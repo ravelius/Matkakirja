@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1421, teksti: 'Kaupunkiruuhkan pudottamat nostot kaupunkilehtiin' },
   { v: 1420, teksti: 'Reittien katkotyyli valmis, urat yhdistyvät silloin' },
   { v: 1419, teksti: 'Kaupunkinostojen katto 3: ihmeet ja skandaalit ensin' },
   { v: 1418, teksti: 'Uloszoom rajattu: tyhjaa tilaa ei nay, pystyruutu panoroi' },

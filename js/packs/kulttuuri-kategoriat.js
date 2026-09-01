@@ -553,6 +553,29 @@ export const KULTTUURI_KATEGORIAT = {
             + '(CC BY 2.0)',
           wiki: 'Lontoon metro',
         },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-lontoo-cheapside` putosi Lontoon
+         * ruuhkasta, ja sen sisältö on tässä lehtimittaan kirjoitettuna.
+         */
+        {
+          otsikko: 'Kellarin lattian alta tuli neljäsataa korua',
+          tiedosto: 'Victoria and Albert Museum Jewellery 11042019 Necklace Enamelled gold Lovers knots Cheapside Hoard 3037.jpg',
+          teksti: 'Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa '
+            + 'osoitteessa 30–32 Cheapside, ja lattian alta tuli puinen '
+            + 'laatikko. Sen sisällä oli yli neljäsataa korukappaletta: '
+            + 'sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja '
+            + 'kameoita. Kivet olivat ympäri maailmaa — smaragdi '
+            + 'Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini '
+            + 'Burmasta, turkoosi Persiasta. Oudoin esine on omenan kokoinen '
+            + 'smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli '
+            + 'sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yksi '
+            + 'sinettikivi ajoittaa kätkennän marraskuun 1640 ja Lontoon '
+            + 'suurpalon syyskuun 1666 väliin.',
+          selite: 'Cheapsiden kätköstä löytynyt kaulaketju on kultaa ja '
+            + 'valkoista emalia, tehty Englannissa 1590–1620.',
+          lahde: 'Vassil, Wikimedia Commons (CC0)',
+        },
       ],
     },
     {
@@ -649,6 +672,70 @@ export const KULTTUURI_KATEGORIAT = {
         fakta: 'Turbiinihallin lattialle levitettiin sata miljoonaa käsin '
           + 'muotoiltua posliinikappaletta, joista jokainen näytti '
           + 'auringonkukan siemeneltä.',
+      },
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö): syvennystarinat
+     * `syvennys-lontoo-vuorovesi` ja `-hirvet` putosivat Lontoon
+     * nostoruuhkasta.
+     */
+    {
+      id: 'luonto',
+      nimi: 'Joki ja puisto',
+      johdanto: 'Thames on vuorovesijoki, ja laskuveden aikaan sen kivinen '
+        + 'ranta paljastuu keskellä miljoonakaupunkia. Kulman takana on '
+        + 'toinen maailma: aidattu puisto, jossa kulkee vapaana lauma '
+        + 'hirviä.',
+      nostot: [
+        {
+          otsikko: 'Laskuvesi paljastaa rannan keskellä kaupunkia',
+          tiedosto: 'Mudlarks by Millennium Bridge.jpg',
+          teksti: 'Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi '
+            + 'nousee ja laskee kahdesti vuorokaudessa, keskustassa '
+            + 'parhaimmillaan noin seitsemän metriä. Laskuveden aikaan '
+            + 'kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne '
+            + 'lasketaan portaita pitkin etsimään savipiippuja ja '
+            + 'astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi. Ranta ei '
+            + 'silti ole vapaata riistaa: lupa on ostettava '
+            + 'satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, '
+            + 'myynti keskeytettiin vuonna 2022. Yli kolmesataa vuotta '
+            + 'vanhat löydöt on ilmoitettava Lontoon museolle.',
+          selite: 'Thamesin kivinen ranta paljastuu laskuveden aikaan '
+            + 'kahdesti vuorokaudessa aivan Millennium Bridgen kohdalla.',
+          lahde: 'Tim Sheerman-Chase, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Richmond Parkin lauma',
+          tiedosto: 'Red deer stag roaring in Richmond Park - geograph.org.uk - 3711560.jpg',
+          teksti: 'Richmond Park on Lontoon kuninkaallisista puistoista '
+            + 'suurin, ja sen kolmentoista kilometrin tiiliaidan sisällä '
+            + 'kulkee vapaana noin 630 saksanhirveä ja kuusipeuraa. Kuningas '
+            + 'Kaarle I aitasi alueen hirvenmetsästystä varten vuonna 1637, '
+            + 'ja aita seisoo yhä. Syys-lokakuussa urokset karjuvat '
+            + 'kiima-aikaan niin, että ääni kuuluu puiston laidalle asti. '
+            + 'Marraskuussa ja helmikuussa laumasta kaadetaan noin '
+            + 'kaksisataa eläintä, jotta laidun riittää lopuille. Vuosina '
+            + '1867 ja 1876 puistosta lähetettiin kuusipeuroja laivalla '
+            + 'Uuteen-Seelantiin, ja ne olivat koko maan ensimmäiset '
+            + 'kuusipeurat.',
+          selite: 'Richmond Parkin aidatussa laumassa on noin 630 '
+            + 'saksanhirveä ja kuusipeuraa.',
+          lahde: 'Russel Wills, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka paljon veden pinta vaihtelee Thamesissa Lontoon '
+          + 'keskustan kohdalla?',
+        vaihtoehdot: [
+          'noin puoli metriä',
+          'parhaimmillaan noin seitsemän metriä',
+          'vesi ei vaihtele lainkaan kaupungin kohdalla',
+          'parhaimmillaan noin kaksikymmentä metriä',
+        ],
+        oikea: 1,
+        fakta: 'Vuorovesi ulottuu Teddingtonin sulkuun asti. Rannalla saa '
+          + 'etsiä vain satamaviranomaisen luvalla, ja yli kolmesataa vuotta '
+          + 'vanhat löydöt on ilmoitettava Lontoon museolle.',
       },
     },
   ],
@@ -1584,6 +1671,67 @@ export const KULTTUURI_KATEGORIAT = {
           + 'prahalaisen orkesterin alttoviulisti.',
       },
     },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö, kaupunkinostojen katto):
+     * syvennystarinat `syvennys-praha-klementinum` ja `-przewalski`
+     * putosivat Prahan nostoruuhkasta.
+     */
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Prahassa on talo, jossa säätä on mitattu katkeamatta vuodesta '
+        + '1775, ja eläintarha, jolle uskottiin kokonaisen lajin sukukirjan '
+        + 'pito silloin kun lajia oli jäljellä enää kaksitoista yksilöä.',
+      nostot: [
+        {
+          otsikko: 'Sääkirja, joka alkoi 1775',
+          tiedosto: 'Clementinum baroque library 2.jpg',
+          teksti: 'Klementinum alkoi 1000-luvun kappelista, jatkui '
+            + 'dominikaaniluostarina ja muutettiin 1556 jesuiittakollegioksi. '
+            + 'Vuonna 1622 sinne siirrettiin Kaarlen yliopiston kirjasto, ja '
+            + 'päärakennusvaihe 1709–1726 antoi talolle barokkikirjaston. '
+            + 'Kun jesuiittakunta lakkautettiin 1773, keisarinna Maria '
+            + 'Teresia teki rakennuksesta observatorion, kirjaston ja '
+            + 'yliopiston. Kansalliskirjasto perustettiin 1781, ja vuodesta '
+            + '1782 taloon on toimitettu vapaakappale jokaisesta painetusta '
+            + 'kirjasta. Pisin yhtäjaksoinen työ on kuitenkin tehty '
+            + 'tornissa: Böömin vanhin säänmittaus alkoi Klementinumissa '
+            + 'vuonna 1775, ja se jatkuu yhä.',
+          selite: 'Klementinumin barokkikirjaston sali valmistui vuosien '
+            + '1709 ja 1726 välisessä rakennusvaiheessa.',
+          lahde: 'Václav Jiroušek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Prahan hevoset',
+          tiedosto: 'Przewalskis horses exposition, Zoo Prague.jpg',
+          teksti: 'Przewalskin hevonen on mongolialainen villihevonen, jolla '
+            + 'on 33 kromosomiparia siinä missä kesyhevosella on 32 — se ei '
+            + 'siis ole karannut kesyhevonen vaan oma lajinsa. Toisen '
+            + 'maailmansodan jälkeen niitä oli jäljellä vain kahdessa '
+            + 'eläintarhassa, Münchenissä ja Prahassa, ja 1950-luvun lopulla '
+            + 'koko maailman eläintarhoissa oli enää kaksitoista yksilöä. '
+            + 'Vuonna 1959 Prahan eläintarhalle uskottiin lajin '
+            + 'kansainvälisen kantakirjan pito. Luonnosta laji hävisi '
+            + 'kokonaan, mutta 1990-luvulta lähtien hevosia on palautettu '
+            + 'Mongolian aroille — osa niistä Tšekin ilmavoimien koneilla.',
+          selite: 'Kaikki nykyiset Przewalskin hevoset polveutuvat '
+            + 'kourallisesta eläintarhojen yksilöitä.',
+          lahde: 'Packa, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Klementinumissa on tehty katkeamatta vuodesta 1775?',
+        vaihtoehdot: [
+          'soitettu keskipäivän kellot',
+          'painettu kaupungin sanomalehteä',
+          'mitattu ja kirjattu sää',
+          'jaettu kirjastokortteja opiskelijoille',
+        ],
+        oikea: 2,
+        fakta: 'Sarja on Böömin vanhin. Sama talo sai 1781 kansalliskirjaston '
+          + 'ja on ottanut vastaan vapaakappaleet vuodesta 1782.',
+      },
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, erä E1 (Raamattu "TEKSTIEN PAINOPISTE",
@@ -2164,6 +2312,151 @@ export const KULTTUURI_KATEGORIAT = {
           + 'soittama kappale.',
       },
     },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö). Wienin viereen kertyi viisi
+     * nostomerkkiä yli katon. Tämän sivun jutut ovat syvennystarinoita
+     * `syvennys-wien-sahko` ja `-vesijohto` sekä täkynosto
+     * `nosto-maailmannayttely-1873`.
+     */
+    {
+      id: 'tiede',
+      nimi: 'Tiede ja tekniikka',
+      johdanto: 'Isoisän matkavuonna Wien avasi maailmannäyttelyn ja '
+        + 'vuoristovesijohdon. Näyttelyhallissa sattui myös vahinko, joka '
+        + 'muutti tehtaat: kone pyörähti väärään suuntaan.',
+      nostot: [
+        {
+          otsikko: 'Kone, joka pyörähti väärään suuntaan',
+          tiedosto: 'Machine Gramme.jpg',
+          teksti: 'Maailmannäyttelyn kupolin alla oli 800 metriä pitkä '
+            + 'konehalli. Belgialainen Zénobe Gramme oli rakentanut '
+            + 'parannellun tasavirtageneraattorin, ja hänen '
+            + 'yhtiökumppaninsa, ranskalainen insinööri Hippolyte Fontaine, '
+            + 'toi koneen Wieniin. Siellä he huomasivat vahingossa, että '
+            + 'laite toimii myös toisin päin: kun siihen johdettiin '
+            + 'tasavirtaa, se ei tuottanut sähköä vaan alkoi pyöriä. Niin '
+            + 'syntyi ensimmäinen teollisesti käyttökelpoinen sähkömoottori '
+            + '— sitä ennen sähkömoottorit olivat leluja ja laboratorion '
+            + 'kuriositeetteja. Samalla näyttelyllä Fontaine osoitti, että '
+            + 'sähkön voi siirtää kahden kilometrin päähän kuparijohtoa '
+            + 'pitkin.',
+          selite: 'Gramme-kone vuodelta 1873; samanlainen laite pyörähti '
+            + 'Wienin näyttelyssä ensimmäiseksi kunnolliseksi '
+            + 'sähkömoottoriksi.',
+          lahde: 'Icone5, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vuoristovesi ratkaisi talojen korkeuden',
+          tiedosto: 'Aquädukt Liesing- Teil der 1. Wiener Hochquellenleitung 1.jpg',
+          teksti: 'Wienin ensimmäinen vuoristovesijohto avattiin 24. '
+            + 'lokakuuta 1873. Se on 95 kilometriä pitkä ja kulkee '
+            + 'kokonaan painovoiman varassa Rax- ja Schneeberg-vuorten '
+            + 'lähteiltä kaupunkiin — juuri siksi Wienin rakennusjärjestykset '
+            + 'rajoittivat talojen korkeuden noin kahteenkymmeneenviiteen '
+            + 'metriin: sitä korkeammalle vesi ei olisi noussut itsestään. '
+            + 'Matkalla on 30 akveduktia ja muuta laaksonylitystä, ja ne '
+            + 'kaikki ovat nykyään suojeltuja. Urakoitsija Antonio '
+            + 'Gabrielli tarjoutui itse, että hänen palkkiostaan '
+            + 'vähennettäisiin yksi prosentti, kunnes kasaan tulisi 100 000 '
+            + 'guldenia — ja niillä rahoilla rakennettiin suihkulähde, '
+            + 'Hochstrahlbrunnen, joka avattiin samana päivänä.',
+          selite: 'Ensimmäinen vuoristovesijohto tuo yhä yli puolet Wienin '
+            + 'juomavedestä, ja vesi kulkee koko 95 kilometrin matkan '
+            + 'painovoiman varassa.',
+          lahde: 'Anna Saini, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kahdeksan päivää avajaisista pörssi suljettiin',
+          tiedosto: 'Weltausstellungsgelände-Wien-1873.jpg',
+          teksti: 'Keisari Franz Joseph avasi maailmannäyttelyn 1. '
+            + 'toukokuuta 1873 sanoen, että Itävalta-Unkari on kaikin puolin '
+            + 'ilahduttavassa nousussa. Kupla oli jo puhkeamassa: maan '
+            + 'suurin pankki oli juuri irtisanonut pörssitalletukset. '
+            + 'Yhdeksäntenä toukokuuta ilmoitti maksukyvyttömyydestään '
+            + 'meklari Adolf Petschek, samana aamupäivänä kaatui 120 muuta '
+            + 'pankkia, ja kello 13 poliisi sulki pörssin. Romahdus levisi '
+            + 'Berliiniin ja syyskuussa New Yorkiin. Näyttelylle odotettiin '
+            + '20 miljoonaa kävijää; tuli 7,25 miljoonaa, ja tappiota '
+            + 'kertyi noin 15 miljoonaa guldenia.',
+          selite: 'Maailmannäyttelyn alue Praterissa vuonna 1873.',
+          lahde: 'Historisches Museum der Stadt Wien 1873, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Wienissä ei saanut 1800-luvulla rakentaa noin '
+          + 'kahtakymmentäviittä metriä korkeampia taloja?',
+        vaihtoehdot: [
+          'keisari halusi nähdä Stephansdomin joka kadulta',
+          'palokunnan tikkaat eivät yltäneet ylemmäs',
+          'vuoristovesi ei olisi noussut ylemmäs ilman pumppuja',
+          'kaupungin savu ei olisi noussut korkeampien talojen yli',
+        ],
+        oikea: 2,
+        fakta: 'Sama vesijohto tuo yhä yli puolet Wienin juomavedestä, ja sen '
+          + '30 akveduktia ovat nykyään suojeltuja rakennuksia.',
+      },
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö): syvennystarina
+     * `syvennys-wien-kauriit` ja täkynosto `nosto-kirahvimuoti`.
+     */
+    {
+      id: 'luonto',
+      nimi: 'Eläimet kaupungissa',
+      johdanto: 'Wienin keskushautausmaalla laiduntaa parikymmentä kaurista '
+        + 'vanhojen hautakivien lomassa, ja Schönbrunniin tuotu kirahvi '
+        + 'muutti aikoinaan kaupungin kampaukset, kankaat ja seuraelämän.',
+      nostot: [
+        {
+          otsikko: 'Kauriit vanhalla hautausmaalla',
+          tiedosto: 'Capreolus capreolus Wien Zentralfriedhof 20221021 01.jpg',
+          teksti: 'Wienin keskushautausmaa on kaksi ja puoli neliökilometriä '
+            + 'ja siihen on haudattu noin kolme miljoonaa ihmistä — enemmän '
+            + 'kuin kaupungissa nykyään asuu. Koon ja tiheän puuston takia '
+            + 'se on myös luontoalue. Näkyvimpiä asukkaita ovat oravat, '
+            + 'joita wieniläiset kutsuvat nimellä Hansi. Suurimpia ovat '
+            + 'kuitenkin noin kaksikymmentä kaurista, jotka viihtyvät '
+            + 'mieluiten vanhan juutalaisen hautausmaan alueella, koska '
+            + 'vanhojen hautakivien ympärillä kasvaa ikivihreitä kasveja. '
+            + '1980-luvun puoliväliin asti alue oli virallinen '
+            + 'metsästysalue; nykyään osa siitä jätetään tarkoituksella '
+            + 'villiintymään.',
+          selite: 'Kauriit viihtyvät parhaiten keskushautausmaan vanhalla '
+            + 'juutalaisella osalla.',
+          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Yksi kirahvi muutti koko kaupungin muodin',
+          tiedosto: 'Eduard Gurk - Die erste Giraffe im Schönbrunner Tiergarten - 1828.jpeg',
+          teksti: 'Schönbrunnin eläintarha sai ensimmäisen kirahvinsa vuonna '
+            + '1828 lahjaksi Egyptin varakuninkaalta. Eläin herätti '
+            + 'sellaisen innostuksen, että se levisi muotiin, käsitöihin ja '
+            + 'seuraelämään: kirahvikuvioita ilmestyi vaatteisiin, kenkiin '
+            + 'ja käyttöesineisiin, ja kirahvin innoittamina keksittiin '
+            + 'uusia kampauksia, hajuvesi, näytelmä ja kaksi sävellystä. '
+            + 'Tarha itse oli tuolloin yhä keisariperheen yksityisomaisuutta, '
+            + 'ja se pysyi sellaisena aina Itävalta-Unkarin hajoamiseen 1918 '
+            + 'asti.',
+          selite: 'Schönbrunnin ensimmäinen kirahvi Eduard Gurkin '
+            + 'maalauksessa samalta vuodelta, jona se saapui.',
+          lahde: 'Eduard Gurk 1828, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi kauriit pysyttelevät mieluiten keskushautausmaan '
+          + 'vanhimmalla osalla?',
+        vaihtoehdot: [
+          'siellä niitä ruokitaan',
+          'siellä on hiljaisinta',
+          'siellä kasvaa ikivihreitä kasveja hautakivien ympärillä',
+          'siellä aita on matalin',
+        ],
+        oikea: 2,
+        fakta: 'Hautausmaa oli virallinen metsästysalue 1980-luvun '
+          + 'puoliväliin asti. Nykyään osa alueesta jätetään tarkoituksella '
+          + 'villiintymään.',
+      },
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E2 (Raamattu, "TEKSTIEN PAINOPISTE"):
@@ -2505,6 +2798,48 @@ export const KULTTUURI_KATEGORIAT = {
           musiikkiNimi: 'Zarzuela-musiikkia Apple Musicissa',
           musiikkiNayte: 'https://archive.org/download/granvi30g/AE2784.mp3',
           musiikkiNayteNimi: 'La Gran Vía -zarzuela — Emilio Sagi-Barba, PD',
+        },
+        /*
+         * KARTALTA LEHTEEN (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-madrid-tasavalta` ja täkynosto
+         * `nosto-munkkiaratit` putosivat Madridin nostoruuhkasta.
+         */
+        {
+          otsikko: 'Tasavallan vuosi: neljä johtajaa yhdessä vuodessa',
+          tiedosto: 'Alegoría de la Primera República Española, por Tomás Padró.jpg',
+          teksti: 'Espanjan ensimmäisen tasavallan johdossa vaihtui isoisän '
+            + 'matkavuonna neljä miestä. Estanislao Figueras kesti '
+            + 'helmikuusta kesäkuuhun. Francisco Pi y Margall aloitti 11. '
+            + 'kesäkuuta ja kesti 37 päivää: hän kieltäytyi tukahduttamasta '
+            + 'etelän kapinoita aseilla, koska kapinalliset noudattivat '
+            + 'hänen omaa oppiaan. Nicolás Salmerón aloitti 18. heinäkuuta '
+            + 'ja erosi 6. syyskuuta, kun kenraalit vaativat häntä '
+            + 'vahvistamaan karkureiden kuolemantuomiot — hän oli '
+            + 'oikeusministerinä itse poistanut kuolemanrangaistuksen. '
+            + 'Emilio Castelar aloitti 7. syyskuuta ja vahvisti ne samat '
+            + 'tuomiot.',
+          selite: 'Aikalaisallegoria Espanjan ensimmäisen tasavallan '
+            + 'julistamisesta painettiin La Flaca -lehdessä maaliskuussa '
+            + '1873.',
+          lahde: 'Tomás Padró ja litografi Juan Vazquez 1873, Wikimedia '
+            + 'Commons (public domain)',
+        },
+        {
+          otsikko: 'Puistoissa asuu tuhansia villejä papukaijoja',
+          tiedosto: 'Cotorra Argentina - Parque del Oeste - Madrid 03.jpg',
+          teksti: 'Laji on munkkiaratti, kotoisin Etelä-Amerikasta. '
+            + 'Espanjassa elää yli 80 prosenttia koko Euroopan villistä '
+            + 'kannasta, ja Madridissa niitä laskettiin kesäkuussa 2015 '
+            + 'kymmenentuhatta kahdeksansataa — enemmän kuin missään muualla '
+            + 'Euroopassa. Munkkiaratti on ainoa papukaija, joka rakentaa '
+            + 'oksista oikean pesän eikä tyydy puunkoloon. Yhdyskunta kutoo '
+            + 'yhteen jättipesän, jossa jokaisella parilla on oma '
+            + 'sisäänkäynti ja oma huoneisto. Pesä voi kasvaa pienen auton '
+            + 'kokoiseksi, ja siihen muuttaa alivuokralaisia: kyyhkyjä, '
+            + 'varpusia, jopa oravia. Espanja kielsi lajin pidon ja kaupan '
+            + 'vuonna 2013.',
+          selite: 'Munkkiaratti Madridin Parque del Oestessa.',
+          lahde: 'Javier Perez Montes, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
           /*
@@ -3291,6 +3626,107 @@ export const KULTTUURI_KATEGORIAT = {
         fakta: 'Maailmankellon alumiinirumpuun on jyrsitty 146 paikannimeä, ja '
           + 'rummun kaksikymmentäneljä sivua vastaavat maapallon '
           + 'aikavyöhykkeitä.',
+      },
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö). Berliinin viereen kertyi neljä
+     * nostomerkkiä yli kaupunkinostojen katon: kohde
+     * `brandenburgin-portti`, syvennystarina `syvennys-berliini-karhu`
+     * sekä täkynostot `nosto-kopenickin-kapteeni` ja
+     * `nosto-archaeopteryx`. Sisältö on niiden omaa, lehtimittaan
+     * kirjoitettuna.
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Portti, josta alkaa Unter den Linden, sinetin karhu vuodelta '
+        + '1280, univormu joka valtasi kaupungintalon — ja kivilaatta, josta '
+        + 'museo maksoi 20 000 kultamarkkaa.',
+      nostot: [
+        {
+          otsikko: 'Portista alkaa Unter den Linden',
+          tiedosto: 'Berlin, Brandenburger Tor -- 2013 -- 4589.jpg',
+          teksti: 'Brandenburgin portti on 1700-luvun klassistinen monumentti '
+            + 'Berliinin keskustassa. Se pystytettiin vanhan kaupunginportin '
+            + 'paikalle — siitä alkoi tie Brandenburg an der Haveliin, '
+            + 'Brandenburgin markkreivikunnan entiseen pääkaupunkiin. '
+            + 'Nykyinen rakennus valmistui 1788–1791 Preussin kuninkaan '
+            + 'Fredrik Vilhelm II:n käskystä, ja sen piirsi hovin arkkitehti '
+            + 'Carl Gotthard Langhans. Katolla ajaa pronssinen kvadriga eli '
+            + 'nelivaljakko, kuvanveistäjä Johann Gottfried Schadowin työ. '
+            + 'Portista alkaa Unter den Linden, bulevardi, joka vie suoraan '
+            + 'vanhalle kaupunginlinnalle.',
+          selite: 'Brandenburgin portti valmistui 1788–1791, ja sen katolla '
+            + 'ajaa Johann Gottfried Schadowin veistämä nelivaljakko.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Karhu on ollut sinetissä vuodesta 1280',
+          tiedosto: 'Sculpture bear Köllnischer Park Berlin-Mitte.jpg',
+          teksti: 'Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. '
+            + 'maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on '
+            + 'turkkurien kiltakirjeessä. Vitsi on siinä, ettei karhulla '
+            + 'todennäköisesti ole kaupungin nimen kanssa mitään tekemistä — '
+            + 'tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on '
+            + 'slaavilaista perua sanasta berl, suo, ja karhu on '
+            + 'kansanetymologiaa eli puhuva vaakuna. Kaupunki otti asian '
+            + 'silti kirjaimellisesti: 17. elokuuta 1939 se sai neljä elävää '
+            + 'karhua, jotka asetettiin Köllnischer Parkiin lämmitettävään '
+            + 'tarhaan. Viimeinen kaupunginkarhu Schnute lopetettiin '
+            + 'lokakuussa 2015, ja tarhasta tehtiin 2017 taidetila.',
+          selite: 'Köllnischer Park on sama puisto, jossa kaupungin elävät '
+            + 'karhut asuivat vuodesta 1939 vuoteen 2015.',
+          lahde: 'Singlespeedfahrer, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Univormu, joka valtasi kaupungintalon',
+          tiedosto: 'Wilhelm Voigt 1906 10 26.jpg',
+          teksti: 'Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 '
+            + 'vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. '
+            + 'Elokuussa Berliinin poliisi karkotti hänet kaupungista '
+            + 'pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. '
+            + 'päivänä hän puki ylleen preussilaisen kaartinkapteenin '
+            + 'univormun, jonka oli ostanut palasina eri kaupoista. Hän '
+            + 'pysäytti kadulla joukon sotilaita, vei heidät junalla '
+            + 'Köpenickiin, miehitti kaupungintalon, pidätytti pormestarin '
+            + 'ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen '
+            + 'kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. '
+            + 'Keisari Wilhelm II armahti hänet 1908.',
+          selite: 'Wilhelm Voigt poliisin kuvassa kymmenen päivää tempun '
+            + 'jälkeen.',
+          lahde: 'Preussin poliisi 1906, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Fossiilin hinta oli yksi lehmä',
+          tiedosto: 'Berlin Archaeopteryx.jpg',
+          teksti: 'Berliinin luonnontieteellisessä museossa on lasin alla '
+            + 'kivilaatta, jossa näkyy pieni hampaallinen olento siipineen, '
+            + 'kynsineen ja pitkine liskomaisine häntineen — ja höyhenten '
+            + 'painaumat kivessä. Se on Archaeopteryxin Berliinin yksilö, '
+            + 'lajin löydetyistä yksilöistä täydellisin ja ensimmäinen, '
+            + 'jolla on kokonainen pää. Löytäjä oli maanviljelijä Jakob '
+            + 'Niemeyer Eichstättin lähellä. Vuonna 1876 hän myi fossiilin '
+            + 'majatalonpitäjä Johann Dörrille saadakseen rahat lehmän '
+            + 'ostoon. Lopulta Berliinin museo osti sen 20 000 '
+            + 'kultamarkalla, ja kaupan rahoitti Ernst Werner von Siemens.',
+          selite: 'Archaeopteryxin Berliinin yksilössä näkyvät höyhenten '
+            + 'painaumat kivessä.',
+          lahde: 'Emily Willoughby, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä kaupungin nimi tarkoittaa tutkijoiden pääsääntöisen '
+          + 'käsityksen mukaan?',
+        vaihtoehdot: [
+          'karhunpentua',
+          'suota',
+          'kahlaamoa',
+          'markkinapaikkaa',
+        ],
+        oikea: 1,
+        fakta: 'Karhu on siis puhuva vaakuna: kuva, joka selittää nimen '
+          + 'väärin mutta ymmärrettävästi. Sinetissä se on ollut vuodesta '
+          + '1280.',
       },
     },
   ],
@@ -4143,6 +4579,30 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Tuntematon lehtikuvaaja, Wikimedia Commons (public domain)',
           wiki: 'Vasa (laiva)',
         },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-tukholma-aurinkotaulu` putosi
+         * Tukholman nostoruuhkasta.
+         */
+        {
+          otsikko: 'Kaupungin vanhin kuva on kuva kuvasta',
+          tiedosto: 'Vädersolstavlan 1535.jpg',
+          teksti: 'Huhtikuun 20. päivänä 1535 tukholmalaiset näkivät '
+            + 'aamutaivaalla valkoisia renkaita ja niiden kehällä useita '
+            + 'hehkuvia auringonkuvia. Kyse oli halosta: ilmassa leijuvat '
+            + 'jääkiteet taittavat auringonvaloa kuin lasiprismat. Näky '
+            + 'pelotti, ja siitä teetettiin maalaus — samalla syntyi vanhin '
+            + 'tunnettu värikuva Tukholmasta muureineen ja kirkontorneineen. '
+            + 'Storkyrkanissa riippuvaan tauluun on kirjoitettu kaksi '
+            + 'vuosilukua, 1535 ja renovoitu 1636. Vuonna 1999 taulu '
+            + 'tutkittiin, ja se osoittautui kokonaan 1600-luvun työksi: '
+            + 'renovointi olikin kopiointi, jonka teki Jacob Heinrich '
+            + 'Elbfas. Alkuperäinen on kadonnut.',
+          selite: 'Vädersolstavlan kuvaa Tukholman yllä 20. huhtikuuta 1535 '
+            + 'nähtyä halo-ilmiötä, ja se on vanhin värillinen kuva '
+            + 'kaupungista.',
+          lahde: 'Wikimedia Commons (public domain)',
+        },
       ],
           /*
        * AVAUSKUVAT (18.8.2026): kolme katselusuuntaa ja kaksi
@@ -4270,6 +4730,28 @@ export const KULTTUURI_KATEGORIAT = {
             + 'porrasaskelmaa laskevat Prästgatanilta Västerlånggatanille.',
           lahde: 'Holger Ellgaard, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Gamla stan',
+        },
+        /*
+         * Kartalta lehteen (v1419 jälkityö): syvennystarina
+         * `syvennys-tukholma-lohi` putosi nostoruuhkasta. Se kuuluu
+         * juuri tälle sivulle, koska sen vuoden 1850 sulusta tehtiin
+         * 2024 kalatie.
+         */
+        {
+          otsikko: 'Lohi nousee eduskuntatalon vierestä',
+          tiedosto: 'Fishing in Strömmen, Stockholm - panoramio.jpg',
+          teksti: 'Norrström on virta, jota pitkin Mälarenin vesi syöksyy '
+            + 'mereen aivan eduskuntatalon vierestä, ja siitä nostetaan joka '
+            + 'vuosi satoja lohia ja meritaimenia: vuonna 2000 saatiin lohi, '
+            + 'joka painoi lähes kaksikymmentäkaksi kiloa. Vedessä elää noin '
+            + 'kolmekymmentä kalalajia, enemmän kuin missään muualla '
+            + 'Tukholman seudun vesissä. Aina ei ollut näin. Kalat palasivat '
+            + 'vasta 1970-luvulla aloitettujen istutusten myötä, ja vuonna '
+            + '2024 vanha vuoden 1850 sulku muutettiin kalatieksi, jota '
+            + 'myöten kalat pääsevät nousemaan järveen asti.',
+          selite: 'Strömmenissä saa onkia keskellä kaupunkia, ja lohi nousee '
+            + 'virtaan aivan vanhankaupungin kupeeseen.',
+          lahde: 'Bengt Nyman, Wikimedia Commons (CC BY 3.0)',
         },
       ],
       tehtava: {
@@ -4955,8 +5437,8 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'musiikki',
       nimi: 'Musiikki',
       johdanto: 'Kaksi muusikkoa aloitti Pariisin kaduilta ja kaupungin laidan '
-        + 'asuntovaunuleiriltä — ja teki lauluja, joita soitetaan yhä '
-        + 'kaikkialla maailmassa.',
+        + 'asuntovaunuleiriltä — ja yksi ooppera kaatui täällä ensi-illassaan '
+        + 'ennen kuin se nousi maineeseen muualla.',
       nostot: [
         {
           otsikko: 'Édith Piaf lauloi ensin kadulla',
@@ -4997,6 +5479,32 @@ export const KULTTUURI_KATEGORIAT = {
           musiikki: 'https://music.apple.com/fi/search?term=django%20reinhardt%20minor%20swing',
           musiikkiNimi: 'Django Reinhardt Apple Musicissa',
         },
+        /*
+         * Siirretty kartalta lehteen (v1419 jälkityö, kaupunkinostojen
+         * katto): Pariisin kohdalle kertyi enemmän nostomerkkejä kuin
+         * kolme, ja karsinta pudotti tämän. Sisältö on täkynoston oma
+         * (`nosto-carmenin-ensi-ilta`) tiivistettynä lehtimittaan.
+         */
+        {
+          otsikko: 'Carmen kaatui ensi-illassaan',
+          tiedosto: 'Prudent-Louis Leray - Poster for the première of Georges Bizet\'s Carmen.jpg',
+          teksti: 'Georges Bizet aloitti Carmenin säveltämisen alkuvuodesta '
+            + '1873. Opéra-Comique oli valtion rahoittama perheteatteri, ja '
+            + 'sen kahdesta johtajasta Adolphe de Leuven vastusti koko '
+            + 'ajatusta: näin uskaliasta tarinaa ei esitetä täällä. Hänelle '
+            + 'luvattiin pehmennyksiä, mutta lupaukset eivät riittäneet, ja '
+            + 'hän erosi alkuvuodesta 1874. Ensi-ilta oli 3. maaliskuuta '
+            + '1875, ja viimeinen näytös oli libretisti Halévyn sanoin jäinen '
+            + 'ensimmäisestä viimeiseen. Bizet kuoli kolme kuukautta '
+            + 'myöhemmin 36-vuotiaana. Maine tuli muualta: Wien 1875, '
+            + 'Bryssel 1876, Lontoo ja New York 1878 — Pariisiin ooppera '
+            + 'palasi vasta 1883.',
+          selite: 'Carmenin ensi-ilta pidettiin Opéra-Comiquessa 3. '
+            + 'maaliskuuta 1875, ja säveltäjä ehti pitää sitä epäonnistumisena.',
+          lahde: 'Prudent-Louis Leray 1875, Wikimedia Commons (public domain)',
+          musiikki: 'https://music.apple.com/fi/search?term=bizet%20carmen',
+          musiikkiNimi: 'Bizet’n Carmen Apple Musicissa',
+        },
       ],
       tehtava: {
         kysymys: 'Mikä sytytti tulipalon Djangon perheen asuntovaunussa?',
@@ -5009,6 +5517,111 @@ export const KULTTUURI_KATEGORIAT = {
         oikea: 2,
         fakta: 'Palo alkoi lokakuussa 1928, kun kynttilä kaatui selluloidista '
           + 'tehtyjen kukkien päälle Djangon perheen asuntovaunussa.',
+      },
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö). Kaupunkinostojen katto jättää
+     * kohdekaupungin viereen enintään kolme merkkiä, ja Pariisissa yli
+     * jäi kahdeksan. Tämän sivun kolme ensimmäistä juttua ovat
+     * syvennystarinoita (`syvennys-pariisi-*`) ja neljäs täkynosto
+     * (`nosto-kirahvin-kavelymatka`) — samat faktat, lehtimittaan
+     * kirjoitettuina.
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Isoisän matkavuoden Pariisi oli yhä piirityksen ja palon '
+        + 'jäljiltä auki. Samat vuodet jättivät kaupunkiin kyyhkypostin, '
+        + 'palatsin rauniot ja maalaussuunnan, jonka nimi oli alun perin '
+        + 'pilkkaa.',
+      nostot: [
+        {
+          otsikko: 'Tuileriain rauniot seisoivat yksitoista vuotta',
+          tiedosto: 'Vue des Tuileries après l\'incendie de 1871, PH83415.jpg',
+          teksti: 'Palatsin runko jäi Louvren länsipäähän seisomaan vuoden '
+            + '1871 palon jälkeen: katto ja sisustus olivat poissa, mutta '
+            + 'kivimuurit seisoivat ehjinä. Kaupungintalo, jonka kommunardit '
+            + 'polttivat niin ikään, rakennettiin uudelleen jo 1870-luvulla. '
+            + 'Tuileriat sen sijaan jäivät paikoilleen, ja purkupäätöksen '
+            + 'teki kolmas tasavalta vasta 1882; vastaan olivat muun muassa '
+            + 'Georges-Eugène Haussmann ja joukko historioitsijoita. Purku '
+            + 'alkoi helmikuussa 1883 ja päättyi saman vuoden syyskuun 30. '
+            + 'päivänä. Kivet ja marmorit myytiin matkamuistoiksi, ja osista '
+            + 'rakennettiin Korsikalle kokonainen palatsi.',
+          selite: 'Tuileriain palatsi paloi vuonna 1871, ja sen runko seisoi '
+            + 'Louvren länsipäässä yksitoista vuotta ennen purkamista.',
+          lahde: 'Godefroy, Henri Emile Cimarosa, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Piiritetyn kaupungin posti kulki kyyhkyillä',
+          tiedosto: 'Pellicule du Journal Pigeons Voyageurs, Souvenir du Siège de Paris, 1870-1871. PH20110 (15 of 20).jpg',
+          teksti: 'Kun preussilaiset sulkivat Pariisin syyskuussa 1870, '
+            + 'viimeiset lennätinlangat katkaistiin kuukauden 19. päivänä ja '
+            + 'Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin '
+            + '27. päivänä. Kaupunkiin päin ainoa toimiva reitti oli '
+            + 'kirjekyyhky. Kyyhkyt vietiin ulos kuumailmapalloilla, ja '
+            + 'valokuvaaja René Dagron, mikrofilmin patentin haltija vuodesta '
+            + '1859, tarjoutui pienentämään viestit: sopimus allekirjoitettiin '
+            + '11. marraskuuta 1870. Yksi filmi painoi noin viisi '
+            + 'sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa '
+            + 'kaksikymmentä pyrstösulkiin sidotussa putkessa. Perillä filmi '
+            + 'heijastettiin taikalyhdyllä seinälle ja viestit kirjoitettiin '
+            + 'puhtaaksi.',
+          selite: 'Piiritetystä Pariisista lähetetty mikrofilmi on noin viisi '
+            + 'senttiä kolme senttiä.',
+          lahde: 'Dagron, Prudent René-Patrice, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Nimi, joka oli alun perin pilkkaa',
+          tiedosto: 'Monet - Impression, Sunrise.jpg',
+          teksti: 'Ranskalaista taide-elämää hallitsi Salon: valitsematta '
+            + 'jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille '
+            + 'oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 '
+            + 'Monet, Renoir, Pissarro, Sisley, Cézanne, Berthe Morisot ja '
+            + 'Degas perustivat oman yhdistyksen esittääkseen työnsä itse, ja '
+            + 'jäseneksi liittyvän oli luovuttava Salonista kokonaan. '
+            + 'Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja '
+            + 'Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. '
+            + 'Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, '
+            + 'soleil levant ja otsikoi juttunsa impressionistien näyttelyksi. '
+            + 'Pilkkanimi jäi — ja taiteilijat ottivat sen itse käyttöön.',
+          selite: 'Claude Monet’n Impression, soleil levant vuodelta 1872 '
+            + 'antoi nimen koko suunnalle.',
+          lahde: 'Claude Monet 1872, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kirahvi käveli Marseillesta Pariisiin',
+          tiedosto: 'Nicolas Hüet, the Younger - Study of the Giraffe Given to Charles X by the Viceroy of Egypt - Google Art Project.jpg',
+          teksti: 'Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle '
+            + 'Kaarle X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta '
+            + '1826 — kannessa oli sahattu reikä, josta kaula mahtui ulos. '
+            + 'Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten '
+            + 'päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä '
+            + 'Étienne Geoffroy Saint-Hilaire käveli mukana ja teetti '
+            + 'eläimelle kaksiosaisen keltaisen takin ja kengät. Matka kesti '
+            + '41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja Pariisissa '
+            + 'kirahvia kävi katsomassa yli 100 000 — joka kahdeksas '
+            + 'kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin '
+            + 'ilmestyi täpliä, ja eläin eli Jardin des Plantes’ssa 18 vuotta.',
+          selite: 'Kaarle X:lle lähetetty kirahvi Nicolas Hüet nuoremman '
+            + 'tutkielmassa vuodelta 1827.',
+          lahde: 'Nicolas Hüet nuorempi 1827, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten kokonaisten sanomalehtien verran viestejä saatiin '
+          + 'yhden kyyhkyn kannettavaksi?',
+        vaihtoehdot: [
+          'ne kirjoitettiin silkkipaperille lyijykynällä',
+          'ne kuvattiin mikrofilmille',
+          'ne lyhennettiin salakielisiksi numeroiksi',
+          'ne painettiin ohuelle metallifoliolle',
+        ],
+        oikea: 1,
+        fakta: 'René Dagron sai kuvat pienenemään niin pieniksi, että yksi '
+          + 'filmi painoi noin viisi sadasosagrammaa. Perillä filmi '
+          + 'heijastettiin taikalyhdyllä seinälle ja viestit kirjoitettiin '
+          + 'puhtaaksi.',
       },
     },
   ],
@@ -5488,6 +6101,80 @@ export const KULTTUURI_KATEGORIAT = {
         fakta: 'Ateenalaiseen souvlaki-kääreeseen menee lihan, tomaatin, sipulin '
           + 'ja tzatzikin lisäksi ranskalaiset, ja koko kääre kiedotaan '
           + 'paperiin syötäväksi kävellen.',
+      },
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö). Ateenan viereen kertyi kuusi
+     * nostomerkkiä yli katon; nämä kolme ovat syvennystarinoita
+     * (`syvennys-ateena-nike`, `-diogenes`, `-schliemann`) lehtimittaan
+     * kirjoitettuina.
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Akropoliin lounaiskulmassa on temppeli, jonka voitolta '
+        + 'riisuttiin siivet, torin laidalla filosofin saviastia — ja kadun '
+        + 'varrella palatsi, jonka rakennutti Troijan kullan löytäjä.',
+      nostot: [
+        {
+          otsikko: 'Temppeli, jolta leikattiin siivet',
+          tiedosto: 'Acròpoli d\'Atenes - Temple de Nike Àptera.JPG',
+          teksti: 'Propylaian ohi Akropoliin lounaiskulmaan noustaan '
+            + 'kallion pienimmän temppelin luo: Athena Niken pyhäkköön. Sen '
+            + 'kaidetta koristi aikoinaan marmoripatsas voitonjumalattaresta '
+            + '— mutta kuvanveistäjä oli jättänyt siltä siivet pois. '
+            + 'Myöhemmät ateenalaiset selittivät asian omalla tavallaan: '
+            + 'Voitto ei koskaan saisi lentää pois heidän kaupungistaan, '
+            + 'joten sen siivet piti riisua. Temppelin toinen nimi, Nike '
+            + 'Aptera, tarkoittaa juuri siivetöntä Voittoa.',
+          selite: 'Athena Niken temppeli seisoo Akropoliin lounaiskulmassa, '
+            + 'ja se on kallion pienin temppeli.',
+          lahde: 'Joanbanjo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Diogenes ja hänen astiansa',
+          tiedosto: 'At Wikimedia Hackathon Athens (MP) 2023 365.jpg',
+          teksti: 'Agoran laidalla kannattaa kuvitella vanha saviastia — '
+            + 'pithos, sellainen jossa säilytettiin viljaa. Filosofi '
+            + 'Diogenes majaili juuri sellaisessa talvisin, koska ei '
+            + 'välittänyt mukavuuksista eikä katoista. Kun eräs nuorukainen '
+            + 'kerran rikkoi hänen astiansa, ateenalaiset eivät suuttuneet '
+            + 'vaan hankkivat uuden tilalle. Se oli omituista kunnioitusta '
+            + 'miehelle, joka kulki torilla päivällä lyhty kädessä ja väitti '
+            + 'etsivänsä rehellistä ihmistä — ikään kuin kirkkainkaan valo '
+            + 'ei siihen riittäisi.',
+          selite: 'Diogenes asui talvisin viljan säilytykseen tarkoitetussa '
+            + 'saviastiassa eli pithoksessa.',
+          lahde: 'Mike Peel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Iliou Melathron — Troijan palatsi',
+          tiedosto: 'Heinrich Schliemann\'s house..tif',
+          teksti: 'Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich '
+            + 'Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi '
+            + 'kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän '
+            + 'rakennutti Ateenaan kadun varteen komean palatsin, Iliou '
+            + 'Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: '
+            + 'nykyään talossa lasketaan vanhoja kolikoita, sillä se on '
+            + 'numismaattinen museo. Talon friisissä Schliemann kaivaa '
+            + 'ikuisesti, lapio kädessä.',
+          selite: 'Schliemannin kotipalatsissa Iliou Melathronissa toimii '
+            + 'nykyään Ateenan numismaattinen museo.',
+          lahde: 'athenswalk, Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Athena Niken patsaalta oli myöhempien ateenalaisten '
+          + 'selityksen mukaan riisuttu siivet?',
+        vaihtoehdot: [
+          'jotta Voitto ei voisi koskaan lentää pois kaupungista',
+          'kuvanveistäjä ei ehtinyt tehdä niitä ajoissa',
+          'patsas kuvasi alun perin miestä eikä jumalatarta',
+          'siivet olivat pudonneet maanjäristyksessä',
+        ],
+        oikea: 0,
+        fakta: 'Temppelin toinen nimi Nike Aptera tarkoittaa siivetöntä '
+          + 'Voittoa. Pyhäkkö on Akropoliin pienin temppeli.',
       },
     },
   ],
@@ -6414,6 +7101,81 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Laima Gūtmane, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Akvedukti',
         },
+        /*
+         * KARTALTA LEHTEEN (v1419 jälkityö). Istanbulin viereen kertyi
+         * kuusi nostomerkkiä yli katon. Nämä neljä ovat karsittujen
+         * merkkien omaa sisältöä: kohteet `kapalicarsi` ja `dolmabahce`
+         * sekä syvennystarinat `syvennys-istanbul-kaarmepylvas` ja
+         * `-camondo`.
+         */
+        {
+          otsikko: 'Kapalıçarşı — kuusikymmentäyksi katettua katua',
+          tiedosto: 'Bayezid Gate of the Grand Bazaar (AP4M2098 1PS) (28796761060).jpg',
+          teksti: 'Istanbulin katettu basaari eli Kapalıçarşı on maailman '
+            + 'suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua '
+            + 'katua ja yli 4 000 myymälää, joissa käy satojatuhansia '
+            + 'ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 '
+            + 'pian Konstantinopolin valloituksen jälkeen, kun sulttaani '
+            + 'Mehmed II pystytti kankaiden ja jalokivien kaupalle oman '
+            + 'hallin. Isoisä kulki samojen holvien alla kuin nykypäivän '
+            + 'kävijä — basaaria sanotaan usein yhdeksi maailman '
+            + 'ensimmäisistä kauppakeskuksista.',
+          selite: 'Kapalıçarşın Beyazıtin portin kaaressa on medaljongissa '
+            + 'sulttaanin tughra eli nimikirjoitusmerkki.',
+          lahde: 'Alexandru Panoiu, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Käärmepylväs ja kadonneet päät',
+          tiedosto: 'Snake column Hippodrome Constantinople 2007.jpg',
+          teksti: 'Sultanahmetin aukion pronssipylväs ei ole tästä '
+            + 'kaupungista. Se pystytettiin Delfoihin vuonna 478 eaa. '
+            + 'voitonlahjaksi Apollonille sen jälkeen, kun kreikkalaiset '
+            + 'kaupunkivaltiot olivat lyöneet persialaiset Plataian '
+            + 'taistelussa, ja Konstantinus Suuri siirsi sen uuteen '
+            + 'pääkaupunkiinsa vuonna 324. Kolme käärmeenpäätä pysyivät '
+            + 'paikoillaan 1600-luvun loppuun asti, ja lopulta kaikki kolme '
+            + 'putosivat samana päivänä lokakuussa 1700. Vuonna 1855 pylvään '
+            + 'jalusta kaivettiin esiin, ja kierteistä paljastui kaiverrus: '
+            + 'kolmenkymmenenyhden kreikkalaisen kaupungin nimet.',
+          selite: 'Käärmepylväs on seissyt kaupungissa vuodesta 324, ja se '
+            + 'tuotiin sinne Delfoista.',
+          lahde: 'Gryffindor, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kreivi Camondo ja köyhien koulu',
+          tiedosto: 'Abraham Salomon de Camondo.jpg',
+          teksti: 'Kreivi Abraham Salomon Camondo oli Istanbulin juutalaisen '
+            + 'yhteisön patriarkka ja ottomaanihallituksen pankkiiri jo '
+            + 'ennen kuin Ottoman Bank oli olemassa. Vuonna 1858 hän perusti '
+            + 'koulun Peri Paşaan, pääkaupungin köyhimpään ja tiheimmin '
+            + 'asuttuun kaupunginosaan — ja osa rabbeista julisti hänet '
+            + 'siitä hyvästä pannaan. Koulu toimi silti kolmekymmentäkaksi '
+            + 'vuotta ja koulutti valtaosan valtakunnan juutalaisista '
+            + 'virkamiehistä. Camondo kuoli 92-vuotiaana Pariisissa 30. '
+            + 'maaliskuuta 1873, ja hänet tuotiin toiveensa mukaan takaisin '
+            + 'haudattavaksi Hasköyn hautausmaalle. Galatassa nousevat yhä '
+            + 'hänen mukaansa nimetyt portaat.',
+          selite: 'Abraham Salomon Camondo oli ottomaanihallituksen pankkiiri '
+            + 'ja kaupungin juutalaisen yhteisön patriarkka.',
+          lahde: 'Tuntematon tekijä n. 1860, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Läimäys Dolmabahçen palatsissa',
+          tiedosto: 'Franz Xaver Winterhalter Empress Eugenie.jpg',
+          teksti: 'Vuonna 1868 sulttaani Abdülaziz vei vieraansa, Ranskan '
+            + 'keisarinna Eugénien, tapaamaan äitiään Dolmabahçen '
+            + 'palatsiin. Pertevniyal Sultan piti vieraan naisen läsnäoloa '
+            + 'omissa yksityisissä huoneissaan loukkauksena, ja hänen '
+            + 'kerrotaan läimäisseen keisarinnaa kasvoihin — tilanne oli '
+            + 'lähellä kansainvälistä selkkausta. Toisen kertomuksen mukaan '
+            + 'hän suuttui siitä, että Eugénie tarttui hänen poikaansa '
+            + 'käsivarresta, ja läimäisi tätä vatsaan muistutuksena siitä, '
+            + 'ettei oltu Ranskassa. Hovista vuoti kaksi eri huhua siitä, '
+            + 'mihin sulttaanin äiti löi.',
+          selite: 'Keisarinna Eugénie Franz Xaver Winterhalterin '
+            + 'muotokuvassa vuodelta 1852.',
+          lahde: 'Franz Xaver Winterhalter 1852, Wikimedia Commons (public domain)',
+        },
       ],
       tehtava: {
         kysymys: 'Kuinka monta kappaletta mehter-soittokunnassa oli kutakin '
@@ -6878,6 +7640,70 @@ export const KULTTUURI_KATEGORIAT = {
           + 'Crickin dna:n jäljille.',
       },
     },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö, kaupunkinostojen katto):
+     * syvennystarinat `syvennys-dublin-vuokrakirja` ja `-leijona`
+     * putosivat Dublinin nostoruuhkasta.
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaksi dublinilaista laitosta alkoi paperista ja häkistä: '
+        + 'panimo yhdeksäntuhannen vuoden vuokrasopimuksella ja eläintarha, '
+        + 'jonka leijona päätyi Hollywoodin tunnukseen.',
+      nostot: [
+        {
+          otsikko: 'Vuokrasopimus yhdeksäksitoista vuosisadaksi',
+          tiedosto: 'Guinness brewery, Dublin.jpg',
+          teksti: 'Uudenvuodenaattona 1759 Arthur Guinness allekirjoitti '
+            + 'vuokrasopimuksen käyttämättömästä panimosta St James’s Gaten '
+            + 'portin luona. Vuokra oli 45 puntaa vuodessa, tontti neljä '
+            + 'eekkeriä ja sopimuskausi yhdeksäntuhatta vuotta. Kun Benjamin '
+            + 'Lee Guinness kuoli 1868, sama tontti oli kasvanut yli '
+            + 'kuudenkymmenenneljän eekkerin laajuiseksi ja yritys oli yli '
+            + 'miljoonan punnan arvoinen. Panimo myi vuonna 1868 '
+            + 'kolmesataaviisikymmentätuhatta tynnyriä ja vuonna 1876 jo '
+            + 'seitsemänsataaseitsemänkymmentäyhdeksäntuhatta. '
+            + 'Yhdeksäntuhatta vuotta ei kuitenkaan tullut täyteen: yhtiö '
+            + 'osti tontin lopulta omakseen, ja sopimus raukesi.',
+          selite: 'Panimo toimii yhä samalla tontilla St James’s Gaten '
+            + 'portin luona, jonka Arthur Guinness vuokrasi vuonna 1759.',
+          lahde: 'Metro Centric, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Dublinin leijona Hollywoodissa',
+          tiedosto: 'Metro-Goldwyn-Mayer — Slats the Lion (1926).png',
+          teksti: 'Phoenix Parkin eläintarha avattiin yleisölle 1. syyskuuta '
+            + '1831. Ensimmäinen leijonapari ostettiin 1855 ja se sai '
+            + 'poikasia 1857. Siitä alkoi maine: Dublinin leijonat olivat '
+            + '1800-luvulla maailmankuuluja. Maaliskuun 20. päivänä 1919 '
+            + 'siellä syntyi poikanen, jolle annettiin nimeksi Cairbre, '
+            + 'iiriksi vaunumies. Amerikassa hänet nimettiin uudestaan '
+            + 'Slatsiksi, ja hänestä tuli vastaperustetun '
+            + 'Metro-Goldwyn-Mayerin ensimmäinen tunnusleijona vuosina '
+            + '1924–1928. Kausi osui mykkäelokuvan aikaan: toisin kuin '
+            + 'yksikään seuraajansa hän ei tunnuksessa karjaise, vaan '
+            + 'katselee ympärilleen.',
+          selite: 'Dublinissa syntynyt Slats oli MGM:n ensimmäinen '
+            + 'tunnusleijona, eikä se karjaise tunnuksessa kertaakaan.',
+          lahde: 'Metro-Goldwyn-Mayer 1926, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka pitkäksi ajaksi Arthur Guinness vuokrasi '
+          + 'panimotontin vuonna 1759?',
+        vaihtoehdot: [
+          'sadaksi vuodeksi kerrallaan uusittavana',
+          'kolmeksi sukupolveksi eteenpäin',
+          'yhdeksäksituhanneksi vuodeksi',
+          'kymmeneksi vuodeksi koeajaksi',
+        ],
+        oikea: 2,
+        fakta: 'Sopimus tehtiin uudenvuodenaattona 1759 neljän eekkerin '
+          + 'tontista. Lopulta yhtiö osti maan omakseen, jolloin '
+          + 'yhdeksäntuhannen vuoden vuokrakausi raukesi kesken.',
+      },
+    },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
   // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
@@ -7154,6 +7980,31 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vettä ei tulivuorenkalliolta tahtonut saada.',
           lahde: 'Scglossop1, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Edinburghin linna',
+        },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-edinburgh-scott-monumentti` putosi
+         * Edinburghin nostoruuhkasta.
+         */
+        {
+          otsikko: 'Muistomerkin voitti puuseppä nimimerkillä',
+          tiedosto: 'Edinburgh Scott Monument 20211019.jpg',
+          teksti: 'Princes Streetin puistossa seisoo goottilainen torni, '
+            + 'kuusikymmentäyksi metriä korkea, 287 porrasta ylimmälle '
+            + 'tasanteelle ja 68 pientä kivipatsasta kirjojen henkilöitä. '
+            + 'Se on maailman toiseksi suurin kirjailijan muistomerkki. '
+            + 'Kilpailu järjestettiin Walter Scottin kuoltua 1832, ja sen '
+            + 'voitti ehdotus, jonka lähettäjä oli allekirjoittanut '
+            + 'nimimerkillä John Morvo. Takana oli 45-vuotias George Meikle '
+            + 'Kemp, puuseppä ja piirtäjä ilman arkkitehdin koulutusta, '
+            + 'joka pelkäsi että hänen nimensä hylättäisiin kuoreen '
+            + 'katsomatta. Torni valmistui syksyllä 1844, mutta Kemp ei '
+            + 'ollut sitä katsomassa: hän oli hukkunut Unionin kanavaan '
+            + 'saman vuoden maaliskuussa.',
+          selite: 'Scott-monumentin holvin alla istuu Walter Scottin '
+            + 'marmoripatsas, ja etualan pronssi on David Livingstonen '
+            + 'muistomerkki.',
+          lahde: 'Daniel Kraft, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
           /*
@@ -7968,6 +8819,49 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tulee arabian sanasta az-zulayj, kiillotettu pikkukivi.',
           lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Azulejo',
+        },
+        /*
+         * KARTALTA LEHTEEN (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarinat `syvennys-lissabon-calcada` ja `-severa`
+         * putosivat Lissabonin nostoruuhkasta.
+         */
+        {
+          otsikko: 'Jalkakäytävä ladotaan käsin kivi kerrallaan',
+          tiedosto: 'Calçada da Praça do Rossio.jpg',
+          teksti: 'Lissabonin jalkakäytävät eivät ole asfalttia vaan pieniä '
+            + 'kivinuppeja, jotka on ladottu käsin hiekkaan ja kopautettu '
+            + 'paikoilleen vasaralla. Kiviä on kahta lajia: mustaa '
+            + 'basalttia ja valkoista kalkkikiveä. Tapa alkoi työmaalta, '
+            + 'jota kukaan ei tullut katsomaan: vuosina 1840–1846 kenraali '
+            + 'ja insinööri Eusebio Pinheiro Furtado johti São Jorgen '
+            + 'linnan korjausta ja latoi linnan pihoihin mustavalkoisen '
+            + 'siksakin. Vuonna 1848 hän sai isomman tehtävän, Rossion '
+            + 'aukion, ja latoi siihen aallon. Siitä kuvio lähti leviämään '
+            + 'pitkin kaupunkia, ja aiheet kiersivät yhä merta: laivoja, '
+            + 'ankkureita, kompassiruusuja.',
+          selite: 'Rossion aukion aaltokuvio on ladottu mustasta basaltista '
+            + 'ja valkoisesta kalkkikivestä.',
+          lahde: 'Roede, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Maria Severa lauloi ensimmäisenä fadon maineeseen',
+          tiedosto: 'Maria Severa - Fado-Sängerin.jpg',
+          teksti: 'Fado on Lissabonin oma laulu, eikä se ole syntynyt '
+            + 'juhlasalissa. Kokoonpano on yhä sama kuin alussa: yksi '
+            + 'laulaja, klassinen kitara ja portugalilainen kitara, jossa on '
+            + 'kaksitoista kieltä kuutena parina. Ensimmäinen, joka nousi '
+            + 'tällä laululla koko kaupungin puheenaiheeksi, oli Maria '
+            + 'Severa Onofriana. Hän syntyi Madragoassa 26. heinäkuuta 1820 '
+            + 'äitinsä kapakan lapsena ja lauloi Mourarian kujilla säestäen '
+            + 'itseään. Hän kuoli tuberkuloosiin 26-vuotiaana 30. '
+            + 'marraskuuta 1846, ja hänet haudattiin yhteishautaan ilman '
+            + 'arkkua. Vuonna 1931 hänen tarinastaan tehtiin Portugalin '
+            + 'ensimmäinen äänielokuva.',
+          selite: 'Maria Severa (1820–1846) oli ensimmäinen maineeseen '
+            + 'noussut fadolaulaja.',
+          lahde: 'Francisco Augusto Metrass, Wikimedia Commons (public domain)',
+          musiikki: 'https://music.apple.com/fi/search?term=fado%20lisboa',
+          musiikkiNimi: 'Fadoa Apple Musicissa',
         },
       ],
           /*
@@ -8797,6 +9691,33 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Iberian korkeimman huipun Mulhacénin kupeessa.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Sierra Nevada (Espanja)',
+        },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-granada-kupoli` putosi Granadan
+         * nostoruuhkasta. Kuva on Laurentin vedos leijonapihasta, eri
+         * tiedosto kuin sivun ennen–nyt -parin vanha vedos: juuri se
+         * pari näyttää kupolin, josta tämä juttu kertoo.
+         */
+        {
+          otsikko: 'Kupoli, joka seisoi 75 vuotta ja purettiin',
+          tiedosto: 'Granada- View into the lion court of the Alhambra (SM stf113).png',
+          teksti: 'Leijonapihan kummassakin päässä on pieni paviljonki. '
+            + 'Isoisän matkavuonna itäisen paviljongin päällä oli pyöreä, '
+            + 'keramiikkalaatoilla päällystetty kupoli, ja se näytti '
+            + 'kuuluvan taloon. Se oli neljätoista vuotta vanha: sen oli '
+            + 'nostanut siihen vuonna 1859 arkkitehti Rafael Contreras, '
+            + 'jonka isä oli aloittanut palatsin korjaustyöt 1828 ja jonka '
+            + 'poika jatkoi niitä vuoteen 1907 asti. He tekivät työnsä sen '
+            + 'ajan opin mukaan: rakennukseen sai lisätä osia, jotta siitä '
+            + 'tulisi kokonainen. Kupolin esikuva oli osittain Persiassa. '
+            + 'Vuonna 1934 Leopoldo Torres Balbás purki sen ja teki tilalle '
+            + 'pyramidikaton, ja siitä nousi kansainvälinen kiista.',
+          selite: 'Jean Laurentin vedoksessa noin vuodelta 1865 pihan '
+            + 'perällä olevan paviljongin päällä on pallomainen kupoli, '
+            + 'joka purettiin vasta 1934.',
+          lahde: 'Jean Laurent n. 1865, Städel Museum, Wikimedia Commons '
+            + '(public domain)',
         },
       ],
       /*
@@ -9908,6 +10829,92 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö). Rooman viereen kertyi neljä
+     * nostomerkkiä yli kaupunkinostojen katon. Kissapyhäkkö oli
+     * karsituissa kahdesti (`syvennys-rooma-kissat` ja täkynosto
+     * `nosto-kissat`, sama tarina ja sama kuva), joten se on tässä
+     * yhtenä juttuna; muut ovat syvennystarinoita
+     * `syvennys-rooma-vatikaani` ja `-avaimenreika`.
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Paavi jäi Vatikaaniin vangiksi kolme vuotta ennen isoisän '
+        + 'käyntiä, Aventinuksella katsotaan avaimenreiästä kolmen valtion '
+        + 'läpi, ja Caesarin murhapaikalla asuu kissalauma.',
+      nostot: [
+        {
+          otsikko: 'Vatikaanin vanki',
+          tiedosto: 'Pius IX, by Adolphe Braun, 1875.jpg',
+          teksti: 'Rooman valtaus kesti yhden aamupäivän. Italian tykistö '
+            + 'aloitti tulen kello viideltä 20. syyskuuta 1870, ja '
+            + 'muutaman tunnin päästä Aurelianuksen muuriin oli ammuttu '
+            + 'aukko Porta Pian viereen. Paaville tarjottiin omaa '
+            + 'pikkuvaltiota Vatikaanin kukkulalla, ja Pius IX kieltäytyi. '
+            + 'Vuoden 1871 takuulaki olisi antanut hänelle kuninkaan '
+            + 'arvoiset kunnianosoitukset ja oikeuden lähettää lähettiläitä, '
+            + 'mutta hän ei hyväksynyt sitäkään: lain voisi kumota sama '
+            + 'valta, joka sen antoi. Niinpä hän jäi Vatikaanin palatsiin '
+            + 'eikä poistunut sieltä — ei hän eikä yksikään hänen '
+            + 'seuraajistaan ennen vuotta 1929.',
+          selite: 'Pius IX vuonna 1875; hän oli tuolloin ollut viisi vuotta '
+            + 'poistumatta Vatikaanista.',
+          lahde: 'Adolphe Braun 1875, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Avaimenreikä, josta näkee kolmen valtion läpi',
+          tiedosto: 'Knights of Malta Keyhole, Aventine Hill, Rome (cropped).jpg',
+          teksti: 'Aventinuksen kukkulalla on pieni aukio, jonka toisella '
+            + 'laidalla on Maltan ritarikunnan villa. Sen portin keskellä on '
+            + 'avaimenreikä, ja siitä katsoo kolmen valtion läpi kerralla: '
+            + 'heti reiän takana on ritarikunnan puutarha, jolla on '
+            + 'Italiassa eksterritoriaalinen asema, puutarhan läpi kulkee '
+            + 'sypressien rajaama käytävä, ja käytävän päässä on '
+            + 'täydellisesti rajautuneena Pietarinkirkon kupoli '
+            + 'Vatikaanissa. Portin suunnitteli vuonna 1765 Giovanni '
+            + 'Battista Piranesi, kuparipiirrostaiteilija, joka piti itseään '
+            + 'ennen kaikkea arkkitehtina. Puutarha sai '
+            + 'eksterritoriaalisen asemansa 1869.',
+          selite: 'Maltan ritarikunnan portin avaimenreiästä avautuu '
+            + 'sypressikäytävä ja sen päässä Pietarinkirkon kupoli.',
+          lahde: 'Galen Crout, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kissalauma asuu temppelissä',
+          tiedosto: 'Cat Sanctuary, Cats, Largo di Torre Argentina, Rome - 398 (19257774921).jpg',
+          teksti: 'Kun Roomaa rakennettiin uusiksi ja korttelia purettiin '
+            + 'vuonna 1927, maasta tuli esiin jättiläispatsaan pää ja '
+            + 'käsivarret. Alta löytyi neljä tasavallan ajan temppeliä ja '
+            + 'pala Pompeiuksen teatteria — ja se paikka, jossa Julius '
+            + 'Caesarin uskotaan tulleen murhatuksi. Kaivauskuoppaan alkoi '
+            + 'kerääntyä kulkukissoja, ja ne asuvat siellä yhä: temppeli '
+            + 'D:n kohdalla toimii kissasuoja, jota on 1950-luvulta lähtien '
+            + 'pidetty yllä avaimella, joka on kulkenut näyttelijältä '
+            + 'toiselle. Vuonna 2012 arkeologiviranomaiset vaativat suojan '
+            + 'häätöä; vetoomukseen kerättiin yli 30 000 nimeä, ja kissat '
+            + 'jäivät.',
+          selite: 'Largo di Torre Argentinan kuopan pohjalla on neljä '
+            + 'tasavallan ajan temppeliä, ja niiden raunioissa asuu '
+            + 'kissasuoja.',
+          lahde: 'Andy Rusch, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Largo di Torre Argentinan kissasuojan hoito siirtyi '
+          + '1950-luvulta lähtien ihmiseltä toiselle?',
+        vaihtoehdot: [
+          'tehtävä kuului aina raunioiden vartijalle',
+          'kaupunki nimitti hoitajan joka vuosi',
+          'avain kulki näyttelijältä toiselle',
+          'hoitaja arvottiin korttelin asukkaista',
+        ],
+        oikea: 2,
+        fakta: 'Suoja toimii temppeli D:n kohdalla. Vuonna 2012 sitä '
+          + 'vaadittiin häädettäväksi raunioiden suojelemiseksi, mutta '
+          + 'vetoomukseen kerättiin yli 30 000 nimeä.',
+      },
+    },
   ],
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa:
   // monivirkkeiset kuvatekstit tiivistetty yhteen virkkeeseen.
@@ -10292,6 +11299,72 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'JagaKRA, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö, kaupunkinostojen katto):
+     * syvennystarina `syvennys-krakova-wawel` ja täkynosto
+     * `nosto-wieliczka` putosivat Krakovan nostoruuhkasta.
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kukkula, jota isoisän matkavuonna käytettiin itävaltalaisena '
+        + 'kasarmina, ja kaivos, jonka pohjalle veistettiin kirkkosali '
+        + 'siitä, mikä oli louhittu pois.',
+      nostot: [
+        {
+          otsikko: 'Wawel oli kasarmi ennen kuin siitä tuli museo',
+          tiedosto: 'Krakow - Wawel and Old Town from balloon.jpg',
+          teksti: 'Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia '
+            + 'täynnä, ja linna seisoo 228 metrissä Veikselin rannalla. '
+            + 'Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, '
+            + 'vaikka pääkaupunki siirtyi Varsovaan jo 1596. Vuoden 1795 '
+            + 'jaon jälkeen kukkula joutui Itävallalle, ja sotilaat '
+            + 'muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät '
+            + 'muurattiin umpeen ja rakennuksia purettiin. Vasta vuonna 1905 '
+            + 'keisari Frans Joosef käski joukkonsa pois. Kunnostus '
+            + 'rahoitettiin yleisellä keräyksellä, ja lahjoittajien nimet '
+            + 'kaiverrettiin tiiliin, joista muurattiin muuri pohjoisen '
+            + 'portin lähelle. Ne ovat siellä yhä ja niitä voi lukea.',
+          selite: 'Wawelin kukkula kohoaa Veikselin rannalla vanhankaupungin '
+            + 'eteläpuolella, ja se oli isoisän matkavuonna itävaltalainen '
+            + 'kasarmi.',
+          lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaivos, jonka pohjalle veistettiin kirkkosali',
+          tiedosto: 'Saint Kinga Chapel in Wieliczka Salt Mine.jpg',
+          teksti: 'Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, '
+            + 'jota on kaivettu 1200-luvulta lähtien; vanhin asiakirja on '
+            + 'vuodelta 1044. Juuri tämä suola kulki Krakovan kangashallin '
+            + 'läpi maailmalle. Suolakivi ei muuten ole valkoista vaan eri '
+            + 'sävyistä harmaata. Vuoteen 1871 mennessä kaivosta pidettiin '
+            + 'yhtenä maailman tuottoisimmista. Louhinta jatkui yhtäjaksoisesti '
+            + 'vuoteen 1996, jolloin suolan hinnan lasku ja veden nousu '
+            + 'lopettivat sen. Jäljelle jäi 287 kilometriä käytävää, 327 '
+            + 'metriä syvyyttä, järvi maan alla, neljä kappelia ja '
+            + 'kaivosmiesten veistämiä patsaita — kaikki samasta aineesta, '
+            + 'jota käytiin hakemassa pois.',
+          selite: 'Pyhän Kingan kappelin seinäreliefit, patsaat ja '
+            + 'kattokruunut on tehty Wieliczkan kaivoksen omasta '
+            + 'suolakivestä.',
+          lahde: 'Андрей Романенко, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Wawelin muurissa pohjoisen portin lähellä on tiiliä, joihin '
+          + 'on kaiverrettu nimiä. Keiden nimiä?',
+        vaihtoehdot: [
+          'linnassa palvelleiden sotilaiden',
+          'kunnostukseen rahaa antaneiden',
+          'kukkulalle haudattujen kuninkaiden',
+          'muurin ladoneiden kivimiesten',
+        ],
+        oikea: 1,
+        fakta: 'Kunnostus rahoitettiin yleisellä keräyksellä sen jälkeen, kun '
+          + 'keisari Frans Joosef oli 1905 käskenyt joukkonsa pois '
+          + 'kukkulalta.',
+      },
     },
   ],
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa:
@@ -13173,6 +14246,70 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö, kaupunkinostojen katto):
+     * syvennystarinat `syvennys-moskova-elaintarha` ja `-nayttely1872`
+     * putosivat Moskovan nostoruuhkasta. Ne kuuluvat yhteen: molempien
+     * takana oli yliopiston professorien seura.
+     */
+    {
+      id: 'tiede',
+      nimi: 'Tiede ja museot',
+      johdanto: 'Moskovan eläintarhan ja polyteknisen museon takana olivat '
+        + 'samat miehet: yliopiston professorit, jotka keräsivät rahat '
+        + 'jäsenmaksuilla ja pystyttivät molemmat ilman keisaria.',
+      nostot: [
+        {
+          otsikko: 'Eläintarha kerättiin viiden ruplan jäsenmaksuilla',
+          tiedosto: '1900th-MoscowZoo.jpg',
+          teksti: 'Yliopiston professorit olivat puuhanneet eläintarhaa '
+            + 'vuodesta 1857, keränneet rahat viiden ruplan jäsenmaksuilla '
+            + '— jäseniä oli 1862 jo yli seitsemänsataa — ja saaneet 1863 '
+            + 'maata Presnjan lammikoilta. Tarha avattiin 31. tammikuuta '
+            + '1864. Alussa oli seitsemän rakennusta ja vajaat kolmesataa '
+            + 'eläintä, enimmäkseen lahjoitettuja: 57 nisäkäslajia ja 53 '
+            + 'lintulajia, joukossa tiikereitä, leopardeja, seepra ja yksi '
+            + 'sarvikuono. Pääsy maksoi juhlapäivinä kymmenen kopeekkaa, '
+            + 'tavallisina päivinä kaksikymmentä ja torstaisin viisikymmentä '
+            + '— halvimmalla pääsi sisään silloin, kun kaikilla muillakin '
+            + 'oli vapaata.',
+          selite: 'Moskovan eläintarha avattiin 31. tammikuuta 1864 Presnjan '
+            + 'lammikoilla, ja se on yhä samalla paikalla.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Näyttely, josta jäi museo',
+          tiedosto: '(05) Москва. Политехническая выставка. Главный вход. 1872г e1t3.jpg',
+          teksti: 'Kesällä 1872 Moskova oli yhtä suurta näyttelyä: koko '
+            + 'Venäjän teknillinen näyttely järjestettiin Pietari Suuren '
+            + 'syntymän kaksisataavuotispäivän kunniaksi, ja sen takana oli '
+            + 'luonnontieteen, antropologian ja etnografian harrastajien '
+            + 'seura yliopiston professoreineen. Kaupunginvaltuusto oli '
+            + 'varannut edellisenä vuonna puoli miljoonaa ruplaa siihen, '
+            + 'mitä näyttelystä jäisi jäljelle. Kokoelmista koottiin museo, '
+            + 'joka avattiin 12. joulukuuta 1872 vuokratuissa huoneissa; '
+            + 'oman talonsa peruskivi laskettiin 1874 ja rakennus vihittiin '
+            + '30. toukokuuta 1877. Samana vuonna 1872 kaupunkiin tuli myös '
+            + 'ensimmäinen hevosten vetämä raitiovaunu.',
+          selite: 'Vuoden 1872 polyteknillisen näyttelyn pääsisäänkäynti oli '
+            + 'puinen paviljonki Voskresenskin aukion puolella.',
+          lahde: 'Tuntematon tekijä 1872, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka pani Moskovan eläintarhan pystyyn vuonna 1864?',
+        vaihtoehdot: [
+          'sirkusperhe, joka lopetti kiertämisen',
+          'keisari lahjaksi kaupungille',
+          'yliopiston professorien seura',
+          'kauppiaskilta omalla rahallaan',
+        ],
+        oikea: 2,
+        fakta: 'Rahat kerättiin viiden ruplan jäsenmaksuilla, ja jäseniä oli '
+          + '1862 yli seitsemänsataa. Pääsy maksoi juhlapäivinä kymmenen '
+          + 'kopeekkaa mutta torstaisin viisikymmentä.',
+      },
+    },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
   // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
@@ -13447,6 +14584,27 @@ export const KULTTUURI_KATEGORIAT = {
           musiikki: 'https://music.apple.com/fi/search?term=bulgarian%20folk%20gaida',
           musiikkiNimi: 'Bulgarialaista kansanmusiikkia Apple Musicissa',
         },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-sofia-pollopatsas` putosi Sofian
+         * ruuhkasta, ja sen sisältö on tässä lehtimittaan kirjoitettuna.
+         */
+        {
+          otsikko: 'Kaupungin kaimalla on pöllö kruunussa',
+          tiedosto: 'Sofia statue, Sofia (P1070773).jpg',
+          teksti: 'Nezavisimost-aukiolla, samalla jalustalla jolla ennen '
+            + 'seisoi Lenin, kohoaa nyt kahdeksanmetrinen kuparinen '
+            + 'naishahmo kuudentoista metrin korkuisella pylväällä. '
+            + 'Kuvanveistäjä antoi hänelle vallan tunnuksen, kruunun, ja '
+            + 'maineen tunnuksen, seppeleen. Kolmanneksi hän tarvitsi '
+            + 'viisauden tunnuksen ja valitsi pöllön. Patsas pystytettiin '
+            + 'joulukuun lopulla vuonna 2000 ja nimettiin kaupungin mukaan — '
+            + 'ja kaupunki taas on nimetty Pyhän Sofian kirkosta, jonka nimi '
+            + 'tarkoittaa kreikaksi Pyhää Viisautta.',
+          selite: 'Sofia-patsas seisoo Nezavisimost-aukiolla: kuparinen '
+            + 'hahmo on kahdeksan metriä korkea ja jalusta kuusitoista.',
+          lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
+        },
       ],
           /*
        * AVAUSKUVAT (19.8.2026): kolme etäisyyttä. Ilmasta auringon
@@ -13571,6 +14729,142 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Banitsa',
         },
       ],
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö). Sofian viereen kertyi seitsemän
+     * nostomerkkiä yli katon. Tämän sivun jutut ovat karsittujen merkkien
+     * omaa sisältöä: `nosto-areena` (täkynosto, sama tarina kuin
+     * syvennystarinalla `syvennys-sofia-areena`), `boyana` ja `moskeijat`
+     * (maan kohteet).
+     */
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kaupungin alla on roomalainen areena, sen laidalla 1200-luvun '
+        + 'freskot ja sen keskustassa aukko siinä, mihin seitsemän moskeijaa '
+        + 'seisoi vielä isoisän matkavuonna.',
+      nostot: [
+        {
+          otsikko: 'Areena löytyi hotellin perustuksista',
+          tiedosto: 'Amphitheatre of Serdica - General view.jpg',
+          teksti: 'Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, '
+            + 'johon oli kuvattu amfiteatterin julkisivu ja sen ohjelma: '
+            + 'krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli '
+            + 'aikoinaan seissyt roomalaisen Serdican portilla '
+            + 'mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli '
+            + 'täytynyt olla areena — mutta ei sitä, missä. Vastaus tuli '
+            + 'vasta 2004, kun keskustassa kaivettiin hotellin perustuksia. '
+            + 'Maasta nousivat portit liukuovineen, karhun ja villisian '
+            + 'luita ja satoja pronssikolikoita. Katsomoon oli mitoitettu '
+            + 'yli kahdellekymmenelletuhannelle. Kuudesosa areenasta '
+            + 'liitettiin hotellin pohjakerrokseen, ja sinne pääsee päivisin '
+            + 'maksutta.',
+          selite: 'Serdican amfiteatterista on jäljellä kuudesosa, ja se '
+            + 'sijaitsee hotellin pohjakerroksessa keskellä Sofiaa.',
+          lahde: 'Epaunov72, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kasvot, jotka maalattiin 1259',
+          tiedosto: 'Boyana Church 2 TB.JPG',
+          teksti: 'Sofian laidalla, Vitošan juurella, seisoo pieni Boyanan '
+            + 'kirkko — Unescon maailmanperintökohde vuodesta 1979. Kirkko '
+            + 'rakennettiin kolmessa vaiheessa 300 vuoden aikana, ja sen '
+            + 'kuuluisimmat freskot ovat vuodelta 1259: seinillä on 89 '
+            + 'kohtausta ja 240 ihmishahmoa. Lahjoittajaparin, '
+            + 'sebastokraattori Kaloyanin ja hänen vaimonsa Desislavan, '
+            + 'muotokuvia pidetään kirkon elävimpinä ja vaikuttavimpina '
+            + 'maalauksina.',
+          selite: 'Boyanan kirkko nousi Vitošan juurella kolmessa vaiheessa '
+            + '300 vuoden aikana.',
+          lahde: 'Todor Bozhinov, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Ukkosmyrsky peitti yön, jona seitsemän moskeijaa räjähti',
+          tiedosto: 'Banya bashi dhzamiya 19 vek.jpg',
+          teksti: 'Joulukuussa 1878, viisi vuotta isoisän käynnin jälkeen, '
+            + 'venäläiset sotilasinsinöörit räjäyttivät seitsemän Sofian '
+            + 'moskeijaa samana yönä; ukkosmyrsky peitti räjähdysten äänen. '
+            + 'Suurin osa kaupungin moskeijoista tuhoutui sodassa, ja suurin '
+            + 'osa muslimiväestöstä lähti kaupungista sen jälkeen. Jäljelle '
+            + 'jäi Banja Bashi, kaupungin ainoa yhä toimiva moskeija, joka '
+            + 'seisoo kuumien lähteiden päällä keskellä samaa korttelia kuin '
+            + 'synagoga ja kaksi kirkkoa.',
+          selite: 'Banja Bashi on Sofian ainoa yhä toimiva moskeija, ja se '
+            + 'valmistui vuonna 1566.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä toi Serdican amfiteatterin takaisin päivänvaloon '
+          + 'vuonna 2004?',
+        vaihtoehdot: [
+          'Perlovska-joen tulva',
+          'keskustan maanjäristys',
+          'hotellin perustustyöt',
+          'metrotunnelin louhinta',
+        ],
+        oikea: 2,
+        fakta: 'Löytöä ei peitetty: kuudesosa areenasta liitettiin hotellin '
+          + 'pohjakerrokseen, ja se on päivisin vapaasti katsottavissa.',
+      },
+    },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö): kohde `vitosa` ja syvennystarina
+     * `syvennys-sofia-elaintarha` putosivat samasta ruuhkasta.
+     */
+    {
+      id: 'luonto',
+      nimi: 'Vuori ja eläintarha',
+      johdanto: 'Sofian etelälaidalla vuori alkaa viimeisen bussipysäkin '
+        + 'takaa, ja neljän kilometrin päässä keskustasta on Kaakkois-Euroopan '
+        + 'vanhin eläintarha, joka alkoi yhdestä ainoasta linnusta.',
+      nostot: [
+        {
+          otsikko: 'Vuori bussipysäkin takana',
+          tiedosto: 'Mount Vitosha (1) (37642153771).jpg',
+          teksti: 'Vitoša kohoaa aivan Sofian kupeessa ja on kaupungin '
+            + 'tunnetuin maamerkki — lähin retkeily-, kiipeily- ja '
+            + 'hiihtokohde, jonne pääsee bussilla ja hissillä keskustasta. '
+            + 'Vuori syntyi tulivuoritoiminnasta ja on muotoutunut '
+            + 'vuosimiljoonien poimutuksissa neljäksi toisiinsa liittyväksi '
+            + 'osaksi. Sen huippu Cherni Vrah, musta huippu, kohoaa 2 290 '
+            + 'metriin. Vitošan luonnonpuisto perustettiin 1934, ja se oli '
+            + 'Balkanin ensimmäinen laatuaan.',
+          selite: 'Vitošan luonnonpuisto perustettiin 1934 ensimmäisenä koko '
+            + 'Balkanilla.',
+          lahde: 'Hans Birger Nilsen, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Eläintarha, joka alkoi yhdestä linnusta',
+          tiedosto: 'Азиатски слон.jpg',
+          teksti: 'Kaakkois-Euroopan vanhin ja suurin eläintarha ei alkanut '
+            + 'leijonista. Kuninkaallinen asetus perusti sen 1. toukokuuta '
+            + '1888, ja aluksi se sijaitsi kuninkaanpalatsin puistossa. Koko '
+            + 'kokoelma oli tuolloin yksi asukas: Bulgariasta pyydystetty '
+            + 'musta korppikotka, joka istui häkissään puutarhassa. Vasta '
+            + 'kun karhupari ei enää mahtunut vanhoihin tiloihin, tsaari '
+            + 'Ferdinand lahjoitti tarhalle uuden maa-alueen entisen '
+            + 'kasvitieteellisen puutarhan paikalta. Sinne se jäi, runsaan '
+            + 'neljän kilometrin päähän keskustasta etelään.',
+          selite: 'Sofian eläintarha on Kaakkois-Euroopan vanhin ja suurin, '
+            + 'ja se perustettiin 1. toukokuuta 1888.',
+          lahde: 'Κλυτίος, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä eläin muodosti yksinään koko Sofian eläintarhan sen '
+          + 'ensimmäisenä vuonna?',
+        vaihtoehdot: [
+          'kaksi Balkanvuorilta tuotua karhua',
+          'tsaarin lahjoittama norsu',
+          'Bulgariasta pyydystetty korppikotka',
+          'kuninkaanpalatsin puistossa asunut kettu',
+        ],
+        oikea: 2,
+        fakta: 'Eläintarha perustettiin kuninkaallisella asetuksella 1. '
+          + 'toukokuuta 1888. Nykyiselle paikalleen se muutti vasta, kun '
+          + 'karhupari ei enää mahtunut palatsin puistoon.',
+      },
     },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
@@ -13867,6 +15161,23 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Alexandru Pănoiu, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Bukarest',
         },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * täkynosto `nosto-dracula` putosi Bukarestin nostoruuhkasta.
+         */
+        {
+          otsikko: 'Dracula syntyi alaviitteestä',
+          tiedosto: 'Stoker Dracula Notes Personal.jpg',
+          teksti: 'Bram Stoker kiersi teatterikiertueilla maailmaa muttei '
+            + 'koskaan käynyt Itä-Euroopassa. Muistiinpanoissa romaani oli '
+            + 'sijoitettu Styriaan ja kreivin nimi oli Count Wampyr. Nimen '
+            + 'Dracula hän poimi William Wilkinsonin vuoden 1820 Valakian ja '
+            + 'Moldavian historiasta ja kopioi kirjasta alaviitteen, jonka '
+            + 'mukaan Dracula tarkoittaa paholaista. Vlad Seivästäjää ei '
+            + 'mainita muistiinpanoissa lainkaan.',
+          selite: 'Bram Stokerin omat muistiinpanot romaaninsa henkilöistä.',
+          lahde: 'Bram Stoker ennen 1897, Wikimedia Commons (public domain)',
+        },
       ],
       /*
        * AVAUSKUVAT: omistajan ChatGPT-herot 26.8.2026 (viiteankkuroitu
@@ -13931,7 +15242,8 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'tiede',
       nimi: 'Tiede ja keksinnöt',
       johdanto: 'Bukarestissa aseteltiin maailman ensimmäiset dioraamat museon '
-        + 'saliin ja rakennettiin lentokone, jota ohjattiin ratilla.',
+        + 'saliin, rakennettiin lentokone, jota ohjattiin ratilla, ja '
+        + 'kuvattiin ensimmäiset sotavalokuvat pimiövaunusta käsin.',
       tehtava: {
         kysymys: 'Missä Aurel Vlaicu menestyi Wienin lentoviikolla 1912?',
         vaihtoehdot: ['Nopeuskilpailussa', 'Pisimmässä yölennossa', 'Tarkkuuslaskussa', 'Korkeuslennossa'],
@@ -13974,6 +15286,30 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kallistamalla rattitankoa sivulle.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Lentokone',
+        },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-bukarest-szathmari` putosi
+         * nostoruuhkasta ja kuuluu tälle sivulle — maailman ensimmäinen
+         * sotavalokuvaaja oli bukarestilainen studionpitäjä.
+         */
+        {
+          otsikko: 'Maailman ensimmäinen sotavalokuvaaja piti studiota täällä',
+          tiedosto: 'Kırım Savaşı, Türk piyadeleri 1854 senesi.jpg',
+          teksti: 'Carol Popp de Szathmari muutti Bukarestiin 18-vuotiaana ja '
+            + 'avasi kaupallisen valokuvausstudion vuonna 1850. Häntä '
+            + 'pidetään romanialaisen valokuvauksen perustajana — ja '
+            + 'maailman ensimmäisenä sotavalokuvaajana. Vuodesta 1853 hän '
+            + 'kuvasi Tonavan rannoilla sekä turkkilaisia että venäläisiä '
+            + 'joukkoja, komentajia ja linnoituksia Krimin sodassa; '
+            + 'märkälevyjen kehittämistä varten hän oli rakentanut vaunuun '
+            + 'pimiön. Studion asiakkaina oli molempien armeijoiden '
+            + 'upseereita, ja juuri se avasi hänelle pääsyn leireihin. '
+            + 'Vuonna 1855 hän vei albuminsa Pariisin maailmannäyttelyyn ja '
+            + 'sai kuningatar Victorialta kultamitalin.',
+          selite: 'Turkkilaista jalkaväkeä vuonna 1854 Carol Szathmarin '
+            + 'Krimin sodan kuvasarjassa.',
+          lahde: 'Carol Szathmari 1854, Wikimedia Commons (public domain)',
         },
       ],
     },
@@ -14668,6 +16004,30 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sähkövaloilla varustettu rakennus.',
           lahde: 'Assedo, Wikimedia Commons (PD)',
           wiki: 'Odessan kansallinen akateeminen ooppera- ja balettiteatteri',
+        },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-odessa-kuyalnyk` putosi Odessan
+         * nostoruuhkasta.
+         */
+        {
+          otsikko: 'Lahti, joka on suolaisempi kuin meri',
+          tiedosto: 'Desert in the Kuyalnik Estuary valley.jpg',
+          teksti: 'Kahdeksan kilometrin päässä keskustasta pohjoiseen on '
+            + 'vesi, joka ei ole meri eikä järvi. Kuyalnykin lahti on '
+            + 'kaksikymmentäkahdeksan kilometriä pitkä ja keskimäärin metrin '
+            + 'syvyinen. Se oli aikoinaan joen suu, sitten merenlahti, ja '
+            + 'noin 1300-luvulla hiekka kasautui sen ja meren väliin '
+            + 'kannakseksi. Siitä lähtien vesi on haihtunut pääsemättä '
+            + 'minnekään: suolapitoisuus on mittausten mukaan vaihdellut 29 '
+            + 'ja 269 promillen välillä. Näin suolaisessa vedessä elää '
+            + 'bakteerien lisäksi vain kaksi lajia, ja lisääntymisaikaan '
+            + 'pikkuäyriäisiä on niin paljon, että koko veden sävy kääntyy '
+            + 'punertavaksi. Kylpylä perustettiin rannalle jo 1834.',
+          selite: 'Kuyalnykin lahden yläpää kuivuu kesäisin suolaerämaaksi, '
+            + 'ja pohjalle jäävä suola on ollut kaupungin tulonlähde '
+            + 'keskiajalta asti.',
+          lahde: 'Yuriy Kvach, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       /*
@@ -22439,6 +23799,30 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ihmishahmoa vuosina 1929–1943.',
           lahde: 'The original uploader was DIMSFIKAS at Greek Wikipedia, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Vigelandin puisto',
+        },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-oslo-unionilippu` putosi Oslon
+         * nostoruuhkasta.
+         */
+        {
+          otsikko: 'Lipun kannossa oli silakkasalaatti',
+          tiedosto: 'LAROUSSE - H.Chartier (1859-1924) SUÈDE ET NORVÈGE Armes, drapeaux, armee (Sweden and Norway historical Coat of arms, flags 1890s) Nouveau Larousse Illustré Paris 1898-1901 Vol 07 (detail).jpg',
+          teksti: 'Norjan nykyinen lippu suunniteltiin jo 1821; sen teki '
+            + 'suurkäräjien jäsen Fredrik Meltzer, ja hän perusteli '
+            + 'punaista, valkoista ja sinistä sillä, että ne merkitsivät '
+            + 'silloin vapautta. Sillä lipulla sai kuitenkin purjehtia vain '
+            + 'pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli '
+            + 'käytettävä unionin yhteistä kauppalippua, koska suoja '
+            + 'Pohjois-Afrikan kaappareilta tuli Ruotsin maksamana. Vuonna '
+            + '1844 molempien maiden lippujen kantoon pantiin yhteinen '
+            + 'unionimerkki, joka jakoi värit tasan. Kansa antoi sille nimen '
+            + 'sildesalaten, silakkasalaatti. Kauppalipun kannosta merkki '
+            + 'katosi vuoden 1899 lopussa.',
+          selite: 'Ruotsin ja Norjan lipuissa oli unionin viimeisinä vuosina '
+            + 'kummassakin sama unionimerkki, jossa maiden värit on jaettu '
+            + 'tasan.',
+          lahde: 'Henri-Georges Chartier, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
           /*
@@ -56634,6 +58018,30 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Florance, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Bitter orange',
         },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * täkynosto `nosto-velazquezin-oppivuodet` putosi Sevillan
+         * nostoruuhkasta.
+         */
+        {
+          otsikko: 'Kaupungin poika maalasi vedenmyyjiä',
+          tiedosto: 'El aguador de Sevilla, por Diego Velázquez.jpg',
+          teksti: 'Diego Velázquez kastettiin Sevillan Pyhän Pietarin '
+            + 'kirkossa 6. kesäkuuta 1599, ja perhe eli vaatimattomasti. '
+            + 'Yksitoistavuotiaana hänet pantiin oppiin maalari Francisco '
+            + 'Pachecon pajaan kuudeksi vuodeksi, ja huhtikuussa 1618 hän '
+            + 'nai opettajansa tyttären Juanan. Ne työt, jotka hän tuolloin '
+            + 'teki, eivät olleet kuninkaita eivätkä pyhimyksiä vaan '
+            + 'keittiöitä: vanha nainen paistamassa munia, poika kantamassa '
+            + 'vesiruukkua. Filip IV istui hänelle 30. elokuuta 1623, ja '
+            + 'kreivi-herttua Olivares antoi määräyksen: Velázquez muuttaa '
+            + 'Madridiin eikä kukaan muu enää maalaa kuningasta. Sevillaan '
+            + 'hän ei palannut asumaan.',
+          selite: 'Sevillan vedenmyyjä on Velázquezin sevillalaiskauden '
+            + 'keittiökuvien huippu, maalattu ennen kuin tekijä oli '
+            + 'täyttänyt kahtakymmentäviittä.',
+          lahde: 'Diego Velázquez n. 1620, Wikimedia Commons (public domain)',
+        },
       ],
       matkailijalle: {
         kuva: {
@@ -56875,6 +58283,30 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kauppansa katedraalin viileissä holveissa.',
           lahde: 'Jl FilpoC, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'General Archive of the Indies',
+        },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * täkynosto `nosto-italica-amfiteatteri` putosi Sevillan
+         * nostoruuhkasta.
+         */
+        {
+          otsikko: 'Amfiteatterin muurit purettiin padoksi',
+          tiedosto: 'Anfiteatro de Itálica (32833418441).jpg',
+          teksti: 'Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, '
+            + 'jonka Scipio perusti vuonna 206 eaa. haavoittuneille '
+            + 'veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen '
+            + 'roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi '
+            + 'Rooman keisaria, Trajanus ja Hadrianus. Kaupungin '
+            + 'amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: '
+            + 'siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui '
+            + 'arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään '
+            + 'sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja '
+            + 'vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit '
+            + 'purettaviksi — kiviä tarvittiin Guadalquiviriin '
+            + 'rakennettavaan patoon.',
+          selite: 'Itálican amfiteatterista on jäljellä se osa, jota ei '
+            + 'louhittu rakennuskiveksi.',
+          lahde: 'Emilio J. Rodríguez Posada, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },
