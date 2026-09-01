@@ -206,7 +206,8 @@ export async function keraaSisalto(
    */
   if (karsintaPaalla) {
     const karsinta = karsiRinnakkaiset(reitit);
-    console.log(`  reittikarsinta: ${karsinta.katkottuja} reittiä lyhenee, `
+    console.log(`  reittikarsinta: ${karsinta.pudotettuja} reittiä pois kuvasta, `
+      + `${karsinta.katkottuja} lyhenee, `
       + `${(100 * karsinta.karsittu / karsinta.pituus).toFixed(1)} % viivasta ja `
       + `${karsinta.karsitutAskelmat}/${karsinta.askelmat} askelhelmeä jää polttamatta `
       + '(sama korridori piirretään kerran)');

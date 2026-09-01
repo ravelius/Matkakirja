@@ -853,15 +853,21 @@ function lisaaJana(joukko, mitat, ax, ay, bx, by, m) {
  *
  *   reitti  solmuheitto 0,60 + vapina 0,35 + katkon sivu 0,55
  *           + kaari 0,95 + puoli veton leveyttä
- *           (4,0 · 1,12 / 2 = 2,24)                          = 4,69
- *   helmi   säde 5,6 + puoli kehää (2,4 / 2)                 = 6,80
+ *           (9,0 · 1,12 / 2 = 5,04)                          = 7,49
+ *           MUTTA helmi ankkuroituu katkon keskelle VIIVALLE
+ *           (maailmapiirto.js "HELMI KATKON KESKELLE"), joten
+ *           korridorin on katettava myös helmen ulottuma
+ *           säde 15 + puoli kehää (9,0 / 2 = 4,5)            = 19,5
+ *   helmi   ankkuri voi siirtää helmen jopa puoli jaksoa
+ *           (190 / 2 = 95) pitkin viivaa raakapaikastaan:
+ *           19,5 + 95                                        = 114,5
  *   raja    puoli veton leveyttä (1,8 / 2)                   = 0,90
  *
  * LENTOREITTEJÄ EI OLE ENÄÄ LISTASSA: ne eivät ole viivatasolla
  * lainkaan (ks. LENNOT EIVÄT OLE VIIVATASOLLA).
  */
 const ULOTTUMA = {
-  reitti: 4.8, helmi: 6.9, raja: 1.0,
+  reitti: 19.7, helmi: 115, raja: 1.0,
 };
 /** Patinan musteen ulottuma laatan reunan yli (sama kuin nostolla). */
 const VIIVA_MARGINAALI_PX = NOSTO_MARGINAALI_PX;

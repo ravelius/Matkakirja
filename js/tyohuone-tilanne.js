@@ -55,6 +55,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1420: REITTIEN KATKOTYYLI VALMIS - katkoviiva viiva 9 / jakso 190, askelhelmi katkon keskella (viiva ei koskaan osu helmeen), rinnakkaiset merireitit yhdistyvat yhdeksi uraksi liittymasilloilla (~90 % rinnakkaismusteesta pois, mm. Dakarin ja Rooman edustat). Nakyy kartalla vasta uuden viivatasopolton jalkeen. Katso Joonianmeri ja Dakar poltosta.',
   'v1419: KAUPUNKINOSTOJEN KATTO - kohdekaupungin viereen jaa enintaan 3 nostoa, ihmeet ja skandaalit ensin (Sofia 9->3, Ateena 10->3, Istanbul 9->3); muut siirtyvat kaupunkilehtiin erillisessa erassa. Nakyy kartalla vasta uuden nostopolton jalkeen (vanha taso piilossa v3-saantoon asti). Avaa Sofia ja laske merkit.',
   'v1418: ULOSZOOM RAJATTU - loitonnus pysahtyy ennen kuin kartan ulkopuolista tyhjaa tilaa tulee nakyviin: kartta peittaa aina koko ruudun, joten pystynaytolla koko maailmaa ei nae kerralla vaan sivuille jaa panoroitavaa. Kehittajan vapaa maailmanappi ja katselutila ohittavat rajan. Kokeile loitontaa pohjalle iPhonella.',
   'v1417: NOSTOKORTIN KUVA KOKONAAN - kortin kuva ei enaa leikkaudu (pystykuva kapenee keskelle, sivuille jaa tyhjaa), kortti saa olla korkeampi, ja minivisa kertoo ennen vastaamista etta oikeasta vastauksesta saa 50 puntaa. Avaa Sofian pollopatsas-kortti ja katso kuva + visa.',
