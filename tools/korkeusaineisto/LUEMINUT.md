@@ -110,3 +110,90 @@ kohinaa, joten alle metrin tarkkuudella ei ole vastinetta missään
 näkyvässä.
 
 Häviöttömyys todennettu koko aineistolla: 25 930 801 solua, 0 eroa.
+
+---
+
+# 1′-PALAT — `korkeus/1min/` (omistajan kokeilu 1.9.2026)
+
+**Ei repossa. Ei koskaan repoon.** Nämä palat viedään R2-ämpäriin ja
+peli hakee ne sieltä.
+
+## Mikä tämä on
+
+ETOPO1:n **natiivi yksi kaariminuutti** 10° × 10° -paloina, 600 × 600
+solua palassa. Peli laskee niistä rinnevarjon reaaliajassa ja piirtää
+sen laattojen päälle (js/korkeuskerros.js, js/korkeus-worker.js) —
+omistajan sanatarkka tilaus: *"korkeusdatan 1′-ajoa simuloidaan
+liverenderöinnillä pelissä: ensin haetaan normaali pohja laatoista ja
+sitten peli rakentaa reaaliajassa tarkemman korkeusvarjostuksen."*
+
+Tämä ei kumoa yllä olevaa 3′-linjausta. Pohjalaatoissa varjo on yhä
+poltettu kolmesta kaariminuutista; 1′-kerros on kehittäjän KOKEILU sen
+päällä, ja lopullinen ratkaisu on pohjan uusintapoltto.
+
+## Miten
+
+```
+# Muutama pala (koeajo: Alpit, Kreikka, Andit):
+node tools/tee-korkeuspalat.mjs --koeajo --ulos korkeus/1min
+
+# Nimetyt palat:
+node tools/tee-korkeuspalat.mjs --palat N40E000,N30E020 --ulos korkeus/1min
+
+# Koko maailma (648 palaa):
+node tools/tee-korkeuspalat.mjs --ulos korkeus/1min
+```
+
+Vienti ämpäriin: `.github/workflows/vie-korkeuspalat.yml`
+(workflow_dispatch; syötteet `lahde` = ncei|erddap, `koeajo`, `palat`).
+Julkinen juuri
+`https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/julisteet/korkeus/1min/`.
+
+## Muoto
+
+Sama resepti kuin 3′-tiedostolla: yksi gzip, jonka sisällä otsikko ja
+rivikohtaisesti erotuskoodattu Int16-runko.
+
+| kenttä | tavua | arvo |
+| --- | --- | --- |
+| tunnus | 4 | `MK1P` |
+| lon0 | 8 | float64 LE — palan LOUNAISNURKKA |
+| lat0 | 8 | float64 LE — palan lounaisnurkka |
+| ruutu | 8 | float64 LE — 1/60 |
+| leveys | 4 | uint32 LE — 600 |
+| korkeus | 4 | uint32 LE — 600 |
+| runko | 2 × n | Int16 LE, rivikohtainen erotus |
+
+Suunnat ovat samat kuin 3′-aineistolla: **y = 0 on palan eteläreuna**
+ja y kasvaa pohjoiseen, x = 0 on länsireuna ja x kasvaa itään. Solu
+(x, y) on hilapiste lon = lon0 + x/60, lat = lat0 + y/60.
+
+Palat **eivät mene päällekkäin**: solu lon0 + 10° kuuluu jo seuraavaan
+palaan. Reunan yli menevä bilineaarinen näyte tarvitsee siis
+naapuripalan, ja selainkerros kokoaa näytteenottajansa kaikista
+ladatuista paloista.
+
+Nimi on lounaisnurkka: `N40E020`, `S30W070` (leveys kahdella ja pituus
+kolmella numerolla, kuten SRTM-laatoilla).
+
+## Mitattu (1.9.2026, tässä kontissa, NCEI-lähde)
+
+| asia | luku |
+| --- | --- |
+| lähdezip (etopo1_ice_g_i2.zip) | 322 Mt |
+| purettu binääri | 467 Mt |
+| pala pakattuna | 320–414 kt (8 palan otos Välimereltä ja Alpeilta) |
+| suhde raakaan Int16:een | 54–56 % |
+| pilkkomisnopeus | 8 palaa 0,6 s (binääri jo levyllä) |
+| koko maailma (arvio otoksesta) | 648 palaa, ~150–250 Mt |
+
+Yksi z7-näkymä osuu 1–4 palaan (mitattu savukkeella: Kroatia–Bosnia
+neljä palaa, varjokuva 1308 × 1223 px, workerin laskuaika 0,2–1,0 s).
+
+## Lähde ja lisenssi
+
+Sama kuin yllä: NOAA NGDC ETOPO1 Global Relief Model, Ice Surface,
+public domain. Binäärilähde
+`https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO1/data/ice_surface/grid_registered/binary/etopo1_ice_g_i2.zip`
+(vastasi tästä kontista 1.9.2026; ajokoneelta EI ole kokeiltu — työnkulku
+tarkistaa sen ensimmäisenä ja kaatuu äänekkäästi jos ei vastaa).

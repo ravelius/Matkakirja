@@ -187,8 +187,13 @@ function valitsin(nimi, oletus) {
  * eikä sen työkalupakkikaan ota niitä ilman syytä.
  *
  * Lainattu hae-topografia.mjs:stä sellaisenaan.
+ *
+ * VIETY ULOS 1.9.2026: tools/tee-korkeuspalat.mjs lukee ERDDAPin
+ * vastaukset samalla lukijalla. Kolmas kopio samasta muodosta olisi
+ * ollut kolmas paikka, josta netCDF-3:n tavujärjestys voi mennä
+ * väärin — ja se virhe ei näy muuna kuin outona maastona.
  */
-function lueNetCDF(buf) {
+export function lueNetCDF(buf) {
   if (buf.toString('latin1', 0, 3) !== 'CDF') throw new Error('ei ole netCDF-3-tiedosto');
   const versio = buf[3];
   let p = 4;
