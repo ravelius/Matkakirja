@@ -1,3 +1,68 @@
+## 1.9.2026 18:55 UTC — FABLEN TILANNEMUISTIO (reset 2 jatkuu) + KUVATILAUS E1: kaksi uutta eläintäkyä
+
+TILANNE: origin/main = v1428 (fd02e043). Tänä iltana julkaistu v1427
+(kaupunkikaton pudottamat syvennystarinat lehdissä, savuke-fokuskohteet
+110/110 katon mukaisena) ja v1428 (omistajan päätös: Vanin kissa -kohde
+ja Livnon villihevoset -syvennys jäävät, päällekkäiset eläintäyt TUR ja
+BIH pois; eläintäkyjä 27 maassa).
+
+POLTTOKETJU VALMIS patinatta: pohja 2026-09-01e (rerun onnistui 18:21
+UTC) → nosto 2026-09-01f (ajo 33543557200, ok 18:29) → viiva 2026-09-01g
+(ajo 33544143068, ok 18:36). pyramidi.json: versio=2026-09-01e,
+patina=ei, nostotaso 01f, viivataso 01g (rajat=nykyiset). Sofian seutu
+z7 (col 92–93, row 37–38) tarkistettu koosteena: pohja + viiva + nostot
+istuvat, paperi puhdas ilman patinaa. HUOM: muistion "Sofia z7 col 92
+row 32" oli Varsovan laatta — Sofia on z7 col 93 row 38.
+Omistaja päättää patinasta katsottuaan.
+
+### KUVATILAUS E1 — yleiskuvitussessiolle (posti/kuvatoimitus.md)
+
+Kaksi uutta eläintäkykuvaa, koska Bosnian ja Turkin eläimet poistuivat
+kaksoiskappaleina. Tyyli sama kuin muissa eläintäkykuvissa
+(assets/elaimet/elain-*.jpg: yksi eläin, lähikuva, luonnonvalo, ei
+tekstiä, ei ihmisiä), fotorealistinen (Raamattu 1.9.), yksi versio per
+kuva. Toimitus: 1536×1536 JPEG sRGB kuten muutkin; pelin puolelle Fable
+vie ne assets/elaimet/-polkuun tools/elaintakykuvat.mjs:llä (960 px),
+joten kerro postissa, mistä R2-polusta ne noudetaan (ei kuvadataa
+postiin).
+
+1. BIH — tornjak-pentu. "Tornjak, Bosnian oma paimenkoira, pentu
+   istuu Vlašić-vuoren kesälaitumella lampaiden luona; pitkä
+   valkopohjainen, tummatäpläinen turkki, uteliaat silmät; taustalla
+   dinaarinen vuoristoniitty, aamuvalo."
+2. TUR — angoravuohen kili. "Angoravuohen (Ankaran vuohi) kili
+   Anatolian ylängöllä; kiharainen, silkinvalkoinen mohair-turkki,
+   riippuvat korvat; taustalla kuiva arokumpu ja kaukainen kylä,
+   lämmin iltapäivävalo."
+
+Kaanonitekstit (otsikko, teksti, lähde, paikka) kirjoittaa Fable
+integroinnin yhteydessä; paikat: BIH Vlašić (n. 17,65E/44,30N), TUR
+Ankaran kaakkoispuoli (n. 33,3E/39,6N) — tests/elaintakyt.test.mjs
+tarkistaa maan rajat ja etäisyyden kaupunkeihin.
+
+### JATKOPROMPTI (jos muisti tyhjenee)
+
+1. POSTIKIERROS tunneittain (trig_01PVJLUsK6F9L92HR7hUCaQN, :19).
+   Odotettavat kuittaukset yleiskuvitussessiolta: K1 fotorealistinen
+   pohja käytössä + 3 Wien-kuvaa uusiksi; K2-skandaalikuvat 7 kpl
+   R2:ssa (kaulanauhajuttu-1785, vrain-lucas, lustig-eiffel,
+   elginin-marmorit, belokas-maratonhuijaus-1896,
+   osmanien-vararikko-1875, etelameren-kupla); E1-eläinkuvat 2 kpl.
+   Kun K2 vahvistettu → 7 skandaalin LEHTISIIRTO v1421-mallilla +
+   julkaisu. Kun E1 vahvistettu → BIH/TUR eläintäyt takaisin
+   (js/packs/elaintakyt.js huomautus kertoo mitä palautetaan; testit
+   ja savuke lukevat määrän aineistosta, 27 → 29).
+2. Polttoketjun herätys trig_01G8MJRUzsDC21B7WKqvFSPS (18:31) on
+   tehnyt tehtävänsä — jos se on yhä listalla, poista.
+3. SIIVOUS: vanhat worktreet (.claude/worktrees/agent-*, scratchpadien
+   julkaisu-reitit/julkaisu-valokuva/tyo-lehtinostot/julkaisu-sauma/
+   tyo-kerroin) ja haarat claude/reitit-katkotyyli, claude/valokuva-
+   kaatuma, tyo/lehtinostot, claude/laatan-kasvukatto,
+   claude/nostot-paikoilleen, worktree-agent-a6445ba10fda3c1ce — kaikki
+   julkaistu mainiin. Lupaluokitin estää ketjutetut `git worktree
+   remove` -komennot: poista yksi kerrallaan. Levy 87 %.
+4. Ei uusia päällekkäisiä herätyksiä; agentit enintään Opus.
+
 ## 1.9.2026 18:20 UTC — FABLEN TILANNEMUISTIO JA JATKOPROMPTI (reset 2, omistajan pyyntö)
 
 TILANNE: origin/main = v1426 (e3e88835). Tänään julkaistu tästä
