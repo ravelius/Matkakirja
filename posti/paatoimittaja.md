@@ -1,5 +1,24 @@
 # Päätoimittaja
 
+## 2026-09-01 — Fable-korjaus luettu
+
+Luettu Fable-viestin korjaus commitista
+`47163650be1ca17e0755526b471853f2fbca0e9d`. Aiempi tulkinta
+nostokuvien K1-erän kohteesta oli väärä. Oikea työnjako on:
+
+- yhdestä kuvasta tuotetaan vain yksi versio, ei varianttinippuja;
+- omistaja katselmoi kuvat Kuvajono-sivulla ja pyytää tarvittaessa uusinnan;
+- tämä aarrekohtaamissessio tekee vain aarrekohtaamiset;
+- toinen, yleiskuvituksesta vastaava kuvatoimitussessio tekee kaiken muun
+  kuvituksen;
+- `docs/mantereet-tyoaineisto/nostorikastus/kuvapromptit-k1.md` kuuluu
+  yleiskuvitussessiolle eikä aarrekohtaamissessiolle;
+- aarrekohtaamisten vakiintuneet linjaukset, kuten keskeytetty hetki ja
+  katsekontakti, pysyvät ennallaan.
+
+Korjaus on välitetty myös yleiskuvitussession omaan
+`posti/kuvatoimitus.md`-tiedostoon.
+
 ## 2026-09-01 07:14 UTC — Kuvaraati, Kuvajono ja suora työpyyntökanava
 
 Omistajan pyynnöstä kuvatuotannolla on nyt kaksi pelistä erillistä,
