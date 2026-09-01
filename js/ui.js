@@ -6894,6 +6894,29 @@ export class UI {
     this.kartta?.tarkistaFokusZoom?.();
   }
 
+  /**
+   * MAATUMMENNUKSEN KEHITTÄJÄKYTKIN päälle tai pois ilman sivulatausta.
+   *
+   * Omistaja 1.9.2026 ilta, sanatarkasti: *"kartan tummennuksen voisi
+   * ottaa pois päältä kehittäjä tilassa."*
+   *
+   * KAKSI KUTSUA, JA JÄRJESTYS ON EHTO. `paivitaMaatummennus` tekee
+   * työtä vain kun kerroksen tunniste muuttuu (js/maatummennus.js
+   * `tunniste`), ja tunniste on pelkkä maa — kytkimen vaihto ei
+   * muuta sitä, kun maa pysyy samana. `nollaaMaatummennus` tyhjentää
+   * siksi ensin sekä kerroksen että avaimen, jolloin seuraava kutsu
+   * joko latoo varjon uudelleen tai jättää sen pois sen mukaan, mitä
+   * kytkin sanoo.
+   *
+   * Muisti unohdetaan samasta syystä kuin maailmakytkimellä: savuke
+   * voi kirjoittaa avaimen suoraan levylle ja kutsua tätä perään.
+   */
+  paivitaKehittajaTummennus() {
+    unohdaKehittajaKytkimet();
+    nollaaMaatummennus(this);
+    paivitaMaatummennus(this);
+  }
+
   /* --- MERKKIKERROSTEN NÄKYMÄRAJAUS (mitattu 29.8.2026) ------------- */
 
   /**

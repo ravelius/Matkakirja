@@ -384,6 +384,46 @@ vaadi('1 eleen asetuttua kartalla on vain näkymän merkit',
   `näkyviä ${panTila.citiesNakyvia} / ${panTila.citiesSolmut}`);
 vaadi('2 rajaus on oikeasti piilottanut osan kerroksesta',
   panTila.rajattuja > 100, `rajattuja ${panTila.rajattuja}`);
+
+/* --- 2b: KEHITTÄJÄN TUMMENNUSKYTKIN --------------------------------
+ *
+ * Omistaja 1.9.2026 ilta, sanatarkasti: *"kartan tummennuksen voisi
+ * ottaa pois päältä kehittäjä tilassa."*
+ *
+ * Kytkinrivi on hammasratasvalikossa (index.html
+ * #kehittaja-tummennus-btn) ja kulkee viiden tiedoston läpi. Lähdepään
+ * ketjun vartioi tests/rules.test.mjs; tämä väite mittaa sen, mitä
+ * lähdekoodista ei näe: KERROS TYHJENEE JA PALAA HETI, ilman
+ * sivulatausta. Nappia klikataan suoraan DOMista, koska valikon avaus
+ * ei kuulu mitattavaan asiaan.
+ *
+ * Tila luetaan vasta pienen odotuksen jälkeen: paluu latoo polun
+ * uudelleen ja aineisto voi olla vielä matkalla (js/maatummennus.js
+ * lataaMaapolygonit).
+ */
+const tummennusPois = await sivu.evaluate(async () => {
+  document.getElementById('kehittaja-tummennus-btn')?.click();
+  return document.getElementById('kehittaja-tummennus-btn')?.getAttribute('aria-pressed');
+});
+await sivu.waitForTimeout(600);
+const poisTummennus = await tila();
+console.log(`      mitattu: tummennus pois -> ${poisTummennus.tummennusSolmut} solmua`
+  + ` (rivin tila aria-pressed=${tummennusPois})`);
+vaadi('2b kehittäjän kytkin ottaa maatummennuksen pois heti',
+  tummennusPois === 'false' && poisTummennus.tummennusSolmut === 0,
+  `solmuja ${poisTummennus.tummennusSolmut}, aria-pressed ${tummennusPois}`);
+
+const tummennusPaalle = await sivu.evaluate(async () => {
+  document.getElementById('kehittaja-tummennus-btn')?.click();
+  return document.getElementById('kehittaja-tummennus-btn')?.getAttribute('aria-pressed');
+});
+await sivu.waitForTimeout(900);
+const paalleTummennus = await tila();
+console.log(`      mitattu: tummennus takaisin -> ${paalleTummennus.tummennusSolmut} solmua`
+  + ` (rivin tila aria-pressed=${tummennusPaalle})`);
+vaadi('2c kytkin palauttaa tummennuksen ilman sivulatausta',
+  tummennusPaalle === 'true' && paalleTummennus.tummennusSolmut > 0,
+  `solmuja ${paalleTummennus.tummennusSolmut}, aria-pressed ${tummennusPaalle}`);
 // Tällä savukkeella mitattu: ennen 389 ms / 7 taskia, jälkeen 215 / 4.
 // (Omistajan omalla A/B-ajolla, jossa naapurilehti on kartalla, sama
 // ero on 799 → 475 ms.) Raja 350 kaatuu korjauksen katoamiseen mutta
