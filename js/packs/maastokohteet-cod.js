@@ -81,9 +81,10 @@ export const MAASTOKOHTEET_COD = [
     nimi: 'Kongo',
     tyyppi: 'joki',
     kysymykset: [
-      'Kuinka syvä joki voi olla?',
-      'Miksi Kongo ylittää päiväntasaajan kahdesti?',
+      'Miksi joki ylittää päiväntasaajan kahdesti?',
+      'Mistä nimi Kongo tulee?',
     ],
+    korostukset: ['Boyoman putoukset|Boyoman putousten'],
     nappi: 'Maailman syvin joki',
     // 18.3 E / 0 N — keskijuoksu Mbandakan kohdalla; en-Wikipedia "Congo River" antaa suulle 12,45 / -6,08
     laudat: {
@@ -91,11 +92,16 @@ export const MAASTOKOHTEET_COD = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Kongo on Afrikan toiseksi pisin joki heti Niilin jälkeen ja virtaamaltaan maailman '
-      + 'kolmanneksi suurin. Se on myös maailman syvin mitattu joki: syvimmillään vettä on noin '
-      + '220 metriä. Kongo on ainoa suuri joki, joka ylittää päiväntasaajan kahdesti, ja sen '
-      + 'valuma-alue kattaa noin 13 prosenttia koko Afrikan pinta-alasta.',
-    lahde: 'en-Wikipedia "Congo River", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Kongo on ainoa suuri joki, joka ylittää päiväntasaajan kahdesti — se kaartaa '
+      + 'pohjoiseen ja palaa takaisin etelään, ja siksi sen valuma-alueella sataa aina '
+      + 'jossakin. Se on myös maailman syvin mitattu joki: syvyyksiä on todettu noin 220 '
+      + 'metriä. Afrikan joista vain Niili on pidempi, ja virtaamaltaan Kongon ohittavat vain '
+      + 'Amazon sekä Ganges ja Brahmaputra yhdessä. Koko vesistö Chambeshistä alkaen on 4 700 '
+      + 'kilometriä pitkä, ja valuma-alue kattaa neljä miljoonaa neliökilometriä eli '
+      + 'kolmetoista prosenttia Afrikan maapinta-alasta. Boyoman putousten yläpuolella joen '
+      + 'nimi vaihtuu Lualabaksi. Nimi Kongo tulee joen eteläpuolella sijainneesta Kongon '
+      + 'kuningaskunnasta.',
+    lahde: 'en-Wikipedia "Congo River", johdanto-osa ja osio "Name" (tarkistettu 1.9.2026).',
   },
 ];
 

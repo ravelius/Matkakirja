@@ -35,9 +35,10 @@ export const MAASTOKOHTEET_SAU = [
     nimi: 'Jabal Sawda',
     tyyppi: 'vuori',
     kysymykset: [
-      'Voiko olla epäselvää, mikä on maan korkein vuori?',
-      'Miten vuori mitataan?',
+      'Kumpi on korkeampi, Jabal Sawda vai Jabal Ferwa?',
+      'Mikä on Soudah Peaks -hanke?',
     ],
+    korostukset: ['as-Sūda|as-Sūdan'],
     nappi: 'Kiistelty korkein kohta',
     // 42.3683 E / 18.2667 N — en-Wikipedia "Jabal Sawda"
     laudat: {
@@ -45,11 +46,16 @@ export const MAASTOKOHTEET_SAU = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Jabal Sawda Asirin ylängöllä on Saudi-Arabian virallisesti tunnustettu korkein kohta, '
-      + '3 015 metriä. Tosin vuoden 2018 mittaus antoi vain 2 999 metriä — hieman vähemmän kuin '
-      + 'naapurihuippu Jabal Ferwan 3 002 — joten aavikkovaltion katosta kiistellään yhä. '
-      + 'Huipulle pääsee köysiradalla läheisestä as-Sūdan kylästä.',
-    lahde: 'en-Wikipedia "Jabal Sawda", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Saudi-Arabian korkeimmalle huipulle pääsee köysiradalla — ja juuri siksi sen '
+      + 'korkeudella on väliä. Viranomaiset kirjaavat Jabal Sawdan maan korkeimmaksi kohdaksi, '
+      + '3 015 metriä, mutta vuoden 2018 mittaus antoi 2 999 metriä, jolloin naapuri Jabal '
+      + 'Ferwa kolmella metrillä ohittaisi sen. Virallinen luku on silti se, jonka mukaan '
+      + 'hanketta myydään: kruununprinssi ilmoitti syyskuussa 2023 Soudah Peaks -hankkeesta, '
+      + 'ylellisestä vuoristomatkailukohteesta juuri 3 015 metrin korkeudessa, jonka on määrä '
+      + 'tuoda kaksi miljoonaa matkailijaa vuoteen 2033 mennessä. Vuoren juurella on as-Sūdan '
+      + 'kylä, josta köysirata nousee.',
+    lahde: 'en-Wikipedia "Jabal as-Sūda", johdanto-osa ja osio "Soudah Peaks" (tarkistettu '
+      + '1.9.2026).',
   },
   {
     id: 'rubalkhali',

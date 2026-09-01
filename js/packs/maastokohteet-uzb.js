@@ -46,11 +46,15 @@ export const MAASTOKOHTEET_UZB = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Khazret Sultan on Uzbekistanin korkein kohta, 4 643 metriä, Gissarin vuoristossa '
-      + 'Tadžikistanin vastaisella rajalla. Neuvostoaikana sillä oli aivan toisenlainen nimi: '
-      + 'kommunistisen puolueen 22. puoluekokouksen huippu. Vuoren rinteiltä löydettiin '
-      + '1800-luvulla tieteelle uusia perhoslajeja.',
-    lahde: 'en-Wikipedia "Khazret Sultan", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Uzbekistanin korkein vuori on vaihtanut nimeä kerran ja saattaa pian menettää '
+      + 'arvonimensäkin. Neuvostoaikana huippu tunnettiin kommunistisen puolueen 22. '
+      + 'puoluekokouksen huippuna; nyt se on Khazret Sultan, 4 643 metriä, Gissarin vuoristossa '
+      + 'aivan Tadžikistanin rajalla. Korkeus on Neuvostoliiton vuoden 1980 mittauksesta, eikä '
+      + 'sitä ole korvattu — mutta vuonna 2025 vuorikiipeilijä Eric Gilbertson julkaisi '
+      + 'mittauksen, jonka mukaan toinen huippu, Alpomish, on maan korkein. Uzbekistanin '
+      + 'viranomaiset pitävät toistaiseksi kiinni vanhasta lukemasta. Rinteiltä on 1800-luvulla '
+      + 'löydetty tieteelle uusia perhoslajeja.',
+    lahde: 'en-Wikipedia "Khazret Sultan", johdanto-osa (tarkistettu 1.9.2026).',
   },
   {
     id: 'araljarvi',

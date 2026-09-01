@@ -80,9 +80,10 @@ export const MAASTOKOHTEET_TCD = [
     nimi: 'Chari',
     tyyppi: 'joki',
     kysymykset: [
-      'Kuinka pitkä Chari on?',
-      'Miksi järvi kuihtuisi ilman tätä jokea?',
+      'Miksi Tšad-järvi kutistuu?',
+      'Mikä on guineaanmato?',
     ],
+    korostukset: ['Logone|Logone'],
     nappi: 'Tšadjärven elinehto',
     // 15.05 E / 12.11 N — N'Djamena joen alajuoksulla; artikkelin koordinaatti 14,565 / 12,909 on suulla Tšadjärvellä
     laudat: {
@@ -90,11 +91,16 @@ export const MAASTOKOHTEET_TCD = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Chari on noin 1 400 kilometriä pitkä Keski-Afrikan joki ja Tšadjärven tärkein '
-      + 'vedentuoja: järven vesi tulee pääosin siitä ja sen monista sivujoista. Merkki on '
-      + 'pääkaupungin N\'Djamenan kohdalla, jonka ohi joki virtaa viimeisellä taipaleellaan '
-      + 'kohti järveä.',
-    lahde: 'en-Wikipedia "Chari River" ja "Lake Chad", johdanto-osat (tarkistettu 30.8.2026).',
+    teksti: 'Tšad-järvi on käytännössä yhden joen varassa: Charista tulee yhdeksänkymmentä '
+      + 'prosenttia sen vedestä. Joki virtaa 1 400 kilometriä Keski-Afrikan tasavallasta Tšadin '
+      + 'halki, seuraa Kamerunin rajaa N\'Djamenasta alkaen ja saa siellä pääsivujokensa '
+      + 'Logonen. Suurin osa Tšadin väestöstä asuu sen varrella, N\'Djamena ja Sarh mukaan '
+      + 'luettuina, ja joki elättää mittavan kalastuksen — arvostetuinta saalista on '
+      + 'niilinahven. Sen vedessä on myös vaaransa: Tšad on yksi neljästä maasta, joissa '
+      + 'guineaanmato yhä esiintyy, ja jäljellä olevat tapaukset keskittyvät juuri Charin '
+      + 'varrelle. Järven pelastamiseksi on 1960-luvulta asti kaavailtu veden kääntämistä '
+      + 'Ubangista Chariin.',
+    lahde: 'en-Wikipedia "Chari River", johdanto-osa ja osio "Geography" (tarkistettu 1.9.2026).',
   },
 ];
 

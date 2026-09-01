@@ -57,7 +57,7 @@ export const MAASTOKOHTEET_ITA = [
     tyyppi: 'meri',
     kysymykset: [
       'Keitä tyrrhenialaiset olivat?',
-      'Mitkä saaret ovat Tyrrhenanmerellä?',
+      'Miksi meren pohjassa on tulivuoria?',
     ],
     korostukset: ['etruskit|etruskeihin'],
     nappi: 'Meri, joka on nimetty etruskien mukaan',
@@ -66,10 +66,17 @@ export const MAASTOKOHTEET_ITA = [
       maailmankartta: { x: 6233.3, y: 1802.9 },
       europe: { x: 441.6, y: 841.6 },
     },
-    teksti: 'Tyrrhenanmeri on osa Välimerta Italian länsirannikolla. Sen nimi tulee '
-      + 'tyrrhenialaisista, jotka on samastettu Italian etruskeihin. Meri jää Apenniinien '
-      + 'niemimaan, Sardinian, Korsikan ja Sisilian väliin.',
-    lahde: 'en-Wikipedia "Tyrrhenian Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Italian länsirannikon merellä on omat vuorensa, ja osa niistä on yhä tulessa. '
+      + 'Tyrrhenanmeri makaa siinä, missä Afrikan ja Euraasian mannerlaatat kohtaavat: pohjassa '
+      + 'kulkee vuorijonoja ja niiden seassa toimivia tulivuoria, kuten Marsili, ja pinnan '
+      + 'yläpuolelle niistä yltävät Aiolian saaret ja Stromboli. Syvintä merta on 3 785 metriä. '
+      + 'Nimi tulee tyrrhenialaisista, jotka on samastettu etruskeihin — meri kantaa siis '
+      + 'kadonneen kansan nimeä ja jää Apenniinien niemimaan, Sardinian, Korsikan ja Sisilian '
+      + 'väliin. Tuhannen metrin syvyydessä avautuvasta Caprera-kanjonista on löytynyt '
+      + 'harvinaisia sieni- ja korallikasvustoja, ja samalla on todettu, että pohjatroolaus ja '
+      + 'liikenteen päästöt uhkaavat niitä eikä kanjoni ole suojeltu.',
+    lahde: 'en-Wikipedia "Tyrrhenian Sea", johdanto-osa sekä osiot "Geography", "Caprera Canyon" '
+      + 'ja "Geology" (tarkistettu 1.9.2026).',
   },
   {
     id: 'ligurianmeri',
@@ -77,18 +84,25 @@ export const MAASTOKOHTEET_ITA = [
     tyyppi: 'meri',
     kysymykset: [
       'Keitä liguurit olivat?',
-      'Mitä eroa on Ligurianmerellä ja Tyrrhenanmerellä?',
+      'Mikä Välimeren valassuojelualue on?',
     ],
+    korostukset: ['liguurit|liguureista'],
     nappi: 'Meri, joka muistaa muinaisen kansan',
     // 9 E / 43.5 N — en-Wikipedia "Ligurian Sea" — meren keskipiste
     laudat: {
       maailmankartta: { x: 6133.3, y: 1663.1 },
       europe: { x: 384, y: 749.6 },
     },
-    teksti: 'Ligurianmeri on Välimeren haara Luoteis-Italian ja Korsikan välissä. Sen uskotaan '
-      + 'saaneen nimensä muinaisesta liguurien kansasta, joka asui näillä rannoilla ennen '
-      + 'roomalaisia. Meri jää Tyrrhenanmeren pohjoispuolelle.',
-    lahde: 'en-Wikipedia "Ligurian Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Genovan edustan meri on ollut vuodesta 1999 valaiden turvapaikka. Ligurianmeri on '
+      + 'Välimeren haara Italian rivieran ja Korsikan välissä, ja siihen perustettiin '
+      + 'kansainvälinen valassuojelualue, joka kattaa 84 000 neliökilometriä — sekä '
+      + 'rantavaltioiden aluevedet että avomeren. Suojeltavaa riittää, sillä samoilla vesillä '
+      + 'liikkuvat myös Genovan sataman laivat; Genova on alueen suurin kaupunki, ja sen '
+      + 'kallioinen rannikko rajaa meren pohjoislaitaa. Meren nimen uskotaan tulevan '
+      + 'liguureista, jotka asuivat näillä rannoilla ennen roomalaisia. Syvimmillään merta on '
+      + 'yli 2 800 metriä Korsikan luoteispuolella.',
+    lahde: 'en-Wikipedia "Ligurian Sea", osiot "Geography" ja "Conservation" (tarkistettu '
+      + '1.9.2026).',
   },
 ];
 

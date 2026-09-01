@@ -79,9 +79,10 @@ export const MAASTOKOHTEET_CMR = [
     nimi: 'Sanaga',
     tyyppi: 'joki',
     kysymykset: [
-      'Missä Djérem ja Lom yhtyvät Sanagaksi?',
-      'Miksi joki on Kamerunin sähköntuotannolle tärkeä?',
+      'Missä Sanaga saa alkunsa?',
+      'Miten padot vaikuttavat kalojen vaellukseen?',
     ],
+    korostukset: ['Adamawan ylänkö|Adamawan ylängöltä'],
     nappi: 'Kamerunin suurin joki',
     // 11 E / 4.2 N — keskijuoksu Edéan yläpuolella; en-Wikipedia "Sanaga River" antaa suulle 9,65 / 3,56
     laudat: {
@@ -89,11 +90,16 @@ export const MAASTOKOHTEET_CMR = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Sanaga on Kamerunin suurin joki, ja se virtaa maan itä-, keski- ja rannikko-osien '
-      + 'halki. Sanagaksi jokea kutsutaan Djéremin ja Lomin yhtymäkohdasta alkaen, mistä matkaa '
-      + 'merelle kertyy noin 603 kilometriä — ja kun pisin latvahaara Djérem lasketaan mukaan, '
-      + 'koko jokijärjestelmän pituudeksi tulee lähes 1 070 kilometriä.',
-    lahde: 'en-Wikipedia "Sanaga River", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Sanaga halkaisee Kamerunin rannikon jokseenkin kahtia — sen leveä suisto avautuu '
+      + 'mereen viisikymmentä kilometriä Doualasta etelään. Joki syntyy Adamawan ylängöltä, '
+      + 'missä Djérem ja Lom yhtyvät, ja siitä eteenpäin sitä on runsaat 600 kilometriä; koko '
+      + 'vesistö latvoineen on yli tuhat kilometriä pitkä. Se on Keski-Afrikan lajirikkaimpia '
+      + 'jokia, ja sen altaassa elää kalalajeja, joita ei tunneta mistään muualta. Vesi on myös '
+      + 'Kamerunin sähkö: Edéan, Song Louloun, Lom Pangarin ja Nachtigalin padot tuottavat '
+      + 'suuren osan maan tuotannosta, mutta samalla ne katkovat kalojen vaellusreittejä ja '
+      + 'pysäyttävät liettä. Edéassa joen ylittää Camrailin rautatiesilta.',
+    lahde: 'en-Wikipedia "Sanaga River", johdanto-osa sekä osiot "Course", "Transport" ja '
+      + '"Biodiversity and conservation" (tarkistettu 1.9.2026).',
   },
 ];
 

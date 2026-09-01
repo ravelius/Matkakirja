@@ -58,9 +58,10 @@ export const MAASTOKOHTEET_TWN = [
     nimi: 'Taiwaninsalmi',
     tyyppi: 'meri',
     kysymykset: [
-      'Kuinka leveä salmi on kapeimmillaan?',
-      'Mitkä meret salmi yhdistää?',
+      'Miksi salmea kutsuttiin Mustaksi ojaksi?',
+      'Kuka oli Koxinga?',
     ],
+    korostukset: ['Koxinga|Koxinga'],
     nappi: 'Salmi kahden rannan välissä',
     // 119.9283 E / 24.8111 N — en-Wikipedia "Taiwan Strait"
     laudat: {
@@ -68,11 +69,18 @@ export const MAASTOKOHTEET_TWN = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Taiwaninsalmi erottaa Taiwanin saaren Aasian mantereesta. Salmi on noin 180 kilometriä '
-      + 'leveä, kapeimmillaan 126 kilometriä, ja se yhdistää Etelä-Kiinan meren etelässä '
-      + 'Itä-Kiinan mereen pohjoisessa. Toiselta rannalta ei siis näe toista, mutta laivalle '
-      + 'matka on lyhyt.',
-    lahde: 'en-Wikipedia "Taiwan Strait", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Salmen vanhin nimi on Musta oja. Se on käännös hokkien- ja hakkankielisestä nimestä, '
+      + 'ja se kertoo enemmän kuin nykyinen: 180 kilometriä leveä vesi erotti vuosituhansien '
+      + 'ajan mantereen han-kulttuurin Taiwanin alkuperäiskansoista, vaikka hakka- ja '
+      + 'hoklo-kauppiaat kulkivat sen yli. Kapeimmillaan salmi on 126 kilometriä. '
+      + 'Portugalilaiset, espanjalaiset ja hollantilaiset perustivat sen rannoille tukikohtia '
+      + 'Ming-kaudella sekä kauppaa että ryöstöretkiä varten, ja hollantilaiset karkotti sieltä '
+      + 'Zheng Chenggong eli Koxinga, joka perusti 1661 Tungningin kuningaskunnan. Hänen '
+      + 'pojanpoikansa antautui Qing-dynastialle, kun amiraali hävisi Penghun taistelun '
+      + 'keskellä salmea vuonna 1683. Pohjoisessa salmi yhtyy Itä-Kiinan mereen, etelässä '
+      + 'Etelä-Kiinan mereen.',
+    lahde: 'en-Wikipedia "Taiwan Strait", johdanto-osa sekä osiot "Names" ja "History" '
+      + '(tarkistettu 1.9.2026).',
   },
 ];
 

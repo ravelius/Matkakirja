@@ -38,6 +38,17 @@
  * kaanontekstejä (29.8.2026). Integroija ei muokkaa sanamuotoja: jos
  * fakta on väärin, se korjataan kaanoniin eikä tähän tauluun.
  *
+ * FAKTAKORJAUSERÄ 1.9.2026 (nostojen sisältöremontti, erä 3). Erän 2
+ * lähteistys nosti esiin 13 väitettä, joille lähde ei antanut katetta.
+ * Ne on kirjoitettu uusiksi lähteen sanamuotoon TAI niille on haettu
+ * oikea lähde, ja `lahde`-rivi kertoo nyt myös artikkelin osan.
+ * Painavin virhe: EST väitti ilvestä Viron kansalliseläimeksi — se on
+ * susi (et-Wikipedia "Rahvusloom"), ja kortti kantaa nyt sen sijaan
+ * ilveskantafaktan (Euroopan tihein, en-Wikipedia "Eurasian lynx").
+ * Muut korjatut: SWE LVA CZE HUN GBR ESP ROU NOR DEU GRC RUS BGR.
+ * Kartan nimiöihin (`elain`/`nimio`) ja paikkoihin ei koskettu, joten
+ * merkkien tiivisteet eivät muuttuneet.
+ *
  * KUVAT OVAT OMISTAJAN OMIA generoituja kuvia, joten niillä ei ole
  * Commons-lähderiviä (vrt. js/packs/africa-valokuvat.js). Ne viedään
  * repoon työkalulla tools/elaintakykuvat.mjs (960 px, laatu 0,82) eikä
@@ -59,8 +70,9 @@ export const ELAINTAKYT = {
   SWE: {
     elain: 'hirvenvasa',
     otsikko: 'Metsän kuninkaan perillinen',
-    teksti: 'Hirvenvasa syntyy alkukesästä ja seuraa emoaan ensimmäisen vuotensa. Ruotsissa hirviä elää niin tiheässä, että niiden kevätvaellusta seurataan televisiosta suorana lähetyksenä viikkojen ajan — hitain ja rauhallisin suosikkiohjelma koko maassa.',
-    lahde: 'en-Wikipedia "Slow television" ja en-Wikipedia "Moose". '
+    teksti: 'Hirvenvasa syntyy alkukesästä ja seuraa emoaan ensimmäisen vuotensa. Ruotsissa hirviä on noin 263 000 — metsäalaan suhteutettuna maailman tihein kanta, vaikka luku on pudonnut puoleen 1900-luvun lopun huipusta. Kevätvaellusta katsotaan suorana televisiosta viikkokausia: vuonna 2024 kolmekymmentäkaksi kameraa laski 87 joen ylittänyttä hirveä.',
+    lahde: 'sv-Wikipedia "Älg", osio "Utbredning och population", ja '
+      + 'en-Wikipedia "Slow television", osio "Den stora älgvandringen". '
       + 'Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-swe.jpg',
     lon: 15,
@@ -69,8 +81,9 @@ export const ELAINTAKYT = {
   NOR: {
     elain: 'myskihärkä',
     otsikko: 'Jääkauden muisto Dovrefjellillä',
-    teksti: 'Myskihärkä laidunsi aikoinaan mammuttien rinnalla. Norjan tuntureille se palautettiin Grönlannista, ja nyt Dovrefjellin ylängöllä vaeltaa villakuontaloinen lauma kuin suoraan jääkaudelta. Pakkasessa sen alusvilla lämmittää moninkertaisesti lampaanvillaan verrattuna.',
-    lahde: 'en-Wikipedia "Muskox". Tarkistettu 1.9.2026.',
+    teksti: 'Myskihärkä laidunsi aikoinaan mammuttien rinnalla, ja Dovrefjellin lauma on tuotu takaisin: kymmenen eläintä Grönlannista vuonna 1932. Sota söi ne, ja työ aloitettiin uudestaan 1947. Alusvilla eli qiviut on vahvempaa ja lämpimämpää kuin lampaanvilla ja pehmeämpää kuin kashmir — sitä ei keritä vaan kammataan kevätluonnin aikana.',
+    lahde: 'en-Wikipedia "Muskox", osio "Norway", ja en-Wikipedia "Qiviut", '
+      + 'osio "Properties". Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-nor.jpg',
     lon: 9.4,
     lat: 62.3,
@@ -97,8 +110,8 @@ export const ELAINTAKYT = {
   GBR: {
     elain: 'kettu',
     otsikko: 'Lontoon yökulkija',
-    teksti: 'Kaupunkikettu on Lontoossa yhtä lontoolainen kuin kaksikerroksinen bussi. Tuhannet ketut partioivat öisin puistoissa ja takapihoilla, ja moni niistä tuntee oman korttelinsa roskapäivät paremmin kuin asukkaat itse.',
-    lahde: 'en-Wikipedia "Red fox". Tarkistettu 1.9.2026.',
+    teksti: 'Kettu muutti Britannian kaupunkeihin 1930-luvulla ja Lontooseen 1940-luvulla, eikä ole lähtenyt. Kaupunkikettuja arvioitiin olevan koko maassa 33 000 vuonna 1995 ja 150 000 vuonna 2017. Reilu kolmannes niiden ravinnosta on ihmisen jättämää — maaseudun ketulla osuus on kuusi prosenttia — ja siksi kaupunkilainen kasvaa isommaksi kuin sukulaisensa pelloilla.',
+    lahde: 'en-Wikipedia "Red fox", osio "Urban red foxes". Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-gbr.jpg',
     lon: -1.5,
     lat: 52.6,
@@ -125,8 +138,9 @@ export const ELAINTAKYT = {
   DEU: {
     elain: 'siili',
     otsikko: 'Puutarhan yövahti',
-    teksti: 'Siili on saksalaisen puutarhan kunniavieras: se ahmii etanoita iltahämärissä ja käpertyy talveksi lehtikasaan. Siksi moni jättää syksyllä nurkkaan siivoamattoman lehtikasan — se ei ole laiskuutta vaan majoitustoimintaa.',
-    lahde: 'en-Wikipedia "European hedgehog". Tarkistettu 1.9.2026.',
+    teksti: 'Siilin maine etanansyöjänä on liioiteltu: pääruokaa ovat kastemadot, kovakuoriaiset ja toukat, ja etanoita on ravinnosta vain muutama prosentti. Talvella siili nukkuu viisi kuukautta risu- tai lehtikasassa, sydän lyöden viisi kertaa minuutissa. Siksi siivoamaton lehtikasa on oikeasti majoitusta — ja siksi etanamyrkky tappaa siilejä saaliin mukana.',
+    lahde: 'de-Wikipedia "Braunbrustigel", osiot "Nahrung" ja "Winterschlaf", '
+      + 'ja en-Wikipedia "European hedgehog". Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-deu.jpg',
     lon: 9.5,
     lat: 51,
@@ -143,8 +157,9 @@ export const ELAINTAKYT = {
   ESP: {
     elain: 'iberianilves',
     otsikko: 'Takaisin partaalta',
-    teksti: 'Iberianilves oli vuosituhannen alussa maailman uhanalaisin kissaeläin — jäljellä oli alle sata yksilöä. Suojelutyö käänsi suunnan, ja nyt töyhtökorvia liikkuu Espanjan mäkimailla taas tuhatmäärin. Se on lajinsuojelun kuuluisimpia onnistumisia.',
-    lahde: 'en-Wikipedia "Iberian lynx". Tarkistettu 1.9.2026.',
+    teksti: 'Iberianilves oli vuosituhannen vaihteessa sukupuuton partaalla: vuonna 2002 laskettiin 94 yksilöä kahdessa erillisessä Andalusian kannassa. Syy ei ollut vain metsästys, vaan kanien joukkokuolemat — kani on kolme neljäsosaa ilveksen ravinnosta. Tarhakasvatus, kanikantojen elvytys ja istutukset käänsivät suunnan, ja 2024 töyhtökorvia laskettiin 2 401.',
+    lahde: 'en-Wikipedia "Iberian lynx", osiot "Distribution and habitat" ja '
+      + '"Conservation". Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-esp.jpg',
     lon: -4.5,
     lat: 38.3,
@@ -189,8 +204,9 @@ export const ELAINTAKYT = {
   CZE: {
     elain: 'siiseli',
     otsikko: 'Nurmikentän tähystäjä',
-    teksti: 'Euroopansiiseli tarvitsee lyhyttä ruohoa nähdäkseen ympärilleen, ja siksi sen viimeisiä turvapaikkoja ovat lentokentät ja golfkentät — harvoja paikkoja, joissa nurmi pidetään aina matalana. Tähystävä siiseli seisoo tikkusuorana kuin pieni vahtisotilas.',
-    lahde: 'en-Wikipedia "European ground squirrel". Tarkistettu 1.9.2026.',
+    teksti: 'Euroopansiiseli tarvitsee lyhyttä ruohoa nähdäkseen ympärilleen, ja siksi sen viimeisiä turvapaikkoja ovat laitumet, urheilukentät, puistot ja ratapenkereet — paikat, joissa nurmi pysyy matalana. Siirtokunta pitää vahteja, jotka viheltävät pedon nähdessään, ja koko rinne katoaa koloihinsa yhdessä hetkessä.',
+    lahde: 'en-Wikipedia "European ground squirrel", osiot "Description" ja '
+      + '"Habitat". Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-cze.jpg',
     lon: 15.5,
     lat: 49.6,
@@ -206,9 +222,10 @@ export const ELAINTAKYT = {
   },
   EST: {
     elain: 'ilves',
-    otsikko: 'Viron kansalliseläin',
-    teksti: 'Virossa ilveksiä elää metsien kokoon nähden tiheämmässä kuin juuri missään muualla Euroopassa, ja ilves on maan kansalliseläin. Silti sen näkee harva: töyhtökorva kulkee öisin ja katoaa metsään kuin savu.',
-    lahde: 'en-Wikipedia "Eurasian lynx". Tarkistettu 1.9.2026.',
+    otsikko: 'Euroopan tihein ilveskanta',
+    teksti: 'Virossa ilveksiä elää tiheämmässä kuin missään muualla Euroopassa — vuosituhannen vaihteen arvio oli noin 900 yksilöä. Tiheys ei silti tarkoita rauhaa: ilveksen metsästys on Virossa laillista, ja pelkästään vuonna 2010 kaadettiin 180 ilvestä. Näkee sen silti harva, sillä töyhtökorva kulkee öisin ja katoaa metsään kuin savu.',
+    lahde: 'en-Wikipedia "Eurasian lynx", osio "Distribution and habitat" '
+      + '(Viron tiheys ja saalismäärä). Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-est.jpg',
     lon: 25.8,
     lat: 58.6,
@@ -216,8 +233,9 @@ export const ELAINTAKYT = {
   LVA: {
     elain: 'majava',
     otsikko: 'Patomestari',
-    teksti: 'Latvian joet ovat Euroopan majavatiheintä seutua. Majava kaataa puun siisteinä lastuina ja rakentaa padon, joka voi kasvaa kymmenien metrien mittaiseksi — ja sen lammikko antaa kodin sammakoille, linnuille ja kaloille. Yksi rakentaja, kokonainen kaupunginosa.',
-    lahde: 'en-Wikipedia "Eurasian beaver". Tarkistettu 1.9.2026.',
+    teksti: 'Isoisäsi aikaan Latvian majavat oli juuri metsästetty sukupuuttoon — turkin, rasvan ja hajurauhasten takia. Palautus alkoi 1927, kun Norjasta tuotiin kaksi majavaparia Irbe-joen sivuhaaraan; myöhemmin tuli lisää Voronežista, Valko-Venäjältä ja Liettuasta. Nyt maassa on yli 80 000 majavaa, ja jokainen pato on tuotujen jälkeläisten työtä.',
+    lahde: 'lv-Wikipedia "Eirāzijas bebrs", osio "Latvijā", ja en-Wikipedia '
+      + '"Eurasian beaver". Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-lva.jpg',
     lon: 25.5,
     lat: 56.8,
@@ -243,8 +261,9 @@ export const ELAINTAKYT = {
   BGR: {
     elain: 'pelastuskarhu',
     otsikko: 'Tanssin loppu',
-    teksti: 'Bulgarian Belitsassa on karhutarha, jonne viimeiset tanssikarhut tuotiin vapauteen — vuosisatainen tapa päättyi, kun karhut ostettiin omistajiltaan ja tanssitus kiellettiin. Tarhassa entiset tanssijat oppivat uudelleen karhun elämän: talviunen, uimisen ja hunajan kaivamisen.',
-    lahde: 'en-Wikipedia "Dancing bear". Tarkistettu 1.9.2026.',
+    teksti: 'Tanssikarhujen pito kiellettiin Bulgariassa 1998, mutta laki puri hitaasti: maan kolme viimeistä tanssikarhua saatiin pois vasta 2007 ja Serbian viimeiset 2009. Ne vietiin Belitsan tarhaan Rilan rinteille, jossa entiset tanssijat opettelevat uudelleen talviunen ja uimisen. Vuonna 2022 tarhan nimestä poistettiin sana tanssikarhu — pelastettavia ei enää ollut.',
+    lahde: 'en-Wikipedia "Dancing bear" ja en-Wikipedia "Bear Sanctuary '
+      + 'Belitsa". Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-bgr.jpg',
     lon: 23.6,
     lat: 41.6,
@@ -252,9 +271,9 @@ export const ELAINTAKYT = {
   ROU: {
     elain: 'karhunpennut',
     otsikko: 'Karpaattien valtakunta',
-    teksti: 'Romanian Karpaateilla elää Euroopan suurin ruskeakarhukanta — tuhansia karhuja pyökkimetsissä ja kuusivyöhykkeellä. Pennut syntyvät sydäntalvella pesään, nyrkin kokoisina ja sokeina, ja keväällä emo tuo ne ulos maailmaan, joka kuuluu yhä karhuille.',
-    lahde: 'en-Wikipedia "Wildlife of Romania" ja en-Wikipedia "Brown bear". '
-      + 'Tarkistettu 1.9.2026.',
+    teksti: 'Romanian Karpaateilla elää yli 6 000 ruskeakarhua — yksi Euroopan suurimmista kannoista. Pennut syntyvät sydäntalvella pesään, nyrkin kokoisina ja sokeina, ja keväällä emo tuo ne ulos. Runsaus on myös riita: karhut tulevat yhä useammin kylien liepeille, ja kun hallitus esitti 2018 noin 2 000 karhun kaatoa, suojelujärjestöt nousivat vastaan.',
+    lahde: 'en-Wikipedia "Wildlife of Romania", osio "Mammals", ja en-Wikipedia '
+      + '"Brown bear". Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-rou.jpg',
     lon: 25,
     lat: 45.6,
@@ -262,8 +281,8 @@ export const ELAINTAKYT = {
   HUN: {
     elain: 'mangalitsa',
     otsikko: 'Sika lampaan vaatteissa',
-    teksti: 'Mangalitsa on unkarilainen sika, joka kasvattaa kiharan villaturkin kuin lammas. Rotu ehti 1990-luvulla lähes kadota, kunnes herkkusuiden into pelasti sen — nyt villasikoja tepastelee taas tuhansissa pihatoissa pustan laidalla.',
-    lahde: 'en-Wikipedia "Mangalica". Tarkistettu 1.9.2026.',
+    teksti: 'Mangalitsa on unkarilainen sika, joka kasvattaa kiharan villaturkin kuin lammas. Rasvasika oli seudun yleisin rotu vielä 1940-luvulla, mutta kylmäketju ja kaukaa tuotu halpa liha veivät siltä markkinat: vuonna 1991 Unkarissa oli enää alle 200 mangalitsaa. Rodun pelasti espanjalainen kinkkuyhtiö, ja nyt emakoita on runsaat 7 000.',
+    lahde: 'en-Wikipedia "Mangalica", osio "History". Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-hun.jpg',
     lon: 21.1,
     lat: 47.55,
@@ -298,9 +317,9 @@ export const ELAINTAKYT = {
      */
     nimio: 'merikilpikonna',
     otsikko: 'Yön juoksijat',
-    teksti: 'Zakynthosin hiekkarannoilla kuoriutuu loppukesän öinä merikilpikonnan poikasia. Ne kaivautuvat esiin pimeällä ja juoksevat kohti merta veden välkettä seuraten — siksi rantojen valot sammutetaan pesimäkaudella. Vain harva sadasta selviää aikuiseksi, ja selviytyjät palaavat munimaan samalle rannalle.',
-    lahde: 'en-Wikipedia "Loggerhead sea turtle" ja en-Wikipedia "Zakynthos". '
-      + 'Tarkistettu 1.9.2026.',
+    teksti: 'Zakynthosin Laganasinlahti on Välimeren tärkein merikilpikonnan pesimäranta ja Kreikan ensimmäinen merellinen kansallispuisto. Poikaset kuoriutuvat noin 80 vuorokauden kuluttua ja kaivautuvat esiin pimeällä: ne suunnistavat kohti kirkkainta taivaanrantaa, kuun ja tähtien kimmellystä vedessä. Rantojen valot vievät ne väärään suuntaan — siksi valot sammutetaan pesimäkaudella. Naaraat palaavat munimaan sille rannalle, jolla itse kuoriutuivat.',
+    lahde: 'en-Wikipedia "Loggerhead sea turtle", osiot "Reproduction" ja '
+      + '"Artificial lighting", ja en-Wikipedia "Zakynthos". Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-grc.jpg',
     lon: 21.9,
     lat: 37.4,
@@ -317,8 +336,8 @@ export const ELAINTAKYT = {
   RUS: {
     elain: 'eremitaasinkissa',
     otsikko: 'Museon henkivartija',
-    teksti: 'Eremitaasin kellareissa on asunut kissoja keisarinna Elisabetin ajoista asti — ne pestattiin suojelemaan palatsin aarteita rotilta, ja virka jatkuu yhä. Museon kymmenillä kissoilla on omat hoitajat, oma sairastupa ja arvonimi: taideaarteiden viralliset vartijat.',
-    lahde: 'en-Wikipedia "Hermitage cats". Tarkistettu 1.9.2026.',
+    teksti: 'Talvipalatsin kellareissa on pidetty kissoja siitä asti, kun keisarinna Elisabet määräsi ne hiiriä vastaan vuonna 1745 — Kazan lähetti viisi parasta pyytäjäänsä. Isoisäsi aikaan ne elivät hemmoteltuina omine palvelijoineen. Nyt Eremitaasin kissoilla on kolme hoitajaa, omat keittiöt, pieni sairastupa ja museon oma lehdistösihteeri.',
+    lahde: 'en-Wikipedia "Hermitage cats", osio "History". Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-rus.jpg',
     lon: 32,
     lat: 58.8,

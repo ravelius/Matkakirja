@@ -120,19 +120,25 @@ export const MAASTOKOHTEET_UKR = [
     nimi: 'Dnestr',
     tyyppi: 'joki',
     kysymykset: [
-      'Miksi joki kulkee kahdesti Ukrainan läpi?',
-      'Missä Dnestrin lähde on?',
+      'Mitä nimi Dnestr tarkoittaa?',
+      'Mikä Transnistria on?',
     ],
+    korostukset: ['Dnepr|Dnepr'],
     nappi: 'Joki, joka palaa takaisin',
     // 30.23 E / 46.35 N — en-Wikipedia "Dniester" — joen suu Ukrainan puolella
     laudat: {
       maailmankartta: { x: 6841, y: 1545.8 },
       europe: { x: 791.6, y: 674.6 },
     },
-    teksti: 'Dnestr on Itä-Euroopan rajat ylittävä joki. Se virtaa ensin Ukrainan halki, sitten '
-      + 'Moldovan läpi ja laskee lopulta Mustaanmereen jälleen Ukrainan puolella. Sama joki käy '
-      + 'siis kahdessa maassa ja palaa takaisin siihen, mistä lähti.',
-    lahde: 'en-Wikipedia "Dniester", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista '
+      + 'perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — '
+      + 'nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien '
+      + 'sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on '
+      + 'muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan '
+      + 'tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja '
+      + 'erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee '
+      + 'Mustaanmereen leveään liman-laguuniin.',
+    lahde: 'en-Wikipedia "Dniester", osiot "Names" ja "Geography" (tarkistettu 1.9.2026).',
   },
 ];
 

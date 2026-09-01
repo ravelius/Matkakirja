@@ -57,8 +57,8 @@ export const MAASTOKOHTEET_RUS = [
     nimi: 'Narodnaja',
     tyyppi: 'vuori',
     kysymykset: [
-      'Miksi Uralia pidetään maanosien rajana?',
-      'Mistä vuoren nimi tulee?',
+      'Miksi Narodnaja on kahdessa maanosassa?',
+      'Mitä komin nimi Naroda-Iz tarkoittaa?',
     ],
     korostukset: ['Ural|Uralin'],
     nappi: 'Uralin korkein huippu',
@@ -68,11 +68,15 @@ export const MAASTOKOHTEET_RUS = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Narodnaja on Uralin korkein huippu, 1 894 metriä. Se on Hanti-Mansian autonomisen '
-      + 'piirikunnan ja Komin tasavallan rajalla, ja korkein kohta on puoli kilometriä rajasta '
-      + 'itään Tutkimusharjanteella. Nimi saattaa viitata Naroda-jokeen, joka saa alkunsa '
-      + 'vuorelta.',
-    lahde: 'en-Wikipedia "Mount Narodnaya", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Narodnajan huipulta sadevesi lähtee kahteen maanosaan. Vuori seisoo Uralin '
+      + 'vedenjakajalla, joka on samalla Euroopan ja Aasian raja: Naroda-joki virtaa huipulta '
+      + 'kaakkoon Obiin eli Siperiaan, ja Kosju luoteeseen Petšoraan eli Euroopan puolelle. '
+      + 'Korkeutta on 1 894 metriä, mikä tekee siitä Uralin korkeimman huipun ja '
+      + 'Euroopan-puoleisen Venäjän korkeimman kohdan Kaukasuksen ulkopuolella — ja koska '
+      + 'ympärillä ei ole mitään sen veroista, sen suhteellinen korkeus on peräti 1 772 metriä. '
+      + 'Komin kielellä vuori on Naroda-Iz, kansan vuori. Rinteillä on pieniä jäätiköitä ja '
+      + 'tunturikangasta, laaksoissa harvaa lehtikuusi- ja koivumetsää.',
+    lahde: 'en-Wikipedia "Mount Narodnaya", johdanto-osa (tarkistettu 1.9.2026).',
   },
   {
     id: 'barentsinmeri',

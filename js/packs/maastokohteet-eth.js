@@ -46,11 +46,18 @@ export const MAASTOKOHTEET_ETH = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Ras Dejen, englanniksi usein Ras Dashen, on Etiopian korkein vuori: 4 550 metriä. Se '
-      + 'kohoaa Simien-vuorten kansallispuistossa Amharan alueella maan pohjoisosassa. Etiopian '
-      + 'karttalaitoksen käyttämä nimi viittaa perimätiedon mukaan päällikköön eli rasiin, joka '
-      + 'taistelee keisarin edellä.',
-    lahde: 'en-Wikipedia "Ras Dashen", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Etiopian korkein vuori on nimetty sotilaan mukaan: ras dejen tarkoittaa päällikköä, '
+      + 'joka taistelee keisarin edellä, ja englanninkielinen asu Ras Dashen on väännös siitä. '
+      + 'Huippu on 4 550 metriä ja itse asiassa vain valtavan tulivuoren kraatterinreunan '
+      + 'itäinen kulma — reunan länsipäässä on Biuat 4 437 metrissä, ja niiden välissä virtaa '
+      + 'Meshaha. Runsaat kaksisataa metriä huippua alempana seisoo yhä pienen linnoituksen '
+      + 'raunio. Öisin sataa lunta rajusti, mutta päivällä lämpötila voi nousta yli viiden '
+      + 'asteen ja lumi sulaa tunneissa. Ensimmäisen tunnetun eurooppalaisen nousun tekivät '
+      + '1841 ranskalaisupseerit Ferret ja Galinier. Simien-vuorten kansallispuisto ympärillä '
+      + 'on maailmanperintökohde ja yksi harvoja trooppisen Afrikan paikkoja, joissa sataa '
+      + 'säännöllisesti lunta.',
+    lahde: 'en-Wikipedia "Ras Dashen", johdanto-osa ja osio "Overview", sekä en-Wikipedia "Simien '
+      + 'Mountains" (tarkistettu 1.9.2026).',
   },
   {
     id: 'tanajarvi',
@@ -80,8 +87,9 @@ export const MAASTOKOHTEET_ETH = [
     tyyppi: 'joki',
     kysymykset: [
       'Kumpi on tärkeämpi, Valkoinen vai Sininen Niili?',
-      'Missä kaupungissa Niilin haarat yhtyvät?',
+      'Mikä Tana-järvi on?',
     ],
+    korostukset: ['Tana-järvi|Tana-järveen'],
     nappi: 'Joki, joka tuo Niilin veden',
     // 36.5 E / 10.5 N — joen kanjoni Etiopian ylängöllä Tanajärven lounaispuolella; en-Wikipedia "Blue Nile" antaa koordinaatiksi Tanajärven 37,25 / 12
     laudat: {
@@ -89,10 +97,16 @@ export const MAASTOKOHTEET_ETH = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Sininen-Niili saa alkunsa Tanajärvestä ja virtaa noin 1 450 kilometriä Etiopian ja '
-      + 'Sudanin halki, kunnes yhtyy Valkoiseen Niiliin. Valkoinen haara on pidempi, mutta vesi '
-      + 'tulee täältä: sadekaudella Sininen-Niili tuo noin 85,6 prosenttia koko Niilin vedestä.',
-    lahde: 'en-Wikipedia "Blue Nile", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Sadekaudella 85,6 prosenttia Niilin vedestä tulee yhdestä joesta, eikä se ole '
+      + 'Valkoinen Niili. Sininen Niili — Etiopiassa Abay — pulppuaa Gish Abayn lähteeltä ja '
+      + 'laskee Tana-järveen, ja kolmenkymmenen kilometrin päässä järvestä se katoaa kanjoniin, '
+      + 'joka on neljäsataa kilometriä pitkä ja paikoin puolentoista kilometrin syvyinen. Rotko '
+      + 'on niin jyrkkä, että se on vuosisatoja katkaissut kulun Pohjois- ja Etelä-Etiopian '
+      + 'väliltä. Ensimmäinen laskeutuminen järveltä kanjonin päähän onnistui vasta 1968 '
+      + 'brittiretkikunnalta, joka antoi sille nimen Niilin Grand Canyon. Kanjonin suulla ovat '
+      + 'Sinisen Niilin putoukset, amharaksi Tis Abay — suuri savu.',
+    lahde: 'en-Wikipedia "Blue Nile", johdanto-osa sekä osio "Course" alaosioineen (tarkistettu '
+      + '1.9.2026).',
   },
 ];
 

@@ -76,19 +76,26 @@ export const MAASTOKOHTEET_PRT = [
     nimi: 'Tejo',
     tyyppi: 'joki',
     kysymykset: [
-      'Miksi Lissabon rakennettiin juuri joen suulle?',
-      'Millä nimellä joki tunnetaan Espanjassa?',
+      'Mikä on käänteinen suisto?',
+      'Miksi Lissabonin edustalla tapahtuu maanjäristyksiä?',
     ],
+    korostukset: ['Lissabon|Lissabonin'],
     nappi: 'Iberian pisin joki',
     // -8.68 E / 39.24 N — Santarém joen alajuoksulla Portugalin puolella; artikkelilla ei ole koordinaattia
     laudat: {
       maailmankartta: { x: 5544, y: 1832.7 },
       europe: { x: 44.5, y: 861.6 },
     },
-    teksti: 'Tejo on Iberian niemimaan pisin joki. Se saa alkunsa Montes Universales -vuoristosta '
-      + 'Keski-Espanjasta, virtaa 1 007 kilometriä pääosin länteen ja laskee Atlanttiin '
-      + 'Lissabonin kohdalla. Espanjan puolella sen nimi on Tajo.',
-    lahde: 'en-Wikipedia "Tagus", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Tejolla on maailman harvinaisimpia suistoja: se on nurinpäin. Tavallinen suisto '
+      + 'levenee merta kohti, mutta Tejon suisto on leveä sisämaan päästä ja kapenee ulos — '
+      + 'laguuni on noin viisitoista kilometriä leveä ja kaksikymmentäviisi pitkä, mutta aukko '
+      + 'mereen vain kaksi kilometriä. Vuorovesi paljastaa siitä valtavat matalikot. Lissabonin '
+      + 'edusta on myös maanjäristysherkkää seutua, ja alajuoksua ovat ravistelleet muun muassa '
+      + 'vuosien 1309, 1531, 1755 ja 1909 järistykset. Keskiajan lopulta alkaen joen suu '
+      + 'välitti kauppaa Pohjois-Euroopan ja Välimeren välillä, ja renessanssista lähtien se '
+      + 'oli Portugalin siirtomaavallan keskus kolmella mantereella.',
+    lahde: 'en-Wikipedia "Tagus", osiot "Estuary", "Geology" ja "Historical importance" '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'douro',

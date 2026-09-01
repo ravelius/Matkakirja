@@ -59,8 +59,9 @@ export const MAASTOKOHTEET_QAT = [
     tyyppi: 'meri',
     kysymykset: [
       'Miten meri pääsee keskelle hiekkadyynejä?',
-      'Mikä on luonnonsuojelualue?',
+      'Keitä Bani Yas olivat?',
     ],
+    korostukset: ['Bani Yas|Bani Yasin'],
     nappi: 'Aavikon sisämeri',
     // 51.296 E / 24.63 N — en-Wikipedia "Khor Al Adaid"
     laudat: {
@@ -68,12 +69,17 @@ export const MAASTOKOHTEET_QAT = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Khawr al-Udayd on Persianlahden poukama Qatarin kaakkoiskulmassa Saudi-Arabian '
-      + 'rajalla, noin 78 kilometriä Dohasta etelään. Englanniksi sitä kutsutaan sisämereksi '
-      + '(Inland Sea), sillä vesi työntyy siinä syvälle aavikon sisään. Alue rauhoitettiin '
-      + 'luonnonsuojelualueeksi 2007, ja Qatar on esittänyt sitä Unescon '
-      + 'maailmanperintöluetteloon.',
-    lahde: 'en-Wikipedia "Khor Al Adaid", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Isoisäsi matkaa edeltävänä vuonna, 1869, Khawr al-Udaydiin muutti kolmannen kerran '
+      + 'joukko Bani Yasin heimolaisia, jotka irtautuivat Abu Dhabista. Heitä oli noin '
+      + 'kaksisataa, ja kylässä oli kolmekymmentä helmenpyyntialusta ja kaksitorninen linnake. '
+      + 'Kaksi edellistä yritystä oli päättynyt huonosti: 1836 brittilaivasto tuli hätistämään '
+      + 'paikan merirosvot ja poltti yhden aluksista, ja 1837 Abu Dhabin šeikin joukot '
+      + 'hävittivät kylän — viisikymmentä asukasta sai surmansa. Paikan nimi tulee sanasta '
+      + 'adad, joukko: siellä asui laivankorjaajien yhteisö, ja siksi helmenpyyntialukset '
+      + 'tulivat sinne huoltoon. Nykyään yhdeksän kilometrin pituinen, dyynien väliin '
+      + 'kiemurteleva vuono on luonnonsuojelualue ja Qatarin sisämeri.',
+    lahde: 'en-Wikipedia "Khor Al Adaid", johdanto-osa sekä osiot "Etymology", "Settlement and '
+      + 'subsequent conflicts" ja "Geography" (tarkistettu 1.9.2026).',
   },
 ];
 

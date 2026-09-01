@@ -38,6 +38,7 @@ export const MAASTOKOHTEET_ZAF = [
       'Miksi Mafadi ei ole itsenäinen vuorenhuippu?',
       'Missä on koko eteläisen Afrikan korkein piste?',
     ],
+    korostukset: ['Drakensberg|Drakensbergin'],
     nappi: 'Etelä-Afrikan korkein kohta',
     // 29.3571 E / -29.2023 N — en-Wikipedia "Mafadi"
     laudat: {
@@ -45,11 +46,15 @@ export const MAASTOKOHTEET_ZAF = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Mafadi on Etelä-Afrikan korkein kohta: 3 446 metriä Lesothon vastaisella rajalla. '
-      + 'Tarkkaan ottaen se ei ole itsenäinen huippu vaan Lesothon puolella kohoavan Makhekan '
-      + 'sivuhuippu, ja koko eteläisen Afrikan korkein piste, 3 482-metrinen Thabana Ntlenyana, '
-      + 'jää sekin Lesothon puolelle.',
-    lahde: 'en-Wikipedia "Mafadi", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Etelä-Afrikan korkein kohta ei erään määritelmän mukaan ole vuori lainkaan. Mafadi on '
+      + '3 446 metriä ja sijaitsee Lesothon rajalla, mutta himalajalaisen säännön mukaan — '
+      + 'huipun on kohottava vähintään seitsemän prosenttia omasta korkeudestaan ympäristönsä '
+      + 'yläpuolelle — se on vain Lesothon Makhekan sivuhuippu. Sillä mitalla Etelä-Afrikan '
+      + 'korkein todellinen vuorenhuippu on Champagne Castle, vaikka maan korkein piste on '
+      + 'kiistatta Mafadi. Koko eteläisen Afrikan katto on kuitenkin rajan takana: Lesothon '
+      + 'Thabana Ntlenyana, 3 482 metriä. Mafadille noustaan Njesuthin leiripaikalta, ja pelkkä '
+      + 'Drakensbergin jyrkänteen juurelle pääsy vie tavallisesti kaksi päivää.',
+    lahde: 'en-Wikipedia "Mafadi", johdanto-osa ja osio "Ascent" (tarkistettu 1.9.2026).',
   },
   {
     id: 'poytavuori',

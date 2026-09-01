@@ -77,19 +77,26 @@ export const MAASTOKOHTEET_IRL = [
     nimi: 'Shannon',
     tyyppi: 'joki',
     kysymykset: [
-      'Miksi Shannon jakaa Irlannin kahtia?',
-      'Kuinka suuri Shannonin valuma-alue on?',
+      'Miksi Shannonin pituudesta ei päästä yksimielisyyteen?',
+      'Mikä on Shannon Pot?',
     ],
+    korostukset: ['Shannon Pot|Shannon Pot'],
     nappi: 'Brittein saarten pisin joki',
     // -8.66 E / 52.657 N — en-Wikipedia "River Shannon" (Limerickin seutu joen alajuoksulla)
     laudat: {
       maailmankartta: { x: 5544.7, y: 1272.7 },
       europe: { x: 44.9, y: 508.7 },
     },
-    teksti: 'Shannon on Irlannin saaren tärkein joki ja 360 kilometrin pituisena Brittein saarten '
-      + 'pisin. Sen valuma-alue on 16 900 neliökilometriä eli noin viidennes koko Irlannin '
-      + 'pinta-alasta. Joki erottaa saaren länsiosan muusta maasta lähes koko pituudeltaan.',
-    lahde: 'en-Wikipedia "River Shannon", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Kukaan ei tiedä varmasti, kuinka pitkä Irlannin pisin joki on. Perinteinen luku on 390 '
+      + 'kilometriä, virallinen irlantilainen lähde sanoo 360,5, oppaat 344 ja osa tutkijoista '
+      + '280 — ja moni kieltäytyy antamasta lukua lainkaan. Syy on yksinkertainen: suistoon '
+      + 'laskevalla joella ei ole selvää loppua. Alku sen sijaan tunnetaan tarkasti. Shannon '
+      + 'Pot on pieni lampi Cuilcagh-vuoren rinteellä Cavanin kreivikunnassa, ja siitä joki '
+      + 'lähtee taimenpuron kokoisena — mutta mittaukset ovat osoittaneet, että sen vesi tulee '
+      + 'nielukuiluista kilometrien päästä, osa jopa Pohjois-Irlannin puolelta. Shannon jakaa '
+      + 'saaren idän ja lännen: Dowran ja Limerickin välillä sen yli pääsee alle '
+      + 'kolmestakymmenestäviidestä kohdasta.',
+    lahde: 'en-Wikipedia "River Shannon", johdanto-osa ja osio "Course" (tarkistettu 1.9.2026).',
   },
 ];
 

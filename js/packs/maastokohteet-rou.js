@@ -35,8 +35,8 @@ export const MAASTOKOHTEET_ROU = [
     nimi: 'Negoiu',
     tyyppi: 'vuori',
     kysymykset: [
-      'Mitkä ovat Făgărașin vuoret?',
-      'Kuinka lähellä toisiaan Negoiu ja Moldoveanu ovat?',
+      'Mikä Transfăgărășan on?',
+      'Miksi Negoiuta sanotaan säänvaihtelun navaksi?',
     ],
     korostukset: ['Făgăraș|Făgărașin'],
     nappi: 'Romanian toiseksi korkein',
@@ -45,10 +45,16 @@ export const MAASTOKOHTEET_ROU = [
       maailmankartta: { x: 6651.9, y: 1577.5 },
       europe: { x: 682.7, y: 694.7 },
     },
-    teksti: 'Negoiu on 2 535 metriä korkea huippu Făgărașin vuorilla Eteläisissä Karpaateissa '
-      + 'Sibiun piirikunnassa. Se on Romanian toiseksi korkein huippu heti 2 544-metrisen '
-      + 'Moldoveanun jälkeen — yhdeksän metrin ero erottaa maan kaksi korkeinta.',
-    lahde: 'en-Wikipedia "Negoiu", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana '
+      + 'huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 '
+      + 'metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan '
+      + 'säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin '
+      + 'vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta '
+      + 'asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. '
+      + 'Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta '
+      + 'kohtaa kutsutaan nimellä Kolme askelta kuolemasta.',
+    lahde: 'ro-Wikipedia "Vârful Negoiu, Munții Făgăraș" ja en-Wikipedia "Făgăraș Mountains", '
+      + 'osiot "Geography" ja "Access and tourism" (tarkistettu 1.9.2026).',
   },
   {
     id: 'mustameri',

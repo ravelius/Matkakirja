@@ -35,8 +35,8 @@ export const MAASTOKOHTEET_AGO = [
     nimi: 'Morro de Moco',
     tyyppi: 'vuori',
     kysymykset: [
-      'Mitkä ovat Angolan seitsemän ihmettä?',
-      'Miksi lintuharrastajat matkustavat juuri Mocolle?',
+      'Mikä on kansainvälisesti tärkeä lintualue?',
+      'Miksi Morro de Mocon metsä on uhattuna?',
     ],
     korostukset: ['Huambo|Huambon'],
     nappi: 'Angolan korkein vuori',
@@ -46,11 +46,17 @@ export const MAASTOKOHTEET_AGO = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Morro de Moco kohoaa 2 620 metriin ja on Angolan korkein vuori. Se sijaitsee Huambon '
-      + 'maakunnassa maan länsiosassa, seitsemänkymmentä kilometriä Huambon kaupungista '
-      + 'länteen. Vuonna 2014 vuori nimettiin yhdeksi Angolan seitsemästä ihmeestä, ja sinne '
-      + 'matkustetaan vaeltamaan, laskeutumaan köysillä ja katselemaan lintuja.',
-    lahde: 'en-Wikipedia "Mount Moco", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Angolan korkeimmalla vuorella on laskettu 233 lintulajia, ja osaa niistä ei tapaa '
+      + 'mistään muualta maailmasta. Morro de Moco kohoaa 2 620 metriin Huambon maakunnassa '
+      + 'seitsemänkymmentä kilometriä kaupungista länteen, ja BirdLife International on '
+      + 'nimennyt sen kansainvälisesti tärkeäksi lintualueeksi osana Länsi-Angolan '
+      + 'kotoperäisten lintujen aluetta; siellä elävät muun muassa uhanalainen Swierstran pyy '
+      + 'ja angolanluolarastas. Vuoren afrovuoristometsä on silti kutistumassa, kun puuta '
+      + 'kaadetaan rakentamiseen ja polttopuuksi. Kasvitieteilijöitä paikalla on käynyt hyvin '
+      + 'vähän — proteakukat aukeavat vasta heinä—syyskuussa, kun ruohomaan kulot ovat '
+      + 'sammuneet. Vuonna 2014 Moco nimettiin yhdeksi Angolan seitsemästä ihmeestä.',
+    lahde: 'en-Wikipedia "Mount Moco", johdanto-osa sekä osiot "Flora", "Birdlife" ja '
+      + '"Conservation" (tarkistettu 1.9.2026).',
   },
   {
     id: 'atlantti',
@@ -79,8 +85,8 @@ export const MAASTOKOHTEET_AGO = [
     nimi: 'Cuanza',
     tyyppi: 'joki',
     kysymykset: [
-      'Miksi joen nimi kirjoitetaan monella tavalla?',
-      'Mikä kaupunki on aivan joen suun pohjoispuolella?',
+      'Miksi Angolan valuutta on nimeltään kwanza?',
+      'Kuinka pitkälle jokea pääsee veneellä?',
     ],
     korostukset: ['Luanda|Luandan'],
     nappi: 'Angolan pisin joki',
@@ -90,9 +96,16 @@ export const MAASTOKOHTEET_AGO = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Cuanza, joka tunnetaan myös nimillä Kwanza, Quanza ja Coanza, on Angolan pisin joki. '
-      + 'Se laskee Atlanttiin aivan maan pääkaupungin Luandan eteläpuolella.',
-    lahde: 'en-Wikipedia "Cuanza River", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Angolan raha on nimetty tämän joen mukaan, ja niin oli aikanaan myös valloituksen '
+      + 'reitti. Cuanza on maan pisin joki ja laskee Atlanttiin kuusikymmentä kilometriä '
+      + 'Luandan eteläpuolella; sen alajuoksu on veneellä kuljettavissa noin 240 kilometrin '
+      + 'matkalta, ja juuri sitä pitkin portugalilaiset tunkeutuivat Pohjois-Angolaan. Nykyään '
+      + 'joki tekee toista työtä: Capandan pato valmistui 2004, ja sen lisäksi virtaa '
+      + 'padottavat Cambambe ja Laúca. Jokea on tutkittu vasta vähän — Angolan ensimmäinen '
+      + 'Cuanzan monimuotoisuuslaskenta on löytänyt viisikymmentä kalalajia, ja geenitestit '
+      + 'saattavat paljastaa niistä uusia lajeja tieteelle.',
+    lahde: 'en-Wikipedia "Cuanza River", johdanto-osa sekä osiot "Geography", "History", '
+      + '"Wildlife" ja "Legacy" (tarkistettu 1.9.2026).',
   },
 ];
 

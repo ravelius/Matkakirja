@@ -35,8 +35,8 @@ export const MAASTOKOHTEET_MOZ = [
     nimi: 'Monte Binga',
     tyyppi: 'vuori',
     kysymykset: [
-      'Minkä toisen maan huippulistalla Binga on?',
-      'Mikä on rajat ylittävä luonnonpuisto?',
+      'Mikä on Chimanimanin rajat ylittävä puisto?',
+      'Miksi vuorella on useita valehuippuja?',
     ],
     korostukset: ['Chimanimani|Chimanimanin'],
     nappi: 'Kahden maan rajahuippu',
@@ -46,11 +46,17 @@ export const MAASTOKOHTEET_MOZ = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Monte Binga on Mosambikin korkein vuori: 2 440 metriä. Sama huippu on Zimbabwen '
-      + 'toiseksi korkein, sillä vuori seisoo suoraan maiden rajalla Chimanimanin vuoristossa. '
-      + 'Se kuuluu Chimanimanin rajat ylittävään luonnonpuistoon, jota kaksi maata hoitaa '
-      + 'yhdessä.',
-    lahde: 'en-Wikipedia "Monte Binga", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Monte Bingan huipulle nousevan polun löytää siitä, mistä se haarautuu salakuljettajien '
+      + 'vanhalta reitiltä. Bundin laaksosta lännestä lähtevä epämääräinen ura erkanee '
+      + 'pääpolusta, joka vie Skeleton Passille rajan yli; itse nousu vie parhaan osan '
+      + 'päivästä, ja matkalla tulee vastaan useita valehuippuja ennen kuin oikea löytyy. '
+      + 'Vuori, 2 440 metriä, on Mosambikin korkein ja Zimbabwen toiseksi korkein ja seisoo '
+      + 'tasan maiden rajalla Chimanimanin rajat ylittävässä puistossa. Kivi on kovaa '
+      + 'vaaleanharmaata prekambrista kvartsiittia, joka tekee koko ylätasangosta '
+      + 'autiontuntuisen ja paljaan: itäpuolelta nousu on loiva, mutta länsi- ja '
+      + 'pohjoisseinämät ovat paikoin pystysuoria.',
+    lahde: 'en-Wikipedia "Monte Binga", johdanto-osa sekä osiot "Geology" ja "Climbing" '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'intianvaltameri',

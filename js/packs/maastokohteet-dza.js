@@ -81,19 +81,26 @@ export const MAASTOKOHTEET_DZA = [
     tyyppi: 'joki',
     kysymykset: [
       'Miksi joen vedenpinta vaihtelee rajusti?',
-      'Mihin Chelifin vettä käytetään?',
+      'Miksi kaupunki nimettiin joen mukaan?',
     ],
+    korostukset: ['Tell-Atlas|Tell-Atlaksen'],
     nappi: 'Algerian pisin joki',
     // 1.3 E / 36.1 N — keskijuoksu Tell-Atlaksessa; en-Wikipedia "Chelif River" antaa suulle 0,13 / 36,04
     laudat: {
       maailmankartta: { x: 5876.7, y: 1953.7 },
       europe: { x: 236.2, y: 944.2 },
     },
-    teksti: 'Chelif on Algerian pisin joki: se virtaa 700 kilometriä Saharan Atlakselta '
-      + 'Tell-Atlaksen halki ja laskee Välimereen Mostaganemin kaupungin pohjoispuolella. Joen '
-      + 'vedenpinta vaihtelee usein voimakkaasti, ja sen alajuoksun vettä käytetään ennen '
-      + 'kaikkea keinokasteluun.',
-    lahde: 'en-Wikipedia "Chelif River", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Algerian pisin joki antoi lopulta nimen kaupungille, joka oli vaihtanut nimeään '
+      + 'kahdesti. Chelifin varrella oleva kaupunki perustettiin 1843 Orléansvilleksi '
+      + 'roomalaisen Castellum Tingitanumin raunioille, nimettiin 1962 al-Asnamiksi ja sai '
+      + 'lokakuun 1980 tuhoisan maanjäristyksen jälkeen nimekseen Chlef — joen mukaan. Seutu on '
+      + 'vanhaa järistysmaata: jo syyskuussa 1954 järistys tappoi samalla paikalla ainakin 1 '
+      + '243 ihmistä. Joki itse on 700 kilometriä pitkä. Se saa alkunsa Saharan Atlaksesta '
+      + 'Boughezoulin lähistöltä, halkoo Tell-Atlaksen ja laskee Välimereen Mostaganemin '
+      + 'pohjoispuolella. Vedenpinta heittelee rajusti, ja alajuoksun vettä käytetään '
+      + 'kasteluun.',
+    lahde: 'en-Wikipedia "Chelif River" ja en-Wikipedia "Chlef", johdanto-osa ja osio '
+      + '"Orléansville" (tarkistettu 1.9.2026).',
   },
 ];
 

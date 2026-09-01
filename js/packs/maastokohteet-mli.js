@@ -35,8 +35,8 @@ export const MAASTOKOHTEET_MLI = [
     nimi: 'Hombori Tondo',
     tyyppi: 'vuori',
     kysymykset: [
-      'Millainen kaupunki Hombori on?',
-      'Miten Homborivuoret nousevat Sahelin tasangolta?',
+      'Miksi ylätasangolla kasvaa enemmän kuin ympäröivällä tasangolla?',
+      'Mitä Hombori Tondon luolista on löydetty?',
     ],
     korostukset: ['Homborivuoret|Homborivuorten'],
     nappi: 'Malin korkein kohta',
@@ -46,9 +46,16 @@ export const MAASTOKOHTEET_MLI = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Hombori Tondo on Malin korkein kohta: 1 155 metriä. Se kohoaa Homborivuorten jonossa '
-      + 'Moptin alueella, Homborin kaupungin naapurina, maan itäosassa.',
-    lahde: 'en-Wikipedia "Mount Hombori", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Kahden neliökilometrin kokoisella ylätasangolla kasvaa 150 kasvilajia; sen ympärillä '
+      + 'leviävällä kymmenentuhannen neliökilometrin tasangolla vain noin kaksisataa. Ero on '
+      + 'Hombori Tondon jyrkänteiden ansiota: Malin korkeinta kohtaa, 1 155 metriä, ympäröivät '
+      + 'joka puolelta pystysuorat seinämät, eivätkä karjalaumat pääse laelle laiduntamaan. '
+      + 'Niin ylätasangosta on tullut turvapaikka, jossa monen eteläisen lajin — muun muassa '
+      + 'Bombax costatum -puun — levinneisyys yltää pohjoisimmilleen. Kalliokoloissa elää '
+      + 'kalliotamaaneja ja oliivipaviaaneja. Homborivuorten luolissa on lisäksi asuttu yli '
+      + 'kaksituhatta vuotta sitten, ja ne ovat Sahelin merkittäviä arkeologisia kohteita.',
+    lahde: 'en-Wikipedia "Mount Hombori", johdanto-osa sekä osiot "Biodiversity" ja "Archaeology" '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'niger',

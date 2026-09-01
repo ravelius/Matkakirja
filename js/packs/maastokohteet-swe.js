@@ -97,8 +97,8 @@ export const MAASTOKOHTEET_SWE = [
     nimi: 'Göta älv',
     tyyppi: 'joki',
     kysymykset: [
-      'Mikä Baltian jääjärvi oli?',
-      'Miksi Trollhättanin putoukset ovat tärkeät?',
+      'Mikä oli Itämeren jääkausijärvi?',
+      'Mikä on Trollhätten kanava?',
     ],
     korostukset: ['Vänern|Vänernin'],
     nappi: 'Vänernin lasku mereen',
@@ -107,10 +107,16 @@ export const MAASTOKOHTEET_SWE = [
       maailmankartta: { x: 6243, y: 1010.3 },
       europe: { x: 447.2, y: 360.8 },
     },
-    teksti: 'Göta älv laskee Vänernin vedet Kattegatiin Göteborgin kohdalla Ruotsin '
-      + 'länsirannikolla. Se syntyi viime jääkauden lopussa, kun Baltian jääjärven vedet '
-      + 'purkautuivat sitä myöten Atlanttiin. Sen valuma-alue on Skandinavian suurin.',
-    lahde: 'en-Wikipedia "Göta älv", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi '
+      + 'purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin '
+      + 'kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 '
+      + 'kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee '
+      + 'Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — '
+      + 'Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä '
+      + 'rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. '
+      + 'Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy '
+      + 'katsomaan, kun vesi ryöppyää alas.',
+    lahde: 'en-Wikipedia "Göta älv", johdanto-osa (tarkistettu 1.9.2026).',
   },
 ];
 

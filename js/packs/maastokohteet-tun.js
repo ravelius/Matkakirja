@@ -35,19 +35,26 @@ export const MAASTOKOHTEET_TUN = [
     nimi: 'Jabal ash Shanabi',
     tyyppi: 'vuori',
     kysymykset: [
-      'Mikä kaupunki lepää vuoren juurella?',
-      'Mitä vuoren laella kasvaa?',
+      'Miksi huipulla on metallinen puolikuu?',
+      'Mikä on biosfäärialue?',
     ],
+    korostukset: ['Kasserine|Kasserinen'],
     nappi: 'Tunisian korkein huippu',
     // 8.6831 E / 35.2067 N — en-Wikipedia "Jebel ech Chambi"
     laudat: {
       maailmankartta: { x: 6122.8, y: 1987.6 },
       europe: { x: 377.9, y: 967.7 },
     },
-    teksti: 'Jabal ash Shanabi, ranskalaisittain Jebel ech Chambi, on Tunisian korkein vuori: 1 544 '
-      + 'metriä. Se kohoaa Kasserinen kaupungin ylle maan länsiosassa, ja sen mäntymetsän '
-      + 'peittämä laki kuuluu Chambin kansallispuistoon.',
-    lahde: 'en-Wikipedia "Jebel ech Chambi", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Tunisian korkeimman vuoren huipulla on metallinen puolikuu, ja sen pystyttivät maan '
+      + 'partiolaiset heti itsenäistymisen jälkeen vuonna 1956 merkiksi omasta nousustaan. '
+      + 'Jabal ash Shanabi kohoaa 1 544 metriin Kasserinen yläpuolella, muutaman kilometrin '
+      + 'päässä Algerian rajasta, ja sen laella kasvaa mäntymetsä. Kivi on caliche-kalkkikiveä, '
+      + 'luonnon omaa sementtiä, jonka eroosio on uurtanut syviin uomiin; kolme '
+      + 'sedimentaatiokierrosta erottuu punaisina savivyöhykkeinä. Unesco nimesi vuoren '
+      + 'biosfäärialueeksi 1977. Joulukuusta 2012 alkaen sen luolissa on käyty myös aseellisia '
+      + 'operaatioita.',
+    lahde: 'en-Wikipedia "Jebel ech Chambi", johdanto-osa sekä osiot "Description" ja "Biosphere '
+      + 'Reserve" (tarkistettu 1.9.2026).',
   },
   {
     id: 'valimeri',
@@ -74,18 +81,25 @@ export const MAASTOKOHTEET_TUN = [
     nimi: 'Medjerda',
     tyyppi: 'joki',
     kysymykset: [
-      'Millä nimellä joki tunnettiin antiikissa?',
-      'Mistä joki saa alkunsa?',
+      'Mikä oli antiikin Utica?',
+      'Miksi joki vaihtoi uomaa vuonna 1973?',
     ],
+    korostukset: ['Utica|Utican'],
     nappi: 'Tunisian pisin joki',
     // 9.4 E / 36.6 N — joen keskijuoksu Testourin tienoilla; artikkelin koordinaatti 10,213 / 37,112 on suulla Tunisinlahdessa
     laudat: {
       maailmankartta: { x: 6146.7, y: 1934.6 },
       europe: { x: 391.7, y: 931 },
     },
-    teksti: 'Medjerda on Tunisian pisin joki: 450 kilometriä Koillis-Algerian vuorilta Tunisian '
-      + 'halki Tunisinlahteen. Antiikin aikana se tunnettiin nimellä Bagradas.',
-    lahde: 'en-Wikipedia "Medjerda River", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Medjerda hautasi kokonaisen merenlahden. Antiikin Utica oli satamakaupunki Utican '
+      + 'lahden rannalla, mutta joen tuoma liete täytti lahtea vuosisata vuosisadalta: eteläosa '
+      + 'umpeutui jo myöhäisantiikissa, ja pohjoisosasta meri vetäytyi keskiajalla ja uudella '
+      + 'ajalla. Jäljelle jäi vain Ghar el Melhin laguuni — koko entisestä lahdesta. Joki itse '
+      + 'on Tunisian pisin, noin 450 kilometriä, ja se alkaa Koillis-Algerian Tell-Atlaksesta '
+      + 'ja laskee Tunisinlahteen. Vettä on padottu useaan kohtaan, ja se kastelee maan '
+      + 'vehnäpeltoja. Vuoden 1973 suurtulvan jälkeen Medjerda siirsi uomaansa jälleen kerran '
+      + 'ja kulkee nyt ihmisen kaivamaa kanavaa pitkin.',
+    lahde: 'en-Wikipedia "Medjerda River", johdanto-osa ja osio "Course" (tarkistettu 1.9.2026).',
   },
 ];
 

@@ -98,18 +98,25 @@ export const MAASTOKOHTEET_NOR = [
     tyyppi: 'joki',
     kysymykset: [
       'Miksi Glommaa käytettiin tukinuittoon?',
-      'Mihin Glomma laskee?',
+      'Mikä on Fetsundin uittolaitos?',
     ],
+    korostukset: ['tukinuitto|tukinuittojoki'],
     nappi: 'Norjan pisin joki',
     // 11.56 E / 60.88 N — Elverum joen keskijuoksulla; artikkelin koordinaatti 10,931 / 59,218 on suistossa
     laudat: {
       maailmankartta: { x: 6218.7, y: 881.6 },
       europe: { x: 433.2, y: 292.5 },
     },
-    teksti: 'Glomma eli Glåma on Norjan pisin ja vesirikkain joki. Sen kokonaispituus on 621 '
-      + 'kilometriä, ja valuma-alue kattaa 13 prosenttia koko Norjan pinta-alasta — kaikki maan '
-      + 'eteläosassa.',
-    lahde: 'en-Wikipedia "Glomma", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Isoisäsi aikaan Glomma oli Norjan työteliäin joki: se virtaa maan rikkaimpien '
+      + 'metsäseutujen läpi, ja siksi siitä tuli koko maan tärkein tukinuittojoki. Puuta, '
+      + 'vesivoimaa ja hyvä satama suistossa — se yhdistelmä nosti Fredrikstadin ympärille '
+      + 'Norjan suurimpia teollisuuslaitoksia. Joki on 621 kilometriä pitkä, maan pisin ja '
+      + 'vesirikkain, ja sen valuma-alueeseen kuuluu kolmetoista prosenttia Norjan '
+      + 'pinta-alasta. Øyeren-järveen laskiessaan se on kasannut Euroopan suurimman '
+      + 'sisämaasuiston, joka ulottuu järven poikki toiselle rannalle. Muinaisskandinaaviksi '
+      + 'joen nimi oli Raumelfr, jyrisevä virta.',
+    lahde: 'en-Wikipedia "Glomma", johdanto-osa sekä osiot "Geography" ja "Name" (tarkistettu '
+      + '1.9.2026).',
   },
 ];
 

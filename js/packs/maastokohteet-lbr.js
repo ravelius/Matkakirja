@@ -36,9 +36,9 @@ export const MAASTOKOHTEET_LBR = [
     tyyppi: 'vuori',
     kysymykset: [
       'Millä toisella nimellä vuori tunnetaan?',
-      'Mikä on Guinean ylänkö?',
+      'Miksi vuoren korkeus muuttui?',
     ],
-    korostukset: ['Guinean ylänkö|Guinean ylänköä'],
+    korostukset: ['Guinean ylänkö|Guinean ylängöllä'],
     nappi: 'Liberian korkein kohta',
     // -9.925 E / 8.1458 N — en-Wikipedia "Mount Wuteve"
     laudat: {
@@ -46,10 +46,17 @@ export const MAASTOKOHTEET_LBR = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Mount Wuteve, joka tunnetaan myös nimellä Mount Wologizi, on Liberian korkein kohta: '
-      + 'tietolaatikon mukaan 1 447 metriä. Vuori kuuluu Guinean ylänköön, samaan Länsi-Afrikan '
-      + 'selkärankaan, jolta myös alueen suuret joet saavat alkunsa.',
-    lahde: 'en-Wikipedia "Mount Wuteve", johdanto-osa ja tietolaatikko (tarkistettu 30.8.2026).',
+    teksti: 'Liberian korkein kohta kasvoi 67 metriä ilman että kivi liikkui. Mount Wuteve eli '
+      + 'Wologizi tunnettiin pitkään 1 380 metrin korkuisena, kunnes avaruussukkulan '
+      + 'tutkakartoitus mittasi sen uudelleen: nykyinen lukema on 1 447 metriä. Vuori on '
+      + 'Guinean ylängöllä, ja sen harjanne jatkuu kaksikymmentäkaksi kilometriä '
+      + 'sivuhaaroineen; rinteet ovat jyrkät ja paikoin sadan metrin pystysuoria '
+      + 'kallioseinämiä. Alarinteillä kasvaa avointa sademetsää, ja tuhannen metrin yläpuolella '
+      + 'puut kääpiöityvät. BirdLife International on nimennyt massiivin kansainvälisesti '
+      + 'tärkeäksi lintualueeksi, ja sen metsissä liikkuu myös metsänorsuja ja länsimaisia '
+      + 'simpansseja.',
+    lahde: 'en-Wikipedia "Mount Wuteve", osiot "Geography" ja "Environment" (tarkistettu '
+      + '1.9.2026).',
   },
   {
     id: 'atlantti',
@@ -81,6 +88,7 @@ export const MAASTOKOHTEET_LBR = [
       'Mikä kala antoi joelle nimen?',
       'Minkä kahden maan rajaa joki piirtää?',
     ],
+    korostukset: ['Mont Nimba|Mont Nimban'],
     nappi: 'Joki, joka nimettiin kalasta',
     // -7.9 E / 4.9 N — alajuoksu Liberian ja Norsunluurannikon rajalla; en-Wikipedia "Cavalla River" antaa suulle -7,53 / 4,37
     laudat: {
@@ -88,11 +96,15 @@ export const MAASTOKOHTEET_LBR = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Cavalla on Liberian pisin joki: 515 kilometriä. Se saa alkunsa Guineasta Nimba-vuoren '
-      + 'pohjoispuolelta, muodostaa kaksi kolmasosaa Liberian ja Norsunluurannikon välisestä '
-      + 'rajasta ja laskee Guineanlahteen. Nimensä joki sai suullaan parveilevasta '
-      + 'cavalla-makrillista.',
-    lahde: 'en-Wikipedia "Cavalla River", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Liberian pisin joki on nimetty kalan mukaan, joka ei ui siinä vaan sen suulla. Cavalla '
+      + 'sai nimensä suistossa tavattavasta cavalla-piikkimakrillista, ja sitä kutsutaan myös '
+      + 'nimillä Cavally, Youbou ja Diougou. Joki alkaa Guineassa Mont Nimban pohjoispuolelta, '
+      + 'kiertää Norsunluurannikon kautta takaisin rajalle ja laskee Guineanlahteen '
+      + 'kaksikymmentäyksi kilometriä Harperista itään. Sen 515 kilometristä suurin osa on '
+      + 'kartalla viiva: se muodostaa Liberian ja Norsunluurannikon välisen rajan kahdesta '
+      + 'kolmasosasta eteläisimmän. Joessa elää oma kotoperäinen kalansa, Chiloglanis normani, '
+      + 'jota ei tunneta muualta.',
+    lahde: 'en-Wikipedia "Cavalla River" (tarkistettu 1.9.2026).',
   },
 ];
 

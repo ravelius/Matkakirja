@@ -56,19 +56,28 @@ export const MAASTOKOHTEET_ESP = [
     nimi: 'Aneto',
     tyyppi: 'vuori',
     kysymykset: [
-      'Mikä Maladeta-massiivi on?',
+      'Miksi Anetoa pidettiin kirottuna?',
       'Onko Anetolla vielä jäätikköä?',
     ],
+    korostukset: ['Maladeta|Maladetaa'],
     nappi: 'Pyreneiden korkein huippu',
     // 0.6578 E / 42.6322 N — en-Wikipedia "Aneto"
     laudat: {
       maailmankartta: { x: 5855.3, y: 1698.2 },
       europe: { x: 223.8, y: 772.4 },
     },
-    teksti: 'Aneto on 3 404 metriä korkea, Pyreneiden ja Aragonian korkein huippu ja Espanjan '
-      + 'kolmanneksi korkein vuori. Se sijaitsee Huescan maakunnassa kuusi kilometriä Ranskan '
-      + 'rajasta etelään ja muodostaa Maladeta-massiivin eteläisimmän osan.',
-    lahde: 'en-Wikipedia "Aneto", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Pyreneiden korkeimmalla huipulla ei pitkään aikaan ollut nimeä. Eteläisten laaksojen '
+      + 'paimenet puhuivat Malhetasta tai vain Puntasta, ja ensimmäinen matkailija, joka näki '
+      + 'vuoren Benasquen solasta vuonna 1787, kuvasi sitä jääneuloiksi. Vielä sen jälkeenkin '
+      + 'Pyreneiden korkeimpana pidettiin naapuria Maladetaa — vasta kun Friedrich von Parrot '
+      + 'nousi Maladetan huipulle 1817, huomattiin että Aneto on korkeampi. Sitten alkoivat '
+      + 'onnettomuudet: kun seudun tunnetuin opas putosi jäätikön railoon ja kuoli, paikalliset '
+      + 'alkoivat pitää vuorta kirottuna eivätkä menneet jäälle. Nykyinen nimi vakiintui vasta '
+      + '1890-luvulla. Aneton pohjoisrinteellä on yhä Pyreneiden suurin jäätikkö, mutta se on '
+      + 'kutistunut yli kahdestasadasta hehtaarista 48 hehtaariin ja saattaa kadota '
+      + '2050-luvulle tultaessa.',
+    lahde: 'en-Wikipedia "Aneto", johdanto-osa sekä osiot "Toponym", "History" ja "Glaciers" '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'valimeri',
@@ -96,19 +105,26 @@ export const MAASTOKOHTEET_ESP = [
     nimi: 'Tajo',
     tyyppi: 'joki',
     kysymykset: [
-      'Miksi Toledo rakennettiin joen mutkaan?',
+      'Mikä Sierra de Albarracín on?',
       'Millä nimellä joki tunnetaan Portugalissa?',
     ],
+    korostukset: ['Sierra de Albarracín|Sierra de Albarracínin'],
     nappi: 'Iberian pisin joki',
     // -4.02 E / 39.86 N — Toledo, joen mutka kaupungin ympäri — piste valittu keskijuoksulta; artikkelilla ei ole koordinaattia
     laudat: {
       maailmankartta: { x: 5699.3, y: 1808.4 },
       europe: { x: 134, y: 845.3 },
     },
-    teksti: 'Tajo on Iberian niemimaan pisin joki. Se saa alkunsa Montes Universales -vuoristosta '
-      + 'Cuencan ja Teruelin välissä Keski-Espanjassa, virtaa 1 007 kilometriä pääosin länteen '
-      + 'ja laskee Atlanttiin Lissabonin kohdalla. Portugalin puolella sen nimi on Tejo.',
-    lahde: 'en-Wikipedia "Tagus", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Iberian pisimmän joen alku mahtuu yhteen lähteeseen. Fuente García pulppuaa 1 593 '
+      + 'metrin korkeudessa Sierra de Albarracínin ylängöllä, kahden lähes 1 850-metrisen '
+      + 'huipun välissä, ja siitä alkaa Tajon 1 007 kilometrin matka Atlantille. Espanjan '
+      + 'puolella jokea on 816 kilometriä: se kulkee Aragonian, Kastilia-La Manchan, Madridin '
+      + 'ja Extremaduran halki, ohittaa Aranjuezin, Toledon ja Talavera de la Reinan ja '
+      + 'muodostaa lopulta 47 kilometrin mittaisen rajan Portugalia vasten. Siitä eteenpäin '
+      + 'joen nimi on Tejo. Vesistöalue on koko niemimaan asutuin — yli kymmenen miljoonaa '
+      + 'ihmistä Madridin seutu ja Lissabon mukaan luettuina — ja sen patoaltaisiin mahtuu noin '
+      + '14 500 kuutiohehtometriä vettä.',
+    lahde: 'en-Wikipedia "Tagus", osiot "Source", "Course" ja "Basin" (tarkistettu 1.9.2026).',
   },
   {
     id: 'ebro',
