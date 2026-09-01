@@ -799,6 +799,15 @@ const MATKAREITIN_KATKO_PX = 8;
  * ruutu, jolle nappula pysähtyy, ja sellaisen pitää näkyä.
  */
 const MATKAREITIN_PISTE_PX = 4.2;
+/*
+ * LENTOKAAREN mitat ruudun pikseleinä. Kaari on lyhytikäinen ja
+ * kulkee koko ruudun poikki, joten se saa olla laivareittiä
+ * harvempi ja hitusen paksumpi — sama lautapelin katkoviivan henki
+ * kuin poltetuilla reiteillä (maailmapiirto.js REITTITYYLI, omistaja
+ * 1.9.2026 *"harvempia ja vähän paksumpia"*).
+ */
+const LENTOKAAREN_VIIVA_PX = 2.4;
+const LENTOKAAREN_KATKO_PX = 14;
 
 /*
  * NUOREN FOGGIN HUUDAHDUSRIVI PALJASTUSKORTILLA (omistajan
@@ -6565,13 +6574,64 @@ export class UI {
     const reittiTunnukset = kaupunki
       ? [...(game.board.adj.get(kaupunki.id) ?? [])]
       : (kesken ? [kesken] : []);
-    const avain = naytetaan && reittiTunnukset.length
-      ? `${game.pack.id}:${kaupunki?.id ?? kesken}:${game.phase}` : '';
+    /*
+     * === LENTOKAARET OVAT ELÄVIÄ, EIVÄT LAATOISSA (omistaja 1.9.2026)
+     *
+     * Sanatarkasti: *"Poistetaan lentoreitit kokonaan näkyvistä.
+     * Piirretään ne näkyviin reaaliajassa vasta sitten jos pelaaja
+     * päättää mennä lentokoneella."* Laatoista ne poistuvat
+     * viivatason ajossa (tools/generoi-laattapyramidi.mjs LENNOT
+     * EIVÄT OLE VIIVATASOLLA); tässä on se, mikä tulee tilalle.
+     *
+     * Kaari näkyy kahdessa hetkessä ja katoaa itsestään molemmista:
+     *   1. kun pelaaja on avannut LENTÄEN-listan (travelSuodatin
+     *      'air'), jokaiseen valittavaan kohteeseen — silloin lista
+     *      ja kartta puhuvat samasta matkasta;
+     *   2. valitun lennon ajan (`lentoKaari`), kunnes nappula on
+     *      perillä ja doFly nollaa sen.
+     *
+     * Kaari on SAMA muoto kuin laudan omilla lentoreiteillä oli
+     * (neljännespoikkeama 0,12 · jänne), jotta pelaajan muistikuva
+     * kartasta ei muutu — vain elinikä muuttuu.
+     */
+    /*
+     * VAIN LAATTALAUDALLA. Mantereiden omilla laudoilla lentoreitit
+     * piirtyvät yhä kartan kuvaan (drawBoard `air-routes`), eikä
+     * samaa yhteyttä saa olla ruudulla kahdesti.
+     */
+    const lennotElavana = pyramidiKattaa(game.pack.id);
+    const lentoKohteet = [];
+    if (lennotElavana && naytetaan && kaupunki
+      && this.travelExpanded && this.travelSuodatin === 'air') {
+      for (const id of game.airportDestinations?.() ?? []) lentoKohteet.push(id);
+      for (const k of game.mannerLennot?.() ?? []) lentoKohteet.push(k.city);
+    }
+    if (lennotElavana && this.lentoKaari?.b) lentoKohteet.push(this.lentoKaari.b);
+    const lennot = [...new Set(lentoKohteet)];
+    const lentoLahto = this.lentoKaari?.a ?? kaupunki?.id ?? null;
+    const avain = naytetaan && (reittiTunnukset.length || lennot.length)
+      ? `${game.pack.id}:${kaupunki?.id ?? kesken}:${game.phase}`
+        + `:${lentoLahto ?? ''}>${lennot.join(',')}` : '';
     if (this.matkareittiAvain === avain) return;
     this.matkareittiAvain = avain;
     kerros.textContent = '';
     if (!avain) return;
     const skaala = this.nakyvaAlue()?.skaala || 1;
+    const lahtoKaupunki = lentoLahto ? game.board.cityById.get(lentoLahto) : null;
+    for (const kohdeId of lahtoKaupunki ? lennot : []) {
+      const kohde = game.board.cityById.get(kohdeId);
+      if (!kohde) continue;
+      const a = lahtoKaupunki;
+      const mx = (a.x + kohde.x) / 2 + (kohde.y - a.y) * 0.12;
+      const my = (a.y + kohde.y) / 2 - (kohde.x - a.x) * 0.12;
+      const kaari = el('path', {
+        d: `M${a.x},${a.y} Q${mx.toFixed(1)},${my.toFixed(1)} ${kohde.x},${kohde.y}`,
+        class: 'matkareitti matkareitti-lento',
+      }, kerros);
+      kaari.style.strokeWidth = (LENTOKAAREN_VIIVA_PX / skaala).toFixed(2);
+      const jakso = LENTOKAAREN_KATKO_PX / skaala;
+      kaari.style.strokeDasharray = `${(jakso * 0.6).toFixed(2)} ${(jakso * 0.4).toFixed(2)}`;
+    }
     for (const eid of reittiTunnukset) {
       const reitti = game.board.edgeById.get(eid);
       const poly = reitti?.poly;
@@ -16624,18 +16684,33 @@ export class UI {
       sfx.play('flight');
       if (!this.reducedMotion) document.body.classList.add('flight-active');
     }
+    /*
+     * VALITUN LENNON KAARI KARTALLE MATKAN AJAKSI (omistaja 1.9.2026:
+     * *"Piirretään ne näkyviin reaaliajassa vasta sitten jos pelaaja
+     * päättää mennä lentokoneella."*). Kaari piirtyy elävässä
+     * matkareittikerroksessa (paivitaMatkareitit) ja katoaa PERILLÄ:
+     * `lentoKaari` nollataan vasta kun nappula on maassa, eikä sitä
+     * jätetä roikkumaan, vaikka animaatio keskeytyisi.
+     */
+    if (lahto && kohde) this.lentoKaari = { a: lahto.id, b: kohde.id };
+    this.paivitaMatkareitit();
     this.run(() => game.actionFly(destination), {
       after: async () => {
-        // Lentokalvo kuuluu vain maailmankartalle; mantereella nappula
-        // lentää suoraan karttanäkymässä — rauhallisemmin ja moottorin
-        // hurinan saattelemana (omistajan toive).
-        if (game.pack.id === 'maailma') {
-          await this.animateFlight(lahto?.name ?? '', kohde?.name ?? '', line, suunta);
-          await this.animatePawn(player, from, [player.pos], FLIGHT_MS);
-        } else {
-          sfx.startFlight(MANNER_LENTO_MS);
-          await this.animatePawn(player, from, [player.pos], MANNER_LENTO_MS);
-          sfx.stopFlight();
+        try {
+          // Lentokalvo kuuluu vain maailmankartalle; mantereella nappula
+          // lentää suoraan karttanäkymässä — rauhallisemmin ja moottorin
+          // hurinan saattelemana (omistajan toive).
+          if (game.pack.id === 'maailma') {
+            await this.animateFlight(lahto?.name ?? '', kohde?.name ?? '', line, suunta);
+            await this.animatePawn(player, from, [player.pos], FLIGHT_MS);
+          } else {
+            sfx.startFlight(MANNER_LENTO_MS);
+            await this.animatePawn(player, from, [player.pos], MANNER_LENTO_MS);
+            sfx.stopFlight();
+          }
+        } finally {
+          this.lentoKaari = null;
+          this.paivitaMatkareitit();
         }
       },
     });

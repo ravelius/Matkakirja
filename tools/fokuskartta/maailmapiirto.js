@@ -1004,6 +1004,35 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    */
   const KALUSTEIDEN_YLARAJA = 0.3;
   const merinimetNakyvat = px <= KALUSTEIDEN_YLARAJA;
+  /*
+   * === MARGINAALIN KALUSTEILLA ON OMA KYNNYS (omistaja 1.9.2026) =====
+   *
+   * Omistaja katsoi kahta kaappausta peräkkäin ja sanoi: *"Toiseksi
+   * laajimmalla zoom tasolla saisi näkyä paperin päälle ladottu
+   * matkakirja ja alhaalla myös muut vastaavat"*, ja täsmensi mitä
+   * tarkoitti: *"nuo tekstit jotka näkyy valkoisen marginaalin
+   * päällä"*.
+   *
+   * Kaappaukset ovat mittajanoiltaan 5000 km ja 2000 km eli tasot z2
+   * (0,225 px/yks) ja z3 (0,45). Vanha kynnys 0,3 päästi kartussin ja
+   * painajanrivin vain z2:lle, joten z3:lla arkki oli paperia ilman
+   * nimeä — ja juuri z3 on se taso, jolla peli näyttää koko
+   * maailmankartan tabletin ruudulla.
+   *
+   * KYNNYS ON KALUSTEILLE OMA, EI MERTEN NIMIEN KANSSA JAETTU. Merten
+   * nimet ovat KARTAN ALALLA ja niiden kynnys tulee siitä, mahtuuko
+   * koko meri näkymään (osion 7 mittaus): se ei muuttunut. Kartussi ja
+   * painajanrivi ovat MARGINAALISSA, ja niiden kysymys on toinen —
+   * onko arkki kokonaisena katsottavana. Sama arkki on kokonaisena
+   * myös z3:lla.
+   *
+   * 0,5 on tason 3 (0,45) yläpuolella ja tason 4 (0,9) alapuolella,
+   * eli raja kulkee siellä missä omistajan kaksi kaappausta erottuvat
+   * seuraavasta: 1000 km:n näkymässä (z4) marginaali on jo ruudun
+   * ulkopuolella, eikä otsikkoa siellä katsota.
+   */
+  const KALUSTEET_YLARAJA = 0.5;
+  const kalusteetNakyvat = px <= KALUSTEET_YLARAJA;
 
   /*
    * Valtamerten nimet ovat karttatypografiaa eivätkä paikkatietoa: ne
@@ -1520,10 +1549,14 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * TÄSTÄ ETEENPÄIN VAIN ULOIMMILLA TASOILLA (ks. osion johdanto).
      * Paperi ja kaksoisviiva yllä ovat joka tasolla; kartussi, jana ja
      * painajanrivi kertovat mikä ARKKI tämä on, ja se on kysymys vain
-     * silloin kun arkkia katsotaan kokonaisena. Kynnys on sama kuin
-     * merten nimillä ja kompassilla (osio 7).
+     * silloin kun arkkia katsotaan kokonaisena.
+     *
+     * KYNNYS ON MARGINAALIN OMA (`kalusteetNakyvat`, osio 7) eikä sama
+     * kuin merten nimillä: omistajan päätös 1.9.2026 toi kartussin ja
+     * painajanrivin myös tasolle z3, jolla koko maailmankartta on
+     * tabletin ruudulla mutta merten nimet olisivat jo liian isot.
      */
-    if (merinimetNakyvat) {
+    if (kalusteetNakyvat) {
       /* ---------------------------------------------------- kartussi */
 
       /*
@@ -2063,23 +2096,68 @@ export function piirraErikoispiiritKankaalle(ctx, mitta) {
  *   kehä   1,3 -> 1,9   ja niiden kehä samassa suhteessa
  *   lento  1,7 -> 2,5   lentoreitin veto samassa suhteessa
  *
- * KAKSI VANHAA RAJAA PITÄÄ YHÄ, ja ne on tarkistettu uusilla luvuilla:
+ * === LAUTAPELI, EI TEKNINEN PIIRUSTUS (omistaja 1.9.2026) ==========
  *
- *   HELMI EI MAHDU KATKOON. Helmen halkaisija on 9,2 R ja lyhin katko
- *   0,55 · 24 = 13,2 R — katko on yhä pitkänomainen ja helmi pyöreä.
+ * Sanatarkasti: *"Katkoviivat saisi olla harvempia ja vähän
+ * paksumpia, niin että näyttävät enemmän käsin piirretyiltä"* ja
+ * *"Maa ja vesireitit saisi olla enemmän söpön lautapelin oloisia
+ * kuin teknisiä piirustuksia."* Sama suunta kuin edellisessä erässä,
+ * pidemmälle vietynä — ja nyt myös katkon OMA MUOTO, ei vain sen koko:
+ *
+ *   viiva     2,8 -> 4,0   paksumpi veto (1,43x)
+ *   jakso      24 -> 40    harvempi rytmi (1,67x, katkoja on 3/5)
+ *   helmi     4,6 -> 5,6   helmi kasvaa veton mukana
+ *   kehä      1,9 -> 2,4
+ *   sivu     0,40 -> 0,55  katko heittää enemmän sivuun
+ *   kaari    0,55 -> 0,95  ja kaartaa selvemmin — tästä syntyy
+ *                          käsin piirretty tunnelma lähikuvassa
+ *   huojunta 0,35 -> 0,60  solmun heitto (käsivara)
+ *   vapina      – -> 0,35  UUSI: hidas huojunta pitkin kaarta
+ *
+ * PYÖREÄT PÄÄT OVAT JO PAIKALLAAN (`ctx.lineCap = 'round'` alla) ja
+ * jäävät: pyöreä pää on juuri se, mikä erottaa piirretyn viivan
+ * teknisen piirustuksen tikusta. Paksummalla vedolla se myös näkyy —
+ * 1,4 pikselin viivassa pään muotoa ei erottanut.
+ *
+ * VAPINA ON KÄSIVARA, EI KOHINAA. Solmuheitto (`huojunta`) toimii
+ * solmujen välein, ja merireitillä välit ovat satoja yksiköitä pitkiä
+ * — pitkä kaari oli siis geometrisen sileä. Vapina lisää saman
+ * mittakaavan heiton TIHEÄMMIN (ohjauspiste joka seitsemäs
+ * murtoviivan piste) ja pehmennettynä, jolloin viiva elää kuin käsi
+ * eikä väristä kuin kohina. Se arvotaan REITIN SIEMENESTÄ ja
+ * ohjauspisteen järjestysluvusta — ei pikselistä eikä laatasta —
+ * joten laattaraja ei näy (sama sääntö kuin solmuheitolla).
+ *
+ * KAKSI VANHAA RAJAA PITÄVÄT YHÄ, ja ne on tarkistettu uusilla
+ * luvuilla:
+ *
+ *   HELMI EI MAHDU KATKOON. Helmen halkaisija on 11,2 R ja lyhin
+ *   katko 0,52 · 40 = 20,8 R — katko on yhä selvästi pitkänomainen.
  *   HELMINAUHAA EI SYNNY. Lyhin askelväli on 232 R ja helmen
- *   ulkohalkaisija kehineen 11,1 R, joten väliin jää yli 220 R.
+ *   ulkohalkaisija kehineen 13,6 R, joten väliin jää yli 218 R.
  *
  * Luvut ovat R:ssä eli KARTTAVAKIOITA (ks. piirraMaailma osio 8b):
  * ne kutistuvat kartan mukana, joten muutos näkyy joka tasolla samana
  * suhteellisena nousuna eikä vain syvimmällä.
  */
 export const REITTITYYLI = Object.freeze({
-  viiva: 2.8,    // veton leveys (kerrotaan vielä kynänpaineella)
-  jakso: 24,     // katko + väli
-  helmi: 4.6,    // askelhelmen säde
-  kehä: 1.9,     // askelhelmen kehän leveys
-  lento: 2.5,    // lentoreitin veton leveys
+  viiva: 4.0,    // veton leveys (kerrotaan vielä kynänpaineella)
+  jakso: 40,     // katko + väli
+  helmi: 5.6,    // askelhelmen säde
+  kehä: 2.4,     // askelhelmen kehän leveys
+  lento: 2.5,    // lentoreitin veton leveys (ei enää poltossa, ks. LENNOT)
+  /*
+   * KATKON OMA MUOTO. Nämä olivat ennen funktion sisäisiä vakioita;
+   * tyylissä ne ovat siksi, että vertailuvedos voi renderöidä saman
+   * näkymän kahdella ilmeellä ilman koodimuutosta (piirraViivataso
+   * `reittityyli`).
+   */
+  lyhin: 0.52,   // katkon osuus jaksosta, alaraja
+  pisin: 0.74,   // katkon osuus jaksosta, yläraja
+  sivu: 0.55,    // koko katko sivussa viivalta (R)
+  kaari: 0.95,   // katkon kaarevuus keskellä (R)
+  huojunta: 0.6, // solmun heitto (R), molempiin suuntiin
+  vapina: 0.35,  // hidas käsivarahuojunta pitkin kaarta (R)
 });
 
 /* --- reitit: pelilaudan rata askelmineen ------------------------
@@ -2277,8 +2355,27 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
      * Heitto lasketaan kerran reittiä kohti ja jää muistiin
      * `sisalto`-olioon — sama olio piirtää tuhannet laatat.
      */
-    const HEITTO = 0.35;   // reittiyksikköä (R), molempiin suuntiin
+    const HEITTO = TYYLI.huojunta;   // reittiyksikköä (R), molempiin suuntiin
     const KYNIA = 5;       // kynänpaineen portaat
+    /*
+     * VAPINA — KÄSIVARA SOLMUJEN VÄLILLÄ (omistaja 1.9.2026: *"vähän
+     * paksumpia, niin että näyttävät enemmän käsin piirretyiltä"*).
+     *
+     * Solmuheitto yksin ei riitä merireitillä: solmuja on kourallinen
+     * ja niiden väli satoja yksiköitä, joten pitkä kaari oli
+     * geometrisen sileä juuri siellä, missä käden pitäisi näkyä.
+     * Vapina on toinen kerros samaa ideaa TIHEÄMMÄLLÄ ohjausvälillä
+     * (`VAPINA_VALI` murtoviivan pistettä) ja pienemmällä
+     * amplitudilla; smoothstep pehmentää sen, joten se on huojuntaa
+     * eikä rosoa.
+     *
+     * SIEMEN ON REITIN, EI PIKSELIN. Sama sääntö kuin solmuheitolla ja
+     * katkokuviolla: luvut tulevat `r.siemen`istä ja ohjauspisteen
+     * järjestysluvusta, joten viiva on joka laatalla pikselilleen sama
+     * eikä laattarajaan voi syntyä saumaa.
+     */
+    const VAPINA = TYYLI.vapina ?? 0;
+    const VAPINA_VALI = 7;
     const heitot = (r) => {
       if (!r.__heitto) {
         const rnd = mulberry32(r.siemen ?? 1);
@@ -2302,6 +2399,26 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
             ];
           }
         }
+        if (VAPINA > 0 && h.length > 2) {
+          const ohjaimia = Math.max(2, Math.ceil((h.length - 1) / VAPINA_VALI) + 1);
+          const v = [];
+          for (let i = 0; i < ohjaimia; i += 1) {
+            // Päät eivät vavise: reitin pää on kaupunki (ks. yllä).
+            const reuna = i === 0 || i === ohjaimia - 1;
+            v.push(reuna ? [0, 0] : [
+              (rnd() - 0.5) * 2 * VAPINA, (rnd() - 0.5) * 2 * VAPINA,
+            ]);
+          }
+          for (let i = 0; i < h.length; i += 1) {
+            const p = Math.min(ohjaimia - 2, Math.floor(i / VAPINA_VALI));
+            const t = Math.min(1, (i - p * VAPINA_VALI) / VAPINA_VALI);
+            const u = t * t * (3 - 2 * t);
+            h[i] = [
+              h[i][0] + v[p][0] + (v[p + 1][0] - v[p][0]) * u,
+              h[i][1] + v[p][1] + (v[p + 1][1] - v[p][1]) * u,
+            ];
+          }
+        }
         r.__heitto = h;
       }
       return r.__heitto;
@@ -2311,39 +2428,39 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
      * === KATKON MITAT (reittiyksikköä R) ==========================
      *
      * `jakso` on yhden katkon ja sitä seuraavan välin yhteismitta.
-     * 24 yksikköä (REITTITYYLI; omistaja 31.8.2026 ilta *"liian
-     * tiheään tikattuja"*) on valittu kahdesta rajasta, ja kumpikin on
+     * 40 yksikköä (REITTITYYLI; omistaja 1.9.2026 *"katkoviivat saisi
+     * olla harvempia"*) on valittu kahdesta rajasta, ja kumpikin on
      * MITTAKAAVASTA RIIPPUMATON, koska helmi ja katko kutistuvat samaa
      * tahtia:
      *
-     *   ALARAJA  helmi on halkaisijaltaan 9,2 R. Jos katko olisi
+     *   ALARAJA  helmi on halkaisijaltaan 11,2 R. Jos katko olisi
      *            samaa kokoluokkaa, katko ja helmi näyttäisivät
      *            käyttökoossa samalta merkiltä. Lyhinkin katko
-     *            (0,55 · 24 = 13,2 R) on selvästi pidempi kuin
+     *            (0,52 · 40 = 20,8 R) on selvästi pidempi kuin
      *            helmi on leveä.
      *   YLÄRAJA  lyhimmälle askelvälille on mahduttava katkoja.
      *            Väli ja jakso mitataan samassa mittakaavassa, joten
      *            suhde pätee joka tasolla: mitattuna lyhin askelväli on
      *            232 R ja mediaani 595 R, eli lyhimmällekin välille
-     *            mahtuu yhdeksän jaksoa.
+     *            mahtuu viisi jaksoa (ennen yhdeksän).
      *
      * SEURAUS, JOKA KANNATTAA TIETÄÄ: kun jakso skaalautuu kartan
      * mukana, KATKOJEN LUKUMÄÄRÄ reittiä kohti on sama joka
      * tasolla. Kuvio ei siis harvene eikä tihene zoomatessa, se vain
      * pienenee — juuri niin kuin painettu kartta pienenee.
      *
-     * Katkon pituus vaihtelee 55…78 % jaksosta ja sen paikka jakson
+     * Katkon pituus vaihtelee 52…74 % jaksosta ja sen paikka jakson
      * sisällä arvotaan lopusta — siksi VÄLIKIN vaihtelee, eivätkä
      * katkot asetu koneelliseen tahtiin. Molemmat luvut tulevat
      * reitin tunnuksesta ja KATKON JÄRJESTYSLUVUSTA.
      */
     const KATKO = {
       jakso: TYYLI.jakso,  // reittiyksikköä: katko + väli (REITTITYYLI)
-      lyhin: 0.55,   // katkon osuus jaksosta, alaraja
-      pisin: 0.78,   // katkon osuus jaksosta, yläraja
-      sivu: 0.40,    // paperipikseliä: koko katko sivussa viivalta
-      kaari: 0.55,   // paperipikseliä: katkon kaarevuus keskellä
-      paloja: 5,     // janaa per katko (kaaren tarkkuus)
+      lyhin: TYYLI.lyhin,  // katkon osuus jaksosta, alaraja
+      pisin: TYYLI.pisin,  // katkon osuus jaksosta, yläraja
+      sivu: TYYLI.sivu,    // reittiyksikköä: koko katko sivussa viivalta
+      kaari: TYYLI.kaari,  // reittiyksikköä: katkon kaarevuus keskellä
+      paloja: 7,     // janaa per katko (kaaren tarkkuus)
     };
     /**
      * Deterministinen 0…1 reitin siemenestä ja katkon numerosta.
@@ -2432,6 +2549,14 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
      * numeron saa suoraan kaarenpituudesta (`Math.floor(s / T)`)
      * eikä sitä tarvitse kerätä reitin alusta asti — ja juuri se
      * tekee kuviosta laatasta riippumattoman.
+     *
+     * PIIRTOVÄLIT (`r.piirtoValit`) rajaavat sen, mikä osa reitistä
+     * ylipäätään piirtyy: rinnakkaiskarsinta jättää pois sen osuuden,
+     * jonka toinen reitti jo piirtää (tools/fokuskartta/
+     * reittikarsinta.mjs). Välit ovat murtoviivan indeksejä, ne
+     * lasketaan reitin omasta geometriasta eikä laatasta, ja
+     * SAMA lista ohjaa peitettä — työlista ja piirto ovat siis
+     * samaa mieltä. Ilman kenttää piirtyy koko reitti.
      */
     const katkoPolku = (g, r, dx) => {
       const a = arkilla(r);
@@ -2441,11 +2566,14 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
       } = a;
       const n = xs.length;
       const T = KATKO.jakso * R;
-      let i0 = 0;
-      for (let raja = 1; raja <= n; raja += 1) {
-        if (raja < n && !uusi[raja]) continue;
-        jaksonKatkot(g, xs, ys, s, i0, raja - 1, r.siemen ?? 1, dx, T);
-        i0 = raja;
+      const valit = r.piirtoValit ?? [[0, n - 1]];
+      for (const [v0, v1] of valit) {
+        let i0 = v0;
+        for (let raja = v0 + 1; raja <= v1 + 1; raja += 1) {
+          if (raja <= v1 && !uusi[raja]) continue;
+          jaksonKatkot(g, xs, ys, s, i0, raja - 1, r.siemen ?? 1, dx, T);
+          i0 = raja;
+        }
       }
     };
 

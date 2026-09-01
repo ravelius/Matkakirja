@@ -5042,6 +5042,21 @@ body.radio-tila .actions {
 /* Merireitti erottuu maareitistä sinertävällä musteella, kuten laudallakin. */
 .matkareitti-meri { stroke: #3d5570; }
 
+/*
+ * LENTOKAARI (omistaja 1.9.2026: *"Poistetaan lentoreitit kokonaan
+ * näkyvistä. Piirretään ne näkyviin reaaliajassa vasta sitten jos
+ * pelaaja päättää mennä lentokoneella."*)
+ *
+ * Muste on sama poltettu sinooperi, jolla lentoreitit olivat
+ * laatoissa (rgba(150,54,40)), jotta merkin merkitys ei vaihdu — vain
+ * sen elinikä. Hitusen näkyvämpi kuin laiva- ja maareitti, koska se
+ * on vastaus pelaajan juuri tekemään valintaan.
+ */
+.matkareitti-lento {
+  stroke: #963628;
+  opacity: 0.6;
+}
+
 .matkareitti-piste {
   fill: rgba(250, 243, 226, 0.9);
   stroke: #4a3a24;

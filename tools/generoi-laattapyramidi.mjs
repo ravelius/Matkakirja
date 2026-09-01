@@ -367,8 +367,36 @@ const NOSTO_ALIN = 5;
  */
 const VIIVATASO = lippu('viivataso');
 const VIIVAVERSIO = valitsin('viivaversio', VERSIO);
-/** Se taso, jolta alkaen reittipassi piirretään (ks. VIIVATASO). */
-const VIIVA_REITIT_ALIN = 1;
+/*
+ * REITIT VAIN LÄHITASOILLE (omistaja 1.9.2026, kuvakaappaus jonka
+ * mittajana on 1000 km): *"Tällä zoomitasolla ja yli reitit voi
+ * piilottaa kokonaan."*
+ *
+ * MIKÄ TASO ON MIKÄKIN — MITATTU KAAPPAUKSISTA, EI ARVATTU. Peli
+ * valitsee tason noin 1:1 laitepikseleinä (js/laattapyramidi.js
+ * valitseTaso), ja mittajana lasketaan näkymän mittakaavasta
+ * (js/fokusmitat.js laskeMittajana). Tason oma tiheys on
+ * `TASO0 · 2^z / 12000` kuvapikseliä lautayksikköä kohti:
+ *
+ *   z2  0,225 px/yks   jana 5000 km   koko maailma arkilla
+ *   z3  0,45           jana 2000 km
+ *   z4  0,90           jana 1000 km   ← omistajan kaappaus
+ *   z5  1,80           jana  500 km
+ *   z6  3,60           jana  200 km   ← omistajan lähikaappaus
+ *   z7  7,20           jana  100 km
+ *
+ * Omistajan raja kulkee siis z4:n ja z5:n VÄLISSÄ: 1000 km:n näkymässä
+ * ja sitä laajemmilla reittejä ei polteta lainkaan, 500 km:stä
+ * sisäänpäin ne ovat. RAJA ON POLTTOPÄÄTÖS EIKÄ HÄIVYTYS (Raamattu,
+ * VIIVATASO: *"EI häivytystä millään tasolla"*) — laattaa ei ole, ja
+ * peli jättää sen pyytämättä, koska luettelon bittikartta lasketaan
+ * samasta funktiosta.
+ *
+ * RAJAT JA PIIRIT JÄÄVÄT KAIKILLE TASOILLE: ne ovat kartan omaa
+ * hallinnollista ja tähtitieteellistä viivastoa, eivät pelilaudan
+ * rataa, eikä omistajan pyyntö koskenut niitä.
+ */
+const VIIVA_REITIT_ALIN = 5;
 /*
  * RAJASETTI on DATAA, ei koodia (omistaja 31.8.2026 ilta: rajojen oma
  * taso on tärkeä siksikin, että myöhemmin voidaan mallintaa
@@ -819,14 +847,21 @@ function lisaaJana(joukko, mitat, ax, ay, bx, by, m) {
  * heitoista laskettuja YLÄRAJOJA — ylimitta maksaa muutaman lähes
  * tyhjän laatan, alimitta katkaisisi viivan laattarajalle.
  *
- *   reitti  solmuheitto 0,35 + katkon sivu 0,40 + kaari 0,55
- *           + puoli veton leveyttä (2,8 · 1,12 / 2 = 1,57)   = 2,87
- *   helmi   säde 4,6 + puoli kehää (1,9 / 2)                 = 5,55
- *   lento   sivu 0,40 + kaari 0,55 + 2,5 · 1,10 / 2          = 2,33
+ * PÄIVITETTY LAUTAPELITYYLIIN (omistaja 1.9.2026, ks. maailmapiirto.js
+ * REITTITYYLI): veto, katkon heitto ja helmi kasvoivat, ja vapina on
+ * uusi.
+ *
+ *   reitti  solmuheitto 0,60 + vapina 0,35 + katkon sivu 0,55
+ *           + kaari 0,95 + puoli veton leveyttä
+ *           (4,0 · 1,12 / 2 = 2,24)                          = 4,69
+ *   helmi   säde 5,6 + puoli kehää (2,4 / 2)                 = 6,80
  *   raja    puoli veton leveyttä (1,8 / 2)                   = 0,90
+ *
+ * LENTOREITTEJÄ EI OLE ENÄÄ LISTASSA: ne eivät ole viivatasolla
+ * lainkaan (ks. LENNOT EIVÄT OLE VIIVATASOLLA).
  */
 const ULOTTUMA = {
-  reitti: 2.9, helmi: 5.6, lento: 2.4, raja: 1.0,
+  reitti: 4.8, helmi: 6.9, raja: 1.0,
 };
 /** Patinan musteen ulottuma laatan reunan yli (sama kuin nostolla). */
 const VIIVA_MARGINAALI_PX = NOSTO_MARGINAALI_PX;
@@ -875,20 +910,33 @@ function viivatasonPeite(mitat, osat = null) {
      */
     const KIERROS = projektio.leveys ?? 0;
     const siirrot = KIERROS ? [-KIERROS, 0, KIERROS] : [0];
-    const lisaaPoly = (poly, ulottumaR) => {
+    const lisaaPoly = (poly, ulottumaR, valit) => {
       const m = ulottumaR * R + VIIVA_MARGINAALI_PX;
       for (const d of siirrot) {
-        for (let i = 1; i < poly.length; i += 1) {
-          const ax = poly[i - 1][0] + d;
-          const bx = poly[i][0] + d;
-          // Sauman yli avattu hyppy ei ole jana (js/rules.js avaaSauma).
-          if (KIERROS && Math.abs(bx - ax) > KIERROS / 2) continue;
-          lisaaJana(joukko, mitat, px(ax), py(poly[i - 1][1]), px(bx), py(poly[i][1]), m);
+        for (const [v0, v1] of valit) {
+          for (let i = v0 + 1; i <= v1; i += 1) {
+            const ax = poly[i - 1][0] + d;
+            const bx = poly[i][0] + d;
+            // Sauman yli avattu hyppy ei ole jana (js/rules.js avaaSauma).
+            if (KIERROS && Math.abs(bx - ax) > KIERROS / 2) continue;
+            lisaaJana(joukko, mitat, px(ax), py(poly[i - 1][1]), px(bx), py(poly[i][1]), m);
+          }
         }
       }
     };
-    for (const r of lautaSisalto.reitit) lisaaPoly(r.poly, ULOTTUMA.reitti);
-    for (const r of lautaSisalto.lentoreitit) lisaaPoly(r.poly, ULOTTUMA.lento);
+    /*
+     * PEITE LUKEE PIIRTOVÄLIT, EI KOKO MURTOVIIVAA. Rinnakkaiskarsinta
+     * (tools/fokuskartta/reittikarsinta.mjs) jättää osan reitistä
+     * piirtämättä, ja jos peite laskisi sen mukaan, luettelo lupaisi
+     * täysin läpinäkyviä laattoja. Sama lista ohjaa piirtoa
+     * (maailmapiirto.js katkoPolku) — yksi lähde, kuten aina.
+     *
+     * LENTOREITTEJÄ EI LASKETA: ne eivät ole viivatasolla (ks. LENNOT
+     * EIVÄT OLE VIIVATASOLLA).
+     */
+    for (const r of lautaSisalto.reitit) {
+      lisaaPoly(r.poly, ULOTTUMA.reitti, r.piirtoValit ?? [[0, r.poly.length - 1]]);
+    }
     const mh = ULOTTUMA.helmi * R + VIIVA_MARGINAALI_PX;
     for (const r of lautaSisalto.reitit) {
       for (const [bx, by] of r.askelmat) {
@@ -1478,10 +1526,29 @@ if (!NOSTOTASO && !VIIVATASO) {
  * jokia, koska joet jäävät pohjaan. Tiedosto on sama nimi ja sama
  * muoto molemmissa tiloissa, joten sivun koodi ei haaraudu.
  */
+/*
+ * === LENNOT EIVÄT OLE VIIVATASOLLA (omistaja 1.9.2026) =============
+ *
+ * Sanatarkasti: *"Poistetaan lentoreitit kokonaan näkyvistä.
+ * Piirretään ne näkyviin reaaliajassa vasta sitten jos pelaaja
+ * päättää mennä lentokoneella."*
+ *
+ * Lentoreitti ei ole pelilaudan rataa vaan pelaajan valinta: sillä ei
+ * ole askelmia (js/game.js actionMannerLento siirtää nappulan suoraan
+ * perille), ja 71 ilmaviivaa risteili kartan yli merkitsemättä
+ * mitään, mitä pelaaja voisi kulkea askel kerrallaan. Piirtopassiin
+ * ei koskettu — se piirtää sen, minkä saa, ja tämä ajo antaa sille
+ * tyhjän listan. Elävä kaari on js/ui.js paivitaMatkareitit
+ * (`matkareitti-lento`).
+ *
+ * VANHOJEN LAATTOJEN LENNOT NÄKYVÄT SIIHEN ASTI, KUNNES VIIVATASO ON
+ * POLTETTU UUDESTAAN. Se on kunnossa: laatta on muuttumaton kuva, ja
+ * uusi viivaversio korvaa sen kokonaan (ks. VIIVAVERSIO).
+ */
 writeFileSync(join(tyokansio, 'sisalto.json'), JSON.stringify(VIIVATASO
   ? {
     reitit: lautaSisalto.reitit,
-    lentoreitit: lautaSisalto.lentoreitit,
+    lentoreitit: [],
     joet: [],
     rajat: rajaViivat,
   }
