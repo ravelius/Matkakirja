@@ -405,6 +405,8 @@ export const FOKUSVIRTA_GRANADA = {
         + 'kirja kantoi: vuotta isoisäsi käynnin jälkeen eräs '
         + 'kalifornialainen mies antoi uudelle esikaupungilleen nimen '
         + 'Alhambra, koska hänen tyttärensä sattui lukemaan sitä.',
+      lahde: 'en-Wikipedia "Tales of the Alhambra" ja en-Wikipedia '
+        + '"Alhambra". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 2400×991, public domain, tekijä David
        * Roberts, päiväys 1836, credit Harvard Art Museums (Fogg
@@ -525,6 +527,8 @@ export const FOKUSVIRTA_GRANADA = {
         + 'pienempänä. Isoisäsi käveli siis kolmenkymmenen vuoden '
         + 'ikäisessä jäljitelmässä ja luuli sitä luultavasti vanhaksi. '
         + 'Niin luulee useimmiten tänäänkin se, joka siellä kävelee.',
+      lahde: 'es-Wikipedia "Alcaicería de Granada" ja en-Wikipedia "Bombyx '
+        + 'mori". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 1536×2048, CC0, tekijä Zarateman, kuvattu
        * 1.8.2023, kuvaus "La Alcaicería (Granada)". Restrictions tyhjä.
@@ -646,6 +650,8 @@ export const FOKUSVIRTA_GRANADA = {
         + 'vanhoissa katoissa. Piha on siis ollut kolmea eri mieltä '
         + 'siitä, miltä sen pitäisi näyttää, ja isoisäsi sattui '
         + 'käymään keskimmäisen aikana.',
+      lahde: 'en-Wikipedia "Court of the Lions", en-Wikipedia "Alhambra" ja '
+        + 'es-Wikipedia "Alcaicería de Granada". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 6352×4464, Public Domain Mark, tekijä Jean
        * Laurent, päiväys "noin 1865", credit Städel Museum

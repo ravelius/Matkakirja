@@ -305,6 +305,7 @@ export const FOKUSVIRTA_ROOMA = {
         + 'sisäpihalle. Isoisäsi matkavuonna asia oli tuore ja päällä: '
         + 'Rooma oli ollut Italian pääkaupunki kaksi vuotta ja paavi '
         + 'Vatikaanin vanki kolme.',
+      lahde: 'en-Wikipedia "Prisoner in the Vatican". Tarkistettu 1.9.2026.',
       /*
        * Takyt-rooma.md, täky 4: 3172×4000, public domain, Adolphe
        * Braun, kuvattu 13.5.1875 — valokuva paavista kaksi vuotta
@@ -373,6 +374,7 @@ export const FOKUSVIRTA_ROOMA = {
         + 'suoja. Vuonna 2012 arkeologiviranomaiset vaativat suojan '
         + 'häätöä raunioiden suojelemiseksi; vetoomukseen kerättiin yli '
         + '30 000 nimeä, ja kissat jäivät.',
+      lahde: 'en-Wikipedia "Largo di Torre Argentina". Tarkistettu 1.9.2026.',
       /*
        * Takyt-rooma.md, täky 1 (ja takynostot-italia.md, ehdokas 1):
        * 5760×3840, CC BY 2.0, Andy Rusch, 2015 — kissat raunioilla.
@@ -427,6 +429,8 @@ export const FOKUSVIRTA_ROOMA = {
         + 'itseään ennen kaikkea arkkitehtina. Puutarha sai '
         + 'eksterritoriaalisen asemansa 1869 — neljä vuotta ennen kuin '
         + 'isoisäsi seisoi portin edessä.',
+      lahde: 'en-Wikipedia "Villa del Priorato di Malta". Tarkistettu '
+        + '1.9.2026.',
       /*
        * Takyt-rooma.md, täky 12: 1536×2150, CC0, Galen Crout, 2016 —
        * näkymä reiän läpi, eli tasan se, mistä teksti puhuu.

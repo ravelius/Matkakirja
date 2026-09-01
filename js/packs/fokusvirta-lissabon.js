@@ -277,6 +277,9 @@ export const FOKUSVIRTA_LISSABON = {
         + 'vuonna 1821, kirjasto ei palannut hänen mukanaan. Se jäi. '
         + 'Neljä vuotta myöhemmin siitä tehtiin kauppa — ja kokoelmasta '
         + 'tuli toisen maan kansalliskirjasto.',
+      lahde: 'pt-Wikipedia "Biblioteca Nacional do Brasil", en-Wikipedia '
+        + '"National Library of Brazil" ja en-Wikipedia "Transfer of the '
+        + 'Portuguese court to Brazil". Tarkistettu 1.9.2026.',
       /*
        * UUSI KUVA (ei pelidatassa; tarvitsee R2-peilauksen). Commons
        * 29.8.2026: 1513×997, public domain, tekijä tuntematon, julkaistu
@@ -371,6 +374,9 @@ export const FOKUSVIRTA_LISSABON = {
         + 'Taitava latoja saa päivässä valmiiksi muutaman neliömetrin, ja '
         + 'jokainen kivi on kopautettu erikseen. Sinä kävelet sen yli '
         + 'katsomatta kertaakaan alas.',
+      lahde: 'en-Wikipedia "Portuguese pavement"; pelin oma tarkistettu '
+        + 'aineisto js/packs/maa-kategoriat.js (PRT/kasityo). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto PRT/kasityo,
        * js/packs/maa-kategoriat.js) — siis jo kertaalleen tarkistettu ja
@@ -459,6 +465,9 @@ export const FOKUSVIRTA_LISSABON = {
         + 'portugalilainen elokuva äänen kanssa. Kahdeksankymmentäviisi '
         + 'vuotta hautajaisten jälkeen koko maa kuuli hänen nimensä '
         + 'kaiuttimista.',
+      lahde: 'en-Wikipedia "Maria Severa Onofriana"; pelin oma tarkistettu '
+        + 'aineisto js/packs/maa-kategoriat.js (PRT/musiikki). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto PRT/musiikki,
        * js/packs/maa-kategoriat.js). Commons 29.8.2026: 338×484, public

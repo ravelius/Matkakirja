@@ -339,6 +339,8 @@ export const FOKUSVIRTA_BARCELONA = {
         + 'sen kulmassa on pieni kaukalo koirille. Siitä lähtee myös se '
         + 'lupaus, jota kukaan ei ole kumonnut: joka juo Canaletesista, '
         + 'palaa kaupunkiin.',
+      lahde: 'en-Wikipedia "La Rambla, Barcelona" ja ca-Wikipedia "Font de '
+        + 'Canaletes". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 3966×2948, CC0, Rijksmuseum, päiväys 1889,
        * kuvaus "Straatgezicht op de Rambla de las flores te Barcelona",
@@ -454,6 +456,9 @@ export const FOKUSVIRTA_BARCELONA = {
         + 'Fil·loxeran juhla jättiläisineen ja tulipetoineen. Kylä '
         + 'juhlii tuholaista, joka pakotti sen keksimään itsensä '
         + 'uudelleen.',
+      lahde: 'en-Wikipedia "Great French Wine Blight", ca-Wikipedia '
+        + '"Fil·loxera de la vinya" ja en-Wikipedia "Cava (Spanish wine)". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 893×830, public domain, tekijä tuntematon,
        * päiväys 1890, kuvaus "Sketch of phylloxera (Dactylosphaera
@@ -564,6 +569,8 @@ export const FOKUSVIRTA_BARCELONA = {
         + 'juuri valmistuneen torin ohi tietämättä, että sen tekijä oli '
         + 'mies, jonka kaupunki oli valinnut ja jonka valtio oli '
         + 'sivuuttanut.',
+      lahde: 'en-Wikipedia "Cerdà Plan" ja en-Wikipedia "Antoni Rovira i '
+        + 'Trias". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1548×1038, public domain, tekijä Antoni
        * Rovira, päiväys 1859, kuvaus "Eixample map of Barcelona. Map
