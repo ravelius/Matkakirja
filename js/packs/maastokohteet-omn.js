@@ -46,19 +46,24 @@ export const MAASTOKOHTEET_OMN = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Jabal Shams, "Auringon vuori", on Omanin korkein vuori ja osa Hajarin vuoristoa. Nimen '
-      + 'kerrotaan tulevan siitä, että auringonnousu osuu Omanissa ensimmäisenä juuri sen '
-      + 'huipulle. Vuoren kyljessä aukeaa Al Nakhurin kanjoni, jota kutsutaan Arabian Grand '
-      + 'Canyoniksi, ja kesälläkin huipulla on vain parikymmentä astetta lämmintä.',
-    lahde: 'en-Wikipedia "Jebel Shams", johdanto-osa ja tietolaatikko (tarkistettu 30.8.2026).',
+    teksti: 'Omanin korkeimmalle huipulle ei pääse kukaan. Jabal Shamsin pohjoishuippu on 3 009 '
+      + 'metriä korkea, ja sen päällä on sotilastukikohta suljetulla alueella; retkeilijöille '
+      + 'jää eteläinen huippu, kaksitoista metriä matalampi, jonne turistiministeriön '
+      + 'merkitsemä W4-polku vie. Nimi tarkoittaa Auringon vuorta, ja sen kerrotaan tulevan '
+      + 'siitä, että auringonnousu osuu Omanissa ensimmäisenä juuri tälle huipulle. Vuoren '
+      + 'kyljessä aukeaa Al Nakhurin rotko, jota kutsutaan Arabian Grand Canyoniksi. Korkeus '
+      + 'näkyy myös lämpötilassa: kesällä huipulla on noin kaksikymmentä astetta, talvella '
+      + 'pakkasta — kaksisataaneljäkymmentä kilometriä Muscatista ja aivan toinen ilmasto.',
+    lahde: 'en-Wikipedia "Jebel Shams", johdanto-osa sekä osiot "Description" ja "Climate" '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'omaninlahti',
     nimi: 'Omaninlahti',
     tyyppi: 'meri',
     kysymykset: [
-      'Missä Hormuzinsalmi on?',
-      'Miksi tämä vesireitti on maailmankaupalle tärkeä?',
+      'Mikä on hapeton merialue?',
+      'Miksi Hormuzinsalmi on maailmankaupalle tärkeä?',
     ],
     korostukset: ['Hormuzinsalmi|Hormuzinsalmeen'],
     nappi: 'Portti Persianlahdelle',
@@ -68,11 +73,16 @@ export const MAASTOKOHTEET_OMN = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Omaninlahti on Intian valtameren lahti, joka yhdistää Arabianmeren Hormuzinsalmeen — '
-      + 'ja salmi edelleen Persianlahteen. Sen pohjoisrannalla ovat Iran ja Pakistan, etelässä '
-      + 'Oman ja lännessä Arabiemiirikunnat. Jokainen Persianlahdelle purjehtiva laiva kulkee '
-      + 'tämän lahden kautta.',
-    lahde: 'en-Wikipedia "Gulf of Oman", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Vuonna 2018 tutkijat vahvistivat, että Omaninlahti on käytännössä kuollut. Sen lähes '
+      + '165 000 neliökilometrin ulapasta on tullut yksi maailman suurimmista hapettomista '
+      + 'merialueista — Floridan kokoinen vyöhyke, jossa merieläimille ei riitä happea. Syitä '
+      + 'on kaksi yhtä aikaa: meri lämpenee, ja mailta huuhtoutuu siihen lannoitteiden typpeä '
+      + 'ja fosforia. Silti lahti on yhä yksi maailman vilkkaimmin liikennöidyistä vesistä. Se '
+      + 'yhdistää Arabianmeren Hormuzinsalmeen, jonka läpi kulkee kolmannes maailman '
+      + 'nesteytetystä maakaasusta ja viidennes öljystä. Aina 1700-luvulle asti lahtea '
+      + 'kutsuttiin Makranin mereksi, ja se nimi näkyy yhä vanhoissa kartoissa.',
+    lahde: 'en-Wikipedia "Gulf of Oman", osiot "Ecology", "International trade" ja "Alternative '
+      + 'names" (tarkistettu 1.9.2026).',
   },
 ];
 

@@ -62,8 +62,8 @@ export const MAASTOKOHTEET_MNG = [
     symboli: 'luonto',
     tyyppi: 'muu',
     kysymykset: [
-      'Voiko aavikolla olla pakkasta?',
       'Mitä mongolin sana gov\' tarkoittaa?',
+      'Miksi Gobista löytyy dinosauruksen munia?',
     ],
     korostukset: ['gov\''],
     nappi: 'Kylmä aavikko',
@@ -73,11 +73,17 @@ export const MAASTOKOHTEET_MNG = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Gobi on laaja kylmä aavikko- ja aroalue Etelä-Mongoliassa ja Pohjois-Kiinassa — '
-      + 'maailman kuudenneksi suurin aavikko. Nimi tulee mongolin sanasta gov\', kuiva maa, '
-      + 'jolla on kutsuttu kaikkia Mongolian ylängön vedettömiä seutuja. Gobi ei ole hiekkameri '
-      + 'vaan enimmäkseen kivistä puoliaavikkoa, ja talvella siellä paukkuvat pakkaset.',
-    lahde: 'en-Wikipedia "Gobi Desert", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Mongolialaiselle gobi ei ole aavikko vaan laiduntyyppi: maa, jossa kasvaa niin ohutta '
+      + 'ruohoa, että se sopii kamelille muttei lehmälle — hevoset, lampaat ja vuohet '
+      + 'pärjäävät, jos lauma pidetään pienenä ja sitä siirretään usein. Sana gov\' tarkoittaa '
+      + 'vedetöntä seutua, ja kiinan vastine gēbì viittaa juuri kiviseen puoliaavikkoon eikä '
+      + 'hiekkaan. Ruoho antaa makua: villisipuli taana on karjan pääravintoa, ja mongolien '
+      + 'mukaan juuri se tuo kamelinmaidosta käytetyn airagin hasselpähkinäisen vivahteen. '
+      + 'Fossiileja Gobi on antanut enemmän kuin useimmat paikat maailmassa — muun muassa '
+      + 'ensimmäiset tunnetut dinosauruksenmunat, joita löytyi vuonna 1923 kaksikymmentäkuusi '
+      + 'kappaletta, kukin noin 23 senttimetriä pitkä.',
+    lahde: 'en-Wikipedia "Gobi Desert", johdanto-osa sekä osiot "Conservation, ecology, and '
+      + 'economy" ja "Ecoregions" (tarkistettu 1.9.2026).',
   },
   {
     id: 'orhon',

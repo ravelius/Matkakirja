@@ -81,8 +81,8 @@ export const MAASTOKOHTEET_KOR = [
     nimi: 'Nakdong',
     tyyppi: 'joki',
     kysymykset: [
-      'Minkä muinaisen liiton rajana joki toimi?',
-      'Mitkä suurkaupungit ovat joen varrella?',
+      'Miksi Andongissa syötiin merikalaa?',
+      'Mikä oli Gayan liitto?',
     ],
     korostukset: ['Gaya|Gayan'],
     nappi: 'Etelä-Korean pisin joki',
@@ -92,11 +92,17 @@ export const MAASTOKOHTEET_KOR = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Nakdong eli Nakdonggang on Etelä-Korean pisin joki. Se virtaa etelään maan itäosan '
-      + 'halki Daegun suurkaupungin ohi ja laskee mereen satamakaupunki Busanin kohdalla. '
-      + 'Nimensä joki on saanut historiasta: kolmen kuningaskunnan aikana se oli Gayan '
-      + 'liittokunnan itäraja.',
-    lahde: 'en-Wikipedia "Nakdong River", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Andong on kaukana merestä, mutta se tunnetaan kalastaan — ja syy on tässä joessa. '
+      + 'Joseon-kaudella suolattua ja kuivattua makrillia kuljetettiin Nakdongia ylös '
+      + 'sisämaahan, ja Andong oli kauimpana oleva paikka, jonne kala ehti pilaantumatta. Sinne '
+      + 'siis mentiin syömään merikalaa. Joki on Etelä-Korean pisin, noin 506 kilometriä '
+      + 'Taebaek-vuorilta Koreansalmeen, ja se on saanut nimensä siitä, että se oli Gayan '
+      + 'liiton itäraja kolmen kuningaskunnan aikaan. Kesällä 1950 joki sai aivan toisen '
+      + 'merkityksen: sen eteläinen juoksu muodosti Pusanin puolustusrenkaan läntisen laidan. '
+      + 'Waegwanin silta räjäytettiin 3. elokuuta 1950, ja räjähdyksessä kuoli suuri joukko '
+      + 'pakolaisia.',
+    lahde: 'en-Wikipedia "Nakdong River", johdanto-osa sekä osiot "Geography" ja "History" '
+      + '(tarkistettu 1.9.2026).',
   },
 ];
 

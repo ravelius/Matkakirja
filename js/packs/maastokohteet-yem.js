@@ -46,12 +46,16 @@ export const MAASTOKOHTEET_YEM = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Jabal an-Nabi Shu\'ayb, profeetta Shuaybin vuori, kohoaa 3 666 metriin Sanaan '
-      + 'lähistöllä. Se ei ole vain Jemenin vaan koko Arabian niemimaan korkein vuori: '
-      + 'aavikkoniemimaan katto on sen lounaiskulmassa, Sarawatin vuoristossa. Vuori tunnetaan '
-      + 'myös nimellä Jabal Hadur.',
-    lahde: 'en-Wikipedia "Jabal An-Nabi Shu\'ayb", johdanto-osa ja tietolaatikko (tarkistettu '
-      + '30.8.2026).',
+    teksti: 'Kaikki Arabian niemimaan yli kolmetuhatmetriset huiput ovat Jemenissä, ja korkein '
+      + 'niistä on Jabal an-Nabi Shu\'ayb, profeetta Shuaybin vuori: 3 666 metriä aivan Sanaan '
+      + 'kupeessa. Se kuuluu Sarawatin vuoristoon, joka juoksee Punaisenmeren rannan '
+      + 'suuntaisesti koko Jemenin länsilaidan pituudelta ja kääntyy sitten itään Adeninlahden '
+      + 'rinnalle. Vuoristo on syntynyt tulivuorista, ja sen läntiset rinteet saavat enemmän '
+      + 'sadetta kuin mikään muu kohta niemimaalla — itäpuolen loivemmat rinteet ovat vadien '
+      + 'uurtamia, ja niissä viljellään, koska Intian valtameren monsuuni yltää sinne asti. '
+      + 'Rinteillä elää hamadryaspaviaaneja, ja arabianleopardistakin on tehty havaintoja.',
+    lahde: 'en-Wikipedia "Sarawat Mountains", johdanto-osa sekä osiot "Geology" ja "Wildlife" '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'adeninlahti',

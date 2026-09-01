@@ -81,8 +81,8 @@ export const MAASTOKOHTEET_JPN = [
     nimi: 'Shinanojoki',
     tyyppi: 'joki',
     kysymykset: [
+      'Mikä Ōkōzun ohitusuoma on?',
       'Miksi joella on kaksi nimeä?',
-      'Mistä Japanin Alpit ovat saaneet nimensä?',
     ],
     korostukset: ['Japanin Alpit|Japanin Alpeilta'],
     nappi: 'Japanin pisin joki, kaksi nimeä',
@@ -92,10 +92,16 @@ export const MAASTOKOHTEET_JPN = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Shinanojoki on Japanin pisin ja levein joki. Se saa alkunsa Japanin Alpeilta ja virtaa '
-      + 'koilliseen Naganon ja Niigatan maakuntien halki Japaninmereen. Yläjuoksullaan sillä on '
-      + 'eri nimi, Chikuma — sama virta vaihtaa siis nimeä matkalla vuorilta merelle.',
-    lahde: 'en-Wikipedia "Shinano River", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Niigatan tasangon kylät anoivat ohitusuomaa kahden vuosisadan ajan. Shinanojoki tulvi '
+      + 'yli riisipeltojen keskimäärin joka kolmas tai neljäs vuosi, ja pyynnöt alkoivat jo '
+      + '1700-luvun alkupuolella — mutta valtio myönsi rahat vasta vuoden 1896 suurtulvan '
+      + 'jälkeen. Kymmenen kilometrin mittaista Ōkōzun uomaa kaivettiin 1909—1922, ja voitto '
+      + 'jäi lyhyeksi: sulkuportti romahti 1927 uoman pohjan syöpymisen takia eikä ollut täysin '
+      + 'kunnossa ennen vuotta 1931. Joki itse on Japanin pisin ja levein, ja se saa alkunsa '
+      + 'Japanin Alpeilta. Yläjuoksullaan sitä kutsutaan Chikumaksi — sama virta vaihtaa nimeä '
+      + 'matkalla vuorilta Japaninmerelle.',
+    lahde: 'en-Wikipedia "Shinano River", johdanto-osa sekä osiot "Ōkōzu Diversion Channel" ja '
+      + '"Course" (tarkistettu 1.9.2026).',
   },
 ];
 
