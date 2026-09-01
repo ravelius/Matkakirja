@@ -165,24 +165,67 @@ export const FOKUSVIRTA_PARIISI = {
        * "Tuileries Palace", osiot "Destruction" ja "Demolition").
        * IKÄSOPIVUUS (13+): sytyttäminen kerrotaan tapahtumana, ei
        * kuvauksena; uhreista lähde ei puhu eikä täky keksi niitä.
+       *
+       * ── AVAUS KIRJOITETTU UUSIKSI 1.9.2026 (nostojen sisältöaudit) ─
+       *
+       * Sama palatsi, sama vuoden 1871 palo ja sama piste kartalla oli
+       * kahdessa kortissa: tässä ja fokuskohteessa `tuileries`
+       * (js/packs/fokuskohteet-fra.js). Kumpaakaan ei poistettu, vaan
+       * TYÖNJAKO SELVITETTIIN:
+       *
+       *   fokuskohde `tuileries` = PALATSI. Mikä se oli: Katariina de
+       *     Medicin rakennuttama 1564, 266 metrin julkisivu,
+       *     hallitsijoiden koti, ja miten se poltettiin. Ei muutettu —
+       *     sen oma kysymysrivi ja kadonneen ihmeen kortti nojaavat
+       *     siihen tekstiin.
+       *   tämä syvennys = RAUNIO. Se yksitoista vuotta, jotka isoisä
+       *     näki, ja se mihin palatsi lopulta hajosi. Palon reseptiä
+       *     (petroli, terva, tärpätti, 48 tuntia) ei enää toisteta
+       *     täällä, koska se on kohteen kortissa.
+       *
+       * UUTTA AINEISTOA EI HAETTU MUUALTA: kaikki lisätty on samasta
+       * artikkelista, osiot vain luettiin loppuun asti (en-Wikipedia
+       * "Tuileries Palace", osiot "Destruction during the Paris
+       * Commune", "Demolition" ja "Proposed reconstruction"; haettu
+       * 1.9.2026):
+       *   - kommunardien polttamia muita muistomerkkejä, kuten
+       *     kaupungintalo, rakennettiin uudelleen jo 1870-luvulla;
+       *   - purkupäätöksen teki 1882 kolmas tasavalta, joka oli
+       *     armahtanut maanpakoon lähteneet kommunardit; vastaan
+       *     olivat Georges-Eugène Haussmann ja historioitsijat;
+       *   - keskuspaviljongin päätykolmio on Pariisin Square Georges
+       *     Cainissa, muita paloja Louvressa, Trocadéron puutarhassa,
+       *     Berliinin Schwanenwerderissä, Italian Bordigherassa ja
+       *     Quiton Palacio de Carondeletissa;
+       *   - huonekalut ja maalaukset oli viety varastoon sodan
+       *     alkaessa 1870, ja vuonna 2003 perustettiin komitea, joka
+       *     esittää palatsin rakentamista takaisin.
        */
       id: 'tuileriat',
       nappi: 'Palatsi, joka jäi seisomaan poltettuna',
       otsikko: 'Tuileriain rauniot',
-      teksti: 'Se rauniorivi, jonka ohi sinä kävelit, oli Ranskan '
-        + 'hallitsijoiden Pariisin-asunto Henrik IV:stä Napoleon '
-        + 'III:een. Palatsi sytytettiin 23. toukokuuta 1871 petrolilla, '
-        + 'tervalla ja tärpätillä; tuli paloi 48 tuntia ja kupoli '
-        + 'räjäytettiin. Seinät jäivät silti pystyyn, ja katto oli '
-        + 'poissa mutta kivimuurit ehjät — kunnostaminen olisi ollut '
-        + 'täysin mahdollista. Niin rauniot seisoivat Louvren '
-        + 'länsipäässä yksitoista vuotta, ja isoisäsi näki tyhjät '
-        + 'ikkuna-aukot taivasta vasten. Vuonna 1882 päätettiin purkaa. '
-        + 'Purku alkoi helmikuussa 1883 ja päättyi 30. syyskuuta samana '
-        + 'vuonna, ja kivet myytiin: yrittäjä Achille Picart kaupitteli '
-        + 'niitä matkamuistoina, ja osista rakennettiin Korsikalle '
-        + 'kokonainen palatsi, Château de la Punta. Paloja on nykyään '
-        + 'Berliinissä, Italiassa ja Quitossa asti.',
+      teksti: 'Se rauniorivi, jonka ohi sinä kävelit, olisi voitu '
+        + 'korjata. Palo oli vienyt katon ja koko sisustan, mutta '
+        + 'kivimuurit seisoivat ehjinä — ja kaupungintalo, jonka '
+        + 'kommunardit polttivat niin ikään, rakennettiin uudelleen jo '
+        + '1870-luvulla. Tuileriat jäivät sen sijaan paikoilleen '
+        + 'Louvren länsipäähän yksitoista vuotta, ja isoisäsi näki '
+        + 'tyhjät ikkuna-aukot taivasta vasten. Purkupäätöksen teki '
+        + '1882 kolmas tasavalta, sama joka oli armahtanut maanpakoon '
+        + 'lähteneet kommunardit; vastaan olivat muun muassa '
+        + 'Georges-Eugène Haussmann ja joukko historioitsijoita. Purku '
+        + 'alkoi helmikuussa 1883 ja päättyi 30. syyskuuta samana '
+        + 'vuonna. Sitten palatsi levisi ympäri maailman: yrittäjä '
+        + 'Achille Picart myi kiviä ja marmoria matkamuistoina, ja '
+        + 'osista rakennettiin Korsikalle Ajaccion lähelle kokonainen '
+        + 'palatsi, Château de la Punta. Keskuspaviljongin päätykolmio '
+        + 'seisoo Pariisissa Square Georges Cainissa, ja paloja on '
+        + 'Louvressa, Trocadéron puutarhassa, Berliinissä, Italian '
+        + 'Bordigherassa ja Quiton presidentinpalatsissa asti. '
+        + 'Huonekalut ja maalaukset olivat koko ajan tallessa: ne oli '
+        + 'viety varastoon, kun sota alkoi 1870. Vuonna 2003 '
+        + 'perustettiin komitea, joka esittää palatsin rakentamista '
+        + 'takaisin.',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (29.8.2026, aalto 1). Sama malli kuin
        * täkynostoilla v1307:stä alkaen: repon oma generoitu kuva, jolla
@@ -233,9 +276,18 @@ export const FOKUSVIRTA_PARIISI = {
           'Matkamuistoiksi ja Korsikalle rakennettuun palatsiin',
         ],
         oikea: 2,
-        fakta: 'Rauniot seisoivat paikallaan yksitoista vuotta, ja '
-          + 'kunnostaminen olisi ollut mahdollista: seinät olivat ehjät. '
-          + 'Purkupäätös tehtiin vasta 1882.',
+        /*
+         * FAKTARIVI PÄIVITETTY 1.9.2026: vanha rivi ("rauniot seisoivat
+         * yksitoista vuotta, kunnostaminen olisi ollut mahdollista")
+         * toistaa nyt sanasta sanaan syvennystekstin avauksen, koska
+         * teksti kirjoitettiin uusiksi juuri siitä näkökulmasta. Tilalla
+         * on saman artikkelin osion "Proposed reconstruction" tieto,
+         * jota teksti ei sano loppuun asti.
+         */
+        fakta: 'Uudelleenrakentamista esittävät vetoavat yhä siihen, '
+          + 'että suuri osa palatsin alkuperäisistä huonekaluista ja '
+          + 'maalauksista on tallella: ne vietiin varastoon, kun sota '
+          + 'alkoi 1870, eivätkä ne olleet talossa palon aikaan.',
       },
     },
     {
@@ -633,6 +685,151 @@ export const FOKUSVIRTA_PARIISI = {
         laudat: {
           maailmankartta: { x: 5912, y: 1440.1 },
           europe: { x: 256.5, y: 609 },
+        },
+      },
+    },
+    {
+      /*
+       * ── SIIRRETTY ESPANJASTA (1.9.2026, nostojen sisältöaudit) ────
+       *
+       * Tämä nosto asui 29.8.2026 alkaen Sevillan paketissa
+       * (js/packs/fokusvirta-sevilla.js) ja oli auditin ainoa
+       * vahvistettu väärän maan tarina: jokainen kortin tapahtuma on
+       * Pariisissa, ja Sevilla on vain se kaupunki, johon ooppera
+       * sijoittuu. Tunnus, Commons-kuva ja aihe ovat samat; TEKSTI ON
+       * KIRJOITETTU UUDELLEEN Ranska-kontekstiin, koska kortin
+       * näkökulma vaihtui teoksen tapahtumapaikasta sen ensi-illan
+       * taloon. Sevilla mainitaan yhä — siinä roolissa, joka sille
+       * kuuluu.
+       *
+       * KOLMANTENA EIKÄ ENSIMMÄISENÄ: poolin kärki on maan kuplatäky
+       * (ks. lohkon alku), eikä sitä siirretä uuden rivin takia.
+       *
+       * FAKTAT (haettu 1.9.2026 en-Wikipedian rajapinnasta artikkeli
+       * ja osio kerrallaan):
+       *   - "Carmen (opera)", johdanto: kantaesitys Opéra-Comiquessa
+       *     Pariisissa 3.3.1875; sopimusten rikkominen järkytti
+       *     ensiyleisöä; Bizet kuoli 33. esityksen jälkeen; Pariisissa
+       *     teos otettiin uudelleen ohjelmistoon vasta 1883;
+       *   - sama artikkeli, osio "Background": talon kaksi johtajaa
+       *     riitautuivat teoksesta, ja Adolphe de Leuven vastusti
+       *     jyrkästi *"niin uskaliaan tarinan"* esittämistä talossa,
+       *     jota hän piti perheteatterina; hänelle luvattiin, että
+       *     Carmenin luonnetta pehmennetään, romanihahmot esitetään
+       *     koomisina ja lopun kuolema jää kulkueiden, balettien ja
+       *     riemufanfaarien varjoon; de Leuven erosi silti
+       *     alkuvuodesta 1874. Sävellystyö alkoi tammikuun tienoilla
+       *     1873, ja ensimmäinen näytös oli valmis kesään mennessä;
+       *   - osio nimiroolin etsimisestä: Marie Roze kieltäytyi
+       *     roolista kuultuaan, että hänen olisi kuoltava lavalla;
+       *     rooli meni Célestine Galli-Mariélle;
+       *   - osio ensi-illasta ja vastaanotosta: salissa olivat mm.
+       *     Massenet, Offenbach, Delibes ja Gounod; ensimmäinen näytös
+       *     otettiin hyvin vastaan, toreadorin laulun jälkeen tuli
+       *     libretisti Halévyn muistiinpanon mukaan "kylmyys" ja
+       *     viimeinen näytös oli "jäinen ensimmäisestä viimeiseen";
+       *     seuraavan päivän arviot vaihtelivat pettymyksestä raivoon,
+       *     ja yksi kriitikko kutsui Galli-Marién tulkintaa "paheen
+       *     ruumiillistumaksi"; taloa ei saatu täyteen edes jakamalla
+       *     lippuja ilmaiseksi;
+       *   - sama osio: Bizet kuoli 3. kesäkuuta 1875 sydäntautiin
+       *     36-vuotiaana, hääpäivänsä vuosipäivänä, ja sen illan
+       *     esitys peruttiin;
+       *   - osio myöhemmästä esityshistoriasta: Wien 1875, Bryssel
+       *     1876, Lontoo 1878, New York 23.10.1878 — maine syntyi
+       *     Ranskan ulkopuolella;
+       *   - "Salle Favart", osio "Background": ensi-illan talo oli
+       *     toinen Salle Favart (avattu 16.5.1840), joka paloi
+       *     25.5.1887; nykyinen kolmas talo rakennettiin 1893–1898
+       *     samalle paikalle Place Boïeldieun varrelle.
+       *
+       * IKÄSOPIVUUS (13+): oopperan juonen väkivaltaa ei kuvata, vaan
+       * kortti kertoo siitä, mitä lavalla tapahtuvasta kuolemasta
+       * SANOTTIIN — se on koko skandaalin ydin.
+       */
+      id: 'carmenin-ensi-ilta',
+      nimio: 'Carmenin ensi-ilta',
+      otsikko: 'Teatterin johtaja vastusti oopperaa niin kiivaasti, '
+        + 'että erosi — ja ensi-illan jälkeen näytti siltä, että hän '
+        + 'oli ollut oikeassa',
+      lunastus: [
+        'Georges Bizet aloitti Carmenin säveltämisen tammikuun tienoilla '
+          + '1873, ja ensimmäinen näytös oli valmis siihen kesään '
+          + 'mennessä, jona isoisäsi oli matkalla. Sitten työ pysähtyi. '
+          + 'Opéra-Comique oli valtion rahoittama talo, johon vietiin '
+          + 'perhe, ja sen kahdesta johtajasta Adolphe de Leuven '
+          + 'vastusti koko ajatusta: näin uskaliasta tarinaa ei esitetä '
+          + 'täällä, yleisö pelästyy pois. Hänelle luvattiin, että '
+          + 'nimihenkilön luonnetta pehmennetään, että romanihahmot '
+          + 'esitetään koomisina ja että lopun kuolema jää kulkueiden, '
+          + 'balettien ja riemufanfaarien varjoon. Lupaukset eivät '
+          + 'riittäneet, ja de Leuven erosi teatterista alkuvuodesta '
+          + '1874. Nimiroolikin oli vaikea täyttää: Marie Roze '
+          + 'kieltäytyi kuultuaan, että hänen olisi kuoltava lavalla.',
+        'Ensi-ilta oli 3. maaliskuuta 1875, ja salissa istui puoli '
+          + 'musiikki-Pariisia — Massenet, Offenbach, Delibes, Gounod. '
+          + 'Ensimmäinen näytös meni hyvin. Toreadorin laulun jälkeen '
+          + 'tuli kylmyys, ja viimeinen näytös oli libretisti Halévyn '
+          + 'sanoin jäinen ensimmäisestä viimeiseen. Seuraavan päivän '
+          + 'arviot vaihtelivat pettymyksestä raivoon: nimihenkilö oli '
+          + 'hyveellisen naisen sijaan moraaliton viettelijä, ja yksi '
+          + 'kriitikko kutsui pääosan tulkintaa paheen '
+          + 'ruumiillistumaksi. Taloa ei saatu täyteen edes jakamalla '
+          + 'lippuja ilmaiseksi. Bizet kuoli 3. kesäkuuta 1875, '
+          + 'kolmannenkymmenennenkolmannen esityksen jälkeen, '
+          + '36-vuotiaana ja hääpäivänsä vuosipäivänä. Maine tuli '
+          + 'muualta: Wien 1875, Bryssel 1876, Lontoo ja New York 1878 '
+          + '— Pariisiin ooppera palasi vasta 1883. Se sijoittuu '
+          + 'Sevillaan, mutta kaikki tämä tapahtui täällä, Place '
+          + 'Boïeldieun varrella. Sekin sali paloi 1887; paikalla '
+          + 'seisoo nyt kolmas samanniminen teatteri.',
+      ],
+      lahde: 'en-Wikipedia "Carmen (opera)" (johdanto sekä osiot '
+        + 'taustasta, nimiroolin etsimisestä, ensi-illasta ja '
+        + 'vastaanotosta sekä myöhemmästä esityshistoriasta), '
+        + '"Georges Bizet" (osiot Carmenista sekä sairaudesta ja '
+        + 'kuolemasta) ja "Salle Favart" (osio "Background"); '
+        + 'tarkistettu 1.9.2026.',
+      /*
+       * Commons 29.8.2026: 6536×8944, public domain, Prudent-Louis Leray
+       * (1820–1879), restaurointi Adam Cuerden, päiväys 1875, kuvaus
+       * "1875 lithographic poster for the première of Georges Bizet's
+       * Carmen". Restrictions tyhjä. SILMÄTARKISTUS tehty: litografoitu
+       * juliste, ei valokuvattuja ihmisiä. Rivi on siirretty Sevillan
+       * paketista sanasta sanaan.
+       */
+      kuva: {
+        tiedosto: "Prudent-Louis Leray - Poster for the première of Georges Bizet's Carmen.jpg",
+        selite: 'Prudent-Louis Lerayn litografia on Carmenin ensi-illan '
+          + 'juliste vuodelta 1875 — samasta esityksestä, jonka '
+          + 'säveltäjä uskoi epäonnistuneen.',
+        lahde: 'Prudent-Louis Leray 1875, Wikimedia Commons (public domain)',
+      },
+      kysymykset: [
+        'Miksi Opéra-Comiquen johto piti Carmenia sopimattomana?',
+        'Miten ooppera nousi epäonnistumisesta maailmanmaineeseen?',
+        'Millainen oopperatalo Opéra-Comique oli 1870-luvulla?',
+      ],
+      /*
+       * OMAT KOORDINAATIT, JOTTA MERKKI ON OIKEASSA MAASSA JA MAAN VOI
+       * YHÄ POLTTAA. Espanjassa nostolla ei ollut `paikka`-kenttää
+       * lainkaan, joten merkki seurasi pelaajaa kaupungista toiseen
+       * (js/fokusnosto.js nostonPaikka) — juuri se vika, jonka audit
+       * nosti esiin.
+       *
+       * 48,8709 N / 2,3378 E — en-Wikipedia "Salle Favart",
+       * prop=coordinates (haettu 1.9.2026). Piste on TONTTI eikä
+       * rakennus: ensi-illan talo paloi 1887, ja nykyinen kolmas
+       * Salle Favart seisoo samalla paikalla, joten koordinaatti on
+       * oikea kummallekin. Sama kaava ja samat vakiot kuin muillakin
+       * nostoilla (js/fokusnosto.js, PAIKKA LAUDALLA): maailmankartta
+       * Millerin lieriönä, europe tasavälinä.
+       */
+      paikka: {
+        nimi: 'Opéra-Comique',
+        laudat: {
+          maailmankartta: { x: 5911.3, y: 1439 },
+          europe: { x: 256.1, y: 608.3 },
         },
       },
     },

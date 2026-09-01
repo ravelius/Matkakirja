@@ -107,6 +107,18 @@ export const FOKUSKOHTEET_FRA = [
       + 'osio "Destruction during the Paris Commune" (tarkistettu '
       + '27.8.2026).',
     /*
+     * TYÖNJAKO SYVENNYSTARINAN KANSSA (1.9.2026, nostojen sisältöaudit).
+     * Samasta palatsista, samasta vuoden 1871 palosta ja samasta
+     * pisteestä kertoi kaksi korttia: tämä kohde ja Pariisin
+     * syvennystäky `tuileriat` (js/packs/fokusvirta-pariisi.js).
+     * Kumpaakaan ei poistettu. TÄMÄ KORTTI ON PALATSI — mikä se oli ja
+     * miten se poltettiin — eikä sen tekstiä ole muutettu, koska
+     * `korostukset`, `kysymykset` ja alempi kadonneen ihmeen kortti
+     * nojaavat siihen. SYVENNYS ON RAUNIO: ne yksitoista vuotta, jotka
+     * isoisä näki, ja se mihin palatsin kivet hajosivat. Palon resepti
+     * (petroli, terva, tärpätti, 48 tuntia) on nyt vain täällä.
+     */
+    /*
      * MATKAKIRJAN IHME (kadonnut) — säännöt js/packs/fokuskohteet-grc.js:n
      * samannimisessä lohkossa. Palatsia ei ole, joten `kadonnut: true`:
      * kartalla tähti ja kortissa tämä kuva ensimmäisenä — ja ainoana.

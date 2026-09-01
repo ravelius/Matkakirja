@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1409, teksti: 'Nostojen faktakorjaukset: Carmen Pariisiin, korut Mykeneen' },
   { v: 1408, teksti: 'Nostojen ruutukatto, nimiökyljet, tummennus panorointiin' },
   { v: 1407, teksti: 'Tummennus vain maihin - meri kirkkaaksi' },
   { v: 1406, teksti: 'Nykyisen maan tummennus ja aariviiva karttaan' },

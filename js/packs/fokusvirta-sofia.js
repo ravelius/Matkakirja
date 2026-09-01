@@ -432,7 +432,19 @@ export const FOKUSVIRTA_SOFIA = {
       id: 'areena',
       nappi: 'Hotelli, jonka lattian alla taisteltiin',
       otsikko: 'Serdican amfiteatteri',
-      /* Faktat: takyt-sofia.md, täky 6 (merkitty VARMAKSI). */
+      /*
+       * Faktat: takyt-sofia.md, täky 6 (merkitty VARMAKSI).
+       *
+       * TYÖNJAKO TÄKYNOSTON KANSSA (1.9.2026, nostojen sisältöaudit):
+       * tämä syvennys on PIDEMPI TARINA ja kertoo LÖYTYMISEN — sen
+       * avaus (hotellin perustuskuoppa 2004) on myös alempana olevan
+       * minivisan vastaus, joten sitä ei ole muutettu. Saman aiheen
+       * täkynosto (`takynostot`, tunnus 'areena') kirjoitettiin sen
+       * sijaan uusiksi: sen avaus oli tähän asti sanasta sanaan tämä
+       * sama virke, ja nyt se aloittaa vuoden 1919 mainoslaatasta ja
+       * kertoo, mitä areena oli. Kaksi korttia, kaksi näkökulmaa,
+       * yksi piste kartalla.
+       */
       teksti: 'Vuonna 2004 kaivettiin Sofian keskustassa hotellin '
         + 'perustuksia, ja maasta paljastui roomalainen amfiteatteri — '
         + 'Bulgarian suurin ja yksi Rooman valtakunnan itäosan '
@@ -814,25 +826,50 @@ export const FOKUSVIRTA_SOFIA = {
         + 'taistelivat krokotiilit ja karhut',
       /*
        * LUNASTUS KAHTENA KAPPALEENA (omistajan päätös 28.8.2026:
-       * *"Lisäksi vähän enemmän juttua"*). Kappaleet ovat kertojan
-       * yleiskieltä, eivät puhekieltä, ja jokainen väite on täkyn 6
-       * lähteestä (docs/mantereet-tyoaineisto/takyt-sofia.md, VARMA;
-       * en-Wikipedia "Amphitheatre of Serdica") — sama faktapohja kuin
-       * tämän tiedoston täyllä 'areena'. Uusia väittämiä ei ole.
+       * *"Lisäksi vähän enemmän juttua"*).
+       *
+       * AVAUS KIRJOITETTU UUSIKSI 1.9.2026 (nostojen sisältöaudit).
+       * Ensimmäinen kappale oli sanasta sanaan sama teksti kuin tämän
+       * tiedoston syvennystäyn 'areena' avaus — kaksi korttia samassa
+       * pisteessä, sama aihe, sama virke. Kumpaakaan ei poistettu,
+       * vaan TYÖNJAKO SELVITETTIIN: syvennys on pidempi tarina ja
+       * kertoo löytymisen (hotellin perustuskuoppa 2004, ja sen visa
+       * kysyy juuri sitä), tämä nosto on kartan täky ja kertoo, mitä
+       * areena oli — alkaen laatasta, joka mainosti sitä kahdeksankymmentä-
+       * viisi vuotta ennen kuin itse rakennus löytyi.
+       *
+       * Jokainen väite on samasta lähteestä kuin ennenkin (en-Wikipedia
+       * "Amphitheatre of Serdica", osiot "History", "Discovery" ja
+       * "Physical description"; faktapohja docs/mantereet-tyoaineisto/
+       * takyt-sofia.md, täky 6, VARMA). Uutta aineistoa ei ole haettu
+       * muualta; osiot vain luettiin loppuun asti.
        */
       lunastus: [
-        'Vuonna 2004 kaivettiin Sofian keskustassa hotellin perustuksia, '
-          + 'ja maasta paljastui roomalainen amfiteatteri — Bulgarian '
-          + 'suurin ja yksi Rooman valtakunnan itäosan suurimmista. Se oli '
-          + 'rakennettu 300–400-luvulla vanhan teatterin päälle, jonka '
-          + 'gootit olivat polttaneet vuonna 268.',
-        'Vuonna 1919 löytyi kivilaatta, joka aikoinaan mainosti täkäläisiä '
-          + 'taisteluja: siihen on kuvattu krokotiileja, karhuja, härkiä ja '
-          + 'villikissoja. Löytöä ei peitetty umpeen. Kuudesosa areenasta '
-          + 'säilytettiin ja liitettiin hotellin pohjakerrokseen, ja sinne '
-          + 'kävelee päivisin sisään kuka tahansa maksutta katsomaan '
-          + 'kolikko- ja keramiikkanäyttelyä.',
+        'Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, johon '
+          + 'oli kuvattu amfiteatterin julkisivu ja sen ohjelma: '
+          + 'krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli '
+          + 'aikoinaan seissyt roomalaisen Serdican portilla '
+          + 'mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli '
+          + 'täytynyt olla areena — mutta ei sitä, missä. Vastausta '
+          + 'odotettiin kahdeksankymmentäviisi vuotta.',
+        'Kun rakennus lopulta löytyi, laatan lupaus osoittautui '
+          + 'kirjaimelliseksi. Maasta nousivat portit liukuovineen, '
+          + 'joista eläimet päästettiin kentälle, karhun ja villisian '
+          + 'luita, satoja pronssikolikoita ja savitiiliä, joihin oli '
+          + 'painunut vuohien, koirien ja kissojen tassunjälkiä. '
+          + 'Katsomoon oli mitoitettu yli kahdellekymmenelletuhannelle '
+          + 'ihmiselle, ja areena oli noussut kahdessa vaiheessa '
+          + 'Diocletianuksen ja Konstantinus Suuren aikana kaupunginmuurin '
+          + 'ulkopuolelle. Käytössä se ehti olla alle sadan vuoden ajan: '
+          + '400-luvulla se hylättiin, ja seuraavalla vuosisadalla '
+          + 'tulijat rakensivat kotinsa keskelle kenttää. Loppu on '
+          + 'hotellin pohjakerroksessa — aukko lattiassa, ja sen alla se '
+          + 'kuudesosa, joka säilyi.',
       ],
+      lahde: 'en-Wikipedia "Amphitheatre of Serdica", osiot "History", '
+        + '"Discovery" ja "Physical description" (tarkistettu 1.9.2026; '
+        + 'sama faktapohja kuin docs/mantereet-tyoaineisto/takyt-sofia.md, '
+        + 'täky 6).',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (omistajan päätös 28.8.2026). Sama sarja
        * kuin assets/kartat/ihmeet/: repon oma generoitu havainnekuva,

@@ -937,95 +937,30 @@ export const FOKUSVIRTA_SEVILLA = {
         },
       },
     },
-    {
-      /*
-       * FAKTAT (en-Wikipedia "Carmen (opera)" johdanto ja
-       * "Georges Bizet" osiot Carmenista, sairaudesta ja kuolemasta;
-       * haettu 29.8.2026):
-       *   - Bizet aloitti Carmenin säveltämisen kesällä 1873, ja työ
-       *     keskeytyi, koska Opéra-Comiquen johto piti aihetta
-       *     sopimattomana talolle;
-       *   - ensi-ilta oli Opéra-Comiquessa 3.3.1875; arvostelut olivat
-       *     enimmäkseen kielteisiä ja yleisö välinpitämätön, ja Bizet
-       *     oli vakuuttunut epäonnistumisesta;
-       *   - hän oli sairastellut kurkkuvaivoja vuosia, sairastui
-       *     uudelleen toukokuussa, sai 1. kesäkuuta kuumeen ja
-       *     ilmeisen sydänkohtauksen ja kuoli aamuyöllä 3. kesäkuuta
-       *     1875, hääpäivänsä vuosipäivänä, 36-vuotiaana;
-       *   - kuolema tuli 33. esityksen jälkeen; sen illan esitys
-       *     peruttiin, koska nimiroolin laulaja Galli-Marié ei kyennyt
-       *     esiintymään, ja tilalle vaihdettiin toinen ooppera;
-       *   - hautajaisissa 5. kesäkuuta oli yli 4 000 ihmistä; saman
-       *     illan erikoisesityksen jälkeen lehdistö, joka oli kolme
-       *     kuukautta aiemmin tuominnut teoksen, julisti Bizet'n
-       *     mestariksi;
-       *   - Pariisissa Carmen otettiin uudelleen ohjelmistoon vasta
-       *     1883; siitä on tullut yksi maailman esitetyimmistä
-       *     oopperoista.
-       *
-       * MIKSI TÄMÄ ON SEVILLAN NOSTO: Carmen sijoittuu tähän kaupunkiin
-       * ja sen nimihenkilö tekee työtä siinä tupakkatehtaassa, jonka
-       * isoisä näki. Kaupunkilehti kertoo tehtaan ja mainitsee oopperan;
-       * tämä nosto kertoo sen, mitä lehti ei kerro — miten säveltäjän
-       * kävi.
-       */
-      id: 'carmenin-ensi-ilta',
-      nimio: 'Carmenin ensi-ilta',
-      otsikko: 'Säveltäjä kuoli kolme kuukautta ensi-illan jälkeen '
-        + 'uskoen kirjoittaneensa epäonnistuneen oopperan',
-      lunastus: [
-        'Georges Bizet aloitti Carmenin säveltämisen kesällä 1873, samana '
-          + 'vuonna kun isoisäsi käveli Sevillassa. Työ takkusi heti: '
-          + 'Opéra-Comique oli talo, johon vietiin perheitä, eikä sen '
-          + 'johto pitänyt tarinaa sopivana. Ensi-ilta tuli lopulta 3. '
-          + 'maaliskuuta 1875. Arvostelut olivat enimmäkseen kielteisiä '
-          + 'ja yleisö välinpitämätön, ja Bizet oli vakuuttunut siitä, '
-          + 'että hän oli epäonnistunut. Ooppera sijoittuu Sevillaan, ja '
-          + 'sen nimihenkilö tekee sikareita siinä samassa tehtaassa, '
-          + 'jonka ohi isoisäsi käveli.',
-        'Bizet oli sairastellut kurkkuaan vuosia. Hän sairastui '
-          + 'uudelleen toukokuussa, sai ensimmäisenä kesäkuuta korkean '
-          + 'kuumeen ja sydänkohtauksen ja kuoli aamuyöllä kolmantena '
-          + 'kesäkuuta 1875 — hääpäivänsä vuosipäivänä, 36-vuotiaana. '
-          + 'Kuolema tuli oopperan kolmannenkymmenennenkolmannen '
-          + 'esityksen jälkeen. Sen illan esitys peruttiin, koska '
-          + 'nimiroolin laulaja ei kyennyt nousemaan lavalle. '
-          + 'Hautajaisiin tuli yli neljätuhatta ihmistä, ja saman illan '
-          + 'erikoisesityksen jälkeen sama lehdistö, joka oli '
-          + 'kolme kuukautta aiemmin tyrmännyt teoksen, julisti Bizet’n '
-          + 'mestariksi. Pariisiin Carmen palasi ohjelmistoon vasta '
-          + '1883. Siitä tuli yksi maailman esitetyimmistä oopperoista, '
-          + 'eikä sen tekijä ehtinyt kuulla siitä sanaakaan.',
-      ],
-      lahde: 'en-Wikipedia "Carmen (opera)" (johdanto) ja "Georges Bizet" '
-        + '(osiot Carmenista sekä sairaudesta ja kuolemasta); tarkistettu '
-        + '29.8.2026.',
-      /*
-       * Commons 29.8.2026: 6536×8944, public domain, Prudent-Louis Leray
-       * (1820–1879), restaurointi Adam Cuerden, päiväys 1875, kuvaus
-       * "1875 lithographic poster for the première of Georges Bizet's
-       * Carmen". Restrictions tyhjä. SILMÄTARKISTUS tehty: litografoitu
-       * juliste, ei valokuvattuja ihmisiä.
-       */
-      kuva: {
-        tiedosto: "Prudent-Louis Leray - Poster for the première of Georges Bizet's Carmen.jpg",
-        selite: 'Prudent-Louis Lerayn litografia on Carmenin ensi-illan '
-          + 'juliste vuodelta 1875 — samasta esityksestä, jonka '
-          + 'säveltäjä uskoi epäonnistuneen.',
-        lahde: 'Prudent-Louis Leray 1875, Wikimedia Commons (public domain)',
-      },
-      kysymykset: [
-        'Miksi Carmenia pidettiin ensi-illassaan sopimattomana?',
-        'Miten ooppera nousi epäonnistumisesta maailmanmaineeseen?',
-        'Millainen kaupunki Sevilla oli oopperoiden tapahtumapaikkana?',
-      ],
-      /*
-       * PAIKKAA EI OLE: ensi-ilta oli Pariisissa, mutta nosto kertoo
-       * Sevillaan sijoittuvasta oopperasta, ja pisteen paikka on siksi
-       * kaupunki, jossa pelaaja seisoo (nostonPaikka). Pariisin piste
-       * veisi kartalla huomion väärään maahan.
-       */
-    },
+    /*
+     * ── CARMENIN ENSI-ILTA ON SIIRRETTY RANSKAN POOLIIN (1.9.2026) ──
+     *
+     * Nosto `carmenin-ensi-ilta` asui tässä listassa 29.8.2026 alkaen,
+     * ja se oli sisältöauditin ainoa vahvistettu väärän maan tarina:
+     * KAIKKI kortin tapahtumat ovat Pariisissa — sävellystyö,
+     * Opéra-Comiquen johdon vastustus, ensi-ilta 3.3.1875, arviot,
+     * Bizet'n kuolema ja se, että teos palasi Pariisiin vasta 1883.
+     * Sevilla on vain oopperan tapahtumapaikka, ja kortti sanoi sen
+     * itse. Koska nostolla ei myöskään ollut `paikka`-kenttää, merkki
+     * asettui siihen Espanjan kaupunkiin, jossa pelaaja sattui
+     * olemaan (js/fokusnosto.js nostonPaikka).
+     *
+     * Nostoa EI POISTETTU: se on nyt js/packs/fokusvirta-pariisi.js:n
+     * `takynostot`-poolin kolmas rivi samalla tunnuksella
+     * `carmenin-ensi-ilta`, samalla Commons-kuvalla (Lerayn ensi-illan
+     * juliste 1875) ja omilla koordinaateillaan Salle Favartissa.
+     * Teksti on kirjoitettu uudelleen Ranska-kontekstiin; Sevilla on
+     * siinä yhä mukana siinä roolissa, joka sille kuuluu — paikkana,
+     * jota teos kuvaa.
+     *
+     * SEVILLAN KAUPUNKILEHTI EI MENETÄ MITÄÄN: tupakkatehdas ja sen
+     * oopperakytkös ovat lehden omaa sisältöä, eivät tämän noston.
+     */
     {
       /*
        * ELÄINNOSTO (Raamattu, ELÄINTÄYT-linjaus).
@@ -1177,7 +1112,8 @@ export const FOKUSVIRTA_SEVILLA = {
       ],
       lahde: 'en-Wikipedia "Diego Velázquez", osiot syntymästä, '
         + 'oppivuosista, varhaisista töistä ja hovimaalariksi '
-        + 'pääsemisestä; tarkistettu 29.8.2026.',
+        + 'pääsemisestä (tarkistettu 29.8.2026); kastekirkon sijainti '
+        + 'en-Wikipedia "Church of San Pedro" (tarkistettu 1.9.2026).',
       /*
        * Commons 29.8.2026: 2371×3200, public domain, Diego Velázquez,
        * päiväys "circa 1620". Restrictions tyhjä. SILMÄTARKISTUS tehty:
@@ -1196,9 +1132,31 @@ export const FOKUSVIRTA_SEVILLA = {
         'Mitä Velázquez maalasi Madridissa?',
       ],
       /*
-       * PAIKKAA EI OLE: syntymä- ja oppivuodet ovat tässä kaupungissa,
-       * joten piste ottaa paikakseen kaupungin (nostonPaikka).
+       * PAIKKA LISÄTTIIN 1.9.2026 (nostojen sisältöaudit). Kenttä
+       * puuttui, koska "tässä kaupungissa" tuntui riittävän — mutta
+       * ilman sitä merkki asettuu siihen kaupunkiin, jossa pelaaja
+       * seisoo (js/fokusnosto.js nostonPaikka), eikä sellaista merkkiä
+       * voi polttaa laattaan lainkaan (tools/fokuskartta/nostot.mjs,
+       * TÄKYN EHTO). Kortin oma tarina alkaa yhdestä dokumentoidusta
+       * pisteestä, joten pistettä ei tarvinnut arvata.
+       *
+       * 37,39283611 N / −5,99138889 E — en-Wikipedia "Church of San
+       * Pedro", prop=coordinates (haettu 1.9.2026). Sama artikkeli
+       * sanoo johdannossaan suoraan, että Diego Velázquez kastettiin
+       * juuri siellä vuonna 1599 — se on tämän kortin ensimmäinen
+       * virke. Kirkko seisoo San Pedron aukiolla Sevillassa.
+       *
+       * Sama kaava ja samat vakiot kuin muillakin nostoilla
+       * (js/fokusnosto.js, PAIKKA LAUDALLA): maailmankartta Millerin
+       * lieriönä, europe tasavälinä.
        */
+      paikka: {
+        nimi: 'San Pedron kirkko',
+        laudat: {
+          maailmankartta: { x: 5633.6, y: 1904.2 },
+          europe: { x: 96.2, y: 910.2 },
+        },
+      },
     },
   ],
 

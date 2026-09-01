@@ -267,6 +267,19 @@ export const FOKUSVIRTA_ATEENA = {
     },
     {
       id: 'schliemann',
+      /*
+       * TYÖNJAKO KAHDEN MUUN SCHLIEMANN-KORTIN KANSSA (1.9.2026,
+       * nostojen sisältöaudit): tämä syvennys on TALO, ja se pitää
+       * Iliou Melathronin pisteen (js/packs/syvennyspaikat.js
+       * ateena.schliemann). Tekstiä ei ole muutettu.
+       *
+       * Kreikan täkynosto `sofia-korut` (js/fokusnosto.js
+       * NOSTO_MAAT.GRC) istui tähän asti samassa osoitteessa, 0,1
+       * laudayksikön päässä; se kertoo nyt SEURAUKSET ja on siirretty
+       * Mykeneen, jonne Schliemann paljastumisen jälkeen meni.
+       * Turkin `schliemann` (js/packs/fokusvirta-istanbul.js) on
+       * KAIVAUS ja piirtyy Troijan kohteesta.
+       */
       nappi: 'Kullanetsijän palatsi',
       otsikko: 'Iliou Melathron',
       teksti: 'Muistatko isoisäsi torikohtauksen — puheet miehestä, joka '

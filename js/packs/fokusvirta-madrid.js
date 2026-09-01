@@ -641,13 +641,30 @@ export const FOKUSVIRTA_MADRID = {
        * Aineiston ehto noudatettu: laskentavuosi on tekstissä näkyvissä,
        * koska luku vanhenee.
        *
-       * PAIKKAA EI OLE, JA SE ON TIETOINEN VALINTA. Aineisto puhuu
-       * "Madridin puistoista" eikä nimeä yhtä pesäpaikkaa, eikä
-       * arvattua koordinaattia kirjoiteta datalle. Ilman
-       * `paikka`-kenttää piste ottaa paikakseen kaupungin ja siirtyy
-       * laatan vasemmalle puolelle (nostonPaikka, js/fokusnosto-
-       * symbolit.js) — juuri se varapolku, jota varten kenttä on
-       * valinnainen.
+       * PAIKKA LISÄTTIIN 1.9.2026 (nostojen sisältöaudit). Kenttä
+       * puuttui tietoisesti, koska aineisto puhuu "Madridin puistoista"
+       * eikä nimeä yhtä pesäpaikkaa — mutta varapolku osoittautui
+       * pahemmaksi kuin puuttuva täsmäpiste. Tämä lista ON Espanjan
+       * maapooli (js/fokusnosto.js NOSTO_MAAT.ESP osoittaa tähän
+       * taulukkoon), eikä datamallissa ole tapaa sitoa yksittäistä
+       * nostoa yhteen kaupunkiin: pooli näkyy sellaisenaan jokaisessa
+       * maan kaupungissa, jolla ei ole omaa listaa (nostoKaupunginPooli).
+       * Ilman `paikka`-kenttää merkki asettui siihen kaupunkiin, jossa
+       * pelaaja seisoi (nostonPaikka), joten Barcelonassa pelaava sai
+       * Barcelonan päälle merkin, jonka otsikko puhuu Madridista.
+       *
+       * MIKSI PARQUE DEL OESTE EIKÄ EL RETIRO: lähdeartikkeli ei nimeä
+       * yhtäkään puistoa, joten pistettä ei voi ottaa siitä. Kortin
+       * OMA, jo tarkistettu valokuva on Parque del Oestesta
+       * ("Cotorra Argentina - Parque del Oeste - Madrid 03.jpg",
+       * Commons-kuvaus nimeää puiston), eli se on tässä kortissa ainoa
+       * dokumentoitu pesäpaikka. Piste on siis kortin oman todisteen
+       * paikka, ei arvaus tunnetuimmasta puistosta.
+       *
+       * 40,42833333 N / −3,72416667 E — en-Wikipedia "Parque del
+       * Oeste", prop=coordinates (haettu 1.9.2026). Sama kaava ja samat
+       * vakiot kuin muillakin nostoilla (js/fokusnosto.js, PAIKKA
+       * LAUDALLA): maailmankartta Millerin lieriönä, europe tasavälinä.
        */
       id: 'munkkiaratit',
       nimio: 'Madridin papukaijat',
@@ -669,7 +686,9 @@ export const FOKUSVIRTA_MADRID = {
       ],
       lahde: 'en-Wikipedia "Monk parakeet", osiot pesinnästä ja '
         + 'vieraslajistatuksesta (tarkistettu 25.8.2026 työaineistoon '
-        + 'docs/mantereet-tyoaineisto/takynostot-espanja.md, ehdokas 6).',
+        + 'docs/mantereet-tyoaineisto/takynostot-espanja.md, ehdokas 6); '
+        + 'pisteen paikka en-Wikipedia "Parque del Oeste" '
+        + '(tarkistettu 1.9.2026).',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin yllä):
        * repon oma generoitu kuva, joten kenttä on `osoite` eikä
@@ -702,6 +721,13 @@ export const FOKUSVIRTA_MADRID = {
         'Millainen on munkkiaratin yhteispesä?',
         'Mitä haittaa vieraslajista on kaupungille?',
       ],
+      paikka: {
+        nimi: 'Parque del Oeste',
+        laudat: {
+          maailmankartta: { x: 5709.2, y: 1786 },
+          europe: { x: 139.7, y: 830.3 },
+        },
+      },
     },
     {
       /*

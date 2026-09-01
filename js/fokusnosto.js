@@ -199,31 +199,86 @@ import { sfx } from './sound.js';
 const NOSTO_MAAT = {
   GRC: [
     {
+      /*
+       * ── KOLME SCHLIEMANN-KORTTIA, KOLME PAIKKAA (1.9.2026) ────────
+       *
+       * Nostojen sisältöaudit löysi pelistä kolme Schliemann-korttia,
+       * joista KAKSI istui samassa osoitteessa: tämä nosto ja Ateenan
+       * syvennystäky `schliemann` (js/packs/fokusvirta-ateena.js +
+       * js/packs/syvennyspaikat.js) olivat molemmat Iliou
+       * Melathronissa, 0,1 laudayksikön päässä toisistaan. Yhtään
+       * korttia ei poistettu; TYÖNJAKO ON NYT PAIKAN MUKAINEN:
+       *
+       *   TUR `schliemann`  = KAIVAUS. Hisarlıkin kumpu ja se, että
+       *     hän kaivoi läpi juuri sen Troijan, jota etsi. Piirtyy
+       *     Troijan kohteesta (`kohde: 'troija'`).
+       *   GRC syvennys `schliemann` = TALO. Iliou Melathron, jonka hän
+       *     rakennutti Ateenaan, ja sen friisi, jossa hän kaivaa
+       *     ikuisesti. Ei muutettu.
+       *   tämä nosto = SEURAUKSET. Valokuva, keksitty huivitarina ja
+       *     se, mitä paljastumisesta seurasi — päätepisteenään Mykene,
+       *     jonne hän siirtyi ja jonne Kreikan arkeologinen seura
+       *     lähetti hänen peräänsä valvojan. Piste siirtyi siksi
+       *     Ateenasta Mykeneen: kortti kertoo nyt sen kohtauksen,
+       *     joka tapahtui siellä, ja Mykene on samalla maan kartalla
+       *     kokonaan uusi nimi.
+       *
+       * TEKSTIIN LISÄTTY KÄÄNNE ON LÄHTEEN OMA eikä uutta aineistoa:
+       * en-Wikipedia "Heinrich Schliemann" (osio Troijan kaivauksista)
+       * ja "Priam's Treasure" (osiot "Art collection" ja
+       * "Authenticity") kertovat, että Schliemann myönsi keksineensä
+       * tarinan huivissa kannetusta aarteesta ja että Sofia oli
+       * löytöhetkellä Ateenassa oman perheensä luona isänsä kuoltua.
+       * Sama osio kertoo myös Mykenen valvojasta ja siitä, että aarre
+       * on Puškin-museossa, joka myönsi omistavansa sen vasta 1994.
+       *
+       * IKÄSOPIVUUS (13+, Perustuslaki): Sofian tarinasta on yhä
+       * jätetty pois aineistossa erikseen hylätty avioliittokulma.
+       */
       id: 'sofia-korut',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen (omistajan
-      // lisätilaus 28.8.2026 ilta). Otsikko on lause, nimiö on nimi.
-      nimio: 'Helenan korut',
+      // lisätilaus 28.8.2026 ilta). Otsikko on lause, nimiö on nimi —
+      // ja nimen on oltava sen paikan nimi, jossa merkki seisoo.
+      nimio: 'Mykene',
       otsikko: 'Valokuva paljasti aarrevarkauden — rouva poseerasi Troijan koruissa',
       teksti: 'Heinrich Schliemann salakuljetti Priamoksen aarteen ulos '
-        + 'Ottomaanien valtakunnasta. Viranomaisille asia paljastui vasta, kun '
-        + 'hänen vaimonsa Sofia esiintyi julkisesti yllään "Helenan korut" — '
-        + 'kultainen otsapanta ja kaulakorut.\n\n'
-        + 'Kaivausta valvomaan määrätty ottomaanivirkamies Amin Effendi sai '
-        + 'vankeustuomion, Schliemannin kaivauslupa peruttiin ja Ottomaanien '
-        + 'hallitus haastoi hänet oikeuteen osuudestaan kultaan.',
-      lahde: 'en-Wikipedia "Priam\'s Treasure", osio "Art collection" '
-        + '(tarkistettu 25.8.2026).',
+        + 'Ottomaanien valtakunnasta Kreikkaan. Viranomaisille asia '
+        + 'paljastui vasta, kun hänen vaimonsa Sofia esiintyi julkisesti '
+        + 'yllään "Helenan korut" — kultainen otsapanta ja kaulakorut. '
+        + 'Tarinan kuuluisin kohta on silti keksitty: Schliemann kertoi '
+        + 'yhä uudelleen, että Sofia oli kantanut kullan pois '
+        + 'kaivaukselta huivissaan, ja myönsi myöhemmin sepittäneensä '
+        + 'sen. Löytöhetkellä Sofia oli Ateenassa oman perheensä luona, '
+        + 'isänsä kuoleman takia.\n\n'
+        + 'Seuraukset osuivat muihin. Kaivausta valvomaan määrätty '
+        + 'ottomaanivirkamies Amin Effendi sai vankeustuomion, '
+        + 'Schliemannin kaivauslupa peruttiin ja Ottomaanien hallitus '
+        + 'haastoi hänet oikeuteen osuudestaan kultaan. Schliemann '
+        + 'siirtyi Mykeneen — ja Kreikan arkeologinen seura lähetti '
+        + 'hänen peräänsä oman miehensä valvomaan, mitä maasta nousee. '
+        + 'Aarre itse on nykyään Moskovassa Puškin-museossa, joka '
+        + 'myönsi omistavansa sen vasta vuonna 1994.',
+      lahde: 'en-Wikipedia "Priam\'s Treasure", osiot "Art collection" ja '
+        + '"Authenticity", sekä "Heinrich Schliemann", osio Troijan '
+        + 'kaivauksista (tarkistettu 1.9.2026); pisteen paikka '
+        + 'en-Wikipedia "Mycenae", prop=coordinates (1.9.2026).',
       /*
-       * Iliou Melathron, Schliemannin oma talo Ateenassa (23,7342 E /
-       * 37,9814 N — en-Wikipedia "Iliou Melathron"). Juuri siitä talosta
-       * Sofia lähti korut yllään, ja se on kadun päässä siitä
-       * kansallismuseosta, jonne Troijan löydöt lopulta päätyivät.
+       * 37,73027778 N / 22,7575 E — en-Wikipedia "Mycenae",
+       * prop=coordinates (haettu 1.9.2026). Piste on kortin oman
+       * loppukäänteen paikka: sinne Schliemann siirtyi, ja sinne
+       * Kreikan arkeologinen seura lähetti valvojansa. Aiempi piste
+       * oli Iliou Melathron (23,7342 E / 37,9814 N), joka on Ateenan
+       * syvennystäyn oma osoite — kaksi merkkiä samassa kohdassa.
+       *
+       * Piste on Kreikan fokuslehden ikkunassa (lat 34,4–41,95,
+       * tools/fokuskartta/maat.mjs GRC). Sama kaava ja samat vakiot
+       * kuin muillakin nostoilla, ks. tiedoston alku, PAIKKA LAUDALLA.
        */
       paikka: {
-        nimi: 'Ateena',
+        nimi: 'Mykene',
         laudat: {
-          maailmankartta: { x: 6624.5, y: 1881.6 },
-          europe: { x: 666.9, y: 894.7 },
+          maailmankartta: { x: 6591.9, y: 1891.3 },
+          europe: { x: 648.1, y: 901.3 },
         },
       },
       kuva: {
