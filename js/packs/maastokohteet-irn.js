@@ -61,7 +61,7 @@ export const MAASTOKOHTEET_IRN = [
       'Onko Kaspianmeri järvi vai meri?',
       'Keitä olivat kaspit?',
     ],
-    korostukset: ['kaspit|kaspien'],
+    korostukset: ['kaspit|kaspeilta'],
     nappi: 'Maailman suurin järvi — vai meri?',
     // 51.5 E / 37.6 N — ulappa Iranin pohjoisrannikon edustalla; artikkelin oma keskipiste 50,5 / 42 on keskiallasta pohjoisempana
     laudat: {

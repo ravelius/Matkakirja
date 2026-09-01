@@ -61,7 +61,7 @@ export const MAASTOKOHTEET_ISL = [
       'Kuuluuko Grönlanninmeri Jäämereen vai Atlanttiin?',
       'Mikä Framinsalmi on?',
     ],
-    korostukset: ['Framinsalmi|Framinsalmi'],
+    korostukset: ['Framinsalmi|Framinsalmeen'],
     nappi: 'Meri, joka ei tiedä mihin kuuluu',
     // -18.5 E / 67 N — meren eteläreuna Islannin pohjoispuolella; artikkelin oma keskipiste on -8 / 76
     laudat: {

@@ -581,7 +581,7 @@ export const FOKUSKOHTEET_BGR = [
       'Mitä bakteeri tekee maidolle?',
       'Miten jogurttia syödään Bulgariassa?',
     ],
-    korostukset: ['Lactobacillus bulgaricus'],
+    korostukset: ['Lactobacillus bulgaricus|Lactobacillus bulgaricukseksi'],
     /* Valintakuplan painike. Lupaus on bakteerin nimen tarina. */
     nappi: 'Bakteeri, joka sai maan nimen',
     /*

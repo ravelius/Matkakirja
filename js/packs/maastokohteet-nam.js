@@ -38,7 +38,7 @@ export const MAASTOKOHTEET_NAM = [
       'Mistä Brandberg sai palavan nimensä?',
       'Miten 2 573 metrin Königstein-huipulle noustaan?',
     ],
-    korostukset: ['Königstein|Königsteinin'],
+    korostukset: ['Königstein'],
     nappi: 'Namibian korkein vuori',
     // 14.5487 E / -21.1258 N — en-Wikipedia "Brandberg Mountain"
     laudat: {

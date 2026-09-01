@@ -38,7 +38,7 @@ export const MAASTOKOHTEET_POL = [
       'Miksi Rysyllä on kolme huippua?',
       'Mikä on Puolan vuorten kruunu?',
     ],
-    korostukset: ['Tatrat|Tatroilla'],
+    korostukset: ['Tatrat|Tatrojen'],
     nappi: 'Puolan korkein piste',
     // 20.0881 E / 49.1794 N — en-Wikipedia "Rysy"
     laudat: {
@@ -86,11 +86,19 @@ export const MAASTOKOHTEET_POL = [
       maailmankartta: { x: 6416.7, y: 1156.5 },
       europe: { x: 547.2, y: 441.8 },
     },
-    teksti: 'Itämeri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, '
-      + 'Liettua, Puola, Venäjä ja Ruotsi. Maantieteellisesti se jää Skandinavian niemimaan '
-      + 'sekä Pohjois- ja Keski-Euroopan tasangon väliin. Se on maailman suurin murtovesiallas: '
-      + 'makea jokivesi ja suolainen merivesi sekoittuvat siinä jatkuvasti.',
-    lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja '
+      + 'niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät '
+      + 'täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se '
+      + 'kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se '
+      + 'nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, '
+      + 'jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja '
+      + 'Ruotsi, ja se on maailman suurin murtovesiallas. Puolan rannalla on Gdańskinlahti, ja '
+      + 'siihen laskee Veiksel, yksi meren suurista joista. Etelärannikon meripihka on ollut '
+      + 'kauppatavaraa 1100-luvulta asti, ja Gdańskin, Gdynian ja Szczecinin telakat ovat '
+      + 'meren suurimmat.',
+    lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa sekä osiot "Storms and storm floods", '
+      + '"Subdivisions", "Middle Ages" ja "Economy"; laivan osalta "Vasa (ship)", johdanto-osa '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'veiksel',

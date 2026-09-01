@@ -617,7 +617,7 @@ export const FOKUSKOHTEET_GRC = [
       'Mitä Idan luolasta on löydetty?',
       'Miksi Zeus piilotettiin juuri Kreetalle?',
     ],
-    korostukset: ['Idan luola|Idan luolassa'],
+    korostukset: ['Idan luola'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Vuori, jossa Zeus kasvoi',
     /*

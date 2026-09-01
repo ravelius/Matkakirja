@@ -66,10 +66,19 @@ export const MAASTOKOHTEET_EST = [
       maailmankartta: { x: 6580, y: 1004.4 },
       europe: { x: 641.3, y: 357.7 },
     },
-    teksti: 'Itämeri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, '
-      + 'Liettua, Puola, Venäjä ja Ruotsi. Maantieteellisesti se jää Skandinavian niemimaan '
-      + 'sekä Pohjois- ja Keski-Euroopan tasangon väliin. Se on maailman suurin murtovesiallas.',
-    lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja '
+      + 'niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät '
+      + 'täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se '
+      + 'kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se '
+      + 'nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, '
+      + 'jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja '
+      + 'Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden '
+      + 'välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala '
+      + 'saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena '
+      + 'jään peitossa.',
+    lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa sekä osiot "Storms and storm floods", '
+      + '"Temperature and ice"; laivan osalta "Vasa (ship)", johdanto-osa (tarkistettu '
+      + '1.9.2026).',
   },
   {
     id: 'suomenlahti',

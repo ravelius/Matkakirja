@@ -64,17 +64,24 @@ export const MAASTOKOHTEET_TUN = [
       'Miksi Välimerta ympäröi maa lähes joka suunnalta?',
       'Mitä reittiä Välimereltä pääsee valtamerelle?',
     ],
+    korostukset: ['Gibraltarinsalmi|Gibraltarinsalmen'],
     nappi: 'Meri jota maa ympäröi',
     // 11.6 E / 37.3 N — ulappa Kap Bonin niemen koillispuolella; artikkelin oma keskipiste on 18 / 35
     laudat: {
       maailmankartta: { x: 6220, y: 1907.8 },
       europe: { x: 433.9, y: 912.6 },
     },
-    teksti: 'Välimeri on Euroopan, Aasian ja Afrikan välinen meri, jota maa ympäröi lähes kokonaan; '
-      + 'Atlanttiin se yhtyy lännessä Gibraltarinsalmen kautta. Tunisian rannikko on meren '
-      + 'etelälaidalla, ja Medjerda tuo maan jokivedet siihen Tunisinlahdessa.',
-    lahde: 'en-Wikipedia "Mediterranean Sea" ja "Medjerda River", johdanto-osat (tarkistettu '
-      + '30.8.2026).',
+    teksti: 'Välimeri on virallisesti kaksi merta, ja raja kulkee Tunisian kärjen kautta: '
+      + 'läntisen ja itäisen altaan välinen viiva vedetään Sisilian länsikärjestä Adventure '
+      + 'Bankin matalikon yli Bon-niemelle. Meri on Euroopan, Aasian ja Afrikan välissä, ja '
+      + 'maa ympäröi sen lähes kokonaan — valtamerelle pääsee vain lännestä, Gibraltarinsalmen '
+      + 'kautta. Yhteys on ollut poikki ennenkin: noin 5,9 miljoonaa vuotta sitten meri jäi '
+      + 'Atlantista erilleen ja kuivui osin tai kokonaan runsaan puolen miljoonan vuoden '
+      + 'ajaksi, kunnes Zanclean tulva täytti altaan uudelleen 5,3 miljoonaa vuotta sitten. '
+      + 'Tunisian rannikko on tämän altaan etelälaidalla, ja Medjerda tuo maan jokivedet '
+      + 'siihen Tunisinlahdessa.',
+    lahde: 'en-Wikipedia "Mediterranean Sea", johdanto-osa ja osio "Extent", sekä "Medjerda '
+      + 'River", johdanto-osa (tarkistettu 1.9.2026).',
   },
   {
     id: 'medjerda',

@@ -79,18 +79,24 @@ export const MAASTOKOHTEET_NOR = [
       'Kuka Willem Barentsz oli?',
       'Miksi merta kutsuttiin ennen Murmanskinmereksi?',
     ],
-    korostukset: ['Willem Barentsz|Willem Barentszin'],
+    korostukset: ['Willem Barentsz|Willem Barentszilta'],
     nappi: 'Meri, joka on nimetty hollantilaiselta',
     // 26 E / 71.3 N — ulappa Finnmarkin rannikon edustalla; artikkelin oma keskipiste on 40 / 75
     laudat: {
       maailmankartta: { x: 6700, y: 303.8 },
       europe: { x: 710.4, y: 18.4 },
     },
-    teksti: 'Barentsinmeri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, ja se on '
-      + 'jaettu Norjan ja Venäjän aluevesiksi. Venäläiset tunsivat sen aiemmin '
-      + 'Murmanskinmerenä. Nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem '
-      + 'Barentszilta.',
-    lahde: 'en-Wikipedia "Barents Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa '
+      + 'ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta '
+      + 'yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan '
+      + 'ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin '
+      + 'kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. '
+      + 'Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee '
+      + 'hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla '
+      + 'ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana '
+      + 'ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.',
+    lahde: 'en-Wikipedia "Barents Sea", johdanto-osa sekä osiot "Extent", "Name" ja "Fishing" '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'glomma',

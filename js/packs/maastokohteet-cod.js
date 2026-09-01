@@ -62,7 +62,7 @@ export const MAASTOKOHTEET_COD = [
       'Mikä järvi on Tanganjikaakin syvempi?',
       'Miten järven vesi päätyy Atlanttiin?',
     ],
-    korostukset: ['Baikal|Baikalin'],
+    korostukset: ['Baikal'],
     nappi: 'Maailman pisin makeanveden järvi',
     // 29.5 E / -6.1 N — en-Wikipedia "Lake Tanganyika" (29,5 / -6,1); järven länsiranta on Kongon puolella
     laudat: {

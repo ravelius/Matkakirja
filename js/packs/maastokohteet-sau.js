@@ -69,7 +69,7 @@ export const MAASTOKOHTEET_SAU = [
       'Miksi aavikon nimi on Tyhjä neljännes?',
       'Voiko aavikon poikki matkustaa?',
     ],
-    korostukset: ['Tyhjä neljännes|Tyhjän neljänneksen'],
+    korostukset: ['Tyhjä neljännes'],
     nappi: 'Tyhjä neljännes',
     // 50 E / 20 N — en-Wikipedia "Rub' al Khali"
     laudat: {

@@ -67,7 +67,7 @@ export const MAASTOKOHTEET_PHL = [
       'Miksi tulivuoresta kasvaa täydellinen kartio?',
       'Miten aktiivista tulivuorta vahditaan?',
     ],
-    korostukset: ['kartio|kartionsa'],
+    korostukset: ['kartio|kartiostaan'],
     nappi: 'Täydellinen kartio',
     // 123.685 E / 13.2567 N — en-Wikipedia "Mayon"
     laudat: {

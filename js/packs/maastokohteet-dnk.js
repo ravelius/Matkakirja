@@ -86,11 +86,19 @@ export const MAASTOKOHTEET_DNK = [
       maailmankartta: { x: 6253.3, y: 1170.4 },
       europe: { x: 453.1, y: 449.7 },
     },
-    teksti: 'Itämeri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, '
-      + 'Liettua, Puola, Venäjä ja Ruotsi. Se on maailman suurin murtovesiallas. Tanskan salmet '
-      + 'ovat sen ainoa yhteys Pohjanmerelle, ja siksi juuri ne ovat aina olleet Itämeren '
-      + 'avain.',
-    lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja '
+      + 'niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät '
+      + 'täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se '
+      + 'kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se '
+      + 'nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, '
+      + 'jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja '
+      + 'Ruotsi, ja se on maailman suurin murtovesiallas. Suolaisen veden ovi on Tanskan: '
+      + 'Juutinrauma, Iso-Belt ja Vähä-Belt ovat meren ainoa yhteys Pohjanmerelle, ja niiden '
+      + 'matalat kynnykset päästävät suolavettä sisään vain harvakseltaan. Siksi juuri ne ovat '
+      + 'aina olleet Itämeren avain.',
+    lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa sekä osiot "Storms and storm floods", '
+      + '"Definitions" ja "Subdivisions"; laivan osalta "Vasa (ship)", johdanto-osa '
+      + '(tarkistettu 1.9.2026).',
   },
 ];
 

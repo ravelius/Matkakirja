@@ -38,7 +38,7 @@ export const MAASTOKOHTEET_FIN = [
       'Miksi Suomen korkein kohta ei ole huippu?',
       'Mikä on korkein kokonaan Suomessa oleva tunturi?',
     ],
-    korostukset: ['Enontekiö|Enontekiön'],
+    korostukset: ['Hálditšohkka'],
     nappi: 'Suomen korkein kohta — mutta ei huippu',
     // 21.2789 E / 69.3228 N — en-Wikipedia "Halti"
     laudat: {
@@ -68,10 +68,17 @@ export const MAASTOKOHTEET_FIN = [
       maailmankartta: { x: 6553.3, y: 783.1 },
       europe: { x: 625.9, y: 242 },
     },
-    teksti: 'Pohjanlahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin '
-      + 'itärannikon välissä. Se jakautuu kolmeen osaan: Perämereen, Merenkurkkuun ja '
-      + 'Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä.',
-    lahde: 'en-Wikipedia "Gulf of Bothnia", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi '
+      + 'sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa '
+      + 'melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan '
+      + 'yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo '
+      + 'pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven '
+      + 'viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja '
+      + 'Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja '
+      + 'Selkämereen. Lahden eteläpäässä on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä; '
+      + 'Suomen puolen suurimmat satamat tonneissa mitattuna ovat Rauma, Kokkola ja Tornio.',
+    lahde: 'en-Wikipedia "Gulf of Bothnia", johdanto-osa sekä osiot "Geography" ja "Economy" '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'suomenlahti',

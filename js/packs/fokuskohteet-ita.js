@@ -274,7 +274,7 @@ export const FOKUSKOHTEET_ITA = [
       'Miten luolaan pääsee sisään?',
       'Miksi keisari halusi asua saarella?',
     ],
-    korostukset: ['Villa Jovis', 'Grotta Azzurra'],
+    korostukset: ['Villa Jovis', 'Grotta Azzurra|Sininen luola'],
     /* Valintakuplan painike. Lupaus on valo, ei keisari. */
     nappi: 'Luola, jossa vesi hehkuu sinisenä',
     /*
@@ -539,7 +539,7 @@ export const FOKUSKOHTEET_ITA = [
       'Mikä Adda-jäätikkö oli?',
       'Mihin silkkiteollisuus järveltä katosi?',
     ],
-    korostukset: ['Lario', 'silkkiteollisuus|silkkiteollisuudesta'],
+    korostukset: ['jääkausi|jääkauden', 'silkkiteollisuus|silkkiteollisuudesta'],
     /* Valintakuplan painike. Lupaus on järven muoto. */
     nappi: 'Järvi, jonka jäätikkö kaiversi Y:ksi',
     // 9,2667 E / 46 N — en-Wikipedia "Lake Como".
@@ -682,7 +682,7 @@ export const FOKUSKOHTEET_ITA = [
       'Miksi Forum jäi lopulta autioksi?',
       'Mitä Forumin aukiolla tehtiin tavallisena päivänä?',
     ],
-    korostukset: ['Curia Julia|Curia Julian', 'basilika|basilikat'],
+    korostukset: ['Curia Julia|Curia Julian', 'Basilica Aemilia|Basilica Aemiliaan'],
     /* Valintakuplan painike. */
     nappi: 'Aukio, jota on sanottu maailman kuuluisimmaksi',
     laudat: {

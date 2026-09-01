@@ -79,6 +79,26 @@ export const MAASTOKOHTEET_GHA = [
   {
     id: 'voltajarvi',
     nimi: 'Voltajärvi',
+    /*
+     * TYYPPI ON 'meri' EIKÄ 'jarvi', JA SE JÄÄ NIIN (tutkittu 1.9.2026).
+     *
+     * Voltajärvi on tekojärvi, joten tyyppi näyttää väärältä. Se ei
+     * kuitenkaan ole tässä kortissa oleva vika vaan koko perheen
+     * sopimus: yhdeksästä järvikortista kahdeksan on tyyppiä 'meri'
+     * (Tanganjika, Tana, Aral, Victoria, Tšad…), koska
+     * KOHDE_TYYPPISYMBOLIT (js/fokuskohteet.js) tuntee vain neljä
+     * luonnon tyyppiä — vuori, meri, saari, joki — ja ne kaikki
+     * kartoittuvat samaan `luonto`-kärkisymboliin. Tyyppiä 'jarvi' ei
+     * ole olemassa.
+     *
+     * Vaihto mitattiin eikä arvattu: 'jarvi' pudottaa symbolin nulliksi
+     * ja nimiön tyhjäksi, ja koska `laji` on osa nostoladonnan
+     * tiivistettä (js/nostoladonta.js), poltettu tiiviste muuttuisi
+     * e09fa844 → cb218a97. Merkki katoaisi julisteesta. Jos järvi
+     * joskus halutaan omaksi lajikseen, se on symbolitaulun ja
+     * laattapyramidin uusintapolton kokoinen erä, ei yhden rivin
+     * korjaus — ja se koskee kaikkia yhdeksää järveä kerralla.
+     */
     tyyppi: 'meri',
     kysymykset: [
       'Mikä pato synnytti Voltajärven?',

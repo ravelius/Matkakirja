@@ -87,6 +87,7 @@ export const MAASTOKOHTEET_ZAF = [
       'Mitkä Afrikan suurjoet laskevat tähän valtamereen?',
       'Kuinka suuri valtameri on?',
     ],
+    korostukset: ['latimeria|Latimeria'],
     nappi: 'Valtameri maan itärannalla',
     // 31.6 E / -30.6 N — ulappa Durbanin edustalla; artikkelin oma keskipiste on 80 / -20
     laudat: {
@@ -94,10 +95,16 @@ export const MAASTOKOHTEET_ZAF = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Intian valtameri on maailman kolmanneksi suurin valtameri: yli 70 miljoonaa '
-      + 'neliökilometriä eli noin viidennes maapallon vesipinnasta. Etelä-Afrikan itäranta '
-      + 'avautuu sille, ja suurimmat siihen laskevat Afrikan joet ovat Sambesi ja Limpopo.',
-    lahde: 'en-Wikipedia "Indian Ocean" ja "Limpopo River", johdanto-osat (tarkistettu 30.8.2026).',
+    teksti: '1930-luvulla Etelä-Afrikan rannikolta nousi vedestä kala, jonka lahkon oli luultu '
+      + 'kuolleen sukupuuttoon 66 miljoonaa vuotta sitten. Latimeria kuuluu varsieväkaloihin, '
+      + 'jotka tunnetaan jo 410 miljoonan vuoden takaa, ja juuri Intian valtameri oli '
+      + 'piilottanut sen. Valtameri on maailman kolmanneksi suurin — yli 70 miljoonaa '
+      + 'neliökilometriä eli noin viidennes maapallon vesipinnasta — ja kaikista lämpimin. Sen '
+      + 'länsiraja on piirretty tähän maahan: 20. itäinen pituuspiiri Agulhasniemeltä etelään '
+      + 'erottaa sen Atlantista. Etelä-Afrikan itäranta avautuu valtamerelle, ja suurimmat '
+      + 'siihen laskevat Afrikan joet ovat Sambesi ja Limpopo.',
+    lahde: 'en-Wikipedia "Indian Ocean", johdanto-osa sekä osiot "Extent and data" ja "Marine '
+      + 'life", sekä "Limpopo River", johdanto-osa (tarkistettu 1.9.2026).',
   },
   {
     id: 'oranjejoki',

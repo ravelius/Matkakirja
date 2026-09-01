@@ -61,7 +61,7 @@ export const MAASTOKOHTEET_KAZ = [
       'Minne Araljärven vesi meni?',
       'Mitä \'saarten meri\' tarkoittaa?',
     ],
-    korostukset: ['Aralkum|Aralkumin'],
+    korostukset: ['puuvilla|puuvillapelloille'],
     nappi: 'Meri, joka katosi ihmisen käsissä',
     // 60 E / 45 N — en-Wikipedia "Aral Sea" — entisen järven keskipiste
     laudat: {

@@ -33,6 +33,34 @@
  * Tiedostot on tuotettu työkalulla `node tools/johda-maastokohteet.mjs
  * <ISO> --runko`; sen jälkeen ne ovat tavallista käsin muokattavaa
  * lähdekoodia, eikä työkalua ajeta niiden yli uudelleen.
+ *
+ * === JAETTU VESISTÖ: YKSI RUNKO, MAAKOHTAINEN HÄNTÄ (1.9.2026) =====
+ *
+ * Kaksikymmentäyhdeksän tunnusta esiintyy 2–7 maassa: Itämeri kuudessa,
+ * Välimeri seitsemässä, Atlantti seitsemässä, Barentsinmeri kahdessa.
+ * Jokaisella maalla on OMA kohdeoliona, omalla paikallaan ja omilla
+ * Pulu-kysymyksillään — sama kortti-implementaatio ei siis ole jaettu,
+ * ja sama vesistö voi kertoa eri maassa eri asian.
+ *
+ * Se ei ollut ilmainen: teksti oli kopioitu maasta toiseen, ja kuuden
+ * Itämeri-kortin ensimmäiset virkkeet olivat sanasta sanaan samat
+ * tietosanakirjan johdannot (nostoaudit 1.9.2026, luku 2.1). Erässä 3B
+ * viisi vesistöä kirjoitettiin siksi KAHTENA OSANA:
+ *
+ *   RUNKO   — sama teksti jokaisessa rantavaltiossa, ja se alkaa
+ *             koukusta eikä määritelmästä: Itämeri on meri, jonka
+ *             pohjassa puulaivat eivät lahoa; Pohjanlahti on katoamassa;
+ *             Barentsinmeri lämpenee nopeammin kuin mikään muu arktinen
+ *             meri. Yhteinen runko on tarkoituksellinen: pelaaja, joka
+ *             avaa Itämeren Riiassa ja uudestaan Tukholmassa, tunnistaa
+ *             sen samaksi mereksi.
+ *   HÄNTÄ   — 1–3 virkettä siitä, mitä juuri tämä meri merkitsee juuri
+ *             tälle maalle: satama, kalastus, historia. Tanskalla salmet,
+ *             Liettualla meripihka, Ruotsilla Gotlanti ja merirosvot.
+ *
+ * Lähderivi nimeää molempien osien lähteet, ja hännän oma osio näkyy
+ * siinä erikseen. Nimeä, tyyppiä, symbolia ja koordinaatteja ei
+ * kosketa — ne ovat nostoladonnan tiivisteessä (js/nostoladonta.js).
  */
 import { MAASTOKOHTEET_AFG } from './maastokohteet-afg.js';
 import { MAASTOKOHTEET_AGO } from './maastokohteet-ago.js';

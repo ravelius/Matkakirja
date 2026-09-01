@@ -564,7 +564,7 @@ export const FOKUSKOHTEET_ROU = [
       'Mitkä ovat Romanian seitsemän ihmettä?',
       'Kuka linnan rakennutti?',
     ],
-    korostukset: ['Hunyadi|Hunyadin'],
+    korostukset: ['Hunyadi|Hunyadin', 'Vlad Seivästäjä|Vlad Seivästäjää'],
     /* Valintakuplan painike. Lupaus on seitsemän ihmeen lista. */
     nappi: 'Linna Romanian seitsemästä ihmeestä',
     // 45,74917 N / 22,88833 E — en-Wikipedia "Corvin Castle".
@@ -573,19 +573,33 @@ export const FOKUSKOHTEET_ROU = [
       europe: { x: 650.7, y: 690.4 },
     },
     /*
-     * LISTAN LYHYIN TEKSTI, JA SE ON TARKOITUS. Aineisto merkitsee tämän
-     * kohteen lähdepohjaltaan heikoimmaksi (siitä haettiin vain
-     * johdanto-osa) ja käskee jättää pois varmentamattoman virkkeen
-     * elokuvien kuvauspaikasta. Se on jätetty pois, eikä tilalle ole
-     * keksitty mitään — kaksi varmennettua virkettä on parempi kuin
-     * kolmas, jota lähde ei sano.
+     * KIRJOITETTU AUKI ERÄSSÄ 3B (1.9.2026). Kortti oli aiemmin 182
+     * merkkiä — koko nostoaineiston pahin ero lupauksen ja sisällön
+     * välillä (nostoaudit 1.9.2026, luku 3.4): Romanian kuuluisin
+     * linna kolmella virkkeellä, joissa ei ollut vuosilukua eikä
+     * Hunyadia. Syy oli lähdepohja: artikkelista oli haettu vain
+     * johdanto-osa. Nyt lähteinä ovat myös osiot "History",
+     * "Structure" ja "Legacy", ja kortti kertoo kolme asiaa, joita
+     * lyhyt versio ei kertonut: mistä nimi tulee, kuka linnan teki ja
+     * miksi sen nykyinen asu on kiistelty.
+     *
+     * ELOKUVIEN KUVAUSPAIKKALISTA ON YHÄ POIS. Se on artikkelissa
+     * ("Legacy"), mutta se on luettelo eikä tarina, eikä se kuulu
+     * 1873:n maailmaan.
      */
-    teksti: 'Hunedoaran goottilais-renessanssilinna on yksi Euroopan '
-      + 'suurimmista linnoista ja kuuluu "Romanian seitsemään ihmeeseen". '
-      + 'Se tunnetaan myös nimillä Hunyadin linna ja Hunedoaran linna.',
-    lahde: 'en-Wikipedia "Corvin Castle", johdanto-osa (tarkistettu '
-      + '25.8.2026). Vain johdanto on tarkistettu, joten kohteesta ei '
-      + 'sanota enempää kuin siinä lukee.',
+    teksti: 'Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta '
+      + 'juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta '
+      + 'Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa '
+      + 'tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. '
+      + 'Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa '
+      + 'pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi '
+      + '"Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon '
+      + 'ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi '
+      + 'siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että '
+      + 'Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram '
+      + 'Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.',
+    lahde: 'en-Wikipedia "Corvin Castle", johdanto-osa sekä osiot "History", "Structure" ja '
+      + '"Legacy" (tarkistettu 1.9.2026).',
     // Category:Corvin Castle. Commons 25.8.2026: 2400×2107, CC BY-SA 4.0,
     // Pasztilla aka Attila Terbócs, 2019.
     kuva: {

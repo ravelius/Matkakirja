@@ -94,12 +94,18 @@ export const MAASTOKOHTEET_RUS = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Barentsinmeri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, ja se on '
-      + 'jaettu Norjan ja Venäjän aluevesiksi. Venäläiset tunsivat sen aiemmin '
-      + 'Murmanskinmerenä. Nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem '
-      + 'Barentszilta. Venäjän puoleisella rannalla se on maan ainoa pohjoinen meri, jonka '
-      + 'satamia lämmin merivirta pitää auki läpi talven.',
-    lahde: 'en-Wikipedia "Barents Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa '
+      + 'ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta '
+      + 'yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan '
+      + 'ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin '
+      + 'kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. '
+      + 'Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee '
+      + 'hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla '
+      + 'ensimmäisiä retkiä kauas pohjoiseen. Venäjän puolella Murmanskin satama pysyy sulana '
+      + 'ympäri vuoden lämpimän Pohjois-Atlantin virran ansiosta, ja meren itäkulmalla '
+      + 'Petšoran suistossa on oma nimensä: Petšoranmeri.',
+    lahde: 'en-Wikipedia "Barents Sea", johdanto-osa sekä osiot "Extent", "Name" ja "Fishing" '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'jaameri',
@@ -155,7 +161,7 @@ export const MAASTOKOHTEET_RUS = [
       'Kuka Vitus Bering oli?',
       'Kuinka kapea Beringinsalmi on?',
     ],
-    korostukset: ['Vitus Bering|Vitus Beringin'],
+    korostukset: ['Vitus Bering|Vitus Beringiltä'],
     nappi: 'Kahden mantereen raja',
     // 180 E / 58.5 N — lehteen poltetun nimen BERINGINMERI paikka (FOKUSMAAT.RUS.meret)
     laudat: {

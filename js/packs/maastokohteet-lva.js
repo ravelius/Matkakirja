@@ -67,10 +67,19 @@ export const MAASTOKOHTEET_LVA = [
       maailmankartta: { x: 6533.3, y: 1071.8 },
       europe: { x: 614.4, y: 394.5 },
     },
-    teksti: 'Itämeri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, '
-      + 'Liettua, Puola, Venäjä ja Ruotsi. Maantieteellisesti se jää Skandinavian niemimaan '
-      + 'sekä Pohjois- ja Keski-Euroopan tasangon väliin. Se on maailman suurin murtovesiallas.',
-    lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja '
+      + 'niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät '
+      + 'täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se '
+      + 'kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se '
+      + 'nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, '
+      + 'jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja '
+      + 'Ruotsi, ja se on maailman suurin murtovesiallas. Latvian rannikkoa reunustaa '
+      + 'Riianlahti, meren oma sivumeri, ja siihen laskee Väinäjoki — yksi niistä suurista '
+      + 'joista, jotka pitävät meren veden vähäsuolaisena. Riian, Ventspilsin ja Liepājan '
+      + 'telakat ovat Itämeren suurimpia.',
+    lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa sekä osiot "Storms and storm floods", '
+      + '"Subdivisions", "Hydrography" ja "Economy"; laivan osalta "Vasa (ship)", johdanto-osa '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'vainajoki',

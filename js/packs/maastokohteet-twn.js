@@ -38,7 +38,7 @@ export const MAASTOKOHTEET_TWN = [
       'Miten meren pohja päätyy vuoren huipuksi?',
       'Miksi vuorella on ollut monta nimeä?',
     ],
-    korostukset: ['Jadevuori|Jadevuoren'],
+    korostukset: ['Jadevuori'],
     nappi: 'Merestä noussut huippu',
     // 120.9572 E / 23.47 N — en-Wikipedia "Yushan (mountain)"
     laudat: {
