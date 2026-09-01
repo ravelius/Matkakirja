@@ -1680,8 +1680,8 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'tiede',
       nimi: 'Tiede',
       johdanto: 'Prahassa on talo, jossa säätä on mitattu katkeamatta vuodesta '
-        + '1775, ja eläintarha, jolle uskottiin kokonaisen lajin '
-        + 'sukukirjan pito.',
+        + '1775, ja eläintarha, jolle uskottiin kokonaisen lajin sukukirjan '
+        + 'pito silloin kun lajia oli jäljellä enää kaksitoista yksilöä.',
       nostot: [
         {
           otsikko: 'Sääkirja, joka alkoi 1775',
@@ -2403,9 +2403,9 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'luonto',
       nimi: 'Eläimet kaupungissa',
-      johdanto: 'Wienin keskushautausmaalla laiduntaa parikymmentä kaurista, '
-        + 'ja kaupungin eläintarhaan tuotu kirahvi muutti aikoinaan '
-        + 'kampaukset, kankaat ja seuraelämän.',
+      johdanto: 'Wienin keskushautausmaalla laiduntaa parikymmentä kaurista '
+        + 'vanhojen hautakivien lomassa, ja Schönbrunniin tuotu kirahvi '
+        + 'muutti aikoinaan kaupungin kampaukset, kankaat ja seuraelämän.',
       nostot: [
         {
           otsikko: 'Kauriit vanhalla hautausmaalla',
@@ -5540,8 +5540,8 @@ export const KULTTUURI_KATEGORIAT = {
           tiedosto: 'Vue des Tuileries après l\'incendie de 1871, PH83415.jpg',
           teksti: 'Palatsin runko jäi Louvren länsipäähän seisomaan vuoden '
             + '1871 palon jälkeen: katto ja sisustus olivat poissa, mutta '
-            + 'kivimuurit seisoivat ehjinä. Kaupungintalo, joka paloi '
-            + 'samoina päivinä, rakennettiin uudelleen jo 1870-luvulla. '
+            + 'kivimuurit seisoivat ehjinä. Kaupungintalo, jonka kommunardit '
+            + 'polttivat niin ikään, rakennettiin uudelleen jo 1870-luvulla. '
             + 'Tuileriat sen sijaan jäivät paikoilleen, ja purkupäätöksen '
             + 'teki kolmas tasavalta vasta 1882; vastaan olivat muun muassa '
             + 'Georges-Eugène Haussmann ja joukko historioitsijoita. Purku '
@@ -5562,11 +5562,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirjekyyhky. Kyyhkyt vietiin ulos kuumailmapalloilla, ja '
             + 'valokuvaaja René Dagron, mikrofilmin patentin haltija vuodesta '
             + '1859, tarjoutui pienentämään viestit: sopimus allekirjoitettiin '
-            + '11. marraskuuta 1870 hintaan viisitoista frangia tuhatta '
-            + 'merkkiä kohti. Yksi filmi painoi noin viisi sadasosagrammaa, ja '
-            + 'yksi kyyhky kantoi niitä jopa kaksikymmentä pyrstösulkiin '
-            + 'sidotussa putkessa. Perillä filmi heijastettiin taikalyhdyllä '
-            + 'seinälle ja viestit kirjoitettiin puhtaaksi.',
+            + '11. marraskuuta 1870. Yksi filmi painoi noin viisi '
+            + 'sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa '
+            + 'kaksikymmentä pyrstösulkiin sidotussa putkessa. Perillä filmi '
+            + 'heijastettiin taikalyhdyllä seinälle ja viestit kirjoitettiin '
+            + 'puhtaaksi.',
           selite: 'Piiritetystä Pariisista lähetetty mikrofilmi on noin viisi '
             + 'senttiä kolme senttiä.',
           lahde: 'Dagron, Prudent René-Patrice, Wikimedia Commons (CC0)',
@@ -7699,9 +7699,9 @@ export const KULTTUURI_KATEGORIAT = {
           'kymmeneksi vuodeksi koeajaksi',
         ],
         oikea: 2,
-        fakta: 'Vuokra oli 45 puntaa vuodessa neljän eekkerin tontista. '
-          + 'Lopulta yhtiö osti maan omakseen, jolloin yhdeksäntuhannen '
-          + 'vuoden sopimus raukesi kesken.',
+        fakta: 'Sopimus tehtiin uudenvuodenaattona 1759 neljän eekkerin '
+          + 'tontista. Lopulta yhtiö osti maan omakseen, jolloin '
+          + 'yhdeksäntuhannen vuoden vuokrakausi raukesi kesken.',
       },
     },
   ],
@@ -7980,6 +7980,31 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vettä ei tulivuorenkalliolta tahtonut saada.',
           lahde: 'Scglossop1, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Edinburghin linna',
+        },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-edinburgh-scott-monumentti` putosi
+         * Edinburghin nostoruuhkasta.
+         */
+        {
+          otsikko: 'Muistomerkin voitti puuseppä nimimerkillä',
+          tiedosto: 'Edinburgh Scott Monument 20211019.jpg',
+          teksti: 'Princes Streetin puistossa seisoo goottilainen torni, '
+            + 'kuusikymmentäyksi metriä korkea, 287 porrasta ylimmälle '
+            + 'tasanteelle ja 68 pientä kivipatsasta kirjojen henkilöitä. '
+            + 'Se on maailman toiseksi suurin kirjailijan muistomerkki. '
+            + 'Kilpailu järjestettiin Walter Scottin kuoltua 1832, ja sen '
+            + 'voitti ehdotus, jonka lähettäjä oli allekirjoittanut '
+            + 'nimimerkillä John Morvo. Takana oli 45-vuotias George Meikle '
+            + 'Kemp, puuseppä ja piirtäjä ilman arkkitehdin koulutusta, '
+            + 'joka pelkäsi että hänen nimensä hylättäisiin kuoreen '
+            + 'katsomatta. Torni valmistui syksyllä 1844, mutta Kemp ei '
+            + 'ollut sitä katsomassa: hän oli hukkunut Unionin kanavaan '
+            + 'saman vuoden maaliskuussa.',
+          selite: 'Scott-monumentin holvin alla istuu Walter Scottin '
+            + 'marmoripatsas, ja etualan pronssi on David Livingstonen '
+            + 'muistomerkki.',
+          lahde: 'Daniel Kraft, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
           /*
@@ -9666,6 +9691,33 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Iberian korkeimman huipun Mulhacénin kupeessa.',
           lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Sierra Nevada (Espanja)',
+        },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-granada-kupoli` putosi Granadan
+         * nostoruuhkasta. Kuva on Laurentin vedos leijonapihasta, eri
+         * tiedosto kuin sivun ennen–nyt -parin vanha vedos: juuri se
+         * pari näyttää kupolin, josta tämä juttu kertoo.
+         */
+        {
+          otsikko: 'Kupoli, joka seisoi 75 vuotta ja purettiin',
+          tiedosto: 'Granada- View into the lion court of the Alhambra (SM stf113).png',
+          teksti: 'Leijonapihan kummassakin päässä on pieni paviljonki. '
+            + 'Isoisän matkavuonna itäisen paviljongin päällä oli pyöreä, '
+            + 'keramiikkalaatoilla päällystetty kupoli, ja se näytti '
+            + 'kuuluvan taloon. Se oli neljätoista vuotta vanha: sen oli '
+            + 'nostanut siihen vuonna 1859 arkkitehti Rafael Contreras, '
+            + 'jonka isä oli aloittanut palatsin korjaustyöt 1828 ja jonka '
+            + 'poika jatkoi niitä vuoteen 1907 asti. He tekivät työnsä sen '
+            + 'ajan opin mukaan: rakennukseen sai lisätä osia, jotta siitä '
+            + 'tulisi kokonainen. Kupolin esikuva oli osittain Persiassa. '
+            + 'Vuonna 1934 Leopoldo Torres Balbás purki sen ja teki tilalle '
+            + 'pyramidikaton, ja siitä nousi kansainvälinen kiista.',
+          selite: 'Jean Laurentin vedoksessa noin vuodelta 1865 pihan '
+            + 'perällä olevan paviljongin päällä on pallomainen kupoli, '
+            + 'joka purettiin vasta 1934.',
+          lahde: 'Jean Laurent n. 1865, Städel Museum, Wikimedia Commons '
+            + '(public domain)',
         },
       ],
       /*
@@ -14194,6 +14246,70 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * KARTALTA LEHTEEN (v1419 jälkityö, kaupunkinostojen katto):
+     * syvennystarinat `syvennys-moskova-elaintarha` ja `-nayttely1872`
+     * putosivat Moskovan nostoruuhkasta. Ne kuuluvat yhteen: molempien
+     * takana oli yliopiston professorien seura.
+     */
+    {
+      id: 'tiede',
+      nimi: 'Tiede ja museot',
+      johdanto: 'Moskovan eläintarhan ja polyteknisen museon takana olivat '
+        + 'samat miehet: yliopiston professorit, jotka keräsivät rahat '
+        + 'jäsenmaksuilla ja pystyttivät molemmat ilman keisaria.',
+      nostot: [
+        {
+          otsikko: 'Eläintarha kerättiin viiden ruplan jäsenmaksuilla',
+          tiedosto: '1900th-MoscowZoo.jpg',
+          teksti: 'Yliopiston professorit olivat puuhanneet eläintarhaa '
+            + 'vuodesta 1857, keränneet rahat viiden ruplan jäsenmaksuilla '
+            + '— jäseniä oli 1862 jo yli seitsemänsataa — ja saaneet 1863 '
+            + 'maata Presnjan lammikoilta. Tarha avattiin 31. tammikuuta '
+            + '1864. Alussa oli seitsemän rakennusta ja vajaat kolmesataa '
+            + 'eläintä, enimmäkseen lahjoitettuja: 57 nisäkäslajia ja 53 '
+            + 'lintulajia, joukossa tiikereitä, leopardeja, seepra ja yksi '
+            + 'sarvikuono. Pääsy maksoi juhlapäivinä kymmenen kopeekkaa, '
+            + 'tavallisina päivinä kaksikymmentä ja torstaisin viisikymmentä '
+            + '— halvimmalla pääsi sisään silloin, kun kaikilla muillakin '
+            + 'oli vapaata.',
+          selite: 'Moskovan eläintarha avattiin 31. tammikuuta 1864 Presnjan '
+            + 'lammikoilla, ja se on yhä samalla paikalla.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Näyttely, josta jäi museo',
+          tiedosto: '(05) Москва. Политехническая выставка. Главный вход. 1872г e1t3.jpg',
+          teksti: 'Kesällä 1872 Moskova oli yhtä suurta näyttelyä: koko '
+            + 'Venäjän teknillinen näyttely järjestettiin Pietari Suuren '
+            + 'syntymän kaksisataavuotispäivän kunniaksi, ja sen takana oli '
+            + 'luonnontieteen, antropologian ja etnografian harrastajien '
+            + 'seura yliopiston professoreineen. Kaupunginvaltuusto oli '
+            + 'varannut edellisenä vuonna puoli miljoonaa ruplaa siihen, '
+            + 'mitä näyttelystä jäisi jäljelle. Kokoelmista koottiin museo, '
+            + 'joka avattiin 12. joulukuuta 1872 vuokratuissa huoneissa; '
+            + 'oman talonsa peruskivi laskettiin 1874 ja rakennus vihittiin '
+            + '30. toukokuuta 1877. Samana vuonna 1872 kaupunkiin tuli myös '
+            + 'ensimmäinen hevosten vetämä raitiovaunu.',
+          selite: 'Vuoden 1872 polyteknillisen näyttelyn pääsisäänkäynti oli '
+            + 'puinen paviljonki Voskresenskin aukion puolella.',
+          lahde: 'Tuntematon tekijä 1872, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka pani Moskovan eläintarhan pystyyn vuonna 1864?',
+        vaihtoehdot: [
+          'sirkusperhe, joka lopetti kiertämisen',
+          'keisari lahjaksi kaupungille',
+          'yliopiston professorien seura',
+          'kauppiaskilta omalla rahallaan',
+        ],
+        oikea: 2,
+        fakta: 'Rahat kerättiin viiden ruplan jäsenmaksuilla, ja jäseniä oli '
+          + '1862 yli seitsemänsataa. Pääsy maksoi juhlapäivinä kymmenen '
+          + 'kopeekkaa mutta torstaisin viisikymmentä.',
+      },
+    },
   ],
   // KUVATEKSTIREMONTTI KT1 22.8.2026: selite-kentät kertovat kohteesta
   // eivätkä kuvasta (Raamattu, omistajan linjaus 22.8.2026).
@@ -15888,6 +16004,30 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sähkövaloilla varustettu rakennus.',
           lahde: 'Assedo, Wikimedia Commons (PD)',
           wiki: 'Odessan kansallinen akateeminen ooppera- ja balettiteatteri',
+        },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-odessa-kuyalnyk` putosi Odessan
+         * nostoruuhkasta.
+         */
+        {
+          otsikko: 'Lahti, joka on suolaisempi kuin meri',
+          tiedosto: 'Desert in the Kuyalnik Estuary valley.jpg',
+          teksti: 'Kahdeksan kilometrin päässä keskustasta pohjoiseen on '
+            + 'vesi, joka ei ole meri eikä järvi. Kuyalnykin lahti on '
+            + 'kaksikymmentäkahdeksan kilometriä pitkä ja keskimäärin metrin '
+            + 'syvyinen. Se oli aikoinaan joen suu, sitten merenlahti, ja '
+            + 'noin 1300-luvulla hiekka kasautui sen ja meren väliin '
+            + 'kannakseksi. Siitä lähtien vesi on haihtunut pääsemättä '
+            + 'minnekään: suolapitoisuus on mittausten mukaan vaihdellut 29 '
+            + 'ja 269 promillen välillä. Näin suolaisessa vedessä elää '
+            + 'bakteerien lisäksi vain kaksi lajia, ja lisääntymisaikaan '
+            + 'pikkuäyriäisiä on niin paljon, että koko veden sävy kääntyy '
+            + 'punertavaksi. Kylpylä perustettiin rannalle jo 1834.',
+          selite: 'Kuyalnykin lahden yläpää kuivuu kesäisin suolaerämaaksi, '
+            + 'ja pohjalle jäävä suola on ollut kaupungin tulonlähde '
+            + 'keskiajalta asti.',
+          lahde: 'Yuriy Kvach, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       /*
@@ -23659,6 +23799,30 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ihmishahmoa vuosina 1929–1943.',
           lahde: 'The original uploader was DIMSFIKAS at Greek Wikipedia, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Vigelandin puisto',
+        },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * syvennystarina `syvennys-oslo-unionilippu` putosi Oslon
+         * nostoruuhkasta.
+         */
+        {
+          otsikko: 'Lipun kannossa oli silakkasalaatti',
+          tiedosto: 'LAROUSSE - H.Chartier (1859-1924) SUÈDE ET NORVÈGE Armes, drapeaux, armee (Sweden and Norway historical Coat of arms, flags 1890s) Nouveau Larousse Illustré Paris 1898-1901 Vol 07 (detail).jpg',
+          teksti: 'Norjan nykyinen lippu suunniteltiin jo 1821; sen teki '
+            + 'suurkäräjien jäsen Fredrik Meltzer, ja hän perusteli '
+            + 'punaista, valkoista ja sinistä sillä, että ne merkitsivät '
+            + 'silloin vapautta. Sillä lipulla sai kuitenkin purjehtia vain '
+            + 'pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli '
+            + 'käytettävä unionin yhteistä kauppalippua, koska suoja '
+            + 'Pohjois-Afrikan kaappareilta tuli Ruotsin maksamana. Vuonna '
+            + '1844 molempien maiden lippujen kantoon pantiin yhteinen '
+            + 'unionimerkki, joka jakoi värit tasan. Kansa antoi sille nimen '
+            + 'sildesalaten, silakkasalaatti. Kauppalipun kannosta merkki '
+            + 'katosi vuoden 1899 lopussa.',
+          selite: 'Ruotsin ja Norjan lipuissa oli unionin viimeisinä vuosina '
+            + 'kummassakin sama unionimerkki, jossa maiden värit on jaettu '
+            + 'tasan.',
+          lahde: 'Henri-Georges Chartier, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
           /*
@@ -57854,6 +58018,30 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Florance, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Bitter orange',
         },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * täkynosto `nosto-velazquezin-oppivuodet` putosi Sevillan
+         * nostoruuhkasta.
+         */
+        {
+          otsikko: 'Kaupungin poika maalasi vedenmyyjiä',
+          tiedosto: 'El aguador de Sevilla, por Diego Velázquez.jpg',
+          teksti: 'Diego Velázquez kastettiin Sevillan Pyhän Pietarin '
+            + 'kirkossa 6. kesäkuuta 1599, ja perhe eli vaatimattomasti. '
+            + 'Yksitoistavuotiaana hänet pantiin oppiin maalari Francisco '
+            + 'Pachecon pajaan kuudeksi vuodeksi, ja huhtikuussa 1618 hän '
+            + 'nai opettajansa tyttären Juanan. Ne työt, jotka hän tuolloin '
+            + 'teki, eivät olleet kuninkaita eivätkä pyhimyksiä vaan '
+            + 'keittiöitä: vanha nainen paistamassa munia, poika kantamassa '
+            + 'vesiruukkua. Filip IV istui hänelle 30. elokuuta 1623, ja '
+            + 'kreivi-herttua Olivares antoi määräyksen: Velázquez muuttaa '
+            + 'Madridiin eikä kukaan muu enää maalaa kuningasta. Sevillaan '
+            + 'hän ei palannut asumaan.',
+          selite: 'Sevillan vedenmyyjä on Velázquezin sevillalaiskauden '
+            + 'keittiökuvien huippu, maalattu ennen kuin tekijä oli '
+            + 'täyttänyt kahtakymmentäviittä.',
+          lahde: 'Diego Velázquez n. 1620, Wikimedia Commons (public domain)',
+        },
       ],
       matkailijalle: {
         kuva: {
@@ -58095,6 +58283,30 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kauppansa katedraalin viileissä holveissa.',
           lahde: 'Jl FilpoC, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'General Archive of the Indies',
+        },
+        /*
+         * Kartalta lehteen (v1419 jälkityö, kaupunkinostojen katto):
+         * täkynosto `nosto-italica-amfiteatteri` putosi Sevillan
+         * nostoruuhkasta.
+         */
+        {
+          otsikko: 'Amfiteatterin muurit purettiin padoksi',
+          tiedosto: 'Anfiteatro de Itálica (32833418441).jpg',
+          teksti: 'Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, '
+            + 'jonka Scipio perusti vuonna 206 eaa. haavoittuneille '
+            + 'veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen '
+            + 'roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi '
+            + 'Rooman keisaria, Trajanus ja Hadrianus. Kaupungin '
+            + 'amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: '
+            + 'siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui '
+            + 'arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään '
+            + 'sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja '
+            + 'vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit '
+            + 'purettaviksi — kiviä tarvittiin Guadalquiviriin '
+            + 'rakennettavaan patoon.',
+          selite: 'Itálican amfiteatterista on jäljellä se osa, jota ei '
+            + 'louhittu rakennuskiveksi.',
+          lahde: 'Emilio J. Rodríguez Posada, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },
