@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1413, teksti: 'Kohtaamiskortti: aarrekuva isona ja kuvateksti alle' },
   { v: 1412, teksti: 'Vesistotarinat, Corvinin linna ja 48 korostuskorjausta' },
   { v: 1411, teksti: 'Maastokortit tarinoiksi - 60 uusiksi, 13 elaintakya' },
   { v: 1410, teksti: 'Lahderivi jokaiselle nostolle - 232 uutta, 3 perhetta' },

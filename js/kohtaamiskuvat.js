@@ -1,4 +1,4 @@
-import { R2_JUURI, kohtaamiskuvat } from './kohtaamiskuvat-data.js';
+import { kohtaamiskuvaOsoite, kohtaamiskuvat } from './kohtaamiskuvat-data.js';
 
 const galleria = document.querySelector('#galleria');
 const korttipohja = document.querySelector('#kuvakortti');
@@ -19,7 +19,9 @@ function kortti(kohtaaminen) {
 
   artikkeli.dataset.haku = `${kohtaaminen.kaupunki} ${kohtaaminen.maa} ${kohtaaminen.hahmo}`.toLocaleLowerCase('fi');
   artikkeli.dataset.tila = kohtaaminen.tila;
-  kuva.src = `${R2_JUURI}/${encodeURIComponent(kohtaaminen.tiedosto)}`;
+  // Sama osoitteenrakennus kuin pelin kortilla (kohtaamiskuvat-data.js):
+  // galleria ja peli eivät saa erota siinä, mistä kuva haetaan.
+  kuva.src = kohtaamiskuvaOsoite(kohtaaminen);
   kuva.alt = kohtaaminen.alt;
   kuva.addEventListener('error', () => {
     kuva.hidden = true;

@@ -498,6 +498,14 @@ const MODULES = [
    * (mannerivihje) — molemmat ovat listalla myöhempänä.
    */
   'js/livia.js',
+  /*
+   * Kohtaamiskuvien katalogi ennen visaa: js/visa.js lukee siitä
+   * kohtaamiskortin ison kuvan (1.9.2026). Pelkkää dataa ja kaksi
+   * apuria, ei omia riippuvuuksia. HUOM: kuvat itse haetaan R2:sta,
+   * joten yhden tiedoston versio näyttää ne vain verkossa — kuvaton
+   * kortti on yhtä ehjä (js/ui.js naytaKohtaamiskuva).
+   */
+  'js/kohtaamiskuvat-data.js',
   'js/visa.js',
   // Tilastot-lehti ennen lehteä (lehti.js tuo sen staattisesti). Se
   // lukee pack.js:n, sisältötaulut ja ui-apurit, jotka ovat yllä —
