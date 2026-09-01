@@ -1555,9 +1555,26 @@ export const NOSTOSYM_NIMIO_KOKO = 11;
  * `nostosymNimionAsu` lukee ne yhä CSS:stä silloin kun kartta on
  * kädessä — tämä on sen sama luku ilman selainta.
  */
+/*
+ * HALO POISTUI KOKONAAN (omistaja 1.9.2026, kuvakaappaus Bulgarian
+ * lehtinäkymästä, sanatarkasti: *"otetaan pois karttanostojen
+ * teksteistä valkoinen ääriviiva, eli tekstit pelkällä tummalla"*).
+ *
+ * Halo oli poltetun VUORENNIMEN oma tapa (piirto.js kohta 8e): siellä
+ * nimi kirjoitetaan keskelle rinnettä, jossa maasto on kirjava, ja
+ * pergamenttivedos irrottaa sen taustastaan. Karttanoston nimiö ei ole
+ * siinä tilanteessa — se on merkkinsä vieressä oleva lippu, ja
+ * merkillä on jo oma laattansa. Kahden vaalean reunuksen vieressä
+ * kolmas teki nimistä sumeita ja paksuja.
+ *
+ * `haloLeveys: 0` on myös LADONNAN luku eikä pelkkä ulkoasu: nimiön
+ * törmäyslaatikko levisi haloleveyden verran (nostosymNimioLaatikko),
+ * joten nimiöt latoutuvat nyt hitusen tiiviimmin. Siksi muutos vaatii
+ * uuden nostopolton — ks. js/nostoladonta.js NOSTOLADONTA_SAANTO v4.
+ */
 const NOSTOSYM_NIMIO_ASUT = {
   vuori: {
-    luokka: '', vali: 0, versaali: false, haloLeveys: 3.1,
+    luokka: '', vali: 0, versaali: false, haloLeveys: 0,
   },
   meri: {
     luokka: 'nostosym-nimio-meri',
@@ -1845,7 +1862,9 @@ let NOSTOSYM_MUSTE = null;
 const NOSTOSYM_ASU_VARA = {
   perhe: '"Liberation Serif", "Times New Roman", Times, serif',
   tyyli: 'italic', muste: 'rgba(74,52,33,0.92)',
-  halo: 'rgba(232,220,188,0.85)', haloLeveys: 3.1,
+  // Ei haloa: nimiö on 1.9.2026 alkaen pelkkää tummaa mustetta
+  // (ks. NOSTOSYM_NIMIO_ASUT).
+  halo: null, haloLeveys: 0,
 };
 
 /**
@@ -1929,7 +1948,7 @@ function nostosymNimionAsu(svg, laji = 'vuori') {
     muste: t.fill || NOSTOSYM_ASU_VARA.muste,
     halo,
     // strokeWidth on kirjaston yksiköitä, koska font-size on niitä.
-    haloLeveys: halo ? (parseFloat(t.strokeWidth) || NOSTOSYM_ASU_VARA.haloLeveys) : 0,
+    haloLeveys: halo ? (parseFloat(t.strokeWidth) || 3.1) : 0,
     vali: muoto.vali,
   };
   apu.remove();

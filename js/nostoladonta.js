@@ -205,8 +205,20 @@ export function nostoladontaSkaala(rajaus) {
  * NOSTOSYM_NIMIO_KOKO — tuplattu tänne, koska tämä moduuli ei saa tuoda
  * mitään; tests/nostoladonta.test.mjs vahtii että luvut ovat samat). */
 export const NOSTOLADONTA_NIMIO_KOKO = 11;
+/*
+ * KATTO LASKI 10,5 -> 8,5 (omistaja 1.9.2026 ilta, kuvakaappaus
+ * Bulgarian lehtinäkymästä, sanatarkasti: *"kaupunkien nimet pitäisi
+ * olla isommalla (suurenna) kuin karttanostojen nimet joita voi
+ * pienentää"*).
+ *
+ * KATTO ON YHÄ SAMA LUKU KUIN KARTAN OMA KOHDENIMI, ja juuri se luku
+ * pieneni (js/karttanimet.js KOKO.kohde). Aamun katto oli *"max sama
+ * koko kuin kohdekaupungin koko"*; illan tilaus erottaa nämä kaksi
+ * toisistaan — kaupunki 12,5 px, nosto 8,5 px — jotta katse tietää,
+ * kumpi nimi on paikka ja kumpi sen vieras.
+ */
 /** Nimiön suurin ruutukoko, CSS-pikseliä (js/karttanimet.js KOKO.kohde). */
-export const NOSTOLADONTA_NIMIO_KATTO = 10.5;
+export const NOSTOLADONTA_NIMIO_KATTO = 8.5;
 /*
  * LAATTA EI TIEDÄ KATSOJAN PIKSELITIHEYTTÄ, JA SE ON MITATTU RAJA.
  *
@@ -311,8 +323,27 @@ export function nostoladontaKattoPorras(porras, ruutuPx) {
  * jää enintään kolme nostoa, ihmeet ja skandaalit ensin
  * (js/fokuskohteet.js karsiKaupunkiruuhka). Versio nostettiin, jotta
  * v2-säännöllä poltettu taso piiloutuu kunnes uusi poltto on ajossa.
+ *
+ * v4 (omistaja 1.9.2026 ilta, kuvakaappaus Bulgarian lehtinäkymästä):
+ * KAKSI piirtosäännön muutosta, kumpikin sanatarkasti tilattu, ja
+ * kumpikin muuttaa poltetun nimiön kokoa tai laatikkoa:
+ *
+ *   1. *"kaupunkien nimet pitäisi olla isommalla (suurenna) kuin
+ *      karttanostojen nimet joita voi pienentää"* — nimiön ruutukatto
+ *      10,5 -> 8,5 px (NOSTOLADONTA_NIMIO_KATTO yllä). Poltettu nimiö
+ *      on siis pienempi kuin v3:n laatoissa.
+ *   2. *"otetaan pois karttanostojen teksteistä valkoinen ääriviiva,
+ *      eli tekstit pelkällä tummalla"* — halo pois
+ *      (js/fokusnosto-symbolit.js NOSTOSYM_NIMIO_ASUT `haloLeveys: 0`).
+ *      Halo oli osa nimiön TÖRMÄYSLAATIKKOA, joten nimiöiden väistö
+ *      päättää nyt toisin.
+ *
+ * Kumpikaan ei muuta yhtäkään merkin kenttää, joten ilman tätä
+ * versiokorotusta luettelo väittäisi v3-laattoja tuoreiksi ja peli
+ * vaikenisi merkeistä, jotka laatassa ovat väärän kokoisia ja väärin
+ * ladottuja. Sama syy kuin v3:ssa — ks. lohkon johdanto.
  */
-export const NOSTOLADONTA_SAANTO = 'v3';
+export const NOSTOLADONTA_SAANTO = 'v4';
 
 export function nostoladontaTiiviste(merkki) {
   const osat = [
