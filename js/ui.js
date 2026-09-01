@@ -2439,6 +2439,13 @@ export class UI {
       this.openLightbox(null, this.quizKohtaaminenKuva.alt || 'Kohtaaminen', src,
         [{ src, caption, lahde: caption ? KOHTAAMISKUVAN_LAHDE : null }]);
     });
+    /*
+     * VIIMEISEN YRITYKSEN VAROITUS tervehdyssivulla (omistajan tilaus
+     * 1.9.2026): kun ensimmäinen vastaus on mennyt väärin, pelaajalle
+     * kerrotaan ENNEN Aloita peli -nappia, että yrityksiä on enää yksi.
+     * Tekstin asettaa js/visa.js renderQuiz.
+     */
+    this.quizVaroitus = document.getElementById('quiz-varoitus');
     this.quizIsoisa = document.getElementById('quiz-isoisa');
     this.quizIsoisaTeksti = document.getElementById('quiz-isoisa-teksti');
     // Tervehdys luetaan kerran per kaupunki ja istunto — toistuvassa
