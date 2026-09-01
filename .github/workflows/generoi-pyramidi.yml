@@ -174,6 +174,11 @@ on:
         type: choice
         options: [taysi, keskitaso, hillitty, ei]
         default: taysi
+      piirit:
+        description: 'Viivataso: erikoispiirit (päiväntasaaja, kääntö- ja napapiiri, nollameridiaani) laattoihin (ei = --eipiirit, omistaja 1.9.2026)'
+        type: choice
+        options: [kylla, ei]
+        default: kylla
       lahdepatina:
         description: 'Vain paikkaus, vain vanha lähde: lähdeajon patinataso, jos lähdeluettelossa ei ole patina-kenttää (31b/31c = hillitty)'
         type: string
@@ -408,6 +413,7 @@ jobs:
           SYOTE_VERSIO: ${{ inputs.versio }}
           SYOTE_NOSTOVERSIO: ${{ inputs.nostoversio || inputs.versio }}
           SYOTE_VIIVAVERSIO: ${{ inputs.viivaversio || inputs.versio }}
+          SYOTE_PIIRIT: ${{ inputs.piirit || 'kylla' }}
         run: |
           set -euo pipefail
           df -h / | tail -1
@@ -428,6 +434,10 @@ jobs:
           # Viivatason shardi samoin: reitit, erikoispiirit ja maiden
           # rajat läpinäkyville laatoille, sama resepti.
           if [ -n "${VIIVATASO}" ]; then LISA="$LISA --viivataso --viivaversio ${VIIVAVERSIO}"; fi
+          # Erikoispiirit pois viivatasolta (omistaja 1.9.2026: "Poista
+          # pituus ja leveyspiirit näkyvistä") — peite ja piirto samalla
+          # kytkimellä, ks. generaattorin ERIKOISPIIRIT POIS VIIVATASOLTA.
+          if [ -n "${VIIVATASO}" ] && [ "${SYOTE_PIIRIT}" = "ei" ]; then LISA="$LISA --eipiirit"; fi
           # Paikkaus: vain alueeseen osuvat laatat, ja luetteloon
           # merkintä siitä, mistä versiosta loput kopioitiin.
           if [ -n "${PAIKKAUS}" ]; then

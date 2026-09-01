@@ -727,3 +727,34 @@ test('vanha luettelo ilman viivataso-oliota jättää kerroksen tyhjäksi', () =
     'viivatasonTasot ei palauta nullia vanhalla luettelolla — silloin '
     + 'peli pyytäisi laattoja, joita ämpärissä ei ole');
 });
+
+/* ------------------------------------------- 4. piirit pois kytkimellä */
+
+/*
+ * ERIKOISPIIRIT POIS (`--eipiirit`, omistaja 1.9.2026 ilta: *"Poista
+ * pituus ja leveyspiirit näkyvistä."*). Kytkimen on osuttava KAHTEEN
+ * paikkaan yhtä aikaa — piirtopassiin ja peitteeseen — ja tämä testi
+ * vartioi peitettä: jos peite laskettaisiin yhä piirien kanssa, peli
+ * pyytäisi kaistallisen täysin läpinäkyviä laattoja. Piirtopassia ei
+ * voi ajaa ilman selainta; se on maailmapiirto.js:n `passit.piirit`,
+ * jonka generaattori välittää samasta vakiosta (ks. lähdetarkistus).
+ */
+test('--eipiirit kirjautuu luetteloon ja kaventaa peitteen', () => {
+  const ilman = ajaLuettelo(['--eipiirit']);
+  assert.equal(luettelo.viivataso.piirit, true, 'oletusajo kirjaa piirit: true');
+  assert.equal(ilman.viivataso.piirit, false, '--eipiirit ei kirjautunut luetteloon');
+  const summa = (l) => l.viivataso.tasot
+    .reduce((s, z) => s + bittejaPaalla(l.viivataso.laatastot[z]), 0);
+  assert.ok(summa(ilman) < summa(luettelo),
+    `peite ei kaventunut (${summa(ilman)} vs ${summa(luettelo)}) — peite ei kulje kytkimellä`);
+  assert.ok(summa(ilman) > 0, 'rajat ja reitit katosivat piirien mukana');
+});
+
+test('generaattori välittää piirikytkimen jokaiseen viivatason piirtoon', () => {
+  const lahde = readFileSync(GENERAATTORI, 'utf8');
+  const kutsut = lahde.match(/passit: \{[^}]*\}/g) ?? [];
+  assert.ok(kutsut.length >= 3, `viivatason piirtokutsuja löytyi ${kutsut.length}`);
+  for (const k of kutsut) {
+    assert.match(k, /piirit: PIIRIT/, `piirtokutsu ilman piirikytkintä: ${k}`);
+  }
+});

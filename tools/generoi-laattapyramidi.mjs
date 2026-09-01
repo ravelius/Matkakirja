@@ -239,6 +239,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--data <kansio>] [--tasot 0-4] [--alue lon0,lat0,lon1,lat1] '
     + '[--laatta 512] [--laatu 0.9] [--muoto webp] [--kuiva] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
+    + '[--nostotaso --nostoversio <v>] [--viivataso --viivaversio <v> [--eipiirit]] '
     + '[--saumatesti [--saumakohta sarake,rivi]]');
   process.exit(1);
 }
@@ -367,6 +368,24 @@ const NOSTO_ALIN = 5;
  */
 const VIIVATASO = lippu('viivataso');
 const VIIVAVERSIO = valitsin('viivaversio', VERSIO);
+/*
+ * ERIKOISPIIRIT POIS VIIVATASOLTA (`--eipiirit`, omistaja 1.9.2026
+ * ilta): *"Poista pituus ja leveyspiirit näkyvistä."* Piirit —
+ * päiväntasaaja, kääntöpiirit, pohjoinen napapiiri ja nollameridiaani
+ * nimineen — ovat viivatason oma passi (tools/fokuskartta/
+ * maailmapiirto.js piirraViivataso, `passit.piirit`), eikä niitä ole
+ * pohjassa (ks. ERIKOISPIIRIT EIVÄT OLE POHJASSA). Ne katoavat siis
+ * kartalta polttamalla viivataso uudella versiolla ilman passia; pohja
+ * ja nostotaso pysyvät välimuistissaan.
+ *
+ * PEITE KULKEE SAMALLA KYTKIMELLÄ (VIIVAOSAT): piirien kaistat ovat
+ * z0–z4:llä valtaosa viivatason laatoista, ja ilman passia ne olisivat
+ * täysin läpinäkyviä kuvia, joita peli kuitenkin pyytäisi. Luettelo
+ * kirjaa `viivataso.piirit`, jotta ämpäristä näkee kumpi ajo on —
+ * peli ei lue kenttää, se piirtää laatat sellaisinaan.
+ */
+const PIIRIT = !lippu('eipiirit');
+const VIIVAOSAT = PIIRIT ? null : { piirit: false };
 /*
  * REITIT VAIN LÄHITASOILLE (omistaja 1.9.2026, kuvakaappaus jonka
  * mittajana on 1000 km): *"Tällä zoomitasolla ja yli reitit voi
@@ -1029,7 +1048,7 @@ const nostoPeitteet = new Map(
   NOSTOTASO ? tasot.map((m) => [m.z, nostotasonPeite(m)]) : [],
 );
 const viivaPeitteet = new Map(
-  VIIVATASO ? tasot.map((m) => [m.z, viivatasonPeite(m)]) : [],
+  VIIVATASO ? tasot.map((m) => [m.z, viivatasonPeite(m, VIIVAOSAT)]) : [],
 );
 const tarvitaan = new Set();
 const lohkot = new Map();
@@ -1615,6 +1634,8 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
    */
   const VIIVATASO = ${VIIVATASO};
   const VIIVA_REITIT_ALIN = ${VIIVA_REITIT_ALIN};
+  // Erikoispiirien passi (ks. ERIKOISPIIRIT POIS VIIVATASOLTA).
+  const PIIRIT = ${PIIRIT};
   const nostot = await (await fetch('./nostot.json')).json().catch(() => null);
   let aineisto = null;
   let sisalto = null;
@@ -1671,7 +1692,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     };
     if (VIIVATASO) {
       piirraViivataso(kangas, {
-        ...yhteiset, passit: { reitit: saumaZ >= VIIVA_REITIT_ALIN },
+        ...yhteiset, passit: { reitit: saumaZ >= VIIVA_REITIT_ALIN, piirit: PIIRIT },
       });
     } else {
       piirraMaailma(kangas, aineisto, {
@@ -1823,7 +1844,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       };
       if (VIIVATASO) {
         piirraViivataso(kangas, {
-          ...yhteiset, passit: { reitit: (perus.__z ?? 7) >= VIIVA_REITIT_ALIN },
+          ...yhteiset, passit: { reitit: (perus.__z ?? 7) >= VIIVA_REITIT_ALIN, piirit: PIIRIT },
         });
       } else {
         piirraMaailma(kangas, aineisto, {
@@ -1897,7 +1918,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       piirraViivataso(kangas, {
         ...asetukset,
         sisalto,
-        passit: { reitit: asetukset.__z >= VIIVA_REITIT_ALIN },
+        passit: { reitit: asetukset.__z >= VIIVA_REITIT_ALIN, piirit: PIIRIT },
       });
     } else {
       piirraMaailma(kangas, aineisto, {
@@ -2408,11 +2429,12 @@ function teeLuettelo() {
   viivataso: (() => {
     if (!tasot.length) return null;
     const laatastot = {};
-    for (const m of tasot) laatastot[m.z] = nostotasoBase64(m, viivatasonPeite(m));
+    for (const m of tasot) laatastot[m.z] = nostotasoBase64(m, viivatasonPeite(m, VIIVAOSAT));
     return {
       versio: VIIVAVERSIO,
       tasot: tasot.map((m) => m.z),
       rajat: RAJASETTI,
+      piirit: PIIRIT,
       laatastot,
     };
   })(),
