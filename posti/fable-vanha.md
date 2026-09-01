@@ -1,3 +1,34 @@
+## 1.9.2026 15:05 UTC — MUISTIOPÄIVITYS: iltapäivän uusi tilauserä (BGR-kaappaus)
+
+Omistajan uudet tilaukset resetin yli (taskit #128-#131, agentit käynnissä):
+
+1. #128+#131 (Opus-agentti, worktree scratchpad/tyo-ui, pohja v1422):
+   tummennus+rajanvahvistus SAMAA reittiä kuin poltettu raja (rajat.mjs
+   'nykyiset' myos elävään maatummennukseen), raja paksummaksi, tummennus
+   pysyy zoomatessa (pois vain rajanylityksessä); kaupunkinimet isommiksi
+   kuin nostonimet (nostoja pienemmäksi), nostoteksteistä valkoinen halo
+   pois (pelkkä tumma), pelaajan kaupunki = askelhelmen kokoinen ympyrä +
+   nimi harvennetuilla kapiteeleilla. Agentti raportoi mitkä vaativat
+   nostopolton. JULKAISE muutokset kun raportti tulee (minä/seuraaja).
+2. #130 (tyo-katko-agentti, jonossa löydöskorjausten perään): MAAREITIT
+   takaisin YHTENÄISEEN viivaan (ohuempi, himmeämpi) — omistaja kumosi
+   maareittien katkoviivat; meri säilyy katkoina. Askelhelmet pienemmiksi
+   (kehä = maaviivan paksuus, säde ~10 R). Vedokset ennen polttoa.
+3. #129 PATINA VÄLIAIKAISESTI POIS kaikista tasoista: kun 01d-nostopoltto
+   on valmis (todennusherätys trig_01BAZKnWhUobMsDnWWEDpZwX), aja POHJA
+   ilman patinaa: generoi-pyramidi.yml, tasot=kaikki, versio=2026-09-01e,
+   patina=ei, nostoversio=2026-09-01d, viivaversio=2026-09-01a (KAIKKI
+   syötteet aina!). Syy: maan ääriviiva terävämpi kuin korkeuskartta —
+   kaikki elementit yhtä teräviksi; omistaja katsoo patinattoman version.
+   EI rinnakkaisia pyramidiajoja (luetteloraces).
+4. Lopuksi: UI-erän jälkeen uusi nostopoltto (patina=ei) ja hyväksytyn
+   reittityylin viivatasopoltto (patina=ei) — yhteinen järjestys: pohja
+   01e -> nosto (uusi) -> viiva (uusi). Kartta yhtenäiseksi ja terävyys
+   arvioitavaksi.
+5. Huom: origin/main on jo v1422 — muut sessiot julkaisevat rinnakkain,
+   git fetch aina ennen versionumeroa. Levy oli 92 % — vanhat worktreet
+   siivottu; pidä scratchpad kurissa.
+
 ## 1.9.2026 15:35 UTC — Kuvaerä K2 yleiskuvitussessiolle: skandaalinostot lehtiin (omistajan tilaus)
 
 Omistaja päätti tänään: kaupunkikaton pudottamat skandaalinostot
