@@ -8779,6 +8779,17 @@ export class UI {
     for (const osa of this.targetLayer?.querySelectorAll('.target-halo') ?? []) {
       lisaa(osa, FOKUS_KOHDE_HALO_LAAJIN);
     }
+    /*
+     * LAATTAAN POLTETUT NOSTOT SAMAAN JOUKKOON (omistaja 2.9.2026:
+     * *"Sofia menee päällekkäin jonkun noston tekstin kanssa"*).
+     * Nekään eivät ole DOMissa vaan laatan kuvassa, ja nimiladonta
+     * tarvitsee niistä täsmälleen saman tiedon kuin pelinappulasta:
+     * missä on mustetta, jota ei voi siirtää. Laatikot laskee ja
+     * ilmoittaa kohdekerros (js/fokuskohteet.js
+     * poltettujenNostojenVaraukset) — se ajetaan tämän EDELLÄ samassa
+     * asettumisketjussa (paivitaMaastonimet).
+     */
+    for (const laatikko of this.poltetutNostovaraukset ?? []) rivit.push(laatikko);
     return asetaRuutuvaraukset(rivit);
   }
 

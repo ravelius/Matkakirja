@@ -101,10 +101,11 @@ import {
 import { asetaKohdehakemisto } from './fokusvirta.js';
 import { FOKUS_LISANIMET } from './packs/fokus-grc.js';
 // Laattoihin poltetut maastonimet (vuoret, järvet, joet): sama nimi
-// vain kerran kartalle, ks. maastonimiLahella.
+// vain kerran kartalle, ks. maastonimenPari ja maastoParit.
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
 import {
-  LAUDAN_YMPARYS, PARIN_ETAISYYS, asetaKohdenimet, karttanimetLatovat, normalisoiNimi,
+  LAUDAN_YMPARYS, PARIN_ETAISYYS, asetaKohdenimet, asetaMaastonOmistajat,
+  karttanimetLatovat, normalisoiNimi,
 } from './karttanimet.js';
 import { karttavaloKarkisymboli, piirraKarttavalo } from './karttavalot.js';
 import { asetaKuva, assetOsoite } from './media.js';
@@ -134,6 +135,15 @@ import { FOKUSKOHTEET_TUR } from './packs/fokuskohteet-tur.js';
 import { FOKUSKOHTEET_ZWE } from './packs/fokuskohteet-zwe.js';
 import { FOKUSKOHTEET_GRC } from './packs/fokuskohteet-grc.js';
 import { MAASTOKOHTEET } from './packs/maastokohteet.js';
+/*
+ * KAUPUNKILEHDEN KOHDEKARTAT. Tuodaan tänne yhtä kysymystä varten:
+ * onko nostolla oma piste kaupunkilehden kartalla (ks.
+ * KAUPUNGIN KOHDALLA OLEVAT NOSTOT alempana). Taulu on laudan dataa
+ * eikä käyttöliittymää, ja niputuksessa se on jo ladattu
+ * (tools/build-standalone.mjs: js/packs/maakartat.js on listan
+ * alussa, tämä moduuli lopussa), joten kehää ei synny.
+ */
+import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import {
   niputaFokusmerkit, nippuAsettelunVersio, nippuAvaaKaupunki, nippuLaatanEtaisyys,
   nippuLaattaEsteet,
@@ -496,7 +506,118 @@ export function kohdeKarttarivit({
      * pelaajalle se näyttäisi merkiltä ilman karttaa.
      */
     .filter(({ paikka }) => pohjanAlla(paikka.x, paikka.y));
-  return karsiKaupunkiruuhka(rivit, kaupungit);
+  /*
+   * KAKSI KARSINTAA, TÄSSÄ JÄRJESTYKSESSÄ. Ensin pois ne, jotka
+   * asuvat kaupunkilehden kohdekartalla (omistajan sääntö 2.9.2026
+   * ilta) — ne eivät kuulu pääkartalle lainkaan. Vasta jäljelle
+   * jäävistä lasketaan kaupunkinostojen katto (1.9.2026), joten katon
+   * kolme paikkaa menevät niille nostoille, joilla ei ole muuta
+   * karttapaikkaa.
+   */
+  return karsiKaupunkiruuhka(karsiKaupunkikartanNostot(rivit, kaupungit), kaupungit);
+}
+
+/*
+ * === KAUPUNGIN KOHDALLA OLEVAT NOSTOT EIVÄT OLE PÄÄKARTALLA =======
+ *
+ * Omistaja 2.9.2026 illalla, kolmatta kertaa sanottuna (sanatarkasti):
+ * *"nuo karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+ * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+ * kaupunkikartalle. olen sanonut tästä jo kaksi kertaa aiemmin, eikä
+ * se ole vieläkään toteutunut."*
+ *
+ * MIKÄ ON "KAUPUNGIN KOHDALLA". Kaksi mittaa, ja kumpikin riittää:
+ *
+ *   1. nosto on kaupunkilehden kohdekartan rajauksessa
+ *      (js/packs/maakartat.js KAUPUNKIKARTAT[kaupunki].rajat), tai
+ *   2. nosto on alle KAUPUNGIN_KOHDALLA_SADE laudan yksikköä
+ *      kaupungin laatasta.
+ *
+ * TÄMÄ PASSI TOTEUTTAA MITAN 1 SUORAAN JA MITAN 2 SEURAUKSENA. Rivillä
+ * on vain laudan koordinaatit, ja rajaustesti vaatisi käänteis-
+ * projektion (se asuu js/fokusmitat.js:ssä, joka on niputuksessa VASTA
+ * tämän jälkeen). Sitä ei tarvita, koska kohdekartalla oleva nosto
+ * tunnistetaan sen omasta linkistä: kohdekartan piste kantaa kenttää
+ * `nosto: '<tunnus>'`, ja tunnus on täsmälleen se merkki, jonka tämä
+ * passi pudottaa. Piste voi olla kartalla vain, jos se on rajauksen
+ * sisällä (tests/nostot-kartalla.test.mjs valvoo sitä), joten linkin
+ * olemassaolo ON mitta 1.
+ *
+ * SÄDE (mitta 2) on nostojen tarkistuksen ja testin työkalu:
+ * tools/tarkista-nostopaikat.mjs listaa sillä ne kaupungin kohdalla
+ * olevat nostot, joilta kohdekartan piste vielä puuttuu — eli sen
+ * työlistan, joka tyhjentää pääkartan kaupunkien päältä lopullisesti.
+ * Vakio on täällä, koska sääntö on tämän passin sääntö.
+ *
+ * MIKSI PUDOTUS EI SEURAA PELKÄSTÄ SÄTEESTÄ. Omistajan aiempi sääntö
+ * samalta päivältä on yhä voimassa: *"lisää kaikki historian hetket ja
+ * muut karttanostot myös joko pääkarttanäkymään tai sitten
+ * kaupunkilehden kaupunkikartalle"*. Jos pelkkä säde pudottaisi merkin,
+ * kaupungin lähialueen nosto (Sofian Vitoša 5,1 yksikköä eli 13 km,
+ * Boyanan kirkko 6 km, eläintarha 3 km) katoaisi KAIKILTA kartoilta:
+ * se on kohdekartan rajauksen ulkopuolella eikä sille ole siellä
+ * paikkaa. Kaksi sääntöä yhdessä tarkoittavat siis: kohdekartalla
+ * oleva nosto ei ole pääkartalla, ja kohdekartalle mahtumaton nosto
+ * jää pääkartalle kunnes sille tehdään paikka.
+ *
+ * SÄDE 7 YKSIKKÖÄ on mitattu eikä arvattu. Yksi laudan yksikkö on
+ * näillä leveysasteilla noin 2,6 km (mitattu 813 nostoparista
+ * maailmankartalla). Rajat tulevat omistajan kuvakaappauksesta: Sofian
+ * Vitoša (5,12 yksikköä = 13 km) on kaupungin kohdalla, Pernik (10,28
+ * = 27 km), Rilan luostari (22,11 = 58 km) ja Plovdiv (52,14 = 137 km)
+ * eivät. Väli on siis 5,12–10,28, ja 7 jättää molempiin puoliin
+ * kolmanneksen pelivaraa. Se on myös PIENEMPI kuin kaupunkinostojen
+ * katon säde 8, joten katolle jää oma rengas 7–8 yksikköä, jossa se
+ * toimii kuten ennen (Berliinin Köpenick 7,7, Helsingin kirjasota 7,6,
+ * Pariisin kaulanauhajuttu 7,3).
+ */
+export const KAUPUNGIN_KOHDALLA_SADE = 7;
+
+/*
+ * KOHDEKARTTOJEN NOSTOLINKIT: nostotunnus → kaupunki. Sama kenttä,
+ * jota tools/tarkista-nostopaikat.mjs lukee (`nosto` on merkkijono tai
+ * lista), mutta ilman sen napautettavuustarkistusta — se on testin työ.
+ * Taulu on laudan dataa eikä muutu ajon aikana, joten se lasketaan
+ * kerran.
+ */
+let kohdeKarttalinkit = null;
+
+function kohdeKaupunkikartanNostot() {
+  if (kohdeKarttalinkit) return kohdeKarttalinkit;
+  kohdeKarttalinkit = new Map();
+  for (const [kaupunki, kartta] of Object.entries(KAUPUNKIKARTAT)) {
+    for (const piste of kartta.kohteet ?? []) {
+      if (!piste.nosto) continue;
+      const tunnukset = Array.isArray(piste.nosto) ? piste.nosto : [piste.nosto];
+      for (const tunnus of tunnukset) kohdeKarttalinkit.set(tunnus, kaupunki);
+    }
+  }
+  return kohdeKarttalinkit;
+}
+
+/**
+ * POIS PÄÄKARTALTA NE, JOILLA ON PAIKKA KAUPUNKILEHDEN KARTALLA.
+ *
+ * Ehto on kaksiosainen: nostolla on kohdekartan piste JA se kaupunki
+ * on tällä laudalla. Jälkimmäinen ei ole muodollisuus — kohdekartta
+ * avautuu vain kaupunkiin saavuttaessa, joten laudalta puuttuvan
+ * kaupungin kartta ei ole pelaajan ulottuvilla eikä se voi korvata
+ * pääkartan merkkiä.
+ *
+ * `kaupungit`-ehto pitää myös tarkistustyökalun perusmitan ennallaan:
+ * tools/tarkista-nostopaikat.mjs ajaa saman passin tyhjällä
+ * kaupunkilistalla saadakseen KAIKKI nostot, ja se listaus ei saa
+ * kadottaa juuri niitä, joiden paikkaa se on tarkistamassa.
+ */
+function karsiKaupunkikartanNostot(rivit, kaupungit) {
+  if (!kaupungit?.length) return rivit;
+  const linkit = kohdeKaupunkikartanNostot();
+  if (!linkit.size) return rivit;
+  const laudalla = new Set(kaupungit.map((k) => k.id));
+  return rivit.filter((r) => {
+    const kaupunki = linkit.get(r.kohde?.id);
+    return !(kaupunki && laudalla.has(kaupunki));
+  });
 }
 
 /*
@@ -545,6 +666,14 @@ export function kohdeKarttarivit({
  * Lippu on merkitty vain niille, joille tools/tarkista-nostopaikat.mjs
  * osoittaa, ettei kohdekarttaa ole tarjolla; tests/nostot-kartalla.test.mjs
  * valvoo, ettei se leviä muualle.
+ *
+ * KATTOVAPAA EI ENÄÄ PELASTA KAUPUNKIKARTAN NOSTOA (2.9.2026 ilta).
+ * Karsintajärjestys on nyt kaksivaiheinen: kohdekartalla asuvat merkit
+ * pudotetaan ENNEN tätä funktiota (karsiKaupunkikartanNostot), joten
+ * niiden lippu ei ehdi vaikuttaa mihinkään. Lippu jää siis siihen, mitä
+ * se lupaa: kaupungin lähialueen nostoon, jolle kohdekartalla EI ole
+ * paikkaa — Wieliczka, Köpenick, Richmond Park, Pariisin
+ * kaulanauhajuttu, Vitoša.
  */
 const KAUPUNKIKATON_SADE = 8;
 const KAUPUNKINOSTOJEN_KATTO = 3;
@@ -810,7 +939,7 @@ function poltetutKaupungit(ui) {
  * Tarnovo, Mostar, Banja Luka, Zagreb, Split, Rijeka, Zadar, Osijek,
  * Debrecen, Szeged, Pécs, Eger, Győr, Napoli, Milano, Torino ja
  * vastaavat. Loput 50 vaikenevat yhä oikein: niiden nimi on kartalla
- * maastonimenä (maastonimiLahella) tai laudan omana kaupunkina.
+ * maastonimenä (maastonimenPari) tai laudan omana kaupunkina.
  *
  * TAULU JÄÄ PAIKALLEEN. FOKUS_LISANIMET on yhä kohdedatan täydellisyyden
  * mitta (tests/fokusnimet.test.mjs, Raamattu: KLIKATTAVUUSLINJAN
@@ -856,6 +985,30 @@ function nimiJoKartalla(ui, kohde) {
  *
  * MERKKI JÄÄ, VAIN NIMIÖ VÄISTYY. Kolmio kertoo mistä on kyse ja on yhä
  * napautettava (kortti, aihevalo); nimen sanoo laatta.
+ *
+ * ── VÄISTÖ KÄÄNTYI TOISIN PÄIN (omistaja 2.9.2026 ilta) ───────────
+ *
+ * Sanatarkasti: *"Balkan vuoret ovat edelleen polttamatta eikä tekstiä
+ * voi klikata. sen sijaan sen yläpuolella oleva irrallinen vuorenkuva
+ * vie balkan vuorten popupiin."*
+ *
+ * PERUSTE OLI VANHENTUNUT. *"Nimen sanoo laatta"* piti paikkansa
+ * niin kauan kuin maastonimet olivat pohjalaatoissa; sen jälkeen ne
+ * siirtyivät nimikerrokseen (luettelon `nimiot: false`,
+ * js/karttanimet.js), ja nimikerros latoo ne MAASTONIMEN omasta
+ * pisteestä — Balkanvuorilla 19 lautayksikköä kohdemerkin alapuolelta.
+ * Kartalle jäi kaksi puolikasta: nimetön mutta napautettava merkki ja
+ * napauttamaton nimi sen alla, eri lähteistä.
+ *
+ * NYT PARI RATKAISTAAN KERRAN JA MOLEMMAT PUOLET LUKEVAT SAMAN
+ * VASTAUKSEN (maastoParit alempana). Yhden maan kohde saa nimiönsä
+ * takaisin — se palaa nostotasolle nimineen ja saa poltetun nimiön
+ * osumamuodon (asetaPoltetutTekstiOsumat), eli nimi ja merkki ovat
+ * yhtä piirrosta ja yhtä napautusalaa — ja nimikerros jättää saman
+ * maastonimen latomatta (js/karttanimet.js asetaMaastonOmistajat).
+ * Monen maan merkki (Victorianjärvi, Tonava) ei polttaudu eikä ole
+ * kartalla muualla kuin omassa maassaan, joten sen nimen kirjoittaa
+ * yhä nimikerros ja merkki vaikenee kuten ennenkin.
  */
 
 /*
@@ -869,16 +1022,19 @@ function nimiJoKartalla(ui, kohde) {
  */
 
 /**
- * Onko samanniminen maastonimi poltettu laattaan tähän kohtaan?
+ * Sama maastonimi tässä kohtaa — se TIETUE vai null.
  *
  * Joen ankkuri on uoman kiinteä keskikohta — sama piste, jonka
  * laattojen ladonta ja entinen elävä kerros (js/mapart.js
  * drawMaastonimet) valitsivat.
+ *
+ * Palauttaa tietueen eikä totuusarvoa, koska molemmat puolet tarvitsevat
+ * SAMAN tietueen: nimikerros jättää juuri sen latomatta, ja tämä kerros
+ * kirjoittaa sen nimen (maastoParit alempana).
  */
-function maastonimiLahella(ui, kohde, paikka) {
-  if (ui?.game?.pack?.id !== 'maailmankartta') return false;
+function maastonimenPari(kohde, paikka) {
   const nimi = normalisoiNimi(kohde?.nimi);
-  if (!nimi) return false;
+  if (!nimi || !Number.isFinite(paikka?.x) || !Number.isFinite(paikka?.y)) return null;
   const osuu = (x, y) => {
     let dx = Math.abs(x - paikka.x);
     if (dx > LAUDAN_YMPARYS / 2) dx = LAUDAN_YMPARYS - dx;
@@ -886,7 +1042,7 @@ function maastonimiLahella(ui, kohde, paikka) {
   };
   for (const laji of ['vuoret', 'jarvet']) {
     for (const m of MAAILMANKARTAN_NIMET[laji] ?? []) {
-      if (normalisoiNimi(m.nimi) === nimi && osuu(m.x, m.y)) return true;
+      if (normalisoiNimi(m.nimi) === nimi && osuu(m.x, m.y)) return m;
     }
   }
   for (const joki of MAAILMANKARTAN_NIMET.joet ?? []) {
@@ -894,15 +1050,97 @@ function maastonimiLahella(ui, kohde, paikka) {
     const pisteet = joki.pisteet ?? [];
     if (pisteet.length < 2) continue;
     const keski = pisteet[Math.floor(pisteet.length / 2)];
-    if (osuu(keski[0], keski[1])) return true;
+    if (osuu(keski[0], keski[1])) return joki;
   }
-  return false;
+  return null;
 }
 
+/*
+ * PARIT KERRAN, KAKSI LUKIJAA (ks. lohko "VÄISTÖ KÄÄNTYI TOISIN PÄIN").
+ *
+ * `omistetut`  maastonimen tietueita, jotka KOHDEMERKKI kirjoittaa —
+ *              nimikerros jättää ne latomatta (asetaMaastonOmistajat).
+ * `vaikenevat` kohteiden tunnuksia, joiden nimen kirjoittaa NIMIKERROS
+ *              maastonimenä — merkki jää nimiöttömäksi kuten ennen.
+ *
+ * JAKO SEURAA POLTTOSÄÄNTÖÄ. Monen maan merkki latoutuu joka maassa eri
+ * paikkaan eikä sitä siksi polteta lainkaan (tools/fokuskartta/nostot.mjs
+ * "SAMA TUNNUS KAHDESSA MAASSA EI PALA"), joten se on kartalla vain
+ * pelaajan omassa maassa — Victorianjärven nimen on tultava kerrokselta,
+ * joka piirtää sen aina. Yhden maan merkki poltetaan koko maailman
+ * kartalle, joten se kantaa nimensä itse.
+ *
+ * TAULU ON LAUDAN OMINAISUUS EIKÄ PELIN: KOHDE_MAAT ja maastonimet ovat
+ * molemmat vakioaineistoa, joten se lasketaan kerran ensimmäisellä
+ * kysymyksellä (435 kohdetta x ~130 maastonimeä, mitattuna alle
+ * millisekunti).
+ */
+let maastoParitTaulu = null;
+
+/*
+ * NIMI KUULUU MERKILLE VAIN, JOS SE ON MERKIN VIERESSÄ (Fable 2.9.2026,
+ * N3-katselmointi). Parin etäisyysraja (PARIN_ETAISYYS 400) kertoo,
+ * että kyse on SAMASTA kohteesta — ei sitä, että nimi saa muuttaa
+ * merkin luo. Kaspianmeren merkki on Iranin pohjoisrannikon edustalla
+ * ja nimi järven keskellä 174 lautayksikön päässä: jos merkki ottaisi
+ * nimen, "Kaspianmeri" lukisi Iranin rannassa eikä meren päällä. Sama
+ * koskee jokia, joiden merkki on suistossa ja nimi uoman keskellä.
+ *
+ * Raja on kauimmaisen aidon lähiparin (Alpit 114,7) yläpuolella
+ * (mitattu 2.9.2026: Senegaljoki 118 omistaa, Veiksel 124 ja Rein 130
+ * jäävät nimikerrokselle, Kaspianmeri 174, Niili ja Jangtse yli 180):
+ * sitä lähempänä nimi ja merkki ovat samaa piirrosta, kauempana nimi
+ * jää nimikerroksen paikalleen ja merkki vaikenee kuten ennen.
+ */
+const OMISTUKSEN_ETAISYYS = 120;
+
+function nimiKuuluuMerkille(pari, paikka) {
+  let x = pari?.x;
+  let y = pari?.y;
+  if (!Number.isFinite(x) && Array.isArray(pari?.pisteet) && pari.pisteet.length >= 2) {
+    const keski = pari.pisteet[Math.floor(pari.pisteet.length / 2)];
+    [x, y] = keski;
+  }
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return false;
+  let dx = Math.abs(x - paikka.x);
+  if (dx > LAUDAN_YMPARYS / 2) dx = LAUDAN_YMPARYS - dx;
+  return Math.hypot(dx, y - paikka.y) <= OMISTUKSEN_ETAISYYS;
+}
+
+function maastoParit() {
+  if (maastoParitTaulu) return maastoParitTaulu;
+  const kertoja = new Map();
+  for (const lista of Object.values(KOHDE_MAAT)) {
+    for (const k of lista) kertoja.set(k.id, (kertoja.get(k.id) ?? 0) + 1);
+  }
+  const omistetut = new Set();
+  const vaikenevat = new Set();
+  for (const lista of Object.values(KOHDE_MAAT)) {
+    for (const k of lista) {
+      const paikka = k.laudat?.maailmankartta;
+      const pari = maastonimenPari(k, paikka);
+      if (!pari) continue;
+      if ((kertoja.get(k.id) ?? 0) > 1 || !nimiKuuluuMerkille(pari, paikka)) {
+        vaikenevat.add(k.id);
+      } else {
+        omistetut.add(pari);
+      }
+    }
+  }
+  maastoParitTaulu = { omistetut, vaikenevat };
+  return maastoParitTaulu;
+}
+
+/*
+ * ILMOITTAUTUMINEN NIMIKERROKSELLE. Riippuvuus osoittaa yhteen suuntaan
+ * (tämä moduuli tuntee nimikerroksen, ei toisin päin), ja haku on laiska:
+ * taulu lasketaan vasta ensimmäisestä ladonnasta.
+ */
+asetaMaastonOmistajat(() => maastoParit().omistetut);
+
 function kohteenNimio(ui, kohde) {
-  const paikka = kohde?.laudat?.[ui?.game?.pack?.id];
-  if (Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y)
-    && maastonimiLahella(ui, kohde, paikka)) return false;
+  if (ui?.game?.pack?.id === 'maailmankartta'
+    && maastoParit().vaikenevat.has(kohde?.id)) return false;
   if (kohde?.tyyppi !== 'kaupunki') return true;
   return !nimiJoKartalla(ui, kohde);
 }
@@ -2370,6 +2608,7 @@ function asetaPoltetutTekstiOsumat(ui, s, piilossa) {
       maare(r.tekstiOsuma, 'width', '0');
       maare(r.tekstiOsuma, 'height', '0');
     }
+    ui.poltetutNostovaraukset = [];
     return;
   }
   const avain = `${ui.fokuskohdeAvain}|${s.toFixed(4)}|${nippuAsettelunVersio()}`;
@@ -2378,6 +2617,80 @@ function asetaPoltetutTekstiOsumat(ui, s, piilossa) {
     ui.fokuskohdeTekstiOsumaPaatokset = laskeKohdeNimioPaatokset(ui, s);
   }
   asetaTekstiOsumat(ui, s, ui.fokuskohdeTekstiOsumaPaatokset, true);
+  ui.poltetutNostovaraukset = poltettujenNostojenVaraukset(
+    ui, s, ui.fokuskohdeTekstiOsumaPaatokset,
+  );
+}
+
+/*
+ * ====== LAATTAAN POLTETTU NOSTO ON NIMILADONNAN VARAUS =============
+ *
+ * OMISTAJAN HAVAINTO 2.9.2026 ilta (kuvakaappaus Sofiasta, mittajana
+ * 50 km), sanatarkasti: *"Sofia menee päällekkäin jonkun noston tekstin
+ * kanssa kartalla."*
+ *
+ * ── JUURISYY, JA SE ON SAMA VANHA ─────────────────────────────────
+ *
+ * Nimikerros (js/karttanimet.js) latoo kaikki elävät nimet yhdessä
+ * ladonnassa, ja siksi kaupungin nimi, kohdenimiö ja maastonimi eivät
+ * voi mennä päällekkäin. Mutta POLTETTU nosto ei ole ladonnassa
+ * lainkaan: sen nimeä ei anneta nimikerrokselle (luovutaKohdeNimiot
+ * ohittaa poltetut, jottei sama nimi piirtyisi kahdesti), ja laatan
+ * kuvasta ladonta ei voi lukea mitään. Kartalla on siis kaksi
+ * mustelähdettä, joista kumpikaan ei tiedä toisesta — täsmälleen sama
+ * juurisyy kuin kaksoisnimillä ja pelinappulan alle jääneellä nimellä.
+ *
+ * ── KORJAUS ON ILMOITTAUTUMINEN, KUTEN PELIMERKEILLÄ ──────────────
+ *
+ * Poltetun noston SYMBOLI ja NIMIÖ luovutetaan ladonnan varauksiksi
+ * samaa tietä kuin pelinappula ja kaupungin laatta (js/ui.js
+ * luovutaRuutuvaraukset → js/karttanimet.js asetaRuutuvaraukset).
+ * Kehykset ovat jo laskettuina: napautusalue asettuu juuri siihen
+ * laatikkoon, johon nimiö laattaan poltettiin (asetaTekstiOsumat),
+ * joten varaus ei ole uusi laskenta vaan sama vastaus toiselle
+ * kysyjälle.
+ *
+ * KUMPI VÄISTÄÄ: LAATTA EI VOI. Omistajan sääntö on *"kaupunkinimi
+ * voittaa, muu nimi väistää"*, ja se pätee kaikkeen ELÄVÄÄN musteeseen
+ * — nimikerros latoo kaupungit ennen kohde- ja maastonimiä. Poltettua
+ * kuvaa ei voi siirtää, joten siinä ainoassa parissa väistäjä on
+ * kaupungin nimi. Se on silti oikea lopputulos: kaksi nimeä päällekkäin
+ * ei ole kummankaan nimi.
+ *
+ * ── RAJAUS, JA SE ON TIEDOSSA ─────────────────────────────────────
+ *
+ * VARAUS KATTAA VAIN SEN MAAN, JONKA NOSTOT PELISSÄ OVAT (`ryhmat` =
+ * nykyisenMaanKohteet). Laattapyramidiin on poltettu jokaisen maan
+ * nostot, joten leveässä näkymässä ruudulla on myös naapurimaiden
+ * poltettuja nimiä, joista tämä kerros ei tiedä mitään — mitattu
+ * 2.9.2026 Bulgarian maalehtinäkymässä (mittajana 200 km): *"WIEN"*
+ * leikkasi Wienin oman poltetun noston nimeä, kun taas Sofia väisti
+ * omansa oikein. Korjaus vaatisi naapurimaiden kohdeaineiston
+ * lataamisen kartalle, eikä se ole tämän erän tilaus; luettelossa
+ * (pyramidi.json nostotaso.nostot) on vain tiivisteet, ei paikkoja.
+ *
+ * @returns {Array} laatikot LAUDAN yksiköissä, [{ x0, y0, x1, y1 }]
+ */
+function poltettujenNostojenVaraukset(ui, s, paatokset) {
+  const rivit = [];
+  (ui.fokuskohdeRyhmat ?? []).forEach((r, i) => {
+    if (!r.poltettu) return;
+    const x = r.nippu?.x ?? r.x + (r.sx ?? 0);
+    const y = r.nippu?.y ?? r.y + (r.sy ?? 0);
+    /* Symboli on laatassa aina, nimiö vain jos se sinne mahtui. */
+    const sade = KOHDE_SYMBOLI_R * s;
+    if (sade > 0) {
+      rivit.push({
+        x0: x - sade, y0: y - sade, x1: x + sade, y1: y + sade,
+      });
+    }
+    const kehys = paatokset?.kehykset?.get(i);
+    if (!kehys) return;
+    rivit.push({
+      x0: kehys.x1, y0: kehys.y1, x1: kehys.x2, y1: kehys.y2,
+    });
+  });
+  return rivit;
 }
 
 /**
@@ -2588,13 +2901,22 @@ export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
     ? nostoladontaKattoPorras(KOHDE_SYMBOLI_SKAALA * merkkiSkaala,
       ui.nakyvaAlue?.()?.skaala) / KOHDE_SYMBOLI_SKAALA
     : merkkiSkaala;
-  if (merkkiSkaala > 0) {
-    if (karttanimetLatovat(ui)) {
-      luovutaKohdeNimiot(ui, merkkiSkaala, piilossa, merkkiPiirto);
-      // Laattaan poltetut nimet saavat silti napautusalueensa tästä
-      // kerroksesta (ks. asetaPoltetutTekstiOsumat).
-      asetaPoltetutTekstiOsumat(ui, merkkiSkaala, piilossa);
-    } else paivitaKohdeNimiot(ui, merkkiSkaala);
+  if (merkkiSkaala > 0 && karttanimetLatovat(ui)) {
+    luovutaKohdeNimiot(ui, merkkiSkaala, piilossa, merkkiPiirto);
+    // Laattaan poltetut nimet saavat silti napautusalueensa tästä
+    // kerroksesta, ja SAMALLA ne luovutetaan nimiladonnan varauksiksi
+    // (ks. asetaPoltetutTekstiOsumat, poltettujenNostojenVaraukset).
+    asetaPoltetutTekstiOsumat(ui, merkkiSkaala, piilossa);
+  } else {
+    if (merkkiSkaala > 0) paivitaKohdeNimiot(ui, merkkiSkaala);
+    /*
+     * VARAUS EI SAA JÄÄDÄ VOIMAAN ILMAN LAATTAA. Vanhoilla laudoilla ja
+     * ennen ensimmäistä mittakaavaa poltettuja nostoja ei ole, ja
+     * edellisen maan laatikot osoittaisivat väärään paikkaan — sama
+     * sääntö kuin pelimerkkien varauksilla laudan vaihtuessa
+     * (js/karttanimet.js unohdaKarttanimet).
+     */
+    ui.poltetutNostovaraukset = [];
   }
   /*
    * NIMIKERROKSEN NAPAUTUS TAKAISIN TÄNNE (omistaja 1.9.2026 ilta,

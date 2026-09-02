@@ -26,7 +26,7 @@ import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 
 import {
-  asetaRuutuvaraukset, karttamerkinKasvukatto, karttanimienLadonta,
+  asetaRuutuvaraukset, karttamerkinKasvukatto, karttanimienLadonta, normalisoiNimi,
 } from '../js/karttanimet.js';
 import { NOSTOLADONTA_S } from '../js/nostoladonta.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
@@ -147,7 +147,7 @@ const nimionAla = (n, px) => n.y * px + n.koko * 1.15 * 0.42;
 test('yksikään nimiö ei jää pelimerkin varauksen alle', () => {
   for (const px of LAHIMITAT) {
     asetaRuutuvaraukset([PELIMERKKI]);
-    const { nimiot } = karttanimienLadonta(MAAILMANKARTTA, px, 'sofia');
+    const { nimiot } = karttanimienLadonta(MAAILMANKARTTA, px);
     const laatikko = {
       x0: PELIMERKKI.x0 * px,
       y0: PELIMERKKI.y0 * px,
@@ -177,10 +177,10 @@ test('yksikään nimiö ei jää pelimerkin varauksen alle', () => {
 test('varaus siirtää kaupungin nimen, ei pudota sitä', () => {
   for (const px of LAHIMITAT) {
     asetaRuutuvaraukset([]);
-    const ilman = karttanimienLadonta(MAAILMANKARTTA, px, 'sofia')
+    const ilman = karttanimienLadonta(MAAILMANKARTTA, px)
       .nimiot.find((n) => n.teksti === 'Sofia');
     asetaRuutuvaraukset([PELIMERKKI]);
-    const kanssa = karttanimienLadonta(MAAILMANKARTTA, px, 'sofia')
+    const kanssa = karttanimienLadonta(MAAILMANKARTTA, px)
       .nimiot.find((n) => n.teksti === 'Sofia');
     assert.ok(ilman, `mittakaava ${px}: Sofia puuttui jo ilman varausta`);
     assert.ok(kanssa, `mittakaava ${px}: varaus pudotti Sofian nimen kokonaan`);
@@ -212,11 +212,11 @@ test('ilman varauksia ladonta on tavu tavulta entinen', () => {
    */
   for (const px of LAHIMITAT) {
     asetaRuutuvaraukset([]);
-    const ennen = JSON.stringify(karttanimienLadonta(MAAILMANKARTTA, px, 'sofia'));
+    const ennen = JSON.stringify(karttanimienLadonta(MAAILMANKARTTA, px));
     asetaRuutuvaraukset([PELIMERKKI]);
-    karttanimienLadonta(MAAILMANKARTTA, px, 'sofia');
+    karttanimienLadonta(MAAILMANKARTTA, px);
     asetaRuutuvaraukset([]);
-    const jalkeen = JSON.stringify(karttanimienLadonta(MAAILMANKARTTA, px, 'sofia'));
+    const jalkeen = JSON.stringify(karttanimienLadonta(MAAILMANKARTTA, px));
     assert.equal(jalkeen, ennen, `mittakaava ${px}: ladonta ei palannut entiselleen`);
   }
 });
@@ -228,14 +228,108 @@ test('kelvoton varaus ei kaada ladontaa eikä varaa mitään', () => {
    * Sellainen ei saa varata paperia eikä kaataa ladontaa.
    */
   asetaRuutuvaraukset([]);
-  const ennen = JSON.stringify(karttanimienLadonta(MAAILMANKARTTA, 9.24, 'sofia'));
+  const ennen = JSON.stringify(karttanimienLadonta(MAAILMANKARTTA, 9.24));
   asetaRuutuvaraukset([
     null,
     { x0: 1, y0: 1, x1: 1, y1: 1 },
     { x0: Number.NaN, y0: 0, x1: 5, y1: 5 },
     { x0: 10, y0: 10, x1: 4, y1: 4 },
   ]);
-  const jalkeen = JSON.stringify(karttanimienLadonta(MAAILMANKARTTA, 9.24, 'sofia'));
+  const jalkeen = JSON.stringify(karttanimienLadonta(MAAILMANKARTTA, 9.24));
   assert.equal(jalkeen, ennen, 'kelvoton varaus muutti ladontaa');
   asetaRuutuvaraukset([]);
+});
+
+/*
+ * ====== KOHDEKAUPUNKI EI PUTOA KARTALTA (omistaja 2.9.2026 ilta) ====
+ *
+ * Sanatarkasti: *"osa kaupungeista ei näy kartalla ollenkaan"*
+ * (Euroopan yleisnäkymä, mittajana 1000 km) ja korjausohje: *"Korjaa
+ * niin, että kohdekaupungit eivät koskaan putoa (ne ovat pelin
+ * pelilaudan ruutuja): nimi saa väistää, mutta merkki ja nimi pysyvät."*
+ *
+ * MIKSI YKSIKKÖTESTI: väite koskee KAIKKIA laudan 261 kaupunkia
+ * jokaisella mittakaavalla, eikä ruudulta näe kuin sen kourallisen,
+ * joka sattuu olemaan näkymässä. Savuke
+ * (tools/savukkeet/savuke-kohdekaupungit.mjs) mittaa saman asian
+ * omistajan omista näkymistä, poltetut laatat mukaan lukien.
+ */
+
+/** z2 on kaupunkien portti; sen yläpuolella kaikki ovat kartalla. */
+const KAUPUNKIEN_PORTTI = 0.22;
+
+test('jokainen kohdekaupunki saa nimen ja merkin z2:sta ylöspäin', () => {
+  for (const px of MITTAKAAVAT.filter((p) => p >= KAUPUNKIEN_PORTTI)) {
+    const { nimiot, merkit } = karttanimienLadonta(MAAILMANKARTTA, px);
+    /*
+     * NIMI VOI OLLA MAASTOPARIN NIMI, ja vertailu on siksi
+     * NORMALISOITU. Kaksoisnimisääntö antaa esimerkiksi Alpeille
+     * vuorennimen kaupunginnimen sijasta, ja pari löytyy nimenomaan
+     * normalisoidulla nimellä: laudalla on *"Tšad-järvi"* ja
+     * maastonimistössä *"Tšadjärvi"*. Kartalla lukee kaupungin nimi,
+     * vaikka väliviiva ja lajitunnus ovat eri.
+     */
+    const nimetyt = new Set(nimiot.map((n) => normalisoiNimi(n.teksti)));
+    const puuttuvat = MAAILMANKARTTA.cities
+      .filter((c) => !nimetyt.has(normalisoiNimi(c.name)));
+    assert.equal(puuttuvat.length, 0,
+      `mittakaava ${px}: ${puuttuvat.length} kohdekaupunkia ilman nimeä `
+      + `(esim. ${puuttuvat.slice(0, 5).map((c) => c.name).join(', ')})`);
+    assert.equal(merkit.filter((m) => m.laji === 'kaupunki').length,
+      MAAILMANKARTTA.cities.length,
+      `mittakaava ${px}: merkkejä ei ole yhtä monta kuin laudan ruutuja`);
+  }
+});
+
+test('portin alapuolella kaupunkeja ei ole — yleisnäkymä on ennallaan', () => {
+  for (const px of MITTAKAAVAT.filter((p) => p < KAUPUNKIEN_PORTTI)) {
+    const { nimiot, merkit } = karttanimienLadonta(MAAILMANKARTTA, px);
+    assert.equal(nimiot.filter((n) => n.laji === 'kaupunki').length, 0,
+      `mittakaava ${px}: kaupunkien nimiä yleisnäkymässä`);
+    assert.equal(merkit.filter((m) => m.laji === 'kaupunki').length, 0,
+      `mittakaava ${px}: kaupunkien merkkejä yleisnäkymässä`);
+  }
+});
+
+/*
+ * ====== JOKAINEN KOHDEKAUPUNKI HARVENNETULLA KAPITEELILLA ==========
+ *
+ * Omistaja 2.9.2026 ilta: *"Kaikki kohdekaupungit saisi olla koko ajan
+ * noilla harvennetuilla kapitaaleilla kirjoitettuna."* Asu tuli ennen
+ * kahdesta lipusta (`start`/`airport` tai pelaajan sijainti), joten
+ * Ateena oli pysyvästi kapiteelilla ja Sofia vain silloin kun nappula
+ * seisoi siinä.
+ *
+ * ASU ON LADONNAN TULOSTA EIKÄ TYYLITIEDOSTON: harvennus mitataan
+ * nimen laatikkoon, joten se kulkee tietueessa piirtoon asti.
+ */
+test('kohdekaupungin nimi on aina harvennettu kapiteeli', () => {
+  for (const px of MITTAKAAVAT.filter((p) => p >= KAUPUNKIEN_PORTTI)) {
+    const { nimiot } = karttanimienLadonta(MAAILMANKARTTA, px);
+    const kaupungit = nimiot.filter((n) => n.laji === 'kaupunki');
+    assert.ok(kaupungit.length > 0, `mittakaava ${px}: ei yhtään kaupungin nimeä`);
+    const vaarat = kaupungit.filter((n) => n.tyylitys !== 'small-caps' || !(n.vali > 0));
+    assert.equal(vaarat.length, 0,
+      `mittakaava ${px}: ${vaarat.length} nimeä ilman kapiteelia tai harvennusta `
+      + `(esim. ${JSON.stringify(vaarat[0])})`);
+  }
+});
+
+test('kohdekaupungin nimi on isompi kuin kohteen ja maaston nimet', () => {
+  /*
+   * Omistaja 2.9.2026: *"Kohdekaupungin nimi voi kyllä olla hieman
+   * isommalla kuin muiden kohteiden nimet."* Porras on KOKO-taulussa;
+   * tämä vartioi, ettei se käänny nurin vahingossa.
+   */
+  const { nimiot } = karttanimienLadonta(MAAILMANKARTTA, 1.88);
+  const pienin = (laji) => {
+    const koot = nimiot.filter((n) => n.laji === laji).map((n) => n.koko);
+    return koot.length ? Math.min(...koot) : null;
+  };
+  const kaupunki = pienin('kaupunki');
+  for (const laji of ['vuori', 'jarvi', 'kohde']) {
+    const muu = pienin(laji);
+    if (muu === null) continue;
+    assert.ok(kaupunki > muu, `${laji} ${muu} >= kaupunki ${kaupunki}`);
+  }
 });

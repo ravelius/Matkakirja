@@ -47,6 +47,28 @@
  * Kenttä `nosto` on siksi pakollinen linkki, ja tämä työkalu lukee
  * vain sitä.
  *
+ * === KOLMAS KYSYMYS: KAUPUNGIN KOHDALLA OLEVAT NOSTOT =============
+ *
+ * Omistaja 2.9.2026 illalla, kolmatta kertaa sanottuna: *"nuo
+ * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä pois
+ * pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+ * kaupunkikartalle."* Sääntö ajaa js/fokuskohteet.js:ssä
+ * (karsiKaupunkikartanNostot): kohdekartan pisteeseen linkitetty nosto
+ * ei ole pääkartalla. Tämä työkalu vastaa toiseen suuntaan: MITKÄ
+ * kaupungin kohdalla olevat nostot ovat yhä pääkartalla, ja miksi
+ * kukin niistä ei ole voinut siirtyä. Mitta on
+ * KAUPUNGIN_KOHDALLA_SADE (js/fokuskohteet.js), ja syitä on viisi:
+ *
+ *   kohdekarttaa ei ole          kaupungilla ei ole kaupunkikarttaa
+ *   rajauksen ulkopuolella       nosto on kaupungin lähialueella, ei
+ *                                sen kartalla (Vitoša, Wieliczka)
+ *   ankkuri on kaupungin laatta  nostolla ei ole omaa osoitetta
+ *   kartan oma kohde             sisältö on fokuskohteen kortissa
+ *                                eikä sitä ole vielä siirretty
+ *                                kohdekartan pisteelle
+ *   hetki                        Historian hetken kortti ei mahdu
+ *                                kohdekartan nähtävyysikkunaan
+ *
  * === POIKKEUKSET ===================================================
  *
  * Nosto saa jäädä pelkkään lehteen vain, jos se on merkitty datassa
@@ -61,7 +83,7 @@
  *
  * Paluuarvo 1, jos yksikin nosto on ilman karttapaikkaa.
  */
-import { kohdeKarttarivit } from '../js/fokuskohteet.js';
+import { KAUPUNGIN_KOHDALLA_SADE, kohdeKarttarivit } from '../js/fokuskohteet.js';
 import { FOKUS_LAUTAPROJEKTIOT, FOKUS_POHJAT } from '../js/packs/fokus-grc.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 import { nostoKarttarivit, nostoKaupunginPooli } from '../js/fokusnosto.js';
@@ -289,14 +311,43 @@ export function nostojenKarttapaikat(pack = MAAILMANKARTTA) {
   const puuttuvat = rivit.filter(
     (r) => !r.paakartalla && !r.kohdekartalla && !r.poikkeus,
   );
-  return { rivit, puuttuvat };
+  for (const r of rivit) r.kaupunginKohdalla = kaupunginKohdallaSyy(r);
+  const kesken = rivit.filter((r) => r.paakartalla && r.kaupunginKohdalla);
+  return { rivit, puuttuvat, kesken };
+}
+
+/**
+ * ONKO NOSTO KAUPUNGIN KOHDALLA — JA JOS ON, MIKSI SE ON YHÄ
+ * PÄÄKARTALLA?
+ *
+ * Palauttaa null, kun nosto ei ole kaupungin kohdalla, ja muuten syyn
+ * (ks. tiedoston alun luettelo). Mitta on KAUPUNGIN_KOHDALLA_SADE
+ * TAI kohdekartan rajaus — kumpi tahansa riittää, kuten säännössä.
+ * Syy on koneellinen luokitus eikä mielipide: jokainen sen arvo kertoo,
+ * mitä nostolle pitäisi tehdä, jotta se pääsisi kohdekartalle.
+ */
+export function kaupunginKohdallaSyy(r) {
+  if (!r.kaupunki) return null;
+  const kartta = KAUPUNKIKARTAT[r.kaupunki];
+  const asteilla = Number.isFinite(r.lat) && Number.isFinite(r.lon);
+  const rajauksessa = Boolean(kartta) && asteilla && kohdekartallaSisalla(kartta, r.lat, r.lon);
+  const sateella = Number.isFinite(r.etaisyys) && r.etaisyys < KAUPUNGIN_KOHDALLA_SADE;
+  if (!rajauksessa && !sateella) return null;
+  if (!kartta) return 'kohdekarttaa ei ole';
+  if (r.tyyppi === 'hetki') return 'hetki';
+  if (!rajauksessa) return 'rajauksen ulkopuolella';
+  if (Number.isFinite(r.etaisyys) && r.etaisyys < 0.05) return 'ankkuri on kaupungin laatta';
+  if (r.id.startsWith('syvennys-') || r.id.startsWith('skandaali-') || r.id.startsWith('nosto-')) {
+    return 'nosto ilman kohdekartan pistettä';
+  }
+  return 'kartan oma kohde';
 }
 
 /* ==================== KOMENTORIVI ==================== */
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const lyhyt = process.argv.includes('--lyhyt');
-  const { rivit, puuttuvat } = nostojenKarttapaikat();
+  const { rivit, puuttuvat, kesken } = nostojenKarttapaikat();
   const kaupungeittain = new Map();
   for (const r of rivit) {
     const avain = r.kaupunki ?? '(ei kaupunkia)';
@@ -327,5 +378,19 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   console.log(`\nnostoja ${rivit.length}: pääkartalla ${paalla}, `
     + `kohdekartalla ${kohteilla}, poikkeuksia ${rivit.filter((r) => r.poikkeus).length}, `
     + `ILMAN PAIKKAA ${puuttuvat.length}`);
+  /*
+   * KAUPUNGIN KOHDALLA OLEVIEN TYÖLISTA. Nämä ovat yhä pääkartalla
+   * kaupungin päällä; syy kertoo, mitä kunkin siirto vaatisi.
+   */
+  const syyttain = new Map();
+  for (const r of kesken) {
+    if (!syyttain.has(r.kaupunginKohdalla)) syyttain.set(r.kaupunginKohdalla, []);
+    syyttain.get(r.kaupunginKohdalla).push(r);
+  }
+  console.log(`\nkaupungin kohdalla (säde ${KAUPUNGIN_KOHDALLA_SADE}) ja yhä pääkartalla: ${kesken.length}`);
+  for (const [syy, lista] of [...syyttain].sort((a, b) => b[1].length - a[1].length)) {
+    console.log(`   ${String(lista.length).padStart(3)}  ${syy}`);
+    for (const r of lista) console.log(`        ${r.kaupunki}/${r.id}`);
+  }
   process.exitCode = puuttuvat.length ? 1 : 0;
 }

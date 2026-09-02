@@ -1578,7 +1578,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Plymouth 1768 — hiililaiva lähtee Tyynellemerelle',
           aika: '26.8.1768',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-cook-endeavour-plymouth-1768.jpg',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-cook-endeavour-plymouth-1768-kauko.jpg',
           teksti: 'Laiturilla on laatikoita, joita sotalaivaan ei yleensä kanneta: '
             + 'kasvipuristimia, lasipurkkeja, verkkohäkkejä ja eläviä taimia '
             + 'ruukuissa. Ne kuuluvat 25-vuotiaalle Joseph Banksille, joka kustansi '
@@ -1593,10 +1593,10 @@ export const MAA_KATEGORIAT = {
             + 'Venuksen ylikulku Tahitilla; hytissä on lisäksi sinetöity kirje, '
             + 'jonka Cook saa avata vasta mittauksen jälkeen — käsky etsiä '
             + 'eteläiseltä Tyyneltämereltä tuntematonta mannerta.',
-          selite: 'Endeavour on kiinni Plymouthin laiturissa, ja kannella '
-            + 'tehdään viimeisiä töitä takiloissa. Laiturilla univormupukuinen '
-            + 'Cook keskustelee kahden miehen kanssa taimiruukkujen, arkkujen ja '
-            + 'verkkohäkkien keskellä.',
+          selite: 'Endeavour on jo irti laiturista ja kulkee ulos Plymouthin '
+            + 'satamasta keulapurje auki. Kivilaiturilla seisoo kaupunkilaisia '
+            + 'kolmikolkkahatuissa ja valkoisissa myssyissä, pikkuveneet '
+            + 'saattavat laivaa, ja taustalla näkyy sataman matala talorivi.',
           lahde: 'Matkakirjan havainnekuva: HM Bark Endeavour lähdössä '
             + 'Plymouthista 26. elokuuta 1768. Faktat: en-Wikipedia "HMS '
             + 'Endeavour" ja "First voyage of James Cook", tarkistettu 2.9.2026.',
@@ -3920,7 +3920,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
           aika: '21.10.1805',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805.jpg',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805-lahi.jpg',
           teksti: 'Kello on hieman yli kaksitoista. Neljännestä vaille kaksitoista '
             + 'Nelson lähetti lippuviestin "England expects that every man will do '
             + 'his duty", ja puolelta päivin ranskalainen Fougueux ampui '
@@ -3935,14 +3935,28 @@ export const MAA_KATEGORIAT = {
             + 'olkapäähän ja läpäisee selkärangan; hän kuolee puoli viideltä, kolme '
             + 'tuntia myöhemmin, kun brittien 27 linjalaivaa ovat jo murtaneet '
             + 'liittouman 33 laivan rivin.',
-          selite: 'Nelson ja Hardy kävelevät Victoryn peräkannella savupilven '
-            + 'alla, ja miehistö ahertaa tykkien ääressä heidän ympärillään. '
-            + 'Oikealla kohoaa toisen laivan kylki tykkiportteineen aivan '
-            + 'kiinni Victoryssa.',
+          selite: 'Nelson ja Hardy seisovat kasvokkain Victoryn kannella kesken '
+            + 'keskustelun kaksikolkkahatut päässä. Nelsonin sinisessä takissa '
+            + 'loistavat kunniamerkit ja rintatähti, ja taustalla miehistö '
+            + 'työskentelee köysien ja kaiteen ääressä avomeren edessä.',
           lahde: 'Matkakirjan havainnekuva: Victoryn peräkansi Trafalgarin '
             + 'taistelussa 21. lokakuuta 1805 hetkeä ennen Nelsonin '
             + 'haavoittumista. Faktat: en-Wikipedia "Battle of Trafalgar", '
             + 'tarkistettu 2.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805.jpg',
+              selite: 'Nelson ja Hardy kävelevät Victoryn peräkannella savupilven '
+                + 'alla, ja miehistö ahertaa tykkien ääressä heidän ympärillään. '
+                + 'Oikealla kohoaa toisen laivan kylki tykkiportteineen aivan '
+                + 'kiinni Victoryssa.',
+              lahde: 'Matkakirjan havainnekuva: Victoryn peräkansi Trafalgarin '
+                + 'taistelussa 21. lokakuuta 1805 hetkeä ennen Nelsonin '
+                + 'haavoittumista. Faktat: en-Wikipedia "Battle of Trafalgar", '
+                + 'tarkistettu 2.9.2026.',
+            },
+          ],
         },
       ],
     },
@@ -8996,7 +9010,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
           aika: '14.12.1911',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911.jpg',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-lahi.jpg',
           teksti: 'Edellinen leiri oli 89°45′ eteläistä leveyttä, viidentoista '
             + 'meripeninkulman päässä maalista. Nyt kello on noin kolme '
             + 'iltapäivällä, mittaukset sanovat että tämä on paikka, ja viisi '
@@ -9012,13 +9026,26 @@ export const MAA_KATEGORIAT = {
             + 'päivää myöhemmin. Koirat ovat syy siihen, että he ovat täällä '
             + 'ensimmäisinä: kahdeksantoista niistä nousi ylätasangolle, ja loput '
             + 'lopetettiin ruoaksi paikassa, jonka miehet nimesivät Teurastamoksi.',
-          selite: 'Viisi turkisasuista miestä seisoo Norjan lipun ympärillä '
-            + 'loputtomalla lumitasangolla, ja koirat lepäävät kuormattujen '
-            + 'rekien välissä. Matala aurinko ja hengityshöyry kertovat '
-            + 'pakkasesta, jossa aurinko ei laske lainkaan.',
+          selite: 'Kolme miestä pitää yhdessä kiinni lipputangosta, ja Norjan '
+            + 'lippu sekä miesten turkislakit ovat huurteen peitossa. Kaksi '
+            + 'toveria katsoo takaa olan yli, ja oikealla odottavat koirat reen '
+            + 'vieressä.',
           lahde: 'Matkakirjan havainnekuva: Amundsenin retkikunta etelänavalla '
             + '14. joulukuuta 1911. Faktat: en-Wikipedia "Amundsen\'s South Pole '
             + 'expedition", tarkistettu 2.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-kauko.jpg',
+              selite: 'Viisi turkisasuista miestä seisoo Norjan lipun ympärillä '
+                + 'loputtomalla lumitasangolla. Koirat lepäävät lumessa kahden '
+                + 'kuormatun reen välissä, ja horisontti häviää valkoiseen usvaan '
+                + 'ilman ainuttakaan maamerkkiä.',
+              lahde: 'Matkakirjan havainnekuva: Amundsenin retkikunta etelänavalla '
+                + '14. joulukuuta 1911. Faktat: en-Wikipedia "Amundsen\'s South Pole '
+                + 'expedition", tarkistettu 2.9.2026.',
+            },
+          ],
         },
       ],
     },
@@ -27258,7 +27285,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Chathamin saari 1835 — kilpikonna ja 26-vuotias mies',
           aika: 'Syyskuu 1835',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835.jpg',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835-lahi.jpg',
           teksti: 'HMS Beagle saapui Galápagosille 15. syyskuuta 1835, ja seuraavana '
             + 'päivänä kapteeni FitzRoy laski ankkurin Chathamin saaren rantaan — '
             + 'sinne, missä nykyään on Puerto Baquerizo Morenon kaupunki. '
@@ -27276,13 +27303,26 @@ export const MAA_KATEGORIAT = {
             + 'pyydystetty. Beagle purjehtii Tahitille 20. lokakuuta, ja vasta '
             + 'merellä muistiinpanojaan lukiessaan Darwin hämmästyy: jokainen saari '
             + 'on oma muunnelmansa.',
-          selite: 'Darwin kyykistyy laavakivikolle vastapäätä '
-            + 'jättiläiskilpikonnaa, ja etualan kivillä liikkuu punaisia rapuja. '
-            + 'Lahdella HMS Beagle on ankkurissa, ja miehiä soutaa veneellä '
-            + 'rantaan.',
+          selite: 'Darwin kyykistyy laavakivelle kasvotusten jättiläiskilpikonnan '
+            + 'kanssa, ja eläin kurottaa kaulansa häntä kohti. Kädenmitan päässä '
+            + 'kivellä lepää nahkakantinen muistikirja, ja lahdella HMS Beagle on '
+            + 'ankkurissa kuivien pensaiden takana.',
           lahde: 'Matkakirjan havainnekuva: Charles Darwin Chathamin saarella '
             + 'Galápagosilla syyskuussa 1835. Faktat: en-Wikipedia "Second '
             + 'voyage of HMS Beagle", tarkistettu 2.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Chathamin saari 1835 — kilpikonna ja 26-vuotias mies',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835.jpg',
+              selite: 'Darwin kyykistyy laavakivikolle vastapäätä '
+                + 'jättiläiskilpikonnaa, ja etualan kivillä liikkuu punaisia '
+                + 'rapuja. Lahdella HMS Beagle on ankkurissa, ja miehiä soutaa '
+                + 'veneellä rantaan.',
+              lahde: 'Matkakirjan havainnekuva: Charles Darwin Chathamin saarella '
+                + 'Galápagosilla syyskuussa 1835. Faktat: en-Wikipedia "Second '
+                + 'voyage of HMS Beagle", tarkistettu 2.9.2026.',
+            },
+          ],
         },
       ],
     },

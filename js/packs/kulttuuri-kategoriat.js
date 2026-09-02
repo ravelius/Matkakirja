@@ -9229,7 +9229,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Restelon ranta 1497 — yö rukouksessa, aamu Intian tiellä',
           aika: '8.7.1497',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-vasco-da-gama-restelo-1497.jpg',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-vasco-da-gama-restelo-1497-lahi.jpg',
           teksti: 'Yö on vietetty polvillaan: Restelon kappelissa, jonka Henrik '
             + 'Purjehtija rakennutti merimiehiä varten ja joka on jo pahasti '
             + 'rapistunut, Vasco da Gama ja hänen miehensä ovat rukoilleet aamuun '
@@ -9242,12 +9242,25 @@ export const KULTTUURI_KATEGORIAT = {
             + 'siihen mennessä pisimmän maihinnousuttoman avomerietapin: yli kolme '
             + 'kuukautta ja yli kymmenentuhatta kilometriä Etelä-Atlantin yli, '
             + 'ennen kuin Afrikan rannikko näkyy jälleen 4. marraskuuta.',
-          selite: 'Miehet polvistuvat rantahiekalle valkoisen kappelin edessä, '
-            + 'ja lastia soudetaan veneillä odottaville laivoille. Etualalla '
-            + 'seisova viittaan pukeutunut mies katsoo merelle.',
+          selite: 'Miehet polvistuvat rukoilemaan rantahiekalle, ja etualan mies '
+            + 'puristaa rukousnauhaa pää painuksissa. Takana kohoaa valkoinen '
+            + 'kappeli kellotorneineen, ja tyynellä lahdella odottaa ankkurissa '
+            + 'laivue purjeet käärittyinä.',
           lahde: 'Matkakirjan havainnekuva: Vasco da Gaman laivue lähdössä '
             + 'Restelon rannalta 8. heinäkuuta 1497. Faktat: en-Wikipedia "Vasco '
             + 'da Gama" ja "Jerónimos Monastery", tarkistettu 2.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Restelon ranta 1497 — yö rukouksessa, aamu Intian tiellä',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-vasco-da-gama-restelo-1497.jpg',
+              selite: 'Miehet polvistuvat rantahiekalle valkoisen kappelin '
+                + 'edessä, ja lastia soudetaan veneillä odottaville laivoille. '
+                + 'Etualalla seisova viittaan pukeutunut mies katsoo merelle.',
+              lahde: 'Matkakirjan havainnekuva: Vasco da Gaman laivue lähdössä '
+                + 'Restelon rannalta 8. heinäkuuta 1497. Faktat: en-Wikipedia "Vasco '
+                + 'da Gama" ja "Jerónimos Monastery", tarkistettu 2.9.2026.',
+            },
+          ],
         },
       ],
     },
@@ -24265,7 +24278,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
           aika: '24.6.1893',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-nansen-fram-1893.jpg',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-nansen-fram-1893-lahi.jpg',
           teksti: 'Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan '
             + 'kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin '
             + 'rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer '
@@ -24280,12 +24293,25 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tahallaan kiinni Siperian pohjoispuoliseen ahtojäähän ja antaa '
             + 'virran kuljettaa se kohti pohjoisnapaa. Fram palaa tähän samaan '
             + 'satamaan 9. syyskuuta 1896, eikä yhtään miestä ole menetetty.',
-          selite: 'Fram irtoaa laiturista Kristianiassa, ja rannalla seisova '
-            + 'väkijoukko heiluttaa hattuja ja nenäliinoja. Nansen seisoo keulan '
-            + 'puolella kannella käsi ylhäällä.',
+          selite: 'Nansen nostaa hatun päänsä yläpuolelle Framin kannella ja '
+            + 'katsoo rantaan, jossa väkijoukko täyttää laiturit ja veneet '
+            + 'reunoja myöten. Vieressä mies kumartuu köysien ääreen, ja takana '
+            + 'kohoaa aluksen savupiippu.',
           lahde: 'Matkakirjan havainnekuva: Fram lähdössä Kristianiasta '
             + '24. kesäkuuta 1893. Faktat: en-Wikipedia "Nansen\'s Fram '
             + 'expedition", tarkistettu 2.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-nansen-fram-1893.jpg',
+              selite: 'Fram irtoaa laiturista Kristianiassa, ja rannalla seisova '
+                + 'väkijoukko heiluttaa hattuja ja nenäliinoja. Nansen seisoo '
+                + 'keulan puolella kannella käsi ylhäällä.',
+              lahde: 'Matkakirjan havainnekuva: Fram lähdössä Kristianiasta '
+                + '24. kesäkuuta 1893. Faktat: en-Wikipedia "Nansen\'s Fram '
+                + 'expedition", tarkistettu 2.9.2026.',
+            },
+          ],
         },
       ],
     },
@@ -58856,7 +58882,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Palos de la Frontera 1492 — kolme laivaa laskuveden mukana',
           aika: '3.8.1492',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-kolumbus-palos-1492.jpg',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-kolumbus-palos-1492-kauko.jpg',
           teksti: 'Aamu on juuri valjennut, ja Río Tinton suistossa vesi laskee — '
             + 'sitä on odotettu, sillä laskuvesi vie laivat merelle ilman soutua. '
             + 'Ankkurissa on kolme alusta: Santa María, pyöreärunkoinen nao, jonka '
@@ -58870,10 +58896,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'viikon merimatkalle. Kukaan täällä ei tiedä, että Kolumbuksen '
             + 'laskelma maapallon koosta on rajusti pielessä ja että lännessä '
             + 'odottaa manner, jota kukaan ei osaa odottaa.',
-          selite: 'Santa María odottaa laskuvettä Río Tinton suistossa, ja '
-            + 'miehet vetävät köyttä rannan mudassa; kauempana Pinta ja Niña '
-            + 'ovat jo valmiina. Vasemmalla rannalla seisoo kaupunkilaisia ja '
-            + 'ruskeakaapuisia munkkeja.',
+          selite: 'Kolme alusta odottaa ankkurissa Río Tinton suistossa '
+            + 'aamuhämärässä: oikealla pyöreärunkoinen nao purjeet auki, '
+            + 'kauempana kaksi pienempää karavellia. Soutuveneet kulkevat '
+            + 'laivojen ja rannan väliä, ja vasemmalla mutarannalla seisoo '
+            + 'kaupunkilaisia katsomassa lähtöä.',
           lahde: 'Matkakirjan havainnekuva: Kolumbuksen laivue lähdössä Palosista '
             + '3. elokuuta 1492. Faktat: en-Wikipedia "Voyages of Christopher '
             + 'Columbus", tarkistettu 2.9.2026.',
@@ -58912,7 +58939,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Sanlúcar de Barrameda 1519 — viisi laivaa, joista yksi palaa',
           aika: '20.9.1519',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-magalhaes-sanlucar-1519.jpg',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-magalhaes-sanlucar-1519-kauko.jpg',
           teksti: 'Laivasto tuli Sevillasta 10. elokuuta Guadalquivirjokea alas ja on '
             + 'maannut tässä jokisuussa yli viisi viikkoa: vettä, viiniä ja '
             + 'suolalihaa on lastattu viimeiseen asti. Nyt ankkurissa on viisi '
@@ -58926,10 +58953,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'paluuta. Tähän samaan jokisuuhun palaa 6. syyskuuta 1522 yksi laiva, '
             + 'Victoria, ja sen kannella kahdeksantoista miestä — ensimmäiset, '
             + 'jotka ovat purjehtineet maapallon ympäri.',
-          selite: 'Viisi laivaa odottaa Guadalquivirin suussa, ja rannalla '
-            + 'kannetaan viimeisiä sipulisäkkejä, köysikiepejä ja tynnyreitä '
-            + 'veneisiin. Etualalla musta-asuinen mies kääntyy katsomaan '
-            + 'laivueeseen päin.',
+          selite: 'Laivue laskee Guadalquivirin suuta kohti merta, kärjessä suuri '
+            + 'nao purjeet auki ja soutuvene köysi kireällä sen keulan edessä. '
+            + 'Oikealla rannalla seisoo kyläläisiä katsomassa, hiekalla lojuu '
+            + 'köysikiekko, ja taustalla häämöttää valkoinen kaupunki.',
           lahde: 'Matkakirjan havainnekuva: Magalhãesin laivue Sanlúcar de '
             + 'Barramedassa 20. syyskuuta 1519. Faktat: en-Wikipedia "Magellan '
             + 'expedition", tarkistettu 2.9.2026.',

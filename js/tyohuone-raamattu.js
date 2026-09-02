@@ -3021,7 +3021,21 @@ export const RAAMATTU = {
           + 'julkaisuporttina Actions-työnkululla '
           + '(.github/workflows/savuke-pollo.yml, workflow_dispatch), '
           + 'joka saa arvot secreteistä; paikallinen savuke ajaa '
-          + 'ilman koodeja osittaisena.',
+          + 'ilman koodeja osittaisena. '
+          + 'TARKISTA AINA ENSIN, ONKO SALAISUUS JO GITHUBISSA (omistaja '
+          + '2.9.2026: "ELEVEN_API_KEY on secretissa. Kannattaa aina '
+          + 'tarkistaa onko. Koska siella pitaisi olla kaikki"): '
+          + 'repo-secreteissa on kaikki pelin avaimet (R2, Cloudflare, '
+          + 'ElevenLabs, OpenAI, Google, Anthropic, Drive, Freesound, '
+          + 'Flickr, Europeana, App Store Connect). Secretien nimet '
+          + 'nakee ilman oikeuksia komennolla `grep -rhoE '
+          + '"secrets\\.[A-Z0-9_]+" .github/workflows/*.yml | sort -u`. '
+          + 'Avainta ei pyydeta omistajalta, ennen kuin tuo lista on '
+          + 'katsottu; vasta jos avainta ei loydy, pyydetaan omistajaa '
+          + 'lisaamaan se secretiin (ei koskaan keskusteluun). Syy '
+          + '(omistaja 2.9.2026): "Naita tulee yllattavan paljon, etta '
+          + 'avain jo on olemassa mutta hommat ei etene" - tyo ei saa '
+          + 'pysahtya odottamaan avainta, joka on jo paikallaan.',
       ],
     },
     {

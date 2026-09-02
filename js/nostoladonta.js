@@ -635,8 +635,56 @@ export function nostoladontaKattoSuhde(porras, ruutuPx) {
  * (js/laattapyramidi.js `nt.saanto !== NOSTOLADONTA_SAANTO`), peli
  * piirtää nostot elävinä uusilla muodoilla, ja seuraava nostotason
  * poltto tekee niistä taas laattaa.
+ *
+ * v9-maasto (omistaja 2.9.2026 ilta, sanatarkasti: *"Balkan vuoret ovat
+ * edelleen polttamatta eikä tekstiä voi klikata. sen sijaan sen
+ * yläpuolella oleva irrallinen vuorenkuva vie balkan vuorten
+ * popupiin."*): maastokohteet — vuoret, järvet ja joet, joilla on sama
+ * nimi myös maastonimiaineistossa — saavat NIMIÖNSÄ TAKAISIN ja
+ * palavat siis nostotasolle nimineen. Vaiennus oli aikanaan oikein
+ * (*"nimen sanoo laatta"*), mutta laattoihin ei ole poltettu nimiä
+ * sitten `nimiot: false` -ajon: nimen latoi nimikerros maastonimen
+ * omasta pisteestä, 19 lautayksikköä merkin alapuolelta, eikä sitä
+ * voinut napauttaa. Nyt yhden maan merkki kantaa nimensä ja
+ * nimikerros jättää saman maastonimen latomatta (js/fokuskohteet.js
+ * maastoParit, js/karttanimet.js asetaMaastonOmistajat); monen maan
+ * merkki vaikenee yhä, koska se ei polttaudu lainkaan.
+ *
+ * NOSTO ON PAKOLLINEN, VAIKKA NIMIÖ ONKIN TIIVISTEESSÄ. Muuttuvia
+ * merkkejä on 28 (mitattu), eli kaukana siitä yhdestä, jonka kohdalla
+ * tiivisteen ero on halpa hinta: jokaisen kohdalle jäisi laatan vanha
+ * nimiötön symboli elävän nimellisen merkin alle. Nostettuna luettelo
+ * ei kelpaa lainkaan (js/laattapyramidi.js `nt.saanto !==
+ * NOSTOLADONTA_SAANTO`), peli piirtää nostot elävinä nimineen, ja
+ * seuraava nostotason poltto tekee niistä taas laattaa.
+ *
+ * v9 (omistaja 2.9.2026 illalla, kolmatta kertaa sanottuna:
+ * *"nuo karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+ * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+ * kaupunkikartalle. olen sanonut tästä jo kaksi kertaa aiemmin, eikä
+ * se ole vieläkään toteutunut."*): kaupunkilehden kohdekartalle
+ * linkitetty nosto ei ole enää pääkartalla lainkaan
+ * (js/fokuskohteet.js karsiKaupunkikartanNostot), ja tässä erässä
+ * 84 merkkiä 36 kaupungin päältä sai kohdekartan pisteen ja katosi
+ * pääkartalta.
+ *
+ * TÄMÄ ON POLTETUN TASON SISÄLTÖMUUTOS EIKÄ PIIRTOSÄÄNNÖN — ja siksi
+ * versio on nostettava vaikka tiiviste onkin merkkikohtainen. Poistuva
+ * merkki ei kysy tiivistettään keneltäkään: v8-laatassa se on
+ * maalattuna kiinni, eikä peli edes tiedä kysyä siitä, joten poltettu
+ * taso näyttäisi 84 merkkiä, joita elävässä kerroksessa ei ole ja
+ * joilla ei ole napautusaluetta. Nostettuna luettelo ei kelpaa
+ * lainkaan (js/laattapyramidi.js `nt.saanto !== NOSTOLADONTA_SAANTO`),
+ * peli piirtää nostot elävinä ilman poistuneita, ja seuraava
+ * nostotason poltto tekee niistä taas laattaa.
  */
-export const NOSTOLADONTA_SAANTO = 'v8';
+/*
+ * YKSI TUNNISTE KAHDESTA SAMANILTAISESTA ERÄSTÄ (Fable 2.9.2026): N3
+ * (maastokohteiden nimet, "v9-maasto") ja N2 (kaupungin kohdalla olevat
+ * nostot pois pääkartalta, "v9") muuttivat molemmat poltetun nostotason
+ * sisältöä. Yksi poltto kattaa molemmat, joten tunnistekin on yksi.
+ */
+export const NOSTOLADONTA_SAANTO = 'v9-maasto-kaupunki';
 
 export function nostoladontaTiiviste(merkki) {
   const osat = [
