@@ -20279,9 +20279,16 @@ dialog.minipopup:focus-visible { outline: none; }
   letter-spacing: 0.04em;
   opacity: 0.8;
 }
+/*
+ * LINKKI ON KORTIN MUSTETTA EIKÄ SELAIMEN SINISTÄ. Sama sääntö kuin
+ * lähderivin linkeillä (.source-line a): väri peritään, ja linkin
+ * kertoo pisteviiva.
+ */
 .maastopopup-wiki {
   display: inline-block;
   font-size: 0.88rem;
+  color: inherit;
+  text-decoration: underline dotted;
 }
 
 /*

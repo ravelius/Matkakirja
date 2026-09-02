@@ -1741,6 +1741,21 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
     el('circle', { class: 'fokuskohde-rengas', r: KOHDE_RENGAS_R }, g);
     el('circle', { class: 'fokuskohde-piste', r: KOHDE_PISTE_R }, g);
   }
+  kytkeMerkinNapautus(ui, g, kohde);
+  return g;
+}
+
+/**
+ * MERKIN NAPAUTUS — YKSI KUUNTELIJA, KAKSI KIRJOITTAJAA.
+ *
+ * Kutsujia on kaksi: oman maan kohdemerkki (piirraKohdemerkki) ja
+ * naapurimaan poltetun merkin osumamuoto (asetaNaapurinOsumat, lisätty
+ * 2.9.2026). Kumpikin ryhmä kilpailee samassa etäisyyskisassa ja avaa
+ * saman kortin, joten kuuntelijakin on sama — kopio ajautuisi ennen
+ * pitkää eri sääntöihin, ja juuri se ero oli naapurin merkeissä ensin:
+ * osumamuoto oli olemassa, mutta napautus ei tehnyt mitään.
+ */
+function kytkeMerkinNapautus(ui, g, kohde) {
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();
@@ -1757,7 +1772,6 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
   g.addEventListener('keydown', (tapahtuma) => {
     if (tapahtuma.key === 'Enter' || tapahtuma.key === ' ') avaa(tapahtuma);
   });
-  return g;
 }
 
 /**
@@ -3127,6 +3141,7 @@ function asetaNaapurinOsumat(ui, kerros, merkit) {
     g.setAttribute('role', 'button');
     g.setAttribute('tabindex', '0');
     g.setAttribute('aria-label', `${m.kohde.nimi ?? m.nimi ?? ''}: avaa tietoruutu`);
+    kytkeMerkinNapautus(ui, g, m.kohde);
     el('circle', {
       class: 'fokuskohde-osuma',
       cx: m.x.toFixed(2),

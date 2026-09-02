@@ -74,7 +74,7 @@ const lippu = (nimi) => {
 };
 const VAIN_MAA = (lippu('--maa') ?? '').toUpperCase() || null;
 const KUVAKANSIO = lippu('--kuvat');
-const NAPAUTUKSIA = Number(lippu('--napautukset') ?? 4);
+const NAPAUTUKSIA = Number(lippu('--napautukset') ?? 2);
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
 /*
@@ -633,12 +633,27 @@ for (const iso of MAAT) {
     maanLoydot += rikki.length;
 
     /*
-     * NAPAUTUS TODEKSI OTOKSELLA. elementFromPoint kertoo, että merkin
-     * kohdalla ON osumamuoto; vasta klikkaus kertoo, että se AVAA
-     * kortin. Otos riittää, koska avaustie on kaikilla sama — ja koko
-     * joukon klikkaaminen kestäisi tunteja.
+     * NAPAUTUS TODEKSI OTOKSELLA — MUTTA JOKAISESTA LAJISTA.
+     * elementFromPoint kertoo vain, että merkin kohdalla ON osumamuoto;
+     * vasta klikkaus kertoo, että se AVAA kortin. Ero on mitattu:
+     * naapurin poltetuilla merkeillä oli osumamuoto ilman kuuntelijaa
+     * (js/fokuskohteet.js kytkeMerkinNapautus), ja pelkkä
+     * elementFromPoint olisi hyväksynyt sen vihreänä.
+     *
+     * OTOS ON LÄHTEITTÄIN eikä listan alusta: avaustie on sama vain
+     * saman lähteen sisällä (oma kohdemerkki, naapurin poltettu,
+     * maastokolmio, maastonimi, eläintäky). Alusta otettu otos kattoi
+     * käytännössä vain oman maan merkit.
      */
-    const otos = tulos.merkit.filter((m) => m.osuma.loytyi).slice(0, NAPAUTUKSIA);
+    const otos = [];
+    const otettu = new Map();
+    for (const m of tulos.merkit) {
+      if (!m.osuma.loytyi) continue;
+      const n = otettu.get(m.lahde) ?? 0;
+      if (n >= NAPAUTUKSIA) continue;
+      otettu.set(m.lahde, n + 1);
+      otos.push(m);
+    }
     for (const m of otos) {
       const auki = await napautaJaKatso(m.x, m.y);
       if (!auki) {
