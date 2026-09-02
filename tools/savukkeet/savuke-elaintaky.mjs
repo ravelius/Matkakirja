@@ -39,8 +39,8 @@ import { ELAINTAKY_PALKKIO } from '../../js/elaintaky.js';
 import { ELAINTAKY_MAAT } from '../../js/packs/elaintakyt.js';
 
 // Kiertävä lauta piirtää joka merkin kahteen kiertokohtaan. Maiden määrä
-// luetaan aineistosta (27 maata 1.9.2026 illasta: BIH ja TUR poistettiin
-// kaksoiskappaleina, ks. js/packs/elaintakyt.js).
+// luetaan aineistosta (29 maata 2.9.2026 alkaen: BIH ja TUR palasivat
+// uusina eläiminä, ks. js/packs/elaintakyt.js).
 const SOLMUJA = ELAINTAKY_MAAT.length * 2;
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).

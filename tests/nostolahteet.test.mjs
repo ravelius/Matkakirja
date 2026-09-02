@@ -77,9 +77,10 @@ test('lähderivi nimeää lähteen eikä ole täytettä', () => {
 test('jokaisesta perheestä löytyy kortteja (tyhjä joukko ei vartioi mitään)', () => {
   const laskuri = {};
   for (const [perhe] of keraaKortit()) laskuri[perhe] = (laskuri[perhe] ?? 0) + 1;
-  // eläintäky 29 → 27 (1.9.2026 ilta): BIH ja TUR poistettiin omistajan
-  // päätöksellä kaksoiskappaleina, ks. js/packs/elaintakyt.js.
-  for (const [perhe, alaraja] of [['syvennys', 118], ['täkynosto', 59], ['skandaali', 83], ['eläintäky', 27]]) {
+  // eläintäky 29 → 27 → 29: BIH ja TUR poistettiin 1.9.2026
+  // kaksoiskappaleina ja palasivat 2.9.2026 uusina eläiminä
+  // (ks. js/packs/elaintakyt.js).
+  for (const [perhe, alaraja] of [['syvennys', 118], ['täkynosto', 59], ['skandaali', 83], ['eläintäky', 29]]) {
     assert.ok((laskuri[perhe] ?? 0) >= alaraja,
       `${perhe}: kortteja on ${laskuri[perhe] ?? 0}, oli 1.9.2026 ${alaraja} — katosiko aineistoa?`);
   }

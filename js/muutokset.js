@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1450, teksti: 'Eläintäyt takaisin: BIH tornjak ja TUR angoravuohi (27→29)' },
   { v: 1449, teksti: 'Elävät merkit seuraavat laatan suurennusta z7:n yli' },
   { v: 1448, teksti: 'Kaupungin nimiö väistää nappulaa ja kohdemerkkejä' },
   { v: 1447, teksti: 'Havainnekuvan selitelinkki näkyy ja toimii kaikkialla' },

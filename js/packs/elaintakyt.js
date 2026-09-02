@@ -1,6 +1,5 @@
 /*
- * ELÄINTÄKYT — 27 maan eläin kartalla, kortti ja pieni punlöytö
- * (29 maasta BIH ja TUR odottavat uutta eläintä, ks. huomautus alla).
+ * ELÄINTÄKYT — 29 maan eläin kartalla, kortti ja pieni punlöytö.
  *
  * Omistajan tilaus 29.8.2026: *"Eläintäky kartalle — eläin ilmestyy
  * maan kartalle täkynä: klikkaus avaa kuvan + lyhyen faktatekstin +
@@ -38,6 +37,15 @@
  * Otsikot ja tekstit ovat Fablen kirjoittamia sanatarkkoja
  * kaanontekstejä (29.8.2026). Integroija ei muokkaa sanamuotoja: jos
  * fakta on väärin, se korjataan kaanoniin eikä tähän tauluun.
+ *
+ * BIH JA TUR PALASIVAT 2.9.2026 UUSINA ELÄIMINÄ. Ne poistettiin
+ * 1.9.2026 kaksoiskappaleina — Livnon villihevoset olivat jo Sarajevon
+ * syvennys (js/packs/syvennyspaikat.js) ja Vanin kissa oma
+ * fokuskohteensa (js/packs/fokuskohteet-tur.js) — ja omistaja tilasi
+ * tilalle eläimet, jotka eivät toistu missään muualla: Bosnia ja
+ * Hertsegovinan tornjak ja Turkin angoravuohi. Molemmat paikat
+ * siirtyivät samalla: BIH Livnosta keskisen Bosnian vuorilaitumille ja
+ * TUR Vanjärveltä Anatolian aroylängölle.
  *
  * FAKTAKORJAUSERÄ 1.9.2026 (nostojen sisältöremontti, erä 3). Erän 2
  * lähteistys nosti esiin 13 väitettä, joille lähde ei antanut katetta.
@@ -297,20 +305,23 @@ export const ELAINTAKYT = {
     lon: 15.9,
     lat: 44.3,
   },
-  /*
-   * BIH ja TUR POISTETTU 1.9.2026 (omistajan päätös): Livnon
-   * villihevoset olivat jo Sarajevon kaanonin syvennys
-   * (js/packs/syvennyspaikat.js villihevoset, js/packs/fokusvirta-
-   * sarajevo.js) ja Vanin kissa oma fokuskohteensa
-   * (js/packs/fokuskohteet-tur.js 'Vanin kissa'). Kaksi merkkiä samasta
-   * eläimestä vierekkäin oli QA:n napautusvika (v1426) ja sisällön
-   * kaksoiskappale; omistaja valitsi: kohde/syvennys jää, eläintäky
-   * pois. Kummallekin maalle tilataan UUSI eläin omine kuvineen
-   * (posti/fable-vanha.md 1.9.2026) — kunnes se on toimitettu, näillä
-   * mailla ei ole eläintäkyä ja tests/elaintakyt.test.mjs laskee 27.
-   * Vanhat kuvat assets/elaimet/elain-bih.jpg ja elain-tur.jpg jäävät
-   * repoon odottamaan korvaajaa (samannimiseksi vietävä).
-   */
+  BIH: {
+    elain: 'tornjak',
+    otsikko: 'Vuoren vartija',
+    teksti: 'Tornjak eli bosnia-hertsegovinalainen paimenkoira on saanut nimensä sanasta tor, lammastarha, ja Dinaaristen vuorten paimenet ovat pitäneet sitä laumojensa luona vuosisatoja — vanhin kirjallinen maininta on 1000-luvulta. Se ei aja lampaita vaan vartioi niitä: paimenten sanonnan mukaan yksi tornjak vastaa kahta sutta ja kaksi ajaa karhunkin tiehensä. Tyyni ja näennäisen välinpitämätön koira muuttuu tarvittaessa valppaaksi vartijaksi, ja paksun turkkinsa turvin se makaa ulkona lumisenakin yönä. Paimentolaisuuden loputtua rotu harvinaistui niin pahoin, että 1970-luvun alussa kynologit etsivät vuorilta vanhoja kuvauksia vastaavat koirat ja rakensivat rodun uudelleen niiden varaan; puhdas jalostus alkoi 1978. Pennun yhdeksän ensimmäistä kuukautta ratkaisevat, sillä silloin opittu kantaa läpi koiran elämän.',
+    lahde: 'en-Wikipedia "Tornjak", osiot "History", "Name", "Characteristics", '
+      + '"Activities" ja "Care". Tarkistettu 2.9.2026.',
+    kuva: 'assets/elaimet/elain-bih.jpg',
+    /*
+     * Piste on keskisen Bosnian vuorilaitumilla Vlašićin länsipuolella
+     * eikä Vlašićin huipulla: huipun kohdalta (lon 17,65) Sarajevoon
+     * jäisi 34,6 laudan yksikköä, kun kaupunkimerkiltä vaaditaan 35
+     * (tests/elaintakyt.test.mjs). Sama vuoristo, sama laidun, pari
+     * kymmentä kilometriä lännemmäs.
+     */
+    lon: 17.4,
+    lat: 44.32,
+  },
   GRC: {
     elain: 'kilpikonnanpoikaset',
     /*
@@ -329,6 +340,22 @@ export const ELAINTAKYT = {
     kuva: 'assets/elaimet/elain-grc.jpg',
     lon: 21.9,
     lat: 37.4,
+  },
+  TUR: {
+    elain: 'angoravuohi',
+    otsikko: 'Silkkiä ylängöltä',
+    teksti: 'Angoravuohi on saanut nimensä Ankarasta, joka tunnettiin ennen Angorana, ja sen kiiltävää kiharaa kuitua kutsutaan mohairiksi. Ranskalainen Pierre Belon näki vuonna 1555 Anatoliassa vuohia, joiden villa oli hänestä "niin hienoa, että sen sanoisi silkkiä hienommaksi". Mohairia tuotettiin pelkästään Turkissa 1800-luvun puoliväliin asti; rotu vietiin Etelä-Afrikkaan 1838 ja Yhdysvaltoihin 1849, ja nyt kumpikin tuottaa mohairia enemmän kuin kotimaa — amerikkalainen kuitu tulee lähes kokonaan Texasista. Turkissa vuohet keritään kerran vuodessa eikä kahdesti niin kuin muualla, ja siksi maailman pisin mohair kasvaa yhä täällä. Kilin ensimmäinen villa on hienointa, sillä kuitu paksunee vuosi vuodelta.',
+    lahde: 'en-Wikipedia "Angora goat", osio "History", en-Wikipedia "Mohair", '
+      + 'osiot "Production" ja "History", ja en-Wikipedia "Ankara". '
+      + 'Tarkistettu 2.9.2026.',
+    kuva: 'assets/elaimet/elain-tur.jpg',
+    /*
+     * Piste on Ankaran kaakkoispuolella Anatolian aroylängöllä, ei
+     * kaupungin kyljessä: lon 33,3 / lat 39,6 jäisi 19,8 yksikön
+     * päähän Ankaran merkistä (vaaditaan 35), tämä on 47,7 päässä.
+     */
+    lon: 33.9,
+    lat: 39.1,
   },
   RUS: {
     elain: 'eremitaasinkissa',
