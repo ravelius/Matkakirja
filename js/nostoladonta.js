@@ -276,8 +276,133 @@ export const NOSTOLADONTA_NIMIO_KATTO = 8.5;
  */
 export const NOSTOLADONTA_POLTON_TIHEYS = 2;
 
+/* ==== LAATAN VENYTYS: Z7:N YLI KARTTA ON SUURENNUSLASIN ALLA =======
+ *
+ * OMISTAJAN PÄÄTÖS 2.9.2026 (kysymyskortilla), sanatarkasti: *"kun
+ * zoomataan z7:n yli, piirretyt merkit kasvavat samassa suhteessa kuin
+ * suurennettu karttakuva — koko kartta kuin yksi paperi suurennuslasin
+ * alla. Ei uutta zoomitasoa, ei polttoa."*
+ *
+ * ── MIKÄ VIKA OLI, MITATTUNA ──────────────────────────────────────
+ *
+ * Pyramidin syvin taso on z7, ja SEN YLI PELI EI LATAA UUTTA TASOA
+ * VAAN VENYTTÄÄ z7-LAATTAA (js/laattapyramidi.js valitseTaso valitsee
+ * lähimmän tason tarpeelle `skaala * dpr`, eikä syvempää ole).
+ *
+ * Poltettu nosto on laatan omia pikseleitä, joten se venyy laatan
+ * mukana. Elävä nosto oli ruutukatossa (NOSTOLADONTA_NIMIO_KATTO), joka
+ * on CSS-pikselivakio — se EI venynyt. Samassa kuvassa oli siis kaksi
+ * eri kokoista nostoa sen mukaan, kumpi sattui olemaan poltettu:
+ *
+ *     näkymä                        skaala  venytys  poltettu  elävä
+ *     iPhone 402x874 dpr 3, 25 km    6,26     1,74    14,8 px  8,5 px
+ *     iPad 834x1112 dpr 2, 25 km     9,24     2,57    21,8 px  8,5 px
+ *
+ * (poltetun nimiön ruutukoko = NOSTOLADONTA_NIMIO_KATTO x venytys,
+ * tools/savukkeet/mittaa-syvazoomi.mjs poltetunNostonMitat). Poltettu
+ * Marathon oli siis 1,7-2,6 kertaa elävän Delfoin kokoinen, eikä
+ * kumpaakaan voi lukea vääräksi omassa kerroksessaan: vika on VÄLISSÄ,
+ * ja se kasvaa syvyyden mukana.
+ *
+ * ── VENYTYS ON YKSI LUKU, JA SE ON JOHDETTU EIKÄ ARVATTU ──────────
+ *
+ * Laatta on 1:1 silloin, kun näkymän mittakaava vastaa tason omaa
+ * tiheyttä. Tason pikselit ovat LAITEPIKSELEITÄ (valitseTaso saa
+ * tarpeen muodossa `skaala * dpr`), ja poltto olettaa tarkkanäytön
+ * (NOSTOLADONTA_POLTON_TIHEYS = 2, ks. sen perustelu yllä), joten
+ * syvimmän tason 1:1-mittakaava CSS-pikseleinä on
+ *
+ *     NOSTOLADONTA_SYVIN_TIHEYS / NOSTOLADONTA_POLTON_TIHEYS
+ *       = 7,2 / 2 = 3,6 CSS-pikseliä lautayksikköä kohti,
+ *
+ * ja venytys on näkymän mittakaava jaettuna sillä. Sama laskutoimitus
+ * on jo mitassa (mittaa-syvazoomi.mjs poltetunNostonMitat: `2 * skaala
+ * / tasonTiheys`), ja juuri se on tämän erän vertailukohta.
+ *
+ * DPR EI OLE KAAVASSA, JA SE ON TAHALLISTA. Laattaan poltettu muste on
+ * poltettu dpr 2:n oletuksella; katsojan oma pikselitiheys ei muuta
+ * sitä KUVAA vaan ainoastaan sen terävyyden. Jos venytys luettaisiin
+ * todellisesta dpr:stä, sama näkymä antaisi puhelimella (dpr 3) eri
+ * merkkikoon kuin iPadilla (dpr 2) — eli täsmälleen sen laitekohtaisen
+ * hajonnan, jonka v1382 ladonnasta poisti.
+ *
+ * ── MIKSI VAKIO EIKÄ LUETTELON LUKU ───────────────────────────────
+ *
+ * Syvin tiheys on LAUDAN GEOMETRIAA eikä ajonaikainen tieto: 7,2 px
+ * lautayksikköä kohti on omistajan lukitsema mitta (Raamattu 30.8.2026
+ * PYRAMIDIN LUKITUT MITAT: *"syvin taso 7,2 px maailmanyksikkoa kohti
+ * = 240 px/aste"*), ja sen muuttaminen tarkoittaa koko pyramidin — ja
+ * nostojen polton — ajamista uusiksi.
+ *
+ * LUETTELO EI KELPAA LÄHTEEKSI, koska se voi olla tynkä: mittatyökalut
+ * syöttävät pelille yhden tason luettelon (tools/savukkeet/
+ * mittaa-syvazoomi.mjs PYRAMIDILUETTELO, vain z0), ja jos venytys
+ * luettaisiin siitä, elävien merkkien koko riippuisi siitä, mitkä
+ * laatat sattuvat olemaan levyllä — mittaus mittaisi omaa tynkäänsä.
+ *
+ * KOPIO ON SILTI KOPIO, JOTEN SE ON VAHDITTU KONEELLISESTI. Luku asuu
+ * laattageneraattorissa (tools/generoi-laattapyramidi.mjs `TIHEYS` ja
+ * `TASOJA`), eikä js/ saa tuoda tools/-moduulia (yhden tiedoston versio
+ * ketjuttaa vain js/:n). tests/nostoladonta.test.mjs lukee generaattorin
+ * omat vakiot ja kaatuu, jos tämä luku jää niistä jälkeen — sama tapa
+ * kuin js/ui.js REITTIYKSIKKO_LAUDALLA:lla ja tests/viivataso.test.mjs:n
+ * SYVIN_TIHEYS-vahdilla.
+ *
+ * ── MITÄ VENYTYS KOSKEE JA MITÄ EI ────────────────────────────────
+ *
+ * KATTOA, EI LADONTAA. Katto kerrotaan venytyksellä, jolloin z7:n yli
+ * merkin PORRAS on vakio lautayksiköissä — merkki, nimiö, sarakkeen
+ * siirtymä, siirtoviiva ja nimiön rako kasvavat kaikki kartan mukana
+ * samassa suhteessa, koska ne kulkevat saman katon läpi
+ * (nostoladontaKattoSuhde). Ladonta — kasaus, erottelusiirto,
+ * nimiöväistö — on yhä kattamattomassa NOSTOLADONTA_S:ssä, joten
+ * yksikään merkin kenttä eikä yksikään tiiviste muutu.
+ *
+ * POLTTOA EI SIIS TARVITA, ja NOSTOLADONTA_SAANTO PYSYY v7:SSÄ. Se on
+ * osa omistajan päätöstä (*"ei uutta zoomitasoa, ei polttoa"*), ja se
+ * on myös laskettavissa: generaattori kysyy katon tason omalla
+ * tiheydellä (px / NOSTOLADONTA_POLTON_TIHEYS), joka on syvimmällä
+ * tasolla täsmälleen 3,6 ja jokaisella karkeammalla pienempi — venytys
+ * on polton kaikilla tasoilla tasan 1, ja laatoista tulee tavulleen
+ * samat kuin ennen tätä erää.
+ *
+ * Z7:N ALAPUOLELLA MIKÄÄN EI MUUTU (Math.max(1, …)): sama porras
+ * samalla mittakaavalla kuin ennen. Vartija on testi
+ * (tests/nostoladonta.test.mjs) eikä silmämääräinen tarkistus.
+ */
+/**
+ * Pyramidin SYVIMMÄN tason tiheys, LAITEPIKSELIÄ lautayksikköä kohti
+ * (tools/generoi-laattapyramidi.mjs `TIHEYS`, syvin taso `TASOJA - 1`).
+ */
+export const NOSTOLADONTA_SYVIN_TIHEYS = 7.2;
+
+/**
+ * Syvimmän tason 1:1-mittakaava, CSS-PIKSELIÄ lautayksikköä kohti:
+ * sitä lähempänä laatta venyy eikä uutta tasoa ole. 7,2 / 2 = 3,6.
+ */
+export const NOSTOLADONTA_SYVIN_RUUTUPX
+  = NOSTOLADONTA_SYVIN_TIHEYS / NOSTOLADONTA_POLTON_TIHEYS;
+
+/**
+ * KUINKA MONINKERTAISEKSI LAATTA ON VENYTETTY — ks. lohko yllä.
+ *
+ * @param {number} ruutuPx CSS-pikseliä lautayksikköä kohti (pelissä
+ *   `nakyvaAlue().skaala`, generaattorissa tason oma tiheys jaettuna
+ *   NOSTOLADONTA_POLTON_TIHEYDELLÄ)
+ * @returns {number} >= 1; tasan 1 syvimmällä tasolla ja sitä ulompana
+ */
+export function nostoladontaVenytys(ruutuPx) {
+  if (!(ruutuPx > 0)) return 1;
+  return Math.max(1, ruutuPx / NOSTOLADONTA_SYVIN_RUUTUPX);
+}
+
 /**
  * PIIRTOMITTA KATOLLA — yksi kaava pelille ja laattageneraattorille.
+ *
+ * KATTO VENYY LAATAN MUKANA (omistaja 2.9.2026, ks. lohko yllä): z7:n
+ * yli yläraja on `NOSTOLADONTA_NIMIO_KATTO * venytys`, jolloin porras
+ * on vakio lautayksiköissä ja merkki kasvaa kartan mukana. Sitä
+ * ulompana venytys on 1 eikä kaava muutu tavuakaan.
  *
  * @param {number} porras  lautayksikköä KIRJASTON yksikköä kohti
  *   (js/fokuskohteet.js KOHDE_SYMBOLI_SKAALA * nostoladontaSkaala)
@@ -288,8 +413,8 @@ export const NOSTOLADONTA_POLTON_TIHEYS = 2;
  */
 export function nostoladontaKattoPorras(porras, ruutuPx) {
   if (!(porras > 0) || !(ruutuPx > 0)) return porras;
-  return Math.min(porras, NOSTOLADONTA_NIMIO_KATTO
-    / (NOSTOLADONTA_NIMIO_KOKO * ruutuPx));
+  const katto = NOSTOLADONTA_NIMIO_KATTO * nostoladontaVenytys(ruutuPx);
+  return Math.min(porras, katto / (NOSTOLADONTA_NIMIO_KOKO * ruutuPx));
 }
 
 /* ====== KATTO KOSKEE KOKO PIIRROSTA, EI VAIN MERKIN KOKOA ==========
