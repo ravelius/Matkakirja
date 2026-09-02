@@ -87,6 +87,7 @@ import {
 import { nostosymKortinYlarivi, piirraNostosymKartalle } from './fokusnosto-symbolit.js';
 import { piirraKarttavalo } from './karttavalot.js';
 import { projisoiLaudalle } from './fokusmitat.js';
+import { nostoladontaKattoPorras } from './nostoladonta.js';
 import { ELAINTAKYT } from './packs/elaintakyt.js';
 import { sfx } from './sound.js';
 
@@ -114,6 +115,11 @@ const ELAINTAKY_OSUMA_R = 22;
  * skaalataan samalla fokusMerkkiSkaalaKartalle-vakiolla, joten sama
  * kerroin tarkoittaa täsmälleen samaa ruutumittaa — eläintäky ei ole
  * kartalla isompi eikä pienempi kuin muut kohdemerkit.
+ *
+ * KERROIN YKSIN EI RIITÄ SYVÄSSÄ ZOOMISSA (2.9.2026): kohdemerkillä on
+ * lisäksi RUUTUKATTO, ja ilman sitä sama kerroin antaa eri ruutukoon.
+ * Katto on elaintakyAsetaMittakaavassa, ja sen perustelu ja mitat ovat
+ * siellä.
  */
 const ELAINTAKY_SYMBOLI_SKAALA = 11 / 21;
 
@@ -419,8 +425,59 @@ function elaintakyAsetaMittakaava(ui, suhde) {
   // Ilman mitattavaa näkymää muunnos jätetään entiselleen: väärä
   // mittakaava olisi pahempi kuin yhden kehyksen viive.
   if (!(s > 0)) return;
-  const osumaR = ELAINTAKY_OSUMA_R * (ui.fokusMerkkiOsumaKerroin?.(suhde) ?? 1);
-  const zoom = s.toFixed(4);
+  /*
+   * ====== RUUTUKATTO KOSKEE MYÖS ELÄINTÄKYÄ (omistaja 2.9.2026) =====
+   *
+   * OMISTAJAN BUGIRAPORTTI, sanatarkasti: *"Siirto viivat aivan liian
+   * paksuja. Osa nostoista vielä polttamatta ja väärän kokoisia"*
+   * (iPhone, Kreikka, mittajana 25 km). Kaappauksessa Peloponnesoksen
+   * *"Merikilpikonna"* oli kartan ylivoimaisesti suurin merkintä:
+   * tassusymboli ja nimi kolminkertaisina viereisiin karttanostoihin
+   * nähden.
+   *
+   * ── JUURISYY, MITATTUNA ──────────────────────────────────────────
+   *
+   * Tiedoston johdanto lupaa: *"eläintäky ei ole kartalla isompi eikä
+   * pienempi kuin muut kohdemerkit"* — ja kerroin (ELAINTAKY_SYMBOLI_
+   * SKAALA = KOHDE_SYMBOLI_SKAALA) onkin sama. Lupaus piti niin kauan
+   * kuin kohdemerkilläkään ei ollut kattoa. Kohdemerkki sai 1.9.2026
+   * RUUTUKATON (js/nostoladonta.js nostoladontaKattoPorras: nimiö
+   * enintään kartan oman kohdenimen kokoinen), tämä kerros ei — ja
+   * katto on juuri se osa, joka syvässä zoomissa ratkaisee. Ilman
+   * kattoa merkki on puhdas karttavakio ja kasvaa rajatta:
+   *
+   *   iPhone 402 x 874 dpr 3, Kreikka, mittajana 25 km (skaala 6,26)
+   *     karttanosto (katossa)     symboli 10,0 px   nimi  8,5 px
+   *     eläintäky (kattamaton)    symboli 25,6 px   nimi 21,6 px
+   *
+   * Kerroin on tasan skaala x NOSTOLADONTA_S / katon mitta, eli mitä
+   * syvemmälle omistaja zoomaa, sitä isommaksi kilpikonna kasvaa.
+   *
+   * ── KAAVA ON SAMA, EIKÄ SE OLE TÄSSÄ ─────────────────────────────
+   *
+   * Katto lasketaan merkin KIRJASTON mitassa (nimiön kirjasinkoko on
+   * siinä yksikössä) ja jaetaan takaisin ryhmän mittaan — rivistä
+   * riviin sama kuin kohdemerkillä (js/fokuskohteet.js
+   * asetaKohdeMittakaava). Kaksi kopiota samasta kaavasta ajautuisi eri
+   * arvoihin; tämä lukee saman funktion samoilla luvuilla, ja ainoa ero
+   * on kerroksen oma nimi kertoimelle.
+   *
+   * NIMIÖ TULEE MUKANA ILMAN ERILLISTÄ SÄÄNTÖÄ. Eläimen nimi on samassa
+   * rasterissa kuin symboli (piirraNostosymKartalle), joten se kutistuu
+   * samalla luvulla — ja päätyy täsmälleen kohdenimen mittaan, koska
+   * juuri se mitta on katon yläraja.
+   *
+   * OSUMA-ALUE EI KUTISTU (sama sääntö kuin kohdemerkillä): ympyrä on
+   * ryhmän lapsi, joten säde kerrotaan takaisin ylös sillä samalla
+   * suhteella, jolla ryhmä pienenee. Merkki on kartan kokoinen,
+   * napautusala sormen kokoinen.
+   */
+  const nakyvaSkaala = ui.nakyvaAlue?.()?.skaala;
+  const sPiirto = nostoladontaKattoPorras(ELAINTAKY_SYMBOLI_SKAALA * s, nakyvaSkaala)
+    / ELAINTAKY_SYMBOLI_SKAALA;
+  const kattoSuhde = sPiirto > 0 && s > 0 ? s / sPiirto : 1;
+  const osumaR = ELAINTAKY_OSUMA_R * (ui.fokusMerkkiOsumaKerroin?.(suhde) ?? 1) * kattoSuhde;
+  const zoom = (sPiirto > 0 ? sPiirto : s).toFixed(4);
   for (const ryhma of ui.elaintakyRyhmat ?? []) {
     ryhma.g.setAttribute('transform', `translate(${ryhma.x} ${ryhma.y}) scale(${zoom})`);
     const osuma = ryhma.g.querySelector?.('.elaintaky-osuma');

@@ -34,10 +34,18 @@
  *   6. EI NIMETTÖMIÄ SYMBOLEJA. Yksikään maastokolmio ei ole kartalla
  *      ilman nimeä (Raamattu: *"kartalla ei ole merkkiä ilman nimeä"*),
  *      eikä yksikään nimellinen nosto jää ilman nimiötään ruudulla.
+ *   7. KAIKKI MERKKIPERHEET SAMASSA MITASSA (lisätty 2.9.2026 illalla,
+ *      omistaja: *"Osa nostoista vielä polttamatta ja väärän kokoisia"*).
+ *      Neljä perhettä — karttanosto, eläintäky, maastokolmio, kaupunki —
+ *      luetaan samasta kuvasta kahtena lukuna (symbolin halkaisija ja
+ *      nimen kirjasinkoko), ja hajonta on rajattu. Perustelu ja mitatut
+ *      luvut ovat vartion omassa lohkossa alempana.
  *
- * KAKSI SYVYYTTÄ: z6-porras (mittajana ~100 km) ja z8-porras (~50 km,
- * omistajan oma näkymä eli laattapyramidin pohjan yli). Juuri niiden
- * VÄLILLÄ vika kasvoi, joten yksi näkymä ei riittäisi.
+ * KOLME NÄKYMÄÄ: Sofian z6-porras (mittajana ~100 km) ja z8-porras
+ * (~50 km) iPadilla — juuri niiden VÄLILLÄ vika kasvoi, joten yksi
+ * näkymä ei riittäisi — sekä omistajan oma puhelinnäkymä (iPhone
+ * 402 x 874 dpr 3, Kreikka, mittajana 25 km), josta jälkimmäinen
+ * bugiraportti on kirjoitettu.
  */
 import { mittaaSyvaZoomi, tiivista } from './mittaa-syvazoomi.mjs';
 
@@ -54,6 +62,52 @@ const VIIVAN_SUURIN_LEVEYS = 3;
 const NIMION_SUURIN_RAKO = 6;
 const SYVYYKSIEN_SUURIN_ERO = 0.1;
 
+/*
+ * ── VARTIO 7: KAIKKI MERKKIPERHEET SAMASSA MITASSA ────────────────
+ *
+ * OMISTAJAN TOINEN BUGIRAPORTTI 2.9.2026 (iPhone, Kreikka, mittajana
+ * 25 km), sanatarkasti: *"Siirto viivat aivan liian paksuja. Osa
+ * nostoista vielä polttamatta ja väärän kokoisia"*.
+ *
+ * Vartiot 1–2 vertasivat KAHTA perhettä (maastokolmio ja nosto). Kartan
+ * päällä niitä on neljä, ja kolmas — eläintäky — oli koko ajan ulkona
+ * mittauksesta ja siksi ulkona myös katosta: mitattuna 2,7-kertainen
+ * viereiseen karttanostoon nähden. Vartio lukee nyt jokaisen perheen
+ * kaksi lukua samasta kuvasta (symbolin halkaisija, nimen kirjasinkoko)
+ * ja vaatii hajonnalta saman rajan kuin vartio 2.
+ *
+ * SUHDE ON OMA VARTIONSA. Kaksi perhettä voi olla samankokoinen ja
+ * silti eri mitassa, jos toisen nimi on iso ja symboli pieni. Normi on
+ * se suhde, jolla nosto POLTETAAN laattaan (js/nostoladonta.js
+ * NOSTOLADONTA_MERKKISUHDE = 13/11 = 1,18) — poltettua kuvaa ei voi
+ * enää muuttaa, joten se on kartan mitta eivätkä elävät kerrokset.
+ *
+ * KOLMAS NÄKYMÄ ON OMISTAJAN OMA (iPhone 402 x 874 dpr 3, Kreikka,
+ * mittajana 25 km). Kaksi ensimmäistä ovat iPadin näkymiä Sofiasta;
+ * juuri puhelimen syvä zoomi on se, jossa kaikki neljä perhettä
+ * eroavat eniten, ja se on myös se kuva, jonka omistaja lähetti.
+ */
+const PERHEIDEN_SUURIN_HAJONTA = 1.5;
+const SUHTEEN_SUURIN_POIKKEAMA = 1.5;
+
+/** Perhetaulukko yhdestä näkymästä — sama muotoilu joka näkymälle. */
+const tarkastaPerheet = (nimi, t) => {
+  const h = t.perheHajonta;
+  const rivit = Object.entries(t.perheet)
+    .map(([k, r]) => `${k} ${r.symboliPx}/${r.nimiPx} (${r.suhde})`).join('  ');
+  console.log(`   perheet (symboli/nimi px, suhde): ${rivit}`);
+  console.log(`   poltettu nosto (laskettu): ${JSON.stringify(t.poltettuNosto)}`);
+  vaadi(`${nimi}: perheiden symbolit samassa mitassa`,
+    h.perheita < 2 || h.symboli <= PERHEIDEN_SUURIN_HAJONTA,
+    `hajonta ${h.symboli} (raja ${PERHEIDEN_SUURIN_HAJONTA}) — ${rivit}`);
+  vaadi(`${nimi}: perheiden nimet samassa mitassa`,
+    h.perheita < 2 || h.nimi <= PERHEIDEN_SUURIN_HAJONTA,
+    `hajonta ${h.nimi} (raja ${PERHEIDEN_SUURIN_HAJONTA}) — ${rivit}`);
+  vaadi(`${nimi}: symboli ja nimi kirjaston suhteessa (1,18)`,
+    h.perheita === 0 || h.suhteenPoikkeama <= SUHTEEN_SUURIN_POIKKEAMA,
+    `poikkeama ${h.suhteenPoikkeama} (raja ${SUHTEEN_SUURIN_POIKKEAMA}) — ${rivit}`);
+};
+
 const mitat = [];
 for (const askelia of [6, 8]) {
   // eslint-disable-next-line no-await-in-loop
@@ -64,6 +118,7 @@ for (const askelia of [6, 8]) {
   console.log(`\n=== ${nimi} ===`);
   console.log(JSON.stringify(t, null, 1));
 
+  tarkastaPerheet(nimi, t);
   vaadi(`${nimi}: nostosymbolit samankokoisia`,
     t.nostosymboleja === 0 || t.nostonSisainenHajonta <= 1.01,
     `hajonta ${t.nostonSisainenHajonta} (${t.nostonKokoMin}…${t.nostonKokoMax} px)`);
@@ -109,6 +164,24 @@ vertaa('nostosymboli on saman kokoinen molemmilla syvyyksillä',
   matala.nostonKokoMax, syva.nostonKokoMax);
 vertaa('siirtoviiva on saman levyinen molemmilla syvyyksillä',
   matala.viivanLeveysPx, syva.viivanLeveysPx);
+
+/*
+ * OMISTAJAN OMA NÄKYMÄ (ks. vartio 7): iPhone, Kreikka, mittajana
+ * 25 km. Eläintäky on Kreikassa Peloponnesoksella eli usein juuri
+ * ruudun laidan takana — mitta ei siksi rajaa sitä perhettä näkymään
+ * (tools/savukkeet/mittaa-syvazoomi.mjs), koska perheen KOKO ei riipu
+ * paikasta ja ilman sitä vartio olisi sokea juuri sille kerrokselle,
+ * josta bugiraportti puhuu.
+ */
+const puhelin = tiivista(await mittaaSyvaZoomi({
+  kaupunki: 'ateena', askelia: 9, ruutu: { width: 402, height: 874 }, dpr: 3,
+}));
+const puhelimenNimi = `omistajan näkymä (iPhone, Kreikka, ${puhelin.mittajana})`;
+console.log(`\n=== ${puhelimenNimi} — skaala ${puhelin.skaala} ===`);
+console.log(JSON.stringify(puhelin, null, 1));
+vaadi(`${puhelimenNimi}: mittajana on 25 km kuten kaappauksessa`,
+  puhelin.mittajana === '25 km', `jana ${puhelin.mittajana}`);
+tarkastaPerheet(puhelimenNimi, puhelin);
 
 console.log(`\n${lapi}/${kaikki} vartiota läpi`);
 process.exit(lapi === kaikki ? 0 : 1);

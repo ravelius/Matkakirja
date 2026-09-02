@@ -88,6 +88,13 @@
  *    kasva maanäkymäkokoaan suuremmaksi, aivan kuten kaupunkilaatta.
  *    Ks. karttamerkinKasvukatto MERKKI-taulun edellä.
  *
+ *    VUORIKOLMIOLLA ON OMA KATTONSA (2.9.2026 ilta, omistaja: *"Osa
+ *    nostoista vielä polttamatta ja väärän kokoisia"*): se on ainoa
+ *    kartan oma merkki, joka on KUVA, ja kuvan mitta tulee sen omasta
+ *    nimestä samalla suhteella kuin karttanostolla. Piste ja rengas
+ *    ovat paikan merkkejä ja pitävät yhteisen kasvukattonsa.
+ *    Ks. maastokolmionKasvukatto.
+ *
  * === KAKSOISNIMIVAARA — LUE TÄMÄ ENNEN KUIN MUUTAT MITÄÄN ==========
  *
  * v1366:ssa tämä tehtiin toiseen suuntaan: elävä kerros pantiin
@@ -102,7 +109,7 @@
  */
 import { el, saumasiirto } from './mapart.js';
 import { laatoissaOnNimet, pyramidiKattaa } from './laattapyramidi.js';
-import { NOSTOLADONTA_S } from './nostoladonta.js';
+import { NOSTOLADONTA_MERKKISUHDE, NOSTOLADONTA_S } from './nostoladonta.js';
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
 
 /**
@@ -510,6 +517,59 @@ const NOSTON_KATKO = 1.6;
 export function karttamerkinKasvukatto(skaala) {
   if (!(skaala > 0)) return 1;
   return Math.min(1, 1 / (MERKIN_KARTTAVAKIO * skaala));
+}
+
+/* ====== MAASTOKOLMIO ON PIKTOGRAMMI, JA SILLÄ ON PIKTOGRAMMIN MITTA ==
+ *
+ * OMISTAJA 2.9.2026, sanatarkasti: *"Siirto viivat aivan liian paksuja.
+ * Osa nostoista vielä polttamatta ja väärän kokoisia"* (iPhone,
+ * Kreikka, mittajana 25 km).
+ *
+ * ── MIKÄ JÄI EDELLISESTÄ KORJAUKSESTA KESKEN ─────────────────────
+ *
+ * Aamun kasvukatto (yllä) lopetti kolmion RAJATTOMAN kasvun, ja se oli
+ * oikein: 44 px:n kolmio kutistui 8,0 x 5,6 pikseliin. Mutta katon
+ * lukkokohta oli merkin OMA peruskoko eikä sen nimen mitta, ja siksi
+ * kartalle jäi kaksi eri suhdetta samaan asiaan (mitattu iPhone
+ * 402 x 874 dpr 3, Sofia, mittajana 25 km, skaala 6,655):
+ *
+ *     perhe            symboli   nimi   symboli/nimi
+ *     karttanosto       10,0 px  8,5 px    1,18
+ *     maastokolmio       8,0 px 11,0 px    0,73
+ *
+ * Silmä lukee juuri tämän: maaston nimi on kartan isoin nimi, ja sen
+ * oma merkki on kartan pienin symboli. Nosto on toisin päin. Kumpikin
+ * on itsessään "oikean kokoinen", eikä kumpaakaan voi lukea koodista —
+ * ero syntyy vasta samassa kuvassa.
+ *
+ * ── LUKKO TULEE NIMESTÄ, EI MERKISTÄ ─────────────────────────────
+ *
+ * Suhde on se, jolla nosto poltetaan laattaan: symbolin halkaisija on
+ * NOSTOLADONTA_MERKKISUHDE kertaa nimiön kirjasinkoko (13 / 11 = 1,18,
+ * js/nostoladonta.js). Maastokolmion nimi on KOKO.vuori = 11 CSS-px,
+ * joten sen halkaisija saa ruudulla olla enintään 1,18 x 11 = 13,0 px
+ * eli säde 6,5 px — ja se on TÄSMÄLLEEN kirjaston oma merkkisäde,
+ * koska maaston nimi ja nostosymbolin nimiö sattuvat olemaan sama
+ * luku 11. Yhtään uutta lukua ei siis synny.
+ *
+ * KAUKONÄKYMÄT EIVÄT MUUTU. Katto on `Math.min(1, …)` kuten ennenkin,
+ * ja se alkaa purra vasta mittakaavassa 2,71 (ennen 1,67) — sitä
+ * kauempana kolmio on tavulleen entinen karttavakio. Muutos näkyy vain
+ * lähikuvassa, jossa kolmio on ennen ollut 8,0 px ja on nyt 13,0 px.
+ *
+ * PISTE JA RENGAS EIVÄT SEURAA. Ne ovat PAIKAN merkkejä eivätkä kuvia:
+ * kaupunginnimen mittainen piste (1,18 x 12,5 = 14,8 px) olisi kartalla
+ * juuri se "musta pippuri", jonka karttavakio äsken poisti. Ne pitävät
+ * oman kasvukattonsa, ja se on päätös eikä unohdus.
+ *
+ * @param {number} skaala CSS-pikseliä lautayksikköä kohti
+ * @returns {number} 0 < kerroin <= 1, jolla MERKKI.vuori ja sen kynä
+ *   kerrotaan
+ */
+export function maastokolmionKasvukatto(skaala) {
+  if (!(skaala > 0)) return 1;
+  const ruutusade = (NOSTOLADONTA_MERKKISUHDE * KOKO.vuori) / 2;
+  return Math.min(1, ruutusade / (MERKKI.vuori * skaala));
 }
 
 /** Merkkien mitat LAUDAN yksiköinä (karttavakio) — ks. yllä. */
@@ -1691,12 +1751,19 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
    * yksikään kaukonäkymä ei muutu.
    */
   const kasvukatto = karttamerkinKasvukatto(nakyva.skaala);
+  /*
+   * KOLMIOLLA ON OMA KATTONSA (2.9.2026, ks. maastokolmionKasvukatto):
+   * se on ainoa kartan oma merkki, joka on KUVA, ja kuvan mitta tulee
+   * sen nimestä samalla suhteella kuin karttanostolla. Piste ja rengas
+   * pitävät yhteisen kasvukaton.
+   */
+  const kolmionKatto = maastokolmionKasvukatto(nakyva.skaala);
   for (const { m, x } of nakyvatMerkit) {
     if (m.laji === 'vuori') {
-      const r = (m.iso ? MERKKI.vuoriIso : MERKKI.vuori) * kasvukatto;
+      const r = (m.iso ? MERKKI.vuoriIso : MERKKI.vuori) * kolmionKatto;
       el('path', {
         class: 'karttamerkki karttamerkki-vuori',
-        'stroke-width': MERKIN_VIIVA.vuori * kasvukatto,
+        'stroke-width': MERKIN_VIIVA.vuori * kolmionKatto,
         d: `M${(x - r).toFixed(2)} ${(m.y + r * 0.6).toFixed(2)}`
           + `L${x.toFixed(2)} ${(m.y - r * 0.8).toFixed(2)}`
           + `L${(x + r).toFixed(2)} ${(m.y + r * 0.6).toFixed(2)}`,
