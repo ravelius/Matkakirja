@@ -61,6 +61,7 @@ import { FOKUSVIRRAT } from '../../js/packs/fokusvirrat.js';
 import { MAASTOKOHTEET } from '../../js/packs/maastokohteet.js';
 import { SYVENNYSPAIKAT } from '../../js/packs/syvennyspaikat.js';
 import { SKANDAALIT } from '../../js/packs/skandaalit.js';
+import { KAUPUNKIKARTAT } from '../../js/packs/maakartat.js';
 import { NOSTOSYM_MINI_RUUTU, nostosymTekstinLeveys } from '../../js/fokusnosto-symbolit.js';
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
@@ -1890,7 +1891,28 @@ for (const [iso, pohja] of Object.entries(FOKUS_POHJAT)) {
     }
   }
 }
-const ilmanLehtea = pudotetutSyvennykset.filter((id) => !lehtiLahde.includes(id));
+/*
+ * KAKSI HYVÄKSYTTYÄ LEHTIOSOITETTA (2.9.2026 ilta). Kaupunkilehden
+ * kohdekartta on itsekin kaupunkilehden sivu, ja omistajan illan
+ * sääntö vie kaupungin kohdalla olevat nostot juuri sinne: *"jättää
+ * vain kaupunkilehden sisällä olevaan kaupunkikartalle."* Merkki, joka
+ * putosi pääkartalta siksi että sillä on kohdekartan piste
+ * (js/fokuskohteet.js karsiKaupunkikartanNostot), ei siis ole kadonnut
+ * — se on lehden kartalla omana pisteenään. Väite hyväksyy siksi
+ * molemmat osoitteet: teemasivun lohkon TAI kohdekartan `nosto`-linkin.
+ */
+const kohdekartanNostot = new Set();
+for (const kartta of Object.values(KAUPUNKIKARTAT)) {
+  for (const piste of kartta.kohteet ?? []) {
+    if (!piste.nosto) continue;
+    for (const t of (Array.isArray(piste.nosto) ? piste.nosto : [piste.nosto])) {
+      kohdekartanNostot.add(t);
+    }
+  }
+}
+const ilmanLehtea = pudotetutSyvennykset.filter(
+  (id) => !lehtiLahde.includes(id) && !kohdekartanNostot.has(id),
+);
 vaadi('katto pudottaa syvennystarinoita (muuten väite mittaisi tyhjää)',
   pudotetutSyvennykset.length > 0, `${pudotetutSyvennykset.length} pudotettua`);
 vaadi('jokaisen pudotetun syvennystarinan sisältö on kaupunkilehdessä',

@@ -635,8 +635,28 @@ export function nostoladontaKattoSuhde(porras, ruutuPx) {
  * (js/laattapyramidi.js `nt.saanto !== NOSTOLADONTA_SAANTO`), peli
  * piirtää nostot elävinä uusilla muodoilla, ja seuraava nostotason
  * poltto tekee niistä taas laattaa.
+ *
+ * v9 (omistaja 2.9.2026 illalla, kolmatta kertaa sanottuna:
+ * *"nuo karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+ * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+ * kaupunkikartalle. olen sanonut tästä jo kaksi kertaa aiemmin, eikä
+ * se ole vieläkään toteutunut."*): kaupunkilehden kohdekartalle
+ * linkitetty nosto ei ole enää pääkartalla lainkaan
+ * (js/fokuskohteet.js karsiKaupunkikartanNostot), ja tässä erässä
+ * 84 merkkiä 36 kaupungin päältä sai kohdekartan pisteen ja katosi
+ * pääkartalta.
+ *
+ * TÄMÄ ON POLTETUN TASON SISÄLTÖMUUTOS EIKÄ PIIRTOSÄÄNNÖN — ja siksi
+ * versio on nostettava vaikka tiiviste onkin merkkikohtainen. Poistuva
+ * merkki ei kysy tiivistettään keneltäkään: v8-laatassa se on
+ * maalattuna kiinni, eikä peli edes tiedä kysyä siitä, joten poltettu
+ * taso näyttäisi 84 merkkiä, joita elävässä kerroksessa ei ole ja
+ * joilla ei ole napautusaluetta. Nostettuna luettelo ei kelpaa
+ * lainkaan (js/laattapyramidi.js `nt.saanto !== NOSTOLADONTA_SAANTO`),
+ * peli piirtää nostot elävinä ilman poistuneita, ja seuraava
+ * nostotason poltto tekee niistä taas laattaa.
  */
-export const NOSTOLADONTA_SAANTO = 'v8';
+export const NOSTOLADONTA_SAANTO = 'v9';
 
 export function nostoladontaTiiviste(merkki) {
   const osat = [
