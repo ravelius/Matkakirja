@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1442, teksti: 'Syvä zoomi: ruutukatto koko nostolle, maastomerkeille katto' },
   { v: 1441, teksti: 'Pohja 1′-korkeusdatalla: R2-palat generaattoriin (z7)' },
   { v: 1440, teksti: 'Nopanheitto jatkuu itsestään kaupunkiin asti' },
   { v: 1439, teksti: 'Nopanheiton kohteet selvemmiksi fokusnäkymässä' },
