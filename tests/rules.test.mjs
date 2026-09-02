@@ -4524,56 +4524,58 @@ test('bittikartta ladataan vain sormen irrotessa, ei kesken eleen', () => {
   assert.match(ui, /rasteroiRuutu\(/, 'ruutuja ei rasteroida erikseen');
 });
 
-test('kehittajan tummennuskytkin on kytketty päästä päähän', () => {
+test('maatummennus on purettu: pelkkä ääriviiva, ei kytkintä', () => {
   /*
-   * Omistaja 1.9.2026 ilta, sanatarkasti: *"kartan tummennuksen voisi
-   * ottaa pois päältä kehittäjä tilassa."*
+   * Omistaja 2.9.2026, sanatarkasti: *"Tummennuksen voisi ottaa pois
+   * myös normaalista pelitilasta. Jätetään pelkkä vahvistettu kartan
+   * ääriviiva jäljelle."* ja saman päivän tarkennus: *"kehittäjätilassa
+   * ota pois se tummennusvalinta ja pidä pelkkä kartan ääriviivojen
+   * tummennus aina päällä. Eli tämä on oletus kummassakin tilassa."*
    *
-   * Kytkin kulkee viiden tiedoston läpi (kytkinrivi, muisti, kytkentä,
-   * näkyvyysehto, ajonaikainen nollaus), eikä yksikään niistä kaadu
-   * yksin: rikki mennyt ketju näkyy vain siinä, ettei nappi tee mitään.
-   * Siksi vartija tarkistaa jokaisen lenkin erikseen.
+   * Purku kulkee viiden tiedoston läpi (kytkinrivi, muisti, kytkentä,
+   * piirtäjä, ajonaikainen nollaus), ja jokainen niistä toimii yksinään
+   * ilman muita — palautunut varjo tai unohtunut kytkin näkyisi vain
+   * ruudulla. Siksi vartija tarkistaa jokaisen lenkin erikseen.
    */
   const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   const main = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');
   const apurit = readFileSync(new URL('../js/ui-apurit.js', import.meta.url), 'utf8');
   const tumma = readFileSync(new URL('../js/maatummennus.js', import.meta.url), 'utf8');
   const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
 
-  // 1. Kytkinrivi on hammasratasvalikossa muiden kytkinten kaltaisena.
-  assert.match(html, /id="kehittaja-tummennus-btn"[\s\S]{0,400}kehittaja-kytkin-nimi">tummennus</,
-    'tummennuskytkintä ei ole kehittäjän valikossa');
+  // 1. Kytkinriviä ei ole enää kehittäjän valikossa eikä kuuntelijaa.
+  assert.ok(!/kehittaja-tummennus-btn/.test(html),
+    'tummennuskytkin on yhä kehittäjän valikossa');
+  assert.ok(!/tummennusNappi/.test(main), 'tummennusnapin kuuntelija on yhä pystyssä');
 
-  // 2. Muisti: oma avain, oletus PÄÄLLÄ (puuttuva avain = päällä).
-  assert.match(apurit, /KEHITTAJA_TUMMENNUS_AVAIN = 'matkakirja-kehittaja-tummennus'/,
-    'tummennuksen localStorage-avain puuttuu');
-  assert.match(apurit, /getItem\(KEHITTAJA_TUMMENNUS_AVAIN\) !== '0'/,
-    'oletuksen pitää olla päällä: vain poiskytkentä kirjoitetaan levylle');
-  assert.match(apurit, /kehittajaTummennusMuisti = null;[\s\S]{0,200}unohdaKehittajaKytkimet/,
-    'tummennuksen muisti ei ole unohdaKehittajaKytkimet-joukossa');
+  // 2. Muisti purettu, ja laitteelle jäänyt vanha avain siivotaan.
+  assert.ok(!/kehittajaTummennusPaalla|asetaKehittajaTummennus/.test(apurit),
+    'kytkimen muistifunktiot ovat yhä olemassa');
   assert.match(
-    apurit.match(/export function unohdaKehittajaKytkimet\(\) \{[\s\S]*?\n\}/)?.[0] ?? '',
-    /kehittajaTummennusMuisti = null;/,
-    'unohdaKehittajaKytkimet ei nollaa tummennuksen muistia',
+    apurit.match(/const KORVATUT_KEHITTAJA_AVAIMET = \[[\s\S]*?\];/)?.[0] ?? '',
+    /'matkakirja-kehittaja-tummennus'/,
+    'vanhaa tummennusavainta ei siivota laitteelta',
   );
 
-  // 3. Kytkentä: nappi kirjoittaa muistin ja tahdistaa kerroksen heti.
-  assert.match(main, /tummennusNappi\?\.addEventListener\('click'/,
-    'tummennusnapin kuuntelija puuttuu');
-  assert.match(main, /asetaKehittajaTummennus\(halutaan\)/,
-    'nappi ei kirjoita kytkimen tilaa');
-  assert.match(main, /paivitaKehittajaTummennus\?\.\(\)/,
-    'nappi ei tahdista kerrosta — kytkin vaatisi sivulatauksen');
+  // 3. Piirtäjä ei enää maalaa yhtään pintaa: ei varjopolkua, ei
+  //    musteen voimakkuutta, ei kytkinehtoa näkyvyydessä.
+  // Määrittelyt, ei maininnat: tiedoston alku KERTOO mikä purettiin.
+  assert.ok(!/function muidenPolku|const TUMMENNUS_MUSTE|const TUMMENNUS_VOIMA/.test(tumma),
+    'naapurimaiden varjo on yhä piirtäjässä');
+  assert.ok(!/kehittajaTummennusPaalla/.test(tumma),
+    'näkyvyysehto lukee yhä poistettua kytkintä');
+  const piirra = tumma.match(/function piirra\(ui, data, tila\) \{[\s\S]*?\n\}/)?.[0] ?? '';
+  assert.match(piirra, /maatummennus-viiva/, 'ääriviiva ei enää piirry');
+  assert.ok(!/setAttribute\('fill'/.test(piirra), 'kerros maalaa yhä täyttöä');
 
-  // 4. Näkyvyysehto: kytkin luetaan VAIN kehittäjätilassa.
-  assert.match(tumma, /if \(kehittajaTilaPaalla\(\) && !kehittajaTummennusPaalla\(\)\) return null;/,
-    'tunniste ei tottele kytkintä — tai se vaikuttaisi myös pelaajaan');
+  // 4. Ajonaikainen kytkimen tahdistin on poistettu ui:sta.
+  assert.ok(!/paivitaKehittajaTummennus/.test(ui),
+    'kytkimen tahdistin on yhä ui:ssa');
 
-  // 5. Nollaus ennen päivitystä: tunniste on pelkkä maa, joten pelkkä
-  //    paivitaMaatummennus ei tekisi kytkimen vaihdossa mitään.
-  const metodi = ui.match(/paivitaKehittajaTummennus\(\) \{[\s\S]*?\n  \}/)?.[0] ?? '';
-  assert.match(metodi, /nollaaMaatummennus\(this\);[\s\S]*paivitaMaatummennus\(this\);/,
-    'kytkimen vaihto ei nollaa kerrosta ennen uutta latomista');
+  // 5. Tyylit: viiva on tallella, varjon oma luokka poissa.
+  assert.match(css, /\.maatummennus-viiva \{/, 'ääriviivan tyyli puuttuu');
+  assert.ok(!/\.maatummennus-varjo/.test(css), 'varjon tyyli on yhä olemassa');
 });
 
 test('kartan kerroksilla ei ole suodattimia, ja viittaukset osuvat', () => {

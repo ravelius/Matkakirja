@@ -1273,31 +1273,37 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
    (omistaja 1.9.2026 aamu ja ilta); nyt sama sääntö koskee kaikkea
    muutakin elävää kerrosta. */
 
-/* NYKYISEN MAAN TUMMENNUS JA ÄÄRIVIIVA (js/maatummennus.js —
-   omistajan tilaus 31.8.2026: *"lähemmillä zoomtasoilla ympäröivät
-   valtiot voisi tummentaa hieman reaaliajassa ja maan ääriviivat
-   piirtää hieman paksummalla. nämä voisivat hävitä välittömästi
-   siirron alkaessa ja tulla feidaten sisään."*).
+/* NYKYISEN MAAN VAHVISTETTU ÄÄRIVIIVA (js/maatummennus.js).
 
-   KATOAMISTA EI ENÄÄ OLE (1.9.2026 ilta): kerros ei väisty eleen
-   ajaksi kummassakaan eleessä, joten sillä ei ole eleen jälkeistä
-   paluutakaan — eikä sama päivä jättänyt piilotusta millekään muullekaan
-   elävälle kerrokselle. Ks. yllä oleva lohko ja js/kartta.js
-   asennaPanorointi.
+   TUMMENNUS ON POISTETTU (omistaja 2.9.2026: *"Tummennuksen voisi
+   ottaa pois myös normaalista pelitilasta. Jätetään pelkkä vahvistettu
+   kartan ääriviiva jäljelle."* ja *"kehittäjätilassa ota pois se
+   tummennusvalinta ja pidä pelkkä kartan ääriviivojen tummennus aina
+   päällä"*). Kerroksessa on enää maan raja viivana; naapurimaiden
+   varjopolku, sen sävy ja kehittäjän kytkin on purettu. Alkuperäinen
+   tilaus (31.8.2026: *"ympäröivät valtiot voisi tummentaa hieman...
+   ja maan ääriviivat piirtää hieman paksummalla"*) elää siis enää
+   jälkimmäisessä puoliskossaan.
 
-   FEIDAUS ON SIIRTYNYT SIIHEN HETKEEN, JOSSA VARJO SYNTYY: maa vaihtuu
-   tai näkyvyysehto aukeaa, ja js/maatummennus.js `piirra` käynnistää
-   tämän animaation uudelleen (`animation: none` -> pakotettu tyylin
-   luku -> takaisin). Animaatio on yhä ANIMAATIO EIKÄ SIIRTYMÄ, koska
-   se on ainoa, joka voidaan käynnistää alusta ilman lähtöarvoa —
-   siirtymä tarvitsisi kaksi kehystä ja rivin ajastuskoodia.
+   KATOAMISTA EI OLE (1.9.2026 ilta): kerros ei väisty eleen ajaksi
+   kummassakaan eleessä, joten sillä ei ole eleen jälkeistä paluutakaan.
+   Ks. yllä oleva lohko ja js/kartta.js asennaPanorointi.
+
+   FEIDAUS ON SIINÄ HETKESSÄ, JOSSA VIIVA SYNTYY: maa vaihtuu tai
+   näkyvyysehto aukeaa, ja js/maatummennus.js `piirra` käynnistää tämän
+   animaation uudelleen (`animation: none` -> pakotettu tyylin luku ->
+   takaisin). Animaatio on yhä ANIMAATIO EIKÄ SIIRTYMÄ, koska se on
+   ainoa, joka voidaan käynnistää alusta ilman lähtöarvoa — siirtymä
+   tarvitsisi kaksi kehystä ja rivin ajastuskoodia.
 
    === FEIDAUS ON PERITTY fill/stroke-opacity, EI RYHMÄN opacity —
        JA SE ON PORTAIKKO ===========================================
 
-   Kaksi valintaa, molemmat mittaustuloksia (tools/savukkeet/
-   savuke-maailmanakyma.mjs, kehittäjän maailmanäkymä, Chromium
-   390x844 dpr3, kuusi pyyhkäisyä + neljä nipistystä, kolme ajoa):
+   Kaksi valintaa, molemmat mittaustuloksia varjollisella kerroksella
+   (tools/savukkeet/savuke-maailmanakyma.mjs, kehittäjän maailmanäkymä,
+   Chromium 390x844 dpr3, kuusi pyyhkäisyä + neljä nipistystä, kolme
+   ajoa). Luvut jäävät tähän, koska ne perustelevat yhä nykyiset
+   valinnat — ja kerros on nyt kevyempi kuin mikään mitattu variantti:
 
      variantti                        panoroinnin lt   nipistyksen lt
      ei maatummennusta (lähtötaso)     0 / 0 / 287 ms  382 / 403 / 397
@@ -1314,19 +1320,11 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
       display muuttuu (lapsipolkujen omat animaatiot eivät käynnisty
       uudelleen — mitattu, ei arvattu).
 
-   2. PORTAIKKO (steps) leikkaa maalikerrat. Portaaton feidaus maalaa
+   2. PORTAIKKO (steps) leikkaa maalikerrat. Portaaton feidaus maalasi
       varjon parikymmentä kertaa 350 ms:ssä; seitsemän porrasta maalaa
-      sen seitsemästi. Ero näkyy luvuissa muttei ruudulla: koko efekti
-      on muutaman prosentin mustetta (js/maatummennus.js
-      `TUMMENNUS_VOIMA`), joten yksi porras jää hienovaraisemmaksi kuin
-      kartan oma rakeisuus.
-
-   TAULUKKO ON MITATTU ARKINLEVYISELLÄ SUORAKAITEELLA. Varjo on
-   31.8.2026 yöstä lähtien muiden maiden polygonit (omistaja: *"Merta ei
-   tarvitse tummentaa"*) — pienempi pinta, enemmän reunoja. Mitattu
-   uudelleen samalla savukkeella ja Kreikan lähikuvan feidauksella: ero
-   on ajojen hajonnan kokoinen, joten kumpikin valinta yllä pätee
-   sellaisenaan. */
+      sen seitsemästi. Ero näkyi luvuissa muttei ruudulla, ja pelkällä
+      viivalla ero on entistäkin pienempi — portaikko jää, koska se on
+      mitattu halvemmaksi eikä maksa mitään. */
 .maatummennus { animation: maatummennus-esiin 350ms steps(7, end); }
 @keyframes maatummennus-esiin {
   from { fill-opacity: 0; stroke-opacity: 0; }
@@ -1338,15 +1336,14 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
    ja sen perustelu ovat yhdessä paikassa js/maatummennus.js:ssä.
 
    SÄVY ON HIMMEÄ MUSTE EIKÄ TÄYSI --map-ink, ja alfa on värissä eikä
-   `stroke-opacity`-ominaisuudessa. Omistajan kuvapalaute 31.8.2026 oli,
-   että ero maahan pitää tehdä pinnalla eikä reunuksella; reunus on
-   1.9.2026 alkaen kaksi ruutupikseliä 60 %:n musteella (*"paksunna maan
-   rajaa myös hieman"*), jolloin se lukee korostuksena mutta ei
-   rajapyykkinä — leveys ja sen perustelu js/maatummennus.js
-   TUMMENNUS_VIIVA. Omaa `stroke-opacity`-arvoa EI saa antaa: se katkaisisi
-   perinnän ryhmästä, ja juuri perittyä stroke-opacityä yllä oleva
+   `stroke-opacity`-ominaisuudessa. Reunus on 1.9.2026 alkaen kaksi
+   ruutupikseliä 60 %:n musteella (*"paksunna maan rajaa myös
+   hieman"*), jolloin se lukee korostuksena mutta ei rajapyykkinä —
+   leveys ja sen perustelu js/maatummennus.js TUMMENNUS_VIIVA. Omaa
+   `stroke-opacity`-arvoa EI saa antaa: se katkaisisi perinnän
+   ryhmästä, ja juuri perittyä stroke-opacityä yllä oleva
    portaikkofeidaus animoi (ks. mittaustaulukko). Värin alfa kertautuu
-   feidauksen kanssa, joten viiva feidaa sisään siinä missä varjokin. */
+   feidauksen kanssa. */
 .maatummennus-viiva {
   fill: none;
   stroke: rgba(70, 51, 31, 0.6);
@@ -1354,16 +1351,9 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
   stroke-linecap: round;
   vector-effect: non-scaling-stroke;
 }
-/* SUMENNUSTA EI OLE TOTEUTETTU. Omistaja epäili blurin tarpeellisuutta
-   jo tilatessaan, ja laatan päälle ajettu suodin on juuri sitä
-   maalikierroksen kalleutta, jonka eleen aikainen piilotus muuten
-   poistaa. Luokka on koukku myöhempää kokeilua varten: sen saa päälle
-   yhdellä rivillä (filter: blur(...)) ilman että kerroksen rakennetta
-   tarvitsee muuttaa. */
-.maatummennus-sumea { /* varattu — ks. js/maatummennus.js */ }
 
 @media (prefers-reduced-motion: reduce) {
-  /* Liikeherkkyys: tummennus ilmestyy kerralla, ei feidaten. */
+  /* Liikeherkkyys: viiva ilmestyy kerralla, ei feidaten. */
   .maatummennus { animation: none; }
 }
 
