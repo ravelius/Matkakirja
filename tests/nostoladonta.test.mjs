@@ -13,16 +13,55 @@ import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 
 import {
-  NOSTOLADONTA_NIMIO_KATTO, NOSTOLADONTA_NIMIO_KOKO, NOSTOLADONTA_POLTON_TIHEYS,
-  NOSTOLADONTA_S, NOSTOLADONTA_SAANTO, nostoladontaKattoPorras, nostoladontaKattoSuhde,
+  NOSTOLADONTA_MERKKISUHDE, NOSTOLADONTA_NIMIO_KATTO, NOSTOLADONTA_NIMIO_KOKO,
+  NOSTOLADONTA_POLTON_TIHEYS, NOSTOLADONTA_S, NOSTOLADONTA_SAANTO,
+  NOSTOLADONTA_SYMBOLI_R, nostoladontaKattoPorras, nostoladontaKattoSuhde,
   nostoladontaTiiviste,
 } from '../js/nostoladonta.js';
-import { NOSTOSYM_NIMIO_KOKO } from '../js/fokusnosto-symbolit.js';
-import { KARTTANIMI_KOOT } from '../js/karttanimet.js';
+import { NOSTOSYM_MINI_R, NOSTOSYM_NIMIO_KOKO } from '../js/fokusnosto-symbolit.js';
+import { KARTTANIMI_KOOT, maastokolmionKasvukatto } from '../js/karttanimet.js';
 import { KOHDE_SYMBOLI_SKAALA } from '../js/fokuskohteet.js';
 
 test('nimiön kirjasinkoko on sama luku kuin symbolikirjastossa', () => {
   assert.equal(NOSTOLADONTA_NIMIO_KOKO, NOSTOSYM_NIMIO_KOKO);
+});
+
+test('merkin säde on sama luku kuin symbolikirjastossa', () => {
+  assert.equal(NOSTOLADONTA_SYMBOLI_R, NOSTOSYM_MINI_R);
+});
+
+/*
+ * MERKKISUHDE ON KARTAN YHTEINEN MITTA (omistaja 2.9.2026: *"Osa
+ * nostoista vielä polttamatta ja väärän kokoisia"*). Se on se suhde,
+ * jolla nosto poltetaan laattaan, ja siksi kaikkien elävien
+ * merkkiperheiden on osuttava siihen — poltettua kuvaa ei voi enää
+ * muuttaa. Vartija mittaa saman asian ruudulta
+ * (tools/savukkeet/savuke-syvazoomi.mjs, vartio 7); tämä testi vahtii,
+ * ettei luku katoa koodista.
+ */
+test('merkkisuhde on symbolin halkaisija jaettuna nimiön koolla', () => {
+  assert.equal(NOSTOLADONTA_MERKKISUHDE, (2 * NOSTOSYM_MINI_R) / NOSTOSYM_NIMIO_KOKO);
+  assert.ok(Math.abs(NOSTOLADONTA_MERKKISUHDE - 1.1818) < 1e-3);
+});
+
+/*
+ * MAASTOKOLMIO SAA MITTANSA OMASTA NIMESTÄÄN samalla suhteella
+ * (js/karttanimet.js maastokolmionKasvukatto). Väite luetaan
+ * RUUTUPIKSELEINÄ, koska juuri se on se yksikkö, jossa omistaja vertaa
+ * merkkejä toisiinsa: kolmion halkaisija ruudulla on merkkisuhde kertaa
+ * maastonimen kirjasinkoko, eikä se enää riipu zoomista.
+ */
+test('maastokolmion ruutukoko on sen oman nimen mitta', () => {
+  const perus = 4 * NOSTOLADONTA_S; // MERKKI.vuori, lautayksikköä
+  const odotettu = NOSTOLADONTA_MERKKISUHDE * KARTTANIMI_KOOT.vuori;
+  for (const skaala of [3, 6.655, 9.239, 20]) {
+    const halkaisija = 2 * perus * maastokolmionKasvukatto(skaala) * skaala;
+    assert.ok(Math.abs(halkaisija - odotettu) < 1e-6,
+      `skaala ${skaala}: ${halkaisija.toFixed(2)} px, odotettu ${odotettu.toFixed(2)} px`);
+  }
+  // Loitolla katto ei pure lainkaan: kolmio on karttavakio kuten ennen.
+  assert.equal(maastokolmionKasvukatto(1), 1);
+  assert.equal(maastokolmionKasvukatto(0), 1);
 });
 
 test('katto on kartan oman kohdenimen ruutukoko', () => {

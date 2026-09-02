@@ -205,6 +205,46 @@ export function nostoladontaSkaala(rajaus) {
  * NOSTOSYM_NIMIO_KOKO — tuplattu tänne, koska tämä moduuli ei saa tuoda
  * mitään; tests/nostoladonta.test.mjs vahtii että luvut ovat samat). */
 export const NOSTOLADONTA_NIMIO_KOKO = 11;
+/** Merkin säde samoissa yksiköissä (js/fokusnosto-symbolit.js
+ * NOSTOSYM_MINI_R — tuplattu tänne samasta syystä kuin nimiön koko;
+ * tests/nostoladonta.test.mjs vahtii että luvut ovat samat). */
+export const NOSTOLADONTA_SYMBOLI_R = 6.5;
+
+/* ====== YKSI SUHDE KAIKILLE MERKKIPERHEILLE (omistaja 2.9.2026) =====
+ *
+ * OMISTAJAN BUGIRAPORTTI, sanatarkasti: *"Siirto viivat aivan liian
+ * paksuja. Osa nostoista vielä polttamatta ja väärän kokoisia"*
+ * (iPhone, Kreikka, mittajana 25 km).
+ *
+ * Kaappauksessa oli samassa näkymässä NELJÄ eri kokojärjestelmää:
+ * eläintäky jättimäisenä, karttanostot pieninä, maastokolmio siltä
+ * väliltä ja poltettu nosto omanaan. Mitattuna (iPhone 402 x 874
+ * dpr 3, Sofia, mittajana 25 km, skaala 6,655 — symbolin halkaisija ja
+ * nimen kirjasinkoko ruudun pikseleinä):
+ *
+ *     perhe            symboli   nimi   symboli/nimi
+ *     karttanosto       10,0     8,5       1,18
+ *     eläintäky         27,2    23,0       1,18   <- 2,7 x nosto
+ *     maastokolmio       8,0    11,0       0,73
+ *     poltettu nosto    18,6    15,7       1,18   (laskettu, z7 x 1,85)
+ *
+ * ── MIKÄ SUHDE ON OIKEA ───────────────────────────────────────────
+ *
+ * Se, jolla nosto POLTETAAN laattaan, koska poltettua kuvaa ei voi
+ * enää muuttaa: merkin halkaisija on 2 x NOSTOSYM_MINI_R ja nimiön
+ * kirjasinkoko NOSTOSYM_NIMIO_KOKO samassa kirjaston yksikössä, eli
+ * 13 / 11 = 1,18. Kaikki muut perheet mitataan tätä vasten — se ei ole
+ * uusi luku vaan sama luku luettuna toisesta kerroksesta, aivan kuten
+ * ruutukaton yläraja on kartan oma kohdenimi.
+ *
+ * KAUPUNGIN PISTE EI KUULU TÄHÄN. Piste ja rengas ovat PAIKAN merkkejä
+ * eivätkä piktogrammeja: nimen mittainen piste olisi kartalla musta
+ * nappi (js/karttanimet.js MERKKI, *"musta pippuri"*). Suhde koskee
+ * niitä perheitä, joissa symboli on kuva — nosto, eläintäky ja
+ * maastokolmio.
+ */
+export const NOSTOLADONTA_MERKKISUHDE
+  = (2 * NOSTOLADONTA_SYMBOLI_R) / NOSTOLADONTA_NIMIO_KOKO;
 /*
  * KATTO LASKI 10,5 -> 8,5 (omistaja 1.9.2026 ilta, kuvakaappaus
  * Bulgarian lehtinäkymästä, sanatarkasti: *"kaupunkien nimet pitäisi

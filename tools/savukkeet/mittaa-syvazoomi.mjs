@@ -177,12 +177,52 @@ export async function mittaaSyvaZoomi({
     const nakyy = (r) => r.w > 0 && r.h > 0 && r.x > 0 && r.x < window.innerWidth
       && r.y > 0 && r.y < window.innerHeight;
 
+    /*
+     * KIRJASTOYKSIKÖN RUUTUPIKSELI — YKSI LUKU, JOKA VERTAA PERHEITÄ.
+     *
+     * Merkkiperheet piirretään eri koordinaatistoissa: nosto ja
+     * eläintäky kirjaston yksiköissä (js/fokusnosto-symbolit.js,
+     * NOSTOSYM_MINI_R = 6,5 ja NOSTOSYM_NIMIO_KOKO = 11), maastomerkki
+     * laudan yksiköissä ja paikannimi suoraan CSS-pikseleinä. Rajaava
+     * laatikko ei kelpaa vertailuun, koska merkki ja sen nimiö ovat
+     * SAMASSA rasterissa (eläintäky) tai eri kerroksissa (nosto) —
+     * laatikko kertoisi kerran symbolin ja kerran symbolin ja nimen
+     * yhdessä.
+     *
+     * `getScreenCTM` kertoo, montako CSS-pikseliä on yksi elementin oma
+     * yksikkö juuri nyt. Siitä saa kummankin perheen kaksi lukua samassa
+     * mitassa: symbolin halkaisija 2 x 6,5 x a ja nimiön kirjasinkoko
+     * 11 x a. Juuri niitä omistaja vertaa silmällään.
+     */
+    const KIRJASTON_SADE = 6.5;
+    const KIRJASTON_NIMIO = 11;
+    const ctmSkaala = (e) => {
+      const m = e?.getScreenCTM?.();
+      if (!m) return null;
+      return +Math.hypot(m.a, m.b).toFixed(4);
+    };
+
     /* 1. Maastosymbolit ja paikannimet (js/karttanimet.js). */
     const pisteet = [...document.querySelectorAll('.karttanimet .karttamerkki-piste')]
       .map(rk).filter(nakyy);
     const nimet = [...document.querySelectorAll('.karttanimet text')].map((e) => ({
       teksti: e.textContent,
       laji: (e.getAttribute('class') ?? '').replace('karttanimi karttanimi-', ''),
+      /*
+       * KIRJASINKOKO RUUDULLA, EI LAATIKON KORKEUS. Laatikko kertoo
+       * ladotun tekstin ylä- ja alapidennykset (»Taÿgetos» on korkeampi
+       * kuin »Mykene»), joten kahden perheen vertailu laatikoilla
+       * kertoisi kirjaimista eikä mitoituksesta.
+       *
+       * KERTOLASKU CTM:LLÄ ON PAKKO. Nimikerros elää LAUDAN yksiköissä
+       * ja ladonta jakaa kirjasinkoon mittakaavalla (js/karttanimet.js
+       * `laudalle`), joten laskettu `font-size` on lautayksiköitä eikä
+       * pikseleitä: mitattuna 2,04 silloin kun ruudulla on 8,5. Vasta
+       * kerroksen oma ruutumuunnos palauttaa sen CSS-pikseleiksi — ja
+       * juuri se luku on vertailukelpoinen kirjastoyksikön kanssa.
+       */
+      koko: +(parseFloat(getComputedStyle(e).fontSize || '0')
+        * (ctmSkaala(e) ?? 1)).toFixed(2),
       ...rk(e),
     })).filter(nakyy);
     /*
@@ -223,6 +263,7 @@ export async function mittaaSyvaZoomi({
         ?? g.querySelector('.nostosym-nimio, text');
       const gr = rk(g);
       if (!nakyy(gr) || !sym) continue;
+      const a = ctmSkaala(sym);
       nostot.push({
         id: r.id,
         nimi: r.nimi ?? '',
@@ -230,6 +271,55 @@ export async function mittaaSyvaZoomi({
         symboli: rk(sym),
         nimio: teksti ? rk(teksti) : null,
         ryhma: gr,
+        /* Kirjastoyksikön ruutupikseli ja siitä johdetut kaksi mittaa. */
+        a,
+        symboliPx: a ? +(2 * KIRJASTON_SADE * a).toFixed(2) : null,
+        /*
+         * NIMIÖ ON KAHDESSA MAHDOLLISESSA PAIKASSA: luovutettuna
+         * nimikerrokseen (paperivakio, js/karttanimet.js KOKO.kohde) tai
+         * merkin omassa rasterissa (kirjaston yksikkö). Mitta luetaan
+         * siitä, kumpi on käytössä — muuten vertailu vertaisi kahta eri
+         * asiaa eri näkymissä.
+         */
+        nimiPx: teksti
+          ? +(parseFloat(getComputedStyle(teksti).fontSize || '0')
+            * (ctmSkaala(teksti) ?? 1)).toFixed(2)
+          : (a ? +(KIRJASTON_NIMIO * a).toFixed(2) : null),
+      });
+    }
+
+    /*
+     * 2b. ELÄINTÄYT (js/elaintaky.js) — oma kerros, sama kirjasto.
+     *
+     * Merkki ja nimiö tulevat samasta piirtäjästä kuin nostolla
+     * (piirraNostosymKartalle), joten sama kaava kertoo molemmat mitat.
+     * Nimiötä EI luovuteta nimikerrokseen, joten se on aina rasterissa.
+     */
+    const elaimet = [];
+    for (const r of ui.elaintakyRyhmat ?? []) {
+      const g = r.g;
+      if (!g?.isConnected) continue;
+      const sym = g.querySelector('.elaintaky-glyyfi');
+      if (!sym) continue;
+      const gr = rk(g);
+      const a = ctmSkaala(sym);
+      const kuva = sym.querySelector('.nostosym-rasteri');
+      /*
+       * NÄKYMÄRAJAUSTA EI TEHDÄ TÄSSÄ PERHEESSÄ. Eläintäkyjä on yksi per
+       * maa (js/packs/elaintakyt.js), ja se sattuu Kreikassa olemaan
+       * Peloponnesoksella — omistajan toisessa kaappauksessa kuvassa,
+       * ensimmäisessä ei. Perheen KOKO ei riipu paikasta (koko kerros
+       * saa saman mittakaavan), joten reunan taakse jäänyt merkki on
+       * yhtä pätevä mitta kuin keskellä oleva, ja ilman tätä vartija
+       * olisi sokea juuri sille perheelle, josta bugiraportti puhuu.
+       */
+      elaimet.push({
+        nimi: kuva?.dataset?.nimio ?? g.getAttribute('aria-label') ?? '',
+        nakyy: nakyy(gr),
+        laatikko: gr,
+        a,
+        symboliPx: a ? +(2 * KIRJASTON_SADE * a).toFixed(2) : null,
+        nimiPx: a ? +(KIRJASTON_NIMIO * a).toFixed(2) : null,
       });
     }
 
@@ -250,11 +340,18 @@ export async function mittaaSyvaZoomi({
     return {
       skaala: +nak.skaala.toFixed(3),
       dpr: window.devicePixelRatio,
-      mittajana: document.querySelector('.mittakaava-teksti, .karttamittari text, .kartta-mittari')?.textContent ?? null,
+      /*
+       * MITTAJANA ON OMISTAJAN OMA MITTATIKKU. Bugiraportit tulevat
+       * muodossa *"mittajana 25 km"*, joten mittauksen on kerrottava
+       * sama luku — muuten kaappausta ja lukuja ei voi asettaa
+       * vierekkäin (js/fokusmitat.js laskeMittajana).
+       */
+      mittajana: document.querySelector('.fokus-jana-maksimi')?.textContent ?? null,
       vuoret,
       pisteet,
       nimet,
       nostot,
+      elaimet,
       viivat,
       nappula: nappula ? rk(nappula) : null,
     };
@@ -264,6 +361,147 @@ export async function mittaaSyvaZoomi({
   await ctx.close();
   await selain.close();
   return mitat;
+}
+
+/*
+ * ====== MERKKIPERHEET SAMAAN TAULUKKOON (bugiraportti 2.9.2026) =====
+ *
+ * OMISTAJA, sanatarkasti: *"Osa nostoista vielä polttamatta ja väärän
+ * kokoisia"* (iPhone, Kreikka, mittajana 25 km). Kaappauksessa samassa
+ * näkymässä oli neljä eri kokojärjestelmää: eläintäky jättimäisenä,
+ * karttanostot pieninä, maastomerkit siltä väliltä ja poltetut nostot
+ * omanaan.
+ *
+ * TAULUKKO ON VERTAILUN KOKO PIHVI. Yksittäisen merkin koko ei kerro
+ * mitään — kartta on oikein silloin, kun KAIKKI perheet ovat samassa
+ * mitassa samassa näkymässä. Siksi mitta kokoaa jokaisesta perheestä
+ * kaksi lukua (symbolin halkaisija ja nimen kirjasinkoko ruudulla) ja
+ * laskee niiden hajonnan; vartija (savuke-syvazoomi.mjs) asettaa
+ * hajonnalle rajan.
+ *
+ * NIMIPERHEIDEN PORRAS ON HYVÄKSYTTY LINJAUS, EI HAJONTAA. Omistaja
+ * 1.9.2026: *"kaupunkien nimet pitäisi olla isommalla (suurenna) kuin
+ * karttanostojen nimet joita voi pienentää"* — js/karttanimet.js KOKO
+ * on se porras (isoKaupunki 14, kaupunki 12,5, vuori 11, kohde 8,5).
+ * Kaupunkinimi on siksi taulukossa mukana LUKUNA mutta ei
+ * hajontavaatimuksessa: se KUULUU olla isompi.
+ */
+const KIRJASTON_SUHDE = (2 * 6.5) / 11;
+
+/** Mediaani — yksittäinen poikkeava merkki ei saa siirtää perheen lukua. */
+function mediaani(luvut) {
+  const l = luvut.filter((n) => Number.isFinite(n) && n > 0).sort((a, b) => a - b);
+  if (!l.length) return null;
+  return +l[(l.length - 1) >> 1].toFixed(2);
+}
+
+/**
+ * Perheittäinen mittataulukko yhdestä näkymästä.
+ *
+ * @returns {object} perheen tunnus -> { symboliPx, nimiPx, suhde, kpl }
+ *   missä `suhde` = symbolin halkaisija / nimen kirjasinkoko. Kirjaston
+ *   oma suhde on 2 x 6,5 / 11 = 1,18 (js/fokusnosto-symbolit.js
+ *   NOSTOSYM_MINI_R ja NOSTOSYM_NIMIO_KOKO) — se on normi, koska juuri
+ *   sillä suhteella nosto poltetaan laattaan.
+ */
+export function perheet(m) {
+  const nimenKoko = (lajit) => mediaani(
+    m.nimet.filter((n) => lajit.includes(n.laji)).map((n) => n.koko),
+  );
+  const rivi = (symboliPx, nimiPx, kpl) => (kpl
+    ? {
+      symboliPx,
+      nimiPx,
+      suhde: symboliPx > 0 && nimiPx > 0 ? +(symboliPx / nimiPx).toFixed(2) : null,
+      kpl,
+    }
+    : null);
+  const taulu = {
+    nosto: rivi(
+      mediaani(m.nostot.map((n) => n.symboliPx)),
+      mediaani(m.nostot.map((n) => n.nimiPx)),
+      m.nostot.length,
+    ),
+    elain: rivi(
+      mediaani((m.elaimet ?? []).map((e) => e.symboliPx)),
+      mediaani((m.elaimet ?? []).map((e) => e.nimiPx)),
+      (m.elaimet ?? []).length,
+    ),
+    /*
+     * MAASTOMERKKI ON KOLMIO, JA SEN LEVEYS ON SEN HALKAISIJA
+     * (js/karttanimet.js MERKKI.vuori). Nimi on maaston oma nimi
+     * (vuori/jarvi), ei kohteen — juuri ne kaksi ovat toistensa vieressä
+     * kartalla.
+     */
+    maasto: rivi(
+      mediaani(m.vuoret.map((v) => v.w)),
+      nimenKoko(['vuori', 'jarvi']),
+      m.vuoret.length,
+    ),
+    kaupunki: rivi(
+      mediaani(m.pisteet.map((p) => p.w)),
+      nimenKoko(['kaupunki', 'isoKaupunki']),
+      m.pisteet.length,
+    ),
+  };
+  for (const avain of Object.keys(taulu)) if (!taulu[avain]) delete taulu[avain];
+  return taulu;
+}
+
+/**
+ * Perheiden hajonta: suurin jaettuna pienimmällä.
+ *
+ * `kaupunki` on ulkona nimien hajonnasta (ks. yllä, hyväksytty porras)
+ * mutta mukana symbolien hajonnassa vasta, jos sillä on pistemerkki —
+ * piste ei ole piktogrammi vaan paikan merkki, joten se raportoidaan
+ * lukuna eikä vaatimuksena.
+ */
+export function perheHajonta(taulu, avaimet) {
+  const arvot = (kentta) => avaimet
+    .map((a) => taulu[a]?.[kentta])
+    .filter((n) => Number.isFinite(n) && n > 0);
+  const suhde = (lista) => (lista.length > 1
+    ? +(Math.max(...lista) / Math.min(...lista)).toFixed(2) : 1);
+  return {
+    perheita: avaimet.filter((a) => taulu[a]).length,
+    symboli: suhde(arvot('symboliPx')),
+    nimi: suhde(arvot('nimiPx')),
+    /* Kuinka kaukana perheen oma suhde on kirjaston normista (1,18). */
+    suhteenPoikkeama: +Math.max(
+      1,
+      ...avaimet.map((a) => {
+        const s = taulu[a]?.suhde;
+        return s > 0 ? Math.max(s / KIRJASTON_SUHDE, KIRJASTON_SUHDE / s) : 1;
+      }),
+    ).toFixed(2),
+  };
+}
+
+/**
+ * POLTETUN NOSTON RUUTUKOKO — NORMI, JOTA VASTEN MUUT MITATAAN.
+ *
+ * Poltettua nostoa ei voi mitata DOMista: se on laatan kuvassa, eikä
+ * kontin selain pääse laattaämpäriin. Koko on silti laskettavissa
+ * täsmälleen, koska se syntyy samasta kaavasta kuin elävä merkki
+ * (js/nostoladonta.js nostoladontaKattoPorras): laatta poltetaan
+ * olettaen dpr 2, eli nimiö on tason omissa pikseleissä
+ * 2 x NOSTOLADONTA_NIMIO_KATTO, ja ruudulla se kerrotaan sillä
+ * suhteella, jolla laatta venytetään näkymään.
+ *
+ * @param {number} skaala CSS-pikseliä lautayksikköä kohti näkymässä
+ * @param {number} tasonTiheys laattatason pikseliä lautayksikköä kohti
+ *   (syvin taso z7 = 7,2; js/laattapyramidi.js)
+ * @param {number} katto NOSTOLADONTA_NIMIO_KATTO (8,5)
+ */
+export function poltetunNostonMitat(skaala, tasonTiheys = 7.2, katto = 8.5) {
+  if (!(skaala > 0) || !(tasonTiheys > 0)) return null;
+  const nimiPx = +((2 * katto * skaala) / tasonTiheys).toFixed(2);
+  return {
+    nimiPx,
+    symboliPx: +(nimiPx * KIRJASTON_SUHDE).toFixed(2),
+    /* 1 = laatta on 1:1; yli 1 = laatta venyy z7:n yli. */
+    venytys: +((2 * skaala) / tasonTiheys).toFixed(2),
+  };
 }
 
 /** Tiivistelmä: mitä bugiraportti kysyy. */
@@ -284,8 +522,14 @@ export function tiivista(m) {
     const dy = Math.max(0, Math.abs(n.nimio.y - n.symboli.y) - (n.nimio.h + n.symboli.h) / 2);
     return +Math.hypot(dx, dy).toFixed(1);
   });
+  const taulu = perheet(m);
   return {
     skaala: m.skaala,
+    mittajana: m.mittajana ?? null,
+    /* Kaikkien merkkiperheiden mitat samassa näkymässä (ks. perheet). */
+    perheet: taulu,
+    perheHajonta: perheHajonta(taulu, ['nosto', 'elain', 'maasto']),
+    poltettuNosto: poltetunNostonMitat(m.skaala),
     vuorisymboleja: m.vuoret.length,
     nimettomiaVuoria: m.vuoret.filter((v) => !v.nimi).length,
     vuorenKokoMin: vuorenKoot.length ? +Math.min(...vuorenKoot).toFixed(1) : null,
