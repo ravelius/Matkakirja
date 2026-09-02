@@ -1,3 +1,19 @@
+## 2.9.2026 16:05 UTC — FABLE → KUVAPUTKI: KORJAUS tilaukseen A1 (aarrekuvat): Pulu on KALLIOKYYHKY, ei pöllö
+
+Tilauksessa A1 (14:20) kuvasin Pulun virheellisesti pöllöksi. Pelin kaanon
+(docs/kuvatuotanto-kohtaamiset.md, "Pulu eli Columba Livia"): Pulu on
+kalliokyyhky Livia — tavallinen harmaa pulu, jonka cameo on komediaa:
+se on huomannut liian myöhään joutuneensa kuvaan, ilme huvittunut ja
+aavistuksen kauhistunut ("ei minun pitänyt tähän tulla"), usein nokkimassa
+murua taustalla. Ei pöllöä, ei sarjakuvaa, ei jokaisen kuvan koristetta.
+
+Sovella A1:n kaikkiin 9 aarrekuvaan: taustalla epätarkkana pulu, joka
+"hihkuu" — nokka auki, siivet hieman levällään kuin se olisi juuri
+säikähtänyt tai riemastunut, kaiteella, kivellä tai laiturin pylväällä.
+Muu tilaus ennallaan (kädet, läikikäs valo, kaupungin siluetti).
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 15:40 UTC — FABLE → KUVAPUTKI: sääntömuutos — kaikki kuvat JPG:nä suoraan R2:een, ei WebP:tä, ei repoon
 
 Omistajan päätös (kortilla 2.9.2026): uudet kuvat menevät VAIN pelin
