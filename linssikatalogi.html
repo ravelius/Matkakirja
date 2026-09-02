@@ -107,6 +107,17 @@
   .jarjestys ol { margin: 0; padding-left: 22px; max-width: 70ch; }
   .jarjestys li { margin: 6px 0; }
   footer { margin-top: 40px; font-family: "Special Elite", monospace; font-size: 12.5px; letter-spacing: .06em; color: var(--muste-haalea); }
+  nav.valilehdet { display: flex; gap: 0; border-bottom: 2px solid var(--muste); margin: 8px 0 0; }
+  nav.valilehdet button { font: 600 17px Vollkorn, serif; color: var(--muste-haalea); background: transparent; border: 0; border-bottom: 3px solid transparent; margin-bottom: -2px; padding: 10px 16px 8px; cursor: pointer; }
+  nav.valilehdet button[aria-selected="true"] { color: var(--muste); border-bottom-color: var(--seepia); }
+  nav.valilehdet button:focus-visible { outline: 2px solid var(--kulta); outline-offset: 2px; }
+  .valilehti[hidden] { display: none; }
+  .moottori { margin: 24px 0 8px; padding: 16px 20px; background: var(--paperi-tumma); border-left: 3px solid var(--sininen); display: grid; gap: 8px; }
+  .moottori h2 { margin: 0; font-size: 20px; }
+  .moottori p { margin: 0; max-width: 70ch; }
+  .moottori dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 18px; margin: 6px 0 0; font-size: 15.5px; }
+  .moottori dt { font-family: "Special Elite", monospace; font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muste-haalea); padding-top: 3px; }
+  .moottori dd { margin: 0; }
   @media (max-width: 640px) {
     .rivi { grid-template-columns: 40px 1fr; }
     .leima { grid-column: 2; justify-self: start; }
@@ -119,9 +130,16 @@
   <header class="otsake">
     <div class="yla">Matkakirja ja unohdettu aarre · aikajanalinssit</div>
     <h1>Linssikatalogi</h1>
-    <p class="johdanto">Ryhmät A–G aiheittain, H–L maanosittain. Aiheita, joista voi rakentaa saman aikajanalinssin kuin <b>Keksinnöt Euroopassa 1769–1928</b>: kello rullaa, valo syttyy kaupunkiin ja jää palamaan, filminauha ja ilmiöpaneeli kertovat pysäkin. <span class="lainaus">”Hiotaan vain ensin tuo linssi mahdollisimman hyväksi, niin sitten voidaan monistaa samaa logiikkaa muihinkin.”</span></p>
+    <p class="johdanto">Aikajanalinssit: ryhmät A–G aiheittain, H–L maanosittain. Aluelinssit omalla välilehdellä: valtakunnat, sodat, imperiumit ja leviämiset. Aiheita, joista voi rakentaa saman aikajanalinssin kuin <b>Keksinnöt Euroopassa 1769–1928</b>: kello rullaa, valo syttyy kaupunkiin ja jää palamaan, filminauha ja ilmiöpaneeli kertovat pysäkin. <span class="lainaus">”Hiotaan vain ensin tuo linssi mahdollisimman hyväksi, niin sitten voidaan monistaa samaa logiikkaa muihinkin.”</span></p>
     <div class="luvut" id="luvut"></div>
   </header>
+
+  <nav class="valilehdet" role="tablist" aria-label="Linssityyppi">
+    <button type="button" role="tab" id="tab-aikajana" aria-selected="true" aria-controls="aikajana">Aikajanalinssit</button>
+    <button type="button" role="tab" id="tab-alue" aria-selected="false" aria-controls="alue">Aluelinssit</button>
+  </nav>
+
+  <div class="valilehti" id="aikajana" role="tabpanel" aria-labelledby="tab-aikajana">
 
   <div class="malli">
     <h2>Mitä monistetaan</h2>
@@ -154,6 +172,23 @@
       <li>Maanosat: H1 Kiinan keksinnöt, H3 Japani, I3 Osmanit, J1 Kultavaltakunnat, J4 Afrikan tutkimusmatkat, K1 Mesoamerikka ja Andit, K3 Yhdysvallat, L2 Cook. Järjestys sen mukaan, mille laudalle peli laajenee seuraavaksi.</li>
       <li>Loput ideasta seuraavaksi omistajan päätöksellä.</li>
     </ol>
+  </div>
+
+  </div>
+
+  <div class="valilehti" id="alue" role="tabpanel" aria-labelledby="tab-alue" hidden>
+    <div class="moottori">
+      <h2>Toinen moottori: alueet muovautuvat vuosien mukana</h2>
+      <p>Omistaja 2.9.2026: <span class="lainaus">”Kiinan dynastiat olisi kiva näyttää yksinkertaistetulla karttapohjalla niin, että eri dynastiat olisivat eri väreillä ja ne muovaisivat rajoja vuosien vieriessä.”</span> Kello ja filminauha ovat samat kuin aikajanalinssissä, mutta kartalle ei sytytetä pisteitä vaan piirretään värialueita, joiden rajat liukuvat avainvuodesta toiseen.</p>
+      <dl>
+        <dt>Pohja</dt><dd>Yksinkertaistettu maakartta (rannat, suuret joet, ei nykyrajoja), sama patina kuin pelin laudassa.</dd>
+        <dt>Alueet</dt><dd>Avainvuosien monikulmiot (esim. 10–20 vuotta kohti linssiä); niiden välillä rajat interpoloidaan, jolloin valtakunta ”hengittää”. Väri per dynastia tai valtio, selite reunassa.</dd>
+        <dt>Pysäkit</dt><dd>Tapahtumat (taistelu, rauha, kruunaus) filminauhaan kuten aikajanassa; napautus pysäyttää ajon.</dd>
+        <dt>Aineisto</dt><dd>Historialliset rajat avoimista lähteistä (PD/CC BY -pohjaiset historialliset GeoJSON-aineistot; lisenssi tarkistetaan ennen käyttöä), yksinkertaistettuina käsin. Tämä on aluelinssin suurin työ.</dd>
+        <dt>Musiikki ja kuvat</dt><dd>Sama putki kuin aikajanalinssissä.</dd>
+      </dl>
+    </div>
+    <div id="alueryhmat"></div>
   </div>
 
   <footer>Lähde: docs/linssikatalogi.md · päivitetty 2.9.2026 · tilat: valmis, rakenteilla, seuraava, idea</footer>
@@ -253,9 +288,49 @@ const RYHMAT = [
   ]},
 ];
 
+const ALUEET = [
+  { k: 'M', nimi: 'Valtakunnat ja dynastiat', kuvaus: 'Yksi väri per dynastia tai valtio; rajat liukuvat avainvuodesta toiseen.', linssit: [
+    { id: 'M1', nimi: 'Kiinan dynastiat', alue: 'Kiina', kaari: '221 eaa – 1912', pysakit: 'Qin · Han · Kolme kuningaskuntaa · Tang · Song · Yuan · Ming · Qing · tasavalta 1912', tila: 'seuraava', huom: 'Omistajan esimerkki; ensimmäinen aluelinssi.' },
+    { id: 'M2', nimi: 'Rooman nousu ja tuho', alue: 'Välimeri', kaari: '509 eaa – 476', pysakit: 'tasavalta · puunilaissodat · Caesar Gallia · Augustus · Trajanus 117 · jako 395 · 476', tila: 'seuraava' },
+    { id: 'M3', nimi: 'Aleksanteri Suuri', alue: 'Kreikka – Intia', kaari: '336 eaa – 301 eaa', pysakit: 'Makedonia · Issos · Egypti · Gaugamela · Persepolis · Hydaspes · diadokit', tila: 'idea' },
+    { id: 'M4', nimi: 'Islamin leviäminen', alue: 'Lähi-itä – Espanja', kaari: '622 – 750', pysakit: 'Medina · Jerusalem 638 · Persia · Pohjois-Afrikka · Iberia 711 · Poitiers 732', tila: 'idea' },
+    { id: 'M5', nimi: 'Mongolien imperiumi', alue: 'Aasia – Eurooppa', kaari: '1206 – 1368', pysakit: 'Tšingis-kaani · Kiova 1240 · Bagdad 1258 · Kublai · jako kaanikuntiin · Yuan kaatuu', tila: 'idea' },
+    { id: 'M6', nimi: 'Bysantti', alue: 'Itäinen Välimeri', kaari: '395 – 1453', pysakit: 'Justinianus 555 · arabit · Basileios II · 1204 · 1453', tila: 'idea' },
+    { id: 'M7', nimi: 'Osmanien nousu ja lasku', alue: 'Turkki, Balkan, Lähi-itä', kaari: '1299 – 1923', pysakit: 'Bursa · 1453 · Suleiman 1566 · Wien 1683 · Bulgaria 1878 · 1923', tila: 'seuraava', huom: 'Bulgaria 1878 on pelissä.' },
+    { id: 'M8', nimi: 'Reconquista', alue: 'Iberia', kaari: '711 – 1492', pysakit: 'Covadonga · Toledo 1085 · Las Navas 1212 · Granada 1492', tila: 'idea' },
+    { id: 'M9', nimi: 'Viikinkien maailma', alue: 'Pohjois-Eurooppa – Atlantti', kaari: '793 – 1066', pysakit: 'Lindisfarne · Danelaw · Normandia 911 · Islanti · Grönlanti · Vinland · Stamford Bridge 1066', tila: 'idea' },
+    { id: 'M10', nimi: 'Ruotsin suurvalta ja Suomi', alue: 'Itämeri', kaari: '1561 – 1809', pysakit: 'Tallinna 1561 · Kustaa II Aadolf · Westfalen 1648 · Poltava 1709 · Uusikaupunki 1721 · Hamina 1809', tila: 'idea', huom: 'Suomen rajat 1323–1947 omana jatkona.' },
+    { id: 'M11', nimi: 'Inkat ja atsteekit', alue: 'Andit, Meksiko', kaari: '1325 – 1572', pysakit: 'Tenochtitlán 1325 · Pachacuti · Huayna Capac · Cortés 1521 · Cajamarca 1532 · Vilcabamba 1572', tila: 'idea' },
+  ]},
+  { k: 'N', nimi: 'Sodat ja rintamat', kuvaus: 'Rintamalinja liikkuu kuukausittain; pysäkit ovat taisteluja ja rauhoja.', linssit: [
+    { id: 'N1', nimi: 'Napoleonin Eurooppa', alue: 'Eurooppa', kaari: '1796 – 1815', pysakit: 'Italia 1796 · Egypti · Austerlitz 1805 · Jena · Tilsit · Espanja · Moskova 1812 · Leipzig · Waterloo 1815', tila: 'seuraava', huom: 'Omistajan esimerkki.' },
+    { id: 'N2', nimi: 'Ensimmäinen maailmansota', alue: 'Eurooppa, Lähi-itä', kaari: '1914 – 1918', pysakit: 'Sarajevo · Marne · Gallipoli · Verdun · Somme · Brest-Litovsk · 11.11.1918', tila: 'seuraava', huom: 'Omistajan esimerkki (maailmansodat).' },
+    { id: 'N3', nimi: 'Toinen maailmansota', alue: 'Eurooppa, Tyynimeri', kaari: '1939 – 1945', pysakit: 'Puola · Ranska 1940 · Barbarossa · Pearl Harbor · Stalingrad · Normandia · Berliini · Hiroshima', tila: 'seuraava', huom: 'Omistajan esimerkki. Pelin aikakauden ulkopuolella, mutta linssi voi katsoa eteenpäin.' },
+    { id: 'N4', nimi: 'Kolmikymmenvuotinen sota', alue: 'Keski-Eurooppa', kaari: '1618 – 1648', pysakit: 'Prahan ikkuna · Breitenfeld · Lützen 1632 · Westfalen', tila: 'idea' },
+    { id: 'N5', nimi: 'Krimin sota', alue: 'Musta meri, Itämeri', kaari: '1853 – 1856', pysakit: 'Sinope · Sevastopol · Bomarsund · Pariisin rauha', tila: 'idea', huom: 'Isoisän aikalaisten sota; Ahvenanmaa.' },
+    { id: 'N6', nimi: 'Yhdysvaltain sisällissota', alue: 'USA', kaari: '1861 – 1865', pysakit: 'Fort Sumter · Antietam · Gettysburg · Sherman · Appomattox', tila: 'idea' },
+    { id: 'N7', nimi: 'Balkanin sodat', alue: 'Balkan', kaari: '1877 – 1913', pysakit: 'Pleven 1877 · San Stefano · Berliini 1878 · 1912 · 1913', tila: 'idea', huom: 'Bulgarian lauta.' },
+  ]},
+  { k: 'O', nimi: 'Imperiumit, siirtomaat ja kartan uusjako', kuvaus: 'Hidas kaari: alueet vaihtavat väriä vuosikymmenittäin.', linssit: [
+    { id: 'O1', nimi: 'Espanja ja Portugali maailmalla', alue: 'maailma', kaari: '1494 – 1825', pysakit: 'Tordesillas 1494 · Filippiinit · Brasilia · itsenäistymiset 1810–1825', tila: 'idea' },
+    { id: 'O2', nimi: 'Britannian imperiumi', alue: 'maailma', kaari: '1600 – 1922', pysakit: 'Itä-Intian kauppakomppania · Plassey 1757 · Kanada · Australia · Intia 1858 · Egypti 1882 · 1922', tila: 'idea' },
+    { id: 'O3', nimi: 'Afrikan jako', alue: 'Afrikka', kaari: '1870 – 1914', pysakit: 'Suez · Berliini 1884 · Kongo · Fashoda 1898 · buurisota · 1914', tila: 'seuraava' },
+    { id: 'O4', nimi: 'Venäjä laajenee Siperiaan', alue: 'Venäjä – Tyynimeri', kaari: '1582 – 1867', pysakit: 'Jermak 1582 · Jakutsk 1632 · Ohotsk · Kamtšatka · Alaska myydään 1867', tila: 'idea', huom: 'Siperian laudat ovat pelissä.' },
+    { id: 'O5', nimi: 'Yhdysvallat laajenee', alue: 'Pohjois-Amerikka', kaari: '1783 – 1912', pysakit: '1783 · Louisiana 1803 · Texas 1845 · Oregon · Meksiko 1848 · Alaska 1867 · 1912', tila: 'idea' },
+    { id: 'O6', nimi: 'Euroopan kartta uusiksi', alue: 'Eurooppa', kaari: '1815 – 1923', pysakit: 'Wien 1815 · Italia 1861 · Saksa 1871 · Berliini 1878 · Versailles 1919 · Lausanne 1923', tila: 'seuraava', huom: 'Isoisän Eurooppa 1873 keskellä.' },
+  ]},
+  { k: 'P', nimi: 'Leviämiset', kuvaus: 'Ei rajoja vaan aalto, joka etenee kartalla.', linssit: [
+    { id: 'P1', nimi: 'Uskontojen levinneisyys', alue: 'maailma', kaari: '500 eaa – 1900', pysakit: 'buddhalaisuus · kristinusko · islam · uskonpuhdistus · lähetystyö', tila: 'seuraava', huom: 'Uskontojen aikajanalinssien pari.' },
+    { id: 'P2', nimi: 'Musta surma', alue: 'Eurooppa', kaari: '1347 – 1353', pysakit: 'Kaffa · Messina 1347 · Marseille · Pariisi 1348 · Lontoo · Bergen 1349 · Moskova 1353', tila: 'idea' },
+    { id: 'P3', nimi: 'Indoeurooppalaiset kielet', alue: 'Euraasia', kaari: '3500 eaa – 1500', pysakit: 'arot · Anatolia · Kreikka · Italia · germaanit · slaavit · Intia', tila: 'idea' },
+    { id: 'P4', nimi: 'Rautatieverkon kasvu', alue: 'Eurooppa', kaari: '1825 – 1900', pysakit: 'Britannia · Belgia 1835 · Saksa · Ranska · Venäjä · Suomi 1862', tila: 'idea', huom: 'Verkko piirtyy vuosi vuodelta.' },
+    { id: 'P5', nimi: 'Kirjapainon leviäminen', alue: 'Eurooppa', kaari: '1450 – 1500', pysakit: 'Mainz · Venetsia · Pariisi · Lontoo 1476 · Tukholma 1483', tila: 'idea' },
+  ]},
+];
+
 const TILAT = { valmis: 'valmis', rakenteilla: 'rakenteilla', seuraava: 'seuraava', idea: 'idea' };
-const juuri = document.getElementById('ryhmat');
-for (const r of RYHMAT) {
+function piirraRyhmat(juuri, ryhmat) {
+for (const r of ryhmat) {
   const s = document.createElement('section'); s.className = 'ryhma';
   s.innerHTML = `<h2><span class="kirjain">${r.k}</span>${r.nimi}</h2>` + (r.kuvaus ? `<p>${r.kuvaus}</p>` : '');
   for (const l of r.linssit) {
@@ -267,15 +342,22 @@ for (const r of RYHMAT) {
   }
   juuri.appendChild(s);
 }
-const kaikki = RYHMAT.flatMap((r) => r.linssit);
+}
+piirraRyhmat(document.getElementById('ryhmat'), RYHMAT);
+piirraRyhmat(document.getElementById('alueryhmat'), ALUEET);
+const kaikki = [...RYHMAT, ...ALUEET].flatMap((r) => r.linssit);
 const laske = (t) => kaikki.filter((l) => l.tila === t).length;
 document.getElementById('luvut').innerHTML =
-  `<span><b>${kaikki.length}</b>linssiä</span><span><b>${laske('valmis')}</b>valmis</span><span><b>${laske('seuraava')}</b>seuraava</span><span><b>${laske('idea')}</b>idea</span>`;
+  `<span><b>${RYHMAT.flatMap((r) => r.linssit).length}</b>aikajanalinssiä</span><span><b>${ALUEET.flatMap((r) => r.linssit).length}</b>aluelinssiä</span><span><b>${laske('valmis')}</b>valmis</span><span><b>${laske('seuraava')}</b>seuraava</span><span><b>${laske('idea')}</b>idea</span>`;
 document.querySelectorAll('nav.suodatin button').forEach((b) => b.addEventListener('click', () => {
   document.querySelectorAll('nav.suodatin button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
   const t = b.dataset.tila;
   document.querySelectorAll('.rivi').forEach((r) => { r.hidden = t !== 'kaikki' && r.dataset.tila !== t; });
   document.querySelectorAll('section.ryhma').forEach((s) => { s.hidden = ![...s.querySelectorAll('.rivi')].some((r) => !r.hidden); });
+}));
+document.querySelectorAll('nav.valilehdet [role="tab"]').forEach((t) => t.addEventListener('click', () => {
+  document.querySelectorAll('nav.valilehdet [role="tab"]').forEach((x) => x.setAttribute('aria-selected', String(x === t)));
+  document.querySelectorAll('.valilehti').forEach((p) => { p.hidden = p.id !== t.getAttribute('aria-controls'); });
 }));
 </script>
 </body>
