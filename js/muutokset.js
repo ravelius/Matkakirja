@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1474, teksti: 'Sahkekortti lomakkeeksi + linssikatalogi julkiseksi' },
   { v: 1473, teksti: 'Sahke lyhyeksi, kysymys ensin (Sofia, Tukholma)' },
   { v: 1472, teksti: 'Miniatyyrit PNG alfakanavalla (JPG-laatikot pois)' },
   { v: 1471, teksti: 'Keksinnot-linssin oma musiikki + Raamattu-kirjaukset' },

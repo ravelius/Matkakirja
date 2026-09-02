@@ -2526,6 +2526,24 @@ export const RAAMATTU = {
           + 'Linssisopimuksen '
           + 'kielto jatkuvasta animaatiosta koskee SVG-kerrosta: valo syttyy '
           + 'kerran, kello ja nauha ovat DOM:ia kartan paalla.',
+        'USKONNOT SAAVAT KUVANSA JA LINSSINSA - JA LINSSEJA MONISTETAAN '
+          + '(omistaja 2.9.2026 ilta: "kaikkien suurien uskontojen '
+          + 'tapahtumista taytyy myos saada omat kuvansa ja niista '
+          + 'varmasti tehdaan myos samanlainen aikajanalinssi kuin nyt '
+          + 'tekniikasta euroopassa. hiotaan vain ensin tuo linssi '
+          + 'mahdollisimman hyvaksi niin sitten voidaan monistaa samaa '
+          + 'logiikkaa muihinkin"): JARJESTYS on (1) Keksinnot Euroopassa '
+          + 'hiotaan valmiiksi, (2) uskontojen linssit (suuret uskonnot '
+          + 'syntyvat; uskonpuhdistus) samalla moottorilla ja omalla '
+          + 'musiikilla, kuvat kuvaputkelta historian hetkien tapaan '
+          + '(lahi + kauko, fotorealistinen; profeettoja ei esiteta '
+          + 'kasvoista tunnistettavina), (3) muut aiheet. AIHELUETTELO '
+          + 'on docs/linssikatalogi.md (elava tyolista, ~40 linssia '
+          + 'seitsemassa ryhmassa: uskonnot, tiede, loytoretket, '
+          + 'valtakunnat, taide, luonto, arki) ja sama sisalto '
+          + 'artefaktisivuna omistajalle; tila per linssi valmis / '
+          + 'rakenteilla / seuraava / idea. Uusi linssi ei ala ilman '
+          + 'omistajan valintaa luettelosta.',
         'LINSSEJA EI TAUOTETA (omistajan kortti 28.8.2026): epailtiin '
           + 'etta linssit pitavat vanhaa maailmankarttaa hengissa ja '
           + 'kuluttavat resursseja. Mittaus (v1280-eran tutkinta) '
@@ -3403,6 +3421,10 @@ export const RAAMATTU = {
           + 'todistus ja parven työnjako.',
         'docs/moduulit/lukijoilta.md — lukijoiden ehdotukset: worker, '
           + 'lomake, Lukijoilta-lehti ja kuratointi.',
+        'docs/linssikatalogi.md — aikajanalinssien aiheluettelo (~40 '
+          + 'linssiä seitsemässä ryhmässä, tila per linssi, monistettava '
+          + 'malli ja järjestys; elävä työlista, jonka Fable päivittää '
+          + 'omistajan valintojen mukaan).',
         'docs/moduulit/aanet.md — siirtymämusiikki ja äänet: raitojen '
           + 'tuotanto-ohje (kesto, looppisauma, -33 LUFS, vienti).',
         'docs/moduulit/viitekuvat.md — viitekuvallinen herogenerointi: '
