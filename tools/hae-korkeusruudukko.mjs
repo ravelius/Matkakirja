@@ -2,6 +2,15 @@
  * Tiheä korkeusruudukko varjostusta varten.
  *
  *   node tools/hae-korkeusruudukko.mjs [--ruutu 0.05] [--nayte 2] [--kuiva]
+ *        [--kaariminuutit 1|3] [--korkeuspalat <kansio>]
+ *
+ * Kaksi tarkkuutta, kaksi lähdettä:
+ *
+ *   3′ (0,05°)  repon oma tiedosto tools/korkeusaineisto/ — ei verkkoa
+ *   1′ (1/60°)  R2-ämpärin 10°-palat (tools/korkeuspalat-lukija.mjs)
+ *
+ * Koko maailma on 1′:llä 466 Mt; siivun tarvitseva kutsuu
+ * `haeKorkeusikkuna()`ta, joka kokoaa vain pyydetyt sarakkeet ja rivit.
  *
  * Tämä ei kirjoita repoon mitään. Se on MODUULI, jonka muut työkalut
  * tuovat: `haeKorkeusruudukko()` palauttaa koko maailman korkeudet
@@ -363,6 +372,26 @@ export async function haeKorkeusruudukko(asetukset = {}) {
   const kerro = (t) => { if (!hiljaa) process.stderr.write(t); };
 
   /*
+   * YKSI KAARIMINUUTTI TULEE PALOISTA EIKÄ NOAA:LTA (2.9.2026).
+   *
+   * LUEMINUT.md lupasi aikoinaan, että tarkempi ajo noutaisi
+   * alkuperäisen 1′-aineiston ERDDAPista. Lupaus on peruttu, koska
+   * ERDDAP ei vastaa GitHubin ajokoneelta lainkaan — ja koska aineisto
+   * on nyt omassa R2-ämpärissämme 10°-paloina. Reitti kulkee siis
+   * ikkunakokoajan kautta; koko maailma on vain ikkuna, joka sattuu
+   * olemaan koko hilan kokoinen.
+   *
+   * VAROITUS ON PAIKALLAAN: koko maailma 1′:llä on 466 Mt Int16:na.
+   * Kutsuja, joka tarvitsee vain siivun, kysyy sen haeKorkeusikkunalta.
+   */
+  if (onYksiKaariminuutti(ruutu)) {
+    const { z, x0, y0 } = await haeKorkeusikkuna({ ...asetukset, ruutu });
+    return {
+      z, leveys, korkeus, ruutu, x0, y0, lahteet: LAHTEET,
+    };
+  }
+
+  /*
    * REPON AINEISTO ENSIN. Se on sama ruudukko, joka ennen koottiin
    * verkosta — ei harvennettu uudelleen vaan luettu sellaisenaan.
    */
@@ -454,13 +483,124 @@ export const latRivista = (y, ruutu) => -90 + y * ruutu;
 /** Ruudun keskipisteen pituusaste. x = 0 on -180. */
 export const lonSarakkeesta = (x, ruutu) => -180 + x * ruutu;
 
+/* --------------------------------------------------------- IKKUNA */
+
+/*
+ * === MIKSI IKKUNA EIKÄ KOKO MAAILMA ================================
+ *
+ * Omistajan tilaus 2.9.2026: pohja poltetaan uudestaan YHDEN
+ * kaariminuutin korkeusdatalla. Koko maailma on 1′:llä 21601 x 10801
+ * eli 233 miljoonaa solua — 466 Mt Int16:na ja 933 Mt Float32:na. Sitä
+ * ei koota muistiin, eikä sitä tarvitsekaan: laattapyramidin shardi
+ * piirtää yhden pituuskaistan, ja kaista tarvitsee vain oman siivunsa.
+ *
+ * Ikkuna on siksi MAAILMANHILAN sarakeväli ja riviväli, ei asteita.
+ * Hilan sopimus on sama kuin koko ruudukolla (ks. haeKorkeusruudukko):
+ * x = 0 on lon −180, y = 0 on etelänapa, ja sarakkeet 0 ja leveys−1
+ * ovat sama meridiaani. Siksi SARAKE KIERTÄÄ MODULO leveys−1 — lauta
+ * on 361 astetta leveä, joten ikkuna kiertää maailman ympäri, ja
+ * sarakkeen 0 länsinaapuri on leveys−2 kuten LUEMINUT.md sanoo.
+ * RIVI EI KIERRÄ vaan leikkautuu napoihin: pohjoisnavan yli ei mennä.
+ *
+ * KOKO MAAILMAN IKKUNA PALAUTTAA SAMAN TAULUKON KUIN ENNENKIN eikä
+ * kopiota. Se ei ole optimointi vaan takuu: 3 kaariminuutin polku on
+ * tuotannossa, ja sen tuloksen on pysyttävä tavulleen samana.
+ */
+
+/** Maailmanhilan mitat annetulla ruudulla. */
+export function hilanMitat(ruutu) {
+  return { leveys: Math.round(360 / ruutu) + 1, korkeus: Math.round(180 / ruutu) + 1 };
+}
+
+/** Onko pyydetty ruutu ETOPO1:n natiivi kaariminuutti? */
+const onYksiKaariminuutti = (ruutu) => Math.abs(ruutu - 1 / 60) < 1e-12;
+
+/**
+ * Korkeudet maailmanhilan ikkunasta.
+ *
+ * @param {object} p
+ * @param {number} p.ruutu   ruudun koko asteina (0,05 = 3′, 1/60 = 1′)
+ * @param {number} p.x0      ikkunan vasen sarake; saa kiertää (modulo leveys−1)
+ * @param {number} p.leveys  sarakkeita; oletus koko maailma
+ * @param {number} p.y0      ikkunan alin rivi (y kasvaa pohjoiseen); leikkautuu napoihin
+ * @param {number} p.korkeus rivejä; oletus koko maailma
+ * @param {boolean} p.pohjoinenEnsin  tuloksen rivi 0 on POHJOISIN
+ * @param {string|null} p.palat  1′-palojen paikallinen kansio (ei verkkoa)
+ * @returns {Promise<{z: ArrayLike<number>, leveys: number, korkeus: number,
+ *   ruutu: number, x0: number, y0: number, lahteet: object}>}
+ */
+export async function haeKorkeusikkuna(asetukset = {}) {
+  const { ruutu } = { ...OLETUKSET, ...asetukset };
+  const hila = hilanMitat(ruutu);
+  const {
+    x0 = 0, y0 = 0, pohjoinenEnsin = false, hiljaa = false, palat = null, palojenUrl,
+  } = asetukset;
+  const leveys = asetukset.leveys ?? hila.leveys;
+  const korkeus = asetukset.korkeus ?? hila.korkeus;
+
+  if (onYksiKaariminuutti(ruutu)) {
+    /*
+     * 1′ EI TULE KOSKAAN NOAA:LTA vaan omasta R2-ämpäristämme
+     * 10°-paloina (tools/tee-korkeuspalat.mjs, tools/korkeuspalat-lukija.mjs).
+     * Moduuli tuodaan vasta täällä, jottei 3′-polku maksa siitä mitään.
+     */
+    const { avaaPalasto, kokoaIkkuna } = await import('./korkeuspalat-lukija.mjs');
+    const palasto = avaaPalasto({ kansio: palat, hiljaa, ...(palojenUrl ? { url: palojenUrl } : {}) });
+    const z = await kokoaIkkuna({
+      x0, leveys, y0, korkeus, palasto, pohjoinenEnsin, hiljaa,
+    });
+    return {
+      z, leveys, korkeus, ruutu, x0, y0, lahteet: LAHTEET,
+    };
+  }
+
+  const maailma = await haeKorkeusruudukko({ ...asetukset, ruutu });
+  const kierros = maailma.leveys - 1;
+  const taysi = x0 === 0 && leveys === maailma.leveys
+    && y0 === 0 && korkeus === maailma.korkeus && !pohjoinenEnsin;
+  if (taysi) {
+    return {
+      z: maailma.z, leveys, korkeus, ruutu, x0, y0, lahteet: maailma.lahteet,
+    };
+  }
+  // Sarakkeen paikka lähteessä ei muutu rivien välillä; lasketaan kerran.
+  const lahdeX = new Int32Array(leveys);
+  for (let j = 0; j < leveys; j += 1) lahdeX[j] = (((x0 + j) % kierros) + kierros) % kierros;
+  const z = maailma.z instanceof Int16Array
+    ? new Int16Array(leveys * korkeus) : new Float32Array(leveys * korkeus);
+  for (let i = 0; i < korkeus; i += 1) {
+    const ly = Math.min(maailma.korkeus - 1, Math.max(0, y0 + i));
+    const lahdeRivi = ly * maailma.leveys;
+    const kohdeRivi = (pohjoinenEnsin ? (korkeus - 1 - i) : i) * leveys;
+    for (let j = 0; j < leveys; j += 1) z[kohdeRivi + j] = maailma.z[lahdeRivi + lahdeX[j]];
+  }
+  return {
+    z, leveys, korkeus, ruutu, x0, y0, lahteet: maailma.lahteet,
+  };
+}
+
 // ------------------------------------------------------------------- ajo
 
+/** Merkkijonovalitsin (valitsin() muuttaisi polun numeroksi). */
+function tekstiValitsin(nimi, oletus = null) {
+  const i = process.argv.indexOf('--' + nimi);
+  if (i < 0) return oletus;
+  const arvo = process.argv[i + 1];
+  return arvo === undefined || arvo.startsWith('--') ? oletus : arvo;
+}
+
 async function main() {
+  /*
+   * `--kaariminuutit 1` on sama asia kuin `--ruutu 0.0166…`, mutta
+   * luettavampi: koko projekti puhuu kaariminuuteista, ja 1/60 on
+   * desimaalilukuna helppo kirjoittaa väärin.
+   */
+  const km = valitsin('kaariminuutit', null);
   const asetukset = {
-    ruutu: valitsin('ruutu', OLETUKSET.ruutu),
+    ruutu: km ? Number(km) / 60 : valitsin('ruutu', OLETUKSET.ruutu),
     nayte: valitsin('nayte', OLETUKSET.nayte),
     kaista: valitsin('kaista', OLETUKSET.kaista),
+    palat: tekstiValitsin('korkeuspalat', null),
   };
   process.stderr.write(`aineisto: ${LAHTEET.aineisto}\nlisenssi: ${LAHTEET.lisenssi}\n\n`);
   const t0 = Date.now();

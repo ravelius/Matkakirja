@@ -64,18 +64,26 @@ ja NOAA:n välissä eikä korjattavissa koodista.
 Natural Earth saa jäädä verkkonoutoon, koska se tulee GitHubista, joka
 on todistetusti ajokoneelta tavoitettavissa.
 
-## Miksi 3 kaariminuuttia riittää
+## Miksi 3 kaariminuuttia riittää — KAUKOTASOILLA
 
-Raamatun lukittu linjaus: laattapyramidi käyttää 3 kaariminuuttia
-**kaikilla zoomtasoilla**. Syvimmällä tasolla (7,2 px lautayksikköä
-kohti) yksi korkeussolu on **12 × 12 kuvapikseliä**, joten tarkempi
-aineisto ei toisi yhtään näkyvää yksityiskohtaa — se vain nelinkertaistaisi
-muistin ja latauksen.
+Alkuperäinen linjaus (30.8.2026) oli 3 kaariminuuttia **kaikilla**
+zoomtasoilla. **Omistajan tilaus 2.9.2026 kumosi sen syvimmän tason
+osalta:** z7 poltetaan yhdellä kaariminuutilla, z0–z6 yhä kolmella
+(ks. docs/moduulit/laattapyramidi.md osio 8b).
 
-Jos joskus halutaan tarkempi ajo, `tools/hae-korkeusruudukko.mjs` osaa
-yhä noutaa alkuperäisen yhden kaariminuutin aineiston NOAA:lta
-(`--ruutu`), ja tämä tiedosto ohitetaan automaattisesti, koska sen
-ruutukoko ei täsmää pyydettyyn.
+Perustelu on sama luku kummallakin puolella: yksi korkeussolu on
+z7:llä 12 × 12 kuvapikseliä 3′:llä ja 4 × 4 pikseliä 1′:llä, joten
+siellä tarkkuus näkyy. Jo z6:lla 1′-solu on 2 pikseliä ja z5:llä yksi
+— aineisto olisi piirtoa tarkempaa, eli tarkempi ruudukko ei toisi
+kaukotasoille yhtään näkyvää yksityiskohtaa vaan nelinkertaisen
+muistin. Tämä tiedosto on siis edelleen kaukotasojen aineisto, ja
+**sitä ei generoida uudestaan.**
+
+Vanha lupaus siitä, että tarkemman ajon aineisto noudettaisiin
+NOAA:lta `--ruutu`-valitsimella, **ei ole enää voimassa**: ERDDAP ei
+vastaa GitHubin ajokoneelta, ja 1′-aineisto on nyt omassa
+R2-ämpärissämme 10°-paloina (alempana). `tools/hae-korkeusruudukko.mjs`
+ohjaa kaikki 1′-pyynnöt sinne.
 
 ## Muoto
 
@@ -137,6 +145,44 @@ kuvaa siis aineiston, ei enää sen lukijaa.
 Tämä ei kumoa yllä olevaa 3′-linjausta takautuvasti: nykyisissä
 pohjalaatoissa varjo on poltettu kolmesta kaariminuutista, ja se
 vaihtuu vasta uusintapoltossa.
+
+## Palojen lukeminen takaisin ruudukoksi
+
+`tools/korkeuspalat-lukija.mjs` on kirjoittajan vastapari: se kokoaa
+paloista sen ruudukonpalasen, jonka kutsuja tarvitsee, eikä yhtään
+enempää. Koko maailma olisi 1′:llä 21601 × 10801 solua eli 466 Mt
+Int16:na; yksi laattapyramidin pituuskaista tarvitsee siitä noin
+neljäsosan.
+
+Kokoaja puhuu **maailmanhilan** sarakkeista ja riveistä, ja hila on
+sama sopimus kuin 3′-aineistolla, vain tiheämpänä: `x = 0` on lon
+−180, `y = 0` on lat −90, ja sarakkeet 0 ja 21600 ovat sama
+meridiaani — sarakeindeksi kiertää siis **modulo 21600**, koska
+sarakkeen 0 länsinaapuri on 21599. Lauta on 361 astetta leveä, joten
+ikkuna todella kiertää maailman ympäri.
+
+Ylin hilarivi (`y = 10800`, lat +90) ei ole missään palassa, koska
+palan yläreuna kuuluu jo seuraavaan palaan; kokoaja lainaa siihen
+alapuolisen rivin. Laudan arkki (89 °N…−74 °S) ei yllä sinne.
+
+```
+# Ruudukko ikkunana (moduulina):
+haeKorkeusikkuna({ ruutu: 1/60, x0, leveys, y0, korkeus,
+                   pohjoinenEnsin: true, palat: 'korkeuspalat' })
+
+# Komentoriviltä koko maailma (466 Mt — harvoin mitä haluat):
+NODE_USE_ENV_PROXY=1 node tools/hae-korkeusruudukko.mjs --kaariminuutit 1
+
+# Mitkä palat yksi laattapyramidin ajo tarvitsee:
+node tools/generoi-laattapyramidi.mjs ulos --tasot 7 --sarakkeet 0-43 \
+  --kaariminuutit 1 --vain-palat palat.txt
+```
+
+Palat luetaan kolmesta lähteestä tässä järjestyksessä: `--korkeuspalat
+<kansio>` (ajokoneen tapa — työnkulku kopioi palat ennen polttoa,
+jolloin ajossa ei ole yhtään verkkopyyntöä), levyvälimuisti
+(tmpdir) ja julkinen R2-osoite. Puuttuva pala on ajon pysäyttävä
+virhe eikä hiljainen merenpinta.
 
 ## Miten
 

@@ -165,6 +165,11 @@ on:
         type: string
         required: false
         default: ''
+      korkeus:
+        description: 'Korkeusdatan tarkkuus SYVIMMÄLLÄ tasolla kaariminuutteina (z0–z6 aina 3)'
+        type: choice
+        options: ['1', '3']
+        default: '1'
       laatu:
         description: 'webp-laatu'
         type: string
@@ -401,10 +406,64 @@ jobs:
             --no-progress
           echo "Kopio $LAHDEVERSIO -> $VERSIO valmis, $(( $(date +%s) - alkoi )) s."
 
+      # -------------------------------------------- 1′-korkeuspalat
+      #
+      # KORKEUSDATA TULEE OMASTA ÄMPÄRISTÄ, EI NOAA:LTA.
+      #
+      # Omistajan päätös 30.8.2026 pitää yhä: yksikään ajo ei saa
+      # riippua NOAA:n tavoitettavuudesta. Kaukotasojen 3′-aineisto
+      # tulee checkoutin mukana reposta; syvimmän tason 1′-aineisto on
+      # R2:ssa 10°-paloina (tools/tee-korkeuspalat.mjs,
+      # vie-korkeuspalat.yml), ja se KOPIOIDAAN LEVYLLE ENNEN POLTTOA.
+      # Poltto itse ei siis tee yhtään verkkopyyntöä — kolmen tunnin
+      # ajo ei saa kaatua yhteen aikakatkaisuun kahden tunnin kohdalla.
+      #
+      # VAIN SHARDIN TARVITSEMAT PALAT. Koko maailma on 612 palaa ja
+      # 194 Mt; yksi pituuskaista tarvitsee siitä noin 170 palaa.
+      # Lista tulee generaattorin omalta laatikkolaskijalta
+      # (`--vain-palat`), joten se on täsmälleen sama joukko, jonka
+      # piirto lukee — puuttuva pala olisi ajon pysäyttävä virhe.
+      - name: Kopioi 1′-korkeuspalat ämpäristä
+        if: ${{ inputs.korkeus != '3' && !matrix.shardi.nostotaso && !matrix.shardi.viivataso }}
+        env:
+          SHARDI_TASOT: ${{ matrix.shardi.tasot }}
+          SARAKKEET: ${{ matrix.shardi.sarakkeet }}
+          PAIKKAUS: ${{ matrix.shardi.paikkaus && 'true' || '' }}
+          AMPARI: ${{ secrets.R2_BUCKET }}
+          PAATE: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+        run: |
+          set -euo pipefail
+          TASOT="${SHARDI_TASOT:-${TASOT:-}}"
+          YLIN="${TASOT##*-}"
+          if [ -z "$TASOT" ] || [ "$YLIN" -lt 7 ]; then
+            echo "Shardi ei piirrä syvintä tasoa — 1′-paloja ei tarvita."
+            exit 0
+          fi
+          LISA=""
+          if [ -n "${SARAKKEET}" ]; then LISA="--sarakkeet ${SARAKKEET}"; fi
+          mkdir -p korkeuspalat
+          node tools/generoi-laattapyramidi.mjs korkeuspalat \
+            --tasot 7 $LISA --kaariminuutit 1 --vain-palat korkeuspalat/palat.txt
+          N=$(wc -l < korkeuspalat/palat.txt)
+          echo "Palat: $N"
+          alkoi=$(date +%s)
+          # Rinnakkain kahdeksalla: yksi pala on 300-420 kt, ja
+          # peräkkäin haettuna 170 pyyntöä olisi minuutteja odotusta.
+          xargs -a korkeuspalat/palat.txt -P 8 -I {} \
+            aws s3 cp "s3://$AMPARI/julisteet/korkeus/1min/{}.bin.gz" \
+            "korkeuspalat/{}.bin.gz" --endpoint-url "$PAATE" --no-progress --quiet
+          PUUTTUU=0
+          while read -r nimi; do
+            [ -s "korkeuspalat/$nimi.bin.gz" ] || { echo "::error::pala $nimi puuttuu"; PUUTTUU=1; }
+          done < korkeuspalat/palat.txt
+          [ "$PUUTTUU" -eq 0 ] || exit 1
+          echo "Kopioitu $N palaa, $(du -sh korkeuspalat | cut -f1), $(( $(date +%s) - alkoi )) s."
+
       - name: Generoi laatat (${{ matrix.shardi.nimi }})
         env:
           SHARDI_TASOT: ${{ matrix.shardi.tasot }}
           SARAKKEET: ${{ matrix.shardi.sarakkeet }}
+          KORKEUS: ${{ inputs.korkeus || '1' }}
           NOSTOTASO: ${{ matrix.shardi.nostotaso && 'true' || '' }}
           VIIVATASO: ${{ matrix.shardi.viivataso && 'true' || '' }}
           PAIKKAUS: ${{ matrix.shardi.paikkaus && 'true' || '' }}
@@ -443,9 +502,38 @@ jobs:
           if [ -n "${PAIKKAUS}" ]; then
             LISA="$LISA --alue ${ALUE} --paikkaus ${LAHDEVERSIO} --muoto ${MUOTO} --laatta ${LAATTA}"
           fi
-          node tools/generoi-laattapyramidi.mjs ulos \
-            --data ne-data --tasot "$TASOT" $LISA \
-            --laatu "$LAATU" --patina "$PATINA" --versio "$VERSIO"
+          # === KORKEUSDATAN TARKKUUS ON TASON OMINAISUUS ==============
+          #
+          # Syvin taso (z7) poltetaan `korkeus`-syötteen tarkkuudella
+          # (oletus 1 kaariminuutti, omistajan tilaus 2.9.2026),
+          # kaukotasot aina kolmella. Ruudukko kootaan kerran ajoa
+          # kohti, joten ajo jonka tasot tarvitsevat eri ruudukot
+          # AJETAAN KAHDESTI — luettelo täydentyy erissä samalla
+          # koneistolla kuin shardeilla muutenkin.
+          #
+          # Tämä koskee käytännössä vain paikkausta, joka ajaa kaikki
+          # tasot yhdessä; matriisin shardit ovat jo valmiiksi yhden
+          # ryhmän ajoja (z0–z6 tai z7).
+          aja() {
+            local T="$1"
+            local KM="$2"
+            local KMLISA="--kaariminuutit $KM"
+            if [ "$KM" = "1" ] && [ -d korkeuspalat ]; then
+              KMLISA="$KMLISA --korkeuspalat korkeuspalat"
+            fi
+            node tools/generoi-laattapyramidi.mjs ulos \
+              --data ne-data --tasot "$T" $LISA $KMLISA \
+              --laatu "$LAATU" --patina "$PATINA" --versio "$VERSIO"
+          }
+          ALIN="${TASOT%%-*}"
+          YLIN="${TASOT##*-}"
+          if [ -n "${NOSTOTASO}${VIIVATASO}" ] || [ "$KORKEUS" = "3" ] \
+            || [ "$ALIN" -ge 7 ] || [ "$YLIN" -le 6 ]; then
+            aja "$TASOT" "$KORKEUS"
+          else
+            aja "$ALIN-6" 3
+            aja "7" 1
+          fi
           echo "--- tuotos ---"
           find ulos -name "*.${MUOTO:-webp}" | wc -l
           du -sh ulos
@@ -623,6 +711,7 @@ jobs:
           SYOTE_PATINA: ${{ inputs.patina }}
           SYOTE_PIIRIT: ${{ inputs.piirit || 'kylla' }}
           SYOTE_TASOT: ${{ inputs.tasot == 'koeajo-z0-z3' && '0-3' || '0-7' }}
+          KORKEUS: ${{ inputs.korkeus || '1' }}
           PAIKKAUS: ${{ inputs.tasot == 'paikkaus' && 'true' || '' }}
         run: |
           set -euo pipefail
@@ -645,9 +734,12 @@ jobs:
           # kaistan laattoja, joita viivatasoshardi ei polttanut (ajo
           # 2026-09-01h kirjasi piirit: true vaikka laatat olivat puhtaat).
           if [ "${SYOTE_PIIRIT}" = "ei" ]; then LISA="$LISA --eipiirit"; fi
+          # Korkeustarkkuus luetteloon TASOITTAIN samalla säännöllä kuin
+          # laattashardeilla; luettelo ei lue ruudukkoa vaan kirjaa
+          # pelkän säännön, joten se osaa kuvata z0–z7 yhdellä ajolla.
           node tools/generoi-laattapyramidi.mjs luettelo-ulos \
             --tasot "$TASOT" --versio "$VERSIO" --nostoversio "$NOSTOVERSIO" \
-            --viivaversio "$VIIVAVERSIO" \
+            --viivaversio "$VIIVAVERSIO" --kaariminuutit "$KORKEUS" \
             --laatu "$LAATU" --patina "$PATINA" $LISA --vain-luettelo
           cat luettelo-ulos/pyramidi.json | head -30
 
