@@ -21956,9 +21956,13 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
    canvasille, joka LUKEE NÄMÄ ARVOT täältä — sävy ei siis ole
    kahdessa paikassa.
 
-   EI KATEGORIAVÄREJÄ. Heraldiset aksentit (--sym-*) elävät kortin
-   ylärivillä, jossa merkki on 1,5 em; kartalla kaikki on samaa
-   seepiaa kuin lehden oma painojälki, ja kategorian kertoo muoto.
+   VIIVAMERKEILLÄ EI OLE KATEGORIAVÄRIÄ, ja se koskee 2.9.2026 alkaen
+   niitä viittä, joilla on yhä oma muoto (vuori, vesi, huutomerkki,
+   tassu, kompassiruusu): kartalla ne ovat samaa seepiaa kuin lehden
+   oma painojälki, ja kategorian kertoo muoto. Loput yksitoista ovat
+   samannäköinen piste, jolla kategorian kertoo väri — ks.
+   .nostosym-mini-taytto alempana. Heraldiset aksentit (--sym-*)
+   elävät sen lisäksi kortin ylärivillä, jossa merkki on 1,5 em.
    --------------------------------------------------------------------------- */
 /* VETO ON TÄYTETTY MUOTO, EI VIIVA (omistaja 31.8.2026: viivat eivät
    saa olla tasapaksuja eivätkä päättyä pyöreään). Merkki piirretään
@@ -21975,6 +21979,37 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
   fill: rgba(58, 40, 25, 0.52);
   stroke: none;
 }
+
+/* PISTEMERKIN KIEKKO (omistaja 2.9.2026: *"Kaikista muista
+   kategorioista voisi tehdä yksinkertaisesti vain pisteen, paitsi
+   jätetään vuori ja vesi ja skandaali ja söpöysmerkki ennalleen"*).
+
+   Yksitoista kategoriaa jakaa saman kiekon, joten kartalla kategorian
+   kertoo enää VÄRI — ja se on sama --sym-muuttuja, jolla selitevalikon
+   väripallo palaa (js/karttavalot.js karttavaloVari). Peitto on 0,86
+   eli merkin oman musteen paino: pergamentilla täysi kylläisyys olisi
+   liikennemerkki. Canvas lukee kummankin luvun täältä
+   (js/fokusnosto-symbolit.js nostosymMustelajit), joten sävy on
+   yhdessä paikassa.
+
+   VIISI SÄILYNYTTÄ MERKKIÄ (vuori, vesi, huutomerkki, tassu,
+   kompassiruusu) ovat yhä pelkkää seepiaa: niillä muoto kertoo. */
+.nostosym-mini-taytto {
+  stroke: none;
+  opacity: 0.86;
+}
+
+.nostosym-mini-silma { fill: var(--sym-silma); }
+.nostosym-mini-historia { fill: var(--sym-historia); }
+.nostosym-mini-ruoka { fill: var(--sym-ruoka); }
+.nostosym-mini-kulttuuri { fill: var(--sym-kulttuuri); }
+.nostosym-mini-tekniikka { fill: var(--sym-tekniikka); }
+.nostosym-mini-kauppa { fill: var(--sym-kauppa); }
+.nostosym-mini-sana { fill: var(--sym-sana); }
+.nostosym-mini-merenkulku { fill: var(--sym-merenkulku); }
+.nostosym-mini-urheilu { fill: var(--sym-urheilu); }
+.nostosym-mini-kaupunki { fill: var(--sym-kaupunki); }
+.nostosym-mini-hetki { fill: var(--sym-hetki); }
 
 /*
  * RASTEROITU MERKKI — glyyfi ja nimiö yhtenä valmiina kuvana

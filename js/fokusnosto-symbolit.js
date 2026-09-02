@@ -124,6 +124,11 @@ export const NOSTOSYM_R = 10.4;
  * Nyt kartan merkki piirretään VIIVOINA tästä taulusta; webp-glyyfit
  * jäivät kortin ylärivin tunnuksiksi (piirraNostosymboli).
  *
+ * TOINEN KEVENNYS 2.9.2026: viivamerkin sai pitää enää viisi
+ * kategoriaa, ja yksitoista muuta on värillinen PISTE — ks. osio
+ * PISTEMERKKI alempana. Tämä osio kuvaa siis sitä kättä, jolla
+ * jäljellä olevat viisi piirretään, ja pisteen mustereunan.
+ *
  * ── MITTAKAAVA ON POLTETUN KOLMION ─────────────────────────────────
  *
  * Lehti hiottiin 1600 prototyyppipikselin levyisenä (tools/fokuskartta/
@@ -479,8 +484,96 @@ function nostosymKyna(tera) {
     return p.map((s, i) => (i ? 'L' : 'M') + s).join(' ') + ' Z';
   };
 
-  return { viiva, kaari, murto, aalto, keha, kehakaari, rata, piste };
+  /**
+   * TÄYSI YMPYRÄ — AINOA MUOTO, JOTA TERÄ EI PIIRRÄ.
+   *
+   * Kartan piste (ks. PISTEMERKKI alempana) on täytetty kiekko eikä
+   * vedon jälki: kynällä ei voi tehdä umpinaista pintaa yhdellä
+   * nostolla, ja monella vedolla siitä tulisi töhry. Kiekko on siksi
+   * kaaripolku (`A`), joka on tarkka ja lyhyt — Path2D ja SVG lukevat
+   * saman merkkijonon, kuten kaikki muutkin tämän taulun muodot.
+   *
+   * Terän kulma ei koske tätä: ympyrä on ympyrä joka suunnasta. Sen
+   * REUNAN piirtää `keha` eli aito terän jälki, joten merkissä on
+   * silti kynän kädenjälki juuri siinä, missä se näkyy.
+   */
+  const ympyra = (cx, cy, r) => {
+    const p = (v) => nostosymPyorista(v);
+    return `M${p(cx - r)} ${p(cy)} A${p(r)} ${p(r)} 0 1 0 ${p(cx + r)} ${p(cy)} `
+      + `A${p(r)} ${p(r)} 0 1 0 ${p(cx - r)} ${p(cy)} Z`;
+  };
+
+  return { viiva, kaari, murto, aalto, keha, kehakaari, rata, piste, ympyra };
 }
+
+/* ══════════════════ PISTEMERKKI — YKSI MUOTO, MONTA VÄRIÄ ═════════
+ *
+ * OMISTAJAN TILAUS 2.9.2026, sanatarkasti: *"Karttasymboleja voitaisiin
+ * vielä yksinkertaistaa. Kaikista muista kategorioista voisi tehdä
+ * yksinkertaisesti vain pisteen, paitsi jätetään vuori ja vesi ja
+ * skandaali ja söpöysmerkki ennalleen."*
+ *
+ * ── MITÄ JÄI JA MIKÄ MENI ─────────────────────────────────────────
+ *
+ * ENNALLAAN viisi merkkiä: VUORI (kolmio), VESI (kaksi aaltoa),
+ * SKANDAALI (huutomerkki) ja SÖPÖYSMERKKI eli eläintäyn TASSU — nämä
+ * neljä omistaja nimesi — sekä KOMPASSIRUUSU, joka ei ole kategoria
+ * vaan Matkakirjan kadonneen ihmeen lisämerkki.
+ *
+ * PISTEEKSI yksitoista: silmä, murtunut pylväs, malja, lyyra,
+ * holvikaari, vaaka, sulkakynä, ankkuri, juoksija, porttitorni ja
+ * tiimalasi. Niiden muodot olivat 26.8.–2.9.2026 hiottua työtä, ja ne
+ * ovat luettavissa git-historiasta (v1211–v1453); niitä ei ole
+ * kommentoitu tähän, koska kuollut koodi vanhenee eikä kukaan sitä
+ * korjaa. Kortin ylärivi kantaa yhä koko taksonomian omalla
+ * kaiverruksellaan (NOSTOSYM_PIIRTAJAT) — KORTTI EI OLE KARTTA.
+ *
+ * ── KUN MUOTO EI ENÄÄ EROTA, VÄRI EROTTAA ─────────────────────────
+ *
+ * Yksitoista kategoriaa yhdessä muodossa tarkoittaa, että kartalla
+ * kategorian kertoo enää VÄRI. Siksi piste on kaksiosainen: täytetty
+ * kiekko kategorian omassa sävyssä (css/styles.css --sym-*, sama
+ * muuttuja jolla selitevalikon väripallo palaa — js/karttavalot.js
+ * karttavaloVari) ja sen päällä OHUT MUSTEREUNA, joka sitoo merkin
+ * kartan omaan käteen.
+ *
+ * TÄMÄ KUMOAA vanhan säännön *"EI KATEGORIAVÄREJÄ ... kartalla kaikki
+ * on samaa seepiaa ja kategorian kertoo muoto"* (27.8.2026) niiltä
+ * osin kuin muotoa ei enää ole. Viisi säilynyttä merkkiä ovat yhä
+ * pelkkää mustetta: niillä muoto kertoo, eikä väriä tarvita.
+ *
+ * ── SÄDE ON MITATTU, EI ARVATTU ───────────────────────────────────
+ *
+ * Merkin oma mitta (välit, väistöt, ladonta) on yhä NOSTOSYM_MINI_R
+ * = 6,5, eikä siihen kosketa: ladonta on poltettu laattoihin, ja jos
+ * se muuttuisi, jokainen merkki siirtyisi. Vain PIIRROS on uusi, ja
+ * sen koko valittiin musteen määrästä: perheen viivamerkkien musteen
+ * pinta-ala on 5,9…63,6 neliöyksikköä, mediaani 30,7. Reunan säteellä
+ * 3,4 kehän muste on noin 24 neliöyksikköä eli sama kuin vuorella
+ * (23,3) ja silmällä (23,0) — piste ei siis ole perhettä kevyempi
+ * eikä raskaampi, ja symbolin ja nimen suhde (13/11, js/nostoladonta.js
+ * NOSTOLADONTA_MERKKISUHDE) pysyy koskemattomana, koska se lasketaan
+ * merkin omasta mitasta eikä musteen ulottumasta.
+ *
+ * KAUPUNGIN PISTE ON ERI ASIA (js/karttanimet.js MERKKI, *"musta
+ * pippuri"*): se on TÄYSIN musteinen kiekko ilman reunaa ja ilman
+ * väriä, säde 1,2 lautayksikköä. Nostopisteen uloin reuna on 1,31
+ * lautayksikköä eli samaa kokoluokkaa — ero ei ole koossa vaan siinä,
+ * että nostopiste on VÄRILLINEN KIEKKO MUSTEREUNASSA ja kaupungin
+ * piste umpimusta täplä. Kaupunkiin kuuluu lisäksi sen oma nimi
+ * suoraan vieressä (Raamatun tietoinen poikkeus).
+ */
+/** Pistemerkin mustereunan säde kirjaston yksiköinä. */
+const NOSTOSYM_PISTE_R = 3.4;
+
+/**
+ * PISTEMERKIN LUONNOS — sama muoto jokaiselle pisteytetylle
+ * kategorialle. Väri tulee tunnuksesta (ks. NOSTOSYM_PISTE_VARIT).
+ */
+const nostosymPisteLuonnos = ({ keha, ympyra }) => ({
+  taytto: [ympyra(0, 0, NOSTOSYM_PISTE_R)],
+  vahva: [keha(0, 0, NOSTOSYM_PISTE_R)],
+});
 
 /**
  * MERKKIEN LUONNOKSET: tunnus → kynä → { vahva, ohut }.
@@ -584,220 +677,33 @@ const NOSTOSYM_MINI_LUONNOS = {
     ],
   }),
   /*
-   * SILMÄ — nähtävyydet. Kaksi luomikaarta ja mustuainen.
-   * Vedot 3 → 3, mutta mustuaisen kehä putosi pois: kehä ja piste
-   * sisäkkäin olivat kartalla yksi läiskä.
+   * YKSITOISTA KATEGORIAA, YKSI MUOTO — ks. osio PISTEMERKKI yllä.
+   *
+   * Järjestys on entinen (silmä, historia, ruoka, kulttuuri, tekniikka,
+   * kauppa, sana, merenkulku, urheilu, kaupunki, hetki), jotta rivi
+   * löytyy samasta kohdasta kuin ennen; jokainen saa saman kiekon ja
+   * oman värinsä tunnuksestaan.
+   *
+   * KARTALLA NÄISTÄ ON VAIN VIISI (js/karttavalot.js
+   * karttavaloKarkisymboli): historia, kulttuuri, kauppa, kaupunki ja
+   * hetki ovat selitevalikon omia rivejä, ja kuusi muuta — silmä, malja,
+   * holvikaari, sulkakynä, ankkuri ja juoksija — kulkevat kartalle
+   * ryhmänsä kärkisymbolina. Ne ovat silti pisteitä tässä taulussa,
+   * koska taulun on vastattava kysymykseen *"minkä näköinen tämä
+   * kategoria on kartalla"* riippumatta siitä, minkä reitin se sinne
+   * kulkee.
    */
-  silma: ({ kaari, piste }) => ({
-    vahva: [
-      kaari(-6.30, 0.20, 6.30, 0.20, -2.70),
-      kaari(-6.30, 0.20, 6.30, 0.20, 2.70),
-      piste(0.10, 0.20, 1.45),
-    ],
-  }),
-  /*
-   * MURTUNUT PYLVÄS — historia. Vedot 5 → 4 (omistaja 31.8.2026:
-   * *"Historia on hyvä"*). Sahalaitainen murtuma vaihtui yhteen
-   * vinoon katkaisuvetoon; vasen varsi on selvästi matalampi, koska
-   * loivalla erolla merkki luki holvikaareksi.
-   */
-  historia: ({ viiva }) => ({
-    vahva: [
-      viiva(-1.55, 4.70, -1.55, -2.50),
-      viiva(1.55, 4.70, 1.55, -5.15),
-      viiva(-1.55, -2.50, 1.55, -5.15),
-      viiva(-3.50, 5.10, 3.50, 5.10),
-    ],
-  }),
-  /*
-   * MALJA — ruoka ja juoma. Vedot 5 → 4 (omistaja 31.8.2026:
-   * *"samoin ruoka"* eli hyvä). Höyryjuovat jäivät pois.
-   */
-  ruoka: ({ viiva, kaari }) => ({
-    vahva: [
-      viiva(-3.70, -2.60, 3.70, -2.60),
-      kaari(-3.70, -2.60, 3.70, -2.60, 4.40),
-      viiva(0, 1.90, 0, 4.90),
-      viiva(-2.70, 5.20, 2.70, 5.20),
-    ],
-  }),
-  /*
-   * LYYRA — kulttuuri. Vedot 7 → 4 (omistaja 31.8.2026:
-   * *"Kulttuuristakin voisi ottaa sen väliviivan pois"*): kolme kieltä
-   * → ei yhtään. Käsivarret kaartuvat ULOS ja kaikupohja pysyi —
-   * ilman sitä käsivarret kokoontuivat alhaalla kärkeen ja merkki
-   * luki Y:n muotoisena haarukkana.
-   *
-   * KOLMAS KIERROS 31.8.2026 (omistaja: *"Ainoastaan kulttuurissa sitä
-   * yläviivaa pitää hieman laskea"*): poikkipuu −4,40 → −3,40 eli yksi
-   * yksikkö alemmas. Leveys kasvoi samalla ±4,70 → ±5,10, koska
-   * käsivarret kaartuvat ulospäin: matalammalla ne ovat x = ±4,89:ssä,
-   * eikä vanha puu olisi enää yltänyt niiden yli vaan pysähtynyt
-   * niiden sisäpuolelle.
-   */
-  kulttuuri: ({ viiva, kaari }) => ({
-    vahva: [
-      kaari(-2.30, 3.90, -4.20, -5.50, -1.70),
-      kaari(2.30, 3.90, 4.20, -5.50, 1.70),
-      viiva(-5.10, -3.40, 5.10, -3.40),
-      viiva(-2.30, 3.90, 2.30, 3.90),
-    ],
-  }),
-  /*
-   * HOLVIKAARI — tekniikka. UUSI KUVIO (omistaja 31.8.2026, kolmas
-   * kierros: *"harppi näyttää vielä liikaa A-kirjaimelta. Koita, jos
-   * saat siihen keksittyä jotain."*). Vedot 4 → 2.
-   *
-   * ── MIKSI HARPPI EI KELVANNUT ─────────────────────────────────────
-   *
-   * Harppi on kaksi haaraa ja poikkipuu, ja se on A. Vika ei ollut
-   * hienosäädössä vaan ÄÄRIVIIVASSA: perheessä kolmio (vuori) ja
-   * pystysuora (historia, kaupunki) ovat jo varattuja, ja A on kolmio.
-   * Ainoa korjaus oli vaihtaa merkin ääriviivan LUOKKA.
-   *
-   * ── MIKSI HOLVI ──────────────────────────────────────────────────
-   *
-   * Kategorian 23 kohdetta luettiin läpi ennen valintaa (nimiöt:
-   * Roquefavour, Vuoristovesijohto, Hobrechtin putket, London Bridge,
-   * Maanalainen, Wienin asema, Konehalli, Finlayson, Pulkova, Duomon
-   * gnomoni, Näyttely 1872, Kyyhkyposti, Prokopovytš, Ukkoskivi …).
-   * Enemmistö on VETTÄ, RATAA TAI KULKUA KANTAVA RAKENNE — akvedukti,
-   * silta, tunneli, asemahalli, vesijohto. Niiden yhteinen ääriviiva
-   * on holvikaari kannen alla: 1800-luvun insinöörityön oma merkki.
-   *
-   * ── MIKSI JUURI TÄMÄ MITOITUS ────────────────────────────────────
-   *
-   * Perusmuoto on VAAKASUUNTAINEN JA PYÖREÄ, koska pysty ja kolmio
-   * ovat varattuja. Kansi on merkin levein veto (±6,30) ja ulottuu
-   * jalkojen yli, jolloin silmä lukee kannen kannatelluksi. Kaari on
-   * AITO PUOLIYMPYRÄ (`rata` + `kaari`, ei bezier): bezier-kaari
-   * kärjistyy tässä koossa goottilaiseksi, ja kärki olisi palauttanut
-   * juuri sen kolmion, josta oltiin pääsemässä eroon. Jalat ja kaari
-   * ovat YKSI veto, joten saumaan ei jää kynän nostoa.
-   *
-   * Kokeiltiin ja hylättiin: hammasratas (kahdeksan hammasta lukee
-   * käyttökoossa samana tähtenä kuin ihme), kahden holvin arkadi
-   * (kaksi kaarta ei mahdu 13 yksikön korkeuteen ilman että
-   * yläpuolisko jää tyhjäksi), kaukoputki (vino tanko = sana).
-   */
-  tekniikka: ({ viiva, rata }) => ({
-    vahva: [
-      viiva(-6.30, -3.60, 6.30, -3.60),
-      rata(['jana', -4.70, 5.20, -4.70, 1.10], ['kaari', 0, 1.10, 4.70, 180, 360],
-        ['jana', 4.70, 1.10, 4.70, 5.20]),
-    ],
-  }),
-  /*
-   * VAAKA — kauppa. Vedot 9 → 5: neljä ripustinta pois ja kupit
-   * ripustettu suoraan orren päihin. Ripustimet olivat kartalla
-   * puolen pikselin viiruja, jotka vain sumensivat orren.
-   */
-  kauppa: ({ viiva, kaari }) => ({
-    vahva: [
-      viiva(0, -3.30, 0, 4.60),
-      viiva(-5.00, -3.30, 5.00, -3.30),
-      viiva(-2.40, 4.90, 2.40, 4.90),
-    ],
-    ohut: [
-      kaari(-6.30, -3.10, -3.60, -3.10, 1.80),
-      kaari(3.60, -3.10, 6.30, -3.10, 1.80),
-    ],
-  }),
-  /*
-   * SULKAKYNÄ — tarinat ja kieli. Vedot 5 → 3: lapa oli kaksi kaarta
-   * ja kolme väkää; nyt ruoto on yksi veto, lapa yksi kaari sen
-   * kylkeen ja väkiä yksi.
-   */
-  sana: ({ viiva, kaari }) => ({
-    vahva: [
-      viiva(5.40, -5.40, -5.10, 5.10),
-      kaari(5.40, -5.40, -3.00, 2.50, 1.70),
-    ],
-    ohut: [viiva(1.70, -1.30, 0.10, -2.70)],
-  }),
-  /*
-   * ANKKURI — merenkulku. Vedot 6 → 3 (omistaja 31.8.2026:
-   * *"Kaupunki ja merenkulku on hyvä"*). Rengas ja kynsien kärjet
-   * jäivät pois; poikkipuu nousi lähemmäs varren päätä.
-   */
-  merenkulku: ({ viiva, kaari }) => ({
-    vahva: [
-      viiva(0, -4.40, 0, 5.00),
-      viiva(-3.30, -3.10, 3.30, -3.10),
-      kaari(-4.90, 1.20, 4.90, 1.20, 3.80),
-    ],
-  }),
-  /*
-   * JUOKSIJA — urheilu. UUSI KUVIO (omistaja 31.8.2026: *"urheilu
-   * voisi olla joku juokseva ihminen ennemmin"*). Vedot 10 → 6.
-   *
-   * Laakeriseppele oli kymmenen vetoa ja kartalla karvainen möykky.
-   * Juoksija on kuusi: pää, vartalo, kaksi jalkaa (kumpikin YKSI
-   * polvesta taittuva veto) ja kaksi kättä. Molemmat kädet tarvitaan —
-   * yhdellä hahmo luki seisovana. Kädet TAITTUVAT KYYNÄRPÄÄSTÄ eri
-   * kulmiin: suorina ne asettuivat samalle linjalle ja näyttivät
-   * yhdeltä tangolta vartalon läpi.
-   */
-  urheilu: ({ viiva, murto, piste }) => ({
-    vahva: [
-      piste(1.95, -4.55, 1.00),
-      viiva(1.40, -3.20, -0.60, 0.60),
-      murto([[-0.60, 0.60], [2.30, 2.10], [2.90, 5.40]]),
-      murto([[-0.60, 0.60], [-3.20, 2.30], [-5.20, 4.90]]),
-    ],
-    ohut: [
-      murto([[0.85, -2.50], [3.40, -1.30], [4.30, -3.30]]),
-      murto([[0.85, -2.50], [-2.10, -1.60], [-3.70, 0.10]]),
-    ],
-  }),
-  /*
-   * PORTTITORNI — kaupunki. Vedot 3 → 2 (omistaja 31.8.2026:
-   * *"Kaupunki ja merenkulku on hyvä"*). Kolmen sakaran harja
-   * supistui yhteen loveen ja holvikaari jäi pois.
-   */
-  kaupunki: ({ murto, viiva }) => ({
-    vahva: [
-      murto([[-3.30, 5.20], [-3.30, -4.60], [-1.00, -4.60], [-1.00, -2.80],
-        [1.00, -2.80], [1.00, -4.60], [3.30, -4.60], [3.30, 5.20]]),
-      viiva(-4.70, 5.50, 4.70, 5.50),
-    ],
-  }),
-  /*
-   * TIIMALASI — historian hetki. UUSI KUVIO 2.9.2026 (H1-erä,
-   * js/packs/historian-hetket.js). Vedot 3.
-   *
-   * ── MIKSI TIIMALASI ───────────────────────────────────────────────
-   *
-   * Kategoria ei ole paikka vaan HETKI: se sekunti, jolloin laiva
-   * irtoaa laiturista tai luoti on vielä lähtemättä. Perheessä ei ole
-   * yhtään ajan merkkiä — kaikki neljätoista muuta nimeävät jonkin
-   * ESINEEN tai PAIKAN (pylväs, ankkuri, malja, portti) — joten aika
-   * on ainoa vapaa merkitys, ja tiimalasi on sen vanha karttakielinen
-   * kuva. Aikakausi on myös oikea: tiimalasi oli 1800-luvun laivan
-   * navigointiväline, ei koriste.
-   *
-   * ── MIKSI TÄMÄ MUOTO EIKÄ TOINEN ─────────────────────────────────
-   *
-   * Kokeiltiin ja hylättiin: KELLOTAULU (ympyrä ja kaksi viisaria luki
-   * käyttökoossa samana täplänä kuin silmä), AURINKOKELLO (vino tanko
-   * = sana), KYNTTILÄ (pystyviiva = historia ja kaupunki).
-   * Tiimalasin ristikkäiset viistot ovat perheen ainoa X, eikä
-   * yhdelläkään toisella merkillä ole kahta vaakapalkkia ylä- ja
-   * alareunassa.
-   *
-   * MITOITUS. Lasi on suljettu murtoviiva, joka käy vyötäröllä (0,0)
-   * kahdesti — sama piste ylä- ja alakartion kärkenä — jolloin muoto
-   * on yksi veto eikä kaksi kolmiota. Laipiot ovat lasia leveämmät
-   * (±5,3 vs. ±3,8), jotta silmä lukee lasin kannatelluksi kehyksen
-   * väliin.
-   */
-  hetki: ({ murto, viiva }) => ({
-    vahva: [
-      murto([[-3.80, -4.40], [3.80, -4.40], [0, 0], [3.80, 4.40], [-3.80, 4.40], [0, 0]], true),
-      viiva(-5.30, -5.80, 5.30, -5.80),
-      viiva(-5.30, 5.80, 5.30, 5.80),
-    ],
-  }),
+  silma: nostosymPisteLuonnos,
+  historia: nostosymPisteLuonnos,
+  ruoka: nostosymPisteLuonnos,
+  kulttuuri: nostosymPisteLuonnos,
+  tekniikka: nostosymPisteLuonnos,
+  kauppa: nostosymPisteLuonnos,
+  sana: nostosymPisteLuonnos,
+  merenkulku: nostosymPisteLuonnos,
+  urheilu: nostosymPisteLuonnos,
+  kaupunki: nostosymPisteLuonnos,
+  hetki: nostosymPisteLuonnos,
   /*
    * KOMPASSIRUUSU — kadonnut ihme. ALKUPERÄINEN KUVIO PALAUTETTU
    * (omistaja 31.8.2026: *"Ihme voisi olla sama kuin alkuperäinen, jos
@@ -812,12 +718,17 @@ const NOSTOSYM_MINI_LUONNOS = {
 };
 
 /**
- * MINIMERKKIEN TAULU: tunnus → { vahva, ohut, vedot }.
+ * MINIMERKKIEN TAULU: tunnus → { taytto, vari, vahva, ohut, vedot }.
  *
- * `vahva` ja `ohut` ovat SVG-polkuja (`d`), jotka TÄYTETÄÄN — eivät
- * viivoja. Sama merkkijono kelpaa SVG:lle ja canvasille (`Path2D`),
- * joten muotoa ei ole kirjoitettu kahdesti. `vedot` on kynän nostojen
- * määrä: yksinkertaistuksen mittari luettavissa koodista.
+ * `taytto`, `vahva` ja `ohut` ovat SVG-polkuja (`d`), jotka TÄYTETÄÄN
+ * — eivät viivoja. Sama merkkijono kelpaa SVG:lle ja canvasille
+ * (`Path2D`), joten muotoa ei ole kirjoitettu kahdesti. `vedot` on
+ * kynän nostojen määrä: yksinkertaistuksen mittari luettavissa
+ * koodista.
+ *
+ * `taytto` on pistemerkin värillinen kiekko ja `vari` sen kategoria,
+ * josta sävy haetaan (NOSTOSYM_PISTE_VARIT). Viivamerkeillä molemmat
+ * ovat null — ne ovat pelkkää mustetta, kuten ennenkin.
  *
  * Taulu lasketaan KERRAN moduulin latautuessa. Laskenta on puhdasta
  * geometriaa ilman DOMia, joten sen voi tehdä missä tahansa —
@@ -829,12 +740,25 @@ const NOSTOSYM_MINI = Object.fromEntries(
     const o = luonnos(nostosymKyna(NOSTOSYM_TERA_OHUT));
     const vahva = m.vahva ?? [];
     const ohut = o.ohut ?? [];
+    const taytto = m.taytto ?? [];
     return [tunnus, {
+      taytto: taytto.length ? taytto.join(' ') : null,
+      vari: taytto.length ? tunnus : null,
       vahva: vahva.length ? vahva.join(' ') : null,
       ohut: ohut.length ? ohut.join(' ') : null,
       vedot: vahva.length + ohut.length,
     }];
   }),
+);
+
+/**
+ * PISTEMERKKIEN TUNNUKSET — ne kategoriat, joilla on värillinen kiekko.
+ *
+ * Johdettu taulusta eikä lueteltu uudestaan: yksi lista, joka ei voi
+ * jäädä jälkeen luonnoksista.
+ */
+export const NOSTOSYM_PISTEET = Object.freeze(
+  Object.entries(NOSTOSYM_MINI).filter(([, m]) => m.vari).map(([tunnus]) => tunnus),
 );
 
 /*
@@ -884,6 +808,14 @@ export function nostosymMiniMerkki(symboli, laji) {
  */
 export function piirraNostosymMini(g, symboli, laji) {
   const merkki = nostosymMiniMerkki(symboli, laji);
+  // Kiekko ensin ja mustereuna sen päälle: reunan on peitettävä värin
+  // laita, tai kiekosta jää musteen ulkopuolelle värillinen kehä.
+  if (merkki.taytto) {
+    el('path', {
+      class: `nostosym-mini-taytto nostosym-mini-${merkki.vari}`,
+      d: merkki.taytto,
+    }, g);
+  }
   if (merkki.ohut) el('path', { class: 'nostosym-mini-ohut', d: merkki.ohut }, g);
   if (merkki.vahva) el('path', { class: 'nostosym-mini', d: merkki.vahva }, g);
 }
@@ -902,6 +834,19 @@ function piirraNostosymMiniCanvas(ctx, tunnus, muste, porras) {
   const merkki = NOSTOSYM_MINI[tunnus];
   ctx.save();
   ctx.scale(porras, porras);
+  if (merkki.taytto) {
+    /*
+     * KIEKKO ON HITUSEN LÄPIKUULTAVA (muste.pisteHimmeys), jotta
+     * kategoriaväri istuu pergamentille samalla painolla kuin merkin
+     * oma muste. Alfa asetetaan ja palautetaan tässä, koska kutsujalla
+     * voi olla oma peittonsa (haalistunut merkki).
+     */
+    const alfa = ctx.globalAlpha;
+    ctx.globalAlpha = alfa * (muste.pisteHimmeys ?? NOSTOSYM_PISTE_HIMMEYS);
+    ctx.fillStyle = muste.varit?.[merkki.vari] ?? NOSTOSYM_PISTE_VARIT[merkki.vari];
+    ctx.fill(new Path2D(merkki.taytto));
+    ctx.globalAlpha = alfa;
+  }
   if (merkki.ohut) {
     ctx.fillStyle = muste.ohut;
     ctx.fill(new Path2D(merkki.ohut));
@@ -1961,6 +1906,38 @@ const NOSTOSYM_MUSTE_VARA = {
   ohut: 'rgba(58,40,25,0.52)',
 };
 
+/*
+ * PISTEMERKIN KATEGORIAVÄRIT — SAMAT LUVUT KUIN css/styles.css:ssÄ.
+ *
+ * Sävy kuuluu tyylitiedostoon, ja kartalla se luetaan sieltä
+ * (nostosymMustelajit). Tämä taulu on VARAPOLKU kahteen paikkaan,
+ * joissa tyylitiedostoa ei ole: laattoja polttava Node-ajo ja
+ * yksikkötestit. Jos luvut eroaisivat, poltettu piste olisi eri
+ * värinen kuin elävä — ja se näkyisi heti vierekkäin, joten
+ * tests/nostoladonta.test.mjs lukee css/styles.css:n --sym-muuttujat
+ * ja kaatuu, jos jokin niistä on jäänyt jälkeen.
+ */
+export const NOSTOSYM_PISTE_VARIT = {
+  silma: '#5f7f9e',
+  historia: '#a05c3f',
+  ruoka: '#8e4550',
+  kulttuuri: '#7b5a8c',
+  tekniikka: '#6f7278',
+  kauppa: '#7d7840',
+  sana: '#47597f',
+  merenkulku: '#34566d',
+  urheilu: '#93893c',
+  kaupunki: '#8a6d4a',
+  hetki: '#6e4a63',
+};
+
+/**
+ * Kiekon peitto: sama 0,86 kuin merkin vahvalla musteella, jotta väri
+ * ei ole pergamentilla merkkiä painavampi (css/styles.css
+ * .nostosym-mini-taytto `opacity`).
+ */
+export const NOSTOSYM_PISTE_HIMMEYS = 0.86;
+
 /** Mittanauha tekstin leveydelle; yksi konteksti koko kirjastolle. */
 let NOSTOSYM_MITTA = null;
 
@@ -2054,7 +2031,13 @@ function nostosymAsuTai(svg, laji) {
  * `stroke` ja `stroke-width` eivät enää koske näihin merkkeihin.
  */
 function nostosymMustelajit(svg) {
-  if (NOSTOSYM_MUSTE || !svg) return NOSTOSYM_MUSTE ?? NOSTOSYM_MUSTE_VARA;
+  if (NOSTOSYM_MUSTE || !svg) {
+    return NOSTOSYM_MUSTE ?? {
+      ...NOSTOSYM_MUSTE_VARA,
+      varit: NOSTOSYM_PISTE_VARIT,
+      pisteHimmeys: NOSTOSYM_PISTE_HIMMEYS,
+    };
+  }
   const lue = (luokka, vara) => {
     const apu = el('path', { class: luokka, d: 'M0 0 L1 0 Z', visibility: 'hidden' }, svg);
     const t = getComputedStyle(apu);
@@ -2062,9 +2045,27 @@ function nostosymMustelajit(svg) {
     apu.remove();
     return arvo;
   };
+  /*
+   * PISTEMERKIN VÄRIT SAMASTA LÄHTEESTÄ. Jokainen kiekko lukee oman
+   * luokkansa (`.nostosym-mini-<kategoria>`) lasketun täytön, eli sen
+   * --sym-muuttujan, jolla myös selitevalikon väripallo palaa. Peitto
+   * on luokan `opacity`, koska canvas ei osaa lukea sitä `fill`istä.
+   */
+  const varit = {};
+  for (const tunnus of NOSTOSYM_PISTEET) {
+    varit[tunnus] = lue(`nostosym-mini-taytto nostosym-mini-${tunnus}`,
+      NOSTOSYM_PISTE_VARIT[tunnus]);
+  }
+  const apu = el('path', {
+    class: 'nostosym-mini-taytto', d: 'M0 0 L1 0 Z', visibility: 'hidden',
+  }, svg);
+  const peitto = parseFloat(getComputedStyle(apu).opacity);
+  apu.remove();
   NOSTOSYM_MUSTE = {
     vahva: lue('nostosym-mini', NOSTOSYM_MUSTE_VARA.vahva),
     ohut: lue('nostosym-mini-ohut', NOSTOSYM_MUSTE_VARA.ohut),
+    varit,
+    pisteHimmeys: Number.isFinite(peitto) ? peitto : NOSTOSYM_PISTE_HIMMEYS,
   };
   return NOSTOSYM_MUSTE;
 }

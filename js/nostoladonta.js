@@ -201,6 +201,17 @@ export function nostoladontaSkaala(rajaus) {
  * väistö on katon purressa hieman varovainen (nimiöiden väliin jää
  * ilmaa) — se ei voi koskaan päästää niitä päällekkäin.
  */
+/*
+ * MERKIN MITTA EI MUUTU, VAIKKA YKSITOISTA MUOTOA MUUTTUI (2.9.2026).
+ *
+ * Omistaja: *"Kaikista muista kategorioista voisi tehdä yksinkertaisesti
+ * vain pisteen, paitsi jätetään vuori ja vesi ja skandaali ja
+ * söpöysmerkki ennalleen."* Piirros on toinen, mutta merkin OMA MITTA
+ * (NOSTOLADONTA_SYMBOLI_R = NOSTOSYM_MINI_R = 6,5) on ennallaan — ja
+ * juuri se on ladonnan, väistön ja merkkisuhteen luku. Ladonta on siis
+ * tavulleen sama; muuttunut on vain se muste, joka siihen paikkaan
+ * piirtyy. Sen huomaa NOSTOLADONTA_SAANTO (v8), ei tämä luku.
+ */
 /** Nimiön kirjasinkoko kirjaston yksikköinä (js/fokusnosto-symbolit.js
  * NOSTOSYM_NIMIO_KOKO — tuplattu tänne, koska tämä moduuli ei saa tuoda
  * mitään; tests/nostoladonta.test.mjs vahtii että luvut ovat samat). */
@@ -606,8 +617,26 @@ export function nostoladontaKattoSuhde(porras, ruutuPx) {
  * paksumpi. Sama syy kuin v5:ssä ja v6:ssa — piirtosäännön muutos ei
  * näy yhdessäkään merkin kentässä, joten ilman tätä nostoa luettelo
  * väittäisi vanhoja laattoja tuoreiksi.
+ *
+ * v8 (omistaja 2.9.2026, sanatarkasti: *"Karttasymboleja voitaisiin
+ * vielä yksinkertaistaa. Kaikista muista kategorioista voisi tehdä
+ * yksinkertaisesti vain pisteen, paitsi jätetään vuori ja vesi ja
+ * skandaali ja söpöysmerkki ennalleen."*): yksitoista kategoriaa sai
+ * saman värillisen pistemerkin (js/fokusnosto-symbolit.js osio
+ * PISTEMERKKI), ja samalla laattoihin polttuvat myös HISTORIAN HETKET
+ * ja ELÄINTÄYT, jotka olivat jääneet eläväksi kerrokseksi (omistajan
+ * havainto: *"Esim. Kreikassa Merikilpikonna on vielä polttamatta"*).
+ *
+ * KUMPIKAAN EI NÄY YHDESSÄKÄÄN VANHAN MERKIN KENTÄSSÄ. Pisteytetyn
+ * merkin tunnus, symboli, paikka ja nimiö ovat entisensä — vain muste
+ * on toinen — joten ilman tätä nostoa luettelo väittäisi v7-laattoja
+ * tuoreiksi ja peli vaikenisi merkeistä, jotka laatassa ovat vanhalla
+ * kuviolla. Nostettuna luettelo ei kelpaa lainkaan
+ * (js/laattapyramidi.js `nt.saanto !== NOSTOLADONTA_SAANTO`), peli
+ * piirtää nostot elävinä uusilla muodoilla, ja seuraava nostotason
+ * poltto tekee niistä taas laattaa.
  */
-export const NOSTOLADONTA_SAANTO = 'v7';
+export const NOSTOLADONTA_SAANTO = 'v8';
 
 export function nostoladontaTiiviste(merkki) {
   const osat = [
