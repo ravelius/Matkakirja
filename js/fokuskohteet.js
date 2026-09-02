@@ -2787,8 +2787,6 @@ function poltettujenNostojenVaraukset(ui, s, paatokset) {
  * tulee samasta asettumisketjusta kuin muukin (js/ui.js
  * paivitaMaastonimet → paivitaFokuskohteet), ei eleen aikana.
  */
-const NAAPURIN_VARAUKSET = new Map();
-
 /**
  * Yhden maan poltetut laatikot laudan yksiköissä — kiertämättöminä.
  *
@@ -2800,9 +2798,24 @@ const NAAPURIN_VARAUKSET = new Map();
  *   generaattorin oman luettelon, koska Nodessa ei ole verkkoa.
  */
 export function maanPoltetutVaraukset(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
+  const tynka = poltettuTynka(pack, iso, pohja, onPoltettu);
+  if (!tynka) return [];
+  return poltettujenNostojenVaraukset(tynka, tynka.__s, tynka.fokuskohdeNimioPaatokset);
+}
+
+/**
+ * YKSI LADONTA, KAKSI LUKIJAA: yhden maan ladottu tynkä valmiiksi
+ * ajettuna (kasaus, erottelu, nimiöväistö, poltettu-liput). Varaukset
+ * (maanPoltetutVaraukset) ja osumamuodot (maanPoltetutMerkit) lukevat
+ * saman tuloksen — kaksi ladontaa ajautuisi eri vastauksiin, ja juuri
+ * sen estäminen on koko ketjun sääntö (ks. lohko yllä).
+ *
+ * @returns {?object} tynkä, kenttä `__s` on käytetty mittakaava
+ */
+function poltettuTynka(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
   const s = nostoladontaSkaala(pohja?.rajaus);
   const bbox = pohja?.bbox;
-  if (!(s > 0) || !bbox || !pack) return [];
+  if (!(s > 0) || !bbox || !pack) return null;
   const lauta = pack.id;
   const taulu = pack.map?.cityCountry ?? {};
   const kaupungit = (pack.cities ?? []).filter((k) => taulu[k.id] === iso);
@@ -2815,7 +2828,7 @@ export function maanPoltetutVaraukset(pack, iso, pohja, onPoltettu = nostoOnPolt
   const rivit = kohdeKarttarivit({
     iso, lauta, kaupungit, pohjanAlla, lisat,
   });
-  if (!rivit.length) return [];
+  if (!rivit.length) return null;
   /*
    * TYNKÄ `ui` — samat kentät kuin generaattorilla. `kiertoKohdat`
    * antaa yhden kohdan: kiertävän laudan toinen kopio on kutsujan asia
@@ -2823,6 +2836,7 @@ export function maanPoltetutVaraukset(pack, iso, pohja, onPoltettu = nostoOnPolt
    * saa riippua siitä, kummasta kopiosta puhutaan.
    */
   const tynka = {
+    __s: s,
     fokusmoodi: true,
     katselu: false,
     game: { pack },
@@ -2852,7 +2866,220 @@ export function maanPoltetutVaraukset(pack, iso, pohja, onPoltettu = nostoOnPolt
   for (const r of tynka.fokuskohdeRyhmat) {
     r.poltettu = onPoltettu(r.id, kohteenNostotiiviste(tynka, r));
   }
-  return poltettujenNostojenVaraukset(tynka, s, tynka.fokuskohdeNimioPaatokset);
+  return tynka;
+}
+
+/*
+ * ====== NAAPURIN POLTETTU MERKKI ON MYÖS NAPAUTETTAVA ==============
+ *
+ * OMISTAJAN HAVAINTO 2.9.2026 (Bosnia, 50 km): *"Dinara ja Sveti Jure
+ * eivät ole klikattavissa."* Kumpikin on KROATIAN kohde, poltettuna
+ * laattaan (pyramidi.json nostotaso.nostot) ja siksi kartalla myös
+ * Bosnian näkymässä — mutta pelin kohdekerros rakennetaan vain siitä
+ * maasta, jossa pelaaja seisoo (nykyisenMaanKohteet), joten naapurin
+ * musteella ei ollut yhtäkään osumamuotoa. Merkki näkyy, nimi näkyy,
+ * eikä kumpaakaan voi napauttaa.
+ *
+ * LADONTA ON JO OLEMASSA. `maanPoltetutVaraukset` latoo naapurimaan
+ * täsmälleen samoilla passeilla kuin generaattori poltti ja palauttaa
+ * VARAUSLAATIKOT nimiladonnalle. Sama passi tietää myös, MIKÄ kohde
+ * kussakin laatikossa on — se tieto vain heitettiin pois. Tämä funktio
+ * palauttaa sen: yksi rivi merkkiä kohti, symbolin laatikko ja nimiön
+ * laatikko erikseen, ja mukana kohteen tietue, josta kortti aukeaa.
+ *
+ * KAKSI LUKIJAA, YKSI LADONTA (sama sääntö kuin
+ * poltettujenNostojenVaraukset-lohkossa): varaukset johdetaan näistä
+ * riveistä eikä rinnakkaisesta laskennasta.
+ *
+ * @returns {Array} [{ id, nimi, kohde, x, y, sade, symboli: {x0,y0,x1,y1},
+ *   nimio: ?{x0,y0,x1,y1} }] LAUDAN yksiköissä, kiertämättöminä
+ */
+export function maanPoltetutMerkit(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
+  const tynka = poltettuTynka(pack, iso, pohja, onPoltettu);
+  if (!tynka) return [];
+  const ulos = [];
+  const sade = KOHDE_SYMBOLI_R * tynka.__s;
+  tynka.fokuskohdeRyhmat.forEach((r, i) => {
+    if (!r.poltettu) return;
+    const x = r.nippu?.x ?? r.x + (r.sx ?? 0);
+    const y = r.nippu?.y ?? r.y + (r.sy ?? 0);
+    const kehys = tynka.fokuskohdeNimioPaatokset?.kehykset?.get(i);
+    ulos.push({
+      id: r.id,
+      nimi: r.nimi ?? null,
+      kohde: tynka.fokuskohdeTiedot.get(r.id) ?? null,
+      x,
+      y,
+      sade,
+      symboli: {
+        x0: x - sade, y0: y - sade, x1: x + sade, y1: y + sade,
+      },
+      nimio: kehys
+        ? {
+          x0: kehys.x1, y0: kehys.y1, x1: kehys.x2, y1: kehys.y2,
+        }
+        : null,
+    });
+  });
+  return ulos;
+}
+
+/*
+ * MAAKOHTAINEN VÄLIMUISTI. Tulos on pelkkää laudan dataa eikä riipu
+ * näkymästä eikä vuorosta (ks. lohko yllä, "LASKETAAN KERRAN MAATA
+ * KOHTI"), joten yksi taulu riittää koko istunnoksi.
+ */
+const NAAPURIN_MERKIT = new Map();
+
+/**
+ * NÄKYMÄSSÄ OLEVAT NAAPURIMAIDEN POLTETUT MERKIT.
+ *
+ * Sama karsinta kuin naapurienPoltetutVarauksilla — maan ikkuna ensin,
+ * sitten merkki kerrallaan — ja kiertävän laudan kopiosiirto mukana,
+ * jotta ruudun laidassa oleva toinen kopio saa oman osumamuotonsa.
+ *
+ * @returns {Array} merkit LAUDAN yksiköissä, kiertosiirto valmiiksi
+ *   lisättynä (kenttä `dx` kertoo, mistä kopiosta rivi on)
+ */
+export function naapurienPoltetutMerkit(ui, nakyva, onPoltettu = null) {
+  const pack = ui.game?.pack;
+  if (!pack?.id || !(nakyva?.w > 0)) return [];
+  if (!onPoltettu && !laatoissaOnNostoja()) return [];
+  const oma = nykyinenIso(ui);
+  const ulos = [];
+  for (const [iso, pohja] of Object.entries(FOKUS_POHJAT)) {
+    if (iso === oma || pohja?.lauta !== pack.id || !pohja.bbox) continue;
+    const { bbox } = pohja;
+    const siirrot = (ui.kiertoKohdat?.(bbox.x) ?? [bbox.x])
+      .map((x) => x - bbox.x)
+      .filter((dx) => laatikkoNakyy({
+        x0: bbox.x + dx, y0: bbox.y, x1: bbox.x + dx + bbox.w, y1: bbox.y + bbox.h,
+      }, nakyva));
+    if (!siirrot.length) continue;
+    const avain = `${pack.id}|${iso}`;
+    let merkit = onPoltettu ? null : NAAPURIN_MERKIT.get(avain);
+    if (!merkit) {
+      merkit = maanPoltetutMerkit(pack, iso, pohja, onPoltettu ?? nostoOnPoltettu);
+      if (!onPoltettu) NAAPURIN_MERKIT.set(avain, merkit);
+    }
+    for (const dx of siirrot) {
+      for (const merkki of merkit) {
+        const laatikot = [merkki.symboli, merkki.nimio].filter(Boolean)
+          .map((l) => ({
+            x0: l.x0 + dx, y0: l.y0, x1: l.x1 + dx, y1: l.y1,
+          }));
+        if (!laatikot.some((l) => laatikkoNakyy(l, nakyva))) continue;
+        ulos.push({
+          ...merkki,
+          iso,
+          dx,
+          x: merkki.x + dx,
+          symboli: laatikot[0],
+          nimio: merkki.nimio ? laatikot[laatikot.length - 1] : null,
+        });
+      }
+    }
+  }
+  return ulos;
+}
+
+/*
+ * ====== NAAPURIN POLTETTU MERKKI ON MYÖS NAPAUTETTAVA ==============
+ *
+ * OMISTAJAN HAVAINTO 2.9.2026 (Bosnia, 50 km), sanatarkasti: *"Dinara
+ * ja Sveti Jure eivät ole klikattavissa."* Kumpikin on KROATIAN kohde,
+ * poltettuna nostotason laattaan ja siksi kartalla myös Bosnian
+ * näkymässä — mutta pelin kohdekerros rakennetaan vain siitä maasta,
+ * jossa pelaaja seisoo (nykyisenMaanKohteet), joten naapurin
+ * musteella ei ollut yhtäkään osumamuotoa. Kartalla oli merkki ja
+ * nimi, eikä kumpaakaan voinut napauttaa.
+ *
+ * Sama koski kaikkea naapurin poltettua mustetta: Zagrebia, Splitiä,
+ * Savaa, Plitvicen järviä, Zrinski–Frankopania. Mitattuna
+ * (tools/tarkista-karttamerkit.mjs --maa BIH) 25 löydöstä 33:sta oli
+ * tätä yhtä juurisyytä.
+ *
+ * ── OSUMAMUODOT TULEVAT SAMASTA LADONNASTA KUIN VARAUKSET ─────────
+ *
+ * `naapurienPoltetutMerkit` on jo se ladonta, jolla nimiladonta saa
+ * naapurin varauslaatikot — ja laatikko on sama olio kummallekin
+ * kysyjälle (Raamattu: *"Poltetun ladonnan ja selaimen osumamuotojen
+ * on tultava SAMASTA lähteestä"*). Tämä passi vain kirjoittaa ne
+ * DOMiin.
+ *
+ * ── OMA KERROS SAMAN KERROKSEN SISÄLLÄ ────────────────────────────
+ *
+ * Muodot elävät kohdekerroksen omassa alaryhmässä, koska napautuksen
+ * ratkaisee kerroksen yhteinen etäisyyskilpailu (lahinKohde) — oma
+ * kerros jäisi sen ulkopuolelle ja veisi napautuksen piirtojärjestyk-
+ * sellä. Alaryhmä on VIIMEISENÄ, jotta tasapelin ratkaisee oman maan
+ * merkki: naapurin muste on kartalla vieraana, eikä se saa voittaa
+ * kotimaista tasatilanteessa.
+ *
+ * MUODOT OVAT SUORAAN LAUDAN YKSIKÖISSÄ eikä skaalatussa ryhmässä:
+ * naapurilla ei ole piirrettävää merkkiä, jonka mittaan ne pitäisi
+ * suhteuttaa — vain osuma. Sormen mitta (KOHDE_OSUMA_R, 44 px) tulee
+ * silloin suoraan ruudun skaalasta.
+ */
+function asetaNaapurinOsumat(ui, kerros, merkit) {
+  const vanha = ui.naapuriOsumaKerros;
+  if (!merkit.length) {
+    if (vanha?.isConnected) vanha.remove();
+    ui.naapuriOsumaKerros = null;
+    ui.naapuriOsumaAvain = null;
+    return;
+  }
+  const sRuutu = ui.fokusMerkkiSkaala?.() ?? 0;
+  if (!(sRuutu > 0)) return;
+  const sade = KOHDE_OSUMA_R * sRuutu;
+  /*
+   * KERROS RAKENNETAAN UUDESTAAN VAIN KUN SEN SISÄLTÖ MUUTTUU — sama
+   * sääntö kuin nimikerroksella (js/karttanimet.js): panoroinnissa
+   * joukko muuttuu vasta kun merkki tulee reunan yli.
+   */
+  const avain = `${sade.toFixed(2)}|${merkit.map((m) => `${m.id}@${m.x.toFixed(0)}`).join(',')}`;
+  const kelpaa = vanha?.isConnected && vanha.parentNode === kerros;
+  if (kelpaa && ui.naapuriOsumaAvain === avain) return;
+  const ryhma = kelpaa ? vanha : el('g', { class: 'naapurikohteet' }, kerros);
+  /* Viimeiseksi: kerros on voitu rakentaa uusiksi tämän alta. */
+  if (ryhma.nextSibling) kerros.appendChild(ryhma);
+  ui.naapuriOsumaKerros = ryhma;
+  ui.naapuriOsumaAvain = avain;
+  ryhma.textContent = '';
+  for (const m of merkit) {
+    if (!m.kohde) continue;
+    /*
+     * TIETO KORTIN AVAAMISTA VARTEN samaan tauluun kuin oman maan
+     * kohteet: napautuksen voittaja (lahinKohde) ja nimikerroksen
+     * napautus (ui.kohdenimenNapautus) lukevat molemmat sitä.
+     */
+    ui.fokuskohdeTiedot?.set(m.id, m.kohde);
+    const g = el('g', { class: 'fokuskohde fokuskohde-naapuri' }, ryhma);
+    g.dataset.kohde = m.id;
+    g.setAttribute('role', 'button');
+    g.setAttribute('tabindex', '0');
+    g.setAttribute('aria-label', `${m.kohde.nimi ?? m.nimi ?? ''}: avaa tietoruutu`);
+    el('circle', {
+      class: 'fokuskohde-osuma',
+      cx: m.x.toFixed(2),
+      cy: m.y.toFixed(2),
+      r: sade.toFixed(2),
+    }, g);
+    /*
+     * NIMIÖ ON OMA MAALINSA (v1218:n sääntö naapuriin laajennettuna):
+     * poltettu nimi on laatan pikseleitä, ja ilman tätä suorakaidetta
+     * napautettavaa olisi vain symboli.
+     */
+    if (m.nimio) {
+      el('rect', {
+        class: 'fokuskohde-osuma fokuskohde-tekstiosuma',
+        x: m.nimio.x0.toFixed(2),
+        y: m.nimio.y0.toFixed(2),
+        width: (m.nimio.x1 - m.nimio.x0).toFixed(2),
+        height: (m.nimio.y1 - m.nimio.y0).toFixed(2),
+      }, g);
+    }
+  }
 }
 
 /** Leikkaako laatikko näkyvää aluetta? */
@@ -2872,40 +3099,25 @@ function laatikkoNakyy(laatikko, nakyva) {
  * @returns {Array} laatikot LAUDAN yksiköissä, [{ x0, y0, x1, y1 }]
  */
 export function naapurienPoltetutVaraukset(ui, nakyva, onPoltettu = null) {
-  const pack = ui.game?.pack;
-  // Ilman luetteloa mitään ei ole poltettu, eikä tyhjää tulosta saa
-  // jäädä välimuistiin: luettelo saapuu verkosta piirron jälkeen.
-  if (!pack?.id || !(nakyva?.w > 0)) return [];
-  if (!onPoltettu && !laatoissaOnNostoja()) return [];
-  const oma = nykyinenIso(ui);
+  /*
+   * VARAUS ON MERKIN TOINEN LUKIJA (2.9.2026, ks.
+   * naapurienPoltetutMerkit). Laatikot johdetaan samasta ladonnasta
+   * kuin osumamuodot eikä rinnakkaisesta laskennasta — Raamatun ehto
+   * *"Poltetun ladonnan ja selaimen osumamuotojen on tultava SAMASTA
+   * lähteestä"* koskee myös nimiladonnan varauksia, koska varaus ja
+   * osuma ovat sama laatikko kahdelle kysyjälle.
+   *
+   * JÄRJESTYS ON ENTINEN: symboli ensin, nimiö perään, maa kerrallaan.
+   */
+  return varauksetMerkeista(naapurienPoltetutMerkit(ui, nakyva, onPoltettu), nakyva);
+}
+
+/** Merkkiriveistä nimiladonnan varauslaatikot (ks. yllä). */
+function varauksetMerkeista(merkit, nakyva) {
   const ulos = [];
-  for (const [iso, pohja] of Object.entries(FOKUS_POHJAT)) {
-    if (iso === oma || pohja?.lauta !== pack.id || !pohja.bbox) continue;
-    const { bbox } = pohja;
-    // Kiertävällä laudalla maa on kartalla kahdesti; siirto on kopion
-    // etäisyys datan omasta paikasta (js/ui.js kiertoKohdat).
-    const siirrot = (ui.kiertoKohdat?.(bbox.x) ?? [bbox.x])
-      .map((x) => x - bbox.x)
-      .filter((dx) => laatikkoNakyy({
-        x0: bbox.x + dx, y0: bbox.y, x1: bbox.x + dx + bbox.w, y1: bbox.y + bbox.h,
-      }, nakyva));
-    if (!siirrot.length) continue;
-    const avain = `${pack.id}|${iso}`;
-    let laatikot = onPoltettu ? null : NAAPURIN_VARAUKSET.get(avain);
-    if (!laatikot) {
-      laatikot = maanPoltetutVaraukset(pack, iso, pohja, onPoltettu ?? nostoOnPoltettu);
-      if (!onPoltettu) NAAPURIN_VARAUKSET.set(avain, laatikot);
-    }
-    for (const dx of siirrot) {
-      for (const laatikko of laatikot) {
-        const rivi = dx ? {
-          x0: laatikko.x0 + dx,
-          y0: laatikko.y0,
-          x1: laatikko.x1 + dx,
-          y1: laatikko.y1,
-        } : laatikko;
-        if (laatikkoNakyy(rivi, nakyva)) ulos.push(rivi);
-      }
+  for (const merkki of merkit) {
+    for (const laatikko of [merkki.symboli, merkki.nimio]) {
+      if (laatikko && laatikkoNakyy(laatikko, nakyva)) ulos.push(laatikko);
     }
   }
   return ulos;
@@ -3102,8 +3314,15 @@ export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
    * Sama portti kuin omilla poltetuilla: piilotetussa kerroksessa ei
    * ole nostolaattojakaan (ks. asetaPoltetutTekstiOsumat).
    */
-  const naapurienVaraukset = piilossa || !karttanimetLatovat(ui)
-    ? [] : naapurienPoltetutVaraukset(ui, nakyva);
+  const naapurinMerkit = piilossa || !karttanimetLatovat(ui)
+    ? [] : naapurienPoltetutMerkit(ui, nakyva);
+  const naapurienVaraukset = varauksetMerkeista(naapurinMerkit, nakyva);
+  /*
+   * NAAPURIN MUSTE SAA OSUMAMUOTONSA SAMASTA LADONNASTA (2.9.2026, ks.
+   * asetaNaapurinOsumat): rivit, joista varaukset yllä johdettiin, ovat
+   * juuri ne merkit, jotka kartalla näkyvät.
+   */
+  asetaNaapurinOsumat(ui, kerros, naapurinMerkit);
   asetaKohdeMittakaava(ui, 1);
   /*
    * NIMIÖIDEN VÄISTÖ VASTA TÄSSÄ eli asemoinnin jälkeen ja vain

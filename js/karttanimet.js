@@ -113,6 +113,8 @@ import {
   NOSTOLADONTA_MERKKISUHDE, NOSTOLADONTA_S, nostoladontaVenytys,
 } from './nostoladonta.js';
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
+import { avaaMinipopup } from './minipopup.js';
+import { html } from './ui-apurit.js';
 
 /**
  * Lautayksikköä yhtä kartan piirtopikseliä kohti maan lehtinäkymässä —
@@ -692,6 +694,22 @@ const MERKIN_VIIVA = {
   vuori: 1 * MERKIN_KARTTAVAKIO,
 };
 
+/*
+ * MAASTOKOLMION NAPAUTUSALUEEN SÄDE, CSS-PIKSELEITÄ (ks.
+ * avaaMaastoPopup). Luku on 11 eikä kohdemerkkien 22, ja se on
+ * tarkoituksellinen poikkeus sormen mitasta:
+ *
+ * TÄMÄ KERROS ON KARTAN PÄÄLLIMMÄINEN (js/ui.js: `karttanimet`
+ * liitetään svg:hen board-rootin jälkeen), joten sen jokainen
+ * osumamuoto varjostaa alleen jäävää laattaa, nappulaa ja
+ * kohdemerkkiä. Kohdemerkin 44 pikselin ympyrä kilpailee napautuksesta
+ * ETÄISYYDELLÄ (js/fokuskohteet.js lahinKohde) ja voi siksi olla suuri;
+ * tämä muoto vie napautuksen ehdottomasti, joten sen on oltava merkin
+ * kokoinen eikä sormen. Nimi on sitä paitsi se iso maali: koko
+ * maastonimen teksti on napautettava (data-maasto tekstisolmussa).
+ */
+const MAASTON_OSUMA_R = 11;
+
 /**
  * Lauta kiertyy: 12000 yksikköä on koko maapallon ympärys.
  *
@@ -764,6 +782,8 @@ function parita(kaupungit, vuoret, jarvet) {
       x: lahin.kohde.x,
       y: lahin.kohde.y,
       tarkeys: lahin.kohde.tarkeys ?? 2,
+      /* Parillinenkin maastonimi on napautettava (ks. avaaMaastoPopup). */
+      polku: lahin.kohde.polku ?? null,
     };
     lahin.kohde.parillinen = true;
   }
@@ -820,6 +840,108 @@ export function asetaMaastonOmistajat(hae) {
   unohdaKarttanimet();
 }
 
+/* ------------------------------------------ maastonimen napautus */
+
+/*
+ * ====== MAASTONIMI ON MYÖS NAPAUTETTAVA ===========================
+ *
+ * OMISTAJAN HAVAINTO 2.9.2026 (Bosnia, 50 km), sanatarkasti:
+ * *"Dinaariset Alpit mitä ei voi klikata"* — ja yleisenä vaatimuksena
+ * *"nyt nämä Euroopan kaikki karttakohteet on huolella
+ * tarkistettava"*.
+ *
+ * ── MIKSI TÄMÄ PUOLI PUUTTUI ──────────────────────────────────────
+ *
+ * Maastonimellä on kaksi mahdollista kirjoittajaa (ks. lohko yllä,
+ * KUKA KIRJOITTAA MAASTON NIMEN). Kun nimen kirjoittaa KOHDEMERKKI,
+ * kortti on ollut olemassa alusta asti — merkki on kohdekerroksen
+ * napautettava merkki ja nimi sen nimiö. Kun nimen kirjoittaa TÄMÄ
+ * KERROS, kohdetta ei ole: nimi ja sen vuorikolmio olivat pelkkää
+ * kuvitusta, jonka takana ei ollut mitään avattavaa. Kartalla oli siis
+ * kaksi eri sääntöä sen mukaan, sattuiko jollakin maalla olemaan
+ * samanniminen kohde.
+ *
+ * Nyt on yksi sääntö: JOKAINEN NÄKYVÄ MAASTONIMI JA SEN KOLMIO
+ * AVAAVAT SEN, MITÄ AINEISTO NIISTÄ TIETÄÄ. Kohteellinen maastonimi
+ * avaa kohteensa kortin kuten ennen (kerros ei lado sitä lainkaan);
+ * kohteeton avaa minipopupin — pelin oman pienen tietoikkunan
+ * (js/minipopup.js), sama komponentti kuin muissakin "mikä tämä on?"
+ * -selityksissä.
+ *
+ * ── MITÄ POPUPISSA LUKEE, JA MITÄ EI ──────────────────────────────
+ *
+ * Vain se, mikä aineistossa on: nimi, selitys, vuoren korkein huippu
+ * ja sen korkeus metreinä sekä linkki Wikipediaan. `pituus`-kenttää EI
+ * näytetä, vaikka se on tietueessa: se on LAUDAN yksiköitä (uoman
+ * murtoviivan pituus laudalla), ei kilometrejä, ja projektio venyttää
+ * sitä leveyspiirin mukaan. Luku näyttäisi faktalta olematta sitä —
+ * ja keksitty fakta on pelin sisältösääntöjen vastainen.
+ */
+
+/*
+ * TIETUEHAKU AVAIMELLA. Solmu kantaa `data-maasto="laji:avain"`, koska
+ * DOM ei voi kantaa oliota: sama avain voi esiintyä kahdessa lajissa,
+ * ja laji kertoo myös popupin faktarivit.
+ */
+let maastoHakuTaulu = null;
+
+function maastoTietue(polku) {
+  if (!maastoHakuTaulu) {
+    maastoHakuTaulu = new Map();
+    for (const laji of ['vuoret', 'jarvet', 'joet']) {
+      for (const t of MAAILMANKARTAN_NIMET?.[laji] ?? []) {
+        if (t?.avain) maastoHakuTaulu.set(`${laji}:${t.avain}`, t);
+      }
+    }
+  }
+  return maastoHakuTaulu.get(polku) ?? null;
+}
+
+/** Nimikerroksen lajinimi (`vuori`, `jarvi`) aineiston avainpoluksi. */
+const MAASTON_LAJIT = { vuori: 'vuoret', jarvi: 'jarvet', joki: 'joet' };
+
+/**
+ * Maastonimen avainpolku DOMiin, tai null jos tietue on nimetön.
+ *
+ * @param {string} laji  ladonnan laji (`vuori` | `jarvi`)
+ * @param {object} tietue MAAILMANKARTAN_NIMET-rivi
+ */
+function maastoPolku(laji, tietue) {
+  const kansio = MAASTON_LAJIT[laji];
+  return kansio && tietue?.avain ? `${kansio}:${tietue.avain}` : null;
+}
+
+/**
+ * Avaa maastonimen minipopupin. Julkinen, jotta savukkeet ja
+ * kohdekerros voivat käyttää samaa ovea kuin napautus.
+ *
+ * @param {string} polku `data-maasto`-määreen arvo
+ * @returns {?HTMLDialogElement}
+ */
+export function avaaMaastoPopup(polku) {
+  const t = maastoTietue(polku);
+  if (!t) return null;
+  const sisalto = [];
+  if (t.selitys) sisalto.push(html('p', 'minipopup-teksti', t.selitys));
+  /*
+   * FAKTARIVI VAIN VUORELLE, koska vain vuorella on aineistossa
+   * todellisen maailman mitta (huippu ja sen korkeus metreinä).
+   */
+  const huippu = t.huippu && t.korkeus ? `${t.huippu} · ${t.korkeus} m`
+    : t.huippu || (t.korkeus ? `${t.korkeus} m` : '');
+  if (huippu) {
+    sisalto.push(html('p', 'minipopup-teksti maastopopup-fakta', `Korkein huippu: ${huippu}`));
+  }
+  if (t.wiki) {
+    const linkki = html('a', 'maastopopup-wiki', 'Lue lisää Wikipediasta');
+    linkki.href = `https://fi.wikipedia.org/wiki/${encodeURIComponent(t.wiki)}`;
+    linkki.target = '_blank';
+    linkki.rel = 'noopener noreferrer';
+    sisalto.push(linkki);
+  }
+  return avaaMinipopup({ otsikko: t.nimi, sisalto, luokka: 'maastopopup' });
+}
+
 /*
  * TÄRKEYS RATKAISEE TÖRMÄYKSEN (sama kaava kuin sisalto.mjs).
  *
@@ -862,12 +984,21 @@ function keraaAineisto(pack) {
   const omistetut = maastonOmistajatHaku?.() ?? null;
   const kelpaa = (v) => Number.isFinite(v.x) && Number.isFinite(v.y)
     && !omistetut?.has(v);
+  /*
+   * AVAIN KULKEE LADONNAN LÄPI PIIRTOON (2.9.2026, maastonimen
+   * napautus): DOM ei voi kantaa tietuetta, joten se kantaa avaimen ja
+   * piirto kirjoittaa sen `data-maasto`-määreeksi.
+   */
   const vuoret = (nimet.vuoret ?? [])
     .filter(kelpaa)
-    .map((v) => ({ nimi: v.nimi, x: v.x, y: v.y, tarkeys: v.tarkeys ?? 2 }));
+    .map((v) => ({
+      nimi: v.nimi, x: v.x, y: v.y, tarkeys: v.tarkeys ?? 2, polku: maastoPolku('vuori', v),
+    }));
   const jarvet = (nimet.jarvet ?? [])
     .filter(kelpaa)
-    .map((v) => ({ nimi: v.nimi, x: v.x, y: v.y, tarkeys: v.tarkeys ?? 2 }));
+    .map((v) => ({
+      nimi: v.nimi, x: v.x, y: v.y, tarkeys: v.tarkeys ?? 2, polku: maastoPolku('jarvi', v),
+    }));
   parita(kaupungit, vuoret, jarvet);
   return { kaupungit, vuoret, jarvet };
 }
@@ -1446,6 +1577,7 @@ function lado(data, px) {
           y: laudalle(my),
           ank: 'middle',
           koko: mkoko,
+          polku: pari.polku ?? null,
         });
         nimetyt.add(c);
         /* Parillisen vuoren nimi tuli tässä: kolmio saa jäädä. */
@@ -1932,6 +2064,7 @@ function lado(data, px) {
         koko: KOKO.vuori,
         laji: 'vuori',
         tarkeys: v.tarkeys,
+        polku: v.polku ?? null,
       });
     }
   }
@@ -1940,7 +2073,13 @@ function lado(data, px) {
       if (j.tarkeys > 1 && !nakyy(KYNNYS.jarviNimi2)) continue;
       if (j.parillinen) continue;
       maasto.push({
-        nimi: j.nimi, x: j.x, y: j.y, koko: KOKO.jarvi, laji: 'jarvi', tarkeys: j.tarkeys,
+        nimi: j.nimi,
+        x: j.x,
+        y: j.y,
+        koko: KOKO.jarvi,
+        laji: 'jarvi',
+        tarkeys: j.tarkeys,
+        polku: j.polku ?? null,
       });
     }
   }
@@ -1963,6 +2102,7 @@ function lado(data, px) {
       y: laudalle(y),
       ank: 'middle',
       koko: m.koko,
+      polku: m.polku ?? null,
     });
     if (m.laji === 'vuori' && m.kohde) nimetytVuoret.add(m.kohde);
   }
@@ -1975,7 +2115,7 @@ function lado(data, px) {
   for (const v of data.vuoret) {
     if (!nimetytVuoret.has(v)) continue;
     merkit.push({
-      laji: 'vuori', iso: v.tarkeys <= 1, x: v.x, y: v.y,
+      laji: 'vuori', iso: v.tarkeys <= 1, x: v.x, y: v.y, polku: v.polku ?? null,
     });
   }
 
@@ -2077,10 +2217,22 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
     kerros.dataset.kohdenapautus = '1';
     kerros.addEventListener('click', (tapahtuma) => {
       const solmu = tapahtuma.target?.closest?.('[data-kohde]');
-      if (!solmu) return;
+      if (solmu) {
+        tapahtuma.stopPropagation();
+        tapahtuma.preventDefault();
+        ui.kohdenimenNapautus?.(solmu.getAttribute('data-kohde'));
+        return;
+      }
+      /*
+       * MAASTONIMI JA SEN KOLMIO (2.9.2026, ks. avaaMaastoPopup).
+       * Sama kuuntelija, sama sääntö — vain kortti on toinen: kohteella
+       * on kohdekortti, kohteettomalla maastonimellä minipopup.
+       */
+      const maasto = tapahtuma.target?.closest?.('[data-maasto]');
+      if (!maasto) return;
       tapahtuma.stopPropagation();
       tapahtuma.preventDefault();
-      ui.kohdenimenNapautus?.(solmu.getAttribute('data-kohde'));
+      avaaMaastoPopup(maasto.getAttribute('data-maasto'));
     });
   }
   const tyhjenna = () => {
@@ -2254,13 +2406,32 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
   for (const { m, x } of nakyvatMerkit) {
     if (m.laji === 'vuori') {
       const r = (m.iso ? MERKKI.vuoriIso : MERKKI.vuori) * kolmionKatto;
+      /*
+       * KOLMIO ON NAPAUTETTAVA (2.9.2026, ks. avaaMaastoPopup).
+       * Osumamuoto on ERILLINEN ympyrä eikä kolmion oma viiva: veto on
+       * hiuksenohut, ja sen osumapinta olisi muutaman pikselin levyinen
+       * V. Säde on MAASTON_OSUMA_R (perustelu siellä). Ympyrä on
+       * läpinäkyvä mutta MAALATTU (fill), koska maalaamaton muoto ei
+       * ota osumia vastaan.
+       */
+      const isanta = m.polku
+        ? el('g', { class: 'karttamerkki-vuoriryhma', 'data-maasto': m.polku }, kerros)
+        : kerros;
       el('path', {
         class: 'karttamerkki karttamerkki-vuori',
         'stroke-width': MERKIN_VIIVA.vuori * kolmionKatto,
         d: `M${(x - r).toFixed(2)} ${(m.y + r * 0.6).toFixed(2)}`
           + `L${x.toFixed(2)} ${(m.y - r * 0.8).toFixed(2)}`
           + `L${(x + r).toFixed(2)} ${(m.y + r * 0.6).toFixed(2)}`,
-      }, kerros);
+      }, isanta);
+      if (m.polku) {
+        el('circle', {
+          class: 'karttamerkki-osuma',
+          cx: x.toFixed(2),
+          cy: m.y.toFixed(2),
+          r: Math.max(r * 1.4, laudalle(MAASTON_OSUMA_R)).toFixed(2),
+        }, isanta);
+      }
       continue;
     }
     el('circle', {
@@ -2289,6 +2460,13 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
        * tunnuksen kerroksen yhteiselle kuuntelijalle alla.
        */
       ...(n.laji === 'kohde' && n.id ? { 'data-kohde': n.id } : null),
+      /*
+       * MAASTONIMI ON NAPAUTETTAVA KOKONAAN, samalla säännöllä kuin
+       * kohdenimi (2.9.2026, ks. avaaMaastoPopup). Avain kulkee
+       * ladonnasta tänne, ja kerroksen yhteinen kuuntelija avaa
+       * minipopupin.
+       */
+      ...(n.polku ? { 'data-maasto': n.polku } : null),
       x,
       y: n.y,
       'font-size': laudalle(n.koko),
