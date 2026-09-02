@@ -122,13 +122,12 @@ const SAHKE_TUKHOLMA = {
    * vastaus on. Juuri se raja tekee tehtävästä kaivamista eikä
    * arvaamista.
    */
+  /* Sähke on lyhyt ja kysymys ensin — sääntö ja perustelu
+   * js/packs/fokusvirta-sofia.js SAHKE_SOFIA (omistaja 2.9.2026). */
   sahke: 'LIVIALLE STOP\n'
-    + 'PAIKKA ON SELVILLÄ STOP\n'
-    + 'EN SÄHKÖTÄ SITÄ ILMAAN KOSKA LINJALLA KUUNNELLAAN STOP\n'
-    + 'VIERAASI VASTATKOON TUNNUSSANALLA STOP\n'
-    + 'MERI OTTI RUOTSISSA KERRAN JA ANTOI TAKAISIN STOP\n'
-    + 'NIMETKÖÖN SEN KOHTEEN JA VUODEN JOLLOIN SE NOUSI STOP\n'
-    + 'MOLEMMAT LUKEVAT LEHDISSÄ JOTKA HÄN ON JO SAANUT KÄTEENSÄ STOP\n'
+    + 'MIKÄ MEREN OTTAMA ALUS NOUSI RUOTSISSA TAKAISIN JA MINÄ VUONNA STOP\n'
+    + 'VASTAA KOHDE JA VUOSI STOP\n'
+    + 'MOLEMMAT LUKEVAT LEHDESSÄSI STOP\n'
     + 'PÖLLÖ STOP',
 
   /*
@@ -136,14 +135,9 @@ const SAHKE_TUKHOLMA = {
    * lyhentymät reunoilla ("No niin", "mut"), keskellä sanat auki,
    * pronominit kokonaisina, ei huutomerkkejä.
    */
-  johdanto: 'No niin. Pöllö on löytänyt paikan eikä kerro sitä ennen kuin '
-    + 'se saa tunnussanan takaisin — se on aina ollut tarkka siitä, kuka '
-    + 'kuulee mitäkin. Minä täytän lomakkeen ja lennän, sinä kaivat '
-    + 'vastauksen.\n\n'
-    + 'Kaksi aukkoa: yksi kohde Ruotsin luettelosta ja yksi vuosiluku. '
-    + 'Kumpikin lukee siinä lehdessä, jonka sinä juuri sait käteesi. '
-    + 'Väärä vastaus ei sulje mitään — mut se syö palkkiota, ja minä '
-    + 'joudun lentämään turhaan.',
+  johdanto: 'No niin. Pöllö on löytänyt paikan eikä kerro sitä ennen '
+    + 'tunnussanaa. Vastaa kahteen aukkoon: kohde Ruotsin luettelosta ja '
+    + 'vuosiluku. Molemmat lukevat lehdessä, jonka juuri sait käteesi.',
 
   /* Sisältöhakemisto rakennetaan tämän maan pelidatasta ajonaikaisesti. */
   hakemistoMaa: 'SWE',
