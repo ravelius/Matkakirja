@@ -34,6 +34,12 @@ const paketti = await import('playwright')
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
+/*
+ * Ihmekuvan osoite on repon polku TAI ämpärin peilipolku, siirtolipun
+ * (js/media.js R2_ASSETIT.ihmeet) mukaan — kumpikin on laillinen, joten
+ * väite hyväksyy kummatkin (assetit ämpäriin, 2.9.2026).
+ */
+const IHME_KUVA = /assets\/kartat\/ihmeet\/|\/kohtaamiset\/ihmeet\//;
 const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg' };
 const palvelin = http.createServer((req, res) => {
   const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
@@ -198,7 +204,7 @@ if (tila.nappeja) {
 }
 let zoom = await suurennos();
 vaadi('"Koe ihme" avaa suurennoksen nähtävyysikkunan sisään (ei sen taakse)',
-  zoom.auki === true && /assets\/kartat\/ihmeet\//.test(zoom.osoite),
+  zoom.auki === true && IHME_KUVA.test(zoom.osoite),
   JSON.stringify({ auki: zoom.auki, osoite: zoom.osoite }));
 /*
  * ODOTUKSET PÄIVITETTY 28.8.2026: nauhan teksti on ollut v1255:stä
@@ -316,7 +322,7 @@ await avaaKaupunki('peking');
 vaadi('Vanha kesäpalatsi aukesi', await avaaKohde('Vanha kesäpalatsi'));
 tila = await juttu();
 vaadi('kadonneen kohteen ENSIMMÄINEN kuva on havainnekuva nauhoineen',
-  /assets\/kartat\/ihmeet\//.test(tila.kuvanOsoite) && tila.nauhoja === 1
+  IHME_KUVA.test(tila.kuvanOsoite) && tila.nauhoja === 1
   && /^1\//.test(tila.laskuri),
   JSON.stringify({ osoite: tila.kuvanOsoite, nauhoja: tila.nauhoja, laskuri: tila.laskuri }));
 vaadi('kadonneen kohteen nauha on kuvan päällä eikä nappaa napautuksia',
