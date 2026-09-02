@@ -2532,12 +2532,12 @@ function laskeKohdeNimioPaatokset(ui, s) {
    *
    * `symbolitEsteena` on kierrosten ero, ks. lohko alempana.
    */
-  const valitseKylki = (rivi, symbolitEsteena) => rivi.puolet
+  const valitseKylki = (rivi, esteet) => rivi.puolet
     .findIndex((_, p) => rivi.kehykset.every((vaihtoehdot, n) => {
       const kehys = vaihtoehdot[p];
-      return (!symbolitEsteena || !symbolit.some((sym, j) => j !== rivi.indeksit[n]
+      return (!esteet.symbolit || !symbolit.some((sym, j) => j !== rivi.indeksit[n]
         && kohdeLimittyy(kehys, sym)))
-        && !laatat.some((laatta) => kohdeLimittyy(kehys, laatta))
+        && (!esteet.laatat || !laatat.some((laatta) => kohdeLimittyy(kehys, laatta)))
         && !varatut.some((varattu) => kohdeLimittyy(kehys, varattu));
     }));
   const hyvaksy = (id, rivi, valittu) => {
@@ -2548,7 +2548,7 @@ function laskeKohdeNimioPaatokset(ui, s) {
   /* ── ENSIMMÄINEN KIERROS: kaikki esteet voimassa ───────────────── */
   const jaljella = [];
   for (const [id, rivi] of jono) {
-    const valittu = valitseKylki(rivi, true);
+    const valittu = valitseKylki(rivi, { symbolit: true, laatat: true });
     if (valittu < 0) jaljella.push([id, rivi]);
     else hyvaksy(id, rivi, valittu);
   }
@@ -2568,16 +2568,17 @@ function laskeKohdeNimioPaatokset(ui, s) {
    * KOSKAAN JÄÄ ILMAN NIMEÄ.
    *
    * MITTA (tools/savukkeet/mittaa-nostonimiot.mjs): pudotuksia oli 14
-   * / 509 nimellisestä nostosta, ja jokaisen syy oli sama — kaikki
-   * neljä kylkeä osuivat NAAPURIN SYMBOLIIN.
+   * / 509 nimellisestä nostosta, ja lähes jokaisen syy oli sama —
+   * neljä kylkeä neljästä osui NAAPURIN SYMBOLIIN.
    *
-   * ── KIERROS KAKSI: NIMI VOITTAA SYMBOLIN, MUTTEI TOISTA NIMEÄ ────
+   * ── NIMI EI KOSKAAN MENE TOISEN NIMEN PÄÄLLE ────────────────────
    *
-   * Symboli on 13 yksikön viivamerkki, nimi on rivi tekstiä. Kun nimi
-   * sivuaa naapurin symbolia, kartalla on kaksi luettavaa merkintää;
-   * kun nimi sivuaa toista nimeä, kartalla ei ole kumpaakaan. Toinen
-   * kierros pudottaa siis esteistä vain symbolit — jo hyväksytyt
-   * nimiöt ja kaupunkien laatat pysyvät esteinä.
+   * Nimi naapurin symbolin päällä jättää molemmat luettaviksi; kaksi
+   * nimeä päällekkäin ei ole kummankaan nimi. Siksi `varatut` — jo
+   * hyväksytyt nimiöt — on este JOKAISELLA kierroksella, ja vain
+   * lievemmät esteet pudotetaan (ks. pahuusjärjestys alempana).
+   * Sama vaatimus on savukkeessa (savuke-fokuskohteet: *"ladottu
+   * nimiö ei mene naapurin symbolin eikä nimiön päälle"*).
    *
    * JÄRJESTYS ON KIERROKSITTAIN eikä merkeittäin: ensin KAIKKI ne,
    * jotka mahtuvat siististi, ja vasta sitten ahtaat. Toisin päin
@@ -2591,12 +2592,25 @@ function laskeKohdeNimioPaatokset(ui, s) {
     kirjaaNimionPudotus(ui, id, rivi, { symbolit, laatat, varatut });
     pakotetut.add(id);
     /*
-     * VIIMEINEN OLKI on ensimmäinen kylki. Sitä ei ole vielä tarvittu
-     * (mitattu: kierros kaksi riitti kaikille 14:lle), mutta sääntö on
-     * ehdoton eikä saa jäädä toteutumatta siksi, että jokin tuleva
-     * rypäs on entistä ahtaampi.
+     * ESTEET PUDOTETAAN PAHUUSJÄRJESTYKSESSÄ, LIEVIN ENSIN:
+     *
+     *   symboli   13 yksikön viivamerkki — nimi sen yli jättää
+     *             molemmat luettaviksi;
+     *   laatta    kaupungin kiekko — nimi sen yli on ruma mutta
+     *             luettava, eikä kaupungin OMA nimi ole siinä
+     *             (nimikerros latoo sen erikseen);
+     *   nimiö     toisen merkin nimi — kaksi tekstiä päällekkäin ei
+     *             ole kummankaan nimi. Tämä este EI koskaan putoa,
+     *             ja siksi `varatut` on mukana joka kierroksella.
+     *
+     * VIIMEINEN OLKI on ensimmäinen kylki. Mitattuna (2.9.2026,
+     * mittaa-nostonimiot) sitä ei tarvita yhdessäkään maailman
+     * 14:stä ahtaasta ryppäästä, mutta sääntö on ehdoton eikä saa
+     * jäädä toteutumatta siksi, että jokin tuleva rypäs on entistä
+     * ahtaampi.
      */
-    const valittu = valitseKylki(rivi, false);
+    let valittu = valitseKylki(rivi, { symbolit: false, laatat: true });
+    if (valittu < 0) valittu = valitseKylki(rivi, { symbolit: false, laatat: false });
     hyvaksy(id, rivi, valittu < 0 ? 0 : valittu);
   }
   return {
