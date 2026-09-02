@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Linssikatalogi — Matkakirja</title>
+<meta name="robots" content="noindex">
+<!-- Lähde: docs/linssikatalogi.md. Pages kopioi tämän (pages.yml), jotta osoite näkyy kaikilla tileillä. -->
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,600;0,700;1,400&family=Special+Elite&display=swap">
+<style>
+  :root {
+    --paperi: #efe6d2;
+    --paperi-tumma: #e3d7bc;
+    --muste: #2b241b;
+    --muste-haalea: #6b5f4d;
+    --seepia: #8a5a2b;
+    --sininen: #3f5a7a;
+    --kulta: #b8892f;
+    --vihrea: #5f6b4a;
+    --viiva: #c9bb9c;
+    --leima-valmis: #5f6b4a;
+    --leima-seuraava: #b8892f;
+    --leima-rakenteilla: #8a5a2b;
+    --leima-idea: #8b8172;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paperi: #1f1a14;
+      --paperi-tumma: #2a241b;
+      --muste: #ebe0c8;
+      --muste-haalea: #a99d86;
+      --seepia: #d2a06a;
+      --sininen: #9fb6cf;
+      --kulta: #d9b25a;
+      --vihrea: #a4b087;
+      --viiva: #4a4034;
+      --leima-valmis: #a4b087;
+      --leima-seuraava: #d9b25a;
+      --leima-rakenteilla: #d2a06a;
+      --leima-idea: #8b8172;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paperi: #1f1a14;
+    --paperi-tumma: #2a241b;
+    --muste: #ebe0c8;
+    --muste-haalea: #a99d86;
+    --seepia: #d2a06a;
+    --sininen: #9fb6cf;
+    --kulta: #d9b25a;
+    --vihrea: #a4b087;
+    --viiva: #4a4034;
+    --leima-valmis: #a4b087;
+    --leima-seuraava: #d9b25a;
+    --leima-rakenteilla: #d2a06a;
+    --leima-idea: #8b8172;
+  }
+  body {
+    margin: 0;
+    background: var(--paperi);
+    color: var(--muste);
+    font-family: Vollkorn, Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  .sivu { max-width: 1040px; margin: 0 auto; padding: 40px 24px 80px; }
+  header.otsake { display: grid; gap: 14px; padding-bottom: 28px; border-bottom: 2px solid var(--muste); margin-bottom: 8px; }
+  .yla { font-family: "Special Elite", "Courier New", monospace; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--seepia); }
+  h1 { font-size: clamp(38px, 6vw, 60px); line-height: 1; margin: 0; font-weight: 700; letter-spacing: -.01em; text-wrap: balance; }
+  .johdanto { max-width: 62ch; color: var(--muste); font-size: 18px; margin: 0; }
+  .lainaus { font-style: italic; color: var(--sininen); }
+  .luvut { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 4px; font-family: "Special Elite", monospace; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muste-haalea); }
+  .luvut b { font-family: Vollkorn, serif; font-size: 22px; font-weight: 600; letter-spacing: 0; color: var(--muste); margin-right: 6px; font-variant-numeric: tabular-nums; }
+  .malli { margin: 28px 0 36px; padding: 18px 20px; background: var(--paperi-tumma); border-left: 3px solid var(--seepia); display: grid; gap: 8px; }
+  .malli h2 { margin: 0; font-size: 20px; }
+  .malli p { margin: 0; max-width: 70ch; }
+  .malli dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 18px; margin: 6px 0 0; font-size: 15.5px; }
+  .malli dt { font-family: "Special Elite", monospace; font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muste-haalea); padding-top: 3px; }
+  .malli dd { margin: 0; }
+  nav.suodatin { position: sticky; top: 0; z-index: 2; display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 0; background: var(--paperi); border-bottom: 1px solid var(--viiva); margin-bottom: 8px; }
+  nav.suodatin button { font: 13px "Special Elite", monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--muste); background: transparent; border: 1px solid var(--viiva); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+  nav.suodatin button[aria-pressed="true"] { background: var(--muste); color: var(--paperi); border-color: var(--muste); }
+  nav.suodatin button:focus-visible { outline: 2px solid var(--kulta); outline-offset: 2px; }
+  section.ryhma { margin-top: 40px; }
+  section.ryhma > h2 { display: flex; align-items: baseline; gap: 14px; margin: 0 0 6px; font-size: 26px; font-weight: 600; }
+  section.ryhma > h2 .kirjain { font-family: "Special Elite", monospace; font-size: 15px; letter-spacing: .1em; color: var(--seepia); }
+  section.ryhma > p { margin: 0 0 14px; color: var(--muste-haalea); max-width: 70ch; font-size: 15.5px; }
+  .rivi { display: grid; grid-template-columns: 52px 1fr 130px; gap: 6px 16px; padding: 14px 0; border-top: 1px solid var(--viiva); align-items: start; }
+  .rivi:last-child { border-bottom: 1px solid var(--viiva); }
+  .rivi[hidden] { display: none; }
+  .koodi { font-family: "Special Elite", monospace; font-size: 14px; color: var(--seepia); padding-top: 4px; }
+  .nimi { font-size: 19px; font-weight: 600; margin: 0; line-height: 1.25; }
+  .meta { font-size: 14px; color: var(--muste-haalea); margin: 2px 0 6px; font-variant-numeric: tabular-nums; }
+  .meta span + span::before { content: " · "; }
+  .pysakit { margin: 0; font-size: 15.5px; color: var(--muste); }
+  .pysakit i { color: var(--muste-haalea); font-style: normal; }
+  .huom { margin: 6px 0 0; font-size: 14px; color: var(--sininen); }
+  .leima { justify-self: end; font: 12px "Special Elite", monospace; letter-spacing: .1em; text-transform: uppercase; border: 1.5px solid currentColor; border-radius: 4px; padding: 5px 8px 4px; transform: rotate(-2deg); white-space: nowrap; margin-top: 4px; }
+  .leima.valmis { color: var(--leima-valmis); }
+  .leima.seuraava { color: var(--leima-seuraava); }
+  .leima.rakenteilla { color: var(--leima-rakenteilla); }
+  .leima.idea { color: var(--leima-idea); border-style: dashed; }
+  .jarjestys { margin-top: 48px; padding-top: 20px; border-top: 2px solid var(--muste); }
+  .jarjestys h2 { font-size: 24px; margin: 0 0 8px; }
+  .jarjestys ol { margin: 0; padding-left: 22px; max-width: 70ch; }
+  .jarjestys li { margin: 6px 0; }
+  footer { margin-top: 40px; font-family: "Special Elite", monospace; font-size: 12.5px; letter-spacing: .06em; color: var(--muste-haalea); }
+  @media (max-width: 640px) {
+    .rivi { grid-template-columns: 40px 1fr; }
+    .leima { grid-column: 2; justify-self: start; }
+    body { font-size: 16px; }
+  }
+  @media (prefers-reduced-motion: no-preference) { nav.suodatin button { transition: background .15s, color .15s; } }
+</style>
+
+<div class="sivu">
+  <header class="otsake">
+    <div class="yla">Matkakirja ja unohdettu aarre · aikajanalinssit</div>
+    <h1>Linssikatalogi</h1>
+    <p class="johdanto">Ryhmät A–G aiheittain, H–L maanosittain. Aiheita, joista voi rakentaa saman aikajanalinssin kuin <b>Keksinnöt Euroopassa 1769–1928</b>: kello rullaa, valo syttyy kaupunkiin ja jää palamaan, filminauha ja ilmiöpaneeli kertovat pysäkin. <span class="lainaus">”Hiotaan vain ensin tuo linssi mahdollisimman hyväksi, niin sitten voidaan monistaa samaa logiikkaa muihinkin.”</span></p>
+    <div class="luvut" id="luvut"></div>
+  </header>
+
+  <div class="malli">
+    <h2>Mitä monistetaan</h2>
+    <p>Jokainen uusi linssi käyttää Keksinnöt-pilotin moottoria (js/aikajana.js). Uutta on vain sisältö: pysäkit, kuvat, juttu ja oma musiikki.</p>
+    <dl>
+      <dt>Pysäkit</dt><dd>15–30, merkkipaalu 1873 aina kun kaari ylittää isoisän matkan.</dd>
+      <dt>Kartalla</dt><dd>Valo syttyy paikkaan ja jää palamaan; reittilinsseissä valo kulkee reittiä.</dd>
+      <dt>Kuvat</dt><dd>Kuvaputki, fotorealistinen valokuva, lähi + kauko kun kohtaus sen sallii. Uskonnoissa paikka, ihmiset ja hetki, ei profeettoja kasvoista tunnistettavina.</dd>
+      <dt>Musiikki</dt><dd>Oma raita per linssi samalla putkella kuin linssi-keksinnot.mp3.</dd>
+      <dt>Ovi peliin</dt><dd>Päätetään pilotin kanssa; nyt kehittäjävalikko.</dd>
+    </dl>
+  </div>
+
+  <nav class="suodatin" aria-label="Suodata tilan mukaan">
+    <button type="button" data-tila="kaikki" aria-pressed="true">Kaikki</button>
+    <button type="button" data-tila="valmis" aria-pressed="false">Valmis</button>
+    <button type="button" data-tila="seuraava" aria-pressed="false">Seuraava</button>
+    <button type="button" data-tila="idea" aria-pressed="false">Idea</button>
+  </nav>
+
+  <div id="ryhmat"></div>
+
+  <div class="jarjestys">
+    <h2>Järjestys</h2>
+    <ol>
+      <li>Keksinnöt Euroopassa hiotaan valmiiksi: pelillinen ovi, kuvat kuvaputkelta, musiikki kuunneltu.</li>
+      <li>A1 Suuret uskonnot syntyvät ja A4 Uskonpuhdistus. Kuvat tilataan H4-eränä, kun H3 on hyväksytty.</li>
+      <li>B2, B3, C1, C2: pysäkeistä iso osa on jo pelin hetkiä tai kohteita.</li>
+      <li>C5 Maapallon ympäri 80 päivässä: pelin oma tarina, tarvitsee maailmankartan.</li>
+      <li>Maanosat: H1 Kiinan keksinnöt, H3 Japani, I3 Osmanit, J1 Kultavaltakunnat, J4 Afrikan tutkimusmatkat, K1 Mesoamerikka ja Andit, K3 Yhdysvallat, L2 Cook. Järjestys sen mukaan, mille laudalle peli laajenee seuraavaksi.</li>
+      <li>Loput ideasta seuraavaksi omistajan päätöksellä.</li>
+    </ol>
+  </div>
+
+  <footer>Lähde: docs/linssikatalogi.md · päivitetty 2.9.2026 · tilat: valmis, rakenteilla, seuraava, idea</footer>
+</div>
+
+<script>
+const RYHMAT = [
+  { k: 'A', nimi: 'Uskonnot ja maailmankatsomukset', kuvaus: 'Omistajan linjaus: suurten uskontojen tapahtumat saavat omat kuvansa ja oman linssinsä. Kuvissa paikka, ihmiset ja hetki.', linssit: [
+    { id: 'A1', nimi: 'Suuret uskonnot syntyvät', alue: 'Lähi-itä, Intia, Kiina', kaari: '1500 eaa – 632', pysakit: 'Veda-hymnit Punjab · Buddhan ensimmäinen saarna Sarnath · Kungfutse Qufu · Toinen temppeli Jerusalem · Jeesus Galilea ja Jerusalem · Muhammad Mekka ja Medina', tila: 'seuraava', huom: 'Kuvat H4-tilauksena.' },
+    { id: 'A2', nimi: 'Kristinusko leviää Eurooppaan', alue: 'Eurooppa', kaari: '30 – 1000', pysakit: 'Paavali Ateena · Nikaian kirkolliskokous 325 · Iona 563 · Canterbury 597 · Kiovan kaste 988 · Uppsala', tila: 'seuraava' },
+    { id: 'A3', nimi: 'Islamin kultakausi', alue: 'Bagdad – Córdoba', kaari: '750 – 1258', pysakit: 'Bait al-hikma Bagdad · Córdoban suuri moskeija · al-Azhar Kairo · Samarkandin observatorio · Isfahan · Bagdadin tuho 1258', tila: 'seuraava' },
+    { id: 'A4', nimi: 'Uskonpuhdistus', alue: 'Keski-Eurooppa', kaari: '1517 – 1648', pysakit: 'Wittenberg 1517 · Zürich · Geneve · Trenton kokous · Pyhän Bartolomeuksen yö Pariisi · Westfalenin rauha', tila: 'seuraava', huom: 'Kuvat H4-tilauksena.' },
+    { id: 'A5', nimi: 'Buddhalaisuuden tie Aasian halki', alue: 'Intia – Japani', kaari: '250 eaa – 800', pysakit: 'Sanchi · Dunhuangin luolat · Nara · Borobudur · Lhasa', tila: 'idea' },
+    { id: 'A6', nimi: 'Pyhiinvaellusreitit', alue: 'maailma', kaari: 'jatkuva', pysakit: 'Santiago de Compostela · Mekan hajj · Varanasi · Shikokun 88 temppeliä · Jerusalem', tila: 'idea', huom: 'Reittilinssi: valo kulkee reittiä.' },
+    { id: 'A7', nimi: 'Luostarit ja kirjat', alue: 'Eurooppa', kaari: '500 – 1500', pysakit: 'Monte Cassino · Iona · Cluny · Mont-Saint-Michel · Athos', tila: 'idea' },
+  ]},
+  { k: 'B', nimi: 'Tiede ja tekniikka', kuvaus: 'Pilotti on tässä ryhmässä. Lääketieteen linssin kuvat ovat jo H3-erässä arvioitavana.', linssit: [
+    { id: 'B1', nimi: 'Keksinnöt Euroopassa', alue: 'Eurooppa', kaari: '1769 – 1928', pysakit: 'Watt · Stephenson · Daguerre · Siemens · Benz · Marconi · Fleming', tila: 'valmis', huom: 'Pilotti (v1470), hiotaan ensin.' },
+    { id: 'B2', nimi: 'Tiede ennen höyryä', alue: 'Eurooppa', kaari: '1543 – 1760', pysakit: 'Kopernikus Frombork · Tycho Ven · Galileo Padova · Kepler Praha · Newton Cambridge · Linné Uppsala', tila: 'seuraava' },
+    { id: 'B3', nimi: 'Lääketieteen läpimurrot', alue: 'Eurooppa', kaari: '1796 – 1928', pysakit: 'Jenner · Semmelweis Wien · Snow Lontoo 1854 · Pasteur · Koch Berliini · Röntgen Würzburg · Fleming', tila: 'seuraava', huom: 'H3-kuvat arvioinnissa.' },
+    { id: 'B4', nimi: 'Sähkö ja viestintä', alue: 'Eurooppa – Atlantti', kaari: '1800 – 1901', pysakit: 'Volta Pavia · Ørsted Kööpenhamina · Faraday Lontoo · Morse · Atlantin kaapeli 1866 · Marconi Poldhu 1901', tila: 'idea' },
+    { id: 'B5', nimi: 'Kartografia ja mittaaminen', alue: 'Eurooppa', kaari: '1569 – 1884', pysakit: 'Mercator Duisburg · Cassini Pariisi · Struven ketju Hammerfest – Izmail · Greenwichin nollameridiaani 1884', tila: 'idea' },
+    { id: 'B6', nimi: 'Tähtitieteen observatoriot', alue: 'maailma', kaari: '1576 – 1900', pysakit: 'Uraniborg · Greenwich · Pulkova · Lick · Ulugh Beg Samarkand', tila: 'idea' },
+  ]},
+  { k: 'C', nimi: 'Löytöretket ja liikkuminen', kuvaus: 'Pysäkeistä moni on jo Historian hetki kartalla.', linssit: [
+    { id: 'C1', nimi: 'Suuret löytöretket', alue: 'Atlantti – Intian valtameri', kaari: '1415 – 1522', pysakit: 'Sagres · Dias 1488 · Kolumbus 1492 · da Gama 1497 · Magalhães 1519', tila: 'seuraava', huom: 'H1/H2-hetket valmiina.' },
+    { id: 'C2', nimi: 'Napa-alueiden valloitus', alue: 'Arktis, Antarktis', kaari: '1845 – 1912', pysakit: 'Franklin · Nordenskiöld Koillisväylä 1878 · Nansen Fram 1893 · Amundsen 1911 · Scott 1912', tila: 'seuraava' },
+    { id: 'C3', nimi: 'Rautatiet valloittavat maanosat', alue: 'maailma', kaari: '1825 – 1916', pysakit: 'Stockton – Darlington · Liverpool – Manchester · Pacific Railroad 1869 · Siperian rata · Orient Express · Berliini – Bagdad', tila: 'idea' },
+    { id: 'C4', nimi: 'Höyrylaivat ja kanavat', alue: 'maailma', kaari: '1807 – 1914', pysakit: 'Clermont · Great Eastern · Suez 1869 · Kielin kanava · Panama 1914 · Titanic', tila: 'idea' },
+    { id: 'C5', nimi: 'Maapallon ympäri 80 päivässä', alue: 'maailma', kaari: '1872', pysakit: 'Lontoo · Suez · Bombay · Kalkutta · Hongkong · Yokohama · San Francisco · New York · Lontoo', tila: 'seuraava', huom: 'Pelin oma tarina: Foggin reitti isoisän 1873 matkan rinnalla.' },
+    { id: 'C6', nimi: 'Ilmailun synty', alue: 'Eurooppa – USA', kaari: '1783 – 1927', pysakit: 'Montgolfier Annonay · Lilienthal Berliini · Wrightit Kitty Hawk · Blériot kanaali 1909 · Lindbergh 1927', tila: 'idea' },
+  ]},
+  { k: 'D', nimi: 'Kaupungit, valtakunnat, aatteet', kuvaus: '', linssit: [
+    { id: 'D1', nimi: 'Antiikin kaupungit', alue: 'Välimeri, Lähi-itä', kaari: '3500 eaa – 476', pysakit: 'Uruk · Memfis · Babylon · Ateena · Aleksandria · Rooma · Konstantinopoli', tila: 'idea' },
+    { id: 'D2', nimi: 'Silkkitie', alue: 'Aasia – Eurooppa', kaari: '130 eaa – 1453', pysakit: 'Chang’an · Dunhuang · Samarkand · Bagdad · Konstantinopoli · Venetsia', tila: 'idea', huom: 'Reittilinssi.' },
+    { id: 'D3', nimi: 'Hansa', alue: 'Itämeri, Pohjanmeri', kaari: '1150 – 1669', pysakit: 'Lyypekki · Visby · Bergen · Novgorod · Brygge · Lontoon Steelyard', tila: 'idea' },
+    { id: 'D4', nimi: 'Vallankumousten Eurooppa', alue: 'Eurooppa', kaari: '1789 – 1849', pysakit: 'Bastilji · Wien 1848 · Frankfurtin parlamentti · Rooman tasavalta 1849', tila: 'idea' },
+    { id: 'D5', nimi: 'Kansallisvaltiot syntyvät', alue: 'Eurooppa', kaari: '1830 – 1918', pysakit: 'Belgia 1830 · Italia 1861 · Saksa 1871 · Bulgaria 1878 · Norja 1905 · Suomi 1917', tila: 'idea' },
+    { id: 'D6', nimi: 'Imperiumit ja siirtomaat', alue: 'maailma', kaari: '1600 – 1914', pysakit: 'VOC Amsterdam · Kalkutta · Kap · Berliinin konferenssi 1884', tila: 'idea' },
+  ]},
+  { k: 'E', nimi: 'Taide ja kulttuuri', kuvaus: '', linssit: [
+    { id: 'E1', nimi: 'Renessanssi', alue: 'Italia', kaari: '1400 – 1600', pysakit: 'Firenze Brunelleschi · Rooma Sikstus · Venetsia Tizian · Milano Leonardo', tila: 'idea' },
+    { id: 'E2', nimi: 'Säveltäjien Eurooppa', alue: 'Eurooppa', kaari: '1685 – 1900', pysakit: 'Eisenach Bach · Salzburg Mozart · Wien Beethoven · Leipzig · Bayreuth · Pietari Tšaikovski · Helsinki Sibelius', tila: 'idea' },
+    { id: 'E3', nimi: 'Kirjallisuuden kaupungit', alue: 'Eurooppa', kaari: '1600 – 1900', pysakit: 'Lontoo Shakespeare · Weimar Goethe · Pietari Dostojevski · Dublin · Pariisi Hugo', tila: 'idea' },
+    { id: 'E4', nimi: 'Maailmannäyttelyt', alue: 'maailma', kaari: '1851 – 1900', pysakit: 'Lontoo Crystal Palace · Pariisi 1889 Eiffel · Chicago 1893 · Pariisi 1900', tila: 'idea' },
+    { id: 'E5', nimi: 'Arkkitehtuurin ihmeet', alue: 'maailma', kaari: '2560 eaa – 1889', pysakit: 'Giza · Pantheon · Hagia Sofia · Alhambra · Kölnin tuomiokirkko · Eiffel', tila: 'idea', huom: 'Ihmesarjan jatko.' },
+    { id: 'E6', nimi: 'Museot ja kirjastot syntyvät', alue: 'Eurooppa', kaari: '1683 – 1900', pysakit: 'Ashmolean · British Museum · Louvre 1793 · Eremitaasi · Ateneum', tila: 'idea' },
+  ]},
+  { k: 'F', nimi: 'Luonto ja ympäristö', kuvaus: '', linssit: [
+    { id: 'F1', nimi: 'Suuret tulivuorenpurkaukset', alue: 'maailma', kaari: '1600 eaa – 1883', pysakit: 'Thera · Vesuvius 79 · Laki 1783 · Tambora 1815 (vuosi ilman kesää) · Krakatau 1883', tila: 'idea' },
+    { id: 'F2', nimi: 'Eläinten muuttoreitit', alue: 'maailma', kaari: 'vuodenkierto', pysakit: 'kurjet · valaat · gnut · monarkkiperhoset · lohet', tila: 'idea', huom: 'Jatkuva animaatio, M7+-linssialusta.' },
+    { id: 'F3', nimi: 'Kasvien matkat', alue: 'maailma', kaari: '1492 – 1900', pysakit: 'peruna · kahvi · tee · sokeri · kumi · kaneli', tila: 'idea' },
+    { id: 'F4', nimi: 'Maanjäristykset ja kaupungit', alue: 'maailma', kaari: '1755 – 1908', pysakit: 'Lissabon 1755 · San Francisco 1906 · Messina 1908', tila: 'idea' },
+  ]},
+  { k: 'G', nimi: 'Arki ja yhteiskunta', kuvaus: '', linssit: [
+    { id: 'G1', nimi: 'Taudit ja rokotukset', alue: 'Eurooppa', kaari: '1347 – 1918', pysakit: 'Musta surma Messina 1347 · Lontoon kolera 1854 · Jenner · Pasteur · espanjantauti 1918', tila: 'idea', huom: 'Osin sama kuin B3.' },
+    { id: 'G2', nimi: 'Raha ja pankit', alue: 'Eurooppa', kaari: '1252 – 1873', pysakit: 'Firenzen floriini · Amsterdamin pörssi 1602 · Bank of England 1694 · kultakanta 1873', tila: 'idea' },
+    { id: 'G3', nimi: 'Ruoan ja juoman historia', alue: 'Eurooppa', kaari: '1500 – 1900', pysakit: 'Pilsen 1842 · Champagne · Lyonin keittiö · Wienin kahvilat · Milanon risotto', tila: 'idea' },
+    { id: 'G4', nimi: 'Urheilun synty', alue: 'Eurooppa', kaari: '1857 – 1903', pysakit: 'Sheffield FC 1857 · Wimbledon 1877 · Ateena 1896 · Tour de France 1903', tila: 'idea' },
+    { id: 'G5', nimi: 'Naisten oikeudet', alue: 'maailma', kaari: '1791 – 1918', pysakit: 'Olympe de Gouges · Seneca Falls · Uusi-Seelanti 1893 · Suomi 1906 · Britannia 1918', tila: 'idea' },
+    { id: 'G6', nimi: 'Posti ja sähkösanoma', alue: 'Eurooppa', kaari: '1840 – 1901', pysakit: 'Penny Black · Morse Washington 1844 · Reuters Aachen · Atlantin kaapeli · Marconi', tila: 'idea', huom: 'Sopii pelin sähkeisiin.' },
+  ]},
+  { k: 'H', nimi: 'Aasia', kuvaus: 'Maanosaryhmät H–L: omistaja 2.9.2026 ”lisäksi voisi eritellä muiden maanosien jutut”.', linssit: [
+    { id: 'H1', nimi: 'Kiinan keksinnöt', alue: 'Kiina', kaari: '105 – 1450', pysakit: 'paperi Luoyang 105 · kompassi · ruuti · kirjapaino Kaifeng · Suuri kanava · Zheng Hen laivasto Nanjing 1405', tila: 'seuraava' },
+    { id: 'H2', nimi: 'Intian valtakunnat ja tiede', alue: 'Intia', kaari: '2600 eaa – 1653', pysakit: 'Mohenjo-daro · Ashoka Pataliputra · Nalandan yliopisto · Aryabhata · Taj Mahal Agra 1653', tila: 'idea' },
+    { id: 'H3', nimi: 'Japanin aikakaudet', alue: 'Japani', kaari: '710 – 1868', pysakit: 'Nara · Heian-Kioto · Kamakura · Edo · Meiji 1868', tila: 'seuraava', huom: 'Yokohama on isoisän reitillä.' },
+    { id: 'H4', nimi: 'Mongolien maailma', alue: 'Aasia', kaari: '1206 – 1405', pysakit: 'Karakorum · Peking Kublai · Bagdad 1258 · Samarkand Timur', tila: 'idea' },
+    { id: 'H5', nimi: 'Kaakkois-Aasian temppelit', alue: 'Kaakkois-Aasia', kaari: '800 – 1431', pysakit: 'Borobudur · Bagan · Angkor · Ayutthaya', tila: 'idea' },
+    { id: 'H6', nimi: 'Maustereitit', alue: 'Intian valtameri', kaari: '1000 – 1700', pysakit: 'Malabar · Malakka · Molukit · Batavia · Lissabon', tila: 'idea', huom: 'Reittilinssi.' },
+  ]},
+  { k: 'I', nimi: 'Lähi-itä ja Pohjois-Afrikka', kuvaus: '', linssit: [
+    { id: 'I1', nimi: 'Sivilisaation synty', alue: 'Mesopotamia, Persia', kaari: '3500 eaa – 330 eaa', pysakit: 'Uruk · Ur · Babylon · Niniven kirjasto · Persepolis', tila: 'idea' },
+    { id: 'I2', nimi: 'Egyptin dynastiat', alue: 'Egypti', kaari: '2650 eaa – 30 eaa', pysakit: 'Sakkara · Giza · Theba ja Luxor · Amarna · Aleksandria', tila: 'idea' },
+    { id: 'I3', nimi: 'Osmanien valtakunta', alue: 'Turkki, Balkan, Levantti', kaari: '1299 – 1923', pysakit: 'Bursa · Konstantinopoli 1453 · Wienin piiritys 1683 · Kairo · Suez 1869 · Ankara 1923', tila: 'seuraava', huom: 'Bulgaria 1878 on jo pelissä.' },
+    { id: 'I4', nimi: 'Persian puutarhat ja kaupungit', alue: 'Iran', kaari: '550 eaa – 1722', pysakit: 'Pasargadae · Persepolis · Isfahan · Shiraz', tila: 'idea' },
+  ]},
+  { k: 'J', nimi: 'Saharan eteläpuolinen Afrikka', kuvaus: '', linssit: [
+    { id: 'J1', nimi: 'Kultavaltakunnat', alue: 'Länsi-Afrikka', kaari: '700 – 1591', pysakit: 'Ghana · Timbuktu · Mansa Musan hajj 1324 · Djenné · Songhai · Kano', tila: 'seuraava' },
+    { id: 'J2', nimi: 'Swahilirannikko ja Suuri Zimbabwe', alue: 'Itä- ja Etelä-Afrikka', kaari: '1000 – 1500', pysakit: 'Kilwa · Sansibar · Mombasa · Suuri Zimbabwe · Sofala', tila: 'idea' },
+    { id: 'J3', nimi: 'Etiopia', alue: 'Etiopia', kaari: '100 – 1700', pysakit: 'Aksum · Lalibela · Gondar', tila: 'idea' },
+    { id: 'J4', nimi: 'Tutkimusmatkat Afrikassa', alue: 'Afrikka', kaari: '1795 – 1877', pysakit: 'Mungo Park Niger · Livingstone Victorian putoukset 1855 · Burton ja Speke · Stanley ja Livingstone Ujiji 1871 · Stanley Kongo 1877', tila: 'seuraava' },
+    { id: 'J5', nimi: 'Siirtomaajako ja rautatiet', alue: 'Afrikka', kaari: '1869 – 1914', pysakit: 'Suez · Berliinin konferenssi 1884 · Kap–Kairo-hanke · Uganda-rata', tila: 'idea' },
+  ]},
+  { k: 'K', nimi: 'Amerikat', kuvaus: '', linssit: [
+    { id: 'K1', nimi: 'Mesoamerikka ja Andit', alue: 'Meksiko, Peru', kaari: '200 – 1532', pysakit: 'Teotihuacán · Tikal · Chichén Itzá · Tenochtitlán · Cusco · Machu Picchu', tila: 'seuraava' },
+    { id: 'K2', nimi: 'Valloitus ja hopea', alue: 'Latinalainen Amerikka', kaari: '1492 – 1600', pysakit: 'Hispaniola · Tenochtitlán 1521 · Cajamarca 1532 · Potosí · Lima', tila: 'idea' },
+    { id: 'K3', nimi: 'Yhdysvaltain synty ja länsi', alue: 'USA', kaari: '1776 – 1869', pysakit: 'Philadelphia 1776 · Lewis ja Clark · Oregon Trail · kultaryntäys 1849 · Pacific Railroad 1869', tila: 'seuraava', huom: 'Foggin reitti kulkee tästä.' },
+    { id: 'K4', nimi: 'Latinalaisen Amerikan itsenäistyminen', alue: 'Etelä-Amerikka', kaari: '1810 – 1825', pysakit: 'Caracas Bolívar · Buenos Aires San Martín · Chacabuco · Ayacucho 1824', tila: 'idea' },
+    { id: 'K5', nimi: 'Amerikan keksinnöt', alue: 'USA', kaari: '1793 – 1903', pysakit: 'Whitney · Morse 1844 · Bell 1876 · Edison Menlo Park · Wrightit 1903', tila: 'idea', huom: 'Keksinnöt Euroopassa -linssin sisar.' },
+    { id: 'K6', nimi: 'Pohjoinen: viikingeistä rautatiehen', alue: 'Grönlanti, Kanada', kaari: '1000 – 1885', pysakit: 'L’Anse aux Meadows · Hudsonin lahti · Luoteisväylä · Kanadan rata 1885', tila: 'idea' },
+  ]},
+  { k: 'L', nimi: 'Oseania ja Tyynimeri', kuvaus: '', linssit: [
+    { id: 'L1', nimi: 'Polynesialaisten merenkulku', alue: 'Tyynimeri', kaari: '1000 eaa – 1250', pysakit: 'Samoa · Tahiti · Havaiji · Rapa Nui · Aotearoa noin 1250', tila: 'idea', huom: 'Reittilinssi.' },
+    { id: 'L2', nimi: 'Cook ja Tyynimeri', alue: 'Tyynimeri', kaari: '1768 – 1779', pysakit: 'Plymouth 1768 · Tahiti · Uusi-Seelanti · Botany Bay · Havaiji 1779', tila: 'seuraava', huom: 'Plymouth on jo Historian hetki.' },
+    { id: 'L3', nimi: 'Australia', alue: 'Australia', kaari: '1788 – 1901', pysakit: 'Sydney 1788 · Ballaratin kultaryntäys 1851 · Burke ja Wills 1860 · liitto 1901', tila: 'idea' },
+    { id: 'L4', nimi: 'Evoluution saaret', alue: 'Galápagos, Malaijisaaristo', kaari: '1835 – 1862', pysakit: 'Darwin Galápagos 1835 · Wallace Ternate 1858 · Wallacen linja', tila: 'idea', huom: 'Galápagos on jo Historian hetki.' },
+  ]},
+];
+
+const TILAT = { valmis: 'valmis', rakenteilla: 'rakenteilla', seuraava: 'seuraava', idea: 'idea' };
+const juuri = document.getElementById('ryhmat');
+for (const r of RYHMAT) {
+  const s = document.createElement('section'); s.className = 'ryhma';
+  s.innerHTML = `<h2><span class="kirjain">${r.k}</span>${r.nimi}</h2>` + (r.kuvaus ? `<p>${r.kuvaus}</p>` : '');
+  for (const l of r.linssit) {
+    const d = document.createElement('div'); d.className = 'rivi'; d.dataset.tila = l.tila;
+    d.innerHTML = `<div class="koodi">${l.id}</div>
+      <div><p class="nimi">${l.nimi}</p><p class="meta"><span>${l.alue}</span><span>${l.kaari}</span></p><p class="pysakit">${l.pysakit}</p>${l.huom ? `<p class="huom">${l.huom}</p>` : ''}</div>
+      <div class="leima ${l.tila}">${TILAT[l.tila]}</div>`;
+    s.appendChild(d);
+  }
+  juuri.appendChild(s);
+}
+const kaikki = RYHMAT.flatMap((r) => r.linssit);
+const laske = (t) => kaikki.filter((l) => l.tila === t).length;
+document.getElementById('luvut').innerHTML =
+  `<span><b>${kaikki.length}</b>linssiä</span><span><b>${laske('valmis')}</b>valmis</span><span><b>${laske('seuraava')}</b>seuraava</span><span><b>${laske('idea')}</b>idea</span>`;
+document.querySelectorAll('nav.suodatin button').forEach((b) => b.addEventListener('click', () => {
+  document.querySelectorAll('nav.suodatin button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+  const t = b.dataset.tila;
+  document.querySelectorAll('.rivi').forEach((r) => { r.hidden = t !== 'kaikki' && r.dataset.tila !== t; });
+  document.querySelectorAll('section.ryhma').forEach((s) => { s.hidden = ![...s.querySelectorAll('.rivi')].some((r) => !r.hidden); });
+}));
+</script>
+</body>
+</html>

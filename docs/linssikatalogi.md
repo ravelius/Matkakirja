@@ -8,9 +8,12 @@ voidaan monistaa samaa logiikkaa muihinkin."*
 
 Tämä on elävä luettelo: aiheita lisätään ja tila päivitetään. Sitovat
 linjaukset ovat Raamatussa (js/tyohuone-raamattu.js, Karttalinssit);
-tämä dokumentti on työlista. Sama sisältö on artefaktisivuna
-omistajalle: https://claude.ai/code/artifact/70aa8279-bf6b-49ce-a6cb-64b5a70c3fae
-(päivitetään samaan osoitteeseen Artifact-työkalun `url`-parametrilla).
+tämä dokumentti on työlista. Sama sisältö on julkisena sivuna pelin
+osoitteessa https://ravelius.github.io/Matkakirja/linssikatalogi.html
+(repon juuren linssikatalogi.html, Pages kopioi sen; näkyy kaikilla
+tileillä, osoite on ainoa avain, noindex) sekä artefaktina
+https://claude.ai/code/artifact/70aa8279-bf6b-49ce-a6cb-64b5a70c3fae
+(vain julkaisijan tilille). Päivitä kaikki kolme yhdessä.
 
 ## Malli, jota monistetaan
 
