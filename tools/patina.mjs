@@ -391,6 +391,29 @@ const PASTELLI_KEVYT = {
   lumPehmeys: 26,
   /* Maskin kromaikkuna: alle ala ei mitään (meri), yli ylä täysi. */
   kromaVali: [36, 72],
+  /*
+   * KROMANVAHVISTUS: maaston värin vahvistus SAMAN maskin sisällä.
+   *
+   * `kyllaisyys` voi vain viedä kromaa pois, joten sillä ei pääse
+   * pohjakuvan väriä VOIMAKKAAMPAAN maastoon — nollakaan ei riitä, jos
+   * omistaja pyytää lisää väriä (2.9.2026: *"lisää vielä kylläisyyttä
+   * reilusti"*). Tämä kerroin skaalaa kroman pikselin OMAN luminanssin
+   * ympäri (c' = Ln + (c − Ln)·k), jolloin
+   *  - luminanssi säilyy TÄSMÄLLEEN (lum on lineaarinen, joten
+   *    lum(Ln + (c − Ln)·k) = Ln), eikä värin lisääminen tummenna;
+   *  - sävy säilyy, koska kaikki kolme kanavaa skaalataan samalla
+   *    kertoimella samasta keskipisteestä.
+   * Vahvistus kulkee samalla maskilla kuin pastelli, joten muste (tumma)
+   * ja meri (matala kroma) jäävät sen ulkopuolelle.
+   *
+   * LEIKKAUSSUOJA ON OSA MÄÄRITELMÄÄ, EI VIIMEISTELY. Ilman sitä
+   * vuoriston ruskean punainen kanava karkaisi yli 255:n, jäisi
+   * rajaukseen kiinni ja sävy kääntyisi oranssiksi juuri siellä, missä
+   * väriä on eniten. Kerroin lasketaan siksi pikselikohtaisesti alas
+   * niin pieneksi, ettei yksikään kanava ylitä väliä [0, 255].
+   * 0 = pois päältä; kaikki muut reseptit jättävät sen nollaan.
+   */
+  kromanVahvistus: 0,
 };
 
 const PASTELLI_KESKI = {
@@ -773,15 +796,43 @@ const VINJETTI = { voima: 0.1, eksponentti: 2.4, lampo: 0.4 };
  *
  * Kartta kirkastuu 13 sävyä, mutta viivan ja paperin ero KASVAA.
  *
- * === 2. KYLLÄISYYS: PASTELLOINTIA VÄHEMMÄN, EI ENEMMÄN VÄRIÄ ===
+ * === 2. KYLLÄISYYS: PASTELLOINTIA VÄHEMMÄN — JA SEN YLI ===
  *
  * Maaston väri on pohjassa jo olemassa; `taysi` vie siitä 55 %
- * (PASTELLI_TAYSI.kyllaisyys). Kylläisyyden nosto tehdään siis
- * pastelloinnista tinkimällä eikä kylläisyyttä lisäämällä — 0,55 →
- * 0,45 jättää kromasta 55 % entisen 45 %:n sijaan eli +22 %.
- * Maan okra ja vuorten ruskea elävät, mutta paperi ei kellastu:
- * paperi on pastellin maskin ULKOPUOLELLA (kroma alle `kromaVali`:n
- * alarajan), eikä passi siis koske siihen lainkaan.
+ * (PASTELLI_TAYSI.kyllaisyys). Ensimmäinen askel oli siis
+ * pastelloinnista tinkiminen — 0,55 → 0,45 jättää kromasta 55 %
+ * entisen 45 %:n sijaan eli +22 %.
+ *
+ * SE EI RIITTÄNYT. Omistaja katsoi vertailun 2.9.2026 ja sanoi:
+ * *"Vaaleus on hyvä, mutta lisää vielä kylläisyyttä reilusti."*
+ * `kyllaisyys` voi kuitenkin vain VIEDÄ kromaa pois — nollakaan ei
+ * pääse pohjan väriä pidemmälle, ja pohja itse on jo pastelli.
+ * Reilusti lisää väriä on siis pakko olla oma kerroin, ja se on
+ * `kromanVahvistus` (ks. PASTELLI_KEVYT): kroma skaalataan pikselin
+ * OMAN luminanssin ympäri, jolloin luminanssi säilyy täsmälleen ja
+ * sävy säilyy, ja kanavan leikkautuminen on estetty pikselikohtaisella
+ * kertoimen rajauksella. Väri kasvaa, kartta ei tummene eikä vuorten
+ * ruskea käänny oranssiksi.
+ *
+ * KAKSI EHDOKASTA AJETTIIN JA MITATTIIN (maan HSL S, kootut laatat;
+ * `ei` = patinaton pohja, `nyk.` = kirkas ilman vahvistusta):
+ *
+ *                          ei    taysi   nyk.    A 0,55   B 0,95
+ *   z5 Kreikka/Balkan    58,1    31,5    41,3     57,6     68,4
+ *   z2 maailma           68,7    43,7    64,4     74,7     81,3
+ *   z7 Sofia (vuori)     59,9    33,2    43,6     61,2     72,5
+ *
+ * A palauttaa maan täsmälleen patinattoman pohjan kylläisyyteen; B vie
+ * sen yli. Omistajan sana oli "reilusti", joten VALITTU ON B
+ * (0,95). A:n arvo 0,55 on tässä tallessa: se on oikea luku, jos
+ * jonain päivänä halutaan "patinaton väri, patinoitu pinta".
+ *
+ * MIKÄ EI LIIKU. Vahvistus kulkee pastellin maskilla, joten paperi,
+ * meri ja muste jäävät sen ulkopuolelle — mitattuna kaikilla kolmella
+ * tasolla paperin marginaali, meri, rae (σ) ja musteen persentiilit
+ * ovat A:ssa ja B:ssä bitilleen samat kuin ilman vahvistusta. Maan
+ * luminanssi laskee enintään 1,0 sävyä ja sävykulma kääntyy enintään
+ * 1,0 astetta.
  *
  * `vaalennus` EI muutu (0,37). Se on korkeuserojen kontrastisäädin,
  * ja omistaja pyysi 29.8.2026 nimenomaan matalampaa reliefikontrastia;
@@ -829,9 +880,13 @@ const SAVYT_KIRKAS = {
   musteHaalennus: 0.04,
 };
 
-/* Ks. kohta 2. */
+/*
+ * Ks. kohta 2. `kromanVahvistus` 0,95 on mitattu ehdokas B; 0,55 (A)
+ * osuu täsmälleen patinattoman pohjan kylläisyyteen, jos joskus
+ * halutaan väri takaisin lähtötasolle patinoidulla pinnalla.
+ */
 const PASTELLI_KIRKAS = {
-  ...PASTELLI_TAYSI, kyllaisyys: 0.45,
+  ...PASTELLI_TAYSI, kyllaisyys: 0.45, kromanVahvistus: 0.95,
 };
 
 /* Ks. kohta 3: tasan puolet PAPERI_TAYSI:n rakeesta ja kuidusta. */
@@ -1670,6 +1725,20 @@ export async function patinoiSelaimessa({
           r += (Ln * pl.paperiSavy[0] - r) * w;
           gg += (Ln * pl.paperiSavy[1] - gg) * w;
           b += (Ln * pl.paperiSavy[2] - b) * w;
+          /* Kroman vahvistus luminanssin ympäri, leikkaussuojattuna.
+           * Ks. PASTELLI_KEVYT.kromanVahvistus. */
+          if (pl.kromanVahvistus > 0) {
+            let kv = 1 + pl.kromanVahvistus * maski;
+            const yli = Math.max(r, gg, b) - Ln;
+            const ali = Ln - Math.min(r, gg, b);
+            if (yli > 0.001) kv = Math.min(kv, (255 - Ln) / yli);
+            if (ali > 0.001) kv = Math.min(kv, Ln / ali);
+            if (kv > 1) {
+              r = Ln + (r - Ln) * kv;
+              gg = Ln + (gg - Ln) * kv;
+              b = Ln + (b - Ln) * kv;
+            }
+          }
           /* Nosto painottuu tummiin: vuoristo vaalenee, alanko ei. */
           const tummuus = pehmene(pl.vaalennusVali[1], pl.vaalennusVali[0], Ln);
           const v = pl.vaalennus * maski * tummuus;

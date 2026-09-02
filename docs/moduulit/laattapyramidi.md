@@ -306,6 +306,7 @@ säädetyllä oliolla — passit, järjestys ja luonne ovat samat.
 | `savyt.kayra` | 0,88 / 21 | 0,87 / **36** | koko arkki vaaleammaksi |
 | `savyt.musteHaalennus` | 0,13 | **0,04** | vastapaino: muste ei nouse käyrän mukana |
 | `pastelli.kyllaisyys` | 0,55 | **0,45** | kromasta jää 55 % entisen 45 %:n sijaan (+22 %) |
+| `pastelli.kromanVahvistus` | 0 | **0,95** | maan kroma vielä yli pohjan tason (omistaja 2.9.2026) |
 | `paperi` rae / nyppy / kuitu / risti | 0,072 / 0,054 / 0,052 / 0,030 | **puolet** | rae puoleen |
 | `leviaminen.voima` | 0,30 | **0,15** | pehmeys puoleen (säde 2 px on paperivakio) |
 | `ikaantyminen` voima / lampo | 0,075 / 0,55 | **0,055 / 0,40** | tahrat kevyemmin, paperi ei kellastu |
@@ -351,6 +352,73 @@ meren nosto L=195:stä ylöspäin joko leikkaisi kerman valkoiseksi tai
 litistäisi kontrastin niin, että meri ja maa alkaisivat sulaa yhteen.
 Seuraava askel olisi pohjan oma syvyysramppi (`piirto.js` SYVYYS), ei
 patina.
+
+#### Kylläisyys vielä yli pohjan: `kromanVahvistus` (omistaja 2.9.2026)
+
+Omistaja katsoi yllä olevan vertailun ja sanoi: *"Vaaleus on hyvä,
+mutta lisää vielä kylläisyyttä reilusti."* `pastelli.kyllaisyys` ei
+riitä siihen: se voi vain VIEDÄ kromaa pois, eli nollakaan ei pääse
+pohjakuvan väriä pidemmälle — ja pohja on itse jo pastelli.
+
+Uusi kenttä `PASTELLI.kromanVahvistus` skaalaa kroman pikselin **oman
+luminanssin ympäri** (`c' = Ln + (c − Ln)·k`). Se on tarkoituksella
+juuri tämä kaava eikä esimerkiksi HSL-kylläisyyden kertominen:
+
+- **luminanssi säilyy täsmälleen** (luminanssi on lineaarinen kanavien
+  suhteen, joten `lum(Ln + (c − Ln)·k) = Ln`) — värin lisääminen ei siis
+  voi tummentaa karttaa;
+- **sävy säilyy**, koska kaikki kolme kanavaa skaalataan samasta
+  keskipisteestä samalla kertoimella;
+- **kanava ei leikkaudu**: kerroin lasketaan pikselikohtaisesti alas
+  niin pieneksi, ettei mikään kanava mene välin [0, 255] yli. Ilman
+  tätä vuoriston ruskean punainen kanava jäisi kattoon ja sävy
+  kääntyisi oranssiksi juuri siellä, missä väriä on eniten.
+
+Vahvistus kulkee **pastellin omalla maskilla**, joten muste (tumma) ja
+meri (matala kroma) jäävät ulkopuolelle — ja paperi samoin, koska
+marginaali on maskin luminanssi-ikkunan yläpuolella.
+
+Kaksi ehdokasta ajettiin koko putken läpi (z2 maailma 24 laattaa,
+z5 Kreikka/Balkan 6 laattaa, z7 Sofia 1 laatta) ja mitattiin samoista
+laatikoista. `nyk.` = `kirkas` ilman vahvistusta.
+
+**Maan kylläisyys (HSL S)**
+
+| | ei patinaa | `taysi` | `nyk.` | A 0,55 | B **0,95** |
+| --- | --- | --- | --- | --- | --- |
+| z5 Kreikka/Balkan | 58,1 % | 31,5 % | 41,3 % | 57,6 % | **68,4 %** |
+| z2 maailma (Sahara) | 68,7 % | 43,7 % | 64,4 % | 74,7 % | **81,3 %** |
+| z7 Sofia (vuori) | 59,9 % | 33,2 % | 43,6 % | 61,2 % | **72,5 %** |
+
+A osuu tasan patinattoman pohjan kylläisyyteen, B vie sen yli.
+Omistajan sana oli "reilusti", joten **valittiin B**; A:n arvo 0,55 on
+tallessa `PASTELLI_KIRKAS`:n kommentissa.
+
+**Mikä ei liikkunut** — kaikki kolme tasoa mitattuna, `nyk.` / A / B:
+
+| | z2 | z5 | z7 |
+| --- | --- | --- | --- |
+| paperin marginaali L | 238,9 / 238,9 / 238,9 | — | — |
+| paperin rae σ | 7,34 / 7,34 / 7,34 | — | — |
+| meri L | 196,2 / 196,2 / 196,2 | 198,6 / 198,6 / 198,6 | — |
+| meri S | 19,3 / 19,3 / 19,3 % | 20,0 / 20,0 / 20,0 % | — |
+| muste 0,5 % | 96 / 96 / 96 | 103 / 103 / 103 | 157 / 156 / 156 |
+| muste 2 % | 131 / 131 / 131 | 155 / 155 / 154 | 167 / 166 / 166 |
+| mediaani | 212 / 212 / 212 | 205 / 205 / 205 | 219 / 219 / 219 |
+
+Meressä ei ole yhden yksikönkään eroa: maski pitää sen ulkona.
+
+**Mitä väri maksoi luminanssissa** — B:n muutos `nyk.`:iin nähden:
+
+| | maa L | vuori L | maa H | vuori H |
+| --- | --- | --- | --- | --- |
+| z2 | 218,2 → 218,2 | 158,3 → 157,9 | 42,2° → 42,2° | 29,4° → 28,9° |
+| z5 | 192,9 → 192,5 | 173,0 → 172,0 | 36,6° → 36,2° | 31,5° → 30,5° |
+| z7 | 230,0 → 230,0 | 198,8 → 198,6 | 49,2° → 49,2° | 38,2° → 37,9° |
+
+Suurin tummeneminen on **1,0 sävyä** ja suurin sävykulman kääntymä
+**1,0 astetta** — eli kartta ei tummene eikä ruskea käänny oranssiksi,
+mikä oli koko leikkaussuojan tarkoitus.
 
 ### Mikä meni laattoihin ja mikä ei
 
