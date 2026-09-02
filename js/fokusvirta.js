@@ -187,8 +187,33 @@ export const TAKY_PALKKIO = 50;
  * vapaassa tutkinnassa. Lehtilukko pitää huolen siitä, ettei kahta
  * annostelijaa ole yhtä aikaa auki: lehti — ja sen tehtävät — aukeaa
  * vasta laatan käännyttyä.
+ *
+ * ── KORTIT POIS (omistaja 2.9.2026 ilta: *"Mikä tuo koko kortti edes
+ *    on? Ei tuollaisia pitäisi olla ollenkaan."*) ──────────────────
+ *
+ * Pelitesti v1466–v1467 päätti kysymyksen: korttiannostelua (matkakirja
+ * → Livian kupla → oppitunti → kohtaamiskortti) EI näytetä missään
+ * kaupungissa — ei saapumisesta, ei Tutki-napista, ei laatasta eikä
+ * vihreästä pisteestä. Lippu on `false`, ja kulku on kevyen kulun oma:
+ *
+ *   kaupunkilehti aukeaa suoraan → lehden nimetyt tehtävät →
+ *   kohtaaminen ja laattakysymys lehden tehtävänapista, laatasta tai
+ *   vihreästä pisteestä → aarre
+ *
+ * Kohtaaminen (paikallisen kuva ja repliikki) elää laattakysymyksen
+ * kortissa (js/visa.js, js/kohtaamiskuvat-data.js), ei tämän moduulin
+ * kortilla. Vihreä piste avaa siksi laattakysymyksen SUORAAN
+ * (avaaFokusKohtaaminen) — ainoa poikkeus on pöllön sähketehtävä
+ * (Tukholma), jonka vastauslomake on oma pintansa eikä esittelykortti.
+ * Lehden tehtävänappi ei enää väisty pistettä (js/ui.js
+ * tehtavaNapinTila): Raamatun 2.9.2026 linjaus sanoo, että
+ * laattakysymykseen pääsee lehden tehtävänapista ja laatasta.
+ *
+ * Koodi säilyy lipun takana Raamatun 24.8.2026 kirjauksen mukaan
+ * ("lipun taakse, ei poisteta") — mutta sitä ei käännetä enää päälle
+ * ilman omistajan uutta päätöstä. Alla oleva 29.8. kirjaus on historiaa.
  */
-export const FOKUSVIRTA_KORTIT = true;
+export const FOKUSVIRTA_KORTIT = false;
 
 /**
  * Virran vaiheet. Viimeinen on "virta pelattu läpi".
@@ -2331,7 +2356,10 @@ export function fokusvirtaKohtaamispiste(ui, city) {
  * pääsi tapaamaan henkilön) POIS"*. Kun kohtaaminen tavataan kartalta,
  * lehden alanappi olisi toinen ovi samaan huoneeseen — ja se ohittaisi
  * koko kokeilun: AARTEEN AVAUS -tehtävää ei tarvitsisi tehdä lainkaan.
- * Lehden alanappi luetaan siksi tästä (js/ui.js tehtavaNapinTila).
+ * Lehden alanappi luettiin tästä (js/ui.js tehtavaNapinTila) kokeilun
+ * ajan; KORTIT POIS -linjaus (2.9.2026) palautti napin näkyviin, koska
+ * laattakysymykseen pääsee lehden tehtävänapista ja laatasta — piste on
+ * nyt kolmas ovi samaan huoneeseen, ei ainoa.
  *
  * UMPIKUJAN ESTO. Lehden kysymykseen vastataan kerran, joten VÄÄRIN
  * vastannut ei voi enää sytyttää pistettä siitä kysymyksestä. Vasta kun
@@ -2367,6 +2395,22 @@ export function avaaFokusKohtaaminen(ui, city) {
   const data = fokusvirtaSisalto(ui, city);
   // Sähketehtävä kelpaa kohtaamisen sijaan (ks. PÖLLÖN SÄHKETEHTÄVÄ).
   if (!data?.kohtaaminen && !data?.sahketehtava) return false;
+  /*
+   * KORTIT POIS (omistaja 2.9.2026 ilta, ks. lipun kirjaus): pisteen
+   * napautus avaa laattakysymyksen SUORAAN — sama kutsu kuin lehden
+   * tehtävänapilla (js/ui.js arrival-yes) ja kuin kohtaamiskortin
+   * Kyllä-napilla ennen. Paikallisen kuva ja repliikki ovat
+   * laattakysymyksen omassa kortissa (js/visa.js), joten esittely ei
+   * jää kertomatta. Sähketehtävän vastauslomake on ainoa kortti, joka
+   * yhä piirretään: se on tehtävän pinta, ei esittely.
+   */
+  if (!data.sahketehtava) {
+    if (ui.busy) return false;
+    suljeFokusvirta(ui);
+    const pulmaOdottaa = ui.game.pendingPuzzle?.();
+    ui.doAction(() => ui.game.actionQuiz(pulmaOdottaa ? {} : { form: 'quiz' }));
+    return true;
+  }
   lataaTyyli();
   piirraKortti(ui, city, data, { vaihe: 'kohtaaminen' });
   return true;
