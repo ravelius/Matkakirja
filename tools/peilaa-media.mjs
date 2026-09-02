@@ -25,6 +25,22 @@
  * .github/workflows/peilaa.yml. Aiemmin tulos asui omassa repossaan
  * (ravelius/Matkakirja-media) GitHub Pagesissa, mutta aineisto ylitti
  * Pagesin suositusrajan (1 Gt) ja repo jäi tarpeettomaksi.
+ *
+ * "VALMIS TIEDOSTO OHITETAAN" ei enää vaadi paikallista tiedostoa levyllä
+ * (korjattu 2.9.2026). Ajokone on kertakäyttöinen: ennen tätä ajo latasi
+ * koko ämpärin sisällön levylle ennen tämän työkalun käynnistämistä, jotta
+ * `existsSync`-tarkistukset alla osuisivat — ja se lataus kasvoi ämpärin
+ * mukana tunneiksi (mitattu 2.9.2026: yksittäisen tiedoston toistuva
+ * verkkovirhe kaatoi 2 h 57 min ajon lataamatta mitään uutta lainkaan).
+ * Nyt riittää, että manifesti.json on levyllä: jos nimi/osoite on jo
+ * manifestissa merkinnällä `koko` (onnistunut aiempi lataus) eikä
+ * paikallista tiedostoa ole, tiedosto luetaan jo ämpärissä olevaksi eikä
+ * sitä ladata uudelleen — ei ämpäristä eikä alkuperäisestä lähteestä.
+ * Vientivaihe ei koskaan poista ämpäristä (ei --delete), joten aiemmin
+ * viety tiedosto on siellä yhä. Paikallinen tiedosto ladataan/luetaan
+ * edelleen normaalisti niissä (harvinaisissa) tapauksissa, joissa se on
+ * jo levyllä — esim. kehittäjän omalla koneella ajettaessa koko peili on
+ * usein jo paikallaan.
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, rmSync, statSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -331,10 +347,24 @@ function commonsMeta(nimet) {
 async function lataaKuvat(nimet, alikansio, leveys) {
   const kansio = join(ULOS, alikansio);
   mkdirSync(kansio, { recursive: true });
+  let ohitettu = 0;
   for (let i = 0; i < nimet.length; i += 20) {
     const era = nimet.slice(i, i + 20);
-    const meta = commonsMeta(era);
-    for (const nimi of era) {
+    // Jo ämpärissä oleva, aiemmalla ajolla onnistuneesti peilattu nimi ei
+    // tarvitse Commons-metahakua eikä latausta uudestaan — ks. selitys
+    // tiedoston alussa. `tiedosto`-polku tarkistetaan mukana, jotta
+    // nimeämissäännön muutos ei jää piiloon: silloin polku ei enää
+    // täsmää eikä vanhaa merkintää luoteta.
+    const uudet = era.filter((nimi) => {
+      const kohde = peiliKuvaPolku(nimi, alikansio).slice(alikansio.length + 1);
+      const vanha = manifesti[alikansio][nimi];
+      const jaAmparissa = vanha?.koko && vanha.tiedosto === `${alikansio}/${kohde}`
+        && !existsSync(join(kansio, kohde));
+      if (jaAmparissa) ohitettu += 1;
+      return !jaAmparissa;
+    });
+    const meta = uudet.length ? commonsMeta(uudet) : {};
+    for (const nimi of uudet) {
       const kohde = peiliKuvaPolku(nimi, alikansio).slice(alikansio.length + 1);
       const polku = join(kansio, kohde);
       manifesti[alikansio][nimi] = {
@@ -365,8 +395,10 @@ async function lataaKuvat(nimet, alikansio, leveys) {
       }
       nuku(350);
     }
-    console.log(`  ${alikansio}: ${Math.min(i + 20, nimet.length)}/${nimet.length}`);
+    console.log(`  ${alikansio}: ${Math.min(i + 20, nimet.length)}/${nimet.length}`
+      + ` (${uudet.length} uutta, ${era.length - uudet.length} jo ämpärissä)`);
   }
+  if (ohitettu) console.log(`  ${alikansio}: yhteensä ${ohitettu} ohitettu — jo ämpärissä`);
 }
 
 let kokoYhteensa = 0;
@@ -374,6 +406,7 @@ let kokoYhteensa = 0;
 function lataaAanet(urlit) {
   const kansio = join(ULOS, 'aanet');
   mkdirSync(kansio, { recursive: true });
+  let ohitettu = 0;
   for (const [i, url] of urlit.entries()) {
     const tiedosto = peiliAaniPolku(url);
     // kohteet() päästää tänne vain osoitteet, joille sääntö antaa
@@ -385,6 +418,18 @@ function lataaAanet(urlit) {
     const kohde = tiedosto.slice('aanet/'.length);
     const polku = join(kansio, kohde);
     const vanha = manifesti.aanet[url] ?? {};
+
+    // Jo ämpärissä oleva, aiemmalla ajolla onnistuneesti peilattu (ja
+    // tarvittaessa leikattu) ääni ei tarvitse paikallista tiedostoa eikä
+    // etäkoon kyselyä — ks. selitys tiedoston alussa. Juuri äänet ovat
+    // hitaimpia ladattavia (Freesound noin 75 kt/s), joten tämä on
+    // suurin yksittäinen säästö.
+    if (vanha.koko && vanha.tiedosto === tiedosto && !existsSync(polku)) {
+      manifesti.aanet[url] = vanha;
+      ohitettu += 1;
+      continue;
+    }
+
     manifesti.aanet[url] = { tiedosto, alkuperainen: url };
 
     // Äänitteet ovat kymmeniä megatavuja ja latautuvat hitaasti, joten
@@ -440,6 +485,7 @@ function lataaAanet(urlit) {
     nuku(400);
     if ((i + 1) % 10 === 0) console.log(`  aanet: ${i + 1}/${urlit.length}`);
   }
+  if (ohitettu) console.log(`  aanet: yhteensä ${ohitettu} ohitettu — jo ämpärissä`);
 }
 
 /**

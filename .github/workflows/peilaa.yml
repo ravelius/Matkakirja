@@ -27,8 +27,28 @@
 # 56 sekuntia, josta noudon osuus 37 s. Pitkä ajo tulee vain silloin, kun
 # uutta aineistoa on oikeasti paljon — ja silloin sitä pitääkin odottaa.
 #
-# Rinnakkaiset ajot eivät ole vaara: concurrency-ryhmä pitää ne jonossa
-# (alempana), eikä vienti käytä --deleteä.
+# PÄIVITYS 2.9.2026: yllä oleva "37 s nouto" oli koko ämpärin lataus
+# levylle (aws s3 sync s3://ämpäri media). Ämpäri on kasvanut sen jälkeen
+# niin paljon, että sama vaihe kesti run 33621762982:ssa lähes kolme
+# tuntia ja kaatui lopulta yhden tiedoston toistuvaan latausvirheeseen
+# ("Max Retries Exceeded") — lataamatta tuota tuntia ennen kaatumista
+# mitään hyödyllistä. Peilaustyökalu (tools/peilaa-media.mjs) tarvitsee
+# ajokoneella oikeasti vain manifesti.json:in: se kertoo, mitkä nimet on
+# jo onnistuneesti peilattu, eikä työkalu enää vaadi paikallista
+# tiedostoa niiden ohittamiseksi (ks. selitys työkalun alusta). Nouto
+# lataa siis enää pelkän manifestin (muutama kilotavu), ja työkalu
+# lataa alkuperäisestä lähteestä vain ne yksittäiset tiedostot, joita
+# manifesti ei vielä tunne. Tyypillinen ajo (muutama uusi kortti) on nyt
+# sekunteja tai minuutteja, ei tunteja.
+#
+# Rinnakkaiset ajot eivät ole vaara: uudempi ajo saa keskeyttää vanhemman
+# (alempana cancel-in-progress: true). Vienti ei käytä --deleteä eikä
+# vie manifesti.json:ia ennen kuin kaikki kansiot on synkattu (set -e
+# pysäyttää koko vaiheen ensimmäiseen virheeseen), joten keskeytys
+# jättää ämpäriin korkeintaan ylimääräisiä, vielä manifestoimattomia
+# tiedostoja — ei koskaan puolittain kirjoittunutta tiedostoa tai
+# ristiriitaista manifestia. S3-yhteensopiva PUT on aina joko kokonaan
+# perillä tai ei ollenkaan.
 #
 # Salaisuudet ovat tämän repon Actions-asetuksissa eivätkä koskaan
 # täällä:
@@ -68,17 +88,24 @@ on:
 permissions:
   contents: read
 
-# Yksi ajo kerrallaan: kaksi rinnakkaista kirjoittaisi ämpäriin
-# päällekkäin ja manifesti menisi sekaisin.
+# Kaksi rinnakkaista ajoa eivät riko toisiaan (ks. perustelu ylempänä:
+# vienti on siivu kerrallaan siirrettäviä tiedostoja + manifesti vasta
+# lopuksi, ei koskaan --delete), joten uudempi push saa keskeyttää
+# vanhemman sen sijaan että jää jonottamaan sen taakse. Tämä oli ennen
+# false juuri siksi, että täysi ajo saattoi kestää tunteja — nyt tyypil-
+# linen ajo on sekunteja, joten jono tuskin edes ehtisi kasvaa, mutta
+# keskeytys on siltä varalta turvallinen eikä enää tarpeeton riski.
 concurrency:
   group: peilaa-media
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   peilaa:
     runs-on: ubuntu-latest
-    # Täysi ajo kestää tunnin luokkaa: jokaisesta tiedostosta
-    # tarkistetaan koko lähteestä, ja lähteet ovat hitaita.
+    # Aiemmin tunnin luokkaa (koko ämpärin lataus). Nyt vain manifesti
+    # noudetaan ja vain uudet tiedostot ladataan/viedään, joten tyypil-
+    # linen ajo on minuutteja — 300 on silti reilu kattoraja siltä
+    # varalta, että kertaheitolla lisätään paljon uutta aineistoa.
     timeout-minutes: 300
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
@@ -88,6 +115,13 @@ jobs:
       # aws-cli 2.23:sta alkaen lähtevät oletuksena mukaan.
       AWS_REQUEST_CHECKSUM_CALCULATION: when_required
       AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      # Yksittäisen tiedoston tilapäinen verkkovirhe ei saa enää kaataa
+      # koko ajoa (run 33621762982, 2.9.2026): aws-cli yrittää nyt
+      # jokaista pyyntöä kymmenen kertaa adaptiivisella takaisinvedolla
+      # ennen luovutusta, minkä lisäksi jokainen aws-komento alla on
+      # vielä oman kolmen yrityksen silmukkansa sisällä (funktio "yrita").
+      AWS_MAX_ATTEMPTS: '10'
+      AWS_RETRY_MODE: adaptive
       JULKINEN: https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev
     steps:
       - uses: actions/checkout@v4
@@ -122,17 +156,48 @@ jobs:
           fi
           echo "Kaikki neljä salaisuutta löytyvät."
 
-      - name: Nouda nykyinen peili ämpäristä
+      # Ei enää koko ämpärin latausta (ks. selitys workflow'n alussa ja
+      # tools/peilaa-media.mjs:n alussa) — pelkkä manifesti riittää
+      # työkalulle päättämään, mitkä nimet on jo peilattu. "yrita" on
+      # oma kolmen yrityksen silmukka aws-clin omien (AWS_MAX_ATTEMPTS)
+      # yritysten päälle: jos koko komento silti epäonnistuu kolmesti
+      # (esim. R2 on poikki useita minuutteja), ajo kaatuu selvästi sen
+      # sijaan että roikkuisi tai jatkaisi tyhjällä manifestilla.
+      - name: Nouda manifesti ämpäristä
         run: |
-          set -euo pipefail
+          set -uo pipefail
           mkdir -p media
-          aws s3 sync "s3://${{ secrets.R2_BUCKET }}" media \
-            --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
-            --no-progress
-          du -sh media
-          for kansio in kuvat liput aanet; do
-            echo "$kansio: $(ls media/$kansio 2>/dev/null | wc -l) tiedostoa"
+          paate="--endpoint-url https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com"
+          # Kolme yritystä ennen luovutusta. Puuttuva manifesti (tyhjä
+          # ämpäri, ensimmäinen ajo ikinä) EI ole virhe eikä kuluta
+          # yrityksiä — silloin työkalu vain aloittaa tyhjästä.
+          yritys=0
+          onnistui=0
+          while [ "$yritys" -lt 3 ]; do
+            yritys=$((yritys + 1))
+            loki=$(aws s3 cp "s3://${{ secrets.R2_BUCKET }}/manifesti.json" media/manifesti.json \
+              $paate --cli-connect-timeout 10 --cli-read-timeout 60 2>&1)
+            koodi=$?
+            if [ "$koodi" -eq 0 ]; then
+              onnistui=1
+              break
+            fi
+            if echo "$loki" | grep -qiE 'does not exist|NoSuchKey|404'; then
+              echo "Ämpärissä ei vielä ole manifesti.json:ia — ensimmäinen ajo, jatketaan tyhjästä."
+              onnistui=1
+              break
+            fi
+            echo "$loki"
+            echo "Manifestin nouto epäonnistui (yritys $yritys/3)."
+            [ "$yritys" -lt 3 ] && sleep 5
           done
+          if [ "$onnistui" -ne 1 ]; then
+            echo "::error::Manifestin nouto epäonnistui kolmen yrityksen jälkeen."
+            exit 1
+          fi
+          if [ -f media/manifesti.json ]; then
+            echo "Manifesti noudettu: $(wc -c < media/manifesti.json) tavua"
+          fi
 
       - name: Peilaa puuttuvat
         env:
@@ -186,20 +251,36 @@ jobs:
       - name: Tarkista polkusäännöt manifestia vasten
         run: node --test tests/media.test.mjs
 
+      # Kolme yritystä per komento: jos yksittäinen pyyntö kaatuu R2:n
+      # tilapäiseen katkoon aws-clin omien (AWS_MAX_ATTEMPTS=10)
+      # yritysten jälkeenkin, koko vaihe ei saa luovuttaa heti.
       - name: Vie ämpäriin
         run: |
-          set -euo pipefail
+          set -uo pipefail
           paate="--endpoint-url https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com"
           ampari="s3://${{ secrets.R2_BUCKET }}"
+          yrita() {
+            local yritys=0
+            while [ "$yritys" -lt 3 ]; do
+              yritys=$((yritys + 1))
+              "$@" && return 0
+              echo "Epäonnistui (yritys $yritys/3): $*"
+              [ "$yritys" -lt 3 ] && sleep 5
+            done
+            return 1
+          }
+          set -e
           for kansio in kuvat liput aanet; do
             [ -d "media/$kansio" ] || continue
-            aws s3 sync "media/$kansio" "$ampari/$kansio" $paate \
-              --size-only --no-progress --cache-control "public, max-age=2592000"
+            yrita aws s3 sync "media/$kansio" "$ampari/$kansio" $paate \
+              --size-only --no-progress --cache-control "public, max-age=2592000" \
+              --cli-connect-timeout 10 --cli-read-timeout 120
           done
           # Manifesti muuttuu joka ajolla ja työhuone lukee sen: lyhyt
           # välimuisti, ettei tilastoihin jää eilistä lukemaa.
-          aws s3 cp media/manifesti.json "$ampari/manifesti.json" $paate \
-            --content-type application/json --cache-control "public, max-age=300"
+          yrita aws s3 cp media/manifesti.json "$ampari/manifesti.json" $paate \
+            --content-type application/json --cache-control "public, max-age=300" \
+            --cli-connect-timeout 10 --cli-read-timeout 60
           # --delete on tarkoituksella pois: vanha tiedosto ämpärissä ei
           # haittaa ketään, mutta vahingossa tyhjentynyt ämpäri rikkoisi
           # pelin kaikilta kerralla.
@@ -219,7 +300,15 @@ jobs:
             case "$koodi" in 200|206) ;; *) exit 1 ;; esac
             test "$cors" != "0"
           }
+          # Näyte poimitaan manifestista, ei paikalliselta levyltä: media/
+          # sisältää enää tällä ajolla uudet tiedostot (ks. selitys
+          # ylempänä), ja tyypillisellä ajolla kansio on usein tyhjä
+          # vaikka ämpärissä on satoja vanhoja tiedostoja. Manifesti on
+          # juuri vietyä ämpärin sisältöä vastaava, joten se kelpaa
+          # näytteeksi aina — myös silloin kun mikään ei muuttunut.
           for kansio in kuvat liput aanet; do
-            [ -d "media/$kansio" ] && tarkista "$kansio/$(ls media/$kansio | head -1)"
+            tiedosto=$(jq -r --arg k "$kansio" \
+              '.[$k] | to_entries | .[0].value.tiedosto // empty' media/manifesti.json)
+            [ -n "$tiedosto" ] && tarkista "$tiedosto"
           done
           tarkista "manifesti.json"
