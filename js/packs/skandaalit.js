@@ -1318,7 +1318,33 @@ export const SKANDAALIT = {
         + 'senkin. Hänestä kirjan kirjoittanut mies jäi pian itse kiinni '
         + 'väärennetyistä muistelmista, mikä lienee alan täydellisin oppitunti: '
         + 'väärentäjän ympärillä kaikki alkaa olla vähän väärennettyä.',
-      lahde: 'en-Wikipedia "Elmyr de Hory". Tarkistettu 1.9.2026.',
+      teksti: 'Elemér Albert Hoffmann syntyi Budapestissa 1906 ja opiskeli maalausta '
+        + 'Münchenissä ja Pariisissa, muun muassa Fernand Léger\'n oppilaana. Hänen '
+        + 'omat työnsä eivät käyneet kaupaksi. Vuonna 1946 pariisilainen ostaja luuli '
+        + 'hänen tussipiirrostaan Picassoksi ja maksoi siitä; siitä alkoi '
+        + 'kaksikymmentä vuotta työtä, jossa de Hory esiintyi kotinsa menettäneenä '
+        + 'unkarilaisaatelisena ja myi gallerioille sitä, mitä suvun kokoelmasta muka '
+        + 'oli jäljellä.'
+        + '\n\nPicassoihin tulivat lisäksi Matisse, Modigliani ja Renoir. Kun '
+        + 'galleristit alkoivat epäillä, hän vaihtoi nimeä — Louis Cassou, Joseph '
+        + 'Dory, E. Raynal — ja siirtyi myymään postitse. 1950-luvun puolivälissä hän '
+        + 'myi \'Matissen\' Harvardin Fogg-museolle ja tarjosi perään \'Modiglianin\' '
+        + 'ja \'Renoirin\'. Museon intendentti huomasi kolmessa piirroksessa saman '
+        + 'käden, kieltäytyi ostamasta ja alkoi kysellä muista museoista. Kauppiaana '
+        + 'toiminut Fernand Legros otti myynnistä ensin 40, sitten 50 prosenttia ja '
+        + 'maksoi de Horylle 400 dollaria kuussa Ibizalla. Texasilainen öljymies Algur '
+        + 'H. Meadows oli ostanut Legros\'lta 56 väärennöstä ja vaati syytteitä.'
+        + '\n\nEspanjalainen tuomioistuin tuomitsi de Horyn 1968 kahdeksi kuukaudeksi '
+        + 'vankeuteen — ei väärennöksistä, koska ei voitu näyttää toteen, että hän '
+        + 'olisi väärentänyt mitään Espanjan maaperällä, vaan homoseksuaalisuudesta, '
+        + 'toimeentulon puutteesta ja rikollisten seurasta. Kun Espanja suostui '
+        + 'luovuttamaan hänet Ranskaan joulukuussa 1976, hän otti yliannostuksen '
+        + 'unilääkettä.'
+        + '\n\nYhtä asiaa de Hory kiisti loppuun asti: hän ei ollut koskaan '
+        + 'signeerannut työtään toisen taiteilijan nimellä. Toisen tyyliin maalaaminen '
+        + 'ei ole rikos — vasta nimikirjoitus tekee taulusta väärennöksen. Nimet '
+        + 'saattoi vetää Legros.',
+      lahde: 'en-Wikipedia "Elmyr de Hory". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Minkä taiteilijoiden tyyliin Elmyr de Hory erityisesti väärensi '
           + 'teoksia?',
@@ -1346,7 +1372,30 @@ export const SKANDAALIT = {
         + 'todisti toista: lautaseen oli kaiverrettu Balatonin roomalainen '
         + 'nimi. Esine voi valehdella alkuperänsä vain, jos kukaan ei lue mitä '
         + 'siihen on kirjoitettu.',
-      lahde: 'en-Wikipedia "Seuso Treasure". Tarkistettu 1.9.2026.',
+      teksti: 'Aarre on neljätoista koristeltua hopea-astiaa ja kuparipata, jossa ne '
+        + 'olivat olleet, 300-luvun lopulta tai 400-luvun alusta. Suurin lautanen on '
+        + 'seitsemänkymmentä senttiä leveä ja painaa lähes yhdeksän kiloa. Ensimmäinen '
+        + 'kappale tuli myyntiin Lontooseen 1980 kahden wieniläisen antiikkikauppiaan '
+        + 'kautta, ja kokonaisuuden osti Spencer Comptonin, Northamptonin seitsemännen '
+        + 'markiisin, johtama ryhmä. Paperit tulivat Sveitsin '
+        + 'Libanonin-suurlähetystöstä ja kertoivat löytöpaikaksi Tyroksen ja Sidonin '
+        + 'seudun.'
+        + '\n\nKauppa Gettyn museolle kymmenellä miljoonalla dollarilla raukesi, ja '
+        + 'aarre pantiin Sotheby\'sin huutokauppaan New Yorkissa 1990. Myynti '
+        + 'pysäytettiin, kun paperit todettiin vääriksi, ja Unkari, Jugoslavia ja '
+        + 'Libanon vaativat kukin aarretta itselleen. New Yorkin '
+        + 'muutoksenhakutuomioistuin hylkäsi vaatimukset 1993, ja hopeat jäivät '
+        + 'markiisin pankkiholviin.'
+        + '\n\nUnkarin todiste oli kaiverrus: metsästyslautasessa lukee Pelso, '
+        + 'Balatonin roomalainen nimi. Löytäjäksi arvioidaan nuori sotilas József '
+        + 'Sümegh, joka kaivoi Polgárdin lähellä noin 1975–76. Hänet löydettiin '
+        + 'kuolleena kellarista 1980. Tuolloin puhuttiin itsemurhasta; myöhemmin '
+        + 'poliisi päätyi murhaan, ja tutkinta on ollut auki vuosikymmeniä.'
+        + '\n\nUnkari osti seitsemän esinettä takaisin 2014 ja loput seitsemän 2017, '
+        + 'jälkimmäiset 28 miljoonalla eurolla. Koko aarre on ollut Unkarin '
+        + 'kansallismuseossa pysyvästi esillä vuodesta 2019. Scotland Yardin tutkinta '
+        + 'esineiden alkuperästä on yhä avoinna.',
+      lahde: 'en-Wikipedia "Seuso Treasure". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mikä kaiverrus tuki Unkarin väitettä Seuson aarteen alkuperästä?',
         vaihtoehdot: [
@@ -1375,8 +1424,30 @@ export const SKANDAALIT = {
         + 'kuuluisimman poliitikon — ja koko juttu kaatui yhteen väärin '
         + 'kirjoitettuun sanaan. Väärentäjä teki oikeussalissa saman virheen '
         + 'kuin paperilla. Oikoluku olisi kannattanut.',
-      lahde: 'en-Wikipedia "Richard Pigott" ja en-Wikipedia "Charles Stewart '
-        + 'Parnell". Tarkistettu 1.9.2026.',
+      teksti: 'Richard Pigott syntyi Ratoathissa Meathin kreivikunnassa 1835 ja teki '
+        + 'uran nationalistisissa lehdissä; vuonna 1879 hän omisti kolme lehteä ja myi '
+        + 'ne pian Irlannin maaliitolle. Vuonna 1883 hän syytti maaliiton '
+        + 'rahastonhoitajaa siitä, ettei tämä pystynyt tekemään tiliä '
+        + 'sadastatuhannesta punnasta. Kun asialle ei tehty mitään, Pigott kääntyi '
+        + 'entisiä tovereitaan vastaan ja alkoi myydä tietoja heidän poliittisille '
+        + 'vastustajilleen.'
+        + '\n\nKirjeet, jotka hän väärensi, esittivät Charles Stewart Parnellin '
+        + 'hyväksyneen vuoden 1882 Phoenix Parkin murhat. The Times maksoi niistä 1 '
+        + '780 puntaa ja julkaisi pahimman 18. huhtikuuta 1887. Parnell sanoi sitä '
+        + 'samana päivänä törkeäksi ja häpeämättömäksi väärennökseksi, mutta lehti '
+        + 'piti kiinni aineistostaan, ja asiaa tutkimaan asetettiin '
+        + 'erityistuomioistuin.'
+        + '\n\nHelmikuussa 1889 kirjeistä löytyi kirjoitusvirhe — hesitency — jonka '
+        + 'Pigott oli tehnyt muissakin teksteissään. Todistelu kaatui siihen. Pigott '
+        + 'tunnusti väärennökset Henry Labouchèrelle, pakeni Espanjaan ja ampui '
+        + 'itsensä madridilaisessa hotellihuoneessa 1. maaliskuuta 1889.'
+        + '\n\nParnell haastoi The Timesin oikeuteen ja sai sovinnossa 5 000 puntaa; '
+        + 'lehden oikeudenkäyntikulut olivat moninkertaiset. Tuomioistuimen aineisto '
+        + 'paisui lopulta kolmeenkymmeneenseitsemään niteeseen. Kun Parnell seuraavan '
+        + 'kerran astui alahuoneeseen, jäsenet nousivat seisomaan. Pigottilta jäi '
+        + 'neljä poikaa, nuorin kuusivuotias.',
+      lahde: 'en-Wikipedia "Richard Pigott" ja en-Wikipedia "Charles Stewart Parnell". '
+        + 'Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Miten Richard Pigottin väärennös paljastui erityistuomioistuimessa '
           + '1889?',
@@ -1404,7 +1475,31 @@ export const SKANDAALIT = {
         + 'puolueensa riitakysymys, ja Irlannin itsehallinto siirtyi '
         + 'sukupolvella eteenpäin. Historia tuntee harvoja kalliimpia '
         + 'yksityiselämän paljastuksia.',
-      lahde: 'en-Wikipedia "Charles Stewart Parnell". Tarkistettu 1.9.2026.',
+      teksti: 'Vuosien 1885 ja 1886 kotisääntökiistoissa Parnell oli pitänyt käsissään '
+        + 'Britannian alahuoneen vaakaa. Kapteeni William O\'Shea jätti '
+        + 'avioerohakemuksen 24. joulukuuta 1889 ja nimesi Parnellin '
+        + 'kanssavastaajaksi. Käsittely alkoi vasta 15. marraskuuta 1890 ja kesti '
+        + 'kaksi päivää. Parnell ei riitauttanut mitään — hän halusi eron menevän läpi '
+        + 'voidakseen naida Katharine O\'Shean — joten kapteenin väitteet jäivät '
+        + 'kiistämättä, niiden joukossa se, että Parnell oli ollut Katharinen '
+        + 'rakastaja vuosikausia ja kolmen tämän lapsen isä. Päätös annettiin 17. '
+        + 'marraskuuta.'
+        + '\n\nGladstone ilmoitti, ettei voisi enää tehdä työtä Parnellin kanssa. '
+        + 'Irlannin parlamenttipuolue kokoontui Westminsterin komiteahuoneeseen numero '
+        + '15 1. joulukuuta, paikalla 73 jäsentä. Parnell kieltäytyi väistymästä edes '
+        + 'väliaikaisesti ja esti puheenjohtajana kaikki esitykset itsensä '
+        + 'syrjäyttämiseksi. Puolue hajosi siihen paikkaan.'
+        + '\n\nHän lähti kiertämään maata. Pohjois-Kilkennyn täytevaaleissa hänen '
+        + 'ehdokkaansa hävisi lähes kaksi yhteen, ja Castlecomerissa joku heitti hänen '
+        + 'silmiinsä sammuttamatonta kalkkia. Hän vihki avioliiton Katharinen kanssa '
+        + '25. kesäkuuta 1891; samana päivänä Irlannin katoliset piispat julkaisivat '
+        + 'lähes yksimielisen julistuksen, jonka mukaan hän oli tehnyt itsensä '
+        + 'kelvottomaksi johtajaksi.'
+        + '\n\nParnell kuoli Hovessa 6. lokakuuta 1891 keuhkokuumeeseen 45-vuotiaana. '
+        + 'Hautajaisiin Glasnevinin hautausmaalle tuli yli kaksisataatuhatta ihmistä. '
+        + 'Hautakiveen, joka pystytettiin vasta 1940, ei kirjoitettu vuosilukuja eikä '
+        + 'arvonimiä — siinä lukee vain Parnell.',
+      lahde: 'en-Wikipedia "Charles Stewart Parnell". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mikä oli Parnellin vuoden 1890 skandaalin merkittävin poliittinen '
           + 'seuraus?',
@@ -1432,7 +1527,30 @@ export const SKANDAALIT = {
         + 'maksettiin — sitten koko komeus purjehti takaisin satamaan lasti '
         + 'täynnä. Kenelle kuuluu aarre, jonka omistajille on jo korvattu sen '
         + 'menetys? Dublin perusti kysymyksen ratkomiseen kokonaisen seuran.',
-      lahde: 'en-Wikipedia "Ouzel Galley". Tarkistettu 1.9.2026.',
+      teksti: 'Syksyllä 1695 kauppalaiva Ouzel — mustarastas — lähti Ringsendistä '
+        + 'kapteeni Eoghan Masseyn johdolla. Omistaja oli dublinilainen huone Ferris, '
+        + 'Twigg ja Cash, määränpää Smyrna. Laivan piti palata seuraavana vuonna. Se '
+        + 'ei palannut silloin eikä sitä seuraavana, ja kolmannen vuoden mentyä Dublin '
+        + 'piti sitä kadonneena kaikkine miehineen.'
+        + '\n\nVuonna 1698 kaupungin arvostetuimmista kauppiaista koottu lautakunta '
+        + 'ratkaisi vakuutuskysymyksen: laiva oli menetetty, korvaukset maksettiin, ja '
+        + 'kolmekymmentäseitsemän miehistön jäsentä ja kolme päällystöön kuuluvaa '
+        + 'julistettiin kuolleiksi. Syksyllä 1700 Ouzel purjehti Liffeytä ylös ruuma '
+        + 'täynnä. Massey kertoi, että algerialaiset kaapparit olivat ottaneet laivan '
+        + 'menomatkalla, miehistö oli pakotettu palvelemaan merirosvoja viisi vuotta '
+        + 'ja että he olivat vallanneet laivan takaisin humalaisten juhlien aikana.'
+        + '\n\nDublin ei uskonut tarinaa kokonaan. Ryöstösaalista ei voinut '
+        + 'laillisesti jakaa miehistölle, joten sama lautakunta kutsuttiin uudelleen '
+        + 'koolle. Se päätti, että kaiken sen jälkeen, mitä omistajille ja '
+        + 'vakuuttajille kuului, ylijäämä pantaisiin rahastoksi kaupungin köyhtyneille '
+        + 'kauppiaille.'
+        + '\n\nOsa miehistöstä palasi kotiin ja löysi vaimonsa naimisissa toisen '
+        + 'kanssa ja omaisuutensa jaettuna. Ringsendissä epätavallisissa oloissa '
+        + 'syntyneitä lapsia kutsutaan yhä ouzelereiksi. Lautakunnasta tehtiin 1705 '
+        + 'pysyvä välimieselin, jonka jäsenmäärä sidottiin laivan miehistön kokoon, '
+        + 'neljäänkymmeneen; jäsenillä oli laivan arvonimet, ja joukossa istuivat '
+        + 'aikanaan Arthur Guinness ja John Jameson.',
+      lahde: 'en-Wikipedia "Ouzel Galley". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mitä Ouzel Galleyn ylimääräiselle saalisrahalle tehtiin, kun '
           + 'omistajat ja vakuuttajat oli hyvitetty?',
@@ -1462,7 +1580,32 @@ export const SKANDAALIT = {
         + 'kuukauden päästä kuningaskunta oli ohi ja kuningas vankina laivassa. '
         + 'Islanti antoi hänelle arvonimen, jota yksikään hallitsija ei ole '
         + 'halunnut periä.',
-      lahde: 'en-Wikipedia "Jørgen Jørgensen". Tarkistettu 1.9.2026.',
+      teksti: 'Jørgen Jørgensen oli tanskalainen laivuri, joka oli menettänyt '
+        + 'aluksensa Admiral Juelin brittien käsiin ja eli Englannissa sotavankina '
+        + 'ehdonalaisessa. Kesällä 1809 hän lähti tulkiksi saippuakauppias Samuel '
+        + 'Phelpsin kauppamatkalle Islantiin laivalla Margaret & Anne. Islannissa oli '
+        + 'pula tavarasta, mutta Tanskan kauppamonopoli ja käynnissä oleva sota '
+        + 'tekivät kaupankäynnistä laitonta, eikä kuvernööri, kreivi Trampe, suostunut '
+        + 'poikkeukseen.'
+        + '\n\nSunnuntaina 25. kesäkuuta Trampe pidätettiin ja vietiin laivalle. '
+        + 'Seuraavana päivänä seinälle naulattiin yksitoistakohtainen julistus, jonka '
+        + 'Jørgensen allekirjoitti Koko Islannin suojelijana ja ylimpänä käskijänä '
+        + 'merellä ja maalla. Phelps rakennutti rantakalliolle patterin kuudelle '
+        + 'tykille, ja sen yllä liehui lippu, jonka Jørgensen oli itse suunnitellut: '
+        + 'sininen, jossa kolme valkoista litistettyä turskaa.'
+        + '\n\nElokuussa Hafnarfjörduriin saapui brittiläinen sotalaiva Talbot. '
+        + 'Jørgensenin valta päättyi 19. elokuuta, ja 22. päivänä allekirjoitettiin '
+        + 'sopimus, jonka mukaan kaikki hänen julistuksensa olivat mitättömiä. '
+        + 'Lontoossa hänet pidätettiin — ei vallankaappauksesta vaan siitä, että hän '
+        + 'oli rikkonut sotavangin kunniasanansa — ja hän istui lähes vuoden '
+        + 'vankilaivalla, jolla oli kahdeksansataa vankia.'
+        + '\n\nPaluumatkalla Margaret & Anne syttyi tuleen. Jørgensen otti palavan '
+        + 'laivan komentoonsa; alusta ei pelastettu, mutta koko miehistö saatiin '
+        + 'toiseen laivaan. Islanti tuntee hänet nimellä Jörundur hundadagakonungur, '
+        + 'koirapäivien kuningas. Hän kuoli 1841 Tasmaniassa, jossa oli toiminut '
+        + 'poliisimiehenä.',
+      lahde: 'en-Wikipedia "Jørgen Jørgensen" ja is-Wikipedia "Jörundur '
+        + 'hundadagakonungur". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Miksi islantilaiset kutsuvat Jørgen Jørgenseniä \'koirapäivien '
           + 'kuninkaaksi\'?',
@@ -1489,7 +1632,27 @@ export const SKANDAALIT = {
         + 'maksoivat — ja sitä nopeammin se katosi. Viimeinen pari haettiin '
         + 'Eldeyn kalliolta tilaustyönä vuonna 1844. Kokoelma täydentyi; laji '
         + 'loppui.',
-      lahde: 'en-Wikipedia "Great auk". Tarkistettu 1.9.2026.',
+      teksti: 'Siivetön ruokki oli seitsemänkymmentäviisi senttiä pitkä ja painoi noin '
+        + 'viisi kiloa. Sen siivet olivat viidentoista sentin mittaiset eivätkä '
+        + 'kantaneet lentoon, mutta vedessä lintu oli nopea. Se pesi kalliosaarilla, '
+        + 'yhden munan paljaalle kivelle, ja pesimäyhdyskuntia uskotaan olleen '
+        + 'kaikkiaan enintään parikymmentä.'
+        + '\n\nViimeinen niistä oli Geirfuglasker Islannin edustalla, jyrkänteiden '
+        + 'ympäröimä kallio, jolle ei päässyt maihin. Vuonna 1830 luoto vajosi '
+        + 'tulivuorenpurkauksen jälkeen ja linnut siirtyivät Eldeylle, jolle pääsee '
+        + 'yhdeltä sivulta. Kun yhdyskunta löydettiin 1835, lintuja oli lähes '
+        + 'viisikymmentä. Museot halusivat nahkoja ja munia, ja mitä harvinaisempi '
+        + 'lintu oli, sitä enemmän niistä maksettiin.'
+        + '\n\nKolmantena kesäkuuta 1844 Jón Brandsson ja Sigurður Ísleifsson nousivat '
+        + 'Eldeylle kauppiaan tilauksesta ja tappoivat viimeisen parin, joka hautoi '
+        + 'munaa. Sigurður kuvasi tapahtuman myöhemmin lintututkijalle: lintu käveli '
+        + 'kuin ihminen, ei päästänyt ääntäkään, ja hän kuristi sen kallionreunalla.'
+        + '\n\nNahkoja on jäljellä 78, munia noin 75 ja luurankoja 24. Viimeisen parin '
+        + 'silmät ja sisäelimet ovat Kööpenhaminan eläintieteellisessä museossa, mutta '
+        + 'nahkojen olinpaikkaa ei tiedetty yli sataankahdeksaankymmeneen vuoteen. '
+        + 'DNA-vertailu tunnisti koiraan nahan Brysselistä 2017 ja naaraan '
+        + 'Cincinnatista 2025.',
+      lahde: 'en-Wikipedia "Great auk". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Miksi viimeiset siivettömät ruokit tapettiin Eldeyllä vuonna 1844?',
         vaihtoehdot: [
@@ -1519,7 +1682,28 @@ export const SKANDAALIT = {
         + 'opiskelijat näyttivät television katsojille videon, jolla päät '
         + 'syntyivät porakoneella. Asiantuntijat eivät itkeneet enää '
         + 'liikutuksesta.',
-      lahde: 'en-Wikipedia "Amedeo Modigliani". Tarkistettu 1.9.2026.',
+      teksti: 'Modigliani syntyi Livornossa ja piti itseään pitkään ennemmin '
+        + 'kuvanveistäjänä kuin maalarina; Pariisissa hän oli vuoden Constantin '
+        + 'Brâncușin oppilaana. Kotikaupungissa on kerrottu sukupolvien ajan, että hän '
+        + 'heitti epäonnistuneet kivipäänsä kanavaan. Kesällä 1984, sata vuotta '
+        + 'taiteilijan syntymästä, Fosso Reale tyhjennettiin, ja pohjasta nousi kolme '
+        + 'veistettyä päätä.'
+        + '\n\nAsiantuntijat tunnistivat ne Modiglianin kadonneiksi töiksi, ja löytö '
+        + 'oli Italian kesän uutinen: kadonnut varhaistuotanto oli palannut ja juuri '
+        + 'juhlavuonna. Sitten opiskelijat näyttivät televisiossa videon, jolla he '
+        + 'itse veistivät yhden päistä — työkaluna Black & Deckerin porakone.'
+        + '\n\nJuttu ei ole yhtä hyvin muistettu siksi, että kyse oli kepposesta, vaan '
+        + 'siksi, että se osui kohtaan, jossa taidemaailma on aidosti heikoilla: '
+        + 'Modigliani on yksi maailman väärennetyimmistä taiteilijoista. Nousevat '
+        + 'hinnat ja lyhyeen elämään kietoutunut legenda ovat pitäneet yllä markkinaa, '
+        + 'jossa on arvioitu, että suurin osa hänen nimiinsä pannuista teoksista ei '
+        + 'ole hänen.'
+        + '\n\nElmyr de Hory myönsi tehneensä useita Modiglianeja. Taidekauppias Klaus '
+        + 'Perls osti väärennettyjä Modigliani-veistoksia. Vuonna 2018 Genovan '
+        + 'näyttelystä takavarikoitiin kaksikymmentä väärää Modigliania. Livornon '
+        + 'kanavasta nousseet päät ovat siis poikkeus vain siinä, että väärentäjät '
+        + 'ilmoittautuivat itse.',
+      lahde: 'en-Wikipedia "Amedeo Modigliani". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Millä työkalulla opiskelijat paljastivat veistäneensä yhden '
           + 'Livornon kanavasta löytyneistä \'Modiglianin päistä\'?',
@@ -1546,7 +1730,29 @@ export const SKANDAALIT = {
         + 'samat numerot kahdesti — näin ajateltiin Banca Romanassa. Skandaali '
         + 'kaatoi hallituksen ja synnytti sivutuotteena Italian keskuspankin. '
         + 'Harva pankkikriisi on ollut näin tuottelias.',
-      lahde: 'en-Wikipedia "Banca Romana scandal". Tarkistettu 1.9.2026.',
+      teksti: 'Italiassa oli kuusi setelinanto-oikeuden saanutta pankkia, ja Banca '
+        + 'Romana oli niistä yksi. Sen pääjohtajaksi tuli 1881 Bernardo Tanlongo, '
+        + 'entinen maatyöläinen, jota Corriere della Sera kuvasi puolilukutaitoiseksi '
+        + 'mutta nerokkaaksi laskijaksi. Hän oli rakentanut suhdeverkoston lainoilla, '
+        + 'jotka peittivät muiden salaisuuksia.'
+        + '\n\nKesäkuussa 1889 valtion tarkastus löysi, että 91 prosenttia pankin '
+        + 'varoista oli kiinni epälikvideissä kohteissa ja että pankki oli painattanut '
+        + 'seteleitä samoilla sarjanumeroilla kahdesti. Pääministeri Francesco Crispi '
+        + 'ja valtiovarainministeri Giovanni Giolitti lukivat raportin ja hautasivat '
+        + 'sen. Pankki oli lainannut suuria summia poliitikoille, usein korotta, ja '
+        + 'heille itselleen.'
+        + '\n\nKansanedustaja Napoleone Colajanni luki raportista otteita '
+        + 'parlamentissa 20. joulukuuta 1892. Asiantuntijakomission raportti 18. '
+        + 'tammikuuta 1893 vahvisti luvut: liikkeessä oli 135 miljoonaa liiraa '
+        + 'seteleitä, kun laki salli 75 miljoonaa, ja lisäksi Britanniassa oli '
+        + 'painettu 40 miljoonan liiran kaksoissarja, joka jäi liikkeeseen laskematta '
+        + 'vain siksi, että pankin alempien virkailijoiden rehellisyys ei pettänyt.'
+        + '\n\nTanlongo pidätettiin seuraavana päivänä ja vapautettiin syytteistä '
+        + 'heinäkuussa 1894 perusteella, jonka mukaan varsinaiset rikolliset olivat '
+        + 'muualla. Giolitti oli eronnut jo marraskuussa 1893. Elokuun 1893 pankkilaki '
+        + 'purki Banca Romanan ja jätti setelinanto-oikeuden uudelle Banca '
+        + 'd\'Italialle sekä kahdelle eteläiselle pankille.',
+      lahde: 'en-Wikipedia "Banca Romana scandal". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mikä instituutio perustettiin Banca Romanan skandaalin '
           + 'seurauksena?',
@@ -1573,7 +1779,31 @@ export const SKANDAALIT = {
         + 'luki tulevaisuutta — ainakin omien sanojensa mukaan. Euroopan hovit '
         + 'uskoivat vuosikausia. Ura päättyi vuoristolinnoituksen selliin, '
         + 'josta edes suuri maagikko ei loihtinut itseään ulos.',
-      lahde: 'en-Wikipedia "Alessandro Cagliostro". Tarkistettu 1.9.2026.',
+      teksti: 'Giuseppe Balsamo syntyi Palermossa 1743, karkasi luostarikoulusta ja '
+        + 'oli seitsemäntoista, kun hän sai kultaseppä Maranon uskomaan, että '
+        + 'oliivilehdon alla oli aarre ja että sen paikan saisi selville seremonialla, '
+        + 'johon tarvittiin kuusikymmentä unssia kultaa. Seremonian lopuksi hän '
+        + 'hakkasi miehen maahan ja lähti kullan kanssa. Messinassa hän otti enonsa '
+        + 'sukunimen ja muuttui kreivi Alessandro Cagliostroksi.'
+        + '\n\nVaimonsa Lorenza Felicianin kanssa hän kiersi Euroopan hoveja '
+        + 'parannusjuomien ja \'egyptiläisen vapaamuurariuden\' kanssa, jonka '
+        + 'suurmestariksi hän nimitti itsensä. Katariina Suuren henkilääkäri tutki '
+        + 'hänen valmisteensa ja totesi ne hyödyttömiksi. Kuurinmaalla kreivitär Elisa '
+        + 'von der Recke paljasti hänet julkisesti. Strasbourgissa hän sai ystäväkseen '
+        + 'kardinaali de Rohanin, ja Pariisissa molemmat joutuivat '
+        + 'kaulakoruskandaaliin: yhdeksän kuukautta Bastiljissa, vapauttava tuomio 31. '
+        + 'toukokuuta 1786 ja karkotus Ranskasta.'
+        + '\n\nVuoteen 1789 mennessä pariskunta pantitti tavaroitaan. Roomassa '
+        + 'Cagliostro yritti perustaa loosin, ja inkvisitio pidätti hänet 29. '
+        + 'joulukuuta 1789. Lorenza tunnusti kaiken ja päätyi luostariin, jossa kuoli '
+        + '1794. Huhtikuussa 1791 Cagliostro tuomittiin elinkautiseen ja kuoli '
+        + 'sellissään San Leon linnoituksessa 26. elokuuta 1795.'
+        + '\n\nVielä kreivin eläessä Ranskan hallitus palkkasi palermolaisen '
+        + 'lakimiehen selvittämään, kuka mies oli. Goethe kuuli selvityksestä '
+        + 'Italian-matkallaan 1788, meni katsomaan sukua ja löysi Cagliostron äidin '
+        + 'elämästä köyhyydessä tyttärensä ja lastenlastensa kanssa — ja yhä velkaa '
+        + 'poikansa lähdöstä.',
+      lahde: 'en-Wikipedia "Alessandro Cagliostro". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mikä oli \'kreivi Cagliostrona\' esiintyneen huijarin oikea nimi?',
         vaihtoehdot: [
@@ -1602,7 +1832,27 @@ export const SKANDAALIT = {
         + 'August valitsi Barboran ja piti valintansa — vaikka koko valtakunta, '
         + 'oma äiti etunenässä, oli toista mieltä. Myrkkyhuhut elävät Vilnassa '
         + 'yhä.',
-      lahde: 'en-Wikipedia "Barbara Radziwiłł". Tarkistettu 1.9.2026.',
+      teksti: 'Vilnan kuninkaanlinna ja Radvilojen palatsi olivat naapureita, ja '
+        + 'tarina kertoo, että Sigismund August kaivatti niiden välille käytävän. '
+        + 'Kesällä 1547, jonakin päivänä heinäkuun lopun ja elokuun alun välillä, hän '
+        + 'vihki salaa Barbora Radvilaitėn. Serkulleen hän kirjoitti syyksi rakkauden.'
+        + '\n\nVanhemmilleen hän kertoi asiasta 2. helmikuuta 1548. Senaatilta ei '
+        + 'ollut kysytty, ja morsian oli kuninkaan oma alamainen. Pilkkakirjoitukset '
+        + 'syyttivät Barboraa siveettömyydestä, noituudesta ja myrkystä. Piotrkówin '
+        + 'valtiopäivillä loppuvuodesta 1548 aateli anoi kuningasta luopumaan liitosta '
+        + 'ja uhkasi tarttua aseisiin; kerrotaan, että Sigismund harkitsi mieluummin '
+        + 'luopuvansa kruunusta. Kuninkaan äiti Bona Sforza lähti hovista.'
+        + '\n\nBarbora kruunattiin Wawelin katedraalissa 7. joulukuuta 1550. '
+        + 'Kruunauksen toimitti arkkipiispa Mikołaj Dzierzgowski, Bonan liittolainen, '
+        + 'joka oli jouduttu voittamaan puolelle. Barbora oli jo sairas. Hän kuoli '
+        + 'Krakovassa 8. toukokuuta 1551. Kun epäiltiin, mahtuisiko hänen '
+        + 'kuljetusvaununsa kaupunginportista, kuningas käski purkaa portin.'
+        + '\n\nMyrkkyhuhut ovat eläneet siitä asti; nykyhistorioitsijat puhuvat '
+        + 'syövästä tai tulehduksesta. Barboran jäännökset löytyivät Vilnan '
+        + 'katedraalista tulvan jälkeen 1931. Hänet oli haudattu kruunu, valtikka ja '
+        + 'valtakunnanomena mukanaan. Esineet katosivat toisessa maailmansodassa — ja '
+        + 'löytyivät uudelleen katedraalin kryptasta joulukuussa 2024.',
+      lahde: 'en-Wikipedia "Barbara Radziwiłł". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Kuka vastusti kiivaimmin Sigismund Augustin ja Barbora Radvilaitėn '
           + 'avioliittoa?',
@@ -1630,7 +1880,31 @@ export const SKANDAALIT = {
         + 'jäivät lentämättä. Syytä ei koskaan selvitetty, ja juuri se piti '
         + 'tarinan hengissä: jokainen liettualainen tuntee Lituanican, ja moni '
         + 'tietää siitä oman versionsa.',
-      lahde: 'en-Wikipedia "Lituanica". Tarkistettu 1.9.2026.',
+      teksti: 'Steponas Darius ja Stasys Girėnas olivat liettualaisia siirtolaisia '
+        + 'Chicagossa. Kesäkuussa 1932 he ostivat 3 200 dollarilla Bellanca CH-300 '
+        + 'Pacemakerin rahoilla, jotka oli kerätty liettualaisseuroista ja '
+        + 'lentonäytöksistä. Kone rakennettiin uusiksi: pidemmät siivet, lisäsäiliöt '
+        + 'runkoon, uusi moottori. Se maalattiin oranssiksi, kylkiin kirjoitettiin '
+        + 'lahjoittajien nimet, ja sille annettiin nimi Lituanica.'
+        + '\n\nLähtö oli New Yorkin Floyd Bennett Fieldiltä 15. heinäkuuta 1933 kello '
+        + '6.24 aamulla. Suunnistusvälineitä ei ollut. Atlantti ylitettiin, mutta '
+        + 'Irlannin yllä sää pakotti kiertämään pohjoisen kautta, ja kone tuli '
+        + 'mantereelle Skotlannin ja Pohjanmeren yli. Kello 0.36 heinäkuun 17. päivänä '
+        + 'se syöksyi maahan Kuhdammin kylän lähellä Soldinissa Saksassa. Lennettyä '
+        + 'oli 37 tuntia 11 minuuttia ja 6 411 kilometriä; Kaunasiin oli matkaa noin '
+        + '650.'
+        + '\n\nLiettualainen tutkintalautakunta totesi lentäjät päteviksi ja koneen '
+        + 'kunnossa: moottori kävi törmäyshetkellä ja polttoainetta oli jäljellä. '
+        + 'Syyksi jäivät vaikeat sääolot, moottorivika ja epäonnistunut pakkolasku. '
+        + 'Huhu, että kone olisi ammuttu alas vakoilukoneena, on elänyt sitkeästi; '
+        + 'ruumiinavauksissa ei löytynyt luodinjälkiä, mutta kaikkia koneen osia ei '
+        + 'koskaan palautettu Liettuaan.'
+        + '\n\nRuumiit lennätettiin kotiin 19. heinäkuuta ja balsamoitiin seuraavana '
+        + 'vuonna. Hylky on Kaunasissa Vytautas Suuren sotamuseossa. Viimeisessä '
+        + 'kirjeessään lentäjät olivat kirjoittaneet, että sekä onnistunut lento että '
+        + 'mahdollinen onnettomuus olisivat kylliksi merkittäviä — matka kannatti '
+        + 'kummassakin tapauksessa.',
+      lahde: 'en-Wikipedia "Lituanica". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mihin Lituanican lento vuonna 1933 päättyi?',
         vaihtoehdot: [
@@ -1656,7 +1930,30 @@ export const SKANDAALIT = {
         + 'mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä '
         + '1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka '
         + 'on kestänyt pidempään kuin kolikon ostovoima.',
-      lahde: 'en-Wikipedia "Boratynka". Tarkistettu 1.9.2026.',
+      teksti: 'Ruotsin sotien jälkeen Puola-Liettuan valtionkassa ei pystynyt '
+        + 'maksamaan sotilailleen. Krakovan rahapajan hoitaja, italialainen Tito Livio '
+        + 'Burattini, esitti pientä kuparikolikkoa, jolle annettaisiin '
+        + 'viranomaispäätöksellä hopeisen szelągin arvo eli kolmasosa groszia. '
+        + 'Valtiopäivät hyväksyi hankkeen 1659, vaikka kaikki tiesivät, ettei kolikon '
+        + 'kupari ollut lähelläkään sitä arvoa.'
+        + '\n\nYhdestä kuparinaulasta, 405 grammasta, Burattini löi kolmesataa '
+        + 'szelągia, joiden virallinen arvo oli sata groszia. Valtio sai niistä 57, '
+        + 'loput jäivät rahapajan vuokraajalle. Lyöntimäärille asetetut rajat hän '
+        + 'ylitti salaa. Valtiopäivät keskeytti lyönnin 1662, mutta kassa oli yhä '
+        + 'tyhjä, ja 1663 lyönti aloitettiin uudelleen ja laajennettiin Liettuan '
+        + 'rahapajoihin.'
+        + '\n\nKolikoita tehtiin arviolta 1,8 miljardia, ja niistä noin kymmenesosa '
+        + 'oli väärennöksiä — vaikka kiinni jääneelle väärentäjälle luvattiin kidutus, '
+        + 'oikean käden katkaisu ja naulaaminen kaupunginportille sekä mestaus. Vuonna '
+        + '1664 dukaatti maksoi hopeassa 195 groszia mutta boratynkoina 270, siis 810 '
+        + 'kolikkoa: yli kilo kuparia. Palkkansa niinä saaneet sotilaat kapinoivat ja '
+        + 'liittyivät Lubomirskin nousuun, jonka vaatimuksiin kuului palkanmaksun '
+        + 'lopettaminen boratynkoina.'
+        + '\n\nLyönti loppui 1668, mutta kolikot kiersivät vielä 1700-luvun alussa. '
+        + 'Puolan kielessä epäluotettava tuttu tunnetaan yhä \'kuin huono szeląg\', ja '
+        + 'arvottomasta asiasta sanotaan, ettei se ole katkenneen szelągin väärtti.',
+      lahde: 'pl-Wikipedia "Boratynka" ja en-Wikipedia "Boratynka". Tarkistettu '
+        + '2.9.2026.',
       visa: {
         kysymys: 'Mistä boratynka-kolikko sai nimensä?',
         vaihtoehdot: [
@@ -1685,7 +1982,31 @@ export const SKANDAALIT = {
         + 'lisäsi, että hän on nimenomaan hyvien puolella, Jumalan koira, joka '
         + 'käy helvetissä hakemassa varastetun sadon takaisin. Tuomarit '
         + 'pyörittelivät papereitaan pitkään.',
-      lahde: 'en-Wikipedia "Thiess of Kaltenbrun". Tarkistettu 1.9.2026.',
+      teksti: 'Vuonna 1691 Jürgensburgin tuomarit kutsuivat kahdeksankymppisen '
+        + 'Thiessin todistajaksi kirkkovarkausjuttuun. He tiesivät, että seutu piti '
+        + 'miestä ihmissutena, mutta se ei kuulunut asiaan. Thiess otti sen puheeksi '
+        + 'itse.'
+        + '\n\nKolmena yönä vuodessa — Lucian päivänä, helluntaina ja juhannuksena — '
+        + 'hän ja muut menivät pensaikkoon, riisuivat vaatteensa ja muuttuivat '
+        + 'susiksi. Sitten he matkasivat helvettiin, joka sijaitsi Lemburgin lähellä '
+        + 'suolla puolen peninkulman päässä oikeuden puheenjohtajan kartanosta. Siellä '
+        + 'he hakkasivat Paholaista ja tämän noitia pitkillä rautakangilla ja '
+        + 'kantoivat takaisin viljan, karjan ja hedelmät, jotka noidat olivat vieneet. '
+        + 'Ilman sitä sato epäonnistuisi. He eivät olleet Paholaisen palvelijoita vaan '
+        + 'Jumalan koiria.'
+        + '\n\nSaman hän oli kertonut kymmenen vuotta aiemmin, kun hän syytti erästä '
+        + 'talollista nenänsä murtamisesta luudanvarrella helvetissä. Silloin hänet '
+        + 'naurettiin ulos salista — mutta yksi tuomareista tarkisti asian, ja nenä '
+        + 'oli todella ollut poikki. Nyt tuomarit kysyivät kylältä, oliko mies '
+        + 'järjissään. Aina ollut, vastattiin, ja hänen arvostuksensa oli edellisen '
+        + 'jutun jälkeen noussut.'
+        + '\n\nKohtalokas ei ollut ihmissusi vaan parantaja. Thiess siunasi viljaa ja '
+        + 'hevosia ja osasi loitsun, jossa siunattua suolaa annettiin lämpimässä '
+        + 'oluessa: aurinko ja kuu käyvät meren yli hakemassa sielun, jonka paholainen '
+        + 'on vienyt. Jumalaan loitsu ei vedonnut kertaakaan. Kristinuskosta pois '
+        + 'kääntämisestä hänet tuomittiin ruoskittavaksi ja karkotettavaksi '
+        + 'loppuiäksi.',
+      lahde: 'en-Wikipedia "Thiess of Kaltenbrun". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Miksi Thiess omien sanojensa mukaan muuttui ihmissudeksi?',
         vaihtoehdot: [
@@ -1711,7 +2032,29 @@ export const SKANDAALIT = {
         + '1584 pystyi: uusi kalenteri vei kaupungin vuosiksi sekasortoon, ja '
         + 'kun pöly laskeutui, Riika päätti pysyä vanhassa ajassa. Sinnikkyys '
         + 'kesti — kaupunki vaihtoi kalenteria vasta 335 vuotta myöhemmin.',
-      lahde: 'en-Wikipedia "Calendar riots in Riga". Tarkistettu 1.9.2026.',
+      teksti: 'Puola-Liettua otti gregoriaanisen kalenterin käyttöön 1582: torstaita '
+        + '4. lokakuuta seurasi perjantai 15. lokakuuta. Protestanttinen Riika '
+        + 'kieltäytyi. Vuonna 1584 kuningas Stefan Batory toisti käskyn nimenomaan '
+        + 'Riikalle ja uhkasi kymmenentuhannen dukaatin sakolla.'
+        + '\n\nSyksyllä raati ja luterilainen papisto taipuivat ja päättivät viettää '
+        + 'joulun uuden kalenterin mukaan. Kirkot olivat jouluaamuna lähes tyhjät, '
+        + 'koska kaupunkilaiset eivät tunnustaneet päivää. Sitten väkijoukko murtautui '
+        + 'Jaakobinkirkkoon kesken jumalanpalveluksen, pahoinpiteli papit ja poltti '
+        + 'kuvat, alttarit ja liput Kuben kukkulalla; se mikä ei palanut, heitettiin '
+        + 'Väinäjokeen.'
+        + '\n\nKun linnanvouti Nicholas Ecke pidätti koulunrehtorin kuninkaan '
+        + 'loukkaamisesta, joukko vapautti vangin ja ryösti raadin miesten talot. '
+        + 'Kaksi raatimiestä sai surmansa. Lakimies Martin Giesen ja viinikauppias '
+        + 'Hans Brinkenin johdolla porvarit sulkivat kaupunginportit, ottivat '
+        + 'kaupungin kassan haltuunsa ja partioivat kaduilla. Raati allekirjoitti '
+        + 'aselevon, perui uuden kalenterin ja antoi killoille osan kaupungin '
+        + 'hallinnosta.'
+        + '\n\nBatory kuoli 1586, kuninkaan joukot linnoittautuivat joen toiselle '
+        + 'puolen, ja Giese matkusti Tukholmaan pyytämään Ruotsin suojelusta — '
+        + 'turhaan. Vuonna 1589 uuden kuninkaan lähetti myöntyi useimpiin vaatimuksiin '
+        + 'sillä ehdolla, että johtajat luovutetaan. Giese ja Brinken kidutettiin ja '
+        + 'mestattiin 2. elokuuta 1589. Riika sai pitää vanhan kalenterin.',
+      lahde: 'en-Wikipedia "Calendar riots in Riga". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Milloin Riika lopulta siirtyi gregoriaaniseen kalenteriin?',
         vaihtoehdot: [
@@ -1735,11 +2078,33 @@ export const SKANDAALIT = {
       vuosi: '1867–1879',
       paikka: 'Tresoar (Frieslandin maakunta-arkisto), Leeuwarden',
       lat: 53.2035, lon: 5.7903,
-      kortti: 'Käsikirjoitus lupasi friiseille neljäntuhannen vuoden kunniakkaan '
+      kortti: 'Käsikirjoitus lupasi friiseille kolmentuhannen vuoden kunniakkaan '
         + 'historian — paperilla, joka tuoksui vielä painomusteelta. Oppineet '
         + 'riitelivät vuosikymmenen ennen kuin sepite myönnettiin sepitteeksi. '
         + 'Väärennös on nyt arkistossa arvopaikalla: se on aito väärennös.',
-      lahde: 'en-Wikipedia "Oera Linda Book". Tarkistettu 1.9.2026.',
+      teksti: 'Vuonna 1867 Cornelis Over de Linden antoi Frieslandin '
+        + 'maakunnankirjastonhoitajalle Eelco Verwijsille käsikirjoituksen, jonka '
+        + 'sanoi perineensä isoisältään. Se väitti kertovan friisien historian, myytit '
+        + 'ja uskonnon vuodesta 2194 eaa. vuoteen 803 jaa. — lähes kolmentuhannen '
+        + 'vuoden kaaren — muinaisfriisiksi kirjoitettuna.'
+        + '\n\nVerwijs ei huolinut sitä. Vuonna 1872 Jan Gerhardus Ottema julkaisi '
+        + 'hollanninkielisen käännöksen ja puolusti tekstiä aitona; englanninnos '
+        + 'ilmestyi 1876. Kiista kesti vuosia, mutta anakronismeja oli liikaa, ja '
+        + 'vuoteen 1879 mennessä oppineet olivat käytännössä yksimielisiä: teksti oli '
+        + 'tuore.'
+        + '\n\nSiihen asian olisi pitänyt loppua. Vuonna 1933 hollantilainen '
+        + 'kansallismielinen kielentutkija Herman Wirth julkaisi saksannoksen ja '
+        + 'kutsui kirjaa pohjoismaiseksi Raamatuksi. Berliinin yliopistossa käytiin '
+        + 'siitä paneelikeskustelu 4. toukokuuta 1934; Wirthin puoli hävisi, '
+        + 'ratkaisevana germanisti Arthur Hübnerin arvio. Silti riita johti suoraan '
+        + 'Himmlerin Ahnenerbe-laitoksen perustamiseen, kirjaa alettiin kutsua '
+        + 'Himmlerin Raamatuksi, ja lopulta se päätyi puolueen kiellettyjen kirjojen '
+        + 'listalle.'
+        + '\n\nVakuuttavin nykytulkinta on Goffe Jensman: kirjoittaja oli '
+        + 'runoilijapappi François Haverschmidt Over de Lindenin ja Verwijsin '
+        + 'avustuksella, ja tarkoitus oli Raamatun parodia, jonka piti kestää vain '
+        + 'hetken. Siitä tuli itse pyhä kirja.',
+      lahde: 'en-Wikipedia "Oera Linda Book". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Millä kielellä Oera Linda -kirja oli kirjoitettu?',
         vaihtoehdot: [
@@ -1766,7 +2131,30 @@ export const SKANDAALIT = {
         + 'Vermeer. Göring oli maksanut omaisuuden taulusta, jota Vermeer ei '
         + 'ollut koskaan nähnyt. Hollanti sai sodanjälkeisen sankarin, jonka '
         + 'ammatti oli petos.',
-      lahde: 'en-Wikipedia "Han van Meegeren". Tarkistettu 1.9.2026.',
+      teksti: 'Kriitikot eivät pitäneet Han van Meegerenin omista töistä, joten hän '
+        + 'käytti kuusi vuotta menetelmän kehittämiseen. Värit hän sekoitti '
+        + 'syreeniöljyyn — ateljee haisi siltä niin voimakkaasti, että hän piti '
+        + 'pöydällä tuoretta syreeniä selitykseksi — ja kovetti maalin bakeliitilla. '
+        + 'Valmis taulu paistettiin sadan ja sadankahdenkymmenen asteen välillä, sen '
+        + 'yli vieritettiin tela halkeamien saamiseksi ja halkeamiin pestiin tussia.'
+        + '\n\nSyyskuussa 1937 aikansa arvostetuin Vermeer-tuntija Abraham Bredius '
+        + 'tutki taulun Emmauksen ateria ja kirjoitti sen olevan Delftin Johannes '
+        + 'Vermeerin mestariteos. Rembrandt-seura osti sen 520 000 guldenilla ja '
+        + 'lahjoitti Rotterdamin Boijmans-museolle, jossa siitä tuli suuren näyttelyn '
+        + 'keskus.'
+        + '\n\nGöring vaihtoi 137 ryöstettyä maalausta \'Vermeeriin\' nimeltä Kristus '
+        + 'ja aviorikkoja. Liittoutuneiden sotilaat löysivät sen itävaltalaisesta '
+        + 'suolakaivoksesta 17. toukokuuta 1945 ja jäljittivät sen van Meegereniin, '
+        + 'joka pidätettiin 29. toukokuuta kansallisomaisuuden myymisestä viholliselle '
+        + '— syytteestä, josta uhkasi kuolemantuomio. Puolustus oli tunnustus. '
+        + 'Heinäkuun ja joulukuun välillä hän maalasi toimittajien ja oikeuden '
+        + 'nimeämien todistajien katsellessa uuden taulun Vermeerin tyyliin.'
+        + '\n\nKemisti Paul Coremans löysi maalista bakeliittia, ja 12. marraskuuta '
+        + '1947 oikeus tuomitsi van Meegerenin vuodeksi vankeuteen väärennöksestä ja '
+        + 'petoksesta. Hän sai sydänkohtauksen valitusajan viimeisenä päivänä ja kuoli '
+        + '30. joulukuuta istumatta päivääkään. Saman syksyn mielipidemittauksessa hän '
+        + 'oli Alankomaiden toiseksi suosituin mies.',
+      lahde: 'en-Wikipedia "Han van Meegeren". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Miksi van Meegeren tunnusti väärentäneensä \'Vermeerinsä\'?',
         vaihtoehdot: [
@@ -1794,7 +2182,32 @@ export const SKANDAALIT = {
         + 'kuningas. Kelloseppä hävisi jokaisen oikeusjutun ja voitti '
         + 'hautakirjoituksen. DNA ratkaisi kiistan vasta puolentoista '
         + 'vuosisadan päästä.',
-      lahde: 'en-Wikipedia "Karl Wilhelm Naundorff". Tarkistettu 1.9.2026.',
+      teksti: 'Ludvig XVII:ksi ilmoittautui yli kolmekymmentä miestä. Karl Wilhelm '
+        + 'Naundorff esiintyy asiakirjoissa ensi kerran Spandaussa 1810, ja 1824 hänet '
+        + 'tuomittiin kolmeksi vuodeksi rahanväärennyksestä. Vapauduttuaan hän '
+        + 'kirjoitti muistelmansa: hänet oli vaihdettu kuuromykkään orpoon, piilotettu '
+        + 'Templen torniin, otettu myöhemmin kiinni Napoleonin miesten toimesta ja '
+        + 'pidetty vankityrmissä eri puolilla Eurooppaa. Todisteita ei ollut yhtään.'
+        + '\n\nRanskaa hän puhui huonosti, mutta Pariisissa 1833 hän tunsi vanhan '
+        + 'hovin yksityiselämän, vastasi kysymyksiin oikein ja puhutteli hovilaisia '
+        + 'kuin olisi tuntenut heidät lapsena. Ludvig XVI:n oikeusministeri Étienne de '
+        + 'Joly, kuninkaan yksityissihteeri Jean Bremond ja kruununprinssin '
+        + 'lastenhoitaja Agathe de Rambaud tunnustivat hänet. Kadonneen prinssin sisar '
+        + 'Marie-Thérèse ei suostunut edes tapaamaan häntä; de Rambaud matkusti '
+        + 'vaunuilla Prahaan suostuttelemaan, eikä häntäkään otettu vastaan.'
+        + '\n\nVuonna 1836 Naundorff haastoi Marie-Thérèsen oikeuteen omaisuudesta. '
+        + 'Louis Philippen poliisi pidätti hänet, takavarikoi paperit ja karkotti '
+        + 'hänet Englantiin. Siellä hän kehitti sotilasteknisiä keksintöjä — varhaisen '
+        + 'käsikranaatin ja rekyylittömän aseen, jonka myi Alankomaiden armeijalle. '
+        + 'Hän ilmoitti nousevansa valtaistuimelle 1. tammikuuta 1840; kun päivä meni, '
+        + 'useimmat kannattajat lähtivät.'
+        + '\n\nHän kuoli Delftissä 10. elokuuta 1845 Alankomaiden armeijan '
+        + 'pyrotekniikan johtajana. Kuolintodistuksessa hänet nimetään Charles-Louis '
+        + 'de Bourboniksi, Ludvig XVI:n ja Marie Antoinetten pojaksi, ja hautakivi '
+        + 'ilmoittaa yhä kadonneen kruununperijän lepäävän siinä. DNA-tutkimukset '
+        + '1998–2016 puhuvat häntä vastaan; osa jälkeläisistä kiistää näytteiden '
+        + 'aitouden.',
+      lahde: 'en-Wikipedia "Karl Wilhelm Naundorff". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Kuka Karl Wilhelm Naundorff väitti olevansa?',
         vaihtoehdot: [
@@ -1824,7 +2237,29 @@ export const SKANDAALIT = {
         + 'elinkautisvanki kirjoitti sellissään omaelämäkerran, jossa varas on '
         + 'sankari, ja kansa osti tarinan mieluummin kuin viranomaisten '
         + 'version.',
-      lahde: 'en-Wikipedia "Gjest Baardsen". Tarkistettu 1.9.2026.',
+      teksti: 'Gjest Baardsen syntyi noin 1791 Sogndalsfjørassa kalastajan poikana; '
+        + 'isä kuoli, kun poika oli kaksivuotias. Hänet pidätettiin varkauksista kerta '
+        + 'toisensa jälkeen, mutta kuuluisaksi hänet tekivät paot: vankiloista pois '
+        + 'pääseminen oli 1800-luvun Norjassa uutinen, jota kerrottiin edelleen.'
+        + '\n\nVuodesta 1827 hän istui elinkautista Akershusin linnoituksessa Oslossa, '
+        + 'kaikkiaan kahdeksantoista vuotta. Siellä alkoi toinen ura. Omaelämäkerran '
+        + 'ensimmäiset osat ilmestyivät 1835, kun kirjoittaja oli yhä kaltereiden '
+        + 'takana. Kirjan varas ryöstää rikkailta ja jakaa köyhille; myöhempi tutkimus '
+        + 'pitää kuvausta jonkin verran kaunisteltuna.'
+        + '\n\nBaardsen kokosi myös sanaluettelon fantespråkista, kulkijoiden omasta '
+        + 'kielimuodosta. Yhteiskuntatutkija Eilert Sundt käytti aineistoa työssään, '
+        + 'ja luettelo julkaistiin lopulta 1948. Vapauduttuaan 1845 Baardsen elätti '
+        + 'itsensä Bergenissä myymällä lauluja ja kirjoja, avioitui 1848 kahden lapsen '
+        + 'äidin Anne Elisabeth Reinchen kanssa ja kuoli 1849. Hänen lauluihinsa '
+        + 'kuuluvat sellaiset kuin vankitoveri Ole Høilandin pako Akershusista 1839 ja '
+        + 'saman miehen kuolema kymmenen vuotta myöhemmin.'
+        + '\n\nTancred Ibsenin ohjaama elokuva Baardsenin elämästä oli 1939 yksi '
+        + 'vuosikymmenen katsotuimmista norjalaiselokuvista, ja siinä laulettu '
+        + 'Fjellsangen jäi elämään omana kappaleenaan. Omaelämäkerran viimeinen osa, '
+        + 'joka kertoi vapautumisen jälkeisistä vuosista, ilmestyi postuumisti 1869, '
+        + 'ja koko teos on painettu uudelleen useita kertoja. Baardsenin lapsuudenkoti '
+        + 'Sogndalsfjørassa on säilytetty museoksi.',
+      lahde: 'en-Wikipedia "Gjest Baardsen". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mistä Gjest Baardsen tuli tunnetuksi rikostensa lisäksi?',
         vaihtoehdot: [
@@ -1851,7 +2286,29 @@ export const SKANDAALIT = {
         + 'kuuluisin kirkaisu vietiin tikapuilla, ja varkaiden jättämä '
         + 'kiitoskortti vartioinnista lienee lajissaan tylyimpiä '
         + 'asiakaspalautteita.',
-      lahde: 'en-Wikipedia "The Scream". Tarkistettu 1.9.2026.',
+      teksti: 'Aamulla 12. helmikuuta 1994, samana päivänä kun Lillehammerin '
+        + 'talviolympialaiset avattiin, kaksi miestä tunkeutui Oslon '
+        + 'kansallisgalleriaan ja vei Huudon. Taulu oli siirretty '
+        + 'olympiajuhlallisuuksien takia toisen kerroksen saliin. Miehet jättivät '
+        + 'paikalle lapun, jossa kiitettiin huonosta vartioinnista.'
+        + '\n\nMaaliskuussa varkaat vaativat miljoonaa dollaria. Galleria kieltäytyi. '
+        + 'Norjan poliisi järjesti soluttautumisoperaation Britannian SO10-yksikön ja '
+        + 'Gettyn museon avulla, ja taulu saatiin takaisin vahingoittumattomana 7. '
+        + 'toukokuuta 1994.'
+        + '\n\nTammikuussa 1996 neljä miestä tuomittiin. Yksi heistä oli Pål Enger, '
+        + 'joka oli aiemmin tuomittu Munchin Rakkaus ja tuska -maalauksen varkaudesta '
+        + '1988. Valitusasteessa kaikki vapautettiin oikeudellisella perusteella: '
+        + 'operaatioon osallistuneet brittiagentit olivat tulleet Norjaan väärillä '
+        + 'henkilöllisyyksillä.'
+        + '\n\nMunch teki Huudosta kaksi maalattua ja kaksi pastelliversiota, ja '
+        + 'molemmat maalatut on varastettu ja saatu takaisin. Vuoden 1910 versio '
+        + 'vietiin Munch-museosta aseistettujen ja naamioituneiden miesten voimin '
+        + 'keskellä päivää 2004, ja samalla lähti Madonna; kolme miestä sai 2006 '
+        + 'neljästä kahdeksaan vuotta, museo oli kymmenen kuukautta kiinni '
+        + 'turvallisuusremontin takia, ja taulut löytyivät elokuussa 2006 pienemmin '
+        + 'vaurioin kuin oli pelätty. Vuonna 2018 koomikkoduo Ylvis teki vuoden 1994 '
+        + 'varkaudesta musikaalin, jossa esiintyi Enger itse.',
+      lahde: 'en-Wikipedia "The Scream". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mitä Huudon varastaneet miehet jättivät jälkeensä vuonna 1994?',
         vaihtoehdot: [
@@ -1881,8 +2338,32 @@ export const SKANDAALIT = {
         + 'Kristiania oli pieni kaupunki ja romaanin henkilöt tunnistettavia. '
         + 'Mikään ei tee kirjasta kiinnostavampaa kuin takavarikko — sen '
         + 'tiesivät boheemitkin.',
-      lahde: 'no-Wikipedia "Fra Kristiania-Bohêmen" ja en-Wikipedia "Hans '
-        + 'Jæger". Tarkistettu 1.9.2026.',
+      teksti: 'Hans Jæger syntyi Drammenissa 1854, lähti merille viisitoistavuotiaana '
+        + 'ja palasi maihin lukeakseen filosofiaa. Opinnot hän kustansi '
+        + 'työskentelemällä suurkäräjien pikakirjoittajana. Vuonna 1881 hän tuli '
+        + 'Kristianiassa tunnetuksi luennoilla, joissa vaati kansalaisoikeuksia '
+        + 'prostituoiduille, avioliiton lakkauttamista, vapaata rakkautta ja '
+        + 'sosialismia.'
+        + '\n\nJoulukuussa 1885 ilmestyi Fra Kristiania-Bohêmen. Kirja takavarikoitiin '
+        + 'saman tien. Virallinen peruste oli säädyttömyys. Todellinen ongelma oli, '
+        + 'että Kristiania oli pieni kaupunki ja Jæger oli käyttänyt eläviä malleja, '
+        + 'jotka moni tunnisti nimeltä.'
+        + '\n\nVuonna 1886 hänet tuomittiin tuntuviin sakkoihin ja kuudenkymmenen '
+        + 'päivän vankeuteen, ja hän menetti paikkansa suurkäräjillä. Kun hänet '
+        + 'tuomittiin uudelleen kirjan uusintapainoksen yrittämisestä, hän pakeni '
+        + 'Pariisiin — ja palasi sitten istumaan tuomionsa. Asiasta tuli '
+        + 'painovapauskiista, joka nolasi Johan Sverdrupin liberaalihallitusta: '
+        + 'liberaalit opiskelijat arvostelivat omaa hallitustaan kirjan '
+        + 'tukahduttamisesta. Samana vuonna Jæger julkaisi puolustuspuheensa '
+        + 'korkeimmassa oikeudessa omana kirjasenaan ja kirjoitti Christian Krohgin '
+        + 'kanssa teoksen Albertine.'
+        + '\n\nMyöhemmin Jæger asui Pariisissa, kirjoitti ulkopolitiikkaa '
+        + 'ruotsalaiseen sosiaalidemokraattiseen lehteen, muuttui anarkistiksi ja '
+        + 'julkaisi 1906 teoksen Anarkiets bibel. Hänen romaanitrilogiansa suhteesta '
+        + 'Oda Krohgiin kiellettiin niin ikään Norjassa. Hän kuoli syöpään Oslossa '
+        + '1910.',
+      lahde: 'no-Wikipedia "Fra Kristiania-Bohêmen" ja en-Wikipedia "Hans Jæger". '
+        + 'Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mitä kirjailija Hans Jægerille tapahtui romaanin Fra '
           + 'Kristiania-Bohêmen ilmestyttyä?',
@@ -1913,7 +2394,28 @@ export const SKANDAALIT = {
         + '\'saksalaista miekkaa\' ja kuiskivat, että tuohan näyttää '
         + 'epäilyttävästi omalta kruunajaismiekalta. He olivat oikeassa; '
         + 'paluumatka kesti silti vielä viisikymmentä vuotta.',
-      lahde: 'en-Wikipedia "Szczerbiec". Tarkistettu 1.9.2026.',
+      teksti: 'Vuonna 1795 preussilaiset joukot tyhjensivät Wawelin aarrekammion '
+        + 'Fredrik Vilhelm II:n käskystä. Kruununjalokivet vietiin Breslauhun, '
+        + 'Berliiniin ja Königsbergiin, ja vuosina 1809–1811 suurin osa niistä '
+        + 'sulatettiin. Szczerbiec pantiin sen sijaan myyntiin.'
+        + '\n\nRuhtinas Dmitri Lobanov-Rostovski osti miekan ja tarjosi sitä 1819 '
+        + 'puolalaiselle keräilijälle Wincenty Krasińskille kertoen ostaneensa sen '
+        + 'Moskovassa armenialaiselta kauppiaalta, joka oli löytänyt sen jostakin '
+        + 'Belgradin ja Rusen väliltä. Krasiński epäili, mikä miekka oli, mutta ei '
+        + 'saanut varmuutta ja kieltäytyi kaupasta. Miekka päätyi ruhtinas Anatoli '
+        + 'Demidovin huvilaan Firenzen liepeille ja 1870 kahdellakymmenellätuhannella '
+        + 'frangilla Ranskan Venäjän-suurlähettiläälle Aleksandr Basilevskille.'
+        + '\n\nBasilevski asetti sen esille Pariisin maailmannäyttelyyn 1878, tuppi '
+        + 'kauan sitten kadonneena ja esine merkittynä saksalaiseksi työksi. Vuonna '
+        + '1884 Aleksanteri III osti koko Basilevskin kokoelman Eremitaasiin, ja 1913 '
+        + 'Pietarissa pidetty museokongressi julisti miekan 1600-luvun jäljitelmäksi. '
+        + 'Riian rauhansopimuksen 11. artikla toi sen kotiin 1928, 133 vuoden jälkeen.'
+        + '\n\nVuonna 1939 se lähti taas. Matkalla Bordeaux\'sta Falmouthiin laivaa '
+        + 'ammuttiin ilmasta, ja evakuointia johtanut Karol Estreicher otti miekan '
+        + 'arkusta ja sitoi sen kahden lankun väliin pullopostin kanssa — jos laiva '
+        + 'uppoaisi, kruunajaismiekka ainakin kelluisi. Se päätyi Kanadaan ja palasi '
+        + 'Krakovaan vasta 1959.',
+      lahde: 'en-Wikipedia "Szczerbiec". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Miten kruunajaismiekka Szczerbiec palasi Puolaan vuonna 1928?',
         vaihtoehdot: [
@@ -1940,7 +2442,30 @@ export const SKANDAALIT = {
         + 'Kaivinkoneet löysivät kunnioitettavan määrän savea. Legenda ei tästä '
         + 'lannistunut — kadonneen aarteen paras piilopaikka on ihmisten '
         + 'mielikuvitus, jonne ei lapio yllä.',
-      lahde: 'en-Wikipedia "Nazi gold train". Tarkistettu 1.9.2026.',
+      teksti: 'Legendan mukaan sodan viimeisinä kuukausina Breslausta lähti '
+        + 'panssaroitu juna, jonka lastina oli kolmesataa tonnia kultaa. Se saapui '
+        + 'Świebodziceen eikä koskaan Wałbrzychiin, vaan katosi Riese-hankkeen '
+        + 'tunneleihin. Puolan armeija etsi sitä vuosikymmeniä eikä löytänyt mitään; '
+        + 'historiantutkijoiden mukaan junaa ei ollut olemassakaan.'
+        + '\n\nElokuussa 2015 Piotr Koper ja Andreas Richter ilmoittivat, että '
+        + 'kuolinvuoteella annettu tunnustus oli johtanut heidät perille, ja '
+        + 'tarjosivat paikkatietoa kymmenesosaa löydön arvosta vastaan. '
+        + 'Kulttuuriministeriön varaministeri kertoi 28. elokuuta, että maatutkakuvat '
+        + 'osoittivat 99 prosentin varmuudella sadan metrin junan. '
+        + 'Wrocław–Wałbrzych-radan kilometri 65 aidattiin, ja armeija raivasi puut ja '
+        + 'tarkisti miinat.'
+        + '\n\nJoulukuussa Krakovan AGH-yliopiston ryhmä ilmoitti, ettei junaa ole. '
+        + 'Löytäjät pitivät kiinni väitteestään, ja kaivaukset aloitettiin 15. '
+        + 'elokuuta 2016 kuudenkymmenenneljän hengen voimin ja 116 000 euron '
+        + 'yksityisrahoituksella. Työ keskeytettiin seitsemän päivän jälkeen. Se, '
+        + 'minkä tutka oli nähnyt, oli luonnon omaa maanalaista muodostumaa.'
+        + '\n\nKaupunki hyötyi silti. Matkailu kasvoi 44 prosenttia, ja virkamies '
+        + 'arvioi maailmanlaajuisen julkisuuden arvoksi noin kaksisataa miljoonaa '
+        + 'dollaria — kaupungin oma markkinointibudjetti oli 380 000. Pormestari '
+        + 'harkitsi liikenneympyrän nimeämistä etsijöiden mukaan. Koper jatkoi '
+        + 'etsintöjä ja löysi tammikuussa 2019 jotain aitoa: 1500-luvun '
+        + 'seinämaalauksia rappauksen alta Strugan kartanossa.',
+      lahde: 'en-Wikipedia "Nazi gold train". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mitä Wałbrzychin kultajunan kaivauksissa 2016 lopulta löytyi?',
         vaihtoehdot: [
@@ -1969,7 +2494,27 @@ export const SKANDAALIT = {
         + 'käsikirjoituksen. Opetus on kestänyt paremmin kuin kronikka: mitä '
         + 'mairittelevampi menneisyys, sitä tarkemmin kannattaa katsoa paperin '
         + 'ikää.',
-      lahde: 'pl-Wikipedia "Kronika Prokosza". Tarkistettu 1.9.2026.',
+      teksti: 'Kenraali Franciszek Morawski antoi Julian Ursyn Niemcewiczille '
+        + 'käsikirjoituksen, jonka sanoi ostaneensa lublinilaiselta kojulta. Sen '
+        + 'mukaan kyseessä oli 900-luvulla kirjoitettu kronikka Puolan vanhimmasta '
+        + 'historiasta, tekijänä Prokosz, Krakovan ensimmäinen arkkipiispa, kuollut '
+        + '986 — mies, jota yksikään aikakauden luotettava lähde ei mainitse.'
+        + '\n\nNiemcewicz uskoi ja esitteli teoksen Varsovan tieteenystävien seurassa. '
+        + 'Hipolit Kownacki painatti sen Varsovassa 1825 ja käänsi tekstin latinaksi. '
+        + 'Kronikka tarjosi pitkän rivin muinaisia kuninkaita, joista kukaan ei ollut '
+        + 'aiemmin kuullut.'
+        + '\n\nVuoden sisällä historioitsija Joachim Lelewel löysi Vilnasta saman '
+        + 'tekstin käsikirjoituksen, joka oli päivätty 21. kesäkuuta 1764 ja jossa '
+        + 'tekijäksi mainittiin Przybysław Dyamentowski, tunnettu asiakirjaväärentäjä '
+        + 'ja aatelissukujen keksittyjen sukupuiden laatija. Sen jälkeen Lelewel purki '
+        + 'sisällön osiin painetussa arviossaan.'
+        + '\n\nTuomiota toistettiin lähes kaksi vuosisataa sellaisenaan. Piotr Boroń '
+        + 'on 2000-luvulla huomauttanut, että jälki Dyamentowskiin on ohut: miestä ei '
+        + 'löydy niistä virkaluetteloista, joihin hänen pitäisi kuulua. Kronikka voi '
+        + 'siis olla jotain muuta kuin 1700-luvun väärennös — ehkä Morawskin oma '
+        + 'seurapiirivitsi juuri ennen vuotta 1825, jota ei koskaan peruttu. Muinaista '
+        + '\'Suur-Lechiaa\' koskevassa salaliittoteoriassa sitä siteerataan yhä.',
+      lahde: 'pl-Wikipedia "Kronika Prokosza". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Kuka paljasti Prokoszin kronikan väärennökseksi?',
         vaihtoehdot: [
@@ -1998,7 +2543,33 @@ export const SKANDAALIT = {
         + 'kiersi kahdet aidot 500 escudon setelit, joista vain toiset oli '
         + 'tilattu. Suunnitelman ainoa vika oli, että sarjanumerotkin olivat '
         + 'aitoja: samat kahteen kertaan.',
-      lahde: 'en-Wikipedia "Alves dos Reis". Tarkistettu 1.9.2026.',
+      teksti: 'Artur Alves Reis oli väärentänyt itselleen tutkintotodistuksen Oxfordin '
+        + 'insinöörikoulusta, jota ei ollut olemassa, jo ennen lähtöään Angolaan. '
+        + 'Vuonna 1924 hän istui 54 päivää Portossa Ambaca-rautatien varojen takia, ja '
+        + 'siellä syntyi suunnitelma: ei väärentää seteleitä vaan sopimus, jonka '
+        + 'nojalla joku muu painaisi ne aidoiksi.'
+        + '\n\nKumppani Karel Marang vei paperit hollantilaiselle painotalolle Joh. '
+        + 'Enschedélle, joka tunnisti näytesetelit lontoolaisen Waterlow and Sonsin '
+        + 'työksi ja huomautti, että vain Waterlowilla olivat laatat. Marang meni 4. '
+        + 'joulukuuta 1924 sir William Waterlow\'n puheille suosituskirjeen kanssa ja '
+        + 'selitti, että asia vaati poliittisista syistä hienotunteisuutta. Waterlow '
+        + 'painoi 200 000 viidensadan escudon seteliä Vasco da Gaman kuvalla — sadan '
+        + 'miljoonan escudon nimellisarvo, lähes prosentti Portugalin '
+        + 'kansantaloudesta.'
+        + '\n\nSetelit olivat aitoja ja oikeilta laatoilta, mutta sarjanumerot '
+        + 'toistivat jo liikkeessä olevia. Reis selitti, että Lissabonissa niihin '
+        + 'lyötäisiin ylipainatus Angola, ja painotalo tyytyi siihen. Hän perusti '
+        + 'pankin, osti palatsin Lissabonista ja kiersi Angolaa, jossa häntä '
+        + 'ylistettiin Portugalin omaksi Cecil Rhodesiksi — ja osti hiljaa Portugalin '
+        + 'keskuspankin osakkeita, mikä olisi tehnyt väärennetystä sopimuksesta '
+        + 'jälkikäteen totta.'
+        + '\n\nNeljäntenä joulukuuta 1925 portolaisen valuutanvaihtimon kassa arvasi '
+        + 'asian, tarkastaja löysi seuraavana päivänä sattumalta kaksoisnumeroita ja O '
+        + 'Século julkaisi jutun. Pankkeja käskettiin järjestää setelinsä '
+        + 'numerojärjestykseen, ja lisää löytyi. Reis sai kaksikymmentä vuotta 1930. '
+        + 'Portugalin keskuspankki voitti Waterlowia vastaan käydyn jutun lordien '
+        + 'huoneessa 1932, eikä painotalo toipunut siitä koskaan täysin.',
+      lahde: 'en-Wikipedia "Alves dos Reis". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Miksi Alves dos Reisin huijausseteleitä oli lähes mahdoton '
           + 'tunnistaa vääriksi?',
@@ -2027,8 +2598,28 @@ export const SKANDAALIT = {
         + 'paljon myöhemmin heräsi kysymys, oliko koko nunnaa olemassakaan. '
         + 'Bejassa näytetään silti yhä ikkunaa, josta häntä ei ehkä koskaan '
         + 'katsottu.',
-      lahde: 'en-Wikipedia "Letters of a Portuguese Nun". Tarkistettu '
-        + '1.9.2026.',
+      teksti: 'Viisi kirjettä ilmestyi nimettöminä Claude Barbinin kustantamana '
+        + 'Pariisissa 1669 nimellä Les Lettres Portugaises: nainen kirjoittaa '
+        + 'ranskalaiselle upseerille, joka on lähtenyt. Niitä pidettiin aitoina, ja '
+        + 'juuri se oli suuri osa niiden vetovoimaa. Ensimmäisenä vuonna otettiin '
+        + 'viisi painosta ja saman vuosisadan aikana yli neljäkymmentä. Ennen vuoden '
+        + 'loppua sama kustantaja julkaisi seitsemän uutta kirjettä toisen '
+        + '\'portugalilaisen naisen\' nimissä.'
+        + '\n\nKölnissä painettu laitos nimesi jo 1669 vastaanottajan: markiisi de '
+        + 'Chamilly, joka oli tullut Portugaliin sotimaan restauraatiosodassa. '
+        + 'Kirjoittaja jäi nimettömäksi. Vasta 1810 hänelle annettiin nimi — Mariana '
+        + 'Alcoforado, fransiskaanisisar Bejan luostarista — ja Bejassa näytetään yhä '
+        + 'Mértolan ikkunaa, josta hänen kerrotaan ensi kerran nähneen upseerin.'
+        + '\n\nVuonna 1926 F. C. Green esitti kirjoittajaksi Gabriel-Joseph de La '
+        + 'Vergneä, kreivi de Guilleraguesia, diplomaattia ja Racinen ja Boileaun '
+        + 'ystävää. Myöhempi tutkimus on pääosin yhtynyt tähän: kyse ei ole '
+        + 'käännöksestä vaan ranskalaisesta sepitteestä ja yhdestä kirjeromaanin '
+        + 'perusteoksista.'
+        + '\n\nKirja loi muodin, joka kesti seuraavalle vuosisadalle asti — '
+        + 'Montesquieun persialaiskirjeisiin ja Rousseaun Uuteen Heloiseen. Ja '
+        + '1600-luvun ranskassa sana portugaise alkoi merkitä yksinkertaisesti '
+        + 'intohimoista rakkauskirjettä.',
+      lahde: 'en-Wikipedia "Letters of a Portuguese Nun". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Kuka useimpien tutkijoiden mukaan todella kirjoitti '
           + '\'portugalilaisen nunnan\' kuuluisat rakkauskirjeet?',
@@ -2056,7 +2647,29 @@ export const SKANDAALIT = {
         + 'ja väri kuivui kokoon päivässä. Lissabonissa nöyryytys muistettiin '
         + 'pitkään, ja lasku lankesi lopulta kuningashuoneelle. Kartta on '
         + 'sentään tallessa.',
-      lahde: 'en-Wikipedia "1890 British Ultimatum". Tarkistettu 1.9.2026.',
+      teksti: 'Ranskan ja Saksan kanssa 1886 tehtyjen sopimusten jälkeen Portugalin '
+        + 'ulkoministeriö piirsi kartan, jossa vaaleanpunainen vyöhyke ulottui '
+        + 'Angolasta Mosambikiin nykyisten Zimbabwen, Sambian ja suuren osan Malawin '
+        + 'yli. Berliinin konferenssi oli jo linjannut, että vaatimusten on nojattava '
+        + 'tosiasialliseen hallintaan eikä löytöretkiin. Portugalin vaatimukset '
+        + 'nojasivat löytöretkiin: Alexandre de Serpa Pinto oli kulkenut alueen läpi '
+        + 'kolmesti, viimeksi Angolasta poikki mantereen vuosina 1877–1879, ja niiden '
+        + 'nojalla Lissabon oli esittänyt vaatimuksensa jo 1879.'
+        + '\n\nVuonna 1889 Serpa Pinto ylitti Ruo-joen Shiren ylängölle, vaikka '
+        + 'Britannian konsuli oli varoittanut häntä, ja marraskuussa hänen joukkonsa '
+        + 'taistelivat makololoja vastaan. Lordi Salisbury lähetti 11. tammikuuta 1890 '
+        + 'muistion, jossa vaadittiin portugalilaisten joukkojen vetäytymistä. '
+        + 'Lissabon suostui päivissä.'
+        + '\n\nJosé Luciano de Castron hallitus kaatui. Lontoossa 20. elokuuta 1890 '
+        + 'allekirjoitettu sopimus otettiin vastaan niin huonosti, että sekin kaatoi '
+        + 'hallituksen eikä sitä koskaan ratifioitu. Uusi sopimus tehtiin Lissabonissa '
+        + '11. kesäkuuta 1891: Portugali sai lisää Sambesin laaksoa ja menetti '
+        + 'Manicalandin Cecil Rhodesin yhtiölle.'
+        + '\n\nNöyryytys jäi kuningashuoneen laskuun. Sitä pidetään yhtenä syynä sekä '
+        + 'tasavaltalaisten kapinaan Portossa 31. tammikuuta 1891 että kaksikymmentä '
+        + 'vuotta myöhemmin lokakuun 5. päivän vallankumoukseen 1910, joka lopetti '
+        + 'Portugalin monarkian.',
+      lahde: 'en-Wikipedia "1890 British Ultimatum". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mitä Portugalin \'vaaleanpunainen kartta\' esitti?',
         vaihtoehdot: [
@@ -2088,8 +2701,30 @@ export const SKANDAALIT = {
         + 'täsmällisesti toimiva osa. Nuori valtio oppi kalliisti '
         + 'kansainvälisen rahoituksen ensimmäisen säännön: lue paperi ennen '
         + 'kuin juna lähtee.',
-      lahde: 'ro-Wikipedia "Afacerea Strousberg" ja en-Wikipedia "Bethel '
-        + 'Henry Strousberg". Tarkistettu 1.9.2026.',
+      teksti: 'Bethel Henry Strousberg syntyi Itä-Preussissa nimellä Baruch Hirsch '
+        + 'Strausberg, muutti nuorena Lontooseen ja vaihtoi sekä nimensä että '
+        + 'uskontonsa. Vuonna 1847 hän otti hoidettavakseen uskotut '
+        + 'rakennusyhdistysten maksut ja varasi laivalipun Amerikkaan. Höyrylaiva oli '
+        + 'lastannut väärää hiililaatua ja joutui kääntymään takaisin Southamptoniin; '
+        + 'Strousberg tuomittiin puoleksi vuodeksi pakkotyöhön. 1860-luvulla hän oli '
+        + 'Saksan rautatiekuningas.'
+        + '\n\nSopimus Romanin, Bukarestin ja Vârciorovan välisestä radasta laadittiin '
+        + 'Berliinissä hänen omalla puolellaan ja lähetettiin ruhtinas Carolille 18. '
+        + 'helmikuuta 1868. Parlamentti myönsi konsession 10. syyskuuta, ja yhtiön '
+        + 'piti liikennöidä rataa yhdeksänkymmentä vuotta. Työmailta tuli kiistoja '
+        + 'mittauksista sekä laskuja osuuksista, jotka olivat myöhässä tai '
+        + 'rakentamatta.'
+        + '\n\nStrousberg meni vararikkoon 1870, ja 5. heinäkuuta 1871 Romania mitätöi '
+        + 'konsession lailla. Wieniläispankkiirit Bleichröder ja Hansemann ottivat '
+        + 'työn hoitaakseen 1872, ja rata valmistui kymmenessä vuodessa. Vuonna 1874 '
+        + 'osakkeenomistajien varat loppuivat ja valtion oli lunastettava osa '
+        + 'verkosta; 1880 se osti lopunkin.'
+        + '\n\nSamoin kävi rakentajalle. Strousberg julistettiin konkurssiin 1875, ja '
+        + 'Hansemann ja Bleichröder saivat hänen rautatiensä murto-osalla arvostaan. '
+        + 'Häntä syytettiin Venäjällä, hänet karkotettiin, ja hän kuoli '
+        + 'sydänkohtaukseen Berliinissä 1884 vaatimattomissa oloissa.',
+      lahde: 'ro-Wikipedia "Afacerea Strousberg" ja en-Wikipedia "Bethel Henry '
+        + 'Strousberg". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Miten Strousbergin rautatiekonsessio Romaniassa päättyi?',
         vaihtoehdot: [
@@ -2119,8 +2754,29 @@ export const SKANDAALIT = {
         + 'paloiksi, ja muinainen teksti pelastui vain siksi, että joku oli '
         + 'sattunut valokuvaamaan sen Lontoossa. Kopio voi joskus olla aarteen '
         + 'tärkein osa.',
-      lahde: 'en-Wikipedia "Pietroasele Treasure" ja ro-Wikipedia "Tezaurul '
-        + 'de la Pietroasa". Tarkistettu 1.9.2026.',
+      teksti: 'Keväällä 1837 kaksi kivimiestä, Ion Lemnaru ja hänen appensa Stan '
+        + 'Avram, louhivat kiveä Istrițan kukkuloilla Buzăun piispanistuimen '
+        + 'rakennustyömaalle ja löysivät kiven alta kultaa. He pitivät löydön '
+        + 'ullakolla vuoden ja myivät sen sitten neljällätuhannella leillä '
+        + 'Anastase-nimiselle miehelle, joka työskenteli Câlnăun sillalla. Tämä '
+        + 'hakkasi esineet rikki kirveellä, ja jalokivet varisivat lattialle ja '
+        + 'lakaistiin pihan pölyyn.'
+        + '\n\nKahdestakymmenestäkuudesta esineestä saatiin talteen kaksitoista, '
+        + 'kaikkiaan lähes yhdeksäntoista kiloa kultaa. Lemnaru ja Stan Avram kuolivat '
+        + 'vankilassa ennen tuomiota. Esineiden joukossa on kaularengas, jossa on '
+        + 'riimukirjoitus; se on aarteen ainoa teksti ja syy siihen, että löytö '
+        + 'osataan ylipäätään ajoittaa ja liittää goottien maailmaan.'
+        + '\n\nVuonna 1875 Dumitru Pantazescu-Popescu varasti aarteen Bukarestin '
+        + 'yliopistonpalatsissa toimineesta antiikkimuseosta, ja bukarestilainen '
+        + 'hopeaseppä katkoi riimukaularenkaan ainakin neljään osaan; suurin osa siitä '
+        + 'sulatettiin. Riimut tunnetaan vain siksi, että lontoolainen Arundel-seura '
+        + 'oli valokuvannut renkaan tarkasti ennen varkautta.'
+        + '\n\nTulipalo samassa museossa 1884 vaurioitti aarretta lisää. Sen jälkeen '
+        + 'Carol I lähetti kokoelman Berliiniin, jossa kultaseppä Paul Telge entisöi '
+        + 'esineet, vahvisti niitä hopealla ja pronssilla ja teki niistä myös kopion. '
+        + 'Joulukuussa 1916 aarre lähetettiin Moskovaan ja palautettiin vasta 1956.',
+      lahde: 'en-Wikipedia "Pietroasele Treasure", ro-Wikipedia "Tezaurul de la '
+        + 'Pietroasa" ja en-Wikipedia "Ring of Pietroassa". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Miksi Pietroaselen aarteen riimukirjoitus voitiin rekonstruoida '
           + 'vuoden 1875 ryöstön jälkeen?',
@@ -2151,7 +2807,28 @@ export const SKANDAALIT = {
         + 'saanut. Taulussa hän hukkuu selliin tulvassa; todellisuus oli '
         + 'proosallisempi, mutta arvoitus jäi, ja arvoitus elää pidempään kuin '
         + 'tulva.',
-      lahde: 'en-Wikipedia "Princess Tarakanova". Tarkistettu 1.9.2026.',
+      teksti: 'Hän ilmestyi Kieliin 1770 ja jatkoi matkaa nimestä toiseen: Berliinissä '
+        + 'neiti Frank, Gentissä neiti Schell, Lontoossa madame de Trémouille, '
+        + 'myöhemmin lady Shelley, kreivitär Pinneberg ja sulttaanitar Selime. '
+        + 'Frankenissa hän oli Ali Emena, persialaisen satraapin tytär. Joka paikkaan '
+        + 'jäi velkojia.'
+        + '\n\nMerkitsevä väite oli viimeinen: että hän oli keisarinna Elisabetin ja '
+        + 'Aleksei Razumovskin tytär ja siis lähempänä Venäjän valtaistuinta kuin '
+        + 'Katariina II. Katariina lähetti hänen peräänsä amiraali Aleksei Orlovin. '
+        + 'Orlov teki hänelle lähentelyjä Livornossa, kutsui hänet venäläiselle '
+        + 'laivalle ja purjehti Venäjälle helmikuussa 1775.'
+        + '\n\nPietari-Paavalin linnoituksessa häntä kuulusteli Pietarin kuvernööri '
+        + 'Golitsyn, joka raportoi, että naisen elämäntarina oli täynnä uskomattomia '
+        + 'käänteitä ja muistutti pikemminkin satua. Oikea nimi ei tullut ilmi silloin '
+        + 'eikä myöhemmin. Hän kuoli keuhkotautiin 4. joulukuuta 1775 ja on haudattu '
+        + 'linnoituksen hautausmaalle.'
+        + '\n\nKuuluisa maalaus, jossa hän hukkuu selliinsä tulvassa, tehtiin vasta '
+        + '1800-luvulla, ja tulva tuli hänen kuolemansa jälkeen. Nimikin on '
+        + 'jälkikäteen annettu: kukaan ei kutsunut häntä Tarakanovaksi hänen '
+        + 'eläessään. Huhu, että kuolema lavastettiin ja hänet pantiin nunnaksi, on '
+        + 'kiinnittynyt Dosifea-nimiseen sisareen, joka eli moskovalaisessa '
+        + 'luostarissa 1785–1810.',
+      lahde: 'en-Wikipedia "Princess Tarakanova". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Miten \'prinsessa Tarakanova\' saatiin kiinni?',
         vaihtoehdot: [
@@ -2180,8 +2857,28 @@ export const SKANDAALIT = {
         + 'joku laskeutuu Kremlin kellareihin lyhty kädessä. Kirjaston '
         + 'sisällysluettelokin on kadonnut, mikä on etsijöiden kannalta '
         + 'suorastaan käytännöllistä.',
-      lahde: 'en-Wikipedia "Lost Library of Ivan the Terrible". Tarkistettu '
-        + '1.9.2026.',
+      teksti: 'Tarina alkaa vuodesta 1518, jolloin oppinut Maksim Kreikkalainen '
+        + 'kutsuttiin Moskovaan ja Vasili III näytti hänelle kreikkalaisia kirjoja. '
+        + 'Elämäkerran mukaan Maksim vakuutti, ettei ollut nähnyt niin montaa '
+        + 'kreikkalaista kirjaa edes Kreikassa. Osan niistä kerrotaan tulleen Sofia '
+        + 'Palaiologinan mukana Konstantinopolista, kun hän meni naimisiin Iivana '
+        + 'III:n kanssa 1472.'
+        + '\n\nSeuraava kuvaus on saksalaisen papin. Johannes Wettermanin kutsui '
+        + 'Iivana IV, ei asevarastoon vaan lukittuun huoneeseen, jota ei ollut avattu '
+        + 'sataan vuoteen, ja hänen piti luetteloida kirjoja, jotka tutkijat tunsivat '
+        + 'vain viittauksista. Vuoden 1724 raportissa kerrotaan miehestä, joka oli '
+        + '1682 lähetetty Kremlin salakäytävään ja löytänyt huoneen täynnä arkkuja; '
+        + 'kun hän ilmoitti asiasta, ruhtinatar Sofia kielsi käytävään menon.'
+        + '\n\n1800-luvun alussa professori Dabelov löysi Pärnun arkistosta luettelon '
+        + 'nimeltä \'Tsaarin hallussa olevat käsikirjoitukset\', noin kahdeksansataa '
+        + 'nimikettä. Hän lähti hakemaan kollegaansa todistajaksi, ja palatessaan '
+        + 'asiakirja oli poissa. Jäljellä on vain se, minkä hän oli ehtinyt kopioida.'
+        + '\n\nProfessori Thraemer asui Moskovassa kuukausia 1891. Zabelin päätteli '
+        + '1893, että kirjasto oli ollut olemassa mutta tuhoutunut 1600-luvulla. '
+        + 'Kremlin alta kaivettiin esiin kammioita ja käytäviä, kaikki tyhjiä. '
+        + 'Arkeologi Stelletski etsi kirjastoa vuosikymmeniä eikä löytänyt. Pietari '
+        + 'Suuri oli etsinyt sitä ennen häntä, sotiensa rahoitusta ajatellen.',
+      lahde: 'en-Wikipedia "Lost Library of Ivan the Terrible". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mistä Iivana Julman kirjaston arvokkaimpien käsikirjoitusten '
           + 'kerrotaan tulleen Moskovaan?',
@@ -2210,7 +2907,30 @@ export const SKANDAALIT = {
         + 'lavastus ja täydellinen ajoitus. Jalokivikauppias sai psykiatrilta '
         + 'diagnoosin, Sonja sai jalokivet. Laki sai hänet lopulta kiinni, '
         + 'mutta legenda karkasi Sahalinilta helpommin kuin hän itse.',
-      lahde: 'en-Wikipedia "Sonya Golden Hand". Tarkistettu 1.9.2026.',
+      teksti: 'Hän syntyi nimellä Sheindlia-Sura Solomoniak Varsovan piirissä 1846 — '
+        + 'itsestään hän ei koskaan kertonut suoraan, ja jopa vuosiluku on epävarma. '
+        + 'Toukokuussa 1883 hän astui moskovalaisen jalokivikauppias Karl von Melin '
+        + 'liikkeeseen tunnetun psykiatrin vaimona, valitsi kolmenkymmenentuhannen '
+        + 'ruplan edestä koruja ja pyysi kauppiasta tuomaan ne itse kotiin.'
+        + '\n\nHän oli jo käynyt lääkärin luona rouva von Melinä ja maksanut etukäteen '
+        + 'hoidosta iäkkäälle miehelleen, joka oli tullut hulluksi timanttien '
+        + 'ostamisesta. Ovella hän otti rasian, sanoi käyttävänsä koruja illalla ja '
+        + 'ohjasi kauppiaan odottamaan työhuoneeseen. Kun kauppias vaati maksua, '
+        + 'hoitajat veivät hänet pois.'
+        + '\n\nLokakuussa 1884 hän sai odessalaisen pankkiirin makuuvaunuun ja poistui '
+        + 'aamulla 43 000 ruplan käteisen ja arvopapereiden kanssa. Elokuussa 1885 hän '
+        + 'jätti Petrovkan liikkeeseen vakuudeksi harmaahapsisen isän ja '
+        + 'lastenhoitajan sylissä olevan pikkutytön ja lähti 22 300 ruplan koruilla. '
+        + 'Poliisi selvitti, että \'sukulaiset\' oli palkattu Hitrovkan torilta '
+        + 'lehti-ilmoituksella.'
+        + '\n\nHän päätyi Sahalinin rangaistussiirtolaan. Tšehov tapasi hänet siellä '
+        + '1890 eristyssellissä jalkaraudoissa — hän oli paennut saarelta sotilaaksi '
+        + 'pukeutuneena — ja kirjoitti, ettei ollut mahdollista uskoa naisen olleen '
+        + 'kaunis, vaikka hän oli lumonnut vartijansa Smolenskissa niin, että '
+        + 'vartiopäällikkö oli karannut hänen mukanaan. Vagankovon hautausmaalla '
+        + 'seisoo nimettömällä haudalla päätön patsas, jonka luona käydään yhä '
+        + 'pyytämässä Sonjalta apua omiin rikoksiin.',
+      lahde: 'en-Wikipedia "Sonya Golden Hand". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Millä tempulla Sonja Kultakäsi huijasi moskovalaista '
           + 'jalokivikauppiasta 1883?',
@@ -2241,8 +2961,31 @@ export const SKANDAALIT = {
         + 'painaa enemmän kuin kassassa on katetta — vei keksijän vankilaan ja '
         + 'pankin nurin. Molemmat opetukset ovat pysyneet ajankohtaisina siitä '
         + 'asti.',
-      lahde: 'en-Wikipedia "Stockholms Banco" ja en-Wikipedia "Johan '
-        + 'Palmstruch". Tarkistettu 1.9.2026.',
+      teksti: 'Ruotsissa ei ollut yhtä rahaa: hopeataalerit katosivat säästöön, ja '
+        + 'käytössä kiersi kuparilevyraha, kolikoita tarjottimen kokoon asti. Riiassa '
+        + 'syntynyt Johan Palmstruch — alkuaan Wittmacher — sai kaksi pankkiehdotusta '
+        + 'hylätyksi; kolmas, joka lupasi kruunulle puolet voitosta, kelpasi, ja '
+        + 'Kaarle X Kustaa allekirjoitti oikeuskirjat 30. marraskuuta 1656.'
+        + '\n\nEnsimmäinen keksintö oli lainata talletukset eteenpäin. Talletukset '
+        + 'olivat lyhyitä ja lainat pitkiä, joten rahaa ei ollut kassassa silloin kun '
+        + 'tallettajat sitä halusivat — ja kun kolikoiden kuparipitoisuutta laskettiin '
+        + '17 prosenttia vuonna 1660, kaikki halusivat vanhat levynsä takaisin. Toinen '
+        + 'keksintö ratkaisi ensimmäisen: vuonna 1661 pankki alkoi antaa '
+        + 'kreditiiviseteleitä tasasummina. Ne olivat Euroopan ensimmäisiä seteleitä, '
+        + 'ja jokaisessa oli Palmstruchin ja pankin virkailijoiden allekirjoitukset.'
+        + '\n\nMenestys oli välitön, koska seteli mahtui kirjekuoreen ja kuparilevy '
+        + 'vaati kärryt. Sitten pankki huomasi, että seteleitä voi painaa lisää, ja '
+        + 'painoi. Syksyllä 1663 setelien arvo alkoi laskea, lokakuusta lähtien pankki '
+        + 'kieltäytyi yhä useammin lunastamasta niitä, ja 1664 toiminta loppui. '
+        + 'Valtiopäivien oli otettava vastuu, ja selvitystila saatiin päätökseen 1667.'
+        + '\n\nVuonna 1668 Palmstruch tuomittiin menettämään aatelisarvonsa ja '
+        + 'pankkioikeutensa sekä karkotukseen tai kuolemaan. Kuolemantuomio '
+        + 'armahdettiin; hän istui vankilassa vuoteen 1670 ja kuoli seuraavana vuonna. '
+        + 'Oikeus siirtyi valtiopäivien pankille, nykyiselle Riksbankenille, maailman '
+        + 'vanhimmalle yhä toimivalle keskuspankille — joka ei saanut painaa seteleitä '
+        + 'ennen seuraavaa vuosisataa.',
+      lahde: 'en-Wikipedia "Stockholms Banco" ja en-Wikipedia "Johan Palmstruch". '
+        + 'Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Miksi Stockholms Banco, Euroopan ensimmäinen setelipankki, kaatui?',
         vaihtoehdot: [
@@ -2271,7 +3014,29 @@ export const SKANDAALIT = {
         + 'Kustaa III oli saanut varoituskirjeenkin, mutta meni tanssiaisiin '
         + 'silti. Jälkimaailma sai aiheesta oopperan; Ruotsi sai '
         + 'perustuslakikriisin.',
-      lahde: 'en-Wikipedia "Gustav III". Tarkistettu 1.9.2026.',
+      teksti: 'Kustaa III saapui oopperataloon 16. maaliskuuta 1792 hyvissä ajoin '
+        + 'illastamaan ystäviensä kanssa. Illallisella hänelle ojennettiin nimetön '
+        + 'ranskankielinen kirje, jossa pyydettiin peruuttamaan tanssiaiset: rosvot '
+        + 'eivät pidä lyhdyistä, siinä luki, eikä murhalle ole mitään niin sopivaa '
+        + 'kuin pimeys ja naamio. Kuningas oli saanut uhkauskirjeitä ennenkin ja meni '
+        + 'saliin.'
+        + '\n\nKirjeen oli kirjoittanut henkikaartin eversti Carl Pontus Lilliehorn — '
+        + 'yksi salaliittolaisista. Muut olivat Jacob Johan Anckarström, Adolph '
+        + 'Ribbing, Claes Fredrik Horn ja Carl Fredrik Pechlin, aatelismiehiä, joiden '
+        + 'viha oli kasvanut kuninkaan vallankaappauksesta ja Venäjän-sodasta asti. '
+        + 'Keskiyöllä he asettuivat hänen taakseen väkijoukkoon. Laukaus osui '
+        + 'kolmannen lannenikaman kohdalta.'
+        + '\n\nKuningas ei kaatunut. Hän sanoi ranskaksi vain \'aï, je suis blessé\'. '
+        + 'Anckarström pudotti pistoolin ja veitsen ja huusi tulipaloa. Uloskäynnit '
+        + 'suljettiin, ja hänet pidätettiin seuraavana aamuna. Ampumisen hän tunnusti '
+        + 'heti, salaliiton kiisti — kunnes kuuli, että Horn ja Ribbing olivat '
+        + 'tunnustaneet kaiken.'
+        + '\n\nKustaa eli vielä kolmetoista päivää, johti valtakuntaa vuoteestaan ja '
+        + 'vastaanotti anteeksipyyntöjä poliittisilta vastustajiltaan. Hän kuoli '
+        + 'verenmyrkytykseen 29. maaliskuuta. Murhasta tehtiin kolme oopperaa; niistä '
+        + 'jäi elämään Verdin Un ballo in maschera, jossa sensuurin vaatimuksesta '
+        + 'tapahtumat oli siirretty Bostoniin.',
+      lahde: 'en-Wikipedia "Gustav III". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Missä kuningas Kustaa III ammuttiin vuonna 1792?',
         vaihtoehdot: [
@@ -2300,7 +3065,32 @@ export const SKANDAALIT = {
         + 'tulitikkuihin. Kukaan ei kysynyt liian tarkkaan, mistä lainarahat '
         + 'tulivat — ennen kuin kevät 1932 vastasi kysymykseen kaikkien '
         + 'puolesta.',
-      lahde: 'en-Wikipedia "Ivar Kreuger". Tarkistettu 1.9.2026.',
+      teksti: 'Ivar Kreuger aloitti ruotsalaisista tulitikkutehtaista ja päätyi '
+        + 'hallitsemaan kahdesta kolmasosasta kolmeen neljäsosaan maailman '
+        + 'tulitikkutuotannosta. Menetelmä oli helppo selittää: hän lainasi valtiolle '
+        + 'rahaa ja pyysi vastineeksi maan tulitikkumonopolin. Kaupan tekivät muun '
+        + 'muassa Puola, Romania, Turkki, Latvia, Liettua, Viro, Bolivia, Guatemala ja '
+        + 'Saksa.'
+        + '\n\nRahat tulivat sijoittajilta, ja niiden houkuttelemiseksi Kreuger keksi '
+        + 'omat välineensä: B-osakkeen, jolla oli tuhannesosa äänestä, niin että '
+        + 'pääoman saattoi kaksinkertaistaa määräysvallasta luopumatta, sekä American '
+        + 'Certificates -todistukset, jotka olivat osaksi lainaa ja osaksi osaketta. '
+        + 'Vuonna 1929 hänen imperiuminsa arvoksi laskettiin kolmekymmentä miljardia '
+        + 'kruunua ja yli kaksisataa yhtiötä; kaikkien ruotsalaispankkien '
+        + 'yhteenlaskettu luotonanto oli tuolloin runsaat neljä miljardia.'
+        + '\n\nHelmikuussa 1932 Kreuger pyysi Riksbankenilta lisää. Hänen velkansa '
+        + 'ruotsalaispankeille arvioitiin puoleksi maan valuuttavarannosta, ja tällä '
+        + 'kertaa hallitus vaati koko konsernin tilinpäätöksen. Hän palasi Amerikasta '
+        + 'laivalla ja saapui Pariisiin 11. maaliskuuta. Seuraavana aamuna hänet '
+        + 'löydettiin kuolleena asuntonsa vuoteesta, pistooli vieressä ja kirje, jossa '
+        + 'luki hänen sotkeneen asiat niin pahoin, että tämä tuntui kaikkien kannalta '
+        + 'parhaalta ratkaisulta.'
+        + '\n\nPrice Waterhouse kävi kirjanpidon läpi ja totesi, että manipulaatiot '
+        + 'olivat niin lapsellisia, että alkeellisinkin kirjanpidon tuntemus olisi '
+        + 'paljastanut kirjojen olevan väärennettyjä. Tuhannet ruotsalaiset menettivät '
+        + 'säästönsä. Yhdysvallat kirjoitti arvopaperilakinsa uusiksi 1933 ja 1934 — '
+        + 'pitkälti Kreugerin takia.',
+      lahde: 'en-Wikipedia "Ivar Kreuger". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mitä Ivar Kreuger pyysi valtioilta vastineeksi lainoistaan?',
         vaihtoehdot: [
@@ -2329,7 +3119,28 @@ export const SKANDAALIT = {
         + 'kerrotaan — ja juuri se on tämän kiven erikoisuus: kukaan ei tiedä, '
         + 'mistä se tuli. Aarrekammiossa kiiltää 86 karaattia todistetta siitä, '
         + 'että paraskaan tarina ei tarvitse kuittia.',
-      lahde: 'en-Wikipedia "Spoonmaker\'s Diamond". Tarkistettu 1.9.2026.',
+      teksti: 'Kivi on 86 karaatin päärynänmuotoinen timantti, kehystetty hopeaan ja '
+        + 'ympäröity kahdella rivillä, yhteensä 49:llä vanhalla hiotulla briljantilla. '
+        + 'Se riippuu vitriinissä aarrekammion kolmannessa huoneessa Topkapın '
+        + 'Valloittajan paviljongissa ja on lajissaan neljänneksi suurin maailmassa. '
+        + 'Miten se tuli sinne, ei tiedä kukaan.'
+        + '\n\nTunnetuin tarina: köyhä mies löysi Yenikapın rannalta roskien seasta '
+        + 'kiiltävän kiven, kantoi sitä taskussaan muutaman päivän ja vei sen '
+        + 'ensimmäiselle vastaan tulleelle jalokivikauppiaalle. Tämä katsoi kiveä '
+        + 'ohimennen, sanoi sitä lasinpalaksi ja tarjosi kolmea lusikkaa, ettei matka '
+        + 'menisi hukkaan. Toisissa versioissa löytäjä on maanviljelijä tai '
+        + 'lusikantekijä, tai nimi tulee siitä, että kivi muistuttaa lusikan kaukaloa.'
+        + '\n\nMuseon omissa luetteloissa on kyllä sormuskivi nimeltä Kaşıkçı, joka '
+        + 'kuului 1600-luvulla sulttaani Mehmet IV:lle — mutta se painoi kultoineen '
+        + 'vain 50–60 karaattia, paljon vähemmän kuin nykyinen kivi. Toinen '
+        + 'tarinasarja kulkee Tepelenan Ali Pašan kautta: hänen omaisuutensa '
+        + 'takavarikoitiin sulttaanille, kun hänet teloitettiin.'
+        + '\n\nRomanttisimmassa versiossa Napoleonin äiti lähetti suuren timantin '
+        + 'Selim III:lle lunnaiksi rakastajastaan, ranskalaisupseerista, joka jäi '
+        + 'vangiksi Prevezassa 1798. Upseeri oli olemassa ja vangiksi hän jäi. Mutta '
+        + 'hän oli silloin 27-vuotias ja Letizia Bonaparte 48, eikä upseeri mainitse '
+        + 'kolmiosaisissa muistelmissaan timanttia sanallakaan.',
+      lahde: 'en-Wikipedia "Spoonmaker\'s Diamond". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mihin hintaan legendan köyhä löytäjä luopui myöhemmin '
           + 'Lusikantekijän timanttina tunnetusta kivestä?',
@@ -2362,8 +3173,29 @@ export const SKANDAALIT = {
         + 'imperiumin verot. Velkojien konttorissa oli lopulta enemmän väkeä '
         + 'kuin sulttaanin valtiovarainministeriössä. Suurvallan arvokkuudelle '
         + 'tämä oli kova kolaus, kirjanpidolle kuulemma erinomainen.',
-      lahde: 'en-Wikipedia "Ottoman Public Debt Administration". Tarkistettu '
-        + '1.9.2026.',
+      teksti: 'Osmanivaltio oli ottanut eurooppalaista lainaa vuodesta 1855, ensin '
+        + 'Krimin sotaan ja sitten rautateihin ja hovin menoihin. Lokakuun 30. päivänä '
+        + '1875 se ilmoitti niin sanotulla ramadan-asetuksella, ettei pystyisi '
+        + 'maksamaan. Velan määräksi arvioitiin 214,5 miljoonaa puntaa. Valtakunnan '
+        + 'koko vuositulo oli 21,7 miljoonaa.'
+        + '\n\nMaksukyvyttömyyttä seurasi kuuden vuoden neuvottelu, joka '
+        + 'tuotti muharram-asetuksen 15. lokakuuta 1881: se leikkasi velan 191 '
+        + 'miljoonasta punnasta 106 miljoonaan ja perusti Istanbuliin valtionvelan '
+        + 'hallinnon. Sen neuvostossa istui yksi edustaja kunkin maan — Britannian, '
+        + 'Ranskan, Saksan, Itävallan, Italian, Alankomaiden ja osmanien — velkojista '
+        + 'sekä yksi osmanivaltiosta.'
+        + '\n\nHallinnolle luovutettiin suola- ja tupakkamonopolit sekä leimavero, '
+        + 'alkoholi-, kalastus- ja silkkiverot, kauppojen verot ja tullimaksut '
+        + 'valtakunnan rikkaimmilla alueilla, ja se keräsi ne itse. Virkailijoita oli '
+        + '5 000 ja parhaimmillaan 9 000 — enemmän kuin valtakunnan omassa '
+        + 'valtiovarainministeriössä. Vuoteen 1900 mennessä hallinto rahoitti omaan '
+        + 'lukuunsa rautateitä ja teollisuutta.'
+        + '\n\nVuonna 1909 velasta ilmoitettiin maksetun yhdeksän kymmenesosaa. Turkin '
+        + 'tasavalta otti jäljelle jääneen kannettavakseen Pariisin konferenssissa '
+        + '1925, neuvotteli summan uudelleen alas 1933 ja maksoi osmanien velan '
+        + 'viimeisen erän 25. toukokuuta 1954.',
+      lahde: 'en-Wikipedia "Ottoman Public Debt Administration" ja en-Wikipedia '
+        + '"Ottoman public debt". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mitä eurooppalaisten velkojien johtama OPDA sai tehdä '
           + 'Osmanivaltiossa vuodesta 1881?',
@@ -2391,7 +3223,28 @@ export const SKANDAALIT = {
         + 'vaihtoi sen kuuluisimman soljen väärennökseen. Paikalliset syyttivät '
         + 'haudan vanhaa kirousta, tuomioistuin pelivelkoja. Aarre on nyt '
         + 'esillä Uşakissa, ja sitä vahditaan tarkemmin kuin koskaan.',
-      lahde: 'en-Wikipedia "Karun Treasure". Tarkistettu 1.9.2026.',
+      teksti: 'Yönä 6. kesäkuuta 1966 kolme miestä Güren kylästä, jotka olivat '
+        + 'päiväkausia yrittäneet murtaa Toptepen hautakammion marmoriovea, '
+        + 'räjäyttivät katon ja näkivät ensimmäisinä 2 600 vuoteen lyydialaisen '
+        + 'ylhäisönaisen hautaesineet. Seuraavan vuoden aikana he löysivät lisää '
+        + 'muista kumpuhaudoista. Esineet vietiin maasta İzmirin ja Amsterdamin '
+        + 'kautta.'
+        + '\n\nMetropolitan-museo osti ne 1967 ja 1968: kahdestasadasta esineestä '
+        + 'laskutettiin 1,2 miljoonaa dollaria. Vuonna 1984 toimittaja Özgen Acar '
+        + 'tunnisti osan museon luettelosta ja kertoi kulttuuriministeriölle, mistä ne '
+        + 'olivat peräisin. Turkki nosti kanteen New Yorkissa 1987, ja 1993 museo '
+        + 'myönsi tienneensä esineiden olleen varastettuja ja palautti 363 kappaletta.'
+        + '\n\nAarre pantiin esille Uşakin pieneen museoon. Toukokuussa 2006 kokoelman '
+        + 'tunnetuin esine, kultainen merihevossolki, paljastui väärennökseksi; vaihto '
+        + 'oli tehty noin vuotta aiemmin. Museon entinen johtaja Kazım Akbıyıkoğlu, '
+        + 'joka oli itse tehnyt enemmän kuin kukaan aarteen kotiuttamiseksi, '
+        + 'pidätettiin kymmenen muun kanssa ja myönsi myyneensä museon esineitä '
+        + 'pelivelkojensa kattamiseksi.'
+        + '\n\nHän vetosi kirokseen. Uşakissa kerrotaan, että seitsemän Toptepen '
+        + 'kaivauksiin osallistunutta miestä kuoli väkivaltaisesti tai koki suuren '
+        + 'onnettomuuden. Oikeus antoi entiselle johtajalle kolmetoista vuotta. Solki '
+        + 'saatiin takaisin, ja aarretta vartioidaan tarkemmin kuin ennen.',
+      lahde: 'en-Wikipedia "Karun Treasure". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Miten New Yorkin Metropolitan-museon ja Turkin kiista '
           + 'Karun-aarteesta päättyi 1993?',
@@ -2421,7 +3274,29 @@ export const SKANDAALIT = {
         + 'matkalla mukana. Potemkin toki maalautti ja koristeli minkä ehti, '
         + 'mutta teki sen kaikkien nähden. Sana jäi silti elämään — julkisivuja '
         + 'rakennetaan yhä, ja harvoin näin rehellisesti.',
-      lahde: 'en-Wikipedia "Potemkin village". Tarkistettu 1.9.2026.',
+      teksti: 'Vuonna 1787 Katariina II matkusti puoli vuotta hovinsa ja useiden '
+        + 'ulkomaisten lähettiläiden kanssa alueilla, jotka oli neljä vuotta aiemmin '
+        + 'otettu osmaneilta. Matkan tarkoitus oli tehdä vaikutus Venäjän '
+        + 'liittolaisiin ennen uutta sotaa. Sotamarsalkka Grigori Potjomkin, '
+        + 'keisarinnan ministeri ja entinen rakastaja, oli nimitetty alueen '
+        + 'kuvernööriksi Krimin liittämisen jälkeen 1783. Sota oli jättänyt seudun '
+        + 'raunioiksi, ja hänen tehtävänään oli rauhoittaa ja rakentaa se uudelleen '
+        + 'venäläisillä uudisasukkailla.'
+        + '\n\nMatkasta jäi elämään kertomus, jonka mukaan Potjomkin oli rakennuttanut '
+        + 'Dneprin rannoille siirrettäviä kyliä, täyttänyt ne talonpojiksi puetuilla '
+        + 'omilla miehillään keisarinnan proomun ohittaessa, purkanut kulissit ja '
+        + 'pystyttänyt ne yön aikana uudelleen matkan varrelle.'
+        + '\n\nSanonnan keksi Georg von Helbig, saksilainen diplomaatti Venäjän '
+        + 'hovissa. Hän ei ollut matkalla mukana vaan kokosi kertomuksen siitä, mitä '
+        + 'Pietarissa puhuttiin. Hän julkaisi sen nimettömänä hampurilaisessa '
+        + 'aikakauslehdessä 1797–1799 ja laajensi kirjaksi 1809.'
+        + '\n\nAlkuperäisiä kirjeitä ja muistelmia lukeneet tutkijat — muun muassa '
+        + 'Panchenko ja Potjomkinin elämäkerturi Sebag Montefiore — pitävät kertomusta '
+        + 'myyttinä ja osana kampanjaa Potjomkinin mustaamiseksi. Potjomkin todella '
+        + 'somisti reitin varren kyliä. Hän ei vain koskaan väittänyt muuta. Sanonta '
+        + 'jäi silti kieleen, ja se tarkoittaa nyt mitä tahansa julkisivua, jonka '
+        + 'taakse kätketään ikävä tilanne.',
+      lahde: 'en-Wikipedia "Potemkin village". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mitä nykyhistorioitsijat sanovat Potemkinin kulissikylistä?',
         vaihtoehdot: [
@@ -2450,7 +3325,30 @@ export const SKANDAALIT = {
         + 'ennen kuin hän takoi uuden palan tiaaraa siinä paikassa. Harvinainen '
         + 'huijaus, jossa ainoa täysin rehellinen osapuoli oli väärennöksen '
         + 'tekijä.',
-      lahde: 'en-Wikipedia "Tiara of Saitaferne". Tarkistettu 1.9.2026.',
+      teksti: 'Ensimmäisenä huhtikuuta 1896 Louvre ilmoitti ostaneensa '
+        + 'skyyttalaiskuninkaan kultatiaaran 200 000 frangilla. Kreikankielinen '
+        + 'kaiverrus kiersi sen ympäri: Olbian neuvosto ja kansalaiset kunnioittavat '
+        + 'suurta ja voittamatonta kuningas Saitafernesta. Se sopi tunnettuun '
+        + 'tapaukseen, jossa kaupunki oli ostanut piirittäjän pois lahjoilla.'
+        + '\n\nVastaväitteet alkoivat heti. Saksalainen arkeologi Adolf Furtwängler '
+        + 'luetteli tyylivirheet ja kysyi, miksi muinaisessa esineessä ei näy kulumaa. '
+        + 'Louvre puolusti hankintaansa vuosia ja valmisteli siitä komeaa julkaisua.'
+        + '\n\nTiaara oli tehty Odessassa 1894. Sen teki kultaseppä Israel Rouhomovski '
+        + 'kahden kauppiaan, Hochmannin veljesten, tilauksesta; he sanoivat sen olevan '
+        + 'lahja arkeologiystävälle ja antoivat mallia varten tietoja tuoreista '
+        + 'kaivauksista. Rouhomovski kuuli teoksensa kohtalosta vasta, kun skandaali '
+        + 'kantautui kaupunkiin.'
+        + '\n\nHän matkusti Pariisiin 1903 ja ilmoitti tehneensä tiaaran. '
+        + 'Asiantuntijat eivät uskoneet ennen kuin hän istui alas ja takoi heidän '
+        + 'silmiensä alla uuden palan kruunua. Louvre siirsi esineen varastoon. '
+        + 'Rouhomovski sai kultamitalin Pariisin koristetaiteen salongissa ja asui '
+        + 'kaupungissa kuolemaansa 1934 asti. Vuonna 1954 Louvre pani tiaaran taas '
+        + 'esille — väärennösten näyttelyyn. Sen jälkeen esine on kiertänyt lainassa: '
+        + 'Jerusalemin Israel-museossa 1997 Rouhomovskin omassa näyttelyssä ja '
+        + 'Hernessä 2018 arkeologian erehdyksiä ja väärennöksiä esittelevän näyttelyn '
+        + 'avajaisviikoilla. Kopio on esillä British Museumissa, ja 2014 kultasepän '
+        + 'odessalaisen verstaan seinään kiinnitettiin muistolaatta.',
+      lahde: 'en-Wikipedia "Tiara of Saitaferne". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Miten kultaseppä Rouhomovski todisti Louvrelle tehneensä '
           + '\'muinaisen\' tiaaran?',
@@ -2478,7 +3376,28 @@ export const SKANDAALIT = {
         + 'sopivasti sodan jalkoihin. Kieli paljasti loput — muinaisteksti oli '
         + 'kirjoitettu kieliopilla, jota ei ole ollut millään vuosisadalla. '
         + 'Väärennös ei silti kuollut faktoihin; hyvä tarina harvoin kuolee.',
-      lahde: 'en-Wikipedia "Book of Veles". Tarkistettu 1.9.2026.',
+      teksti: 'Löytökertomus kuuluu näin: vuonna 1919 valkoisen armeijan luutnantti '
+        + 'Fedor Izenbek löysi ryöstetystä Kurakinien kartanosta Harkovan lähellä '
+        + 'nipun puulautoja, joissa oli outoa kirjoitusta. Vuonna 1923 hän yritti '
+        + 'myydä ne Belgradin kirjastolle ja museolle, asettui 1925 Brysseliin ja '
+        + 'antoi ne siellä Juri Miroljubovin tutkittaviksi.'
+        + '\n\nIzenbek ei päästänyt lautoja talosta ulos eikä suostunut luovuttamaan '
+        + 'niitä brysseliläisprofessorille tutkimusta varten. Miroljubov kopioi ja '
+        + 'käänsi tekstiä viisitoista vuotta; valokuvat, hän kertoi, eivät '
+        + 'onnistuneet. Elokuussa 1941 Saksa miehitti Brysselin, Izenbek kuoli ja '
+        + 'laudat katosivat.'
+        + '\n\nMiroljubov vei jäljennöksensä Yhdysvaltoihin ja luovutti ne 1953 '
+        + 'professori A. A. Kurenkoville, joka julkaisi tekstin siirtolaislehti '
+        + 'Zhar-Ptitsassa maaliskuun 1957 ja toukokuun 1959 välillä. Teksti väittää '
+        + 'kertovan slaavien vaiheet 600-luvulta eaa. 800-luvulle jaa.'
+        + '\n\nKielentutkijat torjuivat sen: kieli on sekoitus nykyslaavilaisia '
+        + 'kieliä, keksittyjä muotoja ja johdonmukaisuudetonta kielioppia, vanhennettu '
+        + 'jonkun käsissä, joka tunsi muinaisslaavia pinnallisesti. Filologi '
+        + 'Tvorogovin sanoin kyseessä on keinotekoinen kieli, jonka on keksinyt '
+        + 'ihminen, joka ei olisi osannut rakentaa omaa kielijärjestelmää. Se ei silti '
+        + 'kuollut: vuonna 1999 kirja otettiin Ukrainassa lukion opetusohjelmaan '
+        + 'aitona teoksena, ja siellä se oli yhä 2008.',
+      lahde: 'en-Wikipedia "Book of Veles". Tarkistettu 2.9.2026.',
       visa: {
         kysymys: 'Mikä paljastaa tutkijoiden mukaan Velesin kirjan väärennökseksi?',
         vaihtoehdot: [
