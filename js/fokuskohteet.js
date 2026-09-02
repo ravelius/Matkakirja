@@ -731,16 +731,30 @@ function kohteenSymboli(kohde) {
  * ankkuri tai malja ilman yhtään sanaa.
  *
  * Ehto luetaan siksi DATASTA eikä tyypistä: nimiö jää pois vain, jos
- * samassa pisteessä on lehden poltettu kaupunginnimi
- * (js/packs/fokus-grc.js FOKUS_LISANIMET) tai pelin oma laatta, jonka
- * nimen peli latoo itse. Vertailu on PAIKALLA eikä nimellä, koska
- * kirjoitusasut eroavat listojen välillä (`Patras` / `Pátra`).
+ * samassa pisteessä on nimi, jonka joku muu kartalle kirjoittaa.
+ * Vertailu on PAIKALLA eikä nimellä, koska kirjoitusasut eroavat
+ * listojen välillä (`Patras` / `Pátra`).
+ *
+ * LEHDEN POLTETTU NIMI EI ENÄÄ KELPAA SIKSI NIMEKSI (2.9.2026): lehdet
+ * on purettu, eikä pyramidiin polteta nimiä. Perustelu ja mittaus ovat
+ * nimiJoKartallan kohdalla alempana.
  */
 
 /** Sama piste laudalla: listat on poimittu samoista koordinaateista. */
 const KOHDE_SAMA_PISTE = 3;
 
-/** Lehden itse painamat kaupunginnimet laudan koordinaateissa. */
+/*
+ * LEHDEN ITSE PAINAMAT KAUPUNGINNIMET laudan koordinaateissa.
+ *
+ * TAULU ON JÄÄNNE, JA SE ON TIEDOSSA (2.9.2026): lehdet on purettu (ks.
+ * nimiJoKartalla alla), joten yksikään näistä nimistä ei ole kartalla.
+ * Funktio jää palvelemaan vain kaupunginNimiLaatikkoa eli sitä
+ * näkymätöntä napautusaluetta, joka poltetun nimen kohdalla oli — se on
+ * kartalla tyhjän paperin päällä ja avaa saman kortin kuin merkki, eikä
+ * siis ole vaarallinen. Jos taulu joskus poistetaan kokonaan, poistuu
+ * laatikkokin; se on oma erilliskysymyksensä (Raamattu:
+ * KLIKATTAVUUSLINJAN VARTIO).
+ */
 function poltetutKaupungit(ui) {
   const iso = nykyinenIso(ui);
   const tiedot = iso ? FOKUS_LISANIMET[iso] : null;
@@ -748,15 +762,52 @@ function poltetutKaupungit(ui) {
   return tiedot.kaupungit ?? [];
 }
 
-/** Onko kohteen nimi jo kartalla — lehteen poltettuna tai laattana? */
+/* ── LEHTEEN POLTETUT NIMET EIVÄT OLE ENÄÄ MISSÄÄN (2.9.2026) ──────
+ *
+ * OMISTAJAN BUGIRAPORTTI, sanatarkasti: *"symbolit heittelee muodoiltaa
+ * ja tekstejä puuttuu"*; kaappauksessa Bulgariasta on linnasymboli
+ * ilman tekstiä kohdassa 43°P / 25,5°I. Se on Veliko Tarnovo.
+ *
+ * JUURISYY ON VANHENTUNUT OLETUS. Tämä ehto vaiensi kaupunkikohteen
+ * nimiön aina, kun samassa pisteessä oli FOKUS_LISANIMET-taulun rivi —
+ * perustelu oli *"lehti painaa nimen itse"* (v1218). Se piti
+ * paikkansa niin kauan kuin maakohtainen fokuslehti oli kartalla
+ * rasterina. LEHDET ON PURETTU: laattapyramidi on pelin ainoa
+ * karttapohja (omistaja 30.8.2026, *"poista kaikki muut vaihtoehdot
+ * käytöstä"*; js/laattapyramidi.js johdanto ja js/ui.js
+ * paivitaMaanIkkuna: *"lehdet ovat poissa"*), eikä pyramidiin polteta
+ * nimiä lainkaan (js/karttanimet.js). Taulu jäi siis kuvaamaan nimiä,
+ * jotka eivät ole kartalla missään — ja merkki jäi ilman yhtään
+ * kirjainta.
+ *
+ * MITATTU (keraaNostot, koko maailma): nimiöttömiä merkkejä 77 -> 50.
+ * Ne 27 ovat kaupunkikohteita, joiden nimeä ei nyt kirjoita kukaan:
+ * Thessaloniki, Pátra, Ioánnina, Náfplio, Plovdiv, Varna, Veliko
+ * Tarnovo, Mostar, Banja Luka, Zagreb, Split, Rijeka, Zadar, Osijek,
+ * Debrecen, Szeged, Pécs, Eger, Győr, Napoli, Milano, Torino ja
+ * vastaavat. Loput 50 vaikenevat yhä oikein: niiden nimi on kartalla
+ * maastonimenä (maastonimiLahella) tai laudan omana kaupunkina.
+ *
+ * TAULU JÄÄ PAIKALLEEN. FOKUS_LISANIMET on yhä kohdedatan täydellisyyden
+ * mitta (tests/fokusnimet.test.mjs, Raamattu: KLIKATTAVUUSLINJAN
+ * VARTIO) — *"poltettu nimi ilman kohdetta vaatii velkakirjarivin"* —
+ * ja se sääntö on riippumaton siitä, kuka nimen piirtää. Vain tämä
+ * VAIENNUS poistuu, koska sen ehto ei enää päde.
+ */
+
+/** Onko kohteen nimi jo kartalla — laudan omana kaupunkina? */
 function nimiJoKartalla(ui, kohde) {
   const paikka = kohde?.laudat?.[ui?.game?.pack?.id];
   if (!Number.isFinite(paikka?.x) || !Number.isFinite(paikka?.y)) return false;
   const lahella = (a) => Number.isFinite(a?.x) && Number.isFinite(a?.y)
     && Math.abs(a.x - paikka.x) <= KOHDE_SAMA_PISTE
     && Math.abs(a.y - paikka.y) <= KOHDE_SAMA_PISTE;
-  return poltetutKaupungit(ui).some(lahella)
-    || (ui?.game?.pack?.cities ?? []).some(lahella);
+  /*
+   * LAUDAN OMA KAUPUNKI ON YHÄ NIMETTY, ja sen nimen latoo nimikerros
+   * (js/karttanimet.js) — kaksoisnimi olisi todellinen. Ehto on siis
+   * sama kuin ennen, mutta vain toinen puolisko siitä.
+   */
+  return (ui?.game?.pack?.cities ?? []).some(lahella);
 }
 
 /* ====== SAMA NIMI VAIN KERRAN KARTALLE — MYÖS MAASTONIMET ==========
@@ -1697,6 +1748,22 @@ function asetaKohdeMittakaava(ui, suhde) {
   const nakyvaSkaala = ui.nakyvaAlue?.()?.skaala;
   const sPiirto = nostoladontaKattoPorras(KOHDE_SYMBOLI_SKAALA * s, nakyvaSkaala)
     / KOHDE_SYMBOLI_SKAALA;
+  /*
+   * KATTO ON SUHDE, JA SE KOSKEE KOKO PIIRROSTA (omistaja 2.9.2026:
+   * *"symbolit heittelee muodoiltaa ja tekstejä puuttuu"*).
+   *
+   * Tähän asti katto kutisti VAIN merkin oman skaalan. Sarakkeen
+   * siirtymä, siirtoviiva ja nimiön rako jäivät kattamattomaan
+   * ladontamittaan eli karttavakioksi, joka kasvaa rajatta
+   * lähennettäessä — mitattuna Sofiassa (skaala 9,24) merkki oli
+   * 11,3 px, mutta sen sarakesiirtymä 86 px ja siirtoviivan leveys
+   * 8,87 px. Merkki, sen nimi ja niiden välinen viiva olivat kolmessa
+   * eri mittajärjestelmässä samassa kuvassa.
+   *
+   * Nyt sama luku kertoo koko piirroksen ankkurinsa ympäri; perustelu
+   * ja mitat js/nostoladonta.js nostoladontaKattoSuhde.
+   */
+  const kattoSuhde = s > 0 ? sPiirto / s : 1;
   const sRuutu = ui.fokusMerkkiSkaala?.(suhde) ?? s;
   /*
    * OSUMASÄDE LASKETAAN PIIRTOMITASTA, EI LADONNASTA. Ympyrä on ryhmän
@@ -1730,7 +1797,7 @@ function asetaKohdeMittakaava(ui, suhde) {
    * erottelun.
    */
   ui.nostoPoltettu = (r) => kohdeOnPoltettu(ui, r);
-  niputaFokusmerkit(ui, s);
+  niputaFokusmerkit(ui, s, s, kattoSuhde);
   eritteleKohdeRyhmat(ui, s);
   /*
    * POLTETUT VAIKENEVAT VASTA TÄSSÄ: tiiviste tuntee merkin lopullisen
@@ -1740,8 +1807,29 @@ function asetaKohdeMittakaava(ui, suhde) {
   const zoom = sPiirto.toFixed(4);
   for (const ryhma of ui.fokuskohdeRyhmat ?? []) {
     if (ryhma.osuma) maare(ryhma.osuma, 'r', osumaR.toFixed(2));
-    const px = ryhma.nippu?.x ?? ryhma.x + (ryhma.sx ?? 0);
-    const py = ryhma.nippu?.y ?? ryhma.y + (ryhma.sy ?? 0);
+    /*
+     * LADOTTU PAIKKA JA PIIRRETTY PAIKKA OVAT ERI ASIA (2.9.2026).
+     *
+     * LADOTTU (lx, ly) on se, mikä menee tiivisteeseen ja laattaan
+     * (kohteenNostotiiviste) — kattamaton, tasoriippumaton, Raamatun
+     * ehto. PIIRRETTY on sama paikka ANKKURINSA ympäri kutistettuna
+     * ruutukaton suhteella: sarakkeen siirtymä on osa noston piirrosta
+     * eikä kartan geometriaa, joten se ei saa kasvaa ohi merkin.
+     *
+     * ANKKURI on sarakkeessa kaupungin piste (nippu.cx/cy,
+     * js/fokusniput.js) ja muualla merkin oma datapiste — se piste,
+     * jonka ympäri merkki on siirretty. Erottelusiirto (sx, sy) on
+     * samalla tavalla piirroksen siirtymä ja kutistuu samoin.
+     */
+    const lx = ryhma.nippu?.x ?? ryhma.x + (ryhma.sx ?? 0);
+    const ly = ryhma.nippu?.y ?? ryhma.y + (ryhma.sy ?? 0);
+    const ax = ryhma.nippu?.cx ?? ryhma.x;
+    const ay = ryhma.nippu?.cy ?? ryhma.y;
+    const px = ax + (lx - ax) * kattoSuhde;
+    const py = ay + (ly - ay) * kattoSuhde;
+    /* Nimikerros latoo nimet PIIRRETYN paikan viereen, ei ladotun. */
+    ryhma.piirtoX = px;
+    ryhma.piirtoY = py;
     maare(ryhma.g, 'transform', `translate(${px.toFixed(2)} ${py.toFixed(2)}) scale(${zoom})`);
     /*
      * POLTETUN NIMEN OSUMA-ALUE EI SEURAA MERKKIÄ. Laatikko on lehden
@@ -1952,7 +2040,7 @@ function kirjaaNimionPudotus(ui, id, rivi, esteet) {
  * kuten ennenkin. Se on omistajan nimenomainen ehto samalla kortilla:
  * *"Merkit jäävät napautettaviksi myös ilman nimeä."*
  */
-function luovutaKohdeNimiot(ui, s, piilossa) {
+function luovutaKohdeNimiot(ui, s, piilossa, sPiirto = s) {
   const ryhmat = ui.fokuskohdeRyhmat ?? [];
   /*
    * KERROS PIILOSSA = EI NIMIÄ. Nimi seuraa merkkiään: kun merkit
@@ -1983,10 +2071,18 @@ function luovutaKohdeNimiot(ui, s, piilossa) {
       rivit.push({
         id: r.id,
         teksti: r.nimi,
-        // PIIRTOPAIKKA, EI DATAPISTE: merkki on voitu siirtää nipussa
-        // tai erottelussa, ja nimi kuuluu sen viereen missä merkki on.
-        x: r.nippu?.x ?? r.x + (r.sx ?? 0),
-        y: r.nippu?.y ?? r.y + (r.sy ?? 0),
+        /*
+         * PIIRTOPAIKKA, EI DATAPISTE eikä LADOTTU paikka: merkki on
+         * voitu siirtää nipussa tai erottelussa, ja ruutukatto kutistaa
+         * sen siirtymän ankkurinsa ympäri (asetaKohdeMittakaava
+         * ryhma.piirtoX). Nimi kuuluu sen viereen, missä merkki
+         * RUUDULLA on — ladottuun paikkaan ladottuna se jäisi syvässä
+         * zoomissa kymmenien pikselien päähän omasta symbolistaan.
+         * Varapolku on ladottu paikka: ennen ensimmäistä asemointia
+         * piirtopaikkaa ei vielä ole.
+         */
+        x: r.piirtoX ?? r.nippu?.x ?? r.x + (r.sx ?? 0),
+        y: r.piirtoY ?? r.nippu?.y ?? r.y + (r.sy ?? 0),
         /*
          * KYLJEN TOIVE KULKEE LADONTAAN ASTI (31.8.2026). Kaupungin
          * ympärille ladottu rypäs on kahtena sarakkeena laatan
@@ -1999,10 +2095,19 @@ function luovutaKohdeNimiot(ui, s, piilossa) {
       });
     }
   }
-  // Merkin säde laudan yksiköinä: sama ketju kuin piirrossa (merkin
-  // oma kutistus × merkkien vakioskaala). Ladonta tarvitsee sen
-  // nimiön raon laskemiseen.
-  asetaKohdenimet(rivit, KOHDE_SYMBOLI_R * s);
+  /*
+   * MERKIN SÄDE LAUDAN YKSIKÖINÄ, PIIRTOMITASSA (2.9.2026).
+   *
+   * Rako nimen ja merkin reunan välissä lasketaan tästä säteestä
+   * (js/karttanimet.js merkkiR), joten sen on oltava sen merkin säde,
+   * joka RUUDULLA on. Kattamattomalla mitalla säde oli Sofian syvässä
+   * zoomissa 30,5 px vaikka piirretty merkki oli 5,6 px — nimi asettui
+   * 34 pikselin päähän tyhjälle paperille, ja mitä kauemmas se joutui,
+   * sitä useammin se törmäsi naapuriin ja putosi kokonaan. Juuri se on
+   * omistajan *"tekstejä puuttuu"*: viidestä yhdeksästä nimellisestä
+   * nostosta nimi katosi.
+   */
+  asetaKohdenimet(rivit, KOHDE_SYMBOLI_R * sPiirto);
   /*
    * OMAT NIMIÖT POIS RASTERISTA. Nimi on nyt nimikerroksen asia, ja
    * merkin oma nimiö olisi sama nimi kahdesti — sama kaksoisnimivaara,
@@ -2450,9 +2555,18 @@ export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
    * poltettuina) nimikerros on hiljaa, ja tämän kerroksen oma väistö
    * on yhä ainoa ladonta, joka kohteille on.
    */
+  /*
+   * PIIRTOMITTA NIMIÖILLE (2.9.2026): nimen rako merkin reunaan on
+   * PIIRRETYN merkin säde, ei ladotun — sama katto ja sama kaava kuin
+   * asemoinnissa (asetaKohdeMittakaava kattoSuhde).
+   */
+  const merkkiPiirto = merkkiSkaala > 0
+    ? nostoladontaKattoPorras(KOHDE_SYMBOLI_SKAALA * merkkiSkaala,
+      ui.nakyvaAlue?.()?.skaala) / KOHDE_SYMBOLI_SKAALA
+    : merkkiSkaala;
   if (merkkiSkaala > 0) {
     if (karttanimetLatovat(ui)) {
-      luovutaKohdeNimiot(ui, merkkiSkaala, piilossa);
+      luovutaKohdeNimiot(ui, merkkiSkaala, piilossa, merkkiPiirto);
       // Laattaan poltetut nimet saavat silti napautusalueensa tästä
       // kerroksesta (ks. asetaPoltetutTekstiOsumat).
       asetaPoltetutTekstiOsumat(ui, merkkiSkaala, piilossa);

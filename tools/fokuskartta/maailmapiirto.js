@@ -88,7 +88,7 @@ import {
 } from './piirto.js';
 import { bilineaarinenKorkeus, varjonVoimakkuus, varjostusPisteessa } from './maastovarjo.js';
 import {
-  NOSTOLADONTA_POLTON_TIHEYS, nostoladontaKattoPorras,
+  NOSTOLADONTA_POLTON_TIHEYS, nostoladontaKattoSuhde,
 } from '../../js/nostoladonta.js';
 
 /* ====================================================== tekstin ladonta
@@ -1873,8 +1873,21 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
 export function piirraNostotKankaalle(ctx, nostot, piirraNosto, mitta) {
   const { lautaKuvaX, lautaKuvaY, px } = mitta;
   for (const m of nostot) {
-    const mx = lautaKuvaX(m.x);
-    const my = lautaKuvaY(m.y);
+    /*
+     * RUUTUKATTO KOSKEE KOKO PIIRROSTA (omistaja 2.9.2026: *"symbolit
+     * heittelee muodoiltaa ja tekstejä puuttuu"*; js/nostoladonta.js
+     * nostoladontaKattoSuhde). Merkin LADOTTU paikka (m.x, m.y) on
+     * tasoriippumaton ja se on tiivisteessä; PIIRRETTY paikka on sama
+     * paikka ankkurinsa ympäri kutistettuna samalla suhteella, jolla
+     * symboli ja nimiö kutistuvat. Ilman tätä poltettu laatta näyttäisi
+     * saman vian kuin elävä kerros: pikkuruinen merkki kaukana omasta
+     * sarakepaikastaan ja sormenpaksuinen viiva niiden välissä.
+     */
+    const kattoSuhde = nostoladontaKattoSuhde(m.porras, px / NOSTOLADONTA_POLTON_TIHEYS);
+    const ankkuriX = m.ankkuriX ?? m.x;
+    const ankkuriY = m.ankkuriY ?? m.y;
+    const mx = lautaKuvaX(ankkuriX + (m.x - ankkuriX) * kattoSuhde);
+    const my = lautaKuvaY(ankkuriY + (m.y - ankkuriY) * kattoSuhde);
     /*
      * SIIRTOVIIVA ENSIN, merkin alle — sama järjestys kuin pelissä,
      * jossa viivakerros menee laattakerroksen eteen (js/fokusniput.js
@@ -1892,13 +1905,24 @@ export function piirraNostotKankaalle(ctx, nostot, piirraNosto, mitta) {
      * kaikki tulevat samasta janasta kuin elävässä kerroksessa, ja
      * juuri se on tämän lohkon koko idea.
      *
-     * VIIVA EI OTA RUUTUKATTOA (alempana, nostoladontaKattoPorras).
-     * Katto on nimiön luettavuutta varten — se estää nimiötä ohittamasta
-     * kartan omaa paikannimeä syvillä tasoilla — ja viivan päät ovat jo
-     * laudan koordinaateissa: jos katto purisi niihin, poltettu viiva
-     * irtoaisi merkistä juuri niillä tasoilla, joilla se on suurin.
+     * VIIVA OTTAA SAMAN KATON KUIN MERKKI (2.9.2026, kumoaa saman
+     * lohkon aiemman *"viiva ei ota ruutukattoa"* -kirjauksen).
+     *
+     * Perustelu oli oikea mutta johtopäätös väärä: viiva EI saa irrota
+     * merkistä — ja juuri siksi sen on otettava sama katto, koska
+     * merkki itse ottaa sen. Kattamattomana viiva jäi osoittamaan
+     * kohtaan, josta merkki oli jo kutistunut pois, ja sen leveys kasvoi
+     * kartan mukana (mitattu Sofiassa 8,87 px kun tilattu on 1,6).
+     * Skaalaus tehdään ankkuripäästä (x2, y2), joka on kartan piste.
      */
-    const v = m.viiva;
+    const v = m.viiva ? {
+      ...m.viiva,
+      x1: m.viiva.x2 + (m.viiva.x1 - m.viiva.x2) * kattoSuhde,
+      y1: m.viiva.y2 + (m.viiva.y1 - m.viiva.y2) * kattoSuhde,
+      leveys: m.viiva.leveys * kattoSuhde,
+      katko: m.viiva.katko * kattoSuhde,
+      vali: m.viiva.vali * kattoSuhde,
+    } : null;
     if (v) {
       ctx.save();
       ctx.strokeStyle = v.vari;
@@ -1921,12 +1945,11 @@ export function piirraNostotKankaalle(ctx, nostot, piirraNosto, mitta) {
      * kohdekaupungin koko"*). Merkin oma mitta on karttavakio ja kasvaa
      * kartan mukana; katto leikkaa sen kasvun syvillä tasoilla niin,
      * ettei nimiö ohita kartan omaa paikannimeä. Kaava on pelin kanssa
-     * yhteinen (js/nostoladonta.js nostoladontaKattoPorras), ja tason
+     * yhteinen (js/nostoladonta.js nostoladontaKattoSuhde), ja tason
      * oma tiheys on LAITEPIKSELEITÄ — muunnos CSS-pikseleihin on
      * NOSTOLADONTA_POLTON_TIHEYS, ks. sen perustelu.
      */
-    const porras = nostoladontaKattoPorras(m.porras, px / NOSTOLADONTA_POLTON_TIHEYS);
-    piirraNosto(ctx, m, porras * px);
+    piirraNosto(ctx, m, m.porras * kattoSuhde * px);
     ctx.restore();
   }
 }
