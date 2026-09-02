@@ -2039,12 +2039,98 @@ function sahkeAvain(ui, city) {
   return `${ui.game.pack.id}:${city.id}`;
 }
 
-/** Sähkeen oma tekstipinta: versaalit rivit STOP-välein. */
-function piirraSahke(kohde, teksti, luokka = '') {
-  const laatikko = html('div', luokka ? `fokusvirta-sahke ${luokka}` : 'fokusvirta-sahke');
-  for (const rivi of String(teksti).split(/\s*\n\s*/).filter(Boolean)) {
-    laatikko.appendChild(html('p', 'fokusvirta-sahkerivi', rivi));
+/* ==================== SÄHKE ON LOMAKE, EI LAATIKKO ==================
+ *
+ * Omistaja 2.9.2026 ilta: sähketehtävän kortti *"visuaalisesti
+ * herkullisemmaksi"*. Sisältö ja sanamuodot ovat ennallaan — vain asu
+ * muuttui, ja se muuttui 1870-luvun sähkösanomalomakkeen suuntaan:
+ * painettu otsake ja lomakenumero, sähköaseman pyöreä musteleima,
+ * liimatut paperiliuskat ja rei'itetyt reunat. Kaikki on CSS:ää
+ * (css/fokusvirta.css, osio PÖLLÖN SÄHKETEHTÄVÄ) — yhtään kuvaa ei
+ * ladata, koska peli on offline-PWA.
+ *
+ * TÄMÄ FUNKTIO RAKENTAA VAIN NE KOUKUT, JOITA CSS EI VOI TEHDÄ:
+ * otsakerivin, jokaisen rivin oman liuskan, STOPin oman jänteen ja
+ * kysymysrivin korostusluokan. Sanoja se ei lisää muualle kuin
+ * painettuun otsakkeeseen ja leimaan, jotka ovat lomakkeen painatusta
+ * eivätkä pöllön puhetta.
+ */
+
+/**
+ * KYSYMYSRIVI EROTTUU (omistajan valitus 2.9.2026: *"tässä tehtävässä
+ * on vaikea ymmärtää mitä tässä kysytään"*).
+ *
+ * Rivi tunnistetaan kysymyssanasta eikä järjestysnumerosta: sähkeen
+ * rivijärjestys on datan asia (js/packs/fokusvirta-*.js), ja
+ * kiinteä "toinen rivi" korostaisi väärän rivin heti, kun jokin
+ * sähke alkaa toisin. Paluusähkeissä (TUNNUSSANA TÄSMÄÄ) ei ole
+ * kysymyssanaa, joten niissä ei korostu mikään.
+ *
+ * SANARAJA \b EI KELPAA TÄSSÄ: ääkkönen ei ole JavaScriptin regexissä
+ * sanamerkki, joten "MISSÄ " jäisi tunnistamatta (havaittu savukkeella
+ * 2.9.2026). Kysymyssanan perässä vaaditaan siksi väli tai rivin loppu.
+ */
+const SAHKE_KYSYMYSRIVI = /^(MIK[ÄA]|MISS[ÄA]|MIST[ÄA]|MIHIN|MILLOIN|MIN[ÄA] VUONNA|KUKA|KENEN|KUINKA|MITEN|MONTAKO|PALJONKO)(\s|$)/i;
+
+/**
+ * Lomakenumero: sama sähke saa aina saman numeron.
+ *
+ * Koriste, ei tieto — mutta arvottu numero vaihtuisi joka piirrolla ja
+ * näyttäisi vialta, kun kortti piirretään ohilyönnin jälkeen uudelleen.
+ */
+function sahkeNumero(teksti) {
+  let summa = 0;
+  for (const merkki of String(teksti)) summa = (summa * 31 + merkki.codePointAt(0)) % 9000;
+  return 1000 + summa;
+}
+
+/** Lomakkeen painettu otsake: nimiö, sähköaseman leima ja numero. */
+function sahkeOtsake(teksti, leima) {
+  const otsake = html('div', 'fokusvirta-sahke-otsake');
+  if (leima) {
+    // Leima on koristetta: ruudunlukija lukisi siitä vain kaupungin
+    // nimen toiseen kertaan, ja sähkeen sisältö on rivien vastuulla.
+    const merkki = html('span', 'fokusvirta-sahke-leima');
+    merkki.setAttribute('aria-hidden', 'true');
+    merkki.appendChild(html('span', 'fokusvirta-sahke-leima-nimi', leima));
+    merkki.appendChild(html('span', 'fokusvirta-sahke-leima-asema', 'Sähköasema'));
+    otsake.appendChild(merkki);
   }
+  otsake.appendChild(html('span', 'fokusvirta-sahke-nimio', 'Sähkösanoma'));
+  otsake.appendChild(html('span', 'fokusvirta-sahke-numero', `N:o ${sahkeNumero(teksti)}`));
+  return otsake;
+}
+
+/** Yksi liimattu liuska: teksti, haalea STOP ja kysymysrivin korostus. */
+function sahkeLiuska(rivi) {
+  const liuska = html('p', 'fokusvirta-sahkerivi');
+  if (SAHKE_KYSYMYSRIVI.test(rivi)) liuska.classList.add('fokusvirta-sahkekysymys');
+  // STOP on sähkösanoman välimerkki eikä sana: se jää haaleammaksi,
+  // jotta silmä lukee sisällön eikä välimerkkejä. Teksti itse ei muutu
+  // (textContent on yhä sama rivi).
+  for (const osa of String(rivi).split(/(\bSTOP\b)/g)) {
+    if (!osa) continue;
+    if (osa === 'STOP') liuska.appendChild(html('span', 'fokusvirta-sahke-stop', osa));
+    else liuska.appendChild(document.createTextNode(osa));
+  }
+  return liuska;
+}
+
+/**
+ * Sähkeen oma tekstipinta: lomakepaperi, jolle rivit on liimattu
+ * versaaleina liuskoina STOP-välein.
+ *
+ * @param {string} leima Sähköaseman leimaan painettava paikannimi
+ *   (kaupungin nimi). Tyhjä = ei leimaa.
+ */
+function piirraSahke(kohde, teksti, luokka = '', leima = '') {
+  const laatikko = html('div', luokka ? `fokusvirta-sahke ${luokka}` : 'fokusvirta-sahke');
+  laatikko.appendChild(sahkeOtsake(teksti, leima));
+  const liuskat = html('div', 'fokusvirta-sahkeliuskat');
+  for (const rivi of String(teksti).split(/\s*\n\s*/).filter(Boolean)) {
+    liuskat.appendChild(sahkeLiuska(rivi));
+  }
+  laatikko.appendChild(liuskat);
   kohde.appendChild(laatikko);
   return laatikko;
 }
@@ -2071,14 +2157,22 @@ function piirraSahketehtava(ui, city, data, kohde) {
    * poistui kaupungista kesken lennon: paluunappi jatkaa siitä.
    */
   if (ui.sahkeVastattu.has(avain)) {
-    piirraSahke(kohde, tehtava.lahetetty ?? 'SÄHKE LÄHETETTY STOP ODOTA VASTAUSTA STOP');
-    piirraTeksti(kohde, tehtava.odotus ?? 'Livia on matkalla. Se palaa kun se palaa.');
+    piirraSahke(kohde, tehtava.lahetetty ?? 'SÄHKE LÄHETETTY STOP ODOTA VASTAUSTA STOP',
+      '', city.name);
+    piirraTeksti(kohde, tehtava.odotus ?? 'Livia on matkalla. Se palaa kun se palaa.')
+      .classList.add('fokusvirta-livian-saate');
     piirraNapit(kohde, [nappi('Selvä', 'primary', () => suljeKasin(ui))]);
     return;
   }
 
-  piirraSahke(kohde, tehtava.sahke ?? '');
-  piirraTeksti(kohde, tehtava.johdanto ?? '');
+  piirraSahke(kohde, tehtava.sahke ?? '', '', city.name);
+  /*
+   * LIVIAN SAATE ON MARGINAALIMERKINTÄ, EI SÄHKETTÄ: oma luokka vaihtaa
+   * sen kirjoituskoneen musteesta kynän jälkeen (kursiivi, sinertävä
+   * muste, hitusen kallellaan) — pelaajan on erotettava yhdellä
+   * silmäyksellä, kumpi teksti tulee koneesta ja kumpi Livialta.
+   */
+  piirraTeksti(kohde, tehtava.johdanto ?? '').classList.add('fokusvirta-livian-saate');
 
   const ohi = ui.sahkeOhi.get(avain) ?? 0;
   const lomake = html('div', 'fokusvirta-sahkelomake');
@@ -2087,7 +2181,14 @@ function piirraSahketehtava(ui, city, data, kohde) {
 
   for (const aukko of tehtava.aukot ?? []) {
     const rivi = html('div', 'fokusvirta-sahkeaukko');
-    const nimio = html('label', 'fokusvirta-sahkeotsake', `${aukko.otsake} `);
+    const nimio = html('label', 'fokusvirta-sahkeotsake');
+    /*
+     * KENTÄN NIMI ON OMASSA JÄNTEESSÄÄN, jotta se voi olla lomakkeeseen
+     * PAINETTU sana kentän vasemmalla puolella ("KOHDE ______") eikä
+     * selainkentän yläpuolinen tekstirivi. Tyhjä väli jää perään, koska
+     * nimiön textContent luetaan ääneen yhtenä pätkänä.
+     */
+    nimio.appendChild(html('span', 'fokusvirta-sahkekentannimi', `${aukko.otsake} `));
     if (aukko.tyyppi === 'luku') {
       const kentta = document.createElement('input');
       kentta.type = 'number';
@@ -2130,8 +2231,9 @@ function piirraSahketehtava(ui, city, data, kohde) {
   let vapaaLohko = null;
   if (tehtava.aukot?.length) {
     vapaaLohko = html('div', 'fokusvirta-sahkevapaa');
-    const vapaaNimio = html('label', 'fokusvirta-sahkeotsake',
-      `${tehtava.vapaaOtsake ?? 'Tai kirjoita vastaus omin sanoin'} `);
+    const vapaaNimio = html('label', 'fokusvirta-sahkeotsake');
+    vapaaNimio.appendChild(html('span', 'fokusvirta-sahkekentannimi',
+      `${tehtava.vapaaOtsake ?? 'Tai kirjoita vastaus omin sanoin'} `));
     vapaaKentta.className = 'fokusvirta-sahkevapaakentta';
     vapaaKentta.rows = 2;
     vapaaKentta.placeholder = tehtava.vapaaVihje ?? 'Yhdellä lauseella, omin sanoin';
@@ -2151,7 +2253,13 @@ function piirraSahketehtava(ui, city, data, kohde) {
   if (ohi >= SAHKE_VINKKI_OHI && tehtava.vinkki) {
     kohde.appendChild(html('p', 'fokusvirta-varmistus', tehtava.vinkki));
   }
-  kohde.appendChild(html('p', 'fokusvirta-varoitus',
+  /*
+   * PALKKIORIVI ON LOMAKKEEN ALAREUNAN MAKSUKOHTA: sama teksti kuin
+   * ennen, mutta lomakkeen pikkupränttinä (oma luokka, ohut yläviiva)
+   * eikä kortin varoituksena. Vanha luokka jää, koska savukkeet lukevat
+   * palkkion juuri siitä.
+   */
+  kohde.appendChild(html('p', 'fokusvirta-varoitus fokusvirta-sahkemaksu',
     `Sähkeen palkkio nyt ${sahkePalkkio(ohi, tehtava.palkkio ?? SAHKE_PALKKIO)} puntaa. `
     + 'Jokainen ohilyönti pienentää sitä — mutta aarre ei lukitu koskaan.'));
 
@@ -2225,7 +2333,7 @@ function piirraSahketehtava(ui, city, data, kohde) {
       ohilyonti(vaarat);
     }),
     nappi('Myöhemmin', '', () => suljeKasin(ui)),
-  ], 'fokusvirta-varmistusnapit');
+  ], 'fokusvirta-varmistusnapit fokusvirta-sahkenapit');
 }
 
 /**
@@ -2249,7 +2357,13 @@ function sahkeOsui(ui, city, data) {
   if (sisalto) {
     sisalto.replaceChildren();
     otsikko(sisalto, 'Sähke', tehtava.hahmo ?? 'Pöllöltä');
-    piirraSahke(sisalto, tehtava.vastaussahke ?? 'VASTAUS LÄHETETTY STOP');
+    piirraSahke(sisalto, tehtava.vastaussahke ?? 'VASTAUS LÄHETETTY STOP', '', city.name);
+    /*
+     * KUITTAUSKORTIN TEKSTI EI OLE MARGINAALIMERKINTÄ: siinä on Livian
+     * repliikin PERÄSSÄ faktakappale (tehtava.fakta), eikä faktaa saa
+     * esittää kynällä raapustettuna huomautuksena. Sinistä mustetta
+     * käytetään vain siellä, missä puhuu pelkkä Livia.
+     */
     piirraTeksti(sisalto, [tehtava.oikein, tehtava.fakta].filter(Boolean).join('\n\n'));
     piirraNapit(sisalto, [nappi(tehtava.lento ?? 'Anna Livian mennä', 'primary', () => {
       sfx.play('paper');
