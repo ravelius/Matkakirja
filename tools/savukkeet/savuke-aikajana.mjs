@@ -11,7 +11,10 @@
  *
  * VÄITTEET:
  *   1. Kehittäjävalikon nappi käynnistää aikajanan: kello, nauha ja
- *      valokerros ovat DOMissa, body.aikajana-paalla.
+ *      valokerros ovat DOMissa, body.aikajana-paalla, ja ajo tietää
+ *      oman musiikkilajinsa (aanet/linssi-keksinnot.mp3 ei ole
+ *      savukkeen ulottuvilla: ulkoiset osoitteet katkaistaan, ja
+ *      puuttuva raita on normaali hiljainen tila).
  *   2. Kamera on Euroopassa (näkyvä alue sisältää Lontoon ja Pietarin).
  *   3. Ensimmäinen tapahtuma syttyy: yksi valo palaa, nykyinen kortti
  *      on Watt, ilmiöpaneelissa Wattin nimi ja selite.
@@ -96,10 +99,12 @@ const kaynnistys = await sivu.evaluate(async () => {
     valoja: document.querySelectorAll('.aikajana-valo').length,
     luokka: document.body.classList.contains('aikajana-paalla'),
     lauta: ui.game.pack.id,
+    musiikki: ui.aikajana?.musiikkiLaji ?? null,
   };
 });
-vaadi('aikajana käynnistyy: kello, nauha ja valokerros DOMissa',
-  kaynnistys.lahti && kaynnistys.kello && kaynnistys.nauha === 26 && kaynnistys.valoja === 25 && kaynnistys.luokka,
+vaadi('aikajana käynnistyy: kello, nauha, valokerros ja oma musiikkilaji',
+  kaynnistys.lahti && kaynnistys.kello && kaynnistys.nauha === 26 && kaynnistys.valoja === 25
+    && kaynnistys.luokka && kaynnistys.musiikki === 'keksinnot',
   JSON.stringify(kaynnistys));
 
 /* 3. Ensimmäinen tapahtuma */

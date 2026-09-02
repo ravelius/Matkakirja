@@ -1,4 +1,4 @@
-# Generoi siirtymämusiikin kolme looppia ja vie ne ämpäriin.
+# Generoi siirtymämusiikin ja linssien musiikin loopit ja vie ne ämpäriin.
 #
 # Omistajan tilaus 2.9.2026: siirtymän taustalle oma pieni musiikki,
 # hieman eri kävellen, laivalla ja lentäen. Pelin puoli on valmis
@@ -9,6 +9,19 @@
 #   jalan  aanet/siirtyma-jalan.mp3  kävelyn rytmi, kevyt ja etenevä
 #   laiva  aanet/siirtyma-laiva.mp3  aallokon huojunta, leveämpi
 #   lento  aanet/siirtyma-lento.mp3  ilmava, soi kabiiniäänen alla
+#
+# Omistajan jatkotilaus 2.9.2026 ilta: *"Generoi linssille oma
+# musiikki"*. Aikajanalinssi (js/aikajana.js, js/linssit/keksinnot.js)
+# soittaa omaa raitaansa koko ajon ajan, ja se on PITKÄ looppi:
+#
+#   keksinnot  aanet/linssi-keksinnot.mp3  1800-luvun keksintöjen
+#              aikakausi: hillitty kellokoneisto ja tasainen pulssi,
+#              50 s looppi (linssi kestää minuutteja, 25 pysäkkiä)
+#
+# VALINTA "kaikki" EI SISÄLLÄ LINSSIRAITAA. Se tekee tasan kolme
+# siirtymäraitaa, kuten ennenkin; linssiraita pyydetään nimeltä. Näin
+# jo valmiita raitoja ei generoida vahingossa uudestaan — jokainen
+# kutsu maksaa rahaa (sama sääntö kuin käsiajossa).
 #
 # KÄSIAJETTAVA (workflow_dispatch), sama syy kuin generoi-musiikki.yml:
 # musiikki maksaa rahaa. Automaattista triggeriä ei ole eikä tule.
@@ -24,7 +37,8 @@
 # on pelissä heti ajon jälkeen ilman julkaisua.
 #
 # KUUNTELE RAIDAT AJON JÄLKEEN. Ajo tarkistaa koneellisesti keston
-# (10–20 s), tason (−33 LUFS) ja sen, ettei päissä ole hiljaisuutta,
+# (siirtymät 10–20 s, linssi 45–60 s), tason (−33 LUFS) ja sen,
+# ettei päissä ole hiljaisuutta,
 # mutta sauman kuulumattomuutta ei voi mitata — se kuullaan.
 # Kelvottoman raidan ajo jättää viemättä ja kaatuu.
 #
@@ -46,12 +60,13 @@ on:
     inputs:
       laji:
         description: >-
-          Mikä raita generoidaan. "kaikki" tekee kolme raitaa eli
-          kolme maksullista kutsua.
+          Mikä raita generoidaan. "kaikki" tekee kolme siirtymäraitaa
+          eli kolme maksullista kutsua — se EI sisällä linssiraitaa
+          "keksinnot", joka pyydetään erikseen nimeltä.
         required: true
         type: choice
         default: 'kaikki'
-        options: ['kaikki', 'jalan', 'laiva', 'lento']
+        options: ['kaikki', 'jalan', 'laiva', 'lento', 'keksinnot']
 
 permissions:
   contents: read
