@@ -114,8 +114,8 @@ import { MINIATYYRIT } from './packs/miniatyyrit.js';
 // kehittäjäkartan vihreä merkintä lukevat kaikki tämän saman taulun.
 import { JULISTEET, JULISTE_LAHDE, kaupunginJuliste } from './packs/julisteet.js';
 import {
-  POLLO_AARRE, polloAnkkuri, polloLisavihje, polloOnnittelu, polloPaivitaNakyvyys, polloSulje,
-  polloVihje, polloVihjePois,
+  POLLO_AARRE, polloAnkkuri, polloAuki, polloLisavihje, polloOnnittelu, polloPaivitaNakyvyys,
+  polloSulje, polloVihje, polloVihjePois,
 } from './pollo.js';
 import { ajastaEhdotusKupla, ehdotusOsio, proHakuRasti, proOsio } from './ehdotukset.js';
 import { kuvavinkkiOsio } from './kuvavinkki.js';
@@ -330,6 +330,20 @@ import { nollaaFokusmitat, paivitaFokusmitat, projisoiLaudalle } from './fokusmi
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
 const BOT_QUIZ_DELAY = 1500; // botin kysymys jää hetkeksi näkyviin luettavaksi
+/*
+ * AUTOMAATTIHEITON HENGÄHDYS (omistajan tilaus 2.9.2026, sanatarkasti:
+ * *"nopanheitto tulee jatkua automaattisesti jos ei olla saavuttu
+ * seuraavaan kohdekaupunkiin"*).
+ *
+ * Kun nappula pysähtyy reitin askelpisteeseen, seuraava heitto tulee
+ * itsestään — mutta ei samassa silmänräpäyksessä. Tauko on se hetki,
+ * jossa silmä ehtii nähdä mihin nappula jäi (kamera on juuri jäänyt
+ * siirtozoomiin, ks. animatePawnSisalla) ennen kuin noppa pyörähtää
+ * kartan päällä. Botin vuorotauko (BOT_DELAY 650 ms) on samaa luokkaa;
+ * tämä on hitusen pidempi, koska edellinen askel päättyy laskeutuvaan
+ * nappulaan eikä valmiiseen ruutuun.
+ */
+const AUTOMAATTIHEITON_TAUKO_MS = 750;
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
 /*
@@ -1983,6 +1997,10 @@ export class UI {
     this.onNewGame = onNewGame;
     this.onChange = onChange;
     this.botTimer = null;
+    // Automaattiheiton ajastin ja viimeisin automaattiheiton paikka
+    // (ajastaAutomaattinenHeitto, automaattiheittoSallittu).
+    this.automaattiheittoAjastin = null;
+    this.automaattiheittoPaikka = null;
 
     this.svg = document.getElementById('board');
     this.turnPill = document.getElementById('turn-pill');
@@ -3803,6 +3821,10 @@ export class UI {
     for (const kalvo of document.querySelectorAll('.flight-overlay')) kalvo.remove();
     this.suljeAloitusportti();
     clearTimeout(this.botTimer);
+    // Kesken katkennut matka jättäisi automaattiheiton ajastimen
+    // pyörimään uuden pelin päälle.
+    clearTimeout(this.automaattiheittoAjastin);
+    this.automaattiheittoPaikka = null;
     clearTimeout(this.lentoPuheAjastin);
     clearTimeout(this.lentoTekstiAjastin);
     clearTimeout(this.zoomAlkuAjastin);
@@ -11810,6 +11832,9 @@ export class UI {
       return;
     }
     this.scheduleBot();
+    // Onko matka kesken reitillä? Silloin seuraava noppa pyörähtää
+    // itsestään pienen hengähdyksen jälkeen (omistaja 2.9.2026).
+    this.ajastaAutomaattinenHeitto();
   }
 
   /**
@@ -15877,6 +15902,7 @@ export class UI {
 
   showWinner() {
     clearTimeout(this.botTimer);
+    clearTimeout(this.automaattiheittoAjastin);
     if (!this.winnerDialog.open) sfx.play('win');
     const w = this.game.winner;
     document.getElementById('winner-title').textContent = `${w.name} voitti!`;
@@ -16813,6 +16839,9 @@ export class UI {
   doMove(key) {
     // Radiotilassa kartalla ei liikuta.
     if (this.radioPaalla()) return;
+    // Nappula liikkuu: automaattiheiton "samasta pisteestä vain kerran"
+    // -merkki vanhenee tässä (ks. automaattiheittoSallittu).
+    this.automaattiheittoPaikka = null;
     const { game } = this;
     const move = game.moves?.get(key);
     if (!move) return;
@@ -18766,6 +18795,80 @@ export class UI {
       this.naytaPolloKupla(kupla);
       await this.wait(this.reducedMotion ? 0 : TIETAJAKUPLA_MS);
     }
+  }
+
+  /**
+   * MATKA JATKUU ITSESTÄÄN, KUNNES OLLAAN KAUPUNGISSA (omistajan tilaus
+   * 2.9.2026, sanatarkasti: *"nopanheitto tulee jatkua automaattisesti
+   * jos ei olla saavuttu seuraavaan kohdekaupunkiin"*).
+   *
+   * Ennen tätä yksi maayhteys pilkkoutui monen napautuksen sarjaksi:
+   * heitä noppa, valitse suunta, katso askeleet — ja heitä noppa taas,
+   * vaikka mitään valittavaa ei ollut, koska nappula jäi reitin
+   * askelpisteeseen. Nyt peli heittää sen välinopan itse.
+   *
+   * MIKSI AJASTIN JA MIKSI RENDERISTÄ. Heitto kuuluu UI:lle eikä
+   * pelisäännöille, koska nopan ja nappulan animaatiot ovat samassa
+   * ketjussa (run → after → render). Tämä on scheduleBotin sisarus ja
+   * kutsutaan samasta paikasta: render on se hetki, jolloin edellinen
+   * siirto on kokonaan näytetty (run nollaa busy-lipun ja piirtää
+   * vasta animaation jälkeen). Sama kutsupaikka hoitaa myös sivun
+   * latauksen kesken matkaa — ensimmäinen render tekee saman
+   * päätöksen kuin siirron jälkeinen.
+   *
+   * MIKÄ ESTÄÄ HEITON. Ajastin viritetään uudelleen joka piirrossa ja
+   * ehdot tarkistetaan VIELÄ KERRAN ajastimen lauetessa, koska
+   * pelaaja ehtii tauon aikana avata mitä tahansa: pöllön, lehden,
+   * matkustusliu’un, minkä tahansa modaalin tai radiotilan. Samat
+   * portit kuin doRollissa (radioPaalla) ja lisäksi busy-lippu, joka
+   * estää tuplaheiton, jos pelaaja ehti painaa noppaa itse. Botin
+   * vuoroon ei kosketa: game.jatkaMatkaaItsestaan vaatii
+   * ihmispelaajan.
+   */
+  automaattiheittoSallittu() {
+    const { game } = this;
+    if (this.dead || this.busy || this.katselu) return false;
+    if (!game.jatkaMatkaaItsestaan()) return false;
+    // Radiotilassa kartalla ei liikuta (sama portti kuin doRollissa).
+    if (this.radioPaalla()) return false;
+    // Pelaaja avasi jotain: pöllö, alanappien liuku tai mikä tahansa
+    // modaali (lehti, laukku, passi, nähtävyys) — matka odottaa.
+    if (polloAuki() || this.liukuAuki) return false;
+    if (document.querySelector('dialog[open]')) return false;
+    /*
+     * SAMASTA PISTEESTÄ VAIN KERRAN. Jos automaatin heitto ei tuota
+     * yhtään laillista siirtoa, peli päättää vuoron ja nappula jää
+     * täsmälleen samaan pisteeseen — ja ilman tätä porttia seuraava
+     * piirto virittäisi heiton uudelleen loputtomiin. Nykyisillä
+     * laudoilla reitin varrelta pääsee aina molempiin suuntiin, joten
+     * tämä on varmistus eikä arkipäivää; merkki nollataan heti kun
+     * nappula oikeasti liikkuu (doMove).
+     */
+    if (this.automaattiheittoPaikka === posKey(game.player.pos)) return false;
+    return true;
+  }
+
+  ajastaAutomaattinenHeitto() {
+    if (!this.automaattiheittoSallittu()) {
+      clearTimeout(this.automaattiheittoAjastin);
+      this.automaattiheittoAjastin = null;
+      return;
+    }
+    /*
+     * JO VIRITETTY AJASTIN SAA LASKEA LOPPUUN. Renderiä kutsutaan
+     * pelin aikana monesta suunnasta, ja jos ajastin nollattaisiin
+     * joka piirrossa, tiheä piirto siirtäisi heittoa loputtomasti
+     * eteenpäin — matka jäisi juuri siihen odotukseen, josta tilaus
+     * halusi eroon.
+     */
+    if (this.automaattiheittoAjastin) return;
+    this.automaattiheittoAjastin = setTimeout(() => {
+      this.automaattiheittoAjastin = null;
+      // Tauon aikana ehti tapahtua mitä tahansa: ehdot uudestaan.
+      if (!this.automaattiheittoSallittu()) return;
+      this.automaattiheittoPaikka = posKey(this.game.player.pos);
+      this.doRoll();
+    }, AUTOMAATTIHEITON_TAUKO_MS);
   }
 
   scheduleBot() {

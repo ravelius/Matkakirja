@@ -39,14 +39,24 @@
  *      .fokus-lehden-alla-luokkaa. Luokkaa ei enää kirjoiteta
  *      kenellekään (30.8.2026), joten vartio on nyt varmistus siitä
  *      ettei piilotus palaa; kaupungin nimi tulee laatasta.
- *   8. NOPPA EI PYÖRÄHDÄ ITSESTÄÄN. *"kun aarteen on avannut, peli menee
- *      SUORAAN nopanheittoon"* — esivalittu matkustustapa saa jäädä,
- *      mutta heitto on aina pelaajan napin takana.
+ *   8. NOPPA EI PYÖRÄHDÄ ITSESTÄÄN KAUPUNGISSA. *"kun aarteen on
+ *      avannut, peli menee SUORAAN nopanheittoon"* — esivalittu
+ *      matkustustapa saa jäädä, mutta heitto on aina pelaajan napin
+ *      takana. RAJAUS TARKENTUI 2.9.2026: sääntö koskee kaupunkia,
+ *      jossa vuoro on aito valinta. Kesken reittiä heitto tulee
+ *      itsestään — ks. vartio 10.
  *   9. NOPAN KOMPOSITORIVIHJE VAIN HEITON AJAKSI. Pysyvä
  *      `will-change: transform` kartan siirtokuoressa lepäävässä nopassa
  *      pakotti sen ALLA olevan kartan omalle kerrokselleen, ja iPhonella
  *      kerros jäi varaamatta: *"kartat eivät näy taustalla kun
  *      pelinappula hyppii"*.
+ *
+ *  10. MATKA JATKUU ITSESTÄÄN (omistaja 2.9.2026: *"nopanheitto tulee
+ *      jatkua automaattisesti jos ei olla saavuttu seuraavaan
+ *      kohdekaupunkiin"*). Kun nappula pysähtyy reitin askelpisteeseen,
+ *      seuraava heitto tulee ilman napautusta — mutta vasta pienen
+ *      hengähdyksen jälkeen, ei samassa silmänräpäyksessä. Aika
+ *      mitataan.
  *
  * MIKSI VARTIO: lähes jokainen takeista rikkoutuu hiljaa. Kamera-ajon
  * kohteesta unohtuva zoomikerroin muuttaa saattamisen taas kevyeksi
@@ -548,6 +558,82 @@ const vihje = await sivu.evaluate(async () => {
 vaadi('9 nopan will-change on voimassa vain heiton ajan',
   /transform/.test(vihje.kesken ?? '') && !/transform/.test(vihje.levossa ?? ''),
   JSON.stringify(vihje));
+
+/* --- 10. matka jatkuu itsestään reitin askelpisteestä -------------- */
+/*
+ * Omistajan tilaus 2.9.2026, sanatarkasti: *"nopanheitto tulee jatkua
+ * automaattisesti jos ei olla saavuttu seuraavaan kohdekaupunkiin"*.
+ *
+ * Vartio ajaa TODELLISEN ketjun: siirto reitin askelpisteeseen →
+ * animaatio loppuun → ei yhtään napautusta → nopan pitää pyörähtää
+ * itsestään. Aika mitataan, koska hengähdys on osa tilausta: heiton on
+ * tultava vasta kun nappula on laskeutunut (js/ui.js
+ * AUTOMAATTIHEITON_TAUKO_MS = 750), ei samassa silmänräpäyksessä.
+ *
+ * Vartio 8 (noppa ei pyörähdä itsestään KAUPUNGISSA) jää voimaan
+ * sellaisenaan — automaatti tunnistaa nimenomaan reitillä olon.
+ */
+const jatkuu = await sivu.evaluate(async () => {
+  const ui = window.matkakirja.ui;
+  const g = ui.game;
+  const { findMoves } = await import('./js/rules.js');
+  await new Promise((r) => setTimeout(r, 300));
+
+  // Pitkä maareitti: kahden askeleen heitto jää varmasti reitin varteen.
+  const reitti = g.board.edges.find((e) => e.type === 'land' && e.steps >= 4);
+  if (!reitti) return { virhe: 'ei tarpeeksi pitkää maareittiä' };
+  ui.movingPlayerId = null;
+  g.player.pos = { type: 'city', city: reitti.a };
+  g.phase = 'action';
+  g.autoTravel = false;
+  g.travelMode = null;
+  g.die = null;
+  if (!g.actionTravel('land').ok) return { virhe: 'maareitti ei kelvannut' };
+  g.die = 2;
+  g.phase = 'move';
+  g.moves = findMoves(g.board, g.player.pos, 2, { mode: 'land' });
+  const valinta = [...g.moves.entries()].find(([, m]) => m.pos.type === 'edge');
+  if (!valinta) return { virhe: 'kahden askeleen päässä ei reittipistettä' };
+
+  ui.doMove(valinta[0]);
+  // Siirto näytetään loppuun asti (run nollaa busy-lipun vasta silloin).
+  for (let i = 0; i < 1200 && ui.busy; i++) {
+    await new Promise((r) => setTimeout(r, 10));
+  }
+  const siirtoValmis = performance.now();
+  const asema = g.player.pos.type;
+  const vaihe = g.phase;
+  const lippu = g.jatkaAutomaattisesti === true;
+
+  // Tästä eteenpäin EI kosketa mihinkään: nopan on tultava itsestään.
+  for (let i = 0; i < 400 && g.die === null; i++) {
+    await new Promise((r) => setTimeout(r, 10));
+  }
+  const viive = Math.round(performance.now() - siirtoValmis);
+  const tulos = { asema, vaihe, lippu, viive, noppa: g.die };
+
+  // Siivous: automaatti pois päältä, ettei se laukea seuraavien
+  // vartioiden aikana.
+  for (let i = 0; i < 600 && ui.busy; i++) {
+    await new Promise((r) => setTimeout(r, 10));
+  }
+  g.jatkaAutomaattisesti = false;
+  g.phase = 'action';
+  g.die = null;
+  g.moves = null;
+  g.player.pos = { type: 'city', city: 'ateena' };
+  ui.movingPlayerId = null;
+  ui.render();
+  return tulos;
+});
+vaadi('10a siirto jäi reitin askelpisteeseen ja vuoro merkittiin jatkuvaksi',
+  jatkuu.asema === 'edge' && jatkuu.vaihe === 'roll' && jatkuu.lippu === true,
+  JSON.stringify(jatkuu));
+vaadi('10b noppa pyörähti itsestään ilman napautusta',
+  Number.isInteger(jatkuu.noppa) && jatkuu.noppa >= 1 && jatkuu.noppa <= 6,
+  JSON.stringify(jatkuu));
+vaadi('10c heitto tuli hengähdyksen jälkeen (0,4–2,5 s siirron lopusta)',
+  jatkuu.viive > 400 && jatkuu.viive < 2500, JSON.stringify(jatkuu));
 
 vaadi('6 ei sivuvirheitä', virheet.length === 0, virheet.join(' | '));
 
