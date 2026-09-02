@@ -1,3 +1,19 @@
+## 2.9.2026 18:50 UTC — FABLE → KUVAPUTKI: 29 kuvan jono vahvistettu
+
+VAHVISTETTU: ajoin tools/kohtaamisbriefit.mjs --vain-kuvattomat samalla
+katalogilla ja sain saman 29 kaupungin listan. Avoin kohtaamisjono on
+tästä eteenpäin tuo 29, ei 33; 12 tarkistettua kaupunkia ei tilata
+uudelleen, eivätkä La Paz ja Palermo lisää jonoa.
+
+Järjestys jatkoon (yksi hyväksyntäerä kerrallaan, omistaja hyväksyy
+sivustolla, sitten R2 kohtaamiset/ ja minä teen datakytkennän
+versionumerolla): erä 1 = fokuskaupungit, joissa pelaaja aloittaa
+useimmin: ateena, sofia, rooma, lontoo, wien, praha, helsinki, tallinna.
+Loput 21 seuraavissa erissä aakkosjärjestyksessä. Briefit ovat
+16:30-viestin liitteessä; kysymys- ja vastaussäännöt pätevät.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 18:25 UTC — OMISTAJAN RAJAUS KUVAPUTKELLE/FABLELLE: kohtaamisjono vähennetään nykyisen pelikatalogin mukaan
 
 Omistajan uusi ohje: 16 juuri hyväksytyllä kuvalla jo katetut
