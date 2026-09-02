@@ -216,11 +216,11 @@ export const ASSET_KANSIOT = {
  * lukee repon polkua, kunnes erä on viety ja tarkistettu.
  */
 export const R2_ASSETIT = {
-  miniatyyrit: false,
+  miniatyyrit: true,
   elaimet: true,
-  aarteet: false,
-  nostot: false,
-  ihmeet: false,
+  aarteet: true,
+  nostot: true,
+  ihmeet: true,
 };
 
 /**

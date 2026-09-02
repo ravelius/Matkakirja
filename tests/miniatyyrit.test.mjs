@@ -22,7 +22,7 @@ import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
 import { MINIATYYRIT } from '../js/packs/miniatyyrit.js';
 import { KAUPUNKIKARTAT } from '../js/packs/maakartat.js';
-import { assetOsoite } from '../js/media.js';
+import { assetOsoite, R2_ASSETIT } from '../js/media.js';
 import { KOHTAAMIS_R2_JUURI } from '../js/kohtaamiskuvat-data.js';
 
 const SW = readFileSync(new URL('../sw.js', import.meta.url), 'utf8');
@@ -71,9 +71,14 @@ test('jokainen ämpäritunnus on muotoa <kaupunki>-<slug>', () => {
 test('tunnus luetaan ämpärin miniatyyrikansiosta JPG:nä', () => {
   assert.equal(assetOsoite('miniatyyrit', 'ateena-akropolis-museo'),
     `${KOHTAAMIS_R2_JUURI}/miniatyyrit/ateena-akropolis-museo.jpg`);
-  // Repon polku ei muutu ennen kuin siirtolippu käännetään.
-  assert.equal(assetOsoite('miniatyyrit', 'assets/kartat/miniatyyrit/rooma-pantheon.webp'),
-    'assets/kartat/miniatyyrit/rooma-pantheon.webp');
+  // Repon polku pysyy ennallaan ennen siirtolipun kääntöä, ja kääntyy
+  // ämpäriosoitteeksi sen jälkeen — kumpikin asento on laillinen.
+  assert.equal(
+    assetOsoite('miniatyyrit', 'assets/kartat/miniatyyrit/rooma-pantheon.webp'),
+    R2_ASSETIT.miniatyyrit
+      ? `${KOHTAAMIS_R2_JUURI}/miniatyyrit/rooma-pantheon.webp`
+      : 'assets/kartat/miniatyyrit/rooma-pantheon.webp',
+  );
 });
 
 /*
