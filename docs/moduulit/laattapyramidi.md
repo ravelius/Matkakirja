@@ -1671,6 +1671,77 @@ on muutoksen tarkoitus. Todennettu md5:llä
 (`d5820eb…` → `7c3fb3d…`). **Jos `patinoi-fokus.yml` ajetaan uudestaan,
 js/media.js `FOKUS_VUOSIKERTA` on nostettava.**
 
+## 8b. Korkeusdata: 1 kaariminuutti syvimmällä tasolla (2.9.2026)
+
+Omistajan tilaus 2.9.2026: *"korkeusdata pitää tehdä 1 tarkkuudella
+uudestaan"*. Raamatun vanha linjaus (3 kaariminuuttia kaikilla
+tasoilla) kumoutuu **vain syvimmän tason osalta**.
+
+| taso | ruutu | mistä |
+| --- | --- | --- |
+| z7 | 1′ (`--kaariminuutit`, oletus 1) | R2:n 10°-palat |
+| z0–z6 | 3′ aina | repon `tools/korkeusaineisto/` |
+
+**Miksi kaukotasot jäävät kolmeen.** Yksi korkeussolu on z7:llä 12
+kuvapikseliä 3′:llä ja 4 pikseliä 1′:llä — siellä tarkkuus näkyy. Jo
+z6:lla 1′-solu on 2 pikseliä ja z5:llä yksi: aineisto olisi piirtoa
+tarkempaa, eli tarkempi ruudukko ei toisi yhtään näkyvää
+yksityiskohtaa vaan nelinkertaisen muistin. Sääntö on koodissa
+(`kaariminuutitTasolle`) ja luettelossa (`pyramidi.json` → `korkeus`).
+
+**Kohinaa ei tullut.** Raamattu varoitti, että 1′:n naapurierot
+näkyisivät rakeisuutena varjossa (varjo lasketaan naapurien erosta).
+Rinnakkaisvedokset z7:ltä (Alpit 6,5–8,5 °E / 45,4–46,6 °N ja Kreikka
+22,5–24,5 °E / 37,4–38,6 °N, sama patina ja laatu, vain ruutu vaihtui)
+näyttävät päinvastaista: 1′ tuo laaksot ja harjanteet esiin
+**puhtaana** eikä rakeisena, koska 4 kuvapikseliä solua kohti on yhä
+reilusti yli näytteenottorajan. Varjopassiin **ei siis lisätty**
+alipäästösuodatinta — se olisi hävittänyt juuri sen, mitä ajolla
+haettiin.
+
+**Aineisto ei tule NOAA:lta.** 1′-palat ovat omassa R2-ämpärissämme
+(`julisteet/korkeus/1min/`, `tools/tee-korkeuspalat.mjs`,
+`vie-korkeuspalat.yml`), ja työnkulku kopioi shardin tarvitsemat palat
+levylle **ennen polttoa** (`--vain-palat` antaa listan). Poltto itse ei
+tee yhtään verkkopyyntöä.
+
+**Muisti.** Koko lauta 1′:llä olisi 424 Mt Int16:na, joten ruudukkoa ei
+enää koota koko laudalle vaan **vain sille alalle, jonka ajo piirtää**
+(`korkeudenLaatikko`: lohkojen unioni reunuksineen + 0,5° marginaali).
+Mitattu tässä kontissa:
+
+| ajo | ruudukko | Int16 | kokoaminen |
+| --- | --- | --- | --- |
+| z7 sarakkeet 0–43 | 5701 × 9795 | 112 Mt | 1,0 s / 170 palaa (RSS 215 Mt) |
+| z7 sarakkeet 44–87 | 5710 × 9795 | 112 Mt | 187 palaa |
+| z7 sarakkeet 88–131 | 5711 × 9795 | 112 Mt | 170 palaa |
+| z7 sarakkeet 132–168 | 4774 × 9795 | 94 Mt | 153 palaa |
+| z7 kokonaan (ei shardattu) | 21661 × 9795 | 424 Mt | 612 palaa |
+| z0–z6 (3′) | 7221 × 3267 | 47 Mt | reposta, ennallaan |
+
+Rajaus koskee **vain korkeusruudukkoa**; rannikot, järvet ja rajat
+kootaan yhä koko laudalta. Täyden leveyden ajossa laatikko on
+leikattu vanhaan koko laudan laatikkoon.
+
+**3′-tuotannon laatat ovat tavulleen entiset — mitattu, ei väitetty**
+(2.9.2026, sama kontti, sama Chromium, vanha koodi vs. uusi):
+
+- koko z3 maailmasta, **77/77 laattaa md5-identtisiä**
+- z7 Alpit (`--alue 6.5,45.4,8.5,46.6`) kavennetulla laatikolla
+  (198 × 166 solua vanhan 7221 × 3267:n sijaan), **4/4 laattaa
+  md5-identtisiä**
+
+Kaventaminen ei siis muuta pikseliäkään: hilapisteet ovat samat, koska
+laatikon reunat napsautetaan samaan `RUUTU`-hilaan kuin ennenkin.
+Lisäksi tests/korkeusikkuna.test.mjs vertaa vanhan poiminnan ja uuden
+ikkunan solu solulta kolmella laatikolla.
+
+**Yksi ajo, yksi ruudukko.** Ruudukko tarjoillaan selainsivulle yhtenä
+tiedostona, joten ajo jonka tasot tarvitsisivat eri tarkkuudet
+pysähtyy äänekkäästi. Matriisi ajaa z0–z6:n ja z7:n eri shardeissa;
+paikkausajo (kaikki tasot yhdessä) ajaa generaattorin kahdesti, ja
+luettelo täydentyy erissä kuten muutenkin.
+
 ## 9. Sauma
 
 `--saumatesti` piirtää saman alueen kerran isona kuvana ja kerran

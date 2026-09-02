@@ -48,7 +48,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { meriMaski } from './aineisto.mjs';
-import { haeKorkeusruudukko } from '../hae-korkeusruudukko.mjs';
+import { haeKorkeusikkuna, hilanMitat } from '../hae-korkeusruudukko.mjs';
 
 /** Pyöristys neljään desimaaliin: noin 11 metriä, aivan riittävä. */
 const pyorista = (n) => Math.round(n * 1e4) / 1e4;
@@ -71,31 +71,58 @@ function lue(kansio, nimi) {
  * kymmeniä megatavuja, ja se kulkee selaimeen omana binääritiedostonaan
  * (ks. tools/tee-yleislehti.mjs) eikä JSONiin ahdettuna merkkijonona.
  */
-export async function korkeusruudukko({ laatikko, ruutu = 0.05, hiljaa = false }) {
-  const maailma = await haeKorkeusruudukko({ ruutu, hiljaa });
-  const w = Math.round((laatikko.lon1 - laatikko.lon0) / ruutu) + 1;
-  const h = Math.round((laatikko.lat1 - laatikko.lat0) / ruutu) + 1;
-  const grid = new Int16Array(w * h);
-  // Lähdesarake jokaiselle kohdesarakkeelle kerran: kierto on sama
-  // jokaisella rivillä, eikä sitä kannata laskea 19 miljoonaa kertaa.
-  const lahdeX = new Int32Array(w);
-  for (let x = 0; x < w; x++) {
-    const lon = laatikko.lon0 + x * ruutu;
-    const kierretty = ((((lon + 180) % 360) + 360) % 360) - 180;
-    lahdeX[x] = Math.min(maailma.leveys - 1,
-      Math.max(0, Math.round((kierretty + 180) / ruutu)));
-  }
-  for (let y = 0; y < h; y++) {
-    // Kohteessa y = 0 on POHJOISIN rivi, lähteessä y = 0 on etelänapa.
-    const lat = laatikko.lat1 - y * ruutu;
-    const ly = Math.min(maailma.korkeus - 1,
-      Math.max(0, Math.round((lat + 90) / ruutu)));
-    const rivi = ly * maailma.leveys;
-    for (let x = 0; x < w; x++) {
-      const v = maailma.z[rivi + lahdeX[x]];
-      grid[y * w + x] = Math.max(-32000, Math.min(32000, Math.round(v)));
+export function ikkunanRajat({ laatikko, ruutu = 0.05 }) {
+  const leveys = Math.round((laatikko.lon1 - laatikko.lon0) / ruutu) + 1;
+  const korkeus = Math.round((laatikko.lat1 - laatikko.lat0) / ruutu) + 1;
+  const hila = hilanMitat(ruutu);
+  const kierretty = ((((laatikko.lon0 + 180) % 360) + 360) % 360) - 180;
+  const x0 = Math.round((kierretty + 180) / ruutu) % (hila.leveys - 1);
+  // Kohteessa y = 0 on POHJOISIN rivi, hilassa y = 0 on etelänapa.
+  const y0 = Math.round((laatikko.lat1 + 90) / ruutu) - (korkeus - 1);
+  return {
+    x0, leveys, y0, korkeus,
+  };
+}
+
+export async function korkeusruudukko({
+  laatikko, ruutu = 0.05, hiljaa = false, palat = null,
+}) {
+  /*
+   * === IKKUNA ON YHTENÄINEN — SIKSI SE ON IKKUNA EIKÄ POIMINTA ======
+   *
+   * Ennen tässä laskettiin jokaiselle kohdesarakkeelle oma lähdesarake
+   * ja poimittiin arvot koko maailman ruudukosta. Se toimi, koska koko
+   * maailma oli 3′:llä vain 52 Mt. Yhdellä kaariminuutilla se on 466
+   * Mt, eikä sitä voi koota muistiin shardia varten, joka piirtää
+   * neljäsosan maailmasta (ks. hae-korkeusruudukko.mjs "MIKSI IKKUNA").
+   *
+   * Poimintaa ei kuitenkaan tarvita: laatikon sarakkeet etenevät
+   * TASAN yhden ruudun välein, joten myös lähdesarakkeet etenevät yksi
+   * kerrallaan ja kiertävät maailman ympäri modulo leveys−1. Riittää
+   * siis laskea ENSIMMÄISEN sarakkeen ja ALIMMAN rivin paikka
+   * maailmanhilassa; loput seuraavat niistä. Tulos on solu solulta
+   * sama kuin vanhalla poiminnalla (tests/korkeusikkuna.test.mjs
+   * vertaa 3′-polun molemmat tavat).
+   */
+  const {
+    x0, leveys: w, y0, korkeus: h,
+  } = ikkunanRajat({ laatikko, ruutu });
+  const ikkuna = await haeKorkeusikkuna({
+    ruutu, x0, leveys: w, y0, korkeus: h, pohjoinenEnsin: true, hiljaa, palat,
+  });
+  /*
+   * Int16-lähde kelpaa RUUDUKOKSI SELLAISENAAN. Arvot ovat jo
+   * kokonaisia metrejä välillä −10 728 … 8 266, joten pyöristys ja
+   * rajaus olisivat identiteettejä — ja 1′:llä ne maksaisivat toisen
+   * sadan megatavun kopion pelkästä muodollisuudesta.
+   */
+  const grid = ikkuna.z instanceof Int16Array ? ikkuna.z : (() => {
+    const g = new Int16Array(w * h);
+    for (let i = 0; i < g.length; i += 1) {
+      g[i] = Math.max(-32000, Math.min(32000, Math.round(ikkuna.z[i])));
     }
-  }
+    return g;
+  })();
   return {
     w,
     h,
@@ -104,7 +131,7 @@ export async function korkeusruudukko({ laatikko, ruutu = 0.05, hiljaa = false }
     lat0: laatikko.lat0,
     lat1: laatikko.lat1,
     grid,
-    lahteet: maailma.lahteet,
+    lahteet: ikkuna.lahteet,
   };
 }
 
@@ -276,8 +303,20 @@ export function jarvet(kansio, { vahinKoko = 0.4, harvennus = 0.006 } = {}) {
  * kahdessa muodossa: renkaat kertovat piirtomoottorille missä maa on,
  * viivat piirretään. Ks. meriRenkaat().
  */
-export async function keraaMaailma({ kansio, laatikko, ruutu = 0.05 }) {
-  const korkeus = await korkeusruudukko({ laatikko, ruutu });
+export async function keraaMaailma({
+  kansio, laatikko, ruutu = 0.05, korkeuslaatikko = null, palat = null,
+}) {
+  /*
+   * KORKEUSLAATIKKO SAA OLLA KAPEAMPI KUIN LAATIKKO.
+   *
+   * Vektorit (rannikot, järvet) ovat kevyitä ja ne kannattaa aina
+   * koota koko laudalle. Korkeusruudukko ei ole: 1′:llä koko laudan
+   * ruudukko on 395 Mt, mutta yksi pituuskaistan shardi tarvitsee
+   * vain oman siivunsa (laattapyramidin `korkeudenLaatikko`). Kun
+   * kutsuja ei anna omaa laatikkoa, tämä on entisellään.
+   */
+  const kl = korkeuslaatikko ?? laatikko;
+  const korkeus = await korkeusruudukko({ laatikko: kl, ruutu, palat });
   /*
    * Laajennus yhdellä ruudulla eikä kahdella: yleislehdellä ruudukko ja
    * kuvapikseli ovat samaa kokoluokkaa (0,05° vs. 0,056°), joten
