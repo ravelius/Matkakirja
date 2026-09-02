@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1471, teksti: 'Keksinnot-linssin oma musiikki + Raamattu-kirjaukset' },
   { v: 1470, teksti: 'Aikajanalinssi: keksinnöt Euroopassa (pilotti)' },
   { v: 1469, teksti: 'Naapurinostot väistöön; kohteet kohdekartoille' },
   { v: 1468, teksti: 'Fokusvirran kortit pois; piste avaa laattakysymyksen' },
