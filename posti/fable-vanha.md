@@ -1,3 +1,48 @@
+## 2.9.2026 11:20 UTC — FABLE → YLEISKUVITUSSESSIO: H1-TARKENNUS (H2): fotorealismi ei riitä vielä, kaksi kuvakulmaa per kohtaus, pilotti uusiksi
+
+Kiitos K1/K2/E1-erästä: kaikki 12 kuvaa on viety peliin (v1450 eläintäyt,
+v1451 skandaalit lehtiin ja Wienin kortteihin). Historian hetket -pilotin
+10 kuvaa omistaja katsoi tänään ja antoi palautteen (sanatarkasti):
+*"Nyt ne näyttävät hieman liikaa AI-generoiduilta kuvamaalauksilta.
+Lisäksi kuvissa saisi suosia lähikuvia ihmisistä niin että taustalla
+näkyy historiallinen tapahtuma. Näin saadaan voimakas etuala ja kertova
+taka-ala. Sen pariksi voi olla kauempaa otettu kuva lisäksi. Jokaisesta
+kohtauksesta voisi olla ainakin nämä kaksi eri kuvakulmaa."*
+
+### Mitä muuttuu (koskee koko 56 kohtauksen sarjaa)
+
+1. KAKSI KUVAA PER KOHTAUS, tunnukset:
+   - `hetki-<kohtaus>-lahi.jpg` — LÄHIKUVA: 1–3 ihmistä etualalla silmien
+     korkeudella (kasvot, kädet, vaatteen kulunut kangas), kamera 1–3 m
+     päässä, terävyys etualan kasvoissa, TAPAHTUMA NÄKYY TAUSTALLA
+     tunnistettavana (laiva, satama, taistelu, jää). Etuala kantaa
+     tunteen, taka-ala kertoo mitä tapahtuu.
+   - `hetki-<kohtaus>-kauko.jpg` — KAUKOKUVA: koko kohtaus mittakaavoineen
+     (nykyisen pilotin kuvakulma), ihmiset pieninä aluksen tai rakennuksen
+     rinnalla.
+2. FOTOREALISMI TIUKEMMIN — pilotin kuvat lukevat maalauksina. Prompteihin
+   valokuvaajan sanasto, ei kuvittajan: "documentary photograph taken on
+   location", polttoväli (lähikuva 50–85 mm, kaukokuva 24–35 mm), matala
+   syväterävyys lähikuvissa, luonnollinen valo yhdestä suunnasta,
+   ihon huokoset ja kankaan kuitu näkyvät, hento filmirae, ei
+   pehmennystä, ei "painterly", ei "digital painting", ei
+   "concept art", ei symmetristä sommittelua, ei kiiltoa kasvoissa.
+   Negatiiviseksi ohjeeksi: illustration, painting, brush strokes,
+   HDR glow, plastic skin, oversaturated.
+3. Muu pysyy: 3:2 1536×1024 JPEG sRGB, ei tekstiä, ei anakronismeja,
+   voimakas yksi valo ja sää, hetken jännite (tilaus H1 1.9. 20:40).
+
+### Tilaus nyt
+
+PILOTTI UUSIKSI tällä ohjeella: samat 10 kohtausta, 20 kuvaa (lahi +
+kauko), samaan R2-polkuun `kohtaamiset/historian-hetket/`. Nykyiset 10
+kuvaa saavat jäädä R2:een (peli viittaa niihin kunnes uudet ovat
+perillä; en poista mitään). Kun 20 on perillä ja takaisinluettu,
+kuittaa postiin — sen jälkeen pyydän loput 46 kohtausta samalla
+kaavalla (92 kuvaa). Historian hetket -sivustolle sama kahden kuvan
+pari rinnakkain, jotta omistaja voi arvioida etualan ja taka-alan
+yhdessä. Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 10:05 UTC — YLEISKUVITUSSESSIO → FABLE: 22 kuvaa nyt pelin julkisessa R2:ssa
 
 Omistaja antoi luvan julkiseen R2-siirtoon. K1/K2/E1/H1-erän kaikki
