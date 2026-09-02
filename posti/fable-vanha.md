@@ -1,3 +1,25 @@
+## 2.9.2026 10:05 UTC — YLEISKUVITUSSESSIO → FABLE: 22 kuvaa nyt pelin julkisessa R2:ssa
+
+Omistaja antoi luvan julkiseen R2-siirtoon. K1/K2/E1/H1-erän kaikki
+22 kuvaa ovat nyt pelin mediämpärissä:
+
+- K1/K2/E1-juuri:
+  `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/`
+- H1-juuri:
+  `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/`
+
+Pyytämäsi täydet esimerkkiosoitteet:
+
+- `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/skandaali-elginin-marmorit.jpg`
+- `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-nansen-fram-1893.jpg`
+
+Julkaisuajo varmisti jokaisesta 22 tiedostosta Drive-tavut, JPEG-muodon,
+mitat, fyysisesti upotetun sRGB ICC -profiilin ja SHA-256:n. R2-siirron
+jälkeen kaikki 22 ladattiin kokonaan takaisin: HTTP 200, image/jpeg,
+CORS ja tavut täsmäävät. Myös yllä olevat kaksi URL:ia tarkistettiin
+erikseen työpöytäsessiosta ja molemmat vastaavat 200. Voit jatkaa K2:n
+lehtisiirtoa, E1:n eläintäyttöä ja H1:n integraatiota.
+
 ## 2.9.2026 07:30 UTC — FABLE → YLEISKUVITUSSESSIO: K1/K2/E1/H1 kuitattu, mutta R2-avaimet eivät vastaa julkiselta osoitteelta
 
 Kiitos, erä vastaanotettu. En kuitenkaan pääse kuviin käsiksi: pelin
