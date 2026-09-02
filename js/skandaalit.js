@@ -21,8 +21,15 @@
  *   1. AVAIN ON MAA, EI KAUPUNKI. Syvennystarinat kuuluvat fokus-
  *      kaupungeilleen; skandaalit kuuluvat maalleen, joten lähde lukee
  *      SKANDAALIT[iso]-listan suoraan eikä kierrä kaupunkien kautta.
- *   2. EI KUVIA tässä erässä (Fablen katselmointi) — kortti on
- *      ylärivi, otsikko, paikka–vuosi-rivi, teksti ja minivisa.
+ *   2. KUVA ON VALINNAINEN. Erä 30.8.2026 tehtiin kuvattomana, ja
+ *      kuvaton kortti piirtyy yhä ennallaan: ylärivi, otsikko,
+ *      paikka–vuosi-rivi, teksti ja minivisa. Kun skandaalilla on
+ *      `kuva`-kenttä (`{ osoite | tiedosto, selite, lahde }`), se
+ *      latoutuu otsikon alle täsmälleen samalla apurilla ja samalla
+ *      kentällä kuin syvennystarinassa (js/syvennys.js
+ *      piirraSyvennysSisus → js/fokusnosto.js piirraNostonKuva) —
+ *      sama kehys, sama suurennos ja sama lähderivi, joten
+ *      havainnekuvan selite tulee mukana ilman omaa koodia.
  *   3. MINITEHTÄVÄAVAIN on skandaali:<id> (kirjanpito game.js
  *      actionMinitehtava, koko avain <lauta>:<maa>:skandaali:<id>),
  *      joten sama visa ei voi maksaa kahdesti. Palkkio on sama
@@ -41,8 +48,9 @@ import {
 } from './ui-apurit.js';
 import { natiiviVastaus } from './natiivi.js';
 import { SKANDAALIT } from './packs/skandaalit.js';
-import { rekisteroiLisakohteet } from './fokuskohteet.js';
+import { rekisteroiLisakohteet, suljeKohdeSuurennos } from './fokuskohteet.js';
 import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
+import { piirraNostonKuva } from './fokusnosto.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { sfx } from './sound.js';
@@ -185,6 +193,8 @@ export function avaaSkandaali(ui, iso, skandaali) {
   });
   const nappain = (tapahtuma) => {
     if (tapahtuma.key !== 'Escape') return;
+    // Kuvan suurennos sulkeutuu ensin — sama väistö kuin syvennyksellä.
+    if (ui?.skandaaliZoom) return;
     tapahtuma.stopPropagation();
     suljeSkandaali(ui);
   };
@@ -210,6 +220,11 @@ export function avaaSkandaali(ui, iso, skandaali) {
 function piirraSkandaalinSisus(ui, sailio, iso, skandaali) {
   skandaaliLataaTyyli();
   sailio.appendChild(html('h3', 'fokusnosto-kortti-otsikko', skandaali.otsikko));
+  // Kuva on valinnainen (ks. moduulin otsake): sama kutsu ja sama
+  // leveys kuin syvennystarinalla, oma zoomiavain kuten sielläkin.
+  if (skandaali.kuva) {
+    piirraNostonKuva(ui, sailio, skandaali.kuva, 'fokusnosto-kuva', 800, 'skandaaliZoom');
+  }
   const meta = [skandaali.paikka, skandaali.vuosi].filter(Boolean).join(' · ');
   if (meta) sailio.appendChild(html('p', 'fokusnosto-lahde', meta));
   const teksti = html('div', 'fokusnosto-teksti');
@@ -281,6 +296,9 @@ export function suljeSkandaali(ui) {
   const auki = ui?.skandaaliKortti;
   if (ui) ui.skandaaliKortti = null;
   auki?.purku?.();
+  // Kuvan suurennos on kortin oma jatke — sama siivous kuin
+  // syvennystarinalla (js/syvennys.js suljeSyvennys).
+  suljeKohdeSuurennos(ui, 'skandaaliZoom');
   if (typeof document === 'undefined') return;
   for (const vanha of document.querySelectorAll('.skandaali-kerros')) vanha.remove();
 }
