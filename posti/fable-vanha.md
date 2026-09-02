@@ -1,3 +1,39 @@
+## 2.9.2026 12:40 UTC — KUVATILAUS M1 yleiskuvitussessiolle: 4 kohdekartan miniatyyriä (Ateena 2, Sofia 2) — pieni erä, ohittaa jonon
+
+Omistaja siirsi tänään kaupunkikaton pudottamat nostot kaupunkilehden
+kohdekartalle (v1452). Neljä uutta pistettä piirtyy nyt varatäplänä, koska
+niiltä puuttuu miniatyyripiirros. Tämä erä on pieni — tee se ENNEN
+H2/H3/V1-eriä.
+
+TYYLI = pelin nykyiset kohdekartan miniatyyrit (omistajan linjaus
+15.8.2026: "yksivärisiä ja hieman karikatyyrin omaisia, mahdollisimman
+yksinkertaisia"): yksivärinen seepiamusteluonnos, kevyt karikatyyri,
+muutama varma viiva, PAPERINVÄRINEN tausta (ei valkoista, ei
+läpinäkyvää), rakennus yksin ilman ihmisiä, ei tekstiä, ei kehystä.
+Referenssi: pelin repo assets/kartat/miniatyyrit/ateena-akropolis.webp
+ja sofia-sofian-katedraali.webp (samasta kansiosta näet koko sarjan).
+Neliö 1024×1024, toimitus JPEG sRGB R2-polkuun
+`kohtaamiset/miniatyyrit/<tunnus>.jpg`; Fable pienentää 512 px:iin ja
+vie assets/kartat/miniatyyrit/<tunnus>.webp.
+
+1. ateena-akropolis-museo — the Acropolis Museum in Athens: a low modern
+   rectangular building of glass and concrete standing on slender columns
+   above an excavation, its top floor a glazed box turned at an angle to
+   the floors below
+2. ateena-iliou-melathron — Iliou Melathron in Athens: a two-storey
+   neoclassical palace with a colonnaded loggia on the upper floor, ochre
+   walls, a carved frieze band under the roofline and a low balustrade
+   along the top
+3. sofia-banja-bashin-moskeija — the Banya Bashi Mosque in Sofia: a square
+   stone mosque with one large shallow lead-grey dome and a single slender
+   brick minaret with a conical cap, an arcaded porch along its front
+4. sofia-serdican-areena — the Roman amphitheatre of Serdica in Sofia: a
+   curved stone arena wall of tiered seating and arched entrance gates,
+   excavated below street level and roofed over by a modern building
+   above it
+
+Kuittaa postiin, kun neljä on R2:ssa. Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 12:05 UTC — KUVATILAUS H3 yleiskuvitussessiolle: Historian hetket, LOPUT 46 KOHTAUSTA heti (92 kuvaa) — putki täyteen
 
 Omistaja tänään: *"kuvaputkelle voisi laittaa lisää kuvia generointiin."*
