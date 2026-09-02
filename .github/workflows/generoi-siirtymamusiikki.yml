@@ -1,0 +1,143 @@
+# Generoi siirtymämusiikin kolme looppia ja vie ne ämpäriin.
+#
+# Omistajan tilaus 2.9.2026: siirtymän taustalle oma pieni musiikki,
+# hieman eri kävellen, laivalla ja lentäen. Pelin puoli on valmis
+# (js/siirtymamusiikki.js) ja odottaa kolmea tiedostoa; vaatimukset
+# ovat docs/moduulit/aanet.md:ssä ja työn tekee
+# tools/generoi-siirtymamusiikki.mjs.
+#
+#   jalan  aanet/siirtyma-jalan.mp3  kävelyn rytmi, kevyt ja etenevä
+#   laiva  aanet/siirtyma-laiva.mp3  aallokon huojunta, leveämpi
+#   lento  aanet/siirtyma-lento.mp3  ilmava, soi kabiiniäänen alla
+#
+# KÄSIAJETTAVA (workflow_dispatch), sama syy kuin generoi-musiikki.yml:
+# musiikki maksaa rahaa. Automaattista triggeriä ei ole eikä tule.
+#
+# TÄMÄ AJO EI COMMITTOI MITÄÄN. Ero paletin ajoon (generoi-musiikki.yml,
+# joka jättää mp3:t haaralle PR:ää varten) on tarkoituksellinen:
+# siirtymäraidat ovat mediaa ja media kuuluu ämpäriin, ei repoon
+# (Raamattu: "kaikki aina ämpäriin"). Työkalu kirjoittaa
+# media/-kansioon, joka on .gitignoressa — se tarkistetaan koneellisesti
+# ennen ensimmäistäkään maksullista kutsua — ja vie tiedoston sieltä
+# ämpärin aanet/-kansioon samalla aws s3 cp -komennolla kuin
+# vie-aanet.yml. Peli hakee juuri sen polun ensimmäisenä, joten raita
+# on pelissä heti ajon jälkeen ilman julkaisua.
+#
+# KUUNTELE RAIDAT AJON JÄLKEEN. Ajo tarkistaa koneellisesti keston
+# (10–20 s), tason (−33 LUFS) ja sen, ettei päissä ole hiljaisuutta,
+# mutta sauman kuulumattomuutta ei voi mitata — se kuullaan.
+# Kelvottoman raidan ajo jättää viemättä ja kaatuu.
+#
+# FFMPEG asennetaan apt:llä: ubuntu-latest-ajurissa sitä ei ole, ja
+# loopin leikkaus, tason mittaus ja hiljaisuusvahti ovat kaikki sen
+# varassa.
+#
+# Salaisuudet ovat tämän repon Actions-asetuksissa eivätkä koskaan
+# täällä: ELEVEN_API_KEY (sama kuin generoi-musiikki.yml) sekä neljä
+# R2-salaisuutta (samat kuin vie-aanet.yml ja peilaa.yml):
+#   R2_ACCOUNT_ID  R2_ACCESS_KEY_ID  R2_SECRET_ACCESS_KEY  R2_BUCKET
+# Avain ei tulostu lokiin: työkalu ei tulosta sitä eikä tämä ajo echoa
+# sitä — GitHub peittää secretit joka tapauksessa, mutta siihen ei nojata.
+
+name: Generoi siirtymämusiikki
+
+on:
+  workflow_dispatch:
+    inputs:
+      laji:
+        description: >-
+          Mikä raita generoidaan. "kaikki" tekee kolme raitaa eli
+          kolme maksullista kutsua.
+        required: true
+        type: choice
+        default: 'kaikki'
+        options: ['kaikki', 'jalan', 'laiva', 'lento']
+
+permissions:
+  contents: read
+
+# Yksi ajo kerrallaan: kaksi rinnakkaista kirjoittaisi ämpärin samoihin
+# avaimiin. Oma ryhmänsä, ei vie-aanet.yml:n — se koskee kansioon
+# audio/, tämä kansioon aanet/.
+concurrency:
+  group: generoi-siirtymamusiikki
+  cancel-in-progress: false
+
+jobs:
+  generoi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # Vienti on työkalun sisällä, mutta salaisuudet tulevat tästä —
+      # samat nimet ja sama endpoint-tyyli kuin vie-aanet.yml:ssä.
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      # R2 ei hyväksy AWS:n uudempia tarkistussummaotsakkeita, jotka
+      # aws-cli 2.23:sta alkaen lähtevät oletuksena mukaan.
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Puuttuva salaisuus tulisi muuten vastaan vasta ElevenLabsin
+      # 401:nä tai aws-clin "Invalid endpoint" -virheenä — ja pahimmassa
+      # järjestyksessä vasta sen jälkeen, kun kutsut on jo maksettu.
+      # Arvoja ei tulosteta, vain onko ne asetettu.
+      - name: Tarkista että salaisuudet ovat tallessa
+        env:
+          AVAIN: ${{ secrets.ELEVEN_API_KEY }}
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$AVAIN" ]                        || puuttuu="$puuttuu ELEVEN_API_KEY"
+          [ -n "${R2_ACCOUNT_ID:-}" ]            || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ]        || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ]    || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "${R2_BUCKET:-}" ]                || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            echo "Lisää ne: Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          echo "Kaikki viisi salaisuutta löytyvät."
+
+      - name: Asenna ffmpeg
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          ffmpeg -version | head -1
+
+      # Kuiva ajo ensin: leikkauslaskenta, ffmpeg-ketju ja tason mittaus
+      # tulevat kokeilluiksi syntetisoidulla äänellä ennen kuin yhtäkään
+      # maksullista kutsua on tehty. Tulostaa myös promptit sellaisina
+      # kuin ne APIin lähtevät.
+      - name: Kuiva ajo (ffmpeg-ketju ja promptit)
+        run: node tools/generoi-siirtymamusiikki.mjs --laji ${{ inputs.laji }} --kuiva
+
+      - name: Generoi, leikkaa looppi ja vie ämpäriin
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+        run: node tools/generoi-siirtymamusiikki.mjs --laji ${{ inputs.laji }}
+
+      # Vartija sille, mitä tämä ajo lupaa: repoon ei jää mitään.
+      # Työkalu kirjoittaa media/-kansioon, joka on .gitignoressa —
+      # jos se joskus muuttuisi, se paljastuisi tässä eikä vasta
+      # seuraavan session hämmästyneessä git statusissa.
+      - name: Varmista ettei repoon jäänyt mitään
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::Ajo muutti työhakemistoa — media kuuluu ämpäriin, ei repoon."
+            git status --porcelain
+            exit 1
+          fi
+          echo "Työhakemisto on siisti."
