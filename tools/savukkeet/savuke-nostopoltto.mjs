@@ -73,11 +73,22 @@ const vaadi = (nimi, ehto, lisa = '') => {
 
 const poltto = keraaNostot(MAAILMANKARTTA);
 console.log(nostojenYhteenveto(poltto.tilasto));
+/*
+ * KAKSI PERHETTÄ, KAKSI VERTAILUA (2.9.2026). Nostot ovat kohdekerroksen
+ * ladontaa (ui.fokuskohdeRyhmat) ja eläintäyt oma kerroksensa
+ * (ui.elaintakyRyhmat, js/elaintaky.js) — molemmat poltetaan, mutta
+ * niitä ei voi verrata samaan DOM-listaan. Ilman jakoa maan
+ * merkkijoukko olisi eri kummallakin puolella eikä vartio 1 kertoisi
+ * enää mitään ladonnasta.
+ */
 const nodeMaittain = new Map();
-for (const merkki of poltto.merkit) {
+for (const merkki of poltto.merkit.filter((m) => m.perhe !== 'elaintaky')) {
   if (!nodeMaittain.has(merkki.iso)) nodeMaittain.set(merkki.iso, new Map());
   nodeMaittain.get(merkki.iso).set(merkki.tunnus, merkki);
 }
+const nodeElaimet = new Map(
+  poltto.merkit.filter((m) => m.perhe === 'elaintaky').map((m) => [m.iso, m]),
+);
 
 /* ------------------------------------------------------ selainpuoli */
 
@@ -154,7 +165,24 @@ async function pelinMerkit(kaupunki, ruutu) {
         laji: r.laji ?? null,
       });
     }
-    return { rivit, s: ui.fokusMerkkiSkaalaPohja() };
+    /*
+     * ELÄINTÄYT OMASTA KERROKSESTAAN. Kiertävä lauta piirtää saman
+     * eläimen kahteen kohtaan, joten sama maatunnus voi esiintyä
+     * kahdesti — vertailu tehdään laudan ympäryksen modulossa.
+     */
+    const elaimet = [];
+    for (const r of ui.elaintakyRyhmat ?? []) {
+      const merkki = r.g?.querySelector?.('.elaintaky-merkki');
+      const kuva = r.g?.querySelector?.('.nostosym-rasteri');
+      const m = /translate\(([-\d.]+) ([-\d.]+)\)/.exec(r.g?.getAttribute('transform') ?? '');
+      elaimet.push({
+        iso: merkki?.dataset?.elaintaky ?? null,
+        x: m ? Number(m[1]) : null,
+        y: m ? Number(m[2]) : null,
+        nimio: kuva?.dataset?.nimio ?? null,
+      });
+    }
+    return { rivit, elaimet, s: ui.fokusMerkkiSkaalaPohja() };
   });
   await sivu.close();
   await ctx.close();
@@ -240,6 +268,27 @@ for (const koe of KOKEET) {
      */
     vaadi(`${koe.nimi} ${ruudunNimi}: sama nimiöteksti`,
       tekstiEroja === 0, `${tekstiEroja} merkillä eri nimiöteksti`);
+    /*
+     * ELÄINTÄKY ON POLTETTAVA MERKKI SIINÄ MISSÄ NOSTO (omistaja
+     * 2.9.2026: *"Esim. Kreikassa Merikilpikonna on vielä
+     * polttamatta"*), ja sen paikka ja nimiö on saatava samasta
+     * lähteestä kuin elävän. Vertailu tehdään laudan ympäryksen
+     * modulossa, koska kiertävä lauta piirtää saman eläimen kahdesti.
+     */
+    const nodeElain = nodeElaimet.get(koe.iso);
+    const elavaElain = (peli.elaimet ?? []).find((e) => e.iso === koe.iso);
+    vaadi(`${koe.nimi} ${ruudunNimi}: eläintäky sekä laatassa että kartalla`,
+      Boolean(nodeElain) === Boolean(elavaElain),
+      `Node ${nodeElain ? 'kyllä' : 'ei'} · peli ${elavaElain ? 'kyllä' : 'ei'}`);
+    if (nodeElain && elavaElain) {
+      const dx = Math.abs(((elavaElain.x - nodeElain.x) % 12000 + 12000) % 12000);
+      const elainEro = Math.hypot(Math.min(dx, 12000 - dx), elavaElain.y - nodeElain.y);
+      vaadi(`${koe.nimi} ${ruudunNimi}: eläintäky samassa pisteessä`,
+        elainEro < 0.01, `ero ${elainEro.toFixed(4)}`);
+      vaadi(`${koe.nimi} ${ruudunNimi}: eläintäyn nimiö on sama`,
+        elavaElain.nimio === nodeElain.nimio,
+        `peli "${elavaElain.nimio}" · Node "${nodeElain.nimio}"`);
+    }
   }
   vaadi(`${koe.nimi}: iPad ja iPhone antavat saman skaalan`,
     mitat.iPad.s === mitat.iPhone.s,

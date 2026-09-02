@@ -53,24 +53,49 @@
  * KARTTASELITE_/karttaselite-etuliitteellä.
  */
 import { html } from './ui-apurit.js';
-import { piirraNostosymboli } from './fokusnosto-symbolit.js';
+import { el } from './mapart.js';
+import { piirraNostosymMini } from './fokusnosto-symbolit.js';
 import {
   KARTTAVALO_AIHEET, karttavaloAseta, karttavaloPaalla, karttavaloVari,
   karttavalotKaikki, karttavalotLaskurit, karttavalotSovita,
 } from './karttavalot.js';
 
 /*
- * Seliterivin symboli piirretään kirjaston omalla piirtäjällä, joka
- * latoo merkin origon ympärille noin 21 px:n kokoisena (NOSTOSYM_R
- * = 10.4). Ruutu on siksi −12…12 molempiin suuntiin: merkki mahtuu
- * kokonaan ilman leikkausta myös silloin, kun kaiverruskuva täyttää
- * koko alansa.
+ * SELITE NÄYTTÄÄ KARTAN OMAN MERKIN (2.9.2026).
+ *
+ * Rivillä oli 26.8.2026 asti kirjaston ISO KAIVERRUS
+ * (piirraNostosymboli, ~21 px) — sama kuva, joka on kohdekortin
+ * ylärivillä. Se oli oikein niin kauan kuin kartallakin oli kaiverrus,
+ * mutta kartan merkki keveni 27.8.2026 viivamerkiksi ja 2.9.2026
+ * yhdentoista kategorian osalta pelkäksi värilliseksi pisteeksi. Rivi
+ * ja kartta eivät siis enää olleet sama kuva — pahimmillaan selite
+ * lupasi pöllöä, kun kartalla on tassunjälki.
+ *
+ * SELITE ON KARTAN AVAIN, joten se latoo nyt saman minimerkin kuin
+ * kartta (piirraNostosymMini): pisteytetyt rivit näyttävät pisteen
+ * omassa värissään ja viisi säilynyttä merkkiä oman muotonsa. Kortin
+ * ylärivi pitää kaiverruksensa — KORTTI EI OLE KARTTA.
+ *
+ * Minimerkki latoo origon ympärille noin 13 yksikön levyisen kuvan
+ * (NOSTOSYM_MINI_R = 6,5), joten ruutu on −8…8: merkki mahtuu
+ * kokonaan ja sen ympärille jää saman verran ilmaa kuin kartalla.
  */
-const KARTTASELITE_RUUTU = '-12 -12 24 24';
+const KARTTASELITE_RUUTU = '-8 -8 16 16';
 
 /**
- * Yhden seliterivin symbolimerkki: ryhmän kärkisymboli kirjaston omalla
- * piirtäjällä.
+ * LUONNOLLA ON KARTALLA KAKSI MUOTOA (js/fokusnosto-symbolit.js
+ * NOSTOSYM_MINI_LAJIT): kolmio kalliolle ja aalto vedelle. Rivin kuva
+ * näyttää molemmat päällekkäin — kuten aikakauden atlaksen oma
+ * merkkiselite — jottei kumpikaan jää selitteen ulkopuolelle.
+ */
+const KARTTASELITE_LUONTO = [
+  { laji: 'vuori', y: -3.4 },
+  { laji: 'meri', y: 3.6 },
+];
+
+/**
+ * Yhden seliterivin symbolimerkki: ryhmän kärkisymboli kartan omalla
+ * minimerkillä.
  *
  * Kaikilla yhdeksällä aiheella on symboli, koska aihe ON symbolien
  * sukukunta (js/fokusnosto-symbolit.js NOSTOSYM_PAAKATEGORIAT).
@@ -82,7 +107,14 @@ function karttaseliteSymboli(rivi) {
   svg.setAttribute('viewBox', KARTTASELITE_RUUTU);
   svg.setAttribute('class', 'karttaselite-symboli');
   svg.setAttribute('aria-hidden', 'true');
-  piirraNostosymboli(svg, rivi.symboli);
+  if (rivi.symboli === 'luonto') {
+    for (const { laji, y } of KARTTASELITE_LUONTO) {
+      const g = el('g', { transform: `translate(0 ${y}) scale(0.62)` }, svg);
+      piirraNostosymMini(g, 'luonto', laji);
+    }
+    return svg;
+  }
+  piirraNostosymMini(el('g', {}, svg), rivi.symboli, null);
   return svg;
 }
 

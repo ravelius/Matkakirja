@@ -87,7 +87,8 @@ import {
 import { nostosymKortinYlarivi, piirraNostosymKartalle } from './fokusnosto-symbolit.js';
 import { piirraKarttavalo } from './karttavalot.js';
 import { projisoiLaudalle } from './fokusmitat.js';
-import { nostoladontaKattoPorras } from './nostoladonta.js';
+import { nostoOnPoltettu } from './laattapyramidi.js';
+import { nostoladontaKattoPorras, nostoladontaTiiviste } from './nostoladonta.js';
 import { ELAINTAKYT } from './packs/elaintakyt.js';
 import { sfx } from './sound.js';
 
@@ -200,7 +201,25 @@ function elaintakyAsteenLeveys(lauta) {
  * Euroopan laudan itäreunan takana (js/packs/elaintakyt.js).
  */
 export function elaintakyLaudalla(ui) {
-  const pack = ui?.game?.pack;
+  return elaintakyKarttarivit(ui?.game?.pack);
+}
+
+/**
+ * SAMA LISTA LAUDAN PAKETISTA, ILMAN PELIÄ JA ILMAN DOMia.
+ *
+ * Viety ulos samasta syystä kuin skandaaleilla ja historian hetkillä
+ * (js/skandaalit.js skandaaliKarttarivit): LAATTAGENERAATTORI POLTTAA
+ * NÄMÄ MERKIT (tools/fokuskartta/nostot.mjs), ja niiden tunnus, nimiö
+ * ja paikka on saatava samasta koodista kuin pelin oma merkki —
+ * muuten poltettu kilpikonna olisi eri paikassa tai eri nimellä kuin
+ * elävä.
+ *
+ * Merkin TUNNUS on `elaintaky-<ISO>`: sama muoto kuin syvennyksillä ja
+ * skandaaleilla (`syvennys-`, `skandaali-`), ja se on luettelon avain,
+ * jolla peli tunnistaa poltetun merkkinsä (js/laattapyramidi.js
+ * nostoOnPoltettu).
+ */
+export function elaintakyKarttarivit(pack) {
   const map = pack?.map;
   if (!map?.countryShapes) return [];
   const tulos = [];
@@ -211,7 +230,9 @@ export function elaintakyLaudalla(ui) {
     if (piste.x < 0 || piste.y < 0) continue;
     if (map.width > 0 && piste.x > map.width) continue;
     if (map.height > 0 && piste.y > map.height) continue;
-    tulos.push({ iso, taky, x: piste.x, y: piste.y });
+    tulos.push({
+      iso, taky, tunnus: `elaintaky-${iso}`, nimio: elaintakyNimio(taky), x: piste.x, y: piste.y,
+    });
   }
   return tulos;
 }
@@ -256,6 +277,50 @@ function elaintakyNimio(taky) {
   return `${nimi.charAt(0).toUpperCase()}${nimi.slice(1)}`;
 }
 
+/* ============ POLTETTU ELÄINTÄKY EI PIIRRY UUDESTAAN ==============
+ *
+ * OMISTAJAN HAVAINTO 2.9.2026, sanatarkasti: *"samalla kun symbolit
+ * uudistetaan, niin voisi tarkistaa, että kaikki kartan merkinnät
+ * tulevat poltetuiksi. Esim. Kreikassa Merikilpikonna on vielä
+ * polttamatta."*
+ *
+ * Eläintäky on juuri sitä, mitä Raamattu (KARTTANOSTOT POLTETAAN
+ * LAATTOIHIN) käskee polttaa: sen paikka, symboli ja nimiö eivät
+ * muutu pelin aikana, ja kaksi pelaajaa näkee samassa koordinaatissa
+ * saman asian. Se jäi pois vain siksi, että se on oma kerroksensa
+ * eikä kulje kohdekerroksen ladonnan läpi — nyt generaattori polttaa
+ * senkin (tools/fokuskartta/nostot.mjs keraaElaintakyt).
+ *
+ * MITÄ JÄÄ ELÄVÄKSI: näkymätön osuma-alue (poltettu muste ei ota
+ * kosketusta), aihevalo ja kortin avaus. Merkki on siis yhä
+ * napautettava täsmälleen kuten ennen.
+ *
+ * LUNASTUKSEN HAALISTUS EI KOSKE POLTETTUA MERKKIÄ, ja se on tämän
+ * muutoksen tietoinen hinta: `opacity` elää elävässä ryhmässä, ja
+ * poltettua laattaa ei voi haalistaa jälkikäteen. Sama koskee kaikkia
+ * muitakin poltettuja perheitä — luettua täkynostoa tai avattua
+ * syvennystä ei merkitä kartalle mitenkään — joten eläintäky vain
+ * siirtyy samaan sääntöön. Löydön tilan kertoo kortti.
+ */
+
+/** Merkin sisältötiiviste — sama laskenta kuin laattageneraattorissa. */
+function elaintakyTiiviste(tieto) {
+  return nostoladontaTiiviste({
+    tunnus: tieto.tunnus,
+    symboli: 'elain',
+    laji: 'elain',
+    nimio: tieto.nimio,
+    x: tieto.x,
+    y: tieto.y,
+    osat: [],
+  });
+}
+
+/** Onko tämä eläintäky poltettu laattaan? */
+function elaintakyOnPoltettu(tieto) {
+  return nostoOnPoltettu(tieto.tunnus, elaintakyTiiviste(tieto));
+}
+
 /** Yksi merkki: näkymätön osuma-alue, viivamerkki ja nimiö. */
 function elaintakyPiirraMerkki(ui, ryhma, tieto) {
   const g = el('g', { class: 'elaintaky-merkki' }, ryhma);
@@ -295,7 +360,11 @@ function elaintakyPiirraMerkki(ui, ryhma, tieto) {
     transform: `scale(${ELAINTAKY_SYMBOLI_SKAALA.toFixed(4)})`,
   }, g);
   const glyyfi = el('g', { class: 'elaintaky-glyyfi' }, symboli);
-  piirraNostosymKartalle(glyyfi, 'elain', elaintakyNimio(tieto.taky), 'elain');
+  // Poltettu merkki on jo laatassa: elävä piirto jäisi sen päälle
+  // kaksinkertaiseksi musteeksi (ks. lohko yllä).
+  if (!elaintakyOnPoltettu(tieto)) {
+    piirraNostosymKartalle(glyyfi, 'elain', tieto.nimio, 'elain');
+  }
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();
@@ -355,8 +424,16 @@ export function paivitaElaintakyt(ui) {
   };
   const takyt = elaintakyLaudalla(ui);
   const lunastetut = takyt.filter((t) => ui.game?.elaintakyLunastettu?.(t.iso)).length;
+  /*
+   * LAATTALUETTELO SAAPUU VERKOSTA KESKEN ISTUNNON, joten poltettujen
+   * määrä kuuluu avaimeen: ilman sitä kerros jäisi siihen tilaan, joka
+   * sillä oli ennen luettelon saapumista — merkit kahteen kertaan tai
+   * ei kertaakaan (js/laattapyramidi.js nostoOnPoltettu, oletus "ei
+   * mitään poltettu").
+   */
+  const poltetut = takyt.filter(elaintakyOnPoltettu).length;
   const avain = takyt.length
-    ? `${ui.game.pack.id}:${takyt.map((t) => t.iso).join('|')}:${lunastetut}`
+    ? `${ui.game.pack.id}:${takyt.map((t) => t.iso).join('|')}:${lunastetut}:${poltetut}`
     : 'tyhja';
   if (ui.elaintakyAvain !== avain) {
     ui.elaintakyAvain = avain;

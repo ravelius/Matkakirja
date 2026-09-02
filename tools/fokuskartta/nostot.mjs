@@ -65,9 +65,13 @@ import {
   paivitaKohdeNimiot,
 } from '../../js/fokuskohteet.js';
 import { nippuViivanJana, niputaFokusmerkit } from '../../js/fokusniput.js';
-import { nostoladontaSkaala, nostoladontaTiiviste } from '../../js/nostoladonta.js';
+import {
+  NOSTOLADONTA_S, nostoladontaSkaala, nostoladontaTiiviste,
+} from '../../js/nostoladonta.js';
 import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
 import { nostoKarttarivit, nostoKaupunginPooli } from '../../js/fokusnosto.js';
+import { elaintakyKarttarivit } from '../../js/elaintaky.js';
+import { hetkiKarttarivit } from '../../js/historian-hetket.js';
 import { skandaaliKarttarivit } from '../../js/skandaalit.js';
 import { syvennysKarttarivit } from '../../js/syvennys.js';
 
@@ -296,11 +300,86 @@ function nostoladontaMerkit({
  * (tools/fokuskartta/maailmapiirto.js) ei laske niistä mitään
  * uudelleen — se vain skaalaa ne laatan kuvapikseleiksi.
  */
+/**
+ * ELÄINTÄYT POLTETTAVIKSI MERKEIKSI (2.9.2026).
+ *
+ * OMISTAJAN HAVAINTO, sanatarkasti: *"samalla kun symbolit
+ * uudistetaan, niin voisi tarkistaa, että kaikki kartan merkinnät
+ * tulevat poltetuiksi. Esim. Kreikassa Merikilpikonna on vielä
+ * polttamatta."*
+ *
+ * ── MIKSI NÄMÄ EIVÄT OLE `lisat`-LISTALLA ─────────────────────────
+ *
+ * Eläintäky ei ole kohde eikä se kulje kohdekerroksen läpi: sillä on
+ * pelissä OMA KERROS (js/elaintaky.js), se on kartalla koko laudan
+ * mitalta eikä vain sen maan lehdellä, jossa pelaaja on, eikä se
+ * osallistu kasaukseen, erotteluun tai nimiöväistöön. Jos se
+ * työnnettäisiin `lisat`-listaan, se muuttaisi kaikkien muiden
+ * merkkien ladontaa — ja poltettu ladonta eroaisi elävästä juuri
+ * siinä, mitä Raamattu kieltää eroamasta.
+ *
+ * Merkki latautuu siis omillaan, omaan pisteeseensä, ja piirtyy
+ * samalla funktiolla kuin kaikki muut (piirraNostosymPolttoon).
+ *
+ * ── MITTA ON SAMA RIVI KUIN ELÄVÄSSÄ KERROKSESSA ──────────────────
+ *
+ * Elävä merkki lukee `ELAINTAKY_SYMBOLI_SKAALA * fokusMerkkiSkaala-
+ * Pohja()`, ja kumpikin luku on tässä: kerroin on sama kuin
+ * kohdemerkillä (KOHDE_SYMBOLI_SKAALA) ja pohja on lehden vakio
+ * NOSTOLADONTA_S. Ruutukaton lisää piirtäjä, kuten muillekin.
+ *
+ * ── NÄKYVYYSRAJA EI OSU NOSTOTASOON ───────────────────────────────
+ *
+ * Elävä kerros piilottaa merkit, kun näkymä on yli 90° leveä
+ * (js/elaintaky.js ELAINTAKY_NAKYY_ASTETTA), eikä poltettu laatta voi
+ * piilottaa mitään. Ristiriitaa ei silti synny, koska nostolaattoja on
+ * VAIN tasoilla z5–z7 (tools/generoi-laattapyramidi.mjs NOSTO_ALIN):
+ * z5 valitaan vasta kun näkymän mittakaava on noin 0,9 CSS-pikseliä
+ * lautayksikköä kohti, ja silloin tavallinen ruutu näyttää 30–50
+ * pituusastetta. Yleiskuvassa, jossa raja purisi, nostotasoa ei ole
+ * ladattuna lainkaan.
+ */
+function keraaElaintakyt(pack) {
+  const merkit = [];
+  for (const taky of elaintakyKarttarivit(pack)) {
+    const merkki = {
+      perhe: 'elaintaky',
+      tunnus: taky.tunnus,
+      iso: taky.iso,
+      x: taky.x,
+      y: taky.y,
+      // Merkkiä ei siirretä mistään: ankkuri on sen oma piste.
+      ankkuriX: taky.x,
+      ankkuriY: taky.y,
+      symboli: 'elain',
+      laji: 'elain',
+      nimio: taky.nimio,
+      nimioNakyy: Boolean(taky.nimio),
+      nimioPuoli: 'oikea',
+      nimioRajaton: false,
+      osat: [],
+      porras: KOHDE_SYMBOLI_SKAALA * NOSTOLADONTA_S,
+      viiva: null,
+      s: NOSTOLADONTA_S,
+      poltettava: true,
+    };
+    merkki.tiiviste = nostoladontaTiiviste(merkki);
+    merkit.push(merkki);
+  }
+  return merkit;
+}
+
 export function keraaNostot(pack) {
   const merkit = [];
   const luettelo = {};
   const tilasto = {
-    maita: 0, maitaEstetty: 0, merkkeja: 0, poltettu: 0, monimaisia: 0, estot: [],
+    maita: 0,
+    maitaEstetty: 0,
+    merkkeja: 0,
+    poltettu: 0,
+    monimaisia: 0,
+    elaimia: 0,
+    estot: [],
   };
   for (const [iso, pohja] of Object.entries(FOKUS_POHJAT)) {
     if (pohja.lauta !== pack.id) continue;
@@ -310,6 +389,16 @@ export function keraaNostot(pack) {
       ...syvennysKarttarivit(iso, pack.id, pack.map?.cityCountry)
         .map(({ kohde, paikka }) => ({ kohde, paikka })),
       ...skandaaliKarttarivit(iso, pack.id).map(({ kohde, paikka }) => ({ kohde, paikka })),
+      /*
+       * HISTORIAN HETKET (lisätty 2.9.2026, omistaja: *"voisi tarkistaa,
+       * että kaikki kartan merkinnät tulevat poltetuiksi"*). Perhe tuli
+       * karttaan v1453:ssa omana nostolajinaan (js/historian-hetket.js)
+       * eikä päätynyt tähän listaan, joten sen tiimalasit jäivät
+       * eläväksi kerrokseksi — vaikka ne ovat samaa pysyvää sisältöä
+       * kuin syvennykset ja skandaalit, samassa ladonnassa ja samassa
+       * sarakkeessa.
+       */
+      ...hetkiKarttarivit(iso, pack.id).map(({ kohde, paikka }) => ({ kohde, paikka })),
       ...takyt.rivit.map(({ kohde, paikka }) => ({ kohde, paikka })),
     ];
     const { s, merkit: maanMerkit } = nostoladontaMerkit({
@@ -322,9 +411,20 @@ export function keraaNostot(pack) {
       tilasto.estot.push(`${iso}: ${takyt.syy}`);
     }
     for (const merkki of maanMerkit) {
-      merkit.push({ ...merkki, iso, s });
+      merkit.push({ ...merkki, perhe: 'nosto', iso, s });
       tilasto.merkkeja += 1;
     }
+  }
+  /*
+   * ELÄINTÄYT OMANA PERHEENÄÄN (ks. keraaElaintakyt yllä): sama
+   * merkkitietue, sama piirtäjä ja sama luettelo, mutta oma ladontansa
+   * — ne eivät ole kohdekerroksen sarakkeissa eivätkä siksi voi
+   * siirtää yhtäkään muuta merkkiä.
+   */
+  for (const merkki of keraaElaintakyt(pack)) {
+    merkit.push(merkki);
+    tilasto.merkkeja += 1;
+    tilasto.elaimia += 1;
   }
   /*
    * === SAMA TUNNUS KAHDESSA MAASSA EI PALA ========================
@@ -365,5 +465,6 @@ export function nostojenYhteenveto(tilasto) {
   return `  nostot          ${tilasto.merkkeja} merkkiä ${tilasto.maita} maasta, `
     + `poltetaan ${tilasto.poltettu}`
     + (tilasto.maitaEstetty ? ` · ${tilasto.maitaEstetty} maata estetty (täky)` : '')
-    + (tilasto.monimaisia ? ` · ${tilasto.monimaisia} monen maan merkkiä eläväksi` : '');
+    + (tilasto.monimaisia ? ` · ${tilasto.monimaisia} monen maan merkkiä eläväksi` : '')
+    + (tilasto.elaimia ? ` · ${tilasto.elaimia} eläintäkyä` : '');
 }

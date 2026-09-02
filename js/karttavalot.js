@@ -30,6 +30,15 @@
  * jolla merkki on kartalle piirretty — eikä uutta väriä keksitä
  * yhtään. Pallo on siis kirjaimellisesti se, mitä kartalta etsitään.
  *
+ * 2.9.2026 SE ON KIRJAIMELLISEMPI KUIN KOSKAAN (omistaja: *"Kaikista
+ * muista kategorioista voisi tehdä yksinkertaisesti vain pisteen"*):
+ * yhdeksästä rivistä viisi — kaupungit, historia, historian hetket,
+ * kulttuuri ja kauppa — on kartalla juuri sen värinen PISTE, ja
+ * neljällä on yhä oma muotonsa (luonto, eläimet, kadonneet ihmeet,
+ * skandaalit). Seliterivi latoo saman minimerkin kuin kartta
+ * (js/karttaselite.js karttaseliteSymboli), joten rivin kuvaa voi
+ * etsiä kartalta sellaisenaan.
+ *
  * SYMBOLITON MERKKI EI SAA VALOA. Vihreä kohtaamispiste
  * (js/fokuspiste.js) ja symboliton musteympyrä (js/fokuskohteet.js)
  * eivät ole symbolikategorioita, joten ne eivät kuulu mihinkään
