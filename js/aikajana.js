@@ -38,6 +38,30 @@
  *   Siirtymät ovat CSS-siirtymiä (css/aikajana.css): kortti liukuu
  *   paikasta toiseen, paneeli ristihäivyttää, valo syttyy kerran.
  *
+ * ── VIIDES PINTA: MUSIIKKI (omistajan tilaus 2.9.2026 ilta,
+ *    *"Generoi linssille oma musiikki"*) ────────────────────────────
+ *
+ * Ajolla on oma raita, jonka laji tulee kaaresta (`aikajana.musiikki`,
+ * keksinnöillä 'keksinnot'). Soittimen omistaa js/siirtymamusiikki.js
+ * — sama koneisto kuin siirtymän musiikilla, koska vaatimukset ovat
+ * samat: kaksi polkua ämpäriin, puuttuva raita hiljaisena
+ * normaalitilana, väistö pöllön ja kertojan alta. Tämä moduuli vain
+ * kertoo, milloin musiikki on tarpeen:
+ *
+ *   käynnistys      musiikki alkaa heti, kamera-ajon kanssa yhtä
+ *                   aikaa — ennen kuin kello lähtee.
+ *   tauko           EI katkaisua vaan himmennys puoleen: pelaaja
+ *                   pysäytti kellon lukeakseen, ei vaientaakseen.
+ *                   Sama koskee kaaren loppua.
+ *   juttu auki      raita feidataan pois nähtävyyskortin ajaksi
+ *                   (kortti on oma näkymänsä, jolla on oma äänensä)
+ *                   ja palaa, kun kortti suljetaan ja ajo jatkuu.
+ *   sulkeminen      feidaus pois purussa (pura()), myös silloin kun
+ *                   koko lauta vaihtuu alta.
+ *
+ * Kaari ilman `musiikki`-kenttää on hiljainen eikä koske soittimeen
+ * lainkaan — silloin siirtymän oma raita saa soida rauhassa.
+ *
  * ── MITÄ MOOTTORI EI TEE ──────────────────────────────────────────
  *
  *   • Ei jatkuvaa animaatiota SVG-kartalla. Linssisopimuksen mitattu
@@ -63,6 +87,9 @@ import { el, maare } from './mapart.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
 import { sfx } from './sound.js';
+import {
+  aloitaSiirtymamusiikki, himmennaSiirtymamusiikki, lopetaSiirtymamusiikki,
+} from './siirtymamusiikki.js';
 
 /* ==================== TAHTI ==================== */
 
@@ -75,6 +102,13 @@ export const AIKAJANA_VUOSI_MS = 260;
 export const AIKAJANA_VIIVE_MS = 4600;
 /** Merkkipaalu (ei valoa, esim. isoisän matka 1873) pysäyttää lyhyemmin. */
 export const AIKAJANA_PAALU_MS = 3200;
+
+/**
+ * Tauolla musiikki jää soimaan PUOLEEN tasoon (omistajan tilaus:
+ * *"jatkuu pysäytyksen yli hiljennettynä puoleen"*). Vakio on tässä
+ * eikä soittimessa: se on tämän linssin tapa, ei musiikkimoduulin.
+ */
+export const AIKAJANA_TAUKO_HIMMENNYS = 0.5;
 
 /**
  * Puhdas askel: vie kelloa dt millisekuntia ja kertoo, mikä tapahtuma
@@ -177,6 +211,8 @@ class Aikajana {
     this.kortit = [];
     this.valot = [];
     this.skaala = null;
+    // Kaari kertoo raidan; ilman kenttää ajo on hiljainen.
+    this.musiikkiLaji = kaari.musiikki ?? null;
     this.reducedMotion = Boolean(globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
   }
 
@@ -320,10 +356,64 @@ class Aikajana {
     );
   }
 
+  /* ---------- musiikki (js/siirtymamusiikki.js) ---------- */
+
+  /**
+   * Käynnistää kaaren oman raidan ja asettaa sen heti oikeaan tasoon.
+   * Turvallinen kutsua uudelleen: soittimen oma sääntö on, ettei sama
+   * laji ala alusta, joten tämä ei nykäise raitaa (esim. kun juttu
+   * suljetaan ja ajo jatkuu).
+   */
+  aloitaMusiikki(ajossa = this.kaynnissa) {
+    if (!this.musiikkiLaji) return;
+    aloitaSiirtymamusiikki(this.musiikkiLaji);
+    this.saadaMusiikki(ajossa);
+  }
+
+  /**
+   * Taso ajon tilan mukaan: täysi ajossa, puolet tauolla ja lopussa.
+   * `ajossa` annetaan käsin vain käynnistyksessä, jossa kello ei ole
+   * vielä lähtenyt mutta musiikki kuuluu jo täydellä — kamera-ajo on
+   * osa ajoa, ei taukoa.
+   */
+  saadaMusiikki(ajossa = this.kaynnissa) {
+    if (!this.musiikkiLaji) return;
+    himmennaSiirtymamusiikki(ajossa ? 1 : AIKAJANA_TAUKO_HIMMENNYS);
+  }
+
+  /** Feidaus pois: sulkeminen, laudan vaihto tai avattu nähtävyyskortti. */
+  lopetaMusiikki() {
+    if (!this.musiikkiLaji) return;
+    lopetaSiirtymamusiikki();
+  }
+
+  /**
+   * NÄHTÄVYYSKORTTI ON OMA NÄKYMÄNSÄ: kun juttu avataan isommaksi
+   * nostoksi, aikajanan musiikki väistyy kokonaan ja palaa vasta kun
+   * kortti suljetaan. Paluu tehdään dialogin omasta `close`-
+   * tapahtumasta eikä ajastimella, koska kortin voi sulkea monella
+   * tavalla (nappi, tausta, Esc) — ja jos aikajana on sillä välin
+   * purettu, paluu jää tekemättä.
+   */
+  vaimennaJutunAjaksi() {
+    if (!this.musiikkiLaji) return;
+    const dialogi = document.getElementById('nahtavyys-dialog');
+    // Kortti ei auennut: musiikki jatkaa niin kuin mitään ei olisi.
+    if (!dialogi?.open) return;
+    this.lopetaMusiikki();
+    dialogi.addEventListener('close', () => {
+      if (!this.juuri?.isConnected) return;
+      this.aloitaMusiikki();
+    }, { once: true });
+  }
+
   /* ---------- ajo ---------- */
 
   kaynnista() {
     if (!this.rakenna()) return false;
+    // Musiikki lähtee kamera-ajon kanssa, ennen kelloa: linssi alkaa
+    // äänestä eikä vasta ensimmäisestä valosta.
+    this.aloitaMusiikki(true);
     this.vapautaKamera(true);
     this.sovitaKaareen();
     // Kamera-ajo ensin, kello lähtee sen jälkeen — pelaaja näkee mistä
@@ -335,6 +425,7 @@ class Aikajana {
   jatka() {
     if (this.loppu || this.kaynnissa) return;
     this.kaynnissa = true;
+    this.saadaMusiikki();
     this.viime = performance.now();
     this.taukoNappi.textContent = 'Tauko';
     this.juuri.classList.remove('tauolla');
@@ -344,6 +435,7 @@ class Aikajana {
   pysayta() {
     if (!this.kaynnissa) return;
     this.kaynnissa = false;
+    this.saadaMusiikki();
     cancelAnimationFrame(this.raf);
     this.raf = 0;
     this.taukoNappi.textContent = this.loppu ? 'Loppu' : 'Jatka';
@@ -538,12 +630,14 @@ class Aikajana {
       kuvat,
       lahde: t.lahde ?? this.linssi.lahde?.aineisto ?? 'Wikipedia',
     }, null, { valikko: false });
+    this.vaimennaJutunAjaksi();
   }
 
   /* ---------- purku ---------- */
 
   pura() {
     this.pysayta();
+    this.lopetaMusiikki();
     this.juuri?.remove();
     this.valokerros?.remove();
     if (this.vastaskaala) this.ui.nipistysVastaskaalaajat?.delete(this.vastaskaala);

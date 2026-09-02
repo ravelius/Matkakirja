@@ -23,12 +23,34 @@
  *
  *   aloitaSiirtymamusiikki('jalan')   siirron alussa
  *   lopetaSiirtymamusiikki()          perillä (tai kun matka katkeaa)
+ *   himmennaSiirtymamusiikki(0.5)     soiva raita puoleen (tauko)
  *
- * Molemmat ovat turvallisia kutsua milloin tahansa ja niin monta
+ * Kaikki ovat turvallisia kutsua milloin tahansa ja niin monta
  * kertaa kuin haluaa: sama laji uudelleen ei käynnistä raitaa
- * alusta, ja lopetus ilman soivaa raitaa ei tee mitään. KUMPIKAAN EI
+ * alusta, ja lopetus ilman soivaa raitaa ei tee mitään. YKSIKÄÄN EI
  * KOSKAAN VIIVYTÄ KUTSUJAA — ne palaavat heti, eivätkä ne palauta
  * lupausta, jota siirtoanimaatio voisi vahingossa jäädä odottamaan.
+ *
+ * ------------------------------------------------------------------
+ * MYÖS LINSSIN MUSIIKKI (omistajan tilaus 2.9.2026 ilta:
+ * *"Generoi linssille oma musiikki"*)
+ * ------------------------------------------------------------------
+ *
+ * Aikajanalinssi (js/aikajana.js) soittaa omaa raitaansa koko ajon
+ * ajan. Se on tämän moduulin neljäs laji (`keksinnot`) eikä oma
+ * moduulinsa: koneisto on sama rivi riviltä — kaksi polkua ämpäriin,
+ * optimistinen soitto, puuttuva raita hiljaisena normaalitilana,
+ * väistö pöllön ja kertojan alta, kehittäjävalikon mittari.
+ * Yleistys on tarkoituksella pieni: LAJITAULUKKO sai kolme uutta
+ * kenttää (`ryhma`, `nousuMs`, `laskuMs`) ja siirtymien käytös on
+ * kenttien oletuksissa ennallaan.
+ *
+ * Ero on kestossa ja siksi feidauksissa. Siirtymä kestää sekunteja,
+ * joten musiikki nousee 300 ms:ssä; linssin ajo kestää minuutteja,
+ * joten sen raita saa nousta rauhassa (600 ms) ja laskea vielä
+ * rauhallisemmin (800 ms). Linssi myös HIMMENTÄÄ raidan puoleen, kun
+ * pelaaja pysäyttää kellon — siirtymässä tälle ei ole käyttöä, koska
+ * siirtymää ei voi pysäyttää.
  *
  * ------------------------------------------------------------------
  * PUUTTUVA RAITA ON NORMAALI TILA (omistajan tilaus 2.9.2026)
@@ -58,7 +80,8 @@
  * työsessio ei kirjoita Raamattuun, ks. CLAUDE.md)
  * ------------------------------------------------------------------
  *
- *   KESTO          10–20 s per raita. Lyhyempi kuulostaa silmukalta,
+ *   KESTO          10–20 s per siirtymäraita (linssin raita 45–60 s,
+ *                  ks. alla). Lyhyempi kuulostaa silmukalta,
  *                  pidempi ei ehdi kertaakaan ympäri: pisin siirto
  *                  (kuutonen jalan + kameran saatto) on noin 5,7 s ja
  *                  lyhin noin 1,4 s, joten pelaaja kuulee raidasta
@@ -78,14 +101,20 @@
  *                  (SIIRTYMA_VOIMA alla) hienosäädetään kuulokokeella
  *                  omistajan laitteella — ei mittarilla.
  *   FORMAATTI      mp3, mono riittää, 128 kbps, 44,1 kHz. Tiedostot
- *                  ovat pieniä (10–20 s) eikä niitä esiladata.
+ *                  ovat pieniä eikä niitä esiladata.
  *   LUONNE         jalan  = kävelyn rytmi, kevyt ja etenevä
  *                  laiva  = aallokon huojunta, hitaampi ja leveämpi
  *                  lento  = ilmava ja liikkumaton; soi kabiiniäänen
  *                           ALLA (v1097), joten sen oma taso on
  *                           matalin kolmesta.
+ *                  keksinnot = linssin ajo: 1800-luvun keksintöjen
+ *                           aikakausi, hillitty kellokoneisto ja
+ *                           tasainen mekaaninen pulssi pohjalla; EI
+ *                           tunnelmapala, koska kello ja filminauha
+ *                           liikkuvat sen päällä. Looppi 45–60 s,
+ *                           koska ajo kestää minuutteja.
  *   NIMET          siirtyma-jalan.mp3, siirtyma-laiva.mp3,
- *                  siirtyma-lento.mp3.
+ *                  siirtyma-lento.mp3, linssi-keksinnot.mp3.
  *   VIENTI         Generoitu raita menee `assets/audio/`-kansioon,
  *                  jolloin .github/workflows/vie-aanet.yml vie sen
  *                  ämpärin `audio/`-kansioon automaattisesti pushissa.
@@ -103,12 +132,21 @@ import { sfx } from './sound.js';
 import { lisaaVaistaja } from './ambience-stream.js';
 
 /*
- * KOLME RAITAA JA KAKSI POLKUA KUMMALLEKIN.
+ * YKSI TAULUKKO KAIKILLE LAJEILLE, KAKSI POLKUA KUHUNKIN.
  *
  * `ampari` on omistajan tilauksessa nimetty polku: R2-juuri +
- * aanet/siirtyma-*.mp3. `oma` on repon oma polku, josta vie-aanet.yml
+ * aanet/<tiedosto>. `oma` on repon oma polku, josta vie-aanet.yml
  * tekee ämpärin audio/-osoitteen (js/media.js aaniUrl). Järjestys on
  * tilauksen mukainen: aanet/ ensin.
+ *
+ * `ryhma` kertoo, mihin raita on tehty: `siirtyma` on matkan lyhyt
+ * raita ja `linssi` linssin ajon pitkä raita. Ero näkyy pelissä vain
+ * feidauksissa ja kestovaatimuksessa (docs/moduulit/aanet.md); koko
+ * muu koneisto on sama, ja siksi lajeja on yksi taulukko eikä kaksi.
+ *
+ * `nousuMs`/`laskuMs` ovat lajin omat feidaukset. Jos ne puuttuvat,
+ * käytetään siirtymän oletuksia (NOUSU_MS 300, LASKU_MS 500), joten
+ * siirtymäraitojen käytös on tässä yleistyksessä muuttumaton.
  *
  * VOIMA on kuulokokeen nuppi, kuten ETUSIVUN_VOIMA ja LENNON_VOIMA
  * aikanaan. Lähtöarvo on johdettu pohjavireestä (POHJA_VOIMA 0,019,
@@ -116,37 +154,68 @@ import { lisaaVaistaja } from './ambience-stream.js';
  * eikä pohjaväriä, joten se saa olla selvästi sitä kuuluvampi mutta
  * yhä maiseman alla. Lento on matalin, koska sen päällä soi
  * matkustamoäänite omalla korotetulla kertoimellaan (LENNON_VOIMA
- * 2,6) — musiikki kuuluu sen ALLA, ei rinnalla.
+ * 2,6) — musiikki kuuluu sen ALLA, ei rinnalla. Linssin raita saa
+ * saman voiman kuin laiva (0,11): sen päällä ei soi äänite vaan
+ * pelaajan oma napautusääni, ja ajo kestää minuutteja.
  */
 const RAIDAT = {
   jalan: {
+    ryhma: 'siirtyma',
     ampari: `${AANI_JUURI}aanet/siirtyma-jalan.mp3`,
     oma: 'assets/audio/siirtyma-jalan.mp3',
     voima: 0.11,
   },
   laiva: {
+    ryhma: 'siirtyma',
     ampari: `${AANI_JUURI}aanet/siirtyma-laiva.mp3`,
     oma: 'assets/audio/siirtyma-laiva.mp3',
     voima: 0.11,
   },
   lento: {
+    ryhma: 'siirtyma',
     ampari: `${AANI_JUURI}aanet/siirtyma-lento.mp3`,
     oma: 'assets/audio/siirtyma-lento.mp3',
     voima: 0.06,
   },
+  /*
+   * AIKAJANALINSSIN RAITA (omistajan tilaus 2.9.2026 ilta). Soi koko
+   * ajon ajan js/aikajana.js:n käskystä. Feidaukset ovat siirtymää
+   * rauhallisemmat, koska mikään ei ole kiirettä: linssi avataan
+   * kerran ja se kestää minuutteja.
+   */
+  keksinnot: {
+    ryhma: 'linssi',
+    ampari: `${AANI_JUURI}aanet/linssi-keksinnot.mp3`,
+    oma: 'assets/audio/linssi-keksinnot.mp3',
+    voima: 0.11,
+    nousuMs: 600,
+    laskuMs: 800,
+  },
 };
 
-/** Lajit siinä järjestyksessä, jossa ne näytetään kehittäjävalikossa. */
+/** Siirtymän lajit siinä järjestyksessä kuin ne matkassa esiintyvät. */
 export const SIIRTYMALAJIT = ['jalan', 'laiva', 'lento'];
+
+/**
+ * Kaikki musiikkilajit — sekä siirtymät että linssit — siinä
+ * järjestyksessä, jossa ne näytetään kehittäjävalikon rivillä.
+ */
+export const MUSIIKKILAJIT = Object.keys(RAIDAT);
 
 /*
  * SISÄÄN 300 ms, ULOS 500 ms (omistajan tilaus). Sisääntulo on nopea,
  * koska siirto on lyhyt eikä musiikki saa olla vasta puolivälissä kun
  * nappula jo laskeutuu; ulostulo on hitaampi, jotta saapumisen
  * äänimaisema ehtii nousta sen alta esiin ilman leikkausta.
+ *
+ * Nämä ovat OLETUKSET: laji saa antaa omansa (RAIDAT.nousuMs/laskuMs).
  */
 const NOUSU_MS = 300;
 const LASKU_MS = 500;
+
+/** Lajin feidaukset oletuksineen. */
+const nousuMs = (laji) => RAIDAT[laji]?.nousuMs ?? NOUSU_MS;
+const laskuMs = (laji) => RAIDAT[laji]?.laskuMs ?? LASKU_MS;
 
 /** Soiva raita: { laji, audio } tai null. */
 let soiva = null;
@@ -158,6 +227,13 @@ let soiva = null;
 const puuttuvatRaidat = new Set();
 /* Väistökerroin (kertoja, pöllö, lukija) — sama totuus kuin taustalla. */
 let siirtymanVaisto = 1;
+/*
+ * AJON OMA HIMMENNYS (0…1). Väistö tulee muualta pelistä, tämä
+ * soivan raidan omistajalta: aikajanalinssi puolittaa raidan, kun
+ * pelaaja pysäyttää kellon. Nollautuu joka käynnistyksessä, jottei
+ * unohtunut himmennys jää vaivaamaan seuraavaa raitaa.
+ */
+let ajonHimmennys = 1;
 
 /**
  * Pehmeä tason liuku. Oma pieni toteutus tarkoituksella: raita soi
@@ -182,8 +258,8 @@ function siirtymanLiuku(audio, kohde, kesto, done) {
   requestAnimationFrame(askel);
 }
 
-/** Lajin tavoitetaso juuri nyt: oma kerroin kertaa voimassa oleva väistö. */
-const raidanTaso = (laji) => (RAIDAT[laji]?.voima ?? 0) * siirtymanVaisto;
+/** Lajin tavoitetaso juuri nyt: oma kerroin kertaa väistö kertaa himmennys. */
+const raidanTaso = (laji) => (RAIDAT[laji]?.voima ?? 0) * siirtymanVaisto * ajonHimmennys;
 
 /** Sammuttaa soittimen lopullisesti ja vapauttaa sen. */
 function vapautaRaita(audio) {
@@ -208,6 +284,7 @@ export function aloitaSiirtymamusiikki(laji) {
   // Toinen laji soimassa (esim. lento kesken maamatkan): pois pehmeästi.
   if (soiva) lopetaSiirtymamusiikki();
 
+  ajonHimmennys = 1;
   const audio = new Audio(raita.ampari);
   audio.loop = true;
   audio.preload = 'auto';
@@ -225,7 +302,7 @@ export function aloitaSiirtymamusiikki(laji) {
       audio.pause();
       return;
     }
-    siirtymanLiuku(audio, raidanTaso(laji), NOUSU_MS);
+    siirtymanLiuku(audio, raidanTaso(laji), nousuMs(laji));
   }).catch(() => {
     /*
      * Ele puuttui tai laite kieltäytyi. TÄMÄ EI OLE PUUTTUVA RAITA:
@@ -258,8 +335,25 @@ export function aloitaSiirtymamusiikki(laji) {
 export function lopetaSiirtymamusiikki() {
   const vanha = soiva;
   soiva = null;
+  ajonHimmennys = 1;
   if (!vanha) return;
-  siirtymanLiuku(vanha.audio, 0, LASKU_MS, () => vapautaRaita(vanha.audio));
+  siirtymanLiuku(vanha.audio, 0, laskuMs(vanha.laji), () => vapautaRaita(vanha.audio));
+}
+
+/**
+ * Himmentää soivan raidan omistajansa käskystä: 1 = täysi taso,
+ * 0,5 = puolet. Aikajanalinssi kutsuu tätä, kun pelaaja pysäyttää
+ * kellon — musiikki jatkuu tauon yli mutta antaa tilaa.
+ *
+ * Turvallinen kutsua ilman soivaa raitaa: kerroin jää voimaan ja
+ * vaikuttaa siihen raitaan, joka on soimassa. Uusi käynnistys
+ * nollaa sen, joten unohtunut himmennys ei voi jäädä päälle.
+ */
+export function himmennaSiirtymamusiikki(kerroin, kesto) {
+  const arvo = Math.min(1, Math.max(0, Number(kerroin)));
+  ajonHimmennys = Number.isFinite(arvo) ? arvo : 1;
+  if (!soiva) return;
+  siirtymanLiuku(soiva.audio, raidanTaso(soiva.laji), kesto ?? nousuMs(soiva.laji));
 }
 
 /** Soiko juuri nyt siirtymämusiikki, ja mikä laji? Savukkeita varten. */
@@ -275,7 +369,7 @@ export function siirtymamusiikkiSoi() {
  */
 lisaaVaistaja((kerroin, kesto) => {
   siirtymanVaisto = kerroin;
-  if (soiva) siirtymanLiuku(soiva.audio, raidanTaso(soiva.laji), kesto || NOUSU_MS);
+  if (soiva) siirtymanLiuku(soiva.audio, raidanTaso(soiva.laji), kesto || nousuMs(soiva.laji));
 });
 
 /* ══════════════════════════════════════════════════════════════════
@@ -291,7 +385,7 @@ lisaaVaistaja((kerroin, kesto) => {
  */
 
 /** Viimeisin tulos lajeittain: true = löytyi, false = ei, null = ei tiedetä. */
-const raitaLoytyi = { jalan: null, laiva: null, lento: null };
+const raitaLoytyi = Object.fromEntries(MUSIIKKILAJIT.map((laji) => [laji, null]));
 
 /** Nykyinen tieto ilman uutta kyselyä. */
 export function siirtymamusiikinTila() {
@@ -323,11 +417,12 @@ async function onOlemassaAani(url) {
 }
 
 /**
- * Kysyy kaikkien kolmen raidan olemassaolon (ämpärin aanet/, sitten
- * audio/) ja palauttaa saman muodon kuin siirtymamusiikinTila.
+ * Kysyy jokaisen raidan olemassaolon (ämpärin aanet/, sitten audio/)
+ * ja palauttaa saman muodon kuin siirtymamusiikinTila. Mukana ovat
+ * myös linssien raidat: kehittäjävalikon rivi näyttää nekin.
  */
 export async function tarkistaSiirtymaraidat() {
-  await Promise.all(SIIRTYMALAJIT.map(async (laji) => {
+  await Promise.all(MUSIIKKILAJIT.map(async (laji) => {
     const raita = RAIDAT[laji];
     const on = await onOlemassaAani(raita.ampari) || await onOlemassaAani(aaniUrl(raita.oma));
     raitaLoytyi[laji] = on;
@@ -338,9 +433,9 @@ export async function tarkistaSiirtymaraidat() {
   return siirtymamusiikinTila();
 }
 
-/** Rivi kehittäjävalikkoon: "jalan ✓  laiva –  lento ?". */
+/** Rivi kehittäjävalikkoon: "jalan ✓  laiva –  lento ?  keksinnot ✓". */
 export function siirtymamusiikinRivi() {
-  return SIIRTYMALAJIT
+  return MUSIIKKILAJIT
     .map((laji) => `${laji} ${raitaLoytyi[laji] === null ? '?' : (raitaLoytyi[laji] ? '✓' : '–')}`)
     .join('  ');
 }
@@ -452,10 +547,11 @@ export function aloitaVaramusiikki(laji) {
 /** Vain testejä varten: unohtaa istunnon liput ja soivan raidan. */
 export function nollaaSiirtymamusiikki() {
   puuttuvatRaidat.clear();
-  for (const laji of SIIRTYMALAJIT) raitaLoytyi[laji] = null;
+  for (const laji of MUSIIKKILAJIT) raitaLoytyi[laji] = null;
   if (soiva) vapautaRaita(soiva.audio);
   soiva = null;
   lopetaVaramusiikki();
   varaKytkinMuisti = null;
   siirtymanVaisto = 1;
+  ajonHimmennys = 1;
 }

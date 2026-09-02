@@ -16,7 +16,7 @@ import {
 } from './ambience-stream.js';
 // Siirtymämusiikin kehittäjärivit (raitojen olemassaolo + varamusiikki).
 import {
-  SIIRTYMALAJIT, asetaVaramusiikki, lopetaSiirtymamusiikki, lopetaVaramusiikki,
+  MUSIIKKILAJIT, asetaVaramusiikki, lopetaSiirtymamusiikki, lopetaVaramusiikki,
   siirtymamusiikinRivi, tarkistaSiirtymaraidat, varamusiikkiPaalla,
 } from './siirtymamusiikki.js';
 import {
@@ -116,7 +116,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1470';
+const APP_VERSION = '2026-08-09.1471';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1300,10 +1300,13 @@ const maailmaNappi = document.getElementById('kehittaja-maailma-btn');
 const mittariNappi = document.getElementById('kehittaja-mittari-btn');
 const polloGenerointiNappi = document.getElementById('kehittaja-pollo-btn');
 /*
- * SIIRTYMÄMUSIIKIN KAKSI RIVIÄ (omistajan tilaus 2.9.2026).
+ * MUSIIKIN KAKSI RIVIÄ (omistajan tilaus 2.9.2026).
  *
- *   siirtymämusiikki  MITTARI, ei kytkin: näyttää löytyykö kolme
- *                     raitaa ämpäristä ("jalan ✓  laiva –  lento –").
+ *   siirtymämusiikki  MITTARI, ei kytkin: näyttää löytyvätkö raidat
+ *                     ämpäristä ("jalan ✓  laiva –  lento –
+ *                     keksinnot ✓"). Mukana ovat sekä siirtymien
+ *                     kolme raitaa että linssien omat (aikajanalinssi,
+ *                     omistajan tilaus 2.9.2026 ilta).
  *                     Napautus kysyy tilanteen uudelleen HEADilla,
  *                     joten kesken istunnon viety raita näkyy heti.
  *                     Kysely tehdään VAIN täältä — peli itse ei
@@ -1365,10 +1368,11 @@ function paivitaKehittajaValikko() {
   }
   merkitseSiirtymamusiikki();
   if (siirtymaMusiikkiNappi) {
-    siirtymaMusiikkiNappi.title = 'Siirtymän oma musiikki: löytyykö raita ämpäristä '
-      + '(aanet/siirtyma-jalan.mp3, -laiva, -lento). ✓ = löytyi, – = ei ole vielä, '
+    siirtymaMusiikkiNappi.title = 'Pelin omat musiikkiraidat: löytyykö raita ämpäristä '
+      + '(aanet/siirtyma-jalan.mp3, -laiva, -lento sekä linssin oma '
+      + 'aanet/linssi-keksinnot.mp3). ✓ = löytyi, – = ei ole vielä, '
       + '? = ei kysytty. Napauta kysyäksesi uudelleen. Puuttuva raita ei riko mitään: '
-      + 'siirtymä on silloin vain hiljainen';
+      + 'siirtymä tai linssi on silloin vain hiljainen';
   }
   const vara = varamusiikkiPaalla();
   merkitseKytkin(varamusiikkiNappi, vara);
@@ -1440,10 +1444,10 @@ siirtymaMusiikkiNappi?.addEventListener('click', () => {
   naytaKehittajaVihje('Kysytään raitoja…');
   tarkistaSiirtymaraidat().then((tila) => {
     merkitseSiirtymamusiikki();
-    const puuttuu = SIIRTYMALAJIT.filter((laji) => !tila[laji]);
+    const puuttuu = MUSIIKKILAJIT.filter((laji) => !tila[laji]);
     naytaKehittajaVihje(puuttuu.length
-      ? `Puuttuu: ${puuttuu.join(', ')}. Siirtymä on niiltä osin hiljainen.`
-      : 'Kaikki kolme raitaa löytyivät.');
+      ? `Puuttuu: ${puuttuu.join(', ')}. Ne kohdat ovat hiljaisia.`
+      : `Kaikki ${MUSIIKKILAJIT.length} raitaa löytyivät.`);
   });
 });
 

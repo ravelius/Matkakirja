@@ -9,9 +9,10 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 
 import {
-  aikajanaAskel, AIKAJANA_VIIVE_MS, AIKAJANA_PAALU_MS,
+  aikajanaAskel, AIKAJANA_VIIVE_MS, AIKAJANA_PAALU_MS, AIKAJANA_TAUKO_HIMMENNYS,
 } from '../js/aikajana.js';
 import { KEKSINNOT, LINSSI } from '../js/linssit/keksinnot.js';
 import { projisoiLaudalle } from '../js/fokusmitat.js';
@@ -56,6 +57,43 @@ test('viimeisen tapahtuman jälkeen askel ilmoittaa lopun', () => {
 
 test('oletustahti: tapahtuman viive on pidempi kuin paalun', () => {
   assert.ok(AIKAJANA_VIIVE_MS > AIKAJANA_PAALU_MS);
+});
+
+/* ==================== MUSIIKKI ==================== */
+
+/*
+ * Linssin oma musiikki (omistajan tilaus 2.9.2026 ilta). Soitin on
+ * js/siirtymamusiikki.js ja sen taulukko on testattu
+ * tests/linssimusiikki.test.mjs:ssä; täällä vartioidaan KYTKENTÄ eli
+ * se, että kaari nimeää raidan ja moottori käskee sitä oikeissa
+ * kohdissa. Kytkentä on juuri sellainen, joka katoaa huomaamatta:
+ * kaikki neljä pintaa toimisivat ilman ainuttakaan ääntä.
+ */
+
+const MOOTTORI = readFileSync(new URL('../js/aikajana.js', import.meta.url), 'utf8');
+
+test('kaari nimeää oman raitansa ja tauko hiljentää sen puoleen', () => {
+  assert.equal(LINSSI.aikajana.musiikki, 'keksinnot');
+  assert.equal(AIKAJANA_TAUKO_HIMMENNYS, 0.5);
+});
+
+test('moottori käskee musiikkia käynnistyksessä, tauolla, jutussa ja purussa', () => {
+  // Raita alkaa ajon mukana ja loppuu purussa.
+  assert.match(MOOTTORI, /kaynnista\(\) \{[\s\S]{0,400}this\.aloitaMusiikki\(true\)/);
+  assert.match(MOOTTORI, /pura\(\) \{[\s\S]{0,200}this\.lopetaMusiikki\(\)/);
+  // Tauko ja jatko säätävät tasoa, EIVÄT katkaise raitaa.
+  assert.match(MOOTTORI, /pysayta\(\) \{[\s\S]{0,200}this\.saadaMusiikki\(\)/);
+  assert.match(MOOTTORI, /jatka\(\) \{[\s\S]{0,200}this\.saadaMusiikki\(\)/);
+  assert.match(MOOTTORI, /saadaMusiikki\([\s\S]{0,200}himmennaSiirtymamusiikki\(ajossa \? 1 : AIKAJANA_TAUKO_HIMMENNYS\)/);
+  // Juttu nähtävyyskorttina: raita pois ja takaisin kortin sulkeutuessa.
+  assert.match(MOOTTORI, /avaaJuttu\(t\) \{[\s\S]{0,600}this\.vaimennaJutunAjaksi\(\)/);
+  assert.match(MOOTTORI, /vaimennaJutunAjaksi\(\) \{[\s\S]{0,600}addEventListener\('close'[\s\S]{0,200}this\.aloitaMusiikki\(\)/);
+  // Kaari ilman musiikki-kenttää ei koske soittimeen.
+  assert.match(MOOTTORI, /this\.musiikkiLaji = kaari\.musiikki \?\? null;/);
+  for (const metodi of ['aloitaMusiikki', 'saadaMusiikki', 'lopetaMusiikki', 'vaimennaJutunAjaksi']) {
+    assert.match(MOOTTORI, new RegExp(`${metodi}\\([^)]*\\) \\{\\n    if \\(!this\\.musiikkiLaji\\) return;`),
+      `${metodi}: hiljainen kaari ei saa koskea soittimeen`);
+  }
 });
 
 /* ==================== KEKSINTÖDATA ==================== */
