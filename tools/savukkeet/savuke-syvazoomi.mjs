@@ -34,6 +34,20 @@
  *   6. EI NIMETTÖMIÄ SYMBOLEJA. Yksikään maastokolmio ei ole kartalla
  *      ilman nimeä (Raamattu: *"kartalla ei ole merkkiä ilman nimeä"*),
  *      eikä yksikään nimellinen nosto jää ilman nimiötään ruudulla.
+ *   7. YKSIKÄÄN NIMI EI OLE PELIMERKIN ALLA (omistaja 2.9.2026:
+ *      *"syvällä zoomilla kaupungin nimiö jää pelinappulan alle"*,
+ *      kaappaus Sofiasta mittajana 50 km). Pelinappula, pelaajan
+ *      kaupungin laatta ja nopanheiton kohdemerkit luovutetaan
+ *      nimiladonnan varauksiksi (js/karttanimet.js
+ *      asetaRuutuvaraukset), joten yhdenkään nimiön laatikko ei saa
+ *      leikata niitä. Mitattu ennen korjausta: iPadilla laatta peitti
+ *      *"SOFIAsta"* 29,5 x 1,5 px ja työpöydällä 36,7 x 8,7 px eli
+ *      valtaosan koko nimestä. Vartio ajetaan OMASSA näkymässään,
+ *      joka panoroi nappulan luo — muissa mittauksissa zoomi jää
+ *      maan keskelle, eikä nappula ole edes ruudulla.
+ *   8. JA NIMI ON YHÄ KARTALLA. Väistö ei saa muuttua pudotukseksi:
+ *      pelaajan oman kaupungin nimi on nimikerroksessa myös varauksen
+ *      kanssa.
  *
  * KAKSI SYVYYTTÄ: z6-porras (mittajana ~100 km) ja z8-porras (~50 km,
  * omistajan oma näkymä eli laattapyramidin pohjan yli). Juuri niiden
@@ -109,6 +123,48 @@ vertaa('nostosymboli on saman kokoinen molemmilla syvyyksillä',
   matala.nostonKokoMax, syva.nostonKokoMax);
 vertaa('siirtoviiva on saman levyinen molemmilla syvyyksillä',
   matala.viivanLeveysPx, syva.viivanLeveysPx);
+
+/*
+ * ====== PELIMERKIN ALLA EI OLE NIMIÄ (vartiot 7 ja 8) ==============
+ *
+ * OMA NÄKYMÄNSÄ, JA SE ON EHTO. Zoomipainike tarttuu näkymän
+ * keskipisteeseen eli maan ikkunan keskukseen, ja pelaajan kaupunki
+ * jää sieltä ruudun ulkopuolelle — juuri sen takia mittaus panoroi
+ * tässä nappulan luo kuten sormi tekisi. Ilman panorointia vartio
+ * mittaisi tyhjää ja menisi läpi aina.
+ *
+ * KAKSI RUUTUA, KOSKA VIKA ON ERIKOKOINEN NIILLÄ. Merkkipino on
+ * karttavakio ja nimi paperivakio, joten suhde riippuu siitä, kuinka
+ * syvälle ruutu päästää zoomaamaan: iPadilla mittakaava 9,24 (peitto
+ * ennen korjausta 29,5 x 1,5 px) ja työpöydällä 13,45 (36,7 x 8,7 px).
+ */
+for (const ruutu of [
+  { nimi: 'iPad 834x1112 dpr 2', ruutu: { width: 834, height: 1112 }, dpr: 2 },
+  { nimi: 'työpöytä 1280x800', ruutu: { width: 1280, height: 800 }, dpr: 1 },
+]) {
+  // eslint-disable-next-line no-await-in-loop
+  const m = await mittaaSyvaZoomi({
+    kaupunki: 'sofia', askelia: 8, ruutu: ruutu.ruutu, dpr: ruutu.dpr, panoroiNappulaan: true,
+  });
+  const t = tiivista(m);
+  console.log(`\n=== nappulan luona, ${ruutu.nimi} (skaala ${t.skaala}) ===`);
+  console.log(JSON.stringify({
+    nimipeittoja: t.nimipeittoja,
+    nimipeitot: t.nimipeitot,
+    pahinPeittoPx2: t.pahinPeittoPx2,
+    nappuloita: t.nappuloita,
+    omaNimi: t.omaNimi,
+    omanNimiKartalla: t.omanNimiKartalla,
+  }, null, 1));
+  vaadi(`${ruutu.nimi}: nappula oli kuvassa (muuten vartio mittaisi tyhjää)`,
+    t.nappuloita > 0, 'yhtään pelinappulaa ei ollut näkyvissä');
+  vaadi(`${ruutu.nimi}: yksikään nimi ei jää pelimerkin alle`,
+    t.nimipeittoja === 0,
+    `${t.nimipeittoja} peittoa, pahin ${t.pahinPeittoPx2} px² (${t.nimipeitot.join('; ')})`);
+  vaadi(`${ruutu.nimi}: pelaajan kaupungin nimi on yhä kartalla`,
+    t.omanNimiKartalla === true,
+    `"${t.omaNimi}" puuttuu nimikerroksesta — väistö muuttui pudotukseksi`);
+}
 
 console.log(`\n${lapi}/${kaikki} vartiota läpi`);
 process.exit(lapi === kaikki ? 0 : 1);

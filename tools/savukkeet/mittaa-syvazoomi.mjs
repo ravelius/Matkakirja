@@ -133,25 +133,51 @@ export async function mittaaSyvaZoomi({
    * kuvassa, joten mittaus panoroi sinne raahaamalla karttaa kuten
    * sormi tekisi.
    */
+  /*
+   * KOHDE ON PELINAPPULA, EI AARREMERKKIEN KERROS (korjattu 2.9.2026).
+   * Aiempi versio tarttui `.tokens`-kerrokseen, jonka laatikko on tyhjä
+   * tai aivan muualla — mittaus jäi siksi sellaiseen näkymään, jossa
+   * pelaajan kaupunkia ei näy lainkaan, ja juuri se näkymä on koko
+   * bugiraportin aihe.
+   *
+   * RAAHAUS TOISTUU, KOSKA MATKA ON PIDEMPI KUIN RUUTU. Syvässä
+   * zoomissa nappula voi olla satojen pikselien päässä näkymän
+   * ulkopuolella, eikä sormi voi tarttua sellaiseen kohtaan: jokainen
+   * veto lähtee siksi ruudun keskeltä ja siirtää enintään kolmasosan
+   * ruudusta kerrallaan, kunnes nappula on keskellä.
+   */
   if (panoroiNappulaan) {
-    const kohde = await sivu.evaluate(() => {
-      const t = document.querySelector('.tokens');
-      if (!t) return null;
-      const r = t.getBoundingClientRect();
+    const kx = ruutu.width / 2;
+    const ky = ruutu.height / 2;
+    const nappulanPaikka = () => sivu.evaluate(() => {
+      const p = document.querySelector('.pawns .pawn') ?? document.querySelector('.tokens');
+      if (!p) return null;
+      const r = p.getBoundingClientRect();
       return { x: r.x + r.width / 2, y: r.y + r.height / 2 };
     });
-    if (kohde) {
-      const kx = ruutu.width / 2;
-      const ky = ruutu.height / 2;
-      await sivu.mouse.move(kohde.x, kohde.y);
+    for (let veto = 0; veto < 8; veto += 1) {
+      // eslint-disable-next-line no-await-in-loop
+      const kohde = await nappulanPaikka();
+      if (!kohde) break;
+      const dx = kx - kohde.x;
+      const dy = ky - kohde.y;
+      if (Math.hypot(dx, dy) < 8) break;
+      /* Veto lähtee keskeltä ja on enintään kolmasosa ruudusta. */
+      const raja = Math.min(1, (Math.min(ruutu.width, ruutu.height) / 3) / Math.hypot(dx, dy));
+      const vx = dx * raja;
+      const vy = dy * raja;
+      // eslint-disable-next-line no-await-in-loop
+      await sivu.mouse.move(kx - vx / 2, ky - vy / 2);
+      // eslint-disable-next-line no-await-in-loop
       await sivu.mouse.down();
       for (let i = 1; i <= 12; i += 1) {
         // eslint-disable-next-line no-await-in-loop
-        await sivu.mouse.move(kohde.x + ((kx - kohde.x) * i) / 12,
-          kohde.y + ((ky - kohde.y) * i) / 12);
+        await sivu.mouse.move(kx - vx / 2 + (vx * i) / 12, ky - vy / 2 + (vy * i) / 12);
       }
+      // eslint-disable-next-line no-await-in-loop
       await sivu.mouse.up();
-      await sivu.waitForTimeout(1500);
+      // eslint-disable-next-line no-await-in-loop
+      await sivu.waitForTimeout(1200);
     }
   }
   await sivu.waitForTimeout(2500);
@@ -245,8 +271,74 @@ export async function mittaaSyvaZoomi({
       };
     });
 
-    /* 4. Pelinappula — peittääkö se oman kaupungin nimen? */
-    const nappula = document.querySelector('.tokens');
+    /*
+     * 4. PELINAPPULA, OMAN KAUPUNGIN LAATTA JA NOPANHEITON KOHTEET —
+     *    PEITTÄVÄTKÖ NE NIMIÄ?
+     *
+     * Omistajan kaappaus Sofiasta 2.9.2026 (mittajana 50 km): *"SOFIA"*
+     * katosi nappulan ja laatan taakse. Nimikerroksen ladonta ei
+     * tiennyt pelinappulasta mitään, joten se latoi kaupungin nimen
+     * 5–7 pikselin päähän pisteestä — suoraan sen merkkipinon alle,
+     * joka syvässä zoomissa on ruudulla 10–20 pikseliä korkea.
+     *
+     * MITTA ON LAATIKKOJEN LEIKKAUS, EI SILMÄMÄÄRÄINEN ETÄISYYS. Nimen
+     * ja nappulan väli saa olla pieni; vika on vasta siinä, että
+     * laatikot menevät päällekkäin — juuri sen pelaaja lukee ruudulta
+     * peittona.
+     *
+     * KERROKSET LUETAAN OMILLA VALITSIMILLAAN eikä yhtenä ryhmänä:
+     * nappula on `.pawns .pawn` (js/ui.js drawPawns), oman kaupungin
+     * laatta `.cities [data-kaupunki=…]` (paivitaFokusLaatta) ja
+     * nopanheiton kohteet `.targets .target-piste/.target-halo`
+     * (paivitaFokusKohdeMitat). NÄKYMÄTTÖMÄT OSUMAYMPYRÄT EIVÄT KUULU
+     * JOUKKOON (.target-hit, fokuslaatan osuma-ala): ne eivät ole
+     * mustetta eivätkä siis voi peittää mitään.
+     */
+    const laatikko = (e) => {
+      const r = e.getBoundingClientRect();
+      return {
+        x0: +r.x.toFixed(1),
+        y0: +r.y.toFixed(1),
+        x1: +(r.x + r.width).toFixed(1),
+        y1: +(r.y + r.height).toFixed(1),
+        w: +r.width.toFixed(1),
+        h: +r.height.toFixed(1),
+      };
+    };
+    const omaId = ui.game?.cityOf?.()?.id ?? null;
+    const nappulat = [...document.querySelectorAll('.pawns .pawn')]
+      .map(laatikko).filter((r) => r.w > 0 && r.h > 0);
+    const laatat = omaId
+      ? [...document.querySelectorAll(`.cities [data-kaupunki="${CSS.escape(omaId)}"]`)]
+        .filter((e) => !e.classList.contains('city-label'))
+        .map(laatikko)
+        .filter((r) => r.w > 0 && r.h > 0)
+      : [];
+    const kohdemerkit = [...document.querySelectorAll('.targets .target-piste, .targets .target-halo')]
+      .map(laatikko).filter((r) => r.w > 0 && r.h > 0);
+    /*
+     * NIMET SAMASSA MITASSA. Jokainen nimikerroksen teksti on ehdolla
+     * peitettäväksi — omistajan vika koski kaupungin nimeä, mutta
+     * varaus koskee koko ladontaa, myös kohdenimiöitä ja maastonimiä.
+     */
+    const nimilaatikot = [...document.querySelectorAll('.karttanimet text')]
+      .map((e) => ({ teksti: e.textContent, ...laatikko(e) }))
+      .filter((r) => r.w > 0 && r.h > 0);
+    const leikkaus = (a, b) => {
+      const w = Math.min(a.x1, b.x1) - Math.max(a.x0, b.x0);
+      const h = Math.min(a.y1, b.y1) - Math.max(a.y0, b.y0);
+      return w > 0 && h > 0 ? { w: +w.toFixed(1), h: +h.toFixed(1) } : null;
+    };
+    const peitot = [];
+    for (const [laji, joukko] of [['nappula', nappulat], ['laatta', laatat], ['kohde', kohdemerkit]]) {
+      for (const merkki of joukko) {
+        for (const nimi of nimilaatikot) {
+          const l = leikkaus(merkki, nimi);
+          if (l) peitot.push({ laji, nimi: nimi.teksti, ...l });
+        }
+      }
+    }
+    const omaNimi = ui.game?.cityOf?.()?.name ?? null;
     return {
       skaala: +nak.skaala.toFixed(3),
       dpr: window.devicePixelRatio,
@@ -256,7 +348,13 @@ export async function mittaaSyvaZoomi({
       nimet,
       nostot,
       viivat,
-      nappula: nappula ? rk(nappula) : null,
+      nappula: nappulat[0] ?? null,
+      nappulat,
+      laatat,
+      kohdemerkit,
+      peitot,
+      omaNimi,
+      omanNimiKartalla: Boolean(omaNimi && nimilaatikot.some((n) => n.teksti === omaNimi)),
     };
   });
   if (kuva) await sivu.screenshot({ path: kuva });
@@ -302,6 +400,19 @@ export function tiivista(m) {
     nimionRakoMax: raot.length ? Math.max(...raot) : null,
     viivanLeveysPx: m.viivat.length ? Math.max(...m.viivat.map((v) => v.leveysPx)) : null,
     viivanKatko: m.viivat[0]?.katkoPx ?? null,
+    /*
+     * PEITOT: montako nimeä jää pelinappulan, oman kaupungin laatan tai
+     * nopanheiton kohdemerkin alle, ja kuinka monta neliöpikseliä pahin
+     * niistä syö. Nolla on ainoa hyväksyttävä luku — nimi merkin alla
+     * ei ole nimi (Raamattu: *"kartalla ei ole merkkiä ilman nimeä"*
+     * toisin päin luettuna).
+     */
+    nimipeittoja: m.peitot?.length ?? 0,
+    nimipeitot: (m.peitot ?? []).map((p) => `${p.laji}/${p.nimi} ${p.w}x${p.h}`),
+    pahinPeittoPx2: (m.peitot ?? []).reduce((s, p) => Math.max(s, p.w * p.h), 0),
+    nappuloita: m.nappulat?.length ?? 0,
+    omaNimi: m.omaNimi ?? null,
+    omanNimiKartalla: m.omanNimiKartalla ?? null,
     nimia: m.nimet.length,
     nimet: m.nimet.map((n) => n.teksti),
   };
@@ -323,5 +434,12 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   for (const p of m.pisteet) console.log(`piste  ${p.w} x ${p.h} @ (${p.x}, ${p.y})`);
   console.log('--- nimet ---');
   for (const n of m.nimet) console.log(`${n.laji.padEnd(12)} ${n.teksti} @ (${n.x}, ${n.y}) ${n.w}x${n.h}`);
+  console.log('--- pelinappula, laatta, kohdemerkit ---');
+  for (const n of m.nappulat ?? []) console.log(`nappula  ${n.w} x ${n.h} @ (${n.x0}, ${n.y0})…(${n.x1}, ${n.y1})`);
+  for (const l of m.laatat ?? []) console.log(`laatta   ${l.w} x ${l.h} @ (${l.x0}, ${l.y0})…(${l.x1}, ${l.y1})`);
+  for (const k of m.kohdemerkit ?? []) console.log(`kohde    ${k.w} x ${k.h} @ (${k.x0}, ${k.y0})…(${k.x1}, ${k.y1})`);
+  console.log(`oma kaupunki: ${m.omaNimi} — nimi kartalla: ${m.omanNimiKartalla ? 'on' : 'EI'}`);
+  console.log('--- peitot ---');
+  for (const p of m.peitot ?? []) console.log(`${p.laji.padEnd(8)} peittää "${p.nimi}" ${p.w} x ${p.h} px`);
   process.exit(0);
 }

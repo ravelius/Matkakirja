@@ -305,7 +305,7 @@ import {
  * hiljaa vanhojen laattojen päällä.
  */
 import {
-  karttanimienMitat, paivitaKarttanimet, unohdaKarttanimet,
+  asetaRuutuvaraukset, karttanimienMitat, paivitaKarttanimet, unohdaKarttanimet,
 } from './karttanimet.js';
 /*
  * MAAN IKKUNA laudan koordinaateissa (js/packs/fokus-grc.js
@@ -5060,6 +5060,40 @@ export class UI {
     // KARTALLA — PURETTU.)
     paivitaFokuskohteet(this, nakyvaNyt);
     /*
+     * ====== PELIMERKKIEN MITAT ENNEN NIMIÄ, JA SE ON JÄRJESTYS-
+     *        VAATIMUS (omistaja 2.9.2026) ============================
+     *
+     * Nämä kolme olivat ennen tämän metodin LOPUSSA, ja se oli oikein
+     * niin kauan kuin nimikerros ei tiennyt merkeistä mitään. Nyt se
+     * tietää: pelinappula, pelaajan kaupungin laatta ja nopanheiton
+     * kohdemerkit luovutetaan ladonnan varauksiksi (luovutaRuutuvaraukset),
+     * ja varaus on laatikko SIINÄ KOOSSA, JOSSA MERKKI RUUDULLA ON.
+     * Vanhassa järjestyksessä varaus olisi luettu edellisen
+     * zoomiportaan mitoista — syvään zoomiin siirryttäessä
+     * puolet liian pienenä, ja juuri se on se vika, jota tämä erä
+     * korjaa.
+     *
+     * KUTSUT OVAT MUUTEN ENNALLAAN eivätkä lue nimikerrokselta mitään:
+     * ne kirjoittavat merkkien muunnokset ja napautusalueet. Ainoa
+     * muutos on paikka tässä listassa.
+     *
+     * Nykyisen kaupungin laatta on fokuslehden päällä kiinteän
+     * kokoinen RUUDULLA (paivitaFokusLaatta), joten sen mittakaava ja
+     * napautusalue lasketaan uudelleen jokaisesta zoomista…
+     */
+    this.paivitaFokusLaatta();
+    // …sama koskee pelinappulaa ja aarremerkkiä (paivitaFokusMerkkiMitat)…
+    this.paivitaFokusMerkkiMitat();
+    // …sekä valittavien kohteiden merkkejä ja niiden nimiä.
+    this.paivitaFokusKohdeMitat();
+    /*
+     * PELIMERKIT LADONNAN VARAUKSIKSI. Palautusarvoa ei tarvitse
+     * katsoa tässä: paivitaKarttanimet ajetaan joka tapauksessa heti
+     * perässä, ja ilmoittautuminen tyhjentää ladontamuistin vain jos
+     * joukko oikeasti muuttui.
+     */
+    this.luovutaRuutuvaraukset();
+    /*
      * PYRAMIDILAUDAN PAIKANNIMET (js/karttanimet.js). Ladonta on
      * funktio pelkästä mittakaavasta ja muistetaan sen mukaan, joten
      * panorointi ei laske sitä uudelleen — tässä valitaan vain se
@@ -5103,14 +5137,7 @@ export class UI {
      * yllä — eikä siis joka kehyksessä.
      */
     paivitaFokusmitat(this);
-    // Sama syy kuin yllä: nykyisen kaupungin laatta on fokuslehden
-    // päällä kiinteän kokoinen RUUDULLA (paivitaFokusLaatta), joten sen
-    // mittakaava ja napautusalue lasketaan uudelleen jokaisesta zoomista.
-    this.paivitaFokusLaatta();
-    // Sama koskee pelinappulaa ja aarremerkkiä (paivitaFokusMerkkiMitat)…
-    this.paivitaFokusMerkkiMitat();
-    // …sekä valittavien kohteiden merkkejä ja niiden nimiä.
-    this.paivitaFokusKohdeMitat();
+    // (Pelimerkkien mitat ajettiin jo nimien EDELLÄ, ks. yllä.)
     if (!this.maastonimiKerros) return;
     if (!this.maastonimet) return;
     /*
@@ -7397,6 +7424,14 @@ export class UI {
     this.paivitaFokusMerkkiMitat();
     // Samoin valittavien kohteiden merkit: pieni piste ja nimi.
     this.paivitaFokusKohdeMitat();
+    /*
+     * MERKKIEN KOOT MUUTTUIVAT, JOTEN NIMILADONNAN VARAUS MUUTTUI
+     * (omistaja 2.9.2026, ks. luovutaRuutuvaraukset). Uudelleenladonta
+     * tehdään vain jos laatikot oikeasti liikkuivat — maan vaihdos ja
+     * lehden ikkunan asettuminen tulevat tänne, eivätkä ne useimmiten
+     * muuta yhtään laatikkoa.
+     */
+    if (this.luovutaRuutuvaraukset()) paivitaKarttanimet(this);
   }
 
   /* --- MERKIT KARTAN MITTAKAAVAAN (omistajan linjaus 26.8.2026) ------ */
@@ -8376,6 +8411,128 @@ export class UI {
       const oma = Number(merkki.dataset.r);
       this.asetaMerkinKoko(merkki, this.fokusMerkkiKerroin(FOKUS_AARRE_PX, oma));
     }
+  }
+
+  /**
+   * YHDEN MERKIN LAATIKKO LAUDAN YKSIKÖISSÄ — SIINÄ KOOSSA, JOSSA SE
+   * RUUDULLA ON.
+   *
+   * `getBBox` antaa muodon omissa koordinaateissaan ja `transform`
+   * kertoo, mihin ja minkä kokoisena se piirretään (asetaMerkinKoko,
+   * asetaLaatanKoko). Kumpikin luetaan SVG:n omasta geometriasta eikä
+   * ruudun laatikoista: `getBoundingClientRect` pakottaisi
+   * tyylinlaskennan ja mittaisi ruutupikseleitä, jotka pitäisi
+   * kääntää takaisin laudalle kameran muunnoksen läpi. Ryhmän
+   * `getBBox` sisältää lapsensa muunnoksineen (nappulan varjo,
+   * vuororengas, hahmo), joten pino tulee mukaan yhtenä laatikkona.
+   *
+   * PIILOTETTU MERKKI EI VARAA MITÄÄN. `display: none` -osan laatikko
+   * on tyhjä (tai kutsu heittää), ja tyhjä laatikko karsiutuu tässä —
+   * niin kuin pitääkin: piilotettu merkki ei peitä yhtään nimeä.
+   *
+   * @param {Element} osa
+   * @param {number} kasvu  kerroin muodon ympärille (CSS-animaation
+   *   laajin aste; se ei näy muunnoksessa, ks. kohdemerkin halo)
+   */
+  static merkinLaatikko(osa, kasvu = 1) {
+    let bb = null;
+    try {
+      bb = osa.getBBox();
+    } catch {
+      return null;
+    }
+    if (!(bb.width > 0) || !(bb.height > 0)) return null;
+    const m = osa.transform?.baseVal?.consolidate?.()?.matrix ?? null;
+    const kulmat = [
+      { x: bb.x, y: bb.y },
+      { x: bb.x + bb.width, y: bb.y },
+      { x: bb.x, y: bb.y + bb.height },
+      { x: bb.x + bb.width, y: bb.y + bb.height },
+    ].map((p) => (m
+      ? { x: m.a * p.x + m.c * p.y + m.e, y: m.b * p.x + m.d * p.y + m.f }
+      : p));
+    const laatikko = {
+      x0: Math.min(...kulmat.map((p) => p.x)),
+      y0: Math.min(...kulmat.map((p) => p.y)),
+      x1: Math.max(...kulmat.map((p) => p.x)),
+      y1: Math.max(...kulmat.map((p) => p.y)),
+    };
+    if (!(kasvu > 1)) return laatikko;
+    const kx = ((laatikko.x1 - laatikko.x0) * (kasvu - 1)) / 2;
+    const ky = ((laatikko.y1 - laatikko.y0) * (kasvu - 1)) / 2;
+    return {
+      x0: laatikko.x0 - kx, y0: laatikko.y0 - ky, x1: laatikko.x1 + kx, y1: laatikko.y1 + ky,
+    };
+  }
+
+  /**
+   * PELIMERKIT NIMILADONNAN VARAUKSIKSI (omistajan tilaus 2.9.2026:
+   * *"syvällä zoomilla kaupungin nimiö jää pelinappulan alle"*).
+   *
+   * === MIKSI TÄSTÄ SUUNNASTA (js/karttanimet.js asetaRuutuvaraukset) =
+   *
+   * Nimikerros latoo nimet, mutta se ei piirrä pelinappulaa, kaupungin
+   * laattaa eikä nopanheiton kohdemerkkejä — eikä siis tiedä niistä
+   * mitään. Sama juurisyy kuin kohdenimiöillä ennen 30.8.2026: kaksi
+   * kerrosta, ei yhtään yhteistä päätöstä. Ja sama korjaus:
+   * PIIRTÄVÄ kerros ilmoittautuu ladonnalle, riippuvuus osoittaa
+   * yhteen suuntaan.
+   *
+   * === MITÄ LUOVUTETAAN, JA MIKSI JUURI NE =========================
+   *
+   *   PELINAPPULAT, kaikki. Monipelissä ja bottien kanssa nappuloita
+   *   on kartalla useampi, ja jokainen niistä peittää oman kohtansa;
+   *   sääntö on geometrinen eikä *"pelaajan oma"*.
+   *
+   *   PELAAJAN KAUPUNGIN LAATTA kaikkine osineen (fokusLaattaOsat:
+   *   laatta, porttikehä, lentokentän merkki). Se on ainoa laatta,
+   *   joka on omassa mitassaan (FOKUS_LAATTA_SADE, askelhelmen
+   *   kokoinen KARTTAVAKIO) ja kasvaa siksi ruudulla zoomin mukana —
+   *   juuri se peitti omistajan kaappauksessa nimen *"SOFIA"*.
+   *   Muiden kaupunkien laatat ovat ruutumitassa kattoineen
+   *   (paivitaMaailmanLaattaKoot) eivätkä kasva nimen yli, ja niiden
+   *   pisteet ovat ladonnalla jo omassa varauksessaan.
+   *
+   *   NOPANHEITON KOHDEMERKIT (.target-piste ja hengittävä .target-halo,
+   *   v1439). Ne ovat kartan mittakaavassa niin kuin laattakin, eli
+   *   syvässä zoomilla nimen kokoisia. Halo saa laajimman asteensa
+   *   (FOKUS_KOHDE_HALO_LAAJIN): CSS-animaation muunnos ei näy
+   *   geometriassa, ja kehä kävisi muuten nimen päällä joka jakson
+   *   puolivälissä.
+   *
+   * NÄKYMÄTTÖMÄT OSUMA-ALUEET EIVÄT KUULU JOUKKOON (.target-hit ja
+   * laatan oma 48 px:n ympyrä): varaus on MUSTETTA. Osuma-alueina ne
+   * pudottaisivat nimiä tyhjän paperin takia.
+   *
+   * KUTSUJÄRJESTYS ON EHTO: merkkien mitat on laskettava ENNEN tätä
+   * (paivitaFokusLaatta, paivitaFokusMerkkiMitat, paivitaFokusKohdeMitat),
+   * tai laatikot olisivat edellisen zoomiportaan kokoisia. Ks.
+   * paivitaMaastonimet, jossa kutsut on juuri siksi tässä
+   * järjestyksessä.
+   *
+   * @returns {boolean} muuttuiko varausjoukko (kutsuja voi ohittaa
+   *   turhan uudelleenladonnan)
+   */
+  luovutaRuutuvaraukset() {
+    if (!this.svg) return asetaRuutuvaraukset([]);
+    const rivit = [];
+    const lisaa = (osa, kasvu = 1) => {
+      const laatikko = UI.merkinLaatikko(osa, kasvu);
+      if (laatikko) rivit.push(laatikko);
+    };
+    for (const nappula of this.pawnLayer?.querySelectorAll('.pawn') ?? []) lisaa(nappula);
+    /*
+     * LAATAN OSAT LUETAAN SIITÄ JOUKOSTA, JONKA MITOITUS JUURI KIRJOITTI
+     * (fokusLaattaOsat, paivitaFokusLaatta) — ei omalla kyselyllä.
+     * Yhdellä lähteellä ei voi käydä niin, että varaus koskee eri
+     * osajoukkoa kuin mitoitus; kahdella se on ajan kysymys.
+     */
+    for (const osa of this.fokusLaattaOsat ?? []) lisaa(osa);
+    for (const osa of this.targetLayer?.querySelectorAll('.target-piste') ?? []) lisaa(osa);
+    for (const osa of this.targetLayer?.querySelectorAll('.target-halo') ?? []) {
+      lisaa(osa, FOKUS_KOHDE_HALO_LAAJIN);
+    }
+    return asetaRuutuvaraukset(rivit);
   }
 
   /**
@@ -18666,6 +18823,19 @@ export class UI {
     this.movingPlayerId = null;
     this.revealShownFor = null;
     this.drawPawns();
+    /*
+     * NAPPULA ON NIMILADONNAN VARAUS, JOTEN SIIRTO ON LADONNAN SYÖTETTÄ
+     * (omistaja 2.9.2026, ks. luovutaRuutuvaraukset) — MUTTA SITÄ EI
+     * KIRJATA TÄSSÄ.
+     *
+     * Ketju on jo olemassa: siirron jälkeen ajetaan render, ja se
+     * kulkee paivitaFokusKerroksen kautta paivitaFokusPallotiin, joka
+     * mitoittaa nappulan ja luovuttaa varaukset. Toinen kutsu tästä
+     * olisi paitsi turha myös HAITALLINEN: se mitoittaisi nappulan
+     * kesken sitä hetkeä, jossa savuke-nappula.mjs mittaa hahmon
+     * (vartio 5b), eikä siirto tarvitse omaa polkuaan silloin kun
+     * yhteinen polku ajetaan joka tapauksessa.
+     */
     /*
      * NOPPA POIS UUDESSA KAUPUNGISSA (#98). Matka päättyi kaupunkiin
      * (myös lento on tällainen siirto, jossa askelia on yksi), joten
