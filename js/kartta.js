@@ -208,8 +208,62 @@ const YLAKAISTA = 0.26;
 /*
  * Loitonnuksen varmuusvara: osuus laudan leveydestä, joka jää aina
  * näkymän ulkopuolelle, jottei sauma näy kahtena (ks. rajaaSkaala).
+ *
+ * KOSKEE ENÄÄ AVAUSNÄKYMÄN LÄHIKUVAA (sovitaAloitusZoom). Pelin oma
+ * näkymä ei kulje tästä: uloimmalla zoomilla lauta piirtyy KERRAN ja
+ * sen ulkopuoli on paperia (ks. KOKOLAUDAN_VARA alla).
  */
 const SAUMAN_VARA = 0.03;
+
+/*
+ * ============ ULOIN ZOOMI = KOKO LAUTA RUUDULLE ====================
+ *
+ * Omistaja 2.9.2026, sanatarkasti: *"Jos ruutu on vaakamuotoinen, niin
+ * silloin pitäisi pystyä zoomaamaan ulos niin paljon, että kartta
+ * näkyy kokonaisena. nyt jostain syystä yläosa hyppää näkymättömiin."*
+ * ja saman erän tarkennus: *"jos kartta alkaisi näkyä liiasta
+ * leveydestä johtuen kaksi kertaa, niin sivuilla voisi silloin olla
+ * tyhjää. mieluiten itseasiassa jos siinnekin pystyisi generoimaan
+ * samanlaista vaaleampaa paperipohjaa kuin ylhäällä ja alhaalla on.
+ * periaatteessa pystyruuduille voisi tehdä saman ja silloin ylös ja
+ * alas generoituisi vain lisää valkoista kartan tyhjää paperia
+ * jatkeeksi."*
+ *
+ * MIKÄ OLI VIKA (mitattu 2.9.2026 Chromiumilla, 2000 x 1300):
+ * uloimman zoomin mittakaava ei ollut laudan sovitus vaan
+ * `rajaaSkaala` — saumavara nosti mittakaavan arvoon
+ * paneeli / (lauta x 0,97), eli KOLME PROSENTTIA yli sen, mihin lauta
+ * juuri mahtuisi. Vaakaruudulla leveys on rajoittava mitta, joten
+ * korkeussuunta ei enää mahtunut: arkki oli 1243 px korkea 1223 px:n
+ * karttaruudussa ja reunus astelukemineen leikkautui ylhäältä ja
+ * alhaalta. Ultraleveällä ruudulla (2560 x 1080) ero oli 528 px.
+ * Sama luku toisin päin: pystyruudulla saumavara ei koskaan sitonut,
+ * ja juuri siksi vika näkyi vain vaakaruudulla.
+ *
+ * UUSI SÄÄNTÖ, kolme osaa, ja kaikki kolme ovat saman asian puolia:
+ *
+ *   1. Uloin zoomi on kokonaissovitus `min(leveys/lauta.w,
+ *      korkeus/lauta.h)` — pieni vara pois (KOKOLAUDAN_VARA), jottei
+ *      reunus kosketa ruudun laitaa eikä pyöristys leikkaa sitä.
+ *      Mitta on LAUTA REUNUKSINEEN (contentBox = pyramidin arkki),
+ *      ei kartta-ala, ja karttaruutu on ylä- ja alapalkin VÄLIIN
+ *      jäävä alue (mapPane), ei koko ikkuna.
+ *   2. Vapaaseen suuntaan jäävä tyhjä KESKITETÄÄN eikä lukita
+ *      reunaan: vaakaruudulla tyhjä jakautuu vasemmalle ja oikealle,
+ *      pystyruudulla ylös ja alas.
+ *   3. Kun näkymä on lautaa leveämpi, lauta piirtyy KERRAN: kierron
+ *      <use>-kopio ja laudan leveyden päähän monistetut merkit
+ *      leikataan pois (paivitaLaudanKierto + css .lauta-kokonaan), ja
+ *      tilalle jää sama pergamentin pohja, joka on jo nyt laudan ylä-
+ *      ja alapuolella (js/mapart.js paperinPohja / paperiUlkopuoli).
+ */
+const KOKOLAUDAN_VARA = 0.99;
+/*
+ * Milloin näkymä on "lautaa leveämpi"? Tasan laudan levyisessä
+ * näkymässä kopiosta ei näy pikseliäkään, joten kynnys on käytännössä
+ * yksi: pyöristysvara alaspäin riittää.
+ */
+const KOKOLAUTA_KYNNYS = 0.9995;
 /*
  * ============ LAVAIKKUNA ==========================================
  *
@@ -602,17 +656,22 @@ export class Kartta {
   }
 
   /*
-   * Pienin sallittu mittakaava kiertävällä kartalla.
+   * Pienin sallittu mittakaava kiertävällä kartalla — VAIN
+   * AVAUSNÄKYMÄN LÄHIKUVALLE (sovitaAloitusZoom).
    *
    * Omistajan vaatimus: yksi paikka ei saa näkyä kahdessa kohdassa
    * samaan aikaan. Näkyvä leveys on paneelin leveys jaettuna
    * mittakaavalla, joten mittakaava ei saa alittaa arvoa
-   * paneeli / maailman leveys.
+   * paneeli / maailman leveys. Avausnäkymässä karttaa vieritetään
+   * kierrolla (panJakso), joten siellä sääntö on yhä oikea: matalassa
+   * ja leveässä ikkunassa (2400 x 420) korkeus kutistaa mittakaavan
+   * niin pieneksi, että maailma mahtuisi ruudulle kahdesti.
    *
-   * Raja tarvitaan erikseen lähikuvassa, koska siellä mittakaava
-   * lasketaan KORKEUDEN mukaan. Leveässä ja matalassa ikkunassa
-   * (2400 x 420) korkeus kutistaa mittakaavan niin pieneksi, että
-   * maailma mahtui ruudulle kahdesti — mitattu, ei arvattu.
+   * PELIN OMA NÄKYMÄ EI ENÄÄ KULJE TÄSTÄ (omistaja 2.9.2026, ks.
+   * KOKOLAUDAN_VARA): siellä uloin zoomi on koko laudan sovitus, ja
+   * kaksoiskuvan estää laudan kierron leikkaus (paivitaLaudanKierto)
+   * eikä mittakaavan nosto. Juuri tämä nosto leikkasi vaakaruudulla
+   * laudan ylä- ja alareunan pois.
    */
   rajaaSkaala(skaala, paneW, box) {
     if (!this.kiertava()) return skaala;
@@ -631,6 +690,36 @@ export class Kartta {
      * saumattoman. Se on halvempi kuin kaksi kertaa piirtyvä ranta.
      */
     return Math.max(skaala, paneW / (box.w * (1 - SAUMAN_VARA)));
+  }
+
+  /**
+   * LAUTA KERRAN, KUN SE MAHTUU KOKONAAN (omistaja 2.9.2026, ks.
+   * KOKOLAUDAN_VARA kohta 3).
+   *
+   * Kiertävä lauta on ruudulla kahdesti: juuriryhmä ja sen <use>-kopio
+   * laudan leveyden päässä (js/ui.js laudanKierto), ja lisäksi
+   * napautettavat merkit on monistettu oikeina elementteinä samaan
+   * kohtaan (js/ui.js kiertoKohdat). Kun näkymä on lautaa leveämpi,
+   * molemmat näkyisivät ruudun laidassa toisintona — juuri se, mitä
+   * omistaja ei halua ("jos kartta alkaisi näkyä liiasta leveydestä
+   * johtuen kaksi kertaa, niin sivuilla voisi silloin olla tyhjää").
+   *
+   * Kytkin on YKSI LUOKKA SVG:n juuressa, ei solmukohtainen käsittely:
+   * css piilottaa kopion ja leikkaa laudan sisällön arkin levyiseksi
+   * (.lauta-kokonaan), jolloin laidoille jää pergamentin pohja. Luokka
+   * kirjoitetaan vain kun se muuttuu — tätä kutsutaan jokaisesta
+   * sovituksesta.
+   *
+   * @param {number} nakyvaLeveysYks näkyvä leveys laudan yksiköissä
+   */
+  paivitaLaudanKierto(nakyvaLeveysYks) {
+    const svg = this.ui.svg;
+    if (!svg) return;
+    const leveys = this.ui.contentBox?.w ?? 0;
+    const kokonaan = this.kiertava() && leveys > 0
+      && nakyvaLeveysYks > leveys * KOKOLAUTA_KYNNYS;
+    if (svg.classList.contains('lauta-kokonaan') === kokonaan) return;
+    svg.classList.toggle('lauta-kokonaan', kokonaan);
   }
 
   fitViewBox() {
@@ -662,18 +751,13 @@ export class Kartta {
     const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
     const kaista = !alkuun && w / box.w > h / box.h ? Math.min(h * 0.2, rem * 7) : 0;
     /*
-     * Loitonnuksen raja kiertävällä kartalla (omistajan vaatimus): yksi
-     * paikka ei saa näkyä kahdessa kohdassa samaan aikaan.
-     *
-     * Näkyvä leveys on w / scale, joten se ei saa ylittää laudan
-     * leveyttä. Ilman rajaa leveä ja matala ikkuna teki juuri sen:
-     * korkeus rajoitti mittakaavaa, ja 2000 x 400 pikselin ikkunaan
-     * olisi mahtunut kaksi maapalloa vierekkäin.
-     *
-     * Raja leikkaa pystysuunnasta eikä vaakasuunnasta — kartan ylä- ja
-     * alalaidassa on merta, kaupungit ovat keskellä.
+     * KOKONÄKYMÄ ON KOKO LAUDAN SOVITUS (omistaja 2.9.2026, ks.
+     * KOKOLAUDAN_VARA). Sovitus lasketaan molemmista mitoista, joten
+     * lauta reunuksineen mahtuu ruudulle sekä leveys- että
+     * korkeussuunnassa; vapaaseen suuntaan jäävä tyhjä keskitetään
+     * alempana (viewBox) ja täytetään pergamentilla.
      */
-    let scale = Math.min(w / box.w, (h - kaista) / box.h);
+    let scale = this.yleiskuvanSkaala(w, h - kaista);
     /*
      * Avaustekstin kaistallinen laatikko (h x 2,2) kutistaa laudan
      * leveällä ikkunalla: korkeus määrää mittakaavan ja kartta jää
@@ -687,10 +771,15 @@ export class Kartta {
     if (alkuun && this.ui.aloitettu) {
       scale = Math.min(w / box.w, (h * 0.72) / this.laudanKorkeus(box));
     }
-    if (this.kiertava()) scale = this.rajaaSkaala(scale, w, box);
+    // Saumavara vain avausnäkymälle: siellä karttaa vieritetään kierrolla
+    // eikä kokonäkymää luvata (ks. rajaaSkaala). Pelin näkymässä kierron
+    // hoitaa leikkaus, ei mittakaavan nosto.
+    if (alkuun && this.kiertava()) scale = this.rajaaSkaala(scale, w, box);
     const vw = w / scale;
     const vh = h / scale;
     this.ui.viewBoxSize = { vw, vh };
+    // Lauta kerran, jos näkymä on sitä leveämpi (ks. paivitaLaudanKierto).
+    this.paivitaLaudanKierto(vw);
     // Aloitusnäkymässä lauta on ennen Aloita seikkailu -nappia keskellä
     // ruutua (pystyruudulla alaosa ammotti muuten tyhjänä), ja nousee
     // portin auettua ylös, jolloin alle jäävä kaista annetaan kokonaan
@@ -799,6 +888,7 @@ export class Kartta {
     this.ui.svg.style.flex = '0 0 auto';
     this.ui.svg.style.alignSelf = 'center';
     this.ui.viewBoxSize = { vw: nakyvaYks, vh: nakyvaKorkeus };
+    this.paivitaLaudanKierto(paneW / skaala);
     /*
      * Aloituskartan lava on jo valmiiksi ruudun korkuinen ja vain
      * runsaan ruudullisen levyinen (yleiskuva x ALOITUS_ZOOM), joten
@@ -1529,10 +1619,18 @@ export class Kartta {
     }
     this.ui.panKoko = { w: paneW, h: paneH };
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
-    const yleiskuva = Math.min(paneW / box.w, paneH / box.h);
+    const yleiskuva = this.yleiskuvanSkaala(paneW, paneH);
     // Zoomitaso tulee portaikosta: automaattinen saapumiszoom käyttää
-    // oletusporrasta, painikkeet siirtävät sitä.
-    const skaala = this.rajaaSkaala(yleiskuva * this.zoomiKerroin, paneW, box);
+    // oletusporrasta, painikkeet siirtävät sitä. Saumavaraa EI enää
+    // lisätä: uloin porras on koko laudan sovitus (KOKOLAUDAN_VARA), ja
+    // lautaa leveämmässä näkymässä kierto leikataan pois.
+    const skaala = yleiskuva * this.zoomiKerroin;
+    /*
+     * Onko näkymä lautaa leveämpi? Silloin lauta piirtyy kerran,
+     * lava on tasan ruudun levyinen ja lauta keskitetään siihen
+     * (ks. KOKOLAUDAN_VARA kohta 2 ja 3).
+     */
+    const kokoLautaX = this.kiertava() && paneW / skaala > box.w * KOKOLAUTA_KYNNYS;
     // Laudan eteläpuolelle varataan tilaa alarivin nappien verran, jotta
     // eteläisimmät kaupungit saa panoroitua niiden alta pois (omistajan
     // havainto: Kreeta ja Ateena jäivät nappien alle). Tila ei muuta
@@ -1579,7 +1677,9 @@ export class Kartta {
      * juuri se mitä tarvitaan kun vieritys on kiertymässä ympäri.
      */
     const jakso = Math.round(box.w * skaala);
-    const yliLeveys = this.kiertava() ? Math.ceil(paneW) : 0;
+    // Uloimmalla zoomilla kaistaletta ei ole: siellä lauta on kokonaan
+    // ruudulla, kopio leikataan pois ja ruudun laidoille jää paperia.
+    const yliLeveys = this.kiertava() && !kokoLautaX ? Math.ceil(paneW) : 0;
     // Koko lava ilman ikkunointia: tästä lavaikkuna leikataan.
     const taysiLeveysYks = box.w + yliLeveys / skaala;
     const lauta = {
@@ -1646,6 +1746,27 @@ export class Kartta {
     const keskiY = ylaReuna + (paneH / 2 - panY) / skaala;
     const ikkuna = this.lavaIkkuna(keskiX, keskiY, paneW, paneH, skaala, lauta);
     /*
+     * ULOIN ZOOMI: LAVA ON RUUDUN LEVYINEN JA LAUTA SEN KESKELLÄ.
+     *
+     * lavaIkkuna palauttaa kiertävällä laudalla koko laudan levyisen
+     * lavan ja jättää kierron panorointiarvon hoidettavaksi (panJakso).
+     * Uloimmalla zoomilla se olisi väärä vastaus kahdesti: lava jäisi
+     * ruutua kapeammaksi (flex latoisi laudan vasempaan laitaan ja
+     * jättäisi kaiken tyhjän oikealle), ja vieritys kiertäisi ympäri
+     * vaikka lauta on jo kokonaan näkyvissä. Tässä lava levitetään
+     * ruudun levyiseksi laudan keskipisteen ympäri: pan menee nollaan,
+     * tyhjä jakautuu tasan molemmille sivuille ja täyttyy paperilla
+     * (js/mapart.js paperiUlkopuoli).
+     */
+    if (kokoLautaX) {
+      const nakyvaLeveys = paneW / skaala;
+      ikkuna.x = box.x - (nakyvaLeveys - box.w) / 2;
+      ikkuna.w = nakyvaLeveys;
+      ikkuna.keski = box.x + box.w / 2;
+      ikkuna.kokoLeveys = false;
+      ikkuna.kiertoX = false;
+    }
+    /*
      * MITAT PIKSELEINÄ JA VIEWBOX NIISTÄ TAKAISIN, jotta mittakaava on
      * täsmälleen `skaala` eikä pyöristys jätä SVG:hen kirjelaatikkoa
      * (preserveAspectRatio keskittäisi sisällön ja siirtäisi kaiken
@@ -1673,6 +1794,7 @@ export class Kartta {
      */
     this.ui.svg.style.alignSelf = korkeus < paneH ? 'center' : 'flex-start';
     this.ui.viewBoxSize = { vw: nakyvaYks, vh: nakyvaKorkeus };
+    this.paivitaLaudanKierto(paneW / skaala);
     this.ui.zoomVasenReuna = ikkuna.x;
     this.ui.zoomYlaReuna = ikkuna.y;
     // Ikkunan tila reunatäydennykselle (ikkunoiLava). Yksi olio
@@ -1945,10 +2067,20 @@ export class Kartta {
     return { x: n.x + n.w / 2, y: n.y + n.h / 2, skaala: n.skaala };
   }
 
-  /** Yleiskuvan mittakaava: se, johon zoomikerroin 1 viittaa. */
+  /**
+   * Yleiskuvan mittakaava: se, johon zoomikerroin 1 viittaa — eli
+   * ULOIN ZOOMI. Koko lauta reunuksineen mahtuu ruutuun molemmissa
+   * suunnissa, ja KOKOLAUDAN_VARA jättää reunuksen ja ruudun laidan
+   * väliin ohuen kaistan paperia (omistaja 2.9.2026; ilman varaa
+   * fitViewBoxin pikselipyöristys leikkasi astelukemat).
+   *
+   * Tämä on se yksi luku, jonka fitViewBox, sovitaMannerZoom,
+   * fokusZoomMinimi ja kamera-ajot lukevat: uloin zoomi on laudan
+   * sovitus eikä mikään muu.
+   */
   yleiskuvanSkaala(paneW, paneH) {
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
-    return Math.min(paneW / box.w, paneH / box.h);
+    return Math.min(paneW / box.w, paneH / box.h) * KOKOLAUDAN_VARA;
   }
 
   /**
@@ -2784,52 +2916,38 @@ export class Kartta {
    * Yläraja on portaikon tihein porras — rajaus ei saa koskaan viedä
    * lähemmäs kuin mihin pelaaja pääsee omin käsin.
    */
-  /**
-   * Pienin sallittu zoomikerroin, jolla kartta PEITTÄÄ koko ruudun
-   * (omistaja 1.9.2026: *"Ulos zoomia voisi rajoittaa niin, että
-   * tyhjää tilaa ei voi tulla näkyville"*). Yleiskuvan kerroin 1 on
-   * contain-sovitus, ja pystyruudulla se jättää kartan ylä- ja
-   * alapuolelle tyhjää — siksi pohja on cover/contain-suhde: kartta
-   * täyttää ruudun molemmissa suunnissa, ja pystynäytöllä koko
-   * maailmaa ei näe kerralla vaan sivuille jää panoroitavaa (omistajan
-   * sanamuoto). Vaakanäytöllä suhde on lähellä ykköstä, joten muutos
-   * tuntuu juuri siellä missä tyhjä tila näkyi.
+  /*
+   * PEITTOPOHJA POISTETTU 2.9.2026 — TÄSSÄ OLI `peittoZoomMinimi`.
    *
-   * KEHITTÄJÄN VAPAA MAAILMANÄKYMÄ OHITTAA POHJAN samalla napilla,
-   * joka vapauttaa panoroinnin (panorointiVapaa; omistaja 31.8.2026:
-   * kehittäjätilassa kauas zoomaus on sallittu). Katselutila samoin:
-   * se on koko laudan esittelyä, ei pelaamista.
+   * Se nosti loitonnuksen pohjan cover-sovitukseen (omistaja 1.9.2026:
+   * *"Ulos zoomia voisi rajoittaa niin, että tyhjää tilaa ei voi tulla
+   * näkyville"*), eli kartta täytti ruudun molemmissa suunnissa ja
+   * ylimenevä osa jäi ruudun ulkopuolelle. Omistajan seuraavan päivän
+   * havainto kumosi säännön nimenomaan siltä osin, mitä se maksoi:
+   * *"jos ruutu on vaakamuotoinen, niin silloin pitäisi pystyä
+   * zoomaamaan ulos niin paljon, että kartta näkyy kokonaisena"* ja
+   * *"jos kartta alkaisi näkyä liiasta leveydestä johtuen kaksi
+   * kertaa, niin sivuilla voisi silloin olla tyhjää... pystyruuduille
+   * voisi tehdä saman ja silloin ylös ja alas generoituisi vain lisää
+   * valkoista kartan tyhjää paperia jatkeeksi."*
+   *
+   * Tyhjä tila ei siis ole enää vika vaan piirretään pergamenttina
+   * (js/mapart.js paperiUlkopuoli, css .lauta-kokonaan), ja uloin
+   * zoomi on koko laudan sovitus (KOKOLAUDAN_VARA). Pohjaa nostaa
+   * enää maan fokusikkuna.
    */
-  peittoZoomMinimi() {
-    if (this.ui.katselu) return 0;
-    if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla()) return 0;
-    const pane = this.ui.mapPane;
-    if (!pane) return 0;
-    const { w: paneW, h: paneH } = this.paneMitat(pane);
-    if (!paneW || !paneH) return 0;
-    const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
-    const yleis = Math.min(paneW / box.w, paneH / box.h);
-    const peitto = Math.max(paneW / box.w, paneH / box.h);
-    if (!(yleis > 0) || !(peitto > 0)) return 0;
-    // Puoli prosenttia yli tarkan peiton: sovituksen pyöristykset
-    // (fitViewBox pyöristää mitat pikseleiksi) jättivät täsmäpohjalla
-    // parin pikselin tyhjän kaistan ruudun laitaan (mitattu 390x844:
-    // svg 771 px, ruutu 773 px).
-    const vara = 1.005;
-    // Sama katto kuin fokusZoomMinimillä: pohja ei saa koskaan viedä
-    // lähemmäs kuin mihin pelaaja pääsee omin käsin.
-    const tasot = this.zoomiTasot();
-    return Math.min(tasot.at(-1) ?? MANNER_ZOOM, (peitto / yleis) * vara);
-  }
 
   /**
-   * Loitonnuksen yhteinen pohja: fokusikkunan ja ruudun peiton
-   * tiukempi. Jokainen loitonnusreitti (portaat, nipistys, kamera-ajo)
-   * kulkee zoomiRajat-pohjan kautta, ja tämä on se yksi luku, jonka
+   * Loitonnuksen yhteinen pohja: maan fokusikkuna. Jokainen
+   * loitonnusreitti (portaat, nipistys, kamera-ajo) kulkee
+   * zoomiRajat-pohjan kautta, ja tämä on se yksi luku, jonka
    * zoomiRajat, yleiskuvaSallittu ja porraslasku lukevat.
+   *
+   * Ruudun peitto EI enää nosta pohjaa (ks. yllä): uloin zoomi on
+   * laudan sovitus, ja sen ulkopuolelle jäävä tyhjä on paperia.
    */
   zoomPohja() {
-    return Math.max(this.fokusZoomMinimi(), this.peittoZoomMinimi());
+    return this.fokusZoomMinimi();
   }
 
   fokusZoomMinimi() {

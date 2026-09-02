@@ -251,6 +251,71 @@ export function drawPaperPohja(svg, map = null, defs = null) {
   }, svg);
 }
 
+/*
+ * ============ PERGAMENTTI LAUDAN ULKOPUOLELLE ======================
+ *
+ * Omistaja 2.9.2026, sanatarkasti: *"jos kartta alkaisi näkyä liiasta
+ * leveydestä johtuen kaksi kertaa, niin sivuilla voisi silloin olla
+ * tyhjää. mieluiten itseasiassa jos siinnekin pystyisi generoimaan
+ * samanlaista vaaleampaa paperipohjaa kuin ylhäällä ja alhaalla on.
+ * periaatteessa pystyruuduille voisi tehdä saman ja silloin ylös ja
+ * alas generoituisi vain lisää valkoista kartan tyhjää paperia
+ * jatkeeksi."*
+ *
+ * Ylä- ja alapuolella tuo pohja on jo (paperinPohja): kiertävällä
+ * laudalla se on laudan levyinen ja yhdeksän ruudullista korkea.
+ * Sivuille se ei ulotu, koska <use>-kopio toisi oman pergamenttinsa
+ * päällekkäin. Uloimmalla zoomilla kopio kuitenkin leikataan pois
+ * (js/kartta.js paivitaLaudanKierto), ja juuri silloin sivuille
+ * tarvitaan sama pohja.
+ *
+ * SAUMATTOMUUS TULEE LIUKUVÄRISTÄ, EI TEKSTUURISTA. #paper-pohja-grad
+ * on userSpaceOnUse-yksiköissä (paperiPohjanLiukuvari), joten se on
+ * laudan koordinaateissa täsmälleen sama väri joka pisteessä kuin
+ * arkin alla — ja arkin ulkopuolella liukuväri on jo päättynyt
+ * reunaväriinsä ja jatkuu sinä. Uutta kuvadataa ei siis tarvita:
+ * sama liukuväri, isompi suorakaide.
+ *
+ * Kaksi elementtiä syntyy tässä:
+ *
+ *   1. `rect.paperi-ulkopuoli` — koko näkyvän alan kattava pohja
+ *      LAUDAN JUURIRYHMÄN ULKOPUOLELLA, jotta laudan leikkaus ei
+ *      leikkaa sitä. Se on piilossa (css) kunnes lauta mahtuu
+ *      kokonaan ruudulle.
+ *   2. `clipPath#lauta-rajaus` — arkin levyinen leikkaus, jolla
+ *      laudan sisältö (myös laudan leveyden päähän monistetut merkit)
+ *      pysyy arkilla eikä vuoda paperille.
+ */
+export const LAUDAN_RAJAUS = 'lauta-rajaus';
+
+/** Pergamentin pohja joka suuntaan — myös kiertävällä laudalla. */
+export function paperinUlkopuoli(map) {
+  return paperinPohja({ ...(map ?? {}), kiertava: false });
+}
+
+/**
+ * Ulkopuolen pohja ja laudan leikkaus. Kutsutaan SVG:n juuressa ENNEN
+ * laudan juuriryhmää, jotta pohja jää kaiken alle.
+ *
+ * Liukuväriä ei luoda tässä: sen tekee drawPaperPohja samaan
+ * määrittelylohkoon (id-viittaus ei välitä järjestyksestä).
+ */
+export function drawPaperUlkopuoli(svg, map = null, defs = null) {
+  const maar = defs ?? el('defs', {}, svg);
+  const arkki = paperinPohja(map);
+  const rajaus = el('clipPath', { id: LAUDAN_RAJAUS, clipPathUnits: 'userSpaceOnUse' }, maar);
+  el('rect', {
+    x: arkki.x, y: arkki.y, width: arkki.w, height: arkki.h,
+  }, rajaus);
+  const ulko = paperinUlkopuoli(map);
+  el('rect', {
+    x: ulko.x, y: ulko.y, width: ulko.w, height: ulko.h,
+    class: 'paperi-ulkopuoli',
+    fill: `url(#${POHJAN_LIUKUVARI})`,
+    'pointer-events': 'none',
+  }, svg);
+}
+
 /**
  * Deterministinen 0–1 -arvo merkkijonosta (FNV-1a). Sama piirre saa aina saman
  * pienen poikkeaman, joten kartta näyttää käsin piirretyltä mutta ei väreile.
