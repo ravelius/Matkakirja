@@ -2370,6 +2370,7 @@ function asetaPoltetutTekstiOsumat(ui, s, piilossa) {
       maare(r.tekstiOsuma, 'width', '0');
       maare(r.tekstiOsuma, 'height', '0');
     }
+    ui.poltetutNostovaraukset = [];
     return;
   }
   const avain = `${ui.fokuskohdeAvain}|${s.toFixed(4)}|${nippuAsettelunVersio()}`;
@@ -2378,6 +2379,80 @@ function asetaPoltetutTekstiOsumat(ui, s, piilossa) {
     ui.fokuskohdeTekstiOsumaPaatokset = laskeKohdeNimioPaatokset(ui, s);
   }
   asetaTekstiOsumat(ui, s, ui.fokuskohdeTekstiOsumaPaatokset, true);
+  ui.poltetutNostovaraukset = poltettujenNostojenVaraukset(
+    ui, s, ui.fokuskohdeTekstiOsumaPaatokset,
+  );
+}
+
+/*
+ * ====== LAATTAAN POLTETTU NOSTO ON NIMILADONNAN VARAUS =============
+ *
+ * OMISTAJAN HAVAINTO 2.9.2026 ilta (kuvakaappaus Sofiasta, mittajana
+ * 50 km), sanatarkasti: *"Sofia menee päällekkäin jonkun noston tekstin
+ * kanssa kartalla."*
+ *
+ * ── JUURISYY, JA SE ON SAMA VANHA ─────────────────────────────────
+ *
+ * Nimikerros (js/karttanimet.js) latoo kaikki elävät nimet yhdessä
+ * ladonnassa, ja siksi kaupungin nimi, kohdenimiö ja maastonimi eivät
+ * voi mennä päällekkäin. Mutta POLTETTU nosto ei ole ladonnassa
+ * lainkaan: sen nimeä ei anneta nimikerrokselle (luovutaKohdeNimiot
+ * ohittaa poltetut, jottei sama nimi piirtyisi kahdesti), ja laatan
+ * kuvasta ladonta ei voi lukea mitään. Kartalla on siis kaksi
+ * mustelähdettä, joista kumpikaan ei tiedä toisesta — täsmälleen sama
+ * juurisyy kuin kaksoisnimillä ja pelinappulan alle jääneellä nimellä.
+ *
+ * ── KORJAUS ON ILMOITTAUTUMINEN, KUTEN PELIMERKEILLÄ ──────────────
+ *
+ * Poltetun noston SYMBOLI ja NIMIÖ luovutetaan ladonnan varauksiksi
+ * samaa tietä kuin pelinappula ja kaupungin laatta (js/ui.js
+ * luovutaRuutuvaraukset → js/karttanimet.js asetaRuutuvaraukset).
+ * Kehykset ovat jo laskettuina: napautusalue asettuu juuri siihen
+ * laatikkoon, johon nimiö laattaan poltettiin (asetaTekstiOsumat),
+ * joten varaus ei ole uusi laskenta vaan sama vastaus toiselle
+ * kysyjälle.
+ *
+ * KUMPI VÄISTÄÄ: LAATTA EI VOI. Omistajan sääntö on *"kaupunkinimi
+ * voittaa, muu nimi väistää"*, ja se pätee kaikkeen ELÄVÄÄN musteeseen
+ * — nimikerros latoo kaupungit ennen kohde- ja maastonimiä. Poltettua
+ * kuvaa ei voi siirtää, joten siinä ainoassa parissa väistäjä on
+ * kaupungin nimi. Se on silti oikea lopputulos: kaksi nimeä päällekkäin
+ * ei ole kummankaan nimi.
+ *
+ * ── RAJAUS, JA SE ON TIEDOSSA ─────────────────────────────────────
+ *
+ * VARAUS KATTAA VAIN SEN MAAN, JONKA NOSTOT PELISSÄ OVAT (`ryhmat` =
+ * nykyisenMaanKohteet). Laattapyramidiin on poltettu jokaisen maan
+ * nostot, joten leveässä näkymässä ruudulla on myös naapurimaiden
+ * poltettuja nimiä, joista tämä kerros ei tiedä mitään — mitattu
+ * 2.9.2026 Bulgarian maalehtinäkymässä (mittajana 200 km): *"WIEN"*
+ * leikkasi Wienin oman poltetun noston nimeä, kun taas Sofia väisti
+ * omansa oikein. Korjaus vaatisi naapurimaiden kohdeaineiston
+ * lataamisen kartalle, eikä se ole tämän erän tilaus; luettelossa
+ * (pyramidi.json nostotaso.nostot) on vain tiivisteet, ei paikkoja.
+ *
+ * @returns {Array} laatikot LAUDAN yksiköissä, [{ x0, y0, x1, y1 }]
+ */
+function poltettujenNostojenVaraukset(ui, s, paatokset) {
+  const rivit = [];
+  (ui.fokuskohdeRyhmat ?? []).forEach((r, i) => {
+    if (!r.poltettu) return;
+    const x = r.nippu?.x ?? r.x + (r.sx ?? 0);
+    const y = r.nippu?.y ?? r.y + (r.sy ?? 0);
+    /* Symboli on laatassa aina, nimiö vain jos se sinne mahtui. */
+    const sade = KOHDE_SYMBOLI_R * s;
+    if (sade > 0) {
+      rivit.push({
+        x0: x - sade, y0: y - sade, x1: x + sade, y1: y + sade,
+      });
+    }
+    const kehys = paatokset?.kehykset?.get(i);
+    if (!kehys) return;
+    rivit.push({
+      x0: kehys.x1, y0: kehys.y1, x1: kehys.x2, y1: kehys.y2,
+    });
+  });
+  return rivit;
 }
 
 /**
@@ -2588,13 +2663,22 @@ export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
     ? nostoladontaKattoPorras(KOHDE_SYMBOLI_SKAALA * merkkiSkaala,
       ui.nakyvaAlue?.()?.skaala) / KOHDE_SYMBOLI_SKAALA
     : merkkiSkaala;
-  if (merkkiSkaala > 0) {
-    if (karttanimetLatovat(ui)) {
-      luovutaKohdeNimiot(ui, merkkiSkaala, piilossa, merkkiPiirto);
-      // Laattaan poltetut nimet saavat silti napautusalueensa tästä
-      // kerroksesta (ks. asetaPoltetutTekstiOsumat).
-      asetaPoltetutTekstiOsumat(ui, merkkiSkaala, piilossa);
-    } else paivitaKohdeNimiot(ui, merkkiSkaala);
+  if (merkkiSkaala > 0 && karttanimetLatovat(ui)) {
+    luovutaKohdeNimiot(ui, merkkiSkaala, piilossa, merkkiPiirto);
+    // Laattaan poltetut nimet saavat silti napautusalueensa tästä
+    // kerroksesta, ja SAMALLA ne luovutetaan nimiladonnan varauksiksi
+    // (ks. asetaPoltetutTekstiOsumat, poltettujenNostojenVaraukset).
+    asetaPoltetutTekstiOsumat(ui, merkkiSkaala, piilossa);
+  } else {
+    if (merkkiSkaala > 0) paivitaKohdeNimiot(ui, merkkiSkaala);
+    /*
+     * VARAUS EI SAA JÄÄDÄ VOIMAAN ILMAN LAATTAA. Vanhoilla laudoilla ja
+     * ennen ensimmäistä mittakaavaa poltettuja nostoja ei ole, ja
+     * edellisen maan laatikot osoittaisivat väärään paikkaan — sama
+     * sääntö kuin pelimerkkien varauksilla laudan vaihtuessa
+     * (js/karttanimet.js unohdaKarttanimet).
+     */
+    ui.poltetutNostovaraukset = [];
   }
   /*
    * NIMIKERROKSEN NAPAUTUS TAKAISIN TÄNNE (omistaja 1.9.2026 ilta,

@@ -4665,10 +4665,46 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
   pointer-events: auto;
   cursor: pointer;
 }
+/* ---------------------------------------------------------------------------
+   ELÄVÄN NIMIKERROKSEN MUSTE ON MITATTU POLTETUSTA LAATASTA
+   (omistaja 2.9.2026 ilta)
+   ---------------------------------------------------------------------------
+   Sanatarkasti: "nuo ei poltetut kaupunkien nimet saisi olla vähän
+   haaleammalla sävyllä jotta sopisivat noiden poltettujen tekstien kanssa
+   paremmin."
+
+   MIKSI SÄVYT EROSIVAT. Poltettu muste kulkee patinapassien läpi
+   (tools/patina.mjs RESEPTIT.nosto → SAVYT: musteen sävytys, haalennus
+   0,13 ja sävykäyrä 0,88 x L + 21), elävä kerros ei kulje minkään läpi.
+   Sama lähtömuste päätyy siis kahteen eri sävyyn, ja ero näkyy juuri
+   siinä näkymässä, jossa molemmat ovat samaan aikaan ruudulla.
+
+   LUKU ON MITATTU EIKÄ ARVATTU. Nostotason laatasta
+   (julisteet/pyramidi/2026-09-02e/nostot/z7/93/38.webp) luettuna, neljä
+   eri kohtaa ja kunkin 40 tumminta pikseliä:
+
+     Plovdiv (nimiö)          rgb(102, 88, 74)   alfa 234
+     Levski (nimiö)           rgb(103, 88, 73)   alfa 230
+     Boyanan kirkko (nimiö)   rgb(104, 89, 74)   alfa 235
+     Plovdivin symboli        rgb(107, 89, 71)   alfa 237
+     Musalan kolmio           rgb( 91, 79, 67)   alfa 205
+
+   Nimiöiden keskiarvo on rgb(103, 88, 73) alfalla 0,92 — ja se on tämän
+   muuttujan arvo. Entinen elävä muste oli #4a3421 eli rgb(74, 52, 33)
+   TÄYDELLÄ peitolla: tummempi, kylläisempi ja kontrastisempi kuin sama
+   nimi laatassa.
+
+   YKSI MUUTTUJA, EI VIITTÄ VAKIOTA. Kaikki tämän kerroksen muste tulee
+   samasta luvusta, ja vain PEITTO vaihtelee perheittäin — juuri kuten
+   laatassa (symboli 0,93, nimiö 0,92, kolmion veto 0,80). Jos laatan
+   patina joskus muuttuu, tässä on yksi paikka, johon uusi mittaus
+   kirjoitetaan.
+   --------------------------------------------------------------------------- */
+:root { --karttamuste: 103, 88, 73; }
 .karttanimi {
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   text-rendering: optimizeLegibility;
-  fill: #4a3421;
+  fill: rgba(var(--karttamuste), 0.92);
   stroke: none;
   dominant-baseline: middle;
 }
@@ -4677,16 +4713,24 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
 /*
    KOHTEEN NIMI ON KAUPUNGIN NIMEN SUKUA, EI OMA KIELENSÄ (omistajan
    päätös 30.8.2026: "sama ladonta kuin paikannimillä"). Sama kirjasin
-   ja sama koko tulevat jo .karttanimestä ja elementiltä; tässä on vain
-   hitusen kevyempi muste, jotta pelin oma sisältö erottuu kartan
-   perusrakenteesta ilman että se huutaa.
+   tulee jo .karttanimestä ja koko elementiltä.
+
+   MUSTE ON NYT TÄSMÄLLEEN SAMA KUIN KAUPUNGIN NIMELLÄ (2.9.2026), ja se
+   on päinvastainen päätös kuin tässä ennen luki ("hitusen kevyempi
+   muste, jotta pelin oma sisältö erottuu"). Syy on mittaus: elävän
+   noston nimi ja POLTETUN noston nimi ovat samassa kuvassa vierekkäin,
+   ja niiden on oltava saman värisiä tai kartalla on kaksi
+   mustejärjestelmää (sama vaatimus kuin koolla, savuke-syvazoomi vartio
+   10). Kaupungista kohde erottuu koossa (KOKO.kaupunki 12,5-14 vs.
+   KOKO.kohde 8,5) ja kirjainlajissa (harvennettu kapiteeli vs. kursiivi)
+   — ne kertovat eron ilman että muste tekee siitä kaksi eri karttaa.
 
    HALO ON POIS TARKOITUKSELLA. Entinen kohdenimiö vedosti nimensä
    taakse pergamenttia, koska se ladottiin merkin kylkeen ottamatta
    naapureista selvää. Ladonta hoitaa nyt saman asian oikein päin:
    nimi asetetaan sinne missä on tilaa, eikä sen tarvitse raivata
    tilaa alleen. */
-.karttanimi-kohde { fill: rgba(74, 52, 33, 0.92); }
+.karttanimi-kohde { fill: rgba(var(--karttamuste), 0.92); }
 /*
    NOSTON VIIVA — merkiltä nimelle. Kartan kevyttä apuviivastoa: ohut,
    haalistunut muste, lyhyet katkot, ei nuolenpäitä. Paksuus ja katkot
@@ -4697,10 +4741,17 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
   stroke: rgba(96, 74, 48, 0.42);
   stroke-linecap: round;
 }
+/*
+   MERKIT SAMASTA MUSTEESTA KUIN NIMET (2.9.2026). Nimi ja sen merkki
+   ovat sama merkintä kartalla; jos vain nimi haalenisi, piste jäisi
+   nimeään tummemmaksi ja kartalla lukisi kaksi eri painovuotta. Peitot
+   ovat laatasta mitatut (symboli 0,92, kolmion veto 0,80); renkaan
+   0,75 on entinen, koska kaksoisrenkaan kuuluu olla hiuksenohut.
+   Poikkeus on järven nimi yllä: se on veden mustetta eikä maan. */
 .karttamerkki { pointer-events: none; }
-.karttamerkki-piste { fill: rgba(58, 40, 25, 0.9); stroke: none; }
-.karttamerkki-rengas { fill: none; stroke: rgba(58, 40, 25, 0.75); }
-.karttamerkki-vuori { fill: none; stroke: rgba(74, 52, 33, 0.78); }
+.karttamerkki-piste { fill: rgba(var(--karttamuste), 0.92); stroke: none; }
+.karttamerkki-rengas { fill: none; stroke: rgba(var(--karttamuste), 0.75); }
+.karttamerkki-vuori { fill: none; stroke: rgba(var(--karttamuste), 0.8); }
 
 .maastonimi { pointer-events: none; }
 .maastonimi-teksti {
