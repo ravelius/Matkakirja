@@ -1,0 +1,336 @@
+/*
+ * AIKAJANALINSSI (js/aikajana.js): kello, filminauha, ilmiöpaneeli ja
+ * kartan valot.
+ *
+ * OMA TIEDOSTO, EI styles.css — sama syy kuin fokusvirralla ja radiolla:
+ * yhteen tiedostoon ei kirjoita kaksi työvaihetta. Muuttujat ovat
+ * styles.css:n :root-muuttujia, joten paletti on pelin oma.
+ *
+ * KAIKKI VAIHDOKSET LIUKUEN (omistaja 2.9.2026 ilta: *"kaikki vaihdokset
+ * pitäisi mennä nätisti liukuen ja animoiden"*). Kortit liukuvat
+ * paikasta toiseen transform-siirtymällä, paneeli ristihäivyttää,
+ * kello rullaa ja valo syttyy kerran. prefers-reduced-motion nollaa
+ * kestot.
+ *
+ * Kartan valot ovat SVG:ssä (js/aikajana.js rakennaValot) ja niiden
+ * syttyminen on KERRAN laukeava siirtymä — ei jatkuvaa sykettä kartan
+ * päällä (docs/moduulit/linssit.md 1.7).
+ */
+
+.aikajana {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  pointer-events: none;
+  font-family: var(--font-luku);
+  color: #211d18;
+  --aikajana-paperi: #f5f0e2;
+  --aikajana-reuna: rgba(122, 85, 20, 0.32);
+  --aikajana-varjo: 0 8px 26px rgba(0, 0, 0, 0.3);
+  --aikajana-kesto: 0.62s;
+  --aikajana-kaari: cubic-bezier(0.22, 0.8, 0.28, 1);
+  --aikajana-kortti-w: clamp(84px, 13vw, 132px);
+}
+.aikajana > * { pointer-events: auto; }
+
+/* ==================== YLÄRIVI: KELLO ==================== */
+
+.aikajana-ylarivi {
+  position: absolute;
+  top: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.35rem 0.6rem 0.35rem 0.8rem;
+  border-radius: 12px;
+  border: 1px solid var(--aikajana-reuna);
+  background: var(--aikajana-paperi);
+  box-shadow: var(--aikajana-varjo);
+  max-width: calc(100% - 1.2rem);
+}
+.aikajana-otsikot { display: flex; flex-direction: column; min-width: 0; }
+.aikajana-otsikko {
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b4d1c;
+  white-space: nowrap;
+}
+.aikajana-paikka {
+  font-size: 0.86rem;
+  font-style: italic;
+  color: #3d3126;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 14rem;
+}
+
+/* Rullaava vuosiluku: neljä rullaa, joissa kymmenen numeroa allekkain. */
+.aikajana-kello {
+  display: inline-flex;
+  gap: 2px;
+  padding: 0.15rem 0.35rem;
+  border: 1px solid rgba(70, 51, 31, 0.5);
+  border-radius: 6px;
+  background: #2a1f16;
+  color: #f3e6d0;
+  font-family: var(--font-type);
+  font-size: clamp(1.35rem, 3.4vw, 1.9rem);
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.55);
+}
+.aikajana-kello:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.aikajana-rulla {
+  position: relative;
+  display: inline-block;
+  width: 0.72em;
+  height: 1.1em;
+  overflow: hidden;
+  border-radius: 3px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.35));
+}
+.aikajana-rullanauha {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.34s var(--aikajana-kaari);
+  will-change: transform;
+}
+.aikajana-numero {
+  display: block;
+  height: 1.1em;
+  line-height: 1.1em;
+  text-align: center;
+}
+.aikajana.tauolla .aikajana-kello { color: var(--accent); }
+
+.aikajana-ohjaimet { display: flex; gap: 0.3rem; }
+.aikajana-nappi {
+  font-family: var(--font-type);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  padding: 0.3rem 0.55rem;
+  border: 1px solid rgba(70, 51, 31, 0.45);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.35);
+  color: #3d3126;
+  cursor: pointer;
+}
+.aikajana-nappi:hover { background: rgba(217, 161, 59, 0.22); }
+.aikajana-nappi:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.aikajana-sulje { border-style: dashed; }
+
+/* ==================== ILMIÖPANEELI ==================== */
+
+.aikajana-ilmio {
+  position: absolute;
+  top: 4.4rem;
+  right: 0.6rem;
+  width: min(21rem, 46%);
+  min-height: 9rem;
+  border-radius: 12px;
+  border: 1px solid var(--aikajana-reuna);
+  background: var(--aikajana-paperi);
+  box-shadow: var(--aikajana-varjo);
+  overflow: hidden;
+}
+.aikajana-ilmio-sivu {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity var(--aikajana-kesto) ease, transform var(--aikajana-kesto) var(--aikajana-kaari);
+}
+.aikajana-ilmio-sivu.esilla { position: relative; opacity: 1; transform: none; }
+.aikajana-ilmio-sivu.poistuu { position: absolute; opacity: 0; transform: translateY(-10px); }
+.aikajana-ilmiokuva {
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  background: #e6dcc3;
+  overflow: hidden;
+}
+.aikajana-ilmiokuva img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.aikajana-ilmio-teksti { padding: 0.5rem 0.7rem 0.65rem; }
+.aikajana-ilmio-henkilo {
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b4d1c;
+}
+.aikajana-ilmio-otsikko {
+  margin: 0.1rem 0 0.25rem;
+  font-size: 1.12rem;
+  line-height: 1.2;
+}
+.aikajana-ilmio-selite { margin: 0; font-size: 0.9rem; line-height: 1.4; }
+.aikajana-ilmio-kuvateksti { margin-top: 0.35rem; font-size: 0.72rem; color: #6b5a44; font-style: italic; }
+.aikajana-lue {
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  font-family: var(--font-type);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  padding: 0.28rem 0.55rem;
+  border: 1px solid rgba(70, 51, 31, 0.45);
+  border-radius: 8px;
+  background: rgba(217, 161, 59, 0.18);
+  color: #3d3126;
+  cursor: pointer;
+}
+.aikajana-lue:hover { background: rgba(217, 161, 59, 0.32); }
+
+/* ==================== FILMINAUHA ==================== */
+
+.aikajana-nauha {
+  position: absolute;
+  left: 0.6rem;
+  right: 0.6rem;
+  bottom: 0.6rem;
+  height: calc(var(--aikajana-kortti-w) * 1.62);
+  overflow: hidden;
+  border-radius: 12px;
+  /* Nauha itsessään on läpinäkyvä kartan päällä: kortit ovat paperia. */
+  pointer-events: none;
+}
+.aikajana-nauha.tyhja { opacity: 0; }
+
+.aikajana-kortti {
+  --paikka: 0;
+  --mitta: 1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: var(--aikajana-kortti-w);
+  padding: 0;
+  border: 1px solid var(--aikajana-reuna);
+  border-radius: 10px;
+  background: var(--aikajana-paperi);
+  box-shadow: var(--aikajana-varjo);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  pointer-events: auto;
+  transform-origin: left bottom;
+  /* Paikka: seuraava (0) vasemmalla, nykyinen (1), menneet 2, 3, 4… */
+  transform:
+    translateX(calc(var(--paikka) * (var(--aikajana-kortti-w) * 0.86 + 12px) + 6px))
+    scale(var(--mitta));
+  transition:
+    transform var(--aikajana-kesto) var(--aikajana-kaari),
+    opacity var(--aikajana-kesto) ease,
+    filter var(--aikajana-kesto) ease;
+  will-change: transform, filter;
+  overflow: hidden;
+}
+.aikajana-kortti:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.aikajana-kortti.seuraava {
+  filter: blur(2.2px) brightness(0.62) saturate(0.7);
+  opacity: 0.9;
+}
+.aikajana-kortti.nykyinen {
+  filter: none;
+  opacity: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.42), 0 0 0 2px rgba(217, 161, 59, 0.55);
+}
+.aikajana-kortti.mennyt { filter: saturate(0.85); opacity: 0.92; }
+.aikajana-kortti.tulossa,
+.aikajana-kortti.piilossa {
+  opacity: 0;
+  pointer-events: none;
+  filter: blur(4px);
+}
+.aikajana-kortti.piilossa { transform: translateX(200vw) scale(0.5); }
+.aikajana-kortti.paalu { background: #e9dcb8; border-style: dashed; }
+
+.aikajana-muotokuva {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  background: #e6dcc3;
+  overflow: hidden;
+}
+.aikajana-muotokuva img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.aikajana-kuvakehys.tyhja {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(217, 161, 59, 0.28), rgba(0, 0, 0, 0) 70%),
+    #e6dcc3;
+}
+.aikajana-monogrammi {
+  font-family: var(--font-type);
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  color: #6b4d1c;
+}
+.aikajana-korttiteksti { padding: 0.3rem 0.4rem 0.4rem; }
+.aikajana-kortti-vuosi {
+  font-family: var(--font-type);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: #6b4d1c;
+}
+.aikajana-kortti-otsikko {
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-top: 0.1rem;
+}
+.aikajana-kortti-henkilo {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: #3d3126;
+  margin-top: 0.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.aikajana-kortti.nykyinen .aikajana-kortti-otsikko { font-size: 0.86rem; }
+
+/* Kaaren lopussa nauha kaventaa nykyisen kortin erottelun. */
+.aikajana.lopussa .aikajana-kortti.nykyinen { box-shadow: var(--aikajana-varjo); }
+
+/* ==================== VALOT KARTALLA (SVG) ==================== */
+
+.aikajana-valot { pointer-events: none; }
+.aikajana-valo-sisus {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.9s cubic-bezier(0.2, 0.9, 0.3, 1.35), opacity 0.6s ease;
+}
+.aikajana-valo.palaa .aikajana-valo-sisus { transform: scale(1); opacity: 1; }
+.aikajana-valo-hehku { fill: rgba(255, 196, 82, 0.28); }
+.aikajana-valo-keha { fill: rgba(255, 214, 120, 0.55); }
+.aikajana-valo-ydin { fill: #fff3c4; stroke: #b8801c; stroke-width: 0.8; }
+.aikajana-valo.nykyinen .aikajana-valo-hehku { fill: rgba(255, 196, 82, 0.5); }
+.aikajana-valo.nykyinen .aikajana-valo-sisus { transform: scale(1.35); }
+
+/* ==================== PUHELIN ==================== */
+
+@media (max-width: 640px) {
+  .aikajana { --aikajana-kortti-w: 78px; }
+  .aikajana-ylarivi { gap: 0.45rem; padding: 0.3rem 0.45rem; }
+  .aikajana-otsikko { display: none; }
+  .aikajana-paikka { max-width: 7rem; font-size: 0.78rem; }
+  .aikajana-ilmio { top: 3.8rem; width: min(17rem, 62%); }
+  .aikajana-ilmio-selite { font-size: 0.82rem; }
+  .aikajana-nappi { padding: 0.28rem 0.42rem; font-size: 0.68rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aikajana { --aikajana-kesto: 0.01s; }
+  .aikajana-rullanauha, .aikajana-valo-sisus { transition: none; }
+}
