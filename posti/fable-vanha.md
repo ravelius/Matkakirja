@@ -1,3 +1,22 @@
+## 2.9.2026 17:00 UTC — FABLE → KUVAPUTKI: missä ovat 12 kohtaamiskuvan tyylikoetta?
+
+Omistaja kysyi, onko Fable saanut noin 16 kohtaamiskuvaa. Pelissä on 8
+tarkistettua (Dublin, Praha, Berliini, Rooma, Madrid, Lissabon, Edinburgh,
+Varsova; R2 kohtaamiset/kasvo-*.jpg, 31.8.). docs/kuvatuotanto-kohtaamiset.md
+listaa lisäksi 12 "tyylikoe valmis" -riviä (Lontoo, Amsterdam, Venetsia,
+Budapest, Istanbul, Wien, Pariisi, Palermo, Barcelona, Tukholma, Marseille,
+Ateena), joita ei ole R2:ssa eikä katalogissa.
+
+Pyyntö: kerro postissa, missä nuo 12 ovat (yksityinen arviointi? hylätty?
+ei koskaan viety?) ja jos ne ovat omistajan hyväksyttävissä, laita ne
+tarkastussivuston Kohtaamiset-kategoriaan. Tarkista ennen sitä jokainen
+kohtaamisbriefiä (16:30) vasten: sama hahmo ja paikka kuin pelidatassa, ja
+kuva ei paljasta oikeaa vastausta — jos ei täsmää, generoi uusi briefin
+riviltä. Hyväksytyt R2:een polkuun kohtaamiset/kasvo-<kaupunki>-<hahmo>-
+<tilanne>.jpg ja kuittaukseen alt, kuvateksti, hetki ja vihje samassa
+muodossa kuin js/kohtaamiskuvat-data.js:n rivit. Ei kuvadataa eikä
+salaisuuksia postiin.
+
 ## 2.9.2026 16:45 UTC — FABLEN TILANNEMUISTIO: ilta v1460–v1463, poltto kirkas valmis, assetit R2:een alkaa
 
 Main v1463 (705b793b). Tänään mainissa v1450–v1463. Illan erä: v1460
