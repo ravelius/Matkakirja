@@ -4258,13 +4258,32 @@ test('porraszoomaus toimii kaikilla laudoilla ja ruuduilla', () => {
   // Zoomatessa keskipiste luetaan ennen tason vaihtoa, muuten kartta
   // hyppäisi laudan keskelle joka painalluksella.
   assert.match(funktio, /nykyinenKeskipiste\(\)/);
-  // Skaala tulee portaikosta eikä kiinteästä vakiosta. Kiertävällä
-  // kartalla se kulkee vielä rajaaSkaalan läpi, jottei maailma mahtuisi
-  // ruudulle kahdesti — mutta portaikko on yhä lähde, ja se on tämän
-  // testin asia.
+  // Skaala tulee portaikosta eikä kiinteästä vakiosta.
   assert.match(ui, /yleiskuva \* this\.zoomiKerroin/);
-  assert.match(ui, /rajaaSkaala\(yleiskuva \* this\.zoomiKerroin/,
-    'kiertävän kartan loitonnusraja puuttuu lähikuvasta');
+  /*
+   * SAUMAVARA EI ENÄÄ NOSTA LÄHIKUVAN MITTAKAAVAA (2.9.2026).
+   *
+   * Tässä vaadittiin ennen `rajaaSkaala(yleiskuva * this.zoomiKerroin`,
+   * eli kiertävällä kartalla mittakaava nostettiin arvoon
+   * paneeli / (lauta x 0,97) — kolme prosenttia yli sen, mihin lauta
+   * juuri mahtuu. Omistaja 2.9.2026: *"Jos ruutu on vaakamuotoinen,
+   * niin silloin pitäisi pystyä zoomaamaan ulos niin paljon, että
+   * kartta näkyy kokonaisena. nyt jostain syystä yläosa hyppää
+   * näkymättömiin."* — juuri tuo nosto vei vaakaruudulla laudan ylä-
+   * ja alareunan ruudun ulkopuolelle.
+   *
+   * Kaksoiskuvan estää nyt leikkaus eikä mittakaava: kun näkymä on
+   * lautaa leveämpi, kierron kopio piilotetaan ja lauta leikataan
+   * arkin levyiseksi (paivitaLaudanKierto + css .lauta-kokonaan).
+   * Mitattu ja vartioitu tools/savukkeet/savuke-uloin-zoomi.mjs.
+   */
+  assert.doesNotMatch(ui, /rajaaSkaala\(yleiskuva \* this\.zoomiKerroin/,
+    'saumavara nostaa taas lähikuvan mittakaavaa — lauta ei mahdu ruudulle');
+  assert.match(ui, /this\.paivitaLaudanKierto\(paneW \/ skaala\)/,
+    'lähikuva ei enää kerro, mahtuuko lauta kokonaan ruudulle');
+  // Uloin zoomi (kerroin 1) on koko laudan sovitus pienellä varalla.
+  assert.match(ui, /Math\.min\(paneW \/ box\.w, paneH \/ box\.h\) \* KOKOLAUDAN_VARA/,
+    'yleiskuvan mittakaava ei ole enää koko laudan sovitus');
 });
 
 test('maailmankartta: sauman yli kulkeva reitti piirtyy yhtenäisenä', () => {

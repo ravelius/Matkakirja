@@ -229,6 +229,7 @@ import {
   drawLand,
   drawPaperOverlay,
   drawPaperPohja,
+  drawPaperUlkopuoli,
   drawParchment,
   drawTerrain,
   drawWaves,
@@ -5744,6 +5745,15 @@ export class UI {
     this.svg.textContent = '';
 
     const maarittelyt = drawDefs(this.svg);
+    /*
+     * PERGAMENTTI LAUDAN ULKOPUOLELLE ja laudan leikkaus (js/mapart.js
+     * drawPaperUlkopuoli). Molemmat ovat laudan juuriryhmän
+     * ULKOPUOLELLA — pohja siksi, ettei leikkaus leikkaisi sitä, ja
+     * leikkaus siksi, että se on juuriryhmän oma rajaus. Kumpikin on
+     * lepotilassa piilossa ja astuu voimaan vasta uloimmalla zoomilla
+     * (css .lauta-kokonaan, js/kartta.js paivitaLaudanKierto).
+     */
+    drawPaperUlkopuoli(this.svg, pack.map, maarittelyt);
     // Kaikki piirretään juuriryhmään: esikatselu siirtää ryhmää, ei SVG:tä,
     // jolloin elementin taakse ei paljastu tyhjää taustaa raahatessa.
     const root = el('g', { class: 'board-root' }, this.svg);
