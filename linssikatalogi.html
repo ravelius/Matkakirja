@@ -130,13 +130,14 @@
   <header class="otsake">
     <div class="yla">Matkakirja ja unohdettu aarre · aikajanalinssit</div>
     <h1>Linssikatalogi</h1>
-    <p class="johdanto">Aikajanalinssit: ryhmät A–G aiheittain, H–L maanosittain. Aluelinssit omalla välilehdellä: valtakunnat, sodat, imperiumit ja leviämiset. Aiheita, joista voi rakentaa saman aikajanalinssin kuin <b>Keksinnöt Euroopassa 1769–1928</b>: kello rullaa, valo syttyy kaupunkiin ja jää palamaan, filminauha ja ilmiöpaneeli kertovat pysäkin. <span class="lainaus">”Hiotaan vain ensin tuo linssi mahdollisimman hyväksi, niin sitten voidaan monistaa samaa logiikkaa muihinkin.”</span></p>
+    <p class="johdanto">Aikajanalinssit: ryhmät A–G aiheittain, H–L maanosittain. Aluelinssit: valtakunnat, sodat, imperiumit ja leviämiset. Virtalinssit: siirtomaat, kauppa, ihmiset ja kaapelit maailmankartalla. Aiheita, joista voi rakentaa saman aikajanalinssin kuin <b>Keksinnöt Euroopassa 1769–1928</b>: kello rullaa, valo syttyy kaupunkiin ja jää palamaan, filminauha ja ilmiöpaneeli kertovat pysäkin. <span class="lainaus">”Hiotaan vain ensin tuo linssi mahdollisimman hyväksi, niin sitten voidaan monistaa samaa logiikkaa muihinkin.”</span></p>
     <div class="luvut" id="luvut"></div>
   </header>
 
   <nav class="valilehdet" role="tablist" aria-label="Linssityyppi">
     <button type="button" role="tab" id="tab-aikajana" aria-selected="true" aria-controls="aikajana">Aikajanalinssit</button>
     <button type="button" role="tab" id="tab-alue" aria-selected="false" aria-controls="alue">Aluelinssit</button>
+    <button type="button" role="tab" id="tab-virta" aria-selected="false" aria-controls="virta">Virtalinssit</button>
   </nav>
 
   <div class="valilehti" id="aikajana" role="tabpanel" aria-labelledby="tab-aikajana">
@@ -189,6 +190,22 @@
       </dl>
     </div>
     <div id="alueryhmat"></div>
+  </div>
+
+  <div class="valilehti" id="virta" role="tabpanel" aria-labelledby="tab-virta" hidden>
+    <div class="moottori">
+      <h2>Kolmas moottori: virrat maailmankartalla</h2>
+      <p>Omistaja 2.9.2026: <span class="lainaus">”visuaalisesti voimakkain linssi jonka pohjana olisi koko maailmankartta ja aiheena siirtomaat … salamanisku merireittiä pitkin … sen jälkeen merireitille piirtyisi pieniä veneitä jotka kuljettaisivat banaania, teetä, yms.”</span> Kello kulkee vuosina kuten muissa, mutta kartalla liikkuu jatkuvasti satoja pieniä merkkejä reittejä pitkin: tämä on hiukkasmoottori, ei kohde- eikä aluepiirto.</p>
+      <dl>
+        <dt>Pohja</dt><dd>Koko maailmankartta (pelin maailmanlauta) yksinkertaistettuna: rannat, merireitit kaarina.</dd>
+        <dt>Isku</dt><dd>Sinä vuonna, kun vieras valta alistaa alueen ensi kertaa, salama kulkee merireittiä emämaasta alueelle ja alue saa emämaan värin. Ääni: jyrähdys.</dd>
+        <dt>Virta</dt><dd>Iskun jälkeen reitille syntyy laivoja, joiden määrä ja lasti seuraavat vuosia: sokeri, tee, mausteet, puuvilla, kumi, banaani, hopea, turkikset, ja rehellisesti myös orjalaivat kolmiokaupan aikana. Virta loppuu, kun kauppa loppui tai alue itsenäistyi.</dd>
+        <dt>Ääni</dt><dd>Satama-ambienssi, laivan torvi, ja kuulutus megafonista pysäkeillä (”Laiva on lastattu teellä. Kalkutta–Lontoo, 1840”). Kuulutukset generoidaan pelin lukijaäänellä etukäteen, ei ajossa.</dd>
+        <dt>Tekniikka</dt><dd>Canvas-kerros kartan päällä (M7+-linssialusta): sadat hiukkaset reittikäyrillä, ei DOM-elementtejä. Sama kello, filminauha ja ilmiöpaneeli kuin muissa linsseissä.</dd>
+        <dt>Aineisto</dt><dd>Noin 60 aluetta, 8 emämaata, ensimmäisen alistuksen vuosi ja itsenäistyminen; kauppatavarat kausittain (Wikipedia + talouden historian lähteet, tarkistetaan). Virtojen suuruus suhteellinen, ei tonnimäärä.</dd>
+      </dl>
+    </div>
+    <div id="virtaryhmat"></div>
   </div>
 
   <footer>Lähde: docs/linssikatalogi.md · päivitetty 2.9.2026 · tilat: valmis, rakenteilla, seuraava, idea</footer>
@@ -328,6 +345,26 @@ const ALUEET = [
   ]},
 ];
 
+const VIRRAT = [
+  { k: 'S', nimi: 'Siirtomaat ja kauppavirrat', kuvaus: 'Salama iskee, sitten laivat kulkevat. Omistajan kolmas linssi.', linssit: [
+    { id: 'S1', nimi: 'Siirtomaat', alue: 'maailma', kaari: '1415 – 1960', pysakit: 'Ceuta 1415 · Goa 1510 · Hispaniola · Batavia 1619 · Kalkutta · Kap 1652 · Sydney 1788 · Algeria 1830 · Kongo 1885 · Intia 1947 · Afrikka 1960', tila: 'seuraava', huom: 'Omistajan esimerkki: salama emämaasta alueelle, sitten lastilaivat vuosien mukaan.' },
+    { id: 'S2', nimi: 'Kolmiokauppa', alue: 'Atlantti', kaari: '1500 – 1867', pysakit: 'Elmina · Liverpool · Nantes · Karibia · Bahia · Charleston · kielto 1807 · viimeinen laiva 1867', tila: 'seuraava', huom: 'Orjalaivat näytetään rehellisesti omana virtanaan.' },
+    { id: 'S3', nimi: 'Maustereitit ja teekauppa', alue: 'Intian valtameri – Eurooppa', kaari: '1500 – 1900', pysakit: 'Molukit · Malakka · Kanton · Kalkutta · Suez 1869 · teekilpalaivat 1866', tila: 'idea' },
+    { id: 'S4', nimi: 'Hopea ja kulta', alue: 'Amerikat – Eurooppa – Aasia', kaari: '1545 – 1900', pysakit: 'Potosí 1545 · Manilan galeonit · Sevilla · kultaryntäykset 1849, 1851, 1886', tila: 'idea' },
+    { id: 'S5', nimi: 'Turkikset ja valaat', alue: 'Pohjoinen', kaari: '1600 – 1900', pysakit: 'Hudsonin lahti · Siperia · Huippuvuoret · Nantucket · Beringinmeri', tila: 'idea' },
+  ]},
+  { k: 'T', nimi: 'Ihmiset liikkuvat', kuvaus: 'Sama hiukkasmoottori, lastina ihmisiä.', linssit: [
+    { id: 'T1', nimi: 'Siirtolaisuus Amerikkaan', alue: 'Eurooppa – Amerikat', kaari: '1840 – 1914', pysakit: 'Irlannin nälänhätä 1845 · Bremen · Liverpool · Ellis Island 1892 · Hanko–New York', tila: 'seuraava', huom: 'Suomalaiset siirtolaiset mukana.' },
+    { id: 'T2', nimi: 'Pyhiinvaellukset', alue: 'maailma', kaari: 'vuodenkierto', pysakit: 'Santiago · Mekka · Varanasi · Jerusalem', tila: 'idea', huom: 'Aikajanalinssin A6 virtaversio.' },
+    { id: 'T3', nimi: 'Siperian karkotukset ja asutus', alue: 'Venäjä', kaari: '1590 – 1917', pysakit: 'Tobolsk · Irkutsk · Sahalin · rata 1891', tila: 'idea' },
+  ]},
+  { k: 'U', nimi: 'Verkot ja viestit', kuvaus: 'Virta on signaali tai kaapeli, ei laiva.', linssit: [
+    { id: 'U1', nimi: 'Sähkösanomakaapelit', alue: 'maailma', kaari: '1851 – 1902', pysakit: 'Dover–Calais 1851 · Atlantti 1866 · Intia 1870 · Australia 1872 · Tyynimeri 1902', tila: 'seuraava', huom: 'Pelin sähkeet kulkevat näitä; 1873 keskellä.' },
+    { id: 'U2', nimi: 'Postireitit ja höyrylinjat', alue: 'maailma', kaari: '1840 – 1914', pysakit: 'P&O · Cunard · Suez · Fogg 1872', tila: 'idea' },
+    { id: 'U3', nimi: 'Muuttolinnut', alue: 'maailma', kaari: 'vuodenkierto', pysakit: 'kurjet · haarapääskyt · valaat', tila: 'idea', huom: 'Sama moottori kuin F2.' },
+  ]},
+];
+
 const TILAT = { valmis: 'valmis', rakenteilla: 'rakenteilla', seuraava: 'seuraava', idea: 'idea' };
 function piirraRyhmat(juuri, ryhmat) {
 for (const r of ryhmat) {
@@ -345,10 +382,11 @@ for (const r of ryhmat) {
 }
 piirraRyhmat(document.getElementById('ryhmat'), RYHMAT);
 piirraRyhmat(document.getElementById('alueryhmat'), ALUEET);
-const kaikki = [...RYHMAT, ...ALUEET].flatMap((r) => r.linssit);
+piirraRyhmat(document.getElementById('virtaryhmat'), VIRRAT);
+const kaikki = [...RYHMAT, ...ALUEET, ...VIRRAT].flatMap((r) => r.linssit);
 const laske = (t) => kaikki.filter((l) => l.tila === t).length;
 document.getElementById('luvut').innerHTML =
-  `<span><b>${RYHMAT.flatMap((r) => r.linssit).length}</b>aikajanalinssiä</span><span><b>${ALUEET.flatMap((r) => r.linssit).length}</b>aluelinssiä</span><span><b>${laske('valmis')}</b>valmis</span><span><b>${laske('seuraava')}</b>seuraava</span><span><b>${laske('idea')}</b>idea</span>`;
+  `<span><b>${RYHMAT.flatMap((r) => r.linssit).length}</b>aikajanalinssiä</span><span><b>${ALUEET.flatMap((r) => r.linssit).length}</b>aluelinssiä</span><span><b>${VIRRAT.flatMap((r) => r.linssit).length}</b>virtalinssiä</span><span><b>${laske('valmis')}</b>valmis</span><span><b>${laske('seuraava')}</b>seuraava</span><span><b>${laske('idea')}</b>idea</span>`;
 document.querySelectorAll('nav.suodatin button').forEach((b) => b.addEventListener('click', () => {
   document.querySelectorAll('nav.suodatin button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
   const t = b.dataset.tila;
