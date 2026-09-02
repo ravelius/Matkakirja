@@ -1,0 +1,148 @@
+name: Vie hyväksytyt 5 keksintökuvaa R2:een 2026-09-03
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/vie-hyvaksytyt-5-keksintokuvaa-2026-09-03.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vie-hyvaksytyt-5-keksintokuvaa-2026-09-03
+  cancel-in-progress: false
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      DRIVE_AVAIN: ${{ secrets.SAMIREIVINEN_DRIVE_API }}
+      R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_AMPARI: ${{ secrets.R2_BUCKET }}
+      JULKINEN: https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev
+
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Tarkista yhteydet
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$DRIVE_AVAIN" ] || puuttuu="$puuttuu SAMIREIVINEN_DRIVE_API"
+          [ -n "$R2_TILI" ] || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ] || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "$R2_AMPARI" ] || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Puuttuvat repository secretit:$puuttuu"
+            exit 1
+          fi
+
+      - name: Nouda Drivestä ja tarkista hyväksytyt JPEG-kuvat
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'SKRIPTI'
+          import { mkdir, writeFile } from 'node:fs/promises';
+          import { createHash } from 'node:crypto';
+
+          const kuvat = [
+            ['1RDBMCp-GkCmGLKdnc3E85Vz5RM85sz2k', '1769-watt.jpg', 'd8a54813b8cdd62583f134ee72d897e1a0e0a9b0df1362710619ea31dc4fc7d3'],
+            ['141yAbaVDffBHyrMUBp1nsT4aFQyMLbeJ', '1783-montgolfier.jpg', '5348a409ff83c4633f67ec45124a796bdc3bb7b8b450cc1f4dff1cf146015b92'],
+            ['1-GDmfp0z5U2aA10DYSZzOVmYj6yMntIw', '1796-jenner.jpg', '7720583c8ccfdd3b9165a95b8a3acefd752fe50f84cd43170cd22564c6ca0bfb'],
+            ['11tvCmU4xLSsnxVkkzcj8TTMh6_rudhWi', '1800-volta.jpg', 'f2425d26e386b55abe4c7b6d91e0c871d2feb2b8275454b7c3cc360b5fd04045'],
+            ['1dN7vipCfBWCgfR7nYwKF0uQWUwVjIGti', '1804-jacquard.jpg', '41ec1a2d4f31f4cfa381bc139a71ad5f7a640616c5faf16e1c2243c26b283646'],
+          ];
+
+          function jpegMitat(data) {
+            if (data[0] !== 0xff || data[1] !== 0xd8) throw new Error('ei ole JPEG');
+            let i = 2;
+            while (i + 9 < data.length) {
+              if (data[i] !== 0xff) { i += 1; continue; }
+              const merkki = data[i + 1];
+              if (merkki === 0xd8 || merkki === 0xd9) { i += 2; continue; }
+              const pituus = data.readUInt16BE(i + 2);
+              if (pituus < 2 || i + 2 + pituus > data.length) break;
+              if ([0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf].includes(merkki)) {
+                return { korkeus: data.readUInt16BE(i + 5), leveys: data.readUInt16BE(i + 7) };
+              }
+              i += 2 + pituus;
+            }
+            throw new Error('JPEG-mittoja ei löytynyt');
+          }
+
+          await mkdir('r2-out', { recursive: true });
+          for (const [id, nimi, odotettuSha] of kuvat) {
+            const julkinen = `${process.env.JULKINEN}/aikajana/keksinnot/${nimi}?t=${Date.now()}`;
+            const vanha = await fetch(julkinen, { headers: { 'Cache-Control': 'no-cache' } });
+            if (vanha.ok) {
+              const vanhaData = Buffer.from(await vanha.arrayBuffer());
+              const vanhaSha = createHash('sha256').update(vanhaData).digest('hex');
+              if (vanhaSha !== odotettuSha) throw new Error(`${nimi}: nimiristiriita, R2:ssa eri sisältö`);
+              console.log(`${nimi}: sama hyväksytty versio oli jo R2:ssa`);
+            } else if (vanha.status !== 404) {
+              throw new Error(`${nimi}: R2-esitarkistus HTTP ${vanha.status}`);
+            }
+
+            const url = `https://www.googleapis.com/drive/v3/files/${id}?alt=media&key=${process.env.DRIVE_AVAIN}`;
+            const vastaus = await fetch(url);
+            if (!vastaus.ok) throw new Error(`${nimi}: Drive HTTP ${vastaus.status}`);
+            const data = Buffer.from(await vastaus.arrayBuffer());
+            const sha = createHash('sha256').update(data).digest('hex');
+            if (sha !== odotettuSha) throw new Error(`${nimi}: SHA-256 ei täsmää`);
+            const mitat = jpegMitat(data);
+            if (mitat.leveys !== 1536 || mitat.korkeus !== 1024) {
+              throw new Error(`${nimi}: ${mitat.leveys}x${mitat.korkeus}, odotettiin 1536x1024`);
+            }
+            if (!data.includes(Buffer.from('ICC_PROFILE'))) throw new Error(`${nimi}: ICC-profiili puuttuu`);
+            await writeFile(`r2-out/${nimi}`, data);
+            console.log(`${nimi}: Drive, JPEG, 1536x1024, ICC ja SHA-256 kunnossa`);
+          }
+          SKRIPTI
+
+      - name: Vie kuvat R2-mediämpäriin
+        run: |
+          set -euo pipefail
+          aws s3 sync r2-out "s3://$R2_AMPARI/aikajana/keksinnot" \
+            --endpoint-url "https://$R2_TILI.r2.cloudflarestorage.com" \
+            --no-progress --size-only --content-type image/jpeg \
+            --cache-control "public, max-age=2592000"
+
+      - name: Varmista julkinen R2 tavutasolla
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'SKRIPTI'
+          import { readFile, readdir } from 'node:fs/promises';
+          import { createHash } from 'node:crypto';
+
+          const nimet = (await readdir('r2-out')).sort();
+          if (nimet.length !== 5) throw new Error(`tiedostoja ${nimet.length}, odotettiin 5`);
+          for (const nimi of nimet) {
+            const paikallinen = await readFile(`r2-out/${nimi}`);
+            let vastaus;
+            for (let yritys = 1; yritys <= 10; yritys += 1) {
+              vastaus = await fetch(`${process.env.JULKINEN}/aikajana/keksinnot/${nimi}?t=${Date.now()}`, {
+                headers: { Origin: 'https://ravelius.github.io', 'Cache-Control': 'no-cache' },
+              });
+              if (vastaus.ok) break;
+              await new Promise((resolve) => setTimeout(resolve, 2000));
+            }
+            if (!vastaus?.ok) throw new Error(`${nimi}: R2 HTTP ${vastaus?.status}`);
+            const tyyppi = vastaus.headers.get('content-type') ?? '';
+            if (!tyyppi.startsWith('image/jpeg')) throw new Error(`${nimi}: R2 MIME ${tyyppi}`);
+            if (!vastaus.headers.get('access-control-allow-origin')) throw new Error(`${nimi}: CORS puuttuu`);
+            const ladattu = Buffer.from(await vastaus.arrayBuffer());
+            const paikallinenSha = createHash('sha256').update(paikallinen).digest('hex');
+            const ladattuSha = createHash('sha256').update(ladattu).digest('hex');
+            if (ladattuSha !== paikallinenSha) throw new Error(`${nimi}: takaisinluettu SHA-256 ei täsmää`);
+            console.log(`${nimi}: julkinen JPEG, CORS ja tavut kunnossa`);
+          }
+          SKRIPTI
