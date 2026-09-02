@@ -9197,6 +9197,60 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * HISTORIAN HETKI (H1-erä 2.9.2026, js/packs/historian-hetket.js
+     * `vasco-da-gama-restelo-1497`). Restelon ranta on Lissabonin
+     * laatan vieressä (3 laudan yksikköä), joten kartalle ei tule
+     * merkkiä — hetki on kaupungin omaa historiaa ja asuu kaupungin
+     * omassa lehdessä.
+     */
+    {
+      id: 'hetki-vasco-da-gama-restelo-1497',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Restelo 1497',
+      johdanto: 'Belémin rannalla seisoi vuonna 1497 pieni merimiesten kappeli, '
+        + 'ei vielä luostaria; siellä Vasco da Gaman miehet valvoivat viimeisen '
+        + 'yönsä Euroopassa.',
+      tehtava: {
+        kysymys: 'Mikä seisoi Restelon rannalla, kun Vasco da Gama lähti '
+          + 'vuonna 1497?',
+        vaihtoehdot: [
+          'Jerónimosin luostari',
+          'Belémin torni',
+          'Merimiesten kappeli',
+          'Kuninkaan telakkahalli',
+        ],
+        oikea: 2,
+        fakta: 'Jerónimos alkoi nousta vasta 1501 ja Belémin torni 1514 — '
+          + 'kappeli oli rannalla ensin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Restelon ranta 1497 — yö rukouksessa, aamu Intian tiellä',
+          aika: '8.7.1497',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-vasco-da-gama-restelo-1497.jpg',
+          teksti: 'Yö on vietetty polvillaan: Restelon kappelissa, jonka Henrik '
+            + 'Purjehtija rakennutti merimiehiä varten ja joka on jo pahasti '
+            + 'rapistunut, Vasco da Gama ja hänen miehensä ovat rukoilleet aamuun '
+            + 'asti. Tejon suulla odottaa neljä alusta — da Gaman São Gabriel, '
+            + 'hänen veljensä Paulon São Rafael, karavelli Bérrio ja nimetön '
+            + 'varastolaiva, joka on määrä hylätä matkan varrella. Miehiä on noin '
+            + '170, ja heistä palaa noin 55. Kukkulalla ei vielä ole luostaria: '
+            + 'Jerónimos alkaa nousta vasta vuonna 1501, tämän matkan mausteilla '
+            + 'ansaituilla tuloilla. Purjehdus, joka alkaa tästä rannasta, sisältää '
+            + 'siihen mennessä pisimmän maihinnousuttoman avomerietapin: yli kolme '
+            + 'kuukautta ja yli kymmenentuhatta kilometriä Etelä-Atlantin yli, '
+            + 'ennen kuin Afrikan rannikko näkyy jälleen 4. marraskuuta.',
+          selite: 'Miehet polvistuvat rantahiekalle valkoisen kappelin edessä, '
+            + 'ja lastia soudetaan veneillä odottaville laivoille. Etualalla '
+            + 'seisova viittaan pukeutunut mies katsoo merelle.',
+          lahde: 'Matkakirjan havainnekuva: Vasco da Gaman laivue lähdössä '
+            + 'Restelon rannalta 8. heinäkuuta 1497. Faktat: en-Wikipedia "Vasco '
+            + 'da Gama" ja "Jerónimos Monastery", tarkistettu 2.9.2026.',
+        },
+      ],
+    },
   ],
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E2 (Raamattu, "TEKSTIEN PAINOPISTE"):
@@ -24181,6 +24235,60 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * HISTORIAN HETKI (H1-erä 2.9.2026, js/packs/historian-hetket.js
+     * `nansen-fram-1893`). Kristiania ON Oslo, eli hetki tapahtui
+     * kaupungin laatan kohdalla (1 laudan yksikkö) — kartalle ei tule
+     * merkkiä, ja sivu on kaupungin omassa lehdessä.
+     */
+    {
+      id: 'hetki-nansen-fram-1893',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Fram 1893',
+      johdanto: 'Kristianian rannat olivat mustanaan väkeä 24. kesäkuuta 1893, '
+        + 'kun vuonolle liukui pyöreäpohjainen laiva, jonka oli tarkoitus '
+        + 'jäätyä kiinni tahallaan.',
+      tehtava: {
+        kysymys: 'Miksi Framin runko rakennettiin pyöreäksi?',
+        vaihtoehdot: [
+          'Jotta laiva kulkisi nopeammin myötätuulessa',
+          'Jottei jäällä olisi mistään otetta',
+          'Jotta ruumaan mahtuisi enemmän lastia',
+          'Jotta laiva kestäisi tykkitulen',
+        ],
+        oikea: 1,
+        fakta: 'Colin Archerin muotoilema runko nousi jään puristuksessa ylös '
+          + 'sen sijaan että olisi murskaantunut.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
+          aika: '24.6.1893',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-nansen-fram-1893.jpg',
+          teksti: 'Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan '
+            + 'kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin '
+            + 'rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer '
+            + 'suunnitteli sen niin, ettei jäällä ole mistään otetta, ja laivan on '
+            + 'Nansenin omin sanoin määrä livahtaa jään syleilystä kuin ankerias. '
+            + 'Runko on kolmea puukerrosta paksu — kuudestakymmenestä '
+            + 'seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja '
+            + 'päällystetty eteläamerikkalaisella greenheart-puulla, kovimmalla '
+            + 'mitä on saatavissa. Kannella on kolmetoista miestä, heidän '
+            + 'joukossaan 31-vuotias Fridtjof Nansen, ja suunnitelma on se, jota '
+            + 'moni tutkija on julkisesti kutsunut itsemurhaksi: ajaa laiva '
+            + 'tahallaan kiinni Siperian pohjoispuoliseen ahtojäähän ja antaa '
+            + 'virran kuljettaa se kohti pohjoisnapaa. Fram palaa tähän samaan '
+            + 'satamaan 9. syyskuuta 1896, eikä yhtään miestä ole menetetty.',
+          selite: 'Fram irtoaa laiturista Kristianiassa, ja rannalla seisova '
+            + 'väkijoukko heiluttaa hattuja ja nenäliinoja. Nansen seisoo keulan '
+            + 'puolella kannella käsi ylhäällä.',
+          lahde: 'Matkakirjan havainnekuva: Fram lähdössä Kristianiasta '
+            + '24. kesäkuuta 1893. Faktat: en-Wikipedia "Nansen\'s Fram '
+            + 'expedition", tarkistettu 2.9.2026.',
+        },
+      ],
+    },
   ],
   /*
    * FIRENZEN LEHTI (17.8.2026). Rakenne on kopioitu Kööpenhaminan
@@ -25333,6 +25441,62 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Tivolin pääportti johtaa puistoon, joka rakennettiin '
             + 'kaupungin vanhan linnoitusvallin ulkopuolelle.',
           lahde: 'Detroit Publishing Company, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI (H1-erä 2.9.2026, js/packs/historian-hetket.js
+     * `viikinkilaiva-roskilde-1000`). Roskildenvuono projisoituu 18
+     * laudan yksikön päähän Kööpenhaminasta, eli kohdekaupungin
+     * viereen — kartalle ei tule merkkiä, ja sivu on Kööpenhaminan
+     * lehdessä.
+     */
+    {
+      id: 'hetki-viikinkilaiva-roskilde-1000',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Roskilde 1000',
+      johdanto: 'Roskildenvuonon pohjasta nostettiin vuosina 1957–1962 viisi '
+        + 'viikinkilaivaa, jotka oli aikanaan upotettu sulkemaan väylä — ja '
+        + 'juuri niiden ansiosta tiedetään tarkasti, miltä tuhat vuotta sitten '
+        + 'lähtenyt pitkälaiva näytti.',
+      tehtava: {
+        kysymys: 'Missä Skuldelev 2 -pitkälaiva rakennettiin?',
+        vaihtoehdot: [
+          'Roskildessa',
+          'Bergenissä',
+          'Dublinin seudulla',
+          'Haithabussa',
+        ],
+        oikea: 2,
+        fakta: 'Vuosilustot ajoittavat rakentamisen Dublinin seudulle noin '
+          + 'vuoteen 1042.',
+      },
+      nostot: [
+        {
+          otsikko: 'Roskildenvuono noin 1000 — kuusikymmentä airoa',
+          aika: 'n. 1000',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-viikinkilaiva-roskilde-1000.jpg',
+          teksti: 'Vuono on matala ja mutkitteleva, ja miehet työntävät keulaa irti '
+            + 'rantamudasta; airot ovat jo ulkona ja kilvet ripustettu laidalle '
+            + 'matkan ajaksi. Purje on raidallista villaa, ja päähineet ovat '
+            + 'huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö '
+            + 'eikä esiinny yhdessäkään viikinkiajan tekstissä tai löydössä. Juuri '
+            + 'tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin '
+            + '1000-luvulla tähän samaan vuonoon sulkemaan Peberrendenin väylä, ja '
+            + 'Tanskan kansallismuseo nosti ne pohjasta vuosina 1957–1962. Suurin, '
+            + 'Skuldelev 2, on tammesta rakennettu kolmikymmenmetrinen sotalaiva: '
+            + 'kuusikymmentä soutajaa, 112 neliömetrin purje, tilaa 70–80 miehelle '
+            + 'ja vuosilustojen mukaan rakennuspaikka Dublinin seudulla noin vuonna '
+            + '1042. Vuonna 2007 sen tarkka jäljennös Havhingsten fra Glendalough '
+            + 'purjehti Roskildesta Dubliniin ja seuraavana kesänä takaisin.',
+          selite: 'Miehet työntävät pitkälaivan keulaa irti rantamudasta, ja '
+            + 'airot ovat jo ulkona molemmin puolin raidallisen villapurjeen '
+            + 'alla. Rannalla näkyy turvekattoisia rakennuksia ja toinen laiva '
+            + 'vedessä.',
+          lahde: 'Matkakirjan havainnekuva: viikinkiajan pitkälaiva lähdössä '
+            + 'Roskildenvuonolta noin vuonna 1000. Faktat: en-Wikipedia '
+            + '"Skuldelev ships" ja "Horned helmet", tarkistettu 2.9.2026.',
         },
       ],
     },
@@ -58652,6 +58816,123 @@ export const KULTTUURI_KATEGORIAT = {
             + 'klassisen musiikin esiintymispaikoista.',
           lahde: 'Anual, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Flamenco',
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI (H1-erä 2.9.2026, js/packs/historian-hetket.js
+     * `kolumbus-palos-1492`). Hetki EI saa karttamerkkiä: Palos de la
+     * Frontera projisoituu 31 laudan yksikön päähän Sevillasta, ja
+     * omistajan sijoitussääntö (2.9.2026) jättää kohdekaupungin
+     * viereen osuvan hetken pelkkään lehteen. Sevilla on lähin
+     * kaupunki, jolla on lehti, joten sivu on tässä.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva). Osoite ja lähderivi ovat samat kuin pakassa;
+     * tests/historian-hetket.test.mjs vartioi, etteivät ne eriydy.
+     */
+    {
+      id: 'hetki-kolumbus-palos-1492',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Palos 1492',
+      johdanto: 'Kahdeksankymmentä kilometriä Sevillasta länteen, Río Tinton '
+        + 'suistossa, kolme laivaa odotti laskuvettä 3. elokuuta 1492 — ja '
+        + 'lähtijät olivat tämän saman jokisuun omia merenkulkijoita.',
+      tehtava: {
+        kysymys: 'Mikä kolmesta aluksesta oli Kolumbuksen laivueen suurin?',
+        vaihtoehdot: [
+          'Pinta',
+          'Niña',
+          'Santa María',
+          'Bérrio',
+        ],
+        oikea: 2,
+        fakta: 'Santa María oli pyöreärunkoinen nao; Pinta ja Niña olivat '
+          + 'pienempiä karavelleja.',
+      },
+      nostot: [
+        {
+          otsikko: 'Palos de la Frontera 1492 — kolme laivaa laskuveden mukana',
+          aika: '3.8.1492',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-kolumbus-palos-1492.jpg',
+          teksti: 'Aamu on juuri valjennut, ja Río Tinton suistossa vesi laskee — '
+            + 'sitä on odotettu, sillä laskuvesi vie laivat merelle ilman soutua. '
+            + 'Ankkurissa on kolme alusta: Santa María, pyöreärunkoinen nao, jonka '
+            + 'omistaa Juan de la Cosa ja jota Kolumbus itse komentaa, sekä '
+            + 'karavellit Pinta ja Niña. Niitä luotsaavat paikkakunnan omat '
+            + 'merenkulkijat, veljekset Martín Alonso ja Vicente Yáñez Pinzón, '
+            + 'jotka värväsivät miehistön naapureistaan Palosista ja Moguerista — '
+            + 'laiturilla seisova väki tuntee lähtijät nimeltä. Kolme päivää '
+            + 'myöhemmin Pintan peräsin murtuu, ja se korjataan Kanariansaarilla; '
+            + 'vasta 6. syyskuuta laivat kääntyvät La Gomeralta länteen viiden '
+            + 'viikon merimatkalle. Kukaan täällä ei tiedä, että Kolumbuksen '
+            + 'laskelma maapallon koosta on rajusti pielessä ja että lännessä '
+            + 'odottaa manner, jota kukaan ei osaa odottaa.',
+          selite: 'Santa María odottaa laskuvettä Río Tinton suistossa, ja '
+            + 'miehet vetävät köyttä rannan mudassa; kauempana Pinta ja Niña '
+            + 'ovat jo valmiina. Vasemmalla rannalla seisoo kaupunkilaisia ja '
+            + 'ruskeakaapuisia munkkeja.',
+          lahde: 'Matkakirjan havainnekuva: Kolumbuksen laivue lähdössä Palosista '
+            + '3. elokuuta 1492. Faktat: en-Wikipedia "Voyages of Christopher '
+            + 'Columbus", tarkistettu 2.9.2026.',
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI (H1-erä 2.9.2026, js/packs/historian-hetket.js
+     * `magalhaes-sanlucar-1519`). Sanlúcar de Barrameda projisoituu 27
+     * laudan yksikön päähän Sevillasta — sama sääntö kuin yllä. Tämä
+     * hetki kuuluu Sevillaan myös sisällöllisesti: laivasto lähti
+     * kaupungista 10. elokuuta 1519 ja laski jokea jokisuuhun.
+     */
+    {
+      id: 'hetki-magalhaes-sanlucar-1519',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Sanlúcar 1519',
+      johdanto: 'Sevillasta lähdettiin 10. elokuuta 1519 Guadalquivirjokea alas, '
+        + 'ja jokisuussa Sanlúcar de Barramedassa viisi laivaa odotti vielä yli '
+        + 'viisi viikkoa ennen kuin ne katosivat länteen.',
+      tehtava: {
+        kysymys: 'Montako Magalhãesin viidestä laivasta palasi Sanlúcariin '
+          + 'vuonna 1522?',
+        vaihtoehdot: [
+          'Ei yhtään',
+          'Yksi',
+          'Kolme',
+          'Kaikki viisi',
+        ],
+        oikea: 1,
+        fakta: 'Victoria palasi 6. syyskuuta 1522, kannellaan kahdeksantoista '
+          + 'miestä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sanlúcar de Barrameda 1519 — viisi laivaa, joista yksi palaa',
+          aika: '20.9.1519',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-magalhaes-sanlucar-1519.jpg',
+          teksti: 'Laivasto tuli Sevillasta 10. elokuuta Guadalquivirjokea alas ja on '
+            + 'maannut tässä jokisuussa yli viisi viikkoa: vettä, viiniä ja '
+            + 'suolalihaa on lastattu viimeiseen asti. Nyt ankkurissa on viisi '
+            + 'alusta — lippulaiva Trinidad, San Antonio, Concepción, Victoria ja '
+            + 'Santiago — ja miehiä on noin 270. Rannalla liikkuu ontuen '
+            + 'portugalilainen Fernão de Magalhães, jonka jalka jäi vialle '
+            + 'Azemmourin taistelussa Marokossa 1513 ja joka purjehtii nyt Espanjan '
+            + 'kuninkaan lipun alla; espanjalaiset kapteenit epäilevät häntä jo '
+            + 'ennen lähtöä. Kukaan ei tiedä, että matka kestää kolme vuotta ja '
+            + 'että Magalhães itse kaatuu Filippiineillä huhtikuussa 1521 eikä näe '
+            + 'paluuta. Tähän samaan jokisuuhun palaa 6. syyskuuta 1522 yksi laiva, '
+            + 'Victoria, ja sen kannella kahdeksantoista miestä — ensimmäiset, '
+            + 'jotka ovat purjehtineet maapallon ympäri.',
+          selite: 'Viisi laivaa odottaa Guadalquivirin suussa, ja rannalla '
+            + 'kannetaan viimeisiä sipulisäkkejä, köysikiepejä ja tynnyreitä '
+            + 'veneisiin. Etualalla musta-asuinen mies kääntyy katsomaan '
+            + 'laivueeseen päin.',
+          lahde: 'Matkakirjan havainnekuva: Magalhãesin laivue Sanlúcar de '
+            + 'Barramedassa 20. syyskuuta 1519. Faktat: en-Wikipedia "Magellan '
+            + 'expedition", tarkistettu 2.9.2026.',
         },
       ],
     },

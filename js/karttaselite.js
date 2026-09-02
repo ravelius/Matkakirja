@@ -72,7 +72,7 @@ const KARTTASELITE_RUUTU = '-12 -12 24 24';
  * Yhden seliterivin symbolimerkki: ryhmän kärkisymboli kirjaston omalla
  * piirtäjällä.
  *
- * Kaikilla kahdeksalla aiheella on symboli, koska aihe ON symbolien
+ * Kaikilla yhdeksällä aiheella on symboli, koska aihe ON symbolien
  * sukukunta (js/fokusnosto-symbolit.js NOSTOSYM_PAAKATEGORIAT).
  * Symbolittomat merkit — vihreä kohtaamispiste ja musteympyrä — eivät
  * ole listalla eivätkä siis tarvitse omaa piirtoaan tänne.

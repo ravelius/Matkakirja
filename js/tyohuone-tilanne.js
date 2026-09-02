@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '2.9.2026 aamupaiva — v1444–v1449; pyramidi poltettu 1 kaariminuutilla ja patinalla (pohja 02a, nostot 02c, viivat 02a)',
+  paivitetty: '2.9.2026 iltapaiva — v1450–v1453; yleiskuvituseran 22 kuvaa pelissa, Historian hetket -nostolaji, kohdekartan ihmemerkki',
   tavoite: 'Kartta yhtenaiseksi ja teravyys arvioitavaksi. Mainissa: '
     + 'maareitit yhtenaisena lamminna viivana ja meri katkoina (v1423), '
     + 'noston teksti kokonaan napautettava (v1424), rajat samaa reittia '
@@ -38,6 +38,13 @@ export const TILANNE = {
     + 'merkkiperheet yhteen mittaan syvassa zoomissa, havainnekuvan '
     + 'selitelinkki kaikkialla, nimio vaistaa nappulaa, elavat merkit '
     + 'seuraavat laatan venytysta z7:n yli (ei uutta zoomitasoa). '
+    + 'ILTAPAIVAN ERA (v1450-v1453): yleiskuvitussession 22 kuvaa '
+    + 'pelissa - BIH/TUR elaintayt (29), 7 skandaalia lehtiin kuvineen '
+    + 'ja Wienin 3 korttikuvaa, karsitut nostot kaupunkilehden '
+    + 'kohdekartalle + Matkakirjan ihme -merkki, Historian hetket '
+    + '-nostolaji (tiimalasi, 9. seliterivi; 10 hetkea, 2 kartalla). '
+    + 'Kuvajonolle tilattu: H2 (pilotti uusiksi, lahi+kauko), H3 (46 '
+    + 'kohtausta), V1 (16 ennen/nyt-paria), M1 (4 miniatyyria). '
     + 'Luettelo: pohja 2026-09-02a (korkeus 1, patina taysi), nostot 02c '
     + '(v7, siirtoviivat 0,9), viivat 02a (piirit ei).',
   rivit: [
@@ -45,16 +52,15 @@ export const TILANNE = {
       tekija: 'Fable',
       rooli: 'paatoimittaja',
       tila: 'tyossa',
-      tehtava: 'Aamupaivan korjauseran julkaisu Opus-agenteilla '
-        + '(v1444-v1449): omistajan syvan zoomin havainnot (paksut '
-        + 'siirtoviivat, erikokoiset nostot, puuttuva selitelinkki, nimio '
-        + 'nappulan alla, z7:n ylizoomi). Postikierros tunneittain: '
-        + 'K1/K2/E1/H1-kuittaukset yleiskuvitussessiolta.',
-      seuraavaksi: 'Omistajan katselmus syvasta zoomista (Sofia, Ateena). '
-        + 'K2 -> 7 skandaalin lehtisiirto, E1 -> BIH/TUR elaintakyt, H1 -> '
-        + 'Historian hetki -nostolaji. Nimeton vuorikolmio Bulgarian '
-        + 'pohjassa (43,25P/24,75I) ja nappulan kokoloikka siirron jalkeen '
-        + 'odottavat.',
+      tehtava: 'Yleiskuvituseran integrointi (v1450-v1453) ja '
+        + 'kuvatilaukset H2/H3/V1/M1 kuvajonolle. Postikierros '
+        + 'tunneittain.',
+      seuraavaksi: 'H2-pilotin kuittaus -> lahikuvat hetkien kuvalistan '
+        + 'karkeen; H3-erat 10 kohtausta kerrallaan; V1 -> ennen/nyt-'
+        + 'nostolaji (kortti kahdella kuvalla ja vuosileimoilla); M1 -> '
+        + 'miniatyyrit assets/kartat/miniatyyrit/. Avoinna: nimeton '
+        + 'vuorikolmio Bulgarian pohjassa, nappulan kokoloikka, '
+        + 'savuke-havainnekuva lipeva (135/137 vs 144/144).',
     },
   ],
   odottaaPaatosta: [
@@ -75,6 +81,10 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1453: HISTORIAN HETKET - selitevalikossa 9. rivi (tiimalasi); Plymouth 1768 (Endeavour) ja Southampton 1912 (Titanic) kartalla Ison-Britannian laudalla, 8 muuta lehdissa omilla sivuillaan (Sevilla 2, Lissabon, Oslo, Kobenhavn, Espanja, Norja, Ecuador). Avaa Plymouthin tiimalasi ja Sevillan kaupunkilehti.',
+  'v1452: KOHDEKARTTA - Ateena: Akropolis-museo, Iliou Melathron; Sofia: Banja Bashin moskeija, Serdican areena omina pisteina. Matkakirjan ihme -merkki nahtavyyden ylakulmassa ja selite vasemmassa ylakulmassa (Ateena 3, Rooma, Lontoo, Luxor, Petra, Persepolis, Peking).',
+  'v1451: SKANDAALIKUVAT - Pariisi 3, Ateena 2, Istanbul 1, Lontoo 1 lehdissa; Wienin 3 skandaalikorttia kuvineen.',
+  'v1450: ELAINTAYT 29 - Bosnia tornjak-pentu (Vlasicin laitumet), Turkki angoravuohen kili (Ankaran kaakkoispuoli).',
   'v1449: ZOOMI YLI Z7:N - elavat merkit (nostot, nimiot, siirtoviivat, maastomerkit) kasvavat samassa suhteessa kuin venytetty laatta; ei uutta zoomitasoa, ei polttoa. Nipista Sofiassa syvimman tason yli: symbolit kasvavat kartan mukana eivatka jaa pieniksi.',
   'v1448: NIMIO VAISTAA NAPPULAA - kaupungin nimi ei jaa nappulan tai kohdemerkkien alle (nappulan ruutulaatikko ladonnan varauksena). Seiso Ateenassa ja Sofiassa syvassa zoomissa: nimi nakyy kokonaan.',
   'v1447: HAVAINNEKUVAN SELITELINKKI KAIKKIALLA - lahderivin linkki nakyy ja aukeaa kaikissa havainnekuvissa (nostot, lehdet, kohtaamiset, aarre). Avaa kolme eri havainnekuvaa ja napauta linkkia.',
