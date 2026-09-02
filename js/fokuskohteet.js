@@ -99,7 +99,7 @@ import {
 // Sähketehtävän sisältöhakemisto tarvitsee maan kohdelistan (ks.
 // asetaKohdehakemisto-kutsu KOHDE_MAAT-taulun alla).
 import { asetaKohdehakemisto } from './fokusvirta.js';
-import { FOKUS_LISANIMET } from './packs/fokus-grc.js';
+import { FOKUS_LISANIMET, FOKUS_POHJAT } from './packs/fokus-grc.js';
 // Laattoihin poltetut maastonimet (vuoret, järvet, joet): sama nimi
 // vain kerran kartalle, ks. maastonimenPari ja maastoParit.
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
@@ -148,8 +148,10 @@ import {
   niputaFokusmerkit, nippuAsettelunVersio, nippuAvaaKaupunki, nippuLaatanEtaisyys,
   nippuLaattaEsteet,
 } from './fokusniput.js';
-import { nostoOnPoltettu } from './laattapyramidi.js';
-import { nostoladontaKattoPorras, nostoladontaTiiviste } from './nostoladonta.js';
+import { laatoissaOnNostoja, nostoOnPoltettu } from './laattapyramidi.js';
+import {
+  nostoladontaKattoPorras, nostoladontaSkaala, nostoladontaTiiviste,
+} from './nostoladonta.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 import { taytaLahderivi } from './tekijakortti.js';
@@ -763,6 +765,44 @@ export function rekisteroiLisakohteet(hae) {
   if (typeof hae === 'function' && !KOHDE_LISALAHTEET.includes(hae)) {
     KOHDE_LISALAHTEET.push(hae);
   }
+}
+
+/*
+ * SAMAT LÄHTEET MAATUNNUKSELLA — NAAPURIMAAN LADONTAA VARTEN.
+ *
+ * Yllä oleva rekisteri kysyy rivinsä `ui`:lta, ja `ui` tietää vain sen
+ * maan, jossa pelaaja seisoo. Naapurimaan poltetut nostot on ladottava
+ * SAMASTA aineistosta kuin ne laattaan poltettiin
+ * (naapurienPoltetutVaraukset alempana), joten sama lähde kysytään
+ * toisen kerran pelkällä maatunnuksella — täsmälleen kuten
+ * laattageneraattori sen kysyy (tools/fokuskartta/nostot.mjs
+ * keraaNostot).
+ *
+ * Lähde on funktio (iso, lauta, kaupungit, cityCountry) → [{ kohde,
+ * paikka }] eikä se saa lukea pelitilaa: sama vastaus joka vuorolla,
+ * tai naapurin ladonta eroaisi poltetusta.
+ *
+ * ── JÄRJESTYS ON OSA LADONTAA, EI MAKUASIA ────────────────────────
+ *
+ * Rivien järjestys ratkaisee kaupunkiruuhkan karsinnan
+ * (karsiKaupunkiruuhka, tasapelissä rivijärjestys) ja erottelusiirron
+ * tasatilanteet — eli sen, mihin merkki päätyy. Lähde ei siksi saa
+ * ilmoittautua kutsujärjestyksessä (js/main.js), vaan `jarjestys`
+ * kiinnittää sen samaksi kuin laattageneraattorilla
+ * (tools/fokuskartta/nostot.mjs keraaNostot `lisat`): syvennystarinat,
+ * skandaalit, historian hetket, täkynostot.
+ *
+ * MITATTU 2.9.2026: kutsujärjestyksessä (täky ensin) 863 laatikkoa
+ * 870:stä — Alankomaat 12/18 ja Irlanti 14/15, koska niiden ladonta
+ * erosi poltetusta eikä tiiviste täsmännyt. Generaattorin
+ * järjestyksellä 870/870.
+ */
+const KOHDE_MAALAHTEET = [];
+
+export function rekisteroiMaanKohteet(hae, jarjestys = 0) {
+  if (typeof hae !== 'function' || KOHDE_MAALAHTEET.some((r) => r.hae === hae)) return;
+  KOHDE_MAALAHTEET.push({ hae, jarjestys });
+  KOHDE_MAALAHTEET.sort((a, b) => a.jarjestys - b.jarjestys);
 }
 
 /* ==================== MERKIT KARTALLE ==================== */
@@ -2659,15 +2699,17 @@ function asetaPoltetutTekstiOsumat(ui, s, piilossa) {
  *
  * ── RAJAUS, JA SE ON TIEDOSSA ─────────────────────────────────────
  *
- * VARAUS KATTAA VAIN SEN MAAN, JONKA NOSTOT PELISSÄ OVAT (`ryhmat` =
- * nykyisenMaanKohteet). Laattapyramidiin on poltettu jokaisen maan
- * nostot, joten leveässä näkymässä ruudulla on myös naapurimaiden
- * poltettuja nimiä, joista tämä kerros ei tiedä mitään — mitattu
- * 2.9.2026 Bulgarian maalehtinäkymässä (mittajana 200 km): *"WIEN"*
- * leikkasi Wienin oman poltetun noston nimeä, kun taas Sofia väisti
- * omansa oikein. Korjaus vaatisi naapurimaiden kohdeaineiston
- * lataamisen kartalle, eikä se ole tämän erän tilaus; luettelossa
- * (pyramidi.json nostotaso.nostot) on vain tiivisteet, ei paikkoja.
+ * TÄMÄ FUNKTIO KATTAA VAIN SEN MAAN, JONKA NOSTOT PELISSÄ OVAT
+ * (`ryhmat` = nykyisenMaanKohteet). Naapurimaiden poltetut nostot
+ * luetaan 2.9.2026 illasta alkaen erikseen ja samalla koneistolla —
+ * ks. naapurienPoltetutVaraukset alempana (omistajan päätös samana
+ * iltana: *"Korjaa: lataa naapurimaat"*, kun *"WIEN"* leikkasi Wienin
+ * oman poltetun noston nimeä Bulgarian maalehtinäkymässä).
+ *
+ * ULOS JÄÄVÄT YHÄ: maat, joilla ei ole fokuslehden ikkunaa
+ * (FOKUS_POHJAT), ja ELÄINTÄYT — ne ovat oma perheensä oman
+ * kerroksensa (js/elaintaky.js) ladonnassa eivätkä kulje tämän
+ * kerroksen läpi kummassakaan maassa, ei omassa eikä naapurin.
  *
  * @returns {Array} laatikot LAUDAN yksiköissä, [{ x0, y0, x1, y1 }]
  */
@@ -2691,6 +2733,182 @@ function poltettujenNostojenVaraukset(ui, s, paatokset) {
     });
   });
   return rivit;
+}
+
+/*
+ * ====== NAAPURIMAAN POLTETTU NOSTO ON MYÖS VARAUS ==================
+ *
+ * OMISTAJAN PÄÄTÖS 2.9.2026 ilta, sanatarkasti: *"Korjaa: lataa
+ * naapurimaat"* — vastaus edellisen erän kirjattuun rajaukseen (ks.
+ * poltettujenNostojenVaraukset yllä). Mitattu vika: Bulgarian
+ * maalehtinäkymässä (mittajana 200 km) kaupungin nimi *"WIEN"* leikkasi
+ * Wienin oman poltetun noston nimeä, kun taas Sofia väisti omansa
+ * oikein — laatoissa on jokaisen maan nostot, mutta pelissä vain sen
+ * maan, jossa pelaaja seisoo.
+ *
+ * ── "LATAAMINEN" EI OLE VERKKOTYÖTÄ ────────────────────────────────
+ *
+ * Jokaisen maan kohdeaineisto on jo muistissa (KOHDE_MAAT, staattiset
+ * tuonnit tiedoston alussa), ja lisälähteet vastaavat pelkkään
+ * maatunnukseen (KOHDE_MAALAHTEET). Puuttui vain LADONTA: missä
+ * naapurin merkit ja nimiöt ovat laudalla sen jälkeen, kun kasaus,
+ * erottelusiirto ja nimiöväistö ovat ajaneet.
+ *
+ * ── SAMA KONEISTO, EI RINNAKKAISTA ARVIOTA ─────────────────────────
+ *
+ * Raamattu vaatii sanatarkasti: *"Poltetun ladonnan ja selaimen
+ * osumamuotojen on tultava SAMASTA lähteestä, ettei kahta ladontaa
+ * pääse eriytymään."* Naapurin kehykset lasketaan siksi TÄSMÄLLEEN
+ * samoilla passeilla ja samassa järjestyksessä kuin laattageneraattori
+ * ne poltti (tools/fokuskartta/nostot.mjs nostoladontaMerkit):
+ *
+ *   kohdeKarttarivit → niputaFokusmerkit → eritteleKohdeRyhmat
+ *   → paivitaKohdeNimiot (paatokset.kehykset) → poltettujenNostojenVaraukset
+ *
+ * `ui` on tynkä laudan datasta: ei ruutua, ei pelitilaa, ei vuoroa —
+ * täsmälleen ne kentät, joita passit lukevat. Mittakaava on sama
+ * globaali vakio kuin nykyisellä maalla (js/nostoladonta.js
+ * nostoladontaSkaala), joten neljäs mitta ei pääse eroamaan.
+ *
+ * ── TIIVISTE ON VARTIJA ────────────────────────────────────────────
+ *
+ * Varaukseen otetaan vain rivi, jonka tiiviste on luettelossa
+ * (nostoOnPoltettu). Jos tämä ladonta joskus eroaisi poltetusta, rivi
+ * ei täsmäisi eikä sitä varattaisi — vika olisi siis puuttuva varaus
+ * eikä väärään paikkaan varattu laatikko. Sama vartija kuin nykyisen
+ * maan poltetuilla (kohdeOnPoltettu).
+ *
+ * ── LASKETAAN KERRAN MAATA KOHTI, JA VAIN LEVOSSA ──────────────────
+ *
+ * Tulos on pelkkää laudan dataa, joten se ei riipu näkymästä eikä
+ * vuorosta: maakohtainen välimuisti riittää koko istunnoksi. Näkymä
+ * karsii kahdesti — ensin maan ikkunalla (bbox) ja sitten laatikoittain
+ * — jottei ruudun ulkopuolinen maa tule lasketuksi lainkaan. Kutsu
+ * tulee samasta asettumisketjusta kuin muukin (js/ui.js
+ * paivitaMaastonimet → paivitaFokuskohteet), ei eleen aikana.
+ */
+const NAAPURIN_VARAUKSET = new Map();
+
+/**
+ * Yhden maan poltetut laatikot laudan yksiköissä — kiertämättöminä.
+ *
+ * @param {object} pack  laudan paketti
+ * @param {string} iso   maatunnus
+ * @param {object} pohja FOKUS_POHJAT[iso]
+ * @param {function} onPoltettu  (tunnus, tiiviste) → boolean. Oletus on
+ *   laattaluettelo (js/laattapyramidi.js); yksikkötesti antaa
+ *   generaattorin oman luettelon, koska Nodessa ei ole verkkoa.
+ */
+export function maanPoltetutVaraukset(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
+  const s = nostoladontaSkaala(pohja?.rajaus);
+  const bbox = pohja?.bbox;
+  if (!(s > 0) || !bbox || !pack) return [];
+  const lauta = pack.id;
+  const taulu = pack.map?.cityCountry ?? {};
+  const kaupungit = (pack.cities ?? []).filter((k) => taulu[k.id] === iso);
+  const pohjanAlla = (x, y) => x >= bbox.x && x <= bbox.x + bbox.w
+    && y >= bbox.y && y <= bbox.y + bbox.h;
+  const lisat = [];
+  for (const { hae } of KOHDE_MAALAHTEET) {
+    for (const rivi of hae(iso, lauta, kaupungit, taulu) ?? []) lisat.push(rivi);
+  }
+  const rivit = kohdeKarttarivit({
+    iso, lauta, kaupungit, pohjanAlla, lisat,
+  });
+  if (!rivit.length) return [];
+  /*
+   * TYNKÄ `ui` — samat kentät kuin generaattorilla. `kiertoKohdat`
+   * antaa yhden kohdan: kiertävän laudan toinen kopio on kutsujan asia
+   * (naapurienPoltetutVaraukset siirtää valmiit laatikot), eikä ladonta
+   * saa riippua siitä, kummasta kopiosta puhutaan.
+   */
+  const tynka = {
+    fokusmoodi: true,
+    katselu: false,
+    game: { pack },
+    fokusPohjaRajaus: pohja.rajaus,
+    fokusPohjaBbox: bbox,
+    fokusPohjanAlla: pohjanAlla,
+    kiertoKohdat: (x) => [x],
+    fokuskohdeKaupungit: kaupungit,
+    fokuskohdeAvain: `${iso}:naapuri`,
+    fokuskohdeEroAvain: null,
+    fokuskohdeNimioAvain: null,
+    fokuskohdeRyhmat: [],
+    fokuskohdeTiedot: new Map(rivit.map(({ kohde }) => [kohde.id, kohde])),
+  };
+  tynka.fokuskohdeRyhmat = rivit.map(({ kohde, paikka }) => ({
+    id: kohde.id,
+    x: paikka.x,
+    y: paikka.y,
+    kierto: 0,
+    ...kohdeMerkinLadonta(tynka, kohde),
+  }));
+  niputaFokusmerkit(tynka, s);
+  eritteleKohdeRyhmat(tynka, s);
+  paivitaKohdeNimiot(tynka, s);
+  // Poltettu-lippu samasta tiivisteestä kuin nykyisellä maalla
+  // (kohdeOnPoltettu); vain lippu, ei piirtoa — tyngällä ei ole solmuja.
+  for (const r of tynka.fokuskohdeRyhmat) {
+    r.poltettu = onPoltettu(r.id, kohteenNostotiiviste(tynka, r));
+  }
+  return poltettujenNostojenVaraukset(tynka, s, tynka.fokuskohdeNimioPaatokset);
+}
+
+/** Leikkaako laatikko näkyvää aluetta? */
+function laatikkoNakyy(laatikko, nakyva) {
+  return laatikko.x1 > nakyva.x && laatikko.x0 < nakyva.x + nakyva.w
+    && laatikko.y1 > nakyva.y && laatikko.y0 < nakyva.y + nakyva.h;
+}
+
+/**
+ * NAAPURIMAIDEN POLTETUT NOSTOT VARAUKSIKSI (ks. osio yllä).
+ *
+ * @param {object} ui
+ * @param {object} nakyva  ui.nakyvaAlue() — laudan yksiköissä
+ * @param {?function} onPoltettu  luettelon sauma: pelissä null, jolloin
+ *   vastaa js/laattapyramidi.js. Yksikkötesti antaa generaattorin oman
+ *   luettelon (Nodessa ei ole verkkoa) ja ohittaa samalla välimuistin.
+ * @returns {Array} laatikot LAUDAN yksiköissä, [{ x0, y0, x1, y1 }]
+ */
+export function naapurienPoltetutVaraukset(ui, nakyva, onPoltettu = null) {
+  const pack = ui.game?.pack;
+  // Ilman luetteloa mitään ei ole poltettu, eikä tyhjää tulosta saa
+  // jäädä välimuistiin: luettelo saapuu verkosta piirron jälkeen.
+  if (!pack?.id || !(nakyva?.w > 0)) return [];
+  if (!onPoltettu && !laatoissaOnNostoja()) return [];
+  const oma = nykyinenIso(ui);
+  const ulos = [];
+  for (const [iso, pohja] of Object.entries(FOKUS_POHJAT)) {
+    if (iso === oma || pohja?.lauta !== pack.id || !pohja.bbox) continue;
+    const { bbox } = pohja;
+    // Kiertävällä laudalla maa on kartalla kahdesti; siirto on kopion
+    // etäisyys datan omasta paikasta (js/ui.js kiertoKohdat).
+    const siirrot = (ui.kiertoKohdat?.(bbox.x) ?? [bbox.x])
+      .map((x) => x - bbox.x)
+      .filter((dx) => laatikkoNakyy({
+        x0: bbox.x + dx, y0: bbox.y, x1: bbox.x + dx + bbox.w, y1: bbox.y + bbox.h,
+      }, nakyva));
+    if (!siirrot.length) continue;
+    const avain = `${pack.id}|${iso}`;
+    let laatikot = onPoltettu ? null : NAAPURIN_VARAUKSET.get(avain);
+    if (!laatikot) {
+      laatikot = maanPoltetutVaraukset(pack, iso, pohja, onPoltettu ?? nostoOnPoltettu);
+      if (!onPoltettu) NAAPURIN_VARAUKSET.set(avain, laatikot);
+    }
+    for (const dx of siirrot) {
+      for (const laatikko of laatikot) {
+        const rivi = dx ? {
+          x0: laatikko.x0 + dx,
+          y0: laatikko.y0,
+          x1: laatikko.x1 + dx,
+          y1: laatikko.y1,
+        } : laatikko;
+        if (laatikkoNakyy(rivi, nakyva)) ulos.push(rivi);
+      }
+    }
+  }
+  return ulos;
 }
 
 /**
@@ -2873,6 +3091,19 @@ export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
    * joten järjestyksen kääntäminen on turvallinen.
    */
   const piilossa = paivitaNakyvyys(ui, kerros, nakyva);
+  /*
+   * NAAPURIMAAT ENNEN OMAA MAATA, JA SE ON JÄRJESTYSVAATIMUS.
+   * Naapurin kasauspassi kasvattaa asettelun versiota
+   * (js/fokusniput.js nippuAsettelunVersio), joka on tämän maan
+   * nimiöväistön välimuistiavain. Tässä järjestyksessä oman maan passit
+   * lukevat jo uuden version; toisin päin ne laskettaisiin joka levolla
+   * kahdesti — kerran ennen naapuria ja kerran sen jälkeen.
+   *
+   * Sama portti kuin omilla poltetuilla: piilotetussa kerroksessa ei
+   * ole nostolaattojakaan (ks. asetaPoltetutTekstiOsumat).
+   */
+  const naapurienVaraukset = piilossa || !karttanimetLatovat(ui)
+    ? [] : naapurienPoltetutVaraukset(ui, nakyva);
   asetaKohdeMittakaava(ui, 1);
   /*
    * NIMIÖIDEN VÄISTÖ VASTA TÄSSÄ eli asemoinnin jälkeen ja vain
@@ -2907,6 +3138,16 @@ export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
     // kerroksesta, ja SAMALLA ne luovutetaan nimiladonnan varauksiksi
     // (ks. asetaPoltetutTekstiOsumat, poltettujenNostojenVaraukset).
     asetaPoltetutTekstiOsumat(ui, merkkiSkaala, piilossa);
+    /*
+     * NAAPURIMAAN POLTETUT SAMAAN JOUKKOON (ks. osio NAAPURIMAAN
+     * POLTETTU NOSTO ON MYÖS VARAUS). Nimikerros ei erottele niitä
+     * omista: kumpikin on laatan kuvassa olevaa mustetta, jota ei voi
+     * siirtää.
+     */
+    if (naapurienVaraukset.length) {
+      ui.poltetutNostovaraukset = (ui.poltetutNostovaraukset ?? [])
+        .concat(naapurienVaraukset);
+    }
   } else {
     if (merkkiSkaala > 0) paivitaKohdeNimiot(ui, merkkiSkaala);
     /*

@@ -50,6 +50,12 @@
  *   6. KOHDEKAUPUNGIN NIMI ON ISOMPI KUIN KOHTEIDEN NIMET (omistaja:
  *      *"Kohdekaupungin nimi voi kyllä olla hieman isommalla kuin
  *      muiden kohteiden nimet"*).
+ *   7. WIEN EI LEIKKAA NAAPURIMAAN POLTETTUA NOSTOA (omistajan päätös
+ *      2.9.2026 ilta: *"Korjaa: lataa naapurimaat"*). Bulgarian
+ *      näkymässä ruudun laidassa on Wien, ja sen nimi leikkasi
+ *      ITÄVALLAN laattaan poltettua nostonimiötä — varaus tunsi siihen
+ *      asti vain sen maan nostot, jossa pelaaja seisoo
+ *      (js/fokuskohteet.js naapurienPoltetutVaraukset).
  *
  * KOLME NÄKYMÄÄ, KAIKKI OMISTAJAN KAAPPAUKSISTA: Euroopan yleisnäkymä
  * (~1000 km), Bulgarian maalehti (~200 km) ja Sofian lähikuva
@@ -354,6 +360,20 @@ const mittaa = () => sivu.evaluate(() => {
       return `${n.laji}/${n.teksti} nimi[${n.x0.toFixed(0)},${n.y0.toFixed(0)}-`
         + `${n.x1.toFixed(0)},${n.y1.toFixed(0)}] vs ${osuvat.join(' ')}`;
     });
+  /*
+   * WIEN ERIKSEEN (omistajan päätös 2.9.2026 ilta: *"Korjaa: lataa
+   * naapurimaat"*). Bulgarian maalehtinäkymässä ruudun vasemmassa
+   * laidassa on Wien, ja sen nimi leikkasi NAAPURIMAAN eli Itävallan
+   * laattaan poltetun nostonimiön — varaus kattoi siihen asti vain sen
+   * maan, jossa pelaaja seisoo. Väite 3 löytäisi tämän joukosta, mutta
+   * nimetty väite kertoo suoraan, onko juuri se korjaus voimassa.
+   */
+  const wien = nimet.find((n) => n.teksti === 'Wien') ?? null;
+  const wienOsumat = wien
+    ? poltetut.filter((p) => limittyy(wien, p)).map(
+      (p) => `[${p.x0.toFixed(0)},${p.y0.toFixed(0)}-${p.x1.toFixed(0)},${p.y1.toFixed(0)}]`,
+    )
+    : [];
   const nimiParit = [];
   for (let i = 0; i < nimet.length; i += 1) {
     for (let j = i + 1; j < nimet.length; j += 1) {
@@ -391,6 +411,8 @@ const mittaa = () => sivu.evaluate(() => {
       .map((laji) => [laji, kokoja(nimet.filter((n) => n.laji === laji))])),
     poltettujaVarauksia: poltetut.length,
     poltonPaalla,
+    wienNakyy: Boolean(wien),
+    wienOsumat,
     nimiParit,
   };
 });
@@ -468,6 +490,19 @@ for (const nakyma of NAKYMAT) {
     m.poltonPaalla.length === 0,
     `${m.poltonPaalla.length} osumaa (${m.poltettujaVarauksia} varausta): `
       + m.poltonPaalla.join(', '));
+  /*
+   * NAAPURIMAAN POLTETTU NOSTO (2.9.2026 ilta). Bulgarian näkymässä
+   * Wien on ruudun laidassa, ja juuri sen nimi leikkasi Itävallan
+   * laattaan poltettua nostonimiötä. Mittaus vain siitä näkymästä,
+   * josta omistajan kaappaus on.
+   */
+  if (nakyma.nimi === 'Bulgaria') {
+    vaadi(`${nimi}: WIEN ei leikkaa yhtäkään poltettua nostolaatikkoa`,
+      m.wienNakyy && m.wienOsumat.length === 0,
+      m.wienNakyy
+        ? `${m.wienOsumat.length} osumaa: ${m.wienOsumat.join(' ')}`
+        : 'Wien ei ollut näkymässä — mittaus sokea');
+  }
   vaadi(`${nimi}: yksikään nimi ei osu toiseen nimeen`,
     m.nimiParit.length === 0,
     `${m.nimiParit.length} paria: ${m.nimiParit.slice(0, 6).join('; ')}`);

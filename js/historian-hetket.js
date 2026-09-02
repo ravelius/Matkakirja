@@ -47,7 +47,9 @@ import {
 } from './ui-apurit.js';
 import { natiiviVastaus } from './natiivi.js';
 import { HISTORIAN_HETKET, hetkenKuvat } from './packs/historian-hetket.js';
-import { avaaKohdeSuurennos, rekisteroiLisakohteet } from './fokuskohteet.js';
+import {
+  avaaKohdeSuurennos, rekisteroiLisakohteet, rekisteroiMaanKohteet,
+} from './fokuskohteet.js';
 import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
@@ -410,4 +412,8 @@ export function suljeHetki(ui) {
  */
 export function kytkeHistorianHetket() {
   rekisteroiLisakohteet(hetkiLisakohteet);
+  // Sama aineisto myös naapurimaalle (js/fokuskohteet.js
+  // naapurienPoltetutVaraukset) — ks. js/syvennys.js kytkeSyvennys.
+  rekisteroiMaanKohteet((iso, lauta) => hetkiKarttarivit(iso, lauta)
+    .map(({ kohde, paikka }) => ({ kohde, paikka })), 3);
 }
