@@ -185,8 +185,8 @@ värialueita, joiden rajat liukuvat avainvuodesta toiseen.
 
 | # | linssi | alue | kaari | pysäkkejä | tila |
 |---|---|---|---|---|---|
-| M1 | Kiinan dynastiat | Kiina | 221 eaa–1912 | Qin · Han · Kolme kuningaskuntaa · Tang · Song · Yuan · Ming · Qing · tasavalta 1912 | seuraava (omistajan esimerkki, ensimmäinen aluelinssi) |
-| M2 | Rooman nousu ja tuho | Välimeri | 509 eaa–476 | tasavalta · puunilaissodat · Caesar Gallia · Augustus · Trajanus 117 · jako 395 · 476 | seuraava |
+| M1 | Kiinan dynastiat | Kiina | 221 eaa–1912 | Qin · Han · Kolme kuningaskuntaa · Tang · Song · Yuan · Ming · Qing · tasavalta 1912 | seuraava, 1. aluelinssi (omistajan esimerkki) |
+| M2 | Rooman nousu ja tuho | Välimeri | 509 eaa–476 | tasavalta · puunilaissodat · Caesar Gallia · Augustus · Trajanus 117 · jako 395 · 476 | seuraava, 4. aluelinssi |
 | M3 | Aleksanteri Suuri | Kreikka–Intia | 336–301 eaa | Makedonia · Issos · Egypti · Gaugamela · Persepolis · Hydaspes · diadokit | idea |
 | M4 | Islamin leviäminen | Lähi-itä–Espanja | 622–750 | Medina · Jerusalem 638 · Persia · Pohjois-Afrikka · Iberia 711 · Poitiers 732 | idea |
 | M5 | Mongolien imperiumi | Aasia–Eurooppa | 1206–1368 | Tšingis-kaani · Kiova 1240 · Bagdad 1258 · Kublai · kaanikunnat · Yuan kaatuu | idea |
@@ -201,9 +201,9 @@ värialueita, joiden rajat liukuvat avainvuodesta toiseen.
 
 | # | linssi | alue | kaari | pysäkkejä | tila |
 |---|---|---|---|---|---|
-| N1 | Napoleonin Eurooppa | Eurooppa | 1796–1815 | Italia 1796 · Egypti · Austerlitz 1805 · Jena · Tilsit · Espanja · Moskova 1812 · Leipzig · Waterloo | seuraava (omistajan esimerkki) |
-| N2 | Ensimmäinen maailmansota | Eurooppa, Lähi-itä | 1914–1918 | Sarajevo · Marne · Gallipoli · Verdun · Somme · Brest-Litovsk · 11.11.1918 | seuraava (omistajan esimerkki) |
-| N3 | Toinen maailmansota | Eurooppa, Tyynimeri | 1939–1945 | Puola · Ranska 1940 · Barbarossa · Pearl Harbor · Stalingrad · Normandia · Berliini · Hiroshima | seuraava (pelin aikakauden ulkopuolella, linssi katsoo eteenpäin) |
+| N1 | Napoleonin Eurooppa | Eurooppa | 1796–1815 | Italia 1796 · Egypti · Austerlitz 1805 · Jena · Tilsit · Espanja · Moskova 1812 · Leipzig · Waterloo | seuraava, 2. aluelinssi (omistajan esimerkki) |
+| N2 | Ensimmäinen maailmansota | Eurooppa, Lähi-itä | 1914–1918 | Sarajevo · Marne · Gallipoli · Verdun · Somme · Brest-Litovsk · 11.11.1918 | seuraava, 3. aluelinssi (omistajan esimerkki) |
+| N3 | Toinen maailmansota | Eurooppa, Tyynimeri | 1939–1945 | Puola · Ranska 1940 · Barbarossa · Pearl Harbor · Stalingrad · Normandia · Berliini · Hiroshima | seuraava, 5. aluelinssi (pelin aikakauden ulkopuolella, linssi katsoo eteenpäin; sävy 13+: rintamat ja rauhat, ei kauhukuvia) |
 | N4 | Kolmikymmenvuotinen sota | Keski-Eurooppa | 1618–1648 | Prahan ikkuna · Breitenfeld · Lützen 1632 · Westfalen | idea |
 | N5 | Krimin sota | Musta meri, Itämeri | 1853–1856 | Sinope · Sevastopol · Bomarsund · Pariisin rauha | idea (isoisän aikalaisten sota) |
 | N6 | Yhdysvaltain sisällissota | USA | 1861–1865 | Fort Sumter · Antietam · Gettysburg · Sherman · Appomattox | idea |
@@ -272,5 +272,5 @@ siirtomaavaltojen arjesta (13+, mutta asia kerrotaan niin kuin se oli).
 3. B2, B3, C1, C2 — pysäkeistä iso osa on jo pelin hetkiä tai kohteita.
 4. C5 Maapallon ympäri 80 päivässä — pelin oma tarina, tarvitsee maailmankartan.
 5. Maanosat: H1 Kiinan keksinnöt, H3 Japani, I3 Osmanit, J1 Kultavaltakunnat, J4 Afrikan tutkimusmatkat, K1 Mesoamerikka ja Andit, K3 Yhdysvallat, L2 Cook — järjestys sen mukaan, mille laudalle peli laajenee seuraavaksi.
-6. Aluelinssit (toinen moottori) aloitetaan M1 Kiinan dynastioista, kun aikajanamoottori on hiottu: pohjakartan ja rajojen aineistotyö ensin, sitten N1 Napoleon, N2 maailmansota, M2 Rooma.
+6. Aluelinssit (toinen moottori), omistajan päätös 2.9.2026 ilta: M1 Kiinan dynastiat → N1 Napoleon → N2 ensimmäinen maailmansota → M2 Rooma → N3 toinen maailmansota (sävy 13+: rintamat ja rauhat). Aloitus, kun aikajanamoottori on hiottu; pohjakartan ja rajojen aineistotyö ensin.
 7. Loput ideasta seuraavaksi omistajan päätöksellä.

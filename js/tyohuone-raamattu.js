@@ -2551,6 +2551,9 @@ export const RAAMATTU = {
           + 'valilehti (M-P: valtakunnat, sodat, imperiumit, leviamiset). '
           + 'Aloitetaan Kiinan dynastioista vasta kun aikajanamoottori on '
           + 'hiottu; rajaaineiston lisenssi tarkistetaan ennen kayttoa. '
+          + 'JARJESTYS (omistaja 2.9.2026 ilta): Kiinan dynastiat, '
+          + 'Napoleon, ensimmainen maailmansota, Rooma, toinen '
+          + 'maailmansota (savy 13+: rintamat ja rauhat). '
           + 'Tila per linssi valmis / '
           + 'rakenteilla / seuraava / idea. Uusi linssi ei ala ilman '
           + 'omistajan valintaa luettelosta.',

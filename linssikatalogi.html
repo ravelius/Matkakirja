@@ -171,6 +171,7 @@
       <li>B2, B3, C1, C2: pysäkeistä iso osa on jo pelin hetkiä tai kohteita.</li>
       <li>C5 Maapallon ympäri 80 päivässä: pelin oma tarina, tarvitsee maailmankartan.</li>
       <li>Maanosat: H1 Kiinan keksinnöt, H3 Japani, I3 Osmanit, J1 Kultavaltakunnat, J4 Afrikan tutkimusmatkat, K1 Mesoamerikka ja Andit, K3 Yhdysvallat, L2 Cook. Järjestys sen mukaan, mille laudalle peli laajenee seuraavaksi.</li>
+      <li>Aluelinssit (omistajan päätös 2.9.2026 ilta): M1 Kiinan dynastiat → N1 Napoleon → N2 ensimmäinen maailmansota → M2 Rooma → N3 toinen maailmansota. Aloitus, kun aikajanamoottori on hiottu; pohjakartan ja rajojen aineistotyö ensin.</li>
       <li>Loput ideasta seuraavaksi omistajan päätöksellä.</li>
     </ol>
   </div>
@@ -189,6 +190,7 @@
         <dt>Musiikki ja kuvat</dt><dd>Sama putki kuin aikajanalinssissä.</dd>
       </dl>
     </div>
+    <p class="johdanto">Toteutusjärjestys (omistaja 2.9.2026 ilta): <b>M1 Kiinan dynastiat</b> → N1 Napoleon → N2 ensimmäinen maailmansota → M2 Rooma → N3 toinen maailmansota.</p>
     <div id="alueryhmat"></div>
   </div>
 
@@ -307,8 +309,8 @@ const RYHMAT = [
 
 const ALUEET = [
   { k: 'M', nimi: 'Valtakunnat ja dynastiat', kuvaus: 'Yksi väri per dynastia tai valtio; rajat liukuvat avainvuodesta toiseen.', linssit: [
-    { id: 'M1', nimi: 'Kiinan dynastiat', alue: 'Kiina', kaari: '221 eaa – 1912', pysakit: 'Qin · Han · Kolme kuningaskuntaa · Tang · Song · Yuan · Ming · Qing · tasavalta 1912', tila: 'seuraava', huom: 'Omistajan esimerkki; ensimmäinen aluelinssi.' },
-    { id: 'M2', nimi: 'Rooman nousu ja tuho', alue: 'Välimeri', kaari: '509 eaa – 476', pysakit: 'tasavalta · puunilaissodat · Caesar Gallia · Augustus · Trajanus 117 · jako 395 · 476', tila: 'seuraava' },
+    { id: 'M1', nimi: 'Kiinan dynastiat', alue: 'Kiina', kaari: '221 eaa – 1912', pysakit: 'Qin · Han · Kolme kuningaskuntaa · Tang · Song · Yuan · Ming · Qing · tasavalta 1912', tila: 'seuraava', huom: '1. aluelinssi (omistajan esimerkki).' },
+    { id: 'M2', nimi: 'Rooman nousu ja tuho', alue: 'Välimeri', kaari: '509 eaa – 476', pysakit: 'tasavalta · puunilaissodat · Caesar Gallia · Augustus · Trajanus 117 · jako 395 · 476', tila: 'seuraava', huom: '4. aluelinssi.' },
     { id: 'M3', nimi: 'Aleksanteri Suuri', alue: 'Kreikka – Intia', kaari: '336 eaa – 301 eaa', pysakit: 'Makedonia · Issos · Egypti · Gaugamela · Persepolis · Hydaspes · diadokit', tila: 'idea' },
     { id: 'M4', nimi: 'Islamin leviäminen', alue: 'Lähi-itä – Espanja', kaari: '622 – 750', pysakit: 'Medina · Jerusalem 638 · Persia · Pohjois-Afrikka · Iberia 711 · Poitiers 732', tila: 'idea' },
     { id: 'M5', nimi: 'Mongolien imperiumi', alue: 'Aasia – Eurooppa', kaari: '1206 – 1368', pysakit: 'Tšingis-kaani · Kiova 1240 · Bagdad 1258 · Kublai · jako kaanikuntiin · Yuan kaatuu', tila: 'idea' },
@@ -320,9 +322,9 @@ const ALUEET = [
     { id: 'M11', nimi: 'Inkat ja atsteekit', alue: 'Andit, Meksiko', kaari: '1325 – 1572', pysakit: 'Tenochtitlán 1325 · Pachacuti · Huayna Capac · Cortés 1521 · Cajamarca 1532 · Vilcabamba 1572', tila: 'idea' },
   ]},
   { k: 'N', nimi: 'Sodat ja rintamat', kuvaus: 'Rintamalinja liikkuu kuukausittain; pysäkit ovat taisteluja ja rauhoja.', linssit: [
-    { id: 'N1', nimi: 'Napoleonin Eurooppa', alue: 'Eurooppa', kaari: '1796 – 1815', pysakit: 'Italia 1796 · Egypti · Austerlitz 1805 · Jena · Tilsit · Espanja · Moskova 1812 · Leipzig · Waterloo 1815', tila: 'seuraava', huom: 'Omistajan esimerkki.' },
-    { id: 'N2', nimi: 'Ensimmäinen maailmansota', alue: 'Eurooppa, Lähi-itä', kaari: '1914 – 1918', pysakit: 'Sarajevo · Marne · Gallipoli · Verdun · Somme · Brest-Litovsk · 11.11.1918', tila: 'seuraava', huom: 'Omistajan esimerkki (maailmansodat).' },
-    { id: 'N3', nimi: 'Toinen maailmansota', alue: 'Eurooppa, Tyynimeri', kaari: '1939 – 1945', pysakit: 'Puola · Ranska 1940 · Barbarossa · Pearl Harbor · Stalingrad · Normandia · Berliini · Hiroshima', tila: 'seuraava', huom: 'Omistajan esimerkki. Pelin aikakauden ulkopuolella, mutta linssi voi katsoa eteenpäin.' },
+    { id: 'N1', nimi: 'Napoleonin Eurooppa', alue: 'Eurooppa', kaari: '1796 – 1815', pysakit: 'Italia 1796 · Egypti · Austerlitz 1805 · Jena · Tilsit · Espanja · Moskova 1812 · Leipzig · Waterloo 1815', tila: 'seuraava', huom: '2. aluelinssi (omistajan esimerkki).' },
+    { id: 'N2', nimi: 'Ensimmäinen maailmansota', alue: 'Eurooppa, Lähi-itä', kaari: '1914 – 1918', pysakit: 'Sarajevo · Marne · Gallipoli · Verdun · Somme · Brest-Litovsk · 11.11.1918', tila: 'seuraava', huom: '3. aluelinssi (omistajan esimerkki).' },
+    { id: 'N3', nimi: 'Toinen maailmansota', alue: 'Eurooppa, Tyynimeri', kaari: '1939 – 1945', pysakit: 'Puola · Ranska 1940 · Barbarossa · Pearl Harbor · Stalingrad · Normandia · Berliini · Hiroshima', tila: 'seuraava', huom: '5. aluelinssi. Pelin aikakauden ulkopuolella, mutta linssi voi katsoa eteenpäin. Sävy 13+: rintamat ja rauhat, ei kauhukuvia.' },
     { id: 'N4', nimi: 'Kolmikymmenvuotinen sota', alue: 'Keski-Eurooppa', kaari: '1618 – 1648', pysakit: 'Prahan ikkuna · Breitenfeld · Lützen 1632 · Westfalen', tila: 'idea' },
     { id: 'N5', nimi: 'Krimin sota', alue: 'Musta meri, Itämeri', kaari: '1853 – 1856', pysakit: 'Sinope · Sevastopol · Bomarsund · Pariisin rauha', tila: 'idea', huom: 'Isoisän aikalaisten sota; Ahvenanmaa.' },
     { id: 'N6', nimi: 'Yhdysvaltain sisällissota', alue: 'USA', kaari: '1861 – 1865', pysakit: 'Fort Sumter · Antietam · Gettysburg · Sherman · Appomattox', tila: 'idea' },
