@@ -345,12 +345,24 @@ const KERAA = async () => sivu.evaluate(async () => {
   /** Mitä selaimen osumatesti tästä kohdasta löytää? */
   const osumaKohdassa = (x, y) => {
     const e = document.elementFromPoint(x, y);
-    if (!e) return { loytyi: false, ketju: 'null' };
+    if (!e) return { loytyi: false, kaluste: false, ketju: 'null' };
     const kohde = e.closest?.('[data-kohde]');
     const elain = e.closest?.('[data-elaintaky]');
     const maasto = e.closest?.('[data-maasto]');
     return {
       loytyi: Boolean(kohde || elain || maasto),
+      /*
+       * KALUSTE ON RUUTUA, EI KARTTAA. Kartuutsi, mittajana, alanapit
+       * ja pöllö kelluvat kartan päällä (savuke-matkakamera: *"ruutu
+       * MIINUS kalusteet"*), ja niiden alle jäävä merkki on
+       * saavuttamattomissa VAIN tästä kamerasta — sormi karttaan tuo
+       * sen esiin. Se ei ole karttamerkin vika, mutta se ei myöskään
+       * saa kadota hiljaa: portti laskee ne omaan lukuunsa.
+       *
+       * TUNNISTUS ON RAKENTEELLINEN eikä luokkalista: kartta on `svg`,
+       * kaikki muu on kalustetta.
+       */
+      kaluste: !e.closest?.('svg'),
       kohde: kohde?.getAttribute('data-kohde') ?? null,
       elain: elain?.getAttribute('data-elaintaky') ?? null,
       maasto: maasto?.getAttribute('data-maasto') ?? null,
@@ -570,6 +582,13 @@ const yhteenveto = [];
  * korjattuna: se raportoidaan erikseen ja nimeltä.
  */
 const polttovelka = new Map();
+/*
+ * KALUSTEEN ALLE JÄÄNEET MERKIT (ks. osumaKohdassa `kaluste`). Ei
+ * löydös — kartuutsin alla oleva merkki on kartalla oikein ja tulee
+ * esiin sormella — mutta luettelo kertoo, jos jokin kaluste peittää
+ * saman merkin joka näkymässä.
+ */
+const kalusteenAlla = new Map();
 
 /*
  * YKSI MAA EI SAA VIEDÄ KOKO AJOA. Portti kestää kymmenisen minuuttia
@@ -609,8 +628,11 @@ for (const iso of MAAT) {
     for (const m of tulos.merkit) {
       if (m.polttovelka) polttovelka.set(`${m.iso ?? iso}/${m.id}`, m.nimi);
     }
+    for (const m of tulos.merkit) {
+      if (m.osuma.kaluste) kalusteenAlla.set(`${m.iso ?? iso}/${m.id}`, m.nimi);
+    }
     const rikki = tulos.merkit.filter((m) => (!m.nimiNakyy && !m.nimiVapaaehtoinen)
-      || !m.osuma.loytyi);
+      || (!m.osuma.loytyi && !m.osuma.kaluste));
     for (const m of rikki) {
       loydokset.push({
         maa: iso,
@@ -625,7 +647,7 @@ for (const iso of MAAT) {
         y: Math.round(m.y),
         puuttuu: [
           ...(!m.nimiNakyy && !m.nimiVapaaehtoinen ? ['nimi'] : []),
-          ...(!m.osuma.loytyi ? ['napautus'] : []),
+          ...(!m.osuma.loytyi && !m.osuma.kaluste ? ['napautus'] : []),
         ],
         osuma: m.osuma.ketju,
       });
@@ -648,7 +670,7 @@ for (const iso of MAAT) {
     const otos = [];
     const otettu = new Map();
     for (const m of tulos.merkit) {
-      if (!m.osuma.loytyi) continue;
+      if (!m.osuma.loytyi || m.osuma.kaluste) continue;
       const n = otettu.get(m.lahde) ?? 0;
       if (n >= NAPAUTUKSIA) continue;
       otettu.set(m.lahde, n + 1);
@@ -732,10 +754,19 @@ if (polttovelka.size) {
   console.log('poltetaan uudestaan (js/fokuskohteet.js SYMBOLI EI JÄÄ ILMAN NIMEÄ).');
   for (const [avain, nimi] of [...polttovelka].sort()) console.log(`  ${avain} "${nimi}"`);
 }
+if (kalusteenAlla.size) {
+  console.log(`\nKALUSTEEN ALLA ${kalusteenAlla.size} merkkiä — kartuutsin, mittajanan tai`);
+  console.log('alanappien peitossa juuri tässä kamerassa. Ei löydös: sormi karttaan tuo');
+  console.log('merkin esiin. Luettelo on tässä siltä varalta, että sama merkki peittyy aina.');
+  for (const [avain, nimi] of [...kalusteenAlla].sort()) console.log(`  ${avain} "${nimi}"`);
+}
 if (KUVAKANSIO) {
   writeFileSync(join(KUVAKANSIO, 'karttamerkit.json'),
     JSON.stringify({
-      yhteenveto, loydokset, polttovelka: [...polttovelka],
+      yhteenveto,
+      loydokset,
+      polttovelka: [...polttovelka],
+      kalusteenAlla: [...kalusteenAlla],
     }, null, 1));
 }
 process.exit(loydokset.length ? 1 : 0);
