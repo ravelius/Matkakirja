@@ -22,8 +22,14 @@
  *   1. nimellisiä nostoja (merkki, jolla on kartalle tuleva nimi)
  *   2. nimiöttömiä (kohteenNimio päätti, että nimi on jo kartalla —
  *      kaupungin oma nimi tai laattaan poltettu maastonimi)
- *   3. pudonneita (väistö ei löytänyt yhdellekään neljästä kyljelle
- *      tilaa) ja niiden syyt kyljittäin
+ *   3. TINGITTYJÄ (väistö ei löytänyt yhdellekään neljästä kyljestä
+ *      täysin vapaata tilaa) ja niiden syyt kyljittäin.
+ *
+ * PUDOTUS ON LAKKAUTETTU 2.9.2026 (omistaja: *"kaksi tekstitöntä
+ * huutomerkkiä"*; js/fokuskohteet.js SYMBOLI EI JÄÄ ILMAN NIMEÄ).
+ * Nimiö ladotaan nyt aina, tarvittaessa naapurin symbolin päälle — ja
+ * juuri se on tämän mitan luku: montako nimiötä joutui tinkimään.
+ * Nollaa kohti painuva luku kertoo, että ladonta on parantunut.
  */
 import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
 import { MAAILMANKARTTA } from '../../js/packs/maailmankartta.js';
@@ -41,7 +47,7 @@ const pack = MAAILMANKARTTA;
 
 let nimellisia = 0;
 let nimiottomia = 0;
-let pudonneita = 0;
+let tingittyja = 0;
 const syittain = new Map();
 const maittain = new Map();
 
@@ -106,8 +112,8 @@ for (const [iso, pohja] of Object.entries(FOKUS_POHJAT)) {
       continue;
     }
     nimellisia += 1;
-    if (r.nimioNakyy !== false) continue;
-    pudonneita += 1;
+    if (!r.nimioPakotettu) continue;
+    tingittyja += 1;
     maittain.set(iso, (maittain.get(iso) ?? 0) + 1);
     const syyt = nimioSyyt.get(r.id) ?? [];
     const avain = syyt.map((x) => `${x.puoli}:${x.este}`).sort().join(' + ');
@@ -120,12 +126,12 @@ for (const [iso, pohja] of Object.entries(FOKUS_POHJAT)) {
 
 console.log(`\nnimellisiä nostoja   ${nimellisia}`);
 console.log(`nimiöttömiä          ${nimiottomia}  (nimi on kartalla jo muuta kautta)`);
-console.log(`nimiö pudonnut       ${pudonneita}  `
-  + `(${((100 * pudonneita) / Math.max(1, nimellisia)).toFixed(1)} %)`);
-console.log('\npudotukset maittain:');
+console.log(`nimiö tingitty       ${tingittyja}  `
+  + `(${((100 * tingittyja) / Math.max(1, nimellisia)).toFixed(1)} %)`);
+console.log('\ntingityt maittain:');
 console.log(`  ${[...maittain].sort((a, b) => b[1] - a[1])
   .map(([k, v]) => `${k}:${v}`).join(' ')}`);
-console.log('\npudotuksen syy (kaikki neljä kylkeä):');
+console.log('\ntinkimisen syy (kaikki neljä kylkeä tukossa):');
 for (const [avain, n] of [...syittain].sort((a, b) => b[1] - a[1])) {
   console.log(`  ${String(n).padStart(3)}  ${avain}`);
 }

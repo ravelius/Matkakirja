@@ -2504,36 +2504,90 @@ function laskeKohdeNimioPaatokset(ui, s) {
   });
   const varatut = [];
   const piilossa = new Set();
+  const pakotetut = new Set();
   const puolet = new Map();
   // Valitut nimiökehykset ryhmäindeksillä (laudan yksiköitä):
   // nostotekstin napautusalue asettuu juuri siihen laatikkoon, johon
   // nimiö rasterissa ladotaan tai laattaan poltettiin.
   const kehykset = new Map();
+  /*
+   * PUOLET JÄRJESTYKSESSÄ: toivottu kylki ensin (kohdeNimioPuolet),
+   * toinen vasta jos toivottu on tukossa. Järjestys on merkin oma ja
+   * kiinteä, joten sama lehti antaa saman kartan — eikä nimiö voi
+   * vaihtaa puolta panoroinnissa.
+   *
+   * `symbolitEsteena` on kierrosten ero, ks. lohko alempana.
+   */
+  const valitseKylki = (rivi, symbolitEsteena) => rivi.puolet
+    .findIndex((_, p) => rivi.kehykset.every((vaihtoehdot, n) => {
+      const kehys = vaihtoehdot[p];
+      return (!symbolitEsteena || !symbolit.some((sym, j) => j !== rivi.indeksit[n]
+        && kohdeLimittyy(kehys, sym)))
+        && !laatat.some((laatta) => kohdeLimittyy(kehys, laatta))
+        && !varatut.some((varattu) => kohdeLimittyy(kehys, varattu));
+    }));
+  const hyvaksy = (id, rivi, valittu) => {
+    puolet.set(id, rivi.puolet[valittu]);
+    varatut.push(...rivi.kehykset.map((vaihtoehdot) => vaihtoehdot[valittu]));
+    rivi.indeksit.forEach((indeksi, n) => kehykset.set(indeksi, rivi.kehykset[n][valittu]));
+  };
+  /* ── ENSIMMÄINEN KIERROS: kaikki esteet voimassa ───────────────── */
+  const jaljella = [];
   for (const [id, rivi] of jono) {
-    /*
-     * PUOLET JÄRJESTYKSESSÄ: toivottu kylki ensin (kohdeNimioPuolet),
-     * toinen vasta jos toivottu on tukossa. Järjestys on merkin oma ja
-     * kiinteä, joten sama lehti antaa saman kartan — eikä nimiö voi
-     * vaihtaa puolta panoroinnissa.
-     */
-    const valittu = rivi.puolet.findIndex((_, p) => rivi.kehykset
-      .every((vaihtoehdot, n) => {
-        const kehys = vaihtoehdot[p];
-        return !symbolit.some((sym, j) => j !== rivi.indeksit[n]
-          && kohdeLimittyy(kehys, sym))
-          && !laatat.some((laatta) => kohdeLimittyy(kehys, laatta))
-          && !varatut.some((varattu) => kohdeLimittyy(kehys, varattu));
-      }));
-    if (valittu < 0) {
-      piilossa.add(id);
-      kirjaaNimionPudotus(ui, id, rivi, { symbolit, laatat, varatut });
-    } else {
-      puolet.set(id, rivi.puolet[valittu]);
-      varatut.push(...rivi.kehykset.map((vaihtoehdot) => vaihtoehdot[valittu]));
-      rivi.indeksit.forEach((indeksi, n) => kehykset.set(indeksi, rivi.kehykset[n][valittu]));
-    }
+    const valittu = valitseKylki(rivi, true);
+    if (valittu < 0) jaljella.push([id, rivi]);
+    else hyvaksy(id, rivi, valittu);
   }
-  return { piilossa, puolet, kehykset };
+  /* ============ SYMBOLI EI JÄÄ ILMAN NIMEÄ =========================
+   *
+   * OMISTAJAN HAVAINTO 2.9.2026 (Bosnia, 50 km), sanatarkasti: *"kaksi
+   * tekstitöntä huutomerkkiä"*. Ne ovat `nosto-pyramidi` ja
+   * `skandaali-fojnican-vaakunakirja`, ja kummankin nimiö putosi tässä
+   * passissa Mostarin ja Sarajevon välisessä ryppäässä.
+   *
+   * VANHA SÄÄNTÖ OLI TOINEN, ja se oli omistajan oma: *"Merkit jäävät
+   * napautettaviksi myös ilman nimeä"* (30.8.2026, ks. lohko NIMIÖT
+   * LUOVUTETAAN YHTEISEEN LADONTAAN). Se koski ELÄVÄÄ merkkiä, jonka
+   * kortin pelaaja saa napauttamalla. Poltettuna sama merkki on
+   * kartalla pelkkä huutomerkki keskellä paperia — ei nimeä, ei
+   * vihjettä siitä mistä on kyse. Uusi sääntö 2.9.2026: SYMBOLI EI
+   * KOSKAAN JÄÄ ILMAN NIMEÄ.
+   *
+   * MITTA (tools/savukkeet/mittaa-nostonimiot.mjs): pudotuksia oli 14
+   * / 509 nimellisestä nostosta, ja jokaisen syy oli sama — kaikki
+   * neljä kylkeä osuivat NAAPURIN SYMBOLIIN.
+   *
+   * ── KIERROS KAKSI: NIMI VOITTAA SYMBOLIN, MUTTEI TOISTA NIMEÄ ────
+   *
+   * Symboli on 13 yksikön viivamerkki, nimi on rivi tekstiä. Kun nimi
+   * sivuaa naapurin symbolia, kartalla on kaksi luettavaa merkintää;
+   * kun nimi sivuaa toista nimeä, kartalla ei ole kumpaakaan. Toinen
+   * kierros pudottaa siis esteistä vain symbolit — jo hyväksytyt
+   * nimiöt ja kaupunkien laatat pysyvät esteinä.
+   *
+   * JÄRJESTYS ON KIERROKSITTAIN eikä merkeittäin: ensin KAIKKI ne,
+   * jotka mahtuvat siististi, ja vasta sitten ahtaat. Toisin päin
+   * ahdas merkki veisi väljän merkin paikan.
+   *
+   * SYY KIRJATAAN YHÄ (kirjaaNimionPudotus): mitta kertoo, montako
+   * nimiötä joutui tinkimään ja mihin ne törmäsivät — se on juuri se
+   * luku, jonka pitää painua kohti nollaa, kun ladonta paranee.
+   */
+  for (const [id, rivi] of jaljella) {
+    kirjaaNimionPudotus(ui, id, rivi, { symbolit, laatat, varatut });
+    pakotetut.add(id);
+    /*
+     * VIIMEINEN OLKI on ensimmäinen kylki. Sitä ei ole vielä tarvittu
+     * (mitattu: kierros kaksi riitti kaikille 14:lle), mutta sääntö on
+     * ehdoton eikä saa jäädä toteutumatta siksi, että jokin tuleva
+     * rypäs on entistä ahtaampi.
+     */
+    const valittu = valitseKylki(rivi, false);
+    hyvaksy(id, rivi, valittu < 0 ? 0 : valittu);
+  }
+  return {
+    piilossa, pakotetut, puolet, kehykset,
+  };
 }
 
 export function paivitaKohdeNimiot(ui, s) {
@@ -2557,12 +2611,19 @@ export function paivitaKohdeNimiot(ui, s) {
 /** Väistön päätökset tietueisiin ja rastereihin — entinen häntä. */
 function kirjoitaKohdeNimioPaatokset(ui) {
   const ryhmat = ui.fokuskohdeRyhmat ?? [];
-  const { piilossa, puolet } = ui.fokuskohdeNimioPaatokset;
+  const { piilossa, pakotetut, puolet } = ui.fokuskohdeNimioPaatokset;
   // Päätös jää muistiin seuraavan rakennuksen arvaukseksi.
   ui.fokuskohdePiiloNimiot = piilossa;
   ui.fokuskohdeNimioPuolet = puolet;
   for (const r of ryhmat) {
     if (!r.nimi) continue;
+    /*
+     * TINKIMINEN JÄÄ TIETUEESEEN (2.9.2026, ks. SYMBOLI EI JÄÄ ILMAN
+     * NIMEÄ): mitta lukee sen (tools/savukkeet/mittaa-nostonimiot.mjs),
+     * eikä sitä voi päätellä `nimioNakyy`-lipusta, koska nimi näkyy
+     * kummallakin kierroksella.
+     */
+    r.nimioPakotettu = Boolean(pakotetut?.has(r.id));
     const nakyy = !piilossa.has(r.id);
     const kylki = puolet.get(r.id) ?? 'oikea';
     if (r.nimioNakyy === nakyy && r.nimioPuoli === kylki) continue;
@@ -2908,6 +2969,13 @@ export function maanPoltetutMerkit(pack, iso, pohja, onPoltettu = nostoOnPoltett
       id: r.id,
       nimi: r.nimi ?? null,
       kohde: tynka.fokuskohdeTiedot.get(r.id) ?? null,
+      /*
+       * TINKIMINEN MUKAAN (2.9.2026, ks. SYMBOLI EI JÄÄ ILMAN NIMEÄ):
+       * tingitty nimiö on ladonnassa, mutta LAATASSA se on vasta
+       * seuraavan polton jälkeen — portti (tools/tarkista-karttamerkit.mjs)
+       * raportoi ne polttovelkana eikä hyväksy niitä hiljaa.
+       */
+      pakotettu: Boolean(tynka.fokuskohdeNimioPaatokset?.pakotetut?.has(r.id)),
       x,
       y,
       sade,

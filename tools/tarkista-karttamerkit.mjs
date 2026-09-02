@@ -370,6 +370,13 @@ const KERAA = async () => sivu.evaluate(async () => {
   const kerrosPiilossa = Boolean(ui.fokuskohdeKerros?.classList?.contains('fokuskohteet-piilossa'));
   if (!kerrosPiilossa) {
     for (const g of ui.fokuskohdeKerros?.querySelectorAll('.fokuskohde') ?? []) {
+      /*
+       * NAAPURIN OSUMAMUODOT OVAT SAMASSA KERROKSESSA mutta eivät
+       * saman ladonnan tietueita (js/fokuskohteet.js
+       * asetaNaapurinOsumat) — niiden nimen todiste on laatan
+       * poltettu nimiö, jonka kohta 2 lukee ladonnasta.
+       */
+      if (g.classList.contains('fokuskohde-naapuri')) continue;
       const id = g.dataset.kohde;
       const r = tietueet.get(id);
       const kohde = ui.fokuskohdeTiedot?.get(id);
@@ -406,6 +413,14 @@ const KERAA = async () => sivu.evaluate(async () => {
          * poikkeus). Nimetön kohde ei siis ole löydös.
          */
         nimiVapaaehtoinen: !nimi,
+        /*
+         * POLTTOVELKA: nimiö on LADONNASSA mutta tingitty naapurin
+         * symbolin päälle (js/fokuskohteet.js SYMBOLI EI JÄÄ ILMAN
+         * NIMEÄ). Poltetulla merkillä se tarkoittaa, että LAATASSA
+         * nimeä ei vielä ole — ruudulla on paljas symboli, kunnes
+         * nostotaso poltetaan uudestaan.
+         */
+        polttovelka: Boolean(r?.poltettu && r?.nimioPakotettu),
         osuma: osumaKohdassa(x, y),
       });
     }
@@ -436,6 +451,7 @@ const KERAA = async () => sivu.evaluate(async () => {
       y: p.y,
       nimiNakyy: Boolean(m.nimio),
       nimiVapaaehtoinen: !m.nimi,
+      polttovelka: Boolean(m.pakotettu),
       osuma: osumaKohdassa(p.x, p.y),
       nimionOsuma: nimioPaikka ? osumaKohdassa(nimioPaikka.x, nimioPaikka.y) : null,
     });
@@ -546,6 +562,14 @@ async function napautaJaKatso(x, y) {
 
 const loydokset = [];
 const yhteenveto = [];
+/*
+ * POLTTOVELKA ON OMA LUETTELONSA EIKÄ LÖYDÖS. Ladonta antaa merkille
+ * nimen, mutta poltettu laatta on vanhempi kuin ladonta — ruudulla on
+ * paljas symboli siihen asti, kunnes nostotaso poltetaan uudestaan.
+ * Portti ei saa merkitä sitä vihreäksi hiljaa eikä punaiseksi
+ * korjattuna: se raportoidaan erikseen ja nimeltä.
+ */
+const polttovelka = new Map();
 
 for (const iso of MAAT) {
   const kaupunki = kaupungitMaittain[iso][0];
@@ -575,6 +599,9 @@ for (const iso of MAAT) {
     await sivu.waitForTimeout(1400);
 
     const tulos = await KERAA();
+    for (const m of tulos.merkit) {
+      if (m.polttovelka) polttovelka.set(`${m.iso ?? iso}/${m.id}`, m.nimi);
+    }
     const rikki = tulos.merkit.filter((m) => (!m.nimiNakyy && !m.nimiVapaaehtoinen)
       || !m.osuma.loytyi);
     for (const m of rikki) {
@@ -661,8 +688,16 @@ console.log(`\nLöydöksiä yhteensä ${loydokset.length} / maita ${MAAT.length}
 for (const [maa, n] of Object.entries(maittain).sort((a, b) => b[1] - a[1])) {
   console.log(`  ${maa}: ${n}`);
 }
+if (polttovelka.size) {
+  console.log(`\nPOLTTOVELKA ${polttovelka.size} merkkiä — nimiö on LADONNASSA mutta`);
+  console.log('laatta on vanhempi: ruudulla paljas symboli, kunnes nostotaso');
+  console.log('poltetaan uudestaan (js/fokuskohteet.js SYMBOLI EI JÄÄ ILMAN NIMEÄ).');
+  for (const [avain, nimi] of [...polttovelka].sort()) console.log(`  ${avain} "${nimi}"`);
+}
 if (KUVAKANSIO) {
   writeFileSync(join(KUVAKANSIO, 'karttamerkit.json'),
-    JSON.stringify({ yhteenveto, loydokset }, null, 1));
+    JSON.stringify({
+      yhteenveto, loydokset, polttovelka: [...polttovelka],
+    }, null, 1));
 }
 process.exit(loydokset.length ? 1 : 0);
