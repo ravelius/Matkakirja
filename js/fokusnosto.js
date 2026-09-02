@@ -74,7 +74,7 @@
 import {
   fokusmoodiPaalla, html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu,
 } from './ui-apurit.js';
-import { asetaKuva } from './media.js';
+import { asetaKuva, assetOsoite } from './media.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import {
   asetaKohdeNostot, avaaFokuskohde, avaaKohdeSuurennos, rekisteroiLisakohteet,
@@ -1055,7 +1055,9 @@ export function suljeNostonKortti(ui) {
 export function asetaNostonKuva(img, kuva, leveys, onVirhe) {
   if (kuva.osoite) {
     img.addEventListener('error', () => onVirhe(), { once: true });
-    img.src = kuva.osoite;
+    // Repon polku tai ämpäriosoite sen mukaan, onko laji jo siirretty
+    // (js/media.js R2_ASSETIT) — kutsupaikka ei muutu siirrosta.
+    img.src = assetOsoite('nostot', kuva.osoite);
     return;
   }
   asetaKuva(img, valokuvaUrl(kuva.tiedosto, leveys),
