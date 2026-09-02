@@ -34,8 +34,31 @@ import { KARTTAVALO_AIHEET } from '../js/karttavalot.js';
 /** Karttanimiön enimmäismitta (js/fokusnosto-symbolit.js NOSTOSYM_NIMIO_MERKKEJA). */
 const NIMION_MAKSIMI = 18;
 
-/** Lyhin sallittu etäisyys kaupunkimerkkiin maailmankartan yksikköinä. */
+/** Etäisyys, jota lähempänä hetki latoutuu kaupungin sarakkeeseen. */
 const VAHIN_ETAISYYS_KAUPUNKIIN = 35;
+
+/** Kaupunkinostojen katon säde (js/fokuskohteet.js KAUPUNKIKATON_SADE). */
+const KAUPUNKIKATON_SADE = 8;
+
+/*
+ * MINIVISAA ODOTTAVAT HETKET (2.9.2026 ilta).
+ *
+ * Omistajan sääntö palautti kuusi hetkeä lehdestä kartalle, ja kartan
+ * hetkeen kuuluu minivisa. Visakysymykset kirjoittaa päätoimittaja
+ * (docs/roolitus.md: "visakysymykset ja luennat"), joten koodierä ei
+ * keksinyt niitä. Kortti toimii ilman visaa
+ * (js/historian-hetket.js hetkiVisa palaa heti), ja tämä lista pitää
+ * puutteen näkyvissä: kun visa saapuu, testi vaatii tunnuksen
+ * poistamista listalta, joten lista tyhjenee itsestään.
+ */
+const VISAA_ODOTTAA = new Set([
+  'kolumbus-palos-1492',
+  'magalhaes-sanlucar-1519',
+  'vasco-da-gama-restelo-1497',
+  'trafalgar-victory-1805',
+  'nansen-fram-1893',
+  'viikinkilaiva-roskilde-1000',
+]);
 
 const paikat = new Map(HISTORIAN_HETKET.map((h) => [
   h.id, projisoiLaudalle('maailmankartta', h.lon, h.lat),
@@ -154,30 +177,51 @@ test('jokaisen kuvan lähderivi on havainnekuvamerkintä ja nimeää lähteensä
   }
 });
 
-test('kartalle merkitty hetki on kaukana jokaisesta kohdekaupungista', () => {
+test('hetki on kartalla, ellei sitä voi piirtää lainkaan', () => {
   /*
-   * Omistajan sijoitussääntö 2.9.2026 koneellisesti: merkin saa vain
-   * hetki, joka ei istu kohdekaupungin päällä. Raja on sama kuin
-   * eläintäyillä, ja se on molempiin suuntiin sitova — kaukana oleva
-   * hetki KUULUU kartalle, jottei sisältö jää huomaamatta lehteen.
+   * SÄÄNTÖ VAIHTUI 2.9.2026 ILLALLA (omistaja, sanatarkasti): *"lisää
+   * kaikki historian hetket ja muut karttanostot myös joko
+   * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle, ellei
+   * näin ole jo tehty."* Aamun sääntö oli 35 laudan yksikköä
+   * kohdekaupungista: sitä lähempi hetki jäi pelkkään lehteen. Se ei
+   * ollut oikea päätelmä siitä, mitä aamun sääntö sanoi — kaupungin
+   * viereen osuvaa merkkiä ei tarvitse jättää pois, koska kasauspassi
+   * (js/fokusniput.js) latoo sen kaupungin viereen sarakkeeseen ja
+   * vetää siirtoviivan tapahtumapaikkaan, kuten kaikille muillekin
+   * lähelle osuville nostoille.
+   *
+   * Nyt sääntö on: hetki on kartalla, ellei sitä voi piirtää lainkaan.
+   * Ainoat poikkeukset ovat `kartanUlkopuolella`-lipulla merkityt, ja
+   * niiden syyn tarkistaa tests/nostot-kartalla.test.mjs.
+   *
+   * VÄHIN_ETAISYYS_KAUPUNKIIN ei ole enää ehto vaan raja sille, milloin
+   * hetki tarvitsee `kattoVapaa`-lipun: kaupunkinostojen katto pudottaa
+   * kahdeksaa yksikköä lähemmät merkit, ellei lippua ole.
    */
   for (const hetki of HISTORIAN_HETKET) {
     const lahin = lahinKaupunki(hetki);
     if (!lahin) {
       assert.equal(hetki.kartalla, false,
         `${hetki.id}: piste ei osu laudalle, joten merkkiä ei voi piirtää`);
+      assert.equal(hetki.kartanUlkopuolella, true,
+        `${hetki.id}: lehteen jäävä hetki on merkittävä kartanUlkopuolella-lipulla`);
       continue;
     }
-    if (hetki.kartalla) {
-      assert.ok(lahin.etaisyys >= VAHIN_ETAISYYS_KAUPUNKIIN,
-        `${hetki.id}: merkki on ${lahin.etaisyys.toFixed(0)} yksikön päässä `
-        + `kaupungista ${lahin.nimi} (vähintään ${VAHIN_ETAISYYS_KAUPUNKIIN})`);
-    } else {
-      assert.ok(lahin.etaisyys < VAHIN_ETAISYYS_KAUPUNKIIN,
-        `${hetki.id}: paikka on ${lahin.etaisyys.toFixed(0)} yksikön päässä `
-        + `lähimmästä kaupungista (${lahin.nimi}) eli vapaalla alueella — `
-        + 'sen kuuluisi olla myös kartalla (kartalla: true)');
+    if (!hetki.kartalla) {
+      assert.equal(hetki.kartanUlkopuolella, true,
+        `${hetki.id}: hetki on ${lahin.etaisyys.toFixed(0)} yksikön päässä `
+        + `kaupungista ${lahin.nimi} eli piirrettävissä — sen kuuluu olla `
+        + 'kartalla (kartalla: true) tai poikkeuksena kartanUlkopuolella');
+      continue;
     }
+    if (lahin.etaisyys < KAUPUNKIKATON_SADE) {
+      assert.equal(hetki.kattoVapaa, true,
+        `${hetki.id}: merkki on ${lahin.etaisyys.toFixed(1)} yksikön päässä `
+        + `kaupungista ${lahin.nimi}, joten kaupunkinostojen katto pudottaisi `
+        + 'sen ilman kattoVapaa-lippua');
+    }
+    assert.ok(lahin.etaisyys < VAHIN_ETAISYYS_KAUPUNKIIN || !hetki.kattoVapaa,
+      `${hetki.id}: kattoVapaa on turha ${lahin.etaisyys.toFixed(0)} yksikön päässä`);
   }
 });
 
@@ -186,6 +230,11 @@ test('kartalle merkityllä hetkellä on minivisa, muilla ei', () => {
     if (!hetki.kartalla) {
       assert.equal(hetki.visa, undefined,
         `${hetki.id}: hetki ei ole kartalla, joten kortti ei aukea eikä visaa tarvita`);
+      continue;
+    }
+    if (VISAA_ODOTTAA.has(hetki.id)) {
+      assert.equal(hetki.visa, undefined,
+        `${hetki.id}: visa on saapunut — poista tunnus VISAA_ODOTTAA-listalta`);
       continue;
     }
     const visa = hetki.visa;

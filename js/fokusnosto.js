@@ -762,6 +762,9 @@ function nostoMerkinKentat(nosto, paikka) {
     nimio: nosto.nimio ?? paikka.nimi ?? null,
     tyyppi: 'nosto',
     symboli: NOSTOSYM_TYYPIT.has(nosto.symboli) ? nosto.symboli : 'huuto',
+    // Kaupunkinostojen katto ei koske kaupungin ulkopuolista täkyä
+    // (js/fokuskohteet.js, osio KATTOVAPAA).
+    ...(nosto.kattoVapaa ? { kattoVapaa: true } : {}),
   };
 }
 

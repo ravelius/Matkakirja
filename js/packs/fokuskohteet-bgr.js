@@ -316,6 +316,13 @@ export const FOKUSKOHTEET_BGR = [
     id: 'vitosa',
     nimi: 'Vitoša',
     tyyppi: 'vuori',
+    /*
+     * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+     * huippu on 15 kilometriä kaupunkilehden kohdekartan eteläpuolella
+     * — vuori ei ole kohdekaupungissa vaan sen takana, ja juuri
+     * sellainen nosto kuuluu pääkartalle.
+     */
+    kattoVapaa: true,
     kysymykset: [
       'Voiko Vitoša vielä purkautua?',
       'Miksi vuori on sofialaisille niin tärkeä?',
@@ -515,6 +522,13 @@ export const FOKUSKOHTEET_BGR = [
   {
     id: 'boyana',
     nimi: 'Boyanan kirkko',
+    /*
+     * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+     * kirkko on Vitošan juurella kaupunkilehden kohdekartan eteläpuolella
+     * (kartan eteläraja 42,681, kirkko 42,644), joten merkki kuuluu
+     * pääkartalle.
+     */
+    kattoVapaa: true,
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'kulttuuri',
     tyyppi: 'muu',

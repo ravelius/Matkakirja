@@ -2901,6 +2901,32 @@ export const MAAKARTAT = {
  * niin, että ydinrajaus täyttää kehyksen (ui.js: ydinAla), joten
  * lepotilan näkymä pysyy pikselilleen entisenä ja reunus paljastuu
  * vasta zoomatessa.
+ *
+ * KOHTEEN KENTÄT: `nimi`, `lat`, `lon` ja valinnaiset `wiki`
+ * (fi-Wikipedian artikkeli) ja `nimiPuoli` ('vasen' | 'oikea', nimiön
+ * väistö ahtaassa paikassa). Kaksi lisää tuli 2.9.2026, kun
+ * kaupunkikaton (v1419) pudottamat karttanostot palautettiin kartalle:
+ *
+ *   nosto   PUDOTETUN KARTTANOSTON TUNNUS, jota tämä piste kantaa —
+ *           merkkijono tai lista, jos sama kohde on kartalla yhtenä
+ *           pisteenä ja pääkartalla kahtena nostona. Kenttä on
+ *           KONEELLINEN LINKKI (tools/tarkista-nostopaikat.mjs,
+ *           tests/nostot-kartalla.test.mjs): nimivertailu ei kelpaisi,
+ *           koska sama sisältö kulkee kartalla eri nimellä kuin
+ *           nostona (`moskeijat` on täällä "Banja Bashin moskeija").
+ *           Omistajan sääntö 2.9.2026: *"lisää kaikki historian hetket
+ *           ja muut karttanostot myös joko pääkarttanäkymään tai sitten
+ *           kaupunkilehden kaupunkikartalle, ellei näin ole jo tehty."*
+ *   siirto  MERKIN VÄISTÖ `{ x, y }` kartan lavan pikseleinä, kun
+ *           piste osuisi naapurinsa alle (peitto yli 50 %,
+ *           tools/tarkista-karttapisteet.mjs). Koordinaattia EI
+ *           siirretä — väistö on piirtoasia kuten `nimiPuoli`, ja se
+ *           tehdään js/nahtavyydet.js:ssä pisteen asemoinnissa.
+ *
+ * NOSTO KELPAA TÄNNE VAIN, JOS SE ON LEPOTILAN NÄKYMÄSSÄ (`rajat`).
+ * Reunukselle (piirtoRajat) osuva merkki näkyisi vasta zoomatessa, ja
+ * tests/karttareunus.test.mjs kieltää sen. Wienin Praterin näyttely ja
+ * Rooman Avaimenreikä jäivät siksi pääkartalle kaupunkikaton ohi.
  */
 export const KAUPUNKIKARTAT = {
   /*
@@ -3766,7 +3792,7 @@ export const KAUPUNKIKARTAT = {
        * Hagia Sofiasta ja Sinisestä moskeijasta — kirjaimellisesti
        * naapuritontteja, joten ne eivät voi olla omia numeroitaan.
        */
-      { nimi: 'Suuri basaari', lat: 41.011, lon: 28.9683 },
+      { nimi: 'Suuri basaari', lat: 41.011, lon: 28.9683, nosto: 'kapalicarsi' },
       { nimi: 'Sininen moskeija', lat: 41.0054, lon: 28.9768, wiki: 'Sulttaani Ahmedin moskeija' },
       { nimi: 'Hagia Sofia', lat: 41.0085, lon: 28.98, wiki: 'Hagia Sofia' },
       { nimi: 'Topkapın palatsi', lat: 41.0128, lon: 28.984, wiki: 'Topkapın palatsi' },
@@ -3785,6 +3811,33 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Galatan silta', lat: 41.0201, lon: 28.9731 },
       { nimi: 'Sirkecin asema', lat: 41.0152, lon: 28.9764 },
       { nimi: 'Neitsyttorni', lat: 41.0211, lon: 29.0041 },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki istanbul).
+       */
+      {
+        nimi: 'Vararikko 1875', lat: 41.0122, lon: 28.9739,
+        nosto: 'skandaali-osmanien-vararikko-1875',
+      },
+      {
+        nimi: 'Camondon portaat', lat: 41.0255, lon: 28.9742,
+        nosto: 'syvennys-istanbul-camondo', nimiPuoli: 'oikea',
+        siirto: { x: 2, y: 26 },
+      },
+      {
+        nimi: 'Käärmepylväs', lat: 41.0058, lon: 28.9758,
+        nosto: 'syvennys-istanbul-kaarmepylvas', nimiPuoli: 'vasen',
+        siirto: { x: -18, y: -19 },
+      },
     ],
   },
   lissabon: {
@@ -3823,6 +3876,29 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Tuomiokirkko', lat: 38.7098, lon: -9.1326, wiki: 'Lissabonin tuomiokirkko' },
       { nimi: 'Kauppatori', lat: 38.7076, lon: -9.1365, wiki: 'Praça do Comércio' },
       { nimi: 'Kansallispanteoni', lat: 38.715, lon: -9.1247 },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki lissabon).
+       */
+      {
+        // Nimiö oikealle eikä siirron suuntaan: vasemmalla on Glórian
+        // köysiradan nimi, oikealla tyhjää korttelia (kaappaus 2.9.2026).
+        nimi: 'Calçada', lat: 38.7139, lon: -9.1394,
+        nosto: 'syvennys-lissabon-calcada', nimiPuoli: 'oikea',
+        siirto: { x: -14, y: -22 },
+      },
+      {
+        nimi: 'Largo da Severa', lat: 38.7161, lon: -9.1344, nosto: 'syvennys-lissabon-severa',
+      },
     ],
   },
   barcelona: {
@@ -3895,6 +3971,23 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Granadan katedraali', lat: 37.1765, lon: -3.5992 },
       { nimi: 'Alhambra', lat: 37.1761, lon: -3.589, wiki: 'Alhambra' },
       { nimi: 'Manuel de Fallan talo', lat: 37.1734, lon: -3.5888, wiki: 'Manuel de Falla' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki granada).
+       */
+      {
+        nimi: 'Leijonain piha', lat: 37.1771, lon: -3.5893,
+        nosto: 'syvennys-granada-kupoli', nimiPuoli: 'vasen',
+      },
     ],
   },
   edinburgh: {
@@ -3931,6 +4024,23 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Greyfriars Bobby', lat: 55.9469, lon: -3.1913, wiki: 'Greyfriars Bobby' },
       { nimi: 'Calton Hill', lat: 55.9553, lon: -3.1828, wiki: 'Calton Hill' },
       { nimi: 'Holyroodin palatsi', lat: 55.9527, lon: -3.1716, wiki: 'Holyroodin palatsi' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki edinburgh).
+       */
+      {
+        nimi: 'Scott-monumentti', lat: 55.9524, lon: -3.1933,
+        nosto: 'syvennys-edinburgh-scott-monumentti',
+      },
     ],
   },
   marseille: {
@@ -4144,12 +4254,46 @@ export const KAUPUNKIKARTAT = {
       // rivillä. Merkki pysyy koordinaatissaan (ks. .kohde-nimi-vasen).
       {
         nimi: 'Akropolis-museo', lat: 37.9691, lon: 23.7283, nimiPuoli: 'vasen',
+        nosto: 'akropolis-museo',
       },
       { nimi: 'Zeuksen temppeli', lat: 37.9694, lon: 23.7331, wiki: 'Olympoksen Zeuksen temppeli' },
       { nimi: 'Sýntagman aukio', lat: 37.9756, lon: 23.7347, wiki: 'Sýntagma' },
-      { nimi: 'Iliou Melathron', lat: 37.9808, lon: 23.7328 },
+      { nimi: 'Iliou Melathron', lat: 37.9808, lon: 23.7328, nosto: 'syvennys-ateena-schliemann' },
       { nimi: 'Lykavittós', lat: 37.9819, lon: 23.7432, wiki: 'Lykavittós' },
       { nimi: 'Kallimarmaro', lat: 37.9683, lon: 23.7411, wiki: 'Panathinaïkó-stadion' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki ateena).
+       */
+      {
+        nimi: 'Maratonhuijaus', lat: 37.9683, lon: 23.7410,
+        nosto: 'skandaali-belokas-maratonhuijaus-1896', nimiPuoli: 'vasen',
+        siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Elginin marmorit', lat: 37.9715, lon: 23.7267,
+        nosto: 'skandaali-elginin-marmorit', nimiPuoli: 'oikea',
+        siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Diogeneen astia', lat: 37.9750, lon: 23.7233,
+        nosto: 'syvennys-ateena-diogenes', nimiPuoli: 'oikea',
+        siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Niken temppeli', lat: 37.9717, lon: 23.7258,
+        nosto: 'syvennys-ateena-nike', nimiPuoli: 'vasen',
+        siirto: { x: -19, y: -18 },
+      },
     ],
   },
   amsterdam: {
@@ -4235,6 +4379,23 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Ha’penny-silta', lat: 53.3463, lon: -6.2631 },
       { nimi: 'Spire', lat: 53.3498, lon: -6.2603, wiki: 'Spire of Dublin' },
       { nimi: 'Trinity College', lat: 53.3437, lon: -6.2545, wiki: 'Trinity College (Dublin)' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki dublin).
+       */
+      {
+        nimi: 'St James’s Gate', lat: 53.3419, lon: -6.2867, nosto: 'syvennys-dublin-vuokrakirja',
+        siirto: { x: 0, y: 26 },
+      },
     ],
   },
   pariisi: {
@@ -4322,6 +4483,46 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Orsayn taidemuseo', lat: 48.86, lon: 2.3266, wiki: 'Orsayn taidemuseo' },
       { nimi: 'Palais Garnier', lat: 48.8719, lon: 2.3317, wiki: 'Palais Garnier' },
       { nimi: 'Place des Vosges', lat: 48.8556, lon: 2.3656, wiki: 'Place des Vosges' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki pariisi).
+       */
+      {
+        nimi: 'Carmenin ensi-ilta', lat: 48.8709, lon: 2.3378, nosto: 'nosto-carmenin-ensi-ilta',
+      },
+      {
+        nimi: 'Kirahvin kävelymatka', lat: 48.8447, lon: 2.3597,
+        nosto: 'nosto-kirahvin-kavelymatka',
+      },
+      {
+        nimi: 'Torni romuraudaksi', lat: 48.85822, lon: 2.2945,
+        nosto: 'nosto-lustig-eiffel', nimiPuoli: 'vasen',
+        siirto: { x: -6, y: -25 },
+      },
+      {
+        nimi: 'Vrain-Lucas', lat: 48.8573, lon: 2.3372,
+        nosto: 'skandaali-vrain-lucas-kirjevaarennokset',
+      },
+      {
+        nimi: 'Impressionistit', lat: 48.8705, lon: 2.3280,
+        nosto: 'syvennys-pariisi-impressionistit', nimiPuoli: 'vasen',
+      },
+      {
+        nimi: 'Kyyhkyposti', lat: 48.8566, lon: 2.3522, nosto: 'syvennys-pariisi-kyyhkyposti',
+      },
+      {
+        nimi: 'Tuileriain rauniot', lat: 48.8622, lon: 2.3325,
+        nosto: 'syvennys-pariisi-tuileriat', nimiPuoli: 'vasen',
+      },
     ],
   },
   budapest: {
@@ -4406,6 +4607,22 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vanhauusi synagoga', lat: 50.09, lon: 14.4186, wiki: 'Vanhauusi synagoga' },
       { nimi: 'Astronominen kello', lat: 50.087, lon: 14.4207, wiki: 'Prahan astronominen kello' },
       { nimi: 'Kansallismuseo', lat: 50.0789, lon: 14.4308, wiki: 'Prahan kansallismuseo' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki praha).
+       */
+      {
+        nimi: 'Klementinum', lat: 50.0867, lon: 14.4164, nosto: 'syvennys-praha-klementinum',
+      },
     ],
   },
   wien: {
@@ -4467,6 +4684,22 @@ export const KAUPUNKIKARTAT = {
       // Kainalossa. Koordinaatti on päärajauksen ulkopuolella, ja
       // karttapiste() sijoittaa sen minikarttaan sen perusteella.
       { nimi: 'Schönbrunn', lat: 48.1845, lon: 16.3119, wiki: 'Schönbrunnin linna' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki wien).
+       */
+      {
+        nimi: 'Vuoristovesijohto', lat: 48.1984, lon: 16.3760, nosto: 'syvennys-wien-vesijohto',
+      },
     ],
   },
   kairo: {
@@ -4663,6 +4896,29 @@ export const KAUPUNKIKARTAT = {
         lon: -0.0754,
         wiki: 'Tower Bridge',
       },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki lontoo).
+       */
+      {
+        nimi: 'Etelämeren kupla', lat: 51.5146, lon: -0.0837, nosto: 'skandaali-etelameren-kupla',
+      },
+      {
+        nimi: 'Cheapsiden kätkö', lat: 51.5141, lon: -0.0937,
+        nosto: 'syvennys-lontoo-cheapside', nimiPuoli: 'oikea',
+      },
+      {
+        nimi: 'Thamesin vuorovesi', lat: 51.5102, lon: -0.0984, nosto: 'syvennys-lontoo-vuorovesi',
+      },
     ],
   },
   berliini: {
@@ -4730,11 +4986,33 @@ export const KAUPUNKIKARTAT = {
        * fi.wikipedian artikkeli.
        */
       { nimi: 'Valtiopäivätalo', lat: 52.5186, lon: 13.3762, wiki: 'Valtiopäivätalo (Saksa)' },
-      { nimi: 'Brandenburgin portti', lat: 52.5163, lon: 13.3777, wiki: 'Brandenburgin portti' },
+      {
+        nimi: 'Brandenburgin portti', lat: 52.5163, lon: 13.3777, wiki: 'Brandenburgin portti',
+        nosto: 'brandenburgin-portti',
+      },
       { nimi: 'Checkpoint Charlie', lat: 52.5076, lon: 13.3904, wiki: 'Checkpoint Charlie' },
       { nimi: 'Museosaari', lat: 52.5169, lon: 13.401, wiki: 'Museumsinsel' },
       { nimi: 'Tv-torni', lat: 52.5208, lon: 13.4094, wiki: 'Berliinin televisiotorni' },
       { nimi: 'East Side Gallery', lat: 52.505, lon: 13.4399, wiki: 'East Side Gallery' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki berliini).
+       */
+      {
+        nimi: 'Lehmän hinnalla', lat: 52.53, lon: 13.37944, nosto: 'nosto-archaeopteryx',
+      },
+      {
+        nimi: 'Berliinin karhu', lat: 52.5099, lon: 13.4143, nosto: 'syvennys-berliini-karhu',
+      },
     ],
   },
   madrid: {
@@ -4777,6 +5055,22 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Cibeleen aukio', lat: 40.4192, lon: -3.6931, wiki: 'Plaza de Cibeles' },
       { nimi: 'Prado-museo', lat: 40.4138, lon: -3.6921, wiki: 'Museo del Prado' },
       { nimi: 'Alcalán portti', lat: 40.42, lon: -3.6889, wiki: 'Puerta de Alcalá' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki madrid).
+       */
+      {
+        nimi: 'Tasavallan vuosi', lat: 40.4153, lon: -3.6971, nosto: 'syvennys-madrid-tasavalta',
+      },
     ],
   },
   tukholma: {
@@ -4826,6 +5120,26 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kuninkaanlinna', lat: 59.3268, lon: 18.0717, wiki: 'Tukholman kuninkaanlinna' },
       { nimi: 'Vasa-museo', lat: 59.328, lon: 18.0915, wiki: 'Vasa-museo' },
       { nimi: 'Skansen', lat: 59.3255, lon: 18.1035, wiki: 'Skansen' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki tukholma).
+       */
+      {
+        nimi: 'Vädersolstavlan', lat: 59.3258, lon: 18.0703,
+        nosto: 'syvennys-tukholma-aurinkotaulu', nimiPuoli: 'vasen',
+      },
+      {
+        nimi: 'Norrström', lat: 59.3286, lon: 18.0713, nosto: 'syvennys-tukholma-lohi',
+      },
     ],
   },
   venetsia: {
@@ -4912,6 +5226,36 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Trevin suihkulähde', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi' },
       { nimi: 'Pantheon', lat: 41.8986, lon: 12.4769, wiki: 'Pantheon (Rooma)' },
       { nimi: 'Colosseum', lat: 41.8902, lon: 12.4922, wiki: 'Colosseum' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki rooma).
+       */
+      /*
+       * YKSI PISTE, KAKSI NOSTOA. Täkynosto `nosto-kissat` (Caesarin
+       * kissat) ja syvennystarina `syvennys-rooma-kissat` seisovat
+       * SAMASSA pisteessä: molemmat ovat Largo di Torre Argentinan
+       * kissakolonia, ja koordinaatit eroavat kolmannessa desimaalissa
+       * (peitto 97 %). Kahta merkkiä ei tehdä samaan paikkaan — piste
+       * kantaa molempien tunnukset, ja sen juttu on syvennystarinan
+       * pidempi kertomus. Täkynoston oma näkökulma on kaupunkilehden
+       * sivulla (v1421).
+       */
+      {
+        nimi: 'Torre Argentina', lat: 41.8953, lon: 12.4769,
+        nosto: ['syvennys-rooma-kissat', 'nosto-kissat'],
+      },
+      {
+        nimi: 'Vatikaanin palatsi', lat: 41.9036, lon: 12.4564, nosto: 'syvennys-rooma-vatikaani',
+      },
     ],
   },
   krakova: {
@@ -4950,6 +5294,22 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Wawelin linna', lat: 50.0544, lon: 19.9366, wiki: 'Wawelin linna' },
       { nimi: 'Wawelin lohikäärme', lat: 50.053, lon: 19.9336 },
       { nimi: 'Kazimierz', lat: 50.0517, lon: 19.9449, wiki: 'Kazimierz' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki krakova).
+       */
+      {
+        nimi: 'Wawel', lat: 50.0539, lon: 19.9347, nosto: 'syvennys-krakova-wawel',
+      },
     ],
   },
   varsova: {
@@ -5112,8 +5472,20 @@ export const KAUPUNKIKARTAT = {
       // joka on 33 px oikealla alaviistossa.
       {
         nimi: 'Banja Bashin moskeija', lat: 42.6977, lon: 23.3219, nimiPuoli: 'vasen',
+        nosto: 'moskeijat',
       },
-      { nimi: 'Serdican areena', lat: 42.6972, lon: 23.3283 },
+      /*
+       * YKSI PISTE, KAKSI NOSTOA (sama ratkaisu kuin Rooman Torre
+       * Argentinalla): syvennystarina `syvennys-sofia-areena` ja
+       * täkynosto `nosto-areena` ovat sama amfiteatteri samassa
+       * pisteessä (peitto 97 %). Pisteen juttu on syvennystarinan
+       * kertomus löytymisestä; täkynoston näkökulma vuoden 1919
+       * mainoslaattaan on kaupunkilehden Historia-sivulla (v1421).
+       */
+      {
+        nimi: 'Serdican areena', lat: 42.6972, lon: 23.3283,
+        nosto: ['syvennys-sofia-areena', 'nosto-areena'],
+      },
       { nimi: 'Pyhän Yrjön rotunda', lat: 42.69689, lon: 23.32288 },
       {
         nimi: 'Sofian katedraali',
@@ -5124,6 +5496,24 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Sofian yliopisto', lat: 42.69354, lon: 23.33528, wiki: 'Sofian yliopisto' },
       { nimi: 'Borisovan puutarha', lat: 42.6893, lon: 23.3372 },
       { nimi: 'Kansalliskulttuuripalatsi', lat: 42.68476, lon: 23.31894 },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki sofia).
+       */
+      {
+        nimi: 'Sofia-patsas', lat: 42.6978, lon: 23.3215,
+        nosto: 'syvennys-sofia-pollopatsas', nimiPuoli: 'vasen',
+        siirto: { x: -25, y: -9 },
+      },
     ],
   },
   bukarest: {
@@ -5186,6 +5576,34 @@ export const KAUPUNKIKARTAT = {
       },
       // Kainalossa vasemmassa ylänurkassa.
       { nimi: 'Antipan museo', lat: 44.4526, lon: 26.0858 },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki bukarest).
+       */
+      /*
+       * TÄKYNOSTO `nosto-dracula` EI TULLUT TÄNNE, vaikka se on
+       * karsittujen joukossa. Sillä ei ole omaa paikkaa: sen ankkuri on
+       * Bukarestin laatta itse (js/packs/fokusvirta-bukarest.js, "MIKSI
+       * SE SILTI KIRJOITETAAN") — juttu syntyi Britanniassa Wilkinsonin
+       * kirjan alaviitteestä. Mikä tahansa piste tällä kartalla olisi
+       * keksitty osoite, ja kartan lupaus on, että piste on siellä
+       * missä kohde on. Nosto jää siksi pääkartalle kaupunkikaton ohi
+       * (kattoVapaa).
+       */
+      {
+        nimi: 'Szathmárin studio', lat: 44.4305, lon: 26.1010,
+        nosto: 'syvennys-bukarest-szathmari', nimiPuoli: 'vasen',
+        siirto: { x: -13, y: -22 },
+      },
     ],
   },
   sarajevo: {
@@ -5425,6 +5843,22 @@ export const KAUPUNKIKARTAT = {
         lon: 37.6209,
         wiki: 'Tretjakovin galleria',
       },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki moskova).
+       */
+      {
+        nimi: 'Näyttely 1872', lat: 55.7577, lon: 37.6295, nosto: 'syvennys-moskova-nayttely1872',
+      },
     ],
   },
   odessa: {
@@ -5511,6 +5945,22 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kaupungintalo', lat: 59.912, lon: 10.7335, wiki: 'Oslon kaupungintalo' },
       { nimi: 'Akershusin linnoitus', lat: 59.9075, lon: 10.7365, wiki: 'Akershusin linnoitus' },
       { nimi: 'Oopperatalo', lat: 59.9075, lon: 10.7522, wiki: 'Oslon oopperatalo' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki oslo).
+       */
+      {
+        nimi: 'Akershus', lat: 59.9067, lon: 10.7361, nosto: 'syvennys-oslo-unionilippu',
+      },
     ],
   },
   /*
@@ -5660,6 +6110,24 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vapahtajan kirkko', lat: 55.6729, lon: 12.594, wiki: 'Vapahtajamme kirkko' },
       { nimi: 'Rosenborgin linna', lat: 55.6859, lon: 12.5773, wiki: 'Rosenborgin linna' },
       { nimi: 'Kastellet', lat: 55.6912, lon: 12.5938, wiki: 'Kastellet (Kööpenhamina)' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki kobenhavn).
+       */
+      {
+        nimi: 'Tivolin portti', lat: 55.6736, lon: 12.5683,
+        nosto: 'syvennys-kobenhavn-tivoli', nimiPuoli: 'oikea',
+        siirto: { x: 18, y: 19 },
+      },
     ],
   },
   tampere: {

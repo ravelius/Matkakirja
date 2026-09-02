@@ -116,6 +116,9 @@ export function syvennysKarttarivit(iso, lauta, cityCountry) {
           nimio: tiedot.nimio ?? null,
           tyyppi: 'syvennys',
           symboli: tiedot.symboli,
+          // Kaupunkinostojen katto ei koske kaupungin ulkopuolista
+          // tarinaa (js/fokuskohteet.js, osio KATTOVAPAA).
+          ...(tiedot.kattoVapaa ? { kattoVapaa: true } : {}),
         },
         paikka: { x: paikka.x, y: paikka.y },
       });

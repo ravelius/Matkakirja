@@ -531,6 +531,13 @@ export const FOKUSVIRTA_WIEN = {
        */
       id: 'maailmannayttely-1873',
       nimio: 'Näyttely ja pörssi',
+      /*
+       * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+       * näyttelyalue oli Praterissa, joka jää Wienin kohdekartan
+       * lepotilan näkymän (itäraja 16,404) itäpuolelle, joten merkki
+       * kuuluu pääkartalle.
+       */
+      kattoVapaa: true,
       otsikko: 'Keisari avasi maailmannäyttelyn — kahdeksan päivää '
         + 'myöhemmin poliisi sulki pörssin',
       lunastus: [
@@ -639,6 +646,12 @@ export const FOKUSVIRTA_WIEN = {
        */
       id: 'kirahvimuoti',
       nimio: 'Kirahvi ja muoti',
+      /*
+       * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+       * Schönbrunnin eläintarha on kaupunkilehden kohdekartan
+       * länsipuolella, joten merkki kuuluu pääkartalle.
+       */
+      kattoVapaa: true,
       otsikko: 'Yksi kirahvi muutti koko kaupungin muodin — kampaukset, '
         + 'hajuveden ja näytelmän',
       lunastus: [

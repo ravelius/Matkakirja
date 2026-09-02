@@ -1048,6 +1048,13 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'dolmabahce',
     nimi: 'Dolmabahçen palatsi',
+    /*
+     * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+     * palatsi on Beşiktaşissa, kolme kilometriä kaupunkilehden
+     * kohdekartan (vanhakaupunki ja Galata) pohjoispuolella, joten
+     * merkki kuuluu pääkartalle.
+     */
+    kattoVapaa: true,
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Dolmabahçe',

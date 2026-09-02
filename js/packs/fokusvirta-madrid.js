@@ -672,6 +672,13 @@ export const FOKUSVIRTA_MADRID = {
        */
       id: 'munkkiaratit',
       nimio: 'Madridin papukaijat',
+      /*
+       * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+       * piste on Casa de Campon ja Länsipuiston puolella, kaupunkilehden
+       * kohdekartan (Kuninkaanlinna–Prado) rajauksen ulkopuolella, joten
+       * merkki kuuluu pääkartalle.
+       */
+      kattoVapaa: true,
       otsikko: 'Madridin puistoissa asuu tuhansia villejä papukaijoja — ja '
         + 'niiden pesät kasvavat pikkuauton kokoisiksi',
       lunastus: [
