@@ -1,3 +1,56 @@
+## 2.9.2026 13:50 UTC — KUVATILAUS M2 — MINIATYYRIT: 41 kohdekartan miniatyyriä (20 kaupunkia)
+
+Kaikki lehtiin siirretyt nostot ovat nyt kaupunkilehtien kohdekartoilla
+(v1457) varatäplinä. Tilaus samalla tyylillä ja toimituksella kuin M1
+(12:40): yksivärinen seepiamusteluonnos, kevyt karikatyyri, muutama varma
+viiva, paperinvärinen tausta, ei ihmisiä, ei tekstiä, ei kehystä; neliö
+1024×1024 JPEG sRGB R2-polkuun `kohtaamiset/miniatyyrit/<tunnus>.jpg`.
+M1:n neljä (ateena-akropolis-museo, ateena-iliou-melathron,
+sofia-banja-bashin-moskeija, sofia-serdican-areena) sisältyvät alla —
+älä tee niitä kahdesti. Tunnus — kuvaus:
+
+ateena-maratonhuijaus — a marble horseshoe stadium seen from the track end
+ateena-elginin-marmorit — a section of carved marble frieze with horsemen
+ateena-diogeneen-astia — a large clay storage jar lying on its side
+ateena-niken-temppeli — a tiny Ionic temple with four slender columns
+berliini-lehman-hinnalla — a fossil bird slab in a display frame
+berliini-berliinin-karhu — a standing bear statue on a plinth
+bukarest-szathmarin-studio — a 19th-century photographer's studio with a bellows camera
+dublin-st-james-s-gate — a brewery gate arch with iron gates
+edinburgh-scott-monumentti — a tall blackened gothic spire monument
+granada-leijonain-piha — a courtyard fountain ringed by stone lions
+istanbul-vararikko-1875 — an Ottoman bank building with an arcaded façade
+istanbul-camondon-portaat — a curving art-nouveau outdoor staircase
+istanbul-kaarmepylvas — a twisted bronze serpent column in a hippodrome square
+kobenhavn-tivolin-portti — an ornate amusement-park entrance gate with lamps
+krakova-wawel — a hilltop royal castle with red roofs
+lissabon-calcada — a patterned black-and-white mosaic pavement panel
+lissabon-largo-da-severa — a narrow Alfama square with a fado guitar sign
+lontoo-etelameren-kupla — an 18th-century stock-exchange coffee house
+lontoo-cheapsiden-katko — a heap of jewelled Elizabethan treasure
+lontoo-thamesin-vuorovesi — a tidal river stair with a mooring post
+madrid-tasavallan-vuosi — a 19th-century parliament building with lion statues
+moskova-nayttely-1872 — a 19th-century exhibition pavilion with flags
+oslo-akershus — a medieval stone fortress above the harbour
+pariisi-carmenin-ensi-ilta — a 19th-century opera house façade with a canopy
+pariisi-kirahvin-kavelymatka — a giraffe walking beside a menagerie fence
+pariisi-torni-romuraudaksi — a wrought-iron tower with a scrap-dealer's cart
+pariisi-vrain-lucas — a bundle of forged letters with a wax seal
+pariisi-impressionistit — a photographer's studio balcony on a boulevard
+pariisi-kyyhkyposti — a carrier pigeon with a message capsule
+pariisi-tuileriain-rauniot — a burnt palace shell with empty windows
+praha-klementinum — a baroque library hall tower with an observatory
+rooma-torre-argentina — sunken temple ruins with cats on the stones
+rooma-vatikaanin-palatsi — a papal palace wing with loggia windows
+sofia-sofia-patsas — a golden female statue on a tall column
+tukholma-vadersolstavlan — a framed old painting of sun haloes over a city
+tukholma-norrstrom — a rushing river channel with a salmon fisher
+wien-vuoristovesijohto — a stone aqueduct arch bringing mountain water
+(+ M1:n neljä)
+
+Järjestys: M1 ensin, sitten tämä kaupungeittain; kuittaa erissä. Ei
+kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 13:35 UTC — KUVATILAUS K4 — KARTTANOSTOT: Bulgarian 3 skandaalia, UUSI SÄÄNTÖ aikalaislähteistä
 
 Omistajan linjaus tänään (Sofian skandaalikortti "Vihellyskonsertti
