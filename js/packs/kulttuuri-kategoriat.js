@@ -36,6 +36,17 @@
 //
 // Ilman kenttää lehti taittuu ennallaan; ne kaupungit, joilta pari
 // puuttuu, on lueteltu docs/moduulit/kaupunkilehti.md:ssä.
+//
+// HAVAINNEKUVIEN JUURI (2.9.2026, kaupunkikaton pudottamien
+// skandaalien lehtisiirto): osa nostoista käyttää Matkakirjan omaa
+// havainnekuvaa Commons-tiedoston sijaan. Kuvat asuvat pelin omassa
+// ämpärissä (sama R2 kuin js/media.js:n peili), eivät repossa, joten
+// kenttä on `osoite` eikä `tiedosto` — valmis osoite, jolla ei ole
+// thumb-putkea eikä varareittiä (js/ui.js varustaNostonKuva). Näiden
+// nostojen lähderivi alkaa "Matkakirjan havainnekuva:", jolloin peli
+// näyttää kuvalajin selitelinkin (js/havainnekuva.js).
+const KULTTUURI_HAVAINNEKUVAJUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/';
+
 export const KULTTUURI_KATEGORIAT = {
   /*
    * TEKSTIREMONTTI 20.8.2026, erä E1 (Raamattu "TEKSTIEN PAINOPISTE",
@@ -575,6 +586,34 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Cheapsiden kätköstä löytynyt kaulaketju on kultaa ja '
             + 'valkoista emalia, tehty Englannissa 1590–1620.',
           lahde: 'Vassil, Wikimedia Commons (CC0)',
+        },
+        /*
+         * KARTALTA LEHTEEN, TOINEN ERÄ (2.9.2026): skandaali
+         * `skandaali-etelameren-kupla` jäi v1421:ssä siirtämättä,
+         * koska lehtimalli vaatii kuvan eikä skandaalidatassa ollut
+         * sellaista. Kuva on nyt Matkakirjan oma havainnekuva (ks.
+         * KULTTUURI_HAVAINNEKUVAJUURI), ja kartan skandaalimerkki
+         * visoineen jää ennalleen.
+         */
+        {
+          otsikko: 'Kupla, joka puhkesi Exchange Alleyssä',
+          osoite: `${KULTTUURI_HAVAINNEKUVAJUURI}skandaali-etelameren-kupla.jpg`,
+          teksti: 'Etelämeren yhtiö perustettiin 1711, ja se sai '
+            + 'yksinoikeuden kauppaan Espanjan Etelä-Amerikan kanssa '
+            + 'vastineeksi siitä, että se otti kantaakseen osan '
+            + 'valtionvelasta. Kauppaa ei juuri syntynyt, mutta vuonna 1720 '
+            + 'yhtiö sopi ottavansa haltuunsa lähes koko velan ja '
+            + 'vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi '
+            + 'tammikuun runsaasta sadasta punnasta kesällä lähes '
+            + 'tuhanteen ja romahti syyskuun loppuun mennessä noin '
+            + 'sataanviiteenkymmeneen. Kauppa käytiin Cornhillin takana '
+            + 'kulkevalla Exchange Alleyn kujalla ja sen kahviloissa. '
+            + 'Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja '
+            + 'valtiovarainministeri John Aislabie erotettiin '
+            + 'alahuoneesta ja suljettiin Toweriin.',
+          selite: 'Kujalle kokoontunut väki lukee osakepapereitaan sen '
+            + 'jälkeen, kun Etelämeren yhtiön kurssi romahti syksyllä 1720.',
+          lahde: 'Matkakirjan havainnekuva: kurssiromahdus Exchange Alleyssä',
         },
       ],
     },
@@ -5610,6 +5649,81 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tutkielmassa vuodelta 1827.',
           lahde: 'Nicolas Hüet nuorempi 1827, Wikimedia Commons (public domain)',
         },
+        /*
+         * KARTALTA LEHTEEN, TOINEN ERÄ (2.9.2026). Pariisin ruuhkasta
+         * putosi kahdeksan merkkiä, ja v1421 siirsi lehteen niistä
+         * neljä; loput jäivät odottamaan kuvaa, koska lehtimalli
+         * vaatii kuvan eikä skandaalidatassa ollut sellaista. Nämä
+         * kolme ovat skandaalit `skandaali-kaulanauhajuttu-1785` ja
+         * `skandaali-vrain-lucas-kirjevaarennokset` sekä täkynosto
+         * `nosto-lustig-eiffel` — sisältö on niiden omaa, lehtimittaan
+         * kirjoitettuna. Kuvat ovat Matkakirjan omia havainnekuvia
+         * (ks. KULTTUURI_HAVAINNEKUVAJUURI). Kartan merkit jäävät
+         * ennalleen: kortti kartalla, juttu lehdessä.
+         */
+        {
+          otsikko: 'Kaulanauha, joka ei koskaan päätynyt kuningattarelle',
+          osoite: `${KULTTUURI_HAVAINNEKUVAJUURI}skandaali-kaulanauhajuttu-1785.jpg`,
+          teksti: 'Hovin jalokivikauppiaat Boehmer ja Bassenge olivat '
+            + 'koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta '
+            + 'kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut '
+            + 'sitä. Jeanne de la Motte -niminen huijari sai kardinaali de '
+            + 'Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja '
+            + 'tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja '
+            + 'yöllinen tapaaminen Versailles\'n puistossa, jossa '
+            + 'kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan '
+            + 'tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti '
+            + 'sen huijarin lähetille; kivet pilkottiin ja myytiin '
+            + 'Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi '
+            + 'elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja '
+            + 'kardinaali pidätettiin Versailles\'ssa. Oikeus vapautti '
+            + 'Rohanin 1786, mutta kuningattaren maine ei toipunut.',
+          selite: 'Jalokivikauppiaat esittelevät 647 timantin kaulanauhaa '
+            + 'kardinaali de Rohanille, joka uskoi ostavansa sen '
+            + 'kuningattaren puolesta.',
+          lahde: 'Matkakirjan havainnekuva: kaulanauha luovutetaan '
+            + 'kardinaalille',
+        },
+        {
+          otsikko: 'Kleopatra kirjoitti ranskaksi — ja akateemikko uskoi',
+          osoite: `${KULTTUURI_HAVAINNEKUVAJUURI}skandaali-vrain-lucas-kirjevaarennokset.jpg`,
+          teksti: 'Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel '
+            + 'Chasles\'lle noin 27 000 käsin kirjoitettua kirjettä, joiden '
+            + 'lähettäjiksi oli merkitty muun muassa Julius Caesar, '
+            + 'Kleopatra, Aristoteles ja Kaarle Suuri. Kaikki oli '
+            + 'kirjoitettu 1800-luvun ranskaksi. Chasles maksoi kokoelmasta '
+            + 'noin 140 000 frangia ja esitteli 1867 tiedeakatemialle '
+            + 'kirjeitä, joiden mukaan Blaise Pascal olisi keksinyt '
+            + 'painovoimalain ennen Isaac Newtonia. Englantilaiset tutkijat '
+            + 'huomauttivat, että Newton oli kirjeiden päiväyksen aikaan '
+            + 'lapsi. Chasles piti kokoelmastaan kiinni vuosia, mutta '
+            + 'väärentäjä tuomittiin helmikuussa 1870 kahdeksi vuodeksi '
+            + 'vankeuteen.',
+          selite: 'Michel Chasles tutkii suurennuslasilla yhtä niistä '
+            + 'kirjeistä, joita Vrain-Lucas toimitti hänelle tuhansittain.',
+          lahde: 'Matkakirjan havainnekuva: väärennöskokoelma tutkittavana',
+        },
+        {
+          otsikko: 'Mies myi Eiffel-tornin romuraudaksi',
+          osoite: `${KULTTUURI_HAVAINNEKUVAJUURI}nosto-lustig-eiffel.jpg`,
+          teksti: 'Huijari Victor Lustig luki Pariisissa vuonna 1925 '
+            + 'lehtijutun siitä, kuinka kallista Eiffel-tornin kunnossapito '
+            + 'on. Hän palkkasi väärentäjän tekemään valtion '
+            + 'kirjelomakkeita, kutsui joukon romukauppiaita '
+            + 'luottamukselliseen kokoukseen kalliiseen hotelliin ja '
+            + 'esittäytyi posti- ja lennätinministeriön varapääjohtajana: '
+            + 'valtio aikoo myydä tornin romuksi, mutta asia on '
+            + 'arkaluontoinen eikä siitä saa puhua. Uhrikseen hän valitsi '
+            + 'André Poissonin, joka halusi nousta liike-elämän '
+            + 'sisäpiiriin, ja sai tältä sekä lahjuksen että kauppasumman. '
+            + 'Sitten hän pakeni Itävaltaan ja luki lehtiä: Poisson ei ollut '
+            + 'ilmoittanut poliisille, koska häpesi. Niinpä Lustig palasi '
+            + 'saman vuoden puolella tekemään saman tempun uudestaan — ja '
+            + 'tällä kertaa joku ilmoitti.',
+          selite: 'Lustig esittelee romukauppiaille tornin pienoismallia '
+            + 'hotellin salongissa, ikkunan takana kohde itse.',
+          lahde: 'Matkakirjan havainnekuva: kokous, jossa torni myytiin',
+        },
       ],
       tehtava: {
         kysymys: 'Miten kokonaisten sanomalehtien verran viestejä saatiin '
@@ -6165,6 +6279,53 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Schliemannin kotipalatsissa Iliou Melathronissa toimii '
             + 'nykyään Ateenan numismaattinen museo.',
           lahde: 'athenswalk, Wikimedia Commons (CC0)',
+        },
+        /*
+         * KARTALTA LEHTEEN, TOINEN ERÄ (2.9.2026). Ateenan viereen
+         * kertyi kuusi merkkiä yli kaupunkinostojen katon; v1421 siirsi
+         * lehteen kolme syvennystarinaa ja jätti skandaalit
+         * `skandaali-elginin-marmorit` ja
+         * `skandaali-belokas-maratonhuijaus-1896` odottamaan kuvaa,
+         * koska lehtimalli vaatii kuvan. Kuvat ovat nyt Matkakirjan
+         * omia havainnekuvia (ks. KULTTUURI_HAVAINNEKUVAJUURI), ja
+         * kartan skandaalimerkit visoineen jäävät ennalleen.
+         */
+        {
+          otsikko: 'Puolet Parthenonin veistoksista lähti laivalla',
+          osoite: `${KULTTUURI_HAVAINNEKUVAJUURI}skandaali-elginin-marmorit.jpg`,
+          teksti: 'Thomas Bruce, seitsemäs Elginin jaarli, oli Britannian '
+            + 'suurlähettiläänä Konstantinopolissa vuodesta 1799. Hänen '
+            + 'miehensä irrottivat vuosina 1801–1812 noin puolet '
+            + 'Parthenonin säilyneistä veistoksista sekä paloja '
+            + 'Propylaiasta ja Erekhtheionista. Lupa perustui osmanihallinnon '
+            + 'kirjeeseen, jonka alkuperäistä ei ole löytynyt: jäljellä on '
+            + 'vain italiankielinen käännös, ja juuri siitä kiistellään yhä. '
+            + 'Yksi kuljetuslaivoista upposi Kytheran edustalla 1802, ja '
+            + 'laatikot nostettiin merestä kahden vuoden työllä. Elginin '
+            + 'varat loppuivat, ja parlamentti osti kokoelman 1816 British '
+            + 'Museumille 35 000 punnalla. Akropoliin museo avattiin 2009, '
+            + 'ja siinä on sali valmiina veistosten paluuta varten.',
+          selite: 'Parthenonin friisilaattaa lasketaan alas puisella '
+            + 'nostolaitteella Elginin miesten työmaalla.',
+          lahde: 'Matkakirjan havainnekuva: friisi irrotetaan Parthenonista',
+        },
+        {
+          otsikko: 'Maratonin kolmas tuli osan matkaa kärryillä',
+          osoite: `${KULTTUURI_HAVAINNEKUVAJUURI}skandaali-belokas-maratonhuijaus-1896.jpg`,
+          teksti: 'Ensimmäisten nykyajan olympialaisten maraton juostiin '
+            + '10. huhtikuuta 1896 Marathonin kylästä Panathinaikon-'
+            + 'stadionille, noin neljäkymmentä kilometriä. Voittajaksi tuli '
+            + 'Spyridon Louis ja toiseksi Kharilaos Vasilakos; kolmantena '
+            + 'maaliin saapui Spyridon Belokas, jolloin kreikkalaiset '
+            + 'olivat vieneet koko palkintopallin. Neljänneksi tullut '
+            + 'unkarilainen Gyula Kellner teki heti vastalauseen: Belokas '
+            + 'oli kulkenut osan reitistä hevoskärryillä. Belokas myönsi '
+            + 'asian, hänet suljettiin pois tuloksista ja kolmas sija '
+            + 'siirtyi Kellnerille. Matkaan lähteneistä seitsemästätoista '
+            + 'juoksijasta yhdeksän pääsi perille.',
+          selite: 'Juoksija istuu hevoskärryjen kyydissä Marathonin '
+            + 'maantiellä, ja takana toinen kilpailija jatkaa jalan.',
+          lahde: 'Matkakirjan havainnekuva: kyyti kesken maratonin',
         },
       ],
       tehtava: {
@@ -7188,6 +7349,34 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Keisarinna Eugénie Franz Xaver Winterhalterin '
             + 'muotokuvassa vuodelta 1852.',
           lahde: 'Franz Xaver Winterhalter 1852, Wikimedia Commons (public domain)',
+        },
+        /*
+         * KARTALTA LEHTEEN, TOINEN ERÄ (2.9.2026): skandaali
+         * `skandaali-osmanien-vararikko-1875` jäi v1421:ssä
+         * siirtämättä, koska lehtimalli vaatii kuvan eikä
+         * skandaalidatassa ollut sellaista. Kuva on nyt Matkakirjan
+         * oma havainnekuva (ks. KULTTUURI_HAVAINNEKUVAJUURI), ja
+         * kartan skandaalimerkki visoineen jää ennalleen.
+         */
+        {
+          otsikko: 'Valtio ilmoitti maksavansa vain puolet',
+          osoite: `${KULTTUURI_HAVAINNEKUVAJUURI}skandaali-osmanien-vararikko-1875.jpg`,
+          teksti: 'Osmanien valtakunta otti ensimmäisen ulkomaisen lainansa '
+            + 'Krimin sodan aikana 1854, ja parikymmentä vuotta myöhemmin '
+            + 'velanhoito söi valtaosan valtion tuloista. Lokakuun 6. '
+            + 'päivänä 1875 hallitus julkaisi ramazan-asetuksen: seuraavat '
+            + 'viisi vuotta velasta maksettaisiin vain puolet käteisenä ja '
+            + 'loput uusina viiden prosentin obligaatioina. Seuraavana '
+            + 'vuonna maksut loppuivat kokonaan. Sopu syntyi vasta 1881 '
+            + 'muharrem-asetuksella, joka perusti eurooppalaisten velkojien '
+            + 'johtaman velkahallinnon; se keräsi suoraan itselleen muun '
+            + 'muassa suola-, tupakka-, leimavero- ja alkoholitulot. '
+            + 'Virasto jäi Istanbuliin vuosikymmeniksi, ja sen talossa '
+            + 'toimii nykyään Istanbul Erkek Lisesi -lukio.',
+          selite: 'Osmanihallinnon virkamiehet ja velkojat saman pöydän '
+            + 'ääressä: kassalipas on tyhjä ja tarjottimella on kourallinen '
+            + 'kolikoita.',
+          lahde: 'Matkakirjan havainnekuva: velkaneuvottelu Konstantinopolissa',
         },
       ],
       tehtava: {

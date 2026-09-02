@@ -992,7 +992,15 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     piirraOtsikonReaktio(otsikkoRivi, sivuAvain, nosto.otsikko);
     lohko.appendChild(otsikkoRivi);
     let kuva = null;
-    if (nosto.tiedosto) {
+    /*
+     * KOLME KUVALÄHDETTÄ, YKSI ASETTAJA. `tiedosto` on Commons-nimi,
+     * `ampari` ämpärin oma painotuote ja `osoite` valmis osoite (pelin
+     * oma havainnekuva ämpärissä). Kaikki kolme osaa jo
+     * `varustaNostonKuva` (js/ui.js) — ennen 2.9.2026 tämä ehto katsoi
+     * vain tiedostonimeä, jolloin havainnekuvanosto latoutui ilman
+     * kuvaa ja jätti pelkän lähderivin roikkumaan otsikon alle.
+     */
+    if (nosto.tiedosto || nosto.osoite || nosto.ampari) {
       kuva = document.createElement('img');
       // Sama syy kuin litteissä nostoissa: nollan kokoinen laiska kuva
       // ei lataudu WebKitissä lainkaan. Vain avatun aiheen kuvat ovat

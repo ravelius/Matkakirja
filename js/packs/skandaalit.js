@@ -7,7 +7,8 @@
  * 29 maassa (Fablen katselmointi 30.8.2026: 85 luonnoksesta
  * pudotettiin 2). Korttitekstit ovat Fablen hyväksymiä; kirjoitus-
  * virhekorjaus ja EST/FIN-pirtuparin ristiviittausvirkkeet ovat
- * katselmointimuistion mukaiset. EI KUVIA tässä erässä.
+ * katselmointimuistion mukaiset. Erä tehtiin kuvattomana; kuvat
+ * lisätään skandaali kerrallaan valinnaiseen `kuva`-kenttään.
  *
  * Taulun muoto: maakoodi (ISO-3) → skandaalilista. Kentät:
  *
@@ -22,6 +23,13 @@
  *            (js/fokusmitat.js projisoiLaudalle) kuten syvennys-
  *            paikoilla — ei käsin laskettuja lautakoordinaatteja.
  *   kortti   Fablen hyväksymä korttiteksti sellaisenaan.
+ *   kuva     VALINNAINEN kortin kuva { osoite, selite, lahde }.
+ *            Kuvaton skandaali piirtyy ennallaan (js/skandaalit.js).
+ *            `osoite` on valmis osoite pelin omassa ämpärissä — nämä
+ *            ovat Matkakirjan omia havainnekuvia, joten lähderivi
+ *            alkaa "Matkakirjan havainnekuva:" ja saa selitelinkin
+ *            (js/havainnekuva.js). Selite on yksi virke siitä, mitä
+ *            kuvassa on.
  *   visa     minivisa: kysymys, kolme vaihtoehtoa, oikean indeksi.
  *            Oikean paikan jakauma tasattiin koko erän yli
  *            (28/28/27), ettei se painotu yhteen indeksiin.
@@ -35,6 +43,17 @@
  * (tools/tarkista-niputus.mjs), joten ainoa top-level-nimi alkaa
  * SKANDAALI-etuliitteellä.
  */
+
+/*
+ * HAVAINNEKUVIEN JUURI. Kuvat ovat Matkakirjan omia havainnekuvia ja
+ * asuvat pelin omassa ämpärissä (sama R2 kuin js/media.js:n peili ja
+ * js/kohtaamiskuvat-data.js:n kohtaamiskuvat), eivät repossa —
+ * omistajan linjaus "kaikki aina ämpäriin eikä repoon". Osoite on
+ * siksi valmis `osoite`, jolla ei ole varareittiä: puuttuva tiedosto
+ * piilottaa kuvakehyksen eikä riko korttia (js/fokusnosto.js
+ * asetaNostonKuva).
+ */
+const SKANDAALI_KUVAJUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/';
 
 export const SKANDAALIT = {
   AUT: [
@@ -55,6 +74,12 @@ export const SKANDAALIT = {
         + 'turkkilaiselle. Paras huijaus on se, jonka kaikki aavistavat eikä '
         + 'kukaan pysty osoittamaan.',
       lahde: 'en-Wikipedia "Mechanical Turk". Tarkistettu 1.9.2026.',
+      kuva: {
+        osoite: `${SKANDAALI_KUVAJUURI}skandaali-shakkiturkkilainen.jpg`,
+        selite: 'Kaapin ovet on avattu yleisölle: rattaiden ja vipujen '
+          + 'takana on tila, johon shakinpelaaja mahtui istumaan.',
+        lahde: 'Matkakirjan havainnekuva: kaappi avattuna ennen näytöstä',
+      },
       visa: {
         kysymys: 'Miten shakkiturkkilainen todellisuudessa pelasi?',
         vaihtoehdot: [
@@ -84,6 +109,12 @@ export const SKANDAALIT = {
         + 'valokuvat ja opetus tilaustöiden vaaroista.',
       lahde: 'en-Wikipedia "Klimt University of Vienna Ceiling Paintings". '
         + 'Tarkistettu 1.9.2026.',
+      kuva: {
+        osoite: `${SKANDAALI_KUVAJUURI}skandaali-klimtin-tiedekuntamaalaukset.jpg`,
+        selite: 'Juhlasalin kullattu kattokehys jäi tyhjäksi, ja tilattu '
+          + 'kangas makaa pukkien päällä rullalla telineiden alla.',
+        lahde: 'Matkakirjan havainnekuva: ripustamatta jäänyt tilaustyö',
+      },
       visa: {
         kysymys: 'Mikä oli Klimtin tiedekuntamaalausten lopullinen kohtalo?',
         vaihtoehdot: [
@@ -111,6 +142,13 @@ export const SKANDAALIT = {
         + 'Museovartioinnin oppikirjat saivat uuden luvun; suola pysyi koko '
         + 'ajan turvassa.',
       lahde: 'en-Wikipedia "Cellini Salt Cellar". Tarkistettu 1.9.2026.',
+      kuva: {
+        osoite: `${SKANDAALI_KUVAJUURI}skandaali-salieran-varkaus.jpg`,
+        selite: 'Cellinin kultainen suola-astia vitriinissään särkyneen '
+          + 'lasin takana; ikkunan ulkopuolella näkyvät rakennustelineet, '
+          + 'joita pitkin varas tuli sisään.',
+        lahde: 'Matkakirjan havainnekuva: murtoyö museosalissa',
+      },
       visa: {
         kysymys: 'Mistä Saliera löytyi vuonna 2006?',
         vaihtoehdot: [
