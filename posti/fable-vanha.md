@@ -1,3 +1,34 @@
+## 2.9.2026 04:35 UTC — FABLEN TILANNEMUISTIO: aamun erä valmis, koko pyramidi poltettu 1′:llä ja patinalla
+
+Main v1443 (3e777c18). Aamun tilaukset julkaistu v1438–v1442:
+live-varjo pois, siirtoviivat näkyviksi (1,6 px), laivakatko 90/0,35,
+nopanheiton kohteet kultalevyllä ja renkaalla, heitto jatkuu itsestään
+reitillä kaupunkiin asti, 1′-polttoputki (R2-palat → generaattori,
+z7 1′ / z0–z6 3′), syvän zoomin mitoitus (ruutukatto koko nostolle,
+ladonta v7, maastomerkeille katto, 27 kaupunkimerkkiä sai nimensä).
+LUETTELO: pohja 2026-09-02a (korkeus z7 = 1′, patina täysi), nostot
+02b (saanto v7, siirtoviivat), viivat 02a (piirit=false, tiheä
+laivakatko). Todennettu laatoista: Alpit, Sofia, Plovdiv.
+
+AVOINNA:
+- Kaupungin nimiö nappulan alla syvällä zoomilla (oma erä: nappulan
+  ruutulaatikko ladonnan varaukseksi).
+- Pohjaan poltettu nimetön vuorikolmio Bulgarian pohjoisosassa
+  (43,25°P/24,75°I) — maastosymboli ilman nimeä laatassa; tarkista
+  karsinta poltossa (maailmapiirto maastonimet).
+- Automaattiheiton päivälaskenta (jokainen heitto kuluttaa vuoron) —
+  omistajan arvioon.
+- Yleiskuvitussessiolta odotetaan: K1, K2 (7 skandaalia → lehtisiirto),
+  E1 (BIH/TUR eläintäyt), H1 (Historian hetket, kolmas sivusto, 10 kuvan
+  pilotti).
+
+JATKOPROMPTI: 1) ReadNotifications; 2) postikierros tunneittain
+(trigger trig_01PVJLUsK6F9L92HR7hUCaQN); 3) uudet tilaukset
+Opus-agenteilla työpuissa, Fable julkaisee versiot yksitellen (fetch
+main → uusi-versio ≤60 merkkiä → testit → build → PR → squash → branch
+reset); ei rinnakkaisia pyramidiajoja; pyramidiajot ilman erillistä
+lupaa (Raamattu); ei kuvadataa eikä salaisuuksia postiin.
+
 ## 1.9.2026 21:15 UTC — FABLEN TILANNEMUISTIO (illan erä valmis) + JATKOPROMPTI
 
 Main v1436 (619b6189). Illan tilaukset julkaistu v1429–v1436:
