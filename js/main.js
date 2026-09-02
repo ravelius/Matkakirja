@@ -4,8 +4,8 @@ import { MUUTOKSET } from './muutokset.js';
 import { Game } from './game.js';
 import { UI } from './ui.js';
 import {
-  asetaKehittajaMaailma, asetaKehittajaTila, asetaKehittajaTummennus,
-  kehittajaMaailmaPaalla, kehittajaTilaPaalla, kehittajaTummennusPaalla,
+  asetaKehittajaMaailma, asetaKehittajaTila,
+  kehittajaMaailmaPaalla, kehittajaTilaPaalla,
 } from './ui-apurit.js';
 // Laitemittarin muistettu kytkin (hammasratasvalikko = ?mittari=1/0).
 import { asetaMittari, mittariPaalla } from './karttamittari.js';
@@ -1266,13 +1266,11 @@ function paivitaPuheSaadin() {
  *               ole osoiteriviä, joten parametria ei voi naputella.
  *               Mittari syntyy ja kuolee ajonaikaisesti (js/ui.js
  *               paivitaKarttamittari) — sivua ei ladata uudelleen.
- *   tummennus   Maatummennus (js/maatummennus.js) päälle ja pois.
- *               Omistaja 1.9.2026 ilta: *"kartan tummennuksen voisi
- *               ottaa pois päältä kehittäjä tilassa."* Oletus on
- *               PÄÄLLÄ, ja kytkin koskee vain kehittäjätilaa —
- *               pelaajan kartalla varjo on aina. Kerros syntyy ja
- *               katoaa ajonaikaisesti (js/ui.js
- *               paivitaKehittajaTummennus).
+ *   (tummennus-kytkin POISTETTU 2.9.2026: omistaja *"kehittäjätilassa
+ *   ota pois se tummennusvalinta ja pidä pelkkä kartan ääriviivojen
+ *   tummennus aina päällä"* — naapurimaiden varjoa ei ole enää
+ *   kummassakaan tilassa, joten kytkimellä ei ollut mitään
+ *   kytkettävää; ks. js/maatummennus.js.)
  *   kysymykset  Pöllön kysymysehdotukset heti nykyiselle näkymälle,
  *               myös uudelleen jo generoidulle (js/pollo.js
  *               generoiEhdotuksetHeti). Sama polku kuin sivunvaihdolla:
@@ -1283,8 +1281,7 @@ function paivitaPuheSaadin() {
  *
  * MIKÄÄN NÄISTÄ EI VAADI SIVULATAUSTA. Maailmakytkin elää valmiin
  * kartan päällä (js/ui.js paivitaFokusKerros), mittari on oma
- * moduulinsa, tummennus on yksi SVG-kerros (js/ui.js
- * paivitaKehittajaTummennus), ja pöllö on pystyssä koko pelin ajan.
+ * moduulinsa, ja pöllö on pystyssä koko pelin ajan.
  */
 const kehittajaValikkoKotelo = document.getElementById('kehittaja-valikko-kotelo');
 const kehittajaValikkoNappi = document.getElementById('kehittaja-valikko-btn');
@@ -1292,7 +1289,6 @@ const kehittajaValikko = document.getElementById('kehittaja-valikko');
 const kehittajaVihje = document.getElementById('kehittaja-valikko-vihje');
 const maailmaNappi = document.getElementById('kehittaja-maailma-btn');
 const mittariNappi = document.getElementById('kehittaja-mittari-btn');
-const tummennusNappi = document.getElementById('kehittaja-tummennus-btn');
 const polloGenerointiNappi = document.getElementById('kehittaja-pollo-btn');
 
 /** Yhden rivin vihje valikon alalaitaan; katoaa itsestään. */
@@ -1333,16 +1329,6 @@ function paivitaKehittajaValikko() {
         + 'lavan mitat ja solmumäärät — sama kuin ?mittari=1'
       : 'Laitemittari on pois — kytke päälle mitataksesi kartan sujuvuutta '
         + 'tällä laitteella (sama kuin ?mittari=1)';
-  }
-  const tummennus = kehittajaTummennusPaalla();
-  merkitseKytkin(tummennusNappi, tummennus);
-  if (tummennusNappi) {
-    tummennusNappi.title = tummennus
-      ? 'Maatummennus on PÄÄLLÄ: ympäröivät maat tummenevat ja nykyisen maan '
-        + 'ääriviiva piirtyy paksummalla — kytke pois nähdäksesi kartan '
-        + 'ilman varjoa (vain kehittäjätilassa; pelaajalla varjo on aina)'
-      : 'Maatummennus on pois: kartta piirtyy ilman naapurimaiden varjoa '
-        + '— kytke päälle palataksesi pelaajan näkymään';
   }
   if (polloGenerointiNappi) {
     polloGenerointiNappi.title = 'Generoi pöllön kysymysehdotukset heti tälle näkymälle '
@@ -1401,15 +1387,6 @@ mittariNappi?.addEventListener('click', () => {
   if (!halutaan) naytaKehittajaVihje('Mittari pois.');
   else if (kaynnissa) naytaKehittajaVihje('Mittari kartan yläkulmassa.');
   else naytaKehittajaVihje('Mittari kytketty: näkyy kartalla — lataa sivu uudelleen.');
-});
-
-tummennusNappi?.addEventListener('click', () => {
-  const halutaan = !kehittajaTummennusPaalla();
-  asetaKehittajaTummennus(halutaan);
-  paivitaKehittajaValikko();
-  // Kerros latoo tai tyhjentää itsensä heti — ei sivulatausta.
-  ui?.paivitaKehittajaTummennus?.();
-  naytaKehittajaVihje(halutaan ? 'Maatummennus päällä.' : 'Maatummennus pois.');
 });
 
 polloGenerointiNappi?.addEventListener('click', () => {

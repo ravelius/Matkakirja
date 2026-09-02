@@ -203,6 +203,8 @@ const tila = () => sivu.evaluate(() => {
     // luetteloa nolla, ks. väite 10d.
     karttanimia: ui.svg.querySelectorAll('.karttanimet .karttanimi').length,
     nakyvanLeveys: Math.round(ui.nakyvaAlue?.()?.w ?? 0),
+    // Kerroksessa on 2.9.2026 alkaen VAIN maan ääriviiva (varjo
+    // purettiin, ks. js/maatummennus.js): solmuja siis yksi.
     tummennusSolmut: ui.svg.querySelectorAll('.maatummennus > *').length,
     tummennusNakyy: (() => {
       const k = ui.svg.querySelector('.maatummennus');
@@ -288,7 +290,7 @@ console.log(`      mitattu: panoroinnin longtaskit ${panLt.length} kpl,`
   + ` summa ${panSumma} ms, pahin ${panPahin} ms`);
 
 const panTila = await tila();
-console.log(`      mitattu: maatummennus ${panTila.tummennusSolmut} solmua,`
+console.log(`      mitattu: maan ääriviiva ${panTila.tummennusSolmut} solmua,`
   + ` näkyvissä ${panTila.tummennusNakyy}`);
 console.log(`      mitattu: näkyviä kaupunkiosia ${panTila.citiesNakyvia}`
   + ` / ${panTila.citiesSolmut} (rajattuja ${panTila.rajattuja})`);
@@ -301,7 +303,8 @@ console.log(`      mitattu: näkyviä kaupunkiosia ${panTila.citiesNakyvia}`
  * voisi pysyä panoroitaessa päällä."*
  *
  * Väitteet vartioivat siis KOLMEA asiaa kesken eleen: runkoon ei tule
- * piilotusluokkaa, maatummennus näkyy ja kohdemerkkien kerros näkyy.
+ * piilotusluokkaa, maan ääriviivan kerros (.maatummennus — naapurien
+ * varjo purettiin siitä 2.9.2026) näkyy ja kohdemerkkien kerros näkyy.
  * Kaksi ensimmäistä olivat voimassa jo ennen tätä; kolmas kääntyi
  * päinvastaiseksi, kun eleenaikainen piilotus purettiin kokonaan
  * (js/kartta.js asennaPanorointi — perustelu ja mitatut luvut siellä).
@@ -358,7 +361,7 @@ const eleenAikainenTila = async (nipistys) => {
 
 const panEle = await eleenAikainenTila(false);
 console.log(`      mitattu: panoroinnin aikana piilotusluokka ${panEle.merkitPiilossa},`
-  + ` tummennus näkyvissä ${panEle.tummennusNakyy},`
+  + ` ääriviiva näkyvissä ${panEle.tummennusNakyy},`
   + ` kohdemerkit näkyvissä ${panEle.kohteetNakyy}`);
 vaadi('1b elävä karttasisältö pysyy näkyvissä panoroinnin ajan',
   panEle.merkitPiilossa === false && panEle.tummennusNakyy === true
@@ -367,7 +370,7 @@ vaadi('1b elävä karttasisältö pysyy näkyvissä panoroinnin ajan',
 
 const zoomEle = await eleenAikainenTila(true);
 console.log(`      mitattu: nipistyksen aikana piilotusluokka ${zoomEle.merkitPiilossa},`
-  + ` tummennus näkyvissä ${zoomEle.tummennusNakyy},`
+  + ` ääriviiva näkyvissä ${zoomEle.tummennusNakyy},`
   + ` kohdemerkit näkyvissä ${zoomEle.kohteetNakyy}`);
 vaadi('1c elävä karttasisältö pysyy näkyvissä myös nipistyksen ajan',
   zoomEle.merkitPiilossa === false && zoomEle.tummennusNakyy === true
@@ -385,45 +388,40 @@ vaadi('1 eleen asetuttua kartalla on vain näkymän merkit',
 vaadi('2 rajaus on oikeasti piilottanut osan kerroksesta',
   panTila.rajattuja > 100, `rajattuja ${panTila.rajattuja}`);
 
-/* --- 2b: KEHITTÄJÄN TUMMENNUSKYTKIN --------------------------------
+/* --- 2b: MAAN ÄÄRIVIIVA ON AINA PÄÄLLÄ -----------------------------
  *
- * Omistaja 1.9.2026 ilta, sanatarkasti: *"kartan tummennuksen voisi
- * ottaa pois päältä kehittäjä tilassa."*
+ * Omistaja 2.9.2026, sanatarkasti: *"kehittäjätilassa ota pois se
+ * tummennusvalinta ja pidä pelkkä kartan ääriviivojen tummennus aina
+ * päällä. Eli tämä on oletus kummassakin tilassa."*
  *
- * Kytkinrivi on hammasratasvalikossa (index.html
- * #kehittaja-tummennus-btn) ja kulkee viiden tiedoston läpi. Lähdepään
- * ketjun vartioi tests/rules.test.mjs; tämä väite mittaa sen, mitä
- * lähdekoodista ei näe: KERROS TYHJENEE JA PALAA HETI, ilman
- * sivulatausta. Nappia klikataan suoraan DOMista, koska valikon avaus
- * ei kuulu mitattavaan asiaan.
- *
- * Tila luetaan vasta pienen odotuksen jälkeen: paluu latoo polun
- * uudelleen ja aineisto voi olla vielä matkalla (js/maatummennus.js
- * lataaMaapolygonit).
+ * Entinen kytkinväite (2b/2c, 1.9.2026) mittasi sitä, että kerros
+ * tyhjenee ja palaa ilman sivulatausta. Kytkintä ei ole enää olemassa,
+ * joten väite kääntyi ympäri: kehittäjän maailmanäkymässä — juuri
+ * siinä tilassa, jossa kytkin asui — kerroksessa on yksi solmu, ja se
+ * on maan ääriviiva eikä naapurien varjo. Lähdepään purun vartioi
+ * tests/rules.test.mjs.
  */
-const tummennusPois = await sivu.evaluate(async () => {
-  document.getElementById('kehittaja-tummennus-btn')?.click();
-  return document.getElementById('kehittaja-tummennus-btn')?.getAttribute('aria-pressed');
+const viivaTila = await sivu.evaluate(() => {
+  const kerros = window.matkakirja.ui.svg.querySelector('.maatummennus');
+  const lapset = [...(kerros?.children ?? [])];
+  return {
+    solmut: lapset.length,
+    luokat: lapset.map((o) => o.getAttribute('class')),
+    tayttoja: lapset.filter((o) => {
+      const f = getComputedStyle(o).fill;
+      return f && f !== 'none' && !/rgba\(0, 0, 0, 0\)/.test(f);
+    }).length,
+    nappi: Boolean(document.getElementById('kehittaja-tummennus-btn')),
+  };
 });
-await sivu.waitForTimeout(600);
-const poisTummennus = await tila();
-console.log(`      mitattu: tummennus pois -> ${poisTummennus.tummennusSolmut} solmua`
-  + ` (rivin tila aria-pressed=${tummennusPois})`);
-vaadi('2b kehittäjän kytkin ottaa maatummennuksen pois heti',
-  tummennusPois === 'false' && poisTummennus.tummennusSolmut === 0,
-  `solmuja ${poisTummennus.tummennusSolmut}, aria-pressed ${tummennusPois}`);
+console.log(`      mitattu: kerroksessa ${viivaTila.solmut} solmua`
+  + ` (${viivaTila.luokat.join(', ') || '—'}), täyttöjä ${viivaTila.tayttoja},`
+  + ` kytkinnappi DOMissa ${viivaTila.nappi}`);
+vaadi('2b kehittäjätilassa on vain maan ääriviiva, ei varjoa eikä kytkintä',
+  viivaTila.solmut === 1 && viivaTila.luokat[0] === 'maatummennus-viiva'
+    && viivaTila.tayttoja === 0 && viivaTila.nappi === false,
+  JSON.stringify(viivaTila));
 
-const tummennusPaalle = await sivu.evaluate(async () => {
-  document.getElementById('kehittaja-tummennus-btn')?.click();
-  return document.getElementById('kehittaja-tummennus-btn')?.getAttribute('aria-pressed');
-});
-await sivu.waitForTimeout(900);
-const paalleTummennus = await tila();
-console.log(`      mitattu: tummennus takaisin -> ${paalleTummennus.tummennusSolmut} solmua`
-  + ` (rivin tila aria-pressed=${tummennusPaalle})`);
-vaadi('2c kytkin palauttaa tummennuksen ilman sivulatausta',
-  tummennusPaalle === 'true' && paalleTummennus.tummennusSolmut > 0,
-  `solmuja ${paalleTummennus.tummennusSolmut}, aria-pressed ${tummennusPaalle}`);
 // Tällä savukkeella mitattu: ennen 389 ms / 7 taskia, jälkeen 215 / 4.
 // (Omistajan omalla A/B-ajolla, jossa naapurilehti on kartalla, sama
 // ero on 799 → 475 ms.) Raja 350 kaatuu korjauksen katoamiseen mutta
