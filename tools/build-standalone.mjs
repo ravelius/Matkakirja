@@ -410,6 +410,12 @@ const MODULES = [
    */
   'js/puhe.js',
   'js/ambience-stream.js',
+  /*
+   * Siirtymämusiikki AMBIENCE-STREAMIN JÄLKEEN: se rekisteröi
+   * väistönsä lisaaVaistajalla moduulitasolla, joten väistökoneiston
+   * on oltava olemassa ennen sitä (sama sääntö kuin taustavahdilla).
+   */
+  'js/siirtymamusiikki.js',
   'js/die.js',
   'js/rules.js',
   // Tietäjätasot ennen peliä: game.js tuo tietajatasonNousut staattisesti

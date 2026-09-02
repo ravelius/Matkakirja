@@ -14,6 +14,11 @@ import { packById } from './pack.js';
 import {
   startQuizMusic, stopPlaceStream, stopPohjaMusiikki, stopQuizMusic,
 } from './ambience-stream.js';
+// Siirtymämusiikin kehittäjärivit (raitojen olemassaolo + varamusiikki).
+import {
+  SIIRTYMALAJIT, asetaVaramusiikki, lopetaSiirtymamusiikki, lopetaVaramusiikki,
+  siirtymamusiikinRivi, tarkistaSiirtymaraidat, varamusiikkiPaalla,
+} from './siirtymamusiikki.js';
 import {
   AANITILA_TAPAHTUMA, kertojaTila, asetaKertojaTila,
 } from './aani-ehdokkaat.js';
@@ -111,7 +116,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1454';
+const APP_VERSION = '2026-08-09.1455';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -544,6 +549,10 @@ const kaannaTausta = (paalle) => {
     stopPlaceStream();
     stopQuizMusic();
     stopPohjaMusiikki();
+    // Siirtymän oma raita (ja kehittäjän varamusiikki) on samaa lajia:
+    // kytkin pois = kaikki taustaääni vaikenee, myös kesken matkan.
+    lopetaSiirtymamusiikki();
+    lopetaVaramusiikki();
     // Aarteen paljastusaihe soi omasta soittimestaan paljastuskortilla
     // (js/ui.js soitaAarreMusiikki), joten se ei ole minkään yllä
     // olevan pysäytyksen ulottuvilla.
@@ -1294,6 +1303,26 @@ const maailmaNappi = document.getElementById('kehittaja-maailma-btn');
 const mittariNappi = document.getElementById('kehittaja-mittari-btn');
 const tummennusNappi = document.getElementById('kehittaja-tummennus-btn');
 const polloGenerointiNappi = document.getElementById('kehittaja-pollo-btn');
+/*
+ * SIIRTYMÄMUSIIKIN KAKSI RIVIÄ (omistajan tilaus 2.9.2026).
+ *
+ *   siirtymämusiikki  MITTARI, ei kytkin: näyttää löytyykö kolme
+ *                     raitaa ämpäristä ("jalan ✓  laiva –  lento –").
+ *                     Napautus kysyy tilanteen uudelleen HEADilla,
+ *                     joten kesken istunnon viety raita näkyy heti.
+ *                     Kysely tehdään VAIN täältä — peli itse ei
+ *                     koskaan odota sitä (js/siirtymamusiikki.js).
+ *   varamusiikki      Kehittäjän syntetisoitu kevyt kuvio niille
+ *                     lajeille, joilta raita puuttuu. OLETUS POIS.
+ */
+const siirtymaMusiikkiNappi = document.getElementById('kehittaja-siirtymamusiikki-btn');
+const varamusiikkiNappi = document.getElementById('kehittaja-varamusiikki-btn');
+
+/** MittarirI:n tilateksti nykytiedosta; ? = ei vielä kysytty. */
+function merkitseSiirtymamusiikki() {
+  const tila = siirtymaMusiikkiNappi?.querySelector('.kehittaja-kytkin-tila');
+  if (tila) tila.textContent = siirtymamusiikinRivi();
+}
 
 /** Yhden rivin vihje valikon alalaitaan; katoaa itsestään. */
 let vihjeAjastin = 0;
@@ -1347,6 +1376,24 @@ function paivitaKehittajaValikko() {
   if (polloGenerointiNappi) {
     polloGenerointiNappi.title = 'Generoi pöllön kysymysehdotukset heti tälle näkymälle '
       + '(myös uudelleen jo generoidulle)';
+  }
+  merkitseSiirtymamusiikki();
+  if (siirtymaMusiikkiNappi) {
+    siirtymaMusiikkiNappi.title = 'Siirtymän oma musiikki: löytyykö raita ämpäristä '
+      + '(aanet/siirtyma-jalan.mp3, -laiva, -lento). ✓ = löytyi, – = ei ole vielä, '
+      + '? = ei kysytty. Napauta kysyäksesi uudelleen. Puuttuva raita ei riko mitään: '
+      + 'siirtymä on silloin vain hiljainen';
+  }
+  const vara = varamusiikkiPaalla();
+  merkitseKytkin(varamusiikkiNappi, vara);
+  if (varamusiikkiNappi) {
+    varamusiikkiNappi.title = vara
+      ? 'Varamusiikki on PÄÄLLÄ: siirtymissä soi syntetisoitu kevyt kuvio niillä '
+        + 'lajeilla, joilta oikea raita puuttuu — mittatikku koreografian ajoitukselle, '
+        + 'ei musiikkia. Oikea raita voittaa aina'
+      : 'Varamusiikki on pois (oletus): siirtymä on hiljainen, jos raitaa ei ole. '
+        + 'Kytke päälle kuullaksesi koreografian ajoituksen ennen kuin raidat on '
+        + 'sävelletty';
   }
 }
 
@@ -1410,6 +1457,28 @@ tummennusNappi?.addEventListener('click', () => {
   // Kerros latoo tai tyhjentää itsensä heti — ei sivulatausta.
   ui?.paivitaKehittajaTummennus?.();
   naytaKehittajaVihje(halutaan ? 'Maatummennus päällä.' : 'Maatummennus pois.');
+});
+
+siirtymaMusiikkiNappi?.addEventListener('click', () => {
+  naytaKehittajaVihje('Kysytään raitoja…');
+  tarkistaSiirtymaraidat().then((tila) => {
+    merkitseSiirtymamusiikki();
+    const puuttuu = SIIRTYMALAJIT.filter((laji) => !tila[laji]);
+    naytaKehittajaVihje(puuttuu.length
+      ? `Puuttuu: ${puuttuu.join(', ')}. Siirtymä on niiltä osin hiljainen.`
+      : 'Kaikki kolme raitaa löytyivät.');
+  });
+});
+
+varamusiikkiNappi?.addEventListener('click', () => {
+  const halutaan = !varamusiikkiPaalla();
+  asetaVaramusiikki(halutaan);
+  // Päällä oleva kuvio ei jää soimaan, kun kytkin käännetään pois.
+  if (!halutaan) lopetaVaramusiikki();
+  paivitaKehittajaValikko();
+  naytaKehittajaVihje(halutaan
+    ? 'Varamusiikki päällä: soi vain jos oikea raita puuttuu.'
+    : 'Varamusiikki pois.');
 });
 
 polloGenerointiNappi?.addEventListener('click', () => {

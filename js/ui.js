@@ -190,6 +190,14 @@ import {
   vaimennaTausta, palautaTausta,
   hiljennaAmbienssi, palautaAmbienssi,
 } from './ambience-stream.js';
+/*
+ * Siirtymän oma musiikki (omistajan tilaus 2.9.2026). Oma moduulinsa,
+ * koska se ei ole paikan ääni vaan matkan: ks. js/siirtymamusiikki.js.
+ */
+import {
+  aloitaSiirtymamusiikki, lopetaSiirtymamusiikki,
+  aloitaVaramusiikki, lopetaVaramusiikki,
+} from './siirtymamusiikki.js';
 import {
   AANITILA_TAPAHTUMA, puheVoima, jaaAlku, kertojaTila, luentaVastaaTekstia,
 } from './aani-ehdokkaat.js';
@@ -492,13 +500,14 @@ export function jalkamatkanAskel(askelia) {
  * enää, joten kamera saa jäädä sinne minne se ajettiin. Samalla katosi
  * se nykäisy, jossa juuri katsottu lähikuva loittoni heti perillä.
  *
- * Pehmennys on smoothstep eikä kamera-ajon oma kuutiokäyrä: kuutio
- * seisoo lähes paikallaan matkan ensimmäisen neljänneksen, ja kamera
- * jäisi jälkeen ja kirisi lopussa. Smoothstep lähtee ja pysähtyy
- * pehmeästi mutta kulkee välillä lähes nappulan tahtia. Ennakkozoomi
- * käyttää kamera-ajon omaa kuutiokäyrää: se on kohtaus eikä seuranta,
- * ja Raamatun KAMERA-AJOT-linjaus haluaa siihen kiihdytyksen ja
- * jarrutuksen.
+ * SAATOLLA ON OMA KÄYRÄNSÄ, EI KAMERA-AJON KUUTIOTA: kuutio seisoo
+ * lähes paikallaan matkan ensimmäisen neljänneksen, ja kamera jäisi
+ * jälkeen ja kirisi lopussa. Käyrä oli ensin smoothstep ja on
+ * 2.9.2026 alkaen trapetsi (ks. seuraava osio) — molemmat lähtevät ja
+ * pysähtyvät pehmeästi, mutta vain trapetsi kulkee välillä aidosti
+ * tasaista vauhtia. Ennakkozoomi käyttää yhä kamera-ajon omaa
+ * kuutiokäyrää: se on kohtaus eikä seuranta, ja Raamatun
+ * KAMERA-AJOT-linjaus haluaa siihen kiihdytyksen ja jarrutuksen.
  *
  * ELE VOITTAA: ajon keskeyttää sormi kartalla, nipistys, rulla tai
  * zoomipainike (kartta.pysaytaKameraAjo), ja kartta jää siihen mihin
@@ -507,8 +516,145 @@ export function jalkamatkanAskel(askelia) {
  * nappulaa lähtemästä: matka jatkuu siitä näkymästä, jonka pelaaja
  * itse valitsi.
  */
-const SAATON_PEHMENNYS = (t) => t * t * (3 - 2 * t);
-const SIIRTOZOOMIN_LAHENNYS = 1.7;
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * SIIRRON KOREOGRAFIA: KAMERA EDELLÄ, NAPPULA PERÄSSÄ, PERILLE ENNEN
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistajan tilaus 2.9.2026, sanatarkasti: *"Kun pelinappula liikkuu
+ * jalan, niin se nappulan liikkeelle lähtö voisi olla hieman
+ * viivytetty niin, että kartta ehtii lähteä hitaasti jo rullaamaan
+ * eteenpäin, juuri sellaisella vauhdilla, että kun se ensin vähän
+ * hitaasti kiihdyttää, sitten pysyy vakionopeudessa ja lopussa taas
+ * hitaasti jarruttaa, niin laatta ehtii viivytetysti lähtemään
+ * liikkeelle ja etenemään loppuun asti, niin, että laatta saapuu
+ * perille vähän ennen, kuin kartan panorointiliike loppuu."*
+ *
+ * Tilauksessa on kolme erillistä lukua, ja jokainen on oma vakionsa:
+ *
+ *   1. VIIVE (NAPPULAN_LAHDON_VIIVE_MS). Kamera lähtee ensin ja
+ *      nappula vasta viiveen päästä. Viive on tarkoituksella se aika,
+ *      jossa kiihdytysramppi ehtii juuri ohi (ks. SAATON_RAMPPI): kun
+ *      nappula lähtee, kartta on jo vakionopeudessa, ja liike lukee
+ *      nimenomaan "kartta rullaa jo, nappula lähtee mukaan".
+ *   2. SAAPUMISERO (NAPPULAN_SAAPUMISERO_MS). Kamera-ajo jatkuu
+ *      nappulan laskeuduttua vielä hetken ja pysähtyy pehmeästi.
+ *      Ilman tätä matka päättyisi kahteen yhtaikaiseen pysähdykseen,
+ *      ja se lukee töksähdyksenä; nyt liike sammuu vasta kun nappula
+ *      on jo levossa.
+ *   3. KÄYRÄ (siirtoajonPehmennys). Smoothstep oli ease-in-out mutta
+ *      sen nopeus on paraabeli 6t(1−t) — se ei ole hetkeäkään
+ *      vakio, vaan kiihtyy puoliväliin ja hidastuu heti perään.
+ *      Tilaus sanoo *"ensin vähän hitaasti kiihdyttää, sitten pysyy
+ *      vakionopeudessa ja lopussa taas hitaasti jarruttaa"* eli
+ *      TRAPETSI: kiihdytysramppi, tasainen keskiosa, jarrutusramppi.
+ *
+ * KESTORAJAT. Kameran ajo on viive + nappulan oma kesto +
+ * saapumisero, ja nappulan kesto on jo porrastettu heiton pituuden
+ * mukaan (jalkamatkanAskel). Rajat ovat siis vartijoita eivätkä
+ * säätimiä: nykyisillä luvuilla lyhin siirto on 1 440 ms ja pisin
+ * 5 758 ms, eli kumpikaan raja ei pure. Ne ovat olemassa siksi,
+ * ettei tuleva askeltahdin muutos voi vahingossa tehdä kamera-ajosta
+ * välähdystä eikä minuutin ryömintää.
+ */
+/*
+ * MITATUT LUVUT, EI ARVATUT (tools/savukkeet/savuke-siirtokoreografia.mjs,
+ * Chromium iPhone 402x874 ja iPad 834x1112, 2.9.2026). Ruudulla mitattu
+ * viive ja saapumisero jäävät nimellisiä pienemmiksi, koska sekä
+ * `wait()` että nappulan hypyt pyöristyvät kehysrajoille ja matka
+ * kerää sitä ylitystä joka hypyllä. Nimellinen 300 ms mittautui
+ * 340-380 ms:ksi (viive jää kehyksen verran myöhäiseksi) ja nimellinen
+ * 280 ms mittautui 170-245 ms:ksi (nappula myöhästyy hyppyjen
+ * ylityksellä). Molemmat osuvat omistajan haarukoihin RUUDULLA
+ * (250-400 ms ja 150-300 ms), ja juuri se on se luku, joka
+ * merkitsee.
+ *
+ * SAAPUMISERO ON HAARUKAN YLÄPÄÄSSÄ TARKOITUKSELLA. Nappulan matka on
+ * kehysvetoinen (hypyt + `wait`-tauot) ja kamera-ajo aikavetoinen,
+ * joten hidas laite venyttää nappulaa muttei kameraa — ero kutistuu
+ * juuri silloin kun kehykset ovat harvassa. Mitattu ero oli kontin
+ * Chromiumissa 60-200 ms, eli järjestys säilyi jokaisessa ajossa,
+ * mutta vara ei ole suuri. Jos jollakin laitteella nappula ehtii
+ * kameran ohi, tätä lukua nostetaan — ei nappulan tahtia lasketa.
+ */
+const NAPPULAN_LAHDON_VIIVE_MS = 300;
+const NAPPULAN_SAAPUMISERO_MS = 280;
+const SIIRTOAJON_LYHIN_MS = 1200;
+const SIIRTOAJON_PISIN_MS = 6200;
+/*
+ * Kiihdytyksen ja jarrutuksen osuus ajosta, kumpikin erikseen. 0,3
+ * jättää keskelle 40 % matkasta tasaista vauhtia — tarpeeksi, että
+ * silmä ehtii lukea sen vakionopeudeksi, ja niin vähän, etteivät
+ * päät tunnu äkkinäisiltä. Ramppien summa ei saa ylittää ykköstä
+ * (siirtoajonPehmennys rajaa 0,49:ään varmuuden vuoksi).
+ */
+const SAATON_RAMPPI = 0.3;
+
+/**
+ * Trapetsipehmennys: kiihdytys → vakionopeus → jarrutus.
+ *
+ * Palauttaa kuljetun matkan osuuden (0…1) ajan osuudella `t`.
+ *
+ * NOPEUSRAMPIT OVAT ITSEKIN PEHMEITÄ (smoothstep) eivätkä lineaarisia.
+ * Lineaarisella rampilla kiihtyvyys hyppäisi askelmana ramppien
+ * päissä, ja juuri se hyppy näkyy kartalla pieninä nytkähdyksinä
+ * silloin kun koko ruutu liikkuu. Smoothstep-rampin pinta-ala on
+ * täsmälleen sama kuin lineaarisen (1/2), joten huippunopeus on
+ * kummallakin `1/(1−r)` — pehmennys ei siis muuta ajoituksia
+ * lainkaan, vain kiihtyvyyden muodon.
+ *
+ * Kaava paloittain, kun r = ramppi ja v = 1/(1−r):
+ *   t < r        s = v·r·(a³ − a⁴/2),  a = t/r
+ *   r ≤ t ≤ 1−r  s = v·(t − r/2)
+ *   t > 1−r      s = 1 − v·r·(b³ − b⁴/2),  b = (1−t)/r
+ *
+ * Palat kohtaavat: molemmissa saumoissa arvo on v·r/2 ja 1 − v·r/2.
+ */
+export function siirtoajonPehmennys(t, ramppi = SAATON_RAMPPI) {
+  const x = Math.min(1, Math.max(0, t));
+  const r = Math.min(0.49, Math.max(0.0001, ramppi));
+  const v = 1 / (1 - r);
+  if (x < r) {
+    const a = x / r;
+    return v * r * (a ** 3 - (a ** 4) / 2);
+  }
+  if (x > 1 - r) {
+    const b = (1 - x) / r;
+    return 1 - v * r * (b ** 3 - (b ** 4) / 2);
+  }
+  return v * (x - r / 2);
+}
+
+/**
+ * Kamera-ajon kesto, kun nappulan oma matka kestää `nappulanKesto` ms.
+ *
+ * Puhdas funktio ja oma nimensä samasta syystä kuin jalkamatkanAskel:
+ * tämä on se yksi paikka, jossa koreografian ajoitus lasketaan, ja
+ * tests/siirtoajoitus.test.mjs vartioi sitä lukuina.
+ */
+export function siirtoajonKesto(nappulanKesto) {
+  const kokonais = NAPPULAN_LAHDON_VIIVE_MS
+    + Math.max(0, nappulanKesto || 0)
+    + NAPPULAN_SAAPUMISERO_MS;
+  return Math.round(Math.min(SIIRTOAJON_PISIN_MS, Math.max(SIIRTOAJON_LYHIN_MS, kokonais)));
+}
+
+const SAATON_PEHMENNYS = (t) => siirtoajonPehmennys(t);
+/*
+ * SIIRTOZOOMIN MÄÄRÄ 1,7 → 2,0 (omistaja 2.9.2026: *"tässä kartta saa
+ * olla suht lähelle zoomattuna, jolloin liikkeestä tulee
+ * dynaamisemman näköinen"*).
+ *
+ * Kerroin on suhteellinen, mutta sen katto on absoluuttinen
+ * (js/kartta.js siirtoZoomiKerroin, SIIRTONAKYMAN_LAHIN_KERROIN 3,5×
+ * lähimmästä portaasta), joten nosto EI vie lähemmäs kuin ennen — se
+ * vie kattoon NOPEAMMIN. Ero näkyy juuri siinä missä omistaja sen
+ * pyysi: ensimmäisessä heitossa maan yleisnäkymästä. Vanhalla 1,7:llä
+ * kattoon tarvittiin kaksi heittoa, uudella yksi, ja jo ensimmäinen
+ * siirto liikuttaa lautaa ruudullisen verran.
+ */
+const SIIRTOZOOMIN_LAHENNYS = 2.0;
 /*
  * Ennakkozoomin kesto ja sen jälkeinen hengähdys.
  *
@@ -531,8 +677,26 @@ const ENNAKON_ASKELIA = 2;
  * Alle tämän jäävää siirtoa ei ajeta lainkaan: kohde on jo käytännössä
  * ruudun keskellä, ja pikkuliike näyttäisi vain siltä että kartta
  * värähtää nappulan lähtiessä. Mitta on RUUDUN pikseleitä.
+ *
+ * KYNNYS ON RUUDUN KOKOON SUHTEUTETTU (mitattu 2.9.2026,
+ * tools/savukkeet/savuke-siirtokoreografia.mjs). Kiinteä 60 px oli
+ * puhelimen kokoisella ruudulla liikaa: mittaus löysi Ateenasta
+ * kahden askeleen maasiirron, jossa iPadilla kamera saattoi normaalisti
+ * mutta iPhonella (402 px leveä) ajo jäi kokonaan tekemättä — sama
+ * matka lautayksikköinä on kapealla ruudulla noin 40 % pikseleistä,
+ * koska yleiskuvan mittakaava lasketaan ruudun leveydestä. Silloin
+ * omistajan tilaus jäisi toteutumatta juuri sillä laitteella, jolla
+ * peliä pelataan: *"kartta ehtii lähteä hitaasti jo rullaamaan
+ * eteenpäin."*
+ *
+ * "Näkyykö liike" on ruudun kokoon suhteutettu kysymys, joten kynnys
+ * on nyt osuus karttaruudun leveydestä ja absoluuttinen pohja sen
+ * alle. 6 % on iPhonella 24 px ja iPadilla 50 px — kummallakin selvästi
+ * enemmän kuin pyöristysvirhe, mutta vähemmän kuin puolet
+ * askelvälistä.
  */
-const SAATON_VAHIN_PX = 60;
+const SAATON_VAHIN_PX = 24;
+const SAATON_VAHIN_OSUUS = 0.06;
 /*
  * JALKAMATKAN ÄÄNIMAISEMA (#96: *"Taustalle pitää kehitellä sopiva
  * äänimaisema siirtymän ajaksi."*).
@@ -17112,11 +17276,19 @@ export class UI {
      * hitaammin"*). Yhden askeleen matka saa täyden rauhan, kuutonen
      * kutistuu kattoon mahtuvaksi — kaava ja luvut jalkamatkanAskelissa.
      */
+    /*
+     * SIIRTYMÄMUSIIKIN LAJI LUETAAN SAMASTA TILASTA JA SAMAAN AIKAAN
+     * kuin matkustustapa (omistaja 2.9.2026: musiikki *"voisi olla
+     * hieman eri kävellessä laivalla ja lentäen"*). doMove kattaa
+     * kaksi lajia kolmesta — maitse ja meritse — ja lennon oma laji
+     * kytketään doFlyssä, jossa animaatio on toinen.
+     */
+    const musiikki = maitse ? 'jalan' : 'laiva';
     this.run(() => game.actionMove(key), {
       after: () => this.animatePawn(
         player, from, path,
         maitse ? jalkamatkanAskel(path.length) : STEP_MS,
-        { saatto: true, maitse },
+        { saatto: true, maitse, musiikki },
       ),
     });
   }
@@ -17152,6 +17324,19 @@ export class UI {
     this.paivitaMatkareitit();
     this.run(() => game.actionFly(destination), {
       after: async () => {
+        /*
+         * LENNON OMA SIIRTYMÄRAITA (omistaja 2.9.2026). Musiikki
+         * kytketään tässä eikä animatePawnin kautta, koska lento on
+         * kaksi eri animaatiota: maailmankartalla kalvo ja sen jälkeen
+         * nappulan hyppy, mantereella pelkkä hyppy. Musiikin kuuluu
+         * kattaa koko matka kummassakin, joten se alkaa ennen niitä ja
+         * loppuu vasta perillä.
+         *
+         * KABIINIÄÄNI JÄÄ (v1097) — musiikki soi sen ALLA, ja siksi
+         * lennon raidan oma taso on kolmesta matalin
+         * (js/siirtymamusiikki.js RAIDAT.lento.voima).
+         */
+        this.aloitaSiirronMusiikki('lento');
         try {
           // Lentokalvo kuuluu vain maailmankartalle; mantereella nappula
           // lentää suoraan karttanäkymässä — rauhallisemmin ja moottorin
@@ -17165,6 +17350,7 @@ export class UI {
             sfx.stopFlight();
           }
         } finally {
+          this.lopetaSiirronMusiikki();
           this.lentoKaari = null;
           this.paivitaMatkareitit();
         }
@@ -18656,7 +18842,10 @@ export class UI {
      * värähtää nappulan lähtiessä.
      */
     const matka = Math.hypot(kohta.x - nyt.x, kohta.y - nyt.y) * nyt.skaala;
-    if (!(matka > SAATON_VAHIN_PX)) return;
+    // Kynnys ruudun leveydestä, pohja absoluuttinen (ks. SAATON_VAHIN_PX).
+    const kynnys = Math.max(SAATON_VAHIN_PX,
+      (this.mapPane?.clientWidth ?? 0) * SAATON_VAHIN_OSUUS);
+    if (!(matka > kynnys)) return;
     void kartta.ajaKamera(
       { x: kohta.x, y: kohta.y },
       { kesto, pehmennys: SAATON_PEHMENNYS },
@@ -18689,6 +18878,40 @@ export class UI {
     if (!this.jalkamatkanAani) return;
     this.jalkamatkanAani = false;
     if (!vaihtui && !this.dead) this.syncAmbience();
+  }
+
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * SIIRTYMÄMUSIIKKI (omistajan tilaus 2.9.2026)
+   * ══════════════════════════════════════════════════════════════
+   *
+   * *"Tähän voisi taustalle kehittää oman pienen musiikin, joka
+   * tulisi aina siirtymän taustalle. Ja se voisi olla hieman eri
+   * kävellessä laivalla ja lentäen."*
+   *
+   * Kaksi metodia ja ei yhtään ehtoa muualla: koko koneisto —
+   * kolme raitaa, puuttuvan tiedoston hiljainen kohtelu, väistö,
+   * häivytykset ja kehittäjän varamusiikki — asuu omassa
+   * moduulissaan (js/siirtymamusiikki.js). Nämä ovat vain se paikka,
+   * jossa PELI päättää milloin siirtymä alkaa ja loppuu.
+   *
+   * RADIOTILA VAIKENEE. Radiossa radio on ainoa ääni (sama sääntö
+   * kuin jalkamatkan äänimaisemalla, aloitaJalkamatkanAani).
+   */
+
+  /** Siirtymän oma raita soimaan: laji on 'jalan', 'laiva' tai 'lento'. */
+  aloitaSiirronMusiikki(laji) {
+    if (this.dead || this.radioPaalla()) return;
+    aloitaSiirtymamusiikki(laji);
+    // Kehittäjän varamusiikki on erillinen ja oletuksena pois; se soi
+    // vain jos kytkin on päällä JA oikea raita puuttuu.
+    aloitaVaramusiikki(laji);
+  }
+
+  /** Siirtymän raita pois pehmeästi. Turvallinen kutsua aina. */
+  lopetaSiirronMusiikki() {
+    lopetaSiirtymamusiikki();
+    lopetaVaramusiikki();
   }
 
   /**
@@ -18739,9 +18962,23 @@ export class UI {
   }
 
   /** Nappulan varsinainen siirto; kääre yllä hiljentää kartan animaatiot. */
-  async animatePawnSisalla(player, from, path, stepMs = STEP_MS, { saatto = false, maitse = false } = {}) {
+  async animatePawnSisalla(
+    player, from, path, stepMs = STEP_MS,
+    { saatto = false, maitse = false, musiikki = null } = {},
+  ) {
     if (!path || path.length === 0) return;
     const { board } = this.game;
+    /*
+     * SIIRTYMÄMUSIIKKI ALKAA HETI, KOKO KOREOGRAFIAN ALUSSA (omistajan
+     * tilaus 2.9.2026: *"oman pienen musiikin, joka tulisi aina
+     * siirtymän taustalle"*). Ennakkozoomi on jo osa siirtoa, joten
+     * musiikki nousee sen aikana ja on täydessä tasossaan silloin kun
+     * kamera lähtee rullaamaan. Ero äänimaisemaan on tarkoituksellinen:
+     * MAISEMA kertoo missä ollaan ja alkaa siksi vasta nappulan
+     * liikkeestä (ks. aloitaJalkamatkanAani), MUSIIKKI kertoo että
+     * ollaan matkalla ja alkaa siksi matkan alusta.
+     */
+    if (musiikki) this.aloitaSiirronMusiikki(musiikki);
 
     /*
      * === 1. ENNAKKOZOOMI, JA VASTA SITTEN NAPPULA ==================
@@ -18757,7 +18994,9 @@ export class UI {
      * nappula, joka skaalautuu kartan mukana kuten aina.
      */
     if (saatto) await this.ennakoiSiirtoZoomi(from, path);
-    if (this.dead) return;
+    // Peli kuoli kesken ennakkozoomin: musiikki ei saa jäädä soimaan
+    // (loppusammutus alempana jää tekemättä, koska tästä poistutaan).
+    if (this.dead) { if (musiikki) this.lopetaSiirronMusiikki(); return; }
 
     this.movingPlayerId = player.id;
     this.drawPawns();
@@ -18786,9 +19025,16 @@ export class UI {
      * nousemaan viimeisellä askeleella eikä siirron lopussa.
      */
     if (saatto) {
-      const kokonaiskesto = path.length * stepMs
+      /*
+       * KAMERA-AJO ON PIDEMPI KUIN NAPPULAN MATKA (omistajan tilaus
+       * 2.9.2026): siihen tulee eteen nappulan lähdön viive ja perään
+       * saapumisero, jotta *"laatta saapuu perille vähän ennen, kuin
+       * kartan panorointiliike loppuu"*. Luvut ja perustelu ovat
+       * osiossa SIIRRON KOREOGRAFIA (siirtoajonKesto).
+       */
+      const nappulanKesto = path.length * stepMs
         + Math.max(0, path.length - 1) * HYPYN_TAUKO_MS;
-      this.aloitaSaattavaKamera(path, kokonaiskesto);
+      this.aloitaSaattavaKamera(path, siirtoajonKesto(nappulanKesto));
       /*
        * YHDEN ASKELEEN MATKA JÄÄ ILMAN OMAA ÄÄNTÄ. Maisema nousee
        * kuuluviin 900 ms:ssa, ja viimeinen askel vaihtaa sen jo
@@ -18810,6 +19056,22 @@ export class UI {
     const koko = Math.abs(kerroin - 1) < 0.0005 ? '' : ` scale(${kerroin.toFixed(4)})`;
     let paikka = pixelOf(board, from);
     g.style.transform = `translate(${paikka.x}px, ${paikka.y}px)${koko}`;
+
+    /*
+     * === 3. NAPPULA LÄHTEE VIIVEELLÄ KAMERAN JÄLKEEN ===============
+     *
+     * Omistajan tilaus 2.9.2026: *"nappulan liikkeelle lähtö voisi
+     * olla hieman viivytetty niin, että kartta ehtii lähteä hitaasti
+     * jo rullaamaan eteenpäin."* Viive on TÄSSÄ eikä kamerassa, koska
+     * kamera-ajo on jo käynnissä ja sen kello juoksee: odotus ei
+     * pysäytä mitään, se vain siirtää nappulan ensimmäisen hypyn
+     * alkamaan sen verran myöhemmin.
+     *
+     * Nappula on jo laudalla ja lähtöruudussaan (yllä), joten se
+     * matkustaa viiveen ajan kartan mukana kuten kaikki muukin
+     * kuoressa oleva — ruudulla ei ole hetkeäkään tyhjää kohtaa.
+     */
+    if (saatto && !this.reducedMotion) await this.wait(NAPPULAN_LAHDON_VIIVE_MS);
 
     for (const [i, pos] of path.entries()) {
       const kohta = pixelOf(board, pos);
@@ -18855,6 +19117,14 @@ export class UI {
     this.movingPlayerId = null;
     this.revealShownFor = null;
     this.drawPawns();
+    /*
+     * SIIRTYMÄMUSIIKKI POIS PERILLÄ. Häivytys on 500 ms (js/
+     * siirtymamusiikki.js LASKU_MS) eli hitaampi kuin sisääntulo, ja
+     * se jatkuu vielä hetken kamera-ajon kanssa — matka loppuu
+     * ääneen, ei leikkaukseen. Kutsu on ehdoton: myös keskeytynyt
+     * siirto jättää musiikin soimaan ilman tätä.
+     */
+    if (musiikki) this.lopetaSiirronMusiikki();
     /*
      * NAPPULA ON NIMILADONNAN VARAUS, JOTEN SIIRTO ON LADONNAN SYÖTETTÄ
      * (omistaja 2.9.2026, ks. luovutaRuutuvaraukset) — MUTTA SITÄ EI
