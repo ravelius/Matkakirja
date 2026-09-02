@@ -327,6 +327,19 @@ aloilta; hajonta = rae tasaisella paperilla):
 | paperin rae (σ) | 3,07 | 6,54 | **4,14** |
 | maan kylläisyys (HSL S) | 69,5 % | 42,0 % | **61,4 %** |
 
+**Muste ei nouse mukana** — mitattu z5:n Kreikka-otoksesta (0,5 %:n
+persentiili = viivojen tummin pää, mediaani = koko kuvan taso):
+
+| | `ei` | `taysi` | `kirkas` |
+| --- | --- | --- | --- |
+| muste (0,5 %) | 80 | 98 | **103** |
+| mediaani | 197 | 192 | **205** |
+| viivan ja paperin ero | 117 | 94 | **102** |
+
+Kartta siis kirkastuu 13 sävyä, mutta viivan ja paperin ero KASVAA
+94:stä 102:een: `musteHaalennuksen` lasku 0,13 → 0,04 on tarkalleen se
+vastapaino, jota käyrän nosto vaati.
+
 Patina ei siis juuri tummenna — **pohja on tumma**, ja `taysi` jättää
 sen tummaksi. Kirkastus on siksi aitoa valon lisäystä sävykäyrään, ei
 "vähemmän patinaa". Sivutuotteena laatat myös **pakkautuvat ~5 %

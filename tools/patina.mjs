@@ -763,8 +763,15 @@ const VINJETTI = { voima: 0.1, eksponentti: 2.4, lampo: 0.4 };
  * näyttäisi vaaleammalta vaan utuiselta. Siksi noston nostoa
  * vastaan asetetaan `musteHaalennus`, joka osuu VAIN musteeseen:
  * 0,13 → 0,04 vetää viivan tummimman pään takaisin alas suunnilleen
- * saman verran kuin käyrä nostaa sitä. Lopputulos on mitattu:
- * paperi ja meri nousevat, musteen ja paperin ero ei kutistu.
+ * saman verran kuin käyrä nostaa sitä. Lopputulos on mitattu z5:n
+ * Kreikka-otoksesta (0,5 %:n persentiili = viivojen tummin pää):
+ *
+ *                       ei      taysi   kirkas
+ *   muste (0,5 %)       80       98      103
+ *   mediaani           197      192      205
+ *   viivan ja paperin ero  117    94      102
+ *
+ * Kartta kirkastuu 13 sävyä, mutta viivan ja paperin ero KASVAA.
  *
  * === 2. KYLLÄISYYS: PASTELLOINTIA VÄHEMMÄN, EI ENEMMÄN VÄRIÄ ===
  *
