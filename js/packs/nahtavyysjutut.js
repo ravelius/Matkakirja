@@ -3885,8 +3885,8 @@ export const NAHTAVYYSJUTUT = {
       teksti: 'Olympia-aate oli 1896 muutaman päivän vanha, kun sitä jo koeteltiin: '
         + 'maratonin kolmonen oli matkannut osan reittiä kärryillä. Yleisö ehti '
         + 'hurrata kreikkalaista kolmoisvoittoa kokonaisen illan. Opetus kesti '
-        + 'pidempään kuin pronssi — perässä tuleva unkarilainen näet laski, '
-        + 'montako juoksijaa hänet ohitti.',
+        + 'pidempään kuin pronssi — perässä tullut unkarilainen näet teki '
+        + 'vastalauseen, ja se hyväksyttiin.',
       lahde: 'Wikipedia',
     },
     'Elginin marmorit': {
