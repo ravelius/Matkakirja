@@ -8,8 +8,9 @@ voidaan monistaa samaa logiikkaa muihinkin."*
 
 Tämä on elävä luettelo: aiheita lisätään ja tila päivitetään. Sitovat
 linjaukset ovat Raamatussa (js/tyohuone-raamattu.js, Karttalinssit);
-tämä dokumentti on työlista. Sama sisältö julkaistaan artefaktisivuna
-omistajalle.
+tämä dokumentti on työlista. Sama sisältö on artefaktisivuna
+omistajalle: https://claude.ai/code/artifact/70aa8279-bf6b-49ce-a6cb-64b5a70c3fae
+(päivitetään samaan osoitteeseen Artifact-työkalun `url`-parametrilla).
 
 ## Malli, jota monistetaan
 
