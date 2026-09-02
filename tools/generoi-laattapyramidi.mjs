@@ -5,9 +5,10 @@
  *   node tools/generoi-laattapyramidi.mjs <kohdekansio> \
  *        [--data <raaka-aineiston kansio>] [--tasot 0-7] \
  *        [--alue lon0,lat0,lon1,lat1] [--laatta 512] [--laatu 0.9] \
- *        [--lohko 4] [--kaariminuutit 3] [--muoto webp]
+ *        [--lohko 4] [--kaariminuutit 1|3] [--korkeuspalat <kansio>]
+ *        [--muoto webp]
  *        [--harva] [--harvamittaus] [--saumatesti] [--kuiva]
- *        [--vain-lista] [--paikkaus <lähdeversio>]
+ *        [--vain-lista] [--vain-palat [tiedosto]] [--paikkaus <lähdeversio>]
  *
  * Omistajan päälinjaus 30.8.2026 (Raamattu, "YKSI MAAILMANBITTIKARTTA -
  * MAALEHDISTA LUOVUTAAN"): *"koko maailma on kokoajan yksi iso
@@ -81,7 +82,8 @@ import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { keraaMaailma } from './fokuskartta/maailma.mjs';
+import { ikkunanRajat, keraaMaailma } from './fokuskartta/maailma.mjs';
+import { ikkunanPalat } from './korkeuspalat-lukija.mjs';
 import { keraaSisalto, sisallonYhteenveto } from './fokuskartta/sisalto.mjs';
 import { keraaNostot, nostojenYhteenveto } from './fokuskartta/nostot.mjs';
 import { lueRajaviivasto, rajatLaudalle, RAJASETIT } from './fokuskartta/rajat.mjs';
@@ -247,6 +249,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
   console.error('Käyttö: node tools/generoi-laattapyramidi.mjs <kohdekansio> '
     + '[--data <kansio>] [--tasot 0-4] [--alue lon0,lat0,lon1,lat1] '
     + '[--laatta 512] [--laatu 0.9] [--muoto webp] [--kuiva] '
+    + '[--kaariminuutit 1|3] [--korkeuspalat <kansio>] [--vain-palat [tiedosto]] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
     + '[--nostotaso --nostoversio <v>] [--viivataso --viivaversio <v> [--eipiirit]] '
     + '[--saumatesti [--saumakohta sarake,rivi]]');
@@ -277,21 +280,50 @@ const LAATTA = Number(valitsin('laatta', 512));
  */
 const LOHKO = Number(valitsin('lohko', 4));
 /*
- * KORKEUSDATAN TARKKUUS KAARIMINUUTTEINA (omistajan päätös 30.8.2026:
- * 3 kaariminuuttia KAIKILLA tasoilla).
+ * KORKEUSDATAN TARKKUUS KAARIMINUUTTEINA — SYVIMMÄLLÄ TASOLLA.
  *
- * ETOPO1:n natiivi yksi kaariminuutti on tässä mittakaavassa pelkkää
- * kohinaa varjostuksessa: varjo lasketaan naapuriruutujen EROSTA, ja
- * yhden kaariminuutin naapurierot ovat suurelta osin mittauskohinaa.
- * Keskiarvoistava harvennus on alipäästösuodatin — pinta on pehmeämpi,
- * ei köyhempi. Tarkempi ajo on myöhemmin pelkkä tämän luvun muutos
- * samalle laattaruudukolle, joten sitä ei tehdä nyt.
+ * Omistajan päätös 30.8.2026 oli 3 kaariminuuttia kaikilla tasoilla;
+ * TILAUS 2.9.2026 KUMOSI SEN SYVIMMÄN TASON OSALTA: *"korkeusdata
+ * pitää tehdä 1 tarkkuudella uudestaan"* (Raamattu, KORKEUSDATA).
+ * Tarkkuus on nyt siis TASON OMINAISUUS eikä ajon:
  *
- * 3 kaariminuuttia = 0,05°, joka on tools/hae-korkeusruudukko.mjs:n oma
- * ruutu — aineistoa ei siis tarvitse hakea uudestaan.
+ *   z7        `--kaariminuutit` (oletus 1) — ETOPO1:n natiivi ruutu
+ *   z0–z6     aina 3 kaariminuuttia
+ *
+ * MIKSI KAUKOTASOT JÄÄVÄT KOLMEEN. Yksi korkeussolu on z7:llä 12
+ * kuvapikseliä 3′:llä ja 4 pikseliä 1′:llä — siellä tarkkuus näkyy.
+ * Jo z6:lla 1′-solu on 2 pikseliä ja z5:llä yksi, eli aineisto on
+ * piirtoa tarkempaa: tarkempi ruudukko ei toisi yhtään näkyvää
+ * yksityiskohtaa vaan pelkkää kohinaa ja nelinkertaisen muistin.
+ * Kaukotasoilla harvennus on nimenomaan ALIPÄÄSTÖSUODATIN (Raamattu),
+ * ja se on niillä oikea valinta myös tarkan aineiston aikana.
+ *
+ * `--kaariminuutit 3` palauttaa vanhan yhtenäisen ajon kokonaan.
+ *
+ * YKSI AJO, YKSI RUUDUKKO. Ruudukko kootaan kerran ja se palvelee
+ * kaikkia ajon tasoja, joten ajo jonka tasot tarvitsisivat ERI
+ * ruudukot pysäytetään (ks. RUUTU alempana). Tuotannossa tämä ei tule
+ * vastaan: matriisi ajaa z0–z6:n ja z7:n eri shardeissa.
  */
-const KAARIMINUUTIT = Number(valitsin('kaariminuutit', 3));
-const RUUTU = Number(valitsin('ruutu', KAARIMINUUTIT / 60));
+const KAARIMINUUTIT = Number(valitsin('kaariminuutit', 1));
+if (KAARIMINUUTIT !== 1 && KAARIMINUUTIT !== 3) {
+  console.error(`--kaariminuutit ${KAARIMINUUTIT}: vain 1 tai 3 ovat olemassa `
+    + '(1 = ETOPO1:n natiivi palat R2:ssa, 3 = repon oma harvennettu aineisto).');
+  process.exit(1);
+}
+/** Kaukotasojen kiinteä tarkkuus. */
+const KARKEA_KAARIMINUUTIT = 3;
+/** Alin taso, joka saa tarkan ruudukon: syvin taso. */
+const TARKKA_ALIN = TASOJA - 1;
+/** Tason korkeusruudukon tarkkuus kaariminuutteina. */
+const kaariminuutitTasolle = (z) => (z >= TARKKA_ALIN ? KAARIMINUUTIT : KARKEA_KAARIMINUUTIT);
+/*
+ * 1′-PALOJEN PAIKALLINEN KANSIO. Työnkulku kopioi tarvittavat palat
+ * R2:sta ajokoneelle ennen polttoa, jolloin itse ajossa ei ole yhtään
+ * verkkopyyntöä. Ilman tätä palat noudetaan julkisesta osoitteesta ja
+ * välimuistitetaan tmpdiriin (tools/korkeuspalat-lukija.mjs).
+ */
+const KORKEUSPALAT = valitsin('korkeuspalat', null);
 const KUIVA = lippu('kuiva');
 /*
  * VERSIO on laattojen polun osa ämpärissä
@@ -556,6 +588,22 @@ const TASOT = lueTasot(valitsin('tasot', NOSTOTASO ? `${NOSTO_ALIN}-${TASOJA - 1
  */
 
 /*
+ * AJON RUUTU: se tarkkuus, jota TÄMÄN ajon tasot tarvitsevat.
+ *
+ * Ruudukko kootaan kerran ja tarjoillaan selainsivulle yhtenä
+ * tiedostona, joten PIIRTÄVÄSSÄ ajossa voi olla vain yksi tarkkuus.
+ * Ristiriitainen ajo pysäytetään — mutta vasta piirron kynnyksellä
+ * (ks. YKSI AJO, YKSI RUUDUKKO ennen aineiston keruuta), koska
+ * luettelo- ja listausajot eivät lue ruudukkoa lainkaan ja
+ * `--vain-luettelo` kuvaa nimenomaan KOKO pyramidin z0–z7.
+ *
+ * Lista on hienoimmasta karkeimpaan, joten RUUTU on ajon tarkin
+ * tarkkuus.
+ */
+const AJON_KAARIMINUUTIT = [...new Set(TASOT.map(kaariminuutitTasolle))].sort((a, b) => a - b);
+const RUUTU = Number(valitsin('ruutu', (AJON_KAARIMINUUTIT[0] ?? KARKEA_KAARIMINUUTIT) / 60));
+
+/*
  * SARAKEKAISTA (--sarakkeet a-b) on parven/matriisin jakotapa.
  *
  * Miksi sarakkeina eikä asteina: `--alue` rajaa asteilla, ja silloin
@@ -707,6 +755,57 @@ function laatanBbox(mitat, sarake, rivi) {
     h: h / mitat.px,
     pw: w,
     ph: h,
+  };
+}
+
+/*
+ * ============ KORKEUSRUUDUKON LAATIKKO ==============================
+ *
+ * VEKTORIT KOKO LAUDALTA, KORKEUDET VAIN AJETULTA ALALTA.
+ *
+ * Rannikot ja järvet ovat kevyitä ja ne kootaan aina koko laudalta;
+ * korkeusruudukko ei ole. Koko laudan ruudukko on 3′:llä 44 Mt mutta
+ * yhdellä kaariminuutilla 395 Mt — ja se olisi vielä siirrettävä
+ * selainsivulle, joka piirtää siitä yhden pituuskaistan. Siksi ajo
+ * kokoaa ruudukon vain siltä alalta, jonka se todella piirtää.
+ *
+ * ALA ON LOHKOJEN UNIONI REUNUKSINEEN, EI PYYDETTY ALUE. Lohko
+ * piirretään reunuksen verran isompana (ks. REUNUS), ja jokainen
+ * pikseli lukee korkeutta myös naapureistaan (varjo on
+ * keskeisdifferenssi). Marginaali on sama puoli astetta kuin koko
+ * laudan laatikossa, eli 30 solua 1′:llä — moninkertaisesti se, mitä
+ * bilineaarinen näyte ja varjon askel yltävät hakemaan.
+ *
+ * LAATIKKO EI KOSKAAN KASVA KOKO LAUDAN LAATIKKOA SUUREMMAKSI. Se on
+ * leikattu siihen molemmista päistä, ja siksi täyden leveyden ajo saa
+ * TÄSMÄLLEEN saman laatikon kuin ennen tätä muutosta — 3′-tuotannon
+ * laatat pysyvät tavulleen entisinä.
+ */
+function korkeudenLaatikko() {
+  if (!lohkot.size) return laatikko;
+  const R = PATINA ? reunusTasolle() : 0;
+  let ax0 = Infinity; let ax1 = -Infinity;
+  let ay0 = Infinity; let ay1 = -Infinity;
+  for (const { mitat, bx, by } of lohkot.values()) {
+    const s0 = bx * LOHKO;
+    const r0 = by * LOHKO;
+    const pw = Math.min(Math.min(LOHKO, mitat.sarakkeita - s0) * LAATTA,
+      mitat.leveys - s0 * LAATTA);
+    const ph = Math.min(Math.min(LOHKO, mitat.riveja - r0) * LAATTA,
+      mitat.korkeus - r0 * LAATTA);
+    const kx0 = s0 * LAATTA - R;
+    const ky0 = r0 * LAATTA - R;
+    ax0 = Math.min(ax0, arkinBbox.x + kx0 / mitat.px);
+    ax1 = Math.max(ax1, arkinBbox.x + (kx0 + pw + 2 * R) / mitat.px);
+    ay0 = Math.min(ay0, arkinBbox.y + ky0 / mitat.px);
+    ay1 = Math.max(ay1, arkinBbox.y + (ky0 + ph + 2 * R) / mitat.px);
+  }
+  const MARGINAALI = 0.5;
+  return {
+    lon0: Math.max(laatikko.lon0, snap(kaava.lautaLon(ax0) - MARGINAALI, true)),
+    lon1: Math.min(laatikko.lon1, snap(kaava.lautaLon(ax1) + MARGINAALI, false)),
+    lat0: Math.max(laatikko.lat0, snap(kaava.lautaLat(ay1) - MARGINAALI, true)),
+    lat1: Math.min(laatikko.lat1, snap(kaava.lautaLat(ay0) + MARGINAALI, false)),
   };
 }
 
@@ -1215,7 +1314,49 @@ if (lippu('vain-lista')) {
   process.exit(0);
 }
 
+/*
+ * VAIN PALAT (`--vain-palat`): tulostaa ne 1′-korkeuspalat, jotka TÄMÄ
+ * komento tarvitsisi — yksi nimi rivillä, ei mitään muuta.
+ *
+ * TÄMÄ ON TYÖNKULUN KOPIOINTILISTA. Ajokone hakee palat R2:sta ennen
+ * polttoa, jottei itse ajossa ole yhtään verkkopyyntöä. Koko maailma
+ * olisi 194 Mt jokaiselle shardille; yksi pituuskaista tarvitsee siitä
+ * neljäsosan. Lista tulee SAMASTA laatikosta jota piirto käyttää
+ * (korkeudenLaatikko), joten se ei voi jäädä palaa vajaaksi — ja
+ * puuttuva pala olisi ajon pysäyttävä virhe eikä hiljainen merenpinta.
+ */
+if (lippu('vain-palat')) {
+  const kaarim = AJON_KAARIMINUUTIT[0] ?? KARKEA_KAARIMINUUTIT;
+  const nimet = (NOSTOTASO || VIIVATASO || kaarim !== 1)
+    ? []
+    : ikkunanPalat(ikkunanRajat({ laatikko: korkeudenLaatikko(), ruutu: RUUTU }));
+  /*
+   * Lista TIEDOSTOON eikä stdoutiin: ajon oma tuloste kulkee samaa
+   * putkea, ja työnkulku joutuisi arvaamaan mikä rivi on palan nimi.
+   */
+  const tiedosto = valitsin('vain-palat', null);
+  const polku = tiedosto && !tiedosto.startsWith('--') ? tiedosto : join(kohdekansio, 'palat.txt');
+  mkdirSync(dirname(resolve(polku)), { recursive: true });
+  writeFileSync(polku, nimet.length ? `${nimet.join('\n')}\n` : '');
+  console.log(`\n--vain-palat: ${polku} (${nimet.length} palaa, ${kaarim}′)`);
+  process.exit(0);
+}
+
 if (KUIVA) {
+  /*
+   * Kuiva ajo kertoo myös KORKEUSRUUDUKON KOON. Se on tämän ajon
+   * suurin yksittäinen muistierä ja se, joka päättää mahtuuko shardi
+   * ajokoneelle — ja sen näkee nyt ilman että mitään kootaan.
+   */
+  if (!NOSTOTASO && !VIIVATASO) {
+    const kl = korkeudenLaatikko();
+    const r = ikkunanRajat({ laatikko: kl, ruutu: RUUTU });
+    const kaarim = AJON_KAARIMINUUTIT.join('+');
+    console.log(`  korkeusruudukko ${r.leveys} x ${r.korkeus} (${kaarim}′, `
+      + `${(r.leveys * r.korkeus * 2 / 1e6).toFixed(0)} Mt Int16) `
+      + `lon ${kl.lon0.toFixed(2)}..${kl.lon1.toFixed(2)} `
+      + `lat ${kl.lat0.toFixed(2)}..${kl.lat1.toFixed(2)}`);
+  }
   console.log('\n--kuiva: vain luettelo, ei piirtoa.');
   process.exit(0);
 }
@@ -1267,11 +1408,41 @@ if (VIIVATASO && (HARVA || lippu('harvamittaus'))) {
 let aineisto = null;
 let sisalto = null;
 if (!NOSTOTASO && !VIIVATASO) {
+  /*
+   * YKSI AJO, YKSI RUUDUKKO. Ruudukko kootaan kerran ja tarjoillaan
+   * selainsivulle yhtenä tiedostona, joten ajo jonka tasot
+   * tarvitsisivat eri tarkkuudet pysähtyy tähän. Vaihtoehto olisi
+   * polttaa kaukotasot tarkalla aineistolla ja kirjata luetteloon
+   * toisin — laatat ja luettelo eivät saa olla eri mieltä siitä,
+   * mistä aineistosta laatta on tehty.
+   *
+   * Tuotannossa tämä ei tule vastaan: matriisi ajaa z0–z6:n ja z7:n
+   * eri shardeissa (.github/workflows/generoi-pyramidi.yml).
+   */
+  if (AJON_KAARIMINUUTIT.length > 1) {
+    console.error(`--tasot ${valitsin('tasot', '')}: tasot tarvitsevat eri korkeusruudukot `
+      + `(${AJON_KAARIMINUUTIT.join(' ja ')} kaariminuuttia), eikä yhteen piirtoajoon `
+      + 'mahdu kuin yksi. Aja z0–z6 ja z7 erikseen (niin matriisikin tekee) tai '
+      + `pakota yhtenäinen ajo: --kaariminuutit ${KARKEA_KAARIMINUUTIT}.`);
+    process.exit(1);
+  }
   console.log(`  aineisto        ${dataKansio}`);
   const aineistoAlkoi = Date.now();
-  aineisto = await keraaMaailma({ kansio: dataKansio, laatikko, ruutu: RUUTU });
-  console.log(`  korkeusruudukko ${aineisto.korkeus.w} x ${aineisto.korkeus.h} (${RUUTU}°) `
-    + `· rannikko ${aineisto.rannikot.length} viivaa · järvet ${aineisto.jarvet.length}`);
+  const korkeuslaatikko = korkeudenLaatikko();
+  aineisto = await keraaMaailma({
+    kansio: dataKansio,
+    laatikko,
+    korkeuslaatikko,
+    ruutu: RUUTU,
+    palat: KORKEUSPALAT,
+  });
+  const megatavua = (aineisto.korkeus.grid.byteLength / 1e6).toFixed(0);
+  console.log(`  korkeusruudukko ${aineisto.korkeus.w} x ${aineisto.korkeus.h} `
+    + `(${AJON_KAARIMINUUTIT[0] ?? KARKEA_KAARIMINUUTIT}′, ${megatavua} Mt) `
+    + `lon ${korkeuslaatikko.lon0.toFixed(2)}..${korkeuslaatikko.lon1.toFixed(2)} `
+    + `lat ${korkeuslaatikko.lat0.toFixed(2)}..${korkeuslaatikko.lat1.toFixed(2)}`);
+  console.log(`  rannikko        ${aineisto.rannikot.length} viivaa `
+    + `· järvet ${aineisto.jarvet.length}`);
   const aineistoSek = (Date.now() - aineistoAlkoi) / 1000;
   console.log(`  aineisto koossa ${aineistoSek.toFixed(1)} s`);
 
@@ -2030,6 +2201,15 @@ const palvelin = createServer((req, res) => {
      * sai 404:n ja koko aineiston lataus kaatui (ajo 13, 1.9.2026).
      */
     '/js/nostoladonta.js': join(JUURI, 'js', 'nostoladonta.js'),
+    /*
+     * SAMA TARINA UUDESTAAN (2.9.2026): maailmapiirto.js tuo
+     * varjostuskaavan pelin moduulista (v1436 js/maastovarjo.js,
+     * yksi lähde moottorille ja pelin tarkalle varjolle), ja selain
+     * pyytää sen polusta /js/maastovarjo.js. Ilman tätä riviä pyyntö
+     * sai 404:n ja koko aineiston lataus kaatui — sama vika kuin
+     * nostoladonnalla ajossa 13.
+     */
+    '/js/maastovarjo.js': join(JUURI, 'js', 'maastovarjo.js'),
     '/fokusnosto-symbolit.js': join(JUURI, 'js', 'fokusnosto-symbolit.js'),
     '/mapart.js': join(JUURI, 'js', 'mapart.js'),
     '/korkeus.bin': join(tyokansio, 'korkeus.bin'),
@@ -2475,10 +2655,38 @@ function teeLuettelo() {
    * laattojen paikan (ks. umpimeriSavy). Null, jos mitään ei karsittu.
    */
   meriSavy,
+  /*
+   * KORKEUSAINEISTON TARKKUUS TASOITTAIN (2.9.2026).
+   *
+   * Tarkkuus ei ole enää sama joka tasolla (ks. KORKEUSDATAN TARKKUUS
+   * KAARIMINUUTTEINA), ja luettelo on ainoa paikka, josta myöhempi
+   * lukija voi tietää MISTÄ AINEISTOSTA kukin taso on poltettu.
+   * Peli ei lue tätä; paikkausajo ja ihminen lukevat. Ilman kenttää
+   * kysymys "onko tämä versio se 1′-poltto" olisi arvailua.
+   *
+   * Kenttä on tasokohtainen JA erissä täydentyvä, koska pyramidi
+   * ajetaan shardeissa: z0–z6 tulee eri ajosta kuin z7, ja kummankin
+   * on saatava kirjattua oma tarkkuutensa ilman että toinen pyyhkii
+   * sen (ks. LUETTELO TÄYDENTYY).
+   */
+  korkeus: (NOSTOTASO || VIIVATASO) ? undefined : {
+    kaariminuutit: Object.fromEntries(tasot.map((m) => [m.z, kaariminuutitTasolle(m.z)])),
+    aineisto: [...new Set(tasot.map((m) => kaariminuutitTasolle(m.z)))]
+      .sort((a, b) => a - b)
+      .map((k) => (k === KARKEA_KAARIMINUUTIT
+        ? `ETOPO1 ${k}′ (repon tools/korkeusaineisto)`
+        : `ETOPO1 ${k}′ (R2:n 10°-palat)`))
+      .join(' + '),
+  },
   tasot: tasot.map((m) => ({
     z: m.z,
     leveys: m.leveys,
     korkeus: m.korkeus,
+    /*
+     * Tason oma tarkkuus myös tässä, jotta se kulkee `tasot`-taulukon
+     * mukana erien yli samalla koodilla kuin laatasto.
+     */
+    kaariminuutit: (NOSTOTASO || VIIVATASO) ? undefined : kaariminuutitTasolle(m.z),
     pikseliaPerYksikko: Math.round(m.px * 1e6) / 1e6,
     sarakkeita: m.sarakkeita,
     riveja: m.riveja,
@@ -2567,6 +2775,19 @@ if (existsSync(luetteloPolku)) {
       // olemassa olevaa nostotasoa pois luettelosta.
       luettelo.nostotaso = luettelo.nostotaso ?? vanha.nostotaso ?? null;
       luettelo.viivataso = luettelo.viivataso ?? vanha.viivataso ?? null;
+      /*
+       * KORKEUSTARKKUUS TÄYDENTYY TASOITTAIN, kuten `tasot`. z7-shardi
+       * ei tunne z0–z6:n tarkkuutta eikä päinvastoin, ja nostotaso- tai
+       * viivatasoajo ei tunne kummankaan — se ei lue ruudukkoa
+       * lainkaan, joten se kantaa vanhan kentän eteenpäin muuttumatta.
+       */
+      if (luettelo.korkeus && vanha.korkeus) {
+        luettelo.korkeus.kaariminuutit = {
+          ...vanha.korkeus.kaariminuutit, ...luettelo.korkeus.kaariminuutit,
+        };
+      } else if (!luettelo.korkeus) {
+        luettelo.korkeus = vanha.korkeus;
+      }
     }
   } catch {
     /* rikkinäinen vanha luettelo: kirjoitetaan tuore päälle */
