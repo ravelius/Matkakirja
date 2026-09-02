@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '2.9.2026 aamu — v1429–v1442; koko pyramidi poltetaan 1 kaariminuutin korkeusdatalla ja patinalla (2026-09-02a)',
+  paivitetty: '2.9.2026 aamupaiva — v1444–v1449; pyramidi poltettu 1 kaariminuutilla ja patinalla (pohja 02a, nostot 02c, viivat 02a)',
   tavoite: 'Kartta yhtenaiseksi ja teravyys arvioitavaksi. Mainissa: '
     + 'maareitit yhtenaisena lamminna viivana ja meri katkoina (v1423), '
     + 'noston teksti kokonaan napautettava (v1424), rajat samaa reittia '
@@ -33,21 +33,28 @@ export const TILANNE = {
     + 'siirtoviivat nakyviksi, laivakatko 90/0,35; nopanheiton kohteet '
     + 'kultalevylla ja renkaalla; heitto jatkuu itsestaan reitilla; syvan '
     + 'zoomin mitoitus korjattu (ruutukatto koko nostolle, ladonta v7). '
-    + 'Luettelo: pohja 2026-09-02a (korkeus 1, patina taysi), nostot 02b '
-    + '(v7), viivat 02a (piirit ei).',
+    + 'AAMUPAIVAN ERA (v1444-v1449): kysymykset omistajalle aina '
+    + 'kortilla (Raamattu), siirtoviivat 0,9 px / himmeys 0,55, kaikki '
+    + 'merkkiperheet yhteen mittaan syvassa zoomissa, havainnekuvan '
+    + 'selitelinkki kaikkialla, nimio vaistaa nappulaa, elavat merkit '
+    + 'seuraavat laatan venytysta z7:n yli (ei uutta zoomitasoa). '
+    + 'Luettelo: pohja 2026-09-02a (korkeus 1, patina taysi), nostot 02c '
+    + '(v7, siirtoviivat 0,9), viivat 02a (piirit ei).',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'paatoimittaja',
       tila: 'tyossa',
-      tehtava: 'Aamun tilauseran julkaisu Opus-agenteilla (v1436-v1442) ja '
-        + 'koko pyramidin poltto 1 kaariminuutilla ja patinalla (02a) + '
-        + 'nostotaso v7 (02b). Postikierros tunneittain: K1/K2/E1/H1-'
-        + 'kuittaukset yleiskuvitussessiolta.',
-      seuraavaksi: 'Kaupungin nimio nappulan alla (oma era: nappulan '
-        + 'ruutulaatikko ladonnan varaukseksi). K2 -> 7 skandaalin '
-        + 'lehtisiirto, E1 -> BIH/TUR elaintakyt, H1 -> Historian hetki '
-        + '-nostolaji. Paivalaskenta automaattiheitossa omistajan arvioon.',
+      tehtava: 'Aamupaivan korjauseran julkaisu Opus-agenteilla '
+        + '(v1444-v1449): omistajan syvan zoomin havainnot (paksut '
+        + 'siirtoviivat, erikokoiset nostot, puuttuva selitelinkki, nimio '
+        + 'nappulan alla, z7:n ylizoomi). Postikierros tunneittain: '
+        + 'K1/K2/E1/H1-kuittaukset yleiskuvitussessiolta.',
+      seuraavaksi: 'Omistajan katselmus syvasta zoomista (Sofia, Ateena). '
+        + 'K2 -> 7 skandaalin lehtisiirto, E1 -> BIH/TUR elaintakyt, H1 -> '
+        + 'Historian hetki -nostolaji. Nimeton vuorikolmio Bulgarian '
+        + 'pohjassa (43,25P/24,75I) ja nappulan kokoloikka siirron jalkeen '
+        + 'odottavat.',
     },
   ],
   odottaaPaatosta: [
@@ -68,6 +75,12 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1449: ZOOMI YLI Z7:N - elavat merkit (nostot, nimiot, siirtoviivat, maastomerkit) kasvavat samassa suhteessa kuin venytetty laatta; ei uutta zoomitasoa, ei polttoa. Nipista Sofiassa syvimman tason yli: symbolit kasvavat kartan mukana eivatka jaa pieniksi.',
+  'v1448: NIMIO VAISTAA NAPPULAA - kaupungin nimi ei jaa nappulan tai kohdemerkkien alle (nappulan ruutulaatikko ladonnan varauksena). Seiso Ateenassa ja Sofiassa syvassa zoomissa: nimi nakyy kokonaan.',
+  'v1447: HAVAINNEKUVAN SELITELINKKI KAIKKIALLA - lahderivin linkki nakyy ja aukeaa kaikissa havainnekuvissa (nostot, lehdet, kohtaamiset, aarre). Avaa kolme eri havainnekuvaa ja napauta linkkia.',
+  'v1446: MERKKIPERHEET YHTEEN MITTAAN - fokusniput, fokuskohteet, elaintakyt ja karttanimet samaa ruutukattoa; symbolit eivat enaa heittele muodoiltaan. Zoomaa Bulgaria 50 km: kaikki merkit samaa kokoa, joka merkilla teksti.',
+  'v1445: SIIRTOVIIVAT OHUEMMIKSI - 0,9 px, himmeys 0,55, katko 2,5. Nostotaso poltettu (02c). Katso Ateena syvassa zoomissa: viiva hiuksenohut.',
+  'v1444: Raamattu - kysymykset omistajalle aina kysymyskortilla.',
   'v1442: SYVA ZOOMI KUNTOON - ruutukatto kertoo koko noston piirroksen (merkki, nimio, siirtoviiva, sarakesiirtyma) samalla suhteella; maastomerkeilla kasvukatto; vuorikolmio vain nimensa kanssa; 27 kaupunkimerkkia sai nimensa takaisin (Plovdiv, Veliko Tarnovo, Thessaloniki...). Ladonta v7. Zoomaa Sofian ympariston 50 km -mittajanalle: symbolit samankokoisia, viivat ohuita, joka symbolilla nimi.',
   'v1441: POHJA 1 KAARIMINUUTILLA - generaattori kokoaa korkeusruudukon R2:n 10 asteen paloista z7:lle, z0-z6 pysyy 3 kaariminuutissa; luettelossa korkeus.kaariminuutit. Nakyy laatoissa polton 02a jalkeen: katso Alpit ja Kreikan vuoret syvimmalla tasolla.',
   'v1440: HEITTO JATKUU ITSESTAAN - reittipisteesta seuraava noppa pyorahtaa 750 ms siirron jalkeen kunnes saavutaan kaupunkiin; suunta valitaan yha itse. Portit: pollo, lehti, dialogit, radio. Heita noppa Ateenasta ja katso ketju.',
