@@ -134,14 +134,58 @@ const MERKIN_KARTTAVAKIO = NOSTOLADONTA_S;
  * ks. tiedoston johdanto.
  */
 const KYNNYS = {
-  isoPiste: 0.11,
-  kaupunkiPiste: 0.22,
-  isoNimi: 0.22,
-  nimi: 0.45,
+  kaupunki: 0.22,
   vuoriNimi: 0.45,
   jarviNimi: 0.45,
   jarviNimi2: 0.9,
 };
+
+/*
+ * ====== KOHDEKAUPUNKI EI OLE NIMISTÖÄ VAAN PELILAUTA ===============
+ *
+ * OMISTAJAN BUGIRAPORTTI 2.9.2026 ilta (kuvakaappaus Euroopan
+ * yleisnäkymästä, mittajana 1000 km), sanatarkasti: *"osa kaupungeista
+ * ei näy kartalla ollenkaan"*.
+ *
+ * ── JUURISYY, MITATTUNA ───────────────────────────────────────────
+ *
+ * Taulussa oli NELJÄ kaupunkikynnystä: `isoPiste` 0,11, `kaupunkiPiste`
+ * 0,22, `isoNimi` 0,22 ja `nimi` 0,45. Ne ovat maailman NIMISTÖN
+ * yleistyskynnyksiä — sama porrastus, jolla laattageneraattori harventaa
+ * 261 kaupungin litaniaa maailmanleveydelle. Sääntö *"kartalla ei ole
+ * merkkiä ilman nimeä"* (31.8.2026) kytki merkin nimeen, ja yhdessä ne
+ * tekivät tämän: mittakaavoilla 0,22…0,45 nimen sai vain `iso`-kaupunki
+ * (`start` tai `airport`), joten kaikki muut katosivat kartalta
+ * KOKONAAN — ei nimeä eikä pistettä. Mitattuna omistajan näkymässä
+ * (px 0,371): Euroopan ikkunassa on 39 laudan kaupunkia ja niistä
+ * 31 oli poissa — Pariisi, Praha, Wien, Budapest, Varsova, Sofia,
+ * Bukarest, Kiova, Lissabon, Barcelona, Amsterdam, Kööpenhamina…
+ *
+ * ── MIKSI KYNNYS ON VÄÄRÄ TYÖKALU JUURI TÄSSÄ ─────────────────────
+ *
+ * `cities` EI OLE kartan nimistöä vaan PELILAUDAN RUUDUT: ne ovat ne
+ * paikat, joihin nopalla voi matkustaa. Yleistyskynnys on kartografin
+ * keino karsia kuvitusta, ja pelilaudan ruudun karsiminen on eri asia
+ * kuin kylännimen karsiminen — sama perustelu kuin kohdenimiöllä, jolla
+ * ei myöskään ole omaa tiheyskynnystä (ks. lohko alempana). Laudalla on
+ * 261 ruutua koko maailmassa eikä tuhansia, ja jokainen niistä on
+ * pelaajalle napautettava kohde.
+ *
+ * ── MITÄ TILALLE: YKSI PORTTI, EI NELJÄÄ ──────────────────────────
+ *
+ * Kaupungeille jää yksi kynnys, ja se on kartan oma *"tässä näkyy
+ * kaupunkeja"* -raja: z2 eli 0,22 (laattapyramidin toinen taso, sama
+ * luku kuin entinen `kaupunkiPiste`). Sen ALAPUOLELLA — koko laudan
+ * yleisnäkymä — mikään ei muutu: vanhassakin taulussa nimiä oli siellä
+ * nolla, koska `isoNimi` oli sekin 0,22. Sen YLÄPUOLELLA jokainen laudan
+ * kaupunki saa merkin JA nimen, eikä nimi voi enää pudota törmäykseen
+ * (ks. `pakota` ladonnassa): nimi väistää, mutta merkki ja nimi pysyvät.
+ *
+ * MAASTONIMET PITÄVÄT KYNNYKSENSÄ. Vuoret ja järvet ovat kuvitusta
+ * täsmälleen siinä mielessä, jossa kaupunki ei ole: niitä ei napauteta,
+ * niihin ei matkusteta, ja niiden litania on juuri se, jota kynnys on
+ * kirjoitettu harventamaan.
+ */
 
 /*
  * KOHDENIMIÖLLÄ EI OLE OMAA TIHEYSKYNNYSTÄ — SEN KYNNYS ON LEHTI.
@@ -221,9 +265,31 @@ const FONTTI = '"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif
  * Se on yhä nostojen ruutukatto (js/nostoladonta.js
  * NOSTOLADONTA_NIMIO_KATTO), joten muutos KOSKEE MYÖS POLTETTUA
  * NIMIÖTÄ — ja siksi nostoladonnan sääntö on samassa erässä v4.
+ *
+ * === KAUPUNKI YHDEN PYKÄLÄN YLÖS 2.9.2026 =========================
+ *
+ * Omistaja samassa palautteessa, jossa muste käskettiin haalentaa:
+ * *"Kohdekaupungin nimi voi kyllä olla hieman isommalla kuin muiden
+ * kohteiden nimet."* Kaksi tämän erän muuta muutosta syövät nimen
+ * painoa juuri sen verran, että lupa kannattaa käyttää:
+ *
+ *  1. MUSTE HAALENI mitatusti poltetun laatan sävyyn (css/styles.css
+ *     --karttamuste): rgb(74,52,33) täydellä peitolla -> rgb(103,88,73)
+ *     peitolla 0,92.
+ *  2. HARVENNETTU KAPITEELI koskee nyt jokaista kohdekaupunkia, ja
+ *     kapiteelissa nimen RUNKO on noin 0,75 x versaalin korkeus —
+ *     mitattuna Sofiassa versaali 8,75 px, kapiteelirunko 6,6 px, kun
+ *     viereisen vuorennimen versaali on 7,7 px. Yhtä suurina luetut
+ *     luvut näyttivät ruudulla siltä, että maastonimi on isompi.
+ *
+ * Korotus on 8 % kummallekin kaupunkiportaalle (12,5 -> 13,5 ja
+ * 14 -> 15) — sama suuruusluokka kuin 1.9. tehdyssä tarkennuksessa,
+ * eli ilmeen tarkennus eikä uusi ilme. MAASTO JA KOHDE EIVÄT MUUTU:
+ * `kohde` on poltetun nimiön katto (yllä), ja sen muuttaminen
+ * vaatisi koko nostotason uuden polton.
  */
 const KOKO = {
-  isoKaupunki: 14, kaupunki: 12.5, vuori: 11, jarvi: 10, kohde: 8.5,
+  isoKaupunki: 15, kaupunki: 13.5, vuori: 11, jarvi: 10, kohde: 8.5,
 };
 
 /*
@@ -295,33 +361,50 @@ export const KARTTANIMI_KOOT = KOKO;
  */
 const PAAKAUPUNGIN_ASU = { tyylitys: 'small-caps', vali: 0.14 };
 
-/** Tavallinen kaupunki: ei kapiteelia eikä harvennusta. */
-const KAUPUNGIN_ASU = { tyylitys: '', vali: 0 };
-
 /*
- * PELAAJAN OMA KAUPUNKI SAA PÄÄKAUPUNGIN ASUN (omistaja 1.9.2026,
- * sanatarkasti: *"sen kaupungin nimi olisi hyvä kirjoittaa samalla
- * lailla harvennetuilla kapitaaleilla kuin pääkaupungin nimi"*).
+ * ====== HARVENNETTU KAPITEELI ON JOKAISEN KOHDEKAUPUNGIN ASU =======
  *
- * ASU EI OLE UUSI VAAN SAMA. Harvennettu kapiteeli on kartalla jo
- * olemassa ja se tarkoittaa *"tämä nimi on tärkeämpi kuin naapurinsa"*
- * (ks. PAAKAUPUNGIN_ASU). Pelaajan sijainti on lähikuvassa juuri se
- * nimi — ja kun pelaaja seisoo pääkaupungissa, asu ei muutu lainkaan,
- * mikä on oikein: kaksi syytä samaan korostukseen ei tee siitä
- * kaksinkertaista.
+ * OMISTAJAN HAVAINTO 2.9.2026 ilta (kuvakaappaukset pääkartalta),
+ * sanatarkasti: *"kun kaupunki on valittuna se kirjoitetaan
+ * kapitaaleilla mutta esim. Sofia, jos ei ole valittuna niin se muuttuu
+ * pois kapitaaleista. Ateena tosin pysyy kokoajan kapitaaleilla. Kaikki
+ * kohdekaupungit saisi olla koko ajan noilla harvennetuilla
+ * kapitaaleilla kirjoitettuna."*
  *
- * KOKO EI MUUTU, VAIN ASU. Nimi ei saa hypätä kokoa sen mukaan, missä
- * nappula sattuu seisomaan — kartan porras (KOKO) kertoo, kuinka iso
- * paikka on, ja se on sama eilen ja tänään. Korostus on typografinen.
+ * ── MIKSI ATEENA PYSYI JA SOFIA EI ────────────────────────────────
  *
- * LADONTA TUNTEE SEN, EIKÄ VAIN PIIRTO. Harvennus levittää nimen noin
- * 14 %:lla, ja jos se lisättäisiin vasta piirrossa, ladonnan
+ * Asu valittiin KAHDESTA lipusta: `c.iso` (= `start` tai `airport`,
+ * sama tieto kuin merkin kaksoisrengas) tai *"pelaaja seisoo tässä"*.
+ * Ateena on lähtökaupunki eli `start`, joten se oli pysyvästi
+ * kapiteelilla; Sofia ei ole kumpaakaan, joten se sai kapiteelin vain
+ * niinä hetkinä, joina nappula seisoi siinä. Kartalla se luki
+ * *"kaupungin asu kertoo pelitilasta"*, ja se on väärä viesti: asun
+ * kuuluu kertoa PAIKASTA.
+ *
+ * ── SÄÄNTÖ ON NYT YKSI, EIKÄ SILLÄ OLE POIKKEUKSIA ────────────────
+ *
+ * Jokainen `cities`-listan paikka on pelilaudan ruutu (ks.
+ * KOHDEKAUPUNKI EI OLE NIMISTÖÄ yllä), ja jokainen niistä ladotaan
+ * harvennetuin kapiteelein joka mittakaavassa ja pelitilassa. Ero
+ * pääkaupunkiin säilyy siinä, missä se 1800-luvun atlaksessakin on:
+ * kaksoisrenkaassa (MERKKI.rengasIso) ja nimen KOOSSA (KOKO.isoKaupunki
+ * vs. KOKO.kaupunki) — ei kirjainlajissa.
+ *
+ * ENTINEN OMAN_KAUPUNGIN_ASU SISÄLTYY TÄHÄN. Omistajan 1.9.2026
+ * päätös *"sen kaupungin nimi olisi hyvä kirjoittaa samalla lailla
+ * harvennetuilla kapitaaleilla kuin pääkaupungin nimi"* ei kumoudu vaan
+ * yleistyy: pelaajan kaupunki on kohdekaupunki niin kuin kaikki muutkin,
+ * ja saa saman asun — nyt myös silloin, kun nappula on muualla. Siksi
+ * ladonta ei enää tarvitse pelaajan kaupungin tunnusta syötteekseen
+ * eikä välimuistin avaimeen (ladonnanAvain).
+ *
+ * LADONTA TUNTEE HARVENNUKSEN, EIKÄ VAIN PIIRTO. Harvennus levittää
+ * nimen noin 14 %:lla, ja jos se lisättäisiin vasta piirrossa, ladonnan
  * törmäyslaatikko olisi liian kapea ja levinnyt nimi peittäisi
- * naapurinsa. Siksi pelaajan kaupunki on ladonnan syötettä ja osa
- * välimuistin avainta (ladonnanAvain) — yksi uusi ladonta siirtoa
- * kohti, sama hinta kuin uudella zoomiportaalla.
+ * naapurinsa. `vali` menee siksi samasta luvusta sekä mittaan että
+ * elementin `letter-spacing`iin.
  */
-const OMAN_KAUPUNGIN_ASU = PAAKAUPUNGIN_ASU;
+const KOHDEKAUPUNGIN_ASU = PAAKAUPUNGIN_ASU;
 
 /* ------------------------------------------------- kohdenimiön nosto */
 
@@ -372,6 +455,18 @@ const NIMION_VALJYYS_Y = 5;
  * zoomilla.
  */
 const NOSTON_PITUUDET = [14, 26];
+
+/**
+ * KOHDEKAUPUNGIN VÄISTÖKEHÄN ETÄISYYDET CSS-PIKSELEINÄ (2.9.2026).
+ *
+ * Kaupungin nimi väistää kahdeksaan suuntaan kahdella etäisyydellä,
+ * kun sen viisi vakiopaikkaa ovat varattuja (ks. ladonnan
+ * KARTOGRAFIN KEHÄ). Luvut ovat PUOLET noston pituuksista, ja siihen
+ * on syy: nostolla on katkoviiva, joka kertoo kenen nimi on kyseessä,
+ * kaupungin nimellä ei. Ilman viivaa nimi on tunnistettava merkkinsä
+ * nimeksi pelkän lähituntuman perusteella.
+ */
+const KAUPUNGIN_KEHA = [7, 13];
 
 /**
  * Kuinka pitkälle nimiö saa LIUKUA esteen ohi (ks. sovita, LIUKU).
@@ -745,8 +840,8 @@ function keraaAineisto(pack) {
     aste.set(e.b, (aste.get(e.b) ?? 0) + 1);
   }
   const kaupungit = (pack.cities ?? []).map((c) => ({
-    // Tunnus on ladonnassa vain yhtä varten: pelaajan oma kaupunki saa
-    // pääkaupungin asun (OMAN_KAUPUNGIN_ASU).
+    /* Tunnus kulkee mukana tunnistamista varten (kaksoisnimipari,
+     * savukkeiden mittaukset); ladonta itse ei enää lue sitä. */
     id: c.id,
     nimi: c.name,
     x: c.x,
@@ -1106,10 +1201,8 @@ function kutistaen(teksti, sovita) {
  *
  * @param {object} data keraaAineisto()-tulos
  * @param {number} px   CSS-pikseliä yhtä lautayksikköä kohti
- * @param {string|null} oma pelaajan nykyisen kaupungin tunnus, joka saa
- *   pääkaupungin harvennetun kapiteelin (ks. OMAN_KAUPUNGIN_ASU)
  */
-function lado(data, px, oma = null) {
+function lado(data, px) {
   const nakyy = (kynnys) => px >= kynnys;
   const laudalle = (arvo) => arvo / px;
 
@@ -1231,8 +1324,9 @@ function lado(data, px, oma = null) {
    */
   const pisteet = [];
   for (const c of data.kaupungit) {
-    if (!c.iso && !nakyy(KYNNYS.kaupunkiPiste)) continue;
-    if (!nakyy(KYNNYS.isoPiste)) continue;
+    /* Yksi portti kaikille laudan ruuduille (ks. KOHDEKAUPUNKI EI OLE
+     * NIMISTÖÄ): sen yläpuolella jokainen kaupunki on kartalla. */
+    if (!nakyy(KYNNYS.kaupunki)) continue;
     const x = c.x * px;
     const y = c.y * px;
     const r = c.iso ? 5.2 : 2.6;
@@ -1247,7 +1341,7 @@ function lado(data, px, oma = null) {
    * näkyä sitten kun kaupungin nimikin näkyy."*
    *
    * Kaupungin piste syttyi ennen kahdella kynnyksellä aikaisemmin kuin
-   * sen nimi (KYNNYS.isoPiste 0,11 vs. isoNimi 0,22; kaupunkiPiste
+   * sen nimi (entiset isoPiste 0,11 vs. isoNimi 0,22; kaupunkiPiste
    * 0,22 vs. nimi 0,45), ja lisäksi nimi saattoi pudota törmäykseen
    * millä tahansa mittakaavalla. Kummassakin tapauksessa kartalle jäi
    * musta piste, joka ei kerro mitään: pelaaja näkee merkin muttei
@@ -1257,6 +1351,11 @@ function lado(data, px, oma = null) {
    * SÄÄNTÖ ON SAMA KUIN VAIENNEELLA NIMIÖLLÄ (v1385): kartalla ei ole
    * merkkiä ilman nimeä. Siksi tämä joukko kerätään VASTA ladonnan
    * jälkeen — nimen saaminen on ladonnan tulos eikä sen syöte.
+   *
+   * KAUPUNGEILLA JOUKKO ON NYKYÄÄN TÄYSI (2.9.2026): kohdekaupungin
+   * nimi ei voi enää pudota, joten jokainen piste saa nimensä ja
+   * jokainen nimi pisteensä. Joukko on silti tässä — se on se kahva,
+   * jolla sääntö pysyy voimassa, jos ladontaan joskus palaa pudotus.
    *
    * MAASTOPARI KELPAA NIMEKSI. Jos kaupungin kohdalla piirtyy sen
    * vuoren tai järven nimi (kaksoisnimisääntö), pisteen vieressä on
@@ -1309,9 +1408,15 @@ function lado(data, px, oma = null) {
     || (a.c.nimi < b.c.nimi ? -1 : 1));
 
   let pudotettu = 0;
+  /* Pakotettuja kohdekaupungin nimiä: ks. PAKOTUS alempana. */
+  let pakotettu = 0;
   for (const { c, x, y } of jono) {
-    const saaNimen = c.iso ? nakyy(KYNNYS.isoNimi) : nakyy(KYNNYS.nimi);
     /*
+     * KOHDEKAUPUNKI SAA NIMENSÄ AINA, kun se ylipäätään on kartalla
+     * (ks. KOHDEKAUPUNKI EI OLE NIMISTÖÄ): piste ja nimi tulevat
+     * samasta portista, eikä nimelle ole omaa kynnystä. Entinen
+     * `saaNimen` on siksi poistunut, ei muutettu vakioksi.
+     *
      * Parillinen kohde ladotaan kaupungin TÄRKEYDELLÄ mutta
      * maastonimen ULKOASULLA ja PAIKALLA: tärkeys tulee kaupungilta,
      * jottei nimi putoa sen takia, että maastonimet ladotaan vasta
@@ -1319,7 +1424,6 @@ function lado(data, px, oma = null) {
      */
     const pari = c.maastopari;
     const pariNakyy = Boolean(pari) && nakyy(maastonKynnys(pari));
-    if (!saaNimen && !pariNakyy) continue;
     if (pariNakyy) {
       const mkoko = pari.laji === 'vuori' ? KOKO.vuori : KOKO.jarvi;
       const mtyyli = pari.laji === 'jarvi' ? 'italic' : '';
@@ -1354,17 +1458,15 @@ function lado(data, px, oma = null) {
        * synny, koska maastonimi on merkitty parilliseksi eikä sitä
        * ladota uudestaan maastokierroksella.
        */
-      if (!saaNimen) { pudotettu += 1; continue; }
     }
     const koko = c.iso ? KOKO.isoKaupunki : KOKO.kaupunki;
     /*
-     * Pääkaupungin asu tulee samasta lipusta kuin sen rengas
-     * (ks. PAAKAUPUNGIN_ASU). Harvennus on CSS-pikseleitä, koska nimi
-     * on paperivakio — sama jako kuin koolla.
+     * Jokainen kohdekaupunki saa harvennetun kapiteelin (ks.
+     * KOHDEKAUPUNGIN_ASU) — asu ei riipu pelitilasta eikä lipuista,
+     * vain koko riippuu. Harvennus on CSS-pikseleitä, koska nimi on
+     * paperivakio — sama jako kuin koolla.
      */
-    const asu = (c.iso || (oma && c.id === oma))
-      ? (c.iso ? PAAKAUPUNGIN_ASU : OMAN_KAUPUNGIN_ASU)
-      : KAUPUNGIN_ASU;
+    const asu = KOHDEKAUPUNGIN_ASU;
     const vali = asu.vali * koko;
     const lev = tekstinLeveys(c.nimi, koko, asu.tyylitys, vali);
     const kork = koko * 1.15;
@@ -1372,7 +1474,9 @@ function lado(data, px, oma = null) {
      * EHDOKKAAT: laudan oma asettelu ensin. Se on käsin hiottua työtä
      * (nimi ei peitä rannikkoa eikä naapuria), joten sitä
      * KUNNIOITETAAN aina kun se ei törmää. Vasta törmätessä kokeillaan
-     * neljää tavanomaista karttapaikkaa, ja viimeisenä nimi putoaa.
+     * neljää tavanomaista karttapaikkaa ja sitten kartografin kehää
+     * (KAUPUNGIN_KEHA) — eikä viimeisenä ole enää pudotus vaan
+     * ensimmäinen ehdokas pakolla (ks. `pakota` alempana).
      *
      * Kerroin 11/13 on laatoilta: laudan `lx/ly` on aseteltu 18 laudan
      * yksikön nimelle, ja tässä nimi on ruutupikseleitä — siirtymä
@@ -1382,6 +1486,8 @@ function lado(data, px, oma = null) {
     const d = c.iso ? 7 : 5;
     const ehdokkaat = [
       { dx: c.lx * (11 / 13), dy: c.ly * (11 / 13), ank: c.la },
+    ];
+    const tavanomaiset = [
       { dx: d, dy: kork * 0.35, ank: 'start' },
       { dx: -d, dy: kork * 0.35, ank: 'end' },
       { dx: 0, dy: -kork * 0.75, ank: 'middle' },
@@ -1409,6 +1515,17 @@ function lado(data, px, oma = null) {
      * vasemmalle."* Alas on viimeinen — kartan lukusuunnassa nimi
      * merkin yläpuolella luetaan merkin nimeksi, alapuolella se
      * sekoittuu helpommin seuraavaan riviin.
+     *
+     * KEHÄ MENEE TAVANOMAISTEN PAIKKOJEN EDELLE, JA SE ON MITATTU
+     * KORJAUS (2.9.2026 ilta). Kehä oli listan HÄNNÄSSÄ, joten
+     * tavanomainen *"nimi merkin alle"* (kork x 1,35 eli parikymmentä
+     * pikseliä) ehti ensin — ja koska pino on kymmeniä pikseleitä
+     * korkea, se paikka on joko pinon sisällä tai hipoo sen alareunaa.
+     * Mitattuna Sofiassa mittakaavalla 5,86: nimen laatikko jäi
+     * 0,8 pikselin päähän varauksen alareunasta, eli nimi valui merkin
+     * ALLE juuri niin kuin omistajan valituksessa. Kun pino on
+     * olemassa, sen oma kehä on ainoa mitta, joka tuntee pinon koon —
+     * tavanomaiset paikat jäävät sen jälkeiseksi varareitiksi.
      */
     const pino = merkkiVaraus(x, y);
     if (pino) {
@@ -1419,17 +1536,117 @@ function lado(data, px, oma = null) {
         { dx: 0, dy: pino.y1 - y + kork * 0.62 + NIMION_RAKO, ank: 'middle' },
       );
     }
-    let asetettu = null;
-    for (const e of ehdokkaat) {
+    ehdokkaat.push(...tavanomaiset);
+    /*
+     * ── KARTOGRAFIN KEHÄ: KAHDEKSAN SUUNTAA, KAKSI ETÄISYYTTÄ ──────
+     *
+     * Sama keino kuin karttanoston nimiöllä (NOSTON_PITUUDET-silmukka
+     * alempana) ja samasta mitatusta syystä: umpikuja ei useimmiten
+     * johdu siitä, että nimi olisi liian leveä, vaan siitä, että
+     * KIINTEÄT viisi paikkaa sattuvat olemaan varattuja. Kehä etsii
+     * paperia merkin ympäriltä ennen kuin ladonta luovuttaa.
+     *
+     * ETÄISYYDET OVAT LYHYET, koska kaupungin nimellä EI ole
+     * nostoviivaa: nimi tunnistetaan merkkinsä nimeksi vain
+     * lähituntumasta. Siksi kehä on tässä puolet noston pituuksista.
+     */
+    for (const pituus of KAUPUNGIN_KEHA) {
+      const vino = pituus * 0.7;
+      ehdokkaat.push(
+        { dx: d + pituus, dy: kork * 0.35, ank: 'start' },
+        { dx: -(d + pituus), dy: kork * 0.35, ank: 'end' },
+        { dx: 0, dy: -kork * 0.75 - pituus, ank: 'middle' },
+        { dx: 0, dy: kork * 1.35 + pituus, ank: 'middle' },
+        { dx: d + vino, dy: -vino + kork * 0.35, ank: 'start' },
+        { dx: d + vino, dy: vino + kork * 0.35, ank: 'start' },
+        { dx: -(d + vino), dy: -vino + kork * 0.35, ank: 'end' },
+        { dx: -(d + vino), dy: vino + kork * 0.35, ank: 'end' },
+      );
+    }
+    const laatikko = (e) => {
       const kx = x + e.dx;
       const ky = y + e.dy;
       const x0 = e.ank === 'end' ? kx - lev : (e.ank === 'middle' ? kx - lev / 2 : kx);
-      const r = {
-        x0: x0 - 1, y0: ky - kork * 0.62, x1: x0 + lev + 1, y1: ky + kork * 0.42,
+      return {
+        kx,
+        ky,
+        ank: e.ank,
+        r: { x0: x0 - 1, y0: ky - kork * 0.62, x1: x0 + lev + 1, y1: ky + kork * 0.42 },
       };
-      if (vapaa(r)) { varaa(r); asetettu = { kx, ky, ank: e.ank }; break; }
+    };
+    let asetettu = null;
+    for (const e of ehdokkaat) {
+      const p = laatikko(e);
+      if (!este(p.r)) { varaa(p.r); asetettu = p; break; }
     }
-    if (!asetettu) { pudotettu += 1; continue; }
+    /*
+     * ── LIUKU: SAMA PAIKKA JUURI ESTEEN OHI ────────────────────────
+     *
+     * Sama keino ja sama perustelu kuin kohdenimiöllä (ks. LIUKU
+     * `sovita`-funktiossa alempana), tuotuna kaupungin nimelle
+     * 2.9.2026. Kiinteä ehdokaskehä osuu joskus juuri raon VIERELLE:
+     * mitattuna Sofian maalehtinäkymässä (mittajana 200 km) nimiön
+     * laatikko leikkasi laattaan poltettujen nostosymbolien varauksia
+     * täsmälleen 4 pikselin verran alareunastaan — rako oli olemassa,
+     * mutta yksikään kehän paikoista ei osunut siihen.
+     *
+     * TÄMÄ ON OMA KIERROKSENSA JA SE ON JÄRJESTYSVAATIMUS. Liuku
+     * SIIRTÄÄ nimeä pystysuunnassa, ja jos se ajettaisiin ehdokkaiden
+     * SISÄLLÄ, ensimmäisen ehdokkaan liu'uttu asu voittaisi
+     * myöhemmän ehdokkaan täyden osuman — myös pelimerkin väistökehän,
+     * jonka järjestys on omistajan oma (*"ensisijaisesti ylös"*).
+     * Siksi kaikki tarkat paikat kokeillaan ensin ja liuku vasta
+     * niiden jälkeen, samassa järjestyksessä.
+     *
+     * SIIRTO ON PYSTYSUORA JA TÄSMÄLLINEN: laatikkoa siirretään juuri
+     * sen verran, että se ohittaa esteen ylhäältä tai alhaalta, eikä
+     * yhtään enempää. Kylki pysyy kylkenä ja sarake sarakkeena, ja
+     * matka on rajattu kehän pisimpään askeleeseen — nimi ei siis
+     * päädy kauemmas merkistään kuin kehä muutenkin veisi.
+     */
+    if (!asetettu) {
+      const liuku = Math.max(...KAUPUNGIN_KEHA);
+      for (const e of ehdokkaat) {
+        const p = laatikko(e);
+        const tulppa = este(p.r);
+        if (!tulppa) continue;
+        for (const dy of [tulppa.y0 - p.r.y1, tulppa.y1 - p.r.y0]) {
+          if (!(Math.abs(dy) <= liuku)) continue;
+          const rl = {
+            x0: p.r.x0, y0: p.r.y0 + dy, x1: p.r.x1, y1: p.r.y1 + dy,
+          };
+          if (este(rl)) continue;
+          asetettu = {
+            kx: p.kx, ky: p.ky + dy, ank: p.ank, r: rl,
+          };
+          break;
+        }
+        if (asetettu) { varaa(asetettu.r); break; }
+      }
+    }
+    /*
+     * ── PAKOTUS: KOHDEKAUPUNKI EI PUDOTA NIMEÄÄN (omistaja 2.9.2026)
+     *
+     * *"Korjaa niin, että kohdekaupungit eivät koskaan putoa (ne ovat
+     * pelin pelilaudan ruutuja): nimi saa väistää, mutta merkki ja nimi
+     * pysyvät."*
+     *
+     * Kun kehältäkään ei löydy paperia, nimi asettuu laudan omaan
+     * käsin hiottuun paikkaansa (ehdokas 0) ja VARAA sen. Varaus on
+     * oleellinen: sen jälkeen kaikki myöhemmät nimet — muut kaupungit,
+     * kohdenimiöt, maastonimet — väistävät sitä normaalisti, eli
+     * pakotus maksaa enintään yhden päällekkäisyyden eikä leviä.
+     *
+     * PAKOTUS ON OMA LUKUNSA, EI PUDOTUS. `pudotettu` kertoo yhä
+     * vaienneista MAASTONIMISTÄ, ja jos pakotus kirjattaisiin siihen,
+     * kaksi eri asiaa sekoittuisi juuri siinä luvussa, jolla ahtautta
+     * mitataan. Kummankin nolla on tavallinen lukema z3:sta ylöspäin.
+     */
+    if (!asetettu) {
+      asetettu = laatikko(ehdokkaat[0]);
+      varaa(asetettu.r);
+      pakotettu += 1;
+    }
     nimiot.push({
       laji: 'kaupunki',
       teksti: c.nimi,
@@ -1763,7 +1980,7 @@ function lado(data, px, oma = null) {
   }
 
   return {
-    nimiot, merkit, nostot, pudotettu,
+    nimiot, merkit, nostot, pudotettu, pakotettu,
   };
 }
 
@@ -1781,18 +1998,19 @@ const LADONTOJA_ENINTAAN = 24;
 /*
  * Mittakaavan avain: neljä merkitsevää numeroa riittää nimiöiden eroon.
  *
- * PELAAJAN KAUPUNKI ON MUKANA AVAIMESSA, koska se on ladonnan syötettä
- * (OMAN_KAUPUNGIN_ASU levittää nimen ja siirtää törmäyslaatikkoa). Yksi
- * uusi ladonta siirtoa kohti, ja vanha jää muistiin: paluu edelliseen
- * kaupunkiin ei lado uudestaan.
+ * PELAAJAN KAUPUNKI EI OLE ENÄÄ AVAIMESSA (2.9.2026). Se oli siellä
+ * niin kauan kuin oma kaupunki sai muista poikkeavan asun; nyt kaikki
+ * kohdekaupungit ladotaan samalla asulla (KOHDEKAUPUNGIN_ASU), joten
+ * ladonta ei riipu pelitilasta lainkaan — yksi ladonta zoomiporrasta
+ * kohti eikä yhtä siirtoakin kohti.
  */
-const ladonnanAvain = (px, oma) => `${px.toPrecision(4)}|${oma ?? ''}`;
+const ladonnanAvain = (px) => px.toPrecision(4);
 
-function ladoVarastosta(pack, px, oma = null) {
-  const avain = ladonnanAvain(px, oma);
+function ladoVarastosta(pack, px) {
+  const avain = ladonnanAvain(px);
   const oli = LADONNAT.get(avain);
   if (oli) return oli;
-  const tulos = lado(aineistoLaudalle(pack), px, oma);
+  const tulos = lado(aineistoLaudalle(pack), px);
   if (LADONNAT.size >= LADONTOJA_ENINTAAN) LADONNAT.delete(LADONNAT.keys().next().value);
   LADONNAT.set(avain, tulos);
   return tulos;
@@ -1885,12 +2103,6 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
   const nakyva = tiedettyNakyva ?? ui.nakyvaAlue?.();
   if (!(nakyva?.w > 0) || !(nakyva.skaala > 0)) return tyhjenna();
 
-  /*
-   * Pelaajan oma kaupunki ladontaan: sen nimi saa pääkaupungin
-   * harvennetun kapiteelin (OMAN_KAUPUNGIN_ASU). Katselutilassa
-   * nappulaa ei ole kartalla, joten korostustakaan ei ole.
-   */
-  const oma = (!ui.katselu && ui.game?.cityOf?.()?.id) || null;
   /* ====== Z7:N YLI KOKO PAPERI ON SUURENNUSLASIN ALLA ==============
    *
    * OMISTAJAN PÄÄTÖS 2.9.2026, sanatarkasti: *"kun zoomataan z7:n yli,
@@ -1935,7 +2147,7 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
    */
   const venytys = nostoladontaVenytys(nakyva.skaala);
   const paperiSkaala = nakyva.skaala / venytys;
-  const { nimiot, merkit, nostot } = ladoVarastosta(ui.game.pack, paperiSkaala, oma);
+  const { nimiot, merkit, nostot } = ladoVarastosta(ui.game.pack, paperiSkaala);
   const leveys = ui.game.pack.map?.kiertava ? (ui.game.pack.map.width ?? 0) : 0;
   const laudalle = (cssPx) => cssPx / paperiSkaala;
 
@@ -2082,8 +2294,8 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
       'font-size': laudalle(n.koko),
       'text-anchor': n.ank,
       /*
-       * ASU TULEE LADONNASTA EIKÄ TYYLITIEDOSTOSTA (pääkaupungin
-       * harvennettu kapiteeli, ks. PAAKAUPUNGIN_ASU). Luku on sama,
+       * ASU TULEE LADONNASTA EIKÄ TYYLITIEDOSTOSTA (kohdekaupungin
+       * harvennettu kapiteeli, ks. KOHDEKAUPUNGIN_ASU). Luku on sama,
        * jolla laatikko mitattiin: jos harvennus asuisi CSS:ssä,
        * mittari ja piirto voisivat ajautua eri arvoihin, ja silloin
        * nimi joko peittäisi naapurinsa tai putoaisi turhaan.
@@ -2114,11 +2326,10 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
  *
  * @param {object} pack laudan paketti
  * @param {number} px   CSS-pikseliä lautayksikköä kohti
- * @param {string|null} oma pelaajan kaupungin tunnus (ladonnan syöte)
  * @returns {{nimiot: Array, merkit: Array, nostot: Array, pudotettu: number}}
  */
-export function karttanimienLadonta(pack, px, oma = null) {
-  return ladoVarastosta(pack, px, oma);
+export function karttanimienLadonta(pack, px) {
+  return ladoVarastosta(pack, px);
 }
 
 export function karttanimienMitat(ui, px) {
@@ -2129,5 +2340,7 @@ export function karttanimienMitat(ui, px) {
     nimioita: tulos.nimiot.length,
     merkkeja: tulos.merkit.length,
     pudotettu: tulos.pudotettu,
+    /* Kohdekaupungit eivät putoa; pakotus on niiden oma ahtausmitta. */
+    pakotettu: tulos.pakotettu,
   };
 }
