@@ -1,5 +1,6 @@
 /*
- * Siirtymäraitojen leikkauslogiikka (tools/generoi-siirtymamusiikki.mjs).
+ * Musiikkiraitojen leikkauslogiikka (tools/generoi-siirtymamusiikki.mjs)
+ * ja pelin lajitaulukko (js/siirtymamusiikki.js).
  *
  * Raita on saumaton looppi vain jos leikkauksen kolme palaa osuvat
  * yhteen SEKUNNIN MURTO-OSAN tarkkuudella: hännän on alettava tasan
@@ -10,19 +11,25 @@
  * pelissä naksahduksena joka kierroksella. Siksi laskenta on puhtaita
  * funktioita ja vartioitu täällä.
  *
- * Toinen vartioitava asia on NIMET: peli hakee kolme tiedostoa nimeltä
+ * Toinen vartioitava asia on NIMET: peli hakee tiedostot nimeltä
  * ämpärin aanet/-kansiosta (js/siirtymamusiikki.js RAIDAT). Jos
  * työkalu kirjoittaisi eri nimen, ajo näyttäisi onnistuvan ja peli
  * jäisi hiljaiseksi — puuttuva raita on siellä normaali tila eikä
  * virhe.
+ *
+ * Kolmas on LAJITAULUKKO (omistajan tilaus 2.9.2026 ilta, linssin oma
+ * musiikki): siirtymät ja linssiraidat asuvat samassa taulukossa
+ * molemmin puolin, ja niiden on pysyttävä samana. Erityisesti
+ * "kaikki" saa tarkoittaa VAIN siirtymäraitoja — linssiraidan
+ * generointi uudestaan maksaisi turhaan.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import {
-  GENEROITAVA_MS, LAJIT, hiljaisuusVirheet, looppiLeikkaus, looppiSuodatin,
-  tulkitseArgumentit, tulkitseEbur128, tulkitseLoudnorm, valitseLajit,
+  GENEROITAVA_MS, LAJIT, hiljaisuusVirheet, kestoRajat, lahdeMs, looppiLeikkaus,
+  looppiSuodatin, tulkitseArgumentit, tulkitseEbur128, tulkitseLoudnorm, valitseLajit,
 } from '../tools/generoi-siirtymamusiikki.mjs';
 
 const TYOKALU = readFileSync(
@@ -134,8 +141,20 @@ test('--laji on pakollinen ja tuntematon nimi torjutaan', () => {
   assert.match(tulkitseArgumentit(['--laji']).virhe, /ilman arvoa/);
   assert.match(tulkitseArgumentit(['--hupsis']).virhe, /tuntematon argumentti/);
   assert.equal(valitseLajit('hupsis'), null);
-  assert.deepEqual(valitseLajit('kaikki'), ['jalan', 'laiva', 'lento']);
   assert.deepEqual(valitseLajit('laiva'), ['laiva']);
+  assert.deepEqual(valitseLajit('keksinnot'), ['keksinnot']);
+});
+
+test('"kaikki" on vain siirtymäryhmä — linssiraita pyydetään nimeltä', () => {
+  /*
+   * Jos linssiraita luiskahtaisi "kaikki"-valintaan, jokainen
+   * siirtymäraitojen ajo maksaisi yhden ylimääräisen kutsun ja
+   * ylikirjoittaisi valmiin raidan ämpärissä.
+   */
+  assert.deepEqual(valitseLajit('kaikki'), ['jalan', 'laiva', 'lento']);
+  for (const nimi of valitseLajit('kaikki')) assert.equal(LAJIT[nimi].ryhma, 'siirtyma');
+  assert.equal(LAJIT.keksinnot.ryhma, 'linssi');
+  assert.ok(!valitseLajit('kaikki').includes('keksinnot'));
 });
 
 test('--kuiva ja --ei-vientia luetaan lipuiksi', () => {
@@ -148,22 +167,49 @@ test('--kuiva ja --ei-vientia luetaan lipuiksi', () => {
 /* --- 5. kytkentä peliin ja vaatimuksiin ---------------------------- */
 
 test('työkalu kirjoittaa tasan ne tiedostot, jotka peli hakee', () => {
-  const pelinNimet = [...PELI.matchAll(/aanet\/(siirtyma-[a-z]+\.mp3)/g)].map((m) => m[1]);
-  assert.equal(pelinNimet.length, 3, 'peli hakee kolme raitaa ämpärin aanet/-kansiosta');
+  const pelinNimet = [...PELI.matchAll(/aanet\/((?:siirtyma|linssi)-[a-z]+\.mp3)/g)].map((m) => m[1]);
+  assert.equal(pelinNimet.length, 4, 'peli hakee neljä raitaa ämpärin aanet/-kansiosta');
   const tyokalunNimet = Object.values(LAJIT).map((r) => r.tiedosto);
   assert.deepEqual([...tyokalunNimet].sort(), [...pelinNimet].sort());
-  // Lajien avaimet ovat samat kuin pelin SIIRTYMALAJIT-listalla.
+  // Siirtymälajit ovat työkalun siirtymäryhmä, samassa järjestyksessä.
   const lajit = PELI.match(/export const SIIRTYMALAJIT = \[([^\]]+)\]/)[1]
     .match(/'([a-z]+)'/g).map((s) => s.replaceAll("'", ''));
-  assert.deepEqual(Object.keys(LAJIT), lajit);
+  assert.deepEqual(valitseLajit('kaikki'), lajit);
+  // Peli listaa MUSIIKKILAJIT taulukostaan: samat avaimet kuin työkalulla.
+  assert.match(PELI, /export const MUSIIKKILAJIT = Object\.keys\(RAIDAT\)/);
+  const pelinLajit = [...PELI.matchAll(/^ {2}([a-z]+): \{$/gm)].map((m) => m[1]);
+  assert.deepEqual(pelinLajit.filter((n) => Object.hasOwn(LAJIT, n)), Object.keys(LAJIT));
 });
 
-test('jokainen looppi mahtuu vaatimusten 10–20 s väliin ja lähteen sisään', () => {
+test('linssiraita on pitkä looppi ja siirtymäraidat lyhyitä', () => {
+  /*
+   * Linssin ajo kestää minuutteja ja pysähtyy 25 kertaa: 10–20 s
+   * looppi alkaisi kuulua silmukaksi. Siirtymä taas kestää sekunteja,
+   * eikä pidempää looppia ehdittäisi koskaan kuulla.
+   */
+  const rajat = kestoRajat(LAJIT.keksinnot);
+  assert.deepEqual(rajat, { min: 45, max: 60 });
+  assert.ok(LAJIT.keksinnot.looppi >= rajat.min && LAJIT.keksinnot.looppi <= rajat.max);
+  for (const nimi of valitseLajit('kaikki')) {
+    assert.deepEqual(kestoRajat(LAJIT[nimi]), { min: 10, max: 20 }, `${nimi}: oletusrajat`);
+    assert.equal(lahdeMs(LAJIT[nimi]), GENEROITAVA_MS, `${nimi}: oletuslähde`);
+  }
+});
+
+test('jokainen looppi mahtuu lajinsa kestorajoihin ja lähteen sisään', () => {
   for (const [nimi, raita] of Object.entries(LAJIT)) {
-    assert.ok(raita.looppi >= 10 && raita.looppi <= 20, `${nimi}: looppi ${raita.looppi} s`);
+    const rajat = kestoRajat(raita);
+    assert.ok(raita.looppi >= rajat.min && raita.looppi <= rajat.max,
+      `${nimi}: looppi ${raita.looppi} s ei ole välillä ${rajat.min}–${rajat.max} s`);
     assert.ok(raita.risti >= 0.5 && raita.risti < raita.looppi, `${nimi}: risti ${raita.risti} s`);
-    assert.ok(raita.looppi + raita.risti < GENEROITAVA_MS / 1000,
-      `${nimi}: leikkaus ei mahdu ${GENEROITAVA_MS / 1000} s lähteeseen`);
+    const lahde = lahdeMs(raita) / 1000;
+    assert.ok(raita.looppi + raita.risti < lahde,
+      `${nimi}: leikkaus ei mahdu ${lahde} s lähteeseen`);
+    // Leikkaus otetaan keskeltä: molempiin päihin on jäätävä varaa
+    // mallin sisäänajolle ja lopetukselle.
+    assert.ok(looppiLeikkaus({
+      lahde, looppi: raita.looppi, risti: raita.risti, vahin: rajat.min,
+    }).alku >= 2, `${nimi}: lähteessä ei ole varaa päissä`);
   }
 });
 
@@ -173,6 +219,9 @@ test('promptit ovat instrumentaaleja ja kieltävät elektroniikan', () => {
     assert.match(raita.prompt, /no vocals/, `${nimi}: laulukielto puuttuu`);
     assert.match(raita.prompt, /repeat forever/, `${nimi}: saumaohje puuttuu`);
   }
+  // Linssiraidan oma luonne (omistajan tilaus): kellokoneisto ja pulssi.
+  assert.match(LAJIT.keksinnot.prompt, /clockwork/);
+  assert.match(LAJIT.keksinnot.prompt, /mechanical pulse/);
   assert.match(TYOKALU, /force_instrumental: true/);
 });
 

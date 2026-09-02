@@ -521,6 +521,14 @@ export const LINSSI = {
   },
   aikajana: {
     otsikko: 'Keksinnöt Euroopassa',
+    /*
+     * Kaaren oma musiikki (omistajan tilaus 2.9.2026 ilta: *"Generoi
+     * linssille oma musiikki"*). Nimi on musiikkimoduulin laji
+     * (js/siirtymamusiikki.js RAIDAT.keksinnot → ämpärin
+     * aanet/linssi-keksinnot.mp3); moottori soittaa sen koko ajon
+     * ajan. Ilman tätä kenttää ajo olisi hiljainen.
+     */
+    musiikki: 'keksinnot',
     alku: 1765,
     loppu: 1928,
     alue: EUROOPPA,

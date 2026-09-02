@@ -1,16 +1,31 @@
 /*
- * SIIRTYMÄMUSIIKKI — kolme saumatonta looppia ElevenLabs Music -APIlla.
+ * SIIRTYMÄMUSIIKKI JA LINSSIEN MUSIIKKI — saumattomia looppeja
+ * ElevenLabs Music -APIlla.
  *
  * Omistajan tilaus 2.9.2026: siirtymän taustalle oma pieni musiikki,
  * hieman eri kävellen, laivalla ja lentäen. Pelin puoli on valmis
  * (js/siirtymamusiikki.js) ja odottaa kolmea tiedostoa; vaatimukset
  * ovat docs/moduulit/aanet.md:n taulukossa. Tämä työkalu tekee ne.
  *
+ * Omistajan jatkotilaus 2.9.2026 ilta: *"Generoi linssille oma
+ * musiikki"* — aikajanalinssi (js/aikajana.js) soittaa omaa raitaansa
+ * koko ajon ajan. Se on sama ketju mutta PITKÄ looppi (45–60 s):
+ * linssi kestää minuutteja, ei sekunteja, ja lyhyt kierto alkaisi
+ * kuulua silmukaksi. Siksi lajilla on omat mittansa (`lahdeMs`,
+ * `kestoMin`, `kestoMax`) eikä yhteisiä vakioita ole enää kuin
+ * oletuksina.
+ *
  *   node tools/generoi-siirtymamusiikki.mjs --laji kaikki
  *   node tools/generoi-siirtymamusiikki.mjs --laji laiva --ei-vientia
- *   node tools/generoi-siirtymamusiikki.mjs --laji kaikki --kuiva
+ *   node tools/generoi-siirtymamusiikki.mjs --laji keksinnot --kuiva
  *
- *   --laji jalan|laiva|lento|kaikki   pakollinen
+ *   --laji jalan|laiva|lento|keksinnot|kaikki   pakollinen.
+ *                                     "kaikki" on VAIN kolme
+ *                                     siirtymäraitaa: linssiraita on
+ *                                     pyydettävä nimeltä, jottei
+ *                                     valmiita raitoja generoida
+ *                                     vahingossa uudestaan (jokainen
+ *                                     kutsu maksaa).
  *   --kuiva                           ei APIa eikä vientiä: tulostaa
  *                                     suunnitelman ja ajaa koko
  *                                     ffmpeg-ketjun syntetisoidulla
@@ -143,10 +158,14 @@ const MUOTO = 'mp3_44100_128';
 /*
  * Mallilta tilataan reilusti pidempi pätkä kuin looppi: leikkaus
  * otetaan keskeltä, jotta mallin oma sisäänajo ja lopetus jäävät
- * pois. 24 s riittää kaikkiin kolmeen (pisin looppi 16 s + 2 s
- * ristiä = 18 s) ja jättää molempiin päihin kolme sekuntia varaa.
+ * pois. 24 s riittää kaikkiin kolmeen siirtymäraitaan (pisin looppi
+ * 16 s + 2 s ristiä = 18 s) ja jättää molempiin päihin kolme
+ * sekuntia varaa. Pidempi looppi tilaa omansa (`lahdeMs`).
  */
 export const GENEROITAVA_MS = 24000;
+
+/** Lajin oma tilaus, jos se on annettu; muuten yhteinen oletus. */
+export const lahdeMs = (raita) => raita.lahdeMs ?? GENEROITAVA_MS;
 
 /** Ämpärin kansio ja pelin ensisijainen hakupolku (aanet/, ei audio/). */
 const AMPARIN_KANSIO = 'aanet';
@@ -164,8 +183,18 @@ const RAAKA_KANSIO = 'media/siirtymamusiikki-raaka';
 const TAVOITE_LUFS = -33;
 /** Mp3-koodaus ja purku siirtävät mitattua tasoa vajaan puoli LU. */
 const LUFS_TOLERANSSI = 1;
+/*
+ * Valmiin raidan kestohaarukka. Nämä ovat OLETUKSET (siirtymäraidat,
+ * aanet.md:n taulukko); laji saa antaa omansa `kestoMin`/`kestoMax`.
+ */
 const KESTO_MIN = 10;
 const KESTO_MAX = 20;
+
+/** Lajin kestorajat oletuksineen. */
+export const kestoRajat = (raita) => ({
+  min: raita.kestoMin ?? KESTO_MIN,
+  max: raita.kestoMax ?? KESTO_MAX,
+});
 /** Hiljaisuusvahti: näin hiljainen ja näin pitkä jakso on hiljaisuutta. */
 const HILJAISUUS_DB = -50;
 const HILJAISUUS_KESTO = 0.2;
@@ -205,9 +234,14 @@ const SAUMA = 'Even and unchanging from beginning to end: no intro, no build, '
  * ristihäivytys. Kävely saa lyhimmän loopin, koska sen kuvio toistuu
  * muutenkin tiuhaan; laiva ja lento ovat hitaita ja tarvitsevat
  * pidemmän kierroksen, ennen kuin ne palaavat alkuun.
+ *
+ * `ryhma` erottaa kaksi käyttöä toisistaan: `siirtyma` on matkan
+ * lyhyt raita ja `linssi` linssin ajon pitkä raita. Vain
+ * siirtymäryhmä kuuluu "kaikki"-valintaan (ks. valitseLajit).
  */
 export const LAJIT = {
   jalan: {
+    ryhma: 'siirtyma',
     tiedosto: 'siirtyma-jalan.mp3',
     kuvaus: 'Kävelyn rytmi, kevyt ja etenevä',
     looppi: 12,
@@ -220,6 +254,7 @@ export const LAJIT = {
       + `${SAUMA} ${TYYLI}`,
   },
   laiva: {
+    ryhma: 'siirtyma',
     tiedosto: 'siirtyma-laiva.mp3',
     kuvaus: 'Aallokon huojunta, hitaampi ja leveämpi',
     looppi: 16,
@@ -232,6 +267,7 @@ export const LAJIT = {
       + `${SAUMA} ${TYYLI}`,
   },
   lento: {
+    ryhma: 'siirtyma',
     tiedosto: 'siirtyma-lento.mp3',
     kuvaus: 'Ilmava ja liikkumaton; soi kabiiniäänen alla',
     looppi: 16,
@@ -241,6 +277,37 @@ export const LAJIT = {
       + 'piano note every few bars, no pulse and no rhythm at all. Weightless '
       + 'and still, suspended, floating. It must never pull attention: another '
       + 'recording plays on top of it. No drums, no melody to follow. '
+      + `${SAUMA} ${TYYLI}`,
+  },
+  /*
+   * LINSSIN OMA RAITA (omistajan tilaus 2.9.2026 ilta). Aikajanalinssi
+   * soi minuutteja ja pysähtyy 25 kertaa, joten looppi on kolme kertaa
+   * pisin siirtymäraita: 50 s kiertää niin harvoin, ettei pelaaja
+   * tunnista kierrosta, ja mahtuu silti yhteen kutsuun. Lähde 66 s
+   * jättää molempiin päihin ~6 s varaa mallin sisäänajolle ja
+   * lopetukselle.
+   *
+   * Raita ei ole tunnelmapala vaan pohja: sen päällä liikkuvat kello,
+   * filminauha ja ilmiöpaneeli, ja niiden on saatava huomio.
+   */
+  keksinnot: {
+    ryhma: 'linssi',
+    tiedosto: 'linssi-keksinnot.mp3',
+    kuvaus: 'Keksintöjen aikakausi: kellokoneisto ja tasainen pulssi',
+    looppi: 50,
+    risti: 2.5,
+    lahdeMs: 66000,
+    kestoMin: 45,
+    kestoMax: 60,
+    prompt: 'A patient underscore for an age of invention and engineering in '
+      + 'the 1800s. Underneath everything a restrained clockwork tick and an '
+      + 'even mechanical pulse, like a workshop regulator: quiet, exact and '
+      + 'never loud. Above it curiosity and expectation — a simple rising '
+      + 'figure on light hammered piano or harpsichord, answered by strings '
+      + 'and a woodwind line, always calm and always returning. Acoustic only: '
+      + 'strings, woodwinds, plucked notes and that small ticking pulse. '
+      + 'Keep it plain and unobtrusive, not dreamy and not sentimental: a clock '
+      + 'and pictures move on top of this music and must stay the main thing. '
       + `${SAUMA} ${TYYLI}`,
   },
 };
@@ -268,9 +335,18 @@ export function tulkitseArgumentit(argumentit) {
   return liput;
 }
 
-/** Lajilista argumentista; null jos nimeä ei tunneta. */
+/**
+ * Lajilista argumentista; null jos nimeä ei tunneta.
+ *
+ * "kaikki" on TARKOITUKSELLA vain siirtymäryhmä. Linssiraita on
+ * pyydettävä nimeltä: se on jo olemassa eikä sitä pidä generoida
+ * uudestaan silloin, kun ajetaan siirtymäraidat — jokainen kutsu
+ * maksaa (workflow'n `laji`-valikko on sama lista).
+ */
 export function valitseLajit(laji) {
-  if (laji === 'kaikki') return Object.keys(LAJIT);
+  if (laji === 'kaikki') {
+    return Object.keys(LAJIT).filter((nimi) => LAJIT[nimi].ryhma === 'siirtyma');
+  }
   return LAJIT[laji] ? [laji] : null;
 }
 
@@ -440,7 +516,7 @@ async function haeApista(raita, avain, kohde) {
     headers: { 'xi-api-key': avain, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       prompt: raita.prompt,
-      music_length_ms: GENEROITAVA_MS,
+      music_length_ms: lahdeMs(raita),
       model_id: MALLI,
       output_format: MUOTO,
       // Siirtymämusiikki soi kertojan ja kaupunkiäänten alla: laulu
@@ -463,7 +539,10 @@ async function haeApista(raita, avain, kohde) {
 function leikkaaLooppi(lahde, kohde, raita, tyokansio) {
   const lahteenKesto = kestoSekunteina(lahde);
   const leikkaus = looppiLeikkaus({
-    lahde: lahteenKesto, looppi: raita.looppi, risti: raita.risti,
+    lahde: lahteenKesto,
+    looppi: raita.looppi,
+    risti: raita.risti,
+    vahin: kestoRajat(raita).min,
   });
   const wav = join(tyokansio, 'looppi.wav');
   aja('ffmpeg', [
@@ -493,8 +572,8 @@ function leikkaaLooppi(lahde, kohde, raita, tyokansio) {
   };
 }
 
-/** Valmiin raidan tarkistukset: kesto, taso, hiljaisuus päissä. */
-function tarkista(kohde) {
+/** Valmiin raidan tarkistukset: kesto (lajin rajoissa), taso, hiljaisuus päissä. */
+function tarkista(kohde, raita) {
   const pituus = kestoSekunteina(kohde);
   const taso = tulkitseEbur128(aja('ffmpeg', [
     '-hide_banner', '-v', 'info', '-i', kohde, '-af', 'ebur128=peak=true',
@@ -508,8 +587,9 @@ function tarkista(kohde) {
 
   const virheet = [];
   const varoitukset = [];
-  if (pituus < KESTO_MIN || pituus > KESTO_MAX) {
-    virheet.push(`kesto ${pituus.toFixed(2)} s ei ole välillä ${KESTO_MIN}–${KESTO_MAX} s`);
+  const rajat = kestoRajat(raita);
+  if (pituus < rajat.min || pituus > rajat.max) {
+    virheet.push(`kesto ${pituus.toFixed(2)} s ei ole välillä ${rajat.min}–${rajat.max} s`);
   }
   if (taso === null) {
     virheet.push('tasoa ei saatu mitattua (ebur128)');
@@ -618,12 +698,13 @@ async function main() {
       const lahde = join(raakakansio, `raaka-${raita.tiedosto}`);
       console.log(`\n── ${nimi} → ${AMPARIN_KANSIO}/${raita.tiedosto} (${raita.kuvaus})`);
       console.log(`   looppi ${raita.looppi} s, sauma ${raita.risti} s, `
-        + `lähde ${(GENEROITAVA_MS / 1000).toFixed(0)} s, malli ${MALLI}, `
+        + `lähde ${(lahdeMs(raita) / 1000).toFixed(0)} s, `
+        + `kesto ${kestoRajat(raita).min}–${kestoRajat(raita).max} s, malli ${MALLI}, `
         + `muoto ${MUOTO}, force_instrumental`);
       console.log(`   prompti: ${raita.prompt}`);
 
       if (liput.kuiva) {
-        syntetisoiLahde(lahde, GENEROITAVA_MS / 1000);
+        syntetisoiLahde(lahde, lahdeMs(raita) / 1000);
       } else {
         // eslint-disable-next-line no-await-in-loop
         const tavut = await haeApista(raita, avain, lahde);
@@ -639,7 +720,7 @@ async function main() {
       console.log(`   taso: mitattu ${mitattu.taso.toFixed(1)} LUFS, `
         + `korjaus ${korjaus.toFixed(2)} dB`);
 
-      const tulos = tarkista(kohde);
+      const tulos = tarkista(kohde, raita);
       console.log(`   valmis: ${tulos.pituus.toFixed(2)} s, `
         + `${tulos.taso === null ? '?' : tulos.taso.toFixed(1)} LUFS → ${kohde}`);
       for (const varoitus of tulos.varoitukset) console.log(`   huom: ${varoitus}`);
