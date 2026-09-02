@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '2.9.2026 ilta — v1454–v1459; pistemerkit, tummennus pois, Matkusta-kamera, siirtokoreografia, kaikki nostot kartoilla, uloin zoomi, patina kirkas',
+  paivitetty: '2.9.2026 myöhäisilta — v1460–v1467; illan karttaerä (kapiteelit, kaupungin nostot pois pääkartalta, tuplanäkymä, Balkanvuoret), H2-kuvat, 16 kohtaamiskuvaa, siirtymämusiikin työkalu',
   tavoite: 'Kartta yhtenaiseksi ja teravyys arvioitavaksi. Mainissa: '
     + 'maareitit yhtenaisena lamminna viivana ja meri katkoina (v1423), '
     + 'noston teksti kokonaan napautettava (v1424), rajat samaa reittia '
@@ -92,6 +92,13 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1467 + POLTTO 02f: ILLAN KARTTAERA - (N1) kohdekaupungit AINA harvennetuilla kapiteeleilla, myos Sofia ilman nappulaa; kaupungit nakyvat z2:sta ylospain (ennen 31/39 puuttui 1000 km -nakymasta); elavan kerroksen muste mitattu laatasta; SOFIA vaistaa poltettuja nostoja. (N2) kohdekartalle linkitetyt nostot pois paakartalta - Sofian paalta Levski, Ruhtinaskaappaus, Vihellyskonsertti, elaintarha; 84 nostoa 36 kaupungista. (N3) nostotason tuplanakyma pois zoomatessa; Balkanvuoret yksi merkki, nimi napautettava. Nostotaso 2026-09-02f poltettu - jos nostot nakyvat elavina, luettelo ei viela paivittynyt (odota 5 min / paivita).',
+  'v1467: H2-KUVAT - 9 hetkikuvaa: Kolumbus, Magalhaes, Cook, Amundsen uusi kauko; Darwin, Nansen, Trafalgar, Vasco da Gama, Amundsen lahikuva paakuvaksi. Avaa Sevillan/Lissabonin/Oslon hetkikortti.',
+  'v1467: 16 KOHTAAMISKUVAA - kuvaputken aktiiviset 12 (Amsterdam, Barcelona, Berliini, Budapest, Istanbul, Krakova, Lissabon, Madrid, Pariisi+Pulu, Tukholma, Venetsia, Vilna). Avaa kohtaaminen naissa.',
+  'v1467: SIIRTYMAMUSIIKKI - tools/generoi-siirtymamusiikki.mjs + workflow; raidat generoitu ElevenLabsilla ampariin aanet/. Kuuntele jalan/laiva/lento-siirto; sauman pitaa olla huomaamaton. Kehittajavalikon rivi "siirtymamusiikki" kertoo loytyvatko raidat.',
+  'v1466: KOHDEKAUPUNKI AVAA AINA KAUPUNKILEHDEN - fokusvirran lehtilukko purettu. Klikkaa Sofiaa: lehti aukeaa, ei Pulun korttia. (Fokusvirran kortit itse ovat viela paalla - seuraava tehtava: FOKUSVIRTA_KORTIT pois.)',
+  'v1465: KAIKKI ASSET-LAJIT R2:STA - miniatyyrit, elaimet, aarteet, nostot, ihmeet ampariista. Ei nakyvaa muutosta; jos jokin kuva puuttuu, se on tama.',
+  'v1464: ELAINTAYT R2:STA (era 1).',
   'v1463: ASSETIT R2:EEN (vaihe 1) - assetOsoite + R2_ASSETIT-kytkin (oletus pois), miniatyyritauluun 41 R2-tunnusta (varataplia kunnes kuvat tulevat), vie-assetit.yml. Ei nakyvaa muutosta viela.',
   'v1462: KOHTAAMISBRIEFIT - tools/kohtaamisbriefit.mjs (41 kohtaamista, 33 ilman kuvaa) kuvaputkelle; Raamattu: JPG, ei kuvia repoon.',
   'v1461: PEILAA MEDIA - vain manifesti, retryt; ajo 3 h -> 4 min.',
