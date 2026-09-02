@@ -93,3 +93,26 @@ Livia nokkii taustalla murua ja huomaa kameran vasta kesken nokkaisun.
 | Praha | Tomáš pujottautuu suuren kehyksen alta museon huoltokäytävässä | Vanha kehys ja linnan seinät; vuotta 1648 ei näytetä | Täysikokotarkistettu; hyväksyntä avoin |
 | Berliini | Lotte on puoliksi autossa sateessa ja vetää salkkua jalkatilasta | Teleskooppikotelo ja observatorion kupu; planeetan nimeä ei näytetä | Täysikokotarkistettu; hyväksyntä avoin |
 | Rooma | Enzo horjahtaa suihkulähteen huoltotyössä kolikkohaavi kädessään | Märkä haavi ja kolikot; oikeaa uskomusta ei paljasteta | Täysikokotarkistettu; hyväksyntä avoin |
+
+## Brief kuvaputkelle
+
+`tools/kohtaamisbriefit.mjs` kokoaa jokaisesta pelin 41 tarinakaaren
+kohtaamisesta (js/packs/tarinakaari.js, TARINAKAARI) yhden briefin:
+kaupunki ja maa, hahmo, kohtaamispaikka ja tilanne, kysymys sanatarkasti,
+oikea vastaus merkittynä "EI SAA NÄKYÄ KUVASSA", väärät vaihtoehdot, onko
+kaupungilla jo tarkistettu kohtaamiskuva (js/kohtaamiskuvat-data.js) sekä
+tämän tiedoston kuvalinjan tiivistelmä kymmenenä sääntönä otsikossa.
+
+```
+node tools/kohtaamisbriefit.mjs --md --ulos polku.md
+node tools/kohtaamisbriefit.mjs --json --ulos polku.json
+node tools/kohtaamisbriefit.mjs --json --kaupunki rooma --ulos rooma.json
+node tools/kohtaamisbriefit.mjs --md --vain-kuvattomat --ulos puuttuvat.md
+```
+
+Täsmälleen yksi muoto (`--md` TAI `--json`) ja `--ulos <tiedosto>` ovat
+pakollisia. `--kaupunki <tunnus>` rajaa yhteen kaupunkiin (pelin
+kaupunkitunnus, esim. `rooma`), `--vain-kuvattomat` jättää pois
+kaupungit, joilla on jo tarkistettu kuva. Työkalu ei kirjoita mitään
+repoon paitsi `--ulos`-polun tiedoston, eikä se lue tai muuta muuta
+sisältöä.
