@@ -257,6 +257,7 @@ siirtomaavaltojen arjesta (13+, mutta asia kerrotaan niin kuin se oli).
 | S4 | Hopea ja kulta | Amerikat–Eurooppa–Aasia | 1545–1900 | Potosí · Manilan galeonit · Sevilla · kultaryntäykset 1849, 1851, 1886 | idea |
 | S5 | Turkikset ja valaat | pohjoinen | 1600–1900 | Hudsonin lahti · Siperia · Huippuvuoret · Nantucket · Beringinmeri | idea |
 | S6 | Luonnonvarat valuvat | maailma | 1850–2000 | guano Chincha 1840 · kumi Kongo ja Amazon · kupari Chile · timantit Kimberley 1867 · öljy Baku ja Pennsylvania 1859, Persia 1908 · harvinaiset maametallit | seuraava (louhintamaa värilänttinä, joka valuu maailmalle; raaka-aine omalla värillään) |
+| S7 | Lähi-itä ja musta kulta | Lähi-itä | 1908–1973 | Masjed Soleyman 1908 · Sykes–Picot 1916 · mandaatit 1920 · Kirkuk 1927 · Bahrain 1932 · Dammam 1938 · Iran 1951 · Suez 1956 · OPEC 1960 · 1973 | seuraava (omistaja 2.9.: Lähi-itäkin oli aluksi siirtomaa ja alistettu; salama ja mandaatin väri, sitten öljy valuu ulos, Pulu kertoo kenelle tuotto meni) |
 | T1 | Siirtolaisuus Amerikkaan | Eurooppa–Amerikat | 1840–1914 | Irlanti 1845 · Bremen · Liverpool · Ellis Island 1892 · Hanko–New York | seuraava |
 | T2 | Pyhiinvaellukset | maailma | vuodenkierto | Santiago · Mekka · Varanasi · Jerusalem | idea |
 | T3 | Siperian karkotukset ja asutus | Venäjä | 1590–1917 | Tobolsk · Irkutsk · Sahalin · rata 1891 | idea |
