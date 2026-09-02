@@ -13,9 +13,8 @@
  * PITKÄ TEKSTI (2.9.2026, omistajan havainto Sofian vihellyskohun
  * kortista: *"Tämä näyttää tyngältä. Puuttuu tekstiä."*): kortti sai
  * ingressin (`kortti`) rinnalle varsinaisen jutun (`teksti`), 3–4
- * kappaletta ja n. 160–240 sanaa. Ensimmäinen erä kattaa skandaalit
- * 1–42 tiedostojärjestyksessä (AUT–HUN, pyhan-kruunun-varkaus-1440
- * mukaan lukien); loput saavat tekstinsä toisessa erässä. Faktat on
+ * kappaletta ja n. 160–240 sanaa. Kaikki 83 skandaalia saivat tekstin
+ * samana päivänä kahdessa erässä (1–42 AUT–HUN ja 43–83 HUN–UKR). Faktat on
  * tarkistettu kunkin skandaalin `lahde`-rivin lähteestä 2.9.2026, ja
  * samalla korjattiin kahdeksan ingressin tai visan väitettä, jotka
  * eivät kestäneet lähteen lukemista (Farinet'n rahojen maine on
