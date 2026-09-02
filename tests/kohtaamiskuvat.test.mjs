@@ -57,10 +57,10 @@ test('jokainen kohtaamiskuva osuu tarinakaaren kohteeseen ja sen hahmoon', () =>
   }
 });
 
-test('vain tarkistettu kuva päätyy peliin, muut jäävät galleriaan', () => {
+test('vain tarkistettu aktiivinen kuva päätyy peliin, muut jäävät galleriaan', () => {
   for (const kuva of kohtaamiskuvat) {
     const peliin = kohtaamiskuvaKohteelle(kuva.kohde ?? kuva.kaupunki);
-    if (kuva.tila === 'tarkistettu') {
+    if (kuva.tila === 'tarkistettu' && kuva.aktiivinen !== false) {
       assert.equal(peliin?.id, kuva.id);
       assert.ok(peliin.osoite.startsWith(`${KOHTAAMIS_R2_JUURI}/`));
       assert.ok(peliin.alt && peliin.kuvateksti, `${kuva.id}: alt tai kuvateksti puuttuu`);
