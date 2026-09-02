@@ -105,6 +105,9 @@ export function skandaaliKarttarivit(iso, lauta) {
         nimio: skandaali.nimio ?? null,
         tyyppi: 'skandaali',
         symboli: 'huuto',
+        // Kaupunkinostojen katto ei koske kaupungin ulkopuolista
+        // skandaalia (js/fokuskohteet.js, osio KATTOVAPAA).
+        ...(skandaali.kattoVapaa ? { kattoVapaa: true } : {}),
       },
       paikka: { x: paikka.x, y: paikka.y },
     });

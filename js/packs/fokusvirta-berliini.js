@@ -531,6 +531,12 @@ export const FOKUSVIRTA_BERLIINI = {
        */
       id: 'kopenickin-kapteeni',
       nimio: 'Köpenickin kapteeni',
+      /*
+       * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+       * Köpenick on Berliinin kaakkoislaidalla eikä osu kaupunkilehden
+       * kohdekartan rajaukseen (Mitte), joten merkki kuuluu pääkartalle.
+       */
+      kattoVapaa: true,
       otsikko: 'Suutari osti univormun palasina ja valtasi kaupungintalon '
         + '— keisari armahti hänet',
       lunastus: [

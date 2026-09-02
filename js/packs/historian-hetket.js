@@ -13,21 +13,50 @@
  *
  * ── MISSÄ HETKI NÄKYY ──────────────────────────────────────────────
  *
- * Omistajan sijoituspäätös 2.9.2026 (sanatarkasti): *"Tee tuon
+ * Omistajan sijoituspäätös 2.9.2026 aamulla (sanatarkasti): *"Tee tuon
  * suosituksesi mukaisesti kumpaankin, jos vain paikka kartalla on joku
  * muu kuin pelissä olevat kohdekaupungit. Muutoin laita pelkästään maa-
- * tai kaupunkilehdelle, Omalle sivulleen."* Käytännössä:
+ * tai kaupunkilehdelle, Omalle sivulleen."*
  *
- *   `kartalla: true`   Tapahtumapaikka on kaukana jokaisesta laudan
- *                      kohdekaupungista (raja on sama 35 laudan
- *                      yksikköä kuin eläintäyillä,
- *                      tests/elaintakyt.test.mjs), joten hetki saa
- *                      OMAN KOHDEMERKIN kartalle JA oman sivun
- *                      lehteen. Kortti tarvitsee silloin myös
- *                      minivisan.
- *   `kartalla: false`  Paikka on kohdekaupunki tai sen naapurissa;
- *                      kartalle ei tule merkkiä, joka istuisi laatan
- *                      päällä. Hetki asuu vain lehdessä.
+ * SÄÄNTÖ TARKENTUI SAMANA PÄIVÄNÄ (omistaja, sanatarkasti): *"lisää
+ * kaikki historian hetket ja muut karttanostot myös joko
+ * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle, ellei
+ * näin ole jo tehty."* Lehtisivu ei siis ole koskaan hetken AINOA
+ * paikka. Aamun sääntö kertoi, MILLOIN hetki ei saa omaa merkkiä
+ * kaupungin laatan päälle; se ei tarkoittanut, että hetki katoaisi
+ * kartalta kokonaan. Kymmenestä hetkestä kahdeksan oli jäänyt v1453:ssa
+ * pelkkään lehteen, ja tarkennus palauttaa niistä kuusi kartalle —
+ * kartalla on siis kahdeksan kymmenestä ja poikkeuksia kaksi.
+ * Nykyinen jako:
+ *
+ *   `kartalla: true`   Hetki saa OMAN KOHDEMERKIN (tiimalasi)
+ *                      tapahtumapaikkaan JA oman sivun lehteen. Tämä on
+ *                      OLETUS: hetki on kartalla, ellei sitä voi
+ *                      projisoida laudalle lainkaan.
+ *   `kattoVapaa: true` Lisä `kartalla`-lipulle silloin, kun paikka on
+ *                      alle kahdeksan yksikön päässä kohdekaupungista.
+ *                      Kaupunkinostojen katto (js/fokuskohteet.js
+ *                      karsiKaupunkiruuhka) pudottaisi merkin muuten
+ *                      kaupungin kolmen noston joukosta. Merkki ei jää
+ *                      laatan päälle: kasauspassi (js/fokusniput.js)
+ *                      latoo sen kaupungin viereen sarakkeeseen ja
+ *                      vetää siirtoviivan tapahtumapaikkaan, kuten
+ *                      kaikille muillekin lähelle osuville nostoille.
+ *   `kartanUlkopuolella: true`  Poikkeus: pistettä ei voi näyttää
+ *                      kartalla lainkaan. Näitä on kaksi — etelänapa
+ *                      (laudan eteläreunan takana) ja Galápagos
+ *                      (maan fokuslehden ikkunan ulkopuolella). Hetki
+ *                      asuu vain lehdessä, ja syy on kirjattu kentässä
+ *                      `kartanUlkopuolellaSyy`. Poikkeukset tarkistaa
+ *                      tests/nostot-kartalla.test.mjs, eikä uutta saa
+ *                      lisätä ilman syytä.
+ *
+ * MINIVISA ON KARTAN HETKEN OSA, mutta kuudelta kartalle
+ * palanneelta se puuttuu: visakysymykset kirjoittaa päätoimittaja
+ * (docs/roolitus.md), eikä niitä keksitä koodierässä. Kortti toimii
+ * ilman visaa (js/historian-hetket.js hetkiVisa palaa heti), ja
+ * tests/historian-hetket.test.mjs pitää kirjaa siitä, keneltä visa
+ * vielä puuttuu — lista tyhjenee itsestään, kun visa saapuu.
  *
  * `lehti`-kenttä kertoo, MIHIN lehteen sivu on kirjoitettu:
  * `{ laji: 'kaupunki', avain: <city.id> }` on kaupunkilehti
@@ -101,8 +130,9 @@ export function hetkenKuvat(hetki) {
 export const HISTORIAN_HETKET = [
   /*
    * 1. PALOS DE LA FRONTERA 3.8.1492.
-   * Lähin kohdekaupunki Sevilla 31 laudan yksikön päässä (< 35) →
-   * ei merkkiä kartalle, sivu Sevillan kaupunkilehteen.
+   * Lähin kohdekaupunki Sevilla 31 laudan yksikön päässä — oma merkki
+   * kartalle (kaupunkikaton kahdeksan yksikön säde ei yllä tänne) ja
+   * sivu Sevillan kaupunkilehteen.
    * Lähde: en.wikipedia.org: Voyages of Christopher Columbus
    */
   {
@@ -139,12 +169,21 @@ export const HISTORIAN_HETKET = [
           + 'Columbus", tarkistettu 2.9.2026.',
       },
     ],
-    kartalla: false,
+    kartalla: true,
     lehti: { laji: 'kaupunki', avain: 'sevilla' },
+    visa: {
+      kysymys: 'Miksi Kolumbuksen laivat odottivat Palosin suistossa juuri aamun laskuvettä?',
+      vaihtoehdot: [
+        'Laskuvesi vei laivat merelle ilman soutua',
+        'La Rábidan munkit siunasivat matkan vasta auringonnousussa',
+        'Pintan peräsin oli vielä korjattavana',
+      ],
+      oikea: 0,
+    },
   },
   /*
    * 2. SANLÚCAR DE BARRAMEDA 20.9.1519.
-   * Sevilla 27 yksikön päässä (< 35) → vain lehteen, Sevilla.
+   * Sevilla 27 yksikön päässä — oma merkki kartalle ja sivu Sevillaan.
    * Lähde: en.wikipedia.org: Magellan expedition, Ferdinand Magellan
    */
   {
@@ -181,12 +220,25 @@ export const HISTORIAN_HETKET = [
           + 'expedition", tarkistettu 2.9.2026.',
       },
     ],
-    kartalla: false,
+    kartalla: true,
     lehti: { laji: 'kaupunki', avain: 'sevilla' },
+    visa: {
+      kysymys: 'Kuinka moni Magalhãesin viidestä laivasta palasi Sanlúcariin syyskuussa 1522?',
+      vaihtoehdot: [
+        'Kolme',
+        'Yksi, Victoria, ja sen kannella 18 miestä',
+        'Kaksi, Trinidad ja Victoria',
+      ],
+      oikea: 1,
+    },
   },
   /*
    * 3. LISSABON, RESTELON RANTA 8.7.1497.
-   * Lissabon 3 yksikön päässä eli sama paikka → vain lehteen.
+   * Lissabon 3 yksikön päässä, joten kaupunkikatto pudottaisi merkin →
+   * `kattoVapaa`. Kaupunkilehden kohdekartta ei kelpaa: Belém on 5,5
+   * kilometriä kartan länsipuolella (rajaus −9,1505…−9,118), eikä
+   * rajausta voi venyttää sinne ilman että Lissabonin kartasta tulee
+   * seitsemän kilometrin levyinen ja lukukelvoton.
    * Lähde: en.wikipedia.org: Vasco da Gama, Jerónimos Monastery
    */
   {
@@ -221,8 +273,18 @@ export const HISTORIAN_HETKET = [
           + 'da Gama" ja "Jerónimos Monastery", tarkistettu 2.9.2026.',
       },
     ],
-    kartalla: false,
+    kartalla: true,
+    kattoVapaa: true,
     lehti: { laji: 'kaupunki', avain: 'lissabon' },
+    visa: {
+      kysymys: 'Mitä Vasco da Gama miehineen teki Restelon rannalla lähtöä edeltävänä yönä?',
+      vaihtoehdot: [
+        'Lastasi mausteita ja viiniä laivoihin',
+        'Juhli Manuel I:n hovissa',
+        'Rukoili Henrik Purjehtijan kappelissa aamuun asti',
+      ],
+      oikea: 2,
+    },
   },
   /*
    * 4. PLYMOUTH 26.8.1768 — KARTALLE.
@@ -278,7 +340,8 @@ export const HISTORIAN_HETKET = [
   },
   /*
    * 5. TRAFALGARIN NIEMEN EDUSTA 21.10.1805.
-   * Lähin kohdekaupunki Tanger 18 yksikön päässä (< 35) → vain lehteen.
+   * Lähin kohdekaupunki Tanger 18 yksikön päässä — oma merkki merelle
+   * ja sivu Espanjan maalehteen.
    * Tapahtumapaikka on Espanjan rannikolla, joten sivu on Espanjan
    * maalehdessä (Tangerilla ei ole omaa kaupunkilehteä).
    * Lähde: en.wikipedia.org: Battle of Trafalgar
@@ -319,13 +382,25 @@ export const HISTORIAN_HETKET = [
           + 'tarkistettu 2.9.2026.',
       },
     ],
-    kartalla: false,
+    kartalla: true,
     lehti: { laji: 'maa', avain: 'ESP' },
+    visa: {
+      kysymys: 'Mistä Nelsonin kuolettava muskettilaukaus ammuttiin?',
+      vaihtoehdot: [
+        'Ranskalaisen Redoutablen mesaanimarsista',
+        'Espanjalaiselta rannikkopatterilta',
+        'Victoryn omalta kannelta vahingossa',
+      ],
+      oikea: 0,
+    },
   },
   /*
    * 6. SAN CRISTÓBAL (CHATHAM), GALÁPAGOS, SYYSKUU 1835.
-   * Laudalla on kohdekaupunki Galápagos 24 yksikön päässä (< 35) →
-   * vain lehteen. Galápagosilla ei ole omaa kaupunkilehteä, joten sivu
+   * TOINEN DOKUMENTOITU POIKKEUS (ks. `kartanUlkopuolella` alla):
+   * saaristo on Ecuadorin fokuslehden ikkunan LÄNSIPUOLELLA, eikä
+   * kohdekerros piirrä ikkunan ulkopuolelle mitään — merkki jäisi
+   * laudan omaan grafiikkaan kiinni. Galápagosilla ei ole omaa
+   * kaupunkilehteä eikä kohdekarttaa, joten sivu
    * avaa Ecuadorin maalehden (uusi maalehtiavain ECU).
    * Lähde: en.wikipedia.org: Second voyage of HMS Beagle
    */
@@ -368,11 +443,20 @@ export const HISTORIAN_HETKET = [
       },
     ],
     kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste x = 2846 on Ecuadorin fokuslehden ikkunan '
+      + '(x 2925–3533) länsipuolella, eikä kohdekerros piirrä ikkunan '
+      + 'ulkopuolelle',
     lehti: { laji: 'maa', avain: 'ECU' },
   },
   /*
    * 7. KRISTIANIA (OSLO) 24.6.1893.
-   * Oslo 1 yksikön päässä eli sama paikka → vain lehteen.
+   * Oslo 1 yksikön päässä eli sama paikka, joten kaupunkikatto
+   * pudottaisi merkin → `kattoVapaa`; kasauspassi latoo tiimalasin
+   * kaupungin viereen siirtoviivan päähän. Piste osuisi myös Oslon
+   * kohdekartan rajaukseen, mutta hetki ei ole nähtävyys: sen kortti
+   * on havainnekuvineen ja tiimalasimerkkeineen oma lajinsa, ja vain
+   * pääkartta osaa näyttää sen sellaisena.
    * Lähde: en.wikipedia.org: Nansen's Fram expedition
    */
   {
@@ -409,8 +493,18 @@ export const HISTORIAN_HETKET = [
           + 'expedition", tarkistettu 2.9.2026.',
       },
     ],
-    kartalla: false,
+    kartalla: true,
+    kattoVapaa: true,
     lehti: { laji: 'kaupunki', avain: 'oslo' },
+    visa: {
+      kysymys: 'Miksi Colin Archer suunnitteli Framin matalaksi ja pyöreäpohjaiseksi?',
+      vaihtoehdot: [
+        'Jotta se kulkisi Siperian jokisuistoissa',
+        'Jotta ahtojää nostaisi sen ylös eikä murskaisi',
+        'Jotta se olisi nopeampi purjeilla',
+      ],
+      oikea: 1,
+    },
   },
   /*
    * 8. ETELÄNAPA 14.12.1911.
@@ -457,6 +551,16 @@ export const HISTORIAN_HETKET = [
       },
     ],
     kartalla: false,
+    /*
+     * AINOA DOKUMENTOITU POIKKEUS SÄÄNTÖÖN "nosto on aina jollain
+     * kartalla" (tools/tarkista-nostopaikat.mjs). Piste on laudan
+     * eteläreunan takana, eikä Norjaan sijoitettu tiimalasi olisi
+     * hetken tapahtumapaikka vaan retkikunnan lähtömaa — väärä lupaus
+     * kartalla. Sivu on Norjan maalehdessä.
+     */
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'etelänapa projisoituisi riville 7611, kun laudan '
+      + 'korkeus on 5399 — Etelämannerta ei ole piirretty',
     lehti: { laji: 'maa', avain: 'NOR' },
   },
   /*
@@ -511,7 +615,8 @@ export const HISTORIAN_HETKET = [
   },
   /*
    * 10. ROSKILDENVUONO NOIN VUONNA 1000.
-   * Kööpenhamina 18 yksikön päässä (< 35) → vain lehteen.
+   * Kööpenhamina 18 yksikön päässä — oma merkki vuonolle ja sivu
+   * Kööpenhaminan kaupunkilehteen.
    * Lähde: en.wikipedia.org: Skuldelev ships, Horned helmet
    */
   {
@@ -548,8 +653,17 @@ export const HISTORIAN_HETKET = [
           + '"Skuldelev ships" ja "Horned helmet", tarkistettu 2.9.2026.',
       },
     ],
-    kartalla: false,
+    kartalla: true,
     lehti: { laji: 'kaupunki', avain: 'kobenhavn' },
+    visa: {
+      kysymys: 'Miksi viisi viikinkilaivaa upotettiin Roskildenvuonoon 1000-luvulla?',
+      vaihtoehdot: [
+        'Sulkemaan Peberrendenin väylä vihollislaivastolta',
+        'Uhrilahjaksi merenjumalille',
+        'Ne olivat lahonneet ja hylättiin',
+      ],
+      oikea: 0,
+    },
   },
 ];
 

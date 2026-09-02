@@ -1041,6 +1041,13 @@ export const FOKUSVIRTA_KRAKOVA = {
       id: 'wieliczka',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen.
       nimio: 'Wieliczka',
+      /*
+       * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+       * kaivos on runsaan kymmenen kilometrin päässä Krakovasta eikä
+       * osu kaupunkilehden kohdekartan rajaukseen, joten merkki kuuluu
+       * pääkartalle.
+       */
+      kattoVapaa: true,
       otsikko: 'Kaivos, jonka pohjalle veistettiin kirkkosali siitä, mikä '
         + 'louhittiin pois',
       lunastus: [
