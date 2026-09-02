@@ -76,13 +76,23 @@
  * selataan nuolilla sen perässä (sama malli kuin lehden noston
  * kuvagalleriassa, docs/moduulit/kaupunkilehti.md).
  *
- * TÄSSÄ ERÄSSÄ LISTASSA ON YKSI KUVA. Ensimmäinen kuvaerä tehtiin ennen
- * linjausta, ja sen kymmenen tiedostoa (`hetki-<id>.jpg`) jäävät
- * ämpäriin sellaisinaan; ne ovat kaukokuvia, joten niiden rooli on
- * `kauko`. Kun pari saapuu, listaan lisätään lähikuva ENSIMMÄISEKSI
- * alkioksi — lähikuva on omistajan nimeämä pääkuva — eikä koodiin
- * tarvitse koskea: kortti ja lehtisivu näyttävät aina listan
- * ensimmäisen isona ja loput selattavina.
+ * ERÄ H1 (2.9.2026) oli tehty ennen linjausta: kymmenen tiedostoa
+ * nimellä `hetki-<id>.jpg`, kaikki kaukokuvia, joten niiden rooli on
+ * `kauko`. ERÄ H2 (2.9.2026 ilta) toi yhdeksän hyväksyttyä kuvaa, ja
+ * ne kytkettiin kahdella tavalla:
+ *
+ *   KAUKO KORVATTIIN neljältä hetkeltä (Kolumbus, Magalhães, Cook,
+ *   Amundsen): `tiedosto` osoittaa nyt uuteen `-kauko.jpg`-kuvaan, ja
+ *   kuvateksti kirjoitettiin uusiksi sen mukaan, mitä uudessa kuvassa
+ *   oikeasti näkyy. H1:n vanhat tiedostot jäävät ämpäriin, mutta
+ *   niihin ei enää viitata.
+ *   LÄHIKUVA LISÄTTIIN listan KÄRKEEN viidelle hetkelle (Darwin,
+ *   Nansen, Trafalgar, Vasco da Gama, Amundsen) — lähikuva on
+ *   omistajan nimeämä pääkuva, eikä koodiin tarvinnut koskea: kortti
+ *   ja lehtisivu näyttävät aina listan ensimmäisen isona ja loput
+ *   selattavina.
+ *
+ * Loput hetket odottavat yhä pariaan; niiden lista on yhden mittainen.
  *
  * ── KUVAT OVAT MATKAKIRJAN HAVAINNEKUVIA ───────────────────────────
  *
@@ -159,11 +169,12 @@ export const HISTORIAN_HETKET = [
     kuvat: [
       {
         rooli: 'kauko',
-        tiedosto: 'hetki-kolumbus-palos-1492.jpg',
-        kuvateksti: 'Santa María odottaa laskuvettä Río Tinton suistossa, ja '
-          + 'miehet vetävät köyttä rannan mudassa; kauempana Pinta ja Niña '
-          + 'ovat jo valmiina. Vasemmalla rannalla seisoo kaupunkilaisia ja '
-          + 'ruskeakaapuisia munkkeja.',
+        tiedosto: 'hetki-kolumbus-palos-1492-kauko.jpg',
+        kuvateksti: 'Kolme alusta odottaa ankkurissa Río Tinton suistossa '
+          + 'aamuhämärässä: oikealla pyöreärunkoinen nao purjeet auki, kauempana '
+          + 'kaksi pienempää karavellia. Soutuveneet kulkevat laivojen ja rannan '
+          + 'väliä, ja vasemmalla mutarannalla seisoo kaupunkilaisia katsomassa '
+          + 'lähtöä.',
         lahde: 'Matkakirjan havainnekuva: Kolumbuksen laivue lähdössä Palosista '
           + '3. elokuuta 1492. Faktat: en-Wikipedia "Voyages of Christopher '
           + 'Columbus", tarkistettu 2.9.2026.',
@@ -210,11 +221,11 @@ export const HISTORIAN_HETKET = [
     kuvat: [
       {
         rooli: 'kauko',
-        tiedosto: 'hetki-magalhaes-sanlucar-1519.jpg',
-        kuvateksti: 'Viisi laivaa odottaa Guadalquivirin suussa, ja rannalla '
-          + 'kannetaan viimeisiä sipulisäkkejä, köysikiepejä ja tynnyreitä '
-          + 'veneisiin. Etualalla musta-asuinen mies kääntyy katsomaan '
-          + 'laivueeseen päin.',
+        tiedosto: 'hetki-magalhaes-sanlucar-1519-kauko.jpg',
+        kuvateksti: 'Laivue laskee Guadalquivirin suuta kohti merta, kärjessä '
+          + 'suuri nao purjeet auki ja soutuvene köysi kireällä sen keulan '
+          + 'edessä. Oikealla rannalla seisoo kyläläisiä katsomassa, hiekalla '
+          + 'lojuu köysikiekko, ja taustalla häämöttää valkoinen kaupunki.',
         lahde: 'Matkakirjan havainnekuva: Magalhãesin laivue Sanlúcar de '
           + 'Barramedassa 20. syyskuuta 1519. Faktat: en-Wikipedia "Magellan '
           + 'expedition", tarkistettu 2.9.2026.',
@@ -262,6 +273,17 @@ export const HISTORIAN_HETKET = [
       + 'kuukautta ja yli kymmenentuhatta kilometriä Etelä-Atlantin yli, '
       + 'ennen kuin Afrikan rannikko näkyy jälleen 4. marraskuuta.',
     kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-vasco-da-gama-restelo-1497-lahi.jpg',
+        kuvateksti: 'Miehet polvistuvat rukoilemaan rantahiekalle, ja etualan '
+          + 'mies puristaa rukousnauhaa pää painuksissa. Takana kohoaa valkoinen '
+          + 'kappeli kellotorneineen, ja tyynellä lahdella odottaa ankkurissa '
+          + 'laivue purjeet käärittyinä.',
+        lahde: 'Matkakirjan havainnekuva: Vasco da Gaman laivue lähdössä '
+          + 'Restelon rannalta 8. heinäkuuta 1497. Faktat: en-Wikipedia "Vasco '
+          + 'da Gama" ja "Jerónimos Monastery", tarkistettu 2.9.2026.',
+      },
       {
         rooli: 'kauko',
         tiedosto: 'hetki-vasco-da-gama-restelo-1497.jpg',
@@ -316,11 +338,11 @@ export const HISTORIAN_HETKET = [
     kuvat: [
       {
         rooli: 'kauko',
-        tiedosto: 'hetki-cook-endeavour-plymouth-1768.jpg',
-        kuvateksti: 'Endeavour on kiinni Plymouthin laiturissa, ja kannella '
-          + 'tehdään viimeisiä töitä takiloissa. Laiturilla univormupukuinen '
-          + 'Cook keskustelee kahden miehen kanssa taimiruukkujen, arkkujen ja '
-          + 'verkkohäkkien keskellä.',
+        tiedosto: 'hetki-cook-endeavour-plymouth-1768-kauko.jpg',
+        kuvateksti: 'Endeavour on jo irti laiturista ja kulkee ulos Plymouthin '
+          + 'satamasta keulapurje auki. Kivilaiturilla seisoo kaupunkilaisia '
+          + 'kolmikolkkahatuissa ja valkoisissa myssyissä, pikkuveneet saattavat '
+          + 'laivaa, ja taustalla näkyy sataman matala talorivi.',
         lahde: 'Matkakirjan havainnekuva: HM Bark Endeavour lähdössä '
           + 'Plymouthista 26. elokuuta 1768. Faktat: en-Wikipedia "HMS '
           + 'Endeavour" ja "First voyage of James Cook", tarkistettu 2.9.2026.',
@@ -369,6 +391,18 @@ export const HISTORIAN_HETKET = [
       + 'tuntia myöhemmin, kun brittien 27 linjalaivaa ovat jo murtaneet '
       + 'liittouman 33 laivan rivin.',
     kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-trafalgar-victory-1805-lahi.jpg',
+        kuvateksti: 'Nelson ja Hardy seisovat kasvokkain Victoryn kannella kesken '
+          + 'keskustelun kaksikolkkahatut päässä. Nelsonin sinisessä takissa '
+          + 'loistavat kunniamerkit ja rintatähti, ja taustalla miehistö '
+          + 'työskentelee köysien ja kaiteen ääressä avomeren edessä.',
+        lahde: 'Matkakirjan havainnekuva: Victoryn peräkansi Trafalgarin '
+          + 'taistelussa 21. lokakuuta 1805 hetkeä ennen Nelsonin '
+          + 'haavoittumista. Faktat: en-Wikipedia "Battle of Trafalgar", '
+          + 'tarkistettu 2.9.2026.',
+      },
       {
         rooli: 'kauko',
         tiedosto: 'hetki-trafalgar-victory-1805.jpg',
@@ -431,6 +465,17 @@ export const HISTORIAN_HETKET = [
       + 'on oma muunnelmansa.',
     kuvat: [
       {
+        rooli: 'lahi',
+        tiedosto: 'hetki-darwin-galapagos-1835-lahi.jpg',
+        kuvateksti: 'Darwin kyykistyy laavakivelle kasvotusten '
+          + 'jättiläiskilpikonnan kanssa, ja eläin kurottaa kaulansa häntä kohti. '
+          + 'Kädenmitan päässä kivellä lepää nahkakantinen muistikirja, ja '
+          + 'lahdella HMS Beagle on ankkurissa kuivien pensaiden takana.',
+        lahde: 'Matkakirjan havainnekuva: Charles Darwin Chathamin saarella '
+          + 'Galápagosilla syyskuussa 1835. Faktat: en-Wikipedia "Second '
+          + 'voyage of HMS Beagle", tarkistettu 2.9.2026.',
+      },
+      {
         rooli: 'kauko',
         tiedosto: 'hetki-darwin-galapagos-1835.jpg',
         kuvateksti: 'Darwin kyykistyy laavakivikolle vastapäätä '
@@ -482,6 +527,17 @@ export const HISTORIAN_HETKET = [
       + 'virran kuljettaa se kohti pohjoisnapaa. Fram palaa tähän samaan '
       + 'satamaan 9. syyskuuta 1896, eikä yhtään miestä ole menetetty.',
     kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-nansen-fram-1893-lahi.jpg',
+        kuvateksti: 'Nansen nostaa hatun päänsä yläpuolelle Framin kannella ja '
+          + 'katsoo rantaan, jossa väkijoukko täyttää laiturit ja veneet reunoja '
+          + 'myöten. Vieressä mies kumartuu köysien ääreen, ja takana kohoaa '
+          + 'aluksen savupiippu.',
+        lahde: 'Matkakirjan havainnekuva: Fram lähdössä Kristianiasta '
+          + '24. kesäkuuta 1893. Faktat: en-Wikipedia "Nansen\'s Fram '
+          + 'expedition", tarkistettu 2.9.2026.',
+      },
       {
         rooli: 'kauko',
         tiedosto: 'hetki-nansen-fram-1893.jpg',
@@ -539,12 +595,22 @@ export const HISTORIAN_HETKET = [
       + 'lopetettiin ruoaksi paikassa, jonka miehet nimesivät Teurastamoksi.',
     kuvat: [
       {
+        rooli: 'lahi',
+        tiedosto: 'hetki-amundsen-etelanapa-1911-lahi.jpg',
+        kuvateksti: 'Kolme miestä pitää yhdessä kiinni lipputangosta, ja Norjan '
+          + 'lippu sekä miesten turkislakit ovat huurteen peitossa. Kaksi toveria '
+          + 'katsoo takaa olan yli, ja oikealla odottavat koirat reen vieressä.',
+        lahde: 'Matkakirjan havainnekuva: Amundsenin retkikunta etelänavalla '
+          + '14. joulukuuta 1911. Faktat: en-Wikipedia "Amundsen\'s South Pole '
+          + 'expedition", tarkistettu 2.9.2026.',
+      },
+      {
         rooli: 'kauko',
-        tiedosto: 'hetki-amundsen-etelanapa-1911.jpg',
+        tiedosto: 'hetki-amundsen-etelanapa-1911-kauko.jpg',
         kuvateksti: 'Viisi turkisasuista miestä seisoo Norjan lipun ympärillä '
-          + 'loputtomalla lumitasangolla, ja koirat lepäävät kuormattujen '
-          + 'rekien välissä. Matala aurinko ja hengityshöyry kertovat '
-          + 'pakkasesta, jossa aurinko ei laske lainkaan.',
+          + 'loputtomalla lumitasangolla. Koirat lepäävät lumessa kahden '
+          + 'kuormatun reen välissä, ja horisontti häviää valkoiseen usvaan ilman '
+          + 'ainuttakaan maamerkkiä.',
         lahde: 'Matkakirjan havainnekuva: Amundsenin retkikunta etelänavalla '
           + '14. joulukuuta 1911. Faktat: en-Wikipedia "Amundsen\'s South Pole '
           + 'expedition", tarkistettu 2.9.2026.',
