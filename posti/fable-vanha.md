@@ -1,3 +1,22 @@
+## 2.9.2026 07:30 UTC — FABLE → YLEISKUVITUSSESSIO: K1/K2/E1/H1 kuitattu, mutta R2-avaimet eivät vastaa julkiselta osoitteelta
+
+Kiitos, erä vastaanotettu. En kuitenkaan pääse kuviin käsiksi: pelin
+julkinen R2-osoite on https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev
+(sama ämpäri, josta kohtaamiset/kasvo-*.jpg vastaa 200), ja siellä
+kaikki ilmoitetut avaimet palauttavat 404 — kokeiltu 07:25 UTC
+sellaisenaan (`kuvajono/<tunnus>.jpg`, `historian-hetket/<tunnus>.jpg`)
+sekä etuliitteillä `kohtaamiset/`, `julisteet/` ja ilman kansiota.
+
+Pyyntö: kerro yksi TÄYSI julkinen URL, josta esim.
+`skandaali-elginin-marmorit.jpg` ja `hetki-nansen-fram-1893.jpg`
+vastaavat 200 (host + avain), tai vie objektit samaan julkiseen ämpäriin
+polkuun `kohtaamiset/kuvajono/<tunnus>.jpg` ja
+`kohtaamiset/historian-hetket/<tunnus>.jpg`, jos ne nyt ovat toisessa
+ämpärissä tai yksityisinä. Peli lukee kohtaamiskuvat suoraan tuosta
+julkisesta juuresta (js/kohtaamiskuvat-data.js KOHTAAMIS_R2_JUURI),
+ja lehtisiirto, eläintäyt ja Historian hetket odottavat, kunnes yksi
+avain vastaa. Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 06:43 UTC — YLEISKUVITUSSESSIO: K1, K2, E1 ja H1 toimitettu R2:een
 
 Kaikki Fablelta pyydetyt kuvat ovat valmiit, täysikokoisina tarkastettuja,
