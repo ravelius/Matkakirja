@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '2.9.2026 iltapaiva — v1450–v1453; yleiskuvituseran 22 kuvaa pelissa, Historian hetket -nostolaji, kohdekartan ihmemerkki',
+  paivitetty: '2.9.2026 ilta — v1454–v1459; pistemerkit, tummennus pois, Matkusta-kamera, siirtokoreografia, kaikki nostot kartoilla, uloin zoomi, patina kirkas',
   tavoite: 'Kartta yhtenaiseksi ja teravyys arvioitavaksi. Mainissa: '
     + 'maareitit yhtenaisena lamminna viivana ja meri katkoina (v1423), '
     + 'noston teksti kokonaan napautettava (v1424), rajat samaa reittia '
@@ -45,22 +45,33 @@ export const TILANNE = {
     + '-nostolaji (tiimalasi, 9. seliterivi; 10 hetkea, 2 kartalla). '
     + 'Kuvajonolle tilattu: H2 (pilotti uusiksi, lahi+kauko), H3 (46 '
     + 'kohtausta), V1 (16 ennen/nyt-paria), M1 (4 miniatyyria). '
-    + 'Luettelo: pohja 2026-09-02a (korkeus 1, patina taysi), nostot 02c '
-    + '(v7, siirtoviivat 0,9), viivat 02a (piirit ei).',
+    + 'ILLAN ERA (v1454-v1459): nostomerkit pisteiksi (muoto vain vuori, '
+    + 'vesi, skandaali, elaintaky, ihme), elaintayt ja hetket polttoon; '
+    + 'siirron koreografia (viivastetty nappula, trapetsiajo) + '
+    + 'siirtymamusiikin kanava; maatummennus purettu, Matkusta-kamera '
+    + 'sovittaa vasta heiton jalkeen ja lennossa heti; jokainen nosto '
+    + 'kartalla (37 kohdekarttapistetta, 20 kattoVapaa, hetket kartalle, '
+    + '6 visaa); uloin zoomi nayttaa koko laudan kerran ja paperia '
+    + 'ymparille; patina kirkas (vaaleampi, kyllaisyys +, rae puolet). '
+    + 'POLTTO 02b/02e/02b kaynnissa. Kuvajonolle tilattu: H2, H3, V1, '
+    + 'M1, M2 (41 miniatyyria), K3 (Klimt), K4 (BGR skandaalit), E2 '
+    + '(karhu), A1 (9 aarretta). Skandaalien taysi teksti + galleria '
+    + 'tulossa (v1460).',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'paatoimittaja',
       tila: 'tyossa',
-      tehtava: 'Yleiskuvituseran integrointi (v1450-v1453) ja '
-        + 'kuvatilaukset H2/H3/V1/M1 kuvajonolle. Postikierros '
-        + 'tunneittain.',
-      seuraavaksi: 'H2-pilotin kuittaus -> lahikuvat hetkien kuvalistan '
-        + 'karkeen; H3-erat 10 kohtausta kerrallaan; V1 -> ennen/nyt-'
-        + 'nostolaji (kortti kahdella kuvalla ja vuosileimoilla); M1 -> '
-        + 'miniatyyrit assets/kartat/miniatyyrit/. Avoinna: nimeton '
-        + 'vuorikolmio Bulgarian pohjassa, nappulan kokoloikka, '
-        + 'savuke-havainnekuva lipeva (135/137 vs 144/144).',
+      tehtava: 'Illan tilauseran julkaisu (v1454-v1459), koko pyramidin '
+        + 'poltto kirkas-patinalla, skandaalien tekstit + galleria '
+        + '(v1460). Postikierros tunneittain.',
+      seuraavaksi: 'Kuvajonon kuittaukset -> integrointi era kerrallaan '
+        + '(H2 lahikuvat, H3, V1 ennen/nyt-nostolaji, M1/M2 miniatyyrit, '
+        + 'K3/K4 skandaalikuvat galleriaan, E2 karhu, A1 aarteet). '
+        + 'Siirtymamusiikin raidat ElevenLabs Music -APIlla kun oikeus '
+        + 'on. Avoinna: Pariisin kohdekartan nimioiden vaisto (18 '
+        + 'pistetta), GBR/ESP takypooli (nostot eivat polttaudu), '
+        + 'nappulan kokoloikka, savuke-havainnekuva lipeva.',
     },
   ],
   odottaaPaatosta: [
@@ -81,6 +92,12 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1459: PATINA KIRKAS - vaaleampi, kyllaisyys reilusti, rae ja pehmennys puolet. Nakyy laatoissa polton 02b jalkeen: katso maailmanakyma ja Balkan.',
+  'v1458: ULOIN ZOOMI - vaakaruudulla koko lauta nakyy, lauta kerran, pergamenttia sivuilla. Zoomaa ulos 2000x1300-ruudulla.',
+  'v1457: KAIKKI NOSTOT KARTALLA - 37 kohdekarttapistetta 20 kaupungissa, 20 lahialueen nostoa takaisin paakartalle (Vitosa, Boyana, Versailles...), Historian hetket kartalle (Palos, Sanlucar, Restelo, Trafalgar, Kristiania, Roskilde) visoineen. Katso Pariisin ja Lissabonin kohdekartat, Sevillan seutu.',
+  'v1456: TUMMENNUS POIS, MATKUSTA-KAMERA - vain vahvistettu rajaviiva; Matkusta ei liikuta karttaa, heiton jalkeen kaikki kohteet ruudulla, lennossa heti kaikki lentokohteet, kohde ei jaa paivakirjakortin taakse.',
+  'v1455: SIIRRON KOREOGRAFIA - kamera lahtee ensin (kiihdytys-vakio-jarrutus), nappula 300 ms perassa ja perilla 280 ms ennen kameraa, lahempi zoomi. Kehittajavalikossa siirtymamusiikki-rivi (raidat puuttuvat viela). Kavele Ateenasta.',
+  'v1454: PISTEMERKIT - nostomerkit kategorian varisia pisteita, muoto vain vuori/vesi/skandaali/elaintaky/ihme; selitevalikko samat merkit. Elaintayt ja hetket poltettu (02d/02e).',
   'v1453: HISTORIAN HETKET - selitevalikossa 9. rivi (tiimalasi); Plymouth 1768 (Endeavour) ja Southampton 1912 (Titanic) kartalla Ison-Britannian laudalla, 8 muuta lehdissa omilla sivuillaan (Sevilla 2, Lissabon, Oslo, Kobenhavn, Espanja, Norja, Ecuador). Avaa Plymouthin tiimalasi ja Sevillan kaupunkilehti.',
   'v1452: KOHDEKARTTA - Ateena: Akropolis-museo, Iliou Melathron; Sofia: Banja Bashin moskeija, Serdican areena omina pisteina. Matkakirjan ihme -merkki nahtavyyden ylakulmassa ja selite vasemmassa ylakulmassa (Ateena 3, Rooma, Lontoo, Luxor, Petra, Persepolis, Peking).',
   'v1451: SKANDAALIKUVAT - Pariisi 3, Ateena 2, Istanbul 1, Lontoo 1 lehdissa; Wienin 3 skandaalikorttia kuvineen.',
