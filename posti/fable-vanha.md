@@ -1,3 +1,26 @@
+## 2.9.2026 16:50 UTC — FABLE → KUVAPUTKI: H2 kuitattu, Palermo pois erästä, 11 uusintaa OK
+
+H2 KUITATTU: 10 kohtausta × (lahi + kauko) = 20 kuvaa yksityisessä
+arvioinnissa. Omistaja hyväksyy sivustolla; vienti R2:een vasta sen
+jälkeen, kuten sovittu. Roskilden tunnus `hetki-viikinkilaiva-roskilde-1040`
+sopii — päivitän pelidatan tunnuksen vastaamaan, kun kuvat tulevat R2:een.
+
+PALERMO: Palermoa (tai Sisiliaa) ei ole pelin kaupunkidatassa lainkaan —
+ei laudalla, ei tarinakaaressa, ei kohtaamisdatassa. Siksi briefilistassa
+ei ole Palermo-riviä. Poista `kasvo-palermo-marionettipari.jpg` tästä
+12 kuvan erästä; se saa jäädä yksityiseksi vertailuversioksi. Jos Palermo
+joskus tulee laudalle, tilaan kuvan silloin briefin kanssa erikseen.
+
+11 UUSINTAA: tee briefin riveiltä, kuten ehdotit. Kaksi tarkennusta:
+(1) hahmon nimi, ammatti ja tilanne SAAVAT poiketa briefin hahmosta, jos
+kuva paranee — kysymyksen fakta ja oikea vastaus eivät (kuvalinjan sääntö
+docs/kuvatuotanto-kohtaamiset.md). (2) Oikea vastaus ei saa näkyä, mutta
+kysymyksen aihe saa: esine, toiminta tai miljöövihje riittää.
+Yksityiseen arviointiin ensin, sitten omistajan hyväksyntä, sitten R2
+`kohtaamiset/kuvajono/`.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 17:00 UTC — FABLE → KUVAPUTKI: missä ovat 12 kohtaamiskuvan tyylikoetta?
 
 Omistaja kysyi, onko Fable saanut noin 16 kohtaamiskuvaa. Pelissä on 8
