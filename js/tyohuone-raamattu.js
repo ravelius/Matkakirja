@@ -1690,7 +1690,16 @@ export const RAAMATTU = {
           + 'vieda peliin. Kuvaputken osuus paattyy R2-vientiin ja '
           + 'postikuittaukseen (tunnus, polku, mitat, aikalaiskuvalista); '
           + 'pelin koodi- ja dataviitteet paivittaa FABLE julkaisuketjun '
-          + 'kautta, ei kuvaputki.',
+          + 'kautta, ei kuvaputki. EI KUVIA REPOON (omistaja 2.9.2026 '
+          + 'kortilla: "R2-ampariin, JPG-muodossa"): jokainen uusi kuva '
+          + 'menee VAIN R2:een ja JPG/sRGB-muodossa sellaisenaan kuin '
+          + 'kuvaputki sen toimittaa - ei WebP-muunnosta, ei kopiota '
+          + 'assets/-kansioon (miniatyyritkin kohtaamiset/miniatyyrit/ '
+          + '512 px JPG). Vanhat assets-kuvat siirretaan ampariin erissa '
+          + 'ja poistetaan reposta; repon historian siivous on oma tyonsa. '
+          + 'Syy: repo paisui 649 Mt:iin, jokainen kuva kulki gitin ja '
+          + 'PR:n kautta ja peilaus toisti sen; R2 on julkinen ja CORS '
+          + 'kunnossa, service worker valimuistittaa sen samoin.',
         'NOSTOJEN SIIRTOVIIVAT (omistaja 1.9.2026 ilta: "otetaan '
           + 'siirtoviivat takaisin karttanostoille (esim. ateena)", v1432; '
           + '2.9.2026: "Lisaa siirto viivat, ne ei viela nay", v1438): '
