@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '1.9.2026 myohaisilta — v1429–v1434, piirit pois, siirtoviivat, nopanheiton kamera, merkit nakyvissa eleissa',
+  paivitetty: '2.9.2026 aamu — v1429–v1442; koko pyramidi poltetaan 1 kaariminuutin korkeusdatalla ja patinalla (2026-09-02a)',
   tavoite: 'Kartta yhtenaiseksi ja teravyys arvioitavaksi. Mainissa: '
     + 'maareitit yhtenaisena lamminna viivana ja meri katkoina (v1423), '
     + 'noston teksti kokonaan napautettava (v1424), rajat samaa reittia '
@@ -26,21 +26,28 @@ export const TILANNE = {
     + 'paikkaus 01k), nostojen siirtoviivat takaisin (nostotaso poltetaan '
     + 'uudestaan), nopanheitossa zoomi ensin ja nappula hitaammin, kaikki '
     + 'merkit nakyvissa eleiden ajan, tummennuskytkin kehittajalle. '
-    + 'Historian hetket -kuvasarja tilattu (H1, 56 promptia). Live 1-'
-    + 'kaariminuutin varjostuskerros kokeiluna tyon alla.',
+    + 'Historian hetket -kuvasarja tilattu (H1, 56 promptia). AAMUN ERA '
+    + '(v1436-v1442): live 1-kaariminuutin varjostuskokeilu tehtiin ja '
+    + 'purettiin omistajan paatoksella, 1-kaariminuutin ETOPO1 R2:ssa '
+    + '648 palana ja pohja poltetaan siita z7:lla (z0-z6 3 kaariminuuttia); '
+    + 'siirtoviivat nakyviksi, laivakatko 90/0,35; nopanheiton kohteet '
+    + 'kultalevylla ja renkaalla; heitto jatkuu itsestaan reitilla; syvan '
+    + 'zoomin mitoitus korjattu (ruutukatto koko nostolle, ladonta v7). '
+    + 'Luettelo: pohja 2026-09-02a (korkeus 1, patina taysi), nostot 02b '
+    + '(v7), viivat 02a (piirit ei).',
   rivit: [
     {
       tekija: 'Fable',
       rooli: 'paatoimittaja',
       tila: 'tyossa',
-      tehtava: 'Illan tilauserän julkaisu Opus-agenteilla (v1429-v1434) ja '
-        + 'poltot: viivataso 01j, pohjan paikkaus 01k (kompassi z3), nostotaso '
-        + 'uusiksi siirtoviivoineen. Postikierros tunneittain: K1/K2/E1/H1-'
+      tehtava: 'Aamun tilauseran julkaisu Opus-agenteilla (v1436-v1442) ja '
+        + 'koko pyramidin poltto 1 kaariminuutilla ja patinalla (02a) + '
+        + 'nostotaso v7 (02b). Postikierros tunneittain: K1/K2/E1/H1-'
         + 'kuittaukset yleiskuvitussessiolta.',
-      seuraavaksi: 'Live 1-kaariminuutin varjostuskerros (kokeilu) julkaisuun; '
-        + 'sitten koko pohjan uusintapoltto 1 kaariminuutin korkeusdatalla '
-        + 'omistajan ohjeiden mukaan. K2 -> 7 skandaalin lehtisiirto, E1 -> '
-        + 'BIH/TUR elaintakyt, H1 -> Historian hetki -nostolaji.',
+      seuraavaksi: 'Kaupungin nimio nappulan alla (oma era: nappulan '
+        + 'ruutulaatikko ladonnan varaukseksi). K2 -> 7 skandaalin '
+        + 'lehtisiirto, E1 -> BIH/TUR elaintakyt, H1 -> Historian hetki '
+        + '-nostolaji. Paivalaskenta automaattiheitossa omistajan arvioon.',
     },
   ],
   odottaaPaatosta: [
@@ -61,6 +68,12 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1442: SYVA ZOOMI KUNTOON - ruutukatto kertoo koko noston piirroksen (merkki, nimio, siirtoviiva, sarakesiirtyma) samalla suhteella; maastomerkeilla kasvukatto; vuorikolmio vain nimensa kanssa; 27 kaupunkimerkkia sai nimensa takaisin (Plovdiv, Veliko Tarnovo, Thessaloniki...). Ladonta v7. Zoomaa Sofian ympariston 50 km -mittajanalle: symbolit samankokoisia, viivat ohuita, joka symbolilla nimi.',
+  'v1441: POHJA 1 KAARIMINUUTILLA - generaattori kokoaa korkeusruudukon R2:n 10 asteen paloista z7:lle, z0-z6 pysyy 3 kaariminuutissa; luettelossa korkeus.kaariminuutit. Nakyy laatoissa polton 02a jalkeen: katso Alpit ja Kreikan vuoret syvimmalla tasolla.',
+  'v1440: HEITTO JATKUU ITSESTAAN - reittipisteesta seuraava noppa pyorahtaa 750 ms siirron jalkeen kunnes saavutaan kaupunkiin; suunta valitaan yha itse. Portit: pollo, lehti, dialogit, radio. Heita noppa Ateenasta ja katso ketju.',
+  'v1439: NOPANHEITON KOHTEET SELVEMMIKSI - fokusnakymassa kultalevy + punamullan rengas + halo (kaupunki 24 px, askelpiste 15 px). Heita noppa ja katso reitin pisteet.',
+  'v1438: LIVE-VARJO POIS, SIIRTOVIIVAT NAKYVIIN (1,6 px, merkin muste), LAIVAKATKO TIHEAMMAKSI (jakso 90, katko 32 R). Ateena: viivat nostoihin; Egeanmeri: lyhyemmat katkot (viivataso 02a).',
+  'v1436-v1437: 1 kaariminuutin korkeuspalat R2:ssa (648 kpl); livekokeilu purettu v1438:ssa.',
   'v1434: MERKIT NAKYVISSA ELEISSA + TUMMENNUSKYTKIN - eleen aikainen piilotus purettu kokonaan (mitattu nopeammaksi: panorointi 767 -> 357 ms), nimikerros napsahtaa kokoonsa eleen lopussa (hyvaksytty hinta). Kehittajavalikossa rivi "tummennus" (oletus paalla). Panoroi ja nipista Kreikassa: mikaan ei katoa. Kytke tummennus pois kehittajavalikosta.',
   'v1433: NOPANHEITTO - kamera zoomaa ensin (760 ms) nappulan ja reitin alun ympärille, nappula lahtee vasta sitten, askel 640 -> 860 ms, kamera jaa siirtozoomiin. Heita noppa Ateenassa ja katso jarjestys ja vauhti.',
   'v1432: SIIRTOVIIVAT TAKAISIN - ohut himmea katkoviiva siirretysta nostomerkista kaupunkiin (107 viivaa). Nakyy heti elavana; laatoissa vasta uuden nostotasopolton jalkeen. Katso Ateena.',
