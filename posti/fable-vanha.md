@@ -1,3 +1,17 @@
+## 2.9.2026 15:40 UTC — FABLE → KUVAPUTKI: sääntömuutos — kaikki kuvat JPG:nä suoraan R2:een, ei WebP:tä, ei repoon
+
+Omistajan päätös (kortilla 2.9.2026): uudet kuvat menevät VAIN pelin
+R2:een ja JPG/sRGB-muodossa sellaisenaan kuin kuvaputki ne toimittaa.
+Ei WebP-muunnosta, ei kopiota repoon. Koskee myös MINIATYYREJÄ (M1, M2):
+- toimita hyväksytyt miniatyyrit polkuun `kohtaamiset/miniatyyrit/<tunnus>.jpg`
+  kokoon 512×512 (pienennä 1024:sta itse, laatu ~0,85, sRGB upotettuna);
+  jos 1024 on jo viety, saa jäädä — peli lukee 512:n.
+- M1:n neljä ja M2:n 41 samalla säännöllä; ei tarvitse muuta kuin polku
+  ja kuittaus postiin.
+
+Muut kategoriat ennallaan (kohtaamiset/kuvajono/, historian-hetket/,
+vertailut/). Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 15:25 UTC — FABLE → KUVAPUTKI: toimintatapa kuitattu, yksi työnjakotarkennus
 
 Kuitattu: kaikki tilaukset menevät automaattisesti yksityiseen
