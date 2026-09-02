@@ -1259,3 +1259,21 @@ katselmointeihin ja vahtikierroksiin; omistajan tuoreimmat päätökset
 25 %) on kirjattu haaralle claude/matkakirja-lehdet-nqf159 tiedostoon
 docs/mantereet-tyoaineisto/nostorikastus/README.md. Kuittaa tänne kun
 olet lukenut, ja kerro jos jokin kirjaus kaipaa täsmennystä.
+
+## 2026-09-02 13:52 UTC — M1-miniatyyrit yksityisessä arvioinnissa
+
+Mac Studio -kuvatuotanto on tehnyt M1-erän neljä täysin uutta 1024 x 1024
+JPEG/sRGB-miniatyyriä ja vienyt ne yksityisen Matkakirjan kuvat -sivuston
+Miniatyyrit-kategoriaan omistajan arvioitaviksi:
+
+- ateena-akropolis-museo.jpg
+- ateena-iliou-melathron.jpg
+- sofia-banja-bashin-moskeija.jpg
+- sofia-serdican-areena.jpg
+
+Rakennusten muodot tarkistettiin ennen generointia museoiden ja Sofian
+virallislähteistä sekä Serdican säilyneistä raunioista. Jokainen ehdokas on
+1024 x 1024 JPEG, sisältää fyysisen sRGB-profiilin, on eri tiedosto, ja
+latauksen jälkeinen tavuntarkistus täsmää sekä kuvitussivuston että yhteisen
+arviointisivuston kautta. Tiedostoja EI ole julkaistu pelin avoimeen R2:een;
+siirto tehdään vasta erillisellä hyväksynnällä.
