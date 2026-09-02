@@ -1,3 +1,46 @@
+## 2.9.2026 13:35 UTC — KUVATILAUS K4 — KARTTANOSTOT: Bulgarian 3 skandaalia, UUSI SÄÄNTÖ aikalaislähteistä
+
+Omistajan linjaus tänään (Sofian skandaalikortti "Vihellyskonsertti
+ruhtinaalle"): *"Tähän voisikin hienosti generoida muutaman
+aikalaiskuvan. Ja voisi pyytää, että kuvaputki nojautuisi alkuperäisiin
+kuvalähteisiin, mikäli sellaisia on saatavilla. Ja jos valokuvia on,
+niin niitäkin voi liittää tähän nostoon mukaan. Mutta ensimmäisenä
+kuvana voisi olla generoitu parempilaatuinen kuva."*
+
+UUSI SÄÄNTÖ KAIKKIIN KARTTANOSTO-TILAUKSIIN (tämä ja jatkossa):
+1. ETSI ENSIN ALKUPERÄISLÄHTEET: Commonsin/arkistojen aikalaisvalokuvat,
+   piirrokset, lehtikuvat, kartat (PD/CC). Käytä niitä generoinnin
+   REFERENSSINÄ (paikka, arkkitehtuuri, vaatetus, valo, kuvakulma), jotta
+   generoitu kuva on uskollinen todelliselle näkymälle.
+2. GENEROI PÄÄKUVA (1 kpl, lähikuva ihmisistä tapahtuma taustalla, H2:n
+   fotorealismiohje) — se on kortin ensimmäinen kuva.
+3. LISTAA postiin löytämäsi aikalaiskuvat (Commons-tiedostonimi, tekijä,
+   lisenssi, vuosi, yhden rivin kuvaus), 1–3 kpl per nosto. Fable liittää
+   ne kortin galleriaan pääkuvan perään. Älä lataa niitä R2:een — peli
+   lukee Commonsia suoraan.
+
+TILAUS K4 (R2 kohtaamiset/kuvajono/, 3:2 1536×1024 JPEG sRGB):
+1. skandaali-kansallisteatterin-vihellyskohu — Sofia, Ivan Vazovin
+   kansallisteatterin avajaiset 3.1.1907: ruhtinas Ferdinand saapuu
+   vaunuilla teatterin edustalle talvi-iltana, ylioppilaat viheltävät ja
+   huutavat, poliisi työntää väkijoukkoa; lähikuva viheltävästä
+   ylioppilaasta (lakki, viikset, huurua), taustalla uusi teatteri
+   valaistuna ja vaunut. Referenssi: teatterin 1900-luvun alun valokuvat.
+2. skandaali-veda-slovena — Stefan Verković ja Ivan Gologanov,
+   1870-luku, Makedonian vuoristokylä / Belgradin työhuone: Gologanov
+   sanelee "muinaisia lauluja" Verkovićille, joka kirjoittaa
+   innoissaan; lähikuva kirjoittavan miehen kasvoista ja kynästä,
+   taustalla kylä tai kirjahyllyt. Referenssi: Verkovićin muotokuva,
+   Veda Slovenan nimiölehti 1874.
+3. skandaali-battenbergin-ruhtinaskaappaus — Sofia, yö 20.–21.8.1886:
+   upseerit vievät ruhtinas Aleksanteri Battenbergin palatsista
+   pakottaen hänet allekirjoittamaan luopumisen; lähikuva nuoresta
+   ruhtinaasta yöpuvussa kynttilänvalossa, univormupukuiset upseerit
+   ympärillä. Referenssi: Aleksanterin muotokuvat, Sofian palatsi 1880-l.
+
+Kuittaa postiin pääkuvat + aikalaiskuvalistat. Ei kuvadataa eikä
+salaisuuksia postiin.
+
 ## 2.9.2026 13:05 UTC — KUVATILAUS K3 — KARTTANOSTOT: Klimtin tiedekuntamaalaukset UUSIKSI (aihe vaihtuu: skandaalin hetki, ei tyhjä kehys)
 
 Omistaja katsoi K1:n kuvan `skandaali-klimtin-tiedekuntamaalaukset`
