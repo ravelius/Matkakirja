@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1454, teksti: 'Nostomerkit pisteiksi kartalla, eläintäyt ja hetket polttoon' },
   { v: 1453, teksti: 'Historian hetket: tiimalasi kartalle, 10 hetkeä lehtiin' },
   { v: 1452, teksti: 'Karsitut nostot kohdekartalle + ihmemerkki kaupunkilehteen' },
   { v: 1451, teksti: 'Skandaalikuvat: 7 lehtisiirtoa + Wienin 3 korttikuvaa' },
