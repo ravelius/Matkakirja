@@ -2042,3 +2042,39 @@ heti, mutta vasta omistajan yksityisellä arviointisivustolla tai chatissa
 antaman hyväksynnän jälkeen. Hylättyä tai vielä odottavaa kuvaa ei viedä
 peliin. M1 on valmis yksityisessä arvioinnissa; M2 alkaa seuraavaksi
 kaupungeittain. Tuntikohtainen postilaatikkoseuranta on aktiivinen.
+
+
+## 2.9.2026 16:35 UTC — KUVAPUTKI → FABLE: H2 valmis yksityiseen arviointiin, 12 kohtaamistyylikokeen auditointi aloitettu
+
+H2-PILOTTI VALMIS YKSITYISESSÄ ARVIOINNISSA: kaikki 10 kohtausta on tehty
+kokonaan uusina kuvina, kustakin `-lahi.jpg` + `-kauko.jpg` (20 kuvaa).
+Kuvat ovat 1536×1024 JPEG/sRGB, kaikki tiedostotiivisteet ovat eri, ja
+jokainen tiedosto on takaisinluettu tavuntarkasti sekä Historian hetket
+-sivustolta että yhteiseltä Matkakirjan kuvat -sivustolta. Trafalgarin
+ensimmäinen laaja vedos hylättiin aikakauteen sopimattoman vaatteen vuoksi
+ja generoitiin kokonaan uudelleen ennen julkaisua. Roskilden kohtaus on
+arkeologisen lähteen mukaisesti noin vuodelta 1040 ja tunnuksella
+`hetki-viikinkilaiva-roskilde-1040`. H2-kuvia ei ole viety pelin avoimeen
+R2:een; omistajan pysyvän ohjeen mukaisesti vienti tapahtuu vasta
+yksityisen hyväksynnän jälkeen.
+
+12 KOHTAAMISTYYLIKOKEEN SIJAINTI JA ENSITARKISTUS: kaikki 12 löytyivät
+yksityisen Matkakirjan kuvat -sivuston Kohtaamiset-metadatasta ja
+yksityisestä mediasäilöstä. Ne eivät olleet pelin R2:ssa tai katalogissa.
+Latasin ne takaisin ja vertasin 16:30 kohtaamisbriefeihin. Yksikään ei
+täytä koko uutta briefiä sellaisenaan: Lontoo on väärällä sillalla;
+Amsterdamissa väärä hahmo ja toiminta; Venetsia ei ole Lucian pajassa;
+Budapest ei ole Rudasin tilanteessa; Istanbul näyttää Medusa-aiheen mutta
+ei vedenvartijan keskeytettyä työtä; Wien on pörssiaiheen vanha hahmoversio;
+Pariisi on liian poseerattu; Barcelona, Tukholma, Marseille ja Ateena ovat
+väärässä toiminnassa tai väärä hahmo. Teen nämä 11 kokonaan uudelleen
+briefin riveiltä niin, ettei oikea vastaus paljastu.
+
+Palermon `kasvo-palermo-marionettipari.jpg` löytyi myös yksityisestä
+arvioinnista, mutta 16:30 koneellisessa kohtaamisbriefilistassa ei ole
+Palermo-riviä lainkaan. En arvaa kaanonia. Tarvitsen Fablelta Palermon
+pelidatan briefin tai vahvistuksen, että kuva poistetaan tästä 12 kuvan
+erästä. Vanhat 12 säilyvät yksityisinä vertailuversioina; niitä ei
+ylikirjoiteta eikä viedä peliin.
+
+Ei kuvadataa eikä salaisuuksia postiin.
