@@ -377,6 +377,18 @@ export const RAAMATTU = {
         'PÖLLÖ-CHAT: ensisijaisesti kuratoitua sisältöä (lehdet, '
           + 'tarkistetut faktat); mallin oma selittely selvästi '
           + 'kehystettynä. Sonnet nyt, Haiku 5 kun julkaistaan.',
+        'ILLAN KARTTAERAN JATKOPAATOKSET (omistaja 2.9.2026 ilta, '
+          + 'kysymyskortti): (N1) leveassa nakymassa naapurimaan poltettu '
+          + 'nostonimi ei saa leikata kaupungin nimea - KORJATTU lataamalla '
+          + 'naapurimaiden kohdeaineisto vaistoon (js/fokuskohteet.js '
+          + 'naapurienPoltetutVaraukset; savuke-kohdekaupungit: WIEN puhdas '
+          + 'Bulgarian 200 km -nakymassa). (N2) "kartan omat kohteet" '
+          + '(Akropolis, Colosseum...) POIS PAAKARTALTA ja kunkin '
+          + 'kaupunkilehden omalle kartalle: 14/16 sai kohdekartan pisteen '
+          + '(maakartat.js nosto-linkki), izmir/izmir (kohde on kaupunki '
+          + 'itse) ja luxor/niili (tunnus jaettu kolmen maan kesken) jaavat '
+          + 'paakartalle kunnes ratkaisu loytyy. NOSTOLADONTA_SAANTO '
+          + 'v10-kohdekartta, nostotaso poltetaan uudestaan.',
         'FOKUSVIRRAN KORTIT POIS (omistaja 2.9.2026 ilta: "Mika tuo koko '
           + 'kortti edes on? Ei tuollaisia pitaisi olla ollenkaan."): '
           + 'korttiannostelu (matkakirja, Livian kupla, oppitunti, '
