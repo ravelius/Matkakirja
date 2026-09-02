@@ -795,6 +795,91 @@ export function asetaKohdenimet(lista, sade = 0) {
   return true;
 }
 
+/* ------------------------------------------- pelimerkkien varaukset */
+
+/*
+ * ====== PELINAPPULA JA LAATTA OVAT LADONNAN SYÖTETTÄ ===============
+ *
+ * OMISTAJAN TILAUS 2.9.2026 (kuvakaappaus Sofiasta, mittajana 50 km):
+ * *"syvällä zoomilla kaupungin nimiö jää pelinappulan alle — SOFIA
+ * katosi nappulan ja laatan taakse."*
+ *
+ * ── JUURISYY, MITATTUNA ───────────────────────────────────────────
+ *
+ * Nimikerros ei tiennyt pelinappulasta eikä kaupungin laatasta
+ * yhtään mitään. Kaupungin nimiön siirtymä pisteestä on RUUTUMITTA
+ * (5–7 CSS-pikseliä, ks. ehdokkaat alempana), koska nimi on
+ * paperivakio. Pelinappula ja pelaajan oman kaupungin laatta ovat
+ * sen sijaan KARTTAVAKIOITA: laatta on askelhelmen kokoinen ympyrä
+ * laudan yksiköissä (js/ui.js FOKUS_LAATTA_SADE), joten se kasvaa
+ * ruudulla zoomin mukana. Mitattu Sofiassa: iPadilla (mittakaava
+ * 9,24) laatan laatikko oli 29,5 x 31,8 px ja nimiö leikkasi sitä
+ * 29,5 x 1,5 px; työpöydällä (13,45) laatta oli 43 x 46,3 px ja
+ * nimestä jäi laatan alle 36,7 x 8,7 px eli valtaosa. Mitä syvemmälle
+ * pelaaja zoomaa, sitä varmemmin nimi katoaa — kaksi eri
+ * mittajärjestelmää, ei yhtään yhteistä päätöstä.
+ *
+ * ── KORJAUS ON ILMOITTAUTUMINEN, EI MAGIC-NUMBER ──────────────────
+ *
+ * Sama malli kuin kohdenimiöillä (asetaKohdenimet yllä): kerros, joka
+ * PIIRTÄÄ merkin, ilmoittaa sen laatikon tänne, ja ladonta kohtelee
+ * sitä varattuna paperina siinä missä toisen nimen laatikkoa.
+ * Riippuvuus osoittaa yhteen suuntaan, eikä tähän moduuliin tule
+ * kehäviittausta. Vaihtoehto olisi ollut kirjoittaa nimiön siirtymään
+ * vakio *"ja vielä 15 pikseliä lisää"*, ja se olisi ollut väärin
+ * kahdesti: se olisi arvaus laatan koosta yhdellä zoomilla, ja se
+ * olisi siirtänyt myös ne nimet, joiden päällä ei ole mitään.
+ *
+ * ── MITÄ KUTSUJA ANTAA ────────────────────────────────────────────
+ *
+ * LAATIKON LAUDAN YKSIKÖISSÄ, PIIRRETYSSÄ KOOSSAAN. Kutsuja mittaa
+ * sen siitä, mikä ruudulla OIKEASTI on (js/ui.js luovutaRuutuvaraukset
+ * lukee getBBox:n ja merkin oman muunnoksen), koska merkkipinon koko
+ * syntyy monesta kerroksesta — nappularyhmä, laatta, porttikehä,
+ * kohderengas — eikä yhtäkään niistä voi tässä arvata. Laudan
+ * yksikkö on oikea yksikkö samasta syystä kuin kohdenimiöiden
+ * säteellä: ladonta kertoo sen mittakaavalla ja saa ruutupikselit.
+ *
+ * VARAUS ON MUSTETTA, EI OSUMA-ALUE. Näkymättömät napautusympyrät
+ * (44/48 px) eivät kuulu joukkoon: ne eivät peitä mitään, ja
+ * varattuina ne pudottaisivat nimiä tyhjän paperin takia.
+ */
+let ruutuvaraukset = [];
+let ruutuvaraustenAvain = '';
+
+/**
+ * Ilmoittaa pelimerkkien laatikot ladonnan varauksiksi.
+ *
+ * @param {Array} lista [{ x0, y0, x1, y1 }] LAUDAN yksiköissä
+ * @returns {boolean} muuttuiko joukko (kutsuja voi ohittaa turhan työn)
+ */
+export function asetaRuutuvaraukset(lista) {
+  const rivit = (Array.isArray(lista) ? lista : []).filter((r) => Number.isFinite(r?.x0)
+    && Number.isFinite(r?.y0) && Number.isFinite(r?.x1) && Number.isFinite(r?.y1)
+    && r.x1 > r.x0 && r.y1 > r.y0);
+  /*
+   * AVAIN KAHDEN DESIMAALIN TARKKUUDELLA. Laudan yksikkö on syvässä
+   * zoomissa noin kymmenen ruutupikseliä, joten sadasosa on
+   * kymmenesosapikseli — sitä pienempi liike ei siirrä yhtäkään
+   * nimeä, eikä siitä siis kannata ladota uudestaan.
+   */
+  const avain = rivit
+    .map((r) => `${r.x0.toFixed(2)},${r.y0.toFixed(2)},${r.x1.toFixed(2)},${r.y1.toFixed(2)}`)
+    .join(';');
+  if (avain === ruutuvaraustenAvain) return false;
+  ruutuvaraustenAvain = avain;
+  ruutuvaraukset = rivit;
+  /*
+   * VARAUS ON LADONNAN SYÖTETTÄ, joten jokainen muistettu mittakaava
+   * on vanhentunut — sama sääntö ja sama perustelu kuin
+   * asetaKohdenimetissä. Nappula liikkuu kerran siirtoa kohti ja
+   * laatan koko kerran zoomiporrasta kohti, eli hinta on sama kuin
+   * kohdenimiöiden ilmoittautumisella.
+   */
+  LADONNAT.clear();
+  return true;
+}
+
 /* --------------------------------------------------- nimiön katkaisu */
 
 /*
@@ -999,6 +1084,54 @@ function lado(data, px, oma = null) {
   const merkit = [];
 
   /*
+   * ====== PELIMERKIT VARATAAN ENNEN KAIKKEA MUUTA =================
+   *
+   * Pelinappula, pelaajan oman kaupungin laatta ja nopanheiton
+   * kohdemerkit ovat kartalla mustetta, jota tämä moduuli ei piirrä
+   * (ks. asetaRuutuvaraukset). Ne varataan ENSIMMÄISENÄ, koska ne ovat
+   * ainoa joukko, joka ei voi väistää: nappula seisoo siinä missä
+   * pelaaja on, ja nimi on se, jonka on siirryttävä.
+   *
+   * VARAUS EI PUDOTA KAUPUNGIN NIMEÄ vaan siirtää sen — kaupungeille
+   * on oma väistökehä varauksen ympäri (`merkkiVaraus` alempana).
+   * Maastonimi ja kohdenimiö väistävät sitä samalla törmäyskarsinnalla
+   * kuin toistensa laatikoita; jos paperia ei löydy, nimi putoaa
+   * niin kuin se putoaisi minkä tahansa muun esteen takia. Se on
+   * oikein: nimi nappulan alla ei ole nimi.
+   */
+  const varaukset = ruutuvaraukset.map((v) => ({
+    x0: v.x0 * px, y0: v.y0 * px, x1: v.x1 * px, y1: v.y1 * px,
+  }));
+  for (const r of varaukset) varaa(r);
+
+  /**
+   * Pelimerkkien varausten YHTEISLAATIKKO tämän pisteen kohdalla — tai
+   * null, jos pisteen päällä ei ole yhtään pelimerkkiä.
+   *
+   * EHTO ON *"PISTE ON LAATIKON SISÄLLÄ"* eikä *"laatikko on lähellä"*:
+   * varaus kertoo, minkä merkin ALLA nimen ankkuri on, ja vain silloin
+   * nimi tarvitsee väistökehän. Naapurin nappulan ohi mennään
+   * tavallisella törmäyskarsinnalla kuten minkä tahansa nimen ohi.
+   *
+   * LAATIKOT YHDISTETÄÄN, koska nappula seisoo laatan päällä: kaksi
+   * erillistä väistöä veisi nimen ensin laatan yläreunaan ja siellä
+   * nappulan alle. Yhteislaatikko on se pino, joka ruudulla on.
+   */
+  const merkkiVaraus = (x, y) => {
+    let laatikko = null;
+    for (const r of varaukset) {
+      if (x < r.x0 || x > r.x1 || y < r.y0 || y > r.y1) continue;
+      laatikko = laatikko ? {
+        x0: Math.min(laatikko.x0, r.x0),
+        y0: Math.min(laatikko.y0, r.y0),
+        x1: Math.max(laatikko.x1, r.x1),
+        y1: Math.max(laatikko.y1, r.y1),
+      } : { ...r };
+    }
+    return laatikko;
+  };
+
+  /*
    * KAKSOISNIMEN PÄÄTÖS ON MITTAKAAVAKOHTAINEN, JA SE ON MITATTU.
    * Vuorennimi syttyy samalla kynnyksellä kuin kaupungin nimi, mutta
    * järven nimi vasta 0,9:llä kun tärkeys > 1. Jos kaupungin nimiö
@@ -1192,6 +1325,38 @@ function lado(data, px, oma = null) {
       { dx: 0, dy: -kork * 0.75, ank: 'middle' },
       { dx: 0, dy: kork * 1.35, ank: 'middle' },
     ];
+    /*
+     * ── VÄISTÖKEHÄ PELIMERKIN YMPÄRI (omistaja 2.9.2026) ───────────
+     *
+     * *"Kaupungin nimiö jää pelinappulan alle."* Viisi ehdokasta yllä
+     * ovat kaikki merkin RUUTUMITASSA (5–7 px), koska nimi on
+     * paperivakio — ja juuri siksi ne kaikki osuvat syvässä zoomissa
+     * pelimerkkipinon sisään, joka on karttavakio ja ruudulla
+     * kymmeniä pikseleitä korkea. Ilman näitä ehdokkaita varaus ei
+     * korjaisi vikaa vaan vaihtaisi sen toiseen: nimi ei jäisi enää
+     * nappulan alle, vaan putoaisi kokonaan.
+     *
+     * KEHÄ LASKETAAN VARAUKSESTA EIKÄ VAKIOSTA. Siirtymä on täsmälleen
+     * se, joka vie nimiön laatikon merkkipinon ULKOPUOLELLE ja
+     * NIMION_RAKON verran siitä irti — sama rako kuin kohdenimiöllä
+     * merkkinsä reunaan. Kun pino kasvaa zoomissa, kehä kasvaa
+     * mukana; kun pinoa ei ole, näitä ehdokkaita ei ole olemassakaan
+     * ja ladonta on tavu tavulta entinen.
+     *
+     * JÄRJESTYS ON OMISTAJAN: *"ensisijaisesti ylös, sitten oikealle/
+     * vasemmalle."* Alas on viimeinen — kartan lukusuunnassa nimi
+     * merkin yläpuolella luetaan merkin nimeksi, alapuolella se
+     * sekoittuu helpommin seuraavaan riviin.
+     */
+    const pino = merkkiVaraus(x, y);
+    if (pino) {
+      ehdokkaat.push(
+        { dx: 0, dy: pino.y0 - y - kork * 0.42 - NIMION_RAKO, ank: 'middle' },
+        { dx: pino.x1 - x + NIMION_RAKO + 1, dy: kork * 0.35, ank: 'start' },
+        { dx: pino.x0 - x - NIMION_RAKO - 1, dy: kork * 0.35, ank: 'end' },
+        { dx: 0, dy: pino.y1 - y + kork * 0.62 + NIMION_RAKO, ank: 'middle' },
+      );
+    }
     let asetettu = null;
     for (const e of ehdokkaat) {
       const kx = x + e.dx;
@@ -1574,6 +1739,14 @@ export function unohdaKarttanimet() {
   LADONNAT.clear();
   aineisto = null;
   aineistoLauta = null;
+  /*
+   * PELIMERKKIEN VARAUKSET OVAT LAUDAN KOORDINAATEISSA, joten laudan
+   * vaihtuessa ne osoittavat väärään paikkaan. Kutsuja ilmoittaa
+   * uudet heti seuraavassa piirrossa (js/ui.js luovutaRuutuvaraukset),
+   * mutta niiden väliin ei jätetä edellisen laudan nappulaa.
+   */
+  ruutuvaraukset = [];
+  ruutuvaraustenAvain = '';
 }
 
 /* ----------------------------------------------------------- piirto */
