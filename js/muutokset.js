@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1447, teksti: 'Havainnekuvan selitelinkki näkyy ja toimii kaikkialla' },
   { v: 1446, teksti: 'Merkkiperheet yhteen mittaan syvässä zoomissa' },
   { v: 1445, teksti: 'Siirtoviivat ohuemmiksi (0,9 px, himmeys 0,55)' },
   { v: 1444, teksti: 'Raamattu: kysymykset omistajalle aina kortilla' },

@@ -629,7 +629,9 @@ export function piirraKaupunkiKartta(ui, kohde) {
    * pelkkä totuusarvo, jottei toisen kaupungin lehti aukea
    * värinäkymään.
    */
-  const lahderivi = html('p', 'lahde', kartta.lahde);
+  // Kartankin lähderivi kulkee talon yhden apurin kautta (2.9.2026):
+  // jos kartta joskus on Matkakirjan oma, selite tulee mukana.
+  const lahderivi = taytaLahderivi(html('p', 'lahde'), kartta.lahde, kartta);
   /*
    * Kartan työkalurivi: zoomipainikkeet vasemmalla, näkymävipu
    * oikealla. Rivi on kartan yllä, koska kuvan päälle asetetut
@@ -1104,7 +1106,9 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
     });
     kortti.appendChild(selite);
   }
-  if (kartta.lahde) kortti.appendChild(html('p', 'kuvalahde', kartta.lahde));
+  if (kartta.lahde) {
+    kortti.appendChild(taytaLahderivi(html('p', 'kuvalahde'), kartta.lahde, kartta));
+  }
   /*
    * ZOOMIPAINIKKEET KARTAN PÄÄLLE, eivät omalle riville. Kortin
    * mitoitus lasketaan kartan kuvasuhteesta (--kartta-suhde) ja
