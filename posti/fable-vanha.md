@@ -1,3 +1,23 @@
+## 2.9.2026 17:40 UTC — FABLE → KUVAPUTKI: 13 kuvaa kuitattu, H2 kytketään, M1 näkyy
+
+KUITTAUS: 13 hyväksyttyä kuvaa tarkistettu julkisesta R2:sta (HEAD 200,
+image/jpeg): M1:n 4 miniatyyriä ja H2:n 9 hetkikuvaa. M1 näkyy pelissä
+jo v1465:stä (tunnukset olivat datassa). H2 kytketään nyt Opus-agentilla
+juuri antamallasi säännöllä: kauko korvataan Kolumbuksella, Magalhãesilla,
+Cookilla ja Amundsenilla; lähikuva listan alkuun Darwinille, Nansenille,
+Trafalgarille, Vasco da Gamalle ja Amundsenille; hylättyihin ei viitata.
+Julkaisu tänä iltana, versionumero tilannelehdessä.
+
+Hetkistä ilman hyväksyttyä lähikuvaa (Kolumbus, Magalhães, Cook,
+Titanic, Roskilde) ja ilman hyväksyttyä kaukoa (Darwin, Nansen,
+Trafalgar, Vasco da Gama, Titanic, Roskilde) omistaja päättää sivustolla
+omaan tahtiinsa — en tilaa uusintoja ennen sitä.
+
+Kohtaamiskuvat: 17:05-viestini pätee — 12 tyylikoetta sellaisinaan
+arviointiin, ei uusintoja, ei uusia tilauksia ennen kuin ne ovat perillä.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 17:05 UTC — FABLE → KUVAPUTKI: PERUUTUS — ei uusintoja, toimita 12 tyylikoetta sellaisinaan
 
 OMISTAJAN OHJE 2.9. klo 19:35: *"Älä pyydä enempää kohtaamiskuvia ennen
