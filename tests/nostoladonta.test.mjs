@@ -12,11 +12,14 @@
 import { strict as assert } from 'node:assert';
 import { test } from 'node:test';
 
+import { readFileSync } from 'node:fs';
+
 import {
   NOSTOLADONTA_MERKKISUHDE, NOSTOLADONTA_NIMIO_KATTO, NOSTOLADONTA_NIMIO_KOKO,
   NOSTOLADONTA_POLTON_TIHEYS, NOSTOLADONTA_S, NOSTOLADONTA_SAANTO,
-  NOSTOLADONTA_SYMBOLI_R, nostoladontaKattoPorras, nostoladontaKattoSuhde,
-  nostoladontaTiiviste,
+  NOSTOLADONTA_SYMBOLI_R, NOSTOLADONTA_SYVIN_RUUTUPX, NOSTOLADONTA_SYVIN_TIHEYS,
+  nostoladontaKattoPorras, nostoladontaKattoSuhde, nostoladontaTiiviste,
+  nostoladontaVenytys,
 } from '../js/nostoladonta.js';
 import { NOSTOSYM_MINI_R, NOSTOSYM_NIMIO_KOKO } from '../js/fokusnosto-symbolit.js';
 import { KARTTANIMI_KOOT, maastokolmionKasvukatto } from '../js/karttanimet.js';
@@ -105,8 +108,15 @@ test('katon purressa nimiö on täsmälleen katon kokoinen', () => {
   for (const skaala of [3.6, 7.2, 11.4, 40]) {
     const k = nostoladontaKattoPorras(porras, skaala);
     const px = NOSTOLADONTA_NIMIO_KOKO * k * skaala;
-    assert.ok(Math.abs(px - NOSTOLADONTA_NIMIO_KATTO) < 1e-9,
-      `mittakaava ${skaala}: nimiö ${px} px`);
+    /*
+     * KATTO VENYY LAATAN MUKANA (omistaja 2.9.2026): z7:n yli yläraja
+     * on katto kertaa venytys, koska laatta itse on venytetty samalla
+     * luvulla. Syvimmällä tasolla ja sitä ulompana venytys on 1, joten
+     * väite on siellä täsmälleen entinen.
+     */
+    const odotettu = NOSTOLADONTA_NIMIO_KATTO * nostoladontaVenytys(skaala);
+    assert.ok(Math.abs(px - odotettu) < 1e-9,
+      `mittakaava ${skaala}: nimiö ${px} px, odotettu ${odotettu} px`);
   }
 });
 
@@ -176,20 +186,123 @@ test('kattosuhde on 1 siellä missä kattokaan ei pure', () => {
 });
 
 /*
- * PIIRROKSEN RUUTUKOKO EI RIIPU ZOOMISTA katon purressa. Tämä on se
- * väite, joka olisi kaatunut ennen korjausta: siirtoviivan leveys ja
- * sarakkeen siirtymä olivat `luku x NOSTOLADONTA_S x mittakaava` eli
- * suoraan verrannollisia zoomiin (mitattu Sofiassa 8,87 px kun tilattu
- * on 1,6).
+ * PIIRROKSEN RUUTUKOKO EI RIIPU ZOOMISTA katon purressa — PAPERIN
+ * MITASSA LUETTUNA. Tämä on se väite, joka olisi kaatunut ennen
+ * v1447:ää: siirtoviivan leveys ja sarakkeen siirtymä olivat `luku x
+ * NOSTOLADONTA_S x mittakaava` eli suoraan verrannollisia zoomiin
+ * (mitattu Sofiassa 8,87 px kun tilattu on 1,6).
+ *
+ * VENYTYS ON JAETTAVA POIS (omistaja 2.9.2026: *"koko kartta kuin yksi
+ * paperi suurennuslasin alla"*). Z7:n yli laatta itse on venytetty,
+ * joten piirroksen KUULUU kasvaa samassa suhteessa; se, mikä on vakio,
+ * on piirros SUHTEESSA laattaan. Ilman jakolaskua tämä testi vaatisi
+ * juuri sitä eroa, jonka omistaja luki ruudulta.
  */
-test('katetun piirroksen ruutumitta on vakio syvillä zoomeilla', () => {
+test('katetun piirroksen mitta on vakio suhteessa venytettyyn laattaan', () => {
   const porras = KOHDE_SYMBOLI_SKAALA * NOSTOLADONTA_S;
+  const paperilla = (luku, skaala) => (luku * NOSTOLADONTA_S
+    * nostoladontaKattoSuhde(porras, skaala) * skaala) / nostoladontaVenytys(skaala);
+  const VIIVAN_LEVEYS = 1.6;
+  const perus = paperilla(VIIVAN_LEVEYS, 5.86);
+  for (const skaala of [5.86, 9.24, 20, 100]) {
+    assert.ok(Math.abs(paperilla(VIIVAN_LEVEYS, skaala) - perus) < 1e-9,
+      `mittakaava ${skaala}: ${paperilla(VIIVAN_LEVEYS, skaala)} px vs ${perus} px`);
+  }
+  /*
+   * Ja z7:n alapuolella venytys on 1, joten mitta on myös RUUDULLA
+   * vakio. Kumpikin mittakaava on katon purevalla puolella (kynnys on
+   * 2,46 tälle portaalle) mutta syvintä tasoa ulompana.
+   */
   const ruudulla = (luku, skaala) => luku * NOSTOLADONTA_S
     * nostoladontaKattoSuhde(porras, skaala) * skaala;
-  const VIIVAN_LEVEYS = 1.6;
-  const perus = ruudulla(VIIVAN_LEVEYS, 5.86);
-  for (const skaala of [5.86, 9.24, 20, 100]) {
-    assert.ok(Math.abs(ruudulla(VIIVAN_LEVEYS, skaala) - perus) < 1e-9,
-      `mittakaava ${skaala}: ${ruudulla(VIIVAN_LEVEYS, skaala)} px vs ${perus} px`);
+  assert.ok(Math.abs(ruudulla(VIIVAN_LEVEYS, 2.7) - ruudulla(VIIVAN_LEVEYS, 3.6)) < 1e-9);
+});
+
+/* ====== VENYTYS: Z7:N YLI KARTTA ON SUURENNUSLASIN ALLA ===========
+ *
+ * OMISTAJAN PÄÄTÖS 2.9.2026, sanatarkasti: *"kun zoomataan z7:n yli,
+ * piirretyt merkit kasvavat samassa suhteessa kuin suurennettu
+ * karttakuva — koko kartta kuin yksi paperi suurennuslasin alla. Ei
+ * uutta zoomitasoa, ei polttoa."*
+ *
+ * Vartija ruudulta on savuke (tools/savukkeet/savuke-syvazoomi.mjs);
+ * nämä testit vahtivat kaavan ja sen kaksi reunaa — z7:n alapuolella
+ * mikään ei muutu, ja poltto pysyy tavulleen entisenä.
+ */
+test('venytys on 1 syvimpään tasoon asti ja kasvaa vasta sen yli', () => {
+  assert.equal(NOSTOLADONTA_SYVIN_RUUTUPX,
+    NOSTOLADONTA_SYVIN_TIHEYS / NOSTOLADONTA_POLTON_TIHEYS);
+  assert.equal(NOSTOLADONTA_SYVIN_RUUTUPX, 3.6);
+  for (const skaala of [0, 0.6, 1.8, 2.4, 3.5999, 3.6]) {
+    assert.equal(nostoladontaVenytys(skaala), 1, `mittakaava ${skaala}`);
   }
+  assert.ok(Math.abs(nostoladontaVenytys(7.2) - 2) < 1e-12);
+  assert.ok(Math.abs(nostoladontaVenytys(9.24) - 9.24 / 3.6) < 1e-12);
+});
+
+test('z7:n alapuolella porras on tavulleen entinen', () => {
+  const porras = KOHDE_SYMBOLI_SKAALA * NOSTOLADONTA_S;
+  /* Entinen kaava ilman venytystä — juuri se, mitä laattoihin on poltettu. */
+  const entinen = (p, px) => ((p > 0 && px > 0)
+    ? Math.min(p, NOSTOLADONTA_NIMIO_KATTO / (NOSTOLADONTA_NIMIO_KOKO * px))
+    : p);
+  for (const skaala of [0.3, 0.9, 1.8, 2.7, 3.5, 3.6]) {
+    assert.equal(nostoladontaKattoPorras(porras, skaala), entinen(porras, skaala),
+      `mittakaava ${skaala}`);
+  }
+});
+
+/*
+ * POLTTO EI MUUTU: generaattori kysyy katon tason omalla tiheydellä
+ * (tools/fokuskartta/maailmapiirto.js: `px / NOSTOLADONTA_POLTON_TIHEYS`),
+ * ja se on syvimmällä tasolla täsmälleen NOSTOLADONTA_SYVIN_RUUTUPX ja
+ * jokaisella karkeammalla puolet edellisestä. Venytys on siis polton
+ * kaikilla tasoilla 1 — ja juuri siksi NOSTOLADONTA_SAANTO pysyy v7:ssä
+ * (omistaja: *"ei uutta zoomitasoa, ei polttoa"*).
+ */
+test('polton jokaisella tasolla venytys on tasan 1', () => {
+  for (let z = 0; z <= 7; z += 1) {
+    const tasonTiheys = NOSTOLADONTA_SYVIN_TIHEYS / 2 ** (7 - z);
+    assert.equal(nostoladontaVenytys(tasonTiheys / NOSTOLADONTA_POLTON_TIHEYS), 1,
+      `taso z${z} (${tasonTiheys} px/yksikkö)`);
+  }
+  assert.equal(NOSTOLADONTA_SAANTO, 'v7');
+});
+
+/*
+ * ELÄVÄ JA POLTETTU NOSTO OVAT SAMAN KOKOISIA JOKA SYVYYDELLÄ. Tämä on
+ * koko erän mitta: poltettu nimiö on laatan pikseleitä eli
+ * `2 x katto x skaala / syvin tiheys` ruudulla (sama kaava kuin
+ * tools/savukkeet/mittaa-syvazoomi.mjs poltetunNostonMitat), ja elävä
+ * nimiö on `NOSTOLADONTA_NIMIO_KOKO x porras x skaala`. Ennen tätä erää
+ * ne erosivat venytyksen verran — iPadin 25 km:n näkymässä 2,57
+ * kertaa.
+ */
+test('elävä nimiö on poltetun kokoinen joka syvyydellä', () => {
+  const porras = KOHDE_SYMBOLI_SKAALA * NOSTOLADONTA_S;
+  for (const skaala of [3.6, 5.86, 6.26, 9.24, 20]) {
+    const elava = NOSTOLADONTA_NIMIO_KOKO * nostoladontaKattoPorras(porras, skaala) * skaala;
+    const poltettu = (NOSTOLADONTA_POLTON_TIHEYS * NOSTOLADONTA_NIMIO_KATTO * skaala)
+      / NOSTOLADONTA_SYVIN_TIHEYS;
+    assert.ok(Math.abs(elava - poltettu) < 1e-9,
+      `mittakaava ${skaala}: elävä ${elava.toFixed(2)} px, poltettu ${poltettu.toFixed(2)} px`);
+  }
+});
+
+/*
+ * SYVIN TIHEYS ON KOPIO, JA SIKSI SE ON VAHDITTU. Luku asuu
+ * laattageneraattorissa (tools/generoi-laattapyramidi.mjs TIHEYS ja
+ * TASOJA; omistajan lukitsema mitta 30.8.2026, Raamattu PYRAMIDIN
+ * LUKITUT MITAT), eikä js/ saa tuoda tools/-moduulia — yhden tiedoston
+ * versio ketjuttaa vain js/:n. Vahti on siksi sama kuin
+ * tests/viivataso.test.mjs:n SYVIN_TIHEYS-vahti: luetaan generaattorin
+ * lähdeteksti ja vaaditaan sama luku.
+ */
+test('syvin tiheys on sama luku kuin laattageneraattorilla', () => {
+  const GEN = readFileSync(new URL('../tools/generoi-laattapyramidi.mjs', import.meta.url), 'utf8');
+  assert.match(GEN, /^const TIHEYS = 7\.2;$/m,
+    'generaattorin TIHEYS muuttui: js/nostoladonta.js NOSTOLADONTA_SYVIN_TIHEYS on nyt väärin');
+  assert.match(GEN, /^const TASOJA = 8;$/m,
+    'pyramidin tasomäärä muuttui: syvin taso ei ole enää z7');
+  assert.equal(NOSTOLADONTA_SYVIN_TIHEYS, 7.2);
 });

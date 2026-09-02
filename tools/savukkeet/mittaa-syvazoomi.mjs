@@ -18,6 +18,9 @@ import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
+import {
+  NOSTOLADONTA_NIMIO_KATTO, NOSTOLADONTA_SYVIN_TIHEYS, nostoladontaVenytys,
+} from '../../js/nostoladonta.js';
 import { packById } from '../../js/pack.js';
 
 const paketti = await import('playwright')
@@ -488,19 +491,36 @@ export function perheHajonta(taulu, avaimet) {
  * 2 x NOSTOLADONTA_NIMIO_KATTO, ja ruudulla se kerrotaan sillä
  * suhteella, jolla laatta venytetään näkymään.
  *
+ * LUVUT TUODAAN EIKÄ KOPIOIDA (2.9.2026). Katto ja syvimmän tason
+ * tiheys olivat tässä kahtena kirjoitettuna lukuna (8,5 ja 7,2), ja
+ * juuri niistä tämä mitta väittää muille perheille normin — kopio olisi
+ * siis vartija, joka mittaa omaa vanhentunutta muistiaan. Venytys tulee
+ * samasta funktiosta kuin pelin oma katto (nostoladontaVenytys), joten
+ * "poltettu" ja "elävä" eivät voi eriytyä mittarin takia.
+ *
  * @param {number} skaala CSS-pikseliä lautayksikköä kohti näkymässä
  * @param {number} tasonTiheys laattatason pikseliä lautayksikköä kohti
- *   (syvin taso z7 = 7,2; js/laattapyramidi.js)
+ *   (syvin taso z7 = 7,2; js/nostoladonta.js NOSTOLADONTA_SYVIN_TIHEYS)
  * @param {number} katto NOSTOLADONTA_NIMIO_KATTO (8,5)
  */
-export function poltetunNostonMitat(skaala, tasonTiheys = 7.2, katto = 8.5) {
+export function poltetunNostonMitat(
+  skaala,
+  tasonTiheys = NOSTOLADONTA_SYVIN_TIHEYS,
+  katto = NOSTOLADONTA_NIMIO_KATTO,
+) {
   if (!(skaala > 0) || !(tasonTiheys > 0)) return null;
-  const nimiPx = +((2 * katto * skaala) / tasonTiheys).toFixed(2);
+  /*
+   * VENYTYS ON KLAMMATTU YKKÖSEEN, koska syvimmän tason yläpuolella peli
+   * lataa oman tasonsa eikä venytä mitään: siellä poltettu nimiö on
+   * katon kokoinen samoin kuin elävä.
+   */
+  const venytys = nostoladontaVenytys((skaala * NOSTOLADONTA_SYVIN_TIHEYS) / tasonTiheys);
+  const nimiPx = +(katto * venytys).toFixed(2);
   return {
     nimiPx,
     symboliPx: +(nimiPx * KIRJASTON_SUHDE).toFixed(2),
     /* 1 = laatta on 1:1; yli 1 = laatta venyy z7:n yli. */
-    venytys: +((2 * skaala) / tasonTiheys).toFixed(2),
+    venytys: +venytys.toFixed(2),
   };
 }
 
@@ -523,13 +543,32 @@ export function tiivista(m) {
     return +Math.hypot(dx, dy).toFixed(1);
   });
   const taulu = perheet(m);
+  /*
+   * POLTETTU JA ELÄVÄ NOSTO SAMASSA KUVASSA (omistaja 2.9.2026: *"kun
+   * zoomataan z7:n yli, piirretyt merkit kasvavat samassa suhteessa kuin
+   * suurennettu karttakuva"*).
+   *
+   * Kaikki nostot eivät ole poltettuja — kaksi maata jää täkyjoukkonsa
+   * takia kokonaan polttamatta ja jokainen datamuutos palauttaa merkin
+   * eläväksi (js/nostoladonta.js nostoladontaTiiviste) — joten samassa
+   * näkymässä on väistämättä molempia. Silloin niiden ON oltava saman
+   * kokoisia, tai silmä lukee kartalta kaksi eri mittajärjestelmää.
+   * Suhde luetaan molempiin suuntiin: kumpi tahansa ylitys on sama vika.
+   */
+  const poltettu = poltetunNostonMitat(m.skaala);
+  const elavaNimi = taulu.nosto?.nimiPx ?? null;
+  const poltettuVsElava = (elavaNimi > 0 && poltettu?.nimiPx > 0)
+    ? +Math.max(poltettu.nimiPx / elavaNimi, elavaNimi / poltettu.nimiPx).toFixed(2)
+    : null;
   return {
     skaala: m.skaala,
     mittajana: m.mittajana ?? null,
     /* Kaikkien merkkiperheiden mitat samassa näkymässä (ks. perheet). */
     perheet: taulu,
     perheHajonta: perheHajonta(taulu, ['nosto', 'elain', 'maasto']),
-    poltettuNosto: poltetunNostonMitat(m.skaala),
+    poltettuNosto: poltettu,
+    /* Poltetun ja elävän noston nimiön kokoero, molempiin suuntiin. */
+    poltettuVsElava,
     vuorisymboleja: m.vuoret.length,
     nimettomiaVuoria: m.vuoret.filter((v) => !v.nimi).length,
     vuorenKokoMin: vuorenKoot.length ? +Math.min(...vuorenKoot).toFixed(1) : null,

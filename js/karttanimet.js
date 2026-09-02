@@ -109,7 +109,9 @@
  */
 import { el, saumasiirto } from './mapart.js';
 import { laatoissaOnNimet, pyramidiKattaa } from './laattapyramidi.js';
-import { NOSTOLADONTA_MERKKISUHDE, NOSTOLADONTA_S } from './nostoladonta.js';
+import {
+  NOSTOLADONTA_MERKKISUHDE, NOSTOLADONTA_S, nostoladontaVenytys,
+} from './nostoladonta.js';
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
 
 /**
@@ -1654,9 +1656,53 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
    * nappulaa ei ole kartalla, joten korostustakaan ei ole.
    */
   const oma = (!ui.katselu && ui.game?.cityOf?.()?.id) || null;
-  const { nimiot, merkit, nostot } = ladoVarastosta(ui.game.pack, nakyva.skaala, oma);
+  /* ====== Z7:N YLI KOKO PAPERI ON SUURENNUSLASIN ALLA ==============
+   *
+   * OMISTAJAN PÄÄTÖS 2.9.2026, sanatarkasti: *"kun zoomataan z7:n yli,
+   * piirretyt merkit kasvavat samassa suhteessa kuin suurennettu
+   * karttakuva — koko kartta kuin yksi paperi suurennuslasin alla. Ei
+   * uutta zoomitasoa, ei polttoa."*
+   *
+   * ── MIKSI TÄMÄ KERROS ON MUKANA ──────────────────────────────────
+   *
+   * Syvin laattataso on z7, ja sen yli peli venyttää samaa laattaa
+   * (js/nostoladonta.js nostoladontaVenytys). Kaikki laatan oma muste —
+   * rantaviiva, patina, poltetut karttanostot — venyy sen mukana, mutta
+   * TÄMÄ kerros on paperivakio: nimet ovat CSS-pikseleitä ja merkeillä
+   * on ruutukokoon lukittu kasvukatto. Ilman tätä muunnosta syvässä
+   * zoomissa kartta suurenee ja sen nimistö kutistuu suhteessa siihen —
+   * ja poltettu nosto olisi elävää naapuriaan moninkertainen (mitattu
+   * iPadilla 2,57-kertainen).
+   *
+   * ── MUUNNOS ON YKSI JAKOLASKU, EI UUSI LADONTA ───────────────────
+   *
+   * Ladonta ja piirto tehdään SYVIMMÄN TASON 1:1-MITASSA (`paperiSkaala`
+   * = näkymän mittakaava jaettuna venytyksellä), ja koska kerros elää
+   * laudan yksiköissä, sama jakolasku suurentaa valmiin kuvan takaisin
+   * ruudulle. Tulos on täsmälleen se, mitä omistaja tilasi: z7:n yli
+   * ladonta ei muutu enää lainkaan — samat nimet samoilla paikoilla,
+   * sama porras (isoKaupunki 14, kaupunki 12,5, vuori 11, kohde 8,5) —
+   * vaan koko paperi vain suurenee. Kohdenimiö on silloin ruudulla
+   * 8,5 x venytys eli TÄSMÄLLEEN poltetun nimiön kokoinen, ja kaikki
+   * neljä merkkiperhettä pysyvät samassa mitassa
+   * (tools/savukkeet/savuke-syvazoomi.mjs vartio 7).
+   *
+   * YLEISTYSKYNNYKSET SEURAAVAT MUKANA, JA SE ON OIKEIN: paperiin ei
+   * ilmesty uusia nimiä siitä, että sitä katsoo suurennuslasilla.
+   * Käytännössä ladonta lasketaan z7:n yli vain kerran ja välimuisti
+   * (LADONNAT) palauttaa sen joka syvyydelle.
+   *
+   * KERROKSEN OMA UUDELLEENRAKENNUS EI SAA JÄÄDÄ TÄHÄN MITTAAN: solmun
+   * `font-size` on lautayksiköitä ja muuttuu joka zoomiportaalla, joten
+   * rakennusavain lukee yhä NÄKYMÄN mittakaavan (ks. `avain` alempana).
+   * Sama koskee itse ladonnan välimuistiavainta vain päinvastoin: se on
+   * paperin mitta, ja juuri siksi ladontaa ei toisteta.
+   */
+  const venytys = nostoladontaVenytys(nakyva.skaala);
+  const paperiSkaala = nakyva.skaala / venytys;
+  const { nimiot, merkit, nostot } = ladoVarastosta(ui.game.pack, paperiSkaala, oma);
   const leveys = ui.game.pack.map?.kiertava ? (ui.game.pack.map.width ?? 0) : 0;
-  const laudalle = (cssPx) => cssPx / nakyva.skaala;
+  const laudalle = (cssPx) => cssPx / paperiSkaala;
 
   /*
    * NÄKYMÄRAJAUS ON KOKO SÄÄSTÖ. Ladonta koskee kaikkia 351:tä nimeä,
@@ -1750,14 +1796,14 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
    * suuremmaksi. Kerroin on 1 maanäkymässä ja sitä kauempana, joten
    * yksikään kaukonäkymä ei muutu.
    */
-  const kasvukatto = karttamerkinKasvukatto(nakyva.skaala);
+  const kasvukatto = karttamerkinKasvukatto(paperiSkaala);
   /*
    * KOLMIOLLA ON OMA KATTONSA (2.9.2026, ks. maastokolmionKasvukatto):
    * se on ainoa kartan oma merkki, joka on KUVA, ja kuvan mitta tulee
    * sen nimestä samalla suhteella kuin karttanostolla. Piste ja rengas
    * pitävät yhteisen kasvukaton.
    */
-  const kolmionKatto = maastokolmionKasvukatto(nakyva.skaala);
+  const kolmionKatto = maastokolmionKasvukatto(paperiSkaala);
   for (const { m, x } of nakyvatMerkit) {
     if (m.laji === 'vuori') {
       const r = (m.iso ? MERKKI.vuoriIso : MERKKI.vuori) * kolmionKatto;

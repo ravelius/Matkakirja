@@ -474,6 +474,17 @@ async function haeLuettelo() {
  * portaikko kertoo mihin nipistys napsahtaa, tämä kertoo mikä tarkkuus
  * levyltä ladataan.
  *
+ * SYVIMMÄN TASON YLI EI OLE MITÄÄN VALITTAVAA, ja siitä seuraa koko
+ * syvän zoomin ilme: kun tarve ylittää syvimmän tason tiheyden (z7,
+ * 7,2 laitepikseliä lautayksikköä kohti), tämä palauttaa yhä sen saman
+ * tason ja selain VENYTTÄÄ laattaa. Elävät merkkikerrokset seuraavat
+ * venytystä samalla luvulla — se lasketaan yhdessä paikassa
+ * (js/nostoladonta.js nostoladontaVenytys) omistajan päätöksestä
+ * 2.9.2026: *"kun zoomataan z7:n yli, piirretyt merkit kasvavat samassa
+ * suhteessa kuin suurennettu karttakuva — koko kartta kuin yksi paperi
+ * suurennuslasin alla."* Ilman sitä poltettu nosto (laatan pikseleitä)
+ * kasvaisi ja elävä ei.
+ *
  * @param {number} tarve laitepikseliä yhtä lautayksikköä kohti
  */
 function valitseTaso(tasot, tarve) {

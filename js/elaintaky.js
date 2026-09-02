@@ -421,7 +421,34 @@ function elaintakyAsetaMittakaava(ui, suhde) {
    * kaksi kiertokohtaa on 58 ryhmää, kun vihreitä pisteitä on yksi —
    * joten juuri tästä v1277 mittasi hukan pois fokusnäkymässä.
    */
-  const s = ui.fokusMerkkiSkaalaKartalle?.(suhde) ?? ui.fokusMerkkiSkaala?.(suhde);
+  /*
+   * ====== PERUSMITTA ON LEHDEN OMA, EI RUUDUN (2.9.2026) ============
+   *
+   * Rivi luki `fokusMerkkiSkaalaKartalle` eli RUUDUN mittaa
+   * (`min(fokusMerkkiSkaala, perustaso)`), kun kohdemerkit lukevat
+   * `fokusMerkkiSkaalaPohja`ta eli lehden rajauksesta laskettua vakiota
+   * (js/fokuskohteet.js asetaKohdeMittakaava, js/nostoladonta.js
+   * NOSTOLADONTA_S = 0,60). Kaksi eri mittaa samassa kuvassa on
+   * täsmälleen se vika, jota omistaja on lukenut ruudulta kahdesti — ja
+   * tämän tiedoston oma lupaus sanoo toisin: *"eläintäky ei ole
+   * kartalla isompi eikä pienempi kuin muut kohdemerkit."*
+   *
+   * ERO EI NÄKYNYT, KOSKA KATTO PEITTI SEN. Niin kauan kuin ruutukatto
+   * puri syvässä zoomissa molempia perheitä, kumpikin päätyi samaan
+   * kattoarvoon eikä perusmitalla ollut väliä. Kun katto alkoi venyä
+   * laatan mukana (js/nostoladonta.js nostoladontaVenytys), se ei enää
+   * pure eläintäkyä lainkaan — ja ero tuli näkyviin: mitattuna Sofian
+   * iPad-näkymässä (skaala 9,24) tassu oli 21,96 px kun viereinen
+   * karttanosto oli 25,78 px eli 15 % isompi, ja kartalla oli taas
+   * neljä perhettä kolmessa mitassa (tools/savukkeet/savuke-syvazoomi.mjs
+   * vartio 7 kaatui hajontaan 1,52).
+   *
+   * MITTA ON NYT SAMA RIVI KUIN KOHDEMERKILLÄ, varapolut mukaan lukien:
+   * ilman lehden ikkunaa jäljelle jää entinen ruutumitta, koska siinä
+   * näkymässä ei ole poltettavaakaan.
+   */
+  const s = ui.fokusMerkkiSkaalaPohja?.()
+    || ui.fokusMerkkiSkaalaKartalle?.(suhde) || ui.fokusMerkkiSkaala?.(suhde);
   // Ilman mitattavaa näkymää muunnos jätetään entiselleen: väärä
   // mittakaava olisi pahempi kuin yhden kehyksen viive.
   if (!(s > 0)) return;

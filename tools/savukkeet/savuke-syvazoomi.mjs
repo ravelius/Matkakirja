@@ -24,13 +24,14 @@
  *   2. KERROSTEN KOOT SAMASSA SUURUUSLUOKASSA. Maastokolmio ja
  *      nostosymboli eivät saa erota moninkertaisesti — juuri se oli
  *      *"symbolit heittelee muodoiltaa"* (mitattu ennen 3,92, raja 1,5).
- *   3. KOKO ON RUUTUVAKIO SYVYYDESTÄ RIIPPUMATTA. Sama merkki kahdella
- *      eri zoomilla on ruudulla saman kokoinen ±10 %. Ilman tätä
+ *   3. KOKO ON VAKIO SYVYYDESTÄ RIIPPUMATTA — PAPERIN MITASSA. Sama
+ *      merkki kahdella eri zoomilla on saman kokoinen ±10 % sen
+ *      jälkeen, kun laatan venytys on jaettu pois. Ilman tätä
  *      kasvukatto voisi kadota huomaamatta ja vika palaisi.
  *   4. SIIRTOVIIVA EI PAKSUUNNU KARTAN MUKANA (mitattu ennen 8,87 px
- *      kun tilattu on 1,6; raja 3).
+ *      kun tilattu on 1,6; raja 3 paperipikseliä).
  *   5. NIMI ON MERKKINSÄ VIERESSÄ. Rako symbolin reunasta nimiön
- *      reunaan on pieni (mitattu ennen 16,3 px, raja 6).
+ *      reunaan on pieni (mitattu ennen 16,3 px, raja 6 paperipikseliä).
  *   6. EI NIMETTÖMIÄ SYMBOLEJA. Yksikään maastokolmio ei ole kartalla
  *      ilman nimeä (Raamattu: *"kartalla ei ole merkkiä ilman nimeä"*),
  *      eikä yksikään nimellinen nosto jää ilman nimiötään ruudulla.
@@ -40,6 +41,22 @@
  *      luetaan samasta kuvasta kahtena lukuna (symbolin halkaisija ja
  *      nimen kirjasinkoko), ja hajonta on rajattu. Perustelu ja mitatut
  *      luvut ovat vartion omassa lohkossa alempana.
+ *   8. POLTETTU JA ELÄVÄ NOSTO OVAT SAMAN KOKOISIA (lisätty 2.9.2026,
+ *      omistajan päätös: *"kun zoomataan z7:n yli, piirretyt merkit
+ *      kasvavat samassa suhteessa kuin suurennettu karttakuva — koko
+ *      kartta kuin yksi paperi suurennuslasin alla"*). Poltettu nosto
+ *      venyy z7-laatan mukana; ennen tätä erää elävä jäi ruutukattoon
+ *      ja ero oli mitattuna 1,74 (iPhone 25 km) ja 2,57 (iPad 25 km).
+ *
+ * ── PAPERIN MITTA ON KOLMEN VARTION YKSIKKÖ ───────────────────────
+ *
+ * Vartiot 3-5 lukivat CSS-pikseleitä. Omistajan päätöksen jälkeen se
+ * olisi väärä yksikkö juuri syvässä zoomissa: koko kartta on siellä
+ * suurennuslasin alla, joten merkin, viivan ja raon KUULUU kasvaa
+ * laatan mukana. Ne luetaan siksi PAPERIPIKSELEINÄ eli jaettuna
+ * venytyksellä (js/nostoladonta.js nostoladontaVenytys, mitassa
+ * `poltettuNosto.venytys`) — se on täsmälleen sama luku kuin ennen
+ * z7:ään asti, ja sen yli se on se luku, jonka omistaja tilasi.
  *
  * KOLME NÄKYMÄÄ: Sofian z6-porras (mittajana ~100 km) ja z8-porras
  * (~50 km) iPadilla — juuri niiden VÄLILLÄ vika kasvoi, joten yksi
@@ -61,6 +78,16 @@ const LAJIEN_SUURIN_SUHDE = 1.5;
 const VIIVAN_SUURIN_LEVEYS = 3;
 const NIMION_SUURIN_RAKO = 6;
 const SYVYYKSIEN_SUURIN_ERO = 0.1;
+/* Vartio 8: poltettu ja elävä nosto saman kokoisia (kumpaan suuntaan tahansa). */
+const POLTETUN_SUURIN_ERO = 1.1;
+
+/**
+ * Näkymän oma venytys: paljonko z7-laatta on suurennettu (>= 1).
+ * Vartiot 3-5 lukevat mittansa tässä yksikössä — ks. johdanto.
+ */
+const venytys = (t) => (t?.poltettuNosto?.venytys > 0 ? t.poltettuNosto.venytys : 1);
+const paperilla = (px, t) => (px === null || px === undefined
+  ? null : +(px / venytys(t)).toFixed(2));
 
 /*
  * ── VARTIO 7: KAIKKI MERKKIPERHEET SAMASSA MITASSA ────────────────
@@ -106,6 +133,15 @@ const tarkastaPerheet = (nimi, t) => {
   vaadi(`${nimi}: symboli ja nimi kirjaston suhteessa (1,18)`,
     h.perheita === 0 || h.suhteenPoikkeama <= SUHTEEN_SUURIN_POIKKEAMA,
     `poikkeama ${h.suhteenPoikkeama} (raja ${SUHTEEN_SUURIN_POIKKEAMA}) — ${rivit}`);
+  /*
+   * VARTIO 8 (ks. johdanto). Poltettu nosto on laatan pikseleitä ja
+   * venyy z7:n yli laatan mukana; elävän on venyttävä sen kanssa, tai
+   * samassa kuvassa on kaksi eri kokoista Marathonia ja Delfoita.
+   */
+  vaadi(`${nimi}: poltettu ja elävä nosto saman kokoisia`,
+    t.poltettuVsElava === null || t.poltettuVsElava <= POLTETUN_SUURIN_ERO,
+    `poltettu ${t.poltettuNosto?.nimiPx} px vs elävä ${t.perheet?.nosto?.nimiPx} px`
+      + ` = ${t.poltettuVsElava} (raja ${POLTETUN_SUURIN_ERO}, venytys ${venytys(t)})`);
 };
 
 const mitat = [];
@@ -134,11 +170,13 @@ for (const askelia of [6, 8]) {
     suhde === null || (suhde <= LAJIEN_SUURIN_SUHDE && suhde >= 1 / LAJIEN_SUURIN_SUHDE),
     `kolmio/nosto = ${suhde} (kolmio ${t.vuorenKokoMax} px, nosto ${t.nostonKokoMax} px)`);
   vaadi(`${nimi}: siirtoviiva ei paksuunnu kartan mukana`,
-    t.viivanLeveysPx === null || t.viivanLeveysPx <= VIIVAN_SUURIN_LEVEYS,
-    `${t.viivanLeveysPx} px (raja ${VIIVAN_SUURIN_LEVEYS})`);
+    t.viivanLeveysPx === null || paperilla(t.viivanLeveysPx, t) <= VIIVAN_SUURIN_LEVEYS,
+    `${paperilla(t.viivanLeveysPx, t)} paperipx (ruudulla ${t.viivanLeveysPx},`
+      + ` venytys ${venytys(t)}; raja ${VIIVAN_SUURIN_LEVEYS})`);
   vaadi(`${nimi}: nimiö on symbolinsa vieressä`,
-    t.nimionRakoMax === null || t.nimionRakoMax <= NIMION_SUURIN_RAKO,
-    `rako ${t.nimionRakoMax} px (raja ${NIMION_SUURIN_RAKO})`);
+    t.nimionRakoMax === null || paperilla(t.nimionRakoMax, t) <= NIMION_SUURIN_RAKO,
+    `rako ${paperilla(t.nimionRakoMax, t)} paperipx (ruudulla ${t.nimionRakoMax},`
+      + ` venytys ${venytys(t)}; raja ${NIMION_SUURIN_RAKO})`);
   vaadi(`${nimi}: ei nimetöntä maastokolmiota`,
     t.nimettomiaVuoria === 0,
     `${t.nimettomiaVuoria} kolmiota ilman nimeä`);
@@ -149,14 +187,20 @@ for (const askelia of [6, 8]) {
 
 /*
  * SAMA MERKKI KAHDELLA SYVYYDELLÄ — tämä on se vartio, joka olisi
- * huomannut alkuperäisen vian. Kasvukaton purressa merkin RUUTUKOKO ei
- * riipu zoomista lainkaan.
+ * huomannut alkuperäisen vian. Kasvukaton purressa merkin koko ei riipu
+ * zoomista lainkaan PAPERIN MITASSA: ruudulla se kasvaa täsmälleen
+ * laatan venytyksen verran ja ei tavuakaan enempää (omistaja 2.9.2026,
+ * ks. johdanto). Jakolasku on siis vartion terävin osa — jos merkki
+ * kasvaisi omia aikojaan, ero näkyisi tässä heti.
  */
 const [matala, syva] = mitat;
 const vertaa = (nimi, a, b) => {
-  if (!(a > 0) || !(b > 0)) { vaadi(nimi, true, 'ei mitattavaa'); return; }
-  const ero = Math.abs(a - b) / Math.max(a, b);
-  vaadi(nimi, ero <= SYVYYKSIEN_SUURIN_ERO, `${a} px vs ${b} px (ero ${(ero * 100).toFixed(0)} %)`);
+  const ap = paperilla(a, matala);
+  const bp = paperilla(b, syva);
+  if (!(ap > 0) || !(bp > 0)) { vaadi(nimi, true, 'ei mitattavaa'); return; }
+  const ero = Math.abs(ap - bp) / Math.max(ap, bp);
+  vaadi(nimi, ero <= SYVYYKSIEN_SUURIN_ERO,
+    `${ap} vs ${bp} paperipx (ruudulla ${a} / ${b}; ero ${(ero * 100).toFixed(0)} %)`);
 };
 vertaa('maastokolmio on saman kokoinen molemmilla syvyyksillä',
   matala.vuorenKokoMax, syva.vuorenKokoMax);
