@@ -2139,6 +2139,83 @@ test('matkustustapa valitaan automaattisesti kun vaihtoehtoja ei ole', () => {
   assert.equal(alku.autoTravel, false);
 });
 
+/*
+ * MATKA JATKUU ITSESTÄÄN, KUNNES OLLAAN KAUPUNGISSA (omistajan tilaus
+ * 2.9.2026, sanatarkasti: *"nopanheitto tulee jatkua automaattisesti
+ * jos ei olla saavuttu seuraavaan kohdekaupunkiin"*).
+ *
+ * Vartioitava asia on VUOROLOGIIKAN LIPPU, ei animaatio: peli ei heitä
+ * itse, vaan merkitsee jatkotilan ja UI heittää (js/ui.js
+ * ajastaAutomaattinenHeitto). Siksi tässä testataan täsmälleen se, mitä
+ * beginTurn päättää — reittipisteestä kyllä, kaupungista ei.
+ */
+test('reitin askelpisteessä vuoro merkitään jatkuvaksi, kaupungissa ei', () => {
+  const game = newGame(31);
+
+  // 1. Siirto reitin askelpisteeseen: matka on kesken.
+  game.player.pos = { type: 'edge', edge: 'tanger|karthago', idx: 1 };
+  game.phase = 'action';
+  game.beginTurn();
+  assert.equal(game.phase, 'roll');
+  assert.ok(game.jatkaAutomaattisesti, 'reitillä matka jatkuu itsestään');
+  assert.ok(game.jatkaMatkaaItsestaan(), 'heitto saa lauetia ilman nappia');
+
+  // Heiton jälkeen automaatti ei enää laukea: kohde on pelaajan valinta.
+  game.actionRoll();
+  assert.equal(game.phase, 'move');
+  assert.equal(game.jatkaMatkaaItsestaan(), false, 'noppa on jo heitetty');
+
+  // 2. Siirto kaupunkiin katkaisee automaation.
+  const kaupunkiin = game.moveOptions().find((o) => o.city);
+  assert.ok(kaupunkiin, 'jonkin kohteen pitäisi olla kaupunki');
+  game.actionMove(kaupunkiin.key);
+  game.current = 0;
+  game.phase = 'action';
+  game.beginTurn();
+  assert.equal(game.player.pos.type, 'city');
+  assert.equal(game.jatkaAutomaattisesti, false, 'kaupungissa noppa on pelaajan napin takana');
+  assert.equal(game.jatkaMatkaaItsestaan(), false);
+
+  // 3. Botti hoitaa vuoronsa omalla ajastimellaan: lippu ei nouse.
+  const botti = newGame(31);
+  botti.player.isBot = true;
+  botti.player.pos = { type: 'edge', edge: 'tanger|karthago', idx: 1 };
+  botti.phase = 'action';
+  botti.beginTurn();
+  assert.equal(botti.phase, 'roll');
+  assert.equal(botti.jatkaAutomaattisesti, false, 'botilla on oma ajastimensa');
+});
+
+test('kesken matkaa tallennettu peli jatkaa automaattisesti, kaupungissa ei', () => {
+  /*
+   * Maailmankartta eikä testien africa-oletuslauta: erillislaudalle
+   * tallennettu peli SIIRRETÄÄN latauksessa maailmankartalle
+   * (siirraErillislaudat), jolloin nappula palaa kaupunkiin eikä
+   * jatkotilaa voisi mitata.
+   */
+  const maailma = packById('maailma');
+  const reitti = maailma.edges.find((e) => (e.type ?? 'land') === 'land' && (e.steps ?? 1) >= 3);
+  const game = new Game({ pack: maailma, players: [{ name: 'A', color: '#f00' }], seed: 31 });
+  game.player.pos = { type: 'edge', edge: `${reitti.a}|${reitti.b}`, idx: 1 };
+  game.phase = 'action';
+  game.beginTurn();
+  assert.equal(game.phase, 'roll');
+
+  // Jatkotila johdetaan asemasta, joten se selviää tallennuksen yli
+  // ilman omaa kenttää — myös vanhasta tallennuksesta.
+  const ladattu = Game.fromJSON(JSON.parse(JSON.stringify(game.toJSON())));
+  assert.equal(ladattu.phase, 'roll');
+  assert.ok(ladattu.jatkaAutomaattisesti, 'kesken matkaa lataus jatkaa itsestään');
+  assert.ok(ladattu.jatkaMatkaaItsestaan());
+
+  // Kaupungissa odottava vuoro ei saa jatkua itsestään latauksenkaan
+  // jälkeen: noppa on aina pelaajan napin takana.
+  game.player.pos = { type: 'city', city: reitti.a };
+  const kaupungissa = Game.fromJSON(JSON.parse(JSON.stringify(game.toJSON())));
+  assert.equal(kaupungissa.jatkaAutomaattisesti, false);
+  assert.equal(kaupungissa.jatkaMatkaaItsestaan(), false);
+});
+
 test('lähdekentän apurit tulkitsevat lähteet oikein', () => {
   assert.deepEqual(sourceList(undefined), []);
   assert.deepEqual(sourceList(''), []);
