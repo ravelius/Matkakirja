@@ -2568,8 +2568,11 @@ export const RAAMATTU = {
           + 'megafonikuulutus pysakeilla, generoidaan lukijaaanella '
           + 'etukateen. REHELLISYYS: kolmiokaupan orjalaivat ovat oma '
           + 'virtansa eika niita piiloteta; savy on isoisan aikalaisen '
-          + 'havainto, ei mainos. Aiheluettelo docs/linssikatalogi.md '
-          + 'osa 3 (Virtalinssit).',
+          + 'havainto, ei mainos. ISOISAN MATKA 1873 NAKYY LINSSISSA '
+          + '(omistaja 2.9.2026: "isoisa mukaan ehdottomasti"): kun kello '
+          + 'saapuu vuoteen 1873, isoisan reitti piirtyy virtojen keskelle '
+          + 'ja kulkee ajan mukana - se kertoo, mita maailmaa han kulki. '
+          + 'Aiheluettelo docs/linssikatalogi.md osa 3 (Virtalinssit).',
         'LINSSEJA EI TAUOTETA (omistajan kortti 28.8.2026): epailtiin '
           + 'etta linssit pitavat vanhaa maailmankarttaa hengissa ja '
           + 'kuluttavat resursseja. Mittaus (v1280-eran tutkinta) '
