@@ -2045,6 +2045,25 @@ export const RAAMATTU = {
           + 'nakya entiseen tapaan. LAATUKALIBROINTI: rakennus itse ja '
           + 'yleisvaikutelma ratkaisevat hyvaksynnan, ymparoivien '
           + 'rakennusten sijoittelu saa poiketa todellisuudesta.',
+        'SIIRRON KOREOGRAFIA JA SIIRTYMAMUSIIKKI (omistaja 2.9.2026: '
+          + '"nappulan liikkeelle lahto voisi olla hieman viivytetty niin, '
+          + 'etta kartta ehtii lahtea hitaasti jo rullaamaan ... kiihdyttaa, '
+          + 'vakionopeus, jarruttaa ... laatta saapuu perille vahan ennen '
+          + 'kuin kartan panorointiliike loppuu ... kartta suht lahelle '
+          + 'zoomattuna"): ennakkozoomi 760 ms (v1433) -> kamera-ajo '
+          + 'TRAPETSIPROFIILILLA (rampit 0,3, keskiosa 1,43 x keskinopeus) '
+          + '-> nappula lahtee 300 ms kameran jalkeen ja saapuu 280 ms '
+          + 'ennen kameraa; ajon kesto = viive + nappulan matka + '
+          + 'saapumisero (rajat 1,2-6,2 s); SIIRTOZOOMIN_LAHENNYS 1,7 -> '
+          + '2,0 (katto 3,5 x ennallaan); saaton kynnys max(24 px, 6 % '
+          + 'ruudun leveydesta), jotta lyhytkin siirto saa saaton myos '
+          + 'puhelimella. Sama koreografia laivalla; lento oma. '
+          + 'SIIRTYMAMUSIIKKI: kolme raitaa (jalan, laiva, lento), 10-20 s '
+          + 'saumaton looppi, -33 LUFS, feidi 300/500 ms, voima 0,11 / '
+          + '0,11 / 0,06 (lento kabiiniaanen alla), vaistyy puheen alta; '
+          + 'puuttuva raita on hiljaa ilman virhetta; raidat ElevenLabs '
+          + 'Music -APIlla (varalla Lyria), ohje docs/moduulit/aanet.md '
+          + '(v1455). savuke-siirtokoreografia mittaa aikaleimat.',
         'KARTALLA NOSTOMERKKI ON PISTE (omistaja 2.9.2026: '
           + '"Karttasymboleja voitaisiin viela yksinkertaistaa. Kaikista '
           + 'muista kategorioista voisi tehda yksinkertaisesti vain '
@@ -3124,6 +3143,8 @@ export const RAAMATTU = {
           + 'todistus ja parven työnjako.',
         'docs/moduulit/lukijoilta.md — lukijoiden ehdotukset: worker, '
           + 'lomake, Lukijoilta-lehti ja kuratointi.',
+        'docs/moduulit/aanet.md — siirtymämusiikki ja äänet: raitojen '
+          + 'tuotanto-ohje (kesto, looppisauma, -33 LUFS, vienti).',
         'docs/moduulit/viitekuvat.md — viitekuvallinen herogenerointi: '
           + 'kohde tunnistetaan sen omasta Commons-kategoriasta, '
           + 'generointi ankkuroidaan 2–4 vapaasti lisensoituun '
