@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1446, teksti: 'Merkkiperheet yhteen mittaan syvässä zoomissa' },
   { v: 1445, teksti: 'Siirtoviivat ohuemmiksi (0,9 px, himmeys 0,55)' },
   { v: 1444, teksti: 'Raamattu: kysymykset omistajalle aina kortilla' },
   { v: 1443, teksti: 'Tilannetaulu: aamun erä v1436–v1442 ja poltto 02a' },
