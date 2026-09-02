@@ -1682,7 +1682,15 @@ export const RAAMATTU = {
           + 'Loistoaika / Matkakirjan ihme, Lehtien kansikuvat, '
           + 'Kuvituskuvat (kaikki muu). Kuvatilaukset ja kuittaukset '
           + 'kulkevat postilaatikon kautta (posti/fable-vanha.md <-> '
-          + 'posti/kuvatoimitus.md), R2-polku kohtaamiset/<kategoria>/.',
+          + 'posti/kuvatoimitus.md), R2-polku kohtaamiset/<kategoria>/. '
+          + 'KUVAPUTKEN PYSYVA TOIMINTATAPA (omistaja 2.9.2026, kuvaputken '
+          + 'kuittaus 14:02 UTC): jokainen tilaus menee ensin YKSITYISEEN '
+          + 'arviointiin; pelin R2:een vasta omistajan hyvaksynnan jalkeen '
+          + '(sivustolla tai chatissa); hylattya tai odottavaa kuvaa ei '
+          + 'vieda peliin. Kuvaputken osuus paattyy R2-vientiin ja '
+          + 'postikuittaukseen (tunnus, polku, mitat, aikalaiskuvalista); '
+          + 'pelin koodi- ja dataviitteet paivittaa FABLE julkaisuketjun '
+          + 'kautta, ei kuvaputki.',
         'NOSTOJEN SIIRTOVIIVAT (omistaja 1.9.2026 ilta: "otetaan '
           + 'siirtoviivat takaisin karttanostoille (esim. ateena)", v1432; '
           + '2.9.2026: "Lisaa siirto viivat, ne ei viela nay", v1438): '
