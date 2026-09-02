@@ -1,3 +1,42 @@
+## 2.9.2026 13:05 UTC — KUVATILAUS K3 — KARTTANOSTOT: Klimtin tiedekuntamaalaukset UUSIKSI (aihe vaihtuu: skandaalin hetki, ei tyhjä kehys)
+
+Omistaja katsoi K1:n kuvan `skandaali-klimtin-tiedekuntamaalaukset`
+(tyhjä kullattu kattokehys ja rullattu kangas telineiden alla) ja haluaa
+sen tilalle KIINNOSTAVAMMAN hetken. Uusi kuva korvaa vanhan samalla
+tunnuksella (sama R2-polku `kohtaamiset/kuvajono/`; vanhan saa
+ylikirjoittaa — tämä on omistajan lupa). Kategoria: KARTTANOSTOT.
+
+KOHTAUS: Secessionin näyttelysali, Wien, maaliskuu 1900. Gustav Klimtin
+"Filosofia" (pystysuuntainen kangas n. 4,3 × 3 m: sumuinen, sinivihreä
+alaston ihmisvirta, joka nousee ja vajoaa pimeyteen; alalaidassa
+valaistut kasvot, "Tieto") on juuri ripustettu valkoiseen, pelkistettyyn
+saliin. Sen edessä joukko Wienin yliopiston PROFESSOREITA mustissa
+frakeissa ja silintereissä, parrakkaita, ikääntyneitä: yksi osoittaa
+maalausta kävelykepillä suuttuneena, toinen on kääntänyt selkänsä,
+kolmas kirjoittaa kiihkeästi vetoomukseen. Vastapuolella nuoria
+Secessionin taiteilijoita ja naisia, jotka katsovat maalausta ihaillen.
+Klimt itse ei ole kuvassa. Valo: matala kevätaurinko korkeista
+ikkunoista + varhaiset sähkölamput; pölyhiukkasia valokiilassa.
+
+KAKSI KUVAKULMAA kuten Historian hetkissä (H2, 11:20):
+- `skandaali-klimtin-tiedekuntamaalaukset.jpg` (= LÄHIKUVA, pääkuva,
+  korvaa vanhan): kamera 1,5–2 m päässä vanhasta professorista, jonka
+  kasvot ovat punoittavat ja suu auki kesken lauseen, keppi kohotettuna
+  kohti maalausta; hänen olkansa yli näkyy "Filosofia" epätarkkana mutta
+  tunnistettavana taustalla, ja sen edessä toisten silinterit.
+- `skandaali-klimtin-tiedekuntamaalaukset-kauko.jpg`: koko sali,
+  maalaus keskellä seinällä, kaksi leiriä sen edessä.
+
+TYYLI: dokumenttivalokuva paikan päältä (H2:n fotorealismiohje: 50–85 mm
+lähikuvassa, matala syväterävyys, ihon ja villakankaan tekstuuri, hento
+rae, ei painterly/illustration/HDR), 3:2 1536×1024 JPEG sRGB, ei tekstiä.
+FAKTAT KUVAAN: 1900-luvun alun miesten muoti (frakki, silinteri,
+poskiparta), Secessionin sali sisältä valkoinen ja koristeeton, maalaus
+pystysuuntainen ja hämyinen (EI Klimtin kultakauden koristeellisuutta —
+Filosofia on tumma ja sumuinen), ei moderneja esineitä.
+
+Ei kuvadataa eikä salaisuuksia postiin. Kuittaa, kun kaksi kuvaa on R2:ssa.
+
 ## 2.9.2026 13:20 UTC — FABLEN TILANNEMUISTIO: iltapäivän erä v1450–v1453, yleiskuvituserä pelissä, neljä kuvatilausta jonossa
 
 Main v1452 (901fd5d3), v1453 PR #1911 CI:ssä. Iltapäivällä julkaistu:
