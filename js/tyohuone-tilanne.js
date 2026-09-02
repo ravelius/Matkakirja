@@ -92,6 +92,16 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1463: ASSETIT R2:EEN (vaihe 1) - assetOsoite + R2_ASSETIT-kytkin (oletus pois), miniatyyritauluun 41 R2-tunnusta (varataplia kunnes kuvat tulevat), vie-assetit.yml. Ei nakyvaa muutosta viela.',
+  'v1462: KOHTAAMISBRIEFIT - tools/kohtaamisbriefit.mjs (41 kohtaamista, 33 ilman kuvaa) kuvaputkelle; Raamattu: JPG, ei kuvia repoon.',
+  'v1461: PEILAA MEDIA - vain manifesti, retryt; ajo 3 h -> 4 min.',
+  'v1460: SKANDAALIKORTIT - kaikilla 83:lla taysi teksti (3-4 kappaletta) ja kuvagalleria; Bulgarian 3 skandaalilla Commonsin aikalaiskuvat. Avaa Sofian vihellyskohu ja Battenberg.',
+  'v1459 + POLTTO: PATINA KIRKAS - pohja 2026-09-02b (vaaleampi, kyllaisyys reilusti, rae ja pehmennys puolet), nostot 02e, viivat 02b. Katso Balkan z5 ja maailma.',
+  'v1458: ULOIN ZOOMI - vaakaruudulla koko lauta nakyy, lauta kerran, pergamenttia ympärille. Zoomaa ulos 2000x1300-ruudulla.',
+  'v1457: JOKAINEN NOSTO KARTALLA - 37 uutta kohdekartan pistetta 20 kaupungissa, 20 kattoVapaa-nostoa paakartalle, 6 hetkea kartalle (Palos, Sanlucar, Restelo, Trafalgar, Kristiania, Roskilde) visoineen. Katso Pariisin ja Lissabonin kohdekartat.',
+  'v1456: TUMMENNUS POIS kokonaan; MATKUSTA ei liikuta kameraa, heiton jalkeen sovitus kaikkiin kohteisiin (kortti ja palkit vaistetaan), lento sovittaa heti. Heita noppa Ateenassa; valitse lento.',
+  'v1455: SIIRRON KOREOGRAFIA - nappula lahtee 300 ms kameran jalkeen ja saapuu 280 ms ennen; trapetsiajo; lahennys 2,0. Siirtymamusiikin kanava (raidat puuttuvat viela). Kavele Ateenasta.',
+  'v1454: NOSTOMERKIT PISTEIKSI (paitsi vuori, vesi, skandaali, elaintaky, ihme); elaintayt ja hetket poltetaan. Kreikan merikilpikonna laatassa.',
   'v1459: PATINA KIRKAS - vaaleampi, kyllaisyys reilusti, rae ja pehmennys puolet. Nakyy laatoissa polton 02b jalkeen: katso maailmanakyma ja Balkan.',
   'v1458: ULOIN ZOOMI - vaakaruudulla koko lauta nakyy, lauta kerran, pergamenttia sivuilla. Zoomaa ulos 2000x1300-ruudulla.',
   'v1457: KAIKKI NOSTOT KARTALLA - 37 kohdekarttapistetta 20 kaupungissa, 20 lahialueen nostoa takaisin paakartalle (Vitosa, Boyana, Versailles...), Historian hetket kartalle (Palos, Sanlucar, Restelo, Trafalgar, Kristiania, Roskilde) visoineen. Katso Pariisin ja Lissabonin kohdekartat, Sevillan seutu.',
