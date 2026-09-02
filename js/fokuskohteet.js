@@ -949,6 +949,36 @@ function maastonimenPari(kohde, paikka) {
  */
 let maastoParitTaulu = null;
 
+/*
+ * NIMI KUULUU MERKILLE VAIN, JOS SE ON MERKIN VIERESSÄ (Fable 2.9.2026,
+ * N3-katselmointi). Parin etäisyysraja (PARIN_ETAISYYS 400) kertoo,
+ * että kyse on SAMASTA kohteesta — ei sitä, että nimi saa muuttaa
+ * merkin luo. Kaspianmeren merkki on Iranin pohjoisrannikon edustalla
+ * ja nimi järven keskellä 174 lautayksikön päässä: jos merkki ottaisi
+ * nimen, "Kaspianmeri" lukisi Iranin rannassa eikä meren päällä. Sama
+ * koskee jokia, joiden merkki on suistossa ja nimi uoman keskellä.
+ *
+ * Raja on kauimmaisen aidon lähiparin (Alpit 114,7) yläpuolella
+ * (mitattu 2.9.2026: Senegaljoki 118 omistaa, Veiksel 124 ja Rein 130
+ * jäävät nimikerrokselle, Kaspianmeri 174, Niili ja Jangtse yli 180):
+ * sitä lähempänä nimi ja merkki ovat samaa piirrosta, kauempana nimi
+ * jää nimikerroksen paikalleen ja merkki vaikenee kuten ennen.
+ */
+const OMISTUKSEN_ETAISYYS = 120;
+
+function nimiKuuluuMerkille(pari, paikka) {
+  let x = pari?.x;
+  let y = pari?.y;
+  if (!Number.isFinite(x) && Array.isArray(pari?.pisteet) && pari.pisteet.length >= 2) {
+    const keski = pari.pisteet[Math.floor(pari.pisteet.length / 2)];
+    [x, y] = keski;
+  }
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return false;
+  let dx = Math.abs(x - paikka.x);
+  if (dx > LAUDAN_YMPARYS / 2) dx = LAUDAN_YMPARYS - dx;
+  return Math.hypot(dx, y - paikka.y) <= OMISTUKSEN_ETAISYYS;
+}
+
 function maastoParit() {
   if (maastoParitTaulu) return maastoParitTaulu;
   const kertoja = new Map();
@@ -959,10 +989,14 @@ function maastoParit() {
   const vaikenevat = new Set();
   for (const lista of Object.values(KOHDE_MAAT)) {
     for (const k of lista) {
-      const pari = maastonimenPari(k, k.laudat?.maailmankartta);
+      const paikka = k.laudat?.maailmankartta;
+      const pari = maastonimenPari(k, paikka);
       if (!pari) continue;
-      if ((kertoja.get(k.id) ?? 0) > 1) vaikenevat.add(k.id);
-      else omistetut.add(pari);
+      if ((kertoja.get(k.id) ?? 0) > 1 || !nimiKuuluuMerkille(pari, paikka)) {
+        vaikenevat.add(k.id);
+      } else {
+        omistetut.add(pari);
+      }
     }
   }
   maastoParitTaulu = { omistetut, vaikenevat };
