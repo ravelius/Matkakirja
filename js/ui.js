@@ -910,12 +910,68 @@ const SAAPUMISEN_KUPLA_TOINEN = 'Klikkaa kaupungin kultaista merkkiä kartalla.'
  * ruudun kokoinen olio (kultalevy ja hengittävä halo mitoitetaan
  * ruudulle, paivitaFokusKohdeMitat): laatikon osuutena sama luku olisi
  * pienellä laatikolla muutama pikseli ja isolla puoli ruutua. 14 %
- * kummastakin mitasta on iPhonen 390x844 ruudulla 55 x 118 px, eli
- * reilusti enemmän kuin kohdemerkin laajin aste (halo 1,42 x 26 px
- * ~ 37 px) ja sen yläpuolelle latova nimi — merkit eivät leikkaudu
- * reunaan silloinkaan, kun kohde on tasan laatikon kulmassa.
+ * kummastakin mitasta on 1280x800-ruudun käytettävällä alueella
+ * (914 x 626 px) 128 x 88 px, eli reilusti enemmän kuin kohdemerkin
+ * laajin aste (halo 1,42 x 26 px ~ 37 px) ja sen yläpuolelle latova
+ * nimi — merkit eivät leikkaudu reunaan silloinkaan, kun kohde on tasan
+ * laatikon kulmassa.
+ *
+ * MARGINAALI MITATAAN KÄYTETTÄVÄSTÄ ALUEESTA, joka on paneeli miinus
+ * kartan päällä olevat kalusteet (SOVITUKSEN_KALUSTEET,
+ * sovituksenAlue). Ilman sitä kohde oli "ruudulla" mutta
+ * MATKAPÄIVÄKIRJA-kortin alla — mitattu vika, ks. kalustelistan
+ * perustelu.
  */
 const KOHDESOVITUKSEN_MARGINAALI = 0.14;
+/*
+ * RUUDUN KALUSTEET, JOIDEN ALLE KOHDE EI SAA JÄÄDÄ (omistajan tarkennus
+ * 2.9.2026: *"reunoille jää vielä vähän lisää tilaa"* koskee myös
+ * kartan päällä olevia kalusteita).
+ *
+ * Ensimmäinen toteutus sovitti kohteet PANEELIIN, ja mitattu seuraus
+ * näkyi heti savukkeessa: Ateenasta lennettäessä Rooman merkki asettui
+ * kohtaan 187 x 242 px — teknisesti ruudulla, mutta MATKAPÄIVÄKIRJA-
+ * kortin alle (kortti peittää nurkasta 346 x 253 px). Käytettävä alue
+ * on siis paneeli MIINUS kalusteet.
+ *
+ * LISTA ON VALITSIMIA EIKÄ MITTOJA, ja mitat luetaan ajossa
+ * (getBoundingClientRect) — sama ratkaisu ja sama perustelu kuin
+ * asteviivainten väistöllä (js/fokusmitat.js KALUSTEET): kortin korkeus
+ * riippuu merkinnän pituudesta, kartuutsin leveys maan nimestä ja
+ * napit turva-alueesta, joten kovakoodattu luku olisi väärin jo
+ * seuraavassa maassa.
+ *
+ * Yläpalkki on listalla vaikka se on nykyään karttapaneelin
+ * YLÄPUOLELLA: leikkaustesti hylkää sen itsestään, eikä listaa tarvitse
+ * muistaa muuttaa, jos palkki joskus kelluu kartan päälle.
+ */
+const SOVITUKSEN_KALUSTEET = [
+  '.topbar',
+  '.fact-card',
+  '.fokus-kartuutsi',
+  '.fokus-jana',
+  // Napit eikä koko rivi: rivi on ruudun levyinen mutta läpinäkyvä,
+  // ja sen laatikko veisi alalaidasta kaistan, jossa ei ole mitään.
+  // Sama valinta kuin js/fokusmitat.js KALUSTEET-listalla.
+  '.toimintorivi button',
+  '.pollo-nappi.pollo-kelluu',
+];
+/*
+ * Kuinka suuri osuus alueesta on jäätävä jäljelle, kun yksi kaluste
+ * väistetään. Kaluste, joka veisi enemmän, jätetään väistämättä: koko
+ * ruudun mittainen kaista olisi pahempi vika kuin kortin alle jäävä
+ * merkki, ja sovituksen on toimittava myös oudoilla ruutukoilla.
+ */
+const SOVITUKSEN_VAHIN_OSUUS = 0.45;
+/*
+ * VEITSENTERÄN SIETO. Sovitus asettaa laatikon tasan marginaalin
+ * reunalle, joten seuraava tarkistus vertaa kahta lukua, jotka ovat
+ * matematiikassa samat mutta liukuluvuissa harvoin: ilman sietoa jo
+ * pyöristysvirhe kertoisi "ei mahdu" ja peli virittäisi uuden ajon
+ * joka heitolla. Kaksi pikseliä on pienempi kuin mikään ruudulla
+ * näkyvä ero ja isompi kuin kertyvä pyöristys.
+ */
+const SOVITUKSEN_SIETO_PX = 2;
 /*
  * Sovituksen kesto. Kartan muut ajot ovat 2 s (AJO_MS) ja ennakkozoomi
  * 760 ms; tämä on niiden väliltä ja samaa lajia kuin ennakkozoomi —
@@ -10481,36 +10537,118 @@ export class UI {
     const kartta = this.kartta;
     if (!kartta?.ajaKamera) return false;
     const paneW = this.mapPane?.clientWidth ?? 0;
-    const paneH = this.mapPane?.clientHeight ?? 0;
-    if (!paneW || !paneH) return false;
+    const pane = this.mapPane?.getBoundingClientRect();
+    if (!paneW || !(pane?.width > 0) || !(pane.height > 0)) return false;
     const nakyva = this.nakyvaAlue?.();
     if (!(nakyva?.skaala > 0)) return false;
-    const reunaX = paneW * KOHDESOVITUKSEN_MARGINAALI;
-    const reunaY = paneH * KOHDESOVITUKSEN_MARGINAALI;
-    // Marginaali laudan yksiköiksi nykyisellä mittakaavalla: mahtuuko
-    // laatikko jo ruudulle niin, että reunoille jää tilaa?
-    const varaX = reunaX / nakyva.skaala;
-    const varaY = reunaY / nakyva.skaala;
-    const mahtuu = bbox.x >= nakyva.x + varaX
-      && bbox.x + bbox.w <= nakyva.x + nakyva.w - varaX
-      && bbox.y >= nakyva.y + varaY
-      && bbox.y + bbox.h <= nakyva.y + nakyva.h - varaY;
+    const alue = this.sovituksenAlue(pane);
+    const leveys = alue.right - alue.left;
+    const korkeus = alue.bottom - alue.top;
+    if (!(leveys > 0) || !(korkeus > 0)) return false;
+    const reunaX = leveys * KOHDESOVITUKSEN_MARGINAALI;
+    const reunaY = korkeus * KOHDESOVITUKSEN_MARGINAALI;
+    /*
+     * LAATIKKO RUUDUN PIKSELEIKSI nykyisellä näkymällä. Vertailu tehdään
+     * ruudulla eikä laudan yksiköissä, koska käytettävä alue on ruudun
+     * eikä laudan käsite: kalusteet eivät liiku kartan mukana.
+     */
+    const s = nakyva.skaala;
+    const vasen = pane.left + (bbox.x - nakyva.x) * s;
+    const yla = pane.top + (bbox.y - nakyva.y) * s;
+    const sieto = SOVITUKSEN_SIETO_PX;
+    const mahtuu = vasen >= alue.left + reunaX - sieto
+      && vasen + bbox.w * s <= alue.right - reunaX + sieto
+      && yla >= alue.top + reunaY - sieto
+      && yla + bbox.h * s <= alue.bottom - reunaY + sieto;
     if (mahtuu) return false;
-    const tilaaX = Math.max(1, paneW - 2 * reunaX);
-    const tilaaY = Math.max(1, paneH - 2 * reunaY);
+    const tilaaX = Math.max(1, leveys - 2 * reunaX);
+    const tilaaY = Math.max(1, korkeus - 2 * reunaY);
     // Yhteen riviin tai sarakkeeseen asettuva joukko antaa nollan
     // mitan; silloin se suunta ei rajoita mittakaavaa lainkaan.
     const tarvittu = Math.min(
       bbox.w > 0 ? tilaaX / bbox.w : Infinity,
       bbox.h > 0 ? tilaaY / bbox.h : Infinity,
     );
-    const skaala = Math.min(nakyva.skaala, tarvittu);
+    const skaala = Math.min(s, tarvittu);
     if (!(skaala > 0) || !Number.isFinite(skaala)) return false;
+    /*
+     * KAMERA KESKITTÄÄ AINA PANEELIN KESKELLE (js/kartta.js
+     * kameranKohde), mutta kohteiden on osuttava KÄYTETTÄVÄN ALUEEN
+     * keskelle. Ero on kalusteiden verran, ja se korjataan siirtämällä
+     * ajon keskipistettä laudalla saman verran vastakkaiseen suuntaan:
+     * piste `Cb - d/skaala` piirtyy paneelin keskelle täsmälleen
+     * silloin, kun `Cb` osuu ruudulla d pikseliä siitä sivuun.
+     */
+    const dx = (alue.left + alue.right) / 2 - (pane.left + pane.right) / 2;
+    const dy = (alue.top + alue.bottom) / 2 - (pane.top + pane.bottom) / 2;
     void kartta.ajaKamera(
-      { x: bbox.x + bbox.w / 2, y: bbox.y + bbox.h / 2, leveys: paneW / skaala },
+      {
+        x: bbox.x + bbox.w / 2 - dx / skaala,
+        y: bbox.y + bbox.h / 2 - dy / skaala,
+        leveys: paneW / skaala,
+      },
       { kesto },
     );
     return true;
+  }
+
+  /**
+   * KÄYTETTÄVÄ ALUE = KARTTAPANEELI MIINUS KALUSTEET (ks.
+   * SOVITUKSEN_KALUSTEET).
+   *
+   * YKSI KALUSTE VÄISTETÄÄN YHDELLÄ REUNALLA, ja reuna valitaan
+   * HINNAN mukaan: se, joka syö vähiten nykyisestä alueesta. Nurkassa
+   * istuva MATKAPÄIVÄKIRJA-kortti (346 x 253 px 1280 x 800 -ruudulla)
+   * maksaa vasempana kaistana 27 % leveydestä ja ylänauhana 35 %
+   * korkeudesta — vasen voittaa, ja kortin ALLE jäävä kartta pysyy
+   * käytössä pystysuunnassa. Nelikulmainen alue eikä monikulmio: laatikko
+   * riittää sovitukselle, ja se on ainoa muoto, jonka kamera ymmärtää.
+   *
+   * SUURIN ENSIN, jotta pienet kalusteet mitataan jo kavennettua aluetta
+   * vasten: alalaidan kartuutsi jää päiväkirjan kaistan taakse eikä vie
+   * enää omaa kaistaansa.
+   *
+   * LIIAN AHNAS KALUSTE OHITETAAN (SOVITUKSEN_VAHIN_OSUUS): jos yksikään
+   * reuna ei mahdu väistämään, alue jää ennalleen. Silloin kohde voi
+   * jäädä kalusteen alle — mutta se on lievempi vika kuin alue, johon ei
+   * mahdu mitään.
+   */
+  sovituksenAlue(pane) {
+    const alue = {
+      left: pane.left, top: pane.top, right: pane.right, bottom: pane.bottom,
+    };
+    const laatikot = [];
+    for (const valitsin of SOVITUKSEN_KALUSTEET) {
+      for (const osa of document.querySelectorAll(valitsin)) {
+        // Piilotettu kaluste ei peitä mitään; nollan kokoinen ei myöskään.
+        if (osa.hidden || osa.closest('[hidden]')) continue;
+        const r = osa.getBoundingClientRect();
+        if (!(r.width > 0) || !(r.height > 0)) continue;
+        const tyyli = getComputedStyle(osa);
+        if (tyyli.visibility === 'hidden' || Number(tyyli.opacity) === 0) continue;
+        laatikot.push(r);
+      }
+    }
+    laatikot.sort((a, b) => b.width * b.height - a.width * a.height);
+    for (const r of laatikot) {
+      const x0 = Math.max(alue.left, r.left);
+      const x1 = Math.min(alue.right, r.right);
+      const y0 = Math.max(alue.top, r.top);
+      const y1 = Math.min(alue.bottom, r.bottom);
+      // Ei osu alueeseen (esim. yläpalkki paneelin yläpuolella).
+      if (!(x1 > x0) || !(y1 > y0)) continue;
+      const w = alue.right - alue.left;
+      const h = alue.bottom - alue.top;
+      const ehdokkaat = [
+        { reuna: 'left', arvo: x1, hinta: (x1 - alue.left) / w },
+        { reuna: 'right', arvo: x0, hinta: (alue.right - x0) / w },
+        { reuna: 'top', arvo: y1, hinta: (y1 - alue.top) / h },
+        { reuna: 'bottom', arvo: y0, hinta: (alue.bottom - y0) / h },
+      ].sort((a, b) => a.hinta - b.hinta);
+      const valinta = ehdokkaat.find((e) => e.hinta <= 1 - SOVITUKSEN_VAHIN_OSUUS);
+      if (valinta) alue[valinta.reuna] = valinta.arvo;
+    }
+    return alue;
   }
 
   /**
@@ -10966,14 +11104,11 @@ export class UI {
     const { game } = this;
     // Nopanheitto keskeyttää tarinan: luenta häipyy pehmeästi pois.
     haivytaLuenta(this);
-    this.run(
-      () => {
-        const chosen = game.actionTravel('land');
-        return chosen.ok ? game.actionRoll() : chosen;
-      },
-      // Sama jälkinäytös kuin doRollissa: noppa ensin, sitten sovitus.
-      { after: (result) => this.heitonJalkeen(result) },
-    );
+    // Sama jälkinäytös kuin doRollissa: noppa ensin, sitten sovitus.
+    this.heitaJaSovita(() => {
+      const chosen = game.actionTravel('land');
+      return chosen.ok ? game.actionRoll() : chosen;
+    });
   }
 
   /**
@@ -17176,27 +17311,34 @@ export class UI {
     if (this.radioPaalla()) return;
     // Nopanheitto keskeyttää tarinan: luenta häipyy pehmeästi pois.
     haivytaLuenta(this);
-    this.run(() => this.game.actionRoll(), { after: (result) => this.heitonJalkeen(result) });
+    this.heitaJaSovita(() => this.game.actionRoll());
   }
 
   /**
-   * Nopanheiton jälkinäytös: noppa pyörii, ja sen pysähdyttyä kamera
-   * sovittaa vaihtoehdot ruudulle (omistaja 2.9.2026, ks. tiedoston
-   * alun lohko KOHTEIDEN SOVITUS RUUDULLE).
+   * Nopanheitto ja sen jälkinäytös: noppa pyörii, rivi piirtyy, ja
+   * vasta sitten kamera sovittaa vaihtoehdot ruudulle (omistaja
+   * 2.9.2026, ks. tiedoston alun lohko KOHTEIDEN SOVITUS RUUDULLE).
    *
-   * JÄRJESTYS ON EHTO. Sovitus tehdään VASTA nopan pysähdyttyä: noppa
-   * lentää nappulan vierestä laudalle ruudun pikseleissä, ja kesken
-   * heiton alkava kamera-ajo siirtäisi maalin sen alta. Valinta taas ei
-   * ole vielä tapahtunut, joten kartta ehtii asettua ennen kuin pelaaja
-   * osoittaa kohdetta.
+   * JÄRJESTYS ON EHTO, JA SE ON KAKSIOSAINEN.
    *
-   * Sovitus ei ole odotettava vaihe: ajo saa jäädä pyörimään, ja
+   *   1. NOPAN JÄLKEEN. Noppa lentää nappulan vierestä laudalle RUUDUN
+   *      pikseleissä, ja kesken heiton alkava kamera-ajo siirtäisi
+   *      maalin sen alta. Siksi sovitus ei ole `after`-vaiheessa.
+   *   2. RENDERIN JÄLKEEN, eli `run`-lupauksen ratkettua. Käytettävä
+   *      alue luetaan RUUDULTA (sovituksenAlue), ja juuri heiton
+   *      päätteeksi ruudun kalusteet vaihtuvat: Matkusta-nappi katoaa
+   *      rivistä siirtovaiheen ajaksi ja kohdemerkit ilmestyvät. Alueen
+   *      lukeminen ennen sitä antoi mitatusti eri laatikon kuin sen
+   *      jälkeen, ja kamera olisi asettunut kahden eri totuuden väliin.
+   *
+   * Sovitus itse ei ole odotettava vaihe: ajo saa jäädä pyörimään, ja
    * pelaajan ele voittaa sen kuten kaikki muutkin kamera-ajot.
    */
-  async heitonJalkeen(result) {
-    await this.animateDie(result?.die);
-    if (this.dead) return;
-    this.sovitaSiirtokohteet();
+  heitaJaSovita(teko) {
+    return this.run(teko, { after: (result) => this.animateDie(result?.die) })
+      .then(() => {
+        if (!this.dead) this.sovitaSiirtokohteet();
+      });
   }
 
 

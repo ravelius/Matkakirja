@@ -24,10 +24,15 @@
  *      heitetty noppa sovittaa kameran niin, että jokaisen valittavan
  *      kohteen merkki JA nimi ovat kokonaan ruudulla, eikä yksikään
  *      kohde ole reunaa lähempänä kuin sovituksen marginaali sallii.
+ *      EIKÄ KALUSTEEN ALLA: MATKAPÄIVÄKIRJA-kortti, kartuutsi,
+ *      mittajana, alanappirivi ja pöllö eivät saa peittää yhtään
+ *      kohdetta (js/ui.js sovituksenAlue).
  *   4. EI ZOOMATA ULOS TURHAAN. Kun kaikki mahtuu jo, sovitus palauttaa
  *      false eikä kamera liiku pikseliäkään.
  *   5. LENTO SOVITTAA HETI. Lentolistan avaus (ilman nopanheittoa) tuo
- *      jokaisen mahdollisen lentokohteen ruudulle samalla marginaalilla.
+ *      jokaisen mahdollisen lentokohteen ruudulle samalla marginaalilla
+ *      ja kalusteiden ulkopuolelle — mitattu vika 2.9.2026: Ateenasta
+ *      Rooman merkki oli ruudulla mutta MATKAPÄIVÄKIRJA-kortin alla.
  *   6. EI SIVUVIRHEITÄ.
  *
  * MIKSI SAVUKE EIKÄ YKSIKKÖTESTI: kysymys on RUUDUN pikseleistä —
@@ -133,6 +138,29 @@ const MERKIT = () => {
       ala: +Math.max(...laatikot.map((r) => r.bottom)).toFixed(1),
     });
   }
+  /*
+   * KALUSTEET RUUDULTA samoilla valitsimilla kuin sovitus käyttää
+   * (js/ui.js SOVITUKSEN_KALUSTEET). Lista on tässä toisinto eikä
+   * tuonti: savuke ajaa selaimessa eikä näe moduulin vakioita, ja jos
+   * listat eroavat, väite kaatuu — mikä on juuri oikea hälytys.
+   */
+  const kalusteet = [];
+  for (const valitsin of ['.fact-card', '.fokus-kartuutsi', '.fokus-jana',
+    '.toimintorivi button', '.pollo-nappi.pollo-kelluu']) {
+    for (const osa of document.querySelectorAll(valitsin)) {
+      if (osa.hidden || osa.closest('[hidden]')) continue;
+      const r = osa.getBoundingClientRect();
+      if (!(r.width > 0) || !(r.height > 0)) continue;
+      if (getComputedStyle(osa).visibility === 'hidden') continue;
+      kalusteet.push({
+        nimi: valitsin,
+        left: +r.left.toFixed(1),
+        top: +r.top.toFixed(1),
+        right: +r.right.toFixed(1),
+        bottom: +r.bottom.toFixed(1),
+      });
+    }
+  }
   return {
     pane: {
       left: +pane.left.toFixed(1),
@@ -142,6 +170,7 @@ const MERKIT = () => {
       w: +pane.width.toFixed(1),
       h: +pane.height.toFixed(1),
     },
+    kalusteet,
     kohteet,
   };
 };
@@ -153,13 +182,16 @@ const MERKIT = () => {
  * JOKIN sen kopioista täyttää ehdon.
  */
 function tarkista(mitat, marginaali) {
-  const { pane, kohteet } = mitat;
+  const { pane, kohteet, kalusteet } = mitat;
   const varaX = pane.w * marginaali;
   const varaY = pane.h * marginaali;
   const sisalla = (k) => k.vasen >= pane.left && k.oikea <= pane.right
     && k.yla >= pane.top && k.ala <= pane.bottom;
   const marginaalissa = (k) => k.kx >= pane.left + varaX && k.kx <= pane.right - varaX
     && k.ky >= pane.top + varaY && k.ky <= pane.bottom - varaY;
+  // Kalusteen alla = merkin (tai nimen) laatikko leikkaa kalusteen.
+  const vapaana = (k) => !kalusteet.some((kal) => k.oikea > kal.left && k.vasen < kal.right
+    && k.ala > kal.top && k.yla < kal.bottom);
   const niput = new Map();
   for (const k of kohteet) {
     const lista = niput.get(k.avain) ?? [];
@@ -168,11 +200,15 @@ function tarkista(mitat, marginaali) {
   }
   const ulkona = [];
   const reunalla = [];
+  const kalusteenAlla = [];
   for (const lista of niput.values()) {
     if (!lista.some(sisalla)) ulkona.push(lista[0]);
     else if (!lista.some((k) => sisalla(k) && marginaalissa(k))) reunalla.push(lista[0]);
+    else if (!lista.some((k) => sisalla(k) && vapaana(k))) kalusteenAlla.push(lista[0]);
   }
-  return { ulkona, reunalla, kohteita: niput.size };
+  return {
+    ulkona, reunalla, kalusteenAlla, kohteita: niput.size,
+  };
 }
 
 /* --- peli Ateenaan ja kartta lähikuvaan --------------------------- */
@@ -323,6 +359,10 @@ vaadi('3d jokainen kohde merkkeineen ja nimineen on kokonaan ruudulla',
 vaadi('3e reunoille jäi tilaa (yksikään kohde ei ole 10 % lähempänä laitaa)',
   heitonTulos.reunalla.length === 0, JSON.stringify(heitonTulos.reunalla));
 
+vaadi('3f yksikään kohde ei jää kalusteen alle (päiväkirja, kartuutsi, jana, napit)',
+  heitonTulos.kalusteenAlla.length === 0,
+  JSON.stringify({ alla: heitonTulos.kalusteenAlla, kalusteet: heitonMitat.kalusteet }));
+
 const heitonJalkeen = join(KAAPPAUKSET, 'kamera-ateena-heiton-jalkeen.png');
 await sivu.screenshot({ path: heitonJalkeen });
 
@@ -378,6 +418,16 @@ vaadi('5c jokainen lentokohde on merkkeineen kokonaan ruudulla',
   JSON.stringify({ kohteet: lennonTulos.kohteita, ulkona: lennonTulos.ulkona }));
 vaadi('5d lentokohteiden reunoille jäi tilaa',
   lennonTulos.reunalla.length === 0, JSON.stringify(lennonTulos.reunalla));
+
+/*
+ * 5e ON TÄMÄN SAVUKKEEN OMA BUGIVÄITE (2.9.2026): Ateenasta Rooman
+ * merkki asettui kohtaan 187 x 242 px, eli MATKAPÄIVÄKIRJA-kortin alle
+ * (kortti 10..356 x 72..325). Väite kaatuu heti, jos käytettävä alue
+ * palaa pelkäksi paneeliksi.
+ */
+vaadi('5e lentokohde ei jää MATKAPÄIVÄKIRJA-kortin eikä muun kalusteen alle',
+  lennonTulos.kalusteenAlla.length === 0,
+  JSON.stringify({ alla: lennonTulos.kalusteenAlla, kalusteet: lennonMitat.kalusteet }));
 
 const lentoKaappaus = join(KAAPPAUKSET, 'kamera-lento-valittu.png');
 await sivu.screenshot({ path: lentoKaappaus });
