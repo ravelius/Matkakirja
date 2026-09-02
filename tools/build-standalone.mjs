@@ -490,6 +490,16 @@ const MODULES = [
    * kohteliaaseen riviin ilman virhettä.
    */
   'js/kuvagalleria.js',
+  /*
+   * Karttasymbolien kirjasto ennen nähtävyyksiä (2.9.2026): kohdekartta
+   * piirtää Matkakirjan ihmeen tähden samasta kirjastosta kuin
+   * pääkartta (piirraNostosymboli, tunnus `ihme`) — Raamattu,
+   * SYMBOLITAKSONOMIA. Kirjasto tuo vain mapartin, joka on listan
+   * kärjessä, joten se voi asua näin ylhäällä; alempana olevat
+   * merkkikerrokset (fokuskohteet, fokusnosto, karttavalot) saavat
+   * sen samalta riviltä.
+   */
+  'js/fokusnosto-symbolit.js',
   // M4: nähtävyydet ennen opasta (opas tuo sen apurit).
   'js/nahtavyydet.js',
   'js/opas.js',
@@ -584,8 +594,12 @@ const MODULES = [
    * Karttasymbolien kirjasto ennen kohteita ja täkynostoa (molemmat
    * piirtävät symbolinsa sillä — Raamattu, SYMBOLITAKSONOMIA). Kerros
    * tuo vain mapartin ja äänet, jotka ovat jo yllä.
+   *
+   * SIIRRETTY YLEMMÄS 2.9.2026: myös kaupunkilehden kohdekartta
+   * piirtää sillä Matkakirjan ihmeen tähden (js/nahtavyydet.js), ja
+   * nähtävyydet ovat listalla paljon ennen tätä kohtaa. Kirjasto on
+   * siis nyt nähtävyyksien yläpuolella; tässä ei ole enää riviä.
    */
-  'js/fokusnosto-symbolit.js',
   /*
    * Kategoria per kaupunki -ryhmittely ennen kohteita (js/fokuskohteet.js
    * tuo sen). Se tuo vain symbolikirjaston kategorianimet, jotka ovat

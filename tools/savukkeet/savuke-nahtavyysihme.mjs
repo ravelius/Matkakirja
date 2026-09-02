@@ -233,6 +233,80 @@ vaadi('ihmeettömässä jutussa ei ole nappia eikä nauhaa',
   tila.nappeja === 0 && tila.nauhoja === 0,
   JSON.stringify({ nappeja: tila.nappeja, nauhoja: tila.nauhoja }));
 await suljeKohde();
+
+/* --- 4a: IHMEEN TÄHTI KOHDEKARTALLA (omistajan tilaus 2.9.2026) ---
+ *
+ * *"karttaan voisi tehdä pienen tähden jokaisen kohteen yläreunaan,
+ * jos sinne on generoitu myös tällainen historiallinen kuva
+ * nykyaikaisen kuvan lisäksi. eli merkki matkakirjan ihmeestä. kartan
+ * yläreunassa voisi olla selite"*.
+ *
+ * Väite mittaa neljä asiaa: tähtiä on täsmälleen niillä kohteilla,
+ * joilla on ihme (Ateenassa kolme: agora, Akropolis ja Zeuksen
+ * temppeli = Olympieion); tähti on merkin YLÄREUNASSA eikä sen
+ * keskellä; tähti on sama kompassiruusu kuin pääkartalla
+ * (.nostosym-tahti, ei uutta muotoa); ja selite on kartalla nimeltä.
+ * Ihmeetön kaupunki (Sofia) tarkistetaan lohkossa 4b.
+ */
+const tahdet = () => sivu.evaluate(() => {
+  const kehys = document.querySelector('.kartta-kehys');
+  const pisteet = [...(kehys?.querySelectorAll('.maakartta-piste.kohde-numero') ?? [])];
+  return {
+    tahdelliset: pisteet
+      .filter((p) => p.querySelector('.kohde-ihmetahti'))
+      .map((p) => p.querySelector('.kohde-nimi')?.textContent ?? '?'),
+    pisteita: pisteet.length,
+    // Tähden keskikohta suhteessa merkin keskikohtaan: negatiivinen
+    // = merkin yläpuolella.
+    ylareunassa: pisteet.filter((p) => {
+      const t = p.querySelector('.kohde-ihmetahti');
+      if (!t) return false;
+      const a = p.getBoundingClientRect();
+      const b = t.getBoundingClientRect();
+      return (b.y + b.height / 2) < (a.y + a.height / 2);
+    }).length,
+    // Vain merkkien tähdet: selitteellä on sama luokka, ja se
+    // lasketaan erikseen (seliteTahtia).
+    kompassiruusuja: kehys
+      ? kehys.querySelectorAll('.maakartta-piste .kohde-ihmetahti .nostosym-tahti').length : 0,
+    selite: kehys?.querySelector('.kartta-ihmeselite')?.textContent?.trim() ?? null,
+    seliteTahtia: kehys
+      ? kehys.querySelectorAll('.kartta-ihmeselite .nostosym-tahti').length : 0,
+  };
+});
+
+let merkit = await tahdet();
+vaadi('Ateenan kohdekartalla tähti on tasan ihmekohteilla',
+  merkit.tahdelliset.length === 3
+  && ['Antiikin agora', 'Akropolis', 'Zeuksen temppeli']
+    .every((n) => merkit.tahdelliset.includes(n)),
+  JSON.stringify(merkit.tahdelliset));
+vaadi('tähti istuu merkin yläreunassa',
+  merkit.ylareunassa === merkit.tahdelliset.length,
+  `${merkit.ylareunassa}/${merkit.tahdelliset.length}`);
+vaadi('tähti on sama kompassiruusu kuin pääkartalla (.nostosym-tahti)',
+  merkit.kompassiruusuja === merkit.tahdelliset.length,
+  `${merkit.kompassiruusuja} ruusua`);
+vaadi('kartalla on selite "Matkakirjan ihme" samalla tähdellä',
+  merkit.selite === 'Matkakirjan ihme' && merkit.seliteTahtia === 1,
+  JSON.stringify({ selite: merkit.selite, tahtia: merkit.seliteTahtia }));
+
+await sivu.evaluate(() => window.matkakirja.ui.closeArrival());
+await sivu.waitForTimeout(600);
+
+/* --- 4b: ihmeetön kaupunki ei saa tähteä eikä selitettä ---
+ *
+ * Tokio on tämän laudan (`maailma`, 14 kaupunkia) kohdekartallinen
+ * kaupunki, jonka yhdelläkään kohteella ei ole ihmettä. Sofia olisi
+ * yhtä hyvä koe, mutta se ei ole tällä laudalla lainkaan.
+ */
+await avaaKaupunki('tokio');
+merkit = await tahdet();
+vaadi('Tokion kohdekartta piirtyi kohteineen',
+  merkit.pisteita > 0, `${merkit.pisteita} pistettä`);
+vaadi('ihmeettömässä kaupungissa ei ole tähtiä eikä selitettä',
+  merkit.tahdelliset.length === 0 && merkit.selite === null,
+  JSON.stringify({ tahtia: merkit.tahdelliset, selite: merkit.selite }));
 await sivu.evaluate(() => window.matkakirja.ui.closeArrival());
 await sivu.waitForTimeout(600);
 

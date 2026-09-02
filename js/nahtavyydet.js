@@ -10,6 +10,7 @@
  * tuontisykliä.
  */
 
+import { piirraNostosymboli } from './fokusnosto-symbolit.js';
 import { kytkeKarttaZoom } from './karttazoom.js';
 import { galleriaNappi } from './kuvagalleria.js';
 import { liitaLukija, pysaytaLukija } from './lukija.js';
@@ -347,6 +348,9 @@ export function piirraKaupunkiKartta(ui, kohde) {
    * pisteen dataset.numero-kenttään.
    */
   const avaajat = [];
+  // Montako kohdetta sai Matkakirjan ihmeen tähden? Selite kartan
+  // yläkulmaan syntyy vain, jos tähtiä on (ks. lohkon loppu).
+  let ihmeita = 0;
   (kartta.kohteet ?? []).forEach((raaka, i) => {
     const juttu = NAHTAVYYSJUTUT[kaupunki]?.[raaka.nimi];
     /*
@@ -425,6 +429,46 @@ export function piirraKaupunkiKartta(ui, kohde) {
      * ainoa, joka kertoo ruudunlukijalle paikan nimen. Ääneen lukija
      * ohittaa koko pisteen (js/lukija.js: .maakartta-piste).
      */
+    /*
+     * MATKAKIRJAN IHMEEN TÄHTI MERKIN YLÄREUNAAN (omistajan tilaus
+     * 2.9.2026: *"karttaan voisi tehdä pienen tähden jokaisen kohteen
+     * yläreunaan, jos sinne on generoitu myös tällainen historiallinen
+     * kuva nykyaikaisen kuvan lisäksi. eli merkki matkakirjan
+     * ihmeestä. kartan yläreunassa voisi olla selite"*).
+     *
+     * SAMA TÄHTI KUIN PÄÄKARTALLA, ei uutta muotoa: kompassiruusun
+     * kahdeksansakarainen tähti piirretään samasta kirjastosta
+     * (js/fokusnosto-symbolit.js piirraNostosymboli, tunnus `ihme`),
+     * joten Raamatun SYMBOLITAKSONOMIA pysyy yhtenä totuutena. Koko
+     * tulee CSS:stä (.kohde-ihmetahti) — pienennys on tyyliä, ei
+     * toista piirtäjää.
+     *
+     * TÄHTI TULEE DATASTA EIKÄ LISTASTA: `ui.matkakirjanIhme` lukee
+     * kohteen nimellä fokuskohteiden `ihme`-lohkon (sama haku, jolla
+     * nähtävyysjuttu näyttää loistoaikakuvan), joten uusi ihme saa
+     * tähtensä kartalle ilman muutosta tähän tiedostoon.
+     */
+    if (ui.matkakirjanIhme?.(raaka.nimi)) {
+      ihmeita += 1;
+      const tahti = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      tahti.setAttribute('class', 'kohde-ihmetahti');
+      tahti.setAttribute('viewBox', '-12 -12 24 24');
+      tahti.setAttribute('aria-hidden', 'true');
+      piirraNostosymboli(el('g', {}, tahti), 'ihme');
+      piste.appendChild(tahti);
+    }
+    /*
+     * NIMIÖN VÄISTÖ DATASTA (2.9.2026). Nimi on oletuksena merkin alla
+     * keskitettynä, ja ahtaassa kohdassa se osuu naapurin nimeen tai
+     * piirrokseen. Merkkiä itseään EI siirretä — koordinaatti on
+     * kartan lupaus — vaan nimiö väistää sivuun, kuten pääkartan
+     * merkeillä (js/fokusniput.js sääntö 2). Kohde ilmoittaa puolen
+     * kentässä `nimiPuoli: 'vasen' | 'oikea'`; ilman kenttää nimi
+     * pysyy keskellä eikä yksikään vanha kartta muutu.
+     */
+    if (raaka.nimiPuoli === 'vasen' || raaka.nimiPuoli === 'oikea') {
+      piste.classList.add(`kohde-nimi-${raaka.nimiPuoli}`);
+    }
     const nimilappu = html('span', 'kohde-nimi', k.nimi);
     piste.appendChild(nimilappu);
     /*
@@ -689,6 +733,45 @@ export function piirraKaupunkiKartta(ui, kohde) {
   const opaste = html('div', 'kartta-opaste', 'Napauta nähtävyyttä, saat lisätietoja.');
   opaste.setAttribute('aria-hidden', 'true');
   kehys.appendChild(opaste);
+  /*
+   * MATKAKIRJAN IHMEEN SELITE KARTAN YLÄREUNAAN (omistajan tilaus
+   * 2.9.2026: *"kartan yläreunassa voisi olla selite: '*) matkakirjan
+   * ihme' tai jotain vastaavaa"*).
+   *
+   * VASEN YLÄKULMA, EI OIKEA — ja tämä on mitattu valinta, ei
+   * mieltymys. Oikea yläkulma on jo napautusopasteen, ja se on
+   * dokumentoidusti ahdas: Kathmandun kartan rajausta jouduttiin
+   * levittämään kuusisataa metriä, jottei kohde jäisi opasteen alle
+   * (tools/piirra-kaupunkikartta.mjs), ja 390 pikselin lehdessä opaste
+   * rivittyy kahdelle riville. Selite opasteen alla peitti siellä
+   * Ateenan Lykavittóksen piirroksen (kaappaus 2.9.2026). Vasen
+   * yläkulma on tyhjä joka kartalla — mittajana on vasemmassa
+   * ALAkulmassa — ja se on yhtä lailla kartan yläreuna.
+   *
+   * OMA LAPPUNSA EIKÄ RIVI OPASTEESEEN: opasteen sisään lisätty toinen
+   * rivi venytti kyltin puhelimella neljä riviä korkeaksi jo kerran
+   * (21.8.2026, suurennusvihje). Tähti ja kaksi sanaa pysyvät omana
+   * lappunaan yksirivisenä joka leveydellä.
+   *
+   * SELITE VAIN, JOS TÄHTIÄ ON. Kaupunkeja, joiden kohdekartalla on
+   * Matkakirjan ihme, on nyt seitsemän (Ateena kolmella, Lontoo,
+   * Rooma, Luxor, Petra, Persepolis, Peking) — muualla lappu ei
+   * selittäisi mitään, joten sitä ei ole olemassakaan. Ehto lukee
+   * kohteiden dataa (ui.matkakirjanIhme), joten uusi ihme tuo sekä
+   * tähden että selitteen ilman muutosta tähän tiedostoon.
+   */
+  if (ihmeita > 0) {
+    const ihmeselite = html('div', 'kartta-ihmeselite');
+    const tahti = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    tahti.setAttribute('class', 'kohde-ihmetahti kartta-ihmeselite-tahti');
+    tahti.setAttribute('viewBox', '-12 -12 24 24');
+    tahti.setAttribute('aria-hidden', 'true');
+    piirraNostosymboli(el('g', {}, tahti), 'ihme');
+    ihmeselite.appendChild(tahti);
+    ihmeselite.appendChild(document.createTextNode('Matkakirjan ihme'));
+    ihmeselite.setAttribute('aria-hidden', 'true');
+    kehys.appendChild(ihmeselite);
+  }
   /*
    * SUURENNOSVIHJE OMANA LAPPUNAAN kartan oikeassa ALAkulmassa
    * (omistajan tilaus 21.8.2026). Ensin se kokeiltiin toisena rivinä
