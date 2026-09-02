@@ -1883,7 +1883,7 @@ export const SKANDAALIT = {
       paikka: 'Dariuksen ja Girėnasin muistomerkki, Ąžuolynasin puisto, Kaunas',
       lat: 54.9, lon: 23.944,
       kortti: 'Kaksi siirtolaislentäjää, yksi pieni kone ja 6 411 kilometriä '
-        + 'avomerta — kaikki meni nappiin, kunnes viimeiset 650 kilometriä '
+        + 'Atlantin yli Eurooppaan — kaikki meni nappiin, kunnes viimeiset 650 kilometriä '
         + 'jäivät lentämättä. Syytä ei koskaan selvitetty, ja juuri se piti '
         + 'tarinan hengissä: jokainen liettualainen tuntee Lituanican, ja moni '
         + 'tietää siitä oman versionsa.',
