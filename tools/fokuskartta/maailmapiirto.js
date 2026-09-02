@@ -86,7 +86,7 @@ import {
   ASTEIKKO, KOHINA, KOHINA2, MUSTE, PAPERI,
   fbm, laudanProjektio, lerpSyvyys, lerpVari, mulberry32,
 } from './piirto.js';
-import { varjostusPisteessa } from '../../js/maastovarjo.js';
+import { bilineaarinenKorkeus, varjonVoimakkuus, varjostusPisteessa } from './maastovarjo.js';
 import {
   NOSTOLADONTA_POLTON_TIHEYS, nostoladontaKattoPorras,
 } from '../../js/nostoladonta.js';
@@ -334,18 +334,20 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
   const DLON = (K.lon1 - K.lon0) / (K.w - 1);
   const DLAT = (K.lat1 - K.lat0) / (K.h - 1);
 
-  /** Bilineaarinen korkeus (m); NaN ruudukon ulkopuolella. */
-  const korkeus = (lon, lat) => {
-    const fx = (lon - K.lon0) / DLON;
-    const fy = (K.lat1 - lat) / DLAT;          // y = 0 on pohjoisin rivi
-    if (fx < 0 || fy < 0 || fx > K.w - 1 || fy > K.h - 1) return NaN;
-    const x0 = Math.floor(fx); const y0 = Math.floor(fy);
-    const x1 = Math.min(K.w - 1, x0 + 1); const y1 = Math.min(K.h - 1, y0 + 1);
-    const tx = fx - x0; const ty = fy - y0;
-    const a = GRID[y0 * K.w + x0]; const b = GRID[y0 * K.w + x1];
-    const c = GRID[y1 * K.w + x0]; const d = GRID[y1 * K.w + x1];
-    return (a + (b - a) * tx) * (1 - ty) + (c + (d - c) * tx) * ty;
+  /*
+   * Bilineaarinen korkeus (m); NaN ruudukon ulkopuolella.
+   *
+   * Näytteenotin asuu varjostuskaavan kanssa samassa moduulissa
+   * (./maastovarjo.js), koska varjo lasketaan NELJÄSTÄ näytteestä ja
+   * näytteenoton pyöristys on osa varjon lopputulosta. Ruudukko
+   * annetaan sille kerran koottuna oliona eikä pikselikohtaisesti:
+   * askelvälit DLON/DLAT lasketaan tässä reunoista, kun taas moduuli
+   * ottaa ne valmiina.
+   */
+  const RUUDUKKO = {
+    grid: GRID, w: K.w, h: K.h, lon0: K.lon0, lat1: K.lat1, dlon: DLON, dlat: DLAT,
   };
+  const korkeus = (lon, lat) => bilineaarinenKorkeus(RUUDUKKO, lon, lat);
 
   /*
    * ================== MAA VAI MERI: VEKTORI ON AUKTORITEETTI =========
@@ -561,12 +563,12 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * yleislehden ruudukko on kolme kaariminuuttia eikä yksi — samalla
    * kertoimella rinteet olisivat kaukozoomissa rakeisia.
    *
-   * KAAVA ITSE ASUU MUUALLA (js/maastovarjo.js). Se
-   * siirtyi omaksi moduulikseen 1.9.2026, kun omistajan 1′-kokeilu
-   * (js/korkeuskerros.js) alkoi laskea SAMAA varjoa selaimessa: kaksi
-   * kopiota olisi ehtinyt eriytyä ensimmäisessä hienosäädössä, ja ero
-   * olisi näkynyt juuri siinä mitä kokeilulla mitataan. Tässä on enää
-   * moottorin oma askel — ruudukon väli — ja sen sulkeuma.
+   * KAAVA ITSE ASUU MUUALLA (./maastovarjo.js). Se irtosi omaksi
+   * moduulikseen 1.9.2026, kun omistajan 1′-kokeilu laski hetken
+   * samaa varjoa selaimessa; kokeilu purettiin 2.9.2026, mutta kaava
+   * jäi omilleen, koska se on siellä testattavissa ilman moottoria
+   * (tests/korkeuspalat.test.mjs). Tässä on enää moottorin oma askel
+   * — ruudukon väli — ja sen sulkeuma.
    */
   const varjostus = (lon, lat) => varjostusPisteessa(korkeus, lon, lat, DLON);
 
@@ -663,7 +665,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
           const n1 = fbm(KOHINA, gx / (26 * P), gy / (26 * P), 4) - 0.5;
           const n2 = fbm(KOHINA2, gx / (7 * P), gy / (7 * P), 3) - 0.5;
           const c = lerpVari(ASTEIKKO, Math.max(0, m + n1 * 190 + n2 * 60));
-          const varjo = (0.5 - varjostus(lon, lat)) * 0.46;
+          const varjo = varjonVoimakkuus(varjostus(lon, lat));
           const pigmentti = (KOHINA2(gx / (2.1 * P), gy / (2.1 * P)) - 0.5) * 13;
           const lai = (fbm(KOHINA, gx / (95 * P), gy / (95 * P), 3) - 0.5) * 12;
           const t = (k) => k * (1 - varjo) + pigmentti + lai + (varjo > 0 ? 0 : varjo * 30);

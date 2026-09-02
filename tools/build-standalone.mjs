@@ -559,20 +559,12 @@ const MODULES = [
    */
   'js/nostoladonta.js',
   /*
-   * Lautaprojektiot ennen niiden lukijoita. Paketti ei tuo mitään, ja
-   * se siirtyi tähän 1.9.2026: js/korkeuskerros.js lukee laudan
-   * Miller-vakiot moduulitasolla, ja se taas on ennen laattapyramidia,
-   * joka tuo sen. (Aiemmin paketti oli vasta js/ui.js:n edellä,
-   * koska ui oli sen ainoa tuoja.)
+   * Lautaprojektiot ennen niiden lukijoita. Paketti ei tuo mitään.
+   * Se siirtyi tähän 1.9.2026 poistetun tarkan varjon takia ja jää
+   * tähän: paikka on kelvollinen kaikille lukijoille, ja rivin
+   * siirtely tässä luettelossa on aina riski.
    */
   'js/packs/fokus-grc.js',
-  /*
-   * Kehittäjän tarkka varjo (1′-korkeusvarjostus) ennen
-   * laattapyramidia, joka tuo sen: kerros piirretään laattojen päälle
-   * samassa päivityksessä. Tuo mapartin, median, lautaprojektiot ja
-   * ui-apurit, jotka ovat yllä.
-   */
-  'js/korkeuskerros.js',
   'js/laattapyramidi.js',
   // M7a: laudan kamera ennen ui:ta (ui tuo Kartan; kartta tuo äänet ja
   // luennan, jotka ovat yllä).

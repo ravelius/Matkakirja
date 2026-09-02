@@ -20,15 +20,6 @@ const SHELL = [
   './js/karttamittari.js',
   './js/fokusmitat.js',
   './js/laattapyramidi.js',
-  // Kehittäjän tarkka varjo (1′-kokeilu 1.9.2026) ja sen laskuri.
-  // Worker on ERILLINEN TIEDOSTO eikä niputettu moduuli: selain lataa
-  // sen omalla pyynnöllä, joten se kuuluu SHELLiin siinä missä muutkin
-  // — muuten kytkin toimisi verkossa ja vaikenisi offline.
-  './js/korkeuskerros.js',
-  './js/korkeus-worker.js',
-  // Varjon kaava: moduuliworker tuo tämän, ja moottori tuo saman
-  // tiedoston Nodessa (tools/fokuskartta/maailmapiirto.js).
-  './js/maastovarjo.js',
   './js/karttanimet.js',
   './js/packs/fokus-grc.js',
   './js/sisaltotaulut.js',

@@ -1,30 +1,29 @@
 /*
- * MAASTON VARJOSTUS — YKSI KAAVA, KAKSI KÄYTTÄJÄÄ.
+ * MAASTON VARJOSTUS — LAATTAPYRAMIDIN RINNEVARJON KAAVA.
  *
  * Tämä on se rinnevarjo, jonka laattapyramidin moottori polttaa
  * pohjalaattoihin (tools/fokuskartta/maailmapiirto.js, pikselipassi
- * "1-3. PINTA"). Kaava asui ennen moottorin sisällä sulkeumana, ja
- * niin kauan kuin sillä oli yksi käyttäjä, se sai asua siellä.
+ * "1-3. PINTA"). Kaava asui ennen moottorin sisällä sulkeumana; se
+ * irrotettiin omaksi moduulikseen 1.9.2026, kun sillä oli hetken
+ * KAKSI käyttäjää — moottori Nodessa ja selaimen 1′-kokeilu
+ * (js/korkeuskerros.js, js/korkeus-worker.js).
  *
- * NYT KÄYTTÄJIÄ ON KAKSI. Omistajan kokeilu 1.9.2026 (sanatarkka:
- * *"korkeusdatan 1′-ajoa simuloidaan liverenderöinnillä pelissä:
- * ensin haetaan normaali pohja laatoista ja sitten peli rakentaa
- * reaaliajassa tarkemman korkeusvarjostuksen"*) laskee saman varjon
- * selaimessa ETOPO1:n natiivista yhden kaariminuutin ruudukosta ja
- * piirtää sen laattojen päälle. Jos peli ja moottori laskisivat
- * varjonsa kahdesta eri kopiosta, ne ehtisivät eriytyä ensimmäisessä
- * hienosäädössä — ja ero näkyisi juuri siinä, mitä kokeilulla
- * yritetään mitata.
+ * KOKEILU ON PURETTU 2.9.2026 (omistaja: *"Ota live pois ja polta
+ * 1 kaarisekuntti"*). Selainkerros ja sen worker on poistettu, ja
+ * 1 kaariminuutin tarkkuus tulee jatkossa siitä, mitä laattoihin
+ * poltetaan — samalla kaavalla, tästä tiedostosta. Käyttäjä on siis
+ * taas yksi, mutta kaava jää omaksi moduulikseen: se on testattavissa
+ * ilman moottoria (tests/korkeuspalat.test.mjs ajaa rinteet läpi
+ * kummankin suunnan), ja juuri se testattavuus on syy, jonka takia
+ * sulkeumaan ei palata.
  *
- * Siksi kaava on tässä, ja molemmat tuovat sen täältä. Tiedosto ei
- * tuo mitään eikä koske verkkoon: se on puhdasta laskentaa, jonka voi
- * ladata sekä Nodeen että selaimen Web Workeriin.
- *
- * MIKSI js/ EIKÄ tools/: peli lataa tämän selaimeen (Web Worker), ja
- * GitHub Pagesiin kopioidaan vain css/, js/, assets/ ja docs/
+ * MIKSI tools/fokuskartta/ EIKÄ js/: tiedosto asui js/-kansiossa niin
+ * kauan kuin peli latasi sen selaimeen (Web Worker), koska GitHub
+ * Pagesiin kopioidaan vain css/, js/, assets/ ja docs/
  * (.github/workflows/pages.yml) — tools/-kansiota EI ole julkaistulla
- * sivulla lainkaan. Node-työkalu tuo tämän täältä samalla tavalla kuin
- * se tuo js/nostoladonta.js:n; suunta on aina tämä eikä toisin päin.
+ * sivulla lainkaan. Nyt lataajaa ei ole, joten kaava muutti moottorin
+ * viereen: js/-kansiossa se olisi tiedosto, jonka service worker
+ * välimuistittaa pelaajan laitteelle eikä yksikään pelin moduuli tuo.
  *
  * HUOM: tämä EI ole sama kuin tools/varjostus.mjs. Se on vanhan
  * pohjakartan oma varjostin (koko ruudukko kerralla, aurinko 45°);
@@ -61,9 +60,10 @@ export const VALO = {
  * @param {number} lon  pituusaste
  * @param {number} lat  leveysaste
  * @param {number} d    derivaatan askel ASTEINA. Moottorilla se on
- *        ruudukon oma väli (3′ = 0,05°); selaimen tarkassa varjossa
- *        1′ = 1/60. Askel on nimenomaan parametri eikä vakio: juuri
- *        sen muutos ON koko kokeilu.
+ *        ruudukon oma väli — 3′ = 0,05° kolmen kaariminuutin ajossa,
+ *        1/60 kun sama pohja poltetaan yhdellä kaariminuutilla. Askel
+ *        on nimenomaan parametri eikä vakio: juuri sen muutos ON koko
+ *        tarkkuuskysymys.
  * @returns {number} 0 (varjossa) … 1 (kohtisuoraan valoa vasten);
  *        tasainen maa antaa sin(korkeuskulma) ≈ 0,669.
  */
@@ -97,11 +97,11 @@ export function varjostusPisteessa(korkeus, lon, lat, d) {
 /**
  * Bilineaarinen korkeusnäyte tasavälisestä ruudukosta.
  *
- * Sama kaava kuin moottorin sisäinen `korkeus(lon, lat)`, mutta
- * ruudukko tulee parametrina. Selaimen tarkka varjo kokoaa
- * ruudukkonsa monesta 10°-palasta, joten sillä on oma näytteenottajansa
- * — tämä on tarjolla niille kutsujille, joilla ruudukko on yhtenä
- * taulukkona (testit, Node-työkalut).
+ * Moottori kutsuu tätä jokaisesta varjonäytteestä (neljä per
+ * maastopikseli) ja antaa ruudukon kerran koottuna oliona. Kaava on
+ * tässä eikä moottorin sulkeumana siksi, että VARJO ON NÄYTTEIDEN
+ * EROTUS: jos näytteenoton pyöristys eläisi eri tiedostossa kuin
+ * varjostuskaava, kaavaa voisi säätää huomaamatta mitä toinen tekee.
  *
  * @param {{grid: ArrayLike<number>, w: number, h: number,
  *          lon0: number, lat1: number, dlon: number, dlat: number}} K
@@ -122,10 +122,10 @@ export function bilineaarinenKorkeus(K, lon, lat) {
 /**
  * Varjon voimakkuus siinä muodossa, jossa moottori sen käyttää.
  *
- * Moottorin maastopassi kirjoittaa `const varjo = (0.5 - varjostus) *
- * 0.46;` ja kertoo sillä pikselin: positiivinen luku tummentaa,
- * negatiivinen vaalentaa. Sama luku on selaimen tarkan varjon
- * peittävyys, joten kerroin kuuluu tänne eikä kahteen paikkaan.
+ * Moottorin maastopassi kertoo tällä pikselin: positiivinen luku
+ * tummentaa, negatiivinen vaalentaa. Kerroin 0,46 on osa varjon
+ * ulkonäköä siinä missä auringon kulmatkin, joten se asuu samassa
+ * tiedostossa kuin ne eikä irrallisena lukuna pikselisilmukassa.
  */
 export const VARJON_VOIMA = 0.46;
 
