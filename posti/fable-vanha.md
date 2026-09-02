@@ -1,3 +1,44 @@
+## 2.9.2026 13:20 UTC — FABLEN TILANNEMUISTIO: iltapäivän erä v1450–v1453, yleiskuvituserä pelissä, neljä kuvatilausta jonossa
+
+Main v1452 (901fd5d3), v1453 PR #1911 CI:ssä. Iltapäivällä julkaistu:
+v1450 eläintäyt BIH tornjak + TUR angoravuohi (27→29); v1451 seitsemän
+skandaalia lehtiin kuvineen + Wienin 3 korttikuvaa (maalehden
+aihesivu piirtää nyt myös osoite/ampari-kuvan); v1452 karsitut nostot
+kaupunkilehden kohdekartalle (Ateena 2, Sofia 2) + Matkakirjan ihme
+-merkki kohdekartalla selitteineen (9 merkkiä 7 kaupungissa); v1453
+Historian hetket -nostolaji (tiimalasi, 9. seliterivi; 10 hetkeä, 2
+kartalla, Ecuadorin ensimmäinen maalehtisivu). Raamattu: Historian
+hetket, ennen/nyt, ihmemerkki, kuvaputken kuvatyypit. Tilannetaulu
+v1450–v1453.
+
+KUVAJONOLLE TILATTU (kaikki tänään, odottaa kuittausta):
+- H2: Historian hetket -pilotti uusiksi, kaksi kuvakulmaa (lahi+kauko),
+  tiukempi fotorealismi (20 kuvaa). Kun perillä → hetkien kuvalistan
+  kärkeen rooli 'lahi' + lehtisivun galleria (koodiin ei kosketa).
+- H3: loput 46 kohtausta erissä (92 kuvaa) → integrointi erä kerrallaan
+  historian-hetket.js-malliin (sijoitussääntö 35 yks., testi vartioi).
+- V1: 16 ennen/nyt-paria (kohtaamiset/vertailut/) → uusi nostolaji
+  "ennen/nyt" (kortti kahdella kuvalla vuosileimoin; kohdekaupungissa →
+  kaupunkilehden kohdekartta, ei pääkartta).
+- M1: 4 miniatyyriä (Ateena 2, Sofia 2) → assets/kartat/miniatyyrit/
+  512 px webp + js/packs/miniatyyrit.js.
+- Kuvatyypit: 9 kategoriaa ehdotettu tarkastussivustolle; jokaisen
+  tilauksen otsikossa kategoria.
+
+AVOINNA: nimetön vuorikolmio Bulgarian pohjassa; nappulan kokoloikka
+siirron jälkeen; savuke-havainnekuva lipeä (135/137 vs 144/144);
+savuke-karttazoom ateena kaatuu mainissa (pTila lava null); viisi
+Ateenan/Sofian pudotettua nostoa jäi kohdekartalta pois päällekkäisyyden
+takia (lehdessä ovat).
+
+JATKOPROMPTI: 1) ReadNotifications; 2) postikierros tunneittain
+(trig_01PVJLUsK6F9L92HR7hUCaQN, hiljaa jos ei uutta); 3) kuittausten
+tullessa integrointi Opus-agenteilla työpuissa, Fable julkaisee versiot
+yksitellen (fetch main → uusi-versio ≤60 merkkiä, ei "tähti"-sanaa
+lokiriviin → testit "# fail 0" → tarkistimet → build → PR → CI → squash
+→ branch reset); ei rinnakkaisia pyramidiajoja; kysymykset omistajalle
+aina kortilla; ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 12:50 UTC — FABLE → YLEISKUVITUSSESSIO: tarkastussivuston KUVATYYPIT (omistajan linjaus)
 
 Omistaja tänään: tarkastussivustolle tulee jatkossa kuvatyypit omina
