@@ -1,3 +1,70 @@
+## 2.9.2026 11:45 UTC — KUVATILAUS V1 yleiskuvitussessiolle: ENNEN/NYT-PARIT (uusi sarja, Historian hetket -sivustolle omaksi osastokseen)
+
+Omistajan tilaus tänään (Ktesifonin kaari 600 jaa. vs 2026 -vertailukuva
+malliksi): *"tällaisia vertailuja olisi hauska saada myös peliin ...
+periaatteessa kummatkin noista kuvista voisi tehdä havainnekuva-
+tekniikalla, mikäli tarpeeksi hyvää nykyajan kuvaa ei löydy. Nämä
+olisivat hauskimpia karttanostoiksi."* Järjestys: H2-pilotti (20 kuvaa)
+ensin, tämä sen jälkeen.
+
+### Muoto: kaksi kuvaa SAMASTA KAMERAPAIKASTA
+- `vertailu-<tunnus>-ennen.jpg` — kohde loistoaikansa asussa (vuosi
+  alla), ihmisiä ajan vaatteissa mittakaavaksi, elämää: kauppiaita,
+  kulkue, työmaa. Fotorealismi kuten H2 (dokumenttivalokuva paikan
+  päältä, ei painterly, ei tekstiä; vuosiluku EI kuvaan — peli leimaa).
+- `vertailu-<tunnus>-nyt.jpg` — sama paikka nyt. ENSISIJAISESTI aito
+  Commons-valokuva (PD/CC, ≥1500 px, sisältö itse katsottu, lähde
+  kuittaukseen: tiedostonimi + tekijä + lisenssi). Vain jos kelvollista
+  ei ole samasta kuvakulmasta → havainnekuva nykytilasta (rauniot,
+  turistit, aidat, nykyinen kaupunki taustalla).
+- KAMERAPAIKKA, POLTTOVÄLI JA HORISONTTI SAMAT molemmissa — vertailu
+  toimii vain, jos rakennuksen jäljellä olevat osat osuvat samaan kohtaan
+  kuvaa. Jos nyt-kuva on Commons-valokuva, ennen-kuva generoidaan SEN
+  kuvakulmaan (anna valokuva referenssiksi). 3:2, 1536×1024 JPEG sRGB.
+- R2-polku: `kohtaamiset/vertailut/`. Sivustolle pari rinnakkain
+  (ennen | nyt) niin, että omistaja näkee kohdistuksen.
+
+### Parit (16; tunnus — kohde, loistoajan vuosi — mitä ennen-kuvassa on)
+Näitä EI ole vielä pelissä (36 nykyistä Matkakirjan ihmettä jätetty pois).
+1. ktesifon — Taq Kasra, Ktesifon (Irak), n. 600 — koko palatsijulkisivu
+   ehjänä, holvi 37 m, kalkittu ja koristeltu, hovin väkeä edessä.
+2. pompeji-forum — Pompejin forum (Italia), 78 jaa. — pylväikkö, Jupiterin
+   temppeli, Vesuvius tyynenä taustalla, torikauppa.
+3. hadrianuksen-muuri — Housesteads, Hadrianuksen muuri (Britannia),
+   n. 130 — muuri täydessä korkeudessa, portti, legioonalaisia.
+4. angkor-wat — Angkor Wat (Kambodža), n. 1150 — tornit kullattuina,
+   vallihauta täynnä, kulkue pengertiellä.
+5. machu-picchu — Machu Picchu (Peru), n. 1470 — olkikatot paikallaan,
+   terassit viljeltyinä, laamoja.
+6. teotihuacan — Auringon pyramidi ja Kuolleiden katu (Meksiko), n. 400 —
+   punaiseksi rapatut julkisivut, kauppiaita.
+7. chichen-itza — El Castillo (Meksiko), n. 1000 — pyramidi punaisena ja
+   sinisenä maalattuna, seremonia.
+8. mohenjo-daro — Suuri kylpyallas (Pakistan), n. 2500 eaa. — allas
+   vedessä, tiilikaupunki ympärillä.
+9. bagan — Baganin temppelitasanko (Myanmar), n. 1200 — tuhannet
+   temppelit valkoisina ja kullattuina, Irrawaddy taustalla.
+10. borobudur — Borobudur (Indonesia), n. 850 — stupat ehjinä, pyhiinvaeltajat
+    kiertämässä, viidakko.
+11. hampi — Vijayanagaran Virupaksha ja tori (Intia), n. 1520 —
+    basaarikatu täynnä kauppiaita, norsuja.
+12. sigiriya — Sigiriyan kalliolinna (Sri Lanka), n. 480 — leijonan
+    tassuportti KOKO leijonana, palatsi huipulla, puutarhat.
+13. mykene — Leijonaportti ja linna (Kreikka), n. 1250 eaa. — muurit
+    täydessä korkeudessa, palatsi kukkulalla.
+14. troija — Troija VI (Turkki), n. 1300 eaa. — viistot muurit, torni,
+    tasanko ja meri taustalla.
+15. tikal — Tikalin Suuri aukio (Guatemala), n. 750 — temppelit I ja II
+    rapattuina ja maalattuina, väkijoukko.
+16. timbuktu-sankore — Sankorén moskeija ja yliopisto (Mali), n. 1550 —
+    savirakennus vasta rapattuna, oppineita ja käsikirjoituksia pihalla.
+
+Kuittaus postiin per pari: tunnus, nyt-kuvan lähde (Commons vai
+havainnekuva), ja mihin vuoteen ennen-kuva on tehty. Fable kirjoittaa
+tekstit ja lähderivit; sijoitus: karttanosto tapahtumapaikkaan tai
+kohdekaupungin kaupunkilehden kohdekartalle (Raamattu 2.9.). Ei
+kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 11:20 UTC — FABLE → YLEISKUVITUSSESSIO: H1-TARKENNUS (H2): fotorealismi ei riitä vielä, kaksi kuvakulmaa per kohtaus, pilotti uusiksi
 
 Kiitos K1/K2/E1-erästä: kaikki 12 kuvaa on viety peliin (v1450 eläintäyt,
