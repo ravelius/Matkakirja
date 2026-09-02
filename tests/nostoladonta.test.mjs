@@ -14,7 +14,8 @@ import { test } from 'node:test';
 
 import {
   NOSTOLADONTA_NIMIO_KATTO, NOSTOLADONTA_NIMIO_KOKO, NOSTOLADONTA_POLTON_TIHEYS,
-  NOSTOLADONTA_S, NOSTOLADONTA_SAANTO, nostoladontaKattoPorras, nostoladontaTiiviste,
+  NOSTOLADONTA_S, NOSTOLADONTA_SAANTO, nostoladontaKattoPorras, nostoladontaKattoSuhde,
+  nostoladontaTiiviste,
 } from '../js/nostoladonta.js';
 import { NOSTOSYM_NIMIO_KOKO } from '../js/fokusnosto-symbolit.js';
 import { KARTTANIMI_KOOT } from '../js/karttanimet.js';
@@ -106,4 +107,50 @@ test('väistön päätös ei ole tiivisteessä, merkin sisältö on', () => {
   assert.equal(nostoladontaTiiviste({ ...merkki, nimioPuoli: 'ala' }), perus);
   assert.notEqual(nostoladontaTiiviste({ ...merkki, nimio: 'Madara' }), perus);
   assert.notEqual(nostoladontaTiiviste({ ...merkki, x: 6737.31 }), perus);
+});
+
+/* ====== KATTO ON SUHDE, JA SE KOSKEE KOKO PIIRROSTA ===============
+ *
+ * OMISTAJA 2.9.2026: *"symbolit heittelee muodoiltaa ja tekstejä
+ * puuttuu"*. Ruutukatto kutisti vain merkin skaalan; sarakkeen
+ * siirtymä, siirtoviiva ja nimiön rako jäivät karttavakioksi ja
+ * kasvoivat rajatta. Suhde on se yksi luku, jolla koko piirros
+ * kutistetaan ankkurinsa ympäri — ja juuri siksi sen on oltava
+ * TÄSMÄLLEEN sama luku kuin merkin oma kutistus.
+ */
+test('kattosuhde on merkin oman kutistuksen kanssa sama luku', () => {
+  const porras = KOHDE_SYMBOLI_SKAALA * NOSTOLADONTA_S;
+  for (const skaala of [1.8, 3.6, 5.86, 9.24, 40]) {
+    const suhde = nostoladontaKattoSuhde(porras, skaala);
+    assert.ok(Math.abs(suhde * porras - nostoladontaKattoPorras(porras, skaala)) < 1e-12,
+      `mittakaava ${skaala}: suhde ${suhde}`);
+    assert.ok(suhde > 0 && suhde <= 1, `mittakaava ${skaala}: suhde ${suhde}`);
+  }
+});
+
+test('kattosuhde on 1 siellä missä kattokaan ei pure', () => {
+  const porras = KOHDE_SYMBOLI_SKAALA * NOSTOLADONTA_S;
+  assert.equal(nostoladontaKattoSuhde(porras, 1.8), 1);
+  assert.equal(nostoladontaKattoSuhde(porras, 0), 1);
+  assert.equal(nostoladontaKattoSuhde(porras, undefined), 1);
+  assert.equal(nostoladontaKattoSuhde(0, 7.2), 1);
+});
+
+/*
+ * PIIRROKSEN RUUTUKOKO EI RIIPU ZOOMISTA katon purressa. Tämä on se
+ * väite, joka olisi kaatunut ennen korjausta: siirtoviivan leveys ja
+ * sarakkeen siirtymä olivat `luku x NOSTOLADONTA_S x mittakaava` eli
+ * suoraan verrannollisia zoomiin (mitattu Sofiassa 8,87 px kun tilattu
+ * on 1,6).
+ */
+test('katetun piirroksen ruutumitta on vakio syvillä zoomeilla', () => {
+  const porras = KOHDE_SYMBOLI_SKAALA * NOSTOLADONTA_S;
+  const ruudulla = (luku, skaala) => luku * NOSTOLADONTA_S
+    * nostoladontaKattoSuhde(porras, skaala) * skaala;
+  const VIIVAN_LEVEYS = 1.6;
+  const perus = ruudulla(VIIVAN_LEVEYS, 5.86);
+  for (const skaala of [5.86, 9.24, 20, 100]) {
+    assert.ok(Math.abs(ruudulla(VIIVAN_LEVEYS, skaala) - perus) < 1e-9,
+      `mittakaava ${skaala}: ${ruudulla(VIIVAN_LEVEYS, skaala)} px vs ${perus} px`);
+  }
 });

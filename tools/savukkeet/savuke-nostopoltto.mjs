@@ -122,6 +122,15 @@ async function pelinMerkit(kaupunki, ruutu) {
    * PAIKKA LUETAAN DOMista, EI ui-oliosta. Juuri se on se piste, johon
    * näkymätön osumamuoto piirtyy — jos tietue ja solmu eroaisivat,
    * mittaus jäisi huomaamatta.
+   *
+   * KOE TEHDÄÄN LEHTINÄKYMÄSSÄ, JA SE ON EHTO (2.9.2026). Ruutukatto
+   * kutistaa syvässä zoomissa koko noston piirroksen ankkurinsa ympäri
+   * (js/nostoladonta.js nostoladontaKattoSuhde), jolloin DOMin muunnos
+   * EI enää ole ladottu paikka vaan piirretty. Lehtinäkymässä katto ei
+   * pure (mittakaava ~1,9 < kynnys ~2,5), joten muunnos on ladonta
+   * sellaisenaan — juuri se, mitä tämä koe vertaa Nodeen. Jos koe
+   * joskus siirretään syvempään zoomiin, paikka on luettava tietueesta
+   * (r.nippu) eikä solmusta.
    */
   const tulos = await sivu.evaluate(() => {
     const ui = window.matkakirja.ui;

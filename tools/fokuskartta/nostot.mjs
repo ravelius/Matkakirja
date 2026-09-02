@@ -200,6 +200,20 @@ function nostoladontaMerkit({
       tunnus: r.id,
       x: r.nippu?.x ?? r.x + (r.sx ?? 0),
       y: r.nippu?.y ?? r.y + (r.sy ?? 0),
+      /*
+       * SIIRTYMÄN ANKKURI (2.9.2026, ruutukatto koskee koko piirrosta —
+       * js/nostoladonta.js nostoladontaKattoSuhde). Merkin PAIKKA (x, y)
+       * on ladonnan tulos ja pysyy tasoriippumattomana; piirtäjä
+       * kutistaa siirtymän ankkurinsa ympäri tason omalla tiheydellä,
+       * täsmälleen kuten peli näkymän mittakaavalla. Ankkuri on
+       * sarakkeessa kaupungin piste ja muualla merkin oma datapiste.
+       *
+       * KENTTÄ EI OLE TIIVISTEESSÄ, eikä sen tarvitse olla: se on
+       * funktio merkin omasta paikasta ja kasauksen tuloksesta, ja
+       * kumpikin on jo tiivisteessä (paikka) tai sen syötteenä.
+       */
+      ankkuriX: r.nippu?.cx ?? r.x,
+      ankkuriY: r.nippu?.cy ?? r.y,
       symboli: r.symboli ?? null,
       laji: r.laji ?? null,
       nimio: r.nimi ?? '',

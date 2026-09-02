@@ -79,9 +79,14 @@
  *
  *    MERKIT EIVÄT (31.8.2026). Piste, rengas ja vuorikolmio ovat
  *    laudan yksiköitä eli karttavakio: ne on mitoitettu niin kuin ne
- *    olisi POLTETTU karttaan, ja siksi ne suurenevat lähennettäessä ja
- *    kutistuvat loitonnettaessa. Perustelu ja mittaukset ovat
- *    MERKKI-taulun kohdalla; älä palauta merkkejä `laudalle`-jakoon.
+ *    olisi POLTETTU karttaan, ja siksi ne kutistuvat loitonnettaessa.
+ *    Perustelu ja mittaukset ovat MERKKI-taulun kohdalla; älä palauta
+ *    merkkejä `laudalle`-jakoon.
+ *
+ *    LÄHENNETTÄESSÄ NIILLÄ ON KASVUKATTO (2.9.2026, omistaja:
+ *    *"symbolit heittelee muodoiltaa ja tekstejä puuttuu"*): merkki ei
+ *    kasva maanäkymäkokoaan suuremmaksi, aivan kuten kaupunkilaatta.
+ *    Ks. karttamerkinKasvukatto MERKKI-taulun edellä.
  *
  * === KAKSOISNIMIVAARA — LUE TÄMÄ ENNEN KUIN MUUTAT MITÄÄN ==========
  *
@@ -436,6 +441,12 @@ const NOSTON_KATKO = 1.6;
  * ja merkkikin siis pienempi, leveällä isompi; juuri se on "poltettu
  * karttaan" eikä vika.
  *
+ * KASVUKATTO TULI 2.9.2026 (karttamerkinKasvukatto heti alla): tämä
+ * taulu antaa merkin PERUSKOON, ja katto estää sen kasvamasta
+ * maanäkymäkokoaan suuremmaksi lähennettäessä. Loitolla mitään ei
+ * muutu, joten yllä olevat mittaukset (500 km, 1000 km, 2000 km) ovat
+ * yhä voimassa sellaisenaan.
+ *
  * NIMET EIVÄT SEURAA (KOKO, KYNNYS). Ne jäävät CSS-pikseleihin
  * tietoisesti: nimi on paperivakio (ks. tiedoston johdanto), koska
  * lukukelpoisuus on ruudun ominaisuus eikä kartan. Kartalla on siis
@@ -443,6 +454,64 @@ const NOSTON_KATKO = 1.6;
  * sama jako kuin nostoviivalla (NOSTON_VIIVA, paperivakio) ja
  * kohdemerkillä (karttavakio).
  */
+/*
+ * ====== KARTTAVAKIOLLA ON KASVUKATTO (omistaja 2.9.2026) ===========
+ *
+ * OMISTAJAN BUGIRAPORTTI sanatarkasti: *"symbolit heittelee muodoiltaa
+ * ja tekstejä puuttuu"* (Bulgaria, mittajana 50 km). Kaappauksessa
+ * Balkanvuorten vuorikolmio oli valtava ja sen nimi pikkuruisena
+ * kolmion päällä, kun taas viereiset karttanostot olivat normaalin
+ * kokoisia.
+ *
+ * ── JUURISYY ──────────────────────────────────────────────────────
+ *
+ * Merkki on karttavakio (ks. yllä) eikä sillä ollut YLÄRAJAA. Peruskoko
+ * on maan lehtinäkymän mitta (MERKIN_KARTTAVAKIO), ja siitä merkki
+ * kasvaa suoraan mittakaavan mukana — mutta nimi on paperivakio ja
+ * pysyy 11 pikselissä. Mitä syvemmälle zoomataan, sitä suurempi ero:
+ *
+ *   Sofia, iPad 834 x 1112 dpr 2, mittajana 50 km, skaala 9,24 px/yks.
+ *     vuorikolmio (vuori, 4 yks.)   44,3 x 31,0 px   — tilattu 8 x 5,6
+ *     nimi "Balkanvuoret"                    12 px   (ennallaan)
+ *     viereinen karttanosto (katossa)      11,3 px
+ *
+ * Kolmio oli siis kartalla lähes neljä kertaa naapurinsa kokoinen, ja
+ * koska nimi ladotaan 11 CSS-pikseliä merkin alle, kolmio kasvoi oman
+ * nimensä PÄÄLLE. Kumpikin oire on sama luku: skaala x
+ * MERKIN_KARTTAVAKIO = 5,5.
+ *
+ * ── SÄÄNTÖ ON JO OLEMASSA, EIKÄ SE OLE UUSI ───────────────────────
+ *
+ * Sama vika luettiin ruudulta kaupunkilaatoista 31.8.2026 (*"kaupunki-
+ * laatat näkyvät jostain syystä aivan hervottoman isoina"*), ja
+ * Raamattu ratkaisi sen KASVUKATOLLA (js/ui.js fokusKasvukatto):
+ * *"laatta on karttavakio loitonnettaessa, mutta lähennettäessä
+ * maanäkymää syvemmälle koko lukittuu — laatta ei koskaan kasva
+ * maanäkymäkokoaan suuremmaksi."* Kartan omat merkit jäivät silloin
+ * korjaamatta, koska ne olivat vielä ruutumitassa; karttavakioksi ne
+ * muuttuivat vasta samana iltana.
+ *
+ * KATTO TULEE SAMASTA LUVUSTA KUIN PERUSKOKO. `MERKIN_KARTTAVAKIO` on
+ * lautayksikköä piirtopikseliä kohti maan lehtinäkymässä, joten sen
+ * käänteisluku 1 / 0,60 = 1,667 ON se mittakaava, jossa merkki on
+ * täsmälleen peruskokoinen. Sitä kauempana katto ei pure lainkaan
+ * (Math.min(1, ...)) eli kaukonäkymät säilyvät tavulleen entisinä, ja
+ * sitä lähempänä merkin RUUTUKOKO lukittuu. Toinen luku olisi toinen
+ * peruskoko, ja kaksi peruskokoa ajautuisi eri arvoihin — sama
+ * perustelu kuin MERKIN_KARTTAVAKIOlla itsellään.
+ *
+ * MITATTU JÄLKEEN (sama näkymä): vuorikolmio 8,0 x 5,6 px joka
+ * zoomilla maanäkymästä sisäänpäin, eikä nimi ole enää kolmion alla.
+ *
+ * VIIVANLEVEYDET KULKEVAT MUKANA samasta syystä kuin ne alunperin
+ * muuttuivat karttavakioksi (MERKIN_VIIVA alempana): merkki on yksi
+ * piirros ja sen kaikki mitat kuuluvat samaan järjestelmään.
+ */
+export function karttamerkinKasvukatto(skaala) {
+  if (!(skaala > 0)) return 1;
+  return Math.min(1, 1 / (MERKIN_KARTTAVAKIO * skaala));
+}
+
 /** Merkkien mitat LAUDAN yksiköinä (karttavakio) — ks. yllä. */
 const MERKKI = {
   pisteIso: 2.6 * MERKIN_KARTTAVAKIO,
@@ -530,6 +599,9 @@ function parita(kaupungit, vuoret, jarvet) {
     }
     if (!lahin || lahinEtaisyys > PARIN_ETAISYYS) continue;
     c.maastopari = {
+      /* Alkuperäinen tietue mukaan: ladonta merkitsee siitä, saiko
+       * maastomerkki nimensä (ks. `nimetytVuoret`). */
+      kohde: lahin.kohde,
       nimi: lahin.kohde.nimi,
       laji: lahin.laji,
       x: lahin.kohde.x,
@@ -950,13 +1022,32 @@ function lado(data, px, oma = null) {
    * nimi törmäisi omaan symboliinsa ja putoaisi. Mitattu tässä
    * kontissa: varauksella 296 nimiötä ja 49 pudotettua, ilman sitä
    * sama 345 kuin laatoilla.
+   *
+   * ── KOLMIO SEURAA NIMEÄÄN (omistaja 2.9.2026) ────────────────────
+   *
+   * Sanatarkasti: *"symbolit heittelee muodoiltaa ja tekstejä
+   * puuttuu"*; kaappauksessa kartalla oli vuorikolmio ilman yhtäkään
+   * kirjainta. Vuorisymboli syttyi kynnyksellä `kaupunkiPiste` (0,22)
+   * mutta sen nimi vasta `vuoriNimi`illa (0,45) — ja senkin jälkeen
+   * nimi saattoi pudota törmäykseen ja jättää kolmionsa jälkeen.
+   * Kolmio ilman nimeä ei kerro mitään: se on kartalla merkintä
+   * *"tässä on vuori, arvaa mikä"*.
+   *
+   * SÄÄNTÖ ON RAAMATUN OMA, VAIN LAAJENNETTUNA. *"Kartalla ei ole
+   * merkkiä ilman nimeä"* (PISTE VAIN NIMEN KANSSA, 31.8.2026) rajattiin
+   * silloin pisteisiin, koska omistajan sana koski pisteitä ja koska
+   * *"kolmio on kartan oma merkintä eikä pelkkä piste"*. Omistaja luki
+   * ruudulta saman vian toisessa asussa, joten rajaus poistuu: sama
+   * sääntö, sama koneisto (joukko kerätään VASTA ladonnan jälkeen,
+   * koska nimen saaminen on ladonnan tulos eikä sen syöte).
+   *
+   * MAASTOPARI KELPAA NIMEKSI, kuten pisteilläkin: jos vuoren nimi
+   * piirtyy kaupunkikierroksella (kaksoisnimisääntö), kolmio on nimetty.
+   *
+   * VARAUS EI MUUTU eikä ladonta liiku millimetriäkään — tämä päättää
+   * vain, mitä piirretään. Sama perustelu kuin nimettömillä pisteillä.
    */
-  if (nakyy(KYNNYS.kaupunkiPiste)) {
-    for (const v of data.vuoret) {
-      if (v.tarkeys > 1 && !nakyy(KYNNYS.vuoriNimi)) continue;
-      merkit.push({ laji: 'vuori', iso: v.tarkeys <= 1, x: v.x, y: v.y });
-    }
-  }
+  const nimetytVuoret = new Set();
 
   /* Tärkein ensin; tasapelissä nimi, jotta ladonta on toistettava. */
   const jono = pisteet.slice().sort((a, b) => (b.c.tarkeys - a.c.tarkeys)
@@ -998,6 +1089,8 @@ function lado(data, px, oma = null) {
           koko: mkoko,
         });
         nimetyt.add(c);
+        /* Parillisen vuoren nimi tuli tässä: kolmio saa jäädä. */
+        if (pari.laji === 'vuori' && pari.kohde) nimetytVuoret.add(pari.kohde);
         continue;
       }
       /*
@@ -1326,7 +1419,13 @@ function lado(data, px, oma = null) {
     for (const v of data.vuoret) {
       if (v.parillinen) continue;
       maasto.push({
-        nimi: v.nimi, x: v.x, y: v.y, koko: KOKO.vuori, laji: 'vuori', tarkeys: v.tarkeys,
+        kohde: v,
+        nimi: v.nimi,
+        x: v.x,
+        y: v.y,
+        koko: KOKO.vuori,
+        laji: 'vuori',
+        tarkeys: v.tarkeys,
       });
     }
   }
@@ -1358,6 +1457,19 @@ function lado(data, px, oma = null) {
       y: laudalle(y),
       ank: 'middle',
       koko: m.koko,
+    });
+    if (m.laji === 'vuori' && m.kohde) nimetytVuoret.add(m.kohde);
+  }
+
+  /*
+   * VUORIKOLMIOT VASTA TÄSSÄ, ja vain nimen saaneille (ks. yllä).
+   * Piirtojärjestys on entinen — kaupungit ennen vuoria — koska
+   * kaupunkien merkit on jo unshiftattu listan alkuun.
+   */
+  for (const v of data.vuoret) {
+    if (!nimetytVuoret.has(v)) continue;
+    merkit.push({
+      laji: 'vuori', iso: v.tarkeys <= 1, x: v.x, y: v.y,
     });
   }
 
@@ -1568,17 +1680,23 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
   /*
    * Merkit ensin, nimet päälle: nimi on merkin selitys eikä toisin päin.
    *
-   * MITAT MENEVÄT SELLAISENAAN, ILMAN `laudalle`-jakolaskua: MERKKI ja
-   * MERKIN_VIIVA ovat jo laudan yksiköitä (karttavakio, ks. MERKKI).
-   * Nimet alempana käyttävät `laudalle`a yhä, koska ne ovat ruudun
-   * mitta — juuri tämä ero on koko muutos.
+   * MITAT MENEVÄT ILMAN `laudalle`-JAKOLASKUA: MERKKI ja MERKIN_VIIVA
+   * ovat jo laudan yksiköitä (karttavakio, ks. MERKKI). Nimet alempana
+   * käyttävät `laudalle`a yhä, koska ne ovat ruudun mitta — juuri tämä
+   * ero on koko muutos.
+   *
+   * KASVUKATTO KERTOO NE (2.9.2026, ks. karttamerkinKasvukatto):
+   * karttavakio kutistuu loitonnettaessa mutta ei kasva maanäkymäkokoaan
+   * suuremmaksi. Kerroin on 1 maanäkymässä ja sitä kauempana, joten
+   * yksikään kaukonäkymä ei muutu.
    */
+  const kasvukatto = karttamerkinKasvukatto(nakyva.skaala);
   for (const { m, x } of nakyvatMerkit) {
     if (m.laji === 'vuori') {
-      const r = m.iso ? MERKKI.vuoriIso : MERKKI.vuori;
+      const r = (m.iso ? MERKKI.vuoriIso : MERKKI.vuori) * kasvukatto;
       el('path', {
         class: 'karttamerkki karttamerkki-vuori',
-        'stroke-width': MERKIN_VIIVA.vuori,
+        'stroke-width': MERKIN_VIIVA.vuori * kasvukatto,
         d: `M${(x - r).toFixed(2)} ${(m.y + r * 0.6).toFixed(2)}`
           + `L${x.toFixed(2)} ${(m.y - r * 0.8).toFixed(2)}`
           + `L${(x + r).toFixed(2)} ${(m.y + r * 0.6).toFixed(2)}`,
@@ -1587,7 +1705,7 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
     }
     el('circle', {
       class: 'karttamerkki karttamerkki-piste',
-      cx: x, cy: m.y, r: m.iso ? MERKKI.pisteIso : MERKKI.piste,
+      cx: x, cy: m.y, r: (m.iso ? MERKKI.pisteIso : MERKKI.piste) * kasvukatto,
     }, kerros);
     // Rengas ison ympärille: aikakauden kartan pääkaupunkimerkintä.
     if (m.iso) {
@@ -1595,8 +1713,8 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
         class: 'karttamerkki karttamerkki-rengas',
         cx: x,
         cy: m.y,
-        r: MERKKI.rengasIso,
-        'stroke-width': MERKIN_VIIVA.rengas,
+        r: MERKKI.rengasIso * kasvukatto,
+        'stroke-width': MERKIN_VIIVA.rengas * kasvukatto,
       }, kerros);
     }
   }
@@ -1636,6 +1754,25 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
  * Kehittäjän ja savukkeiden mittakahva: mitä ladonta antaa tälle
  * mittakaavalle. Ei piirrä mitään.
  */
+/**
+ * LADONNAN TULOS SELLAISENAAN — mittausta ja testejä varten.
+ *
+ * MIKSI ULOS: ladonta on puhdas funktio paketista ja mittakaavasta,
+ * mutta piirto tarvitsee DOMin. Sääntö *"kartalla ei ole merkkiä ilman
+ * nimeä"* on ladonnan tulos eikä piirron, joten sen voi — ja pitää —
+ * todistaa ilman selainta (tests/karttanimet.test.mjs). Ilman tätä
+ * kahvaa väite jäisi savukkeen varaan, ja savuke näkee vain sen
+ * kourallisen merkkejä, joka sattuu olemaan ruudulla.
+ *
+ * @param {object} pack laudan paketti
+ * @param {number} px   CSS-pikseliä lautayksikköä kohti
+ * @param {string|null} oma pelaajan kaupungin tunnus (ladonnan syöte)
+ * @returns {{nimiot: Array, merkit: Array, nostot: Array, pudotettu: number}}
+ */
+export function karttanimienLadonta(pack, px, oma = null) {
+  return ladoVarastosta(pack, px, oma);
+}
+
 export function karttanimienMitat(ui, px) {
   if (!pyramidiKattaa(ui?.game?.pack?.id)) return null;
   const tulos = ladoVarastosta(ui.game.pack, px);
