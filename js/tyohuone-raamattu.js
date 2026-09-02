@@ -1117,6 +1117,18 @@ export const RAAMATTU = {
           + 'saman tiheyden (6 tasoa suhteella 1,5) ja on jaettu '
           + 'kolmen kayttajan kesken - vaihto tehdaan vasta jos '
           + 'laitemittaus sita vaatii.',
+        'MATKA JATKUU ITSESTAAN KAUPUNKIIN ASTI (omistaja 2.9.2026, '
+          + 'sanatarkasti: "nopanheitto tulee jatkua automaattisesti jos '
+          + 'ei olla saavuttu seuraavaan kohdekaupunkiin"): kun nappula '
+          + 'pysahtyy reitin askelpisteeseen, seuraava heitto laukeaa '
+          + 'itsestaan 750 ms siirtoanimaation jalkeen '
+          + '(AUTOMAATTIHEITON_TAUKO_MS; game.jatkaMatkaaItsestaan: vaihe '
+          + 'roll, ei noppaa, ei botti, pos reitilla). Suunnan valinta '
+          + 'jaa pelaajalle (askelpisteesta paasee aina kahteen '
+          + 'suuntaan). Portit: pollo, lehti, dialogit, radio, katselu, '
+          + 'botin vuoro. Lippua ei talleteta - se johdetaan tilasta. '
+          + 'Paivalaskenta ennallaan: jokainen heitto kuluttaa vuoron '
+          + '(v1440).',
         'NOPANHEITON KAMERA: ZOOMI ENSIN, NAPPULA VASTA SITTEN (omistaja '
           + '1.9.2026 ilta, sanatarkasti: "kartta saisi zoomautua '
           + 'lahemmaksi ensin ja sitten vasta pelaaja alkaisi liikkua. '
