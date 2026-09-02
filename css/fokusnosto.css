@@ -665,9 +665,11 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
    samalta kuin eläintäyn kortti.
    =========================================================================== */
 
-.hetki-kuva .fokusnosto-kuvanappi { position: relative; }
+.hetki-kuva .fokusnosto-kuvanappi,
+.skandaali-kuva .fokusnosto-kuvanappi { position: relative; }
 
-.hetki-kuvanuoli {
+.hetki-kuvanuoli,
+.skandaali-kuvanuoli {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -683,12 +685,17 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
   opacity: 0.85;
 }
 
-.hetki-kuvanuoli.edellinen { left: 0; text-align: left; padding-left: 0.4rem; }
-.hetki-kuvanuoli.seuraava { right: 0; text-align: right; padding-right: 0.4rem; }
+.hetki-kuvanuoli.edellinen,
+.skandaali-kuvanuoli.edellinen { left: 0; text-align: left; padding-left: 0.4rem; }
+.hetki-kuvanuoli.seuraava,
+.skandaali-kuvanuoli.seuraava { right: 0; text-align: right; padding-right: 0.4rem; }
 .hetki-kuvanuoli:hover,
-.hetki-kuvanuoli:focus-visible { opacity: 1; }
+.hetki-kuvanuoli:focus-visible,
+.skandaali-kuvanuoli:hover,
+.skandaali-kuvanuoli:focus-visible { opacity: 1; }
 
-.hetki-kuvalaskuri {
+.hetki-kuvalaskuri,
+.skandaali-kuvalaskuri {
   position: absolute;
   right: 0.45rem;
   bottom: 0.4rem;
@@ -701,3 +708,23 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
   letter-spacing: 0.04em;
   pointer-events: none;
 }
+
+/* ===========================================================================
+   9. SKANDAALIKORTIN INGRESSI JA KUVASELAILU (js/skandaalit.js)
+   ---------------------------------------------------------------------------
+   Kortti sai 2.9.2026 ingressin (`kortti`) ja sen alle varsinaisen
+   jutun (`teksti`) — omistajan havainto: kortti "näyttää tyngältä".
+   Ingressi erottuu jutusta samalla keinolla kuin lehden nostoissa:
+   hitusen isompi kirjasin ja tummempi muste, ei uutta väriä eikä
+   kehystä. Kuvaselailun nuolet ja laskuri ovat historian hetken
+   luokkien rinnalla osiossa 8, koska ilme on sama.
+   =========================================================================== */
+
+.fokusnosto-teksti p.skandaali-ingressi {
+  font-size: 1.04rem;
+  line-height: 1.5;
+  color: #241f19;
+  margin-bottom: 0.7rem;
+}
+
+.fokusnosto-teksti p.skandaali-ingressi + p { margin-top: 0; }
