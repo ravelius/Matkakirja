@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1444, teksti: 'Raamattu: kysymykset omistajalle aina kortilla' },
   { v: 1443, teksti: 'Tilannetaulu: aamun erä v1436–v1442 ja poltto 02a' },
   { v: 1442, teksti: 'Syvä zoomi: ruutukatto koko nostolle, maastomerkeille katto' },
   { v: 1441, teksti: 'Pohja 1′-korkeusdatalla: R2-palat generaattoriin (z7)' },
