@@ -1,6 +1,7 @@
 # Karttanostojen kattavuus maittain
 
-Päivitetty: 2.9.2026 (Fable, runko; K2-erän inventaario täytti taulukon).
+Päivitetty: 2.9.2026 (Fable, runko; K2-erän inventaario ja erä 1 täyttivät
+taulukon).
 Omistaja 2.9.2026: *"pitäisi jatkaa kaikki Euroopan maat loppuun
 näiden karttanostojen osalta. ja muistathan että kohdekaupunkien
 nostot eivät tule pääkartalle?"* Tavoite per maa: 8 kohdetta,
@@ -40,19 +41,19 @@ kuratoidussa `fokuskohteet-grc.js`:ssä, ja Islannin Þjórsá on
 maastokohde `maastokohteet-isl.js`:ssä. Peli katsoo listat joka
 tapauksessa yhdessä (`js/fokuskohteet.js` KOHDE_MAAT).
 
-## Kattavuus 2.9.2026 (inventaario, ennen erää K2)
+## Kattavuus 2.9.2026 (erän 1 jälkeen)
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | Itävalta (AUT) | 0 | 4 | 1 | 3 | 0 | 5 | 9 | 3 | kohteita −8 |
 | Bulgaria (BGR) | 12 | 6 | 1 | 3 | 0 | 5 | 18 | 7 | täysi |
 | Bosnia ja Hertsegovina (BIH) | 9 | 5 | 1 | 2 | 0 | 4 | 18 | 2 | täysi |
-| Sveitsi (CHE) | 0 | 5 | 1 | 3 | 0 | 0 | 8 | 0 | kohteita −8 |
-| Tšekki (CZE) | 0 | 3 | 1 | 3 | 0 | 4 | 6 | 4 | kohteita −8 |
+| Sveitsi (CHE) | 8 | 5 | 1 | 3 | 0 | 0 | 16 | 0 | täysi |
+| Tšekki (CZE) | 8 | 3 | 1 | 3 | 0 | 4 | 14 | 4 | täysi |
 | Saksa (DEU) | 8 | 13 | 1 | 3 | 0 | 6 | 25 | 5 | täysi |
 | Tanska (DNK) | 0 | 3 | 1 | 3 | 1 | 4 | 7 | 4 | kohteita −8 |
 | Espanja (ESP) | 0 | 5 | 1 | 3 | 3 | 15 | 16 | 10 | kohteita −8 |
-| Viro (EST) | 0 | 3 | 1 | 3 | 0 | 4 | 5 | 5 | kohteita −8 |
+| Viro (EST) | 8 | 3 | 1 | 3 | 0 | 4 | 13 | 5 | täysi |
 | Suomi (FIN) | 0 | 4 | 1 | 3 | 0 | 7 | 6 | 8 | kohteita −8 |
 | Ranska (FRA) | 2 | 6 | 1 | 3 | 0 | 9 | 9 | 11 | kohteita −6 |
 | Britannia (GBR) | 3 | 5 | 1 | 3 | 2 | 7 | 13 | 7 | kohteita −5 |
@@ -60,10 +61,10 @@ tapauksessa yhdessä (`js/fokuskohteet.js` KOHDE_MAAT).
 | Kroatia (HRV) | 8 | 11 | 1 | 3 | 0 | 3 | 23 | 2 | täysi |
 | Unkari (HUN) | 11 | 6 | 1 | 3 | 0 | 3 | 20 | 3 | täysi |
 | Irlanti (IRL) | 0 | 3 | 1 | 3 | 0 | 6 | 9 | 3 | kohteita −8 |
-| Islanti (ISL) | 0 | 3 | 1 | 2 | 0 | 0 | 5 | 0 | kohteita −8 |
+| Islanti (ISL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Italia (ITA) | 10 | 9 | 1 | 3 | 0 | 10 | 20 | 12 | täysi |
 | Liettua (LTU) | 0 | 3 | 1 | 3 | 0 | 6 | 9 | 3 | kohteita −8 |
-| Latvia (LVA) | 0 | 3 | 1 | 2 | 0 | 5 | 8 | 2 | kohteita −8 |
+| Latvia (LVA) | 8 | 3 | 1 | 2 | 0 | 5 | 16 | 2 | täysi |
 | Alankomaat (NLD) | 0 | 3 | 1 | 3 | 0 | 7 | 10 | 3 | kohteita −8 |
 | Norja (NOR) | 0 | 4 | 1 | 3 | 2 | 8 | 13 | 3 | kohteita −8 |
 | Puola (POL) | 0 | 5 | 1 | 3 | 0 | 9 | 12 | 5 | kohteita −8 |
@@ -74,22 +75,45 @@ tapauksessa yhdessä (`js/fokuskohteet.js` KOHDE_MAAT).
 | Turkki (TUR) | 22 | 6 | 1 | 3 | 0 | 3 | 28 | 6 | täysi |
 | Ukraina (UKR) | 0 | 5 | 1 | 3 | 0 | 9 | 13 | 4 | kohteita −8 |
 
-Maita 29, tavoitteessa 9, vajaita 20.
+Maita 29, tavoitteessa 14, vajaita 15.
 
-## Viisi heikointa maata
+## Erä 1: viisi heikointa maata, ennen ja jälkeen
 
-Erä valitaan taulukon heikoimmasta päästä. Karttamerkkien yhteismäärä
-(pääkartta + kohdekartta) on pienin näillä viidellä, ja jokaisella
-niistä kuratoituja kohteita on **nolla** — maasto, eläintäky ja
-skandaalit ovat jo tavoitteessa, joten koko vaje on kohteissa.
+Erä valittiin taulukon heikoimmasta päästä. Karttamerkkien yhteismäärä
+(pääkartta + kohdekartta) oli pienin näillä viidellä, ja jokaisella
+niistä kuratoituja kohteita oli **nolla** — maasto, eläintäky ja
+skandaalit olivat jo tavoitteessa, joten koko vaje oli kohteissa.
 
-| maa | merkkejä yhteensä | kohteet | vaje |
+| maa | merkkejä ennen | merkkejä jälkeen | kohteet ennen → jälkeen |
 |---|---:|---:|---|
-| Islanti (ISL) | 5 | 0 | kohteita −8 |
-| Sveitsi (CHE) | 8 | 0 | kohteita −8 |
-| Tšekki (CZE) | 10 | 0 | kohteita −8 |
-| Viro (EST) | 10 | 0 | kohteita −8 |
-| Latvia (LVA) | 10 | 0 | kohteita −8 |
+| Islanti (ISL) | 5 | 13 | 0 → 8 |
+| Sveitsi (CHE) | 8 | 16 | 0 → 8 |
+| Tšekki (CZE) | 10 | 18 | 0 → 8 |
+| Viro (EST) | 10 | 18 | 0 → 8 |
+| Latvia (LVA) | 10 | 18 | 0 → 8 |
+
+Yhteensä 40 uutta karttanostoa. Yksikään ei ole kohdekaupungin
+kohdalla: lähin uusi merkki on Islannin Þingvellir 26,7 lautayksikön
+päässä Islanti-laatasta, ja muissa maissa lähin on 29,1–29,6
+yksikön päässä (raja `KAUPUNGIN_KOHDALLA_SADE` on 7). Kaikki 40 ovat
+siis pääkartan merkkejä.
+
+**Missä ne asuvat.** Kohteet kirjoitettiin maan omaan
+`js/packs/maastokohteet-<iso>.js`-tiedostoon eikä uuteen
+`fokuskohteet-<iso>.js`-pakkiin. Syy on kirjattu jokaisen tiedoston
+alkuun: kohdepakki vaatisi rivin `js/fokuskohteet.js`:n
+KOHDE_MAAT-tauluun (rinnakkaisen erän hallussa) sekä FOKUS_LISANIMET-
+lohkon (`js/packs/fokus-grc.js`), jonka lähtöaineisto on ämpärissä
+eikä repossa. Maastokohteiden hakemisto (`js/packs/maastokohteet.js`)
+liittää listan peliin sellaisenaan, joten kohteet ovat kartalla heti.
+Kun KOHDE_MAAT vapautuu, lohkot siirtyvät omiin pakkeihinsa
+sellaisinaan — ja silloin on ajettava myös
+`tools/tee-fokus-lisanimet.mjs`, jotta lehteen poltetut kaupunginnimet
+eivät jää kaksinkerroin.
+
+**Kuvaton erä.** Kortti kantaa tekstin ja lähteen, ei kuvaa — sama
+linja kuin maastokohteilla muutenkin. Tarkistamaton Commons-tiedosto
+olisi huonompi kuin kuvaton kortti.
 
 ## Erien järjestys
 
@@ -97,14 +121,16 @@ Erä valitaan aina taulukon heikoimmasta päästä: ensin ne maat, joiden
 karttamerkkien yhteismäärä (pääkartta + kohdekartta) on pienin, ja
 niiden sisällä ne lajit, joissa vaje on suurin.
 
-- **K2, erä 1** — ISL, CHE, CZE, EST, LVA: 8 kohdetta kuhunkin,
+- **K2, erä 1 (tehty)** — ISL, CHE, CZE, EST, LVA: 8 kohdetta kuhunkin,
   yhteensä 40 uutta karttanostoa.
-- **Erä 2 (ehdotus)** — DNK, SWE, FIN, IRL, LTU. Kaikilla on 0 kohdetta
-  ja pienin karttamerkkimäärä jäljellä olevista; maasto, eläintäky ja
-  skandaalit ovat niissä jo tavoitteessa, joten työ on puhdasta
-  kohdetyötä samalla mallilla.
-- **Erä 3 (ehdotus)** — NLD, AUT, PRT, POL, NOR.
-- **Erä 4 (ehdotus)** — RUS, UKR, ESP sekä vajaat FRA (−6) ja GBR (−5).
+- **Erä 2 (ehdotus)** — DNK 11, SWE 11, AUT 12, IRL 12, LTU 12
+  karttamerkkiä. Kaikilla nolla kohdetta ja pienin merkkimäärä
+  jäljellä olevista; maasto, eläintäky ja skandaalit ovat niissä jo
+  tavoitteessa, joten työ on puhdasta kohdetyötä samalla mallilla.
+- **Erä 3 (ehdotus)** — NLD 13, FIN 14, PRT 15, NOR 16, POL 17.
+- **Erä 4 (ehdotus)** — UKR 17, RUS 20, ESP 26 sekä vajaat FRA (−6) ja
+  GBR (−5), jotka ovat lähimpänä maalia.
+
 Maastovajetta ei jäänyt: tyyppipohjaisella laskennalla jokaisella
 maalla on jo vähintään kolme maastokohdetta, ja skandaalitavoite (2)
 täyttyy kaikkialla. Koko jäljellä oleva vaje on siis kohteissa.
