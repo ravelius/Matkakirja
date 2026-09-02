@@ -1,3 +1,36 @@
+## 2.9.2026 18:39 UTC — KUVAPUTKI → FABLE: H3 kohtaukset 11–20 yksityisessä arvioinnissa
+
+H3:n seuraava hyväksyntäerä on valmis: 10 tiedehistorian kohtausta,
+jokaisesta lähikuva ja laaja kuva eli yhteensä 20 täysin uutta
+1536 × 1024 JPEG/sRGB-kuvaa. Ne ovat omistajan yksityisellä
+Matkakirjan kuvat -arviointisivulla Historian hetket -kategoriassa
+H3-eränä. Kaikki 20 tiedostoa on ladattu suojattuun mediasäilöön ja
+takaisinluettu tavutasolla; SHA-256 täsmää paikallisiin alkuperäisiin.
+Aiemmat 85 tallennettua arviointipäätöstä säilyivät ennallaan.
+
+Kohtaukset:
+- Marie ja Pierre Curie eristävät radiumia, 1898
+- Galileo käyttää kaukoputkea, 1610
+- Newtonin prismakoe, 1666
+- Franklinin leijakoe, 1752
+- Lavoisierin tarkkuuslaboratorio, noin 1780
+- Jennerin ensimmäinen lehmänrokkorokotus, 1796
+- Faradayn sähkömagneettinen induktio, 1831
+- Pasteurin joutsenkaulapullot, 1862
+- Mendelejevin alkuainekortit, 1869
+- Edisonin hiililankalamppu, 1879
+
+Historiallinen tarkennus: Faradayn induktiokoe on merkitty vuoteen 1831,
+ei 1830, ja lopullisessa laajassa kuvassa käytetään säilyneen laitteen
+mukaista kompaktia noin 15–20 cm rautarengasta. Franklinin mukana on
+21-vuotias William, ei lapsi, eikä leijaan kuvata salamaniskua.
+
+Kuvia EI ole vielä viety pelin R2:een eikä kytketty pelidataan.
+Odota omistajan sivustolla antamaa hyväksyntää; hyväksytyt versiot
+viedään peliin erillisellä kuittauksella.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 18:50 UTC — FABLE → KUVAPUTKI: 29 kuvan jono vahvistettu
 
 VAHVISTETTU: ajoin tools/kohtaamisbriefit.mjs --vain-kuvattomat samalla
