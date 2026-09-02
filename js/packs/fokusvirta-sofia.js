@@ -156,13 +156,18 @@ const SAHKE_SOFIA = {
 
   hahmo: 'Pöllöltä, jostain maan alta',
 
+  /*
+   * SÄHKE ON LYHYT JA KYSYMYS ENSIN (omistaja 2.9.2026 ilta: "Tässä
+   * tehtävässä on vaikea ymmärtää mitä tässä kysytään. Ja vähän turhan
+   * pitkä teksti lukea joka tapauksessa"): enintään viisi riviä,
+   * kysymys heti tervehdyksen jälkeen, sitten mitä vastataan ja mistä
+   * vastaus löytyy. Ei kehyskertomusta sähkeessä — se on Livian
+   * saatteessa, ja sekin on kaksi virkettä.
+   */
   sahke: 'LIVIALLE STOP\n'
-    + 'OLEN KAIVANUT SOFIAN ALLA KOLME PÄIVÄÄ STOP\n'
-    + 'TÄÄLTÄ LÖYTYY KAIKKEA MUTTA EI SITÄ MITÄ ETSIN STOP\n'
-    + 'ENNEN KUIN KERRON PAIKAN HALUAN TIETÄÄ ETTÄ VIERAASI OSAA LUKEA KARTTAA STOP\n'
-    + 'MISSÄ BULGARIASSA NOUSI MAASTA MAAILMAN VANHIN KULTA STOP\n'
-    + 'JA MINÄ VUONNA SE LÖYTYI STOP\n'
-    + 'KOHDE ON KARTALLE MERKITTY STOP\n'
+    + 'MISSÄ BULGARIASSA LÖYTYI MAAILMAN VANHIN KULTA JA MINÄ VUONNA STOP\n'
+    + 'VASTAA KOHDE JA VUOSI STOP\n'
+    + 'PAIKKA ON KARTAN KOHTEISSA STOP\n'
     + 'PÖLLÖ STOP',
 
   /*
@@ -173,14 +178,10 @@ const SAHKE_SOFIA = {
    * SAATE SITOO TEHTÄVÄN AARREMERKINTÄÄN kertomatta merkintää:
    * isoisä punnitsi lapiota ja lähti, pöllö osti lapion.
    */
-  johdanto: 'No. Isoisäsi seisoi tässä samassa kaupungissa ja mietti '
-    + 'lapion ostamista, eikä ostanut. Pöllö osti. Nyt se istuu jossain '
-    + 'kuopassa ja vaatii tunnussanan ennen kuin kertoo, mihin se on '
-    + 'päätynyt.\n\n'
-    + 'Kaksi aukkoa: yksi kohde Bulgarian luettelosta ja yksi vuosiluku. '
-    + 'Kumpikin lukee kartan omissa kohteissa — ne merkit, joita sinä '
-    + 'olet napautellut auki. Väärä vastaus ei sulje mitään, mut se syö '
-    + 'palkkiota ja minä lennän turhaan.',
+  johdanto: 'No. Pöllö istuu kuopassa eikä kerro löytöään ennen '
+    + 'tunnussanaa. Vastaa kahteen aukkoon: kartan kohde Bulgarian '
+    + 'luettelosta ja vuosiluku. Molemmat lukevat kartan kohteissa, joita '
+    + 'olet napauttanut auki.',
 
   hakemistoMaa: 'BGR',
 

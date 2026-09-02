@@ -1053,6 +1053,16 @@ export const RAAMATTU = {
           + 'mustaan - ei Aarnin luettelo -kehysta, otsakkeita eika '
           + 'leimaa. Diplomikoodi jai paikoilleen kuolleena (poisto '
           + 'oma eransa). Toteutettu v1300.',
+        'SAHKE ON LYHYT JA KYSYMYS ENSIN (omistaja 2.9.2026 ilta, Sofian '
+          + 'sahke: "Tassa tehtavassa on vaikea ymmartaa mita tassa kysytaan. '
+          + 'Ja vahan turhan pitka teksti lukea joka tapauksessa"): sahkeessa '
+          + 'enintaan viisi rivia - tervehdys, KYSYMYS yhdella rivilla, '
+          + '"VASTAA KOHDE JA VUOSI", mista vastaus loytyy, allekirjoitus. '
+          + 'Ei kehyskertomusta sahkeessa. Livian saate enintaan kolme '
+          + 'virketta: miksi polloa pitaa vastata, mitka kaksi aukkoa, mista '
+          + 'ne loytyvat. Palkkio- ja vaarin vastaamisen saannot ovat jo '
+          + 'lomakkeen alarivilla, niita ei toisteta saatteessa. Koskee '
+          + 'kaikkia sahketehtavia (Sofia, Tukholma ja tulevat).',
         'POLLON SAHKETEHTAVA - FLIPPED LEARNING (omistaja 29.8.2026: '
           + '"joo, tee vain"): uusi tehtavatyyppi ja VAIHTOEHTOINEN '
           + 'aarteen avaustapa. Pollo lahettaa sahkeen Livialle, Livia '
