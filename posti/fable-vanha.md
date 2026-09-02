@@ -1,3 +1,43 @@
+## 2.9.2026 14:55 UTC — FABLEN TILANNEMUISTIO: illan erä v1454–v1459 mainissa, koko pyramidi poltossa (kirkas), 9 kuvatilausta jonossa
+
+Main v1459 (7d2b58f6). Tänään illalla julkaistu: v1454 nostomerkit
+pisteiksi + eläintäyt/hetket polttoon; v1455 siirron koreografia +
+siirtymämusiikin kanava; v1456 maatummennus purettu + Matkusta-kamera;
+v1457 jokainen nosto kartalla (37 kohdekarttapistettä, 20 kattoVapaa,
+hetket kartalle, 6 visaa); v1458 uloin zoomi koko lauta + paperi
+ympärille; v1459 patina kirkas (kromanvahvistus 0,95). POLTTO KÄYNNISSÄ:
+pohja 2026-09-02b (kirkas, korkeus 1), nostot 02e (v8), viivat 02b —
+omistaja: "Saat polttaa suoraan." Haarassa odottaa v1460: skandaalien
+täysi teksti 43–83 (S2 valmis) + 1–42 ja kortin galleria (S1 kesken).
+
+KUVAJONOLLE TILATTU (kuittauksia ei vielä yhtään): H2 (pilotti uusiksi
+lahi+kauko), H3 (46 kohtausta), V1 (16 ennen/nyt-paria), M1 (4
+miniatyyriä), M2 (41 miniatyyriä), K3 (Klimt uusiksi), K4 (BGR 3
+skandaalia + aikalaislähdesääntö), E2 (BGR karhu fotorealistinen), A1 (9
+pääaarretta: kädet, läikikäs valo, siluetti, Pulu). Kuvatyypit-ehdotus
+(9 kategoriaa) lähetetty.
+
+RAAMATTU tänään: Historian hetket + ennen/nyt, ihmemerkki, kuvatyypit,
+jokainen nosto kartalla, piste-symbolit + polttokattavuus,
+siirtokoreografia + musiikki (docs/moduulit/aanet.md), tummennus
+purettu, Matkusta-kamera, uloin zoomi + patina kirkas, nostokortin kuvat
+ja teksti. Musiikkiraidat: ElevenLabs Music -API (omistaja hankkii
+oikeuden), varalla Lyria.
+
+AVOINNA: Pariisin kohdekartan nimiöiden väistö (18 pistettä); GBR/ESP
+täkypooli estää polton; nappulan kokoloikka; savuke-havainnekuva lipeä;
+savuke-nappula 7b/7c; savuke-maailmanakyma väite 4 kontissa;
+savuke-karttazoom ateena kaatuu mainissa.
+
+JATKOPROMPTI: 1) ReadNotifications; 2) postikierros tunneittain
+(trig_01PVJLUsK6F9L92HR7hUCaQN, hiljaa jos ei uutta); 3) kun S1 valmis
+→ merge, v1460 (skandaalit), sitten polton kuittaus omistajalle; 4)
+kuittausten tullessa integrointi Opus-agenteilla työpuissa, Fable
+julkaisee yksitellen (fetch main → uusi-versio ≤60 merkkiä ASCII-laskuna,
+ei "tähti"-sanaa → testit "# fail 0" → tarkistimet → build → PR → CI →
+squash → reset); ei rinnakkaisia pyramidiajoja; kysymykset omistajalle
+aina kortilla; ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 14:20 UTC — KUVATILAUS A1 — AARREKUVAT: 9 pääaarretta uusiksi (aarre käsissä, läikikäs valo, kaupungin siluetti, Pulu taustalla)
 
 Omistajan tilaus (sanatarkasti): *"generoimaan muutamia aarrekuvia
