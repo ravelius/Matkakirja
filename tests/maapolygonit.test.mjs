@@ -1,19 +1,20 @@
 /*
- * Maatummennuksen aineisto (assets/data/maapolygonit.json).
+ * Maan ääriviivan aineisto (assets/data/maapolygonit.json).
  *
  * Tiedosto on koneen kirjoittama (tools/generoi-maapolygonit.mjs),
  * joten testit vartioivat niitä EHTOJA, joiden varassa piirtäjä
  * (js/maatummennus.js) toimii — eivät yksittäisiä lukuja:
  *
- *   1. KIERTOSUUNTA. Varjo on kaikkien muiden maiden renkaat yhtenä
- *      polkuna `fill-rule: nonzero` (js/maatummennus.js `muidenPolku`,
- *      omistajan kaappaus 31.8.2026: *"Merta ei tarvitse tummentaa"*).
- *      Nonzero maalaa päällekkäin menevät naapurirajat kerran VAIN jos
- *      renkaat kiertävät samaan suuntaan; vastakkainen rengas kumoaisi
- *      naapurinsa ja jokainen maaraja saisi vaalean raon.
- *   2. KATTAVUUS. Maa, jolle ei ole polygonia, jää tummentamatta ja
- *      lukee kartalla merenä — ja jos polygoni puuttuu NYKYISELTÄ
- *      maalta, koko efekti jää pois.
+ *   1. KIERTOSUUNTA. Aineiston yhtenäinen suunnistus
+ *      (tools/generoi-maapolygonit.mjs `suunnista`) oli ehto
+ *      naapurivarjon `fill-rule: nonzero` -täytölle. Varjo poistui
+ *      2.9.2026 (omistaja: *"Jätetään pelkkä vahvistettu kartan
+ *      ääriviiva jäljelle"*), joten väite ei enää vartioi piirtoa vaan
+ *      AINEISTON EHEYTTÄ: vastakkaiseen suuntaan kiertävä rengas on
+ *      merkki siitä, että generaattori tai lähde on vaihtunut alta.
+ *   2. KATTAVUUS. Maa, jolle ei ole polygonia, jää ilman vahvistettua
+ *      ääriviivaa — ja jos polygoni puuttuu NYKYISELTÄ maalta, koko
+ *      efekti jää pois.
  *   3. MUOTO. Purku on yksi silmukka ilman tarkistuksia, joten
  *      renkaan pituuden on oltava parillinen ja vähintään kolmion
  *      verran pisteitä.
@@ -74,10 +75,9 @@ test('renkaat ovat parillisia ja vähintään kolmioita', () => {
 });
 
 /*
- * Tämä on se väite, jonka varassa `nonzero` on oikein. Jos generaattorin
- * suunnistus (tools/generoi-maapolygonit.mjs `suunnista`) joskus katoaa
- * tai lähde vaihtuu, vika näkyisi kartalla vaaleina rakoina maarajoilla
- * — täällä se näkyy heti.
+ * Aineiston eheysväite (ks. tiedoston alku, kohta 1). Nonzero-täyttöä ei
+ * enää ole, mutta suunnistuksen katoaminen kertoisi yhä siitä, että
+ * generaattori tai lähde on vaihtunut alta — täällä se näkyy heti.
  */
 test('kaikki renkaat kiertävät samaan suuntaan', () => {
   const vaarin = [];
