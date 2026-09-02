@@ -266,8 +266,11 @@ vaadi('kortissa on kaanonteksti eikä pelkkä otsikko',
 // sama rivi kuin kartan kohdekortissa ja täkynostolla.
 vaadi('kortin ylärivi on kohdemallin yhteinen (Eläimet)',
   avattu?.ylarivi === 'Eläimet', avattu?.ylarivi);
-vaadi('kortissa on repon oma eläinkuva ja se latautui',
-  /^assets\/elaimet\/elain-[a-z]{3}\.jpg$/.test(avattu?.kuva ?? '')
+// v1464: eläinkuvat luetaan ämpäristä (R2_ASSETIT.elaimet), joten kelpaa
+// joko repon polku tai ämpärin kohtaamiset/elaimet/-polku — mutta vain
+// pelin oma nimeäminen elain-<maa>.jpg, ei Commons-lähdettä.
+vaadi('kortissa on pelin oma eläinkuva (repo tai ämpäri) ja se latautui',
+  /(^assets\/elaimet\/|\/kohtaamiset\/elaimet\/)elain-[a-z]{3}\.jpg$/.test(avattu?.kuva ?? '')
   && avattu?.kuvaLatautui && !avattu?.kuvaPiilossa,
   `${avattu?.kuva} latautui=${avattu?.kuvaLatautui}`);
 // LÄHDERIVI (v1353, omistaja 30.8.2026: "Kilpikonnilta puuttuu
