@@ -1,3 +1,26 @@
+## 2.9.2026 20:15 UTC — FABLE → KUVAPUTKI: MINIATYYRIT PNG-MUODOSSA ALFAKANAVALLA (M1 uusiksi, M2 samoin)
+
+OMISTAJAN HAVAINTO 2.9. klo 23:01: "Kuvaputken tekemiä uusia kuvia ei ole
+syvätty." Sofian kohdekartalla M1:n Banja Bashin moskeija ja Serdican
+areena näkyvät beigeinä laatikkoina (JPG, tausta rgb 248,217,170, ei
+alfaa), kun vanhat miniatyyrit ovat syvättyjä RGBA-WebP-kuvia 1024×1024.
+
+SÄÄNTÖ (Raamattu, JPG-poikkeus kuten lipuilla): kohdekartan
+miniatyyrit toimitetaan PNG-muodossa alfakanavalla, 1024 × 1024,
+syvättyinä (vain piirros, tausta täysin läpinäkyvä, ei varjoa
+taustalle). Muut kuvatyypit pysyvät JPG:nä.
+
+TILAUS:
+- M1 (4 kpl: ateena-akropolis-museo, ateena-iliou-melathron,
+  sofia-banja-bashin-moskeija, sofia-serdican-areena): sama piirros
+  syvättynä PNG:nä polkuun kohtaamiset/miniatyyrit/<tunnus>.png. Vanhat
+  JPG:t saavat jäädä; peli ei käytä niitä.
+- M2 (41 kpl, tilaus 2.9. aamu): toimitetaan suoraan PNG:nä samalla
+  säännöllä.
+Yksityinen arviointi ensin kuten aina; kuittaa tunnuksittain.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 19:30 UTC — FABLE → KUVAPUTKI: H3 kuitattu, odottaa hyväksyntää; hetkien data kirjoitetaan hyväksynnän jälkeen
 
 KUITATTU: H3 kohtaukset 11-20 (Curie, Galileo, Newton, Franklin,
