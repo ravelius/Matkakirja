@@ -408,40 +408,263 @@
 
 /* ==================== PÖLLÖN SÄHKETEHTÄVÄ ====================
  *
- * Sähke näyttää sähkeeltä: kapea liuska, versaalit, harva riviväli ja
- * konekirjoituskirjasin. Asu on tarkoituksella eri kuin kortin muu
- * teksti — pöllön sähke ei ole Livian puhetta eikä isoisän käsialaa,
- * vaan konetta.
+ * SÄHKE ON LOMAKE (omistaja 2.9.2026 ilta: kortti *"visuaalisesti
+ * herkullisemmaksi"*). Aiemmin sähke oli katkoviivalaatikko ja
+ * monospace-rivejä; nyt se on 1870-luvun sähkösanomalomake, jollaisen
+ * asemalta sai käteen:
  *
- * VÄRIT ON POIMITTU KORTIN OMASTA PALETISTA (ei uusia sävyjä): sama
- * ruskea muste ja sama pergamentti kuin muualla, vain vaaleampi
- * pohjalappu ja katkoviivareuna erottavat liuskan.
+ *   painettu otsake "SÄHKÖSANOMA" harvennetuin kapiteelein,
+ *   lomakenumero oikeassa laidassa, ohut kaksoisviiva alla,
+ *   sähköaseman pyöreä musteleima kallellaan vasemmassa yläkulmassa,
+ *   rei'itetyt ala- ja yläreunat (irti revitty arkki),
+ *   ja itse viesti LIIMATTUINA PAPERILIUSKOINA — sähkeet todella
+ *   liimattiin lomakkeelle liuskoina, ja siksi jokainen rivi on oma
+ *   hieman vaaleampi lappunsa, jolla on varjo ja pieni kallistus.
+ *
+ * KAIKKI ON CSS:ÄÄ: yhtään kuvatiedostoa tai fonttilatausta ei tule,
+ * koska peli on offline-PWA. Rei'itys on radial-gradient, leima on
+ * border-radius ja rotate, liuskojen kallistukset ovat nth-child-
+ * sarjana (arvottu kallistus vaihtuisi joka piirrolla ja näyttäisi
+ * vialta, kun kortti piirretään ohilyönnin jälkeen uudelleen).
+ *
+ * VÄRIT OVAT KORTIN OMASTA PALETISTA — sama ruskea muste ja sama
+ * pergamentti kuin muualla — yhtä lukuun ottamatta: sähköaseman leima
+ * ja Livian saate ovat sinertävää mustetta. Ne ovat kortin ainoat
+ * kohdat, joita EI ole kirjoitettu koneella: leima on painettu asemalla
+ * ja saate on Livian oma merkintä marginaaliin.
+ *
+ * MIKSI LIVIALLA EI OLE KAUNOKIRJOITUSTA: pelissä on yksi kaunokirjasin
+ * (--font-kauno) ja se on isoisän käsiala (css/styles.css). Toinen
+ * käsiala samassa pelissä lukisi isoisän merkinnäksi, ja repoon ei
+ * myöskään voi lisätä verkkofonttia ilman että offline-lataus kasvaa.
+ * Saate on siksi kursivoitua lukukirjasinta sinisellä musteella ja
+ * hitusen kallellaan — kynän jälki lomakkeen marginaalissa.
+ *
+ * MITAT: kaikki luettava teksti on vähintään 15 px myös iPhonen 390
+ * pikselin leveydellä, kentät ja napit vähintään 44 px korkeita, eikä
+ * kortti vaakavieritä (vartija: tools/savukkeet/savuke-sahkekortti.mjs).
  */
+
 .fokusvirta-sahke {
-  margin: 0.7rem 0 0;
-  padding: 0.55rem 0.7rem;
-  border: 1px dashed rgba(58, 38, 16, 0.45);
-  background: rgba(255, 252, 240, 0.72);
+  /* Lomakkeen omat sävyt yhdessä paikassa. */
+  --sahke-muste: #3a2610;
+  --sahke-lomake: #f7edcf;
+  --sahke-liuska: #fffbee;
+  --sahke-reuna: rgba(58, 38, 16, 0.34);
+  /* Rei'ityksen "reikä" on kortin oma paperi (.fokusvirta-kortti). */
+  --sahke-kortti: #f5f0e2;
+  --sahke-leima: rgba(72, 74, 116, 0.62);
+
+  position: relative;
+  margin: 0.85rem 0 0;
+  /* Ylä- ja alareunassa on tilaa rei'itykselle (::before, ::after). */
+  padding: 0.75rem 0.6rem 0.85rem;
+  border: 1px solid var(--sahke-reuna);
+  /* Revitty reuna ylhäällä ja alhaalla: siellä ei ole viivaa. */
+  border-top: 0;
+  border-bottom: 0;
+  background: linear-gradient(180deg, #fcf4da 0%, var(--sahke-lomake) 55%, #f1e3bd 100%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 2px 7px rgba(58, 38, 16, 0.16);
+}
+
+/* Rei'itys: puolikkaita reikiä kortin paperin värillä, kuten
+   irtirevityn lomakkeen reunassa. */
+.fokusvirta-sahke::before,
+.fokusvirta-sahke::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 7px;
+  pointer-events: none;
+}
+
+.fokusvirta-sahke::before {
+  top: 0;
+  background: radial-gradient(circle 4.2px at 6px 0, var(--sahke-kortti) 98%, transparent 100%)
+    0 0 / 12px 7px repeat-x;
+}
+
+.fokusvirta-sahke::after {
+  bottom: 0;
+  background: radial-gradient(circle 4.2px at 6px 7px, var(--sahke-kortti) 98%, transparent 100%)
+    0 0 / 12px 7px repeat-x;
+}
+
+/* --- lomakkeen painettu otsake --- */
+
+.fokusvirta-sahke-otsake {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.4rem;
+  min-height: 3.5rem;
+  /* Vasen laita on leiman: otsakkeen teksti alkaa vasta sen jälkeen. */
+  padding: 0 0.1rem 0.3rem 4.1rem;
+  border-bottom: 3px double rgba(58, 38, 16, 0.42);
+}
+
+.fokusvirta-sahke-nimio {
+  font-family: var(--font-type);
+  font-size: 0.95rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(58, 38, 16, 0.82);
+}
+
+/* Lomakenumero on painatusta, ei tietoa: pientä ja vaaleaa. */
+.fokusvirta-sahke-numero {
+  font-family: var(--font-type);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  color: rgba(58, 38, 16, 0.5);
+}
+
+/* --- sähköaseman musteleima --- */
+
+.fokusvirta-sahke-leima {
+  position: absolute;
+  left: 0.05rem;
+  top: 0.15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  padding: 0 0.15rem;
+  border: 2px solid var(--sahke-leima);
+  border-radius: 50%;
+  /* Kaksoiskehä kuten oikeassa leimasimessa. */
+  box-shadow: inset 0 0 0 1px rgba(72, 74, 116, 0.28);
+  transform: rotate(-11deg);
+  font-family: var(--font-type);
+  line-height: 1.05;
+  text-align: center;
+  color: var(--sahke-leima);
+}
+
+.fokusvirta-sahke-leima-nimi {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.fokusvirta-sahke-leima-asema {
+  font-size: 0.42rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+/* --- liimatut liuskat --- */
+
+.fokusvirta-sahkeliuskat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  /* Kallistus vie liuskan kulmat muutaman pikselin sivulle: pieni
+     sisennys pitää varjot lomakkeen sisällä. */
+  margin: 0.75rem 0.1rem 0;
 }
 
 .fokusvirta-sahkerivi {
-  margin: 0 0 0.3rem;
-  font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
-  font-size: 0.82rem;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
+  margin: 0;
+  padding: 0.32rem 0.5rem;
+  background: linear-gradient(180deg, var(--sahke-liuska), #fdf7e4);
+  box-shadow: 0 1px 2px rgba(58, 38, 16, 0.22), 0 0 0 1px rgba(58, 38, 16, 0.06);
+  transform: rotate(var(--sahke-kallistus, 0deg));
+  font-family: var(--font-type);
+  font-size: 0.96rem;
+  line-height: 1.45;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #3a2610;
+  color: var(--sahke-muste);
 }
 
-.fokusvirta-sahkerivi:last-child { margin-bottom: 0; }
+/* Liimaajan käsi ei ollut suora: ±0,4 asteen sarja, joka toistuu
+   viiden rivin välein. */
+.fokusvirta-sahkeliuskat .fokusvirta-sahkerivi:nth-child(5n + 1) { --sahke-kallistus: -0.35deg; }
+.fokusvirta-sahkeliuskat .fokusvirta-sahkerivi:nth-child(5n + 2) { --sahke-kallistus: 0.28deg; }
+.fokusvirta-sahkeliuskat .fokusvirta-sahkerivi:nth-child(5n + 3) { --sahke-kallistus: -0.16deg; }
+.fokusvirta-sahkeliuskat .fokusvirta-sahkerivi:nth-child(5n + 4) { --sahke-kallistus: 0.4deg; }
+.fokusvirta-sahkeliuskat .fokusvirta-sahkerivi:nth-child(5n + 5) { --sahke-kallistus: -0.26deg; }
 
-/* Lomake on osa sähkettä: aukot ovat rivejä, ei lomakelaatikoita. */
+/* STOP on sähkeen välimerkki eikä sana: haaleampana silmä lukee
+   sisällön eikä pisteitä. */
+.fokusvirta-sahke-stop {
+  letter-spacing: 0.06em;
+  color: rgba(58, 38, 16, 0.42);
+}
+
+/*
+ * KYSYMYSRIVI EROTTUU (omistaja 2.9.2026: *"tässä tehtävässä on vaikea
+ * ymmärtää mitä tässä kysytään"*). Kysymyksen liuska on hitusen tummempi
+ * lappu, jonka vasemmassa reunassa on musteviiva — se on ainoa rivi,
+ * jolla on paino, joten silmä osuu siihen ennen muita.
+ */
+.fokusvirta-sahkerivi.fokusvirta-sahkekysymys {
+  padding-left: 0.65rem;
+  border-left: 3px solid rgba(122, 85, 20, 0.8);
+  background: linear-gradient(180deg, #f7ebc8, #f1e0b4);
+  box-shadow: 0 1px 3px rgba(58, 38, 16, 0.26), 0 0 0 1px rgba(58, 38, 16, 0.08);
+  font-weight: 700;
+  color: #2a1c09;
+}
+
+/*
+ * PUHELIMELLA LOMAKE TIIVISTYY, EI PIENENE. Kirjasinkoot pysyvät
+ * (15 px on alaraja myös kapealla ruudulla) — tilaa otetaan
+ * välistyksistä, otsakkeen korkeudesta ja leiman halkaisijasta, jotta
+ * lomake ja sen vastauskentät mahtuvat samaan silmäykseen.
+ */
+@media (max-width: 430px) {
+  .fokusvirta-sahke { padding: 0.7rem 0.45rem 0.8rem; }
+
+  .fokusvirta-sahke-otsake {
+    min-height: 3.1rem;
+    padding-left: 3.6rem;
+  }
+
+  .fokusvirta-sahke-nimio { font-size: 0.88rem; letter-spacing: 0.18em; }
+
+  .fokusvirta-sahke-leima {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .fokusvirta-sahke-leima-nimi { font-size: 0.55rem; }
+
+  .fokusvirta-sahke-leima-asema { font-size: 0.38rem; }
+
+  .fokusvirta-sahkeliuskat { gap: 0.28rem; margin-top: 0.6rem; }
+
+  .fokusvirta-sahkerivi { padding: 0.26rem 0.42rem; line-height: 1.4; }
+
+  .fokusvirta-sahkeaukko .fokusvirta-sahkekentannimi { min-width: 4rem; }
+}
+
+/* ===================================================================
+   VASTAUSLOMAKE — PAINETTUJA KENTTIÄ, EI SELAIMEN LAATIKOITA
+   -------------------------------------------------------------------
+   Aukot ovat lomakkeen omia rivejä: nimi painettuna vasemmalla ja
+   täytettävä viiva sen perässä ("KOHDE ______"). Kenttien tausta on
+   läpinäkyvä ja ainoa reuna on alaviiva, joten ne näyttävät samalle
+   paperille painetuilta eivätkä selaimen harmailta laatikoilta.
+   Kosketusala on silti 44 px, ja tarkennusrengas on oma, koska
+   oletusreunaa ei enää ole näyttämässä missä ollaan.
+   =================================================================== */
+
 .fokusvirta-sahkelomake {
-  margin: 0.75rem 0 0;
+  margin: 0.85rem 0 0;
+  padding: 0.7rem 0.1rem 0;
+  border-top: 3px double rgba(58, 38, 16, 0.35);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.35rem;
 }
 
 .fokusvirta-sahkeaukko { display: block; }
@@ -449,66 +672,114 @@
 .fokusvirta-sahkeotsake {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  gap: 0.15rem;
+  font-family: var(--font-type);
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(58, 38, 16, 0.85);
+  color: rgba(58, 38, 16, 0.9);
 }
 
-/*
- * Kentät ovat sormen mittaisia (44 px) ja täyttä leveyttä: valintalista
- * on pitkä (koko maan sisältöhakemisto), eikä kapea kenttä näyttäisi
- * otsikoita puhelimella.
- */
+/* Aukkorivi on yhtä riviä: nimi ja sen perässä täytettävä viiva. */
+.fokusvirta-sahkeaukko .fokusvirta-sahkeotsake {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Sama mitta molemmilla, jotta viivat alkavat samasta kohdasta. */
+.fokusvirta-sahkeaukko .fokusvirta-sahkekentannimi {
+  flex: 0 0 auto;
+  min-width: 4.6rem;
+}
+
 .fokusvirta-sahkevalinta,
 .fokusvirta-sahkeluku {
-  width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
   min-height: 44px;
-  padding: 0.35rem 0.5rem;
-  border: 1px solid rgba(58, 38, 16, 0.5);
-  border-radius: 3px;
-  background: rgba(255, 255, 250, 0.9);
-  font-family: inherit;
-  font-size: 0.95rem;
+  padding: 0.3rem 0.1rem;
+  border: 0;
+  border-bottom: 1px solid rgba(58, 38, 16, 0.55);
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.55);
+  font-family: var(--font-type);
+  font-size: 1rem;
   letter-spacing: normal;
   text-transform: none;
   color: #211d18;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Valintalistan oma nuoli: selaimen nuoli katosi, kun laatikko meni. */
+.fokusvirta-sahkevalinta {
+  padding-right: 1.3rem;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8'><path d='M1 1 L6 6 L11 1' fill='none' stroke='%233a2610' stroke-width='1.6' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.1rem center;
 }
 
 .fokusvirta-sahkeluku {
-  font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
   letter-spacing: 0.12em;
+}
+
+/* Numerokentän nuolinäppäimet pois: ne toisivat laatikon takaisin. */
+.fokusvirta-sahkeluku::-webkit-outer-spin-button,
+.fokusvirta-sahkeluku::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.fokusvirta-sahkevalinta:focus-visible,
+.fokusvirta-sahkeluku:focus-visible,
+.fokusvirta-sahkevapaakentta:focus-visible {
+  outline: 2px solid rgba(122, 85, 20, 0.85);
+  outline-offset: 2px;
+  border-bottom-color: rgba(58, 38, 16, 0.85);
 }
 
 /*
  * VAPAA VASTAUS (vaihe 2) on lomakkeen RINNALLA, ei sen tilalla, ja se
- * näyttää siltä: sama otsakerivi ja sama kenttäasu kuin aukoilla, mutta
- * ohut yläviiva kertoo, että tämä on toinen tapa vastata samaan
- * sähkeeseen. Teksti on tavallista leipäkirjasinta eikä sähkekonetta —
- * pelaaja kirjoittaa omin sanoin, ei sähkötä.
+ * näyttää siltä: sama painettu nimiö, mutta oma katkoviiva erottimena ja
+ * viivoitettu kirjoitustila — se on lomakkeen "muuta ilmoitettavaa"
+ * -kenttä, johon kirjoitetaan omin sanoin.
  */
 .fokusvirta-sahkevapaa {
-  margin: 0.75rem 0 0;
-  padding: 0.7rem 0 0;
+  margin: 0.85rem 0 0;
+  padding: 0.7rem 0.1rem 0;
   border-top: 1px dashed rgba(58, 38, 16, 0.3);
 }
 
 .fokusvirta-sahkevapaakentta {
   width: 100%;
-  min-height: 3.2rem;
-  padding: 0.4rem 0.5rem;
-  border: 1px solid rgba(58, 38, 16, 0.5);
-  border-radius: 3px;
-  background: rgba(255, 255, 250, 0.9);
-  font-family: inherit;
-  font-size: 0.95rem;
-  line-height: 1.4;
+  /* Kolme viivoitettua riviä (24 px kukin) — tasaluku, jotta viivat
+     osuvat rivien alle eivätkä keskelle tekstiä. */
+  min-height: 72px;
+  padding: 0 0.15rem;
+  border: 0;
+  border-bottom: 1px solid rgba(58, 38, 16, 0.55);
+  border-radius: 0;
+  background-color: transparent;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 23px,
+    rgba(58, 38, 16, 0.2) 23px 24px
+  );
+  background-attachment: local;
+  font-family: var(--font-type);
+  font-size: 1rem;
+  line-height: 24px;
   letter-spacing: normal;
   text-transform: none;
   color: #211d18;
   resize: vertical;
+}
+
+.fokusvirta-sahkevapaakentta::placeholder {
+  color: rgba(58, 38, 16, 0.45);
 }
 
 /*
@@ -517,6 +788,39 @@
  * kortin lopetus. Alarivi pysyy kortin viimeisenä rivinä.
  */
 .fokusvirta-napit.fokusvirta-vapaanapit { margin-top: 0.5rem; }
+
+/*
+ * PALKKIORIVI ON LOMAKKEEN ALAREUNAN MAKSUKOHTA: pientä pränttiä ohuen
+ * viivan alla, kuten lomakkeen "maksu" -rivi ennenkin. Tarkoituksella
+ * alle 15 px — se on lomakkeen ehto, ei luettavaa tekstiä.
+ */
+.fokusvirta-varoitus.fokusvirta-sahkemaksu {
+  margin-top: 0.85rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid rgba(58, 38, 16, 0.22);
+  letter-spacing: 0.02em;
+}
+
+/*
+ * LIVIAN SAATE ON MARGINAALIMERKINTÄ. Kursivoitu lukukirjasin,
+ * sinertävä muste, ohut musteviiva vasemmalla ja pieni kallistus:
+ * kynällä kirjoitettu huomautus koneella kirjoitetun sähkeen viereen.
+ * (Miksi ei kaunokirjoitusta — ks. osion alun perustelu.)
+ */
+.fokusvirta-livian-saate {
+  margin: 0.9rem 0 0;
+  padding: 0.05rem 0.2rem 0.05rem 0.7rem;
+  border-left: 2px solid rgba(60, 74, 117, 0.32);
+  transform: rotate(-0.4deg);
+}
+
+.fokusvirta-livian-saate p {
+  font-family: var(--font-luku);
+  font-style: italic;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: #384a72;
+}
 
 /*
  * Odotusrivi Livian lennon ajaksi. Ei omaa animaatiota: lento ITSE on
@@ -1224,5 +1528,63 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
 .fokusvirta-napit.fokusvirta-varmistusnapit button:not(.primary):hover:not(:disabled),
 .fokusvirta-napit.fokusvirta-varmistusnapit button:not(.primary):focus-visible {
   background: rgba(122, 85, 20, 0.12);
+  color: #16130f;
+}
+
+/* ===================================================================
+   SÄHKEEN LÄHETYSNAPIT — LAKKASINETTI JA HILLITTY PERUUTUS
+   -------------------------------------------------------------------
+   Sähkekortin alarivi käyttää samaa varmistusnappiparia kuin
+   kohtaaminen (kulta + paperi), mutta sähkeellä nappi on lomakkeen
+   päätös: kullassa on lakkasinetin kohovalo ja teksti on
+   kirjoituskoneella harvennettu, ja "Myöhemmin" vetäytyy pelkäksi
+   kehystetyksi paperiksi, jotta katse jää sinettiin.
+
+   SELEKTORIT OVAT TIEDOSTON LOPUSSA samasta syystä kuin
+   varmistusnapitkin: tarkkuus on sama kuin niillä, joten järjestys
+   ratkaisee. Vain sähkekortin oma luokka (fokusvirta-sahkenapit,
+   js/fokusvirta.js piirraSahketehtava) saa nämä — kohtaamisen
+   Kyllä/Ei on ennallaan.
+   =================================================================== */
+
+.fokusvirta-napit.fokusvirta-sahkenapit {
+  margin-top: 0.9rem;
+}
+
+.fokusvirta-napit.fokusvirta-sahkenapit button {
+  min-height: 46px;
+  font-family: var(--font-type);
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+
+.fokusvirta-napit.fokusvirta-sahkenapit button.primary {
+  border: 1px solid rgba(122, 85, 20, 0.9);
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255, 240, 196, 0.75), rgba(255, 240, 196, 0) 62%),
+    linear-gradient(180deg, #eab84e, #cf8c1f);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 246, 214, 0.75),
+    inset 0 -1px 0 rgba(96, 62, 6, 0.35),
+    0 2px 5px rgba(58, 38, 16, 0.28);
+  text-shadow: 0 1px 0 rgba(255, 240, 200, 0.45);
+}
+
+.fokusvirta-napit.fokusvirta-sahkenapit button.primary:hover:not(:disabled),
+.fokusvirta-napit.fokusvirta-sahkenapit button.primary:focus-visible {
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255, 246, 214, 0.85), rgba(255, 246, 214, 0) 62%),
+    linear-gradient(180deg, #f3c661, #d9a13b);
+}
+
+.fokusvirta-napit.fokusvirta-sahkenapit button:not(.primary) {
+  border: 1px solid rgba(122, 85, 20, 0.3);
+  background: none;
+  color: rgba(33, 29, 24, 0.78);
+}
+
+.fokusvirta-napit.fokusvirta-sahkenapit button:not(.primary):hover:not(:disabled),
+.fokusvirta-napit.fokusvirta-sahkenapit button:not(.primary):focus-visible {
+  background: rgba(122, 85, 20, 0.1);
   color: #16130f;
 }
