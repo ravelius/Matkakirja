@@ -3438,7 +3438,19 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Sfinksikuja', lat: 25.7084, lon: 32.6485 },
       { nimi: 'Mutin temppeli', lat: 25.7111, lon: 32.656 },
       { nimi: 'Khonsun temppeli', lat: 25.7168, lon: 32.6559 },
-      { nimi: 'Karnakin suuri pylvässali', lat: 25.7186, lon: 32.6579 },
+      /*
+       * KARTAN OMA KOHDE NOSTONA (omistajan päätös 2.9.2026 illalla:
+       * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+       * kaupunkilehden omalla kartalla."*). Piste oli jo kartalla; kenttä
+       * `nosto` on koneellinen linkki samaa paikkaa tarkoittavaan
+       * pääkartan fokuskohteeseen, joka putoaa sen myötä pääkartalta
+       * (js/fokuskohteet.js karsiKaupunkikartanNostot). Pisteen oma juttu
+       * on ennallaan — sisältöä ei kopioitu mistään.
+       */
+      {
+        nimi: 'Karnakin suuri pylvässali', lat: 25.7186, lon: 32.6579,
+        nosto: 'karnakin-pylvassali',
+      },
     ],
   },
   halab: {
@@ -3836,9 +3848,17 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-istanbul-camondo', nimiPuoli: 'oikea',
         siirto: { x: 2, y: 26 },
       },
+      /*
+       * KAKSI NOSTOA SAMASSA PAIKASSA. Pääkartan fokuskohde `hippodromi`
+       * (js/packs/fokuskohteet-tur.js) on tämä sama paikka: käärmepylväs
+       * seisoo yhä radan keskiselänteellä siinä, mihin Konstantinus Suuri
+       * sen pystytti, joten kahta merkkiä ei voi olla. Lista on
+       * `nosto`-kentän toinen sallittu muoto
+       * (tools/tarkista-nostopaikat.mjs kohdekarttojenNostot).
+       */
       {
         nimi: 'Käärmepylväs', lat: 41.0058, lon: 28.9758,
-        nosto: 'syvennys-istanbul-kaarmepylvas', nimiPuoli: 'vasen',
+        nosto: ['syvennys-istanbul-kaarmepylvas', 'hippodromi'], nimiPuoli: 'vasen',
         siirto: { x: -18, y: -19 },
       },
     ],
@@ -4330,8 +4350,25 @@ export const KAUPUNKIKARTAT = {
        * se on 9,5 prosenttiyksikköä Antiikin agorasta — numerot
        * menisivät päällekkäin, joten agora voitti.
        */
-      { nimi: 'Antiikin agora', lat: 37.975, lon: 23.7225, wiki: 'Agora (Ateena)' },
-      { nimi: 'Akropolis', lat: 37.9715, lon: 23.7266, wiki: 'Akropolis (Ateena)' },
+      /*
+       * KARTAN OMAT KOHTEET NOSTOINA (omistajan päätös 2.9.2026 illalla:
+       * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+       * kaupunkilehden omalla kartalla."*). Nämä pisteet olivat jo
+       * kartalla, mutta pääkartan fokuskohde (js/packs/fokuskohteet-*.js)
+       * seisoi yhä saman paikan päällä. Kenttä `nosto` on koneellinen
+       * linkki fokuskohteen tunnukseen: se pudottaa merkin pääkartalta
+       * (js/fokuskohteet.js karsiKaupunkikartanNostot) ja kirjaa noston
+       * paikaksi tämän pisteen (tools/tarkista-nostopaikat.mjs). Pisteen
+       * oma juttu on ennallaan — sisältöä ei kopioitu mistään.
+       */
+      {
+        nimi: 'Antiikin agora', lat: 37.975, lon: 23.7225,
+        wiki: 'Agora (Ateena)', nosto: 'antiikin-agora',
+      },
+      {
+        nimi: 'Akropolis', lat: 37.9715, lon: 23.7266,
+        wiki: 'Akropolis (Ateena)', nosto: 'akropolis',
+      },
       /*
        * KARSITTU KARTTANOSTO KOHDEKARTALLE (omistajan tilaus 2.9.2026:
        * *"niitä nostoja joita oli paljon ateenassa ja sofiassa … voisi
@@ -4361,7 +4398,14 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Akropolis-museo', lat: 37.9691, lon: 23.7283, nimiPuoli: 'vasen',
         nosto: 'akropolis-museo',
       },
-      { nimi: 'Zeuksen temppeli', lat: 37.9694, lon: 23.7331, wiki: 'Olympoksen Zeuksen temppeli' },
+      /*
+       * Zeuksen temppeli kantaa fokuskohteen `olympieion` (sama
+       * rakennus, eri nimi kartalla ja lehdessä) — ks. edellinen lohko.
+       */
+      {
+        nimi: 'Zeuksen temppeli', lat: 37.9694, lon: 23.7331,
+        wiki: 'Olympoksen Zeuksen temppeli', nosto: 'olympieion',
+      },
       { nimi: 'Sýntagman aukio', lat: 37.9756, lon: 23.7347, wiki: 'Sýntagma' },
       { nimi: 'Iliou Melathron', lat: 37.9808, lon: 23.7328, nosto: 'syvennys-ateena-schliemann' },
       { nimi: 'Lykavittós', lat: 37.9819, lon: 23.7432, wiki: 'Lykavittós' },
@@ -4673,9 +4717,37 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Kyyhkyposti', lat: 48.8566, lon: 2.3522, nosto: 'syvennys-pariisi-kyyhkyposti',
       },
+      /*
+       * KAKSI NOSTOA SAMASSA PAIKASSA. Syvennystarina `syvennys-pariisi-
+       * tuileriat` ja pääkartan fokuskohde `tuileries`
+       * (js/packs/fokuskohteet-fra.js) ovat samaa palanutta palatsia,
+       * joten ne eivät voi olla kahtena merkkinä kolmenkymmenen metrin
+       * päässä toisistaan. Lista on `nosto`-kentän toinen sallittu muoto
+       * (tools/tarkista-nostopaikat.mjs kohdekarttojenNostot).
+       */
       {
         nimi: 'Tuileriain rauniot', lat: 48.8622, lon: 2.3325,
-        nosto: 'syvennys-pariisi-tuileriat', nimiPuoli: 'vasen',
+        nosto: ['syvennys-pariisi-tuileriat', 'tuileries'], nimiPuoli: 'vasen',
+      },
+      /*
+       * BASTILJI — UUSI PISTE PÄÄKARTAN FOKUSKOHTEELLE (omistajan päätös
+       * 2.9.2026 illalla: *"Otetaan pois pääkartalta ja varmista, että ne
+       * näkyvät kunkin kaupunkilehden omalla kartalla."*).
+       *
+       * 2,36917 E / 48,85333 N — en-Wikipedia "Bastille" (tietolaatikon
+       * coordinates), sama luku kuin kohteen omassa pakissa
+       * (js/packs/fokuskohteet-fra.js). Piste on Place de la Bastille,
+       * aukio joka kattaa suurimman osan linnoituksen vanhasta paikasta,
+       * ja se osuu tämän kartan rajaukseen. Lähin naapuri on Place des
+       * Vosges 250 metrin päässä luoteessa, joten numeroympyrät eivät
+       * mene päällekkäin (tools/tarkista-karttapisteet.mjs).
+       *
+       * Juttu on kohteen OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki pariisi).
+       */
+      {
+        nimi: 'Bastilji', lat: 48.85333, lon: 2.36917,
+        nosto: 'bastilji',
       },
     ],
   },
@@ -5113,11 +5185,21 @@ export const KAUPUNKIKARTAT = {
         lon: -0.1191,
         wiki: 'London Eye',
       },
+      /*
+       * KARTAN OMA KOHDE NOSTONA (omistajan päätös 2.9.2026 illalla:
+       * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+       * kaupunkilehden omalla kartalla."*). Piste oli jo kartalla; kenttä
+       * `nosto` pudottaa pääkartan fokuskohteen `st-paulin-katedraali`
+       * (js/packs/fokuskohteet-gbr.js) tähän. Sama kukkula, sama kirkko —
+       * fokuskohde kertoo keskiaikaisesta edeltäjästä, pisteen oma juttu
+       * Wrenin kupolikirkosta.
+       */
       {
         nimi: 'Pyhän Paavalin katedraali',
         lat: 51.5138,
         lon: -0.0984,
         wiki: 'Pyhän Paavalin katedraali',
+        nosto: 'st-paulin-katedraali',
       },
       {
         nimi: 'Tower Bridge',
@@ -5147,6 +5229,25 @@ export const KAUPUNKIKARTAT = {
       },
       {
         nimi: 'Thamesin vuorovesi', lat: 51.5102, lon: -0.0984, nosto: 'syvennys-lontoo-vuorovesi',
+      },
+      /*
+       * VANHA LONDON BRIDGE — UUSI PISTE PÄÄKARTAN FOKUSKOHTEELLE
+       * (omistajan päätös 2.9.2026 illalla).
+       *
+       * −0,08778 E / 51,50806 N — en-Wikipedia "London Bridge"
+       * (tietolaatikon coordinates), sama luku kuin kohteen omassa
+       * pakissa (js/packs/fokuskohteet-gbr.js). Piste on nykyisen sillan
+       * paikka; keskiaikainen silta seisoi noin 30 metriä siitä itään,
+       * mikä ei erotu omaksi pisteekseen tälläkään kartalla. Piste on
+       * määritelmän mukaan vedellä — silta ylittää joen, ks.
+       * tools/tarkista-karttapisteet.mjs:n otsake.
+       *
+       * Juttu on kohteen OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki lontoo).
+       */
+      {
+        nimi: 'Vanha London Bridge', lat: 51.50806, lon: -0.08778,
+        nosto: 'vanha-london-bridge',
       },
     ],
   },
@@ -5550,7 +5651,27 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Espanjalaiset portaat', lat: 41.9061, lon: 12.4828, wiki: 'Espanjalaiset portaat' },
       { nimi: 'Trevin suihkulähde', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi' },
       { nimi: 'Pantheon', lat: 41.8986, lon: 12.4769, wiki: 'Pantheon (Rooma)' },
-      { nimi: 'Colosseum', lat: 41.8902, lon: 12.4922, wiki: 'Colosseum' },
+      /*
+       * KARTAN OMAT KOHTEET NOSTOINA (omistajan päätös 2.9.2026 illalla:
+       * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+       * kaupunkilehden omalla kartalla."*). Colosseumin piste oli jo
+       * kartalla, joten se saa vain kentän `nosto`: se pudottaa
+       * samannimisen fokuskohteen pääkartalta (js/packs/fokuskohteet-ita.js,
+       * js/fokuskohteet.js karsiKaupunkikartanNostot) ja kirjaa noston
+       * paikaksi tämän pisteen. Pisteen oma juttu on ennallaan.
+       *
+       * FORUM ROMANUM on uusi piste: sitä ei ollut kartalla lainkaan.
+       * 12,4852 E / 41,8922 N — en-Wikipedia "Roman Forum", sama luku kuin
+       * kohteen omassa pakissa. Lähin naapuri on Colosseum 600 metriä
+       * kaakossa, joten numeroympyrät eivät mene päällekkäin
+       * (tools/tarkista-karttapisteet.mjs). Juttu on kohteen OMA teksti ja
+       * kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki rooma).
+       */
+      {
+        nimi: 'Forum Romanum', lat: 41.8922, lon: 12.4852,
+        nosto: 'forum-romanum',
+      },
+      { nimi: 'Colosseum', lat: 41.8902, lon: 12.4922, wiki: 'Colosseum', nosto: 'colosseum' },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
        * *"lisää kaikki historian hetket ja muut karttanostot myös joko
@@ -7276,7 +7397,16 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Suuri temppeli', lat: 30.3288, lon: 35.4423 },
       { nimi: 'Teatteri', lat: 30.3248, lon: 35.447 },
       { nimi: 'Siq', lat: 30.3232, lon: 35.4567 },
-      { nimi: 'Al-Khazneh', lat: 30.3221, lon: 35.4515 },
+      /*
+       * KARTAN OMA KOHDE NOSTONA (omistajan päätös 2.9.2026 illalla:
+       * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+       * kaupunkilehden omalla kartalla."*). Piste oli jo kartalla; kenttä
+       * `nosto` on koneellinen linkki samaa paikkaa tarkoittavaan
+       * pääkartan fokuskohteeseen, joka putoaa sen myötä pääkartalta
+       * (js/fokuskohteet.js karsiKaupunkikartanNostot). Pisteen oma juttu
+       * on ennallaan — sisältöä ei kopioitu mistään.
+       */
+      { nimi: 'Al-Khazneh', lat: 30.3221, lon: 35.4515, nosto: 'al-khazneh' },
       { nimi: 'Uhripaikka', lat: 30.3215, lon: 35.447 },
     ],
   },
@@ -7334,7 +7464,16 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kaikkien kansojen portti', lat: 29.93618, lon: 52.889078 },
       { nimi: 'Artakserkses III:n hauta', lat: 29.935872, lon: 52.892459 },
       { nimi: 'Sadan pylvään sali', lat: 29.9353, lon: 52.891028 },
-      { nimi: 'Apadana', lat: 29.935107, lon: 52.88951 },
+      /*
+       * KARTAN OMA KOHDE NOSTONA (omistajan päätös 2.9.2026 illalla:
+       * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+       * kaupunkilehden omalla kartalla."*). Piste oli jo kartalla; kenttä
+       * `nosto` on koneellinen linkki samaa paikkaa tarkoittavaan
+       * pääkartan fokuskohteeseen, joka putoaa sen myötä pääkartalta
+       * (js/fokuskohteet.js karsiKaupunkikartanNostot). Pisteen oma juttu
+       * on ennallaan — sisältöä ei kopioitu mistään.
+       */
+      { nimi: 'Apadana', lat: 29.935107, lon: 52.88951, nosto: 'apadana' },
       { nimi: 'Kolmen oven sali', lat: 29.934664, lon: 52.890555 },
       { nimi: 'Aarrekammio', lat: 29.934446, lon: 52.891737 },
       { nimi: 'Tachara', lat: 29.934382, lon: 52.889554 },
@@ -7721,7 +7860,25 @@ export const KAUPUNKIKARTAT = {
       + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
-      { nimi: 'Kuyunjikin kumpu', lat: 36.3594, lon: 43.1528 },
+      /*
+       * KARTAN OMA KOHDE NOSTONA (omistajan päätös 2.9.2026 illalla:
+       * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+       * kaupunkilehden omalla kartalla."*). Piste oli jo kartalla; kenttä
+       * `nosto` on koneellinen linkki samaa paikkaa tarkoittavaan
+       * pääkartan fokuskohteeseen, joka putoaa sen myötä pääkartalta
+       * (js/fokuskohteet.js karsiKaupunkikartanNostot). Pisteen oma juttu
+       * on ennallaan — sisältöä ei kopioitu mistään.
+       */
+      /*
+       * Kuyunjikin kumpu kantaa fokuskohteen `niniven-lounaispalatsi`:
+       * Sanheribin "palatsi vailla vertaa" on juuri tämän kummun alla
+       * (js/packs/fokuskohteet-irq.js), ja pisteen oma juttu kertoo
+       * kummusta ja sen palatseista.
+       */
+      {
+        nimi: 'Kuyunjikin kumpu', lat: 36.3594, lon: 43.1528,
+        nosto: 'niniven-lounaispalatsi',
+      },
       { nimi: 'Bash Tapian linna', lat: 36.3554, lon: 43.1216 },
       { nimi: 'Qara Saray', lat: 36.3528, lon: 43.1257 },
       { nimi: 'Nabi Yunusin kumpu', lat: 36.3481, lon: 43.1594 },
