@@ -1,4 +1,4 @@
-# Linssikatalogi — aikajanalinssien aiheluettelo
+# Linssikatalogi — aikajana- ja aluelinssien aiheluettelo
 
 Päivitetty: 2.9.2026 (Fable). Omistajan linjaus 2.9.2026 ilta: *"kaikkien
 suurien uskontojen tapahtumista täytyy myös saada omat kuvansa ja niistä
@@ -164,6 +164,72 @@ esitetä profeettoja kasvoista tunnistettavina; paikka, ihmiset ja hetki.
 | L3 | Australia | Australia | 1788–1901 | Sydney 1788 · Ballaratin kultaryntäys 1851 · Burke ja Wills 1860 · liitto 1901 | idea |
 | L4 | Evoluution saaret | Galápagos, Malaijisaaristo | 1835–1862 | Darwin Galápagos 1835 (hetki) · Wallace Ternate 1858 · Alfred Wallacen linja | idea |
 
+# Osa 2: Aluelinssit (toinen moottori)
+
+Omistaja 2.9.2026 ilta: *"Kiinan dynastiat olisi kiva näyttää (ehkä
+yksinkertaistetulla) karttapohjalla niin, että eri dynastiat olisivat eri
+väreillä ja ne muovaisivat rajoja vuosien vieriessä. Samaa voisi soveltaa
+maailmansotiin… napoleon, rooma."* Kello ja filminauha ovat samat kuin
+aikajanalinssissä, mutta kartalle ei sytytetä pisteitä vaan piirretään
+värialueita, joiden rajat liukuvat avainvuodesta toiseen.
+
+| osa | aluelinssissä |
+|---|---|
+| pohja | yksinkertaistettu maakartta (rannat, suuret joet, ei nykyrajoja), pelin patina |
+| alueet | avainvuosien monikulmiot (10–20 per linssi), rajat interpoloidaan välillä; väri per dynastia/valtio, selite reunassa |
+| pysäkit | taistelut, rauhat, kruunaukset filminauhaan kuten aikajanassa |
+| aineisto | historialliset rajat avoimista lähteistä (PD/CC BY -GeoJSON; lisenssi tarkistetaan ennen käyttöä), yksinkertaistetaan käsin — suurin työ |
+| musiikki ja kuvat | sama putki kuin aikajanalinssissä |
+
+## M. Valtakunnat ja dynastiat
+
+| # | linssi | alue | kaari | pysäkkejä | tila |
+|---|---|---|---|---|---|
+| M1 | Kiinan dynastiat | Kiina | 221 eaa–1912 | Qin · Han · Kolme kuningaskuntaa · Tang · Song · Yuan · Ming · Qing · tasavalta 1912 | seuraava (omistajan esimerkki, ensimmäinen aluelinssi) |
+| M2 | Rooman nousu ja tuho | Välimeri | 509 eaa–476 | tasavalta · puunilaissodat · Caesar Gallia · Augustus · Trajanus 117 · jako 395 · 476 | seuraava |
+| M3 | Aleksanteri Suuri | Kreikka–Intia | 336–301 eaa | Makedonia · Issos · Egypti · Gaugamela · Persepolis · Hydaspes · diadokit | idea |
+| M4 | Islamin leviäminen | Lähi-itä–Espanja | 622–750 | Medina · Jerusalem 638 · Persia · Pohjois-Afrikka · Iberia 711 · Poitiers 732 | idea |
+| M5 | Mongolien imperiumi | Aasia–Eurooppa | 1206–1368 | Tšingis-kaani · Kiova 1240 · Bagdad 1258 · Kublai · kaanikunnat · Yuan kaatuu | idea |
+| M6 | Bysantti | itäinen Välimeri | 395–1453 | Justinianus 555 · arabit · Basileios II · 1204 · 1453 | idea |
+| M7 | Osmanien nousu ja lasku | Turkki, Balkan, Lähi-itä | 1299–1923 | Bursa · 1453 · Suleiman 1566 · Wien 1683 · Bulgaria 1878 · 1923 | seuraava (Bulgaria pelissä) |
+| M8 | Reconquista | Iberia | 711–1492 | Covadonga · Toledo 1085 · Las Navas 1212 · Granada 1492 | idea |
+| M9 | Viikinkien maailma | Pohjois-Eurooppa–Atlantti | 793–1066 | Lindisfarne · Danelaw · Normandia 911 · Islanti · Grönlanti · Vinland · 1066 | idea |
+| M10 | Ruotsin suurvalta ja Suomi | Itämeri | 1561–1809 | Tallinna 1561 · Kustaa II Aadolf · Westfalen 1648 · Poltava 1709 · Uusikaupunki 1721 · Hamina 1809 | idea (Suomen rajat 1323–1947 jatkona) |
+| M11 | Inkat ja atsteekit | Andit, Meksiko | 1325–1572 | Tenochtitlán 1325 · Pachacuti · Huayna Capac · Cortés 1521 · Cajamarca 1532 · Vilcabamba 1572 | idea |
+
+## N. Sodat ja rintamat
+
+| # | linssi | alue | kaari | pysäkkejä | tila |
+|---|---|---|---|---|---|
+| N1 | Napoleonin Eurooppa | Eurooppa | 1796–1815 | Italia 1796 · Egypti · Austerlitz 1805 · Jena · Tilsit · Espanja · Moskova 1812 · Leipzig · Waterloo | seuraava (omistajan esimerkki) |
+| N2 | Ensimmäinen maailmansota | Eurooppa, Lähi-itä | 1914–1918 | Sarajevo · Marne · Gallipoli · Verdun · Somme · Brest-Litovsk · 11.11.1918 | seuraava (omistajan esimerkki) |
+| N3 | Toinen maailmansota | Eurooppa, Tyynimeri | 1939–1945 | Puola · Ranska 1940 · Barbarossa · Pearl Harbor · Stalingrad · Normandia · Berliini · Hiroshima | seuraava (pelin aikakauden ulkopuolella, linssi katsoo eteenpäin) |
+| N4 | Kolmikymmenvuotinen sota | Keski-Eurooppa | 1618–1648 | Prahan ikkuna · Breitenfeld · Lützen 1632 · Westfalen | idea |
+| N5 | Krimin sota | Musta meri, Itämeri | 1853–1856 | Sinope · Sevastopol · Bomarsund · Pariisin rauha | idea (isoisän aikalaisten sota) |
+| N6 | Yhdysvaltain sisällissota | USA | 1861–1865 | Fort Sumter · Antietam · Gettysburg · Sherman · Appomattox | idea |
+| N7 | Balkanin sodat | Balkan | 1877–1913 | Pleven 1877 · San Stefano · Berliini 1878 · 1912 · 1913 | idea (Bulgarian lauta) |
+
+## O. Imperiumit, siirtomaat ja kartan uusjako
+
+| # | linssi | alue | kaari | pysäkkejä | tila |
+|---|---|---|---|---|---|
+| O1 | Espanja ja Portugali maailmalla | maailma | 1494–1825 | Tordesillas 1494 · Filippiinit · Brasilia · itsenäistymiset 1810–1825 | idea |
+| O2 | Britannian imperiumi | maailma | 1600–1922 | Itä-Intian kauppakomppania · Plassey 1757 · Kanada · Australia · Intia 1858 · Egypti 1882 · 1922 | idea |
+| O3 | Afrikan jako | Afrikka | 1870–1914 | Suez · Berliini 1884 · Kongo · Fashoda 1898 · buurisota · 1914 | seuraava |
+| O4 | Venäjä laajenee Siperiaan | Venäjä–Tyynimeri | 1582–1867 | Jermak 1582 · Jakutsk 1632 · Ohotsk · Kamtšatka · Alaska 1867 | idea (Siperian laudat pelissä) |
+| O5 | Yhdysvallat laajenee | Pohjois-Amerikka | 1783–1912 | 1783 · Louisiana 1803 · Texas 1845 · Oregon · Meksiko 1848 · Alaska 1867 · 1912 | idea |
+| O6 | Euroopan kartta uusiksi | Eurooppa | 1815–1923 | Wien 1815 · Italia 1861 · Saksa 1871 · Berliini 1878 · Versailles 1919 · Lausanne 1923 | seuraava (isoisän Eurooppa 1873 keskellä) |
+
+## P. Leviämiset
+
+| # | linssi | alue | kaari | pysäkkejä | tila |
+|---|---|---|---|---|---|
+| P1 | Uskontojen levinneisyys | maailma | 500 eaa–1900 | buddhalaisuus · kristinusko · islam · uskonpuhdistus · lähetystyö | seuraava (uskontojen aikajanalinssien pari) |
+| P2 | Musta surma | Eurooppa | 1347–1353 | Kaffa · Messina 1347 · Marseille · Pariisi 1348 · Lontoo · Bergen 1349 · Moskova 1353 | idea |
+| P3 | Indoeurooppalaiset kielet | Euraasia | 3500 eaa–1500 | arot · Anatolia · Kreikka · Italia · germaanit · slaavit · Intia | idea |
+| P4 | Rautatieverkon kasvu | Eurooppa | 1825–1900 | Britannia · Belgia 1835 · Saksa · Ranska · Venäjä · Suomi 1862 | idea (verkko piirtyy vuosi vuodelta) |
+| P5 | Kirjapainon leviäminen | Eurooppa | 1450–1500 | Mainz · Venetsia · Pariisi · Lontoo 1476 · Tukholma 1483 | idea |
+
 ## Järjestys
 
 1. Keksinnöt Euroopassa hiotaan valmiiksi (pelillinen ovi, kuvat kuvaputkelta, musiikki kuunneltu).
@@ -171,4 +237,5 @@ esitetä profeettoja kasvoista tunnistettavina; paikka, ihmiset ja hetki.
 3. B2, B3, C1, C2 — pysäkeistä iso osa on jo pelin hetkiä tai kohteita.
 4. C5 Maapallon ympäri 80 päivässä — pelin oma tarina, tarvitsee maailmankartan.
 5. Maanosat: H1 Kiinan keksinnöt, H3 Japani, I3 Osmanit, J1 Kultavaltakunnat, J4 Afrikan tutkimusmatkat, K1 Mesoamerikka ja Andit, K3 Yhdysvallat, L2 Cook — järjestys sen mukaan, mille laudalle peli laajenee seuraavaksi.
-6. Loput ideasta seuraavaksi omistajan päätöksellä.
+6. Aluelinssit (toinen moottori) aloitetaan M1 Kiinan dynastioista, kun aikajanamoottori on hiottu: pohjakartan ja rajojen aineistotyö ensin, sitten N1 Napoleon, N2 maailmansota, M2 Rooma.
+7. Loput ideasta seuraavaksi omistajan päätöksellä.
