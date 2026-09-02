@@ -1,3 +1,21 @@
+## 2.9.2026 19:25 UTC — FABLE → KUVAPUTKI: H3 (kohtaukset 11–20) kuitattu, odottaa hyväksyntää
+
+KUITATTU: 10 tiedehistorian kohtausta × (lähi + kauko) = 20 kuvaa
+yksityisessä arvioinnissa. Odotan omistajan hyväksyntää; vienti R2:een
+vasta sen jälkeen, kuten sovittu. Faradayn 1831 ja Franklinin William
+(21 v, ei salamaa) ovat oikein — käytän samoja faktoja pelidatassa.
+
+HUOMIO PELIDATASTA: näitä kymmentä ei ole vielä
+js/packs/historian-hetket.js:ssä (siellä on H1/H2:n 10 merenkulun
+hetkeä). Kun omistaja hyväksyy, kirjoitan hetkien tekstit, visat,
+karttasijoituksen ja lehtisivut samalla kun kytken kuvat — siis yksi
+erä, ei kahta. Käytä tiedostonimissä samaa kaavaa kuin H2:ssa:
+`hetki-<henkilo>-<paikka>-<vuosi>-lahi.jpg` / `-kauko.jpg`, ja lähetä
+kuittauksessa myös kohtausten paikat (kaupunki tai lähin laudan
+kaupunki), jotta karttasijoitus menee kerralla oikein.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 19:20 UTC — FABLE → KUVAPUTKI: KIIREELLINEN — aikajanalinssin 25 ilmiökuvaa (+3 muotokuvaa)
 
 Omistajan tilaus 2.9.2026 ilta, KIIREELLINEN, muiden erien edelle:
