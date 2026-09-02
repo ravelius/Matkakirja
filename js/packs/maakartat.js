@@ -4117,8 +4117,37 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Antiikin agora', lat: 37.975, lon: 23.7225, wiki: 'Agora (Ateena)' },
       { nimi: 'Akropolis', lat: 37.9715, lon: 23.7266, wiki: 'Akropolis (Ateena)' },
+      /*
+       * KARSITTU KARTTANOSTO KOHDEKARTALLE (omistajan tilaus 2.9.2026:
+       * *"niitä nostoja joita oli paljon ateenassa ja sofiassa … voisi
+       * sijoittaa suoraan sinne kaupunkilehden nähtävyyden osioon …
+       * siis tähän kartalle"*).
+       *
+       * Kaupunkinostojen katto (v1419, js/fokuskohteet.js
+       * karsiKaupunkiruuhka) pudottaa pääkartalta Ateenan viereltä
+       * kuusi merkkiä. Kahdella niistä on kaupungin sisällä OMA paikka,
+       * joka ei osu minkään entisen kohteen päälle, ja ne kaksi tulevat
+       * tähän: `akropolis-museo` (23,7283 E / 37,9691 N —
+       * js/packs/fokuskohteet-grc.js) ja syvennystarina
+       * `syvennys-ateena-schliemann` eli Iliou Melathron (23,7328 E /
+       * 37,9808 N — js/packs/syvennyspaikat.js).
+       *
+       * NELJÄ MUUTA JÄI POIS, ja syy on sama kuin Tuulten tornilla
+       * alla: ne seisovat täsmälleen kartalla jo olevan kohteen päällä
+       * (tools/tarkista-karttapisteet.mjs, peittoprosentit 71–97):
+       * Niken temppeli ja Elginin marmorit Akropoliin, Diogeneen astia
+       * Antiikin agoran ja maratonhuijaus Kallimarmaron päällä. Niiden
+       * sisältö on lehden Historia-sivulla (v1421, v1451).
+       */
+      // Nimiö vasemmalle: keskitettynä "Akropolis-museo" osui
+      // "Zeuksen temppeli" -nimeen, joka on 68 px oikealla samalla
+      // rivillä. Merkki pysyy koordinaatissaan (ks. .kohde-nimi-vasen).
+      {
+        nimi: 'Akropolis-museo', lat: 37.9691, lon: 23.7283, nimiPuoli: 'vasen',
+      },
       { nimi: 'Zeuksen temppeli', lat: 37.9694, lon: 23.7331, wiki: 'Olympoksen Zeuksen temppeli' },
       { nimi: 'Sýntagman aukio', lat: 37.9756, lon: 23.7347, wiki: 'Sýntagma' },
+      { nimi: 'Iliou Melathron', lat: 37.9808, lon: 23.7328 },
       { nimi: 'Lykavittós', lat: 37.9819, lon: 23.7432, wiki: 'Lykavittós' },
       { nimi: 'Kallimarmaro', lat: 37.9683, lon: 23.7411, wiki: 'Panathinaïkó-stadion' },
     ],
@@ -5058,6 +5087,33 @@ export const KAUPUNKIKARTAT = {
        * menisivät päällekkäin.
        */
       { nimi: 'Mineraalikylpylä', lat: 42.69923, lon: 23.3238 },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan tilaus
+       * 2.9.2026, sama erä kuin Ateenassa — ks. sen kohteet).
+       *
+       * Kaupunkinostojen katto pudottaa pääkartalta Sofian viereltä
+       * seitsemän merkkiä. Kaksi niistä on kaupungin sisällä ja saa
+       * kartalla oman paikkansa: `moskeijat` eli jäljelle jäänyt Banja
+       * Bashi (23,3219 E / 42,6977 N —
+       * js/packs/fokuskohteet-bgr.js) ja syvennystarina
+       * `syvennys-sofia-areena` (23,3283 E / 42,6972 N —
+       * js/packs/syvennyspaikat.js).
+       *
+       * VIISI MUUTA JÄI POIS kahdesta syystä. Vitoša, Boyanan kirkko ja
+       * eläintarha ovat kartan rajauksen ULKOPUOLELLA (Boyana 42,6437 ja
+       * tarha 42,6581, kun kartan eteläraja on 42,681); täkynosto
+       * `nosto-areena` kertoo saman tarinan kuin areena; ja
+       * `syvennys-sofia-pollopatsas` eli Sofia-patsas seisoo 77 %:n
+       * peitolla Banja Bashin päällä (tools/tarkista-karttapisteet.mjs),
+       * joten kahdesta valittiin rakennus. Kaikkien sisältö on lehdessä.
+       */
+      // Nimiö vasemmalle: keskitettynä kaksirivinen "Banja Bashin
+      // moskeija" laskeutui Pyhän Yrjön rotundan piirroksen päälle,
+      // joka on 33 px oikealla alaviistossa.
+      {
+        nimi: 'Banja Bashin moskeija', lat: 42.6977, lon: 23.3219, nimiPuoli: 'vasen',
+      },
+      { nimi: 'Serdican areena', lat: 42.6972, lon: 23.3283 },
       { nimi: 'Pyhän Yrjön rotunda', lat: 42.69689, lon: 23.32288 },
       {
         nimi: 'Sofian katedraali',

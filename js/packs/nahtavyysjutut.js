@@ -3296,6 +3296,73 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan tilaus 2.9.2026:
+     * *"niitä nostoja joita oli paljon ateenassa ja sofiassa … voisi
+     * sijoittaa suoraan sinne kaupunkilehden nähtävyyden osioon … siis
+     * tähän kartalle"*). Kaupunkinostojen katto (v1419) pudotti nämä
+     * pääkartalta; kohteet ovat js/packs/maakartat.js:n ateena-listassa,
+     * ja perustelu sille, mitkä kuusi kelpasivat ja mitkä eivät, on
+     * siellä.
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: Akropolis-museon kappale ja
+     * kuva ovat kohteen omasta pakista (js/packs/fokuskohteet-grc.js,
+     * `akropolis-museo`) ja Iliou Melathron lehden Historia-sivun
+     * nostosta (js/packs/kulttuuri-kategoriat.js) — samat sanat, sama
+     * kuva, sama lähderivi. Sama juttu on siis kahdessa paikassa
+     * samassa lehdessä; se on tietoinen valinta, koska Historia-sivun
+     * tehtävä nojaa sivun omiin nostoihin.
+     */
+    'Akropolis-museo': {
+      aika: '2009',
+      teksti: 'Akropolis-museo avattiin vuonna 2009 kallion '
+          + 'kaakkoispuolelle, ja se rakennettiin kokoamaan yhteen kaikki '
+          + 'Akropoliilta ja sen rinteiltä löytynyt — yli 4 250 esinettä '
+          + 'pronssikaudelta Bysantin aikaan. Rakennus seisoo pilarien '
+          + 'varassa antiikin kaupunginosan raunioiden päällä, ja kaivaus '
+          + 'näkyy lasilattioiden läpi. Ylin kerros on käännetty vinoon '
+          + 'muuhun rakennukseen nähden: se seuraa Parthenonin suuntaa, ja '
+          + 'temppelin veistokset on aseteltu saliin samaan järjestykseen '
+          + 'ja samoin päin kuin ne olivat itse temppelissä, lasiseinien '
+          + 'läpi tulevassa luonnonvalossa.',
+      kuvat: [
+        {
+          tiedosto: 'Caryatids from the Erechtheion on the Acropolis, Acropolis Museum, Athens (13889706087).jpg',
+          selite: 'Erekhtheionin alkuperäisiä karyatideja Akropolis-museon '
+            + 'salissa.',
+          lahde: 'Carole Raddato, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * `lahde: 'Wikipedia'` on nähtävyysjutun oma muoto: se kääntyy
+       * riviksi "Matkakirjan oma teksti · lähteenä Wikipedia"
+       * (js/ui-apurit.js lahdemerkinta) kuten kaikissa muissakin
+       * jutuissa. Tarkka artikkeliviite (en-Wikipedia "Acropolis
+       * Museum", johdanto ja osio "The building", tarkistettu
+       * 26.8.2026) asuu kohteen omassa pakissa
+       * js/packs/fokuskohteet-grc.js.
+       */
+      lahde: 'Wikipedia',
+    },
+    'Iliou Melathron': {
+      teksti: 'Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich '
+          + 'Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi '
+          + 'kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän '
+          + 'rakennutti Ateenaan kadun varteen komean palatsin, Iliou '
+          + 'Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: '
+          + 'nykyään talossa lasketaan vanhoja kolikoita, sillä se on '
+          + 'numismaattinen museo. Talon friisissä Schliemann kaivaa '
+          + 'ikuisesti, lapio kädessä.',
+      kuvat: [
+        {
+          tiedosto: 'Heinrich Schliemann\'s house..tif',
+          selite: 'Schliemannin kotipalatsissa Iliou Melathronissa toimii '
+            + 'nykyään Ateenan numismaattinen museo.',
+          lahde: 'athenswalk, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
   amsterdam: {
@@ -6504,6 +6571,66 @@ export const NAHTAVYYSJUTUT = {
             + 'kommunistijohtaja Todor Živkovin tytär, ja vuonna 2005 '
             + 'rakennus palkittiin maailman parhaana kongressikeskuksena.',
           lahde: 'Ivano Giambattista, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan tilaus 2.9.2026,
+     * sama erä kuin Ateenassa). Kohteet ovat js/packs/maakartat.js:n
+     * sofia-listassa, ja perustelu sille, mitkä kaksi seitsemästä
+     * mahtuivat kartalle, on siellä.
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: molemmat kappaleet, kuvat ja
+     * lähderivit ovat lehden Historia-sivun nostoista
+     * (js/packs/kulttuuri-kategoriat.js, v1421:n siirtoerä). Sama juttu
+     * on siis kahdessa paikassa samassa lehdessä; Historia-sivun oma
+     * tehtävä kysyy juuri areenasta, joten sivun nostoja ei purettu.
+     */
+    'Banja Bashin moskeija': {
+      aika: '1566',
+      teksti: 'Joulukuussa 1878, viisi vuotta isoisän käynnin jälkeen, '
+          + 'venäläiset sotilasinsinöörit räjäyttivät seitsemän Sofian '
+          + 'moskeijaa samana yönä; ukkosmyrsky peitti räjähdysten äänen. '
+          + 'Suurin osa kaupungin moskeijoista tuhoutui sodassa, ja suurin '
+          + 'osa muslimiväestöstä lähti kaupungista sen jälkeen. Jäljelle '
+          + 'jäi Banja Bashi, kaupungin ainoa yhä toimiva moskeija, joka '
+          + 'seisoo kuumien lähteiden päällä keskellä samaa korttelia kuin '
+          + 'synagoga ja kaksi kirkkoa.',
+      kuvat: [
+        {
+          tiedosto: 'Banya bashi dhzamiya 19 vek.jpg',
+          selite: 'Banja Bashi on Sofian ainoa yhä toimiva moskeija, ja se '
+            + 'valmistui vuonna 1566.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * `aika` puuttuu tarkoituksella: lähdeteksti antaa löytövuodet
+     * (1919 ja 2004) muttei areenan rakennusaikaa, eikä sitä keksitä
+     * tähän. Kenttä on valinnainen (js/nahtavyydet.js piilottaa rivin).
+     */
+    'Serdican areena': {
+      teksti: 'Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, '
+          + 'johon oli kuvattu amfiteatterin julkisivu ja sen ohjelma: '
+          + 'krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli '
+          + 'aikoinaan seissyt roomalaisen Serdican portilla '
+          + 'mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli '
+          + 'täytynyt olla areena — mutta ei sitä, missä. Vastaus tuli '
+          + 'vasta 2004, kun keskustassa kaivettiin hotellin perustuksia. '
+          + 'Maasta nousivat portit liukuovineen, karhun ja villisian '
+          + 'luita ja satoja pronssikolikoita. Katsomoon oli mitoitettu '
+          + 'yli kahdellekymmenelletuhannelle. Kuudesosa areenasta '
+          + 'liitettiin hotellin pohjakerrokseen, ja sinne pääsee päivisin '
+          + 'maksutta.',
+      kuvat: [
+        {
+          tiedosto: 'Amphitheatre of Serdica - General view.jpg',
+          selite: 'Serdican amfiteatterista on jäljellä kuudesosa, ja se '
+            + 'sijaitsee hotellin pohjakerroksessa keskellä Sofiaa.',
+          lahde: 'Epaunov72, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',

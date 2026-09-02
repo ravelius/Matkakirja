@@ -15162,6 +15162,96 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 }
 
 /*
+ * MATKAKIRJAN IHMEEN SELITE (omistajan tilaus 2.9.2026: *"kartan
+ * yläreunassa voisi olla selite: '*) matkakirjan ihme'"*). Sama asu ja
+ * sama kieli kuin napautusopasteella — vain tähti edessä ja kartan
+ * VASEMMASSA yläkulmassa, koska oikea on opasteen (perustelut
+ * js/nahtavyydet.js). Merkki on kartan pisteen tähti pienennettynä,
+ * ei toinen kuvake.
+ */
+.kartta-ihmeselite {
+  position: absolute;
+  top: 0.35rem;
+  left: 0.35rem;
+  z-index: 3;
+  display: flex;
+  gap: 0.28rem;
+  align-items: center;
+  padding: 0.16rem 0.46rem;
+  font-family: var(--font-type);
+  font-size: 0.6rem;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: rgba(44, 35, 24, 0.92);
+  background: rgba(247, 240, 222, 0.82);
+  border: 1px solid rgba(70, 51, 31, 0.45);
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+}
+
+/*
+ * KOKORUUDULLA SELITE VÄISTÄÄ ZOOMIPILLERIT. Kortin vasempaan
+ * yläkulmaan kelluu suurennoksen oma zoomipainikepari
+ * (.kartta-suurennos-tyokalut, top ja left 0,5 rem) — selite jäisi sen
+ * alle. Se laskeutuu siksi pillerien alapuolelle; oikea yläkulma on
+ * sulkurastin ja alakulma mittajanan, joten tämä on ainoa vapaa laita.
+ */
+.dialog .kartta-suurennos .kartta-kehys .kartta-ihmeselite {
+  top: 3.1rem;
+  left: 0.5rem;
+}
+
+/*
+ * IHMEEN TÄHTI KOHDEMERKIN YLÄREUNASSA (omistajan tilaus 2.9.2026:
+ * *"pienen tähden jokaisen kohteen yläreunaan, jos sinne on generoitu
+ * myös tällainen historiallinen kuva"*).
+ *
+ * Tähti istuu merkin YLÄPUOLELLA hieman oikealla, kuten alaviitteen
+ * tähti sanan perässä: piirroksen yläreuna on rakennuksen harja, ja
+ * suoraan sen päälle asetettu merkki peittäisi juuri sen. Se ei ota
+ * napautuksia vastaan — koko merkki on jo nappi, ja tähti on sen
+ * lipuke, ei oma kohteensa. Piirros tulee samasta kirjastosta kuin
+ * pääkartan tähtisymboli (js/fokusnosto-symbolit.js), joten kulta ja
+ * musteääriviiva ovat .nostosym-tahti-säännön.
+ */
+.kohde-ihmetahti {
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  width: 15px;
+  height: 15px;
+  overflow: visible;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+}
+
+/* Täplämerkki on 13 px eli tähteä pienempi: tähti nousee sen päälle
+ * hieman tiukemmin, jotta pari pysyy yhtenä merkkinä. */
+.maakartta-piste.kohde-numero:not(.kohde-piirros) > .kohde-ihmetahti {
+  top: -8px;
+  right: -7px;
+  width: 13px;
+  height: 13px;
+}
+
+/* Suurennettuna piirros vuotaa laatikkonsa yli ja saa nimikyltin;
+ * pikkutähti jäisi siihen irralleen laatikon reunalle. Se piiloutuu
+ * samalla säännöllä kuin karttanimi (.kohde-piirros.valittu
+ * .kohde-nimi) ja palaa, kun valinta puretaan. */
+.kohde-piirros.valittu > .kohde-ihmetahti { display: none; }
+
+/* Selitteen tähti on tekstin kokoinen eikä merkin: sama muoto, oma
+ * mitta rivin sisällä. */
+.kartta-ihmeselite-tahti {
+  position: static;
+  width: 0.74rem;
+  height: 0.74rem;
+  filter: none;
+}
+
+/*
  * SUURENNUSVIHJE KARTAN OIKEASSA ALAKULMASSA (omistajan tilaus
  * 21.8.2026). Samat sävyt ja sama kokoluokka kuin napautusopasteessa
  * ja mittajanan tekstilipukkeessa — kartan päällä puhutaan yhtä
@@ -15874,7 +15964,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   top: calc(100% + 2px);
   z-index: 1;
   width: 6.5rem;
-  transform: translateX(-50%);
+  transform: translateX(calc(-50% + var(--nimi-siirto, 0px)));
   font-family: var(--font-type);
   font-size: 0.6rem;
   line-height: 1.15;
@@ -15910,6 +16000,24 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 .kohde-piirros > .kohde-nimi { top: var(--nimi-top, 104%); }
 
 /*
+ * NIMIÖN VÄISTÖ (omistajan tilaus 2.9.2026:n erässä, kun kartalle tuli
+ * karsittuja karttanostoja). Merkki pysyy koordinaatissaan ja nimiö
+ * siirtyy sivuun — sama periaate kuin pääkartan nimiöillä
+ * (js/fokusniput.js sääntö 2). Siirto on 2,6 rem eli noin 40 % nimen
+ * palstasta: se irrottaa naapurin nimestä mutta jättää nimen yhä
+ * merkkinsä kylkeen. Puoli tulee datasta (`nimiPuoli`,
+ * js/nahtavyydet.js).
+ */
+.maakartta-piste.kohde-nimi-vasen { --nimi-siirto: -2.6rem; }
+.maakartta-piste.kohde-nimi-oikea { --nimi-siirto: 2.6rem; }
+
+@media (max-width: 560px) {
+  /* Kapealla ruudulla nimipalsta on 4,6 rem, joten sama 40 %. */
+  .maakartta-piste.kohde-nimi-vasen { --nimi-siirto: -1.85rem; }
+  .maakartta-piste.kohde-nimi-oikea { --nimi-siirto: 1.85rem; }
+}
+
+/*
  * NIMI KASVAA KARTAN MUKANA MYÖS TÄPLÄLLÄ. Täplä on merkki eikä
  * maisema, joten se saa lavan vastaskaalauksen (1/zoom) — nimi ei:
  * omistaja pyysi tekstin, jonka näkee zoomaamalla. Kerroin zoomilla
@@ -15919,7 +16027,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * alaspäin eikä sen päälle.
  */
 .kartta-lava .maakartta-piste:not(.kohde-piirros) > .kohde-nimi {
-  transform: translateX(-50%) scale(var(--zoom, 1));
+  transform: translateX(calc(-50% + var(--nimi-siirto, 0px))) scale(var(--zoom, 1));
   transform-origin: top center;
 }
 
