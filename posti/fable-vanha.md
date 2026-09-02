@@ -1,3 +1,39 @@
+## 2.9.2026 06:07 UTC — FABLEN TILANNEMUISTIO: aamupäivän korjauserä v1444–v1449, syvä zoomi valmis
+
+Main v1449 (b0cca603, PR #1905). Omistajan syvän zoomin havainnot korjattu
+v1444–v1449: kysymykset omistajalle aina kortilla (Raamattu),
+siirtoviivat 0,9 px / himmeys 0,55 / katko 2,5 (nostotaso poltettu
+02c), kaikki neljä merkkiperhettä (nosto, eläintäky, maastokolmio,
+kaupunki) yhteen ruutukattoon, havainnekuvan selitelinkki kaikkialla
+(taytaLahderivi), kaupungin nimiö väistää nappulaa ja kohdemerkkejä
+(ruutuvaraus), ja z7:n yli zoomattaessa elävä kerros kasvaa laatan
+venytyksen mukana (nostoladontaVenytys = ruutuPx / 3,6; ei uutta
+zoomitasoa, ei polttoa). Savuke-syvazoomi 36/36 kolmessa näkymässä.
+LUETTELO: pohja 2026-09-02a (korkeus z7 = 1′, patina täysi), nostot
+02c (saanto v7, siirtoviivat 0,9), viivat 02a (piirit=false).
+
+HUOMIO OMISTAJALLE: z7:n yli myös paikannimet (kaupungit, vuoret)
+kasvavat suurennuslasin alla (iPad 25 km: kaupunki 12,5 → 32 px). Se
+on päätöksen "koko kartta kuin yksi paperi" suora seuraus ja ainoa
+tapa pitää perheet samassa mitassa. Jos nimet halutaan ruutuvakioksi,
+se on eri erä ja eri hierarkiapäätös.
+
+AVOINNA:
+- Nimetön vuorikolmio Bulgarian pohjassa (43,25°P/24,75°I).
+- Nappulan hetkellinen kokoloikka siirron jälkeen; savuke-nappula
+  7b/7c punaisena mainissa; savuke-maailmanakyma väite 4 kontissa.
+- Yleiskuvitussessiolta odotetaan: K1, K2 (7 skandaalia → lehtisiirto),
+  E1 (BIH/TUR eläintäyt, testit 27→29), H1 (Historian hetket, kolmas
+  sivusto, 10 kuvan pilotti → nostolaji + maalehden Historia).
+
+JATKOPROMPTI: 1) ReadNotifications; 2) postikierros tunneittain
+(trigger trig_01PVJLUsK6F9L92HR7hUCaQN, hiljaa jos ei uutta postia);
+3) uudet tilaukset Opus-agenteilla työpuissa, Fable julkaisee versiot
+yksitellen (fetch main → uusi-versio ≤60 merkkiä → testit → build →
+PR → squash → branch reset); ei rinnakkaisia pyramidiajoja;
+pyramidiajot ilman erillistä lupaa (Raamattu); ei kuvadataa eikä
+salaisuuksia postiin; kysymykset omistajalle aina kortilla.
+
 ## 2.9.2026 04:35 UTC — FABLEN TILANNEMUISTIO: aamun erä valmis, koko pyramidi poltettu 1′:llä ja patinalla
 
 Main v1443 (3e777c18). Aamun tilaukset julkaistu v1438–v1442:
