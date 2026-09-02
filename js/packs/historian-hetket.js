@@ -171,6 +171,15 @@ export const HISTORIAN_HETKET = [
     ],
     kartalla: true,
     lehti: { laji: 'kaupunki', avain: 'sevilla' },
+    visa: {
+      kysymys: 'Miksi Kolumbuksen laivat odottivat Palosin suistossa juuri aamun laskuvettä?',
+      vaihtoehdot: [
+        'Laskuvesi vei laivat merelle ilman soutua',
+        'La Rábidan munkit siunasivat matkan vasta auringonnousussa',
+        'Pintan peräsin oli vielä korjattavana',
+      ],
+      oikea: 0,
+    },
   },
   /*
    * 2. SANLÚCAR DE BARRAMEDA 20.9.1519.
@@ -213,6 +222,15 @@ export const HISTORIAN_HETKET = [
     ],
     kartalla: true,
     lehti: { laji: 'kaupunki', avain: 'sevilla' },
+    visa: {
+      kysymys: 'Kuinka moni Magalhãesin viidestä laivasta palasi Sanlúcariin syyskuussa 1522?',
+      vaihtoehdot: [
+        'Kolme',
+        'Yksi, Victoria, ja sen kannella 18 miestä',
+        'Kaksi, Trinidad ja Victoria',
+      ],
+      oikea: 1,
+    },
   },
   /*
    * 3. LISSABON, RESTELON RANTA 8.7.1497.
@@ -258,6 +276,15 @@ export const HISTORIAN_HETKET = [
     kartalla: true,
     kattoVapaa: true,
     lehti: { laji: 'kaupunki', avain: 'lissabon' },
+    visa: {
+      kysymys: 'Mitä Vasco da Gama miehineen teki Restelon rannalla lähtöä edeltävänä yönä?',
+      vaihtoehdot: [
+        'Lastasi mausteita ja viiniä laivoihin',
+        'Juhli Manuel I:n hovissa',
+        'Rukoili Henrik Purjehtijan kappelissa aamuun asti',
+      ],
+      oikea: 2,
+    },
   },
   /*
    * 4. PLYMOUTH 26.8.1768 — KARTALLE.
@@ -357,6 +384,15 @@ export const HISTORIAN_HETKET = [
     ],
     kartalla: true,
     lehti: { laji: 'maa', avain: 'ESP' },
+    visa: {
+      kysymys: 'Mistä Nelsonin kuolettava muskettilaukaus ammuttiin?',
+      vaihtoehdot: [
+        'Ranskalaisen Redoutablen mesaanimarsista',
+        'Espanjalaiselta rannikkopatterilta',
+        'Victoryn omalta kannelta vahingossa',
+      ],
+      oikea: 0,
+    },
   },
   /*
    * 6. SAN CRISTÓBAL (CHATHAM), GALÁPAGOS, SYYSKUU 1835.
@@ -460,6 +496,15 @@ export const HISTORIAN_HETKET = [
     kartalla: true,
     kattoVapaa: true,
     lehti: { laji: 'kaupunki', avain: 'oslo' },
+    visa: {
+      kysymys: 'Miksi Colin Archer suunnitteli Framin matalaksi ja pyöreäpohjaiseksi?',
+      vaihtoehdot: [
+        'Jotta se kulkisi Siperian jokisuistoissa',
+        'Jotta ahtojää nostaisi sen ylös eikä murskaisi',
+        'Jotta se olisi nopeampi purjeilla',
+      ],
+      oikea: 1,
+    },
   },
   /*
    * 8. ETELÄNAPA 14.12.1911.
@@ -610,6 +655,15 @@ export const HISTORIAN_HETKET = [
     ],
     kartalla: true,
     lehti: { laji: 'kaupunki', avain: 'kobenhavn' },
+    visa: {
+      kysymys: 'Miksi viisi viikinkilaivaa upotettiin Roskildenvuonoon 1000-luvulla?',
+      vaihtoehdot: [
+        'Sulkemaan Peberrendenin väylä vihollislaivastolta',
+        'Uhrilahjaksi merenjumalille',
+        'Ne olivat lahonneet ja hylättiin',
+      ],
+      oikea: 0,
+    },
   },
 ];
 

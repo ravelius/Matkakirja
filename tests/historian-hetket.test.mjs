@@ -51,14 +51,7 @@ const KAUPUNKIKATON_SADE = 8;
  * puutteen näkyvissä: kun visa saapuu, testi vaatii tunnuksen
  * poistamista listalta, joten lista tyhjenee itsestään.
  */
-const VISAA_ODOTTAA = new Set([
-  'kolumbus-palos-1492',
-  'magalhaes-sanlucar-1519',
-  'vasco-da-gama-restelo-1497',
-  'trafalgar-victory-1805',
-  'nansen-fram-1893',
-  'viikinkilaiva-roskilde-1000',
-]);
+const VISAA_ODOTTAA = new Set([]);
 
 const paikat = new Map(HISTORIAN_HETKET.map((h) => [
   h.id, projisoiLaudalle('maailmankartta', h.lon, h.lat),
