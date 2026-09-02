@@ -19730,7 +19730,16 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
  * avaa pelin oman kortin. Ulkoasu on silti tekstin oma — lähderivi
  * ei saa muuttua nappuloiden riviksi.
  */
-.tekija-nappi {
+/*
+ * VALITSIMESSA ON MUKANA `.dialog button` (2.9.2026, sama kaava kuin
+ * .reveal-jatka-lohkossa): lähderivi elää myös dialogien sisällä
+ * (kaupunkilehti, nähtävyysikkuna), ja dialogien yleissääntö
+ * `.dialog button` (0,1,1) voittaa pelkän luokan (0,1,0). Ilman tätä
+ * tekijän nimi peri dialogin pergamenttilaatikon — reunus, pyöristetyt
+ * kulmat ja 42 px:n korkeus keskellä pientä lähderiviä.
+ */
+.tekija-nappi,
+.dialog button.tekija-nappi {
   min-height: 0;
   margin: 0;
   padding: 0;
@@ -19741,10 +19750,15 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
   text-decoration: underline dotted;
   text-underline-offset: 3px;
   cursor: pointer;
+  /* Suurennoksen paperi ohittaa eleet (pointer-events: none) ja sääntö
+     periytyy — nappi ottaa ne takaisin itselleen (ks. seuraava lohko). */
+  pointer-events: auto;
 }
 
 .tekija-nappi:hover,
-.tekija-nappi:focus-visible { text-decoration: underline; }
+.tekija-nappi:focus-visible,
+.dialog button.tekija-nappi:hover,
+.dialog button.tekija-nappi:focus-visible { text-decoration: underline; }
 
 /* ------------------------------------------------------------------ *
  * HAVAINNEKUVAN SELITE (omistajan hyväksyntä 1.9.2026)
@@ -19763,44 +19777,66 @@ button.pollo-laheta:disabled { opacity: 0.5; cursor: default; }
  * alla eikä katkeile pilkkujen kohdalta — omistajan sana oli
  * "pisteviiva-alleviivaus". Molemmat voivat esiintyä samalla rivillä
  * (pro-tuottajan havainnekuva), ja silloin ero on se, kumpi on mitä.
+ *
+ * KAKSI KORJAUSTA 2.9.2026 (omistajan bugiraportti iPhonella, Kreikan
+ * Olympian Zeus-patsaan ihmekortti: *"Havainnekuvasta puuttuu popup
+ * linkki. Tarkista kaikkialta pelistä että linkki tulee näkyviin"*).
+ * Kumpikin vika oli suurennoksissa, eli juuri siellä, missä ihmeen
+ * havainnekuvaa katsotaan isona:
+ *
+ *   1. VIIVA SEURAA TEKSTIÄ, EI LUETTELOA POHJISTA. Tässä oli
+ *      luettelo kolmesta "tummasta" säiliöstä, joille viiva
+ *      vaihdettiin vaaleaksi. Kaksi niistä ei ole tumma: sekä
+ *      .fokuskohde-zoomkehys että .fokuszoom-kehys ovat vaaleaa
+ *      pergamenttia (#f8f3e6), joten valkoinen pisteviiva katosi
+ *      niissä kokonaan ja rivi näytti pelkältä tekstiltä. Luettelo on
+ *      poistettu: viiva otetaan currentColorista, jolloin se on aina
+ *      samaa mustetta kuin lähderivin teksti — vaalea vaalealla,
+ *      tumma tummalla, ilman että uusi säiliö pitää muistaa lisätä
+ *      mihinkään. Ensimmäinen rivi on varasävy vanhoille selaimille
+ *      (sama kaksoiskirjoitus kuin .nosto-linkillä).
+ *   2. NAPPI OTTAA NAPAUTUKSET VASTAAN MYÖS SUURENNOKSESSA. Molempien
+ *      suurennosten paperi ohittaa eleet (pointer-events: none),
+ *      jotta napautus paperin päällä sulkee kuvan — ja koska sääntö
+ *      periytyy, se sammutti myös tämän napin. Selite ei siis
+ *      auennut, vaan napautus sulki suurennoksen. Sama korjaus kuin
+ *      reaktiorivillä (.reaktiot-suurennos): nappi ottaa eleet
+ *      takaisin itselleen. Painallus pysähtyy nappiin
+ *      (js/havainnekuva.js stopPropagation), joten kuva ei sulkeudu
+ *      sen alta.
+ *   3. VALITSIMESSA ON MUKANA `.dialog button`. Sama savuke paljasti
+ *      kolmannen puolen samasta viasta: kaupunkilehti ja
+ *      nähtävyysikkuna ovat dialogeja, ja yleissääntö `.dialog button`
+ *      (0,1,1) voitti pelkän luokan (0,1,0) — lehden kuvatekstissä
+ *      selite ei ollut pisteviivainen sana vaan pergamenttilaatikko
+ *      pyöristetyin kulmin ja 42 px korkeana. Kaava on talon oma (ks.
+ *      .reveal-jatka).
  * ------------------------------------------------------------------ */
-.havainnekuva-selite {
+.havainnekuva-selite,
+.dialog button.havainnekuva-selite {
   min-height: 0;
   margin: 0;
   padding: 0;
   border: none;
   border-bottom: 1px dotted rgba(70, 51, 31, 0.55);
+  border-bottom-color: color-mix(in srgb, currentColor 55%, transparent);
   border-radius: 0;
   background: none;
   color: inherit;
   font: inherit;
   text-decoration: none;
   cursor: pointer;
+  /* Ks. kohta 2 yllä: suurennoksen paperi ohittaa eleet, nappi ei saa. */
+  pointer-events: auto;
 }
 
 .havainnekuva-selite:hover,
-.havainnekuva-selite:focus-visible {
+.havainnekuva-selite:focus-visible,
+.dialog button.havainnekuva-selite:hover,
+.dialog button.havainnekuva-selite:focus-visible {
   border-bottom-color: rgba(70, 51, 31, 0.9);
+  border-bottom-color: currentColor;
   border-bottom-style: solid;
-}
-
-/*
- * Tummalla pohjalla (suurennos, katselin) lähderivi on vaalea, joten
- * viivan on seurattava tekstiä eikä paperia.
- */
-.lightbox-lahde .havainnekuva-selite,
-.fokuszoom-lahde .havainnekuva-selite,
-.fokuskohde-zoomlahde .havainnekuva-selite {
-  border-bottom-color: rgba(245, 240, 230, 0.55);
-}
-
-.lightbox-lahde .havainnekuva-selite:hover,
-.lightbox-lahde .havainnekuva-selite:focus-visible,
-.fokuszoom-lahde .havainnekuva-selite:hover,
-.fokuszoom-lahde .havainnekuva-selite:focus-visible,
-.fokuskohde-zoomlahde .havainnekuva-selite:hover,
-.fokuskohde-zoomlahde .havainnekuva-selite:focus-visible {
-  border-bottom-color: rgba(245, 240, 230, 0.95);
 }
 
 /* Palautenappi selitepopupin pohjalla: tavallinen primary-nappi, mutta

@@ -645,15 +645,24 @@ function elaintakyPiirraKuva(ui, kohde, taky, maa) {
    * LÄHDERIVI KUTEN MUISSA KORTEISSA (omistajan testikierros 30.8.2026:
    * *"Kilpikonnilta puuttuu lähde"*; media-sääntö vaatii lähteen
    * näkyviin). Eläinkuvat ovat pelin omia generoituja kuvia eivätkä
-   * Commons-valokuvia (js/packs/elaintakyt.js, osio "TEKSTIT OVAT
-   * KAANONIA"), joten rivi kertoo TOTUUDEN eikä keksittyä kuvaajaa —
-   * sama sanamuoto kuin muilla pelin omilla kuvilla
+   * Commons-valokuvia (js/packs/elaintakyt.js, osio "KUVAT OVAT
+   * OMISTAJAN OMIA"), joten rivi kertoo TOTUUDEN eikä keksittyä
+   * kuvaajaa — sama sanamuoto kuin muilla pelin omilla kuvilla
    * (js/packs/fokusvirta-*.js `lahde: 'Matkakirjan havainnekuva'`).
-   * Jos jokin täky saa joskus Commons-kuvan, sen oma `lahde`-kenttä
-   * voittaa vakiorivin.
+   *
+   * KUVAN LÄHDE ON ERI KENTTÄ KUIN TEKSTIN (korjaus 2.9.2026,
+   * omistajan bugiraportti *"Havainnekuvasta puuttuu popup linkki.
+   * Tarkista kaikkialta pelistä että linkki tulee näkyviin"*). Tässä
+   * luki `taky.lahde ?? 'Matkakirjan havainnekuva'`, ja koska jokaisella
+   * täyllä ON `lahde` — se on kortin TEKSTIN lähde, en-Wikipedian
+   * artikkeli, ja se ladotaan omalle rivilleen ylempänä — vakiorivi ei
+   * koskaan toteutunut: kuvan alla luki Wikipedia-artikkeli kuvan
+   * lähteenä, vaikka kuva on pelin oma. Rivi valehteli ja havainnekuvan
+   * selite jäi syntymättä. Nyt kuvan oma kenttä on `kuvaLahde`, ja
+   * ilman sitä rivi kertoo totuuden: kuva on Matkakirjan havainnekuva.
    */
   teksti.appendChild(taytaLahderivi(html('span', 'fokusnosto-kuvalahde'),
-    taky.lahde ?? 'Matkakirjan havainnekuva', taky));
+    taky.kuvaLahde ?? 'Matkakirjan havainnekuva', taky));
   kehys.appendChild(teksti);
   kohde.appendChild(kehys);
 }

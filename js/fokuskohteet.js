@@ -3553,9 +3553,17 @@ function avaaKierros(ui, kohde, kierros = kohteenKierrokset(kohde)[0]) {
   varaNappi.target = '_blank';
   varaNappi.rel = 'noopener noreferrer';
   vara.appendChild(varaNappi);
-  if (kierros.lahde) vara.appendChild(html('p', 'fokuskierros-lahde', kierros.lahde));
+  // Kierroksen lähderivi kulkee saman apurin kautta kuin kuvien
+  // (2.9.2026): yksi paikka, jossa lähderivi kirjoitetaan.
+  if (kierros.lahde) {
+    vara.appendChild(taytaLahderivi(html('p', 'fokuskierros-lahde'),
+      kierros.lahde, kierros));
+  }
   ikkuna.appendChild(vara);
-  if (kierros.lahde) ikkuna.appendChild(html('p', 'fokuskierros-lahde', kierros.lahde));
+  if (kierros.lahde) {
+    ikkuna.appendChild(taytaLahderivi(html('p', 'fokuskierros-lahde'),
+      kierros.lahde, kierros));
+  }
 
   kerros.appendChild(ikkuna);
   document.body.appendChild(kerros);
@@ -4147,7 +4155,11 @@ function piirraKohteenSisus(ui, sailio, kohde) {
   piirraKohdeKysymykset(ui, sailio, kohde);
   piirraKierrosnappi(ui, sailio, kohde);
   piirraKohteenNosto(ui, sailio, kohde);
-  if (kohde.lahde) sailio.appendChild(html('p', 'fokuskohde-lahde', kohde.lahde));
+  // Tekstin lähderivi samalla apurilla kuin kuvien (2.9.2026).
+  if (kohde.lahde) {
+    sailio.appendChild(taytaLahderivi(html('p', 'fokuskohde-lahde'),
+      kohde.lahde, kohde));
+  }
   /*
    * REAKTIOT LÄHDERIVIN PERÄÄN (js/reaktiot.js): peukku ja
    * virheilmoitus samasta kortista, jossa teksti on. Tunniste on

@@ -119,7 +119,6 @@ import {
 } from './pollo.js';
 import { ajastaEhdotusKupla, ehdotusOsio, proHakuRasti, proOsio } from './ehdotukset.js';
 import { kuvavinkkiOsio } from './kuvavinkki.js';
-import { merkitseHavainnekuva } from './havainnekuva.js';
 /*
  * Livian omat kuplat (js/livia.js): avausesittely aloitusvalinnassa
  * lähtee kartasta (zoomaaAloituskartta), mutta sen peruminen ja
@@ -13905,7 +13904,11 @@ export class UI {
       this.wikiKuvateksti.appendChild(html('span', 'nahtavyys-selite', kuva.caption));
     }
     if (kuva.lahde) {
-      this.wikiKuvateksti.appendChild(html('span', 'nahtavyys-lahde', kuva.lahde));
+      // Sama apuri kuin kaikilla muilla lähderiveillä (2.9.2026):
+      // kuratoitu kuva voi olla myös Matkakirjan oma havainnekuva.
+      this.wikiKuvateksti.appendChild(
+        taytaLahderivi(html('span', 'nahtavyys-lahde'), kuva.lahde, kuva),
+      );
     }
   }
 
@@ -16080,18 +16083,23 @@ export class UI {
     if (this.quizKohtaaminenKuvateksti) {
       this.quizKohtaaminenKuvateksti.hidden = !tiedot.kuvateksti;
       /*
-       * HAVAINNEKUVASELITE MYÖS KOHTAAMISKORTTIIN (1.9.2026). Tämä on
-       * talon ainoa lähderivi, joka on KIINTEÄÄ HTML:ää (index.html
-       * "Matkakirjan kuvitus") eikä kulje taytaLahderivin kautta, joten
-       * se merkitään tässä samalla apurilla. Merkintä on kertaluontoinen
-       * — merkitseHavainnekuva ohittaa jo merkityn rivin — joten kutsu
-       * kestää kortin uudelleennäytöt.
+       * HAVAINNEKUVASELITE MYÖS KOHTAAMISKORTTIIN (1.9.2026). Tämän
+       * kortin lähderivi on kiinteää HTML:ää (index.html "Matkakirjan
+       * kuvitus"), eli ainoa lähderivi talossa, jota mikään renderöijä
+       * ei kirjoita — mutta se kulkee silti SAMAN apurin kautta kuin
+       * kaikki muut (taytaLahderivi, 2.9.2026). Apuri kirjoittaa rivin
+       * tekstin uudestaan joka näytöllä, joten selite syntyy mukana
+       * eikä tässä tarvitse tietää merkintätavasta mitään.
+       *
+       * Teksti annetaan vakiona (KOHTAAMISKUVAN_LAHDE) eikä lueta
+       * HTML:stä: sama vakio on jo kortin suurennoksen lähderivi
+       * (openLightbox), joten molemmat sanovat saman asian samasta
+       * paikasta.
        */
-      merkitseHavainnekuva(
-        this.quizKohtaaminenKuvateksti.querySelector('.kuvalahde'),
-        KOHTAAMISKUVAN_LAHDE,
-        { osoite: tiedot.osoite },
-      );
+      const kuvalahde = this.quizKohtaaminenKuvateksti.querySelector('.kuvalahde');
+      if (kuvalahde) {
+        taytaLahderivi(kuvalahde, KOHTAAMISKUVAN_LAHDE, { osoite: tiedot.osoite });
+      }
     }
     kuvio.hidden = false;
   }
