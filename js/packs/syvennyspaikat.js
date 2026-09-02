@@ -20,6 +20,13 @@
  *             löytää tarinan tällä (NOSTOSYM_PAAKATEGORIAT).
  *   nimio     lyhyt karttanimiö merkin kylkeen (≤ ~18 merkkiä ennen
  *             lyhennystä) — kortin otsikko on lause, nimiö on nimi.
+ *   kattoVapaa  valinnainen. Tarina EI OLE kohdekaupungin sisällä
+ *             (eläintarha, kansallispuisto, naapurikaupunginosa), joten
+ *             kaupunkinostojen katto ei koske sitä: merkki jää
+ *             pääkartalle, koska kaupunkilehden kohdekartan rajaus ei
+ *             yllä sinne. Perustelu ja sääntö ovat js/fokuskohteet.js:n
+ *             osiossa KATTOVAPAA, ja tests/nostot-kartalla.test.mjs
+ *             tarkistaa jokaisen lipun koneellisesti.
  *
  * KOORDINAATIT ON TARKISTETTU LÄHTEISTÄ (agenttikartoitus 30.8.2026,
  * erä 2 samana päivänä): jokaisen pisteen kommentissa on paikan nimi
@@ -284,6 +291,7 @@ export const SYVENNYSPAIKAT = {
      */
     leijona: {
       lat: 53.3539, lon: -6.3039, symboli: 'elain', nimio: 'Dublinin leijona',
+      kattoVapaa: true,
     },
   },
   dubrovnik: {
@@ -454,6 +462,7 @@ export const SYVENNYSPAIKAT = {
      */
     kissat: {
       lat: 40.9833, lon: 29.0333, symboli: 'elain', nimio: 'Istanbulin kissat',
+      kattoVapaa: true,
     },
   },
   kiova: {
@@ -593,6 +602,7 @@ export const SYVENNYSPAIKAT = {
      */
     hirvet: {
       lat: 51.44333, lon: -0.275, symboli: 'elain', nimio: 'Richmond Park',
+      kattoVapaa: true,
     },
     /*
      * Cheapside (30-32 Cheapside, City of London) (sijainti on arvio).
@@ -686,6 +696,7 @@ export const SYVENNYSPAIKAT = {
      */
     elaintarha: {
       lat: 55.7619, lon: 37.5772, symboli: 'elain', nimio: 'Eläintarha 1864',
+      kattoVapaa: true,
     },
     /*
      * Polyteknillinen museo, Novaja ploštšad (näyttelyn kokoelmien
@@ -731,6 +742,7 @@ export const SYVENNYSPAIKAT = {
      */
     kuyalnyk: {
       lat: 46.6644, lon: 30.7131, symboli: 'luonto', nimio: 'Kuyalnyk',
+      kattoVapaa: true,
     },
   },
   oslo: {
@@ -851,6 +863,7 @@ export const SYVENNYSPAIKAT = {
      */
     przewalski: {
       lat: 50.11694, lon: 14.40611, symboli: 'elain', nimio: 'Prahan hevoset',
+      kattoVapaa: true,
     },
   },
   riika: {
@@ -915,6 +928,9 @@ export const SYVENNYSPAIKAT = {
      */
     avaimenreika: {
       lat: 41.8836, lon: 12.4775, symboli: 'historia', nimio: 'Avaimenreikä',
+      // Aventinuksen kukkula jää Rooman kohdekartan lepotilan näkymän
+      // (eteläraja 41,8845) eteläpuolelle, joten paikka on pääkartalla.
+      kattoVapaa: true,
     },
   },
   sarajevo: {
@@ -1025,6 +1041,7 @@ export const SYVENNYSPAIKAT = {
      */
     elaintarha: {
       lat: 42.6581, lon: 23.3319, symboli: 'elain', nimio: 'Sofian eläintarha',
+      kattoVapaa: true,
     },
   },
   tallinna: {
@@ -1235,6 +1252,9 @@ export const SYVENNYSPAIKAT = {
      */
     sahko: {
       lat: 48.2122, lon: 16.4094, symboli: 'tekniikka', nimio: 'Konehalli',
+      // Prater jää Wienin kohdekartan lepotilan näkymän (itäraja
+      // 16,404) itäpuolelle, joten paikka on pääkartalla.
+      kattoVapaa: true,
     },
     /*
      * Hochstrahlbrunnen, Schwarzenbergplatz (sijainti on arvio).
@@ -1255,6 +1275,7 @@ export const SYVENNYSPAIKAT = {
      */
     kauriit: {
       lat: 48.1508, lon: 16.4381, symboli: 'elain', nimio: 'Keskushautausmaa',
+      kattoVapaa: true,
     },
   },
 };

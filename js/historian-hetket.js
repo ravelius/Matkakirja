@@ -105,6 +105,9 @@ export function hetkiKarttarivit(iso, lauta) {
         nimio: hetki.nimio ?? null,
         tyyppi: 'hetki',
         symboli: 'hetki',
+        // Kaupunkinostojen katto ei koske hetkeä, joka ei mahdu
+        // kaupungin kohdekartalle (js/fokuskohteet.js, KATTOVAPAA).
+        ...(hetki.kattoVapaa ? { kattoVapaa: true } : {}),
       },
       paikka: { x: paikka.x, y: paikka.y },
     });

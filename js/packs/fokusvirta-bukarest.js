@@ -661,6 +661,14 @@ export const FOKUSVIRTA_BUKAREST = {
   takynostot: [
     {
       id: 'dracula',
+      /*
+       * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+       * nostolla ei ole omaa paikkaa vaan sen ankkuri on Bukarestin
+       * laatta itse (ks. `paikka` alempana), joten kaupunkilehden
+       * kohdekartalle sitä ei voi sijoittaa keksimättä osoitetta.
+       * Merkki kuuluu siksi pääkartalle katon ohi.
+       */
+      kattoVapaa: true,
       // Kartan nimiö täkypisteen kylkeen (päätoimittaja 28.8.2026).
       nimio: 'Draculan alaviite',
       otsikko: 'Dracula syntyi alaviitteestä — kirjailija ei käynyt koskaan '

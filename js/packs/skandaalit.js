@@ -964,6 +964,13 @@ export const SKANDAALIT = {
       vuosi: '1784–1785',
       paikka: 'Versailles\'n palatsi',
       lat: 48.8049, lon: 2.1204,
+      /*
+       * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+       * Versailles on 20 kilometriä Pariisin keskustasta eikä osu
+       * kaupunkilehden kohdekartan rajaukseen, joten merkki kuuluu
+       * pääkartalle — kaupunkinostojen katto ei koske sitä.
+       */
+      kattoVapaa: true,
       kortti: 'Huijari myi kardinaalille tarinan, kardinaali osti '
         + 'timanttikaulanauhan kuningattarelle, eikä kuningatar tiennyt asiasta '
         + 'mitään. Kun lasku erääntyi, kaulanauha oli jo pilkottu myyntiin. '

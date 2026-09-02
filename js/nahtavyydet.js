@@ -409,8 +409,31 @@ export function piirraKaupunkiKartta(ui, kohde) {
       asetaKylttiRaja(piste, miniatyyri);
       piirrosPisteet.push({ piste, x: p.x, y: p.y });
     }
-    piste.style.left = `${p.x.toFixed(1)}%`;
-    piste.style.top = `${p.y.toFixed(1)}%`;
+    /*
+     * MERKIN VÄISTÖ NAAPURIN ALTA (2.9.2026, karsitut karttanostot
+     * kohdekartalle). Kaupunkikaton pudottamat nostot ovat kaupungin
+     * kuuluisimpien kohteiden vieressä — Elginin marmorit seisovat
+     * Akropoliin, Niken temppeli saman kallion lounaiskulmassa ja
+     * maratonhuijaus Kallimarmaron päällä. Merkkiruutujen peitto on
+     * silloin 59–100 % (tools/tarkista-karttapisteet.mjs), eli alempi
+     * merkki jää kokonaan piiloon eikä sitä voi napauttaa.
+     *
+     * KOORDINAATTIA EI SIIRRETÄ — piste on datassa siellä, missä kohde
+     * on. Väistö on PIIRTOASIA, kuten nimiön puolen valinta
+     * (`nimiPuoli`): merkki piirtyy `siirto`-kentän verran sivuun
+     * kartan omissa pikseleissä (kehys on kapealla ruudulla 360 px, ja
+     * merkki 24 px, joten 26 px riittää juuri irrottamaan sen). Luku on
+     * kartan lavan pikseleitä, ei ruudun, joten leveämmällä ruudulla
+     * väistö kasvaa samassa suhteessa kuin kartta ja pysyy samalla
+     * kohdalla piirrosta.
+     */
+    const siirto = raaka.siirto ?? null;
+    piste.style.left = siirto?.x
+      ? `calc(${p.x.toFixed(1)}% + ${siirto.x}px)`
+      : `${p.x.toFixed(1)}%`;
+    piste.style.top = siirto?.y
+      ? `calc(${p.y.toFixed(1)}% + ${siirto.y}px)`
+      : `${p.y.toFixed(1)}%`;
     // Numero talteen: kokoruutunäkymä kytkee sillä kloonatun napin
     // oikeaan avaajaan (avaaKarttaSuurennos). Kartalla se ei näy.
     piste.dataset.numero = numero;

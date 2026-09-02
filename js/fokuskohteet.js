@@ -522,6 +522,29 @@ export function kohdeKarttarivit({
  * Sääntö on osa nostoladontaa: sama karsinta ajaa pelissä ja
  * poltossa (NOSTOLADONTA_SAANTO v3), joten elävä kerros ja laatat
  * eivät voi erota.
+ *
+ * === KATTOVAPAA: NOSTO, JOKA EI OLE KAUPUNGISSA (2.9.2026) =========
+ *
+ * Omistajan sääntö 2.9.2026 (sanatarkasti): *"lisää kaikki historian
+ * hetket ja muut karttanostot myös joko pääkarttanäkymään tai sitten
+ * kaupunkilehden kaupunkikartalle, ellei näin ole jo tehty."* Lehtisivu
+ * ei siis ole koskaan noston ainoa paikka, ja karsitulle merkille on
+ * kaksi vaihtoehtoa: kaupunkilehden kohdekartta tai pääkartta.
+ *
+ * Kaupunkilehden kohdekartta kelpaa vain, jos nosto osuu sen rajaukseen
+ * — kartta on esirenderöity kuva parin kilometrin ruudusta. Sofian
+ * Vitoša (5 yksikköä keskustasta), Boyanan kirkko ja eläintarha,
+ * Krakovan Wieliczka, Lontoon Richmond Park ja kolmetoista muuta jäävät
+ * sen ulkopuolelle: ne EIVÄT OLE kohdekaupungissa vaan sen lähialueella.
+ * Juuri sellaisia nostoja omistaja pyysi kartalle 1.9. (*"nostoja
+ * nimenomaan muista paikoista kuin kohdekaupungeista"*) — kahdeksan
+ * yksikön säde vain sattuu yltämään niiden yli.
+ *
+ * `kattoVapaa: true` on siksi datan kenttä, joka sanoo: tämä nosto ei
+ * ole kaupungin sisällä, joten kaupunkinostojen katto ei koske sitä.
+ * Lippu on merkitty vain niille, joille tools/tarkista-nostopaikat.mjs
+ * osoittaa, ettei kohdekarttaa ole tarjolla; tests/nostot-kartalla.test.mjs
+ * valvoo, ettei se leviä muualle.
  */
 const KAUPUNKIKATON_SADE = 8;
 const KAUPUNKINOSTOJEN_KATTO = 3;
@@ -542,6 +565,7 @@ function karsiKaupunkiruuhka(rivit, kaupungit) {
     const ruuhka = [];
     rivit.forEach((r, i) => {
       if (r.kohde?.tyyppi === 'kaupunki') return; // kaupunkikohde on oma laattansa vieressä
+      if (r.kohde?.kattoVapaa) return;            // ei kaupungissa (ks. KATTOVAPAA yllä)
       if (Math.hypot(r.paikka.x - c.x, r.paikka.y - c.y) <= KAUPUNKIKATON_SADE) {
         ruuhka.push({ r, i });
       }
