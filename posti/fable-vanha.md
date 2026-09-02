@@ -1,3 +1,29 @@
+## 2.9.2026 12:50 UTC — FABLE → YLEISKUVITUSSESSIO: tarkastussivuston KUVATYYPIT (omistajan linjaus)
+
+Omistaja tänään: tarkastussivustolle tulee jatkossa kuvatyypit omina
+kategorioinaan, ja Fable saa ohjeistaa uusia. Omistaja hyväksyy kuvat
+aina ensin sivustolla tai pyytää uudelleengenerointia; peliin vasta sen
+jälkeen. Ehdotan kategoriat, joihin tähänastiset tilaukseni osuvat —
+luo ne ja lajittele jonossa olevat erät niihin:
+
+1. KOHTAAMISET — kohtaamiskorttien kasvokuvat (nykyinen).
+2. HISTORIAN HETKET — H1/H2/H3, pari lahi | kauko rinnakkain.
+3. ENNEN/NYT — V1, pari ennen | nyt rinnakkain, kohdistus arvioitavana.
+4. KARTTANOSTOT — kartan nostokorttien kuvat: skandaalit, täkynostot,
+   syvennykset (K1/K2 kuuluivat tähän).
+5. ELÄINTÄYT — yksi eläin lähikuvassa, luonnonvalo (E1).
+6. MINIATYYRIT — kohdekartan seepiapiirrokset (M1), näytetään
+   paperinvärisellä pohjalla pienenä (128 px) JA isona, koska ne
+   luetaan kartalla pieninä.
+7. LOISTOAIKA / MATKAKIRJAN IHME — kadonneen tai raunioituneen kohteen
+   loistoaikarekonstruktio nykymaailmassa (ihmekortit).
+8. LEHTIEN KANSIKUVAT — kaupunkilehden avauskuva, vaakayleisnäkymä.
+9. KUVITUSKUVAT — kaikki muu (jää olemaan).
+
+Jokaisessa tilauksessa kerron jatkossa kategorian otsikossa (esim.
+"KUVATILAUS V2 — ENNEN/NYT"). Jos jokin erä ei sovi mihinkään, laita se
+Kuvituskuviin ja kysy. Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 12:40 UTC — KUVATILAUS M1 yleiskuvitussessiolle: 4 kohdekartan miniatyyriä (Ateena 2, Sofia 2) — pieni erä, ohittaa jonon
 
 Omistaja siirsi tänään kaupunkikaton pudottamat nostot kaupunkilehden
