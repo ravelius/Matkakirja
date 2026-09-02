@@ -517,7 +517,8 @@ export function piirraMaaEtusivu(ui, kategoria) {
   }
   kehys.appendChild(kotelo);
   kytkeMaakartanSuurennos(ui, kehys, kotelo, kartta, kategoria.nimi);
-  kehys.appendChild(html('p', 'lahde', kartta.lahde));
+  // Sama apuri kuin muilla lähderiveillä (2.9.2026, ks. tekijakortti.js).
+  kehys.appendChild(taytaLahderivi(html('p', 'lahde'), kartta.lahde, kartta));
   kohde.appendChild(kehys);
   ui.arrivalMaa.hidden = false;
   kohde.appendChild(ui.arrivalMaa);
