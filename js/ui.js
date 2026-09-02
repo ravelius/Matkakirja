@@ -12599,11 +12599,21 @@ export class UI {
    * siellä myöskään haeta.
    */
   nostonKuvat(nosto, leveys) {
-    if (!nosto?.tiedosto) return [];
-    const kuvat = [valokuvaUrl(nosto.tiedosto, leveys)];
+    /*
+     * Valmis osoite (pelin oma havainnekuva ämpärissä) ja julisteämpäri
+     * puskuroidaan sellaisinaan; Commonsin tiedostonimi käännetään
+     * leveyden mukaiseksi thumbiksi. Sama portaikko kuin piirrossa
+     * (varustaNostonKuva, kaariNostoGalleria).
+     */
+    const url = (t, w) => (t?.osoite
+      ?? (t?.ampari ? julisteUrl(t.ampari) : (t?.tiedosto ? valokuvaUrl(t.tiedosto, w) : null)));
+    const oma = url(nosto, leveys);
+    if (!oma) return [];
+    const kuvat = [oma];
     if (leveys === 900) {
       for (const teos of nosto.galleria ?? []) {
-        if (teos.tiedosto) kuvat.push(valokuvaUrl(teos.tiedosto, 900));
+        const teoksenUrl = url(teos, 900);
+        if (teoksenUrl) kuvat.push(teoksenUrl);
       }
     }
     return kuvat;
@@ -13647,9 +13657,22 @@ export class UI {
         // kuvat voivat olla eri tekijöiltä (js/tekijakortti.js).
         tekija: nosto.tekija,
         tekijaId: nosto.tekijaId,
+        // Ämpärikuvalla ei ole Commons-tiedostonimeä; valmis osoite
+        // kulkee mukana, jotta sarjan ensimmäinen teos näkyy myös
+        // silloin kun noston kuva on pelin oma havainnekuva.
+        osoite: nosto.osoite,
+        ampari: nosto.ampari,
       },
       ...nosto.galleria,
     ];
+    /*
+     * TEOKSEN OSOITE: valmis polku ensin, sitten julisteämpäri ja
+     * viimeisenä Commonsin thumb-putku varareitteineen. Sama portaikko
+     * kuin suurennoksessa (naytaKulttuuriKuva) ja noston omalla kuvalla
+     * (varustaNostonKuva) — kolme paikkaa, yksi järjestys.
+     */
+    const teoksenOsoite = (t) => (t.osoite
+      ?? (t.ampari ? julisteUrl(t.ampari) : valokuvaUrl(t.tiedosto, 900)));
     /*
      * Sarjan kaikki kuvat latautuvat taustalla heti kun galleria on
      * sivulla (omistajan tarkennus 14.8.2026: ensimmäinen erä kattoi
@@ -13657,7 +13680,7 @@ export class UI {
      * nostogalleria jäi lataamaan kuvat vasta nuolesta). Sama osoite
      * ja leveys kuin nayta():ssa, jotta välimuisti osuu.
      */
-    esilataaKuvat(teokset.map((t) => valokuvaUrl(t.tiedosto, 900)));
+    esilataaKuvat(teokset.map(teoksenOsoite).filter(Boolean));
     let kohdalla = 0;
     const laskuri = html('span', 'arrival-kuva-laskuri', `1 / ${teokset.length}`);
     // Suurennos avaa kohdalla olevan teoksen JA koko sarjan selattavana
@@ -13666,7 +13689,8 @@ export class UI {
     const nayta = (suunta) => {
       kohdalla = (kohdalla + suunta + teokset.length) % teokset.length;
       const teos = teokset[kohdalla];
-      asetaKuva(kuva, valokuvaUrl(teos.tiedosto, 900), valokuvaVara(teos.tiedosto, 900));
+      asetaKuva(kuva, teoksenOsoite(teos),
+        teos.osoite || teos.ampari ? null : valokuvaVara(teos.tiedosto, 900));
       kuva.alt = teos.selite ?? teos.otsikko ?? nosto.otsikko;
       kuva.galleriaTila = { teokset, kohdalla };
       if (selite) selite.textContent = teos.selite ?? '';

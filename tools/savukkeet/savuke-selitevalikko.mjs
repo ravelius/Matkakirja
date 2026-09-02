@@ -12,7 +12,7 @@
  * VARTIOT:
  *   1. NAPPI JA LEVY. Kartan oikeassa yläkulmassa on nappi, valikko on
  *      aluksi kiinni (visibility: hidden) ja napista se aukeaa. Rivejä
- *      on omistajan kahdeksan pääkategoriaa, ja jokaisella on symboli,
+ *      on omistajan pääkategoriat, ja jokaisella on symboli,
  *      suomenkielinen selite ja kappalemäärä.
  *   2. KAPPALEMÄÄRÄ ON TOSI (omistajan lisätilaus 29.8.2026). Rivin
  *      luku vastaa täsmälleen sitä, montako sen aiheen merkkiä kartalle
@@ -22,7 +22,7 @@
  *      eläintäyt; kun kamera ajaa maalehdelle, maan omat kohdemerkit
  *      ilmestyvät ja rivien luvut kasvavat niiden mukana. Juuri tämä on
  *      omistajan *"kappalemäärä kyseisen maan kohdalla"*.
- *   4. KARTALLA ON VAIN SELITTEEN KAHDEKSAN SYMBOLIA (omistajan päätös
+ *   4. KARTALLA ON VAIN SELITTEEN SYMBOLIT (omistajan päätös
  *      31.8.2026). Jokainen kartalle piirretty merkki on jonkin
  *      seliterivin oma kärkisymboli (js/fokuskohteet.js kohteenSymboli
  *      → js/karttavalot.js karttavaloKarkisymboli) — kartalla ei siis
@@ -412,7 +412,7 @@ vaadi('eläinvalot palavat kartalla',
 await sivu.screenshot({ path: join(KAAPPAUKSET, 'selitevalikko-valot-elaimet.png') });
 await klikkaa('.karttaselite-kaikki:first-of-type');
 
-/* --- 4: kartalla on vain kahdeksan symbolia, ja pallo sytyttää oman --- */
+/* --- 4: kartalla on vain selitteen symbolit, ja pallo sytyttää oman --- */
 
 /*
  * MIKÄ TÄSSÄ MUUTTUI 31.8.2026. Vartio mittasi ennen, että yksi pallo
@@ -430,7 +430,7 @@ await klikkaa('.karttaselite-kaikki:first-of-type');
 const KARJET = Object.fromEntries(KARTTAVALO_AIHEET.map((r) => [r.aihe, r.symboli]));
 const vieraat = Object.entries(lehdella)
   .filter(([aihe, t]) => t.alalajit.join() !== KARJET[aihe]);
-vaadi('kartan merkit ovat vain selitteen kahdeksan kärkisymbolia',
+vaadi('kartan merkit ovat vain selitteen kärkisymbolit',
   vieraat.length === 0,
   JSON.stringify(vieraat.map(([a, t]) => `${a}: ${t.alalajit.join('+')} ≠ ${KARJET[a]}`)));
 vaadi('jokainen kartalla oleva alalaji kuuluu oman rivinsä pääkategoriaan',

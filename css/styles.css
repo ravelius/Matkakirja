@@ -21737,6 +21737,15 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
   --sym-urheilu: #93893c;      /* kullanvihreä — urheilu ja kisat */
   --sym-kaupunki: #8a6d4a;  /* muurinruskea — kaupungit (porttitorni) */
   --sym-ihme: #b8862b;      /* vanha kulta — Matkakirjan kadonneet ihmeet (tähti) */
+  /*
+   * Tiimalasi — Historian hetket (2.9.2026). Sävy on tumma purppura:
+   * perheen kaksitoista muuta väriä ovat okrasta oliiviin ja sinestä
+   * viininpunaiseen, eikä yksikään ole purppura, joten rivi erottuu
+   * selitevalikossa myös väristä. Vaimennettu kuten muutkin —
+   * pergamentti ei kestä kirkasta.
+   */
+  --sym-hetki: #6e4a63;
+  --sym-hetki-hiekka: #c9a86a; /* hiekan kellertävä kasa lasin pohjalla */
 }
 
 /* TÄHTI — Matkakirjan ihme, kohde jota ei enää ole (Raamattu, osio
@@ -21942,6 +21951,26 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
   stroke: var(--sym-muste);
   stroke-width: 0.7;
   stroke-linejoin: round;
+}
+
+/* Tiimalasi — Historian hetket. Kehys (laipiot ja pylväät) on
+   musteessa kuten kaikki puuosat perheessä, lasi kategoriansa
+   purppurassa ja hiekka kellertävänä kasana pohjalla. */
+.nostosym-hetkikehys {
+  fill: var(--sym-muste);
+  stroke: none;
+}
+
+.nostosym-hetki {
+  fill: var(--sym-hetki);
+  stroke: var(--sym-muste);
+  stroke-width: 0.8;
+  stroke-linejoin: round;
+}
+
+.nostosym-hiekka {
+  fill: var(--sym-hetki-hiekka);
+  stroke: none;
 }
 
 /* Murtunut pylväs — historia ja rauniot. */
