@@ -101,10 +101,11 @@ import {
 import { asetaKohdehakemisto } from './fokusvirta.js';
 import { FOKUS_LISANIMET } from './packs/fokus-grc.js';
 // Laattoihin poltetut maastonimet (vuoret, järvet, joet): sama nimi
-// vain kerran kartalle, ks. maastonimiLahella.
+// vain kerran kartalle, ks. maastonimenPari ja maastoParit.
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
 import {
-  LAUDAN_YMPARYS, PARIN_ETAISYYS, asetaKohdenimet, karttanimetLatovat, normalisoiNimi,
+  LAUDAN_YMPARYS, PARIN_ETAISYYS, asetaKohdenimet, asetaMaastonOmistajat,
+  karttanimetLatovat, normalisoiNimi,
 } from './karttanimet.js';
 import { karttavaloKarkisymboli, piirraKarttavalo } from './karttavalot.js';
 import { asetaKuva, assetOsoite } from './media.js';
@@ -810,7 +811,7 @@ function poltetutKaupungit(ui) {
  * Tarnovo, Mostar, Banja Luka, Zagreb, Split, Rijeka, Zadar, Osijek,
  * Debrecen, Szeged, Pécs, Eger, Győr, Napoli, Milano, Torino ja
  * vastaavat. Loput 50 vaikenevat yhä oikein: niiden nimi on kartalla
- * maastonimenä (maastonimiLahella) tai laudan omana kaupunkina.
+ * maastonimenä (maastonimenPari) tai laudan omana kaupunkina.
  *
  * TAULU JÄÄ PAIKALLEEN. FOKUS_LISANIMET on yhä kohdedatan täydellisyyden
  * mitta (tests/fokusnimet.test.mjs, Raamattu: KLIKATTAVUUSLINJAN
@@ -856,6 +857,30 @@ function nimiJoKartalla(ui, kohde) {
  *
  * MERKKI JÄÄ, VAIN NIMIÖ VÄISTYY. Kolmio kertoo mistä on kyse ja on yhä
  * napautettava (kortti, aihevalo); nimen sanoo laatta.
+ *
+ * ── VÄISTÖ KÄÄNTYI TOISIN PÄIN (omistaja 2.9.2026 ilta) ───────────
+ *
+ * Sanatarkasti: *"Balkan vuoret ovat edelleen polttamatta eikä tekstiä
+ * voi klikata. sen sijaan sen yläpuolella oleva irrallinen vuorenkuva
+ * vie balkan vuorten popupiin."*
+ *
+ * PERUSTE OLI VANHENTUNUT. *"Nimen sanoo laatta"* piti paikkansa
+ * niin kauan kuin maastonimet olivat pohjalaatoissa; sen jälkeen ne
+ * siirtyivät nimikerrokseen (luettelon `nimiot: false`,
+ * js/karttanimet.js), ja nimikerros latoo ne MAASTONIMEN omasta
+ * pisteestä — Balkanvuorilla 19 lautayksikköä kohdemerkin alapuolelta.
+ * Kartalle jäi kaksi puolikasta: nimetön mutta napautettava merkki ja
+ * napauttamaton nimi sen alla, eri lähteistä.
+ *
+ * NYT PARI RATKAISTAAN KERRAN JA MOLEMMAT PUOLET LUKEVAT SAMAN
+ * VASTAUKSEN (maastoParit alempana). Yhden maan kohde saa nimiönsä
+ * takaisin — se palaa nostotasolle nimineen ja saa poltetun nimiön
+ * osumamuodon (asetaPoltetutTekstiOsumat), eli nimi ja merkki ovat
+ * yhtä piirrosta ja yhtä napautusalaa — ja nimikerros jättää saman
+ * maastonimen latomatta (js/karttanimet.js asetaMaastonOmistajat).
+ * Monen maan merkki (Victorianjärvi, Tonava) ei polttaudu eikä ole
+ * kartalla muualla kuin omassa maassaan, joten sen nimen kirjoittaa
+ * yhä nimikerros ja merkki vaikenee kuten ennenkin.
  */
 
 /*
@@ -869,16 +894,19 @@ function nimiJoKartalla(ui, kohde) {
  */
 
 /**
- * Onko samanniminen maastonimi poltettu laattaan tähän kohtaan?
+ * Sama maastonimi tässä kohtaa — se TIETUE vai null.
  *
  * Joen ankkuri on uoman kiinteä keskikohta — sama piste, jonka
  * laattojen ladonta ja entinen elävä kerros (js/mapart.js
  * drawMaastonimet) valitsivat.
+ *
+ * Palauttaa tietueen eikä totuusarvoa, koska molemmat puolet tarvitsevat
+ * SAMAN tietueen: nimikerros jättää juuri sen latomatta, ja tämä kerros
+ * kirjoittaa sen nimen (maastoParit alempana).
  */
-function maastonimiLahella(ui, kohde, paikka) {
-  if (ui?.game?.pack?.id !== 'maailmankartta') return false;
+function maastonimenPari(kohde, paikka) {
   const nimi = normalisoiNimi(kohde?.nimi);
-  if (!nimi) return false;
+  if (!nimi || !Number.isFinite(paikka?.x) || !Number.isFinite(paikka?.y)) return null;
   const osuu = (x, y) => {
     let dx = Math.abs(x - paikka.x);
     if (dx > LAUDAN_YMPARYS / 2) dx = LAUDAN_YMPARYS - dx;
@@ -886,7 +914,7 @@ function maastonimiLahella(ui, kohde, paikka) {
   };
   for (const laji of ['vuoret', 'jarvet']) {
     for (const m of MAAILMANKARTAN_NIMET[laji] ?? []) {
-      if (normalisoiNimi(m.nimi) === nimi && osuu(m.x, m.y)) return true;
+      if (normalisoiNimi(m.nimi) === nimi && osuu(m.x, m.y)) return m;
     }
   }
   for (const joki of MAAILMANKARTAN_NIMET.joet ?? []) {
@@ -894,15 +922,63 @@ function maastonimiLahella(ui, kohde, paikka) {
     const pisteet = joki.pisteet ?? [];
     if (pisteet.length < 2) continue;
     const keski = pisteet[Math.floor(pisteet.length / 2)];
-    if (osuu(keski[0], keski[1])) return true;
+    if (osuu(keski[0], keski[1])) return joki;
   }
-  return false;
+  return null;
 }
 
+/*
+ * PARIT KERRAN, KAKSI LUKIJAA (ks. lohko "VÄISTÖ KÄÄNTYI TOISIN PÄIN").
+ *
+ * `omistetut`  maastonimen tietueita, jotka KOHDEMERKKI kirjoittaa —
+ *              nimikerros jättää ne latomatta (asetaMaastonOmistajat).
+ * `vaikenevat` kohteiden tunnuksia, joiden nimen kirjoittaa NIMIKERROS
+ *              maastonimenä — merkki jää nimiöttömäksi kuten ennen.
+ *
+ * JAKO SEURAA POLTTOSÄÄNTÖÄ. Monen maan merkki latoutuu joka maassa eri
+ * paikkaan eikä sitä siksi polteta lainkaan (tools/fokuskartta/nostot.mjs
+ * "SAMA TUNNUS KAHDESSA MAASSA EI PALA"), joten se on kartalla vain
+ * pelaajan omassa maassa — Victorianjärven nimen on tultava kerrokselta,
+ * joka piirtää sen aina. Yhden maan merkki poltetaan koko maailman
+ * kartalle, joten se kantaa nimensä itse.
+ *
+ * TAULU ON LAUDAN OMINAISUUS EIKÄ PELIN: KOHDE_MAAT ja maastonimet ovat
+ * molemmat vakioaineistoa, joten se lasketaan kerran ensimmäisellä
+ * kysymyksellä (435 kohdetta x ~130 maastonimeä, mitattuna alle
+ * millisekunti).
+ */
+let maastoParitTaulu = null;
+
+function maastoParit() {
+  if (maastoParitTaulu) return maastoParitTaulu;
+  const kertoja = new Map();
+  for (const lista of Object.values(KOHDE_MAAT)) {
+    for (const k of lista) kertoja.set(k.id, (kertoja.get(k.id) ?? 0) + 1);
+  }
+  const omistetut = new Set();
+  const vaikenevat = new Set();
+  for (const lista of Object.values(KOHDE_MAAT)) {
+    for (const k of lista) {
+      const pari = maastonimenPari(k, k.laudat?.maailmankartta);
+      if (!pari) continue;
+      if ((kertoja.get(k.id) ?? 0) > 1) vaikenevat.add(k.id);
+      else omistetut.add(pari);
+    }
+  }
+  maastoParitTaulu = { omistetut, vaikenevat };
+  return maastoParitTaulu;
+}
+
+/*
+ * ILMOITTAUTUMINEN NIMIKERROKSELLE. Riippuvuus osoittaa yhteen suuntaan
+ * (tämä moduuli tuntee nimikerroksen, ei toisin päin), ja haku on laiska:
+ * taulu lasketaan vasta ensimmäisestä ladonnasta.
+ */
+asetaMaastonOmistajat(() => maastoParit().omistetut);
+
 function kohteenNimio(ui, kohde) {
-  const paikka = kohde?.laudat?.[ui?.game?.pack?.id];
-  if (Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y)
-    && maastonimiLahella(ui, kohde, paikka)) return false;
+  if (ui?.game?.pack?.id === 'maailmankartta'
+    && maastoParit().vaikenevat.has(kohde?.id)) return false;
   if (kohde?.tyyppi !== 'kaupunki') return true;
   return !nimiJoKartalla(ui, kohde);
 }

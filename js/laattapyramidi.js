@@ -435,10 +435,38 @@ let edellinenKeskus = null;
 let edellinenTaso = null;
 let luetteloHaku = null;
 
+/*
+ * LUETTELO TARKISTETAAN AINA, LAATAT EI KOSKAAN.
+ *
+ * Laatan osoitteessa on ajon versio, joten se kelpaa ikuiseen
+ * välimuistiin (`immutable`, 1 vuosi). LUETTELON osoitteessa ei ole
+ * versiota — se on se tiedosto, joka KERTOO version — ja ämpärissä
+ * sillä on `max-age=300`.
+ *
+ * Viisi minuuttia on juuri se ikkuna, jossa omistaja katsoi karttaa
+ * uuden nostopolton jälkeen (2.9.2026 ilta, *"välillä tulee tällaisia
+ * tuplanäkymiä … ne onneksi häviävät jonkun ajan kuluttua"*): selain
+ * tarjosi vanhan luettelon, peli pyysi sen mukana EDELLISEN
+ * nostoversion laatat ja laski tiivisteet uudella koodilla, jolloin
+ * jokainen muuttunut merkki oli kartalla kahdesti — vanha poltettuna
+ * laatassa ja uusi elävänä sen päällä.
+ *
+ * `cache: 'no-cache'` ei ohita välimuistia vaan TARKISTAA sen
+ * (If-None-Match): osuma on 304 ilman tavuakaan runkoa, joten hinta on
+ * yksi kättely istuntoa kohti. VARAREITTI ON PAKOLLINEN: verkotta
+ * tarkistus epäonnistuu, ja silloin tavallinen nouto saa yhä vastata
+ * välimuistista — muuten koko kartta katoaisi lentokonetilassa.
+ */
+function noudaLuettelo() {
+  return fetch(pyramidiUrl('pyramidi.json'), { cache: 'no-cache' })
+    .then((v) => (v.ok ? v : Promise.reject(new Error('luettelo'))))
+    .catch(() => fetch(pyramidiUrl('pyramidi.json')));
+}
+
 async function haeLuettelo() {
   if (luettelo) return luettelo;
   if (!luetteloHaku) {
-    luetteloHaku = fetch(pyramidiUrl('pyramidi.json'))
+    luetteloHaku = noudaLuettelo()
       .then((v) => (v.ok ? v.json() : null))
       .then((j) => {
         // Kelpaa vain, jos siinä on se, mitä piirto lukee — versio
@@ -561,8 +589,18 @@ export function pyramidinMittarit() {
  * kantoi kierroksen, sauman yli panoroitaessa samasta tiedostosta
  * syntyi toinen elementti — ja se elementti oli juuri se, jonka laudan
  * kopio peitti.
+ *
+ * AJON VERSIO ON AVAIMESSA, koska se on laatan osoitteessa
+ * (`<versio>/nostot/z6/…`, laattaUrl). Kaksi ajoa on kaksi eri
+ * tiedostoa samassa ruudussa, ja jos avain ei erottaisi niitä, kerros
+ * pitäisi vanhaa kuvaa uutena eikä pyytäisi uutta lainkaan. Yhden
+ * istunnon aikana versio ei vaihdu, joten tämä on vakuutus eikä
+ * viritys — mutta juuri se vakuutus, jonka puuttuminen näkyi
+ * tuplanäkymänä 2.9.2026.
  */
-const avain = (z, sarake, rivi) => `${z}:${sarake}:${rivi}`;
+const tasonVersio = (taso) => (taso.nosto ? luettelo?.nostotaso?.versio
+  : (taso.viiva ? luettelo?.viivataso?.versio : luettelo?.versio)) ?? '';
+const avain = (taso, sarake, rivi) => `${tasonVersio(taso)}:${taso.z}:${sarake}:${rivi}`;
 
 /**
  * Onko laatta olemassa levyllä?
@@ -824,6 +862,13 @@ function jonotaEsilataus(taso, laatta, arkki, nakyva, suunta) {
  * ja ulospäin kasvaa samassa suhteessa — molemmissa päissä laattoja on
  * suunnilleen saman verran kuin nyt (~25), eli kaksi tasoa on noin
  * megatavu. Ilman tätä rajausta z+1 olisi nelinkertainen määrä.
+ *
+ * MYÖS MERKKITASOT (2.9.2026 ilta). Lista sisältää nyt pohjan tasojen
+ * lisäksi nosto- ja viivatason omat tasot, koska nostotaso ei enää pidä
+ * vanhaa tasoa uuden alla (paivitaKerros, "LÄPINÄKYVÄ MERKKIKERROS"):
+ * juuri se hetki, jolloin merkit ovat poissa, on tämän lämmityksen
+ * mitta. Nostolaattoja on vain siellä missä merkkejä on (luettelon
+ * laatasto), joten erä on murto-osa pohjan laatoista.
  */
 function jonotaTasovaihto(tasot, taso, laatta, arkki, nakyva) {
   const kx = nakyva.x + nakyva.w / 2;
@@ -932,9 +977,16 @@ function peruLaatta(kuva) {
   kuva.remove();
 }
 
-/** Yhden kerroksen tila: mikä taso siinä on ja mitkä laatat. */
-const tyhjaTila = (kerros, alin = false) => ({
-  kerros, alin, z: null, laatat: new Map(), vanhat: null, ajastin: 0,
+/**
+ * Yhden kerroksen tila: mikä taso siinä on ja mitkä laatat.
+ *
+ * `alin`       kerroksen alla ei ole mitään — ruudulla olevaa laattaa
+ *              ei saa heittää pois (ks. paivitaKerros).
+ * `lapinakyva` kerros on MERKINTÖJÄ pergamentin päällä, ei karttaa:
+ *              vanha taso ei jää uuden alle (ks. paivitaKerros).
+ */
+const tyhjaTila = (kerros, alin = false, lapinakyva = false) => ({
+  kerros, alin, lapinakyva, z: null, laatat: new Map(), vanhat: null, ajastin: 0,
   nakyva: null, jakso: 0,
 });
 
@@ -1057,6 +1109,39 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
     // Vain YKSI vanha taso kerrallaan: sitä edellinen on jo tarpeeton.
     poistaVanhaTaso(tila);
     /*
+     * ── LÄPINÄKYVÄ MERKKIKERROS EI JÄTÄ VANHAA TASOA ALLE ──────────
+     *
+     * Omistaja 2.9.2026 ilta, kuvakaappaus Sofiasta (mittajana 100 km):
+     * *"välillä tulee tällaisia tuplanäkymiä … ne onneksi häviävät
+     * jonkun ajan kuluttua"* — sumea, venytetty ja hieman eri kohdassa
+     * oleva poltettu nimi ("Boyanan kirkko", "Rila-vuoristo") terävän
+     * nimen vieressä.
+     *
+     * ALLA OLEVA SÄÄNTÖ ON POHJAN SÄÄNTÖ, EI TÄMÄN. Pohjalaatta on
+     * LÄPINÄKYMÄTÖN: uusi laatta maalaa vanhan kokonaan yli, ja vanha
+     * jää alle vain siksi ajaksi, ettei ruutu ole tyhjä. Nostotaso on
+     * merkintöjä läpinäkyvällä lasilla, joten vanha muste EI katoa
+     * uuden alle — se jää näkyviin sen läpi, ja kartalla on kaksi
+     * kertaa sama nimi.
+     *
+     * KAKSOISKUVA ON MYÖS ERIKOKOINEN. Nostojen ruutukatto lasketaan
+     * TASON omalla tiheydellä (js/nostoladonta.js
+     * nostoladontaKattoSuhde), joten sama merkki on karkeammalla
+     * tasolla suurempi lautayksiköissä ja sen nimiö kauempana
+     * ankkurista. Ruudulla se on juuri se, minkä omistaja näki: venynyt
+     * ja siirtynyt haamu terävän merkin vieressä.
+     *
+     * HINTA ON PIENI JA TIEDOSSA: kerros on hetken ilman merkkejä,
+     * kunnes uuden tason laatat saapuvat — kartta itse ei vilku, koska
+     * pohja ja karkea pohja ovat omissa kerroksissaan. Naapuritasojen
+     * nostolaatat lämmitetään esilatauksessa (jonotaTasovaihto), joten
+     * tavallisella yhteydellä ne ovat jo selaimen välimuistissa.
+     */
+    if (tila.lapinakyva) {
+      for (const kuva of tila.laatat.values()) peruLaatta(kuva);
+      tila.laatat = new Map();
+    }
+    /*
      * ALIN KERROS EI HEITÄ POIS SITÄ, MIKÄ ON RUUDULLA. YLEMPI SAA.
      *
      * Katkaisu on oikea keksintö — se teki zoomauksesta nopean, koska
@@ -1106,7 +1191,7 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
   const uudet = new Map();
   let ruudulla = 0;
   const kasittele = (sarake, rivi) => {
-    const k = avain(taso.z, sarake, rivi);
+    const k = avain(taso, sarake, rivi);
     if (uudet.has(k)) return;
     // Paikka on laatan OMA paikka arkilla, ei näkymän kierros (sääntö 3).
     const lx = arkki.x + (sarake * laatta) / taso.pikseliaPerYksikko;
@@ -1332,6 +1417,14 @@ function paivitaViivataso(ui, taso, laatta, arkki, alue, nakyva) {
     mittarit.viivoja = 0;
     return;
   }
+  /*
+   * VIIVATASO SAA PITÄÄ VANHAN TASON, TOISIN KUIN NOSTOTASO. Sekin on
+   * läpinäkyvä, mutta sen sisältö on karttavakiota (reittimuste, rajat)
+   * eikä ruutukaton alaista: sama viiva on joka tasolla samassa
+   * kohdassa ja samanlevyinen, joten edellisen tason laatta osuu uuden
+   * PÄÄLLE eikä viereen — haamua ei synny, ja reitti pysyy näkyvissä
+   * koko zoomin ajan.
+   */
   ui.pyramidiViiva ??= tyhjaTila(kerros);
   ui.pyramidiViiva.kerros = kerros;
   paivitaKerros(ui.pyramidiViiva, oma, laatta, arkki, alue, nakyva, 'low');
@@ -1345,7 +1438,8 @@ function paivitaNostotaso(ui, taso, laatta, arkki, alue, nakyva) {
   const oma = tasot?.find((t) => t.z === taso.z) ?? null;
   kerros.style.opacity = oma ? '1' : '0';
   if (!oma) return;
-  ui.pyramidiNosto ??= tyhjaTila(kerros);
+  // Läpinäkyvä merkkikerros: vanha taso ei jää uuden alle (paivitaKerros).
+  ui.pyramidiNosto ??= tyhjaTila(kerros, false, true);
   ui.pyramidiNosto.kerros = kerros;
   paivitaKerros(ui.pyramidiNosto, oma, laatta, arkki, alue, nakyva, 'low');
   mittarit.nostoja = ui.pyramidiNosto.laatat.size;
@@ -1526,7 +1620,8 @@ export function paivitaPyramidi(ui) {
    * Viereiset zoomtasot tulevat jonon perälle.
    */
   jonotaEsilataus(taso, laatta, arkki, nakyva, suunta);
-  jonotaTasovaihto(tasot, taso, laatta, arkki, nakyva);
+  jonotaTasovaihto([...tasot, ...(nostotasonTasot() ?? []), ...(viivatasonTasot() ?? [])],
+    taso, laatta, arkki, nakyva);
 }
 
 /** Tyhjentää laatat (laudan vaihto, pelin loppu). */

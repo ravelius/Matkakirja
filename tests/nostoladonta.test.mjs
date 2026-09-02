@@ -320,7 +320,7 @@ test('polton jokaisella tasolla venytys on tasan 1', () => {
     assert.equal(nostoladontaVenytys(tasonTiheys / NOSTOLADONTA_POLTON_TIHEYS), 1,
       `taso z${z} (${tasonTiheys} px/yksikkö)`);
   }
-  assert.equal(NOSTOLADONTA_SAANTO, 'v8');
+  assert.equal(NOSTOLADONTA_SAANTO, 'v9-maasto');
 });
 
 /*
