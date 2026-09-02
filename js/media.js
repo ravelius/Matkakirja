@@ -236,11 +236,20 @@ export function assetOsoite(laji, tiedosto) {
   if (typeof tiedosto !== 'string' || !tiedosto) return tiedosto;
   // Valmis osoite (ämpäri tai mikä tahansa muu) menee sellaisenaan.
   if (/^(?:[a-z][a-z0-9+.-]*:)?\/\//i.test(tiedosto)) return tiedosto;
-  // Pelkkä tunnus: uusi kuva, joka on vain ämpärissä ja aina JPG.
+  /*
+   * Pelkkä tunnus: uusi kuva, joka on vain ämpärissä. Muoto on JPG —
+   * paitsi MINIATYYREILLÄ, jotka ovat syvättyjä piirroksia paperin
+   * päällä ja tarvitsevat alfakanavan (omistajan havainto 2.9.2026 ilta:
+   * "Kuvaputken tekemiä uusia kuvia ei ole syvätty" — M1:n JPG:t
+   * näkyivät beigeinä laatikkoina). Miniatyyri luetaan PNG:nä; JPG-
+   * versio jää ämpäriin käyttämättä, ja kunnes PNG on siellä, 404
+   * pudottaa merkin varatäpläksi kuten ennenkin (Raamattu, KUVAMUOTO
+   * ON JPG: poikkeus liput ja miniatyyrit).
+   */
   if (!tiedosto.includes('/')) {
-    return ASSET_KANSIOT[laji]
-      ? `${PEILI_JUURI}${ASSET_ALIPOLKU}${laji}/${tiedosto}.jpg`
-      : tiedosto;
+    if (!ASSET_KANSIOT[laji]) return tiedosto;
+    const pääte = laji === 'miniatyyrit' ? 'png' : 'jpg';
+    return `${PEILI_JUURI}${ASSET_ALIPOLKU}${laji}/${tiedosto}.${pääte}`;
   }
   const osuma = Object.entries(ASSET_KANSIOT)
     .map(([nimi, kansio]) => [nimi, tiedosto.indexOf(`${kansio}/`)])

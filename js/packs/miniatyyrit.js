@@ -25,8 +25,9 @@
  *                                       eikä yksikään rivi muutu siitä:
  *                                       kytkin on js/media.js R2_ASSETIT.
  *   'ateena-akropolis-museo'            pelkkä TUNNUS. Kuva on vain
- *                                       ämpärissä JPG:nä polussa
- *                                       kohtaamiset/miniatyyrit/<tunnus>.jpg,
+ *                                       ämpärissä PNG:nä (alfakanava,
+ *                                       syvätty) polussa
+ *                                       kohtaamiset/miniatyyrit/<tunnus>.png,
  *                                       eikä repossa ole kopiota.
  *
  * Osoitteen laskee js/media.js assetOsoite — tämä taulu ei tiedä

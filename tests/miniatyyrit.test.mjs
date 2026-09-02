@@ -64,13 +64,14 @@ test('jokainen ämpäritunnus on muotoa <kaupunki>-<slug>', () => {
 
 /*
  * Lukupolun on osuttava siihen kansioon, johon kuvaputki toimittaa
- * (posti 2.9.2026: `kohtaamiset/miniatyyrit/<tunnus>.jpg`). Juuri
+ * (posti 2.9.2026: `kohtaamiset/miniatyyrit/<tunnus>.png` — PNG, koska
+ * miniatyyri on syvätty ja tarvitsee alfakanavan). Juuri
  * luetaan kohtaamiskuvien taulusta, jotta pelin kaksi ämpärivakiota
  * eivät voi eriytyä toisistaan.
  */
 test('tunnus luetaan ämpärin miniatyyrikansiosta JPG:nä', () => {
   assert.equal(assetOsoite('miniatyyrit', 'ateena-akropolis-museo'),
-    `${KOHTAAMIS_R2_JUURI}/miniatyyrit/ateena-akropolis-museo.jpg`);
+    `${KOHTAAMIS_R2_JUURI}/miniatyyrit/ateena-akropolis-museo.png`);
   // Repon polku pysyy ennallaan ennen siirtolipun kääntöä, ja kääntyy
   // ämpäriosoitteeksi sen jälkeen — kumpikin asento on laillinen.
   assert.equal(
