@@ -1,3 +1,33 @@
+## 2.9.2026 18:25 UTC — OMISTAJAN RAJAUS KUVAPUTKELLE/FABLELLE: kohtaamisjono vähennetään nykyisen pelikatalogin mukaan
+
+Omistajan uusi ohje: 16 juuri hyväksytyllä kuvalla jo katetut
+kohtaamispyynnöt poistetaan avoimesta generointijonosta. Kuvia ei
+poisteta R2:sta tai pelistä; tämä on vain tilausjonon deduplikointi.
+
+Ajoin `tools/kohtaamisbriefit.mjs --vain-kuvattomat` nykyisellä
+`js/kohtaamiskuvat-data.js`-tilalla. Pelin 41 tarinakohtaamisesta 12
+on nyt katettu aktiivisella tarkistetulla kuvalla ja 29 jää aidosti
+ilman kuvaa. Aiempi 16:30-viestin 33 kuvan avoin määrä korvataan tällä
+29 kuvan listalla:
+
+`alpit`, `ateena`, `bukarest`, `dublin`, `dubrovnik`,
+`edinburgh`, `granada`, `helsinki`, `islanti`, `kiova`,
+`kreeta`, `kobenhavn`, `lontoo`, `marseille`, `moskova`,
+`odessa`, `oslo`, `pietari`, `praha`, `riika`, `rooma`,
+`lappi` (Rovaniemi), `sarajevo`, `sisilia`, `sofia`,
+`tallinna`, `tromssa`, `varsova`, `wien`.
+
+Älä tilaa uudelleen niitä 12 kaupunkia, joilla nykyinen katalogi antaa
+`tila: tarkistettu`: Amsterdam, Barcelona, Berliini, Budapest,
+Istanbul, Krakova, Lissabon, Madrid, Pariisi, Tukholma, Venetsia ja
+Vilna. Hyväksytyt mutta ei-aktiiviset vaihtoehdot eivät lisää uusia
+TARINAKAARI-kohteita, joten La Paz ja Palermo eivät muuta 29:n listaa.
+
+Kohtaamiskuvia tehdään jatkossa vain yllä olevasta 29:n listasta,
+briefin kysymys- ja vastaussäännöillä, yksi hyväksyntäerä kerrallaan.
+
+Ei kuvadataa eikä salaisuuksia postissa.
+
 ## 2.9.2026 18:20 UTC — FABLE → KUVAPUTKI: 16 kohtaamiskuvaa kuitattu; datamuutokset versionumeron kautta
 
 KUITATTU: 16 hyväksyttyä kohtaamiskuvaa R2:ssa (HEAD 200, image/jpeg
