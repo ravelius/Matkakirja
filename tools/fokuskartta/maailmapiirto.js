@@ -1886,6 +1886,12 @@ export function piirraNostotKankaalle(ctx, nostot, piirraNosto, mitta) {
      * siirtoviivat takaisin karttanostoille (esim. ateena)"*); viivat
      * olivat poissa yhden vuorokauden ajan.
      *
+     * VAHVISTETTU 2.9.2026 (omistaja: *"Lisää siirto viivat, ne ei
+     * vielä näy"*): leveys, himmeys, katko ja muste kaksinkertaistuivat
+     * tai vahvistuivat, mutta yhtäkään niistä ei kirjoiteta tänne —
+     * kaikki tulevat samasta janasta kuin elävässä kerroksessa, ja
+     * juuri se on tämän lohkon koko idea.
+     *
      * VIIVA EI OTA RUUTUKATTOA (alempana, nostoladontaKattoPorras).
      * Katto on nimiön luettavuutta varten — se estää nimiötä ohittamasta
      * kartan omaa paikannimeä syvillä tasoilla — ja viivan päät ovat jo
@@ -1899,7 +1905,9 @@ export function piirraNostotKankaalle(ctx, nostot, piirraNosto, mitta) {
       ctx.globalAlpha = v.himmeys;
       ctx.lineCap = 'round';
       ctx.lineWidth = Math.max(0.2, v.leveys * px);
-      ctx.setLineDash([v.katko * px, v.katko * px]);
+      // Katko ja väli ovat eri mitat (js/fokusniput.js NIPPU_VIIVA_KATKO
+      // ja NIPPU_VIIVA_VALI): pidempi veto, lyhyempi väli.
+      ctx.setLineDash([v.katko * px, v.vali * px]);
       ctx.beginPath();
       ctx.moveTo(lautaKuvaX(v.x1), lautaKuvaY(v.y1));
       ctx.lineTo(lautaKuvaX(v.x2), lautaKuvaY(v.y2));
