@@ -906,7 +906,11 @@ function lisaaJana(joukko, mitat, ax, ay, bx, by, m) {
  * 190 -> 150. Veton kaventuminen ei näy `reitti`-ulottumassa
  * lainkaan, koska sen määrää helmi eikä veto; JAKSON lyhentyminen sen
  * sijaan kutistaa `helmi`-ulottuman, koska ankkurin suurin siirtymä on
- * puoli jaksoa:
+ * puoli jaksoa.
+ *
+ * JA KERRAN VIELÄ (omistaja 2.9.2026 aamu, ks. REITTITYYLI "LYHYEMPI
+ * KATKO, TIHEÄMPI RYTMI"): jakso 150 -> 90. Sama sääntö, sama seuraus
+ * — `helmi` kutistuu puolen jakson verran, muut eivät liiku:
  *
  *   reitti  MERI: solmuheitto 0,60 + vapina 0,35 + katkon sivu 0,55
  *           + kaari 0,95 + puoli veton leveyttä
@@ -917,16 +921,19 @@ function lisaaJana(joukko, mitat, ax, ay, bx, by, m) {
  *           korridorin on katettava myös helmen ulottuma
  *           säde 10 + puoli kehää (6,0 / 2 = 3,0)             = 13,0
  *   helmi   MERELLÄ ankkuri voi siirtää helmen jopa puoli jaksoa
- *           (150 / 2 = 75) pitkin viivaa raakapaikastaan:
- *           13,0 + 75                                         = 88,0
+ *           (90 / 2 = 45) pitkin viivaa raakapaikastaan:
+ *           13,0 + 45                                         = 58,0
  *           (maalla ankkuria ei ole, joten siellä riittää 13,0)
+ *           MITATTU koko laudalta z7:llä (350 merihelmeä): suurin
+ *           todellinen siirtymä on 44,5 px eli alle puolen jakson,
+ *           kuten yläraja lupaa.
  *   raja    puoli veton leveyttä (1,8 / 2)                    = 0,90
  *
  * LENTOREITTEJÄ EI OLE ENÄÄ LISTASSA: ne eivät ole viivatasolla
  * lainkaan (ks. LENNOT EIVÄT OLE VIIVATASOLLA).
  */
 const ULOTTUMA = {
-  reitti: 13.2, helmi: 88.5, raja: 1.0,
+  reitti: 13.2, helmi: 58.5, raja: 1.0,
 };
 /** Patinan musteen ulottuma laatan reunan yli (sama kuin nostolla). */
 const VIIVA_MARGINAALI_PX = NOSTO_MARGINAALI_PX;

@@ -2196,12 +2196,13 @@ export function piirraErikoispiiritKankaalle(ctx, mitta) {
  * KAKSI VANHAA RAJAA PITÄVÄT YHÄ, ja ne on tarkistettu uusilla
  * luvuilla:
  *
- *   HELMI EI MAHDU KATKOON. Helmen halkaisija on 20 R ja katko
- *   0,30 · 150 = 45 R — katko on yhä selvästi pitkänomainen.
+ *   HELMI EI MAHDU KATKOON. Helmen halkaisija on 20 R, ja katon on
+ *   pysyttävä sitä pidempänä.
  *   HELMINAUHAA EI SYNNY. Lyhin askelväli on 232 R ja helmen
  *   ulkohalkaisija kehineen 26 R, joten väliin jää yli 200 R.
- *   (Luvut on päivitetty 1.9.2026 illan eriin: helmi 15 -> 10 ja
- *   jakso 190 -> 150; molemmat rajat pitävät uusillakin mitoilla.)
+ *   (Molempien rajojen voimassa olevat luvut ovat alimmassa
+ *   perustelulohkossa "LYHYEMPI KATKO, TIHEÄMPI RYTMI", jonne ne on
+ *   laskettu uudestaan jokaisessa erässä.)
  *
  * Luvut ovat R:ssä eli KARTTAVAKIOITA (ks. piirraMaailma osio 8b):
  * ne kutistuvat kartan mukana, joten muutos näkyy joka tasolla samana
@@ -2290,18 +2291,69 @@ export function piirraErikoispiiritKankaalle(ctx, mitta) {
  * HELMET EIVÄT SIIRRY, VAIKKA JAKSO LYHENEE. Merihelmi ankkuroidaan
  * lähimmän katkojakson keskelle (ks. `arkilla`), joten sen suurin
  * siirtymä raakapaikastaan on puoli jaksoa: 95 R -> 75 R. Tiheämpi
- * rytmi vie helmen siis LÄHEMMÄS omaa askelmaansa, ei kauemmas — ja
- * se on MITATTU koko laudalta (350 merihelmeä): suurin siirtymä oli
- * ennen 95 px ja on nyt 74 px z7:llä, eikä yksikään helmi ylitä
- * palautusrajaa 0,75 · jakso kummallakaan mitalla. Helmi ei siis voi
- * jäädä raakapaikalleen niin, että sen jakso silti jätettäisiin
+ * rytmi vie helmen siis LÄHEMMÄS omaa askelmaansa, ei kauemmas.
+ * (Sama mittaus on ajettu uudestaan 2.9.2026 tiheämmällä rytmillä —
+ * ks. "LYHYEMPI KATKO, TIHEÄMPI RYTMI".)
+ */
+/*
+ * === LYHYEMPI KATKO, TIHEÄMPI RYTMI (omistaja 2.9.2026 aamu) ========
+ *
+ * Sanatarkasti: *"tihennä laivareitin viivoitus (lyhyempi viiva mutta
+ * tiheämmässä)."* Tilaus on sama suunta kuin edellisenä iltana
+ * (*"vähän tiheämmät"*) mutta selvästi pidemmälle viety, ja siinä on
+ * nyt MOLEMMAT puolet erikseen: katko lyhyemmäksi JA rytmi tiheämmäksi.
+ *
+ *   jakso  150 -> 90     tiheämpi rytmi (−40 %, katkoja on 1,67x)
+ *   osuus 0,30 -> 0,35   katko lyhyemmäksi mutta ei suhteessa yhtä
+ *                        paljon kuin jakso — muuten katko olisi
+ *                        kutistunut 27 R:ään ja siitä olisi tullut
+ *                        piste
+ *
+ * MITÄ SE TEKEE KATKOLLE JA VÄLILLE:
+ *
+ *   ennen  0,30 · 150 = 45 R katkoa, 105 R väliä; katko/veto 6,0
+ *   nyt    0,35 ·  90 = 32 R katkoa,  58 R väliä; katko/veto 4,2
+ *
+ * KATKO ON YHÄ PITKÄNOMAINEN TUSSINVETO, EI PISTE. Suhde vetoon
+ * putoaa 6,0:sta 4,2:een, ja se on tarkoituksellinen: omistaja pyysi
+ * *lyhyempää* viivaa. Alaraja on helmi — katkon on pysyttävä sitä
+ * pidempänä, tai katkoviivasta tulee helminauhaa (ks. seuraava kohta).
+ *
+ * OSUUS EI SEURAA JAKSOA SUORAAN, ja se on sama päätös kuin
+ * 1.9.2026 illalla, vain toisin päin. Silloin osuus PIDETTIIN, jottei
+ * katko kutistuisi pisteeksi kaventamisen mukana; nyt sitä NOSTETAAN
+ * hitusen samasta syystä: 0,30:lla katko olisi 27 R eli 3,6 kertaa
+ * veton leveys, ja se on jo lähempänä pisaraa kuin vetoa.
+ *
+ * KAKSI VANHAA RAJAA, TARKISTETTU UUSILLA LUVUILLA:
+ *
+ *   HELMI EI MAHDU KATKOON. Helmen halkaisija on 20 R ja katko 32 R.
+ *   Marginaali kapenee (45 -> 32), mutta katko on yhä 1,6-kertainen
+ *   helmeen nähden — ja tämä on se raja, joka kertoo, ettei osuutta
+ *   saa enää laskea: 0,30:lla katko (27 R) olisi enää 1,35-kertainen.
+ *   HELMINAUHAA EI SYNNY. Lyhin askelväli on 232 R ja helmen
+ *   ulkohalkaisija kehineen 26 R, joten väliin jää yli 200 R. Tämä
+ *   raja ei riipu jaksosta lainkaan.
+ *
+ * HELMET SIIRTYVÄT TAAS LÄHEMMÄS ASKELMIAAN. Merihelmi ankkuroidaan
+ * lähimmän katkojakson keskelle (ks. `arkilla`), joten sen suurin
+ * mahdollinen siirtymä raakapaikastaan on puoli jaksoa: 75 R -> 45 R.
+ * MITATTU koko laudalta (350 merihelmeä, z7, jossa R = 1,0 px):
+ * suurin siirtymä 74,3 px -> 44,5 px ja mediaani 37,6 -> 22,5, eikä
+ * yksikään helmi ylitä palautusrajaa 0,75 · jakso (112,5 -> 67,5 px)
+ * kummallakaan mitalla. Helmi ei siis
+ * voi jäädä raakapaikalleen niin, että sen jakso silti jätettäisiin
  * piirtämättä (se oli 1.9.2026 korjattu vika *"osa laivareiteistä
  * jännästi katkeaa välissä"*).
+ *
+ * VETO, HELMI JA MAANTIE EIVÄT MUUTU. Tilaus koskee *"laivareitin
+ * viivoitusta"* eli katkorytmiä; leveys 7,5 jää, helmi 10 ja kehä 6,0
+ * jäävät askelmilleen, ja maantie on yhä yhtenäinen 6,0:n veto.
  */
 export const REITTITYYLI = Object.freeze({
   viiva: 7.5,    // meren katkotussin leveys (omistaja 1.9.2026: "kavenna hieman"; oli 9,0)
   maaViiva: 6.0, // maantien yhtenäisen veton leveys (omistaja 1.9.2026)
-  jakso: 150,    // katko + väli (omistaja 1.9.2026: "vähän tiheämmät"; oli 190)
+  jakso: 90,     // katko + väli (omistaja 2.9.2026: "tihennä"; 190 -> 150 -> 90)
   helmi: 10,     // askelhelmen säde (omistaja 1.9.2026: "vähän pienempi ympyrä")
   kehä: 6.0,     // askelhelmen kehä = MAAVIIVA (omistaja 1.9.2026)
   lento: 2.5,    // lentoreitin veton leveys (ei enää poltossa, ks. LENNOT)
@@ -2311,8 +2363,8 @@ export const REITTITYYLI = Object.freeze({
    * näkymän kahdella ilmeellä ilman koodimuutosta (piirraViivataso
    * `reittityyli`).
    */
-  lyhin: 0.30,   // katkon osuus jaksosta, alaraja
-  pisin: 0.30,   // katkon osuus jaksosta, yläraja (= alaraja: tasainen rytmi)
+  lyhin: 0.35,   // katkon osuus jaksosta, alaraja (omistaja 2.9.2026; oli 0,30)
+  pisin: 0.35,   // katkon osuus jaksosta, yläraja (= alaraja: tasainen rytmi)
   sivu: 0.55,    // koko katko sivussa viivalta (R)
   kaari: 0.95,   // katkon kaarevuus keskellä (R)
   huojunta: 0.6, // solmun heitto (R), molempiin suuntiin
@@ -2632,34 +2684,36 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
      * === KATKON MITAT (reittiyksikköä R) ==========================
      *
      * `jakso` on yhden katkon ja sitä seuraavan välin yhteismitta.
-     * 150 yksikköä (REITTITYYLI; omistaja 1.9.2026 illalla *"tee
-     * niistä vähän tiheämmät"*, ennen 190) on valittu kahdesta
-     * rajasta, ja kumpikin on MITTAKAAVASTA RIIPPUMATON, koska helmi
-     * ja katko kutistuvat samaa tahtia:
+     * 90 yksikköä (REITTITYYLI; omistaja 2.9.2026 *"tihennä
+     * laivareitin viivoitus"*, ennen 150 ja sitä ennen 190) on
+     * valittu kahdesta rajasta, ja kumpikin on MITTAKAAVASTA
+     * RIIPPUMATON, koska helmi ja katko kutistuvat samaa tahtia:
      *
      *   ALARAJA  helmi on halkaisijaltaan 20 R. Jos katko olisi
      *            samaa kokoluokkaa, katko ja helmi näyttäisivät
      *            käyttökoossa samalta merkiltä. Katko
-     *            (0,30 · 150 = 45 R) on selvästi pidempi kuin
-     *            helmi on leveä — ja pidempi myös suhteessa
-     *            kaventuneeseen vetoon (45 / 7,5 = 6,0).
+     *            (0,35 · 90 = 32 R) on 1,6-kertainen helmen
+     *            leveyteen ja 4,2-kertainen kaventuneeseen vetoon
+     *            (32 / 7,5). Juuri TÄMÄ raja on se syy, miksi
+     *            katkon osuutta nostettiin 0,30:sta 0,35:een
+     *            tihennyksen yhteydessä.
      *   YLÄRAJA  askelvälille on mahduttava katkorytmiä: mitattuna
      *            lyhin askelväli on 232 R ja mediaani 595 R, eli
-     *            jakso 150 antaa mediaanivälille neljä jaksoa ja
-     *            lyhimmällekin puolitoista. Lyhimmällä välillä joka
-     *            jaksossa on helmi ja rytmi harvenee — omistaja
-     *            1.9.2026: *"Ei haittaa, jos pistetiheys muuttuu
-     *            suuntaan tai toiseen."*
+     *            jakso 90 antaa mediaanivälille kuusi ja puoli
+     *            jaksoa ja lyhimmällekin kaksi ja puoli. Lyhimmällä
+     *            välillä joka jaksossa on helmi ja rytmi harvenee —
+     *            omistaja 1.9.2026: *"Ei haittaa, jos pistetiheys
+     *            muuttuu suuntaan tai toiseen."*
      *
      * SEURAUS, JOKA KANNATTAA TIETÄÄ: kun jakso skaalautuu kartan
      * mukana, KATKOJEN LUKUMÄÄRÄ reittiä kohti on sama joka
      * tasolla. Kuvio ei siis harvene eikä tihene zoomatessa, se vain
      * pienenee — juuri niin kuin painettu kartta pienenee.
      *
-     * Katkon pituus on tasan 30 % jaksosta ja katko istuu jaksonsa
+     * Katkon pituus on tasan 35 % jaksosta ja katko istuu jaksonsa
      * keskellä (omistaja 1.9.2026: *"Saisivat mennä tasaisesti"*) —
-     * väli on siis aina yli kaksi kertaa katkon mitta. Käsin
-     * piirretty vaihtelu tulee katkon MUODOSTA (tussiprofiili,
+     * väli on siis aina lähes kaksi kertaa katkon mitta (58 vs. 32).
+     * Käsin piirretty vaihtelu tulee katkon MUODOSTA (tussiprofiili,
      * sivu, kaari), ei rytmistä.
      */
     const KATKO = {
