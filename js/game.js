@@ -428,6 +428,24 @@ export class Game {
     this.phase = 'action';
     this.travelMode = null;
     this.autoTravel = false;
+    /*
+     * MATKA JATKUU ITSESTÄÄN, KUNNES OLLAAN KAUPUNGISSA (omistajan
+     * tilaus 2.9.2026, sanatarkasti: *"nopanheitto tulee jatkua
+     * automaattisesti jos ei olla saavuttu seuraavaan
+     * kohdekaupunkiin"*).
+     *
+     * Lippu nousee vuoron alussa (beginTurn), kun ihmispelaaja seisoo
+     * reitin askelpisteessä eikä kaupungissa: silloin vuoro ei ole
+     * valinta vaan matkan jatko, ja nopan saa heittää peli itse.
+     * PELI EI HEITÄ TÄSSÄ — heitto kuuluu UI:lle, jotta nopan ja
+     * nappulan animaatiot pysyvät samassa ketjussa (js/ui.js
+     * ajastaAutomaattinenHeitto).
+     *
+     * Ei tallenneta: arvo johdetaan fromJSONissa asemasta ja
+     * vaiheesta, jolloin kesken matkaa ladattu peli jatkaa oikein
+     * eikä lippu voi jäädä roikkumaan väärään tilaan.
+     */
+    this.jatkaAutomaattisesti = false;
     this.pendingFare = 0;
     this.die = null;
     this.moves = null;
@@ -1355,6 +1373,7 @@ export class Game {
     this.travelMode = null;
     this.pendingFare = 0;
     this.autoTravel = false;
+    this.jatkaAutomaattisesti = false;
 
     // Pääaarre kotikaupungissa ratkaisee pelin heti vuoron alussa.
     if (this.checkWin()) return;
@@ -1371,6 +1390,41 @@ export class Game {
     const modes = this.travelModes(p);
     this.autoTravel = modes.length === 1 && modes[0] !== 'stay';
     if (this.autoTravel) this.actionTravel(modes[0]);
+
+    /*
+     * MATKA KESKEN = HEITTO ILMAN NAPPIA (omistaja 2.9.2026:
+     * *"nopanheitto tulee jatkua automaattisesti jos ei olla saavuttu
+     * seuraavaan kohdekaupunkiin"*).
+     *
+     * Ehto luetaan asemasta: reitin askelpiste ei ole pysähdys vaan
+     * matkan puoliväli. Kaupunkiin saavuttaessa lippu jää alas, ja
+     * saapumiskortti sekä tutkiminen saavat vuoron kuten ennenkin.
+     * Botti ei tarvitse tätä — sillä on oma ajastimensa (ui.js
+     * scheduleBot) — eikä lippu nouse, ellei matkustustapa jatkunut
+     * itsestään samana (autoTravel): merellä se tarkoittaa, että
+     * laivalippu on jo maksettu satamassa (pendingFare = 0).
+     */
+    this.jatkaAutomaattisesti = this.autoTravel
+      && this.phase === 'roll'
+      && !p.isBot
+      && p.pos.type === 'edge';
+  }
+
+  /**
+   * Saako peli heittää nopan pelaajan puolesta juuri nyt?
+   *
+   * Lipun lisäksi tarkistetaan elävä tila, koska kesken vuoron voi
+   * tapahtua mitä tahansa (kehittäjäsiirto, tallennuksen lataus,
+   * käsin siirretty nappula savukkeissa): vaiheen on oltava 'roll',
+   * noppa heittämättä ja nappulan yhä reitillä. Näin vanhentunut
+   * lippu ei voi laukaista heittoa kaupungissa.
+   */
+  jatkaMatkaaItsestaan(player = this.player) {
+    return this.jatkaAutomaattisesti
+      && this.phase === 'roll'
+      && this.die === null
+      && !player.isBot
+      && player.pos.type === 'edge';
   }
 
   /**
@@ -3029,6 +3083,18 @@ export class Game {
     game.phase = data.phase;
     game.travelMode = data.travelMode ?? null;
     game.autoTravel = !!data.autoTravel;
+    /*
+     * JATKOTILA JOHDETAAN, EI LUETA (2.9.2026). Kesken matkaa
+     * tallennettu peli jatkuu itsestään vain siitä samasta tilasta,
+     * jossa automaatti muutenkin toimii: vuoro on nopanheitossa ja
+     * nappula reitin askelpisteessä. Näin vanhakin tallennus jatkaa
+     * matkaa oikein eikä kenttä voi jäädä roikkumaan väärään tilaan
+     * (esim. kaupungissa, jossa noppa kuuluu aina pelaajan napin
+     * taakse).
+     */
+    game.jatkaAutomaattisesti = game.phase === 'roll'
+      && !game.player?.isBot
+      && game.player?.pos?.type === 'edge';
     game.pendingFare = data.pendingFare ?? 0;
     game.die = data.die ?? null;
     game.quiz = data.quiz ?? null;
