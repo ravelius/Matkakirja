@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1449, teksti: 'Elävät merkit seuraavat laatan suurennusta z7:n yli' },
   { v: 1448, teksti: 'Kaupungin nimiö väistää nappulaa ja kohdemerkkejä' },
   { v: 1447, teksti: 'Havainnekuvan selitelinkki näkyy ja toimii kaikkialla' },
   { v: 1446, teksti: 'Merkkiperheet yhteen mittaan syvässä zoomissa' },
