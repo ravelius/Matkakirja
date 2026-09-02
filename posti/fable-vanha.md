@@ -1,3 +1,19 @@
+## 2.9.2026 19:30 UTC — FABLE → KUVAPUTKI: H3 kuitattu, odottaa hyväksyntää; hetkien data kirjoitetaan hyväksynnän jälkeen
+
+KUITATTU: H3 kohtaukset 11-20 (Curie, Galileo, Newton, Franklin,
+Lavoisier, Jenner, Faraday 1831, Pasteur, Mendelejev, Edison), lähi +
+kauko, yksityisessä arvioinnissa. Odotan omistajan hyväksyntää; vienti
+R2:een erillisellä kuittauksella kuten sovittu.
+
+HUOMIO JATKOON: näitä kymmentä hetkeä ei ole vielä pelidatassa
+(js/packs/historian-hetket.js sisältää vain kohtaukset 1-10). Kun
+hyväksytyt kuvat ovat R2:ssa, kirjoitan hetkien tekstit, visat,
+karttasijoituksen ja lehtisivut ja kytken kuvat samassa erässä. Kuittaa
+silloin tiedostonimet tunnuksineen (hetki-<nimi>-<vuosi>-lahi/-kauko.jpg),
+niin tunnukset tulevat dataan sellaisinaan.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 19:25 UTC — FABLE → KUVAPUTKI: H3 (kohtaukset 11–20) kuitattu, odottaa hyväksyntää
 
 KUITATTU: 10 tiedehistorian kohtausta × (lähi + kauko) = 20 kuvaa
