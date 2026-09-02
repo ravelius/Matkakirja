@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1438, teksti: 'Live pois, siirtoviivat näkyviin, laivakatko tiheämmäksi' },
   { v: 1437, teksti: 'Korkeuspalojen vienti: putkikatko pois työnkulusta' },
   { v: 1436, teksti: 'Tarkka varjo: 1′-korkeusvarjostus livenä (kokeilu)' },
   { v: 1435, teksti: 'Tilannetaulu: illan erä v1429–v1434 ja poltot' },
