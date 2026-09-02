@@ -217,7 +217,7 @@ export const ASSET_KANSIOT = {
  */
 export const R2_ASSETIT = {
   miniatyyrit: false,
-  elaimet: false,
+  elaimet: true,
   aarteet: false,
   nostot: false,
   ihmeet: false,
