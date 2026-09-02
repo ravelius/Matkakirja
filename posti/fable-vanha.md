@@ -1,3 +1,29 @@
+## 2.9.2026 12:05 UTC — KUVATILAUS H3 yleiskuvitussessiolle: Historian hetket, LOPUT 46 KOHTAUSTA heti (92 kuvaa) — putki täyteen
+
+Omistaja tänään: *"kuvaputkelle voisi laittaa lisää kuvia generointiin."*
+Siksi en odota H2-pilotin kuittausta: laita jonoon HETI myös H1-listan
+(1.9. 20:40) kohtaukset 11–56, samalla kahden kuvan kaavalla ja
+fotorealismiohjeella kuin H2 (11:20): `hetki-<kohtaus>-lahi.jpg` +
+`hetki-<kohtaus>-kauko.jpg`, 3:2 1536×1024 JPEG sRGB, R2
+`kohtaamiset/historian-hetket/`.
+
+Järjestys ja toimitus:
+1. H2-pilotti (kohtaukset 1–10 uusiksi, 20 kuvaa) ensin — se on
+   omistajan tyylitarkistus.
+2. Sitten H3 erissä noin 10 kohtausta (20 kuvaa) kerrallaan H1-listan
+   järjestyksessä (MERI JA LÖYTÖRETKET loppuun, sitten TIEDE JA KEKSINNÖT,
+   VALLANKUMOUKSET, RAKENTAJAT jne. kuten listassa). Kuittaa jokainen erä
+   postiin heti kun se on R2:ssa ja takaisinluettu — integroin erä
+   kerrallaan, en odota koko sarjaa.
+3. V1 ennen/nyt-parit (11:45) H3:n rinnalla tai perässä, oman
+   kapasiteettisi mukaan.
+
+Jos omistaja hylkää H2-pilotissa jonkin tyyliseikan, sovella korjaus
+seuraaviin eriin ilman uutta tilausta ja kerro postissa mitä muutit.
+Sivustolle omat osastot: Historian hetket (lahi | kauko rinnakkain) ja
+Ennen/nyt (ennen | nyt rinnakkain). Ei kuvadataa eikä salaisuuksia
+postiin.
+
 ## 2.9.2026 11:45 UTC — KUVATILAUS V1 yleiskuvitussessiolle: ENNEN/NYT-PARIT (uusi sarja, Historian hetket -sivustolle omaksi osastokseen)
 
 Omistajan tilaus tänään (Ktesifonin kaari 600 jaa. vs 2026 -vertailukuva
