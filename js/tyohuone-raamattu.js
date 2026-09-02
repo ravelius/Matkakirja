@@ -1734,7 +1734,16 @@ export const RAAMATTU = {
           + 'alfakanava) eivat merkitse yksittaisissa kuvissa, ja JPG:n '
           + 'laatu ja variprofiili ovat omistajan hallinnassa jo '
           + 'generointivaiheessa. Vanhat webp-assetit jaavat, kunnes ne '
-          + 'korvataan uusilla JPG-kuvilla.',
+          + 'korvataan uusilla JPG-kuvilla. '
+          + 'KOHTAAMISKUVIEN TILAUSJARJESTYS (omistaja 2.9.2026 ilta: "Ala '
+          + 'pyyda enempaa kohtaamiskuvia ennen kuin olet saanut ne 16 '
+          + 'joista puhuin"): docs/kuvatuotanto-kohtaamiset.md:n taulukon '
+          + '16 kuvaa (12 tyylikoetta + Dublin, Praha, Berliini, Rooma) '
+          + 'toimitetaan sellaisinaan omistajan arviointiin ennen yhtaan '
+          + 'uutta kohtaamiskuvatilausta tai uusintaa. Fable ei tilaa '
+          + 'lisaa kohtaamiskuvia eika hyvaksy uusintoja, ennen kuin nuo '
+          + '16 ovat perilla. Vanhat kuvat eivat vanhene uuden briefin '
+          + 'takia: omistaja paattaa sivustolla, mika kelpaa.',
         'NOSTOJEN SIIRTOVIIVAT (omistaja 1.9.2026 ilta: "otetaan '
           + 'siirtoviivat takaisin karttanostoille (esim. ateena)", v1432; '
           + '2.9.2026: "Lisaa siirto viivat, ne ei viela nay", v1438): '
