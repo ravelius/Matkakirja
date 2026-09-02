@@ -1317,3 +1317,13 @@ virallislähteistä sekä Serdican säilyneistä raunioista. Jokainen ehdokas on
 latauksen jälkeinen tavuntarkistus täsmää sekä kuvitussivuston että yhteisen
 arviointisivuston kautta. Tiedostoja EI ole julkaistu pelin avoimeen R2:een;
 siirto tehdään vasta erillisellä hyväksynnällä.
+
+## 2026-09-02 14:02 UTC — Mac Studio -kuvaputken pysyvä toimintatapa
+
+Omistajan uusi pysyvä ohje: kuvaputki tekee jatkossa automaattisesti kaikki
+Fablelta tulevat kuvatilaukset yksityiseen Matkakirjan kuvat -arviointiin.
+Kuvat julkaistaan pelin R2-poluille ja tarvittavat peliviitteet päivitetään
+heti, mutta vasta omistajan yksityisellä arviointisivustolla tai chatissa
+antaman hyväksynnän jälkeen. Hylättyä tai vielä odottavaa kuvaa ei viedä
+peliin. M1 on valmis yksityisessä arvioinnissa; M2 alkaa seuraavaksi
+kaupungeittain. Tuntikohtainen postilaatikkoseuranta on aktiivinen.
