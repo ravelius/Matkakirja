@@ -294,6 +294,64 @@ käyttäytyy sanasta sanaan kuten ennen:
 kohdistusheitto ja leviäminen, jotka Raamatun tyyliohje nimeää.
 `taitteet: false` ja `vinjetti: null` kaikilla tasoilla.
 
+### `kirkas` — sama resepti vaaleampana (omistaja 2.9.2026)
+
+Omistaja: *"kartta ei olisi ihan noin tumma ja se saisi olla myös vähän
+värikylläisempi… myös raetta ja pehmeyttä saisi olla hieman
+vähemmän."* Uusi resepti `RESEPTIT.kirkas` on `taysi` kuudella
+säädetyllä oliolla — passit, järjestys ja luonne ovat samat.
+
+| parametri | `taysi` | `kirkas` | miksi |
+| --- | --- | --- | --- |
+| `savyt.kayra` | 0,88 / 21 | 0,87 / **36** | koko arkki vaaleammaksi |
+| `savyt.musteHaalennus` | 0,13 | **0,04** | vastapaino: muste ei nouse käyrän mukana |
+| `pastelli.kyllaisyys` | 0,55 | **0,45** | kromasta jää 55 % entisen 45 %:n sijaan (+22 %) |
+| `paperi` rae / nyppy / kuitu / risti | 0,072 / 0,054 / 0,052 / 0,030 | **puolet** | rae puoleen |
+| `leviaminen.voima` | 0,30 | **0,15** | pehmeys puoleen (säde 2 px on paperivakio) |
+| `ikaantyminen` voima / lampo | 0,075 / 0,55 | **0,055 / 0,40** | tahrat kevyemmin, paperi ei kellastu |
+| `reunakertyma.voima` | 0,24 | **0,18** | sama |
+
+Muuttumattomat: `syvyys` (litistys 0,70), `maanraja`, `rosoisuus`,
+`kohdistus`, `pastelli.vaalennus` (0,37 = reliefikontrasti),
+`taitteet: false`, `vinjetti: null`.
+
+**Mitattu z2:n maailmanarkilta** (luminanssikeskiarvo tasaisilta
+aloilta; hajonta = rae tasaisella paperilla):
+
+| | ei patinaa | `taysi` | `kirkas` |
+| --- | --- | --- | --- |
+| paperi (marginaali) | 235,2 | 225,7 | **238,9** |
+| meri (avo-Tyynimeri) | 176,7 | 181,7 | **195,2** |
+| maa (Sahara) | 212,5 | 204,5 | **217,6** |
+| vuori (Tiibet) | 133,5 | 144,2 | **156,3** |
+| paperin rae (σ) | 3,07 | 6,54 | **4,14** |
+| maan kylläisyys (HSL S) | 69,5 % | 42,0 % | **61,4 %** |
+
+**Muste ei nouse mukana** — mitattu z5:n Kreikka-otoksesta (0,5 %:n
+persentiili = viivojen tummin pää, mediaani = koko kuvan taso):
+
+| | `ei` | `taysi` | `kirkas` |
+| --- | --- | --- | --- |
+| muste (0,5 %) | 80 | 98 | **103** |
+| mediaani | 197 | 192 | **205** |
+| viivan ja paperin ero | 117 | 94 | **102** |
+
+Kartta siis kirkastuu 13 sävyä, mutta viivan ja paperin ero KASVAA
+94:stä 102:een: `musteHaalennuksen` lasku 0,13 → 0,04 on tarkalleen se
+vastapaino, jota käyrän nosto vaati.
+
+Patina ei siis juuri tummenna — **pohja on tumma**, ja `taysi` jättää
+sen tummaksi. Kirkastus on siksi aitoa valon lisäystä sävykäyrään, ei
+"vähemmän patinaa". Sivutuotteena laatat myös **pakkautuvat ~5 %
+pienemmiksi** (z5 Kreikka: 560 kt → 534 kt / laatta), koska puolitettu
+rae on juuri sitä kohinaa, jota webp ei voi pakata.
+
+Kirkkaammaksi ei pääse sävykäyrää nostamalla: käyrä on affiini, joten
+meren nosto L=195:stä ylöspäin joko leikkaisi kerman valkoiseksi tai
+litistäisi kontrastin niin, että meri ja maa alkaisivat sulaa yhteen.
+Seuraava askel olisi pohjan oma syvyysramppi (`piirto.js` SYVYYS), ei
+patina.
+
 ### Mikä meni laattoihin ja mikä ei
 
 | osa | laattoihin? | miksi |
