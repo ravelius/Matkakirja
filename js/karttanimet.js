@@ -710,6 +710,20 @@ const MERKIN_VIIVA = {
  */
 const MAASTON_OSUMA_R = 11;
 
+/*
+ * OSUMAN KATTO LAUDAN YKSIKÖISSÄ — JOTTA KOLMIO EI SYÖ KAUPUNKIA.
+ *
+ * Ruudun mitta muuttuu laudan yksiköiksi jakamalla mittakaavalla, joten
+ * kaukonäkymässä 11 CSS-pikselin ympyrä on laudalla valtava: yleiskuvan
+ * porrasta (0,5 px lautayksikköä kohti) vastaava säde olisi 22
+ * lautayksikköä. Lähin maastokolmion ja LAUDAN KAUPUNGIN välinen
+ * etäisyys on mitattuna 17,6 yksikköä (tests/karttamerkit.test.mjs),
+ * joten kattamaton ympyrä kurottaisi juuri siinä yhdessä paikassa
+ * kaupungin laatan päälle ja veisi matkustusnapautuksen. Katto on
+ * selvästi sen alle.
+ */
+export const MAASTON_OSUMA_KATTO = 12;
+
 /**
  * Lauta kiertyy: 12000 yksikköä on koko maapallon ympärys.
  *
@@ -2429,7 +2443,8 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
           class: 'karttamerkki-osuma',
           cx: x.toFixed(2),
           cy: m.y.toFixed(2),
-          r: Math.max(r * 1.4, laudalle(MAASTON_OSUMA_R)).toFixed(2),
+          r: Math.min(Math.max(r * 1.4, laudalle(MAASTON_OSUMA_R)),
+            MAASTON_OSUMA_KATTO).toFixed(2),
         }, isanta);
       }
       continue;

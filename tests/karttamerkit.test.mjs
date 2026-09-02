@@ -35,7 +35,7 @@ import { packById } from '../js/pack.js';
 import { FOKUS_POHJAT } from '../js/packs/fokus-grc.js';
 import { MAAILMANKARTAN_NIMET } from '../js/packs/maailmankartta-nimet.js';
 import { maanPoltetutMerkit } from '../js/fokuskohteet.js';
-import { karttanimienLadonta } from '../js/karttanimet.js';
+import { karttanimienLadonta, MAASTON_OSUMA_KATTO } from '../js/karttanimet.js';
 import { keraaNostot } from '../tools/fokuskartta/nostot.mjs';
 import { kytkeFokusnosto } from '../js/fokusnosto.js';
 import { kytkeSyvennys } from '../js/syvennys.js';
@@ -138,4 +138,29 @@ test('maastotietueessa on se, mitä popup lupaa näyttää', () => {
       assert.ok(t.wiki, `${kansio}/${t.avain}: wiki-otsikko puuttuu`);
     }
   }
+});
+
+test('maastokolmion osuma ei ylety laudan kaupunkiin', () => {
+  /*
+   * KOLMION NAPAUTUSALUE ON KARTAN PÄÄLLIMMÄISESSÄ KERROKSESSA
+   * (js/karttanimet.js MAASTON_OSUMA_KATTO), joten se varjostaa
+   * alleen jäävää kaupungin laattaa ehdottomasti — laatta ei pääse
+   * edes kilpailemaan. Katon on siksi jäätävä selvästi lähimmän
+   * kolmio–kaupunki-parin alle, tai yksi vuori veisi yhden kaupungin
+   * matkustusnapautuksen.
+   */
+  const kaupungit = pack.cities ?? [];
+  let lyhin = Infinity;
+  for (const px of MITTAKAAVAT) {
+    for (const m of karttanimienLadonta(pack, px).merkit) {
+      if (m.laji !== 'vuori') continue;
+      for (const c of kaupungit) {
+        const d = Math.hypot(c.x - m.x, c.y - m.y);
+        if (d < lyhin) lyhin = d;
+      }
+    }
+  }
+  assert.ok(Number.isFinite(lyhin), 'yhtäkään vuorikolmiota ei ladottu — testin oletus vanhentui');
+  assert.ok(MAASTON_OSUMA_KATTO < lyhin,
+    `osumakatto ${MAASTON_OSUMA_KATTO} >= lähin kolmio-kaupunki-etäisyys ${lyhin.toFixed(1)}`);
 });
