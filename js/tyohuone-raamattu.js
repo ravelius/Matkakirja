@@ -3031,8 +3031,11 @@ export const RAAMATTU = {
           + 'nakee ilman oikeuksia komennolla `grep -rhoE '
           + '"secrets\\.[A-Z0-9_]+" .github/workflows/*.yml | sort -u`. '
           + 'Avainta ei pyydeta omistajalta, ennen kuin tuo lista on '
-          + 'katsottu; puuttuva avain pyydetaan secretiin, ei '
-          + 'keskusteluun.',
+          + 'katsottu; vasta jos avainta ei loydy, pyydetaan omistajaa '
+          + 'lisaamaan se secretiin (ei koskaan keskusteluun). Syy '
+          + '(omistaja 2.9.2026): "Naita tulee yllattavan paljon, etta '
+          + 'avain jo on olemassa mutta hommat ei etene" - tyo ei saa '
+          + 'pysahtya odottamaan avainta, joka on jo paikallaan.',
       ],
     },
     {
