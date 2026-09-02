@@ -6663,45 +6663,80 @@ body.flight-active .fact-card {
 .target-cost { fill: var(--mark); font-size: 17px; font-weight: 700; }
 
 /* ---------------------------------------------------------------------------
-   KOHDEMERKKI FOKUSNÄKYMÄSSÄ — PIENI LAATTA JA NIMI (js/ui.js drawTargets)
+   KOHDEMERKKI FOKUSNÄKYMÄSSÄ — PUNAMERKKI RUUDUN MITASSA (js/ui.js
+   drawTargets, fokusKohdeMerkki)
    ---------------------------------------------------------------------------
    Omistajan pelitestitilaus 26.8.2026 (iPad-kuvakaappaus Liiku-tilasta):
    *"kohderenkaat pisteiksi Ateenan tavalla kaikissa tilanteissa"*.
+   Silloin tästä tuli PIENI VAALEA PALLURA, ja mitta oli oikea mutta
+   merkki liian hiljainen.
 
-   Yllä olevat renkaat ovat LAUDAN kieltä: ne on mitoitettu yleiskuvaan,
-   jossa koko maanosa on ruudulla ja kohde saa huutaa. Fokusnäkymässä
-   sama rengas piirtyy hienovaraisen atlaslehden päälle yli 60 pikselin
-   punaisena kehänä. Siksi fokusnäkymässä kohde piirretään samalla
-   kielellä kuin nykyisen kaupungin laatta: PIENI PYÖREÄ LAATTA, sama
-   pergamentti ja sama muste.
+   OMISTAJAN OIKAISU 2.9.2026, sanatarkasti:
+   *"nopanheitossa valittavat pisteet täytyy näkyä selvemmin"*.
+   Kaappaus Kreikan laudalta (heitto 3 Ateenasta): valittavat kohteet
+   olivat pieniä valkoisia ympyröitä reittien varrella ja Sofian
+   suunnassa, ja ne hukkuivat karttaan käytännössä kokonaan. Koska
+   fokusnäkymä on nykyään pelin NORMAALINÄKYMÄ, tämä oli pelin heikoin
+   merkki juuri siinä hetkessä, jossa pelaajan pitää tehdä valinta.
+
+   RATKAISU: SAMA KIELI KUIN LAUDALLA, ERI MITTAKAAVA. Merkki puhuu nyt
+   täsmälleen samaa kieltä kuin yllä oleva .target-ring/.target-halo-pari
+   (omistajan hyväksymä 18.8.2026): vaalea kultalevy pohjaksi,
+   punamullan katkoviivarengas päälle ja hengittävä kultahalo alle.
+   Ainoa ero laudan merkkiin on KOKO — se mitataan ruudulta eikä
+   laudalta, joten atlaslehden päälle ei tule 60 pikselin kehää vaan
+   24 pikselin (askelpiste 15 px, kuten .target-ring.far laudalla).
+   Kohteita on kerralla korkeintaan kourallinen, joten vahva merkki ei
+   tee lehdestä levotonta.
 
    KOKO TULEE JS:STÄ, EI TÄSTÄ. Säde ja nimen kirjasinkoko lasketaan
    zoomista (paivitaFokusKohdeMitat), koska ne ovat ruudun mittoja
-   laudan yksiköissä. Täällä on vain väri ja viivan paksuus.
+   laudan yksiköissä. Täällä on vain väri, viivan paksuus ja liike.
 
-   EI SUODATTIMIA EIKÄ HALOA. Sama iOS-sääntö kuin muullakin kartalla,
-   ja lehden päällä hehku olisi muutenkin väärä ele.
+   VIIVA ON RUUDUN MITASSA (vector-effect: non-scaling-stroke): merkin
+   säde elää kartan mittakaavassa, mutta katkoviiva pysyy yhtä paksuna
+   ja yhtä tiheänä joka zoomilla — muuten kaukaa katsottuna renkaasta
+   tulisi umpinainen ja lähellä kolme paksua viivanpätkää.
+
+   EI SUODATTIMIA. Sama iOS-sääntö kuin muullakin kartalla: laudan
+   renkaan drop-shadow jää tästä pois, ja irrotuksen maastosta hoitaa
+   halo — pelkkä muunnos ja peitto, ei omaa piirtopuskuria.
    --------------------------------------------------------------------------- */
 
 .target-piste {
-  fill: #f7ecd2;
+  /* Kultalevy pohjaksi ja punamullan katkoviiva päälle — sama pari kuin
+     laudan .target-ring, samoilla väreillä. */
+  fill: rgba(246, 210, 122, 0.72);
   stroke: var(--mark);
-  stroke-width: 1.5;
+  stroke-width: 3;
+  stroke-dasharray: 6 4;
   vector-effect: non-scaling-stroke;
   pointer-events: none;
-  /* Sama hento sykähdys kuin muillakin valittavilla kohteilla: pelkkä
-     peitto, ei muotoa eikä suodinta. */
-  animation: kohde-syke 2.6s ease-in-out infinite;
 }
 
-/* Askelpiste ilman kaupunkia: samaa mustetta, kevyempi täyttö. */
-.target-piste.far { fill: rgba(247, 236, 210, 0.72); }
-
-.target:hover .target-piste { fill: #fff6e2; }
-
-@media (prefers-reduced-motion: reduce) {
-  .target-piste { animation: none; opacity: 1; }
+/* Askelpiste ilman kaupunkia: pienempi mutta samaa punamerkkiä — kaikki
+   valittavat löytyvät yhdellä silmäyksellä (vrt. .target-ring.far). */
+.target-piste.far {
+  fill: rgba(246, 210, 122, 0.55);
+  stroke-width: 2.2;
+  stroke-dasharray: 4 3;
 }
+
+.target:hover .target-piste { fill: rgba(238, 196, 105, 0.9); }
+.target:hover .target-piste.far { fill: rgba(238, 196, 105, 0.75); }
+
+/*
+ * Fokusnäkymän halo. Liike, väri ja pysähtyminen raahauksessa tulevat
+ * yllä olevasta .target-halo-säännöstä; täällä on vain viivan paksuus
+ * ruudun mitassa, koska laudan 5 laudanyksikköä olisi 24 pikselin
+ * merkin päällä paksumpi kuin merkki itse.
+ */
+.target-halo.fokus {
+  stroke-width: 3.4;
+  vector-effect: non-scaling-stroke;
+}
+
+.target-halo.fokus.far { stroke-width: 2.4; }
 
 /*
  * KOHTEEN NIMI. Se on kohdekerroksessa eikä kaupunkikerroksessa, joten

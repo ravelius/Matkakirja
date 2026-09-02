@@ -1390,9 +1390,36 @@ const FOKUS_LAATTA_OSUMA_LAUDALLA = 34;
  * NIMI ON ISOMPI KUIN LAATTAAN POLTETTU KAUPUNGINNIMI: valinta saa
  * erottua siitä, mikä on jo painettu karttaan. 13 px on maltillinen
  * ero, ei otsikko.
+ *
+ * VAHVISTUS 2.9.2026 (omistajan pelitesti, sanatarkasti:
+ * *"nopanheitossa valittavat pisteet täytyy näkyä selvemmin"*).
+ * Kreikan laudalta otetussa kaappauksessa (heitto 3 Ateenasta)
+ * valittavat kohteet olivat pieniä valkoisia ympyröitä reittien
+ * varrella — ne hukkuivat karttaan käytännössä kokonaan. Koska
+ * fokusnäkymä on nykyään pelin NORMAALINÄKYMÄ (Raamattu), juuri sen
+ * kohteet olivat pelin heikoin merkki.
+ *
+ * KORJAUS: fokusnäkymän kohde puhuu nyt SAMAA KIELTÄ kuin laudan
+ * yleiskuvan .target-ring/.target-halo — vaalea kultalevy, päälle
+ * punamullan katkoviivarengas ja alle hengittävä kultahalo (sama pari,
+ * jonka omistaja hyväksyi 18.8.2026 laudan puolelle). Ero laudan
+ * merkkiin on vain MITTAKAAVASSA: koko mitataan ruudulta eikä laudalta,
+ * joten atlaslehden päälle ei tule 60 pikselin kehää vaan 24 pikselin.
+ * Askelpiste (ei kaupunkia) saa saman merkin pienempänä, kuten
+ * .target-ring.far laudalla — niin kaikki valittavat löytyvät yhdellä
+ * silmäyksellä eikä pelaajan tarvitse arvata, mikä on napautettava.
  */
-const FOKUS_KOHDE_PX = 18;
+const FOKUS_KOHDE_PX = 24;
 const FOKUS_KOHDE_NIMI_PX = 13;
+/*
+ * Halon laajin aste (sama luku kuin @keyframes kohde-halo -kehyksessä
+ * 50 % ja liikeherkkyyden staattisessa kehässä on suurempi näistä).
+ * Nimen etäisyys lasketaan TÄSTÄ eikä pelkästä merkin säteestä: muuten
+ * hengittävä halo kävisi nimen päällä joka jakson puolivälissä.
+ */
+const FOKUS_KOHDE_HALO_LAAJIN = 1.42;
+/* Nimen ja halon uloimman kehän väliin jäävä rako ruutupikseleinä. */
+const FOKUS_KOHDE_NIMI_RAKO_PX = 8;
 /*
  * KUINKA LEVEÄ NÄKYMÄ SAA OLLA, JOTTA KAUPUNKIEN NIMET NÄKYVÄT
  * (pituusasteina, ks. paivitaKaupunkinimienNakyvyys).
@@ -1404,8 +1431,14 @@ const FOKUS_KOHDE_NIMI_PX = 13;
  * saavat erota, jos omistaja haluaa nimille toisen rajan kuin täyille.
  */
 const KAUPUNKINIMET_NAKYY_ASTETTA = 90;
-/* Askelpiste ilman kaupunkia on pelkkä reitin nasta — puolet merkistä. */
-const FOKUS_KOHDE_PISTE_PX = 10;
+/*
+ * Askelpiste ilman kaupunkia: sama merkki pienempänä (omistaja
+ * 2.9.2026). ENNEN tämä oli puolet merkistä eli 10 px valkoista
+ * palluraa — juuri se, mikä hukkui reitin varrelle. Nyt suhde on sama
+ * kuin laudalla (.target-ring 22 vs. .target-ring.far 14), jolloin
+ * askelpiste erottuu kaupungista mutta ei katoa kartasta.
+ */
+const FOKUS_KOHDE_PISTE_PX = 15;
 /* Napautusalue: sama sormisääntö kuin laatalla, sama katto laudalla. */
 const FOKUS_KOHDE_OSUMA_PX = 48;
 /*
@@ -9131,8 +9164,15 @@ export class UI {
   }
 
   /**
-   * Valittavan kohteen merkki fokusnäkymässä: pieni pyöreä laatta ja
-   * sen yläpuolella kohteen nimi.
+   * Valittavan kohteen merkki fokusnäkymässä: hengittävä kultahalo,
+   * sen päällä kultalevy + punamullan katkoviivarengas, ja ylimpänä
+   * kohteen nimi.
+   *
+   * KOLME ELEMENTTIÄ, YKSI ELE (omistaja 2.9.2026: *"nopanheitossa
+   * valittavat pisteet täytyy näkyä selvemmin"*). Halo piirretään
+   * ENSIN, jotta se jää renkaan alle; se ei ota napautuksia vastaan
+   * (pointer-events: none CSS:ssä), joten osuma-alue on yhä sitä ennen
+   * ladottu .target-hit.
    *
    * MITAT ANNETAAN LAUDAN YKSIKÖISSÄ MUTTA TARKOITETAAN RUUDULLE.
    * Tässä piirretään karkea alkuarvo, ja paivitaFokusKohdeMitat asettaa
@@ -9142,10 +9182,18 @@ export class UI {
    * merkistä voidaan laskea uudelleen joka zoomilla.
    *
    * NIMETÖN KOHDE on askelpiste reitin varrella (nopanheiton väliruutu),
-   * ei kaupunki: se saa pienemmän pisteen eikä nimeä lainkaan.
+   * ei kaupunki: se saa saman merkin pienempänä (.far, kuten laudan
+   * .target-ring.far) eikä nimeä lainkaan.
    */
   fokusKohdeMerkki(g, x, y, city = null, etuliite = '') {
     const px = city ? FOKUS_KOHDE_PX : FOKUS_KOHDE_PISTE_PX;
+    const halo = el('circle', {
+      cx: x,
+      cy: y,
+      r: px / 2,
+      class: city ? 'target-halo fokus' : 'target-halo fokus far',
+    }, g);
+    halo.dataset.px = String(px);
     const piste = el('circle', {
       cx: x,
       cy: y,
@@ -9166,17 +9214,24 @@ export class UI {
   }
 
   /**
-   * Kohdemerkkien koko RUUDULLA: pisteet, nimet ja napautusalueet.
+   * Kohdemerkkien koko RUUDULLA: halot, renkaat, nimet ja
+   * napautusalueet.
    *
    * Kutsutaan samoista kahdesta paikasta kuin nykyisen kaupungin laatan
    * mitat (paivitaFokusPallot joka piirrossa, paivitaMaastonimet kun
    * näkymä on asettunut), jotta merkki ei kasva eikä kutistu zoomin
    * mukana.
+   *
+   * HALO MITOITETAAN SAMASTA LUVUSTA KUIN RENGAS eikä omastaan: CSS
+   * laajentaa sitä muunnoksella (scale 1,14…1,42), joten sen oma säde
+   * on täsmälleen renkaan säde. Jos halo jäisi tästä silmukasta pois,
+   * se jähmettyisi piirtohetken karkeaan alkuarvoon ja karkaisi
+   * renkaastaan heti ensimmäisellä zoomilla.
    */
   paivitaFokusKohdeMitat() {
     if (!this.targetLayer || !this.fokusKohdeMerkit()) return;
     const osat = this.targetLayer.querySelectorAll(
-      '.target-piste, .target-nimi, .target-hit',
+      '.target-piste, .target-halo, .target-nimi, .target-hit',
     );
     if (!osat.length) return;
     const skaala = this.nakyvaAlue()?.skaala;
@@ -9186,15 +9241,22 @@ export class UI {
     // samalla lailla") — sama vakio kuin merkeillä ja nimilapuilla.
     const kerroin = this.fokusMerkkiSkaala();
     for (const osa of osat) {
-      if (osa.classList.contains('target-piste')) {
+      if (osa.classList.contains('target-piste')
+        || osa.classList.contains('target-halo')) {
         const px = Number(osa.dataset.px) || FOKUS_KOHDE_PX;
         osa.setAttribute('r', ((px / 2) * kerroin).toFixed(2));
       } else if (osa.classList.contains('target-nimi')) {
         osa.setAttribute('font-size', (FOKUS_KOHDE_NIMI_PX * kerroin).toFixed(2));
         const y = Number(osa.dataset.ky);
         if (Number.isFinite(y)) {
-          // Nimi merkin yläpuolelle: puolikas merkkiä ja pieni rako.
-          osa.setAttribute('y', (y - (FOKUS_KOHDE_PX / 2 + 6) * kerroin).toFixed(2));
+          /*
+           * Nimi HALON yläpuolelle, ei renkaan: hengittävän kehän
+           * laajin aste on 1,42 × säde, ja sitä pienemmällä etäisyydellä
+           * halo kävisi nimen päällä joka jakson puolivälissä.
+           */
+          const yla = (FOKUS_KOHDE_PX / 2) * FOKUS_KOHDE_HALO_LAAJIN
+            + FOKUS_KOHDE_NIMI_RAKO_PX;
+          osa.setAttribute('y', (y - yla * kerroin).toFixed(2));
         }
       } else {
         /*
