@@ -252,6 +252,62 @@ export function nostoladontaKattoPorras(porras, ruutuPx) {
     / (NOSTOLADONTA_NIMIO_KOKO * ruutuPx));
 }
 
+/* ====== KATTO KOSKEE KOKO PIIRROSTA, EI VAIN MERKIN KOKOA ==========
+ *
+ * OMISTAJA 2.9.2026, sanatarkasti: *"symbolit heittelee muodoiltaa ja
+ * tekstejä puuttuu"* (Bulgaria, mittajana 50 km) — ja saman päivän
+ * toinen kaappaus Sofiasta: siirtoviivat *valtavina*, nostosymbolit
+ * pikkuruisina ja niiden nimet 60–100 pikselin päässä symbolistaan.
+ *
+ * ── JUURISYY, MITATTUNA ───────────────────────────────────────────
+ *
+ * Nosto on YKSI PIIRROS — symboli, nimiö, sarakkeen siirtymä
+ * kaupungista ja siirtoviiva niiden välissä. Ruutukatto
+ * (nostoladontaKattoPorras) kutisti niistä vain YHDEN: merkin oman
+ * skaalan. Kaikki muu jäi kattamattomaan ladontamittaan
+ * (NOSTOLADONTA_S) eli karttavakioksi, joka kasvaa rajatta
+ * lähennettäessä. Ero on täsmälleen `skaala x NOSTOLADONTA_S`, ja
+ * mitattuna se on syvässä zoomissa yli viisinkertainen:
+ *
+ *   Sofia, iPad 834 x 1112 dpr 2, mittajana 50 km, skaala 9,24 px/yks.
+ *     nostosymboli (katossa)          11,3 px
+ *     siirtoviivan leveys             8,87 px   (tilattu 1,6)
+ *     siirtoviivan katko / väli   16,6 / 11,1   (tilattu 3 / 2)
+ *     sarakkeen siirtymä             ~86 px     (tilattu ~23)
+ *     nimiön rako merkin reunaan     ~34 px     (merkin oma säde 5,6)
+ *
+ * Silmä lukee juuri tämän: merkki on pieni, sen nimi on kaukana, ja
+ * niiden välissä on sormenpaksuinen katkoviiva.
+ *
+ * ── SÄÄNTÖ ────────────────────────────────────────────────────────
+ *
+ * Katto on SUHDE, jolla koko piirros kutistetaan sen ANKKURIN ympäri
+ * (kaupungin piste sarakkeessa, merkin oma datapiste muualla).
+ * Ankkuri pysyy paikallaan, ja siirtymä, viiva, symboli ja nimiö
+ * kertautuvat samalla luvulla — piirros pysyy kasassa joka zoomilla.
+ *
+ * LADONTA EI MUUTU MILLIÄKÄÄN. Merkkien paikat (kasaus, erottelusiirto,
+ * nimiöväistö) lasketaan yhä kattamattomalla NOSTOLADONTA_S:llä, ja
+ * juuri ne menevät tiivisteeseen ja laattaan — ks. edellisen lohkon
+ * "KATTO EI KOSKE LADONTAA". Muutos on PIIRTOSÄÄNTÖ, ja siksi
+ * NOSTOLADONTA_SAANTO nousee (v7).
+ *
+ * SAMA KAAVA MOLEMMILLE: peli antaa näkymän oman mittakaavan,
+ * laattageneraattori tason tiheyden jaettuna NOSTOLADONTA_POLTON_
+ * TIHEYDELLÄ. Tason omalla tarkkuudella katsottuna poltettu ja elävä
+ * piirros ovat siis edelleen sama kuva.
+ *
+ * @param {number} porras  lautayksikköä KIRJASTON yksikköä kohti
+ * @param {number} ruutuPx CSS-pikseliä lautayksikköä kohti
+ * @returns {number} 0 < suhde <= 1 — se luku, jolla koko piirros
+ *   (siirtymä, viiva, symboli, nimiö) kerrotaan ankkurinsa ympäri
+ */
+export function nostoladontaKattoSuhde(porras, ruutuPx) {
+  if (!(porras > 0)) return 1;
+  const katettu = nostoladontaKattoPorras(porras, ruutuPx);
+  return katettu > 0 ? katettu / porras : 1;
+}
+
 /* ============ TIIVISTE: MUUTOS ON HUOMATTAVA =======================
  *
  * Raamattu 31.8.2026: luettelo kantaa tiedon siitä, MITKÄ nostot
@@ -374,8 +430,19 @@ export function nostoladontaKattoPorras(porras, ruutuPx) {
  * yhä samaa näkymätöntä viivaa — nyt luettelo ei kelpaa lainkaan,
  * peli piirtää nostot elävinä uusilla mitoilla, ja seuraava
  * nostotason poltto tekee niistä taas laattaa.
+ *
+ * v7 (omistaja 2.9.2026, sanatarkasti: *"symbolit heittelee muodoiltaa
+ * ja tekstejä puuttuu"*): ruutukatto koskee nyt KOKO piirrosta eikä
+ * vain merkin skaalaa — sarakkeen siirtymä, siirtoviiva ja nimiön rako
+ * kutistuvat merkin mukana ankkurinsa ympäri (nostoladontaKattoSuhde
+ * yllä). Merkin PAIKKA laudalla — se, mikä tiivisteessä on — ei muutu
+ * tavuakaan, mutta piirros on toinen: v6-laatoissa merkki on
+ * kaukaisemmassa kohdassa kuin peli sen nyt piirtää ja viiva on
+ * paksumpi. Sama syy kuin v5:ssä ja v6:ssa — piirtosäännön muutos ei
+ * näy yhdessäkään merkin kentässä, joten ilman tätä nostoa luettelo
+ * väittäisi vanhoja laattoja tuoreiksi.
  */
-export const NOSTOLADONTA_SAANTO = 'v6';
+export const NOSTOLADONTA_SAANTO = 'v7';
 
 export function nostoladontaTiiviste(merkki) {
   const osat = [

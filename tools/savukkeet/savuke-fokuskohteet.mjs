@@ -777,8 +777,24 @@ vaadi('saman kohteen molemmat kopiot ovat samanlaisia',
   kopioEro.length === 0, kopioEro.join(', '));
 vaadi('Olympoksen nimiö on kohteen oma nimi',
   taksonomia.vuori?.nimio === 'Ólympos', JSON.stringify(taksonomia.vuori?.nimio));
-vaadi('kaupunkimerkki jättää nimiön lehden painojäljelle',
-  taksonomia.kaupunki?.nimio === '', JSON.stringify(taksonomia.kaupunki?.nimio));
+/*
+ * KAUPUNKIMERKKI SAA NYT NIMIÖNSÄ (2.9.2026, omistaja: *"symbolit
+ * heittelee muodoiltaa ja tekstejä puuttuu"*).
+ *
+ * Väite oli päinvastainen v1218:sta asti: kaupunkikohteen nimiö
+ * vaikeni, koska *"lehti painaa nimen itse"*. Perustelu kuoli, kun
+ * maakohtaiset fokuslehdet purettiin ja laattapyramidista tuli pelin
+ * ainoa karttapohja (js/laattapyramidi.js johdanto) — pyramidiin ei
+ * polteta nimiä lainkaan. Kartalle jäi 27 kaupunkimerkkiä, joiden nimeä
+ * ei kirjoittanut kukaan; Patras oli yksi niistä.
+ *
+ * VAIENNUS PÄTEE YHÄ LAUDAN OMAAN KAUPUNKIIN (js/fokuskohteet.js
+ * nimiJoKartalla): sen nimen latoo nimikerros, ja kaksi nimeä samassa
+ * pisteessä olisi todellinen kaksoisnimi. Ateena on se tapaus, ja sitä
+ * koe 1a4 alempana vartioi.
+ */
+vaadi('kaupunkimerkki saa nimiönsä, koska lehteä ei enää ole',
+  Boolean(taksonomia.kaupunki?.nimio), JSON.stringify(taksonomia.kaupunki?.nimio));
 
 /* --- 1a2: nimiöt eivät limity naapureihin (omistajan siistintätilaus)
  *
@@ -912,15 +928,19 @@ vaadi('väljällä alueella jokainen merkki saa nimiön',
   valjyys.valjia > 0 && valjyys.mykat.length === 0,
   `${valjyys.valjia} väljää, mykkiä: ${valjyys.mykat.join(', ')}`);
 
-/* --- 1a4: NIMIÖ JÄÄ POIS VAIN SILLE, JONKA LEHTI ON POLTTANUT ------
+/* --- 1a4: NIMIÖ JÄÄ POIS VAIN SILTÄ, JONKA NIMEN JOKU MUU KIRJOITTAA
  *
  * Omistajan kaappaus v1217:stä, jatko. Ennen nimiö vaiennettiin
- * kaikilta `tyyppi: 'kaupunki'` -kohteilta, mutta perustelu — lehti
- * painaa nimen itse — pätee vain niihin neljään, jotka Kreikan lehteen
- * on poltettu (tools/fokuskartta/maat.mjs GRC.kaupungit). Marathon,
- * Kalamata, Ermoupoli ja Iraklion olivat kartalla merkkejä ilman
- * yhtään sanaa. Ehto on nyt data (js/fokuskohteet.js kohteenNimio),
- * ja tämä koe pitää molemmat suunnat kiinni.
+ * kaikilta `tyyppi: 'kaupunki'` -kohteilta, ja Marathon, Kalamata,
+ * Ermoupoli ja Iraklion olivat kartalla merkkejä ilman yhtään sanaa.
+ * Ehto siirtyi dataan (js/fokuskohteet.js kohteenNimio).
+ *
+ * EHDON TOINEN PUOLISKO POISTUI 2.9.2026 (omistaja: *"tekstejä
+ * puuttuu"*). Vaiennus koski siihen asti myös lehteen poltettuja
+ * kaupunkeja — Thessaloniki, Pátra, Ioánnina, Náfplio — mutta lehtiä ei
+ * enää ole, joten nekin olivat merkkejä ilman sanaa. Nyt vaikenee vain
+ * se, jonka nimen NIMIKERROS oikeasti latoo: laudan oma kaupunki
+ * (Ateena). Koe pitää molemmat suunnat kiinni.
  */
 /*
  * MITTA LUETAAN LADONNASTA EIKÄ RASTERISTA (31.8.2026). Rasterin
@@ -938,16 +958,25 @@ const nimioLahteet = await sivu.evaluate(() => {
     .map((r) => [r.id, r.nimi ?? '']));
   const lue = (id) => rivit.get(id) ?? null;
   return {
-    poltetut: ['thessaloniki', 'patras', 'ioannina', 'nafplio'].map(lue),
+    entisetPoltetut: ['thessaloniki', 'patras', 'ioannina', 'nafplio'].map(lue),
     pelilta: ['marathon', 'kalamata', 'ermoupoli', 'iraklion'].map(lue),
+    lautakaupunki: lue('ateena'),
   };
 });
-vaadi('lehteen poltettu kaupunki jättää nimiön painojäljelle',
-  nimioLahteet.poltetut.every((t) => t === ''),
-  JSON.stringify(nimioLahteet.poltetut));
+vaadi('entinen lehtinimi saa nyt nimiönsä pelistä',
+  nimioLahteet.entisetPoltetut.every((t) => t && t.length > 0),
+  JSON.stringify(nimioLahteet.entisetPoltetut));
 vaadi('nimeämätön kaupunki saa nimiönsä pelistä',
   nimioLahteet.pelilta.every((t) => t && t.length > 0),
   JSON.stringify(nimioLahteet.pelilta));
+/*
+ * LAUDAN OMA KAUPUNKI VAIKENEE YHÄ: sen nimen latoo nimikerros
+ * (js/karttanimet.js), ja merkin oma nimiö olisi sama nimi kahdesti
+ * vierekkäin — v1366:n ja v1369:n kaksoisnimivaara.
+ */
+vaadi('laudan oma kaupunki jättää nimiön nimikerrokselle',
+  nimioLahteet.lautakaupunki === '' || nimioLahteet.lautakaupunki === null,
+  JSON.stringify(nimioLahteet.lautakaupunki));
 /*
  * Silmäsymboleita EI enää odoteta (26.8.2026: Akropolis-museon
  * GA&C-kierrokset poistettiin, koska upotus ei latautunut iPadilla —

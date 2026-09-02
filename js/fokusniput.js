@@ -663,7 +663,7 @@ export function nippuAvaaKaupunki(ui) {
  * riviä toisen kerroksen merkki jäisi väärään paikkaan siihen asti,
  * kunnes sen oma asemointi sattuu ajautumaan.
  */
-function nippuAseta(ryhma, nippu, vasemmalle, s) {
+function nippuAseta(ryhma, nippu, vasemmalle, s, suhde = 1) {
   const vanha = ryhma.nippu ?? null;
   const sama = (vanha === nippu || (vanha && nippu
     && Math.abs(vanha.x - nippu.x) < 0.01 && Math.abs(vanha.y - nippu.y) < 0.01))
@@ -679,10 +679,22 @@ function nippuAseta(ryhma, nippu, vasemmalle, s) {
   ryhma.nippuPuoli = nippu ? Boolean(vasemmalle) : false;
   if (sama) return;
   NIPPU_VERSIO += 1;
-  const x = nippu ? nippu.x : ryhma.x + (ryhma.sx ?? 0);
-  const y = nippu ? nippu.y : ryhma.y + (ryhma.sy ?? 0);
+  /*
+   * PAIKKA KIRJOITETAAN PIIRTOMITASSA (2.9.2026, ruutukatto koskee koko
+   * piirrosta — js/nostoladonta.js nostoladontaKattoSuhde). Ladottu
+   * paikka jää tietueeseen (ryhma.nippu) tiivisteelle ja poltolle;
+   * ruudulle menee sama paikka ankkurinsa ympäri kutistettuna, jotta
+   * merkki, sen nimi ja sen siirtoviiva pysyvät yhdessä myös syvässä
+   * zoomissa. Suhde 1 (ei kattoa) antaa täsmälleen entisen rivin.
+   */
+  const lx = nippu ? nippu.x : ryhma.x + (ryhma.sx ?? 0);
+  const ly = nippu ? nippu.y : ryhma.y + (ryhma.sy ?? 0);
+  const ax = nippu ? (nippu.cx ?? ryhma.x) : ryhma.x;
+  const ay = nippu ? (nippu.cy ?? ryhma.y) : ryhma.y;
+  const x = ax + (lx - ax) * suhde;
+  const y = ay + (ly - ay) * suhde;
   ryhma.g?.setAttribute?.('transform',
-    `translate(${x.toFixed(2)} ${y.toFixed(2)}) scale(${s.toFixed(4)})`);
+    `translate(${x.toFixed(2)} ${y.toFixed(2)}) scale(${(s * suhde).toFixed(4)})`);
 }
 
 /* ============ SIIRTOVIIVA (sääntö 6) ==============================
@@ -725,6 +737,33 @@ function nippuViivakerros(ui) {
     ui.nippuViivaKerros = kerros;
   }
   return ui.nippuViivaKerros;
+}
+
+/**
+ * SAMA JANA RUUTUKATON KUTISTAMANA (omistaja 2.9.2026: *"symbolit
+ * heittelee muodoiltaa"*; ks. js/nostoladonta.js nostoladontaKattoSuhde).
+ *
+ * Viiva on merkin jatke, joten se kutistuu merkin mukana — ja koska
+ * merkki itse siirtyy samalla suhteella kohti ankkuriaan, viivan on
+ * lyhennyttävä täsmälleen saman verran tai se jäisi osoittamaan
+ * tyhjään. Skaalaus tehdään ANKKURIN (x2, y2) ympäri, koska ankkuri on
+ * kartan piste eikä piirroksen osa: se pysyy paikallaan.
+ *
+ * Kynnys (NIPPU_VIIVA_MIN) on jo ratkaistu kattamattomassa mitassa —
+ * suhde on sama luku joka päässä, joten se ei voi muuttaa päätöstä
+ * siitä, piirretäänkö viiva lainkaan. Siksi tämä on puhdas jälkiskaalaus
+ * eikä toinen laskenta.
+ */
+function nippuJananPiirto(jana, suhde) {
+  if (!jana || !(suhde > 0) || suhde === 1) return jana;
+  return {
+    ...jana,
+    x1: jana.x2 + (jana.x1 - jana.x2) * suhde,
+    y1: jana.y2 + (jana.y1 - jana.y2) * suhde,
+    leveys: jana.leveys * suhde,
+    katko: jana.katko * suhde,
+    vali: jana.vali * suhde,
+  };
 }
 
 /**
@@ -784,14 +823,16 @@ export function nippuViivanJana(v, s) {
  *
  * @param {object} ui
  * @param {Array} viivat  { cx, cy, x, y, sade } laudan koordinaateissa
- * @param {number} s      merkkien vakioskaala.
+ * @param {number} s      merkkien vakioskaala (LADONTA).
+ * @param {number} suhde  ruutukaton kutistus (PIIRTO) — ks.
+ *   nippuJananPiirto. Ladottu jana jää paluuarvoon sellaisenaan.
  */
-function nippuPiirraViivat(ui, viivat, s) {
+function nippuPiirraViivat(ui, viivat, s, suhde = 1) {
   const kerros = nippuViivakerros(ui);
   if (!kerros) return;
   let i = 0;
   for (const v of viivat) {
-    const jana = nippuViivanJana(v, s);
+    const jana = nippuJananPiirto(nippuViivanJana(v, s), suhde);
     if (!jana) continue;
     const solmu = kerros.childNodes[i] ?? el('line', {
       class: 'nippuviiva',
@@ -873,13 +914,19 @@ function nippuPiirraViivat(ui, viivat, s) {
  * Työ on muutaman merkin lajittelu ilman yhtäkään mittausta, joten
  * passin voi ajaa huoletta joka kutsulla.
  *
+ * @param {number} suhde RUUTUKATON KUTISTUS, joka koskee vain PIIRTOA
+ *   (js/nostoladonta.js nostoladontaKattoSuhde). Ladonta — kasaus,
+ *   sarakkeen siirtymä, viivan päät paluuarvossa — lasketaan yhä
+ *   kattamattomalla `s`:llä, koska juuri se menee tiivisteeseen ja
+ *   laattaan. Laattageneraattori jättää tämän pois (suhde 1) ja
+ *   kutistaa itse tason omalla tiheydellä.
  * @returns {Array} siirtoviivat laudan koordinaateissa ({ cx, cy, x, y,
  *   sade, id, ryhma }) — sama lista, joka juuri piirrettiin. Paluuarvo
  *   palasi 1.9.2026 viivojen mukana: laattageneraattori lukee sen
  *   (js/nostoladonta.js, tools/fokuskartta/nostot.mjs), koska poltettu
  *   siirtoviiva ei saa tulla toisesta laskennasta kuin selaimen oma.
  */
-export function niputaFokusmerkit(ui, s, sRuutu = s) {
+export function niputaFokusmerkit(ui, s, sRuutu = s, suhde = 1) {
   if (!ui || !(s > 0)) return [];
   /*
    * SARAKKEET OVAT LEHDEN MITASSA (omistaja 31.8.2026, Raamattu
@@ -897,13 +944,13 @@ export function niputaFokusmerkit(ui, s, sRuutu = s) {
    * varhaiset paluut käyvät siis piirron kautta.
    */
   if (!merkit.length) {
-    nippuPiirraViivat(ui, [], s);
+    nippuPiirraViivat(ui, [], s, suhde);
     return [];
   }
   const kaupungit = nippuKaupungit(ui);
   if (!kaupungit.length) {
-    for (const { ryhma } of merkit) nippuAseta(ryhma, null, false, s);
-    nippuPiirraViivat(ui, [], s);
+    for (const { ryhma } of merkit) nippuAseta(ryhma, null, false, s, suhde);
+    nippuPiirraViivat(ui, [], s, suhde);
     return [];
   }
   /*
@@ -938,7 +985,7 @@ export function niputaFokusmerkit(ui, s, sRuutu = s) {
         if (e < etaisyys) { etaisyys = e; paras = { cx, cy: kaupunki.y }; }
       }
     }
-    if (!paras) { nippuAseta(merkki.ryhma, null, false, s); return; }
+    if (!paras) { nippuAseta(merkki.ryhma, null, false, s, suhde); return; }
     const avain = `${paras.cx}|${paras.cy}`;
     const jold = niput.get(avain) ?? { cx: paras.cx, cy: paras.cy, jono: [] };
     jold.jono.push({ merkki, jono });
@@ -976,7 +1023,16 @@ export function niputaFokusmerkit(ui, s, sRuutu = s) {
       const porras = Math.floor(indeksi / 2);
       const x = cx + (vasemmalle ? -dx : dx);
       const y = riviY(porras);
-      nippuAseta(merkki.ryhma, { x, y }, vasemmalle, s);
+      /*
+       * ANKKURI KULKEE TIETUEESSA (2.9.2026): sarakkeen siirtymä on osa
+       * noston PIIRROSTA, ja ruutukatto kutistaa sen kaupungin pisteen
+       * ympäri (js/nostoladonta.js nostoladontaKattoSuhde). Ilman
+       * ankkuria piirtopassi ei tietäisi, minkä pisteen ympäri kutistaa
+       * — ja merkki lipuisi kartalla.
+       */
+      nippuAseta(merkki.ryhma, {
+        x, y, cx, cy,
+      }, vasemmalle, s, suhde);
       indeksi += 1;
       /*
        * SIIRTOVIIVA SAMASTA LASKENNASTA (ks. sääntö 6). Piilotetun
@@ -1016,6 +1072,6 @@ export function niputaFokusmerkit(ui, s, sRuutu = s) {
   const piirrettavat = ui.nostoPoltettu
     ? viivat.filter((v) => !ui.nostoPoltettu(v.ryhma))
     : viivat;
-  nippuPiirraViivat(ui, piirrettavat, s);
+  nippuPiirraViivat(ui, piirrettavat, s, suhde);
   return viivat;
 }
