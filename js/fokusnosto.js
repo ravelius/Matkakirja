@@ -1042,8 +1042,14 @@ export function suljeNostonKortti(ui) {
  * palvelimelle. `osoite` on repon oma generoitu havainnekuva
  * (assets/kartat/nostot/), jolla ei ole varareittiä: se joko on tai ei
  * ole, joten uusinta vain jättäisi kortille tyhjän kehyksen.
+ *
+ * VIETY ULOS 2.9.2026 (skandaalikortin kuvagalleria): skandaalilla on
+ * kuvalista, jossa on sekä havainnekuva (`osoite`) että Commons-kuvia
+ * (`tiedosto`), ja galleria vaihtaa kuvaa samaan img-elementtiin. Sama
+ * kahden lähteen sääntö kuuluu sinnekin — kopio olisi kaksi paikkaa,
+ * joissa varareitti voi erota.
  */
-function asetaNostonKuva(img, kuva, leveys, onVirhe) {
+export function asetaNostonKuva(img, kuva, leveys, onVirhe) {
   if (kuva.osoite) {
     img.addEventListener('error', () => onVirhe(), { once: true });
     img.src = kuva.osoite;

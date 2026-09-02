@@ -21,15 +21,21 @@
  *   1. AVAIN ON MAA, EI KAUPUNKI. Syvennystarinat kuuluvat fokus-
  *      kaupungeilleen; skandaalit kuuluvat maalleen, joten lähde lukee
  *      SKANDAALIT[iso]-listan suoraan eikä kierrä kaupunkien kautta.
- *   2. KUVA ON VALINNAINEN. Erä 30.8.2026 tehtiin kuvattomana, ja
- *      kuvaton kortti piirtyy yhä ennallaan: ylärivi, otsikko,
- *      paikka–vuosi-rivi, teksti ja minivisa. Kun skandaalilla on
- *      `kuva`-kenttä (`{ osoite | tiedosto, selite, lahde }`), se
- *      latoutuu otsikon alle täsmälleen samalla apurilla ja samalla
- *      kentällä kuin syvennystarinassa (js/syvennys.js
- *      piirraSyvennysSisus → js/fokusnosto.js piirraNostonKuva) —
- *      sama kehys, sama suurennos ja sama lähderivi, joten
- *      havainnekuvan selite tulee mukana ilman omaa koodia.
+ *   2. KUVIA ON LISTA, JA LISTA ON VALINNAINEN. Erä 30.8.2026 tehtiin
+ *      kuvattomana, ja kuvaton kortti piirtyy yhä ennallaan: ylärivi,
+ *      otsikko, paikka–vuosi-rivi, teksti ja minivisa. Kuvat asuvat
+ *      `kuvat`-listassa (`[{ osoite | tiedosto, selite, lahde }]`),
+ *      jonka ensimmäinen on Matkakirjan oma havainnekuva ja loput
+ *      aikalaiskuvia Commonsista (omistajan linjaus 2.9.2026:
+ *      *"ensimmäisenä kuvana generoitu parempilaatuinen kuva, ja jos
+ *      valokuvia/aikalaiskuvia on, ne liitetään mukaan"*). Yhden kuvan
+ *      skandaali piirtyy samalla apurilla kuin syvennystarina
+ *      (js/fokusnosto.js piirraNostonKuva), useamman kuvan skandaali
+ *      saa selailunuolet ja laskurin kuten historian hetki
+ *      (js/historian-hetket.js) ja lehden nostogalleria (js/ui.js
+ *      kaariNostoGalleria). Vanha yhden kuvan `kuva`-kenttä kelpaa
+ *      yhä: se luetaan yhden alkion listana (skandaalinKuvat), joten
+ *      erän 1.9.2026 kolme Wienin havainnekuvaa toimivat ennallaan.
  *   3. MINITEHTÄVÄAVAIN on skandaali:<id> (kirjanpito game.js
  *      actionMinitehtava, koko avain <lauta>:<maa>:skandaali:<id>),
  *      joten sama visa ei voi maksaa kahdesti. Palkkio on sama
@@ -48,12 +54,18 @@ import {
 } from './ui-apurit.js';
 import { natiiviVastaus } from './natiivi.js';
 import { SKANDAALIT } from './packs/skandaalit.js';
-import { rekisteroiLisakohteet, suljeKohdeSuurennos } from './fokuskohteet.js';
+import {
+  avaaKohdeSuurennos, rekisteroiLisakohteet, suljeKohdeSuurennos,
+} from './fokuskohteet.js';
 import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
-import { piirraNostonKuva } from './fokusnosto.js';
+import { asetaNostonKuva, piirraNostonKuva } from './fokusnosto.js';
+import { taytaLahderivi } from './tekijakortti.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { sfx } from './sound.js';
+
+/** Kortin kuvan leveys (sama kuin syvennystarinalla). */
+const SKANDAALI_KUVA_PX = 800;
 
 /*
  * KAKSI TYYLITIEDOSTOA, MOLEMMAT LAINASSA — sama järjestely ja sama
@@ -220,19 +232,153 @@ export function avaaSkandaali(ui, iso, skandaali) {
 function piirraSkandaalinSisus(ui, sailio, iso, skandaali) {
   skandaaliLataaTyyli();
   sailio.appendChild(html('h3', 'fokusnosto-kortti-otsikko', skandaali.otsikko));
-  // Kuva on valinnainen (ks. moduulin otsake): sama kutsu ja sama
-  // leveys kuin syvennystarinalla, oma zoomiavain kuten sielläkin.
-  if (skandaali.kuva) {
-    piirraNostonKuva(ui, sailio, skandaali.kuva, 'fokusnosto-kuva', 800, 'skandaaliZoom');
-  }
+  // Paikka ja vuosi otsikon alle (ks. funktion otsake). Metarivi on
+  // ennen kuvaa, jotta kuvan alla oleva kuvateksti ja lähderivi eivät
+  // jää kahden pikkurivin väliin.
   const meta = [skandaali.paikka, skandaali.vuosi].filter(Boolean).join(' · ');
   if (meta) sailio.appendChild(html('p', 'fokusnosto-lahde', meta));
+  piirraSkandaalinKuvat(ui, sailio, skandaali);
   const teksti = html('div', 'fokusnosto-teksti');
+  /*
+   * INGRESSI ENSIN, SITTEN JUTTU (omistajan havainto 2.9.2026: kortti
+   * "näyttää tyngältä, puuttuu tekstiä"). `kortti` on Fablen hyväksymä
+   * 3–4 virkkeen ingressi ja `teksti` sen alle latoutuva juttu, joten
+   * ingressi erottuu omalla luokallaan ja juttu jakautuu kappaleisiin
+   * kirjoittajan omista tyhjistä riveistä (ui-apurit jaaKappaleiksi).
+   * Ilman `teksti`-kenttää kortti latoo pelkän ingressin kuten ennen.
+   */
   for (const kappale of jaaKappaleiksi(skandaali.kortti ?? '')) {
+    teksti.appendChild(html('p', 'skandaali-ingressi', kappale));
+  }
+  for (const kappale of jaaKappaleiksi(skandaali.teksti ?? '')) {
     teksti.appendChild(html('p', '', kappale));
   }
   sailio.appendChild(teksti);
   piirraSkandaaliVisa(ui, sailio, iso, skandaali);
+}
+
+/**
+ * KORTIN KUVAT YHTENÄ LISTANA.
+ *
+ * Uusi `kuvat` voittaa, vanha yhden kuvan `kuva` kelpaa yhä (ks.
+ * moduulin otsake, kohta 2). Kuvaton alkio karsitaan tässä, jotta
+ * galleria ei koskaan näytä laskurissa kuvaa, jota ei ole.
+ *
+ * @param {object} skandaali skandaalin tietue
+ * @returns {object[]} kuvat piirtojärjestyksessä
+ */
+export function skandaalinKuvat(skandaali) {
+  const lista = Array.isArray(skandaali?.kuvat) ? skandaali.kuvat : [];
+  if (lista.length) return lista.filter((kuva) => kuva?.osoite || kuva?.tiedosto);
+  return skandaali?.kuva ? [skandaali.kuva] : [];
+}
+
+/**
+ * KUVAT KORTTIIN: yksi kuva entiseen tapaan, useampi selailunuolin.
+ *
+ * Yhden kuvan reitti on tarkoituksella muuttumaton — se on sama kutsu,
+ * sama leveys ja sama zoomiavain kuin syvennystarinalla (js/syvennys.js
+ * piirraSyvennysSisus), joten Wienin kolme havainnekuvaa piirtyvät
+ * täsmälleen kuten ennen. Galleria on oma haaransa ja seuraa historian
+ * hetken mallia (js/historian-hetket.js piirraHetkenKuvat): pääkuva
+ * isona, nuolet ja laskuri kuvan päällä, kuvateksti ja lähderivi
+ * vaihtuvat kuvan mukana.
+ */
+function piirraSkandaalinKuvat(ui, sailio, skandaali) {
+  const kuvat = skandaalinKuvat(skandaali);
+  if (!kuvat.length) return;
+  if (kuvat.length === 1) {
+    piirraNostonKuva(ui, sailio, kuvat[0], 'fokusnosto-kuva', SKANDAALI_KUVA_PX, 'skandaaliZoom');
+    return;
+  }
+  piirraSkandaalinGalleria(ui, sailio, skandaali, kuvat);
+}
+
+/**
+ * SELATTAVA KUVASARJA.
+ *
+ * PUUTTUVA KUVA POISTUU SARJASTA. Havainnekuva syntyy kuvajonossa
+ * skandaali kerrallaan, joten sarjassa voi olla osoite, jota ämpärissä
+ * ei vielä ole. Virheen sattuessa kuva pudotetaan listalta ja
+ * seuraava näytetään; jos yksikään ei lataudu, koko kehys piiloutuu
+ * eikä kortille jää tyhjää laatikkoa lupaamaan kuvaa, jota ei ole.
+ */
+function piirraSkandaalinGalleria(ui, sailio, skandaali, kuvat) {
+  const jaljella = [...kuvat];
+  const kehys = html('figure', 'fokusnosto-kuva skandaali-kuva');
+  const nappi = html('button', 'fokusnosto-kuvanappi');
+  nappi.type = 'button';
+  nappi.title = 'Katso kuva suurempana';
+  const img = document.createElement('img');
+  img.decoding = 'async';
+  img.draggable = false;
+  nappi.appendChild(img);
+  kehys.appendChild(nappi);
+
+  const kuvateksti = html('figcaption', 'fokusnosto-kuvateksti');
+  const selite = html('span', 'fokusnosto-kuvaselite');
+  const lahderivi = html('span', 'fokusnosto-kuvalahde');
+  kuvateksti.append(selite, lahderivi);
+  kehys.appendChild(kuvateksti);
+
+  const laskuri = html('span', 'skandaali-kuvalaskuri');
+  let kohdalla = 0;
+
+  const nayta = () => {
+    if (!jaljella.length) {
+      kehys.hidden = true;
+      return;
+    }
+    kohdalla = ((kohdalla % jaljella.length) + jaljella.length) % jaljella.length;
+    const kuva = jaljella[kohdalla];
+    img.alt = kuva.selite ?? skandaali.otsikko ?? '';
+    nappi.setAttribute('aria-label', `${kuva.selite ?? 'Kuva'} — avaa suurena`);
+    selite.textContent = kuva.selite ?? '';
+    /*
+     * LÄHDERIVI ON KUVAN OMA, ja se kulkee taytaLahderivin läpi, joten
+     * "Matkakirjan havainnekuva" saa painettavan selitteen joka kerta
+     * (js/havainnekuva.js) ja Commons-kuvan tekijä näkyy niin kuin
+     * lisenssi vaatii.
+     */
+    taytaLahderivi(lahderivi, kuva.lahde ?? '', kuva);
+    laskuri.textContent = jaljella.length > 1 ? `${kohdalla + 1} / ${jaljella.length}` : '';
+    laskuri.hidden = jaljella.length < 2;
+    asetaNostonKuva(img, kuva, SKANDAALI_KUVA_PX, () => {
+      const paikka = jaljella.indexOf(kuva);
+      if (paikka < 0) return;
+      jaljella.splice(paikka, 1);
+      if (kohdalla > paikka) kohdalla -= 1;
+      nayta();
+    });
+  };
+  nayta();
+
+  // Napautus suurentaa, kuten kortin muillakin kuvilla; suurennos saa
+  // sen kuvan, joka on kohdalla.
+  nappi.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    if (!jaljella.length) return;
+    avaaKohdeSuurennos(ui, jaljella[kohdalla], () => nappi, 'skandaaliZoom');
+  });
+
+  const nuoli = (luokka, merkki, nimi, suunta) => {
+    const nap = html('button', `skandaali-kuvanuoli ${luokka}`, merkki);
+    nap.type = 'button';
+    nap.setAttribute('aria-label', nimi);
+    nap.addEventListener('click', (tapahtuma) => {
+      tapahtuma.stopPropagation();
+      if (jaljella.length < 2) return;
+      kohdalla += suunta;
+      sfx.play('paper');
+      nayta();
+    });
+    nappi.appendChild(nap);
+  };
+  nuoli('edellinen', '‹', 'Edellinen kuva', -1);
+  nuoli('seuraava', '›', 'Seuraava kuva', 1);
+  nappi.appendChild(laskuri);
+
+  sailio.appendChild(kehys);
 }
 
 /**
