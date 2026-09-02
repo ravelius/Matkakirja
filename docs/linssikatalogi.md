@@ -29,6 +29,8 @@ on pilotti. Jokainen uusi linssi käyttää samaa moottoria:
 
 Tilat: **valmis** · **rakenteilla** · **seuraava** (päätetty, odottaa pilotin hiontaa) · **idea**.
 
+Ryhmät A–G ovat aiheittain (painopiste Euroopassa, missä pelin laudat nyt ovat), ryhmät H–L maanosittain (omistaja 2.9.2026: "lisäksi voisi eritellä muiden maanosien jutut").
+
 ## A. Uskonnot ja maailmankatsomukset
 
 | # | linssi | alue | kaari | pysäkkejä (esimerkit) | tila |
@@ -109,10 +111,61 @@ esitetä profeettoja kasvoista tunnistettavina; paikka, ihmiset ja hetki.
 | G5 | Naisten oikeudet | maailma | 1791–1918 | Olympe de Gouges · Seneca Falls · Uusi-Seelanti 1893 · Suomi 1906 · Britannia 1918 | idea |
 | G6 | Posti ja sähkösanoma | Eurooppa | 1840–1901 | Penny Black · Morse Washington 1844 · Reuters Aachen · Atlantin kaapeli · Marconi | idea (sopii pelin sähkeisiin) |
 
+## H. Aasia
+
+| # | linssi | alue | kaari | pysäkkejä | tila |
+|---|---|---|---|---|---|
+| H1 | Kiinan keksinnöt | Kiina | 105–1450 | paperi Luoyang 105 · kompassi · ruuti · kirjapaino Kaifeng · Suuri kanava · Zheng Hen laivasto Nanjing 1405 | seuraava |
+| H2 | Intian valtakunnat ja tiede | Intia | 2600 eaa–1653 | Mohenjo-daro · Ashoka Pataliputra · Nalandan yliopisto · Aryabhata · Taj Mahal Agra 1653 | idea |
+| H3 | Japanin aikakaudet | Japani | 710–1868 | Nara · Heian-Kioto · Kamakura · Edo · Meiji 1868 (Yokohama isoisän reitillä) | seuraava |
+| H4 | Mongolien maailma | Aasia | 1206–1405 | Karakorum · Peking Kublai · Bagdad 1258 · Samarkand Timur | idea |
+| H5 | Kaakkois-Aasian temppelit | Kaakkois-Aasia | 800–1431 | Borobudur · Bagan · Angkor · Ayutthaya | idea |
+| H6 | Maustereitit (reittilinssi) | Intian valtameri | 1000–1700 | Malabar · Malakka · Molukit · Batavia · Lissabon | idea |
+
+## I. Lähi-itä ja Pohjois-Afrikka
+
+| # | linssi | alue | kaari | pysäkkejä | tila |
+|---|---|---|---|---|---|
+| I1 | Sivilisaation synty | Mesopotamia, Persia | 3500 eaa–330 eaa | Uruk · Ur · Babylon · Niniven kirjasto · Persepolis | idea |
+| I2 | Egyptin dynastiat | Egypti | 2650 eaa–30 eaa | Sakkara · Giza · Theba ja Luxor · Amarna · Aleksandria | idea |
+| I3 | Osmanien valtakunta | Turkki, Balkan, Levantti | 1299–1923 | Bursa · Konstantinopoli 1453 · Wienin piiritys 1683 · Kairo · Suez 1869 · Ankara 1923 | seuraava (Bulgaria 1878 pelissä) |
+| I4 | Persian puutarhat ja kaupungit | Iran | 550 eaa–1722 | Pasargadae · Persepolis · Isfahan · Shiraz | idea |
+
+## J. Saharan eteläpuolinen Afrikka
+
+| # | linssi | alue | kaari | pysäkkejä | tila |
+|---|---|---|---|---|---|
+| J1 | Kultavaltakunnat | Länsi-Afrikka | 700–1591 | Ghana · Timbuktu · Mansa Musan hajj 1324 · Djenné · Songhai · Kano | seuraava |
+| J2 | Swahilirannikko ja Suuri Zimbabwe | Itä- ja Etelä-Afrikka | 1000–1500 | Kilwa · Sansibar · Mombasa · Suuri Zimbabwe · Sofala | idea |
+| J3 | Etiopia | Etiopia | 100–1700 | Aksum · Lalibela · Gondar | idea |
+| J4 | Tutkimusmatkat Afrikassa | Afrikka | 1795–1877 | Mungo Park Niger · Livingstone Victorian putoukset 1855 · Burton ja Speke · Stanley ja Livingstone Ujiji 1871 · Stanley Kongo 1877 | seuraava |
+| J5 | Siirtomaajako ja rautatiet | Afrikka | 1869–1914 | Suez · Berliinin konferenssi 1884 · Kap–Kairo-hanke · Uganda-rata | idea |
+
+## K. Amerikat
+
+| # | linssi | alue | kaari | pysäkkejä | tila |
+|---|---|---|---|---|---|
+| K1 | Mesoamerikka ja Andit | Meksiko, Peru | 200–1532 | Teotihuacán · Tikal · Chichén Itzá · Tenochtitlán · Cusco · Machu Picchu | seuraava |
+| K2 | Valloitus ja hopea | Latinalainen Amerikka | 1492–1600 | Hispaniola · Tenochtitlán 1521 · Cajamarca 1532 · Potosí · Lima | idea |
+| K3 | Yhdysvaltain synty ja länsi | USA | 1776–1869 | Philadelphia 1776 · Lewis ja Clark · Oregon Trail · kultaryntäys 1849 · Pacific Railroad 1869 | seuraava (Foggin reitti) |
+| K4 | Latinalaisen Amerikan itsenäistyminen | Etelä-Amerikka | 1810–1825 | Caracas Bolívar · Buenos Aires San Martín · Chacabuco · Ayacucho 1824 | idea |
+| K5 | Amerikan keksinnöt | USA | 1793–1903 | Whitney · Morse 1844 · Bell 1876 · Edison Menlo Park · Wrightit 1903 | idea (Keksinnöt-linssin sisar) |
+| K6 | Pohjoinen: viikingeistä rautatiehen | Grönlanti, Kanada | 1000–1885 | L'Anse aux Meadows · Hudsonin lahti · Luoteisväylä · Kanadan rata 1885 | idea |
+
+## L. Oseania ja Tyynimeri
+
+| # | linssi | alue | kaari | pysäkkejä | tila |
+|---|---|---|---|---|---|
+| L1 | Polynesialaisten merenkulku (reittilinssi) | Tyynimeri | 1000 eaa–1250 | Samoa · Tahiti · Havaiji · Rapa Nui · Aotearoa noin 1250 | idea |
+| L2 | Cook ja Tyynimeri | Tyynimeri | 1768–1779 | Plymouth 1768 (hetki) · Tahiti · Uusi-Seelanti · Botany Bay · Havaiji 1779 | seuraava (H1-hetki) |
+| L3 | Australia | Australia | 1788–1901 | Sydney 1788 · Ballaratin kultaryntäys 1851 · Burke ja Wills 1860 · liitto 1901 | idea |
+| L4 | Evoluution saaret | Galápagos, Malaijisaaristo | 1835–1862 | Darwin Galápagos 1835 (hetki) · Wallace Ternate 1858 · Alfred Wallacen linja | idea |
+
 ## Järjestys
 
 1. Keksinnöt Euroopassa hiotaan valmiiksi (pelillinen ovi, kuvat kuvaputkelta, musiikki kuunneltu).
 2. A1 Suuret uskonnot syntyvät + A4 Uskonpuhdistus (omistajan linjaus; kuvat H4-tilauksena).
 3. B2, B3, C1, C2 — pysäkeistä iso osa on jo pelin hetkiä tai kohteita.
 4. C5 Maapallon ympäri 80 päivässä — pelin oma tarina, tarvitsee maailmankartan.
-5. Loput ideasta seuraavaksi omistajan päätöksellä.
+5. Maanosat: H1 Kiinan keksinnöt, H3 Japani, I3 Osmanit, J1 Kultavaltakunnat, J4 Afrikan tutkimusmatkat, K1 Mesoamerikka ja Andit, K3 Yhdysvallat, L2 Cook — järjestys sen mukaan, mille laudalle peli laajenee seuraavaksi.
+6. Loput ideasta seuraavaksi omistajan päätöksellä.
