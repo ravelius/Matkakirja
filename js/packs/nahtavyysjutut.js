@@ -361,6 +361,86 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * firenze kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Poggin terassi': {
+      nosto: 'syvennys-firenze-paakaupunki',
+      teksti: 'Kun hovi tuli, kaupunki oli väärän kokoinen. Firenzen ympärillä '
+        + 'seisoivat yhä keskiaikaiset muurit, sisällä oli kujia ja puutarhoja, '
+        + 'ja ulkopuolella alkoi heti toinen kunta. Kaupunki tilasi arkkitehti '
+        + 'Giuseppe Poggilta laajennussuunnitelman, ja hän luovutti sen 18. '
+        + 'helmikuuta 1865 — kaksi viikkoa sen jälkeen, kun kuningas oli '
+        + 'saapunut. Työt alkoivat saman vuoden toukokuussa ja kestivät viisi '
+        + 'vuotta. Muurit purettiin joen pohjoispuolelta, ja niiden tilalle '
+        + 'vedettiin leveät puurivistöiset bulevardit Pariisin malliin; '
+        + 'vanhojen kaupunginporttien kohdille avattiin isot aukiot. Joen '
+        + 'eteläpuolelle raivattiin kahdeksan kilometrin panoraamatie, viale '
+        + 'dei Colli, ja sen päätteeksi kukkulalle tehtiin vuodesta 1869 alkaen '
+        + 'terassi, jolta koko kaupunki näkyy yhdellä silmäyksellä. Samaan '
+        + 'pakettiin kuuluivat uusi rautatieasema, uusi teurastamo, kaasulaitos '
+        + 'ja uudet tulvapenkereet — vuoden 1844 tulva ja marraskuun 1864 tulva '
+        + 'olivat tuoreessa muistissa. Kaikki tämä maksettiin velaksi: '
+        + 'kolmenkymmenen miljoonan liiran laina, joka oli tarkoitus kuolettaa '
+        + 'viidessäkymmenessä vuodessa. Sitten hovi lähti Roomaan, ja '
+        + 'kaupungille jäivät bulevardit, terassi ja lyhennykset. Kesäkuun 25. '
+        + 'päivänä 1873, kuukausi isoisäsi käynnin jälkeen, kukkulalle '
+        + 'vedettiin yhdeksällä härkäparilla pronssinen jäljennös Davidista. Se '
+        + 'seisoo siellä yhä ja katsoo kaupunkia, joka rakennettiin '
+        + 'pääkaupungiksi kuudeksi vuodeksi.',
+      kuvat: [
+        {
+          tiedosto: 'Gezicht op Florence vanaf de Monte alle Croci FIRENZE Panorama preso dal Monte alle Croci. (titel op object), RP-F-F01093-AV.jpg',
+          selite: 'Monte alle Crocin rinteelle vuodesta 1869 rakennettu terassi '
+            + 'ja sen alla Firenze: joki, sillat, kupoli ja Palazzo Vecchion '
+            + 'torni 1800-luvun lopun albumiinivedoksessa.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Porcellino: {
+      nosto: 'syvennys-firenze-porcellino',
+      teksti: 'Kultaseppien sillalta on muutaman minuutin kävely kauppahallin '
+        + 'holvien alle, jossa istuu pronssinen villisika kitansa auki. '
+        + 'Firenzeläiset sanovat sitä porsaaksi, vaikka se ei ole porsas. '
+        + 'Pietro Tacca valoi sen vähän ennen vuotta 1634, ja mallina oli '
+        + 'marmoripatsas, joka oli itsekin kopio — roomalainen jäljennös '
+        + 'hellenistisestä alkuperäisestä. Se marmori löytyi Roomasta, Medicit '
+        + 'toivat sen Firenzeen 1500-luvun puolivälissä, ja jo silloin sitä '
+        + 'sanottiin Kalydonian villisiaksi, tarujen pedoksi. Pronssi oli '
+        + 'tarkoitettu Bobolin puutarhaan, mutta se päätyi kauppahallin '
+        + 'kulmaan, ensin apteekin eteen — apteekki sai siitä nimekseen '
+        + 'Villisian apteekki — ja myöhemmin sivummalle, jotta markkinoilla '
+        + 'mahtui kulkemaan. Ja sitten alkoi se, mikä tekee tästä eläimestä '
+        + 'kiinnostavan. Kulkijat pudottavat kolikon sen kitaan ja katsovat, '
+        + 'meneekö se ritilän läpi, ja hankaavat kuonoa palatakseen vielä '
+        + 'kaupunkiin. Tapa oli vanha jo silloin, kun skotlantilainen '
+        + 'matkakirjailija Tobias Smollett kirjoitti siitä vuonna 1766 — eli '
+        + 'isoisäsi käydessä kuonoa oli hangattu jo yli sata vuotta. Siksi '
+        + 'eläin on kahta väriä: ruho on patinoitunut tummanruskeanvihreäksi, '
+        + 'kuono kiiltää kuin uusi. Holvin alla seisoo nykyään kopio, joka '
+        + 'valettiin 1998 ja nostettiin paikalleen 2008; Taccan oma pronssi on '
+        + 'suojassa museossa joen toisella puolella. Kopiota hangataan '
+        + 'tarkalleen yhtä ahkerasti.',
+      kuvat: [
+        {
+          tiedosto: 'PorcellinoFlorence.jpg',
+          selite: 'Mercato Nuovon villisian kuono on hankaamisesta kirkas, vaikka '
+            + 'muu pronssi on patinoitunut tummanruskeanvihreäksi.',
+          lahde: 'Thermos, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
 
   berliini: {
@@ -635,6 +715,73 @@ export const NAHTAVYYSJUTUT = {
           selite: 'Puinen karhuveistos Köllnischer Parkissa, samassa puistossa jossa '
             + 'kaupungin elävät karhut asuivat.',
           lahde: 'Singlespeedfahrer, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * berliini kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Kulta-Liisa': {
+      nosto: 'syvennys-berliini-kultaliisa',
+      teksti: 'Heinrich Strack suunnitteli pylvään vuoden 1864 jälkeen muistoksi '
+        + 'voitosta Tanskasta. Ennen kuin se ehdittiin vihkiä, Preussi oli '
+        + 'voittanut myös Itävallan ja Ranskan, ja pylväs sai uuden '
+        + 'merkityksen: harjalle lisättiin 8,3 metriä korkea pronssinen '
+        + 'Victoria, jota alkuperäisissä suunnitelmissa ei ollut lainkaan. '
+        + 'Vihkiäiset pidettiin 2. syyskuuta 1873, isoisäsi matkavuonna. '
+        + 'Berliiniläiset eivät jääneet juhlapuheiden varaan vaan antoivat '
+        + 'patsaalle lempinimen Goldelse, Kulta-Liisa, vuonna 1866 ilmestyneen '
+        + 'romaanin sankarittaren mukaan. Pylväs ei ole enää siinä, missä se '
+        + 'silloin seisoi: se nousi Königsplatzille, ja vuosina 1938–39 se '
+        + 'siirrettiin Großer Sternille ja korotettiin samalla kuudella ja '
+        + 'puolella metrillä, kun keskustaa suunniteltiin uusiksi.',
+      kuvat: [
+        {
+          osoite: 'assets/kartat/nostot/nosto-voitonpylvas-loistoaika.webp',
+          selite: 'Voitonpylvään vihkiäiset Königsplatzilla: kullattu Victoria '
+            + 'harjalla, sotaväkeä rivissä ja juhlayleisöä koko kentän '
+            + 'ympärillä.',
+          lahde: 'Matkakirjan havainnekuva: kohde vihkiäispäivänään 1873',
+        },
+        {
+          tiedosto: 'Einweihung Siegessaeule Berlin.jpg',
+          selite: 'Voitonpylvään vihkiäiset 2. syyskuuta 1873. Kuvassa pylväs '
+            + 'seisoo vielä alkuperäisellä paikallaan Königsplatzilla.',
+          lahde: 'Tuntematon tekijä 1873, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hobrechtin putket': {
+      nosto: 'syvennys-berliini-viemarit',
+      teksti: 'Ne perustukset, joita kaduilla lyötiin, olivat osaksi viemäriä: '
+        + 'Berliinillä ei sellaista vielä ollut. James Hobrecht oli laatinut '
+        + 'kaupungin laajenemissuunnitelman jo 1862, mutta hänet oli erotettu '
+        + 'ennen kuin se valmistui, ja hän lähti Stettiniin rakentamaan '
+        + 'vesijohtoa ja viemäriä. Vuonna 1869 hän palasi tehtävänään koko '
+        + 'Berliinin viemäröinti. Kaksi liittolaista teki sen mahdolliseksi: '
+        + 'hänen veljensä Arthur Hobrecht, josta tuli kaupungin ylipormestari '
+        + '1872, ja lääkäri-poliitikko Rudolf Virchow. Hobrecht suunnitteli '
+        + 'kahdentoista pääsuunnan säteittäisen järjestelmän, joka johti '
+        + 'jätevedet kaupungin laidalle sadetuskentille. Pääputkien '
+        + 'rakentaminen alkoi 1873 ja viimeinen valmistui 1893. Samalta '
+        + 'mieheltä tilattiin sen jälkeen viemärit kolmeenkymmeneen '
+        + 'saksalaiseen kaupunkiin sekä Moskovaan, Tokioon ja Kairoon.',
+      kuvat: [
+        {
+          tiedosto: 'Canalisation von Berlin. Blatt 10.png',
+          selite: 'Lehti Hobrechtin omasta viemäriatlaksesta vuodelta 1884: '
+            + 'mallikuva berliiniläisen vuokratalon viemäröinnistä.',
+          lahde: 'James Hobrecht 1884, Wikimedia Commons (public domain)',
         },
       ],
       lahde: 'Wikipedia',
@@ -1144,6 +1291,126 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * venetsia kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Markuksen hevoset': {
+      nosto: 'syvennys-venetsia-hevoset',
+      teksti: 'Isoisäsi näki ne siellä, missä ne olivat seisoneet kuusisataa '
+        + 'vuotta: basilikan parvekkeella, katunäkymän yläpuolella. Sitä ennen '
+        + 'ne olivat seisoneet Konstantinopolin hippodromilla, ja vuonna 1204 '
+        + 'ne vietiin sieltä pois. Kuljetusta varten päät katkaistiin irti, ja '
+        + 'samana vuonna kaulaan lisättiin pannat peittämään saumat — ne pannat '
+        + 'ovat siinä yhä. Venetsiaan hevoset pystytettiin 1254, ja Petrarca '
+        + 'kävi ihailemassa niitä. Vuonna 1797 Napoleon vei ne Pariisiin ja ne '
+        + 'nostettiin Carrousel-riemukaareen; kahdeksantoista vuotta myöhemmin '
+        + 'ne tuotiin takaisin, ja työn teki kapteeni nimeltä Dumaresq, jonka '
+        + 'Itävallan keisari palkitsi kultaisella nuuskarasialla, kannessa '
+        + 'timanteista tehdyt nimikirjaimet. Basilikan päältä ne siirrettiin '
+        + 'sisälle vasta 1980-luvun alussa, kun ilmansaasteet olivat alkaneet '
+        + 'syödä pintaa, ja ulos nostettiin kopiot. Ja tässä on se kohta, jonka '
+        + 'isoisäsi olisi kirjannut ylös kahdesti: kun seosta lopulta '
+        + 'mitattiin, siinä oli vähintään 96,67 prosenttia kuparia. Ne eivät '
+        + 'siis ole pronssihevosia lainkaan vaan kuparihevosia, ja juuri se '
+        + 'teki valamisesta vaikeaa — vähän tinaa tarkoittaa kuumaa uunia, '
+        + 'tässä tapauksessa tuhatkaksisataa astetta tai enemmän. Iästä ei ole '
+        + 'yksimielisyyttä: toiset pitävät niitä roomalaisina, toiset '
+        + 'kreikkalaisina ja kolmesataa vuotta vanhempina. Yksi asia niistä '
+        + 'silti tiedetään varmasti. Selät ovat lyhyet ja jalat pitkät, mikä '
+        + 'tarkoittaa, että ne on veistetty katsottaviksi alhaalta ylöspäin — '
+        + 'ne on tehty seisomaan korkealla jossain, kauan ennen kuin kukaan '
+        + 'tiesi mitään Venetsiasta.',
+      kuvat: [
+        {
+          tiedosto: 'Horses of Basilica San Marco bright.jpg',
+          selite: 'Alkuperäiset hevoset basilikan sisällä: kaulapannat lisättiin '
+            + '1204 peittämään kohdat, joista päät katkaistiin kuljetusta '
+            + 'varten.',
+          lahde: 'Tteske, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dogen palatsi': {
+      nosto: 'syvennys-venetsia-plebiskiitti',
+      teksti: 'Kun isoisäsi käveli täällä, kaupunki oli ollut Italiaa seitsemän '
+        + 'vuotta. Sitä ennen se oli ollut Itävallan keisarikunnan osa vuodesta '
+        + '1815 asti, ja vaihdos tapahtui papereilla: elokuussa 1866 Itävalta '
+        + 'luovutti alueen Ranskalle sillä ehdolla, että Ranska luovuttaa sen '
+        + 'Italian kuninkaalle sitten kun asukkailta on kysytty. Kysyminen '
+        + 'tapahtui sunnuntaina 21. ja maanantaina 22. lokakuuta 1866. Äänet '
+        + 'laskettiin viikkoa myöhemmin dogen palatsin laskuhuoneessa, ja tulos '
+        + 'luettiin ensin salissa ja sitten palatsin parvekkeelta. Sen jälkeen '
+        + 'alkoi se osa, joka olisi pitänyt isoisäsi hereillä. Kaikkia ääniä ei '
+        + 'ollut ehditty laskea: Rovigon piirin kunnista puuttui yli '
+        + 'viisituhatta ääntä ja siirtolaisilta sataneljäkymmentäyhdeksän, ja '
+        + 'tuomioistuin joutui korjaamaan tuloksen uudestaan 31. lokakuuta. '
+        + 'Niinpä kaupungissa on muistolaattoja, joissa lukee eri luvut. '
+        + 'Padovassa laatta kertoo 647 246 ääntä puolesta ja 69 vastaan. Dogen '
+        + 'palatsissa, laskusalin käytävässä, laatassa lukee 641 758 puolesta, '
+        + '69 vastaan ja 273 hylättyä. Sama äänestys, samat kivet, eri summat. '
+        + 'Ja yksi joukko ei ollut luvuissa lainkaan: naiset eivät saaneet '
+        + 'äänestää. Venetsiassa, Padovassa, Dolossa, Miranossa ja Rovigossa he '
+        + 'tulivat silti paikalle, Mantovassa heidän äänensä otettiin vastaan '
+        + 'erillisiin uurniin — noin kaksituhatta kappaletta, jotka eivät '
+        + 'laskeneet mitään. Venetsialaisnaiset lähettivät kuninkaalle '
+        + 'kirjelmän, jossa he kirjoittivat, ettei heidän sukupuolensa ollut '
+        + 'koskaan tuntenut lain katkeruutta syvemmin kuin sinä lokakuuna.',
+      kuvat: [
+        {
+          tiedosto: 'Le Monde Illustré 1866 - Votazioni a Venezia.jpg',
+          selite: 'Le Monde Illustrén puupiirros marraskuulta 1866: Markuksen '
+            + 'kaupunginosan asukkaat kulkevat lippurivistössä '
+            + 'äänestyspaikalle Ateneoon.',
+          lahde: 'Gustave Janet Raffaele Pontremolin luonnoksen mukaan, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Aldon paino': {
+      nosto: 'syvennys-venetsia-aldus',
+      teksti: 'Tässä kaupungissa keksittiin se, mitä isoisäsi kantoi '
+        + 'takintaskussaan. Aldo Manuzio muutti Venetsiaan 1490 ja perusti '
+        + 'painonsa 1494; ensimmäinen kirja ilmestyi seuraavana keväänä. Siihen '
+        + 'aikaan kirja oli huonekalu. Klassikoihin painettiin selitykset '
+        + 'tekstin ympärille, niteestä tuli painava, ja kirjastoissa kirjat oli '
+        + 'usein ketjutettu pulpettiin kiinni — lukija ei liikkunut, kirja '
+        + 'liikkui vielä vähemmän. Manuzio käänsi asetelman ympäri. Hän jätti '
+        + 'selitykset pois, pienensi sivun noin postikortin kokoiseksi ja '
+        + 'kutsui tulosta latinaksi kannettaviksi pikkukirjoiksi. Vuonna 1501 '
+        + 'hän painoi tässä koossa Vergiliuksen. Sitä varten hän tilasi '
+        + 'bolognalaiselta Francesco Griffolta kirjasimen, joka jäljitteli '
+        + 'käsialaa ja vei siksi vähemmän tilaa riviltä: se on ensimmäinen '
+        + 'tunnettu kursiivi, ja se oli niin kiireellä tehty, ettei siinä ollut '
+        + 'lainkaan suuraakkosia. Halpa kirja ei silti ollut. Latinankielinen '
+        + 'nide maksoi kolmekymmentä soldia eli neljänneksen dukaatista, '
+        + 'kreikankielinen kaksi kertaa sen, ja mestarimuurari tienasi '
+        + 'viisikymmentä soldia päivässä. Ostajan sai silti, koska tavara oli '
+        + 'uutta lajia: kirjan pystyi ottamaan mukaan. Kesäkuusta 1502 alkaen '
+        + 'jokaisessa niteessä oli sama merkki, ankkurin ympärille kiertynyt '
+        + 'delfiini, ja sen vieressä kaksi sanaa: festina lente. Kiiruhda '
+        + 'hitaasti. Se on kaiverrettu roomalaiseen kolikkoon kauan ennen '
+        + 'Venetsiaa, ja se on suunnilleen ainoa matkaohje, jota isoisäsi ei '
+        + 'koskaan noudattanut.',
+      kuvat: [
+        {
+          tiedosto: 'Page from the edition of Virgil printed by Aldus Manutius in 1501.jpg',
+          selite: 'Sivu Aldo Manuzion vuonna 1501 painamasta taskukokoisesta '
+            + 'Vergiliuksesta, ensimmäisestä kokonaan kursiivilla painetusta '
+            + 'kirjasta; tämän kappaleen reunukset on maalattu käsin.',
+          lahde: 'British Library, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   madrid: {
     Kuninkaanlinna: {
@@ -1369,6 +1636,85 @@ export const NAHTAVYYSJUTUT = {
             + '(public domain)',
         },
       ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * madrid kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Casa de Fieras': {
+      nosto: 'syvennys-madrid-casadefieras',
+      teksti: 'Retiron puistossa oli kuninkaallinen eläintarha, Casa de Fieras. '
+        + 'Kaarle III käski rakentaa sen 1774, ja Wienin jälkeen se oli '
+        + 'Euroopan toiseksi vanhin. Filippiinien varakuningas lähetti '
+        + 'kuninkaan suosiota tavoitellakseen norsun, joka käveli Cádizista '
+        + 'Madridiin — sinne se oli purettu laivasta. Häkkirykelmää sanottiin '
+        + 'nimellä La Leonera: alakerrassa tiikereitä, pantteri, kaksi hyeenaa '
+        + 'ja sakaali, yläkerrassa huoneet kuninkaalliselle perheelle. Muualla '
+        + 'oli apinakioski, norsutarha, karhukuoppa ja häkkejä, joissa asui '
+        + 'riikinkukkoja, laamoja ja gaselleja. Vuoden 1868 vallankumouksen '
+        + 'jälkeen puisto avattiin yleisölle ja kaupunki otti tarhan hoitoonsa, '
+        + 'joten isoisäsi pääsi sisään maksamatta hoville mitään. Eläimet '
+        + 'muuttivat 1972 Casa de Campoon, ja vanhoihin eläinsuojiin avattiin '
+        + '2013 kaupunginkirjasto — sen seinissä ovat yhä ne kalterit, joiden '
+        + 'läpi pedoille heitettiin ruokaa yläkerrasta.',
+      kuvat: [
+        {
+          osoite: 'assets/kartat/nostot/nosto-retiro-loistoaika.webp',
+          selite: 'Casa de Fieras Retirossa: norsu aitauksessaan, iso lintuhäkki '
+            + 'ja kävijöitä hiekkakäytävillä.',
+          lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
+        },
+        {
+          tiedosto: '1879-12-22, La Ilustración Española y Americana, Madrid.—El cercado de los llamas, en la Casa de Fieras del parque de Madrid.jpg',
+          selite: 'Laamatarha Retiron eläintarhassa. Kuvalaitos on vuodelta 1879, '
+            + 'kuusi vuotta isoisän käynnin jälkeen.',
+          lahde: 'Josep Lluis Pellicer ja Bernardo Rico 1879, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Filipin patsas': {
+      nosto: 'syvennys-madrid-felipe',
+      teksti: 'Sinä seisoit Prado-museossa Velázquezin edessä — mutta hänen työtään '
+        + 'on Madridissa myös pronssina. Plaza de Orienten keskellä kohoaa '
+        + 'Filip IV:n ratsastajapatsas, ja kuningas halusi siihen asennon, '
+        + 'jollaista ei ollut veistoksessa ennen tehty: hevonen nousee '
+        + 'corvetaan, etujalat ilmassa, koko paino takajaloilla ja '
+        + 'hienovaraisesti hännällä. Työ tilattiin firenzeläiseltä Pietro '
+        + 'Taccalta, ja malliksi lähetettiin Madridista kaksi Velázquezin '
+        + 'maalaamaa luonnosta sekä Juan Martínez Montañésin veistämä kuninkaan '
+        + 'pää. Tacca teki patsasta kuusi vuotta, 1634–1640. Perimätiedon '
+        + 'mukaan hän kysyi tasapaino-ongelmaan neuvoa Galileo Galileilta, joka '
+        + 'ehdotti umpinaista takaosaa ja onttoa etuosaa. Ensimmäistä '
+        + 'savimallia kuningas ei hyväksynyt: hän ei tunnistanut omia '
+        + 'kasvojaan, ja pää jouduttiin teettämään uudelleen — sen teki Taccan '
+        + 'poika.',
+      kuvat: [
+        {
+          tiedosto: 'Madrid - Plaza de Oriente en 2018, Monumento a Felipe IV (1).jpg',
+          selite: 'Filip IV:n ratsastajapatsas Plaza de Orientella. Hevonen '
+            + 'seisoo takajaloillaan corveta-asennossa.',
+          lahde: 'Zarateman, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Baldomera: {
+      aika: '1870-luku',
+      nosto: 'skandaali-baldomera-larra-pyramidi',
+      teksti: 'Baldomera lupasi tallettajille korkoa, jollaista pankit eivät '
+        + 'kehdanneet edes vitsinä luvata, ja madridilaiset jonottivat ovelle. '
+        + 'Järjestelmä toimi täydellisesti — niin kauan kuin uusia jonottajia '
+        + 'riitti. Menetelmä sai myöhemmin nimensä eräältä herra Ponzilta, joka '
+        + 'keksi saman pyörän uudestaan.',
       lahde: 'Wikipedia',
     },
   },
@@ -1640,6 +1986,47 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Bengt Nyman, Wikimedia Commons (CC BY 3.0)',
         },
       ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * tukholma kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    Setelipankki: {
+      aika: '1657–1668',
+      nosto: 'skandaali-palmstruchin-setelipankki',
+      teksti: 'Setelin keksiminen oli nerokasta: paperi painaa vähemmän kuin '
+        + 'kahdenkymmenen kilon kuparilevy. Toinen oivallus — että paperia voi '
+        + 'painaa enemmän kuin kassassa on katetta — vei keksijän vankilaan ja '
+        + 'pankin nurin. Molemmat opetukset ovat pysyneet ajankohtaisina siitä '
+        + 'asti.',
+      lahde: 'Wikipedia',
+    },
+    Naamiaislaukaus: {
+      aika: '1792',
+      nosto: 'skandaali-naamiaisten-laukaus',
+      teksti: 'Naamiaiset ovat salamurhaajan kannalta käytännölliset: kaikilla on '
+        + 'naamio, eikä kukaan ihmettele, miksi joku lähestyy kuningasta. '
+        + 'Kustaa III oli saanut varoituskirjeenkin, mutta meni tanssiaisiin '
+        + 'silti. Jälkimaailma sai aiheesta oopperan; Ruotsi sai '
+        + 'perustuslakikriisin.',
+      lahde: 'Wikipedia',
+    },
+    Kreuger: {
+      aika: '1932',
+      nosto: 'skandaali-kreugerin-romahdus',
+      teksti: 'Kreuger keksi liikeidean, jota valtiovarainministerit rakastivat: '
+        + 'hän lainasi valtioille rahaa ja pyysi vastineeksi vain yksinoikeuden '
+        + 'tulitikkuihin. Kukaan ei kysynyt liian tarkkaan, mistä lainarahat '
+        + 'tulivat — ennen kuin kevät 1932 vastasi kysymykseen kaikkien '
+        + 'puolesta.',
       lahde: 'Wikipedia',
     },
   },
@@ -2173,6 +2560,44 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * praha kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Tycho Brahe': {
+      nosto: 'syvennys-praha-tycho',
+      teksti: 'Sen kellon vieressä, saman torin kirkossa, lepää mies joka mittasi '
+        + 'taivaan. Tanskalainen Tycho Brahe menetti kaksintaistelussa 1566 '
+        + 'nenänsä siltaosan — riita oli siitä, kumpi hän vai serkku Manderup '
+        + 'Parsberg oli parempi matemaatikko — ja käytti loppuikänsä proteesia, '
+        + 'jonka sanottiin olevan hopeaa ja kultaa. Vuonna 2010 hänen hautansa '
+        + 'avattiin, ja kaksi vuotta myöhemmin näyte kertoi toista: messinkiä. '
+        + 'Kuningas Kristian IV pakotti hänet lähtemään Tanskasta 1597, ja '
+        + 'Praha otti hänet vastaan: hänestä tuli keisarin tähtitieteilijä ja '
+        + 'hän rakensi observatorion lähikaupunkiin. Hän ehti tehdä täällä vain '
+        + 'neljä vuotta ja kuoli 1601, mutta ne neljä vuotta riittivät. '
+        + 'Viimeisenä vuotenaan hän sai apulaisen, Johannes Keplerin, ja antoi '
+        + 'tälle tehtäväksi Marsin radan. Keplerin oli lopulta myönnettävä, '
+        + 'että havainnot sopivat vain jos planeetta kiertää aurinkoa soikiota '
+        + 'pitkin — ja siitä tuli yksi luonnontieteen käännekohdista. Tycho '
+        + 'itse on haudattu Tynin kirkkoon, sadan metrin päähän kellosta.',
+      kuvat: [
+        {
+          tiedosto: 'Tycho Brahe\'s Tomb.jpg',
+          selite: 'Tycho Brahen hautakivi Tynin kirkossa Prahan Vanhankaupungin '
+            + 'torilla, muutaman askeleen päässä astronomisesta kellosta.',
+          lahde: 'Arpasevan, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   wien: {
     Raatihuone: {
@@ -2448,6 +2873,37 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * wien kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Klimtin maalaukset': {
+      aika: '1900–1907',
+      nosto: 'skandaali-klimtin-tiedekuntamaalaukset',
+      teksti: 'Yliopisto tilasi taiteilijalta katon täydeltä tieteen riemuvoittoa '
+        + 'ja sai sen sijaan Klimtin näkemyksen — mikä oli professorien '
+        + 'mielestä skandaali. Maalauksia ei ripustettu koskaan, ja lopulta '
+        + 'sota poltti koko kiistan kohteen. Jäljelle jäivät mustavalkoiset '
+        + 'valokuvat ja opetus tilaustöiden vaaroista.',
+      lahde: 'Wikipedia',
+    },
+    Saliera: {
+      aika: '2003–2006',
+      nosto: 'skandaali-salieran-varkaus',
+      teksti: 'Renessanssin kuuluisin suola-astia vietiin museosta '
+        + 'rakennustelineitä pitkin, ja hälytys kuitattiin tekniseksi viaksi. '
+        + 'Kolme vuotta kultainen Cellini makasi lyijyarkussa metsässä. '
+        + 'Museovartioinnin oppikirjat saivat uuden luvun; suola pysyi koko '
+        + 'ajan turvassa.',
+      lahde: 'Wikipedia',
+    },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
   budapest: {
@@ -2705,6 +3161,62 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Max263, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * budapest kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    Maanalainen: {
+      nosto: 'syvennys-budapest-kisfoldalatti',
+      teksti: 'Kaupunki, jota ei ollut isoisäsi tullessa, kasvoi nopeammin kuin '
+        + 'yksikään toinen Euroopassa — ja kahdenkymmenen vuoden päästä se '
+        + 'rakensi jotain, mitä oli ennen nähty vain Lontoossa. Millenniumin '
+        + 'maanalainen valmistui 1896, ja se oli Manner-Euroopan ensimmäinen '
+        + 'sähköistetty maanalainen rata; maailmassa vanhempi oli vain Lontoon '
+        + 'metro, jonka isoisäsi ehti nähdä. Valtiopäivät olivat hyväksyneet '
+        + 'suunnitelman jo 1870, mutta työ alkoi vasta 1894, ja Siemens & '
+        + 'Halsken unkarilainen tytäryhtiö sai sen valmiiksi alle kahdessa '
+        + 'vuodessa kahdentuhannen miehen voimin. Tunnelia ei porattu syvälle: '
+        + 'se kaivettiin kadun pinnasta auki ja katettiin takaisin, ja siksi '
+        + 'rata kulkee aivan jalkakäytävän alla. Syy oli kohtelias — '
+        + 'Andrássy-kadulle haluttiin reitti kaupunginmetsään ilman että kadun '
+        + 'ulkonäköä pilattaisiin raiteilla. Keisari Franz Joseph vihki radan '
+        + 'toukokuussa 1896. Sama neljän ja puolen kilometrin rata yhdentoista '
+        + 'asemineen kulkee yhä.',
+      kuvat: [
+        {
+          tiedosto: 'Budapest, M1 metró (kisföldalatti), Andrássy út.png',
+          selite: 'Aikalaispiirros vuodelta 1896 näyttää, kuinka matalalla '
+            + 'millenniumin maanalainen kulkee Andrássy-kadun alla.',
+          lahde: 'Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Elmyr de Hory': {
+      nosto: 'skandaali-elmyr-de-hory-vaarentaja',
+      teksti: 'De Hory väärensi mestareita niin hyvin, että asiantuntijat ostivat — '
+        + 'ja väärensi oman elämäkertansa niin hyvin, että toimittajat ostivat '
+        + 'senkin. Hänestä kirjan kirjoittanut mies jäi pian itse kiinni '
+        + 'väärennetyistä muistelmista, mikä lienee alan täydellisin oppitunti: '
+        + 'väärentäjän ympärillä kaikki alkaa olla vähän väärennettyä.',
+      lahde: 'Wikipedia',
+    },
+    'Seuson hopeat': {
+      nosto: 'skandaali-seuso-aarteen-kiista',
+      teksti: 'Roomalainen hopeakalusto matkusti Unkarin pellosta Lontoon holveihin '
+        + 'paperilla, jonka mukaan se oli aina asunut Libanonissa. Hopea itse '
+        + 'todisti toista: lautaseen oli kaiverrettu Balatonin roomalainen '
+        + 'nimi. Esine voi valehdella alkuperänsä vain, jos kukaan ei lue mitä '
+        + 'siihen on kirjoitettu.',
       lahde: 'Wikipedia',
     },
   },
@@ -3593,6 +4105,114 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * helsinki kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Löyly ja avanto': {
+      nosto: 'syvennys-helsinki-sauna',
+      teksti: 'Suomessa on noin kolme miljoonaa saunaa ja 5,6 miljoonaa asukasta — '
+        + 'löylyt kuuluvat kerrostaloasuntoonkin, ja luku tarkoittaa '
+        + 'käytännössä sitä, että saunoja on enemmän kuin autoja. Unesco lisäsi '
+        + 'suomalaisen saunomisen ihmiskunnan aineettoman kulttuuriperinnön '
+        + 'luetteloon vuonna 2020. Helsingin Kalliossa on yhä yleisiä saunoja, '
+        + 'joihin ostetaan lippu kuin elokuviin ja joissa istutaan vieretysten '
+        + 'tuntemattomien kanssa; vanhin niistä, Kotiharjun sauna, avattiin '
+        + '1928 ja on kaupungin viimeinen alkuperäisessä käytössä säilynyt '
+        + 'puulämmitteinen yleinen sauna. Löylyn jälkeen mennään kadulle '
+        + 'jäähtymään pyyhe päällä, kesät talvet. Talvella osa menee '
+        + 'pidemmälle: jäähän sahataan neliön muotoinen aukko, avanto, ja '
+        + 'siihen laskeudutaan portaita pitkin. Vesi on silloin nollan ja '
+        + 'neljän asteen välillä, ja uinti kestää harvoin minuuttia kauempaa — '
+        + 'tarkoitus ei ole uida vaan kääntyä ympäri ja nousta ylös. '
+        + 'Harrastajia on yli satatuhatta.',
+      kuvat: [
+        {
+          tiedosto: 'Kotiharjun yleinen sauna (Kotiharju public sauna in Helsinki) Helsingin Torkkelinmäellä Kalliossa 01.jpg',
+          selite: 'Vuonna 1928 avattu Kotiharjun sauna on Helsingin viimeinen '
+            + 'alkuperäisessä käytössä säilynyt puulämmitteinen yleinen '
+            + 'sauna.',
+          lahde: 'Paasikivi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kantele: {
+      nosto: 'syvennys-helsinki-kantele',
+      teksti: 'Kantele on Suomen vanhin oma soitin: puinen kaikukoppa, jonka yli on '
+        + 'pingotettu kieliä, ja jota soitetaan sormin näppäillen. Kalevalan '
+        + 'mukaan Väinämöinen teki ensimmäisen kanteleen hauen leukaluusta ja '
+        + 'kielet hevosen jouhista — se on runoa eikä arkeologiaa, mutta se '
+        + 'kertoo, mitä soittimesta ajateltiin: että se on tehty siitä, mitä '
+        + 'on. Vanhimmissa kanteleissa oli viisi kieltä ja ne veistettiin '
+        + 'yhdestä puukappaleesta. Nykyisessä konserttikanteleessa on 39 kieltä '
+        + 'ja vipuja, joilla sävelkorkeutta muutetaan kesken soiton, ja '
+        + 'pienintä viisikielistä opetellaan kouluissa. Soitin ei myöskään ole '
+        + 'yksin: se kuuluu Baltian psalttereiden perheeseen yhdessä viron '
+        + 'kandlen, latvian kokleen ja liettuan kanklėsin kanssa. Meren '
+        + 'toisella puolella soi siis sama soitin toisella nimellä.',
+      kuvat: [
+        {
+          tiedosto: 'Musician Rauno Esa Nieminen with Saarijärven kantele (Saarijärvi zither).jpg',
+          selite: 'Kantele kuuluu Baltian psalttereiden perheeseen yhdessä viron '
+            + 'kandlen, latvian kokleen ja liettuan kanklėsin kanssa.',
+          lahde: 'R.o.t, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Finlandia: {
+      nosto: 'syvennys-helsinki-finlandia',
+      teksti: 'Isoisäsi näki kukkulalla keisarin allekirjoituksen. '
+        + 'Kaksikymmentäkuusi vuotta hänen käyntinsä jälkeen samassa '
+        + 'kaupungissa tehtiin allekirjoitus toiseen suuntaan. Marraskuussa '
+        + '1899 Helsingissä järjestettiin sanomalehtien juhla vastalauseeksi '
+        + 'Venäjän sortotoimille. Ruotsalaisessa teatterissa esitettiin '
+        + 'kuvaelmia Suomen historiasta, ja Jean Sibelius johti itse viimeisen '
+        + 'osan, jonka nimi oli Suomi herää. Se kiihotti kuulijoita niin, että '
+        + 'kappaletta soitettiin sen jälkeen vaihtuvilla nimillä — yksi niistä '
+        + 'oli pelkkä Impromptu, joka tarkoittaa suunnilleen "jotain, mitä nyt '
+        + 'sattui syntymään". Nimen Finlandia teos sai vasta vuonna 1900. Se '
+        + 'kestää noin kahdeksan minuuttia, ja siinä ajassa se ehti tehdä sen, '
+        + 'mitä yksikään puhe ei olisi saanut tehdä ääneen.',
+      kuvat: [
+        {
+          tiedosto: 'Jean-Sibelius-at-the-piano.jpg',
+          selite: 'Jean Sibelius (1865–1957) on Suomen tunnetuin säveltäjä, ja '
+            + 'hänen musiikkinsa vahvisti kansallista identiteettiä '
+            + 'venäläistämiskausien aikana.',
+          lahde: 'Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Pirtukuningas: {
+      aika: '1919–1932',
+      nosto: 'skandaali-kieltolaki-ja-pirtukuningas',
+      teksti: 'Laki kielsi alkoholin, mutta unohti kysyä kansalta. Kolmetoista '
+        + 'vuotta pirtu kulki Suomenlahden yli nopeammin kuin tulli ehti '
+        + 'perässä, ja tunnetuin salakuljettaja oli entinen '
+        + 'maajoukkuejalkapalloilija. Lopulta äänestäjät ratkaisivat ottelun '
+        + 'lain tappioksi. Lastien lähtöranta oli Viron — sama tarina alkaa '
+        + 'Tallinnan satamasta.',
+      lahde: 'Wikipedia',
+    },
+    'Nurmen kohu': {
+      aika: '1932',
+      nosto: 'skandaali-nurmen-amatoorikohu',
+      teksti: 'Aikakauden kovin kestävyysjuoksija pysäytettiin lopulta paperilla, '
+        + 'ei radalla: kaksi päivää ennen avajaisia kokous päätti, ettei Nurmi '
+        + 'juokse. Kysymys kuului, oliko juoksija ottanut matkoistaan rahaa — '
+        + 'vastausta ei virallisesti annettu koskaan, mutta maratonhaave jäi.',
+      lahde: 'Wikipedia',
+    },
   },
   ateena: {
     'Antiikin agora': {
@@ -4104,6 +4724,93 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * amsterdam kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    Timanttihiomo: {
+      nosto: 'syvennys-amsterdam-timantit',
+      teksti: 'Isoisäsi käveli hiomoiden ohi kaupungin parhaana timanttivuotena '
+        + 'eikä tiennyt sitä. Amsterdam oli tuolloin maailman tärkein '
+        + 'timanttikeskus, ja ala oli päätynyt sinne kiertotietä: 1500-luvulla '
+        + 'Portugalista tulleet sefardijuutalaiset toivat mukanaan '
+        + 'kauppasuhteet, ja hionta oli yksi niistä harvoista ammateista, '
+        + 'joihin ei tarvinnut kuulua kiltaan — kiltoihin heitä ei olisi '
+        + 'otettu. Työ tehtiin aluksi kotona. Noin 1820 alkaen hiomapyöriä '
+        + 'pyörittivät hevoset, noin 1850 alkaen höyry, ja pienet verstaat '
+        + 'väistyivät tehtaiden tieltä. Ala oli silti pitkään pieni: tuhat '
+        + 'työntekijää vuonna 1848, tuhat neljäsataa vuonna 1860. Sitten '
+        + 'Etelä-Afrikan Kimberleystä alkoi vuonna 1870 nousta raakaa timanttia '
+        + 'enemmän kuin kukaan osasi odottaa, ja Amsterdamiin tuli kausi, jota '
+        + 'täällä sanotaan yhä Kaapin ajaksi. Veljekset Boas olivat aloittaneet '
+        + 'samana vuonna hiomon Nieuwe Keizersgrachtilla hevoskierron voimalla; '
+        + 'kahdeksan vuotta myöhemmin he tilasivat höyrytehtaan, joka valmistui '
+        + '1879 ja oli avatessaan Euroopan suurin. Nousu ei kestänyt: vuodesta '
+        + '1875 länsimaiden talouskriisi pysäytti sen, ja luksuskivi on juuri '
+        + 'sellainen tavara, joka jää ensimmäisenä myymättä. Huippuaikoina '
+        + 'alalla oli yli kymmenentuhatta työntekijää, noin seitsemän '
+        + 'kymmenestä juutalaisia, ja työ oli sitä mitä kimalluksesta ei näy: '
+        + 'kaksitoistatuntisia päiviä ilman taukoja hämärissä huoneissa, ja '
+        + 'silmät ja keuhkot maksoivat siitä. Vuonna 1894 juuri nämä työläiset '
+        + 'perustivat maan ensimmäisen suuren ammattiliiton. Boasin tehdas '
+        + 'seisoo yhä Uilenburgerstraatilla, ja siellä hiotaan edelleen '
+        + 'timantteja.',
+      kuvat: [
+        {
+          tiedosto: 'Slijpen van de diamant bij Van Moppes in Amsterdam, Bestanddeelnr 252-0343.jpg',
+          selite: 'Timantin hionta amsterdamilaisessa hiomossa vuonna 1932: kivi '
+            + 'painetaan vaakatasossa pyörivää tahkoa vasten, ja tahkoon on '
+            + 'hierottu timanttipölyä.',
+          lahde: 'Willem van de Poll, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Amsterdam-laiva': {
+      nosto: 'syvennys-amsterdam-voc-hylky',
+      teksti: 'Kompanian laivat menivät itään hopea lastinaan ja palasivat '
+        + 'mausteet, kankaat ja posliini ruumassaan — se oli koko liikeidea. '
+        + 'Yksi niistä ei ehtinyt edes alkuun. Amsterdam rakennettiin 1748 '
+        + 'yhtiön omalla telakalla, ja se lähti ensimmäiselle matkalleen '
+        + 'Texelin redeltä 8. tammikuuta 1749 kohti Bataviaa. Kannen alla oli '
+        + '203 merimiestä, 127 sotilasta ja viisi matkustajaa, kapteenina '
+        + '33-vuotias Willem Klump. Lastina oli kangasta, viiniä, '
+        + 'rakennuskiveä, tykkejä, paperia, kyniä ja työkaluja — ja '
+        + 'kaksikymmentäseitsemän arkkua hopeaa, arvoltaan noin '
+        + 'kolmesataatuhatta guldenia. Lounaismyrsky ei antanut periksi. Laiva '
+        + 'ei päässyt Atlantille, osui hiekkasärkkään, menetti peräsimensä, ja '
+        + 'tammikuun 26. päivänä kapteeni teki ainoan jäljellä olevan '
+        + 'ratkaisun: ajoi laivan rantaan Hastingsin kupeeseen. Miehistö pääsi '
+        + 'maihin ja sai suurimman osan hopeasta mukanaan, loput veivät '
+        + 'rannalle ryntäneet ryöstelijät. Kolme viikkoa yhtiö yritti saada '
+        + 'laivaa irti, ja 11. maaliskuuta se luovutti. Amsterdam vajosi saveen '
+        + 'ja jäi sinne. Kaksisataa kaksikymmentä vuotta myöhemmin, vuonna '
+        + '1969, vesi laski poikkeuksellisen matalalle ja paljasti sen: runko '
+        + 'oli tallella, koska savi ei päästä happea puuhun. Nykyään hylky on '
+        + 'suojeltu, sen kylkiluut näkyvät rannalla vain harvoina päivinä '
+        + 'vuodessa, ja siitä nostetut esineet ovat Hastingsin '
+        + 'haaksirikkomuseossa. Amsterdamissa on lisäksi laiva itse — tai sen '
+        + 'kokoinen kopio, jonka neljäsataa vapaaehtoista rakensi vuosina '
+        + '1982–1990. Se on merimuseon laiturissa, ja sinne pääsee kävelemään '
+        + 'kuivin jaloin.',
+      kuvat: [
+        {
+          tiedosto: 'The wreck of the Amsterdam in the fossil forest at Bulverhythe - geograph.org.uk - 8295766.jpg',
+          selite: 'Amsterdam-laivan runko paljastuu Bulverhythen rannalla vain '
+            + 'poikkeuksellisen matalan veden aikaan; etualalla näkyy '
+            + 'muinaismetsän kantoja.',
+          lahde: 'Adrian Diack, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   dublin: {
     'Guinness-panimo': {
@@ -4327,6 +5034,54 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Metro Centric, Wikimedia Commons (CC BY 2.0)',
         },
       ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * dublin kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Kellsin kirja': {
+      nosto: 'syvennys-dublin-kellsinkirja',
+      teksti: 'Se kirja, jota isoisäsi katseli, tehtiin noin vuonna 800 '
+        + 'kolumbalaisessa luostarissa — Ionan saarella, Kellsissä tai osittain '
+        + 'molemmissa, siitä kiistellään yhä. Siinä on 340 lehteä vasikannahkaa '
+        + 'ja kymmenen kokosivun kuvaa. Vuonna 1007 Ulsterin annaaleihin '
+        + 'kirjattiin, että "Columkillen suuri evankeliumikirja, läntisen '
+        + 'maailman päämuistoesine" varastettiin yöllä kivikirkon läntisestä '
+        + 'sakaristosta — ja syy sanotaan merkinnässä suoraan: sen taotun '
+        + 'kotelon tähden. Kirja löytyi muutamaa kuukautta myöhemmin turpeen '
+        + 'alta. Kotelo oli poissa, kulta ja jalokivet sen mukana, ja noin '
+        + 'kolmekymmentä lehteä puuttuu yhä — ne saattoivat repeytyä irti, kun '
+        + 'kirja kiskottiin kansistaan. Varkaat veivät siis sen, mikä oli '
+        + 'kallista, ja jättivät sen, mikä oli arvokasta. Trinity Collegeen '
+        + 'kirja tuli 1661, ja yleisölle se on ollut esillä 1800-luvulta asti — '
+        + 'isoisäsi näki sen siis aivan laillisesti, vaikka häntä katsottiinkin '
+        + 'nurjasti. Nykyään esillä on yksi nide neljästä, kaksi sivua '
+        + 'kerrallaan, ja sivu käännetään noin kahdentoista viikon välein.',
+      kuvat: [
+        {
+          tiedosto: 'KellsFol034rChiRhoMonogram.jpg',
+          selite: 'Kellsin kirjan tunnetuin aukeama on folio 34r, jossa yksi '
+            + 'ainoa kirjainyhdistelmä täyttää koko sivun kiemuroineen.',
+          lahde: 'Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ouzel Galley': {
+      aika: '1695–1705',
+      nosto: 'skandaali-ouzel-galleyn-mysteeri',
+      teksti: 'Laiva julistettiin menneeksi, miehistö kuolleiksi ja vakuutukset '
+        + 'maksettiin — sitten koko komeus purjehti takaisin satamaan lasti '
+        + 'täynnä. Kenelle kuuluu aarre, jonka omistajille on jo korvattu sen '
+        + 'menetys? Dublin perusti kysymyksen ratkomiseen kokonaisen seuran.',
       lahde: 'Wikipedia',
     },
   },
@@ -5500,6 +6255,37 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * lissabon kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Alves dos Reis': {
+      aika: '1924–1925',
+      nosto: 'skandaali-alves-dos-reis-setelihuijaus',
+      teksti: 'Alves dos Reis ei väärentänyt seteleitä — hän väärensi paperit, '
+        + 'joilla oikea setelipaino painoi hänelle aitoja. Hetken Portugalissa '
+        + 'kiersi kahdet aidot 500 escudon setelit, joista vain toiset oli '
+        + 'tilattu. Suunnitelman ainoa vika oli, että sarjanumerotkin olivat '
+        + 'aitoja: samat kahteen kertaan.',
+      lahde: 'Wikipedia',
+    },
+    'Ultimaatum 1890': {
+      aika: '1890',
+      nosto: 'skandaali-vaaleanpunainen-kartta-1890',
+      teksti: 'Portugali väritti kartalle vaaleanpunaisen vyöhykkeen Atlantilta '
+        + 'Intian valtamerelle — Britannia lähetti vastaukseksi ultimaatumin, '
+        + 'ja väri kuivui kokoon päivässä. Lissabonissa nöyryytys muistettiin '
+        + 'pitkään, ja lasku lankesi lopulta kuningashuoneelle. Kartta on '
+        + 'sentään tallessa.',
+      lahde: 'Wikipedia',
+    },
   },
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E2 (Raamattu, "TEKSTIEN PAINOPISTE"):
@@ -5730,6 +6516,91 @@ export const NAHTAVYYSJUTUT = {
             + 'metriä korkea pronssipatsas osoittaa kädellään kohti '
             + 'avomerta.',
           lahde: 'Mister No, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * barcelona kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Font de Canaletes': {
+      nosto: 'syvennys-barcelona-rambla',
+      teksti: 'Ramblalla oli isoisäsi aikaan kaksi kauppaa, ja kumpikin oli '
+        + 'vanhempi kuin katu. Kadun kohdalla virtasi ennen puro, joka '
+        + 'johdettiin vuonna 1440 uusien muurien ulkopuolelle — vasta sen '
+        + 'jälkeen uomasta alkoi tulla kulkuväylä. Puut ovat paljon nuorempia '
+        + 'kuin ne näyttävät. Ensimmäiset istutettiin 1703, ja niitä oli '
+        + 'kaksisataakahdeksankymmentä koivua; koivut korvattiin jalavilla, '
+        + '1832 istutettiin akaasioita ja vuodesta 1859 kadun puu on ollut '
+        + 'plataani. Isoisäsi käveli siis neljätoistavuotiaiden puiden alla ja '
+        + 'piti niitä varmasti ikimuistoisina. Lintutori oli Rambla dels '
+        + 'Estudisilla, ja se kesti vuoteen 2010. Sitä ei lopettanut kilpailu '
+        + 'eikä vuokra vaan eläinsuojelu: elävien eläinten myynti kadulla kävi '
+        + 'säädösten kanssa mahdottomaksi, ja vuosien vastustelun jälkeen kojut '
+        + 'suljettiin. Toinen kauppa on yhä paikallaan, eikä se maksa enää '
+        + 'mitään. Canaletesin lähde on saanut nimensä kanaaleista, joita '
+        + 'pitkin vesi valui 1500-luvulla juottokaukaloon; se tuli Collserolan '
+        + 'kaivostunneleista ja kulki kaupunkiin muurin viertä keramiikkakourua '
+        + 'myöten. Kun vanha Estudis Generalsin rakennus purettiin 1843, '
+        + 'Ramblalle nostettiin uusi lähde ja siihen vesi Montcadan kaivoksesta '
+        + '— juuri se, jonka isoisäsi ehti nähdä. Nykyinen valurautainen '
+        + 'nelisuihkuinen lähde nelilamppuisine lyhtyineen on vasta vuodelta '
+        + '1889, kaupunginarkkitehti Pere Falquésin malli, ja sen kulmassa on '
+        + 'pieni kaukalo koirille. Siitä lähtee myös se lupaus, jota kukaan ei '
+        + 'ole kumonnut: joka juo Canaletesista, palaa kaupunkiin.',
+      kuvat: [
+        {
+          tiedosto: 'Straatgezicht op de Rambla de las flores te Barcelona, RP-F-F01157-AY.jpg',
+          selite: 'Rambla de las Flores vuonna 1889: vuodesta 1859 istutetut '
+            + 'plataanit ovat kolmenkymmenen vuoden ikäisiä ja katu on jo '
+            + 'kaupungin olohuone.',
+          lahde: 'Valokuvaamo J. E. Puig 1889, Rijksmuseum / Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Roviran aukio': {
+      nosto: 'syvennys-barcelona-kilpailu',
+      teksti: 'Se ruudukko ei ollut kaupungin oma valinta. Muurien sisällä asui '
+        + 'vuonna 1850 satakahdeksankymmentäseitsemäntuhatta ihmistä runsaan '
+        + 'kahden neliökilometrin alalla, ja siitä alasta neljäkymmentä '
+        + 'prosenttia oli kasarmeja, sairaaloita, luostareita ja kirkkoja: '
+        + 'seitsemän kasarmia, yksitoista sairaalaa, neljäkymmentä luostaria ja '
+        + 'kaksikymmentäseitsemän kirkkoa. Varakas eli keskimäärin '
+        + 'kolmeenkymmeneenkuuteen ikävuoteen, päivätyöläinen '
+        + 'kahteenkymmeneenkolmeen. Muurit määrättiin purettaviksi elokuussa '
+        + '1854, ja niiden takana odotti tyhjä kenttä. Sitten tuli kaksi '
+        + 'kaavaa. Insinööri Ildefons Cerdà sai helmikuussa 1859 Madridin '
+        + 'hallitukselta tehtäväkseen laatia laajennuksen vuodessa, ja kaupunki '
+        + 'vastasi huhtikuussa kutsumalla oman kilpailunsa. Kesäkuun 9. päivänä '
+        + 'hallitus hyväksyi Cerdàn kaavan kuninkaallisella määräyksellä — '
+        + 'neljä kuukautta ennen kuin kaupungin oma kilpailu edes ratkesi. '
+        + 'Lokakuun 10. päivänä kolmestatoista ehdotuksesta valittiin '
+        + 'yksimielisesti voittajaksi arkkitehti Antoni Rovira i Trias, jonka '
+        + 'kaava levisi vanhastakaupungista säteittäin kuin viuhka ja jonka '
+        + 'tunnuslause kuului: kaupungin kaava on enemmän ajan kuin arkkitehdin '
+        + 'työtä. Heinäkuussa 1860 ministeriö päätti asian ja määräsi '
+        + 'rakennettavaksi Cerdàn. Rovira ei jäänyt toimettomaksi: hän '
+        + 'suunnitteli kaupungille sen katetut torit — Barcelonetan 1873, El '
+        + 'Bornin 1876, Sant Antonin 1879 — ja oli mukana purkamassa '
+        + 'Ciutadellan linnoitusta. Isoisäsi käveli siis mahdollisesti juuri '
+        + 'valmistuneen torin ohi tietämättä, että sen tekijä oli mies, jonka '
+        + 'kaupunki oli valinnut ja jonka valtio oli sivuuttanut.',
+      kuvat: [
+        {
+          tiedosto: 'EixampleBCN-projecteRovira.jpg',
+          selite: 'Antoni Rovira i Triasin voittanut kilpailuehdotus vuodelta '
+            + '1859: vanhastakaupungista säteittäin avautuva viuhka, jota ei '
+            + 'koskaan rakennettu.',
+          lahde: 'Antoni Rovira i Trias 1859, Museu d\'Història de la Ciutat / Wikimedia Commons (public domain)',
         },
       ],
       lahde: 'Wikipedia',
@@ -6026,6 +6897,88 @@ export const NAHTAVYYSJUTUT = {
             + '1934.',
           lahde: 'Jean Laurent n. 1865, Städel Museum, Wikimedia Commons (public '
             + 'domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * granada kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Irvingin huoneet': {
+      nosto: 'syvennys-granada-irving',
+      teksti: 'Kun amerikkalainen Washington Irving tuli Granadaan vuonna 1828, '
+        + 'palatsi ei ollut nähtävyys vaan osoite. Valtio oli antanut sen '
+        + 'rapistua toistasataa vuotta: hoito oli jäänyt paikallisille '
+        + 'kuvernööreille, jotka asuivat perheineen laiminlyödyissä saleissa, '
+        + 'ja 1800-luvun alussa taloa asuttivat kertomusten mukaan vangit, '
+        + 'työkyvyttömät sotilaat ja muut, joilla ei ollut muutakaan paikkaa. '
+        + 'Irving oli tullut kirjoittamaan historiateosta ja pyysi pääsyä '
+        + 'sisään palatsin kuvernööriltä ja kaupungin arkkipiispalta. Lupa '
+        + 'heltisi, koska hän oli jo kuuluisa mies. Ja sitten tapahtui se, mikä '
+        + 'tekee tästä muuta kuin matkakertomuksen: hän ei mennyt arkistoon '
+        + 'vaan kysyi ihmisiltä. Oppaaksi tuli seitsemäntoistavuotias '
+        + 'granadalainen Mateo Ximenes, ja tämän johdolla Irving kirjasi ylös '
+        + 'ne tarinat, joita palatsissa asuvat kertoivat omasta talostaan. '
+        + 'Seuraavana vuonna hän palasi ja asui itse yhdessä sen huoneistoista '
+        + 'noin kolme kuukautta. Kirja ilmestyi toukokuussa 1832 salanimellä '
+        + 'Geoffrey Crayon, ja sen jälkeen palatsiin alkoi tulla maalareita, '
+        + 'piirtäjiä ja matkustajia, jotka tahtoivat nähdä sen paikan, jota '
+        + 'talon omat asukkaat olivat kuvailleet vieraalle. Ja jotta huomaisit, '
+        + 'kuinka kauas kirja kantoi: vuotta isoisäsi käynnin jälkeen eräs '
+        + 'kalifornialainen mies antoi uudelle esikaupungilleen nimen Alhambra, '
+        + 'koska hänen tyttärensä sattui lukemaan sitä.',
+      kuvat: [
+        {
+          tiedosto: 'David Roberts - The Fortress of the Alhambra, Granada - 1967.72 - Fogg Museum.jpg',
+          selite: 'David Robertsin maalaus vuodelta 1836, neljä vuotta Irvingin '
+            + 'kirjan jälkeen: linnoitus kukkulallaan, lumiset huiput takana '
+            + 'ja kaupunki sen alla.',
+          lahde: 'David Roberts 1836, Harvard Art Museums, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Alcaicería: {
+      nosto: 'syvennys-granada-alcaiceria',
+      teksti: 'Kukkulan alla, tuomiokirkon kupeessa, on kapeiden kujien kortteli '
+        + 'nimeltä Alcaicería. Se oli kaupungin silkkitori, ja silkki tuli '
+        + 'yhdeltä eläimeltä: silkkiperhosen toukalta, joka syö vain mulperin '
+        + 'lehtiä ja kehrää ympärilleen kotelon yhdestä ainoasta langasta. '
+        + 'Lanka on kolmesta yhdeksään sataan metriä pitkä, ja yhteen kiloon '
+        + 'silkkiä niitä koteloita tarvitaan neljästä seitsemään tuhatta. '
+        + 'Toukka on kesytetty niin pitkälle, ettei aikuinen perhonen enää osaa '
+        + 'lentää eikä laji tule toimeen ilman ihmistä. Sen ympärille '
+        + 'rakennettiin kortteli. Se oli suojattu kuin pieni linnoitus: neliö '
+        + 'talojen muurin sisällä, portit kiinni yöksi, ja sisäkujilla '
+        + 'vartijat. Yöksi sisään päästettiin lisäksi koirat, joille oli '
+        + 'korttelissa oma huoneensa. 1500-luvulla puoteja oli lähes '
+        + 'kaksisataa, kukin pieni ja yhden alas käännettävän oven takana; ovi '
+        + 'oli maalattu punamullalla ja se toimi auki käännettynä katoksena '
+        + 'sateelta ja auringolta. Porttien kaarista riippui rautaketjuja, '
+        + 'jotka kertoivat kuninkaallisesta erioikeudesta ja estivät ratsuja '
+        + 'tulemasta sisään. Sitten silkkiammatti hiipui, ja vuoteen 1787 '
+        + 'mennessä puoteja oli enää 117. Ja 20. heinäkuuta 1843 kortteli paloi '
+        + 'kokonaan: tuli lähti tulitikkukaupasta viereiseltä kadulta. Se '
+        + 'rakennettiin uudestaan siihen uusarabialaiseen tyyliin, joka oli '
+        + 'silloin muotia — kadut suorempina, kortteli pienempänä. Isoisäsi '
+        + 'käveli siis kolmenkymmenen vuoden ikäisessä jäljitelmässä ja luuli '
+        + 'sitä luultavasti vanhaksi. Niin luulee useimmiten tänäänkin se, joka '
+        + 'siellä kävelee.',
+      kuvat: [
+        {
+          tiedosto: 'Granada - La Alcaicería 1.jpg',
+          selite: 'Alcaicerían holvikäytävä: kipsikaaret ja koristelu ovat vuoden '
+            + '1843 palon jälkeistä uusarabialaista työtä, eivät silkkitorin '
+            + 'omaa.',
+          lahde: 'Zarateman, Wikimedia Commons (CC0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -6395,6 +7348,26 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Adolphe Braun 1875, Wikimedia Commons (public domain)',
         },
       ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * rooma kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Banca Romana': {
+      aika: '1893',
+      nosto: 'skandaali-banca-romana-1893',
+      teksti: 'Kun setelipainossa loppuvat numerot kesken, voi tietysti painaa '
+        + 'samat numerot kahdesti — näin ajateltiin Banca Romanassa. Skandaali '
+        + 'kaatoi hallituksen ja synnytti sivutuotteena Italian keskuspankin. '
+        + 'Harva pankkikriisi on ollut näin tuottelias.',
       lahde: 'Wikipedia',
     },
   },
@@ -6982,6 +7955,57 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * varsova kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Wienin asema': {
+      nosto: 'syvennys-varsova-raideleveys',
+      teksti: 'Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt '
+        + 'siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä '
+        + 'Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen '
+        + 'kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: '
+        + 'kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen '
+        + 'rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli '
+        + 'rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta '
+        + 'kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli '
+        + 'leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua '
+        + 'voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja '
+        + 'pysähtyi joen toiselle rannalle. Kierbedźin silta oli alun perin '
+        + 'suunniteltu juuri tähän — rautatiesillaksi, joka yhdistäisi kaksi '
+        + 'asemaa — mutta radan vetämisestä keskustan läpi luovuttiin, ja silta '
+        + 'valmistui 1864 pelkkänä maantiesiltana. Rautatiesilta rakennettiin '
+        + 'vasta muutamaa vuotta myöhemmin, pohjoisempaa. Niinpä sillalle '
+        + 'laskettiin junan kiskojen sijasta hevosraitiovaunun kiskot. Radan '
+        + 'omistanut yhtiö rakensi 1865 runsaan kuuden kilometrin '
+        + 'hevosraitiotien pelkästään sitä varten, että matkustaja pääsisi '
+        + 'asemalta asemalle, ja reitti avattiin joulukuussa 1866. '
+        + 'Varsovalaiset sanoivat vaunuja sammakoiksi. Sillalla oli '
+        + 'kesäkuukausina tupakointikielto. Isoisäsi kävellessä kaupungissa '
+        + 'Wienin radalle rakennettiin parhaillaan toista raidetta, työ kesti '
+        + 'vuodesta 1872 vuoteen 1881, ja Wienin asemalla seisoi kaksi tornia: '
+        + 'toisessa kello, toisessa lennätin. Asema oli toista sataa metriä '
+        + 'pitkä, mitoitettu aikansa keskimittaisen junan mukaan. Kaikesta '
+        + 'tästä seurasi yksi asia, jota mies, joka pelkäsi hevosia enemmän '
+        + 'kuin myrskyjä, ei olisi halunnut kuulla: junasta junaan pääsi vain '
+        + 'hevosen perässä.',
+      kuvat: [
+        {
+          tiedosto: 'Dworzec Wiedeński w Warszawie ok. 1890.jpg',
+          selite: 'Wienin asema Varsovassa noin 1890: etualalla hevosraitiovaunu, '
+            + 'joka kuljetti matkustajat radalta toiselle.',
+          lahde: 'Konrad Brandel, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   tallinna: {
     'Paksu Margareeta': {
@@ -7256,6 +8280,79 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
         },
       ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * tallinna kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'E-valtio': {
+      nosto: 'syvennys-tallinna-e-valtio',
+      teksti: 'Viro oli vuonna 2005 maailman ensimmäinen maa, jossa sai äänestää '
+        + 'vaaleissa internetissä. Äänestäjä tunnistautuu sirullisella '
+        + 'henkilökortilla, joka on pakollinen jokaiselle virolaiselle '
+        + 'viidestätoista ikävuodesta alkaen. Vuoden 2023 parlamenttivaaleissa '
+        + 'yli puolet äänistä annettiin verkossa. Sama kortti ei ole vain '
+        + 'äänestyskortti: sillä haetaan resepti apteekista, allekirjoitetaan '
+        + 'sopimus ja perustetaan yritys. Ja sitten on vielä yksi kerros. '
+        + 'Joulukuun ensimmäisenä päivänä 2014 alkoi e-residenttiohjelma, joka '
+        + 'antaa saman sirukortin myös ulkomaalaiselle, joka ei asu maassa '
+        + 'lainkaan — hän voi allekirjoittaa asiakirjoja ja perustaa yrityksen '
+        + 'käymättä koskaan paikalla. Se on sama vanha hansa-ajatus uudessa '
+        + 'muodossa: kaupankäynti ei vaadi läsnäoloa, se vaatii vain '
+        + 'luotettavan tavan todistaa, kuka olet.',
+      kuvat: [
+        {
+          tiedosto: 'E-Residency card.jpg',
+          selite: 'Viron e-residenttiohjelma alkoi 1. joulukuuta 2014, ja se '
+            + 'antaa ulkomaalaisille sirukortin, jolla voi allekirjoittaa '
+            + 'asiakirjoja ja perustaa yrityksen.',
+          lahde: 'Masayuki (Yuki) Kawagishi, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lyhyen jalan torni': {
+      nosto: 'syvennys-tallinna-kaksi-kaupunkia',
+      teksti: 'Tallinna oli vuosisatoja kaksi kaupunkia. Mäen päällä oli Toompea '
+        + 'omine herroineen ja lakeineen, alhaalla kauppiaiden kaupunki omine '
+        + 'raateineen — ja ne yhdistettiin vasta vuonna 1878, viisi vuotta '
+        + 'isoisäsi käynnin JÄLKEEN. Hän käveli siis kahdessa kaupungissa '
+        + 'luullen kävelevänsä yhdessä. Ylös pääsi vain kahta katua, Pitkää '
+        + 'jalkaa ja Lyhyttä jalkaa, ja kummankin päässä oli porttitorni. Ja '
+        + 'tässä on se kohta, joka kertoo suhteesta enemmän kuin yksikään '
+        + 'asiakirja: Lyhyen jalan torniin hakattiin 1400-luvulla '
+        + 'ampuma-aukkoja, jotka osoittavat YLÖS Toompealle. Ne eivät siis ole '
+        + 'vihollista vaan naapuria varten. Tornia on siksi kutsuttu Epäluulon '
+        + 'torniksi. Kahden eripituisen jalan takia Tallinnaa sanotaan '
+        + 'leikillään ontuvaksi kaupungiksi.',
+      kuvat: [
+        {
+          tiedosto: 'Lühikese Jala värav.JPG',
+          selite: 'Lyhyen jalan porttitorniin hakattiin 1400-luvulla '
+            + 'ampuma-aukkoja, jotka osoittavat ylös Toompealle — siksi sitä '
+            + 'on kutsuttu Epäluulon torniksi.',
+          lahde: 'NOSSER, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Pirtulaivat: {
+      nosto: 'skandaali-pirtukauppa-suomenlahdella',
+      teksti: 'Laki poisti viinan kaupoista, ja Suomenlahti hoiti logistiikan: '
+        + 'pimeinä öinä Viron rannikolta lähti nopeita veneitä, joiden lasti '
+        + 'loiskui kanistereissa. Tulli takavarikoi vuodessa sen, minkä yksi '
+        + 'emälaiva toi yhdessä yössä. Harva laki on opettanut taloustiedettä '
+        + 'yhtä tehokkaasti — tai kastellut yhtä montaa oppituntia. '
+        + 'Vastaanottava ranta oli Suomen — sama tarina jatkuu Helsingin '
+        + 'Kauppatorilla.',
       lahde: 'Wikipedia',
     },
   },
@@ -7615,6 +8712,59 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * sofia kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    Levski: {
+      nosto: 'syvennys-sofia-levski',
+      teksti: 'Majatalon isäntä ei sanonut nimeä, mutta minä sanon: Vasil Levski. '
+        + 'Bulgarialaiset kutsuvat häntä Vapauden apostoliksi. Hän rakensi koko '
+        + 'maahan salaisten vallankumouskomiteoiden verkoston ja suunnitteli '
+        + 'kansannousua osmanivaltaa vastaan. Joulukuussa 1872 hänet kaapattiin '
+        + 'majatalosta ja tuotiin Sofiaan oikeudenkäyntiin — eikä hän '
+        + 'paljastanut yhtäkään toveriaan. Tuomio pantiin täytäntöön 18. '
+        + 'helmikuuta 1873, siis samana talvena kuin isoisäsi sulki '
+        + 'matkalaukkunsa Lontoossa. Sillä kohdalla seisoo nyt kolmentoista '
+        + 'metrin muistomerkki harmaata balkanilaista graniittia. Hautaa ei ole '
+        + 'löydetty.',
+      kuvat: [
+        {
+          tiedosto: 'Sofia Dungeon.jpg',
+          selite: 'Vanha vankityrmä, jossa Vasil Levskiä pidettiin vangittuna. '
+            + 'Valokuva on 1800-luvun lopulta.',
+          lahde: 'Tuntematon kuvaaja 1879, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Ruhtinaskaappaus: {
+      aika: '1886',
+      nosto: 'skandaali-battenbergin-ruhtinaskaappaus',
+      teksti: 'Maan ensimmäinen ruhtinas herätettiin omassa palatsissaan pistimet '
+        + 'ovella ja saatettiin allekirjoittamaan luopumiskirja ennen aamua. '
+        + 'Hän ehti vielä palata — mutta huomasi, että kaapattua kruunua on '
+        + 'vaikea pitää päässä. Palatsissa katsellaan nykyään tauluja, mikä on '
+        + 'kaikin puolin rauhallisempaa.',
+      lahde: 'Wikipedia',
+    },
+    Vihellyskonsertti: {
+      aika: '1907',
+      nosto: 'skandaali-kansallisteatterin-vihellyskohu',
+      teksti: 'Ylioppilaat viheltivät ruhtinaalle teatterin avajaisissa, ja '
+        + 'hallitus sulki vastineeksi koko yliopiston — puoleksi vuodeksi, '
+        + 'opettajat erotettuina. Harvoin on yksi vihellyskonsertti tullut '
+        + 'valtiolle näin kalliiksi. Teatteri sentään jäi pystyyn, ja se on yhä '
+        + 'kaupungin komeimpia.',
+      lahde: 'Wikipedia',
+    },
   },
   bukarest: {
     'Romanian ateneum': {
@@ -7937,6 +9087,51 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * bukarest kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Colțean torni': {
+      nosto: 'syvennys-bukarest-coltea',
+      teksti: 'Isoisäsi kiipesi Bukarestin korkeimpaan rakennukseen: Colțean torni '
+        + 'kohosi arviolta 54 metriin ja oli kaupungin korkein yli vuosisadan '
+        + 'ajan. Sen rakentamisessa vuosina 1709–1714 auttoivat Ruotsin '
+        + 'kuninkaan Kaarle XII:n sotilaat, jotka olivat paenneet Valakiaan '
+        + 'Poltavan tappion jälkeen; ruhtinas Constantin Brâncoveanu majoitti '
+        + 'heidät. Sisäänkäynnin molemmin puolin oli maalattuna kaksi '
+        + 'ruotsalaista sotilasta, jalkaväkimies ja ratsumies, kiväärit olalla '
+        + '— juuri ne, jotka isoisäsi näki. Tornissa oli myös kirjoitus '
+        + 'ruotsalaisten muuraustöiden muistoksi; se on kadonnut. Vuoden 1802 '
+        + 'maanjäristys pudotti tornin huipun ja kellon, ja kun torni 1888 '
+        + 'purettiin kokonaan, sen 1 700 kilon kello vietiin Sinaian '
+        + 'luostariin.',
+      kuvat: [
+        {
+          tiedosto: 'Aquarelle, Turnul Colţei.jpg',
+          selite: 'Colțean torni Amedeo Preziosin akvarellissa vuodelta 1868.',
+          lahde: 'Amedeo Preziosi 1868, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kultakana: {
+      aika: 'löytö 1837, ryöstö 1875',
+      nosto: 'skandaali-kultakanan-ryosto-1875',
+      teksti: 'Tämä aarre on selvinnyt varkaudesta, sahasta, tulipalosta ja '
+        + 'neljänkymmenen vuoden ulkomaanevakosta — museoesineeksi harvinaisen '
+        + 'vauhdikas ura. Varas katkoi ainoan riimukirjoitetun kaularenkaan '
+        + 'paloiksi, ja muinainen teksti pelastui vain siksi, että joku oli '
+        + 'sattunut valokuvaamaan sen Lontoossa. Kopio voi joskus olla aarteen '
+        + 'tärkein osa.',
+      lahde: 'Wikipedia',
+    },
   },
   sarajevo: {
     'Sarajevon katedraali': {
@@ -8198,6 +9393,41 @@ export const NAHTAVYYSJUTUT = {
             + 'oli yksi viidestä Vratnikin ympärille nousseesta '
             + 'tykkilinnoituksesta.',
           lahde: 'Damien Smith, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * sarajevo kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Inat kuća': {
+      nosto: 'syvennys-sarajevo-inat-kuca',
+      teksti: 'Tämä ei ole isoisäsi Sarajevoa. Kun hän käveli täällä, jokivarsi oli '
+        + 'yhä ottomaanien kaupunkia; viisi vuotta myöhemmin tuli '
+        + 'Itävalta-Unkari. Sen virkamiehet halusivat Miljackan rannalta tontin '
+        + 'uudelle kaupungintalolle ja kirjastolle. Tontilla oli talo. '
+        + 'Omistajalle tarjottiin rahaa: ei. Hänelle sanottiin, että hänen on '
+        + 'pakko muuttaa: ei. Kun virkamiehet siirtyivät uhkailuun, mies purki '
+        + 'talonsa, siirsi sen ja kokosi sen uudelleen pala palalta joen '
+        + 'vastarannalle — ei siksi, että olisi halunnut asua siellä, vaan '
+        + 'kiusatakseen heitä. Talo seisoo yhä paikallaan, ja siinä on nykyään '
+        + 'ravintola nimeltä Inat kuća, Uhmatalo. Kuulet siitä vielä toisenkin '
+        + 'version, jossa mies vaati korvaukseksi kultarahan jokaista tiiltä '
+        + 'kohti. Sitä minä en toista: se ei ole lähteissäni.',
+      kuvat: [
+        {
+          tiedosto: 'Sarajevo - Inat kuća (49104054186).jpg',
+          selite: 'Uhman talo joen rannalla. Alkuperäinen tontti oli '
+            + 'vastarannalla, siellä missä kaupungintalo nyt seisoo.',
+          lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -8778,6 +10008,52 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * pietari kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Fabergé-museo': {
+      nosto: 'syvennys-pietari-faberge',
+      teksti: 'Ensin ajoitus, ettei tule väärinkäsitystä: isoisäsi ei voinut nähdä '
+        + 'yhtäkään munaa. Ensimmäinen valmistui pääsiäiseksi 1885, kaksitoista '
+        + 'vuotta hänen käyntinsä jälkeen. Liike oli kyllä olemassa: Gustav '
+        + 'Fabergé perusti sen tähän kaupunkiin 1842, ja poika Carl otti sen '
+        + 'haltuunsa 1872 — merkintää edeltävänä vuonna. Silloin siellä ei '
+        + 'tehty keisarille lahjoja vaan luetteloitiin, korjattiin ja '
+        + 'entisöitiin palatsin taidekokoelman esineitä. Sitten Aleksanteri III '
+        + 'tilasi vaimolleen pääsiäislahjan, ja siitä tuli tapa. Ensimmäinen '
+        + 'muna oli ulkoa kuusi ja puoli senttiä valkoista emalia. Se aukesi, '
+        + 'ja sisällä oli kultainen keltuainen; keltuainen aukesi, ja sisällä '
+        + 'istui kultainen kana; kanan sisällä oli timanttinen kruunu ja '
+        + 'rubiinikoru. Ne kaksi viimeistä ovat kadoksissa. Keisarillisia munia '
+        + 'tehtiin kaikkiaan viisikymmentä. Vuoden 1917 jälkeen liike '
+        + 'kansallistettiin ja aarteet vietiin Kremlin asevarastoon; 1930-luvun '
+        + 'alussa niistä myytiin neljätoista ulkomaille valuutan takia. '
+        + 'Neljäkymmentäneljä tunnetaan yhä; kuusi on kateissa, ja ne kaikki '
+        + 'olivat saman naisen omia. Yksi palasi: vuoden 1887 muna löytyi '
+        + 'Yhdysvaltain keskilännestä. Joku oli ostanut sen neljällätoista '
+        + 'tuhannella dollarilla sulattaakseen sen romukullaksi, huomannut '
+        + 'ettei kauppa kannata, ja jättänyt sen keittiöön. Vuosia myöhemmin '
+        + 'hän luki lehdestä kadonneesta munasta. Se oli sama muna, ja arvoksi '
+        + 'arvioitiin kolmekymmentäkolme miljoonaa dollaria.',
+      kuvat: [
+        {
+          tiedosto: 'Яйцо "Курочка" (cropped).JPG',
+          selite: 'Vuoden 1885 ensimmäinen keisarillinen pääsiäismuna on ulkoa '
+            + 'valkoista emalia ja munan näköinen; kaikki oleellinen on sen '
+            + 'sisällä.',
+          lahde: 'Mihail Ovtšinnikov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   moskova: {
     'Bolšoi-teatteri': {
@@ -9077,6 +10353,48 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * moskova kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Perlovin teetalo': {
+      nosto: 'syvennys-moskova-karavaanitee',
+      teksti: 'Se samovaarin tee oli matkustanut kauemmin kuin isoisäsi. Venäjän '
+        + 'tee tuli Kiinasta maitse, ja koko kauppa kulki yhden ainoan pisteen '
+        + 'läpi: Kyahtan, joka perustettiin 1727 aivan rajalle. Kiinan puolelle '
+        + 'rakennettiin heti oma kauppakylänsä Maimaitsheng, ja kaksi kaupunkia '
+        + 'seisoivat nokakkain muurirajan yli. Vuoden 1762 jälkeen siellä ei '
+        + 'juuri käytetty rahaa vaan vaihdettiin tavaraa tavaraan: venäläiset '
+        + 'toivat turkiksia, kankaita ja vuotia, kiinalaiset silkkiä, '
+        + 'puuvillaa, posliinia ja teetä. Matka kesti tavallisesti '
+        + 'kuudestatoista kahdeksaantoista kuukauteen, ja juuri siitä syntyi '
+        + 'maku: tee nukkui yönsä karavaanin nuotioiden vieressä ja imi savun '
+        + 'itseensä. Sitä sekoitusta myydään nykyäänkin nimellä Russian '
+        + 'Caravan, vaikka savu saadaan siihen nykyään muilla keinoin. Isoisäsi '
+        + 'joi tätä teetä juuri oikeaan aikaan. Karavaanien huippuvuosi oli '
+        + '1860, ja kun Siperian radan ensimmäinen osuus valmistui 1880, sama '
+        + 'matka lyheni kuudestatoista kuukaudesta seitsemään viikkoon. '
+        + 'Hevosvetoinen teekuljetus loppui 1905, karavaanit 1925 — ja Kyahta, '
+        + 'joka oli aikoinaan rakennuttanut oman teepörssinsä, jäi paikaksi, '
+        + 'jonka läpi ei enää kulje mitään.',
+      kuvat: [
+        {
+          tiedosto: 'Кяхта 1783 год.jpg',
+          selite: 'Kyahta ja sen kiinalainen naapurikaupunki Maimaitsheng vuoden '
+            + '1783 kaiverruksessa: kaksi muurattua kauppapaikkaa vastakkain '
+            + 'rajan yli, ja koko Venäjän tee kulki niiden välistä.',
+          lahde: 'Nicolas Louis de Lespinasse 1783, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   odessa: {
     'Vorontsovin majakka': {
@@ -9337,6 +10655,62 @@ export const NAHTAVYYSJUTUT = {
             + 'alussa, ja vuonna 1904 valmistunutta Hedelmäkäytävää pidetään '
             + 'yhä torin ainoana varsinaisena arkkitehtuurinähtävyytenä.',
           lahde: 'Garik 11, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * odessa kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Potjomkin-portaat': {
+      nosto: 'syvennys-odessa-portaat',
+      teksti: 'Kun isoisäsi nousi rannasta kaupunkiin, portaikko oli '
+        + 'kolmekymmentäkaksivuotias ja täysin tuntematon maailmalla. Se '
+        + 'rakennettiin vuosina 1837–1841, ja sen teetti ruhtinas Mihail '
+        + 'Vorontsov: virallisesti lahjaksi vaimolleen Elżbietalle, käytännössä '
+        + 'myös siksi, että kaupungin varakkain väki asui törmän päällä ja '
+        + 'pääsi satamaan vain kiemurtelevia polkuja ja karkeita puuportaita '
+        + 'pitkin. Hinta oli kahdeksansataatuhatta ruplaa. Piirustukset teki '
+        + 'Francesco Boffo kahden muun kanssa, ja työmaata valvoi '
+        + 'englantilainen insinööri John Upton. Nimiä portaikolla oli isoisäsi '
+        + 'aikaan kolme, eikä yksikään niistä ollut nykyinen: sitä sanottiin '
+        + 'Bulevardin portaiksi, Richelieun portaiksi ja useimmiten '
+        + 'yksinkertaisesti Jättiläisportaiksi. Mark Twain kävi täällä kuusi '
+        + 'vuotta ennen isoisääsi ja käytti kirjassaan juuri sitä sanaa. Sitten '
+        + 'tuli vuosi 1925. Ohjaaja Sergei Eisenstein kuvasi portailla '
+        + 'mykkäelokuvansa kuuluisimman jakson, ja siitä tuli elokuvan '
+        + 'leikkauksen oppikirjaesimerkki: lastenvaunut, jotka vierivät '
+        + 'askelmia alas, ovat luultavasti maailman siteeratuin kuva-aihe. Ja '
+        + 'tässä on se kohta, joka isoisääsi kiinnostaisi eniten, koska hän oli '
+        + 'mies joka tarkisti asiat. Kohtaus ei ole kuvaus tapahtuneesta. '
+        + 'Eisenstein kokosi siihen sen, mitä oli tapahtunut eri puolilla '
+        + 'kaupunkia kaksikymmentä vuotta aiemmin, ja teki niistä yhden '
+        + 'yleiskuvan yhdelle portaikolle. Elokuvakriitikko Roger Ebert '
+        + 'kirjoitti tästä myöhemmin, että kohtaus on tehty niin hyvin, että '
+        + 'siitä puhutaan yhä kuin se olisi oikeasti tapahtunut näillä '
+        + 'askelmilla. Portaikko itse on sillä välin uusittu kerran: eroosio '
+        + 'söi alkuperäisen kiven, ja vuonna 1933 tilalle ladottiin '
+        + 'ruusunharmaa graniitti ja tasanteet päällystettiin asfaltilla. Nimi '
+        + 'vaihtui vasta 1955. Vuonna 1991 kaupunki palautti viralliseksi '
+        + 'nimeksi vanhan Primorskin portaat, mutta puhekielessä nimi ei ole '
+        + 'vaihtunut takaisin, eikä luultavasti vaihdu: heinäkuussa 2015 '
+        + 'Euroopan elokuva-akatemia kiinnitti portaisiin muistolaatan, jonka '
+        + 'mukaan tämä on eurooppalaisen elokuvan aarre.',
+      kuvat: [
+        {
+          tiedosto: 'Потьомкінські сходи 11.jpg',
+          selite: 'Portaikko nousee satamasta kaupunkiin, ja sen yläpäässä seisoo '
+            + 'herttua Richelieun patsas; kivi on vuoden 1933 graniittia, ei '
+            + 'alkuperäistä.',
+          lahde: 'Oleksandr Malyon, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -10443,6 +11817,74 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * vilna kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    Kirjankantajat: {
+      nosto: 'syvennys-vilna-knygnesiai',
+      teksti: 'Isoisäsi kuuli tässä kaupungissa neljää kieltä, ja yksi niistä oli '
+        + 'sinä kesänä kielletty painokoneesta. Vuonna 1864 keisarikunta '
+        + 'määräsi, että liettuaa ei saa painaa latinalaisin kirjaimin — '
+        + 'kyrillisin sai, ja siihen jopa kannustettiin. Lähteet aloittavat '
+        + 'kiellon vuodesta 1864 tai 1865 sen mukaan, lasketaanko alku '
+        + 'hallinnollisesta määräyksestä vai sitä seuranneesta täydestä '
+        + 'kiellosta; sitä ei kannata pyöristää, koska kyse oli juuri siitä, '
+        + 'ettei kieltoa koskaan säädetty laiksi. Se ei toiminut. Kirjoja '
+        + 'alettiin painaa rajan takana Itä-Preussissa ja aina Amerikassa asti, '
+        + 'ja niitä kannettiin takaisin. Kantajia sanottiin knygnešiai, '
+        + 'kirjankantajat: he kulkivat öisin metsäpolkuja säkit selässä, ja '
+        + 'kiinni jäänyt sai sakot, vankeutta tai karkotuksen Siperiaan. Määrät '
+        + 'kertovat, miten laajaksi se kasvoi. Itä-Preussissa painettiin '
+        + 'vuosina 1864–1896 yli kolme ja puoli miljoonaa kappaletta '
+        + 'liettuankielisiä julkaisuja, niistä noin puoli miljoonaa aapisia. '
+        + 'Kiellon viimeisinä vuosina rajan yli kannettiin arviolta '
+        + 'kolmestakymmenestä neljäänkymmeneen tuhanteen kirjaa vuodessa, ja '
+        + 'niistä noin kolmasosa jäi viranomaisille. Kyrillisin kirjaimin '
+        + 'painettuja liettuankielisiä kirjoja ilmestyi koko neljänkymmenen '
+        + 'vuoden aikana viitisenkymmentä. Kielto kumottiin 24. huhtikuuta '
+        + '1904, ja se oli saanut aikaan täsmälleen päinvastaista kuin oli '
+        + 'tarkoitettu: sen sijaan että kieli olisi kadonnut, sen ympärille '
+        + 'syntyi järjestäytynyt ja hyvin harjoitellut vastarinta. '
+        + 'Kirjankantajan päivää vietetään 16. maaliskuuta, kuuluisimman '
+        + 'kantajan Jurgis Bielinisin syntymäpäivänä.',
+      kuvat: [
+        {
+          tiedosto: 'Lithuanian book carrier Kazys Ūdra (1857–1937).jpg',
+          selite: 'Kazys Ūdra (1857–1937) oli knygnešys eli kirjankantaja, joka '
+            + 'kuljetti kiellettyjä liettuankielisiä kirjoja rajan yli '
+            + 'selässään.',
+          lahde: 'Tuntematon valokuvaaja, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Salattu avioliitto': {
+      aika: '1547–1551',
+      nosto: 'skandaali-barbora-salainen-avioliitto',
+      teksti: 'Kuningas voi julistaa sotia ja säätää lakeja, mutta salaa solmittu '
+        + 'avioliitto osoittautui vaikeimmaksi asiaksi puolustaa. Sigismund '
+        + 'August valitsi Barboran ja piti valintansa — vaikka koko valtakunta, '
+        + 'oma äiti etunenässä, oli toista mieltä. Myrkkyhuhut elävät Vilnassa '
+        + 'yhä.',
+      lahde: 'Wikipedia',
+    },
+    Boratynka: {
+      aika: '1659–1668',
+      nosto: 'skandaali-boratynka-kuparikohu',
+      teksti: 'Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, '
+        + 'mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä '
+        + '1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka '
+        + 'on kestänyt pidempään kuin kolikon ostovoima.',
+      lahde: 'Wikipedia',
+    },
   },
   oslo: {
     Kuninkaanlinna: {
@@ -10746,6 +12188,37 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Henri-Georges Chartier, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * oslo kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Huudon varkaus': {
+      aika: '1994',
+      nosto: 'skandaali-huudon-varkaus',
+      teksti: 'Koko maailman katsoessa Lillehammerille joku katsoi Oslon '
+        + 'kansallisgallerian toisen kerroksen ikkunaa. Taidehistorian '
+        + 'kuuluisin kirkaisu vietiin tikapuilla, ja varkaiden jättämä '
+        + 'kiitoskortti vartioinnista lienee lajissaan tylyimpiä '
+        + 'asiakaspalautteita.',
+      lahde: 'Wikipedia',
+    },
+    Boheemikirja: {
+      aika: '1885–1886',
+      nosto: 'skandaali-boheemikirjan-takavarikko',
+      teksti: 'Kirja ehti tuskin kirjakauppaan, kun valtio jo keräsi sen pois. '
+        + 'Virallisesti kyse oli säädyllisyydestä; epävirallisesti siitä, että '
+        + 'Kristiania oli pieni kaupunki ja romaanin henkilöt tunnistettavia. '
+        + 'Mikään ei tee kirjasta kiinnostavampaa kuin takavarikko — sen '
+        + 'tiesivät boheemitkin.',
       lahde: 'Wikipedia',
     },
   },
@@ -11272,6 +12745,35 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Leif Jørgensen, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * kobenhavn kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Vararikko 1813': {
+      aika: '1813',
+      nosto: 'skandaali-tanskan-valtionvararikko-1813',
+      teksti: 'Valtio ei voi mennä konkurssiin, sanotaan usein. Tanska kokeili '
+        + 'tammikuussa 1813 ja osoitti väitteen vääräksi. Setelien omistajat '
+        + 'saivat pitää paperinsa — arvosta suurin osa vain oli kadonnut, ja '
+        + 'luottamuksen paluuta saatiin odottaa pidempään kuin rauhaa.',
+      lahde: 'Wikipedia',
+    },
+    Alberti: {
+      aika: '1908',
+      nosto: 'skandaali-alberti-skandaali',
+      teksti: 'Harva rikos selviää niin vaivattomasti: oikeusministeri hoiti '
+        + 'ilmiannon, tunnustuksen ja syyllisen kiinnioton samalla '
+        + 'asiointikerralla. Poliisin työksi jäi lähinnä kirjata summa — 18 '
+        + 'miljoonaa kruunua — ja tarkistaa, ettei nollia puutu.',
       lahde: 'Wikipedia',
     },
   },
@@ -17762,6 +19264,80 @@ export const NAHTAVYYSJUTUT = {
             + 'neljällä huoneella oli yksi yhteinen keittiö, ja jokaisessa '
             + 'huoneessa asui oma perheensä.',
           lahde: 'JIP, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * tampere kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    Finlayson: {
+      nosto: 'syvennys-tampere-finlayson',
+      teksti: 'Skotlantilainen James Finlayson perusti kosken yläjuoksulle vuonna '
+        + '1820 konepajan, jonka oli tarkoitus valmistaa kehruukoneita. Koneet '
+        + 'eivät menneet kaupaksi, joten tehdas alkoi kehrätä itse. Finlayson '
+        + 'myi laitoksensa 1836 kahdelle pietarilaiselle liikemiehelle, Carl '
+        + 'Samuel Nottbeckille ja Georg Adolf Rauchille, ja vasta siitä kasvu '
+        + 'alkoi. Vuonna 1837 valmistui talo, jota kaupunki kutsuu yhä '
+        + 'Kuusvooninkiseksi: nimi tulee ruotsin sanoista sex våningar, kuusi '
+        + 'kerrosta. Puutalojen keskellä se oli pilvenpiirtäjä. Se on myös '
+        + 'Suomen ensimmäinen moderni tehdasrakennus, koska sen välipohjia '
+        + 'eivät kannata väliseinät vaan valurautapylväät, jotka valettiin '
+        + 'Fiskarsissa. Kehruu alkoi 1838, kudonta 1839. Ja sitten '
+        + 'mittasuhteet: 1850-luvulla tehdas työllisti kaksi tuhatta ihmistä, '
+        + 'ja koko kaupungissa oli vuonna 1856 neljä tuhatta asukasta. '
+        + 'Työväestä suurin osa oli naisia ja lapsia — juuri se, minkä isoisäsi '
+        + 'huomasi salien ovelta. Tehdas ei ollutkaan vain työpaikka. Sen väki '
+        + 'muodosti oman seurakuntansa vuosina 1846–1860, ja tehtaalla oli oma '
+        + 'pappi, tehtaansaarnaaja, vuoteen 1880 asti. Kuusi vuotta isoisäsi '
+        + 'käynnin jälkeen tehtaan johtaja Wilhelm von Nottbeck rakennutti '
+        + 'työväelleen punatiilisen kirkon, ja siellä aloitettiin vuoden '
+        + 'ensimmäinen työpäivä jumalanpalveluksella aina 1970-luvulle asti. '
+        + 'Kirkko annettiin seurakunnalle 1981 — yhdellä ehdolla: nimi pysyy.',
+      kuvat: [
+        {
+          tiedosto: 'Finlaysonin kirkko Heli Haavisto (16556986992).jpg',
+          selite: 'Finlaysonin puuvillatehtaan oma kirkko valmistui 1879, ja '
+            + 'tehdas luovutti sen seurakunnalle 1981 ehdolla, että nimi '
+            + 'säilyy.',
+          lahde: 'Museokeskus Vapriikki, kuva Heli Haavisto, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Tuomiokirkko: {
+      nosto: 'syvennys-tampere-kaarme',
+      teksti: 'Isoisäsi ei nähnyt tätä kirkkoa: se rakennettiin vasta vuosina '
+        + '1902–1907, kun tehdaskaupungilla oli varaa rakentaa itselleen jotain '
+        + 'muuta kuin tehdas. Lars Sonck piirsi sen Uudenkaupungin harmaasta '
+        + 'graniitista, ja maalaustyöhön kutsuttiin Hugo Simberg. Alttarin '
+        + 'kahta puolta hän maalasi Haavoittuneen enkelin ja Kuoleman '
+        + 'puutarhan. Lehterin kaidetta pitkin kiertää Köynnöksenkantajat, '
+        + 'jossa kaksitoista alastonta pikkupoikaa kannattelee ruusuköynnöstä. '
+        + 'Ja aivan kirkkosalin kunniapaikalle, pääholvin kattoon, hän maalasi '
+        + 'kiemurtelevan paratiisikäärmeen, jolla on suussaan hyvän ja pahan '
+        + 'tiedon omena. Vastaanotto oli äänekäs. Luurangot ja alastomat pojat '
+        + 'olivat monien mielestä kirkkoon kuulumattomia, ja käärme kaikkein '
+        + 'pahiten. Riita ei myöskään kuollut nopeasti: vielä toisen '
+        + 'maailmansodan jälkeen piispantarkastuksessa vaadittiin, että '
+        + 'loukkaavat ja sopimattomat freskot poistetaan. Niitä ei poistettu. '
+        + 'Nykyään ne ovat suomalaisen symbolismin mestariteoksia, ja käärme '
+        + 'katsoo alas kirkkosaliin siipien keskeltä kuin mitään ei olisi '
+        + 'tapahtunut.',
+      kuvat: [
+        {
+          tiedosto: 'Kattofresko Tampereen tuomiokirkko.jpg',
+          selite: 'Tampereen tuomiokirkon pääholvin keskellä kiemurtelee '
+            + 'paratiisikäärme, jonka suussa on hyvän ja pahan tiedon omena.',
+          lahde: 'Hugo Simberg, Wikimedia Commons (public domain)',
         },
       ],
       lahde: 'Wikipedia',
@@ -36538,6 +38114,49 @@ export const NAHTAVYYSJUTUT = {
             + 'Glazioun uudistuksessa 1864, ja kuva on otettu pian sen '
             + 'jälkeen.',
           lahde: 'Instituto Moreira Salles, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  sevilla: {
+    /*
+     * KAUPUNGIN KOHDALLA OLEVIEN KARTTANOSTOJEN JUTUT (omistajan
+     * sääntö 2.9.2026 illalla, ks. js/packs/maakartat.js kaupungin
+     * sevilla kohteet).
+     *
+     * TEKSTIÄ EI KIRJOITETTU UUDESTAAN: jokainen kappale, kuva ja
+     * lähderivi on kopioitu noston omasta pakista sanatarkasti, ja
+     * tests/nostot-kartalla.test.mjs vertaa niitä merkki merkiltä —
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee
+     * nostona. Kenttä `nosto` kertoo, mistä nostosta juttu on.
+     */
+    'Victorian laituri': {
+      nosto: 'syvennys-sevilla-victoria',
+      teksti: 'Elokuun 10. päivänä 1519 viisi laivaa irrotti köydet tässä '
+        + 'kaupungissa ja laskeutui Guadalquiviria alas Sanlúcariin, joen '
+        + 'suulle. Purjeet nostettiin vasta syyskuun 20. päivänä, ja mukana oli '
+        + 'noin 270 miestä. Kolmen vuoden päästä palasi yksi laiva, Victoria, '
+        + 'ja sen kannella kahdeksantoista miestä. Matkan varrella oli kuollut '
+        + 'myös retkikunnan johtaja. Mutta tässä on se kohta, joka isoisääsi '
+        + 'kiinnostaisi kaikkein eniten. Kap Verdellä miehet nousivat maihin '
+        + 'ostamaan ruokaa ja kuulivat, että päivä oli kymmenes heinäkuuta. '
+        + 'Heidän omassa kirjanpidossaan oli yhdeksäs. He olivat merkinneet '
+        + 'joka ikisen päivän kolmen vuoden ajan, eikä yhtäkään ollut jäänyt '
+        + 'kirjaamatta — ja silti yksi puuttui. Portugalilaiset pidättivät '
+        + 'kolmetoista miestä, kun selvisi mitä ruumassa oli, mutta Victoria '
+        + 'pääsi pakoon kaksikymmentäkuusi tonnia neilikkaa ja kanelia '
+        + 'kyydissään ja purjehti syyskuussa 1522 jokea ylös samaan satamaan, '
+        + 'josta oli lähtenyt. Päivä oli kadonnut siksi, että laiva oli '
+        + 'kiertänyt maapallon länteen, samaan suuntaan kuin aurinko näyttää '
+        + 'kulkevan taivaalla. Sitä ei ollut osannut odottaa kukaan.',
+      kuvat: [
+        {
+          tiedosto: 'Ortelius - Maris Pacifici 1589.jpg',
+          selite: 'Abraham Orteliuksen Maris Pacifici vuodelta 1589 on '
+            + 'ensimmäinen painettu kartta Tyynestämerestä, ja sen keskellä '
+            + 'purjehtii Victoria.',
+          lahde: 'Abraham Ortelius 1589, Wikimedia Commons (public domain)',
         },
       ],
       lahde: 'Wikipedia',

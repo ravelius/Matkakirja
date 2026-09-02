@@ -135,6 +135,15 @@ import { FOKUSKOHTEET_TUR } from './packs/fokuskohteet-tur.js';
 import { FOKUSKOHTEET_ZWE } from './packs/fokuskohteet-zwe.js';
 import { FOKUSKOHTEET_GRC } from './packs/fokuskohteet-grc.js';
 import { MAASTOKOHTEET } from './packs/maastokohteet.js';
+/*
+ * KAUPUNKILEHDEN KOHDEKARTAT. Tuodaan tänne yhtä kysymystä varten:
+ * onko nostolla oma piste kaupunkilehden kartalla (ks.
+ * KAUPUNGIN KOHDALLA OLEVAT NOSTOT alempana). Taulu on laudan dataa
+ * eikä käyttöliittymää, ja niputuksessa se on jo ladattu
+ * (tools/build-standalone.mjs: js/packs/maakartat.js on listan
+ * alussa, tämä moduuli lopussa), joten kehää ei synny.
+ */
+import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import {
   niputaFokusmerkit, nippuAsettelunVersio, nippuAvaaKaupunki, nippuLaatanEtaisyys,
   nippuLaattaEsteet,
@@ -497,7 +506,118 @@ export function kohdeKarttarivit({
      * pelaajalle se näyttäisi merkiltä ilman karttaa.
      */
     .filter(({ paikka }) => pohjanAlla(paikka.x, paikka.y));
-  return karsiKaupunkiruuhka(rivit, kaupungit);
+  /*
+   * KAKSI KARSINTAA, TÄSSÄ JÄRJESTYKSESSÄ. Ensin pois ne, jotka
+   * asuvat kaupunkilehden kohdekartalla (omistajan sääntö 2.9.2026
+   * ilta) — ne eivät kuulu pääkartalle lainkaan. Vasta jäljelle
+   * jäävistä lasketaan kaupunkinostojen katto (1.9.2026), joten katon
+   * kolme paikkaa menevät niille nostoille, joilla ei ole muuta
+   * karttapaikkaa.
+   */
+  return karsiKaupunkiruuhka(karsiKaupunkikartanNostot(rivit, kaupungit), kaupungit);
+}
+
+/*
+ * === KAUPUNGIN KOHDALLA OLEVAT NOSTOT EIVÄT OLE PÄÄKARTALLA =======
+ *
+ * Omistaja 2.9.2026 illalla, kolmatta kertaa sanottuna (sanatarkasti):
+ * *"nuo karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+ * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+ * kaupunkikartalle. olen sanonut tästä jo kaksi kertaa aiemmin, eikä
+ * se ole vieläkään toteutunut."*
+ *
+ * MIKÄ ON "KAUPUNGIN KOHDALLA". Kaksi mittaa, ja kumpikin riittää:
+ *
+ *   1. nosto on kaupunkilehden kohdekartan rajauksessa
+ *      (js/packs/maakartat.js KAUPUNKIKARTAT[kaupunki].rajat), tai
+ *   2. nosto on alle KAUPUNGIN_KOHDALLA_SADE laudan yksikköä
+ *      kaupungin laatasta.
+ *
+ * TÄMÄ PASSI TOTEUTTAA MITAN 1 SUORAAN JA MITAN 2 SEURAUKSENA. Rivillä
+ * on vain laudan koordinaatit, ja rajaustesti vaatisi käänteis-
+ * projektion (se asuu js/fokusmitat.js:ssä, joka on niputuksessa VASTA
+ * tämän jälkeen). Sitä ei tarvita, koska kohdekartalla oleva nosto
+ * tunnistetaan sen omasta linkistä: kohdekartan piste kantaa kenttää
+ * `nosto: '<tunnus>'`, ja tunnus on täsmälleen se merkki, jonka tämä
+ * passi pudottaa. Piste voi olla kartalla vain, jos se on rajauksen
+ * sisällä (tests/nostot-kartalla.test.mjs valvoo sitä), joten linkin
+ * olemassaolo ON mitta 1.
+ *
+ * SÄDE (mitta 2) on nostojen tarkistuksen ja testin työkalu:
+ * tools/tarkista-nostopaikat.mjs listaa sillä ne kaupungin kohdalla
+ * olevat nostot, joilta kohdekartan piste vielä puuttuu — eli sen
+ * työlistan, joka tyhjentää pääkartan kaupunkien päältä lopullisesti.
+ * Vakio on täällä, koska sääntö on tämän passin sääntö.
+ *
+ * MIKSI PUDOTUS EI SEURAA PELKÄSTÄ SÄTEESTÄ. Omistajan aiempi sääntö
+ * samalta päivältä on yhä voimassa: *"lisää kaikki historian hetket ja
+ * muut karttanostot myös joko pääkarttanäkymään tai sitten
+ * kaupunkilehden kaupunkikartalle"*. Jos pelkkä säde pudottaisi merkin,
+ * kaupungin lähialueen nosto (Sofian Vitoša 5,1 yksikköä eli 13 km,
+ * Boyanan kirkko 6 km, eläintarha 3 km) katoaisi KAIKILTA kartoilta:
+ * se on kohdekartan rajauksen ulkopuolella eikä sille ole siellä
+ * paikkaa. Kaksi sääntöä yhdessä tarkoittavat siis: kohdekartalla
+ * oleva nosto ei ole pääkartalla, ja kohdekartalle mahtumaton nosto
+ * jää pääkartalle kunnes sille tehdään paikka.
+ *
+ * SÄDE 7 YKSIKKÖÄ on mitattu eikä arvattu. Yksi laudan yksikkö on
+ * näillä leveysasteilla noin 2,6 km (mitattu 813 nostoparista
+ * maailmankartalla). Rajat tulevat omistajan kuvakaappauksesta: Sofian
+ * Vitoša (5,12 yksikköä = 13 km) on kaupungin kohdalla, Pernik (10,28
+ * = 27 km), Rilan luostari (22,11 = 58 km) ja Plovdiv (52,14 = 137 km)
+ * eivät. Väli on siis 5,12–10,28, ja 7 jättää molempiin puoliin
+ * kolmanneksen pelivaraa. Se on myös PIENEMPI kuin kaupunkinostojen
+ * katon säde 8, joten katolle jää oma rengas 7–8 yksikköä, jossa se
+ * toimii kuten ennen (Berliinin Köpenick 7,7, Helsingin kirjasota 7,6,
+ * Pariisin kaulanauhajuttu 7,3).
+ */
+export const KAUPUNGIN_KOHDALLA_SADE = 7;
+
+/*
+ * KOHDEKARTTOJEN NOSTOLINKIT: nostotunnus → kaupunki. Sama kenttä,
+ * jota tools/tarkista-nostopaikat.mjs lukee (`nosto` on merkkijono tai
+ * lista), mutta ilman sen napautettavuustarkistusta — se on testin työ.
+ * Taulu on laudan dataa eikä muutu ajon aikana, joten se lasketaan
+ * kerran.
+ */
+let kohdeKarttalinkit = null;
+
+function kohdeKaupunkikartanNostot() {
+  if (kohdeKarttalinkit) return kohdeKarttalinkit;
+  kohdeKarttalinkit = new Map();
+  for (const [kaupunki, kartta] of Object.entries(KAUPUNKIKARTAT)) {
+    for (const piste of kartta.kohteet ?? []) {
+      if (!piste.nosto) continue;
+      const tunnukset = Array.isArray(piste.nosto) ? piste.nosto : [piste.nosto];
+      for (const tunnus of tunnukset) kohdeKarttalinkit.set(tunnus, kaupunki);
+    }
+  }
+  return kohdeKarttalinkit;
+}
+
+/**
+ * POIS PÄÄKARTALTA NE, JOILLA ON PAIKKA KAUPUNKILEHDEN KARTALLA.
+ *
+ * Ehto on kaksiosainen: nostolla on kohdekartan piste JA se kaupunki
+ * on tällä laudalla. Jälkimmäinen ei ole muodollisuus — kohdekartta
+ * avautuu vain kaupunkiin saavuttaessa, joten laudalta puuttuvan
+ * kaupungin kartta ei ole pelaajan ulottuvilla eikä se voi korvata
+ * pääkartan merkkiä.
+ *
+ * `kaupungit`-ehto pitää myös tarkistustyökalun perusmitan ennallaan:
+ * tools/tarkista-nostopaikat.mjs ajaa saman passin tyhjällä
+ * kaupunkilistalla saadakseen KAIKKI nostot, ja se listaus ei saa
+ * kadottaa juuri niitä, joiden paikkaa se on tarkistamassa.
+ */
+function karsiKaupunkikartanNostot(rivit, kaupungit) {
+  if (!kaupungit?.length) return rivit;
+  const linkit = kohdeKaupunkikartanNostot();
+  if (!linkit.size) return rivit;
+  const laudalla = new Set(kaupungit.map((k) => k.id));
+  return rivit.filter((r) => {
+    const kaupunki = linkit.get(r.kohde?.id);
+    return !(kaupunki && laudalla.has(kaupunki));
+  });
 }
 
 /*
@@ -546,6 +666,14 @@ export function kohdeKarttarivit({
  * Lippu on merkitty vain niille, joille tools/tarkista-nostopaikat.mjs
  * osoittaa, ettei kohdekarttaa ole tarjolla; tests/nostot-kartalla.test.mjs
  * valvoo, ettei se leviä muualle.
+ *
+ * KATTOVAPAA EI ENÄÄ PELASTA KAUPUNKIKARTAN NOSTOA (2.9.2026 ilta).
+ * Karsintajärjestys on nyt kaksivaiheinen: kohdekartalla asuvat merkit
+ * pudotetaan ENNEN tätä funktiota (karsiKaupunkikartanNostot), joten
+ * niiden lippu ei ehdi vaikuttaa mihinkään. Lippu jää siis siihen, mitä
+ * se lupaa: kaupungin lähialueen nostoon, jolle kohdekartalla EI ole
+ * paikkaa — Wieliczka, Köpenick, Richmond Park, Pariisin
+ * kaulanauhajuttu, Vitoša.
  */
 const KAUPUNKIKATON_SADE = 8;
 const KAUPUNKINOSTOJEN_KATTO = 3;

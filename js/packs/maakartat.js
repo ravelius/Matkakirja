@@ -3795,7 +3795,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Suuri basaari', lat: 41.011, lon: 28.9683, nosto: 'kapalicarsi' },
       { nimi: 'Sininen moskeija', lat: 41.0054, lon: 28.9768, wiki: 'Sulttaani Ahmedin moskeija' },
       { nimi: 'Hagia Sofia', lat: 41.0085, lon: 28.98, wiki: 'Hagia Sofia' },
-      { nimi: 'Topkapın palatsi', lat: 41.0128, lon: 28.984, wiki: 'Topkapın palatsi' },
+      {
+        nimi: 'Topkapın palatsi', lat: 41.0128, lon: 28.984, wiki: 'Topkapın palatsi',
+        nosto: 'skandaali-kasikci-elmasi-legenda',
+      },
       { nimi: 'Galatan torni', lat: 41.0256, lon: 28.9742, wiki: 'Galatan torni' },
       { nimi: 'Üsküdar', lat: 41.0254, lon: 29.0156, wiki: 'Üsküdar' },
       /*
@@ -3899,6 +3902,27 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Largo da Severa', lat: 38.7161, lon: -9.1344, nosto: 'syvennys-lissabon-severa',
       },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * lissabon); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Alves dos Reis', lat: 38.7085, lon: -9.139,
+        nosto: 'skandaali-alves-dos-reis-setelihuijaus',
+      },
+      {
+        nimi: 'Ultimaatum 1890', lat: 38.716, lon: -9.1414,
+        nosto: 'skandaali-vaaleanpunainen-kartta-1890',
+      },
     ],
   },
   barcelona: {
@@ -3936,6 +3960,27 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Musiikkipalatsi', lat: 41.3876, lon: 2.1752, wiki: 'Palau de la Música Catalana' },
       { nimi: 'Boquerian kauppahalli', lat: 41.3817, lon: 2.1716 },
       { nimi: 'Kolumbuksen patsas', lat: 41.3758, lon: 2.1778 },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * barcelona); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Font de Canaletes', lat: 41.3853, lon: 2.1701,
+        nosto: 'syvennys-barcelona-rambla',
+      },
+      {
+        nimi: 'Roviran aukio', lat: 41.4076, lon: 2.1584,
+        nosto: 'syvennys-barcelona-kilpailu',
+      },
     ],
   },
   granada: {
@@ -3988,6 +4033,27 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Leijonain piha', lat: 37.1771, lon: -3.5893,
         nosto: 'syvennys-granada-kupoli', nimiPuoli: 'vasen',
       },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * granada); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Irvingin huoneet', lat: 37.1775, lon: -3.59,
+        nosto: 'syvennys-granada-irving',
+      },
+      {
+        nimi: 'Alcaicería', lat: 37.1759, lon: -3.5984,
+        nosto: 'syvennys-granada-alcaiceria',
+      },
     ],
   },
   edinburgh: {
@@ -4021,7 +4087,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Charlotte Square', lat: 55.9514, lon: -3.2086 },
       { nimi: 'Edinburghin linna', lat: 55.9487, lon: -3.2004, wiki: 'Edinburghin linna' },
       { nimi: 'St Gilesin katedraali', lat: 55.9495, lon: -3.1909, wiki: 'St Gilesin katedraali' },
-      { nimi: 'Greyfriars Bobby', lat: 55.9469, lon: -3.1913, wiki: 'Greyfriars Bobby' },
+      {
+        nimi: 'Greyfriars Bobby', lat: 55.9469, lon: -3.1913, wiki: 'Greyfriars Bobby',
+        nosto: 'syvennys-edinburgh-bobby',
+      },
       { nimi: 'Calton Hill', lat: 55.9553, lon: -3.1828, wiki: 'Calton Hill' },
       { nimi: 'Holyroodin palatsi', lat: 55.9527, lon: -3.1716, wiki: 'Holyroodin palatsi' },
       /*
@@ -4078,7 +4147,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Marseillen katedraali', lat: 43.2998, lon: 5.3649, wiki: 'Marseillen katedraali' },
       { nimi: 'Saint-Victorin kirkko', lat: 43.2903, lon: 5.3656 },
       { nimi: 'Vanhasatama', lat: 43.2946, lon: 5.3693, wiki: 'Marseillen vanha satama' },
-      { nimi: 'Notre-Dame de la Garde', lat: 43.2839, lon: 5.3712, wiki: 'Notre-Dame de la Garde' },
+      {
+        nimi: 'Notre-Dame de la Garde', lat: 43.2839, lon: 5.3712, wiki: 'Notre-Dame de la Garde',
+        nosto: 'syvennys-marseille-exvotot',
+      },
       { nimi: 'Saint-Charlesin asema', lat: 43.3032, lon: 5.3816 },
     ],
   },
@@ -4189,6 +4261,39 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Johanneksenkirkko', lat: 60.1618, lon: 24.9447, wiki: 'Johanneksenkirkko (Helsinki)' },
       // Kainalossa oikeassa alanurkassa.
       { nimi: 'Suomenlinna', lat: 60.1472, lon: 24.9864, wiki: 'Suomenlinna' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * helsinki); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Löyly ja avanto', lat: 60.18647, lon: 24.95728,
+        nosto: 'syvennys-helsinki-sauna',
+      },
+      {
+        nimi: 'Kantele', lat: 60.1699, lon: 24.9384,
+        nosto: 'syvennys-helsinki-kantele',
+      },
+      {
+        nimi: 'Finlandia', lat: 60.16722, lon: 24.94333,
+        nosto: 'syvennys-helsinki-finlandia',
+      },
+      {
+        nimi: 'Pirtukuningas', lat: 60.1676, lon: 24.9547,
+        nosto: 'skandaali-kieltolaki-ja-pirtukuningas',
+      },
+      {
+        nimi: 'Nurmen kohu', lat: 60.1875, lon: 24.9272,
+        nosto: 'skandaali-nurmen-amatoorikohu',
+      },
     ],
   },
   ateena: {
@@ -4334,10 +4439,35 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Keskusrautatieasema', lat: 52.379, lon: 4.9006, wiki: 'Amsterdamin keskusrautatieasema' },
       { nimi: 'Anne Frankin talo', lat: 52.3752, lon: 4.8841, wiki: 'Anne Frankin talo' },
-      { nimi: 'Kuninkaanpalatsi', lat: 52.3731, lon: 4.8913, wiki: 'Amsterdamin kuninkaallinen palatsi' },
+      {
+        nimi: 'Kuninkaanpalatsi', lat: 52.3731, lon: 4.8913,
+        wiki: 'Amsterdamin kuninkaallinen palatsi',
+        nosto: 'syvennys-amsterdam-haikarat',
+      },
       { nimi: 'Rembrandtin talo', lat: 52.3693, lon: 4.9012 },
       { nimi: 'Artis-eläintarha', lat: 52.367, lon: 4.913, wiki: 'Artis (eläintarha)' },
       { nimi: 'Rijksmuseum', lat: 52.3599, lon: 4.885, wiki: 'Rijksmuseum' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * amsterdam); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Timanttihiomo', lat: 52.3696, lon: 4.904,
+        nosto: 'syvennys-amsterdam-timantit',
+      },
+      {
+        nimi: 'Amsterdam-laiva', lat: 52.3714, lon: 4.9147,
+        nosto: 'syvennys-amsterdam-voc-hylky',
+      },
     ],
   },
   dublin: {
@@ -4395,6 +4525,27 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'St James’s Gate', lat: 53.3419, lon: -6.2867, nosto: 'syvennys-dublin-vuokrakirja',
         siirto: { x: 0, y: 26 },
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * dublin); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Kellsin kirja', lat: 53.3444, lon: -6.2577,
+        nosto: 'syvennys-dublin-kellsinkirja',
+      },
+      {
+        nimi: 'Ouzel Galley', lat: 53.3485, lon: -6.2531,
+        nosto: 'skandaali-ouzel-galleyn-mysteeri',
       },
     ],
   },
@@ -4459,7 +4610,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni' },
       { nimi: 'Riemukaari', lat: 48.8738, lon: 2.295, wiki: 'Riemukaari (Pariisi)' },
       { nimi: 'Concorden aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
-      { nimi: 'Louvre', lat: 48.861, lon: 2.3358, wiki: 'Louvre' },
+      {
+        nimi: 'Louvre', lat: 48.861, lon: 2.3358, wiki: 'Louvre',
+        nosto: 'skandaali-mona-lisan-varkaus-1911',
+      },
       // Puiston keskipiste on suuri kahdeksankulmainen allas
       // (vesitarkistin nappasi) — piste seisoo länsinurmikoilla.
       { nimi: 'Luxembourgin puisto', lat: 48.8467, lon: 2.3352, wiki: 'Luxembourgin puisto' },
@@ -4567,6 +4721,31 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Suuri kauppahalli', lat: 47.4866, lon: 19.059 },
       // Kainalossa oikeassa ylänurkassa.
       { nimi: 'Sankarien aukio', lat: 47.5153, lon: 19.0781, wiki: 'Sankarien aukio (Budapest)' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * budapest); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Maanalainen', lat: 47.5057, lon: 19.0631,
+        nosto: 'syvennys-budapest-kisfoldalatti',
+      },
+      {
+        nimi: 'Elmyr de Hory', lat: 47.4979, lon: 19.0402,
+        nosto: 'skandaali-elmyr-de-hory-vaarentaja',
+      },
+      {
+        nimi: 'Seuson hopeat', lat: 47.4912, lon: 19.0625,
+        nosto: 'skandaali-seuso-aarteen-kiista',
+      },
     ],
   },
   praha: {
@@ -4606,7 +4785,19 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kaarlensilta', lat: 50.0866, lon: 14.4106, wiki: 'Kaarlensilta' },
       { nimi: 'Vanhauusi synagoga', lat: 50.09, lon: 14.4186, wiki: 'Vanhauusi synagoga' },
       { nimi: 'Astronominen kello', lat: 50.087, lon: 14.4207, wiki: 'Prahan astronominen kello' },
-      { nimi: 'Kansallismuseo', lat: 50.0789, lon: 14.4308, wiki: 'Prahan kansallismuseo' },
+      /*
+       * Kuninkaanhovin käsikirjoitukset (`skandaali-...`) LIITETTIIN
+       * TÄHÄN pisteeseen eikä omaksi merkikseen: väärennökset löytyivät
+       * Dvůr Královésta mutta niitä säilytetään tässä museossa, ja oma
+       * merkki peittäisi museon numeron 81-prosenttisesti
+       * (tools/tarkista-karttapisteet.mjs). Sama ratkaisu kuin Sofian
+       * Serdican areenalla.
+       */
+      {
+        nimi: 'Kansallismuseo', lat: 50.0789, lon: 14.4308,
+        wiki: 'Prahan kansallismuseo',
+        nosto: 'skandaali-kuninkaanhovin-kasikirjoitukset',
+      },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
        * *"lisää kaikki historian hetket ja muut karttanostot myös joko
@@ -4622,6 +4813,23 @@ export const KAUPUNKIKARTAT = {
        */
       {
         nimi: 'Klementinum', lat: 50.0867, lon: 14.4164, nosto: 'syvennys-praha-klementinum',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * praha); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Tycho Brahe', lat: 50.0876, lon: 14.4227,
+        nosto: ['syvennys-praha-tycho', 'skandaali-tycho-brahen-kuolinmysteeri'],
       },
     ],
   },
@@ -4699,6 +4907,27 @@ export const KAUPUNKIKARTAT = {
        */
       {
         nimi: 'Vuoristovesijohto', lat: 48.1984, lon: 16.3760, nosto: 'syvennys-wien-vesijohto',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * wien); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Klimtin maalaukset', lat: 48.2131, lon: 16.3597,
+        nosto: 'skandaali-klimtin-tiedekuntamaalaukset',
+      },
+      {
+        nimi: 'Saliera', lat: 48.2036, lon: 16.3619,
+        nosto: 'skandaali-salieran-varkaus',
       },
     ],
   },
@@ -5013,6 +5242,27 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Berliinin karhu', lat: 52.5099, lon: 13.4143, nosto: 'syvennys-berliini-karhu',
       },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * berliini); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Kulta-Liisa', lat: 52.5145, lon: 13.3501,
+        nosto: 'syvennys-berliini-kultaliisa',
+      },
+      {
+        nimi: 'Hobrechtin putket', lat: 52.5219, lon: 13.4132,
+        nosto: 'syvennys-berliini-viemarit',
+      },
     ],
   },
   madrid: {
@@ -5070,6 +5320,31 @@ export const KAUPUNKIKARTAT = {
        */
       {
         nimi: 'Tasavallan vuosi', lat: 40.4153, lon: -3.6971, nosto: 'syvennys-madrid-tasavalta',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * madrid); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Casa de Fieras', lat: 40.4105, lon: -3.678,
+        nosto: 'syvennys-madrid-casadefieras',
+      },
+      {
+        nimi: 'Filipin patsas', lat: 40.418538, lon: -3.71224,
+        nosto: 'syvennys-madrid-felipe',
+      },
+      {
+        nimi: 'Baldomera', lat: 40.4089, lon: -3.7009,
+        nosto: 'skandaali-baldomera-larra-pyramidi',
       },
     ],
   },
@@ -5140,6 +5415,31 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Norrström', lat: 59.3286, lon: 18.0713, nosto: 'syvennys-tukholma-lohi',
       },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * tukholma); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Setelipankki', lat: 59.3225, lon: 18.0739,
+        nosto: 'skandaali-palmstruchin-setelipankki',
+      },
+      {
+        nimi: 'Naamiaislaukaus', lat: 59.3297, lon: 18.0706,
+        nosto: 'skandaali-naamiaisten-laukaus',
+      },
+      {
+        nimi: 'Kreuger', lat: 59.3318, lon: 18.0696,
+        nosto: 'skandaali-kreugerin-romahdus',
+      },
     ],
   },
   venetsia: {
@@ -5184,6 +5484,31 @@ export const KAUPUNKIKARTAT = {
       // Portin edusta eikä altaan reuna: entinen piste osui
       // telakka-altaaseen (vesitarkistin 9.8.2026).
       { nimi: 'Arsenaali', lat: 45.4344, lon: 12.3506, wiki: 'Arsenale' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * venetsia); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Markuksen hevoset', lat: 45.4345, lon: 12.3394,
+        nosto: 'syvennys-venetsia-hevoset',
+      },
+      {
+        nimi: 'Dogen palatsi', lat: 45.4337, lon: 12.3405,
+        nosto: 'syvennys-venetsia-plebiskiitti',
+      },
+      {
+        nimi: 'Aldon paino', lat: 45.439, lon: 12.3287,
+        nosto: 'syvennys-venetsia-aldus',
+      },
     ],
   },
   rooma: {
@@ -5256,6 +5581,23 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Vatikaanin palatsi', lat: 41.9036, lon: 12.4564, nosto: 'syvennys-rooma-vatikaani',
       },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoi pääkartalla kaupungin merkin
+       * päällä; nyt sen paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa sen pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * rooma); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Banca Romana', lat: 41.9009, lon: 12.4785,
+        nosto: 'skandaali-banca-romana-1893',
+      },
     ],
   },
   krakova: {
@@ -5290,7 +5632,10 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Barbakaani', lat: 50.0655, lon: 19.9417 },
       { nimi: 'Collegium Maius', lat: 50.0617, lon: 19.9337, wiki: 'Jagellon yliopisto' },
-      { nimi: 'Mariankirkko', lat: 50.0617, lon: 19.9392, wiki: 'Mariankirkko (Krakova)' },
+      {
+        nimi: 'Mariankirkko', lat: 50.0617, lon: 19.9392, wiki: 'Mariankirkko (Krakova)',
+        nosto: 'syvennys-krakova-hejnal',
+      },
       { nimi: 'Wawelin linna', lat: 50.0544, lon: 19.9366, wiki: 'Wawelin linna' },
       { nimi: 'Wawelin lohikäärme', lat: 50.053, lon: 19.9336 },
       { nimi: 'Kazimierz', lat: 50.0517, lon: 19.9449, wiki: 'Kazimierz' },
@@ -5308,7 +5653,8 @@ export const KAUPUNKIKARTAT = {
        * (js/packs/nahtavyysjutut.js, kaupunki krakova).
        */
       {
-        nimi: 'Wawel', lat: 50.0539, lon: 19.9347, nosto: 'syvennys-krakova-wawel',
+        nimi: 'Wawel', lat: 50.0539, lon: 19.9347,
+        nosto: ['syvennys-krakova-wawel', 'skandaali-szczerbiec-odysseia'],
       },
     ],
   },
@@ -5345,7 +5691,10 @@ export const KAUPUNKIKARTAT = {
        * tästä rakennuksesta — älä linkitä siihen.
        */
       { nimi: 'Vanhankaupungin tori', lat: 52.2498, lon: 21.0122 },
-      { nimi: 'Varsovan linna', lat: 52.2479, lon: 21.0152, wiki: 'Varsovan linna' },
+      {
+        nimi: 'Varsovan linna', lat: 52.2479, lon: 21.0152, wiki: 'Varsovan linna',
+        nosto: 'syvennys-varsova-canaletto',
+      },
       { nimi: 'Kopernikuksen tiedekeskus', lat: 52.2419, lon: 21.0286 },
       {
         nimi: 'Pyhän ristin kirkko',
@@ -5359,6 +5708,23 @@ export const KAUPUNKIKARTAT = {
         lat: 52.2318,
         lon: 21.0062,
         wiki: 'Kulttuurin ja tieteen palatsi',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoi pääkartalla kaupungin merkin
+       * päällä; nyt sen paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa sen pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * varsova); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Wienin asema', lat: 52.2297, lon: 21.0094,
+        nosto: 'syvennys-varsova-raideleveys',
       },
     ],
   },
@@ -5397,7 +5763,10 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Paksu Margareeta', lat: 59.4426, lon: 24.7496 },
       { nimi: 'Olevisten kirkko', lat: 59.4413, lon: 24.7479, wiki: 'Olevisten kirkko' },
-      { nimi: 'Raatihuoneentori', lat: 59.4369, lon: 24.7453, wiki: 'Tallinnan raatihuone' },
+      {
+        nimi: 'Raatihuoneentori', lat: 59.4369, lon: 24.7453, wiki: 'Tallinnan raatihuone',
+        nosto: 'syvennys-tallinna-kama',
+      },
       {
         nimi: 'Nevskin katedraali',
         lat: 59.4357,
@@ -5406,6 +5775,31 @@ export const KAUPUNKIKARTAT = {
       },
       { nimi: 'Virun portti', lat: 59.4365, lon: 24.7503 },
       { nimi: 'Matkustajasatama', lat: 59.4448, lon: 24.7618, wiki: 'Tallinnan satama' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * tallinna); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'E-valtio', lat: 59.4358, lon: 24.7372,
+        nosto: ['syvennys-tallinna-e-valtio', 'skandaali-rummu-jyri-mestarikarkuri'],
+      },
+      {
+        nimi: 'Lyhyen jalan torni', lat: 59.436, lon: 24.741,
+        nosto: 'syvennys-tallinna-kaksi-kaupunkia',
+      },
+      {
+        nimi: 'Pirtulaivat', lat: 59.4433, lon: 24.7511,
+        nosto: 'skandaali-pirtukauppa-suomenlahdella',
+      },
     ],
   },
   sofia: {
@@ -5514,6 +5908,31 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-sofia-pollopatsas', nimiPuoli: 'vasen',
         siirto: { x: -25, y: -9 },
       },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * sofia); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Levski', lat: 42.6967, lon: 23.3353,
+        nosto: 'syvennys-sofia-levski',
+      },
+      {
+        nimi: 'Ruhtinaskaappaus', lat: 42.6965, lon: 23.3268,
+        nosto: 'skandaali-battenbergin-ruhtinaskaappaus',
+      },
+      {
+        nimi: 'Vihellyskonsertti', lat: 42.6942, lon: 23.3264,
+        nosto: 'skandaali-kansallisteatterin-vihellyskohu',
+      },
     ],
   },
   bukarest: {
@@ -5604,6 +6023,27 @@ export const KAUPUNKIKARTAT = {
         nosto: 'syvennys-bukarest-szathmari', nimiPuoli: 'vasen',
         siirto: { x: -13, y: -22 },
       },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * bukarest); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Colțean torni', lat: 44.43515, lon: 26.10298,
+        nosto: 'syvennys-bukarest-coltea',
+      },
+      {
+        nimi: 'Kultakana', lat: 44.4313, lon: 26.0973,
+        nosto: 'skandaali-kultakanan-ryosto-1875',
+      },
     ],
   },
   sarajevo: {
@@ -5657,9 +6097,29 @@ export const KAUPUNKIKARTAT = {
         wiki: 'Gazi Husrev-begin moskeija',
       },
       { nimi: 'Baščaršija', lat: 43.85972, lon: 18.43122 },
-      { nimi: 'Vijećnica', lat: 43.85917, lon: 18.43335, wiki: 'Vijećnica' },
+      {
+        nimi: 'Vijećnica', lat: 43.85917, lon: 18.43335, wiki: 'Vijećnica',
+        nosto: 'skandaali-bosnian-kriisi-1908',
+      },
       { nimi: 'Latinalaissilta', lat: 43.85763, lon: 18.42893 },
       { nimi: 'Keltainen linnake', lat: 43.86146, lon: 18.43772 },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoi pääkartalla kaupungin merkin
+       * päällä; nyt sen paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa sen pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * sarajevo); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Inat kuća', lat: 43.8585, lon: 18.4343,
+        nosto: 'syvennys-sarajevo-inat-kuca',
+      },
     ],
   },
   kiova: {
@@ -5699,7 +6159,10 @@ export const KAUPUNKIKARTAT = {
        * omasta palatsista ei ole artikkelia. Pyhän Andreaksen kirkko
        * ilman täsmennettä ohjautuu täsmennyssivulle.
        */
-      { nimi: 'Kontraktovan aukio', lat: 50.4636, lon: 30.5178 },
+      {
+        nimi: 'Kontraktovan aukio', lat: 50.4636, lon: 30.5178,
+        nosto: 'syvennys-kiova-tsumakit',
+      },
       {
         nimi: 'Andreaksen kirkko',
         lat: 50.4589,
@@ -5717,6 +6180,7 @@ export const KAUPUNKIKARTAT = {
         lat: 50.4528,
         lon: 30.5144,
         wiki: 'Pyhän Sofian katedraali (Kiova)',
+        nosto: 'nosto-sofian-mosaiikit',
       },
       {
         nimi: 'Itsenäisyyden aukio',
@@ -5771,6 +6235,7 @@ export const KAUPUNKIKARTAT = {
         lat: 59.95,
         lon: 30.317,
         wiki: 'Pietari-Paavalin linnoitus',
+        nosto: 'skandaali-prinsessa-tarakanova',
       },
       { nimi: 'Talvipalatsi', lat: 59.9404, lon: 30.3139, wiki: 'Talvipalatsi' },
       {
@@ -5779,9 +6244,29 @@ export const KAUPUNKIKARTAT = {
         lon: 30.3286,
         wiki: 'Kristuksen ylösnousemuksen katedraali',
       },
-      { nimi: 'Vaskiratsastaja', lat: 59.9364, lon: 30.3022, wiki: 'Vaskiratsastaja' },
+      {
+        nimi: 'Vaskiratsastaja', lat: 59.9364, lon: 30.3022, wiki: 'Vaskiratsastaja',
+        nosto: 'syvennys-pietari-ukkoskivi',
+      },
       { nimi: 'Kazanin katedraali', lat: 59.9343, lon: 30.3245, wiki: 'Kazanin katedraali' },
       { nimi: 'Mariinski-teatteri', lat: 59.9256, lon: 30.2961, wiki: 'Mariinski-teatteri' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoi pääkartalla kaupungin merkin
+       * päällä; nyt sen paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa sen pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * pietari); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Fabergé-museo', lat: 59.9349, lon: 30.3435,
+        nosto: 'syvennys-pietari-faberge',
+      },
     ],
   },
   moskova: {
@@ -5830,7 +6315,10 @@ export const KAUPUNKIKARTAT = {
         lon: 37.6231,
         wiki: 'Pyhän Vasilin katedraali',
       },
-      { nimi: 'Moskovan Kreml', lat: 55.7517, lon: 37.6178, wiki: 'Moskovan Kreml' },
+      {
+        nimi: 'Moskovan Kreml', lat: 55.7517, lon: 37.6178, wiki: 'Moskovan Kreml',
+        nosto: 'skandaali-iivanan-kadonnut-kirjasto',
+      },
       {
         nimi: 'Vapahtajan katedraali',
         lat: 55.7444,
@@ -5858,6 +6346,23 @@ export const KAUPUNKIKARTAT = {
        */
       {
         nimi: 'Näyttely 1872', lat: 55.7577, lon: 37.6295, nosto: 'syvennys-moskova-nayttely1872',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoi pääkartalla kaupungin merkin
+       * päällä; nyt sen paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa sen pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * moskova); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Perlovin teetalo', lat: 55.7626, lon: 37.636,
+        nosto: 'syvennys-moskova-karavaanitee',
       },
     ],
   },
@@ -5904,9 +6409,27 @@ export const KAUPUNKIKARTAT = {
         lat: 46.4854,
         lon: 30.7413,
         wiki: 'Odessan kansallinen akateeminen ooppera- ja balettiteatteri',
+        nosto: 'syvennys-odessa-ooppera',
       },
       { nimi: 'Kaupunginpuisto', lat: 46.4848, lon: 30.7344 },
       { nimi: 'Privozin tori', lat: 46.4699, lon: 30.7368 },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoi pääkartalla kaupungin merkin
+       * päällä; nyt sen paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa sen pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * odessa); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Potjomkin-portaat', lat: 46.4892, lon: 30.7433,
+        nosto: 'syvennys-odessa-portaat',
+      },
     ],
   },
   oslo: {
@@ -5960,6 +6483,27 @@ export const KAUPUNKIKARTAT = {
        */
       {
         nimi: 'Akershus', lat: 59.9067, lon: 10.7361, nosto: 'syvennys-oslo-unionilippu',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * oslo); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Huudon varkaus', lat: 59.9163, lon: 10.7373,
+        nosto: 'skandaali-huudon-varkaus',
+      },
+      {
+        nimi: 'Boheemikirja', lat: 59.9135, lon: 10.741,
+        nosto: 'skandaali-boheemikirjan-takavarikko',
       },
     ],
   },
@@ -6018,6 +6562,23 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Maestranzan areena', lat: 37.386, lon: -5.9983 },
       { nimi: 'Trianan silta', lat: 37.3862, lon: -6.0023 },
       { nimi: 'Plaza de España', lat: 37.3769, lon: -5.9869 },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoi pääkartalla kaupungin merkin
+       * päällä; nyt sen paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa sen pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * sevilla); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Victorian laituri', lat: 37.3801, lon: -5.9969,
+        nosto: 'syvennys-sevilla-victoria',
+      },
     ],
   },
   /*
@@ -6109,7 +6670,10 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Vapahtajan kirkko', lat: 55.6729, lon: 12.594, wiki: 'Vapahtajamme kirkko' },
       { nimi: 'Rosenborgin linna', lat: 55.6859, lon: 12.5773, wiki: 'Rosenborgin linna' },
-      { nimi: 'Kastellet', lat: 55.6912, lon: 12.5938, wiki: 'Kastellet (Kööpenhamina)' },
+      {
+        nimi: 'Kastellet', lat: 55.6912, lon: 12.5938, wiki: 'Kastellet (Kööpenhamina)',
+        nosto: 'skandaali-struensee-kuninkaan-laakari',
+      },
       /*
        * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
        * *"lisää kaikki historian hetket ja muut karttanostot myös joko
@@ -6127,6 +6691,27 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Tivolin portti', lat: 55.6736, lon: 12.5683,
         nosto: 'syvennys-kobenhavn-tivoli', nimiPuoli: 'oikea',
         siirto: { x: 18, y: 19 },
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * kobenhavn); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Vararikko 1813', lat: 55.6756, lon: 12.5839,
+        nosto: 'skandaali-tanskan-valtionvararikko-1813',
+      },
+      {
+        nimi: 'Alberti', lat: 55.6772, lon: 12.5731,
+        nosto: 'skandaali-alberti-skandaali',
       },
     ],
   },
@@ -6179,7 +6764,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Näsinneula', lat: 61.5052, lon: 23.7422, wiki: 'Näsinneula' },
       { nimi: 'Finlaysonin tehdasalue', lat: 61.4996, lon: 23.753, wiki: 'Finlaysonin tehdasalue' },
       { nimi: 'Museokeskus Vapriikki', lat: 61.5022, lon: 23.7657, wiki: 'Museokeskus Vapriikki' },
-      { nimi: 'Hämeensilta', lat: 61.4979, lon: 23.7626, wiki: 'Hämeensilta' },
+      {
+        nimi: 'Hämeensilta', lat: 61.4979, lon: 23.7626, wiki: 'Hämeensilta',
+        nosto: 'syvennys-tampere-koski',
+      },
       { nimi: 'Tampereen tuomiokirkko', lat: 61.4966, lon: 23.7744, wiki: 'Tampereen tuomiokirkko' },
       { nimi: 'Pyynikin näkötorni', lat: 61.4936, lon: 23.7208, wiki: 'Pyynikin näkötorni' },
       // Kuninkaankatu 4, Finlaysonin tehdasalueen pohjoisreunassa
@@ -6188,6 +6776,27 @@ export const KAUPUNKIKARTAT = {
       // Satakunnankatu 49; sama piste kuin fi-Wikipedian
       // koordinaatti (61,4993 / 23,7434) kymmenen metrin sisällä.
       { nimi: 'Amurin työläismuseokortteli', lat: 61.4993, lon: 23.7434, wiki: 'Amurin museokortteli' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * tampere); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Finlayson', lat: 61.5008, lon: 23.7585,
+        nosto: 'syvennys-tampere-finlayson',
+      },
+      {
+        nimi: 'Tuomiokirkko', lat: 61.5025, lon: 23.7697,
+        nosto: 'syvennys-tampere-kaarme',
+      },
     ],
   },
   firenze: {
@@ -6232,7 +6841,10 @@ export const KAUPUNKIKARTAT = {
        *  - `Bargello` yksinään puuttuu; rakennuksesta ja museosta
        *    kertoo `Bargellon palatsi`.
        */
-      { nimi: 'Duomo', lat: 43.7731, lon: 11.256, wiki: 'Santa Maria del Fiore' },
+      {
+        nimi: 'Duomo', lat: 43.7731, lon: 11.256, wiki: 'Santa Maria del Fiore',
+        nosto: 'syvennys-firenze-toscanelli',
+      },
       { nimi: 'Palazzo Vecchio', lat: 43.7694, lon: 11.2558, wiki: 'Palazzo Vecchio' },
       { nimi: 'Uffizi', lat: 43.7676, lon: 11.2553, wiki: 'Uffizi' },
       // Silta saa olla vedellä (tarkista-karttapisteet.mjs): piste on
@@ -6248,6 +6860,27 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Galleria dell\'Accademia', lat: 43.7769, lon: 11.2589 },
       { nimi: 'Santa Maria Novella', lat: 43.7746, lon: 11.2494, wiki: 'Santa Maria Novella' },
       { nimi: 'Bargello', lat: 43.7704, lon: 11.2583, wiki: 'Bargellon palatsi' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * firenze); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Poggin terassi', lat: 43.7628, lon: 11.2651,
+        nosto: 'syvennys-firenze-paakaupunki',
+      },
+      {
+        nimi: 'Porcellino', lat: 43.7699, lon: 11.2542,
+        nosto: 'syvennys-firenze-porcellino',
+      },
     ],
   },
   dubrovnik: {
@@ -6284,11 +6917,14 @@ export const KAUPUNKIKARTAT = {
        * vain katedraali ja Lokrumin saari, joka jää kartan
        * ulkopuolelle.
        */
-      { nimi: 'Minčetan torni', lat: 42.643, lon: 18.1082 },
+      { nimi: 'Minčetan torni', lat: 42.643, lon: 18.1082, nosto: 'syvennys-dubrovnik-tornit' },
       { nimi: 'Pilen portti', lat: 42.6415, lon: 18.1067 },
       // Rektorinpalatsi jätettiin pois: se on parikymmentä metriä
       // katedraalista, ja kaksi numeroympyrää olisi mennyt päällekkäin.
-      { nimi: 'Sponzan palatsi', lat: 42.6414, lon: 18.1101 },
+      {
+        nimi: 'Sponzan palatsi', lat: 42.6414, lon: 18.1101,
+        nosto: 'syvennys-dubrovnik-sponza',
+      },
       // Laiturille eikä altaaseen (vesitarkistin).
       { nimi: 'Vanhasatama', lat: 42.6416, lon: 18.1113 },
       // Linnake seisoo omalla kalliollaan; aineiston piste osui
@@ -6330,7 +6966,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kolme veljestä', lat: 56.9497, lon: 24.103 },
       { nimi: 'Riian tuomiokirkko', lat: 56.9494, lon: 24.1042, wiki: 'Riian tuomiokirkko' },
       { nimi: 'Pyhän Pietarin kirkko', lat: 56.9475, lon: 24.1094, wiki: 'Pyhän Pietarin kirkko (Riika)' },
-      { nimi: 'Mustapäiden talo', lat: 56.9472, lon: 24.1063, wiki: 'Mustapäiden talo (Riika)' },
+      {
+        nimi: 'Mustapäiden talo', lat: 56.9472, lon: 24.1063, wiki: 'Mustapäiden talo (Riika)',
+        nosto: ['syvennys-riika-balsami', 'skandaali-riian-kalenterikahakat'],
+      },
       { nimi: 'Keskustori', lat: 56.944, lon: 24.1146, wiki: 'Riian keskustori' },
     ],
   },
@@ -6365,6 +7004,31 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vilnan yliopisto', lat: 54.6819, lon: 25.2867, wiki: 'Vilnan yliopisto' },
       { nimi: 'Užupis', lat: 54.681, lon: 25.2977, wiki: 'Užupis' },
       { nimi: 'Aamuportti', lat: 54.6733, lon: 25.2896 },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * vilna); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Kirjankantajat', lat: 54.6825, lon: 25.2872,
+        nosto: 'syvennys-vilna-knygnesiai',
+      },
+      {
+        nimi: 'Salattu avioliitto', lat: 54.6862, lon: 25.289,
+        nosto: 'skandaali-barbora-salainen-avioliitto',
+      },
+      {
+        nimi: 'Boratynka', lat: 54.6861, lon: 25.2833,
+        nosto: 'skandaali-boratynka-kuparikohu',
+      },
     ],
   },
   tromssa: {

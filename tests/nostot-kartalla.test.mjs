@@ -31,6 +31,7 @@ import assert from 'node:assert/strict';
 import {
   kohdekarttojenNostot, kohdekartallaSisalla, nostojenKarttapaikat,
 } from '../tools/tarkista-nostopaikat.mjs';
+import { KAUPUNGIN_KOHDALLA_SADE } from '../js/fokuskohteet.js';
 import { KAUPUNKIKARTAT } from '../js/packs/maakartat.js';
 import { NAHTAVYYSJUTUT } from '../js/packs/nahtavyysjutut.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
@@ -38,7 +39,7 @@ import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import { SKANDAALIT } from '../js/packs/skandaalit.js';
 import { HISTORIAN_HETKET } from '../js/packs/historian-hetket.js';
 
-const { rivit, puuttuvat } = nostojenKarttapaikat();
+const { rivit, puuttuvat, kesken } = nostojenKarttapaikat();
 
 test('jokainen karttanosto on pääkartalla tai kohdekartalla', () => {
   const nimet = puuttuvat.map((r) => `${r.kaupunki ?? r.iso}/${r.id} (${r.nimi})`);
@@ -52,8 +53,67 @@ test('nostoja on odotettu määrä eikä yksikään kadonnut', () => {
   // niistä laskee, jotain on pudonnut kartalta hiljaa.
   assert.ok(rivit.length >= 694, `nostoja on ${rivit.length}, odotettiin vähintään 694`);
   const kohdekartalla = rivit.filter((r) => r.kohdekartalla).length;
-  assert.ok(kohdekartalla >= 45,
-    `kohdekartoilla on ${kohdekartalla} nostoa, odotettiin vähintään 45`);
+  assert.ok(kohdekartalla >= 129,
+    `kohdekartoilla on ${kohdekartalla} nostoa, odotettiin vähintään 129`);
+});
+
+test('kohdekartalla asuva nosto EI ole pääkartalla', () => {
+  /*
+   * Omistajan sääntö 2.9.2026 illalla, kolmatta kertaa sanottuna
+   * (sanatarkasti): *"nuo karttanostot jotka ovat kohdekaupunkien
+   * kohdalla piti viedä pois pääkartalta ja jättää vain
+   * kaupunkilehden sisällä olevaan kaupunkikartalle."*
+   *
+   * Sääntö ajaa js/fokuskohteet.js:ssä (karsiKaupunkikartanNostot), ja
+   * tämä testi valvoo sen tuloksen: yksikään nosto ei saa olla yhtä
+   * aikaa kohdekartalla ja pääkartalla. Kaupunkinostojen katto teki
+   * saman aiemmin sivutuotteena, mutta vain silloin kun kaupungin
+   * ympärillä sattui olemaan yli kolme merkkiä — se ei ollut sääntö
+   * vaan sattuma.
+   */
+  const molemmilla = rivit.filter((r) => r.paakartalla && r.kohdekartalla)
+    .map((r) => `${r.kaupunki ?? r.iso}/${r.id}`);
+  assert.deepEqual(molemmilla, [],
+    `${molemmilla.length} nostoa on sekä kohdekartalla että pääkartalla`);
+});
+
+test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
+  /*
+   * MITÄ TÄMÄ VALVOO. Kaupungin kohdalla oleva nosto (kohdekartan
+   * rajauksessa TAI alle KAUPUNGIN_KOHDALLA_SADE laudan yksikköä
+   * kaupungin laatasta) kuuluu vain kohdekartalle. Osa ei sinne vielä
+   * mahdu, ja jokaiselle sellaiselle on koneellinen syy
+   * (tools/tarkista-nostopaikat.mjs kaupunginKohdallaSyy):
+   *
+   *   rajauksen ulkopuolella      lähialueen nosto, jolle kohdekartan
+   *                               rajauksessa ei ole paikkaa (Vitoša,
+   *                               Wieliczka, Richmond Park). Näiden
+   *                               siirto vaatisi kartan rajauksen
+   *                               laajentamisen eli uuden piirroksen.
+   *   kartan oma kohde            fokuskohteen kortti (Akropolis,
+   *                               Colosseum): sisältö on kortissa eikä
+   *                               kohdekartan pisteellä, joten siirto
+   *                               on sisältöerä eikä koodimuutos.
+   *   kohdekarttaa ei ole         kaupungilla ei ole kaupunkikarttaa.
+   *   hetki                       Historian hetken kortti ei mahdu
+   *                               kohdekartan nähtävyysikkunaan
+   *                               (ks. kattoVapaa-testin perustelu).
+   *   ankkuri on kaupungin laatta nostolla ei ole omaa osoitetta.
+   *
+   * Luku saa laskea muttei kasvaa: uusi nosto kaupungin kohdalle
+   * kirjoitetaan kohdekartalle eikä pääkartalle.
+   */
+  const sallitut = new Set([
+    'rajauksen ulkopuolella', 'kartan oma kohde', 'kohdekarttaa ei ole',
+    'hetki', 'ankkuri on kaupungin laatta',
+  ]);
+  const oudot = kesken.filter((r) => !sallitut.has(r.kaupunginKohdalla))
+    .map((r) => `${r.kaupunki}/${r.id} (${r.kaupunginKohdalla})`);
+  assert.deepEqual(oudot, [],
+    'kaupungin kohdalla on nostoja, joille ei ole kirjattua syytä jäädä pääkartalle');
+  assert.ok(kesken.length <= 64,
+    `kaupungin kohdalla on pääkartalla ${kesken.length} nostoa (säde `
+    + `${KAUPUNGIN_KOHDALLA_SADE}), enintään 64 sallittu — uusi nosto kuuluu kohdekartalle`);
 });
 
 test('kohdekartan nostopiste on napautettava ja rajauksen sisällä', () => {
@@ -126,7 +186,7 @@ test('kohdekartan nostojuttu on sanatarkasti noston oma teksti', () => {
       verrattu += 1;
     }
   }
-  assert.ok(verrattu >= 37, `vertailtavia juttuja oli ${verrattu}, odotettiin vähintään 37`);
+  assert.ok(verrattu >= 95, `vertailtavia juttuja oli ${verrattu}, odotettiin vähintään 95`);
 });
 
 /** Noston oma teksti tunnuksesta, tai null jos lähde ei ole taulukoitu. */
