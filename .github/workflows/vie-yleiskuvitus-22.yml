@@ -1,0 +1,175 @@
+name: Vie yleiskuvituksen 22 kuvaa R2:een
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/vie-yleiskuvitus-22.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vie-yleiskuvitus-22
+  cancel-in-progress: false
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      DRIVE_AVAIN: ${{ secrets.SAMIREIVINEN_DRIVE_API }}
+      R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_AMPARI: ${{ secrets.R2_BUCKET }}
+      JULKINEN: https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Tarkista yhteydet
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$DRIVE_AVAIN" ] || puuttuu="$puuttuu SAMIREIVINEN_DRIVE_API"
+          [ -n "$R2_TILI" ] || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ] || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "$R2_AMPARI" ] || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Puuttuvat repository secretit:$puuttuu"
+            exit 1
+          fi
+
+      - name: Nouda ja tarkista 22 JPEG-kuvaa
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'SKRIPTI'
+          import { mkdir, writeFile } from 'node:fs/promises';
+          import { createHash } from 'node:crypto';
+          import { dirname } from 'node:path';
+
+          const kuvat = [
+            ['1CqUWaLf2kpECzatucXK02I-Y6v7b_Dpe', 'kuvajono/skandaali-shakkiturkkilainen.jpg', 1536, 1024, '2b0caa24f0ab4cdb4cdd68e64ff2f678fd44f1803c64c85cff3745d84159346c'],
+            ['1vKXGEq2dU29KlByW2tfz0W35wPmBKwe3', 'kuvajono/skandaali-klimtin-tiedekuntamaalaukset.jpg', 1536, 1024, '24b5d00177a08566bca3ef7604b7cc493e02a1af567cc809649b583b648271b0'],
+            ['188yFuuwSRabhepUrt_C4EPG8gSLm4OrP', 'kuvajono/skandaali-salieran-varkaus.jpg', 1536, 1024, '90be2048dfc11c901791ba6c0afd9ff3ac028e8dcd5fef534ec99e7f1d0ce360'],
+            ['1LeBl93qbsrFYSzFTEjCKprCenWrig9CD', 'kuvajono/skandaali-kaulanauhajuttu-1785.jpg', 1536, 1024, '1c3c4eb13eadf4046e0a7f748edbc0a0e675e53d8da8254a4bae5be6df09abc6'],
+            ['1XTLDee5Rsd1tlleOzxzUJiVgPhdxGpWM', 'kuvajono/skandaali-vrain-lucas-kirjevaarennokset.jpg', 1536, 1024, '4cf78796359381e9a20ae76377725c3baced735e4c3d08435fe9a155096b0197'],
+            ['1x70desFcF37FJvqsCRyD-QNwlme6avEd', 'kuvajono/nosto-lustig-eiffel.jpg', 1536, 1024, '7f300fd2c0c82eaefa812e76c58a8bb8f2a9089323c8dbdac98c6c05ff3f8ff9'],
+            ['1XPhuXHv7wqQuyuao85iJRVlMrTf8_ap4', 'kuvajono/skandaali-elginin-marmorit.jpg', 1536, 1024, 'fbe3b85af16e930acb37c2e94cc22d868896df06ce5e475f6f34c253f48460df'],
+            ['1zUmqwMMo9_9CSn3Mjp9cDA9VDGHvGCoO', 'kuvajono/skandaali-belokas-maratonhuijaus-1896.jpg', 1536, 1024, '08bb58fafc6b466bb8ef7f3f265eb00f09ddda1c53e24dc32e4dccf0d12664a4'],
+            ['1LTtQgjDZ0lNy7SJG81nNGOyuK4_pUtMQ', 'kuvajono/skandaali-osmanien-vararikko-1875.jpg', 1536, 1024, 'ea9791b6c6c986e270d08911ac754f8054b41f0d1701b6f63fda1801ee1d1f20'],
+            ['1brMGWfDqTd22-yTNed7uFI3Q926QKATf', 'kuvajono/skandaali-etelameren-kupla.jpg', 1536, 1024, 'ea1b1e13202befe3336d08ffce05fd32fc777807a81b8455e0f52e1b4460fc92'],
+            ['1kXHCKPyxBmeCv6Do39WLBfrs_QmQG3Ml', 'kuvajono/elain-bih-tornjakpentu-vlasic.jpg', 1536, 1536, '44db081103c7733e3b5ef4042b2e99b16e2b73d2fb7f72644b7382aa98ac6ec9'],
+            ['1Wnqc2ojTu0iCejY6vOBOycnQNLohrYTG', 'kuvajono/elain-tur-ankaravuohenkili-anatolia.jpg', 1536, 1536, '0c51f5ddb5ad27f26735527e952f7ef3e835f69513bca747fd5bd080c8bb244a'],
+            ['1E4Fmkiqom_jp_Fsq6t-0v4OustY_DQoD', 'historian-hetket/hetki-kolumbus-palos-1492.jpg', 1536, 1024, '21f215366921fb8043d08bb9e9195425e4364ccd29af4c5c73e53f6ac542f9be'],
+            ['1NFjCNJnZQFaIkZTNouK56sRqbISs_Wr1', 'historian-hetket/hetki-magalhaes-sanlucar-1519.jpg', 1536, 1024, 'baa34caa735a684193db1283eb3070e59e31a8124e1a55ff02f104d2f1c04616'],
+            ['1AUWj82ILcx7YEWeNOosz1p4sKyqf32fn', 'historian-hetket/hetki-vasco-da-gama-restelo-1497.jpg', 1536, 1024, '0d76df5deae71e0d1eef2314388acac8667d749414711b05b4ffaf247c13ea79'],
+            ['1xXi0RM5l8soHPd8oJ-6WHjL75kOyd73Y', 'historian-hetket/hetki-cook-endeavour-plymouth-1768.jpg', 1536, 1024, '7987b318a4df5aa4f768a4ceb02f9d1c1cb6e7750d99d20449aaf3d8274886b7'],
+            ['1EXHkJ8sbvEB9DDKVUs9FyODfL1l0dtuy', 'historian-hetket/hetki-trafalgar-victory-1805.jpg', 1536, 1024, '98afd7cd08161f87ebd121eb52c0ec04bb960f53e5adbff44f71fd5ffb2dbe43'],
+            ['17L9RXRu3CJ-OPGFZMpK-i-nUyMYunhyU', 'historian-hetket/hetki-darwin-galapagos-1835.jpg', 1536, 1024, '6d81c2291a921e64ebfb8c9fe9d84b687e19064044f49996e58d1f8b7fd29b2b'],
+            ['1S_gPXC3n3S9QUzGUia0eA8sphwHLzC2B', 'historian-hetket/hetki-nansen-fram-1893.jpg', 1536, 1024, '7948d4bd8ba80242a071ebf690ed799105e0160b69ff8e195809fafacf7e7f52'],
+            ['1HUjQT7XEUXE13sX7ZRJ7Pchygwoa6Pqr', 'historian-hetket/hetki-amundsen-etelanapa-1911.jpg', 1536, 1024, '114a09a7b66435243c707d6592ee70c3aad5c517ad17f9242a268d80b50ce081'],
+            ['1m8jpTQ-8-P1fHEgJapUJesKY388i3Byy', 'historian-hetket/hetki-titanic-southampton-1912.jpg', 1536, 1024, 'ca118100ec0853e78a907358066d1873b8eb15265ad445a4ddf10c45479a113b'],
+            ['1TR0JNHr9cp73QaTpLeIsbKPL9EC53VBj', 'historian-hetket/hetki-viikinkilaiva-roskilde-1000.jpg', 1536, 1024, 'e8eda4e3c07654c7d0e99161f48ee44ed4901f0578e8f7aeb605473b154e8bc0'],
+          ];
+
+          function jpegMitat(data) {
+            if (data[0] !== 0xff || data[1] !== 0xd8) throw new Error('ei ole JPEG');
+            let i = 2;
+            while (i + 9 < data.length) {
+              if (data[i] !== 0xff) { i += 1; continue; }
+              const merkki = data[i + 1];
+              if (merkki === 0xd8 || merkki === 0xd9) { i += 2; continue; }
+              const pituus = data.readUInt16BE(i + 2);
+              if (pituus < 2 || i + 2 + pituus > data.length) break;
+              if ([0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf].includes(merkki)) {
+                return { korkeus: data.readUInt16BE(i + 5), leveys: data.readUInt16BE(i + 7) };
+              }
+              i += 2 + pituus;
+            }
+            throw new Error('JPEG-mittoja ei löytynyt');
+          }
+
+          for (const [id, polku, leveys, korkeus, odotettuSha] of kuvat) {
+            const julkinen = `${process.env.JULKINEN}/kohtaamiset/${polku}`;
+            const vanha = await fetch(julkinen, { headers: { Range: 'bytes=0-0', 'Cache-Control': 'no-cache' } });
+            if (vanha.status !== 404) throw new Error(`${polku}: nimiristiriita, julkinen HTTP ${vanha.status}`);
+
+            const url = `https://www.googleapis.com/drive/v3/files/${id}?alt=media&key=${process.env.DRIVE_AVAIN}`;
+            const vastaus = await fetch(url);
+            if (!vastaus.ok) throw new Error(`${polku}: Drive HTTP ${vastaus.status}`);
+            const data = Buffer.from(await vastaus.arrayBuffer());
+            const sha = createHash('sha256').update(data).digest('hex');
+            if (sha !== odotettuSha) throw new Error(`${polku}: SHA-256 ei täsmää`);
+            const mitat = jpegMitat(data);
+            if (mitat.leveys !== leveys || mitat.korkeus !== korkeus) {
+              throw new Error(`${polku}: ${mitat.leveys}x${mitat.korkeus}, odotettiin ${leveys}x${korkeus}`);
+            }
+            if (!data.includes(Buffer.from('ICC_PROFILE'))) throw new Error(`${polku}: ICC-profiili puuttuu`);
+            const kohde = `r2-out/${polku}`;
+            await mkdir(dirname(kohde), { recursive: true });
+            await writeFile(kohde, data);
+            console.log(`${polku}: Drive, JPEG, ${leveys}x${korkeus}, ICC ja SHA-256 kunnossa`);
+          }
+          SKRIPTI
+
+      - name: Vie kuvat R2-mediämpäriin
+        run: |
+          set -euo pipefail
+          aws s3 sync r2-out "s3://$R2_AMPARI/kohtaamiset" \
+            --endpoint-url "https://$R2_TILI.r2.cloudflarestorage.com" \
+            --no-progress --size-only --content-type image/jpeg \
+            --cache-control "public, max-age=2592000"
+
+      - name: Varmista julkinen R2 tavutasolla
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'SKRIPTI'
+          import { readFile } from 'node:fs/promises';
+          import { createHash } from 'node:crypto';
+          import { readdir } from 'node:fs/promises';
+          import { join, relative } from 'node:path';
+
+          async function tiedostot(hakemisto) {
+            const tulos = [];
+            for (const nimi of await readdir(hakemisto, { withFileTypes: true })) {
+              const polku = join(hakemisto, nimi.name);
+              if (nimi.isDirectory()) tulos.push(...await tiedostot(polku));
+              else tulos.push(polku);
+            }
+            return tulos;
+          }
+
+          const polut = (await tiedostot('r2-out')).sort();
+          if (polut.length !== 22) throw new Error(`tiedostoja ${polut.length}, odotettiin 22`);
+          for (const paikallinen of polut) {
+            const avain = relative('r2-out', paikallinen).split('\\').join('/');
+            const odotettu = await readFile(paikallinen);
+            let vastaus;
+            for (let yritys = 1; yritys <= 10; yritys += 1) {
+              vastaus = await fetch(`${process.env.JULKINEN}/kohtaamiset/${avain}?t=${Date.now()}`, {
+                headers: { Origin: 'https://ravelius.github.io', 'Cache-Control': 'no-cache' },
+              });
+              if (vastaus.ok) break;
+              await new Promise((resolve) => setTimeout(resolve, 2000));
+            }
+            if (!vastaus?.ok) throw new Error(`${avain}: R2 HTTP ${vastaus?.status}`);
+            const tyyppi = vastaus.headers.get('content-type') ?? '';
+            if (!tyyppi.startsWith('image/jpeg')) throw new Error(`${avain}: R2 MIME ${tyyppi}`);
+            if (!vastaus.headers.get('access-control-allow-origin')) throw new Error(`${avain}: CORS puuttuu`);
+            const ladattu = Buffer.from(await vastaus.arrayBuffer());
+            const paikallinenSha = createHash('sha256').update(odotettu).digest('hex');
+            const ladattuSha = createHash('sha256').update(ladattu).digest('hex');
+            if (ladattuSha !== paikallinenSha) throw new Error(`${avain}: takaisinluettu SHA-256 ei täsmää`);
+            console.log(`${avain}: julkinen JPEG, CORS ja tavut kunnossa`);
+          }
+          SKRIPTI
