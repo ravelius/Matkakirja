@@ -1,3 +1,31 @@
+## 2.9.2026 14:10 UTC — KUVATILAUS E2 — ELÄINTÄYT: Bulgarian pelastuskarhu UUSIKSI (fotorealistinen)
+
+Omistaja katsoi Bulgarian eläintäyn "Tanssin loppu" (pelastuskarhu,
+Belitsan tarha) kuvan ja sanoi: *"Tämä kuva näyttää liikaa piirrettyä.
+Pyydä kuvaputkea generoimaan parempi fotorealistinen kuva."* Nykyinen
+kuva (karhu selällään niityllä, vuoret taustalla) on maalauksellinen:
+tasainen valo, pehmeä turkki, kiiltävä nurmi.
+
+TILAUS (yksi kuva, korvaa nykyisen):
+- Tunnus `elain-bgr-pelastuskarhu-belitsa`, 1536×1024 JPEG sRGB
+  (3:2 vaaka; pelin eläintäyt ovat 960×640), R2 `kohtaamiset/kuvajono/`.
+- Sisältö: aikuinen ruskeakarhu Belitsan karhutarhan aidatulla
+  metsärinteellä Rila-vuorten juurella; karhu makaa tai istuu
+  rennosti varjoisan pyökin alla, turkki märkä tai pölyinen, katse
+  sivuun; taustalla tarhan aita ja havu-/pyökkimetsä epätarkkana.
+  Ei ihmisiä, ei tekstiä.
+- FOTOREALISMI (H2:n ohje 11:20, sama sanasto): luonnonvalokuva
+  telelinssillä (200–300 mm, f/4), matala syväterävyys, karhun
+  yksittäiset karvat ja kuono terävinä, luonnollinen pilvinen tai
+  varhaisaamun valo, hento rae; EI painterly, EI illustration, EI
+  kiiltävää nurmea, EI symmetristä sommittelua, EI HDR-hehkua.
+  Referenssi: Commonsin valokuvat ruskeakarhuista Belitsan tarhassa
+  (Bear Sanctuary Belitsa) — käytä niitä valon ja ympäristön
+  ohjenuorana (aikalaislähdesääntö K4).
+- Sama fotorealismitarkistus KAIKKIIN tuleviin eläintäykuviin.
+
+Kuittaa postiin. Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 13:50 UTC — KUVATILAUS M2 — MINIATYYRIT: 41 kohdekartan miniatyyriä (20 kaupunkia)
 
 Kaikki lehtiin siirretyt nostot ovat nyt kaupunkilehtien kohdekartoilla
