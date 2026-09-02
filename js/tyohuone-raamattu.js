@@ -2278,6 +2278,24 @@ export const RAAMATTU = {
           + 'puuttuva raita on hiljaa ilman virhetta; raidat ElevenLabs '
           + 'Music -APIlla (varalla Lyria), ohje docs/moduulit/aanet.md '
           + '(v1455). savuke-siirtokoreografia mittaa aikaleimat.',
+        'JOKAINEN NAKYVA KARTTAMERKKI ON NIMETTY JA NAPAUTETTAVA (omistaja '
+          + '2.9.2026 ilta, Bosnia: "kaksi tekstitonta huutomerkkia seka '
+          + 'Dinaariset Alpit mita ei voi klikata. samoin Dinara ja Sveti Jure '
+          + '... nyt nama Euroopan kaikki karttakohteet on huolella '
+          + 'tarkistettava. olen pyytanyt tata jo pari kertaa"): jokaisella '
+          + 'paakartan merkilla - nosto, skandaali, elaintaky, vuorikolmio, '
+          + 'vesimerkki, maastonimi, hetki, kohde, poltettu tai elava - on '
+          + 'nakyva nimi JA napautus, joka avaa kortin tai minipopupin. '
+          + 'Maastonimet ja niiden kolmiot ovat napautettavia (selitys + '
+          + 'linkki), symboli ei koskaan jaa ilman nimea. Vartio on '
+          + 'KONEELLINEN: tools/tarkista-karttamerkit.mjs kay lapi kaikki '
+          + 'Euroopan maat kahdessa mittakaavassa ja on julkaisuportti - '
+          + 'silmamaarainen tarkistus ei riita, koska sama vika on loytynyt '
+          + 'kolmesti. KARTTANOSTOT KAIKKIIN EUROOPAN MAIHIN: kattavuus '
+          + 'kirjataan docs/moduulit/karttanostot-kattavuus.md (tavoite per '
+          + 'maa: 8 kohdetta, 3 maastokohdetta, 1 elaintaky, 2 skandaalia) '
+          + 'ja taytetaan erissa heikoimmasta alkaen; kohdekaupunkien '
+          + 'kohdalla olevat nostot vain kohdekartalle, ei paakartalle.',
         'KARTALLA NOSTOMERKKI ON PISTE (omistaja 2.9.2026: '
           + '"Karttasymboleja voitaisiin viela yksinkertaistaa. Kaikista '
           + 'muista kategorioista voisi tehda yksinkertaisesti vain '
@@ -3474,6 +3492,9 @@ export const RAAMATTU = {
           + 'linssiä seitsemässä ryhmässä, tila per linssi, monistettava '
           + 'malli ja järjestys; elävä työlista, jonka Fable päivittää '
           + 'omistajan valintojen mukaan).',
+        'docs/moduulit/karttanostot-kattavuus.md — karttanostojen kattavuus '
+          + 'maittain (kohteet, maastokohteet, eläintäyt, skandaalit, hetket) '
+          + 'ja tavoite per maa; täytetään koneellisesti erissä.',
         'docs/moduulit/aanet.md — siirtymämusiikki ja äänet: raitojen '
           + 'tuotanto-ohje (kesto, looppisauma, -33 LUFS, vienti).',
         'docs/moduulit/viitekuvat.md — viitekuvallinen herogenerointi: '
