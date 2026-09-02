@@ -21,7 +21,10 @@ import {
   nostoladontaKattoPorras, nostoladontaKattoSuhde, nostoladontaTiiviste,
   nostoladontaVenytys,
 } from '../js/nostoladonta.js';
-import { NOSTOSYM_MINI_R, NOSTOSYM_NIMIO_KOKO } from '../js/fokusnosto-symbolit.js';
+import {
+  NOSTOSYM_MINI_R, NOSTOSYM_NIMIO_KOKO, NOSTOSYM_PISTEET, NOSTOSYM_PISTE_HIMMEYS,
+  NOSTOSYM_PISTE_VARIT, nostosymMiniMerkki,
+} from '../js/fokusnosto-symbolit.js';
 import { KARTTANIMI_KOOT, maastokolmionKasvukatto } from '../js/karttanimet.js';
 import { KOHDE_SYMBOLI_SKAALA } from '../js/fokuskohteet.js';
 
@@ -31,6 +34,51 @@ test('nimiön kirjasinkoko on sama luku kuin symbolikirjastossa', () => {
 
 test('merkin säde on sama luku kuin symbolikirjastossa', () => {
   assert.equal(NOSTOLADONTA_SYMBOLI_R, NOSTOSYM_MINI_R);
+});
+
+/*
+ * PISTEMERKIN VÄRIT OVAT KAHDESSA PAIKASSA, JA SE ON PAKKO.
+ *
+ * Sävy kuuluu tyylitiedostoon, mutta laattoja polttava Node-ajo ei näe
+ * css/styles.css:ää — se lukee varataulun (NOSTOSYM_PISTE_VARIT). Jos
+ * luvut eroaisivat, poltettu piste olisi eri värinen kuin elävä, ja
+ * kartalla olisi kaksi eri sävyä samasta kategoriasta vierekkäin.
+ * Tämä testi on se vahti, jonka takia kopio on sallittu — sama malli
+ * kuin nimiön kirjasinkoolla yllä.
+ */
+test('pistemerkin värit ovat samat kuin css/styles.css:n --sym-muuttujat', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  assert.ok(NOSTOSYM_PISTEET.length >= 11, `pisteitä ${NOSTOSYM_PISTEET.length}`);
+  for (const tunnus of NOSTOSYM_PISTEET) {
+    const muuttuja = new RegExp(`--sym-${tunnus}:\\s*(#[0-9a-fA-F]{3,8})`).exec(css);
+    assert.ok(muuttuja, `css/styles.css: --sym-${tunnus} puuttuu`);
+    assert.equal(NOSTOSYM_PISTE_VARIT[tunnus].toLowerCase(), muuttuja[1].toLowerCase(),
+      `varasävy ja --sym-${tunnus} eroavat`);
+    assert.ok(
+      new RegExp(`\\.nostosym-mini-${tunnus}\\s*\\{[^}]*var\\(--sym-${tunnus}\\)`).test(css),
+      `css/styles.css: .nostosym-mini-${tunnus} ei lue --sym-${tunnus}`,
+    );
+  }
+  const peitto = /\.nostosym-mini-taytto\s*\{[^}]*opacity:\s*([\d.]+)/.exec(css);
+  assert.ok(peitto, 'css/styles.css: .nostosym-mini-taytto ilman peittoa');
+  assert.equal(Number(peitto[1]), NOSTOSYM_PISTE_HIMMEYS);
+});
+
+/*
+ * VIISI MERKKIÄ SÄILYTTI MUOTONSA (omistaja 2.9.2026: *"jätetään vuori
+ * ja vesi ja skandaali ja söpöysmerkki ennalleen"* — ja kompassiruusu,
+ * joka ei ole kategoria vaan kadonneen ihmeen lisämerkki). Ne ovat
+ * pelkkää mustetta: jos jokin niistä saisi kiekon, kartalta katoaisi
+ * se muoto, jonka omistaja nimenomaan pyysi jättämään.
+ */
+test('vuori, vesi, huutomerkki, tassu ja kompassiruusu ovat yhä muotoja', () => {
+  for (const tunnus of ['vuori', 'meri', 'huuto', 'elain', 'ihme']) {
+    const merkki = nostosymMiniMerkki(tunnus, null);
+    assert.equal(merkki.taytto, null, `${tunnus}: kiekko`);
+    assert.equal(merkki.vari, null, `${tunnus}: kategoriaväri`);
+    assert.ok(merkki.vahva, `${tunnus}: muoto puuttuu`);
+    assert.ok(!NOSTOSYM_PISTEET.includes(tunnus), `${tunnus} on pistelistalla`);
+  }
 });
 
 /*
@@ -253,12 +301,18 @@ test('z7:n alapuolella porras on tavulleen entinen', () => {
 });
 
 /*
- * POLTTO EI MUUTU: generaattori kysyy katon tason omalla tiheydellä
- * (tools/fokuskartta/maailmapiirto.js: `px / NOSTOLADONTA_POLTON_TIHEYS`),
- * ja se on syvimmällä tasolla täsmälleen NOSTOLADONTA_SYVIN_RUUTUPX ja
- * jokaisella karkeammalla puolet edellisestä. Venytys on siis polton
- * kaikilla tasoilla 1 — ja juuri siksi NOSTOLADONTA_SAANTO pysyy v7:ssä
- * (omistaja: *"ei uutta zoomitasoa, ei polttoa"*).
+ * POLTTO EI MUUTU VENYTYKSESTÄ: generaattori kysyy katon tason omalla
+ * tiheydellä (tools/fokuskartta/maailmapiirto.js:
+ * `px / NOSTOLADONTA_POLTON_TIHEYS`), ja se on syvimmällä tasolla
+ * täsmälleen NOSTOLADONTA_SYVIN_RUUTUPX ja jokaisella karkeammalla
+ * puolet edellisestä. Venytys on siis polton kaikilla tasoilla 1 —
+ * ja juuri siksi z7:n yli venyvä katto EI vaatinut polttoa (omistaja
+ * 2.9.2026: *"ei uutta zoomitasoa, ei polttoa"*).
+ *
+ * SÄÄNNÖN TUNNUS ON SILTI PINNI, ja se on tarkoitus: se nousee aina
+ * kun piirtosääntö muuttuu, ja tämä rivi pakottaa nostajan katsomaan,
+ * että poltto todella ajetaan. v8 = pistemerkit ja eläintäkyjen sekä
+ * historian hetkien poltto (2.9.2026).
  */
 test('polton jokaisella tasolla venytys on tasan 1', () => {
   for (let z = 0; z <= 7; z += 1) {
@@ -266,7 +320,7 @@ test('polton jokaisella tasolla venytys on tasan 1', () => {
     assert.equal(nostoladontaVenytys(tasonTiheys / NOSTOLADONTA_POLTON_TIHEYS), 1,
       `taso z${z} (${tasonTiheys} px/yksikkö)`);
   }
-  assert.equal(NOSTOLADONTA_SAANTO, 'v7');
+  assert.equal(NOSTOLADONTA_SAANTO, 'v8');
 });
 
 /*
