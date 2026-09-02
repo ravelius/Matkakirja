@@ -2121,3 +2121,33 @@ erästä. Vanhat 12 säilyvät yksityisinä vertailuversioina; niitä ei
 ylikirjoiteta eikä viedä peliin.
 
 Ei kuvadataa eikä salaisuuksia postiin.
+
+
+---
+
+## 2.9.2026 20:05 EEST — KUVAPUTKI → FABLE: 13 käyttäjän hyväksymää kuvaa viety pelin R2:een
+
+Käyttäjän yksityisen arvioinnin tämänhetkinen hyväksytty määrä ei ole 16 vaan 13. Olen vienyt kaikki 13 hyväksyttyä kuvaa uusiin, aiempia korvaamattomiin peli-R2-osoitteisiin. GitHub Actions -ajo 33658465666 onnistui; se tarkisti jokaiselle Drive-lähteen SHA-256:n, JPEG-mitat, upotetun sRGB-ICC:n, MIME-tyypin, CORSin sekä julkisen R2-takaisinluvun tavutasolla.
+
+### M1 — neljä miniatyyriä (512 × 512, jo kytketty MINIATYYRIT-tauluun)
+
+- `kohtaamiset/miniatyyrit/ateena-akropolis-museo.jpg`
+- `kohtaamiset/miniatyyrit/ateena-iliou-melathron.jpg`
+- `kohtaamiset/miniatyyrit/sofia-banja-bashin-moskeija.jpg`
+- `kohtaamiset/miniatyyrit/sofia-serdican-areena.jpg`
+
+### H2 — yhdeksän hyväksyttyä historian hetkeä (1536 × 1024)
+
+- `kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-kauko.jpg`
+- `kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-lahi.jpg`
+- `kohtaamiset/historian-hetket/hetki-cook-endeavour-plymouth-1768-kauko.jpg`
+- `kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835-lahi.jpg`
+- `kohtaamiset/historian-hetket/hetki-kolumbus-palos-1492-kauko.jpg`
+- `kohtaamiset/historian-hetket/hetki-magalhaes-sanlucar-1519-kauko.jpg`
+- `kohtaamiset/historian-hetket/hetki-nansen-fram-1893-lahi.jpg`
+- `kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805-lahi.jpg`
+- `kohtaamiset/historian-hetket/hetki-vasco-da-gama-restelo-1497-lahi.jpg`
+
+M1 näkyy jo pelin datan kautta, koska `js/packs/miniatyyrit.js` nimeää nämä neljä R2-tunnusta. Kytke H2:n hyväksytyt kuvat seuraavassa pelierässä `js/packs/historian-hetket.js`-kuvalistoihin ja niitä peilaaviin kaupunki-/maalehtien gallerioihin. Säilytä vanhat H1-tiedostot R2:ssa, mutta käytä hyväksyttyä H2-kaukoa vanhan kaukon tilalla Kolumbuksella, Magalhãesilla, Cookilla ja Amundsenilla; lisää hyväksytty H2-lähikuva listan alkuun Darwinille, Nansenille, Trafalgarille, Vasco da Gamalle ja Amundsenille. Älä kytke hylättyjä H2-versioita.
+
+Drive-välivarasto: `1X7Kj-nQnOdg_V5987YNK7Uewyoawa-ik` (13 tiedostoa, vanhoja versioita korvaamatta).
