@@ -635,8 +635,30 @@ export function nostoladontaKattoSuhde(porras, ruutuPx) {
  * (js/laattapyramidi.js `nt.saanto !== NOSTOLADONTA_SAANTO`), peli
  * piirtää nostot elävinä uusilla muodoilla, ja seuraava nostotason
  * poltto tekee niistä taas laattaa.
+ *
+ * v9-maasto (omistaja 2.9.2026 ilta, sanatarkasti: *"Balkan vuoret ovat
+ * edelleen polttamatta eikä tekstiä voi klikata. sen sijaan sen
+ * yläpuolella oleva irrallinen vuorenkuva vie balkan vuorten
+ * popupiin."*): maastokohteet — vuoret, järvet ja joet, joilla on sama
+ * nimi myös maastonimiaineistossa — saavat NIMIÖNSÄ TAKAISIN ja
+ * palavat siis nostotasolle nimineen. Vaiennus oli aikanaan oikein
+ * (*"nimen sanoo laatta"*), mutta laattoihin ei ole poltettu nimiä
+ * sitten `nimiot: false` -ajon: nimen latoi nimikerros maastonimen
+ * omasta pisteestä, 19 lautayksikköä merkin alapuolelta, eikä sitä
+ * voinut napauttaa. Nyt yhden maan merkki kantaa nimensä ja
+ * nimikerros jättää saman maastonimen latomatta (js/fokuskohteet.js
+ * maastoParit, js/karttanimet.js asetaMaastonOmistajat); monen maan
+ * merkki vaikenee yhä, koska se ei polttaudu lainkaan.
+ *
+ * NOSTO ON PAKOLLINEN, VAIKKA NIMIÖ ONKIN TIIVISTEESSÄ. Muuttuvia
+ * merkkejä on 28 (mitattu), eli kaukana siitä yhdestä, jonka kohdalla
+ * tiivisteen ero on halpa hinta: jokaisen kohdalle jäisi laatan vanha
+ * nimiötön symboli elävän nimellisen merkin alle. Nostettuna luettelo
+ * ei kelpaa lainkaan (js/laattapyramidi.js `nt.saanto !==
+ * NOSTOLADONTA_SAANTO`), peli piirtää nostot elävinä nimineen, ja
+ * seuraava nostotason poltto tekee niistä taas laattaa.
  */
-export const NOSTOLADONTA_SAANTO = 'v8';
+export const NOSTOLADONTA_SAANTO = 'v9-maasto';
 
 export function nostoladontaTiiviste(merkki) {
   const osat = [

@@ -1758,6 +1758,83 @@ Näkyvät laatat luodaan aina ENNEN reunuksen laattoja (kaksi kierrosta
 samalla käsittelijällä), koska pyyntöjärjestys pätee joka selaimessa —
 `fetchpriority` on sama asia pelkkänä vihjeenä.
 
+## 6n. Kaksoiskuvat: nostotaso ja maastokohteen nimi (2.9.2026 ilta)
+
+Omistajan kaksi havaintoa saman illan kaappauksista, ja molemmat ovat
+**sama asia kartalla kahdesti** — eri syistä.
+
+### A. Tuplanäkymä zoomatessa
+
+Sanatarkasti: *"välillä tulee tällaisia tuplanäkymiä … ne onneksi
+häviävät jonkun ajan kuluttua"* (Sofia, mittajana 100 km). Kaappauksessa
+sumea, venytetty ja hieman siirtynyt *Boyanan kirkko* terävän nimen
+vieressä.
+
+**Juurisyy 1 — pohjan sääntö väärässä kerroksessa.** Sääntö 2 (*vanha
+taso ei katoa ennen kuin uusi on paikallaan*) on kirjoitettu
+LÄPINÄKYMÄTTÖMÄLLE pohjalle: uusi laatta maalaa vanhan yli, ja vanha on
+vain vakuutus tyhjää vastaan. Nostotaso on merkintöjä läpinäkyvällä
+lasilla, joten vanha muste **näkyy uuden läpi**. Päälle tulee se, että
+noston ruutukatto lasketaan tason omalla tiheydellä
+(`nostoladontaKattoSuhde`): karkeamman tason merkki on lautayksiköissä
+suurempi ja sen nimiö kauempana ankkurista — siis juuri venynyt ja
+siirtynyt haamu. Korjaus: nostotaso saa lipun `lapinakyva`, ja tason
+vaihtuessa edellisen tason laatat poistetaan heti
+(`js/laattapyramidi.js paivitaKerros`). Pohja ja viivataso pitävät
+sääntönsä — viivataso siksi, että sen muste on karttavakiota ja osuu
+uuden PÄÄLLE eikä viereen.
+
+Aukon hinta maksetaan esilatauksessa: `jonotaTasovaihto` lämmittää nyt
+myös nosto- ja viivatason naapuritasot, joita se ei ennen tuntenut.
+
+**Juurisyy 2 — luettelo selaimen välimuistista.** `pyramidi.json` on
+`max-age=300`, ja juuri se viisi minuuttia on ikkuna, jossa peli lukee
+EDELLISEN ajon nostoversion mutta laskee tiivisteet uudella koodilla:
+jokainen muuttunut merkki on kartalla kahdesti (vanha laatassa, uusi
+elävänä). Luettelo noudetaan siksi `cache: 'no-cache'` -tarkistuksella
+(304 ilman runkoa), ja verkoton varareitti on tavallinen nouto — muuten
+kartta katoaisi lentokonetilassa. Laatan avain kantaa lisäksi ajon
+version, joten kaksi ajoa ei voi jakaa samaa elementtiä.
+
+**Mitattu** (`tools/savukkeet/savuke-nostolaatat.mjs`, laattaviive
+400 ms, 121 otosta Sofian zoomista): ennen korjausta nostokerroksessa
+oli kahden tason laattoja **10 otoksessa** (pahimmillaan 91 laattaa
+tasoilta z5 ja z6), jälkeen **0**. Pohjakerros näyttää kaksi tasoa yhä
+(5–7 otosta), eli otanta ei mittaa tyhjää.
+
+### B. Irrallinen vuorenkuva
+
+Sanatarkasti: *"Balkan vuoret ovat edelleen polttamatta eikä tekstiä voi
+klikata. sen sijaan sen yläpuolella oleva irrallinen vuorenkuva vie
+balkan vuorten popupiin."*
+
+Kaksoisnimen KOLMAS lähdepari (vrt. luku 6c.1): kohdeaineisto
+(`js/packs/fokuskohteet-bgr.js` `balkanvuoret`, 6666,7 / 1673,3) ja
+maastonimet (`maailmankartta-nimet.js`, 6660 / 1691,4) — sama vuoristo
+19 lautayksikön päässä itsestään. Kohdemerkki oli vaiennettu
+nimiöttömäksi perusteella *"nimen sanoo laatta"*, mutta laattoihin ei
+ole poltettu nimiä sitten `nimiot: false` -ajon: nimen latoi nimikerros
+maastonimen omasta pisteestä eikä sitä voinut napauttaa. Kartalle jäi
+kaksi puolikasta.
+
+**Sääntö nyt:** pari ratkaistaan kerran (`js/fokuskohteet.js
+maastoParit`) ja molemmat puolet lukevat saman vastauksen.
+
+| omistaja | ehto | seuraus |
+| --- | --- | --- |
+| kohdemerkki | tunnus vain yhdessä maassa → merkki poltetaan koko maailman kartalle | merkki kantaa nimensä; nimikerros ei lado maastonimeä eikä sen kolmiota |
+| nimikerros | sama tunnus monessa maassa (Victorianjärvi, Tonava) → ei polttaudu lainkaan | maastonimi jää nimikerrokselle; merkki vaikenee kuten ennen |
+
+Mitattu: nimiöttömiä merkkejä 50 → 22, ja 28 poltettavaa merkkiä saa
+nimensä (yksi vuori, yksi järvi, loput jokia — 37 maastonimen paria,
+joista viisi on vuoria tai järviä, muut jokia, joita nimikerros ei
+piirrä lainkaan). Poltetun nimiön näkymätön osumamuoto tulee
+olemassa olevasta koneistosta (`asetaPoltetutTekstiOsumat`), joten nimi
+on napautettava samalla tavalla kuin muillakin poltetuilla nostoilla.
+
+Muutos koskee jokaisen merkin tiivistettä, joten **ladontasääntö nousee
+`v9-maasto`** ja nostotaso piiloutuu kokonaan uusintapolttoon asti.
+
 ## 7. Harva pyramidi — mitattu, päätetty POIS
 
 Karsinta laattamäärästä (`--harva-raja 8`, koko maailma, uusi arkki):

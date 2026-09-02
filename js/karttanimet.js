@@ -601,7 +601,7 @@ const MERKIN_VIIVA = {
  * Lauta kiertyy: 12000 yksikköä on koko maapallon ympärys.
  *
  * Viety, koska kohdekerros tarvitsee saman luvun samaan tarkoitukseen
- * (js/fokuskohteet.js maastonimiLahella).
+ * (js/fokuskohteet.js maastonimenPari).
  */
 export const LAUDAN_YMPARYS = 12000;
 
@@ -674,6 +674,57 @@ function parita(kaupungit, vuoret, jarvet) {
   }
 }
 
+/* ------------------------------------------- maastonimen omistaja */
+
+/*
+ * KUKA KIRJOITTAA MAASTON NIMEN — KOHDEMERKKI VAI TÄMÄ KERROS?
+ *
+ * Omistajan kuvakaappaus Sofiasta 2.9.2026 illalla, sanatarkasti:
+ * *"Balkan vuoret ovat edelleen polttamatta eikä tekstiä voi klikata.
+ * sen sijaan sen yläpuolella oleva irrallinen vuorenkuva vie balkan
+ * vuorten popupiin."*
+ *
+ * JUURISYY: sama vuoristo on kahdessa aineistossa, 19 lautayksikön
+ * päässä toisistaan — kohdemerkkinä (js/packs/fokuskohteet-bgr.js
+ * `balkanvuoret`, 6666,7 / 1673,3) ja maastonimenä
+ * (js/packs/maailmankartta-nimet.js, 6660 / 1691,4). Kohdemerkki oli
+ * VAIENNETTU nimiöttömäksi sillä perusteella, että *"nimen sanoo
+ * laatta"* (js/fokuskohteet.js kohteenNimio) — mutta laattoihin ei ole
+ * poltettu nimiä sitten `nimiot: false` -ajon, joten nimen sanoo tämä
+ * kerros omalta paikaltaan. Lopputulos kartalla oli kaksi puolikasta:
+ * napautettava merkki ilman nimeä ja nimi ilman napautusta.
+ *
+ * SÄÄNTÖ: jommalla kummalla on nimi, ei kummallakaan puolikasta.
+ * Kohdekerros laskee parit (js/fokuskohteet.js maastoParit) ja
+ * ILMOITTAUTUU tänne — sama suunta kuin kohdenimiöillä
+ * (asetaKohdenimet) eikä kehäviittausta.
+ *
+ * KUMPI SAA NIMEN, RATKAISEE SE, KUMPI ON KARTALLA AINA. Yhden maan
+ * kohdemerkki poltetaan nostotasolle koko maailman kartalle, joten se
+ * kantaa nimensä ja symbolinsa yhtenä piirroksena (ja saa poltetun
+ * nimiön näkymättömän osumamuodon, js/fokuskohteet.js
+ * asetaPoltetutTekstiOsumat) — silloin tämä kerros jättää maastonimen
+ * ja sen kolmion latomatta. Monen maan merkki (Victorianjärvi Keniassa
+ * ja Ugandassa) ei polttaudu lainkaan eikä ole kartalla muualla kuin
+ * omassa maassaan, joten sen nimen kirjoittaa yhä tämä kerros.
+ */
+let maastonOmistajatHaku = null;
+
+/**
+ * Ilmoittaa, mitkä maastonimen tietueet kohdemerkki kirjoittaa itse.
+ *
+ * @param {() => Set<object>|null} hae palauttaa joukon
+ *   MAAILMANKARTAN_NIMET-tietueita (identiteetti, ei nimi: sama nimi
+ *   voi olla kartalla kahdesti eri paikassa).
+ */
+export function asetaMaastonOmistajat(hae) {
+  maastonOmistajatHaku = typeof hae === 'function' ? hae : null;
+  // Ladonta on välimuistissa mittakaavoittain: vanha erä tuntisi
+  // vanhan joukon (unohdaKarttanimet on funktiomäärittely, siis
+  // käytettävissä jo tässä).
+  unohdaKarttanimet();
+}
+
 /*
  * TÄRKEYS RATKAISEE TÖRMÄYKSEN (sama kaava kuin sisalto.mjs).
  *
@@ -707,11 +758,20 @@ function keraaAineisto(pack) {
     tarkeys: (c.start ? 8 : 0) + (c.airport ? 4 : 0) + Math.min(3, aste.get(c.id) ?? 0),
   }));
   const nimet = MAAILMANKARTAN_NIMET ?? {};
+  /*
+   * KOHDEMERKIN OMAT MAASTONIMET POIS (ks. asetaMaastonOmistajat):
+   * merkki kirjoittaa nimensä itse, ja tämä kerros jättää sekä nimen
+   * että kolmion latomatta — muuten sama vuoristo olisi kartalla
+   * kahdesti, kahdessa eri paikassa, ja vain toinen napautettavana.
+   */
+  const omistetut = maastonOmistajatHaku?.() ?? null;
+  const kelpaa = (v) => Number.isFinite(v.x) && Number.isFinite(v.y)
+    && !omistetut?.has(v);
   const vuoret = (nimet.vuoret ?? [])
-    .filter((v) => Number.isFinite(v.x) && Number.isFinite(v.y))
+    .filter(kelpaa)
     .map((v) => ({ nimi: v.nimi, x: v.x, y: v.y, tarkeys: v.tarkeys ?? 2 }));
   const jarvet = (nimet.jarvet ?? [])
-    .filter((v) => Number.isFinite(v.x) && Number.isFinite(v.y))
+    .filter(kelpaa)
     .map((v) => ({ nimi: v.nimi, x: v.x, y: v.y, tarkeys: v.tarkeys ?? 2 }));
   parita(kaupungit, vuoret, jarvet);
   return { kaupungit, vuoret, jarvet };
@@ -1409,10 +1469,12 @@ function lado(data, px, oma = null) {
    *    jota kartta latoo joka tapauksessa koko maailmaan; kohde on
    *    pelin omaa sisältöä ja vain siinä maassa, jossa pelaaja nyt on.
    *    Kun molemmat eivät mahdu, se harvinaisempi ja avattava jää.
-   *    Kaksoisnimivaaraa tästä ei synny: samanniminen kohde jättää
-   *    nimiönsä pois jo lähteellä (js/fokuskohteet.js kohteenNimio →
-   *    maastonimiLahella), joten sama nimi ei voi kilpailla itsensä
-   *    kanssa.
+   *    Kaksoisnimivaaraa tästä ei synny: pari ratkaistaan yhdessä
+   *    paikassa (js/fokuskohteet.js maastoParit) ja vain toinen puoli
+   *    kirjoittaa nimen — joko kohdemerkki, jolloin maastonimi ei tule
+   *    tähän ladontaan lainkaan (asetaMaastonOmistajat), tai
+   *    nimikerros, jolloin merkki jää nimiöttömäksi. Sama nimi ei voi
+   *    siis kilpailla itsensä kanssa.
    *
    * MERKIT EIVÄT OSALLISTU EIVÄTKÄ KATOA. Ladonta päättää vain
    * NIMISTÄ. Kohdemerkki piirretään omassa kerroksessaan
