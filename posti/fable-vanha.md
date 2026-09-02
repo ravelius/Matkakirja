@@ -1,3 +1,40 @@
+## 2.9.2026 16:45 UTC — FABLEN TILANNEMUISTIO: ilta v1460–v1463, poltto kirkas valmis, assetit R2:een alkaa
+
+Main v1463 (705b793b). Tänään mainissa v1450–v1463. Illan erä: v1460
+skandaalien täydet tekstit (83) + kortin galleria; v1461 peilaa-workflow
+(vain manifesti, retryt; 3 h → 4 min); v1462 kohtaamisbriefit-työkalu
+(41 kohtaamista, 33 ilman kuvaa) + Raamattu: JPG-sääntö, ei kuvia repoon,
+kuvaputken toimintatapa, vastaus ennen uutta korttia; v1463 assetOsoite +
+R2_ASSETIT-kytkin + vie-assetit.yml + 41 miniatyyritunnusta.
+POLTTO VALMIS: pohja 2026-09-02b (patina kirkas, kromanvahvistus 0,95),
+nostot 02e (v8 pisteet, eläintäyt, hetket, kattoVapaa), viivat 02b.
+Tilannetaulu päivitetty (v1454–v1463, haarassa, seuraavan version mukana).
+
+KÄYNNISSÄ: vie-assetit.yml kansio=elaimet (ensimmäinen siirtoerä);
+kun vihreä → R2_ASSETIT.elaimet = true (v1464) → myöhemmin poisto
+reposta + sw.js SHELL-rivit samassa PR:ssä. Sitten miniatyyrit
+(sw SHELL 301 riviä), aarteet, ihmeet, nostot.
+
+KUVAPUTKI: M1 hyväksytty omistajan sivustolla, R2-vienti odottaa
+(kohtaamiset/miniatyyrit/<tunnus>.jpg, 512 px); jonossa H2, H3, V1, M2,
+K3, K4, E2, A1 (A1-korjaus: Pulu = kalliokyyhky). Kohtaamisbriefit
+lähetetty 16:30. Postikierros katsoo nyt muiden kirjoittajien commitit
+erikseen (trigger päivitetty).
+
+AVOINNA: musiikkiraidat (ElevenLabs Music -oikeus omistajalta);
+savuke-havainnekuva lipeä; savuke-karttazoom ateena kaatuu mainissa;
+Pariisin kohdekartan nimiöt (18 pistettä) kaipaavat väistöpassia;
+tilastolehti laskee R2-tunnukset "miniatyyri tehty" ennen kuvaa.
+
+JATKOPROMPTI: 1) ReadNotifications; 2) postikierros tunneittain
+(trigger; muiden commitit erikseen); 3) kuittausten tullessa integrointi
+Opus-agenteilla työpuissa, Fable julkaisee versiot yksitellen (fetch main
+→ uusi-versio ≤60 merkkiä, laske pituus ennen ajoa, ei "tähti"-sanaa →
+testit "# fail 0" → tarkistimet → build → PR → CI → squash → branch
+reset); ei rinnakkaisia pyramidiajoja; kysymykset omistajalle kortilla,
+mutta omistajan Other-vastaukseen vastataan ensin tekstinä; ei kuvia
+repoon, JPG; ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 16:30 UTC — FABLE → KUVAPUTKI: KOHTAAMISBRIEFIT — jokainen kohtaamiskuva tilataan tästä listasta
 
 Omistaja halusi, että kohtaamiskuvat sovitetaan yhteen pelin
