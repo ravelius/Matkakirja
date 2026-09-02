@@ -1,10 +1,11 @@
 # Vie ETOPO1:n 1′-korkeuspalat R2-ämpäriin.
 #
-# Omistajan kokeilu 1.9.2026: peli laskee tarkan rinnevarjon
-# reaaliajassa ETOPO1:n natiivista yhden kaariminuutin ruudukosta
-# (js/korkeuskerros.js). Ruudukko on 466 Mt raakana, joten se pilkotaan
-# 10° × 10° -paloihin (tools/tee-korkeuspalat.mjs) ja peli noutaa vain
-# näkyvän alueen palat.
+# Omistajan tilaus 1.9.2026: *"korkeusdata pitää tehdä 1
+# [kaariminuutin] tarkkuudella uudestaan."* Ruudukko on 466 Mt raakana,
+# joten se pilkotaan 10° × 10° -paloihin (tools/tee-korkeuspalat.mjs) ja
+# lukija noutaa vain tarvitsemansa palat. Aineiston lukija on
+# laattapoltto; selainkokeilu, joka haki palat pelin puolelle, purettiin
+# 2.9.2026 (*"Ota live pois ja polta 1 kaarisekuntti"*).
 #
 # AINEISTOA EI COMMITOIDA — sama sääntö kuin dist/-kansiolla: historia
 # paisuisi eikä sitä saisi enää pieneksi. Siksi tämä ajo noutaa
@@ -12,7 +13,6 @@
 # Palat päätyvät polkuun `julisteet/korkeus/1min/`, jonka julkinen
 # osoite on
 # https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/julisteet/korkeus/1min/
-# (js/media.js korkeuspalaUrl).
 #
 # === NOAA:N TAVOITETTAVUUS ON TÄMÄN AJON AINOA RISKI ================
 #

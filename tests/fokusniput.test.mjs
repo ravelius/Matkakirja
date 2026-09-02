@@ -222,6 +222,52 @@ test('liian lyhyt pätkä ei ole viiva vaan roska — jana jää tekemättä', (
   }, S), null);
 });
 
+test('Ateenan koko sarake saa viivan — kynnys ei karsi ketään', () => {
+  /*
+   * OMISTAJAN VIKA 2.9.2026, sanatarkasti: *"Lisää siirto viivat, ne
+   * ei vielä näy"*. Viivat OLIVAT paikallaan, ja vika oli mitoissa —
+   * mutta kun mitat kasvoivat, kynnys (NIPPU_VIIVA_MIN) olisi ollut
+   * seuraava tapa saada sama vika toisin päin: kahteen katkoon
+   * sidottuna se olisi pudottanut Ateenan lyhyimmät viivat pois.
+   *
+   * MITTA ON OMISTAJAN OMASTA KAAPPAUKSESTA: Ateenan ryppään merkit
+   * ovat 15,6 ja 20,8 perustason pikselin päässä kaupungista, joten
+   * viivaa jää 7,5 ja 12,7. Molempien on saatava jana.
+   */
+  for (const etaisyys of [15.6, 20.8]) {
+    const v = {
+      cx: 1000, cy: 1000, x: 1000 + etaisyys * S, y: 1000, sade: 5.6,
+    };
+    const j = nippuViivanJana(v, S);
+    assert.ok(j, `${etaisyys} px:n päässä oleva merkki jäi ilman viivaa`);
+    const pituus = Math.hypot(j.x2 - j.x1, j.y2 - j.y1);
+    assert.ok(pituus > j.katko, `${etaisyys} px: viivaan ei mahdu yhtä katkoa`);
+  }
+});
+
+test('viiva on merkin mustetta eikä paperin raetta', () => {
+  /*
+   * KOLME LUKUA, JOTKA RATKAISEVAT NÄKYYKÖ VIIVA (omistaja 2.9.2026).
+   * Ne on kirjoitettu tänne numeroina eikä tuotu moduulista: juuri
+   * niiden hiljainen kutistuminen oli vika, ja tuotu vakio myöntyisi
+   * mihin tahansa arvoon.
+   *
+   * Muste on merkin oma (css/styles.css .nostosym-mini rgb(58, 40, 25)
+   * = #3a2819), ei kartan haalea okra — viiva luetaan merkin jatkeeksi.
+   * Himmeys jää silti merkin oman 0,86:n alle: viiva on jatke, ei
+   * merkki.
+   */
+  const v = { cx: 1000, cy: 1000, x: 1040, y: 1000, sade: 5.6 };
+  const j = nippuViivanJana(v, S);
+  assert.equal(j.vari, '#3a2819', 'viiva ei ole merkin musteessa');
+  assert.ok(j.himmeys >= 0.6, `himmeys ${j.himmeys} — viiva katoaa puhelimen ruudulta`);
+  assert.ok(j.himmeys < 0.86, 'viiva ei saa olla merkkiä vahvempi');
+  assert.ok(j.leveys >= 1.5 * S, `leveys ${j.leveys} — viiva katoaa puhelimen ruudulta`);
+  // Katko on VÄLIÄ pidempi: tasavälinen katko hajoaa pienessä koossa
+  // pisteriviksi (sama korjaus kuin merireitin viivoituksessa).
+  assert.ok(j.katko > j.vali, 'katko ei ole väliä pidempi');
+});
+
 test('viivan mitat elävät merkkiskaalan mukana, eivät ruudun', () => {
   /*
    * Sama jana kahdella mittakaavalla. Merkki on tässä KAUKANA
@@ -234,6 +280,7 @@ test('viivan mitat elävät merkkiskaalan mukana, eivät ruudun', () => {
   const b = nippuViivanJana(v, S * 2);
   assert.ok(Math.abs(b.leveys - a.leveys * 2) < 1e-9, 'paksuus');
   assert.ok(Math.abs(b.katko - a.katko * 2) < 1e-9, 'katko');
+  assert.ok(Math.abs(b.vali - a.vali * 2) < 1e-9, 'katkon väli');
   // Isompi merkki peittää enemmän, joten sen reuna — ja viivan alkupää
   // — on LÄHEMPÄNÄ ankkuria; loppupää ei liiku, koska ankkuripisteellä
   // ei ole kokoa.
@@ -257,7 +304,8 @@ test('poltettavassa rivissä on viiva vain siirretyllä merkillä', () => {
   for (const m of viivallisia) {
     assert.ok(Number.isFinite(m.viiva.x1) && Number.isFinite(m.viiva.y2),
       `${m.tunnus}: janan päät eivät ole lukuja`);
-    assert.ok(m.viiva.leveys > 0 && m.viiva.katko > 0, `${m.tunnus}: mitat`);
+    assert.ok(m.viiva.leveys > 0 && m.viiva.katko > 0 && m.viiva.vali > 0,
+      `${m.tunnus}: mitat`);
     // Viivan alkupää on merkissä kiinni: sen etäisyys merkin
     // keskipisteestä on aluslaatan reuna, ei mitä sattuu.
     const merkista = Math.hypot(m.viiva.x1 - m.x, m.viiva.y1 - m.y);

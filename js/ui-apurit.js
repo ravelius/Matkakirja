@@ -1178,14 +1178,12 @@ const KEHITTAJA_AVAIN = 'matkakirja-kehittaja';
 let kehittajaMuisti = null;
 let kehittajaMaailmaMuisti = null;
 let kehittajaTummennusMuisti = null;
-let kehittajaVarjoMuisti = null;
 
 /** Kytkinten muisti tyhjäksi: seuraava kysyjä lukee levyltä. */
 export function unohdaKehittajaKytkimet() {
   kehittajaMuisti = null;
   kehittajaMaailmaMuisti = null;
   kehittajaTummennusMuisti = null;
-  kehittajaVarjoMuisti = null;
 }
 
 try {
@@ -1391,51 +1389,6 @@ export function asetaKehittajaTummennus(paalla) {
   try {
     if (paalla) localStorage.removeItem(KEHITTAJA_TUMMENNUS_AVAIN);
     else localStorage.setItem(KEHITTAJA_TUMMENNUS_AVAIN, '0');
-  } catch {
-    /* yksityinen selaus: tila jää vain tälle istunnolle */
-  }
-}
-
-/*
- * === TARKKA VARJO: KEHITTÄJÄN 1′-KOKEILU ============================
- *
- * Omistajan tilaus 1.9.2026, sanatarkka: *"korkeusdatan 1′-ajoa
- * simuloidaan liverenderöinnillä pelissä: ensin haetaan normaali pohja
- * laatoista ja sitten peli rakentaa reaaliajassa tarkemman
- * korkeusvarjostuksen."* Kytkin panee js/korkeuskerros.js:n päälle:
- * peli noutaa ETOPO1:n natiivit yhden kaariminuutin palat ja piirtää
- * niistä lasketun rinnevarjon läpikuultavana laattojen päälle.
- *
- * TÄMÄ ON KOKEILU EIKÄ OMINAISUUS. Omistajan päätös samasta
- * viestistä: varjo piirretään SUORAAN laattojen päälle, ilman
- * sekoitustilaa, ja hyväksytään että rinne saa sekä poltetun 3′-varjon
- * että 1′-varjon. Lopullinen ratkaisu on pohjan uusintapoltto, ei
- * tämä kerros — siksi kytkin asuu kehittäjän valikossa eikä
- * missään pelaajan näkemässä.
- *
- * OMA AVAIN, ei maailmakytkimen jaettu: kokeilun saa jättää päälle
- * pelaajan näkymässäkin, ja sitä pitääkin voida katsoa juuri siinä.
- * Sama kaava kuin muillakin kehittäjän kytkimillä: try/catch,
- * muistiin luettu arvo eikä levylukua joka kehyksessä, eikä riviäkään
- * pelitallennuksessa.
- */
-const KEHITTAJA_VARJO_AVAIN = 'matkakirja-kehittaja-tarkkavarjo';
-
-export function tarkkaVarjoPaalla() {
-  if (kehittajaVarjoMuisti !== null) return kehittajaVarjoMuisti;
-  try {
-    kehittajaVarjoMuisti = localStorage.getItem(KEHITTAJA_VARJO_AVAIN) === '1';
-  } catch {
-    kehittajaVarjoMuisti = false; // yksityinen selaus
-  }
-  return kehittajaVarjoMuisti;
-}
-
-export function asetaTarkkaVarjo(paalla) {
-  unohdaKehittajaKytkimet();
-  try {
-    if (paalla) localStorage.setItem(KEHITTAJA_VARJO_AVAIN, '1');
-    else localStorage.removeItem(KEHITTAJA_VARJO_AVAIN);
   } catch {
     /* yksityinen selaus: tila jää vain tälle istunnolle */
   }

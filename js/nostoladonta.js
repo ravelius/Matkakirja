@@ -358,8 +358,24 @@ export function nostoladontaKattoPorras(porras, ruutuPx) {
  * missään. Nostettuna luettelo ei kelpaa lainkaan (js/laattapyramidi.js
  * `nt.saanto !== NOSTOLADONTA_SAANTO`), peli piirtää nostot elävinä
  * viivoineen, ja seuraava nostotason poltto tekee niistä taas laattaa.
+ *
+ * v6 (omistaja 2.9.2026 aamu, sanatarkasti: *"Lisää siirto viivat, ne
+ * ei vielä näy"*; kaappaus Ateenasta): v5:n viiva OLI kartalla ja
+ * laatoissa, mutta puhelimen ruudulla se oli kahden CSS-pikselin veto
+ * 30 %:n peitolla haalealla okralla — mitattuna sama asia kuin paperin
+ * oma rae. Viiva on nyt selvästi näkyvä: leveys 0,8 -> 1,6, himmeys
+ * 0,3 -> 0,7, katko 2,0 -> 3,0 välillä 2,0, ja muste merkin omaa
+ * (#3a2819) haalean okran sijasta (js/fokusniput.js NIPPU_VIIVA_*).
+ *
+ * SAMA SYY KUIN v5:SSÄ, VAIN TOISIN PÄIN: viiva ei ole tiivisteen
+ * syötettä, joten v5-laatoissa on merkki, jonka viiva on OLEMASSA
+ * mutta väärän näköinen, ja jokainen tiiviste täsmäisi. Ilman tätä
+ * nostoa peli hyväksyisi v5-laatat tuoreiksi ja omistaja katsoisi
+ * yhä samaa näkymätöntä viivaa — nyt luettelo ei kelpaa lainkaan,
+ * peli piirtää nostot elävinä uusilla mitoilla, ja seuraava
+ * nostotason poltto tekee niistä taas laattaa.
  */
-export const NOSTOLADONTA_SAANTO = 'v5';
+export const NOSTOLADONTA_SAANTO = 'v6';
 
 export function nostoladontaTiiviste(merkki) {
   const osat = [

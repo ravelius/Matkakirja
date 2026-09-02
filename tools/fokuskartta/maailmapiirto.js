@@ -86,7 +86,7 @@ import {
   ASTEIKKO, KOHINA, KOHINA2, MUSTE, PAPERI,
   fbm, laudanProjektio, lerpSyvyys, lerpVari, mulberry32,
 } from './piirto.js';
-import { varjostusPisteessa } from '../../js/maastovarjo.js';
+import { bilineaarinenKorkeus, varjonVoimakkuus, varjostusPisteessa } from './maastovarjo.js';
 import {
   NOSTOLADONTA_POLTON_TIHEYS, nostoladontaKattoPorras,
 } from '../../js/nostoladonta.js';
@@ -334,18 +334,20 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
   const DLON = (K.lon1 - K.lon0) / (K.w - 1);
   const DLAT = (K.lat1 - K.lat0) / (K.h - 1);
 
-  /** Bilineaarinen korkeus (m); NaN ruudukon ulkopuolella. */
-  const korkeus = (lon, lat) => {
-    const fx = (lon - K.lon0) / DLON;
-    const fy = (K.lat1 - lat) / DLAT;          // y = 0 on pohjoisin rivi
-    if (fx < 0 || fy < 0 || fx > K.w - 1 || fy > K.h - 1) return NaN;
-    const x0 = Math.floor(fx); const y0 = Math.floor(fy);
-    const x1 = Math.min(K.w - 1, x0 + 1); const y1 = Math.min(K.h - 1, y0 + 1);
-    const tx = fx - x0; const ty = fy - y0;
-    const a = GRID[y0 * K.w + x0]; const b = GRID[y0 * K.w + x1];
-    const c = GRID[y1 * K.w + x0]; const d = GRID[y1 * K.w + x1];
-    return (a + (b - a) * tx) * (1 - ty) + (c + (d - c) * tx) * ty;
+  /*
+   * Bilineaarinen korkeus (m); NaN ruudukon ulkopuolella.
+   *
+   * Näytteenotin asuu varjostuskaavan kanssa samassa moduulissa
+   * (./maastovarjo.js), koska varjo lasketaan NELJÄSTÄ näytteestä ja
+   * näytteenoton pyöristys on osa varjon lopputulosta. Ruudukko
+   * annetaan sille kerran koottuna oliona eikä pikselikohtaisesti:
+   * askelvälit DLON/DLAT lasketaan tässä reunoista, kun taas moduuli
+   * ottaa ne valmiina.
+   */
+  const RUUDUKKO = {
+    grid: GRID, w: K.w, h: K.h, lon0: K.lon0, lat1: K.lat1, dlon: DLON, dlat: DLAT,
   };
+  const korkeus = (lon, lat) => bilineaarinenKorkeus(RUUDUKKO, lon, lat);
 
   /*
    * ================== MAA VAI MERI: VEKTORI ON AUKTORITEETTI =========
@@ -561,12 +563,12 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * yleislehden ruudukko on kolme kaariminuuttia eikä yksi — samalla
    * kertoimella rinteet olisivat kaukozoomissa rakeisia.
    *
-   * KAAVA ITSE ASUU MUUALLA (js/maastovarjo.js). Se
-   * siirtyi omaksi moduulikseen 1.9.2026, kun omistajan 1′-kokeilu
-   * (js/korkeuskerros.js) alkoi laskea SAMAA varjoa selaimessa: kaksi
-   * kopiota olisi ehtinyt eriytyä ensimmäisessä hienosäädössä, ja ero
-   * olisi näkynyt juuri siinä mitä kokeilulla mitataan. Tässä on enää
-   * moottorin oma askel — ruudukon väli — ja sen sulkeuma.
+   * KAAVA ITSE ASUU MUUALLA (./maastovarjo.js). Se irtosi omaksi
+   * moduulikseen 1.9.2026, kun omistajan 1′-kokeilu laski hetken
+   * samaa varjoa selaimessa; kokeilu purettiin 2.9.2026, mutta kaava
+   * jäi omilleen, koska se on siellä testattavissa ilman moottoria
+   * (tests/korkeuspalat.test.mjs). Tässä on enää moottorin oma askel
+   * — ruudukon väli — ja sen sulkeuma.
    */
   const varjostus = (lon, lat) => varjostusPisteessa(korkeus, lon, lat, DLON);
 
@@ -663,7 +665,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
           const n1 = fbm(KOHINA, gx / (26 * P), gy / (26 * P), 4) - 0.5;
           const n2 = fbm(KOHINA2, gx / (7 * P), gy / (7 * P), 3) - 0.5;
           const c = lerpVari(ASTEIKKO, Math.max(0, m + n1 * 190 + n2 * 60));
-          const varjo = (0.5 - varjostus(lon, lat)) * 0.46;
+          const varjo = varjonVoimakkuus(varjostus(lon, lat));
           const pigmentti = (KOHINA2(gx / (2.1 * P), gy / (2.1 * P)) - 0.5) * 13;
           const lai = (fbm(KOHINA, gx / (95 * P), gy / (95 * P), 3) - 0.5) * 12;
           const t = (k) => k * (1 - varjo) + pigmentti + lai + (varjo > 0 ? 0 : varjo * 30);
@@ -1884,6 +1886,12 @@ export function piirraNostotKankaalle(ctx, nostot, piirraNosto, mitta) {
      * siirtoviivat takaisin karttanostoille (esim. ateena)"*); viivat
      * olivat poissa yhden vuorokauden ajan.
      *
+     * VAHVISTETTU 2.9.2026 (omistaja: *"Lisää siirto viivat, ne ei
+     * vielä näy"*): leveys, himmeys, katko ja muste kaksinkertaistuivat
+     * tai vahvistuivat, mutta yhtäkään niistä ei kirjoiteta tänne —
+     * kaikki tulevat samasta janasta kuin elävässä kerroksessa, ja
+     * juuri se on tämän lohkon koko idea.
+     *
      * VIIVA EI OTA RUUTUKATTOA (alempana, nostoladontaKattoPorras).
      * Katto on nimiön luettavuutta varten — se estää nimiötä ohittamasta
      * kartan omaa paikannimeä syvillä tasoilla — ja viivan päät ovat jo
@@ -1897,7 +1905,9 @@ export function piirraNostotKankaalle(ctx, nostot, piirraNosto, mitta) {
       ctx.globalAlpha = v.himmeys;
       ctx.lineCap = 'round';
       ctx.lineWidth = Math.max(0.2, v.leveys * px);
-      ctx.setLineDash([v.katko * px, v.katko * px]);
+      // Katko ja väli ovat eri mitat (js/fokusniput.js NIPPU_VIIVA_KATKO
+      // ja NIPPU_VIIVA_VALI): pidempi veto, lyhyempi väli.
+      ctx.setLineDash([v.katko * px, v.vali * px]);
       ctx.beginPath();
       ctx.moveTo(lautaKuvaX(v.x1), lautaKuvaY(v.y1));
       ctx.lineTo(lautaKuvaX(v.x2), lautaKuvaY(v.y2));
@@ -2186,12 +2196,13 @@ export function piirraErikoispiiritKankaalle(ctx, mitta) {
  * KAKSI VANHAA RAJAA PITÄVÄT YHÄ, ja ne on tarkistettu uusilla
  * luvuilla:
  *
- *   HELMI EI MAHDU KATKOON. Helmen halkaisija on 20 R ja katko
- *   0,30 · 150 = 45 R — katko on yhä selvästi pitkänomainen.
+ *   HELMI EI MAHDU KATKOON. Helmen halkaisija on 20 R, ja katon on
+ *   pysyttävä sitä pidempänä.
  *   HELMINAUHAA EI SYNNY. Lyhin askelväli on 232 R ja helmen
  *   ulkohalkaisija kehineen 26 R, joten väliin jää yli 200 R.
- *   (Luvut on päivitetty 1.9.2026 illan eriin: helmi 15 -> 10 ja
- *   jakso 190 -> 150; molemmat rajat pitävät uusillakin mitoilla.)
+ *   (Molempien rajojen voimassa olevat luvut ovat alimmassa
+ *   perustelulohkossa "LYHYEMPI KATKO, TIHEÄMPI RYTMI", jonne ne on
+ *   laskettu uudestaan jokaisessa erässä.)
  *
  * Luvut ovat R:ssä eli KARTTAVAKIOITA (ks. piirraMaailma osio 8b):
  * ne kutistuvat kartan mukana, joten muutos näkyy joka tasolla samana
@@ -2280,18 +2291,69 @@ export function piirraErikoispiiritKankaalle(ctx, mitta) {
  * HELMET EIVÄT SIIRRY, VAIKKA JAKSO LYHENEE. Merihelmi ankkuroidaan
  * lähimmän katkojakson keskelle (ks. `arkilla`), joten sen suurin
  * siirtymä raakapaikastaan on puoli jaksoa: 95 R -> 75 R. Tiheämpi
- * rytmi vie helmen siis LÄHEMMÄS omaa askelmaansa, ei kauemmas — ja
- * se on MITATTU koko laudalta (350 merihelmeä): suurin siirtymä oli
- * ennen 95 px ja on nyt 74 px z7:llä, eikä yksikään helmi ylitä
- * palautusrajaa 0,75 · jakso kummallakaan mitalla. Helmi ei siis voi
- * jäädä raakapaikalleen niin, että sen jakso silti jätettäisiin
+ * rytmi vie helmen siis LÄHEMMÄS omaa askelmaansa, ei kauemmas.
+ * (Sama mittaus on ajettu uudestaan 2.9.2026 tiheämmällä rytmillä —
+ * ks. "LYHYEMPI KATKO, TIHEÄMPI RYTMI".)
+ */
+/*
+ * === LYHYEMPI KATKO, TIHEÄMPI RYTMI (omistaja 2.9.2026 aamu) ========
+ *
+ * Sanatarkasti: *"tihennä laivareitin viivoitus (lyhyempi viiva mutta
+ * tiheämmässä)."* Tilaus on sama suunta kuin edellisenä iltana
+ * (*"vähän tiheämmät"*) mutta selvästi pidemmälle viety, ja siinä on
+ * nyt MOLEMMAT puolet erikseen: katko lyhyemmäksi JA rytmi tiheämmäksi.
+ *
+ *   jakso  150 -> 90     tiheämpi rytmi (−40 %, katkoja on 1,67x)
+ *   osuus 0,30 -> 0,35   katko lyhyemmäksi mutta ei suhteessa yhtä
+ *                        paljon kuin jakso — muuten katko olisi
+ *                        kutistunut 27 R:ään ja siitä olisi tullut
+ *                        piste
+ *
+ * MITÄ SE TEKEE KATKOLLE JA VÄLILLE:
+ *
+ *   ennen  0,30 · 150 = 45 R katkoa, 105 R väliä; katko/veto 6,0
+ *   nyt    0,35 ·  90 = 32 R katkoa,  58 R väliä; katko/veto 4,2
+ *
+ * KATKO ON YHÄ PITKÄNOMAINEN TUSSINVETO, EI PISTE. Suhde vetoon
+ * putoaa 6,0:sta 4,2:een, ja se on tarkoituksellinen: omistaja pyysi
+ * *lyhyempää* viivaa. Alaraja on helmi — katkon on pysyttävä sitä
+ * pidempänä, tai katkoviivasta tulee helminauhaa (ks. seuraava kohta).
+ *
+ * OSUUS EI SEURAA JAKSOA SUORAAN, ja se on sama päätös kuin
+ * 1.9.2026 illalla, vain toisin päin. Silloin osuus PIDETTIIN, jottei
+ * katko kutistuisi pisteeksi kaventamisen mukana; nyt sitä NOSTETAAN
+ * hitusen samasta syystä: 0,30:lla katko olisi 27 R eli 3,6 kertaa
+ * veton leveys, ja se on jo lähempänä pisaraa kuin vetoa.
+ *
+ * KAKSI VANHAA RAJAA, TARKISTETTU UUSILLA LUVUILLA:
+ *
+ *   HELMI EI MAHDU KATKOON. Helmen halkaisija on 20 R ja katko 32 R.
+ *   Marginaali kapenee (45 -> 32), mutta katko on yhä 1,6-kertainen
+ *   helmeen nähden — ja tämä on se raja, joka kertoo, ettei osuutta
+ *   saa enää laskea: 0,30:lla katko (27 R) olisi enää 1,35-kertainen.
+ *   HELMINAUHAA EI SYNNY. Lyhin askelväli on 232 R ja helmen
+ *   ulkohalkaisija kehineen 26 R, joten väliin jää yli 200 R. Tämä
+ *   raja ei riipu jaksosta lainkaan.
+ *
+ * HELMET SIIRTYVÄT TAAS LÄHEMMÄS ASKELMIAAN. Merihelmi ankkuroidaan
+ * lähimmän katkojakson keskelle (ks. `arkilla`), joten sen suurin
+ * mahdollinen siirtymä raakapaikastaan on puoli jaksoa: 75 R -> 45 R.
+ * MITATTU koko laudalta (350 merihelmeä, z7, jossa R = 1,0 px):
+ * suurin siirtymä 74,3 px -> 44,5 px ja mediaani 37,6 -> 22,5, eikä
+ * yksikään helmi ylitä palautusrajaa 0,75 · jakso (112,5 -> 67,5 px)
+ * kummallakaan mitalla. Helmi ei siis
+ * voi jäädä raakapaikalleen niin, että sen jakso silti jätettäisiin
  * piirtämättä (se oli 1.9.2026 korjattu vika *"osa laivareiteistä
  * jännästi katkeaa välissä"*).
+ *
+ * VETO, HELMI JA MAANTIE EIVÄT MUUTU. Tilaus koskee *"laivareitin
+ * viivoitusta"* eli katkorytmiä; leveys 7,5 jää, helmi 10 ja kehä 6,0
+ * jäävät askelmilleen, ja maantie on yhä yhtenäinen 6,0:n veto.
  */
 export const REITTITYYLI = Object.freeze({
   viiva: 7.5,    // meren katkotussin leveys (omistaja 1.9.2026: "kavenna hieman"; oli 9,0)
   maaViiva: 6.0, // maantien yhtenäisen veton leveys (omistaja 1.9.2026)
-  jakso: 150,    // katko + väli (omistaja 1.9.2026: "vähän tiheämmät"; oli 190)
+  jakso: 90,     // katko + väli (omistaja 2.9.2026: "tihennä"; 190 -> 150 -> 90)
   helmi: 10,     // askelhelmen säde (omistaja 1.9.2026: "vähän pienempi ympyrä")
   kehä: 6.0,     // askelhelmen kehä = MAAVIIVA (omistaja 1.9.2026)
   lento: 2.5,    // lentoreitin veton leveys (ei enää poltossa, ks. LENNOT)
@@ -2301,8 +2363,8 @@ export const REITTITYYLI = Object.freeze({
    * näkymän kahdella ilmeellä ilman koodimuutosta (piirraViivataso
    * `reittityyli`).
    */
-  lyhin: 0.30,   // katkon osuus jaksosta, alaraja
-  pisin: 0.30,   // katkon osuus jaksosta, yläraja (= alaraja: tasainen rytmi)
+  lyhin: 0.35,   // katkon osuus jaksosta, alaraja (omistaja 2.9.2026; oli 0,30)
+  pisin: 0.35,   // katkon osuus jaksosta, yläraja (= alaraja: tasainen rytmi)
   sivu: 0.55,    // koko katko sivussa viivalta (R)
   kaari: 0.95,   // katkon kaarevuus keskellä (R)
   huojunta: 0.6, // solmun heitto (R), molempiin suuntiin
@@ -2622,34 +2684,36 @@ export function piirraReititKankaalle(ctx, sisalto, mitta, tyyli = null) {
      * === KATKON MITAT (reittiyksikköä R) ==========================
      *
      * `jakso` on yhden katkon ja sitä seuraavan välin yhteismitta.
-     * 150 yksikköä (REITTITYYLI; omistaja 1.9.2026 illalla *"tee
-     * niistä vähän tiheämmät"*, ennen 190) on valittu kahdesta
-     * rajasta, ja kumpikin on MITTAKAAVASTA RIIPPUMATON, koska helmi
-     * ja katko kutistuvat samaa tahtia:
+     * 90 yksikköä (REITTITYYLI; omistaja 2.9.2026 *"tihennä
+     * laivareitin viivoitus"*, ennen 150 ja sitä ennen 190) on
+     * valittu kahdesta rajasta, ja kumpikin on MITTAKAAVASTA
+     * RIIPPUMATON, koska helmi ja katko kutistuvat samaa tahtia:
      *
      *   ALARAJA  helmi on halkaisijaltaan 20 R. Jos katko olisi
      *            samaa kokoluokkaa, katko ja helmi näyttäisivät
      *            käyttökoossa samalta merkiltä. Katko
-     *            (0,30 · 150 = 45 R) on selvästi pidempi kuin
-     *            helmi on leveä — ja pidempi myös suhteessa
-     *            kaventuneeseen vetoon (45 / 7,5 = 6,0).
+     *            (0,35 · 90 = 32 R) on 1,6-kertainen helmen
+     *            leveyteen ja 4,2-kertainen kaventuneeseen vetoon
+     *            (32 / 7,5). Juuri TÄMÄ raja on se syy, miksi
+     *            katkon osuutta nostettiin 0,30:sta 0,35:een
+     *            tihennyksen yhteydessä.
      *   YLÄRAJA  askelvälille on mahduttava katkorytmiä: mitattuna
      *            lyhin askelväli on 232 R ja mediaani 595 R, eli
-     *            jakso 150 antaa mediaanivälille neljä jaksoa ja
-     *            lyhimmällekin puolitoista. Lyhimmällä välillä joka
-     *            jaksossa on helmi ja rytmi harvenee — omistaja
-     *            1.9.2026: *"Ei haittaa, jos pistetiheys muuttuu
-     *            suuntaan tai toiseen."*
+     *            jakso 90 antaa mediaanivälille kuusi ja puoli
+     *            jaksoa ja lyhimmällekin kaksi ja puoli. Lyhimmällä
+     *            välillä joka jaksossa on helmi ja rytmi harvenee —
+     *            omistaja 1.9.2026: *"Ei haittaa, jos pistetiheys
+     *            muuttuu suuntaan tai toiseen."*
      *
      * SEURAUS, JOKA KANNATTAA TIETÄÄ: kun jakso skaalautuu kartan
      * mukana, KATKOJEN LUKUMÄÄRÄ reittiä kohti on sama joka
      * tasolla. Kuvio ei siis harvene eikä tihene zoomatessa, se vain
      * pienenee — juuri niin kuin painettu kartta pienenee.
      *
-     * Katkon pituus on tasan 30 % jaksosta ja katko istuu jaksonsa
+     * Katkon pituus on tasan 35 % jaksosta ja katko istuu jaksonsa
      * keskellä (omistaja 1.9.2026: *"Saisivat mennä tasaisesti"*) —
-     * väli on siis aina yli kaksi kertaa katkon mitta. Käsin
-     * piirretty vaihtelu tulee katkon MUODOSTA (tussiprofiili,
+     * väli on siis aina lähes kaksi kertaa katkon mitta (58 vs. 32).
+     * Käsin piirretty vaihtelu tulee katkon MUODOSTA (tussiprofiili,
      * sivu, kaari), ei rytmistä.
      */
     const KATKO = {

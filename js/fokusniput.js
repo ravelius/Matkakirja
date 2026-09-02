@@ -144,13 +144,20 @@
  *    juuri sen erottaminen — tämä kuuluu Ateenaan, tämä ei — on se
  *    työ, jota viiva tekee.
  *
- *    VIIVA ON KARTAN KEVYTTÄ APUVIIVASTOA EIKÄ NUOLI: ohut,
- *    haalistunut muste, lyhyet katkot, ei nuolenpäitä (mitat ja sävy
- *    alempana, NIPPU_VIIVA_*; ne ovat omistajan 30.8.2026 hyväksymät
- *    luvut sellaisinaan). Kerros on LAATTOJEN ALLA
- *    (nippuViivakerros) eikä ota napautuksia vastaan, joten kaupungin
- *    sormialue säilyy koskemattomana — juuri se oli koko nipun
- *    alkuperäinen tilaus.
+ *    VIIVA ON MERKIN JATKE EIKÄ NUOLI: katkoviiva merkin omassa
+ *    musteessa, ei nuolenpäitä (mitat ja sävy alempana,
+ *    NIPPU_VIIVA_*). Kerros on LAATTOJEN ALLA (nippuViivakerros) eikä
+ *    ota napautuksia vastaan, joten kaupungin sormialue säilyy
+ *    koskemattomana — juuri se oli koko nipun alkuperäinen tilaus.
+ *
+ *    VIIDES KERTA: OMISTAJA EI NÄHNYT VIIVAA (2.9.2026 aamu,
+ *    sanatarkasti: *"Lisää siirto viivat, ne ei vielä näy"*). Viivat
+ *    olivat kartalla — kaikki kymmenen — mutta 30.8.2026 hyväksytyt
+ *    luvut oli mitoitettu isolle ruudulle, ja puhelimella niistä jäi
+ *    kahden pikselin veto 30 %:n peitolla. Luvut kaksinkertaistettiin
+ *    ja muste vaihdettiin merkin omaksi; ks. NIPPU_VIIVA_* -lohkon
+ *    mittaukset. Ladontaan, etäisyyksiin tai riviväleihin ei
+ *    koskettu.
  *
  *    PÄÄT: MERKIN REUNASTA ANKKURIPISTEESEEN. Viiva alkaa merkin oman
  *    aluslaatan reunasta (NIPPU_KOHDE_R + NIPPU_VIIVA_RAKO, merkin
@@ -166,7 +173,10 @@
  *    piirretään vain sille merkille, jonka kasauspassi oikeasti
  *    siirsi — ja vasta kun jäljelle jää oikeaa viivaa vähintään
  *    NIPPU_VIIVA_MIN:n verran. Paikallaan pysyvä merkki ei saa viivaa
- *    eikä `viiva`-kenttää (tools/fokuskartta/nostot.mjs).
+ *    eikä `viiva`-kenttää (tools/fokuskartta/nostot.mjs). KYNNYS EI
+ *    SAA KARSIA SARAKKEESTA KETÄÄN: se on yksi katko, ja Ateenan
+ *    lyhyinkin viiva on siitä yli kaksinkertainen (ks.
+ *    NIPPU_VIIVA_MIN).
  *
  *    Siirto itse on yhä ESITYSTÄ, EI DATAA — sama sopimus kuin
  *    kohtaamispisteellä (js/fokuspiste.js PISTE_ERO_MIN) ja
@@ -418,17 +428,48 @@ const NIPPU_VALI = 2 * NIPPU_KOHDE_R + NIPPU_VALI_RAKO;
  * oman tyylinsä — ja koska laattageneraattori piirtää saman viivan
  * canvasille, jossa tyylitiedostoa ei ole lainkaan.
  *
- * LUVUT PALAAVAT SELLAISINAAN (1.9.2026 ilta). Ne ovat omistajan
- * 30.8.2026 pelitestissään hyväksymät — *"Myös tuo katkoviiva saisi
- * olla kevyempi."* — eli paksuus 1,2 -> 0,8, himmeys 0,42 -> 0,3 ja
- * katko 2,6 -> 2,0, jotta ohuempi kynä ei muutu pisteriviksi. Kun
- * omistaja pyysi viivat takaisin, hän ei pyytänyt uutta ulkoasua,
- * joten yhtäkään lukua ei viritetty uudestaan.
+ * VIIVA EI NÄKYNYT PUHELIMELLA (omistaja 2.9.2026 aamu, sanatarkasti:
+ * *"Lisää siirto viivat, ne ei vielä näy"*; kaappaus Ateenasta, jossa
+ * nostot Antiikin agora ja Olympieion ovat kaupungin oikealla puolella).
+ * Vika ei ollut kynnyksessä eikä ladonnassa — viivat OLIVAT siellä,
+ * kaikki kymmenen — vaan siinä, että 30.8.2026 hyväksytyt luvut oli
+ * mitoitettu isolle ruudulle. MITATTU (390 x 844, dpr 3, kamera
+ * Ateenan päällä, kartan skaala 4,16):
+ *
+ *   leveys   0,8 x s = 0,48 lautayksikköä  = 2,0 CSS-pikseliä
+ *   katko    2,0 x s = 1,20 lautayksikköä  = 5,0 CSS-pikseliä
+ *   himmeys  0,3     — haalean okran (#8a6a2c) päällä
+ *
+ * Kahden pikselin veto 30 %:n peitolla haalealla musteella on
+ * pergamentin päällä käytännössä sama asia kuin paperin oma rae, ja
+ * poltetussa laatassa siitä jää webp-pakkauksen jälkeen vielä
+ * vähemmän. Omistaja katsoi kuvaa eikä nähnyt viivoja lainkaan.
+ *
+ * UUDET LUVUT (omistajan tilaus 2.9.2026): leveys 0,8 -> 1,6, himmeys
+ * 0,3 -> 0,7, katko 2,0 -> 3,0 ja katkon väli erikseen 2,0. Muste
+ * vaihtui haalean okran (#8a6a2c) sijasta MERKIN OMAKSI MUSTEEKSI
+ * (#3a2819 = css/styles.css .nostosym-mini rgb(58, 40, 25)): viiva
+ * kuuluu merkkiin, ja kun se on samaa mustetta, silmä lukee sen
+ * merkin jatkeeksi eikä kartan omaksi apuviivastoksi.
+ *
+ * KEVEYS SÄILYY SUHTEESSA, EI ABSOLUUTTISENA: himmeys 0,7 on yhä
+ * vaaleampi kuin merkin oma 0,86, katkoviiva on yhä katkoviiva, eikä
+ * viivassa ole nuolenpäitä. Omistajan 30.8.2026 toive (*"Myös tuo
+ * katkoviiva saisi olla kevyempi"*) koski viivaa, joka oli TÄYSIN
+ * NÄKYVÄ ja liian raskas; tämä on sama viiva sillä puolella rajaa,
+ * jossa se ylipäätään näkyy.
+ *
+ * KATKO JA VÄLI OVAT NYT ERI LUVUT (3 ja 2). Ennen sama luku toimi
+ * kumpanakin. Pidempi veto ja lyhyempi väli tekevät samasta katkosta
+ * yhtenäisemmän — se on sama korjaus kuin merireitin viivoituksessa
+ * (tools/fokuskartta/maailmapiirto.js REITTITYYLI), ja samasta syystä:
+ * pienessä koossa tasaväliset katkot hajoavat pisteriviksi.
  */
-const NIPPU_VIIVA_LEVEYS = 0.8;
-const NIPPU_VIIVA_KATKO = 2;
-const NIPPU_VIIVA_VARI = '#8a6a2c';
-const NIPPU_VIIVA_HIMMEYS = 0.3;
+const NIPPU_VIIVA_LEVEYS = 1.6;
+const NIPPU_VIIVA_KATKO = 3;
+const NIPPU_VIIVA_VALI = 2;
+const NIPPU_VIIVA_VARI = '#3a2819';
+const NIPPU_VIIVA_HIMMEYS = 0.7;
 
 /*
  * Pieni rako merkin aluslaatan reunaan, jottei viiva näytä kasvavan
@@ -442,17 +483,24 @@ const NIPPU_VIIVA_RAKO = 2.5;
 /*
  * LYHIN PIIRRETTÄVÄ PÄTKÄ — ja samalla se "pieni kynnys", jolla
  * ratkaistaan, onko merkki oikeasti siirretty ankkuristaan (sääntö 6).
- * Tätä lyhyempi pätkä ei ole viiva vaan roska: kaksi katkoa
- * (NIPPU_VIIVA_KATKO) on vähin, josta silmä lukee katkoviivan eikä
- * pölyhiukkasta.
+ * Tätä lyhyempi pätkä ei ole viiva vaan roska.
  *
- * MITATTU ATEENASTA (1.9.2026, tools/fokuskartta/nostot.mjs -ladonta):
- * ryppään merkit ovat 15,6 ja 20,8 perustason pikselin päässä
- * kaupungista, joten viivaa jää 7,5 ja 12,7 pikseliä. Kynnys 4 päästää
- * kummankin läpi selvällä marginaalilla eikä sitä ole viritetty
- * juuri niiden mukaan — se on kaksi katkoa.
+ * KYNNYS ON YKSI KOKONAINEN KATKO (NIPPU_VIIVA_KATKO), ei kaksi.
+ * Kahteen katkoon se oli sidottu siihen asti, kun katko ja väli olivat
+ * sama luku 2,0 — silloin kaksi katkoa oli 4 pikseliä ja Ateenan
+ * lyhyinkin viiva (7,5) mahtui kaksin verroin. Nyt katko + väli on 5,
+ * joten kaksi katkoa olisi 8 eikä Ateenan lyhyempi rivi enää saisi
+ * viivaa lainkaan. Se olisi juuri se vika, jonka omistaja 2.9.2026
+ * pyysi korjaamaan (*"Lisää siirto viivat, ne ei vielä näy"*), vain
+ * toista kautta: viiva olisi näkyvä mutta puuttuisi puolelta merkeistä.
+ *
+ * MITATTU ATEENASTA (2.9.2026, elävä kerros puhelimen ruudulla,
+ * 390 x 844): ryppään merkit ovat 15,6 ja 20,8 perustason pikselin
+ * päässä kaupungista, joten viivaa jää 7,5 ja 12,7 pikseliä — kaikki
+ * KYMMENEN Kreikan sarakkeeseen ladottua merkkiä saavat siis viivan,
+ * ja kynnyksellä on niihin yli kaksinkertainen marginaali.
  */
-const NIPPU_VIIVA_MIN = 4;
+const NIPPU_VIIVA_MIN = 3;
 
 /**
  * Kerrosten ankkuriryhmätietueet yhtenä jonona.
@@ -720,6 +768,7 @@ export function nippuViivanJana(v, s) {
     y2: v.cy,
     leveys: NIPPU_VIIVA_LEVEYS * s,
     katko: NIPPU_VIIVA_KATKO * s,
+    vali: NIPPU_VIIVA_VALI * s,
     vari: NIPPU_VIIVA_VARI,
     himmeys: NIPPU_VIIVA_HIMMEYS,
   };
@@ -755,8 +804,8 @@ function nippuPiirraViivat(ui, viivat, s) {
     maare(solmu, 'x2', jana.x2.toFixed(2));
     maare(solmu, 'y2', jana.y2.toFixed(2));
     maare(solmu, 'stroke-width', jana.leveys.toFixed(3));
-    const katko = jana.katko.toFixed(3);
-    maare(solmu, 'stroke-dasharray', `${katko} ${katko}`);
+    // Katko ja väli ovat eri mitat (3 ja 2) — ks. NIPPU_VIIVA_KATKO.
+    maare(solmu, 'stroke-dasharray', `${jana.katko.toFixed(3)} ${jana.vali.toFixed(3)}`);
     i += 1;
   }
   while (kerros.childNodes.length > i) kerros.lastChild.remove();

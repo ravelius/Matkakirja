@@ -171,27 +171,6 @@ export function pyramidiUrl(polku) {
   return `${PEILI_JUURI}${PYRAMIDI_ALIPOLKU}${polku}`;
 }
 
-/*
- * KORKEUSPALAT (omistajan kokeilu 1.9.2026): ETOPO1:n natiivi yhden
- * kaariminuutin ruudukko 10° × 10° -paloina, joista peli laskee
- * tarkan rinnevarjon laattojen päälle (js/korkeuskerros.js).
- *
- * Sama ämpäri ja sama `julisteet/`-juuri kuin pyramidilla, samasta
- * syystä: viennit koskevat vain sitä kansiota. Vuosikertaa ei ole,
- * koska aineisto on MUUTTUMATON — ETOPO1 on julkaistu 2009 eikä
- * muutu, joten sama osoite antaa aina saman palan ja palat kelpaavat
- * ikuiseen välimuistiin.
- */
-const KORKEUS_ALIPOLKU = 'julisteet/korkeus/1min/';
-
-/**
- * Yhden korkeuspalan osoite ämpärissä.
- * @param {string} nimi palan nimi ilman päätettä, esim. 'N40E020'
- */
-export function korkeuspalaUrl(nimi) {
-  return `${PEILI_JUURI}${KORKEUS_ALIPOLKU}${nimi}.bin.gz`;
-}
-
 /**
  * Turvallinen tiedostonimi mistä tahansa merkkijonosta.
  *

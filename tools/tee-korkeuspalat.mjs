@@ -44,17 +44,18 @@
  *
  * PALAT EIVÄT MENE PÄÄLLEKKÄIN: solu lon0 + 10° kuuluu jo seuraavaan
  * palaan. Reunan yli menevä bilineaarinen näyte tarvitsee siis
- * naapuripalan, ja juuri siksi selainkerros kokoaa näytteenottajansa
- * KAIKISTA ladatuista paloista eikä palasta kerrallaan
- * (js/korkeus-worker.js).
+ * naapuripalan, ja juuri siksi lukijan on koottava näytteenottajansa
+ * KAIKISTA tarvitsemistaan paloista eikä palasta kerrallaan.
  *
  * === AINEISTOA EI COMMITOIDA ========================================
  *
  * Koko maailma on 648 palaa ja satoja megatavuja. Sama sääntö kuin
  * dist/-kansiolla: historia paisuisi eikä sitä saisi enää pieneksi.
  * Palat viedään R2-ämpäriin polkuun `julisteet/korkeus/1min/`
- * työnkululla .github/workflows/vie-korkeuspalat.yml, ja peli hakee ne
- * sieltä (js/media.js korkeuspalaUrl).
+ * työnkululla .github/workflows/vie-korkeuspalat.yml, ja laattapoltto
+ * lukee ne sieltä. (Selainkerros, joka haki ne pelin puolelle, oli
+ * omistajan kokeilu 1.9.2026 ja purettiin 2.9.2026: *"Ota live pois ja
+ * polta 1 kaarisekuntti."*)
  *
  * === KAKSI LÄHDETTÄ =================================================
  *
@@ -213,8 +214,7 @@ export function pakkaaPala({ lon0, lat0, leveys, korkeus, solut }) {
 
 /**
  * Purkaa gzipatun palan takaisin. Peilikuva pakkaajalle — testi ajaa
- * kummankin suuntaan, ja selainkerroksella on tästä oma kopionsa
- * (js/korkeus-worker.js), koska Node-työkalua ei voi tuoda selaimeen.
+ * kummankin suuntaan.
  *
  * @param {Buffer} runko jo GUNZIPATTU sisältö
  */

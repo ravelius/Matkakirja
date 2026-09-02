@@ -5,8 +5,7 @@ import { Game } from './game.js';
 import { UI } from './ui.js';
 import {
   asetaKehittajaMaailma, asetaKehittajaTila, asetaKehittajaTummennus,
-  asetaTarkkaVarjo, kehittajaMaailmaPaalla, kehittajaTilaPaalla,
-  kehittajaTummennusPaalla, tarkkaVarjoPaalla,
+  kehittajaMaailmaPaalla, kehittajaTilaPaalla, kehittajaTummennusPaalla,
 } from './ui-apurit.js';
 // Laitemittarin muistettu kytkin (hammasratasvalikko = ?mittari=1/0).
 import { asetaMittari, mittariPaalla } from './karttamittari.js';
@@ -45,9 +44,6 @@ import { readStamps, writeStamps, STAMP_KEY } from './passport.js';
 import { kytkeFokusnosto } from './fokusnosto.js';
 import { kytkeSyvennys } from './syvennys.js';
 import { kytkeSkandaalit } from './skandaalit.js';
-// Kehittäjän tarkka varjo kytkeytyy ilman sivulatausta: kerros syntyy
-// seuraavassa pyramidipäivityksessä, ja se ajetaan napista heti.
-import { paivitaPyramidi } from './laattapyramidi.js';
 
 kytkeFokusnosto();
 kytkeSyvennys();
@@ -112,7 +108,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1437';
+const APP_VERSION = '2026-08-09.1438';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1294,7 +1290,6 @@ const kehittajaVihje = document.getElementById('kehittaja-valikko-vihje');
 const maailmaNappi = document.getElementById('kehittaja-maailma-btn');
 const mittariNappi = document.getElementById('kehittaja-mittari-btn');
 const tummennusNappi = document.getElementById('kehittaja-tummennus-btn');
-const varjoNappi = document.getElementById('kehittaja-varjo-btn');
 const polloGenerointiNappi = document.getElementById('kehittaja-pollo-btn');
 
 /** Yhden rivin vihje valikon alalaitaan; katoaa itsestään. */
@@ -1345,16 +1340,6 @@ function paivitaKehittajaValikko() {
         + 'ilman varjoa (vain kehittäjätilassa; pelaajalla varjo on aina)'
       : 'Maatummennus on pois: kartta piirtyy ilman naapurimaiden varjoa '
         + '— kytke päälle palataksesi pelaajan näkymään';
-  }
-  const varjo = tarkkaVarjoPaalla();
-  merkitseKytkin(varjoNappi, varjo);
-  if (varjoNappi) {
-    varjoNappi.title = varjo
-      ? 'Tarkka varjo on PÄÄLLÄ: peli laskee rinnevarjon ETOPO1:n yhden '
-        + 'kaariminuutin ruudukosta ja piirtää sen laattojen päälle. '
-        + 'Näkyy vain lähizoomissa (z5 ja syvemmällä).'
-      : 'Tarkka varjo on pois: kartalla näkyy vain laattoihin poltettu '
-        + 'kolmen kaariminuutin varjostus — kytke päälle vertaillaksesi';
   }
   if (polloGenerointiNappi) {
     polloGenerointiNappi.title = 'Generoi pöllön kysymysehdotukset heti tälle näkymälle '
@@ -1422,23 +1407,6 @@ tummennusNappi?.addEventListener('click', () => {
   // Kerros latoo tai tyhjentää itsensä heti — ei sivulatausta.
   ui?.paivitaKehittajaTummennus?.();
   naytaKehittajaVihje(halutaan ? 'Maatummennus päällä.' : 'Maatummennus pois.');
-});
-
-/*
- * TARKKA VARJO ei vaadi sivulatausta sen enempää kuin muutkaan
- * kytkimet: kerros syntyy ja kuolee seuraavassa pyramidipäivityksessä,
- * ja se ajetaan tässä heti — muuten varjo ilmestyisi vasta pelaajan
- * seuraavasta eleestä. Vihjerivi kertoo mitä odottaa, koska kerros on
- * hiljaa uloimmilla zoomtasoilla eikä tyhjä ruutu kerro syytään.
- */
-varjoNappi?.addEventListener('click', () => {
-  const halutaan = !tarkkaVarjoPaalla();
-  asetaTarkkaVarjo(halutaan);
-  paivitaKehittajaValikko();
-  if (ui) paivitaPyramidi(ui);
-  naytaKehittajaVihje(halutaan
-    ? 'Tarkka varjo päällä — näkyy lähizoomissa (z5 ja syvemmällä).'
-    : 'Tarkka varjo pois.');
 });
 
 polloGenerointiNappi?.addEventListener('click', () => {

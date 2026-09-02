@@ -90,7 +90,6 @@
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
 import { NOSTOLADONTA_SAANTO } from './nostoladonta.js';
-import { paivitaKorkeuskerros, nollaaKorkeuskerros } from './korkeuskerros.js';
 
 /*
  * === NOUTAMINEN JA KIINNITTÄMINEN OVAT ERI ASIOITA =================
@@ -1494,16 +1493,6 @@ export function paivitaPyramidi(ui) {
   paivitaViivataso(ui, taso, laatta, arkki, kiinnitys, nakyva);
 
   /*
-   * KEHITTÄJÄN TARKKA VARJO laattojen ja viivatason väliin
-   * (js/korkeuskerros.js). Kutsu on tässä eikä omassa silmukassaan,
-   * koska tämä funktio ajetaan täsmälleen kerran jokaisesta
-   * ASETTUNEESTA näkymästä — juuri se ajoitus, jota kokeilu vaatii.
-   * Kytkin pois → moduuli tyhjentää kerroksensa itse ensimmäisellä
-   * kutsulla eikä tee muuta.
-   */
-  paivitaKorkeuskerros(ui, taso, nakyva);
-
-  /*
    * NOSTOTASO PÄÄLLIMMÄISENÄ. Kiinnitysalue on sama kuin tarkalla
    * tasolla, ja prioriteetti matala: pohjakartta menee aina nostojen
    * edelle — nosto ilman karttaa alla olisi mustetta tyhjällä
@@ -1541,9 +1530,6 @@ export function nollaaPyramidi(ui) {
   mittarit.esijonossa = 0;
   edellinenKeskus = null;
   edellinenTaso = null;
-  // Kehittäjän tarkka varjo asuu samassa kerroksessa: sen object-URL on
-  // vapautettava ennen kuin koko kerros pyyhitään alta.
-  nollaaKorkeuskerros(ui);
   if (!ui?.pyramidiKerros) return;
   clearTimeout(ui.pyramidiTarkka?.ajastin);
   clearTimeout(ui.pyramidiKarkea?.ajastin);

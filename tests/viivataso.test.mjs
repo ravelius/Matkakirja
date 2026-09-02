@@ -564,24 +564,33 @@ test('katkorytmi on harvempi ja veto paksumpi kuin edellisessä erässä', () =>
    *
    * MERI KAPENI JA TIHENI SAMANA ILTANA (omistaja 1.9.2026:
    * *"kavenna hieman meren noppareittiviivoja ja tee niistä vähän
-   * tiheämmät."*): viiva 9 -> 7,5 ja jakso 190 -> 150. Haarukat
-   * seuraavat mukana, mutta pysyvät HAARUKKOINA eivätkä lukuina:
-   * koe vartioi sitä, ettei ilme karkaa takaisin tekniseksi
+   * tiheämmät."*): viiva 9 -> 7,5 ja jakso 190 -> 150.
+   *
+   * JA TIHENI TOISEN KERRAN (omistaja 2.9.2026 aamu, sanatarkasti:
+   * *"tihennä laivareitin viivoitus (lyhyempi viiva mutta
+   * tiheämmässä)"*): jakso 150 -> 90 ja katkon osuus 0,30 -> 0,35,
+   * eli katko 45 -> 32 R ja väli 105 -> 58 R. Veto ei muuttunut.
+   *
+   * Haarukat seuraavat mukana, mutta pysyvät HAARUKKOINA eivätkä
+   * lukuina: koe vartioi sitä, ettei ilme karkaa takaisin tekniseksi
    * piirustukseksi (ohut tiheä tikutus) eikä paisu sarjakuvaksi.
    */
   assert.ok(REITTITYYLI.viiva >= 6.5 && REITTITYYLI.viiva <= 9,
     `veto ${REITTITYYLI.viiva} ei ole hyväksytyssä haarukassa 6,5–9`);
-  assert.ok(REITTITYYLI.jakso >= 120 && REITTITYYLI.jakso <= 200,
-    `jakso ${REITTITYYLI.jakso} ei ole hyväksytyssä haarukassa 120–200`);
+  assert.ok(REITTITYYLI.jakso >= 80 && REITTITYYLI.jakso <= 200,
+    `jakso ${REITTITYYLI.jakso} ei ole hyväksytyssä haarukassa 80–200`);
   /*
    * KATKO PYSYY PITKÄNOMAISENA. Kaventuminen ja tihentyminen vetävät
    * molemmat samaan suuntaan — kohti pistemäistä katkoa — ja juuri se
    * olisi eri ilme kuin omistajan hyväksymä. Suhde katkon pituuden ja
-   * veton leveyden välillä oli hyväksytyillä mitoilla 6,3 (57 / 9) ja
-   * on nyt 6,0 (45 / 7,5).
+   * veton leveyden välillä oli 6,3 (57 / 9), sitten 6,0 (45 / 7,5) ja
+   * on nyt 4,2 (32 / 7,5). Raja laskettiin 4,5:stä 4,0:aan, koska
+   * omistaja pyysi nimenomaan LYHYEMPÄÄ viivaa — mutta ei alle
+   * neljän: siinä katko alkaa lukeutua pisaraksi. Kova alaraja tulee
+   * silti helmestä, ei tästä (ks. seuraava koe).
    */
   const katkoSuhde = (REITTITYYLI.lyhin * REITTITYYLI.jakso) / REITTITYYLI.viiva;
-  assert.ok(katkoSuhde >= 4.5,
+  assert.ok(katkoSuhde >= 4,
     `katko on vain ${katkoSuhde.toFixed(1)} kertaa veton levyinen — `
     + 'katkoviiva muuttuu pisteriviksi');
   assert.equal(REITTITYYLI.lyhin, REITTITYYLI.pisin,
@@ -600,6 +609,15 @@ test('helmi ei mahdu katkoon eikä helminauhaa synny', () => {
    */
   const helmenHalkaisija = 2 * REITTITYYLI.helmi;
   const lyhinKatko = REITTITYYLI.lyhin * REITTITYYLI.jakso;
+  /*
+   * TÄMÄ ON SE RAJA, JOKA SITOO. Kun omistaja tihensi rytmin
+   * 2.9.2026 (*"lyhyempi viiva mutta tiheämmässä"*), katko kutistui
+   * 45 R:stä 32 R:ään — eli 1,6-kertaiseksi helmen leveyteen, kun se
+   * ennen oli 2,25. Katkon osuutta nostettiin samalla 0,30 -> 0,35
+   * juuri siksi: pelkällä jakson lyhentämisellä katko olisi ollut
+   * 27 R eli 1,35-kertainen, ja tämä koe olisi kaatunut. Se on kokeen
+   * tehtävä — katko ja helmi eivät saa näyttää samalta merkiltä.
+   */
   assert.ok(lyhinKatko > helmenHalkaisija * 1.5,
     `lyhin katko ${lyhinKatko} R ei ole selvästi pidempi kuin helmi `
     + `(${helmenHalkaisija} R) on leveä`);

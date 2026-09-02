@@ -113,23 +113,30 @@ Häviöttömyys todennettu koko aineistolla: 25 930 801 solua, 0 eroa.
 
 ---
 
-# 1′-PALAT — `korkeus/1min/` (omistajan kokeilu 1.9.2026)
+# 1′-PALAT — `korkeus/1min/`
 
 **Ei repossa. Ei koskaan repoon.** Nämä palat viedään R2-ämpäriin ja
-peli hakee ne sieltä.
+laattapoltto lukee ne sieltä.
 
 ## Mikä tämä on
 
 ETOPO1:n **natiivi yksi kaariminuutti** 10° × 10° -paloina, 600 × 600
-solua palassa. Peli laskee niistä rinnevarjon reaaliajassa ja piirtää
-sen laattojen päälle (js/korkeuskerros.js, js/korkeus-worker.js) —
-omistajan sanatarkka tilaus: *"korkeusdatan 1′-ajoa simuloidaan
-liverenderöinnillä pelissä: ensin haetaan normaali pohja laatoista ja
-sitten peli rakentaa reaaliajassa tarkemman korkeusvarjostuksen."*
+solua palassa. Aineisto tehtiin 1.9.2026 omistajan tilauksesta
+(*"korkeusdata pitää tehdä 1 [kaariminuutin] tarkkuudella
+uudestaan"*).
 
-Tämä ei kumoa yllä olevaa 3′-linjausta. Pohjalaatoissa varjo on yhä
-poltettu kolmesta kaariminuutista; 1′-kerros on kehittäjän KOKEILU sen
-päällä, ja lopullinen ratkaisu on pohjan uusintapoltto.
+**LIVEKOKEILU ON PURETTU (2.9.2026).** Palat syntyivät alun perin
+selainkokeilua varten: peli haki ne verkosta ja laski niistä
+rinnevarjon laattojen päälle (v1436, js/korkeuskerros.js,
+js/korkeus-worker.js). Omistaja päätti kokeilun heti nähtyään sen —
+sanatarkasti: *"Ota live pois ja polta 1 kaarisekuntti."* Selainkerros
+ja sen worker on poistettu; **palat itse jäävät**, koska 1′-tarkkuus
+tulee jatkossa siitä, mitä pohjalaattoihin poltetaan. Tämä osio
+kuvaa siis aineiston, ei enää sen lukijaa.
+
+Tämä ei kumoa yllä olevaa 3′-linjausta takautuvasti: nykyisissä
+pohjalaatoissa varjo on poltettu kolmesta kaariminuutista, ja se
+vaihtuu vasta uusintapoltossa.
 
 ## Miten
 
@@ -170,8 +177,8 @@ ja y kasvaa pohjoiseen, x = 0 on länsireuna ja x kasvaa itään. Solu
 
 Palat **eivät mene päällekkäin**: solu lon0 + 10° kuuluu jo seuraavaan
 palaan. Reunan yli menevä bilineaarinen näyte tarvitsee siis
-naapuripalan, ja selainkerros kokoaa näytteenottajansa kaikista
-ladatuista paloista.
+naapuripalan — lukijan on koottava näytteenottajansa kaikista
+tarvitsemistaan paloista, ei palasta kerrallaan.
 
 Nimi on lounaisnurkka: `N40E020`, `S30W070` (leveys kahdella ja pituus
 kolmella numerolla, kuten SRTM-laatoilla).
@@ -187,8 +194,9 @@ kolmella numerolla, kuten SRTM-laatoilla).
 | pilkkomisnopeus | 8 palaa 0,6 s (binääri jo levyllä) |
 | koko maailma (arvio otoksesta) | 648 palaa, ~150–250 Mt |
 
-Yksi z7-näkymä osuu 1–4 palaan (mitattu savukkeella: Kroatia–Bosnia
-neljä palaa, varjokuva 1308 × 1223 px, workerin laskuaika 0,2–1,0 s).
+Yksi z7-näkymä osuu 1–4 palaan (mitattu puretulla livekokeilulla:
+Kroatia–Bosnia neljä palaa, varjokuva 1308 × 1223 px, laskuaika
+selaimessa 0,2–1,0 s).
 
 ## Lähde ja lisenssi
 

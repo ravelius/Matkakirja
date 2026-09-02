@@ -1,5 +1,5 @@
 /*
- * KORKEUSPALAT JA TARKAN VARJON KAAVA.
+ * KORKEUSPALAT JA VARJON KAAVA.
  *
  * Kaksi asiaa, joita ei voi katsomalla nähdä:
  *
@@ -9,12 +9,18 @@
  *     yhtä uskottavalta kuin oikea. Testi pakkaa ja purkaa oikeaa
  *     maastoa muistuttavia ruudukoita ja vertaa solu solulta.
  *
- *  2. VARJON KAAVA ON YKSI. Laattapyramidin moottori polttaa 3′-varjon
- *     pohjalaattoihin ja peli laskee 1′-varjon niiden päälle
- *     (omistajan kokeilu 1.9.2026). Kokeilu mittaa RUUDUKON tarkkuutta,
- *     joten kaavassa ei saa olla muita eroja — siksi molemmat tuovat
- *     saman funktion js/maastovarjo.js:stä, ja tämä testi vartioi
- *     ettei kumpikaan ole hiljaa palannut omaan kopioonsa.
+ *  2. VARJO ON NÄYTTEIDEN EROTUS. Rinnevarjo lasketaan neljästä
+ *     korkeusnäytteestä, joten näytteenotin ja varjostuskaava kuuluvat
+ *     yhteen tiedostoon (tools/fokuskartta/maastovarjo.js) — muuten
+ *     toista voisi säätää huomaamatta mitä toinen tekee. Testi ajaa
+ *     rinteet läpi kaikkiin neljään ilmansuuntaan ja vartioi, ettei
+ *     moottori ole hiljaa palannut omaan kopioonsa kaavasta.
+ *
+ * PALAT OVAT YHÄ 1′-AINEISTOA, vaikka omistajan livekokeilu
+ * (v1436, js/korkeuskerros.js) purettiin 2.9.2026: *"Ota live pois ja
+ * polta 1 kaarisekuntti."* Palojen muoto on se sopimus, jolla
+ * ämpärissä oleva aineisto luetaan laattapolttoon, ja juuri siksi sitä
+ * vartioidaan täällä eikä poltinta odotellen.
  *
  * Mitään ei ladata verkosta: ruudukot ovat keksittyjä ja aineiston
  * lukijaa ei kutsuta.
@@ -30,7 +36,7 @@ import {
 } from '../tools/tee-korkeuspalat.mjs';
 import {
   VALO, bilineaarinenKorkeus, varjonVoimakkuus, varjostusPisteessa,
-} from '../js/maastovarjo.js';
+} from '../tools/fokuskartta/maastovarjo.js';
 
 const LUE = (p) => readFileSync(new URL(`../${p}`, import.meta.url), 'utf8');
 
@@ -135,19 +141,12 @@ test('vajaa pala ei mene läpi hiljaa', () => {
 });
 
 test('palan sivu on kymmenen astetta kaariminuutin ruuduilla', () => {
-  // Selainkerros laskee palan paikan tästä samasta luvusta
-  // (js/korkeuskerros.js PALAN_ASTEITA, js/korkeus-worker.js SOLUJA).
-  // Jos ne eriytyvät, peli hakee palaa jota ei ole.
+  // Palan koko on ämpärin ja lukijan välinen sopimus: nimi kertoo
+  // lounaisnurkan kymmenen asteen välein, ja solujen määrä seuraa
+  // siitä. Jos nämä eriytyvät, lukija hakee palaa jota ei ole.
   assert.equal(PALAN_SOLUJA, PALAN_ASTEITA * 60);
   assert.equal(Math.round(1 / PALAN_RUUTU), 60);
-  const selain = LUE('js/korkeuskerros.js');
-  assert.match(selain, new RegExp(`const PALAN_ASTEITA = ${PALAN_ASTEITA};`),
-    'js/korkeuskerros.js käyttää eri palakokoa kuin pilkkoja');
-  const worker = LUE('js/korkeus-worker.js');
-  assert.match(worker, new RegExp(`const PALAN_ASTEITA = ${PALAN_ASTEITA};`),
-    'js/korkeus-worker.js käyttää eri palakokoa kuin pilkkoja');
-  assert.match(worker, new RegExp(`'${PALAN_TUNNUS}'`),
-    'workerin tuntema palan tunnus ei ole pilkkojan tunnus');
+  assert.equal(PALAN_TUNNUS, 'MK1P');
 });
 
 /* ------------------------------------------------------- varjon kaava */
@@ -179,7 +178,7 @@ test('tasainen maa antaa auringon korkeuden sinin', () => {
   assert.ok(Math.abs(arvo - Math.sin(VALO.korkeuskulma * Math.PI / 180)) < 1e-9,
     `tasainen maa antoi ${arvo}`);
   // Tasainen maa on hitusen VALOISAMPI kuin varjon nollataso 0,5, eli
-  // moottori vaalentaa sitä. Sama on 1′-kerroksen valkoinen puoli.
+  // moottori vaalentaa sitä — se on varjon valkoinen puoli.
   assert.ok(varjonVoimakkuus(arvo) < 0, 'tasainen maa ei saa tummua');
 });
 
@@ -229,7 +228,7 @@ test('ruudukon ulkopuoli on neutraali eikä musta', () => {
 
 test('tarkempi askel näkee sen mitä karkeampi tasoittaa', () => {
   /*
-   * Koko kokeilun väite yhtenä lukuna: sama kaava, eri askel. Kapea
+   * Koko 1′-tarkkuuden väite yhtenä lukuna: sama kaava, eri askel. Kapea
    * harjanne on 1′-askeleella jyrkkä ja 3′-askeleella lähes olematon,
    * koska keskeisdifferenssi kurottaa harjanteen yli.
    */
@@ -266,25 +265,24 @@ test('tarkempi askel näkee sen mitä karkeampi tasoittaa', () => {
 
 /* --------------------------------------------- yksi lähde, kaksi käyttäjää */
 
-test('moottori ja selain käyttävät samaa varjostuskaavaa', () => {
+test('moottori tuo varjostuskaavan yhteisestä moduulista', () => {
   const moottori = LUE('tools/fokuskartta/maailmapiirto.js');
-  const worker = LUE('js/korkeus-worker.js');
-  assert.match(moottori, /from '\.\.\/\.\.\/js\/maastovarjo\.js'/,
+  assert.match(moottori, /from '\.\/maastovarjo\.js'/,
     'moottori ei enää tuo varjostuskaavaa yhteisestä moduulista');
-  assert.match(worker, /from '\.\/maastovarjo\.js'/,
-    'selaimen worker ei enää tuo varjostuskaavaa yhteisestä moduulista');
   /*
    * KAAVAN LUVUT SAAVAT ESIINTYÄ VAIN YHDESSÄ PAIKASSA. Auringon
    * atsimuutti ja korkeuskulma ovat se, minkä kopioiminen kääntäisi
    * kuvan nurin — ja juuri sellainen kopio on aiemmin syntynyt
    * vahingossa, kun funktio "otettiin talteen" toiseen tiedostoon.
+   * Sama koskee varjon voimakkuutta: 0,46 kuuluu kaavan viereen eikä
+   * moottorin pikselisilmukkaan.
    */
-  for (const [nimi, lahde] of Object.entries({ moottori, worker })) {
-    assert.doesNotMatch(lahde, /315 \* Math\.PI/,
-      `${nimi} laskee auringon suunnan itse — kaava on kahdessa paikassa`);
-    assert.doesNotMatch(lahde, /Math\.hypot\(nx, ny, nz\)/,
-      `${nimi} laskee normaalin itse — kaava on kahdessa paikassa`);
-  }
+  assert.doesNotMatch(moottori, /315 \* Math\.PI/,
+    'moottori laskee auringon suunnan itse — kaava on kahdessa paikassa');
+  assert.doesNotMatch(moottori, /Math\.hypot\(nx, ny, nz\)/,
+    'moottori laskee normaalin itse — kaava on kahdessa paikassa');
+  assert.doesNotMatch(moottori, /\* 0\.46/,
+    'moottori kertoo varjon voimakkuuden itse — luku on kahdessa paikassa');
   assert.equal(VALO.atsimuutti, 315);
   assert.equal(VALO.korkeuskulma, 42);
   assert.equal(VALO.liioittelu, 2.6);
