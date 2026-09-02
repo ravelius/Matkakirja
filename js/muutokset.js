@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1461, teksti: 'Peilaa media: vain manifesti ja retryt, ei koko amparia' },
   { v: 1460, teksti: 'Skandaalikortit: taysi teksti 83:lle ja kuvagalleria' },
   { v: 1459, teksti: 'Patina kirkas: kromanvahvistus 0,95 (kyllaisyys reilusti)' },
   { v: 1458, teksti: 'Uloin zoomi: koko lauta kerran, paperia sivuille' },
