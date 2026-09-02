@@ -1733,6 +1733,18 @@ export const RAAMATTU = {
           + 'kartalla (Plymouth 1768, Southampton 1912), Ecuador sai '
           + 'ensimmaisen maalehtisivunsa (Darwin). "Kartalla on vain '
           + 'selitevalikon symbolit" pysyy - riveja on nyt yhdeksan.',
+        'KAIKKI GENEROIDUT KUVAT MAHDOLLISIMMAN VALOKUVAMAISIA (omistaja '
+          + '2.9.2026 ilta: kuvaputki ohjeistettiin uudelleen ja tekee '
+          + 'kaikki kuvat uudestaan, "kun aiemmat nayttivat hieman '
+          + 'piirroksilta"): jokainen kuvaputken generoima kuva - '
+          + 'kohtaamiset, historian hetket, ennen/nyt, karttanostot, '
+          + 'elaintayt, aarteet, ihmeet, kansikuvat, kuvituskuvat - '
+          + 'tehdaan fotorealistiseksi valokuvaksi, ei piirrokseksi eika '
+          + 'maalaukseksi. Poikkeus vain miniatyyrit (yksivariset '
+          + 'karikatyyripiirrokset kohdekartalle). Piirrosmainen tulos on '
+          + 'hylkaysperuste arviointisivustolla. Kuvat myohastyvat taman '
+          + 'uusinnan vuoksi; Fable ei tilaa uusia ennen kuin uusinta on '
+          + 'arvioinnissa.',
         'KUVAPUTKEN KUVATYYPIT (omistaja 2.9.2026): kuvajonon '
           + 'tarkastussivustolla jokainen kuvatyyppi on oma kategoriansa, '
           + 'ja omistaja hyvaksyy kuvat AINA ensin sivustolla tai pyytaa '
