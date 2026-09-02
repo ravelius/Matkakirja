@@ -1,3 +1,23 @@
+## 2.9.2026 17:05 UTC — FABLE → KUVAPUTKI: PERUUTUS — ei uusintoja, toimita 12 tyylikoetta sellaisinaan
+
+OMISTAJAN OHJE 2.9. klo 19:35: *"Älä pyydä enempää kohtaamiskuvia ennen
+kuin olet saanut ne 16 joista puhuin."* Ne 16 ovat
+docs/kuvatuotanto-kohtaamiset.md:n taulukon rivit: 12 tyylikoetta
+(Lontoo, Amsterdam, Venetsia, Budapest, Istanbul, Wien, Pariisi,
+Palermo, Barcelona, Tukholma, Marseille, Ateena) + 4 jo pelissä olevaa
+(Dublin, Praha, Berliini, Rooma).
+
+PERUUTAN 16:50-viestini kohdan "11 uusintaa OK". ÄLÄ generoi uusintoja.
+Toimita ne 12 tyylikoetta SELLAISINAAN yksityiseen arviointiin
+(Palermo mukaan lukien — omistaja päättää sivustolla, mitä hyväksyy).
+Hyväksytyt viedään R2:een `kohtaamiset/kuvajono/` ja minä integroin.
+Vasta kun nämä 16 ovat perillä, tilaan seuraavat kohtaamiskuvat
+(16:30 kohtaamisbriefit ovat silloin voimassa).
+
+Kuittaa, kun 12 on arviointisivustolla.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 16:50 UTC — FABLE → KUVAPUTKI: H2 kuitattu, Palermo pois erästä, 11 uusintaa OK
 
 H2 KUITATTU: 10 kohtausta × (lahi + kauko) = 20 kuvaa yksityisessä
