@@ -363,18 +363,26 @@ export function fokusvirtaLaattaNakyy(ui, city) {
  */
 export function fokusvirtaOhittaaLehden(ui, city) {
   /*
-   * LEHTILUKKO POIS KEVYESSÄ KULUSSA. Kokeilun koko idea on, että
-   * kaupunkilehti AUKEAA SUORAAN myös fokusmoodissa: lehti on nyt se
-   * pinta, joka annostelee (nimetyt minitehtävät sivuilla 2 ja 3), eikä
-   * sitä vastaan ole enää mitään lukittavaa.
+   * LEHTILUKKO ON PURETTU LOPULLISESTI (omistaja 2.9.2026 ilta:
+   * *"Kohdekaupunki avaa aina kaupunkilehden ei mitään muuta"*).
+   *
+   * Korttien ollessa päällä (FOKUSVIRTA_KORTIT) tämä funktio kaappasi
+   * kaupungin napautuksen laatan kääntöön asti ja avasi lehden sijasta
+   * virran kortin — Sofiassa oppitunnin "Serdica — kaupunki lähteiden
+   * päällä". Pelaajalle se näytti siltä, ettei kaupunkia saa auki.
+   *
+   * Nyt kaupungin napautus avaa AINA kaupunkilehden. Virran kortti
+   * aukeaa vain saapumisen omasta kytkennästä (fokusvirtaSaapuminen:
+   * kerran tutki-sykkeen jälkeen) ja etenee matkakirjakortin ja Livian
+   * kuplan kautta (fokusvirtaMerkintaLuettu). Kortin sulkeminen ei
+   * lukitse mitään: laattakysymykseen pääsee lehden tehtävänapista ja
+   * laatasta kuten muissakin kaupungeissa.
+   *
+   * Parametrit jäävät allekirjoitukseen, koska ui.js openArrival kutsuu
+   * tätä kytkentäkohtana; paluuarvo on aina false = lehti aukeaa.
    */
-  if (!FOKUSVIRTA_KORTIT) return false;
-  if (!fokusvirtaLukitseeLehden(ui, city)) return false;
-  const data = fokusvirtaSisalto(ui, city);
-  const tila = fokusvirtaTila(ui.game, city);
-  if (tila.vaihe === 'matkakirja') siirry(ui, city, data, 'jatka');
-  else avaaFokusvirta(ui, city);
-  return true;
+  void ui; void city;
+  return false;
 }
 
 /* ==================== VAIHE 1: YLÄVASEN MATKAKIRJAKORTTI ============ */

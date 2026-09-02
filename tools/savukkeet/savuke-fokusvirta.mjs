@@ -327,14 +327,26 @@ const paina = async (osuma, mista = '.fokusvirta-napit', kohde = sivu) => {
   await kohde.waitForTimeout(350);
 };
 
-/* --- 1: Tutki avaa virran, ei saapumiskorttia --- */
+/* --- 1: kaupungin napautus avaa AINA kaupunkilehden (omistaja
+ * 2.9.2026 ilta: "Kohdekaupunki avaa aina kaupunkilehden ei mitään
+ * muuta") — lehtilukko on purettu, virran kortti ei kaappaa avausta. --- */
 await sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
   ui.openArrival(ui.game.cityOf());
 });
 await sivu.waitForTimeout(500);
 const lehtiAuki = await sivu.evaluate(() => document.getElementById('arrival-dialog').open);
-vaadi('lehtilukko: saapumiskortti pysyy kiinni', !lehtiAuki);
+vaadi('kaupungin napautus avaa kaupunkilehden, ei virran korttia', lehtiAuki
+  && await sivu.evaluate(() => !document.querySelector('.fokusvirta-kortti')));
+await sivu.evaluate(() => document.getElementById('arrival-dialog').close());
+await sivu.waitForTimeout(300);
+
+/** Virran kortti avataan savukkeessa suoraan moduulista, ei lehden kautta. */
+const avaaVirta = (kohde = sivu) => kohde.evaluate(async () => {
+  const { avaaFokusvirta } = await import('/js/fokusvirta.js');
+  const ui = window.matkakirja.ui;
+  avaaFokusvirta(ui, ui.game.cityOf());
+});
 
 /* --- 2: vaihe 1 on ylävasen matkakirjakortti, ei virran oma kortti --- */
 // Tutki kuittasi merkinnän jo luetuksi, joten tila palautetaan alkuun.
@@ -601,10 +613,7 @@ await sivu.evaluate(() => {
 });
 await sivu.waitForTimeout(300);
 vaadi('napautus pintaan sulkee sen', (await kortti()) === null);
-await sivu.evaluate(() => {
-  const ui = window.matkakirja.ui;
-  ui.openArrival(ui.game.cityOf());
-});
+await avaaVirta();
 await sivu.waitForTimeout(400);
 tila = await kortti();
 vaadi('uusi avaus jatkaa samasta vaiheesta, ei alusta',
@@ -855,10 +864,7 @@ vaadi('kuplan tekstin veto ei panoroi karttaa',
  * oppituntikortti: sama kehys, sama vieritettävä sisus (piirraKehys),
  * joten vartio ei riipu siitä kummasta vaiheesta kortti tulee.
  */
-await puhelin.evaluate(() => {
-  const ui = window.matkakirja.ui;
-  ui.openArrival(ui.game.cityOf());
-});
+await avaaVirta(puhelin);
 await puhelin.waitForTimeout(500);
 await paina('Jatka', '.fokusvirta-napit', puhelin);
 await puhelin.waitForTimeout(400);
