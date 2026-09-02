@@ -243,8 +243,11 @@ hiukkasia reittikäyrillä → Canvas-kerros (M7+-linssialusta), ei DOM. Isku =
 salama emämaasta alueelle ensimmäisen alistuksen vuonna, alue saa emämaan
 värin; virta = laivoja, joiden määrä ja lasti seuraavat vuosia ja loppuvat
 kaupan tai siirtomaavallan loppuun. Ääni: satama-ambienssi, torvi, kuulutus
-megafonista pysäkeillä, generoidaan lukijaäänellä etukäteen. Rehellisyys:
-kolmiokaupan orjalaivat ovat oma virtansa, ei piiloteta.
+megafonista pysäkeillä, generoidaan lukijaäänellä etukäteen. Orjat kuulutetaan
+kuten muu lasti ("laiva on lastattu orjilla"), koska niin heihin silloin
+suhtauduttiin; orjalaivat vetävät mustaa viivaa, Pulu tulee väliin ja selittää,
+ja tyhjälle merelle projisoidaan generoituja aikalaiskuvia orjien oloista ja
+siirtomaavaltojen arjesta (13+, mutta asia kerrotaan niin kuin se oli).
 
 | # | linssi | alue | kaari | pysäkkejä | tila |
 |---|---|---|---|---|---|
@@ -253,6 +256,7 @@ kolmiokaupan orjalaivat ovat oma virtansa, ei piiloteta.
 | S3 | Maustereitit ja teekauppa | Intian valtameri–Eurooppa | 1500–1900 | Molukit · Malakka · Kanton · Kalkutta · Suez 1869 · teekilpalaivat 1866 | idea |
 | S4 | Hopea ja kulta | Amerikat–Eurooppa–Aasia | 1545–1900 | Potosí · Manilan galeonit · Sevilla · kultaryntäykset 1849, 1851, 1886 | idea |
 | S5 | Turkikset ja valaat | pohjoinen | 1600–1900 | Hudsonin lahti · Siperia · Huippuvuoret · Nantucket · Beringinmeri | idea |
+| S6 | Luonnonvarat valuvat | maailma | 1850–2000 | guano Chincha 1840 · kumi Kongo ja Amazon · kupari Chile · timantit Kimberley 1867 · öljy Baku ja Pennsylvania 1859, Persia 1908 · harvinaiset maametallit | seuraava (louhintamaa värilänttinä, joka valuu maailmalle; raaka-aine omalla värillään) |
 | T1 | Siirtolaisuus Amerikkaan | Eurooppa–Amerikat | 1840–1914 | Irlanti 1845 · Bremen · Liverpool · Ellis Island 1892 · Hanko–New York | seuraava |
 | T2 | Pyhiinvaellukset | maailma | vuodenkierto | Santiago · Mekka · Varanasi · Jerusalem | idea |
 | T3 | Siperian karkotukset ja asutus | Venäjä | 1590–1917 | Tobolsk · Irkutsk · Sahalin · rata 1891 | idea |
