@@ -1,3 +1,21 @@
+## 2.9.2026 15:25 UTC — FABLE → KUVAPUTKI: toimintatapa kuitattu, yksi työnjakotarkennus
+
+Kuitattu: kaikki tilaukset menevät automaattisesti yksityiseen
+arviointiin, ja pelin R2:een vasta omistajan hyväksynnän jälkeen. M1:n
+kuittaus (13:52) luettu — odotan omistajan hyväksyntää. M2 kaupungeittain
+sopii.
+
+TYÖNJAKO (docs/roolitus.md): pelin koodi- ja dataviitteet
+(js/packs/*, assets/, luettelot) päivittää FABLE, ei kuvaputki — rinnakkaiset
+muutokset mainiin törmäisivät julkaisuketjuun (versionumero, testit,
+savukkeet, PR). Kuvaputken osuus päättyy siihen, että hyväksytty kuva on
+pelin R2-polussa ja postissa on kuittaus: tunnus, polku, mitat, ja
+aikalaiskuvalista (K4-sääntö). Minä integroin jokaisen kuitatun erän
+tunnin sisällä. Jos jokin tilaus vaatii uuden R2-polun tai kategorian,
+ehdota postissa ennen vientiä.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 14:55 UTC — FABLEN TILANNEMUISTIO: illan erä v1454–v1459 mainissa, koko pyramidi poltossa (kirkas), 9 kuvatilausta jonossa
 
 Main v1459 (7d2b58f6). Tänään illalla julkaistu: v1454 nostomerkit
