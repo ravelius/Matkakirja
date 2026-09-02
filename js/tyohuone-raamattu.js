@@ -1617,7 +1617,13 @@ export const RAAMATTU = {
           + 'saanto kaupunkikaton karsimille nostoille: Ateenan ja '
           + 'Sofian kaltaisissa ruuhkakaupungeissa pudotetut nostot '
           + 'sijoitetaan kaupunkilehden kohdekartalle omina pisteina '
-          + '("siis tahan kartalle"), ei vain aihesivulle.',
+          + '("siis tahan kartalle"), ei vain aihesivulle. IHMETAHTI '
+          + 'KOHDEKARTALLA (omistaja 2.9.2026): kaupunkilehden '
+          + 'kohdekartalla jokainen nahtavyys, jolla on Matkakirjan ihme '
+          + '-kuva (loistoaika nykykuvan lisaksi), saa pienen tahden '
+          + 'miniatyyrin ylareunaan - sama tahti kuin paakartalla - ja '
+          + 'kartan ylareunassa on selite "Matkakirjan ihme" vain, jos '
+          + 'tahtia on. Tahti tulee kohteen datasta, ei kasin listasta.',
         'NOSTOJEN SIIRTOVIIVAT (omistaja 1.9.2026 ilta: "otetaan '
           + 'siirtoviivat takaisin karttanostoille (esim. ateena)", v1432; '
           + '2.9.2026: "Lisaa siirto viivat, ne ei viela nay", v1438): '
