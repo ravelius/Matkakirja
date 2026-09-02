@@ -1,4 +1,4 @@
-# Linssikatalogi — aikajana- ja aluelinssien aiheluettelo
+# Linssikatalogi — aikajana-, alue- ja virtalinssien aiheluettelo
 
 Päivitetty: 2.9.2026 (Fable). Omistajan linjaus 2.9.2026 ilta: *"kaikkien
 suurien uskontojen tapahtumista täytyy myös saada omat kuvansa ja niistä
@@ -229,6 +229,36 @@ värialueita, joiden rajat liukuvat avainvuodesta toiseen.
 | P3 | Indoeurooppalaiset kielet | Euraasia | 3500 eaa–1500 | arot · Anatolia · Kreikka · Italia · germaanit · slaavit · Intia | idea |
 | P4 | Rautatieverkon kasvu | Eurooppa | 1825–1900 | Britannia · Belgia 1835 · Saksa · Ranska · Venäjä · Suomi 1862 | idea (verkko piirtyy vuosi vuodelta) |
 | P5 | Kirjapainon leviäminen | Eurooppa | 1450–1500 | Mainz · Venetsia · Pariisi · Lontoo 1476 · Tukholma 1483 | idea |
+
+## Osa 3: Virtalinssit (kolmas moottori)
+
+Omistaja 2.9.2026 ilta: *"visuaalisesti voimakkain linssi jonka pohjana olisi
+koko maailmankartta ja aiheena siirtomaat … salamanisku merireittiä pitkin
+valloittajamaista siirtomaihin … sen jälkeen merireitille piirtyisi pieniä
+veneitä jotka kuljettaisivat banaania, teetä, yms. … ääniefektit ja
+kuulutukset megafonista."*
+
+Moottori: kello ja filminauha samat, mutta kartalla liikkuu jatkuvasti satoja
+hiukkasia reittikäyrillä → Canvas-kerros (M7+-linssialusta), ei DOM. Isku =
+salama emämaasta alueelle ensimmäisen alistuksen vuonna, alue saa emämaan
+värin; virta = laivoja, joiden määrä ja lasti seuraavat vuosia ja loppuvat
+kaupan tai siirtomaavallan loppuun. Ääni: satama-ambienssi, torvi, kuulutus
+megafonista pysäkeillä, generoidaan lukijaäänellä etukäteen. Rehellisyys:
+kolmiokaupan orjalaivat ovat oma virtansa, ei piiloteta.
+
+| # | linssi | alue | kaari | pysäkkejä | tila |
+|---|---|---|---|---|---|
+| S1 | Siirtomaat | maailma | 1415–1960 | Ceuta 1415 · Goa 1510 · Hispaniola · Batavia 1619 · Kalkutta · Kap 1652 · Sydney 1788 · Algeria 1830 · Kongo 1885 · Intia 1947 · Afrikka 1960 | seuraava (omistajan kolmas linssi) |
+| S2 | Kolmiokauppa | Atlantti | 1500–1867 | Elmina · Liverpool · Nantes · Karibia · Bahia · Charleston · kielto 1807 · 1867 | seuraava |
+| S3 | Maustereitit ja teekauppa | Intian valtameri–Eurooppa | 1500–1900 | Molukit · Malakka · Kanton · Kalkutta · Suez 1869 · teekilpalaivat 1866 | idea |
+| S4 | Hopea ja kulta | Amerikat–Eurooppa–Aasia | 1545–1900 | Potosí · Manilan galeonit · Sevilla · kultaryntäykset 1849, 1851, 1886 | idea |
+| S5 | Turkikset ja valaat | pohjoinen | 1600–1900 | Hudsonin lahti · Siperia · Huippuvuoret · Nantucket · Beringinmeri | idea |
+| T1 | Siirtolaisuus Amerikkaan | Eurooppa–Amerikat | 1840–1914 | Irlanti 1845 · Bremen · Liverpool · Ellis Island 1892 · Hanko–New York | seuraava |
+| T2 | Pyhiinvaellukset | maailma | vuodenkierto | Santiago · Mekka · Varanasi · Jerusalem | idea |
+| T3 | Siperian karkotukset ja asutus | Venäjä | 1590–1917 | Tobolsk · Irkutsk · Sahalin · rata 1891 | idea |
+| U1 | Sähkösanomakaapelit | maailma | 1851–1902 | Dover–Calais 1851 · Atlantti 1866 · Intia 1870 · Australia 1872 · Tyynimeri 1902 | seuraava (pelin sähkeet) |
+| U2 | Postireitit ja höyrylinjat | maailma | 1840–1914 | P&O · Cunard · Suez · Fogg 1872 | idea |
+| U3 | Muuttolinnut | maailma | vuodenkierto | kurjet · haarapääskyt · valaat | idea (= F2) |
 
 ## Järjestys
 
