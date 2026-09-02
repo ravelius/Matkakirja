@@ -763,6 +763,42 @@ const NOSTOSYM_MINI_LUONNOS = {
     ],
   }),
   /*
+   * TIIMALASI — historian hetki. UUSI KUVIO 2.9.2026 (H1-erä,
+   * js/packs/historian-hetket.js). Vedot 3.
+   *
+   * ── MIKSI TIIMALASI ───────────────────────────────────────────────
+   *
+   * Kategoria ei ole paikka vaan HETKI: se sekunti, jolloin laiva
+   * irtoaa laiturista tai luoti on vielä lähtemättä. Perheessä ei ole
+   * yhtään ajan merkkiä — kaikki neljätoista muuta nimeävät jonkin
+   * ESINEEN tai PAIKAN (pylväs, ankkuri, malja, portti) — joten aika
+   * on ainoa vapaa merkitys, ja tiimalasi on sen vanha karttakielinen
+   * kuva. Aikakausi on myös oikea: tiimalasi oli 1800-luvun laivan
+   * navigointiväline, ei koriste.
+   *
+   * ── MIKSI TÄMÄ MUOTO EIKÄ TOINEN ─────────────────────────────────
+   *
+   * Kokeiltiin ja hylättiin: KELLOTAULU (ympyrä ja kaksi viisaria luki
+   * käyttökoossa samana täplänä kuin silmä), AURINKOKELLO (vino tanko
+   * = sana), KYNTTILÄ (pystyviiva = historia ja kaupunki).
+   * Tiimalasin ristikkäiset viistot ovat perheen ainoa X, eikä
+   * yhdelläkään toisella merkillä ole kahta vaakapalkkia ylä- ja
+   * alareunassa.
+   *
+   * MITOITUS. Lasi on suljettu murtoviiva, joka käy vyötäröllä (0,0)
+   * kahdesti — sama piste ylä- ja alakartion kärkenä — jolloin muoto
+   * on yksi veto eikä kaksi kolmiota. Laipiot ovat lasia leveämmät
+   * (±5,3 vs. ±3,8), jotta silmä lukee lasin kannatelluksi kehyksen
+   * väliin.
+   */
+  hetki: ({ murto, viiva }) => ({
+    vahva: [
+      murto([[-3.80, -4.40], [3.80, -4.40], [0, 0], [3.80, 4.40], [-3.80, 4.40], [0, 0]], true),
+      viiva(-5.30, -5.80, 5.30, -5.80),
+      viiva(-5.30, 5.80, 5.30, 5.80),
+    ],
+  }),
+  /*
    * KOMPASSIRUUSU — kadonnut ihme. ALKUPERÄINEN KUVIO PALAUTETTU
    * (omistaja 31.8.2026: *"Ihme voisi olla sama kuin alkuperäinen, jos
    * siitä vain poistaisi ne haaleammat viivat"*). Vedot 5 → 1:
@@ -1269,6 +1305,41 @@ function piirraNostosymTahti(g) {
   }, g);
 }
 
+/**
+ * TIIMALASI — HISTORIAN HETKI (js/historian-hetket.js).
+ *
+ * Kortin ylärivin tunnus. Kartalla merkki on viivatiimalasi
+ * (NOSTOSYM_MINI_LUONNOS.hetki); tässä sama muoto saa kaiverruksen
+ * mitat: puiset laipiot ja pylväät musteessa, lasi kategoriansa
+ * sävyssä ja hiekka kasautuneena alakartion pohjalle.
+ *
+ * TIIMALASI EI TULE KUVANA (NOSTOSYM_GENEROIDUT), vaan koodilla kuten
+ * tähti: muoto on suoria viivoja ja teräviä kärkiä, jotka kestävät
+ * pienenemisen rasteria paremmin.
+ */
+function piirraNostosymTiimalasi(g) {
+  // Kaksi laipiota ja niitä yhdistävät pylväät — kehys ensin, jotta
+  // lasi piirtyy sen päälle.
+  el('path', {
+    class: 'nostosym-hetkikehys',
+    d: 'M-7.6 -8.6 L7.6 -8.6 L7.6 -6.6 L-7.6 -6.6 Z '
+      + 'M-7.6 6.6 L7.6 6.6 L7.6 8.6 L-7.6 8.6 Z '
+      + 'M-6.4 -6.6 L-4.8 -6.6 L-4.8 6.6 L-6.4 6.6 Z '
+      + 'M4.8 -6.6 L6.4 -6.6 L6.4 6.6 L4.8 6.6 Z',
+  }, g);
+  // Lasi: ylä- ja alakartio, jotka kohtaavat vyötäröllä.
+  el('path', {
+    class: 'nostosym-hetki',
+    d: 'M-3.9 -6.6 L3.9 -6.6 L0 0 L3.9 6.6 L-3.9 6.6 L0 0 Z',
+  }, g);
+  // Hiekka: valunut kasa alakartion pohjalla ja ohut juova vyötäröltä.
+  el('path', {
+    class: 'nostosym-hiekka',
+    d: 'M-3.0 6.6 L3.0 6.6 L1.4 3.9 L-1.4 3.9 Z',
+  }, g);
+  el('path', { class: 'nostosym-viiva', d: 'M0 0.6 L0 3.6' }, g);
+}
+
 const NOSTOSYM_PIIRTAJAT = {
   huuto: piirraNostosymHuuto,
   elain: piirraNostosymPollo,
@@ -1284,6 +1355,7 @@ const NOSTOSYM_PIIRTAJAT = {
   urheilu: piirraNostosymSeppele,
   kaupunki: piirraNostosymPortti,
   ihme: piirraNostosymTahti,
+  hetki: piirraNostosymTiimalasi,
 };
 
 /** Tunnetut symbolikategoriat — yksi totuus myös kutsujien tarkistuksiin. */
@@ -1316,6 +1388,9 @@ export const NOSTOSYM_LUOKAT = {
   // Tähti on oma luokkansa eikä historian alalaji: kortin ylärivi
   // kertoo heti, että tästä kohteesta on jäljellä vain tarina.
   ihme: 'Kadonneet ihmeet',
+  // Tiimalasi on oma luokkansa eikä historian alalaji: murtunut pylväs
+  // lupaa paikkaa, tiimalasi lupaa hetkeä (js/historian-hetket.js).
+  hetki: 'Historian hetket',
 };
 
 /*
@@ -1365,6 +1440,14 @@ export const NOSTOSYM_PAAKATEGORIAT = {
   tekniikka: 'kauppa',
   merenkulku: 'kauppa',
   huuto: 'skandaalit',
+  /*
+   * TIIMALASI ON OMA PÄÄKATEGORIANSA eikä historian alalaji (omistajan
+   * sijoituspäätös 2.9.2026): historia-rivin takana ovat kartan
+   * paikat — rauniot, pylväät, legendat — ja Historian hetket on eri
+   * lupaus, havainnekuva yhdestä sekunnista. Rivi on siksi selitteen
+   * yhdeksäs (js/karttavalot.js KARTTAVALO_AIHEET).
+   */
+  hetki: 'hetket',
 };
 
 /** Symbolin pääkategoria; tuntematon symboli ei kuulu mihinkään. */

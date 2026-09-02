@@ -617,7 +617,17 @@ export function sisallysTiedot(ui, osa) {
   // kertomaan mistä sivulla on kyse, eli juuri tähän tarkoitukseen.
   const johdanto = osa.johdanto ?? ensimmainen?.teksti ?? '';
   const virke = (johdanto.match(/[^.!?]+[.!?]/) ?? [johdanto])[0].trim();
-  return { kuva: ensimmainen?.tiedosto ?? null, ingressi: virke };
+  /*
+   * `osoite` on valmis polku ilman thumb-putkea (pelin oma
+   * havainnekuva ämpärissä, ks. piirraKategoria). Se palautetaan
+   * omana kenttänään, jottei kutsuja yritä kääntää sitä
+   * valokuvaUrl:lla — muuten sisällysrivi jäisi kuvattomaksi.
+   */
+  return {
+    kuva: ensimmainen?.tiedosto ?? null,
+    osoite: ensimmainen?.osoite ?? null,
+    ingressi: virke,
+  };
 }
 
 /** Sisällysluettelon rivit. Käytetään sekä etusivulla että valikossa. */
@@ -658,15 +668,18 @@ export function rakennaSisallysLista(ui, sisallys, { suljeValikko = null, etusiv
     lista.appendChild(rivi);
   }
   for (const osa of sisallys ?? []) {
-    const { kuva, ingressi } = sisallysTiedot(ui, osa);
+    const { kuva, osoite, ingressi } = sisallysTiedot(ui, osa);
     const rivi = html('button', 'sisallys-rivi');
     rivi.type = 'button';
-    if (kuva) {
+    if (kuva || osoite) {
       const img = document.createElement('img');
       img.className = 'sisallys-kuva';
       img.alt = '';
       img.decoding = 'async';
-      asetaKuva(img, valokuvaUrl(kuva, 320), valokuvaVara(kuva, 320));
+      // Valmiilla osoitteella ei ole varareittiä — ämpäri on ainoa
+      // lähde, kuten julisteillakin (js/ui.js varustaNostonKuva).
+      if (osoite) asetaKuva(img, osoite, null);
+      else asetaKuva(img, valokuvaUrl(kuva, 320), valokuvaVara(kuva, 320));
       rivi.appendChild(img);
     }
     const teksti = html('div', 'sisallys-teksti');

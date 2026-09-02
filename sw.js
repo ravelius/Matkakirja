@@ -54,6 +54,8 @@ const SHELL = [
   './js/packs/syvennyspaikat.js',
   './js/skandaalit.js',
   './js/packs/skandaalit.js',
+  './js/historian-hetket.js',
+  './js/packs/historian-hetket.js',
   './js/fokustehtavat.js',
   './js/maalehti.js',
   './js/lukija.js',

@@ -658,6 +658,16 @@ const MODULES = [
   'js/packs/skandaalit.js',
   'js/skandaalit.js',
   /*
+   * Historian hetket kartalle (yhtenäinen kohdemalli, sisar
+   * skandaaleille): data ensin, kerroskytkentä perässä.
+   * js/historian-hetket.js tuo fokusvirran (TAKY_PALKKIO),
+   * kohdekerroksen ja sen kuvasuurennoksen, symbolikirjaston,
+   * tekijakortin lähderivin ja projektion (fokusmitat) — kaikki ovat
+   * jo yllä.
+   */
+  'js/packs/historian-hetket.js',
+  'js/historian-hetket.js',
+  /*
    * Eläintäyt ennen ui:ta (ui tuo niiden päivitys- ja nollauskutsun).
    * Data ensin, kerros perässä. Kerros lukee laudan projektion
    * fokusmitat.js:stä — juuri siksi se on listalla vasta tässä — ja

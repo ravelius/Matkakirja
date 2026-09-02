@@ -85,12 +85,14 @@ import { nostosymPaakategoria } from './fokusnosto-symbolit.js';
 const KARTTAVALO_TALLE = 'matkakirja-karttavalot';
 
 /**
- * SELITELISTA — KAHDEKSAN AIHETTA, kartan järjestyksessä.
+ * SELITELISTA — YHDEKSÄN AIHETTA, kartan järjestyksessä.
  *
- * Omistajan lopullinen jako 29.8.2026. Järjestys on kartan oma eikä
- * aakkosten: ensin kaupungit (joita etsitään useimmin), sitten luonto
- * ja eläimet, sitten menneisyys, ja lopuksi ihmisen tekemiset —
- * kulttuuri, kauppa ja skandaalit.
+ * Omistajan jako 29.8.2026 (kahdeksan riviä) sai yhdeksännen rivin
+ * 2.9.2026, kun Historian hetket tuli peliin omana nostolajinaan
+ * (js/historian-hetket.js). Järjestys on kartan oma eikä aakkosten:
+ * ensin kaupungit (joita etsitään useimmin), sitten luonto ja eläimet,
+ * sitten menneisyys — historia, kadonneet ihmeet ja historian hetket —
+ * ja lopuksi ihmisen tekemiset: kulttuuri, kauppa ja skandaalit.
  *
  * `nimi` on selite eli se, mitä kartalla NÄKYY. Kahdella rivillä on
  * kaksiosainen nimi, koska ryhmä on kaksiosainen: yksi lyyra kattaa
@@ -108,6 +110,7 @@ export const KARTTAVALO_AIHEET = [
   { aihe: 'elaimet', nimi: 'Eläimet', symboli: 'elain' },
   { aihe: 'historia', nimi: 'Historia', symboli: 'historia' },
   { aihe: 'ihmeet', nimi: 'Kadonneet ihmeet', symboli: 'ihme' },
+  { aihe: 'hetket', nimi: 'Historian hetket', symboli: 'hetki' },
   { aihe: 'kulttuuri', nimi: 'Kulttuuri ja ruoka', symboli: 'kulttuuri' },
   { aihe: 'kauppa', nimi: 'Kauppa ja tekniikka', symboli: 'kauppa' },
   { aihe: 'skandaalit', nimi: 'Skandaalit', symboli: 'huuto' },
@@ -125,9 +128,11 @@ const KARTTAVALO_KARJET = Object.fromEntries(
  * SYMBOLI → RYHMÄNSÄ KÄRKISYMBOLI, eli se merkki, joka kartalle
  * oikeasti piirretään.
  *
- * OMISTAJAN PÄÄTÖS 31.8.2026: KARTALLA ON VAIN KAHDEKSAN SYMBOLIA —
- * täsmälleen selitevalikon kahdeksan riviä (KARTTAVALO_AIHEET). Ennen
- * tätä kartalla oli neljäntoista kategorian merkit, ja niistä kuusi
+ * OMISTAJAN PÄÄTÖS 31.8.2026: KARTALLA ON VAIN SELITEVALIKON OMAT
+ * SYMBOLIT — yksi merkki jokaista KARTTAVALO_AIHEET-riviä kohti, ei
+ * yhtään enempää (rivejä oli tuolloin kahdeksan; Historian hetket toi
+ * yhdeksännen 2.9.2026). Ennen tätä kartalla oli neljäntoista
+ * kategorian merkit, ja niistä kuusi
  * (silmä, malja, veturi, sulkakynä, ankkuri, seppele) esiintyi ilman
  * omaa seliteriviä: pelaaja näki kartalla ankkurin muttei löytänyt
  * ankkuria selitteestä. Nyt jokainen kartan merkki on jonkin
