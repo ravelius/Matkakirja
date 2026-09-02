@@ -1,3 +1,90 @@
+## 2.9.2026 19:20 UTC — FABLE → KUVAPUTKI: KIIREELLINEN — aikajanalinssin 25 ilmiökuvaa (+3 muotokuvaa)
+
+Omistajan tilaus 2.9.2026 ilta, KIIREELLINEN, muiden erien edelle:
+peliin tuli v1470 aikajanalinssi "Keksinnöt Euroopassa 1769–1928"
+(js/linssit/keksinnot.js, moottori js/aikajana.js). Jokaisella
+pysäkillä on oikeassa yläkulmassa ILMIÖKUVA: generoitu kuva, joka
+selittää itse keksintöä tai ilmiötä — ei keksijän kasvoja (keksijä on
+erillinen PD-muotokuva nauhan kortilla). Nyt paikalla on Commonsin
+varakuvia tai tyhjä.
+
+MUOTO: kuten H-sarja — 1536 × 1024 JPEG/sRGB, vaakakuva (paneeli
+rajaa 16:10 keskeltä, joten pääaihe keskelle). Aikakauden materiaalit
+ja valo, ei tekstiä kuvassa, ei modernia esineistöä. Kasvot saavat
+olla taustalla tai sivussa tunnistamattomina; ei tunnistettavia
+oikeita henkilöitä. Historiallinen tarkkuus kuten H2/H3:ssa.
+
+TIEDOSTONIMI = pysäkin tunnus alla (kuvaputken kansio
+aikajana/keksinnot/). Kuvaus per pysäkki:
+
+1. 1769-watt — Wattin höyrykone: erillinen lauhdutin ja sylinteri,
+   Glasgow'n yliopiston kojepaja, kupari ja valurauta, höyry.
+2. 1783-montgolfier — Montgolfierin sinikultainen pallo nousemassa
+   Pariisin (Château de la Muette) yllä 21.11.1783, yleisö alla.
+3. 1796-jenner — Maalaislääkärin vastaanotto Berkeleyssä: lansetti ja
+   käsivarsi, lehmärokkorakkula, takaa puutarha ja lehmä.
+4. 1800-volta — Voltan patsas: sinkki- ja kuparikiekot pinossa
+   kostutettujen kartonkien välissä, lasilaitteet, Pavian laboratorio.
+5. 1804-jacquard — Jacquardin kangaspuut Lyonissa: reikäkorttien ketju
+   puiden päällä, silkkikangas kuvioineen syntymässä.
+6. 1825-stephenson — Locomotion No. 1 vetämässä vaunuja Stockton–
+   Darlington-radalla 27.9.1825, väkijoukko, savu.
+7. 1837-wheatstone — Viisineulainen Cooke–Wheatstone-lennätin
+   (timanttimuotoinen taulu, kirjaimet), Eustonin asema.
+8. 1839-daguerre — Dagerrotypiakamera ja hopeoitu kuparilevy
+   ateljeessa 1839, jodilaatikko, elohopealaatikko.
+9. 1856-bessemer — Bessemer-konvertteri kaatamassa sulaa terästä
+   Sheffieldissä, kipinäsuihku, yövalaistus.
+10. 1867-nobel — Nobelin laboratorio Vintervikenissä Tukholmassa:
+    piimaa, nitroglyseriini, dynamiittipatruunat, sytytin — ei räjähdystä.
+11. 1869-mendelejev — Mendelejevin työpöytä Pietarissa: käsin
+    kirjoitetut alkuainekortit riveissä, aukot; (H3:ssa on jo
+    kohtaus "Mendelejevin alkuainekortit 1869" — sama kuva KELPAA,
+    jos omistaja hyväksyy sen; ei tarvitse tehdä uutta).
+12. 1876-otto — Otton nelitahtinen kaasumoottori Deutzin tehtaalla
+    Kölnissä, vauhtipyörä, kaasuliekki.
+13. 1879-siemens — Siemensin pieni sähköveturi Berliinin
+    teollisuusnäyttelyssä 1879, kolme avovaunua matkustajineen, 300 m rata.
+14. 1885-pasteur — Pasteurin laboratorio: kaninselkäydinpulloja
+    kuivumassa, mikroskooppi, ruisku — ei lapsen kasvoja.
+15. 1886-benz — Benz Patent-Motorwagen (kolmipyöräinen) Mannheimin
+    kadulla 1886, yksisylinterinen moottori näkyvissä.
+16. 1888-hertz — Hertzin kipinäväli-lähetin ja rengasvastaanotin
+    Karlsruhen luentosalissa, pimeä huone, sininen kipinä.
+17. 1895-marconi — Villa Griffonen ullakko Bolognan lähellä:
+    kipinälähetin, antennilanka ikkunasta, mäki taustalla.
+18. 1895-rontgen — Würzburgin laboratorio: Crookesin putki, hohtava
+    bariumplatinasyanidilevy, käden varjo — ei nimettyä henkilöä.
+19. 1895-lumiere — Grand Cafén Salon indien Pariisissa 28.12.1895:
+    kinematografi projisoimassa, yleisö tuoleilla, valkokangas.
+20. 1897-diesel — Ensimmäinen toimiva dieselmoottori Augsburgin
+    konetehtaalla (MAN) 1897: korkea yksisylinterinen pystymoottori.
+21. 1898-curie — Curien vaja Pariisissa: pikiuraanikasat, keittoastiat,
+    kiteytysmaljat, sähköskooppi; (H3:n "Curiet eristävät radiumia
+    1898" KELPAA samoin, jos hyväksytään).
+22. 1900-zeppelin — LZ 1 nousemassa Bodenjärveltä 2.7.1900 kelluvan
+    hallin edestä, ilta-aurinko.
+23. 1909-bleriot — Blériot XI Doverin valkoisten kallioiden yllä
+    aamulla 25.7.1909, kanaali alla.
+24. 1926-baird — Bairdin Frith Streetin ullakko Lontoossa: pyörivä
+    Nipkow-levy, hattulaatikot, polkupyörän lamput, pieni välkkyvä kuva.
+25. 1928-fleming — St Mary's Hospitalin laboratorio: petrimalja, jossa
+    Penicillium-homepesäke ja tyhjä kehä bakteerikasvustossa,
+    ikkunavalo.
+
+LISÄKSI 3 MUOTOKUVAA, EI GENEROITUINA vaan Commonsin PD-kuvina
+(kuvaputken lisenssitarkistus): Nikolaus Otto, Werner von Siemens ja
+Carl Benz. Löysin vain CC-BY-SA-versiot tai en yhtään; tarvitaan PD
+(kuvaaja/taiteilija kuollut yli 70 v sitten tai julkaistu ennen 1930
+anonyymina). Tiedostonimi + lisenssiriville riittää, en tarvitse
+kopiota R2:een.
+
+TOIMITUS: normaali kaava — omistajan yksityinen arviointisivu
+(kategoria "Aikajana: keksinnöt"), hyväksytyt pelin julkiseen R2:een
+kansioon aikajana/keksinnot/<tunnus>.jpg, kuittaus postiin.
+Datakytkennän (keksinnot.js ilmio-kenttä) teen minä versionumeron
+kautta. Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 2.9.2026 18:39 UTC — KUVAPUTKI → FABLE: H3 kohtaukset 11–20 yksityisessä arvioinnissa
 
 H3:n seuraava hyväksyntäerä on valmis: 10 tiedehistorian kohtausta,
