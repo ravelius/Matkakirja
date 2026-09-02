@@ -2,7 +2,7 @@
  * PATINAPASSI: valmiin karttalehden jälkikäsittely 1873-vedokseksi.
  *
  *   node tools/patina.mjs <pohjakuva> <ulos-kansio> \
- *        [--taso hillitty|keskitaso|taysi|kaikki] [--tunnus GRC] \
+ *        [--taso hillitty|keskitaso|taysi|kirkas|kaikki] [--tunnus GRC] \
  *        [--leveys 6400] [--laatu 0.9] [--muoto jpeg|webp|png] \
  *        [--vertailu] [--pala x,y,w,h] [--bbox x,y,w,h]
  *
@@ -31,6 +31,8 @@
  * `taysi`      kaikki + viivojen mikrorosoisuus + painolaattojen
  *              kohdistusheitto + musteen leviäminen nimissä +
  *              vinjetointi.
+ * `kirkas`     `taysi` vaaleampana, värikkäämpänä ja hillitymmällä
+ *              pinnalla (omistaja 2.9.2026) — ks. KIRKAS alempana.
  *
  * Taso ei ole kytkinlista vaan valmis resepti: jokainen taso on
  * itsenäinen parametriolio, jota voi säätää rikkomatta muita.
@@ -718,6 +720,127 @@ const TAITTEET = {
 const VINJETTI = { voima: 0.1, eksponentti: 2.4, lampo: 0.4 };
 
 /*
+ * ================================================================
+ * KIRKAS — TÄYSI RESEPTI VAALEAMPANA JA VÄRIKKÄÄMPÄNÄ
+ * ================================================================
+ *
+ * Omistajan tilaus 2.9.2026 (sanatarkasti): *"Kartan patinoinnin voisi
+ * ajaa uudestaan niin, että kartta ei olisi ihan noin tumma ja se
+ * saisi olla myös vähän värikylläisempi kuin nykyinen versio. Myös
+ * raetta ja pehmeyttä saisi olla hieman vähemmän."*
+ *
+ * TÄMÄ EI OLE UUSI TYYLI VAAN SAMA TYYLI TOISELLA ANNOKSELLA. Jokainen
+ * passi on sama kuin `taysi`-reseptissä ja samassa järjestyksessä;
+ * vain kuusi parametrioliota on säädetty. Siksi resepti on kirjattu
+ * `taysi`-arvojen EROINA — kun joku myöhemmin muuttaa perusarvoa,
+ * ero seuraa mukana eikä unohdu tänne vanhaksi kopioksi.
+ *
+ * MITATTU LÄHTÖTILANNE (z2, koko maailman arkki, 2.9.2026 — luvut ovat
+ * kootun kuvan luminanssikeskiarvoja tasaisilta aloilta):
+ *
+ *              ei patinaa   taysi   kirkas
+ *   paperi       235,2      225,7   238,9
+ *   meri         176,7      181,7   195,2
+ *   maa          212,5      204,5   217,6
+ *   vuori        133,5      144,2   156,3
+ *
+ * Patina ei siis juuri tummenna — POHJA on tumma, ja `taysi` vain
+ * jättää sen tummaksi. Siksi kirkastus EI voi olla "vähemmän
+ * tummennusta" vaan sen on oltava aitoa VALON LISÄYSTÄ sävykäyrään.
+ *
+ * MIKSI EI VIELÄ ENEMPÄÄ. Sävykäyrä on affiini, joten meren nosto
+ * L=195:stä kohti maan sävyä vaatisi joko kerman leikkautumista
+ * valkoiseksi tai kontrastin litistämistä — kummassakin tapauksessa
+ * meri ja maa alkaisivat sulaa yhteen. Kirkkaammaksi pääsee vasta
+ * pohjaa muuttamalla (piirto.js SYVYYS-rampin vaalein pää), ja se on
+ * oma eränsä eikä patinan säätöä.
+ *
+ * === 1. SÄVYKÄYRÄ NOSTAA, MUSTE EI NOUSE MUKANA ===
+ *
+ * Käyrä on affiini (L' = L·kerroin + nosto), joten pelkkä noston
+ * kasvattaminen nostaisi myös musteen: viivat ja pieni teksti
+ * haalistuisivat juuri sen verran kuin paperi kirkastuu, eikä kartta
+ * näyttäisi vaaleammalta vaan utuiselta. Siksi noston nostoa
+ * vastaan asetetaan `musteHaalennus`, joka osuu VAIN musteeseen:
+ * 0,13 → 0,04 vetää viivan tummimman pään takaisin alas suunnilleen
+ * saman verran kuin käyrä nostaa sitä. Lopputulos on mitattu:
+ * paperi ja meri nousevat, musteen ja paperin ero ei kutistu.
+ *
+ * === 2. KYLLÄISYYS: PASTELLOINTIA VÄHEMMÄN, EI ENEMMÄN VÄRIÄ ===
+ *
+ * Maaston väri on pohjassa jo olemassa; `taysi` vie siitä 55 %
+ * (PASTELLI_TAYSI.kyllaisyys). Kylläisyyden nosto tehdään siis
+ * pastelloinnista tinkimällä eikä kylläisyyttä lisäämällä — 0,55 →
+ * 0,45 jättää kromasta 55 % entisen 45 %:n sijaan eli +22 %.
+ * Maan okra ja vuorten ruskea elävät, mutta paperi ei kellastu:
+ * paperi on pastellin maskin ULKOPUOLELLA (kroma alle `kromaVali`:n
+ * alarajan), eikä passi siis koske siihen lainkaan.
+ *
+ * `vaalennus` EI muutu (0,37). Se on korkeuserojen kontrastisäädin,
+ * ja omistaja pyysi 29.8.2026 nimenomaan matalampaa reliefikontrastia;
+ * kirkastus hoituu sävykäyrällä, joka ei litistä rinteitä.
+ *
+ * === 3. RAE JA PEHMEYS PUOLEEN ===
+ *
+ * Paperin rae, nyppy ja kuitu ovat tasan puolet `PAPERI_TAYSI`:n
+ * arvoista — ne ovat sama syy hennompana, eivät eri paperi.
+ * Musteen leviäminen (LEVIAMINEN.voima) puolittuu samoin; säde jää
+ * kahteen pikseliin, koska se on paperivakio (ks. LEVIAMINEN) eikä
+ * puolikasta pikseliä ole olemassa.
+ *
+ * === 4. TAHRAT KEVYEMMIN ===
+ *
+ * Ikääntymislaikku ja akvarellin reunakertymä ovat "tahroja": ne
+ * jäävät, koska ilman niitä lehti muuttuu sileäksi digitaalikartaksi,
+ * mutta molempia annostellaan noin neljännes vähemmän. Laikun
+ * `lampo` laskee 0,55 → 0,40, jotta kevyempi paperi ei kellastu.
+ *
+ * === 5. VINJETTI PYSYY POIS ===
+ *
+ * Tilauksessa luki "vinjetointi säilyy kevyempänä", mutta Raamattu
+ * (PAPERIVAKIOT JA KARTTAVAKIOT) lukitsee vinjetin POIS KAIKILTA
+ * tasoilta: jokainen laatta on laudan pala, ja reunatummennus piirtää
+ * laattaruudukon meren päälle. `taysi`-reseptissä kenttä on jo `null`,
+ * ja se pysyy `null`:na tässäkin. Kevyempi vinjetti olisi vain
+ * himmeämpi ruudukko, ei parempi vinjetti.
+ */
+const SAVYT_KIRKAS = {
+  ...SAVYT,
+  /*
+   * NOSTO 21 → 36 kirkastaa koko arkin; kerroin 0,88 → 0,87 pitää
+   * kirkkaimman pään alle 255:n, jottei paperin rae leikkaudu
+   * huipussa tasaiseksi valkoiseksi (kerma 245 · 0,87 + 36 = 249).
+   *
+   * KAHDEN AJETUN KOKEILUN VÄLISTÄ. 0,875/33 jätti meren 193,1:een;
+   * 0,865/38 vei paperin 239,7:ään, mutta sen vastapainoksi tarvittu
+   * `musteHaalennus` 0,03 alkoi olla niin pieni, että musteen
+   * haalennuspassi oli käytännössä pois päältä. 0,87/36 on näiden
+   * väli: meri 195,2, paperi 238,9, ja muste pysyy paikallaan.
+   */
+  kayra: { kerroin: 0.87, nosto: 36 },
+  /* Ks. kohta 1: musteen vastapaino noston nostolle. */
+  musteHaalennus: 0.04,
+};
+
+/* Ks. kohta 2. */
+const PASTELLI_KIRKAS = {
+  ...PASTELLI_TAYSI, kyllaisyys: 0.45,
+};
+
+/* Ks. kohta 3: tasan puolet PAPERI_TAYSI:n rakeesta ja kuidusta. */
+const PAPERI_KIRKAS = {
+  ...PAPERI_TAYSI,
+  rae: 0.036, raeKarkea: 0.027, kuitu: 0.026, kuituRisti: 0.015,
+};
+
+/* Ks. kohta 4. */
+const IKAANTYMINEN_KIRKAS = { ...IKAANTYMINEN, voima: 0.055, lampo: 0.40 };
+const REUNAKERTYMA_KIRKAS = { ...REUNAKERTYMA, voima: 0.18 };
+
+/* Ks. kohta 3: pehmeys puoleen, säde pysyy paperivakiona. */
+const LEVIAMINEN_KIRKAS = { ...LEVIAMINEN, voima: 0.15 };
+
+/*
  * SYVYYS ON SAMA KAIKILLA TASOILLA — se ei ole patinan voimakkuutta.
  *
  * Muut passit ovat tyylivalintoja, joita tasot annostelevat. Tämä on
@@ -776,6 +899,27 @@ export const RESEPTIT = {
     taitteet: false,
     /* Ks. VINJETTI: maalehti on laudan pala, ei sivu — reunatummennus
      * piirtää sauman. Arvoksi VINJETTI vain yksittäiselle lehdelle. */
+    vinjetti: null,
+  },
+  /*
+   * KIRKAS — sama resepti kuin `taysi`, kuusi oliota säädettynä.
+   * Perustelut kokonaisuudessaan KIRKAS-osiossa yllä.
+   */
+  kirkas: {
+    nimi: 'kirkas',
+    savyt: SAVYT_KIRKAS,
+    syvyys: SYVYYS,
+    vesiviivoitus: VESIVIIVOITUS,
+    maanraja: MAANRAJA,
+    pastelli: PASTELLI_KIRKAS,
+    paperi: PAPERI_KIRKAS,
+    ikaantyminen: IKAANTYMINEN_KIRKAS,
+    reunakertyma: REUNAKERTYMA_KIRKAS,
+    rosoisuus: ROSOISUUS,
+    kohdistus: KOHDISTUS,
+    leviaminen: LEVIAMINEN_KIRKAS,
+    taitteet: false,
+    /* Ks. KIRKAS kohta 5: vinjetti pysyy poissa (Raamattu). */
     vinjetti: null,
   },
   /*

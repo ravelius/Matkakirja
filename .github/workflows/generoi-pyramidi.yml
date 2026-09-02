@@ -175,10 +175,10 @@ on:
         type: string
         default: '0.9'
       patina:
-        description: 'Patinataso (taysi = lukittu resepti)'
+        description: 'Patinataso (kirkas = omistajan 2.9.2026 vaaleampi ja värikkäämpi annos; taysi = sitä edeltänyt lukittu resepti)'
         type: choice
-        options: [taysi, keskitaso, hillitty, ei]
-        default: taysi
+        options: [kirkas, taysi, keskitaso, hillitty, ei]
+        default: kirkas
       piirit:
         description: 'Viivataso: erikoispiirit (päiväntasaaja, kääntö- ja napapiiri, nollameridiaani) laattoihin (ei = --eipiirit, omistaja 1.9.2026)'
         type: choice
