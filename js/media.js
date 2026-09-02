@@ -171,6 +171,94 @@ export function pyramidiUrl(polku) {
   return `${PEILI_JUURI}${PYRAMIDI_ALIPOLKU}${polku}`;
 }
 
+/*
+ * REPON ASSET-KUVAT ÄMPÄRIIN (omistajan päätös 2.9.2026: "R2-ämpäriin,
+ * JPG-muodossa").
+ *
+ * Pelin omat generoidut kuvat — kohdekartan miniatyyrit, eläintäkyjen
+ * lähikuvat, aarrekuvat sekä karttanostojen ja Matkakirjan ihmeiden
+ * havainnekuvat — ovat tähän asti asuneet repossa. Uudet kuvat menevät
+ * vain ämpäriin JPG:nä, ja vanhat siirretään sinne erissä
+ * (.github/workflows/vie-assetit.yml). Siirtymä kestää useamman
+ * julkaisun, joten pelin on osattava lukea kumpaakin.
+ *
+ * SIIRTYMÄ ON YKSI KYTKINTAULU EIKÄ SATA POLKUA. `R2_ASSETIT` kertoo
+ * lajeittain, onko vanha aineisto jo ämpärissä. Kun erä on viety ja
+ * takaisinluku vihreä, lippu kääntyy `true`:ksi — vasta silloin repon
+ * polut käännetään ämpäriosoitteiksi, ja vasta sen jälkeen tiedostot
+ * voi poistaa reposta. Yksikään datataulu ei muutu siirrosta.
+ *
+ * PELKKÄ TUNNUS TARKOITTAA AINA ÄMPÄRIÄ. Datassa saa lukea joko vanha
+ * repon polku (`assets/kartat/miniatyyrit/x.webp`) tai pelkkä tunnus
+ * (`ateena-akropolis-museo`). Tunnuksella ei ole repokopiota lainkaan —
+ * se on uusi kuva, joka syntyi suoraan ämpäriin — joten se ei ole
+ * kytkimen alainen. Puuttuva kuva on tavallinen tilanne eikä virhe:
+ * kutsuja piilottaa kuvapaikan (kohdekartalla piirros putoaa
+ * varatäpläksi), kunnes kuvaputki on toimittanut tiedoston.
+ */
+const ASSET_ALIPOLKU = 'kohtaamiset/';
+
+/**
+ * Asset-perheet: lajin tunnus → kansio repossa. Sama nimi on ämpärissä
+ * polun `kohtaamiset/<laji>/` alla, joten vientityökalu ja peli eivät
+ * voi olla eri mieltä siitä, minne tiedosto meni.
+ */
+export const ASSET_KANSIOT = {
+  miniatyyrit: 'assets/kartat/miniatyyrit',
+  elaimet: 'assets/elaimet',
+  aarteet: 'assets/aarteet',
+  nostot: 'assets/kartat/nostot',
+  ihmeet: 'assets/kartat/ihmeet',
+};
+
+/**
+ * Onko lajin VANHA repoaineisto jo ämpärissä? Oletus on false: peli
+ * lukee repon polkua, kunnes erä on viety ja tarkistettu.
+ */
+export const R2_ASSETIT = {
+  miniatyyrit: false,
+  elaimet: false,
+  aarteet: false,
+  nostot: false,
+  ihmeet: false,
+};
+
+/**
+ * Asset-kuvan osoite: ämpäri kun kuva on siellä, repon polku muuten.
+ *
+ * @param {string} laji ASSET_KANSIOT-avain. Ratkaisee vain PELKÄN
+ *   TUNNUKSEN tapauksen — valmis polku kertoo lajinsa itse, jotta
+ *   yhteiset kuvakohdat (esim. suurennos, joka näyttää sekä ihme- että
+ *   nostokuvia) eivät joudu arvaamaan lajia kutsupaikassa.
+ * @param {string} tiedosto repon polku, pelkkä tunnus tai valmis osoite.
+ */
+export function assetOsoite(laji, tiedosto) {
+  if (typeof tiedosto !== 'string' || !tiedosto) return tiedosto;
+  // Valmis osoite (ämpäri tai mikä tahansa muu) menee sellaisenaan.
+  if (/^(?:[a-z][a-z0-9+.-]*:)?\/\//i.test(tiedosto)) return tiedosto;
+  // Pelkkä tunnus: uusi kuva, joka on vain ämpärissä ja aina JPG.
+  if (!tiedosto.includes('/')) {
+    return ASSET_KANSIOT[laji]
+      ? `${PEILI_JUURI}${ASSET_ALIPOLKU}${laji}/${tiedosto}.jpg`
+      : tiedosto;
+  }
+  const osuma = Object.entries(ASSET_KANSIOT)
+    .map(([nimi, kansio]) => [nimi, tiedosto.indexOf(`${kansio}/`)])
+    .find(([, i]) => i !== -1);
+  if (!osuma) return tiedosto;
+  const [nimi, i] = osuma;
+  if (!R2_ASSETIT[nimi]) return tiedosto;
+  /*
+   * Katkaisijan ollessa auki repon polku on yhä oikea vastaus — niin
+   * kauan kuin tiedosto on vielä repossa. Kun se on poistettu, lippu on
+   * ollut päällä jo julkaisun verran eikä varareittiä tarvita: 404
+   * käyttäytyy silloin samoin kuin ennen siirtoa puuttuva kuva.
+   */
+  if (!peiliKaytossa('kuvat')) return tiedosto;
+  const hanta = tiedosto.slice(i + ASSET_KANSIOT[nimi].length + 1);
+  return `${PEILI_JUURI}${ASSET_ALIPOLKU}${nimi}/${hanta}`;
+}
+
 /**
  * Turvallinen tiedostonimi mistä tahansa merkkijonosta.
  *

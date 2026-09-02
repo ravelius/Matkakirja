@@ -1,0 +1,187 @@
+# Vie repon vanhat asset-kuvat R2-ämpäriin (omistajan päätös 2.9.2026:
+# "R2-ämpäriin, JPG-muodossa"). Uudet kuvat syntyvät suoraan ämpäriin
+# JPG:nä; TÄMÄ työnkulku siirtää sinne sen, mikä on jo repossa.
+#
+# MUOTOA EI MUUNNETA. Omistajan JPG-sääntö koskee UUSIA kuvia: vanha
+# webp menee ämpäriin webpinä. Uudelleenpakkaus tekisi olemassa olevasta
+# kuvasta huonomman ilman että kukaan sitä pyysi, ja pelin datataulut
+# nimeävät tiedostot päätteineen — pääte pysyy siis samana molemmin
+# puolin, kuten repon omilla äänillä (js/media.js).
+#
+# EI --delete EIKÄ POISTOJA REPOSTA. Työnkulku vain kopioi. Repon
+# tiedostot poistetaan vasta erikseen, kun js/media.js R2_ASSETIT on
+# käännetty tälle lajille ja julkaisu on ollut hetken pelaajilla.
+#
+# Peli lukee nämä osoitteesta kohtaamiset/<laji>/ (js/media.js
+# assetOsoite). Sama juuri kuin kohtaamiskuvilla, koska ämpärillä on
+# siellä jo CORS-sääntö ja julkinen luku.
+name: Vie assetit R2:een
+
+on:
+  workflow_dispatch:
+    inputs:
+      kansio:
+        description: 'Mikä asset-perhe viedään'
+        type: choice
+        required: true
+        default: miniatyyrit
+        options:
+          - miniatyyrit
+          - elaimet
+          - aarteet
+          - nostot
+          - ihmeet
+          - kaikki
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vie-assetit
+  cancel-in-progress: false
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      JULKINEN: https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev
+      KANSIO: ${{ inputs.kansio }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Tarkista secretit
+        env:
+          R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_AMPARI: ${{ secrets.R2_BUCKET }}
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ] || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "$R2_TILI" ] || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "$R2_AMPARI" ] || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Puuttuvat repository secretit:$puuttuu"
+            exit 1
+          fi
+
+      # Kansiot luetaan js/media.js:n ASSET_KANSIOT-taulusta eikä
+      # kirjoiteta tähän uudelleen: kaksi kopiota nimeämissäännöstä
+      # ehtivät kerran eriytyä (ks. js/media.js turvanimi).
+      - name: Kokoa siirtolista
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'SKRIPTI' > siirtolista.txt
+          import { ASSET_KANSIOT } from './js/media.js';
+          const valinta = process.env.KANSIO;
+          const lajit = valinta === 'kaikki' ? Object.keys(ASSET_KANSIOT) : [valinta];
+          for (const laji of lajit) {
+            const kansio = ASSET_KANSIOT[laji];
+            if (!kansio) throw new Error(`tuntematon laji: ${laji}`);
+            console.log(`${laji}\t${kansio}`);
+          }
+          SKRIPTI
+          cat siirtolista.txt
+
+      - name: Vie ämpäriin
+        env:
+          R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_AMPARI: ${{ secrets.R2_BUCKET }}
+        run: |
+          set -euo pipefail
+          paate="https://$R2_TILI.r2.cloudflarestorage.com"
+          while IFS=$'\t' read -r laji kansio; do
+            [ -d "$kansio" ] || { echo "::error::$kansio puuttuu"; exit 1; }
+            # Tuntematon pääte tarkoittaisi hiljaa väärää Content-Typeä
+            # (tai ohitettua tiedostoa), joten se kaataa ajon.
+            muut=$(find "$kansio" -type f ! -name '*.webp' ! -name '*.jpg' | head -5)
+            if [ -n "$muut" ]; then
+              echo "::error::$kansio sisältää muuta kuin webp/jpg:"
+              echo "$muut"
+              exit 1
+            fi
+            # Kaksi ajoa, koska Content-Type asetetaan käsin: arvaus
+            # riippuisi runnerin mimetypes-taulusta, ja väärä tyyppi
+            # rikkoisi kuvan vasta pelaajan selaimessa.
+            for pari in "webp image/webp" "jpg image/jpeg"; do
+              set -- $pari
+              aws s3 sync "$kansio" "s3://$R2_AMPARI/kohtaamiset/$laji" \
+                --endpoint-url "$paate" \
+                --exclude '*' --include "*.$1" \
+                --no-progress --size-only --content-type "$2" \
+                --cache-control "public, max-age=2592000"
+            done
+            echo "$laji: $(find "$kansio" -type f | wc -l) tiedostoa viety."
+          done < siirtolista.txt
+
+      # Takaisinluku samalla periaatteella kuin vie-kohtaamiskuvat.yml:
+      # vienti ilman todennettua julkista lukua ei ole vienti. Jokainen
+      # tiedosto tarkistetaan, koska juuri yksittäinen unohtunut kuva on
+      # se, joka näkyisi pelissä puuttuvana.
+      - name: Varmista julkinen R2-luku
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'SKRIPTI'
+          import { readFileSync } from 'node:fs';
+          import { readdir } from 'node:fs/promises';
+
+          const rivit = readFileSync('siirtolista.txt', 'utf8').trim().split('\n');
+          const TYYPIT = { webp: 'image/webp', jpg: 'image/jpeg' };
+          const RINNAKKAIN = 8;
+
+          async function tiedostot(juuri, alku = '') {
+            const lista = [];
+            for (const kohta of await readdir(`${juuri}/${alku}`, { withFileTypes: true })) {
+              const polku = alku ? `${alku}/${kohta.name}` : kohta.name;
+              if (kohta.isDirectory()) lista.push(...await tiedostot(juuri, polku));
+              else lista.push(polku);
+            }
+            return lista;
+          }
+
+          async function tarkista(osoite, odotettu) {
+            // Yksi uusinta: r2.dev on Cloudflaren rajoitettu kehitysosoite
+            // ja purskeessa yksittäinen pyyntö voi jäädä rajan taakse.
+            for (let yritys = 0; yritys < 2; yritys += 1) {
+              const vastaus = await fetch(osoite, {
+                headers: { Range: 'bytes=0-2047', Origin: 'https://ravelius.github.io' },
+              }).catch(() => null);
+              if (vastaus && [200, 206].includes(vastaus.status)) {
+                const tyyppi = vastaus.headers.get('content-type') ?? '';
+                if (!tyyppi.startsWith(odotettu)) throw new Error(`${osoite}: MIME ${tyyppi}`);
+                if (!vastaus.headers.get('access-control-allow-origin')) {
+                  throw new Error(`${osoite}: CORS-otsake puuttuu`);
+                }
+                return;
+              }
+              if (yritys === 0) await new Promise((v) => setTimeout(v, 2000));
+              else throw new Error(`${osoite}: HTTP ${vastaus?.status ?? 'ei vastausta'}`);
+            }
+          }
+
+          for (const rivi of rivit) {
+            const [laji, kansio] = rivi.split('\t');
+            const lista = await tiedostot(kansio);
+            const jono = [...lista];
+            const tyot = Array.from({ length: RINNAKKAIN }, async () => {
+              for (let nimi = jono.shift(); nimi; nimi = jono.shift()) {
+                const pate = nimi.split('.').pop().toLowerCase();
+                const osoite = `${process.env.JULKINEN}/kohtaamiset/${laji}/`
+                  + nimi.split('/').map(encodeURIComponent).join('/');
+                await tarkista(osoite, TYYPIT[pate]);
+              }
+            });
+            await Promise.all(tyot);
+            console.log(`${laji}: ${lista.length} tiedostoa luettavissa julkisesti.`);
+          }
+          SKRIPTI

@@ -90,6 +90,7 @@ import { projisoiLaudalle } from './fokusmitat.js';
 import { nostoOnPoltettu } from './laattapyramidi.js';
 import { nostoladontaKattoPorras, nostoladontaTiiviste } from './nostoladonta.js';
 import { ELAINTAKYT } from './packs/elaintakyt.js';
+import { assetOsoite } from './media.js';
 import { sfx } from './sound.js';
 
 /*
@@ -727,7 +728,10 @@ function elaintakyPiirraKuva(ui, kohde, taky, maa) {
   img.loading = 'lazy';
   img.draggable = false;
   img.addEventListener('error', () => { kehys.hidden = true; }, { once: true });
-  img.src = taky.kuva;
+  // Repon polku tai ämpäriosoite sen mukaan, onko laji jo siirretty
+  // (js/media.js R2_ASSETIT) — kutsupaikka ei muutu siirrosta.
+  const elainkuva = assetOsoite('elaimet', taky.kuva);
+  img.src = elainkuva;
   nappi.appendChild(img);
   /*
    * NAPAUTUS SUURENTAA (omistajan raportti 30.8.2026: kaikki popupien
@@ -740,7 +744,7 @@ function elaintakyPiirraKuva(ui, kohde, taky, maa) {
    */
   nappi.addEventListener('click', (tapahtuma) => {
     tapahtuma.stopPropagation();
-    avaaKohdeSuurennos(ui, { osoite: taky.kuva, selite }, () => nappi, 'elaintakyZoom');
+    avaaKohdeSuurennos(ui, { osoite: elainkuva, selite }, () => nappi, 'elaintakyZoom');
   });
   kehys.appendChild(nappi);
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');
