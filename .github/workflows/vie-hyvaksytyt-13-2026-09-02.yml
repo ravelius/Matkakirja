@@ -56,10 +56,10 @@ jobs:
           import { dirname } from 'node:path';
 
           const kuvat = [
-            ['1H2tAiDDKlqnUHf8rqsi6-6Maf8K_dFTH', 'miniatyyrit/ateena-akropolis-museo.jpg', 512, 512, '933da3d176c3f7e54ab18dc5053997a6a6ddde41b5ee5b68e4814561ee5deb98'],
-            ['1xYwHQjZfrN1vA4Bd5tX-2dlU8MnisJgr', 'miniatyyrit/ateena-iliou-melathron.jpg', 512, 512, '91ba7eb78386043df84342d2d2541139e5d3aaa6241e62247a61686dbfcdfe19'],
-            ['1ekAZ2K2i5gxmok_-0Gja0rqFx-kp38LR', 'miniatyyrit/sofia-banja-bashin-moskeija.jpg', 512, 512, '233a40516b86856f77d7321522263a21edbee26f27dff7bdae4097f6eb619f14'],
-            ['1eGHHmwf_WCaU_Q84MZfQ_OWKaD9aVJyN', 'miniatyyrit/sofia-serdican-areena.jpg', 512, 512, '3c50e3b328fd0aba44c5abc2117ef75f66ecad2e354306adbd54e46beb3abd77'],
+            ['1H2tAiDDKlqnUHf8rqsi6-6Maf8K_dFTH', 'miniatyyrit/ateena-akropolis-museo.jpg', 512, 512, '676fec5599371548d019dc336f4949540332c1259d02f978a33fecbfaaa47c11'],
+            ['1xYwHQjZfrN1vA4Bd5tX-2dlU8MnisJgr', 'miniatyyrit/ateena-iliou-melathron.jpg', 512, 512, '034c2e13d6bff90ce3022a94ad554d29086bca8ece871629b40cdf5c55c9ed2e'],
+            ['1ekAZ2K2i5gxmok_-0Gja0rqFx-kp38LR', 'miniatyyrit/sofia-banja-bashin-moskeija.jpg', 512, 512, '910425601e34f5283ff0b260feaa30e36467d839dbe8b6ec4648e5d0c7e8d15e'],
+            ['1eGHHmwf_WCaU_Q84MZfQ_OWKaD9aVJyN', 'miniatyyrit/sofia-serdican-areena.jpg', 512, 512, 'ae29ca67fae9040248294b9b183d9581a3f557c84eb6fe953b46ae3136aceb29'],
             ['1G_Wd9rGogZhqrdn1LxTiTLNyMkTSWATf', 'historian-hetket/hetki-amundsen-etelanapa-1911-kauko.jpg', 1536, 1024, '31e4206bad3f22a40fd8f7c597b41c16cf5f8be684b7c94f110c7808e06f383a'],
             ['1WQTAjK9igKJVif7IOKwcOVRuiWpDKq-a', 'historian-hetket/hetki-amundsen-etelanapa-1911-lahi.jpg', 1536, 1024, '7d77a730f732189c6b812c6914de1afdfef6bc6c2e515287cae644e4eefe8216'],
             ['1uPvZNVJBvbgHAithBpRMmzVkNj-I8yL7', 'historian-hetket/hetki-cook-endeavour-plymouth-1768-kauko.jpg', 1536, 1024, 'ec5114d7f44dedd9062792a12914760649bfeaf763b9ce3108acb929c2884014'],
