@@ -153,7 +153,7 @@ import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 import {
   fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden,
   fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu, fokusvirtaLaattaNakyy,
-  fokusvirtaKohtaaminenPisteessa, fokusvirtaLehtivinkki, fokusvirtaSisalto,
+  fokusvirtaLehtivinkki, fokusvirtaSisalto,
   fokusvirtaSaapumiskupla, nollaaFokuskuvat,
 } from './fokusvirta.js';
 
@@ -12530,13 +12530,12 @@ export class UI {
   tehtavaNapinTila(city) {
     const { game } = this;
     /*
-     * KEVYT KULKU: kohtaaminen tavataan kartalta, ei lehden pohjalta
-     * (Raamattu, KEVYT KULKU -KOKEILU: *"kaupunkilehden ALIN KOHTA
-     * (josta pääsi tapaamaan henkilön) POIS"*). Perustelu ja umpikujan
-     * esto ovat yhdessä paikassa: js/fokusvirta.js
-     * fokusvirtaKohtaaminenPisteessa.
+     * LEHDEN TEHTÄVÄNAPPI EI ENÄÄ VÄISTY VIHREÄÄ PISTETTÄ (Raamattu,
+     * KORTIT POIS 2.9.2026: laattakysymykseen pääsee lehden
+     * tehtävänapista ja laatasta). Kevyen kulun kokeilu piilotti napin
+     * pisteen palaessa (fokusvirtaKohtaaminenPisteessa), jotta AARTEEN
+     * AVAUS -tehtävä olisi pakollinen; nyt piste on lisäovi, ei portti.
      */
-    if (fokusvirtaKohtaaminenPisteessa(this, city)) return null;
     const kaari = game.kaariTilanne?.(city.id);
     const tapaa = KOHTAAMISET[city.id]?.nappi
       ?? (kaari?.kohde?.nimi ? `Tapaa ${kaari.kohde.nimi}` : 'Etsi kätkö');

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1468, teksti: 'Fokusvirran kortit pois; piste avaa laattakysymyksen' },
   { v: 1467, teksti: 'Illan karttaera N1-N3, H2-kuvat, siirtymamusiikin tyokalu' },
   { v: 1466, teksti: 'Kohdekaupunki avaa aina kaupunkilehden (lukko pois)' },
   { v: 1465, teksti: 'Kaikki asset-lajit R2:sta (assets-siirto, era 2)' },

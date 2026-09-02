@@ -21,8 +21,9 @@
  *   5. Sivulla 2 on nimilaatta AARTEEN AVAUS ja sivulla 3 JULISTE.
  *   6. AARTEEN AVAUS -tehtävän OIKEA vastaus sytyttää kartalle vihreän
  *      pisteen; ennen sitä pistettä ei ole.
- *   7. Pisteen napautus avaa kohtaamisen (Vartija Nikos) ja sen nappi
- *      vie samaan laattakysymykseen kuin ennenkin.
+ *   7. Pisteen napautus avaa laattakysymyksen SUORAAN — kohtaamis-
+ *      korttia ei tule (KORTIT POIS, omistaja 2.9.2026). Ateenassa
+ *      lehden tehtävänappi näkyy pisteen rinnalla.
  *   8. JULISTE-tehtävän oikea vastaus myöntää Ateenan julisteen ja
  *      tarjoaa Lunasta juliste -napin.
  *   9. Laatan ratkettua matkakirjakortti EI palaa vanhaan
@@ -36,16 +37,13 @@
  *      säikähdyksen JÄLKEEN aikasiirtymän konteksti (pariperiaate,
  *      Raamattu v1262). Väite EI ole FOKUSVIRTA_KORTIT-kytkimen
  *      takana — se on kevyen kulun oma.
- *  12. VENETSIASSA sama kupla kertoo kaupungin oman saapumisrepliikin:
+ *  12. KREETALLA (fokusvirraton) sama kupla kertoo kaupungin oman saapumisrepliikin:
  *      fokusvirrattomassa kaupungissa puheenvuoro tulee tavallisen
  *      saapumismerkinnän perästä (omistajan laajennus 28.8.2026).
  *
- * LIPPUTESTI (vanha virta palaa): palvelin kääntää lennossa molemmat
- * liput päinvastoin (FOKUSVIRTA_KORTIT = true, FOKUS_LEHTITEHTAVAT =
- * false), sivu ladataan uudestaan ja mitataan, että Tutki avaa taas
- * PÖLLÖN KUPLAN eikä lehteä. Näin kokeilun voi perua yhdellä rivillä,
- * ja savuke todistaa sen — muuten "helppo palauttaa" olisi lupaus,
- * jota kukaan ei ole kokeillut.
+ * LIPPUTESTI (vanha virta palaa) POISTETTIIN 2.9.2026 — ks. tiedoston
+ * loppu. Korttiannostelu on omistajan päätöksellä pois pysyvästi
+ * (Raamattu, FOKUSVIRRAN KORTIT POIS).
  *
  * serviceWorkers: 'block' on pakollinen — muuten sw sieppaa pyynnöt ja
  * ajo mittaa välimuistia eikä koodia. Ulkopuoliset osoitteet (kuvat)
@@ -238,6 +236,14 @@ vaadi('Ateenassa ei maadoituskuplaa (aloituskaupungin ohjekuplat saavat tilan)',
  */
 const sofianKupla = await sivu.evaluate(async () => {
   const { ui, game } = window.matkakirja;
+  /*
+   * ENSISAAPUMISEN TUURAUSPALJASTUS VOITTAA (omistaja 29.8.2026,
+   * js/livia.js livianPaljastusOdottaa): tuoreessa selaimessa Livian
+   * kahden kuplan paljastus ottaisi Sofian puheenvuoron ja maadoitus
+   * väistyisi. Savuke mittaa maadoitusta, joten paljastus merkitään
+   * nähdyksi samalla avaimella kuin peli itse.
+   */
+  localStorage.setItem('matkakirja-livia-paljastus', '1');
   game.player.pos = { type: 'city', city: 'sofia' };
   game.world.visited.add('sofia');
   if (!game.tokens.has('sofia')) game.world.tokens.set('sofia', 'coin');
@@ -334,13 +340,19 @@ await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-maadoituskupla.png') });
  * mitä se lupaa: että Venetsiaan saavuttaessa kupla NOUSEE UUDESTAAN
  * ja siinä on kaupungin oma repliikki.
  */
+/*
+ * VENETSIA → KREETA (2.9.2026): Venetsia sai fokusvirran aallossa 3
+ * (js/packs/fokusvirta-venetsia.js maadoituksineen), joten se ei enää
+ * kelpaa fokusvirrattoman kaupungin mitaksi. Kreeta on laudan kaupunki,
+ * jolla on oma saapumisrepliikki (LIVIAN_SAAPUMISET) mutta ei virtaa.
+ */
 const venetsianKupla = await sivu.evaluate(async () => {
   const { ui, game } = window.matkakirja;
   // Sofian puheenvuoro pois samasta solmusta (ks. yllä).
   window.matkakirjaPollo?.piilotaVihje();
-  game.player.pos = { type: 'city', city: 'venetsia' };
-  game.world.visited.add('venetsia');
-  game.arrivalFact = { packId: game.pack.id, cityId: 'venetsia' };
+  game.player.pos = { type: 'city', city: 'kreeta' };
+  game.world.visited.add('kreeta');
+  game.arrivalFact = { packId: game.pack.id, cityId: 'kreeta' };
   ui.render();
   // Sama luennan pysäytys kuin Sofiassa: kupla odottaa luennan loppua.
   for (let i = 0; i < 40; i += 1) {
@@ -361,8 +373,8 @@ const venetsianKupla = await sivu.evaluate(async () => {
   }
   return { teksti: '', nimilappu: '' };
 });
-vaadi('Venetsiassa Livia kertoo kaupungin oman saapumisrepliikin',
-  /^Venetsia\./.test(venetsianKupla.teksti)
+vaadi('Kreetalla Livia kertoo kaupungin oman saapumisrepliikin (ei fokusvirtaa)',
+  /^Kreeta\./.test(venetsianKupla.teksti)
     && /Pulu/.test(venetsianKupla.nimilappu),
   JSON.stringify(venetsianKupla).slice(0, 200));
 
@@ -388,14 +400,15 @@ const lehti = await sivu.evaluate(async () => {
 vaadi('kaupunkilehti aukeaa suoraan fokusmoodissa',
   lehti.auki && lehti.lehti && /ateena/i.test(lehti.otsikko), JSON.stringify(lehti));
 
-// Lehden ALIN KOHTA — "Tapaa Nikos" — on poissa: kohtaaminen tavataan
-// kartalta (Raamattu, KEVYT KULKU -KOKEILU).
+// Lehden tehtävänappi ("Tapaa …") NÄKYY heti: laattakysymykseen pääsee
+// lehden tehtävänapista ja laatasta (Raamattu, KORTIT POIS 2.9.2026).
+// Kevyen kulun kokeilu piilotti napin; se on nyt palautettu.
 const alanappi = await sivu.evaluate(() => {
   const nappi = document.getElementById('arrival-yes');
   return { piilossa: Boolean(nappi?.hidden), teksti: nappi?.textContent ?? '' };
 });
-vaadi('lehden alin "tapaa henkilö" -kohta on poissa',
-  alanappi.piilossa, JSON.stringify(alanappi));
+vaadi('lehden tehtävänappi näkyy ennen aarteen avausta',
+  !alanappi.piilossa && /tapaa/i.test(alanappi.teksti), JSON.stringify(alanappi));
 
 // Pöllön vinkki lehden päällä + ruksi. Kupla tulee tarkoituksella
 // vasta ~1,4 s hengähdyksen jälkeen (omistaja 26.8.2026).
@@ -515,39 +528,13 @@ vaadi('piste on kartalla sormenkokoisella osuma-alueella',
 
 await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-vihrea-piste.png') });
 
-// Pisteen napautus avaa kohtaamisen.
+// Pisteen napautus avaa laattakysymyksen suoraan (KORTIT POIS 2.9.2026).
 const kohtaaminen = await sivu.evaluate(async () => {
+  const { game } = window.matkakirja;
   window.matkakirja.ui.busy = false;
+  game.phase = 'action';
   document.querySelector('.fokuspiste')
     ?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
-  await new Promise((r) => setTimeout(r, 500));
-  const kortti = document.querySelector('.fokusvirta-kortti');
-  return {
-    kortti: Boolean(kortti),
-    otsikko: kortti?.querySelector('.fokusvirta-otsikko')?.textContent ?? '',
-    // v1120: suora Tapaa-nappi korvattiin varmistuksella (Kyllä/Ei)
-    // ja kahden yrityksen pränttivaroituksella.
-    varmistus: kortti?.querySelector('.fokusvirta-varmistus')?.textContent ?? '',
-    varoitus: kortti?.querySelector('.fokusvirta-varoitus')?.textContent ?? '',
-    napit: [...(kortti?.querySelectorAll('button') ?? [])]
-      .map((b) => b.textContent.trim()).filter((t) => /^(kyllä|ei)$/i.test(t)),
-  };
-});
-vaadi('pisteen napautus avaa Vartija Nikoksen kohtaamisen',
-  kohtaaminen.kortti && /nikos/i.test(kohtaaminen.otsikko)
-    && /haluatko varmasti tavata/i.test(kohtaaminen.varmistus)
-    && /kaksi yritystä/i.test(kohtaaminen.varoitus)
-    && kohtaaminen.napit.length === 2,
-  JSON.stringify(kohtaaminen));
-
-await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-kohtaaminen.png') });
-
-// Kohtaamisen Kyllä vie laattakysymykseen (sama actionQuiz kuin ennen).
-const kysymys = await sivu.evaluate(async () => {
-  const { game } = window.matkakirja;
-  game.phase = 'action';
-  [...document.querySelectorAll('.fokusvirta-kortti button')]
-    .find((b) => /^kyllä$/i.test(b.textContent.trim()))?.click();
   await new Promise((r) => setTimeout(r, 900));
   return {
     kortti: document.querySelectorAll('.fokusvirta-kortti').length,
@@ -555,8 +542,11 @@ const kysymys = await sivu.evaluate(async () => {
     kysymys: Boolean(game.quiz),
   };
 });
-vaadi('Kyllä avaa laattakysymyksen ja sulkee kortin',
-  kysymys.kortti === 0 && (kysymys.kysymys || kysymys.vaihe === 'quiz'), JSON.stringify(kysymys));
+vaadi('pisteen napautus avaa laattakysymyksen suoraan ilman korttia',
+  kohtaaminen.kortti === 0 && (kohtaaminen.kysymys || kohtaaminen.vaihe === 'quiz'),
+  JSON.stringify(kohtaaminen));
+
+await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-kohtaaminen.png') });
 
 /*
  * LAATAN RATKETTUA MERKINTÄ EI VAIHDU (omistajan bugi 27.8.2026).
@@ -622,31 +612,14 @@ vaadi('ratkaistuun kaupunkiin palatessa kortissa on fokusvirran merkintä',
 
 vaadi('ei sivuvirheitä kokeilutilassa', virheet.length === 0, virheet.join(' | '));
 
-/* ==================== 2. LIPPUTESTI: VANHA VIRTA ==================== */
-
-vanhaVirta = true;
-virheet.length = 0;
-await sivu.evaluate(() => localStorage.clear());
-const vanha = await ateenaan();
-vaadi('vanha virta: nappula Ateenassa', vanha.kaupunki === 'ateena', JSON.stringify(vanha));
-
-const vanhaTutki = await sivu.evaluate(async () => {
-  const { ui, game } = window.matkakirja;
-  ui.avaaTutkinta(game.cityOf());
-  await new Promise((r) => setTimeout(r, 900));
-  const dialogi = document.getElementById('arrival-dialog');
-  const pinta = document.querySelector('.fokusvirta-kupla, .fokusvirta-kortti');
-  return {
-    lehtiAuki: Boolean(dialogi?.open),
-    virranPinta: Boolean(pinta),
-    teksti: (pinta?.textContent ?? '').slice(0, 60),
-  };
-});
-vaadi('lippu palauttaa korttiannostelun: Tutki avaa virran, ei lehteä',
-  vanhaTutki.virranPinta && !vanhaTutki.lehtiAuki, JSON.stringify(vanhaTutki));
-
-await sivu.screenshot({ path: join(ULOS, 'savuke-vanha-virta.png') });
-vaadi('ei sivuvirheitä vanhassa virrassa', virheet.length === 0, virheet.join(' | '));
+/*
+ * LIPPUTESTI POISTETTU (KORTIT POIS, omistaja 2.9.2026). Savuke käänsi
+ * ennen liput lennossa ja mittasi, että Tutki avaa taas pöllön kuplan.
+ * Lehtilukko purettiin v1466 (Tutki avaa lehden lipusta riippumatta),
+ * ja korttiannostelua ei enää käännetä päälle ilman omistajan uutta
+ * päätöstä — testattavaa polkua ei ole. Palvelimen lipunkääntö
+ * (vanhaVirta) jätettiin paikoilleen mahdollista käsiajoa varten.
+ */
 
 await selain.close();
 palvelin.close();
