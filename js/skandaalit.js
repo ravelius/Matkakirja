@@ -55,7 +55,8 @@ import {
 import { natiiviVastaus } from './natiivi.js';
 import { SKANDAALIT } from './packs/skandaalit.js';
 import {
-  avaaKohdeSuurennos, rekisteroiLisakohteet, suljeKohdeSuurennos,
+  avaaKohdeSuurennos, rekisteroiLisakohteet, rekisteroiMaanKohteet,
+  suljeKohdeSuurennos,
 } from './fokuskohteet.js';
 import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
 import { asetaNostonKuva, piirraNostonKuva } from './fokusnosto.js';
@@ -462,6 +463,10 @@ export function suljeSkandaali(ui) {
  */
 export function kytkeSkandaalit() {
   rekisteroiLisakohteet(skandaaliLisakohteet);
+  // Sama aineisto myös naapurimaalle (js/fokuskohteet.js
+  // naapurienPoltetutVaraukset) — ks. js/syvennys.js kytkeSyvennys.
+  rekisteroiMaanKohteet((iso, lauta) => skandaaliKarttarivit(iso, lauta)
+    .map(({ kohde, paikka }) => ({ kohde, paikka })), 2);
 }
 
 /** Laudan vaihto tai uusi peli: kortti pois. */
