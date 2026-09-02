@@ -1107,6 +1107,30 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 
 /*
+ * ============ ULOIN ZOOMI: KOKO LAUTA KERRAN ========================
+ *
+ * Omistaja 2.9.2026: kartan pitää mahtua vaakaruudulle kokonaan, eikä
+ * se saa silloin näkyä kahdesti — sivuille jää mieluummin samaa
+ * vaaleaa paperia kuin ylä- ja alapuolelle. Kytkin on
+ * js/kartta.js paivitaLaudanKierto, joka kirjoittaa luokan SVG:n
+ * juureen heti kun näkymä on lautaa leveämpi.
+ *
+ *   1. Kierron <use>-kopio pois: lauta piirtyy kerran.
+ *   2. Laudan juuriryhmä leikataan arkin levyiseksi. Se on tarpeen
+ *      kopion lisäksi siksi, että napautettavat merkit on monistettu
+ *      oikeina elementteinä laudan leveyden päähän (js/ui.js
+ *      kiertoKohdat) — ilman leikkausta ne kelluisivat paperilla.
+ *   3. Laudan ulkopuolinen pergamentti esiin (js/mapart.js
+ *      drawPaperUlkopuoli). Se on juuriryhmän ULKOPUOLELLA, joten
+ *      leikkaus ei koske siihen.
+ */
+.paperi-ulkopuoli { display: none; }
+
+#board.lauta-kokonaan .paperi-ulkopuoli { display: block; }
+#board.lauta-kokonaan .lauta-kierto { display: none; }
+#board.lauta-kokonaan .board-root { clip-path: url(#lauta-rajaus); }
+
+/*
  * Aloituskartan lähikuva puhelimella: kartta on paneelia leveämpi ja sitä
  * selataan sivusuunnassa. Siirto tehdään transformilla, jolloin selain
  * käyttää valmista rasteria eikä piirrä karttaa uudelleen joka kehyksellä.

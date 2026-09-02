@@ -1510,6 +1510,26 @@ function paivitaPerusta(ui) {
  * ruutu tulevat nyt parametreina (ks. "KEHYSSILMUKKA EI SAA TUOTTAA
  * ROSKAA").
  */
+/*
+ * PITUUSASTE KIERRETÄÄN VÄLILLE (-180, 180] (2.9.2026).
+ *
+ * Sama vika kuin leveysasteen 100 °P:ssä, mutta toisin päin: Miller
+ * on jatkuva kummallakin akselilla, ja arkki kattaa TASAN 360
+ * pituusastetta (-175…185). Näkymä voi olla arkkia leveämpi kahdessa
+ * tilanteessa — sauman yli panoroitaessa ollaan laudan kopion päällä,
+ * ja uloimmalla zoomilla laudan sivuille jää paperia (js/kartta.js
+ * KOKOLAUDAN_VARA) — ja silloin käänteisprojektio antoi kuuliaisesti
+ * "200 °I" ja "300 °L", joita ei ole olemassa.
+ *
+ * Kierto on tässä oikea vastaus eikä merkin pudotus (vrt. navat):
+ * arkin oikea reuna ON sama meridiaani kuin sen vasen reuna, joten
+ * kierretty lukema osuu kopion päällä täsmälleen oikeaan paikkaan.
+ */
+function kierraPituusaste(lon) {
+  const kierretty = (((lon + 180) % 360) + 360) % 360 - 180;
+  return kierretty <= -180 ? 180 : kierretty;
+}
+
 function laskeVaakaParit(kaavat, ruutu) {
   const lonAlku = kaavat.lon(ruutu.lautaX(0));
   const lonLoppu = kaavat.lon(ruutu.lautaX(ruutu.leveys));
@@ -1522,7 +1542,7 @@ function laskeVaakaParit(kaavat, ruutu) {
   const alku = Math.ceil(Math.min(reunaA, reunaB) / askel) * askel;
   const loppu = Math.max(reunaA, reunaB);
   for (let lon = alku; lon <= loppu + 1e-9; lon += askel) {
-    parit.push([ruutu.px(kaavat.x(lon)), asteTeksti(lon, ['I', 'L'])]);
+    parit.push([ruutu.px(kaavat.x(lon)), asteTeksti(kierraPituusaste(lon), ['I', 'L'])]);
   }
   return parit;
 }

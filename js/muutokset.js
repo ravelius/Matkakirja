@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1458, teksti: 'Uloin zoomi: koko lauta kerran, paperia sivuille' },
   { v: 1457, teksti: 'Jokainen nosto kartalla: kohdekarttapisteet ja kattoVapaa' },
   { v: 1456, teksti: 'Tummennus pois, Matkusta-kamera sovittaa heiton jälkeen' },
   { v: 1455, teksti: 'Siirron koreografia: viivästetty nappula, trapetsi, musiikki' },
