@@ -13,11 +13,16 @@
  *
  * === MITÄ LASKETAAN ================================================
  *
- *   kohteet         maan kuratoitu fokuskohteet-<iso>.js -lista. Tämä
- *                   on se laji, jonka tavoite on 8; maastokohteet EIVÄT
- *                   kuulu siihen, vaikka peli katsoo listat yhdessä
- *                   (js/fokuskohteet.js KOHDE_MAAT).
- *   maastokohteet   maastokohteet-<iso>.js — vuoret, meret, joet.
+ *   kohteet         maan kohdemerkit, joiden tyyppi EI ole maastoa:
+ *                   kaupunki, historia, kulttuuri, tekniikka, muu...
+ *                   Tavoite 8 koskee juuri näitä.
+ *   maastokohteet   saman listan maastotyypit (vuori, joki, meri, järvi,
+ *                   saari) riippumatta siitä, kummassa tiedostossa ne
+ *                   asuvat. Jako on TYYPIN eikä tiedoston mukainen,
+ *                   koska pelaaja näkee tyypin eikä tiedostoa: Kreikan
+ *                   Ólympos on maastokohde, vaikka se on kuratoidussa
+ *                   fokuskohteet-grc.js:ssä, ja Islannin Þjórsá on
+ *                   maastokohde maastokohteet-isl.js:ssä.
  *   eläintäky       0 tai 1 (js/packs/elaintakyt.js).
  *   skandaalit      js/packs/skandaalit.js.
  *   hetket          js/packs/historian-hetket.js, maan iso-kentällä.
@@ -96,6 +101,14 @@ export const MAANIMET = {
   TUR: 'Turkki', UKR: 'Ukraina',
 };
 
+/**
+ * MAASTON TYYPIT. Nämä viisi ovat maastokohteita; kaikki muu on
+ * kohteita. Sama lista kuin js/fokuskohteet.js KOHDE_TYYPIT nimeää
+ * maastoksi (vuori, meri, saari, joki) sekä järvi, jota kartalla ei
+ * vielä ole mutta joka kuuluu samaan perheeseen.
+ */
+const MAASTON_TYYPIT = new Set(['vuori', 'joki', 'meri', 'jarvi', 'saari']);
+
 /** Tavoite per maa (Raamattu, karttanostojen kattavuus). */
 export const TAVOITE = { kohteet: 8, maastokohteet: 3, elaintaky: 1, skandaalit: 2 };
 
@@ -113,11 +126,12 @@ export function kattavuus() {
     const kulttuuri = maanRivit.filter(
       (r) => r.id.startsWith('syvennys-') || r.id.startsWith('nosto-'),
     ).length;
+    const lista = [...(KURATOIDUT[iso] ?? []), ...(MAASTOKOHTEET[iso] ?? [])];
     rivit.push({
       iso,
       nimi: MAANIMET[iso] ?? iso,
-      kohteet: (KURATOIDUT[iso] ?? []).length,
-      maastokohteet: (MAASTOKOHTEET[iso] ?? []).length,
+      kohteet: lista.filter((k) => !MAASTON_TYYPIT.has(k.tyyppi)).length,
+      maastokohteet: lista.filter((k) => MAASTON_TYYPIT.has(k.tyyppi)).length,
       elaintaky: ELAINTAKYT[iso] ? 1 : 0,
       skandaalit: (SKANDAALIT[iso] ?? []).length,
       hetket: HISTORIAN_HETKET.filter((h) => h.iso === iso).length,
