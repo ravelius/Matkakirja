@@ -709,6 +709,19 @@ button, .brand, .turn-pill, .fact-card h2 {
   color: var(--muted);
 }
 
+/*
+ * Leveä tilateksti: siirtymämusiikin rivi kertoo kolmen raidan
+ * tilanteen kerralla ("jalan \2713  laiva \2013  lento \2013"), eikä
+ * versaali harvennuksella mahdu riville. Sama väri ja koko, vain
+ * muotoilu kevyempi.
+ */
+.kehittaja-kytkin-tila.laaja {
+  font-size: 0.6rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  white-space: nowrap;
+}
+
 .kehittaja-valikko .kehittaja-kytkin[aria-pressed='true'] {
   color: var(--kulta, #eab84e);
   border-color: rgba(176, 138, 60, 0.55);

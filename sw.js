@@ -399,6 +399,7 @@ const SHELL = [
   './js/aani-tausta.js',
   './js/sound.js',
   './js/ambience-stream.js',
+  './js/siirtymamusiikki.js',
   './js/die.js',
   './assets/icon.svg',
   './assets/logo.png',

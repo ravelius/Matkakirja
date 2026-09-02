@@ -61,6 +61,7 @@ import { teeViritysaani, esilataaViritysaanet, unohdaViritysaanet } from './viri
 import { sfx } from '../sound.js';
 import { lisaaTaustaVaimennus } from '../aani-tausta.js';
 import { lisaaVaistaja, stopPlaceStream, stopPohjaMusiikki } from '../ambience-stream.js';
+import { lopetaSiirtymamusiikki, lopetaVaramusiikki } from '../siirtymamusiikki.js';
 
 /*
  * NÄYTÖN MITAT.
@@ -1629,6 +1630,10 @@ export function paalle({
   // radiotilasta poistuttaessa syncAmbience käynnistää sen uudelleen.
   stopPlaceStream();
   stopPohjaMusiikki();
+  // Kesken jäänyt siirtymämusiikki kuuluu samaan joukkoon: radiotilassa
+  // radio on ainoa ääni (js/siirtymamusiikki.js).
+  lopetaSiirtymamusiikki();
+  lopetaVaramusiikki();
   sfx.setAmbience(null);
 
   /*
