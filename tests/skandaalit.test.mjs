@@ -95,3 +95,93 @@ test('jokainen skandaali projisoituu maailmankartalle laudan sisään', () => {
       + 'on laudan ulkopuolella');
   }
 });
+
+/* ------------------------------------------------------------------ *
+ * PITKÄ TEKSTI JA KUVALISTA (2.9.2026)
+ *
+ * Omistajan havainto Sofian vihellyskohun kortista ("näyttää
+ * tyngältä") toi ingressin (`kortti`) rinnalle jutun (`teksti`) ja
+ * yhden kuvan tilalle kuvalistan (`kuvat`). Kumpikin on VALINNAINEN —
+ * ensimmäinen erä kattaa skandaalit 1–42 — mutta kun kenttä on, sen on
+ * kestettävä mitta: liian lyhyt teksti on tynkä ja liian pitkä ei mahdu
+ * kortille. Sanaraja on väljempi kuin kirjoitusohje (160–240), jotta
+ * yksittäinen tiivis tai runsas juttu ei kaada testiä.
+ * ------------------------------------------------------------------ */
+
+const sanoja = (teksti) => teksti.trim().split(/\s+/).length;
+
+test('teksti-kenttä on kelvollinen juttu siellä missä se on', () => {
+  const tekstilliset = KAIKKI.filter((s) => s.teksti !== undefined);
+  assert.ok(tekstilliset.length >= 42,
+    `pitkä teksti on vasta ${tekstilliset.length} skandaalilla — ensimmäinen erä on 42`);
+  for (const s of tekstilliset) {
+    const nimi = `${s.iso}/${s.id}`;
+    assert.equal(typeof s.teksti, 'string', `${nimi}: teksti ei ole merkkijono`);
+    const maara = sanoja(s.teksti);
+    assert.ok(maara >= 120 && maara <= 260,
+      `${nimi}: tekstissä on ${maara} sanaa (tavoite 160–240, raja 120–260)`);
+    const kappaleet = s.teksti.split(/\n{2,}/).filter((k) => k.trim());
+    assert.ok(kappaleet.length >= 3 && kappaleet.length <= 5,
+      `${nimi}: kappaleita on ${kappaleet.length} (tavoite 3–4)`);
+    assert.ok(!/\n[^\n]/.test(s.teksti.replace(/\n\n/g, '')),
+      `${nimi}: yksittäinen rivinvaihto — kappaleraja on tyhjä rivi`);
+    // Ingressiä ei toisteta jutussa sanasta sanaan: ensimmäinen virke
+    // on se, jonka lukija näkee kahdesti, jos se kopioidaan.
+    const ekaVirke = s.kortti.split(/(?<=\.)\s/)[0]?.trim();
+    if (ekaVirke && ekaVirke.length > 30) {
+      assert.ok(!s.teksti.includes(ekaVirke),
+        `${nimi}: juttu toistaa ingressin ensimmäisen virkkeen sellaisenaan`);
+    }
+  }
+});
+
+test('kuvat-lista on kelvollinen ja lähderivi kertoo tekijän', () => {
+  for (const s of KAIKKI) {
+    const nimi = `${s.iso}/${s.id}`;
+    if (s.kuvat === undefined) continue;
+    assert.ok(Array.isArray(s.kuvat) && s.kuvat.length,
+      `${nimi}: kuvat-kenttä on tyhjä — jätä se pois tai täytä se`);
+    // Vanha yhden kuvan kenttä ja uusi lista eivät saa olla yhtä aikaa:
+    // js/skandaalit.js skandaalinKuvat lukee listan ja unohtaisi toisen.
+    assert.equal(s.kuva, undefined,
+      `${nimi}: sekä kuva että kuvat — siirrä vanha kuva listan kärkeen`);
+    for (const [i, kuva] of s.kuvat.entries()) {
+      const kohta = `${nimi} kuva ${i + 1}`;
+      assert.ok(kuva.osoite || kuva.tiedosto, `${kohta}: ei osoitetta eikä tiedostoa`);
+      assert.ok(!(kuva.osoite && kuva.tiedosto), `${kohta}: kaksi kuvalähdettä`);
+      assert.ok(typeof kuva.selite === 'string' && kuva.selite.trim(),
+        `${kohta}: selite puuttuu`);
+      assert.ok(typeof kuva.lahde === 'string' && kuva.lahde.trim(),
+        `${kohta}: lähderivi puuttuu`);
+      if (kuva.osoite) {
+        assert.match(kuva.lahde, /Matkakirjan havainnekuva/,
+          `${kohta}: pelin oma kuva ilman havainnekuvamerkintää (js/havainnekuva.js)`);
+      } else {
+        // CC ja PD vaativat molemmat tekijän ja lähteen näkyviin.
+        assert.match(kuva.lahde, /Wikimedia Commons \(/,
+          `${kohta}: Commons-kuvan lähderivistä puuttuu lisenssi`);
+      }
+    }
+  }
+});
+
+test('lähderivi on päivätty ja tuore niillä, joilla on pitkä teksti', () => {
+  for (const s of KAIKKI) {
+    const nimi = `${s.iso}/${s.id}`;
+    assert.ok(typeof s.lahde === 'string' && s.lahde.trim(), `${nimi}: lähde puuttuu`);
+    assert.match(s.lahde, /Tarkistettu \d{1,2}\.\d{1,2}\.\d{4}\.$/,
+      `${nimi}: lähderivi ei pääty tarkistuspäivään`);
+    if (s.teksti === undefined) continue;
+    /*
+     * Pitkän tekstin väitteet ovat uusia, joten lähde on luettu
+     * uudelleen — päiväys ei saa jäädä kuvattoman erän päiväykseen.
+     * Raja on tekstierän ensimmäinen päivä (2.9.2026), ei tasan se:
+     * jälkimmäinen puolisko kirjoitetaan omana päivänään.
+     */
+    const [, pv, kk, vv] = s.lahde.match(/Tarkistettu (\d{1,2})\.(\d{1,2})\.(\d{4})\.$/);
+    const paiva = Date.UTC(Number(vv), Number(kk) - 1, Number(pv));
+    assert.ok(paiva >= Date.UTC(2026, 8, 2),
+      `${nimi}: pitkä teksti, mutta lähde on tarkistettu ${pv}.${kk}.${vv} — `
+      + 'tekstierän lähteet luetaan uudelleen 2.9.2026 tai sen jälkeen');
+  }
+});
