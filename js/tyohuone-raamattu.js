@@ -2464,6 +2464,28 @@ export const RAAMATTU = {
       otsikko: 'Karttalinssit',
       tila: 'luonnos',
       kohdat: [
+        'ENSIMMAINEN AIKAJANALINSSI: KEKSINNOT EUROOPASSA (omistajan '
+          + 'tilaus 2.9.2026 ilta; Fablen ensimmainen kierros): yhteinen '
+          + 'aikajanamoottori js/aikajana.js + linssi js/linssit/keksinnot.js '
+          + '(kerros: false, kuten radio). Kulku: kello rullaa ylalaidassa '
+          + 'tyhjien vuosien yli ja pysahtyy tapahtumaan; kartalle syttyy '
+          + 'valo tyon kaupunkiin ja JAA PALAMAAN (lopussa koko kaaren '
+          + 'valokartta); FILMINAUHA alalaidassa: seuraava kortti vasemmalla '
+          + 'sumeana, nykyinen tarkkana, menneet oikealle pienenevina '
+          + 'nimineen ja vuosineen; ILMIOPANEELI oikeassa ylakulmassa: '
+          + 'ilmiokuva + keksijan nimi + selite + Lue juttu. Kaikki vaihdokset '
+          + 'liukuen. Napautus kelloon/korttiin pysayttaa; nykyinen kortti '
+          + 'avaa jutun nahtavyyskorttina. Kaari 1769 Watt - 1928 Fleming, '
+          + '25 pysakkia + merkkipaalu 1873 (isoisan matka); rehellinen '
+          + 'rajaus: Bell, Edison ja Wrightit mainitaan loppusanoissa '
+          + 'Atlantin takaisina. KUVAT: keksijoiden muotokuvat Commonsin '
+          + 'PD-kuvia; ilmiokuvan paikalle GENEROITU kuva kun kuvaputki '
+          + 'tuottaa sen (yksi kentta datassa). Kamera vapautuu maan '
+          + 'ikkunasta ajon ajaksi (ui.kameraVapaa). Kaynnistin toistaiseksi '
+          + 'kehittajavalikon rivi "aikajana: keksinnot"; pelillinen ovi ja '
+          + 'oma musiikki paatetaan omistajan kanssa. Linssisopimuksen '
+          + 'kielto jatkuvasta animaatiosta koskee SVG-kerrosta: valo syttyy '
+          + 'kerran, kello ja nauha ovat DOM:ia kartan paalla.',
         'LINSSEJA EI TAUOTETA (omistajan kortti 28.8.2026): epailtiin '
           + 'etta linssit pitavat vanhaa maailmankarttaa hengissa ja '
           + 'kuluttavat resursseja. Mittaus (v1280-eran tutkinta) '

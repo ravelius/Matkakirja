@@ -6419,6 +6419,9 @@ export class UI {
     nollaaFokuskohteet(this);
     nollaaFokuspiste(this);
     nollaaElaintakyt(this);
+    // Aikajana (js/aikajana.js) elää yhdellä laudalla: uusi lauta tai
+    // uusi peli purkaa sen kellon, valot ja nauhan.
+    this.pysaytaAikajana();
     // Uusi lauta, tyhjä kerros: muistettu näkymätunniste ei saa jäädä
     // voimaan, tai nimet jäisivät piirtymättä kun sama näkymä palaa.
     this.maastonimiTunniste = null;
@@ -16210,6 +16213,10 @@ export class UI {
     // (kerros: false) — se kytketään tässä samalla tavalla.
     tahdistaVertailu(this, tunnus === 'vertailu');
     if (this.dead) return;
+    // Aikajanalinssit (keksinnöt) ovat samaa perhettä: linssin valinta
+    // matkalaukusta käynnistää ajon, muu valinta purkaa sen.
+    await this.tahdistaAikajana(tunnus);
+    if (this.dead) return;
     // Maiden tiedot on samaa perhettä: kartan tila, ei kerros. Tila
     // voi olla päällä myös kartan omasta napista, joten varusteen
     // vaihto ei saa sammuttaa sitä yksin (ks. maatiedotHalutaan).
@@ -16319,6 +16326,68 @@ export class UI {
     }
     nappi.addEventListener('click', () => this.valitseLinssi(tunnus));
     return nappi;
+  }
+
+  /* ==================== AIKAJANALINSSIT (js/aikajana.js) ==================== */
+
+  /**
+   * Käynnistää aikajanalinssin (esim. 'keksinnot') kartan päälle.
+   *
+   * Moottori ja linssi tuodaan dynaamisesti: yhden tiedoston versio ei
+   * niputa linssejä (docs/moduulit/linssit.md 2.1), ja tuontivirhe
+   * tarkoittaa silloin vain, ettei aikajanaa ole — peli ei kaadu.
+   * Aikajana vaatii maailmankartan laudan (linssin `laudat`).
+   *
+   * @returns {Promise<boolean>} lähtikö ajo
+   */
+  async kaynnistaAikajana(tunnus) {
+    if (this.dead) return false;
+    let moottori = null;
+    let linssi = null;
+    try {
+      const tuki = await this.lataaLinssit();
+      moottori = await import('./aikajana.js');
+      linssi = await tuki?.kerros.haeLinssi(tunnus);
+    } catch (syy) {
+      console.warn(`Aikajanalinssiä "${tunnus}" ei voitu ladata.`, syy);
+      return false;
+    }
+    if (this.dead || !linssi?.aikajana || !moottori) return false;
+    if (!(linssi.laudat ?? []).some((l) => l === '*' || l === this.game.pack.id)) return false;
+    const lahti = moottori.kaynnistaAikajana(this, linssi);
+    this.aikajanaTunnus = lahti ? tunnus : null;
+    document.dispatchEvent(new CustomEvent('aikajana-tila', { detail: { paalla: lahti } }));
+    return lahti;
+  }
+
+  /** Purkaa päällä olevan aikajanan; ilman aikajanaa ei tee mitään. */
+  pysaytaAikajana() {
+    if (!this.aikajana) return false;
+    this.aikajana.pura();
+    this.aikajana = null;
+    this.aikajanaTunnus = null;
+    document.dispatchEvent(new CustomEvent('aikajana-tila', { detail: { paalla: false } }));
+    return true;
+  }
+
+  /**
+   * Linssivalinnan tahdistus: kerrokseton aikajanalinssi käynnistää
+   * ajon, mikä tahansa muu valinta (tai valinnan purku) sammuttaa sen —
+   * mutta vain jos ajo oli linssivalinnan käynnistämä. Kehittäjävalikon
+   * käynnistämä aikajana ei sammu linssinapista.
+   */
+  async tahdistaAikajana(tunnus) {
+    const tuki = await this.lataaLinssit();
+    const linssi = tunnus ? tuki?.moottori.linssi : null;
+    if (linssi?.aikajana) {
+      if (this.aikajanaTunnus !== tunnus) await this.kaynnistaAikajana(tunnus);
+      this.aikajanaValitsimesta = true;
+      return;
+    }
+    if (this.aikajanaValitsimesta) {
+      this.aikajanaValitsimesta = false;
+      this.pysaytaAikajana();
+    }
   }
 
   /** Ylärivin nappi näyttää päällä olevan linssin kuvakkeen. */

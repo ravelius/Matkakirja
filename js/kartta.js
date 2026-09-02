@@ -2663,6 +2663,9 @@ export class Kartta {
    * (ks. js/ui-apurit.js kehittajaMaailmaPaalla).
    */
   panorointiVapaa() {
+    // Aikajanalinssi (js/aikajana.js) vapauttaa kameran ajon ajaksi:
+    // kaari kattaa monta maata, eikä yhden maan ikkuna saa lukita sitä.
+    if (this.ui.kameraVapaa) return true;
     if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla()) return true;
     return !fokusmoodiPaalla();
   }
@@ -2795,6 +2798,8 @@ export class Kartta {
      * maahan. Sama nappi, sama sääntö kuin panorointiVapaassa.
      */
     if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla()) return null;
+    // Sama vapaus aikajanalinssille (ks. panorointiVapaa).
+    if (this.ui.kameraVapaa) return null;
     /*
      * VAIN LÄHIKUVASSA. Yleiskuva (mannerZoom pois) on laudan oma
      * näkymä, jossa fokuskuva on pieni upote maailmankartalla eikä

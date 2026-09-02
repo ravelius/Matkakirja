@@ -116,7 +116,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1469';
+const APP_VERSION = '2026-08-09.1470';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1457,6 +1457,34 @@ varamusiikkiNappi?.addEventListener('click', () => {
     ? 'Varamusiikki päällä: soi vain jos oikea raita puuttuu.'
     : 'Varamusiikki pois.');
 });
+
+/*
+ * AIKAJANALINSSI KEHITTÄJÄVALIKOSTA (omistajan tilaus 2.9.2026 ilta).
+ * Nappi on kytkin: päälle → keksintöjen aikajana Euroopan kartalle,
+ * pois → aikajana puretaan. Tila luetaan ui:lta joka päivityksessä,
+ * joten aikajanan oma Sulje-nappi pitää valikon rivin ajan tasalla.
+ */
+const aikajanaNappi = document.getElementById('kehittaja-aikajana-btn');
+function merkitseAikajana() {
+  merkitseKytkin(aikajanaNappi, Boolean(window.matkakirja?.ui?.aikajana));
+}
+aikajanaNappi?.addEventListener('click', async () => {
+  const ui = window.matkakirja?.ui;
+  if (!ui) return;
+  if (ui.aikajana) {
+    ui.pysaytaAikajana();
+    merkitseAikajana();
+    naytaKehittajaVihje('Aikajana suljettu.');
+    return;
+  }
+  naytaKehittajaVihje('Käynnistetään aikajana…');
+  const lahti = await ui.kaynnistaAikajana('keksinnot');
+  merkitseAikajana();
+  naytaKehittajaVihje(lahti
+    ? 'Keksinnöt Euroopassa 1769–1928. Napauta kelloa pysäyttääksesi.'
+    : 'Aikajana ei lähtenyt (linssi puuttuu tai lauta ei ole maailmankartta).');
+});
+document.addEventListener('aikajana-tila', merkitseAikajana);
 
 polloGenerointiNappi?.addEventListener('click', () => {
   const tulos = polloGeneroiEhdotukset();
