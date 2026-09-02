@@ -677,14 +677,38 @@ export function nostoladontaKattoSuhde(porras, ruutuPx) {
  * lainkaan (js/laattapyramidi.js `nt.saanto !== NOSTOLADONTA_SAANTO`),
  * peli piirtää nostot elävinä ilman poistuneita, ja seuraava
  * nostotason poltto tekee niistä taas laattaa.
+ *
+ * v10-kohdekartta (omistajan päätös 2.9.2026 illalla, sanatarkasti:
+ * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+ * kaupunkilehden omalla kartalla."*): v9 jätti pääkartalle vielä
+ * kuusitoista kohdekaupungin kohdalla olevaa merkkiä, joiden sisältö
+ * oli pääkartan fokuskohteen kortissa eikä kohdekartan pisteellä
+ * (tools/tarkista-nostopaikat.mjs luokka "kartan oma kohde"). Nyt
+ * neljätoista niistä sai kohdekartan pisteen — kaksitoista jo olemassa
+ * olleeseen pisteeseen linkitettynä ja kolme uutena pisteenä (Bastilji,
+ * Vanha London Bridge, Forum Romanum) — ja katosi pääkartalta.
+ * Kaksi jäi: `izmir` on kaupunki itse eikä sille ole kohdekartalla
+ * omaa paikkaa, ja `niili` on tunnus, jonka jakavat Egyptin, Sudanin ja
+ * Ugandan maastokohteet, joten Luxorin linkki veisi Niilin merkin myös
+ * kahdelta muulta maalta.
+ *
+ * SYY NOSTAA VERSIO ON SAMA KUIN v9:SSÄ: tämä on poltetun tason
+ * SISÄLTÖMUUTOS. v9-laatassa nuo neljätoista merkkiä ovat maalattuna
+ * kiinni, eikä peli tiedä kysyä niiden tiivistettä, joten poltettu taso
+ * näyttäisi merkkejä, joita elävässä kerroksessa ei enää ole ja joilla
+ * ei ole napautusaluetta. Nostettuna luettelo ei kelpaa lainkaan
+ * (js/laattapyramidi.js `nt.saanto !== NOSTOLADONTA_SAANTO`), peli
+ * piirtää nostot elävinä ilman poistuneita, ja seuraava nostotason
+ * poltto tekee niistä taas laattaa.
  */
 /*
- * YKSI TUNNISTE KAHDESTA SAMANILTAISESTA ERÄSTÄ (Fable 2.9.2026): N3
- * (maastokohteiden nimet, "v9-maasto") ja N2 (kaupungin kohdalla olevat
- * nostot pois pääkartalta, "v9") muuttivat molemmat poltetun nostotason
- * sisältöä. Yksi poltto kattaa molemmat, joten tunnistekin on yksi.
+ * YKSI TUNNISTE SAMAN ILLAN ERISTÄ (Fable 2.9.2026): N3 (maastokohteiden
+ * nimet, "v9-maasto"), N2 (kaupungin kohdalla olevat nostot pois
+ * pääkartalta, "v9") ja sen jatkoerä (kartan omat kohteet kohdekartan
+ * pisteille, "v10-kohdekartta") muuttivat kaikki poltetun nostotason
+ * sisältöä. Yksi poltto kattaa ne kaikki, joten tunnistekin on yksi.
  */
-export const NOSTOLADONTA_SAANTO = 'v9-maasto-kaupunki';
+export const NOSTOLADONTA_SAANTO = 'v10-kohdekartta';
 
 export function nostoladontaTiiviste(merkki) {
   const osat = [

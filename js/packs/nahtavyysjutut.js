@@ -2321,6 +2321,32 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    /*
+     * KARTAN OMAN KOHTEEN JUTTU (omistajan päätös 2.9.2026 illalla:
+     * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+     * kaupunkilehden omalla kartalla."*). Pisteellä ei ollut ennestään
+     * juttua eikä wiki-artikkelia, joten se olisi ollut merkki, jolle ei
+     * tapahdu mitään (tests/nostot-kartalla.test.mjs). Teksti ja kuva on
+     * kopioitu kohteen omasta pakista SANATARKASTI — mitään ei
+     * kirjoitettu uudestaan. Kenttä `nosto` kertoo, mistä pääkartan
+     * kohteesta juttu on; tarkka lähdeviite asuu kohteen pakissa, ja
+     * `lahde: 'Wikipedia'` on nähtävyysjutun oma muoto.
+     */
+    'Vanha London Bridge': {
+      nosto: 'vanha-london-bridge',
+      teksti: 'Thamesin ylitse rakennettiin 1176 alkaen kivisilta, joka '
+        + 'valmistui 1209. Sen aloitti pappi Peter de Colechurch, ja '
+        + 'lopputulos oli noin 282 metriä pitkä: yhdeksäntoista pilaria ja '
+        + 'yhdeksäntoista kaarta sekä nostosilta. Sillalla oli taloja alusta '
+        + 'asti, koska niiden vuokrat maksoivat sillan kunnossapidon — '
+        + '1300-luvun lopulla niitä oli 140, ja 1600-luvulla lähes kaikissa '
+        + 'oli neljä tai viisi kerrosta. Jokainen talo oli myös kauppa, ja '
+        + 'silta oli yksi Lontoon tärkeimmistä ostoskaduista. Vuosina '
+        + '1577–1579 nostosillan torni korvattiin Nonsuch Housella, '
+        + 'kaksoistalolla, joka oli aikanaan Lontoon toinen klassisin '
+        + 'julkisivu. Talot purettiin 1758–1761 ja koko silta 1831.',
+      lahde: 'Wikipedia',
+    },
   },
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E3 (Raamattu, "TEKSTIEN PAINOPISTE"):
@@ -3806,6 +3832,31 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Matkakirjan havainnekuva: rauniot isoisän matkavuonna',
         },
       ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KARTAN OMAN KOHTEEN JUTTU (omistajan päätös 2.9.2026 illalla:
+     * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+     * kaupunkilehden omalla kartalla."*). Pisteellä ei ollut ennestään
+     * juttua eikä wiki-artikkelia, joten se olisi ollut merkki, jolle ei
+     * tapahdu mitään (tests/nostot-kartalla.test.mjs). Teksti ja kuva on
+     * kopioitu kohteen omasta pakista SANATARKASTI — mitään ei
+     * kirjoitettu uudestaan. Kenttä `nosto` kertoo, mistä pääkartan
+     * kohteesta juttu on; tarkka lähdeviite asuu kohteen pakissa, ja
+     * `lahde: 'Wikipedia'` on nähtävyysjutun oma muoto.
+     */
+    Bastilji: {
+      nosto: 'bastilji',
+      teksti: 'Bastille Saint-Antoine oli keskiaikainen linnoitus Pariisin '
+        + 'itälaidalla. Se rakennettiin satavuotisen sodan aikana suojaamaan '
+        + 'kaupungin itäistä sisääntuloa, Porte Saint-Antoinea: työt olivat '
+        + 'käynnissä jo 1357 ja pääosa nousi vuodesta 1370 alkaen '
+        + 'kahdeksantornisena kivimuurina. Vuonna 1417 se julistettiin '
+        + 'valtionvankilaksi, ja vuodesta 1659 se toimi lähinnä siinä '
+        + 'tehtävässä — vuoteen 1789 mennessä sen porteista oli kulkenut 5 '
+        + '279 vankia. Heinäkuun 14. päivänä 1789 väkijoukko valtasi '
+        + 'linnoituksen, jonka selleissä oli tuolloin enää seitsemän vankia. '
+        + 'Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.',
       lahde: 'Wikipedia',
     },
   },
@@ -7368,6 +7419,40 @@ export const NAHTAVYYSJUTUT = {
         + 'samat numerot kahdesti — näin ajateltiin Banca Romanassa. Skandaali '
         + 'kaatoi hallituksen ja synnytti sivutuotteena Italian keskuspankin. '
         + 'Harva pankkikriisi on ollut näin tuottelias.',
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KARTAN OMAN KOHTEEN JUTTU (omistajan päätös 2.9.2026 illalla:
+     * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+     * kaupunkilehden omalla kartalla."*). Pisteellä ei ollut ennestään
+     * juttua eikä wiki-artikkelia, joten se olisi ollut merkki, jolle ei
+     * tapahdu mitään (tests/nostot-kartalla.test.mjs). Teksti ja kuva on
+     * kopioitu kohteen omasta pakista SANATARKASTI — mitään ei
+     * kirjoitettu uudestaan. Kenttä `nosto` kertoo, mistä pääkartan
+     * kohteesta juttu on; tarkka lähdeviite asuu kohteen pakissa, ja
+     * `lahde: 'Wikipedia'` on nähtävyysjutun oma muoto.
+     */
+    'Forum Romanum': {
+      nosto: 'forum-romanum',
+      teksti: 'Forum Romanum on suorakaiteen muotoinen aukio Palatinuksen ja '
+        + 'Capitoliumin välisessä notkossa, ja se oli vuosisatoja Rooman '
+        + 'jokapäiväisen elämän keskus: täällä kuljettiin voittokulkueissa, '
+        + 'äänestettiin, pidettiin puheita ja oikeudenkäyntejä, hoidettiin '
+        + 'kaupat ja pystytettiin patsaat kaupungin johtajille. Vanhimmat '
+        + 'pyhäköt ovat aukion kaakkoisreunalla — kuninkaanasunto Regia ja '
+        + 'Vestan temppeli ovat peräisin 700-luvulta eaa. Oikeudenkäynnit '
+        + 'siirtyivät vuonna 179 eaa. valmistuneeseen Basilica Aemiliaan, ja '
+        + 'noin 130 vuotta myöhemmin Julius Caesar rakensi Basilica Julian '
+        + 'ja uuden senaatintalon Curia Julian. Nykyään paikka on laaja '
+        + 'raunioalue, jolla käy vuosittain yli 4,5 miljoonaa kävijää.',
+      kuvat: [
+        {
+          tiedosto: '2012-02-17 Foro Romano da Palazzo Senatorio 1.jpg',
+          selite: 'Forum Capitoliumilta katsottuna: vasemmalla Septimius '
+            + 'Severuksen riemukaari, taustalla Colosseum.',
+          lahde: 'Blackcat, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },

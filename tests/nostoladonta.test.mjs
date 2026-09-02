@@ -311,8 +311,9 @@ test('z7:n alapuolella porras on tavulleen entinen', () => {
  *
  * SÄÄNNÖN TUNNUS ON SILTI PINNI, ja se on tarkoitus: se nousee aina
  * kun piirtosääntö muuttuu, ja tämä rivi pakottaa nostajan katsomaan,
- * että poltto todella ajetaan. v9 = kaupungin kohdalla olevat nostot
- * pois pääkartalta kaupunkilehden kohdekartalle (2.9.2026 ilta).
+ * että poltto todella ajetaan. v10 = kartan omat kohteet (Akropolis,
+ * Colosseum, Forum Romanum …) kohdekartan pisteille ja pois
+ * pääkartalta (2.9.2026 ilta, jatkoerä v9:lle).
  */
 test('polton jokaisella tasolla venytys on tasan 1', () => {
   for (let z = 0; z <= 7; z += 1) {
@@ -320,7 +321,7 @@ test('polton jokaisella tasolla venytys on tasan 1', () => {
     assert.equal(nostoladontaVenytys(tasonTiheys / NOSTOLADONTA_POLTON_TIHEYS), 1,
       `taso z${z} (${tasonTiheys} px/yksikkö)`);
   }
-  assert.equal(NOSTOLADONTA_SAANTO, 'v9-maasto-kaupunki');
+  assert.equal(NOSTOLADONTA_SAANTO, 'v10-kohdekartta');
 });
 
 /*

@@ -78,7 +78,7 @@ import { asetaKuva, assetOsoite } from './media.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import {
   asetaKohdeNostot, avaaFokuskohde, avaaKohdeSuurennos, rekisteroiLisakohteet,
-  suljeFokuskohde, suljeKohdeSuurennos,
+  rekisteroiMaanKohteet, suljeFokuskohde, suljeKohdeSuurennos,
 } from './fokuskohteet.js';
 import { NOSTOSYM_TYYPIT, nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
 import { fokuskohteet } from './packs/fokuskohteet-grc.js';
@@ -1241,6 +1241,24 @@ function piirraNostonKysymykset(ui, sisalto, nosto) {
  */
 export function kytkeFokusnosto() {
   rekisteroiLisakohteet(nostoLisakohteet);
+  /*
+   * SAMA TÄKYPOOLI MYÖS NAAPURIMAALLE (2.9.2026, js/fokuskohteet.js
+   * naapurienPoltetutVaraukset). Täky ei ole poltettavissa, mutta se ON
+   * ladonnassa: se menee samaan sarakkeeseen kuin muut merkit ja
+   * työntää naapureitaan erottelusiirrolla, joten ILMAN sitä naapurin
+   * ladonta eroaisi poltetusta eikä yksikään maan tiiviste täsmäisi.
+   *
+   * POOLI LUETAAN MAAN ENSIMMÄISESTÄ KAUPUNGISTA, kuten
+   * laattageneraattorilla (tools/fokuskartta/nostot.mjs maanTakyt).
+   * Maassa, jonka täkyjoukko vaihtuu kaupungeittain (ESP, GBR),
+   * valinta voi olla toinen kuin pelissä — mutta juuri sellaista maata
+   * ei ole poltettu lainkaan, joten varaus jää silloin tyhjäksi eikä
+   * väärään paikkaan.
+   */
+  rekisteroiMaanKohteet((iso, lauta, kaupungit) => (kaupungit?.length
+    ? nostoKarttarivit(nostoKaupunginPooli(iso, kaupungit[0].id), lauta).rivit
+      .map(({ kohde, paikka }) => ({ kohde, paikka }))
+    : []), 4);
   asetaKohdeNostot(nostoKohteelle);
 }
 

@@ -52,9 +52,11 @@ test('nostoja on odotettu määrä eikä yksikään kadonnut', () => {
   // Kolme lukua, jotka muuttuvat vain sisältöä lisättäessä. Jos jokin
   // niistä laskee, jotain on pudonnut kartalta hiljaa.
   assert.ok(rivit.length >= 694, `nostoja on ${rivit.length}, odotettiin vähintään 694`);
+  // 129 → 143 (2.9.2026 ilta): kartan omat kohteet (Akropolis, Colosseum,
+  // Forum Romanum ...) saivat kohdekartan pisteen ja katosivat pääkartalta.
   const kohdekartalla = rivit.filter((r) => r.kohdekartalla).length;
-  assert.ok(kohdekartalla >= 129,
-    `kohdekartoilla on ${kohdekartalla} nostoa, odotettiin vähintään 129`);
+  assert.ok(kohdekartalla >= 143,
+    `kohdekartoilla on ${kohdekartalla} nostoa, odotettiin vähintään 143`);
 });
 
 test('kohdekartalla asuva nosto EI ole pääkartalla', () => {
@@ -111,9 +113,12 @@ test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
     .map((r) => `${r.kaupunki}/${r.id} (${r.kaupunginKohdalla})`);
   assert.deepEqual(oudot, [],
     'kaupungin kohdalla on nostoja, joille ei ole kirjattua syytä jäädä pääkartalle');
-  assert.ok(kesken.length <= 64,
+  // 64 → 50 (2.9.2026 ilta): "kartan oma kohde" -luokka tyhjeni kahta
+  // poikkeusta vaille (izmir/izmir on kaupunki itse, luxor/niili jakaa
+  // tunnuksensa Sudanin ja Ugandan Niilin kanssa).
+  assert.ok(kesken.length <= 50,
     `kaupungin kohdalla on pääkartalla ${kesken.length} nostoa (säde `
-    + `${KAUPUNGIN_KOHDALLA_SADE}), enintään 64 sallittu — uusi nosto kuuluu kohdekartalle`);
+    + `${KAUPUNGIN_KOHDALLA_SADE}), enintään 50 sallittu — uusi nosto kuuluu kohdekartalle`);
 });
 
 test('kohdekartan nostopiste on napautettava ja rajauksen sisällä', () => {

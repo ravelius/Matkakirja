@@ -51,7 +51,9 @@ import { natiiviVastaus } from './natiivi.js';
 import { kaupunginJuliste } from './packs/julisteet.js';
 import { FOKUSVIRRAT } from './packs/fokusvirrat.js';
 import { SYVENNYSPAIKAT } from './packs/syvennyspaikat.js';
-import { rekisteroiLisakohteet, suljeKohdeSuurennos } from './fokuskohteet.js';
+import {
+  rekisteroiLisakohteet, rekisteroiMaanKohteet, suljeKohdeSuurennos,
+} from './fokuskohteet.js';
 import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
 import { piirraNostonKuva } from './fokusnosto.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
@@ -333,6 +335,18 @@ export function suljeSyvennys(ui) {
  */
 export function kytkeSyvennys() {
   rekisteroiLisakohteet(syvennysLisakohteet);
+  /*
+   * SAMA AINEISTO MYÖS NAAPURIMAALLE (2.9.2026, js/fokuskohteet.js
+   * naapurienPoltetutVaraukset): yllä oleva lähde tuntee vain sen maan,
+   * jossa pelaaja seisoo, mutta naapurin poltetut nostot on ladottava
+   * samasta aineistosta kuin ne laattaan poltettiin. Rivit tulevat
+   * samasta funktiosta kuin generaattorilla (tools/fokuskartta/nostot.mjs)
+   * — kortin `avaa` ei kuulu tähän, koska naapurin merkkiä ei piirretä
+   * eikä siitä avata mitään; siitä lasketaan vain ladonnan laatikko.
+   */
+  rekisteroiMaanKohteet((iso, lauta, kaupungit, cityCountry) => syvennysKarttarivit(
+    iso, lauta, cityCountry,
+  ).map(({ kohde, paikka }) => ({ kohde, paikka })), 1);
 }
 
 /** Laudan vaihto tai uusi peli: kortti pois. */
