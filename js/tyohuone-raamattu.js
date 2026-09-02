@@ -377,6 +377,18 @@ export const RAAMATTU = {
         'PÖLLÖ-CHAT: ensisijaisesti kuratoitua sisältöä (lehdet, '
           + 'tarkistetut faktat); mallin oma selittely selvästi '
           + 'kehystettynä. Sonnet nyt, Haiku 5 kun julkaistaan.',
+        'KOHDEKAUPUNKI AVAA AINA KAUPUNKILEHDEN (omistaja 2.9.2026 ilta: '
+          + '"Kohdekaupunki avaa aina kaupunkilehden ei mitaan muuta"): '
+          + 'kaupungin napautus paakartalla avaa kaupunkilehden JOKA '
+          + 'TILANTEESSA - myos fokuskaupungissa ennen laatan kaantoa. '
+          + 'Fokusvirran lehtilukko on purettu (js/fokusvirta.js '
+          + 'fokusvirtaOhittaaLehden palauttaa aina false). Virran kortit '
+          + '(matkakirja, Livian kupla, oppitunti, kohtaaminen) aukeavat '
+          + 'vain saapumisen omasta kytkennasta, eivat kaupungin '
+          + 'napautuksesta. Kortin sulkeminen ei lukitse mitaan: '
+          + 'laattakysymykseen paasee lehden tehtavanapista ja laatasta. '
+          + 'Mikaan kartan elementti ei saa kaapata kohdekaupungin '
+          + 'napautusta lehdelta.',
         'KEVYT KULKU -KOKEILU PAATTYI - KORTIT OVAT PAALLA (omistaja '
           + '29.8.2026: "Paalle - koko kulku testiin"): FOKUSVIRTA_KORTIT '
           + 'kaannettiin paalle ja fokusvirran takysyvennyskortit + '
