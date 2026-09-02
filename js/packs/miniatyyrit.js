@@ -15,6 +15,25 @@
  * SILMIN ennen tähän tauluun lisäämistä — tests/miniatyyrit.test.mjs
  * valvoo, että jokainen polku on olemassa ja jokainen nimi vastaa
  * kartan kohdetta.
+ *
+ * ARVOJA ON KAHTA LAJIA (omistajan päätös 2.9.2026: "R2-ämpäriin,
+ * JPG-muodossa"):
+ *
+ *   'assets/kartat/miniatyyrit/x.webp'  vanha repokopio. Nämä siirtyvät
+ *                                       ämpäriin erissä
+ *                                       (.github/workflows/vie-assetit.yml),
+ *                                       eikä yksikään rivi muutu siitä:
+ *                                       kytkin on js/media.js R2_ASSETIT.
+ *   'ateena-akropolis-museo'            pelkkä TUNNUS. Kuva on vain
+ *                                       ämpärissä JPG:nä polussa
+ *                                       kohtaamiset/miniatyyrit/<tunnus>.jpg,
+ *                                       eikä repossa ole kopiota.
+ *
+ * Osoitteen laskee js/media.js assetOsoite — tämä taulu ei tiedä
+ * ämpäristä mitään. Tunnus on aina `<kaupunki>-<slug kohteen nimestä>`,
+ * ja tunnuksen saa lisätä tauluun ENNEN kuin kuva on ämpärissä: puuttuva
+ * kuva pudottaa kartan merkin varatäpläksi (js/nahtavyydet.js), eli
+ * kohde näkyy ja toimii kuten ennen piirroksia.
  */
 
 export const MINIATYYRIT = {
@@ -25,6 +44,10 @@ export const MINIATYYRIT = {
     Museosaari: 'assets/kartat/miniatyyrit/berliini-museosaari.webp',
     'Tv-torni': 'assets/kartat/miniatyyrit/berliini-tv-torni.webp',
     'East Side Gallery': 'assets/kartat/miniatyyrit/berliini-east-side-gallery.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'Lehmän hinnalla': 'berliini-lehman-hinnalla',
+    'Berliinin karhu': 'berliini-berliinin-karhu',
   },
   helsinki: {
     'Temppeliaukion kirkko': 'assets/kartat/miniatyyrit/helsinki-temppeliaukion-kirkko.webp',
@@ -52,6 +75,15 @@ export const MINIATYYRIT = {
     'Orsayn taidemuseo': 'assets/kartat/miniatyyrit/pariisi-orsayn-taidemuseo.webp',
     'Palais Garnier': 'assets/kartat/miniatyyrit/pariisi-palais-garnier.webp',
     'Place des Vosges': 'assets/kartat/miniatyyrit/pariisi-place-des-vosges.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'Carmenin ensi-ilta': 'pariisi-carmenin-ensi-ilta',
+    'Kirahvin kävelymatka': 'pariisi-kirahvin-kavelymatka',
+    'Torni romuraudaksi': 'pariisi-torni-romuraudaksi',
+    'Vrain-Lucas': 'pariisi-vrain-lucas',
+    Impressionistit: 'pariisi-impressionistit',
+    Kyyhkyposti: 'pariisi-kyyhkyposti',
+    'Tuileriain rauniot': 'pariisi-tuileriain-rauniot',
   },
   lontoo: {
     'Buckinghamin palatsi': 'assets/kartat/miniatyyrit/lontoo-buckinghamin-palatsi.webp',
@@ -60,6 +92,11 @@ export const MINIATYYRIT = {
     'Lontoon silmä': 'assets/kartat/miniatyyrit/lontoo-lontoon-silma.webp',
     'Pyhän Paavalin katedraali': 'assets/kartat/miniatyyrit/lontoo-pyhan-paavalin-katedraali.webp',
     'Tower Bridge': 'assets/kartat/miniatyyrit/lontoo-tower-bridge.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'Etelämeren kupla': 'lontoo-etelameren-kupla',
+    'Cheapsiden kätkö': 'lontoo-cheapsiden-katko',
+    'Thamesin vuorovesi': 'lontoo-thamesin-vuorovesi',
   },
   // Eurooppa-erä 1 (omistajan tilaus 15.8.2026: "Lisää kartta
   // muihinkin Euroopan kaupunkeihin. Tee 5 erissä" ja "Aloita
@@ -74,6 +111,9 @@ export const MINIATYYRIT = {
     'Vapahtajan kirkko': 'assets/kartat/miniatyyrit/kobenhavn-vapahtajan-kirkko.webp',
     'Rosenborgin linna': 'assets/kartat/miniatyyrit/kobenhavn-rosenborgin-linna.webp',
     Kastellet: 'assets/kartat/miniatyyrit/kobenhavn-kastellet.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'Tivolin portti': 'kobenhavn-tivolin-portti',
   },
   rooma: {
     Pietarinkirkko: 'assets/kartat/miniatyyrit/rooma-pietarinkirkko.webp',
@@ -82,6 +122,10 @@ export const MINIATYYRIT = {
     'Trevin suihkulähde': 'assets/kartat/miniatyyrit/rooma-trevin-suihkulahde.webp',
     Pantheon: 'assets/kartat/miniatyyrit/rooma-pantheon.webp',
     Colosseum: 'assets/kartat/miniatyyrit/rooma-colosseum.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'Torre Argentina': 'rooma-torre-argentina',
+    'Vatikaanin palatsi': 'rooma-vatikaanin-palatsi',
   },
   wien: {
     Raatihuone: 'assets/kartat/miniatyyrit/wien-raatihuone.webp',
@@ -91,6 +135,9 @@ export const MINIATYYRIT = {
     Belvedere: 'assets/kartat/miniatyyrit/wien-belvedere.webp',
     Jättiratas: 'assets/kartat/miniatyyrit/wien-jattiratas.webp',
     Schönbrunn: 'assets/kartat/miniatyyrit/wien-schonbrunn.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    Vuoristovesijohto: 'wien-vuoristovesijohto',
   },
   praha: {
     'Petřínin näkötorni': 'assets/kartat/miniatyyrit/praha-petrinin-nakotorni.webp',
@@ -99,6 +146,9 @@ export const MINIATYYRIT = {
     'Vanhauusi synagoga': 'assets/kartat/miniatyyrit/praha-vanhauusi-synagoga.webp',
     'Astronominen kello': 'assets/kartat/miniatyyrit/praha-astronominen-kello.webp',
     Kansallismuseo: 'assets/kartat/miniatyyrit/praha-kansallismuseo.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    Klementinum: 'praha-klementinum',
   },
   amsterdam: {
     Keskusrautatieasema: 'assets/kartat/miniatyyrit/amsterdam-keskusrautatieasema.webp',
@@ -115,6 +165,10 @@ export const MINIATYYRIT = {
     Kuninkaanlinna: 'assets/kartat/miniatyyrit/tukholma-kuninkaanlinna.webp',
     'Vasa-museo': 'assets/kartat/miniatyyrit/tukholma-vasa-museo.webp',
     Skansen: 'assets/kartat/miniatyyrit/tukholma-skansen.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'Vädersolstavlan': 'tukholma-vadersolstavlan',
+    'Norrström': 'tukholma-norrstrom',
   },
   /*
    * Erät 1–2 Euroopan ulkopuolelle ja Suomeen (17.8.2026); neljä
@@ -245,6 +299,11 @@ export const MINIATYYRIT = {
     'Galatan silta': 'assets/kartat/miniatyyrit/istanbul-galatan-silta.webp',
     'Sirkecin asema': 'assets/kartat/miniatyyrit/istanbul-sirkecin-asema.webp',
     'Neitsyttorni': 'assets/kartat/miniatyyrit/istanbul-neitsyttorni.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'Vararikko 1875': 'istanbul-vararikko-1875',
+    'Camondon portaat': 'istanbul-camondon-portaat',
+    'Käärmepylväs': 'istanbul-kaarmepylvas',
   },
   /*
    * New York (kohdekartta v1065). Kymmenestä kohteesta yhdeksän sai
@@ -277,6 +336,14 @@ export const MINIATYYRIT = {
     'Sýntagman aukio': 'assets/kartat/miniatyyrit/ateena-syntagman-aukio.webp',
     'Lykavittós': 'assets/kartat/miniatyyrit/ateena-lykavittos.webp',
     Kallimarmaro: 'assets/kartat/miniatyyrit/ateena-kallimarmaro.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'Akropolis-museo': 'ateena-akropolis-museo',
+    'Iliou Melathron': 'ateena-iliou-melathron',
+    Maratonhuijaus: 'ateena-maratonhuijaus',
+    'Elginin marmorit': 'ateena-elginin-marmorit',
+    'Diogeneen astia': 'ateena-diogeneen-astia',
+    'Niken temppeli': 'ateena-niken-temppeli',
   },
   sofia: {
     'Mineraalikylpylä': 'assets/kartat/miniatyyrit/sofia-mineraalikylpyla.webp',
@@ -285,6 +352,11 @@ export const MINIATYYRIT = {
     'Sofian yliopisto': 'assets/kartat/miniatyyrit/sofia-sofian-yliopisto.webp',
     'Borisovan puutarha': 'assets/kartat/miniatyyrit/sofia-borisovan-puutarha.webp',
     Kansalliskulttuuripalatsi: 'assets/kartat/miniatyyrit/sofia-kansalliskulttuuripalatsi.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'Banja Bashin moskeija': 'sofia-banja-bashin-moskeija',
+    'Serdican areena': 'sofia-serdican-areena',
+    'Sofia-patsas': 'sofia-sofia-patsas',
   },
   bukarest: {
     'Romanian ateneum': 'assets/kartat/miniatyyrit/bukarest-romanian-ateneum.webp',
@@ -294,6 +366,9 @@ export const MINIATYYRIT = {
     'Vanha ruhtinaanhovi': 'assets/kartat/miniatyyrit/bukarest-vanha-ruhtinaanhovi.webp',
     Parlamenttipalatsi: 'assets/kartat/miniatyyrit/bukarest-parlamenttipalatsi.webp',
     'Antipan museo': 'assets/kartat/miniatyyrit/bukarest-antipan-museo.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'Szathmárin studio': 'bukarest-szathmarin-studio',
   },
   sarajevo: {
     'Sarajevon katedraali': 'assets/kartat/miniatyyrit/sarajevo-sarajevon-katedraali.webp',
@@ -316,6 +391,9 @@ export const MINIATYYRIT = {
     'Cibeleen aukio': 'assets/kartat/miniatyyrit/madrid-cibeleen-aukio.webp',
     'Prado-museo': 'assets/kartat/miniatyyrit/madrid-prado-museo.webp',
     'Alcalán portti': 'assets/kartat/miniatyyrit/madrid-alcalan-portti.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'Tasavallan vuosi': 'madrid-tasavallan-vuosi',
   },
   lissabon: {
     'Glórian köysirata': 'assets/kartat/miniatyyrit/lissabon-glorian-koysirata.webp',
@@ -324,6 +402,10 @@ export const MINIATYYRIT = {
     Tuomiokirkko: 'assets/kartat/miniatyyrit/lissabon-tuomiokirkko.webp',
     Kauppatori: 'assets/kartat/miniatyyrit/lissabon-kauppatori.webp',
     Kansallispanteoni: 'assets/kartat/miniatyyrit/lissabon-kansallispanteoni.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'Calçada': 'lissabon-calcada',
+    'Largo da Severa': 'lissabon-largo-da-severa',
   },
   budapest: {
     Kalastajanlinnake: 'assets/kartat/miniatyyrit/budapest-kalastajanlinnake.webp',
@@ -357,6 +439,9 @@ export const MINIATYYRIT = {
     Kaupungintalo: 'assets/kartat/miniatyyrit/oslo-kaupungintalo.webp',
     'Akershusin linnoitus': 'assets/kartat/miniatyyrit/oslo-akershusin-linnoitus.webp',
     Oopperatalo: 'assets/kartat/miniatyyrit/oslo-oopperatalo.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    Akershus: 'oslo-akershus',
   },
   dublin: {
     'Guinness-panimo': 'assets/kartat/miniatyyrit/dublin-guinness-panimo.webp',
@@ -365,6 +450,9 @@ export const MINIATYYRIT = {
     'Ha’penny-silta': 'assets/kartat/miniatyyrit/dublin-hapenny-silta.webp',
     Spire: 'assets/kartat/miniatyyrit/dublin-spire.webp',
     'Trinity College': 'assets/kartat/miniatyyrit/dublin-trinity-college.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'St James’s Gate': 'dublin-st-james-s-gate',
   },
   barcelona: {
     'Sagrada Família': 'assets/kartat/miniatyyrit/barcelona-sagrada-familia.webp',
@@ -382,6 +470,9 @@ export const MINIATYYRIT = {
     'Holyroodin palatsi': 'assets/kartat/miniatyyrit/edinburgh-holyroodin-palatsi.webp',
     // Uusinta 27.8.2026: kruunutorni nyt oikein (1. otto hylattiin).
     'St Gilesin katedraali': 'assets/kartat/miniatyyrit/edinburgh-st-gilesin-katedraali.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'Scott-monumentti': 'edinburgh-scott-monumentti',
   },
   /*
    * Erä 4 (27.8.2026): 24/25 hyväksytty. Vapahtajan katedraali
@@ -397,6 +488,9 @@ export const MINIATYYRIT = {
     'Tretjakovin galleria': 'assets/kartat/miniatyyrit/moskova-tretjakovin-galleria.webp',
     // Uusinta 27.8.2026: kupolit nyt kullatut (1. otto hylattiin vihreista).
     'Vapahtajan katedraali': 'assets/kartat/miniatyyrit/moskova-vapahtajan-katedraali.webp',
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'Näyttely 1872': 'moskova-nayttely-1872',
   },
   pietari: {
     'Pietari-Paavalin linnoitus': 'assets/kartat/miniatyyrit/pietari-pietari-paavalin-linnoitus.webp',
@@ -458,5 +552,15 @@ export const MINIATYYRIT = {
     'Sulu Han': 'assets/kartat/miniatyyrit/izmir-sulu-han.webp',
     'Smyrnan agora': 'assets/kartat/miniatyyrit/izmir-smyrnan-agora.webp',
     'Salepçioğlun moskeija': 'assets/kartat/miniatyyrit/izmir-salepcioglun-moskeija.webp',
+  },
+  granada: {
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    'Leijonain piha': 'granada-leijonain-piha',
+  },
+  krakova: {
+    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
+    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
+    Wawel: 'krakova-wawel',
   },
 };

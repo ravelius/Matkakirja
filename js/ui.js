@@ -93,7 +93,8 @@ import {
   lippuUrl, lippuVara, valokuvaSuurennos, valokuvaUrl, valokuvaVara,
 } from './packs/africa-valokuvat.js';
 import {
-  asetaKuva, julisteUrl, peiliPetti, peilinLaji, aaniOsoite, aaniUrl, onPeilista,
+  asetaKuva, assetOsoite, julisteUrl, peiliPetti, peilinLaji,
+  aaniOsoite, aaniUrl, onPeilista,
 } from './media.js';
 import { KULTTUURI_PALKKIO } from './packs/africa-kulttuuri.js';
 import { TARINAKAARI, KAARI_LAUDAT, kaariLuentaSoi } from './packs/tarinakaari.js';
@@ -12922,7 +12923,8 @@ export class UI {
       if (kohdekartta.varikartta) kuvat.push(kohdekartta.varikartta);
       // Miniatyyripiirrokset (etukäteispuskurin periaate): kortti
       // aukeaa napautuksesta, eikä piirros saa latautua vasta siinä.
-      kuvat.push(...Object.values(MINIATYYRIT[cityId] ?? {}));
+      kuvat.push(...Object.values(MINIATYYRIT[cityId] ?? {})
+        .map((arvo) => assetOsoite('miniatyyrit', arvo)));
     }
     return kuvat;
   }
@@ -13282,7 +13284,7 @@ export class UI {
      * nähtävyysjuttuun.
      */
     const osoitteet = nosto.osoite
-      ? [nosto.osoite]
+      ? [assetOsoite('ihmeet', nosto.osoite)]
       : (nosto.ampari
         ? [julisteUrl(nosto.ampari)]
         : [...new Set([
@@ -13414,7 +13416,8 @@ export class UI {
     // selaus ei odota verkkoa (omistajan tilaus 14.8.2026).
     if (lista) {
       esilataaKuvat(lista.map((t) => (t.osoite
-        ?? (t.ampari ? julisteUrl(t.ampari) : valokuvaSuurennos(t.tiedosto, 1600)))));
+        ? assetOsoite('ihmeet', t.osoite)
+        : (t.ampari ? julisteUrl(t.ampari) : valokuvaSuurennos(t.tiedosto, 1600)))));
     }
     const nayta = () => {
       const teos = lista ? lista[indeksi] : nosto;

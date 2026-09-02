@@ -8,7 +8,7 @@
 
 import { HUUDAHDUKSET } from './aani-ehdokkaat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
-import { asetaKuva } from './media.js';
+import { asetaKuva, assetOsoite } from './media.js';
 import { tokenIconSvg } from './mapart.js';
 import { AARRETYYPIT } from './tokens.js';
 import { fetchImage, fetchSummary } from './wiki.js';
@@ -248,7 +248,10 @@ export function arvoHuudahdus(type) {
  * jokin lauta vielä sellaista käyttää.
  */
 export function aarrekuvanOsoitteet(kuva) {
-  if (kuva.startsWith('assets/')) return [kuva, null];
+  // Ämpäriin siirretty aarrekuva saa R2-osoitteen samasta paikasta
+  // (js/media.js R2_ASSETIT.aarteet); ennen siirtoa polku palautuu
+  // sellaisenaan, eli tämä haara käyttäytyy täsmälleen kuten ennen.
+  if (kuva.startsWith('assets/')) return [assetOsoite('aarteet', kuva), null];
   return [valokuvaUrl(kuva, 640), valokuvaVara(kuva, 640)];
 }
 

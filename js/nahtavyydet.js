@@ -15,7 +15,7 @@ import { kytkeKarttaZoom } from './karttazoom.js';
 import { galleriaNappi } from './kuvagalleria.js';
 import { liitaLukija, pysaytaLukija } from './lukija.js';
 import { el } from './mapart.js';
-import { asetaKuva, julisteUrl } from './media.js';
+import { asetaKuva, assetOsoite, julisteUrl } from './media.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { HENKILOLINKIT, HENKILOT } from './packs/henkilot.js';
 import {
@@ -368,7 +368,15 @@ export function piirraKaupunkiKartta(ui, kohde) {
     const p = karttapiste(kartta, k.lat, k.lon);
     // Napautettava, jos kohteella on oma juttu TAI wiki-artikkeli.
     const avattava = Boolean(k.teksti || k.wiki);
-    const miniatyyri = MINIATYYRIT[kaupunki]?.[raaka.nimi] ?? null;
+    /*
+     * MINIATYYRIN OSOITE TULEE MEDIASTA (2.9.2026, assetit ämpäriin).
+     * Taulussa voi lukea joko vanha repon polku tai pelkkä tunnus, joka
+     * on ämpärissä JPG:nä — js/media.js assetOsoite tuntee molemmat, ja
+     * tämä tiedosto ei tiedä kummasta on kyse.
+     */
+    const miniatyyri = MINIATYYRIT[kaupunki]?.[raaka.nimi]
+      ? assetOsoite('miniatyyrit', MINIATYYRIT[kaupunki][raaka.nimi])
+      : null;
     /*
      * PIIRROS NUMERON PAIKALLA (omistajan tilaukset 15.8.2026:
      * "Piirrokset kartalla saisi näkyä numeroiden paikalla" ja
@@ -396,6 +404,21 @@ export function piirraKaupunkiKartta(ui, kohde) {
       pikku.alt = '';
       pikku.decoding = 'async';
       pikku.draggable = false;
+      /*
+       * PUUTTUVA PIIRROS PUTOAA VARATÄPLÄKSI (2.9.2026, assetit
+       * ämpäriin). Taulussa on tunnuksia, joiden kuva on vasta tilattu
+       * kuvaputkelta: ämpäri vastaa 404:llä, ja ilman tätä kartalle
+       * jäisi selaimen rikkinäisen kuvan ikoni juuri sinne, missä
+       * kohteen pitäisi olla. `kohde-piirros`-luokan poisto palauttaa
+       * merkin 13 pikselin täpläksi (css/styles.css
+       * .maakartta-piste.kohde-numero) ja piilottaa samalla kyltin,
+       * joka näkyy vain piirroksella — kohde on siis kartalla ja
+       * napautettavissa aivan kuten ennen piirroksia.
+       */
+      pikku.addEventListener('error', () => {
+        pikku.remove();
+        piste.classList.remove('kohde-piirros');
+      }, { once: true });
       pikku.src = miniatyyri;
       piste.appendChild(pikku);
       // Numero kylttiin (omistajan tilaus 15.8.2026: "Nimikyltissä
@@ -1759,17 +1782,22 @@ export function avaaNahtavyys(ui, kohde, numero, {
    * jutut ja muut ei-karttakohteet eivät löydä piirrosta nimellään,
    * jolloin kappale taittuu ennalleen.
    */
-  const piirros = MINIATYYRIT[ui.lehtitila.arrivalShownFor]?.[kohde.nimi] ?? null;
+  const piirrosArvo = MINIATYYRIT[ui.lehtitila.arrivalShownFor]?.[kohde.nimi] ?? null;
+  const piirros = piirrosArvo ? assetOsoite('miniatyyrit', piirrosArvo) : null;
 
   kappaleet.forEach((kappale, i) => {
     const kpl = nahtavyysKappale(ui, kappale, linkit);
     if (i === 0 && piirros) {
       const kuva = document.createElement('img');
       kuva.className = 'nahtavyys-piirros';
-      kuva.src = piirros;
       kuva.alt = '';
       kuva.decoding = 'async';
       kuva.draggable = false;
+      // Puuttuva piirros (ämpärissä ei vielä ole tunnuksen kuvaa) ei saa
+      // jättää kappaleen sisään rikkinäistä kuvaa: kappale taittuu
+      // silloin ennalleen, kuten kohteella jolla piirrosta ei ole.
+      kuva.addEventListener('error', () => kuva.remove(), { once: true });
+      kuva.src = piirros;
       kpl.insertBefore(kuva, kpl.firstChild);
     }
     // Kelluva kuva ennen kappaletta, jotta teksti kiertää sen.

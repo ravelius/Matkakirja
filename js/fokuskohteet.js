@@ -107,7 +107,7 @@ import {
   LAUDAN_YMPARYS, PARIN_ETAISYYS, asetaKohdenimet, karttanimetLatovat, normalisoiNimi,
 } from './karttanimet.js';
 import { karttavaloKarkisymboli, piirraKarttavalo } from './karttavalot.js';
-import { asetaKuva } from './media.js';
+import { asetaKuva, assetOsoite } from './media.js';
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu } from './ui-apurit.js';
 import { piirraReaktiot } from './reaktiot.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
@@ -3267,7 +3267,9 @@ function piirraKohdeKuvat(ui, sisalto, kohde) {
 function asetaKohdeKuva(img, kuva, leveys, onVirhe) {
   if (kuva.osoite) {
     img.addEventListener('error', () => onVirhe(), { once: true });
-    img.src = kuva.osoite;
+    // Repon polku tai ämpäriosoite sen mukaan, onko laji jo siirretty
+    // (js/media.js R2_ASSETIT) — kutsupaikka ei muutu siirrosta.
+    img.src = assetOsoite('ihmeet', kuva.osoite);
     return;
   }
   asetaKuva(img, valokuvaUrl(kuva.tiedosto, leveys),

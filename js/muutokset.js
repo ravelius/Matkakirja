@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1463, teksti: 'Assetit R2:een: miniatyyrien lukupolku, vie-assetit.yml' },
   { v: 1462, teksti: 'Kohtaamisbriefit kuvaputkelle + Raamattu: JPG, kuvaputki' },
   { v: 1461, teksti: 'Peilaa media: vain manifesti ja retryt, ei koko amparia' },
   { v: 1460, teksti: 'Skandaalikortit: taysi teksti 83:lle ja kuvagalleria' },
