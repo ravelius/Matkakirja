@@ -465,11 +465,22 @@ const NIPPU_VALI = 2 * NIPPU_KOHDE_R + NIPPU_VALI_RAKO;
  * (tools/fokuskartta/maailmapiirto.js REITTITYYLI), ja samasta syystä:
  * pienessä koossa tasaväliset katkot hajoavat pisteriviksi.
  */
-const NIPPU_VIIVA_LEVEYS = 1.6;
-const NIPPU_VIIVA_KATKO = 3;
-const NIPPU_VIIVA_VALI = 2;
+/*
+ * KOLMAS MITOITUS (omistaja 2.9.2026 aamu, iPhone-kaappaus Ateenasta
+ * 25 km -mittajanalla: *"Siirto viivat aivan liian paksuja"*). Luvut
+ * 1,6 / 0,7 mitoitettiin, kun viiva vielä kasvoi karttavakiona
+ * (v1438); v1442 toi ruutukaton koko nostolle, ja sen jälkeen sama
+ * veto on ruudulla täsmälleen se, mitä tässä sanotaan — puhelimella
+ * poltettu z7-laatta näytetään vielä 2–3-kertaisena, jolloin 1,6
+ * px:n veto on viisi. Puolitetaan leveys ja kevennetään peittoa;
+ * katko ja väli tasan, jotta viiva pysyy katkoviivana myös
+ * suurennettuna. Merkin muste säilyy.
+ */
+const NIPPU_VIIVA_LEVEYS = 0.9;
+const NIPPU_VIIVA_KATKO = 2.5;
+const NIPPU_VIIVA_VALI = 2.5;
 const NIPPU_VIIVA_VARI = '#3a2819';
-const NIPPU_VIIVA_HIMMEYS = 0.7;
+const NIPPU_VIIVA_HIMMEYS = 0.55;
 
 /*
  * Pieni rako merkin aluslaatan reunaan, jottei viiva näytä kasvavan

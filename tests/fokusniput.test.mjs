@@ -260,12 +260,21 @@ test('viiva on merkin mustetta eikä paperin raetta', () => {
   const v = { cx: 1000, cy: 1000, x: 1040, y: 1000, sade: 5.6 };
   const j = nippuViivanJana(v, S);
   assert.equal(j.vari, '#3a2819', 'viiva ei ole merkin musteessa');
-  assert.ok(j.himmeys >= 0.6, `himmeys ${j.himmeys} — viiva katoaa puhelimen ruudulta`);
+  /*
+   * RAJAT LASKETTIIN 2.9.2026 AAMULLA (omistaja, iPhone-kaappaus
+   * Ateenasta: *"Siirto viivat aivan liian paksuja"*): v1438:n 1,6 px /
+   * 0,7 oli mitoitettu viivalle, joka vielä kasvoi karttavakiona, ja
+   * v1442:n ruutukaton jälkeen se oli puhelimen suurennetulla laatalla
+   * viisi pikseliä. Alaraja on nyt se, jonka alla viiva oikeasti
+   * katosi (0,8 px / 0,3) — ei vanha yläraja.
+   */
+  assert.ok(j.himmeys >= 0.5, `himmeys ${j.himmeys} — viiva katoaa puhelimen ruudulta`);
   assert.ok(j.himmeys < 0.86, 'viiva ei saa olla merkkiä vahvempi');
-  assert.ok(j.leveys >= 1.5 * S, `leveys ${j.leveys} — viiva katoaa puhelimen ruudulta`);
-  // Katko on VÄLIÄ pidempi: tasavälinen katko hajoaa pienessä koossa
-  // pisteriviksi (sama korjaus kuin merireitin viivoituksessa).
-  assert.ok(j.katko > j.vali, 'katko ei ole väliä pidempi');
+  assert.ok(j.leveys >= 0.85 * S, `leveys ${j.leveys} — viiva katoaa puhelimen ruudulta`);
+  assert.ok(j.leveys <= 1.0 * S, `leveys ${j.leveys} — viiva on taas liian paksu (omistaja 2.9.2026)`);
+  // Katko ei saa olla väliä lyhyempi: tasavälinen tai pidempi katko
+  // pysyy katkoviivana myös suurennettuna.
+  assert.ok(j.katko >= j.vali, 'katko on väliä lyhyempi');
 });
 
 test('viivan mitat elävät merkkiskaalan mukana, eivät ruudun', () => {
