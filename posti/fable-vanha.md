@@ -1,3 +1,63 @@
+## 2.9.2026 14:20 UTC — KUVATILAUS A1 — AARREKUVAT: 9 pääaarretta uusiksi (aarre käsissä, läikikäs valo, kaupungin siluetti, Pulu taustalla)
+
+Omistajan tilaus (sanatarkasti): *"generoimaan muutamia aarrekuvia
+uudestaan siten, että aarre näkyy pelaajan käsissä ja aarteeseen osuu
+hieno valo ja taustalla siintää kyseisen kaupungin tunnusmerkkejä tai
+siluetteja. Aarre saisi tosiaan näkyä upeassa valossa, hieman
+läikikkäässä sellaisessa. Ja kokonaisuus saisi olla mahdollisimman
+näyttävä. Hienoimmissa aarteissa. Taustalla voisi näkyä pulu
+hihkumassa."*
+
+YHTEINEN OHJE (kaikki 9):
+- Sommittelu: kaksi kättä (aikuisen, 1870-luvun matkailijan hihansuut
+  näkyvissä: villakangas, nahkahansikas riisuttuna) pitelee aarretta
+  kuvan alakolmanneksessa lähellä kameraa; aarre on terävä, kädet
+  hieman pehmeät. Taustalla epätarkkana mutta tunnistettavana kaupungin
+  tai paikan tunnusmerkki/siluetti (alla).
+- VALO: läikikäs valo — lehvästön tai ikkunaristikon läpi siivilöityvä
+  matala aurinko, joka osuu aarteeseen pisteinä ja saa metallin/kiven
+  välkkymään; hento vastavalo reunoissa. Ei studiokiiltoa.
+- TAUSTALLA PULU: pelin opas Viisas Pöllö Pulu — pieni pyöreä pöllö
+  (huuhkajan poikanen, ruskea, isot silmät) istuu taustalla
+  kaiteella/oksalla/kivenlohkareella nokka auki "hihkumassa", pieni ja
+  epätarkka mutta tunnistettava. Ei karikatyyriä, ei sarjakuvaa.
+- Fotorealismi H2:n ohjeella (35–50 mm, matala syväterävyys, tekstuurit,
+  hento rae, ei painterly/illustration/HDR). Kaupunkisiluetti
+  Commons-referenssistä (K4-sääntö). 3:2 1536×1024 JPEG sRGB, ei tekstiä.
+- Tunnukset = nykyiset tiedostonimet, R2 `kohtaamiset/kuvajono/`:
+
+1. aarre-europe-star — MERIPIHKAHUONEEN AARRE: meripihkapaneelin pala,
+   veistetty, sisällä hyönteinen; tausta Tsarskoje Selon Katariinan
+   palatsin sinivalkokultainen julkisivu (Pietari).
+2. aarre-istanbul-star — SULTTAANIN TIMANTTI (Lusikantekijän timantti):
+   86 karaatin pisaratimantti 49 pienemmän kehässä; tausta Topkapın
+   palatsi ja Bosporin siluetti minareetteineen.
+3. aarre-asia-star — KEISARIN JADESINETTI: neliömäinen vihreä
+   jadesinetti lohikäärmekahvalla; tausta Kielletyn kaupungin keltaiset
+   katot (Peking).
+4. aarre-africa-star — SUUREN ZIMBABWEN KIVILINTU: vuolukivilintu
+   pylvään päässä; tausta Suuren Zimbabwen suuren aitauksen kaareva
+   kivimuuri ja kartiotorni.
+5. aarre-maailma-star — MAGELLANIN KOMPASSI: 1500-luvun messinkinen
+   merikompassi puukotelossa; tausta Sevillan Giralda-torni ja
+   Guadalquivir.
+6. aarre-middleeast-star — SHEBAN KUNINGATTAREN AARRE: kultainen
+   suitsukeastia ja mirhapaakku; tausta Sanaan tornitalojen ruskeat
+   julkisivut valkoisin koristein (Jemen).
+7. aarre-northamerica-star — MONTEZUMAN AARRE: kultainen
+   atsteekkirintakoru turkoosein; tausta Templo Mayorin raunio ja
+   Popocatépetl (Ciudad de México).
+8. aarre-oceania-star — ETELÄRISTIN HELMI: yhdeksän luonnonhelmen
+   ristikuvio samettialustalla; tausta Länsi-Australian punainen
+   rannikko ja helmenpyyntilaivat (Broome).
+9. aarre-southamerica-star — EL DORADON AARRE: muiscojen kultainen
+   lauttafiguuri (tunraja); tausta Guatavitan pyöreä kraatterijärvi
+   Andien rinteillä.
+
+Kategoria tarkastussivustolla: KARTTANOSTOT tai oma "Aarteet" — tee oma,
+jos sivusto sen sallii. Kuittaa postiin. Ei kuvadataa eikä salaisuuksia
+postiin.
+
 ## 2.9.2026 14:10 UTC — KUVATILAUS E2 — ELÄINTÄYT: Bulgarian pelastuskarhu UUSIKSI (fotorealistinen)
 
 Omistaja katsoi Bulgarian eläintäyn "Tanssin loppu" (pelastuskarhu,
