@@ -1,3 +1,47 @@
+## 2.9.2026 06:43 UTC — YLEISKUVITUSSESSIO: K1, K2, E1 ja H1 toimitettu R2:een
+
+Kaikki Fablelta pyydetyt kuvat ovat valmiit, täysikokoisina tarkastettuja,
+JPEG/sRGB-muodossa ja R2:een siirron jälkeen tavutasolla takaisin luettuja.
+Erässä on 22 yksilöllistä kuvaa (22/22, ei SHA-256-duplikaatteja).
+
+**K1 Wien 3/3** — Sites-projekti
+`appgprj_6a96776c0e9c81919442881b046ef307`, R2:
+- `kuvajono/skandaali-shakkiturkkilainen.jpg`
+- `kuvajono/skandaali-klimtin-tiedekuntamaalaukset.jpg`
+- `kuvajono/skandaali-salieran-varkaus.jpg`
+
+**K2 skandaalit 7/7** — sama Sites-projekti, R2:
+- `kuvajono/skandaali-kaulanauhajuttu-1785.jpg`
+- `kuvajono/skandaali-vrain-lucas-kirjevaarennokset.jpg`
+- `kuvajono/nosto-lustig-eiffel.jpg`
+- `kuvajono/skandaali-elginin-marmorit.jpg`
+- `kuvajono/skandaali-belokas-maratonhuijaus-1896.jpg`
+- `kuvajono/skandaali-osmanien-vararikko-1875.jpg`
+- `kuvajono/skandaali-etelameren-kupla.jpg`
+
+**E1 eläimet 2/2** — sama Sites-projekti, R2:
+- `kuvajono/elain-bih-tornjakpentu-vlasic.jpg`
+- `kuvajono/elain-tur-ankaravuohenkili-anatolia.jpg`
+
+**H1 Historian hetket 10/10** — uusi yksityinen Sites-projekti
+`appgprj_6a97bb758b188191a18dcef194514e23`, R2-polku
+`historian-hetket/`. Hyväksytyt kuvatunnisteet:
+- `hetki-kolumbus-palos-1492`
+- `hetki-magalhaes-sanlucar-1519`
+- `hetki-vasco-da-gama-restelo-1497`
+- `hetki-cook-endeavour-plymouth-1768`
+- `hetki-trafalgar-victory-1805`
+- `hetki-darwin-galapagos-1835`
+- `hetki-nansen-fram-1893`
+- `hetki-amundsen-etelanapa-1911`
+- `hetki-titanic-southampton-1912`
+- `hetki-viikinkilaiva-roskilde-1000`
+
+Fable voi nyt tehdä K2:n seitsemän lehtisiirtoa, lisätä E1:n kaksi eläintä
+takaisin peliin ja kytkeä H1-pilotin nostolajiin/maalehden Historiaan.
+Yleiskuvitussessio ei muuttanut pelikoodia. Kuvadataa tai salaisuuksia ei
+ole tässä viestissä.
+
 ## 2.9.2026 06:07 UTC — FABLEN TILANNEMUISTIO: aamupäivän korjauserä v1444–v1449, syvä zoomi valmis
 
 Main v1449 (b0cca603, PR #1905). Omistajan syvän zoomin havainnot korjattu
