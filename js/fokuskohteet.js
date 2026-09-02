@@ -2517,6 +2517,13 @@ function laskeKohdeNimioPaatokset(ui, s) {
     jono.set(r.id, rivi);
   });
   const varatut = [];
+  /*
+   * PIILOSSA JÄÄ TYHJÄKSI (2.9.2026, ks. SYMBOLI EI JÄÄ ILMAN NIMEÄ).
+   * Kenttä säilyy, koska sen lukijat ovat sopimusta — piirto
+   * (kirjoitaKohdeNimioPaatokset) ja nimikerroksen luovutus — eikä
+   * sääntö saa palata takaoven kautta: jos jokin tuleva kierros
+   * joskus taas pudottaa nimen, lukijat tekevät oikein.
+   */
   const piilossa = new Set();
   const pakotetut = new Set();
   const puolet = new Map();
@@ -2530,7 +2537,9 @@ function laskeKohdeNimioPaatokset(ui, s) {
    * kiinteä, joten sama lehti antaa saman kartan — eikä nimiö voi
    * vaihtaa puolta panoroinnissa.
    *
-   * `symbolitEsteena` on kierrosten ero, ks. lohko alempana.
+   * `esteet` kertoo, mitkä lievemmät esteet ovat tällä kierroksella
+   * voimassa (symbolit, kaupunkilaatat). Jo hyväksytyt nimiöt
+   * (`varatut`) ovat este AINA — ks. lohko alempana.
    */
   const valitseKylki = (rivi, esteet) => rivi.puolet
     .findIndex((_, p) => rivi.kehykset.every((vaihtoehdot, n) => {
