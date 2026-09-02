@@ -571,9 +571,16 @@ const yhteenveto = [];
  */
 const polttovelka = new Map();
 
+/*
+ * YKSI MAA EI SAA VIEDÄ KOKO AJOA. Portti kestää kymmenisen minuuttia
+ * ja käy 37 maata; yksi aikakatkaisu (hidas laattahaku, roikkuva
+ * kirjasin) veisi mukanaan kaiken siihen asti mitatun. Kaatunut maa
+ * kirjataan LÖYDÖKSEKSI — mittaamaton maa ei ole puhdas maa.
+ */
 for (const iso of MAAT) {
   const kaupunki = kaupungitMaittain[iso][0];
   /* eslint-disable no-await-in-loop */
+  try {
   await sivu.goto(osoite, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await sivu.evaluate((data) => {
     try {
@@ -653,7 +660,17 @@ for (const iso of MAAT) {
     }
 
     if (KUVAKANSIO) {
-      await sivu.screenshot({ path: join(KUVAKANSIO, `k1-${iso}-${nakyma}.png`) });
+      /*
+       * KAAPPAUS ON TODISTE, EI MITTA. Playwright odottaa ennen
+       * kaappausta kirjasinten latautumista, ja kartan omat webfontit
+       * voivat jäädä roikkumaan kun ämpäri ja Commons on katkaistu —
+       * mitattu AUT:ssa 30 s:n aikakatkaisu, joka kaatoi koko ajon
+       * toisen maan kohdalla. Epäonnistunut kaappaus ei saa viedä
+       * mukanaan 37 maan mittausta.
+       */
+      await sivu.screenshot({
+        path: join(KUVAKANSIO, `k1-${iso}-${nakyma}.png`), timeout: 15000,
+      }).catch((virhe) => console.log(`   (kaappaus ei onnistunut: ${virhe.name})`));
     }
     yhteenveto.push({
       maa: iso, nakyma, jana: tulos.jana, merkkeja: tulos.merkit.length, loydoksia: rikki.length,
@@ -668,6 +685,12 @@ for (const iso of MAAT) {
         + ` ${String(l.id ?? '-').padEnd(34)} "${l.nimi}"`
         + ` (${l.x},${l.y}) puuttuu: ${l.puuttuu.join('+')} [${l.osuma}]`);
     }
+  }
+  } catch (virhe) {
+    console.log(`${iso} KAATUI — ${virhe.name}: ${String(virhe.message).split('\n')[0]}`);
+    loydokset.push({
+      maa: iso, nakyma: '-', lahde: 'ajo', laji: 'virhe', id: null, nimi: virhe.name, puuttuu: ['mittaus'], osuma: '',
+    });
   }
   /* eslint-enable no-await-in-loop */
 }
