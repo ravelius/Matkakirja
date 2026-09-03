@@ -114,7 +114,7 @@ test('rullauksen kesto on Raamatun animaatiosäännön rajoissa', () => {
 test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa sekunnissa', () => {
   assert.ok(AIKAJANA_NAKSU_VALI_MS >= 125, `${AIKAJANA_NAKSU_VALI_MS} ms sallisi yli 8 naksua sekunnissa`);
   // Kytkentä: avaus ja alustus ovat `heti`, pysäytetty kello hiljainen.
-  assert.match(MOOTTORI, /naytaVuosi\(vuosi, heti = false\) \{[\s\S]{0,600}if \(!heti && this\.kaynnissa\) this\.naksahda\(\);/);
+  assert.match(MOOTTORI, /naytaVuosi\(vuosi, heti = false\) \{[\s\S]{0,900}if \(elava && this\.kaynnissa\) this\.vuosiAani\(\);/);
   assert.match(MOOTTORI, /naksahda\(\) \{[\s\S]{0,300}AIKAJANA_NAKSU_VALI_MS[\s\S]{0,200}sfx\.play\('vuosi'\);/);
   // prefers-reduced-motion vaihtaa merkin ilman liikettä.
   assert.match(MOOTTORI, /rullaaVuosi\(this\.rullat, teksti, \{ heti: heti \|\| this\.reducedMotion \}\)/);

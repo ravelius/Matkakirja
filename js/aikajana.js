@@ -62,11 +62,41 @@
  * Kaari ilman `musiikki`-kenttää on hiljainen eikä koske soittimeen
  * lainkaan — silloin siirtymän oma raita saa soida rauhassa.
  *
+ * ── LINSSITILAN ÄÄNIMAAILMA (omistajan tilaus 3.9.2026, sanatarkasti:
+ *    *"Kun linssitila menee päälle, niin kaikki muut äänet saisi
+ *    vaieta taustalta ja oma linssin generoitu musiikki saisi alkaa
+ *    toistua taustalla."*) ───────────────────────────────────────────
+ *
+ * Ajo on OMA NÄKYMÄNSÄ siinä missä pöllön paneeli (js/pollo.js avaa):
+ *
+ *   käynnistys   hiljennaAmbienssi(LINSSIN_HILJENNYS) vie kaupungin
+ *                äänimaiseman, pohjavireen, visamusiikin ja radion
+ *                yhdellä ja samalla syyllä alas; pysaytaLukija()
+ *                vaientaa kesken olevan luennan. Linssin oma raita ei
+ *                väisty tätä hiljennystä — se on sen itsensä pyytämä
+ *                (js/siirtymamusiikki.js lajinVaisto).
+ *   sulkeminen   palautaAmbienssi(LINSSIN_HILJENNYS) purussa, samalla
+ *                syyllä. Syy on joukon alkio eikä laskuri, joten
+ *                kahdesti purettu ajo ei nosta taustaa kahdesti.
+ *
+ * Vuoden vaihtuessa soi KOHAHDUS (omistaja: *"joku uuu-huudahdus,
+ * aivan kuin yleisö kohahtaisi, kun uusi hieno keksintö saapuu
+ * maailmaan"*) — neljä ämpärissä olevaa varianttia, joista sama ei
+ * toistu peräkkäin (js/tehosteet.js). Kun varianttia ei ole ladattu,
+ * soi kellon oma syntetisoitu naksahdus (naksahda). Ääni tulee vain
+ * ELÄVÄSTÄ vaihdoksesta: rakentaminen ja Alusta asettavat kellon
+ * vuosiluvun ilman ääntä.
+ *
  * ── MITÄ MOOTTORI EI TEE ──────────────────────────────────────────
  *
- *   • Ei jatkuvaa animaatiota SVG-kartalla. Linssisopimuksen mitattu
- *     sääntö (docs/moduulit/linssit.md 1.7) koskee karttakerrosta:
- *     valo syttyy KERRAN laukeavalla siirtymällä ja jää paikalleen.
+ *   • Ei RASKASTA animaatiota SVG-kartalla. Linssisopimuksen sääntö
+ *     (docs/moduulit/linssit.md 1.7) kieltää suodattimet ja
+ *     kehyskohtaisen JS-työn karttakerroksessa; omistaja tilasi
+ *     3.9.2026 nimenomaan sykkivän merkin, ja se tehdään CSS-
+ *     keyframeilla YHDELLE merkille kerrallaan (nykyinen keksintö) —
+ *     ei ajastimilla, ei suodattimilla, ei jokaiselle merkille.
+ *     Jäljelle jääneet merkit ovat liikkumattomia. prefers-reduced-
+ *     motion sammuttaa sykkeen kokonaan.
  *     Kello, nauha ja paneeli ovat tavallista DOM:ia kartan päällä.
  *   • Ei kosketa pelitilaan eikä tallennukseen: aikajana on
  *     katselutila, ja sulkeminen palauttaa kartan sellaisenaan.
@@ -87,8 +117,12 @@ import { el, maare } from './mapart.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
 import { sfx } from './sound.js';
+import { hiljennaAmbienssi, palautaAmbienssi } from './ambience-stream.js';
+import { pysaytaLukija } from './lukija.js';
+import { esilataaKohahdukset, soitaKohahdus } from './tehosteet.js';
 import {
   aloitaSiirtymamusiikki, himmennaSiirtymamusiikki, lopetaSiirtymamusiikki,
+  LINSSIN_HILJENNYS,
 } from './siirtymamusiikki.js';
 
 /* ==================== TAHTI ==================== */
@@ -109,6 +143,41 @@ export const AIKAJANA_PAALU_MS = 3200;
  * eikä soittimessa: se on tämän linssin tapa, ei musiikkimoduulin.
  */
 export const AIKAJANA_TAUKO_HIMMENNYS = 0.5;
+
+/*
+ * ── KEKSINNÖN PAIKKAMERKKI KARTALLA (omistajan tilaus 3.9.2026) ────
+ *
+ * Sanatarkasti: *"Keksinnön paikka ei näy oikein kartalla. Saisi olla
+ * ensin todella selkeä vilkkuva pallo ja sitten kun siirrytään
+ * seuraavaan vuoteen, niin pallo voisi hieman himmentyä ja lopettaa
+ * vilkkumisen, mutta silti hehkua kartalla."*
+ *
+ * MIKSI SE EI NÄKYNYT OIKEIN. Merkin sisusryhmä skaalattiin
+ * CSS-muunnoksella (`scale(0)` → `scale(1)`, nykyisellä `scale(1.35)`)
+ * ja muunnoksen keskipiste haettiin parilla
+ * `transform-box: fill-box; transform-origin: center`. Jos selain ei
+ * tue `fill-box`-arvoa — vanhempi WebKit, eli juuri omistajan iPad —
+ * `center` lasketaan SVG:N VIEWPORTIN keskeltä, ja jokainen ykkösestä
+ * poikkeava skaalaus siirtää merkin kauas oikealta paikaltaan.
+ * Vakioskaalassa (1) virhe on nolla, joten vika näkyi vain
+ * NYKYISESSÄ merkissä — täsmälleen se, mistä omistaja raportoi.
+ *
+ * Korjaus on poistaa koko riippuvuus: kaikki kolme ympyrää ovat
+ * keskipisteessä (0,0), jolloin skaalaus origon ympäri ON skaalaus
+ * merkin keskipisteen ympäri, eikä `transform-box`-tukea tarvita
+ * missään. Paikan antaa yksin ryhmän oma `translate` (paivitaMittakaava).
+ *
+ * TOINEN SYY oli MITTA, ja se selittää tyhjän kartan silloinkin kun
+ * skaalaus osui oikeaan: merkki luki kokonsa lehden omasta vakiosta,
+ * joka on aivan liian pieni koko Euroopan näkymässä (mitattu 1,5 px).
+ * Mitta tulee nyt suoraan ruudusta — ks. merkkiSkaala.
+ *
+ * MITAT ovat siis RUUDUN PIKSELEITÄ: pallon säde ~7 px ja pehmeä
+ * ulkohehku vajaat kaksi kertaa se. Syke laajenee CSS-keyframeilla
+ * 2,4-kertaiseksi (css/aikajana.css).
+ */
+export const MERKIN_SADE = 7;
+export const HEHKUN_SUHDE = 1.9;
 
 /**
  * Naksahduksia enintään kahdeksan sekunnissa (omistajan tilaus
@@ -396,20 +465,51 @@ class Aikajana {
       if (t.paalu || !Number.isFinite(t.x) || !Number.isFinite(t.y)) return null;
       const g = el('g', { class: 'aikajana-valo' }, this.valokerros);
       const sisus = el('g', { class: 'aikajana-valo-sisus' }, g);
-      // Mitat ovat merkkimittakaavassa (fokusMerkkiSkaalaKartalle):
-      // hehku on kaupungin laatan luokkaa, ydin nastan kokoinen.
-      el('circle', { class: 'aikajana-valo-hehku', r: 30 }, sisus);
-      el('circle', { class: 'aikajana-valo-keha', r: 11 }, sisus);
-      el('circle', { class: 'aikajana-valo-ydin', r: 4 }, sisus);
+      /*
+       * KOLME YMPYRÄÄ, KAIKKI KESKIPISTEESSÄ (0,0) — ks. MERKIN_SADE.
+       * Piirtojärjestys on alhaalta ylös: sykkivä rengas taimmaisena,
+       * pehmeä hehku sen päällä ja täytetty pallo päällimmäisenä.
+       */
+      el('circle', { class: 'aikajana-valo-syke', r: MERKIN_SADE }, sisus);
+      el('circle', { class: 'aikajana-valo-hehku', r: MERKIN_SADE * HEHKUN_SUHDE }, sisus);
+      el('circle', { class: 'aikajana-valo-pallo', r: MERKIN_SADE }, sisus);
       return { g, x: t.x, y: t.y };
     });
     this.paivitaMittakaava();
     (ui.nipistysVastaskaalaajat ??= new Set()).add(this.vastaskaala ??= (suhde) => this.paivitaMittakaava(suhde));
   }
 
+  /**
+   * MERKIN MITTA ON RUUDUN PIKSELI, EI LEHDEN PIKSELI.
+   *
+   * === TOINEN SYY SIIHEN, ETTEI PAIKKA NÄKYNYT (mitattu 3.9.2026) ===
+   *
+   * Merkki luki mittansa `fokusMerkkiSkaalaKartalle`-parista, joka on
+   * LEHDEN oma vakio: se mitoittaa merkin siihen näkymään, johon
+   * saapumisajo maahan päätyy (js/ui.js fokusMerkkiSkaala). Aikajana
+   * ei ole siinä näkymässä — se vapauttaa kameran (vapautaKamera) ja
+   * sovittaa ruutuun koko Euroopan.
+   *
+   * Mitattu Ateenasta avattuna (1280 x 800, Kreikan lehti voimassa):
+   * kerroin oli 0,4056 ja kartan oma mittakaava 0,512, joten 7
+   * lautayksikön pallo oli ruudulla 1,5 PIKSELIÄ. Kaari näytti
+   * tyhjältä kartalta — täsmälleen omistajan raportti.
+   *
+   * Aikajana mitoittaa merkkinsä siksi suoraan RUUTUUN (näkyvän alueen
+   * mittakaavan käänteisluku, sama varapolku jota lehdetön näkymä
+   * käyttää), jolloin MERKIN_SADE on ruudun pikseleitä joka zoomilla ja
+   * jokaisella laudalla. `suhde` on nipistyseleen kerroin, ja tässä
+   * haarassa se merkitsee (js/kartta.js vastaskaalaaMerkit).
+   * Lehtipari jää varareitiksi näkymään, jota ei voi mitata.
+   */
+  merkkiSkaala(suhde = 1) {
+    const skaala = this.ui.nakyvaAlue?.()?.skaala;
+    if (Number.isFinite(skaala) && skaala > 0) return 1 / (skaala * (suhde > 0 ? suhde : 1));
+    return this.ui.fokusMerkkiSkaalaKartalle?.(suhde) ?? this.ui.fokusMerkkiSkaala?.(suhde) ?? 0;
+  }
+
   paivitaMittakaava(suhde = 1) {
-    const { ui } = this;
-    const s = ui.fokusMerkkiSkaalaKartalle?.(suhde) ?? ui.fokusMerkkiSkaala?.(suhde);
+    const s = this.merkkiSkaala(suhde);
     if (!(s > 0)) return;
     const zoom = s.toFixed(4);
     if (zoom === this.skaala) return;
@@ -502,8 +602,28 @@ class Aikajana {
 
   /* ---------- ajo ---------- */
 
+  /**
+   * TAUSTA VAIKENEE LINSSIN AJAKSI (omistaja 3.9.2026). Sama syy
+   * molemmissa päissä, jotta purku osaa nostaa taustan takaisin;
+   * kesken oleva luenta pysäytetään kuten pöllön paneelia avattaessa
+   * (js/pollo.js avaa → pysaytaLukija).
+   */
+  avaaAanimaailma() {
+    hiljennaAmbienssi(LINSSIN_HILJENNYS);
+    pysaytaLukija();
+    // Kohahduksen variantit metadataan jo nyt: ensimmäinen vuosi
+    // vaihtuu sekunnin sisällä, eikä lataus saa myöhästyä siitä.
+    esilataaKohahdukset();
+  }
+
+  /** Tausta takaisin samalla syyllä kuin se vietiin. */
+  suljeAanimaailma() {
+    palautaAmbienssi(LINSSIN_HILJENNYS);
+  }
+
   kaynnista() {
     if (!this.rakenna()) return false;
+    this.avaaAanimaailma();
     // Musiikki lähtee kamera-ajon kanssa, ennen kelloa: linssi alkaa
     // äänestä eikä vasta ensimmäisestä valosta.
     this.aloitaMusiikki(true);
@@ -591,12 +711,32 @@ class Aikajana {
   naytaVuosi(vuosi, heti = false) {
     const teksti = String(Math.max(0, Math.round(vuosi))).padStart(4, '0');
     if (teksti === this.kelloTeksti) return;
+    // ELÄVÄ VAIHDOS = kello liikkui itse. Rakentaminen ja Alusta
+    // asettavat luvun `heti`-lipulla ilman rullausta, eikä
+    // ensimmäinen asetus (ei edellistä lukemaa) ole vaihdos lainkaan.
+    const elava = !heti && this.kelloTeksti !== undefined;
     this.kelloTeksti = teksti;
     rullaaVuosi(this.rullat, teksti, { heti: heti || this.reducedMotion });
     this.kello.setAttribute('aria-label', `Vuosi ${Number(teksti)}`);
-    // Naksahdus vain elävästä vaihdosta: avaus ja alustus ovat `heti`,
+    // Ääni vain elävästä vaihdosta: avaus ja alustus ovat `heti`,
     // ja pysäytetty kello on hiljainen (kortista toiseen kelaus myös).
-    if (!heti && this.kaynnissa) this.naksahda();
+    if (elava && this.kaynnissa) this.vuosiAani();
+  }
+
+  /**
+   * VUODEN VAIHTUMISEN ÄÄNI: kohahdus, varana naksahdus.
+   *
+   * Omistaja 3.9.2026: *"se efektiääni vuodenvaihtuessa voisi olla
+   * joku uuu-huudahdus, aivan kuin yleisö kohahtaisi."* Kohahdus on
+   * ämpärissä neljänä varianttina (js/tehosteet.js), eikä sama variantti
+   * toistu peräkkäin. `soitaKohahdus` palauttaa false, jos varianttia
+   * ei ole ladattu, ääni on mykistetty, peli on taustalla tai edellinen
+   * kohahdus soi vielä — vain SILLOIN naksautetaan, jottei kaksi ääntä
+   * soi päällekkäin.
+   */
+  vuosiAani() {
+    if (soitaKohahdus()) return;
+    this.naksahda();
   }
 
   /**
@@ -604,7 +744,8 @@ class Aikajana {
    * 3.9.2026: *"kun vuosiluku vaihtuu, niin siinäkin voisi olla pieni
    * ääniefekti taustalla"*). Ääni on js/sound.js:n 'vuosi' — hyvin
    * hiljainen, ja mykistyksen sekä taustatilan hoitaa SoundKit itse.
-   * Liian tiheät ohitetaan (AIKAJANA_NAKSU_VALI_MS).
+   * Liian tiheät ohitetaan (AIKAJANA_NAKSU_VALI_MS). Varaääni:
+   * kohahdus (vuosiAani) soi tämän sijaan, kun se on ladattu.
    */
   naksahda() {
     const nyt = performance.now();
@@ -744,6 +885,7 @@ class Aikajana {
   pura() {
     this.pysayta();
     this.lopetaMusiikki();
+    this.suljeAanimaailma();
     this.juuri?.remove();
     this.valokerros?.remove();
     if (this.vastaskaala) this.ui.nipistysVastaskaalaajat?.delete(this.vastaskaala);

@@ -289,25 +289,39 @@ export const LAJIT = {
    *
    * Raita ei ole tunnelmapala vaan pohja: sen päällä liikkuvat kello,
    * filminauha ja ilmiöpaneeli, ja niiden on saatava huomio.
+   *
+   * SYDÄMEN SYKE POHJALLE (omistajan tarkennus 3.9.2026, sanatarkasti:
+   * *"Tähän sopisi taustaääneksi myös ehkä jopa sydämen syke, mutta sen
+   * lisäksi voisi olla jotain muutakin musiikkia tai musiikki, joka
+   * olisi inspiroitunut sydämen sykkeen äänestä."*). Prompti pyytää nyt
+   * kaksiosaisen matalan pulssin levossa olevan sydämen tahdissa
+   * (n. 60 bpm) ja sen päälle saman hillityn 1800-luvun teeman kuin
+   * ennen. Mitat ovat ennallaan, joten vanhat raidat voi korvata
+   * ajamalla `--laji keksinnot` uudelleen — tiedostonimi ei muutu.
    */
   keksinnot: {
     ryhma: 'linssi',
     tiedosto: 'linssi-keksinnot.mp3',
-    kuvaus: 'Keksintöjen aikakausi: kellokoneisto ja tasainen pulssi',
+    kuvaus: 'Sydämen sykkeen tahti ja 1800-luvun kellokoneisto',
     looppi: 50,
     risti: 2.5,
     lahdeMs: 66000,
     kestoMin: 45,
     kestoMax: 60,
     prompt: 'A patient underscore for an age of invention and engineering in '
-      + 'the 1800s. Underneath everything a restrained clockwork tick and an '
-      + 'even mechanical pulse, like a workshop regulator: quiet, exact and '
-      + 'never loud. Above it curiosity and expectation — a simple rising '
-      + 'figure on light hammered piano or harpsichord, answered by strings '
-      + 'and a woodwind line, always calm and always returning. Acoustic only: '
-      + 'strings, woodwinds, plucked notes and that small ticking pulse. '
-      + 'Keep it plain and unobtrusive, not dreamy and not sentimental: a clock '
-      + 'and pictures move on top of this music and must stay the main thing. '
+      + 'the 1800s, built on a heartbeat. Underneath everything a slow, even '
+      + 'two part pulse at about 60 beats per minute — a calm resting '
+      + 'heartbeat, low and soft, played by muted low strings, a soft mallet '
+      + 'or a quiet hand drum with no attack, felt more than heard. It never '
+      + 'speeds up and never gets louder. Above that pulse a restrained '
+      + 'nineteenth century clockwork theme: a simple rising figure on light '
+      + 'hammered piano or harpsichord, a small ticking figure like a workshop '
+      + 'regulator, answered by strings and a woodwind line, always calm and '
+      + 'always returning to the same place. Acoustic only: strings, '
+      + 'woodwinds, plucked notes, piano. No drum kit, no electronic sounds, '
+      + 'no synthesiser, no vocals. Keep it plain and unobtrusive, not dreamy '
+      + 'and not sentimental: a clock and pictures move on top of this music '
+      + 'and must stay the main thing. '
       + `${SAUMA} ${TYYLI}`,
   },
 };
