@@ -161,6 +161,62 @@ export const AIKAJANA_PAALU_MS = 3200;
  */
 export const AIKAJANA_TAUON_OSUUS = 0.6;
 
+/*
+ * ── PEHMEÄT KIIHDYTYKSET JA JARRUTUKSET ────────────────────────────
+ *
+ * Omistaja sanatarkasti (3.9.2026): *"vuosinumerot juoksevat nyt mutta
+ * niihin pitäisi tehdä pehmeät kiihdytykset ja jarrutukset
+ * (logaritminen)."*
+ *
+ * PROFIILI. Kello ei enää kulje pysäkkien välillä vakionopeudella.
+ * Nopeus on PAIKAN funktio: se riippuu siitä, montako vuotta on
+ * lähimpään pysäkkiin — taaksepäin siihen kohtaan, josta liike lähti
+ * (tauon hiipimän jälkeen), ja eteenpäin seuraavan tapahtuman vuoteen.
+ * Käyrä on logaritmi, joka nousee jyrkästi heti liikkeelle lähdössä ja
+ * loivenee: nopeus = ln(1 + etäisyys / TAITE) / ln(1 + KIIHTYMISMATKA /
+ * TAITE), rajattuna välille [POHJANOPEUS, 1] ja kerrottuna
+ * matkanopeudella (1 vuosi / AIKAJANA_VUOSI_MS).
+ *
+ * Koska sama käyrä luetaan kummastakin päästä, kiihdytys ja jarrutus
+ * ovat symmetriset: kello lähtee liikkeelle suunnilleen samaa vauhtia
+ * kuin se tauolla hiipi (POHJANOPEUS ≈ TAUON_OSUUS × VUOSI_MS /
+ * VIIVE_MS = 0,034), kiihtyy täyteen matkavauhtiin ja jarruttaa
+ * saapuessaan takaisin samaan pohjanopeuteen. LIIKE EI PYSÄHDY
+ * KOSKAAN: pohjanopeus on aidosti nollaa suurempi.
+ *
+ * LYHYILLÄ VÄLEILLÄ (1–3 vuotta) kello ei ehdi täyteen vauhtiin — se
+ * on tarkoitus: tiheä 1890-luku näkyy hitaana ja harva 1800-luvun alku
+ * pitkinä vetoina.
+ *
+ * KESTO. Vakiot on säädetty niin, ettei profiili veny liikaa: 13
+ * vuoden väli kestää 1,28× ja 40 vuoden väli 1,09× entisestä
+ * (koko kaari taukoineen 1,17×). Reduced motion ohittaa profiilin
+ * (tahti.lineaarinen) — silloin kello vain juoksee.
+ */
+/** Osuus matkanopeudesta, jota hitaammin kello ei koskaan kulje. */
+export const AIKAJANA_POHJANOPEUS = 0.035;
+/** Vuosia pysäkistä, jonka päässä kello on täydessä matkavauhdissa. */
+export const AIKAJANA_KIIHTYMISMATKA = 1.5;
+/** Logaritmin taite vuosina: pienempi = jyrkempi lähtö liikkeelle. */
+export const AIKAJANA_KAYRAN_TAITE = 0.2;
+/** Nopeus luetaan paikasta, joten iso kehysväli pilkotaan tähän. */
+export const AIKAJANA_ALIASKEL_MS = 8;
+
+/**
+ * Nopeusprofiili puhtaana käyränä: kuinka suuren osan matkanopeudesta
+ * kello kulkee, kun lähimpään pysäkkiin on `etaisyys` vuotta.
+ * Palauttaa aina > 0 (ks. AIKAJANA_POHJANOPEUS).
+ *
+ * @param {number} etaisyys vuosia lähimpään pysäkkiin
+ * @returns {number} osuus matkanopeudesta, välillä [POHJANOPEUS, 1]
+ */
+export function aikajananNopeus(etaisyys) {
+  if (!(etaisyys > 0)) return AIKAJANA_POHJANOPEUS;
+  const osuus = Math.log1p(etaisyys / AIKAJANA_KAYRAN_TAITE)
+    / Math.log1p(AIKAJANA_KIIHTYMISMATKA / AIKAJANA_KAYRAN_TAITE);
+  return Math.min(1, Math.max(AIKAJANA_POHJANOPEUS, osuus));
+}
+
 /**
  * Tauolla musiikki jää soimaan PUOLEEN tasoon (omistajan tilaus:
  * *"jatkuu pysäytyksen yli hiljennettynä puoleen"*). Vakio on tässä
@@ -218,10 +274,59 @@ const TUMMENNUKSEN_ULOTTUVUUS = 1e6;
 const TUMMENNUKSEN_POISTUMA_MS = 700;
 /** Paneelin kuvan dekoodauksen enimmäisodotus ennen ristihäivytystä. */
 const PANEELIN_DEKOODAUSKATTO_MS = 250;
+/**
+ * Paneelin ristihäivytyksen kesto (css --aikajana-kesto 0,6 s) pienen
+ * marginaalin kera: väistyvä sivu poistetaan ja korkeuslukko avataan
+ * vasta tämän jälkeen, jottei kumpikaan katkaise liukua kesken.
+ */
+const PANEELIN_HAIVYTYS_MS = 700;
 /** Raahaus alkaa vasta tämän liikkeen jälkeen; sitä lyhyempi on napautus. */
 export const PANEELIN_RAAHAUSKYNNYS = 6;
-/** Paneelin siirto muistetaan istunnon ajan (kytkeRaahaus). */
-const PANEELIN_SIIRTO = { dx: 0, dy: 0 };
+/**
+ * Paneelin siirto ja koko muistetaan laitteella (kytkeRaahaus):
+ * omistaja 3.9.2026 ilta: "eri kokoisilla näytöillä pelaaja voi itse
+ * asetella sopivaan kokoon". Selaimen muisti on mukavuus, ei tila —
+ * puuttuessaan oletus.
+ */
+const PANEELIN_SIIRTO = { dx: 0, dy: 0, koko: 1 };
+const PANEELIN_MUISTIAVAIN = 'matkakirja-linssi-paneeli';
+export const PANEELIN_KOKO_MIN = 0.55;
+export const PANEELIN_KOKO_MAX = 2.2;
+/** Hiiren rullan askel: yksi pykälä (100 yksikköä) ≈ 12 % koon muutos. */
+export const PANEELIN_RULLAN_HERKKYYS = 0.0012;
+
+function lataaPaneelinMuisti() {
+  try {
+    const m = JSON.parse(globalThis.localStorage?.getItem(PANEELIN_MUISTIAVAIN) ?? 'null');
+    if (m && Number.isFinite(m.koko)) PANEELIN_SIIRTO.koko = rajaaPaneelinKoko(m.koko);
+    if (m && Number.isFinite(m.dx) && Number.isFinite(m.dy)) { PANEELIN_SIIRTO.dx = m.dx; PANEELIN_SIIRTO.dy = m.dy; }
+  } catch { /* ei muistia */ }
+}
+
+function tallennaPaneelinMuisti() {
+  try { globalThis.localStorage?.setItem(PANEELIN_MUISTIAVAIN, JSON.stringify(PANEELIN_SIIRTO)); } catch { /* ei muistia */ }
+}
+
+/**
+ * Rajaa paneelin kokokertoimen: vakioväli ja lisäksi paneelin on
+ * mahduttava linssin alueelle (leveys nyt / kerroin nyt = perusleveys).
+ *
+ * @param {number} koko haluttu kerroin
+ * @param {{leveys?:number, kokoNyt?:number, juuriLeveys?:number}} [mitat]
+ */
+export function rajaaPaneelinKoko(koko, mitat = {}) {
+  let ylaraja = PANEELIN_KOKO_MAX;
+  const { leveys, korkeus, kokoNyt, juuriLeveys, juuriKorkeus, ylaVara = 0 } = mitat;
+  if (leveys > 0 && kokoNyt > 0 && juuriLeveys > 0) {
+    ylaraja = Math.min(ylaraja, (juuriLeveys - 16) / (leveys / kokoNyt));
+  }
+  // Korkeussuunnassa paneelin on mahduttava vuosipalkin alta linssin alareunaan.
+  if (korkeus > 0 && kokoNyt > 0 && juuriKorkeus > 0) {
+    ylaraja = Math.min(ylaraja, (juuriKorkeus - ylaVara - 16) / (korkeus / kokoNyt));
+  }
+  ylaraja = Math.max(PANEELIN_KOKO_MIN, ylaraja);
+  return Math.min(Math.max(Number.isFinite(koko) ? koko : 1, PANEELIN_KOKO_MIN), ylaraja);
+}
 
 /**
  * Rajaa paneelin siirron niin, että paneeli pysyy linssin alueella
@@ -265,17 +370,27 @@ export const AIKAJANA_NAKSU_VALI_MS = 125;
  * (jos mikään) syttyy. DOM:iton, jotta tahti on testattavissa
  * (tests/aikajana.test.mjs).
  *
- * @param {{vuosi:number, i:number, viive:number}} tila
+ * Nopeus ei ole vakio vaan luetaan paikasta (aikajananNopeus): kello
+ * kiihtyy pysäkiltä lähtiessään ja jarruttaa seuraavaa lähestyessään.
+ * Siksi kehysväli pilkotaan enintään AIKAJANA_ALIASKEL_MS:n paloihin —
+ * niin sama matka kestää yhtä kauan riippumatta kehysvälistä.
+ * `tila.alku` on se vuosi, josta liike lähti (tauon hiipimän jälkeen);
+ * ilman sitä lähtökohta päätellään edellisestä tapahtumasta.
+ *
+ * @param {{vuosi:number, i:number, viive:number, viiveTaysi?:number, alku?:number}} tila
  * @param {number} dt millisekuntia edellisestä kehyksestä
  * @param {Array<{vuosi:number, paalu?:boolean}>} tapahtumat
- * @param {{vuosiMs?:number, viiveMs?:number, paaluMs?:number}} [tahti]
+ * @param {{vuosiMs?:number, viiveMs?:number, paaluMs?:number, lineaarinen?:boolean}} [tahti]
  * @returns {{tila:object, syttyi:number|null, loppu:boolean}}
  */
 export function aikajanaAskel(tila, dt, tapahtumat, tahti = {}) {
   const vuosiMs = tahti.vuosiMs ?? AIKAJANA_VUOSI_MS;
   const viiveMs = tahti.viiveMs ?? AIKAJANA_VIIVE_MS;
   const paaluMs = tahti.paaluMs ?? AIKAJANA_PAALU_MS;
+  const lineaarinen = Boolean(tahti.lineaarinen);
   let { vuosi, i, viive } = tila;
+  let alku = tila.alku
+    ?? (tapahtumat[i]?.vuosi != null ? tapahtumat[i].vuosi + AIKAJANA_TAUON_OSUUS : vuosi);
   let tauolta = false;
   if (viive > 0) {
     const taysi = tila.viiveTaysi ?? viive;
@@ -283,21 +398,36 @@ export function aikajanaAskel(tila, dt, tapahtumat, tahti = {}) {
     // Tauolla ykkösrulla hiipii (AIKAJANA_TAUON_OSUUS) — kello ei seiso.
     const hiipima = taysi > 0 ? AIKAJANA_TAUON_OSUUS * (1 - viive / taysi) : 0;
     vuosi = Math.floor(vuosi) + Math.max(vuosi - Math.floor(vuosi), hiipima);
-    if (viive > 0) return { tila: { vuosi, i, viive, viiveTaysi: taysi }, syttyi: null, loppu: false };
-    if (i >= tapahtumat.length - 1) return { tila: { vuosi, i, viive: 0 }, syttyi: null, loppu: true };
+    // Liike lähtee siitä, mihin hiipimä ehti: kiihdytys jatkaa siitä.
+    alku = vuosi;
+    if (viive > 0) return { tila: { vuosi, i, viive, viiveTaysi: taysi, alku }, syttyi: null, loppu: false };
+    if (i >= tapahtumat.length - 1) return { tila: { vuosi, i, viive: 0, alku }, syttyi: null, loppu: true };
     dt = 0;
     tauolta = true;
   }
   const seuraava = tapahtumat[i + 1];
-  if (!seuraava) return { tila: { vuosi, i, viive: 0 }, syttyi: null, loppu: true };
-  vuosi += dt / vuosiMs;
-  if (vuosi < seuraava.vuosi) return { tila: { vuosi, i, viive: 0 }, syttyi: null, loppu: false };
+  if (!seuraava) return { tila: { vuosi, i, viive: 0, alku }, syttyi: null, loppu: true };
+  if (dt > 0) {
+    if (lineaarinen) {
+      vuosi += dt / vuosiMs;
+    } else {
+      const askelia = Math.max(1, Math.ceil(dt / AIKAJANA_ALIASKEL_MS));
+      const pala = dt / askelia;
+      for (let n = 0; n < askelia && vuosi < seuraava.vuosi; n += 1) {
+        // Etäisyys lähimpään pysäkkiin: lähtökohta tai seuraava vuosi.
+        const etaisyys = Math.max(0, Math.min(vuosi - alku, seuraava.vuosi - vuosi));
+        vuosi += (pala / vuosiMs) * aikajananNopeus(etaisyys);
+      }
+    }
+  }
+  if (vuosi < seuraava.vuosi) return { tila: { vuosi, i, viive: 0, alku }, syttyi: null, loppu: false };
   i += 1;
   const uusiViive = seuraava.paalu ? paaluMs : viiveMs;
+  // Kello napsahtaa tapahtuman vuoteen. Saman vuoden ketjussa (tauolta
+  // suoraan seuraavaan) hiipinyt osuus säilyy, ettei mittari peruuta.
+  const kohta = tauolta ? Math.max(vuosi, seuraava.vuosi) : seuraava.vuosi;
   return {
-    // Kello napsahtaa tapahtuman vuoteen. Saman vuoden ketjussa (tauolta
-    // suoraan seuraavaan) hiipinyt osuus säilyy, ettei mittari peruuta.
-    tila: { vuosi: tauolta ? Math.max(vuosi, seuraava.vuosi) : seuraava.vuosi, i, viive: uusiViive, viiveTaysi: uusiViive },
+    tila: { vuosi: kohta, i, viive: uusiViive, viiveTaysi: uusiViive, alku: kohta },
     syttyi: i,
     loppu: false,
   };
@@ -440,6 +570,38 @@ function asetaAmpariKuva(kuva, osoite, leveys) {
     }, { once: true });
   }
   kuva.src = karuselli;
+}
+
+/**
+ * KORTIN KUVAN VAIHTO ILMAN NYKÄYSTÄ (omistaja 3.9.2026: *"alareunan
+ * kuvat pitäisi siirtyä animoidusti"*).
+ *
+ * MIKSI EI SUORAA `img.src = …`. Mitattuna se jätti kortin kuvaan
+ * yhden tyhjän kehyksen: heti vaihdon jälkeen `complete` oli epätosi
+ * ja `naturalWidth` nolla, eli kortti välähti tyhjänä juuri sillä
+ * hetkellä, kun se lähti liukumaan. Uusi bittikartta haetaan ja
+ * dekoodataan siksi DOM:in ulkopuolella, ja `src` vaihtuu vasta kun
+ * kuva on valmis piirrettäväksi — silloin vaihto tapahtuu yhdessä
+ * kehyksessä ilman välähdystä.
+ *
+ * `data-vaihtoon` on kilpailun esto: jos pysäkki ehtii vaihtua
+ * uudelleen ennen dekoodausta, vanhentunut lataus ei enää kirjoita
+ * korttiin. Epäonnistunut dekoodaus (puuttuva variantti) asettaa
+ * osoitteen silti, jotta asetaAmpariKuva-varareitti pääsee töihin.
+ */
+function vaihdaKorttikuva(kuva, osoite) {
+  if (!osoite || kuva.getAttribute('src') === osoite || kuva.dataset.vaihtoon === osoite) return;
+  kuva.dataset.vaihtoon = osoite;
+  const pane = () => {
+    if (kuva.dataset.vaihtoon !== osoite) return;
+    delete kuva.dataset.vaihtoon;
+    if (kuva.getAttribute('src') !== osoite) kuva.src = osoite;
+  };
+  const esilataus = new Image();
+  esilataus.decoding = 'async';
+  esilataus.src = osoite;
+  if (typeof esilataus.decode === 'function') void esilataus.decode().then(pane, pane);
+  else pane();
 }
 
 /** Kuva pergamentille; ilman lähdettä nimikirjainlaatta. */
@@ -743,6 +905,11 @@ class Aikajana {
     this.juuri = solmu('div', 'aikajana');
     this.juuri.setAttribute('role', 'region');
     this.juuri.setAttribute('aria-label', this.kaari.otsikko);
+    // 0. Vinjetti peli-ikkunan reunoille: juuressa, ei kartan kuoressa,
+    // joten se ei liiku kartan mukana (omistaja 3.9.2026 ilta).
+    this.vinjetti = solmu('div', 'aikajana-vinjetti');
+    this.vinjetti.setAttribute('aria-hidden', 'true');
+    this.juuri.appendChild(this.vinjetti);
 
     // 1. Kello ja ohjaimet
     const ylarivi = solmu('div', 'aikajana-ylarivi');
@@ -897,8 +1064,10 @@ class Aikajana {
     this.paivitaMittakaava();
     (ui.nipistysVastaskaalaajat ??= new Set()).add(this.vastaskaala ??= (suhde) => this.paivitaMittakaava(suhde));
     const tummennus = this.tummennus;
-    if (this.reducedMotion) tummennus.classList.add('paalla');
-    else requestAnimationFrame(() => tummennus.classList.add('paalla'));
+    const vinjetti = this.vinjetti;
+    if (this.reducedMotion) { tummennus.classList.add('paalla'); vinjetti?.classList.add('paalla'); } else {
+      requestAnimationFrame(() => { tummennus.classList.add('paalla'); vinjetti?.classList.add('paalla'); });
+    }
   }
 
   /**
@@ -1103,6 +1272,9 @@ class Aikajana {
     for (const valo of this.valot) this.asetaValonTila(valo, false, false);
     this.paneeli.hidden = true;
     this.paneeli.replaceChildren();
+    // Korkeuslukko pois: tyhjä paneeli ei saa jäädä vanhaan mittaansa.
+    this.paneelinKorkeusMerkki = (this.paneelinKorkeusMerkki ?? 0) + 1;
+    this.paneeli.style.height = '';
     this.juuri.classList.remove('lopussa');
     this.paikkarivi.textContent = `${this.kaari.alku}–${this.kaari.loppu}`;
     this.asettele();
@@ -1115,8 +1287,10 @@ class Aikajana {
     if (!this.kaynnissa) return;
     const dt = Math.min(200, nyt - this.viime);
     this.viime = nyt;
+    // Reduced motion: nopeutettu ja LINEAARINEN — pehmeät kiihdytykset
+    // ovat juuri sitä liikettä, jota tässä tilassa vältetään.
     const { tila, syttyi, loppu } = aikajanaAskel(this.tila, dt, this.tapahtumat, this.reducedMotion
-      ? { vuosiMs: 40 } : {});
+      ? { vuosiMs: 40, lineaarinen: true } : {});
     this.tila = tila;
     this.naytaVuosi(tila.vuosi);
     if (syttyi !== null) this.sytyta(syttyi);
@@ -1296,6 +1470,9 @@ class Aikajana {
       sivu.append(teksti);
     }
     const vanhat = [...this.paneeli.children];
+    // Vanha korkeus talteen ENNEN uuden sivun liittämistä: se on
+    // korkeusliu'un lähtöarvo (css .aikajana-ilmio transition: height).
+    const vanhaKorkeus = this.paneeli.hidden ? 0 : (this.paneeli.getBoundingClientRect?.().height ?? 0);
     this.paneeli.hidden = false;
     this.paneeli.appendChild(sivu);
     /*
@@ -1311,11 +1488,51 @@ class Aikajana {
       : Promise.resolve();
     void valmis.then(() => requestAnimationFrame(() => {
       if (!sivu.isConnected) return;
+      /*
+       * LÄHTÖARVO PAKOTETAAN LASKETUKSI ennen luokan vaihtoa. Ilman
+       * tätä lukua selain saa nähdä sivun ensi kerran vasta
+       * `esilla`-luokan kanssa, jolloin siirtymällä ei ole mistä
+       * lähteä ja kuva ilmestyy kerralla — juuri se kova leikkaus,
+       * jonka omistaja näki. Sama luku lukitsee paneelin korkeuden
+       * vanhaan mittaansa, jotta uusi voidaan liu'uttaa siitä.
+       */
+      void sivu.offsetHeight;
+      if (vanhaKorkeus > 0) this.paneeli.style.height = `${vanhaKorkeus}px`;
       sivu.classList.add('esilla');
       for (const v of vanhat) {
         v.classList.remove('esilla');
         v.classList.add('poistuu');
-        setTimeout(() => v.remove(), 700);
+        setTimeout(() => v.remove(), PANEELIN_HAIVYTYS_MS);
+      }
+      if (vanhaKorkeus > 0) {
+        /*
+         * `esilla` teki sivusta virran mukaisen, joten sen oma korkeus
+         * on paneelin uusi mitta. Luku pakottaa sommittelun vielä
+         * lukitulla korkeudella, ja vasta sen jälkeen asetettu uusi
+         * arvo lähtee liukumaan. Lukko avataan häivytyksen jälkeen,
+         * jottei kiinteä korkeus jää ikkunan koon muutoksen tielle;
+         * merkki varmistaa, ettei vanhentunut ajastin avaa uudempaa.
+         *
+         * REUNUS MUKAAN, JA MITTA SOMMITTELUSTA EIKÄ RUUDULTA.
+         * `style.height` on border-box (styles.css
+         * `* { box-sizing: border-box }`), kun taas sivun korkeus on
+         * paneelin sisältölaatikossa: ilman reunuslisää lukon avaus
+         * nytkäytti paneelia parin pikselin verran juuri kun liuku oli
+         * päättynyt. `offsetHeight` eikä `getBoundingClientRect`,
+         * koska sivulla on juuri tässä käynnissä oma skaalaus
+         * (0,985 → 1) ja ruudulta mitattu laatikko olisi sen verran
+         * liian matala.
+         */
+        const reunat = this.paneeli.offsetHeight - this.paneeli.clientHeight;
+        // Pohja mukaan: tekstisivulla min-height (9rem) on lopullinen
+        // korkeus, ja ilman tätä liuku päättyi sen alle ja lukon avaus
+        // ponnautti paneelin takaisin pohjalle.
+        const pohja = Number.parseFloat(getComputedStyle(this.paneeli).minHeight) || 0;
+        this.paneeli.style.height = `${Math.max(sivu.offsetHeight + reunat, pohja)}px`;
+        const merkki = (this.paneelinKorkeusMerkki = (this.paneelinKorkeusMerkki ?? 0) + 1);
+        setTimeout(() => {
+          if (this.paneelinKorkeusMerkki === merkki) this.paneeli.style.height = '';
+        }, PANEELIN_HAIVYTYS_MS);
       }
     }));
   }
@@ -1358,10 +1575,11 @@ class Aikajana {
       kortti.style.setProperty('--himmeys', himmeys.toFixed(2));
       kortti.style.setProperty('--sumennus', `${sumennus.toFixed(2)}px`);
       kortti.style.zIndex = String(jarjestys);
-      // Tuleva pysäkki näyttää valmiiksi sumennetun tiedoston, muut terävän.
+      // Tuleva pysäkki näyttää valmiiksi sumennetun tiedoston, muut
+      // terävän. Vaihto menee dekoodauksen kautta (vaihdaKorttikuva),
+      // jottei liukuvassa kortissa välähdä tyhjää kehystä.
       for (const img of kortti.querySelectorAll('img[data-terava]')) {
-        const haluttu = luokka === 'tuleva' ? img.dataset.sumea : img.dataset.terava;
-        if (haluttu && img.getAttribute('src') !== haluttu) img.src = haluttu;
+        vaihdaKorttikuva(img, luokka === 'tuleva' ? img.dataset.sumea : img.dataset.terava);
       }
       const piilossa = luokka === 'piilossa';
       kortti.setAttribute('aria-hidden', piilossa ? 'true' : 'false');
@@ -1383,16 +1601,63 @@ class Aikajana {
    */
   kytkeRaahaus() {
     const paneeli = this.paneeli;
+    lataaPaneelinMuisti();
+    this.asetaPaneelinKoko(PANEELIN_SIIRTO.koko);
     this.asetaPaneelinSiirto(PANEELIN_SIIRTO.dx, PANEELIN_SIIRTO.dy);
     let veto = null;
+    /*
+     * NIPISTYS (omistaja 3.9.2026 ilta: *"nipistämällä kuva suurenee tai
+     * pienenee"*): kaksi osoitinta paneelilla mitoittavat sen; veto
+     * keskeytyy nipistyksen ajaksi eikä jatku, kun toinen sormi nousee.
+     * Hiirellä sama tehdään rullalla paneelin päällä (alla).
+     */
+    const sormet = new Map();
+    let nipistys = null;
+    const aloitaNipistys = () => {
+      const [a, b] = [...sormet.values()];
+      nipistys = { etaisyys: Math.max(1, Math.hypot(a.x - b.x, a.y - b.y)), koko: PANEELIN_SIIRTO.koko };
+      veto = null;
+      paneeli.classList.add('nipistetaan');
+    };
     paneeli.addEventListener('pointerdown', (e) => {
       if (e.button !== 0 && e.pointerType === 'mouse') return;
+      sormet.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (sormet.size >= 2) { aloitaNipistys(); return; }
       veto = { id: e.pointerId, x: e.clientX, y: e.clientY, dx: PANEELIN_SIIRTO.dx, dy: PANEELIN_SIIRTO.dy, liikkui: false };
     });
+    const nipista = (e) => {
+      if (!nipistys || !sormet.has(e.pointerId)) return false;
+      sormet.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (sormet.size < 2) return true;
+      const [a, b] = [...sormet.values()];
+      const etaisyys = Math.hypot(a.x - b.x, a.y - b.y);
+      e.preventDefault();
+      this.asetaPaneelinKoko(this.rajattuPaneelinKoko(nipistys.koko * (etaisyys / nipistys.etaisyys)));
+      return true;
+    };
+    const paataSormi = (e) => {
+      sormet.delete(e.pointerId);
+      if (nipistys && sormet.size < 2) {
+        nipistys = null;
+        paneeli.classList.remove('nipistetaan');
+        this.raahattiin = true;
+        setTimeout(() => { this.raahattiin = false; }, 0);
+        tallennaPaneelinMuisti();
+      }
+    };
+    paneeli.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const kerroin = Math.exp(-e.deltaY * PANEELIN_RULLAN_HERKKYYS);
+      this.asetaPaneelinKoko(this.rajattuPaneelinKoko(PANEELIN_SIIRTO.koko * kerroin));
+      clearTimeout(this.rullanAjastin);
+      this.rullanAjastin = setTimeout(tallennaPaneelinMuisti, 300);
+    }, { passive: false });
     // Liike ja irrotus kuunnellaan ikkunasta: kaappaus ei ole varma
     // (kartta ottaa osoittimen omaan käyttöönsä), ja veto saa jatkua
     // paneelin ulkopuolellakin.
     const liikkuu = (e) => {
+      if (nipista(e)) return;
       if (!veto || e.pointerId !== veto.id) return;
       const dx = e.clientX - veto.x;
       const dy = e.clientY - veto.y;
@@ -1407,6 +1672,7 @@ class Aikajana {
       this.asetaPaneelinSiirto(raja.dx, raja.dy);
     };
     const lopeta = (e) => {
+      paataSormi(e);
       if (!veto || e.pointerId !== veto.id) return;
       if (veto.liikkui) {
         paneeli.classList.remove('raahataan');
@@ -1414,6 +1680,7 @@ class Aikajana {
         // Napautus ei saa mennä kuvalle raahauksen päätteeksi.
         this.raahattiin = true;
         setTimeout(() => { this.raahattiin = false; }, 0);
+        tallennaPaneelinMuisti();
       }
       veto = null;
     };
@@ -1422,7 +1689,7 @@ class Aikajana {
       globalThis.removeEventListener?.('pointerup', paata);
       globalThis.removeEventListener?.('pointercancel', paata);
     };
-    const paata = (e) => { lopeta(e); if (!veto) irrota(); };
+    const paata = (e) => { lopeta(e); if (!veto && !sormet.size) irrota(); };
     paneeli.addEventListener('pointerdown', () => {
       globalThis.addEventListener?.('pointermove', liikkuu);
       globalThis.addEventListener?.('pointerup', paata);
@@ -1439,6 +1706,27 @@ class Aikajana {
     PANEELIN_SIIRTO.dy = dy;
     this.paneeli.style.setProperty('--aikajana-paneeli-dx', `${Math.round(dx)}px`);
     this.paneeli.style.setProperty('--aikajana-paneeli-dy', `${Math.round(dy)}px`);
+  }
+
+  /** Kokokerroin rajattuna linssin alueeseen (mitat ruudulta). */
+  rajattuPaneelinKoko(koko) {
+    const p = this.paneeli?.getBoundingClientRect?.();
+    const j = this.juuri?.getBoundingClientRect?.();
+    if (!p || !j) return rajaaPaneelinKoko(koko);
+    // Paneelin yläreuna ilman siirtoa = vuosipalkin alta mitattu paikka.
+    const ylaVara = Math.max(0, p.top - PANEELIN_SIIRTO.dy - j.top);
+    return rajaaPaneelinKoko(koko, {
+      leveys: p.width, korkeus: p.height, kokoNyt: PANEELIN_SIIRTO.koko,
+      juuriLeveys: j.width, juuriKorkeus: j.height, ylaVara,
+    });
+  }
+
+  asetaPaneelinKoko(koko) {
+    PANEELIN_SIIRTO.koko = koko;
+    this.paneeli.style.setProperty('--aikajana-paneeli-koko', koko.toFixed(3));
+    // Suurempi paneeli ei saa työntyä linssin alueen yli.
+    const raja = rajaaPaneelinSiirto(this.paneeli, this.juuri, PANEELIN_SIIRTO.dx, PANEELIN_SIIRTO.dy);
+    if (raja.dx !== PANEELIN_SIIRTO.dx || raja.dy !== PANEELIN_SIIRTO.dy) this.asetaPaneelinSiirto(raja.dx, raja.dy);
   }
 
   /**

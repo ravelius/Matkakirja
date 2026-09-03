@@ -13,8 +13,10 @@ import { readFileSync } from 'node:fs';
 
 import {
   aikajanaAskel, asetaMatkamittari, rajaaPaneelinSiirto, PANEELIN_RAAHAUSKYNNYS,
+  rajaaPaneelinKoko, PANEELIN_KOKO_MIN, PANEELIN_KOKO_MAX,
   AIKAJANA_TAUON_OSUUS, VUOSI_RULLAUS_MS, AIKAJANA_NAKSU_VALI_MS,
-  AIKAJANA_VIIVE_MS, AIKAJANA_PAALU_MS, AIKAJANA_TAUKO_HIMMENNYS,
+  AIKAJANA_VIIVE_MS, AIKAJANA_PAALU_MS, AIKAJANA_TAUKO_HIMMENNYS, AIKAJANA_VUOSI_MS,
+  aikajananNopeus, AIKAJANA_POHJANOPEUS, AIKAJANA_KIIHTYMISMATKA, AIKAJANA_ALIASKEL_MS,
   pieniOsoite, PIENEN_KATTO, karusellinPaikat, karusellinMitta, KARUSELLIN_MITAT,
   karuselliOsoite, sumeaOsoite, KARUSELLIN_KATTO,
 } from '../js/aikajana.js';
@@ -30,16 +32,59 @@ const MOOTTORI = readFileSync(new URL('../js/aikajana.js', import.meta.url), 'ut
 const TIEDELIITE = readFileSync(new URL('../js/tiedeliite.js', import.meta.url), 'utf8');
 const TAPAHTUMAT = [{ vuosi: 1770 }, { vuosi: 1773, paalu: true }, { vuosi: 1780 }];
 const TAHTI = { vuosiMs: 100, viiveMs: 500, paaluMs: 200 };
+/* Reduced motion ajaa saman tahdin ilman nopeusprofiilia. */
+const LINEAARINEN = { ...TAHTI, lineaarinen: true };
+
+/** Ajaa kelloa tasaisin askelin, kunnes tapahtuma syttyy tai kaari loppuu. */
+function ajaKunnesSyttyy(alku, tapahtumat, tahti = TAHTI, askel = 16) {
+  let tila = alku;
+  for (let t = 0; t < 400000; t += askel) {
+    const tulos = aikajanaAskel(tila, askel, tapahtumat, tahti);
+    tila = tulos.tila;
+    if (tulos.syttyi !== null || tulos.loppu) {
+      return { kesto: t + askel, tila, syttyi: tulos.syttyi, loppu: tulos.loppu };
+    }
+  }
+  throw new Error('kello ei saapunut pysäkille');
+}
+
+/**
+ * Ajaa yhden välin pysäkiltä pysäkille ja palauttaa keston sekä
+ * nopeusotoksen (nopeus osuutena matkanopeudesta). Lähtökohta on
+ * tauon hiipimän jälkeinen kohta, kuten oikeassa ajossa.
+ */
+function ajaVali(alkuVuosi, loppuVuosi, askel = 16, tahti = {}) {
+  const tapahtumat = [{ vuosi: alkuVuosi }, { vuosi: loppuVuosi }];
+  const lahto = alkuVuosi + AIKAJANA_TAUON_OSUUS;
+  const vuosiMs = tahti.vuosiMs ?? AIKAJANA_VUOSI_MS;
+  let tila = { vuosi: lahto, i: 0, viive: 0, alku: lahto };
+  const otos = [];
+  for (let t = 0; t < 1000000; t += askel) {
+    const tulos = aikajanaAskel(tila, askel, tapahtumat, tahti);
+    if (tulos.syttyi !== null) return { kesto: t + askel, otos };
+    otos.push({ vuosi: tila.vuosi, nopeus: ((tulos.tila.vuosi - tila.vuosi) / askel) * vuosiMs });
+    tila = tulos.tila;
+  }
+  throw new Error('väli ei päättynyt');
+}
 
 test('kello juoksee tyhjät vuodet ja pysähtyy tapahtumaan', () => {
-  let tila = { vuosi: 1765, i: -1, viive: 0 };
-  let askel = aikajanaAskel(tila, 250, TAPAHTUMAT, TAHTI);
+  // Lineaarinen tahti (reduced motion): matka on suoraan dt / vuosiMs.
+  let askel = aikajanaAskel({ vuosi: 1765, i: -1, viive: 0 }, 250, TAPAHTUMAT, LINEAARINEN);
   assert.equal(askel.syttyi, null);
   assert.ok(Math.abs(askel.tila.vuosi - 1767.5) < 1e-9);
-  askel = aikajanaAskel(askel.tila, 400, TAPAHTUMAT, TAHTI);
+  askel = aikajanaAskel(askel.tila, 400, TAPAHTUMAT, LINEAARINEN);
   assert.equal(askel.syttyi, 0, 'ensimmäinen tapahtuma syttyy kun vuosi ylittyy');
   assert.equal(askel.tila.vuosi, 1770, 'kello napsahtaa tapahtuman vuoteen, ei sen yli');
   assert.equal(askel.tila.viive, 500);
+
+  // Nopeusprofiililla sama matka kestää kauemmin mutta päättyy samaan
+  // vuoteen: kiihdytys ja jarrutus eivät saa hukata tai ylittää pysäkkiä.
+  const ajo = ajaKunnesSyttyy({ vuosi: 1765, i: -1, viive: 0 }, TAPAHTUMAT);
+  assert.equal(ajo.syttyi, 0);
+  assert.equal(ajo.tila.vuosi, 1770);
+  assert.equal(ajo.tila.viive, 500);
+  assert.ok(ajo.kesto > 5 * 100, 'profiili on hitaampi kuin vakiovauhti');
 });
 
 test('viive kuluu ennen kuin kello jatkaa; tauolla mittari hiipii; merkkipaalu on lyhyempi', () => {
@@ -53,10 +98,12 @@ test('viive kuluu ennen kuin kello jatkaa; tauolla mittari hiipii; merkkipaalu o
   askel = aikajanaAskel(askel.tila, 300, TAPAHTUMAT, TAHTI);
   assert.equal(askel.tila.viive, 0);
   assert.ok(Math.abs(askel.tila.vuosi - (1770 + AIKAJANA_TAUON_OSUUS)) < 1e-9, 'tauon lopussa koko hiipimä');
-  askel = aikajanaAskel(askel.tila, 300, TAPAHTUMAT, TAHTI);
-  assert.equal(askel.syttyi, 1, 'paalu syttyy vuonna 1773');
-  assert.equal(askel.tila.viive, 200, 'paalun viive');
-  assert.equal(askel.tila.viiveTaysi, 200);
+  assert.ok(Math.abs(askel.tila.alku - askel.tila.vuosi) < 1e-9,
+    'liike lähtee siitä, mihin hiipimä ehti — kiihdytys jatkaa siitä');
+  const ajo = ajaKunnesSyttyy(askel.tila, TAPAHTUMAT);
+  assert.equal(ajo.syttyi, 1, 'paalu syttyy vuonna 1773');
+  assert.equal(ajo.tila.viive, 200, 'paalun viive');
+  assert.equal(ajo.tila.viiveTaysi, 200);
 });
 
 test('hiipimä on alle kokonaisen vuoden ja saman vuoden ketju ei peruuta mittaria', () => {
@@ -76,6 +123,90 @@ test('viimeisen tapahtuman jälkeen askel ilmoittaa lopun', () => {
   assert.equal(askel.loppu, true);
   askel = aikajanaAskel({ vuosi: 1780, i: 2, viive: 0 }, 100, TAPAHTUMAT, TAHTI);
   assert.equal(askel.loppu, true);
+});
+
+/* ==================== PEHMEÄ KIIHDYTYS JA JARRUTUS ==================== */
+
+/*
+ * Omistaja 3.9.2026: *"vuosinumerot juoksevat nyt mutta niihin pitäisi
+ * tehdä pehmeät kiihdytykset ja jarrutukset (logaritminen)."* Tässä
+ * mitataan se, mikä rikkoutuisi hiljaa: että liike ei pysähdy, että
+ * kiihdytys ja jarrutus todella näkyvät nopeudessa, ettei kaari veny
+ * kohtuuttomasti ja ettei tulos riipu kehysvälistä.
+ */
+
+test('nopeusprofiili: nopeus pysyy nollan yläpuolella eikä mittari peruuta', () => {
+  for (const d of [-1, 0, 0.001, 0.3, 1, 1.5, 5, 100]) {
+    const v = aikajananNopeus(d);
+    assert.ok(v > 0, `nopeus on aina yli nollan (etäisyys ${d})`);
+    assert.ok(v >= AIKAJANA_POHJANOPEUS && v <= 1, `nopeus pysyy rajoissa (etäisyys ${d})`);
+  }
+  assert.equal(aikajananNopeus(AIKAJANA_KIIHTYMISMATKA), 1, 'täysi vauhti kiihtymismatkan päässä');
+  let edellinen = 0;
+  for (let d = 0; d <= 3; d += 0.05) {
+    const v = aikajananNopeus(d);
+    assert.ok(v >= edellinen - 1e-12, 'käyrä kasvaa monotonisesti');
+    edellinen = v;
+  }
+  // Koko kaari läpi: vuosi ei mene taaksepäin missään vaiheessa.
+  let tila = { vuosi: 1765, i: -1, viive: 0 };
+  let vuosi = tila.vuosi;
+  let n = 0;
+  for (; n < 50000; n += 1) {
+    const askel = aikajanaAskel(tila, 16, TAPAHTUMAT, TAHTI);
+    assert.ok(askel.tila.vuosi >= vuosi - 1e-12, 'mittari ei peruuta');
+    vuosi = askel.tila.vuosi;
+    tila = askel.tila;
+    if (askel.loppu) break;
+  }
+  assert.ok(n < 50000 && vuosi >= 1780, 'kaari ajautuu loppuun asti');
+});
+
+test('nopeusprofiili: lähtö on hiipimisvauhtia, keskiväli täyttä vauhtia, tulo hidasta', () => {
+  const hiipiminen = (AIKAJANA_TAUON_OSUUS * AIKAJANA_VUOSI_MS) / AIKAJANA_VIIVE_MS;
+  assert.ok(Math.abs(AIKAJANA_POHJANOPEUS - hiipiminen) < 0.01,
+    'pohjanopeus on hiipimisnopeuden luokkaa — ei nopeushyppyä tauon jälkeen');
+
+  const { otos } = ajaVali(1783, 1796);
+  const lahto = otos[0].nopeus;
+  assert.ok(lahto < 1.6 * hiipiminen, `lähtönopeus ${lahto} on lähellä hiipimisnopeutta ${hiipiminen}`);
+  const keski = otos.filter((o) => o.vuosi > 1788 && o.vuosi < 1791);
+  const keskinopeus = keski.reduce((s, o) => s + o.nopeus, 0) / keski.length;
+  assert.ok(keskinopeus > 0.98, `välin keskellä ajetaan täyttä vauhtia (${keskinopeus})`);
+  assert.ok(keskinopeus > 10 * lahto, 'keskiväli on selvästi lähtöä nopeampi');
+  // Viimeinen vuosi ennen pysäkkiä: jarrutus näkyy.
+  const tulo = otos.filter((o) => o.vuosi > 1795);
+  const suurinTulossa = Math.max(...tulo.map((o) => o.nopeus));
+  assert.ok(suurinTulossa < keskinopeus, 'viimeisen vuoden aikana kello on hitaampi kuin keskellä');
+  assert.ok(tulo[tulo.length - 1].nopeus < 1.6 * hiipiminen, 'saapuminen on hiipimisvauhtia');
+  // Symmetria: yhden vuoden päässä kummastakin päästä sama nopeus.
+  const lahin = (kohde) => otos.reduce((a, b) => (Math.abs(b.vuosi - kohde) < Math.abs(a.vuosi - kohde) ? b : a));
+  const alkuPaa = lahin(1783 + AIKAJANA_TAUON_OSUUS + 1);
+  const loppuPaa = lahin(1796 - 1);
+  assert.ok(Math.abs(alkuPaa.nopeus - loppuPaa.nopeus) < 0.05,
+    `kiihdytys ja jarrutus ovat sama käyrä (${alkuPaa.nopeus} vs ${loppuPaa.nopeus})`);
+});
+
+test('nopeusprofiili: pitkä väli ei veny eikä tulos riipu kehysvälistä', () => {
+  const pitka = ajaVali(1783, 1796).kesto;
+  assert.ok(pitka <= 1.6 * 13 * AIKAJANA_VUOSI_MS,
+    `13 vuoden väli ${pitka} ms enintään 1,6× entisestä (${13 * AIKAJANA_VUOSI_MS} ms)`);
+  const hyvinPitka = ajaVali(1800, 1840).kesto;
+  assert.ok(hyvinPitka <= 1.3 * 40 * AIKAJANA_VUOSI_MS,
+    `40 vuoden väli ${hyvinPitka} ms enintään 1,3× entisestä (${40 * AIKAJANA_VUOSI_MS} ms)`);
+  // Kehysväli pilkotaan aliaskeliin, joten iso dt ei oikaise.
+  assert.ok(AIKAJANA_ALIASKEL_MS > 0 && AIKAJANA_ALIASKEL_MS <= 16);
+  const tihea = ajaVali(1783, 1796, 16).kesto;
+  const harva = ajaVali(1783, 1796, 100).kesto;
+  assert.ok(Math.abs(tihea - harva) / tihea < 0.05,
+    `16 ms ja 100 ms askel päätyvät samaan (${tihea} vs ${harva})`);
+  // Lyhyt väli ei ehdi täyteen vauhtiin — se on tarkoitus.
+  const lyhyt = ajaVali(1885, 1886);
+  assert.ok(Math.max(...lyhyt.otos.map((o) => o.nopeus)) < 0.9,
+    'yhden vuoden välillä kello ei ehdi täyteen vauhtiin');
+  // Reduced motion ohittaa profiilin kokonaan.
+  const suora = ajaVali(1783, 1796, 16, { vuosiMs: 40, lineaarinen: true }).kesto;
+  assert.ok(Math.abs(suora - 12.4 * 40) < 80, `lineaarinen tahti kulkee vakiovauhtia (${suora} ms)`);
 });
 
 test('oletustahti: tapahtuman viive on pidempi kuin paalun', () => {
@@ -155,6 +286,28 @@ test('pysäytetyn kellon hyppy rullaa muuttuneet numerot yhdellä liikkeellä', 
   assert.equal(rullat[1].vanha.textContent, '9');
   assert.equal(rullat[1].vanha.style.transform, 'translateY(0%)');
   assert.equal(rullat[3].vanha.style.transform, 'translateY(-10%)');
+});
+
+test('paneelin koko nipistämällä: kerroin rajataan vakioväliin ja linssin leveyteen', () => {
+  assert.ok(PANEELIN_KOKO_MIN < 1 && PANEELIN_KOKO_MAX >= 2);
+  assert.equal(rajaaPaneelinKoko(1), 1);
+  assert.equal(rajaaPaneelinKoko(0.1), PANEELIN_KOKO_MIN);
+  assert.equal(rajaaPaneelinKoko(9), PANEELIN_KOKO_MAX);
+  assert.equal(rajaaPaneelinKoko(NaN), 1);
+  // Paneeli 300 px kertoimella 1 → perusleveys 300; linssi 800 px → enintään (800-16)/300.
+  assert.ok(Math.abs(rajaaPaneelinKoko(5, { leveys: 300, kokoNyt: 1, juuriLeveys: 500 }) - 484 / 300) < 1e-9);
+  assert.equal(rajaaPaneelinKoko(1.5, { leveys: 300, kokoNyt: 1, juuriLeveys: 800 }), 1.5);
+  assert.equal(rajaaPaneelinKoko(5, { leveys: 300, kokoNyt: 1, juuriLeveys: 5000 }), PANEELIN_KOKO_MAX);
+  // Korkeus: paneeli 200 px, linssi 600 px, vuosipalkki vie 60 → enintään (600-60-16)/200.
+  assert.ok(Math.abs(rajaaPaneelinKoko(5, { leveys: 300, korkeus: 200, kokoNyt: 1, juuriLeveys: 5000, juuriKorkeus: 600, ylaVara: 60 }) - 524 / 200) < 1e-9 || rajaaPaneelinKoko(5, { leveys: 300, korkeus: 200, kokoNyt: 1, juuriLeveys: 5000, juuriKorkeus: 600, ylaVara: 60 }) === PANEELIN_KOKO_MAX);
+  assert.ok(Math.abs(rajaaPaneelinKoko(5, { leveys: 300, korkeus: 300, kokoNyt: 1, juuriLeveys: 5000, juuriKorkeus: 600, ylaVara: 60 }) - 524 / 300) < 1e-9);
+  // Kytkentä: kaksi osoitinta nipistää, rulla mitoittaa, koko muistetaan laitteella.
+  assert.match(MOOTTORI, /if \(sormet\.size >= 2\) \{ aloitaNipistys\(\); return; \}/);
+  assert.match(MOOTTORI, /paneeli\.addEventListener\('wheel', \(e\) => \{\n\s*e\.preventDefault\(\);\n\s*e\.stopPropagation\(\);/);
+  assert.match(MOOTTORI, /localStorage\?\.setItem\(PANEELIN_MUISTIAVAIN/);
+  const CSS = readFileSync(new URL('../css/aikajana.css', import.meta.url), 'utf8');
+  assert.match(CSS, /width: calc\(var\(--aikajana-paneeli-leveys\) \* var\(--aikajana-paneeli-koko, 1\)\)/);
+  assert.match(CSS, /\.aikajana-ilmio\.nipistetaan \{ transition: none; \}/);
 });
 
 test('paneelin siirto rajataan linssin alueelle ja raahauskynnys erottaa napautuksen', () => {
@@ -339,7 +492,7 @@ test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa se
   // Lamput ovat napautettavia (omistaja 3.9.2026) ja paneeli raahattava.
   assert.match(MOOTTORI, /g\.addEventListener\('click', \(e\) => \{ e\.stopPropagation\(\); this\.napautaValoa\(i\); \}\)/);
   assert.match(MOOTTORI, /napautaValoa\(i\) \{[\s\S]{0,200}this\.siirry\(i\);/);
-  assert.match(MOOTTORI, /kytkeRaahaus\(\) \{[\s\S]{0,2500}rajaaPaneelinSiirto\(paneeli, this\.juuri/);
+  assert.match(MOOTTORI, /kytkeRaahaus\(\) \{[\s\S]{0,6000}rajaaPaneelinSiirto\(paneeli, this\.juuri/);
   const CSS = readFileSync(new URL('../css/aikajana.css', import.meta.url), 'utf8');
   assert.match(CSS, /\.aikajana-valo\.palaa \{ pointer-events: auto; cursor: pointer; \}/);
   assert.match(CSS, /translate\(var\(--aikajana-paneeli-dx, 0px\), var\(--aikajana-paneeli-dy, 0px\)\)/);
@@ -509,11 +662,36 @@ test('muotokuvia on 28 eri tiedostoa — yhtä monta kuin ämpäriin vietiin', (
 
 test('aito Commons-kuva säilyy datassa Tiedeliitettä varten', () => {
   const aidot = KEKSINNOT.filter((t) => t.kuvaAito);
-  assert.equal(aidot.length, 22, 'aitoja Commons-kuvia oli 22 (Otto, Siemens ja Benz ilman)');
+  assert.equal(aidot.length, 25, 'jokaisella keksijäpysäkillä on aito Commons-kuva');
   for (const t of aidot) {
     assert.ok(t.kuvaAito.tiedosto && t.kuvaAito.selite, `${t.otsikko}: aidon kuvan tiedot`);
   }
   assert.match(LINSSI.lahde.lisenssi, /PD \(kuvat\)/, 'kuvien lisenssirivi ei saa kadota');
+});
+
+/*
+ * TIEDELIITTEEN HENKILÖNOSTO (omistajan tilaus 3.9.2026: "laita agentit
+ * monistamaan Wattin noston tyyli muihin samanlaisiin"). Wattin pysäkki
+ * oli pilotti; nyt jokaisella keksijäpysäkillä pitää olla sama kolmikko:
+ * kaksikappaleinen henkilojuttu, luonnetta kuvaava muotokuvateksti ja
+ * aito Commons-kuva. Ilman testiä yksi pysäkki jäisi hiljaa vajaaksi.
+ */
+test('jokaisella keksijäpysäkillä on henkilojuttu, luonnekuva ja aito kuva', () => {
+  const keksijat = KEKSINNOT.filter((t) => !t.paalu);
+  assert.equal(keksijat.length, 25);
+  for (const t of keksijat) {
+    assert.ok(t.henkilojuttu, `${t.otsikko}: henkilojuttu puuttuu`);
+    const kappaleet = t.henkilojuttu.split('\n\n');
+    assert.equal(kappaleet.length, 2, `${t.otsikko}: henkilojuttu on kaksi kappaletta`);
+    for (const k of kappaleet) {
+      assert.ok(k.trim().length > 0, `${t.otsikko}: tyhjä kappale`);
+    }
+    const sanoja = t.henkilojuttu.split(/\s+/).filter(Boolean).length;
+    assert.ok(sanoja >= 90, `${t.otsikko}: henkilojuttu vain ${sanoja} sanaa`);
+    // Sidos vuoteen 1873 on nostojen koko idea — se ei saa unohtua.
+    assert.match(t.henkilojuttu, /1873/, `${t.otsikko}: henkilojutusta puuttuu sidos vuoteen 1873`);
+    assert.ok(t.kuvaAito?.tiedosto, `${t.otsikko}: aito Commons-kuva puuttuu`);
+  }
 });
 
 test('moottori piirtää kortin ja henkilörivin generoidusta muotokuvasta', () => {
@@ -542,4 +720,101 @@ test('muotokuvalla on karusellikoko ja valmiiksi sumennettu versio, ilmiökuvall
   assert.doesNotMatch(kortti, /filter:/);
   assert.doesNotMatch(CSS, /\.aikajana-kortti\.tuleva \{[^}]*filter:/);
   assert.match(MOOTTORI, /img\[data-terava\]/);
+});
+
+/* ==================== SIIRTYMÄT: KARUSELLI JA PANEELI (3.9.2026) ====================
+ *
+ * Omistajan tilaus sanatarkasti: *"alareunan kuvat pitäisi siirtyä
+ * animoidusti niin että uusi kuva kasvaa suureksi samalla kun vanha
+ * pienenee ja siirtyy eteenpäin … myös havainnekuvaan tarvitaan joko
+ * ristihäivytys tai jokin muu animoitu siirtymä."*
+ *
+ * Siirtymät ovat CSS:ssä ja rikkoutuvat hiljaa: kaari, joka tekee koko
+ * matkan ensimmäisissä kehyksissä, näyttää hyppäykseltä vaikka siirtymä
+ * teknisesti on olemassa — juuri niin kävi aiemmalle kaarelle
+ * (0.22, 0.8, 0.28, 1), joka selaimessa mitattuna vei 35 % matkasta
+ * ensimmäisen 10 %:n aikana. Nämä vartiot lukitsevat sen, mitä
+ * mittauksen jälkeen jäi: pehmeä kaari, transform-pohjainen liike,
+ * kuvanvaihto dekoodauksen kautta ja paneelin korkeusliuku.
+ */
+
+const AIKAJANA_CSS = readFileSync(new URL('../css/aikajana.css', import.meta.url), 'utf8');
+
+/** cubic-bezier(x1,y1,x2,y2): edistymä (0..1) ajan osuudella t. */
+function kaarenArvo(x1, y1, x2, y2, t) {
+  let lo = 0;
+  let hi = 1;
+  let u = t;
+  for (let k = 0; k < 40; k += 1) {
+    u = (lo + hi) / 2;
+    const x = 3 * (1 - u) ** 2 * u * x1 + 3 * (1 - u) * u * u * x2 + u ** 3;
+    if (x < t) lo = u; else hi = u;
+  }
+  return 3 * (1 - u) ** 2 * u * y1 + 3 * (1 - u) * u * u * y2 + u ** 3;
+}
+
+test('linssin kaaressa on nopeutus ja hidastus, ei pelkkää jarrutusta', () => {
+  const kesto = AIKAJANA_CSS.match(/--aikajana-kesto:\s*([\d.]+)s/);
+  assert.ok(kesto, '--aikajana-kesto puuttuu');
+  const ms = Number(kesto[1]) * 1000;
+  assert.ok(ms >= 500 && ms <= 700, `siirtymän kesto ${ms} ms (tilaus n. 600 ms)`);
+  const kaari = AIKAJANA_CSS.match(/--aikajana-kaari:\s*cubic-bezier\(([\d.]+),\s*([\d.]+),\s*([\d.]+),\s*([\d.]+)\)/);
+  assert.ok(kaari, '--aikajana-kaari puuttuu tai ei ole cubic-bezier');
+  const [x1, y1, x2, y2] = kaari.slice(1).map(Number);
+  const kymmenesosa = kaarenArvo(x1, y1, x2, y2, 0.1);
+  assert.ok(kymmenesosa <= 0.1,
+    `kaari lähtee hyppäyksellä: ${(kymmenesosa * 100).toFixed(0)} % matkasta 10 %:ssa kestoa`);
+  assert.ok(kaarenArvo(x1, y1, x2, y2, 0.5) >= 0.5, 'kaari ei ehdi puoliväliin ajoissa');
+  assert.ok(kaarenArvo(x1, y1, x2, y2, 0.9) >= 0.95, 'kaari ei hidastu loppua kohti');
+  // prefers-reduced-motion nollaa liikkeen samalla muuttujalla.
+  assert.match(AIKAJANA_CSS, /prefers-reduced-motion[\s\S]{0,200}--aikajana-kesto: 0\.01s/);
+});
+
+test('kortti liukuu ja skaalautuu yhdellä transform-siirtymällä, ei left/width-siirtymällä', () => {
+  const kortti = AIKAJANA_CSS.match(/\.aikajana-kortti \{[\s\S]*?\n\}/)[0];
+  // Yksi GPU-matriisi: siirto ja suurennus samassa transformissa.
+  assert.match(kortti, /transform:\s*translate3d\(calc\(var\(--paikka\) \* var\(--aikajana-kortti-w\) - 50%\), 0, 0\)\s*scale\(var\(--mitta\)\);/);
+  assert.match(kortti, /transition:\s*transform var\(--aikajana-kesto\) var\(--aikajana-kaari\),\s*opacity var\(--aikajana-kesto\) var\(--aikajana-kaari\);/);
+  assert.doesNotMatch(kortti, /transition:[^;]*\b(left|width|top|height)\b/, 'sommittelua ei animoida kehyksittäin');
+  assert.match(kortti, /will-change: transform, opacity;/);
+  // Kortin teksti seuraa kortin kokoa liukuen eikä napsahda luokan vaihtuessa.
+  assert.match(AIKAJANA_CSS, /\.aikajana-kortti-otsikko \{ transition: font-size var\(--aikajana-kesto\) var\(--aikajana-kaari\); \}/);
+});
+
+test('kortin terävä/sumea vaihtuu vasta dekoodatusta kuvasta, ei tyhjän kehyksen kautta', () => {
+  // Suoraa src-sijoitusta ei enää tehdä asettelussa: se välähti tyhjänä.
+  assert.match(MOOTTORI, /vaihdaKorttikuva\(img, luokka === 'tuleva' \? img\.dataset\.sumea : img\.dataset\.terava\)/);
+  assert.match(MOOTTORI, /function vaihdaKorttikuva[\s\S]{0,900}esilataus\.decode\(\)\.then\(pane, pane\)/);
+  // Kilpailun esto: vanhentunut lataus ei kirjoita korttiin.
+  assert.match(MOOTTORI, /function vaihdaKorttikuva[\s\S]{0,900}kuva\.dataset\.vaihtoon !== osoite\) return;/);
+});
+
+test('havainnekuvapaneelin ristihäivytyksessä on liikettä ja korkeus liukuu', () => {
+  // Sivu tulee esiin nousten ja kasvaen, väistyvä kohoaa ja suurenee ohi.
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu \{[\s\S]*?transform: translateY\(10px\) scale\(0\.985\);/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu\.poistuu \{ position: absolute; opacity: 0; transform: translateY\(-8px\) scale\(1\.03\); \}/);
+  // Ristihäivytys ajetaan linssin omalla kaarella, ei selaimen ease-oletuksella.
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu \{[\s\S]*?opacity var\(--aikajana-kesto\) var\(--aikajana-kaari\),\s*transform var\(--aikajana-kesto\) var\(--aikajana-kaari\);/);
+  // Korkeus liukuu, mutta raahaus ei saa liukua perässä.
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio \{ transition: height var\(--aikajana-kesto\) var\(--aikajana-kaari\), width 180ms var\(--aikajana-kaari\); \}/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio\.raahataan, \.aikajana-ilmio\.nipistetaan \{ transition: none; \}/);
+});
+
+test('paneelinvaihto pakottaa lähtöarvon ja liuuttaa korkeuden vanhasta uuteen', () => {
+  // Ilman pakotettua sommittelua siirtymällä ei ole mistä lähteä.
+  assert.match(MOOTTORI, /void sivu\.offsetHeight;\s*\n\s*if \(vanhaKorkeus > 0\) this\.paneeli\.style\.height = `\$\{vanhaKorkeus\}px`;\s*\n\s*sivu\.classList\.add\('esilla'\);/);
+  // Reunus mukaan (border-box) ja mitta sommittelusta: skaalattu
+  // ruutulaatikko olisi liian matala ja lukon avaus nytkäyttäisi.
+  assert.match(MOOTTORI, /const reunat = this\.paneeli\.offsetHeight - this\.paneeli\.clientHeight;/);
+  assert.match(MOOTTORI, /const pohja = Number\.parseFloat\(getComputedStyle\(this\.paneeli\)\.minHeight\) \|\| 0;/);
+  assert.match(MOOTTORI, /this\.paneeli\.style\.height = `\$\{Math\.max\(sivu\.offsetHeight \+ reunat, pohja\)\}px`;/);
+  // Pohjan ehto katsoo ESILLÄ olevaa sivua: vaihdon aikana paneelissa
+  // on kaksi sivua, ja väistyvä kuvasivu antoi väärän pohjan.
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio:has\(> \.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child\) \{ min-height: 0; \}/);
+  // Lukko avataan häivytyksen jälkeen, ja vanhentunut ajastin ei avaa uudempaa.
+  assert.match(MOOTTORI, /this\.paneelinKorkeusMerkki === merkki\) this\.paneeli\.style\.height = '';/);
+  assert.match(MOOTTORI, /setTimeout\(\(\) => v\.remove\(\), PANEELIN_HAIVYTYS_MS\)/);
+  assert.match(MOOTTORI, /const PANEELIN_HAIVYTYS_MS = 700;/);
+  // Raahaus säilyy: siirto on yhä CSS-muuttujissa eikä korkeuslukko koske siihen.
+  assert.match(MOOTTORI, /asetaPaneelinSiirto\(raja\.dx, raja\.dy\)/);
 });
