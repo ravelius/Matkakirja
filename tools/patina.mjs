@@ -936,6 +936,11 @@ const VEDOS_C = {
   leviaminen: null,
 };
 
+/* Sama kolmikko, saturaatio hieman alas (omistaja 3.9.2026 vedosten
+ * jälkeen: "saturaatiota voi hieman vähentää myös"): kromanVahvistus
+ * 0,95 → 0,80, kyllaisyys 0,45 → 0,40. */
+const PASTELLI_VEDOS = { ...PASTELLI_KIRKAS, kyllaisyys: 0.40, kromanVahvistus: 0.80 };
+
 export const RESEPTIT = {
   hillitty: {
     nimi: 'hillitty',
@@ -1012,6 +1017,9 @@ export const RESEPTIT = {
   },
   'vedos-a': { nimi: 'vedos-a', savyt: VEDOS_A.savyt, syvyys: SYVYYS, vesiviivoitus: VESIVIIVOITUS, maanraja: MAANRAJA, pastelli: PASTELLI_KIRKAS, paperi: VEDOS_A.paperi, ikaantyminen: IKAANTYMINEN_KIRKAS, reunakertyma: REUNAKERTYMA_KIRKAS, rosoisuus: ROSOISUUS, kohdistus: KOHDISTUS, leviaminen: VEDOS_A.leviaminen, taitteet: false, vinjetti: null },
   'vedos-b': { nimi: 'vedos-b', savyt: VEDOS_B.savyt, syvyys: SYVYYS, vesiviivoitus: VESIVIIVOITUS, maanraja: MAANRAJA, pastelli: PASTELLI_KIRKAS, paperi: VEDOS_B.paperi, ikaantyminen: IKAANTYMINEN_KIRKAS, reunakertyma: REUNAKERTYMA_KIRKAS, rosoisuus: ROSOISUUS, kohdistus: KOHDISTUS, leviaminen: VEDOS_B.leviaminen, taitteet: false, vinjetti: null },
+  'vedos-a2': { nimi: 'vedos-a2', savyt: VEDOS_A.savyt, syvyys: SYVYYS, vesiviivoitus: VESIVIIVOITUS, maanraja: MAANRAJA, pastelli: PASTELLI_VEDOS, paperi: VEDOS_A.paperi, ikaantyminen: IKAANTYMINEN_KIRKAS, reunakertyma: REUNAKERTYMA_KIRKAS, rosoisuus: ROSOISUUS, kohdistus: KOHDISTUS, leviaminen: VEDOS_A.leviaminen, taitteet: false, vinjetti: null },
+  'vedos-b2': { nimi: 'vedos-b2', savyt: VEDOS_B.savyt, syvyys: SYVYYS, vesiviivoitus: VESIVIIVOITUS, maanraja: MAANRAJA, pastelli: PASTELLI_VEDOS, paperi: VEDOS_B.paperi, ikaantyminen: IKAANTYMINEN_KIRKAS, reunakertyma: REUNAKERTYMA_KIRKAS, rosoisuus: ROSOISUUS, kohdistus: KOHDISTUS, leviaminen: VEDOS_B.leviaminen, taitteet: false, vinjetti: null },
+  'vedos-c2': { nimi: 'vedos-c2', savyt: VEDOS_C.savyt, syvyys: SYVYYS, vesiviivoitus: VESIVIIVOITUS, maanraja: MAANRAJA, pastelli: PASTELLI_VEDOS, paperi: VEDOS_C.paperi, ikaantyminen: IKAANTYMINEN_KIRKAS, reunakertyma: REUNAKERTYMA_KIRKAS, rosoisuus: ROSOISUUS, kohdistus: KOHDISTUS, leviaminen: VEDOS_C.leviaminen, taitteet: false, vinjetti: null },
   'vedos-c': { nimi: 'vedos-c', savyt: VEDOS_C.savyt, syvyys: SYVYYS, vesiviivoitus: VESIVIIVOITUS, maanraja: MAANRAJA, pastelli: PASTELLI_KIRKAS, paperi: VEDOS_C.paperi, ikaantyminen: IKAANTYMINEN_KIRKAS, reunakertyma: REUNAKERTYMA_KIRKAS, rosoisuus: ROSOISUUS, kohdistus: KOHDISTUS, leviaminen: VEDOS_C.leviaminen, taitteet: false, vinjetti: null },
   /*
    * NOSTOTASO — LÄPINÄKYVÄN MUSTEKERROKSEN PAPERIVAKIOPASSIT.
