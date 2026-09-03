@@ -170,13 +170,34 @@
 }
 .aikajana-ilmiokuva img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .aikajana-ilmio-teksti { padding: 0.5rem 0.7rem 0.65rem; }
+/*
+ * HENKILÖRIVI: keksijän kasvot nimen vieressä. Muotokuva on pieni
+ * rintakuva, jotta ilmiökuva pysyy paneelin pääkuvana;
+ * kaksoispysäkillä kasvot ovat vierekkäin samassa kehyksessä
+ * (.kaksi), joten rivi levenee eikä kuva mene päällekkäin.
+ */
 .aikajana-ilmio-henkilo {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
   font-family: var(--font-type);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #6b4d1c;
 }
+.aikajana-ilmio-kasvot {
+  flex: none;
+  width: 2.1rem;
+  aspect-ratio: 4 / 5;
+  border-radius: 5px;
+  border: 1px solid var(--aikajana-reuna);
+  background: #e6dcc3;
+  overflow: hidden;
+}
+.aikajana-ilmio-kasvot.kaksi { width: 3.6rem; }
+.aikajana-ilmio-kasvot img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.aikajana-ilmio-nimi { min-width: 0; }
 .aikajana-ilmio-otsikko {
   margin: 0.1rem 0 0.25rem;
   font-size: 1.12rem;
@@ -206,7 +227,15 @@
   left: 0.6rem;
   right: 0.6rem;
   bottom: 0.6rem;
-  height: calc(var(--aikajana-kortti-w) * 1.62);
+  /*
+   * KORKEUS ON LASKETTU, EI ARVATTU (omistajan havainto 3.9.2026:
+   * *"suurennettu kuva näyttää leikkautuvan yläosasta"*). Nauha
+   * leikkaa ylitteen (overflow: hidden), joten suurennetun kortin
+   * koko korkeuden on mahduttava tähän: muotokuva on kortin levyinen
+   * pystykuva (4:5) ja sen alla kolme tekstiriviä, joiden korkeus on
+   * lukittu alla (rivikorkeudet ja otsikon kahden rivin katto).
+   */
+  height: calc(var(--aikajana-kortti-w) * 1.25 + 4.7rem);
   overflow: hidden;
   border-radius: 12px;
   /* Nauha itsessään on läpinäkyvä kartan päällä: kortit ovat paperia. */
@@ -263,13 +292,28 @@
 .aikajana-kortti.piilossa { transform: translateX(200vw) scale(0.5); }
 .aikajana-kortti.paalu { background: #e9dcb8; border-style: dashed; }
 
+/*
+ * KEKSIJÄN MUOTOKUVA (kuvaputken studiokuva, pystykuva). Kehyksen
+ * suhde on 4:5 eikä alkuperäisen pystykuvan suhde: koko kortin on
+ * mahduttava nauhaan myös suurennettuna. `object-position: center top`
+ * pitää kasvot kehyksessä, kun rajaus syö kuvan alalaidasta.
+ */
 .aikajana-muotokuva {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   width: 100%;
   background: #e6dcc3;
   overflow: hidden;
 }
 .aikajana-muotokuva img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+
+/*
+ * KAKSOISPYSÄKKI: kaksi keksijää vierekkäin (Montgolfier, Cooke ja
+ * Wheatstone, Lumière). Vierekkäin eikä päällekkäin — kortti on
+ * kapea, ja päällekkäinen kuva peittäisi toisen kasvot. Ohut rako
+ * erottaa rintakuvat toisistaan.
+ */
+.aikajana-kuvakehys.kaksi { display: flex; gap: 1px; }
+.aikajana-kuvakehys.kaksi img { width: 50%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .aikajana-kuvakehys.tyhja {
   display: grid;
   place-items: center;
@@ -283,10 +327,18 @@
   letter-spacing: 0.1em;
   color: #6b4d1c;
 }
+/*
+ * KORTTITEKSTIN KORKEUS ON LUKITTU: rivikorkeudet ja otsikon kahden
+ * rivin katto pitävät kortin sen mittaisena, jonka mukaan nauhan
+ * korkeus on laskettu (0,7 + 0,86 + 0,1 + 1,98 + 0,1 + 0,84 ≈ 4,6rem).
+ * Ilman kattoa kolmirivinen otsikko työntäisi kortin yläreunan taas
+ * nauhan ulkopuolelle.
+ */
 .aikajana-korttiteksti { padding: 0.3rem 0.4rem 0.4rem; }
 .aikajana-kortti-vuosi {
   font-family: var(--font-type);
   font-size: 0.78rem;
+  line-height: 1.1;
   letter-spacing: 0.06em;
   color: #6b4d1c;
 }
@@ -295,9 +347,15 @@
   font-weight: 700;
   line-height: 1.15;
   margin-top: 0.1rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
 }
 .aikajana-kortti-henkilo {
   font-size: 0.7rem;
+  line-height: 1.2;
   font-style: italic;
   color: #3d3126;
   margin-top: 0.1rem;

@@ -25,14 +25,31 @@
  *
  * ── KUVAT ─────────────────────────────────────────────────────────
  *
- * `kuva` on henkilön muotokuva ja `ilmio` keksintöä selittävä kuva.
- * Muotokuvat ovat Commonsin PD-kuvia (tarkistettu 2.9.2026, lisenssi
- * kunkin kuvan kohdalla). Omistajan linjaus: ilmiökuvan paikalle tulee
- * GENEROITU kuva, kun kuvaputki on tehnyt sen — se vaihdetaan tähän
- * kenttään `osoite`-muodossa (ks. KEKSINTO_KUVAJUURI). Kaikki 25
- * pysäkkiä on nyt kytketty generoituun ilmiökuvaan; vain merkkipaalu
- * 1873 on ilman kuvaa.
- * Muotokuva, jota ei vielä ole tarkistettu (null), näkyy nimikirjainlaattana.
+ * Pysäkillä on kolme kuvakenttää, ja jokaisella on oma tehtävänsä:
+ *
+ *   `kuva`        keksijän KUVAPUTKEN GENEROIMA studiomuotokuva —
+ *                 pelin ensisijainen henkilökuva (kortti ja
+ *                 ilmiöpaneelin henkilörivi). Omistajan tilaus
+ *                 3.9.2026: yhtenäiset, pelkistetyt mutta
+ *                 karaktääriset väriset rintakuvat, sama tausta ja
+ *                 valo kaikissa. Kansio `muotokuva/` ämpärissä.
+ *   `kuvaToinen`  saman pysäkin toinen keksijä samassa muodossa.
+ *                 Kolmella pysäkillä on kaksi tekijää (Montgolfier'n
+ *                 veljekset, Cooke ja Wheatstone, Lumière'n
+ *                 veljekset), ja moottori piirtää heidät vierekkäin
+ *                 pienempinä — ei koskaan päällekkäin.
+ *   `kuvaAito`    AITO Commons-kuva (PD, tarkistettu 2.9.2026):
+ *                 maalaus, kaiverrus tai valokuva henkilöstä. Se ei
+ *                 enää näy kortissa vaan odottaa datassa keksijän
+ *                 omaa Tiedeliite-sivua; lisenssitiedot pysyvät
+ *                 tallessa täällä. Kolmelta pysäkiltä (Otto, Siemens,
+ *                 Benz) aitoa kuvaa ei koskaan tarkistettu — null.
+ *   `ilmio`       keksintöä selittävä generoitu kuva ilmiöpaneelissa.
+ *
+ * Kaikki 25 pysäkkiä on kytketty sekä generoituun muotokuvaan (28
+ * kuvaa, kaksoispysäkit mukaan lukien) että generoituun ilmiökuvaan;
+ * vain merkkipaalu 1873 on ilman kuvaa, ja se näkyy
+ * nimikirjainlaattana.
  *
  * Blériot'n kohdassa on kaksi hyväksyttyä ilmiökuvaa: laaja `ilmio`
  * (kone ja Kanaali) ja lähikuva `ilmioLisa` (lentäjän jännitys).
@@ -43,7 +60,7 @@
  *
  * `x`/`y` ovat maailmankartan laudan koordinaatit, laskettu
  * js/fokusmitat.js projisoiLaudalle -kaavalla asteista (`lat`/`lon`
- * jätetty näkyviin tarkistusta varten; tests/keksinnot.test.mjs
+ * jätetty näkyviin tarkistusta varten; tests/aikajana.test.mjs
  * vertaa). Ilmoitettu paikka on se, missä työ tehtiin — Watt
  * Glasgow'ssa, Röntgen Würzburgissa — ei henkilön syntymäkaupunki.
  *
@@ -52,7 +69,11 @@
  */
 
 /**
- * Kuvaputken generoitujen ilmiökuvien juuri ämpärissä. Generoitu kuva
+ * Kuvaputken generoitujen kuvien juuri ämpärissä. Ilmiökuvat ovat
+ * juuressa ja keksijöiden muotokuvat sen alikansiossa `muotokuva/`
+ * (28 hyväksyttyä pystykuvaa, vienti
+ * .github/workflows/vie-hyvaksytyt-28-keksijamuotokuvaa-2026-09-03.yml
+ * 3.9.2026). Generoitu kuva
  * kulkee `osoite`-kenttänä (valmis osoite, ei Commons-thumb-putkea)
  * kuten historian hetkien kuvat (js/packs/historian-hetket.js
  * HETKI_KUVAJUURI); Commons-kuva kulkee yhä `tiedosto`-kenttänä.
@@ -85,7 +106,12 @@ export const KEKSINNOT = [
       + 'Yhdessä tehtailija Matthew Boultonin kanssa Watt rakensi koneita '
       + 'kaivoksiin, myllyihin ja tehtaisiin. Tehon yksikkö watti on nimetty '
       + 'hänen mukaansa, ja hevosvoima on hänen keksimänsä vertailuluku.',
-    kuva: { tiedosto: 'Watt James von Breda.jpg', selite: 'James Watt, Carl Frederik von Bredan maalaus 1792.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1769-james-watt.jpg`,
+      selite: 'James Watt, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Watt James von Breda.jpg', selite: 'James Watt, Carl Frederik von Bredan maalaus 1792.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1769-watt.jpg`,
       selite: 'Wattin työpajan käsityöläinen kuuntelee, lakkaako sylinteri '
@@ -111,7 +137,17 @@ export const KEKSINNOT = [
       + 'Marraskuun 21. päivänä 1783 Pilâtre de Rozier ja markiisi d\'Arlandes '
       + 'nousivat pallolla Pariisin yli — ensimmäinen vapaa miehitetty lento '
       + 'ihmiskunnan historiassa. Matkaa kertyi noin yhdeksän kilometriä.',
-    kuva: { tiedosto: 'Joseph-montgolfier.jpg', selite: 'Joseph Montgolfier, tuntemattoman taiteilijan maalaus 1700-luvulta.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1783-joseph-montgolfier.jpg`,
+      selite: 'Joseph Montgolfier, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaToinen: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1783-etienne-montgolfier.jpg`,
+      selite: 'Étienne Montgolfier, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Joseph-montgolfier.jpg', selite: 'Joseph Montgolfier, tuntemattoman taiteilijan maalaus 1700-luvulta.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1783-montgolfier.jpg`,
       selite: 'Pilâtre de Rozier ja markiisi d\'Arlandes seisovat avonaisella '
@@ -138,7 +174,12 @@ export const KEKSINNOT = [
       + 'Jenner julkaisi tulokset 1798, ja menetelmä levisi muutamassa '
       + 'vuodessa ympäri Eurooppaa. Isorokko julistettiin hävitetyksi koko '
       + 'maailmasta vuonna 1980 — ainoa ihmisen tauti, jolle näin on käynyt.',
-    kuva: { tiedosto: 'Portrait of Edward Jenner M.D (4672926).jpg', selite: 'Edward Jenner, William Ridleyn kaiverrus 1804.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1796-edward-jenner.jpg`,
+      selite: 'Edward Jenner, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Portrait of Edward Jenner M.D (4672926).jpg', selite: 'Edward Jenner, William Ridleyn kaiverrus 1804.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1796-jenner.jpg`,
       selite: 'Kahdeksanvuotias puutarhurin poika James Phipps tutkii sidottua '
@@ -165,7 +206,12 @@ export const KEKSINNOT = [
       + 'Voltan patsas oli ensimmäinen sähkölähde, joka antoi jatkuvaa '
       + 'virtaa. Sen avulla veden hajotettiin vedyksi ja hapeksi samana '
       + 'vuonna, ja jännitteen yksikkö voltti nimettiin keksijän mukaan.',
-    kuva: { tiedosto: 'Alessandro Volta. Gaetano Bonatti inc.jpg', selite: 'Alessandro Volta, Gaetano Bonattin kaiverrus 1837.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1800-alessandro-volta.jpg`,
+      selite: 'Alessandro Volta, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Alessandro Volta. Gaetano Bonatti inc.jpg', selite: 'Alessandro Volta, Gaetano Bonattin kaiverrus 1837.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1800-volta.jpg`,
       selite: 'Pavian laboratoriossa avustaja säpsähtää, kun metallikiekkojen '
@@ -191,7 +237,12 @@ export const KEKSINNOT = [
       + 'kymmenessä vuodessa Lyonissa oli tuhansia Jacquardin puita. Charles '
       + 'Babbage lainasi reikäkortit laskukoneeseensa, ja niistä tuli '
       + 'tietojenkäsittelyn ensimmäinen ohjelmointitapa.',
-    kuva: { tiedosto: 'Joseph Marie Jacquard.jpg', selite: 'Joseph Marie Jacquard, kaiverrus 1800-luvulta.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1804-joseph-marie-jacquard.jpg`,
+      selite: 'Joseph Marie Jacquard, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Joseph Marie Jacquard.jpg', selite: 'Joseph Marie Jacquard, kaiverrus 1800-luvulta.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1804-jacquard.jpg`,
       selite: 'Lyonin nuori apulainen lukee rei\'itettyä korttia kuin käskyä: '
@@ -217,7 +268,12 @@ export const KEKSINNOT = [
       + 'veturikilpailun, ja Liverpoolin ja Manchesterin välinen rata aloitti '
       + 'aikataulun mukaisen matkustajaliikenteen. Stephensonin raideleveys, '
       + '1 435 millimetriä, on yhä maailman yleisin.',
-    kuva: { tiedosto: 'George Stephenson.jpg', selite: 'George Stephenson, John Lucasin maalaus.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1825-george-stephenson.jpg`,
+      selite: 'George Stephenson, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'George Stephenson.jpg', selite: 'George Stephenson, John Lucasin maalaus.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1825-stephenson.jpg`,
       selite: 'Avovaunuun ahtautunut kaivosmies puristaa laitaa, kun '
@@ -244,7 +300,17 @@ export const KEKSINNOT = [
       + 'lennätin auttoi pidättämään murhaajan, joka oli paennut junalla — ja '
       + 'siitä alkoi laitteen maine. Isoisän matkan aikaan 1873 lennätinkaapelit '
       + 'ylittivät jo Atlantin.',
-    kuva: { tiedosto: 'Wheatstone Charles drawing 1868.jpg', selite: 'Charles Wheatstone, Samuel Laurencen piirros 1868.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1837-william-fothergill-cooke.jpg`,
+      selite: 'William Fothergill Cooke, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaToinen: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1837-charles-wheatstone.jpg`,
+      selite: 'Charles Wheatstone, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Wheatstone Charles drawing 1868.jpg', selite: 'Charles Wheatstone, Samuel Laurencen piirros 1868.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1837-wheatstone.jpg`,
       selite: 'Eustonin nuori virkailija ei kuule Camden Townista '
@@ -270,7 +336,12 @@ export const KEKSINNOT = [
       + 'vapaasti kaikkien käyttöön. Muutamassa kuukaudessa Pariisissa '
       + 'myytiin kameroita ja levyjä, ja ensimmäiset muotokuvaamot avattiin '
       + 'seuraavana vuonna.',
-    kuva: { tiedosto: 'Louis Daguerre 2.jpg', selite: 'Louis Daguerre dagerrotypiassa 1844.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1839-louis-daguerre.jpg`,
+      selite: 'Louis Daguerre, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Louis Daguerre 2.jpg', selite: 'Louis Daguerre dagerrotypiassa 1844.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1839-daguerre.jpg`,
       selite: 'Hopeoitu kuparilevy on peili, josta ateljeeapulainen etsii '
@@ -296,7 +367,12 @@ export const KEKSINNOT = [
       + 'Bessemer perusti oman terästehtaan Sheffieldiin, josta tuli '
       + 'maailman teräskaupunki. Halpa teräs teki mahdolliseksi kiskot, '
       + 'pilvenpiirtäjät ja Eiffel-tornin kaltaiset rakenteet.',
-    kuva: { tiedosto: 'Henry Bessemer.jpg', selite: 'Henry Bessemer.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1856-henry-bessemer.jpg`,
+      selite: 'Henry Bessemer, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Henry Bessemer.jpg', selite: 'Henry Bessemer.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1856-bessemer.jpg`,
       selite: 'Sheffieldin terästyöläinen kääntää kasvonsa, mutta ei voi '
@@ -322,7 +398,12 @@ export const KEKSINNOT = [
       + 'Dynamiitti teki Nobelista yhden Euroopan rikkaimmista miehistä. '
       + 'Testamentissaan hän määräsi omaisuutensa palkintoihin, joita on '
       + 'jaettu Tukholmassa vuodesta 1901.',
-    kuva: { tiedosto: 'AlfredNobel adjusted.jpg', selite: 'Alfred Nobel, Gösta Flormanin valokuva.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1867-alfred-nobel.jpg`,
+      selite: 'Alfred Nobel, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'AlfredNobel adjusted.jpg', selite: 'Alfred Nobel, Gösta Flormanin valokuva.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1867-nobel.jpg`,
       selite: 'Vintervikenin työntekijä katsoo paperipatruunoita '
@@ -349,7 +430,12 @@ export const KEKSINNOT = [
       + 'aineiden ominaisuudet. Gallium (1875), skandium (1879) ja germanium '
       + '(1886) löytyivät ennusteiden mukaisina, ja taulukko on yhä kemian '
       + 'seinällä jokaisessa koulussa.',
-    kuva: { tiedosto: 'DIMendeleevCab.jpg', selite: 'Dmitri Mendelejev työhuoneessaan 1897.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1869-dmitri-mendeleev.jpg`,
+      selite: 'Dmitri Mendelejev, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'DIMendeleevCab.jpg', selite: 'Dmitri Mendelejev työhuoneessaan 1897.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1869-mendelejev.jpg`,
       selite: 'Taulukkoon jäävä tyhjä kohta vaivaa Mendelejeviä enemmän '
@@ -383,7 +469,12 @@ export const KEKSINNOT = [
       + 'Puristus teki moottorista tehokkaan ja hiljaisen. Daimler ja Maybach '
       + 'kehittivät siitä muutamassa vuodessa bensiinikäyttöisen version, '
       + 'joka oli riittävän kevyt ajoneuvoon.',
-    kuva: null,
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1876-nikolaus-otto.jpg`,
+      selite: 'Nikolaus Otto, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: null,
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1876-otto.jpg`,
       selite: 'Kun suuri vauhtipyörä ei pysähdy, Otton vieressä seisova '
@@ -409,7 +500,12 @@ export const KEKSINNOT = [
       + 'ensimmäisen sähköraitiotien. Sähkövoima teki mahdolliseksi '
       + 'maanalaiset radat, joissa höyryveturin savu olisi ollut '
       + 'tukahduttava.',
-    kuva: null,
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1879-werner-von-siemens.jpg`,
+      selite: 'Werner von Siemens, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: null,
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1879-siemens.jpg`,
       selite: 'Kuusipaikkaisen avovaunun poika kuuntelee, mistä veturin '
@@ -436,7 +532,12 @@ export const KEKSINNOT = [
       + 'parani, ja Pariisiin perustettiin Pasteur-instituutti vuonna 1888. '
       + 'Suomalainen Albert Edelfelt maalasi Pasteurin laboratoriossaan samana '
       + 'vuonna kuin rokote syntyi.',
-    kuva: { tiedosto: 'Albert Edelfelt - Louis Pasteur - 1885.jpg', selite: 'Louis Pasteur laboratoriossaan, Albert Edelfeltin maalaus 1885.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1885-louis-pasteur.jpg`,
+      selite: 'Louis Pasteur, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Albert Edelfelt - Louis Pasteur - 1885.jpg', selite: 'Louis Pasteur laboratoriossaan, Albert Edelfeltin maalaus 1885.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1885-pasteur.jpg`,
       selite: 'Avustaja merkitsee pullon päivämäärän tietäen, että '
@@ -464,7 +565,12 @@ export const KEKSINNOT = [
       + 'kanssa Mannheimista Pforzheimiin, yli sata kilometriä, kertomatta '
       + 'miehelleen. Matka osoitti, että auto kestää pitkän ajon — ja toi '
       + 'tehtaalle ensimmäiset tilaukset.',
-    kuva: null,
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1886-carl-benz.jpg`,
+      selite: 'Carl Benz, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: null,
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1886-benz.jpg`,
       selite: 'Kadun poika odottaa hevosen ilmestyvän, mutta ääni tulee '
@@ -490,7 +596,12 @@ export const KEKSINNOT = [
       + 'Kun opiskelija kysyi, mihin aaltoja voisi käyttää, Hertz vastasi: '
       + '"Ei mihinkään." Seitsemän vuotta myöhemmin Marconi lähetti niillä '
       + 'viestin. Taajuuden yksikkö hertsi on nimetty hänen mukaansa.',
-    kuva: { tiedosto: 'Heinrich Rudolf Hertz.jpg', selite: 'Heinrich Hertz, Robert Krewaldtin valokuva.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1888-heinrich-hertz.jpg`,
+      selite: 'Heinrich Hertz, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Heinrich Rudolf Hertz.jpg', selite: 'Heinrich Hertz, Robert Krewaldtin valokuva.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1888-hertz.jpg`,
       selite: 'Avustaja peittää kädellään lampun hajavalon ja odottaa '
@@ -515,7 +626,12 @@ export const KEKSINNOT = [
       + 'sai patentin 1896. Joulukuussa 1901 hänen asemansa Cornwallissa '
       + 'lähetti kirjaimen S Atlantin yli Newfoundlandiin. Marconi sai fysiikan '
       + 'Nobelin 1909.',
-    kuva: { tiedosto: 'Guglielmo Marconi.jpg', selite: 'Guglielmo Marconi 1908, Pach Brothers.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1895-guglielmo-marconi.jpg`,
+      selite: 'Guglielmo Marconi, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Guglielmo Marconi.jpg', selite: 'Guglielmo Marconi 1908, Pach Brothers.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1895-marconi.jpg`,
       selite: 'Villa Griffonen ullakolla nuori apulainen tuijottaa '
@@ -540,7 +656,12 @@ export const KEKSINNOT = [
       + 'Joulukuun 22. päivänä 1895 hän kuvasi vaimonsa Anna Berthan käden. '
       + '"Olen nähnyt kuolemani", vaimo sanoi. Kuukaudessa säteitä käytettiin '
       + 'jo sairaaloissa, ja Röntgen sai ensimmäisen fysiikan Nobel-palkinnon 1901.',
-    kuva: { tiedosto: 'Roentgen2.jpg', selite: 'Wilhelm Röntgen noin 1900.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1895-wilhelm-rontgen.jpg`,
+      selite: 'Wilhelm Röntgen, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Roentgen2.jpg', selite: 'Wilhelm Röntgen noin 1900.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1895-rontgen.jpg`,
       selite: 'Avustaja pitää oikean kätensä liikkumatta ja vertaa sitä '
@@ -566,7 +687,17 @@ export const KEKSINNOT = [
       + 'kymmenen lyhytfilmiä. Juna, joka saapuu asemalle, sai tarinan mukaan '
       + 'katsojat säikähtämään. Vuoden päästä kinematografeja kiersi jo '
       + 'ympäri maailmaa.',
-    kuva: { tiedosto: 'Fratelli Lumiere.jpg', selite: 'Auguste ja Louis Lumière noin 1895.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1895-auguste-lumiere.jpg`,
+      selite: 'Auguste Lumière, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaToinen: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1895-louis-lumiere.jpg`,
+      selite: 'Louis Lumière, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Fratelli Lumiere.jpg', selite: 'Auguste ja Louis Lumière noin 1895.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1895-lumiere.jpg`,
       selite: 'Eturivin katsoja kääntyy hetkeksi katsomaan vierustoveriaan: '
@@ -592,7 +723,12 @@ export const KEKSINNOT = [
       + 'Dieselin kone oli raskas mutta säästeliäs, ja se valtasi laivat, '
       + 'veturit ja kuorma-autot. Diesel itse katosi Englannin kanaalilla '
       + 'matkustajalaivalta vuonna 1913.',
-    kuva: { tiedosto: 'Rudolf Diesel.jpg', selite: 'Rudolf Diesel.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1897-rudolf-diesel.jpg`,
+      selite: 'Rudolf Diesel, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Rudolf Diesel.jpg', selite: 'Rudolf Diesel.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1897-diesel.jpg`,
       selite: 'Mekaanikko hellittää säätövivusta vasta, kun vauhtipyörän '
@@ -617,7 +753,12 @@ export const KEKSINNOT = [
       + 'polonium sai nimensä Marien kotimaasta, radium säteilystään. '
       + 'Marie Curie sai Nobelin fysiikassa 1903 ja kemiassa 1911 — ainoana '
       + 'ihmisenä kahdessa eri tieteessä.',
-    kuva: { tiedosto: 'Marie Curie c. 1898.jpg', selite: 'Marie Curie noin 1898.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1898-marie-curie.jpg`,
+      selite: 'Marie Curie, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Marie Curie c. 1898.jpg', selite: 'Marie Curie noin 1898.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1898-curie.jpg`,
       selite: 'Marie Curie kiertää raskasta rautatankoa padassa, josta '
@@ -643,7 +784,12 @@ export const KEKSINNOT = [
       + 'saksalaiset keräsivät kreiville uuden alun. Vuodesta 1910 zeppeliinit '
       + 'kuljettivat matkustajia, ja 1930-luvulla ne lensivät säännöllisesti '
       + 'Atlantin yli.',
-    kuva: { tiedosto: 'Ferdinand von Zeppelin.jpg', selite: 'Ferdinand von Zeppelin.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1900-ferdinand-von-zeppelin.jpg`,
+      selite: 'Ferdinand von Zeppelin, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Ferdinand von Zeppelin.jpg', selite: 'Ferdinand von Zeppelin.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1900-zeppelin.jpg`,
       selite: 'Köydestä vetävä palomies tuntee 128-metrisen rungon nosteen '
@@ -669,7 +815,12 @@ export const KEKSINNOT = [
       + 'läheltä ilman kompassia ja laskeutui Doverin linnan viereen 37 '
       + 'minuuttia myöhemmin. Blériot XI -koneita tilattiin sadoittain, ja '
       + 'lentokoneesta tuli Euroopassa vakavasti otettava kulkuneuvo.',
-    kuva: { tiedosto: 'Louis Bleriot.jpg', selite: 'Louis Blériot.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1909-louis-bleriot.jpg`,
+      selite: 'Louis Blériot, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Louis Bleriot.jpg', selite: 'Louis Blériot.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1909-bleriot.jpg`,
       selite: 'Kolme alusta jää pieniksi pisteiksi Kanaalille, eikä '
@@ -704,7 +855,12 @@ export const KEKSINNOT = [
       + 'jäsenille Frith Streetillä. Kuvassa oli 30 juovaa ja se välkkyi, '
       + 'mutta kasvot liikkuivat. BBC aloitti säännölliset lähetykset '
       + 'Bairdin järjestelmällä 1932.',
-    kuva: { tiedosto: 'John Logie Baird in 1917.jpg', selite: 'John Logie Baird 1917.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1926-john-logie-baird.jpg`,
+      selite: 'John Logie Baird, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'John Logie Baird in 1917.jpg', selite: 'John Logie Baird 1917.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1926-baird.jpg`,
       selite: 'Skeptinen todistaja kumartuu niin lähelle pientä '
@@ -730,7 +886,12 @@ export const KEKSINNOT = [
       + 'kymmenen vuotta. Oxfordissa Howard Florey ja Ernst Chain '
       + 'puhdistivat sen 1940, ja toisen maailmansodan aikana penisilliiniä '
       + 'tuotettiin miljoonille. Kolmikko sai Nobelin 1945.',
-    kuva: { tiedosto: 'Synthetic Production of Penicillin TR1468.jpg', selite: 'Alexander Fleming laboratoriossaan 1943.' },
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1928-alexander-fleming.jpg`,
+      selite: 'Alexander Fleming, kuvaputken generoitu studiomuotokuva (2026).',
+      lahde: 'Kuvaputken studiomuotokuva',
+    },
+    kuvaAito: { tiedosto: 'Synthetic Production of Penicillin TR1468.jpg', selite: 'Alexander Fleming laboratoriossaan 1943.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1928-fleming.jpg`,
       selite: 'Fleming on vähällä siirtää sotkuisen viljelymaljan syrjään, '

@@ -206,7 +206,7 @@ test('pelin omissa kaupungeissa valo osuu kaupungin laatan viereen', () => {
 
 test('kuvat ovat Commons-nimiä ilman polkua tai ämpäriosoitteita, ja jokaisella on selite', () => {
   for (const t of KEKSINNOT) {
-    for (const k of [t.kuva, t.ilmio]) {
+    for (const k of [t.kuva, t.kuvaToinen, t.kuvaAito, t.ilmio, t.ilmioLisa]) {
       if (!k) continue;
       if (k.osoite) {
         // Generoitu kuva: valmis osoite kuvaputken kansiossa, ei tiedostoa.
@@ -227,4 +227,65 @@ test('hyväksytyt generoidut ilmiökuvat ovat kytketty (Watt, Montgolfier, Jenne
   const odotetut = ['1769-watt', '1783-montgolfier', '1796-jenner', '1800-volta', '1804-jacquard'];
   const kytketyt = KEKSINNOT.filter((t) => t.ilmio?.osoite).map((t) => t.ilmio.osoite.split('/').pop().replace(/\.jpg$/, ''));
   for (const o of odotetut) assert.ok(kytketyt.includes(o), `${o} puuttuu`);
+});
+
+/* ==================== KEKSIJÖIDEN MUOTOKUVAT ==================== */
+
+/*
+ * Muotokuvat ovat kuvaputken generoimia studiokuvia (omistajan tilaus
+ * 3.9.2026), ja ne ovat pelin ENSISIJAINEN henkilökuva. Kolme asiaa
+ * rikkoutuisi hiljaa: pysäkiltä puuttuisi kuva (nimikirjainlaatta
+ * kesken kaaren), osoite osoittaisi väärään kansioon (404 vasta
+ * ruudulla) tai kaksoispysäkiltä puuttuisi toinen tekijä.
+ */
+
+test('jokaisella pysäkillä on generoitu muotokuva omassa kansiossaan', () => {
+  for (const t of KEKSINNOT) {
+    if (t.paalu) {
+      assert.equal(t.kuva, null, 'merkkipaalulla ei ole muotokuvaa');
+      continue;
+    }
+    assert.ok(t.kuva?.osoite, `${t.otsikko}: muotokuva puuttuu`);
+    for (const k of [t.kuva, t.kuvaToinen].filter(Boolean)) {
+      assert.ok(k.osoite.startsWith(`${KEKSINTO_KUVAJUURI}/muotokuva/`),
+        `${t.otsikko}: muotokuva väärässä kansiossa (${k.osoite})`);
+      assert.match(k.osoite, /\/\d{4}-[a-z-]+\.jpg$/, `${t.otsikko}: muotokuvan nimi ${k.osoite}`);
+      assert.match(k.selite, /, kuvaputken generoitu studiomuotokuva \(2026\)\.$/,
+        `${t.otsikko}: muotokuvan selite ${k.selite}`);
+    }
+  }
+});
+
+test('kaksoispysäkeillä on molempien keksijöiden muotokuva, muilla yksi', () => {
+  const kaksi = KEKSINNOT.filter((t) => t.kuvaToinen).map((t) => t.henkilo);
+  assert.deepEqual(kaksi, ['Montgolfier-veljekset', 'Cooke ja Wheatstone', 'Lumière-veljekset']);
+  for (const t of KEKSINNOT.filter((x) => x.kuvaToinen)) {
+    assert.notEqual(t.kuva.osoite, t.kuvaToinen.osoite, `${t.otsikko}: sama kuva kahdesti`);
+  }
+});
+
+test('muotokuvia on 28 eri tiedostoa — yhtä monta kuin ämpäriin vietiin', () => {
+  const osoitteet = KEKSINNOT.flatMap((t) => [t.kuva, t.kuvaToinen])
+    .filter((k) => k?.osoite).map((k) => k.osoite);
+  assert.equal(osoitteet.length, 28);
+  assert.equal(new Set(osoitteet).size, 28, 'sama tiedosto kahdella pysäkillä');
+});
+
+test('aito Commons-kuva säilyy datassa Tiedeliitettä varten', () => {
+  const aidot = KEKSINNOT.filter((t) => t.kuvaAito);
+  assert.equal(aidot.length, 22, 'aitoja Commons-kuvia oli 22 (Otto, Siemens ja Benz ilman)');
+  for (const t of aidot) {
+    assert.ok(t.kuvaAito.tiedosto && t.kuvaAito.selite, `${t.otsikko}: aidon kuvan tiedot`);
+  }
+  assert.match(LINSSI.lahde.lisenssi, /PD \(kuvat\)/, 'kuvien lisenssirivi ei saa kadota');
+});
+
+test('moottori piirtää kortin ja henkilörivin generoidusta muotokuvasta', () => {
+  assert.match(MOOTTORI, /const muotokuvat = \(t\) => \[t\.kuva, t\.kuvaToinen\]\.filter\(onKuva\);/);
+  assert.match(MOOTTORI, /kortti\.appendChild\(muotokuvaKehys\(t, 400, 'aikajana-muotokuva'\)\);/,
+    'kortti ottaa muotokuvan kaksoispysäkit kestävän kehyksen kautta');
+  assert.match(MOOTTORI, /muotokuvaKehys\(t, 200, 'aikajana-ilmio-kasvot'\)/,
+    'ilmiöpaneelin henkilörivillä on kasvot');
+  assert.ok(!/kuvaTaiLaatta\(t\.kuva,/.test(MOOTTORI), 'aito kuva ei enää piirry kortille');
+  assert.match(MOOTTORI, /this\.esilataaSeuraavat\(i \+ 1\);/, 'seuraavat pysäkit esiladataan');
 });

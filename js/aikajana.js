@@ -27,7 +27,10 @@
  *      reunassa blurrattuna ja nykyinen kuva heti sen oikealla
  *      puolella. Ja siitä oikealle päin näkyisi aiemmat kuvat ja
  *      keksinnön nimi, keksijä ja vuosiluku … vähän pienemmässä
- *      koossa."* Nauhan kortit ovat henkilön (PD-)muotokuvia.
+ *      koossa."* Nauhan kortit ovat keksijän KUVAPUTKEN GENEROIMIA
+ *      studiomuotokuvia (omistajan tilaus 3.9.2026, datan kentät
+ *      `kuva` ja kaksoispysäkillä `kuvaToinen`); aito Commons-kuva
+ *      (`kuvaAito`) jää datassa odottamaan Tiedeliitettä.
  *   4. ILMIÖPANEELI oikeassa yläkulmassa: *"visualisoitu se keksintö
  *      tai joku muu kuva, joka selittäisi sitä itse ilmiötä … sen
  *      generoidun kuvan alle voisi tulla se keksinnön selite ja …
@@ -120,6 +123,7 @@ import { sfx } from './sound.js';
 import { hiljennaAmbienssi, palautaAmbienssi } from './ambience-stream.js';
 import { pysaytaLukija } from './lukija.js';
 import { esilataaKohahdukset, soitaKohahdus } from './tehosteet.js';
+import { esilataaKuvat } from './ui-apurit.js';
 import {
   aloitaSiirtymamusiikki, himmennaSiirtymamusiikki, lopetaSiirtymamusiikki,
   LINSSIN_HILJENNYS,
@@ -273,6 +277,37 @@ function kuvaTaiLaatta(kuvatieto, nimi, leveys, luokka) {
     const kirjaimet = String(nimi ?? '?').split(/\s+/).map((s) => s[0] ?? '').join('').slice(0, 3);
     kehys.classList.add('tyhja');
     kehys.appendChild(solmu('span', 'aikajana-monogrammi', kirjaimet.toUpperCase()));
+  }
+  return kehys;
+}
+
+/**
+ * Pysäkin keksijöiden muotokuvat järjestyksessä. Kaksoispysäkillä
+ * (Montgolfier, Cooke ja Wheatstone, Lumière) tekijöitä on kaksi, ja
+ * molemmat kuuluvat näkyviin: yksi kasvo kahdesta olisi väärä tieto.
+ */
+const muotokuvat = (t) => [t.kuva, t.kuvaToinen].filter(onKuva);
+
+/**
+ * MUOTOKUVAKEHYS: yksi tai kaksi rintakuvaa samassa kehyksessä.
+ *
+ * Kaksi kuvaa menee vierekkäin (CSS .kaksi), ei päällekkäin — kortti
+ * on kapea, joten päällekkäisyys peittäisi toisen kasvot. Ilman
+ * yhtäkään kuvaa palataan nimikirjainlaattaan, joka on merkkipaalun
+ * ainoa esitys.
+ */
+function muotokuvaKehys(t, leveys, luokka) {
+  const kuvat = muotokuvat(t);
+  if (kuvat.length < 2) return kuvaTaiLaatta(kuvat[0] ?? null, t.henkilo ?? t.otsikko, leveys, luokka);
+  const kehys = solmu('div', `aikajana-kuvakehys ${luokka} kaksi`);
+  for (const kuvatieto of kuvat) {
+    const kuva = document.createElement('img');
+    kuva.alt = kuvatieto.selite ?? t.henkilo ?? '';
+    kuva.decoding = 'async';
+    kuva.loading = 'eager';
+    if (kuvatieto.osoite) kuva.src = kuvatieto.osoite;
+    else asetaKuva(kuva, valokuvaUrl(kuvatieto.tiedosto, leveys), valokuvaVara(kuvatieto.tiedosto, leveys));
+    kehys.appendChild(kuva);
   }
   return kehys;
 }
@@ -432,7 +467,7 @@ class Aikajana {
       const kortti = solmu('button', `aikajana-kortti${t.paalu ? ' paalu' : ''}`);
       kortti.type = 'button';
       kortti.dataset.i = String(i);
-      kortti.appendChild(kuvaTaiLaatta(t.kuva, t.henkilo ?? t.otsikko, 400, 'aikajana-muotokuva'));
+      kortti.appendChild(muotokuvaKehys(t, 400, 'aikajana-muotokuva'));
       const teksti = solmu('div', 'aikajana-korttiteksti');
       teksti.append(
         solmu('div', 'aikajana-kortti-vuosi', String(t.vuosi)),
@@ -623,6 +658,8 @@ class Aikajana {
 
   kaynnista() {
     if (!this.rakenna()) return false;
+    // Ensimmäiset pysäkit taustalle jo kamera-ajon aikana.
+    this.esilataaSeuraavat(0);
     this.avaaAanimaailma();
     // Musiikki lähtee kamera-ajon kanssa, ennen kelloa: linssi alkaa
     // äänestä eikä vasta ensimmäisestä valosta.
@@ -755,8 +792,33 @@ class Aikajana {
     return true;
   }
 
+  /**
+   * ESILATAUS (omistajan havainto 3.9.2026: *"kaikki kuvat pitää
+   * ladata ennakkoon taustalle"*). Kello ei odota verkkoa: seuraavien
+   * kolmen pysäkin muotokuvat ja ilmiökuvat pyydetään taustalle heti,
+   * kun edellinen valo syttyy, jotta kuva on selaimen välimuistissa
+   * ennen kuin paneeli vaihtuu. Kolme riittää: yksi pysäkki kestää
+   * VIIVE_MS eli useita sekunteja.
+   *
+   * Sama kirjanpito kuin muualla pelissä (ui-apurit esilataaKuvat):
+   * yksi pyyntö per osoite per istunto. Pienet WebP-versiot
+   * (aikajana/keksinnot/pieni/) otetaan käyttöön omassa erässään —
+   * tämä esilataa sen, mitä peli oikeasti näyttää.
+   */
+  esilataaSeuraavat(alkaen) {
+    const osoitteet = [];
+    for (let i = alkaen; i < Math.min(alkaen + 3, this.tapahtumat.length); i += 1) {
+      const t = this.tapahtumat[i];
+      for (const kuva of [t.kuva, t.kuvaToinen, t.ilmio]) {
+        if (kuva?.osoite) osoitteet.push(kuva.osoite);
+      }
+    }
+    esilataaKuvat(osoitteet);
+  }
+
   sytyta(i) {
     const t = this.tapahtumat[i];
+    this.esilataaSeuraavat(i + 1);
     for (const valo of this.valot) valo?.g.classList.remove('nykyinen');
     const valo = this.valot[i];
     if (valo) {
@@ -782,8 +844,16 @@ class Aikajana {
     // nauhan kortille, ei selitteen ylle.
     if (onKuva(t.ilmio)) sivu.appendChild(kuvaTaiLaatta(t.ilmio, t.otsikko, 640, 'aikajana-ilmiokuva'));
     const teksti = solmu('div', 'aikajana-ilmio-teksti');
+    /*
+     * HENKILÖRIVI: keksijän kasvot nimen vieressä. Muotokuva on
+     * pieni rintakuva, jotta katse pysyy ilmiökuvassa; kaksoispysäkin
+     * molemmat kasvot mahtuvat samalle riville vierekkäin.
+     */
+    const henkilorivi = solmu('div', 'aikajana-ilmio-henkilo');
+    if (muotokuvat(t).length) henkilorivi.appendChild(muotokuvaKehys(t, 200, 'aikajana-ilmio-kasvot'));
+    henkilorivi.appendChild(solmu('span', 'aikajana-ilmio-nimi', t.henkilo ?? ''));
     teksti.append(
-      solmu('div', 'aikajana-ilmio-henkilo', t.henkilo ?? ''),
+      henkilorivi,
       solmu('h3', 'aikajana-ilmio-otsikko', t.otsikko),
       solmu('p', 'aikajana-ilmio-selite', t.selite ?? ''),
     );
@@ -869,7 +939,13 @@ class Aikajana {
   }
 
   avaaJuttu(t) {
-    const kuvat = [t.ilmio, t.kuva].filter(onKuva);
+    /*
+     * Jutun kuvat: ilmiö ensin, sitten keksijän muotokuvat ja
+     * viimeisenä aito Commons-kuva. Aito kuva ei enää näy kortissa,
+     * mutta se ei myöskään katoa pelaajalta ennen kuin Tiedeliite
+     * ottaa sen omakseen.
+     */
+    const kuvat = [t.ilmio, ...muotokuvat(t), t.kuvaAito].filter(onKuva);
     this.ui.avaaNahtavyys?.({
       nimi: t.otsikko,
       aika: [t.vuosi, paikka(t), t.henkilo].filter(Boolean).join(' · '),

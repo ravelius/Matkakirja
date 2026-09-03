@@ -30,8 +30,13 @@
  * ------------------------------------------------------------------
  *
  * Kuvien osoitteet luetaan suoraan linssin datasta
- * (js/linssit/keksinnot.js, kentät `ilmio.osoite` ja
- * `ilmioLisa.osoite`). Kuvaputki lisää kuvia sitä mukaa kuin omistaja
+ * (js/linssit/keksinnot.js, kentät `ilmio`, `ilmioLisa`, `kuva` ja
+ * `kuvaToinen` — kaksi jälkimmäistä ovat keksijöiden generoidut
+ * muotokuvat alikansiossa `muotokuva/`, 3.9.2026). Jokaisen pieni
+ * versio menee saman alikansion `pieni/`-hakemistoon, joten
+ * ilmiökuvat päätyvät kansioon `aikajana/keksinnot/pieni/` ja
+ * muotokuvat kansioon `aikajana/keksinnot/muotokuva/pieni/`.
+ * Kuvaputki lisää kuvia sitä mukaa kuin omistaja
  * hyväksyy ne, ja kovakoodattu lista jäisi jälkeen juuri silloin, kun
  * uusi kuva on tullut — tämä työkalu tekee aina pienet versiot niistä
  * kuvista, joita peli oikeasti pyytää. Kaikki `ilmio`-kentät eivät ole
@@ -101,11 +106,21 @@ export const LAATU = 78;
  */
 export const MAKS_TAVUT = 90 * 1024;
 
-/** Ämpärin kansio pienille versioille ja sen peilipolku levyllä. */
+/**
+ * Ämpärin kansio pienille versioille ja sen peilipolku levyllä.
+ *
+ * Alkuperäisiä on kahdessa kansiossa: ilmiökuvat keksintökansion
+ * juuressa ja keksijöiden muotokuvat sen alikansiossa `muotokuva/`
+ * (3.9.2026). Pieni versio menee saman alikansion sisään
+ * (`aikajana/keksinnot/muotokuva/pieni/`), jotta osoitteen saa yhä
+ * suoraan alkuperäisestä eikä kahden nimen välillä tarvita listaa.
+ */
 export const AMPARIN_KANSIO = 'aikajana/keksinnot/pieni';
-const KOHDE_KANSIO = 'media/aikajana/keksinnot/pieni';
 /** Alkuperäisten kansio ämpärissä — pieni versio ei saa mennä sen päälle. */
 const LAHTEEN_KANSIO = 'aikajana/keksinnot';
+/** Pienen version ämpäriavain ja levypolku alikansion mukaan. */
+const ampariAvain = (alikansio, runko) => `${LAHTEEN_KANSIO}/${alikansio ? `${alikansio}/` : ''}pieni/${runko}.webp`;
+const kohdeKansio = (alikansio) => `media/${LAHTEEN_KANSIO}/${alikansio ? `${alikansio}/` : ''}pieni`;
 
 // ── argumentit ─────────────────────────────────────────────────────
 
@@ -131,7 +146,8 @@ export function tulkitseArgumentit(argumentit) {
 // ── kuvalista datasta ──────────────────────────────────────────────
 
 /**
- * Osoitteesta tiedoston runko (nimi ilman päätettä).
+ * Osoitteesta tiedoston runko ja alikansio keksintökansion sisällä
+ * (`''` = juuri, `'muotokuva'` = keksijöiden muotokuvat).
  *
  * Osoitteen on oltava ämpärin keksintökansiossa: jos kuvaputki joskus
  * osoittaisi muualle, pienen version polku menisi väärään paikkaan
@@ -144,40 +160,52 @@ export function runkoOsoitteesta(osoite) {
   } catch {
     throw new Error(`osoite ei ole URL: ${osoite}`);
   }
-  if (!polku.includes(`/${LAHTEEN_KANSIO}/`)) {
+  const jako = polku.split(`/${LAHTEEN_KANSIO}/`);
+  if (jako.length !== 2) {
     throw new Error(`osoite ei ole kansiossa ${LAHTEEN_KANSIO}/: ${osoite}`);
   }
-  const nimi = decodeURIComponent(polku.split('/').pop() ?? '');
+  const osat = decodeURIComponent(jako[1]).split('/');
+  const nimi = osat.pop() ?? '';
+  const alikansio = osat.join('/');
+  if (alikansio === 'pieni' || osat.includes('pieni')) {
+    throw new Error(`osoite osoittaa jo pieneen versioon: ${osoite}`);
+  }
   const runko = nimi.replace(/\.[a-z0-9]+$/i, '');
   if (!runko || runko === nimi) throw new Error(`osoitteesta ei saa nimeä: ${osoite}`);
-  return runko;
+  return { runko, alikansio };
 }
 
 /**
  * Kaikki pienennettävät kuvat linssin datasta, järjestyksessä ja
- * kertaalleen. Kaksi kenttää: `ilmio` on pysäkin oma ilmiökuva ja
- * `ilmioLisa` sen toinen kuvakulma (kuvaputken lisäkuva).
+ * kertaalleen. Neljä kenttää: `ilmio` on pysäkin oma ilmiökuva,
+ * `ilmioLisa` sen toinen kuvakulma, ja `kuva`/`kuvaToinen` ovat
+ * keksijöiden generoidut muotokuvat (kaksoispysäkillä kaksi).
+ * Muotokuvat asuvat omassa alikansiossaan, ja pieni versio menee
+ * saman alikansion `pieni/`-hakemistoon.
  */
 export async function keraaKuvat() {
   const moduuli = await import(new URL('../js/linssit/keksinnot.js', import.meta.url).href);
   const tapahtumat = moduuli.KEKSINNOT ?? [];
   const kuvat = new Map();
   for (const tapahtuma of tapahtumat) {
-    for (const kentta of ['ilmio', 'ilmioLisa']) {
+    for (const kentta of ['ilmio', 'ilmioLisa', 'kuva', 'kuvaToinen']) {
       const osoite = tapahtuma[kentta]?.osoite;
       if (!osoite) continue;
-      const runko = runkoOsoitteesta(osoite);
-      const vanha = kuvat.get(runko);
+      const { runko, alikansio } = runkoOsoitteesta(osoite);
+      const avain = ampariAvain(alikansio, runko);
+      const vanha = kuvat.get(avain);
       if (vanha && vanha.lahde !== osoite) {
         throw new Error(`kaksi eri osoitetta samalla nimellä ${runko}: `
           + `${vanha.lahde} ja ${osoite}`);
       }
       if (vanha) { vanha.kentat.push(`${tapahtuma.vuosi} ${kentta}`); continue; }
-      kuvat.set(runko, {
+      kuvat.set(avain, {
         runko,
+        alikansio,
         lahde: osoite,
         tiedosto: `${runko}.webp`,
-        avain: `${AMPARIN_KANSIO}/${runko}.webp`,
+        kansio: kohdeKansio(alikansio),
+        avain,
         kentat: [`${tapahtuma.vuosi} ${kentta}`],
       });
     }
@@ -348,10 +376,11 @@ async function main() {
   }
 
   console.log(`Pienet versiot: ${kuvat.length}/${kaikki.length} kuvaa `
-    + '(js/linssit/keksinnot.js, kentät ilmio.osoite ja ilmioLisa.osoite)');
+    + '(js/linssit/keksinnot.js, kentät ilmio, ilmioLisa, kuva ja kuvaToinen)');
   console.log(`Mitat: leveys ${LEVEYS} px, korkeus suhteessa, WebP laatu ${LAATU}, `
     + `katto ${(MAKS_TAVUT / 1024).toFixed(0)} kt`);
-  console.log(`Kohde: ämpärin ${AMPARIN_KANSIO}/<nimi>.webp`);
+  console.log(`Kohde: ämpärin ${AMPARIN_KANSIO}/<nimi>.webp ja `
+    + `${LAHTEEN_KANSIO}/muotokuva/pieni/<nimi>.webp`);
   console.log('');
 
   let virheita = 0;
@@ -387,16 +416,18 @@ async function main() {
   }
 
   // Ennen ensimmäistäkään kirjoitusta: kohde ei saa olla repossa.
-  const kohdekansio = resolve(JUURI, KOHDE_KANSIO);
-  vaadiGitignore(kohdekansio);
-  mkdirSync(kohdekansio, { recursive: true });
+  for (const kansio of new Set(kuvat.map((kuva) => kuva.kansio))) {
+    const polku = resolve(JUURI, kansio);
+    vaadiGitignore(polku);
+    mkdirSync(polku, { recursive: true });
+  }
 
   const tyokansio = mkdtempSync(join(tmpdir(), 'pienet-kuvat-'));
   const valmiit = [];
   try {
     for (const kuva of kuvat) {
       const lahde = join(tyokansio, `alkuperainen-${kuva.runko}`);
-      const kohde = join(kohdekansio, kuva.tiedosto);
+      const kohde = join(resolve(JUURI, kuva.kansio), kuva.tiedosto);
       console.log(`── ${kuva.runko}  [${kuva.kentat.join(', ')}]`);
       // eslint-disable-next-line no-await-in-loop
       const tavut = await nouda(kuva.lahde, lahde);
@@ -419,7 +450,7 @@ async function main() {
 
     if (liput.vienti) {
       for (const kuva of valmiit) {
-        vieAmpariin(join(kohdekansio, kuva.tiedosto), kuva.avain);
+        vieAmpariin(join(resolve(JUURI, kuva.kansio), kuva.tiedosto), kuva.avain);
       }
     }
   } finally {
@@ -429,7 +460,7 @@ async function main() {
   console.log('');
   if (!liput.vienti) {
     console.log('Vienti ohitettiin (--ei-vientia). Tiedostot:');
-    for (const kuva of valmiit) console.log(`  ${join(kohdekansio, kuva.tiedosto)}`);
+    for (const kuva of valmiit) console.log(`  ${join(resolve(JUURI, kuva.kansio), kuva.tiedosto)}`);
   } else {
     console.log('Julkiset osoitteet:');
     for (const kuva of valmiit) {
