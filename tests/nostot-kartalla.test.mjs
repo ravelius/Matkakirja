@@ -116,9 +116,22 @@ test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
   // 64 → 50 (2.9.2026 ilta): "kartan oma kohde" -luokka tyhjeni kahta
   // poikkeusta vaille (izmir/izmir on kaupunki itse, luxor/niili jakaa
   // tunnuksensa Sudanin ja Ugandan Niilin kanssa).
-  assert.ok(kesken.length <= 50,
+  //
+  // 50 → 52 (3.9.2026): photo-v3-erän kaksi uutta historian hetkeä
+  // osuvat kohdekaupungin päälle — Kolumbuksen hylkäys Lissabonissa
+  // 1484 (1 yksikkö) ja Santa Fén kapitulaatiot Granadan vieressä
+  // 1492 (4 yksikköä). Kumpikin on luokkaa `hetki`, joka on tämän
+  // testin sallittujen syiden listalla: hetken kortti ei mahdu
+  // kohdekartan nähtävyysikkunaan, joten sen ainoa karttapaikka on
+  // pääkartta kattoVapaa-lipulla — sama ratkaisu kuin Restelolla ja
+  // Kristianialla. Katto nousee vain hetkien verran; muiden lajien
+  // luku ei saa yhä kasvaa.
+  assert.ok(kesken.length <= 52,
     `kaupungin kohdalla on pääkartalla ${kesken.length} nostoa (säde `
-    + `${KAUPUNGIN_KOHDALLA_SADE}), enintään 50 sallittu — uusi nosto kuuluu kohdekartalle`);
+    + `${KAUPUNGIN_KOHDALLA_SADE}), enintään 52 sallittu — uusi nosto kuuluu kohdekartalle`);
+  const muutKuinHetket = kesken.filter((r) => r.kaupunginKohdalla !== 'hetki');
+  assert.ok(muutKuinHetket.length <= 48,
+    `muita kuin hetkiä on kaupungin kohdalla ${muutKuinHetket.length} — luku saa vain laskea`);
 });
 
 test('kohdekartan nostopiste on napautettava ja rajauksen sisällä', () => {
