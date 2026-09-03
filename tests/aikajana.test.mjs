@@ -14,7 +14,9 @@ import { readFileSync } from 'node:fs';
 import {
   aikajanaAskel, rullaaVuosi, VUOSI_RULLAUS_MS, AIKAJANA_NAKSU_VALI_MS,
   AIKAJANA_VIIVE_MS, AIKAJANA_PAALU_MS, AIKAJANA_TAUKO_HIMMENNYS,
+  pieniOsoite, PIENEN_KATTO, karusellinPaikat, karusellinMitta, KARUSELLIN_MITAT,
 } from '../js/aikajana.js';
+import { runkoOsoitteesta } from '../tools/tee-pienet-kuvat.mjs';
 import { KEKSINNOT, KEKSINTO_KUVAJUURI, LINSSI } from '../js/linssit/keksinnot.js';
 import { projisoiLaudalle } from '../js/fokusmitat.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
@@ -105,6 +107,150 @@ test('vuosinäyttö jakaa luvun rulliin ja vaihtaa vain muuttuneet numerot', () 
   assert.equal(rullat[1].uusi.textContent, '9');
   // Sama vuosi uudelleen ei liikuta mitään.
   assert.equal(rullaaVuosi(rullat, '1928').length, 0);
+});
+
+/* ==================== PIENI KUVAVERSIO ==================== */
+
+/*
+ * Pieni WebP-versio (Raamattu, KEKSIJAT LINSSIN ALARIVILLA kohta 4).
+ * Osoitesääntö on kahdessa paikassa — pelissä (pieniOsoite) ja
+ * pienennystyökalussa (tools/tee-pienet-kuvat.mjs) — ja juuri se
+ * rikkoutuisi hiljaa: peli pyytäisi osoitetta, jota ämpärissä ei ole,
+ * ja varareitti näyttäisi ison kuvan ilman että kukaan huomaa.
+ */
+
+test('pieni versio menee saman kansion pieni/-alikansioon WebPinä', () => {
+  assert.equal(
+    pieniOsoite(`${KEKSINTO_KUVAJUURI}/1769-watt.jpg`),
+    `${KEKSINTO_KUVAJUURI}/pieni/1769-watt.webp`,
+  );
+  assert.equal(
+    pieniOsoite(`${KEKSINTO_KUVAJUURI}/muotokuva/1769-james-watt.jpg`),
+    `${KEKSINTO_KUVAJUURI}/muotokuva/pieni/1769-james-watt.webp`,
+  );
+});
+
+test('kelvoton syöte palautuu sellaisenaan eikä pieni kierry kahdesti', () => {
+  for (const syote of ['', 'ei-url', 'aikajana/keksinnot/1769-watt.jpg',
+    `${KEKSINTO_KUVAJUURI}/ilman-paatetta`, null, undefined, 42]) {
+    assert.equal(pieniOsoite(syote), syote, `${syote}`);
+  }
+  // Jo pieni osoite ei saa saada toista pieni/-kerrosta.
+  const pieni = `${KEKSINTO_KUVAJUURI}/pieni/1769-watt.webp`;
+  assert.equal(pieniOsoite(pieni), pieni);
+});
+
+test('pieni osoite on sama kuin pienennystyökalun kirjoittama avain', () => {
+  const osoitteet = KEKSINNOT.flatMap((t) => [t.kuva, t.kuvaToinen, t.ilmio, t.ilmioLisa])
+    .filter((k) => k?.osoite).map((k) => k.osoite);
+  assert.ok(osoitteet.length >= 50, `osoitteita vain ${osoitteet.length}`);
+  for (const osoite of osoitteet) {
+    const { runko, alikansio } = runkoOsoitteesta(osoite);
+    const odotettu = `${KEKSINTO_KUVAJUURI}/${alikansio ? `${alikansio}/` : ''}pieni/${runko}.webp`;
+    assert.equal(pieniOsoite(osoite), odotettu, osoite);
+  }
+});
+
+test('moottori näyttää pienen version ja esilataa koko kaaren pienenä', () => {
+  // Ilmiöpaneeli (640) ja kortin muotokuva (400) mahtuvat kattoon.
+  assert.equal(PIENEN_KATTO, 640);
+  assert.match(MOOTTORI, /if \(kuvatieto\.osoite\) asetaAmpariKuva\(kuva, kuvatieto\.osoite, leveys\);/);
+  // Varareitti kerran, ei silmukkaa.
+  assert.match(MOOTTORI, /function asetaAmpariKuva[\s\S]{0,500}addEventListener\('error', \(\) => \{ kuva\.src = osoite; \}, \{ once: true \}\)/);
+  // Esilataus: koko kaari pienenä heti käynnistyksessä, ei kolmen ikkunaa.
+  assert.match(MOOTTORI, /kaynnista\(\) \{[\s\S]{0,200}this\.esilataaPienet\(\);/);
+  assert.match(MOOTTORI, /esilataaPienet\(\) \{[\s\S]{0,400}for \(const t of this\.tapahtumat\)[\s\S]{0,300}pieniOsoite\(kuva\.osoite\)/);
+  assert.ok(!/esilataaSeuraavat/.test(MOOTTORI), 'kolmen pysäkin ikkuna on korvattu');
+  // "Lue juttu" -galleria saa yhä alkuperäiset kuvatiedot.
+  assert.match(MOOTTORI, /const kuvat = \[t\.ilmio, \.\.\.muotokuvat\(t\), t\.kuvaAito\]\.filter\(onKuva\);/);
+});
+
+/* ==================== KARUSELLI ==================== */
+
+/*
+ * Alarivi on karuselli (omistaja 3.9.2026). Laskenta rikkoutuisi
+ * hiljaa: kortti liukuisi ruudun ulkopuolelle, keskikortti ei olisi
+ * keskellä tai sumennus osuisi väärälle puolelle. LEVEYS on nauhan
+ * leveys kortin leveyksinä — 1280 px:n ruudulla noin 9,7 ja 390 px:n
+ * puhelimella noin 4.
+ */
+const LEVEA = 9.7;
+const KAPEA = 4;
+
+test('nykyinen kortti on aina keskellä ruutua täydessä mitassa', () => {
+  for (const leveys of [LEVEA, KAPEA, 0.5]) {
+    const k = karusellinPaikat(5, 5, leveys);
+    assert.equal(k.paikka, 0, `leveys ${leveys}`);
+    assert.equal(k.mitta, 1);
+    assert.equal(k.luokka, 'nykyinen');
+    assert.equal(k.sumennus, 0);
+    assert.equal(k.himmeys, 1);
+  }
+});
+
+test('menneet ovat vasemmalla ja sumeita, tulevat oikealla ja tarkkoja', () => {
+  const mennyt = karusellinPaikat(4, 5, LEVEA);
+  const tuleva = karusellinPaikat(6, 5, LEVEA);
+  assert.ok(mennyt.paikka < 0, 'mennyt kuuluu vasemmalle');
+  assert.ok(tuleva.paikka > 0, 'tuleva kuuluu oikealle');
+  assert.equal(mennyt.luokka, 'mennyt');
+  assert.equal(tuleva.luokka, 'tuleva');
+  assert.ok(mennyt.sumennus >= 1.5 && mennyt.sumennus <= 2, `sumennus ${mennyt.sumennus} px`);
+  assert.equal(tuleva.sumennus, 0, 'tulevia ei sumenneta');
+  // Sivut ovat symmetriset koon puolesta ja merkittävästi pienempiä.
+  assert.equal(mennyt.mitta, tuleva.mitta);
+  assert.ok(mennyt.mitta <= 0.7, `sivukortin mitta ${mennyt.mitta}`);
+  assert.ok(mennyt.himmeys < 1 && tuleva.himmeys < 1, 'sivut ovat vaimeampia');
+});
+
+test('kortit pienenevät ja etääntyvät järjestyksessä keskeltä ulos', () => {
+  let edellinen = karusellinPaikat(5, 5, LEVEA);
+  for (let d = 1; d <= 6; d += 1) {
+    const oikea = karusellinPaikat(5 + d, 5, LEVEA);
+    const vasen = karusellinPaikat(5 - d, 5, LEVEA);
+    assert.ok(oikea.paikka > edellinen.paikka, `d=${d}: etäisyys ei kasva`);
+    assert.ok(oikea.mitta <= edellinen.mitta, `d=${d}: mitta ei pienene`);
+    assert.ok(Math.abs(vasen.paikka + oikea.paikka) < 1e-9, `d=${d}: puolet eivät ole peilikuvia`);
+    assert.equal(vasen.mitta, oikea.mitta);
+    // Kortit eivät saa mennä päällekkäin: väli on vähintään mittojen keskiarvo.
+    assert.ok(oikea.paikka - edellinen.paikka >= (oikea.mitta + edellinen.mitta) / 2 - 1e-9,
+      `d=${d}: kortit menisivät päällekkäin`);
+    edellinen = oikea;
+  }
+  assert.equal(karusellinMitta(9), KARUSELLIN_MITAT.at(-1), 'kauimmaiset eivät enää kutistu');
+});
+
+test('reunan taakse jäävä kortti on piilossa, ja kapea ruutu näyttää vähemmän', () => {
+  const nakyvat = (leveys) => {
+    let n = 0;
+    for (let i = 0; i < 26; i += 1) if (karusellinPaikat(i, 12, leveys).luokka !== 'piilossa') n += 1;
+    return n;
+  };
+  const levealla = nakyvat(LEVEA);
+  const kapealla = nakyvat(KAPEA);
+  assert.ok(levealla >= 9, `leveällä ruudulla näkyi vain ${levealla} korttia`);
+  assert.ok(kapealla >= 3 && kapealla <= 7, `kapealla ruudulla näkyi ${kapealla} korttia`);
+  assert.ok(kapealla < levealla, 'kapea ruutu ei näytä yhtä montaa');
+  // Piilossa oleva kortti ei ole napautettava eikä näy.
+  const piilossa = karusellinPaikat(25, 12, KAPEA);
+  assert.equal(piilossa.luokka, 'piilossa');
+  assert.equal(piilossa.himmeys, 0);
+  // Nykyinen näkyy vaikka ruutu olisi korttia kapeampi.
+  assert.equal(karusellinPaikat(12, 12, 0.4).luokka, 'nykyinen');
+});
+
+test('lähempi kortti peittää kauemman', () => {
+  assert.ok(karusellinPaikat(5, 5, LEVEA).jarjestys > karusellinPaikat(6, 5, LEVEA).jarjestys);
+  assert.ok(karusellinPaikat(6, 5, LEVEA).jarjestys > karusellinPaikat(8, 5, LEVEA).jarjestys);
+});
+
+test('moottori asettelee karusellin mitatusta leveydestä eikä kehyskohtaisesti', () => {
+  assert.match(MOOTTORI, /asettele\(\) \{[\s\S]{0,400}karusellinPaikat\(i, nyt, leveys\)/);
+  assert.match(MOOTTORI, /nauhanLeveysKortteina\(\) \{[\s\S]{0,400}nauha \/ kortti/);
+  // Koon muutos laskee asettelun uudelleen — kuuntelijalla, ei ajastimella.
+  assert.match(MOOTTORI, /addEventListener\?\.\('resize', this\.koonMuutos\)/);
+  assert.match(MOOTTORI, /removeEventListener\?\.\('resize', this\.koonMuutos\)/);
+  assert.ok(!/setInterval/.test(MOOTTORI), 'karuselli ei saa ajastinta');
 });
 
 test('rullauksen kesto on Raamatun animaatiosäännön rajoissa', () => {
@@ -287,5 +433,5 @@ test('moottori piirtää kortin ja henkilörivin generoidusta muotokuvasta', () 
   assert.match(MOOTTORI, /muotokuvaKehys\(t, 200, 'aikajana-ilmio-kasvot'\)/,
     'ilmiöpaneelin henkilörivillä on kasvot');
   assert.ok(!/kuvaTaiLaatta\(t\.kuva,/.test(MOOTTORI), 'aito kuva ei enää piirry kortille');
-  assert.match(MOOTTORI, /this\.esilataaSeuraavat\(i \+ 1\);/, 'seuraavat pysäkit esiladataan');
+  assert.match(MOOTTORI, /this\.esilataaPienet\(\);/, 'koko kaari esiladataan pienenä');
 });

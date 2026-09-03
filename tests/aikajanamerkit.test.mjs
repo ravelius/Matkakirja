@@ -158,8 +158,8 @@ globalThis.fetch = () => Promise.reject(new Error('ei verkkoa testissä'));
 globalThis.window = { AudioContext: function Ctx() { return {}; } };
 
 /*
- * ESILATAUSTYNKÄ. Linssi pyytää seuraavien pysäkkien muotokuvat ja
- * ilmiökuvat taustalle (js/aikajana.js esilataaSeuraavat →
+ * ESILATAUSTYNKÄ. Linssi pyytää koko kaaren muotokuvat ja ilmiökuvat
+ * PIENINÄ taustalle heti avautuessaan (js/aikajana.js esilataaPienet →
  * js/ui-apurit.js esilataaKuvat), joten ilman selaimen Image-luokkaa
  * käynnistys kaatuisi. Osoitteet talteen, jotta esilataus on myös
  * mitattavissa eikä vain vaiettu pois.
@@ -221,7 +221,7 @@ globalThis.Audio = TynkaAudio;
 
 /* ── moduulit tyngän jälkeen ─────────────────────────────────────── */
 
-const { kaynnistaAikajana, pysaytaAikajana, MERKIN_SADE } = await import('../js/aikajana.js');
+const { kaynnistaAikajana, pysaytaAikajana, MERKIN_SADE, pieniOsoite } = await import('../js/aikajana.js');
 const { LINSSI } = await import('../js/linssit/keksinnot.js');
 const { lisaaVaistaja, nollaaHiljennykset } = await import('../js/ambience-stream.js');
 const { LINSSIN_HILJENNYS } = await import('../js/siirtymamusiikki.js');
@@ -460,25 +460,27 @@ test('moottori soittaa kohahduksen elävästä vaihdoksesta ja naksahtaa varana'
 
 /*
  * Omistajan havainto 3.9.2026: kuvat pitää olla ladattuina ennen kuin
- * paneeli vaihtuu. Tässä mitataan se, mitä moottori oikeasti pyytää:
- * kolmen seuraavan pysäkin muotokuvat ja ilmiökuvat, kaksoispysäkin
- * molemmat kasvot mukaan luettuina.
+ * paneeli vaihtuu — *"ainakin tuossa pienemmässä koossa"*. Raamatun
+ * kohta 4 (KEKSIJAT LINSSIN ALARIVILLA) tarkentaa: KOKO kaari
+ * esiladataan PIENINÄ heti linssin avautuessa, isoja ei lainkaan.
+ * Tässä mitataan se, mitä moottori oikeasti pyytää.
  */
-test('linssin avaus esilataa seuraavien pysäkkien muotokuvat ja ilmiökuvat', () => {
+test('linssin avaus esilataa koko kaaren kuvat pieninä, ei ainuttakaan isoa', () => {
   const ui = tynkaUi();
   kaynnistaAikajana(ui, LINSSI);
-  const alku = LINSSI.aikajana.tapahtumat.slice(0, 3);
-  for (const t of alku) {
-    for (const kuva of [t.kuva, t.kuvaToinen, t.ilmio]) {
+  for (const t of LINSSI.aikajana.tapahtumat) {
+    for (const kuva of [t.kuva, t.kuvaToinen, t.ilmio, t.ilmioLisa]) {
       if (!kuva?.osoite) continue;
-      assert.ok(esiladatut.includes(kuva.osoite), `esilataamatta: ${kuva.osoite}`);
+      assert.ok(esiladatut.includes(pieniOsoite(kuva.osoite)),
+        `esilataamatta: ${pieniOsoite(kuva.osoite)}`);
+      assert.ok(!esiladatut.includes(kuva.osoite), `iso esiladattiin: ${kuva.osoite}`);
     }
   }
   // Montgolfier on kaksoispysäkki: molemmat kasvot pyydetään.
-  assert.ok(esiladatut.filter((o) => o.includes('/muotokuva/1783-')).length === 2,
+  assert.ok(esiladatut.filter((o) => o.includes('/muotokuva/pieni/1783-')).length === 2,
     'kaksoispysäkiltä esiladattiin vain toinen keksijä');
-  // Vasta myöhemmät pysäkit eivät kuormita avausta.
-  assert.ok(!esiladatut.some((o) => o.includes('1928-alexander-fleming')),
-    'koko kaari esiladattiin kerralla');
+  // Myös kaaren viimeinen pysäkki on mukana — ei enää kolmen ikkunaa.
+  assert.ok(esiladatut.some((o) => o.includes('1928-alexander-fleming')),
+    'kaaren loppupää jäi esilataamatta');
   pysaytaAikajana(ui);
 });

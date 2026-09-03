@@ -23,11 +23,21 @@
  *   2. VALOT kartalla: *"kartalle syttyisi valo siihen kaupunkiin,
  *      missä se on tehty"*. Valo jää palamaan — kaaren lopussa kartalla
  *      on koko kaaren valokartta.
- *   3. FILMINAUHA alalaidassa: *"aina seuraava kuva on vasemmassa
- *      reunassa blurrattuna ja nykyinen kuva heti sen oikealla
- *      puolella. Ja siitä oikealle päin näkyisi aiemmat kuvat ja
- *      keksinnön nimi, keksijä ja vuosiluku … vähän pienemmässä
- *      koossa."* Nauhan kortit ovat keksijän KUVAPUTKEN GENEROIMIA
+ *   3. FILMINAUHA alalaidassa. Ensimmäinen muoto oli omistajan kuvaus
+ *      2.9.2026 illalta: *"aina seuraava kuva on vasemmassa reunassa
+ *      blurrattuna ja nykyinen kuva heti sen oikealla puolella. Ja
+ *      siitä oikealle päin näkyisi aiemmat kuvat ja keksinnön nimi,
+ *      keksijä ja vuosiluku … vähän pienemmässä koossa."*
+ *      KARUSELLI korvasi sen 3.9.2026 (omistaja, sanatarkasti):
+ *      *"nuo henkiloiden kuvat voisi tayttaa koko alarivin niin etta
+ *      nykyinen henkilo on aina keskella ruutua ja kaikki vasemmalla
+ *      ja oikealla puolella olevat ovat merkittavasti pienempia ja
+ *      kaikki vasemmalla puolella ovat kevyesti blurattuja."*
+ *      Nauha on siis KRONOLOGINEN: menneet vasemmalla (sumennettuina),
+ *      nykyinen keskellä ruutua isona, tulevat oikealla (tarkkoina
+ *      mutta pienempinä ja vaimeampina). Vuoden vaihtuessa koko rivi
+ *      liukuu yhden askeleen vasemmalle — ks. karusellinPaikat ja
+ *      asettele. Nauhan kortit ovat keksijän KUVAPUTKEN GENEROIMIA
  *      studiomuotokuvia (omistajan tilaus 3.9.2026, datan kentät
  *      `kuva` ja kaksoispysäkillä `kuvaToinen`); aito Commons-kuva
  *      (`kuvaAito`) jää datassa odottamaan Tiedeliitettä.
@@ -256,6 +266,70 @@ function onKuva(kuvatieto) {
   return Boolean(kuvatieto?.tiedosto || kuvatieto?.osoite);
 }
 
+/* ==================== PIENI KUVAVERSIO ==================== */
+
+/**
+ * ÄMPÄRIOSOITTEEN PIENI VERSIO (Raamattu, KEKSIJAT LINSSIN ALARIVILLA
+ * kohta 4: *"LINSSIKUVAT ESILADATAAN pienina (640 px WebP, ampari
+ * aikajana/keksinnot/pieni/) linssin avautuessa; iso kuva vasta Lue
+ * juttu -napista."*).
+ *
+ * Sääntö on täsmälleen sama kuin pienennystyökalulla
+ * (tools/tee-pienet-kuvat.mjs `runkoOsoitteesta` + `ampariAvain`):
+ * pieni versio menee ALKUPERÄISEN OMAN kansion `pieni/`-alikansioon ja
+ * saa saman rungon WebP-päätteellä. Siksi kaksi kansiota kulkee
+ * samalla säännöllä eikä nimilistaa tarvita:
+ *
+ *   …/aikajana/keksinnot/1769-watt.jpg
+ *     → …/aikajana/keksinnot/pieni/1769-watt.webp
+ *   …/aikajana/keksinnot/muotokuva/1769-james-watt.jpg
+ *     → …/aikajana/keksinnot/muotokuva/pieni/1769-james-watt.webp
+ *
+ * PALAUTTAA SYÖTTEEN SELLAISENAAN, jos se ei ole URL, jos nimessä ei
+ * ole päätettä tai jos osoite on jo pienessä kansiossa. Peli ei saa
+ * kaatua kuvan takia — puuttuvan pienen version hoitaa kuvaelementin
+ * kertaluontoinen varareitti (asetaAmpariKuva).
+ *
+ * @param {string} osoite
+ * @returns {string}
+ */
+export function pieniOsoite(osoite) {
+  if (typeof osoite !== 'string' || !osoite) return osoite;
+  let url;
+  try {
+    url = new URL(osoite);
+  } catch {
+    return osoite;
+  }
+  const osat = url.pathname.split('/');
+  const nimi = osat.pop() ?? '';
+  const runko = nimi.replace(/\.[a-z0-9]+$/i, '');
+  // Ei päätettä (runko === nimi) tai ei nimeä lainkaan: ei kosketa.
+  if (!runko || runko === nimi) return osoite;
+  if (osat.at(-1) === 'pieni') return osoite;
+  url.pathname = [...osat, 'pieni', `${runko}.webp`].join('/');
+  return url.href;
+}
+
+/**
+ * Suurin leveys, jossa pieni versio (640 px) riittää. Sitä isompi
+ * pyyntö — käytännössä vain jutun galleria — saa alkuperäisen.
+ */
+export const PIENEN_KATTO = 640;
+
+/**
+ * Ämpärikuva elementtiin: pieni versio ensin, alkuperäinen VARANA
+ * KERRAN. Kertaluontoinen kuuntelija (`once`) on tässä olennainen:
+ * jos varakin kaatuu, uutta yritystä ei tule eikä synny silmukkaa.
+ */
+function asetaAmpariKuva(kuva, osoite, leveys) {
+  const pieni = leveys <= PIENEN_KATTO ? pieniOsoite(osoite) : osoite;
+  if (pieni !== osoite) {
+    kuva.addEventListener('error', () => { kuva.src = osoite; }, { once: true });
+  }
+  kuva.src = pieni;
+}
+
 /** Kuva pergamentille; ilman lähdettä nimikirjainlaatta. */
 function kuvaTaiLaatta(kuvatieto, nimi, leveys, luokka) {
   const kehys = solmu('div', `aikajana-kuvakehys ${luokka}`);
@@ -266,11 +340,12 @@ function kuvaTaiLaatta(kuvatieto, nimi, leveys, luokka) {
     kuva.loading = 'eager';
     /*
      * Generoitu kuva (kuvaputki, ämpäri) kulkee valmiina `osoite`-
-     * kenttänä ilman thumb-putkea tai varareittiä — sama sopimus kuin
-     * historian hetkillä (js/historian-hetket.js). Commons-kuva
+     * kenttänä ilman thumb-putkea — sama sopimus kuin historian
+     * hetkillä (js/historian-hetket.js) — mutta pienenä versiona ja
+     * alkuperäinen varana (asetaAmpariKuva). Commons-kuva
      * (`tiedosto`) menee peilin ja Commonsin portaita kuten ennen.
      */
-    if (kuvatieto.osoite) kuva.src = kuvatieto.osoite;
+    if (kuvatieto.osoite) asetaAmpariKuva(kuva, kuvatieto.osoite, leveys);
     else asetaKuva(kuva, valokuvaUrl(kuvatieto.tiedosto, leveys), valokuvaVara(kuvatieto.tiedosto, leveys));
     kehys.appendChild(kuva);
   } else {
@@ -305,7 +380,7 @@ function muotokuvaKehys(t, leveys, luokka) {
     kuva.alt = kuvatieto.selite ?? t.henkilo ?? '';
     kuva.decoding = 'async';
     kuva.loading = 'eager';
-    if (kuvatieto.osoite) kuva.src = kuvatieto.osoite;
+    if (kuvatieto.osoite) asetaAmpariKuva(kuva, kuvatieto.osoite, leveys);
     else asetaKuva(kuva, valokuvaUrl(kuvatieto.tiedosto, leveys), valokuvaVara(kuvatieto.tiedosto, leveys));
     kehys.appendChild(kuva);
   }
@@ -314,6 +389,100 @@ function muotokuvaKehys(t, leveys, luokka) {
 
 /** Kaupungin nimi tapahtumasta (paikka on datan kenttä). */
 const paikka = (t) => t.paikka ?? t.kaupunki ?? '';
+
+/* ==================== KARUSELLI ==================== */
+
+/*
+ * ALARIVI ON KARUSELLI (omistaja 3.9.2026, sanatarkasti: *"nuo
+ * henkiloiden kuvat voisi tayttaa koko alarivin niin etta nykyinen
+ * henkilo on aina keskella ruutua ja kaikki vasemmalla ja oikealla
+ * puolella olevat ovat merkittavasti pienempia ja kaikki vasemmalla
+ * puolella ovat kevyesti blurattuja"*).
+ *
+ * MIKSI PUHTAANA FUNKTIONA. Koko asettelu on yhtä laskentaa: kuinka
+ * kaukana keskeltä kortti on, kuinka pieni se on, näkyykö se ja
+ * kuinka sumea se on. Laskenta rikkoutuu hiljaa (kortti liukuu ruudun
+ * ulkopuolelle tai keskikortti ei ole keskellä), joten se on tässä
+ * DOM:ittomana ja testattavana — kuten tahti ja vuosiluvun rullaus.
+ * DOM saa vain valmiit luvut CSS-muuttujiin (asettele).
+ */
+
+/**
+ * Kortin mitta etäisyyden mukaan: nykyinen täysi, naapurit
+ * *"merkittavasti pienempia"* ja kauempana vielä pienempiä. Neljäs
+ * arvo on pohja — sitä kauempana kortti ei enää kutistu, jotta
+ * kasvot pysyvät tunnistettavina reunaan asti.
+ */
+export const KARUSELLIN_MITAT = [1, 0.62, 0.52, 0.44];
+
+/** Korttien väli: peräkkäisten korttien keskimitta + 5 % rakoa. */
+export const KARUSELLIN_VALI = 1.05;
+
+export function karusellinMitta(etaisyys) {
+  const d = Math.min(Math.abs(Math.trunc(etaisyys)), KARUSELLIN_MITAT.length - 1);
+  return KARUSELLIN_MITAT[d];
+}
+
+/**
+ * Kortin keskipisteen etäisyys nauhan keskeltä KORTIN LEVEYKSINÄ.
+ *
+ * Kertyvä summa eikä vakioaskel: kun kortit kutistuvat ulospäin,
+ * vakioaskel jättäisi reunoille ammottavat raot. Kahden vierekkäisen
+ * kortin väli on niiden mittojen keskiarvo, joten karuselli pakkautuu
+ * tasaisesti reunaa kohti.
+ */
+export function karusellinEtaisyys(d) {
+  let x = 0;
+  for (let k = 1; k <= Math.abs(d); k += 1) {
+    x += ((karusellinMitta(k - 1) + karusellinMitta(k)) / 2) * KARUSELLIN_VALI;
+  }
+  return x;
+}
+
+/**
+ * Yhden kortin paikka karusellissa.
+ *
+ * @param {number} i kortin järjestysnumero (kronologinen)
+ * @param {number} nyt nykyisen pysäkin numero (-1 ennen ensimmäistä)
+ * @param {number} leveysKortteina nauhan leveys kortin leveyksinä
+ * @returns {{paikka:number, mitta:number, luokka:string,
+ *   himmeys:number, sumennus:number, jarjestys:number}}
+ *   `paikka` on negatiivinen menneille (vasemmalle) ja positiivinen
+ *   tuleville (oikealle), yksikkönä kortin leveys.
+ */
+export function karusellinPaikat(i, nyt, leveysKortteina) {
+  const ero = i - nyt;
+  const d = Math.abs(ero);
+  const mitta = karusellinMitta(d);
+  const paikka = Math.sign(ero) * karusellinEtaisyys(d);
+  // Mahtuuko kortti kokonaan ruudulle? Nykyinen mahtuu aina — se on
+  // keskellä, ja ilman sitä nauha olisi tyhjä kapeimmalla puhelimella.
+  const puolikas = Math.max(1, leveysKortteina || 0) / 2;
+  const mahtuu = ero === 0 || Math.abs(paikka) + mitta / 2 <= puolikas;
+  let luokka = 'piilossa';
+  if (ero === 0) luokka = 'nykyinen';
+  else if (mahtuu) luokka = ero < 0 ? 'mennyt' : 'tuleva';
+  /*
+   * MENNEET SUMENTUVAT, TULEVAT EIVÄT (omistajan sanamuoto: *"kaikki
+   * vasemmalla puolella ovat kevyesti blurattuja"*). Sumennus on
+   * kevyt — 1,5–2 px — jotta kasvot yhä erottuvat: kyse on syvyydestä,
+   * ei salaamisesta. Tulevat erottuvat pelkällä koolla ja vaimeudella.
+   */
+  const sumennus = ero < 0 ? Math.min(2, 1.5 + (d - 1) * 0.25) : 0;
+  let himmeys = 1;
+  if (ero < 0) himmeys = Math.max(0.4, 0.82 - (d - 1) * 0.14);
+  else if (ero > 0) himmeys = Math.max(0.5, 0.9 - (d - 1) * 0.12);
+  if (luokka === 'piilossa') himmeys = 0;
+  return {
+    paikka,
+    mitta,
+    luokka,
+    himmeys,
+    sumennus,
+    // Lähempänä keskustaa oleva kortti peittää kauempana olevan.
+    jarjestys: 100 - d,
+  };
+}
 
 /* ==================== VUOSILUKU RULLAA ==================== */
 
@@ -484,6 +653,16 @@ class Aikajana {
     this.juuri.append(ylarivi, this.paneeli, this.nauha);
     koti.appendChild(this.juuri);
     document.body.classList.add('aikajana-paalla');
+
+    /*
+     * KOON MUUTOS ASETTELEE KARUSELLIN UUDELLEEN. Ruudulle mahtuvien
+     * korttien määrä tulee mitatusta leveydestä, joten ikkunan koon
+     * muutos (myös puhelimen kääntö) on ainoa hetki, jolloin asettelu
+     * pitää laskea ilman että pysäkki vaihtuu. Kuuntelija, ei ajastin
+     * eikä kehyskohtainen työ.
+     */
+    this.koonMuutos = () => { if (this.juuri?.isConnected) this.asettele(); };
+    globalThis.addEventListener?.('resize', this.koonMuutos);
 
     // 2. Valot kartalle
     this.rakennaValot();
@@ -658,8 +837,8 @@ class Aikajana {
 
   kaynnista() {
     if (!this.rakenna()) return false;
-    // Ensimmäiset pysäkit taustalle jo kamera-ajon aikana.
-    this.esilataaSeuraavat(0);
+    // Koko kaaren pienet kuvat taustalle jo kamera-ajon aikana.
+    this.esilataaPienet();
     this.avaaAanimaailma();
     // Musiikki lähtee kamera-ajon kanssa, ennen kelloa: linssi alkaa
     // äänestä eikä vasta ensimmäisestä valosta.
@@ -793,24 +972,28 @@ class Aikajana {
   }
 
   /**
-   * ESILATAUS (omistajan havainto 3.9.2026: *"kaikki kuvat pitää
-   * ladata ennakkoon taustalle"*). Kello ei odota verkkoa: seuraavien
-   * kolmen pysäkin muotokuvat ja ilmiökuvat pyydetään taustalle heti,
-   * kun edellinen valo syttyy, jotta kuva on selaimen välimuistissa
-   * ennen kuin paneeli vaihtuu. Kolme riittää: yksi pysäkki kestää
-   * VIIVE_MS eli useita sekunteja.
+   * ESILATAUS: KOKO KAARI PIENENÄ, HETI (omistajan havainto 3.9.2026:
+   * *"kaikki kuvat pitää ladata ennakkoon taustalle ainakin tuossa
+   * pienemmässä koossa mikä näkyy linssin animaation aikana"*, ja
+   * Raamatun kohta 4: *"LINSSIKUVAT ESILADATAAN pienina … linssin
+   * avautuessa; iso kuva vasta Lue juttu -napista."*).
    *
+   * AIEMPI "kolme pysäkkiä edellä" oli kiertotie sille, että
+   * alkuperäiset ovat 400–760 kt kappale: koko kaari niinä olisi yli
+   * 14 Mt. Pieninä WebP-versioina (640 px, alle 90 kt) sama sarja on
+   * 3–5 Mt, ja se ladataan taustalle kerralla kamera-ajon aikana.
+   * Silloin karuselli ei enää odota verkkoa missään kohtaa — myöskään
+   * silloin kun pelaaja hyppää kortista kauas eteenpäin.
+   *
+   * Isoja ei esiladata lainkaan: ne kuuluvat vasta jutun galleriaan.
    * Sama kirjanpito kuin muualla pelissä (ui-apurit esilataaKuvat):
-   * yksi pyyntö per osoite per istunto. Pienet WebP-versiot
-   * (aikajana/keksinnot/pieni/) otetaan käyttöön omassa erässään —
-   * tämä esilataa sen, mitä peli oikeasti näyttää.
+   * yksi pyyntö per osoite per istunto.
    */
-  esilataaSeuraavat(alkaen) {
+  esilataaPienet() {
     const osoitteet = [];
-    for (let i = alkaen; i < Math.min(alkaen + 3, this.tapahtumat.length); i += 1) {
-      const t = this.tapahtumat[i];
-      for (const kuva of [t.kuva, t.kuvaToinen, t.ilmio]) {
-        if (kuva?.osoite) osoitteet.push(kuva.osoite);
+    for (const t of this.tapahtumat) {
+      for (const kuva of [t.kuva, t.kuvaToinen, t.ilmio, t.ilmioLisa]) {
+        if (kuva?.osoite) osoitteet.push(pieniOsoite(kuva.osoite));
       }
     }
     esilataaKuvat(osoitteet);
@@ -818,7 +1001,6 @@ class Aikajana {
 
   sytyta(i) {
     const t = this.tapahtumat[i];
-    this.esilataaSeuraavat(i + 1);
     for (const valo of this.valot) valo?.g.classList.remove('nykyinen');
     const valo = this.valot[i];
     if (valo) {
@@ -879,36 +1061,46 @@ class Aikajana {
   }
 
   /**
-   * FILMINAUHAN ASETTELU. Jokainen kortti saa paikkansa suhteessa
-   * nykyiseen: seuraava vasemmalla sumeana, nykyinen tarkkana ja
-   * isona, menneet oikealle pienenevinä. Paikat ovat CSS-muuttujia,
-   * ja tyylitiedosto liu'uttaa kortin niihin.
+   * NAUHAN LEVEYS KORTIN LEVEYKSINÄ. Kortin leveys on CSS-muuttuja
+   * (`--aikajana-kortti-w`, clamp-arvo), joten se luetaan mitattuna
+   * eikä arvattuna: sama laskenta pätee sekä 1280 px:n työpöydällä
+   * että 390 px:n puhelimella. `offsetWidth` on ASETTELUN leveys eikä
+   * skaalattu, joten kutistettu kortti ei sotke mittaa.
+   */
+  nauhanLeveysKortteina() {
+    const nauha = this.nauha?.clientWidth ?? 0;
+    const kortti = this.kortit[0]?.offsetWidth ?? 0;
+    if (!(nauha > 0) || !(kortti > 0)) return 0;
+    return nauha / kortti;
+  }
+
+  /**
+   * KARUSELLIN ASETTELU. Nykyinen kortti on aina nauhan keskellä,
+   * menneet vasemmalla ja tulevat oikealla kronologisessa
+   * järjestyksessä (karusellinPaikat). Paikat, mitat, sumennus ja
+   * himmeys menevät CSS-muuttujina, ja tyylitiedosto liu'uttaa koko
+   * rivin uuteen asentoon yhdellä siirtymällä — vuoden vaihtuessa
+   * rivi liukuu askeleen vasemmalle (Raamatun animaatiosääntö).
+   *
+   * Ruudun ulkopuolelle jäävät kortit saavat OMAN oikean paikkansa ja
+   * pelkän läpinäkyvyyden nollaksi: silloin reunan takaa saapuva
+   * kortti liukuu sisään oikeasta suunnasta eikä ilmesty tyhjästä.
+   * Ne eivät ole napautettavia eivätkä fokusoitavia (aria-hidden).
    */
   asettele() {
     const nyt = this.tila.i;
+    const leveys = this.nauhanLeveysKortteina();
     this.kortit.forEach((kortti, i) => {
-      const ero = i - nyt;
-      let luokka = 'piilossa';
-      let jarjestys = 0;
-      let paikkaX = 0;
-      let mitta = 0.62;
-      if (ero === 1) { luokka = 'seuraava'; paikkaX = 0; mitta = 0.78; }
-      else if (ero === 0) { luokka = 'nykyinen'; paikkaX = 1; mitta = 1; jarjestys = 3; }
-      else if (ero < 0 && ero >= -5) {
-        luokka = 'mennyt';
-        paikkaX = 2 + (-ero - 1);
-        mitta = Math.max(0.5, 0.74 - (-ero - 1) * 0.06);
-        jarjestys = 2 - (-ero);
-      } else if (ero > 1) {
-        luokka = 'tulossa';
-        paikkaX = -1;
-      }
+      const { paikka: paikkaX, mitta, luokka, himmeys, sumennus, jarjestys } = karusellinPaikat(i, nyt, leveys);
       kortti.className = `aikajana-kortti ${luokka}${this.tapahtumat[i].paalu ? ' paalu' : ''}`;
-      kortti.style.setProperty('--paikka', String(paikkaX));
+      kortti.style.setProperty('--paikka', paikkaX.toFixed(3));
       kortti.style.setProperty('--mitta', mitta.toFixed(2));
-      kortti.style.zIndex = String(10 + jarjestys);
-      kortti.setAttribute('aria-hidden', luokka === 'piilossa' || luokka === 'tulossa' ? 'true' : 'false');
-      kortti.tabIndex = luokka === 'piilossa' || luokka === 'tulossa' ? -1 : 0;
+      kortti.style.setProperty('--himmeys', himmeys.toFixed(2));
+      kortti.style.setProperty('--sumennus', `${sumennus.toFixed(2)}px`);
+      kortti.style.zIndex = String(jarjestys);
+      const piilossa = luokka === 'piilossa';
+      kortti.setAttribute('aria-hidden', piilossa ? 'true' : 'false');
+      kortti.tabIndex = piilossa ? -1 : 0;
     });
     this.nauha.classList.toggle('tyhja', nyt < 0);
   }
@@ -930,7 +1122,7 @@ class Aikajana {
       this.paikkarivi.textContent = [t.vuosi, paikka(t)].filter(Boolean).join(' · ');
       return;
     }
-    // Seuraava kortti: hyppää siihen heti.
+    // Tuleva kortti (karusellin oikea puoli): hyppää siihen heti.
     this.pysayta();
     this.tila = { vuosi: t.vuosi, i, viive: this.tapahtumat[i].paalu ? AIKAJANA_PAALU_MS : AIKAJANA_VIIVE_MS };
     this.naytaVuosi(t.vuosi);
@@ -962,6 +1154,8 @@ class Aikajana {
     this.pysayta();
     this.lopetaMusiikki();
     this.suljeAanimaailma();
+    if (this.koonMuutos) globalThis.removeEventListener?.('resize', this.koonMuutos);
+    this.koonMuutos = null;
     this.juuri?.remove();
     this.valokerros?.remove();
     if (this.vastaskaala) this.ui.nipistysVastaskaalaajat?.delete(this.vastaskaala);
