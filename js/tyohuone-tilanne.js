@@ -92,6 +92,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1488: KEKSINTOERAN 21 KUVAA LINSSISSA (kuvaputki 3.9., omistaja hyvaksyi) - kaikilla 25 pysakilla on nyt generoitu ilmiokuva kuvateksteineen (Stephenson 1825 ... Fleming 1928); Blerio\'n lahikuva on datassa (ilmioLisa) ja tulee jutun galleriaan seuraavassa linssierassa. Kehittajavalikko > aikajana: keksinnot.',
   'v1487: LINSSIN VUOSILUKU RULLAA (omistaja 3.9.) - kehittajavalikko > aikajana: keksinnot; numerot pyorahtavat ylhaalta alas ja jokaisesta vaihdosta kuuluu hiljainen naksahdus (ei pysaytetylla kellolla). Kehittajavalikon siirtymamusiikki-rivi nayttaa nyt raidat loytyneiksi (jalan, laiva, lento, keksinnot = kaikki amparissa).',
   'v1486: LOOPPITAITTO KAIKISSA 83 SKANDAALIKORTISSA (omistaja 3.9. "monista kaikkiin muihinkin") - nimio Lisalehti, paivaysrivi paikka + vuosi, iso otsikko, ingressi (= kortin entinen johdanto), kuva/galleria, leipateksti anfangilla ja kahdessa palstassa, visa lopussa. Avaa esim. Wien (Shakkiturkkilainen), Sofia (Battenberg), Praha (Tycho Brahe).',
   'v1485: KOLME KARTTAKORJAUSTA (omistaja 3.9.) - a) Bosnia 100 km: Dinaariset Alpit nyt kohdenimion kokoinen kursiivi (sama Pyreneet, Karpaatit, Skandit, Apenniinit, Taurus); b) ihmekortin Unohdettu aarre -nauha samassa suhteessa kuin suurennoksessa (pienempi kortissa); c) poltetun merkin tai nimen napautuksesta avautuva kortti tulee napautuksen viereen, ei ruudun kulmaan (Pergamonin alttari).',
