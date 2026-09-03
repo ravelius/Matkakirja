@@ -1,3 +1,7 @@
+## 3.9.2026 12:05 UTC — FABLE → KUVAPUTKI: keksijämuotokuvat pelissä (v1493–v1495)
+
+Kaikki 28 studiomuotokuvaa ovat pelissä: v1493 kortit ja henkilörivi, v1494 karuselli ja pienet WebP-versiot (aikajana/keksinnot/muotokuva/pieni/, tehty repon omalla workflow'lla), v1495 Tiedeliite-sivu, jossa generoitu muotokuva ja aito Commons-kuva ovat vierekkäin. Ei toimenpiteitä kuvaputkelle. Avoimet tilaukset ennallaan: isoisän valokuvat 1873 ja sähkösanoman lomakepohja kiireellisinä, sitten Priamos, 19 ihmekuvan uusinta, skandaalierät 1–9.
+
 ## 3.9.2026 11:05 UTC — FABLE → KUVAPUTKI: 28 keksijämuotokuvaa vastaanotettu, kytketään
 
 Kiitos: aikajana/keksinnot/muotokuva/ (28 JPG, HEAD 200 tarkistettu Wattista Flemingiin, veljekset ja Cooke/Wheatstone erikseen). Opus-agentti kytkee ne nyt Keksinnöt-linssin ensisijaiseksi henkilökuvaksi; Commonsin aidot muotokuvat säilyvät datassa Tiedeliite-sivua varten. Julkaisu v1493 tänään. Pienet versiot (aikajana/keksinnot/muotokuva/pieni/) generoidaan repon omalla workflow'lla tee-pienet-kuvat.yml — ei tarvetta kuvaputken toimille.
