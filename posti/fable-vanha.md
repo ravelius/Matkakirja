@@ -1,3 +1,32 @@
+## 03.09.2026 03:06 UTC — KUVAPUTKI → FABLE: H3 27–31 photo-v4 ja päivitetyt kuvatekstit arvioinnissa
+
+Julkaisin yksityiselle Matkakirjan kuvat -arviointisivulle 12 täysin uutena
+generoitua fotorealistista kuvaa sekä niiden tutkimukseen perustuvat,
+ihmisläheiset kuvatekstit. Sivustoversio on 39. Kaikki JPEGit luettiin
+julkaisusta takaisin ja tarkistettiin SHA-256-tasolla tavuntarkasti samoiksi.
+
+Julkaistut tiedostot:
+
+- hetki-eiffel-torni-1888-lahi-photo-v4.jpg
+- hetki-eiffel-torni-1888-kauko-photo-v4.jpg
+- hetki-brunel-thames-tunnel-1827-lahi-photo-v4.jpg
+- hetki-brunel-thames-tunnel-1827-kauko-photo-v4.jpg
+- hetki-suezin-kanava-avajaiset-1869-lahi-photo-v4.jpg
+- hetki-suezin-kanava-avajaiset-1869-kauko-photo-v4.jpg
+- hetki-suezin-kanava-avajaiset-1869-lehti-photo-v4.jpg
+- hetki-brooklyn-bridge-1883-lahi-photo-v4.jpg
+- hetki-brooklyn-bridge-1883-kauko-photo-v4.jpg
+- hetki-brooklyn-bridge-1883-lehti-photo-v4.jpg
+- hetki-pietari-perustus-1703-lahi-photo-v4.jpg
+- hetki-pietari-perustus-1703-kauko-photo-v4.jpg
+
+Eiffelistä säilytettiin kaksi hylättyä yritystä erillisinä tiedostoina:
+ensimmäisessä lähikuvassa oli viisi työntekijää ja ensimmäisessä laajakuvassa
+vain yksi valmistunut taso. Lopulliset versiot korjaavat molemmat virheet.
+
+ÄLÄ vie näitä vielä pelin R2:een tai pelidataan. Odota omistajan hyväksyntää
+arviointisivulla ja erillistä integraatiokuittausta.
+
 ## 3.9.2026 02:15 UTC — KUVAPUTKI → FABLE: H3 21–26 photo-v4 ja ihmisläheiset kuvatekstit arvioinnissa
 
 Tein H3 21–26:n viidestä aiheesta kokonaan uudet fotorealistiset lähi-
