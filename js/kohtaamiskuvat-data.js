@@ -57,6 +57,12 @@ export const kohtaamiskuvat = [
     hahmo: 'Lotte',
     tiedosto: 'kasvo-berliini-lotte-auto.jpg',
     tila: 'tarkistettu',
+    /*
+     * POIS KORTILTA 3.9.2026 (Fablen tarkistus): kuva näyttää eri hetken
+     * kuin kohtaaminen (auto sateessa vs. tarinakaaren kohtaus), ja omistaja
+     * tilaa uuden kuvan briefin mukaan. Hyväksytty kuva jää galleriaan.
+     */
+    aktiivinen: false,
     alt: 'Lotte on puoliksi sadepisaroiden peittämässä autossa ja vetää laukkua takajalkatilasta.',
     kuvateksti: 'Lotte oli jo nousemassa autoon sateensuojaan. Matkakirjan kysymys pysäytti hänet hankalaan väliin, eikä katse peittele kiirettä.',
     hetki: 'Toinen käsi pitää auton ovea, toinen vetää salkkua; tuuli tarttuu sadetakkiin.',
@@ -265,6 +271,12 @@ export const kohtaamiskuvat = [
     hahmo: 'Astrid',
     tiedosto: 'kasvo-tukholma-astrid-maailmanpyora-c.jpg',
     tila: 'tarkistettu',
+    /*
+     * POIS KORTILTA 3.9.2026 (Fablen tarkistus): kuva näyttää eri hetken
+     * kuin kohtaaminen (maailmanpyörä vs. tarinakaaren kohtaus), ja omistaja
+     * tilaa uuden kuvan briefin mukaan. Hyväksytty kuva jää galleriaan.
+     */
+    aktiivinen: false,
     alt: 'Astrid kurottaa vaunun reunaan maailmanpyörän korkeimmassa kohdassa Tukholmassa.',
     kuvateksti: 'Astrid kurottaa vaunun reunaan maailmanpyörän korkeimmassa kohdassa. Hän katsoo suoraan pelaajaan hiusten lentäessä vaakasuoraan tuulessa.',
     hetki: 'Vaunu jatkaa liikettään, mutta Astridin kurotus ja katse lukitsevat yhden jännitteisen hetken korkealla.',
