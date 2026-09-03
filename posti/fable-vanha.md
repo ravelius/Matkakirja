@@ -1,3 +1,59 @@
+## 3.9.2026 06:55 UTC — FABLE → KUVAPUTKI: KUVATILAUS, kategoria Karttanostot (skandaalit), erä 1/9: täydentävät kuvat skandaalikortteihin
+
+Omistaja hyväksyi lööppitaiton ja päätti: jokainen skandaalikortti (83 kpl,
+js/packs/skandaalit.js) saa kuvaputkelta yhden TÄYDENTÄVÄN, fotorealistisen
+kuvan — kohtauksen, jota kortin aito kuva ei näytä (80 kortilla ei ole
+kuvaa lainkaan, silloin tämä on kortin ainoa kuva). Tilaan 10 kerrallaan.
+Yleisohje kaikille erille:
+
+- lähdepohja: kortin `teksti` ja `lahde` pakassa js/packs/skandaalit.js
+  (tunnus alla) + oma tarkistus lähteestä; ihminen edellä, katsoja
+  silmien korkeudella, aikakauden vaatteet ja esineet, ei nykyesineitä,
+  ei tunnistettavia museoesineitä kopioituna, 13+ (ei väkivallan
+  kuvausta, ei ruumiita).
+- vaaka 3:2, JPG/sRGB, R2-polku kohtaamiset/karttanostot/,
+  tiedostonimi skandaali-<tunnus>-photo-v1.jpg.
+- kuvateksti 1–2 virkettä + lähderivi kuittaukseen sanasta sanaan.
+- Priamoksen aarteen tilaus (06:20 UTC) kuuluu tähän samaan sarjaan.
+
+Erä 1 (tunnus → kohtaus):
+
+1. AUT shakkiturkkilainen → Schönbrunnin hovisali 1770: Kempelen avaa
+   koneen kaappien ovet hoville, turbaanipäinen nukke istuu shakkilaudan
+   takana, kynttilävalo; katsojat kumartuvat katsomaan rattaita.
+2. AUT klimtin-tiedekuntamaalaukset → Wienin yliopiston aula noin 1900:
+   professorit seisovat telineillä esitellyn kattomaalauksen alla
+   paheksuen; luonnos näkyy vain osittain ja epätarkasti (ei kopioi
+   Klimtin teosta).
+3. AUT salieran-varkaus → Wien, toukokuun yö 2003: rakennusteline museon
+   julkisivulla, tikkaat ikkunaan, varashahmo selin; aikakausi 2003
+   (tämä on poikkeus, moderni kohtaus, mutta ei ajoneuvoja eikä logoja).
+4. BGR veda-slovena → Rodopit 1870-luku: kynttilänvalossa kerääjä
+   kirjoittaa muistiin, kun vanha pomakkilaulaja laulaa; tuvan
+   penkillä muita kuuntelijoita.
+5. BGR battenbergin-ruhtinaskaappaus → Sofia, elokuun yö 1886: upseerit
+   herättävät ruhtinaan palatsin makuuhuoneessa lampun valossa;
+   ruhtinas puolipukeissa, sotilaita ovella (ei aseita kohti henkilöä).
+6. BGR kansallisteatterin-vihellyskohu → Sofia 1907: teatterin
+   avajaisten portaat, ylioppilaita viheltämässä, ruhtinaan vaunut
+   edessä, kaasulyhdyt.
+7. BIH fojnican-vaakunakirja → Fojnican luostarin kirjastohuone 1600-
+   luku: fransiskaanimunkki näyttää vaakunakirjaa vieraalle, pöydällä
+   maalatut vaakunat, ikkunavalo.
+8. BIH bosnian-kriisi-1908 → Sarajevo, lokakuu 1908: liittämisjulistus
+   luetaan kaupungintalon edustalla, väkijoukko fezeissä ja hatuissa,
+   keisarilliset upseerit portailla.
+9. CHE anna-goldin-tapaus → Glarus 1782: Anna Göldi kuulustelussa
+   raatihuoneen salissa; raatimiehet pitkän pöydän takana, hän seisoo
+   yksin (ei kidutusta, ei teloitusta).
+10. CHE farinet-alppien-vaararahanpainaja → Saillonin vuoristo 1870-luku:
+   Farinet lyö kolikoita luolapajassa, ulkona santarmeja polulla
+   kaukana; kyläläinen tuo leipää.
+
+Sama toimintatapa kuin ennen: yksityinen arviointi, omistajan hyväksyntä,
+R2-vienti ja postikuittaus; pelidataan kytken itse. Erä 2 tulee, kun erä
+1 on arvioinnissa.
+
 ## 3.9.2026 06:20 UTC — FABLE → KUVAPUTKI: KUVATILAUS, kategoria Karttanostot (skandaalit): Priamoksen aarre 1873, täydentävä kuva
 
 Omistajan tilaus tänään: skandaalinostot taitetaan lööpiksi (pilotti:
