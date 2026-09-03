@@ -737,6 +737,16 @@ const POLLO_ALANAPPIRIVISSA = false;
  * 18, 46 ja 85 pikseliä. Tarkkuus riittää: kupla vain asettuu tähän
  * kohtaan, mitään ei kohdisteta napin pikseleihin.
  */
+/** Pinon etäisyys ruudun reunasta (px), sama kuin vaakapaikan marginaali. */
+/*
+ * Pinon nousun kesto: sama luku sekä vanhojen kuplien FLIP-siirrolle
+ * että uuden kuplan saapumiselle (css .pollo-kuplapino .pollo-vihje),
+ * jotta kaksi liikettä lukee yhtenä eleenä eikä kahtena töksähdyksenä.
+ */
+const PINON_NOUSU_MS = 380;
+const PINON_MARGINAALI = 14;
+/** Kuplan kärjen keskikohta kuplan oikeasta reunasta (css right 1.1rem + 6px). */
+const PINON_KARJEN_SIIRTO = 24;
 const KELLUVAN_NAPIN_VARAPAIKKA = { reuna: 18, koko: 46, pohja: 85 };
 
 /*
@@ -2366,7 +2376,7 @@ class Pollo {
       // loppuarvon samaksi tyylimuutokseksi eikä siirtymää syntyisi.
       void pino.offsetWidth;
       for (const k of liikkuneet) {
-        k.style.transition = 'transform 360ms var(--liike-pehmea)';
+        k.style.transition = `transform ${PINON_NOUSU_MS}ms var(--liike-pehmea)`;
         k.style.transform = '';
         const siivoa = () => {
           k.style.transition = '';
@@ -2378,7 +2388,7 @@ class Pollo {
         k.addEventListener('transitionend', siivoa);
         // Varmistin: transitionend jää tulematta, jos välilehti on
         // taustalla — ilman tätä siirto jäisi kiinni kuplaan.
-        setTimeout(siivoa, 420);
+        setTimeout(siivoa, PINON_NOUSU_MS + 60);
       }
     }
     this.vierita();
@@ -2642,8 +2652,23 @@ class Pollo {
     if (!kehys || kehys.hidden) return;
     const ikkuna = this.doc.defaultView ?? window;
     const nappi = this.ankkuriLaatikko(this.nappi, ikkuna);
-    const leveys = this.luontainenLeveys(kehys);
-    kehys.style.left = `${Math.round(this.vaakapaikka(leveys, nappi, ikkuna))}px`;
+    /*
+     * PINO ANKKUROIDAAN OIKEASTA REUNASTA, EI KESKELTÄ (omistaja
+     * 3.9.2026: *"pöllön puhekuplat tulevat vielä vähän töksähdellen"*).
+     * Aiemmin kehyksen vasen reuna laskettiin sen leveydestä (keskitys
+     * napin ylle), ja kun pinoon tuli leveämpi kupla, koko pino hyppäsi
+     * vaakasuunnassa ilman siirtymää. Kuplat tasataan pinossa oikealle
+     * (css align-items: flex-end) ja kärki on kuplan oikeassa laidassa
+     * (.pollo-vihje::after right 1.1rem), joten oikea reuna on se, jonka
+     * pitää pysyä paikallaan: se asetetaan napin keskikohdan mukaan, ja
+     * leveyden muutos kasvattaa pinoa vasemmalle näkymättömästi.
+     * Loput liikkeet (bottom, right) liukuvat css-siirtymällä.
+     */
+    const leveys = ikkuna.innerWidth || 0;
+    const karki = PINON_KARJEN_SIIRTO;
+    const oikea = Math.max(PINON_MARGINAALI, leveys - (nappi.left + nappi.width / 2 + karki));
+    kehys.style.left = 'auto';
+    kehys.style.right = `${Math.round(oikea)}px`;
     kehys.style.bottom = `${Math.round((ikkuna.innerHeight || 0) - nappi.top + 10)}px`;
   }
 
