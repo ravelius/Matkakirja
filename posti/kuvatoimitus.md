@@ -1,5 +1,99 @@
 # Kuvatoimitussessio
 
+## 3.9.2026 05:55 UTC — H3 41–44: omistaja hyväksyi 9 photo-v4-kuvaa, vie heti peliin
+
+Omistaja hyväksyi yksityisellä Matkakirjan kuvat -sivulla kaikki H3-erän
+41–44 yhdeksän kuvaa ja painoi myös **Lähetä päätökset**. Hyväksyntä on
+varmistettu sivuston tietokannasta. Vie nämä kuvat nyt julkiseen R2:een ja
+kytke ne peliin alla olevilla lopullisilla kuvateksteillä. Älä käytä aiempien
+H1/H2-versioiden kuvia tai tekstejä näiden tilalla.
+
+### Bastiljin portti avautuu 1789
+
+- `hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v4.jpg` → Kuvituksen
+  pariisilainen metallityöläinen on kantanut Invalidikirkolta hakemaansa
+  muskettia tuntikausia, mutta ruutia hän etsii yhä. Kun Bastiljin portti
+  viimein avautuu, voitonriemu sekoittuu pelkoon: savun takana odottaa piha,
+  jolta äsken ammuttiin väkijoukkoon.
+- `hetki-ranskan-vallankumous-bastilji-1789-kauko-photo-v4.jpg` → Vankilan
+  sveitsiläinen sotilas laskee aseensa ja yrittää kadota sisäpihan reunaan
+  ennen kuin virta saavuttaa hänet. Portista tuleville pariisilaisille
+  Bastilji on sortovallan linna; hänelle se on paikka, jossa univormu voi
+  yhtäkkiä tehdä ihmisestä vihollisen.
+- Lähderivi molemmille: Matkakirjan havainnekuva. Faktat ja visuaaliset
+  referenssit: Musée Carnavalet, Jean-Louis Prieurin aikalaiskuva, sekä BnF:n
+  Bastiljin arkistot; tarkistettu 3.9.2026.
+  https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/prise-de-la-bastille-le-14-juillet-1789-1
+  https://www.bnf.fr/fr/archives-de-la-bastille
+
+### Spyridon Louis saapuu stadionille 1896
+
+- `hetki-olympia-ateena-1896-lahi-photo-v4.jpg` → Spyridon Louis kuulee
+  stadionin huudon ennen kuin ehtii nähdä marmorikatsomot. Kruununprinssi
+  Konstantin ja prinssi Yrjö juoksevat hänen rinnalleen; 23-vuotiaan
+  vedenkantajan on enää pysyttävä jaloillaan kierros, jonka jokainen askel
+  näyttää koko Ateenan yhteiseltä.
+- `hetki-olympia-ateena-1896-kauko-photo-v4.jpg` → Louisin isä murtautuu radan
+  reunalle ja etsii poikansa pölyisiä kasvoja kahden prinssin välistä.
+  Kuusikymmentätuhantinen stadion juhlii Kreikan voittoa, mutta isälle
+  väkijoukon keskellä on vain yksi tärkeä kysymys: hengittääkö Spyros vielä
+  tasaisesti.
+- Lähderivi molemmille: Matkakirjan havainnekuva. Faktat ja visuaaliset
+  referenssit: Olympic World Libraryn aikalaiskertomus ja Petralian
+  olympia-arkiston vuoden 1896 valokuva; tarkistettu 3.9.2026.
+  https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=2435580&parentDocumentId=2435579&skipCopyright=true&skipWatermark=true
+  https://archivespetralia.gr/en/archive-single/14120
+
+### Sibelius johtaa “Suomi herää” -kuvaelman 1899
+
+- `hetki-sibelius-finlandia-1899-lahi-photo-v4.jpg` → Jean Sibelius nostaa
+  tahtipuikon viimeiseen kuvaelmaan, mutta eturivin nuori toimittaja kuuntelee
+  myös salin hiljaisuutta. Hänen lehtensä voidaan lakkauttaa seuraavaksi;
+  siksi “Suomi herää” tuntuu enemmän tunnussanalta kuin pelkältä
+  ohjelmanumerolta.
+- `hetki-sibelius-finlandia-1899-kauko-photo-v4.jpg` → Orkesterin
+  nuotinkääntäjä tietää, ettei illan protestia lausuta suoraan. Se piilotetaan
+  kuuteen historialliseen kuvaelmaan, näyttämön eleisiin ja Sibeliuksen
+  musiikkiin — niin, että täysi sali ymmärtää ja sensuurin edustaja joutuu
+  teeskentelemään, ettei ymmärrä.
+- Lähderivi molemmille: Matkakirjan havainnekuva. Faktat: Sibelius.fi;
+  visuaalinen henkilöreferenssi: Daniel Nyblinin vuoden 1899 valokuva,
+  Museovirasto/Finna; tarkistettu 3.9.2026.
+  https://sibelius.fi/de/die-musik/orchesterwerke/finlandia/
+  https://www.finna.fi/Record/museovirasto.7F6FFE359CE67ECF4B65981FB53C004D
+
+### Lumièren maksullinen ensinäytös 1895
+
+- `hetki-lumiere-elokuva-1895-lahi-photo-v4.jpg` → Georges Méliès nojautuu
+  eteenpäin, kun valkokankaan tehdasportti aukeaa ja ihmiset kävelevät ulos
+  kuin seinä olisi muuttunut ikkunaksi. Taikuri tietää katsovansa uutta
+  temppua, mutta ei vielä sitä, että laite pakottaa hänet pian keksimään koko
+  oman elokuvallisen maailmansa.
+- `hetki-lumiere-elokuva-1895-kauko-photo-v4.jpg` → Koneen takana nuori
+  avustaja pitää kammen tasaisena, vaikka 33 katsojan jokainen naurahdus ja
+  henkäys kuuluu pimeässä kellarissa. Jos käsi nykäisee, kuva värisee; jos se
+  pysyy rytmissä, valokuvan ihmiset jatkavat kävelemistä vielä senkin jälkeen,
+  kun oikea hetki on jo ohi.
+- Lähderivi molemmille: Matkakirjan havainnekuva. Faktat ja laitereferenssit:
+  Institut Lumière, Cinémathèque française ja GRIMH; tarkistettu 3.9.2026.
+  https://www.institut-lumiere.org/musee-lumiere-fr
+  https://www.cinematheque.fr/media/pdf/2021-05-25-dossier-de-presse-musee-melies.pdf
+  https://www.grimh.org/index.php?Itemid=678&id=1703&lang=fr&layout=edit&option=com_content&view=article
+
+### Le Radical, 31.12.1895
+
+- `hetki-lumiere-le-radical-1895-lehti-photo-v4.jpg` → Lehden nimetön
+  toimittaja yrittää selittää liikkuvaa kuvaa lukijoille, jotka eivät ole
+  koskaan nähneet sellaista. Hän kutsuu laitetta valokuvauksen ihmeeksi ja
+  takertuu yhteen lähes mahdottomalta tuntuvaan ajatukseen: kuolleen läheisen
+  voisi jonain päivänä nähdä jälleen liikkeessä.
+- Lähderivi: Matkakirjan havainnekuva: Le Radicalin 31.12.1895 sivun 3
+  todelliseen lehden nimeen, päivämäärään, otsikkoon ja palstaan perustuva uusi
+  rekonstruktio; ei alkuperäinen lehtisivu. Tarkistettu 3.9.2026.
+
+Kuvadataa tai salaisuuksia ei ole postissa. Kuittaa tähän, kun kaikki yhdeksän
+R2-objektia on varmennettu ja peliin kytketty.
+
 ## 3.9.2026 01:02 UTC — 34 hyväksytyn photo-v3-historiakuvan kuvatekstit ja lähderivit
 
 Tässä ovat yksityisellä arviointisivulla julkaistut, photo-v3-kuvien kanssa
