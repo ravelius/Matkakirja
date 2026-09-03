@@ -1,5 +1,73 @@
 # Kuvatoimitussessio
 
+## 3.9.2026 06:29 UTC — Keksintötilauksen deduplikointi: jo tehdyt aiheet linkitetty kiireelliseen 25 kuvan tilaukseen
+
+Omistajan tarkennus: kiireellinen tilaus laadittiin ennen kuin Fable tiesi
+kaikkien jo tuotettujen kuvien nykytilan. Älä tilaa tai generoi alla olevia
+aiheita uudelleen vain siksi, etteivät ne näkyneet tilaushetkellä.
+
+### Kiireellisen tilauksen oma tuotanto
+
+- Kohdat 1–5, `1769-watt`–`1804-jacquard`: hyväksytty, toimitettu ja
+  varmennettu R2:ssa poluissa
+  `aikajana/keksinnot/1769-watt.jpg` …
+  `aikajana/keksinnot/1804-jacquard.jpg`. Aiempi kuittaus on tässä tiedostossa.
+- Kohdat 6–15, `1825-stephenson`–`1886-benz`: kaikki kymmenen
+  kiireelliseen tilaukseen tehtyä 1536 × 1024 JPG-kuvaa ovat omistajan
+  hyväksymiä. Niitä ei generoida uudelleen; R2-toimitus ja erillinen
+  tiedostonimikuittaus tehdään hyväksytyistä versioista.
+- Kohdat 16–20, `1888-hertz`, `1895-marconi`, `1895-rontgen`,
+  `1895-lumiere` ja `1897-diesel`: aiheet on jo generoitu kokonaan
+  uusina fotorealistisina ilmiökuvina. Röntgenistä tehtiin omistajan
+  palautteen perusteella vielä uusi versio, jossa oikea käsi ja kyynärvarsi
+  näkyvät kokonaisina ja luurankokuva on erillisellä kehystetyllä näytöllä.
+  Erä odottaa teknistä QA:ta ja yhteisjulkaisua omistajan arviointisivulle.
+- Kohta 21, `1898-curie`: älä tilaa uutta Curie-kuvaa. Sama aihe on jo
+  valmiina H3-sarjassa tiedostoina
+  `hetki-marie-curie-hangaari-1898-lahi-photo-v4.jpg` ja
+  `hetki-marie-curie-hangaari-1898-kauko-photo-v4.jpg`. Valitaan niistä
+  paneeliin sopiva omistajan hyväksymä kuva ja kopioidaan vasta hyväksynnän
+  mukaan kohdepolkuun `aikajana/keksinnot/1898-curie.jpg`.
+- Kohta 25, `1928-fleming`: sama aihe on jo tehty H3-sarjaan tiedostoina
+  `hetki-fleming-malja-1928-lahi-photo-v4.jpg` ja
+  `hetki-fleming-malja-1928-kauko-photo-v4.jpg`. Älä generoi aihetta
+  uudelleen ennen omistajan katselmusta; hyväksytty kuva voidaan kopioida
+  kohdepolkuun `aikajana/keksinnot/1928-fleming.jpg`.
+
+Aiemmin tehdyt samansisältöiset H3-aiheet, jotka on myös sidottu tähän
+kiireelliseen tilaukseen vertailu- tai varaversioiksi:
+
+- `1796-jenner` ←
+  `hetki-jenner-rokotus-1796-lahi-photo-v4.jpg` /
+  `hetki-jenner-rokotus-1796-kauko-photo-v4.jpg`
+- `1869-mendelejev` ←
+  `hetki-mendelejev-kortit-1869-lahi-photo-v4.jpg` /
+  `hetki-mendelejev-kortit-1869-kauko-photo-v4.jpg`
+- `1895-rontgen` ←
+  `hetki-rontgen-kasi-1895-lahi-photo-v4.jpg` /
+  `hetki-rontgen-kasi-1895-kauko-photo-v4.jpg`
+- `1895-lumiere` ←
+  `hetki-lumiere-elokuva-1895-lahi-photo-v4.jpg` /
+  `hetki-lumiere-elokuva-1895-kauko-photo-v4.jpg`
+- `1898-curie` ←
+  `hetki-marie-curie-hangaari-1898-lahi-photo-v4.jpg` /
+  `hetki-marie-curie-hangaari-1898-kauko-photo-v4.jpg`
+- `1928-fleming` ←
+  `hetki-fleming-malja-1928-lahi-photo-v4.jpg` /
+  `hetki-fleming-malja-1928-kauko-photo-v4.jpg`
+
+Pasteurin H3-kuvat kuvaavat vuoden 1862 joutsenkaulapullokoetta eivätkä siksi
+korvaa kiireellisen listan vuoden 1885 raivotautinäytteitä; tähän käytetään
+jo tehtyä ja hyväksyttyä `1885-pasteur.jpg`-kuvaa.
+
+Tämän deduplikoinnin jälkeen aidosti puuttuvat kiireellisen tilauksen
+ilmiökuvat ovat vain kohdat 22–24:
+`1900-zeppelin`, `1909-bleriot` ja `1926-baird`.
+Koko jäljellä oleva erä julkaistaan arviointiin vasta, kun nämä kolme ja
+QA ovat valmiit. Peliin/R2:een siirtyvät vain omistajan hyväksymät versiot.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 3.9.2026 05:55 UTC — H3 41–44: omistaja hyväksyi 9 photo-v4-kuvaa, vie heti peliin
 
 Omistaja hyväksyi yksityisellä Matkakirjan kuvat -sivulla kaikki H3-erän
