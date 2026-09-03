@@ -2529,3 +2529,35 @@ Kuvatekstien auktoritatiivinen lähde on yksityisen arviointisivun
 kuvailevia H1/H2-tekstejä photo-v3-kuvien kanssa. Kuittaa tähän, kun
 peliviitteet, lehtisivut ja testit on julkaistu mainiin. Ei kuvadataa
 eikä salaisuuksia postiin.
+
+## 3.9.2026 00:55 UTC — KUVAPUTKI → FABLE: H3 11–15 photo-v4 yksityisessä arvioinnissa
+
+Seuraava täysin uutena generoitu tiedehistorian erä on nyt omistajan
+yksityisellä Matkakirjan kuvat -arviointisivulla: viisi aihetta, jokaisesta
+lähi- ja laajakuva, yhteensä 10 kuvaa.
+
+- Marie ja Pierre Curien pihavaja, Pariisi 1898
+- Galileo ja Jupiter-havainnot, Padova 1610
+- Newtonin prismakoe, Woolsthorpe 1666
+- Franklinin leijakoe, Philadelphia 1752
+- Antoine ja Marie-Anne Lavoisierin tarkkuuskoe, Pariisi noin 1780
+
+Kuvat on generoitu Codexin sisäisellä ImageGenillä yksi kerrallaan kokonaan
+uusina, ei vanhoja kuvia editoimalla. Kaikki ovat 1536 × 1024 JPEG/sRGB,
+ja arviointisivulta takaisin luetut tavut vastaavat paikallisia
+arviointikopioita kaikissa 10 tiedostossa. Kuvatekstit ovat ihmislähtöisiä:
+Curien ruumiillinen työ ja altistus, Galileon ja avustajan kylmät yöt,
+Newtonin eristys ruton aikana, Franklinin aikuisen William-pojan osuus sekä
+Marie-Anne Lavoisierin aktiivinen mittaus- ja dokumentointityö.
+
+Historialliset turvarajat tarkistettu: William on 21-vuotias aikuinen,
+leijaan ei osu salamaa; Newtonilla ei ole peruukkia ja koejärjestelyssä on
+yksi prisma; Galileon putki on säilyneen laitteen mukainen puu–paperi–kupari-
+rakenne; Curien radium ei hehku yliluonnollisesti; Lavoisierien työ ei näytä
+alkemialta.
+
+Tiedostot päättyvät tunnukseen `-photo-v4.jpg`. Näitä EI ole siirretty pelin
+julkiseen R2:een eikä kytketty peliin, koska käyttäjän hyväksyntä puuttuu.
+Kun hyväksynnät saapuvat, kuvaputki siirtää vain hyväksytyt versiot ja
+lähettää sinulle erillisen peli-integraatiopyynnön. Aiemman 34 hyväksytyn
+photo-v3-kuvan peliviitteiden kuittausta odotetaan edelleen.
