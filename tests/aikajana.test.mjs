@@ -14,7 +14,8 @@ import { readFileSync } from 'node:fs';
 import {
   aikajanaAskel, asetaMatkamittari, rajaaPaneelinSiirto, PANEELIN_RAAHAUSKYNNYS,
   AIKAJANA_TAUON_OSUUS, VUOSI_RULLAUS_MS, AIKAJANA_NAKSU_VALI_MS,
-  AIKAJANA_VIIVE_MS, AIKAJANA_PAALU_MS, AIKAJANA_TAUKO_HIMMENNYS,
+  AIKAJANA_VIIVE_MS, AIKAJANA_PAALU_MS, AIKAJANA_TAUKO_HIMMENNYS, AIKAJANA_VUOSI_MS,
+  aikajananNopeus, AIKAJANA_POHJANOPEUS, AIKAJANA_KIIHTYMISMATKA, AIKAJANA_ALIASKEL_MS,
   pieniOsoite, PIENEN_KATTO, karusellinPaikat, karusellinMitta, KARUSELLIN_MITAT,
   karuselliOsoite, sumeaOsoite, KARUSELLIN_KATTO,
 } from '../js/aikajana.js';
@@ -30,16 +31,59 @@ const MOOTTORI = readFileSync(new URL('../js/aikajana.js', import.meta.url), 'ut
 const TIEDELIITE = readFileSync(new URL('../js/tiedeliite.js', import.meta.url), 'utf8');
 const TAPAHTUMAT = [{ vuosi: 1770 }, { vuosi: 1773, paalu: true }, { vuosi: 1780 }];
 const TAHTI = { vuosiMs: 100, viiveMs: 500, paaluMs: 200 };
+/* Reduced motion ajaa saman tahdin ilman nopeusprofiilia. */
+const LINEAARINEN = { ...TAHTI, lineaarinen: true };
+
+/** Ajaa kelloa tasaisin askelin, kunnes tapahtuma syttyy tai kaari loppuu. */
+function ajaKunnesSyttyy(alku, tapahtumat, tahti = TAHTI, askel = 16) {
+  let tila = alku;
+  for (let t = 0; t < 400000; t += askel) {
+    const tulos = aikajanaAskel(tila, askel, tapahtumat, tahti);
+    tila = tulos.tila;
+    if (tulos.syttyi !== null || tulos.loppu) {
+      return { kesto: t + askel, tila, syttyi: tulos.syttyi, loppu: tulos.loppu };
+    }
+  }
+  throw new Error('kello ei saapunut pysäkille');
+}
+
+/**
+ * Ajaa yhden välin pysäkiltä pysäkille ja palauttaa keston sekä
+ * nopeusotoksen (nopeus osuutena matkanopeudesta). Lähtökohta on
+ * tauon hiipimän jälkeinen kohta, kuten oikeassa ajossa.
+ */
+function ajaVali(alkuVuosi, loppuVuosi, askel = 16, tahti = {}) {
+  const tapahtumat = [{ vuosi: alkuVuosi }, { vuosi: loppuVuosi }];
+  const lahto = alkuVuosi + AIKAJANA_TAUON_OSUUS;
+  const vuosiMs = tahti.vuosiMs ?? AIKAJANA_VUOSI_MS;
+  let tila = { vuosi: lahto, i: 0, viive: 0, alku: lahto };
+  const otos = [];
+  for (let t = 0; t < 1000000; t += askel) {
+    const tulos = aikajanaAskel(tila, askel, tapahtumat, tahti);
+    if (tulos.syttyi !== null) return { kesto: t + askel, otos };
+    otos.push({ vuosi: tila.vuosi, nopeus: ((tulos.tila.vuosi - tila.vuosi) / askel) * vuosiMs });
+    tila = tulos.tila;
+  }
+  throw new Error('väli ei päättynyt');
+}
 
 test('kello juoksee tyhjät vuodet ja pysähtyy tapahtumaan', () => {
-  let tila = { vuosi: 1765, i: -1, viive: 0 };
-  let askel = aikajanaAskel(tila, 250, TAPAHTUMAT, TAHTI);
+  // Lineaarinen tahti (reduced motion): matka on suoraan dt / vuosiMs.
+  let askel = aikajanaAskel({ vuosi: 1765, i: -1, viive: 0 }, 250, TAPAHTUMAT, LINEAARINEN);
   assert.equal(askel.syttyi, null);
   assert.ok(Math.abs(askel.tila.vuosi - 1767.5) < 1e-9);
-  askel = aikajanaAskel(askel.tila, 400, TAPAHTUMAT, TAHTI);
+  askel = aikajanaAskel(askel.tila, 400, TAPAHTUMAT, LINEAARINEN);
   assert.equal(askel.syttyi, 0, 'ensimmäinen tapahtuma syttyy kun vuosi ylittyy');
   assert.equal(askel.tila.vuosi, 1770, 'kello napsahtaa tapahtuman vuoteen, ei sen yli');
   assert.equal(askel.tila.viive, 500);
+
+  // Nopeusprofiililla sama matka kestää kauemmin mutta päättyy samaan
+  // vuoteen: kiihdytys ja jarrutus eivät saa hukata tai ylittää pysäkkiä.
+  const ajo = ajaKunnesSyttyy({ vuosi: 1765, i: -1, viive: 0 }, TAPAHTUMAT);
+  assert.equal(ajo.syttyi, 0);
+  assert.equal(ajo.tila.vuosi, 1770);
+  assert.equal(ajo.tila.viive, 500);
+  assert.ok(ajo.kesto > 5 * 100, 'profiili on hitaampi kuin vakiovauhti');
 });
 
 test('viive kuluu ennen kuin kello jatkaa; tauolla mittari hiipii; merkkipaalu on lyhyempi', () => {
@@ -53,10 +97,12 @@ test('viive kuluu ennen kuin kello jatkaa; tauolla mittari hiipii; merkkipaalu o
   askel = aikajanaAskel(askel.tila, 300, TAPAHTUMAT, TAHTI);
   assert.equal(askel.tila.viive, 0);
   assert.ok(Math.abs(askel.tila.vuosi - (1770 + AIKAJANA_TAUON_OSUUS)) < 1e-9, 'tauon lopussa koko hiipimä');
-  askel = aikajanaAskel(askel.tila, 300, TAPAHTUMAT, TAHTI);
-  assert.equal(askel.syttyi, 1, 'paalu syttyy vuonna 1773');
-  assert.equal(askel.tila.viive, 200, 'paalun viive');
-  assert.equal(askel.tila.viiveTaysi, 200);
+  assert.ok(Math.abs(askel.tila.alku - askel.tila.vuosi) < 1e-9,
+    'liike lähtee siitä, mihin hiipimä ehti — kiihdytys jatkaa siitä');
+  const ajo = ajaKunnesSyttyy(askel.tila, TAPAHTUMAT);
+  assert.equal(ajo.syttyi, 1, 'paalu syttyy vuonna 1773');
+  assert.equal(ajo.tila.viive, 200, 'paalun viive');
+  assert.equal(ajo.tila.viiveTaysi, 200);
 });
 
 test('hiipimä on alle kokonaisen vuoden ja saman vuoden ketju ei peruuta mittaria', () => {
@@ -76,6 +122,90 @@ test('viimeisen tapahtuman jälkeen askel ilmoittaa lopun', () => {
   assert.equal(askel.loppu, true);
   askel = aikajanaAskel({ vuosi: 1780, i: 2, viive: 0 }, 100, TAPAHTUMAT, TAHTI);
   assert.equal(askel.loppu, true);
+});
+
+/* ==================== PEHMEÄ KIIHDYTYS JA JARRUTUS ==================== */
+
+/*
+ * Omistaja 3.9.2026: *"vuosinumerot juoksevat nyt mutta niihin pitäisi
+ * tehdä pehmeät kiihdytykset ja jarrutukset (logaritminen)."* Tässä
+ * mitataan se, mikä rikkoutuisi hiljaa: että liike ei pysähdy, että
+ * kiihdytys ja jarrutus todella näkyvät nopeudessa, ettei kaari veny
+ * kohtuuttomasti ja ettei tulos riipu kehysvälistä.
+ */
+
+test('nopeusprofiili: nopeus pysyy nollan yläpuolella eikä mittari peruuta', () => {
+  for (const d of [-1, 0, 0.001, 0.3, 1, 1.5, 5, 100]) {
+    const v = aikajananNopeus(d);
+    assert.ok(v > 0, `nopeus on aina yli nollan (etäisyys ${d})`);
+    assert.ok(v >= AIKAJANA_POHJANOPEUS && v <= 1, `nopeus pysyy rajoissa (etäisyys ${d})`);
+  }
+  assert.equal(aikajananNopeus(AIKAJANA_KIIHTYMISMATKA), 1, 'täysi vauhti kiihtymismatkan päässä');
+  let edellinen = 0;
+  for (let d = 0; d <= 3; d += 0.05) {
+    const v = aikajananNopeus(d);
+    assert.ok(v >= edellinen - 1e-12, 'käyrä kasvaa monotonisesti');
+    edellinen = v;
+  }
+  // Koko kaari läpi: vuosi ei mene taaksepäin missään vaiheessa.
+  let tila = { vuosi: 1765, i: -1, viive: 0 };
+  let vuosi = tila.vuosi;
+  let n = 0;
+  for (; n < 50000; n += 1) {
+    const askel = aikajanaAskel(tila, 16, TAPAHTUMAT, TAHTI);
+    assert.ok(askel.tila.vuosi >= vuosi - 1e-12, 'mittari ei peruuta');
+    vuosi = askel.tila.vuosi;
+    tila = askel.tila;
+    if (askel.loppu) break;
+  }
+  assert.ok(n < 50000 && vuosi >= 1780, 'kaari ajautuu loppuun asti');
+});
+
+test('nopeusprofiili: lähtö on hiipimisvauhtia, keskiväli täyttä vauhtia, tulo hidasta', () => {
+  const hiipiminen = (AIKAJANA_TAUON_OSUUS * AIKAJANA_VUOSI_MS) / AIKAJANA_VIIVE_MS;
+  assert.ok(Math.abs(AIKAJANA_POHJANOPEUS - hiipiminen) < 0.01,
+    'pohjanopeus on hiipimisnopeuden luokkaa — ei nopeushyppyä tauon jälkeen');
+
+  const { otos } = ajaVali(1783, 1796);
+  const lahto = otos[0].nopeus;
+  assert.ok(lahto < 1.6 * hiipiminen, `lähtönopeus ${lahto} on lähellä hiipimisnopeutta ${hiipiminen}`);
+  const keski = otos.filter((o) => o.vuosi > 1788 && o.vuosi < 1791);
+  const keskinopeus = keski.reduce((s, o) => s + o.nopeus, 0) / keski.length;
+  assert.ok(keskinopeus > 0.98, `välin keskellä ajetaan täyttä vauhtia (${keskinopeus})`);
+  assert.ok(keskinopeus > 10 * lahto, 'keskiväli on selvästi lähtöä nopeampi');
+  // Viimeinen vuosi ennen pysäkkiä: jarrutus näkyy.
+  const tulo = otos.filter((o) => o.vuosi > 1795);
+  const suurinTulossa = Math.max(...tulo.map((o) => o.nopeus));
+  assert.ok(suurinTulossa < keskinopeus, 'viimeisen vuoden aikana kello on hitaampi kuin keskellä');
+  assert.ok(tulo[tulo.length - 1].nopeus < 1.6 * hiipiminen, 'saapuminen on hiipimisvauhtia');
+  // Symmetria: yhden vuoden päässä kummastakin päästä sama nopeus.
+  const lahin = (kohde) => otos.reduce((a, b) => (Math.abs(b.vuosi - kohde) < Math.abs(a.vuosi - kohde) ? b : a));
+  const alkuPaa = lahin(1783 + AIKAJANA_TAUON_OSUUS + 1);
+  const loppuPaa = lahin(1796 - 1);
+  assert.ok(Math.abs(alkuPaa.nopeus - loppuPaa.nopeus) < 0.05,
+    `kiihdytys ja jarrutus ovat sama käyrä (${alkuPaa.nopeus} vs ${loppuPaa.nopeus})`);
+});
+
+test('nopeusprofiili: pitkä väli ei veny eikä tulos riipu kehysvälistä', () => {
+  const pitka = ajaVali(1783, 1796).kesto;
+  assert.ok(pitka <= 1.6 * 13 * AIKAJANA_VUOSI_MS,
+    `13 vuoden väli ${pitka} ms enintään 1,6× entisestä (${13 * AIKAJANA_VUOSI_MS} ms)`);
+  const hyvinPitka = ajaVali(1800, 1840).kesto;
+  assert.ok(hyvinPitka <= 1.3 * 40 * AIKAJANA_VUOSI_MS,
+    `40 vuoden väli ${hyvinPitka} ms enintään 1,3× entisestä (${40 * AIKAJANA_VUOSI_MS} ms)`);
+  // Kehysväli pilkotaan aliaskeliin, joten iso dt ei oikaise.
+  assert.ok(AIKAJANA_ALIASKEL_MS > 0 && AIKAJANA_ALIASKEL_MS <= 16);
+  const tihea = ajaVali(1783, 1796, 16).kesto;
+  const harva = ajaVali(1783, 1796, 100).kesto;
+  assert.ok(Math.abs(tihea - harva) / tihea < 0.05,
+    `16 ms ja 100 ms askel päätyvät samaan (${tihea} vs ${harva})`);
+  // Lyhyt väli ei ehdi täyteen vauhtiin — se on tarkoitus.
+  const lyhyt = ajaVali(1885, 1886);
+  assert.ok(Math.max(...lyhyt.otos.map((o) => o.nopeus)) < 0.9,
+    'yhden vuoden välillä kello ei ehdi täyteen vauhtiin');
+  // Reduced motion ohittaa profiilin kokonaan.
+  const suora = ajaVali(1783, 1796, 16, { vuosiMs: 40, lineaarinen: true }).kesto;
+  assert.ok(Math.abs(suora - 12.4 * 40) < 80, `lineaarinen tahti kulkee vakiovauhtia (${suora} ms)`);
 });
 
 test('oletustahti: tapahtuman viive on pidempi kuin paalun', () => {

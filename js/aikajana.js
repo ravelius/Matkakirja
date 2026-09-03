@@ -161,6 +161,62 @@ export const AIKAJANA_PAALU_MS = 3200;
  */
 export const AIKAJANA_TAUON_OSUUS = 0.6;
 
+/*
+ * ── PEHMEÄT KIIHDYTYKSET JA JARRUTUKSET ────────────────────────────
+ *
+ * Omistaja sanatarkasti (3.9.2026): *"vuosinumerot juoksevat nyt mutta
+ * niihin pitäisi tehdä pehmeät kiihdytykset ja jarrutukset
+ * (logaritminen)."*
+ *
+ * PROFIILI. Kello ei enää kulje pysäkkien välillä vakionopeudella.
+ * Nopeus on PAIKAN funktio: se riippuu siitä, montako vuotta on
+ * lähimpään pysäkkiin — taaksepäin siihen kohtaan, josta liike lähti
+ * (tauon hiipimän jälkeen), ja eteenpäin seuraavan tapahtuman vuoteen.
+ * Käyrä on logaritmi, joka nousee jyrkästi heti liikkeelle lähdössä ja
+ * loivenee: nopeus = ln(1 + etäisyys / TAITE) / ln(1 + KIIHTYMISMATKA /
+ * TAITE), rajattuna välille [POHJANOPEUS, 1] ja kerrottuna
+ * matkanopeudella (1 vuosi / AIKAJANA_VUOSI_MS).
+ *
+ * Koska sama käyrä luetaan kummastakin päästä, kiihdytys ja jarrutus
+ * ovat symmetriset: kello lähtee liikkeelle suunnilleen samaa vauhtia
+ * kuin se tauolla hiipi (POHJANOPEUS ≈ TAUON_OSUUS × VUOSI_MS /
+ * VIIVE_MS = 0,034), kiihtyy täyteen matkavauhtiin ja jarruttaa
+ * saapuessaan takaisin samaan pohjanopeuteen. LIIKE EI PYSÄHDY
+ * KOSKAAN: pohjanopeus on aidosti nollaa suurempi.
+ *
+ * LYHYILLÄ VÄLEILLÄ (1–3 vuotta) kello ei ehdi täyteen vauhtiin — se
+ * on tarkoitus: tiheä 1890-luku näkyy hitaana ja harva 1800-luvun alku
+ * pitkinä vetoina.
+ *
+ * KESTO. Vakiot on säädetty niin, ettei profiili veny liikaa: 13
+ * vuoden väli kestää 1,28× ja 40 vuoden väli 1,09× entisestä
+ * (koko kaari taukoineen 1,17×). Reduced motion ohittaa profiilin
+ * (tahti.lineaarinen) — silloin kello vain juoksee.
+ */
+/** Osuus matkanopeudesta, jota hitaammin kello ei koskaan kulje. */
+export const AIKAJANA_POHJANOPEUS = 0.035;
+/** Vuosia pysäkistä, jonka päässä kello on täydessä matkavauhdissa. */
+export const AIKAJANA_KIIHTYMISMATKA = 1.5;
+/** Logaritmin taite vuosina: pienempi = jyrkempi lähtö liikkeelle. */
+export const AIKAJANA_KAYRAN_TAITE = 0.2;
+/** Nopeus luetaan paikasta, joten iso kehysväli pilkotaan tähän. */
+export const AIKAJANA_ALIASKEL_MS = 8;
+
+/**
+ * Nopeusprofiili puhtaana käyränä: kuinka suuren osan matkanopeudesta
+ * kello kulkee, kun lähimpään pysäkkiin on `etaisyys` vuotta.
+ * Palauttaa aina > 0 (ks. AIKAJANA_POHJANOPEUS).
+ *
+ * @param {number} etaisyys vuosia lähimpään pysäkkiin
+ * @returns {number} osuus matkanopeudesta, välillä [POHJANOPEUS, 1]
+ */
+export function aikajananNopeus(etaisyys) {
+  if (!(etaisyys > 0)) return AIKAJANA_POHJANOPEUS;
+  const osuus = Math.log1p(etaisyys / AIKAJANA_KAYRAN_TAITE)
+    / Math.log1p(AIKAJANA_KIIHTYMISMATKA / AIKAJANA_KAYRAN_TAITE);
+  return Math.min(1, Math.max(AIKAJANA_POHJANOPEUS, osuus));
+}
+
 /**
  * Tauolla musiikki jää soimaan PUOLEEN tasoon (omistajan tilaus:
  * *"jatkuu pysäytyksen yli hiljennettynä puoleen"*). Vakio on tässä
@@ -265,17 +321,27 @@ export const AIKAJANA_NAKSU_VALI_MS = 125;
  * (jos mikään) syttyy. DOM:iton, jotta tahti on testattavissa
  * (tests/aikajana.test.mjs).
  *
- * @param {{vuosi:number, i:number, viive:number}} tila
+ * Nopeus ei ole vakio vaan luetaan paikasta (aikajananNopeus): kello
+ * kiihtyy pysäkiltä lähtiessään ja jarruttaa seuraavaa lähestyessään.
+ * Siksi kehysväli pilkotaan enintään AIKAJANA_ALIASKEL_MS:n paloihin —
+ * niin sama matka kestää yhtä kauan riippumatta kehysvälistä.
+ * `tila.alku` on se vuosi, josta liike lähti (tauon hiipimän jälkeen);
+ * ilman sitä lähtökohta päätellään edellisestä tapahtumasta.
+ *
+ * @param {{vuosi:number, i:number, viive:number, viiveTaysi?:number, alku?:number}} tila
  * @param {number} dt millisekuntia edellisestä kehyksestä
  * @param {Array<{vuosi:number, paalu?:boolean}>} tapahtumat
- * @param {{vuosiMs?:number, viiveMs?:number, paaluMs?:number}} [tahti]
+ * @param {{vuosiMs?:number, viiveMs?:number, paaluMs?:number, lineaarinen?:boolean}} [tahti]
  * @returns {{tila:object, syttyi:number|null, loppu:boolean}}
  */
 export function aikajanaAskel(tila, dt, tapahtumat, tahti = {}) {
   const vuosiMs = tahti.vuosiMs ?? AIKAJANA_VUOSI_MS;
   const viiveMs = tahti.viiveMs ?? AIKAJANA_VIIVE_MS;
   const paaluMs = tahti.paaluMs ?? AIKAJANA_PAALU_MS;
+  const lineaarinen = Boolean(tahti.lineaarinen);
   let { vuosi, i, viive } = tila;
+  let alku = tila.alku
+    ?? (tapahtumat[i]?.vuosi != null ? tapahtumat[i].vuosi + AIKAJANA_TAUON_OSUUS : vuosi);
   let tauolta = false;
   if (viive > 0) {
     const taysi = tila.viiveTaysi ?? viive;
@@ -283,21 +349,36 @@ export function aikajanaAskel(tila, dt, tapahtumat, tahti = {}) {
     // Tauolla ykkösrulla hiipii (AIKAJANA_TAUON_OSUUS) — kello ei seiso.
     const hiipima = taysi > 0 ? AIKAJANA_TAUON_OSUUS * (1 - viive / taysi) : 0;
     vuosi = Math.floor(vuosi) + Math.max(vuosi - Math.floor(vuosi), hiipima);
-    if (viive > 0) return { tila: { vuosi, i, viive, viiveTaysi: taysi }, syttyi: null, loppu: false };
-    if (i >= tapahtumat.length - 1) return { tila: { vuosi, i, viive: 0 }, syttyi: null, loppu: true };
+    // Liike lähtee siitä, mihin hiipimä ehti: kiihdytys jatkaa siitä.
+    alku = vuosi;
+    if (viive > 0) return { tila: { vuosi, i, viive, viiveTaysi: taysi, alku }, syttyi: null, loppu: false };
+    if (i >= tapahtumat.length - 1) return { tila: { vuosi, i, viive: 0, alku }, syttyi: null, loppu: true };
     dt = 0;
     tauolta = true;
   }
   const seuraava = tapahtumat[i + 1];
-  if (!seuraava) return { tila: { vuosi, i, viive: 0 }, syttyi: null, loppu: true };
-  vuosi += dt / vuosiMs;
-  if (vuosi < seuraava.vuosi) return { tila: { vuosi, i, viive: 0 }, syttyi: null, loppu: false };
+  if (!seuraava) return { tila: { vuosi, i, viive: 0, alku }, syttyi: null, loppu: true };
+  if (dt > 0) {
+    if (lineaarinen) {
+      vuosi += dt / vuosiMs;
+    } else {
+      const askelia = Math.max(1, Math.ceil(dt / AIKAJANA_ALIASKEL_MS));
+      const pala = dt / askelia;
+      for (let n = 0; n < askelia && vuosi < seuraava.vuosi; n += 1) {
+        // Etäisyys lähimpään pysäkkiin: lähtökohta tai seuraava vuosi.
+        const etaisyys = Math.max(0, Math.min(vuosi - alku, seuraava.vuosi - vuosi));
+        vuosi += (pala / vuosiMs) * aikajananNopeus(etaisyys);
+      }
+    }
+  }
+  if (vuosi < seuraava.vuosi) return { tila: { vuosi, i, viive: 0, alku }, syttyi: null, loppu: false };
   i += 1;
   const uusiViive = seuraava.paalu ? paaluMs : viiveMs;
+  // Kello napsahtaa tapahtuman vuoteen. Saman vuoden ketjussa (tauolta
+  // suoraan seuraavaan) hiipinyt osuus säilyy, ettei mittari peruuta.
+  const kohta = tauolta ? Math.max(vuosi, seuraava.vuosi) : seuraava.vuosi;
   return {
-    // Kello napsahtaa tapahtuman vuoteen. Saman vuoden ketjussa (tauolta
-    // suoraan seuraavaan) hiipinyt osuus säilyy, ettei mittari peruuta.
-    tila: { vuosi: tauolta ? Math.max(vuosi, seuraava.vuosi) : seuraava.vuosi, i, viive: uusiViive, viiveTaysi: uusiViive },
+    tila: { vuosi: kohta, i, viive: uusiViive, viiveTaysi: uusiViive, alku: kohta },
     syttyi: i,
     loppu: false,
   };
@@ -1122,8 +1203,10 @@ class Aikajana {
     if (!this.kaynnissa) return;
     const dt = Math.min(200, nyt - this.viime);
     this.viime = nyt;
+    // Reduced motion: nopeutettu ja LINEAARINEN — pehmeät kiihdytykset
+    // ovat juuri sitä liikettä, jota tässä tilassa vältetään.
     const { tila, syttyi, loppu } = aikajanaAskel(this.tila, dt, this.tapahtumat, this.reducedMotion
-      ? { vuosiMs: 40 } : {});
+      ? { vuosiMs: 40, lineaarinen: true } : {});
     this.tila = tila;
     this.naytaVuosi(tila.vuosi);
     if (syttyi !== null) this.sytyta(syttyi);
