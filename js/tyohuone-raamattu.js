@@ -2419,7 +2419,10 @@ export const RAAMATTU = {
           + 'lopu siirron paattyessa vaan jatkuu valinopanheittojen ja '
           + 'valisiirtojen ajan ja feidaa vasta, kun pelaaja saapuu '
           + 'seuraavaan kaupunkiin (tai peli keskeytyy/vaihtuu laivaan tai '
-          + 'lentoon).',
+          + 'lentoon). TOTEUTETTU v1503: prompti laukkaavaksi (ajo '
+          + 'generoi-siirtymamusiikki laji=jalan), js/ui.js '
+          + 'animatePawnSisalla jattaa jalan-raidan soimaan kun pelaaja jaa '
+          + 'valipisteeseen (pos.type edge).',
         'JOKAINEN NAKYVA KARTTAMERKKI ON NIMETTY JA NAPAUTETTAVA (omistaja '
           + '2.9.2026 ilta, Bosnia: "kaksi tekstitonta huutomerkkia seka '
           + 'Dinaariset Alpit mita ei voi klikata. samoin Dinara ja Sveti Jure '

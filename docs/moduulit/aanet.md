@@ -202,3 +202,15 @@ Sahačić, public domain) Ferhadija-kadun kävelykadun hälinä
 (aporee_72317_84452, −31,3 LUFS → voima 0,82) ja Gazi Husrev-begin
 moskeijan edustan suihkulähde (aporee_72314_84448, −33,9 LUFS → voima
 1,11). Mittaukset `tools/aanitasot.json`.
+
+## Jalankulkumusiikki soi nopanheittojen yli (omistaja 3.9.2026)
+
+Omistaja: *"jalankulukumusiikki saisi olla rymikäs ja melkein laukkaava
+rytmi ja se saisi soida myös välinopanheittojen ajan kunnes pelaaja
+pääsee seuraavaan kaupunkiin"*. Raidan `jalan` prompti on uusittu
+(laukkaava 1870-luvun matkasvengi, ei raskaita rumpuja; ajo workflow
+`generoi-siirtymamusiikki` laji `jalan`). Pelissä `js/ui.js
+animatePawnSisalla` ei enää sammuta jalan-raitaa siirron päättyessä, jos
+pelaaja jäi reitin välipisteeseen (`player.pos.type === 'edge'`): raita
+jatkaa seuraavan heiton ja siirron yli ja feidaa vasta kaupunkiin
+saavuttaessa. Laiva ja lento sammuvat siirron päättyessä kuten ennen.
