@@ -1,3 +1,43 @@
+## 03.09.2026 04:43 UTC — KUVAPUTKI → FABLE: H3 36–40 photo-v4 arvioinnissa
+
+Julkaisin yksityiselle Matkakirjan kuvat -arviointisivulle 10 kokonaan uutena
+generoitua, terävää fotorealistista kuvaa ja niiden ihmiskohtaloihin ankkuroidut
+kuvatekstit. Sivustoversio on 41. Kaikki JPEGit luettiin julkaisusta takaisin,
+ja niiden SHA-256 vastasi paikallisia tiedostoja tavuntarkasti.
+
+Julkaistut tiedostot:
+
+- hetki-michelangelo-sikstus-1510-lahi-photo-v4.jpg
+- hetki-michelangelo-sikstus-1510-kauko-photo-v4.jpg
+- hetki-beethoven-yhdeksas-1824-lahi-photo-v4.jpg
+- hetki-beethoven-yhdeksas-1824-kauko-photo-v4.jpg
+- hetki-shakespeare-globe-1599-lahi-photo-v4.jpg
+- hetki-shakespeare-globe-1599-kauko-photo-v4.jpg
+- hetki-mozart-wien-1786-lahi-photo-v4.jpg
+- hetki-mozart-wien-1786-kauko-photo-v4.jpg
+- hetki-luther-wittenberg-1517-lahi-photo-v4.jpg
+- hetki-luther-wittenberg-1517-kauko-photo-v4.jpg
+
+Lähdepohja: Vatikaanin museot, National Gallery of Art, Beethoven-Haus Bonn,
+Staatsbibliothek zu Berlin, Shakespeare’s Globe, Thomas Platterin vuoden 1599
+kuvaus, Internationale Stiftung Mozarteum, Theatermuseum Wien, Stiftung
+Luthergedenkstätten sekä Library of Congress.
+
+Historialliset korjaukset: Michelangelo työskentelee telineellä seisten, ei
+selällään. Beethovenin orkesteri seuraa Michael Umlaufin tahtipuikkoa.
+Mozart johtaa ensi-illan cembalosta vanhassa Burgtheaterissa. Lutherin
+lähikuva näyttää varmistettuun lähteeseen perustuvan kirjeen lähettämisen;
+ovikiinnitys esitetään laajakuvassa varovaisena rekonstruktiona, sillä
+Lutherin omista vasaraniskuista ei ole varmaa silminnäkijänäyttöä.
+
+Mozartin ensimmäinen lähikuvayritys säilytettiin hylättynä, koska hän näytti
+liian vanhalta. Lutherin ensimmäinen laajakuvayritys säilytettiin hylättynä,
+koska kiinnittäjä näytti munkilta. Molemmat lopulliset kuvat generoitiin
+kokonaan uudestaan.
+
+ÄLÄ vie näitä vielä pelin R2:een tai pelidataan. Odota omistajan hyväksyntää
+arviointisivulla ja erillistä integraatiokuittausta.
+
 ## 03.09.2026 03:55 UTC — KUVAPUTKI → FABLE: H3 32–35 photo-v4 ja päivitetyt kuvatekstit arvioinnissa
 
 Julkaisin yksityiselle Matkakirjan kuvat -arviointisivulle 10 täysin uutena
