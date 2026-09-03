@@ -92,6 +92,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1509: ISOISAN VALOKUVAT - aloitussivu: pieni kallistettu Kanton-kuva luonnoslehden vieressa; uusi peli ja avauslento: Bombay-kuva nousee kartan vasempaan alakulmaan repliikin alettua, napautus suurentaa (ei ohita lentoa).',
   'v1508: TIEDELIITTEEN TAITTO (pilotti Watt) - avaa linssi, napauta Wattin korttia: leipateksti vasemmalla ja pieni muotokuva oikealla, alla havainnekuva, lopussa Keksija-osio henkilotekstilla ja aidolla kuvalla oikealla. Muut keksijat: sama taitto ilman henkilo-osiota.',
   'v1507: KUPLAPINO PEHMEASTI - Sofiaan saapuessa kolme kuplaa: pino ei hypi vaakasuunnassa, uusi kupla nousee samaan tahtiin kuin vanhat vaistyvat. LINSSIN VIIMEISTELY - Keksinnot-linssi: kartuutsi, mittajana ja asteviivaimet poissa, ilmiopaneeli irti vuosipalkista, karuselli ja kuvanvaihto sulavampia.',
   'v1506: KAMERA-AJOT PEHMEASTI - heita noppa maan yleiskuvasta ja valitse kohde heti: kartta ei hyppaa vaan jatkaa liikkeesta saumatta, iso zoomi kestaa pidempaan (n. 1,1-1,5 s), pieni ele pysyy ripeana; nappula lahtee vasta zoomin pysahdyttya.',

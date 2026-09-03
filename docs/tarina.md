@@ -16,6 +16,15 @@ hän kuoli aikaa sitten. Matkustava osapuoli on hänen päiväkirjansa, jota
 lapsenlapsi lukee junissa, laivoissa ja lentokentillä, ja jonka merkinnät
 ovat vuoroin hämmentävän tarkkoja ja vuoroin toivottoman vanhentuneita.
 
+**Isoisän ulkonäkö (kaanon 3.9.2026, kuvaputken valokuvat Kanton ja
+Bombay 1873):** noin 35–40-vuotias brittiläinen herrasmiesmatkailija.
+Vaalea kolmiosainen pellavapuku ja liivi, tumma solmio, kellonperät
+liivissä, leveälierinen huopahattu kädessä tai pöydällä. Tuuhea,
+kihartuva vaalea tukka ja lyhyt täysparta. Avoin, vilpitön hymy; istuu
+tai seisoo rennosti paikallisten seurassa, ei koskaan poseeraa
+komentavasti. Matkassa iso vaneri- ja nahkakuorinen matka-arkku. Kaikki
+uudet kuvat ja kuvaukset isoisästä noudattavat tätä.
+
 Nuori Fogg olettaa maailman olevan suunnilleen siinä kunnossa kuin isoisä
 sen jätti.
 

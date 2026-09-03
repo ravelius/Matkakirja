@@ -1,6 +1,7 @@
 // Käyttöliittymä: aarrekartan piirto, ohjauspaneeli, tietovisa ja bottien ohjaus.
 
 import { pixelOf, pointAlong, posKey } from './rules.js';
+import { ISOISAN_VALOKUVAT, LENNON_VALOKUVAN_VIIVE_MS } from './isoisan-valokuvat.js';
 import {
   chooseDuelAnswer,
   chooseMove,
@@ -273,6 +274,7 @@ import { Kartta } from './kartta.js';
 import {
   matkakirjanIhme, nollaaFokuskohteet, paivitaFokuskohteet, piirraIhmenappi,
   piirraIhmenauha,
+  avaaKohdeSuurennos,
 } from './fokuskohteet.js';
 /*
  * MERKKIEN LADONNAN MITTAKAAVA TULEE LADONTAMODUULISTA, EI TÄSTÄ
@@ -19042,6 +19044,27 @@ export class UI {
     overlay.appendChild(alaosa);
     this.flightLineValmis = null;
     if (line) this.showFlightLine(line, alaosa);
+    /*
+     * ISOISÄN VALOKUVA MATKAKIRJAN VÄLISTÄ (omistaja 3.9.2026; js/
+     * isoisan-valokuvat.js). Kuva nousee kartan päälle repliikin alettua
+     * ja pysyy lennon loppuun; napautus suurentaa eikä ohita lentoa.
+     */
+    const valokuvaNappi = html('button', 'lento-valokuva');
+    valokuvaNappi.type = 'button';
+    valokuvaNappi.setAttribute('aria-label', `${ISOISAN_VALOKUVAT.bombay.selite} — avaa suurena`);
+    const valokuva = document.createElement('img');
+    valokuva.src = ISOISAN_VALOKUVAT.bombay.osoite;
+    valokuva.alt = ISOISAN_VALOKUVAT.bombay.selite;
+    valokuva.decoding = 'async';
+    valokuva.draggable = false;
+    valokuvaNappi.appendChild(valokuva);
+    valokuvaNappi.addEventListener('pointerdown', (e) => e.stopPropagation());
+    valokuvaNappi.addEventListener('click', (e) => {
+      e.stopPropagation();
+      avaaKohdeSuurennos(this, ISOISAN_VALOKUVAT.bombay, () => valokuvaNappi, 'lentoValokuva');
+    });
+    overlay.appendChild(valokuvaNappi);
+    const valokuvanAjastin = setTimeout(() => valokuvaNappi.classList.add('nakyy'), LENNON_VALOKUVAN_VIIVE_MS);
     // Harsopilvet kartan päälle koko lennon ajaksi.
     const pilvet = this.lennonPilvet(this.mapPane);
     const sanoja = line ? String(line).trim().split(/\s+/).length : 0;
@@ -19230,6 +19253,7 @@ export class UI {
     clearTimeout(nuolenAjastin);
     nuoli.remove();
     if (!ohitettu) await Promise.race([this.wait(LENNON_JATKO_MS), ohitusLupaus]);
+    clearTimeout(valokuvanAjastin);
 
     // --- 5) Saapumissekvenssi: paperi, välikortti, kartta, kuplat ----
     sfx.stopFlight();
