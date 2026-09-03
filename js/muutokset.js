@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1502, teksti: 'Sarajevon aanimaisema, kehittajan voimakkuussaatimet' },
   { v: 1501, teksti: 'Livia kommentoi matkakirjaa myos ensimmaisessa kaupungissa' },
   { v: 1500, teksti: 'Kohtaamisten tarkistuskierros: vinouma pois, toistot' },
   { v: 1499, teksti: 'Aarteen paljastus koko ruudun pergamentille' },

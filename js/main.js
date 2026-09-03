@@ -1,6 +1,7 @@
 // Käynnistys: aloitusruutu, pelin luonti, tallennus ja dialogit.
 
 import { MUUTOKSET } from './muutokset.js';
+import { kehittajanKerroinTeksti, saadaKehittajanKerrointa } from './kehittajan-voimat.js';
 import { Game } from './game.js';
 import { UI } from './ui.js';
 import {
@@ -116,7 +117,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1501';
+const APP_VERSION = '2026-08-09.1502';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1298,6 +1299,25 @@ const kehittajaValikko = document.getElementById('kehittaja-valikko');
 const kehittajaVihje = document.getElementById('kehittaja-valikko-vihje');
 const maailmaNappi = document.getElementById('kehittaja-maailma-btn');
 const mittariNappi = document.getElementById('kehittaja-mittari-btn');
+/*
+ * KEHITTÄJÄN VOIMAKKUUSSÄÄTIMET (omistaja 3.9.2026): taustaääni ja
+ * taustamusiikki, +/- askelittain pelin nykyiseen tasoon nähden.
+ * Kerroin ja tallennus ovat js/kehittajan-voimat.js:ssä; ambienssi ja
+ * siirtymämusiikki kuuntelevat sitä itse.
+ */
+for (const saadin of document.querySelectorAll('.kehittaja-saadin[data-laji]')) {
+  const laji = saadin.dataset.laji;
+  const arvo = saadin.querySelector('.kehittaja-saadin-arvo');
+  const nayta = () => { if (arvo) arvo.textContent = kehittajanKerroinTeksti(laji); };
+  nayta();
+  for (const nappi of saadin.querySelectorAll('.kehittaja-saadin-nappi')) {
+    nappi.addEventListener('click', (e) => {
+      e.stopPropagation();
+      saadaKehittajanKerrointa(laji, Number(nappi.dataset.suunta) || 1);
+      nayta();
+    });
+  }
+}
 const polloGenerointiNappi = document.getElementById('kehittaja-pollo-btn');
 /*
  * MUSIIKIN KAKSI RIVIÄ (omistajan tilaus 2.9.2026).

@@ -864,9 +864,21 @@ export const KAUPUNKI_EHDOKKAAT = {
       { url: 'https://archive.org/download/aporee_59836_68692/wallsofdubrovnik.mp3#voima=2.42',
         nimi: 'Dubrovnikin muurit — Roberto Vodanović Čopor, public domain' },
     ],
+    /*
+     * Sarajevo (omistaja 3.9.2026): *"sarajevon taustaäänimaisema pitää
+     * vaihtaa koska siinä kilkattaa kokoajan kirkonkello"*. Aiempi
+     * äänite (aporee_72320_84455, Pyhän Joosefin kirkon kellot) oli
+     * nimetty Baščaršijaksi, mutta se on kolme minuuttia kellonsoittoa.
+     * Tilalla saman tallentajan kaksi äänitettä samasta vanhasta
+     * kaupungista: Ferhadija-kadun kävelykadun hälinä ja Gazi
+     * Husrev-begin moskeijan edustan suihkulähde. Voimat mitattu
+     * tools/mittaa-aanet.mjs:n kaavalla (−31,3 ja −33,9 LUFS).
+     */
     sarajevo: [
-      { url: 'https://archive.org/download/aporee_72320_84455/stjosephchurchsarajevo.mp3#voima=0.33',
-        nimi: 'Baščaršijan äänimaisema — Haris Sahačić, public domain' },
+      { url: 'https://archive.org/download/aporee_72317_84452/bianuralsoundwalksarajevoferhadijastreet.mp3#voima=0.82',
+        nimi: 'Ferhadija-kadun kävelykatu — Haris Sahačić, public domain' },
+      { url: 'https://archive.org/download/aporee_72314_84448/soundoftheshadrvaninfrontofthemosque.mp3#voima=1.11',
+        nimi: 'Suihkulähde Gazi Husrev-begin moskeijan edustalla — Haris Sahačić, public domain' },
     ],
     sofia: [
       { url: 'https://archive.org/download/aporee_15487_18036/LS111000kopor.mp3#voima=0.17',

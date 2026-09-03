@@ -169,6 +169,20 @@
               <span class="kehittaja-kytkin-nimi">maailma</span>
               <span class="kehittaja-kytkin-tila">pois</span>
             </button>
+            <!-- Kehittäjän voimakkuussäätimet (omistaja 3.9.2026): kerroin
+                 pelin omaan tasoon, +/- askelittain (js/kehittajan-voimat.js). -->
+            <div class="kehittaja-saadin" data-laji="tausta" role="group" aria-label="Taustaäänen voimakkuus">
+              <span class="kehittaja-kytkin-nimi">taustaääni</span>
+              <button type="button" class="ghost kehittaja-saadin-nappi" data-suunta="-1" aria-label="Taustaäänen voimakkuus hiljemmalle">&minus;</button>
+              <span class="kehittaja-saadin-arvo" aria-live="polite">×1,0</span>
+              <button type="button" class="ghost kehittaja-saadin-nappi" data-suunta="1" aria-label="Taustaäänen voimakkuus kovemmalle">+</button>
+            </div>
+            <div class="kehittaja-saadin" data-laji="musiikki" role="group" aria-label="Taustamusiikin voimakkuus">
+              <span class="kehittaja-kytkin-nimi">taustamusiikki</span>
+              <button type="button" class="ghost kehittaja-saadin-nappi" data-suunta="-1" aria-label="Taustamusiikin voimakkuus hiljemmalle">&minus;</button>
+              <span class="kehittaja-saadin-arvo" aria-live="polite">×1,0</span>
+              <button type="button" class="ghost kehittaja-saadin-nappi" data-suunta="1" aria-label="Taustamusiikin voimakkuus kovemmalle">+</button>
+            </div>
             <button id="kehittaja-mittari-btn" class="ghost kehittaja-kytkin"
                     type="button" aria-pressed="false">
               <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 17.5a7.5 7.5 0 1 1 15 0"/><path d="m12 17.5 3.6-5.2"/><path d="M12 5.5v1.6M5.6 8.2l1.2 1.1M18.4 8.2l-1.2 1.1"/></svg></span>
