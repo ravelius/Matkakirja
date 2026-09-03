@@ -117,9 +117,9 @@ export const KAARI_PAKETIT = {
           + 'ylösalaisin. Mitä tarina kertoo syyksi?',
         vaihtoehdot: [
           'Jotta kivettävä katse ei osuisi keneenkään',
-          'Jotta pylväästä tulisi tukevampi',
+          'Jotta pylväästä tulisi tukevampi ja vakaampi',
           'Kuvanveistäjä erehtyi suunnasta',
-          'Sulttaani halusi piilottaa kasvot',
+          'Sulttaani halusi piilottaa pakanalliset kasvot',
         ],
         oikea: 0,
         fakta: 'Tarinan mukaan Medusan katse muutti katsojan kiveksi, ja '
@@ -342,9 +342,9 @@ export const KAARI_PAKETIT = {
         q: 'Isoisä kirjoitti, että Lontoossa sumu syö äänet. Mistä se '
           + 'sumu oikeasti syntyi?',
         vaihtoehdot: [
-          'Kivihiilen savusta, joka sekoittui joen kosteuteen',
+          'Kivihiilen savusta ja joen kosteudesta',
           'Mereltä ajautuneesta suolausvasta',
-          'Höyryveturien päästämästä vesihöyrystä',
+          'Höyryveturien ja tehtaiden päästämästä vesihöyrystä',
           'Kaasulyhtyjen palamisjätteestä',
         ],
         oikea: 0,
@@ -412,7 +412,7 @@ export const KAARI_PAKETIT = {
         + 'jota hänen sukunsa on pitänyt observatorion alusta asti.',
       kohtaaminen: 'Lotte avaa havaintokirjan vuoden 1873 kohdalta. "Vieras '
         + 'istui kaukoputken ääressä aamuun asti eikä kertonut, mitä '
-        + 'etsi. Hän jätti kysymyksen; se on odottanut siitä yöstä. '
+        + 'etsi — vain sen, mitä kysyisi seuraavalta tulijalta. '
         + 'Vastaa, niin käännän putken hänen kohtaansa ja saat katsoa '
         + 'itse."',
       kysymys: {
@@ -492,7 +492,7 @@ export const KAARI_PAKETIT = {
         q: 'Saman aukion kiveyksessä, jolla kello lyö, on laatta, josta '
           + 'jotakin mitataan. Mitä?',
         vaihtoehdot: [
-          'Espanjan maanteiden kilometrit — nollapiste on tässä',
+          'Maanteiden kilometrit — Espanjan nollapiste',
           'Auringon varjon pituus tarkalleen keskipäivällä',
           'Härkätaistelukulkueen juhlallinen lähtöpiste',
           'Vanhan vesijohdon syvyys aukion alla',
@@ -574,7 +574,7 @@ export const KAARI_PAKETIT = {
         q: 'Sana azulejo ei tule sinisestä väristä, vaikka siltä '
           + 'kuulostaa. Mistä se tulee?',
         vaihtoehdot: [
-          'Arabian sanasta, joka tarkoittaa kiillotettua kiveä',
+          'Arabian sanasta: kiillotettu kivi',
           'Latinan taivaansineä tarkoittavasta sanasta',
           'Laattamestari Azulejon kuuluisasta sukunimestä',
           'Atlantin aalloista, joita laatat jäljittelivät',
@@ -693,7 +693,7 @@ export const KAARI_PAKETIT = {
         q: 'Edinburghin linnasta ammutaan laukaus joka päivä kello '
           + 'yhdeltä. Kenelle laukaus alun perin ammuttiin?',
         vaihtoehdot: [
-          'Sataman laivureille, jotka asettivat kellonsa sen mukaan',
+          'Sataman laivureille kellojen asettamista varten',
           'Kaupungin virastoille, jotka avasivat ovensa siitä',
           'Ylämaan paimenille, jotka käänsivät laumat kotiin',
           'Linnan vartiostolle vahdinvaihdon merkiksi',
@@ -768,9 +768,9 @@ export const KAARI_PAKETIT = {
           + 'nimi tarkoittaa?',
         vaihtoehdot: [
           'Punaista — arabiaksi al-hamra',
-          'Korkeaa puutarhaa',
-          'Tuhannen lähteen taloa',
-          'Viimeistä huokausta',
+          'Korkeaa puutarhaa vuoren rinteellä',
+          'Tuhannen lähteen taloa ja sen kaivoja',
+          'Viimeistä huokausta kukkulan laella',
         ],
         oikea: 0,
         fakta: 'Al-qal\'a al-hamra tarkoittaa punaista linnaa: iltavalossa '
@@ -878,9 +878,9 @@ export const KAARI_PAKETIT = {
         q: 'Krakovan tornista soitetaan joka tunti hejnał-kutsu, joka '
           + 'katkeaa aina kesken. Miksi?',
         vaihtoehdot: [
-          'Tarun mukaan nuoli osui soittajaan kesken varoitussoiton',
+          'Tarun mukaan nuoli osui soittajaan kesken soiton',
           'Sävelen loppua ei ole koskaan sävelletty',
-          'Torni on niin korkea, ettei soittajan henki riitä',
+          'Torni on niin korkea, ettei soittajan henki riitä loppuun',
           'Kaupunki ei aikoinaan maksanut koko sävelestä',
         ],
         oikea: 0,
@@ -1079,7 +1079,7 @@ export const KAARI_PAKETIT = {
           + 'vaahtoineen. Baščaršijan seppäkujat ovat takoneet niitä '
           + 'vuosisatoja — kuparin kilke on kaupungin äänimaisema.',
       },
-      aarre: 'Kupin kaksoispohjan välissä odotti litteä kätkö. Emir '
+      aarre: 'Kupin kaksoispohjan välistä löytyi litteä kätkö. Emir '
         + 'piteli kuppia valossa: "Pohja on juotettu auki ja kiinni '
         + 'kahdesti — jälkimmäinen juotos ei ole sukuni kättä."',
     },
@@ -1182,8 +1182,7 @@ export const KAARI_PAKETIT = {
         q: 'Kiovan Kultainen portti rakennettiin lähes tuhat vuotta '
           + 'sitten. Mikä sen tehtävä oli?',
         vaihtoehdot: [
-          'Se oli muurien juhlava pääportti, josta saavuttiin '
-            + 'kaupunkiin',
+          'Se oli muurien juhlava pääportti kaupunkiin',
           'Se oli tulliportti, jossa kauppiaiden kuormat punnittiin',
           'Se oli vankila, jonka holveihin suljettiin sotavangit',
           'Se oli kellotorni, joka kutsui kaupungin kokoon',
@@ -1258,8 +1257,7 @@ export const KAARI_PAKETIT = {
       kysymys: {
         q: 'Miten Tsaarinkello sai kylkeensä valtavan lohkeaman?',
         vaihtoehdot: [
-          'Tulipalon sammutusvesi osui kuumaan pronssiin, ja kylki '
-            + 'halkesi',
+          'Sammutusvesi osui kuumaan pronssiin, ja kylki halkesi',
           'Kello putosi nostettaessa ja iskeytyi kiveykseen',
           'Ensimmäinen pakkastalvi halkaisi jäähtyvän valun',
           'Liian raskas kieli murskasi kyljen ensimmäisellä lyönnillä',
@@ -1270,7 +1268,7 @@ export const KAARI_PAKETIT = {
           + 'koskaan ehtinyt torniin eikä soinut kertaakaan — sen sisään '
           + 'voi nykyään kävellä.',
       },
-      aarre: 'Lohkeaman kolossa odotti kätkö. "Liitu ei pysy pronssissa '
+      aarre: 'Lohkeaman kolosta löytyi kätkö. "Liitu ei pysy pronssissa '
         + 'vuotta — tämä on tältä talvelta", Vera sanoi.',
     },
     {
@@ -1406,7 +1404,7 @@ export const KAARI_PAKETIT = {
         q: 'Riian vanhat tornikukot maalattiin kahdella värillä: kylki '
           + 'kultaa, kylki mustaa. Miksi?',
         vaihtoehdot: [
-          'Kaupunkilainen näki väristä kaukaa, mistä tuuli käy',
+          'Väristä näki kaukaa, mistä tuuli käy',
           'Musta kylki suojasi kultausta meren suolalta',
           'Kaksi kiltaa kustansi kumpikin oman kylkensä',
           'Tumma kylki ei houkutellut salamoita ukkosella',
@@ -1457,7 +1455,7 @@ export const KAARI_PAKETIT = {
           + 'Vilnan kukkulalle ja kutsui kirjeillään käsityöläisiä ja '
           + 'kauppiaita kaikkialta.',
       },
-      aarre: 'Suden jalustan alta aukesi kolo, ja kolossa odotti kätkö. '
+      aarre: 'Suden jalustan alta aukesi kolo, ja kolossa oli kätkö. '
         + 'Rasa nosti lyhtyään: "Kuluneessa kohdassa on tuore '
         + 'kädenjälki, leveämpi kuin minun — joku on silittänyt sutta '
         + 'tänä yönä, kierrosteni välissä."',
@@ -1587,7 +1585,8 @@ export const KAARI_PAKETIT = {
         + 'tokkaansa tulien alla talvet läpeensä.',
       kohtaaminen: 'Nuotiolla Aslak kaataa kuksaan kuumaa. "Isoisäsi hiihti '
         + 'sukuni matkassa kolme päivää ja kysyi tulista joka ilta. '
-        + 'Viimeisenä iltana hän kirjoitti kysymyksen muistiin. Vastaa '
+        + 'Viimeisenä iltana hän kysyi yhden, johon kukaan ei osannut '
+        + 'vastata. Vastaa '
         + 'siihen, niin hiihdämme aamulla jäljet päähän asti."',
       kysymys: {
         q: 'Mikä revontulet tieteen mukaan sytyttää?',
