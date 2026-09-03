@@ -19036,6 +19036,26 @@ export class UI {
     this.mapPane.appendChild(overlay);
     overlay.addEventListener('pointerdown', ohitaLento, { once: true });
     /*
+     * ARKKI VÄLITTÄÄ NAPAUTUKSEN ETEENPÄIN (v1493).
+     *
+     * Pergamenttiarkki on kaikkien kartan kerrosten yläpuolella (css
+     * .aloitusverho, z-index 50 vastaan lentokalvon 7) ja nielee
+     * napautukset tarkoituksella, ettei siirtymän aikana valita
+     * kaupunkia sen alta. Se oli harmiton niin kauan kuin arkki oli
+     * ruudulla vain feidin ajan — mutta v1492 lisäsi sen taakse
+     * laattojen odotuksen (odotaPyramidi, jopa kuusi sekuntia), ja
+     * juuri siihen ikkunaan pelaajan kiire osuu. Ohituskuuntelija ei
+     * saanut napautusta lainkaan: mitattuna välikortti tuli vasta
+     * 8 s napautuksesta, kun sääntö on *"pääsee siirtymään mantereelle
+     * välittömästi"* (omistaja 26.8.2026).
+     *
+     * Sama käsittelijä siis myös arkille. Kuuntelija katoaa arkin
+     * mukana, kun arkki väistyy — ja koska ohitus jättää arkin
+     * paikalleen, saapumisen välikortti kirjoittuu samalle arkille
+     * ilman välähdystä.
+     */
+    this.aloitusverho?.addEventListener('pointerdown', ohitaLento, { once: true });
+    /*
      * Hento vinjetti lennon ajaksi (d-kohta, päätoimittajan taidesuunta
      * 26.8.2026): ruudun reunat tummuvat aavistuksen, jolloin katse
      * hakeutuu kartan keskelle reitin päälle. Liuku elementissä eikä
@@ -19106,8 +19126,20 @@ export class UI {
      * kerrokset ovat nyt puussa, joten arkin takana ei tapahdu enää
      * mitään muuta kuin laattojen saapuminen — ja tämä on viimeinen
      * hetki, jolloin odottaminen ei vielä näy pelaajalle.
+     *
+     * OHITUS PÄTEE JO TÄSSÄ (v1493). Odotus tapahtuu arkin takana, ja
+     * juuri siihen ikkunaan napautus osuu: kone ja ohituskuuntelija ovat
+     * puussa, mutta lento ei ole vielä alkanut. Ilman `keskeytys`-ehtoa
+     * napautus kirjattiin muistiin ja lento eteni silti loppuun asti —
+     * mitattuna välikortti tuli yli kahdeksan sekuntia napautuksesta,
+     * vaikka omistajan sääntö on *"pääsee siirtymään mantereelle
+     * välittömästi"* (26.8.2026). Kartta saa täydentyä loppuun
+     * taustalla; ohittanut pelaaja ei jää sitä odottamaan.
      */
-    await odotaPyramidi(this, { katto: ALOITUSLENNON_LAATTA_ODOTUS_MS });
+    await odotaPyramidi(this, {
+      katto: ALOITUSLENNON_LAATTA_ODOTUS_MS,
+      keskeytys: () => ohitettu,
+    });
     if (this.dead) return;
     /*
      * ══════════════════════════════════════════════════════════════
@@ -19139,15 +19171,21 @@ export class UI {
      * pyysi 12.8.2026 — ja verkko on vapaa, koska laatat ovat jo
      * perillä.
      */
-    this.lueLennonRepliikki();
+    if (!ohitettu) this.lueLennonRepliikki();
     /*
      * ARKKI POIS VASTA NYT: kaikki on paikallaan — kartta rajattuna
      * lähtömaahan ja kohdemaahan, laatat ruudulla, lähtömerkki Lontoon
      * kohdalla, kone kiitoradalla. Pergamenttiarkista feidataan siis
      * suoraan valmiiseen lentonäkymään, eikä tyhjää maailmankarttaa näy
      * hetkeäkään (omistajan tilaus 25.8.2026, ks. ALOITUSVERHO_SISAAN_MS).
+     *
+     * OHITETTU LENTO EI PALJASTA KARTTAA LAINKAAN. Napautus arkin takana
+     * tarkoittaa, ettei lentoa ehditty nähdä: arkki jää silloin
+     * paikalleen ja saapumisen välikortti kirjoittuu samalle arkille
+     * (naytaSaapumiskortti → naytaAloitusverho palauttaa saman).
+     * Väistyminen ja välitön paluu olisi pelkkä välähdys.
      */
-    await this.piilotaAloitusverho();
+    if (!ohitettu) await this.piilotaAloitusverho();
     if (this.dead) return;
     /*
      * ÄÄNI ENSIN, SITTEN KARTTA, SITTEN KONE (omistajan tilaus
@@ -19164,26 +19202,35 @@ export class UI {
      * napautuksen kohta on ohitettu (esim. kehittäjätilan hyppy).
      */
     this.syncAmbience();
-    await new Promise((valmis) => requestAnimationFrame(() => requestAnimationFrame(valmis)));
-    const koneAnim = kone.animate(koneRuudut, {
-      duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
-    });
-    const reittiAnim = reitti.animate(reittiRuudut, {
-      duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
-    });
-    lentoAnimaatiot.push(koneAnim, reittiAnim);
-    // Katkojälki ja koneen huojunta samaan tahtiin: ne ovat kohtauksen
-    // koristeita, mutta ohituksen on vietävä nekin loppuun, ettei
-    // ruudulle jää puolikasta reittimerkintää.
-    lentoAnimaatiot.push(...this.lennonKatkojalki({
-      kerros, kohta, kokoPituus, mitta: 1 / skaala, kesto: lennonKesto, viive: 180,
-    }));
-    lentoAnimaatiot.push(this.lennonHuojunta(keinu, {
-      mitta: 1 / skaala, kesto: lennonKesto, viive: 180,
-    }));
-    await Promise.all([koneAnim.finished, reittiAnim.finished]).catch(() => {
-      /* peruttu animaatio (esim. uusi peli) ei kaada lentoa */
-    });
+    /*
+     * KONE EI LÄHDE ENÄÄ, JOS LENTO ON JO OHITETTU. `ohitaLento` vie
+     * loppuun ne animaatiot, jotka ovat olemassa sillä hetkellä — arkin
+     * takana napautettaessa niitä ei ole yhtäkään, ja tässä luodut
+     * animaatiot alkaisivat vasta ohituksen jälkeen. Silloin ohitus
+     * odottaisi juuri sitä lentoa, jonka pelaaja äsken katkaisi.
+     */
+    if (!ohitettu) {
+      await new Promise((valmis) => requestAnimationFrame(() => requestAnimationFrame(valmis)));
+      const koneAnim = kone.animate(koneRuudut, {
+        duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
+      });
+      const reittiAnim = reitti.animate(reittiRuudut, {
+        duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
+      });
+      lentoAnimaatiot.push(koneAnim, reittiAnim);
+      // Katkojälki ja koneen huojunta samaan tahtiin: ne ovat kohtauksen
+      // koristeita, mutta ohituksen on vietävä nekin loppuun, ettei
+      // ruudulle jää puolikasta reittimerkintää.
+      lentoAnimaatiot.push(...this.lennonKatkojalki({
+        kerros, kohta, kokoPituus, mitta: 1 / skaala, kesto: lennonKesto, viive: 180,
+      }));
+      lentoAnimaatiot.push(this.lennonHuojunta(keinu, {
+        mitta: 1 / skaala, kesto: lennonKesto, viive: 180,
+      }));
+      await Promise.all([koneAnim.finished, reittiAnim.finished]).catch(() => {
+        /* peruttu animaatio (esim. uusi peli) ei kaada lentoa */
+      });
+    }
 
     /*
      * PERILLÄ — JA JATKO TAPAHTUU ITSESTÄÄN (omistajan tilaus

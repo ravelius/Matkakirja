@@ -1072,11 +1072,20 @@ export function pyramidiValmisRuudulla(ui) {
  * saapumatta lento ei saa jäädä odottamaan ikuisesti: katon täyttyessä
  * lähdetään joka tapauksessa, ja kartta täydentyy silloin kuten ennen.
  *
+ * ODOTUKSEN SAA KESKEYTTÄÄ. Avauslennossa tämä odotus tapahtuu
+ * pergamenttiarkin takana, ja juuri siihen ikkunaan osuu pelaajan
+ * napautus, jos hän haluaa kiirehtiä (omistajan tilaus 26.8.2026:
+ * *"napauttamalla ruutua animaatio katkeaa kesken"*). `keskeytys` on
+ * kutsuja, joka palauttaa true silloin kun odotuksella ei ole enää
+ * kohdetta: kartta saa täydentyä loppuun taustalla, mutta kukaan ei
+ * jää katsomaan arkkia sen takia.
+ *
  * @returns {Promise<boolean>} oliko kartta valmis kun odotus päättyi
  */
-export async function odotaPyramidi(ui, { katto = 6000, askel = 60 } = {}) {
+export async function odotaPyramidi(ui, { katto = 6000, askel = 60, keskeytys = null } = {}) {
   const takaraja = performance.now() + katto;
-  while (!ui?.dead && !pyramidiValmisRuudulla(ui) && performance.now() < takaraja) {
+  while (!ui?.dead && !keskeytys?.() && !pyramidiValmisRuudulla(ui)
+    && performance.now() < takaraja) {
     // eslint-disable-next-line no-await-in-loop
     await new Promise((valmis) => { setTimeout(valmis, askel); });
   }

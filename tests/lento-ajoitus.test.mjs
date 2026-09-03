@@ -139,6 +139,33 @@ test('lennon jälkeen ei ole nappia vaan automaattinen jatko', () => {
     'automaattinen jatko puuttuu jommaltakummalta lentopolulta');
 });
 
+/*
+ * OHITUS PÄTEE MYÖS ARKIN TAKANA (v1493).
+ *
+ * v1492 siirsi avauslennon taakse laattojen odotuksen (odotaPyramidi,
+ * katto kuusi sekuntia), ja se odotus tapahtuu pergamenttiarkin takana.
+ * Arkki on kartan kerrosten yläpuolella ja nielee napautukset
+ * tarkoituksella (css .aloitusverho z-index 50 vastaan lentokalvon 7),
+ * joten pelaajan kiire ei tavoittanut ohituskuuntelijaa lainkaan:
+ * mitattuna (tools/savuke-etusivun-animaatio.mjs) välikortti tuli vasta
+ * 8 s napautuksesta, kun sääntö on *"pääsee siirtymään mantereelle
+ * välittömästi"* (omistaja 26.8.2026).
+ *
+ * Kolme kytkentää pitää vian poissa, eikä yksikään niistä näy pelissä
+ * virheenä jos se katoaa — lento vain lakkaa tottelemasta sormea.
+ */
+test('napautus arkin takana katkaisee lennon ennen kuin se alkaa', () => {
+  const lento = UI.match(/async aloituslentoSisalla\([\s\S]*?\n {2}\}\n/)[0];
+  assert.match(lento, /this\.aloitusverho\?\.addEventListener\('pointerdown', ohitaLento, \{ once: true \}\)/,
+    'arkki ei välitä napautusta ohitukselle, joten kiire ei tavoita lentoa');
+  assert.match(lento, /await odotaPyramidi\(this, \{[\s\S]*?keskeytys: \(\) => ohitettu,[\s\S]*?\}\)/,
+    'laattojen odotus ei katkea ohituksesta');
+  assert.match(lento, /if \(!ohitettu\) await this\.piilotaAloitusverho\(\);/,
+    'ohitettu lento paljastaa kartan hetkeksi ennen välikorttia');
+  assert.match(lento, /if \(!ohitettu\) \{\s*await new Promise\(\(valmis\) => requestAnimationFrame/,
+    'kone lähtee lentoon vielä ohituksen jälkeenkin');
+});
+
 test('napautus vie lennon läpi eikä vuoda alla oleviin elementteihin', () => {
   // Ohitus on nyt koko lennon loppu: se päättää animaatiot ja tekstin,
   // vapauttaa odotukset ja nielaisee napautuksen jälkipuolen, ettei
