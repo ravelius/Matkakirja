@@ -726,27 +726,8 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
 }
 
 /* ===========================================================================
-   9. SKANDAALIKORTIN INGRESSI JA KUVASELAILU (js/skandaalit.js)
-   ---------------------------------------------------------------------------
-   Kortti sai 2.9.2026 ingressin (`kortti`) ja sen alle varsinaisen
-   jutun (`teksti`) — omistajan havainto: kortti "näyttää tyngältä".
-   Ingressi erottuu jutusta samalla keinolla kuin lehden nostoissa:
-   hitusen isompi kirjasin ja tummempi muste, ei uutta väriä eikä
-   kehystä. Kuvaselailun nuolet ja laskuri ovat historian hetken
-   luokkien rinnalla osiossa 8, koska ilme on sama.
-   =========================================================================== */
-
-.fokusnosto-teksti p.skandaali-ingressi {
-  font-size: 1.04rem;
-  line-height: 1.5;
-  color: #241f19;
-  margin-bottom: 0.7rem;
-}
-
-.fokusnosto-teksti p.skandaali-ingressi + p { margin-top: 0; }
-
-/* ===========================================================================
-   9. LÖÖPPITAITTO (omistaja 3.9.2026, pilotti: GRC sofia-korut)
+   9. LÖÖPPITAITTO (omistaja 3.9.2026; pilotti GRC sofia-korut, sitten
+      kaikki 83 skandaalikorttia)
    ---------------------------------------------------------------------------
    Omistajan tilaus sanatarkasti: "Saisiko nämä skandaalinostot taitettua
    enemmän lehden muotoon, missä olisi pääotsikko isolla ja sitten olisi
@@ -759,7 +740,7 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
    .fokusnosto-looppi. Rakenne ylhäältä alas:
 
      ylärivi (kohdemallin symboli + luokka)      .fokusnosto-ylarivi
-     nimiö "Matkakirjan lööppi"                  .looppi-nimio
+     nimiö "Lisälehti"                           .looppi-nimio
      päiväysrivi kaksoisviivoin (paikka · vuosi) .looppi-paivays
      PÄÄOTSIKKO isolla                           .looppi-otsikko
      ingressi                                    .looppi-ingressi
@@ -772,9 +753,25 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
    column-count) mutta kortin omassa mitassa: kortti on 40 rem leveä (omistaja 3.9.2026: "vähän leveämpi", 32 → 40)
    (kaupunkilehti on koko ruutu), joten lehti ja lööppi eivät sekoitu.
    Pohja on lehden paperia keltaisempi (#f6ecc6): lööppi on lööppi.
+
+   MONISTETTU KAIKKIIN SKANDAALIKORTTEIHIN (omistaja 3.9.2026: *"lööppi
+   lisälehti on nyt hyvä. monista kaikkiin muihinkin"*). Skandaalikortin
+   kuori on oma luokkansa (.skandaali-kortti, osio 7), joten se saa
+   .fokusnosto-looppin rinnalleen ja tarvitsee OMAN valitsimensa samoille
+   arvoille: osion 7 `background`-lyhenne ja `width: min(34rem, 100%)`
+   ovat yhtä tarkkoja kuin yksiluokkainen looppisääntö eivätkä väistäisi
+   sitä. Kaksiluokkainen valitsin voittaa kummankin, ja osion 7 muut
+   kortit (syvennys, hetki) jäävät koskematta.
+
+   VANHA .skandaali-ingressi -SÄÄNTÖ POISTETTU 3.9.2026: skandaalin
+   ingressi (`kortti`) latoutuu nyt .looppi-ingressinä ennen kuvaa, eikä
+   luokkaa `skandaali-ingressi` synnytä enää mikään moduuli (tarkistettu
+   grepillä koko puusta). Kuvaselailun nuolet ja laskuri jäivät osioon 8
+   historian hetken luokkien rinnalle.
    =========================================================================== */
 
-.fokusnosto-kortti.fokusnosto-looppi {
+.fokusnosto-kortti.fokusnosto-looppi,
+.skandaali-kortti.fokusnosto-looppi {
   width: min(40rem, 100%);
   background-color: #f6ecc6;
   background-image: var(--paper-noise);
@@ -792,6 +789,12 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
   color: rgba(70, 51, 31, 0.7);
 }
 
+/* Päiväysrivi saa rivittyä: skandaalien paikannimet ovat pisimmillään
+   yli 60 merkkiä ("Entinen ruhtinaanpalatsi (nyk. Kansallinen
+   taidegalleria), Sofia"), ja kapealla ruudulla rivi menee kahdelle tai
+   kolmelle riville kaksoisviivojen väliin. Väljä riviväli pitää
+   harvennetun versaalin luettavana silloinkin; keskitys ja kaksoisviiva
+   ovat entiset, eikä riviä kielletä katkeamasta. */
 .fokusnosto-looppi .looppi-paivays {
   margin: 0.2rem 0 0.7rem;
   padding: 0.22rem 0;
@@ -800,8 +803,10 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
   font-family: var(--font-type);
   font-size: 0.68rem;
   letter-spacing: 0.16em;
+  line-height: 1.5;
   text-transform: uppercase;
   text-align: center;
+  text-wrap: balance;
   color: rgba(70, 51, 31, 0.85);
 }
 
@@ -820,6 +825,8 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
   text-wrap: balance;
 }
 
+/* Ingressi voi olla useampi kappale (skandaalin `kortti`-kenttä), joten
+   väli on kappaleiden välissä eikä vain viimeisen alla. */
 .fokusnosto-looppi .looppi-ingressi {
   margin: 0 0 0.75rem;
   font-family: var(--font-luku);
