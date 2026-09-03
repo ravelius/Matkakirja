@@ -92,6 +92,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1503: JALANKULKUMUSIIKKI - lahde kaupungista jalan pienella heitolla: raita jatkuu valipisteessa nopanheiton ja seuraavan siirron yli ja feidaa vasta kaupunkiin saavuttaessa; uusi laukkaava raita kuuluu kun generointiajo on valmis (siirtyma-jalan.mp3 ampariin).',
   'v1502: SARAJEVON AANIMAISEMA - saavu Sarajevoon: kavelykadun halina tai suihkulahde, ei kirkonkelloja. KEHITTAJAN VOIMAKKUUSSAATIMET - hammasratas > taustaaani / taustamusiikki +/-: soiva aani seuraa heti, arvo sailyy sivun latauksen yli (x1,0 = nykyinen taso).',
   'v1501: LIVIA KOMMENTOI MYOS ENSIMMAISESSA KAUPUNGISSA - uusi peli tyhjalla selaimella (tai localStorage-avain matkakirja-livia-paljastus pois): ensimmaisessa kohdekaupungissa Livian tuurauspaljastus tulee ensin ja sen jalkeen matkakirjakommentti osissa samaan pinoon; seuraavissa kaupungeissa kommentti kuten ennen.',
   'v1500: KOHTAAMISET (Eurooppa) - 14 visakysymyksessa oikea vastaus ei ole enaa pisin vaihtoehto (Istanbul, Lontoo, Madrid, Lissabon, Edinburgh, Granada, Krakova, Kiova, Moskova, Riika); Berliinin ja Lapin kohtaamisrepliikki uusiksi; Moskovan, Vilnan ja Sarajevon aarreteksti varioitu. Tukholman ja Berliinin kohtaamiskortilla ei nyt kuvaa (kuva ei vastannut kohtausta; uudet tilattu kuvaputkelta briefin mukaan, jaavat galleriaan).',

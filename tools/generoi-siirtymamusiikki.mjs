@@ -243,14 +243,22 @@ export const LAJIT = {
   jalan: {
     ryhma: 'siirtyma',
     tiedosto: 'siirtyma-jalan.mp3',
-    kuvaus: 'Kävelyn rytmi, kevyt ja etenevä',
+    /*
+     * Omistaja 3.9.2026: *"jalankulukumusiikki saisi olla rymikäs ja
+     * melkein laukkaava rytmi"*. Aiempi prompti (kevyt kävely, ei
+     * rumpuja) korvattiin: nyt tiukka, lähes laukkaava 1870-luvun
+     * matkasvengi — hevoskyytiä ja reipasta astuntaa, ei marssia.
+     */
+    kuvaus: 'Rytmikäs, lähes laukkaava matkasvengi',
     looppi: 12,
     risti: 1.5,
-    prompt: 'A light walking underscore for a short journey on foot. A steady '
-      + 'gentle stride carried by pizzicato strings and a simple piano figure, '
-      + 'with a small woodwind melody stepping along above it. Forward moving '
-      + 'and quietly cheerful, the pace of one person walking, never marching. '
-      + 'The pulse comes only from the plucked notes: no drums of any kind. '
+    prompt: 'A rhythmic, driving travel underscore for a journey overland in the '
+      + '1870s, with an almost galloping feel. A tight, lively pulse from '
+      + 'strummed guitar, plucked double bass and light hand percussion like '
+      + 'a horse\'s hooves clip-clopping on a road, a bright fiddle or clarinet '
+      + 'melody bouncing along above it, a piano adding cheerful accents. '
+      + 'Brisk and eager, always moving forward, but never a military march '
+      + 'and never heavy drums. '
       + `${SAUMA} ${TYYLI}`,
   },
   laiva: {

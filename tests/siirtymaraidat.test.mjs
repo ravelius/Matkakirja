@@ -226,6 +226,9 @@ test('promptit ovat instrumentaaleja ja kieltävät elektroniikan', () => {
    * inspiroitunut sydämen sykkeen äänestä"*). Tahti on osa tilausta,
    * joten se vartioidaan lukuna eikä sanana.
    */
+  // Jalan: omistaja 3.9.2026 "rymikäs ja melkein laukkaava rytmi".
+  assert.match(LAJIT.jalan.prompt, /galloping/);
+  assert.match(LAJIT.jalan.prompt, /never heavy drums/);
   assert.match(LAJIT.keksinnot.prompt, /clockwork/);
   assert.match(LAJIT.keksinnot.prompt, /heartbeat/);
   assert.match(LAJIT.keksinnot.prompt, /60 beats per minute/);
@@ -238,4 +241,10 @@ test('API-avain ei koskaan päädy tulosteeseen', () => {
     assert.ok(!/\bavain\b/.test(rivi) || /puuttuu ympäristöstä|ilman avainta/.test(rivi),
       `tuloste vuotaa avaimen: ${rivi}`);
   }
+});
+
+test('jalan-raita jää soimaan reitin välipisteeseen ja sammuu vasta kaupungissa (omistaja 3.9.2026)', async () => {
+  const UI = (await import('node:fs')).readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  assert.match(UI, /const jalanKeskenReitin = musiikki === 'jalan' && player\.pos\?\.type === 'edge' && !this\.dead;/);
+  assert.match(UI, /if \(musiikki && !jalanKeskenReitin\) this\.lopetaSiirronMusiikki\(\);/);
 });

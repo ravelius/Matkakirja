@@ -19655,8 +19655,19 @@ export class UI {
      * se jatkuu vielä hetken kamera-ajon kanssa — matka loppuu
      * ääneen, ei leikkaukseen. Kutsu on ehdoton: myös keskeytynyt
      * siirto jättää musiikin soimaan ilman tätä.
+     *
+     * PAITSI JALAN KESKEN REITIN (omistaja 3.9.2026: *"jalankulku-
+     * musiikki ... saisi soida myös välinopanheittojen ajan kunnes
+     * pelaaja pääsee seuraavaan kaupunkiin"*). actionMove on jo
+     * ajettu ennen animaatiota, joten `player.pos` on määränpää: jos
+     * se on yhä reitin välipiste (type 'edge'), raita jää soimaan
+     * seuraavan heiton ja siirron yli — aloitaSiirtymamusiikki ei
+     * käynnistä samaa lajia uudestaan, joten looppi jatkuu saumatta.
+     * Kaupunkiin saapuminen, uusi peli (js/main.js) ja lajin vaihto
+     * laivaan tai lentoon (aloitaSiirtymamusiikki) sammuttavat sen.
      */
-    if (musiikki) this.lopetaSiirronMusiikki();
+    const jalanKeskenReitin = musiikki === 'jalan' && player.pos?.type === 'edge' && !this.dead;
+    if (musiikki && !jalanKeskenReitin) this.lopetaSiirronMusiikki();
     /*
      * NAPPULA ON NIMILADONNAN VARAUS, JOTEN SIIRTO ON LADONNAN SYÖTETTÄ
      * (omistaja 2.9.2026, ks. luovutaRuutuvaraukset) — MUTTA SITÄ EI
