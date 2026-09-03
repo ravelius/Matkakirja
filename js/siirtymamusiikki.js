@@ -378,8 +378,8 @@ lisaaVaistaja((kerroin, kesto) => {
  *
  * Omistajan tilaus 2.9.2026: kehittäjävalikosta on nähtävä
  * *"siirtymämusiikki: jalan ✓/–, laiva ✓/–, lento ✓/–"* eli löytyykö
- * raita ämpäristä. Kysely on HEAD eikä lataus — se kertoo
- * olemassaolon kuluttamatta kaistaa — ja se tehdään VAIN kun valikko
+ * raita ämpäristä. Kysely on metatietolataus eikä koko raita — se
+ * kertoo olemassaolon kuluttamatta kaistaa — ja se tehdään VAIN kun valikko
  * avataan. Peli itse ei koskaan odota tätä: soitto lähtee optimistina
  * ja hiljenee itsestään (ks. yllä).
  */
@@ -402,18 +402,41 @@ export function siirtymamusiikinTila() {
  */
 const KYSELYN_KATKAISU_MS = 4000;
 
-/** Yksi HEAD; verkkovirhe ja vaikeneva palvelin ovat sama kuin puuttuva. */
-async function onOlemassaAani(url) {
-  const katkaisin = new AbortController();
-  const ajastin = setTimeout(() => katkaisin.abort(), KYSELYN_KATKAISU_MS);
-  try {
-    const vastaus = await fetch(url, { method: 'HEAD', signal: katkaisin.signal });
-    return vastaus.ok;
-  } catch {
-    return false;
-  } finally {
-    clearTimeout(ajastin);
-  }
+/*
+ * OLEMASSAOLO KYSYTÄÄN ÄÄNIELEMENTILLÄ, EI HEAD-PYYNNÖLLÄ (3.9.2026,
+ * omistajan havainto: kehittäjärivi väitti kaikkia neljää raitaa
+ * puuttuviksi, vaikka ne olivat ämpärissä). Juurisyy mitattuna:
+ * ämpärin julkinen osoite vastaa HEAD-pyyntöön 200 mutta ILMAN
+ * Access-Control-Allow-Origin-otsaketta (GET saa sen), joten selaimen
+ * fetch kaatui CORS-virheeseen ja "virhe = puuttuu". Soittoon tämä ei
+ * vaikuttanut — <audio> ei ole CORS-alainen ja soitto on optimistinen —
+ * mutta mittari valehteli. Nyt kysely tehdään samalla välineellä kuin
+ * soitto: <audio preload=metadata> lataa vain otsakkeet, ja
+ * loadedmetadata = löytyi, error = puuttuu. Ilman Audio-rajapintaa
+ * (testien tynkäselain, Node) vastaus on "ei tiedetä" = false, kuten
+ * ennenkin verkottomana.
+ */
+function onOlemassaAani(url) {
+  return new Promise((valmis) => {
+    if (typeof Audio === 'undefined') { valmis(false); return; }
+    let tehty = false;
+    const soitin = new Audio();
+    const ohi = (on) => {
+      if (tehty) return;
+      tehty = true;
+      clearTimeout(ajastin);
+      // Lataus poikki: elementti ei jää vetämään dataa taustalla.
+      soitin.removeAttribute('src');
+      try { soitin.load(); } catch { /* tynkäselain */ }
+      valmis(on);
+    };
+    const ajastin = setTimeout(() => ohi(false), KYSELYN_KATKAISU_MS);
+    soitin.preload = 'metadata';
+    soitin.addEventListener('loadedmetadata', () => ohi(true), { once: true });
+    soitin.addEventListener('error', () => ohi(false), { once: true });
+    soitin.src = url;
+    try { soitin.load(); } catch { ohi(false); }
+  });
 }
 
 /**
