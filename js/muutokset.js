@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1478, teksti: '34 historiakuvaa, 5 uutta hetkea, karttanostot 5 maahan' },
+  { v: 1477, teksti: 'Linssikatalogi: aluelinssien järjestys; Raamattu S6–S7' },
   { v: 1476, teksti: 'Linssikatalogi: virtalinssit (siirtomaat) kolmas moottori' },
   { v: 1475, teksti: 'Linssikatalogi: aluelinssit omalle valilehdelle' },
   { v: 1474, teksti: 'Sahkekortti lomakkeeksi + linssikatalogi julkiseksi' },

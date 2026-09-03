@@ -4665,6 +4665,21 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
   pointer-events: auto;
   cursor: pointer;
 }
+/*
+ * MAASTONIMI JA SEN KOLMIO OTTAVAT NAPAUTUKSIA SAMALLA SÄÄNNÖLLÄ
+ * (omistaja 2.9.2026: "Dinaariset Alpit mitä ei voi klikata").
+ * Nimi on iso maali, kolmiolla on oma läpinäkyvä ympyränsä
+ * (js/karttanimet.js MAASTON_OSUMA_R) — maalaamaton muoto ei ottaisi
+ * osumia vastaan, joten `fill` on läpinäkyvä eikä `none`.
+ */
+.karttanimet [data-maasto] {
+  pointer-events: auto;
+  cursor: pointer;
+}
+.karttanimet .karttamerkki-osuma {
+  fill: transparent;
+  stroke: none;
+}
 /* ---------------------------------------------------------------------------
    ELÄVÄN NIMIKERROKSEN MUSTE ON MITATTU POLTETUSTA LAATASTA
    (omistaja 2.9.2026 ilta)
@@ -20251,6 +20266,29 @@ dialog.minipopup:focus-visible { outline: none; }
   margin: 0 0 0.5rem;
   font-size: 0.92rem;
   line-height: 1.5;
+}
+
+/*
+ * MAASTONIMEN POPUP (js/karttanimet.js avaaMaastoPopup): selitys,
+ * vuoren korkein huippu ja linkki Wikipediaan. Faktarivi on pientä
+ * kapiteelia kuten muissakin korteissa oleva mittarivi, ja linkki
+ * on kortin viimeinen rivi omalla rivillään.
+ */
+.maastopopup-fakta {
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  opacity: 0.8;
+}
+/*
+ * LINKKI ON KORTIN MUSTETTA EIKÄ SELAIMEN SINISTÄ. Sama sääntö kuin
+ * lähderivin linkeillä (.source-line a): väri peritään, ja linkin
+ * kertoo pisteviiva.
+ */
+.maastopopup-wiki {
+  display: inline-block;
+  font-size: 0.88rem;
+  color: inherit;
+  text-decoration: underline dotted;
 }
 
 /*

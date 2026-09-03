@@ -170,15 +170,27 @@ function solmu(tag, luokka, teksti) {
   return e;
 }
 
-/** Kuva pergamentille; ilman tiedostoa nimikirjainlaatta. */
+/** Onko kuvatiedolla lähde: Commons-tiedosto tai valmis ämpäriosoite. */
+function onKuva(kuvatieto) {
+  return Boolean(kuvatieto?.tiedosto || kuvatieto?.osoite);
+}
+
+/** Kuva pergamentille; ilman lähdettä nimikirjainlaatta. */
 function kuvaTaiLaatta(kuvatieto, nimi, leveys, luokka) {
   const kehys = solmu('div', `aikajana-kuvakehys ${luokka}`);
-  if (kuvatieto?.tiedosto) {
+  if (onKuva(kuvatieto)) {
     const kuva = document.createElement('img');
     kuva.alt = kuvatieto.selite ?? nimi ?? '';
     kuva.decoding = 'async';
     kuva.loading = 'eager';
-    asetaKuva(kuva, valokuvaUrl(kuvatieto.tiedosto, leveys), valokuvaVara(kuvatieto.tiedosto, leveys));
+    /*
+     * Generoitu kuva (kuvaputki, ämpäri) kulkee valmiina `osoite`-
+     * kenttänä ilman thumb-putkea tai varareittiä — sama sopimus kuin
+     * historian hetkillä (js/historian-hetket.js). Commons-kuva
+     * (`tiedosto`) menee peilin ja Commonsin portaita kuten ennen.
+     */
+    if (kuvatieto.osoite) kuva.src = kuvatieto.osoite;
+    else asetaKuva(kuva, valokuvaUrl(kuvatieto.tiedosto, leveys), valokuvaVara(kuvatieto.tiedosto, leveys));
     kehys.appendChild(kuva);
   } else {
     const kirjaimet = String(nimi ?? '?').split(/\s+/).map((s) => s[0] ?? '').join('').slice(0, 3);
@@ -533,7 +545,7 @@ class Aikajana {
     const sivu = solmu('div', 'aikajana-ilmio-sivu');
     // Paneelissa kuva vain jos sellainen on: nimikirjainlaatta kuuluu
     // nauhan kortille, ei selitteen ylle.
-    if (t.ilmio?.tiedosto) sivu.appendChild(kuvaTaiLaatta(t.ilmio, t.otsikko, 640, 'aikajana-ilmiokuva'));
+    if (onKuva(t.ilmio)) sivu.appendChild(kuvaTaiLaatta(t.ilmio, t.otsikko, 640, 'aikajana-ilmiokuva'));
     const teksti = solmu('div', 'aikajana-ilmio-teksti');
     teksti.append(
       solmu('div', 'aikajana-ilmio-henkilo', t.henkilo ?? ''),
@@ -622,7 +634,7 @@ class Aikajana {
   }
 
   avaaJuttu(t) {
-    const kuvat = [t.ilmio, t.kuva].filter((k) => k?.tiedosto);
+    const kuvat = [t.ilmio, t.kuva].filter(onKuva);
     this.ui.avaaNahtavyys?.({
       nimi: t.otsikko,
       aika: [t.vuosi, paikka(t), t.henkilo].filter(Boolean).join(' · '),

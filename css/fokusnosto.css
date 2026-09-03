@@ -660,13 +660,29 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
    kaariNostoGalleria, .arrival-kuva-nuoli). Luokat ovat omat, koska
    kortin kuvanappi on oma asemointipohjansa; mitat ja ilme ovat samat.
 
-   YHDEN KUVAN HETKELLÄ NÄITÄ EI PIIRRETÄ LAINKAAN — ensimmäisessä
-   erässä (2.9.2026) kuvia on yksi, ja kortti näyttää täsmälleen
-   samalta kuin eläintäyn kortti.
+   KOLMAS KUVA VOI OLLA PYSTYKUVA (3.9.2026). Neljälle hetkelle tehtiin
+   aikakauden lehtisivun rekonstruktio, ja se on 1024 × 1536 eli
+   pystyyn. Kuva itse näkyy kokonaan jo perussäännöllä
+   (`.fokusnosto-kuva img`: width auto, max-height 42vh, contain), mutta
+   NUOLET JA LASKURI eivät: ne asemoituvat kuvanappiin, ja nappi oli
+   `width: 100%` eli aina palstan levyinen. Pystykuvalla nuolet
+   leijuivat siis kortin pohjan päällä kuvan molemmin puolin, ja
+   laskuri istui tyhjässä kulmassa. Nappi kutistetaan siksi kuvan
+   levyiseksi ja keskitetään — sama ratkaisu kuin saapumiskortin
+   kuvakotelossa (css/styles.css `.arrival-kuvakotelo`), ja
+   vaakakuvalla lopputulos on entinen, koska kuva täyttää palstan.
+   Kutistus koskee vain hetken korttia: skandaalikortin kuvat ovat
+   vaakakuvia, eikä sen asemointiin ole syytä koskea.
    =========================================================================== */
 
 .hetki-kuva .fokusnosto-kuvanappi,
 .skandaali-kuva .fokusnosto-kuvanappi { position: relative; }
+
+.hetki-kuva .fokusnosto-kuvanappi {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+}
 
 .hetki-kuvanuoli,
 .skandaali-kuvanuoli {

@@ -14,7 +14,7 @@ import { readFileSync } from 'node:fs';
 import {
   aikajanaAskel, AIKAJANA_VIIVE_MS, AIKAJANA_PAALU_MS, AIKAJANA_TAUKO_HIMMENNYS,
 } from '../js/aikajana.js';
-import { KEKSINNOT, LINSSI } from '../js/linssit/keksinnot.js';
+import { KEKSINNOT, KEKSINTO_KUVAJUURI, LINSSI } from '../js/linssit/keksinnot.js';
 import { projisoiLaudalle } from '../js/fokusmitat.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
@@ -145,13 +145,27 @@ test('pelin omissa kaupungeissa valo osuu kaupungin laatan viereen', () => {
   }
 });
 
-test('kuvatiedostot ovat Commons-nimiä ilman polkua ja jokaisella on selite', () => {
+test('kuvat ovat Commons-nimiä ilman polkua tai ämpäriosoitteita, ja jokaisella on selite', () => {
   for (const t of KEKSINNOT) {
     for (const k of [t.kuva, t.ilmio]) {
       if (!k) continue;
-      assert.ok(typeof k.tiedosto === 'string' && !k.tiedosto.includes('/') && /\.(jpe?g|png|gif)$/i.test(k.tiedosto),
-        `${t.otsikko}: tiedostonimi ${k.tiedosto}`);
+      if (k.osoite) {
+        // Generoitu kuva: valmis osoite kuvaputken kansiossa, ei tiedostoa.
+        assert.ok(k.osoite.startsWith(`${KEKSINTO_KUVAJUURI}/`) && /\.jpg$/.test(k.osoite),
+          `${t.otsikko}: ämpäriosoite ${k.osoite}`);
+        assert.equal(k.tiedosto, undefined, `${t.otsikko}: osoite ja tiedosto yhtä aikaa`);
+        assert.ok(k.lahde, `${t.otsikko}: generoidun kuvan lähderivi puuttuu`);
+      } else {
+        assert.ok(typeof k.tiedosto === 'string' && !k.tiedosto.includes('/') && /\.(jpe?g|png|gif)$/i.test(k.tiedosto),
+          `${t.otsikko}: tiedostonimi ${k.tiedosto}`);
+      }
       assert.ok(k.selite, `${t.otsikko}: kuvaselite puuttuu`);
     }
   }
+});
+
+test('hyväksytyt generoidut ilmiökuvat ovat kytketty (Watt, Montgolfier, Jenner, Volta, Jacquard)', () => {
+  const odotetut = ['1769-watt', '1783-montgolfier', '1796-jenner', '1800-volta', '1804-jacquard'];
+  const kytketyt = KEKSINNOT.filter((t) => t.ilmio?.osoite).map((t) => t.ilmio.osoite.split('/').pop().replace(/\.jpg$/, ''));
+  for (const o of odotetut) assert.ok(kytketyt.includes(o), `${o} puuttuu`);
 });

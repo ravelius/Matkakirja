@@ -185,8 +185,8 @@ värialueita, joiden rajat liukuvat avainvuodesta toiseen.
 
 | # | linssi | alue | kaari | pysäkkejä | tila |
 |---|---|---|---|---|---|
-| M1 | Kiinan dynastiat | Kiina | 221 eaa–1912 | Qin · Han · Kolme kuningaskuntaa · Tang · Song · Yuan · Ming · Qing · tasavalta 1912 | seuraava (omistajan esimerkki, ensimmäinen aluelinssi) |
-| M2 | Rooman nousu ja tuho | Välimeri | 509 eaa–476 | tasavalta · puunilaissodat · Caesar Gallia · Augustus · Trajanus 117 · jako 395 · 476 | seuraava |
+| M1 | Kiinan dynastiat | Kiina | 221 eaa–1912 | Qin · Han · Kolme kuningaskuntaa · Tang · Song · Yuan · Ming · Qing · tasavalta 1912 | seuraava, 1. aluelinssi (omistajan esimerkki) |
+| M2 | Rooman nousu ja tuho | Välimeri | 509 eaa–476 | tasavalta · puunilaissodat · Caesar Gallia · Augustus · Trajanus 117 · jako 395 · 476 | seuraava, 4. aluelinssi |
 | M3 | Aleksanteri Suuri | Kreikka–Intia | 336–301 eaa | Makedonia · Issos · Egypti · Gaugamela · Persepolis · Hydaspes · diadokit | idea |
 | M4 | Islamin leviäminen | Lähi-itä–Espanja | 622–750 | Medina · Jerusalem 638 · Persia · Pohjois-Afrikka · Iberia 711 · Poitiers 732 | idea |
 | M5 | Mongolien imperiumi | Aasia–Eurooppa | 1206–1368 | Tšingis-kaani · Kiova 1240 · Bagdad 1258 · Kublai · kaanikunnat · Yuan kaatuu | idea |
@@ -201,9 +201,9 @@ värialueita, joiden rajat liukuvat avainvuodesta toiseen.
 
 | # | linssi | alue | kaari | pysäkkejä | tila |
 |---|---|---|---|---|---|
-| N1 | Napoleonin Eurooppa | Eurooppa | 1796–1815 | Italia 1796 · Egypti · Austerlitz 1805 · Jena · Tilsit · Espanja · Moskova 1812 · Leipzig · Waterloo | seuraava (omistajan esimerkki) |
-| N2 | Ensimmäinen maailmansota | Eurooppa, Lähi-itä | 1914–1918 | Sarajevo · Marne · Gallipoli · Verdun · Somme · Brest-Litovsk · 11.11.1918 | seuraava (omistajan esimerkki) |
-| N3 | Toinen maailmansota | Eurooppa, Tyynimeri | 1939–1945 | Puola · Ranska 1940 · Barbarossa · Pearl Harbor · Stalingrad · Normandia · Berliini · Hiroshima | seuraava (pelin aikakauden ulkopuolella, linssi katsoo eteenpäin) |
+| N1 | Napoleonin Eurooppa | Eurooppa | 1796–1815 | Italia 1796 · Egypti · Austerlitz 1805 · Jena · Tilsit · Espanja · Moskova 1812 · Leipzig · Waterloo | seuraava, 2. aluelinssi (omistajan esimerkki) |
+| N2 | Ensimmäinen maailmansota | Eurooppa, Lähi-itä | 1914–1918 | Sarajevo · Marne · Gallipoli · Verdun · Somme · Brest-Litovsk · 11.11.1918 | seuraava, 3. aluelinssi (omistajan esimerkki) |
+| N3 | Toinen maailmansota | Eurooppa, Tyynimeri | 1939–1945 | Puola · Ranska 1940 · Barbarossa · Pearl Harbor · Stalingrad · Normandia · Berliini · Hiroshima | seuraava, 5. aluelinssi (pelin aikakauden ulkopuolella, linssi katsoo eteenpäin; sävy 13+: rintamat ja rauhat, ei kauhukuvia) |
 | N4 | Kolmikymmenvuotinen sota | Keski-Eurooppa | 1618–1648 | Prahan ikkuna · Breitenfeld · Lützen 1632 · Westfalen | idea |
 | N5 | Krimin sota | Musta meri, Itämeri | 1853–1856 | Sinope · Sevastopol · Bomarsund · Pariisin rauha | idea (isoisän aikalaisten sota) |
 | N6 | Yhdysvaltain sisällissota | USA | 1861–1865 | Fort Sumter · Antietam · Gettysburg · Sherman · Appomattox | idea |
@@ -243,8 +243,11 @@ hiukkasia reittikäyrillä → Canvas-kerros (M7+-linssialusta), ei DOM. Isku =
 salama emämaasta alueelle ensimmäisen alistuksen vuonna, alue saa emämaan
 värin; virta = laivoja, joiden määrä ja lasti seuraavat vuosia ja loppuvat
 kaupan tai siirtomaavallan loppuun. Ääni: satama-ambienssi, torvi, kuulutus
-megafonista pysäkeillä, generoidaan lukijaäänellä etukäteen. Rehellisyys:
-kolmiokaupan orjalaivat ovat oma virtansa, ei piiloteta.
+megafonista pysäkeillä, generoidaan lukijaäänellä etukäteen. Orjat kuulutetaan
+kuten muu lasti ("laiva on lastattu orjilla"), koska niin heihin silloin
+suhtauduttiin; orjalaivat vetävät mustaa viivaa, Pulu tulee väliin ja selittää,
+ja tyhjälle merelle projisoidaan generoituja aikalaiskuvia orjien oloista ja
+siirtomaavaltojen arjesta (13+, mutta asia kerrotaan niin kuin se oli).
 
 | # | linssi | alue | kaari | pysäkkejä | tila |
 |---|---|---|---|---|---|
@@ -253,6 +256,8 @@ kolmiokaupan orjalaivat ovat oma virtansa, ei piiloteta.
 | S3 | Maustereitit ja teekauppa | Intian valtameri–Eurooppa | 1500–1900 | Molukit · Malakka · Kanton · Kalkutta · Suez 1869 · teekilpalaivat 1866 | idea |
 | S4 | Hopea ja kulta | Amerikat–Eurooppa–Aasia | 1545–1900 | Potosí · Manilan galeonit · Sevilla · kultaryntäykset 1849, 1851, 1886 | idea |
 | S5 | Turkikset ja valaat | pohjoinen | 1600–1900 | Hudsonin lahti · Siperia · Huippuvuoret · Nantucket · Beringinmeri | idea |
+| S6 | Luonnonvarat valuvat | maailma | 1850–2000 | guano Chincha 1840 · kumi Kongo ja Amazon · kupari Chile · timantit Kimberley 1867 · öljy Baku ja Pennsylvania 1859, Persia 1908 · harvinaiset maametallit | seuraava (louhintamaa värilänttinä, joka valuu maailmalle; raaka-aine omalla värillään) |
+| S7 | Lähi-itä ja musta kulta | Lähi-itä | 1908–1973 | Masjed Soleyman 1908 · Sykes–Picot 1916 · mandaatit 1920 · Kirkuk 1927 · Bahrain 1932 · Dammam 1938 · Iran 1951 · Suez 1956 · OPEC 1960 · 1973 | seuraava (omistaja 2.9.: Lähi-itäkin oli aluksi siirtomaa ja alistettu; salama ja mandaatin väri, sitten öljy valuu ulos, Pulu kertoo kenelle tuotto meni) |
 | T1 | Siirtolaisuus Amerikkaan | Eurooppa–Amerikat | 1840–1914 | Irlanti 1845 · Bremen · Liverpool · Ellis Island 1892 · Hanko–New York | seuraava |
 | T2 | Pyhiinvaellukset | maailma | vuodenkierto | Santiago · Mekka · Varanasi · Jerusalem | idea |
 | T3 | Siperian karkotukset ja asutus | Venäjä | 1590–1917 | Tobolsk · Irkutsk · Sahalin · rata 1891 | idea |
@@ -267,5 +272,5 @@ kolmiokaupan orjalaivat ovat oma virtansa, ei piiloteta.
 3. B2, B3, C1, C2 — pysäkeistä iso osa on jo pelin hetkiä tai kohteita.
 4. C5 Maapallon ympäri 80 päivässä — pelin oma tarina, tarvitsee maailmankartan.
 5. Maanosat: H1 Kiinan keksinnöt, H3 Japani, I3 Osmanit, J1 Kultavaltakunnat, J4 Afrikan tutkimusmatkat, K1 Mesoamerikka ja Andit, K3 Yhdysvallat, L2 Cook — järjestys sen mukaan, mille laudalle peli laajenee seuraavaksi.
-6. Aluelinssit (toinen moottori) aloitetaan M1 Kiinan dynastioista, kun aikajanamoottori on hiottu: pohjakartan ja rajojen aineistotyö ensin, sitten N1 Napoleon, N2 maailmansota, M2 Rooma.
+6. Aluelinssit (toinen moottori), omistajan päätös 2.9.2026 ilta: M1 Kiinan dynastiat → N1 Napoleon → N2 ensimmäinen maailmansota → M2 Rooma → N3 toinen maailmansota (sävy 13+: rintamat ja rauhat). Aloitus, kun aikajanamoottori on hiottu; pohjakartan ja rajojen aineistotyö ensin.
 7. Loput ideasta seuraavaksi omistajan päätöksellä.

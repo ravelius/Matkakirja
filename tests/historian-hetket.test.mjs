@@ -1,5 +1,5 @@
 /*
- * HISTORIAN HETKIEN AINEISTO — H1-pilotti, 10 hetkeä.
+ * HISTORIAN HETKIEN AINEISTO — 15 hetkeä, photo-v3-kuvaerä.
  *
  * Hetki on sisältöä kahdessa paikassa yhtä aikaa: kartalla omana
  * kohdemerkkinään (js/historian-hetket.js) ja lehdessä omana sivunaan
@@ -21,8 +21,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  HETKI_KUVAJUURI, HETKI_KUVAROOLIT, HISTORIAN_HETKET, hetkenKuvaOsoite, hetkenKuvat,
+  HETKI_KUVAJUURI, HETKI_KUVAROOLIT, HETKI_LEHTIKUVAT, HISTORIAN_HETKET,
+  hetkenKuvaOsoite, hetkenKuvat,
 } from '../js/packs/historian-hetket.js';
+import { paivitaHetkisivut } from '../tools/paivita-hetkisivut.mjs';
 import { KULTTUURI_KATEGORIAT } from '../js/packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
@@ -79,8 +81,9 @@ function lehtisivu(hetki) {
   return (sivut ?? []).find((s) => s.id === `hetki-${hetki.id}`) ?? null;
 }
 
-test('hetkiä on kymmenen ja jokaisella on kortin kentät', () => {
-  assert.equal(HISTORIAN_HETKET.length, 10, 'H1-pilotissa on kymmenen hetkeä');
+test('hetkiä on viisitoista ja jokaisella on kortin kentät', () => {
+  assert.equal(HISTORIAN_HETKET.length, 15,
+    'photo-v3-erän jälkeen hetkiä on viisitoista');
   const tunnukset = new Set();
   for (const hetki of HISTORIAN_HETKET) {
     assert.ok(!tunnukset.has(hetki.id),
@@ -101,29 +104,60 @@ test('hetkiä on kymmenen ja jokaisella on kortin kentät', () => {
   }
 });
 
-test('jokaisella hetkellä on vähintään yksi kuva ja roolit ovat lahi/kauko', () => {
+test('jokaisella hetkellä on lähi- ja kaukokuva tässä järjestyksessä', () => {
   /*
-   * KAKSI KUVAA PER HETKI (omistaja 2.9.2026): lähikuva ihmisistä ja
-   * kaukokuva kohtauksesta. Ensimmäisessä erässä lista on yhden
-   * mittainen — sen kuvan rooli on `kauko` — ja lähikuvan paikka jää
-   * tyhjäksi ilman virhettä. Tämä testi vartioi listan muodon, ei sen
-   * pituutta: kun pari saapuu, lähikuva lisätään listan kärkeen.
+   * KAKSI KUVAKULMAA PER HETKI (omistaja 2.9.2026): LÄHIKUVA ihmisistä
+   * ja KAUKOKUVA koko kohtauksesta. Lähikuva on omistajan nimeämä
+   * pääkuva, joten se on listan ensimmäinen — kortti ja lehtisivu
+   * näyttävät aina listan ensimmäisen isona.
+   *
+   * KOLMAS ROOLI `lehti` on aikakauden lehtisivun rekonstruktio, ja
+   * sellainen tehtiin vain neljälle hetkelle; se on aina viimeisenä,
+   * koska se on lisäkuva eikä kuvakulma kohtaukseen.
    */
   for (const hetki of HISTORIAN_HETKET) {
     const kuvat = hetkenKuvat(hetki);
-    assert.ok(kuvat.length >= 1, `${hetki.id}: kuvalista on tyhjä`);
+    const roolit = kuvat.map((k) => k.rooli);
+    const odotus = HETKI_LEHTIKUVAT[hetki.id]
+      ? ['lahi', 'kauko', 'lehti']
+      : ['lahi', 'kauko'];
+    assert.deepEqual(roolit, odotus,
+      `${hetki.id}: kuvaroolit ovat ${roolit.join('+')} — pitäisi olla ${odotus.join('+')}`);
     assert.ok(kuvat.length <= HETKI_KUVAROOLIT.size,
       `${hetki.id}: kuvia on enemmän kuin rooleja`);
-    const roolit = new Set();
     for (const kuva of kuvat) {
       assert.ok(HETKI_KUVAROOLIT.has(kuva.rooli),
         `${hetki.id}: tuntematon kuvarooli "${kuva.rooli}"`);
-      assert.ok(!roolit.has(kuva.rooli),
-        `${hetki.id}: rooli ${kuva.rooli} on kahdesti`);
-      roolit.add(kuva.rooli);
       assert.ok(typeof kuva.kuvateksti === 'string' && kuva.kuvateksti.trim(),
         `${hetki.id}/${kuva.rooli}: kuvateksti puuttuu`);
     }
+  }
+});
+
+test('lehtikuva on vain niillä neljällä hetkellä, joille sellainen tehtiin', () => {
+  /*
+   * Lehtisivun rekonstruktio on PYSTYKUVA (1024 × 1536) ja siksi oma
+   * asiansa kortin vaakakuvien rinnalla: kortin kehys sallii
+   * pystysuhteen (css/fokusnosto.css `.fokusnosto-kuva img`), mutta
+   * uusi lehtikuva ilman omistajan tilausta ei kuulu tähän joukkoon.
+   * Lista on datassa (HETKI_LEHTIKUVAT), ja tämä testi lukitsee sen.
+   */
+  assert.deepEqual(Object.keys(HETKI_LEHTIKUVAT).sort(), [
+    'amundsen-etelanapa-1911',
+    'nansen-fram-1893',
+    'titanic-southampton-1912',
+    'trafalgar-victory-1805',
+  ], 'lehtikuvien lista muuttui — uusi lehtisivu on kuvatilaus, ei koodierä');
+  const tunnukset = new Set(HISTORIAN_HETKET.map((h) => h.id));
+  for (const [id, tiedosto] of Object.entries(HETKI_LEHTIKUVAT)) {
+    assert.ok(tunnukset.has(id), `${id}: lehtikuva osoittaa hetkeen, jota ei ole`);
+    assert.match(tiedosto, /^hetki-[a-z0-9-]+-lehti-photo-v3\.jpg$/,
+      `${id}: lehtikuvan nimi "${tiedosto}" ei noudata kaavaa`);
+    const kuvat = hetkenKuvat(HISTORIAN_HETKET.find((h) => h.id === id));
+    const lehtikuva = kuvat.find((k) => k.rooli === 'lehti');
+    assert.ok(lehtikuva, `${id}: lehtikuva puuttuu kuvalistalta`);
+    assert.equal(lehtikuva.tiedosto, tiedosto,
+      `${id}: kuvalistan lehtikuva ei ole sama kuin HETKI_LEHTIKUVAT`);
   }
 });
 
@@ -133,19 +167,25 @@ test('kuvien osoitteet osoittavat pelin omaan ämpäriin oikealla nimikaavalla',
   for (const hetki of HISTORIAN_HETKET) {
     for (const kuva of hetkenKuvat(hetki)) {
       /*
-       * NIMIKAAVA: ensimmäisen erän tiedosto on `hetki-<id>.jpg` ja
-       * parikuvat ovat `hetki-<id>-lahi.jpg` ja `hetki-<id>-kauko.jpg`
-       * (omistajan tilaus 2.9.2026). Molemmat kelpaavat, muut eivät —
-       * väärin nimetty tiedosto vastaisi ämpärissä 404:llä eikä mikään
-       * kaatuisi, kortti jäisi vain kuvattomaksi.
+       * NIMIKAAVA photo-v3-erän jälkeen: kuvakulmat ovat
+       * `hetki-<id>-lahi-photo-v3.jpg` ja `-kauko-photo-v3.jpg`.
+       * Lehtisivun rekonstruktio on nimetty JULKAISUNSA eikä hetken
+       * mukaan (`hetki-titanic-daily-graphic-1912-lehti-photo-v3.jpg`),
+       * joten sen nimi luetaan HETKI_LEHTIKUVAT-taulusta. Väärin
+       * nimetty tiedosto vastaisi ämpärissä 404:llä eikä mikään
+       * kaatuisi — kortti jäisi vain kuvattomaksi.
+       *
+       * `-photo-v3`-pääte on osa sopimusta: H1- ja H2-erien kuvat
+       * jäivät ämpäriin, mutta niihin ei enää viitata (Raamattu,
+       * "KAIKKI GENEROIDUT KUVAT MAHDOLLISIMMAN VALOKUVAMAISIA").
        */
-      const sallitut = new Set([
-        `hetki-${hetki.id}.jpg`,
-        `hetki-${hetki.id}-lahi.jpg`,
-        `hetki-${hetki.id}-kauko.jpg`,
-      ]);
-      assert.ok(sallitut.has(kuva.tiedosto),
+      const odotettu = kuva.rooli === 'lehti'
+        ? HETKI_LEHTIKUVAT[hetki.id]
+        : `hetki-${hetki.id}-${kuva.rooli}-photo-v3.jpg`;
+      assert.equal(kuva.tiedosto, odotettu,
         `${hetki.id}: kuvan nimi "${kuva.tiedosto}" ei noudata kaavaa`);
+      assert.match(kuva.tiedosto, /-photo-v3\.jpg$/,
+        `${hetki.id}: vanha kuvaerä on yhä käytössä (${kuva.tiedosto})`);
       assert.equal(kuva.osoite, `${HETKI_KUVAJUURI}/${kuva.tiedosto}`,
         `${hetki.id}: osoite ei synny kuvajuuresta`);
       assert.equal(kuva.osoite, hetkenKuvaOsoite(kuva.tiedosto));
@@ -162,10 +202,27 @@ test('jokaisen kuvan lähderivi on havainnekuvamerkintä ja nimeää lähteensä
       assert.match(kuva.lahde, HAVAINNEKUVA_RE,
         `${nimi}: lähderivi ei kerro kuvan olevan Matkakirjan havainnekuva `
         + '— silloin selitettä ei synny (js/havainnekuva.js)');
-      assert.match(kuva.lahde, /en-Wikipedia "/,
-        `${nimi}: lähderivi ei nimeä en-Wikipedian artikkelia`);
+      /*
+       * LÄHDERIVI NIMEÄÄ KUVAN OMAN AINEISTON. photo-v3-erässä
+       * kuvaputki toimitti jokaiselle kuvalle lähderivin, joka nimeää
+       * arkiston tai museon (Library of Congress, Frammuseet,
+       * Vikingeskibsmuseet, NobelPrize.org…) — ei siis enää
+       * en-Wikipediaa, joka on TEKSTIN lähde ja nimetään hetken
+       * yläpuolisessa lähdekommentissa.
+       */
+      assert.match(kuva.lahde, /faktat|referenssi/i,
+        `${nimi}: lähderivi ei nimeä, mihin aineistoon kuva perustuu`);
       assert.match(kuva.lahde, /tarkistettu \d+\.\d+\.\d{4}/,
         `${nimi}: lähderivistä puuttuu tarkistuspäivä`);
+      /*
+       * OSOITE ON OMASSA KENTÄSSÄÄN. Lähderivi ladotaan tekstinä kuvan
+       * alle, ja pitkä http-osoite täyttäisi puolet kuvatekstistä.
+       */
+      assert.doesNotMatch(kuva.lahde, /https?:\/\//,
+        `${nimi}: lähderivillä on osoite — se kuuluu url-kenttään`);
+      if (kuva.url) {
+        assert.match(kuva.url, /^https:\/\//, `${nimi}: url ei ole https-osoite`);
+      }
     }
   }
 });
@@ -317,4 +374,21 @@ test('kartalle merkitty hetki projisoituu laudan sisään ja tuottaa karttarivin
     assert.equal(rivi.kohde.symboli, 'hetki');
     assert.equal(rivi.kohde.nimio, hetki.nimio);
   }
+});
+
+test('lehtisivut ovat generoituja eivätkä käsin muokattuja', () => {
+  /*
+   * SAMA KOODI, JOKA SIVUT KIRJOITTAA, TARKISTAA NE MYÖS.
+   * tools/paivita-hetkisivut.mjs latoo lehtisivun lohkon pakasta;
+   * `kirjoita: false` ajaa saman passin koskematta tiedostoihin ja
+   * palauttaa listan siitä, mikä eriytyisi. Tyhjä lista tarkoittaa,
+   * että lehti ja pakka ovat merkilleen samat — ja jos joku on
+   * korjannut sivua käsin, korjaus näkyy tässä eikä vasta pelissä.
+   *
+   * Korjaus on aina sama: muuta pakkaa ja aja
+   * `node tools/paivita-hetkisivut.mjs`.
+   */
+  const muutokset = paivitaHetkisivut({ kirjoita: false });
+  assert.deepEqual(muutokset, [],
+    'lehtisivu on eriytynyt pakasta — aja node tools/paivita-hetkisivut.mjs');
 });
