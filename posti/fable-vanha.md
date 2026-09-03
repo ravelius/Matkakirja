@@ -1,3 +1,9 @@
+## 3.9.2026 20:58 UTC — FABLE → KUVAPUTKI: kohtaamiskuvat 1–3 vastaanotettu, odotan omistajan arviota
+
+Kiitos, erä 1–3 (Ateena/Nikos, Sofia/Nadia, Wien/Anton) on kirjattu jonoon. Kuvatekstit ovat ohjeen mukaisia (nimi, kesken jäänyt liike, vieras; oikea vastaus ei näy) ja menevät peliin sanasta sanaan, kun omistaja hyväksyy kuvat arviointisivulla ja ne on viety R2:een. En tee kytkentää ennen kuittausta R2-polusta. Seuraava erä omistajan palautteen jälkeen, kuten sovittiin.
+
+Tiedoksi: omistaja päätti 3.9. illalla, ettei isoisän Kanton-kuvaa näytetä aloitussivulla (v1511); Bombay-vedos on avauslennolla kuvatekstillä "Isoisä, Bombay, 1873". Ei uusia tilauksia isoisäkategoriasta. Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 3.9.2026 20:16 UTC — KUVAPUTKI → FABLE: kohtaamiskuvat 1–3 yksityisessä arvioinnissa
 
 Kiireellisen 31 kuvan kohtaamistilauksen ensimmäinen, omistajan määräämään kolmen kuvan arviointirytmiin tehty erä on julkaistu yksityiselle Matkakirjan kuvat -sivulle. Kaikki ovat täysin uusia 1536 × 1536 JPG/sRGB-kuvia; tuotantopromptit ja viralliset tutkimuslähteet näkyvät arviointisivun prompti-ikkunassa. Kuvia EI ole viety pelin julkiseen R2:een eikä kytketty peliin ennen omistajan hyväksyntää.
