@@ -22,9 +22,9 @@
  *      kaupungeilleen; skandaalit kuuluvat maalleen, joten lähde lukee
  *      SKANDAALIT[iso]-listan suoraan eikä kierrä kaupunkien kautta.
  *   2. KUVIA ON LISTA, JA LISTA ON VALINNAINEN. Erä 30.8.2026 tehtiin
- *      kuvattomana, ja kuvaton kortti piirtyy yhä ennallaan: ylärivi,
- *      otsikko, paikka–vuosi-rivi, teksti ja minivisa. Kuvat asuvat
- *      `kuvat`-listassa (`[{ osoite | tiedosto, selite, lahde }]`),
+ *      kuvattomana, ja kuvaton kortti taittuu yhä kokonaisena: ylärivi,
+ *      nimiö, päiväysrivi, otsikko, ingressi, juttu ja minivisa. Kuvat
+ *      asuvat `kuvat`-listassa (`[{ osoite | tiedosto, selite, lahde }]`),
  *      jonka ensimmäinen on Matkakirjan oma havainnekuva ja loput
  *      aikalaiskuvia Commonsista (omistajan linjaus 2.9.2026:
  *      *"ensimmäisenä kuvana generoitu parempilaatuinen kuva, ja jos
@@ -157,16 +157,24 @@ function skandaaliLisakohteet(ui) {
 /* ==================== KORTTI ==================== */
 
 /**
- * SKANDAALIKORTTI — ylärivi, otsikko, paikka–vuosi-rivi, tarina ja
- * minivisa.
+ * SKANDAALIKORTTI — ylärivi ja sen alle lisälehden taitto (nimiö,
+ * päiväysrivi, otsikko, ingressi, kuvat, juttu, minivisa).
  *
  * Kortti on kartan päällä kelluva paperi, ei koko ruudun modaali —
  * sama sääntö, samat sisusluokat ja sama sulkusopimus kuin
  * syvennystarinalla (js/syvennys.js avaaSyvennys). Ulkokuori on oma
  * (`skandaali-*`), koska kukin korttiperhe siivoaa omat kerroksensa
- * valitsimella. Paikka ja vuosi latoutuvat lähderivin luokalla
- * (css/fokusnosto.css .fokusnosto-lahde) otsikon alle — hiljainen
- * pikkurivi, ei uutta UI-kieltä.
+ * valitsimella.
+ *
+ * LÖÖPPITAITTO KAIKISSA SKANDAALEISSA (omistaja 3.9.2026: *"lööppi
+ * lisälehti on nyt hyvä. monista kaikkiin muihinkin"*). Kuori saa
+ * skandaali-luokkansa rinnalle täkynostojen lööppiluokan
+ * `fokusnosto-looppi`, jolloin leveämpi mitta ja keltaisempi paperi
+ * tulevat SAMASTA säännöstä kuin pilotissa (css/fokusnosto.css osio 9)
+ * eikä skandaalille kirjoiteta omaa ulkonäköä. Skandaali on aina
+ * lisälehti — dataan ei siis tule `taitto`-lippua niin kuin
+ * täkynostoilla (js/fokusnosto.js nostonTaitto), joilla oletus on
+ * tavallinen kortti.
  */
 export function avaaSkandaali(ui, iso, skandaali) {
   if (!skandaali) return;
@@ -175,7 +183,7 @@ export function avaaSkandaali(ui, iso, skandaali) {
   suljeSkandaali(ui);
 
   const kerros = html('div', 'skandaali-kerros');
-  const kortti = html('div', 'skandaali-kortti');
+  const kortti = html('div', 'skandaali-kortti fokusnosto-looppi');
   kortti.setAttribute('role', 'dialog');
   kortti.setAttribute('aria-modal', 'false');
   kortti.setAttribute('aria-label', skandaali.otsikko ?? 'Skandaali');
@@ -225,39 +233,59 @@ export function avaaSkandaali(ui, iso, skandaali) {
 }
 
 /**
- * SKANDAALIN SISUS — otsikko, paikka–vuosi-rivi, tarina ja minivisa.
+ * SKANDAALIN SISUS LEHDEN TAITOSSA — nimiö, päiväysrivi, pääotsikko,
+ * ingressi, kuvat, leipäteksti ja minivisa.
  *
  * Erotettu omaksi funktiokseen 31.8.2026 (kategoria per kaupunki):
  * sama sisus latoutuu joko oman kortin ylärivin alle tai osiona
  * yhdistetyllä lehdellä (js/fokuskohteet.js piirraRyhmanOsiot). Tyyli
  * ladataan tässä samasta syystä kuin syvennystarinalla — osiona
  * kutsuttaessa korttia ei avata lainkaan.
+ *
+ * ── LÖÖPPITAITTO (omistaja 3.9.2026) ───────────────────────────────
+ *
+ * Rivit ovat samat kuin täkynoston lööppipilotissa (js/fokusnosto.js
+ * piirraNostonSisus, haara `looppi`) ja käyttävät SAMOJA luokkia, joten
+ * ulkonäkö tulee yhdestä paikasta (css/fokusnosto.css osio 9):
+ *
+ *   1. `looppi-nimio` — "Lisälehti". 1800-luvulla skandaaliuutinen tuli
+ *      lisälehtenä varsinaisen numeron väliin.
+ *   2. `looppi-paivays` — paikka · vuosi kaksoisviivojen välissä. SAMA
+ *      SISÄLTÖ kuin ennen ollut metarivi (`fokusnosto-lahde`), uusi asu.
+ *   3. `looppi-otsikko` — pääotsikko lehden kokoisena. Kortin oma
+ *      otsikkoluokka on rinnalla, jotta kirjasin ja väri periytyvät.
+ *   4. `looppi-ingressi` — `kortti`-kenttä, kappale kerrallaan omana
+ *      kappaleenaan (Fablen 3–4 virkkeen ingressi; monikappaleinen
+ *      ingressi latoutuu useaksi ingressikappaleeksi).
+ *   5. kuvat entiseen tapaan — yksi kuva tai selattava galleria.
+ *      77/83 skandaalia on kuvattomia, ja taitto on tehty kestämään se:
+ *      kuvaton kortti menee ingressistä suoraan leipätekstiin eikä
+ *      kuvalle varata paikkaa etukäteen.
+ *   6. `looppi-leipa` — `teksti` kappaleittain; anfangi ja leveän
+ *      ruudun kaksi palstaa tulevat CSS:stä.
+ *
+ * Vanha `skandaali-ingressi` -luokka jäi pois: ingressi on nyt lehden
+ * ingressi eikä leipätekstin ensimmäinen kappale, joten sen sekä oma
+ * paikkansa taitossa että oma luokkansa vaihtuivat.
  */
 function piirraSkandaalinSisus(ui, sailio, iso, skandaali) {
   skandaaliLataaTyyli();
-  sailio.appendChild(html('h3', 'fokusnosto-kortti-otsikko', skandaali.otsikko));
-  // Paikka ja vuosi otsikon alle (ks. funktion otsake). Metarivi on
-  // ennen kuvaa, jotta kuvan alla oleva kuvateksti ja lähderivi eivät
-  // jää kahden pikkurivin väliin.
-  const meta = [skandaali.paikka, skandaali.vuosi].filter(Boolean).join(' · ');
-  if (meta) sailio.appendChild(html('p', 'fokusnosto-lahde', meta));
-  piirraSkandaalinKuvat(ui, sailio, skandaali);
-  const teksti = html('div', 'fokusnosto-teksti');
-  /*
-   * INGRESSI ENSIN, SITTEN JUTTU (omistajan havainto 2.9.2026: kortti
-   * "näyttää tyngältä, puuttuu tekstiä"). `kortti` on Fablen hyväksymä
-   * 3–4 virkkeen ingressi ja `teksti` sen alle latoutuva juttu, joten
-   * ingressi erottuu omalla luokallaan ja juttu jakautuu kappaleisiin
-   * kirjoittajan omista tyhjistä riveistä (ui-apurit jaaKappaleiksi).
-   * Ilman `teksti`-kenttää kortti latoo pelkän ingressin kuten ennen.
-   */
+  sailio.appendChild(html('p', 'looppi-nimio', 'Lisälehti'));
+  const paivays = [skandaali.paikka, skandaali.vuosi].filter(Boolean).join(' · ');
+  if (paivays) sailio.appendChild(html('p', 'looppi-paivays', paivays));
+  sailio.appendChild(html('h3', 'fokusnosto-kortti-otsikko looppi-otsikko', skandaali.otsikko));
   for (const kappale of jaaKappaleiksi(skandaali.kortti ?? '')) {
-    teksti.appendChild(html('p', 'skandaali-ingressi', kappale));
+    sailio.appendChild(html('p', 'looppi-ingressi', kappale));
   }
+  piirraSkandaalinKuvat(ui, sailio, skandaali);
+  const teksti = html('div', 'fokusnosto-teksti looppi-leipa');
   for (const kappale of jaaKappaleiksi(skandaali.teksti ?? '')) {
     teksti.appendChild(html('p', '', kappale));
   }
-  sailio.appendChild(teksti);
+  // Jututon skandaali ei saa jättää tyhjää palstalaatikkoa ingressin ja
+  // visan väliin (kaikilla 83:lla on `teksti`, mutta kenttä ei ole
+  // pakollinen tests/skandaalit.test.mjs:ssä).
+  if (teksti.childElementCount) sailio.appendChild(teksti);
   piirraSkandaaliVisa(ui, sailio, iso, skandaali);
 }
 

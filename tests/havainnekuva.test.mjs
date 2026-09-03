@@ -116,7 +116,12 @@ const SALLITUT = new Map([
   ['js/maalehti.js:vinkki-lahde', 'menovinkin ulkoisen sivuston nimi'],
   ['js/nahtavyydet.js:nahtavyys-lainaus-lahde', 'sitaatin puhuja, ei kuva'],
   ['js/nahtavyydet.js:nahtavyys-lahderivi', 'jutun tekstin lähde (lahdemerkinta)'],
-  ['js/skandaalit.js:fokusnosto-lahde', 'paikka · vuosi -metarivi, ei lähde lainkaan'],
+  /*
+   * js/skandaalit.js:fokusnosto-lahde poistui 3.9.2026: skandaalikortin
+   * paikka · vuosi -metarivi latoutuu lisälehden päiväysrivinä
+   * (.looppi-paivays), eikä luokan nimessä lue enää "lahde" — poikkeusta
+   * ei siis tarvita. Alla oleva vanhenemistesti kaatoi listan itse.
+   */
 ]);
 
 /**

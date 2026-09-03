@@ -1966,9 +1966,16 @@ vaadi('skandaalimerkin valo kuuluu Skandaalit-aiheeseen',
   skandaaliValo === 'skandaalit', JSON.stringify(skandaaliValo));
 await napauta('skandaali-simonides-kasikirjoitusvaarentaja');
 const skandaalikortti = await sivu.evaluate(() => ({
-  otsikko: document.querySelector('.skandaali-kortti .fokusnosto-kortti-otsikko')
+  otsikko: document.querySelector('.skandaali-kortti .looppi-otsikko')
     ?.textContent ?? null,
-  meta: document.querySelector('.skandaali-kortti .fokusnosto-lahde')?.textContent ?? '',
+  // Paikka ja vuosi latoutuvat 3.9.2026 alkaen lisälehden päiväysrivinä
+  // (.looppi-paivays) entisen metarivin (.fokusnosto-lahde) tilalla —
+  // sama sisältö, uusi asu (js/skandaalit.js piirraSkandaalinSisus).
+  meta: document.querySelector('.skandaali-kortti .looppi-paivays')?.textContent ?? '',
+  nimio: document.querySelector('.skandaali-kortti .looppi-nimio')?.textContent ?? '',
+  ingressi: document.querySelector('.skandaali-kortti .looppi-ingressi')?.textContent ?? '',
+  leipa: document.querySelector('.skandaali-kortti .looppi-leipa')?.textContent ?? '',
+  looppi: Boolean(document.querySelector('.skandaali-kortti.fokusnosto-looppi')),
   visa: Boolean(document.querySelector('.skandaali-kortti .fokusvirta-visa-kysymys')),
   ylarivi: document.querySelector('.skandaali-kortti .fokusnosto-ylarivi')
     ?.textContent ?? '',
@@ -1982,6 +1989,16 @@ vaadi('skandaalimerkin napautus avaa skandaalikortin minivisoineen',
   && skandaalikortti.ylarivi.includes('Skandaalit')
   && skandaalikortti.meta.includes('Symin saari'),
   JSON.stringify(skandaalikortti));
+// Lööppitaitto monistettiin kaikkiin skandaaleihin 3.9.2026: kortti
+// kantaa lööppiluokkaa, nimiö on Lisälehti ja ingressi (`kortti`) on
+// omana kappaleenaan ennen leipätekstiä (`teksti`).
+vaadi('skandaalikortti on ladottu lisälehden taittoon',
+  skandaalikortti.looppi && skandaalikortti.nimio === 'Lisälehti'
+  && skandaalikortti.ingressi.length > 40 && skandaalikortti.leipa.length > 200,
+  JSON.stringify({
+    looppi: skandaalikortti.looppi, nimio: skandaalikortti.nimio,
+    ingressi: skandaalikortti.ingressi.length, leipa: skandaalikortti.leipa.length,
+  }));
 await sivu.keyboard.press('Escape');
 await sivu.waitForTimeout(400);
 
