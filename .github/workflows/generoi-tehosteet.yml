@@ -1,0 +1,153 @@
+# Generoi lyhyet ääniefektit ja vie ne ämpäriin.
+#
+# Omistajan tilaus 3.9.2026: aikajanalinssin vuodenvaihtumiseen
+# *"joku uuu-huudahdus, aivan kuin yleisö kohahtaisi, kun uusi hieno
+# keksintö saapuu maailmaan"* — ja *"niitä vain pitäisi sitten
+# generoida useampia variantteja, jotta sama ääniefekti ei toistuisi
+# peräjälkeen"*. Pelin puoli on valmis (js/tehosteet.js) ja odottaa
+# neljää tiedostoa; työn tekee tools/generoi-tehosteet.mjs.
+#
+#   kohahdus  aanet/tehosteet/kohahdus-1.mp3 … kohahdus-4.mp3
+#             yleisön hillitty "uuu", n. 1,5 s, −30 LUFS
+#
+# JOKAINEN VARIANTTI ON OMA MAKSULLINEN KUTSUNSA. Oletus on neljä,
+# koska peli arpoo neljästä eikä soita samaa kahdesti peräkkäin; yhden
+# variantin korjaamiseen riittää `maara: 1` — se kirjoittaa
+# kohahdus-1.mp3:n uudelleen.
+#
+# KÄSIAJETTAVA (workflow_dispatch), sama syy kuin
+# generoi-siirtymamusiikki.yml:llä: generointi maksaa rahaa.
+# Automaattista triggeriä ei ole eikä tule.
+#
+# TÄMÄ AJO EI COMMITTOI MITÄÄN. Tehosteet ovat mediaa ja media kuuluu
+# ämpäriin, ei repoon (Raamattu: "kaikki aina ämpäriin"). Työkalu
+# kirjoittaa media/-kansioon, joka on .gitignoressa — se tarkistetaan
+# koneellisesti ennen ensimmäistäkään maksullista kutsua — ja vie
+# tiedostot sieltä ämpärin aanet/tehosteet/-kansioon samalla
+# aws s3 cp -komennolla kuin vie-aanet.yml. Peli hakee tasan sen polun,
+# joten tehosteet ovat pelissä heti ajon jälkeen ilman julkaisua.
+#
+# KUUNTELE VARIANTIT AJON JÄLKEEN. Ajo tarkistaa koneellisesti keston
+# (1,0–2,4 s) ja tason (−30 LUFS), mutta ei sitä, kuulostaako ääni
+# yleisön kohahdukselta eivätkä variantit liian erilaisilta — se
+# kuullaan.
+#
+# FFMPEG asennetaan apt:llä: ubuntu-latest-ajurissa sitä ei ole, ja
+# hiljaisuuden leikkaus, häivytykset ja tason mittaus ovat sen varassa.
+#
+# Salaisuudet ovat tämän repon Actions-asetuksissa eivätkä koskaan
+# täällä: ELEVEN_API_KEY (sama kuin generoi-musiikki.yml ja
+# generoi-siirtymamusiikki.yml) sekä neljä R2-salaisuutta (samat kuin
+# vie-aanet.yml ja peilaa.yml):
+#   R2_ACCOUNT_ID  R2_ACCESS_KEY_ID  R2_SECRET_ACCESS_KEY  R2_BUCKET
+# Avain ei tulostu lokiin: työkalu ei tulosta sitä eikä tämä ajo echoa
+# sitä — GitHub peittää secretit joka tapauksessa, mutta siihen ei nojata.
+
+name: Generoi tehosteet
+
+on:
+  workflow_dispatch:
+    inputs:
+      laji:
+        description: 'Mikä tehoste generoidaan.'
+        required: true
+        type: choice
+        default: 'kohahdus'
+        options: ['kohahdus']
+      maara:
+        description: >-
+          Montako varianttia (1–8). Jokainen on oma maksullinen
+          kutsunsa. Oletus 4 = kohahdus-1 … kohahdus-4.
+        required: true
+        type: string
+        default: '4'
+
+permissions:
+  contents: read
+
+# Yksi ajo kerrallaan: kaksi rinnakkaista kirjoittaisi ämpärin samoihin
+# avaimiin. Oma ryhmänsä, ei musiikkiajon — tämä koskee kansiota
+# aanet/tehosteet/, musiikki kansiota aanet/.
+concurrency:
+  group: generoi-tehosteet
+  cancel-in-progress: false
+
+jobs:
+  generoi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # Vienti on työkalun sisällä, mutta salaisuudet tulevat tästä —
+      # samat nimet ja sama endpoint-tyyli kuin vie-aanet.yml:ssä.
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      # R2 ei hyväksy AWS:n uudempia tarkistussummaotsakkeita, jotka
+      # aws-cli 2.23:sta alkaen lähtevät oletuksena mukaan.
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Puuttuva salaisuus tulisi muuten vastaan vasta ElevenLabsin
+      # 401:nä tai aws-clin "Invalid endpoint" -virheenä — ja pahimmassa
+      # järjestyksessä vasta sen jälkeen, kun kutsut on jo maksettu.
+      # Arvoja ei tulosteta, vain onko ne asetettu.
+      - name: Tarkista että salaisuudet ovat tallessa
+        env:
+          AVAIN: ${{ secrets.ELEVEN_API_KEY }}
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$AVAIN" ]                        || puuttuu="$puuttuu ELEVEN_API_KEY"
+          [ -n "${R2_ACCOUNT_ID:-}" ]            || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ]        || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ]    || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "${R2_BUCKET:-}" ]                || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            echo "Lisää ne: Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          echo "Kaikki viisi salaisuutta löytyvät."
+
+      - name: Asenna ffmpeg
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          ffmpeg -version | head -1
+
+      # Kuiva ajo ensin: leikkaus, häivytykset ja tason mittaus tulevat
+      # kokeilluiksi syntetisoidulla äänellä ennen kuin yhtäkään
+      # maksullista kutsua on tehty. Tulostaa myös promptin sellaisena
+      # kuin se APIin lähtee.
+      - name: Kuiva ajo (ffmpeg-ketju ja prompti)
+        run: >-
+          node tools/generoi-tehosteet.mjs
+          --laji ${{ inputs.laji }} --maara ${{ inputs.maara }} --kuiva
+
+      - name: Generoi variantit ja vie ämpäriin
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+        run: >-
+          node tools/generoi-tehosteet.mjs
+          --laji ${{ inputs.laji }} --maara ${{ inputs.maara }}
+
+      # Vartija sille, mitä tämä ajo lupaa: repoon ei jää mitään.
+      - name: Varmista ettei repoon jäänyt mitään
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::Ajo muutti työhakemistoa — media kuuluu ämpäriin, ei repoon."
+            git status --porcelain
+            exit 1
+          fi
+          echo "Työhakemisto on siisti."

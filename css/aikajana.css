@@ -12,9 +12,12 @@
  * kello rullaa ja valo syttyy kerran. prefers-reduced-motion nollaa
  * kestot.
  *
- * Kartan valot ovat SVG:ssä (js/aikajana.js rakennaValot) ja niiden
- * syttyminen on KERRAN laukeava siirtymä — ei jatkuvaa sykettä kartan
- * päällä (docs/moduulit/linssit.md 1.7).
+ * Kartan merkit ovat SVG:ssä (js/aikajana.js rakennaValot). Syttyminen
+ * on kerran laukeava siirtymä, ja NYKYINEN keksintö sykkii omistajan
+ * tilauksesta 3.9.2026 — CSS-keyframeilla, yhdelle merkille kerrallaan
+ * ja ilman suodattimia (docs/moduulit/linssit.md 1.7 kieltää raskaan
+ * kerroksen ja suodattimet, ei tätä). prefers-reduced-motion sammuttaa
+ * sykkeen.
  */
 
 .aikajana {
@@ -303,20 +306,72 @@
 
 /* ==================== VALOT KARTALLA (SVG) ==================== */
 
+/*
+ * KEKSINNÖN PAIKKAMERKKI (omistajan tilaus 3.9.2026: *"todella selkeä
+ * vilkkuva pallo … kun siirrytään seuraavaan vuoteen, pallo voisi
+ * hieman himmentyä ja lopettaa vilkkumisen, mutta silti hehkua"*).
+ *
+ * KOLME YMPYRÄÄ, EI SUODATINTA. `filter: drop-shadow` olisi lyhyempi
+ * mutta kielletty: iOS:n webapp-tila palauttaa suodatetun SVG-kerroksen
+ * TYHJÄNÄ taustalta palatessa (js/karttavalot.js, tests/sw.test.mjs).
+ * Ulkohehku on siksi oma puoliläpinäkyvä ympyränsä, kuten
+ * karttavaloilla ja vihreällä kohtaamispisteellä.
+ *
+ * EI transform-box/transform-origin -paria. Kaikki kolme ympyrää ovat
+ * keskipisteessä (0,0), joten skaalaus origon ympäri on skaalaus merkin
+ * keskipisteen ympäri joka selaimessa — ks. js/aikajana.js MERKIN_SADE,
+ * jossa kerrotaan miksi vanha pari siirsi merkin väärään paikkaan.
+ */
 .aikajana-valot { pointer-events: none; }
 .aikajana-valo-sisus {
-  transform-box: fill-box;
-  transform-origin: center;
   transform: scale(0);
   opacity: 0;
-  transition: transform 0.9s cubic-bezier(0.2, 0.9, 0.3, 1.35), opacity 0.6s ease;
+  transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.3, 1.35), opacity 0.6s ease;
 }
 .aikajana-valo.palaa .aikajana-valo-sisus { transform: scale(1); opacity: 1; }
-.aikajana-valo-hehku { fill: rgba(255, 196, 82, 0.28); }
-.aikajana-valo-keha { fill: rgba(255, 214, 120, 0.55); }
-.aikajana-valo-ydin { fill: #fff3c4; stroke: #b8801c; stroke-width: 0.8; }
-.aikajana-valo.nykyinen .aikajana-valo-hehku { fill: rgba(255, 196, 82, 0.5); }
-.aikajana-valo.nykyinen .aikajana-valo-sisus { transform: scale(1.35); }
+
+/*
+ * JÄLKI eli jo ohitettu keksintö: himmeä mutta yhä hehkuva pallo,
+ * ei vilkkumista eikä sykettä. Kaaren lopussa kartalla on koko kaaren
+ * valokartta juuri tässä tilassa.
+ */
+.aikajana-valo-pallo {
+  fill: #ffc452;
+  stroke: #6b4a12;
+  stroke-width: 1.1;
+  opacity: 0.55;
+  transition: opacity 0.6s ease;
+}
+.aikajana-valo-hehku {
+  fill: rgba(255, 196, 82, 0.22);
+  transition: fill 0.6s ease;
+}
+/* Syke on vain nykyisellä merkillä; muilla se on näkymätön. */
+.aikajana-valo-syke {
+  fill: none;
+  stroke: rgba(255, 196, 82, 0.9);
+  stroke-width: 2.4;
+  opacity: 0;
+}
+
+/* NYKYINEN keksintö: kirkas pallo, pehmeä vilkku ja laajeneva rengas. */
+.aikajana-valo.nykyinen .aikajana-valo-pallo {
+  opacity: 1;
+  animation: aikajana-vilkku 1.1s ease-in-out infinite;
+}
+.aikajana-valo.nykyinen .aikajana-valo-hehku { fill: rgba(255, 196, 82, 0.34); }
+.aikajana-valo.nykyinen .aikajana-valo-syke {
+  animation: aikajana-syke 1.4s ease-out infinite;
+}
+
+@keyframes aikajana-vilkku {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+@keyframes aikajana-syke {
+  0% { opacity: 0.9; transform: scale(1); }
+  100% { opacity: 0; transform: scale(2.4); }
+}
 
 /* ==================== PUHELIN ==================== */
 
@@ -333,4 +388,11 @@
 @media (prefers-reduced-motion: reduce) {
   .aikajana { --aikajana-kesto: 0.01s; }
   .aikajana-rullanauha, .aikajana-valo-sisus { transition: none; }
+  /*
+   * Ei sykettä eikä vilkkua: nykyinen keksintö erottuu pelkällä
+   * kirkkaudella, jälki jää himmeäksi kuten muutenkin.
+   */
+  .aikajana-valo.nykyinen .aikajana-valo-pallo,
+  .aikajana-valo.nykyinen .aikajana-valo-syke { animation: none; }
+  .aikajana-valo.nykyinen .aikajana-valo-pallo { opacity: 1; }
 }

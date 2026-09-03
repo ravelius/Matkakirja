@@ -96,6 +96,9 @@ const NIMET = [
   // Pöllön omat äänet (13.8.2026): huhuilu paneelin avautuessa ja
   // kirjoituskoneen rivinvaihtokello vastauksen valmistuessa.
   'owl', 'typeBell',
+  // Aikajanalinssin kellon vuosinaksahdus (3.9.2026): varaääni sille,
+  // kun ämpärin kohahdusta (js/tehosteet.js) ei ole ladattu.
+  'vuosi',
 ];
 
 test('jokainen tehoste tuottaa äänilähteitä', async () => {

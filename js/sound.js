@@ -1505,6 +1505,21 @@ const SOUNDS = {
   swipe: (s) => s.hiss({ dur: 0.24, freq: 700, sweepTo: 2600, gain: 0.09, q: 0.8 }),
 
   /*
+   * AIKAJANAN VUOSINAKSAHDUS (js/aikajana.js naksahda).
+   *
+   * Rullaava vuosiluku on mekaaninen laskuri, ja laskuri naksahtaa.
+   * Ääni on tarkoituksella pienin pelissä oleva: se toistuu joka
+   * vuodella, eli tiheimmillään neljä kertaa sekunnissa, eikä se saa
+   * kuulua rytminä musiikin päällä. Kaksi korkeaa osasäveltä hyvin
+   * kapealla resonanssilla ja 28 ms:n kesto — kynnenkopautus
+   * messinkiin, ei kello.
+   *
+   * VARAÄÄNI, EI PÄÄOSA: kun ämpärin kohahdus (js/tehosteet.js) on
+   * ladattu, se soi tämän sijaan.
+   */
+  vuosi: (s) => s.knock({ freqs: [1180, 1720], dur: 0.028, gain: 0.035, q: 12 }),
+
+  /*
    * PÖLLÖN HUHUILU paneelin avautuessa (omistajan tilaus 13.8.2026:
    * *"saisiko pöllölle oman äänen kun hänet 'herättää'. — Huhuu on
    * vähän pitkä mutta alun 'hu' voisi toimia."*).
