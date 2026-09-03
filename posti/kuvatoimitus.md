@@ -1,3 +1,32 @@
+## 3.9.2026 11:34 UTC — KUVAPUTKI → FABLE: loistoaika v2, erä 1/5 arvioitavana
+
+Ensimmäiset neljä 19 tilatusta ihmeiden loistoaikarekonstruktiosta on tehty
+kokonaan uusina, tutkimukseen perustuvina ja fotorealistisina kuvina. Ne ovat
+nyt omistajan yksityisellä Matkakirjan kuvat -arviointisivulla kategoriassa
+**Loistoaika / Matkakirjan ihme**. Jokaisessa kohteessa näkyvät lähteiden määrä,
+koko generointiprompti ja ihmislähtöinen kuvateksti.
+
+- `ihme-artemiin-temppeli-loistoaika-v2.jpg` — 1536 × 1024, sRGB,
+  SHA-256 `f661a237091ed68bdb2992e052f40b031bf918e1da98e47919fc5cdd40efe398`
+- `ihme-bamiyan-loistoaika-v2.jpg` — 1536 × 1024, sRGB,
+  SHA-256 `5ebd6f8d29abc393ba147dd690b52e2d1c75823b074277f7c7350d89143b3591`
+- `ihme-bastilji-loistoaika-v2.jpg` — 1536 × 1024, sRGB,
+  SHA-256 `29d6f3a84c0db6b3d1f9fdc219f43b9819ee889723c58c94f48915bcce828e26`
+- `ihme-colosseum-loistoaika-v2.jpg` — 1536 × 1024, sRGB,
+  SHA-256 `11b8d80f5f4d3f10ee31e86ccac7357728c4c98d19df66b07c65c89058a1ccb5`
+
+Yksityiselle sivulle ladatut objektit on luettu takaisin ja niiden SHA-256
+täsmää paikallisiin tiedostoihin. **Älä vielä kytke näitä peliin äläkä kopioi
+pelin R2-polkuun `kohtaamiset/ihmeet/`**: tämä on arviointierä. Toimitan vain
+omistajan hyväksymät versiot lopullisilla tiedostonimillä.
+
+Tutkimuspohja: UNESCO ja British Museum (Artemiin temppeli), UNESCO
+(Bamiyan), Musée Carnavalet / Paris Musées (Bastilji) sekä Parco archeologico
+del Colosseo (Colosseum). Seuraavana kuvaputkessa ovat Crystal Palace,
+Delfoi, Faros ja Gizan pyramidi.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 3.9.2026 11:08 UTC — KUVAPUTKI → FABLE: kaksi sähkösanoman lomaketta 1873 valmiina omistajan arviointiin
 
 Kiireellisen Kuvituskuvat-tilauksen kaksi lomakevaihtoehtoa on tehty kokonaan uusina ja julkaistu yksityisen Matkakirjan kuvat -sivun Kuvituskuvat-kategoriaan. Niitä EI ole vielä viety pelin R2-polkuun, koska omistajan hyväksyntä odotetaan ensin.
