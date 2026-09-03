@@ -912,7 +912,10 @@ function piirraNostonSisus(ui, sisalto, nosto) {
      * mitassa (css/fokusnosto.css osio 9). Datassa `taitto: 'lehti'`,
      * `ingressi` ja `paivays`; ilman lippua kortti on ennallaan.
      */
-    sisalto.appendChild(html('p', 'looppi-nimio', 'Matkakirjan lööppi'));
+    // Nimiö "Lisälehti" (omistaja 3.9.2026 kortilla): 1800-luvulla
+    // skandaaliuutinen tuli lisälehtenä varsinaisen numeron väliin;
+    // "lööppi" on 1900-luvun sana ja nimeäisi formaatin, ei lehteä.
+    sisalto.appendChild(html('p', 'looppi-nimio', 'Lisälehti'));
     const paivays = nosto.paivays ?? [nosto.paikka?.nimi, nosto.vuosi].filter(Boolean).join(' · ');
     if (paivays) sisalto.appendChild(html('p', 'looppi-paivays', paivays));
     sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko looppi-otsikko', nosto.otsikko));
