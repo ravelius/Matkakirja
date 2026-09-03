@@ -662,11 +662,36 @@ test('muotokuvia on 28 eri tiedostoa — yhtä monta kuin ämpäriin vietiin', (
 
 test('aito Commons-kuva säilyy datassa Tiedeliitettä varten', () => {
   const aidot = KEKSINNOT.filter((t) => t.kuvaAito);
-  assert.equal(aidot.length, 22, 'aitoja Commons-kuvia oli 22 (Otto, Siemens ja Benz ilman)');
+  assert.equal(aidot.length, 25, 'jokaisella keksijäpysäkillä on aito Commons-kuva');
   for (const t of aidot) {
     assert.ok(t.kuvaAito.tiedosto && t.kuvaAito.selite, `${t.otsikko}: aidon kuvan tiedot`);
   }
   assert.match(LINSSI.lahde.lisenssi, /PD \(kuvat\)/, 'kuvien lisenssirivi ei saa kadota');
+});
+
+/*
+ * TIEDELIITTEEN HENKILÖNOSTO (omistajan tilaus 3.9.2026: "laita agentit
+ * monistamaan Wattin noston tyyli muihin samanlaisiin"). Wattin pysäkki
+ * oli pilotti; nyt jokaisella keksijäpysäkillä pitää olla sama kolmikko:
+ * kaksikappaleinen henkilojuttu, luonnetta kuvaava muotokuvateksti ja
+ * aito Commons-kuva. Ilman testiä yksi pysäkki jäisi hiljaa vajaaksi.
+ */
+test('jokaisella keksijäpysäkillä on henkilojuttu, luonnekuva ja aito kuva', () => {
+  const keksijat = KEKSINNOT.filter((t) => !t.paalu);
+  assert.equal(keksijat.length, 25);
+  for (const t of keksijat) {
+    assert.ok(t.henkilojuttu, `${t.otsikko}: henkilojuttu puuttuu`);
+    const kappaleet = t.henkilojuttu.split('\n\n');
+    assert.equal(kappaleet.length, 2, `${t.otsikko}: henkilojuttu on kaksi kappaletta`);
+    for (const k of kappaleet) {
+      assert.ok(k.trim().length > 0, `${t.otsikko}: tyhjä kappale`);
+    }
+    const sanoja = t.henkilojuttu.split(/\s+/).filter(Boolean).length;
+    assert.ok(sanoja >= 90, `${t.otsikko}: henkilojuttu vain ${sanoja} sanaa`);
+    // Sidos vuoteen 1873 on nostojen koko idea — se ei saa unohtua.
+    assert.match(t.henkilojuttu, /1873/, `${t.otsikko}: henkilojutusta puuttuu sidos vuoteen 1873`);
+    assert.ok(t.kuvaAito?.tiedosto, `${t.otsikko}: aito Commons-kuva puuttuu`);
+  }
 });
 
 test('moottori piirtää kortin ja henkilörivin generoidusta muotokuvasta', () => {
