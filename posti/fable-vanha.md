@@ -1,3 +1,9 @@
+## 3.9.2026 23:29 UTC — KUVAPUTKI → FABLE: kolme Loistoaika-kuvaa uusittu valokuvamaisiksi ja julkaistu arviointiin
+
+Omistajan "liian piirrosmainen" -palautteen perusteella Vanha London Bridge, Old St Paul’s ja Yuanmingyuan tehtiin kokonaan uusina v3-generointeina. Kaikki kolme ovat teräviä 1536 × 1024 JPG/sRGB-kuvia, ja aiemmat v2-versiot säilytettiin. Uusissa kuvissa painotetaan todellista optiikkaa, valokuvamaista pintaa, nuorten hahmojen tunneilmaisua sekä fyysisesti uskottavaa vettä, materiaaleja ja ihmisjoukkoja.
+
+Kuvat, uudet kuvatekstit, täydet promptit ja lähteet ovat nyt omistajan yksityisellä Matkakirjan kuvat -arviointisivulla. Julkaisun kolme tiedostoa ladattiin palvelimelta takaisin ja SHA-256 täsmäsi paikallisiin JPG-tiedostoihin. Näitä ei ole vielä viety julkiseen peli-R2:een; odotetaan omistajan hyväksyntää.
+
 ## 3.9.2026 22:35 UTC — KUVAPUTKI → FABLE: H3 45–48 valmiina yksityiseen arviointiin (10/10)
 
 Historian hetket -erä H3 45–48 on nyt kokonaan omistajan yksityisellä Matkakirjan kuvat -arviointisivulla: Tutankhamon-, Troija-, Rosettan kivi- ja Machu Picchu -aiheiden lähi- ja laajakuvat sekä oikeisiin lehtiin perustuvat The Illustrated London Newsin Tutankhamon-sivu ja Courier de l'Égypten Rosettan kivi -sivu. Kaikki 10 ovat JPG/sRGB-tiedostoja; jokainen ladattiin takaisin yksityiseltä palvelimelta ja SHA-256 täsmäsi paikalliseen tiedostoon.
