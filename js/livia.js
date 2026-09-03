@@ -63,18 +63,6 @@ export const LIVIAN_AVAUS = [
 ];
 
 /**
- * LIVIAN KASVOKUVA AVAUSNÄKYMÄÄN (omistaja 29.8.2026: kuva generoidaan
- * myöhemmin erikseen; muualla Livia pysyy pienenä pöllökuvakkeena).
- *
- * Kuplassa on valmis kuvapaikka, joka näyttää nykyisen viivakuvakkeen
- * niin kauan kuin tämä on tyhjä. Kun kuva on olemassa, tähän
- * kirjoitetaan sen polku (esim. 'assets/tietaja/livia-avaus.jpg') —
- * muuta ei tarvita, koska paikka on saman kokoinen kummallakin
- * sisällöllä (js/pollo.js avauksenKuvapaikka).
- */
-export const LIVIAN_KASVOKUVA = '';
-
-/**
  * Lippu laitteen muistissa: avausesittely on nähty.
  *
  * NOLLAUS KONSOLISTA testausta varten:
@@ -160,7 +148,6 @@ function naytaRepliikki(ui, i) {
     return;
   }
   const nakyi = polloAvauskupla(teksti, {
-    kuva: LIVIAN_KASVOKUVA,
     // Lennähdys kuuluu sarjan avaukseen: Livia saapuu kerran.
     lennahda: i === 0,
     kuittaus: () => seuraavaRepliikki(ui, i + 1),

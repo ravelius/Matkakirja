@@ -18746,7 +18746,18 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
   flex-direction: column;
   align-items: flex-end;
   gap: 0.5rem;
-  max-height: min(44vh, 24rem);
+  /*
+   * KORKEUS RIITTÄÄ USEALLE KUPLALLE (omistajan tilaus 3.9.2026:
+   * *"puhekuplat näkyvät vain yksi kerrallaan … puhekuplien korkeutta
+   * pitää kasvattaa, jotta useampi kupla mahtuu kerralla näkyviin"*).
+   *
+   * Mitoitus: tavallinen puhekupla on 2–3 riviä eli noin 5 rem korkea,
+   * ja väli on 0.5 rem. 34 rem kantaa siis 5–6 kuplaa kerralla, ja
+   * 900 px:n työpöytäruudulla 60vh (540 px) on sama mitta — pino
+   * kasvaa napista ylöspäin ja jättää ruudun yläkolmanneksen vapaaksi.
+   * Ylivuoto ei katoa: häivytys ja vieritys hoitavat pidemmät sarjat.
+   */
+  max-height: min(60vh, 34rem);
   overflow-y: auto;
   overscroll-behavior: contain;
   /* Kärki ja varjo mahtuvat: leikkaava overflow söisi ne muuten. */
@@ -18757,9 +18768,13 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
 
 .pollo-kuplapino::-webkit-scrollbar { display: none; }
 
-/* Puhelin: pino ei saa syödä puolta kartasta. */
+/*
+ * Puhelin: pino saa nousta korkeammalle kuin ennen (3.9.2026), mutta
+ * ei yli puolen kartasta — 52vh jättää kartalle enemmistön ja kantaa
+ * silti kolme tavallista kuplaa.
+ */
 @media (max-width: 599px) {
-  .pollo-kuplapino { max-height: min(40vh, 19rem); }
+  .pollo-kuplapino { max-height: min(52vh, 24rem); }
 }
 
 /*
@@ -18924,35 +18939,25 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
  * ISOISÄN MAADOITUS KEVYEN KULUN SAAPUMISKUPLASSA (omistajan päätös
  * 27.8.2026; js/pollo.js naytaMaadoitus).
  *
- * Sama pergamentti, kärki ja paikannus kuin muilla kuplilla — vain
- * kaksi eroa. (1) Kupla on hitusen LEVEÄMPI: maadoitus on kokonainen
+ * Sama pergamentti, kärki ja paikannus kuin muilla kuplilla — yksi
+ * ero: kupla on hitusen LEVEÄMPI, koska maadoitus on kokonainen
  * puheenvuoro eikä yhden rivin ohje, ja 17 rem:n kaistalla se venyi
- * kymmenen rivin torniksi. (2) Ylärivinä on puhujan nimilappu, koska
- * tämä on ainoa kupla, jossa Livia sanoo jotain omissa nimissään.
+ * kymmenen rivin torniksi.
+ *
+ * PELKKÄ PUHE (omistajan tilaus 3.9.2026: *"pelkät puhekuplat"*).
+ * Ylärivinä oli puhujan yliviivattu nimilappu; se toistui pinossa
+ * kuplasta toiseen eikä kertonut enää mitään uutta, joten se ja sen
+ * tyylit (.pollo-vihje-nimilappu) poistuivat. Nimi näkyy yhä
+ * chatissa. Kaista pysyy samana: teksti sai päinvastoin lisää tilaa,
+ * kun avauskuplan kuvasarake katosi (js/pollo.js naytaAvauskupla).
  */
 .pollo-vihje-maadoitus {
   max-width: min(21rem, calc(100vw - 1.6rem));
   padding: 0.55rem 0.75rem 0.6rem;
 }
 
-/*
- * Nimilappu erottuu puheesta samalla keinolla kuin lehtien
- * osastorivit: pieni harvennettu versaali ja ohut viiva alle. Punainen
- * korjausveto tulee polloNimilapun omista tyyleistä
- * (.pollo-yliviivattu), joten tässä säädetään vain rivin asu.
- */
-.pollo-vihje-nimilappu {
-  margin: 0 0 0.35rem;
-  padding-bottom: 0.28rem;
-  border-bottom: 1px solid rgba(122, 85, 20, 0.28);
-  font-size: 0.74rem;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: #6b5a45;
-}
-
-/* Kappaleväli vain kappaleiden VÄLIIN: ensimmäinen tulee nimilapun
-   alle, jolle väli on jo annettu ylhäältä. */
+/* Kappaleväli vain kappaleiden VÄLIIN: ensimmäisen yläpuolella on jo
+   kuplan oma pehmuste. */
 .pollo-vihje-maadoitus .pollo-vihje-lause + .pollo-vihje-lause {
   margin-top: 0.45rem;
 }
@@ -18961,46 +18966,15 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
  * LIVIAN AVAUSKUPLA ALOITUSVALINNASSA (omistajan tilaus 29.8.2026;
  * js/livia.js, js/pollo.js naytaAvauskupla).
  *
- * Sama pergamentti ja kärki kuin saapumiskuplalla — kaksi lisäystä:
- * puheen viereen VALMIS KUVAPAIKKA (Livialle generoidaan myöhemmin oma
- * kasvokuva; siihen asti paikassa on sama viivapöllö kuin napissa,
- * eikä kuvan vaihtuminen liikuta asettelua) ja hitusen leveämpi kaista,
- * koska kuva vie oman sarakkeensa.
+ * EI ENÄÄ OMAA ASUA (omistajan tilaus 3.9.2026: *"tässä ei tarvita
+ * ollenkaan tuota kuvaketta … Eli pelkät puhekuplat"*). Kuplassa oli
+ * puheen vieressä pyöreä kuvapaikka odottamassa Livian kasvokuvaa, ja
+ * sitä varten oma flex-asettelu ja leveämpi kaista
+ * (.pollo-vihje-avaus, .pollo-vihje-puhe, .pollo-vihje-kuvapaikka,
+ * .pollo-vihje-kasvot). Kuvake luki ruudulla tunnistamattomana
+ * tahrana, joten sarake ja sen tyylit poistuivat; avauskupla on nyt
+ * tavallinen .pollo-vihje-maadoitus. Vain lennähdys jäi.
  */
-.pollo-vihje-avaus {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  max-width: min(23rem, calc(100vw - 1.6rem));
-}
-
-/* Puheen sarake: min-width 0 pitää pitkät sanat sarakkeen sisällä. */
-.pollo-vihje-puhe { min-width: 0; }
-
-.pollo-vihje-kuvapaikka {
-  flex: 0 0 auto;
-  width: 3.1rem;
-  height: 3.1rem;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  border: 1px solid rgba(122, 85, 20, 0.42);
-  border-radius: 50%;
-  background: rgba(250, 243, 226, 0.92);
-  color: #46331f;
-}
-
-.pollo-vihje-kasvot {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.pollo-vihje-kuvapaikka .pollo-vihje-kuvake svg {
-  width: 2rem;
-  height: 2rem;
-}
 
 /*
  * LIVIA LENNÄHTÄÄ PAIKALLE: kevyt saapumisliike sarjan ensimmäiselle
