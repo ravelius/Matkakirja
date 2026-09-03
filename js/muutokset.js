@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1499, teksti: 'Aarteen paljastus koko ruudun pergamentille' },
   { v: 1498, teksti: 'Kohahdus vain keksinnon kohdalla, kertojatila lyhyt pois' },
   { v: 1497, teksti: 'Sahketehtava lehtimaiseksi, pulla vinkiksi' },
   { v: 1496, teksti: 'Avauslennon ohitus toimii heti, etusivusavuke vihrea' },

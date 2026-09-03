@@ -7740,12 +7740,18 @@ body.flight-active .fact-card {
 
 /* --- vaaleat paljastusmallit (leiskapäätökset 28.8.2026) ------------
  *
- * Yhteinen tausta molemmille: pelin näkymä kuultaa purppuraan
- * taitettuna tummennoksen läpi (leiskan brightness/hue-rotate siirtyi
+ * Diplomin tausta: pelin näkymä kuultaa purppuraan taitettuna
+ * tummennoksen läpi (leiskan brightness/hue-rotate siirtyi
  * backdrop-filteriin — overlayn takana on aito pelinäkymä, ei
  * kuvakaappaus). Säteittäinen liukuväri painaa laidat pimeään.
+ *
+ * PAIKALLISAARRE SAI OMAN TAUSTAN 3.9.2026 (omistaja Hymettoksen
+ * hunajan kortista: *"tämä kaipaa vielä säätöä. taustan voisi
+ * levittää koko ruudun alueella ja poistaa vinjetit"*): koko ruutu on
+ * tasaista pergamenttia, ei purppuraa laitaa eikä valokeilaa, ja
+ * kuva sulautuu siihen ilman maskia (ks. .reveal-pergamentti ja
+ * .reveal-overlay.paikallis .reveal-aarrekuva).
  */
-.reveal-overlay.paikallis,
 .reveal-overlay.diplomi {
   background: radial-gradient(
     ellipse 85% 70% at 50% 42%,
@@ -7758,20 +7764,29 @@ body.flight-active .fact-card {
 }
 
 /*
- * VINJETOINTIMALLI (paikallisaarteet): EI paperiarkkia eikä kehystä —
- * kuvan oma pergamenttitausta jatkuu valokeilaksi, jonka reunat
- * sulavat overlayn pimeään. Koko keila nousee esiin yhtenä kappaleena.
+ * PAIKALLISAARTEEN PERGAMENTTI KOKO RUUDULLE (omistaja 3.9.2026, ks.
+ * yllä): overlay itse on pergamenttia laidasta laitaan — sama sävy
+ * kuin aarrekuvien oma pohja, aavistuksen tummempana, jotta kuvan
+ * pohja katoaa darken-sulautuksessa (alla). Ei backdrop-suodatinta:
+ * pohja on peittävä, eikä sumennettu pelinäkymä näy sen läpi.
+ */
+.reveal-overlay.paikallis {
+  background-color: #e6d8ae;
+  background-image: var(--paper-noise);
+  background-blend-mode: multiply;
+}
+
+/*
+ * Paikallisaarteen sisältö: EI paperiarkkia, EI kehystä, EI
+ * valokeilaa (aiempi säteittäinen liukuväri poistettiin 3.9.2026:
+ * "poistaa vinjetit") — pelkkä keskitetty ladonta pergamentin päällä.
+ * Kokonaisuus nousee esiin yhtenä kappaleena kuten ennenkin.
  */
 .reveal-pergamentti {
   padding: clamp(2rem, 6vmin, 4rem) clamp(2.4rem, 9vmin, 5.6rem)
     clamp(1.6rem, 5vmin, 3.5rem);
   text-align: center;
-  background: radial-gradient(
-    ellipse 78% 74% at 50% 42%,
-    #ecdfb8 0%, #e7d9ae 42%, #d0bc8e 60%,
-    rgba(120, 98, 80, 0.5) 78%,
-    rgba(23, 16, 32, 0) 97%
-  );
+  background: none;
   opacity: 0;
   transform: scale(0.92);
   transition: opacity 0.9s ease-out, transform 0.9s ease-out;
@@ -7779,13 +7794,46 @@ body.flight-active .fact-card {
 
 .reveal-pergamentti.shown { opacity: 1; transform: none; }
 
-/* Kuvan omat reunat sulavat pergamenttiin: multiply-mood ja leveämpi
- * maski korvaavat tumman mallin mustaan häivytyksen. */
+/* Kuva sulautuu pergamenttiin ILMAN VINJETTIÄ (omistaja 3.9.2026:
+ * "poistaa vinjetit"): darken ottaa kanavittain tummemman, joten kuvan
+ * oma vaalea pohja — vaaleampi kuin overlayn pergamentti — katoaa ja
+ * vain esine jää (multiply olisi tummentanut kuvan pohjan neliöksi).
+ * Osalla kuvista pohja on kuitenkin TEKSTUROITUA pergamenttia (esim.
+ * FIN tervatynnyri), joka on paikoin overlayta tummempaa ja piirtäisi
+ * neliön reunan. Siksi kuvan reunat höyhennetään kapealla SUORAKAIDE-
+ * maskilla: vain uloin 9 % häipyy, keskusta on koskematon — se ei ole
+ * valokeila eikä halo vaan pelkkä sauman pehmennys. */
 .reveal-overlay.paikallis .reveal-aarrekuva {
-  mix-blend-mode: multiply;
-  width: min(76vw, 22rem, 44vh);
-  -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 45%, rgba(0, 0, 0, 0.55) 68%, transparent 92%);
-  mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 45%, rgba(0, 0, 0, 0.55) 68%, transparent 92%);
+  mix-blend-mode: darken;
+  width: min(78vw, 24rem, 46vh);
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, #000 9%, #000 91%, transparent),
+    linear-gradient(to bottom, transparent, #000 9%, #000 91%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent, #000 9%, #000 91%, transparent),
+    linear-gradient(to bottom, transparent, #000 9%, #000 91%, transparent);
+  mask-composite: intersect;
+}
+
+/* JATKA MATKAA vaaleilla malleilla: mustan mallin kultakajo on
+ * pergamentilla lähes näkymätön (vaalea teksti vaalealla), joten nappi
+ * on tässä tumma musteella ja kultaisella tekstillä — sama nappi kuin
+ * omistajan hyväksymässä kortissa, nyt luettavana koko ruudun
+ * pergamentilla (3.9.2026). */
+.reveal-overlay.paikallis button.reveal-jatka,
+.reveal-overlay.diplomi.kirkas button.reveal-jatka {
+  background: #3b2a12;
+  border-color: rgba(228, 196, 128, 0.7);
+  color: #f4e3b6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 10px rgba(40, 26, 8, 0.28);
+}
+.reveal-overlay.paikallis button.reveal-jatka:hover:not(:disabled),
+.reveal-overlay.paikallis button.reveal-jatka:focus-visible,
+.reveal-overlay.diplomi.kirkas button.reveal-jatka:hover:not(:disabled),
+.reveal-overlay.diplomi.kirkas button.reveal-jatka:focus-visible {
+  background: #4a3617;
 }
 
 /* Tekstit musteella pergamenttia vasten — vaaleat overlay-värit
