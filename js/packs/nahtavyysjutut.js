@@ -6028,6 +6028,25 @@ export const NAHTAVYYSJUTUT = {
     },
   },
   lissabon: {
+    // Historian hetken kohdekartan piste (omistaja 3.9.2026): juttu on
+    // sanatarkasti hetken oma teksti (js/packs/historian-hetket.js).
+    'Kolumbus 1484': {
+      nosto: 'hetki-kolumbus-portugali-1484',
+      teksti: 'Pöydällä on kartta, jota Kolumbus on kantanut ovelta ovelle jo '
+        + 'vuosia. Siihen on merkitty lyhyt meri ja sen takana Aasia. Hän '
+        + 'katsoo, kuinka kuninkaan asiantuntijat kumartuvat kartan ylle ja '
+        + 'pudistavat päätään — taas kerran. Loukkaus on tuttu eikä siksi '
+        + 'yhtään helpompi. Epäilijät osuvat siihen, mikä on olennaista: '
+        + 'Kolumbus on laskenut maapallon liian pieneksi ja Aasian aivan '
+        + 'liian lähelle, ja purjehdus, jonka hän lupaa, olisi '
+        + 'todellisuudessa moninkertainen. Juhana II:n hovi ei silti hylkää '
+        + 'suunnitelmaa vain laskuvirheen takia. Portugalin laivat etenevät '
+        + 'jo Afrikan rannikkoa etelään, ja se tie Intiaan näyttää varmalta — '
+        + 'miksi maksaa arvauksesta? Lissabonista lähtee mies, jolla ei ole '
+        + 'laivaa eikä rahoittajaa. Seuraavat kahdeksan vuotta hän vie saman '
+        + 'kartan Kastilian hoviin, sitten uudelleen ja uudelleen, kunnes '
+        + 'joku vihdoin sanoo kyllä.',
+    },
     'Glórian köysirata': {
       aika: '1885',
       teksti: 'Osa Lissabonin kaduista nousee niin jyrkkinä mäkinä, että '
@@ -11972,6 +11991,27 @@ export const NAHTAVYYSJUTUT = {
     },
   },
   oslo: {
+    // Historian hetken kohdekartan piste (omistaja 3.9.2026): juttu on
+    // sanatarkasti hetken oma teksti (js/packs/historian-hetket.js).
+    'Fram 1893': {
+      nosto: 'hetki-nansen-fram-1893',
+      teksti: 'Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. '
+        + '31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman '
+        + 'kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. '
+        + 'Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan '
+        + 'kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin '
+        + 'rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer '
+        + 'suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan '
+        + 'ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea '
+        + 'puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen '
+        + 'senttiä, keulassa runsaan metrin — ja päällystetty '
+        + 'greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma '
+        + 'on se, jota moni tutkija on julkisesti kutsunut itsemurhaksi: ajaa '
+        + 'laiva tahallaan kiinni Siperian pohjoispuoliseen ahtojäähän ja '
+        + 'antaa virran kuljettaa se kohti pohjoisnapaa. Rannalla vilkuttavat '
+        + 'odottavat uutisia lähes kolme vuotta. Fram palaa tähän satamaan 9. '
+        + 'syyskuuta 1896, eikä yhtään miestä ole menetetty.',
+    },
     Kuninkaanlinna: {
       aika: '1825–1849',
       teksti: 'Oslon kuninkaanlinna on Norjan kuninkaan koti, ja se '
