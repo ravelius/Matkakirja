@@ -543,3 +543,100 @@ test('muotokuvalla on karusellikoko ja valmiiksi sumennettu versio, ilmiökuvall
   assert.doesNotMatch(CSS, /\.aikajana-kortti\.tuleva \{[^}]*filter:/);
   assert.match(MOOTTORI, /img\[data-terava\]/);
 });
+
+/* ==================== SIIRTYMÄT: KARUSELLI JA PANEELI (3.9.2026) ====================
+ *
+ * Omistajan tilaus sanatarkasti: *"alareunan kuvat pitäisi siirtyä
+ * animoidusti niin että uusi kuva kasvaa suureksi samalla kun vanha
+ * pienenee ja siirtyy eteenpäin … myös havainnekuvaan tarvitaan joko
+ * ristihäivytys tai jokin muu animoitu siirtymä."*
+ *
+ * Siirtymät ovat CSS:ssä ja rikkoutuvat hiljaa: kaari, joka tekee koko
+ * matkan ensimmäisissä kehyksissä, näyttää hyppäykseltä vaikka siirtymä
+ * teknisesti on olemassa — juuri niin kävi aiemmalle kaarelle
+ * (0.22, 0.8, 0.28, 1), joka selaimessa mitattuna vei 35 % matkasta
+ * ensimmäisen 10 %:n aikana. Nämä vartiot lukitsevat sen, mitä
+ * mittauksen jälkeen jäi: pehmeä kaari, transform-pohjainen liike,
+ * kuvanvaihto dekoodauksen kautta ja paneelin korkeusliuku.
+ */
+
+const AIKAJANA_CSS = readFileSync(new URL('../css/aikajana.css', import.meta.url), 'utf8');
+
+/** cubic-bezier(x1,y1,x2,y2): edistymä (0..1) ajan osuudella t. */
+function kaarenArvo(x1, y1, x2, y2, t) {
+  let lo = 0;
+  let hi = 1;
+  let u = t;
+  for (let k = 0; k < 40; k += 1) {
+    u = (lo + hi) / 2;
+    const x = 3 * (1 - u) ** 2 * u * x1 + 3 * (1 - u) * u * u * x2 + u ** 3;
+    if (x < t) lo = u; else hi = u;
+  }
+  return 3 * (1 - u) ** 2 * u * y1 + 3 * (1 - u) * u * u * y2 + u ** 3;
+}
+
+test('linssin kaaressa on nopeutus ja hidastus, ei pelkkää jarrutusta', () => {
+  const kesto = AIKAJANA_CSS.match(/--aikajana-kesto:\s*([\d.]+)s/);
+  assert.ok(kesto, '--aikajana-kesto puuttuu');
+  const ms = Number(kesto[1]) * 1000;
+  assert.ok(ms >= 500 && ms <= 700, `siirtymän kesto ${ms} ms (tilaus n. 600 ms)`);
+  const kaari = AIKAJANA_CSS.match(/--aikajana-kaari:\s*cubic-bezier\(([\d.]+),\s*([\d.]+),\s*([\d.]+),\s*([\d.]+)\)/);
+  assert.ok(kaari, '--aikajana-kaari puuttuu tai ei ole cubic-bezier');
+  const [x1, y1, x2, y2] = kaari.slice(1).map(Number);
+  const kymmenesosa = kaarenArvo(x1, y1, x2, y2, 0.1);
+  assert.ok(kymmenesosa <= 0.1,
+    `kaari lähtee hyppäyksellä: ${(kymmenesosa * 100).toFixed(0)} % matkasta 10 %:ssa kestoa`);
+  assert.ok(kaarenArvo(x1, y1, x2, y2, 0.5) >= 0.5, 'kaari ei ehdi puoliväliin ajoissa');
+  assert.ok(kaarenArvo(x1, y1, x2, y2, 0.9) >= 0.95, 'kaari ei hidastu loppua kohti');
+  // prefers-reduced-motion nollaa liikkeen samalla muuttujalla.
+  assert.match(AIKAJANA_CSS, /prefers-reduced-motion[\s\S]{0,200}--aikajana-kesto: 0\.01s/);
+});
+
+test('kortti liukuu ja skaalautuu yhdellä transform-siirtymällä, ei left/width-siirtymällä', () => {
+  const kortti = AIKAJANA_CSS.match(/\.aikajana-kortti \{[\s\S]*?\n\}/)[0];
+  // Yksi GPU-matriisi: siirto ja suurennus samassa transformissa.
+  assert.match(kortti, /transform:\s*translate3d\(calc\(var\(--paikka\) \* var\(--aikajana-kortti-w\) - 50%\), 0, 0\)\s*scale\(var\(--mitta\)\);/);
+  assert.match(kortti, /transition:\s*transform var\(--aikajana-kesto\) var\(--aikajana-kaari\),\s*opacity var\(--aikajana-kesto\) var\(--aikajana-kaari\);/);
+  assert.doesNotMatch(kortti, /transition:[^;]*\b(left|width|top|height)\b/, 'sommittelua ei animoida kehyksittäin');
+  assert.match(kortti, /will-change: transform, opacity;/);
+  // Kortin teksti seuraa kortin kokoa liukuen eikä napsahda luokan vaihtuessa.
+  assert.match(AIKAJANA_CSS, /\.aikajana-kortti-otsikko \{ transition: font-size var\(--aikajana-kesto\) var\(--aikajana-kaari\); \}/);
+});
+
+test('kortin terävä/sumea vaihtuu vasta dekoodatusta kuvasta, ei tyhjän kehyksen kautta', () => {
+  // Suoraa src-sijoitusta ei enää tehdä asettelussa: se välähti tyhjänä.
+  assert.match(MOOTTORI, /vaihdaKorttikuva\(img, luokka === 'tuleva' \? img\.dataset\.sumea : img\.dataset\.terava\)/);
+  assert.match(MOOTTORI, /function vaihdaKorttikuva[\s\S]{0,900}esilataus\.decode\(\)\.then\(pane, pane\)/);
+  // Kilpailun esto: vanhentunut lataus ei kirjoita korttiin.
+  assert.match(MOOTTORI, /function vaihdaKorttikuva[\s\S]{0,900}kuva\.dataset\.vaihtoon !== osoite\) return;/);
+});
+
+test('havainnekuvapaneelin ristihäivytyksessä on liikettä ja korkeus liukuu', () => {
+  // Sivu tulee esiin nousten ja kasvaen, väistyvä kohoaa ja suurenee ohi.
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu \{[\s\S]*?transform: translateY\(10px\) scale\(0\.985\);/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu\.poistuu \{ position: absolute; opacity: 0; transform: translateY\(-8px\) scale\(1\.03\); \}/);
+  // Ristihäivytys ajetaan linssin omalla kaarella, ei selaimen ease-oletuksella.
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu \{[\s\S]*?opacity var\(--aikajana-kesto\) var\(--aikajana-kaari\),\s*transform var\(--aikajana-kesto\) var\(--aikajana-kaari\);/);
+  // Korkeus liukuu, mutta raahaus ei saa liukua perässä.
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio \{ transition: height var\(--aikajana-kesto\) var\(--aikajana-kaari\); \}/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio\.raahataan \{ transition: none; \}/);
+});
+
+test('paneelinvaihto pakottaa lähtöarvon ja liuuttaa korkeuden vanhasta uuteen', () => {
+  // Ilman pakotettua sommittelua siirtymällä ei ole mistä lähteä.
+  assert.match(MOOTTORI, /void sivu\.offsetHeight;\s*\n\s*if \(vanhaKorkeus > 0\) this\.paneeli\.style\.height = `\$\{vanhaKorkeus\}px`;\s*\n\s*sivu\.classList\.add\('esilla'\);/);
+  // Reunus mukaan (border-box) ja mitta sommittelusta: skaalattu
+  // ruutulaatikko olisi liian matala ja lukon avaus nytkäyttäisi.
+  assert.match(MOOTTORI, /const reunat = this\.paneeli\.offsetHeight - this\.paneeli\.clientHeight;/);
+  assert.match(MOOTTORI, /const pohja = Number\.parseFloat\(getComputedStyle\(this\.paneeli\)\.minHeight\) \|\| 0;/);
+  assert.match(MOOTTORI, /this\.paneeli\.style\.height = `\$\{Math\.max\(sivu\.offsetHeight \+ reunat, pohja\)\}px`;/);
+  // Pohjan ehto katsoo ESILLÄ olevaa sivua: vaihdon aikana paneelissa
+  // on kaksi sivua, ja väistyvä kuvasivu antoi väärän pohjan.
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio:has\(> \.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child\) \{ min-height: 0; \}/);
+  // Lukko avataan häivytyksen jälkeen, ja vanhentunut ajastin ei avaa uudempaa.
+  assert.match(MOOTTORI, /this\.paneelinKorkeusMerkki === merkki\) this\.paneeli\.style\.height = '';/);
+  assert.match(MOOTTORI, /setTimeout\(\(\) => v\.remove\(\), PANEELIN_HAIVYTYS_MS\)/);
+  assert.match(MOOTTORI, /const PANEELIN_HAIVYTYS_MS = 700;/);
+  // Raahaus säilyy: siirto on yhä CSS-muuttujissa eikä korkeuslukko koske siihen.
+  assert.match(MOOTTORI, /asetaPaneelinSiirto\(raja\.dx, raja\.dy\)/);
+});

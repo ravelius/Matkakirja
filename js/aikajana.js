@@ -218,6 +218,12 @@ const TUMMENNUKSEN_ULOTTUVUUS = 1e6;
 const TUMMENNUKSEN_POISTUMA_MS = 700;
 /** Paneelin kuvan dekoodauksen enimmäisodotus ennen ristihäivytystä. */
 const PANEELIN_DEKOODAUSKATTO_MS = 250;
+/**
+ * Paneelin ristihäivytyksen kesto (css --aikajana-kesto 0,6 s) pienen
+ * marginaalin kera: väistyvä sivu poistetaan ja korkeuslukko avataan
+ * vasta tämän jälkeen, jottei kumpikaan katkaise liukua kesken.
+ */
+const PANEELIN_HAIVYTYS_MS = 700;
 /** Raahaus alkaa vasta tämän liikkeen jälkeen; sitä lyhyempi on napautus. */
 export const PANEELIN_RAAHAUSKYNNYS = 6;
 /** Paneelin siirto muistetaan istunnon ajan (kytkeRaahaus). */
@@ -440,6 +446,38 @@ function asetaAmpariKuva(kuva, osoite, leveys) {
     }, { once: true });
   }
   kuva.src = karuselli;
+}
+
+/**
+ * KORTIN KUVAN VAIHTO ILMAN NYKÄYSTÄ (omistaja 3.9.2026: *"alareunan
+ * kuvat pitäisi siirtyä animoidusti"*).
+ *
+ * MIKSI EI SUORAA `img.src = …`. Mitattuna se jätti kortin kuvaan
+ * yhden tyhjän kehyksen: heti vaihdon jälkeen `complete` oli epätosi
+ * ja `naturalWidth` nolla, eli kortti välähti tyhjänä juuri sillä
+ * hetkellä, kun se lähti liukumaan. Uusi bittikartta haetaan ja
+ * dekoodataan siksi DOM:in ulkopuolella, ja `src` vaihtuu vasta kun
+ * kuva on valmis piirrettäväksi — silloin vaihto tapahtuu yhdessä
+ * kehyksessä ilman välähdystä.
+ *
+ * `data-vaihtoon` on kilpailun esto: jos pysäkki ehtii vaihtua
+ * uudelleen ennen dekoodausta, vanhentunut lataus ei enää kirjoita
+ * korttiin. Epäonnistunut dekoodaus (puuttuva variantti) asettaa
+ * osoitteen silti, jotta asetaAmpariKuva-varareitti pääsee töihin.
+ */
+function vaihdaKorttikuva(kuva, osoite) {
+  if (!osoite || kuva.getAttribute('src') === osoite || kuva.dataset.vaihtoon === osoite) return;
+  kuva.dataset.vaihtoon = osoite;
+  const pane = () => {
+    if (kuva.dataset.vaihtoon !== osoite) return;
+    delete kuva.dataset.vaihtoon;
+    if (kuva.getAttribute('src') !== osoite) kuva.src = osoite;
+  };
+  const esilataus = new Image();
+  esilataus.decoding = 'async';
+  esilataus.src = osoite;
+  if (typeof esilataus.decode === 'function') void esilataus.decode().then(pane, pane);
+  else pane();
 }
 
 /** Kuva pergamentille; ilman lähdettä nimikirjainlaatta. */
@@ -1103,6 +1141,9 @@ class Aikajana {
     for (const valo of this.valot) this.asetaValonTila(valo, false, false);
     this.paneeli.hidden = true;
     this.paneeli.replaceChildren();
+    // Korkeuslukko pois: tyhjä paneeli ei saa jäädä vanhaan mittaansa.
+    this.paneelinKorkeusMerkki = (this.paneelinKorkeusMerkki ?? 0) + 1;
+    this.paneeli.style.height = '';
     this.juuri.classList.remove('lopussa');
     this.paikkarivi.textContent = `${this.kaari.alku}–${this.kaari.loppu}`;
     this.asettele();
@@ -1296,6 +1337,9 @@ class Aikajana {
       sivu.append(teksti);
     }
     const vanhat = [...this.paneeli.children];
+    // Vanha korkeus talteen ENNEN uuden sivun liittämistä: se on
+    // korkeusliu'un lähtöarvo (css .aikajana-ilmio transition: height).
+    const vanhaKorkeus = this.paneeli.hidden ? 0 : (this.paneeli.getBoundingClientRect?.().height ?? 0);
     this.paneeli.hidden = false;
     this.paneeli.appendChild(sivu);
     /*
@@ -1311,11 +1355,51 @@ class Aikajana {
       : Promise.resolve();
     void valmis.then(() => requestAnimationFrame(() => {
       if (!sivu.isConnected) return;
+      /*
+       * LÄHTÖARVO PAKOTETAAN LASKETUKSI ennen luokan vaihtoa. Ilman
+       * tätä lukua selain saa nähdä sivun ensi kerran vasta
+       * `esilla`-luokan kanssa, jolloin siirtymällä ei ole mistä
+       * lähteä ja kuva ilmestyy kerralla — juuri se kova leikkaus,
+       * jonka omistaja näki. Sama luku lukitsee paneelin korkeuden
+       * vanhaan mittaansa, jotta uusi voidaan liu'uttaa siitä.
+       */
+      void sivu.offsetHeight;
+      if (vanhaKorkeus > 0) this.paneeli.style.height = `${vanhaKorkeus}px`;
       sivu.classList.add('esilla');
       for (const v of vanhat) {
         v.classList.remove('esilla');
         v.classList.add('poistuu');
-        setTimeout(() => v.remove(), 700);
+        setTimeout(() => v.remove(), PANEELIN_HAIVYTYS_MS);
+      }
+      if (vanhaKorkeus > 0) {
+        /*
+         * `esilla` teki sivusta virran mukaisen, joten sen oma korkeus
+         * on paneelin uusi mitta. Luku pakottaa sommittelun vielä
+         * lukitulla korkeudella, ja vasta sen jälkeen asetettu uusi
+         * arvo lähtee liukumaan. Lukko avataan häivytyksen jälkeen,
+         * jottei kiinteä korkeus jää ikkunan koon muutoksen tielle;
+         * merkki varmistaa, ettei vanhentunut ajastin avaa uudempaa.
+         *
+         * REUNUS MUKAAN, JA MITTA SOMMITTELUSTA EIKÄ RUUDULTA.
+         * `style.height` on border-box (styles.css
+         * `* { box-sizing: border-box }`), kun taas sivun korkeus on
+         * paneelin sisältölaatikossa: ilman reunuslisää lukon avaus
+         * nytkäytti paneelia parin pikselin verran juuri kun liuku oli
+         * päättynyt. `offsetHeight` eikä `getBoundingClientRect`,
+         * koska sivulla on juuri tässä käynnissä oma skaalaus
+         * (0,985 → 1) ja ruudulta mitattu laatikko olisi sen verran
+         * liian matala.
+         */
+        const reunat = this.paneeli.offsetHeight - this.paneeli.clientHeight;
+        // Pohja mukaan: tekstisivulla min-height (9rem) on lopullinen
+        // korkeus, ja ilman tätä liuku päättyi sen alle ja lukon avaus
+        // ponnautti paneelin takaisin pohjalle.
+        const pohja = Number.parseFloat(getComputedStyle(this.paneeli).minHeight) || 0;
+        this.paneeli.style.height = `${Math.max(sivu.offsetHeight + reunat, pohja)}px`;
+        const merkki = (this.paneelinKorkeusMerkki = (this.paneelinKorkeusMerkki ?? 0) + 1);
+        setTimeout(() => {
+          if (this.paneelinKorkeusMerkki === merkki) this.paneeli.style.height = '';
+        }, PANEELIN_HAIVYTYS_MS);
       }
     }));
   }
@@ -1358,10 +1442,11 @@ class Aikajana {
       kortti.style.setProperty('--himmeys', himmeys.toFixed(2));
       kortti.style.setProperty('--sumennus', `${sumennus.toFixed(2)}px`);
       kortti.style.zIndex = String(jarjestys);
-      // Tuleva pysäkki näyttää valmiiksi sumennetun tiedoston, muut terävän.
+      // Tuleva pysäkki näyttää valmiiksi sumennetun tiedoston, muut
+      // terävän. Vaihto menee dekoodauksen kautta (vaihdaKorttikuva),
+      // jottei liukuvassa kortissa välähdä tyhjää kehystä.
       for (const img of kortti.querySelectorAll('img[data-terava]')) {
-        const haluttu = luokka === 'tuleva' ? img.dataset.sumea : img.dataset.terava;
-        if (haluttu && img.getAttribute('src') !== haluttu) img.src = haluttu;
+        vaihdaKorttikuva(img, luokka === 'tuleva' ? img.dataset.sumea : img.dataset.terava);
       }
       const piilossa = luokka === 'piilossa';
       kortti.setAttribute('aria-hidden', piilossa ? 'true' : 'false');
