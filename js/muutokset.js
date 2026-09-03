@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1480, teksti: 'Skandaalinosto lehtena: looppitaitto, pilotti Mykene' },
   { v: 1479, teksti: 'Hetket kaupungin kohdalla kohdekartalle, ei siirtoviivaa' },
   { v: 1478, teksti: '34 historiakuvaa, 5 uutta hetkea, karttanostot 5 maahan' },
   { v: 1477, teksti: 'Linssikatalogi: aluelinssien järjestys; Raamattu S6–S7' },
