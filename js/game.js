@@ -482,6 +482,17 @@ export class Game {
      */
     this.pullaVinkit = new Set();
     /*
+     * SÄHKETEHTÄVÄN PULLAT (omistaja 3.9.2026: *"tässäkin tehtävässä
+     * voisi olla mahdollisuus ostaa pulla pululle ja saada vinkki …
+     * lisäksi pelaaja voisi ostaa 25 punnalla puolikkaan pullan"*)
+     * kirjataan SAMAAN joukkoon omalla avainmuodollaan
+     * 'sahke:<tehtäväId>:vinkki' ja 'sahke:<tehtäväId>:linkki'. Sama
+     * joukko siksi, että kyse on samasta asiasta — Livialle ostetusta
+     * pullasta — ja tallennuskenttiä ei kannata monistaa; eri
+     * avainmuoto siksi, ettei sähkeen pulla voi koskaan sekoittua
+     * kaupungin aarrepullaan ('pakka:kaupunki').
+     */
+    /*
      * LUNASTETUT ELÄINTÄYT (js/elaintaky.js), avaimena MAATUNNUS ilman
      * pakan tunnusta: eläin on maan eläin eikä laudan, ja sama
      * saimaannorppa maailmankartalla ja Euroopan laudalla on sama
@@ -1215,19 +1226,41 @@ export class Game {
    * pelaajaa. Sama linja kuin visan 50:50:llä ja vihjeellä.
    */
   actionPullaVinkki(cityId, hinta = PULLA_HINTA) {
-    const avain = `${this.pack.id}:${cityId}`;
+    return this.actionPullaOstos(`${this.pack.id}:${cityId}`, hinta,
+      'sai vinkin aarteen paikasta');
+  }
+
+  /**
+   * SAMA KASSATAPAHTUMA MILLE TAHANSA LIVIALLE OSTETULLE PULLALLE.
+   *
+   * Avain on kutsujan: aarrevinkki käyttää muotoa 'pakka:kaupunki',
+   * sähketehtävä muotoa 'sahke:<tehtäväId>:vinkki|linkki'. Portti,
+   * kassa ja kirjanpito ovat silti YHDESSÄ paikassa — kaksi rinnakkaista
+   * kassafunktiota ajautuisi ennen pitkää eri säännöille.
+   *
+   * @param {string} avain kirjanpidon avain (ks. pullaVinkit)
+   * @param {number} hinta punnat
+   * @param {string} mita mitä pelaaja sai, lokiriville
+   */
+  actionPullaOstos(avain, hinta = PULLA_HINTA, mita = 'sai vinkin') {
+    if (!avain) return { ok: false, error: 'Avain puuttuu' };
     if (this.pullaVinkit.has(avain)) return { ok: false, error: 'Jo ostettu' };
     const p = this.player;
     if (p.money < hinta) return { ok: false, error: 'Rahat eivät riitä' };
     p.money -= hinta;
     this.pullaVinkit.add(avain);
-    this.say(p.id, `${p.name} osti Livialle pullan ${hinta} punnalla ja sai vinkin aarteen paikasta.`);
+    this.say(p.id, `${p.name} osti Livialle pullan ${hinta} punnalla ja ${mita}.`);
     return { ok: true, hinta };
   }
 
   /** Onko tämän kaupungin pullavinkki jo ostettu? */
   pullaVinkkiOstettu(cityId) {
     return this.pullaVinkit.has(`${this.pack.id}:${cityId}`);
+  }
+
+  /** Onko tällä avaimella ostettu pulla jo kirjattu? */
+  pullaOstettu(avain) {
+    return Boolean(avain) && this.pullaVinkit.has(avain);
   }
 
   /**

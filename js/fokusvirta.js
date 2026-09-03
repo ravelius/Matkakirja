@@ -86,7 +86,12 @@ import {
   fokusmoodiPaalla, html, jaaKappaleiksi, jaaPuheenvuoroksi, lehtivinkkiPiilotettu,
   nielaiseSulkevaNapautus, piilotaLehtivinkki, polloNimilappu,
 } from './ui-apurit.js';
-import { asetaTehtavakuittaus, fokusAarreAvattu, fokusAarreVastattu } from './fokustehtavat.js';
+import {
+  asetaTehtavakuittaus, fokusAarreAvattu, fokusAarreVastattu,
+  // Sähketehtävän oma pullakauppa käyttää samaa nimitaulua ja samaa
+  // kaksoisnapautuskaavaa kuin aarteen pullavinkki (ks. PULLA SÄHKEESSÄ).
+  pullaOstosnappi, pullanNimi,
+} from './fokustehtavat.js';
 import { asetaKuva, julisteUrl } from './media.js';
 import { el } from './mapart.js';
 import { valokuvaUrl, valokuvaVara, valokuvaSuurennos } from './packs/africa-valokuvat.js';
@@ -1819,6 +1824,120 @@ const SAHKE_LENTO_MS = 6500;
 /** Paluukuplan ja aarteen paljastuksen väli: kupla ehditään lukea. */
 const SAHKE_PALUU_MS = 3200;
 
+/* ============ SÄHKE KIRJOITTUU RUUDULLE ==========================
+ *
+ * Omistaja 3.9.2026 (Raamattu, SÄHKETEHTÄVÄ LEHTIMÄISEKSI JA PULLA
+ * VINKIKSI): *"tekstit saisi tulla siihen animoidusti. Rivi kerrallaan
+ * ja taustalla saisi kuulua kirjoituskoneen äänet ja lopussa aina se
+ * bling, kun rivi vaihtuu"*.
+ *
+ * KOLME LUKUA JA YKSI KATTO. Merkkiväli on kirjoituskoneen tahti,
+ * rivikatto estää pitkää riviä venymästä (pitkä rivi vain nopeutuu:
+ * merkkiväli lasketaan uudelleen, ei pätkitä tekstiä) ja rivien väli
+ * on se hengähdys, johon lennättimen kello osuu. Viiden rivin sähke
+ * kirjoittuu näillä alle kahdeksassa sekunnissa — mitattuna
+ * yksikkötestissä (tests/sahketehtava.test.mjs), koska se on lupaus
+ * pelaajalle eikä makuasia.
+ */
+export const SAHKE_MERKKI_MS = 28;
+export const SAHKE_RIVI_KATTO_MS = 1400;
+export const SAHKE_RIVIVALI_MS = 350;
+
+/*
+ * PALUUSÄHKEET KIRJOITTUVAT NOPEAMMIN. "TUNNUSSANA TÄSMÄÄ" on kuittaus
+ * eikä tehtävä: pelaaja on jo vastannut ja odottaa, että peli etenee.
+ * Sama animaatio hitaana olisi tässä kohtaa pelkkä hidaste.
+ */
+const SAHKE_PALUU_MERKKI_MS = 16;
+const SAHKE_PALUU_KATTO_MS = 700;
+const SAHKE_PALUU_RIVIVALI_MS = 220;
+
+/** Naputus soi enintään 20 kertaa sekunnissa (omistajan mitta). */
+const SAHKE_NAKSU_VALI_MS = 50;
+
+/**
+ * KIRJOITUKSEN AIKATAULU YHTENÄ PUHTAANA FUNKTIONA.
+ *
+ * Ajoitus on erotettu piirrosta, jotta sen voi mitata ilman selainta:
+ * testi laskee kokonaiskeston ja tarkistaa, ettei yksikään rivi ylitä
+ * kattoa. Funktio ei kosketa DOM:iin eikä ääniin.
+ *
+ * @param {string[]|string} rivit sähkeen rivit (tai koko teksti)
+ * @returns {{rivit: object[], valiMs: number, kesto: number}}
+ *   `rivit` on rivikohtainen aikataulu (teksti, merkit, merkkiväli,
+ *   kesto, alku millisekunteina sähkeen alusta) ja `kesto` koko
+ *   kirjoituksen pituus rivivälit mukaan lukien.
+ */
+export function sahkeKirjoitusAikataulu(rivit, {
+  merkkiMs = SAHKE_MERKKI_MS,
+  kattoMs = SAHKE_RIVI_KATTO_MS,
+  valiMs = SAHKE_RIVIVALI_MS,
+} = {}) {
+  const lista = (Array.isArray(rivit) ? rivit : String(rivit ?? '').split(/\s*\n\s*/))
+    .map((rivi) => String(rivi ?? '')).filter(Boolean);
+  let kello = 0;
+  const osat = lista.map((teksti, i) => {
+    const merkit = teksti.length;
+    // Pitkä rivi NOPEUTUU kattoon asti: rivi ei koskaan kestä yli
+    // kattoMs, eikä tekstistä jätetä mitään pois.
+    const merkkivali = merkit > 0 ? Math.min(merkkiMs, kattoMs / merkit) : merkkiMs;
+    const kesto = Math.round(merkkivali * merkit);
+    const osa = {
+      teksti, merkit, merkkivali, kesto, alku: Math.round(kello),
+    };
+    kello += kesto + (i < lista.length - 1 ? valiMs : 0);
+    return osa;
+  });
+  return { rivit: osat, valiMs, kesto: Math.round(kello) };
+}
+
+/**
+ * LOMAKEPOHJA ON KUVA, KUN SELLAINEN ON — MUUTEN CSS.
+ *
+ * Omistaja 3.9.2026: *"tähän voisi generoida pohjalle oikean
+ * sähkösanoman paperin"*. Pohja on kuvaputken generoima 1870-luvun
+ * lennätinlomake (pysty 3:4, alfakanava, EI painettua tekstiä — peli
+ * piirtää leiman, otsakkeen ja rivit sen päälle).
+ *
+ * KUVA EI OLE PAKOLLINEN. Peli on offline-PWA ja lomake on jo tehty
+ * CSS:llä (css/fokusvirta.css, PÖLLÖN SÄHKETEHTÄVÄ). Kuvaa siis vain
+ * KOKEILLAAN kerran istunnossa (new Image): jos se latautuu, sähke saa
+ * luokan `lomakekuva` ja CSS vaihtaa koristelun kuvaan; jos ei, mikään
+ * ei muutu eikä pelaaja huomaa mitään. Näin kuva voidaan lisätä
+ * ämpäriin milloin tahansa ilman koodimuutosta.
+ */
+export const SAHKE_LOMAKE_OSOITE =
+  'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvitus/sahke-lomake-1873-v1.png';
+
+/** null = kysymättä, true/false = tiedetään; kysytään kerran istunnossa. */
+let sahkeLomakekuva = null;
+let sahkeLomakekuvaHaku = null;
+
+function varmistaSahkeLomakekuva(laatikko) {
+  const merkitse = () => {
+    if (!laatikko?.isConnected) return;
+    laatikko.classList.add('lomakekuva');
+    // Osoite on JS:n vakio (yksi totuus), joten CSS saa sen muuttujana.
+    laatikko.style.setProperty('--sahke-lomakekuva', `url("${SAHKE_LOMAKE_OSOITE}")`);
+  };
+  if (sahkeLomakekuva === true) { merkitse(); return; }
+  if (sahkeLomakekuva === false || typeof Image === 'undefined') return;
+  if (!sahkeLomakekuvaHaku) {
+    sahkeLomakekuvaHaku = new Promise((valmis) => {
+      const kuva = new Image();
+      kuva.onload = () => { sahkeLomakekuva = true; valmis(true); };
+      kuva.onerror = () => { sahkeLomakekuva = false; valmis(false); };
+      kuva.src = SAHKE_LOMAKE_OSOITE;
+    });
+  }
+  void sahkeLomakekuvaHaku.then((ok) => { if (ok) merkitse(); });
+}
+
+/** Kunnioitetaanko liikettä vähentävää järjestelmäasetusta? */
+function liikeRajoitettu() {
+  return Boolean(globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
+}
+
 /** Palkkio ohilyöntien jälkeen — neljännes kerrallaan, lattia 0. */
 export function sahkePalkkio(ohi, pohja = SAHKE_PALKKIO) {
   return Math.max(0, Math.round(pohja * (1 - SAHKE_VAHENNYS * (ohi ?? 0))));
@@ -1836,6 +1955,27 @@ let kohdehakemisto = null;
 
 export function asetaKohdehakemisto(fn) {
   kohdehakemisto = typeof fn === 'function' ? fn : null;
+}
+
+/*
+ * KARTAN KOHDEKORTIN AVAUS — sama takaisinkutsutemppu, sama syy.
+ *
+ * Puolikas pulla ostaa Livialta SUORAN LINKIN vastauskohteeseen
+ * (Raamattu, SÄHKETEHTÄVÄ LEHTIMÄISEKSI JA PULLA VINKIKSI). Kun linkki
+ * osoittaa kartan kohteeseen, kortin avaa js/fokuskohteet.js
+ * (avaaFokuskohde) — mutta se moduuli on niputusjärjestyksessä VASTA
+ * tämän jälkeen ja tuo tästä (asetaKohdehakemisto). Suora import
+ * kääntäisi järjestyksen väärin päin, joten kytkentä tulee sieltä
+ * tänne päin takaisinkutsuna.
+ */
+let kohdeavaus = null;
+
+/**
+ * @param {(ui: object, iso: string, tunnus: string) => boolean} fn
+ *   avaa maan kohdelistalta kohteen tunnuksella; palauttaa löytyikö.
+ */
+export function asetaKohdeavaus(fn) {
+  kohdeavaus = typeof fn === 'function' ? fn : null;
 }
 
 /**
@@ -2047,6 +2187,189 @@ function sahkeAvain(ui, city) {
   return `${ui.game.pack.id}:${city.id}`;
 }
 
+/* ============ LIVIA PUHUU KUPLASSA, EI KORTILLA ==================
+ *
+ * Omistaja 3.9.2026: *"Nuo pulun kommentit voisi siirtää pulun
+ * puhekuplaan."* Sähkekortin sininen kursiivi (Livian saate) oli
+ * kortilla kilpailemassa lomakkeen kanssa samasta silmäyksestä. Nyt
+ * saate menee LIVIAN KUPLAPINOON (js/pollo.js, Raamattu: LIVIAN
+ * KUPLAPINO), jolloin kortti on pelkkää sähkettä ja lomaketta ja
+ * Livian ääni kuuluu sieltä mistä muutkin hänen repliikkinsä.
+ *
+ * MIKSI polloPuheenvuoro EIKÄ polloSaapumiskupla: puheenvuoro pilkkoo
+ * pitkän saatteen luettaviksi kupliksi ja pinoaa ne (sama kohtelu kuin
+ * maadoituksella), ja se on juuri se pinta, joka toimii kortin ollessa
+ * auki. Kortti asuu karttaruudussa (.map-pane, z-index 6) ja kuplapino
+ * document.bodyssa kiinteänä kerroksena (z-index 40), joten pino
+ * piirtyy kortin PÄÄLLE eikä sen alle — kuplaa ei siis tarvitse
+ * siirtää kortin sulkemisen jälkeen.
+ *
+ * KERRAN PER TEHTÄVÄ PER ISTUNTO. Kortti piirretään uudelleen joka
+ * ohilyönnistä, eikä sama saate saa toistua joka kerta.
+ */
+function sahkeSaateKuplaan(ui, avain, teksti) {
+  if (!teksti) return false;
+  ui.sahkeSaateSanottu ??= new Set();
+  if (ui.sahkeSaateSanottu.has(avain)) return false;
+  ui.sahkeSaateSanottu.add(avain);
+  /*
+   * Pieni viive: kortti ehtii ilmestyä ensin, ja kupla tulee sen päälle
+   * omana tapahtumanaan. Yhtä aikaa ilmestyvät pinnat lukisivat yhtenä
+   * ryöpsähdyksenä.
+   */
+  clearTimeout(ui.sahkeSaateAjastin);
+  ui.sahkeSaateAjastin = setTimeout(() => {
+    if (ui.dead) return;
+    polloPuheenvuoro(jaaPuheenvuoroksi(teksti), { jatkuuko: () => !ui.dead });
+  }, SAHKE_SAATE_VIIVE_MS);
+  return true;
+}
+
+/** Kortti ehtii ensin, Livia puhuu heti perään. */
+const SAHKE_SAATE_VIIVE_MS = 450;
+
+/* ==================== PULLA SÄHKEESSÄ ============================
+ *
+ * Omistajan tilaus 3.9.2026 (Raamattu, SÄHKETEHTÄVÄ LEHTIMÄISEKSI JA
+ * PULLA VINKIKSI): *"tässäkin tehtävässä voisi olla mahdollisuus ostaa
+ * pulla pululle ja saada vinkki, joka helpottaa oleellisesti. Tämä
+ * olisi 50 puntaa. Lisäksi pelaaja voisi ostaa 25 punnalla puolikkaan
+ * pullan, mistä vastineeksi pulu suostuisi näyttämään vain suoran
+ * linkin, mistä pääsisi lukemaan juuri tämän kysymyksen vastauksen
+ * kaupunkilehden sivulta."*
+ *
+ * KAKSI ERI TAVARAA, EI KAKSI HINTAA SAMASTA. Kokonainen pulla ostaa
+ * SANAT (Livia kertoo vinkin omalla äänellään), puolikas ostaa PELKÄN
+ * OSOITTEEN (kortti tai lehden sivu aukeaa, mitään ei sanota ääneen).
+ * Kumpikin voidaan ostaa erikseen ja kumpikin säilyy tallennuksen yli,
+ * koska kirjanpito on pelitilassa (js/game.js pullaVinkit).
+ *
+ * MIKSI PUOLIKAS ON HALVEMPI: se on työläämpi. Pelaaja saa oikean
+ * sivun mutta lukee vastauksen itse — vinkki on oikotie, linkki on
+ * lapio.
+ */
+const SAHKE_PULLA_VINKKI_HINTA = 50;
+const SAHKE_PULLA_LINKKI_HINTA = 25;
+
+/** Kirjanpidon avain: 'sahke:<tehtäväId>:vinkki|linkki'. */
+function sahkePullaAvain(tehtava, laji) {
+  return tehtava?.id ? `sahke:${tehtava.id}:${laji}` : '';
+}
+
+/** Mitä linkkinapissa lukee — linkin laji kertoo sen itse. */
+function vastauslinkinNappi(linkki) {
+  if (linkki?.tyyppi === 'lehtisivu') return 'Avaa Livian linkki: lehden sivu';
+  if (linkki?.tyyppi === 'kohde') return 'Avaa Livian linkki: kartan kohde';
+  return 'Avaa Livian linkki';
+}
+
+/**
+ * LIVIAN SUORA LINKKI AUKI.
+ *
+ * Kaksi lajia, koska pelin kaksi vastausaineistoa ovat eri paikoissa:
+ * Sofian vastaus lukee KARTAN KOHTEESSA (Varna) ja Tukholman
+ * KAUPUNKILEHDEN SIVULLA (Vasa-juttu). Sähkekortti suljetaan
+ * avautumisen alta — kaksi pintaa päällekkäin olisi juuri se sekasotku,
+ * jota kohdemalli välttää — ja pelaaja palaa sähkeeseen kartan
+ * pisteestä kuten ennenkin.
+ *
+ * @returns {boolean} aukesiko jokin.
+ */
+function avaaVastauslinkki(ui, city, linkki) {
+  if (!linkki) return false;
+  if (linkki.tyyppi === 'kohde') {
+    if (!kohdeavaus) return false;
+    suljeFokusvirta(ui);
+    return Boolean(kohdeavaus(ui, linkki.maa, linkki.kohde));
+  }
+  if (linkki.tyyppi === 'lehtisivu') {
+    const kaupunki = ui.game?.pack?.cities?.find((c) => c.id === linkki.kaupunki) ?? city;
+    if (!kaupunki || typeof ui.avaaTutkinta !== 'function') return false;
+    suljeFokusvirta(ui);
+    ui.avaaTutkinta(kaupunki);
+    /*
+     * Lehti rakentaa sivunsa avautuessaan ja jää etusivulle
+     * (js/lehti.js rakennaSivut → naytaTutkiSivu(0)); haluttu sivu
+     * pyydetään heti sen perään, samassa tehtäväjonossa.
+     */
+    ui.naytaTutkiSivu?.(linkki.sivu ?? 0, { heti: true });
+    return true;
+  }
+  return false;
+}
+
+/**
+ * KAKSI PULLANAPPIA VASTAUSLOMAKKEEN ALLE.
+ *
+ * Kaava — kaksi napautusta, kassaportti, −N puntaa -kelluke ja
+ * kuittausrivi napin tilalle — on aarretehtävän pullavinkin oma
+ * (js/fokustehtavat.js pullaOstosnappi). Sitä ei kopioida tänne, se
+ * tuodaan: yksi kaava, yksi paikka.
+ */
+function piirraSahkePullat(ui, city, data, kohde) {
+  const tehtava = data.sahketehtava ?? {};
+  if (!tehtava.id) return;
+  const nimi = pullanNimi(ui, city);
+  const kotelo = html('div', 'fokusvirta-sahkepullat');
+  kohde.appendChild(kotelo);
+
+  /* ---------- 50 £: kokonainen pulla, Livia vinkkaa ---------- */
+  if (tehtava.vinkki) {
+    const avain = sahkePullaAvain(tehtava, 'vinkki');
+    pullaOstosnappi(ui, kotelo, {
+      hinta: SAHKE_PULLA_VINKKI_HINTA,
+      teksti: `Osta ${nimi} Livialle (${SAHKE_PULLA_VINKKI_HINTA} £) — vinkki`,
+      varmistus: `Varmista: ${nimi} Livialle, ${SAHKE_PULLA_VINKKI_HINTA} £`,
+      koyha: `Kassa ei riitä: ${nimi} ${SAHKE_PULLA_VINKKI_HINTA} £`,
+      kelluke: `${nimi} Livialle`,
+      tehty: `Livia sai kokonaisen pullan (${nimi}) ja sanoi vinkkinsä.`,
+      ostettu: ui.game.pullaOstettu?.(avain) === true,
+      osta: () => ui.game.actionPullaOstos(avain, SAHKE_PULLA_VINKKI_HINTA,
+        'sai vinkin sähkeen vastaukseen'),
+      // Vinkki tulee KUPLAAN eikä kortille: se on Livian puhetta, ja
+      // kuplasta se jää myös chat-historiaan (js/pollo.js).
+      jalkeen: () => polloPuheenvuoro(jaaPuheenvuoroksi(tehtava.vinkki),
+        { jatkuuko: () => !ui.dead }),
+    });
+  }
+
+  /* ---------- 25 £: puolikas pulla, pelkkä linkki ---------- */
+  if (!tehtava.vastauslinkki) return;
+  const avain = sahkePullaAvain(tehtava, 'linkki');
+  const linkkiNappi = () => {
+    const rivi = html('div', 'fokusvirta-sahkelinkki');
+    piirraNapit(rivi, [
+      nappi(vastauslinkinNappi(tehtava.vastauslinkki), 'primary',
+        () => {
+          sfx.play('paper');
+          avaaVastauslinkki(ui, city, tehtava.vastauslinkki);
+        }),
+    ], 'fokusvirta-varmistusnapit');
+    kotelo.appendChild(rivi);
+  };
+  const ostettuJo = ui.game.pullaOstettu?.(avain) === true;
+  pullaOstosnappi(ui, kotelo, {
+    hinta: SAHKE_PULLA_LINKKI_HINTA,
+    teksti: `Osta puolikas ${nimi} (${SAHKE_PULLA_LINKKI_HINTA} £) — suora linkki`,
+    varmistus: `Varmista: puolikas ${nimi}, ${SAHKE_PULLA_LINKKI_HINTA} £`,
+    koyha: `Kassa ei riitä: puolikas ${nimi} ${SAHKE_PULLA_LINKKI_HINTA} £`,
+    kelluke: `puolikas ${nimi} Livialle`,
+    tehty: `Livia sai puolikkaan pullan (${nimi}) ja näytti linkin.`,
+    ostettu: ostettuJo,
+    osta: () => ui.game.actionPullaOstos(avain, SAHKE_PULLA_LINKKI_HINTA,
+      'sai suoran linkin sähkeen vastaukseen'),
+    jalkeen: () => {
+      if (tehtava.linkkiSaate) {
+        polloPuheenvuoro(jaaPuheenvuoroksi(tehtava.linkkiSaate), { jatkuuko: () => !ui.dead });
+      }
+      linkkiNappi();
+    },
+  });
+  // Kortti avattiin uudelleen jo ostetun linkin jälkeen: nappi kuuluu
+  // sinne edelleen, muuten ostos katoaisi kortin sulkemisen mukana.
+  if (ostettuJo) linkkiNappi();
+}
+
 /* ==================== SÄHKE ON LOMAKE, EI LAATIKKO ==================
  *
  * Omistaja 2.9.2026 ilta: sähketehtävän kortti *"visuaalisesti
@@ -2109,19 +2432,128 @@ function sahkeOtsake(teksti, leima) {
   return otsake;
 }
 
-/** Yksi liimattu liuska: teksti, haalea STOP ja kysymysrivin korostus. */
-function sahkeLiuska(rivi) {
-  const liuska = html('p', 'fokusvirta-sahkerivi');
-  if (SAHKE_KYSYMYSRIVI.test(rivi)) liuska.classList.add('fokusvirta-sahkekysymys');
-  // STOP on sähkösanoman välimerkki eikä sana: se jää haaleammaksi,
-  // jotta silmä lukee sisällön eikä välimerkkejä. Teksti itse ei muutu
-  // (textContent on yhä sama rivi).
-  for (const osa of String(rivi).split(/(\bSTOP\b)/g)) {
+/**
+ * Liuskan sisältö annetusta tekstistä.
+ *
+ * STOP on sähkösanoman välimerkki eikä sana: se jää haaleammaksi, jotta
+ * silmä lukee sisällön eikä välimerkkejä. Teksti itse ei muutu
+ * (textContent on yhä sama rivi).
+ *
+ * OMA FUNKTIO, KOSKA SAMA LADONTA TEHDÄÄN MONESTI: kirjoitusanimaatio
+ * latoo rivin uudestaan joka merkillä (ks. kirjoitaSahke), eikä
+ * puolivalmis "STO" saa silloin poimia STOP-tyyliä — split tekee sen
+ * itsestään oikein, koska sanaraja ei täsmää keskeneräiseen sanaan.
+ */
+function taytaLiuska(liuska, teksti) {
+  liuska.replaceChildren();
+  for (const osa of String(teksti).split(/(\bSTOP\b)/g)) {
     if (!osa) continue;
     if (osa === 'STOP') liuska.appendChild(html('span', 'fokusvirta-sahke-stop', osa));
     else liuska.appendChild(document.createTextNode(osa));
   }
+}
+
+/** Yksi liimattu liuska: teksti, haalea STOP ja kysymysrivin korostus. */
+function sahkeLiuska(rivi) {
+  const liuska = html('p', 'fokusvirta-sahkerivi');
+  if (SAHKE_KYSYMYSRIVI.test(rivi)) liuska.classList.add('fokusvirta-sahkekysymys');
+  taytaLiuska(liuska, rivi);
   return liuska;
+}
+
+/**
+ * SÄHKE KIRJOITTUU RIVI KERRALLAAN (omistajan tilaus 3.9.2026).
+ *
+ * KOLME ASIAA, JOTKA TÄSSÄ ON RATKAISTU JA JOTKA EIVÄT OLE ITSESTÄÄN
+ * SELVIÄ:
+ *
+ *   1. KORTTI EI SAA KASVAA KIRJOITTAESSA. Liuskapinon korkeus
+ *      mitataan VALMIISTA tekstistä ja lukitaan (min-height) ennen kuin
+ *      rivit tyhjennetään. Ilman tätä kortti venyisi rivi riviltä ja
+ *      napit hyppisivät alaspäin — juuri sitä nykimistä, jonka
+ *      Arkkikirjaston animaatiosääntö kieltää.
+ *   2. TULEVAT RIVIT VARAAVAT PAIKKANSA MUTTA EIVÄT NÄY. Ne ovat
+ *      tyhjiä eivätkä piilotettuja: piilotettu mutta täysi liuska
+ *      näkyisi tyhjänä paperilappuna, ja se näyttäisi vialta.
+ *   3. HYPPY LOPPUUN ON AINA MAHDOLLINEN. Napautus sähkeeseen tai mihin
+ *      tahansa kortin nappiin täyttää kaikki rivit heti ja vaientaa
+ *      äänet — pelaajaa ei koskaan pakoteta katsomaan animaatiota
+ *      loppuun (sama sopimus kuin matkakirjan kirjoituskoneella).
+ *
+ * @returns {() => void} `ohita`: täyttää sähkeen heti.
+ */
+function kirjoitaSahke(laatikko, liuskat, rivit, {
+  merkkiMs, kattoMs, valiMs, aanet = true,
+} = {}) {
+  const aikataulu = sahkeKirjoitusAikataulu(rivit, { merkkiMs, kattoMs, valiMs });
+  const kentat = [...liuskat.children];
+  const korkeus = liuskat.getBoundingClientRect?.().height ?? 0;
+  if (korkeus > 0) liuskat.style.minHeight = `${Math.ceil(korkeus)}px`;
+  /*
+   * TYHJÄ LIUSKA EI SAA NÄKYÄ TYHJÄNÄ LAPPUNA. Rivi varaa paikkansa
+   * (min-height yllä) mutta on maalaamatta, kunnes sen vuoro tulee —
+   * muuten lomakkeella olisi valmiiksi viisi tyhjää paperiliuskaa ja
+   * "rivi kerrallaan" näyttäisi pelkältä tekstin ilmestymiseltä.
+   */
+  for (const kentta of kentat) {
+    kentta.replaceChildren();
+    kentta.classList.add('fokusvirta-sahkerivi-odottaa');
+  }
+  laatikko.classList.add('kirjoittaa');
+
+  let ajastin = 0;
+  let viimeNaksu = 0;
+  let ohi = false;
+
+  const ohita = () => {
+    if (ohi) return;
+    ohi = true;
+    clearTimeout(ajastin);
+    kentat.forEach((kentta, i) => {
+      kentta.classList.remove('fokusvirta-sahkerivi-odottaa');
+      taytaLiuska(kentta, aikataulu.rivit[i]?.teksti ?? '');
+    });
+    liuskat.style.minHeight = '';
+    laatikko.classList.remove('kirjoittaa');
+  };
+
+  /* Naksu enintään joka toisesta merkistä JA enintään 20 kertaa
+     sekunnissa: nopealla rivillä jälkimmäinen katto puree ensin. */
+  const naksu = () => {
+    if (!aanet) return;
+    const nyt = Date.now();
+    if (nyt - viimeNaksu < SAHKE_NAKSU_VALI_MS) return;
+    viimeNaksu = nyt;
+    // Sävy vaihtelee hitusen: jokainen kirjain osuu eri kohtaan telaa.
+    sfx.play('kirjoituskone', { vire: 0.94 + Math.random() * 0.12 });
+  };
+
+  const kirjoitaRivi = (i) => {
+    const tila = aikataulu.rivit[i];
+    const kentta = kentat[i];
+    if (ohi || !tila || !kentta) { ohita(); return; }
+    kentta.classList.remove('fokusvirta-sahkerivi-odottaa');
+    let merkki = 0;
+    const askel = () => {
+      if (ohi) return;
+      // Kortti on voitu sulkea tai piirtää uudelleen kesken kirjoituksen.
+      if (!kentta.isConnected) { ohi = true; clearTimeout(ajastin); return; }
+      merkki += 1;
+      taytaLiuska(kentta, tila.teksti.slice(0, merkki));
+      if (merkki % 2 === 1) naksu();
+      if (merkki < tila.merkit) {
+        ajastin = setTimeout(askel, tila.merkkivali);
+        return;
+      }
+      if (aanet) sfx.play('bling');
+      if (i + 1 >= aikataulu.rivit.length) { ohita(); return; }
+      ajastin = setTimeout(() => kirjoitaRivi(i + 1), aikataulu.valiMs);
+    };
+    ajastin = setTimeout(askel, tila.merkkivali);
+  };
+
+  kirjoitaRivi(0);
+  return ohita;
 }
 
 /**
@@ -2131,15 +2563,27 @@ function sahkeLiuska(rivi) {
  * @param {string} leima Sähköaseman leimaan painettava paikannimi
  *   (kaupungin nimi). Tyhjä = ei leimaa.
  */
-function piirraSahke(kohde, teksti, luokka = '', leima = '') {
+function piirraSahke(kohde, teksti, luokka = '', leima = '', asetukset = {}) {
   const laatikko = html('div', luokka ? `fokusvirta-sahke ${luokka}` : 'fokusvirta-sahke');
+  varmistaSahkeLomakekuva(laatikko);
   laatikko.appendChild(sahkeOtsake(teksti, leima));
   const liuskat = html('div', 'fokusvirta-sahkeliuskat');
-  for (const rivi of String(teksti).split(/\s*\n\s*/).filter(Boolean)) {
-    liuskat.appendChild(sahkeLiuska(rivi));
-  }
+  const rivit = String(teksti).split(/\s*\n\s*/).filter(Boolean);
+  for (const rivi of rivit) liuskat.appendChild(sahkeLiuska(rivi));
   laatikko.appendChild(liuskat);
   kohde.appendChild(laatikko);
+  /*
+   * ANIMAATIO ON VALINNAINEN JA KERTALUONTOINEN. Kutsuja päättää
+   * (`animoi`), ja liikettä vähentävä järjestelmäasetus kumoaa päätöksen
+   * — silloin rivit ovat valmiina kuten ennenkin.
+   */
+  if (asetukset.animoi && rivit.length && !liikeRajoitettu()) {
+    const ohita = kirjoitaSahke(laatikko, liuskat, rivit, asetukset);
+    kohde.addEventListener('pointerdown', (tapahtuma) => {
+      if (!tapahtuma.target?.closest?.('.fokusvirta-sahke, button')) return;
+      ohita();
+    }, true);
+  }
   return laatikko;
 }
 
@@ -2164,23 +2608,42 @@ function piirraSahketehtava(ui, city, data, kohde) {
    * toista kertaa. Sama pinta palvelee myös tilannetta, jossa pelaaja
    * poistui kaupungista kesken lennon: paluunappi jatkaa siitä.
    */
+  ui.sahkeKirjoitettu ??= new Set();
+  /* Sama sähke kirjoittuu kerran istunnossa; toisella avauksella rivit
+     ovat valmiina (omistajan animaatiosääntö: liike on tapahtuma, ei
+     tapa piirtää). */
+  const kirjoita = (tunnus) => {
+    if (ui.sahkeKirjoitettu.has(tunnus)) return false;
+    ui.sahkeKirjoitettu.add(tunnus);
+    return true;
+  };
+
   if (ui.sahkeVastattu.has(avain)) {
     piirraSahke(kohde, tehtava.lahetetty ?? 'SÄHKE LÄHETETTY STOP ODOTA VASTAUSTA STOP',
-      '', city.name);
-    piirraTeksti(kohde, tehtava.odotus ?? 'Livia on matkalla. Se palaa kun se palaa.')
-      .classList.add('fokusvirta-livian-saate');
+      '', city.name, {
+        animoi: kirjoita(`${avain}:lahetetty`),
+        merkkiMs: SAHKE_PALUU_MERKKI_MS,
+        kattoMs: SAHKE_PALUU_KATTO_MS,
+        valiMs: SAHKE_PALUU_RIVIVALI_MS,
+      });
+    // Odotusteksti on Livian puhetta: se kuuluu kuplaan kuten saatekin.
+    sahkeSaateKuplaan(ui, `${avain}:odotus`,
+      tehtava.odotus ?? 'Livia on matkalla. Se palaa kun se palaa.');
     piirraNapit(kohde, [nappi('Selvä', 'primary', () => suljeKasin(ui))]);
     return;
   }
 
-  piirraSahke(kohde, tehtava.sahke ?? '', '', city.name);
+  piirraSahke(kohde, tehtava.sahke ?? '', '', city.name, { animoi: kirjoita(avain) });
   /*
-   * LIVIAN SAATE ON MARGINAALIMERKINTÄ, EI SÄHKETTÄ: oma luokka vaihtaa
-   * sen kirjoituskoneen musteesta kynän jälkeen (kursiivi, sinertävä
-   * muste, hitusen kallellaan) — pelaajan on erotettava yhdellä
-   * silmäyksellä, kumpi teksti tulee koneesta ja kumpi Livialta.
+   * LIVIAN SAATE MENI KUPLAAN (omistaja 3.9.2026). Kortilla se oli
+   * sinistä kursiivia sähkeen alla (.fokusvirta-livian-saate) ja
+   * kilpaili lomakkeen kanssa samasta silmäyksestä; nyt Livia sanoo sen
+   * omassa kuplassaan, ja kortille jää pelkkä sähke ja lomake. Luokan
+   * tyylit jäävät css/fokusvirta.css:ään varalle (ne ovat Livian
+   * marginaalimerkinnän asu), mutta yksikään kutsupaikka ei enää
+   * aseta sitä — savuke vahtii sitä (tools/savuke-sahketehtava.mjs).
    */
-  piirraTeksti(kohde, tehtava.johdanto ?? '').classList.add('fokusvirta-livian-saate');
+  sahkeSaateKuplaan(ui, avain, tehtava.johdanto ?? '');
 
   const ohi = ui.sahkeOhi.get(avain) ?? 0;
   const lomake = html('div', 'fokusvirta-sahkelomake');
@@ -2270,6 +2733,14 @@ function piirraSahketehtava(ui, city, data, kohde) {
   kohde.appendChild(html('p', 'fokusvirta-varoitus fokusvirta-sahkemaksu',
     `Sähkeen palkkio nyt ${sahkePalkkio(ohi, tehtava.palkkio ?? SAHKE_PALKKIO)} puntaa. `
     + 'Jokainen ohilyönti pienentää sitä — mutta aarre ei lukitu koskaan.'));
+
+  /*
+   * PULLAT PALKKIORIVIN ALLE, NAPPIRIVIN YLLE. Paikka on sama kuin
+   * lehden aarretehtävässä: raha-asiat ovat yhdessä nipussa lomakkeen
+   * jälkeen, eikä ostosnappi joudu sekaan sen napin kanssa, joka
+   * lähettää vastauksen.
+   */
+  piirraSahkePullat(ui, city, data, kohde);
 
   /** Ohilyönti: sama kirjanpito ja sama paluusähke kummallakin tavalla. */
   const ohilyonti = (vaarat) => {
@@ -2365,7 +2836,16 @@ function sahkeOsui(ui, city, data) {
   if (sisalto) {
     sisalto.replaceChildren();
     otsikko(sisalto, 'Sähke', tehtava.hahmo ?? 'Pöllöltä');
-    piirraSahke(sisalto, tehtava.vastaussahke ?? 'VASTAUS LÄHETETTY STOP', '', city.name);
+    ui.sahkeKirjoitettu ??= new Set();
+    const vastausAvain = `${avain}:vastaus`;
+    const animoi = !ui.sahkeKirjoitettu.has(vastausAvain);
+    ui.sahkeKirjoitettu.add(vastausAvain);
+    piirraSahke(sisalto, tehtava.vastaussahke ?? 'VASTAUS LÄHETETTY STOP', '', city.name, {
+      animoi,
+      merkkiMs: SAHKE_PALUU_MERKKI_MS,
+      kattoMs: SAHKE_PALUU_KATTO_MS,
+      valiMs: SAHKE_PALUU_RIVIVALI_MS,
+    });
     /*
      * KUITTAUSKORTIN TEKSTI EI OLE MARGINAALIMERKINTÄ: siinä on Livian
      * repliikin PERÄSSÄ faktakappale (tehtava.fakta), eikä faktaa saa

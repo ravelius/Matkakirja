@@ -30,6 +30,16 @@ vaadi koodimuutoksia:
   kirjoitetaan muita pidemmäksi, koska se kantaa maaosaston yksin.
   Muut kaupungit näyttävät etusivun entiseen tapaan
   (`.dialog.lehti`-luokka ohjaa kaiken).
+- **Sivunumero on indeksi, ei painetun lehden sivu (3.9.2026):**
+  `naytaTutkiSivu(n)` lukee sivut listasta, jossa `0` on etusivu ja
+  `n` on kategoria `n − 1` (js/lehti.js `rakennaSivut`). Kansiosion
+  (`id: 'kaupunki'`) nostot ovat siis AINA sivulla 1. Sähketehtävän
+  puolikkaalla pullalla ostettava suora linkki käyttää tätä numerointia
+  (`vastauslinkki: { tyyppi: 'lehtisivu', kaupunki, sivu }`,
+  js/packs/fokusvirta-*.js), joten jos kaupungin kategorioiden
+  järjestys muuttuu, linkin numero on tarkistettava — sitä vahtii
+  tests/sahketehtava.test.mjs, joka lukee sivun nostot ja vaatii
+  sähkeen oikean vastausotsikon niiden joukosta.
 - **Teosgalleria:** nosto voi kantaa `galleria: [{ otsikko, tiedosto,
   selite, lahde }]` -listan (pilotti: Venetsian Canaletto, 6 teosta).
   Noston kuva saa selailunuolet ja laskurin; selite- ja lähderivit

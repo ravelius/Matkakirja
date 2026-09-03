@@ -99,6 +99,9 @@ const NIMET = [
   // Aikajanan vuosiluvun naksahdus (3.9.2026): varaääni sille,
   // kun ämpärin kohahdusta (js/tehosteet.js) ei ole ladattu.
   'vuosi',
+  // Sähketehtävän kirjoittuvat rivit (3.9.2026): lennätinkonttorin
+  // naputus merkki merkiltä ja rivin lopun kello.
+  'kirjoituskone', 'bling',
 ];
 
 test('jokainen tehoste tuottaa äänilähteitä', async () => {
@@ -139,6 +142,54 @@ test("vuosiluvun naksahdus on kirjastossa ja paperia hiljaisempi", async () => {
   // Lyhyt kuin mekaanisen laskurin naksu: jokainen osa alle 40 ms.
   const kestot = [...runko.matchAll(/dur: ([\d.]+)/g)].map((m) => Number(m[1]));
   assert.ok(kestot.length >= 1 && kestot.every((d) => d <= 0.04), `naksahdus on liian pitkä: ${kestot}`);
+});
+
+/*
+ * SÄHKEEN KIRJOITUSKONE JA RIVIN KELLO (omistajan tilaus 3.9.2026:
+ * *"taustalla saisi kuulua kirjoituskoneen äänet ja lopussa aina se
+ * bling, kun rivi vaihtuu"*).
+ *
+ * Naputus soi kymmeniä kertoja peräkkäin, joten sen on oltava LYHYT
+ * (alle 40 ms per osa) ja selvästi paperin kahahdusta hiljaisempi —
+ * muuten rivi kuulostaisi rakennustyömaalta. Kello taas on kaksi
+ * puhdasta sinisävyä (2,1 kHz ja 3,2 kHz), jotka vaimenevat 250 ms:ssä:
+ * se on lennättimen ohut kilkatus eikä soittorasian kellopeli, ja siksi
+ * se on rakennettu `tone`-kutsuista eikä `bell`-kutsuista.
+ */
+test('sähkeen naputus on lyhyt ja hiljainen, ja rivin kello on kaksi sinisävyä', async () => {
+  const { sfx, ctx } = await lataaSfx();
+  sfx.play('kirjoituskone');
+  assert.ok(ctx.aloitetut.length > 0, "ääntä 'kirjoituskone' ei ole kirjastossa");
+  const ennen = ctx.aloitetut.length;
+  sfx.play('bling');
+  assert.ok(ctx.aloitetut.length > ennen, "ääntä 'bling' ei ole kirjastossa");
+
+  const lahde = readFileSync(new URL('../js/sound.js', import.meta.url), 'utf8');
+  const paperi = Number(lahde.match(/paper: \(s\) => s\.hiss\(\{[^}]*gain: ([\d.]+)/)[1]);
+
+  const naputus = lahde.slice(
+    lahde.indexOf('  kirjoituskone: (s, { vire = 1 } = {}) => {'),
+    lahde.indexOf('  bling: (s) => {'),
+  );
+  assert.ok(naputus.length > 40, "SOUNDS-kirjastosta puuttuu 'kirjoituskone'");
+  const naputusKestot = [...naputus.matchAll(/dur: ([\d.]+)/g)].map((m) => Number(m[1]));
+  assert.ok(naputusKestot.length >= 1 && naputusKestot.every((d) => d <= 0.04),
+    `naputus on liian pitkä: ${naputusKestot}`);
+  for (const v of [...naputus.matchAll(/gain: ([\d.]+)/g)].map((m) => Number(m[1]))) {
+    assert.ok(v < paperi, `naputuksen taso ${v} ei ole paperia (${paperi}) hiljaisempi`);
+  }
+
+  const kello = lahde.slice(
+    lahde.indexOf('  bling: (s) => {'),
+    lahde.indexOf('},', lahde.indexOf('  bling: (s) => {')),
+  );
+  assert.ok(kello.includes('2100') && kello.includes('3200'),
+    'kellosta puuttuu kumpikin sinisävy (2,1 kHz ja 3,2 kHz)');
+  assert.equal((kello.match(/s\.tone\(/g) ?? []).length, 2,
+    'kello ei ole kaksi puhdasta sinisävyä');
+  const kelloKestot = [...kello.matchAll(/dur: ([\d.]+)/g)].map((m) => Number(m[1]));
+  assert.ok(kelloKestot.length === 2 && kelloKestot.every((d) => d <= 0.25),
+    `kello soi liian pitkään: ${kelloKestot}`);
 });
 
 test('tehosteita ei ole portitettu sallitulla listalla', async () => {

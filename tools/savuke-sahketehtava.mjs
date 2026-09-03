@@ -50,6 +50,19 @@
  *      vapaalla tekstillä (tulkinta mock-workerilta), Sofiassa
  *      lomakkeella kuten ennenkin, jotta kumpikin tie pysyy mitattuna.
  *
+ * KIRJOITTUVAT RIVIT JA PULLA (omistaja 3.9.2026, v1496) lisäävät
+ * kuusi väitettä:
+ *
+ *  15. SÄHKE KIRJOITTUU RIVI KERRALLAAN: 300 ms kortin avauksesta osa
+ *      riveistä on yhä tyhjiä ja sähkeellä on luokka `kirjoittaa`.
+ *  16. NAPAUTUS HYPPÄÄ LOPPUUN: kaikki rivit heti, luokka pois.
+ *  17. LIVIAN SAATE ON KUPLASSA EIKÄ KORTILLA (omistajan tilaus).
+ *  18. KORTILLA ON KAKSI PULLANAPPIA: 50 £ vinkki ja 25 £ suora linkki.
+ *  19. OSTETTU PULLA JÄTTÄÄ KUITTAUKSEN napin tilalle ja veloittaa
+ *      kassasta oikean summan.
+ *  20. PUOLIKAS PULLA AVAA OIKEAN PINNAN: Sofiassa kartan kohdekortin,
+ *      Tukholmassa kaupunkilehden sivun, jolta vastaus luetaan.
+ *
  * SOFIALLA ON YKSI VÄITE LISÄÄ: Nadian kohtaaminen on yhä datassa,
  * vaikka sähke voittaa sen kortilla. Se on omistajan pilottiehto —
  * palautus on yksi rivi vain, jos data on tallessa.
@@ -222,6 +235,11 @@ const KAUPUNGIT = [
     vuosi: 1961,
     vaaraKohde: 'Kanelipullalla on oma päivänsä',
     vinkkiSana: /ensimmäisellä sivulla/i,
+    // Livian saate siirtyi kortilta kuplapinoon (3.9.2026).
+    saateSana: /löytänyt paikan/i,
+    // Puolikas pulla avaa kaupunkilehden sivun 1 (Vasa-juttu).
+    linkkiPinta: { valitsin: '#arrival-dialog[open]', teksti: /upposi ja nousi/i },
+    pullaNimi: 'kanelbulle',
     merkinta: /kalastaja|kronan/i,
     /*
      * TUKHOLMA AVAA AARTEEN OMIN SANOIN. Teksti on tarkoituksella
@@ -240,7 +258,13 @@ const KAUPUNGIT = [
     kohde: 'Varna',
     vuosi: 1974,
     vaaraKohde: 'Musala',
-    vinkkiSana: /maailman vanhin kulta/i,
+    // Vinkki on Fablen 3.9.2026 kirjoittama uusi teksti: sama kenttä
+    // palvelee nyt kahden ohilyönnin vihjettä JA pullalla ostettua.
+    vinkkiSana: /maailman vanhimmasta kullasta/i,
+    saateSana: /kuopassa/i,
+    // Puolikas pulla avaa Varnan kohdekortin kartalta.
+    linkkiPinta: { valitsin: '.fokuskohde-popup', teksti: /Varna/i },
+    pullaNimi: 'kozunak',
     merkinta: /konakin varjossa|lapion/i,
     // Omistajan pilottiehto: Nadian kohtaaminen jää dataan.
     kohtaaminenTallessa: 'Lähteenvartija Nadia',
@@ -383,7 +407,14 @@ for (const kaupunki of KAUPUNGIT) {
 
   /* ---------- sähkekortti ja lomake ---------- */
 
-  const kortti = await sivu.evaluate(async (kortit) => {
+  /*
+   * KORTTI AUKI OMANA ASKELEENAAN. Avaus on erotettu mittauksesta,
+   * koska sähke KIRJOITTUU riveittäin (3.9.2026) ja juuri se
+   * välitila halutaan nähdä: jos avaus ja mittaus olisivat samassa
+   * evaluatessa, savuke joko odottaisi animaation ohi tai mittaisi
+   * tyhjää korttia.
+   */
+  await sivu.evaluate((kortit) => {
     window.matkakirja.ui.busy = false;
     // Korttiannostelussa sähkekortti on jo auki (oppitunnin jatkonappi
     // avasi sen); kevyessä kulussa se avataan kartan pisteestä.
@@ -391,7 +422,70 @@ for (const kaupunki of KAUPUNGIT) {
       document.querySelector('.fokuspiste')
         ?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     }
-    await new Promise((r) => setTimeout(r, 600));
+  }, KORTIT);
+
+  /** Sähkeen rivit ja kirjoitustila juuri nyt. */
+  const lueSahke = () => sivu.evaluate(() => {
+    const s = document.querySelector('.fokusvirta-kortti .fokusvirta-sahke');
+    const rivit = [...(s?.querySelectorAll('.fokusvirta-sahkerivi') ?? [])]
+      .map((riv) => riv.textContent ?? '');
+    return {
+      kirjoittaa: Boolean(s?.classList.contains('kirjoittaa')),
+      rivit: rivit.length,
+      tyhjia: rivit.filter((t) => !t.trim()).length,
+      merkkeja: rivit.join('').length,
+    };
+  });
+
+  if (KORTIT) {
+    // Korttikulussa kortti avattiin jo oppitunnin napista sekunteja
+    // sitten, joten välitilaa ei ole enää nähtävissä.
+    await sivu.waitForTimeout(600);
+  } else {
+    await sivu.waitForTimeout(300);
+    const kesken = await lueSahke();
+    vaadi(`${kaupunki.nimi}: sähke kirjoittuu rivi kerrallaan`,
+      kesken.kirjoittaa && kesken.tyhjia >= 1 && kesken.merkkeja > 0,
+      JSON.stringify(kesken));
+    await sivu.screenshot({ path: join(ULOS, `savuke-sahke-${kaupunki.id}-kirjoittuu.png`) });
+
+    await sivu.evaluate(() => {
+      document.querySelector('.fokusvirta-sahke')
+        ?.dispatchEvent(new MouseEvent('pointerdown', { bubbles: true }));
+    });
+    await sivu.waitForTimeout(120);
+    const hyppy = await lueSahke();
+    vaadi(`${kaupunki.nimi}: napautus sähkeeseen hyppää loppuun`,
+      !hyppy.kirjoittaa && hyppy.tyhjia === 0 && hyppy.rivit >= 5,
+      JSON.stringify(hyppy));
+  }
+
+  /*
+   * LIVIAN SAATE ON KUPLASSA EIKÄ KORTILLA (omistaja 3.9.2026: *"nuo
+   * pulun kommentit voisi siirtää pulun puhekuplaan"*). Kupla tulee
+   * pienen viiveen päästä kortin avauksesta, joten sitä odotetaan.
+   */
+  const saate = await sivu.evaluate(async () => {
+    for (let i = 0; i < 30; i += 1) {
+      const kuplat = [...document.querySelectorAll('.pollo-kuplapino .pollo-vihje')]
+        .map((k) => k.textContent ?? '').join(' ');
+      if (kuplat.trim()) {
+        return {
+          kuplat: kuplat.slice(0, 200),
+          kortilla: document.querySelectorAll(
+            '.fokusvirta-kortti .fokusvirta-livian-saate',
+          ).length,
+        };
+      }
+      await new Promise((r) => setTimeout(r, 200));
+    }
+    return { kuplat: '', kortilla: -1 };
+  });
+  vaadi(`${kaupunki.nimi}: Livian saate tulee kuplaan eikä kortille`,
+    kaupunki.saateSana.test(saate.kuplat) && saate.kortilla === 0,
+    JSON.stringify(saate));
+
+  const kortti = await sivu.evaluate(async () => {
     const k = document.querySelector('.fokusvirta-kortti');
     const valinta = k?.querySelector('.fokusvirta-sahkevalinta');
     const optiot = [...(valinta?.options ?? [])].map((o) => o.value).filter(Boolean);
@@ -412,8 +506,11 @@ for (const kaupunki of KAUPUNGIT) {
       vapaakenttia: k?.querySelectorAll('.fokusvirta-sahkevapaakentta').length ?? 0,
       vapaaNappi: [...(k?.querySelectorAll('button') ?? [])]
         .map((b) => b.textContent.trim()).find((t) => /omin sanoin/i.test(t)) ?? '',
+      // Pullakauppa lomakkeen alla (3.9.2026).
+      pullanapit: [...(k?.querySelectorAll('.fokusvirta-sahkepullat .fokus-pulla-nappi') ?? [])]
+        .map((b) => b.textContent.trim()),
     };
-  }, KORTIT);
+  });
   vaadi(`${kaupunki.nimi}: reitti aarrevaiheeseen avaa sähkekortin`,
     kortti.kortti && /sähke/i.test(kortti.ylarivi) && /pöllö/i.test(kortti.otsikko),
     JSON.stringify([kortti.ylarivi, kortti.otsikko]));
@@ -431,7 +528,124 @@ for (const kaupunki of KAUPUNGIT) {
     kortti.vapaakenttia === 1 && /omin sanoin/i.test(kortti.vapaaNappi),
     JSON.stringify({ kenttia: kortti.vapaakenttia, nappi: kortti.vapaaNappi }));
 
+  vaadi(`${kaupunki.nimi}: kortilla on kaksi pullanappia (50 £ vinkki, 25 £ linkki)`,
+    kortti.pullanapit.length === 2
+      && /50 £/.test(kortti.pullanapit[0]) && /vinkki/i.test(kortti.pullanapit[0])
+      && /25 £/.test(kortti.pullanapit[1]) && /linkki/i.test(kortti.pullanapit[1])
+      && kortti.pullanapit.every((t) => t.includes(kaupunki.pullaNimi)),
+    JSON.stringify(kortti.pullanapit));
+
   await sivu.screenshot({ path: join(ULOS, `savuke-sahke-${kaupunki.id}-lomake.png`) });
+
+  /* ---------- pulla Livialle: vinkki ja suora linkki ---------- */
+
+  /**
+   * Ostaa yhden pullan: kaksi napautusta samaan nappiin (ensimmäinen
+   * varmistaa, toinen maksaa) — sama kaava kuin lehden aarretehtävässä.
+   *
+   * @param {number} indeksi 0 = kokonainen pulla, 1 = puolikas
+   */
+  const ostaPulla = async (indeksi) => sivu.evaluate(async (i) => {
+    const napit = () => [...document.querySelectorAll(
+      '.fokusvirta-sahkepullat .fokus-pulla-nappi',
+    )];
+    const rahaEnnen = window.matkakirja.game.player.money;
+    napit()[i]?.click();
+    await new Promise((r) => setTimeout(r, 120));
+    const varmistus = napit()[i]?.textContent?.trim() ?? '';
+    napit()[i]?.click();
+    await new Promise((r) => setTimeout(r, 250));
+    const kotelo = document.querySelector('.fokusvirta-sahkepullat');
+    return {
+      varmistus,
+      kuittaukset: [...(kotelo?.querySelectorAll('.fokus-pulla-tehty') ?? [])]
+        .map((el) => el.textContent.trim()),
+      jaljella: napit().length,
+      maksoi: rahaEnnen - window.matkakirja.game.player.money,
+      linkkinappi: [...(kotelo?.querySelectorAll('button') ?? [])]
+        .map((b) => b.textContent.trim()).find((t) => /Livian linkki/i.test(t)) ?? '',
+      kuplat: [...document.querySelectorAll('.pollo-kuplapino .pollo-vihje')]
+        .map((k) => k.textContent ?? '').join(' ').slice(-400),
+      lomakeYha: Boolean(document.querySelector('.fokusvirta-sahkelomake')),
+    };
+  }, indeksi);
+
+  const kokoPulla = await ostaPulla(0);
+  vaadi(`${kaupunki.nimi}: kokonainen pulla maksaa 50 £ ja jättää kuittauksen`,
+    kokoPulla.maksoi === 50 && kokoPulla.kuittaukset.length === 1
+      && /Varmista/i.test(kokoPulla.varmistus) && kokoPulla.lomakeYha === true,
+    JSON.stringify(kokoPulla).slice(0, 220));
+
+  /*
+   * VINKKI TULEE KUPLAPINOON OSISSA (js/pollo.js naytaPuheenvuoro):
+   * ensin huudahdus, sitten jatko. Se osa, jossa lähde mainitaan, ei
+   * ole ensimmäinen — joten sitä odotetaan eikä lueta kertalukemalla.
+   */
+  const vinkkikupla = await sivu.evaluate(async (sana) => {
+    const ehto = new RegExp(sana, 'i');
+    let kaikki = '';
+    for (let i = 0; i < 40; i += 1) {
+      kaikki = [...document.querySelectorAll('.pollo-kuplapino .pollo-vihje')]
+        .map((k) => k.textContent ?? '').join(' ');
+      if (ehto.test(kaikki)) break;
+      await new Promise((r) => setTimeout(r, 250));
+    }
+    return kaikki.slice(-400);
+  }, kaupunki.vinkkiSana.source);
+  vaadi(`${kaupunki.nimi}: Livia sanoo vinkin kuplassa`,
+    kaupunki.vinkkiSana.test(vinkkikupla), vinkkikupla.slice(-120));
+
+  const puolikas = await ostaPulla(0);
+  vaadi(`${kaupunki.nimi}: puolikas pulla maksaa 25 £ ja tuo linkkinapin`,
+    puolikas.maksoi === 25 && puolikas.kuittaukset.length === 2
+      && /Livian linkki/i.test(puolikas.linkkinappi),
+    JSON.stringify(puolikas).slice(0, 220));
+
+  await sivu.screenshot({ path: join(ULOS, `savuke-sahke-${kaupunki.id}-pullat.png`) });
+
+  /*
+   * LINKKI AVAA OIKEAN PINNAN. Sofiassa se on kartan kohdekortti
+   * (Varna), Tukholmassa kaupunkilehden sivu, jolla Vasa-juttu on.
+   * Pinta suljetaan heti perään ja sähkekortti avataan uudelleen —
+   * loput väitteet mittaavat vastaamista, eivät linkkiä.
+   */
+  const linkki = await sivu.evaluate(async ([valitsin, kortit]) => {
+    const nappi = [...document.querySelectorAll('.fokusvirta-sahkepullat button')]
+      .find((b) => /Livian linkki/i.test(b.textContent));
+    nappi?.click();
+    await new Promise((r) => setTimeout(r, 900));
+    const pinta = document.querySelector(valitsin);
+    /*
+     * KOKO TEKSTI, EI ALKUA. Kaupunkilehden dialogissa ensimmäiset
+     * sadat merkit ovat nimiötä, päiväystä ja säärivä — juttu itse on
+     * vasta niiden jälkeen, ja alkupätkän lukeminen mittasi pelkkää
+     * ylätunnistetta.
+     */
+    const teksti = pinta?.textContent ?? '';
+    // Pinta kiinni ja sähke takaisin ruudulle.
+    document.querySelector(`${valitsin} .fokuskohde-sulje`)?.click();
+    document.getElementById('arrival-dialog')?.close();
+    window.matkakirja.ui.render();
+    await new Promise((r) => setTimeout(r, 500));
+    if (!kortit) {
+      document.querySelector('.fokuspiste')
+        ?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    } else {
+      const fv = await import('/js/fokusvirta.js');
+      fv.avaaFokusvirta(window.matkakirja.ui, window.matkakirja.game.cityOf());
+    }
+    await new Promise((r) => setTimeout(r, 600));
+    return {
+      aukesi: Boolean(pinta),
+      teksti,
+      kortti: Boolean(document.querySelector('.fokusvirta-sahkelomake')),
+    };
+  }, [kaupunki.linkkiPinta.valitsin, KORTIT]);
+  vaadi(`${kaupunki.nimi}: puolikkaan pullan linkki avaa vastauksen lähteen`,
+    linkki.aukesi && kaupunki.linkkiPinta.teksti.test(linkki.teksti),
+    `${linkki.aukesi} · ${linkki.teksti.length} merkkiä`);
+  vaadi(`${kaupunki.nimi}: sähkekortti palaa linkin jälkeen`, linkki.kortti === true,
+    String(linkki.kortti));
 
   /** Täyttää lomakkeen ja painaa lähetysnapin. */
   const laheta = async (kohde, vuosi) => sivu.evaluate(async ([k, v]) => {
@@ -441,6 +655,14 @@ for (const kaupunki of KAUPUNGIT) {
     [...kortti2.querySelectorAll('button')]
       .find((b) => /lähetä sähke/i.test(b.textContent))?.click();
     await new Promise((r) => setTimeout(r, 500));
+    /*
+     * PALUUSÄHKE KIRJOITTUU (3.9.2026), joten se viedään loppuun ennen
+     * lukemista — muuten savuke lukisi puolikkaan rivin. Napautus on
+     * sama kuin pelaajan: hyppy loppuun.
+     */
+    document.querySelector('.fokusvirta-sahke')
+      ?.dispatchEvent(new MouseEvent('pointerdown', { bubbles: true }));
+    await new Promise((r) => setTimeout(r, 80));
     const uusi = document.querySelector('.fokusvirta-kortti');
     return {
       tulos: uusi?.querySelector('.fokusvirta-visa-tulos')?.textContent ?? '',
@@ -503,7 +725,11 @@ for (const kaupunki of KAUPUNGIT) {
       // eslint-disable-next-line no-await-in-loop
       await sivu.waitForTimeout(100);
     }
-    return sivu.evaluate(() => {
+    return sivu.evaluate(async () => {
+      // Sama hyppy loppuun kuin lomakkeella (ks. laheta).
+      document.querySelector('.fokusvirta-sahke')
+        ?.dispatchEvent(new MouseEvent('pointerdown', { bubbles: true }));
+      await new Promise((r) => setTimeout(r, 80));
       const uusi = document.querySelector('.fokusvirta-kortti');
       return {
         tulos: uusi?.querySelector('.fokusvirta-visa-tulos')?.textContent ?? '',

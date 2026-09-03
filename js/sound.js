@@ -1696,6 +1696,43 @@ const SOUNDS = {
     s.knock({ freqs: [2400], dur: 0.022, gain: 0.03, q: 12 });
   },
   /*
+   * SÄHKEEN KIRJOITUSKONE (omistajan tilaus 3.9.2026: *"tekstit saisi
+   * tulla siihen animoidusti. Rivi kerrallaan ja taustalla saisi kuulua
+   * kirjoituskoneen äänet ja lopussa aina se bling, kun rivi vaihtuu"*).
+   *
+   * ERI ÄÄNI KUIN `pen`: kynän raapaisu on pehmeä sipaisu pergamentilla,
+   * lennätinkonttorin kone on KOVA vasaranisku metallityyppiä vasten.
+   * Purske on siksi lyhyt (30 ms) ja sen päällä kuiva resonoiva kopsahdus.
+   * Sävy vaihtelee kutsusta toiseen (`vire`), koska jokainen kirjain osuu
+   * eri kohtaan telaa — täysin identtinen naksu kuulostaisi metronomilta.
+   *
+   * KIERRÄTETTY KANAVA (hissNopea): naputus soi kymmeniä kertoja rivissä,
+   * eikä se saa luoda uusia audiosolmuja per lyönti — sama oppi kuin
+   * `pen`-lyönnillä ja aikajanan vuosinaksulla. Soittotiheyden rajaus
+   * (joka toinen merkki, enintään 20/s) on kutsujalla, js/fokusvirta.js.
+   */
+  kirjoituskone: (s, { vire = 1 } = {}) => {
+    s.hissNopea({
+      dur: 0.03, type: 'highpass', freq: 3200 * vire, sweepTo: 1700 * vire, gain: 0.028, q: 0.8,
+    });
+    s.knock({ freqs: [1350 * vire, 2450 * vire], dur: 0.028, gain: 0.05, q: 9 });
+  },
+  /*
+   * LENNÄTTIMEN KELLO RIVIN LOPUSSA (sama tilaus). Kaksi puhdasta
+   * sinisävyä ilman epäharmonisia osasäveliä: se on pieni kirkas kello
+   * eikä soittorasian kellopeli (`bell`), ja juuri siksi tässä on
+   * `tone` eikä `bell`. Vaimennus 250 ms — kello ehtii soida rivin yli
+   * mutta on vaiennut ennen kuin seuraava rivi alkaa (350 ms).
+   *
+   * SUKULAISUUS `typeBell`-ääneen on tarkoituksellinen mutta ero on
+   * selvä: pöllön rivinvaihtokello on FM-kilahdus ja pitkä kellosointu,
+   * tämä on lennätinkonttorin ohuempi ja lyhyempi kilkatus.
+   */
+  bling: (s) => {
+    s.tone({ freq: 2100, dur: 0.25, type: 'sine', gain: 0.055, attack: 0.004 });
+    s.tone({ freq: 3200, dur: 0.22, type: 'sine', gain: 0.03, attack: 0.004, delay: 0.008 });
+  },
+  /*
    * Kuplan varapolku ilman äänitettä: hyvin lyhyt pehmeä paperin
    * kahahdus (ks. REAL_PLAYERS.kupla). Ei kelloa eikä sointua — kupla
    * ei ilmoita mitään, se vain ilmestyy.
