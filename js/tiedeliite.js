@@ -25,7 +25,8 @@
  *   ingressi                             linssin lyhyt selite
  *   KASVOT vierekkäin                    generoitu muotokuva (+ toinen
  *                                        keksijä) JA aito Commons-kuva
- *   ilmiökuva(t) kuvateksteineen         ilmio, ilmioLisa
+ *   ilmiökuva(t) kuvateksteineen         ilmio, ilmioLisa — kaksi tai
+ *                                        useampi selataan karusellina
  *   leipäteksti palstoina                juttu
  *   lähderivi                            lahde
  *   ‹ edellinen keksijä | seuraava ›     alanapit
@@ -150,7 +151,9 @@ function piirraKasvot(ui, sailio, kuvat, henkilo, luokka = '') {
     const kehys = html('figure', 'tiedeliite-kasvo');
     const nappi = html('button', 'fokusnosto-kuvanappi');
     nappi.type = 'button';
-    nappi.title = 'Katso kuva suurempana';
+    // Ei title-vihjettä: hiiren tooltip jäi kuvan päälle (ks.
+    // piirraTiedeliitteenSivu, vihjeiden siivous). Lukuohjelma saa
+    // saman tiedon aria-labelista.
     nappi.setAttribute('aria-label', `${kuva.selite ?? henkilo ?? 'Kuva'} — avaa suurena`);
     const img = document.createElement('img');
     img.alt = kuva.selite ?? henkilo ?? '';
@@ -172,6 +175,226 @@ function piirraKasvot(ui, sailio, kuvat, henkilo, luokka = '') {
     rivi.appendChild(kehys);
   }
   sailio.appendChild(rivi);
+}
+
+/* ==================== HAVAINNEKUVIEN KARUSELLI ==================== */
+
+/**
+ * Pyyhkäisyn kynnys pikseleinä: tätä lyhyempi veto palauttaa kuvan
+ * paikalleen (omistajan tilaus 3.9.2026: *"pyyhkäisy sormella"*).
+ */
+export const KARUSELLIN_KYNNYS = 30;
+
+/**
+ * Askel karusellissa. Raita on yhtenäinen nauha, joka ei voi kiertää
+ * päästä päähän liukumatta koko matkaa takaisin — siksi karuselli
+ * PYSÄHTYY PÄIHIN ja päädyn nuoli menee harmaaksi.
+ */
+export function karusellinKohta(kohdalla, suunta, maara) {
+  if (!(maara >= 1)) return 0;
+  return Math.min(maara - 1, Math.max(0, Math.trunc(kohdalla) + suunta));
+}
+
+/**
+ * Pyyhkäisyn suunta: vasemmalle veto (dx < 0) vie seuraavaan kuvaan,
+ * oikealle edelliseen. Kynnystä lyhyempi liike ei siirrä (0).
+ */
+export function karusellinPyyhkaisy(dx, kynnys = KARUSELLIN_KYNNYS) {
+  if (!Number.isFinite(dx) || Math.abs(dx) < kynnys) return 0;
+  return dx < 0 ? 1 : -1;
+}
+
+/**
+ * USEAMPI HAVAINNEKUVA ON KARUSELLI (omistajan tilaus 3.9.2026,
+ * sanatarkasti: *"jos oli useampi havainnekuva, niin ne voisi laittaa
+ * nostoihin karuselliksi"*).
+ *
+ * Yksi kuva kerrallaan samassa 16/10-kehyksessä (sama mittasuhde kuin
+ * linssin paneelin ilmiökuvalla, .aikajana-ilmiokuva); kuvateksti ja
+ * lähderivi vaihtuvat kuvan mukana, koska jokainen havainnekuva kertoo
+ * mitä juuri siinä kuvassa on. Selaus kolmella tavalla: nuolet kuvan
+ * laidoilla, pisteet alla ja pyyhkäisy sormella. Nuolinäppäimet
+ * selaavat kuvia, kun kohdistus on karusellin sisällä — muuten ne
+ * kuuluvat sivunvaihdolle (avaaTiedeliite → nappain).
+ *
+ * Siirtymä on liuku (CSS .tiedeliite-karuselli-raita: 480 ms,
+ * nopeutus ja hidastus — Raamattu: KAIKKI LIIKE ANIMOIDAAN PEHMEASTI);
+ * reduced motion vaihtaa kuvan suoraan. Napautus avaa yhä
+ * suurennoksen (avaaKohdeSuurennos) — paitsi jos sormi oikeasti
+ * liikkui, jolloin kyse oli pyyhkäisystä eikä napautuksesta.
+ *
+ * YKSI KUVA ei ole karuselli: silloin sivu piirtyy entiseen tapaan
+ * (piirraNostonKuva), eikä nuolia tai pisteitä synny lainkaan.
+ */
+function piirraIlmiokaruselli(ui, sailio, kuvat, henkilo) {
+  const kehys = html('figure', 'fokusnosto-kuva tiedeliite-karuselli');
+  kehys.dataset.maara = String(kuvat.length);
+  const ikkuna = html('div', 'tiedeliite-karuselli-ikkuna');
+  const raita = html('div', 'tiedeliite-karuselli-raita');
+  ikkuna.appendChild(raita);
+  kehys.appendChild(ikkuna);
+
+  let kohdalla = 0;
+  let estaNapautus = false;
+  let virheita = 0;
+  const ruudut = [];
+
+  for (const kuva of kuvat) {
+    const nappi = html('button', 'fokusnosto-kuvanappi tiedeliite-karuselli-ruutu');
+    nappi.type = 'button';
+    nappi.setAttribute('aria-label', `${kuva.selite ?? henkilo ?? 'Kuva'} — avaa suurena`);
+    const img = document.createElement('img');
+    img.alt = kuva.selite ?? henkilo ?? '';
+    img.decoding = 'async';
+    img.draggable = false;
+    /*
+     * Rikkinäinen kuva jättää ruudun tyhjäksi paperiksi, ja vasta kun
+     * KAIKKI kuvat pettävät, koko kehys katoaa — sama sääntö kuin
+     * yhdellä kuvalla (piirraNostonKuva): teksti kantaa sivun yksinkin.
+     */
+    asetaNostonKuva(img, kuva, TIEDELIITE_KUVA_PX, () => {
+      img.hidden = true;
+      virheita += 1;
+      if (virheita === kuvat.length) kehys.hidden = true;
+    });
+    nappi.appendChild(img);
+    nappi.addEventListener('click', (tapahtuma) => {
+      tapahtuma.stopPropagation();
+      if (estaNapautus) { estaNapautus = false; return; }
+      avaaKohdeSuurennos(ui, kuvat[kohdalla], () => nappi, ZOOM_AVAIN);
+    });
+    raita.appendChild(nappi);
+    ruudut.push(nappi);
+  }
+
+  const teksti = html('figcaption', 'fokusnosto-kuvateksti tiedeliite-karuselli-teksti');
+  const selite = html('span', 'fokusnosto-kuvaselite');
+  const lahde = html('span', 'fokusnosto-kuvalahde');
+  teksti.append(selite, lahde);
+
+  const edellinen = html('button', 'tiedeliite-karuselli-nuoli edellinen', '‹');
+  const seuraava = html('button', 'tiedeliite-karuselli-nuoli seuraava', '›');
+  edellinen.type = 'button';
+  seuraava.type = 'button';
+  edellinen.setAttribute('aria-label', 'Edellinen havainnekuva');
+  seuraava.setAttribute('aria-label', 'Seuraava havainnekuva');
+  ikkuna.append(edellinen, seuraava);
+
+  const pisteet = html('div', 'tiedeliite-karuselli-pisteet');
+  const pistenapit = kuvat.map((kuva, j) => {
+    const piste = html('button', 'tiedeliite-karuselli-piste');
+    piste.type = 'button';
+    piste.setAttribute('aria-label', `Havainnekuva ${j + 1}/${kuvat.length}`);
+    piste.addEventListener('click', (tapahtuma) => {
+      tapahtuma.stopPropagation();
+      siirry(j);
+    });
+    pisteet.appendChild(piste);
+    return piste;
+  });
+  kehys.append(teksti, pisteet);
+
+  /** Raidan paikka: nykyinen kuva ja mahdollinen sormen veto päälle. */
+  const asetaRaita = (dx = 0) => {
+    const siirto = dx ? ` + ${Math.round(dx)}px` : '';
+    raita.style.transform = `translate3d(calc(${-100 * kohdalla}%${siirto}), 0, 0)`;
+  };
+
+  /** Kuvateksti, lähderivi, nuolet, pisteet ja kohdistus kuvan mukaan. */
+  const nayta = () => {
+    const kuva = kuvat[kohdalla];
+    selite.textContent = kuva.selite ?? '';
+    // Lähderivi kulkee taytaLahderivin läpi, jotta "Matkakirjan
+    // havainnekuva" saa painettavan selitteensä joka kuvalla
+    // (js/havainnekuva.js) — myös karusellin toisella kuvalla.
+    taytaLahderivi(lahde, kuva.lahde ?? '', kuva);
+    // Uusi kuvateksti tulee esiin pehmeästi: luokka irrotetaan ja
+    // kiinnitetään uudestaan, jotta CSS-animaatio alkaa alusta.
+    teksti.classList.remove('vaihtui');
+    void teksti.offsetWidth;
+    teksti.classList.add('vaihtui');
+    edellinen.disabled = kohdalla <= 0;
+    seuraava.disabled = kohdalla >= kuvat.length - 1;
+    ruudut.forEach((nappi, j) => {
+      // Vain näkyvä kuva on sarkaimella tavoitettava.
+      nappi.tabIndex = j === kohdalla ? 0 : -1;
+      nappi.setAttribute('aria-hidden', j === kohdalla ? 'false' : 'true');
+    });
+    pistenapit.forEach((piste, j) => {
+      piste.classList.toggle('nykyinen', j === kohdalla);
+      if (j === kohdalla) piste.setAttribute('aria-current', 'true');
+      else piste.removeAttribute('aria-current');
+    });
+    asetaRaita();
+  };
+
+  function siirry(j) {
+    const uusi = Math.min(kuvat.length - 1, Math.max(0, j));
+    if (uusi === kohdalla) { asetaRaita(); return; }
+    kohdalla = uusi;
+    sfx.play('paper');
+    nayta();
+  }
+
+  edellinen.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    siirry(karusellinKohta(kohdalla, -1, kuvat.length));
+  });
+  seuraava.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    siirry(karusellinKohta(kohdalla, 1, kuvat.length));
+  });
+
+  /*
+   * PYYHKÄISY: raita seuraa sormea ja napsahtaa kynnyksen ylityttyä
+   * seuraavaan kuvaan. Pystysuora liike jätetään sivun vieritykselle
+   * (kortti on `touch-action: pan-y`), joten suunta ratkaistaan
+   * ensimmäisistä pikseleistä eikä vaakaraahaus ala vahingossa.
+   */
+  let raahaus = null;
+  ikkuna.addEventListener('pointerdown', (tapahtuma) => {
+    if (tapahtuma.pointerType === 'mouse' && tapahtuma.button !== 0) return;
+    raahaus = {
+      id: tapahtuma.pointerId, x: tapahtuma.clientX, y: tapahtuma.clientY,
+      dx: 0, vaaka: false,
+    };
+  });
+  ikkuna.addEventListener('pointermove', (tapahtuma) => {
+    if (!raahaus || tapahtuma.pointerId !== raahaus.id) return;
+    const dx = tapahtuma.clientX - raahaus.x;
+    const dy = tapahtuma.clientY - raahaus.y;
+    if (!raahaus.vaaka) {
+      if (Math.abs(dx) < 6 && Math.abs(dy) < 6) return;
+      if (Math.abs(dx) <= Math.abs(dy)) { raahaus = null; return; }
+      raahaus.vaaka = true;
+      raita.classList.add('raahataan');
+      ikkuna.setPointerCapture?.(tapahtuma.pointerId);
+    }
+    raahaus.dx = dx;
+    asetaRaita(dx);
+  });
+  const lopetaRaahaus = (tapahtuma) => {
+    if (!raahaus || (tapahtuma && tapahtuma.pointerId !== raahaus.id)) return;
+    const { dx, vaaka } = raahaus;
+    raahaus = null;
+    raita.classList.remove('raahataan');
+    // Sormi liikkui: napautus oli pyyhkäisyn loppu eikä kuvan avaus.
+    if (Math.abs(dx) > 6) estaNapautus = true;
+    const suunta = vaaka ? karusellinPyyhkaisy(dx) : 0;
+    if (suunta) siirry(karusellinKohta(kohdalla, suunta, kuvat.length));
+    else asetaRaita();
+  };
+  ikkuna.addEventListener('pointerup', lopetaRaahaus);
+  ikkuna.addEventListener('pointercancel', lopetaRaahaus);
+
+  kehys.addEventListener('keydown', (tapahtuma) => {
+    if (tapahtuma.key !== 'ArrowLeft' && tapahtuma.key !== 'ArrowRight') return;
+    tapahtuma.stopPropagation();
+    siirry(karusellinKohta(kohdalla, tapahtuma.key === 'ArrowRight' ? 1 : -1, kuvat.length));
+  });
+
+  nayta();
+  sailio.appendChild(kehys);
 }
 
 /**
@@ -221,9 +444,24 @@ function piirraTiedeliitteenSivu(ui, sailio, t, lahdeVara) {
   piirraKasvot(ui, palsta, generoidut, t.henkilo, 'tiedeliite-kasvot-pieni');
   sailio.appendChild(palsta);
 
-  // 2. Havainnekuva(t) kuvateksteineen.
-  for (const kuva of ilmiot) {
-    piirraNostonKuva(ui, sailio, kuva, 'fokusnosto-kuva', TIEDELIITE_KUVA_PX, ZOOM_AVAIN);
+  /*
+   * 2. HAVAINNEKUVA(T). Yksi kuva latoutuu entiseen tapaan lehden
+   * kuvana, useampi karusellina (omistaja 3.9.2026: *"jos oli useampi
+   * havainnekuva, niin ne voisi laittaa nostoihin karuselliksi"*).
+   * Molemmilla on sama 16/10-kehys ja sama reunus kuin henkilökuvalla
+   * (omistaja 3.9.2026: *"havainnekuvalla voisi olla samanlaiset
+   * kehykset kuin henkilökuvalla"*), joten sivun kuvat ovat samaa
+   * perhettä olipa niitä yksi tai kaksi.
+   */
+  if (ilmiot.length > 1) {
+    piirraIlmiokaruselli(ui, sailio, ilmiot, t.henkilo);
+  } else {
+    for (const kuva of ilmiot) {
+      piirraNostonKuva(
+        ui, sailio, kuva, 'fokusnosto-kuva tiedeliite-ilmiokuva',
+        TIEDELIITE_KUVA_PX, ZOOM_AVAIN,
+      );
+    }
   }
 
   // 3. Keksijä itse: henkilöteksti ja aito kuva oikealla.
@@ -241,6 +479,18 @@ function piirraTiedeliitteenSivu(ui, sailio, t, lahdeVara) {
   }
   const lahde = t.lahde ?? lahdeVara;
   if (lahde) sailio.appendChild(taytaLahderivi(html('p', 'fokusnosto-lahde'), lahde, t));
+
+  /*
+   * VIHJEIDEN SIIVOUS (omistajan raportti 3.9.2026, kuvakaappaus Benz
+   * 1886): hiiren tooltip *"Katso kuva suurempana"* jäi leijumaan
+   * kuvan päälle ja peitti sivua. Lehtisivulla kuva on kuva, ei
+   * työkalu, joten title otetaan pois kaikilta kuvanapeilta — myös
+   * yhteiseltä piirraNostonKuvalta perityiltä; aria-label kertoo
+   * saman apuvälineelle.
+   */
+  for (const nappi of sailio.querySelectorAll('.fokusnosto-kuvanappi[title]')) {
+    nappi.removeAttribute('title');
+  }
 }
 
 /* ==================== AVAUS JA SULKU ==================== */
@@ -426,6 +676,14 @@ export function avaaTiedeliite(ui, tapahtumat, i, {
       suljeTiedeliite(ui);
       return;
     }
+    /*
+     * NUOLET KUULUVAT KARUSELLILLE, KUN KOHDISTUS ON SIINÄ. Sivun
+     * vaihto on nuolten oletustyö, mutta kun pelaaja on juuri
+     * napauttanut havainnekuvan karusellia, samat näppäimet selaavat
+     * sen kuvia (kuuntelija on karusellin kehyksessä). Tämä kuuntelija
+     * on kaappausvaiheessa, joten väistö on tehtävä tässä.
+     */
+    if (document.activeElement?.closest?.('.tiedeliite-karuselli')) return;
     if (tapahtuma.key === 'ArrowLeft' && !edellinenNappi.disabled) edellinenNappi.click();
     if (tapahtuma.key === 'ArrowRight' && !seuraavaNappi.disabled) seuraavaNappi.click();
   };

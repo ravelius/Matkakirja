@@ -724,6 +724,156 @@
   .tiedeliite-palsta .tiedeliite-kasvot { order: -1; max-width: 11rem; }
   .tiedeliite-keksija .tiedeliite-palsta { grid-template-columns: minmax(0, 1fr); }
   .tiedeliite-keksija .tiedeliite-palsta .tiedeliite-kasvot { max-width: 15rem; }
+  /* Kapealla ruudulla nuolet lähemmäs laitaa, jottei kuva jää niiden
+     alle; kosketusala pysyy 40 pikselissä. */
+  .tiedeliite-karuselli-nuoli { width: 40px; font-size: 1.05rem; }
+  .tiedeliite-karuselli-nuoli.edellinen { left: 0.25rem; }
+  .tiedeliite-karuselli-nuoli.seuraava { right: 0.25rem; }
+}
+
+/* ---------------------------------------------------------------------------
+   HAVAINNEKUVAT: SAMA KEHYS KUIN HENKILÖKUVALLA, USEAMPI KARUSELLINA
+   ---------------------------------------------------------------------------
+   Omistaja 3.9.2026, sanatarkasti: *"jos oli useampi havainnekuva, niin
+   ne voisi laittaa nostoihin karuselliksi"*, *"havainnekuvalla voisi
+   olla samanlaiset kehykset kuin henkilökuvalla"* ja *"kuvateksti ei saa
+   olla leveämpi kuin kuva"*.
+
+   Kolme tilausta ratkeaa samalla kehyksellä: havainnekuva on palstan
+   levyinen 16/10-ruutu (sama mittasuhde kuin linssin paneelin
+   .aikajana-ilmiokuva) samalla reunuksella ja pyöristyksellä kuin
+   .tiedeliite-kasvo img. Kun kuva täyttää palstan, kuvateksti ja
+   lähderivi ovat väistämättä TÄSMÄLLEEN kuvan levyiset — ennen kuva
+   kapeni max-height-katon takia ja teksti jäi sen reunojen yli.
+   Karuselli käyttää samaa ruutua, joten yksi ja kaksi kuvaa näyttävät
+   sivulla samalta. --------------------------------------------------- */
+
+.tiedeliite-ilmiokuva img,
+.tiedeliite-karuselli-ikkuna {
+  border-radius: 6px;
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  background: #e6dcc3;
+}
+.tiedeliite-ilmiokuva img {
+  width: 100%;
+  height: auto;
+  /* Katto pois: se kavensi kuvan ja jätti kuvatekstin sen yli. */
+  max-height: none;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.tiedeliite-karuselli { position: relative; margin: 0 0 0.6rem; }
+.tiedeliite-karuselli-ikkuna {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  /* Vaakapyyhkäisy karusellille, pystyvieritys yhä kortille. */
+  touch-action: pan-y;
+}
+.tiedeliite-karuselli-raita {
+  display: flex;
+  height: 100%;
+  /* Liuku nopeutuen ja hidastuen (Raamattu: kaikki liike animoidaan). */
+  transition: transform 480ms cubic-bezier(0.33, 0.02, 0.2, 1);
+  will-change: transform;
+}
+/* Sormen alla raita seuraa liikettä ilman siirtymää. */
+.tiedeliite-karuselli-raita.raahataan { transition: none; }
+.tiedeliite-karuselli-ruutu {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+.tiedeliite-karuselli-ruutu img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.tiedeliite-karuselli-ruutu img[hidden] { display: none; }
+.tiedeliite-karuselli-ruutu:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
+
+/* NUOLET: sama hillitty kultareuna kuin linssin napeilla
+   (.aikajana-nappi), tummalla lasilla jotta ne erottuvat sekä
+   vaalealta että tummalta kuvalta. */
+.tiedeliite-karuselli-nuoli {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 2.1rem;
+  min-width: 40px;
+  min-height: 40px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(217, 161, 59, 0.55);
+  border-radius: 8px;
+  background: rgba(26, 18, 8, 0.42);
+  color: #f6ecc6;
+  font-family: var(--font-type);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 160ms ease, opacity 160ms ease;
+}
+.tiedeliite-karuselli-nuoli.edellinen { left: 0.4rem; }
+.tiedeliite-karuselli-nuoli.seuraava { right: 0.4rem; }
+.tiedeliite-karuselli-nuoli:hover:not(:disabled),
+.tiedeliite-karuselli-nuoli:focus-visible { background: rgba(122, 85, 20, 0.72); }
+.tiedeliite-karuselli-nuoli:disabled { opacity: 0.28; cursor: default; }
+
+/* PISTEET: kuvien määrä ja paikka yhdellä silmäyksellä. */
+.tiedeliite-karuselli-pisteet {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0.15rem 0 0;
+}
+/* Piste itse on pieni, mutta nappi on sormen kokoinen (22 px): väri ja
+   reuna piirtyvät ::before-ympyrään, ei nappiin — muuten yleissääntö
+   `button { min-height: 42px }` venyttäisi pisteen soikioksi. */
+.tiedeliite-karuselli-piste {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+.tiedeliite-karuselli-piste::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1px solid rgba(122, 85, 20, 0.6);
+  border-radius: 50%;
+  background: transparent;
+  transition: background 200ms ease, transform 200ms ease;
+}
+.tiedeliite-karuselli-piste:hover::before { background: rgba(122, 85, 20, 0.3); }
+.tiedeliite-karuselli-piste.nykyinen::before {
+  background: #b8891f;
+  transform: scale(1.15);
+}
+.tiedeliite-karuselli-piste:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Kuvateksti vaihtuu kuvan mukana ja tulee esiin pehmeästi. */
+.tiedeliite-karuselli-teksti.vaihtui { animation: tiedeliite-kuvateksti-esiin 380ms ease-out; }
+@keyframes tiedeliite-kuvateksti-esiin {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: none; }
 }
 
 /* HAMPURILAINEN: sama mustepiirros kuin lehden nimiössä
@@ -858,5 +1008,11 @@
   .tiedeliite-kerros,
   .tiedeliite-kortti,
   .tiedeliite-sivu,
-  .tiedeliite-navinappi { transition: none; }
+  .tiedeliite-navinappi,
+  /* Karusellin kuva vaihtuu suoraan ilman liukua, kuvateksti ilman
+     häivytystä — selailu toimii, liike jää pois. */
+  .tiedeliite-karuselli-raita,
+  .tiedeliite-karuselli-nuoli,
+  .tiedeliite-karuselli-piste::before { transition: none; }
+  .tiedeliite-karuselli-teksti.vaihtui { animation: none; }
 }
