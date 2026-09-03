@@ -541,6 +541,13 @@ const MODULES = [
   'js/viitekuva-herot.js',
   'js/tyohuone-tilastot.js',
   /*
+   * Musiikki-lehti (3.9.2026) ennen lehteä samoin perustein: lehti.js
+   * tuo sen staattisesti. Riippuvuudet — ui-apurit, media, sound,
+   * ambience-stream ja siirtymämusiikki — ovat kaikki jo yllä, eikä
+   * mitään soiteta ennen kuin liite avataan.
+   */
+  'js/tyohuone-musiikki.js',
+  /*
    * Kevyen kulun nimetyt lehtitehtävät ENNEN maalehteä (maalehti tuo
    * sivun tehtäväpiirron staattisesti). Moduulin omat riippuvuudet —
    * ui-apurit, julisteet, fokusvirrat, natiivi ja äänet — ovat kaikki

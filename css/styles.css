@@ -14763,6 +14763,122 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 
 .tk-luvut .tk-nimi { min-width: 9rem; }
 
+/* ------------------------------------------------------------------ *
+ * MUSIIKKI-LEHTI (kehittäjän liite, omistajan tilaus 3.9.2026:
+ * "kehittäjä hampurilaiseen voisi tehdä oman sivun taustamusiikeille,
+ * jossa voisin käydä kuuntelemassa niitä")
+ *
+ * Rivilista, ei taulua: raitoja on parikymmentä ja jokainen tarvitsee
+ * kaksi napautuskohdetta, joten sarakkeisiin ladottuna rivi menisi 390
+ * px ruudulla rikki. Sävyt ovat Tilastot-lehden ja Raamatun chippien
+ * omat, jotta kehittäjän liitteet puhuvat yhtä väriä.
+ * ------------------------------------------------------------------ */
+
+.mus-osasto {
+  margin: 1.1rem 0 0.5rem;
+  font-family: system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(70, 51, 31, 0.7);
+  border-bottom: 1px solid rgba(70, 51, 31, 0.18);
+  padding-bottom: 0.25rem;
+}
+
+.mus-rivi {
+  margin: 0 0 0.7rem;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid rgba(70, 51, 31, 0.14);
+  border-radius: 3px;
+  background: rgba(217, 161, 59, 0.05);
+  font-family: system-ui, sans-serif;
+}
+
+/* Soiva raita erottuu listasta yhdellä silmäyksellä. */
+.mus-rivi.soi {
+  border-color: rgba(150, 116, 52, 0.75);
+  background: #f7ecd2;
+}
+
+.mus-nimi {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.mus-nimi b { font-weight: 600; }
+
+.mus-tila {
+  font-size: 0.66rem;
+  white-space: nowrap;
+  color: rgba(70, 51, 31, 0.55);
+}
+
+.mus-tila.olemassa { color: #2c5e2a; }
+.mus-tila.puuttuu { color: #8a4b39; }
+
+.mus-kaytto {
+  margin: 0.25rem 0 0;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: rgba(70, 51, 31, 0.82);
+}
+
+/* Osoite katkeaa mistä tahansa: R2-polku on pitkä eikä saa venyttää
+   sivua vaakaan (sama sääntö kuin Tilastot-lehden taulussa). */
+.mus-polku {
+  margin: 0.15rem 0 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.62rem;
+  line-height: 1.35;
+  color: rgba(70, 51, 31, 0.55);
+  overflow-wrap: anywhere;
+}
+
+.mus-napit {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.45rem;
+}
+
+.mus-napit .wiki-btn { font-size: 0.7rem; padding: 0.2rem 0.8rem; }
+
+.mus-napit .wiki-btn[disabled] { opacity: 0.4; cursor: default; }
+
+.mus-lahde,
+.mus-huomio {
+  margin: 0 0 0.7rem;
+  font-family: system-ui, sans-serif;
+  font-size: 0.68rem;
+  line-height: 1.45;
+  color: rgba(70, 51, 31, 0.68);
+}
+
+.mus-huomio {
+  padding: 0.4rem 0.6rem;
+  border-radius: 3px;
+  background: #f7ecd2;
+  color: #7a5a12;
+}
+
+.mus-sfx {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.mus-sfx-nappi {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.66rem;
+  padding: 0.18rem 0.6rem;
+}
+
+.mus-sfx-nappi[disabled] { opacity: 0.4; cursor: default; }
+
 /*
  * Numeroina-sivun avaava yleisluonnehdinta (omistajan palaute
  * 10.8.2026): datasta koottu 2–3 virkkeen luonnehdinta isolla ennen

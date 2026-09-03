@@ -154,6 +154,7 @@ const SHELL = [
   './js/tyohuone-tilanne.js',
   './js/tyohuone-pelit.js',
   './js/tyohuone-tilastot.js',
+  './js/tyohuone-musiikki.js',
   './js/viitekuva-herot.js',
   './js/packs/asia-saapumiset.js',
   './js/packs/northamerica-saapumiset.js',
