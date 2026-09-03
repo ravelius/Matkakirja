@@ -1,3 +1,458 @@
+## 3.9.2026 13:10 UTC — FABLE → KUVAPUTKI: KIIREELLINEN KUVATILAUS, kategoria Kohtaamiskuvat: Euroopan loput 31 kohtaamiskuvaa
+
+Omistajan tilaus 3.9.2026: Euroopan loput kohtaamiskuvat tehdään nyt valmiiksi kiireellisenä. Kohtaamistekstit on tänään tarkistettu ja lukittu (v1500: kysymysten vaihtoehdot tasattu, kaksi repliikkiä uusiksi), joten alla olevat briefit ovat lopullisia — tee kuvat NÄISTÄ riveistä, ei aiemmista viesteistä.
+
+MÄÄRÄ JA JÄRJESTYS: 31 kuvaa = 29 kuvatonta kaupunkia + Tukholma ja Berliini uusina (aiemmat hyväksytyt kuvat jäävät galleriaan, mutta kortilta ne on otettu pois, koska ne näyttivät eri hetken kuin kohtaus: maailmanpyörä vs. kuja ja lyhty; auto sateessa vs. tähtitornin kaukoputki). Erät 10 kpl yksityiseen arviointiin omistajan hyväksyttäväksi, R2 vasta hyväksynnän jälkeen, kuittaus postiin. Erä 1: Ateena, Sofia, Wien, Lontoo, Rooma, Bukarest, Sarajevo, Praha, Tukholma, Berliini. Erä 2: Dublin, Edinburgh, Granada, Marseille, Varsova, Alpit, Sisilia, Kreeta, Dubrovnik, Kiova. Erä 3: Odessa, Moskova, Pietari, Helsinki, Tallinna, Riika, Oslo, Köpenhamina, Lappi, Tromssa, Islanti. Kiireellisyys: heti isoisän valokuvien (6) ja sähkölomakkeen (2) jälkeen, ennen ihmekuvia ja skandaalieriä.
+
+KUVALINJA: docs/kuvatuotanto-kohtaamiset.md ja 2.9. 16:30 UTC -viestin 10 sääntöä ennallaan (toimituksellinen nykyajan valokuva, kaksi aikakerrosta, henkilö kesken aidon tekemisen, enintään puolivartalo, kysyjä katsoo linssiin, oikea vastaus EI näy). Tiedostonimi kohtaamiset/kasvo-<kaupunki>-<hahmo>-<aihe>.jpg, JPG/sRGB, vähintään 1536 px pitkä sivu, pysty tai neliö (kortti näyttää kuvan enintään 45 % korkeudesta puhelimella).
+
+KUVATEKSTI — OHJE (omistaja pyysi täsmentämään, miten kuvateksti ja Fablen kohtaamisteksti toimivat yhteen). Kortilla kuvateksti on suoraan kuvan alla ja heti sen alla tulee minun kohtaamistekstini (hahmon repliikki). Siksi:
+1. Kuvateksti kertoo MITÄ NÄHDÄÄN, repliikki kertoo mitä sanotaan. Älä toista repliikin sisältöä äläkä kerro suvun tarinaa — se on repliikissä.
+2. Yksi tai kaksi virkettä, enintään 25 sanaa, preesens. Hahmon nimi ensimmäisessä virkkeessä, sitten mitä hän on tekemässä ja mikä liike jäi kesken, kun vieras tuli.
+3. Kuvaa hetkeä, ei kuvan tekniikkaa: ei "kasvojen kapea valo", ei "rakentaa arvioivan katseen", ei "sommittelu". Malli hyvästä: Lissabon ("Inês oli pelastamassa kuivaustelineestä liukuvaa laattaa, kun vieras ilmestyi kysymyksineen. Säikähdys muuttui heti pidätellyksi nauruksi."). Malli vältettävästä: Madridin nykyinen ("Kasvojen kapea valo ja kaupungin pehmeä tausta rakentavat arvioivan katseen").
+4. Tulijasta sana "vieras" — ei "pelaaja", ei "arvoitus", ei "matkakirja" (ne ovat pelin sanoja, eivät lehden).
+5. Kuvateksti saa vihjata kysymyksen esineeseen tai paikkaan (kello, koukku, lanka), mutta ei koskaan oikeaan vastaukseen.
+6. Sävy: lämmin toimituksellinen kuvateksti kuin lehdessä, yksi konkreettinen yksityiskohta, ei adjektiivikasaumaa, ei huutomerkkejä.
+7. Kuittaukseen jokaisesta: kaupungin tunnus, hahmon nimi, kuvateksti sanasta sanaan (menee peliin sellaisenaan), yhden rivin "vihje" (mitä kysymyksestä näkyy ja mitä ei) ja tiedostonimi. Lähderivin "Matkakirjan kuvitus" peli lisää itse.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
+# Kohtaamisbriefit (31), pelin datasta 3.9.2026 (tools/kohtaamisbriefit.mjs --vain-kuvattomat, v1500)
+
+## Alpit (alpit)
+
+- **Maa:** Sveitsi
+- **Hahmo:** Anselm — Luostarinveli Anselm kasvattaa suurikokoisia koiriaan vuoristosolan hospitsissa, kuten veljet ennen häntä vuosisatojen ajan.
+- **Kohtaamispaikka:** Alpit (ei erillistä kohtaamispistettä merkitty datassa — kohtaaminen sijoittuu kaupungin laatalle)
+- **Tilanne (esittely):** Hospitsin ovella veli Anselm pitelee koiraa kauluksesta. "Tämä koira polveutuu siitä, joka kaivoi isoisäsi laukun lumesta. Suku muistaa, meillä sanotaan. Vastaa kirjan kysymykseen, niin päästän sen etsimään."
+- **Kysymys:** Alppien solissa pelastustyötä tekivät kuuluisat bernhardilaiskoirat. Mistä ne tunnetaan?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Ne etsivät lumeen eksyneitä ja hautautuneita kulkijoita
+- **Väärät vaihtoehdot:**
+  - Ne vetivät postirekiä solan yli pahimmissa myrskyissä
+  - Ne vartioivat luostarin kellareita ja aarrekammiota
+  - Ne paimensivat luostarin vuohia kesän jyrkänteillä
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Ateena (ateena)
+
+- **Maa:** Kreikka
+- **Hahmo:** Nikos — Marmorinveistäjä Nikos korjaa Akropoliin pylväitä ja tuntee jokaisen kiven — ja rahan, jota siellä vartioidaan.
+- **Kohtaamispaikka:** Akropolis
+- **Tilanne (esittely):** Nikos laskee talttansa nähdessään rahan. "Isoisoisäni löysi samanlaisen ja pani sen takaisin — hän sanoi, että pöllö laskee ne. Kirjasi omistaja tiesi rahasta. Vastaa hänen kysymykseensä, niin nostan rahan ja näytän, mitä sen alla on."
+- **Kysymys:** Kaupunki on nimetty jumalattaren mukaan. Millä lahjalla Athene tarun mukaan voitti kaupungin itselleen?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Oliivipuulla, jonka hän kasvatti Akropoliin kalliolle
+- **Väärät vaihtoehdot:**
+  - Suolaisella lähteellä, jonka hän iski kalliosta keskelle linnaa
+  - Sotahevosella, joka ei väsynyt koskaan
+  - Kultakypärällä, joka kätki kantajansa katseilta
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Berliini (berliini)
+
+- **Maa:** Saksa
+- **Hahmo:** Lotte — Tähtitornin hoitaja Lotte kirjaa joka yön havainnot kirjaan, jota hänen sukunsa on pitänyt observatorion alusta asti.
+- **Kohtaamispaikka:** Vanha tähtitorni
+- **Tilanne (esittely):** Lotte avaa havaintokirjan vuoden 1873 kohdalta. "Vieras istui kaukoputken ääressä aamuun asti eikä kertonut, mitä etsi — vain sen, mitä kysyisi seuraavalta tulijalta. Vastaa, niin käännän putken hänen kohtaansa ja saat katsoa itse."
+- **Kysymys:** Yksi planeetta löydettiin ensin kynällä ja paperilla — ja vasta sitten kaukoputkella, juuri Berliinissä. Mikä?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Neptunus
+- **Väärät vaihtoehdot:**
+  - Uranus
+  - Mars
+  - Jupiter
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Bukarest (bukarest)
+
+- **Maa:** Romania
+- **Hahmo:** Ana — Kellonsoittaja Ana soittaa paimenen kirkon kelloa, jonka köyttä hänen sukunsa on vetänyt neljässä polvessa.
+- **Kohtaamispaikka:** Colțean tornin paikka
+- **Tilanne (esittely):** Kellotornin portailla Ana kiertää köyden ranteensa ympäri. "Isoisäsi kysyi sukuni soittajalta, kenelle kello lyö silloin, kun kukaan ei soita. Vastaa, niin saat soittajan vastauksen — se on kulkenut suvussamme neljä polvea."
+- **Kysymys:** Kaupungin nimessä elää sana bucurie. Mitä se tarkoittaa romaniaksi?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Iloa
+- **Väärät vaihtoehdot:**
+  - Kotia
+  - Lammasta
+  - Aamunkoittoa
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Dublin (dublin)
+
+- **Maa:** Irlanti
+- **Hahmo:** Molly — Sillanvartija Molly kerää puolen pennin lantit samaan nahkakukkaroon kuin isoisoisänsä aikanaan.
+- **Kohtaamispaikka:** Ha’penny Bridge
+- **Tilanne (esittely):** Sillan korvassa Molly punnitsee lanttia sormissaan. "Kukkarossa on yksi lantti, jota en saa laskea kassaan — se odottaa maksajan sukua. Vastaa kirjan kysymykseen, niin ylitys on sinun."
+- **Kysymys:** Dublinin rautainen kävelysilta korvasi aikanaan jotakin. Minkä?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Lauttamiehet, jotka soutivat väkeä joen yli
+- **Väärät vaihtoehdot:**
+  - Kahluupaikan, joka upotti kärryjä joka syksy
+  - Vanhan puusillan, jonka tulva vei mennessään
+  - Köysiradan, jolla tavarat vedettiin rannalta toiselle
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Dubrovnik (dubrovnik)
+
+- **Maa:** Kroatia
+- **Hahmo:** Ivo — Muurinvartija Ivo kävelee muurin kehän joka ilta ja laskee askeleensa, kuten vartijat vapaan tasavallan ajoista.
+- **Kohtaamispaikka:** Pilen portti
+- **Tilanne (esittely):** Portin holvissa Ivo laskee avainrengastaan. "Kirjassa lukee, että isoisäsi käveli kehän isoisäni kanssa ja pysähtyi yhdeksännelläsadalla askeleella. Vastaa hänen kysymykseensä, niin pysähdymme samassa kohdassa."
+- **Kysymys:** Dubrovnik oli vuosisatoja pieni vapaa tasavalta suurten valtojen välissä. Mikä sana sen lipussa luki?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Libertas — vapaus
+- **Väärät vaihtoehdot:**
+  - Fortuna — onni
+  - Veritas — totuus
+  - Victoria — voitto
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Edinburgh (edinburgh)
+
+- **Maa:** Yhdistynyt kuningaskunta
+- **Hahmo:** Ewan — Tykkimestari Ewan lataa linnan yhden lyönnin tykin joka päivä, kuten isoisänsä ennen häntä.
+- **Kohtaamispaikka:** Edinburghin linnan valli
+- **Tilanne (esittely):** Vallilla tykkimestari Ewan kuuraa piippua. "Isoisäsi seisoi tässä kellonsa kanssa ja vertasi lyöntiä tykkiimme — kirjasi mukaan ne erosivat sekunnilla. Vastaa hänen kysymykseensä, niin näytän, kumpi kävi edellä."
+- **Kysymys:** Edinburghin linnasta ammutaan laukaus joka päivä kello yhdeltä. Kenelle laukaus alun perin ammuttiin?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Sataman laivureille kellojen asettamista varten
+- **Väärät vaihtoehdot:**
+  - Kaupungin virastoille, jotka avasivat ovensa siitä
+  - Ylämaan paimenille, jotka käänsivät laumat kotiin
+  - Linnan vartiostolle vahdinvaihdon merkiksi
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Granada (granada)
+
+- **Maa:** Espanja
+- **Hahmo:** Yusuf — Vesimestari Yusuf avaa ja sulkee Alhambran vanhat vesikourut samoilla avaimilla kuin sukunsa vuosisatojen ajan.
+- **Kohtaamispaikka:** Alhambra
+- **Tilanne (esittely):** Kourun äärellä Yusuf kuuntelee veden ääntä kuin kelloa. "Vesi kertoo, jos joku liikkuu palatsissa — isoisäsi opetteli kuuntelemaan sitä sukuni kanssa. Vastaa hänen kysymykseensä, niin ohjaan veden näyttämään tien."
+- **Kysymys:** Punertava linnoitus Alhambra kohoaa Granadan yllä. Mitä sen nimi tarkoittaa?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Punaista — arabiaksi al-hamra
+- **Väärät vaihtoehdot:**
+  - Korkeaa puutarhaa vuoren rinteellä
+  - Tuhannen lähteen taloa ja sen kaivoja
+  - Viimeistä huokausta kukkulan laella
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Helsinki (helsinki)
+
+- **Maa:** Suomi
+- **Hahmo:** Aino — Luotsi Aino ohjaa laivat linnoituksen salmien läpi ja tuntee jokaisen karin — myös ne, joita ei ole kartoissa.
+- **Kohtaamispaikka:** Suomenlinnan salmi
+- **Tilanne (esittely):** Laiturilla Aino kiinnittää veneensä yhdellä solmulla. "Isoisäsi maksoi yösijansa kartalla: hän piirsi salmet isoisoisälleni ulkomuistista. Yhdessä väylässä on vain kysymysmerkki, eikä sukuni ole sitä kulkenut. Vastaa, niin kuljemme sen tänään."
+- **Kysymys:** Suomenlinnan linnoitus rakennettiin aikanaan usealle saarelle. Kuinka monelle?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Kuudelle
+- **Väärät vaihtoehdot:**
+  - Kolmelle
+  - Kahdelletoista
+  - Yhdelle ainoalle
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Islanti (islanti)
+
+- **Maa:** Islanti
+- **Hahmo:** Björk — Tilallinen Björk asuu lähdelaakson talossa, jonka suku on opastanut matkalaisia kuumille lähteille kuusi polvea.
+- **Kohtaamispaikka:** Islanti (ei erillistä kohtaamispistettä merkitty datassa — kohtaaminen sijoittuu kaupungin laatalle)
+- **Tilanne (esittely):** Tuvan ovella Björk ojentaa peiton harteilleni. "Kaiverruksen sana on sukuni murretta, ja vaiennut opas oli isoisoisäni. Sana tarkoittaa: odota purkausta. Vastaa, niin odotamme purkauksen yhdessä — ja kun lähde vaikenee, nostamme nuolen kiven."
+- **Kysymys:** Islannin kuuluisin kuuma lähde on antanut nimen kaikille maailman purkautuville lähteille. Mikä sana siitä tuli?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Geysir
+- **Väärät vaihtoehdot:**
+  - Vulkaani
+  - Kraatteri
+  - Laguuni
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Kiova (kiova)
+
+- **Maa:** Ukraina
+- **Hahmo:** Oksana — Portinvartija Oksana pitää Kultaisen portin avaimia ja tuntee holvin jokaisen kaiverruksen sormenpäillään.
+- **Kohtaamispaikka:** Kultainen portti
+- **Tilanne (esittely):** Holvin varjossa Oksana laskee kätensä kaiverrukselle. "Suvussani näitä viivoja sanotaan matkamiehen merkiksi, ja meille on opetettu, että tekijän suku palaa lukemaan ne. Vastaa, niin painan kätesi viivoille — ne luetaan sormilla."
+- **Kysymys:** Kiovan Kultainen portti rakennettiin lähes tuhat vuotta sitten. Mikä sen tehtävä oli?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Se oli muurien juhlava pääportti kaupunkiin
+- **Väärät vaihtoehdot:**
+  - Se oli tulliportti, jossa kauppiaiden kuormat punnittiin
+  - Se oli vankila, jonka holveihin suljettiin sotavangit
+  - Se oli kellotorni, joka kutsui kaupungin kokoon
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Kreeta (kreeta)
+
+- **Maa:** Kreikka
+- **Hahmo:** Eleni — Paimen Eleni tuntee vuoren luolat lampaidensa ansiosta ja kehrää lankansa itse, kuten äitinsä ja tämän äiti.
+- **Kohtaamispaikka:** Kreeta (ei erillistä kohtaamispistettä merkitty datassa — kohtaaminen sijoittuu kaupungin laatalle)
+- **Tilanne (esittely):** Luolan suulla Eleni punnitsee lankakerää kädessään. "Isoisäsi osti sukuni lankaa kaksi kerää — ja palautti vain toisen. Vastaa hänen kysymykseensä, niin annan sinulle kolmannen."
+- **Kysymys:** Kreetan tarun sokkelon uumenissa asui olento, joka oli puoliksi mies. Mikä sen toinen puoli oli?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Härkä
+- **Väärät vaihtoehdot:**
+  - Leijona
+  - Käärme
+  - Kotka
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Kööpenhamina (kobenhavn)
+
+- **Maa:** Tanska
+- **Hahmo:** Karen — Sadunkertoja Karen kertoo satuja Nyhavnin laiturilla samalta puiselta arkulta, jolta hänen isoisänsä ne kertoi.
+- **Kohtaamispaikka:** Nyhavnin laituri
+- **Tilanne (esittely):** Karen taputtaa arkkua vierestään. "Isoisäni sai arkun sadunkirjoittajalta, ja sinun isoisäsi kuunteli tässä. Arkussa on satu, jota ei ole koskaan kerrottu loppuun. Vastaa, niin avaan arkun ja luemme niin pitkälle kuin satua riittää."
+- **Kysymys:** Nyhavnin kanavan varrella asui satujen mestari H. C. Andersen. Mikä näistä on hänen satunsa?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Pieni merenneito
+- **Väärät vaihtoehdot:**
+  - Punahilkka
+  - Tuhkimo
+  - Hannu ja Kerttu
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Lontoo (lontoo)
+
+- **Maa:** Yhdistynyt kuningaskunta
+- **Hahmo:** Ned — Jokilöytäjä Ned etsii laskuveden liejusta joen pudottamia esineitä, kuten hänen sukunsa on etsinyt sata vuotta.
+- **Kohtaamispaikka:** Millennium Bridgen laskuvesiranta
+- **Tilanne (esittely):** Rannalla jokilöytäjä Ned punnitsee taskukelloa kädessään. "Suvussani sanotaan: joki antaa takaisin sen, minkä omistaja unohti. Kannessa on kaksi kirjainta — H. F. Vastaa kirjan kysymykseen, niin kello on sinun."
+- **Kysymys:** Isoisä kirjoitti, että Lontoossa sumu syö äänet. Mistä se sumu oikeasti syntyi?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Kivihiilen savusta ja joen kosteudesta
+- **Väärät vaihtoehdot:**
+  - Mereltä ajautuneesta suolausvasta
+  - Höyryveturien ja tehtaiden päästämästä vesihöyrystä
+  - Kaasulyhtyjen palamisjätteestä
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Marseille (marseille)
+
+- **Maa:** Ranska
+- **Hahmo:** Baptiste — Soutaja Baptiste kuljettaa kalastajia satamasta ja tuntee Ifin saaren virtaukset paremmin kuin kukaan.
+- **Kohtaamispaikka:** Vanhan sataman laituri
+- **Tilanne (esittely):** Airojen välissä Baptiste lepuuttaa käsiään. "Isäni isä souti isoisäsi saarelle ja odotti häntä kaksi vuorokautta. Paluumatkalla veneessä oli yksi arkku enemmän. Vastaa kirjan kysymykseen, niin soudan sinut samaa reittiä."
+- **Kysymys:** Ifin linnoitussaari Marseillen edustalla tunnetaan kaikkialla yhden kirjan ansiosta. Minkä?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Monte-Criston kreivin
+- **Väärät vaihtoehdot:**
+  - Kolmen muskettisoturin
+  - Kurjien
+  - Aarresaaren
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Moskova (moskova)
+
+- **Maa:** Venäjä
+- **Hahmo:** Vera — Kellonvalajan jälkeläinen Vera tuntee suuren kellon pronssin jokaisen sävyn ja lohkeaman koko tarinan.
+- **Kohtaamispaikka:** Suuren kellon jalusta
+- **Tilanne (esittely):** Kellon varjossa Vera koputtaa pronssia rystysillään. "Sukuni valoi kelloja, ja tämä on meidän surumme: kello, joka ei saanut ääntä. Isoisäsi kysyi, voiko soimaton kello silti kertoa jotain. Vastaa hänen kysymykseensä, niin näytän, mitä se kertoo."
+- **Kysymys:** Miten Tsaarinkello sai kylkeensä valtavan lohkeaman?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Sammutusvesi osui kuumaan pronssiin, ja kylki halkesi
+- **Väärät vaihtoehdot:**
+  - Kello putosi nostettaessa ja iskeytyi kiveykseen
+  - Ensimmäinen pakkastalvi halkaisi jäähtyvän valun
+  - Liian raskas kieli murskasi kyljen ensimmäisellä lyönnillä
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Odessa (odessa)
+
+- **Maa:** Ukraina
+- **Hahmo:** Fjodor — Lyhdynsytyttäjä Fjodor sytyttää portaikon lyhdyt joka ilta alhaalta ylös ja sammuttaa ne aamulla ylhäältä alas.
+- **Kohtaamispaikka:** Portaikon puolivälin tasanne
+- **Tilanne (esittely):** Tasanteella Fjodor nojaa lyhtytankoonsa. "Solmun sitoi kirjasi omistaja isoisoisäni nähden — ja sinä iltana hän jätti tämän yhden lyhdyn sytyttämättä. Meillä sanotaan: valo säästetään sille, joka vielä nousee portaat. Vastaa, niin sytytän sen nyt."
+- **Kysymys:** Montako askelmaa Odessan jättiläisportaikossa on?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Vajaat kaksisataa
+- **Väärät vaihtoehdot:**
+  - Tasan sata
+  - Yli viisisataa
+  - Kolmekymmentäkolme
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Oslo (oslo)
+
+- **Maa:** Norja
+- **Hahmo:** Sigrid — Talonpoika Sigrid viljelee peltoa, jonka laidalla laivakumpu on ollut hänen sukunsa vartiossa satoja vuosia.
+- **Kohtaamispaikka:** Jellhaugen, Halden
+- **Tilanne (esittely):** Kummun juurella Sigrid nojaa talikkoonsa. "Isoisäsi leiriytyi tähän kolmeksi yöksi ja lupasi, ettei kaiva — sillä ehdolla suku näytti hänelle jotain. Vastaa hänen kysymykseensä, niin näytän saman sinulle."
+- **Kysymys:** Kummuista nostetut viikinkilaivat ovat säilyneet lähes ehjinä. Mikä ne säilytti?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Tiivis savimulta, joka sulki ilman pois puun ympäriltä
+- **Väärät vaihtoehdot:**
+  - Terva, jolla laivat siveltiin ennen hautaamista
+  - Pohjolan ikirouta, joka piti kummun jäässä
+  - Suolavesi, joka kyllästi tammilankut kiven koviksi vuosisadoiksi
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Pietari (pietari)
+
+- **Maa:** Venäjä
+- **Hahmo:** Dmitri — Sillanhoitaja Dmitri nostaa joen sillan joka yö ja laskee sen aamuksi, kuten hänen sukunsa on tehnyt siltojen alusta asti.
+- **Kohtaamispaikka:** Palatsisilta
+- **Tilanne (esittely):** Koneiston äärellä Dmitri pitelee vipua. "Kirjaan merkitään laiva, joka ei ole vielä palannut — isoisäsi pyysi sukuani pitämään sivun auki. Vastaa hänen kysymykseensä, niin käännämme sivua yhdessä."
+- **Kysymys:** Sillat nousevat öisin, sillä joki on kaupungin valtakatu. Millaiselle maalle rakentajat tämän kaupungin pystyttivät?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Nevan suiston soille, tammipaalujen varaan
+- **Väärät vaihtoehdot:**
+  - Graniittiharjulle, joka lohkottiin tasaiseksi
+  - Vanhan merenpohjan hiekalle, joka nousi kuivaksi
+  - Jäätikön jättämälle kivikentälle
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Praha (praha)
+
+- **Maa:** Tšekki
+- **Hahmo:** Tomáš — Lyhdynsytyttäjä Tomáš pitää sukunsa lupauksen: talon kahdeksan kynttilä palaa, kunnes etsijä palaa.
+- **Kohtaamispaikka:** Kultainen kuja
+- **Tilanne (esittely):** Tikkailla lyhdynsytyttäjä Tomáš kohentaa liekkiä. "Isoisäsi herätti tulipalon yönä koko kujan, omamme viimeisenä — savu oli jo portailla. Siitä yöstä talon kahdeksan kynttilä on palanut etsijälle. Vastaa — tämän illan sytytys on sinun."
+- **Kysymys:** Isoisän merkintä jättää kysymättä yhden asian: keisarin ihmeet ovat hajallaan, mutta sali on yhä paikallaan. Kuka kokoelman vei ja milloin?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Ruotsalaiset sotasaaliina vuonna 1648
+- **Väärät vaihtoehdot:**
+  - Napoleonin joukot Pariisiin vuonna 1805
+  - Linnanmäen tulipalo tuhosi sen vuonna 1541
+  - Kaupunki myi sen tasavallan alkaessa 1918
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Riika (riika)
+
+- **Maa:** Latvia
+- **Hahmo:** Ilze — Kultaaja Ilze uudistaa tornikukkojen kultauksen, kun myrskyt ovat sen syöneet — sukunsa viidentenä.
+- **Kohtaamispaikka:** Vanhankaupungin apteekki
+- **Tilanne (esittely):** Pajassaan Ilze silittää kultalehteä siveltimellä. "Kun sukuni kultasi kukon isoisäsi aikana, lehtien alle jäi jotain, mikä ei ollut kultaa. Se on siellä yhä. Vastaa hänen kysymykseensä, niin nousemme katsomaan."
+- **Kysymys:** Riian vanhat tornikukot maalattiin kahdella värillä: kylki kultaa, kylki mustaa. Miksi?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Väristä näki kaukaa, mistä tuuli käy
+- **Väärät vaihtoehdot:**
+  - Musta kylki suojasi kultausta meren suolalta
+  - Kaksi kiltaa kustansi kumpikin oman kylkensä
+  - Tumma kylki ei houkutellut salamoita ukkosella
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Rooma (rooma)
+
+- **Maa:** Italia
+- **Hahmo:** Enzo — Suihkulähteenhoitaja Enzo nostaa Trevin kolikot talteen joka viikko, kuten hänen isänsä ja isoisänsä nostivat.
+- **Kohtaamispaikka:** Aventinuksen avaimenreikä
+- **Tilanne (esittely):** Enzo kääntelee vanhaa kolikkoa hansikkaassa kädessään. "Tämä nousee altaasta yhä uudelleen, vaikka panen sen talteen. Isäni sanoi: älä kysy keneltä, kysy miksi. Vastaa tavan kysymykseen, niin kolikko on sinun."
+- **Kysymys:** Mitä tarun mukaan tapahtuu, kun heittää kolikon Trevin suihkulähteeseen olkapään yli?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Palaat vielä Roomaan
+- **Väärät vaihtoehdot:**
+  - Saat vuoden onnea
+  - Toiveesi toteutuu heti
+  - Löydät aarteen
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Rovaniemi (lappi)
+
+- **Maa:** Suomi
+- **Hahmo:** Aslak — Poromies Aslak lukee hangen jäljet kuin kirjaa ja seuraa tokkaansa tulien alla talvet läpeensä.
+- **Kohtaamispaikka:** Rovaniemi (ei erillistä kohtaamispistettä merkitty datassa — kohtaaminen sijoittuu kaupungin laatalle)
+- **Tilanne (esittely):** Nuotiolla Aslak kaataa kuksaan kuumaa. "Isoisäsi hiihti sukuni matkassa kolme päivää ja kysyi tulista joka ilta. Viimeisenä iltana hän kysyi yhden, johon kukaan ei osannut vastata. Vastaa siihen, niin hiihdämme aamulla jäljet päähän asti."
+- **Kysymys:** Mikä revontulet tieteen mukaan sytyttää?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Auringon hiukkaset, jotka törmäävät ilmakehän kaasuihin
+- **Väärät vaihtoehdot:**
+  - Kuunvalo, joka taittuu yläilmojen jääkiteistä
+  - Salamat, jotka jäävät talven ajaksi loimottamaan yläilmoihin
+  - Jäätyneen meren heijastus taivaankannessa
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Sarajevo (sarajevo)
+
+- **Maa:** Bosnia ja Hertsegovina
+- **Hahmo:** Emir — Kupariseppä Emir takoo kannuja ja kuppeja kujalla, jolla hänen sukunsa paja on soinut kolmesataa vuotta.
+- **Kohtaamispaikka:** Latinska ćuprija
+- **Tilanne (esittely):** Pajan ovella Emir kääntelee kuparilevyä pihdeissään. "Isoisäsi tilasi sukuni pajasta kaksi kuppia — toisen hän vei, toinen jäi odottamaan. Vastaa hänen kysymykseensä, niin haen sen hyllyltä."
+- **Kysymys:** Sarajevon kuparisepät takovat astiaa, joka kuuluu kaupungin kahvipöytään. Mikä se on?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Pitkävartinen pannu, jossa kahvi keitetään vaahtoavaksi
+- **Väärät vaihtoehdot:**
+  - Kaksipohjainen kannu, joka pitää juoman lämpimänä iltaan
+  - Hunajakattila, jonka kansi soi kuin pieni kello
+  - Vesikannu, joka viilentää juoman kuparin kautta
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Sisilia (sisilia)
+
+- **Maa:** Italia
+- **Hahmo:** Rosalia — Nukketeatterin mestari Rosalia liikuttaa ritarinukkeja, joiden haarniskat hänen sukunsa on takonut neljässä polvessa.
+- **Kohtaamispaikka:** Sisilia (ei erillistä kohtaamispistettä merkitty datassa — kohtaaminen sijoittuu kaupungin laatalle)
+- **Tilanne (esittely):** Näyttämön takana Rosalia ripustaa ritarin naulaansa. "Isoisäsi istui katsomossa kolme iltaa peräkkäin — ja neljäntenä hän toi meille nuken, jonka tarinaa ei ole vielä esitetty. Vastaa hänen kysymykseensä, niin nostan sen naulasta."
+- **Kysymys:** Sisilian nukketeatterin ritarinuket taistelevat näyttämöllä ilta toisensa jälkeen. Kenen tarinoita ne esittävät?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Kaarle Suuren ritarien, etunenässä Rolandin
+- **Väärät vaihtoehdot:**
+  - Kuningas Arthurin pyöreän pöydän ritarien
+  - Odysseuksen pitkän kotimatkan vaiheita
+  - Normannikuninkaiden valloitusretkiä
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Sofia (sofia)
+
+- **Maa:** Bulgaria
+- **Hahmo:** Nadia — Lähteenvartija Nadia täyttää kaupunkilaisten kannut kuumasta lähteestä ja tuntee jokaisen suonen kaupungin alla.
+- **Kohtaamispaikka:** Vasil Levskin muistomerkki
+- **Tilanne (esittely):** Höyryn keskellä Nadia laskee kauhansa. "Yksi rivi vihkoissamme on vieraalla käsialalla — isoisäsi kävi kirjaamassa lukemat sinä viikkona, jona kirjaaja makasi kuumeessa, ettei sarjaan tulisi aukkoa. Vastaa hänen kysymykseensä, niin näytän sen rivin."
+- **Kysymys:** Sofian lähteet houkuttivat rakentajia jo ennen bulgaareja. Ketkä rakensivat kylpylänsä näiden lähteiden ääreen?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Roomalaiset
+- **Väärät vaihtoehdot:**
+  - Viikingit
+  - Foinikialaiset
+  - Ristiretkeläiset
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Tallinna (tallinna)
+
+- **Maa:** Viro
+- **Hahmo:** Kristjan — Tornimestari Kristjan rasvaa Vana Toomasin laakerit ja nousee torniin joka myrskyn jälkeen katsomaan, että vahti kääntyy yhä.
+- **Kohtaamispaikka:** Raatihuoneen torni
+- **Tilanne (esittely):** Tornin portaissa Kristjan kantaa öljykannua. "Vana Toomas on kääntynyt tuuleen kolmesataa vuotta — mutta kerran se osoitti vastatuuleen kokonaisen päivän, ja se päivä on kirjattu. Isoisäsi päivä. Vastaa hänen kysymykseensä, niin näytän kirjauksen."
+- **Kysymys:** Tarun mukaan nuori Toomas voitti kilpailun, mutta palkinto jäi saamatta. Minkä kilpailun?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Kevätjuhlan jousiammunnan — puisen papukaijan tangosta
+- **Väärät vaihtoehdot:**
+  - Laivojen suuren kilpapurjehduksen Suomenlahden myrskyssä
+  - Raatihuoneen suuren shakkiturnauksen
+  - Painin, jossa kaatui itse raatimieskin
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Tromssa (tromssa)
+
+- **Maa:** Norja
+- **Hahmo:** Ingrid — Satamavahti Ingrid pitää keskiyön auringon aikaan kirjaa saapuvista laivoista, koska yö ei sitä tee.
+- **Kohtaamispaikka:** Tromssa (ei erillistä kohtaamispistettä merkitty datassa — kohtaaminen sijoittuu kaupungin laatalle)
+- **Tilanne (esittely):** Laiturin päässä Ingrid sulkee lokikirjansa. "Isoisoisäni sytytti tuon lyhdyn yönä, jona isoisäsi laiva lähti yöttömään yöhön, ja suku sytyttää sen yhä: sammutetaan, kun tieto tulee. Vastaa, niin lasken lyhdyn alas ja sammutamme sen yhdessä."
+- **Kysymys:** Tromssa sai 1800-luvulla lempinimen, joka hämmästytti etelän vieraita. Minkä?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Pohjolan Pariisi
+- **Väärät vaihtoehdot:**
+  - Jäämeren portti
+  - Valaiden satama
+  - Kaamoksen kaupunki
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Tukholma (tukholma)
+
+- **Maa:** Ruotsi
+- **Hahmo:** Astrid — Lyhdynsytyttäjä Astrid hoitaa kapeimman kujan ainoaa lyhtyä ja tyhjentää ovettoman talon postiluukun — minne, sitä hän ei kerro.
+- **Kohtaamispaikka:** Skeppsbronin laituri
+- **Tilanne (esittely):** Kujan portailla Astrid suojaa liekkiä kämmenellään. "Luukku on sukuni vastuulla: kirje viedään sille, jonka nimi paperissa lukee — vaikka odottaisi sata vuotta. Vastaa kirjan kysymykseen, niin annan sinulle sinun kirjeesi."
+- **Kysymys:** Tukholman vanhassakaupungissa on Ruotsin kapein kuja, Mårten Trotzigin kuja. Kuinka kapea se kapeimmillaan on?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Alle metrin — noin 90 senttiä
+- **Väärät vaihtoehdot:**
+  - Noin kolme metriä — kärrytien verran
+  - Puolitoista metriä — kaksi kulkijaa rinnakkain
+  - Viisi metriä — tavallisen kadun leveys
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Varsova (varsova)
+
+- **Maa:** Puola
+- **Hahmo:** Jadwiga — Kalastaja Jadwiga paikkaa verkkoja Veikselin rannalla ja laulaa työlauluja, joita ei osaa enää kukaan muu.
+- **Kohtaamispaikka:** Antikvariaatti Kuninkaiden talon kulmalla
+- **Tilanne (esittely):** Jadwiga solmii verkon silmää katsettaan nostamatta. "Suvussani sanotaan: mereneito lupasi puolustaa kaupunkia, koska kalastaja päästi hänet vapaaksi. Isoisäsi kirjoitti lupauksen muistiin. Vastaa hänen kysymykseensä, niin kerron minne."
+- **Kysymys:** Varsovan mereneidolla on tarun mukaan sisar, joka ui toiseen kaupunkiin. Minne?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** Kööpenhaminaan
+- **Väärät vaihtoehdot:**
+  - Venetsian kanaaleihin
+  - Pietariin
+  - Tukholman saaristoon
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
+## Wien (wien)
+
+- **Maa:** Itävalta
+- **Hahmo:** Anton — Suntio Anton hoitaa holvien kynttilät ja saattajien kirjaa, jossa on sekä Horation että hänen isoisänsä nimi.
+- **Kohtaamispaikka:** Stephansdomin katakombit
+- **Tilanne (esittely):** Holvien suulla suntio Anton nostaa kynttilänsammuttimen olalleen. "Saattajien kirjassa on isoisäsi nimi: he laskeutuivat kolmen lyhdyn kanssa, ja ylös palasi kaksi. Vastaa hänen kysymykseensä, niin kerron, minne kolmas jäi."
+- **Kysymys:** Isoisän merkintä laskee päivät muttei sano päivämäärää: pörssi kaatui kahdeksan päivää maailmannäyttelyn avajaisten jälkeen. Minä päivänä miehet itkivät kadulla?
+- **Oikea vastaus (EI SAA NÄKYÄ KUVASSA):** 9. toukokuuta 1873
+- **Väärät vaihtoehdot:**
+  - 1. toukokuuta 1873
+  - 8. kesäkuuta 1873
+  - 17. syyskuuta 1873
+- **Kuva:** Ei vielä tarkistettua kuvaa
+
 ## 3.9.2026 13:15 UTC — FABLE → KUVAPUTKI: kohtaamiskuvien 29 kaupungin jono — missä mennään?
 
 Omistaja kysyi tänään, onko uusia kohtaamiskuvia tullut ("ne voisi sitten vaihtaa peliin kun ne tulee"). Pelissä on yhä 2.9. hyväksytyt 16 (12 kaupunkia aktiivisina); 29 kaupungin jono (2.9. 18:25 UTC -viesti, mm. Ateena, Sofia, Lontoo, Rooma, Wien) ei ole tuottanut vielä yhtään erää. Pyyntö: kerro jonon tilanne ja toimita valmistuvat kuvat erä kerrallaan (10 kpl) yksityiseen arviointiin omistajan hyväksyttäväksi — briefin kysymys- ja vastaussäännöillä (posti 2.9. 16:30 UTC). Kiireellisyysjärjestys ennallaan: isoisän valokuvat 1873 ja sähkösanoman lomakepohja ensin (lomakkeen kytkentä on pelissä valmiina v1497:stä alkaen: kohtaamiset/kuvitus/sahke-lomake-1873-v1.png otetaan käyttöön automaattisesti kun se on ämpärissä), sitten kohtaamiskuvat rinnan ihmekuvien kanssa. Kytken jokaisen hyväksytyn erän versionumerolla kuten ennenkin.
