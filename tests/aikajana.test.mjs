@@ -407,8 +407,16 @@ test('jokaisella pysäkillä on generoitu muotokuva omassa kansiossaan', () => {
       assert.ok(k.osoite.startsWith(`${KEKSINTO_KUVAJUURI}/muotokuva/`),
         `${t.otsikko}: muotokuva väärässä kansiossa (${k.osoite})`);
       assert.match(k.osoite, /\/\d{4}-[a-z-]+\.jpg$/, `${t.otsikko}: muotokuvan nimi ${k.osoite}`);
-      assert.match(k.selite, /, kuvaputken generoitu studiomuotokuva \(2026\)\.$/,
-        `${t.otsikko}: muotokuvan selite ${k.selite}`);
+      if (t.henkilojuttu) {
+        // Tiedeliitteen pilotti (omistaja 3.9.2026): selite kuvaa persoonaa,
+        // lähde on sama alleviivattu maininta kuin ilmiökuvissa.
+        assert.ok(k.selite.length > 40, `${t.otsikko}: persoonakuvaus puuttuu`);
+        assert.doesNotMatch(k.selite, /studiomuotokuva/, `${t.otsikko}: selite ei saa nimetä kuvaputkea`);
+        assert.equal(k.lahde, 'Matkakirjan havainnekuva', `${t.otsikko}: muotokuvan lähde`);
+      } else {
+        assert.match(k.selite, /, kuvaputken generoitu studiomuotokuva \(2026\)\.$/,
+          `${t.otsikko}: muotokuvan selite ${k.selite}`);
+      }
     }
   }
 });

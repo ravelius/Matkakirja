@@ -127,10 +127,19 @@ export const KEKSINNOT = [
       + 'vuonna 1873 Wattin patentin vanhenemisesta oli kulunut 73 vuotta, '
       + 'ja hänen koneensa jälkeläiset vetivät jo junia ja laivoja koko '
       + 'Euroopassa.',
+    /*
+     * MUOTOKUVAN KUVATEKSTI (omistaja 3.9.2026 ilta, Tiedeliitteen pilotti:
+     * "tässä pitäisi kuvailla hieman hänen persoonaa ja lopussa vain
+     * 'matkakirjan havainnekuva'"): selite on lyhyt luonnekuva, lähde
+     * sama alleviivattu maininta kuin ilmiökuvissa (avaa havainnekuvan
+     * selityksen). Fable kirjoittaa henkilojuttu-tekstin pohjalta.
+     */
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1769-james-watt.jpg`,
-      selite: 'James Watt, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'James Watt oli hiljainen ja perusteellinen mies, joka pelkäsi '
+        + 'epäonnistumista ja hioi jokaista yksityiskohtaa vuosikausia. Hän ei '
+        + 'pitänyt itseään keksijänä vaan parantelijana.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Watt James von Breda.jpg', selite: 'James Watt, Carl Frederik von Bredan maalaus 1792.' },
     ilmio: {
