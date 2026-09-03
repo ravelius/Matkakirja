@@ -115,6 +115,19 @@ export const MAKS_TAVUT = 90 * 1024;
  * (`aikajana/keksinnot/muotokuva/pieni/`), jotta osoitteen saa yhä
  * suoraan alkuperäisestä eikä kahden nimen välillä tarvita listaa.
  */
+/*
+ * KARUSELLIKOKO JA VALMIIKSI SUMENNETTU (omistaja 3.9.2026: *"pyörisikö
+ * alareunan kuvakaruselli paremmin, jos kuvat pienentäisi valmiiksi
+ * tätä näkymää varten?"* ja *"kannattaisiko blurratut kuvat renderöidä
+ * pieneen kokoon myös nopeutusta varten?"*). Muotokuvista (alikansio
+ * muotokuva) tehdään pienen 640 px:n lisäksi kaksi versiota:
+ *   karuselli/<runko>.webp  400 px leveä, terävä (kortti 2× tiheydellä)
+ *   sumea/<runko>.webp      400 px leveä, gblur — tulevien korttien kuva
+ * Kortit eivät silloin käytä CSS-suodatinta lainkaan (js/aikajana.js
+ * asettele vaihtaa terävän ja sumean tiedoston).
+ */
+export const KARUSELLIN_LEVEYS = 400;
+export const SUMENNUS_SIGMA = 2.6;
 export const AMPARIN_KANSIO = 'aikajana/keksinnot/pieni';
 /** Alkuperäisten kansio ämpärissä — pieni versio ei saa mennä sen päälle. */
 const LAHTEEN_KANSIO = 'aikajana/keksinnot';
@@ -214,6 +227,28 @@ export async function keraaKuvat() {
 }
 
 /** --vain sietää sekä rungon että tiedostonimen päätteineen. */
+/**
+ * Muotokuvan lisäversiot karusellia varten (ks. KARUSELLIN_LEVEYS).
+ * Muille kuville (ilmiökuvat) ei tehdä lisäversioita: ne näkyvät vain
+ * paneelissa, johon pieni 640 px riittää.
+ */
+export function variantit(kuva) {
+  if (kuva.alikansio !== 'muotokuva') return [];
+  const kansio = `${LAHTEEN_KANSIO}/${kuva.alikansio}`;
+  return [
+    {
+      nimi: 'karuselli', leveys: KARUSELLIN_LEVEYS, sumennus: 0,
+      avain: `${kansio}/karuselli/${kuva.runko}.webp`,
+      kansio: `media/${kansio}/karuselli`, tiedosto: `${kuva.runko}.webp`,
+    },
+    {
+      nimi: 'sumea', leveys: KARUSELLIN_LEVEYS, sumennus: SUMENNUS_SIGMA,
+      avain: `${kansio}/sumea/${kuva.runko}.webp`,
+      kansio: `media/${kansio}/sumea`, tiedosto: `${kuva.runko}.webp`,
+    },
+  ];
+}
+
 export function suodata(kuvat, vain) {
   if (!vain) return kuvat;
   const haettu = vain.replace(/\.(jpg|jpeg|png|webp)$/i, '');
@@ -298,10 +333,11 @@ async function nouda(osoite, kohde) {
  * korkeuden; libwebp koodaa lopun. `-frames:v 1` estää ffmpegiä
  * tekemästä animoitua WebPiä yhdestä ruudusta.
  */
-function pienenna(lahde, kohde) {
+function pienenna(lahde, kohde, { leveys = LEVEYS, sumennus = 0 } = {}) {
+  const suodatin = `scale=${leveys}:-2:flags=lanczos${sumennus > 0 ? `,gblur=sigma=${sumennus}` : ''}`;
   aja('ffmpeg', [
     '-y', '-v', 'error', '-i', lahde,
-    '-vf', `scale=${LEVEYS}:-2:flags=lanczos`,
+    '-vf', suodatin,
     '-frames:v', '1',
     '-c:v', 'libwebp', '-preset', 'photo',
     '-quality', String(LAATU), '-compression_level', '6',
@@ -310,11 +346,11 @@ function pienenna(lahde, kohde) {
 }
 
 /** Valmiin pienen version tarkistukset: leveys ja koko. */
-function tarkista(kohde) {
+function tarkista(kohde, odotettuLeveys = LEVEYS) {
   const { leveys, korkeus } = mitat(kohde);
   const tavut = statSync(kohde).size;
   const virheet = [];
-  if (leveys !== LEVEYS) virheet.push(`leveys ${leveys} px, odotettiin ${LEVEYS}`);
+  if (leveys !== odotettuLeveys) virheet.push(`leveys ${leveys} px, odotettiin ${odotettuLeveys}`);
   if (tavut > MAKS_TAVUT) {
     virheet.push(`koko ${(tavut / 1024).toFixed(0)} kt ylittää katon `
       + `${(MAKS_TAVUT / 1024).toFixed(0)} kt`);
@@ -445,12 +481,31 @@ async function main() {
         virheita += 1;
         continue;
       }
+      // Karusellin versiot muotokuvista: terävä ja valmiiksi sumennettu.
+      let variantitKunnossa = true;
+      for (const v of variantit(kuva)) {
+        mkdirSync(resolve(JUURI, v.kansio), { recursive: true });
+        vaadiGitignore(v.kansio);
+        const vKohde = join(resolve(JUURI, v.kansio), v.tiedosto);
+        pienenna(lahde, vKohde, { leveys: v.leveys, sumennus: v.sumennus });
+        const vTulos = tarkista(vKohde, v.leveys);
+        console.log(`   ${v.nimi}: ${vTulos.leveys}×${vTulos.korkeus}, `
+          + `${(vTulos.tavut / 1024).toFixed(0)} kt → ${vKohde}`);
+        if (vTulos.virheet.length) {
+          for (const virhe of vTulos.virheet) console.error(`   VIRHE (${v.nimi}): ${virhe}`);
+          variantitKunnossa = false;
+        }
+      }
+      if (!variantitKunnossa) { virheita += 1; continue; }
       valmiit.push(kuva);
     }
 
     if (liput.vienti) {
       for (const kuva of valmiit) {
         vieAmpariin(join(resolve(JUURI, kuva.kansio), kuva.tiedosto), kuva.avain);
+        for (const v of variantit(kuva)) {
+          vieAmpariin(join(resolve(JUURI, v.kansio), v.tiedosto), v.avain);
+        }
       }
     }
   } finally {
@@ -463,7 +518,7 @@ async function main() {
     for (const kuva of valmiit) console.log(`  ${join(resolve(JUURI, kuva.kansio), kuva.tiedosto)}`);
   } else {
     console.log('Julkiset osoitteet:');
-    for (const kuva of valmiit) {
+    for (const kuva of valmiit.flatMap((k) => [k, ...variantit(k)])) {
       // eslint-disable-next-line no-await-in-loop
       const { url, koodi, tavut } = await tarkistaJulkinen(kuva.avain);
       const kunnossa = koodi === 200;

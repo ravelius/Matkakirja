@@ -323,7 +323,7 @@
    * transform ja opacity liukuvat — molemmat pelkkiä koostamiskerroksen
    * töitä. contain rajaa kortin maalauksen omaan laatikkoonsa.
    */
-  filter: blur(var(--sumennus));
+  /* Sumennus tulee valmiiksi sumennetusta tiedostosta (js asettele), ei suodattimesta. */
   transition:
     transform var(--aikajana-kesto) var(--aikajana-kaari),
     opacity var(--aikajana-kesto) var(--aikajana-kaari);
@@ -340,11 +340,11 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.42), 0 0 0 2px rgba(217, 161, 59, 0.55);
 }
 /* Menneet (jo nähdyt): TARKKOJA, pelkkä pienuus ja vaimeus. */
-.aikajana-kortti.mennyt { filter: saturate(0.85); }
+.aikajana-kortti.mennyt { }
 /* Tulevat: kevyt sumennus (js asettaa --sumennus) — omistajan oikaisu 3.9.2026. */
-.aikajana-kortti.tuleva { filter: blur(var(--sumennus)) saturate(0.8); }
+.aikajana-kortti.tuleva { opacity: calc(var(--himmeys) * 0.92); }
 /* Reunan takana: oikea paikka tallella, jotta sisääntulo liukuu; ei suodatinta turhaan. */
-.aikajana-kortti.piilossa { pointer-events: none; filter: none; }
+.aikajana-kortti.piilossa { pointer-events: none; }
 .aikajana-kortti.paalu { background: #2a2119; border-style: dashed; }
 
 /*

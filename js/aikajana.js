@@ -334,6 +334,29 @@ export function pieniOsoite(osoite) {
  */
 export const PIENEN_KATTO = 640;
 
+/*
+ * KARUSELLIN KUVAT VALMIIKSI PIENINÄ JA SUMENNETTUINA (omistaja 3.9.2026,
+ * Raamattu: KARUSELLIN KUVAT VALMIIKSI PIENINA). Muotokuvista on ämpärissä
+ * kaksi 400 px:n versiota (tools/tee-pienet-kuvat.mjs variantit):
+ * karuselli/ (terävä) ja sumea/ (gblur). Kortti näyttää tulevalle
+ * pysäkille sumean tiedoston ja muille terävän, joten CSS-suodatinta ei
+ * tarvita — liuku ja suurennus ovat pelkkää siirtoa ja läpinäkyvyyttä.
+ * Puuttuva versio putoaa pieneen (640) ja siitä alkuperäiseen.
+ */
+export const KARUSELLIN_KATTO = 400;
+
+/** Muotokuvan karusellikokoinen osoite; muille kuin muotokuville pieni. */
+export function karuselliOsoite(osoite, versio = 'karuselli') {
+  const pieni = pieniOsoite(osoite);
+  if (typeof pieni !== 'string' || !/\/muotokuva\/pieni\//.test(pieni)) return pieni;
+  return pieni.replace('/muotokuva/pieni/', `/muotokuva/${versio}/`);
+}
+
+/** Valmiiksi sumennettu karusellikuva (vain muotokuvat). */
+export function sumeaOsoite(osoite) {
+  return karuselliOsoite(osoite, 'sumea');
+}
+
 /**
  * Ämpärikuva elementtiin: pieni versio ensin, alkuperäinen VARANA
  * KERRAN. Kertaluontoinen kuuntelija (`once`) on tässä olennainen:
@@ -341,10 +364,31 @@ export const PIENEN_KATTO = 640;
  */
 function asetaAmpariKuva(kuva, osoite, leveys) {
   const pieni = leveys <= PIENEN_KATTO ? pieniOsoite(osoite) : osoite;
-  if (pieni !== osoite) {
-    kuva.addEventListener('error', () => { kuva.src = osoite; }, { once: true });
+  const karuselli = leveys <= KARUSELLIN_KATTO ? karuselliOsoite(osoite) : pieni;
+  /*
+   * Kortin kuva kantaa molemmat karuselliversiot: asettele vaihtaa
+   * terävän ja sumean välillä pysäkin mukaan (ei CSS-suodatinta).
+   * Varareitit kerran kumpikin: karuselli → pieni → alkuperäinen.
+   */
+  if (karuselli !== pieni) {
+    kuva.dataset.terava = karuselli;
+    kuva.dataset.sumea = sumeaOsoite(osoite);
+    kuva.dataset.vara = pieni;
   }
-  kuva.src = pieni;
+  if (pieni !== osoite) {
+    kuva.addEventListener('error', () => {
+      if (kuva.dataset.vara && kuva.src !== kuva.dataset.vara) {
+        delete kuva.dataset.terava;
+        delete kuva.dataset.sumea;
+        kuva.src = kuva.dataset.vara;
+        delete kuva.dataset.vara;
+        kuva.addEventListener('error', () => { kuva.src = osoite; }, { once: true });
+        return;
+      }
+      kuva.src = osoite;
+    }, { once: true });
+  }
+  kuva.src = karuselli;
 }
 
 /** Kuva pergamentille; ilman lähdettä nimikirjainlaatta. */
@@ -1081,7 +1125,11 @@ class Aikajana {
     const osoitteet = [];
     for (const t of this.tapahtumat) {
       for (const kuva of [t.kuva, t.kuvaToinen, t.ilmio, t.ilmioLisa]) {
-        if (kuva?.osoite) osoitteet.push(pieniOsoite(kuva.osoite));
+        if (!kuva?.osoite) continue;
+        osoitteet.push(pieniOsoite(kuva.osoite));
+        // Muotokuvista myös karusellin terävä ja sumea versio.
+        const karuselli = karuselliOsoite(kuva.osoite);
+        if (karuselli !== pieniOsoite(kuva.osoite)) osoitteet.push(karuselli, sumeaOsoite(kuva.osoite));
       }
     }
     esilataaKuvat(osoitteet);
@@ -1209,6 +1257,11 @@ class Aikajana {
       kortti.style.setProperty('--himmeys', himmeys.toFixed(2));
       kortti.style.setProperty('--sumennus', `${sumennus.toFixed(2)}px`);
       kortti.style.zIndex = String(jarjestys);
+      // Tuleva pysäkki näyttää valmiiksi sumennetun tiedoston, muut terävän.
+      for (const img of kortti.querySelectorAll('img[data-terava]')) {
+        const haluttu = luokka === 'tuleva' ? img.dataset.sumea : img.dataset.terava;
+        if (haluttu && img.getAttribute('src') !== haluttu) img.src = haluttu;
+      }
       const piilossa = luokka === 'piilossa';
       kortti.setAttribute('aria-hidden', piilossa ? 'true' : 'false');
       kortti.tabIndex = piilossa ? -1 : 0;

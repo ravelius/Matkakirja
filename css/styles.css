@@ -5806,6 +5806,22 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   pointer-events: none;
 }
 
+/*
+ * Kortti irti valkoisesta taustasta (omistaja 3.9.2026): clip-path
+ * leikkaa JPG:n valkoiset reunat pois ja skaala täyttää elementin
+ * kortilla. Muuttujat tulevat js/isoisan-valokuvat.js rajausTyyli.
+ */
+.isoisa-rajattu {
+  clip-path: inset(
+    calc(var(--ry0, 0) * 100%)
+    calc((1 - var(--rx1, 1)) * 100%)
+    calc((1 - var(--ry1, 1)) * 100%)
+    calc(var(--rx0, 0) * 100%)
+  );
+}
+.intro-valokuva.isoisa-rajattu { transform: rotate(7deg) scale(var(--rskaala, 1)); }
+.lento-valokuva .isoisa-rajattu { transform: scale(var(--rskaala, 1)); }
+
 .intro.intro-fade { opacity: 0; }
 
 /*

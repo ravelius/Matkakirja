@@ -1,7 +1,7 @@
 // Käyttöliittymä: aarrekartan piirto, ohjauspaneeli, tietovisa ja bottien ohjaus.
 
 import { pixelOf, pointAlong, posKey } from './rules.js';
-import { ISOISAN_VALOKUVAT, LENNON_VALOKUVAN_VIIVE_MS } from './isoisan-valokuvat.js';
+import { ISOISAN_VALOKUVAT, LENNON_VALOKUVAN_VIIVE_MS, rajausTyyli } from './isoisan-valokuvat.js';
 import {
   chooseDuelAnswer,
   chooseMove,
@@ -19057,6 +19057,8 @@ export class UI {
     valokuva.alt = ISOISAN_VALOKUVAT.bombay.selite;
     valokuva.decoding = 'async';
     valokuva.draggable = false;
+    valokuva.className = 'isoisa-rajattu';
+    valokuva.style.cssText = rajausTyyli(ISOISAN_VALOKUVAT.bombay);
     valokuvaNappi.appendChild(valokuva);
     valokuvaNappi.addEventListener('pointerdown', (e) => e.stopPropagation());
     valokuvaNappi.addEventListener('click', (e) => {
