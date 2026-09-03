@@ -743,6 +743,11 @@ class Aikajana {
     this.juuri = solmu('div', 'aikajana');
     this.juuri.setAttribute('role', 'region');
     this.juuri.setAttribute('aria-label', this.kaari.otsikko);
+    // 0. Vinjetti peli-ikkunan reunoille: juuressa, ei kartan kuoressa,
+    // joten se ei liiku kartan mukana (omistaja 3.9.2026 ilta).
+    this.vinjetti = solmu('div', 'aikajana-vinjetti');
+    this.vinjetti.setAttribute('aria-hidden', 'true');
+    this.juuri.appendChild(this.vinjetti);
 
     // 1. Kello ja ohjaimet
     const ylarivi = solmu('div', 'aikajana-ylarivi');
@@ -897,8 +902,10 @@ class Aikajana {
     this.paivitaMittakaava();
     (ui.nipistysVastaskaalaajat ??= new Set()).add(this.vastaskaala ??= (suhde) => this.paivitaMittakaava(suhde));
     const tummennus = this.tummennus;
-    if (this.reducedMotion) tummennus.classList.add('paalla');
-    else requestAnimationFrame(() => tummennus.classList.add('paalla'));
+    const vinjetti = this.vinjetti;
+    if (this.reducedMotion) { tummennus.classList.add('paalla'); vinjetti?.classList.add('paalla'); } else {
+      requestAnimationFrame(() => { tummennus.classList.add('paalla'); vinjetti?.classList.add('paalla'); });
+    }
   }
 
   /**

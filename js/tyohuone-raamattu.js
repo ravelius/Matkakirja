@@ -3129,7 +3129,9 @@ export const RAAMATTU = {
           + 'pehmea siirtyma), yhdella kuvalla ei karusellia. Lisays '
           + '(omistaja samana iltana: "havainnekuvalla voisi olla '
           + 'samanlaiset kehykset kuin henkilokuvalla"): Tiedeliitteen '
-          + 'havainnekuvat saavat saman kehyksen kuin kasvokuvat.',
+          + 'havainnekuvat saavat saman kehyksen kuin kasvokuvat, ja '
+          + '(omistaja: "kuvateksti ei saa olla leveampi kuin kuva") '
+          + 'kuvateksti ja lahderivi ovat tasmalleen kuvan levyisia.',
         'KUVAPUTKEN PYYNNOT AINA KIIREELLISINA (omistaja 3.9.2026 ilta, '
           + 'sanatarkasti: "pyyda kuvaputkelta tahan joku pystymuotoinen '
           + 'isoisan matkustus kuva" ja "laita kiireellisena aina tallaiset '
@@ -3141,6 +3143,18 @@ export const RAAMATTU = {
           + 'paikkamerkki); tilaus postissa 3.9. 21:12 UTC, kaanon '
           + 'docs/tarina.md, sama henkilo kuin Kanton/Bombay. Kytketaan, kun '
           + 'omistaja on hyvaksynyt ja kuva on R2:ssa.',
+        'LAMPUT TUMMUVAT, KARTTA TUMMEMPI, VINJETTI IKKUNAN REUNOILLA '
+          + '(omistaja 3.9.2026 ilta, sanatarkasti: "pisteet saisivat tummua '
+          + 'enemman alkuleimahduksen jalkeen, niin uusi paikka erottuu '
+          + 'paremmin kartalla. kartta voisi olla viela asteen tummempi ja '
+          + 'vinjetoitua reunoille. vinjetti pitaa vain tehda niin, etta jos '
+          + 'karttaa liikuttaa, niin vinjetti pysyy edelleen peli-ikkunan '
+          + 'reunoilla eika lahde liikkeelle"): ohitettu lamppu hiipuu '
+          + 'leimahduksen jalkeen matalalle (pallo .32, hehku .22, kajo .18, '
+          + 'maskin reika .45), vain nykyinen on kirkas; tummennus .7; '
+          + 'vinjetti on linssin juuren lapsi karttapaneelissa (ei kartan '
+          + 'kuoressa), joten se pysyy ruudun reunoilla panoroinnissa ja '
+          + 'zoomissa. Toteutettu v1513.',
         'KARUSELLIN KUVAT VALMIIKSI PIENINA (omistaja 3.9.2026 ilta: '
           + '"pyorisiko alareunan kuvakaruselli paremmin, jos kuvat '
           + 'pienentaisi valmiiksi tata nakymaa varten? haluaisin etta kuvat '
