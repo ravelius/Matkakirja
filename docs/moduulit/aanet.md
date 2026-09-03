@@ -176,3 +176,29 @@ API-avain vain ympäristömuuttujana, ei koskaan repoon eikä lokiin.
 Koneellinen tarkistus ei kuule saumaa: raidat **kuunnellaan** ajon
 jälkeen, ja loopin on kierrettävä ilman naksahdusta.
 Leikkauslaskennan vartija on `tests/siirtymaraidat.test.mjs`.
+
+## Kehittäjän voimakkuussäätimet (omistaja 3.9.2026)
+
+Omistaja: *"kehittäjätilaan saisi hammasrattaan alle laittaa
+äänenvoimakkuus säätimet taustaäänen ja taustamusiikin voimakkuuksille
+(+/- arvot nykyisille arvoille)"*.
+
+`js/kehittajan-voimat.js` pitää kahta kerrointa (`tausta`, `musiikki`),
+oletus 1,0 = pelin nykyinen taso, askel 0,1, rajat 0,25–3,0, tallennus
+localStorageen (`matkakirja-dev-voima-<laji>`). Hammasratasvalikon
+(`#kehittaja-valikko`) kaksi riviä näyttävät arvon (`×1,0`) ja
+säätävät sitä miinus- ja plusnapeilla. Kerroin kerrotaan päälle
+ambienssin tasoon (`js/ambience-stream.js taso`) ja siirtymä- ja
+linssiraitojen tasoon (`js/siirtymamusiikki.js raidanTaso`); molemmat
+kuuntelevat muutosta ja liu'uttavat soivan äänen uuteen tasoon 200 ms:ssa.
+Tavallisella pelaajalla kerroin on aina 1,0.
+
+## Sarajevon äänimaisema (omistaja 3.9.2026)
+
+Omistaja: *"sarajevon taustaäänimaisema pitää vaihtaa koska siinä
+kilkattaa kokoajan kirkonkello"*. Aiempi äänite oli Pyhän Joosefin
+kirkon kellot (aporee_72320_84455). Tilalla saman tallentajan (Haris
+Sahačić, public domain) Ferhadija-kadun kävelykadun hälinä
+(aporee_72317_84452, −31,3 LUFS → voima 0,82) ja Gazi Husrev-begin
+moskeijan edustan suihkulähde (aporee_72314_84448, −33,9 LUFS → voima
+1,11). Mittaukset `tools/aanitasot.json`.

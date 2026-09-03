@@ -8,6 +8,7 @@
 // CC-lisensoituja äänitteitä.
 
 import { sfx } from './sound.js';
+import { kehittajanKerroin, kuunteleKehittajanKerrointa } from './kehittajan-voimat.js';
 import {
   valittuTaiOletus, jaaAlku, tyyppiKori, kaupunkiKori, maaKori,
 } from './aani-ehdokkaat.js';
@@ -177,7 +178,13 @@ const SILMUKKA_RISTI_MS = 2600;
 let nykyinen = null; // { audio, cityId, url, tavoite, vaimennus }
 
 /** Soiva taso: kohdevoimakkuus kerrottuna mahdollisella väistöllä. */
-const taso = (oma) => (oma ? oma.tavoite * (oma.vaimennus ?? 1) : 0);
+const taso = (oma) => (oma ? oma.tavoite * (oma.vaimennus ?? 1) * kehittajanKerroin('tausta') : 0);
+
+// Kehittäjän säädin (js/kehittajan-voimat.js) muuttaa soivan maiseman
+// tason heti: lyhyt liuku, ettei säätö naksu.
+kuunteleKehittajanKerrointa('tausta', () => {
+  if (nykyinen?.audio) haivyta(nykyinen.audio, taso(nykyinen), undefined, 200);
+});
 
 /*
  * --- kompressointi (omistajan toive) ---

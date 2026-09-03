@@ -129,6 +129,7 @@
  *                  syntetisoitu ajossa eikä tiedosto.
  */
 import { AANI_JUURI, aaniUrl } from './media.js';
+import { kehittajanKerroin, kuunteleKehittajanKerrointa } from './kehittajan-voimat.js';
 import { sfx } from './sound.js';
 import { lisaaVaistaja } from './ambience-stream.js';
 
@@ -294,7 +295,13 @@ function lajinVaisto(laji) {
 }
 
 /** Lajin tavoitetaso juuri nyt: oma kerroin kertaa väistö kertaa himmennys. */
-const raidanTaso = (laji) => (RAIDAT[laji]?.voima ?? 0) * lajinVaisto(laji) * ajonHimmennys;
+const raidanTaso = (laji) => (RAIDAT[laji]?.voima ?? 0) * lajinVaisto(laji) * ajonHimmennys
+  * kehittajanKerroin('musiikki');
+
+// Kehittäjän säädin (js/kehittajan-voimat.js): soiva raita seuraa heti.
+kuunteleKehittajanKerrointa('musiikki', () => {
+  if (soiva?.audio) siirtymanLiuku(soiva.audio, raidanTaso(soiva.laji), 200);
+});
 
 /** Sammuttaa soittimen lopullisesti ja vapauttaa sen. */
 function vapautaRaita(audio) {

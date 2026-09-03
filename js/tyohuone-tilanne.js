@@ -92,6 +92,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1502: SARAJEVON AANIMAISEMA - saavu Sarajevoon: kavelykadun halina tai suihkulahde, ei kirkonkelloja. KEHITTAJAN VOIMAKKUUSSAATIMET - hammasratas > taustaaani / taustamusiikki +/-: soiva aani seuraa heti, arvo sailyy sivun latauksen yli (x1,0 = nykyinen taso).',
   'v1501: LIVIA KOMMENTOI MYOS ENSIMMAISESSA KAUPUNGISSA - uusi peli tyhjalla selaimella (tai localStorage-avain matkakirja-livia-paljastus pois): ensimmaisessa kohdekaupungissa Livian tuurauspaljastus tulee ensin ja sen jalkeen matkakirjakommentti osissa samaan pinoon; seuraavissa kaupungeissa kommentti kuten ennen.',
   'v1500: KOHTAAMISET (Eurooppa) - 14 visakysymyksessa oikea vastaus ei ole enaa pisin vaihtoehto (Istanbul, Lontoo, Madrid, Lissabon, Edinburgh, Granada, Krakova, Kiova, Moskova, Riika); Berliinin ja Lapin kohtaamisrepliikki uusiksi; Moskovan, Vilnan ja Sarajevon aarreteksti varioitu. Tukholman ja Berliinin kohtaamiskortilla ei nyt kuvaa (kuva ei vastannut kohtausta; uudet tilattu kuvaputkelta briefin mukaan, jaavat galleriaan).',
   'v1499: AARTEEN PALJASTUS (paikallisaarre, esim. Ateenan hunajaruukku) - tausta on nyt koko ruudun tasainen pergamentti, ei purppuraa laitaa eika valokeilaa, kuvassa ei sateittaista maskia; Jatka matkaa -nappi tumma. Tiedossa: kuvat joiden oma pohja on teksturoitu (esim. Suomen tervatynnyri) erottuvat himmeana nelion sisalla - jos hairitsee, tilataan uudelleen tasaiselle pohjalle.',

@@ -409,6 +409,7 @@ const MODULES = [
    * staattisesti.
    */
   'js/puhe.js',
+  'js/kehittajan-voimat.js',
   'js/ambience-stream.js',
   /*
    * Siirtymämusiikki AMBIENCE-STREAMIN JÄLKEEN: se rekisteröi

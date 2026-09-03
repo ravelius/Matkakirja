@@ -1250,6 +1250,26 @@
       "huippuDb": -3.59,
       "kesto": 168.1,
       "uusiVoima": 0.18
+    },
+    {
+      "url": "https://archive.org/download/aporee_72317_84452/bianuralsoundwalksarajevoferhadijastreet.mp3",
+      "voima": 0.82,
+      "asetettu": true,
+      "esiintymat": 1,
+      "lufs": -31.27,
+      "huippuDb": 0.08,
+      "kesto": 241,
+      "uusiVoima": 0.82
+    },
+    {
+      "url": "https://archive.org/download/aporee_72314_84448/soundoftheshadrvaninfrontofthemosque.mp3",
+      "voima": 1.11,
+      "asetettu": true,
+      "esiintymat": 1,
+      "lufs": -33.91,
+      "huippuDb": -3.24,
+      "kesto": 77,
+      "uusiVoima": 1.11
     }
   ]
 }

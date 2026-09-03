@@ -2875,7 +2875,10 @@ export const RAAMATTU = {
           + 'saadinta - taustaaani ja taustamusiikki - jotka lisaavat tai '
           + 'vahentavat nykyisia voimakkuuksia (+/- suhteessa nykyarvoon, '
           + 'nykyarvo nakyvissa), tallennus localStorageen; vain '
-          + 'kehittajatilassa.',
+          + 'kehittajatilassa. TOTEUTETTU v1502: Sarajevo = Ferhadija-kadun '
+          + 'kavelykatu (0,82) + Gazi Husrev-begin suihkulahde (1,11), '
+          + 'js/kehittajan-voimat.js kertoimet tausta/musiikki 0,25-3,0 '
+          + 'askel 0,1, ambienssi ja siirtymamusiikki seuraavat heti.',
         'KEKSIJAT LINSSIN ALARIVILLA JA TIEDELIITE (omistaja 3.9.2026, '
           + 'sanatarkasti: "nuo henkiloiden kuvat voisi tayttaa koko '
           + 'alarivin niin etta nykyinen henkilo on aina keskella ruutua ja '
