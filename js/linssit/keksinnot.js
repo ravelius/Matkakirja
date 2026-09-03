@@ -31,8 +31,9 @@
  *                 pelin ensisijainen henkilökuva (kortti ja
  *                 ilmiöpaneelin henkilörivi). Omistajan tilaus
  *                 3.9.2026: yhtenäiset, pelkistetyt mutta
- *                 karaktääriset väriset rintakuvat, sama tausta ja
- *                 valo kaikissa. Kansio `muotokuva/` ämpärissä.
+ *                 karaktääriset rintakuvat (toimitettu ja hyväksytty
+ *                 mustavalkoisina), sama tausta ja valo kaikissa.
+ *                 Kansio `muotokuva/` ämpärissä.
  *   `kuvaToinen`  saman pysäkin toinen keksijä samassa muodossa.
  *                 Kolmella pysäkillä on kaksi tekijää (Montgolfier'n
  *                 veljekset, Cooke ja Wheatstone, Lumière'n

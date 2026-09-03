@@ -912,7 +912,8 @@ saa jäädä näkymättä siksi, että pienennysajo on vielä ajamatta.
 ## 8. Keksijöiden muotokuvat ovat pelin henkilökuva (3.9.2026)
 
 Omistajan tilaus 3.9.2026: yhtenäiset, pelkistetyt mutta karaktääriset
-väriset studiorintakuvat kaikille kaaren keksijöille. Kuvaputki toimitti
+studiorintakuvat kaikille kaaren keksijöille (toimitettu ja hyväksytty
+mustavalkoisina). Kuvaputki toimitti
 28 hyväksyttyä pystykuvaa kansioon `aikajana/keksinnot/muotokuva/`
 (vienti `.github/workflows/vie-hyvaksytyt-28-keksijamuotokuvaa-2026-09-03.yml`).
 Pysäkin kuvakentät ovat sen jälkeen nämä:
