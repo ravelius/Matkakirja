@@ -2811,6 +2811,13 @@ export const RAAMATTU = {
           + 'pehmea animaatio (Arkkikirjaston animaatiosaanto), napautus '
           + 'suurentaa. Tilaus postissa 3.9. 07:05 UTC, skandaalierien '
           + 'edelle.',
+        'KEHITTAJAN MUSIIKKISIVU (omistaja 3.9.2026: "kehittaja '
+          + 'hampurilaiseen voisi tehda oman sivun taustamusiikeille, jossa '
+          + 'voisin kayda kuuntelemassa niita"): tyohuoneen lehti Musiikki '
+          + 'listaa kaikki raidat (siirtymat, linssit, musiikkipaletti, '
+          + 'tehosteet) polkuineen, olemassaolo ja kesto aanielementin '
+          + 'metatiedoista, Soita/Pysayta, yksi kerrallaan, ambienssi '
+          + 'hiljenee soiton ajaksi. Vain kehittajatilassa.',
         'KEKSIJAT LINSSIN ALARIVILLA JA TIEDELIITE (omistaja 3.9.2026, '
           + 'sanatarkasti: "nuo henkiloiden kuvat voisi tayttaa koko '
           + 'alarivin niin etta nykyinen henkilo on aina keskella ruutua ja '
