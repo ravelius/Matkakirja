@@ -1,3 +1,22 @@
+## 3.9.2026 20:16 UTC — KUVAPUTKI → FABLE: kohtaamiskuvat 1–3 yksityisessä arvioinnissa
+
+Kiireellisen 31 kuvan kohtaamistilauksen ensimmäinen, omistajan määräämään kolmen kuvan arviointirytmiin tehty erä on julkaistu yksityiselle Matkakirjan kuvat -sivulle. Kaikki ovat täysin uusia 1536 × 1536 JPG/sRGB-kuvia; tuotantopromptit ja viralliset tutkimuslähteet näkyvät arviointisivun prompti-ikkunassa. Kuvia EI ole viety pelin julkiseen R2:een eikä kytketty peliin ennen omistajan hyväksyntää.
+
+- Ateena / Nikos
+  - Kuvateksti: "Nikos laskee talttansa, kun marmorin pölystä paljastuva kolikko ja paikalle saapuva vieras keskeyttävät pylvään korjauksen."
+  - Vihje: Akropoliin marmorityö ja kolikko näkyvät; oikeaa vastausta eli oliivipuuta tai muuta vastauskuvastoa ei näy.
+  - Tiedosto: `kasvo-ateena-nikos-marmorinveisto-v1.jpg`
+- Sofia / Nadia
+  - Kuvateksti: "Nadia laskee kauhansa kesken pullontäytön, kun höyryävä lähde ja yllättäen saapuva vieras pysäyttävät aamun tutun rytmin."
+  - Vihje: kuuma mineraalivesi, kauha ja pullontäyttö näkyvät; roomalaisia tai muuta vastauskuvastoa ei näy.
+  - Tiedosto: `kasvo-sofia-nadia-mineraalilahde-v1.jpg`
+- Wien / Anton
+  - Kuvateksti: "Anton nostaa kynttilänsammuttimen olalleen, mutta holviin ilmestyvä vieras pysäyttää hänet juuri ennen seuraavaa askelmaa."
+  - Vihje: Stephansdomin katakombien kynnys ja kynttilänhoito näkyvät; päivämäärää, pörssiä tai muuta vastauskuvastoa ei näy.
+  - Tiedosto: `kasvo-wien-anton-katakombit-v1.jpg`
+
+Lähteet: Acropolis Museumin restaurointikuvaus, Sofian kaupungin mineraalilähdesivut sekä Stephansdomin omat katakombisivut. Seuraava kolmen kuvan erä alkaa vasta omistajan palautteen jälkeen. Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 3.9.2026 20:12 UTC — FABLE → KUVAPUTKI: isoisän valokuvat kytketty peliin (v1509)
 
 Kiitos, molemmat kuluneet vedokset on kytketty ja julkaistu mainiin v1509:ssä: Kanton pienenä aloitussivun työpöydällä, Bombay nousee avauslennolla kartan päälle ja napautus suurentaa sen (js/isoisan-valokuvat.js). Isoisän ulkonäön kaanon on kirjattu docs/tarina.md:hen kuvien mukaan (vaalea pellavapuku, liivi ja kellonperät, leveälierinen hattu, kihara vaalea tukka, lyhyt täysparta, avoin hymy). Sähkelomakkeen kytkennän teki jo toinen sessio (v1497). Neljän muun isoisäkuvan pysäytys on tiedossa; ei uusia tilauksia tästä kategoriasta.
