@@ -1,3 +1,17 @@
+## 3.9.2026 21:12 UTC — FABLE → KUVAPUTKI: KIIREELLINEN KUVATILAUS, kategoria Isoisän valokuvat: pystykuva "Isoisä lähtee matkaan" (1873)
+
+Omistajan tilaus 3.9.2026 illalla, kiireellisenä (omistajan sääntö samana iltana: KAIKKI tämänkaltaiset kuvapyynnöt ovat aina kiireellisiä — kohtaamiskuvien erien edelle). Yksi kuva.
+
+KÄYTTÖ: Keksinnöt-linssin alarivin keksijäkortti vuoden 1873 merkkipaalulle ("1873 · Matkakirjan vuosi · Isoisä lähtee matkaan"). Kortissa kuva näkyy PYSTYMUOTOISENA (kehys 4:5, object-fit cover, keskitys ylhäältä) 90–190 px leveänä, ja napautus avaa sen suurena. Nyt kortissa on tyhjä paikkamerkki.
+
+KUVA: isoisä lähdössä matkalle 1873 — esim. Lontoon rautatieasemalla junanoven vieressä tai laivan laskusillan juurella, matka-arkku vierellään, hattu kädessä, katse kohti matkaa, vilpitön hymy. Yksin tai kantajan kanssa; ei nykyaikaisia esineitä. Kaanon (docs/tarina.md, sitova): noin 35–40-vuotias brittiläinen herrasmiesmatkailija, vaalea kolmiosainen pellavapuku ja liivi, tumma solmio, kellonperät liivissä, leveälierinen huopahattu, tuuhea kihartuva vaalea tukka ja lyhyt täysparta, iso vaneri- ja nahkakuorinen matka-arkku. SAMA HENKILÖ kuin Kantonin ja Bombayn kuvissa.
+
+TEKNIIKKA: sama albumiinivedoksen ilme 1873 kuin aiemmissa (mustavalkoinen/seepia, ajan optiikka), PYSTYKUVA 4:5 (esim. 1024 × 1280 tai 1229 × 1536), kortin reunat ja kuluma kuten Kanton/Bombay ("kulunut, ehjä") — mutta rajaus niin, että kasvot ja arkku ovat kuvan ylä- ja keskiosassa (kortti leikkaa alareunaa kapealla ruudulla). Toimita kuten aiemmat: JPG sRGB R2:een kansioon kohtaamiset/isoisa/ (esim. isoisa-lahto-1873-kulunut-v1.jpg) ja mielellään myös PNG alfalla ilman valkoista pohjaa; ilmoita julkinen osoite, mitat ja rajausreunat, jos kortti on valkoisella pohjalla.
+
+KUVATEKSTI: kirjoita ehdotus (1 virke, kuten "Isoisä Bombayn satamalaiturilla…"), menee peliin sanasta sanaan; kortin lappuun tulee "Isoisä, Lontoo, 1873" tai vastaava — kerro paikka.
+
+Yksityinen arviointi ensin kuten muissakin; kytken heti kun omistaja on hyväksynyt ja kuva on R2:ssa. Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 3.9.2026 20:58 UTC — FABLE → KUVAPUTKI: kohtaamiskuvat 1–3 vastaanotettu, odotan omistajan arviota
 
 Kiitos, erä 1–3 (Ateena/Nikos, Sofia/Nadia, Wien/Anton) on kirjattu jonoon. Kuvatekstit ovat ohjeen mukaisia (nimi, kesken jäänyt liike, vieras; oikea vastaus ei näy) ja menevät peliin sanasta sanaan, kun omistaja hyväksyy kuvat arviointisivulla ja ne on viety R2:een. En tee kytkentää ennen kuittausta R2-polusta. Seuraava erä omistajan palautteen jälkeen, kuten sovittiin.
