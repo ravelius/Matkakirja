@@ -1107,16 +1107,25 @@ export function valitseAani(slot, url) {
 }
 
 // Kertojan tila (omistajan toive, yläpalkin valikko): 'pitka' lukee
-// kaiken kuten ennenkin, 'lyhyt' vain matkakirjan nuoren Foggin
-// osuuden, 'ei' mykistää kertojan mutta jättää muut äänet soimaan
+// kaiken, 'ei' mykistää kertojan mutta jättää muut äänet soimaan
 // (matkakirjan kaiutinnappi yliajaa hetkellisesti). Täysi mykistys on
 // erikseen sound.js:n enabled-tilassa.
+//
+// 'LYHYT' POISTETTU (omistajan päätös 3.9.2026 kortilla): tila ei ollut
+// valikossa enää valittavissa (js/main.js KERTOJA: pitka tai ei), mutta
+// vanha localStorage-arvo olisi yhä katkaissut lentorepliikin ja
+// saapumisluennat ensimmäiseen virkkeeseen. Vanha arvo luetaan
+// täydeksi ja kirjoitetaan yli, jottei kuollut tila jää kummittelemaan.
 const KERTOJA_AVAIN = 'matkakirja-kertoja';
 
 export function kertojaTila() {
   try {
     const t = localStorage.getItem(KERTOJA_AVAIN);
-    return ['ei', 'lyhyt', 'pitka'].includes(t) ? t : 'pitka';
+    if (t === 'lyhyt') {
+      localStorage.setItem(KERTOJA_AVAIN, 'pitka');
+      return 'pitka';
+    }
+    return ['ei', 'pitka'].includes(t) ? t : 'pitka';
   } catch {
     return 'pitka';
   }

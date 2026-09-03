@@ -441,15 +441,17 @@ test('puuttuva tai lataamaton tiedosto jättää soittamatta — kutsuja soittaa
   sfx.enabled = true;
 });
 
-test('moottori soittaa kohahduksen elävästä vaihdoksesta ja naksahtaa varana', async () => {
+test('moottori naksahtaa elävästä vaihdoksesta ja kohahtaa vain keksinnön kohdalla', async () => {
   const MOOTTORI = (await import('node:fs')).readFileSync(
     new URL('../js/aikajana.js', import.meta.url), 'utf8',
   );
   // Ääni tulee vain elävästä vaihdoksesta: `heti` on rakentaminen ja Alusta.
   assert.match(MOOTTORI, /const elava = !heti && this\.kelloTeksti !== undefined;/);
-  assert.match(MOOTTORI, /if \(elava && this\.kaynnissa\) this\.vuosiAani\(\);/);
-  // Kohahdus ensin, naksahdus vain jos se ei soinut — ei kahta päällekkäin.
-  assert.match(MOOTTORI, /vuosiAani\(\) \{\n\s*if \(soitaKohahdus\(\)\) return;\n\s*this\.naksahda\(\);/);
+  assert.match(MOOTTORI, /if \(elava && this\.kaynnissa\) this\.naksahda\(\);/);
+  // Kohahdus kuuluu keksinnölle (omistajan päätös 3.9.2026): valon
+  // syttyessä, ei merkkipaalulla; naksahdus vain jos se ei soinut.
+  assert.match(MOOTTORI, /sytyta\(i\) \{[\s\S]{0,700}this\.keksinnonAani\(t\);/);
+  assert.match(MOOTTORI, /keksinnonAani\(t\) \{\n\s*if \(t\?\.paalu\) return;\n\s*if \(soitaKohahdus\(\)\) return;\n\s*this\.naksahda\(\);/);
   // Naksahdus on harvennettu (AIKAJANA_NAKSU_VALI_MS) ja soittaa 'vuosi'.
   assert.match(MOOTTORI, /naksahda\(\) \{[\s\S]{0,300}AIKAJANA_NAKSU_VALI_MS[\s\S]{0,200}sfx\.play\('vuosi'\);/);
 });
