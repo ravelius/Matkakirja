@@ -18,18 +18,28 @@
  *
  * ── MIKÄ EROAA SKANDAALEISTA ───────────────────────────────────────
  *
- *   1. KORTISSA ON KUVA, JA NIITÄ VOI OLLA KAKSI. Hetkellä on
+ *   1. KORTISSA ON KUVA, JA NIITÄ VOI OLLA KOLME. Hetkellä on
  *      kuvalista (js/packs/historian-hetket.js `kuvat`): lähikuva
- *      ihmisistä ja kaukokuva koko kohtauksesta. Kortti näyttää listan
- *      ensimmäisen isona ja tarjoaa lopuille selailunuolet ja laskurin
- *      — sama malli kuin lehden nostogalleriassa (js/ui.js
+ *      ihmisistä, kaukokuva koko kohtauksesta ja neljällä hetkellä
+ *      kolmantena aikakauden lehtisivun rekonstruktio. Kortti näyttää
+ *      listan ensimmäisen isona ja tarjoaa lopuille selailunuolet ja
+ *      laskurin — sama malli kuin lehden nostogalleriassa (js/ui.js
  *      kaariNostoGalleria). Kuvan alla on kuvateksti ja lähderivi,
  *      jonka "Matkakirjan havainnekuva" -maininnasta kasvaa painettava
  *      selite (js/havainnekuva.js js/tekijakortti.js taytaLahderivi).
- *   2. KAIKKI HETKET EIVÄT OLE KARTALLA. Kartalle tulevat vain ne,
- *      joiden tapahtumapaikka on kaukana laudan kohdekaupungeista
- *      (`kartalla: true`); muut asuvat pelkästään lehdessä. Suodatus on
- *      datassa eikä täällä.
+ *
+ *      LEHTIKUVA ON PYSTYKUVA (1024 × 1536), ja se on ainoa kohta,
+ *      jossa kortin kuvakehyksen on kestettävä pystysuhde. Kuva
+ *      mitoittuu korkeuskattoon ja kapenee keskelle (css/fokusnosto.css
+ *      `.fokusnosto-kuva img`), ja kuvanappi kutistuu kuvan levyiseksi,
+ *      jotta selailunuolet ja laskuri pysyvät kuvan päällä eivätkä
+ *      leiju sen viereisessä tyhjässä. Vartija:
+ *      tools/savukkeet/savuke-historian-hetket.mjs.
+ *   2. KAIKKI HETKET EIVÄT OLE KARTALLA. Hetki on kartalla
+ *      (`kartalla: true`), ellei sen pistettä voi projisoida laudalle
+ *      lainkaan; poikkeukset on merkitty datassa
+ *      `kartanUlkopuolella`-lipulla ja ne asuvat pelkästään lehdessä.
+ *      Suodatus on datassa eikä täällä.
  *   3. MINITEHTÄVÄAVAIN on hetki:<id> (kirjanpito game.js
  *      actionMinitehtava, koko avain <lauta>:<maa>:hetki:<id>), ja
  *      palkkio on sama TAKY_PALKKIO kuin skandaalilla ja
@@ -256,9 +266,9 @@ function piirraHetkenSisus(ui, sailio, iso, hetki) {
  * Rikkinäinen tai lataamaton kuva piilottaa kehyksensä — teksti kantaa
  * kortin yksinkin.
  *
- * NUOLET ILMESTYVÄT VASTA KAHDESTA KUVASTA. Ensimmäisessä erässä
- * hetkellä on yksi kuva, ja silloin kortti näyttää täsmälleen samalta
- * kuin eläintäyn kortti: kuva, kuvateksti, lähderivi.
+ * NUOLET ILMESTYVÄT VASTA KAHDESTA KUVASTA. Jokaisella hetkellä on
+ * lähikuva ja kaukokuva, joten nuolet ovat aina näkyvissä; neljällä
+ * hetkellä kolmas kuva on aikakauden lehtisivu, ja laskuri sanoo "1 / 3".
  */
 function piirraHetkenKuvat(ui, sailio, hetki) {
   const kuvat = hetkenKuvat(hetki);

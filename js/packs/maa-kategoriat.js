@@ -1542,22 +1542,20 @@ export const MAA_KATEGORIAT = {
       },
     },
     /*
-     * HISTORIAN HETKI (H1-erä 2.9.2026, js/packs/historian-hetket.js
-     * `cook-endeavour-plymouth-1768`). Plymouth on 143 laudan yksikön
-     * päässä lähimmästä kohdekaupungista (Lontoo), joten hetki saa
-     * MYÖS oman kohdemerkkinsä kartalle (tiimalasi) — omistajan
-     * sijoitussääntö 2.9.2026. Tämä sivu on saman hetken lehtiversio:
-     * sama kuva, sama teksti, sama lähderivi.
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `cook-endeavour-plymouth-1768`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
      *
      * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
      * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
-     * varustaNostonKuva); tests/historian-hetket.test.mjs vartioi,
-     * ettei osoite eriydy pakan omasta.
+     * varustaNostonKuva).
      */
     {
       id: 'hetki-cook-endeavour-plymouth-1768',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Plymouth 1768',
+      otsikko: 'Historian hetki: Endeavour 1768',
       johdanto: 'Plymouthin laiturilla oli 26. elokuuta 1768 laatikoita, joita '
         + 'sotalaivaan ei yleensä kanneta: kasvipuristimia, lasipurkkeja ja '
         + 'eläviä taimia ruukuissa.',
@@ -1578,47 +1576,73 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Plymouth 1768 — hiililaiva lähtee Tyynellemerelle',
           aika: '26.8.1768',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-cook-endeavour-plymouth-1768-kauko.jpg',
-          teksti: 'Laiturilla on laatikoita, joita sotalaivaan ei yleensä kanneta: '
-            + 'kasvipuristimia, lasipurkkeja, verkkohäkkejä ja eläviä taimia '
-            + 'ruukuissa. Ne kuuluvat 25-vuotiaalle Joseph Banksille, joka kustansi '
-            + 'omasta pussistaan seitsemän seuralaisensa paikat — mukana ovat '
-            + 'ruotsalainen Daniel Solander ja turkulaissyntyinen Herman Spöring. '
-            + 'Alus on entinen Whitbyn hiililaiva Earl of Pembroke: laivasto osti '
-            + 'sen keväällä, nimesi His Majesty\u2019s Bark Endeavouriksi ja rakensi '
-            + 'ruumaan kolmannen kannen hyteiksi ja ruutivarastoksi. Luutnantti '
-            + 'James Cook, 39-vuotias, vie mukanaan kahdeksantoista kuukauden '
-            + 'muonat 94 hengelle, kymmenen neljän naulan tykkiä, sikoja, kanoja, '
-            + 'kaksi vinttikoiraa ja lypsyvuohen. Virallinen tehtävä on mitata '
-            + 'Venuksen ylikulku Tahitilla; hytissä on lisäksi sinetöity kirje, '
-            + 'jonka Cook saa avata vasta mittauksen jälkeen — käsky etsiä '
-            + 'eteläiseltä Tyyneltämereltä tuntematonta mannerta.',
-          selite: 'Endeavour on jo irti laiturista ja kulkee ulos Plymouthin '
-            + 'satamasta keulapurje auki. Kivilaiturilla seisoo kaupunkilaisia '
-            + 'kolmikolkkahatuissa ja valkoisissa myssyissä, pikkuveneet '
-            + 'saattavat laivaa, ja taustalla näkyy sataman matala talorivi.',
-          lahde: 'Matkakirjan havainnekuva: HM Bark Endeavour lähdössä '
-            + 'Plymouthista 26. elokuuta 1768. Faktat: en-Wikipedia "HMS '
-            + 'Endeavour" ja "First voyage of James Cook", tarkistettu 2.9.2026.',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-cook-endeavour-plymouth-1768-lahi-photo-v3.jpg',
+          teksti: 'Laiturilla seisoo ruukku, jossa kasvaa elävä taimi. Sen '
+            + 'vieressä on kasvipuristimia, lasipurkkeja ja verkkohäkkejä — '
+            + 'laatikoita, joita sotalaivaan ei yleensä kanneta. Ne kuuluvat '
+            + '25-vuotiaalle Joseph Banksille, joka kustansi omasta pussistaan '
+            + 'seitsemän seuralaisensa paikat; mukana ovat ruotsalainen Daniel '
+            + 'Solander ja turkulaissyntyinen Herman Spöring. Kansimies ottaa '
+            + 'viimeisen katseen Plymouthiin ennen matkaa, jonka pituutta kukaan '
+            + 'ei osaa luvata. Alus on entinen Whitbyn hiililaiva Earl of '
+            + 'Pembroke: laivasto osti sen keväällä, nimesi His Majesty’s Bark '
+            + 'Endeavouriksi ja rakensi ruumaan kolmannen kannen. Luutnantti '
+            + 'James Cook, 39-vuotias, vie kahdeksantoista kuukauden muonat 94 '
+            + 'hengelle, kymmenen tykkiä, sikoja, kanoja, kaksi vinttikoiraa ja '
+            + 'lypsyvuohen. Virallinen tehtävä on mitata Venuksen ylikulku '
+            + 'Tahitilla; hytissä on sinetöity kirje, jonka saa avata vasta sen '
+            + 'jälkeen — käsky etsiä tuntematonta eteläistä mannerta. '
+            + 'Kolmivuotinen matka tuottaa tiedettä ja karttoja sekä kohtaamisia, '
+            + 'joiden seuraukset Tyynenmeren kansoille ovat kaikkea muuta kuin '
+            + 'viattomia.',
+          selite: 'Endeavourin kansimies ottaa viimeisen katseen Plymouthiin '
+            + 'ennen matkaa, jonka pituutta kukaan ei osaa luvata. Cook ja Joseph '
+            + 'Banks tavoittelevat Venuksen ylikulkua ja uusia kasveja, mutta '
+            + 'miehistö kantaa samalla imperiumin Euroopan ulkopuolisiin '
+            + 'yhteisöihin.',
+          lahde: 'Matkakirjan havainnekuva. Faktat ja alusreferenssi: Royal '
+            + 'Museums Greenwich, James Cookin ja Joseph Banksin '
+            + 'Endeavour-päiväkirjat sekä Endeavour 1768 -kokoelma; tarkistettu '
+            + '3.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Plymouth 1768 — hiililaiva lähtee Tyynellemerelle',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-cook-endeavour-plymouth-1768-kauko-photo-v3.jpg',
+              selite: 'Hiililaivaksi rakennettuun Endeavouriin pakkautuu '
+                + 'merimiesten lisäksi tähtitieteilijöitä, luonnontutkijoita, '
+                + 'taiteilijoita ja heidän toiveitaan. Heidän kolmivuotinen '
+                + 'matkansa tuottaa tiedettä, karttoja ja kohtaamisia, joiden '
+                + 'seuraukset Tyynenmeren kansoille ovat kaikkea muuta kuin '
+                + 'viattomia.',
+              lahde: 'Matkakirjan havainnekuva. Faktat ja alusreferenssi: Royal '
+                + 'Museums Greenwich, James Cookin ja Joseph Banksin '
+                + 'Endeavour-päiväkirjat sekä Endeavour 1768 -kokoelma; '
+                + 'tarkistettu 3.9.2026.',
+            },
+          ],
         },
       ],
     },
     /*
-     * HISTORIAN HETKI (H1-erä 2.9.2026, js/packs/historian-hetket.js
-     * `titanic-southampton-1912`). Southampton on 51 laudan yksikön
-     * päässä Lontoosta eli yli 35 yksikön rajan, joten myös tämä hetki
-     * saa kohdemerkin kartalle. Southampton itse ei ole laudan
-     * kohdekaupunki, joten lehtisivu on maalehdessä.
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `titanic-southampton-1912`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
      */
     {
       id: 'hetki-titanic-southampton-1912',
       nimi: 'Historian hetki',
-      otsikko: 'Historian hetki: Southampton 1912',
+      otsikko: 'Historian hetki: Titanic 1912',
       johdanto: 'Titanicin neitsytmatka alkoi Southamptonista täsmälleen '
         + 'keskipäivällä 10. huhtikuuta 1912, ja muutamaa minuuttia myöhemmin se '
         + 'melkein päättyi laiturin päähän.',
       tehtava: {
-        kysymys: 'Montako Titanicin neljästä savupiipusta palveli kattiloita?',
+        kysymys: 'Montako Titanicin neljästä savupiipusta savusi?',
         vaihtoehdot: [
           'Yksi',
           'Kaksi',
@@ -1634,26 +1658,57 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Southampton 1912 — metri törmäyksestä',
           aika: '10.4.1912',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-titanic-southampton-1912.jpg',
-          teksti: 'Matkustajat alkoivat saapua puoli kymmeneltä aamulla, kun Lontoon '
-            + 'Waterloosta tullut laivajuna pysähtyi laiturille aivan Titanicin '
-            + 'kylkeen. Southamptonista nousee kyytiin 920 matkustajaa: 179 '
-            + 'ensimmäiseen luokkaan, 247 toiseen ja 494 kolmanteen. Neitsytmatka '
-            + 'alkaa keskipäivällä aikataulun mukaan — ja muutamaa minuuttia '
-            + 'myöhemmin melkein päättyy, kun Titanicin syrjäyttämä vesi nostaa '
-            + 'kiinnitettynä makaavan New Yorkin ja pudottaa sen niin, että köydet '
-            + 'katkeavat pamahdellen ja pienempi laiva kääntyy perä edellä '
-            + 'Titanicia kohti. Kapteeni Smith käskee koneet täydelle taakse, '
-            + 'hinaaja Vulcan saa köyden kiinni, ja alukset ohittavat toisensa '
-            + 'noin metrin päästä; lähtö viivästyy tunnin. Neljästä savupiipusta '
-            + 'vain kolme savuaa: takimmainen on koriste, jota käytetään keittiön '
-            + 'ja tupakkasalonkien ilmanvaihtoon.',
-          selite: 'Titanic irtoaa Southamptonin laiturista hinaajien '
-            + 'avustamana, ja laiturille jääneet heiluttavat hattujaan. '
-            + 'Etualalla odottavat matkatavaravaunut, hevonen ja auto.',
-          lahde: 'Matkakirjan havainnekuva: Titanic lähdössä Southamptonista '
-            + '10. huhtikuuta 1912. Faktat: en-Wikipedia "Titanic", tarkistettu '
-            + '2.9.2026.',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-titanic-southampton-1912-lahi-photo-v3.jpg',
+          teksti: 'Seitsemänvuotias Eva Hart nousee laivaan vanhempiensa kanssa, '
+            + 'mutta hänen äitinsä Esther pelkää alusta niin paljon, ettei aio '
+            + 'nukkua öisin koko matkan aikana. Matkustajat alkoivat saapua puoli '
+            + 'kymmeneltä, kun Lontoon Waterloosta tullut laivajuna pysähtyi '
+            + 'laiturille aivan Titanicin kylkeen; Southamptonista nousee kyytiin '
+            + '920 matkustajaa, heistä 179 ensimmäiseen luokkaan, 247 toiseen ja '
+            + '494 kolmanteen. Neitsytmatka alkaa keskipäivällä aikataulun mukaan '
+            + '— ja melkein päättyy heti, kun Titanicin syrjäyttämä vesi '
+            + 'katkaisee kiinnitettynä makaavan New Yorkin köydet ja pienempi '
+            + 'laiva kääntyy perä edellä sitä kohti. Kapteeni Smith käskee koneet '
+            + 'täydelle taakse, hinaaja Vulcan saa köyden kiinni, ja alukset '
+            + 'ohittavat toisensa noin metrin päästä; lähtö viivästyy tunnin. '
+            + 'Neljästä savupiipusta vain kolme savuaa. Eva ja äiti pelastuvat; '
+            + 'isä Benjamin jää niiden yli 1 500 joukkoon, jotka eivät palaa.',
+          selite: 'Seitsemänvuotias Eva Hart nousee Titaniciin vanhempiensa '
+            + 'kanssa, mutta hänen äitinsä Esther pelkää laivaa niin paljon, '
+            + 'ettei suostu nukkumaan öisin. Eva ja äiti pelastuvat; isä Benjamin '
+            + 'jää niiden yli 1 500 ihmisen joukkoon, jotka eivät palaa.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Titanic Belfastin Eva Hart '
+            + '-aineisto ja Encyclopedia Titanican matkustajatiedot Eva Hartista '
+            + 'sekä Michel ja Edmond Navratilista; tarkistettu 3.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Southampton 1912 — metri törmäyksestä',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-titanic-southampton-1912-kauko-photo-v3.jpg',
+              selite: 'Kolmivuotias Michel ja kaksivuotias Edmond matkustavat '
+                + 'isänsä kanssa väärällä sukunimellä, äidiltä salaa vietyinä. '
+                + 'Haaksirikon jälkeen isä kuolee ja pojat tunnetaan viikkoja '
+                + 'vain ’Titanicin orpoina’, kunnes heidän äitinsä tunnistaa '
+                + 'heidät lehtikuvista.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Titanic Belfastin Eva '
+                + 'Hart -aineisto ja Encyclopedia Titanican matkustajatiedot Eva '
+                + 'Hartista sekä Michel ja Edmond Navratilista; tarkistettu '
+                + '3.9.2026.',
+            },
+            {
+              otsikko: 'Southampton 1912 — metri törmäyksestä',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-titanic-daily-graphic-1912-lehti-photo-v3.jpg',
+              selite: 'Jack Phillips jatkaa hätäkutsujen lähettämistä, vaikka '
+                + 'vesi nousee Titanicin radiohyttiin; Harold Bride vetää '
+                + 'pelastusliivin hänen ylleen. Bride selviää kaatuneen '
+                + 'pelastusveneen päällä, Phillips kuolee — ja vain toinen heistä '
+                + 'ehtii nähdä, kuinka lehdet tekevät radiomiehistä yön '
+                + 'sankareita.',
+              lahde: 'Matkakirjan havainnekuva: historiallinen rekonstruktio The '
+                + 'Daily Graphicin 20.4.1912 julkaisemasta '
+                + 'Titanic-muistonumerosta. Henkilöfaktat: Encyclopedia Titanica, '
+                + 'Jack Phillips ja Harold Bride; tarkistettu 3.9.2026.',
+            },
+          ],
         },
       ],
     },
@@ -3889,20 +3944,22 @@ export const MAA_KATEGORIAT = {
       },
     },
     /*
-     * HISTORIAN HETKI (H1-erä 2.9.2026, js/packs/historian-hetket.js
-     * `trafalgar-victory-1805`). Trafalgarin niemen edusta projisoituu
-     * 18 laudan yksikön päähän Tangerista, eli kohdekaupungin viereen —
-     * kartalle ei tule merkkiä. Tapahtumapaikka on Espanjan rannikolla
-     * eikä Tangerilla ole omaa kaupunkilehteä, joten sivu on Espanjan
-     * maalehdessä.
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `trafalgar-victory-1805`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
      */
     {
       id: 'hetki-trafalgar-victory-1805',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Trafalgar 1805',
       johdanto: 'Trafalgarin niemen edustalla kohtasivat 21. lokakuuta 1805 '
-        + 'brittien 27 linjalaivaa ja Ranskan ja Espanjan yhteinen 33 laivan '
-        + 'rivi.',
+        + 'brittien 27 linjalaivaa ja Ranskan ja Espanjan yhteinen 33 laivan rivi.',
       tehtava: {
         kysymys: 'Mistä ammuttiin luoti, joka haavoitti Nelsonia kuolettavasti?',
         vaihtoehdot: [
@@ -3920,41 +3977,58 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
           aika: '21.10.1805',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805-lahi.jpg',
-          teksti: 'Kello on hieman yli kaksitoista. Neljännestä vaille kaksitoista '
-            + 'Nelson lähetti lippuviestin "England expects that every man will do '
-            + 'his duty", ja puolelta päivin ranskalainen Fougueux ampui '
-            + 'ensimmäisen laukauksensa. Victory on ajanut liittouman linjan läpi '
-            + 'ja takertunut mastoistaan kiinni ranskalaiseen Redoutableen, jonka '
-            + 'kannelle kokoontuu jalkaväkeä valtaamaan britti. Kansi on '
-            + 'hiekoitettu, jottei veri tekisi lankuista liukkaita, ja tykkimiehet '
-            + 'työskentelevät paitasillaan; peräkannella kävelee kaksi miestä '
-            + 'edestakaisin kuten joka aamu, viceamiraali Horatio Nelson ja '
-            + 'lippulaivan päällikkö Thomas Hardy. Hetken kuluttua Redoutablen '
-            + 'mesaanimarsista ammuttu muskettiluoti osuu Nelsonia vasempaan '
-            + 'olkapäähän ja läpäisee selkärangan; hän kuolee puoli viideltä, kolme '
-            + 'tuntia myöhemmin, kun brittien 27 linjalaivaa ovat jo murtaneet '
-            + 'liittouman 33 laivan rivin.',
-          selite: 'Nelson ja Hardy seisovat kasvokkain Victoryn kannella kesken '
-            + 'keskustelun kaksikolkkahatut päässä. Nelsonin sinisessä takissa '
-            + 'loistavat kunniamerkit ja rintatähti, ja taustalla miehistö '
-            + 'työskentelee köysien ja kaiteen ääressä avomeren edessä.',
-          lahde: 'Matkakirjan havainnekuva: Victoryn peräkansi Trafalgarin '
-            + 'taistelussa 21. lokakuuta 1805 hetkeä ennen Nelsonin '
-            + 'haavoittumista. Faktat: en-Wikipedia "Battle of Trafalgar", '
-            + 'tarkistettu 2.9.2026.',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805-lahi-photo-v3.jpg',
+          teksti: 'Kuinka kaukana vihollislinja vielä on? Nelson kysyy sitä '
+            + 'kapteeni Hardylta vielä kerran, ja kumpikin tietää, mitä vastaus '
+            + 'tarkoittaa: Victory ajetaan suoraan lähitulitukseen. Kello on '
+            + 'hieman yli kaksitoista. Neljännestä vaille kaksitoista Nelson '
+            + 'lähetti lippuviestin "England expects that every man will do his '
+            + 'duty", ja puolelta päivin ranskalainen Fougueux ampui ensimmäisen '
+            + 'laukauksensa. Kansi on hiekoitettu, jottei veri tekisi lankuista '
+            + 'liukkaita, ja tykkimiehet työskentelevät paitasillaan; ensimmäistä '
+            + 'taisteluaan odottava ruutipoika yrittää lukea vanhempien '
+            + 'merimiesten kasvoista, kuinka lähellä laukaus on. Victory on '
+            + 'ajanut liittouman linjan läpi ja takertunut mastoistaan kiinni '
+            + 'ranskalaiseen Redoutableen, jonka kannelle kokoontuu jalkaväkeä '
+            + 'valtaamaan britti. Pian sen mesaanimarsista ammuttu muskettiluoti '
+            + 'osuu Nelsonia vasempaan olkapäähän ja läpäisee selkärangan. Hänet '
+            + 'kannetaan ruumaan, ja hän kuolee puoli viideltä, kolme tuntia '
+            + 'myöhemmin; Hardy selviää päivästä. Brittien 27 linjalaivaa '
+            + 'murtavat liittouman 33 laivan rivin, mutta kannella voitto '
+            + 'tarkoittaa ensin savua, melua ja tovereiden menettämistä.',
+          selite: 'Nelson kysyy kapteeni Hardylta vielä kerran vihollislinjan '
+            + 'etäisyyttä; kumpikin tietää, että suunnitelma vie Victoryn suoraan '
+            + 'lähitulitukseen. Hardy selviää päivästä, Nelson ei — heidän '
+            + 'viimeisestä keskustelustaan tulee osa brittiläistä muistikuvaa '
+            + 'Trafalgarista.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Royal Museums Greenwich, '
+            + '*Battle of Trafalgar Timeline* ja National Maritime Museumin HMS '
+            + 'Victory -kokoelma; tarkistettu 3.9.2026.',
           galleria: [
             {
               otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805.jpg',
-              selite: 'Nelson ja Hardy kävelevät Victoryn peräkannella savupilven '
-                + 'alla, ja miehistö ahertaa tykkien ääressä heidän ympärillään. '
-                + 'Oikealla kohoaa toisen laivan kylki tykkiportteineen aivan '
-                + 'kiinni Victoryssa.',
-              lahde: 'Matkakirjan havainnekuva: Victoryn peräkansi Trafalgarin '
-                + 'taistelussa 21. lokakuuta 1805 hetkeä ennen Nelsonin '
-                + 'haavoittumista. Faktat: en-Wikipedia "Battle of Trafalgar", '
-                + 'tarkistettu 2.9.2026.',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805-kauko-photo-v3.jpg',
+              selite: 'Ensimmäistä taisteluaan odottava nuori ruutipoika yrittää '
+                + 'lukea vanhempien merimiesten kasvoista, kuinka lähellä '
+                + 'ensimmäinen laukaus jo on. Nelsonin 27 alusta käyvät suuremman '
+                + 'laivaston kimppuun, mutta kannella voitto tarkoittaa ensin '
+                + 'savua, melua ja tovereiden menettämistä.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Royal Museums Greenwich, '
+                + '*Battle of Trafalgar Timeline* ja National Maritime Museumin '
+                + 'HMS Victory -kokoelma; tarkistettu 3.9.2026.',
+            },
+            {
+              otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-trafalgar-the-times-1805-lehti-photo-v3.jpg',
+              selite: 'Lontoolaiset lukevat samasta uutisesta voiton ja '
+                + 'menetyksen: Napoleonin laivasto on lyöty, mutta Nelson on '
+                + 'kuollut Victoryllä. Merimiesten perheille Collingwoodin '
+                + 'lähetys ei ole vielä juhla, vaan alku piinaavalle kysymykselle '
+                + 'siitä, kenen nimi seuraavassa luettelossa on.',
+              lahde: 'Matkakirjan havainnekuva: historiallinen rekonstruktio The '
+                + 'Timesin 7.11.1805 julkaisemasta Trafalgar-uutisesta. Faktat: '
+                + 'Royal Museums Greenwich, *Battle of Trafalgar Timeline*; '
+                + 'tarkistettu 3.9.2026.',
             },
           ],
         },
@@ -5524,6 +5598,83 @@ export const MAA_KATEGORIAT = {
           + 'myydä sen kanssa paistettua makkaraa kioskillaan '
           + 'Charlottenburgissa.',
       },
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `rontgen-kasi-1895`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-rontgen-kasi-1895',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Würzburg 1895',
+      johdanto: 'Würzburgin yliopiston laboratoriossa otettiin 22. joulukuuta '
+        + '1895 valokuva, jossa näkyi elävän ihmisen käden luut ja sormessa '
+        + 'vihkisormus — ja lääketiede sai uuden silmän.',
+      tehtava: {
+        kysymys: 'Miksi Röntgen ei koskaan patentoinut keksintöään?',
+        vaihtoehdot: [
+          'Yliopisto omisti kaikki hänen tuloksensa',
+          'Patentti oli jo myönnetty toiselle tutkijalle',
+          'Hän katsoi keksinnön kuuluvan kaikille',
+          'Hän ei uskonut löydön olevan hyödyllinen',
+        ],
+        oikea: 2,
+        fakta: 'Röntgen sai ensimmäisen fysiikan Nobelin vuonna 1901 ja lahjoitti '
+          + 'palkintorahansa yliopistolleen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Würzburg 1895 — käsi, joka ei saa liikkua',
+          aika: '22.12.1895',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-lahi-photo-v3.jpg',
+          teksti: 'Käsi ei saa liikkua. Anna Bertha Röntgen pitää sitä paikallaan '
+            + 'minuutti toisensa jälkeen tietämättä, näkyykö levylle mitään. Kun '
+            + 'kuva kehittyy, siinä ovat hänen sormiensa luut ja vihkisormuksen '
+            + 'tumma rengas: aviopari katsoo ensimmäistä kertaa elävän ihmisen '
+            + 'sisään ilman veistä. Kerrotaan, että vaimo katsoi kuvaa ja sanoi '
+            + 'nähneensä oman kuolemansa. Wilhelm Conrad Röntgen oli huomannut '
+            + 'oudon säteilyn marraskuun kahdeksantena päivänä ja kertonut siitä '
+            + 'viikkoihin tuskin kenellekään; hän söi usein laboratoriossaan ja '
+            + 'toisti kokeitaan, kunnes tulos kesti hänen oman epäilynsä. Säteet '
+            + 'hän nimesi X-säteiksi, koska ei tiennyt mitä ne olivat. Vasta 22. '
+            + 'joulukuuta 1895 hän pyysi Anna Berthaa valotukseen, ja kuusi '
+            + 'päivää myöhemmin hän jätti tuloksensa Würzburgin '
+            + 'fyysis-lääketieteellisen seuran julkaistavaksi. Muutamassa '
+            + 'kuukaudessa sairaalat ympäri maailmaa kuvasivat murtumia ja '
+            + 'luodinsirpaleita, ja vuonna 1901 Röntgen sai ensimmäisen fysiikan '
+            + 'Nobelin. Keksinnölleen hän ei ottanut patenttia: hän katsoi sen '
+            + 'kuuluvan kaikille.',
+          selite: 'Anna Bertha Röntgen pitää kättään liikkumatta pitkän '
+            + 'valotuksen ajan tietämättä, näkyykö levylle mitään. Kun luiden ja '
+            + 'vihkisormuksen tumma hahmo ilmestyy, aviopari katsoo ensimmäistä '
+            + 'kertaa elävän ihmisen sisään ilman veistä.',
+          lahde: 'Matkakirjan havainnekuva. Faktat ja alkuperäisen käsikuvan '
+            + 'referenssi: NobelPrize.org, Wilhelm Conrad Röntgenin elämäkerta ja '
+            + 'kuvagalleria; tarkistettu 3.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Würzburg 1895 — käsi, joka ei saa liikkua',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-kauko-photo-v3.jpg',
+              selite: 'Röntgen kertoo kokeistaan viikkoihin tuskin kenellekään ja '
+                + 'syökin usein laboratoriossa, kunnes tulos kestää hänen oman '
+                + 'epäilynsä. Vasta sitten hän pyytää Anna Berthaa valotukseen, '
+                + 'josta tulee sekä lääketieteellisen kuvantamisen alku että '
+                + 'pelottavan henkilökohtainen perhekuva.',
+              lahde: 'Matkakirjan havainnekuva. Faktat ja alkuperäisen käsikuvan '
+                + 'referenssi: NobelPrize.org, Wilhelm Conrad Röntgenin '
+                + 'elämäkerta ja kuvagalleria; tarkistettu 3.9.2026.',
+            },
+          ],
+        },
+      ],
     },
     {
       id: 'menovinkit',
@@ -8658,6 +8809,83 @@ export const MAA_KATEGORIAT = {
           + 'sanotaan konssaukseksi.',
       },
     },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `einstein-patenttitoimisto-1905`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-einstein-patenttitoimisto-1905',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Bern 1905',
+      johdanto: 'Bernin patenttivirastossa istui vuonna 1905 kolmannen luokan '
+        + 'tekninen asiantuntija, joka kirjoitti samana vuonna neljä tutkimusta '
+        + 'ja muutti fysiikan.',
+      tehtava: {
+        kysymys: 'Montako mullistavaa tutkimusta Einstein julkaisi vuonna 1905?',
+        vaihtoehdot: [
+          'Yhden',
+          'Kaksi',
+          'Neljä',
+          'Kaksitoista',
+        ],
+        oikea: 2,
+        fakta: 'Vuotta kutsutaan siksi ihmevuodeksi, annus mirabilisiksi; '
+          + 'yliopiston virkaan Einstein pääsi vasta 1909.',
+      },
+      nostot: [
+        {
+          otsikko: 'Bern 1905 — patenttipino ja valonsäde',
+          aika: '1905',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-lahi-photo-v3.jpg',
+          teksti: 'Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen '
+            + 'uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. '
+            + 'Bernin patenttiviraston kolmannen luokan tekninen asiantuntija '
+            + 'Albert Einstein on 26-vuotias, ja hänen palkkansa elättää '
+            + 'Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa '
+            + 'kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo '
+            + 'näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi '
+            + 'harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa '
+            + 'kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat '
+            + 'itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, '
+            + 'ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 '
+            + 'Einstein lähettää Annalen der Physik -lehteen neljä tutkimusta: '
+            + 'valosähköinen ilmiö, Brownin liike, erityinen suhteellisuusteoria '
+            + 'sekä energian ja massan yhteys. Vuotta kutsutaan myöhemmin '
+            + 'ihmevuodeksi, annus mirabilisiksi. Virastossa se ei näy mitenkään: '
+            + 'Einstein arvioi hakemuksia vielä vuosia, ja yliopiston virkaan hän '
+            + 'pääsee vasta 1909.',
+          selite: 'Patenttiviraston kolmannen luokan tekninen asiantuntija Albert '
+            + 'Einstein joutuu siirtämään fysiikan muistiinpanot syrjään aina '
+            + 'uuden hakemuksen saapuessa. Iltaisin hän palaa kysymykseen, miltä '
+            + 'valo näyttäisi, jos sitä voisi ajaa kiinni.',
+          lahde: 'Matkakirjan havainnekuva. Faktat ja työhuonereferenssi: Albert '
+            + 'Einstein Archives / einstein-website.de, *Patent Office*; '
+            + 'tarkistettu 3.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Bern 1905 — patenttipino ja valonsäde',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-kauko-photo-v3.jpg',
+              selite: 'Kotona odottavat Mileva-vaimo, pieni Hans Albert ja niukka '
+                + 'palkka; toimistossa odottaa pino patentteja. Tämän arkisen '
+                + 'paineen keskellä 26-vuotias Einstein kirjoittaa neljä '
+                + 'tutkimusta, mutta läheinen ystävä Michele Besso on niitä '
+                + 'harvoja, joiden kanssa hän voi ajatella ääneen.',
+              lahde: 'Matkakirjan havainnekuva. Faktat ja työhuonereferenssi: '
+                + 'Albert Einstein Archives / einstein-website.de, *Patent '
+                + 'Office*; tarkistettu 3.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
     {
       id: 'menovinkit',
       nimi: 'Menovinkit',
@@ -8974,27 +9202,24 @@ export const MAA_KATEGORIAT = {
       },
     },
     /*
-     * HISTORIAN HETKI (H1-erä 2.9.2026, js/packs/historian-hetket.js
-     * `amundsen-etelanapa-1911`). Etelänapa ei osu laudalle lainkaan —
-     * maailmankartan korkeus on 5399 yksikköä ja napa projisoituisi
-     * riville 7611 — joten karttamerkkiä ei voi piirtää. Sivu on
-     * omistajan ohjeen mukaan Norjan maalehdessä.
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
      *
-     * TÄMÄ EI KORVAA HISTORIA-SIVUN AMUNDSEN-NOSTOA ("Etelänavalle
-     * koirien vetämänä", aito valokuva 1911): se kertoo retken kaaren,
-     * tämä sivu yhden hetken silmien korkeudelta. Sivujen minitehtävät
-     * kysyvät eri asiaa tarkoituksella.
+     * Lähde: js/packs/historian-hetket.js `amundsen-etelanapa-1911`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
      */
     {
       id: 'hetki-amundsen-etelanapa-1911',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Etelänapa 1911',
       johdanto: 'Etelänavalla oli 14. joulukuuta 1911 kello noin kolme '
-        + 'iltapäivällä viisi miestä, kahdeksantoista koiraa ja yksi '
-        + 'lipputanko.',
+        + 'iltapäivällä viisi miestä, kahdeksantoista koiraa ja yksi lipputanko.',
       tehtava: {
-        kysymys: 'Minkä nimen retkikunta antoi etelänavalle jättämälleen '
-          + 'teltalle?',
+        kysymys: 'Minkä nimen retkikunta antoi etelänavalle jättämälleen teltalle?',
         vaihtoehdot: [
           'Framheim',
           'Polheim',
@@ -9010,40 +9235,55 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
           aika: '14.12.1911',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-lahi.jpg',
-          teksti: 'Edellinen leiri oli 89°45′ eteläistä leveyttä, viidentoista '
-            + 'meripeninkulman päässä maalista. Nyt kello on noin kolme '
-            + 'iltapäivällä, mittaukset sanovat että tämä on paikka, ja viisi '
-            + 'miestä tarttuu yhdessä lipputankoon: Roald Amundsen, Olav Bjaaland, '
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-lahi-photo-v3.jpg',
+          teksti: 'Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen '
+            + 'viejäksi pyydetään Robert Scottia — siltä varalta, että Scott '
+            + 'saapuu perille mutta viisi norjalaista ei pääse kotiin. Kello on '
+            + 'noin kolme iltapäivällä, mittaukset sanovat että tämä on paikka, '
+            + 'ja lipputankoon tarttuvat yhdessä Roald Amundsen, Olav Bjaaland, '
             + 'Helmer Hanssen, Sverre Hassel ja Oscar Wisting. Ylätasangon he '
-            + 'nimeävät kuningas Haakon VII:n tasangoksi. Seuraavat kolme päivää '
-            + 'kuluvat sekstantin ääressä ja hiihtäen navan ympäri ristiin rastiin, '
-            + 'jotta paikka olisi todistettavasti oikea — Cookin ja Pearyn riitaiset '
-            + 'pohjoisnapaväitteet ovat tuoreessa muistissa, eikä Amundsen aio '
-            + 'jättää itsestään samanlaista epäselvyyttä. Telttaan, jolle he '
-            + 'antavat nimen Polheim, jää varusteita ja kirje Norjan kuninkaalle, '
-            + 'ja sen viejäksi pyydetään Robert Scottia, joka saapuu paikalle 34 '
-            + 'päivää myöhemmin. Koirat ovat syy siihen, että he ovat täällä '
-            + 'ensimmäisinä: kahdeksantoista niistä nousi ylätasangolle, ja loput '
-            + 'lopetettiin ruoaksi paikassa, jonka miehet nimesivät Teurastamoksi.',
-          selite: 'Kolme miestä pitää yhdessä kiinni lipputangosta, ja Norjan '
-            + 'lippu sekä miesten turkislakit ovat huurteen peitossa. Kaksi '
-            + 'toveria katsoo takaa olan yli, ja oikealla odottavat koirat reen '
-            + 'vieressä.',
-          lahde: 'Matkakirjan havainnekuva: Amundsenin retkikunta etelänavalla '
-            + '14. joulukuuta 1911. Faktat: en-Wikipedia "Amundsen\'s South Pole '
-            + 'expedition", tarkistettu 2.9.2026.',
+            + 'nimeävät kuningas Haakon VII:n tasangoksi ja teltan Polheimiksi. '
+            + 'Seuraavat kolme päivää kuluvat sekstantin ääressä ja hiihtäen '
+            + 'navan ympäri ristiin rastiin, jotta paikka olisi todistettavasti '
+            + 'oikea: Cookin ja Pearyn riitaiset pohjoisnapaväitteet ovat '
+            + 'tuoreessa muistissa. Lipunnosto kestää hetken, ja kotiin on vielä '
+            + 'lähes 1 300 kilometriä. Koirat ovat syy siihen, että he ovat '
+            + 'täällä ensimmäisinä: kahdeksantoista nousi ylätasangolle, loput '
+            + 'lopetettiin ruoaksi paikassa, jonka miehet nimesivät '
+            + 'Teurastamoksi. Kaikki viisi palaavat; Scottin ryhmä ei.',
+          selite: 'Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre Hassel '
+            + 'ja Oscar Wisting tietävät olevansa ensimmäisiä — mutta kotiin on '
+            + 'vielä lähes 1 300 kilometriä. He jättävät teltalle kirjeen Norjan '
+            + 'kuninkaalle siltä varalta, että Scott saapuu perille mutta he '
+            + 'eivät.',
+          lahde: 'Matkakirjan havainnekuva. Faktat ja Fram-alusreferenssi: '
+            + 'Frammuseet, Roald Amundsenin etelänaparetki 1910–1912; tarkistettu '
+            + '3.9.2026.',
           galleria: [
             {
               otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-kauko.jpg',
-              selite: 'Viisi turkisasuista miestä seisoo Norjan lipun ympärillä '
-                + 'loputtomalla lumitasangolla. Koirat lepäävät lumessa kahden '
-                + 'kuormatun reen välissä, ja horisontti häviää valkoiseen usvaan '
-                + 'ilman ainuttakaan maamerkkiä.',
-              lahde: 'Matkakirjan havainnekuva: Amundsenin retkikunta etelänavalla '
-                + '14. joulukuuta 1911. Faktat: en-Wikipedia "Amundsen\'s South Pole '
-                + 'expedition", tarkistettu 2.9.2026.',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-kauko-photo-v3.jpg',
+              selite: 'Lipunnosto kestää hetken; selviytyminen on vaatinut '
+                + 'viikkojen kylmyyden ja suunnitelman, jossa osa koirista '
+                + 'uhrataan muiden ravinnoksi. Kaikki viisi norjalaista palaavat, '
+                + 'kun taas 34 päivää myöhemmin navalle ehtivä Scottin ryhmä '
+                + 'menehtyy paluumatkalla.',
+              lahde: 'Matkakirjan havainnekuva. Faktat ja Fram-alusreferenssi: '
+                + 'Frammuseet, Roald Amundsenin etelänaparetki 1910–1912; '
+                + 'tarkistettu 3.9.2026.',
+            },
+            {
+              otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-amundsen-tidens-tegn-1912-lehti-photo-v3.jpg',
+              selite: 'Lyhyt sähke tekee Roald Amundsenista kansallissankarin, '
+                + 'mutta retkikunnan miehille tärkein sana on paluu: kaikki viisi '
+                + 'ovat hengissä. Samaan aikaan Robert Scott vetäytyy navalta '
+                + 'kohti rannikkoa tietämättä vielä, ettei hänen ryhmänsä pääse '
+                + 'kotiin.',
+              lahde: 'Matkakirjan havainnekuva: historiallinen rekonstruktio '
+                + 'Tidens Tegnin 9.3.1912 julkaisemasta Amundsen-numerosta. '
+                + 'Faktat ja Fram-alusreferenssi: Frammuseet; tarkistettu '
+                + '3.9.2026.',
             },
           ],
         },
@@ -24961,6 +25201,82 @@ export const MAA_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `wright-kitty-hawk-1903`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-wright-kitty-hawk-1903',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Kitty Hawk 1903',
+      johdanto: 'Pohjois-Carolinan hiekkasärkillä nousi 17. joulukuuta 1903 '
+        + 'ilmaan kone, jonka lento kesti kaksitoista sekuntia — ja jonka kuvan '
+        + 'otti mies, joka ei ollut koskaan ennen käyttänyt kameraa.',
+      tehtava: {
+        kysymys: 'Kuka otti valokuvan Wrightin veljesten ensimmäisestä lennosta?',
+        vaihtoehdot: [
+          'Wilbur Wright',
+          'Paikallislehden kuvaaja',
+          'Pelastusaseman mies John T. Daniels',
+          'Kukaan — kuva on myöhempi piirros',
+        ],
+        oikea: 2,
+        fakta: 'Daniels ei ollut koskaan ennen ottanut valokuvaa; hän puristi '
+          + 'laukaisupalloa juuri kun kone irtosi kiskosta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kill Devil Hills 1903 — kaksitoista sekuntia ilmassa',
+          aika: '17.12.1903',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-wright-kitty-hawk-1903-lahi-photo-v3.jpg',
+          teksti: 'Orville makaa vatsallaan Flyerin ohjaimissa, lantiollaan '
+            + 'kehto, joka kiertää siipien kärkiä. Wilbur juoksee siiven rinnalla '
+            + 'niin pitkään kuin pystyy. Kahdentoista sekunnin kuluttua kone osuu '
+            + 'hiekkaan 36 metrin päässä lähtökohdasta — ja siinä on kaikki, mitä '
+            + 'maailman ensimmäiseltä moottorilennolta jää nähtäväksi. Kill Devil '
+            + 'Hillsin pelastusasemalla työskentelevä John T. Daniels ei ole '
+            + 'koskaan ennen ottanut valokuvaa. Hän puristaa kameran '
+            + 'laukaisupalloa juuri oikealla hetkellä, ja hänen levylleen jää '
+            + 'kuva, joka on nyt jokaisessa oppikirjassa. Aamu on kylmä ja tuuli '
+            + 'kova, ja koneen on rakentanut kaksi polkupyöräkauppiasta '
+            + 'Daytonista: siivet ovat kangasta ja kuusipuuta, moottori heidän '
+            + 'oma, noin kaksitoista hevosvoimaa. Lentoja tehdään sinä päivänä '
+            + 'neljä, ja viimeisellä Wilbur pysyy ilmassa 59 sekuntia ja 260 '
+            + 'metriä. Sen jälkeen tuulenpuuska kaataa koneen, eikä se lennä enää '
+            + 'koskaan. Veljekset lähettävät kotiin sähkeen ja pyytävät kertomaan '
+            + 'asiasta lehdistölle.',
+          selite: 'Orville makaa Flyerin ohjaimissa ja Wilbur juoksee siiven '
+            + 'rinnalla niin pitkään kuin pystyy. Kahdentoista sekunnin kuluttua '
+            + 'kone osuu hiekkaan, mutta veljekset tietävät jo onnistuneensa '
+            + 'siinä, mitä moni piti mahdottomana.',
+          lahde: 'Matkakirjan havainnekuva. Faktat ja alkuperäisen valokuvan '
+            + 'referenssi: U.S. National Park Service, Wright Brothers National '
+            + 'Memorial, *The First Flight*; tarkistettu 3.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Kill Devil Hills 1903 — kaksitoista sekuntia ilmassa',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-wright-kitty-hawk-1903-kauko-photo-v3.jpg',
+              selite: 'Pelastusasemalla työskentelevä John T. Daniels ei ole '
+                + 'koskaan ennen ottanut valokuvaa, kun hän puristaa kameran '
+                + 'laukaisupalloa juuri oikealla hetkellä. Hänen levylleen jää '
+                + 'Orvillen 36 metrin lento — ensimmäinen neljästä yrityksestä '
+                + 'sinä kylmänä aamuna.',
+              lahde: 'Matkakirjan havainnekuva. Faktat ja alkuperäisen valokuvan '
+                + 'referenssi: U.S. National Park Service, Wright Brothers '
+                + 'National Memorial, *The First Flight*; tarkistettu 3.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
   ],
   /*
    * UUSI-SEELANTI (NZL) — Oseanian ensimmäinen maalehti.
@@ -27260,12 +27576,23 @@ export const MAA_KATEGORIAT = {
    * mittaiseksi.
    */
   ECU: [
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `darwin-galapagos-1835`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
     {
       id: 'hetki-darwin-galapagos-1835',
       nimi: 'Historian hetki',
       otsikko: 'Historian hetki: Galápagos 1835',
-      johdanto: 'HMS Beagle laski ankkurin Chathamin saarelle 16. syyskuuta '
-        + '1835, ja laivan 26-vuotias luonnontutkija astui ensimmäistä kertaa '
+      johdanto: 'HMS Beagle laski ankkurin Chathamin saarelle 16. syyskuuta 1835, '
+        + 'ja laivan 26-vuotias luonnontutkija astui ensimmäistä kertaa '
         + 'Galápagosin laavarannalle.',
       tehtava: {
         kysymys: 'Mikä lintu sai Darwinin merkitsemään muistiin, miltä saarelta '
@@ -27283,44 +27610,44 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Chathamin saari 1835 — kilpikonna ja 26-vuotias mies',
-          aika: 'Syyskuu 1835',
+          aika: 'syyskuu 1835',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835-lahi.jpg',
-          teksti: 'HMS Beagle saapui Galápagosille 15. syyskuuta 1835, ja seuraavana '
-            + 'päivänä kapteeni FitzRoy laski ankkurin Chathamin saaren rantaan — '
-            + 'sinne, missä nykyään on Puerto Baquerizo Morenon kaupunki. '
-            + 'Ensimmäisen tuntinsa maissa Charles Darwin viettää Cerro '
-            + 'Tijeretasin kalliolla: allaan mustaa laavaa, joka polttaa '
-            + 'auringossa, ja ympärillään punaisia rapuja ja pensaikkoa, jota hän '
-            + 'kutsuu muistiinpanoissaan surkeannäköiseksi. Darwin on 26-vuotias '
-            + 'eikä kirjoita vielä sanaakaan lajien synnystä: hän merkitsee '
-            + 'muistiin tulivuorenkartioita, jotka muistuttavat häntä '
-            + 'Staffordshiren masuunien piipuista, kutsuu merileguaaneja pimeyden '
-            + 'pikkupiruiksi ja pitää jättiläiskilpikonnia vedenpaisumusta '
-            + 'vanhempina. Ratkaiseva havainto ei ole peippo vaan pilkkalintu: kun '
-            + 'hän huomaa Charlesin saarelta saamansa linnun eroavan Chathamin '
-            + 'yksilöstä, hän alkaa merkitä muistiin, miltä saarelta kukin lintu on '
-            + 'pyydystetty. Beagle purjehtii Tahitille 20. lokakuuta, ja vasta '
-            + 'merellä muistiinpanojaan lukiessaan Darwin hämmästyy: jokainen saari '
-            + 'on oma muunnelmansa.',
-          selite: 'Darwin kyykistyy laavakivelle kasvotusten jättiläiskilpikonnan '
-            + 'kanssa, ja eläin kurottaa kaulansa häntä kohti. Kädenmitan päässä '
-            + 'kivellä lepää nahkakantinen muistikirja, ja lahdella HMS Beagle on '
-            + 'ankkurissa kuivien pensaiden takana.',
-          lahde: 'Matkakirjan havainnekuva: Charles Darwin Chathamin saarella '
-            + 'Galápagosilla syyskuussa 1835. Faktat: en-Wikipedia "Second '
-            + 'voyage of HMS Beagle", tarkistettu 2.9.2026.',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835-lahi-photo-v3.jpg',
+          teksti: 'Kilpikonna kurottaa kaulaansa, ja 26-vuotias mies kyykistyy '
+            + 'sitä vastaan katsomaan silmiin. Charles Darwin ei ole tässä '
+            + 'hetkessä teorian isä vaan utelias keräilijä: hän istuu Cerro '
+            + 'Tijeretasin kalliolla, merkitsee muistiin tulivuorenkartioita, '
+            + 'jotka muistuttavat häntä Staffordshiren masuunien piipuista, '
+            + 'kutsuu merileguaaneja pimeyden pikkupiruiksi ja pitää '
+            + 'jättiläiskilpikonnia vedenpaisumusta vanhempina. HMS Beagle saapui '
+            + 'Galápagosille 15. syyskuuta 1835, ja seuraavana päivänä kapteeni '
+            + 'FitzRoy laski ankkurin Chathamin saaren rantaan. Miehistölle '
+            + 'saaristo on lyhyt pysähdys veden, ruoan ja näytteiden vuoksi. '
+            + 'Ratkaiseva havainto ei ole peippo vaan pilkkalintu: kun Darwin '
+            + 'huomaa Charlesin saaren linnun eroavan Chathamin yksilöstä, hän '
+            + 'alkaa merkitä muistiin, miltä saarelta kukin lintu on pyydystetty '
+            + '— osaa näytteistään hän ei ole merkinnyt lainkaan. Beagle '
+            + 'purjehtii Tahitille 20. lokakuuta, ja teoria syntyy vasta vuosien '
+            + 'vertailusta ja pitkästä epäröinnistä.',
+          selite: '26-vuotias Darwin katsoo kilpikonnaa vielä uteliaana '
+            + 'keräilijänä, ei valmiin teorian isänä. Hän ymmärtää saarten '
+            + 'havaintojen merkityksen vasta myöhemmin — osin siksi, ettei aluksi '
+            + 'merkitse kaikkien näytteidensä tarkkaa alkuperäsaarta.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Darwin Correspondence '
+            + 'Project, Darwinin vuoden 1835 kirjeet ja Galápagos-oleskelun '
+            + 'toimitukselliset viitteet; tarkistettu 3.9.2026.',
           galleria: [
             {
               otsikko: 'Chathamin saari 1835 — kilpikonna ja 26-vuotias mies',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835.jpg',
-              selite: 'Darwin kyykistyy laavakivikolle vastapäätä '
-                + 'jättiläiskilpikonnaa, ja etualan kivillä liikkuu punaisia '
-                + 'rapuja. Lahdella HMS Beagle on ankkurissa, ja miehiä soutaa '
-                + 'veneellä rantaan.',
-              lahde: 'Matkakirjan havainnekuva: Charles Darwin Chathamin saarella '
-                + 'Galápagosilla syyskuussa 1835. Faktat: en-Wikipedia "Second '
-                + 'voyage of HMS Beagle", tarkistettu 2.9.2026.',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835-kauko-photo-v3.jpg',
+              selite: 'Beaglen miehistölle Galápagos on lyhyt pysähdys veden, '
+                + 'ruoan ja näytteiden vuoksi; Darwinille sen viidestä viikosta '
+                + 'tulee vuosikymmenten ajatuskumppani. Evoluutioteoria ei synny '
+                + 'yhtenä välähdyksenä rannalla vaan epävarmoista '
+                + 'muistiinpanoista, vertailusta ja pitkästä epäröinnistä.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Darwin Correspondence '
+                + 'Project, Darwinin vuoden 1835 kirjeet ja Galápagos-oleskelun '
+                + 'toimitukselliset viitteet; tarkistettu 3.9.2026.',
             },
           ],
         },

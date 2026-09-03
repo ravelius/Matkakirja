@@ -9,7 +9,21 @@
  * Sarjan mitta on juuri tuo: KATSOJA ON PAIKALLA, silmien korkeudella,
  * siinä sekunnissa jolloin jotain on tapahtumassa.
  *
- * Tämä on H1-pilotti: kymmenen hetkeä meren ja löytöretkien piiristä.
+ * Hetkiä on viisitoista: H1-pilotin kymmenen meren ja löytöretkien
+ * hetkeä sekä kuvaputken photo-v3-erän mukana saapunut viisikko —
+ * Kolumbuksen kaksi rahoitushetkeä ja kolme tiedehistorian hetkeä
+ * (Röntgen, Wrightin veljekset, Einstein).
+ *
+ * ── TEKSTIN SÄÄNTÖ: IHMINEN EDELLÄ ─────────────────────────────────
+ *
+ * Jokainen `teksti` alkaa siitä, mitä kuvan ihminen kokee, pelkää tai
+ * ajattelee juuri tässä sekunnissa; suuri kaari kerrotaan vasta sen
+ * jälkeen ja lyhyesti. Aloitustapa vaihtelee (lähikuva, ääni, esine,
+ * kysymys, ohikulkeva hetki) eikä sama tapa toistu peräkkäisissä
+ * hetkissä. Mitta on 120–170 sanaa. Keksitty minitarina on sallittu
+ * vain merkittynä ("ehkä", "kerrotaan"); päivämäärät, nimet ja luvut
+ * ovat en-Wikipediasta, ja artikkeli nimetään jokaisen hetken
+ * yläpuolella olevassa lähdekommentissa.
  *
  * ── MISSÄ HETKI NÄKYY ──────────────────────────────────────────────
  *
@@ -22,12 +36,7 @@
  * kaikki historian hetket ja muut karttanostot myös joko
  * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle, ellei
  * näin ole jo tehty."* Lehtisivu ei siis ole koskaan hetken AINOA
- * paikka. Aamun sääntö kertoi, MILLOIN hetki ei saa omaa merkkiä
- * kaupungin laatan päälle; se ei tarkoittanut, että hetki katoaisi
- * kartalta kokonaan. Kymmenestä hetkestä kahdeksan oli jäänyt v1453:ssa
- * pelkkään lehteen, ja tarkennus palauttaa niistä kuusi kartalle —
- * kartalla on siis kahdeksan kymmenestä ja poikkeuksia kaksi.
- * Nykyinen jako:
+ * paikka. Nykyinen jako:
  *
  *   `kartalla: true`   Hetki saa OMAN KOHDEMERKIN (tiimalasi)
  *                      tapahtumapaikkaan JA oman sivun lehteen. Tämä on
@@ -51,56 +60,58 @@
  *                      tests/nostot-kartalla.test.mjs, eikä uutta saa
  *                      lisätä ilman syytä.
  *
- * MINIVISA ON KARTAN HETKEN OSA, mutta kuudelta kartalle
- * palanneelta se puuttuu: visakysymykset kirjoittaa päätoimittaja
- * (docs/roolitus.md), eikä niitä keksitä koodierässä. Kortti toimii
- * ilman visaa (js/historian-hetket.js hetkiVisa palaa heti), ja
- * tests/historian-hetket.test.mjs pitää kirjaa siitä, keneltä visa
- * vielä puuttuu — lista tyhjenee itsestään, kun visa saapuu.
- *
  * `lehti`-kenttä kertoo, MIHIN lehteen sivu on kirjoitettu:
  * `{ laji: 'kaupunki', avain: <city.id> }` on kaupunkilehti
  * (js/packs/kulttuuri-kategoriat.js) ja `{ laji: 'maa', avain: <ISO3> }`
  * maalehti (js/packs/maa-kategoriat.js). Sivun tunnus on kummassakin
- * `hetki-<id>`, ja tests/historian-hetket.test.mjs tarkistaa, että
- * sivu on oikeasti olemassa ja että sen kuvat ja lähderivit ovat samat
- * kuin täällä.
+ * `hetki-<id>`.
  *
- * ── KAKSI KUVAA PER HETKI (omistaja 2.9.2026, klo 11 UTC) ──────────
+ * ── LEHTISIVU EI OLE ENÄÄ KÄSITYÖTÄ ────────────────────────────────
  *
- * Jokaisesta kohtauksesta tulee KAKSI havainnekuvaa: LÄHIKUVA ihmisistä
- * tapahtuma taustalla (`rooli: 'lahi'`, tiedosto
- * `hetki-<id>-lahi.jpg`) ja KAUKOKUVA koko kohtauksesta
- * (`rooli: 'kauko'`, `hetki-<id>-kauko.jpg`). Siksi kuva ei ole yksi
- * kenttä vaan LISTA: `kuvat[0]` on sivun ja kortin pääkuva ja loput
- * selataan nuolilla sen perässä (sama malli kuin lehden noston
- * kuvagalleriassa, docs/moduulit/kaupunkilehti.md).
+ * Sama teksti ja samat kuvat asuivat aiemmin kahdessa tiedostossa
+ * käsin kopioituina, ja juuri se eriytyy hiljaa. Nyt lehtisivu
+ * GENEROIDAAN tästä pakasta: kentät `lehtiJohdanto` ja `lehtiTehtava`
+ * ovat sivun ainoa oma sisältö, ja `node tools/paivita-hetkisivut.mjs`
+ * kirjoittaa sivulohkon kulttuuri-/maa-kategorioihin. Vastaavuuden
+ * tarkistaa tests/historian-hetket.test.mjs.
  *
- * ERÄ H1 (2.9.2026) oli tehty ennen linjausta: kymmenen tiedostoa
- * nimellä `hetki-<id>.jpg`, kaikki kaukokuvia, joten niiden rooli on
- * `kauko`. ERÄ H2 (2.9.2026 ilta) toi yhdeksän hyväksyttyä kuvaa, ja
- * ne kytkettiin kahdella tavalla:
+ * ── KOLME KUVAKULMAA PER HETKI ─────────────────────────────────────
  *
- *   KAUKO KORVATTIIN neljältä hetkeltä (Kolumbus, Magalhães, Cook,
- *   Amundsen): `tiedosto` osoittaa nyt uuteen `-kauko.jpg`-kuvaan, ja
- *   kuvateksti kirjoitettiin uusiksi sen mukaan, mitä uudessa kuvassa
- *   oikeasti näkyy. H1:n vanhat tiedostot jäävät ämpäriin, mutta
- *   niihin ei enää viitata.
- *   LÄHIKUVA LISÄTTIIN listan KÄRKEEN viidelle hetkelle (Darwin,
- *   Nansen, Trafalgar, Vasco da Gama, Amundsen) — lähikuva on
- *   omistajan nimeämä pääkuva, eikä koodiin tarvinnut koskea: kortti
- *   ja lehtisivu näyttävät aina listan ensimmäisen isona ja loput
- *   selattavina.
+ * Omistaja 2.9.2026 (klo 11 UTC): jokaisesta kohtauksesta LÄHIKUVA
+ * ihmisistä tapahtuma taustalla (`rooli: 'lahi'`) ja KAUKOKUVA koko
+ * kohtauksesta (`rooli: 'kauko'`). Lähikuva on pääkuva, joten se on
+ * listan ensimmäinen; kortti ja lehtisivu näyttävät ensimmäisen isona
+ * ja loput selailunuolilla.
  *
- * Loput hetket odottavat yhä pariaan; niiden lista on yhden mittainen.
+ * KOLMAS ROOLI `lehti` (3.9.2026) on aikakauden lehtisivun
+ * rekonstruktio — PYSTYKUVA 1024 × 1536 — ja sellainen tehtiin
+ * neljälle hetkelle: Titanicille (The Daily Graphic), Nansenille
+ * (Verdens Gang), Amundsenille (Tidens Tegn) ja Trafalgarille (The
+ * Times). Tiedostonimi ei ole `hetki-<id>-lehti-…` vaan lehden oma
+ * (`hetki-titanic-daily-graphic-1912-lehti-photo-v3.jpg`), koska kuva
+ * on nimetty julkaisunsa eikä hetken mukaan; testi lukitsee neljän
+ * tiedoston listan.
+ *
+ * ERÄ photo-v3 (3.9.2026) korvasi KAIKKI aiemmat kuvat. Omistajan
+ * linjaus (Raamattu, "KAIKKI GENEROIDUT KUVAT MAHDOLLISIMMAN
+ * VALOKUVAMAISIA"): H1- ja H2-erien kuvat lukivat maalauksina ja
+ * tilattiin uusiksi valokuvaajan sanastolla. Vanhat tiedostot jäävät
+ * ämpäriin, mutta niihin ei enää viitata, eivätkä niiden kuvatekstit
+ * kelpaa uusien kuvien kanssa: jokainen `kuvateksti` ja `lahde` on
+ * kuvaputken toimittama ja omistajan hyväksymä sanasta sanaan
+ * (posti/kuvatoimitus.md 3.9.2026 01:02 UTC).
+ *
+ * LÄHDERIVIN OSOITTEET ASUVAT `url`-KENTÄSSÄ. Toimitetut lähderivit
+ * päättyivät pitkiin http-osoitteisiin, ja lähderivi ladotaan pelissä
+ * tekstinä kuvan alle (js/tekijakortti.js taytaLahderivi) — osoite
+ * täyttäisi kuvatekstin alta puolet rivistä. Osoite ei silti katoa:
+ * se on omassa kentässään samassa kuvassa.
  *
  * ── KUVAT OVAT MATKAKIRJAN HAVAINNEKUVIA ───────────────────────────
  *
  * Kuvat eivät ole valokuvia vaan Matkakirjan itse koostamia
  * havainnekuvia, ja jokaisen kuvan `lahde` sanoo sen ääneen —
  * lähderivistä kasvaa pelissä painettava selite (js/havainnekuva.js).
- * Rivin loppuosa nimeää sen en-Wikipedian artikkelin, jota vasten
- * hetken faktat (päivämäärä, alukset, henkilöt, luvut) on tarkistettu.
  *
  * ── NIMET ON PREFIKSOITU ───────────────────────────────────────────
  *
@@ -122,8 +133,23 @@ export const HETKI_KUVAJUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.
 /** Kuvan täysi osoite ämpärissä. */
 export const hetkenKuvaOsoite = (tiedosto) => `${HETKI_KUVAJUURI}/${tiedosto}`;
 
-/** Sallitut kuvaroolit: lähikuva ihmisistä ja kaukokuva kohtauksesta. */
-export const HETKI_KUVAROOLIT = new Set(['lahi', 'kauko']);
+/**
+ * Sallitut kuvaroolit: lähikuva ihmisistä, kaukokuva kohtauksesta ja
+ * aikakauden lehtisivu (pystykuva, vain neljällä hetkellä).
+ */
+export const HETKI_KUVAROOLIT = new Set(['lahi', 'kauko', 'lehti']);
+
+/**
+ * Hetket, joille kuvaputki teki aikakauden lehtisivun — ja sen kuvan
+ * tiedostonimi. Nimi ei johdu hetken tunnuksesta, joten se ei ole
+ * pääteltävissä: lista on tässä, ja testi vartioi sen.
+ */
+export const HETKI_LEHTIKUVAT = {
+  'trafalgar-victory-1805': 'hetki-trafalgar-the-times-1805-lehti-photo-v3.jpg',
+  'nansen-fram-1893': 'hetki-nansen-verdens-gang-1893-lehti-photo-v3.jpg',
+  'amundsen-etelanapa-1911': 'hetki-amundsen-tidens-tegn-1912-lehti-photo-v3.jpg',
+  'titanic-southampton-1912': 'hetki-titanic-daily-graphic-1912-lehti-photo-v3.jpg',
+};
 
 /**
  * Hetken kuvat valmiine osoitteineen — yksi paikka, josta sekä kortti
@@ -139,7 +165,180 @@ export function hetkenKuvat(hetki) {
 
 export const HISTORIAN_HETKET = [
   /*
-   * 1. PALOS DE LA FRONTERA 3.8.1492.
+   * 1. LISSABON 1484 — HYLKÄYS JUHANA II:N HOVISSA.
+   * Piste on Lissabonin laatan päällä (1 laudan yksikkö), joten merkki
+   * tarvitsee `kattoVapaa`-lipun; kasauspassi latoo tiimalasin
+   * kaupungin viereen siirtoviivan päähän. Sivu on Lissabonin
+   * kaupunkilehdessä.
+   * Lähde: en.wikipedia.org: Christopher Columbus, John II of Portugal
+   */
+  {
+    id: 'kolumbus-portugali-1484',
+    otsikko: 'Lissabon 1484 — kartta, jota kukaan ei osta',
+    nimio: 'Lissabon 1484',
+    paivays: '1484',
+    paikka: 'Lissabon, Portugali',
+    iso: 'PRT',
+    lat: 38.7075, lon: -9.1355,
+    teksti: 'Pöydällä on kartta, jota Kolumbus on kantanut ovelta ovelle jo '
+      + 'vuosia. Siihen on merkitty lyhyt meri ja sen takana Aasia. Hän '
+      + 'katsoo, kuinka kuninkaan asiantuntijat kumartuvat kartan ylle ja '
+      + 'pudistavat päätään — taas kerran. Loukkaus on tuttu eikä siksi '
+      + 'yhtään helpompi. Epäilijät osuvat siihen, mikä on olennaista: '
+      + 'Kolumbus on laskenut maapallon liian pieneksi ja Aasian aivan liian '
+      + 'lähelle, ja purjehdus, jonka hän lupaa, olisi todellisuudessa '
+      + 'moninkertainen. Juhana II:n hovi ei silti hylkää suunnitelmaa vain '
+      + 'laskuvirheen takia. Portugalin laivat etenevät jo Afrikan rannikkoa '
+      + 'etelään, ja se tie Intiaan näyttää varmalta — miksi maksaa '
+      + 'arvauksesta? Lissabonista lähtee mies, jolla ei ole laivaa eikä '
+      + 'rahoittajaa. Seuraavat kahdeksan vuotta hän vie saman kartan '
+      + 'Kastilian hoviin, sitten uudelleen ja uudelleen, kunnes joku '
+      + 'vihdoin sanoo kyllä.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-kolumbus-portugali-1484-lahi-photo-v3.jpg',
+        kuvateksti: 'Kolumbus on kantanut samoja karttoja ja laskelmia ovelta '
+          + 'toiselle jo vuosia, kun Portugalin hovin asiantuntijat sanovat '
+          + 'jälleen ei. Heidän epäilynsä osuu olennaiseen: Kolumbus kuvittelee '
+          + 'Aasian paljon lähemmäksi kuin se on.',
+        lahde: 'Matkakirjan havainnekuva. Faktat ja asiakirjareferenssit: '
+          + 'Library of Congress, näyttely *1492: An Ongoing Voyage* ja Henry '
+          + 'Harrisse Collection; tarkistettu 3.9.2026.',
+        url: 'https://www.loc.gov/exhibits/1492/columbus.html',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-kolumbus-portugali-1484-kauko-photo-v3.jpg',
+        kuvateksti: 'Kuningas Juhana II:n pöydällä Kolumbuksen suuri unelma '
+          + 'näyttää tarpeettomalta riskiltä, sillä Portugali etenee jo Afrikan '
+          + 'rannikkoa etelään. Hylätty suunnittelija lähtee Lissabonista '
+          + 'loukattuna mutta ei luovuta — seuraavaksi hän yrittää Kastilian '
+          + 'hovissa.',
+        lahde: 'Matkakirjan havainnekuva. Faktat ja asiakirjareferenssit: '
+          + 'Library of Congress, näyttely *1492: An Ongoing Voyage* ja Henry '
+          + 'Harrisse Collection; tarkistettu 3.9.2026.',
+        url: 'https://www.loc.gov/exhibits/1492/columbus.html',
+      },
+    ],
+    kartalla: true,
+    kattoVapaa: true,
+    lehti: { laji: 'kaupunki', avain: 'lissabon' },
+    visa: {
+      kysymys: 'Miksi Portugalin hovin asiantuntijat torjuivat Kolumbuksen suunnitelman?',
+      vaihtoehdot: [
+        'He eivät uskoneet maapallon olevan pyöreä',
+        'Portugalilla ei ollut varaa kolmeen laivaan',
+        'Kolumbus oli laskenut maapallon liian pieneksi',
+      ],
+      oikea: 2,
+    },
+    lehtiJohdanto: 'Kolumbus asui Lissabonissa toistakymmentä vuotta ja esitti '
+      + 'suunnitelmansa ensin Portugalin kuninkaalle — joka sanoi ei, ja oli '
+      + 'laskuopin puolesta oikeassa.',
+    lehtiTehtava: {
+      kysymys: 'Missä Kolumbus haki rahoitusta ennen Espanjaa?',
+      vaihtoehdot: [
+        'Genovan tasavallasta',
+        'Portugalin kuninkaalta Juhana II:lta',
+        'Englannin kuninkaalta Henrik VII:ltä',
+        'Venetsian dogelta',
+      ],
+      oikea: 1,
+      fakta: 'Portugalin hovi hylkäsi suunnitelman 1484; Kastilian kyllä tuli '
+        + 'vasta kahdeksan vuotta myöhemmin.',
+    },
+  },
+  /*
+   * 2. SANTA FÉ, GRANADA 17.4.1492 — KAPITULAATIOT.
+   * Granada on 4 laudan yksikön päässä, joten merkki tarvitsee
+   * `kattoVapaa`-lipun. Sivu on Granadan kaupunkilehdessä.
+   * Lähde: en.wikipedia.org: Capitulations of Santa Fe, Christopher
+   * Columbus, Isabella I of Castile
+   */
+  {
+    id: 'kolumbus-santa-fe-1492',
+    otsikko: 'Santa Fé 1492 — sanansaattaja tavoittaa tiellä',
+    nimio: 'Santa Fé 1492',
+    paivays: '17.4.1492',
+    paikka: 'Santa Fé, Granada, Espanja',
+    iso: 'ESP',
+    lat: 37.19, lon: -3.72,
+    teksti: 'Kavioiden kapse tavoittaa hänet vasta tiellä. Kolumbus on lähtenyt '
+      + 'Santa Fésta jälleen kerran torjuttuna, kun kuninkaallinen '
+      + 'sanansaattaja saa hänet kiinni ja käskee kääntyä takaisin: hovi on '
+      + 'muuttanut mielensä. Miehellä, joka ratsastaa takaisin leirikaupunkiin, '
+      + 'ei ole enää mitään hävittävää, ja juuri siksi hän uskaltaa vaatia. Hän '
+      + 'ei pyydä pelkkiä laivoja vaan amiraalin arvon, kuvernöörin aseman '
+      + 'löytämissään maissa ja kymmenyksen kaikesta, mitä lännestä tulee. '
+      + 'Odotusta on takana seitsemän vuotta: Kastilian hovi on kuunnellut, '
+      + 'lykännyt ja torjunut, ja koko ajan on ollut sota. Santa Fé on '
+      + 'rakennettu Granadan piiritystä varten, ja kaupunki antautui vasta '
+      + 'tammikuun toisena päivänä; nyt kruunulla on vihdoin aikaa kuunnella. '
+      + 'Sopimus allekirjoitetaan 17. huhtikuuta 1492. Tarina, jonka mukaan '
+      + 'Isabella pantitsi jalokivensä, on myöhempää perua — rahat tulivat '
+      + 'kruunun varoista ja hovin neuvotteluista, ja niitä ajoi eteenpäin '
+      + 'kuninkaan taloudenhoitaja Luis de Santángel. Kolumbus ei aavista, että '
+      + 'samat pykälät, jotka nyt tekevät hänestä amiraalin, riitautetaan hänen '
+      + 'kuolemansa jälkeen vuosikymmeniksi.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-kolumbus-santa-fe-1492-lahi-photo-v3.jpg',
+        kuvateksti: 'Kuninkaallinen sanansaattaja tavoittaa jo pois lähteneen '
+          + 'Kolumbuksen ja kutsuu hänet takaisin Santa Fehen: vuosien torjunnat '
+          + 'vaihtuvat viimein suostumukseksi. Hän ei saa vain laivoja, vaan '
+          + 'vaatii itselleen amiraalin arvon, kuvernöörin aseman ja osuuden '
+          + 'mahdollisista rikkauksista.',
+        lahde: 'Matkakirjan havainnekuva. Faktat ja sopimusreferenssi: Library '
+          + 'of Congress, Santa Fén 17.4.1492 kapitulaatiot ja Columbus, *Book '
+          + 'of Privileges*; tarkistettu 3.9.2026.',
+        url: 'https://www.loc.gov/exhibits/1492/columbus.html',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-kolumbus-santa-fe-1492-kauko-photo-v3.jpg',
+        kuvateksti: 'Isabella ei tarinan vastaisesti panttaa jalokiviään; '
+          + 'rahoitus syntyy hovin neuvotteluista ja kruunun varoista. Huhtikuun '
+          + '1492 sopimuksen äärellä Kolumbukselle ratkaisevaa ei ole vain matka '
+          + 'vaan se, mitä hänestä tulee, jos lännessä todella odottaa Aasia.',
+        lahde: 'Matkakirjan havainnekuva. Faktat ja sopimusreferenssi: Library '
+          + 'of Congress, Santa Fén 17.4.1492 kapitulaatiot ja Columbus, *Book '
+          + 'of Privileges*; tarkistettu 3.9.2026.',
+        url: 'https://www.loc.gov/exhibits/1492/columbus.html',
+      },
+    ],
+    kartalla: true,
+    kattoVapaa: true,
+    lehti: { laji: 'kaupunki', avain: 'granada' },
+    visa: {
+      kysymys: 'Mistä Kolumbuksen ensimmäisen matkan rahoitus tuli?',
+      vaihtoehdot: [
+        'Kuningatar Isabella pantitsi jalokivensä',
+        'Kruunun varoista ja hovin neuvotteluista',
+        'Genovalaiset pankkiirit maksoivat koko retken',
+      ],
+      oikea: 1,
+    },
+    lehtiJohdanto: 'Granadan viereen piiritystä varten rakennettu leirikaupunki '
+      + 'Santa Fé näki 17. huhtikuuta 1492 sopimuksen, joka teki genovalaisesta '
+      + 'purjehtijasta amiraalin ennen kuin hän oli löytänyt mitään.',
+    lehtiTehtava: {
+      kysymys: 'Mitä Kolumbus vaati Santa Fén sopimuksessa laivojen lisäksi?',
+      vaihtoehdot: [
+        'Aateliskirjan koko suvulleen',
+        'Vapautuksen kaikista veroista',
+        'Amiraalin arvon ja kymmenyksen löydöistä',
+        'Oman sataman Cádizista',
+      ],
+      oikea: 2,
+      fakta: 'Sopimus lupasi hänelle myös kuvernöörin aseman löytämissään '
+        + 'maissa — pykälistä riideltiin oikeudessa vuosikymmeniä hänen '
+        + 'kuolemansa jälkeen.',
+    },
+  },
+  /*
+   * 3. PALOS DE LA FRONTERA 3.8.1492.
    * Lähin kohdekaupunki Sevilla 31 laudan yksikön päässä — oma merkki
    * kartalle (kaupunkikaton kahdeksan yksikön säde ei yllä tänne) ja
    * sivu Sevillan kaupunkilehteen.
@@ -153,31 +352,47 @@ export const HISTORIAN_HETKET = [
     paikka: 'Palos de la Frontera, Espanja',
     iso: 'ESP',
     lat: 37.2306, lon: -6.8944,
-    teksti: 'Aamu on juuri valjennut, ja Río Tinton suistossa vesi laskee — '
-      + 'sitä on odotettu, sillä laskuvesi vie laivat merelle ilman soutua. '
-      + 'Ankkurissa on kolme alusta: Santa María, pyöreärunkoinen nao, jonka '
-      + 'omistaa Juan de la Cosa ja jota Kolumbus itse komentaa, sekä '
-      + 'karavellit Pinta ja Niña. Niitä luotsaavat paikkakunnan omat '
-      + 'merenkulkijat, veljekset Martín Alonso ja Vicente Yáñez Pinzón, '
-      + 'jotka värväsivät miehistön naapureistaan Palosista ja Moguerista — '
-      + 'laiturilla seisova väki tuntee lähtijät nimeltä. Kolme päivää '
-      + 'myöhemmin Pintan peräsin murtuu, ja se korjataan Kanariansaarilla; '
-      + 'vasta 6. syyskuuta laivat kääntyvät La Gomeralta länteen viiden '
-      + 'viikon merimatkalle. Kukaan täällä ei tiedä, että Kolumbuksen '
-      + 'laskelma maapallon koosta on rajusti pielessä ja että lännessä '
-      + 'odottaa manner, jota kukaan ei osaa odottaa.',
+    teksti: 'Santa Marían nuori laivapoika kuuntelee Palosin kirkonkelloja ja '
+      + 'yrittää olla näyttämättä, ettei ole koskaan ollut avomerellä. Hänen '
+      + 'ympärillään kaikki tuntevat toisensa: karavelleja Pintaa ja Niñaa '
+      + 'luotsaavat paikkakunnan omat merenkulkijat, veljekset Martín Alonso ja '
+      + 'Vicente Yáñez Pinzón, ja miehistö on värvätty naapureista Palosista ja '
+      + 'Moguerista. Laiturilla seisova väki tuntee lähtijät nimeltä, ja se on '
+      + 'pojan onni ja pelko yhtä aikaa. Aamu on juuri valjennut. Río Tinton '
+      + 'suistossa vesi laskee, ja juuri sitä on odotettu: laskuvesi vie laivat '
+      + 'merelle ilman soutua. Suurin aluksista '
+      + 'on Santa María, pyöreärunkoinen nao, jonka omistaa Juan de la Cosa ja '
+      + 'jota Kolumbus itse komentaa. Kolme päivää myöhemmin Pintan peräsin '
+      + 'murtuu ja korjataan Kanariansaarilla; vasta 6. syyskuuta laivat '
+      + 'kääntyvät La Gomeralta länteen viiden viikon merimatkalle. Poika '
+      + 'luulee purjehtivansa Aasiaan, kuten Kolumbuskin. Matka päätyy '
+      + 'toisaalle, ja siitä kohtaamisesta tulee käänne sekä Euroopalle että '
+      + 'Amerikan alkuperäiskansoille.',
     kuvat: [
       {
+        rooli: 'lahi',
+        tiedosto: 'hetki-kolumbus-palos-1492-lahi-photo-v3.jpg',
+        kuvateksti: 'Santa Marían nuori laivapoika kuuntelee Palosin kelloja ja '
+          + 'yrittää olla näyttämättä, ettei ole koskaan ollut avomerellä. '
+          + 'Kolumbus uskoo purjehtivansa Aasiaan; pojan tuntematon matka päätyy '
+          + 'osaksi kohtaamista, joka mullistaa sekä Euroopan että Amerikan '
+          + 'alkuperäiskansojen elämän.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Library of Congress, '
+          + '*Writings of Christopher Columbus* ja Henry Harrisse Collection; '
+          + 'tarkistettu 3.9.2026.',
+        url: 'https://www.loc.gov/resource/gdcmassbookdig.writingsofchrist01colu/',
+      },
+      {
         rooli: 'kauko',
-        tiedosto: 'hetki-kolumbus-palos-1492-kauko.jpg',
-        kuvateksti: 'Kolme alusta odottaa ankkurissa Río Tinton suistossa '
-          + 'aamuhämärässä: oikealla pyöreärunkoinen nao purjeet auki, kauempana '
-          + 'kaksi pienempää karavellia. Soutuveneet kulkevat laivojen ja rannan '
-          + 'väliä, ja vasemmalla mutarannalla seisoo kaupunkilaisia katsomassa '
-          + 'lähtöä.',
-        lahde: 'Matkakirjan havainnekuva: Kolumbuksen laivue lähdössä Palosista '
-          + '3. elokuuta 1492. Faktat: en-Wikipedia "Voyages of Christopher '
-          + 'Columbus", tarkistettu 2.9.2026.',
+        tiedosto: 'hetki-kolumbus-palos-1492-kauko-photo-v3.jpg',
+        kuvateksti: 'Rannalle jäävä perhe näkee kolmen pienen laivan katoavan '
+          + 'Río Tinton suulle tietämättä, maksetaanko luvattu palkka tai '
+          + 'palaako oma mies koskaan. Kolumbuksen retkikunta etsii Aasiaa mutta '
+          + 'avaa pysyvän ja pian väkivaltaisen yhteyden Atlantin yli.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Library of Congress, '
+          + '*Writings of Christopher Columbus* ja Henry Harrisse Collection; '
+          + 'tarkistettu 3.9.2026.',
+        url: 'https://www.loc.gov/resource/gdcmassbookdig.writingsofchrist01colu/',
       },
     ],
     kartalla: true,
@@ -191,9 +406,24 @@ export const HISTORIAN_HETKET = [
       ],
       oikea: 0,
     },
+    lehtiJohdanto: 'Kahdeksankymmentä kilometriä Sevillasta länteen, Río Tinton '
+      + 'suistossa, kolme laivaa odotti laskuvettä 3. elokuuta 1492 — ja '
+      + 'lähtijät olivat tämän saman jokisuun omia merenkulkijoita.',
+    lehtiTehtava: {
+      kysymys: 'Mikä kolmesta aluksesta oli Kolumbuksen laivueen suurin?',
+      vaihtoehdot: [
+        'Pinta',
+        'Niña',
+        'Santa María',
+        'Bérrio',
+      ],
+      oikea: 2,
+      fakta: 'Santa María oli pyöreärunkoinen nao; Pinta ja Niña olivat '
+        + 'pienempiä karavelleja.',
+    },
   },
   /*
-   * 2. SANLÚCAR DE BARRAMEDA 20.9.1519.
+   * 4. SANLÚCAR DE BARRAMEDA 20.9.1519.
    * Sevilla 27 yksikön päässä — oma merkki kartalle ja sivu Sevillaan.
    * Lähde: en.wikipedia.org: Magellan expedition, Ferdinand Magellan
    */
@@ -205,30 +435,47 @@ export const HISTORIAN_HETKET = [
     paikka: 'Sanlúcar de Barrameda, Espanja',
     iso: 'ESP',
     lat: 36.7726, lon: -6.3530,
-    teksti: 'Laivasto tuli Sevillasta 10. elokuuta Guadalquivirjokea alas ja on '
-      + 'maannut tässä jokisuussa yli viisi viikkoa: vettä, viiniä ja '
-      + 'suolalihaa on lastattu viimeiseen asti. Nyt ankkurissa on viisi '
-      + 'alusta — lippulaiva Trinidad, San Antonio, Concepción, Victoria ja '
-      + 'Santiago — ja miehiä on noin 270. Rannalla liikkuu ontuen '
+    teksti: 'Kuka teistä palaa? Sitä ei jokisuussa kysy kukaan ääneen. Köyttä '
+      + 'kiristävä merimies on yksi noin 270 lähtijästä, ja kolmen vuoden '
+      + 'kuluttua kotiin pääsee heistä kahdeksantoista. Laivasto tuli '
+      + 'Sevillasta 10. elokuuta Guadalquivirjokea alas ja on maannut tässä '
+      + 'jokisuussa yli viisi viikkoa: vettä, viiniä ja suolalihaa on lastattu '
+      + 'viimeiseen asti. Ankkurissa on viisi alusta — lippulaiva Trinidad, San '
+      + 'Antonio, Concepción, Victoria ja Santiago. Rannalla liikkuu ontuen '
       + 'portugalilainen Fernão de Magalhães, jonka jalka jäi vialle '
       + 'Azemmourin taistelussa Marokossa 1513 ja joka purjehtii nyt Espanjan '
-      + 'kuninkaan lipun alla; espanjalaiset kapteenit epäilevät häntä jo '
-      + 'ennen lähtöä. Kukaan ei tiedä, että matka kestää kolme vuotta ja '
-      + 'että Magalhães itse kaatuu Filippiineillä huhtikuussa 1521 eikä näe '
-      + 'paluuta. Tähän samaan jokisuuhun palaa 6. syyskuuta 1522 yksi laiva, '
-      + 'Victoria, ja sen kannella kahdeksantoista miestä — ensimmäiset, '
-      + 'jotka ovat purjehtineet maapallon ympäri.',
+      + 'kuninkaan lipun alla; espanjalaiset kapteenit epäilevät häntä jo ennen '
+      + 'lähtöä. Hän itse kaatuu Filippiineillä huhtikuussa 1521. Tähän samaan '
+      + 'jokisuuhun palaa 6. syyskuuta 1522 yksi laiva, Victoria, Juan '
+      + 'Sebastián Elcanon komennossa — ensimmäiset maapallon ympäri '
+      + 'purjehtineet ihmiset. Useimmat toverit jäivät nimettömiin hautoihin '
+      + 'matkan varrelle.',
     kuvat: [
       {
+        rooli: 'lahi',
+        tiedosto: 'hetki-magalhaes-sanlucar-1519-lahi-photo-v3.jpg',
+        kuvateksti: 'Köyttä kiristävä merimies on yksi noin 270 lähtijästä; '
+          + 'kotiin palaa alkuperäisestä joukosta vain 18. Magalhães itse kuolee '
+          + 'Filippiineillä, ja Juan Sebastián Elcano tuo viimeisen laivan '
+          + 'Espanjaan.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Espanjan merivoimien '
+          + 'Instituto de Historia y Cultura Naval, *Expedición de Juan '
+          + 'Sebastián de Elcano y Fernando de Magallanes (1519–1522)*; '
+          + 'tarkistettu 3.9.2026.',
+        url: 'https://armada.defensa.gob.es/ArmadaPortal/page/Portal/ArmadaEspannola/cienciaorgano/prefLang-es/02cienciaihcn--10navegaciones--21expvueltalmundo',
+      },
+      {
         rooli: 'kauko',
-        tiedosto: 'hetki-magalhaes-sanlucar-1519-kauko.jpg',
-        kuvateksti: 'Laivue laskee Guadalquivirin suuta kohti merta, kärjessä '
-          + 'suuri nao purjeet auki ja soutuvene köysi kireällä sen keulan '
-          + 'edessä. Oikealla rannalla seisoo kyläläisiä katsomassa, hiekalla '
-          + 'lojuu köysikiekko, ja taustalla häämöttää valkoinen kaupunki.',
-        lahde: 'Matkakirjan havainnekuva: Magalhãesin laivue Sanlúcar de '
-          + 'Barramedassa 20. syyskuuta 1519. Faktat: en-Wikipedia "Magellan '
-          + 'expedition", tarkistettu 2.9.2026.',
+        tiedosto: 'hetki-magalhaes-sanlucar-1519-kauko-photo-v3.jpg',
+        kuvateksti: 'Viisi laivaa lähtee, mutta Sanlúcar näkee kahden vuoden ja '
+          + 'yhdentoista kuukauden kuluttua palaavan vain Victorian. Sen '
+          + 'uupuneet miehet ovat ensimmäiset, jotka ovat kiertäneet maapallon — '
+          + 'useimmat toverit jäävät nimettömiin hautoihin matkan varrelle.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Espanjan merivoimien '
+          + 'Instituto de Historia y Cultura Naval, *Expedición de Juan '
+          + 'Sebastián de Elcano y Fernando de Magallanes (1519–1522)*; '
+          + 'tarkistettu 3.9.2026.',
+        url: 'https://armada.defensa.gob.es/ArmadaPortal/page/Portal/ArmadaEspannola/cienciaorgano/prefLang-es/02cienciaihcn--10navegaciones--21expvueltalmundo',
       },
     ],
     kartalla: true,
@@ -242,9 +489,25 @@ export const HISTORIAN_HETKET = [
       ],
       oikea: 1,
     },
+    lehtiJohdanto: 'Sevillasta lähdettiin 10. elokuuta 1519 Guadalquivirjokea '
+      + 'alas, ja jokisuussa Sanlúcar de Barramedassa viisi laivaa odotti vielä '
+      + 'yli viisi viikkoa ennen kuin ne katosivat länteen.',
+    lehtiTehtava: {
+      kysymys: 'Montako Magalhãesin viidestä laivasta palasi Sanlúcariin '
+        + 'vuonna 1522?',
+      vaihtoehdot: [
+        'Ei yhtään',
+        'Yksi',
+        'Kolme',
+        'Kaikki viisi',
+      ],
+      oikea: 1,
+      fakta: 'Victoria palasi 6. syyskuuta 1522, kannellaan kahdeksantoista '
+        + 'miestä.',
+    },
   },
   /*
-   * 3. LISSABON, RESTELON RANTA 8.7.1497.
+   * 5. LISSABON, RESTELON RANTA 8.7.1497.
    * Lissabon 3 yksikön päässä, joten kaupunkikatto pudottaisi merkin →
    * `kattoVapaa`. Kaupunkilehden kohdekartta ei kelpaa: Belém on 5,5
    * kilometriä kartan länsipuolella (rajaus −9,1505…−9,118), eikä
@@ -260,39 +523,44 @@ export const HISTORIAN_HETKET = [
     paikka: 'Restelon ranta, Lissabon',
     iso: 'PRT',
     lat: 38.6960, lon: -9.2050,
-    teksti: 'Yö on vietetty polvillaan: Restelon kappelissa, jonka Henrik '
-      + 'Purjehtija rakennutti merimiehiä varten ja joka on jo pahasti '
-      + 'rapistunut, Vasco da Gama ja hänen miehensä ovat rukoilleet aamuun '
-      + 'asti. Tejon suulla odottaa neljä alusta — da Gaman São Gabriel, '
-      + 'hänen veljensä Paulon São Rafael, karavelli Bérrio ja nimetön '
-      + 'varastolaiva, joka on määrä hylätä matkan varrella. Miehiä on noin '
-      + '170, ja heistä palaa noin 55. Kukkulalla ei vielä ole luostaria: '
-      + 'Jerónimos alkaa nousta vasta vuonna 1501, tämän matkan mausteilla '
-      + 'ansaituilla tuloilla. Purjehdus, joka alkaa tästä rannasta, sisältää '
-      + 'siihen mennessä pisimmän maihinnousuttoman avomerietapin: yli kolme '
-      + 'kuukautta ja yli kymmenentuhatta kilometriä Etelä-Atlantin yli, '
-      + 'ennen kuin Afrikan rannikko näkyy jälleen 4. marraskuuta.',
+    teksti: 'Polvet painuvat rantahiekkaan, ja yön viimeinen tunti kuluu näin. '
+      + 'Restelon kappelissa, jonka Henrik Purjehtija rakennutti merimiehiä '
+      + 'varten ja joka on jo pahasti rapistunut, Vasco da Gama ja hänen '
+      + 'miehensä ovat rukoilleet aamuun asti — moni heistä rukoilee ehkä '
+      + 'vähemmän Intian rikkauksia kuin sitä, että näkisi vielä kotinsa. Moni '
+      + 'ei näe: miehiä on noin 170, ja heistä palaa noin 55. Tejon suulla '
+      + 'odottaa neljä alusta, da Gaman São Gabriel, hänen veljensä Paulon São '
+      + 'Rafael, karavelli Bérrio ja nimetön varastolaiva, joka on määrä hylätä '
+      + 'matkan varrella. Kukkulalla ei vielä ole luostaria: Jerónimos alkaa '
+      + 'nousta vasta vuonna 1501, tämän matkan mausteilla ansaituilla '
+      + 'tuloilla. Edessä on siihen mennessä pisin maihinnousuton '
+      + 'avomerietappi, yli kolme kuukautta ja yli kymmenentuhatta kilometriä '
+      + 'Etelä-Atlantin yli — ja sen päässä meritie Intiaan, jonka varaan '
+      + 'kasvaa väkivaltainen kauppaimperiumi.',
     kuvat: [
       {
         rooli: 'lahi',
-        tiedosto: 'hetki-vasco-da-gama-restelo-1497-lahi.jpg',
-        kuvateksti: 'Miehet polvistuvat rukoilemaan rantahiekalle, ja etualan '
-          + 'mies puristaa rukousnauhaa pää painuksissa. Takana kohoaa valkoinen '
-          + 'kappeli kellotorneineen, ja tyynellä lahdella odottaa ankkurissa '
-          + 'laivue purjeet käärittyinä.',
-        lahde: 'Matkakirjan havainnekuva: Vasco da Gaman laivue lähdössä '
-          + 'Restelon rannalta 8. heinäkuuta 1497. Faktat: en-Wikipedia "Vasco '
-          + 'da Gama" ja "Jerónimos Monastery", tarkistettu 2.9.2026.',
+        tiedosto: 'hetki-vasco-da-gama-restelo-1497-lahi-photo-v3.jpg',
+        kuvateksti: 'Restelossa polvistuva merimies rukoilee ehkä vähemmän '
+          + 'Intian rikkauksia kuin sitä, että näkisi vielä kotinsa. Moni ei '
+          + 'näe: da Gaman reitti avaa kaupalle uuden tien, mutta matka maksaa '
+          + 'miehistölle nälkää, sairautta ja kuolemia.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: UNESCO Memory of the World, '
+          + '*Journal of the first voyage of Vasco da Gama to India, 1497–1499*; '
+          + 'tarkistettu 3.9.2026.',
+        url: 'https://www.unesco.org/en/memory-world/journal-first-voyage-vasco-da-gama-india-1497-1499',
       },
       {
         rooli: 'kauko',
-        tiedosto: 'hetki-vasco-da-gama-restelo-1497.jpg',
-        kuvateksti: 'Miehet polvistuvat rantahiekalle valkoisen kappelin edessä, '
-          + 'ja lastia soudetaan veneillä odottaville laivoille. Etualalla '
-          + 'seisova viittaan pukeutunut mies katsoo merelle.',
-        lahde: 'Matkakirjan havainnekuva: Vasco da Gaman laivue lähdössä '
-          + 'Restelon rannalta 8. heinäkuuta 1497. Faktat: en-Wikipedia "Vasco '
-          + 'da Gama" ja "Jerónimos Monastery", tarkistettu 2.9.2026.',
+        tiedosto: 'hetki-vasco-da-gama-restelo-1497-kauko-photo-v3.jpg',
+        kuvateksti: 'Rannalle jääville lähtö on lupaus vauraudesta ja '
+          + 'mahdollinen viimeinen hyvästijättö samassa hetkessä. Kun da Gama '
+          + 'palaa, Portugalilla on meritietä Intiaan koskeva vastaus — ja alku '
+          + 'väkivaltaiselle kauppaimperiumille.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: UNESCO Memory of the World, '
+          + '*Journal of the first voyage of Vasco da Gama to India, 1497–1499*; '
+          + 'tarkistettu 3.9.2026.',
+        url: 'https://www.unesco.org/en/memory-world/journal-first-voyage-vasco-da-gama-india-1497-1499',
       },
     ],
     kartalla: true,
@@ -307,9 +575,25 @@ export const HISTORIAN_HETKET = [
       ],
       oikea: 2,
     },
+    lehtiJohdanto: 'Belémin rannalla seisoi vuonna 1497 pieni merimiesten '
+      + 'kappeli, ei vielä luostaria; siellä Vasco da Gaman miehet valvoivat '
+      + 'viimeisen yönsä Euroopassa.',
+    lehtiTehtava: {
+      kysymys: 'Mikä seisoi Restelon rannalla, kun Vasco da Gama lähti '
+        + 'vuonna 1497?',
+      vaihtoehdot: [
+        'Jerónimosin luostari',
+        'Belémin torni',
+        'Merimiesten kappeli',
+        'Kuninkaan telakkahalli',
+      ],
+      oikea: 2,
+      fakta: 'Jerónimos alkoi nousta vasta 1501 ja Belémin torni 1514 — '
+        + 'kappeli oli rannalla ensin.',
+    },
   },
   /*
-   * 4. PLYMOUTH 26.8.1768 — KARTALLE.
+   * 6. PLYMOUTH 26.8.1768 — KARTALLE.
    * Lähin kohdekaupunki Lontoo 143 yksikön päässä (> 35).
    * Lähde: en.wikipedia.org: HMS Endeavour, First voyage of James Cook
    */
@@ -321,31 +605,51 @@ export const HISTORIAN_HETKET = [
     paikka: 'Plymouth, Englanti',
     iso: 'GBR',
     lat: 50.3660, lon: -4.1430,
-    teksti: 'Laiturilla on laatikoita, joita sotalaivaan ei yleensä kanneta: '
-      + 'kasvipuristimia, lasipurkkeja, verkkohäkkejä ja eläviä taimia '
-      + 'ruukuissa. Ne kuuluvat 25-vuotiaalle Joseph Banksille, joka kustansi '
-      + 'omasta pussistaan seitsemän seuralaisensa paikat — mukana ovat '
-      + 'ruotsalainen Daniel Solander ja turkulaissyntyinen Herman Spöring. '
-      + 'Alus on entinen Whitbyn hiililaiva Earl of Pembroke: laivasto osti '
-      + 'sen keväällä, nimesi His Majesty’s Bark Endeavouriksi ja rakensi '
-      + 'ruumaan kolmannen kannen hyteiksi ja ruutivarastoksi. Luutnantti '
-      + 'James Cook, 39-vuotias, vie mukanaan kahdeksantoista kuukauden '
-      + 'muonat 94 hengelle, kymmenen neljän naulan tykkiä, sikoja, kanoja, '
-      + 'kaksi vinttikoiraa ja lypsyvuohen. Virallinen tehtävä on mitata '
-      + 'Venuksen ylikulku Tahitilla; hytissä on lisäksi sinetöity kirje, '
-      + 'jonka Cook saa avata vasta mittauksen jälkeen — käsky etsiä '
-      + 'eteläiseltä Tyyneltämereltä tuntematonta mannerta.',
+    teksti: 'Laiturilla seisoo ruukku, jossa kasvaa elävä taimi. Sen vieressä '
+      + 'on kasvipuristimia, lasipurkkeja ja verkkohäkkejä — laatikoita, joita '
+      + 'sotalaivaan ei yleensä kanneta. Ne kuuluvat 25-vuotiaalle Joseph '
+      + 'Banksille, joka kustansi omasta pussistaan seitsemän seuralaisensa '
+      + 'paikat; mukana ovat ruotsalainen Daniel Solander ja turkulaissyntyinen '
+      + 'Herman Spöring. Kansimies ottaa viimeisen katseen Plymouthiin ennen '
+      + 'matkaa, jonka pituutta kukaan ei osaa luvata. Alus on entinen Whitbyn '
+      + 'hiililaiva Earl of Pembroke: laivasto osti sen keväällä, nimesi His '
+      + 'Majesty’s Bark Endeavouriksi ja rakensi ruumaan kolmannen kannen. '
+      + 'Luutnantti James Cook, 39-vuotias, vie kahdeksantoista kuukauden '
+      + 'muonat 94 hengelle, kymmenen tykkiä, sikoja, kanoja, kaksi '
+      + 'vinttikoiraa ja lypsyvuohen. Virallinen tehtävä on mitata Venuksen '
+      + 'ylikulku Tahitilla; hytissä on sinetöity kirje, jonka saa avata vasta '
+      + 'sen jälkeen — käsky etsiä tuntematonta eteläistä mannerta. '
+      + 'Kolmivuotinen matka tuottaa tiedettä ja karttoja sekä kohtaamisia, '
+      + 'joiden seuraukset Tyynenmeren kansoille ovat kaikkea muuta kuin '
+      + 'viattomia.',
     kuvat: [
       {
+        rooli: 'lahi',
+        tiedosto: 'hetki-cook-endeavour-plymouth-1768-lahi-photo-v3.jpg',
+        kuvateksti: 'Endeavourin kansimies ottaa viimeisen katseen Plymouthiin '
+          + 'ennen matkaa, jonka pituutta kukaan ei osaa luvata. Cook ja Joseph '
+          + 'Banks tavoittelevat Venuksen ylikulkua ja uusia kasveja, mutta '
+          + 'miehistö kantaa samalla imperiumin Euroopan ulkopuolisiin '
+          + 'yhteisöihin.',
+        lahde: 'Matkakirjan havainnekuva. Faktat ja alusreferenssi: Royal '
+          + 'Museums Greenwich, James Cookin ja Joseph Banksin '
+          + 'Endeavour-päiväkirjat sekä Endeavour 1768 -kokoelma; tarkistettu '
+          + '3.9.2026.',
+        url: 'https://www.rmg.co.uk/collections/search/endeavour%201768',
+      },
+      {
         rooli: 'kauko',
-        tiedosto: 'hetki-cook-endeavour-plymouth-1768-kauko.jpg',
-        kuvateksti: 'Endeavour on jo irti laiturista ja kulkee ulos Plymouthin '
-          + 'satamasta keulapurje auki. Kivilaiturilla seisoo kaupunkilaisia '
-          + 'kolmikolkkahatuissa ja valkoisissa myssyissä, pikkuveneet saattavat '
-          + 'laivaa, ja taustalla näkyy sataman matala talorivi.',
-        lahde: 'Matkakirjan havainnekuva: HM Bark Endeavour lähdössä '
-          + 'Plymouthista 26. elokuuta 1768. Faktat: en-Wikipedia "HMS '
-          + 'Endeavour" ja "First voyage of James Cook", tarkistettu 2.9.2026.',
+        tiedosto: 'hetki-cook-endeavour-plymouth-1768-kauko-photo-v3.jpg',
+        kuvateksti: 'Hiililaivaksi rakennettuun Endeavouriin pakkautuu '
+          + 'merimiesten lisäksi tähtitieteilijöitä, luonnontutkijoita, '
+          + 'taiteilijoita ja heidän toiveitaan. Heidän kolmivuotinen matkansa '
+          + 'tuottaa tiedettä, karttoja ja kohtaamisia, joiden seuraukset '
+          + 'Tyynenmeren kansoille ovat kaikkea muuta kuin viattomia.',
+        lahde: 'Matkakirjan havainnekuva. Faktat ja alusreferenssi: Royal '
+          + 'Museums Greenwich, James Cookin ja Joseph Banksin '
+          + 'Endeavour-päiväkirjat sekä Endeavour 1768 -kokoelma; tarkistettu '
+          + '3.9.2026.',
+        url: 'https://www.rmg.co.uk/collections/search/endeavour%201768',
       },
     ],
     kartalla: true,
@@ -359,13 +663,26 @@ export const HISTORIAN_HETKET = [
       ],
       oikea: 1,
     },
+    lehtiJohdanto: 'Plymouthin laiturilla oli 26. elokuuta 1768 laatikoita, '
+      + 'joita sotalaivaan ei yleensä kanneta: kasvipuristimia, lasipurkkeja ja '
+      + 'eläviä taimia ruukuissa.',
+    lehtiTehtava: {
+      kysymys: 'Mikä oli Cookin ensimmäisen matkan virallinen tehtävä?',
+      vaihtoehdot: [
+        'Etsiä Luoteisväylä Kanadan pohjoispuolelta',
+        'Mitata Venuksen ylikulku Tahitilla',
+        'Kartoittaa Uuden-Seelannin rannikko',
+        'Kuljettaa vangit Australiaan',
+      ],
+      oikea: 1,
+      fakta: 'Sinetöity toinen käsky — etsiä eteläistä mannerta — sai avata '
+        + 'vasta mittauksen jälkeen.',
+    },
   },
   /*
-   * 5. TRAFALGARIN NIEMEN EDUSTA 21.10.1805.
+   * 7. TRAFALGARIN NIEMEN EDUSTA 21.10.1805.
    * Lähin kohdekaupunki Tanger 18 yksikön päässä — oma merkki merelle
-   * ja sivu Espanjan maalehteen.
-   * Tapahtumapaikka on Espanjan rannikolla, joten sivu on Espanjan
-   * maalehdessä (Tangerilla ei ole omaa kaupunkilehteä).
+   * ja sivu Espanjan maalehteen (Tangerilla ei ole omaa lehteä).
    * Lähde: en.wikipedia.org: Battle of Trafalgar
    */
   {
@@ -376,44 +693,64 @@ export const HISTORIAN_HETKET = [
     paikka: 'Trafalgarin niemen edusta, Espanja',
     iso: 'ESP',
     lat: 36.1811, lon: -6.0339,
-    teksti: 'Kello on hieman yli kaksitoista. Neljännestä vaille kaksitoista '
-      + 'Nelson lähetti lippuviestin "England expects that every man will do '
-      + 'his duty", ja puolelta päivin ranskalainen Fougueux ampui '
-      + 'ensimmäisen laukauksensa. Victory on ajanut liittouman linjan läpi '
-      + 'ja takertunut mastoistaan kiinni ranskalaiseen Redoutableen, jonka '
-      + 'kannelle kokoontuu jalkaväkeä valtaamaan britti. Kansi on '
-      + 'hiekoitettu, jottei veri tekisi lankuista liukkaita, ja tykkimiehet '
-      + 'työskentelevät paitasillaan; peräkannella kävelee kaksi miestä '
-      + 'edestakaisin kuten joka aamu, viceamiraali Horatio Nelson ja '
-      + 'lippulaivan päällikkö Thomas Hardy. Hetken kuluttua Redoutablen '
+    teksti: 'Kuinka kaukana vihollislinja vielä on? Nelson kysyy sitä kapteeni '
+      + 'Hardylta vielä kerran, ja kumpikin tietää, mitä vastaus tarkoittaa: '
+      + 'Victory ajetaan suoraan lähitulitukseen. Kello on hieman yli '
+      + 'kaksitoista. Neljännestä vaille kaksitoista Nelson lähetti '
+      + 'lippuviestin "England expects that every man will do his duty", ja '
+      + 'puolelta päivin ranskalainen Fougueux ampui ensimmäisen laukauksensa. '
+      + 'Kansi on hiekoitettu, jottei veri tekisi lankuista liukkaita, ja '
+      + 'tykkimiehet työskentelevät paitasillaan; ensimmäistä taisteluaan '
+      + 'odottava ruutipoika yrittää lukea vanhempien merimiesten kasvoista, '
+      + 'kuinka lähellä laukaus on. Victory on ajanut liittouman linjan läpi ja '
+      + 'takertunut mastoistaan kiinni ranskalaiseen Redoutableen, jonka '
+      + 'kannelle kokoontuu jalkaväkeä valtaamaan britti. Pian sen '
       + 'mesaanimarsista ammuttu muskettiluoti osuu Nelsonia vasempaan '
-      + 'olkapäähän ja läpäisee selkärangan; hän kuolee puoli viideltä, kolme '
-      + 'tuntia myöhemmin, kun brittien 27 linjalaivaa ovat jo murtaneet '
-      + 'liittouman 33 laivan rivin.',
+      + 'olkapäähän ja läpäisee selkärangan. Hänet kannetaan ruumaan, ja hän '
+      + 'kuolee puoli viideltä, kolme tuntia myöhemmin; Hardy selviää päivästä. '
+      + 'Brittien 27 linjalaivaa murtavat liittouman 33 laivan rivin, mutta '
+      + 'kannella voitto tarkoittaa ensin savua, melua ja tovereiden '
+      + 'menettämistä.',
     kuvat: [
       {
         rooli: 'lahi',
-        tiedosto: 'hetki-trafalgar-victory-1805-lahi.jpg',
-        kuvateksti: 'Nelson ja Hardy seisovat kasvokkain Victoryn kannella kesken '
-          + 'keskustelun kaksikolkkahatut päässä. Nelsonin sinisessä takissa '
-          + 'loistavat kunniamerkit ja rintatähti, ja taustalla miehistö '
-          + 'työskentelee köysien ja kaiteen ääressä avomeren edessä.',
-        lahde: 'Matkakirjan havainnekuva: Victoryn peräkansi Trafalgarin '
-          + 'taistelussa 21. lokakuuta 1805 hetkeä ennen Nelsonin '
-          + 'haavoittumista. Faktat: en-Wikipedia "Battle of Trafalgar", '
-          + 'tarkistettu 2.9.2026.',
+        tiedosto: 'hetki-trafalgar-victory-1805-lahi-photo-v3.jpg',
+        kuvateksti: 'Nelson kysyy kapteeni Hardylta vielä kerran vihollislinjan '
+          + 'etäisyyttä; kumpikin tietää, että suunnitelma vie Victoryn suoraan '
+          + 'lähitulitukseen. Hardy selviää päivästä, Nelson ei — heidän '
+          + 'viimeisestä keskustelustaan tulee osa brittiläistä muistikuvaa '
+          + 'Trafalgarista.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Royal Museums Greenwich, '
+          + '*Battle of Trafalgar Timeline* ja National Maritime Museumin HMS '
+          + 'Victory -kokoelma; tarkistettu 3.9.2026.',
+        url: 'https://www.rmg.co.uk/stories/maritime-history/battle-trafalgar-timeline',
       },
       {
         rooli: 'kauko',
-        tiedosto: 'hetki-trafalgar-victory-1805.jpg',
-        kuvateksti: 'Nelson ja Hardy kävelevät Victoryn peräkannella savupilven '
-          + 'alla, ja miehistö ahertaa tykkien ääressä heidän ympärillään. '
-          + 'Oikealla kohoaa toisen laivan kylki tykkiportteineen aivan '
-          + 'kiinni Victoryssa.',
-        lahde: 'Matkakirjan havainnekuva: Victoryn peräkansi Trafalgarin '
-          + 'taistelussa 21. lokakuuta 1805 hetkeä ennen Nelsonin '
-          + 'haavoittumista. Faktat: en-Wikipedia "Battle of Trafalgar", '
-          + 'tarkistettu 2.9.2026.',
+        tiedosto: 'hetki-trafalgar-victory-1805-kauko-photo-v3.jpg',
+        kuvateksti: 'Ensimmäistä taisteluaan odottava nuori ruutipoika yrittää '
+          + 'lukea vanhempien merimiesten kasvoista, kuinka lähellä ensimmäinen '
+          + 'laukaus jo on. Nelsonin 27 alusta käyvät suuremman laivaston '
+          + 'kimppuun, mutta kannella voitto tarkoittaa ensin savua, melua ja '
+          + 'tovereiden menettämistä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Royal Museums Greenwich, '
+          + '*Battle of Trafalgar Timeline* ja National Maritime Museumin HMS '
+          + 'Victory -kokoelma; tarkistettu 3.9.2026.',
+        url: 'https://www.rmg.co.uk/stories/maritime-history/battle-trafalgar-timeline',
+      },
+      {
+        rooli: 'lehti',
+        tiedosto: 'hetki-trafalgar-the-times-1805-lehti-photo-v3.jpg',
+        kuvateksti: 'Lontoolaiset lukevat samasta uutisesta voiton ja '
+          + 'menetyksen: Napoleonin laivasto on lyöty, mutta Nelson on kuollut '
+          + 'Victoryllä. Merimiesten perheille Collingwoodin lähetys ei ole '
+          + 'vielä juhla, vaan alku piinaavalle kysymykselle siitä, kenen nimi '
+          + 'seuraavassa luettelossa on.',
+        lahde: 'Matkakirjan havainnekuva: historiallinen rekonstruktio The '
+          + 'Timesin 7.11.1805 julkaisemasta Trafalgar-uutisesta. Faktat: Royal '
+          + 'Museums Greenwich, *Battle of Trafalgar Timeline*; tarkistettu '
+          + '3.9.2026.',
+        url: 'https://www.rmg.co.uk/stories/maritime-history/battle-trafalgar-timeline',
       },
     ],
     kartalla: true,
@@ -427,15 +764,29 @@ export const HISTORIAN_HETKET = [
       ],
       oikea: 0,
     },
+    lehtiJohdanto: 'Trafalgarin niemen edustalla kohtasivat 21. lokakuuta 1805 '
+      + 'brittien 27 linjalaivaa ja Ranskan ja Espanjan yhteinen 33 laivan '
+      + 'rivi.',
+    lehtiTehtava: {
+      kysymys: 'Mistä ammuttiin luoti, joka haavoitti Nelsonia kuolettavasti?',
+      vaihtoehdot: [
+        'Espanjalaisen Santísima Trinidadin kannelta',
+        'Trafalgarin niemen rannikkopatterista',
+        'Ranskalaisen Redoutablen mesaanimarsista',
+        'Oman laivan tykistä vahingossa',
+      ],
+      oikea: 2,
+      fakta: 'Nelson kuoli puoli viideltä, kolme tuntia osuman jälkeen, kun '
+        + 'taistelu oli jo voitettu.',
+    },
   },
   /*
-   * 6. SAN CRISTÓBAL (CHATHAM), GALÁPAGOS, SYYSKUU 1835.
-   * TOINEN DOKUMENTOITU POIKKEUS (ks. `kartanUlkopuolella` alla):
-   * saaristo on Ecuadorin fokuslehden ikkunan LÄNSIPUOLELLA, eikä
-   * kohdekerros piirrä ikkunan ulkopuolelle mitään — merkki jäisi
-   * laudan omaan grafiikkaan kiinni. Galápagosilla ei ole omaa
-   * kaupunkilehteä eikä kohdekarttaa, joten sivu
-   * avaa Ecuadorin maalehden (uusi maalehtiavain ECU).
+   * 8. SAN CRISTÓBAL (CHATHAM), GALÁPAGOS, SYYSKUU 1835.
+   * DOKUMENTOITU POIKKEUS (ks. `kartanUlkopuolella` alla): saaristo on
+   * Ecuadorin fokuslehden ikkunan LÄNSIPUOLELLA, eikä kohdekerros
+   * piirrä ikkunan ulkopuolelle mitään — merkki jäisi laudan omaan
+   * grafiikkaan kiinni. Galápagosilla ei ole omaa kaupunkilehteä eikä
+   * kohdekarttaa, joten sivu avaa Ecuadorin maalehden.
    * Lähde: en.wikipedia.org: Second voyage of HMS Beagle
    */
   {
@@ -446,45 +797,46 @@ export const HISTORIAN_HETKET = [
     paikka: 'San Cristóbal (Chatham), Galápagos',
     iso: 'ECU',
     lat: -0.9017, lon: -89.6100,
-    teksti: 'HMS Beagle saapui Galápagosille 15. syyskuuta 1835, ja seuraavana '
-      + 'päivänä kapteeni FitzRoy laski ankkurin Chathamin saaren rantaan — '
-      + 'sinne, missä nykyään on Puerto Baquerizo Morenon kaupunki. '
-      + 'Ensimmäisen tuntinsa maissa Charles Darwin viettää Cerro '
-      + 'Tijeretasin kalliolla: allaan mustaa laavaa, joka polttaa '
-      + 'auringossa, ja ympärillään punaisia rapuja ja pensaikkoa, jota hän '
-      + 'kutsuu muistiinpanoissaan surkeannäköiseksi. Darwin on 26-vuotias '
-      + 'eikä kirjoita vielä sanaakaan lajien synnystä: hän merkitsee '
-      + 'muistiin tulivuorenkartioita, jotka muistuttavat häntä '
-      + 'Staffordshiren masuunien piipuista, kutsuu merileguaaneja pimeyden '
-      + 'pikkupiruiksi ja pitää jättiläiskilpikonnia vedenpaisumusta '
-      + 'vanhempina. Ratkaiseva havainto ei ole peippo vaan pilkkalintu: kun '
-      + 'hän huomaa Charlesin saarelta saamansa linnun eroavan Chathamin '
-      + 'yksilöstä, hän alkaa merkitä muistiin, miltä saarelta kukin lintu on '
-      + 'pyydystetty. Beagle purjehtii Tahitille 20. lokakuuta, ja vasta '
-      + 'merellä muistiinpanojaan lukiessaan Darwin hämmästyy: jokainen saari '
-      + 'on oma muunnelmansa.',
+    teksti: 'Kilpikonna kurottaa kaulaansa, ja 26-vuotias mies kyykistyy sitä '
+      + 'vastaan katsomaan silmiin. Charles Darwin ei ole tässä hetkessä '
+      + 'teorian isä vaan utelias keräilijä: hän istuu Cerro Tijeretasin '
+      + 'kalliolla, merkitsee muistiin tulivuorenkartioita, jotka muistuttavat '
+      + 'häntä Staffordshiren masuunien piipuista, kutsuu merileguaaneja '
+      + 'pimeyden pikkupiruiksi ja pitää jättiläiskilpikonnia vedenpaisumusta '
+      + 'vanhempina. HMS Beagle saapui Galápagosille 15. syyskuuta 1835, ja '
+      + 'seuraavana päivänä kapteeni FitzRoy laski ankkurin Chathamin saaren '
+      + 'rantaan. Miehistölle saaristo on lyhyt pysähdys veden, ruoan ja '
+      + 'näytteiden vuoksi. Ratkaiseva havainto ei ole peippo vaan '
+      + 'pilkkalintu: kun Darwin huomaa Charlesin saaren linnun eroavan '
+      + 'Chathamin yksilöstä, hän alkaa merkitä muistiin, miltä saarelta kukin '
+      + 'lintu on pyydystetty — osaa näytteistään hän ei ole merkinnyt '
+      + 'lainkaan. Beagle purjehtii Tahitille 20. lokakuuta, ja teoria syntyy '
+      + 'vasta vuosien vertailusta ja pitkästä epäröinnistä.',
     kuvat: [
       {
         rooli: 'lahi',
-        tiedosto: 'hetki-darwin-galapagos-1835-lahi.jpg',
-        kuvateksti: 'Darwin kyykistyy laavakivelle kasvotusten '
-          + 'jättiläiskilpikonnan kanssa, ja eläin kurottaa kaulansa häntä kohti. '
-          + 'Kädenmitan päässä kivellä lepää nahkakantinen muistikirja, ja '
-          + 'lahdella HMS Beagle on ankkurissa kuivien pensaiden takana.',
-        lahde: 'Matkakirjan havainnekuva: Charles Darwin Chathamin saarella '
-          + 'Galápagosilla syyskuussa 1835. Faktat: en-Wikipedia "Second '
-          + 'voyage of HMS Beagle", tarkistettu 2.9.2026.',
+        tiedosto: 'hetki-darwin-galapagos-1835-lahi-photo-v3.jpg',
+        kuvateksti: '26-vuotias Darwin katsoo kilpikonnaa vielä uteliaana '
+          + 'keräilijänä, ei valmiin teorian isänä. Hän ymmärtää saarten '
+          + 'havaintojen merkityksen vasta myöhemmin — osin siksi, ettei aluksi '
+          + 'merkitse kaikkien näytteidensä tarkkaa alkuperäsaarta.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Darwin Correspondence '
+          + 'Project, Darwinin vuoden 1835 kirjeet ja Galápagos-oleskelun '
+          + 'toimitukselliset viitteet; tarkistettu 3.9.2026.',
+        url: 'https://www.darwinproject.ac.uk/letter/?docId=letters/DCP-LETT-282.xml',
       },
       {
         rooli: 'kauko',
-        tiedosto: 'hetki-darwin-galapagos-1835.jpg',
-        kuvateksti: 'Darwin kyykistyy laavakivikolle vastapäätä '
-          + 'jättiläiskilpikonnaa, ja etualan kivillä liikkuu punaisia rapuja. '
-          + 'Lahdella HMS Beagle on ankkurissa, ja miehiä soutaa veneellä '
-          + 'rantaan.',
-        lahde: 'Matkakirjan havainnekuva: Charles Darwin Chathamin saarella '
-          + 'Galápagosilla syyskuussa 1835. Faktat: en-Wikipedia "Second '
-          + 'voyage of HMS Beagle", tarkistettu 2.9.2026.',
+        tiedosto: 'hetki-darwin-galapagos-1835-kauko-photo-v3.jpg',
+        kuvateksti: 'Beaglen miehistölle Galápagos on lyhyt pysähdys veden, '
+          + 'ruoan ja näytteiden vuoksi; Darwinille sen viidestä viikosta tulee '
+          + 'vuosikymmenten ajatuskumppani. Evoluutioteoria ei synny yhtenä '
+          + 'välähdyksenä rannalla vaan epävarmoista muistiinpanoista, '
+          + 'vertailusta ja pitkästä epäröinnistä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Darwin Correspondence '
+          + 'Project, Darwinin vuoden 1835 kirjeet ja Galápagos-oleskelun '
+          + 'toimitukselliset viitteet; tarkistettu 3.9.2026.',
+        url: 'https://www.darwinproject.ac.uk/letter/?docId=letters/DCP-LETT-282.xml',
       },
     ],
     kartalla: false,
@@ -493,9 +845,25 @@ export const HISTORIAN_HETKET = [
       + '(x 2925–3533) länsipuolella, eikä kohdekerros piirrä ikkunan '
       + 'ulkopuolelle',
     lehti: { laji: 'maa', avain: 'ECU' },
+    lehtiJohdanto: 'HMS Beagle laski ankkurin Chathamin saarelle 16. syyskuuta '
+      + '1835, ja laivan 26-vuotias luonnontutkija astui ensimmäistä kertaa '
+      + 'Galápagosin laavarannalle.',
+    lehtiTehtava: {
+      kysymys: 'Mikä lintu sai Darwinin merkitsemään muistiin, miltä saarelta '
+        + 'kukin yksilö oli pyydystetty?',
+      vaihtoehdot: [
+        'Peippo',
+        'Pilkkalintu',
+        'Fregattilintu',
+        'Sinijalkasuula',
+      ],
+      oikea: 1,
+      fakta: 'Peippoja Darwin ei vaivautunut merkitsemään saarittain; '
+        + 'pilkkalinnut hän huomasi erilaisiksi jo paikan päällä.',
+    },
   },
   /*
-   * 7. KRISTIANIA (OSLO) 24.6.1893.
+   * 9. KRISTIANIA (OSLO) 24.6.1893.
    * Oslo 1 yksikön päässä eli sama paikka, joten kaupunkikatto
    * pudottaisi merkin → `kattoVapaa`; kasauspassi latoo tiimalasin
    * kaupungin viereen siirtoviivan päähän. Piste osuisi myös Oslon
@@ -512,41 +880,56 @@ export const HISTORIAN_HETKET = [
     paikka: 'Kristiania (Oslo), Norja',
     iso: 'NOR',
     lat: 59.9050, lon: 10.7500,
-    teksti: 'Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan '
-      + 'kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin '
-      + 'rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer '
-      + 'suunnitteli sen niin, ettei jäällä ole mistään otetta, ja laivan on '
-      + 'Nansenin omin sanoin määrä livahtaa jään syleilystä kuin ankerias. '
+    teksti: 'Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. '
+      + '31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman '
+      + 'kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut '
+      + 'ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja '
+      + 'vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala '
+      + 'ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole '
+      + 'mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. '
       + 'Runko on kolmea puukerrosta paksu — kuudestakymmenestä '
-      + 'seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja '
-      + 'päällystetty eteläamerikkalaisella greenheart-puulla, kovimmalla '
-      + 'mitä on saatavissa. Kannella on kolmetoista miestä, heidän '
-      + 'joukossaan 31-vuotias Fridtjof Nansen, ja suunnitelma on se, jota '
-      + 'moni tutkija on julkisesti kutsunut itsemurhaksi: ajaa laiva '
-      + 'tahallaan kiinni Siperian pohjoispuoliseen ahtojäähän ja antaa '
-      + 'virran kuljettaa se kohti pohjoisnapaa. Fram palaa tähän samaan '
-      + 'satamaan 9. syyskuuta 1896, eikä yhtään miestä ole menetetty.',
+      + 'seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty '
+      + 'greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on '
+      + 'se, jota moni tutkija on julkisesti kutsunut itsemurhaksi: ajaa laiva '
+      + 'tahallaan kiinni Siperian pohjoispuoliseen ahtojäähän ja antaa virran '
+      + 'kuljettaa se kohti pohjoisnapaa. Rannalla vilkuttavat odottavat '
+      + 'uutisia lähes kolme vuotta. Fram palaa tähän satamaan 9. syyskuuta '
+      + '1896, eikä yhtään miestä ole menetetty.',
     kuvat: [
       {
         rooli: 'lahi',
-        tiedosto: 'hetki-nansen-fram-1893-lahi.jpg',
-        kuvateksti: 'Nansen nostaa hatun päänsä yläpuolelle Framin kannella ja '
-          + 'katsoo rantaan, jossa väkijoukko täyttää laiturit ja veneet reunoja '
-          + 'myöten. Vieressä mies kumartuu köysien ääreen, ja takana kohoaa '
-          + 'aluksen savupiippu.',
-        lahde: 'Matkakirjan havainnekuva: Fram lähdössä Kristianiasta '
-          + '24. kesäkuuta 1893. Faktat: en-Wikipedia "Nansen\'s Fram '
-          + 'expedition", tarkistettu 2.9.2026.',
+        tiedosto: 'hetki-nansen-fram-1893-lahi-photo-v3.jpg',
+        kuvateksti: 'Nansen jättää Kristianiaan Eva-vaimonsa ja vasta muutaman '
+          + 'kuukauden ikäisen Liv-tyttärensä eikä voi luvata paluupäivää. Hänen '
+          + 'suunnitelmansa on tarkoituksella jäädyttää Fram ahtojäihin — juuri '
+          + 'siihen, mitä merimiehet tavallisesti pelkäävät eniten.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Frammuseet, *The First Fram '
+          + 'Expedition (1893–1896)*; tarkistettu 3.9.2026.',
+        url: 'https://frammuseum.no/polar-history/expeditions/the-first-fram-expedition-1893-1896/',
       },
       {
         rooli: 'kauko',
-        tiedosto: 'hetki-nansen-fram-1893.jpg',
-        kuvateksti: 'Fram irtoaa laiturista Kristianiassa, ja rannalla seisova '
-          + 'väkijoukko heiluttaa hattuja ja nenäliinoja. Nansen seisoo keulan '
-          + 'puolella kannella käsi ylhäällä.',
-        lahde: 'Matkakirjan havainnekuva: Fram lähdössä Kristianiasta '
-          + '24. kesäkuuta 1893. Faktat: en-Wikipedia "Nansen\'s Fram '
-          + 'expedition", tarkistettu 2.9.2026.',
+        tiedosto: 'hetki-nansen-fram-1893-kauko-photo-v3.jpg',
+        kuvateksti: 'Rannalla vilkuttavat omaiset joutuvat odottamaan uutisia '
+          + 'lähes kolme vuotta. Framin runko kestää jään puristuksen ja koko '
+          + 'miehistö palaa, mutta lähdön hetkellä kukaan ei vielä tiedä, onko '
+          + 'Nansenin uhkapeli nerokas vai kohtalokas.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Frammuseet, *The First Fram '
+          + 'Expedition (1893–1896)*; tarkistettu 3.9.2026.',
+        url: 'https://frammuseum.no/polar-history/expeditions/the-first-fram-expedition-1893-1896/',
+      },
+      {
+        rooli: 'lehti',
+        tiedosto: 'hetki-nansen-verdens-gang-1893-lehti-photo-v3.jpg',
+        kuvateksti: 'Eva Nansen jää puolen vuoden ikäisen Livin kanssa '
+          + 'odottamaan miestä, joka aikoo kadota tarkoituksella Jäämeren '
+          + 'ahtojäihin. Lehden lukijalle suunnitelma näyttää lähes '
+          + 'itsetuhoiselta; kolme vuotta myöhemmin Fram palaa ja koko miehistö '
+          + 'astuu maihin.',
+        lahde: 'Matkakirjan havainnekuva: historiallinen rekonstruktio Verdens '
+          + 'Gangin 24.6.1893 ilmestyneestä lähtönumerosta. Faktat: Frammuseet, '
+          + '*The First Fram Expedition (1893–1896)*; tarkistettu 3.9.2026.',
+        url: 'https://frammuseum.no/polar-history/expeditions/the-first-fram-expedition-1893-1896/',
       },
     ],
     kartalla: true,
@@ -561,9 +944,24 @@ export const HISTORIAN_HETKET = [
       ],
       oikea: 1,
     },
+    lehtiJohdanto: 'Kristianian rannat olivat mustanaan väkeä 24. kesäkuuta '
+      + '1893, kun vuonolle liukui pyöreäpohjainen laiva, jonka oli tarkoitus '
+      + 'jäätyä kiinni tahallaan.',
+    lehtiTehtava: {
+      kysymys: 'Miksi Framin runko rakennettiin pyöreäksi?',
+      vaihtoehdot: [
+        'Jotta laiva kulkisi nopeammin myötätuulessa',
+        'Jottei jäällä olisi mistään otetta',
+        'Jotta ruumaan mahtuisi enemmän lastia',
+        'Jotta laiva kestäisi tykkitulen',
+      ],
+      oikea: 1,
+      fakta: 'Colin Archerin muotoilema runko nousi jään puristuksessa ylös sen '
+        + 'sijaan että olisi murskaantunut.',
+    },
   },
   /*
-   * 8. ETELÄNAPA 14.12.1911.
+   * 10. ETELÄNAPA 14.12.1911.
    * Piste ei osu laudalle lainkaan: maailmankartan korkeus on 5399
    * yksikköä ja etelänapa projisoituisi riville 7611 — Etelämannerta ei
    * ole piirretty. Siksi hetki ei voi saada karttamerkkiä, ja sivu on
@@ -578,61 +976,92 @@ export const HISTORIAN_HETKET = [
     paikka: 'Etelänapa',
     iso: 'NOR',
     lat: -90, lon: 0,
-    teksti: 'Edellinen leiri oli 89°45′ eteläistä leveyttä, viidentoista '
-      + 'meripeninkulman päässä maalista. Nyt kello on noin kolme '
-      + 'iltapäivällä, mittaukset sanovat että tämä on paikka, ja viisi '
-      + 'miestä tarttuu yhdessä lipputankoon: Roald Amundsen, Olav Bjaaland, '
-      + 'Helmer Hanssen, Sverre Hassel ja Oscar Wisting. Ylätasangon he '
-      + 'nimeävät kuningas Haakon VII:n tasangoksi. Seuraavat kolme päivää '
+    teksti: 'Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen '
+      + 'viejäksi pyydetään Robert Scottia — siltä varalta, että Scott saapuu '
+      + 'perille mutta viisi norjalaista ei pääse kotiin. Kello on noin kolme '
+      + 'iltapäivällä, mittaukset sanovat että tämä on paikka, ja lipputankoon '
+      + 'tarttuvat yhdessä Roald Amundsen, Olav Bjaaland, Helmer Hanssen, '
+      + 'Sverre Hassel ja Oscar Wisting. Ylätasangon he nimeävät kuningas '
+      + 'Haakon VII:n tasangoksi ja teltan Polheimiksi. Seuraavat kolme päivää '
       + 'kuluvat sekstantin ääressä ja hiihtäen navan ympäri ristiin rastiin, '
-      + 'jotta paikka olisi todistettavasti oikea — Cookin ja Pearyn riitaiset '
-      + 'pohjoisnapaväitteet ovat tuoreessa muistissa, eikä Amundsen aio '
-      + 'jättää itsestään samanlaista epäselvyyttä. Telttaan, jolle he '
-      + 'antavat nimen Polheim, jää varusteita ja kirje Norjan kuninkaalle, '
-      + 'ja sen viejäksi pyydetään Robert Scottia, joka saapuu paikalle 34 '
-      + 'päivää myöhemmin. Koirat ovat syy siihen, että he ovat täällä '
-      + 'ensimmäisinä: kahdeksantoista niistä nousi ylätasangolle, ja loput '
-      + 'lopetettiin ruoaksi paikassa, jonka miehet nimesivät Teurastamoksi.',
+      + 'jotta paikka olisi todistettavasti oikea: Cookin ja Pearyn riitaiset '
+      + 'pohjoisnapaväitteet ovat tuoreessa muistissa. Lipunnosto kestää '
+      + 'hetken, ja kotiin on vielä lähes 1 300 kilometriä. Koirat ovat syy '
+      + 'siihen, että he ovat täällä ensimmäisinä: kahdeksantoista nousi '
+      + 'ylätasangolle, loput lopetettiin ruoaksi paikassa, jonka miehet '
+      + 'nimesivät Teurastamoksi. Kaikki viisi palaavat; Scottin ryhmä ei.',
     kuvat: [
       {
         rooli: 'lahi',
-        tiedosto: 'hetki-amundsen-etelanapa-1911-lahi.jpg',
-        kuvateksti: 'Kolme miestä pitää yhdessä kiinni lipputangosta, ja Norjan '
-          + 'lippu sekä miesten turkislakit ovat huurteen peitossa. Kaksi toveria '
-          + 'katsoo takaa olan yli, ja oikealla odottavat koirat reen vieressä.',
-        lahde: 'Matkakirjan havainnekuva: Amundsenin retkikunta etelänavalla '
-          + '14. joulukuuta 1911. Faktat: en-Wikipedia "Amundsen\'s South Pole '
-          + 'expedition", tarkistettu 2.9.2026.',
+        tiedosto: 'hetki-amundsen-etelanapa-1911-lahi-photo-v3.jpg',
+        kuvateksti: 'Roald Amundsen, Olav Bjaaland, Helmer Hanssen, Sverre '
+          + 'Hassel ja Oscar Wisting tietävät olevansa ensimmäisiä — mutta '
+          + 'kotiin on vielä lähes 1 300 kilometriä. He jättävät teltalle '
+          + 'kirjeen Norjan kuninkaalle siltä varalta, että Scott saapuu perille '
+          + 'mutta he eivät.',
+        lahde: 'Matkakirjan havainnekuva. Faktat ja Fram-alusreferenssi: '
+          + 'Frammuseet, Roald Amundsenin etelänaparetki 1910–1912; tarkistettu '
+          + '3.9.2026.',
+        url: 'https://frammuseum.no/polar-history/vessels/',
       },
       {
         rooli: 'kauko',
-        tiedosto: 'hetki-amundsen-etelanapa-1911-kauko.jpg',
-        kuvateksti: 'Viisi turkisasuista miestä seisoo Norjan lipun ympärillä '
-          + 'loputtomalla lumitasangolla. Koirat lepäävät lumessa kahden '
-          + 'kuormatun reen välissä, ja horisontti häviää valkoiseen usvaan ilman '
-          + 'ainuttakaan maamerkkiä.',
-        lahde: 'Matkakirjan havainnekuva: Amundsenin retkikunta etelänavalla '
-          + '14. joulukuuta 1911. Faktat: en-Wikipedia "Amundsen\'s South Pole '
-          + 'expedition", tarkistettu 2.9.2026.',
+        tiedosto: 'hetki-amundsen-etelanapa-1911-kauko-photo-v3.jpg',
+        kuvateksti: 'Lipunnosto kestää hetken; selviytyminen on vaatinut '
+          + 'viikkojen kylmyyden ja suunnitelman, jossa osa koirista uhrataan '
+          + 'muiden ravinnoksi. Kaikki viisi norjalaista palaavat, kun taas 34 '
+          + 'päivää myöhemmin navalle ehtivä Scottin ryhmä menehtyy '
+          + 'paluumatkalla.',
+        lahde: 'Matkakirjan havainnekuva. Faktat ja Fram-alusreferenssi: '
+          + 'Frammuseet, Roald Amundsenin etelänaparetki 1910–1912; tarkistettu '
+          + '3.9.2026.',
+        url: 'https://frammuseum.no/polar-history/vessels/',
+      },
+      {
+        rooli: 'lehti',
+        tiedosto: 'hetki-amundsen-tidens-tegn-1912-lehti-photo-v3.jpg',
+        kuvateksti: 'Lyhyt sähke tekee Roald Amundsenista kansallissankarin, '
+          + 'mutta retkikunnan miehille tärkein sana on paluu: kaikki viisi ovat '
+          + 'hengissä. Samaan aikaan Robert Scott vetäytyy navalta kohti '
+          + 'rannikkoa tietämättä vielä, ettei hänen ryhmänsä pääse kotiin.',
+        lahde: 'Matkakirjan havainnekuva: historiallinen rekonstruktio Tidens '
+          + 'Tegnin 9.3.1912 julkaisemasta Amundsen-numerosta. Faktat ja '
+          + 'Fram-alusreferenssi: Frammuseet; tarkistettu 3.9.2026.',
+        url: 'https://frammuseum.no/polar-history/vessels/',
       },
     ],
     kartalla: false,
     /*
-     * AINOA DOKUMENTOITU POIKKEUS SÄÄNTÖÖN "nosto on aina jollain
-     * kartalla" (tools/tarkista-nostopaikat.mjs). Piste on laudan
-     * eteläreunan takana, eikä Norjaan sijoitettu tiimalasi olisi
-     * hetken tapahtumapaikka vaan retkikunnan lähtömaa — väärä lupaus
+     * DOKUMENTOITU POIKKEUS SÄÄNTÖÖN "nosto on aina jollain kartalla"
+     * (tools/tarkista-nostopaikat.mjs). Piste on laudan eteläreunan
+     * takana, eikä Norjaan sijoitettu tiimalasi olisi hetken
+     * tapahtumapaikka vaan retkikunnan lähtömaa — väärä lupaus
      * kartalla. Sivu on Norjan maalehdessä.
      */
     kartanUlkopuolella: true,
     kartanUlkopuolellaSyy: 'etelänapa projisoituisi riville 7611, kun laudan '
       + 'korkeus on 5399 — Etelämannerta ei ole piirretty',
     lehti: { laji: 'maa', avain: 'NOR' },
+    lehtiJohdanto: 'Etelänavalla oli 14. joulukuuta 1911 kello noin kolme '
+      + 'iltapäivällä viisi miestä, kahdeksantoista koiraa ja yksi lipputanko.',
+    lehtiTehtava: {
+      kysymys: 'Minkä nimen retkikunta antoi etelänavalle jättämälleen '
+        + 'teltalle?',
+      vaihtoehdot: [
+        'Framheim',
+        'Polheim',
+        'Haakonsheim',
+        'Nordheim',
+      ],
+      oikea: 1,
+      fakta: 'Framheim oli retkikunnan talvehtimispaikka Rossin jäähyllyllä; '
+        + 'navalle jäi Polheim.',
+    },
   },
   /*
-   * 9. SOUTHAMPTON 10.4.1912 — KARTALLE.
+   * 11. SOUTHAMPTON 10.4.1912 — KARTALLE.
    * Lähin kohdekaupunki Lontoo 51 yksikön päässä (> 35).
-   * Lähde: en.wikipedia.org: Titanic
+   * Lähde: en.wikipedia.org: Titanic, Eva Hart, Michel Marcel Navratil
    */
   {
     id: 'titanic-southampton-1912',
@@ -642,29 +1071,59 @@ export const HISTORIAN_HETKET = [
     paikka: 'Southampton, Englanti',
     iso: 'GBR',
     lat: 50.8998, lon: -1.4166,
-    teksti: 'Matkustajat alkoivat saapua puoli kymmeneltä aamulla, kun Lontoon '
-      + 'Waterloosta tullut laivajuna pysähtyi laiturille aivan Titanicin '
-      + 'kylkeen. Southamptonista nousee kyytiin 920 matkustajaa: 179 '
-      + 'ensimmäiseen luokkaan, 247 toiseen ja 494 kolmanteen. Neitsytmatka '
-      + 'alkaa keskipäivällä aikataulun mukaan — ja muutamaa minuuttia '
-      + 'myöhemmin melkein päättyy, kun Titanicin syrjäyttämä vesi nostaa '
-      + 'kiinnitettynä makaavan New Yorkin ja pudottaa sen niin, että köydet '
-      + 'katkeavat pamahdellen ja pienempi laiva kääntyy perä edellä '
-      + 'Titanicia kohti. Kapteeni Smith käskee koneet täydelle taakse, '
-      + 'hinaaja Vulcan saa köyden kiinni, ja alukset ohittavat toisensa '
-      + 'noin metrin päästä; lähtö viivästyy tunnin. Neljästä savupiipusta '
-      + 'vain kolme savuaa: takimmainen on koriste, jota käytetään keittiön '
-      + 'ja tupakkasalonkien ilmanvaihtoon.',
+    teksti: 'Seitsemänvuotias Eva Hart nousee laivaan vanhempiensa kanssa, '
+      + 'mutta hänen äitinsä Esther pelkää alusta niin paljon, ettei aio nukkua '
+      + 'öisin koko matkan aikana. Matkustajat alkoivat saapua puoli '
+      + 'kymmeneltä, kun Lontoon Waterloosta tullut laivajuna pysähtyi '
+      + 'laiturille aivan Titanicin kylkeen; Southamptonista nousee kyytiin 920 '
+      + 'matkustajaa, heistä 179 ensimmäiseen luokkaan, 247 toiseen ja 494 '
+      + 'kolmanteen. Neitsytmatka alkaa keskipäivällä aikataulun mukaan — ja '
+      + 'melkein päättyy heti, kun Titanicin syrjäyttämä vesi katkaisee '
+      + 'kiinnitettynä makaavan New Yorkin köydet ja pienempi laiva kääntyy '
+      + 'perä edellä sitä kohti. Kapteeni Smith käskee koneet täydelle taakse, '
+      + 'hinaaja Vulcan saa köyden kiinni, ja alukset ohittavat toisensa noin '
+      + 'metrin päästä; lähtö viivästyy tunnin. Neljästä savupiipusta vain '
+      + 'kolme savuaa. Eva ja äiti pelastuvat; isä Benjamin jää niiden yli '
+      + '1 500 joukkoon, jotka eivät palaa.',
     kuvat: [
       {
+        rooli: 'lahi',
+        tiedosto: 'hetki-titanic-southampton-1912-lahi-photo-v3.jpg',
+        kuvateksti: 'Seitsemänvuotias Eva Hart nousee Titaniciin vanhempiensa '
+          + 'kanssa, mutta hänen äitinsä Esther pelkää laivaa niin paljon, ettei '
+          + 'suostu nukkumaan öisin. Eva ja äiti pelastuvat; isä Benjamin jää '
+          + 'niiden yli 1 500 ihmisen joukkoon, jotka eivät palaa.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Titanic Belfastin Eva Hart '
+          + '-aineisto ja Encyclopedia Titanican matkustajatiedot Eva Hartista '
+          + 'sekä Michel ja Edmond Navratilista; tarkistettu 3.9.2026.',
+        url: 'https://www.encyclopedia-titanica.org/',
+      },
+      {
         rooli: 'kauko',
-        tiedosto: 'hetki-titanic-southampton-1912.jpg',
-        kuvateksti: 'Titanic irtoaa Southamptonin laiturista hinaajien '
-          + 'avustamana, ja laiturille jääneet heiluttavat hattujaan. '
-          + 'Etualalla odottavat matkatavaravaunut, hevonen ja auto.',
-        lahde: 'Matkakirjan havainnekuva: Titanic lähdössä Southamptonista '
-          + '10. huhtikuuta 1912. Faktat: en-Wikipedia "Titanic", tarkistettu '
-          + '2.9.2026.',
+        tiedosto: 'hetki-titanic-southampton-1912-kauko-photo-v3.jpg',
+        kuvateksti: 'Kolmivuotias Michel ja kaksivuotias Edmond matkustavat '
+          + 'isänsä kanssa väärällä sukunimellä, äidiltä salaa vietyinä. '
+          + 'Haaksirikon jälkeen isä kuolee ja pojat tunnetaan viikkoja vain '
+          + '’Titanicin orpoina’, kunnes heidän äitinsä tunnistaa '
+          + 'heidät lehtikuvista.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Titanic Belfastin Eva Hart '
+          + '-aineisto ja Encyclopedia Titanican matkustajatiedot Eva Hartista '
+          + 'sekä Michel ja Edmond Navratilista; tarkistettu 3.9.2026.',
+        url: 'https://www.encyclopedia-titanica.org/',
+      },
+      {
+        rooli: 'lehti',
+        tiedosto: 'hetki-titanic-daily-graphic-1912-lehti-photo-v3.jpg',
+        kuvateksti: 'Jack Phillips jatkaa hätäkutsujen lähettämistä, vaikka '
+          + 'vesi nousee Titanicin radiohyttiin; Harold Bride vetää pelastusliivin '
+          + 'hänen ylleen. Bride selviää kaatuneen pelastusveneen päällä, '
+          + 'Phillips kuolee — ja vain toinen heistä ehtii nähdä, kuinka lehdet '
+          + 'tekevät radiomiehistä yön sankareita.',
+        lahde: 'Matkakirjan havainnekuva: historiallinen rekonstruktio The '
+          + 'Daily Graphicin 20.4.1912 julkaisemasta Titanic-muistonumerosta. '
+          + 'Henkilöfaktat: Encyclopedia Titanica, Jack Phillips ja Harold '
+          + 'Bride; tarkistettu 3.9.2026.',
+        url: 'https://www.encyclopedia-titanica.org/',
       },
     ],
     kartalla: true,
@@ -678,45 +1137,83 @@ export const HISTORIAN_HETKET = [
       ],
       oikea: 2,
     },
+    lehtiJohdanto: 'Titanicin neitsytmatka alkoi Southamptonista täsmälleen '
+      + 'keskipäivällä 10. huhtikuuta 1912, ja muutamaa minuuttia myöhemmin se '
+      + 'melkein päättyi laiturin päähän.',
+    lehtiTehtava: {
+      kysymys: 'Montako Titanicin neljästä savupiipusta savusi?',
+      vaihtoehdot: [
+        'Yksi',
+        'Kaksi',
+        'Kolme',
+        'Kaikki neljä',
+      ],
+      oikea: 2,
+      fakta: 'Takimmainen piippu oli koriste, jota käytettiin keittiön ja '
+        + 'tupakkasalonkien ilmanvaihtoon.',
+    },
   },
   /*
-   * 10. ROSKILDENVUONO NOIN VUONNA 1000.
+   * 12. ROSKILDENVUONO NOIN 1040.
    * Kööpenhamina 18 yksikön päässä — oma merkki vuonolle ja sivu
-   * Kööpenhaminan kaupunkilehteen.
+   * Kööpenhaminan kaupunkilehteen. Vuosiluku 1040 on kuvaputken
+   * tunnuksen ja arkeologisen referenssin mukainen: Skuldelev 2
+   * rakennettiin vuosilustojen perusteella Dublinin seudulla noin
+   * 1042–1043.
    * Lähde: en.wikipedia.org: Skuldelev ships, Horned helmet
    */
   {
-    id: 'viikinkilaiva-roskilde-1000',
-    otsikko: 'Roskildenvuono noin 1000 — kuusikymmentä airoa',
-    nimio: 'Roskilde 1000',
-    paivays: 'n. 1000',
+    id: 'viikinkilaiva-roskilde-1040',
+    otsikko: 'Roskildenvuono noin 1040 — kuusikymmentä airoa',
+    nimio: 'Roskilde 1040',
+    paivays: 'n. 1040',
     paikka: 'Roskildenvuono, Tanska',
     iso: 'DNK',
     lat: 55.7500, lon: 12.0200,
-    teksti: 'Vuono on matala ja mutkitteleva, ja miehet työntävät keulaa irti '
-      + 'rantamudasta; airot ovat jo ulkona ja kilvet ripustettu laidalle '
-      + 'matkan ajaksi. Purje on raidallista villaa, ja päähineet ovat '
-      + 'huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö '
-      + 'eikä esiinny yhdessäkään viikinkiajan tekstissä tai löydössä. Juuri '
-      + 'tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin '
-      + '1000-luvulla tähän samaan vuonoon sulkemaan Peberrendenin väylä, ja '
-      + 'Tanskan kansallismuseo nosti ne pohjasta vuosina 1957–1962. Suurin, '
-      + 'Skuldelev 2, on tammesta rakennettu kolmikymmenmetrinen sotalaiva: '
-      + 'kuusikymmentä soutajaa, 112 neliömetrin purje, tilaa 70–80 miehelle '
-      + 'ja vuosilustojen mukaan rakennuspaikka Dublinin seudulla noin vuonna '
-      + '1042. Vuonna 2007 sen tarkka jäljennös Havhingsten fra Glendalough '
-      + 'purjehti Roskildesta Dubliniin ja seuraavana kesänä takaisin.',
+    teksti: 'Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu '
+      + 'kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle '
+      + 'pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, '
+      + 'sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen '
+      + 'takana on koko maailma: Atlantti lännessä, idässä jokireitit '
+      + 'Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, '
+      + 'kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista '
+      + 'villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun '
+      + 'oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan '
+      + 'löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi '
+      + 'niistä upotettiin 1000-luvulla tähän samaan vuonoon sulkemaan '
+      + 'Peberrendenin väylä, ja Tanskan kansallismuseo nosti ne pohjasta '
+      + 'vuosina 1957–1962. Suurin, Skuldelev 2, on tammesta rakennettu '
+      + 'kolmikymmenmetrinen sotalaiva: kuusikymmentä soutajaa, 112 '
+      + 'neliömetrin purje ja tilaa 70–80 miehelle. Sen tarkka jäljennös '
+      + 'Havhingsten fra Glendalough purjehti vuonna 2007 Roskildesta Dubliniin '
+      + 'ja seuraavana kesänä takaisin — sama matka, samat airot, tuhat vuotta '
+      + 'myöhemmin.',
     kuvat: [
       {
+        rooli: 'lahi',
+        tiedosto: 'hetki-viikinkilaiva-roskilde-1040-lahi-photo-v3.jpg',
+        kuvateksti: 'Kuvan nuori soutaja lähtee ensimmäiselle pitkälle '
+          + 'matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina '
+          + 'vai ei lainkaan. Kapea pitkälaiva tekee saman aluksen kaikista '
+          + 'kolmesta mahdollisen ja kuljettaa pohjoismaisia ihmisiä Atlantille '
+          + 'sekä idän jokireiteille.',
+        lahde: 'Matkakirjan havainnekuva. Alusreferenssi: Vikingeskibsmuseet, '
+          + 'Skuldelev 2, Irlannissa noin 1042–1043 rakennettu pitkälaiva; '
+          + 'tarkistettu 3.9.2026.',
+        url: 'https://www.vikingeskibsmuseet.dk/frontend/Dokumenter/Skuldelev2_b.pdf',
+      },
+      {
         rooli: 'kauko',
-        tiedosto: 'hetki-viikinkilaiva-roskilde-1000.jpg',
-        kuvateksti: 'Miehet työntävät pitkälaivan keulaa irti rantamudasta, ja '
-          + 'airot ovat jo ulkona molemmin puolin raidallisen villapurjeen '
-          + 'alla. Rannalla näkyy turvekattoisia rakennuksia ja toinen laiva '
-          + 'vedessä.',
-        lahde: 'Matkakirjan havainnekuva: viikinkiajan pitkälaiva lähdössä '
-          + 'Roskildenvuonolta noin vuonna 1000. Faktat: en-Wikipedia '
-          + '"Skuldelev ships" ja "Horned helmet", tarkistettu 2.9.2026.',
+        tiedosto: 'hetki-viikinkilaiva-roskilde-1040-kauko-photo-v3.jpg',
+        kuvateksti: 'Vuonon rannalle jäävät eivät näe pelkkää sotalaivaa vaan '
+          + 'kokonaisen liikkuvan yhteisön: sukulaisia, velallisia, vapaita '
+          + 'miehiä ja ehkä pakotettuja soutajia. Noin 60 airoa antaa alukselle '
+          + 'nopeuden, mutta jokainen meripeninkulma syntyy yksittäisten käsien '
+          + 'työstä.',
+        lahde: 'Matkakirjan havainnekuva. Alusreferenssi: Vikingeskibsmuseet, '
+          + 'Skuldelev 2, Irlannissa noin 1042–1043 rakennettu pitkälaiva; '
+          + 'tarkistettu 3.9.2026.',
+        url: 'https://www.vikingeskibsmuseet.dk/frontend/Dokumenter/Skuldelev2_b.pdf',
       },
     ],
     kartalla: true,
@@ -729,6 +1226,276 @@ export const HISTORIAN_HETKET = [
         'Ne olivat lahonneet ja hylättiin',
       ],
       oikea: 0,
+    },
+    lehtiJohdanto: 'Roskildenvuonon pohjasta nostettiin vuosina 1957–1962 viisi '
+      + 'viikinkilaivaa, jotka oli aikanaan upotettu sulkemaan väylä — ja juuri '
+      + 'niiden ansiosta tiedetään tarkasti, miltä tuhat vuotta sitten lähtenyt '
+      + 'pitkälaiva näytti.',
+    lehtiTehtava: {
+      kysymys: 'Missä Skuldelev 2 -pitkälaiva rakennettiin?',
+      vaihtoehdot: [
+        'Roskildessa',
+        'Bergenissä',
+        'Dublinin seudulla',
+        'Haithabussa',
+      ],
+      oikea: 2,
+      fakta: 'Vuosilustot ajoittavat rakentamisen Dublinin seudulle noin '
+        + 'vuoteen 1042.',
+    },
+  },
+  /*
+   * 13. WÜRZBURG 22.12.1895 — ENSIMMÄINEN RÖNTGENKUVA IHMISESTÄ.
+   * Lähin kohdekaupunki on Alppien laatta 126 laudan yksikön päässä,
+   * joten merkki menee kartalle sellaisenaan. Würzburgilla ei ole omaa
+   * kaupunkilehteä, joten sivu on Saksan maalehdessä.
+   * Lähde: en.wikipedia.org: Wilhelm Röntgen, X-ray
+   */
+  {
+    id: 'rontgen-kasi-1895',
+    otsikko: 'Würzburg 1895 — käsi, joka ei saa liikkua',
+    nimio: 'Würzburg 1895',
+    paivays: '22.12.1895',
+    paikka: 'Würzburg, Saksa',
+    iso: 'DEU',
+    lat: 49.7969, lon: 9.9333,
+    teksti: 'Käsi ei saa liikkua. Anna Bertha Röntgen pitää sitä paikallaan '
+      + 'minuutti toisensa jälkeen tietämättä, näkyykö levylle mitään. Kun kuva '
+      + 'kehittyy, siinä ovat hänen sormiensa luut ja vihkisormuksen tumma '
+      + 'rengas: aviopari katsoo ensimmäistä kertaa elävän ihmisen sisään ilman '
+      + 'veistä. Kerrotaan, että vaimo katsoi kuvaa ja sanoi nähneensä oman '
+      + 'kuolemansa. Wilhelm Conrad Röntgen oli huomannut oudon säteilyn '
+      + 'marraskuun kahdeksantena päivänä ja kertonut siitä viikkoihin tuskin '
+      + 'kenellekään; hän söi usein laboratoriossaan ja toisti kokeitaan, '
+      + 'kunnes tulos kesti hänen oman epäilynsä. Säteet hän nimesi '
+      + 'X-säteiksi, koska ei tiennyt mitä ne olivat. Vasta 22. joulukuuta 1895 '
+      + 'hän pyysi Anna Berthaa valotukseen, ja kuusi päivää myöhemmin hän '
+      + 'jätti tuloksensa Würzburgin fyysis-lääketieteellisen seuran '
+      + 'julkaistavaksi. Muutamassa kuukaudessa sairaalat ympäri maailmaa '
+      + 'kuvasivat murtumia ja luodinsirpaleita, ja vuonna 1901 Röntgen sai '
+      + 'ensimmäisen fysiikan Nobelin. Keksinnölleen hän ei ottanut patenttia: '
+      + 'hän katsoi sen kuuluvan kaikille.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-rontgen-kasi-1895-lahi-photo-v3.jpg',
+        kuvateksti: 'Anna Bertha Röntgen pitää kättään liikkumatta pitkän '
+          + 'valotuksen ajan tietämättä, näkyykö levylle mitään. Kun luiden ja '
+          + 'vihkisormuksen tumma hahmo ilmestyy, aviopari katsoo ensimmäistä '
+          + 'kertaa elävän ihmisen sisään ilman veistä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat ja alkuperäisen käsikuvan '
+          + 'referenssi: NobelPrize.org, Wilhelm Conrad Röntgenin elämäkerta ja '
+          + 'kuvagalleria; tarkistettu 3.9.2026.',
+        url: 'https://www.nobelprize.org/prizes/physics/1901/rontgen/biographical/',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-rontgen-kasi-1895-kauko-photo-v3.jpg',
+        kuvateksti: 'Röntgen kertoo kokeistaan viikkoihin tuskin kenellekään ja '
+          + 'syökin usein laboratoriossa, kunnes tulos kestää hänen oman '
+          + 'epäilynsä. Vasta sitten hän pyytää Anna Berthaa valotukseen, josta '
+          + 'tulee sekä lääketieteellisen kuvantamisen alku että pelottavan '
+          + 'henkilökohtainen perhekuva.',
+        lahde: 'Matkakirjan havainnekuva. Faktat ja alkuperäisen käsikuvan '
+          + 'referenssi: NobelPrize.org, Wilhelm Conrad Röntgenin elämäkerta ja '
+          + 'kuvagalleria; tarkistettu 3.9.2026.',
+        url: 'https://www.nobelprize.org/prizes/physics/1901/rontgen/photo-gallery/',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'maa', avain: 'DEU' },
+    visa: {
+      kysymys: 'Kenen käsi näkyy Röntgenin 22. joulukuuta 1895 ottamassa kuvassa?',
+      vaihtoehdot: [
+        'Röntgenin oma käsi',
+        'Hänen vaimonsa Anna Berthan käsi',
+        'Yliopiston vahtimestarin käsi',
+      ],
+      oikea: 1,
+    },
+    lehtiJohdanto: 'Würzburgin yliopiston laboratoriossa otettiin 22. joulukuuta '
+      + '1895 valokuva, jossa näkyi elävän ihmisen käden luut ja sormessa '
+      + 'vihkisormus — ja lääketiede sai uuden silmän.',
+    lehtiTehtava: {
+      kysymys: 'Miksi Röntgen ei koskaan patentoinut keksintöään?',
+      vaihtoehdot: [
+        'Yliopisto omisti kaikki hänen tuloksensa',
+        'Patentti oli jo myönnetty toiselle tutkijalle',
+        'Hän katsoi keksinnön kuuluvan kaikille',
+        'Hän ei uskonut löydön olevan hyödyllinen',
+      ],
+      oikea: 2,
+      fakta: 'Röntgen sai ensimmäisen fysiikan Nobelin vuonna 1901 ja lahjoitti '
+        + 'palkintorahansa yliopistolleen.',
+    },
+  },
+  /*
+   * 14. KILL DEVIL HILLS, KITTY HAWK 17.12.1903.
+   * Lähin kohdekaupunki on Appalakkien laatta 171 laudan yksikön
+   * päässä, joten merkki menee kartalle sellaisenaan. Sivu on
+   * Yhdysvaltain maalehdessä.
+   * Lähde: en.wikipedia.org: Wright brothers, Wright Flyer
+   */
+  {
+    id: 'wright-kitty-hawk-1903',
+    otsikko: 'Kill Devil Hills 1903 — kaksitoista sekuntia ilmassa',
+    nimio: 'Kitty Hawk 1903',
+    paivays: '17.12.1903',
+    paikka: 'Kill Devil Hills, Kitty Hawk, Yhdysvallat',
+    iso: 'USA',
+    lat: 36.0200, lon: -75.6700,
+    teksti: 'Orville makaa vatsallaan Flyerin ohjaimissa, lantiollaan kehto, '
+      + 'joka kiertää siipien kärkiä. Wilbur juoksee siiven rinnalla niin '
+      + 'pitkään kuin pystyy. Kahdentoista sekunnin kuluttua kone osuu '
+      + 'hiekkaan 36 metrin päässä lähtökohdasta — ja siinä on kaikki, mitä '
+      + 'maailman ensimmäiseltä moottorilennolta jää nähtäväksi. Kill Devil '
+      + 'Hillsin pelastusasemalla työskentelevä John T. Daniels ei ole koskaan '
+      + 'ennen ottanut valokuvaa. Hän puristaa kameran laukaisupalloa juuri '
+      + 'oikealla hetkellä, ja hänen levylleen jää kuva, joka on nyt jokaisessa '
+      + 'oppikirjassa. Aamu on kylmä ja tuuli kova, ja koneen on rakentanut '
+      + 'kaksi polkupyöräkauppiasta Daytonista: siivet ovat kangasta ja '
+      + 'kuusipuuta, moottori heidän oma, noin kaksitoista hevosvoimaa. '
+      + 'Lentoja tehdään sinä päivänä neljä, ja viimeisellä Wilbur pysyy '
+      + 'ilmassa 59 sekuntia ja 260 metriä. Sen jälkeen tuulenpuuska kaataa '
+      + 'koneen, eikä se lennä enää koskaan. Veljekset lähettävät kotiin '
+      + 'sähkeen ja pyytävät kertomaan asiasta lehdistölle.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-wright-kitty-hawk-1903-lahi-photo-v3.jpg',
+        kuvateksti: 'Orville makaa Flyerin ohjaimissa ja Wilbur juoksee siiven '
+          + 'rinnalla niin pitkään kuin pystyy. Kahdentoista sekunnin kuluttua '
+          + 'kone osuu hiekkaan, mutta veljekset tietävät jo onnistuneensa '
+          + 'siinä, mitä moni piti mahdottomana.',
+        lahde: 'Matkakirjan havainnekuva. Faktat ja alkuperäisen valokuvan '
+          + 'referenssi: U.S. National Park Service, Wright Brothers National '
+          + 'Memorial, *The First Flight*; tarkistettu 3.9.2026.',
+        url: 'https://www.nps.gov/wrbr/learn/historyculture/thefirstflight.htm',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-wright-kitty-hawk-1903-kauko-photo-v3.jpg',
+        kuvateksti: 'Pelastusasemalla työskentelevä John T. Daniels ei ole '
+          + 'koskaan ennen ottanut valokuvaa, kun hän puristaa kameran '
+          + 'laukaisupalloa juuri oikealla hetkellä. Hänen levylleen jää '
+          + 'Orvillen 36 metrin lento — ensimmäinen neljästä yrityksestä sinä '
+          + 'kylmänä aamuna.',
+        lahde: 'Matkakirjan havainnekuva. Faktat ja alkuperäisen valokuvan '
+          + 'referenssi: U.S. National Park Service, Wright Brothers National '
+          + 'Memorial, *The First Flight*; tarkistettu 3.9.2026.',
+        url: 'https://www.nps.gov/wrbr/learn/historyculture/thefirstflight.htm',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'maa', avain: 'USA' },
+    visa: {
+      kysymys: 'Kuinka kauan Orville Wrightin ensimmäinen lento kesti 17. joulukuuta 1903?',
+      vaihtoehdot: [
+        'Kaksitoista sekuntia',
+        'Viisikymmentäyhdeksän sekuntia',
+        'Kolme ja puoli minuuttia',
+      ],
+      oikea: 0,
+    },
+    lehtiJohdanto: 'Pohjois-Carolinan hiekkasärkillä nousi 17. joulukuuta 1903 '
+      + 'ilmaan kone, jonka lento kesti kaksitoista sekuntia — ja jonka kuvan '
+      + 'otti mies, joka ei ollut koskaan ennen käyttänyt kameraa.',
+    lehtiTehtava: {
+      kysymys: 'Kuka otti valokuvan Wrightin veljesten ensimmäisestä lennosta?',
+      vaihtoehdot: [
+        'Wilbur Wright',
+        'Paikallislehden kuvaaja',
+        'Pelastusaseman mies John T. Daniels',
+        'Kukaan — kuva on myöhempi piirros',
+      ],
+      oikea: 2,
+      fakta: 'Daniels ei ollut koskaan ennen ottanut valokuvaa; hän puristi '
+        + 'laukaisupalloa juuri kun kone irtosi kiskosta.',
+    },
+  },
+  /*
+   * 15. BERN 1905 — PATENTTITOIMISTON IHMEVUOSI.
+   * Lähin kohdekaupunki on Alppien laatta 31 laudan yksikön päässä,
+   * joten merkki menee kartalle sellaisenaan. Bernillä ei ole omaa
+   * kaupunkilehteä, joten sivu on Sveitsin maalehdessä.
+   * Lähde: en.wikipedia.org: Albert Einstein, Annus Mirabilis papers
+   */
+  {
+    id: 'einstein-patenttitoimisto-1905',
+    otsikko: 'Bern 1905 — patenttipino ja valonsäde',
+    nimio: 'Bern 1905',
+    paivays: '1905',
+    paikka: 'Bern, Sveitsi',
+    iso: 'CHE',
+    lat: 46.9480, lon: 7.4474,
+    teksti: 'Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi '
+      + 'tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin '
+      + 'patenttiviraston kolmannen luokan tekninen asiantuntija Albert '
+      + 'Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja '
+      + 'pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut '
+      + 'teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? '
+      + 'Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele '
+      + 'Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, '
+      + 'jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän '
+      + 'päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna '
+      + '1905 Einstein lähettää Annalen der '
+      + 'Physik -lehteen neljä tutkimusta: valosähköinen ilmiö, Brownin liike, '
+      + 'erityinen suhteellisuusteoria sekä energian ja massan yhteys. Vuotta '
+      + 'kutsutaan myöhemmin ihmevuodeksi, annus mirabilisiksi. Virastossa se '
+      + 'ei näy mitenkään: Einstein arvioi hakemuksia vielä vuosia, ja '
+      + 'yliopiston virkaan hän pääsee vasta 1909.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-einstein-patenttitoimisto-1905-lahi-photo-v3.jpg',
+        kuvateksti: 'Patenttiviraston kolmannen luokan tekninen asiantuntija '
+          + 'Albert Einstein joutuu siirtämään fysiikan muistiinpanot syrjään '
+          + 'aina uuden hakemuksen saapuessa. Iltaisin hän palaa kysymykseen, '
+          + 'miltä valo näyttäisi, jos sitä voisi ajaa kiinni.',
+        lahde: 'Matkakirjan havainnekuva. Faktat ja työhuonereferenssi: Albert '
+          + 'Einstein Archives / einstein-website.de, *Patent Office*; '
+          + 'tarkistettu 3.9.2026.',
+        url: 'https://einstein-website.de/en/patent-office/',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-einstein-patenttitoimisto-1905-kauko-photo-v3.jpg',
+        kuvateksti: 'Kotona odottavat Mileva-vaimo, pieni Hans Albert ja niukka '
+          + 'palkka; toimistossa odottaa pino patentteja. Tämän arkisen paineen '
+          + 'keskellä 26-vuotias Einstein kirjoittaa neljä tutkimusta, mutta '
+          + 'läheinen ystävä Michele Besso on niitä harvoja, joiden kanssa hän '
+          + 'voi ajatella ääneen.',
+        lahde: 'Matkakirjan havainnekuva. Faktat ja työhuonereferenssi: Albert '
+          + 'Einstein Archives / einstein-website.de, *Patent Office*; '
+          + 'tarkistettu 3.9.2026.',
+        url: 'https://einstein-website.de/en/patent-office/',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'maa', avain: 'CHE' },
+    visa: {
+      kysymys: 'Mikä oli Albert Einsteinin virka Bernin patenttitoimistossa vuonna 1905?',
+      vaihtoehdot: [
+        'Viraston johtaja',
+        'Kirjaaja ja arkistonhoitaja',
+        'Kolmannen luokan tekninen asiantuntija',
+      ],
+      oikea: 2,
+    },
+    lehtiJohdanto: 'Bernin patenttivirastossa istui vuonna 1905 kolmannen '
+      + 'luokan tekninen asiantuntija, joka kirjoitti samana vuonna neljä '
+      + 'tutkimusta ja muutti fysiikan.',
+    lehtiTehtava: {
+      kysymys: 'Montako mullistavaa tutkimusta Einstein julkaisi vuonna 1905?',
+      vaihtoehdot: [
+        'Yhden',
+        'Kaksi',
+        'Neljä',
+        'Kaksitoista',
+      ],
+      oikea: 2,
+      fakta: 'Vuotta kutsutaan siksi ihmevuodeksi, annus mirabilisiksi; '
+        + 'yliopiston virkaan Einstein pääsi vasta 1909.',
     },
   },
 ];
