@@ -862,6 +862,47 @@ turhaa).
 
 ---
 
+## 7. Aikajanalinssin ilmiökuvista on pieni versio (3.9.2026)
+
+Omistajan havainto 3.9.2026: *"kaikki kuvat pitää ladata ennakkoon
+taustalle ainakin tuossa pienemmässä koossa mikä näkyy linssin
+animaation aikana. pitäisikö näille linssikuville generoida oma
+pienempi versio, joka latautuisi nopeammin?"* — kyllä. Kuvaputken
+ilmiökuvat ovat ämpärissä alkuperäisinä 1536×1024 ja painavat 400–760
+kt kappale; ilmiöpaneelissa kuva näkyy noin 450 px leveänä. Koko kaaren
+kuvat alkuperäisinä olisi yli 14 Mt, mikä ei lataudu taustalle
+animaation aikana millään yhteydellä.
+
+Siksi jokaisesta ilmiökuvasta tehdään pieni versio:
+
+| | alkuperäinen | pieni |
+|---|---|---|
+| polku ämpärissä | `aikajana/keksinnot/<nimi>.jpg` | `aikajana/keksinnot/pieni/<nimi>.webp` |
+| mitat | 1536×1024 | leveys 640 px, korkeus suhteessa |
+| muoto ja laatu | JPEG, kuvaputken tuotos | WebP, laatu 78 |
+| koko | 400–760 kt | alle 90 kt (ajo kaatuu, jos ylittyy) |
+| milloin ladataan | vasta "Lue juttu" -napista | esilataus linssin avautuessa |
+
+Tiedostonimen runko on sama kummassakin, joten pienen version osoitteen
+saa alkuperäisestä ilman omaa listaa. Työkalu on
+`tools/tee-pienet-kuvat.mjs` ja ajo
+`.github/workflows/tee-pienet-kuvat.yml` (käsiajettava, `vain`- ja
+`kuiva`-valinnat). Kumpikaan ei kanna kuvalistaa: osoitteet luetaan
+linssin datasta (`js/linssit/keksinnot.js`, kentät `ilmio.osoite` ja
+`ilmioLisa.osoite`), joten uusi hyväksytty kuva tulee mukaan
+seuraavalla ajolla. Pienet versiot eivät mene repoon — työkalu
+kirjoittaa `media/`-kansioon (.gitignore) ja vie sieltä ämpäriin, kuten
+kaikki muukin media.
+
+**Pelin puoli tulee erikseen.** Sopimus on tämä: kun linssi avataan,
+peli esilataa taustalla kaikkien pysäkkien PIENET versiot (ei
+alkuperäisiä), ja ilmiöpaneeli näyttää animaation aikana pienen
+version; alkuperäinen haetaan vasta, kun pelaaja avaa jutun. Kun
+pieni versio puuttuu ämpäristä, näytetään alkuperäinen — uusi kuva ei
+saa jäädä näkymättä siksi, että pienennysajo on vielä ajamatta.
+
+---
+
 ## 9. Tarkistuslista ennen kuin linssi on valmis
 
 - [ ] `js/linssit/<tunnus>.js` vie `LINSSI`-vakion, jossa on `tunnus`,
