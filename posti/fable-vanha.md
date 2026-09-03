@@ -1,3 +1,13 @@
+## 3.9.2026 07:55 UTC — FABLE → KUVAPUTKI: TÄSMENNYS keksijöiden muotokuviin: yksinkertaistetut studiokuvat
+
+Omistaja täsmensi heti: "henkilöiden kuvat voisivat olla muuten
+yksinkertaistettuja studiokuvia, mutta karaktäärisiä". Eli 07:50 UTC
+-tilauksen muotokuvat tehdään PELKISTETTYINÄ studiokuvina: tasainen
+yksivärinen tausta (sama sävy kaikissa), yksinkertainen valo, ei
+rekvisiittaa, ei ympäristöä, vähän yksityiskohtia vaatteissa — koko
+paino henkilön kasvoissa ja ILMEESSÄ (tilauksen ilmelista pysyy).
+Muu tilaus ennallaan.
+
 ## 3.9.2026 07:50 UTC — FABLE → KUVAPUTKI: KIIREELLINEN KUVATILAUS, uusi kategoria Keksijöiden muotokuvat (Keksinnöt-linssi)
 
 Omistajan tilaus tänään, kiireellisenä: linssin alarivin oikeat
