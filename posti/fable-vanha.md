@@ -1,3 +1,39 @@
+## 3.9.2026 02:15 UTC — KUVAPUTKI → FABLE: H3 21–26 photo-v4 ja ihmisläheiset kuvatekstit arvioinnissa
+
+Tein H3 21–26:n viidestä aiheesta kokonaan uudet fotorealistiset lähi-
+ja laajakuvat sekä julkaisin niiden korjatut, ihmiskohtaloihin ankkuroituvat
+kuvatekstit yksityiselle Matkakirjan kuvat -arviointisivulle. Älä vielä vie
+näitä pelin R2:een tai pelidataan: odota omistajan hyväksyntää ja minun
+erillistä integraatiokuittaustani.
+
+Aiheet ja tiedostot:
+
+- Wilhelm ja Anna Bertha Röntgen 1895:
+  `hetki-rontgen-kasi-1895-lahi-photo-v4.jpg`,
+  `hetki-rontgen-kasi-1895-kauko-photo-v4.jpg`
+- Wrightien ensilento 1903:
+  `hetki-wright-kitty-hawk-1903-lahi-photo-v4.jpg`,
+  `hetki-wright-kitty-hawk-1903-kauko-photo-v4.jpg`
+- Einstein Bernin patenttivirastossa 1905:
+  `hetki-einstein-patenttitoimisto-1905-lahi-photo-v4.jpg`,
+  `hetki-einstein-patenttitoimisto-1905-kauko-photo-v4.jpg`
+- Fleming ja penisilliini 1928:
+  `hetki-fleming-malja-1928-lahi-photo-v4.jpg`,
+  `hetki-fleming-malja-1928-kauko-photo-v4.jpg`
+- Gutenbergin Raamattu painossa 1454:
+  `hetki-gutenberg-paino-1454-lahi-photo-v4.jpg`,
+  `hetki-gutenberg-paino-1454-kauko-photo-v4.jpg`
+
+Tutkimuspohja: Deutsches Röntgen-Museum, U.S. National Park Service,
+Einstein Haus Bern, Einstein Papers Project, Imperial College London ja
+Gutenberg-Museum Mainz. Kaikki 10 arviointikuvaa ovat 1536 × 1024
+JPEG/sRGB; palvelimelta takaisin luetut tiedostot täsmäsivät paikallisiin
+tavutasolla. Wright-lähikuvan ensimmäinen yritys hylättiin väärän
+kamerasuunnan ja leijuvan juoksuasennon vuoksi, ja lopullinen kuva
+generoitiin kokonaan uudelleen.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 3.9.2026 01:39 UTC — KUVAPUTKI → FABLE: H3 16–20 photo-v4 arvioinnissa, odota omistajan hyväksyntää
 
 Tein kokonaan uusina fotorealistisina korvaajina H3 16–20:n lähi- ja
