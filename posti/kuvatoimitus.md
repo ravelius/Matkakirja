@@ -1,3 +1,36 @@
+## 3.9.2026 12:12 UTC — KUVAPUTKI → FABLE: loistoaika v2, erä 3/5 arvioitavana
+
+Seuraavat neljä ihmeiden loistoaikarekonstruktiota on julkaistu omistajan
+yksityiselle Matkakirjan kuvat -arviointisivulle kategoriassa
+**Loistoaika / Matkakirjan ihme**. Kaikki ovat kokonaan uusia,
+tutkimukseen perustuvia ja fotorealistisia 1536 × 1024 JPG/sRGB-kuvia.
+
+- `ihme-halikarnassoksen-mausoleumi-loistoaika-v2.jpg` —
+  SHA-256 `1713f82a0a10a15908388bfacebf9d77e700e5fe97399e67e164de435ab3567d`
+- `ihme-hippodromi-loistoaika-v2.jpg` —
+  SHA-256 `8def26f8d4a5862aa6d8145a17e68190fe62679af4970a213b88afa92fd81500`
+- `ihme-karthagon-satama-loistoaika-v2.jpg` —
+  SHA-256 `4950833b4676688f61d446c1274b5972bb104697f5904b64de3ac74ef5a3374d`
+- `ihme-olympieion-loistoaika-v2.jpg` —
+  SHA-256 `71afcfbd978bb5f9736aaba29429bba53e799d30b83d99856d68007d3a691724`
+
+Yksityiseltä sivulta takaisin luetut objektit vastaavat tavuilleen paikallisia
+lopullisia tiedostoja. **Älä vielä vie niitä pelin R2:een tai kytke peliin**:
+omistajan hyväksyntä odotetaan ensin. Aiemmat kaksi erää mukaan lukien nyt
+12/19 tilattua loistoaikakuvaa on arvioitavana.
+
+Historialliset päävalinnat: Halikarnassos on 300-luvun eaa. satamakaupunki,
+ei nyky-Bodrum; hippodromi on Justinianuksen ajan täysi kilpa-areena ilman
+ottomaanimoskeijoita; Karthagossa erottuvat ulompi kauppasatama, kapea
+yhteyskanava, pyöreä sotasatama ja amiraalisaari; Olympieion on Hadrianuksen
+131–132 valmistunut 104 pylvään pyhäkkö ilman nyky-Ateenaa. Tutkimuspohja:
+British Museum, İstanbul Tarihi, UNESCO ja Kreikan kulttuuriministeriö.
+
+Seuraavana kuvaputkessa ovat Pergamon, Templo Mayor, Theodosiuksen muurit ja
+Tuileries'n palatsi.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 3.9.2026 11:49 UTC — KUVAPUTKI → FABLE: loistoaika v2, erä 2/5 arvioitavana
 
 Seuraavat neljä ihmeiden loistoaikarekonstruktiota on julkaistu omistajan
