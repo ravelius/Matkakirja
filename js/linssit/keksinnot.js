@@ -26,11 +26,18 @@
  * ── KUVAT ─────────────────────────────────────────────────────────
  *
  * `kuva` on henkilön muotokuva ja `ilmio` keksintöä selittävä kuva.
- * Kaikki tiedostot ovat Commonsin PD-kuvia (tarkistettu 2.9.2026,
- * lisenssi kunkin kuvan kohdalla). Omistajan linjaus: ilmiökuvan
- * paikalle tulee GENEROITU kuva, kun kuvaputki on tehnyt sen — se
- * vaihdetaan tähän kenttään `osoite`-muodossa (ks. KEKSINTO_KUVAJUURI).
+ * Muotokuvat ovat Commonsin PD-kuvia (tarkistettu 2.9.2026, lisenssi
+ * kunkin kuvan kohdalla). Omistajan linjaus: ilmiökuvan paikalle tulee
+ * GENEROITU kuva, kun kuvaputki on tehnyt sen — se vaihdetaan tähän
+ * kenttään `osoite`-muodossa (ks. KEKSINTO_KUVAJUURI). Kaikki 25
+ * pysäkkiä on nyt kytketty generoituun ilmiökuvaan; vain merkkipaalu
+ * 1873 on ilman kuvaa.
  * Muotokuva, jota ei vielä ole tarkistettu (null), näkyy nimikirjainlaattana.
+ *
+ * Blériot'n kohdassa on kaksi hyväksyttyä ilmiökuvaa: laaja `ilmio`
+ * (kone ja Kanaali) ja lähikuva `ilmioLisa` (lentäjän jännitys).
+ * Moottori (js/aikajana.js) piirtää toistaiseksi vain `ilmio`-kentän,
+ * joten lähikuva odottaa datassa piirtotukea.
  *
  * ── PAIKAT ────────────────────────────────────────────────────────
  *
@@ -51,8 +58,12 @@
  * HETKI_KUVAJUURI); Commons-kuva kulkee yhä `tiedosto`-kenttänä.
  * Ensimmäiset viisi (Watt, Montgolfier, Jenner, Volta, Jacquard)
  * omistaja hyväksyi 2.9.2026 ja kuvaputki varmensi ne R2:ssa
- * (posti/kuvatoimitus.md 2.9.2026 23:28 UTC). Kuvatekstit ovat
- * kuvaputken lopulliset, ihminen edellä -linjan mukaiset.
+ * (posti/kuvatoimitus.md 2.9.2026 23:28 UTC). Loput 21 — kaaren
+ * kaikki muut pysäkit sekä Blériot'n toinen kuva — omistaja hyväksyi
+ * 3.9.2026 ja kuvaputki varmensi ne samaan kansioon
+ * (posti/kuvatoimitus.md 3.9.2026). Kuvatekstit ovat
+ * kuvaputken lopulliset, ihminen edellä -linjan mukaiset, ja ne on
+ * kopioitu kuittauksesta sanasta sanaan.
  */
 export const KEKSINTO_KUVAJUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/keksinnot';
 
@@ -207,7 +218,16 @@ export const KEKSINNOT = [
       + 'aikataulun mukaisen matkustajaliikenteen. Stephensonin raideleveys, '
       + '1 435 millimetriä, on yhä maailman yleisin.',
     kuva: { tiedosto: 'George Stephenson.jpg', selite: 'George Stephenson, John Lucasin maalaus.' },
-    ilmio: { tiedosto: 'Locomotion No 1.jpg', selite: 'Locomotion No. 1, vuoden 1825 veturi. Kuva Neil T, CC BY-SA 2.0.' },
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1825-stephenson.jpg`,
+      selite: 'Avovaunuun ahtautunut kaivosmies puristaa laitaa, kun '
+        + 'Locomotion No. 1 alkaa vetää väkijoukkoa nopeammin kuin '
+        + 'tuttu hevonen. Stockton–Darlingtonin avajaisjunan '
+        + 'matkustajille rautatien uusi aika tuntuu ensin savuna '
+        + 'silmissä, metallin iskuina ja kysymyksenä siitä, kestääkö '
+        + 'kone koko matkan.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Stockton and Darlington Railway"',
   },
   {
@@ -225,7 +245,15 @@ export const KEKSINNOT = [
       + 'siitä alkoi laitteen maine. Isoisän matkan aikaan 1873 lennätinkaapelit '
       + 'ylittivät jo Atlantin.',
     kuva: { tiedosto: 'Wheatstone Charles drawing 1868.jpg', selite: 'Charles Wheatstone, Samuel Laurencen piirros 1868.' },
-    ilmio: null,
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1837-wheatstone.jpg`,
+      selite: 'Eustonin nuori virkailija ei kuule Camden Townista '
+        + 'ääntäkään: kaksi neulaa vain kääntyy ja osoittaa kirjaimen. '
+        + 'Vuoden 1837 kokeessa sähköinen viesti ehtii perille ennen '
+        + 'radan junaa, mutta ensimmäiselle käyttäjälle ihme on '
+        + 'henkilökohtainen — joku näkymättömissä vastasi.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Cooke and Wheatstone telegraph"',
   },
   {
@@ -243,7 +271,15 @@ export const KEKSINNOT = [
       + 'myytiin kameroita ja levyjä, ja ensimmäiset muotokuvaamot avattiin '
       + 'seuraavana vuonna.',
     kuva: { tiedosto: 'Louis Daguerre 2.jpg', selite: 'Louis Daguerre dagerrotypiassa 1844.' },
-    ilmio: { tiedosto: 'Boulevard du Temple by Daguerre.jpg', selite: 'Boulevard du Temple 1838: ensimmäinen valokuva, jossa näkyy ihminen — kengänkiillottajan asiakas.' },
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1839-daguerre.jpg`,
+      selite: 'Hopeoitu kuparilevy on peili, josta ateljeeapulainen etsii '
+        + 'pienintäkin virhettä tietäen, ettei valotusta voi kopioida. '
+        + 'Vuonna 1839 dagerrotypia tekee jokaisesta kuvasta '
+        + 'ainutkertaisen esineen, vaikka elohopeahöyryjen vaarasta '
+        + 'kuvia valmistavat ihmiset tietävät vielä liian vähän.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Louis Daguerre"',
   },
   {
@@ -261,7 +297,15 @@ export const KEKSINNOT = [
       + 'maailman teräskaupunki. Halpa teräs teki mahdolliseksi kiskot, '
       + 'pilvenpiirtäjät ja Eiffel-tornin kaltaiset rakenteet.',
     kuva: { tiedosto: 'Henry Bessemer.jpg', selite: 'Henry Bessemer.' },
-    ilmio: { tiedosto: 'Bessemer converter.jpg', selite: 'Bessemer-konvertteri.' },
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1856-bessemer.jpg`,
+      selite: 'Sheffieldin terästyöläinen kääntää kasvonsa, mutta ei voi '
+        + 'irrottaa kättään vivusta, kun konvertterin valkea virta '
+        + 'täyttää kauhan. Bessemerin prosessi lupaa halvempaa terästä; '
+        + 'miehelle muutos tuntuu ensin kuumuutena, meluna ja uutena '
+        + 'työnä, jossa yksi virhe voi tappaa.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Bessemer process"',
   },
   {
@@ -279,7 +323,15 @@ export const KEKSINNOT = [
       + 'Testamentissaan hän määräsi omaisuutensa palkintoihin, joita on '
       + 'jaettu Tukholmassa vuodesta 1901.',
     kuva: { tiedosto: 'AlfredNobel adjusted.jpg', selite: 'Alfred Nobel, Gösta Flormanin valokuva.' },
-    ilmio: null,
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1867-nobel.jpg`,
+      selite: 'Vintervikenin työntekijä katsoo paperipatruunoita '
+        + 'muistamatta unohtaa Heleneborgin räjähdyksessä kuolleita — '
+        + 'yksi heistä oli Alfred Nobelin veli Emil. Kiselguuri tekee '
+        + 'nitroglyseriinistä käsiteltävämpää, mutta vuoden 1867 '
+        + 'turvallisempi räjähde ei tee työpäivästä vaaratonta.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Alfred Nobel"',
   },
   {
@@ -298,7 +350,16 @@ export const KEKSINNOT = [
       + '(1886) löytyivät ennusteiden mukaisina, ja taulukko on yhä kemian '
       + 'seinällä jokaisessa koulussa.',
     kuva: { tiedosto: 'DIMendeleevCab.jpg', selite: 'Dmitri Mendelejev työhuoneessaan 1897.' },
-    ilmio: { tiedosto: 'Mendelejevs periodiska system 1871.png', selite: 'Mendelejevin taulukko vuoden 1871 muodossa.' },
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1869-mendelejev.jpg`,
+      selite: 'Taulukkoon jäävä tyhjä kohta vaivaa Mendelejeviä enemmän '
+        + 'kuin väärä vastaus: jos järjestys on oikea, tuntemattoman '
+        + 'alkuaineen pitäisi vielä ilmestyä siihen. Vuonna 1869 hän '
+        + 'uskaltaa julkaista aukot ja ennustaa niiden aineiden '
+        + 'ominaisuuksia — gallium, skandium ja germanium löydetään '
+        + 'myöhemmin hämmästyttävän läheltä hänen arvioitaan.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Dmitri Mendeleev"',
   },
   {
@@ -323,7 +384,16 @@ export const KEKSINNOT = [
       + 'kehittivät siitä muutamassa vuodessa bensiinikäyttöisen version, '
       + 'joka oli riittävän kevyt ajoneuvoon.',
     kuva: null,
-    ilmio: null,
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1876-otto.jpg`,
+      selite: 'Kun suuri vauhtipyörä ei pysähdy, Otton vieressä seisova '
+        + 'mekaanikko uskaltaa viimein hellittää otettaan säätövivusta. '
+        + 'Toukokuussa 1876 Kölnissä uusi moottori puristaa '
+        + 'kaasuseoksen ennen sytytystä ja käy neljässä tahdissa — noin '
+        + 'kolme hevosvoimaa riittää todistamaan, että vuosien '
+        + 'epäonnistumiset eivät menneet hukkaan.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Nikolaus Otto"',
   },
   {
@@ -340,7 +410,16 @@ export const KEKSINNOT = [
       + 'maanalaiset radat, joissa höyryveturin savu olisi ollut '
       + 'tukahduttava.',
     kuva: null,
-    ilmio: null,
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1879-siemens.jpg`,
+      selite: 'Kuusipaikkaisen avovaunun poika kuuntelee, mistä veturin '
+        + 'ääni tulee: savupiippua, hevosta tai höyryä ei ole. '
+        + 'Berliinin teollisuusnäyttelyn pieni Siemens & Halsken rata '
+        + 'kuljettaa vuonna 1879 yleisöä noin seitsemän kilometrin '
+        + 'tuntinopeudella ja tekee sähköisestä liikkeestä ensi kertaa '
+        + 'monelle ruumiillisen kokemuksen.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Werner von Siemens"',
   },
   {
@@ -358,7 +437,17 @@ export const KEKSINNOT = [
       + 'Suomalainen Albert Edelfelt maalasi Pasteurin laboratoriossaan samana '
       + 'vuonna kuin rokote syntyi.',
     kuva: { tiedosto: 'Albert Edelfelt - Louis Pasteur - 1885.jpg', selite: 'Louis Pasteur laboratoriossaan, Albert Edelfeltin maalaus 1885.' },
-    ilmio: null,
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1885-pasteur.jpg`,
+      selite: 'Avustaja merkitsee pullon päivämäärän tietäen, että '
+        + 'kuivumisaika ratkaisee näytteen voiman: liian virulentti voi '
+        + 'tappaa, liian heikko ei suojaa. Pasteurin ryhmä heikentää '
+        + 'raivotautia kuivattamalla tartunnan saaneiden kaniinien '
+        + 'selkäydintä; kesällä 1885 menetelmää käytetään Joseph '
+        + 'Meisteriin, jonka puremat olisivat muuten olleet lähes '
+        + 'varmasti kohtalokkaat.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Louis Pasteur"',
   },
   {
@@ -376,7 +465,16 @@ export const KEKSINNOT = [
       + 'miehelleen. Matka osoitti, että auto kestää pitkän ajon — ja toi '
       + 'tehtaalle ensimmäiset tilaukset.',
     kuva: null,
-    ilmio: { tiedosto: '1885Benz.jpg', selite: 'Benz Patent-Motorwagen, Benzin oma piirros 1880-luvulta.' },
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1886-benz.jpg`,
+      selite: 'Kadun poika odottaa hevosen ilmestyvän, mutta ääni tulee '
+        + 'penkin takana tärisevästä yksisylinterisestä moottorista. '
+        + 'Carl Benzin vuonna 1886 patentoitu kolmipyöräinen kulkee '
+        + 'alle yhden hevosvoiman varassa; epävarma koeajo näyttää, '
+        + 'että ajoneuvo voi kantaa sekä oman voimanlähteensä että '
+        + 'ohjaajansa.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Benz Patent-Motorwagen"',
   },
   {
@@ -393,7 +491,14 @@ export const KEKSINNOT = [
       + '"Ei mihinkään." Seitsemän vuotta myöhemmin Marconi lähetti niillä '
       + 'viestin. Taajuuden yksikkö hertsi on nimetty hänen mukaansa.',
     kuva: { tiedosto: 'Heinrich Rudolf Hertz.jpg', selite: 'Heinrich Hertz, Robert Krewaldtin valokuva.' },
-    ilmio: null,
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1888-hertz.jpg`,
+      selite: 'Avustaja peittää kädellään lampun hajavalon ja odottaa '
+        + 'kipinää, jota tuskin näkee. Kun renkaan pieni kipinä vastaa '
+        + 'lähettimen kipinään ilman johtoa, sähkömagneettinen aalto '
+        + 'muuttuu laskusta havaittavaksi ilmiöksi.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Heinrich Hertz"',
   },
   {
@@ -411,7 +516,15 @@ export const KEKSINNOT = [
       + 'lähetti kirjaimen S Atlantin yli Newfoundlandiin. Marconi sai fysiikan '
       + 'Nobelin 1909.',
     kuva: { tiedosto: 'Guglielmo Marconi.jpg', selite: 'Guglielmo Marconi 1908, Pach Brothers.' },
-    ilmio: null,
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1895-marconi.jpg`,
+      selite: 'Villa Griffonen ullakolla nuori apulainen tuijottaa '
+        + 'paperinauhaa ja odottaa mäen takaa kiväärinlaukausta. Ääni '
+        + 'tarkoittaisi, että näkymätön viesti on kulkenut ensimmäisen '
+        + 'kerran esteen läpi — ja ettei kuukausien rakentelu ollut '
+        + 'turhaa.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Guglielmo Marconi"',
   },
   {
@@ -428,7 +541,15 @@ export const KEKSINNOT = [
       + '"Olen nähnyt kuolemani", vaimo sanoi. Kuukaudessa säteitä käytettiin '
       + 'jo sairaaloissa, ja Röntgen sai ensimmäisen fysiikan Nobel-palkinnon 1901.',
     kuva: { tiedosto: 'Roentgen2.jpg', selite: 'Wilhelm Röntgen noin 1900.' },
-    ilmio: { tiedosto: 'First medical X-ray by Wilhelm Röntgen of his wife Anna Bertha Ludwig\'s hand - 18951222.gif', selite: 'Anna Bertha Röntgenin käsi 22.12.1895 — ensimmäinen lääketieteellinen röntgenkuva.' },
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1895-rontgen.jpg`,
+      selite: 'Avustaja pitää oikean kätensä liikkumatta ja vertaa sitä '
+        + 'erillisellä hohtavalla levyllä näkyvään luiseen varjoon. '
+        + 'Sormus vahvistaa, että kuva kuuluu hänelle; säteilyn '
+        + 'tulevista hyödyistä tai vaaroista huoneessa ei vielä tiedetä '
+        + 'juuri mitään.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Wilhelm Röntgen"',
   },
   {
@@ -446,7 +567,15 @@ export const KEKSINNOT = [
       + 'katsojat säikähtämään. Vuoden päästä kinematografeja kiersi jo '
       + 'ympäri maailmaa.',
     kuva: { tiedosto: 'Fratelli Lumiere.jpg', selite: 'Auguste ja Louis Lumière noin 1895.' },
-    ilmio: { tiedosto: 'Cinématographe Lumière.jpg', selite: 'Lumièren kinematografi.' },
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1895-lumiere.jpg`,
+      selite: 'Eturivin katsoja kääntyy hetkeksi katsomaan vierustoveriaan: '
+        + 'liikkuivatko tehtaan portista todella ihmiset vai huijasiko '
+        + 'silmä? Salon indienin 33 maksavaa vierasta joutuvat '
+        + 'keksimään kokemukselle sanat samalla, kun käsikammen '
+        + 'tasainen rytmi pitää valokuvat liikkeessä.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Auguste and Louis Lumière"',
   },
   {
@@ -464,7 +593,14 @@ export const KEKSINNOT = [
       + 'veturit ja kuorma-autot. Diesel itse katosi Englannin kanaalilla '
       + 'matkustajalaivalta vuonna 1913.',
     kuva: { tiedosto: 'Rudolf Diesel.jpg', selite: 'Rudolf Diesel.' },
-    ilmio: null,
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1897-diesel.jpg`,
+      selite: 'Mekaanikko hellittää säätövivusta vasta, kun vauhtipyörän '
+        + 'rytmi ei enää horju. Neljän vuoden rikkoutumisten jälkeen '
+        + 'vuoden 1897 moottori käy, mutta mies kuuntelee yhä jokaista '
+        + 'metallista iskua kuin seuraava voisi olla viimeinen.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Rudolf Diesel"',
   },
   {
@@ -482,7 +618,15 @@ export const KEKSINNOT = [
       + 'Marie Curie sai Nobelin fysiikassa 1903 ja kemiassa 1911 — ainoana '
       + 'ihmisenä kahdessa eri tieteessä.',
     kuva: { tiedosto: 'Marie Curie c. 1898.jpg', selite: 'Marie Curie noin 1898.' },
-    ilmio: { tiedosto: 'Pierre and Marie Curie.jpg', selite: 'Pierre ja Marie Curie laboratoriossaan.' },
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1898-curie.jpg`,
+      selite: 'Marie Curie kiertää raskasta rautatankoa padassa, josta '
+        + 'nousevat happamat höyryt tarttuvat vaatteisiin ja ihoon. '
+        + 'Tuhansien kilojen jäännöksestä tavoitellaan jotakin, jota '
+        + 'mittari paljastaa mutta silmä ei — eikä kukaan työtilassa '
+        + 'vielä osaa arvioida säteilyn hintaa heidän terveydelleen.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Marie Curie"',
   },
   {
@@ -500,7 +644,15 @@ export const KEKSINNOT = [
       + 'kuljettivat matkustajia, ja 1930-luvulla ne lensivät säännöllisesti '
       + 'Atlantin yli.',
     kuva: { tiedosto: 'Ferdinand von Zeppelin.jpg', selite: 'Ferdinand von Zeppelin.' },
-    ilmio: null,
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1900-zeppelin.jpg`,
+      selite: 'Köydestä vetävä palomies tuntee 128-metrisen rungon nosteen '
+        + 'käsivarsissaan ennen kuin ilmalaiva on kunnolla irti '
+        + 'vedestä. Kun LZ 1 kohoaa kelluvan hallin edessä, hänen '
+        + 'tehtävänsä on päästää irti juuri oikealla hetkellä — koneen '
+        + 'kyky palata on vielä todistamatta.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "LZ 1"',
   },
   {
@@ -518,7 +670,24 @@ export const KEKSINNOT = [
       + 'minuuttia myöhemmin. Blériot XI -koneita tilattiin sadoittain, ja '
       + 'lentokoneesta tuli Euroopassa vakavasti otettava kulkuneuvo.',
     kuva: { tiedosto: 'Louis Bleriot.jpg', selite: 'Louis Blériot.' },
-    ilmio: { tiedosto: 'Bleriot XI 1909.jpg', selite: 'Blériot XI -yksitaso 1909.' },
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1909-bleriot.jpg`,
+      selite: 'Kolme alusta jää pieniksi pisteiksi Kanaalille, eikä '
+        + 'Blériot\'lla ole kompassia kertomassa, kuinka kauas tuuli on '
+        + 'vienyt. Kun Doverin valkoiset kalliot viimein erottuvat '
+        + 'usvasta, koko hauras puu- ja kangaskone näyttää hetken '
+        + 'mahdolliselta eikä pelkältä uhkapeliltä.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
+    ilmioLisa: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1909-bleriot-close.jpg`,
+      selite: 'Kylmä ilmavirta on kastellut Blériot\'n silmät ja moottorin '
+        + 'öljy tarttuu kasvoihin, mutta hän ei uskalla irrottaa otetta '
+        + 'ohjaimesta. Kallioiden löytyminen sumusta ei vielä ole '
+        + 'voitonjuhla — se on ensimmäinen helpotuksen välähdys ennen '
+        + 'kovaa laskua Englannin maaperälle.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Louis Blériot"',
   },
   {
@@ -536,7 +705,15 @@ export const KEKSINNOT = [
       + 'mutta kasvot liikkuivat. BBC aloitti säännölliset lähetykset '
       + 'Bairdin järjestelmällä 1932.',
     kuva: { tiedosto: 'John Logie Baird in 1917.jpg', selite: 'John Logie Baird 1917.' },
-    ilmio: null,
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1926-baird.jpg`,
+      selite: 'Skeptinen todistaja kumartuu niin lähelle pientä '
+        + 'vastaanotinta, että näkee kuvan hajoavan valopisteiksi. Kun '
+        + 'kasvojen suu kuitenkin liikkuu samassa hetkessä kuin '
+        + 'viereisessä huoneessa, kömpelö välke lakkaa olemasta temppu '
+        + 'ja muuttuu televisioksi.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "John Logie Baird"',
   },
   {
@@ -554,7 +731,14 @@ export const KEKSINNOT = [
       + 'puhdistivat sen 1940, ja toisen maailmansodan aikana penisilliiniä '
       + 'tuotettiin miljoonille. Kolmikko sai Nobelin 1945.',
     kuva: { tiedosto: 'Synthetic Production of Penicillin TR1468.jpg', selite: 'Alexander Fleming laboratoriossaan 1943.' },
-    ilmio: null,
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1928-fleming.jpg`,
+      selite: 'Fleming on vähällä siirtää sotkuisen viljelymaljan syrjään, '
+        + 'kun homepesäkkeen ympärillä oleva kirkas kehä pysäyttää '
+        + 'hänet. Kukaan ei hurraa: hänen edessään ei ole vielä lääke '
+        + 'vaan outo paikka, jossa stafylokokit eivät kasva.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Alexander Fleming"',
   },
 ];
