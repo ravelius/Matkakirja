@@ -447,14 +447,24 @@ const lentoLupaus = sivu.evaluate(async () => {
         havainnot.riviFontti = rivi2 ? parseFloat(getComputedStyle(rivi2).fontSize) : 0;
       }
       /*
-       * Kartan tila luetaan sillä hetkellä, kun kone ilmestyy: silloin
-       * kamera-ajo on ohi ja rajaus on se, jonka pelaaja näkee. Rajaus
-       * mitataan siitä, mahtuvatko lähtö- ja kohdekaupunki näkyvälle
-       * alueelle — se on sama asia kuin "molemmat maat näkyvissä",
-       * mutta luettavissa ilman maiden muotoja.
+       * Kartan tila luetaan sillä hetkellä, kun kone ON RUUDULLA eli kun
+       * kone on puussa JA pergamenttiarkki on väistynyt. Rajaus mitataan
+       * siitä, mahtuvatko lähtö- ja kohdekaupunki näkyvälle alueelle —
+       * se on sama asia kuin "molemmat maat näkyvissä", mutta
+       * luettavissa ilman maiden muotoja.
+       *
+       * ARKIN EHTO ON OSA MITTAA (lisätty v1493). Kone ja kaikki lennon
+       * kerrokset rakennetaan arkin TAKANA, ja v1492 jälkeen niiden ja
+       * arkin väistymisen väliin jää laattojen odotus (js/ui.js
+       * odotaPyramidi, jopa kuusi sekuntia). Pelkän koneen ilmestymiseen
+       * sidottu mittaus luki siis kartan tilan hetkellä, jota kukaan ei
+       * näe: kesken lennon kerrosten 0,5 sekunnin häivytystä
+       * (css .pawns { transition: opacity 0.5s }) nappulan peittävyys
+       * oli 0,20 vaikka se on 0 ennen kuin arkki nousee. Nyt mitta on
+       * siinä kohdassa, jossa omistaja katsoo kuvaa.
        */
       const kone = document.querySelector('.flight .flight-plane');
-      if (kone && havainnot.kartta === undefined) {
+      if (kone && !arkki && havainnot.kartta === undefined) {
         const n = ui.nakyvaAlue?.() ?? null;
         const paikka = (id) => {
           const c = game.board.cityById.get(id);
@@ -484,10 +494,14 @@ const lentoLupaus = sivu.evaluate(async () => {
           lauta: game.pack.id,
           kartalento: document.body.classList.contains('kartalento'),
           // Vanha piirros pois myös lennosta (omistajan linjaus
-          // 25.8.2026, ilta) — mutta pergamentti jää alle.
-          atlasLuokka: document.body.classList.contains('fokus-atlas-nakyma'),
+          // 25.8.2026, ilta) — mutta pergamentti jää alle. Vanha lauta
+          // ei enää piiloudu luokalla vaan on tyhjä: laatat ovat ainoa
+          // karttapohja (v1365), joten mitta on lasten lukumäärä.
           staattinen: naytto('.staattinen'),
+          staattisenLapsia: document.querySelector('.staattinen')
+            ? document.querySelector('.staattinen').childElementCount : -1,
           paperi: naytto('.paper-pohja'),
+          laattoja: document.querySelectorAll('.pyramidi-laatta').length,
           reitti: Boolean(document.querySelector('.flight .flight-trail')),
           skene: Boolean(document.querySelector('.flight-scene')),
           sumu: Boolean(document.querySelector('.fokus-sumu-harso')),
@@ -564,28 +578,56 @@ vaadi('rajaukseen mahtuvat sekä lähtömaa että kohdemaa',
  * on aloituslennon oma kerros (js/kartta.js), ja se jää — juuri se
  * tekee lennon kartasta niukan nyt kun maakohtaista himmennystä ei
  * enää ole.
+ *
+ * NAPPULAN PEITTÄVYYS EI OLE TÄSMÄNOLLA VAAN HÄIVYTYKSEN LOPPU.
+ * Pelitilan kerrokset häivytetään lennon alkaessa puolen sekunnin
+ * liu'ulla (css/styles.css `.pawns { transition: opacity 0.5s }`,
+ * body.kartalento .pawns { opacity: 0 }), joten mitta on kynnys eikä
+ * yhtäsuuruus. Mittaushetki on nyt arkin väistyminen (ks. yllä), joten
+ * liuku on käytännössä jo maalissa — kynnys on varalta hitaalle
+ * laitteelle.
  */
 vaadi('kartta on lennon aikana niukka: lennon harso päällä, nappula ja himmennykset pois',
-  Boolean(kartta.sumu) && kartta.himmennettyja === 0 && kartta.nappula === '0',
+  Boolean(kartta.sumu) && kartta.himmennettyja === 0
+  && Number(kartta.nappula) <= 0.05,
   `harso ${kartta.sumu}, himmennettyjä ${kartta.himmennettyja}, nappulan peittävyys ${kartta.nappula}`);
 /*
  * VANHA KARTTA POIS MYÖS LENNOSTA (omistajan linjaus 25.8.2026, ilta:
  * *"Lennon aikana taidetaan käyttää sitä vanhaa karttaa. Vanha kartta
  * pitää ottaa kokonaan pois pelistä toistaiseksi."*).
  *
- * Aiemmin lentonäkymä oli nimenomaan NIUKKA VANHA KARTTA: laudan
- * piirros harson alla. Nyt harson alla on pergamentti ja
- * valmistuneiden maiden atlas-lehdet — ja jos lähtö- ja kohdemaalle ei
- * ole vielä lehtiä (esim. lento New Yorkiin), pelkkä pergamentti.
+ * VÄITE MITATAAN NYT TOISIN (päivitetty v1493). Se luki ennen kahta
+ * asiaa, jotka molemmat kuuluivat puretulle atlasjärjestelmälle:
+ * `body.fokus-atlas-nakyma` ja sen CSS-sääntö
+ * `body.fokus-atlas-nakyma .staattinen { display: none }`. Kumpaakaan
+ * ei enää ole — omistajan päätös 30.8.2026 (*"poista kaikki muut
+ * vaihtoehdot käytöstä ja kytke peliin vain tämä uusi kartta"*, v1365)
+ * purki fokuslehdet ja teki laattapyramidista ainoan karttapohjan.
+ * Vanhaa lautaa ei siis enää PIILOTETA vaan sitä ei piirretä: ryhmä
+ * `g.staattinen` jää tyhjäksi (js/ui.js laatatPohjana), mikä on
+ * omistajan linjaus toteutettuna vahvempana kuin väite osasi vaatia.
  *
- * PAPERI ON OSA VÄITETTÄ. Ilman sitä lehdettömästä lennosta tulisi
+ * Mitta on siksi kaksiosainen: vanhassa laudassa ei ole yhtään lasta,
+ * ja pergamentti on yhä alla. Juuri ensimmäinen on se, mistä omistaja
+ * huomautti TestFlightissä 30.8.2026 (*"Peli piirtää alle ensin sen
+ * vanhan kartan ja sitten päälle sen uuden"*) — tyhjä ryhmä on tuon
+ * havainnon vartija.
+ *
+ * LAATTOJA EI VOI VAATIA TÄSSÄ AJOSSA. Savuke katkaisee kaikki
+ * ulkopuoliset osoitteet (ks. tiedoston alku), ja laatat tulevat
+ * verkosta — mitattuna `.pyramidi-laatta` on tässä ajossa aina 0.
+ * Luku tulostetaan silti mukaan, koska se erottaa "ei laattoja, koska
+ * verkko on poikki" tapauksesta "ei laattoja, koska pohja katosi".
+ *
+ * PAPERI ON OSA VÄITETTÄ. Ilman sitä laatattomasta kartasta tulisi
  * paneelin tumma tausta, mikä olisi selvästi pahempi vika kuin se, joka
  * korjattiin.
  */
-vaadi('lennossa vanha lauta on piilossa mutta pergamentti jää',
-  kartta.atlasLuokka === true && kartta.staattinen === 'none'
+vaadi('lennossa vanha lauta on tyhjä mutta pergamentti jää',
+  kartta.staattisenLapsia === 0
   && kartta.paperi !== 'none' && kartta.paperi !== 'ei ole',
-  `atlasLuokka ${kartta.atlasLuokka}, staattinen ${kartta.staattinen}, paperi ${kartta.paperi}`);
+  `vanhan laudan lapsia ${kartta.staattisenLapsia}, paperi ${kartta.paperi},`
+  + ` laattoja ${kartta.laattoja} (verkko poikki)`);
 /*
  * ÄÄNI JOHTAA, KUVA SEURAA (omistajan tilaus 27.8.2026: *"aloita sen
  * äänen toisto mahdollisimman pian. Olisi kiva ensin kuulla kabiinin
