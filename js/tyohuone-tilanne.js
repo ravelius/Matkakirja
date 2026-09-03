@@ -92,6 +92,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1510: KARUSELLI ILMAN SUODATINTA - Keksinnot-linssi: kortit liukuvat ja suurenevat tasaisesti myos iPadilla; tulevat kortit nayttavat valmiiksi sumennetun muotokuvan (kun workflow tee-pienet-kuvat on ajettu). ISOISAN KUVA RAJATTUNA - aloitussivulla ja avauslennolla kortti ilman valkoista taustaa.',
   'v1509: ISOISAN VALOKUVAT - aloitussivu: pieni kallistettu Kanton-kuva luonnoslehden vieressa; uusi peli ja avauslento: Bombay-kuva nousee kartan vasempaan alakulmaan repliikin alettua, napautus suurentaa (ei ohita lentoa).',
   'v1508: TIEDELIITTEEN TAITTO (pilotti Watt) - avaa linssi, napauta Wattin korttia: leipateksti vasemmalla ja pieni muotokuva oikealla, alla havainnekuva, lopussa Keksija-osio henkilotekstilla ja aidolla kuvalla oikealla. Muut keksijat: sama taitto ilman henkilo-osiota.',
   'v1507: KUPLAPINO PEHMEASTI - Sofiaan saapuessa kolme kuplaa: pino ei hypi vaakasuunnassa, uusi kupla nousee samaan tahtiin kuin vanhat vaistyvat. LINSSIN VIIMEISTELY - Keksinnot-linssi: kartuutsi, mittajana ja asteviivaimet poissa, ilmiopaneeli irti vuosipalkista, karuselli ja kuvanvaihto sulavampia.',

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1510, teksti: 'Karuselli ilman suodatinta, isoisan kuva rajattuna' },
   { v: 1509, teksti: 'Isoisan valokuvat aloitussivulle ja avauslennolle' },
   { v: 1508, teksti: 'Tiedeliitteen taitto: pilotti Watt' },
   { v: 1507, teksti: 'Kuplapino pehmeasti, linssin viimeistely' },

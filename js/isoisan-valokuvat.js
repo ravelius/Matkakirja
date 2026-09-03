@@ -15,15 +15,24 @@ import { AANI_JUURI } from './media.js';
 
 export const ISOISAN_KUVAJUURI = `${AANI_JUURI}kohtaamiset/isoisa/`;
 
+/*
+ * KORTTI IRTI VALKOISESTA TAUSTASTA (omistaja 3.9.2026: *"tuo isoisän kuva
+ * pitää leikata irti valkoisesta taustasta"*). JPG:ssä cabinet card on
+ * valkoisella pohjalla; rajaus on kortin reunat kuvan mittojen osuuksina
+ * (mitattu Chromiumin kanvaasilla, kynnys min(r,g,b) < 238, pieni vara).
+ * CSS leikkaa clip-pathilla ja skaalaa kortin täyteen (rajausTyyli).
+ */
 export const ISOISAN_VALOKUVAT = {
   kanton: {
     osoite: `${ISOISAN_KUVAJUURI}isoisa-kanton-1873-kulunut-v1.jpg`,
+    rajaus: { x0: 0.054, y0: 0.032, x1: 0.943, y1: 0.956 },
     selite: 'Isoisä teehuoneen pöydässä Kantonissa 1873. Kulunut cabinet card '
       + 'isoisän matkalaukusta.',
     lahde: 'Kuvaputken generoitu valokuva',
   },
   bombay: {
     osoite: `${ISOISAN_KUVAJUURI}isoisa-bombay-1873-kulunut-v1.jpg`,
+    rajaus: { x0: 0.076, y0: 0.091, x1: 0.923, y1: 0.915 },
     selite: 'Isoisä Bombayn satamalaiturilla matka-arkkunsa vieressä 1873. '
       + 'Valokuva löytyi matkakirjan välistä.',
     lahde: 'Kuvaputken generoitu valokuva',
@@ -32,3 +41,16 @@ export const ISOISAN_VALOKUVAT = {
 
 /** Lennolla valokuva nousee esiin vasta, kun repliikki on ehtinyt alkaa. */
 export const LENNON_VALOKUVAN_VIIVE_MS = 2600;
+
+/**
+ * Rajaus CSS-muuttujina (css .isoisa-rajattu): clip-path leikkaa kortin
+ * reunoihin ja skaala täyttää elementin leikatulla kortilla.
+ */
+export function rajausTyyli(kuva) {
+  const r = kuva?.rajaus;
+  if (!r) return '';
+  const leveys = r.x1 - r.x0;
+  const korkeus = r.y1 - r.y0;
+  const skaala = 1 / Math.max(leveys, korkeus);
+  return `--rx0:${r.x0};--ry0:${r.y0};--rx1:${r.x1};--ry1:${r.y1};--rskaala:${skaala.toFixed(4)}`;
+}

@@ -15,6 +15,7 @@ import {
   aikajanaAskel, rullaaVuosi, VUOSI_RULLAUS_MS, AIKAJANA_NAKSU_VALI_MS,
   AIKAJANA_VIIVE_MS, AIKAJANA_PAALU_MS, AIKAJANA_TAUKO_HIMMENNYS,
   pieniOsoite, PIENEN_KATTO, karusellinPaikat, karusellinMitta, KARUSELLIN_MITAT,
+  karuselliOsoite, sumeaOsoite, KARUSELLIN_KATTO,
 } from '../js/aikajana.js';
 import { runkoOsoitteesta } from '../tools/tee-pienet-kuvat.mjs';
 import { KEKSINNOT, KEKSINTO_KUVAJUURI, LINSSI } from '../js/linssit/keksinnot.js';
@@ -157,7 +158,7 @@ test('moottori näyttää pienen version ja esilataa koko kaaren pienenä', () =
   assert.equal(PIENEN_KATTO, 640);
   assert.match(MOOTTORI, /if \(kuvatieto\.osoite\) asetaAmpariKuva\(kuva, kuvatieto\.osoite, leveys\);/);
   // Varareitti kerran, ei silmukkaa.
-  assert.match(MOOTTORI, /function asetaAmpariKuva[\s\S]{0,500}addEventListener\('error', \(\) => \{ kuva\.src = osoite; \}, \{ once: true \}\)/);
+  assert.match(MOOTTORI, /function asetaAmpariKuva[\s\S]{0,1200}addEventListener\('error', \(\) => \{ kuva\.src = osoite; \}, \{ once: true \}\)/);
   // Esilataus: koko kaari pienenä heti käynnistyksessä, ei kolmen ikkunaa.
   assert.match(MOOTTORI, /kaynnista\(\) \{[\s\S]{0,200}this\.esilataaPienet\(\);/);
   assert.match(MOOTTORI, /esilataaPienet\(\) \{[\s\S]{0,400}for \(const t of this\.tapahtumat\)[\s\S]{0,300}pieniOsoite\(kuva\.osoite\)/);
@@ -444,4 +445,22 @@ test('moottori piirtää kortin ja henkilörivin generoidusta muotokuvasta', () 
     'ilmiöpaneelin henkilörivillä on kasvot');
   assert.ok(!/kuvaTaiLaatta\(t\.kuva,/.test(MOOTTORI), 'aito kuva ei enää piirry kortille');
   assert.match(MOOTTORI, /this\.esilataaPienet\(\);/, 'koko kaari esiladataan pienenä');
+});
+
+/* ==================== KARUSELLIN KUVAT VALMIIKSI (3.9.2026) ==================== */
+
+test('muotokuvalla on karusellikoko ja valmiiksi sumennettu versio, ilmiökuvalla vain pieni', () => {
+  const muotokuva = `${KEKSINTO_KUVAJUURI}/muotokuva/1769-james-watt.jpg`;
+  assert.equal(karuselliOsoite(muotokuva), `${KEKSINTO_KUVAJUURI}/muotokuva/karuselli/1769-james-watt.webp`);
+  assert.equal(sumeaOsoite(muotokuva), `${KEKSINTO_KUVAJUURI}/muotokuva/sumea/1769-james-watt.webp`);
+  const ilmio = `${KEKSINTO_KUVAJUURI}/1769-watt.jpg`;
+  assert.equal(karuselliOsoite(ilmio), pieniOsoite(ilmio));
+  assert.equal(sumeaOsoite(ilmio), pieniOsoite(ilmio));
+  assert.equal(KARUSELLIN_KATTO, 400);
+  // Kortit eivät käytä CSS-suodatinta: sumennus on tiedostossa.
+  const CSS = readFileSync(new URL('../css/aikajana.css', import.meta.url), 'utf8');
+  const kortti = CSS.match(/\.aikajana-kortti \{[^}]*\}/)[0];
+  assert.doesNotMatch(kortti, /filter:/);
+  assert.doesNotMatch(CSS, /\.aikajana-kortti\.tuleva \{[^}]*filter:/);
+  assert.match(MOOTTORI, /img\[data-terava\]/);
 });

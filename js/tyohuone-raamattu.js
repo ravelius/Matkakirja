@@ -2921,7 +2921,11 @@ export const RAAMATTU = {
           + 'iOS:n webapp-tilassa tyhjana), Bombay nousee avauslennolla '
           + 'kartan paalle ja napautus suurentaa (js/isoisan-valokuvat.js); '
           + 'ulkonaon kaanon kirjattu docs/tarina.md:hen. Shanghain kuva ja '
-          + 'puhtaat vedokset jaivat omistajan pyynnosta pois.',
+          + 'puhtaat vedokset jaivat omistajan pyynnosta pois. Tasmennys '
+          + '(omistaja 3.9. ilta: "tuo isoisan kuva pitaa leikata irti '
+          + 'valkoisesta taustasta"): kortti rajataan CSS:lla JPG:n '
+          + 'valkoisesta pohjasta (mitatut reunat, clip-path + skaala) '
+          + 'v1510; kuvaputkelta pyydetaan jatkossa PNG alfalla.',
         'KEHITTAJAN MUSIIKKISIVU (omistaja 3.9.2026: "kehittaja '
           + 'hampurilaiseen voisi tehda oman sivun taustamusiikeille, jossa '
           + 'voisin kayda kuuntelemassa niita"): tyohuoneen lehti Musiikki '
@@ -3090,7 +3094,11 @@ export const RAAMATTU = {
           + 'kortit vaihtavat kuvan sumennettuun versioon, nahdyt terava. '
           + 'Ilmiokuvien pieni 640 px riittaa paneeliin. Tyokalu '
           + 'tools/tee-pienet-kuvat.mjs laajennetaan muotokuva-kansioon '
-          + '(karuselli + sumea), ajo workflow tee-pienet-kuvat.',
+          + '(karuselli + sumea), ajo workflow tee-pienet-kuvat. TOTEUTETTU '
+          + 'v1510: variantit karuselli/ (400 px terava) ja sumea/ (gblur '
+          + '2,6) muotokuville, kortit vaihtavat tiedoston pysakin mukaan, '
+          + 'CSS-suodatin poistettu korteista; varareitti pieni -> '
+          + 'alkuperainen.',
         'OMISTAJAN PAATOKSET KORTILLA 3.9.2026 (iltapaiva, neljan kohdan '
           + 'kysymyskortti): 1) JUHLAKUPLA tietajatason noustessa menee '
           + 'Livian kuplapinoon (ei matkalaukun kohdalle) - nain se jo on '
