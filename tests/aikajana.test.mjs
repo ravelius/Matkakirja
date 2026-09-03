@@ -289,7 +289,7 @@ test('pysäytetyn kellon hyppy rullaa muuttuneet numerot yhdellä liikkeellä', 
 });
 
 test('paneelin koko nipistämällä: kerroin rajataan vakioväliin ja linssin leveyteen', () => {
-  assert.ok(PANEELIN_KOKO_MIN < 1 && PANEELIN_KOKO_MAX > 1.5);
+  assert.ok(PANEELIN_KOKO_MIN < 1 && PANEELIN_KOKO_MAX >= 2);
   assert.equal(rajaaPaneelinKoko(1), 1);
   assert.equal(rajaaPaneelinKoko(0.1), PANEELIN_KOKO_MIN);
   assert.equal(rajaaPaneelinKoko(9), PANEELIN_KOKO_MAX);
@@ -298,6 +298,9 @@ test('paneelin koko nipistämällä: kerroin rajataan vakioväliin ja linssin le
   assert.ok(Math.abs(rajaaPaneelinKoko(5, { leveys: 300, kokoNyt: 1, juuriLeveys: 500 }) - 484 / 300) < 1e-9);
   assert.equal(rajaaPaneelinKoko(1.5, { leveys: 300, kokoNyt: 1, juuriLeveys: 800 }), 1.5);
   assert.equal(rajaaPaneelinKoko(5, { leveys: 300, kokoNyt: 1, juuriLeveys: 5000 }), PANEELIN_KOKO_MAX);
+  // Korkeus: paneeli 200 px, linssi 600 px, vuosipalkki vie 60 → enintään (600-60-16)/200.
+  assert.ok(Math.abs(rajaaPaneelinKoko(5, { leveys: 300, korkeus: 200, kokoNyt: 1, juuriLeveys: 5000, juuriKorkeus: 600, ylaVara: 60 }) - 524 / 200) < 1e-9 || rajaaPaneelinKoko(5, { leveys: 300, korkeus: 200, kokoNyt: 1, juuriLeveys: 5000, juuriKorkeus: 600, ylaVara: 60 }) === PANEELIN_KOKO_MAX);
+  assert.ok(Math.abs(rajaaPaneelinKoko(5, { leveys: 300, korkeus: 300, kokoNyt: 1, juuriLeveys: 5000, juuriKorkeus: 600, ylaVara: 60 }) - 524 / 300) < 1e-9);
   // Kytkentä: kaksi osoitinta nipistää, rulla mitoittaa, koko muistetaan laitteella.
   assert.match(MOOTTORI, /if \(sormet\.size >= 2\) \{ aloitaNipistys\(\); return; \}/);
   assert.match(MOOTTORI, /paneeli\.addEventListener\('wheel', \(e\) => \{\n\s*e\.preventDefault\(\);\n\s*e\.stopPropagation\(\);/);

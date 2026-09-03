@@ -291,7 +291,7 @@ export const PANEELIN_RAAHAUSKYNNYS = 6;
 const PANEELIN_SIIRTO = { dx: 0, dy: 0, koko: 1 };
 const PANEELIN_MUISTIAVAIN = 'matkakirja-linssi-paneeli';
 export const PANEELIN_KOKO_MIN = 0.55;
-export const PANEELIN_KOKO_MAX = 2.4;
+export const PANEELIN_KOKO_MAX = 2.2;
 /** Hiiren rullan askel: yksi pykälä (100 yksikköä) ≈ 12 % koon muutos. */
 export const PANEELIN_RULLAN_HERKKYYS = 0.0012;
 
@@ -316,10 +316,15 @@ function tallennaPaneelinMuisti() {
  */
 export function rajaaPaneelinKoko(koko, mitat = {}) {
   let ylaraja = PANEELIN_KOKO_MAX;
-  const { leveys, kokoNyt, juuriLeveys } = mitat;
+  const { leveys, korkeus, kokoNyt, juuriLeveys, juuriKorkeus, ylaVara = 0 } = mitat;
   if (leveys > 0 && kokoNyt > 0 && juuriLeveys > 0) {
-    ylaraja = Math.min(ylaraja, Math.max(PANEELIN_KOKO_MIN, (juuriLeveys - 16) / (leveys / kokoNyt)));
+    ylaraja = Math.min(ylaraja, (juuriLeveys - 16) / (leveys / kokoNyt));
   }
+  // Korkeussuunnassa paneelin on mahduttava vuosipalkin alta linssin alareunaan.
+  if (korkeus > 0 && kokoNyt > 0 && juuriKorkeus > 0) {
+    ylaraja = Math.min(ylaraja, (juuriKorkeus - ylaVara - 16) / (korkeus / kokoNyt));
+  }
+  ylaraja = Math.max(PANEELIN_KOKO_MIN, ylaraja);
   return Math.min(Math.max(Number.isFinite(koko) ? koko : 1, PANEELIN_KOKO_MIN), ylaraja);
 }
 
@@ -1705,9 +1710,15 @@ class Aikajana {
 
   /** Kokokerroin rajattuna linssin alueeseen (mitat ruudulta). */
   rajattuPaneelinKoko(koko) {
-    const leveys = this.paneeli?.getBoundingClientRect?.().width;
-    const juuriLeveys = this.juuri?.getBoundingClientRect?.().width;
-    return rajaaPaneelinKoko(koko, { leveys, kokoNyt: PANEELIN_SIIRTO.koko, juuriLeveys });
+    const p = this.paneeli?.getBoundingClientRect?.();
+    const j = this.juuri?.getBoundingClientRect?.();
+    if (!p || !j) return rajaaPaneelinKoko(koko);
+    // Paneelin yläreuna ilman siirtoa = vuosipalkin alta mitattu paikka.
+    const ylaVara = Math.max(0, p.top - PANEELIN_SIIRTO.dy - j.top);
+    return rajaaPaneelinKoko(koko, {
+      leveys: p.width, korkeus: p.height, kokoNyt: PANEELIN_SIIRTO.koko,
+      juuriLeveys: j.width, juuriKorkeus: j.height, ylaVara,
+    });
   }
 
   asetaPaneelinKoko(koko) {
