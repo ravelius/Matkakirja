@@ -744,3 +744,113 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
 }
 
 .fokusnosto-teksti p.skandaali-ingressi + p { margin-top: 0; }
+
+/* ===========================================================================
+   9. LÖÖPPITAITTO (omistaja 3.9.2026, pilotti: GRC sofia-korut)
+   ---------------------------------------------------------------------------
+   Omistajan tilaus sanatarkasti: "Saisiko nämä skandaalinostot taitettua
+   enemmän lehden muotoon, missä olisi pääotsikko isolla ja sitten olisi
+   vielä ingressitekstiä ja muuta? ... vähän samantyyppisen kuin
+   kaupunkilehden taitto, mutta tee lehdestä aavistuksen pienempi
+   kooltaan, jotta se ei sotkeudu kaupunkilehden kanssa ... hieman
+   keltaisempi pohjaväri, kun kyseessä on lööppi."
+
+   Nosto, jonka datassa on `taitto: 'lehti'`, saa kortille luokan
+   .fokusnosto-looppi. Rakenne ylhäältä alas:
+
+     ylärivi (kohdemallin symboli + luokka)      .fokusnosto-ylarivi
+     nimiö "Matkakirjan lööppi"                  .looppi-nimio
+     päiväysrivi kaksoisviivoin (paikka · vuosi) .looppi-paivays
+     PÄÄOTSIKKO isolla                           .looppi-otsikko
+     ingressi                                    .looppi-ingressi
+     kuva + kuvateksti (ennallaan)               .fokusnosto-kuva
+     leipäteksti anfangilla, leveällä ruudulla
+     kahdessa palstassa                          .looppi-leipa
+
+   Samat muotoilut kuin kaupunkilehdessä (css/styles.css .lehti-ylarivi,
+   .lehti-alarivi, #arrival-intro::first-letter, #arrival-intro
+   column-count) mutta kortin omassa mitassa: kortti on 32 rem leveä
+   (kaupunkilehti on koko ruutu), joten lehti ja lööppi eivät sekoitu.
+   Pohja on lehden paperia keltaisempi (#f6ecc6): lööppi on lööppi.
+   =========================================================================== */
+
+.fokusnosto-kortti.fokusnosto-looppi {
+  width: min(32rem, 100%);
+  background-color: #f6ecc6;
+  background-image: var(--paper-noise);
+  background-blend-mode: multiply;
+  border-color: rgba(122, 85, 20, 0.45);
+}
+
+.fokusnosto-looppi .looppi-nimio {
+  margin: 0.45rem 0 0;
+  font-family: var(--font-type);
+  font-size: 0.6rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(70, 51, 31, 0.7);
+}
+
+.fokusnosto-looppi .looppi-paivays {
+  margin: 0.2rem 0 0.7rem;
+  padding: 0.22rem 0;
+  border-top: 3px double rgba(70, 51, 31, 0.75);
+  border-bottom: 1px solid rgba(70, 51, 31, 0.5);
+  font-family: var(--font-type);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(70, 51, 31, 0.85);
+}
+
+/* Pääotsikko: lehden otsikkokoko, tiukka riviväli, vasen tasaus. Kortin
+   oma otsikkosääntö (.fokusnosto-kortti-otsikko) jättää tilaa
+   sulkunapille; lööpissä nappi on nimiön yläpuolella eikä otsikon
+   vieressä, joten koko leveys on otsikon. */
+.fokusnosto-looppi .looppi-otsikko {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-luku);
+  font-size: clamp(1.45rem, 4.6vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.005em;
+  color: #16130f;
+  text-wrap: balance;
+}
+
+.fokusnosto-looppi .looppi-ingressi {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-luku);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.42;
+  color: #2a231b;
+}
+
+/* Leipäteksti: anfangi ensimmäiseen kappaleeseen kuten lehden
+   etusivulla, ja leveällä ruudulla kaksi palstaa. */
+.fokusnosto-looppi .looppi-leipa p:first-of-type::first-letter {
+  float: left;
+  font-family: var(--font-type);
+  font-size: 3.1em;
+  line-height: 0.82;
+  font-weight: 700;
+  padding: 0.06em 0.12em 0 0;
+  color: rgba(70, 51, 31, 0.9);
+}
+
+@media (min-width: 560px) {
+  .fokusnosto-looppi .looppi-leipa {
+    column-count: 2;
+    column-gap: 1.4rem;
+    /* Vasen tasaus: kortin palsta on n. 14 em leveä, ja tasapalsta
+       jätti siihen aukkoja (kaappaus 3.9.2026). Lehden 2 rem palstat
+       ovat leveämmät ja kestävät tasauksen. */
+    text-align: left;
+    hyphens: auto;
+  }
+  .fokusnosto-looppi .looppi-leipa p { margin: 0 0 0.65em; }
+  .fokusnosto-looppi .looppi-leipa p:last-child { margin-bottom: 0; }
+}

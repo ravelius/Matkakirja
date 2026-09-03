@@ -242,6 +242,19 @@ const NOSTO_MAAT = {
       // ja nimen on oltava sen paikan nimi, jossa merkki seisoo.
       nimio: 'Mykene',
       otsikko: 'Valokuva paljasti aarrevarkauden — rouva poseerasi Troijan koruissa',
+      /*
+       * LÖÖPPITAITTO, PILOTTI (omistaja 3.9.2026): tämä nosto taitetaan
+       * lehden muotoon — nimiö, päiväysrivi, pääotsikko isolla, ingressi,
+       * kuva, leipäteksti anfangilla ja kahdessa palstassa (js/fokusnosto.js
+       * piirraNostonSisus, css/fokusnosto.css osio 9). Kun pilotti on
+       * hyväksytty, sama taitto monistetaan muihin skandaalinostoihin.
+       * Ingressi on Fablen kirjoittama tiivistys jutun omista faktoista.
+       */
+      taitto: 'lehti',
+      paivays: 'Ateena · Mykene · 1873–1876',
+      ingressi: 'Kun Sofia Schliemann asettui valokuvaajan eteen kullassa, '
+        + 'jonka piti olla yhä Troijan maassa, Ottomaanien viranomaiset '
+        + 'tiesivät vihdoin, minne Priamoksen aarre oli kadonnut.',
       teksti: 'Heinrich Schliemann salakuljetti Priamoksen aarteen ulos '
         + 'Ottomaanien valtakunnasta Kreikkaan. Viranomaisille asia '
         + 'paljastui vasta, kun hänen vaimonsa Sofia esiintyi julkisesti '
@@ -883,11 +896,32 @@ function avaaNosto(ui, nosto) {
  * osiona, koska se palaa tyhjentäneenä eikä ui.fokusnostoKortti ole
  * silloin asetettu.
  */
+/** Kortin taitto: 'lehti' = lööppitaitto (osio 9), muuten oletuskortti. */
+export function nostonTaitto(nosto) {
+  return nosto?.taitto === 'lehti' ? 'lehti' : 'kortti';
+}
+
 function piirraNostonSisus(ui, sisalto, nosto) {
   nostoLataaTyyli();
-  sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko', nosto.otsikko));
+  const looppi = nostonTaitto(nosto) === 'lehti';
+  if (looppi) {
+    /*
+     * LÖÖPPITAITTO (omistaja 3.9.2026, pilotti GRC sofia-korut): nimiö,
+     * päiväysrivi kaksoisviivoin, pääotsikko isolla ja ingressi ennen
+     * kuvaa — sama muoto kuin kaupunkilehden etusivulla mutta kortin
+     * mitassa (css/fokusnosto.css osio 9). Datassa `taitto: 'lehti'`,
+     * `ingressi` ja `paivays`; ilman lippua kortti on ennallaan.
+     */
+    sisalto.appendChild(html('p', 'looppi-nimio', 'Matkakirjan lööppi'));
+    const paivays = nosto.paivays ?? [nosto.paikka?.nimi, nosto.vuosi].filter(Boolean).join(' · ');
+    if (paivays) sisalto.appendChild(html('p', 'looppi-paivays', paivays));
+    sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko looppi-otsikko', nosto.otsikko));
+    if (nosto.ingressi) sisalto.appendChild(html('p', 'looppi-ingressi', nosto.ingressi));
+  } else {
+    sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko', nosto.otsikko));
+  }
   if (nosto.kuva) piirraNostonKuva(ui, sisalto, nosto.kuva);
-  const teksti = html('div', 'fokusnosto-teksti');
+  const teksti = html('div', looppi ? 'fokusnosto-teksti looppi-leipa' : 'fokusnosto-teksti');
   for (const kappale of jaaKappaleiksi(nosto.teksti)) {
     teksti.appendChild(html('p', '', kappale));
   }
@@ -928,6 +962,7 @@ function avaaNostonKortti(ui, nosto) {
 
   const kerros = html('div', 'fokusnosto-kerros');
   const kortti = html('div', 'fokusnosto-kortti');
+  if (nostonTaitto(nosto) === 'lehti') kortti.classList.add('fokusnosto-looppi');
   kortti.setAttribute('role', 'dialog');
   kortti.setAttribute('aria-modal', 'false');
   kortti.setAttribute('aria-label', nosto.otsikko);
