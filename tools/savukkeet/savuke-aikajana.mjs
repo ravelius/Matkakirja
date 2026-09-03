@@ -233,14 +233,31 @@ vaadi('kaaren lopussa kaikki 25 valoa palavat ja loppusanat näkyvät',
   JSON.stringify(loppu).slice(0, 300));
 await sivu.screenshot({ path: join(ULOS, 'savuke-aikajana-loppu.png') });
 
-/* 6. Kortin napautus avaa jutun */
+/* 6. Kortin napautus avaa Tiedeliitteen (v1495: keksijän lehtisivu
+   Lisälehden taitossa, ei nähtävyyskortti) ja alanappi selaa edelliseen */
 const juttu = await sivu.evaluate(async () => {
   document.querySelector('.aikajana-kortti.nykyinen')?.click();
   await new Promise((r) => setTimeout(r, 500));
-  const d = document.getElementById('nahtavyys-dialog');
-  return { auki: Boolean(d?.open), otsikko: document.getElementById('nahtavyys-otsikko')?.textContent ?? '' };
+  const kortti = document.querySelector('.tiedeliite-kortti');
+  const tila = {
+    auki: Boolean(kortti && document.querySelector('.tiedeliite-kerros.tiedeliite-auki')),
+    nimio: kortti?.querySelector('.looppi-nimio')?.textContent ?? '',
+    otsikko: kortti?.querySelector('.looppi-otsikko')?.textContent ?? '',
+    kasvoja: kortti?.querySelectorAll('.tiedeliite-kasvo').length ?? 0,
+    seuraavaPois: kortti?.querySelector('.tiedeliite-navinappi.seuraava')?.disabled,
+    dialogi: Boolean(document.getElementById('nahtavyys-dialog')?.open),
+  };
+  kortti?.querySelector('.tiedeliite-navinappi.edellinen')?.click();
+  await new Promise((r) => setTimeout(r, 600));
+  tila.edellinen = document.querySelector('.tiedeliite-kortti .looppi-otsikko')?.textContent ?? '';
+  tila.paneeli = document.querySelector('.aikajana-ilmio-sivu.esilla .aikajana-ilmio-nimi')?.textContent ?? '';
+  return tila;
 });
-vaadi('nykyisen kortin napautus avaa jutun isommaksi nostoksi', juttu.auki && /Penisilliini/.test(juttu.otsikko), JSON.stringify(juttu));
+vaadi('nykyisen kortin napautus avaa Tiedeliitteen, alanappi selaa edelliseen ja paneeli seuraa',
+  juttu.auki && juttu.nimio === 'Tiedeliite' && /Penisilliini/.test(juttu.otsikko) && juttu.kasvoja >= 2
+    && juttu.seuraavaPois === true && !juttu.dialogi && /Televisio/.test(juttu.edellinen)
+    && /Baird/.test(juttu.paneeli),
+  JSON.stringify(juttu));
 await sivu.screenshot({ path: join(ULOS, 'savuke-aikajana-juttu.png') });
 
 /* 7. Sulje */

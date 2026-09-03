@@ -134,6 +134,7 @@ import { hiljennaAmbienssi, palautaAmbienssi } from './ambience-stream.js';
 import { pysaytaLukija } from './lukija.js';
 import { esilataaKohahdukset, soitaKohahdus } from './tehosteet.js';
 import { esilataaKuvat } from './ui-apurit.js';
+import { avaaTiedeliite, suljeTiedeliite } from './tiedeliite.js';
 import {
   aloitaSiirtymamusiikki, himmennaSiirtymamusiikki, lopetaSiirtymamusiikki,
   LINSSIN_HILJENNYS,
@@ -795,23 +796,20 @@ class Aikajana {
   }
 
   /**
-   * NÄHTÄVYYSKORTTI ON OMA NÄKYMÄNSÄ: kun juttu avataan isommaksi
-   * nostoksi, aikajanan musiikki väistyy kokonaan ja palaa vasta kun
-   * kortti suljetaan. Paluu tehdään dialogin omasta `close`-
-   * tapahtumasta eikä ajastimella, koska kortin voi sulkea monella
-   * tavalla (nappi, tausta, Esc) — ja jos aikajana on sillä välin
-   * purettu, paluu jää tekemättä.
+   * TIEDELIITE ON OMA NÄKYMÄNSÄ: kun keksijän sivu avataan, aikajanan
+   * musiikki väistyy kokonaan ja palaa vasta kun sivu suljetaan. Paluu
+   * tehdään kortin omasta sulkukoukusta eikä ajastimella, koska kortin
+   * voi sulkea monella tavalla (nappi, tausta, Esc) — ja jos aikajana
+   * on sillä välin purettu, paluu jää tekemättä.
    */
   vaimennaJutunAjaksi() {
     if (!this.musiikkiLaji) return;
-    const dialogi = document.getElementById('nahtavyys-dialog');
-    // Kortti ei auennut: musiikki jatkaa niin kuin mitään ei olisi.
-    if (!dialogi?.open) return;
     this.lopetaMusiikki();
-    dialogi.addEventListener('close', () => {
-      if (!this.juuri?.isConnected) return;
-      this.aloitaMusiikki();
-    }, { once: true });
+  }
+
+  palautaJutunJalkeen() {
+    if (!this.musiikkiLaji || !this.juuri?.isConnected) return;
+    this.aloitaMusiikki();
   }
 
   /* ---------- ajo ---------- */
@@ -1130,28 +1128,37 @@ class Aikajana {
     if (i < this.tapahtumat.length - 1) this.jatka(); else this.lopeta();
   }
 
+  /**
+   * KEKSIJÄN SIVU = TIEDELIITE (Raamattu, KEKSIJAT LINSSIN ALARIVILLA
+   * JA TIEDELIITE, kohta 3): napautus ja "Lue juttu" avaavat lehtisivun
+   * Lisälehden taittoperheessä (js/tiedeliite.js) — generoitu
+   * muotokuva, aito kuva ja ilmiökuvat samalla sivulla, juttu
+   * palstoina, edellinen/seuraava keksijä alanapeista ja
+   * hampurilaisesta. Kello pysyy pysäytettynä sivun ajan; kun pelaaja
+   * selaa sivulla toiseen keksijään, linssin paneeli seuraa perässä
+   * kuten menneen kortin napautuksessa (valot ja kello eivät liiku).
+   */
   avaaJuttu(t) {
-    /*
-     * Jutun kuvat: ilmiö ensin, sitten keksijän muotokuvat ja
-     * viimeisenä aito Commons-kuva. Aito kuva ei enää näy kortissa,
-     * mutta se ei myöskään katoa pelaajalta ennen kuin Tiedeliite
-     * ottaa sen omakseen.
-     */
-    const kuvat = [t.ilmio, ...muotokuvat(t), t.kuvaAito].filter(onKuva);
-    this.ui.avaaNahtavyys?.({
-      nimi: t.otsikko,
-      aika: [t.vuosi, paikka(t), t.henkilo].filter(Boolean).join(' · '),
-      teksti: t.juttu,
-      kuvat,
-      lahde: t.lahde ?? this.linssi.lahde?.aineisto ?? 'Wikipedia',
-    }, null, { valikko: false });
-    this.vaimennaJutunAjaksi();
+    const i = this.tapahtumat.indexOf(t);
+    if (i < 0) return;
+    const auki = avaaTiedeliite(this.ui, this.tapahtumat, i, {
+      lahdeVara: this.linssi.lahde?.aineisto ?? 'Wikipedia',
+      kunVaihtuu: (j) => {
+        const kohde = this.tapahtumat[j];
+        if (!kohde || !this.juuri?.isConnected || j === this.tila.i) return;
+        this.vaihdaPaneeli(kohde);
+        this.paikkarivi.textContent = [kohde.vuosi, paikka(kohde)].filter(Boolean).join(' · ');
+      },
+      kunSuljetaan: () => this.palautaJutunJalkeen(),
+    });
+    if (auki) this.vaimennaJutunAjaksi();
   }
 
   /* ---------- purku ---------- */
 
   pura() {
     this.pysayta();
+    suljeTiedeliite(this.ui);
     this.lopetaMusiikki();
     this.suljeAanimaailma();
     if (this.koonMuutos) globalThis.removeEventListener?.('resize', this.koonMuutos);

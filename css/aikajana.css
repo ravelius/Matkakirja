@@ -494,3 +494,253 @@
   .aikajana-valo.nykyinen .aikajana-valo-syke { animation: none; }
   .aikajana-valo.nykyinen .aikajana-valo-pallo { opacity: 1; }
 }
+
+/* ===========================================================================
+   TIEDELIITE — keksijän oma lehtisivu (js/tiedeliite.js)
+   ---------------------------------------------------------------------------
+   Raamattu KEKSIJAT LINSSIN ALARIVILLA JA TIEDELIITE, kohta 3: napautus
+   avaa lehtisivun LISÄLEHDEN TAITTOPERHEESSÄ. Sivun rivit (nimiö,
+   päiväys, otsikko, ingressi, palstat) tulevat css/fokusnosto.css
+   osiosta 9 luokan .fokusnosto-looppi kautta; tässä on vain KUORI
+   (sama kaava kuin .skandaali-kerros / .skandaali-kortti, osio 7),
+   kasvorivi, sisällyslevy ja alanapit. Kortti on lööpin levyinen
+   (40 rem) ja lööpin paperilla — Tiedeliite on Lisälehden sisar.
+   =========================================================================== */
+
+.tiedeliite-kerros {
+  position: fixed;
+  inset: 0;
+  /* Sama pino kuin muilla korteilla (skandaali, syvennys, hetki: 46):
+     linssin juuri on 7, ja kuvan suurennos (css/fokuskohteet.css, 48)
+     on noustava kortin päälle. */
+  z-index: 46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(18, 12, 4, 0);
+  transition: background 220ms ease-out;
+}
+.tiedeliite-auki { background: rgba(18, 12, 4, 0.3); }
+
+.tiedeliite-kortti {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(40rem, 100%);
+  max-height: min(90vh, 56rem);
+  padding: 0.7rem 0.8rem 0.6rem;
+  border-radius: 12px;
+  border: 1px solid rgba(122, 85, 20, 0.45);
+  background-color: #f6ecc6;
+  background-image: var(--paper-noise);
+  background-blend-mode: multiply;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34);
+  color: #211d18;
+  text-shadow: none;
+  font-family: var(--font-luku);
+  touch-action: pan-y;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 220ms ease-out, transform 220ms cubic-bezier(0.22, 0.9, 0.24, 1);
+}
+.tiedeliite-auki .tiedeliite-kortti { opacity: 1; transform: translateY(0); }
+
+/* Nimiö saa tilaa hampurilaiselle vasemmalla ja sulkunapille oikealla. */
+.tiedeliite-kortti .looppi-nimio { margin: 0.55rem 2.4rem 0; }
+
+/* Sivun vaihto on ristihäivytys: vanha häipyy paikaltaan, uusi tulee
+   alta esiin (Raamattu: KAIKKI LIIKE ANIMOIDAAN PEHMEASTI). */
+.tiedeliite-sisalto { position: relative; }
+.tiedeliite-sivu {
+  transition: opacity 260ms ease;
+}
+.tiedeliite-sivu.tulossa { opacity: 0; }
+.tiedeliite-sivu.vaihtuu {
+  position: absolute;
+  inset: 0 0.2rem 0 0;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Keksijän nimi otsikon alla — sama harvennettu versaali kuin linssin
+   paneelissa, jotta sivu tunnistuu samaksi keksijäksi. */
+.tiedeliite-henkilo {
+  margin: -0.2rem 0 0.5rem;
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7a5514;
+}
+
+/* KASVORIVI: generoitu muotokuva, toinen keksijä ja aito kuva
+   vierekkäin. Kolme mahtuu 40 rem:iin; kapealla ruudulla rivi
+   rivittyy kahdelle riville, jotta kasvot eivät kutistu tunnistamattomiksi. */
+.tiedeliite-kasvot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0.1rem 0 0.7rem;
+}
+.tiedeliite-kasvo {
+  flex: 1 1 8rem;
+  min-width: 0;
+  margin: 0;
+}
+.tiedeliite-kasvo[hidden] { display: none; }
+.tiedeliite-kasvo .fokusnosto-kuvanappi {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+.tiedeliite-kasvo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 6px;
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  background: #e6dcc3;
+}
+.tiedeliite-kasvo .fokusnosto-kuvateksti { font-size: 0.68rem; line-height: 1.35; }
+
+/* HAMPURILAINEN: sama mustepiirros kuin lehden nimiössä
+   (css/styles.css .lehti-hampurilainen) kortin vasemmassa yläkulmassa. */
+.tiedeliite-hampurilainen {
+  position: absolute;
+  top: 0.35rem;
+  left: 0.5rem;
+  z-index: 3;
+  width: 2.1rem;
+  height: 2.1rem;
+  min-width: 40px;
+  min-height: 40px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+.tiedeliite-hampurilainen span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 1px;
+  background: rgba(70, 51, 31, 0.85);
+}
+.tiedeliite-hampurilainen:hover,
+.tiedeliite-hampurilainen:focus-visible,
+.tiedeliite-hampurilainen[aria-expanded="true"] { background: rgba(122, 85, 20, 0.14); }
+
+/* SISÄLLYSLEVY: kaikki keksijät vuosineen, nykyinen lihavoitu. */
+.tiedeliite-sisallys {
+  position: absolute;
+  top: 2.7rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  z-index: 4;
+  max-height: min(60vh, 24rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.3rem;
+  border-radius: 8px;
+  border: 1px solid rgba(122, 85, 20, 0.45);
+  background: #fbf3d9;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+  column-count: 2;
+  column-gap: 0.4rem;
+}
+.tiedeliite-sisallysrivi {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  width: 100%;
+  padding: 0.28rem 0.4rem;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #211d18;
+  font: inherit;
+  font-size: 0.86rem;
+  text-align: left;
+  cursor: pointer;
+  break-inside: avoid;
+}
+.tiedeliite-sisallysrivi:hover,
+.tiedeliite-sisallysrivi:focus-visible { background: rgba(122, 85, 20, 0.12); }
+.tiedeliite-sisallysrivi.nykyinen { font-weight: 700; }
+.tiedeliite-sisallysvuosi {
+  flex: none;
+  min-width: 2.6rem;
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: #6b4d1c;
+}
+.tiedeliite-sisallysnimi { min-width: 0; }
+
+/* ALANAPIT: edellinen ja seuraava keksijä. Nimi katkeaa kolmella
+   pisteellä, jotta napit pysyvät yhdellä rivillä kapeallakin ruudulla. */
+.tiedeliite-navi {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  padding-top: 0.5rem;
+  border-top: 3px double rgba(70, 51, 31, 0.55);
+}
+.tiedeliite-navinappi {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid rgba(122, 85, 20, 0.45);
+  border-radius: 8px;
+  background: rgba(255, 252, 240, 0.7);
+  color: #211d18;
+  font: inherit;
+  font-size: 0.84rem;
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+.tiedeliite-navinappi.seuraava { flex-direction: row-reverse; text-align: right; }
+.tiedeliite-navinappi:hover:not(:disabled),
+.tiedeliite-navinappi:focus-visible { background: rgba(255, 252, 240, 1); }
+.tiedeliite-navinappi:disabled { opacity: 0.45; cursor: default; }
+.tiedeliite-navimerkki {
+  flex: none;
+  font-family: var(--font-type);
+  font-size: 1.1rem;
+  line-height: 1;
+  color: #7a5514;
+}
+.tiedeliite-navinimi {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .tiedeliite-sisallys { column-count: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tiedeliite-kerros,
+  .tiedeliite-kortti,
+  .tiedeliite-sivu,
+  .tiedeliite-navinappi { transition: none; }
+}
