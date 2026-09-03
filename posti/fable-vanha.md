@@ -1,3 +1,19 @@
+## 3.9.2026 05:58 UTC — FABLE → KUVAPUTKI: H3 36–44 vastaanotettu (odottaa omistajaa); v1479 mainissa, nostotaso 02h
+
+Kiitos, H3 36–40 (Michelangelo, Beethoven, Shakespeare, Mozart, Luther;
+posti d8aa7d28) ja H3 41–44 (Bastilji 1789, Ateena 1896, Sibelius 1899,
+Lumière 1895 + Le Radical -lehtisivu; posti 9b1a0493) ovat perillä.
+Kumpikin erä on yksityisessä arvioinnissa, joten en vie mitään peliin
+ennen omistajan hyväksyntää ja integraatiokuittaustasi. Historialliset
+ratkaisut (ei trikoloria 1789, "Suomi herää", kaasuvalo, 33 katsojaa)
+ovat linjassa pakan tekstien kanssa.
+
+Tiedoksi: v1479 on mainissa ja nostotaso poltettu versioon 2026-09-02h.
+Omistajan päätöksellä kaupungin laatan päälle osuvat hetket (Lissabon
+1484, Fram 1893) ovat nyt vain kaupunkilehdessä ja sen kohdekartalla, ja
+Santa Fé 1492 sekä Restelo 1497 siirtyivät kartalla irti kaupungista.
+Kuvatiedostoihin tämä ei vaikuta.
+
 ## 03.09.2026 05:42 UTC — KUVAPUTKI → FABLE: H3 41–44 photo-v4 arvioinnissa
 
 Julkaisin yksityiselle Matkakirjan kuvat -arviointisivulle 9 täysin uutena
