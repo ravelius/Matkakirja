@@ -1856,6 +1856,52 @@ on napautettava samalla tavalla kuin muillakin poltetuilla nostoilla.
 Muutos koskee jokaisen merkin tiivistettä, joten **ladontasääntö nousee
 `v9-maasto`** ja nostotaso piiloutuu kokonaan uusintapolttoon asti.
 
+## 6o. Avauslento odottaa laattoja (omistaja 3.9.2026)
+
+Omistajan tilaus sanatarkasti (Raamattu, AVAUSLENTO VALMIIKSI
+LADATTUNA): *"kartta pitää ladata etukäteen, nyt se rakentui
+pikkuhiljaa taustalla valmiiksi."*
+
+**Juurisyy.** Avauslento odotti pergamenttiarkin takana vain
+**pohjatasoa** (`js/ui.js ALOITUSLENNON_POHJA_ODOTUS_MS`), ja se oli
+vanhan vektorilaudan mitta. Laattakartta on eri asia: se on **haku**,
+joka lähtee liikkeelle vasta kun kamera on lennon rajauksessa
+(`paivitaPyramidi`), eikä sen valmistumisesta kertonut kukaan.
+
+**Mitattu** (`tools/savukkeet/savuke-avauslento.mjs`, Chromium, laatat
+ämpäristä, näytteet 200 ms välein):
+
+| hetki | arkki | kiinnitettyjä laattoja | ruudulla kesken |
+| --- | --- | --- | --- |
+| ennen korjausta, arkki väistyy | pois | **0** | 0 |
+| +0,6 s | pois | 103 | 29 |
+| +2,1 s | pois | 103 | 0 |
+| korjauksen jälkeen, arkki väistyy | pois | **103** | **0** |
+
+Eli kartta täydentyi ennen korjausta 103 laatan verran vasta koneen
+lennon alla, täsmälleen niin kuin omistaja sen näki.
+
+**Ratkaisu.** `odotaPyramidi(ui, { katto })` odottaa, että luettelo on
+kädessä, laatat on kiinnitetty ja jokainen **ruudulla** oleva laatta on
+`load`-tapahtunut (`pyramidinKesken` lukee saman `data-odottaa` /
+`data-ladattu` -parin kuin `kaikkiRuudullaLadattu`). Lento kutsuu sen
+viimeisenä ennen arkin häivytystä — reitti, kone ja kohtauksen kerrokset
+ovat silloin jo puussa, joten arkin takana ei tapahdu enää mitään muuta.
+
+**Katto on varoventtiili, ei odotusaika.** Mitattuna näkyvän alueen 103
+laattaa ovat perillä noin 1,5 sekunnissa kamera-ajosta; kuuden sekunnin
+katto (`ALOITUSLENNON_LAATTA_ODOTUS_MS`) koskee vain hidasta verkkoa tai
+saapumatta jäävää laattaa, eikä lento saa jäädä niistä jumiin. Aika
+luetaan kellosta eikä ajastimien laukeamisista, samasta syystä kuin
+pohjatason odotuksessa.
+
+**Sivutuote: kertoja kuuluu.** Avauslennon luenta oli ripustettu
+seinäkelloon (ajastin 2,3 s napautuksesta) ja lennon `finally` perui
+ajastimen. Ajastin osui samaan ikkunaan, jossa laattaburst kilpaili
+sekä pääsäikeestä että kaistasta. Nyt luenta lähtee **kohtauksesta**:
+laattojen valmistuttua, juuri ennen arkin väistymistä
+(`js/ui.js lueLennonRepliikki`).
+
 ## 7. Harva pyramidi — mitattu, päätetty POIS
 
 Karsinta laattamäärästä (`--harva-raja 8`, koko maailma, uusi arkki):

@@ -1524,6 +1524,54 @@ test('pöllön kaikki kuplat sitovat napautusnielun', () => {
   assert.equal(suorat.length, 1, 'kupla luodaan tehtaan ohi');
 });
 
+/*
+ * PELKÄT PUHEKUPLAT (omistajan tarkennus 3.9.2026: *"tässä ei tarvita
+ * ollenkaan tuota kuvaketta eikä tuota riviä, missä lukee viisas pöllö
+ * yliviivattuna pulu. Eli pelkät puhekuplat."*).
+ *
+ * Kupla kantoi kaksi ylimääräistä osaa: yliviivatun nimilappurivin
+ * (ui-apurit polloNimilappu) ja avauskuplan pyöreän pöllökuvakkeen.
+ * Molemmat toistuivat pinossa kuplasta toiseen, söivät tilaa puheelta
+ * eivätkä kertoneet mitään uutta — puhuja tunnistuu paikasta pöllön
+ * vierellä, ja nimi näkyy yhä chatissa. Väite lukee LÄHTEEN, koska
+ * kumpikin palaisi yhdellä rivillä eikä yksikään muu portti huomaisi.
+ */
+test('puhekuplissa ei ole nimilappua eikä pöllökuvaketta', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  const koodi = lahde
+    // Kommentit kertovat poistosta nimeltä: proosa ei saa laukaista.
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/^\s*\/\/.*$/gm, '');
+  assert.doesNotMatch(koodi, /pollo-vihje-nimilappu/,
+    'nimilappurivi on palannut puhekuplaan');
+  assert.doesNotMatch(koodi, /pollo-vihje-kuvapaikka|pollo-vihje-kasvot/,
+    'kuvake on palannut puhekuplaan');
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8')
+    .replace(/\/\*[\s\S]*?\*\//g, '');
+  assert.doesNotMatch(css, /\.pollo-vihje-nimilappu\s*\{/, 'nimilapun tyyli on palannut');
+  assert.doesNotMatch(css, /\.pollo-vihje-kuvapaikka\s*\{/, 'kuvapaikan tyyli on palannut');
+});
+
+/*
+ * PINOON MAHTUU USEA KUPLA (omistajan tilaus 3.9.2026: *"puhekuplien
+ * korkeutta pitää kasvattaa, jotta useampi kupla mahtuu kerralla
+ * näkyviin"*). Tavallinen kupla on noin 5 rem, joten työpöydän katon
+ * on kannettava vähintään neljä ja puhelimen vähintään kolme. Väite
+ * lukee CSS:n luvun, koska katto on kahdessa paikassa (perussääntö ja
+ * kapean ruudun media) ja pelkkä toisen nosto jäisi huomaamatta.
+ */
+test('kuplapinon katto kantaa useamman kuplan', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  const lohko = css.match(/\n\.pollo-kuplapino \{([^}]*)\}/);
+  assert.ok(lohko, 'pinon perussääntöä ei löydy');
+  const tyopoyta = lohko[1].match(/max-height: min\(\d+vh, ([\d.]+)rem\)/);
+  const kapea = css.match(/\.pollo-kuplapino \{ max-height: min\(\d+vh, ([\d.]+)rem\); \}/);
+  assert.ok(tyopoyta, 'työpöydän max-height ei löydy');
+  assert.ok(kapea, 'kapean ruudun max-height ei löydy');
+  assert.ok(Number(tyopoyta[1]) >= 28, `työpöydän katto ${tyopoyta[1]}rem — alle neljän kuplan`);
+  assert.ok(Number(kapea[1]) >= 21, `puhelimen katto ${kapea[1]}rem — alle kolmen kuplan`);
+});
+
 /* ---------------------------------------------------------------- */
 /* Puheenvuoron jako osiin (kuplapino)                                */
 /* ---------------------------------------------------------------- */

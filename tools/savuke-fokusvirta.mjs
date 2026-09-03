@@ -33,7 +33,8 @@
  *  10. ATEENASSA EI maadoituskuplaa: aloituskaupungin kaksi ohjekuplaa
  *      saavat tilan (omistajan päätös 27.8.2026).
  *  11. SOFIASSA isoisän maadoitus tulee Livian saapumiskuplaan heti
- *      matkakirjaluennan päätyttyä, nimilappuineen — ja kuplassa on
+ *      matkakirjaluennan päätyttyä, pelkkänä puheena (ei nimilappua
+ *      eikä kuvaketta, omistaja 3.9.2026) — ja kuplassa on
  *      säikähdyksen JÄLKEEN aikasiirtymän konteksti (pariperiaate,
  *      Raamattu v1262). Väite EI ole FOKUSVIRTA_KORTIT-kytkimen
  *      takana — se on kevyen kulun oma.
@@ -264,18 +265,22 @@ const sofianKupla = await sivu.evaluate(async () => {
    * KUPLAPINO (omistajan tilaus 3.9.2026): maadoitus tulee nyt
    * MONTANA kuplana peräkkäin (js/pollo.js naytaPuheenvuoro), joten
    * väitteen mittaama teksti on pinon kaikkien kuplien teksti
-   * yhdistettynä ja nimilappu luetaan sarjan ENSIMMÄISESTÄ kuplasta —
-   * jatkokuplissa nimeä ei toisteta. Odotus jatkuu, kunnes
-   * puheenvuoron viimeinen lause on pinossa (jatko-osat tulevat
-   * 1,8–4,2 s välein), enintään 12 sekuntia.
+   * yhdistettynä. Odotus jatkuu, kunnes puheenvuoron viimeinen lause
+   * on pinossa (jatko-osat tulevat 1,8–4,2 s välein), enintään 12
+   * sekuntia.
+   *
+   * PELKÄT PUHEKUPLAT (omistajan tarkennus 3.9.2026): kuplissa ei saa
+   * olla nimilappuriviä eikä pöllökuvaketta, joten mittari laskee
+   * molemmat — nollan ylittävä luku kaataa väitteen.
    */
   const lueKuplat = () => {
     const kuplat = [...document.querySelectorAll('.pollo-kuplapino .pollo-vihje-maadoitus')];
-    const eka = kuplat[0] ?? null;
     return {
       kuplia: kuplat.length,
-      nimilappu: eka?.querySelector('.pollo-vihje-nimilappu')?.textContent ?? '',
-      yliviivaus: Boolean(eka?.querySelector('.pollo-vihje-nimilappu .pollo-yliviivattu')),
+      nimilappuja: kuplat
+        .filter((k) => k.querySelector('.pollo-vihje-nimilappu')).length,
+      kuvakkeita: kuplat
+        .filter((k) => k.querySelector('.pollo-vihje-kuvapaikka, svg')).length,
       teksti: kuplat
         .flatMap((k) => [...k.querySelectorAll('.pollo-vihje-lause')].map((p) => p.textContent))
         .join(' '),
@@ -314,7 +319,8 @@ vaadi('Sofiassa isoisän maadoitus tulee Livian saapumiskuplaan',
     && /1873/.test(sofianKupla.teksti)
     && /sataviisikymmentä vuotta/.test(sofianKupla.teksti)
     && /Mut kyllä sen kestää lukea/.test(sofianKupla.teksti)
-    && sofianKupla.yliviivaus === true && /Pulu/.test(sofianKupla.nimilappu),
+    // Pelkät puhekuplat (3.9.2026): ei nimilappua eikä kuvaketta.
+    && sofianKupla.nimilappuja === 0 && sofianKupla.kuvakkeita === 0,
   JSON.stringify(sofianKupla).slice(0, 200));
 
 await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-maadoituskupla.png') });
@@ -380,22 +386,23 @@ const venetsianKupla = await sivu.evaluate(async () => {
   }
   ui.diaryVoice?.pause();
   for (let i = 0; i < 40; i += 1) {
-    // Sarjan ensimmäinen kupla kantaa nimilapun (kuplapino 3.9.2026).
+    // Kupla on pelkkää puhetta (3.9.2026): nimilappu ja kuvake pois.
     const k = document.querySelector('.pollo-kuplapino .pollo-vihje-maadoitus');
     if (k) {
       return {
         teksti: [...k.querySelectorAll('.pollo-vihje-lause')]
           .map((p) => p.textContent).join(' '),
-        nimilappu: k.querySelector('.pollo-vihje-nimilappu')?.textContent ?? '',
+        nimilappuja: k.querySelectorAll('.pollo-vihje-nimilappu').length,
+        kuvakkeita: k.querySelectorAll('.pollo-vihje-kuvapaikka, svg').length,
       };
     }
     await new Promise((r) => setTimeout(r, 500));
   }
-  return { teksti: '', nimilappu: '' };
+  return { teksti: '', nimilappuja: 0, kuvakkeita: 0 };
 });
 vaadi('Kreetalla Livia kertoo kaupungin oman saapumisrepliikin (ei fokusvirtaa)',
   /^Kreeta\./.test(venetsianKupla.teksti)
-    && /Pulu/.test(venetsianKupla.nimilappu),
+    && venetsianKupla.nimilappuja === 0 && venetsianKupla.kuvakkeita === 0,
   JSON.stringify(venetsianKupla).slice(0, 200));
 
 await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-saapumisrepliikki.png') });
