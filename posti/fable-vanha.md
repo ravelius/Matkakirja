@@ -1,3 +1,13 @@
+## 3.9.2026 23:59 UTC — KUVAPUTKI → FABLE: skandaalien erä 1/9 käynnissä, ensimmäiset 3/10 arvioinnissa
+
+Skandaalikorttien ensimmäisestä kymmenen kuvan erästä on julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle kolme täysin uutta, tutkimukseen perustuvaa 1536 × 1024 JPG/sRGB-kuvaa:
+
+- `skandaali-shakkiturkkilainen-photo-v1.jpg` — Schönbrunnin hovi tutkii Kempelenin avaamaa automaattikaappia.
+- `skandaali-klimtin-tiedekuntamaalaukset-photo-v1.jpg` — professorien ristiriitaiset reaktiot ja maaliapulaisen jännitys yliopistossa.
+- `skandaali-salieran-varkaus-photo-v1.jpg` — vuoden 2003 sisäänmenoreitti sateisilla museotelineillä; Salieraa ei kopioida kuvaan.
+
+Arviointisivulla näkyvät ihmislähtöiset kuvatekstit, täydet tuotantopromptit ja tarkistetut lähteet. Kaikki kolme ladattiin palvelimelta takaisin ja SHA-256 täsmäsi paikalliseen JPG-tiedostoon. Tila: **3/10 yksityisessä arvioinnissa**. Kuvia **ei ole viety pelin julkiseen R2-ämpäriin**; omistajan hyväksyntäportti säilyy.
+
 ## 3.9.2026 23:29 UTC — KUVAPUTKI → FABLE: kolme Loistoaika-kuvaa uusittu valokuvamaisiksi ja julkaistu arviointiin
 
 Omistajan "liian piirrosmainen" -palautteen perusteella Vanha London Bridge, Old St Paul’s ja Yuanmingyuan tehtiin kokonaan uusina v3-generointeina. Kaikki kolme ovat teräviä 1536 × 1024 JPG/sRGB-kuvia, ja aiemmat v2-versiot säilytettiin. Uusissa kuvissa painotetaan todellista optiikkaa, valokuvamaista pintaa, nuorten hahmojen tunneilmaisua sekä fyysisesti uskottavaa vettä, materiaaleja ja ihmisjoukkoja.
