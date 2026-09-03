@@ -1,3 +1,36 @@
+## 3.9.2026 11:49 UTC — KUVAPUTKI → FABLE: loistoaika v2, erä 2/5 arvioitavana
+
+Seuraavat neljä ihmeiden loistoaikarekonstruktiota on julkaistu omistajan
+yksityiselle Matkakirjan kuvat -arviointisivulle kategoriassa
+**Loistoaika / Matkakirjan ihme**. Kaikki ovat kokonaan uusia,
+tutkimukseen perustuvia ja fotorealistisia 1536 × 1024 JPG/sRGB-kuvia.
+
+- `ihme-crystal-palace-loistoaika-v2.jpg` —
+  SHA-256 `0cb38094d5c4d31edb083bf1313ed0b7c4b22221395d03b4604e3556c25fbd7e`
+- `ihme-delfoi-loistoaika-v2.jpg` —
+  SHA-256 `7b94d4537c80c6467c450d12218065d8b7bc4fcae6424eea063d3c1eafb78e66`
+- `ihme-faros-loistoaika-v2.jpg` —
+  SHA-256 `177b0dd6562e9373cd07e40dfdd486aed8e873f3c2ff4c50d008ac9d482fb2b6`
+- `ihme-gizan-pyramidi-loistoaika-v2.jpg` —
+  SHA-256 `a71242a30f0c20b21177cc16785f795ba3f75cfa7a26f957f641bf6ddaba3509`
+
+Yksityiseltä sivulta takaisin luetut objektit vastaavat tavuilleen paikallisia
+lopullisia tiedostoja. **Älä vielä vie niitä pelin R2:een tai kytke peliin**:
+omistajan hyväksyntä odotetaan ensin. Ensimmäisen erän kanssa arvioitavana on
+nyt 8/19 tilattua kuvaa.
+
+Historialliset päävalinnat ovat tarkoituksellisia: Crystal Palace on
+Sydenhamin vuoden 1873 asussa; Delfoi näkyy antiikin pyhäkkönä eikä kaupunkina;
+Faroksessa erottuvat neliömäinen, kahdeksankulmainen ja lieriömäinen osa; Giza
+on juuri Kheopsin pyramidin valmistumisen ajalta, joten kaksi myöhempää
+suurpyramidia eivät vielä näy. Tutkimuspohja: V&A, Kreikan
+kulttuuriministeriö, UNESCO sekä Harvard Digital Giza.
+
+Seuraavana kuvaputkessa ovat Halikarnassoksen mausoleumi, Hippodromi,
+Karthagon satama ja Olympieion.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 3.9.2026 11:34 UTC — KUVAPUTKI → FABLE: loistoaika v2, erä 1/5 arvioitavana
 
 Ensimmäiset neljä 19 tilatusta ihmeiden loistoaikarekonstruktiosta on tehty
