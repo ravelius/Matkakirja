@@ -3712,16 +3712,44 @@ function kohdePolloPaneeli() {
  * voittaa yhä molemmat: mieluummin kapea kaista kortin alalaidasta
  * paneelin alle kuin kortti, jota ei voi lukea.
  */
+/*
+ * VIIMEISIN OSOITIN (omistaja 3.9.2026, Pergamonin alttarin kortti:
+ * *"nostot aukeavat liian reunaan"*). Kortti aukesi karttaruudun
+ * vasempaan yläkulmaan, kun kohteella ei ollut ELÄVÄÄ merkkiä: laattaan
+ * poltetun merkin tai nimikerroksen nimen napautus avaa kortin, mutta
+ * asemointi palasi ennen aikojaan (`merkki.isConnected` puuttui) ja
+ * kortti jäi CSS:n oletuspaikkaan. Nyt muistetaan viimeisin
+ * osoittimen paikka ruudulla ja kortti asemoidaan sen viereen samoin
+ * säännöin kuin merkin viereen; ilman kumpaakaan kortti keskitetään
+ * karttaruutuun.
+ */
+let viimeisinOsoitin = null;
+if (typeof document !== 'undefined') {
+  document.addEventListener('pointerdown', (tapahtuma) => {
+    viimeisinOsoitin = { x: tapahtuma.clientX, y: tapahtuma.clientY };
+  }, true);
+}
+
+function ankkurinLaatikko(auki, pane) {
+  if (auki.merkki?.isConnected) return auki.merkki.getBoundingClientRect();
+  const p = viimeisinOsoitin
+    && viimeisinOsoitin.x >= pane.left && viimeisinOsoitin.x <= pane.right
+    && viimeisinOsoitin.y >= pane.top && viimeisinOsoitin.y <= pane.bottom
+    ? viimeisinOsoitin
+    : { x: pane.left + pane.width / 2, y: pane.top + pane.height / 2 };
+  return { left: p.x, right: p.x, top: p.y, bottom: p.y, width: 0, height: 0 };
+}
+
 function asetaKohteenPaikka(ui) {
   const auki = ui.fokuskohdeAuki;
-  if (!auki?.popup?.isConnected || !auki.merkki?.isConnected) return;
+  if (!auki?.popup?.isConnected) return;
   // Pelaajan raahaama kortti pysyy siinä, mihin se raahattiin
   // (raahausTaiSulku) — automaattinen asemointi ei kilpaile käden kanssa.
   if (auki.raahattu) return;
   const koti = auki.popup.offsetParent ?? auki.popup.parentNode;
   const pane = koti?.getBoundingClientRect?.();
   if (!pane || !(pane.width > 0)) return;
-  const m = auki.merkki.getBoundingClientRect();
+  const m = ankkurinLaatikko(auki, pane);
 
   /*
    * PYSTYSUUNNAN LAIDAT OVAT VÄLJEMMÄT KUIN VAAKASUUNNAN

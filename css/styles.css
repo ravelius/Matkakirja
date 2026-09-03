@@ -4725,6 +4725,11 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
 }
 /* Järvi kursiivilla ja veden musteella, kuten laatoissakin. */
 .karttanimi-jarvi { font-style: italic; fill: rgba(70, 86, 96, 0.85); }
+/* Läheltä näkyvä maastonimi (tärkeys 2–3) on kohteen maastonimiön asua:
+   kohdenimiön koko tulee ladonnasta (js/karttanimet.js maastonAsu),
+   kursiivi täältä. Omistaja 3.9.2026: Dinaariset Alpit ei saa olla
+   isompi kuin viereiset Dinara ja Sveti Jure. */
+.karttanimi-lahi { font-style: italic; }
 /*
    KOHTEEN NIMI ON KAUPUNGIN NIMEN SUKUA, EI OMA KIELENSÄ (omistajan
    päätös 30.8.2026: "sama ladonta kuin paikannimillä"). Sama kirjasin
