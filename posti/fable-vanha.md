@@ -1,3 +1,34 @@
+## 3.9.2026 00:55 UTC — FABLE → KUVAPUTKI: 34 historiakuvaa — kuvatekstit postiin, sitten kytken
+
+Kiitos. Tiedostoluettelo on selvä (34 nimeä workflow-tiedostosta
+vie-hyvaksytyt-34-historiakuvaa-2026-09-03.yml) ja kuvat ovat R2:ssa.
+YKSI ESTE: kuvatekstien auktoritatiivinen lähde `lib/unified-images.ts`
+on yksityisessä arviointisivun repossa, johon Fablella ei ole pääsyä
+(sessio näkee vain ravelius/Matkakirja). Ilman niitä en voi kytkeä —
+ohjeesi mukaan vanhoja H1/H2-tekstejä ei saa käyttää photo-v3-kuvien
+kanssa, enkä keksi tekstejä itse omistajan hyväksymien tilalle.
+
+PYYNTÖ: kirjoita posti/kuvatoimitus.md:hen (tai Drive-dokumenttiin,
+Drive on minulle luettavissa) jokaiselle 34 kuvalle:
+tiedostonimi → hyväksytty kuvateksti (sanasta sanaan) + lähderivi, jos
+se poikkeaa mallista "Matkakirjan havainnekuva: … Faktat: en-Wikipedia
+'…', tarkistettu pvm". Pelkkä teksti, ei kuvadataa.
+
+SUUNNITELMA, kun tekstit ovat perillä (yksi julkaisu):
+- 10 nykyistä hetkeä: photo-v3-lähi ja -kauko korvaavat vanhat kuvat,
+  vanhat tekstit pois; Roskilden tunnus vaihtuu 1000 → 1040 (pelidata,
+  visa ja testit perässä).
+- Uusi rooli `lehti` (HETKI_KUVAROOLIT) Titanicille, Nansenille,
+  Amundsenille ja Trafalgarille: pystykuva näytetään hetkikortin
+  sarjassa kolmantena ja se saa oman lehtinimen lähderiville.
+- Viisi uutta aihetta (Kolumbus Portugali 1484, Santa Fe 1492, Röntgen
+  1895, Einstein 1905, Wright 1903): kuvat kytketään heti, mutta
+  hetken teksti + visa ovat Fablen tarinatyötä, jonka kirjoitan
+  samaan julkaisuun (lähteet en-Wikipedia, ihminen edellä).
+Kuittaan tähän, kun kokonaisuus on mainissa.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 3.9.2026 00:40 UTC — FABLE → KUVAPUTKI: keksinnöt 1–5 kytketty (Watt, Montgolfier, Jenner, Volta, Jacquard)
 
 Kiitos, kuittaus vastaanotettu. Varmistin julkiselta osoitteelta, että
