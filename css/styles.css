@@ -5786,27 +5786,9 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 }
 
 /*
- * ISOISÄN VALOKUVA TYÖPÖYDÄLLÄ (omistaja 3.9.2026: *"yksi kuva pienenä ja
- * ehkä blurrattuna pelin ensimmäiselle sivulle"*). Pieni, kallistettu ja
- * hieman haalea — kuin unohtunut luonnoslehden alle. Sumennus jätettiin
- * pois: filter piirtyy iOS:n webapp-tilassa tyhjänä, ja pienuus tekee
- * saman työn. Kuva on koristetta, ei nappi.
- */
-.intro-valokuva {
-  position: absolute;
-  z-index: 0;
-  right: -9%;
-  bottom: -9%;
-  width: 36%;
-  height: auto;
-  aspect-ratio: 3 / 2;
-  object-fit: contain;
-  opacity: 0.86;
-  transform: rotate(7deg);
-  pointer-events: none;
-}
-
-/*
+ * Isoisän valokuva oli työpöydällä v1509–v1510; omistaja jätti sen pois
+ * etusivulta 3.9.2026. Kortti elää lentokohtauksessa (.lento-valokuva).
+ *
  * Kortti irti valkoisesta taustasta (omistaja 3.9.2026): clip-path
  * leikkaa JPG:n valkoiset reunat pois ja skaala täyttää elementin
  * kortilla. Muuttujat tulevat js/isoisan-valokuvat.js rajausTyyli.
@@ -5819,7 +5801,6 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
     calc(var(--rx0, 0) * 100%)
   );
 }
-.intro-valokuva.isoisa-rajattu { transform: rotate(7deg) scale(var(--rskaala, 1)); }
 .lento-valokuva .isoisa-rajattu { transform: scale(var(--rskaala, 1)); }
 
 .intro.intro-fade { opacity: 0; }
@@ -10099,6 +10080,22 @@ body.katselu #newgame-btn { display: none; }
   width: 100%;
   height: auto;
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+}
+/*
+ * Kuvateksti kortin alla, samassa kallistuksessa kuin kuva (omistaja
+ * 3.9.2026: *"lisää lentokohtaukseen pienellä kuvateksti kuvan kanssa
+ * vinosti: 'Isoisä, paikkakunta, 1873'"*). Kirjoituskoneen kirjasin,
+ * kuin albumin kulmaan lyöty lappu.
+ */
+.lento-valokuva .lento-valokuvateksti {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--font-type);
+  font-size: clamp(0.62rem, 1.4vw, 0.8rem);
+  letter-spacing: 0.08em;
+  color: #3a2a16;
+  text-shadow: 0 0 4px rgba(255, 246, 224, 0.9), 0 0 1px rgba(255, 246, 224, 0.9);
+  text-align: center;
 }
 .lento-valokuva:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 @media (max-width: 599px) {

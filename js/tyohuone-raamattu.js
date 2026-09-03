@@ -2925,7 +2925,13 @@ export const RAAMATTU = {
           + '(omistaja 3.9. ilta: "tuo isoisan kuva pitaa leikata irti '
           + 'valkoisesta taustasta"): kortti rajataan CSS:lla JPG:n '
           + 'valkoisesta pohjasta (mitatut reunat, clip-path + skaala) '
-          + 'v1510; kuvaputkelta pyydetaan jatkossa PNG alfalla.',
+          + 'v1510; kuvaputkelta pyydetaan jatkossa PNG alfalla. MUUTOS '
+          + '(omistaja 3.9. ilta, sanatarkasti: "jatetaan isoisan kuva pois '
+          + 'etusivulta ja lisaa lentokohtaukseen pienella kuvateksti kuvan '
+          + 'kanssa vinosti: \'Isoisa, paikkaunta, 1873\' vaihda vain oikea '
+          + 'paikka tekstiin"): aloitussivulla ei isoisan kuvaa; lennon '
+          + 'kortin alla samassa kallistuksessa pieni lappu "Isoisa, '
+          + 'Bombay, 1873" (datakentta kuvateksti). Toteutettu v1511.',
         'KEHITTAJAN MUSIIKKISIVU (omistaja 3.9.2026: "kehittaja '
           + 'hampurilaiseen voisi tehda oman sivun taustamusiikeille, jossa '
           + 'voisin kayda kuuntelemassa niita"): tyohuoneen lehti Musiikki '
@@ -3059,7 +3065,17 @@ export const RAAMATTU = {
           + 'vasemmalla ja aito Commons-kuva oikealla; lahderivi. Pilotti '
           + 'Watt v1508; muille keksijoille henkilotekstit kirjoitetaan '
           + 'omistajan hyvaksynnan jalkeen (Fable), ja ilman '
-          + 'henkilotekstia sivu jattaa henkilo-osion ja aidon kuvan pois.',
+          + 'henkilotekstia sivu jattaa henkilo-osion ja aidon kuvan pois. '
+          + 'TARKENNUS (omistaja 3.9. ilta, sanatarkasti: "tassa pitaisi '
+          + 'kuvailla hieman hanen persoonaa ja lopussa vain \'matkakirjan '
+          + 'havainnekuva\' ja se voi olla samalla lailla alleviivattuna kuin '
+          + 'muuallakin mista aukeaa se popup. jalkimmainen maalauskuva '
+          + 'saisi olla isommalla"): generoidun muotokuvan kuvateksti on '
+          + 'lyhyt luonnekuva keksijasta (Fable kirjoittaa henkilotekstin '
+          + 'pohjalta), lahderivina vain alleviivattu "Matkakirjan '
+          + 'havainnekuva" kuten ilmiokuvissa (ei mainintaa kuvaputkesta); '
+          + 'Keksija-osion aito maalaus on ylakulman muotokuvaa isompi '
+          + '(14 rem palsta). Toteutettu v1511.',
         'LINSSIN VUOSILUKU JUOKSEE JATKUVASTI, PISTEET KLIKATTAVIA, '
           + 'HAVAINNEKUVA SIIRRETTAVA (omistaja 3.9.2026 ilta, sanatarkasti: '
           + '"saisiko vuosinumerot juoksemaan kokoajan kuin hedelmapelissa, '

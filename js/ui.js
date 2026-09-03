@@ -1,7 +1,7 @@
 // Käyttöliittymä: aarrekartan piirto, ohjauspaneeli, tietovisa ja bottien ohjaus.
 
 import { pixelOf, pointAlong, posKey } from './rules.js';
-import { ISOISAN_VALOKUVAT, LENNON_VALOKUVAN_VIIVE_MS, rajausTyyli } from './isoisan-valokuvat.js';
+import { ISOISAN_VALOKUVAT, LENNON_VALOKUVAN_VIIVE_MS, rajausTyyli, valokuvanKuvateksti } from './isoisan-valokuvat.js';
 import {
   chooseDuelAnswer,
   chooseMove,
@@ -19060,6 +19060,9 @@ export class UI {
     valokuva.className = 'isoisa-rajattu';
     valokuva.style.cssText = rajausTyyli(ISOISAN_VALOKUVAT.bombay);
     valokuvaNappi.appendChild(valokuva);
+    // Pieni lappu kortin alla, samassa kallistuksessa (omistaja 3.9.2026).
+    const lappu = valokuvanKuvateksti(ISOISAN_VALOKUVAT.bombay);
+    if (lappu) valokuvaNappi.appendChild(html('span', 'lento-valokuvateksti', lappu));
     valokuvaNappi.addEventListener('pointerdown', (e) => e.stopPropagation());
     valokuvaNappi.addEventListener('click', (e) => {
       e.stopPropagation();

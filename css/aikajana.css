@@ -693,6 +693,10 @@
 .tiedeliite-palsta .tiedeliite-kasvot { margin: 0; flex-wrap: nowrap; }
 .tiedeliite-kasvot-pieni .tiedeliite-kasvo { flex: 1 1 4.4rem; }
 .tiedeliite-kasvot-aito .tiedeliite-kasvo img { aspect-ratio: 4 / 5; }
+/* Keksijä-osion aito maalaus isommalla kuin yläkulman generoitu
+   muotokuva (omistaja 3.9.2026 ilta: "jälkimmäinen maalauskuva saisi
+   olla isommalla"). */
+.tiedeliite-keksija .tiedeliite-palsta { grid-template-columns: minmax(0, 1fr) 14rem; }
 .tiedeliite-keksija { margin-top: 0.4rem; }
 .tiedeliite-valiotsikko {
   margin: 0.2rem 0 0.4rem;
@@ -707,6 +711,8 @@
 @media (max-width: 560px) {
   .tiedeliite-palsta { grid-template-columns: minmax(0, 1fr); }
   .tiedeliite-palsta .tiedeliite-kasvot { order: -1; max-width: 11rem; }
+  .tiedeliite-keksija .tiedeliite-palsta { grid-template-columns: minmax(0, 1fr); }
+  .tiedeliite-keksija .tiedeliite-palsta .tiedeliite-kasvot { max-width: 15rem; }
 }
 
 /* HAMPURILAINEN: sama mustepiirros kuin lehden nimiössä

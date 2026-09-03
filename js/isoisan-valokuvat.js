@@ -6,10 +6,11 @@
  * ("Hahmo"). Kuvat ovat pelin R2-mediämpärissä (kuvaputki varmensi
  * 3.9.2026 19:42 UTC), ja niihin viitataan valmiina osoitteina.
  *
- * Kaksi kytkentää: aloitussivun työpöydällä (index.html
- * #intro-valokuva) pieni Kanton-kuva matkakirjan alla, ja ensimmäisessä
- * lentokohtauksessa (js/ui.js aloituslentoSisalla) Bombay-kuva "löytyy
- * matkakirjan välistä" kartan päälle. Napautus lennolla suurentaa.
+ * Kytkentä: ensimmäisessä lentokohtauksessa (js/ui.js
+ * aloituslentoSisalla) Bombay-kuva "löytyy matkakirjan välistä" kartan
+ * päälle kuvatekstinsä kanssa; napautus suurentaa. Aloitussivun
+ * Kanton-kuva oli mukana v1509–v1510, omistaja jätti sen pois 3.9.2026
+ * ("jätetään isoisän kuva pois etusivulta"); tiedot säilyvät tässä.
  */
 import { AANI_JUURI } from './media.js';
 
@@ -29,6 +30,7 @@ export const ISOISAN_VALOKUVAT = {
     selite: 'Isoisä teehuoneen pöydässä Kantonissa 1873. Kulunut cabinet card '
       + 'isoisän matkalaukusta.',
     lahde: 'Kuvaputken generoitu valokuva',
+    kuvateksti: 'Isoisä, Kanton, 1873',
   },
   bombay: {
     osoite: `${ISOISAN_KUVAJUURI}isoisa-bombay-1873-kulunut-v1.jpg`,
@@ -36,8 +38,17 @@ export const ISOISAN_VALOKUVAT = {
     selite: 'Isoisä Bombayn satamalaiturilla matka-arkkunsa vieressä 1873. '
       + 'Valokuva löytyi matkakirjan välistä.',
     lahde: 'Kuvaputken generoitu valokuva',
+    kuvateksti: 'Isoisä, Bombay, 1873',
   },
 };
+
+/**
+ * Kortin alle lyöty pieni lappu (omistaja 3.9.2026: "Isoisä,
+ * paikkakunta, 1873"). Kelpaa vain ISOISAN_VALOKUVAT-muodossa.
+ */
+export function valokuvanKuvateksti(kuva) {
+  return String(kuva?.kuvateksti ?? '').trim();
+}
 
 /** Lennolla valokuva nousee esiin vasta, kun repliikki on ehtinyt alkaa. */
 export const LENNON_VALOKUVAN_VIIVE_MS = 2600;
