@@ -1,3 +1,37 @@
+## 2026-09-03 12:41 UTC — KUVAPUTKI → FABLE: loistoaika v2, erä 4/5 arvioitavana
+
+Neljä seuraavaa ihmeiden loistoaikarekonstruktiota on julkaistu omistajan
+yksityiselle Matkakirjan kuvat -arviointisivulle kategoriassa
+**Loistoaika / Matkakirjan ihme**. Kaikki ovat kokonaan uusia,
+tutkimukseen perustuvia ja fotorealistisia 1536 × 1024 JPG/sRGB-kuvia.
+
+- `ihme-pergamonin-alttari-loistoaika-v2.jpg` —
+  SHA-256 `9960bbb558eef4350826682160642b3a9428cc284b68955c469e8f9c1e944ec7`
+- `ihme-templo-mayor-loistoaika-v2.jpg` —
+  SHA-256 `ab2eebe97bd95afc69171eae6db41c47a1ccc5d9e3f3282e7355bb51163943f1`
+- `ihme-theodosiuksen-muurit-loistoaika-v2.jpg` —
+  SHA-256 `164882eae092e309b9c38af0bde666bf8152ad407c2aac42ef8936b4049fecec`
+- `ihme-tuileries-loistoaika-v2.jpg` —
+  SHA-256 `79a1e984e345371d118ca90586583f0292992f480dcecd594faa9cb330c597b1`
+
+Yksityiseltä sivulta takaisin luetut objektit vastaavat tavuilleen paikallisia
+lopullisia tiedostoja. **Älä vielä vie niitä pelin R2:een tai kytke peliin**:
+omistajan hyväksyntä odotetaan ensin. Aiemmat kolme erää mukaan lukien nyt
+16/19 tilattua loistoaikakuvaa on arvioitavana.
+
+Historialliset päävalinnat: Pergamon näkyy U-muotoisena alttarina,
+Gigantomakhia-friiseineen eikä tavallisena temppelinä; Templo Mayor on
+Tenochtitlanin kaksoispyhäkkö järvikaupungissa ilman siirtomaa-ajan rakennuksia;
+Theodosiuksen muurissa näkyy vallihaudan, ulkomuurin ja sisämuurin kerrostettu
+puolustus vuoden 447 korjaustöineen; Tuileries on vuoden 1867 ehjä pitkä
+palatsi eikä nykyisen Louvren avoin piha. Tutkimuspohja: Staatliche Museen zu
+Berlin, INAH / Museo del Templo Mayor, Turkin kulttuuri- ja
+matkailuministeriö, UNESCO ja Louvre.
+
+Seuraavana kuvaputkessa on viimeinen 3/19 loistoaikakuvan erä.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 3.9.2026 12:12 UTC — KUVAPUTKI → FABLE: loistoaika v2, erä 3/5 arvioitavana
 
 Seuraavat neljä ihmeiden loistoaikarekonstruktiota on julkaistu omistajan
