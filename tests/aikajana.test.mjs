@@ -12,7 +12,8 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import {
-  aikajanaAskel, rullaaVuosi, VUOSI_RULLAUS_MS, AIKAJANA_NAKSU_VALI_MS,
+  aikajanaAskel, asetaMatkamittari, rajaaPaneelinSiirto, PANEELIN_RAAHAUSKYNNYS,
+  AIKAJANA_TAUON_OSUUS, VUOSI_RULLAUS_MS, AIKAJANA_NAKSU_VALI_MS,
   AIKAJANA_VIIVE_MS, AIKAJANA_PAALU_MS, AIKAJANA_TAUKO_HIMMENNYS,
   pieniOsoite, PIENEN_KATTO, karusellinPaikat, karusellinMitta, KARUSELLIN_MITAT,
   karuselliOsoite, sumeaOsoite, KARUSELLIN_KATTO,
@@ -41,17 +42,32 @@ test('kello juoksee tyhjät vuodet ja pysähtyy tapahtumaan', () => {
   assert.equal(askel.tila.viive, 500);
 });
 
-test('viive kuluu ennen kuin kello jatkaa; merkkipaalu on lyhyempi', () => {
-  let tila = { vuosi: 1770, i: 0, viive: 500 };
+test('viive kuluu ennen kuin kello jatkaa; tauolla mittari hiipii; merkkipaalu on lyhyempi', () => {
+  let tila = { vuosi: 1770, i: 0, viive: 500, viiveTaysi: 500 };
   let askel = aikajanaAskel(tila, 300, TAPAHTUMAT, TAHTI);
-  assert.equal(askel.tila.vuosi, 1770, 'viiveen aikana kello seisoo');
+  // Omistaja 3.9.2026: kello ei seiso tauollakaan — ykkösrulla hiipii
+  // AIKAJANA_TAUON_OSUUS:n verran koko tauon aikana.
+  assert.ok(Math.abs(askel.tila.vuosi - (1770 + AIKAJANA_TAUON_OSUUS * 0.6)) < 1e-9, 'tauolla mittari hiipii');
+  assert.equal(Math.floor(askel.tila.vuosi), 1770, 'vuosi ei vaihdu tauolla');
   assert.equal(askel.tila.viive, 200);
   askel = aikajanaAskel(askel.tila, 300, TAPAHTUMAT, TAHTI);
   assert.equal(askel.tila.viive, 0);
-  assert.equal(askel.tila.vuosi, 1770, 'viiveen loppukehys ei vielä liikuta kelloa');
+  assert.ok(Math.abs(askel.tila.vuosi - (1770 + AIKAJANA_TAUON_OSUUS)) < 1e-9, 'tauon lopussa koko hiipimä');
   askel = aikajanaAskel(askel.tila, 300, TAPAHTUMAT, TAHTI);
   assert.equal(askel.syttyi, 1, 'paalu syttyy vuonna 1773');
   assert.equal(askel.tila.viive, 200, 'paalun viive');
+  assert.equal(askel.tila.viiveTaysi, 200);
+});
+
+test('hiipimä on alle kokonaisen vuoden ja saman vuoden ketju ei peruuta mittaria', () => {
+  assert.ok(AIKAJANA_TAUON_OSUUS > 0 && AIKAJANA_TAUON_OSUUS < 1);
+  const ketju = [{ vuosi: 1895 }, { vuosi: 1895 }];
+  const askel = aikajanaAskel({ vuosi: 1895 + AIKAJANA_TAUON_OSUUS, i: 0, viive: 10, viiveTaysi: 500 }, 10, ketju, TAHTI);
+  assert.equal(askel.syttyi, 1);
+  assert.ok(askel.tila.vuosi >= 1895 + AIKAJANA_TAUON_OSUUS - 1e-9, 'mittari ei palaa taaksepäin');
+  // Vanha tila ilman viiveTaysi-kenttää toimii (viive = koko tauko).
+  const vanha = aikajanaAskel({ vuosi: 1770, i: 0, viive: 500 }, 250, TAPAHTUMAT, TAHTI);
+  assert.ok(Math.abs(vanha.tila.vuosi - (1770 + AIKAJANA_TAUON_OSUUS * 0.5)) < 1e-9);
 });
 
 test('viimeisen tapahtuman jälkeen askel ilmoittaa lopun', () => {
@@ -80,35 +96,81 @@ const tynkaRullat = () => [0, 1, 2, 3].map(() => ({
   vanha: tynkaRivi(), uusi: tynkaRivi(), merkki: null,
 }));
 
-test('vuosinäyttö jakaa luvun rulliin ja vaihtaa vain muuttuneet numerot', () => {
+test('matkamittari: ykkösrulla nousee murto-osan, ylemmät vasta ysin kohdalla', () => {
   const rullat = tynkaRullat();
   // Avaus: merkit paikoilleen ilman liikettä.
-  const avaus = rullaaVuosi(rullat, '1769', { heti: true });
+  const avaus = asetaMatkamittari(rullat, 1769, { heti: true });
   assert.equal(avaus.length, 4);
-  assert.deepEqual(rullat.map((r) => r.uusi.textContent), ['1', '7', '6', '9']);
-  assert.equal(rullat[3].uusi.style.transition, 'none', 'avaus ei saa rullata');
+  assert.deepEqual(rullat.map((r) => r.vanha.textContent), ['1', '7', '6', '9']);
+  assert.deepEqual(rullat.map((r) => r.uusi.textContent), ['2', '8', '7', '0'], 'seuraava numero odottaa alla');
+  assert.equal(rullat[3].vanha.style.transform, 'translateY(0%)');
+  assert.equal(rullat[3].uusi.style.transform, 'translateY(100%)');
+  assert.equal(rullat[3].vanha.style.transition, 'none', 'avaus ei saa rullata');
 
-  // 1769 → 1770: kaksi oikeanpuoleista rullaa, kaksi vasenta seisoo.
-  const askel = rullaaVuosi(rullat, '1770');
-  assert.equal(askel.length, 2, 'vain muuttuneet numerot liikkuvat');
+  // 1769.25: ykkösrulla neljänneksen ylös, kymmenet myös (alempi on 9), sadat ja tuhannet eivät (7 ei ole 9).
+  assert.equal(asetaMatkamittari(rullat, 1769.25).length, 0, 'numerot eivät vaihdu');
+  assert.equal(rullat[3].vanha.style.transform, 'translateY(-25%)');
+  assert.equal(rullat[3].uusi.style.transform, 'translateY(75%)');
+  assert.equal(rullat[2].vanha.style.transform, 'translateY(-25%)', 'kymmenet liikkuvat, koska ykköset ovat 9:ssä');
+  assert.equal(rullat[1].vanha.style.transform, 'translateY(0%)', 'sadat seisovat');
+  assert.equal(rullat[0].vanha.style.transform, 'translateY(0%)');
+  assert.equal(rullat[3].vanha.style.transition, 'none', 'käyvä kello ei käytä siirtymää');
+
+  // 1770.0: kaksi rullaa vaihtoi numeron ja asettui paikalleen.
+  const vaihto = asetaMatkamittari(rullat, 1770);
+  assert.equal(vaihto.length, 2);
   assert.deepEqual(rullat.map((r) => r.merkki), ['1', '7', '7', '0']);
-  // Vanha merkki liukuu alas näkyvistä, uusi tulee ylhäältä tilalle.
-  assert.equal(rullat[3].vanha.textContent, '9');
-  assert.equal(rullat[3].uusi.textContent, '0');
-  assert.equal(rullat[3].vanha.style.transform, 'translateY(100%)');
-  assert.equal(rullat[3].uusi.style.transform, 'translateY(0%)');
-  assert.equal(rullat[3].uusi.style.transition, `transform ${VUOSI_RULLAUS_MS}ms cubic-bezier(0.22, 0.9, 0.24, 1)`);
-  // Vuosituhat ei liikahtanut eikä saanut vanhaa merkkiä.
-  assert.equal(rullat[0].vanha.textContent, '');
-  assert.equal(rullat[0].uusi.style.transform, 'translateY(0%)');
+  assert.equal(rullat[3].vanha.style.transform, 'translateY(0%)');
 
-  // Kelaus monen vuoden yli tehdään yhdellä liikkeellä, ei välivuosina.
-  const hyppy = rullaaVuosi(rullat, '1928');
-  assert.equal(hyppy.length, 3);
+  // 1770.5: vain ykkösrulla liikkuu.
+  asetaMatkamittari(rullat, 1770.5);
+  assert.equal(rullat[3].vanha.style.transform, 'translateY(-50%)');
+  assert.equal(rullat[2].vanha.style.transform, 'translateY(0%)');
+
+  // 1999.5 → tuhannetkin liikkuvat, koska kaikki alemmat ovat 9.
+  asetaMatkamittari(rullat, 1999.5);
+  assert.deepEqual(rullat.map((r) => r.vanha.style.transform), Array(4).fill('translateY(-50%)'));
+  assert.equal(rullat[0].uusi.textContent, '2');
+});
+
+test('pysäytetyn kellon hyppy rullaa muuttuneet numerot yhdellä liikkeellä', () => {
+  const rullat = tynkaRullat();
+  asetaMatkamittari(rullat, 1770, { heti: true });
+  const hyppy = asetaMatkamittari(rullat, 1928, { liuku: true });
+  assert.equal(hyppy.length, 3, 'vain muuttuneet numerot liikkuvat');
+  // Vanha merkki liukuu alas näkyvistä, uusi tulee ylhäältä tilalle.
   assert.equal(rullat[1].vanha.textContent, '7');
   assert.equal(rullat[1].uusi.textContent, '9');
-  // Sama vuosi uudelleen ei liikuta mitään.
-  assert.equal(rullaaVuosi(rullat, '1928').length, 0);
+  assert.equal(rullat[1].vanha.style.transform, 'translateY(100%)');
+  assert.equal(rullat[1].uusi.style.transform, 'translateY(0%)');
+  assert.equal(rullat[1].uusi.style.transition, `transform ${VUOSI_RULLAUS_MS}ms cubic-bezier(0.22, 0.9, 0.24, 1)`);
+  // Vuosituhat ei liikahtanut.
+  assert.equal(rullat[0].vanha.textContent, '1');
+  assert.equal(rullat[0].vanha.style.transform, 'translateY(0%)');
+  assert.equal(rullat[0].vanha.style.transition, 'none');
+  // Sama vuosi uudelleen ei vaihda numeroita.
+  assert.equal(asetaMatkamittari(rullat, 1928, { liuku: true }).length, 0);
+  // Käyvä kello jatkaa hypyn jälkeen saumatta: nykyinen numero palaa vanha-riville.
+  asetaMatkamittari(rullat, 1928.1);
+  assert.equal(rullat[1].vanha.textContent, '9');
+  assert.equal(rullat[1].vanha.style.transform, 'translateY(0%)');
+  assert.equal(rullat[3].vanha.style.transform, 'translateY(-10%)');
+});
+
+test('paneelin siirto rajataan linssin alueelle ja raahauskynnys erottaa napautuksen', () => {
+  assert.ok(PANEELIN_RAAHAUSKYNNYS >= 4 && PANEELIN_RAAHAUSKYNNYS <= 12);
+  const laatikko = (left, top, width, height) => ({ getBoundingClientRect: () => ({ left, top, width, height, right: left + width, bottom: top + height }) });
+  const juuri = laatikko(0, 0, 1000, 600);
+  // Paneeli oikeassa yläkulmassa (600..900 x 60..260), siirto nyt 0.
+  const paneeli = laatikko(600, 60, 300, 200);
+  const nolla = { dx: 0, dy: 0 };
+  assert.deepEqual(rajaaPaneelinSiirto(paneeli, juuri, 50, 50, nolla), { dx: 50, dy: 50 });
+  // Liian kauas oikealle/alas: pysähtyy reunan varaan (8 px).
+  assert.deepEqual(rajaaPaneelinSiirto(paneeli, juuri, 500, 900, nolla), { dx: 92, dy: 332 });
+  // Liian kauas vasemmalle/ylös.
+  assert.deepEqual(rajaaPaneelinSiirto(paneeli, juuri, -900, -300, nolla), { dx: -592, dy: -52 });
+  // Mitaton ympäristö (testitynkä) päästää siirron läpi.
+  assert.deepEqual(rajaaPaneelinSiirto({}, {}, 3, 4, nolla), { dx: 3, dy: 4 });
 });
 
 /* ==================== PIENI KUVAVERSIO ==================== */
@@ -264,14 +326,23 @@ test('rullauksen kesto on Raamatun animaatiosäännön rajoissa', () => {
 test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa sekunnissa', () => {
   assert.ok(AIKAJANA_NAKSU_VALI_MS >= 125, `${AIKAJANA_NAKSU_VALI_MS} ms sallisi yli 8 naksua sekunnissa`);
   // Kytkentä: avaus ja alustus ovat `heti`, pysäytetty kello hiljainen.
-  assert.match(MOOTTORI, /naytaVuosi\(vuosi, heti = false\) \{[\s\S]{0,900}if \(elava && this\.kaynnissa\) this\.naksahda\(\);/);
+  assert.match(MOOTTORI, /naytaVuosi\(vuosi, heti = false\) \{[\s\S]{0,1400}if \(elava && this\.kaynnissa\) this\.naksahda\(\);/);
   // Kohahdus kuuluu keksinnölle, ei vuodenvaihteelle (omistaja 3.9.2026).
   assert.match(MOOTTORI, /sytyta\(i\) \{[\s\S]{0,700}this\.keksinnonAani\(t\);/);
   assert.match(MOOTTORI, /keksinnonAani\(t\) \{\n    if \(t\?\.paalu\) return;\n    sfx\.play\('keksinto'\);/);
   assert.ok(!/vuosiAani/.test(MOOTTORI), 'vuosiAani on korvattu');
   assert.match(MOOTTORI, /naksahda\(\) \{[\s\S]{0,300}AIKAJANA_NAKSU_VALI_MS[\s\S]{0,200}sfx\.play\('vuosi'\);/);
-  // prefers-reduced-motion vaihtaa merkin ilman liikettä.
-  assert.match(MOOTTORI, /rullaaVuosi\(this\.rullat, teksti, \{ heti: heti \|\| this\.reducedMotion \}\)/);
+  // prefers-reduced-motion vaihtaa merkin ilman liikettä; pysäytetty kello liukuu.
+  assert.match(MOOTTORI, /asetaMatkamittari\(this\.rullat, arvo, \{ heti: heti \|\| this\.reducedMotion, liuku: !this\.kaynnissa \}\)/);
+  // Käyvä kello antaa mittarille murto-osavuoden joka kehyksellä.
+  assert.match(MOOTTORI, /this\.tila = tila;\n\s*this\.naytaVuosi\(tila\.vuosi\);/);
+  // Lamput ovat napautettavia (omistaja 3.9.2026) ja paneeli raahattava.
+  assert.match(MOOTTORI, /g\.addEventListener\('click', \(e\) => \{ e\.stopPropagation\(\); this\.napautaValoa\(i\); \}\)/);
+  assert.match(MOOTTORI, /napautaValoa\(i\) \{[\s\S]{0,200}this\.siirry\(i\);/);
+  assert.match(MOOTTORI, /kytkeRaahaus\(\) \{[\s\S]{0,2500}rajaaPaneelinSiirto\(paneeli, this\.juuri/);
+  const CSS = readFileSync(new URL('../css/aikajana.css', import.meta.url), 'utf8');
+  assert.match(CSS, /\.aikajana-valo\.palaa \{ pointer-events: auto; cursor: pointer; \}/);
+  assert.match(CSS, /translate\(var\(--aikajana-paneeli-dx, 0px\), var\(--aikajana-paneeli-dy, 0px\)\)/);
 });
 
 /* ==================== MUSIIKKI ==================== */

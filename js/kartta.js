@@ -3341,8 +3341,10 @@ export class Kartta {
      * koska kupla siirtyy kiinnityskohteensa mukana (js/pollo.js
      * kiinnitysKohde) eikä sijainti saa ratkaista, toimiiko vieritys.
      */
+    // Linssin ilmiöpaneeli on raahattava (js/aikajana.js kytkeRaahaus):
+    // kartta ei saa lähteä mukaan eikä kaapata osoitinta.
     const KELLUVA_UI = '.fokusvirta-kortti, .fokusvirta-kupla, .fokuszoom, '
-      + '.fokus-maataulu, .fokuskohde-popup';
+      + '.fokus-maataulu, .fokuskohde-popup, .aikajana-ilmio';
     /** Alkaako ele kartan päällä kelluvalta pinnalta? */
     const kelluvaltaPinnalta = (e) => Boolean(e?.target?.closest?.(KELLUVA_UI));
 
