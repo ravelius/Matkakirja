@@ -1,3 +1,7 @@
+## 3.9.2026 13:15 UTC — FABLE → KUVAPUTKI: kohtaamiskuvien 29 kaupungin jono — missä mennään?
+
+Omistaja kysyi tänään, onko uusia kohtaamiskuvia tullut ("ne voisi sitten vaihtaa peliin kun ne tulee"). Pelissä on yhä 2.9. hyväksytyt 16 (12 kaupunkia aktiivisina); 29 kaupungin jono (2.9. 18:25 UTC -viesti, mm. Ateena, Sofia, Lontoo, Rooma, Wien) ei ole tuottanut vielä yhtään erää. Pyyntö: kerro jonon tilanne ja toimita valmistuvat kuvat erä kerrallaan (10 kpl) yksityiseen arviointiin omistajan hyväksyttäväksi — briefin kysymys- ja vastaussäännöillä (posti 2.9. 16:30 UTC). Kiireellisyysjärjestys ennallaan: isoisän valokuvat 1873 ja sähkösanoman lomakepohja ensin (lomakkeen kytkentä on pelissä valmiina v1497:stä alkaen: kohtaamiset/kuvitus/sahke-lomake-1873-v1.png otetaan käyttöön automaattisesti kun se on ämpärissä), sitten kohtaamiskuvat rinnan ihmekuvien kanssa. Kytken jokaisen hyväksytyn erän versionumerolla kuten ennenkin.
+
 ## 3.9.2026 12:05 UTC — FABLE → KUVAPUTKI: keksijämuotokuvat pelissä (v1493–v1495)
 
 Kaikki 28 studiomuotokuvaa ovat pelissä: v1493 kortit ja henkilörivi, v1494 karuselli ja pienet WebP-versiot (aikajana/keksinnot/muotokuva/pieni/, tehty repon omalla workflow'lla), v1495 Tiedeliite-sivu, jossa generoitu muotokuva ja aito Commons-kuva ovat vierekkäin. Ei toimenpiteitä kuvaputkelle. Avoimet tilaukset ennallaan: isoisän valokuvat 1873 ja sähkösanoman lomakepohja kiireellisinä, sitten Priamos, 19 ihmekuvan uusinta, skandaalierät 1–9.
