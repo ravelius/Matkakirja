@@ -1,3 +1,54 @@
+## 3.9.2026 07:05 UTC — FABLE → KUVAPUTKI: KIIREELLINEN KUVATILAUS, uusi kategoria Isoisän valokuvat (1873)
+
+Omistajan tilaus tänään, kiireellisenä: "isoisästä voisi generoida
+muutaman mustavalkoisen kuvan sen ajan tekniikalla toteutettuna
+hymyilemässä jossain päin matkaa eksoottisessa paikassa (kiina tms)."
+Käyttö pelissä: yksi kuva pienenä ja hieman sumennettuna pelin
+aloitussivulla, toinen ensimmäisessä lentokonekohtauksessa kartan
+päällä — pelaaja löytää matkakirjan välistä valokuvan isoisästään.
+Sen kuvan paperi on revennyt niin, että osa kuvasta puuttuu.
+
+Hahmo (kaanon docs/tarina.md: isoisä Fogg, matkapäiväkirja 1873, ei
+tarkempaa ulkonäkökuvausta — tämä tilaus LUO ulkonäön, joten pidä
+sama henkilö kaikissa kuvissa): noin 35–40-vuotias brittiläinen
+herrasmiesmatkailija, vaalea pellavapuku tai matkatakki, liivi ja
+kellonperät, leveälierinen matkahattu kädessä tai päässä, lyhyt
+parta tai pulisongit ajan tapaan, silmissä vilpitön hymy — ei
+ajan jäykkä muotokuvailme vaan mies, joka on juuri nauranut jollekin.
+Ei lapsia, ei nykyesineitä.
+
+Tekniikka: aidon 1870-luvun albumiinivedoksen / märkälevyn ilme —
+ruskehtava mustavalkoinen, pehmeä syväterävyys, pitkän valotuksen
+hiljaisuus taustan ihmisissä (liikkuvat hahmot utuisina), levyn
+reunavirheet ja vinjetointi, kevyt naarmutus ja kellastuminen.
+Ei värikuvaa, ei nykyaikaista terävyyttä.
+
+Tilaus, 3 kohtausta × 2 versiota:
+
+A. isoisa-shanghai-1873: Shanghain rantakatu (Bund) 1873, sampaaneja
+   ja jokilaivoja taustalla, kantajia; isoisä seisoo laiturilla.
+B. isoisa-kanton-1873: Kantonin vilkas kuja, kyltit ja lyhdyt,
+   teekauppa; isoisä istuu teekupin ääressä paikallisen kauppiaan
+   kanssa.
+C. isoisa-bombay-1873: Bombayn satama tai basaari 1873, purjeveneitä
+   ja kuormakameleita/härkävankkureita; isoisä nojaa matkalaukkuunsa.
+
+Versiot jokaisesta:
+ 1. puhdas vedos: JPG/sRGB, vaaka 3:2, tiedostonimi
+    <tunnus>-albumiini-v1.jpg (aloitussivulle; sumennus tehdään pelissä).
+ 2. esine: sama kuva albumiinivedoksena pahvipohjalla (cabinet card),
+    jonka yksi kulma/reuna on REVENNYT niin, että noin viidennes kuvasta
+    puuttuu; reunat kuluneet, pieni sormenjälki, kellastunut; PNG
+    alfakanavalla ilman taustaa (kuten miniatyyrit), pysty tai vaaka
+    kortin oman muodon mukaan, tiedostonimi <tunnus>-revitty-v1.png
+    (lentokonekohtaukseen kartan päälle).
+
+R2-polku kohtaamiset/isoisa/. Kuvateksti ei tarvita pelissä (kuva on
+esine), mutta kuittaukseen 1 virke mitä kuvassa on ja lähderivi
+aikakauden tekniikasta. Sama toimintatapa: yksityinen arviointi,
+omistajan hyväksyntä, R2 ja postikuittaus; kytken pelidataan itse.
+Tämä tilaus menee skandaalierien EDELLE.
+
 ## 3.9.2026 06:55 UTC — FABLE → KUVAPUTKI: KUVATILAUS, kategoria Karttanostot (skandaalit), erä 1/9: täydentävät kuvat skandaalikortteihin
 
 Omistaja hyväksyi lööppitaiton ja päätti: jokainen skandaalikortti (83 kpl,
