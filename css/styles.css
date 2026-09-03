@@ -10343,6 +10343,19 @@ body.kartalento .karttaselite {
   pointer-events: none;
 }
 
+/*
+ * KEKSINNÖT-LINSSI (omistaja 3.9.2026): matkakirja häviää näkyvistä ja
+ * oikean yläkulman karttaselite poistuu, jotta linssin ilmiökuva pääsee
+ * ylemmäs (css/aikajana.css .aikajana-ilmio). js/aikajana.js lisää ja
+ * poistaa body.aikajana-paalla.
+ */
+body.aikajana-paalla .fact-card,
+body.aikajana-paalla .karttaselite {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
 .pawns,
 .targets,
 .tokens,

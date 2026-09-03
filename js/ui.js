@@ -12245,6 +12245,9 @@ export class UI {
     // Radiotilassa radio on ainoa ääni. Kaupungin äänimaiseman sulkee
     // radio.paalle() itse; tämä estää sen palaamisen.
     if (this.radioPaalla()) return;
+    // Linssin ajan kaupungin maisema on POISSA (omistaja 3.9.2026,
+    // js/aikajana.js avaaAanimaailma); purku kutsuu tämän uudelleen.
+    if (this.aikajana?.juuri?.isConnected) { stopPlaceStream(); return; }
     // Lennon aikana kuuluu matkustamon äänimaisema (omistajan toive
     // 10.8.2026: kalvon taustaääneksi äänimaisema lentokoneen
     // sisältä). Kaupungin maisema alkaa vasta, kun pelaaja astuu ulos

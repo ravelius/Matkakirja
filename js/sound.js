@@ -1691,6 +1691,17 @@ const SOUNDS = {
    * VARAÄÄNI, EI PÄÄOSA: kun ämpärin kohahdus (js/tehosteet.js) on
    * ladattu, se soi tämän sijaan (js/aikajana.js vuosiAani).
    */
+  /*
+   * KEKSINNÖN KILAHDUS (omistaja 3.9.2026: *"vaihda se efektiääni, joka
+   * on, kun tulee uusi keksintö. Se pitää vaihtaa johonkin todella
+   * yksinkertaiseen"*). Yksi puhdas sävel (C6) ja hyvin hiljainen
+   * oktaavi sen päällä, alle puoli sekuntia, pehmeä alku. Ei tähteä,
+   * ei kohahdusta, ei rullausta — pieni lamppu syttyy.
+   */
+  keksinto: (s) => {
+    s.tone({ freq: 1046.5, dur: 0.4, type: 'sine', gain: 0.05, attack: 0.008 });
+    s.tone({ freq: 2093, dur: 0.24, type: 'sine', gain: 0.01, attack: 0.008, delay: 0.01 });
+  },
   vuosi: (s) => {
     s.hissNopea({ dur: 0.028, type: 'highpass', freq: 5200, sweepTo: 3200, gain: 0.014, q: 0.7 });
     s.knock({ freqs: [2400], dur: 0.022, gain: 0.03, q: 12 });

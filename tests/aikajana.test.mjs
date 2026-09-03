@@ -184,22 +184,22 @@ test('nykyinen kortti on aina keskellä ruutua täydessä mitassa', () => {
   for (const leveys of [LEVEA, KAPEA, 0.5]) {
     const k = karusellinPaikat(5, 5, leveys);
     assert.equal(k.paikka, 0, `leveys ${leveys}`);
-    assert.equal(k.mitta, 1);
+    assert.equal(k.mitta, KARUSELLIN_MITAT[0]);
     assert.equal(k.luokka, 'nykyinen');
     assert.equal(k.sumennus, 0);
     assert.equal(k.himmeys, 1);
   }
 });
 
-test('menneet ovat vasemmalla ja sumeita, tulevat oikealla ja tarkkoja', () => {
+test('menneet ovat vasemmalla ja tarkkoja, tulevat oikealla ja sumeita (omistaja 3.9.2026)', () => {
   const mennyt = karusellinPaikat(4, 5, LEVEA);
   const tuleva = karusellinPaikat(6, 5, LEVEA);
   assert.ok(mennyt.paikka < 0, 'mennyt kuuluu vasemmalle');
   assert.ok(tuleva.paikka > 0, 'tuleva kuuluu oikealle');
   assert.equal(mennyt.luokka, 'mennyt');
   assert.equal(tuleva.luokka, 'tuleva');
-  assert.ok(mennyt.sumennus >= 1.5 && mennyt.sumennus <= 2, `sumennus ${mennyt.sumennus} px`);
-  assert.equal(tuleva.sumennus, 0, 'tulevia ei sumenneta');
+  assert.ok(tuleva.sumennus >= 1.5 && tuleva.sumennus <= 2, `sumennus ${tuleva.sumennus} px`);
+  assert.equal(mennyt.sumennus, 0, 'jo nähtyjä ei sumenneta');
   // Sivut ovat symmetriset koon puolesta ja merkittävästi pienempiä.
   assert.equal(mennyt.mitta, tuleva.mitta);
   assert.ok(mennyt.mitta <= 0.7, `sivukortin mitta ${mennyt.mitta}`);
@@ -266,7 +266,7 @@ test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa se
   assert.match(MOOTTORI, /naytaVuosi\(vuosi, heti = false\) \{[\s\S]{0,900}if \(elava && this\.kaynnissa\) this\.naksahda\(\);/);
   // Kohahdus kuuluu keksinnölle, ei vuodenvaihteelle (omistaja 3.9.2026).
   assert.match(MOOTTORI, /sytyta\(i\) \{[\s\S]{0,700}this\.keksinnonAani\(t\);/);
-  assert.match(MOOTTORI, /keksinnonAani\(t\) \{\n    if \(t\?\.paalu\) return;\n    if \(soitaKohahdus\(\)\) return;/);
+  assert.match(MOOTTORI, /keksinnonAani\(t\) \{\n    if \(t\?\.paalu\) return;\n    sfx\.play\('keksinto'\);/);
   assert.ok(!/vuosiAani/.test(MOOTTORI), 'vuosiAani on korvattu');
   assert.match(MOOTTORI, /naksahda\(\) \{[\s\S]{0,300}AIKAJANA_NAKSU_VALI_MS[\s\S]{0,200}sfx\.play\('vuosi'\);/);
   // prefers-reduced-motion vaihtaa merkin ilman liikettä.

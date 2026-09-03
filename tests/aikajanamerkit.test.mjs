@@ -451,7 +451,11 @@ test('moottori naksahtaa elävästä vaihdoksesta ja kohahtaa vain keksinnön ko
   // Kohahdus kuuluu keksinnölle (omistajan päätös 3.9.2026): valon
   // syttyessä, ei merkkipaalulla; naksahdus vain jos se ei soinut.
   assert.match(MOOTTORI, /sytyta\(i\) \{[\s\S]{0,700}this\.keksinnonAani\(t\);/);
-  assert.match(MOOTTORI, /keksinnonAani\(t\) \{\n\s*if \(t\?\.paalu\) return;\n\s*if \(soitaKohahdus\(\)\) return;\n\s*this\.naksahda\(\);/);
+  // Omistaja 3.9.2026: keksinnön ääni on yksi yksinkertainen kilahdus,
+  // ei tähteä eikä kohahdusta.
+  assert.match(MOOTTORI, /keksinnonAani\(t\) \{\n\s*if \(t\?\.paalu\) return;\n\s*sfx\.play\('keksinto'\);/);
+  assert.doesNotMatch(MOOTTORI, /sfx\.play\('star'\)/);
+  assert.doesNotMatch(MOOTTORI, /soitaKohahdus/);
   // Naksahdus on harvennettu (AIKAJANA_NAKSU_VALI_MS) ja soittaa 'vuosi'.
   assert.match(MOOTTORI, /naksahda\(\) \{[\s\S]{0,300}AIKAJANA_NAKSU_VALI_MS[\s\S]{0,200}sfx\.play\('vuosi'\);/);
 });
