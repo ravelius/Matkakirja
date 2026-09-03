@@ -33,7 +33,10 @@
  *                 3.9.2026: yhtenäiset, pelkistetyt mutta
  *                 karaktääriset rintakuvat (toimitettu ja hyväksytty
  *                 mustavalkoisina), sama tausta ja valo kaikissa.
- *                 Kansio `muotokuva/` ämpärissä.
+ *                 Kansio `muotokuva/` ämpärissä. Kuvateksti (`selite`)
+ *                 on LYHYT LUONNEKUVA henkilöstä eikä saa nimetä
+ *                 kuvaputkea; `lahde` on 'Matkakirjan havainnekuva'
+ *                 kuten ilmiökuvissa.
  *   `kuvaToinen`  saman pysäkin toinen keksijä samassa muodossa.
  *                 Kolmella pysäkillä on kaksi tekijää (Montgolfier'n
  *                 veljekset, Cooke ja Wheatstone, Lumière'n
@@ -43,14 +46,26 @@
  *                 maalaus, kaiverrus tai valokuva henkilöstä. Se ei
  *                 enää näy kortissa vaan odottaa datassa keksijän
  *                 omaa Tiedeliite-sivua; lisenssitiedot pysyvät
- *                 tallessa täällä. Kolmelta pysäkiltä (Otto, Siemens,
- *                 Benz) aitoa kuvaa ei koskaan tarkistettu — null.
+ *                 tallessa täällä. Kolme viimeistä puuttunutta (Otto,
+ *                 Siemens, Benz) tarkistettiin Commonsista 3.9.2026,
+ *                 joten kaikilla 25 pysäkillä on nyt aito kuva.
  *   `ilmio`       keksintöä selittävä generoitu kuva ilmiöpaneelissa.
  *
  * Kaikki 25 pysäkkiä on kytketty sekä generoituun muotokuvaan (28
  * kuvaa, kaksoispysäkit mukaan lukien) että generoituun ilmiökuvaan;
  * vain merkkipaalu 1873 on ilman kuvaa, ja se näkyy
  * nimikirjainlaattana.
+ *
+ * ── HENKILÖJUTTU ──────────────────────────────────────────────────
+ *
+ * `henkilojuttu` on Tiedeliitteen oma teksti: kaksi kappaletta
+ * keksijästä IHMISENÄ, ei keksinnöstä — syntymä ja tausta, luonne ja
+ * työtapa, elämän käänteet, ja LOPUKSI SIDOS VUOTEEN 1873 (mitä
+ * keksinnölle tai keksijälle oli isoisän matkavuoteen mennessä
+ * tapahtunut). Wattin pysäkki on tyylin pilotti (omistajan tilaus
+ * 3.9.2026); loput 24 kirjoitettiin samaan muotoon 3.9.2026, faktat
+ * `lahde`-kentän Wikipedia-artikkeleista. Kappaleet erotetaan
+ * '\n\n':llä, kuten `juttu`-kentässä.
  *
  * Blériot'n kohdassa on kaksi hyväksyttyä ilmiökuvaa: laaja `ilmio`
  * (kone ja Kanaali) ja lähikuva `ilmioLisa` (lentäjän jännitys).
@@ -167,15 +182,40 @@ export const KEKSINNOT = [
       + 'Marraskuun 21. päivänä 1783 Pilâtre de Rozier ja markiisi d\'Arlandes '
       + 'nousivat pallolla Pariisin yli — ensimmäinen vapaa miehitetty lento '
       + 'ihmiskunnan historiassa. Matkaa kertyi noin yhdeksän kilometriä.',
+    henkilojuttu: 'Joseph-Michel (1740–1810) ja Jacques-Étienne (1745–1799) '
+      + 'Montgolfier syntyivät Annonayssa paperitehtailijan perheeseen, '
+      + 'jossa oli kuusitoista lasta. Joseph oli järjestyksessä '
+      + 'kahdestoista: haaveilija, joka hyppäsi kotitalon katolta itse '
+      + 'tekemällään laskuvarjolla ja pärjäsi huonosti liikeasioissa. '
+      + 'Étienne, viidestoista lapsi, opiskeli Pariisissa arkkitehdiksi '
+      + 'ja kutsuttiin kotiin johtamaan tehdasta, kun vanhin veli kuoli '
+      + '1772. Kun kokeet siirtyivät Pariisiin, hovin eteen meni Étienne; '
+      + 'Joseph jäi Annonayhin, koska piti itseään liian ujona ja '
+      + 'huolittelemattomana.'
+      + '\n\n'
+      + 'Étienne kuoli 1799 matkalla Lyonista Annonayhin, Joseph 1810 '
+      + 'kylpyläkaupungissa Balaruc-les-Bainsissa keksittyään sitä ennen '
+      + 'itsetoimivan hydraulisen vesipumpun. Perheen paperitehdas jatkoi '
+      + 'toimintaansa nimellä Canson-Montgolfier. Kun Foggin isoisä '
+      + 'matkusti vuonna 1873, tehdas valmisti yhä paperia Annonayssa — '
+      + 'ja pallosta oli tullut sodan väline: kolme vuotta aiemmin '
+      + 'piiritetystä Pariisista oli noussut noin 66 ilmapalloa, jotka '
+      + 'veivät postia ja sotaministeri Léon Gambettan saksalaisten '
+      + 'linjojen yli.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1783-joseph-montgolfier.jpg`,
-      selite: 'Joseph Montgolfier, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Joseph Montgolfier oli haaveilija, joka hyppäsi kotitalon '
+        + 'katolta omatekoisella laskuvarjolla mutta ei osannut hoitaa '
+        + 'liikeasioita. Ujoutensa vuoksi hän jätti Pariisin näytökset '
+        + 'veljelleen.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaToinen: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1783-etienne-montgolfier.jpg`,
-      selite: 'Étienne Montgolfier, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Étienne Montgolfier oli veljeksistä tyyni ja järjestelmällinen: '
+        + 'koulutettu arkkitehti, joka johti perheen paperitehdasta ja '
+        + 'hoiti pallokokeiden esittelyt hovissa.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Joseph-montgolfier.jpg', selite: 'Joseph Montgolfier, tuntemattoman taiteilijan maalaus 1700-luvulta.' },
     ilmio: {
@@ -204,10 +244,30 @@ export const KEKSINNOT = [
       + 'Jenner julkaisi tulokset 1798, ja menetelmä levisi muutamassa '
       + 'vuodessa ympäri Eurooppaa. Isorokko julistettiin hävitetyksi koko '
       + 'maailmasta vuonna 1980 — ainoa ihmisen tauti, jolle näin on käynyt.',
+    henkilojuttu: 'Edward Jenner (1749–1823) syntyi Berkeleyn kirkkoherran '
+      + 'kahdeksantena lapsena. Kouluikäisenä hänet rokotettiin isorokkoa '
+      + 'vastaan vanhalla ja vaarallisella variloinnilla, ja se rasitti '
+      + 'hänen terveyttään koko elämän ajan. Kolmentoista vanhana hän '
+      + 'meni seitsemäksi vuodeksi kirurgin oppiin ja opiskeli sitten '
+      + 'Lontoossa John Hunterin johdolla; Hunterilta hän sai ohjeen "älä '
+      + 'arvaile, kokeile", josta tuli hänen työtapansa.'
+      + '\n\n'
+      + 'Jenner palasi maaseudulle kyläläisten lääkäriksi eikä lähtenyt '
+      + 'sieltä enää. Hän tutki myös lintuja ja kuvasi ensimmäisenä '
+      + 'tarkasti, miten vastakuoriutunut käenpoikanen työntää '
+      + 'isäntälinnun munat pesästä. Vaimo Catherine kuoli tuberkuloosiin '
+      + '1815, esikoispoika jo 1810. Kun Foggin isoisä matkusti vuonna '
+      + '1873, rokotus oli Britanniassa lakisääteinen pakko: vuoden 1871 '
+      + 'laki asetti jokaiseen piiriin rokotusvirkailijan ja sakot '
+      + 'laiminlyönnistä, ja pakko oli synnyttänyt äänekkään '
+      + 'vastustusliikkeen.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1796-edward-jenner.jpg`,
-      selite: 'Edward Jenner, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Edward Jenner pysyi koko ikänsä maaseudun lääkärinä ja '
+        + 'innokkaana luonnontutkijana. Opettajaltaan hän oli oppinut '
+        + 'ohjeen "älä arvaile, kokeile" — ja tunsi lapsena itse vanhan '
+        + 'rokotustavan vaarat.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Portrait of Edward Jenner M.D (4672926).jpg', selite: 'Edward Jenner, William Ridleyn kaiverrus 1804.' },
     ilmio: {
@@ -236,10 +296,30 @@ export const KEKSINNOT = [
       + 'Voltan patsas oli ensimmäinen sähkölähde, joka antoi jatkuvaa '
       + 'virtaa. Sen avulla veden hajotettiin vedyksi ja hapeksi samana '
       + 'vuonna, ja jännitteen yksikkö voltti nimettiin keksijän mukaan.',
+    henkilojuttu: 'Alessandro Volta (1745–1827) syntyi Comossa aatelisperheeseen, '
+      + 'joka odotti hänestä pappia. Hän valitsi luonnontieteet: 1774 '
+      + 'hänestä tuli fysiikan opettaja Comon kouluun ja 1779 Pavian '
+      + 'yliopiston kokeellisen fysiikan professori, virka jota hän '
+      + 'hoiti lähes neljäkymmentä vuotta. Luennot olivat niin täynnä, että '
+      + 'keisari Joosef II rakennutti niitä varten oman salin. Volta '
+      + 'eristi myös metaanin, jonka hän löysi Maggiorejärven soilta.'
+      + '\n\n'
+      + 'Volta oli kiistoissa itsepäinen mutta yksityiselämässään '
+      + 'kotiinsa vetäytyvä: hän meni naimisiin 49-vuotiaana, sai kolme '
+      + 'poikaa ja siirtyi vanhoilla päivillään Camnagon tilalleen pois '
+      + 'julkisuudesta. Napoleon teki hänestä kreivin 1810. Kun Foggin '
+      + 'isoisä matkusti vuonna 1873, Voltan pinon jälkeläiset eli '
+      + 'kemialliset paristot antoivat virran Euroopan lennätinasemille — '
+      + 'mutta niiden yksinvalta oli päättymässä, sillä Zénobe Gramme oli '
+      + 'esitellyt Pariisin tiedeakatemialle 1871 dynamon, joka tekee '
+      + 'sähköä koneellisesti.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1800-alessandro-volta.jpg`,
-      selite: 'Alessandro Volta, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Alessandro Volta oli kiistakumppanina itsepäinen ja '
+        + 'luennoitsijana niin suosittu, että hänelle rakennettiin oma '
+        + 'sali. Yksityiselämässään hän vetäytyi kotiinsa ja meni naimisiin '
+        + 'vasta 49-vuotiaana.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Alessandro Volta. Gaetano Bonatti inc.jpg', selite: 'Alessandro Volta, Gaetano Bonattin kaiverrus 1837.' },
     ilmio: {
@@ -267,10 +347,28 @@ export const KEKSINNOT = [
       + 'kymmenessä vuodessa Lyonissa oli tuhansia Jacquardin puita. Charles '
       + 'Babbage lainasi reikäkortit laskukoneeseensa, ja niistä tuli '
       + 'tietojenkäsittelyn ensimmäinen ohjelmointitapa.',
+    henkilojuttu: 'Joseph Marie Charles, lisänimeltään Jacquard (1752–1834), syntyi '
+      + 'Lyonissa silkkikutojan perheeseen. Yhdeksästä sisaruksesta vain '
+      + 'hän ja sisar Clémence elivät aikuisiksi. Koulua hän ei käynyt ja '
+      + 'oli lukutaidoton kolmetoistavuotiaaksi; lukemaan hänet opetti '
+      + 'lanko, joka piti kirjapainoa ja kirjakauppaa. Isän kangaspuut '
+      + 'olivat pojalle liian raskaat, joten hänestä tehtiin ensin '
+      + 'kirjansitojan ja sitten kirjasinvalajan oppipoika.'
+      + '\n\n'
+      + 'Perimänsä talon, kangaspuut ja viinitarhan Jacquard menetti '
+      + 'velkoihin ja joutui käyttämään myös vaimonsa myötäjäiset. Vasta '
+      + 'lähes viisikymppisenä hän alkoi keksiä koneita. Lyonin kutojat '
+      + 'vastustivat konetta rajusti, ja kaupunki nousi kutojakapinaan '
+      + 'vielä 1831 ja 1834, Jacquardin kuolinvuonna. Kun Foggin isoisä '
+      + 'matkusti vuonna 1873, Lyon oli yhä Euroopan silkkikaupunki ja '
+      + 'reikäkorttiketju sen arkinen työkalu; keksijälle oli pystytetty '
+      + 'patsas kotikaupunkiin jo 1840.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1804-joseph-marie-jacquard.jpg`,
-      selite: 'Joseph Marie Jacquard, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Joseph Marie Jacquard oli lukutaidoton 13-vuotiaaksi ja '
+        + 'epäonnistui sekä kauppiaana että perintönsä hoitajana. Vasta '
+        + 'lähes viisikymppisenä hän löysi taitonsa: koneiden rakentamisen.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Joseph Marie Jacquard.jpg', selite: 'Joseph Marie Jacquard, kaiverrus 1800-luvulta.' },
     ilmio: {
@@ -282,7 +380,7 @@ export const KEKSINNOT = [
         + 'ilman heitä.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    lahde: 'en-Wikipedia "Jacquard machine"',
+    lahde: 'en-Wikipedia "Jacquard machine" ja "Joseph Marie Jacquard"',
   },
   {
     vuosi: 1825, paikka: 'Darlington', lat: 54.5236, lon: -1.559, x: 5781.4, y: 1187.8,
@@ -298,10 +396,30 @@ export const KEKSINNOT = [
       + 'veturikilpailun, ja Liverpoolin ja Manchesterin välinen rata aloitti '
       + 'aikataulun mukaisen matkustajaliikenteen. Stephensonin raideleveys, '
       + '1 435 millimetriä, on yhä maailman yleisin.',
+    henkilojuttu: 'George Stephenson (1781–1848) syntyi Wylamissa kaivoksen '
+      + 'lämmittäjän poikana. Kumpikaan vanhemmista ei osannut lukea eikä '
+      + 'koulunkäyntiin ollut varaa: Stephenson oli lukutaidoton '
+      + 'kahdeksaantoista ikävuoteensa asti ja maksoi itse iltakoulusta, '
+      + 'jossa opetteli lukemaan, kirjoittamaan ja laskemaan. Vaimo '
+      + 'Frances kuoli tuberkuloosiin 1806 ja tytär jo vauvana, ja isä '
+      + 'sokeutui kaivosonnettomuudessa. Lisätienestit Stephenson hankki '
+      + 'korjaamalla kelloja ja tekemällä kenkiä.'
+      + '\n\n'
+      + 'Hän puhui leveää northumberlandilaista murretta, jota Lontoossa '
+      + 'pidettiin sivistymättömänä, ja lähetti poikansa Robertin '
+      + 'yksityiskouluun oppimaan hienoa puhetapaa. Kun Stephenson '
+      + 'kehitti kaivoslampun samaan aikaan kuin Humphry Davy, häntä '
+      + 'syytettiin idean varastamisesta — ja hän kantoi loppuikänsä '
+      + 'epäluuloa teoreettisia oppineita kohtaan. Kun Foggin isoisä '
+      + 'matkusti vuonna 1873, Stephenson oli ollut kuolleena 25 vuotta, '
+      + 'Newcastleen oli pystytetty muistomerkki 1862 ja hänen '
+      + 'valitsemansa raideleveys oli tulossa maailman standardiksi.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1825-george-stephenson.jpg`,
-      selite: 'George Stephenson, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'George Stephenson oli lukutaidoton 18-vuotiaaksi ja maksoi itse '
+        + 'iltakoulunsa. Hän ei koskaan päässyt eroon epäluulostaan Lontoon '
+        + 'oppineita kohtaan, jotka pitivät häntä sivistymättömänä.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'George Stephenson.jpg', selite: 'George Stephenson, John Lucasin maalaus.' },
     ilmio: {
@@ -314,7 +432,7 @@ export const KEKSINNOT = [
         + 'kone koko matkan.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    lahde: 'en-Wikipedia "Stockton and Darlington Railway"',
+    lahde: 'en-Wikipedia "Stockton and Darlington Railway" ja "George Stephenson"',
   },
   {
     vuosi: 1837, paikka: 'Lontoo', lat: 51.5074, lon: -0.1278, x: 5829.1, y: 1324.0,
@@ -330,15 +448,40 @@ export const KEKSINNOT = [
       + 'lennätin auttoi pidättämään murhaajan, joka oli paennut junalla — ja '
       + 'siitä alkoi laitteen maine. Isoisän matkan aikaan 1873 lennätinkaapelit '
       + 'ylittivät jo Atlantin.',
+    henkilojuttu: 'William Fothergill Cooke (1806–1879) oli kirurgin poika, joka '
+      + 'palveli viisi vuotta Intian armeijassa ja opiskeli sen jälkeen '
+      + 'lääketiedettä Pariisissa ja Heidelbergissä. Siellä hän näki 1836 '
+      + 'luennolla lennätinlaitteen, hylkäsi lääkärinuran ja päätti myydä '
+      + 'keksinnön rautateille. Charles Wheatstone (1802–1875) taas oli '
+      + 'soitinkauppiaan poika, arka ja hiljainen: hän osti '
+      + 'taskurahoillaan ranskankielisen kirjan Voltan kokeista, säästi '
+      + 'vielä sanakirjaan ja rakensi pariston isänsä talon '
+      + 'takakeittiössä pennyistä.'
+      + '\n\n'
+      + 'Yhteistyö kesti, riita kesti kauemmin: patenttien omistuksesta '
+      + 'sovittiin välimiesmenettelyllä 1843, eivätkä miehet koskaan '
+      + 'päässeet yksimielisyyteen siitä, kumman keksintö lennätin oli. '
+      + 'Wheatstone kammosi esiintymistä niin, että hänen ensimmäinen '
+      + 'luentosarjansa King\'s Collegessa epäonnistui täysin. Kun Foggin '
+      + 'isoisä matkusti vuonna 1873, molemmat elivät ja olivat '
+      + 'ritareita: Wheatstone valittiin sinä vuonna Ranskan '
+      + 'tiedeakatemian ulkojäseneksi ja sai Ampère-mitalin, ja Cookelle '
+      + 'oli myönnetty 1871 valtion eläke, sillä hänen rahansa olivat '
+      + 'menneet.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1837-william-fothergill-cooke.jpg`,
-      selite: 'William Fothergill Cooke, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'William Fothergill Cooke oli entinen upseeri ja lääketieteen '
+        + 'opiskelija, joka näki lennättimen luennolla ja vaihtoi alaa '
+        + 'saman tien. Hän hoiti parivaljakon liikeasiat ja kiisti loppuun '
+        + 'asti toverinsa osuudesta.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaToinen: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1837-charles-wheatstone.jpg`,
-      selite: 'Charles Wheatstone, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Charles Wheatstone oli lapsena niin ujo, että pakeni ullakolle '
+        + 'omien ajatustensa seuraan. Yleisön edessä hän mumisi seinälle '
+        + 'päin, mutta laboratoriossa hän oli kotonaan.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Wheatstone Charles drawing 1868.jpg', selite: 'Charles Wheatstone, Samuel Laurencen piirros 1868.' },
     ilmio: {
@@ -350,7 +493,7 @@ export const KEKSINNOT = [
         + 'henkilökohtainen — joku näkymättömissä vastasi.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    lahde: 'en-Wikipedia "Cooke and Wheatstone telegraph"',
+    lahde: 'en-Wikipedia "Cooke and Wheatstone telegraph", "William Fothergill Cooke" ja "Charles Wheatstone"',
   },
   {
     vuosi: 1839, paikka: 'Pariisi', lat: 48.8566, lon: 2.3522, x: 5911.7, y: 1439.6,
@@ -366,10 +509,28 @@ export const KEKSINNOT = [
       + 'vapaasti kaikkien käyttöön. Muutamassa kuukaudessa Pariisissa '
       + 'myytiin kameroita ja levyjä, ja ensimmäiset muotokuvaamot avattiin '
       + 'seuraavana vuonna.',
+    henkilojuttu: 'Louis Daguerre (1787–1851) oli koulutukseltaan teatteri- ja '
+      + 'panoraamamaalari. Hän avasi Pariisiin 1822 dioraaman: valtavan '
+      + 'läpikuultavan kankaan, jota valaistiin vuoroin edestä ja takaa '
+      + 'niin että maisema muuttui katsojan silmissä. Sali pyöri, kankaat '
+      + 'pysyivät paikoillaan, ja näytökset tuottivat parhaimmillaan 200 '
+      + '000 frangia vuodessa. Valokuvaan Daguerre päätyi kumppaninsa '
+      + 'Nicéphore Niépcen kautta ja jatkoi yksin, kun Niépce kuoli 1833.'
+      + '\n\n'
+      + 'Illuusioiden ammattilainen puhui myös keksinnöstään näyttämön '
+      + 'sanoin: "Olen siepannut valon — olen pysäyttänyt sen lennon." '
+      + 'Maaliskuussa 1839 dioraamateatteri paloi, ja Daguerre kehotti '
+      + 'palomiehiä pelastamaan viidennen kerroksen, jossa olivat hänen '
+      + 'levynsä ja muistiinpanonsa. Kun Foggin isoisä matkusti vuonna '
+      + '1873, dagerrotypia oli jo mennyttä aikaa: märkälevymenetelmä oli '
+      + 'syrjäyttänyt sen 1850-luvulla, ja jo 1860 harva valokuvaaja '
+      + 'käytti enää Daguerren hopealevyjä.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1839-louis-daguerre.jpg`,
-      selite: 'Louis Daguerre, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Louis Daguerre oli ammatiltaan teatterimaalari ja illuusioiden '
+        + 'mestari, joka rakensi Pariisiin muuttuvien maisemien dioraaman. '
+        + 'Keksinnöstäänkin hän puhui kuin näyttämöltä.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Louis Daguerre 2.jpg', selite: 'Louis Daguerre dagerrotypiassa 1844.' },
     ilmio: {
@@ -397,10 +558,29 @@ export const KEKSINNOT = [
       + 'Bessemer perusti oman terästehtaan Sheffieldiin, josta tuli '
       + 'maailman teräskaupunki. Halpa teräs teki mahdolliseksi kiskot, '
       + 'pilvenpiirtäjät ja Eiffel-tornin kaltaiset rakenteet.',
+    henkilojuttu: 'Henry Bessemer (1813–1898) syntyi Hertfordshiressä keksijän '
+      + 'poikana; isä oli joutunut pakenemaan Pariisista Ranskan '
+      + 'vallankumouksen aikana. Ensimmäisen omaisuutensa poika teki '
+      + 'pronssijauheella: hän purki Nürnbergissä käsin tehdyn kalliin '
+      + 'tuotteen osiin, rakensi kuusi höyrykonetta sen valmistamiseen ja '
+      + 'pudotti hinnan murto-osaan entisestä. Salaisuutta varjeltiin '
+      + 'niin, että tehtaaseen pääsivät vain perheenjäsenet.'
+      + '\n\n'
+      + 'Bessemer patentoi elämänsä aikana ainakin 129 keksintöä ja — '
+      + 'toisin kuin useimmat keksijät — rikastui itse omillaan. Kun '
+      + 'teräksentekijät kieltäytyivät ostamasta lisenssiä, hän perusti '
+      + 'Sheffieldiin oman tehtaan ja alkoi alihinnoitella heidät. '
+      + 'Robert Mushet, jonka keksintö korjasi menetelmän viimeisen '
+      + 'virheen, jäi puille paljaille; eläkettä Bessemer alkoi maksaa '
+      + 'vasta kun Mushetin 16-vuotias tytär tuli yksin Lontooseen '
+      + 'vaatimaan sitä. Kun Foggin isoisä matkusti vuonna 1873, Bessemer '
+      + 'oli Iron and Steel Instituten puheenjohtaja, virassa 1871–1873.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1856-henry-bessemer.jpg`,
-      selite: 'Henry Bessemer, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Henry Bessemer oli sarjakeksijä ja kylmä liikemies, joka toisin '
+        + 'kuin useimmat keksijät rikastui omilla patenteillaan. '
+        + 'Kieltäytyville teollisuusmiehille hän vastasi hinnalla.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Henry Bessemer.jpg', selite: 'Henry Bessemer.' },
     ilmio: {
@@ -412,7 +592,7 @@ export const KEKSINNOT = [
         + 'työnä, jossa yksi virhe voi tappaa.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    lahde: 'en-Wikipedia "Bessemer process"',
+    lahde: 'en-Wikipedia "Bessemer process" ja "Henry Bessemer"',
   },
   {
     vuosi: 1867, paikka: 'Tukholma', lat: 59.3293, lon: 18.0686, x: 6435.6, y: 958.9,
@@ -428,10 +608,28 @@ export const KEKSINNOT = [
       + 'Dynamiitti teki Nobelista yhden Euroopan rikkaimmista miehistä. '
       + 'Testamentissaan hän määräsi omaisuutensa palkintoihin, joita on '
       + 'jaettu Tukholmassa vuodesta 1901.',
+    henkilojuttu: 'Alfred Nobel (1833–1896) kasvoi Tukholmassa ja Pietarissa '
+      + 'insinööri-isän perheessä, joka ehti sekä rikastua että mennä '
+      + 'konkurssiin. Koulua hän kävi yhteensä puolitoista vuotta, mutta '
+      + 'oppi kotiopettajilta kuusi kieltä ja kirjoitti runoja '
+      + 'englanniksi. Nitroglyseriini vei häneltä nuoremman veljen '
+      + 'Emilin: Heleneborgin vaja räjähti 1864 ja tappoi viisi ihmistä, '
+      + 'minkä jälkeen Nobel menetti luvan valmistaa räjähteitä '
+      + 'Tukholmassa.'
+      + '\n\n'
+      + 'Nobel oli yksinäinen, masennukseen taipuvainen ja jatkuvasti '
+      + 'kivuilta kärsivä mies. Hän ei mennyt naimisiin, ja tehtaitaan '
+      + 'hän johti kirjeitse ympäri Eurooppaa. Kun Foggin isoisä matkusti '
+      + 'vuonna 1873, Nobel muutti Hampurin liepeiltä Krümmelistä '
+      + 'Pariisiin Avenue de Malakoffin varrelle ja asui siellä vuoteen '
+      + '1891. Dynamiitti oli silloin kuuden vuoden ikäinen; palkinnoista '
+      + 'hän määräsi vasta testamentissaan 1895.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1867-alfred-nobel.jpg`,
-      selite: 'Alfred Nobel, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Alfred Nobel oli yksinäinen ja masennukseen taipuvainen mies, '
+        + 'joka kirjoitti runoja englanniksi ja johti tehtaitaan kirjeitse. '
+        + 'Nuoremman veljensä hän menetti räjähdyksessä 1864.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'AlfredNobel adjusted.jpg', selite: 'Alfred Nobel, Gösta Flormanin valokuva.' },
     ilmio: {
@@ -460,10 +658,29 @@ export const KEKSINNOT = [
       + 'aineiden ominaisuudet. Gallium (1875), skandium (1879) ja germanium '
       + '(1886) löytyivät ennusteiden mukaisina, ja taulukko on yhä kemian '
       + 'seinällä jokaisessa koulussa.',
+    henkilojuttu: 'Dmitri Mendelejev (1834–1907) syntyi Siperiassa Tobolskin '
+      + 'lähellä perheen nuorimpana; sisaruksia oli seitsemäntoista. Isä '
+      + 'sokeutui ja menetti opettajanpaikkansa, ja äiti käynnisti suvun '
+      + 'lasitehtaan uudelleen elättääkseen perheen. Kun isä oli kuollut '
+      + 'ja tehdas palanut, äiti vei pojan halki Venäjän ensin Moskovaan '
+      + 'ja sitten Pietariin, jotta tämä pääsisi opiskelemaan. '
+      + 'Valmistuttuaan Mendelejev sairastui tuberkuloosiin ja toipui '
+      + 'vasta Krimillä.'
+      + '\n\n'
+      + 'Mendelejev oli äkkipikainen ja riitaisa. Hän uhkasi itsemurhalla '
+      + 'saadakseen toisen vaimonsa suostumaan, ja avioerosta noussut '
+      + 'kohu maksoi hänelle paikan Venäjän tiedeakatemiassa. Kemian '
+      + 'ohella hän tutki öljyä, mittayksiköitä ja Jäämerta. Kun Foggin '
+      + 'isoisä matkusti vuonna 1873, jaksollinen järjestelmä oli neljän '
+      + 'vuoden ikäinen ja yhä pelkkä väite: ensimmäinen Mendelejevin '
+      + 'ennustama alkuaine, gallium, löytyi vasta 1875 ja skandium ja '
+      + 'germanium sen jälkeen.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1869-dmitri-mendeleev.jpg`,
-      selite: 'Dmitri Mendelejev, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Dmitri Mendelejev oli äkkipikainen ja riitaisa mies, joka ajoi '
+        + 'asiansa läpi hinnalla millä hyvänsä. Siperialaisen lapsuutensa '
+        + 'jälkeen hänet vietiin opiskelemaan tuhansien kilometrien päähän.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'DIMendeleevCab.jpg', selite: 'Dmitri Mendelejev työhuoneessaan 1897.' },
     ilmio: {
@@ -499,12 +716,31 @@ export const KEKSINNOT = [
       + 'Puristus teki moottorista tehokkaan ja hiljaisen. Daimler ja Maybach '
       + 'kehittivät siitä muutamassa vuodessa bensiinikäyttöisen version, '
       + 'joka oli riittävän kevyt ajoneuvoon.',
+    henkilojuttu: 'Nikolaus August Otto (1832–1891) syntyi Holzhausenissa '
+      + 'kuusilapsisen perheen nuorimpana, ja isä kuoli hänen '
+      + 'syntymävuonnaan. Koulun jälkeen hänestä tuli kauppa-apulainen: '
+      + 'hän kiersi Länsi-Saksaa myymässä kahvia, teetä, riisiä ja '
+      + 'sokeria. Insinöörikoulutusta hän ei saanut koskaan. Kuultuaan '
+      + '1860 Lenoirin kaasumoottorista hän rakensi veljensä kanssa siitä '
+      + 'kopion ja alkoi parannella sitä.'
+      + '\n\n'
+      + 'Otto oli itsepäinen mutta ei yksin: nelitahtisen kaasumoottorin '
+      + 'sai lopulta toimimaan hänen yhtiönsä insinööripari Franz Rings '
+      + 'ja Herman Schumm. Myöhemmin Otto menetti tärkeimmän patenttinsa, '
+      + 'kun hänen entinen työnjohtajansa Gottlieb Daimler löysi '
+      + 'vanhemman ranskalaisen patentin samaan ajatukseen. Kun Foggin '
+      + 'isoisä matkusti vuonna 1873, Otton ja Eugen Langenin yhtiö oli '
+      + 'juuri muuttanut Kölnin Deutziin ja ottanut nimen '
+      + 'Gasmotoren-Fabrik Deutz — mutta myytävä kone oli yhä äänekäs '
+      + 'ilmakehämoottori, ja nelitahtiseen oli kolme vuotta.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1876-nikolaus-otto.jpg`,
-      selite: 'Nikolaus Otto, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Nikolaus Otto oli koulutukseltaan kauppamies, joka myi kahvia ja '
+        + 'sokeria ennen kuin ryhtyi moottoreihin. Hän ei opiskellut '
+        + 'koskaan insinööriksi eikä lakannut parantelemasta samaa konetta.',
+      lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: null,
+    kuvaAito: { tiedosto: 'Nikolaus August Otto.png', selite: 'Nikolaus August Otto, tuntemattoman kuvaajan muotokuva noin 1868.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1876-otto.jpg`,
       selite: 'Kun suuri vauhtipyörä ei pysähdy, Otton vieressä seisova '
@@ -530,12 +766,31 @@ export const KEKSINNOT = [
       + 'ensimmäisen sähköraitiotien. Sähkövoima teki mahdolliseksi '
       + 'maanalaiset radat, joissa höyryveturin savu olisi ollut '
       + 'tukahduttava.',
+    henkilojuttu: 'Werner Siemens (1816–1892) oli vuokraviljelijän neljästätoista '
+      + 'lapsesta kolmas. Rakennusakatemiaan ei ollut varaa, joten hän '
+      + 'meni Preussin tykistö- ja insinöörikouluun ja palveli upseerina; '
+      + 'sotilaana hän oli mukana kehittämässä sähköllä laukaistavia '
+      + 'merimiinoja Kielin puolustukseen. Palattuaan sodasta hän päätti '
+      + 'keskittyä parantelemaan jo olemassa olevia tekniikoita, myi '
+      + 'ensimmäisen keksintönsä oikeudet 1843 englantilaiselle yhtiölle '
+      + 'ja perusti 1847 Johann Halskeen kanssa lennätinpajan Berliiniin.'
+      + '\n\n'
+      + 'Siemens oli yhtä paljon järjestäjä kuin keksijä: yhtiö '
+      + 'kansainvälistyi heti, ja veljet hoitivat Lontoon ja Pietarin. '
+      + 'Hän kannatti avoimesti työväen aseman parantamista ja kirjoitti, '
+      + 'ettei päämääränä saa olla tehdas, jossa "työn orjat" raatavat '
+      + 'rikkaiden käsissä. Kun Foggin isoisä matkusti vuonna 1873, '
+      + 'Siemens & Halske oli jo rakentanut yli 11 000 kilometrin '
+      + 'lennätinlinjan Lontoosta Kalkuttaan, mutta sähköveturiin oli '
+      + 'kuusi vuotta ja aatelisarvoonsa viisitoista.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1879-werner-von-siemens.jpg`,
-      selite: 'Werner von Siemens, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Werner von Siemens oli upseeri ja yritysjohtaja yhtä paljon kuin '
+        + 'keksijä. Hän puolusti avoimesti työväen asemaa ja varoitti '
+        + 'tehtaista, joissa raatavat "työn orjat".',
+      lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: null,
+    kuvaAito: { tiedosto: 'Wvs 1885.jpg', selite: 'Werner von Siemens, valokuva noin 1885.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1879-siemens.jpg`,
       selite: 'Kuusipaikkaisen avovaunun poika kuuntelee, mistä veturin '
@@ -562,10 +817,27 @@ export const KEKSINNOT = [
       + 'parani, ja Pariisiin perustettiin Pasteur-instituutti vuonna 1888. '
       + 'Suomalainen Albert Edelfelt maalasi Pasteurin laboratoriossaan samana '
       + 'vuonna kuin rokote syntyi.',
+    henkilojuttu: 'Louis Pasteur (1822–1895) oli köyhän nahkurin poika Jurasta ja '
+      + 'keskinkertainen koulupoika, joka piirsi mieluummin muotokuvia '
+      + 'kuin luki; hän oli luki- ja kirjoitushäiriöinen ja reputti '
+      + 'ensimmäisen pääsykokeensa École Normaleen. Esimiehenä hän oli '
+      + 'ankara: koulun johtajana hän määräsi opiskelijoiden hylkäämän '
+      + 'lampaanmuhennoksen tarjolle joka maanantai ja uhkasi erottaa '
+      + 'tupakoivat, minkä jälkeen 80 opiskelijasta 73 erosi itse.'
+      + '\n\n'
+      + 'Elämä koetteli. Viidestä lapsesta kolme kuoli lavantautiin. '
+      + 'Vuonna 1868 Pasteur sai aivohalvauksen, joka halvaannutti hänen '
+      + 'vasemman puolensa; sen jälkeen kokeet tekivät hänen ohjeidensa '
+      + 'mukaan avustajat Émile Roux ja Charles Chamberland. Kun Foggin '
+      + 'isoisä matkusti vuonna 1873, halvauksesta toipunut 50-vuotias '
+      + 'Pasteur valittiin Ranskan lääketieteen akatemian jäseneksi — '
+      + 'raivotautirokotteeseen oli vielä kaksitoista vuotta.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1885-louis-pasteur.jpg`,
-      selite: 'Louis Pasteur, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Louis Pasteur oli keskinkertainen koulupoika ja armoton esimies, '
+        + 'joka ei antanut kiistoissa periksi. Halvaus vei häneltä kätten '
+        + 'työn mutta ei työtä.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Albert Edelfelt - Louis Pasteur - 1885.jpg', selite: 'Louis Pasteur laboratoriossaan, Albert Edelfeltin maalaus 1885.' },
     ilmio: {
@@ -595,12 +867,31 @@ export const KEKSINNOT = [
       + 'kanssa Mannheimista Pforzheimiin, yli sata kilometriä, kertomatta '
       + 'miehelleen. Matka osoitti, että auto kestää pitkän ajon — ja toi '
       + 'tehtaalle ensimmäiset tilaukset.',
+    henkilojuttu: 'Carl Benz (1844–1929) syntyi Karlsruhen laidalla '
+      + 'veturinkuljettajan pojaksi, ja isä kuoli keuhkokuumeeseen pojan '
+      + 'ollessa kaksivuotias. Köyhyydestä huolimatta äiti piti huolen '
+      + 'koulusta: Benz pääsi 15-vuotiaana Karlsruhen polyteknilliseen '
+      + 'kouluun ja valmistui 19-vuotiaana. Sen jälkeen tuli seitsemän '
+      + 'vuotta töitä, joihin hän ei sopeutunut — konepaja, vaakatehdas, '
+      + 'siltatehdas ja lopulta wieniläinen rautarakennusliike.'
+      + '\n\n'
+      + 'Benzin pelasti kahdesti hänen vaimonsa Bertha. Kun ensimmäisen '
+      + 'oman pajan työkalut ulosmitattiin, Bertha osti myötäjäisillään '
+      + 'pois epäluotettavan yhtiökumppanin. Kun auto ei mennyt kaupaksi, '
+      + 'hän ajoi 1888 poikiensa kanssa 104 kilometriä Mannheimista '
+      + 'Pforzheimiin miehelleen kertomatta ja keksi matkalla jarrupalat. '
+      + 'Kun Foggin isoisä matkusti vuonna 1873, Benz oli 28-vuotias '
+      + 'vastavihitty konepajanpitäjä, jonka yritys oli kaatumassa; '
+      + 'esikoispoika Eugen syntyi samana vuonna, ja autoon oli '
+      + 'kolmetoista vuotta.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1886-carl-benz.jpg`,
-      selite: 'Carl Benz, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Carl Benz ei sopeutunut yhteenkään palkkatyöhön ja menetti kaksi '
+        + 'yritystä ennen menestystä. Vaimo Bertha pelasti sekä pajan että '
+        + 'auton.',
+      lahde: 'Matkakirjan havainnekuva',
     },
-    kuvaAito: null,
+    kuvaAito: { tiedosto: 'Carl Benz circa 1920.jpg', selite: 'Carl Benz noin 1920.' },
     ilmio: {
       osoite: `${KEKSINTO_KUVAJUURI}/1886-benz.jpg`,
       selite: 'Kadun poika odottaa hevosen ilmestyvän, mutta ääni tulee '
@@ -611,7 +902,7 @@ export const KEKSINNOT = [
         + 'ohjaajansa.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    lahde: 'en-Wikipedia "Benz Patent-Motorwagen"',
+    lahde: 'en-Wikipedia "Benz Patent-Motorwagen" ja "Carl Benz"',
   },
   {
     vuosi: 1888, paikka: 'Karlsruhe', lat: 49.0069, lon: 8.4037, x: 6113.5, y: 1433.1,
@@ -626,10 +917,28 @@ export const KEKSINNOT = [
       + 'Kun opiskelija kysyi, mihin aaltoja voisi käyttää, Hertz vastasi: '
       + '"Ei mihinkään." Seitsemän vuotta myöhemmin Marconi lähetti niillä '
       + 'viestin. Taajuuden yksikkö hertsi on nimetty hänen mukaansa.',
+    henkilojuttu: 'Heinrich Hertz (1857–1894) syntyi Hampurissa asianajajan ja '
+      + 'poliitikon poikana. Koulussa hän oli hyvä sekä luonnontieteissä '
+      + 'että kielissä ja opetteli huvikseen arabiaa. Hän opiskeli '
+      + 'Dresdenissä, Münchenissä ja Berliinissä, jossa hänen '
+      + 'opettajikseen tulivat Gustav Kirchhoff ja Hermann von Helmholtz. '
+      + 'Helmholtz ehdotti hänelle jo 1879 Maxwellin teorian '
+      + 'koettelemista, mutta Hertz piti tehtävää liian vaikeana ja '
+      + 'siirsi sen syrjään lähes seitsemäksi vuodeksi.'
+      + '\n\n'
+      + 'Kun koe lopulta onnistui, Hertz ei nähnyt sille mitään käyttöä: '
+      + 'kyse oli hänen mukaansa vain siitä, että Maxwell oli ollut '
+      + 'oikeassa. Hän kuoli 36-vuotiaana leikkauksen jälkitautiin. Kun '
+      + 'Foggin isoisä matkusti vuonna 1873, Hertz oli 16-vuotias '
+      + 'koululainen Hampurissa — ja samana vuonna ilmestyi James Clerk '
+      + 'Maxwellin teos A Treatise on Electricity and Magnetism, jonka '
+      + 'ennustuksen Hertz viisitoista vuotta myöhemmin todisti todeksi.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1888-heinrich-hertz.jpg`,
-      selite: 'Heinrich Hertz, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Heinrich Hertz oli lahjakas myös kielissä ja opetteli '
+        + 'koululaisena arabiaa. Todistettuaan radioaallot olemassa '
+        + 'oleviksi hän sanoi, ettei niistä ole mitään hyötyä.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Heinrich Rudolf Hertz.jpg', selite: 'Heinrich Hertz, Robert Krewaldtin valokuva.' },
     ilmio: {
@@ -656,10 +965,29 @@ export const KEKSINNOT = [
       + 'sai patentin 1896. Joulukuussa 1901 hänen asemansa Cornwallissa '
       + 'lähetti kirjaimen S Atlantin yli Newfoundlandiin. Marconi sai fysiikan '
       + 'Nobelin 1909.',
+    henkilojuttu: 'Guglielmo Marconi (1874–1937) syntyi Bolognassa italialaisen '
+      + 'maanomistajan ja irlantilaisen Annie Jamesonin poikana; äiti oli '
+      + 'viskitehtailijasuvun tyttärentytär. Koulua Marconi ei käynyt '
+      + 'lainkaan vaan sai kotiopettajia, joista tärkein oli '
+      + 'livornolainen fysiikanopettaja Vincenzo Rosa. Kaksikymppisenä '
+      + 'hän kokosi laitteensa Villa Griffonen ullakolle huoneeseen, '
+      + 'jossa oli aiemmin kasvatettu silkkiäistoukkia.'
+      + '\n\n'
+      + 'Marconi oli ennen muuta yrittäjä: hän ei keksinyt radioaaltoja '
+      + 'vaan teki niistä liiketoiminnan, ja hänen yhtiönsä sähköttäjät '
+      + 'olivat Titanicin radiohuoneessa 1912. Fysiikan Nobelin hän sai '
+      + '1909 yhdessä Ferdinand Braunin kanssa. Vuonna 1923 hän liittyi '
+      + 'Italian fasistiseen puolueeseen ja nousi sen aikana maan '
+      + 'tiedeakatemian johtoon. Kun Foggin isoisä matkusti vuonna 1873, '
+      + 'Marconia ei ollut vielä olemassa — hän syntyi seuraavana '
+      + 'keväänä, eikä kukaan ollut vielä osoittanut radioaaltojen olevan '
+      + 'olemassa.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1895-guglielmo-marconi.jpg`,
-      selite: 'Guglielmo Marconi, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Guglielmo Marconi ei käynyt päivääkään koulua vaan opiskeli '
+        + 'kotiopettajien johdolla. Hän oli yhtä paljon liikemies kuin '
+        + 'keksijä — ja liittyi 1923 Italian fasistiseen puolueeseen.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Guglielmo Marconi.jpg', selite: 'Guglielmo Marconi 1908, Pach Brothers.' },
     ilmio: {
@@ -686,10 +1014,29 @@ export const KEKSINNOT = [
       + 'Joulukuun 22. päivänä 1895 hän kuvasi vaimonsa Anna Berthan käden. '
       + '"Olen nähnyt kuolemani", vaimo sanoi. Kuukaudessa säteitä käytettiin '
       + 'jo sairaaloissa, ja Röntgen sai ensimmäisen fysiikan Nobel-palkinnon 1901.',
+    henkilojuttu: 'Wilhelm Röntgen (1845–1923) syntyi Lennepissä kangaskauppiaan '
+      + 'ainoana lapsena ja muutti kolmivuotiaana Alankomaihin, minkä '
+      + 'vuoksi hän oli neljäkymmentä vuotta vailla kansalaisuutta. '
+      + 'Utrechtin teknillisestä koulusta hänet erotettiin 1865 '
+      + 'syyttömänä: hänen katsottiin piirtäneen opettajasta pilakuvan, '
+      + 'jonka oli tehnyt joku toinen. Ilman päästötodistusta yliopisto '
+      + 'oli kiinni, kunnes Zürichin polyteknikko otti hänet pelkän '
+      + 'pääsykokeen perusteella.'
+      + '\n\n'
+      + 'Röntgen oli sulkeutunut mies, joka ei halunnut julkisuutta: hän '
+      + 'kieltäytyi pitämästä Nobel-luentoa ja määräsi kirjeenvaihtonsa '
+      + 'hävitettäväksi kuolemansa jälkeen. Patenttia hän ei ottanut, '
+      + 'koska halusi löydön kaikkien käyttöön. Kun Foggin isoisä '
+      + 'matkusti vuonna 1873, Röntgen oli 28-vuotias apulainen, joka '
+      + 'seurasi opettajaansa August Kundtia Würzburgista Strasbourgiin; '
+      + 'vaimo Anna Bertha oli naitu vuotta aiemmin, eikä rahaa juuri '
+      + 'ollut.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1895-wilhelm-rontgen.jpg`,
-      selite: 'Wilhelm Röntgen, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Wilhelm Röntgen oli sulkeutunut ja julkisuutta kaihtava mies: '
+        + 'hän kieltäytyi pitämästä Nobel-luentoa, ei ottanut löydöstään '
+        + 'patenttia ja määräsi kirjeenvaihtonsa hävitettäväksi.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Roentgen2.jpg', selite: 'Wilhelm Röntgen noin 1900.' },
     ilmio: {
@@ -717,15 +1064,39 @@ export const KEKSINNOT = [
       + 'kymmenen lyhytfilmiä. Juna, joka saapuu asemalle, sai tarinan mukaan '
       + 'katsojat säikähtämään. Vuoden päästä kinematografeja kiersi jo '
       + 'ympäri maailmaa.',
+    henkilojuttu: 'Auguste (1862–1954) ja Louis (1864–1948) Lumière syntyivät '
+      + 'Besançonissa, jossa heidän isänsä piti pientä '
+      + 'valokuvausateljeeta. Perhe muutti Lyoniin 1870, ja pojat kävivät '
+      + 'kaupungin suurimman teknillisen koulun La Martinièren. Työ oli '
+      + 'perheyritystä alusta asti: veljekset patentoivat filmin '
+      + 'reikäperforoinnin, joka kuljettaa kuvanauhaa tasaisesti kameran '
+      + 'ja projektorin läpi, ja kehittivät kinematografin: yhden '
+      + 'laitteen, joka sekä kuvasi, kopioi että heijasti elokuvan.'
+      + '\n\n'
+      + 'Elokuva ei ollut heille tulevaisuus vaan uutuus. He '
+      + 'kieltäytyivät myymästä kameraansa Georges Mélièsille, kutsuivat '
+      + 'elokuvaa keksinnöksi ilman tulevaisuutta ja vetäytyivät alalta '
+      + '1905 keskittyäkseen väriin; heidän autochrome-menetelmänsä tuli '
+      + 'markkinoille 1907. Kymmenessä vuodessa yhtiön kuvaajat olivat '
+      + 'silti ehtineet tehdä yli tuhat lyhyttä elokuvaa arjesta ja '
+      + 'työstä. Kun Foggin isoisä matkusti vuonna 1873, '
+      + 'Auguste oli kymmenen ja Louis kahdeksan vuoden ikäinen '
+      + 'koulupoika Lyonissa, ja heidän isänsä otti muotokuvia '
+      + 'lasilevyille.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1895-auguste-lumiere.jpg`,
-      selite: 'Auguste Lumière, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Auguste Lumière oli veljeksistä vanhempi ja johti perheen '
+        + 'valokuvatehdasta yhdessä veljensä kanssa. Elokuva oli heille '
+        + 'uutuustuote, josta he luopuivat jo 1905.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaToinen: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1895-louis-lumiere.jpg`,
-      selite: 'Louis Lumière, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Louis Lumière tuli Pariisiin esittelemään värivalokuvausta ja '
+        + 'hämmästyi, että liikkuvat mustavalkokuvat kiinnostivat yleisöä '
+        + 'enemmän. Veljekset pitivät elokuvaa keksintönä ilman '
+        + 'tulevaisuutta.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Fratelli Lumiere.jpg', selite: 'Auguste ja Louis Lumière noin 1895.' },
     ilmio: {
@@ -753,10 +1124,28 @@ export const KEKSINNOT = [
       + 'Dieselin kone oli raskas mutta säästeliäs, ja se valtasi laivat, '
       + 'veturit ja kuorma-autot. Diesel itse katosi Englannin kanaalilla '
       + 'matkustajalaivalta vuonna 1913.',
+    henkilojuttu: 'Rudolf Diesel (1858–1913) syntyi Pariisissa baijerilaisten '
+      + 'siirtolaisten poikana ja vietti ensimmäiset yhdeksän kuukauttaan '
+      + 'sijaisperheessä maalla. Isä valmisti nahkatavaraa, ja poika '
+      + 'kuljetti tilaukset asiakkaille kärryillä. Ranskan ja Preussin '
+      + 'sodan syttyessä 1870 perhe karkotettiin Lontooseen, ja äiti '
+      + 'lähetti 12-vuotiaan Rudolfin yksin Augsburgiin sukulaisten luo '
+      + 'oppimaan saksaa.'
+      + '\n\n'
+      + 'Diesel oli poikkeuksellisen kunnianhimoinen ja teki työnsä '
+      + 'hengenvaarassa: höyryllä toiminut koemoottori räjähti ja oli '
+      + 'tappaa hänet, ja toinen räjähdys vei häneltä kuukausia '
+      + 'sairaalassa sekä osan näöstä. Vuonna 1913 hän katosi yöllä '
+      + 'laivasta matkalla Antwerpenistä Lontooseen; pankkitilit olivat '
+      + 'tyhjät, ja kuolinsyy on yhä avoin. Kun Foggin isoisä matkusti '
+      + 'vuonna 1873, Diesel päätti peruskoulunsa luokkansa parhaana ja '
+      + 'kirjoittautui Augsburgin vasta perustettuun teollisuuskouluun.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1897-rudolf-diesel.jpg`,
-      selite: 'Rudolf Diesel, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Rudolf Diesel oli pakolaislapsi, joka ilmoitti 14-vuotiaana '
+        + 'kirjeellä vanhemmilleen ryhtyvänsä insinööriksi. Kaksi '
+        + 'räjähdystä oli vähällä tappaa hänet työn ääressä.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Rudolf Diesel.jpg', selite: 'Rudolf Diesel.' },
     ilmio: {
@@ -783,10 +1172,31 @@ export const KEKSINNOT = [
       + 'polonium sai nimensä Marien kotimaasta, radium säteilystään. '
       + 'Marie Curie sai Nobelin fysiikassa 1903 ja kemiassa 1911 — ainoana '
       + 'ihmisenä kahdessa eri tieteessä.',
+    henkilojuttu: 'Maria Skłodowska (1867–1934) syntyi Varsovassa Venäjän vallan '
+      + 'alla kahden opettajan nuorimpana lapsena. Kun venäläiset '
+      + 'kielsivät laboratorio-opetuksen puolalaisissa kouluissa, isä toi '
+      + 'välineet kotiin ja opetti lapsensa käyttämään niitä. Äiti kuoli '
+      + 'tuberkuloosiin ja vanhin sisar lavantautiin; Maria oli silloin '
+      + 'kymmenvuotias. Naisena hän ei päässyt yliopistoon, joten hän '
+      + 'opiskeli salaisessa "lentävässä yliopistossa" ja työskenteli '
+      + 'kotiopettajattarena.'
+      + '\n\n'
+      + 'Sisarusten sopimus vei hänet eteenpäin: ensin Maria elätti '
+      + 'sisarensa lääketieteen opinnot Pariisissa, sitten sisar hänen '
+      + 'omansa. Latinalaiskorttelin ullakolla hän paleli, unohti syödä '
+      + 'ja suoritti kaksi tutkintoa. Kotimaahan hän olisi halunnut '
+      + 'jäädä, mutta Krakovan yliopisto ei ottanut naista töihin, ja '
+      + 'Pierre Curien kirje käänsi hänet takaisin Pariisiin. Kun '
+      + 'Foggin isoisä matkusti vuonna '
+      + '1873, Maria oli viisivuotias Varsovassa eikä radioaktiivisuutta '
+      + 'tunnettu lainkaan — koko sanan hän keksi itse vasta '
+      + 'neljännesvuosisataa myöhemmin.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1898-marie-curie.jpg`,
-      selite: 'Marie Curie, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Marie Curie opiskeli salaisessa "lentävässä yliopistossa", koska '
+        + 'naisia ei otettu Varsovan yliopistoon. Pariisissa hän paleli '
+        + 'ullakollaan ja unohti syödä.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Marie Curie c. 1898.jpg', selite: 'Marie Curie noin 1898.' },
     ilmio: {
@@ -814,10 +1224,29 @@ export const KEKSINNOT = [
       + 'saksalaiset keräsivät kreiville uuden alun. Vuodesta 1910 zeppeliinit '
       + 'kuljettivat matkustajia, ja 1930-luvulla ne lensivät säännöllisesti '
       + 'Atlantin yli.',
+    henkilojuttu: 'Kreivi Ferdinand von Zeppelin (1838–1917) kasvoi Konstanzin '
+      + 'lähellä sukukartanossa ja sai kotiopetusta. Hän valitsi upseerin '
+      + 'uran Württembergin armeijassa mutta otti toistuvasti '
+      + 'virkavapaata opiskellakseen tekniikkaa ja kemiaa. Vuonna 1863 '
+      + 'hän lähti tarkkailijaksi Yhdysvaltain sisällissotaan ja matkasi '
+      + 'sieltä oppaiden kanssa kanooteilla Ylä-Mississippille; St. '
+      + 'Paulissa hän nousi ensimmäisen kerran ilmapalloon ja mainitsi '
+      + 'myöhemmin sen hetken ilmalaiva-ajatuksensa alkuna.'
+      + '\n\n'
+      + 'Zeppelin oli itsepäinen ja hankala: hänet pakotettiin eroamaan '
+      + 'armeijasta 52-vuotiaana huonosti sujuneiden sotaharjoitusten '
+      + 'jälkeen, hän erotti ensimmäisen insinöörinsä ja kiinnitti '
+      + 'lopulta vaimonsa maat lainan vakuudeksi. Kun Foggin isoisä '
+      + 'matkusti vuonna 1873, Zeppelin ylennettiin toukokuussa majuriksi '
+      + '— ja vasta seuraavan vuoden maaliskuussa hän kirjoitti '
+      + 'päiväkirjaansa ensimmäisen kuvauksen jäykkärunkoisesta '
+      + 'ilmalaivasta, jonka sisällä olisi useita erillisiä kaasusäkkejä.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1900-ferdinand-von-zeppelin.jpg`,
-      selite: 'Ferdinand von Zeppelin, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Ferdinand von Zeppelin oli itsepäinen upseeri, joka pakotettiin '
+        + 'eroamaan armeijasta ja pani lopulta vaimonsa maat pantiksi '
+        + 'ilmalaivojensa vuoksi.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Ferdinand von Zeppelin.jpg', selite: 'Ferdinand von Zeppelin.' },
     ilmio: {
@@ -829,7 +1258,7 @@ export const KEKSINNOT = [
         + 'kyky palata on vielä todistamatta.',
       lahde: 'Matkakirjan havainnekuva',
     },
-    lahde: 'en-Wikipedia "LZ 1"',
+    lahde: 'en-Wikipedia "LZ 1" ja "Ferdinand von Zeppelin"',
   },
   {
     vuosi: 1909, paikka: 'Calais', lat: 50.9513, lon: 1.8587, x: 5895.3, y: 1348.6,
@@ -845,10 +1274,28 @@ export const KEKSINNOT = [
       + 'läheltä ilman kompassia ja laskeutui Doverin linnan viereen 37 '
       + 'minuuttia myöhemmin. Blériot XI -koneita tilattiin sadoittain, ja '
       + 'lentokoneesta tuli Euroopassa vakavasti otettava kulkuneuvo.',
+    henkilojuttu: 'Louis Blériot (1872–1936) syntyi Cambraissa viisilapsisen '
+      + 'perheen esikoisena ja pärjäsi koulussa erityisen hyvin '
+      + 'konepiirustuksessa. Hän läpäisi pääsykokeen Pariisin '
+      + 'arvostettuun École Centraleen ja valmistui insinööriksi. Rahansa '
+      + 'hän teki auton valonheittimillä: hänen asetyleenilamppunsa '
+      + 'olivat maailman ensimmäiset käyttökelpoiset, ja Renault ja '
+      + 'Panhard ostivat niitä. Voitot menivät lentokoneisiin.'
+      + '\n\n'
+      + 'Blériot rikkoi koneen toisensa jälkeen ja selvisi joka kerta. '
+      + 'Kerran hän kiipesi syöksykierteessä istuimeltaan kohti pyrstöä '
+      + 'saadakseen koneen nokan ylös. Douaissa pakoputken eriste irtosi '
+      + 'ja poltti hänen kenkänsä puhki, mutta hän lensi lentonsa '
+      + 'loppuun; kolmannen asteen palovammat paranivat yli kaksi '
+      + 'kuukautta. Kun Foggin isoisä matkusti vuonna 1873, Blériot oli '
+      + 'vuoden ikäinen lapsi Cambraissa, eikä yksikään ihminen ollut '
+      + 'vielä lentänyt moottorikoneella.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1909-louis-bleriot.jpg`,
-      selite: 'Louis Blériot, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Louis Blériot rahoitti lentokoneensa myymällä '
+        + 'autonvalonheittimiä ja rikkoi konetta toisensa jälkeen. Kerran '
+        + 'hän lensi lentonsa loppuun kenkä palaen jalassa.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Louis Bleriot.jpg', selite: 'Louis Blériot.' },
     ilmio: {
@@ -885,10 +1332,30 @@ export const KEKSINNOT = [
       + 'jäsenille Frith Streetillä. Kuvassa oli 30 juovaa ja se välkkyi, '
       + 'mutta kasvot liikkuivat. BBC aloitti säännölliset lähetykset '
       + 'Bairdin järjestelmällä 1932.',
+    henkilojuttu: 'John Logie Baird (1888–1946) syntyi Helensburghissa kirkkoherran '
+      + 'nuorimpana lapsena. Glasgow\'n teollisuuskaupungin '
+      + 'harjoittelupaikat tekivät hänestä sosialistin ja veivät hänen '
+      + 'terveytensä; opinnot katkesivat maailmansotaan eikä hän koskaan '
+      + 'valmistunut. Ennen televisiota hän yritti tehdä timantteja '
+      + 'grafiitista, lasisen partaveitsen ja ilmatäytteiset kengät. '
+      + 'Menestys tuli vasta lämpösukasta.'
+      + '\n\n'
+      + 'Sairaana ja rahattomana Baird muutti 1923 Hastingsiin ja rakensi '
+      + 'ensimmäisen toimivan televisionsa hatturasiasta, saksista, '
+      + 'parsinneuloista, polkupyörän lampunlinsseistä, teelaatikosta ja '
+      + 'sinettivahasta. Kun hän tuli esittelemään laitettaan Daily '
+      + 'Expressin toimitukseen, uutispäällikkö pyysi hankkiutumaan eroon '
+      + '"hullusta, jolla on kone langattomaan näkemiseen". Kun Foggin '
+      + 'isoisä matkusti vuonna 1873, Bairdia ei ollut syntynyt — mutta '
+      + 'helmikuussa 1873 Willoughby Smith kertoi Lontoon '
+      + 'lennätininsinööreille, että valo muuttaa seleenin '
+      + 'sähkönjohtavuutta. Siitä havainnosta alkoi tie televisioon.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1926-john-logie-baird.jpg`,
-      selite: 'John Logie Baird, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'John Logie Baird oli sinnikäs epäonnistuja: lasinen partaveitsi, '
+        + 'ilmatäytteiset kengät, timantit grafiitista. Ensimmäisen '
+        + 'televisionsa hän kokosi hatturasiasta ja parsinneuloista.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'John Logie Baird in 1917.jpg', selite: 'John Logie Baird 1917.' },
     ilmio: {
@@ -916,10 +1383,30 @@ export const KEKSINNOT = [
       + 'kymmenen vuotta. Oxfordissa Howard Florey ja Ernst Chain '
       + 'puhdistivat sen 1940, ja toisen maailmansodan aikana penisilliiniä '
       + 'tuotettiin miljoonille. Kolmikko sai Nobelin 1945.',
+    henkilojuttu: 'Alexander Fleming (1881–1955) syntyi Ayrshiren maatilalla ja '
+      + 'menetti isänsä seitsenvuotiaana. Hän työskenteli neljä vuotta '
+      + 'laivayhtiön konttorissa, kunnes sedän perintö ja isoveljen '
+      + 'esimerkki veivät hänet 20-vuotiaana lääketieteen opintoihin '
+      + 'Lontooseen. Tutkijaksi hänet houkutteli osittain ampumaseura: '
+      + 'kerhon kapteeni halusi pitää hyvän ampujan talossa ja järjesti '
+      + 'hänelle paikan sairaalan rokotusosastolta.'
+      + '\n\n'
+      + 'Fleming oli tunnetusti epäjärjestelmällinen laboratoriossa, ja '
+      + 'hänen apulaisensa piti juuri sitä molempien suurten löytöjen '
+      + 'syynä. Ensimmäisen maailmansodan kenttäsairaaloissa hän '
+      + 'havaitsi, että antiseptiset aineet tappoivat haavoittuneita '
+      + 'enemmän kuin itse tulehdus, ja osoitti sen kokeella 1917 — mutta '
+      + 'armeijan lääkärit jatkoivat entiseen tapaan. Kun Foggin isoisä '
+      + 'matkusti vuonna 1873, tulehtuneelle haavalle ei ollut mitään '
+      + 'tehtävissä: Joseph Lister oli tuonut karbolihapon leikkaussaliin '
+      + 'vasta 1860-luvun puolivälissä, eikä bakteereja tappavia '
+      + 'lääkkeitä ollut olemassa.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1928-alexander-fleming.jpg`,
-      selite: 'Alexander Fleming, kuvaputken generoitu studiomuotokuva (2026).',
-      lahde: 'Kuvaputken studiomuotokuva',
+      selite: 'Alexander Fleming oli tunnetusti epäjärjestelmällinen tutkija, '
+        + 'ja hänen apulaisensa piti juuri sitä hänen löytöjensä syynä. '
+        + 'Tutkijaksi hänet houkutteli ampumaseuran kapteeni.',
+      lahde: 'Matkakirjan havainnekuva',
     },
     kuvaAito: { tiedosto: 'Synthetic Production of Penicillin TR1468.jpg', selite: 'Alexander Fleming laboratoriossaan 1943.' },
     ilmio: {
