@@ -92,6 +92,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1505: KARTTANIMIOT EIVAT LIMITY - Bulgaria 100 km: Pelastuskarhu ja Veda Slovena erillaan; nostotason uudelleenpolton (2026-09-03b) jalkeen myos Kirkpinar/Evros (Edirne) ja Romanian karhurypas (Moldoveanu, Karhusanktuaari; elaintaky siirtyi Baile Tusnadiin). Kunnes nostotaso on poltettu, nostot piirtyvat elavina (v10-laatat eivat kelpaa).',
   'v1504: KEKSINNOT-LINSSIN TUMMA ASU - avaa linssi: kartta tummenee, lamput valaisevat kartan pintaa ilman mustaa rengasta, matkakirja ja karttaselite katoavat, taustaaani ja luenta loppuvat, ilmiokuva isona; keksinnon kohdalla yksi pehmea kilahdus. VAPAA SELAUS - klikkaa mita tahansa keksijaa alarivilla: kello pysahtyy, nakyma siirtyy siihen, nahdyt tarkkoina ja tulevat sumeina, valittu isolla; nuolinappaimet selaavat; Jatka jatkaa siita.',
   'v1503: JALANKULKUMUSIIKKI - lahde kaupungista jalan pienella heitolla: raita jatkuu valipisteessa nopanheiton ja seuraavan siirron yli ja feidaa vasta kaupunkiin saavuttaessa; uusi laukkaava raita kuuluu kun generointiajo on valmis (siirtyma-jalan.mp3 ampariin).',
   'v1502: SARAJEVON AANIMAISEMA - saavu Sarajevoon: kavelykadun halina tai suihkulahde, ei kirkonkelloja. KEHITTAJAN VOIMAKKUUSSAATIMET - hammasratas > taustaaani / taustamusiikki +/-: soiva aani seuraa heti, arvo sailyy sivun latauksen yli (x1,0 = nykyinen taso).',

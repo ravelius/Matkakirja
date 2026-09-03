@@ -62,18 +62,18 @@
  */
 import {
   KOHDE_SYMBOLI_SKAALA, eritteleKohdeRyhmat, kohdeKarttarivit, kohdeMerkinLadonta,
-  paivitaKohdeNimiot,
+  maanLadontaEsteet, paivitaKohdeNimiot,
 } from '../../js/fokuskohteet.js';
 import { nippuViivanJana, niputaFokusmerkit } from '../../js/fokusniput.js';
 import {
   NOSTOLADONTA_S, nostoladontaSkaala, nostoladontaTiiviste,
 } from '../../js/nostoladonta.js';
 import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
-import { nostoKarttarivit, nostoKaupunginPooli } from '../../js/fokusnosto.js';
-import { elaintakyKarttarivit } from '../../js/elaintaky.js';
-import { hetkiKarttarivit } from '../../js/historian-hetket.js';
-import { skandaaliKarttarivit } from '../../js/skandaalit.js';
-import { syvennysKarttarivit } from '../../js/syvennys.js';
+import { kytkeFokusnosto, nostoKarttarivit, nostoKaupunginPooli } from '../../js/fokusnosto.js';
+import { elaintakyKarttarivit, elaintakyNimioKylki } from '../../js/elaintaky-rivit.js';
+import { hetkiKarttarivit, kytkeHistorianHetket } from '../../js/historian-hetket.js';
+import { kytkeSkandaalit, skandaaliKarttarivit } from '../../js/skandaalit.js';
+import { kytkeSyvennys, syvennysKarttarivit } from '../../js/syvennys.js';
 
 /**
  * Maan kaupungit laudan paketista.
@@ -165,6 +165,9 @@ function nostoladontaMerkit({
     fokusPohjaBbox: bbox,
     fokusPohjanAlla: pohjanAlla,
     kiertoKohdat: (x) => [x],
+    // Väistön ulkoiset esteet: edeltävät maat maatunnusjärjestyksessä
+    // (js/fokuskohteet.js NAAPURIMAAT LADOTAAN JÄRJESTYKSESSÄ).
+    fokuskohdeIso: iso,
     fokuskohdeKaupungit: kaupungit,
     fokuskohdeAvain: `${iso}:poltto`,
     fokuskohdeEroAvain: null,
@@ -355,7 +358,14 @@ function keraaElaintakyt(pack) {
       laji: 'elain',
       nimio: taky.nimio,
       nimioNakyy: Boolean(taky.nimio),
-      nimioPuoli: 'oikea',
+      /*
+       * KYLKI MAAN VALMIIN LADONNAN YMPÄRILTÄ (3.9.2026,
+       * js/elaintaky-rivit.js elaintakyNimioKylki): sama funktio ja
+       * samat esteet kuin elävällä kerroksella (js/elaintaky.js).
+       */
+      nimioPuoli: elaintakyNimioKylki(
+        taky, KOHDE_SYMBOLI_SKAALA * NOSTOLADONTA_S, maanLadontaEsteet(pack, taky.iso),
+      ),
       nimioRajaton: false,
       osat: [],
       porras: KOHDE_SYMBOLI_SKAALA * NOSTOLADONTA_S,
@@ -370,6 +380,18 @@ function keraaElaintakyt(pack) {
 }
 
 export function keraaNostot(pack) {
+  /*
+   * LISÄLÄHTEET REKISTERIIN, KUTEN PELISSÄ (js/main.js): naapurimaan
+   * ladonta (js/fokuskohteet.js maanUlkoisetEsteet → ladoMaanTynka)
+   * lukee syvennykset, skandaalit, historian hetket ja täkynostot
+   * rekisteristä, ja ilman niitä edeltävän maan esteet olisivat toiset
+   * kuin pelissä. Kutsu on idempotentti (rekisteroiMaanKohteet: yksi
+   * lähde järjestysnumeroa kohti).
+   */
+  kytkeFokusnosto();
+  kytkeSyvennys();
+  kytkeSkandaalit();
+  kytkeHistorianHetket();
   const merkit = [];
   const luettelo = {};
   const tilasto = {

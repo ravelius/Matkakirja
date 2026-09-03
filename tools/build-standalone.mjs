@@ -632,6 +632,22 @@ const MODULES = [
    * mapartin ja ui-apurit — kaikki jo yllä.
    */
   'js/karttaselite.js',
+  /*
+   * Fokusnäkymän ruutuun ankkuroidut mitat ennen ui:ta (ui tuo ne
+   * staattisesti). Se lukee laudan projektion fokus-grc.js:stä ja maan
+   * perustiedot sisältötauluista — molemmat ovat jo yllä.
+   */
+  'js/fokusmitat.js',
+  /*
+   * Eläintäyn karttarivit ja nimiön kylki ennen kohdekerrosta
+   * (3.9.2026): fokuskohteet.js lukee täyn paikan ladontansa
+   * esteeksi, ja elaintaky.js lukee kohdekerroksen ladonnan kylkeensä
+   * — siksi rivit ovat omassa moduulissaan tässä välissä. Data
+   * (elaintakyt.js) tuo ei mitään; rivit tuovat projektion
+   * (fokusmitat.js) ja symbolikirjaston, molemmat jo yllä.
+   */
+  'js/packs/elaintakyt.js',
+  'js/elaintaky-rivit.js',
   // Fokuslehden klikattavat karttakohteet ennen ui:ta (ui tuo sen
   // päivitys- ja nollauskutsun; kohteiden lista, symbolikirjasto,
   // mapart, media, ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).
@@ -649,12 +665,6 @@ const MODULES = [
    * listalla vasta tässä.
    */
   'js/fokusnosto.js',
-  /*
-   * Fokusnäkymän ruutuun ankkuroidut mitat ennen ui:ta (ui tuo ne
-   * staattisesti). Se lukee laudan projektion fokus-grc.js:stä ja maan
-   * perustiedot sisältötauluista — molemmat ovat jo yllä.
-   */
-  'js/fokusmitat.js',
   /*
    * Syvennystarinat kartalle (yhtenäinen kohdemalli): data ensin,
    * kerroskytkentä perässä. js/syvennys.js tuo fokusvirran,
@@ -688,7 +698,6 @@ const MODULES = [
    * tuo lisäksi symbolikirjaston, mapartin, ui-apurit ja äänet, jotka
    * ovat kaikki jo yllä.
    */
-  'js/packs/elaintakyt.js',
   'js/elaintaky.js',
   /*
    * Sähkepinta ennen ui:ta (ui tuo siitä retkikuntaosion ja

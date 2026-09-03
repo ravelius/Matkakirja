@@ -708,7 +708,29 @@ export function nostoladontaKattoSuhde(porras, ruutuPx) {
  * pisteille, "v10-kohdekartta") muuttivat kaikki poltetun nostotason
  * sisältöä. Yksi poltto kattaa ne kaikki, joten tunnistekin on yksi.
  */
-export const NOSTOLADONTA_SAANTO = 'v10-kohdekartta';
+/*
+ * v11-limitys (omistajan havainto 3.9.2026, Bulgaria 100 km: *"Kırkpınar-
+ * nosto limittyy toisen nimen kanssa"*): kolme ladontasäännön muutosta
+ * yhdellä tunnisteella, kaikki nimiön KYLKEEN eikä merkin paikkaan —
+ *   1. naapurimaat ladotaan maatunnusjärjestyksessä ja jokainen saa
+ *      edeltäjiensä nimiöt ja symbolit esteikseen (js/fokuskohteet.js
+ *      NAAPURIMAAT LADOTAAN JÄRJESTYKSESSÄ; mitattuna 6 paria rajan
+ *      kahta puolta);
+ *   2. eläintäky valitsee kylkensä maan valmiin ladonnan ympäriltä ja
+ *      sen symboli on nostojen pehmeä este (js/elaintaky-rivit.js;
+ *      mitattuna 8 paria);
+ *   3. viimeinen olki on pienin limitys eikä oikea kylki (mitattuna
+ *      3 merkkiä, joilla kaikki neljä kylkeä osuivat nimiöön).
+ * KYLKI EI OLE TIIVISTEESSÄ (nimioPuoli, ks. testi "väistön päätös ei
+ * ole tiivisteessä"), joten ilman tätä nostoa v10-laatat täsmäisivät
+ * ja laatan nimiö olisi eri kyljellä kuin pelin napautusalue.
+ * Nostettuna luettelo ei kelpaa lainkaan (js/laattapyramidi.js
+ * `nt.saanto !== NOSTOLADONTA_SAANTO`), peli piirtää nostot elävinä
+ * uusilla kyljillä, ja seuraava nostotason poltto tekee niistä taas
+ * laattaa. Portti: tools/tarkista-nimiolimitys.mjs ja
+ * tests/nimiolimitys.test.mjs.
+ */
+export const NOSTOLADONTA_SAANTO = 'v11-limitys';
 
 export function nostoladontaTiiviste(merkki) {
   const osat = [
