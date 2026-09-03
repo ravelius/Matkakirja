@@ -615,8 +615,18 @@ const NOSTOSYM_MINI_LUONNOS = {
    * täkynostot, selitevalikko); vain muoto vaihtui. Murrettu sinetti,
    * kello ja lihavampi huutomerkki hävisivät samalla arkilla.
    */
+  /*
+   * MUOTO 2 (omistaja 3.9.2026 iltapäivä: *"Tee salamasta hieman
+   * matalampi ja se voisi näyttää enemmän leveällä tussilla piirretyltä,
+   * niin että osa viivoista on paksumpia ja osa ohuempia"*): salama
+   * PEILATTIIN — vinot vedot kulkevat nyt ylävasemmalta alaoikealle eli
+   * poikittain terän suuntaan (-40°), jolloin terä antaa niille täyden
+   * leveyden, ja vaakasuora askel jää terän kapeaksi jäljeksi. Sama
+   * kynä, sama yksi veto; paksuusvaihtelu tulee suunnasta, ei toisesta
+   * musteesta. Korkeus 12,8 → 10 yksikköä.
+   */
   huuto: ({ murto }) => ({
-    vahva: [murto([[2.60, -6.40], [-2.40, 0.30], [1.50, 0.30], [-2.60, 6.40]])],
+    vahva: [murto([[-3.20, -5.00], [2.60, 0.10], [-1.90, 0.10], [3.20, 5.00]])],
   }),
   /*
    * TASSUNJÄLKI — eläimet. UUSI KUVIO, omistajan valinta 31.8.2026
@@ -890,7 +900,8 @@ function piirraNostosymHuuto(g) {
   // kategorian keltainen täyttö ja musteinen reuna kuten ennenkin.
   el('path', {
     class: 'nostosym-huuto',
-    d: 'M3.2 -8.4 L-4.2 0.9 L-0.6 0.9 L-3.2 8.4 L4.2 -1.1 L0.6 -1.1 Z',
+    // Muoto 2 (3.9.2026): peilattu ja matalampi kuten kartan merkki.
+    d: 'M-3.6 -7.0 L4.4 0.7 L0.5 0.7 L3.6 7.0 L-4.4 -0.7 L-0.5 -0.7 Z',
   }, g);
 }
 
