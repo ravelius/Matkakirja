@@ -10651,7 +10651,19 @@ export class UI {
     }, this.valintavihjeViive);
   }
 
-  /** Vihjekupla ja sen ajastin pois. */
+  /**
+   * Vihjekupla ja sen ajastin pois.
+   *
+   * VAIN OHJEKUPLAT (omistajan Sofia-havainto 3.9.2026: *"pulu ei
+   * kommentoinut matkakirjan hurjaa tekstiä"*). Tämä kutsu tulee myös
+   * kartan kosketuksesta (kartallaKosketettu), ja ennen kuplapinoa se
+   * piilotti kuplien AINOAN elementin — siis myös Livian juuri
+   * alkaneen saapumispuheenvuoron. Pelaajan sormi kartalla pyyhki
+   * puheenvuoron, jota hän ei ollut vielä ehtinyt lukea. Nyt
+   * polloVihjePois koskee vain ohjekupliin (js/pollo.js
+   * piilotaVihje); puheenvuorot jäävät pinoon, kunnes pelaaja sulkee
+   * ne itse tai avaa chatin.
+   */
   peruValintavihje() {
     clearTimeout(this.valintavihjeAjastin);
     this.valintavihjeAjastin = null;

@@ -287,7 +287,7 @@ for (const kaupunki of KAUPUNGIT) {
     ui.render();
     await new Promise((r) => setTimeout(r, 1200));
     // Edellisen kaupungin kuplat pois tieltä.
-    document.querySelector('.pollo-vihje')?.remove();
+    window.matkakirjaPollo?.tyhjennaPino();
     return {
       kaupunki: c?.id,
       laatta: game.tokens.has(id),

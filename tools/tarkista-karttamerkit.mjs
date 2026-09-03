@@ -202,7 +202,8 @@ function tallenne(kaupunki) {
  * tämä ei koske.
  */
 const PEITTO_POIS = '.pollo-paneeli, .pollo-nappi, .fokusvirta-kupla, .fact-card,'
-  + ' .pollo-vihje, .paivakirjalappu, .reveal { display: none !important; }';
+  + ' .pollo-vihje, .pollo-kuplapino-kehys, .paivakirjalappu,'
+  + ' .reveal { display: none !important; }';
 
 /** Kartta esiin: kortit kiinni, kunnes mikään ei enää sulkeudu. */
 async function siivoa() {
