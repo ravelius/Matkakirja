@@ -1917,7 +1917,7 @@ export function sahkeKirjoitusAikataulu(rivit, {
  *
  * Omistaja 3.9.2026: *"tähän voisi generoida pohjalle oikean
  * sähkösanoman paperin"*. Pohja on kuvaputken generoima 1870-luvun
- * lennätinlomake (pysty 3:4, alfakanava, EI painettua tekstiä — peli
+ * lennätinlomake (pysty 3:4 JPG/sRGB, EI painettua tekstiä — peli
  * piirtää leiman, otsakkeen ja rivit sen päälle).
  *
  * KUVA EI OLE PAKOLLINEN. Peli on offline-PWA ja lomake on jo tehty
@@ -1928,7 +1928,7 @@ export function sahkeKirjoitusAikataulu(rivit, {
  * ämpäriin milloin tahansa ilman koodimuutosta.
  */
 export const SAHKE_LOMAKE_OSOITE =
-  'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvitus/sahke-lomake-1873-v1.png';
+  'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvitus/sahke-lomake-1873-v1.jpg';
 
 /** null = kysymättä, true/false = tiedetään; kysytään kerran istunnossa. */
 let sahkeLomakekuva = null;
