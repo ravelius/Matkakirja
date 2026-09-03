@@ -1,5 +1,42 @@
 # Kuvatoimitussessio
 
+## 3.9.2026 07:08 UTC — Kiireellisen tilauksen 3 PD-muotokuvaa löydetty ja lisenssit tarkistettu
+
+Kolme puuttunutta keksijämuotokuvaa voidaan täyttää ilman generointia.
+Valitut lähteet täyttävät tilauksen PD-ehdon:
+
+- **Nikolaus August Otto:** Bavarikon / Bayerische Staatsbibliothek,
+  `Otto, Nikolaus August [Ingenieur 1832–1891]`, tunniste
+  `bav:BSB-BAR-0000000000020103`.
+  Kuva: https://www.bavarikon.de/object/bav:BSB-BAR-0000000000020103
+  Lisenssirivi: **Public Domain Mark (PDM); Bayerische Staatsbibliothek,
+  Bildarchiv, port-023097.** Bavarikon merkitsee digitaalikopion PDM:ksi ja
+  metadatan CC0:ksi.
+- **Werner von Siemens:** Wikimedia Commons,
+  `Werner-von-Siemens.png` (1494 × 1909), valokuvaaja Giacomo Brogi
+  (1822–1881).
+  Kuva ja lisenssi:
+  https://commons.wikimedia.org/wiki/File:Werner-von-Siemens.png
+  Lisenssirivi: **Public domain / PD-old-100; Giacomo Brogi
+  (1822–1881); lähde zeno.org via Wikimedia Commons.**
+- **Carl Benz:** Wikimedia Commons,
+  `Carl Benz circa 1920.jpg` (1536 × 2048), tekijä tuntematon; kuva on
+  dokumentoidusti julkaistu viimeistään 13.4.1929.
+  Kuva ja lisenssi:
+  https://commons.wikimedia.org/wiki/File:Carl_Benz_circa_1920.jpg
+  Lisenssirivi: **Public domain; anonymous photograph published by
+  13.4.1929; PD-US-expired and German publication-term basis, via Wikimedia
+  Commons.**
+
+Näitä ei tarvitse kopioida arviointisivulle tai R2:een tämän kuvaputken
+toimesta: Fable pyysi vain valittavan tiedoston ja lisenssirivin. Otto on
+instituution PDM-merkitsemä kaiverrus/muotokuva; Siemens ja Benz ovat
+valokuvamuotokuvia. Älä käytä Otto-kuvan Commons-uudelleenlatausta, jonka
+metatiedoissa on ristiriitainen museon CC BY-NC-SA -skannausmerkintä, vaan
+yllä olevaa Bavarikonin omaa PDM-lähdettä.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 3.9.2026 07:03 UTC — Kiireellisen keksintöerän loppuosa ja Blériot-lähikuva nyt omistajan arvioitavana
 
 Kiireellisen tilauksen loppuosa on valmis ja julkaistu yksityiselle
