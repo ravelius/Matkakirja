@@ -10809,7 +10809,8 @@ export class UI {
         y: bbox.y + bbox.h / 2 - dy / skaala,
         leveys: paneW / skaala,
       },
-      { kesto },
+      // Kesto liikkeen mukaan (kartta.js sovitaAjonKesto, omistaja 3.9.2026).
+      { kesto, sovita: true },
     );
     return true;
   }
@@ -19333,7 +19334,9 @@ export class UI {
     const kohti = pixelOf(board, suunta);
     const kohta = { x: (lahto.x + kohti.x) / 2, y: (lahto.y + kohti.y) / 2 };
     const kerroin = kartta.siirtoZoomiKerroin(SIIRTOZOOMIN_LAHENNYS);
-    await kartta.ajaKamera({ x: kohta.x, y: kohta.y, kerroin }, { kesto: ENNAKKOZOOMIN_MS });
+    // Kesto liikkeen mukaan (kartta.js sovitaAjonKesto): iso zoomi
+    // yleiskuvasta saa aikaa, pieni ele pysyy 760 ms:ssa.
+    await kartta.ajaKamera({ x: kohta.x, y: kohta.y, kerroin }, { kesto: ENNAKKOZOOMIN_MS, sovita: true });
     if (this.dead) return;
     await this.wait(ENNAKON_HENGAHDYS_MS);
   }

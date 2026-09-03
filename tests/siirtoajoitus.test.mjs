@@ -315,3 +315,29 @@ test('siirto kytkee musiikin: jalan, laiva ja lento omissa paikoissaan', () => {
   assert.match(siirto, /if \(musiikki\) this\.lopetaSiirronMusiikki\(\);/,
     'siirto ei sammuta musiikkia perillä');
 });
+
+/* --- 4. ajot pehmeästi peräkkäin (omistaja 3.9.2026) --------------- */
+
+test('kamera-ajo lähtee kesken olevan ajon nykyisestä kehyksestä, ei sen määränpäästä', () => {
+  const metodi = KARTTA.match(/ {2}ajaKamera\(kohde, \{[\s\S]*?\n {2}\}\n/)[0];
+  assert.match(metodi, /const kesken = this\.kameraAjo\?\.nyt;\n\s*const alku = kesken \? \{ \.\.\.kesken \} : this\.kameranTila\(\);/,
+    'uusi ajo alkaa yhä kirjatusta näkymästä — kuva hyppää edellisen ajon loppuun');
+  assert.match(metodi, /if \(sovita\) kesto = sovitaAjonKesto\(kesto, suhde, matka \/ paneW\);/);
+});
+
+test('ennakkozoomi ja kohdesovitus sovittavat kestonsa liikkeen mukaan', async () => {
+  const { sovitaAjonKesto, SOVITETUN_AJON_PISIN_MS } = await import('../js/kartta.js');
+  // Pieni ele: pyydetty kesto sellaisenaan.
+  assert.equal(sovitaAjonKesto(760, 0, 0), 760);
+  // Kaksinkertainen zoomi: puolet lisää.
+  assert.equal(sovitaAjonKesto(760, Math.LN2, 0), 1140);
+  // Oktaavi zoomia ja ruudullinen panorointi: tuplat.
+  assert.equal(sovitaAjonKesto(760, Math.LN2, 1), 1520);
+  // Katto pitää kohtauksen mittaisena, eikä koskaan lyhene pyydetystä.
+  assert.equal(sovitaAjonKesto(760, 3 * Math.LN2, 3), SOVITETUN_AJON_PISIN_MS);
+  assert.equal(sovitaAjonKesto(2000, 0, 0), 2000);
+  const ennakko = UI.match(/async ennakoiSiirtoZoomi\([\s\S]*?\n  \}\n/)[0];
+  assert.match(ennakko, /\{ kesto: ENNAKKOZOOMIN_MS, sovita: true \}/, 'ennakko ei sovita kestoaan');
+  const sovitus = UI.match(/ {2}sovitaKohteetNakyviin\(bbox[\s\S]*?\n {2}\}\n/)[0];
+  assert.match(sovitus, /\{ kesto, sovita: true \}/, 'kohdesovitus ei sovita kestoaan');
+});

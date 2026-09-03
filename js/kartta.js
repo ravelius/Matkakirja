@@ -438,6 +438,34 @@ function pehmennysKaari(t) {
   return t < 0.5 ? 4 * t * t * t : 1 - ((-2 * t + 2) ** 3) / 2;
 }
 
+/*
+ * AJON KESTO LIIKKEEN MUKAAN (omistaja 3.9.2026: *"tarkista kaikki
+ * vaiheet jotta menisi pehmeästi ja sulavasti kaikki automaattiset
+ * karttaliikkeet ennen kuin pelaajan nappula lähtee liikkeelle
+ * (panoroinnit ja zoomaukset)"*).
+ *
+ * Kiinteä kesto on oikea silloin, kun liike on pieni: pienestä
+ * kohdesovituksesta tai puolen zoomin ennakosta 700 ms on rauhallinen
+ * ele. Sama 700 ms kaksinkertaiselle zoomille JA ruudullisen
+ * panoroinnille on syöksy — juuri se "liian pikaisesti", jonka omistaja
+ * näki ensimmäisellä heitolla maan yleiskuvasta. Kesto kasvaa siksi
+ * liikkeen määrän mukaan: yksi oktaavi zoomia (kerroin 2) lisää
+ * puolet, ruudun leveyden panorointi lisää saman verran, ja katto
+ * pitää pisimmätkin ajot kohtauksen mittaisina (SOVITETUN_AJON_PISIN_MS).
+ * Lyhyempi kuin pyydetty ei koskaan tule.
+ *
+ * @param {number} kesto pyydetty pohja (ms)
+ * @param {number} suhde |ln(loppuskaala / alkuskaala)|
+ * @param {number} matkaRuutuina panorointi ruudun leveyksinä
+ */
+export const SOVITETUN_AJON_PISIN_MS = 1800;
+export function sovitaAjonKesto(kesto, suhde, matkaRuutuina) {
+  const oktaavit = Math.abs(suhde) / Math.LN2;
+  const kerroin = 1 + 0.5 * oktaavit + 0.5 * Math.max(0, matkaRuutuina);
+  // Katto rajaa vain LISÄN: pyydettyä pitempi ajo (esim. saapuminen) pysyy omanaan.
+  return Math.round(Math.max(kesto, Math.min(SOVITETUN_AJON_PISIN_MS, kesto * kerroin)));
+}
+
 /** Kahden laatikon pienin yhteinen laatikko (ks. fokusRajaukset). */
 function yhdistaAlue(a, b) {
   const x = Math.min(a.x, b.x);
@@ -2153,7 +2181,9 @@ export class Kartta {
    * `pakota` ohittaa aloituslennon kameravarauksen (ks. alla). Sitä
    * käyttää vain lento itse.
    */
-  ajaKamera(kohde, { kesto = AJO_MS, pehmennys = pehmennysKaari, pakota = false } = {}) {
+  ajaKamera(kohde, {
+    kesto = AJO_MS, pehmennys = pehmennysKaari, pakota = false, sovita = false,
+  } = {}) {
     const pane = this.ui.mapPane;
     if (this.ui.dead || !pane) return Promise.resolve(false);
     /*
@@ -2174,7 +2204,19 @@ export class Kartta {
     if (this.avausNakymassa()) return Promise.resolve(false);
     const maali = this.kameranKohde(kohde, paneW, paneH);
     if (!maali) return Promise.resolve(false);
-    const alku = this.kameranTila();
+    /*
+     * LÄHTÖ ON SE, MISSÄ KUVA JUURI NYT ON (omistaja 3.9.2026:
+     * *"nopanheiton alussa kun kartta zoomaa, niin se menee nyt joissain
+     * tilanteissa liian pikaisesti"*). kameranTila lukee KIRJATUN
+     * näkymän, ja kesken olevan ajon aikana kirjattu näkymä on jo sen
+     * MÄÄRÄNPÄÄ — ajo piirtää liikkeen muunnoksella sen päälle. Jos
+     * uusi ajo (ennakkozoomi) alkaa edellisen (kohdesovitus, saatto)
+     * ollessa kesken, lähtöasemana oli edellisen loppu: kuva hyppäsi
+     * sinne ja jatkoi siitä. Nyt lähtö on kesken olevan ajon nykyinen
+     * kehys, ja liike jatkuu saumatta uuteen kohteeseen.
+     */
+    const kesken = this.kameraAjo?.nyt;
+    const alku = kesken ? { ...kesken } : this.kameranTila();
 
     // Edellinen ajo pois alta ILMAN välivaiheen kirjausta: uusi ajo
     // asettaa näkymän joka tapauksessa itse.
@@ -2212,6 +2254,9 @@ export class Kartta {
       this.ui.taydennaTaide?.({ heti: true });
       return Promise.resolve(true);
     }
+    // Kesto liikkeen mukaan (sovita): iso zoomi tai pitkä panorointi
+    // saa lisää aikaa, pieni ele pysyy ripeänä. Ks. sovitaAjonKesto.
+    if (sovita) kesto = sovitaAjonKesto(kesto, suhde, matka / paneW);
 
     /*
      * LAVA KATTAA KOKO AJON (ks. LAVAIKKUNA).
