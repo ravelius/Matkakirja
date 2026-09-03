@@ -595,9 +595,16 @@
    molempiin taitoksiin. MARGINAALI 0,4rem on napin
    paperipohjustus. */
 .fokuskohde-kuva {
-  --nauha-pituus: 65.7cqw;
-  --nauha-korkeus: 8.6cqw;
-  --nauha-teksti: 2.78cqw;
+  /* SAMA OSUUS KUIN SUURENNOKSESSA (omistaja 3.9.2026, Pergamonin
+     kortti: "nauha pitäisi olla kuin poltettu kuvaan, eli kun kuva
+     näkyy pienellä myös nauha näkyy samassa koossa suhteessa kuvaan ja
+     pienemmällä. nyt nauha on isompi suhteessa kuin mitä se on kun
+     kuvaa katsotaan isompana"). Kortin oma isompi osuus (65,7 cqw)
+     poistui: nauha on kuvan osa, ja kuvan osa ei muutu kuvan koon
+     mukana. Referenssi on suurennos: 36,8 / 4,8 / 1,56 cqw. */
+  --nauha-pituus: 36.8cqw;
+  --nauha-korkeus: 4.8cqw;
+  --nauha-teksti: 1.56cqw;
   --nauha-marginaali: 0.4rem;
   /* Kortin kuva on pyöristetty (.fokuskohde-kuva img border-radius),
      ja napin pehmustelaatikko sen kanssa samalla säteellä. */
@@ -840,9 +847,16 @@
    ryhmä (.fokuskohde-kuva). Kaari on .nahtavyys-kuvan oma 4px. */
 .nahtavyys-kuvakehys.kuva-nauhalla,
 .karuselli-ikkuna.kuva-nauhalla {
-  --nauha-pituus: 65.7cqw;
-  --nauha-korkeus: 8.6cqw;
-  --nauha-teksti: 2.78cqw;
+  /* SAMA OSUUS KUIN SUURENNOKSESSA (omistaja 3.9.2026, Pergamonin
+     kortti: "nauha pitäisi olla kuin poltettu kuvaan, eli kun kuva
+     näkyy pienellä myös nauha näkyy samassa koossa suhteessa kuvaan ja
+     pienemmällä. nyt nauha on isompi suhteessa kuin mitä se on kun
+     kuvaa katsotaan isompana"). Kortin oma isompi osuus (65,7 cqw)
+     poistui: nauha on kuvan osa, ja kuvan osa ei muutu kuvan koon
+     mukana. Referenssi on suurennos: 36,8 / 4,8 / 1,56 cqw. */
+  --nauha-pituus: 36.8cqw;
+  --nauha-korkeus: 4.8cqw;
+  --nauha-teksti: 1.56cqw;
   --nauha-marginaali: 0.4rem;
   --nauha-kaari: 4px;
   --nauha-kaari-ulko: 4px;

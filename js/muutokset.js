@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1485, teksti: 'Maastonimet, aarrenauha ja kortin paikka kuntoon' },
   { v: 1484, teksti: 'Salama takaisin entiseen suuntaan' },
   { v: 1483, teksti: 'Salama matalammaksi ja tussimaiseksi' },
   { v: 1482, teksti: 'Skandaalin merkki on salama; looppi leveammaksi' },

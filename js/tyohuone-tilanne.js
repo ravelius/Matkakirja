@@ -92,6 +92,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1485: KOLME KARTTAKORJAUSTA (omistaja 3.9.) - a) Bosnia 100 km: Dinaariset Alpit nyt kohdenimion kokoinen kursiivi (sama Pyreneet, Karpaatit, Skandit, Apenniinit, Taurus); b) ihmekortin Unohdettu aarre -nauha samassa suhteessa kuin suurennoksessa (pienempi kortissa); c) poltetun merkin tai nimen napautuksesta avautuva kortti tulee napautuksen viereen, ei ruudun kulmaan (Pergamonin alttari).',
   'v1484 + POLTTO 02k: SALAMA MUOTO 3 (omistaja 3.9.) - takaisin entiseen suuntaan, matala, vinot paksummat kuin askel. Katso Kreikka 50 km (Mykene) ja kortin ylarivi.',
   'v1483 + POLTTO 02j: SALAMA MUOTO 2 (omistaja 3.9.) - matalampi ja tussimainen: paksut vinot vedot, ohut askel; sama muoto kortin ylarivilla. Katso Kreikka 50 km (Mykene) ja selitevalikon Skandaalit-rivi.',
   'v1482 + POLTTO 02i: SKANDAALIN MERKKI ON SALAMA (omistajan kortti 3.9.) - kartalla, selitevalikossa ja kortin ylarivilla sama salama huutomerkin tilalla; looppikortti levenee 32 -> 40 rem. Katso Kreikka 50 km (Mykene, Antikythera) ja selitevalikon Skandaalit-rivi; avaa Mykeneen looppi.',

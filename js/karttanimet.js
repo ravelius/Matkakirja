@@ -305,6 +305,30 @@ const KOKO = {
 export const KARTTANIMI_KOOT = KOKO;
 
 /*
+ * LÄHELTÄ NÄKYVÄ MAASTONIMI ON KOHDENIMIÖN KOKOINEN JA KURSIIVIA
+ * (omistaja 3.9.2026, Bosnia 100 km: *"dinaariset alpit näkyvät
+ * edelleen vielä väärässä ja liian isossa koossa. tarkista muualtakin
+ * euroopasta että vastaavia ei enää löytyisi"*).
+ *
+ * Juurisyy: tämä kerros latoi JOKAISEN vuoristonimen KOKO.vuori-koossa
+ * (11 px) pystykirjaimin, myös ne, jotka näkyvät vasta maan
+ * mittakaavassa (tärkeys 2–3: Dinaariset Alpit, Balkanvuoret,
+ * Pyreneet, Karpaatit, Skandit, Apenniinit, Taurus). Samalla ruudulla
+ * kohdekerroksen maastonimiöt (Dinara, Sveti Jure, Balkanvuoret
+ * Bulgariassa, jossa nimi on kohde) ovat 8,5 px kursiivia — sama laji,
+ * kaksi asua, ja ero näkyi juuri Bosniassa, jossa vuoristolla ei ole
+ * omaa kohdetta. Nyt: tärkeys 1 (Alpit, Kaukasus, Himalaja…) pysyy
+ * mantereen nimenä 11 px:ssä; tärkeys ≥ 2 latoo KOKO.kohde-koossa ja
+ * kursiivina (css .karttanimi-lahi), eli täsmälleen kuin kohteen
+ * maastonimiö. Sama sääntö järville.
+ */
+function maastonAsu(laji, tarkeys = 2) {
+  const lahi = (tarkeys ?? 2) >= 2;
+  if (laji === 'jarvi') return { koko: lahi ? KOKO.kohde : KOKO.jarvi, tyyli: 'italic', lahi };
+  return { koko: lahi ? KOKO.kohde : KOKO.vuori, tyyli: lahi ? 'italic' : '', lahi };
+}
+
+/*
  * ====== PÄÄKAUPUNKI LADOTAAN HARVENNETULLA KAPITEELILLA ============
  *
  * OMISTAJAN KYSYMYS 31.8.2026: *"miten tuon ajan kartoissa eroteltiin
@@ -1570,8 +1594,9 @@ function lado(data, px) {
     const pari = c.maastopari;
     const pariNakyy = Boolean(pari) && nakyy(maastonKynnys(pari));
     if (pariNakyy) {
-      const mkoko = pari.laji === 'vuori' ? KOKO.vuori : KOKO.jarvi;
-      const mtyyli = pari.laji === 'jarvi' ? 'italic' : '';
+      const masu = maastonAsu(pari.laji, pari.tarkeys);
+      const mkoko = masu.koko;
+      const mtyyli = masu.tyyli;
       const mx = pari.x * px;
       const my = pari.y * px + (pari.laji === 'vuori' ? 11 : 0);
       const mlev = tekstinLeveys(pari.nimi, mkoko, mtyyli);
@@ -1591,6 +1616,7 @@ function lado(data, px) {
           y: laudalle(my),
           ank: 'middle',
           koko: mkoko,
+          lahi: masu.lahi,
           polku: pari.polku ?? null,
         });
         nimetyt.add(c);
@@ -2075,7 +2101,7 @@ function lado(data, px) {
         nimi: v.nimi,
         x: v.x,
         y: v.y,
-        koko: KOKO.vuori,
+        koko: maastonAsu('vuori', v.tarkeys).koko,
         laji: 'vuori',
         tarkeys: v.tarkeys,
         polku: v.polku ?? null,
@@ -2090,7 +2116,7 @@ function lado(data, px) {
         nimi: j.nimi,
         x: j.x,
         y: j.y,
-        koko: KOKO.jarvi,
+        koko: maastonAsu('jarvi', j.tarkeys).koko,
         laji: 'jarvi',
         tarkeys: j.tarkeys,
         polku: j.polku ?? null,
@@ -2101,7 +2127,8 @@ function lado(data, px) {
   for (const m of maasto) {
     const x = m.x * px;
     const y = m.y * px + (m.laji === 'vuori' ? 11 : 0);
-    const tyylitys = m.laji === 'jarvi' ? 'italic' : '';
+    const asu = maastonAsu(m.laji, m.tarkeys);
+    const tyylitys = asu.tyyli;
     const lev = tekstinLeveys(m.nimi, m.koko, tyylitys);
     const kork = m.koko * 1.15;
     const r = {
@@ -2116,6 +2143,7 @@ function lado(data, px) {
       y: laudalle(y),
       ank: 'middle',
       koko: m.koko,
+      lahi: asu.lahi,
       polku: m.polku ?? null,
     });
     if (m.laji === 'vuori' && m.kohde) nimetytVuoret.add(m.kohde);
@@ -2467,7 +2495,7 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
 
   for (const { n, x } of nakyvat) {
     el('text', {
-      class: `karttanimi karttanimi-${n.laji}`,
+      class: `karttanimi karttanimi-${n.laji}${n.lahi ? ' karttanimi-lahi' : ''}`,
       /*
        * KOHTEEN NIMI ON NAPAUTETTAVA KOKONAAN (omistaja 1.9.2026 ilta).
        * Kerros on pointer-events: none; tämä määre sytyttää tapahtumat
