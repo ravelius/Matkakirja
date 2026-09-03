@@ -2232,6 +2232,63 @@ export function karttanimetLatovat(ui) {
   return Boolean(pyramidiKattaa(ui?.game?.pack?.id)) && !laatoissaOnNimet();
 }
 
+/* ------------------------------------------------------- lennon nimivaitiolo */
+
+/*
+ * === LENTOTILA: KARTALLA ON VAIN LONTOO JA KOHDEKAUPUNKI ===========
+ *
+ * Omistajan tilaus 25.8.2026, sanatarkasti: *"lennon aikana kartalla
+ * näkyy Lontoo pisteenä + Lontoo-teksti ja Ateena pisteenä +
+ * Ateena-teksti. Ei muita pisteitä eikä nimiä."* Tilaus toistui
+ * 3.9.2026 (Raamattu, AVAUSLENTO VALMIIKSI LADATTUNA): *"muiden
+ * kaupunkien kuin lontoon ja kohdekaupungin nimiä ei tarvita."*
+ *
+ * MIKSI SE OLI RIKKI. Lennon niukkuus tehtiin CSS:llä
+ * (css/styles.css body.kartalento: .cities, .targets, .fokuspisteet…),
+ * ja se kattoi kaikki SILLOISET nimikerrokset. TÄMÄ kerros syntyi
+ * vasta laattapyramidin mukana 30.8.2026, eikä sitä ollut siinä
+ * listassa — mitattuna (savuke-avauslento) lennon aikana ruudulla oli
+ * 69 nimeä ja 83 merkkiä: Berliini, Helsinki, Madrid, Rooma, Tukholma
+ * ja koko Euroopan maastonimistö.
+ *
+ * TILALIPPU, EI DATAN POISTOA. Ladonta on välimuistissa oleva puhdas
+ * funktio paketista ja mittakaavasta (LADONNAT), ja sitä lukevat myös
+ * mittarit ja testit; jos lento karsisi itse aineistoa, kartta palaisi
+ * perillä vajaana. Lippu koskee vain PIIRTOA — ladonta on koskematon,
+ * ja lipun laskeminen palauttaa kerroksen sellaisenaan.
+ *
+ * LONTOO JA KOHDEKAUPUNKI TULEVAT LENNON OMASTA KERROKSESTA
+ * (js/kartta.js aloituslennonNiukkuus: punainen piste + nimi
+ * pergamenttihalolla). Siksi tämä kerros vaikenee KOKONAAN eikä suodata
+ * kahta nimeä läpi: kaksi eri kerrosta latoisi samat kaksi nimeä eri
+ * kohtiin, ja kartalla olisi Lontoo kahdesti.
+ *
+ * LIPPU EI KOSKE karttanimetLatovat-EHTOON, vaikka se olisi houkuttava
+ * paikka. Se ehto ohjaa myös kohdekerroksen omaa ladontaa
+ * (js/fokuskohteet.js): epätotena se antaisi kohdekerroksen latoa omat
+ * nimiönsä vanhaan tapaan, ja lennon aikana ruudulle ilmestyisi juuri
+ * ne nimet, jotka tämän piti viedä pois. Lippu on PIIRRON lippu.
+ */
+let lentotila = false;
+
+/**
+ * Nostaa tai laskee lentotilan lipun.
+ *
+ * Palauttaa true, jos tila oikeasti vaihtui — kutsuja tietää silloin
+ * nollata rakennusavaimen (ui.karttanimiAvain) ja pyytää uuden piirron.
+ */
+export function asetaKarttanimienLentotila(paalla) {
+  const uusi = Boolean(paalla);
+  if (lentotila === uusi) return false;
+  lentotila = uusi;
+  return true;
+}
+
+/** Onko nimikerros lentotilassa (vartioita ja testejä varten)? */
+export function karttanimienLentotila() {
+  return lentotila;
+}
+
 /**
  * Piirtää näkyvät paikannimet ja niiden merkit.
  *
@@ -2294,6 +2351,12 @@ export function paivitaKarttanimet(ui, tiedettyNakyva = null) {
    * (ks. tiedoston johdanto, KAKSOISNIMIVAARA).
    */
   if (laatoissaOnNimet()) return tyhjenna();
+  /*
+   * LENNON AIKANA KERROS ON VAITI (ks. lentotila yllä): Lontoo ja
+   * kohdekaupunki tulevat lennon omasta kerroksesta, eikä kartalla saa
+   * olla yhtään muuta nimeä eikä merkkiä.
+   */
+  if (lentotila) return tyhjenna();
   const nakyva = tiedettyNakyva ?? ui.nakyvaAlue?.();
   if (!(nakyva?.w > 0) || !(nakyva.skaala > 0)) return tyhjenna();
 

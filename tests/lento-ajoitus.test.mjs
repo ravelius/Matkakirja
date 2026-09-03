@@ -30,7 +30,29 @@ test('kertojan luenta alkaa aiemmin kuin ennen, mutta moottorin noustua', () => 
    */
   assert.ok(puhe >= 2100 && puhe <= 2500,
     `luennan viive ${puhe} ms ei ole noin 1,5 s entistä 3800:aa aiemmin`);
-  assert.match(UI, /\}, LENNON_PUHE_MS\);/, 'luennan ajastin käyttää yhä kovakoodattua lukua');
+  assert.match(UI, /setTimeout\(\(\) => this\.lueLennonRepliikki\(\),\s*LENNON_PUHE_MS\)/,
+    'vanhan kalvolennon luennan ajastin ei käytä enää LENNON_PUHE_MS:ää');
+});
+
+/*
+ * KARTTALENTO OTTAA HETKENSÄ KOHTAUKSESTA EIKÄ KELLOSTA (omistaja
+ * 3.9.2026: *"kertojan ääni jäi kuulumattomiin"*). Ajastin osui
+ * täsmälleen siihen ikkunaan, jossa lauta vaihtuu ja sata laattaa
+ * noudetaan, ja lennon finally perui myöhässä olevan ajastimen. Nyt
+ * karttalento perii ajastimen itse ja lukee repliikin siinä kohdassa,
+ * jossa kartta on valmis ja arkki alkaa väistyä. Ilman tätä vartiota
+ * vika palaisi hiljaa: peli näyttäisi samalta, kertoja vain vaikenisi.
+ */
+test('karttalento lukee repliikin kohtauksesta, ei ajastimesta', () => {
+  const lento = UI.match(/async aloituslentoSisalla\([\s\S]*?\n  \}\n/)[0];
+  assert.match(lento, /clearTimeout\(this\.lentoPuheAjastin\)/,
+    'karttalento ei peri ajastinta itselleen');
+  assert.match(lento, /await odotaPyramidi\(this[\s\S]*?this\.lueLennonRepliikki\(\);[\s\S]*?await this\.piilotaAloitusverho\(\);/,
+    'luenta ei ala laattojen valmistuttua juuri ennen arkin väistymistä');
+  // Sama ääni ei saa lähteä kahdesti: lippu on luennan ainoa portti.
+  const luenta = UI.match(/ {2}lueLennonRepliikki\(\) \{[\s\S]*?\n {2}\}/)[0];
+  assert.match(luenta, /this\.lennonLuentaAlkoi/, 'luennan kertalippu puuttuu');
+  assert.match(luenta, /puhe-lento-alku\.mp3/, 'luenta ei soita avauslennon äänitettä');
 });
 
 test('ruututeksti alkaa myöhemmin kuin kalvo', () => {

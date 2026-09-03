@@ -305,6 +305,7 @@ import { paivitaMaatummennus, nollaaMaatummennus } from './maatummennus.js';
  */
 import {
   paivitaPyramidi, nollaaPyramidi, pyramidiKattaa, pyramidinMittarit,
+  odotaPyramidi,
 } from './laattapyramidi.js';
 /*
  * PAIKANNIMET LADOTAAN RUUTUAVARUUDESSA (omistajan päätös 30.8.2026).
@@ -315,6 +316,7 @@ import {
  */
 import {
   asetaRuutuvaraukset, karttanimienMitat, paivitaKarttanimet, unohdaKarttanimet,
+  asetaKarttanimienLentotila,
 } from './karttanimet.js';
 /*
  * MAAN IKKUNA laudan koordinaateissa (js/packs/fokus-grc.js
@@ -895,6 +897,21 @@ const ALOITUSLENNON_AJO_MS = 2400;
  * pitää silloinkin kun pääsäie on tukossa (ks. aloituslentoSisalla).
  */
 const ALOITUSLENNON_POHJA_ODOTUS_MS = 12000;
+
+/**
+ * Kauanko avauslento odottaa LAATTAKARTAN valmistumista arkin takana.
+ *
+ * Omistajan tilaus 3.9.2026 (Raamattu, AVAUSLENTO VALMIIKSI LADATTUNA):
+ * *"kartta pitää ladata etukäteen, nyt se rakentui pikkuhiljaa
+ * taustalla valmiiksi."*
+ *
+ * KUUSI SEKUNTIA ON VAROVENTTIILI EIKÄ ODOTUSAIKA. Mitattuna
+ * (tools/savukkeet/savuke-avauslento.mjs, Chromium, laatat ämpäristä)
+ * näkyvän alueen 103 laattaa ovat perillä noin 1,5 sekunnissa siitä,
+ * kun kamera on rajauksessa — katto koskee siis vain hidasta verkkoa
+ * tai saapumatta jäävää laattaa, eikä lento saa jäädä niistä jumiin.
+ */
+const ALOITUSLENNON_LAATTA_ODOTUS_MS = 6000;
 // Reitin kaaren voimakkuus. Sama kerroin kuin laudan omilla
 // lentoreiteillä (drawBoard, .air-route), jotta uusi viiva on samaa
 // käsialaa kuin kartalle valmiiksi piirretyt kaaret.
@@ -4101,6 +4118,9 @@ export class UI {
     // Sama kartalennolle: lippu pidättelee kamera-ajoja ja annosteluvirtaa,
     // joten kesken katkennut lento lamauttaisi seuraavan pelin.
     document.body.classList.remove('flight-active', 'kartalento');
+    // Nimikerroksen lentovaitiolo samalla alas: pystyyn jäädessään se
+    // jättäisi uuden pelin kartan kokonaan nimettömäksi.
+    this.paataKarttanimienLentotila();
     // Arkin alle piilotettu lauta takaisin näkyviin: pystyyn jäädessään
     // luokka jättäisi uuden pelin kartan näkymättömäksi.
     document.body.classList.remove('lauta-arkin-alla', 'aloitusverho-paalla');
@@ -11238,20 +11258,25 @@ export class UI {
       this.lennonAmbienssi = false;
       if (kartalento) this.aloituslentoKesken = true;
       this.doAction(() => game.actionPickStart(city.id, portti ? 0 : null));
+      // Uusi avaus, uusi lupa lukea: lippu nollataan ennen kumpaakin
+      // lentotapaa (ks. lueLennonRepliikki).
+      this.lennonLuentaAlkoi = false;
       if (!this.reducedMotion) {
-        // Avauslennon repliikki on lukittu ja luettu ääneen: puhe alkaa
-        // pienellä viiveellä, kun moottori on jo ehtinyt nousta esiin.
-        this.lentoPuheAjastin = setTimeout(() => {
-          // Lentorepliikin lukee vain pitkä kertoja. Kertoja aloittaa
-          // vasta kun moottori on ehtinyt nousta kuuluviin (omistajan
-          // toive 10.8.2026, tarkennus samana iltana: 4,2 s kohdalla,
-          // kun moottori on jo noussut rauhassa kuuluviin). 12.8.2026
-          // hetki aikaistui LENNON_PUHE_MS:ään: ääni saa olla edellä ja
-          // teksti perässä.
-          if (!this.dead && kertojaTila() === 'pitka') {
-            playDiaryVoice(this, 'assets/audio/puhe-lento-alku.mp3');
-          }
-        }, LENNON_PUHE_MS);
+        /*
+         * AJASTIN ON NYT VANHAN KALVOLENNON POLKU, EI KARTTALENNON.
+         *
+         * Kertoja aloitti ennen tästä molemmilla lentotavoilla:
+         * 2,3 s napautuksesta (omistajan toive 10.8.2026, aikaistus
+         * 12.8. — *"ääni saa olla edellä ja teksti perässä"*). Kartalla
+         * lentävä avaus ottaa hetkensä nyt kohtauksesta eikä kellosta:
+         * ajastin osui aiemmin täsmälleen siihen ikkunaan, jossa lauta
+         * vaihtuu ja sata laattaa noudetaan, ja myöhässä lauennut luenta
+         * peruuntui lennon finally-lohkon clearTimeoutissa (ks.
+         * aloituslentoSisalla, KERTOJA ALKAA TÄSTÄ). Karttalento
+         * kumoaa tämän ajastimen omalla kutsullaan.
+         */
+        this.lentoPuheAjastin = setTimeout(() => this.lueLennonRepliikki(),
+          LENNON_PUHE_MS);
       }
       // Kartalento voi todeta lennon mahdottomaksi (puuttuva maatieto tai
       // rajaus); silloin vanha kalvo hoitaa avauksen kuten ennenkin.
@@ -18698,13 +18723,62 @@ export class UI {
        * jossain aivan muualla kuin lennossa.
        */
       this.aloituslentoKesken = false;
+      /*
+       * Sama varmistus nimikerroksen lentovaitiololle: poikkeukseen
+       * katkennut lento ei saa jättää karttaa nimettömäksi lopuksi
+       * ajaksi. Tavallisella polulla lippu on jo laskettu
+       * saapumissekvenssissä ja tämä on nollatyötä.
+       */
+      this.paataKarttanimienLentotila();
     }
     return true;
+  }
+
+  /**
+   * Laskee nimikerroksen lentovaitiolon ja pyytää uuden ladonnan.
+   *
+   * Kaksi riviä yhdessä paikassa, koska ne KUULUVAT yhteen: pelkkä
+   * lipun lasku jättäisi kerroksen tyhjäksi siihen asti kunnes jokin
+   * muu sattuisi muuttamaan näkymää (rakennusavain on lennon
+   * tyhjennyksestä eikä siis muutu itsestään).
+   */
+  paataKarttanimienLentotila() {
+    if (!asetaKarttanimienLentotila(false)) return;
+    this.karttanimiAvain = null;
+    paivitaKarttanimet(this);
+  }
+
+  /**
+   * Avauslennon repliikin luenta — KERRAN JA VAIN KERRAN.
+   *
+   * Kaksi kutsujaa, yksi ääni: karttalento kutsuu tämän kohtauksesta
+   * (aloituslentoSisalla, kartta valmiina juuri ennen feidiä) ja vanha
+   * kalvolento doPickStartin ajastimesta. Lippu takaa, ettei sama
+   * äänite lähde kahdesti — playDiaryVoice aloittaa aina
+   * stopDiaryVoicella, joten toinen käynnistys katkaisisi ensimmäisen
+   * kesken lauseen.
+   *
+   * Vain pitkä kertoja lukee lentorepliikin (sama sääntö kuin
+   * avaustekstillä, js/luenta.js playIntroVoice).
+   */
+  lueLennonRepliikki() {
+    clearTimeout(this.lentoPuheAjastin);
+    if (this.lennonLuentaAlkoi || this.dead || this.reducedMotion) return;
+    this.lennonLuentaAlkoi = true;
+    if (kertojaTila() !== 'pitka') return;
+    playDiaryVoice(this, 'assets/audio/puhe-lento-alku.mp3');
   }
 
   /** Lennon varsinainen piirto; kääre yllä hiljentää kartan animaatiot. */
   async aloituslentoSisalla({ kerros, lahto, kohde, bbox, line }) {
     kerros.textContent = '';
+    /*
+     * KARTTALENTO OMISTAA KERTOJAN HETKEN. doPickStartin ajastin on
+     * vanhan kalvolennon polku; tässä se perutaan heti, ettei luenta
+     * pääse alkamaan pergamenttiarkin takana silloin kun laattojen
+     * odotus (odotaPyramidi) kestää ajastinta pidempään.
+     */
+    clearTimeout(this.lentoPuheAjastin);
     /*
      * kartalento kertoo CSS:lle ja rasteroinnille, että lento on kartan
      * PÄÄLLÄ eikä kalvon takana: pelitila (nappula, kohderenkaat,
@@ -18712,6 +18786,19 @@ export class UI {
      * tarkkuuteen (ks. taydennaTaide).
      */
     document.body.classList.add('flight-active', 'kartalento');
+    /*
+     * NIMIKERROS VAIKENEE KOKO LENNON AJAKSI (omistaja 3.9.2026:
+     * *"muiden kaupunkien kuin lontoon ja kohdekaupungin nimiä ei
+     * tarvita"*). Lippu ennen kamera-ajoa, jotta yksikään ladonta ei
+     * ehdi kirjoittaa Eurooppaa täyteen nimiä sillä välin — kerros
+     * tyhjennetään tässä ja pysyy tyhjänä, koska lipun päällä ollessa
+     * jokainen piirtokutsu tyhjentää sen (js/karttanimet.js lentotila).
+     * Lontoo ja kohdekaupunki tulevat lennon omasta kerroksesta
+     * (js/kartta.js aloituslennonNiukkuus).
+     */
+    asetaKarttanimienLentotila(true);
+    this.karttanimiAvain = null;
+    paivitaKarttanimet(this);
     /*
      * Fokusmoodin niukkuus voimaan ENNEN kamera-ajoa: sumuverho
      * rakennetaan tässä, jotta ajo alkaa jo valmiiksi niukalta kartalta
@@ -18996,11 +19083,66 @@ export class UI {
     }
     kone.style.transform = koneRuudut[0].transform;
     /*
+     * ══════════════════════════════════════════════════════════════
+     * KARTTA VALMIIKSI ENNEN FEIDIÄ (omistajan tilaus 3.9.2026)
+     * ══════════════════════════════════════════════════════════════
+     *
+     * Sanatarkasti: *"kartta pitää ladata etukäteen, nyt se rakentui
+     * pikkuhiljaa taustalla valmiiksi."*
+     *
+     * JUURISYY. Arkin takana odotettiin PELKKÄÄ POHJATASOA (yllä), ja
+     * se oli vanhan vektorilaudan mitta. Laattakartta on eri asia: se
+     * on HAKU, joka lähtee liikkeelle vasta kun kamera on rajauksessa
+     * (js/laattapyramidi.js paivitaPyramidi), eikä sen valmistumisesta
+     * kertonut kukaan. Mitattuna (savuke-avauslento, Chromium): arkin
+     * väistyessä kiinnitettyjä laattoja oli NOLLA, ja kartta täydentyi
+     * 103 laatan verran vasta seuraavien kahden sekunnin aikana — siis
+     * koneen lennon alla, täsmälleen niin kuin omistaja sen näki.
+     *
+     * ODOTUS ON TÄSSÄ EIKÄ AIEMMIN. Reitti, kone ja kaikki kohtauksen
+     * kerrokset ovat nyt puussa, joten arkin takana ei tapahdu enää
+     * mitään muuta kuin laattojen saapuminen — ja tämä on viimeinen
+     * hetki, jolloin odottaminen ei vielä näy pelaajalle.
+     */
+    await odotaPyramidi(this, { katto: ALOITUSLENNON_LAATTA_ODOTUS_MS });
+    if (this.dead) return;
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * KERTOJA ALKAA TÄSTÄ — EI KELLOSTA (omistaja 3.9.2026)
+     * ══════════════════════════════════════════════════════════════
+     *
+     * Sanatarkasti: *"jostain syystä myös kertojan ääni jäi
+     * kuulumattomiin vaikka kohdekaupungissa kyllä sitten taas
+     * kuului."*
+     *
+     * JUURISYY. Luenta oli ripustettu SEINÄKELLOON: doPickStart
+     * käynnisti sen ajastimella 2,3 s napautuksesta, ja lennon oma
+     * finally-lohko perui ajastimen (clearTimeout) heti kun lento
+     * päättyi. Juuri siihen ikkunaan osui koko avauksen raskain työ —
+     * laudan vaihto, kamera-ajo, pohjatason rasterointi ja sadan
+     * laatan nouto ja purku. Hitaalla laitteella ja hitaalla verkolla
+     * ajastin myöhästyy ja äänitiedosto jonottaa samojen laattojen
+     * takana; myöhässä lauennut luenta joko peruttiin ajastimen mukana
+     * tai ehti vain alkaa ennen kuin saapumisen oma luenta pysäytti
+     * sen (playDiaryVoice aloittaa aina stopDiaryVoicella). Sama
+     * pullonkaula selittää molemmat omistajan havainnot: kartta rakentui
+     * silmien edessä JA kertoja jäi kuulumatta. Kohdekaupungin luenta
+     * kuuluu, koska se lähtee rauhoittuneesta saapumissekvenssistä.
+     *
+     * KORJAUS. Luenta ei enää katso kelloa vaan KOHTAUSTA: se alkaa
+     * täsmälleen siitä hetkestä, jolloin kartta on valmis ja arkki
+     * alkaa väistyä. Ääni on silloin edellä ja teksti perässä (repliikin
+     * kirjoitus alkaa LENNON_TEKSTI_VIIVE_MS:n päästä), kuten omistaja
+     * pyysi 12.8.2026 — ja verkko on vapaa, koska laatat ovat jo
+     * perillä.
+     */
+    this.lueLennonRepliikki();
+    /*
      * ARKKI POIS VASTA NYT: kaikki on paikallaan — kartta rajattuna
-     * lähtömaahan ja kohdemaahan, lähtömerkki Lontoon kohdalla, kone
-     * kiitoradalla. Pergamenttiarkista feidataan siis suoraan valmiiseen
-     * lentonäkymään, eikä tyhjää maailmankarttaa näy hetkeäkään
-     * (omistajan tilaus 25.8.2026, ks. ALOITUSVERHO_SISAAN_MS).
+     * lähtömaahan ja kohdemaahan, laatat ruudulla, lähtömerkki Lontoon
+     * kohdalla, kone kiitoradalla. Pergamenttiarkista feidataan siis
+     * suoraan valmiiseen lentonäkymään, eikä tyhjää maailmankarttaa näy
+     * hetkeäkään (omistajan tilaus 25.8.2026, ks. ALOITUSVERHO_SISAAN_MS).
      */
     await this.piilotaAloitusverho();
     if (this.dead) return;
@@ -19074,6 +19216,14 @@ export class UI {
      */
     const kortti = this.naytaSaapumiskortti(kohde);
     document.body.classList.remove('flight-active', 'kartalento');
+    /*
+     * NIMET TAKAISIN. Lippu alas heti lentotilan mukana ja rakennusavain
+     * nollaan, jotta saapumisen ensimmäinen asettunut näkymä latoo
+     * kerroksen uudestaan (paivitaMaastonimet → paivitaKarttanimet).
+     * Ilman avaimen nollausta kerros luulisi olevansa jo ajan tasalla:
+     * viimeinen kirjattu avain on lennon tyhjennyksestä.
+     */
+    this.paataKarttanimienLentotila();
     overlay.classList.add('flight-leaving');
     this.poistaLennonPilvet(pilvet);
     kerros.classList.add('lento-poistuu');
