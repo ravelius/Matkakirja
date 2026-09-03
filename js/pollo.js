@@ -2111,10 +2111,7 @@ class Pollo {
    * Fokuskaupungissa hän palauttaa isoisän merkinnän SÄVYN maan
    * tasalle (maadoitus); muualla hän juttelee kaupungista jotain omaa
    * — kansallisherkun, sukutarinan tai sen, mikä on muuttunut vuoden
-   * 1873 jälkeen (js/fokusvirta.js LIVIAN_SAAPUMISET). Kummallakin
-   * sisällöllä tämä on kaupungin AINOA Livian saapumiskupla, joten
-   * kupla kantaa myös puhujansa nimen — muissa kuplissa nimeä ei
-   * tarvita, koska ne ovat lyhyitä ohjeita, tämä taas on puheenvuoro.
+   * 1873 jälkeen (js/fokusvirta.js LIVIAN_SAAPUMISET).
    *
    * SAMA KUPLAPERHE KUIN VIHJEELLÄ eikä uusi elementti: sama paperi,
    * sama kärki, sama paikannus (asetaVihjeenPaikka) ja ennen kaikkea
@@ -2122,21 +2119,23 @@ class Pollo {
    * nielaiseSulkevaNapautuksen, joten napautus sulkee kuplan eikä vuoda
    * kartalle (ks. sidoKuplanNapautus).
    *
-   * Ylärivi on v1225:n yliviivattu nimilappu (ui-apurit.js
-   * polloNimilappu): "Viisas Pöllö" vedettynä yli yhdellä vedolla,
-   * "Pulu" perässä.
+   * PELKKÄ PUHE, EI NIMILAPPUA (omistajan tilaus 3.9.2026: *"tässä ei
+   * tarvita ollenkaan tuota kuvaketta eikä tuota riviä, missä lukee
+   * viisas pöllö yliviivattuna pulu. Eli pelkät puhekuplat."*).
+   * Aiempi ylärivi oli v1225:n yliviivattu nimilappu (ui-apurit.js
+   * polloNimilappu); pinossa se toistui kuplasta toiseen ja söi tilaa
+   * puheelta. Puhuja tunnistuu kuplan paikasta pöllön vierellä, ja
+   * nimi näkyy yhä chatissa (ks. kirjaaKuplaViestiin).
    *
    * @param {string} teksti saapumispuheenvuoro; tyhjä ei tee mitään.
    * @param {object} [asetukset]
    * @param {(() => void)|null} [asetukset.kuittaus] napautus kuplaan vie
    *   sarjan seuraavaan repliikkiin (js/livia.js ensisaapumisen
    *   paljastus); yksittäinen puheenvuoro jättää tämän pois.
-   * @param {boolean} [asetukset.nimilappu] osiin jaetun puheenvuoron
-   *   jatkokuplissa nimeä ei toisteta (ks. naytaPuheenvuoro).
    * @returns {boolean} näkyikö kupla PINOSSA (chatin ollessa auki
    *   puheenvuoro menee pelkkään virtaan ja tästä palaa epätosi).
    */
-  naytaSaapumiskupla(teksti, { kuittaus = null, nimilappu = true } = {}) {
+  naytaSaapumiskupla(teksti, { kuittaus = null } = {}) {
     if (!teksti || this.nappi.hidden) return false;
     // Puhekupla kuuluu chattiin aina, myös silloin kun se ei ehdi
     // pinoon asti (ks. kirjaaKuplaViestiin).
@@ -2146,11 +2145,6 @@ class Pollo {
     this.kiinnita();
     const kupla = this.luoKupla('puhe');
     kupla.classList.add('pollo-vihje-maadoitus');
-    if (nimilappu) {
-      kupla.appendChild(polloNimilappu(
-        polloElementti('p', 'pollo-vihje-nimilappu'), {},
-      ));
-    }
     for (const kappale of jaaKappaleiksi(teksti)) {
       kupla.appendChild(polloElementti('p', 'pollo-vihje-lause', kappale));
     }
@@ -2163,17 +2157,20 @@ class Pollo {
    * LIVIAN AVAUSKUPLA ALOITUSVALINNASSA (omistaja 29.8.2026: *"Livia
    * lennähtää mukaan jo aloitusvalinnassa"*).
    *
-   * KAKSI EROA saapumiskuplaan, kaikki muu on samaa kuplaperhettä —
+   * YKSI ERO saapumiskuplaan, kaikki muu on samaa kuplaperhettä —
    * sama paperi, sama kärki, sama paikannus ja sama napautussopimus:
+   * KUPLA PUHUU, VAIKKA NAPPIA EI OLE. Aloitusvalinnassa pöllönappi on
+   * piilossa (nakyyko: #intro on näkyvissä), joten `nappi.hidden`-portti
+   * jättäisi muuten koko sarjan pois. Paikannuksen varapaikka hoitaa
+   * ankkurin (ks. ankkuriLaatikko).
    *
-   *  1. KUPLA PUHUU, VAIKKA NAPPIA EI OLE. Aloitusvalinnassa
-   *     pöllönappi on piilossa (nakyyko: #intro on näkyvissä), joten
-   *     `nappi.hidden`-portti jättäisi muuten koko sarjan pois.
-   *     Paikannuksen varapaikka hoitaa ankkurin (ks. ankkuriLaatikko).
-   *  2. KUVAPAIKKA PUHEEN VIERESSÄ. Livialle generoidaan myöhemmin oma
-   *     kasvokuva juuri tähän näkymään (omistaja 29.8.2026); siihen
-   *     asti paikassa on sama viivakuvake kuin pöllönapissa. Kuvan
-   *     vaihto on yhden vakion muutos (js/livia.js LIVIAN_KASVOKUVA).
+   * KUVAPAIKKA JA NIMILAPPU POISTETTU (omistajan tilaus 3.9.2026:
+   * *"tässä ei tarvita ollenkaan tuota kuvaketta eikä tuota riviä,
+   * missä lukee viisas pöllö yliviivattuna pulu. Eli pelkät
+   * puhekuplat."*). Puheen vieressä oli viivapöllö odottamassa
+   * Livian omaa kasvokuvaa; ruudulla se jäi tunnistamattomaksi
+   * tahraksi ja söi kuplan leveydestä oman sarakkeensa. Nyt kupla on
+   * pelkkää puhetta, kuten muutkin pinon kuplat.
    *
    * NAPAUTUS VIE ETEENPÄIN: kuittaus-takaisinkutsu kerrotaan
    * napautussopimukselle (sidoKuplanNapautus), joka sulkee kuplan ja
@@ -2181,61 +2178,27 @@ class Pollo {
    *
    * @param {string} teksti repliikki (kaanonia, js/livia.js).
    * @param {object} [asetukset]
-   * @param {string} [asetukset.kuva] kasvokuvan polku; tyhjä = viivakuvake.
    * @param {boolean} [asetukset.lennahda] kevyt saapumisliike (sarjan avaus).
    * @param {(() => void)|null} [asetukset.kuittaus] pelaajan napautus kuplaan.
    * @returns {boolean} näkyikö kupla.
    */
-  naytaAvauskupla(teksti, { kuva = '', lennahda = false, kuittaus = null } = {}) {
+  naytaAvauskupla(teksti, { lennahda = false, kuittaus = null } = {}) {
     if (!teksti) return false;
     this.kirjaaKuplaViestiin(teksti);
     if (this.auki) return false;
     this.vihjeAnkkuri = null;
     const kupla = this.luoKupla('puhe');
-    kupla.classList.add('pollo-vihje-maadoitus', 'pollo-vihje-avaus');
+    kupla.classList.add('pollo-vihje-maadoitus');
     // Liike aloittaa uudestaan vain kun sarja alkaa: Livia lennähtää
     // paikalle kerran, seuraavat repliikit saavat pinon oman
     // ilmestymisliikkeen.
     if (lennahda) kupla.classList.add('pollo-vihje-lennahtaa');
-    kupla.appendChild(this.avauksenKuvapaikka(kuva));
-    const puhe = polloElementti('div', 'pollo-vihje-puhe');
-    puhe.appendChild(polloNimilappu(
-      polloElementti('p', 'pollo-vihje-nimilappu'), {},
-    ));
     for (const kappale of jaaKappaleiksi(teksti)) {
-      puhe.appendChild(polloElementti('p', 'pollo-vihje-lause', kappale));
+      kupla.appendChild(polloElementti('p', 'pollo-vihje-lause', kappale));
     }
-    kupla.appendChild(puhe);
     kupla.polloKuittaus = kuittaus;
     this.lisaaPinoon(kupla);
     return true;
-  }
-
-  /**
-   * Kuvapaikka avauskuplaan: kasvokuva jos sellainen on, muuten sama
-   * viivapöllö kuin napissa. Paikka on aina samankokoinen, joten
-   * kuvan pudottaminen paikalleen ei muuta kuplan asettelua.
-   */
-  avauksenKuvapaikka(kuva = '') {
-    const paikka = polloElementti('div', 'pollo-vihje-kuvapaikka');
-    paikka.setAttribute('aria-hidden', 'true');
-    if (kuva) {
-      const kuvake = this.doc.createElement('img');
-      kuvake.className = 'pollo-vihje-kasvot';
-      kuvake.src = kuva;
-      kuvake.alt = '';
-      kuvake.decoding = 'async';
-      kuvake.draggable = false;
-      // Kuva muuttaa kuplan korkeutta latautuessaan, ja kupla on
-      // asemoitu alareunastaan — ilman uutta mittausta se hyppäisi.
-      kuvake.addEventListener('load', () => this.asetaVihjeenPaikka(), { once: true });
-      paikka.appendChild(kuvake);
-      return paikka;
-    }
-    const merkki = polloElementti('span', 'pollo-vihje-kuvake viiva-ikoni');
-    merkki.innerHTML = POLLO_IKONI;
-    paikka.appendChild(merkki);
-    return paikka;
   }
 
   /**
@@ -2247,7 +2210,7 @@ class Pollo {
   nollaaKuplanAsu(kupla) {
     kupla.classList.remove(
       'pollo-vihje-juhla', 'pollo-vihje-maadoitus',
-      'pollo-vihje-ylos', 'pollo-vihje-avaus', 'pollo-vihje-lennahtaa',
+      'pollo-vihje-ylos', 'pollo-vihje-lennahtaa',
     );
     kupla.polloKuittaus = null;
     kupla.replaceChildren();
@@ -2381,6 +2344,15 @@ class Pollo {
     this.pinoKehys.hidden = false;
     pino.appendChild(kupla);
     this.asetaPinonPaikka();
+    /*
+     * YLIVUOTO MITATAAN ENNEN FLIP-SIIRTOA (korjaus 3.9.2026). Alla
+     * vanhoille kuplille asetetaan hetkeksi translateY, ja selain
+     * laskee siirretyn kuplan mukaan pinon vieritysalueeseen — mittaus
+     * kesken liikkeen luuli pinon vuotavan yli ja jätti yläreunan
+     * häivytyksen päälle pysyvästi. Sama mittaus toistetaan liikkeen
+     * jälkeen (ks. siivoa), jotta oikea ylivuoto ei jää huomaamatta.
+     */
+    this.paivitaYlivuoto();
     if (ennen) {
       const liikkuneet = [];
       vanhat.forEach((k, i) => {
@@ -2400,12 +2372,16 @@ class Pollo {
           k.style.transition = '';
           k.style.transform = '';
           k.removeEventListener('transitionend', siivoa);
+          // Transform on purettu: nyt vieritysalue on todellinen.
+          this.paivitaYlivuoto();
         };
         k.addEventListener('transitionend', siivoa);
+        // Varmistin: transitionend jää tulematta, jos välilehti on
+        // taustalla — ilman tätä siirto jäisi kiinni kuplaan.
+        setTimeout(siivoa, 420);
       }
     }
     this.vierita();
-    this.paivitaYlivuoto();
     this.kuplanAani();
   }
 
@@ -2741,8 +2717,8 @@ class Pollo {
    *
    * Osat tulevat pinoon yksi kerrallaan, ja viive on suhteessa EDELLISEN
    * osan pituuteen: pelaaja ehtii lukea sen ennen kuin seuraava
-   * työntää sitä ylöspäin. Nimilappu on vain ensimmäisessä — sama
-   * puhuja jatkaa, eikä nimeä toisteta joka kuplassa.
+   * työntää sitä ylöspäin. Kuplat ovat pelkkää puhetta (3.9.2026);
+   * puhuja tunnistuu paikasta pöllön vierellä eikä nimilappua ole.
    *
    * KESKEYTYS. Sarja perutaan, kun pelaaja sulkee kuplat (×), avaa
    * chatin tai pöllö katoaa (tyhjennaPino), ja `jatkuuko` katkaisee
@@ -2799,7 +2775,6 @@ class Pollo {
       const viimeinen = nyt.seuraava >= nyt.palat.length;
       this.naytaSaapumiskupla(nyt.palat[i], {
         kuittaus: viimeinen ? nyt.kuittaus : null,
-        nimilappu: false,
       });
       if (viimeinen) {
         this.puheenvuoro = null;
