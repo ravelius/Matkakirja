@@ -420,6 +420,27 @@ Suurin tummeneminen on **1,0 sävyä** ja suurin sävykulman kääntymä
 **1,0 astetta** — eli kartta ei tummene eikä ruskea käänny oranssiksi,
 mikä oli koko leikkaussuojan tarkoitus.
 
+### `kevyt` — kirkas kevennettynä (omistajan valinta 3.9.2026)
+
+Omistaja: *"patinaan voisi ajaa seuraavat muutokset: kirkkautta, raetta
+ja sumennusta hieman pois"* ja pelinäkymän vedosten jälkeen
+*"saturaatiota voi hieman vähentää myös"*. Seitsemästä vedoksesta
+(kirkas, a/b/c, a2/b2/c2 — Bulgaria 100 km, nimet, nostot ja viivat
+mukana) omistaja valitsi A2:n. `RESEPTIT.kevyt` on `kirkas` neljällä
+muutoksella; workflow-oletus ja koko pyramidin sekä nostotason resepti
+versiosta 2026-09-03a alkaen.
+
+| parametri | `kirkas` | `kevyt` |
+|---|---|---|
+| sävykäyrän nosto | 36 | 30 |
+| paperin rae / karkea | 0,036 / 0,027 | 0,027 / 0,020 |
+| kuitu / ristikuitu | 0,026 / 0,015 | 0,020 / 0,011 |
+| leviämisen voima | 0,15 | 0,10 |
+| kylläisyys / kromanVahvistus | 0,45 / 0,95 | 0,40 / 0,80 |
+
+Hylätyt annokset b (26 / 0,018 / 0,06) ja c (22 / 0,010 / ei
+leviämistä) ovat git-historiassa (v1490:n vedosreseptit).
+
 ### Mikä meni laattoihin ja mikä ei
 
 | osa | laattoihin? | miksi |

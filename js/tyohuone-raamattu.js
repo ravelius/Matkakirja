@@ -2334,7 +2334,15 @@ export const RAAMATTU = {
           + 'uusi profiili tools/patina.mjs RESEPTIT.kirkas (savykayra '
           + '0,87/36, rae ja leviaminen puolitettu, kyllaisyys omistajan '
           + 'toiveen mukaan "reilusti" - lopullinen arvo mitattuna '
-          + 'docs/moduulit/laattapyramidi.md 6b), workflow-oletus.',
+          + 'docs/moduulit/laattapyramidi.md 6b), workflow-oletus. '
+          + 'PATINA KEVYT (omistaja 3.9.2026: "patinaan voisi ajaa '
+          + 'seuraavat muutokset: kirkkautta, raetta ja sumennusta hieman '
+          + 'pois" ja vedosten jalkeen "saturaatiota voi hieman vahentaa '
+          + 'myos"; valinta seitsemasta pelinakyman vedoksesta: A2 eli '
+          + 'pienin annos + saturaatio alas): RESEPTIT.kevyt = kirkas '
+          + 'savykayran nostolla 30, rae ja kuitu n. -25 %, leviaminen '
+          + '0,10, kyllaisyys 0,40 / kromanVahvistus 0,80. Workflow-oletus; '
+          + 'koko pyramidi ja nostotaso poltetaan samalla reseptilla.',
         'NOSTOKORTIN KUVAT JA TEKSTI (omistaja 2.9.2026, Sofian '
           + 'skandaalikortti: "Tama nayttaa tyngalta. Puuttuu tekstia. '
           + 'Tahan voisikin hienosti generoida muutaman aikalaiskuvan ... '
