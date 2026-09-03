@@ -895,17 +895,29 @@ seuraavalla ajolla. Pieni versio menee aina saman alikansion
 `pieni/`-hakemistoon, joten muotokuvien pienennykset eivät sekoitu
 ilmiökuviin. Pienet versiot eivät mene repoon — työkalu kirjoittaa
 `media/`-kansioon (.gitignore) ja vie sieltä ämpäriin, kuten kaikki
-muukin media. **Muotokuvien tultua mukaan
-`.github/workflows/tee-pienet-kuvat.yml` on ajettava uudelleen**, jotta
-uusi kansio täyttyy (28 muotokuvaa); pelin puoli ei vielä lue pieniä
-versioita, joten ajo ei ole julkaisun este.
+muukin media. Ämpärissä ovat nyt (tarkistettu 3.9.2026 HEADilla)
+kaikki 54 pientä versiota: 26 ilmiökuvaa ja 28 muotokuvaa.
 
-**Pelin puoli tulee erikseen.** Sopimus on tämä: kun linssi avataan,
-peli esilataa taustalla kaikkien pysäkkien PIENET versiot (ei
-alkuperäisiä), ja ilmiöpaneeli näyttää animaation aikana pienen
-version; alkuperäinen haetaan vasta, kun pelaaja avaa jutun. Kun
-pieni versio puuttuu ämpäristä, näytetään alkuperäinen — uusi kuva ei
-saa jäädä näkymättä siksi, että pienennysajo on vielä ajamatta.
+**Pelin puoli lukee nyt pienet.** Sopimus on tämä:
+
+- `js/aikajana.js` vie puhtaan apurin **`pieniOsoite(osoite)`**, joka
+  tekee saman muunnoksen kuin työkalu: viimeinen polkusegmentti
+  `nimi.jpg` → `pieni/nimi.webp` samaan kansioon. Kelvoton syöte (ei
+  URL, ei päätettä, jo `pieni/`-kansiossa) palautuu sellaisenaan.
+  Yhtenevyys työkalun kanssa on testattu kaikilla datan osoitteilla
+  (`tests/aikajana.test.mjs`), koska sääntö asuu kahdessa paikassa.
+- **Kortin muotokuvat ja ilmiöpaneelin kuva** (pyyntöleveys ≤ 640,
+  `PIENEN_KATTO`) ladataan pienenä, ja `onerror` hakee **kerran**
+  alkuperäisen. Kertaluontoinen kuuntelija estää silmukan: jos
+  varakin kaatuu, uutta yritystä ei tule. Puuttuva pieni versio ei
+  siis koskaan jätä kuvaa näkymättä.
+- **"Lue juttu" -galleria käyttää yhä alkuperäisiä** — se on ainoa
+  paikka, jossa kuva näkyy isona.
+- **Esilataus:** linssin avautuessa (`kaynnista` → `esilataaPienet`)
+  pyydetään taustalle KAIKKIEN pysäkkien pienet muotokuvat ja
+  ilmiökuvat kerralla, ei enää kolmea pysäkkiä edellä. Koko sarja
+  pieninä on 3–5 Mt ja ehtii latautua kamera-ajon aikana; isoja ei
+  esiladata lainkaan.
 
 ---
 
@@ -934,12 +946,75 @@ ja filminauhan korkeus on laskettu kehyksestä ja tekstirivien lukituista
 rivikorkeuksista: suurennettu kortti mahtuu nauhaan kokonaan (omistajan
 havainto *"suurennettu kuva näyttää leikkautuvan yläosasta"*).
 
-Muotokuvat esiladataan kolme pysäkkiä edellä (`esilataaSeuraavat`,
-js/ui-apurit.js `esilataaKuvat`), samalla kertaa ilmiökuvien kanssa.
+Muotokuvat esiladataan pieninä koko kaaresta kerralla linssin
+avautuessa (`esilataaPienet`, js/ui-apurit.js `esilataaKuvat`), samalla
+kertaa ilmiökuvien kanssa — ks. luku 7.
 
 ---
 
-## 9. Tarkistuslista ennen kuin linssi on valmis
+## 9. Alarivi on karuselli (3.9.2026)
+
+Omistajan tilaus 3.9.2026, sanatarkasti: *"nuo henkiloiden kuvat voisi
+tayttaa koko alarivin niin etta nykyinen henkilo on aina keskella
+ruutua ja kaikki vasemmalla ja oikealla puolella olevat ovat
+merkittavasti pienempia ja kaikki vasemmalla puolella ovat kevyesti
+blurattuja."* Tämä korvasi 2.9.2026 illan filminauhan, jossa seuraava
+kortti oli vasemmassa reunassa sumeana ja menneet oikealla.
+
+**Järjestys on kronologinen vasemmalta oikealle.** Menneet vasemmalla,
+nykyinen keskellä ruutua täydessä mitassa, tulevat oikealla. Vuoden
+vaihtuessa koko rivi liukuu yhden askeleen vasemmalle.
+
+| | mitta | sumennus | himmeys |
+|---|---|---|---|
+| nykyinen (keskellä) | 1 | — | 1 |
+| naapuri | 0,62 | menneet 1,5 px | 0,82 / 0,90 |
+| toinen naapuri | 0,52 | menneet 1,75 px | 0,68 / 0,78 |
+| kauempana | 0,44 | menneet 2 px | pohja 0,4 / 0,5 |
+
+Tulevia **ei sumenneta** — ne erottuvat pelkällä koolla ja
+vaimeudella, kuten omistajan sanamuoto edellyttää.
+
+**Laskenta on puhdas funktio** `karusellinPaikat(i, nyt,
+leveysKortteina)` (js/aikajana.js), joka palauttaa `paikka`
+(etäisyys keskeltä kortin leveyksinä, negatiivinen vasemmalle),
+`mitta`, `luokka`, `himmeys`, `sumennus` ja `jarjestys`. `asettele()`
+vie ne CSS-muuttujiin `--paikka`, `--mitta`, `--himmeys` ja
+`--sumennus`; tyylitiedosto (css/aikajana.css) hoitaa liikkeen yhdellä
+siirtymällä (transform + opacity + filter, `--aikajana-kesto` 0,62 s
+ja nopeutus–hidastus; `prefers-reduced-motion` nollaa keston, jolloin
+jää pelkkä vaihto). Ei ajastimia eikä kehyskohtaista JS:ää — asettelu
+lasketaan vain pysäkin vaihtuessa ja ikkunan koon muuttuessa.
+
+**Etäisyys kertyy, ei askella.** Kahden vierekkäisen kortin väli on
+niiden mittojen keskiarvo (+ 5 % rakoa), joten karuselli pakkautuu
+tasaisesti reunaa kohti eikä ulkoreunoille jää ammottavia rakoja.
+
+**Ruudulle mahtuu niin monta kuin leveys sallii.** Nauhan leveys
+mitataan kortin leveyksinä (`nauhanLeveysKortteina`, `--aikajana-kortti-w`
+on clamp-arvo), ja kortti on `piilossa`, jos se ei mahdu kokonaan:
+läpinäkyvyys 0, ei osoitintapahtumia, `aria-hidden="true"`,
+`tabIndex = -1` — mutta **oikealla paikallaan**, jotta reunan takaa
+saapuva kortti liukuu sisään oikeasta suunnasta. Nykyinen kortti on
+aina näkyvissä, vaikka ruutu olisi korttia kapeampi. Käytännössä
+1280 px:n ruudulla näkyy noin 8 korttia kummallakin puolella ja
+390 px:n puhelimella kaksi.
+
+**Napautukset:** mennyt kortti näyttää itsensä paneelissa (kello ei
+kelaa taaksepäin), nykyinen pysäyttää ja avaa jutun, tuleva hyppää
+siihen. Näppäimistöfokus vain näkyvillä korteilla.
+
+**Kortti ei saa leikkautua nauhan yläreunasta** (omistajan havainto
+3.9.2026). Nauhan korkeus on laskettu: kortin leveys × 1,25
+(muotokuvan 4:5-kehys) + 5,2 rem (lukitut tekstirivit + tila
+kultarenkaalle ja varjolle). Savuke mittaa tämän
+(`tools/savukkeet/savuke-aikajana.mjs`, väite 3b) yhdessä sen kanssa,
+että nykyinen kortti on nauhan keskellä, menneet vasemmalla sumeina ja
+tulevat oikealla tarkkoina.
+
+---
+
+## 10. Tarkistuslista ennen kuin linssi on valmis
 
 - [ ] `js/linssit/<tunnus>.js` vie `LINSSI`-vakion, jossa on `tunnus`,
       `nimi`, `lyhyt`, `ikoni`, `laudat`, `lahde` ja `piirra`.

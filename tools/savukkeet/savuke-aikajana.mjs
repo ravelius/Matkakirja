@@ -18,6 +18,11 @@
  *   2. Kamera on Euroopassa (näkyvä alue sisältää Lontoon ja Pietarin).
  *   3. Ensimmäinen tapahtuma syttyy: yksi valo palaa, nykyinen kortti
  *      on Watt, ilmiöpaneelissa Wattin nimi ja selite.
+ *   3b. KARUSELLI keskivaiheilla kaarta (omistaja 3.9.2026): nauha
+ *      täyttää ruudun leveyden, nykyinen kortti on keskellä, menneet
+ *      ovat vasemmalla sumeina ja tulevat oikealla tarkkoina — ja
+ *      kaikki sivukortit merkittävästi pienempiä. Sama mittaus
+ *      vartioi sitä, ettei kortti leikkaudu nauhan yläreunasta.
  *   4. Kellon napautus pysäyttää; toinen jatkaa.
  *   5. Kaaren lopussa kaikki valot palavat ja loppusanat näkyvät.
  *   6. Nykyisen kortin napautus avaa nähtävyysdialogin jutulla.
@@ -120,7 +125,9 @@ const eka = await sivu.evaluate(async () => {
     i: ui.aikajana.tila.i,
     palaa: document.querySelectorAll('.aikajana-valo.palaa').length,
     kortti: nykyinen?.textContent ?? '',
-    seuraava: document.querySelector('.aikajana-kortti.seuraava')?.textContent ?? '',
+    // Karusellissa tulevat ovat oikealla DOM-järjestyksessä, joten
+    // ensimmäinen .tuleva on seuraava pysäkki.
+    seuraava: document.querySelector('.aikajana-kortti.tuleva')?.textContent ?? '',
     paneeli: document.querySelector('.aikajana-ilmio-sivu.esilla')?.textContent ?? '',
     kello: document.querySelector('.aikajana-kello')?.getAttribute('aria-label'),
     kuvia: document.querySelectorAll('.aikajana-kortti.nykyinen img').length,
@@ -131,6 +138,47 @@ vaadi('ensimmäinen tapahtuma: Watt syttyy, kortti ja paneeli täsmäävät',
     && /Montgolfier/.test(eka.seuraava) && /lauhdut/i.test(eka.paneeli) && eka.kello === 'Vuosi 1769',
   JSON.stringify(eka).slice(0, 300));
 await sivu.screenshot({ path: join(ULOS, 'savuke-aikajana-watt.png') });
+
+/* 3b. Karuselli keskivaiheilla kaarta (omistajan tilaus 3.9.2026) */
+const karuselli = await sivu.evaluate(async () => {
+  const { ui } = window.matkakirja;
+  ui.aikajana.napautaKorttia(5);
+  ui.aikajana.pysayta();
+  await new Promise((r) => setTimeout(r, 900));
+  const nauha = document.querySelector('.aikajana-nauha').getBoundingClientRect();
+  const keski = nauha.left + nauha.width / 2;
+  const tiedot = (valitsin) => [...document.querySelectorAll(valitsin)].map((k) => {
+    const r = k.getBoundingClientRect();
+    return { x: r.left + r.width / 2, w: r.width, ylin: r.top, sumea: /blur\(([\d.]+)px\)/.exec(getComputedStyle(k).filter)?.[1] ?? '0' };
+  });
+  const nyk = tiedot('.aikajana-kortti.nykyinen')[0];
+  const menneet = tiedot('.aikajana-kortti.mennyt');
+  const tulevat = tiedot('.aikajana-kortti.tuleva');
+  return {
+    i: ui.aikajana.tila.i,
+    keskella: Math.abs(nyk.x - keski),
+    nauhanLeveys: Math.round(nauha.width),
+    ruutu: Math.round(document.querySelector('.aikajana').getBoundingClientRect().width),
+    leikkaus: Math.round(nyk.ylin - nauha.top),
+    menneita: menneet.length,
+    tulevia: tulevat.length,
+    menneetVasemmalla: menneet.every((k) => k.x < nyk.x),
+    tulevatOikealla: tulevat.every((k) => k.x > nyk.x),
+    sivutPienempia: [...menneet, ...tulevat].every((k) => k.w < nyk.w * 0.7),
+    menneetSumeita: menneet.every((k) => Number(k.sumea) >= 1.5),
+    tulevatTarkkoja: tulevat.every((k) => Number(k.sumea) === 0),
+  };
+});
+vaadi('karuselli: nykyinen keskellä, menneet vasemmalla sumeina, tulevat oikealla tarkkoina',
+  karuselli.i === 5 && karuselli.keskella < 2 && karuselli.leikkaus >= 0
+    && karuselli.menneita >= 3 && karuselli.tulevia >= 3
+    && karuselli.menneetVasemmalla && karuselli.tulevatOikealla && karuselli.sivutPienempia
+    && karuselli.menneetSumeita && karuselli.tulevatTarkkoja
+    && karuselli.nauhanLeveys === karuselli.ruutu,
+  JSON.stringify(karuselli));
+await sivu.screenshot({ path: join(ULOS, 'savuke-aikajana-karuselli.png') });
+await sivu.evaluate(() => window.matkakirja.ui.aikajana.alusta());
+await sivu.waitForTimeout(600);
 
 /* 2. Kamera Euroopassa (odotetaan kamera-ajo) */
 await sivu.waitForTimeout(1600);
@@ -176,11 +224,12 @@ const loppu = await sivu.evaluate(async () => {
     paneeli: document.querySelector('.aikajana-ilmio-sivu.esilla')?.textContent ?? '',
     kello: document.querySelector('.aikajana-kello')?.getAttribute('aria-label'),
     menneita: document.querySelectorAll('.aikajana-kortti.mennyt').length,
+    tulevia: document.querySelectorAll('.aikajana-kortti.tuleva').length,
   };
 });
 vaadi('kaaren lopussa kaikki 25 valoa palavat ja loppusanat näkyvät',
   loppu.loppu && loppu.palaa === 25 && loppu.lopussa && /Atlantin takana/.test(loppu.paneeli)
-    && loppu.kello === 'Vuosi 1928' && loppu.menneita === 5,
+    && loppu.kello === 'Vuosi 1928' && loppu.menneita >= 5 && loppu.tulevia === 0,
   JSON.stringify(loppu).slice(0, 300));
 await sivu.screenshot({ path: join(ULOS, 'savuke-aikajana-loppu.png') });
 
