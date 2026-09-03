@@ -2867,7 +2867,15 @@ export const RAAMATTU = {
           + 'sailyvat chatissa. 6) Kartan kosketus piilottaa vain '
           + 'VIHJEET (valintavihje, ohjeet), ei Livian puheenvuoroja. '
           + 'Sarjakuplien kuittausnapautus (aloitusvalinnan paljastus) '
-          + 'sailyy. Kaikki liike Arkkikirjaston animaatiosaannon mukaan.',
+          + 'sailyy. Kaikki liike Arkkikirjaston animaatiosaannon mukaan. '
+          + 'TOTEUTETTU v1489: js/pollo.js kuplapino (FLIP-nousu 360 ms, '
+          + 'sisaantulo 320 ms, x, ylareunan haivytys, vieritys), '
+          + 'polloPuheenvuoro + jaaPuheenvirkkeiksi (ui-apurit '
+          + 'jaaPuheenvuoroksi), puhekuplat kirjataan chattiin; Sofian '
+          + 'maadoitus tulee kolmena kuplana. Sivuvaikutus: tietajatason '
+          + 'juhlakupla tulee nyt pinoon pollonapin ylle eika matkalaukun '
+          + 'kohdalle (18.8.2026 linjaus paikasta ei enaa pade) - omistaja '
+          + 'paattaa, palautetaanko.',
         'VAIKEAT NYKYAIHEET (omistaja 20.8.2026): Pöllö vastaa '
           + 'asiallisesti suoriin kysymyksiin vaikeista nykyaiheista '
           + '(esim. "miksi Mosul on tuhoutunut", "onko siellä elämää '
