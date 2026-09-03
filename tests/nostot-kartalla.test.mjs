@@ -246,7 +246,12 @@ test('lehteen jätetyllä hetkellä on kirjattu syy', () => {
     `${hetki.id}: poikkeukselle ei ole kirjattu syytä (kartanUlkopuolellaSyy)`);
   }
   const poikkeukset = HISTORIAN_HETKET.filter((h) => h.kartanUlkopuolella).map((h) => h.id);
+  // 3.9.2026 (omistaja): kaupungin laatan päälle osuva hetki ei ole
+  // pääkartalla vaan kaupunkilehdessä ja sen kohdekartan pisteenä
+  // (Lissabon 1484, Fram 1893). Lähelle osuva hetki siirretään datassa
+  // irti kaupungista, ei pudoteta.
   assert.deepEqual(poikkeukset.sort(),
-    ['amundsen-etelanapa-1911', 'darwin-galapagos-1835'],
+    ['amundsen-etelanapa-1911', 'darwin-galapagos-1835',
+      'kolumbus-portugali-1484', 'nansen-fram-1893'],
     'poikkeuslista muuttui — uusi lehteen jäävä hetki vaatii omistajan päätöksen');
 });

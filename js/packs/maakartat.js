@@ -3943,6 +3943,13 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Ultimaatum 1890', lat: 38.716, lon: -9.1414,
         nosto: 'skandaali-vaaleanpunainen-kartta-1890',
       },
+      // Historian hetki kaupungin laatan päältä (omistaja 3.9.2026):
+      // Juhana II:n hovi istui Paço da Ribeirassa nykyisen Kauppatorin
+      // paikalla; hetken oma sivu on lehdessä, tämä on sen karttapaikka.
+      {
+        nimi: 'Kolumbus 1484', lat: 38.7066, lon: -9.1352,
+        nosto: 'hetki-kolumbus-portugali-1484',
+      },
     ],
   },
   barcelona: {
@@ -6625,6 +6632,12 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Boheemikirja', lat: 59.9135, lon: 10.741,
         nosto: 'skandaali-boheemikirjan-takavarikko',
+      },
+      // Historian hetki kaupungin laatan päältä (omistaja 3.9.2026): Fram
+      // lähti Pipervikasta, nykyisen kaupungintalon edustalta.
+      {
+        nimi: 'Fram 1893', lat: 59.9098, lon: 10.7318,
+        nosto: 'hetki-nansen-fram-1893',
       },
     ],
   },

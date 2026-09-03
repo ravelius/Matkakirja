@@ -46,8 +46,18 @@
  *                      alle kahdeksan yksikön päässä kohdekaupungista.
  *                      Kaupunkinostojen katto (js/fokuskohteet.js
  *                      karsiKaupunkiruuhka) pudottaisi merkin muuten
- *                      kaupungin kolmen noston joukosta. Merkki ei jää
- *                      laatan päälle: kasauspassi (js/fokusniput.js)
+ *                      kaupungin kolmen noston joukosta. OMISTAJA
+ *                      3.9.2026: hetkeä EI enää ladota kaupungin
+ *                      viereen siirtoviivan päähän — kaupungin laatan
+ *                      päälle osuva hetki (Lissabon 1484, Fram 1893)
+ *                      on vain kaupunkilehdessä ja sen kohdekartalla,
+ *                      ja lähelle osuva hetki (Santa Fé 1492, Restelo
+ *                      1497) on siirretty datassa sen verran irti
+ *                      kaupungista (≥ 9 yksikköä), että piste mahtuu
+ *                      kartalle omalla paikallaan ilman lippua ja ilman
+ *                      viivaa; sijainnin ei tarvitse olla tarkka.
+ *                      Lippu jää varalle. Vanha malli: kasauspassi
+ *                      (js/fokusniput.js)
  *                      latoo sen kaupungin viereen sarakkeeseen ja
  *                      vetää siirtoviivan tapahtumapaikkaan, kuten
  *                      kaikille muillekin lähelle osuville nostoille.
@@ -166,10 +176,10 @@ export function hetkenKuvat(hetki) {
 export const HISTORIAN_HETKET = [
   /*
    * 1. LISSABON 1484 — HYLKÄYS JUHANA II:N HOVISSA.
-   * Piste on Lissabonin laatan päällä (1 laudan yksikkö), joten merkki
-   * tarvitsee `kattoVapaa`-lipun; kasauspassi latoo tiimalasin
-   * kaupungin viereen siirtoviivan päähän. Sivu on Lissabonin
-   * kaupunkilehdessä.
+   * Piste on Lissabonin laatan päällä (1 laudan yksikkö). Omistaja
+   * 3.9.2026: laatan päälle osuva hetki EI ole pääkartalla — sivu on
+   * Lissabonin kaupunkilehdessä ja piste sen kohdekartalla
+   * (js/packs/maakartat.js "Kolumbus 1484" → tämä hetki).
    * Lähde: en.wikipedia.org: Christopher Columbus, John II of Portugal
    */
   {
@@ -221,18 +231,12 @@ export const HISTORIAN_HETKET = [
         url: 'https://www.loc.gov/exhibits/1492/columbus.html',
       },
     ],
-    kartalla: true,
-    kattoVapaa: true,
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Lissabonin laatan päällä (1 yksikkö): '
+      + 'kaupungin laatan päälle osuva hetki ei ole pääkartalla (omistaja '
+      + '3.9.2026) vaan Lissabonin kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'lissabon' },
-    visa: {
-      kysymys: 'Miksi Portugalin hovin asiantuntijat torjuivat Kolumbuksen suunnitelman?',
-      vaihtoehdot: [
-        'He eivät uskoneet maapallon olevan pyöreä',
-        'Portugalilla ei ollut varaa kolmeen laivaan',
-        'Kolumbus oli laskenut maapallon liian pieneksi',
-      ],
-      oikea: 2,
-    },
     lehtiJohdanto: 'Kolumbus asui Lissabonissa toistakymmentä vuotta ja esitti '
       + 'suunnitelmansa ensin Portugalin kuninkaalle — joka sanoi ei, ja oli '
       + 'laskuopin puolesta oikeassa.',
@@ -251,8 +255,13 @@ export const HISTORIAN_HETKET = [
   },
   /*
    * 2. SANTA FÉ, GRANADA 17.4.1492 — KAPITULAATIOT.
-   * Granada on 4 laudan yksikön päässä, joten merkki tarvitsee
-   * `kattoVapaa`-lipun. Sivu on Granadan kaupunkilehdessä.
+   * Santa Fé on 11 km Granadasta länteen eli 4 laudan yksikköä —
+   * kaupunkikaton ja kasauspassin sisällä. Omistaja 3.9.2026: piste
+   * siirretään datassa sen verran irti kaupungista, että se mahtuu
+   * kartalle omalla paikallaan ilman kattoVapaa-lippua ja ilman
+   * siirtoviivaa (lon −3,72 → −3,87, noin 9 yksikköä Granadasta;
+   * "ei haittaa vaikka ei ole täysin tarkka sijainti"). Sivu on
+   * Granadan kaupunkilehdessä.
    * Lähde: en.wikipedia.org: Capitulations of Santa Fe, Christopher
    * Columbus, Isabella I of Castile
    */
@@ -263,7 +272,7 @@ export const HISTORIAN_HETKET = [
     paivays: '17.4.1492',
     paikka: 'Santa Fé, Granada, Espanja',
     iso: 'ESP',
-    lat: 37.19, lon: -3.72,
+    lat: 37.19, lon: -3.87,
     teksti: 'Kavioiden kapse tavoittaa hänet vasta tiellä. Kolumbus on lähtenyt '
       + 'Santa Fésta jälleen kerran torjuttuna, kun kuninkaallinen '
       + 'sanansaattaja saa hänet kiinni ja käskee kääntyä takaisin: hovi on '
@@ -309,7 +318,6 @@ export const HISTORIAN_HETKET = [
       },
     ],
     kartalla: true,
-    kattoVapaa: true,
     lehti: { laji: 'kaupunki', avain: 'granada' },
     visa: {
       kysymys: 'Mistä Kolumbuksen ensimmäisen matkan rahoitus tuli?',
@@ -508,11 +516,16 @@ export const HISTORIAN_HETKET = [
   },
   /*
    * 5. LISSABON, RESTELON RANTA 8.7.1497.
-   * Lissabon 3 yksikön päässä, joten kaupunkikatto pudottaisi merkin →
-   * `kattoVapaa`. Kaupunkilehden kohdekartta ei kelpaa: Belém on 5,5
-   * kilometriä kartan länsipuolella (rajaus −9,1505…−9,118), eikä
-   * rajausta voi venyttää sinne ilman että Lissabonin kartasta tulee
-   * seitsemän kilometrin levyinen ja lukukelvoton.
+   * Belém on 6 km Lissabonin keskustasta länteen eli 3 laudan yksikköä
+   * — kaupunkikaton ja kasauspassin sisällä. Kaupunkilehden kohdekartta
+   * ei kelpaa: Belém on 5,5 kilometriä kartan länsipuolella (rajaus
+   * −9,1505…−9,118), eikä rajausta voi venyttää sinne ilman että
+   * Lissabonin kartasta tulee seitsemän kilometrin levyinen ja
+   * lukukelvoton. Omistaja 3.9.2026: piste siirretään datassa Tejon
+   * suulle sen verran irti kaupungista, että se mahtuu kartalle omalla
+   * paikallaan ilman kattoVapaa-lippua ja ilman siirtoviivaa (lon
+   * −9,205 → −9,415, lat 38,696 → 38,700, noin 10 yksikköä
+   * Lissabonista; "ei haittaa vaikka ei ole täysin tarkka sijainti").
    * Lähde: en.wikipedia.org: Vasco da Gama, Jerónimos Monastery
    */
   {
@@ -522,7 +535,7 @@ export const HISTORIAN_HETKET = [
     paivays: '8.7.1497',
     paikka: 'Restelon ranta, Lissabon',
     iso: 'PRT',
-    lat: 38.6960, lon: -9.2050,
+    lat: 38.7000, lon: -9.4150,
     teksti: 'Polvet painuvat rantahiekkaan, ja yön viimeinen tunti kuluu näin. '
       + 'Restelon kappelissa, jonka Henrik Purjehtija rakennutti merimiehiä '
       + 'varten ja joka on jo pahasti rapistunut, Vasco da Gama ja hänen '
@@ -564,7 +577,6 @@ export const HISTORIAN_HETKET = [
       },
     ],
     kartalla: true,
-    kattoVapaa: true,
     lehti: { laji: 'kaupunki', avain: 'lissabon' },
     visa: {
       kysymys: 'Mitä Vasco da Gama miehineen teki Restelon rannalla lähtöä edeltävänä yönä?',
@@ -864,9 +876,10 @@ export const HISTORIAN_HETKET = [
   },
   /*
    * 9. KRISTIANIA (OSLO) 24.6.1893.
-   * Oslo 1 yksikön päässä eli sama paikka, joten kaupunkikatto
-   * pudottaisi merkin → `kattoVapaa`; kasauspassi latoo tiimalasin
-   * kaupungin viereen siirtoviivan päähän. Piste osuisi myös Oslon
+   * Oslo 1 yksikön päässä eli sama paikka. Omistaja 3.9.2026: laatan
+   * päälle osuva hetki EI ole pääkartalla — sivu on Oslon
+   * kaupunkilehdessä ja piste sen kohdekartalla (js/packs/maakartat.js
+   * "Fram 1893" → tämä hetki). Piste osuisi myös Oslon
    * kohdekartan rajaukseen, mutta hetki ei ole nähtävyys: sen kortti
    * on havainnekuvineen ja tiimalasimerkkeineen oma lajinsa, ja vain
    * pääkartta osaa näyttää sen sellaisena.
@@ -932,18 +945,12 @@ export const HISTORIAN_HETKET = [
         url: 'https://frammuseum.no/polar-history/expeditions/the-first-fram-expedition-1893-1896/',
       },
     ],
-    kartalla: true,
-    kattoVapaa: true,
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Oslon laatan päällä (1 yksikkö): '
+      + 'kaupungin laatan päälle osuva hetki ei ole pääkartalla (omistaja '
+      + '3.9.2026) vaan Oslon kohdekartan piste',
     lehti: { laji: 'kaupunki', avain: 'oslo' },
-    visa: {
-      kysymys: 'Miksi Colin Archer suunnitteli Framin matalaksi ja pyöreäpohjaiseksi?',
-      vaihtoehdot: [
-        'Jotta se kulkisi Siperian jokisuistoissa',
-        'Jotta ahtojää nostaisi sen ylös eikä murskaisi',
-        'Jotta se olisi nopeampi purjeilla',
-      ],
-      oikea: 1,
-    },
     lehtiJohdanto: 'Kristianian rannat olivat mustanaan väkeä 24. kesäkuuta '
       + '1893, kun vuonolle liukui pyöreäpohjainen laiva, jonka oli tarkoitus '
       + 'jäätyä kiinni tahallaan.',

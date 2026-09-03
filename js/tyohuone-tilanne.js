@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '3.9.2026 yö — v1478 odottaa julkaisua (H2b 34 photo-v3 + 5 uutta hetkeä, keksintökuvat 1–5, K1 karttamerkit, K2 erä 1); 2.9. v1460–v1467; illan karttaerä (kapiteelit, kaupungin nostot pois pääkartalta, tuplanäkymä, Balkanvuoret), H2-kuvat, 16 kohtaamiskuvaa, siirtymämusiikin työkalu',
+  paivitetty: '3.9.2026 aamu — v1479 hetket kaupungin kohdalla (omistajan kortti); v1478 mainissa 04:53 UTC + nostotaso 02g poltettu (H2b 34 photo-v3 + 5 uutta hetkeä, keksintökuvat 1–5, K1 karttamerkit, K2 erä 1); 2.9. v1460–v1467; illan karttaerä (kapiteelit, kaupungin nostot pois pääkartalta, tuplanäkymä, Balkanvuoret), H2-kuvat, 16 kohtaamiskuvaa, siirtymämusiikin työkalu',
   tavoite: 'Kartta yhtenaiseksi ja teravyys arvioitavaksi. Mainissa: '
     + 'maareitit yhtenaisena lamminna viivana ja meri katkoina (v1423), '
     + 'noston teksti kokonaan napautettava (v1424), rajat samaa reittia '
@@ -92,6 +92,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1479 + POLTTO 02h: HETKET KAUPUNGIN KOHDALLA (omistajan kortti 3.9.) - Lissabon 1484 ja Fram 1893 pois paakartalta: sivu kaupunkilehdessa ja PISTE kohdekartalla (Lissabon "Kolumbus 1484" Kauppatorin vieressa, Oslo "Fram 1893" kaupungintalon edustalla, juttu = hetken teksti). Santa Fe 1492 ja Restelo 1497 siirretty datassa 9-10 yksikon paahan kaupungista: piste omalla paikallaan ILMAN siirtoviivaa. Katso Granada ja Lissabon 50 km -nakymassa seka molempien kohdekartat.',
   'v1478 + POLTTO 02g: H2b - 34 PHOTO-V3-HISTORIAKUVAA: kaikki 10 vanhaa hetkea saivat lahi+kauko-parin ja tekstit kirjoitettiin ihminen edella; 5 UUTTA HETKEA (Lissabon 1484, Santa Fe 1492, Wurzburg/Rontgen 1895, Kitty Hawk/Wright 1903, Bern/Einstein 1905); LEHTIKUVA (pystykuva, 3/3) Titanic, Nansen, Amundsen, Trafalgar; Roskilde 1000 -> 1040 (laatassa vanha nimio kunnes nostotaso poltetaan). Avaa Lissabonin kaksi hetkea, Trafalgarin kortti 3/3 ja suurennos, Granadan lehti.',
   'v1478: KEKSINNOT-LINSSI - Watt, Montgolfier, Jenner, Volta, Jacquard saivat kuvaputken ilmiokuvan (aikajana/keksinnot/). Kehittajavalikko > aikajana: keksinnot, katso ilmiopaneeli 1769-1804.',
   'v1478 + POLTTO 02g: K1 KARTTAMERKIT - jokaisella nakyvalla merkilla nimi ja napautus (Dinaariset Alpit, Dinara, Sveti Jure, naapurimaan poltetut merkit); 13 merkin polttovelka poistuu vasta nostotason 02g myota. Bosnia/Kroatia 50 km ja 200 km.',
