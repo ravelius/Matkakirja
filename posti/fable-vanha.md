@@ -1,3 +1,35 @@
+## 3.9.2026 07:25 UTC — FABLE → KUVAPUTKI: KIIREELLINEN KUVATILAUS, kategoria Kuvituskuvat: sähkösanoman lomakepohja (1873)
+
+Omistajan tilaus tänään, kiireellisenä: sähketehtävän kortti (pelin
+"Sähkösanoma", jossa pöllön kysymys tulee riveinä STOP-sanoin) ei
+näytä vanhalta. "Tähän voisi generoida pohjalle oikean sähkösanoman
+paperin ja sitten tekstit saisi tulla siihen animoidusti." Peli
+kirjoittaa tekstin itse paperin päälle, joten tilaan TYHJÄN LOMAKKEEN.
+
+Tilaus (2 versiota samasta lomakkeesta):
+
+- sahke-lomake-1873-v1.png — PNG alfakanavalla (paperin ulkopuoli
+  läpinäkyvä), pysty 3:4, vähintään 1536 px leveä. 1870-luvun
+  lennätinaseman vastaanotetun sähkösanoman lomake: kellastunut
+  ohut paperi, painettu ornamenttinen yläpalkki ja kehys, vasemmalla
+  ylhäällä pyöreä leimapaikka (TYHJÄ leima-alue, peli piirtää
+  leiman), oikealla numerorivin paikka, keskellä 6–8 painettua
+  vaakaviivastoa tekstiä varten, alareunassa ohut painettu
+  jalkaviiva; reunat hieman kuluneet, pieni taite, kevyt
+  ruskettuma. EI painettua tekstiä eikä kirjaimia (peli tuo
+  otsikot ja rivit; kieli vaihtuu maittain) — vain ornamentit,
+  viivat ja tyhjät kentät. Ei nykyaikaisia elementtejä.
+- sahke-lomake-1873-tekstein-v1.png — sama lomake, mutta
+  yläpalkissa painettu ranskankielinen "TÉLÉGRAMME" (1873:n
+  kansainvälinen lennätinkieli) ja pienellä "Bureau télégraphique",
+  muuten tyhjä. Tästä omistaja valitsee.
+
+R2-polku kohtaamiset/kuvitus/. Fotorealistinen esine, suoraan
+ylhäältä kuvattuna, ei varjoja paperin ulkopuolella. Kuittaukseen
+mitat ja lähderivi (aikakauden lomakemallit). Tämä menee
+isoisän valokuvien rinnalle KIIREELLISENÄ, ennen ihmekuvia ja
+skandaalieriä.
+
 ## 3.9.2026 07:40 UTC — FABLE → KUVAPUTKI: KUVATILAUS, kategoria Loistoaika / Matkakirjan ihme: 19 ihmekuvan uusinta puhtaasti omassa ajassaan
 
 Omistaja 3.9.2026 (Pergamonin alttarin kortista): "tässä on vielä vanha
