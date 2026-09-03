@@ -1105,3 +1105,12 @@ sopivuus), tests/aikajana.test.mjs (kytkentä moottoriin).
   pysäkkiin asti, paneeli ja vuosiluku vaihtuvat, ja ajo jatkuu vasta
   Jatka-napista. Nähdyt keksijät ovat tarkkoja, tulevat sumeita;
   valittu kortti on 1,45-kertainen (`KARUSELLIN_MITAT[0]`).
+
+## Tiedeliitteen taitto (omistaja 3.9.2026, pilotti Watt, v1508)
+
+Järjestys: nimiö, päiväys, otsikko, keksijä, ingressi → `.tiedeliite-palsta`
+(leipäteksti vasemmalla, pieni generoitu muotokuva oikealla, kaksoispysäkillä
+kaksi) → havainnekuva(t) → `.tiedeliite-keksija` (väliotsikko = nimi,
+henkilöteksti kentästä `henkilojuttu`, aito Commons-kuva `kuvaAito`
+oikealla) → lähderivi. Ilman `henkilojuttu`-kenttää henkilöosio ja aito
+kuva jäävät pois. Kapealla ruudulla (≤560 px) kuva siirtyy tekstin ylle.

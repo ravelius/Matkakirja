@@ -675,6 +675,40 @@
 }
 .tiedeliite-kasvo .fokusnosto-kuvateksti { font-size: 0.68rem; line-height: 1.35; }
 
+/*
+ * PALSTATAITTO (omistaja 3.9.2026, pilotti Watt): leipäteksti vasemmalla,
+ * kuva oikealla. Yläkulmassa generoitu muotokuva pienenä, lopussa aito
+ * kuva henkilötekstin rinnalla. Kapealla ruudulla kuva siirtyy tekstin
+ * ylle täysleveänä.
+ */
+.tiedeliite-palsta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 9.5rem;
+  gap: 0.9rem 1.1rem;
+  align-items: start;
+  margin: 0.2rem 0 0.9rem;
+}
+.tiedeliite-palsta .tiedeliite-leipa { column-count: 1; margin: 0; }
+.tiedeliite-palsta .tiedeliite-leipa p:first-child { margin-top: 0; }
+.tiedeliite-palsta .tiedeliite-kasvot { margin: 0; flex-wrap: nowrap; }
+.tiedeliite-kasvot-pieni .tiedeliite-kasvo { flex: 1 1 4.4rem; }
+.tiedeliite-kasvot-aito .tiedeliite-kasvo img { aspect-ratio: 4 / 5; }
+.tiedeliite-keksija { margin-top: 0.4rem; }
+.tiedeliite-valiotsikko {
+  margin: 0.2rem 0 0.4rem;
+  font-family: var(--font-type);
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7a5514;
+  border-top: 1px solid rgba(122, 85, 20, 0.32);
+  padding-top: 0.55rem;
+}
+@media (max-width: 560px) {
+  .tiedeliite-palsta { grid-template-columns: minmax(0, 1fr); }
+  .tiedeliite-palsta .tiedeliite-kasvot { order: -1; max-width: 11rem; }
+}
+
 /* HAMPURILAINEN: sama mustepiirros kuin lehden nimiössä
    (css/styles.css .lehti-hampurilainen) kortin vasemmassa yläkulmassa. */
 .tiedeliite-hampurilainen {

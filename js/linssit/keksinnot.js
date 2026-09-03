@@ -107,6 +107,26 @@ export const KEKSINNOT = [
       + 'Yhdessä tehtailija Matthew Boultonin kanssa Watt rakensi koneita '
       + 'kaivoksiin, myllyihin ja tehtaisiin. Tehon yksikkö watti on nimetty '
       + 'hänen mukaansa, ja hevosvoima on hänen keksimänsä vertailuluku.',
+    /*
+     * HENKILÖTEKSTI (omistajan tilaus 3.9.2026, Tiedeliitteen pilotti):
+     * keksijä ihmisenä, ei keksintö. Faktat en-Wikipedia "James Watt".
+     */
+    henkilojuttu: 'James Watt (1736–1819) syntyi Greenockissa Skotlannin '
+      + 'länsirannikolla laivanrakentajan poikana. Hän oli sairaalloinen '
+      + 'lapsi, joka opiskeli kotona ja rakasti matematiikkaa ja työkaluja; '
+      + 'Lontoossa hän opetteli kojeenrakentajan ammatin vuodessa, vaikka '
+      + 'oppiaika oli tavallisesti seitsemän. Glasgow\'n yliopisto antoi '
+      + 'hänelle työpajan, kun ammattikunta ei hyväksynyt häntä jäsenekseen.'
+      + '\n\n'
+      + 'Watt oli perusteellinen ja usein masentunut: hän pelkäsi '
+      + 'epäonnistumista ja jätti työt kesken, kunnes Boultonin '
+      + 'liikevaisto ja rohkaisu veivät koneet tehtaisiin. Vanhoilla '
+      + 'päivillään hän kokeili kaikkea kopiokoneesta veistoksia '
+      + 'jäljentävään koneeseen ja kirjoitti, ettei ollut koskaan tuntenut '
+      + 'itseään keksijäksi vaan parantelijaksi. Foggin isoisän matkatessa '
+      + 'vuonna 1873 Wattin patentin vanhenemisesta oli kulunut 73 vuotta, '
+      + 'ja hänen koneensa jälkeläiset vetivät jo junia ja laivoja koko '
+      + 'Euroopassa.',
     kuva: {
       osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1769-james-watt.jpg`,
       selite: 'James Watt, kuvaputken generoitu studiomuotokuva (2026).',

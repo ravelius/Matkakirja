@@ -142,9 +142,9 @@ const paikka = (t) => t.paikka ?? t.kaupunki ?? '';
  * pudotetaan riviltä (kehys piiloon), jottei paperille jää tyhjää
  * laatikkoa.
  */
-function piirraKasvot(ui, sailio, kuvat, henkilo) {
+function piirraKasvot(ui, sailio, kuvat, henkilo, luokka = '') {
   if (!kuvat.length) return;
-  const rivi = html('div', 'tiedeliite-kasvot');
+  const rivi = html('div', `tiedeliite-kasvot${luokka ? ` ${luokka}` : ''}`);
   rivi.dataset.maara = String(kuvat.length);
   for (const kuva of kuvat) {
     const kehys = html('figure', 'tiedeliite-kasvo');
@@ -174,7 +174,30 @@ function piirraKasvot(ui, sailio, kuvat, henkilo) {
   sailio.appendChild(rivi);
 }
 
-/** Yhden keksijän sivu lööpin riveinä. */
+/**
+ * Yhden keksijän sivu lööpin riveinä.
+ *
+ * TAITTO (omistajan tilaus 3.9.2026, pilotti Watt): *"generoitu
+ * henkilökuva voisi tulla pienellä oikean yläreunaan ja sen vasemmalle
+ * puolelle tulisi leipäteksti. leipätekstin alle havainnekuva ja loppuun
+ * voisi lisätä tekstiä itse henkilöstä ja siinä olisi oikealla puolella
+ * aito kuva hänestä."*
+ *
+ *   nimiö · päiväys · otsikko · keksijä · ingressi
+ *   ┌───────────────────────────┬──────────┐
+ *   │ leipäteksti (juttu)       │ muotokuva│  ← generoitu, pieni
+ *   └───────────────────────────┴──────────┘
+ *   havainnekuva(t) kuvateksteineen
+ *   ┌───────────────────────────┬──────────┐
+ *   │ Keksijä: henkilöteksti    │ aito kuva│  ← Commons
+ *   └───────────────────────────┴──────────┘
+ *   lähderivi
+ *
+ * Henkilöosio piirtyy vain, kun pysäkillä on `henkilojuttu`; ilman sitä
+ * aito kuva jää pois (se kuuluu henkilötekstin rinnalle, ei irralleen).
+ * Kaksoispysäkillä (kaksi generoitua kasvoa) molemmat ovat yläkulmassa
+ * vierekkäin.
+ */
 function piirraTiedeliitteenSivu(ui, sailio, t, lahdeVara) {
   sailio.appendChild(html('p', 'looppi-nimio', 'Tiedeliite'));
   const paivays = [t.vuosi, paikka(t)].filter(Boolean).join(' · ');
@@ -185,15 +208,37 @@ function piirraTiedeliitteenSivu(ui, sailio, t, lahdeVara) {
     sailio.appendChild(html('p', 'looppi-ingressi', kappale));
   }
   const { kasvot, ilmiot } = tiedeliitteenKuvat(t);
-  piirraKasvot(ui, sailio, kasvot, t.henkilo);
-  for (const kuva of ilmiot) {
-    piirraNostonKuva(ui, sailio, kuva, 'fokusnosto-kuva', TIEDELIITE_KUVA_PX, ZOOM_AVAIN);
-  }
-  const teksti = html('div', 'fokusnosto-teksti looppi-leipa');
+  const generoidut = kasvot.filter((k) => k !== t.kuvaAito);
+  const aito = kasvot.find((k) => k === t.kuvaAito) ?? null;
+
+  // 1. Leipäteksti ja pieni generoitu muotokuva oikealla.
+  const palsta = html('div', 'tiedeliite-palsta');
+  const teksti = html('div', 'fokusnosto-teksti looppi-leipa tiedeliite-leipa');
   for (const kappale of jaaKappaleiksi(t.juttu ?? '')) {
     teksti.appendChild(html('p', '', kappale));
   }
-  if (teksti.childElementCount) sailio.appendChild(teksti);
+  palsta.appendChild(teksti);
+  piirraKasvot(ui, palsta, generoidut, t.henkilo, 'tiedeliite-kasvot-pieni');
+  sailio.appendChild(palsta);
+
+  // 2. Havainnekuva(t) kuvateksteineen.
+  for (const kuva of ilmiot) {
+    piirraNostonKuva(ui, sailio, kuva, 'fokusnosto-kuva', TIEDELIITE_KUVA_PX, ZOOM_AVAIN);
+  }
+
+  // 3. Keksijä itse: henkilöteksti ja aito kuva oikealla.
+  const henkilojuttu = jaaKappaleiksi(t.henkilojuttu ?? '');
+  if (henkilojuttu.length) {
+    const osio = html('section', 'tiedeliite-keksija');
+    osio.appendChild(html('h4', 'tiedeliite-valiotsikko', t.henkilo ?? 'Keksijä'));
+    const rivi = html('div', 'tiedeliite-palsta');
+    const henkiloTeksti = html('div', 'fokusnosto-teksti looppi-leipa tiedeliite-leipa');
+    for (const kappale of henkilojuttu) henkiloTeksti.appendChild(html('p', '', kappale));
+    rivi.appendChild(henkiloTeksti);
+    if (aito) piirraKasvot(ui, rivi, [aito], t.henkilo, 'tiedeliite-kasvot-aito');
+    osio.appendChild(rivi);
+    sailio.appendChild(osio);
+  }
   const lahde = t.lahde ?? lahdeVara;
   if (lahde) sailio.appendChild(taytaLahderivi(html('p', 'fokusnosto-lahde'), lahde, t));
 }
