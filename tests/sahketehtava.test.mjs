@@ -97,7 +97,7 @@ test('lomakepohjan osoite on yhdessä vakiossa ja osoittaa ämpäriin', () => {
   // varmistaSahkeLomakekuva): kaksi kirjoitusasua ajautuisi erilleen
   // ensimmäisellä versionvaihdolla.
   assert.match(SAHKE_LOMAKE_OSOITE, /^https:\/\/pub-[a-z0-9]+\.r2\.dev\//);
-  assert.match(SAHKE_LOMAKE_OSOITE, /sahke-lomake-1873-v1\.png$/);
+  assert.match(SAHKE_LOMAKE_OSOITE, /sahke-lomake-1873-v1\.jpg$/);
 });
 
 /* ==================== 3. PULLA JA VASTAUSLINKKI ==================== */
