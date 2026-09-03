@@ -5785,6 +5785,27 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   pointer-events: none;
 }
 
+/*
+ * ISOISÄN VALOKUVA TYÖPÖYDÄLLÄ (omistaja 3.9.2026: *"yksi kuva pienenä ja
+ * ehkä blurrattuna pelin ensimmäiselle sivulle"*). Pieni, kallistettu ja
+ * hieman haalea — kuin unohtunut luonnoslehden alle. Sumennus jätettiin
+ * pois: filter piirtyy iOS:n webapp-tilassa tyhjänä, ja pienuus tekee
+ * saman työn. Kuva on koristetta, ei nappi.
+ */
+.intro-valokuva {
+  position: absolute;
+  z-index: 0;
+  right: -9%;
+  bottom: -9%;
+  width: 36%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  opacity: 0.86;
+  transform: rotate(7deg);
+  pointer-events: none;
+}
+
 .intro.intro-fade { opacity: 0; }
 
 /*
@@ -10032,6 +10053,43 @@ body.katselu #newgame-btn { display: none; }
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   justify-content: flex-end;
+}
+
+/*
+ * ISOISÄN VALOKUVA LENNOLLA (omistaja 3.9.2026: *"pelaaja löytäisi siis
+ * matkakirjan välistä yhden kuvan lentokoneessa istuessaan isoisästään"*).
+ * Kulunut cabinet card nousee kartan päälle vasemmasta alakulmasta
+ * repliikin alettua, pehmeästi jarruttaen (Raamatun animaatiosääntö), ja
+ * napautus suurentaa sen. EI suodatinta (ks. tests/lento-ajoitus).
+ */
+.lento-valokuva {
+  position: absolute;
+  left: clamp(0.8rem, 4vw, 3rem);
+  /* Repliikin yläpuolella: teksti asuu alalaidassa (.flight-alaosa). */
+  bottom: clamp(10rem, 30vh, 16rem);
+  width: min(30vw, 280px);
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+  opacity: 0;
+  transform: translateY(28px) rotate(-7deg);
+  transition: opacity 900ms var(--liike-pehmea), transform 900ms var(--liike-pehmea);
+  z-index: 6;
+}
+.lento-valokuva.nakyy { opacity: 1; transform: translateY(0) rotate(-7deg); }
+.lento-valokuva img {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+}
+.lento-valokuva:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (max-width: 599px) {
+  .lento-valokuva { width: min(44vw, 200px); bottom: clamp(12rem, 34vh, 18rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lento-valokuva { transition: none; }
 }
 
 /* Reitin lähtömerkki Lontoon kohdalla: sama punainen kuin viivalla.
