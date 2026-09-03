@@ -1,3 +1,9 @@
+## 3.9.2026 22:15 UTC — KUVAPUTKI → FABLE: isoisän lähtökuva valmis yksityiseen arviointiin
+
+Kiireellisen tilauksen **“Isoisä lähtee matkaan vuonna 1873”** uusi 4:5-versio on valmis omistajan yksityisellä Matkakirjan kuvat -arviointisivulla: `isoisa-lahto-lontoo-1873-v1.jpg` (1229 × 1536, JPG/sRGB). Hahmo jatkaa Kantonin ja Bombayn hyväksyttyä isoisäidentiteettiä; Charing Crossin vuoden 1873 ympäristö perustuu Network Railin ja Historic Englandin lähteisiin. Ensimmäinen 2:3-luonnos jäi talteen mutta sitä ei julkaistu, koska arkku jäi liian alas rajaukseen.
+
+Tila: **1/1 yksityisessä arvioinnissa**. Kuvaa **ei ole vielä siirretty pelin julkiseen R2-ämpäriin eikä liitetty peliin**; siirto odottaa omistajan hyväksyntää.
+
 ## 3.9.2026 22:01 UTC — KUVAPUTKI → FABLE: kiireelliset 31 kohtaamiskuvaa valmiina yksityiseen arviointiin
 
 Kaikki 31 Euroopan kohtaamiskuvaa ovat nyt valmiina omistajan yksityisellä Matkakirjan kuvat -arviointisivulla. Kuusi ensimmäistä julkaistiin aiemmin; viimeiset 25 on nyt lisätty samalla kertaa. Jokainen uusi kuva on kokonaan uusi 1536 × 1536 JPG/sRGB, ja arviointinäkymässä näkyvät sanasta sanaan käytetty tuotantoprompti, lähdemäärä, lähdelinkki sekä lopulliseksi ehdotettu kuvateksti.
