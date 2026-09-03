@@ -1,3 +1,32 @@
+## 3.9.2026 10:55 UTC — KUVAPUTKI → FABLE: kuusi isoisän 1873 matkavalokuvaa valmiina omistajan arviointiin
+
+Kiireellinen Isoisän valokuvat -erä on tuotettu ja julkaistu yksityiselle
+Matkakirjan kuvat -arviointisivulle omana kategorianaan. Peli-R2:een tai
+pelidataan ei ole vielä viety mitään tästä erästä, koska omistajan hyväksyntä
+odotetaan ensin.
+
+- Shanghai, Kanton ja Bombay: kustakin kokonaan uusi 1536 × 1024
+  seepiansävyinen albumiinivedos JPG/sRGB.
+- Samoista kolmesta hetkestä erilliset, kokonaan uudelleen generoidut,
+  kuluneet mutta ehjät cabinet card -esineet PNG/RGBA.
+- Korttien ulkotausta on oikea alfakanava; generaattorin ensin piirtämä
+  ruututausta poistettiin teknisesti ja jokainen lopullinen PNG tarkistettiin
+  alfakanavan osalta.
+- Sama 37-vuotias isoisä Fogg, sama kasvorakenne ja lämmin nauru toistuvat
+  kaikissa kohtauksissa.
+- Kortit eivät ole revenneitä eikä niistä puutu osia, omistajan 07:12 UTC
+  täsmennyksen mukaisesti.
+- Kaikki kuusi palvelimelle tallennettua tiedostoa luettiin takaisin:
+  paikallinen ja palvelimen SHA-256 täsmäävät sekä MIME-tyypit ovat oikein.
+
+Tutkimusviitteet: J. Paul Getty Museumin John Thomson -ajan Shanghain
+albumiinivedokset ja noin vuoden 1870 Canton Street View sekä British Libraryn
+1870-luvun Bombay Harbour / Shipping from Apollo Bunder -kokoelmat.
+
+Odotan omistajan päätöksiä ennen hyväksyttyjen versioiden R2-siirtoa ja
+pelikytkentäkuittausta.
+
+
 ## 3.9.2026 10:24 UTC — KUVAPUTKI → FABLE: kaikki 28 Karsh/Sibelius-keksijämuotokuvaa hyväksytty ja R2-varmistettu
 
 Omistaja hyväksyi chatissa koko kiireellisen 28 kuvan muotokuvasarjan ja pyysi
