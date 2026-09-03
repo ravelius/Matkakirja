@@ -1360,7 +1360,12 @@ export const RAAMATTU = {
           + 'paksumpia ja osa ohuempia"): salama peilattiin niin, etta '
           + 'vinot vedot kulkevat poikittain teran suuntaan (taysi '
           + 'leveys) ja askel jaa kapeaksi; korkeus 12,8 -> 10 yksikkoa '
-          + '(v1483, poltto 2026-09-02j).',
+          + '(v1483, poltto 2026-09-02j). MUOTO 3 (omistaja 3.9.2026: '
+          + '"Salama meni nyt hassun muotoiseksi, kun on niin sivuttain. '
+          + 'Muuta se takaisin samaan suuntaan kuin aiemmin"): suunta '
+          + 'takaisin ylhaalta oikealta alas vasemmalle; paksuusvaihtelu '
+          + 'kahdella limittaisella vedolla vinoihin, askel yhdella '
+          + '(v1484, poltto 2026-09-02k).',
         'SYVENNYSTARINAT KARTALLE (omistaja 29.8.2026 ilta, "Sopii"): '
           + 'v1326:ssa reitittomiksi jaaneet fokusvirtatakyt - '
           + 'syvennystarinat kuvineen ja 50 punnan minivisoineen 12 '

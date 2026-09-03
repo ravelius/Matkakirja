@@ -625,8 +625,21 @@ const NOSTOSYM_MINI_LUONNOS = {
    * kynä, sama yksi veto; paksuusvaihtelu tulee suunnasta, ei toisesta
    * musteesta. Korkeus 12,8 → 10 yksikköä.
    */
-  huuto: ({ murto }) => ({
-    vahva: [murto([[-3.20, -5.00], [2.60, 0.10], [-1.90, 0.10], [3.20, 5.00]])],
+  /*
+   * MUOTO 3 (omistaja 3.9.2026: *"Salama meni nyt hassun muotoiseksi,
+   * kun on niin sivuttain. Muuta se takaisin samaan suuntaan kuin
+   * aiemmin"*): suunta on taas ylhäältä oikealta alas vasemmalle. Koska
+   * terä antaa tälle suunnalle kapean jäljen, vinot vedetään KAHDESTI
+   * hieman limittäin (paksu tussinjälki) ja askel kerran (ohuempi) —
+   * paksuusvaihtelu säilyy ilman peilausta. Korkeus 10 yksikköä. Vedot
+   * 1 → 5, kaikki samaa mustetta.
+   */
+  huuto: ({ viiva }) => ({
+    vahva: [
+      viiva(3.00, -5.00, -2.40, 0.10), viiva(3.50, -4.70, -1.90, 0.40),
+      viiva(-2.40, 0.10, 1.90, 0.10),
+      viiva(1.60, 0.10, -3.20, 5.00), viiva(2.10, 0.40, -2.70, 5.30),
+    ],
   }),
   /*
    * TASSUNJÄLKI — eläimet. UUSI KUVIO, omistajan valinta 31.8.2026
@@ -900,8 +913,8 @@ function piirraNostosymHuuto(g) {
   // kategorian keltainen täyttö ja musteinen reuna kuten ennenkin.
   el('path', {
     class: 'nostosym-huuto',
-    // Muoto 2 (3.9.2026): peilattu ja matalampi kuten kartan merkki.
-    d: 'M-3.6 -7.0 L4.4 0.7 L0.5 0.7 L3.6 7.0 L-4.4 -0.7 L-0.5 -0.7 Z',
+    // Muoto 3 (3.9.2026): entinen suunta, matala kuten kartan merkki.
+    d: 'M3.6 -7.0 L-4.4 0.7 L-0.5 0.7 L-3.6 7.0 L4.4 -0.7 L0.5 -0.7 Z',
   }, g);
 }
 
