@@ -2,7 +2,7 @@
  * PATINAPASSI: valmiin karttalehden jälkikäsittely 1873-vedokseksi.
  *
  *   node tools/patina.mjs <pohjakuva> <ulos-kansio> \
- *        [--taso hillitty|keskitaso|taysi|kirkas|kaikki] [--tunnus GRC] \
+ *        [--taso hillitty|keskitaso|taysi|kirkas|kevyt|kaikki] [--tunnus GRC] \
  *        [--leveys 6400] [--laatu 0.9] [--muoto jpeg|webp|png] \
  *        [--vertailu] [--pala x,y,w,h] [--bbox x,y,w,h]
  *
@@ -911,35 +911,23 @@ const LEVIAMINEN_KIRKAS = { ...LEVIAMINEN, voima: 0.15 };
  * olio jokaisessa reseptissä, ei kolmea voimakkuutta.
  */
 /*
- * VEDOSVARIANTIT 3.9.2026 (omistaja: "patinaan voisi ajaa seuraavat
- * muutokset: kirkkautta, raetta ja sumennusta hieman pois. tee ensin
- * muutama vedos eri määrillä"): kolme annosta kirkkaasta alaspäin.
- * Kirkkaus = sävykäyrän nosto (36 → 30 / 26 / 22), rae = paperin rae,
- * nyppy ja kuitu, sumennus = musteen leviämisen voima (0,15 → 0,10 /
- * 0,06 / 0). Muu resepti on kirkas. Vedokset tehdään laattatyökalulla
- * Bulgarian alueelle ja omistaja valitsee; valittu annos saa nimen ja
- * jää tähän, muut poistetaan.
+ * KEVYT — kirkas kevennettynä (omistaja 3.9.2026: "patinaan voisi ajaa
+ * seuraavat muutokset: kirkkautta, raetta ja sumennusta hieman pois"
+ * ja vedosten jälkeen "saturaatiota voi hieman vähentää myös").
+ * Seitsemästä pelinäkymän vedoksesta (kirkas, a/b/c, a2/b2/c2)
+ * omistaja valitsi A2:n eli pienimmän annoksen saturaatio alas:
+ *   kirkkaus  = sävykäyrän nosto 36 → 30 (kerroin 0,87 ennallaan)
+ *   rae       = paperin rae 0,036/0,027 → 0,027/0,020, kuitu
+ *               0,027/0,015 → 0,020/0,011
+ *   sumennus  = musteen leviämisen voima 0,15 → 0,10
+ *   saturaatio: kyllaisyys 0,45 → 0,40, kromanVahvistus 0,95 → 0,80
+ * Muu resepti on kirkas. Hylätyt annokset (b: 26/0,018/0,06, c:
+ * 22/0,010/ei leviämistä) poistettiin; ne ovat git-historiassa.
  */
-const VEDOS_A = {
-  savyt: { ...SAVYT_KIRKAS, kayra: { kerroin: 0.87, nosto: 30 } },
-  paperi: { ...PAPERI_KIRKAS, rae: 0.027, raeKarkea: 0.020, kuitu: 0.020, kuituRisti: 0.011 },
-  leviaminen: { ...LEVIAMINEN, voima: 0.10 },
-};
-const VEDOS_B = {
-  savyt: { ...SAVYT_KIRKAS, kayra: { kerroin: 0.87, nosto: 26 } },
-  paperi: { ...PAPERI_KIRKAS, rae: 0.018, raeKarkea: 0.014, kuitu: 0.013, kuituRisti: 0.008 },
-  leviaminen: { ...LEVIAMINEN, voima: 0.06 },
-};
-const VEDOS_C = {
-  savyt: { ...SAVYT_KIRKAS, kayra: { kerroin: 0.87, nosto: 22 } },
-  paperi: { ...PAPERI_KIRKAS, rae: 0.010, raeKarkea: 0.008, kuitu: 0.008, kuituRisti: 0.005 },
-  leviaminen: null,
-};
-
-/* Sama kolmikko, saturaatio hieman alas (omistaja 3.9.2026 vedosten
- * jälkeen: "saturaatiota voi hieman vähentää myös"): kromanVahvistus
- * 0,95 → 0,80, kyllaisyys 0,45 → 0,40. */
-const PASTELLI_VEDOS = { ...PASTELLI_KIRKAS, kyllaisyys: 0.40, kromanVahvistus: 0.80 };
+const SAVYT_VALITTU = { ...SAVYT_KIRKAS, kayra: { kerroin: 0.87, nosto: 30 } };
+const PAPERI_VALITTU = { ...PAPERI_KIRKAS, rae: 0.027, raeKarkea: 0.020, kuitu: 0.020, kuituRisti: 0.011 };
+const LEVIAMINEN_VALITTU = { ...LEVIAMINEN, voima: 0.10 };
+const PASTELLI_VALITTU = { ...PASTELLI_KIRKAS, kyllaisyys: 0.40, kromanVahvistus: 0.80 };
 
 export const RESEPTIT = {
   hillitty: {
@@ -1015,12 +1003,23 @@ export const RESEPTIT = {
     /* Ks. KIRKAS kohta 5: vinjetti pysyy poissa (Raamattu). */
     vinjetti: null,
   },
-  'vedos-a': { nimi: 'vedos-a', savyt: VEDOS_A.savyt, syvyys: SYVYYS, vesiviivoitus: VESIVIIVOITUS, maanraja: MAANRAJA, pastelli: PASTELLI_KIRKAS, paperi: VEDOS_A.paperi, ikaantyminen: IKAANTYMINEN_KIRKAS, reunakertyma: REUNAKERTYMA_KIRKAS, rosoisuus: ROSOISUUS, kohdistus: KOHDISTUS, leviaminen: VEDOS_A.leviaminen, taitteet: false, vinjetti: null },
-  'vedos-b': { nimi: 'vedos-b', savyt: VEDOS_B.savyt, syvyys: SYVYYS, vesiviivoitus: VESIVIIVOITUS, maanraja: MAANRAJA, pastelli: PASTELLI_KIRKAS, paperi: VEDOS_B.paperi, ikaantyminen: IKAANTYMINEN_KIRKAS, reunakertyma: REUNAKERTYMA_KIRKAS, rosoisuus: ROSOISUUS, kohdistus: KOHDISTUS, leviaminen: VEDOS_B.leviaminen, taitteet: false, vinjetti: null },
-  'vedos-a2': { nimi: 'vedos-a2', savyt: VEDOS_A.savyt, syvyys: SYVYYS, vesiviivoitus: VESIVIIVOITUS, maanraja: MAANRAJA, pastelli: PASTELLI_VEDOS, paperi: VEDOS_A.paperi, ikaantyminen: IKAANTYMINEN_KIRKAS, reunakertyma: REUNAKERTYMA_KIRKAS, rosoisuus: ROSOISUUS, kohdistus: KOHDISTUS, leviaminen: VEDOS_A.leviaminen, taitteet: false, vinjetti: null },
-  'vedos-b2': { nimi: 'vedos-b2', savyt: VEDOS_B.savyt, syvyys: SYVYYS, vesiviivoitus: VESIVIIVOITUS, maanraja: MAANRAJA, pastelli: PASTELLI_VEDOS, paperi: VEDOS_B.paperi, ikaantyminen: IKAANTYMINEN_KIRKAS, reunakertyma: REUNAKERTYMA_KIRKAS, rosoisuus: ROSOISUUS, kohdistus: KOHDISTUS, leviaminen: VEDOS_B.leviaminen, taitteet: false, vinjetti: null },
-  'vedos-c2': { nimi: 'vedos-c2', savyt: VEDOS_C.savyt, syvyys: SYVYYS, vesiviivoitus: VESIVIIVOITUS, maanraja: MAANRAJA, pastelli: PASTELLI_VEDOS, paperi: VEDOS_C.paperi, ikaantyminen: IKAANTYMINEN_KIRKAS, reunakertyma: REUNAKERTYMA_KIRKAS, rosoisuus: ROSOISUUS, kohdistus: KOHDISTUS, leviaminen: VEDOS_C.leviaminen, taitteet: false, vinjetti: null },
-  'vedos-c': { nimi: 'vedos-c', savyt: VEDOS_C.savyt, syvyys: SYVYYS, vesiviivoitus: VESIVIIVOITUS, maanraja: MAANRAJA, pastelli: PASTELLI_KIRKAS, paperi: VEDOS_C.paperi, ikaantyminen: IKAANTYMINEN_KIRKAS, reunakertyma: REUNAKERTYMA_KIRKAS, rosoisuus: ROSOISUUS, kohdistus: KOHDISTUS, leviaminen: VEDOS_C.leviaminen, taitteet: false, vinjetti: null },
+  /* KEVYT — omistajan valinta 3.9.2026 (perustelut KEVYT-osiossa). */
+  kevyt: {
+    nimi: 'kevyt',
+    savyt: SAVYT_VALITTU,
+    syvyys: SYVYYS,
+    vesiviivoitus: VESIVIIVOITUS,
+    maanraja: MAANRAJA,
+    pastelli: PASTELLI_VALITTU,
+    paperi: PAPERI_VALITTU,
+    ikaantyminen: IKAANTYMINEN_KIRKAS,
+    reunakertyma: REUNAKERTYMA_KIRKAS,
+    rosoisuus: ROSOISUUS,
+    kohdistus: KOHDISTUS,
+    leviaminen: LEVIAMINEN_VALITTU,
+    taitteet: false,
+    vinjetti: null,
+  },
   /*
    * NOSTOTASO — LÄPINÄKYVÄN MUSTEKERROKSEN PAPERIVAKIOPASSIT.
    *
