@@ -719,7 +719,11 @@ export const RAAMATTU = {
           + 'KOHDEKAUPUNGIN nimet - muut kaupunki- ja maastonimet '
           + 'piilotetaan lennon ajaksi; 3) kertojan luenta (lennon '
           + 'kaaritekstit) kuuluu myos lentokohtauksessa - vika '
-          + 'selvitetaan ja korjataan.',
+          + 'selvitetaan ja korjataan. TOTEUTETTU v1492: laattojen odotus '
+          + '(odotaPyramidi, katto 6 s), nimikerroksen lentotila, ja luenta '
+          + 'lahtee kohtauksesta laattojen valmistuttua. Juurisyy: luenta '
+          + 'oli kiintean 2,3 s ajastimen varassa, joka osui laattojen '
+          + 'latauksen paalle ja peruuntui lennon paattyessa.',
         'SAAPUMISSEKVENSSI (omistaja 26.8.2026, sanamuodot kaanon): '
           + 'lennon jälkeen feidi tyhjään pergamenttiin → '
           + 'konekirjoitettu välikortti "<KAUPUNKI> · PÄIVÄ <n>/80" '
@@ -2941,7 +2945,9 @@ export const RAAMATTU = {
           + '- pinon enimmaiskorkeus reilusti ylos (useampi kupla kerralla '
           + 'nakyvissa), kuplista pois pollokuvake ja nimilappurivi '
           + '("Viisas Pollo" yliviivattuna + Pulu); jaljelle jaa pelkka '
-          + 'puhekuplateksti.',
+          + 'puhekuplateksti. TOTEUTETTU v1492: kuvake ja nimilappu pois, '
+          + 'pinon katto 60vh/34rem (kapealla 52vh/24rem), ja avaussarjan '
+          + 'repliikit pinoutuvat (aiempi "yksi kerrallaan" kumottu).',
         'VAIKEAT NYKYAIHEET (omistaja 20.8.2026): Pöllö vastaa '
           + 'asiallisesti suoriin kysymyksiin vaikeista nykyaiheista '
           + '(esim. "miksi Mosul on tuhoutunut", "onko siellä elämää '

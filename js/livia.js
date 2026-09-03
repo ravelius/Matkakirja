@@ -163,12 +163,16 @@ function naytaRepliikki(ui, i) {
 }
 
 /*
- * Kupla pois, pieni tauko ja seuraava repliikki — tai sarjan loppu.
+ * Pieni tauko ja seuraava repliikki — tai sarjan loppu.
  *
- * KAIKKI KUPLAT POIS eikä pelkät ohjekuplat (kuplapino 3.9.2026):
- * avaussarjan repliikit ovat PUHEKUPLIA, ja ne on tarkoitus näyttää
- * yksi kerrallaan — aloitusvalinnassa Livia puhuu lyhyitä lauseita,
- * eikä niistä kasvateta pinoa kartan päälle.
+ * REPLIIKIT PINOUTUVAT (omistaja 3.9.2026 aloitusvalinnan kaappauksesta:
+ * "puhekuplat näkyvät vain yksi kerrallaan. Eli puhekuplien korkeutta
+ * pitää kasvattaa, jotta useampi kupla mahtuu kerralla näkyviin"):
+ * edellistä kuplaa EI pyyhitä ennen seuraavaa, vaan uusi tulee pinon
+ * alle ja työntää aiemmat ylös kuten Sofian kommentissa (js/pollo.js
+ * lisaaPinoon). Aiempi "yksi kerrallaan" -linjaus kumottiin samalla.
+ * Sarjan loppu (lopetaAvaus) ja pelaajan valinta (peruLivianAvaus)
+ * tyhjentävät pinon edelleen.
  */
 function seuraavaRepliikki(ui, i) {
   clearTimeout(avausAjastin);
@@ -178,7 +182,6 @@ function seuraavaRepliikki(ui, i) {
     lopetaAvaus();
     return;
   }
-  polloKuplatPois();
   avausAjastin = setTimeout(() => naytaRepliikki(ui, i), KUPLIEN_VALI);
 }
 
