@@ -1521,6 +1521,11 @@ document.getElementById('lukijoilta-lehti-btn')?.addEventListener('click', () =>
 document.getElementById('grafiikka-lehti-btn')?.addEventListener('click', () => {
   window.matkakirja?.ui?.avaaGrafiikkaLehti();
 });
+// Musiikki-lehti (omistajan tilaus 3.9.2026): pelin taustamusiikit
+// kuunneltavaksi yhdeltä sivulta — js/tyohuone-musiikki.js.
+document.getElementById('musiikki-lehti-btn')?.addEventListener('click', () => {
+  window.matkakirja?.ui?.avaaMusiikkiLehti();
+});
 
 /** Täyttää kentät valitun lukijan tallennetuista säädöistä. */
 function lataaPuheKentat() {

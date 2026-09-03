@@ -52,6 +52,7 @@ import { ARTIKKELIT, KULTTUURIT } from './sisaltotaulut.js';
 import { kayttoluvanNimi } from './kuvavinkki.js';
 import { sfx } from './sound.js';
 import { taytaLahderivi } from './tekijakortti.js';
+import { musiikkiSivut } from './tyohuone-musiikki.js';
 import { RAAMATTU } from './tyohuone-raamattu.js';
 import { TESTATTAVAA, TILANNE, TUOREET } from './tyohuone-tilanne.js';
 import { raamatunTaulusivu, tilastoSivut } from './tyohuone-tilastot.js';
@@ -998,6 +999,16 @@ export function avaaPoiminnatLehti(ui) {
  */
 export function avaaTilastoLehti(ui) {
   avaaKehittajaLehti(ui, 'Tilastot', tilastoSivut());
+}
+
+/**
+ * Musiikki-lehti: pelin taustamusiikit kuunneltavaksi (omistajan tilaus
+ * 3.9.2026: *"kehittäjä hampurilaiseen voisi tehdä oman sivun
+ * taustamusiikeille, jossa voisin käydä kuuntelemassa niitä"*).
+ * Sivut ja soittokoneisto js/tyohuone-musiikki.js.
+ */
+export function avaaMusiikkiLehti(ui) {
+  avaaKehittajaLehti(ui, 'Musiikki', musiikkiSivut());
 }
 
 /**
