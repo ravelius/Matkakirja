@@ -171,3 +171,12 @@ test('nostokuvan kehys kutistuu kuvan levyiseksi eikä kuvateksti määrää lev
   assert.match(css, /\.fokusnosto-kuvateksti \{[\s\S]{0,400}width: 0;\s*min-width: 100%;/);
   assert.match(css, /\.fokusnosto-valokuva \{[\s\S]{0,200}margin: 0\.8rem auto 0 0;/);
 });
+
+test('kohdekortin raahausele puretaan aina ennen uutta kosketusta ja kuunnellaan ikkunasta (omistaja 4.9.2026)', () => {
+  const L = readFileSync(new URL('../js/fokuskohteet.js', import.meta.url), 'utf8');
+  assert.match(L, /function raahausTaiSulku\(ui, popup, alku\) \{[\s\S]{0,1200}popup\.puraEle\?\.\(\);/);
+  assert.match(L, /globalThis\.addEventListener\?\.\('pointermove', siirry\);\s*globalThis\.addEventListener\?\.\('pointerup', loppu\);\s*globalThis\.addEventListener\?\.\('pointercancel', peru\);/);
+  assert.match(L, /tapahtuma\.stopPropagation\(\);\s*\/\/[^\n]*\n\s*\/\/[^\n]*\n\s*popup\.puraEle\?\.\(\);\s*if \(tapahtuma\.target\?\.closest\?\.\('button, a'\)\) return;/);
+  assert.match(L, /if \(tapahtuma\.pointerType === 'mouse' && !tapahtuma\.buttons\) \{ puru\(\); return; \}/);
+  assert.doesNotMatch(L, /popup\.addEventListener\('pointermove', siirry\)/);
+});

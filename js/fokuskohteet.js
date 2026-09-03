@@ -5257,6 +5257,20 @@ const KOHDE_RAAHAUSKYNNYS = 8;
  * joka suuntaan (css/fokuskohteet.css touch-action: none).
  */
 function raahausTaiSulku(ui, popup, alku) {
+  /*
+   * EDELLINEN ELE PURETAAN AINA ENSIN (omistajan iPad-havainto 4.9.2026,
+   * Zadarin kortti: *"ei anna klikata kuvaa suuremmaksi vaan nosto
+   * itsessään vain hyppää eri kohtaan"*). Kuuntelijat olivat kortissa
+   * itsessään, ja jos sormen irrotus ei koskaan saapunut kortille
+   * (sormi liukui kortin ulkopuolelle ennen kaappausta, tai iOS:n
+   * WKWebView jätti pointercancelin lähettämättä), ele jäi elämään.
+   * Seuraava kosketus sai iOS:ssa saman pointerId:n, ja vanha
+   * siirtokäsittelijä laski sen matkan VANHASTA lähtöpisteestä: kortti
+   * hyppäsi ja kaappaus söi kuvanapin napautuksen. Nyt liike ja
+   * irrotus kuunnellaan ikkunasta, uusi ele purkaa edellisen, ja hiiren
+   * irronnut nappi purkaa eleen itse.
+   */
+  popup.puraEle?.();
   const alkuX = alku.clientX;
   const alkuY = alku.clientY;
   const lahtoVasen = popup.offsetLeft;
@@ -5264,6 +5278,7 @@ function raahausTaiSulku(ui, popup, alku) {
   let raahaa = false;
   const siirry = (tapahtuma) => {
     if (tapahtuma.pointerId !== alku.pointerId) return;
+    if (tapahtuma.pointerType === 'mouse' && !tapahtuma.buttons) { puru(); return; }
     const dx = tapahtuma.clientX - alkuX;
     const dy = tapahtuma.clientY - alkuY;
     if (!raahaa) {
@@ -5279,11 +5294,13 @@ function raahausTaiSulku(ui, popup, alku) {
     popup.style.top = `${Math.round(Math.min(Math.max(0, lahtoYlin + dy), maxYlin))}px`;
   };
   const puru = () => {
-    popup.removeEventListener('pointermove', siirry);
-    popup.removeEventListener('pointerup', loppu);
-    popup.removeEventListener('pointercancel', peru);
+    globalThis.removeEventListener?.('pointermove', siirry);
+    globalThis.removeEventListener?.('pointerup', loppu);
+    globalThis.removeEventListener?.('pointercancel', peru);
     popup.classList.remove('raahauksessa');
+    if (popup.puraEle === puru) popup.puraEle = null;
   };
+  popup.puraEle = puru;
   const loppu = (tapahtuma) => {
     if (tapahtuma.pointerId !== alku.pointerId) return;
     puru();
@@ -5298,9 +5315,9 @@ function raahausTaiSulku(ui, popup, alku) {
     if (tapahtuma.pointerId !== alku.pointerId) return;
     puru();
   };
-  popup.addEventListener('pointermove', siirry);
-  popup.addEventListener('pointerup', loppu);
-  popup.addEventListener('pointercancel', peru);
+  globalThis.addEventListener?.('pointermove', siirry);
+  globalThis.addEventListener?.('pointerup', loppu);
+  globalThis.addEventListener?.('pointercancel', peru);
 }
 
 /*
@@ -5473,6 +5490,9 @@ export function avaaFokuskohde(ui, kohde) {
    */
   popup.addEventListener('pointerdown', (tapahtuma) => {
     tapahtuma.stopPropagation();
+    // Kesken jäänyt ele ei saa periytyä painikkeen napautukselle
+    // (ks. raahausTaiSulku): puretaan ennen painike-ehtoa.
+    popup.puraEle?.();
     if (tapahtuma.target?.closest?.('button, a')) return;
     raahausTaiSulku(ui, popup, tapahtuma);
   });
@@ -5615,6 +5635,7 @@ function kuunteleKohdetta(ui, popup) {
   return () => {
     document.removeEventListener('keydown', nappain, true);
     document.removeEventListener('pointerdown', ulos, true);
+    popup.puraEle?.();
     globalThis.removeEventListener?.('resize', asemoi);
     globalThis.removeEventListener?.('orientationchange', asemoi);
     vahti.disconnect();
