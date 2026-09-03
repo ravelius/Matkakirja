@@ -516,7 +516,7 @@ function nostosymKyna(tera) {
  * ── MITÄ JÄI JA MIKÄ MENI ─────────────────────────────────────────
  *
  * ENNALLAAN viisi merkkiä: VUORI (kolmio), VESI (kaksi aaltoa),
- * SKANDAALI (huutomerkki) ja SÖPÖYSMERKKI eli eläintäyn TASSU — nämä
+ * SKANDAALI (huutomerkki, 3.9.2026 alkaen SALAMA) ja SÖPÖYSMERKKI eli eläintäyn TASSU — nämä
  * neljä omistaja nimesi — sekä KOMPASSIRUUSU, joka ei ole kategoria
  * vaan Matkakirjan kadonneen ihmeen lisämerkki.
  *
@@ -604,11 +604,19 @@ const NOSTOSYM_MINI_LUONNOS = {
     vahva: [aalto(-6.30, 6.30, -1.30, 3, 1.05)],
     ohut: [aalto(-6.30, 6.30, 2.40, 3, 1.05)],
   }),
-  /* HUUTOMERKKI — skandaali. Vedot 2 → 2: palkki ja piste on vähin
-   * mahdollinen. Terä antaa palkille kapenevan pään ja pisteelle
-   * viistotun dabin. */
-  huuto: ({ viiva, piste }) => ({
-    vahva: [viiva(0, -5.80, 0, 1.40), piste(0, 4.00, 0.95)],
+  /*
+   * SALAMA — skandaali. Omistajan valinta 3.9.2026 kahdeksan luonnoksen
+   * katseluarkilta (*"en ole täysin tyytyväinen skandaalin symboliin.
+   * mieti sille jokin parempi muoto huutomerkistä tai sitten kokonaan
+   * toinen merkki"*): huutomerkki oli 7 pikselin koossa ohut pystyviiva,
+   * joka katosi rantaviivojen sekaan. Salama on YKSI veto, joka
+   * erottuu pienimmässäkin koossa, ja kohu iskee kuin salama. Vedot
+   * 2 → 1. Tunnus `huuto` säilyy datan avaimena (83 skandaalia,
+   * täkynostot, selitevalikko); vain muoto vaihtui. Murrettu sinetti,
+   * kello ja lihavampi huutomerkki hävisivät samalla arkilla.
+   */
+  huuto: ({ murto }) => ({
+    vahva: [murto([[2.60, -6.40], [-2.40, 0.30], [1.50, 0.30], [-2.60, 6.40]])],
   }),
   /*
    * TASSUNJÄLKI — eläimet. UUSI KUVIO, omistajan valinta 31.8.2026
@@ -877,11 +885,13 @@ function piirraNostosymMiniCanvas(ctx, tunnus, muste, porras) {
  * sisällä kapeneva palkki ja piste.
  */
 function piirraNostosymHuuto(g) {
+  // Salama (omistaja 3.9.2026): sama muoto kuin kartan minimerkillä
+  // (NOSTOSYM_MINI_LUONNOS.huuto), kortin mitassa kaiverrettuna —
+  // kategorian keltainen täyttö ja musteinen reuna kuten ennenkin.
   el('path', {
     class: 'nostosym-huuto',
-    d: 'M-1.75 -6.6 L1.75 -6.6 L1.15 1.7 L-1.15 1.7 Z',
+    d: 'M3.2 -8.4 L-4.2 0.9 L-0.6 0.9 L-3.2 8.4 L4.2 -1.1 L0.6 -1.1 Z',
   }, g);
-  el('circle', { class: 'nostosym-huuto', cx: 0, cy: 5.1, r: 1.6 }, g);
 }
 
 /**
@@ -1486,7 +1496,10 @@ export function piirraNostosymboli(g, symboli) {
  * piirretään koodilla) haetaan suoraan piirtäjätaulusta ilman turhaa
  * 404-pyyntöä jokaisesta merkistä.
  */
-const NOSTOSYM_GENEROIDUT = ['huuto', 'elain', 'silma', 'historia', 'luonto', 'ruoka',
+// huuto poistui listalta 3.9.2026: skandaalin merkki on nyt salama, joka
+// piirretään koodilla (piirraNostosymHuuto); sym-huuto.webp on vanha
+// huutomerkkikaiverrus eikä sitä enää ladata.
+const NOSTOSYM_GENEROIDUT = ['elain', 'silma', 'historia', 'luonto', 'ruoka',
   'kulttuuri', 'tekniikka', 'kauppa', 'sana', 'merenkulku', 'urheilu',
   // kaupunki hyvaksytty 27.8.2026 (generoi-symbolit.yml, vain=kaupunki).
   'kaupunki'];

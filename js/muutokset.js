@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1482, teksti: 'Skandaalin merkki on salama; looppi leveammaksi' },
   { v: 1481, teksti: 'Skandaalilehden nimio: Lisalehti' },
   { v: 1480, teksti: 'Skandaalinosto lehtena: looppitaitto, pilotti Mykene' },
   { v: 1479, teksti: 'Hetket kaupungin kohdalla kohdekartalle, ei siirtoviivaa' },

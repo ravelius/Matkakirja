@@ -71,7 +71,7 @@ test('pistemerkin värit ovat samat kuin css/styles.css:n --sym-muuttujat', () =
  * pelkkää mustetta: jos jokin niistä saisi kiekon, kartalta katoaisi
  * se muoto, jonka omistaja nimenomaan pyysi jättämään.
  */
-test('vuori, vesi, huutomerkki, tassu ja kompassiruusu ovat yhä muotoja', () => {
+test('vuori, vesi, salama (skandaali), tassu ja kompassiruusu ovat yhä muotoja', () => {
   for (const tunnus of ['vuori', 'meri', 'huuto', 'elain', 'ihme']) {
     const merkki = nostosymMiniMerkki(tunnus, null);
     assert.equal(merkki.taytto, null, `${tunnus}: kiekko`);

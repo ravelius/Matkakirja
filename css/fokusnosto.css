@@ -769,13 +769,13 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
 
    Samat muotoilut kuin kaupunkilehdessä (css/styles.css .lehti-ylarivi,
    .lehti-alarivi, #arrival-intro::first-letter, #arrival-intro
-   column-count) mutta kortin omassa mitassa: kortti on 32 rem leveä
+   column-count) mutta kortin omassa mitassa: kortti on 40 rem leveä (omistaja 3.9.2026: "vähän leveämpi", 32 → 40)
    (kaupunkilehti on koko ruutu), joten lehti ja lööppi eivät sekoitu.
    Pohja on lehden paperia keltaisempi (#f6ecc6): lööppi on lööppi.
    =========================================================================== */
 
 .fokusnosto-kortti.fokusnosto-looppi {
-  width: min(32rem, 100%);
+  width: min(40rem, 100%);
   background-color: #f6ecc6;
   background-image: var(--paper-noise);
   background-blend-mode: multiply;
