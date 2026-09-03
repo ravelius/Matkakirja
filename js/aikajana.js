@@ -92,7 +92,7 @@
  *                syyllä. Syy on joukon alkio eikä laskuri, joten
  *                kahdesti purettu ajo ei nosta taustaa kahdesti.
  *
- * Vuoden vaihtuessa soi KOHAHDUS (omistaja: *"joku uuu-huudahdus,
+ * Keksinnön syttyessä soi KOHAHDUS (omistaja: *"joku uuu-huudahdus,
  * aivan kuin yleisö kohahtaisi, kun uusi hieno keksintö saapuu
  * maailmaan"*) — neljä ämpärissä olevaa varianttia, joista sama ei
  * toistu peräkkäin (js/tehosteet.js). Kun varianttia ei ole ladattu,
@@ -934,21 +934,27 @@ class Aikajana {
     this.kello.setAttribute('aria-label', `Vuosi ${Number(teksti)}`);
     // Ääni vain elävästä vaihdosta: avaus ja alustus ovat `heti`,
     // ja pysäytetty kello on hiljainen (kortista toiseen kelaus myös).
-    if (elava && this.kaynnissa) this.vuosiAani();
+    // Vuosiluvun vaihdos NAKSAHTAA; kohahdus kuuluu keksinnölle
+    // (sytyta, omistajan päätös 3.9.2026).
+    if (elava && this.kaynnissa) this.naksahda();
   }
 
   /**
-   * VUODEN VAIHTUMISEN ÄÄNI: kohahdus, varana naksahdus.
+   * KEKSINNÖN ÄÄNI: kohahdus, varana naksahdus.
    *
    * Omistaja 3.9.2026: *"se efektiääni vuodenvaihtuessa voisi olla
-   * joku uuu-huudahdus, aivan kuin yleisö kohahtaisi."* Kohahdus on
-   * ämpärissä neljänä varianttina (js/tehosteet.js), eikä sama variantti
-   * toistu peräkkäin. `soitaKohahdus` palauttaa false, jos varianttia
-   * ei ole ladattu, ääni on mykistetty, peli on taustalla tai edellinen
-   * kohahdus soi vielä — vain SILLOIN naksautetaan, jottei kaksi ääntä
-   * soi päällekkäin.
+   * joku uuu-huudahdus, aivan kuin yleisö kohahtaisi, kun uusi hieno
+   * keksintö saapuu maailmaan."* Omistajan päätös kortilla 3.9.2026:
+   * kohahdus VAIN KEKSINNÖN KOHDALLA — tyhjien vuosien rullaus vain
+   * naksahtaa (naksahda). Kohahdus on ämpärissä neljänä varianttina
+   * (js/tehosteet.js), eikä sama variantti toistu peräkkäin.
+   * `soitaKohahdus` palauttaa false, jos varianttia ei ole ladattu,
+   * ääni on mykistetty, peli on taustalla tai edellinen kohahdus soi
+   * vielä — vain SILLOIN naksautetaan, jottei kaksi ääntä soi
+   * päällekkäin. Merkkipaalu (1873) ei ole keksintö eikä kohahda.
    */
-  vuosiAani() {
+  keksinnonAani(t) {
+    if (t?.paalu) return;
     if (soitaKohahdus()) return;
     this.naksahda();
   }
@@ -958,8 +964,8 @@ class Aikajana {
    * 3.9.2026: *"kun vuosiluku vaihtuu, niin siinäkin voisi olla pieni
    * ääniefekti taustalla"*). Ääni on js/sound.js:n 'vuosi' — hyvin
    * hiljainen, ja mykistyksen sekä taustatilan hoitaa SoundKit itse.
-   * Liian tiheät ohitetaan (AIKAJANA_NAKSU_VALI_MS). Varaääni:
-   * kohahdus (vuosiAani) soi tämän sijaan, kun se on ladattu.
+   * Liian tiheät ohitetaan (AIKAJANA_NAKSU_VALI_MS). Keksinnön kohdalla
+   * soi kohahdus (keksinnonAani), ja tämä on sen vara.
    */
   naksahda() {
     const nyt = performance.now();
@@ -1009,6 +1015,8 @@ class Aikajana {
     } else {
       sfx.play('paper');
     }
+    // Yleisö kohahtaa, kun uusi keksintö saapuu — ei joka vuodesta.
+    this.keksinnonAani(t);
     this.paikkarivi.textContent = [t.vuosi, paikka(t)].filter(Boolean).join(' · ');
     this.vaihdaPaneeli(t);
     this.asettele();

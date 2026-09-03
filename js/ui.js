@@ -11899,23 +11899,11 @@ export class UI {
         } else {
           this.factKuuntele.hidden = true;
         }
-        // Lyhyt kertoja pysähtyy ensimmäisen virkkeen jälkeiseen
-        // hengähdykseen; osuus kertoo äänitteen lauserajan etsijälle,
-        // mistä kohtaa puhetta virkkeen loppu suunnilleen on.
-        const { eka: virtaEka } = ekaLause(merkinta.teksti);
-        const virtaOsuus = merkinta.teksti.length
-          ? virtaEka.length / merkinta.teksti.length : null;
+        // Kertoja lukee koko merkinnän tai ei mitään ('lyhyt' poistettu
+        // 3.9.2026, ks. js/aani-ehdokkaat.js kertojaTila).
         this.asetaMerkinnanLuenta(virtaAanite ? () => {
-          const tila = kertojaTila();
-          if (tila === 'ei') {
-            stopDiaryVoice(this);
-          } else if (tila === 'lyhyt') {
-            playDiaryVoice(this, virtaAanite, {
-              ekaLauseeseen: true, osuus: virtaOsuus, viive: 1000,
-            });
-          } else {
-            playDiaryVoice(this, virtaAanite, { viive: 1000 });
-          }
+          if (kertojaTila() === 'ei') stopDiaryVoice(this);
+          else playDiaryVoice(this, virtaAanite, { viive: 1000 });
         } : null);
         return;
       }
@@ -12055,15 +12043,11 @@ export class UI {
           this.diaryFullUrl = null;
           this.naytaMerkinnanKaiutin(false);
           // Kertojan tila (yläpalkin valikko): pitkä lukee koko
-          // merkinnän, lyhyt vain ensimmäisen lauseen — kaiutinnappi
-          // jatkaa loput. Ei kertojaa → ei autoluentaa.
+          // merkinnän, ei kertojaa → ei autoluentaa ('lyhyt' poistettu
+          // 3.9.2026).
           const aloitaStriimi = () => {
             stopDiaryVoice(this);
-            const tila = kertojaTila();
-            if (tila === 'lyhyt') {
-              this.merkintaJatko = jatkoTeksti || null;
-              lueMerkinta(this, eka, { viive: 1000 });
-            } else if (tila === 'pitka') {
+            if (kertojaTila() === 'pitka') {
               lueMerkinta(this, [uusi.kuvaus, uusi.nosto].filter(Boolean).join(' '), { viive: 1000 });
             }
           };
@@ -12091,24 +12075,12 @@ export class UI {
           : null;
         this.naytaMerkinnanKaiutin(Boolean(saapumisLauta));
         // Kertojan tila (yläpalkin valikko): pitkä lukee koko merkinnän,
-        // lyhyt vain ensimmäisen lauseen (omistajan tarkennus — luenta
-        // pysähtyy ensimmäisen virkkeen jälkeiseen hengähdykseen), ei
-        // kertojaa jättää luennan aloittamatta — kaiutinnappi yliajaa
-        // sen hetkellisesti.
+        // ei kertojaa jättää luennan aloittamatta — kaiutinnappi yliajaa
+        // sen hetkellisesti ('lyhyt' poistettu 3.9.2026).
         const saapumisAani = this.diaryFullUrl;
         const aloitaSaapuminen = saapumisLauta ? () => {
-          const tila = kertojaTila();
-          if (tila === 'ei') {
-            stopDiaryVoice(this);
-          } else if (tila === 'lyhyt') {
-            playDiaryVoice(this, saapumisAani, {
-              ekaLauseeseen: true,
-              osuus: eka.length / (uusi.kuvaus.length + 1 + (uusi.nosto?.length ?? 0)),
-              viive: 1000,
-            });
-          } else {
-            playDiaryVoice(this, saapumisAani, { viive: 1000 });
-          }
+          if (kertojaTila() === 'ei') stopDiaryVoice(this);
+          else playDiaryVoice(this, saapumisAani, { viive: 1000 });
         } : null;
         if (saapumisLauta && this.luettuSaapuminen !== luentaAvain) {
           this.luettuSaapuminen = luentaAvain;

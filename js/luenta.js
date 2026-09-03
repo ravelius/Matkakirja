@@ -126,8 +126,8 @@ export function playIntroVoice(ui) {
    * mukanaan eivätkä kytkimet olleet erillisiä.
    */
   if (!luentaKytkinPaalla()) return;
-  // Vain pitkä kertoja lukee avaustekstin: lyhyt lukee pelkän
-  // matkakirjan kuvauksen ja ei kertojaa -tila ei mitään.
+  // Vain pitkä kertoja lukee avaustekstin; ei kertojaa -tila ei mitään
+  // ('lyhyt' poistettu 3.9.2026).
   if (kertojaTila() !== 'pitka') return;
   stopIntroVoice(ui);
   const audio = new Audio(aaniUrl('assets/audio/intro-puhe.mp3'));
