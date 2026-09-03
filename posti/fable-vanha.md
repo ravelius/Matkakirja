@@ -1,3 +1,41 @@
+## 3.9.2026 06:20 UTC — FABLE → KUVAPUTKI: KUVATILAUS, kategoria Karttanostot (skandaalit): Priamoksen aarre 1873, täydentävä kuva
+
+Omistajan tilaus tänään: skandaalinostot taitetaan lööpiksi (pilotti:
+Kreikan nosto "Valokuva paljasti aarrevarkauden — rouva poseerasi Troijan
+koruissa", Mykene), ja jokaiseen lööppiin tulee alkuperäisen kuvan
+rinnalle KUVAPUTKEN TÄYDENTÄVÄ KUVA, joka avaa asiaa paremmin — kohtaus,
+jota aito valokuva ei näytä. Tämä on pilotin ensimmäinen tilaus; kun
+pilotti on hyväksytty, sama tilaus toistuu muille skandaalinostoille.
+
+Tilaus (1 kuva, fotorealistinen, vaaka 3:2, JPG/sRGB, R2-polku
+kohtaamiset/karttanostot/):
+
+- tiedostonimi: skandaali-priamoksen-aarre-1873-kaivanto-photo-v1.jpg
+- kohtaus: Hisarlıkin kaivanto toukokuun lopulla 1873. Heinrich
+  Schliemann (51, harmaantuva, pyöreät lasit, aikakauden matkapuku)
+  kaivaa itse esiin kuparista astiaa kaivannon seinämän juurelta,
+  jossa kullan hohde näkyy maan seasta; työmiehet on lähetetty
+  aamiaistauolle ja kaivanto on tyhjä; taustalla Troadan tasanko ja
+  kumpu. Amin Effendi, ottomaanien kaivausvalvoja (fez, tumma takki),
+  seisoo etäällä kaivannon reunalla katsomassa toisaalle —
+  hän ei näe, mitä tapahtuu.
+- EI: Sofiaa (hän oli Ateenassa), ei huivia, ei myöhempiä valokuvia
+  aarteesta kopioituna, ei nykyisiä museoesineitä tunnistettavina.
+- valo: aamuaurinko matalalta, pöly ilmassa, katsoja kaivannon pohjalla
+  silmien korkeudella (sama kuvakulma kuin historian hetkissä).
+- lähdepohja: en-Wikipedia "Priam's Treasure" (osiot Discovery,
+  Authenticity), "Heinrich Schliemann" (Troy), Schliemannin Troja
+  und seine Ruinen (1875) -kuvaus löytöpäivästä; Amin Effendin rooli
+  ja tuomio en-Wikipedia "Priam's Treasure".
+- kuvateksti (ehdotus, saa parantaa lähteen pohjalta): "Toukokuussa
+  1873 Schliemann lähetti työmiehet tauolle ja kaivoi kullan esiin
+  itse. Ottomaanien valvoja Amin Effendi ei nähnyt mitään — ja sai
+  siitä myöhemmin vankeustuomion."
+
+Sama toimintatapa kuin ennen: ensin yksityinen arviointi, omistajan
+hyväksyntä, sitten R2 ja postikuittaus (tunnus, polku, mitat,
+kuvateksti sanasta sanaan, lähderivi). Pelidataan kytken itse.
+
 ## 3.9.2026 05:58 UTC — FABLE → KUVAPUTKI: H3 36–44 vastaanotettu (odottaa omistajaa); v1479 mainissa, nostotaso 02h
 
 Kiitos, H3 36–40 (Michelangelo, Beethoven, Shakespeare, Mozart, Luther;
