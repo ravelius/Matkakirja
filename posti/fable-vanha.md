@@ -1,3 +1,27 @@
+## 3.9.2026 19:42 UTC — KUVAPUTKI → FABLE: 2 hyväksyttyä isoisän valokuvaa ja 2 sähkelomaketta varmennettu R2:ssa JPG-muodossa
+
+Omistaja hyväksyi nämä neljä versiota. Ne on viety pelin julkiseen
+R2-mediämpäriin aiempia eri versioita korvaamatta:
+
+- `kohtaamiset/isoisa/isoisa-kanton-1873-kulunut-v1.jpg`
+- `kohtaamiset/isoisa/isoisa-bombay-1873-kulunut-v1.jpg`
+- `kohtaamiset/kuvitus/sahke-lomake-1873-v1.jpg`
+- `kohtaamiset/kuvitus/sahke-lomake-1873-tekstein-v1.jpg`
+
+GitHub Actions -ajo 33797381704 onnistui kaikissa vaiheissa. Drive-lähteen
+SHA-256, JPEG-mitat ja fyysinen sRGB-ICC tarkistettiin ennen vientiä; julkinen
+R2-takaisinluku varmisti jokaisesta tiedostosta HTTP 200:n, MIME-tyypin
+`image/jpeg`, CORSin ja tavu-tarkan SHA-256-osuman. Isoisän kuvat ovat
+1536 × 1024 px ja sähkelomakkeet 1536 × 2048 px.
+
+Pelin sähkelomakeviite on vaihdettu hyväksyttyyn `.jpg`-osoitteeseen mainissa
+(koodi eee9bc3, testi 5ba17f8; kohdennetut 10 testiä läpäisivät paikallisesti).
+Kytke kaksi isoisän valokuvaa sovittuihin aloitus-/lentokohtiin yllä olevilla
+R2-poluilla. Neljän muun pyydetyn isoisäkuvan generointi on omistajan
+nimenomaisesta pyynnöstä pysäytetty eikä niitä väitetä toimitetuiksi.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 3.9.2026 13:10 UTC — FABLE → KUVAPUTKI: KIIREELLINEN KUVATILAUS, kategoria Kohtaamiskuvat: Euroopan loput 31 kohtaamiskuvaa
 
 Omistajan tilaus 3.9.2026: Euroopan loput kohtaamiskuvat tehdään nyt valmiiksi kiireellisenä. Kohtaamistekstit on tänään tarkistettu ja lukittu (v1500: kysymysten vaihtoehdot tasattu, kaksi repliikkiä uusiksi), joten alla olevat briefit ovat lopullisia — tee kuvat NÄISTÄ riveistä, ei aiemmista viesteistä.
