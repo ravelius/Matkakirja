@@ -10350,7 +10350,10 @@ body.kartalento .karttaselite {
  * poistaa body.aikajana-paalla.
  */
 body.aikajana-paalla .fact-card,
-body.aikajana-paalla .karttaselite {
+body.aikajana-paalla .karttaselite,
+body.aikajana-paalla .fokus-kartuutsi,
+body.aikajana-paalla .kartta-mittajana,
+body.aikajana-paalla .fokus-viivain {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
@@ -18827,6 +18830,12 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
   position: fixed;
   z-index: 40;
   max-width: min(23rem, calc(100vw - 1.6rem));
+  /*
+   * Kehys ankkuroidaan oikeasta reunasta (js/pollo.js asetaPinonPaikka),
+   * ja sen siirrot — napin liike, ruudun koon muutos — liukuvat samalla
+   * käyrällä kuin pino itse (omistaja 3.9.2026: "töksähdellen").
+   */
+  transition: right 380ms var(--liike-pehmea), bottom 380ms var(--liike-pehmea);
 }
 
 .pollo-kuplapino-kehys[hidden] { display: none; }
@@ -18959,18 +18968,26 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
  * (js/pollo.js lisaaPinoon) työntää vanhat ylöspäin. Kaksi liikettä,
  * yksi ele.
  */
+/*
+ * SAMA KESTO JA KÄYRÄ KUIN VANHOJEN NOUSULLA (js/pollo.js PINON_NOUSU_MS
+ * 380 ms, --liike-pehmea): uusi kupla nousee oman korkeutensa verran
+ * alhaalta samaan tahtiin kuin vanhat väistyvät ylös — yksi liike, ei
+ * pomppu vanhojen liu'un rinnalla (omistaja 3.9.2026).
+ */
 .pollo-kuplapino .pollo-vihje {
-  animation: pollo-kupla-saapuu 320ms var(--liike-sisaan);
+  animation: pollo-kupla-saapuu 380ms var(--liike-pehmea);
 }
 
 @keyframes pollo-kupla-saapuu {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(60%); }
+  60% { opacity: 1; }
   to { opacity: 1; transform: translateY(0); }
 }
 
 /* Liikeherkkyys: kupla vain ilmestyy, ei liiku. */
 @media (prefers-reduced-motion: reduce) {
   .pollo-vihje { animation: none; }
+  .pollo-kuplapino-kehys { transition: none; }
 
   .pollo-kuplapino .pollo-vihje {
     animation: pollo-kupla-havahtuu 120ms linear;

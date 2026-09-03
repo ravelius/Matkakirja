@@ -207,6 +207,8 @@ export const REIAN_SUHDE = 9;
 const TUMMENNUKSEN_ULOTTUVUUS = 1e6;
 /** Tummennuksen poistumisliuku (css .aikajana-tummennus-pinta). */
 const TUMMENNUKSEN_POISTUMA_MS = 700;
+/** Paneelin kuvan dekoodauksen enimmäisodotus ennen ristihäivytystä. */
+const PANEELIN_DEKOODAUSKATTO_MS = 250;
 
 /**
  * Naksahduksia enintään kahdeksan sekunnissa (omistajan tilaus
@@ -1108,42 +1110,65 @@ class Aikajana {
    */
   vaihdaPaneeli(t) {
     const sivu = solmu('div', 'aikajana-ilmio-sivu');
-    // Paneelissa kuva vain jos sellainen on: nimikirjainlaatta kuuluu
-    // nauhan kortille, ei selitteen ylle.
-    if (onKuva(t.ilmio)) sivu.appendChild(kuvaTaiLaatta(t.ilmio, t.otsikko, 640, 'aikajana-ilmiokuva'));
-    const teksti = solmu('div', 'aikajana-ilmio-teksti');
     /*
-     * HENKILÖRIVI: keksijän kasvot nimen vieressä. Muotokuva on
-     * pieni rintakuva, jotta katse pysyy ilmiökuvassa; kaksoispysäkin
-     * molemmat kasvot mahtuvat samalle riville vierekkäin.
+     * PELKKÄ KUVA (omistaja 3.9.2026: *"havainnekuvan alta voisi poistaa
+     * kaiken ja jättää pelkän kuvan"*). Otsikko, keksijä ja selite ovat
+     * karusellin kortilla ja Tiedeliitteessä; paneeli on ikkuna
+     * ilmiökuvaan. Kuva on nappi, joka avaa jutun. Vain kuvattomalla
+     * pysäkillä (loppusanat) paneeli näyttää tekstin.
      */
-    const henkilorivi = solmu('div', 'aikajana-ilmio-henkilo');
-    if (muotokuvat(t).length) henkilorivi.appendChild(muotokuvaKehys(t, 200, 'aikajana-ilmio-kasvot'));
-    henkilorivi.appendChild(solmu('span', 'aikajana-ilmio-nimi', t.henkilo ?? ''));
-    teksti.append(
-      henkilorivi,
-      solmu('h3', 'aikajana-ilmio-otsikko', t.otsikko),
-      solmu('p', 'aikajana-ilmio-selite', t.selite ?? ''),
-    );
-    if (t.ilmio?.selite) teksti.appendChild(solmu('div', 'aikajana-ilmio-kuvateksti', t.ilmio.selite));
-    if (t.juttu) {
-      const lue = solmu('button', 'aikajana-lue', 'Lue juttu');
-      lue.type = 'button';
-      lue.addEventListener('click', () => this.avaaJuttu(t));
-      teksti.appendChild(lue);
+    if (onKuva(t.ilmio)) {
+      const kehys = kuvaTaiLaatta(t.ilmio, t.otsikko, 640, 'aikajana-ilmiokuva');
+      if (t.juttu) {
+        kehys.classList.add('avaa-jutun');
+        kehys.setAttribute('role', 'button');
+        kehys.setAttribute('tabindex', '0');
+        kehys.setAttribute('aria-label', `${t.otsikko}: lue juttu`);
+        kehys.addEventListener('click', () => this.avaaJuttu(t));
+        kehys.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.avaaJuttu(t); } });
+      }
+      sivu.appendChild(kehys);
+    } else {
+      const teksti = solmu('div', 'aikajana-ilmio-teksti');
+      const henkilorivi = solmu('div', 'aikajana-ilmio-henkilo');
+      if (muotokuvat(t).length) henkilorivi.appendChild(muotokuvaKehys(t, 200, 'aikajana-ilmio-kasvot'));
+      henkilorivi.appendChild(solmu('span', 'aikajana-ilmio-nimi', t.henkilo ?? ''));
+      teksti.append(
+        henkilorivi,
+        solmu('h3', 'aikajana-ilmio-otsikko', t.otsikko),
+        solmu('p', 'aikajana-ilmio-selite', t.selite ?? ''),
+      );
+      if (t.juttu) {
+        const lue = solmu('button', 'aikajana-lue', 'Lue juttu');
+        lue.type = 'button';
+        lue.addEventListener('click', () => this.avaaJuttu(t));
+        teksti.appendChild(lue);
+      }
+      sivu.append(teksti);
     }
-    sivu.append(teksti);
     const vanhat = [...this.paneeli.children];
     this.paneeli.hidden = false;
     this.paneeli.appendChild(sivu);
-    requestAnimationFrame(() => {
+    /*
+     * KUVA DEKOODATAAN ENNEN RISTIHÄIVYTYSTÄ (omistaja 3.9.2026:
+     * *"havainnekuvien vaihto pehmeämmäksi"*). Ilman tätä selain purki
+     * WebP:n häivytyksen ensimmäisillä kehyksillä ja liike nyki. Pieni
+     * kuva on esiladattu, joten dekoodaus on yleensä välitön; katto
+     * pitää huolen, ettei vaihto jää odottamaan verkkoa.
+     */
+    const kuva = sivu.querySelector('img');
+    const valmis = kuva && typeof kuva.decode === 'function'
+      ? Promise.race([kuva.decode().catch(() => {}), new Promise((ok) => setTimeout(ok, PANEELIN_DEKOODAUSKATTO_MS))])
+      : Promise.resolve();
+    void valmis.then(() => requestAnimationFrame(() => {
+      if (!sivu.isConnected) return;
       sivu.classList.add('esilla');
       for (const v of vanhat) {
         v.classList.remove('esilla');
         v.classList.add('poistuu');
         setTimeout(() => v.remove(), 700);
       }
-    });
+    }));
   }
 
   /**
@@ -1189,6 +1214,21 @@ class Aikajana {
       kortti.tabIndex = piilossa ? -1 : 0;
     });
     this.nauha.classList.toggle('tyhja', nyt < 0);
+    this.asetaPaneelinYla();
+  }
+
+  /**
+   * ILMIÖPANEELI ALKAA VUOSIPALKIN ALTA (omistaja 3.9.2026: *"havainne-
+   * kuvan ruutu ei saisi olla kiinni vuosipalkissa ylhäällä"*). Palkin
+   * korkeus riippuu kirjasimesta ja ruudun leveydestä, joten sen alareuna
+   * mitataan ja paneelin yläreuna asetetaan CSS-muuttujaan; koon
+   * muutos kutsuu asettelun uudestaan.
+   */
+  asetaPaneelinYla() {
+    const palkki = this.kello?.parentElement;
+    if (!palkki || !this.juuri || typeof palkki.getBoundingClientRect !== 'function') return;
+    const yla = palkki.getBoundingClientRect().bottom - this.juuri.getBoundingClientRect().top;
+    if (Number.isFinite(yla) && yla > 0) this.juuri.style.setProperty('--aikajana-paneeli-yla', `${Math.round(yla + 10)}px`);
   }
 
   /**
