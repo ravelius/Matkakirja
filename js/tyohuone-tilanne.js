@@ -92,6 +92,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1487: LINSSIN VUOSILUKU RULLAA (omistaja 3.9.) - kehittajavalikko > aikajana: keksinnot; numerot pyorahtavat ylhaalta alas ja jokaisesta vaihdosta kuuluu hiljainen naksahdus (ei pysaytetylla kellolla). Kehittajavalikon siirtymamusiikki-rivi nayttaa nyt raidat loytyneiksi (jalan, laiva, lento, keksinnot = kaikki amparissa).',
   'v1486: LOOPPITAITTO KAIKISSA 83 SKANDAALIKORTISSA (omistaja 3.9. "monista kaikkiin muihinkin") - nimio Lisalehti, paivaysrivi paikka + vuosi, iso otsikko, ingressi (= kortin entinen johdanto), kuva/galleria, leipateksti anfangilla ja kahdessa palstassa, visa lopussa. Avaa esim. Wien (Shakkiturkkilainen), Sofia (Battenberg), Praha (Tycho Brahe).',
   'v1485: KOLME KARTTAKORJAUSTA (omistaja 3.9.) - a) Bosnia 100 km: Dinaariset Alpit nyt kohdenimion kokoinen kursiivi (sama Pyreneet, Karpaatit, Skandit, Apenniinit, Taurus); b) ihmekortin Unohdettu aarre -nauha samassa suhteessa kuin suurennoksessa (pienempi kortissa); c) poltetun merkin tai nimen napautuksesta avautuva kortti tulee napautuksen viereen, ei ruudun kulmaan (Pergamonin alttari).',
   'v1484 + POLTTO 02k: SALAMA MUOTO 3 (omistaja 3.9.) - takaisin entiseen suuntaan, matala, vinot paksummat kuin askel. Katso Kreikka 50 km (Mykene) ja kortin ylarivi.',
