@@ -873,11 +873,12 @@ kt kappale; ilmiöpaneelissa kuva näkyy noin 450 px leveänä. Koko kaaren
 kuvat alkuperäisinä olisi yli 14 Mt, mikä ei lataudu taustalle
 animaation aikana millään yhteydellä.
 
-Siksi jokaisesta ilmiökuvasta tehdään pieni versio:
+Siksi jokaisesta ilmiökuvasta ja muotokuvasta tehdään pieni versio:
 
 | | alkuperäinen | pieni |
 |---|---|---|
 | polku ämpärissä | `aikajana/keksinnot/<nimi>.jpg` | `aikajana/keksinnot/pieni/<nimi>.webp` |
+| polku ämpärissä (muotokuva) | `aikajana/keksinnot/muotokuva/<nimi>.jpg` | `aikajana/keksinnot/muotokuva/pieni/<nimi>.webp` |
 | mitat | 1536×1024 | leveys 640 px, korkeus suhteessa |
 | muoto ja laatu | JPEG, kuvaputken tuotos | WebP, laatu 78 |
 | koko | 400–760 kt | alle 90 kt (ajo kaatuu, jos ylittyy) |
@@ -888,11 +889,16 @@ saa alkuperäisestä ilman omaa listaa. Työkalu on
 `tools/tee-pienet-kuvat.mjs` ja ajo
 `.github/workflows/tee-pienet-kuvat.yml` (käsiajettava, `vain`- ja
 `kuiva`-valinnat). Kumpikaan ei kanna kuvalistaa: osoitteet luetaan
-linssin datasta (`js/linssit/keksinnot.js`, kentät `ilmio.osoite` ja
-`ilmioLisa.osoite`), joten uusi hyväksytty kuva tulee mukaan
-seuraavalla ajolla. Pienet versiot eivät mene repoon — työkalu
-kirjoittaa `media/`-kansioon (.gitignore) ja vie sieltä ämpäriin, kuten
-kaikki muukin media.
+linssin datasta (`js/linssit/keksinnot.js`, kentät `ilmio`, `ilmioLisa`,
+`kuva` ja `kuvaToinen`), joten uusi hyväksytty kuva tulee mukaan
+seuraavalla ajolla. Pieni versio menee aina saman alikansion
+`pieni/`-hakemistoon, joten muotokuvien pienennykset eivät sekoitu
+ilmiökuviin. Pienet versiot eivät mene repoon — työkalu kirjoittaa
+`media/`-kansioon (.gitignore) ja vie sieltä ämpäriin, kuten kaikki
+muukin media. **Muotokuvien tultua mukaan
+`.github/workflows/tee-pienet-kuvat.yml` on ajettava uudelleen**, jotta
+uusi kansio täyttyy (28 muotokuvaa); pelin puoli ei vielä lue pieniä
+versioita, joten ajo ei ole julkaisun este.
 
 **Pelin puoli tulee erikseen.** Sopimus on tämä: kun linssi avataan,
 peli esilataa taustalla kaikkien pysäkkien PIENET versiot (ei
@@ -900,6 +906,36 @@ alkuperäisiä), ja ilmiöpaneeli näyttää animaation aikana pienen
 version; alkuperäinen haetaan vasta, kun pelaaja avaa jutun. Kun
 pieni versio puuttuu ämpäristä, näytetään alkuperäinen — uusi kuva ei
 saa jäädä näkymättä siksi, että pienennysajo on vielä ajamatta.
+
+---
+
+## 8. Keksijöiden muotokuvat ovat pelin henkilökuva (3.9.2026)
+
+Omistajan tilaus 3.9.2026: yhtenäiset, pelkistetyt mutta karaktääriset
+studiorintakuvat kaikille kaaren keksijöille (toimitettu ja hyväksytty
+mustavalkoisina). Kuvaputki toimitti
+28 hyväksyttyä pystykuvaa kansioon `aikajana/keksinnot/muotokuva/`
+(vienti `.github/workflows/vie-hyvaksytyt-28-keksijamuotokuvaa-2026-09-03.yml`).
+Pysäkin kuvakentät ovat sen jälkeen nämä:
+
+| kenttä | mitä | missä näkyy |
+|---|---|---|
+| `kuva` | generoitu studiomuotokuva (`osoite`) | filminauhan kortti, ilmiöpaneelin henkilörivi, juttu |
+| `kuvaToinen` | saman pysäkin toinen keksijä | kortilla ja henkilörivillä ensimmäisen vierellä |
+| `kuvaAito` | aito Commons-kuva (`tiedosto`, PD) | ei enää kortissa; jutun kuvissa ja myöhemmin Tiedeliitteessä |
+| `ilmio`, `ilmioLisa` | keksintöä selittävä generoitu kuva | ilmiöpaneeli, juttu |
+
+Kolmella pysäkillä on kaksi tekijää (Montgolfier'n veljekset, Cooke ja
+Wheatstone, Lumière'n veljekset). Moottori piirtää heidät **vierekkäin
+pienempinä** samaan kehykseen (`.aikajana-kuvakehys.kaksi`) — ei
+päällekkäin, koska kortti on kapea ja päällimmäinen peittäisi toisen
+kasvot. Kortin muotokuvakehys on 4:5 ja `object-position: center top`,
+ja filminauhan korkeus on laskettu kehyksestä ja tekstirivien lukituista
+rivikorkeuksista: suurennettu kortti mahtuu nauhaan kokonaan (omistajan
+havainto *"suurennettu kuva näyttää leikkautuvan yläosasta"*).
+
+Muotokuvat esiladataan kolme pysäkkiä edellä (`esilataaSeuraavat`,
+js/ui-apurit.js `esilataaKuvat`), samalla kertaa ilmiökuvien kanssa.
 
 ---
 

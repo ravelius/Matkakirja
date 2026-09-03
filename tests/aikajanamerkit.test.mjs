@@ -157,6 +157,24 @@ globalThis.localStorage = { getItem: () => null, setItem() {}, removeItem() {} }
 globalThis.fetch = () => Promise.reject(new Error('ei verkkoa testissä'));
 globalThis.window = { AudioContext: function Ctx() { return {}; } };
 
+/*
+ * ESILATAUSTYNKÄ. Linssi pyytää seuraavien pysäkkien muotokuvat ja
+ * ilmiökuvat taustalle (js/aikajana.js esilataaSeuraavat →
+ * js/ui-apurit.js esilataaKuvat), joten ilman selaimen Image-luokkaa
+ * käynnistys kaatuisi. Osoitteet talteen, jotta esilataus on myös
+ * mitattavissa eikä vain vaiettu pois.
+ */
+const esiladatut = [];
+globalThis.Image = class TynkaKuva {
+  constructor() { this.decoding = ''; }
+
+  addEventListener() {}
+
+  set src(osoite) { this.osoite = osoite; esiladatut.push(osoite); }
+
+  get src() { return this.osoite; }
+};
+
 /** Kaikki soittimet, jotka moduulit ovat luoneet — kohahdus mukaan luettuna. */
 let soittimet = [];
 
@@ -434,4 +452,33 @@ test('moottori soittaa kohahduksen elävästä vaihdoksesta ja naksahtaa varana'
   assert.match(MOOTTORI, /vuosiAani\(\) \{\n\s*if \(soitaKohahdus\(\)\) return;\n\s*this\.naksahda\(\);/);
   // Naksahdus on harvennettu (AIKAJANA_NAKSU_VALI_MS) ja soittaa 'vuosi'.
   assert.match(MOOTTORI, /naksahda\(\) \{[\s\S]{0,300}AIKAJANA_NAKSU_VALI_MS[\s\S]{0,200}sfx\.play\('vuosi'\);/);
+});
+
+/* ══════════════════════════════════════════════════════════════════
+ * 5. KUVIEN ESILATAUS
+ * ══════════════════════════════════════════════════════════════════ */
+
+/*
+ * Omistajan havainto 3.9.2026: kuvat pitää olla ladattuina ennen kuin
+ * paneeli vaihtuu. Tässä mitataan se, mitä moottori oikeasti pyytää:
+ * kolmen seuraavan pysäkin muotokuvat ja ilmiökuvat, kaksoispysäkin
+ * molemmat kasvot mukaan luettuina.
+ */
+test('linssin avaus esilataa seuraavien pysäkkien muotokuvat ja ilmiökuvat', () => {
+  const ui = tynkaUi();
+  kaynnistaAikajana(ui, LINSSI);
+  const alku = LINSSI.aikajana.tapahtumat.slice(0, 3);
+  for (const t of alku) {
+    for (const kuva of [t.kuva, t.kuvaToinen, t.ilmio]) {
+      if (!kuva?.osoite) continue;
+      assert.ok(esiladatut.includes(kuva.osoite), `esilataamatta: ${kuva.osoite}`);
+    }
+  }
+  // Montgolfier on kaksoispysäkki: molemmat kasvot pyydetään.
+  assert.ok(esiladatut.filter((o) => o.includes('/muotokuva/1783-')).length === 2,
+    'kaksoispysäkiltä esiladattiin vain toinen keksijä');
+  // Vasta myöhemmät pysäkit eivät kuormita avausta.
+  assert.ok(!esiladatut.some((o) => o.includes('1928-alexander-fleming')),
+    'koko kaari esiladattiin kerralla');
+  pysaytaAikajana(ui);
 });
