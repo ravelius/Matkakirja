@@ -472,8 +472,16 @@ const PULLA_YLEISNIMI = 'makea pulla';
 /** Kuinka kauan varmistusnappi odottaa toista napautusta. */
 const PULLA_VARMISTUS_MS = 6000;
 
-/** Kaupungin pullavastine — aina jokin, koskaan tyhjä. */
-function pullanNimi(ui, city) {
+/**
+ * Kaupungin pullavastine — aina jokin, koskaan tyhjä.
+ *
+ * VIETY JAETTAVAKSI (3.9.2026): sähketehtävän oma pullakauppa
+ * (js/fokusvirta.js) tarvitsee täsmälleen saman nimen kuin aarteen
+ * pullavinkki. Kaksi kopiota PULLA_NIMET-taulusta ajautuisi erilleen
+ * ensimmäisellä uudella maalla, joten taulu ja sen lukija ovat tässä
+ * kerran ja fokusvirta tuo ne.
+ */
+export function pullanNimi(ui, city) {
   const iso = ui?.game?.pack?.map?.cityCountry?.[city?.id] ?? null;
   return (iso && PULLA_NIMET[iso]) || PULLA_YLEISNIMI;
 }
@@ -531,6 +539,104 @@ function pullaKuittausTeksti(nimi) {
 }
 
 /**
+ * PULLAKAUPAN NAPPI — KAKSI NAPAUTUSTA, KASSA JA KUITTAUS.
+ *
+ * VIETY JAETTAVAKSI (3.9.2026, Raamattu: SÄHKETEHTÄVÄ LEHTIMÄISEKSI JA
+ * PULLA VINKIKSI). Kaava on omistajan hyväksymä ja pelitestattu — ei
+ * vahingossa (ensimmäinen napautus varmistaa, toinen maksaa),
+ * varmistus raukeaa itsestään, tyhjä kassa kertoo itsestään Livian
+ * äänellä, ja onnistunut osto jättää rivin tilalle kuittauksen ja
+ * heittää −N puntaa -kellukkeen. Sähketehtävän kaksi pullaa käyttävät
+ * SAMAA funktiota eivätkä kopiota: jos kaava muuttuu, se muuttuu
+ * yhdessä paikassa.
+ *
+ * @param {object} ui
+ * @param {Element} kotelo laatikko, jonka loppuun rivi tulee
+ * @param {object} asetukset tekstit ja kauppa
+ * @param {number} asetukset.hinta punnat
+ * @param {string} asetukset.teksti nappi vastaamattomana
+ * @param {string} asetukset.varmistus nappi varmistusta odottamassa
+ * @param {string} asetukset.koyha nappi kun kassa ei riitä
+ * @param {string} asetukset.kelluke kellukkeen alarivi
+ * @param {string} asetukset.tehty rivi napin tilalle oston jälkeen
+ * @param {boolean} [asetukset.ostettu] jo ostettu: pelkkä kuittaus
+ * @param {() => {ok: boolean}} asetukset.osta pelin oma kassatapahtuma
+ * @param {(rivi: Element) => void} [asetukset.jalkeen] oston jälkityö
+ * @returns {Element} rivi
+ */
+export function pullaOstosnappi(ui, kotelo, {
+  hinta = PULLA_HINTA, teksti, varmistus, koyha, kelluke, tehty,
+  ostettu = false, osta, jalkeen = null,
+}) {
+  const rivi = html('div', 'fokus-pulla');
+  kotelo.appendChild(rivi);
+  if (ostettu) {
+    rivi.appendChild(html('p', 'fokus-pulla-tehty', tehty));
+    return rivi;
+  }
+  const nappi = html('button', 'fokus-pulla-nappi');
+  nappi.type = 'button';
+  const huomio = html('p', 'fokus-pulla-huomio');
+  let varmistusOdottaa = false;
+  let ajastin = 0;
+
+  const koyhaNyt = () => (ui.game.player?.money ?? 0) < hinta;
+
+  const paivita = () => {
+    if (koyhaNyt()) {
+      varmistusOdottaa = false;
+      nappi.disabled = true;
+      nappi.classList.remove('fokus-pulla-varmistus');
+      nappi.textContent = koyha;
+      huomio.textContent = PULLA_KOYHA_LIVIA;
+      huomio.hidden = false;
+      return;
+    }
+    nappi.disabled = false;
+    nappi.classList.toggle('fokus-pulla-varmistus', varmistusOdottaa);
+    nappi.textContent = varmistusOdottaa ? varmistus : teksti;
+    huomio.textContent = varmistusOdottaa ? PULLA_VARMISTUS_OHJE : '';
+    huomio.hidden = !varmistusOdottaa;
+  };
+
+  nappi.addEventListener('click', () => {
+    if (!varmistusOdottaa) {
+      varmistusOdottaa = true;
+      paivita();
+      sfx.play('click');
+      clearTimeout(ajastin);
+      ajastin = setTimeout(() => {
+        varmistusOdottaa = false;
+        paivita();
+      }, PULLA_VARMISTUS_MS);
+      return;
+    }
+    clearTimeout(ajastin);
+    const vastaus = osta();
+    if (!vastaus?.ok) {
+      // Kassa ehti tyhjentyä tai ostos on jo tehty: nappi kertoo
+      // tilanteen eikä jätä pelaajaa varmistustilaan.
+      varmistusOdottaa = false;
+      paivita();
+      return;
+    }
+    sfx.play('coin');
+    rivi.replaceChildren(html('p', 'fokus-pulla-tehty', tehty));
+    const box = ui.buildToast?.({
+      kind: 'stamp', icon: 'kukkaro', text: `−${hinta} puntaa`, sub: kelluke,
+    });
+    if (box) setTimeout(() => ui.removeToast(box), TOAST_MS.default);
+    ui.onChange?.(ui.game);
+    ui.renderTurnPill?.();
+    jalkeen?.(rivi);
+  });
+
+  paivita();
+  rivi.append(nappi, huomio);
+  return rivi;
+}
+
+/**
  * ONKO PULLA TARJOLLA TÄSSÄ KAUPUNGISSA JUURI NYT?
  *
  * Kaksi ehtoa, samat kuin aarteen avaavalla kysymyksellä:
@@ -558,79 +664,27 @@ function pullaTarjolla(ui, city) {
 function piirraPullaOstos(ui, city, kotelo, aarreAvattiin) {
   if (!pullaTarjolla(ui, city)) return null;
   const nimi = pullanNimi(ui, city);
-  const rivi = html('div', 'fokus-pulla');
-  const nappi = html('button', 'fokus-pulla-nappi');
-  nappi.type = 'button';
-  const huomio = html('p', 'fokus-pulla-huomio');
-  let varmistus = false;
-  let ajastin = 0;
-
-  const koyha = () => (ui.game.player?.money ?? 0) < PULLA_HINTA;
-
-  const paivita = () => {
-    if (koyha()) {
-      varmistus = false;
-      nappi.disabled = true;
-      nappi.classList.remove('fokus-pulla-varmistus');
-      nappi.textContent = pullaKoyhaTeksti(nimi);
-      huomio.textContent = PULLA_KOYHA_LIVIA;
-      huomio.hidden = false;
-      return;
-    }
-    nappi.disabled = false;
-    nappi.classList.toggle('fokus-pulla-varmistus', varmistus);
-    nappi.textContent = varmistus ? pullaVarmistusTeksti(nimi) : pullaNapinTeksti(nimi);
-    huomio.textContent = varmistus ? PULLA_VARMISTUS_OHJE : '';
-    huomio.hidden = !varmistus;
-  };
-
-  nappi.addEventListener('click', () => {
-    if (!varmistus) {
-      varmistus = true;
-      paivita();
-      sfx.play('click');
-      clearTimeout(ajastin);
-      ajastin = setTimeout(() => {
-        varmistus = false;
-        paivita();
-      }, PULLA_VARMISTUS_MS);
-      return;
-    }
-    clearTimeout(ajastin);
-    const vastaus = ui.game.actionPullaVinkki(city.id, PULLA_HINTA);
-    if (!vastaus.ok) {
-      // Kassa ehti tyhjentyä tai pulla on jo ostettu: nappi kertoo
-      // tilanteen eikä jätä pelaajaa varmistustilaan.
-      varmistus = false;
-      paivita();
-      return;
-    }
-    sfx.play('coin');
-    rivi.replaceChildren(html('p', 'fokus-pulla-tehty', pullaTehtyTeksti(nimi)));
-    const box = ui.buildToast?.({
-      kind: 'stamp',
-      icon: 'kukkaro',
-      text: `−${PULLA_HINTA} puntaa`,
-      sub: `${nimi} Livialle`,
-    });
-    if (box) setTimeout(() => ui.removeToast(box), TOAST_MS.default);
+  return pullaOstosnappi(ui, kotelo, {
+    hinta: PULLA_HINTA,
+    teksti: pullaNapinTeksti(nimi),
+    varmistus: pullaVarmistusTeksti(nimi),
+    koyha: pullaKoyhaTeksti(nimi),
+    kelluke: `${nimi} Livialle`,
+    tehty: pullaTehtyTeksti(nimi),
+    osta: () => ui.game.actionPullaVinkki(city.id, PULLA_HINTA),
     /*
      * SAMA JÄRJESTYS KUIN OIKEALLA VASTAUKSELLA: tallennus ja
-     * rahapilleri ensin, sitten piste kartalle, ja pöllön kupla
-     * viimeisenä — kupla ei saa luvata mitään, mitä kartalla ei vielä
-     * ole. Koko render() sulkisi lehden, joten sitä ei kutsuta.
+     * rahapilleri ensin (yhteinen nappi hoitaa ne), sitten piste
+     * kartalle, ja pöllön kupla viimeisenä — kupla ei saa luvata
+     * mitään, mitä kartalla ei vielä ole. Koko render() sulkisi
+     * lehden, joten sitä ei kutsuta.
      */
-    ui.onChange?.(ui.game);
-    ui.renderTurnPill?.();
-    ui.paivitaFokuspiste?.();
-    aarreAvattiin?.();
-    kuittausPinta?.(ui, pullaKuittausTeksti(nimi));
+    jalkeen: () => {
+      ui.paivitaFokuspiste?.();
+      aarreAvattiin?.();
+      kuittausPinta?.(ui, pullaKuittausTeksti(nimi));
+    },
   });
-
-  paivita();
-  rivi.append(nappi, huomio);
-  kotelo.appendChild(rivi);
-  return rivi;
 }
 
 /**

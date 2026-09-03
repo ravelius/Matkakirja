@@ -225,10 +225,28 @@ const SAHKE_SOFIA = {
   lahetaVapaa: 'Lähetä omin sanoin',
   vaarinSahke: 'EI TÄSMÄÄ STOP TARKISTA KOHDE JA VUOSILUKU STOP',
 
-  vinkki: 'Kato, minä sanon sen nyt suoraan: se kohde on kartalla '
-    + 'Mustanmeren rannalla, ja sen kortin otsikkona lukee maailman '
-    + 'vanhin kulta. Vuosiluku on saman kortin ensimmäisessä '
-    + 'kappaleessa.',
+  /*
+   * LIVIAN VINKKI (Fable 3.9.2026). Sama teksti palvelee kahta tietä:
+   * se tulee itsestään kahden ohilyönnin jälkeen JA se on se, minkä
+   * kokonainen pulla ostaa (Raamattu, SÄHKETEHTÄVÄ LEHTIMÄISEKSI JA
+   * PULLA VINKIKSI). Vinkki kertoo MISTÄ vastaus löytyy — se ei sano
+   * kohteen nimeä eikä vuosilukua, joten ostajakin kaivaa itse.
+   */
+  vinkki: 'No. Kuuntele nyt. Se kulta ei ole Sofiassa, se on meren '
+    + 'rannalla. Katso kartalta Mustanmeren puolelta se kaupunki, jonka '
+    + 'kohde puhuu maailman vanhimmasta kullasta, ja vuosiluku lukee '
+    + 'samassa kortissa. Löytö on nuorempi kuin luulisi, sillon '
+    + 'seitkytluvulla.',
+
+  /*
+   * PUOLIKAS PULLA = SUORA LINKKI (omistaja 3.9.2026). Livia ei kerro
+   * vastausta vaan avaa sen kortin, jolta se luetaan — tässä kartan
+   * kohde 'varna' Bulgarian luettelosta (js/packs/fokuskohteet-bgr.js).
+   * Saate on lyhyt, koska palvelus on puolikas.
+   */
+  linkkiSaate: 'No. Puolikas pulla, puolikas palvelus. Tossa on suora '
+    + 'linkki, lue itse.',
+  vastauslinkki: { tyyppi: 'kohde', maa: 'BGR', kohde: 'varna' },
 
   vastaussahke: 'PÖLLÖLLE STOP\nTUNNUSSANA TÄSMÄÄ STOP\nLIVIA TULEE STOP',
   oikein: 'Se on se. Yli kolmetuhatta kultaesinettä yhdestä '

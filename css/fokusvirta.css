@@ -806,6 +806,13 @@
  * sinertävä muste, ohut musteviiva vasemmalla ja pieni kallistus:
  * kynällä kirjoitettu huomautus koneella kirjoitetun sähkeen viereen.
  * (Miksi ei kaunokirjoitusta — ks. osion alun perustelu.)
+ *
+ * VARALLA 3.9.2026 ALKAEN: saate itse siirtyi sähkekortilta Livian
+ * kuplapinoon (omistaja: *"nuo pulun kommentit voisi siirtää pulun
+ * puhekuplaan"*), joten tätä luokkaa ei tällä hetkellä aseteta
+ * mistään. Asu jää tänne, koska se on Livian marginaaliäänen
+ * määrittely — jos kortille joskus palaa hänen kynällä kirjoittamansa
+ * huomautus, se näyttää tältä eikä uudelta.
  */
 .fokusvirta-livian-saate {
   margin: 0.9rem 0 0;
@@ -859,6 +866,192 @@
 
 .fokusvirta-vihjelinkki:hover,
 .fokusvirta-vihjelinkki:focus-visible { color: #7a5514; }
+
+/* ===================================================================
+   SÄHKE KIRJOITTUU — ANIMAATION TILAT
+   -------------------------------------------------------------------
+   Omistaja 3.9.2026: *"tekstit saisi tulla siihen animoidusti. Rivi
+   kerrallaan."* Liike itse on JS:ssä (js/fokusvirta.js kirjoitaSahke),
+   koska se on tekstin latomista merkki kerrallaan eikä CSS osaa sitä.
+   CSS hoitaa kaksi asiaa, joita JS ei saa tehdä:
+
+     1. VASTAUSLOMAKE ON HIMMEÄNÄ, EI ESTETTYNÄ, kirjoituksen ajan.
+        Sähke on juuri nyt se, mitä pelaajan kuuluu lukea — mutta jos
+        hän tietää jo vastauksen, kenttiin saa silti tarttua heti.
+        Himmennys on siis vihje eikä lukko (`pointer-events` pysyy).
+     2. PALUU PERUSTILAAN ON PEHMEÄ. Kun luokka `kirjoittaa` poistuu,
+        lomake kirkastuu 320 ms:ssä nopeutuksella ja hidastuksella
+        (Arkkikirjaston animaatiosääntö) — ei välähdystä.
+
+   Liuskapinon korkeus lukitaan kirjoituksen ajaksi JS:stä (min-height),
+   joten kortti ei kasva rivi riviltä.
+   =================================================================== */
+
+/* Vuoroaan odottava liuska varaa paikkansa mutta on maalaamatta:
+   tyhjä paperilappu näyttäisi vialta (js/fokusvirta.js kirjoitaSahke). */
+.fokusvirta-sahkerivi.fokusvirta-sahkerivi-odottaa { visibility: hidden; }
+
+.fokusvirta-sahkelomake,
+.fokusvirta-sahkevapaa,
+.fokusvirta-varoitus.fokusvirta-sahkemaksu,
+.fokusvirta-sahkepullat {
+  transition: opacity 320ms ease-in-out;
+}
+
+.fokusvirta-sahke.kirjoittaa ~ .fokusvirta-sahkelomake,
+.fokusvirta-sahke.kirjoittaa ~ .fokusvirta-sahkevapaa,
+.fokusvirta-sahke.kirjoittaa ~ .fokusvirta-varoitus.fokusvirta-sahkemaksu,
+.fokusvirta-sahke.kirjoittaa ~ .fokusvirta-sahkepullat {
+  opacity: 0.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fokusvirta-sahkelomake,
+  .fokusvirta-sahkevapaa,
+  .fokusvirta-varoitus.fokusvirta-sahkemaksu,
+  .fokusvirta-sahkepullat { transition: none; }
+}
+
+/* ===================================================================
+   LOMAKEPOHJA KUVANA (js/fokusvirta.js SAHKE_LOMAKE_OSOITE)
+   -------------------------------------------------------------------
+   Omistaja 3.9.2026: *"tähän voisi generoida pohjalle oikean
+   sähkösanoman paperin."* Pohja on kuvaputken generoima 1870-luvun
+   lennätinlomake — pysty 3:4, alfakanava, EI painettua tekstiä.
+
+   LUOKKA TULEE VASTA KUN KUVA ON LADATTU. Peli on offline-PWA, joten
+   CSS-lomake (osion alku) on yhä se, mitä pelaaja näkee ilman verkkoa;
+   kuva vain KORVAA koristelun, kun se on saatavilla. Siksi tässä
+   lohkossa ei ole yhtään uutta sääntöä ilman `.lomakekuva`-luokkaa.
+
+   MITÄ KUVA VIE MENNESSÄÄN: paperin väripinta, rei'itetyt reunat ja
+   liuskojen omat laput. Kuvassa on jo lomakkeen viivasto, joten
+   liuskoista jää pelkkä teksti — muuten paperia olisi paperin päällä.
+
+   MITÄ PELI PIIRTÄÄ EDELLEEN ITSE: sähköaseman leima (vasen yläkulma),
+   painettu otsake ja lomakenumero (oikea yläkulma) sekä rivit. Ne ovat
+   pelin tietoa eivätkä painatusta, ja ne vaihtuvat kaupungeittain.
+
+   TARKISTETTAVA, KUN KUVA ON ÄMPÄRISSÄ (mittasuhteet on viritettävä
+   oikeaa kuvaa vasten):
+     · aspect-ratio 3/4 vs. kortin korkeus kapealla puhelimella,
+     · tekstialueen sisennykset (--sahke-kuva-ylareuna/-sivu) niin että
+       rivit osuvat lomakkeen viivastolle,
+     · leiman ja numeron paikat kuvan omiin kehyksiin,
+     · riittääkö kuvan kontrasti tummalle musteelle.
+   =================================================================== */
+
+.fokusvirta-sahke.lomakekuva {
+  /* Kuvan omat mitat: tekstialue on lomakkeen keskellä, ja ylälaita on
+     varattu leimalle ja otsakkeelle. Säädetään kuvaa vasten. */
+  --sahke-kuva-ylareuna: 8%;
+  --sahke-kuva-sivu: 9%;
+
+  aspect-ratio: 3 / 4;
+  padding: var(--sahke-kuva-ylareuna) var(--sahke-kuva-sivu);
+  border: 0;
+  background-color: transparent;
+  background-image: var(--sahke-lomakekuva);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  box-shadow: none;
+}
+
+/* Rei'itys ja liuskojen laput ovat kuvassa: CSS-koristeet pois. */
+.fokusvirta-sahke.lomakekuva::before,
+.fokusvirta-sahke.lomakekuva::after { content: none; }
+
+.fokusvirta-sahke.lomakekuva .fokusvirta-sahkerivi {
+  background: none;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Kysymysrivi erottuu yhä, mutta pelkällä musteella — lappua ei ole. */
+.fokusvirta-sahke.lomakekuva .fokusvirta-sahkerivi.fokusvirta-sahkekysymys {
+  background: none;
+  box-shadow: none;
+}
+
+/* ===================================================================
+   PULLA SÄHKETEHTÄVÄSSÄ (js/fokusvirta.js piirraSahkePullat)
+   -------------------------------------------------------------------
+   Omistaja 3.9.2026: kokonainen pulla ostaa vinkin, puolikas suoran
+   linkin. Napit ovat SAMAA PERHETTÄ kuin lehden aarretehtävän
+   pullatarjous (osio "pulla Livialle" alempana tässä tiedostossa):
+   katkoviivareunus = kauppa, umpireunus ja kullattu pohja = varmistus,
+   pisteviiva = tyhjä kassa. Ero on vain siinä, että tämä laatikko asuu
+   kortilla eikä lehden minitehtävässä, joten valitsimet ovat omat.
+   =================================================================== */
+
+.fokusvirta-sahkepullat {
+  margin-top: 0.75rem;
+  padding-top: 0.65rem;
+  border-top: 1px dashed rgba(58, 38, 16, 0.34);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fokusvirta-sahkepullat .fokus-pulla-nappi {
+  display: block;
+  width: 100%;
+  /* Sormisääntö: kosketuskoko vähintään 44 px myös kortilla. */
+  min-height: 44px;
+  margin: 0;
+  padding: 0.5rem 0.9rem;
+  border: 1px dashed rgba(60, 44, 26, 0.6);
+  border-radius: 4px;
+  background: rgba(255, 253, 245, 0.72);
+  box-shadow: none;
+  font-family: var(--font-luku);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  text-align: center;
+  color: #211d18;
+  cursor: pointer;
+}
+
+.fokusvirta-sahkepullat .fokus-pulla-nappi:hover:not(:disabled),
+.fokusvirta-sahkepullat .fokus-pulla-nappi:focus-visible {
+  background: #fffdf5;
+  border-color: rgba(60, 44, 26, 0.85);
+  color: #16130f;
+}
+
+.fokusvirta-sahkepullat .fokus-pulla-nappi.fokus-pulla-varmistus {
+  border-style: solid;
+  border-color: rgba(122, 85, 20, 0.75);
+  background: linear-gradient(180deg, #f0c76a, #dda63a);
+  font-weight: 700;
+  color: #2c1e07;
+}
+
+.fokusvirta-sahkepullat .fokus-pulla-nappi:disabled {
+  border-style: dotted;
+  background: none;
+  color: rgba(33, 29, 24, 0.55);
+  cursor: default;
+}
+
+/* Livian ääni napin alla ja kaupan kuittaus: sama pieni kursiivi. */
+.fokusvirta-sahkepullat .fokus-pulla-huomio,
+.fokusvirta-sahkepullat .fokus-pulla-tehty {
+  margin: 0.4rem 0 0;
+  font-family: var(--font-luku);
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.35;
+  text-align: center;
+  color: rgba(60, 44, 26, 0.72);
+}
+
+.fokusvirta-sahkepullat .fokus-pulla-tehty { margin-top: 0; }
+
+/* Ostettu linkki: nappirivi ilman kortin alarivin yläväliä. */
+.fokusvirta-sahkelinkki .fokusvirta-napit { margin-top: 0; }
 
 /* ===================================================================
    PÖLLÖN PUHEKUPLA (js/fokusvirta.js piirraKupla)

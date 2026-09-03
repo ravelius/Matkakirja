@@ -176,6 +176,9 @@ const kohahduksenPolku = (n) => `${AANI_JUURI}aanet/tehosteet/kohahdus-${n}.mp3`
  */
 export const SFX_NIMET = [
   'click', 'paper', 'pen', 'swipe', 'flip', 'popup', 'kupla', 'typeBell',
+  // Sähketehtävän kirjoittuvat rivit (3.9.2026): lennätinkonttorin
+  // naputus ja rivin lopun kello.
+  'kirjoituskone', 'bling',
   'quizOpen', 'zoom', 'owl', 'hint',
   'dieTick', 'dieLand', 'step', 'arrive', 'ferry', 'flight', 'clack',
   'tick', 'timeout', 'correct', 'wrong', 'vuosi',

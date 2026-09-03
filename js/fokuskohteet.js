@@ -98,7 +98,7 @@ import {
 } from './fokusnosto-symbolit.js';
 // Sähketehtävän sisältöhakemisto tarvitsee maan kohdelistan (ks.
 // asetaKohdehakemisto-kutsu KOHDE_MAAT-taulun alla).
-import { asetaKohdehakemisto } from './fokusvirta.js';
+import { asetaKohdeavaus, asetaKohdehakemisto } from './fokusvirta.js';
 import { FOKUS_LISANIMET, FOKUS_POHJAT } from './packs/fokus-grc.js';
 // Laattoihin poltetut maastonimet (vuoret, järvet, joet): sama nimi
 // vain kerran kartalle, ks. maastonimenPari ja maastoParit.
@@ -301,6 +301,20 @@ for (const [iso, kohteet] of Object.entries(MAASTOKOHTEET)) {
  * (asetaTehtavakuittaus), vain vastakkaiseen suuntaan.
  */
 asetaKohdehakemisto((iso) => KOHDE_MAAT[iso] ?? []);
+
+/*
+ * SÄHKETEHTÄVÄN SUORA LINKKI KOHTEESEEN (3.9.2026, Raamattu:
+ * SÄHKETEHTÄVÄ LEHTIMÄISEKSI JA PULLA VINKIKSI). Puolikkaalla pullalla
+ * Livia näyttää sen kortin, jolta vastaus luetaan — Sofiassa Varnan
+ * kohdekortin. Kytkentä on takaisinkutsu samasta syystä kuin
+ * hakemistolla yllä: fokusvirta on niputusjärjestyksessä ennen tätä.
+ */
+asetaKohdeavaus((ui, iso, tunnus) => {
+  const kohde = (KOHDE_MAAT[iso] ?? []).find((k) => k.id === tunnus);
+  if (!kohde) return false;
+  avaaFokuskohde(ui, kohde);
+  return true;
+});
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */
 const KOHDE_OSUMA_R = 22;

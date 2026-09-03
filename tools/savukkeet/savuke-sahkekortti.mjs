@@ -134,6 +134,15 @@ for (const ruutu of RUUDUT) {
     window.matkakirjaPollo?.tyhjennaPino();
     const ok = fv.avaaFokusKohtaaminen(ui, game.cityOf());
     await new Promise((r) => setTimeout(r, 700));
+    /*
+     * SÄHKE KIRJOITTUU RIVEITTÄIN (3.9.2026), ja tämä savuke mittaa
+     * VALMIIN kortin asua ja mittoja. Napautus sähkeeseen vie
+     * kirjoituksen loppuun — sama ele kuin pelaajalla, joka ei jaksa
+     * odottaa. Ilman tätä mitat otettaisiin puolityhjästä kortista.
+     */
+    document.querySelector('.fokusvirta-sahke')
+      ?.dispatchEvent(new MouseEvent('pointerdown', { bubbles: true }));
+    await new Promise((r) => setTimeout(r, 200));
     return { ok, kortti: Boolean(document.querySelector('.fokusvirta-kortti')) };
   }, KAUPUNKI);
   vaadi(`${ruutu.nimi}: sähkekortti aukeaa`, auki.ok && auki.kortti, JSON.stringify(auki));
@@ -149,7 +158,9 @@ for (const ruutu of RUUDUT) {
     const px = (el) => parseFloat(getComputedStyle(el).fontSize);
     const luettavat = [
       ...kortti.querySelectorAll('.fokusvirta-sahkerivi'),
-      ...kortti.querySelectorAll('.fokusvirta-livian-saate p'),
+      /* Livian saate siirtyi kortilta kuplapinoon 3.9.2026
+         (js/fokusvirta.js sahkeSaateKuplaan), joten sitä ei enää
+         mitata täältä — kortilla on pelkkä sähke ja lomake. */
       ...kortti.querySelectorAll('.fokusvirta-sahkeotsake'),
       ...kortti.querySelectorAll('.fokusvirta-sahkevalinta, .fokusvirta-sahkeluku, .fokusvirta-sahkevapaakentta'),
       ...kortti.querySelectorAll('.fokusvirta-napit button'),

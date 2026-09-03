@@ -186,10 +186,27 @@ const SAHKE_TUKHOLMA = {
   lahetaVapaa: 'Lähetä omin sanoin',
   vaarinSahke: 'EI TÄSMÄÄ STOP TARKISTA KOHDE JA VUOSILUKU STOP',
 
-  /* Kahden ohilyönnin jälkeen Livia sanoo lähteen suoraan. */
-  vinkki: 'Kato, minä sanon sen nyt suoraan: kaupunkilehden ensimmäisellä '
-    + 'sivulla on juttu laivasta, joka upposi ja nousi. Vuosiluku on samassa '
-    + 'kappaleessa.',
+  /*
+   * LIVIAN VINKKI (Fable 3.9.2026). Sama teksti kahdella tiellä: se
+   * tulee itsestään kahden ohilyönnin jälkeen JA se on se, minkä
+   * kokonainen pulla ostaa (Raamattu, SÄHKETEHTÄVÄ LEHTIMÄISEKSI JA
+   * PULLA VINKIKSI). Vinkki kertoo MISTÄ vastaus löytyy, ei sitä mikä
+   * vastaus on.
+   */
+  vinkki: 'No niin. Mä sanon sen näin. Se alus kaatui ennen kuin ehti '
+    + 'satamasta ulos, ja makasi pohjassa yli kolmesataa vuotta. Lehtesi '
+    + 'ensimmäisellä sivulla on juttu laivasta, joka upposi ja nousi, ja '
+    + 'nostovuosi lukee siinä, kuuskytluvun alusta.',
+
+  /*
+   * PUOLIKAS PULLA = SUORA LINKKI (omistaja 3.9.2026). Kaupunkilehden
+   * SIVU 1 on kansiosion nostosivu, jolla juttu "Laiva, joka upposi ja
+   * nousi" on (js/packs/kulttuuri-kategoriat.js tukholma/kaupunki;
+   * sivu 0 on etusivu, ks. js/lehti.js rakennaSivut).
+   */
+  linkkiSaate: 'No niin. Puolikas pulla, puolikas palvelus. Tossa on '
+    + 'suora linkki, lue itse.',
+  vastauslinkki: { tyyppi: 'lehtisivu', kaupunki: 'tukholma', sivu: 1 },
 
   vastaussahke: 'PÖLLÖLLE STOP\nTUNNUSSANA TÄSMÄÄ STOP\nLIVIA TULEE STOP',
   oikein: 'Se on se. Kolmesataakolmekymmentäkolme vuotta pohjassa ja sitten '
