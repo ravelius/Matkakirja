@@ -1005,6 +1005,91 @@ function kaikkiRuudullaLadattu(tila) {
   return true;
 }
 
+/* ------------------------------------------------- kartta valmiiksi ennen */
+
+/**
+ * Montako RUUDULLA olevaa laattaa on yhä matkalla?
+ *
+ * Sama kysely kuin kaikkiRuudullaLadattu, mutta koko pyramidin yli ja
+ * lukuna: kutsuja (avauslento) tarvitsee määrän mittariinsa, ja
+ * savuke (tools/savukkeet/savuke-avauslento.mjs) lukee sen samasta
+ * paikasta kuin peli — muuten mittari ja odotus voisivat olla eri
+ * mieltä siitä, milloin kartta on valmis.
+ *
+ * VAIN KAKSI KARTTAKERROSTA. Karkea pohja ja tarkka taso OVAT se
+ * kartta, jonka puuttuminen näkyy tyhjänä pergamenttina. Viiva- ja
+ * nostotaso ovat merkintöjä kartan päällä ja ne haetaan matalalla
+ * prioriteetilla; niiden odottaminen venyttäisi avauksen ilman että
+ * ruudulla olisi mitään puuttuvaa.
+ */
+export function pyramidinKesken(ui) {
+  let kesken = 0;
+  for (const tila of [ui?.pyramidiKarkea, ui?.pyramidiTarkka]) {
+    if (!tila?.laatat) continue;
+    for (const kuva of tila.laatat.values()) {
+      if (kuva.dataset.odottaa === '1' && kuva.dataset.ladattu !== '1') kesken += 1;
+    }
+  }
+  return kesken;
+}
+
+/**
+ * Onko näkyvä kartta VALMIS — luettelo kädessä, laatat kiinnitetty ja
+ * ruudulla olevista jokainen perillä?
+ *
+ * Kolme ehtoa eikä yksi, koska kaksi ensimmäistä ovat juuri ne, joissa
+ * pelkkä "ei keskeneräisiä" valehtelisi: ennen luettelon saapumista
+ * pyramidi ei ole pyytänyt mitään, ja tyhjässä kerroksessa ei ole
+ * yhtään keskeneräistä laattaa. Molemmissa vastaus olisi "valmis",
+ * vaikka ruudulla on tyhjä pergamentti.
+ */
+export function pyramidiValmisRuudulla(ui) {
+  if (!luettelo) return false;
+  if (!ui?.pyramidiTarkka?.laatat?.size) return false;
+  return pyramidinKesken(ui) === 0;
+}
+
+/**
+ * Odottaa, että näkyvän alueen laatat ovat ruudulla.
+ *
+ * === MIKSI TÄMÄ ON OLEMASSA ========================================
+ *
+ * Omistajan tilaus 3.9.2026 (Raamattu, AVAUSLENTO VALMIIKSI LADATTUNA):
+ * *"kartta pitää ladata etukäteen, nyt se rakentui pikkuhiljaa
+ * taustalla valmiiksi."* Mitattuna (savuke-avauslento, Chromium):
+ * pergamenttiarkin väistyessä kiinnitettyjä laattoja oli NOLLA, ja
+ * kartta täydentyi 103 laatan verran vasta seuraavan kahden sekunnin
+ * aikana — siis koneen lennon alla, kuten omistaja sen näki.
+ *
+ * ODOTUS ON KELLOSTA EIKÄ AJASTIMISTA. Katto luetaan
+ * performance.now():sta samasta syystä kuin pohjatason odotuksessa
+ * (js/ui.js ALOITUSLENNON_POHJA_ODOTUS_MS): laattojen purku jumittaa
+ * pääsäiettä satojen millisekuntien erissä, ja ajastimien laskemiseen
+ * perustuva katto venyisi moninkertaiseksi juuri silloin kun sen
+ * pitäisi pitää.
+ *
+ * KATTO ON PAKOLLINEN. Hitaalla verkolla tai yhden laatan jäädessä
+ * saapumatta lento ei saa jäädä odottamaan ikuisesti: katon täyttyessä
+ * lähdetään joka tapauksessa, ja kartta täydentyy silloin kuten ennen.
+ *
+ * @returns {Promise<boolean>} oliko kartta valmis kun odotus päättyi
+ */
+export async function odotaPyramidi(ui, { katto = 6000, askel = 60 } = {}) {
+  const takaraja = performance.now() + katto;
+  while (!ui?.dead && !pyramidiValmisRuudulla(ui) && performance.now() < takaraja) {
+    // eslint-disable-next-line no-await-in-loop
+    await new Promise((valmis) => { setTimeout(valmis, askel); });
+  }
+  /*
+   * KIINNITETTY EI OLE VIELÄ MAALATTU. Viimeisenkin laatan load-tapahtuma
+   * kertoo vain, että kuva on purettavissa; ruudulle se tulee vasta
+   * seuraavassa maalauksessa. Kaksi kehystä on sama varmistus, jota
+   * lento käyttää muutenkin ennen koneen animaatiota.
+   */
+  await new Promise((valmis) => requestAnimationFrame(() => requestAnimationFrame(valmis)));
+  return pyramidiValmisRuudulla(ui);
+}
+
 /**
  * Osuuko arkin suorakaide näkymään, kun LAUTA KIERTÄÄ?
  *
