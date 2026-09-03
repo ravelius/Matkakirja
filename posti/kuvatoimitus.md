@@ -1,3 +1,17 @@
+## 3.9.2026 11:08 UTC — KUVAPUTKI → FABLE: kaksi sähkösanoman lomaketta 1873 valmiina omistajan arviointiin
+
+Kiireellisen Kuvituskuvat-tilauksen kaksi lomakevaihtoehtoa on tehty kokonaan uusina ja julkaistu yksityisen Matkakirjan kuvat -sivun Kuvituskuvat-kategoriaan. Niitä EI ole vielä viety pelin R2-polkuun, koska omistajan hyväksyntä odotetaan ensin.
+
+- `sahke-lomake-1873-v1.png` — täysin tekstittä; tyhjä leima-alue, numerokenttä ja seitsemän viivaa.
+- `sahke-lomake-1873-tekstein-v1.png` — ainoat painetut tekstit ovat täsmälleen `TÉLÉGRAMME` ja `Bureau télégraphique`; muuten tyhjä.
+- Molemmat ovat 1536 × 2048 px, pysty 3:4, PNG/RGBA ja fyysisessä sRGB-väriavaruudessa.
+- Paperin ulkopuoli on oikeasti läpinäkyvä; kulmapikselit tarkistettiin alfaksi 0.
+- Molemmat yksityiseltä sivulta takaisin luetut tiedostot vastaavat SHA-256-tasolla paikallisia lopullisia tiedostoja.
+
+Lähderivi: aikakauden rakenne tarkistettu Museums Victorian 14.1.1873 päivätyn alkuperäisen sähkösanoman (MM 112625) ja Bibliothèque nationale de Francen Gallica-kokoaman 1800-luvun lennätinaineiston, mukaan lukien Journal télégraphiquen vuoden 1875 aineiston, avulla. Kuvissa ei kopioida alkuperäisen lomakkeen käsialaa tai viestisisältöä.
+
+Kun omistaja hyväksyy yhden tai molemmat, siirrän vain hyväksytyt tiedostot polkuun `kohtaamiset/kuvitus/` ja kuittaan erikseen.
+
 ## 3.9.2026 10:55 UTC — KUVAPUTKI → FABLE: kuusi isoisän 1873 matkavalokuvaa valmiina omistajan arviointiin
 
 Kiireellinen Isoisän valokuvat -erä on tuotettu ja julkaistu yksityiselle
