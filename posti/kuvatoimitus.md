@@ -1,5 +1,54 @@
 # Kuvatoimitussessio
 
+## 3.9.2026 — Keksintöerän kaikki 21 uutta hyväksytty; R2 varmennettu ja valmis välittömään pelikytkentään
+
+Omistaja hyväksyi yksityisellä arviointisivulla koko vielä avoinna olleen
+keksintöerän. Tietokannasta on varmistettu hyväksytyiksi kohdat 6–25 sekä
+omistajan pyytämä toinen Blériot-kuva. Kaikki alla olevat 21 objektia on
+kopioitu pelin R2:een polkuun `aikajana/keksinnot/` ja luettu takaisin:
+SHA-256 täsmää paikalliseen hyväksyttyyn tiedostoon, koko on 1536 × 1024,
+MIME `image/jpeg` ja väriavaruus sRGB IEC61966-2.1. Kohteissa ei ollut
+ennestään samannimisiä objekteja, joten mitään aiempaa ei korvattu.
+
+Kytke nämä nyt peliin välittömästi. Kohdat 1–5 ovat jo aiemman kuittauksen
+mukaan pelissä. Käytä seuraavia avaimia ja kuvatekstejä sanasta sanaan:
+
+- `aikajana/keksinnot/1825-stephenson.jpg` — Avovaunuun ahtautunut kaivosmies puristaa laitaa, kun Locomotion No. 1 alkaa vetää väkijoukkoa nopeammin kuin tuttu hevonen. Stockton–Darlingtonin avajaisjunan matkustajille rautatien uusi aika tuntuu ensin savuna silmissä, metallin iskuina ja kysymyksenä siitä, kestääkö kone koko matkan.
+- `aikajana/keksinnot/1837-wheatstone.jpg` — Eustonin nuori virkailija ei kuule Camden Townista ääntäkään: kaksi neulaa vain kääntyy ja osoittaa kirjaimen. Vuoden 1837 kokeessa sähköinen viesti ehtii perille ennen radan junaa, mutta ensimmäiselle käyttäjälle ihme on henkilökohtainen — joku näkymättömissä vastasi.
+- `aikajana/keksinnot/1839-daguerre.jpg` — Hopeoitu kuparilevy on peili, josta ateljeeapulainen etsii pienintäkin virhettä tietäen, ettei valotusta voi kopioida. Vuonna 1839 dagerrotypia tekee jokaisesta kuvasta ainutkertaisen esineen, vaikka elohopeahöyryjen vaarasta kuvia valmistavat ihmiset tietävät vielä liian vähän.
+- `aikajana/keksinnot/1856-bessemer.jpg` — Sheffieldin terästyöläinen kääntää kasvonsa, mutta ei voi irrottaa kättään vivusta, kun konvertterin valkea virta täyttää kauhan. Bessemerin prosessi lupaa halvempaa terästä; miehelle muutos tuntuu ensin kuumuutena, meluna ja uutena työnä, jossa yksi virhe voi tappaa.
+- `aikajana/keksinnot/1867-nobel.jpg` — Vintervikenin työntekijä katsoo paperipatruunoita muistamatta unohtaa Heleneborgin räjähdyksessä kuolleita — yksi heistä oli Alfred Nobelin veli Emil. Kiselguuri tekee nitroglyseriinistä käsiteltävämpää, mutta vuoden 1867 turvallisempi räjähde ei tee työpäivästä vaaratonta.
+- `aikajana/keksinnot/1869-mendelejev.jpg` — Taulukkoon jäävä tyhjä kohta vaivaa Mendelejeviä enemmän kuin väärä vastaus: jos järjestys on oikea, tuntemattoman alkuaineen pitäisi vielä ilmestyä siihen. Vuonna 1869 hän uskaltaa julkaista aukot ja ennustaa niiden aineiden ominaisuuksia — gallium, skandium ja germanium löydetään myöhemmin hämmästyttävän läheltä hänen arvioitaan.
+- `aikajana/keksinnot/1876-otto.jpg` — Kun suuri vauhtipyörä ei pysähdy, Otton vieressä seisova mekaanikko uskaltaa viimein hellittää otettaan säätövivusta. Toukokuussa 1876 Kölnissä uusi moottori puristaa kaasuseoksen ennen sytytystä ja käy neljässä tahdissa — noin kolme hevosvoimaa riittää todistamaan, että vuosien epäonnistumiset eivät menneet hukkaan.
+- `aikajana/keksinnot/1879-siemens.jpg` — Kuusipaikkaisen avovaunun poika kuuntelee, mistä veturin ääni tulee: savupiippua, hevosta tai höyryä ei ole. Berliinin teollisuusnäyttelyn pieni Siemens & Halsken rata kuljettaa vuonna 1879 yleisöä noin seitsemän kilometrin tuntinopeudella ja tekee sähköisestä liikkeestä ensi kertaa monelle ruumiillisen kokemuksen.
+- `aikajana/keksinnot/1885-pasteur.jpg` — Avustaja merkitsee pullon päivämäärän tietäen, että kuivumisaika ratkaisee näytteen voiman: liian virulentti voi tappaa, liian heikko ei suojaa. Pasteurin ryhmä heikentää raivotautia kuivattamalla tartunnan saaneiden kaniinien selkäydintä; kesällä 1885 menetelmää käytetään Joseph Meisteriin, jonka puremat olisivat muuten olleet lähes varmasti kohtalokkaat.
+- `aikajana/keksinnot/1886-benz.jpg` — Kadun poika odottaa hevosen ilmestyvän, mutta ääni tulee penkin takana tärisevästä yksisylinterisestä moottorista. Carl Benzin vuonna 1886 patentoitu kolmipyöräinen kulkee alle yhden hevosvoiman varassa; epävarma koeajo näyttää, että ajoneuvo voi kantaa sekä oman voimanlähteensä että ohjaajansa.
+- `aikajana/keksinnot/1888-hertz.jpg` — Avustaja peittää kädellään lampun hajavalon ja odottaa kipinää, jota tuskin näkee. Kun renkaan pieni kipinä vastaa lähettimen kipinään ilman johtoa, sähkömagneettinen aalto muuttuu laskusta havaittavaksi ilmiöksi.
+- `aikajana/keksinnot/1895-marconi.jpg` — Villa Griffonen ullakolla nuori apulainen tuijottaa paperinauhaa ja odottaa mäen takaa kiväärinlaukausta. Ääni tarkoittaisi, että näkymätön viesti on kulkenut ensimmäisen kerran esteen läpi — ja ettei kuukausien rakentelu ollut turhaa.
+- `aikajana/keksinnot/1895-rontgen.jpg` — Avustaja pitää oikean kätensä liikkumatta ja vertaa sitä erillisellä hohtavalla levyllä näkyvään luiseen varjoon. Sormus vahvistaa, että kuva kuuluu hänelle; säteilyn tulevista hyödyistä tai vaaroista huoneessa ei vielä tiedetä juuri mitään.
+- `aikajana/keksinnot/1895-lumiere.jpg` — Eturivin katsoja kääntyy hetkeksi katsomaan vierustoveriaan: liikkuivatko tehtaan portista todella ihmiset vai huijasiko silmä? Salon indienin 33 maksavaa vierasta joutuvat keksimään kokemukselle sanat samalla, kun käsikammen tasainen rytmi pitää valokuvat liikkeessä.
+- `aikajana/keksinnot/1897-diesel.jpg` — Mekaanikko hellittää säätövivusta vasta, kun vauhtipyörän rytmi ei enää horju. Neljän vuoden rikkoutumisten jälkeen vuoden 1897 moottori käy, mutta mies kuuntelee yhä jokaista metallista iskua kuin seuraava voisi olla viimeinen.
+- `aikajana/keksinnot/1898-curie.jpg` — Marie Curie kiertää raskasta rautatankoa padassa, josta nousevat happamat höyryt tarttuvat vaatteisiin ja ihoon. Tuhansien kilojen jäännöksestä tavoitellaan jotakin, jota mittari paljastaa mutta silmä ei — eikä kukaan työtilassa vielä osaa arvioida säteilyn hintaa heidän terveydelleen.
+- `aikajana/keksinnot/1900-zeppelin.jpg` — Köydestä vetävä palomies tuntee 128-metrisen rungon nosteen käsivarsissaan ennen kuin ilmalaiva on kunnolla irti vedestä. Kun LZ 1 kohoaa kelluvan hallin edessä, hänen tehtävänsä on päästää irti juuri oikealla hetkellä — koneen kyky palata on vielä todistamatta.
+- `aikajana/keksinnot/1909-bleriot.jpg` — Kolme alusta jää pieniksi pisteiksi Kanaalille, eikä Blériot'lla ole kompassia kertomassa, kuinka kauas tuuli on vienyt. Kun Doverin valkoiset kalliot viimein erottuvat usvasta, koko hauras puu- ja kangaskone näyttää hetken mahdolliselta eikä pelkältä uhkapeliltä.
+- `aikajana/keksinnot/1909-bleriot-close.jpg` — Kylmä ilmavirta on kastellut Blériot'n silmät ja moottorin öljy tarttuu kasvoihin, mutta hän ei uskalla irrottaa otetta ohjaimesta. Kallioiden löytyminen sumusta ei vielä ole voitonjuhla — se on ensimmäinen helpotuksen välähdys ennen kovaa laskua Englannin maaperälle.
+- `aikajana/keksinnot/1926-baird.jpg` — Skeptinen todistaja kumartuu niin lähelle pientä vastaanotinta, että näkee kuvan hajoavan valopisteiksi. Kun kasvojen suu kuitenkin liikkuu samassa hetkessä kuin viereisessä huoneessa, kömpelö välke lakkaa olemasta temppu ja muuttuu televisioksi.
+- `aikajana/keksinnot/1928-fleming.jpg` — Fleming on vähällä siirtää sotkuisen viljelymaljan syrjään, kun homepesäkkeen ympärillä oleva kirkas kehä pysäyttää hänet. Kukaan ei hurraa: hänen edessään ei ole vielä lääke vaan outo paikka, jossa stafylokokit eivät kasva.
+
+Blériot-kuvat ovat tarkoituksella kaksi erillistä hyväksyttyä kuvaa samasta
+aiheesta. Laaja `1909-bleriot.jpg` näyttää lentokoneen ja Kanaalin;
+`1909-bleriot-close.jpg` näyttää lentäjän jännityksen, uupumuksen ja
+helpotuksen. Älä korvaa laajaa lähikuvalla. Lisää aikajanakohtaan toinen
+kuvarooli, kuvapari tai selattava lisäkuva sen mukaan, mikä nykyiseen
+rakenteeseen sopii turvallisimmin.
+
+Omistajan hyväksyntä on lopullinen, joten erillistä odotusta tai
+"Lähetä päätökset" -toimintoa ei enää tarvita tälle erälle. Kuittaa tähän,
+kun kaikki 21 avainta ja kuvatekstiä on kytketty peliin ja Blériot'n molemmat
+kuvat ovat saavutettavissa.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 3.9.2026 07:08 UTC — Kiireellisen tilauksen 3 PD-muotokuvaa löydetty ja lisenssit tarkistettu
 
 Kolme puuttunutta keksijämuotokuvaa voidaan täyttää ilman generointia.
