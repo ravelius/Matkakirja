@@ -1,3 +1,78 @@
+## 3.9.2026 10:24 UTC — KUVAPUTKI → FABLE: kaikki 28 Karsh/Sibelius-keksijämuotokuvaa hyväksytty ja R2-varmistettu
+
+Omistaja hyväksyi chatissa koko kiireellisen 28 kuvan muotokuvasarjan ja pyysi
+toimittamaan peliin **vain JPG-versiot**. Erillistä arviointikierrosta ei enää
+tarvita tälle erälle.
+
+### Toimituksen tila
+
+- 28 erillistä JPG/sRGB-muotokuvaa on viety peli-R2:een hakemistoon
+  `aikajana/keksinnot/muotokuva/`.
+- GitHub Actions -ajo `33743744420` onnistui. Jokainen kohde luettiin vielä
+  erikseen julkisesta R2-osoitteesta takaisin: paikallinen ja etäinen SHA-256
+  täsmäävät, MIME on `image/jpeg` ja CORS toimii.
+- Kaikki 28 kohdepolkua olivat ennen siirtoa 404, joten mitään aiempaa
+  peliresurssia ei korvattu.
+- PNG-versioita ei viety peliin.
+- Kuvien koko vaihtelee välillä 1100–1125 × 1398–1429 px. Kaikki ovat
+  pystysuuntaisia ja leveys on vähintään 1024 px. Yhteinen rajausehto poistettiin
+  omistajan pyynnöstä, jotta Karsh-tyylinen sommittelu saa elää henkilöittäin.
+
+### Pelikytkentä
+
+Vaihda nykyisten Commons-kuvien `kuva`-kentät näihin R2:n `osoite`-avaimiin.
+Älä pakota henkilöpareja takaisin yhdeksi kuvaksi: Joseph ja Étienne
+Montgolfier, Cooke ja Wheatstone sekä Auguste ja Louis Lumière ovat kukin kaksi
+erillistä kuvaa. Toteuta näille kolmelle aikajanatapahtumalle aiemmin sovittu
+hieman limittäinen tuplanosto: valokeilassa kuvat saavat enemmän tilaa, sivussa
+ollessaan pari leikkautuu voimakkaammin ulkoreunoistaan.
+
+- James Watt — `aikajana/keksinnot/muotokuva/1769-james-watt.jpg` — keskittynyt, sisäänpäin kääntynyt ongelmanratkaisija; oivallus on juuri muotoutumassa.
+- Joseph Montgolfier — `aikajana/keksinnot/muotokuva/1783-joseph-montgolfier.jpg` — levoton, ylöspäin kurottava mielikuvitus; mahdoton ajatus alkaa tuntua todelta.
+- Étienne Montgolfier — `aikajana/keksinnot/muotokuva/1783-etienne-montgolfier.jpg` — käytännöllinen ja hillityn ylpeä; veli, joka tekee haaveesta rakennettavan.
+- Edward Jenner — `aikajana/keksinnot/muotokuva/1796-edward-jenner.jpg` — lempeys ja vakava epävarmuus yhtä aikaa.
+- Alessandro Volta — `aikajana/keksinnot/muotokuva/1800-alessandro-volta.jpg` — hallittu itsevarmuus ja kiistan voittaneen tutkijan ylpeys.
+- Joseph Marie Jacquard — `aikajana/keksinnot/muotokuva/1804-joseph-marie-jacquard.jpg` — väsynyt mutta järkähtämätön päättäväisyys.
+- George Stephenson — `aikajana/keksinnot/muotokuva/1825-george-stephenson.jpg` — sään kuluttama, itseoppineen insinöörin jäyhä varmuus.
+- William Fothergill Cooke — `aikajana/keksinnot/muotokuva/1837-william-fothergill-cooke.jpg` — nuori kunnianhimo ja eteenpäin kiirehtivä katse.
+- Charles Wheatstone — `aikajana/keksinnot/muotokuva/1837-charles-wheatstone.jpg` — ujo mutta intensiivisen tarkkaavainen tutkija.
+- Louis Daguerre — `aikajana/keksinnot/muotokuva/1839-louis-daguerre.jpg` — teatraalinen mielikuvitus, mutta katse on sisäänpäin.
+- Henry Bessemer — `aikajana/keksinnot/muotokuva/1856-henry-bessemer.jpg` — päättäväinen teollisuusmies, valmis puolustamaan väitettään.
+- Alfred Nobel — `aikajana/keksinnot/muotokuva/1867-alfred-nobel.jpg` — yksityinen suru kurinalaisen keskittymisen alla.
+- Dmitri Mendelejev — `aikajana/keksinnot/muotokuva/1869-dmitri-mendeleev.jpg` — villi katse etsii rakennetta, jota muut eivät vielä näe.
+- Nikolaus Otto — `aikajana/keksinnot/muotokuva/1876-nikolaus-otto.jpg` — uupumus muuttumassa varovaiseksi helpotukseksi.
+- Werner von Siemens — `aikajana/keksinnot/muotokuva/1879-werner-von-siemens.jpg` — hallittu auktoriteetti ja järjestelmänrakentajan uteliaisuus.
+- Louis Pasteur — `aikajana/keksinnot/muotokuva/1885-louis-pasteur.jpg` — ankara keskittyminen, jota lapsipotilaan kohtalo pehmentää.
+- Carl Benz — `aikajana/keksinnot/muotokuva/1886-carl-benz.jpg` — epävarma toivo; yleisö ei vielä usko koneeseen.
+- Heinrich Hertz — `aikajana/keksinnot/muotokuva/1888-heinrich-hertz.jpg` — vaatimaton ilo lähes näkymättömän kipinän todistamisesta.
+- Guglielmo Marconi — `aikajana/keksinnot/muotokuva/1895-guglielmo-marconi.jpg` — nuori, jäätävän rauhallinen kunnianhimo.
+- Wilhelm Röntgen — `aikajana/keksinnot/muotokuva/1895-wilhelm-rontgen.jpg` — järkytys pidäteltynä äärimmäisen vaiteliaan ilmeen alla.
+- Auguste Lumière — `aikajana/keksinnot/muotokuva/1895-auguste-lumiere.jpg` — harkitseva johtaja punnitsee yhtä aikaa riskejä ja lupausta.
+- Louis Lumière — `aikajana/keksinnot/muotokuva/1895-louis-lumiere.jpg` — tekninen ihmetys, johon sekoittuu epäusko elokuvan tulevaisuudesta.
+- Rudolf Diesel — `aikajana/keksinnot/muotokuva/1897-rudolf-diesel.jpg` — älyllinen pakko ja näkyvä uupumus.
+- Marie Curie — `aikajana/keksinnot/muotokuva/1898-marie-curie.jpg` — väsynyt mutta järkähtämätön keskittyminen.
+- Ferdinand von Zeppelin — `aikajana/keksinnot/muotokuva/1900-ferdinand-von-zeppelin.jpg` — vanhan sotilaan arvokkuus ja poikamainen haaveikkuus.
+- Louis Blériot — `aikajana/keksinnot/muotokuva/1909-louis-bleriot.jpg` — pelko ei ole vielä väistynyt, mutta muuttuu uupuneeksi voitoksi.
+- John Logie Baird — `aikajana/keksinnot/muotokuva/1926-john-logie-baird.jpg` — hauras terveys ja tinkimätön toivo.
+- Alexander Fleming — `aikajana/keksinnot/muotokuva/1928-alexander-fleming.jpg` — kuiva, tarkkaavainen huumori; havainto, jonka siistimpi tutkija olisi ehkä heittänyt pois.
+
+### Lähde- ja esitystieto
+
+Jokaisen henkilön näköisyys perustuu omaan historialliseen
+henkilölähteeseensä. Sarjan valaistus- ja muotokuvallinen tyyliviite on Yousuf
+Karshin virallinen Jean Sibelius -muotokuva (1949):
+https://karsh.org/photographs/jean-sibelius/
+
+Kuvat ovat täysin uusia Matkakirjaa varten tehtyjä historiallisia havainnekuvia;
+Karshin alkuperäistä valokuvaa ei ole kopioitu peliresurssiksi. Peliin voi liittää
+yhteisen lähderivin yllä olevasta sekä henkilökohtaiset lähdetiedot nykyisen
+lähdekäytännön mukaisesti.
+
+Kuitatkaa mailboxiin erikseen, kun 28 `osoite`-kytkentää ja kolme tuplanostoa
+ovat näkyvissä pelissä. Vasta sen jälkeen kuvaputki merkitsee tämän kiireellisen
+tilauksen pelitoimituksen valmistuneeksi.
+
+
 # Kuvatoimitussessio
 
 ## 3.9.2026 08:17 UTC — KUVAPUTKI → FABLE: muotokuvien uusi rajaus ja kolmen parin tuplanostot
