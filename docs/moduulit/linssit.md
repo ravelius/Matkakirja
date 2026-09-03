@@ -1081,3 +1081,27 @@ sopivuus), tests/aikajana.test.mjs (kytkentä moottoriin).
 - [ ] `tools/mittaa-kartta.mjs` ajettu linssi päällä ja ms/kehys kirjattu.
 - [ ] Kaikki kommentit, muuttujat ja tulosteet suomeksi, ja kommentit
       kertovat **miksi** eivät mitä.
+
+## Tumma asu, lamput ja vapaa selaus (omistaja 3.9.2026, v1504)
+
+- **Tummennus**: linssi lisää SVG:hen kartan kokoisen tummennuspinnan
+  (`.aikajana-tummennus`, maski `#aikajana-maski`), joka liukuu sisään ja
+  ulos. Jokaisella palavalla lampulla on maskissa reunoille vaaleneva
+  reikä (`.aikajana-reika`), joten tummennettu kartta vaalenee lampun
+  ympäriltä. Lamppu itse on reunaviivaton liukuväripallo
+  (`#aikajana-lamppu`) ja sen kajo (`.aikajana-valo-kajo`, screen-
+  sekoitus) valaisee kartan pintaa.
+- **Tumma asu**: kello, ilmiöpaneeli ja keksijäkortit tummalla pohjalla
+  (`--aikajana-paperi`), Tiedeliite pysyy paperina. Matkakirja ja
+  karttaselite ovat piilossa (`body.aikajana-paalla`, styles.css), ja
+  ilmiöpaneeli nousee ylemmäs ja leventyy isolla näytöllä.
+- **Äänet**: linssin auetessa kaupungin äänimaisema pysäytetään
+  (`stopPlaceStream`, `ui.syncAmbience` pitää sen poissa) ja luenta
+  lopetetaan (`stopDiaryVoice`, `pysaytaLukija`); sulkiessa maisema
+  palaa. Keksinnön ääni on yksi pehmeä kilahdus (`SOUNDS.keksinto`) —
+  tähti ja kohahdus ovat pois.
+- **Vapaa selaus**: minkä tahansa kortin napautus (tai nuolinäppäin)
+  pysäyttää kellon ja siirtyy pysäkkiin (`siirry`): lamput palavat
+  pysäkkiin asti, paneeli ja vuosiluku vaihtuvat, ja ajo jatkuu vasta
+  Jatka-napista. Nähdyt keksijät ovat tarkkoja, tulevat sumeita;
+  valittu kortti on 1,45-kertainen (`KARUSELLIN_MITAT[0]`).

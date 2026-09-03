@@ -2957,7 +2957,13 @@ export const RAAMATTU = {
           + 'aanet.md). Lisensoituja raitoja EI committoida repoon - ne '
           + 'viedaan ampariin samoihin polkuihin (aanet/...), jolloin peli '
           + 'ottaa ne kayttoon ilman koodimuutosta. Generointityokalut '
-          + 'jaavat varalle.',
+          + 'jaavat varalle. TOTEUTETTU v1504 (linssi): tummennus '
+          + 'maskilla ja lamppujen reiat, reunaviivattomat lamput ja kajo, '
+          + 'tumma asu kaikille elementeille, matkakirja ja karttaselite '
+          + 'piiloon, iso ilmiokuva, aanimaisema ja luenta pois, keksinnon '
+          + 'kilahdus (SOUNDS.keksinto), kortin napautus pysayttaa ja '
+          + 'siirtyy (siirry), nuolinappaimet, sumennus tuleville, valittu '
+          + '1,45x. Musiikkilahde odottaa omistajan Artlist-tunnusta.',
         'OMISTAJAN PAATOKSET KORTILLA 3.9.2026 (iltapaiva, neljan kohdan '
           + 'kysymyskortti): 1) JUHLAKUPLA tietajatason noustessa menee '
           + 'Livian kuplapinoon (ei matkalaukun kohdalle) - nain se jo on '

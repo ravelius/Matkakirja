@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1504, teksti: 'Keksinnot-linssi: tumma asu, lamput, vapaa selaus' },
   { v: 1503, teksti: 'Jalankulkumusiikki laukkaavaksi ja soi nopanheittojen yli' },
   { v: 1502, teksti: 'Sarajevon aanimaisema, kehittajan voimakkuussaatimet' },
   { v: 1501, teksti: 'Livia kommentoi matkakirjaa myos ensimmaisessa kaupungissa' },

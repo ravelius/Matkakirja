@@ -130,9 +130,9 @@ import { el, maare } from './mapart.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
 import { sfx } from './sound.js';
-import { hiljennaAmbienssi, palautaAmbienssi } from './ambience-stream.js';
+import { hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream } from './ambience-stream.js';
+import { stopDiaryVoice } from './luenta.js';
 import { pysaytaLukija } from './lukija.js';
-import { esilataaKohahdukset, soitaKohahdus } from './tehosteet.js';
 import { esilataaKuvat } from './ui-apurit.js';
 import { avaaTiedeliite, suljeTiedeliite } from './tiedeliite.js';
 import {
@@ -193,6 +193,20 @@ export const AIKAJANA_TAUKO_HIMMENNYS = 0.5;
  */
 export const MERKIN_SADE = 7;
 export const HEHKUN_SUHDE = 1.9;
+/*
+ * LAMPUT (omistaja 3.9.2026: *"pisteet, jotka hohtavat kartalla, olisivat
+ * aivan kuin lamppuja ilman mustaa ympyrää ... kirkkaampi keskusta ja
+ * sitten ne tummuisivat pikkuhiljaa reunoille päin, mutta valaisisivat
+ * samalla myös kartan pintaa vaaleammaksi"*). Kajo on lampun valokeila
+ * kartan päällä (screen-sekoitus) ja reikä on sama keila tummennuksen
+ * maskissa: tummennettu kartta vaalenee lampun ympäriltä.
+ */
+export const KAJON_SUHDE = 7;
+export const REIAN_SUHDE = 9;
+/** Tummennuspinnan ulottuvuus laudan yksiköissä: reilusti yli laudan. */
+const TUMMENNUKSEN_ULOTTUVUUS = 1e6;
+/** Tummennuksen poistumisliuku (css .aikajana-tummennus-pinta). */
+const TUMMENNUKSEN_POISTUMA_MS = 700;
 
 /**
  * Naksahduksia enintään kahdeksan sekunnissa (omistajan tilaus
@@ -414,7 +428,13 @@ const paikka = (t) => t.paikka ?? t.kaupunki ?? '';
  * arvo on pohja — sitä kauempana kortti ei enää kutistu, jotta
  * kasvot pysyvät tunnistettavina reunaan asti.
  */
-export const KARUSELLIN_MITAT = [1, 0.62, 0.52, 0.44];
+/*
+ * NYKYINEN ON SELVÄSTI ISOIN (omistaja 3.9.2026: *"valittu henkilö ja
+ * hänen kuvansa saa olla vielä paljon isommalla"*): 1,45 x kortin
+ * leveys, naapurit 0,62 ja siitä pienenevät. Nauhan korkeus css:ssä
+ * (.aikajana-nauha) on mitoitettu tämän kertoimen mukaan.
+ */
+export const KARUSELLIN_MITAT = [1.45, 0.62, 0.52, 0.44];
 
 /** Korttien väli: peräkkäisten korttien keskimitta + 5 % rakoa. */
 export const KARUSELLIN_VALI = 1.05;
@@ -464,12 +484,14 @@ export function karusellinPaikat(i, nyt, leveysKortteina) {
   if (ero === 0) luokka = 'nykyinen';
   else if (mahtuu) luokka = ero < 0 ? 'mennyt' : 'tuleva';
   /*
-   * MENNEET SUMENTUVAT, TULEVAT EIVÄT (omistajan sanamuoto: *"kaikki
-   * vasemmalla puolella ovat kevyesti blurattuja"*). Sumennus on
-   * kevyt — 1,5–2 px — jotta kasvot yhä erottuvat: kyse on syvyydestä,
-   * ei salaamisesta. Tulevat erottuvat pelkällä koolla ja vaimeudella.
+   * TULEVAT SUMENTUVAT, MENNEET EIVÄT (omistajan oikaisu 3.9.2026:
+   * *"Nyt kuvien blurraus menee juuri väärin päin, eli jo nähdyt
+   * henkilöt pitäisi olla ei-blurrattuja, ja ne henkilöt, joiden
+   * keksinnöt on vasta tulossa, pitäisi olla blurrattuna"*). Sumennus
+   * on kevyt — 1,5–2 px — jotta kasvot yhä erottuvat: kyse on siitä,
+   * ettei tulevaa vielä tiedä. Menneet erottuvat koolla ja vaimeudella.
    */
-  const sumennus = ero < 0 ? Math.min(2, 1.5 + (d - 1) * 0.25) : 0;
+  const sumennus = ero > 0 ? Math.min(2, 1.5 + (d - 1) * 0.25) : 0;
   let himmeys = 1;
   if (ero < 0) himmeys = Math.max(0.4, 0.82 - (d - 1) * 0.14);
   else if (ero > 0) himmeys = Math.max(0.5, 0.9 - (d - 1) * 0.12);
@@ -664,6 +686,8 @@ class Aikajana {
      */
     this.koonMuutos = () => { if (this.juuri?.isConnected) this.asettele(); };
     globalThis.addEventListener?.('resize', this.koonMuutos);
+    this.nappainkuuntelija = (e) => this.nappain(e);
+    document.addEventListener?.('keydown', this.nappainkuuntelija);
 
     // 2. Valot kartalle
     this.rakennaValot();
@@ -675,23 +699,81 @@ class Aikajana {
   rakennaValot() {
     const { ui } = this;
     if (!ui.svg) return;
+    /*
+     * MÄÄRITYKSET: lampun ja kajon liukuvärit sekä tummennuksen maski.
+     * Maski on valkoinen (tummennus näkyy) ja jokainen palava lamppu
+     * piirtää siihen mustan, reunoille vaalenevan reiän: tummennettu
+     * kartta vaalenee lampun ympäriltä (omistaja 3.9.2026).
+     */
+    this.maaritykset = el('defs', { class: 'aikajana-maaritykset' }, ui.svg);
+    const lamppu = el('radialGradient', { id: 'aikajana-lamppu' }, this.maaritykset);
+    el('stop', { offset: '0%', 'stop-color': '#fff7dc' }, lamppu);
+    el('stop', { offset: '42%', 'stop-color': '#ffd066' }, lamppu);
+    el('stop', { offset: '100%', 'stop-color': '#f09a2a', 'stop-opacity': '0.2' }, lamppu);
+    const kajo = el('radialGradient', { id: 'aikajana-kajo' }, this.maaritykset);
+    el('stop', { offset: '0%', 'stop-color': '#ffe2a0', 'stop-opacity': '0.8' }, kajo);
+    el('stop', { offset: '100%', 'stop-color': '#ffd98a', 'stop-opacity': '0' }, kajo);
+    const reika = el('radialGradient', { id: 'aikajana-reika' }, this.maaritykset);
+    el('stop', { offset: '0%', 'stop-color': '#000' }, reika);
+    el('stop', { offset: '50%', 'stop-color': '#6a6a6a' }, reika);
+    el('stop', { offset: '100%', 'stop-color': '#fff' }, reika);
+    this.maski = el('mask', {
+      id: 'aikajana-maski', maskUnits: 'userSpaceOnUse', x: -TUMMENNUKSEN_ULOTTUVUUS, y: -TUMMENNUKSEN_ULOTTUVUUS,
+      width: 2 * TUMMENNUKSEN_ULOTTUVUUS, height: 2 * TUMMENNUKSEN_ULOTTUVUUS,
+    }, this.maaritykset);
+    el('rect', {
+      x: -TUMMENNUKSEN_ULOTTUVUUS, y: -TUMMENNUKSEN_ULOTTUVUUS,
+      width: 2 * TUMMENNUKSEN_ULOTTUVUUS, height: 2 * TUMMENNUKSEN_ULOTTUVUUS, fill: '#fff',
+    }, this.maski);
+    /*
+     * TUMMENNUS (omistaja 3.9.2026: *"Linssin kytkeytyessä päälle kartta
+     * pitää tummentaa jonkun verran ... Kartan tummennuksen voi tehdä
+     * reaaliajassa"*): yksi kartan kokoinen pinta maskilla, valojen
+     * alla ja kaiken muun päällä. Liu'utetaan sisään seuraavassa
+     * kehyksessä (css .aikajana-tummennus.paalla).
+     */
+    this.tummennus = el('g', { class: 'aikajana-tummennus' }, ui.svg);
+    el('rect', {
+      class: 'aikajana-tummennus-pinta', x: -TUMMENNUKSEN_ULOTTUVUUS, y: -TUMMENNUKSEN_ULOTTUVUUS,
+      width: 2 * TUMMENNUKSEN_ULOTTUVUUS, height: 2 * TUMMENNUKSEN_ULOTTUVUUS, mask: 'url(#aikajana-maski)',
+    }, this.tummennus);
     this.valokerros = el('g', { class: 'aikajana-valot' }, ui.svg);
     this.valot = this.tapahtumat.map((t) => {
       if (t.paalu || !Number.isFinite(t.x) || !Number.isFinite(t.y)) return null;
       const g = el('g', { class: 'aikajana-valo' }, this.valokerros);
       const sisus = el('g', { class: 'aikajana-valo-sisus' }, g);
       /*
-       * KOLME YMPYRÄÄ, KAIKKI KESKIPISTEESSÄ (0,0) — ks. MERKIN_SADE.
-       * Piirtojärjestys on alhaalta ylös: sykkivä rengas taimmaisena,
-       * pehmeä hehku sen päällä ja täytetty pallo päällimmäisenä.
+       * NELJÄ YMPYRÄÄ, KAIKKI KESKIPISTEESSÄ (0,0) — ks. MERKIN_SADE.
+       * Piirtojärjestys alhaalta ylös: kajo (valokeila kartalle),
+       * sykkivä rengas, pehmeä hehku ja lamppu päällimmäisenä. Lampulla
+       * ei ole reunaviivaa: kirkas keskusta tummuu reunoille (liukuväri).
        */
+      el('circle', { class: 'aikajana-valo-kajo', r: MERKIN_SADE * KAJON_SUHDE }, sisus);
       el('circle', { class: 'aikajana-valo-syke', r: MERKIN_SADE }, sisus);
       el('circle', { class: 'aikajana-valo-hehku', r: MERKIN_SADE * HEHKUN_SUHDE }, sisus);
       el('circle', { class: 'aikajana-valo-pallo', r: MERKIN_SADE }, sisus);
-      return { g, x: t.x, y: t.y };
+      const reikaYmpyra = el('circle', { class: 'aikajana-reika', r: MERKIN_SADE * REIAN_SUHDE }, this.maski);
+      return { g, reika: reikaYmpyra, x: t.x, y: t.y };
     });
     this.paivitaMittakaava();
     (ui.nipistysVastaskaalaajat ??= new Set()).add(this.vastaskaala ??= (suhde) => this.paivitaMittakaava(suhde));
+    const tummennus = this.tummennus;
+    if (this.reducedMotion) tummennus.classList.add('paalla');
+    else requestAnimationFrame(() => tummennus.classList.add('paalla'));
+  }
+
+  /**
+   * Lampun ja sen maskireiän tila yhdessä: `palaa` = syttynyt (jää
+   * hehkumaan), `nykyinen` = viimeksi syttynyt (kirkkain, sykkii).
+   * Reiän luokat ovat omat, jotta merkkien laskenta (`palaa`,
+   * `nykyinen`) ei sekoitu maskiin.
+   */
+  asetaValonTila(valo, palaa, nykyinen) {
+    if (!valo) return;
+    valo.g.classList.toggle('palaa', palaa);
+    valo.g.classList.toggle('nykyinen', nykyinen);
+    valo.reika?.classList.toggle('reika-palaa', palaa);
+    valo.reika?.classList.toggle('reika-nykyinen', nykyinen);
   }
 
   /**
@@ -730,7 +812,10 @@ class Aikajana {
     if (zoom === this.skaala) return;
     this.skaala = zoom;
     for (const valo of this.valot) {
-      if (valo) valo.g.setAttribute('transform', `translate(${valo.x} ${valo.y}) scale(${zoom})`);
+      if (!valo) continue;
+      const siirto = `translate(${valo.x} ${valo.y}) scale(${zoom})`;
+      valo.g.setAttribute('transform', siirto);
+      valo.reika?.setAttribute('transform', siirto);
     }
   }
 
@@ -815,22 +900,25 @@ class Aikajana {
   /* ---------- ajo ---------- */
 
   /**
-   * TAUSTA VAIKENEE LINSSIN AJAKSI (omistaja 3.9.2026). Sama syy
-   * molemmissa päissä, jotta purku osaa nostaa taustan takaisin;
-   * kesken oleva luenta pysäytetään kuten pöllön paneelia avattaessa
-   * (js/pollo.js avaa → pysaytaLukija).
+   * TAUSTA JA LUENTA POIS LINSSIN AJAKSI (omistaja 3.9.2026: *"mikäli
+   * luenta tai kaupungin taustaääni on ollut päällä, niin ne kummatkin
+   * lopetetaan"*). Kaupungin äänimaisema pysäytetään kokonaan (ei vain
+   * vaimenneta) ja ui.syncAmbience pitää sen poissa linssin ajan;
+   * kertojan luenta ja lukija pysäytetään. Hiljennyssyy pitää
+   * pohjavireen ja muut väistäjät matalalla, ja purku palauttaa
+   * maiseman samalla syyllä (suljeAanimaailma → syncAmbience).
    */
   avaaAanimaailma() {
     hiljennaAmbienssi(LINSSIN_HILJENNYS);
+    stopPlaceStream();
+    stopDiaryVoice(this.ui);
     pysaytaLukija();
-    // Kohahduksen variantit metadataan jo nyt: ensimmäinen vuosi
-    // vaihtuu sekunnin sisällä, eikä lataus saa myöhästyä siitä.
-    esilataaKohahdukset();
   }
 
-  /** Tausta takaisin samalla syyllä kuin se vietiin. */
+  /** Tausta takaisin: hiljennys pois ja maisema uudelleen pelin tilasta. */
   suljeAanimaailma() {
     palautaAmbienssi(LINSSIN_HILJENNYS);
+    if (!this.ui.dead) this.ui.syncAmbience?.();
   }
 
   kaynnista() {
@@ -873,7 +961,7 @@ class Aikajana {
     this.pysayta();
     this.loppu = false;
     this.tila = { vuosi: this.kaari.alku, i: -1, viive: 0 };
-    for (const valo of this.valot) valo?.g.classList.remove('palaa', 'nykyinen');
+    for (const valo of this.valot) this.asetaValonTila(valo, false, false);
     this.paneeli.hidden = true;
     this.paneeli.replaceChildren();
     this.juuri.classList.remove('lopussa');
@@ -905,7 +993,7 @@ class Aikajana {
     this.loppu = true;
     this.pysayta();
     this.juuri.classList.add('lopussa');
-    for (const valo of this.valot) valo?.g.classList.remove('nykyinen');
+    for (const valo of this.valot) { if (valo) this.asetaValonTila(valo, valo.g.classList.contains('palaa'), false); }
     const loppu = this.kaari.loppusanat;
     if (loppu) {
       this.vaihdaPaneeli({
@@ -940,23 +1028,17 @@ class Aikajana {
   }
 
   /**
-   * KEKSINNÖN ÄÄNI: kohahdus, varana naksahdus.
-   *
-   * Omistaja 3.9.2026: *"se efektiääni vuodenvaihtuessa voisi olla
-   * joku uuu-huudahdus, aivan kuin yleisö kohahtaisi, kun uusi hieno
-   * keksintö saapuu maailmaan."* Omistajan päätös kortilla 3.9.2026:
-   * kohahdus VAIN KEKSINNÖN KOHDALLA — tyhjien vuosien rullaus vain
-   * naksahtaa (naksahda). Kohahdus on ämpärissä neljänä varianttina
-   * (js/tehosteet.js), eikä sama variantti toistu peräkkäin.
-   * `soitaKohahdus` palauttaa false, jos varianttia ei ole ladattu,
-   * ääni on mykistetty, peli on taustalla tai edellinen kohahdus soi
-   * vielä — vain SILLOIN naksautetaan, jottei kaksi ääntä soi
-   * päällekkäin. Merkkipaalu (1873) ei ole keksintö eikä kohahda.
+   * KEKSINNÖN ÄÄNI: YKSI PEHMEÄ KILAHDUS (omistaja 3.9.2026: *"vaihda
+   * se efektiääni, joka on, kun tulee uusi keksintö. Se pitää vaihtaa
+   * johonkin todella yksinkertaiseen. Nykyinen on todella riinaava"*).
+   * Aiempi yhdistelmä — tähtitehoste (SOUNDS.star) ja yleisön kohahdus
+   * (js/tehosteet.js) — on pois; tilalla js/sound.js:n syntetisoitu
+   * 'keksinto', lyhyt ja hiljainen. Merkkipaalu (1873) ei ole keksintö
+   * eikä kilahda. Kohahdusäänet jäävät ämpäriin varalle.
    */
   keksinnonAani(t) {
     if (t?.paalu) return;
-    if (soitaKohahdus()) return;
-    this.naksahda();
+    sfx.play('keksinto');
   }
 
   /**
@@ -1005,17 +1087,15 @@ class Aikajana {
 
   sytyta(i) {
     const t = this.tapahtumat[i];
-    for (const valo of this.valot) valo?.g.classList.remove('nykyinen');
+    for (const valo of this.valot) { if (valo) this.asetaValonTila(valo, valo.g.classList.contains('palaa'), false); }
     const valo = this.valot[i];
     if (valo) {
-      valo.g.classList.add('palaa', 'nykyinen');
+      this.asetaValonTila(valo, true, true);
       // Palava valo päällimmäiseksi, jottei myöhempi naapuri peitä sitä.
       this.valokerros.appendChild(valo.g);
-      sfx.play('star');
     } else {
       sfx.play('paper');
     }
-    // Yleisö kohahtaa, kun uusi keksintö saapuu — ei joka vuodesta.
     this.keksinnonAani(t);
     this.paikkarivi.textContent = [t.vuosi, paikka(t)].filter(Boolean).join(' · ');
     this.vaihdaPaneeli(t);
@@ -1111,29 +1191,57 @@ class Aikajana {
     this.nauha.classList.toggle('tyhja', nyt < 0);
   }
 
+  /**
+   * KORTIN NAPAUTUS PYSÄYTTÄÄ JA SIIRTYY (omistaja 3.9.2026: *"Pelaaja
+   * voi minä hetkenä tahansa pysäyttää aikajanan klikkaamalla mitä
+   * tahansa tiedemiestä alareunassa, eikä animaatio saa jatkua kuin
+   * vasta sitten, jos pelaaja painaa Jatka-nappia ... eteenpäin kuin
+   * taaksepäin historiassa vapaasti"*). Nykyisen kortin napautus avaa
+   * Tiedeliitteen; muu kortti siirtää koko näkymän — kellon, kartan
+   * lamput, paneelin ja karusellin — siihen pysäkkiin ja jää tauolle.
+   */
   napautaKorttia(i) {
     const t = this.tapahtumat[i];
     if (!t) return;
     if (i === this.tila.i) {
-      // Nykyinen kortti: pysäytä ja avaa juttu isommaksi nostoksi.
       this.pysayta();
       if (t.juttu) this.avaaJuttu(t);
       return;
     }
-    if (i < this.tila.i) {
-      // Mennyt kortti: pysäytä ja näytä se paneelissa uudelleen — kello
-      // ei kelaa taaksepäin, valot jäävät.
-      this.pysayta();
-      this.vaihdaPaneeli(t);
-      this.paikkarivi.textContent = [t.vuosi, paikka(t)].filter(Boolean).join(' · ');
-      return;
-    }
-    // Tuleva kortti (karusellin oikea puoli): hyppää siihen heti.
+    this.siirry(i);
+  }
+
+  /**
+   * Siirtyminen pysäkkiin `i` tauolla. Lamput palavat pysäkkiin asti
+   * ja sammuvat sen jälkeen, joten Jatka jatkaa juuri tästä kohdasta
+   * ja myöhemmät keksinnöt syttyvät uudelleen vuorollaan. Vuosiluku
+   * rullaa hiljaa (kello ei käy), kilahdusta ei tule.
+   */
+  siirry(i) {
+    const t = this.tapahtumat[i];
+    if (!t) return;
     this.pysayta();
-    this.tila = { vuosi: t.vuosi, i, viive: this.tapahtumat[i].paalu ? AIKAJANA_PAALU_MS : AIKAJANA_VIIVE_MS };
+    this.loppu = false;
+    this.juuri.classList.remove('lopussa');
+    this.tila = { vuosi: t.vuosi, i, viive: t.paalu ? AIKAJANA_PAALU_MS : AIKAJANA_VIIVE_MS };
     this.naytaVuosi(t.vuosi);
-    this.sytyta(i);
-    if (i < this.tapahtumat.length - 1) this.jatka(); else this.lopeta();
+    this.valot.forEach((valo, k) => { if (valo) this.asetaValonTila(valo, k <= i, k === i); });
+    if (this.valot[i]) this.valokerros.appendChild(this.valot[i].g);
+    this.paikkarivi.textContent = [t.vuosi, paikka(t)].filter(Boolean).join(' · ');
+    this.vaihdaPaneeli(t);
+    this.asettele();
+    this.taukoNappi.textContent = 'Jatka';
+    this.juuri.classList.add('tauolla');
+  }
+
+  /** Nuolinäppäimet selaavat pysäkkejä (sama tauko kuin napautuksessa). */
+  nappain(e) {
+    if (!this.juuri?.isConnected || this.ui.dead) return;
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    const kohde = this.tila.i + (e.key === 'ArrowRight' ? 1 : -1);
+    if (kohde < 0 || kohde >= this.tapahtumat.length) return;
+    e.preventDefault();
+    this.siirry(kohde);
   }
 
   /**
@@ -1168,16 +1276,34 @@ class Aikajana {
     this.pysayta();
     suljeTiedeliite(this.ui);
     this.lopetaMusiikki();
-    this.suljeAanimaailma();
     if (this.koonMuutos) globalThis.removeEventListener?.('resize', this.koonMuutos);
     this.koonMuutos = null;
+    if (this.nappainkuuntelija) document.removeEventListener?.('keydown', this.nappainkuuntelija);
+    this.nappainkuuntelija = null;
     this.juuri?.remove();
     this.valokerros?.remove();
+    // Tummennus liukuu pois ja poistuu vasta sen jälkeen; määritykset
+    // (maski) sen mukana, koska pinta viittaa niihin.
+    const tummennus = this.tummennus;
+    const maaritykset = this.maaritykset;
+    if (tummennus) {
+      tummennus.classList.remove('paalla');
+      const pois = () => { tummennus.remove(); maaritykset?.remove(); };
+      if (this.reducedMotion) pois(); else setTimeout(pois, TUMMENNUKSEN_POISTUMA_MS);
+    } else {
+      maaritykset?.remove();
+    }
     if (this.vastaskaala) this.ui.nipistysVastaskaalaajat?.delete(this.vastaskaala);
     document.body.classList.remove('aikajana-paalla');
     if (this.ui.kameraVapaa) this.vapautaKamera(false);
     this.juuri = null;
     this.valokerros = null;
+    this.tummennus = null;
+    this.maaritykset = null;
+    this.maski = null;
+    // Tausta takaisin vasta kun linssi on poissa: syncAmbiencen portti
+    // lukee juuren kytkentää.
+    this.suljeAanimaailma();
   }
 }
 
