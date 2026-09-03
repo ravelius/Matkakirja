@@ -727,16 +727,24 @@ vaadi('välikortissa on kaupunki ja päivälaskuri',
  * matkapäiväkirjan luennan loppumista (js/luenta.js luennanLoppuun) ja
  * toisen kuplan tauko kasvoi 1,6 → 2,5 s, joten kiinteä kuuden sekunnin
  * odotus ehti ensimmäisen kuplan väliin ja mittasi vain sen.
+ *
+ * OHJEKUPLAT EIVÄT OLE AINOAT KUPLAT (kuplapino 3.9.2026). Ensimmäisen
+ * kohdemaan saapumisessa puheenvuoron ottaa Livian tuurauspaljastus
+ * (js/livia.js), ja pinossa sen kaksi repliikkiä ovat nyt yhtä aikaa
+ * näkyvissä — pelkkä "kaksi kuplaa" -ehto laukeaisi niihin. Odotus ja
+ * mittaus koskevat siksi nimenomaan OHJEKUPLIA (data-laji="vihje"),
+ * jotka tulevat vasta paljastuksen jälkeen.
  */
+const OHJEKUPLAT = '.pollo-kuplapino .pollo-vihje[data-laji="vihje"]';
 await sivu.waitForFunction(
-  () => [...document.querySelectorAll('.pollo-vihje')].filter((k) => !k.hidden).length >= 2,
-  null,
+  (valitsin) => [...document.querySelectorAll(valitsin)].filter((k) => !k.hidden).length >= 2,
+  OHJEKUPLAT,
   { timeout: 90000 },
 ).catch(() => {});
 await sivu.waitForTimeout(600);
-const saapuminen = await sivu.evaluate(() => {
+const saapuminen = await sivu.evaluate((valitsin) => {
   clearInterval(window.__ajoVahti);
-  const kuplat = [...document.querySelectorAll('.pollo-vihje')]
+  const kuplat = [...document.querySelectorAll(valitsin)]
     .filter((k) => !k.hidden)
     .map((k) => k.textContent.trim());
   return {
@@ -767,7 +775,7 @@ const saapuminen = await sivu.evaluate(() => {
     paivakirjanOtsikko: document.getElementById('fact-voice')?.textContent ?? '',
     paivakirjanLyhyt: document.getElementById('fact-place-lyhyt')?.textContent ?? '',
   };
-});
+}, OHJEKUPLAT);
 console.log('  saapuminen:', JSON.stringify(saapuminen));
 await sivu.screenshot({ path: join(ULOS, 'saapumisen-kuplat.png') });
 vaadi('välikortti väistyy kartan tieltä', saapuminen.kortteja === 0);
@@ -870,15 +878,24 @@ vaadi('napautus ei vuoda alla oleviin elementteihin',
 // Lentonäkymä puretaan paperin ALLA, joten purku mitataan vasta täältä
 // — napautushetkellä kone on tarkoituksella vielä paikallaan arkin
 // takana, jottei purku näy ruudulla.
-/* Kuplien viiveet kasvoivat 26.8 (1,8 s + 1,6 s) — odotus sen mukaan. */
-await sivu2.waitForTimeout(9500);
-const ohituksenLoppu = await sivu2.evaluate(() => ({
+/*
+ * Ohjekuplat tulevat vasta Livian tuurauspaljastuksen jälkeen (ks.
+ * OHJEKUPLAT yllä), joten odotus on ehto eikä kello — kiinteä yhdeksän
+ * sekuntia osui keskelle paljastusta.
+ */
+await sivu2.waitForFunction(
+  (valitsin) => [...document.querySelectorAll(valitsin)].filter((k) => !k.hidden).length >= 2,
+  OHJEKUPLAT,
+  { timeout: 90000 },
+).catch(() => {});
+await sivu2.waitForTimeout(600);
+const ohituksenLoppu = await sivu2.evaluate((valitsin) => ({
   kortteja: document.querySelectorAll('.saapumiskortti').length,
-  kuplat: [...document.querySelectorAll('.pollo-vihje')].filter((k) => !k.hidden).length,
+  kuplat: [...document.querySelectorAll(valitsin)].filter((k) => !k.hidden).length,
   lentokerros: document.querySelectorAll('.flight *').length,
   kalvo: document.querySelectorAll('.flight-overlay').length,
   pilvia: document.querySelectorAll('.lento-pilvi').length,
-}));
+}), OHJEKUPLAT);
 console.log('  ohituksen loppu:', JSON.stringify(ohituksenLoppu), JSON.stringify(ohituksenLahto));
 await sivu2.screenshot({ path: join(ULOS, 'ohitus-saapuminen.png') });
 vaadi('ohitettu lento päätyy samaan saapumissekvenssiin',

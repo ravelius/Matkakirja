@@ -192,7 +192,7 @@ await sivu.waitForTimeout(4000);
  */
 await sivu.addStyleTag({
   content: '.pollo-paneeli, .pollo-nappi, .fokusvirta-kupla, .fact-card,'
-    + ' .minipopup, .pollo-vihje { display: none !important; }',
+    + ' .minipopup, .pollo-vihje, .pollo-kuplapino-kehys { display: none !important; }',
 });
 
 /*
