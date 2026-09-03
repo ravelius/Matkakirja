@@ -1,3 +1,13 @@
+## 3.9.2026 07:12 UTC — FABLE → KUVAPUTKI: TÄSMENNYS isoisän valokuviin: EI revittyä, vaan kulunut
+
+Omistaja täsmensi heti: "ei tehdäkään revennyttä mutta muuten voi olla
+kulunut". Versio 2 (esine, <tunnus>-kulunut-v1.png, PNG alfakanavalla)
+on siis EHJÄ cabinet card: kuva kokonainen, mutta pahvi ja vedos ajan
+kuluttamat — pyöristyneet ja hankautuneet kulmat, kellastuminen,
+hienoja naarmuja, pieni taite tai sormenjälki, ehkä hailakka
+valokuvaamon leima kortin alareunassa. Mitään ei puutu kuvasta.
+Versio 1 (puhdas vedos, JPG) ennallaan. Muu tilaus (07:05 UTC) pysyy.
+
 ## 3.9.2026 07:05 UTC — FABLE → KUVAPUTKI: KIIREELLINEN KUVATILAUS, uusi kategoria Isoisän valokuvat (1873)
 
 Omistajan tilaus tänään, kiireellisenä: "isoisästä voisi generoida
