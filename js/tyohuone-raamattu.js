@@ -1346,7 +1346,13 @@ export const RAAMATTU = {
           + 'kaytosta. Havinneet ehdokkaat: lihava huutomerkki, '
           + 'kaksoishuuto, kello, murrettu sinetti, mustetahra, torvi. '
           + 'Tunnus `huuto` sailyy datan avaimena. Poltettu nostotaso '
-          + 'uusiksi (2026-09-02i), koska skandaalimerkit ovat laatassa.',
+          + 'uusiksi (2026-09-02i), koska skandaalimerkit ovat laatassa. '
+          + 'MUOTO 2 (omistaja 3.9.2026 iltapaiva: "hieman matalampi ... '
+          + 'levealla tussilla piirretylta, niin etta osa viivoista on '
+          + 'paksumpia ja osa ohuempia"): salama peilattiin niin, etta '
+          + 'vinot vedot kulkevat poikittain teran suuntaan (taysi '
+          + 'leveys) ja askel jaa kapeaksi; korkeus 12,8 -> 10 yksikkoa '
+          + '(v1483, poltto 2026-09-02j).',
         'SYVENNYSTARINAT KARTALLE (omistaja 29.8.2026 ilta, "Sopii"): '
           + 'v1326:ssa reitittomiksi jaaneet fokusvirtatakyt - '
           + 'syvennystarinat kuvineen ja 50 punnan minivisoineen 12 '

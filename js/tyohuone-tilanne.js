@@ -92,6 +92,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1483 + POLTTO 02j: SALAMA MUOTO 2 (omistaja 3.9.) - matalampi ja tussimainen: paksut vinot vedot, ohut askel; sama muoto kortin ylarivilla. Katso Kreikka 50 km (Mykene) ja selitevalikon Skandaalit-rivi.',
   'v1482 + POLTTO 02i: SKANDAALIN MERKKI ON SALAMA (omistajan kortti 3.9.) - kartalla, selitevalikossa ja kortin ylarivilla sama salama huutomerkin tilalla; looppikortti levenee 32 -> 40 rem. Katso Kreikka 50 km (Mykene, Antikythera) ja selitevalikon Skandaalit-rivi; avaa Mykeneen looppi.',
   'v1481: LOOPPITAITTO, PILOTTI (omistajan tilaus 3.9.) - Kreikan skandaalinosto "Valokuva paljasti aarrevarkauden" (Mykene) aukeaa lehtena: nimio Lisalehti (v1481; v1480:n Matkakirjan looppi hylatty), paivaysrivi, paaotsikko isolla, ingressi, kuva, leipateksti anfangilla ja kahdessa palstassa, keltaisempi paperi. Muut nostot ennallaan. Taydentava kuva tilattu kuvaputkelta. Avaa Kreikka 50 km, napauta Mykene.',
   'v1479 + POLTTO 02h: HETKET KAUPUNGIN KOHDALLA (omistajan kortti 3.9.) - Lissabon 1484 ja Fram 1893 pois paakartalta: sivu kaupunkilehdessa ja PISTE kohdekartalla (Lissabon "Kolumbus 1484" Kauppatorin vieressa, Oslo "Fram 1893" kaupungintalon edustalla, juttu = hetken teksti). Santa Fe 1492 ja Restelo 1497 siirretty datassa 9-10 yksikon paahan kaupungista: piste omalla paikallaan ILMAN siirtoviivaa. Katso Granada ja Lissabon 50 km -nakymassa seka molempien kohdekartat.',
