@@ -29,8 +29,8 @@
  * Kaikki tiedostot ovat Commonsin PD-kuvia (tarkistettu 2.9.2026,
  * lisenssi kunkin kuvan kohdalla). Omistajan linjaus: ilmiökuvan
  * paikalle tulee GENEROITU kuva, kun kuvaputki on tehnyt sen — se
- * vaihdetaan tähän kenttään yhdellä rivillä. Muotokuva, jota ei vielä
- * ole tarkistettu (null), näkyy nimikirjainlaattana.
+ * vaihdetaan tähän kenttään `osoite`-muodossa (ks. KEKSINTO_KUVAJUURI).
+ * Muotokuva, jota ei vielä ole tarkistettu (null), näkyy nimikirjainlaattana.
  *
  * ── PAIKAT ────────────────────────────────────────────────────────
  *
@@ -43,6 +43,18 @@
  * Lähde jokaiselle tapahtumalle: englanninkielinen Wikipedia,
  * artikkeli mainittu `lahde`-kentässä (tarkistettu 2.9.2026).
  */
+
+/**
+ * Kuvaputken generoitujen ilmiökuvien juuri ämpärissä. Generoitu kuva
+ * kulkee `osoite`-kenttänä (valmis osoite, ei Commons-thumb-putkea)
+ * kuten historian hetkien kuvat (js/packs/historian-hetket.js
+ * HETKI_KUVAJUURI); Commons-kuva kulkee yhä `tiedosto`-kenttänä.
+ * Ensimmäiset viisi (Watt, Montgolfier, Jenner, Volta, Jacquard)
+ * omistaja hyväksyi 2.9.2026 ja kuvaputki varmensi ne R2:ssa
+ * (posti/kuvatoimitus.md 2.9.2026 23:28 UTC). Kuvatekstit ovat
+ * kuvaputken lopulliset, ihminen edellä -linjan mukaiset.
+ */
+export const KEKSINTO_KUVAJUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/keksinnot';
 
 /** Euroopan alue laudalla — kamera sovitetaan tähän (js/aikajana.js). */
 const EUROOPPA = { x: 5560, y: 830, w: 1700, h: 1000 };
@@ -63,7 +75,16 @@ export const KEKSINNOT = [
       + 'kaivoksiin, myllyihin ja tehtaisiin. Tehon yksikkö watti on nimetty '
       + 'hänen mukaansa, ja hevosvoima on hänen keksimänsä vertailuluku.',
     kuva: { tiedosto: 'Watt James von Breda.jpg', selite: 'James Watt, Carl Frederik von Bredan maalaus 1792.' },
-    ilmio: null,
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1769-watt.jpg`,
+      selite: 'Wattin työpajan käsityöläinen kuuntelee, lakkaako sylinteri '
+        + 'vihdoin jäähtymästä jokaisella iskulla — pieni muutos voisi '
+        + 'tarkoittaa, ettei hiiltä enää lapioida hukkaan. Erillinen '
+        + 'lauhdutin tekee höyrykoneesta paljon taloudellisemman ja antaa '
+        + 'Wattin ajatukselle voiman lähteä laboratoriosta kaivoksiin ja '
+        + 'tehtaisiin.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "James Watt"',
   },
   {
@@ -80,7 +101,16 @@ export const KEKSINNOT = [
       + 'nousivat pallolla Pariisin yli — ensimmäinen vapaa miehitetty lento '
       + 'ihmiskunnan historiassa. Matkaa kertyi noin yhdeksän kilometriä.',
     kuva: { tiedosto: 'Joseph-montgolfier.jpg', selite: 'Joseph Montgolfier, tuntemattoman taiteilijan maalaus 1700-luvulta.' },
-    ilmio: { tiedosto: '1783 balloonj.jpg', selite: 'Montgolfierin pallo aikalaispiirroksessa 1783.' },
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1783-montgolfier.jpg`,
+      selite: 'Pilâtre de Rozier ja markiisi d\'Arlandes seisovat avonaisella '
+        + 'parvekkeella suoraan paperisen pallon tulen yläpuolella; mukana '
+        + 'on märkiä sieniä, jos kipinät sytyttävät kuoren. Kun köydet '
+        + 'irtoavat La Muettessa, heidän 25 minuutin lentonsa muuttaa '
+        + 'mahdottomalta tuntuneen haaveen kahden ihmisen hyvin todelliseksi '
+        + 'riskiksi.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Montgolfier brothers"',
   },
   {
@@ -98,7 +128,16 @@ export const KEKSINNOT = [
       + 'vuodessa ympäri Eurooppaa. Isorokko julistettiin hävitetyksi koko '
       + 'maailmasta vuonna 1980 — ainoa ihmisen tauti, jolle näin on käynyt.',
     kuva: { tiedosto: 'Portrait of Edward Jenner M.D (4672926).jpg', selite: 'Edward Jenner, William Ridleyn kaiverrus 1804.' },
-    ilmio: null,
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1796-jenner.jpg`,
+      selite: 'Kahdeksanvuotias puutarhurin poika James Phipps tutkii sidottua '
+        + 'käsivarttaan tietämättä, että heinäkuussa Jenner altistaa hänet '
+        + 'vielä isorokolle kokeen varmistamiseksi. Poika selviää, mutta '
+        + 'hetki muistuttaa myös siitä, kuinka kaukana 1700-luvun '
+        + 'lääketieteellinen koe on nykyisestä suostumuksesta ja lapsen '
+        + 'suojasta.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Edward Jenner"',
   },
   {
@@ -116,7 +155,15 @@ export const KEKSINNOT = [
       + 'virtaa. Sen avulla veden hajotettiin vedyksi ja hapeksi samana '
       + 'vuonna, ja jännitteen yksikkö voltti nimettiin keksijän mukaan.',
     kuva: { tiedosto: 'Alessandro Volta. Gaetano Bonatti inc.jpg', selite: 'Alessandro Volta, Gaetano Bonattin kaiverrus 1837.' },
-    ilmio: { tiedosto: 'Pila di Volta.jpg', selite: 'Voltan patsas: metallilevyjä pinossa. Kuva Luigi Chiesa, CC BY 3.0.' },
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1800-volta.jpg`,
+      selite: 'Pavian laboratoriossa avustaja säpsähtää, kun metallikiekkojen '
+        + 'pino antaa tasaisen sähköärsykkeen eikä vain yhtä staattista '
+        + 'kipinää. Volta käyttää omaa kehoaan mittalaitteena ja avaa tien '
+        + 'kokeille, joissa sähköä voidaan ensimmäistä kertaa tuottaa yhä '
+        + 'uudelleen.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Alessandro Volta"',
   },
   {
@@ -134,7 +181,15 @@ export const KEKSINNOT = [
       + 'Babbage lainasi reikäkortit laskukoneeseensa, ja niistä tuli '
       + 'tietojenkäsittelyn ensimmäinen ohjelmointitapa.',
     kuva: { tiedosto: 'Joseph Marie Jacquard.jpg', selite: 'Joseph Marie Jacquard, kaiverrus 1800-luvulta.' },
-    ilmio: { tiedosto: 'Jacquard loom.jpg', selite: 'Jacquardin kangaspuut reikäkortteineen (Mahlum, PD).' },
+    ilmio: {
+      osoite: `${KEKSINTO_KUVAJUURI}/1804-jacquard.jpg`,
+      selite: 'Lyonin nuori apulainen lukee rei\'itettyä korttia kuin käskyä: '
+        + 'yksi aukko voi nostaa juuri ne loimilangat, joista kukka syntyy. '
+        + 'Korttiketju vapauttaa kuvion piirtäjän käsistä, mutta työpajan '
+        + 'väki ymmärtää samalla, että kone voi tehdä osan heidän taidostaan '
+        + 'ilman heitä.',
+      lahde: 'Matkakirjan havainnekuva',
+    },
     lahde: 'en-Wikipedia "Jacquard machine"',
   },
   {
