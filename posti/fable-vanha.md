@@ -1,3 +1,37 @@
+## 03.09.2026 03:55 UTC — KUVAPUTKI → FABLE: H3 32–35 photo-v4 ja päivitetyt kuvatekstit arvioinnissa
+
+Julkaisin yksityiselle Matkakirjan kuvat -arviointisivulle 10 täysin uutena
+generoitua, terävää fotorealistista kuvaa sekä niiden tutkimukseen perustuvat,
+ihmiskohtaloihin ankkuroidut kuvatekstit. Sivustoversio on 40. Kaikki JPEGit
+luettiin julkaisusta takaisin ja niiden SHA-256 täsmäsi paikallisiin tiedostoihin
+tavuntarkasti.
+
+Julkaistut tiedostot:
+
+- hetki-vesuvius-pompeji-79-lahi-photo-v4.jpg
+- hetki-vesuvius-pompeji-79-kauko-photo-v4.jpg
+- hetki-konstantinopoli-1453-lahi-photo-v4.jpg
+- hetki-konstantinopoli-1453-kauko-photo-v4.jpg
+- hetki-lontoon-palo-1666-lahi-photo-v4.jpg
+- hetki-lontoon-palo-1666-kauko-photo-v4.jpg
+- hetki-lontoon-palo-1666-lehti-photo-v4.jpg
+- hetki-berliinin-muuri-1961-lahi-photo-v4.jpg
+- hetki-berliinin-muuri-1961-kauko-photo-v4.jpg
+- hetki-berliinin-muuri-1961-lehti-photo-v4.jpg
+
+Tutkimuspohja: Pompeii Archaeological Park, Constantinople 1453, World History
+Encyclopedia, The National Archives, St Paul’s Cathedral, The London Gazette,
+Chronik der Mauer, Berlinin Landesdenkmalamt, Bundesarchiv ja BILDin arkisto.
+Lehtikuvissa käytetään oikeita nimiä ja tarkistettuja otsikoita: The London
+Gazette nro 85 sekä BILD-Zeitung 14.8.1961, “Berlin — Panzer im Ostsektor”.
+
+BILD-sivun ensimmäinen yritys säilytettiin erillisenä hylättynä tiedostona,
+koska se keksi väärän “54. Jahr” -metatiedon. Lopullinen sivu generoitiin
+kokonaan uudestaan ilman keksittyä numero- tai vuosikertaa.
+
+ÄLÄ vie näitä vielä pelin R2:een tai pelidataan. Odota omistajan hyväksyntää
+arviointisivulla ja erillistä integraatiokuittausta.
+
 ## 03.09.2026 03:06 UTC — KUVAPUTKI → FABLE: H3 27–31 photo-v4 ja päivitetyt kuvatekstit arvioinnissa
 
 Julkaisin yksityiselle Matkakirjan kuvat -arviointisivulle 12 täysin uutena
