@@ -219,9 +219,16 @@ test('promptit ovat instrumentaaleja ja kieltävät elektroniikan', () => {
     assert.match(raita.prompt, /no vocals/, `${nimi}: laulukielto puuttuu`);
     assert.match(raita.prompt, /repeat forever/, `${nimi}: saumaohje puuttuu`);
   }
-  // Linssiraidan oma luonne (omistajan tilaus): kellokoneisto ja pulssi.
+  /*
+   * Linssiraidan oma luonne: kellokoneisto ja pulssi — ja 3.9.2026
+   * alkaen pulssi on SYDÄMEN syke (omistaja: *"Tähän sopisi
+   * taustaääneksi myös ehkä jopa sydämen syke … musiikki, joka olisi
+   * inspiroitunut sydämen sykkeen äänestä"*). Tahti on osa tilausta,
+   * joten se vartioidaan lukuna eikä sanana.
+   */
   assert.match(LAJIT.keksinnot.prompt, /clockwork/);
-  assert.match(LAJIT.keksinnot.prompt, /mechanical pulse/);
+  assert.match(LAJIT.keksinnot.prompt, /heartbeat/);
+  assert.match(LAJIT.keksinnot.prompt, /60 beats per minute/);
   assert.match(TYOKALU, /force_instrumental: true/);
 });
 

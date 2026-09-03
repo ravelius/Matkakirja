@@ -35,7 +35,8 @@ import { onAarre } from './tokens.js';
 // Remontin M5a: lehden sivukoneisto.
 import {
   avaaGrafiikkaLehti,
-  avaaKehittajaLehti, avaaLukijoiltaLehti, avaaMaalehti, avaaPoiminnatLehti,
+  avaaKehittajaLehti, avaaLukijoiltaLehti, avaaMaalehti, avaaMusiikkiLehti,
+  avaaPoiminnatLehti,
   avaaRaamattuLehti,
   avaaSisallysvalikko,
   avaaTilanneLehti, avaaTilastoLehti, jatkaLehdenLuentaa, kytkeTutkiSelaus, naytaMaaUutiset,
@@ -13852,6 +13853,8 @@ export class UI {
   avaaTilastoLehti() { return avaaTilastoLehti(this); }
 
   avaaGrafiikkaLehti() { return avaaGrafiikkaLehti(this); }
+
+  avaaMusiikkiLehti() { return avaaMusiikkiLehti(this); }
 
   avaaLukijoiltaLehti() { return avaaLukijoiltaLehti(this); }
 

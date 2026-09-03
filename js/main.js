@@ -116,7 +116,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1489';
+const APP_VERSION = '2026-08-09.1490';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1520,6 +1520,11 @@ document.getElementById('lukijoilta-lehti-btn')?.addEventListener('click', () =>
 });
 document.getElementById('grafiikka-lehti-btn')?.addEventListener('click', () => {
   window.matkakirja?.ui?.avaaGrafiikkaLehti();
+});
+// Musiikki-lehti (omistajan tilaus 3.9.2026): pelin taustamusiikit
+// kuunneltavaksi yhdeltä sivulta — js/tyohuone-musiikki.js.
+document.getElementById('musiikki-lehti-btn')?.addEventListener('click', () => {
+  window.matkakirja?.ui?.avaaMusiikkiLehti();
 });
 
 /** Täyttää kentät valitun lukijan tallennetuista säädöistä. */

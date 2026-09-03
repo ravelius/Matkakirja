@@ -1375,6 +1375,24 @@ const voimassaVaisto = () => (hiljennykset.size
   ? Math.min(pyydettyVaisto, VAISTO_HILJENNYS)
   : pyydettyVaisto);
 
+/*
+ * VÄISTÖN TIEDOT ULKOISILLE VÄISTÄJILLE (3.9.2026).
+ *
+ * Kerroin yksin ei riitä, kun väistäjä on ITSE se, joka hiljennyksen
+ * pyysi: aikajanalinssi hiljentää maiseman omalla syyllään ja soittaa
+ * sen alla omaa raitaansa (js/siirtymamusiikki.js LINSSIN_HILJENNYS).
+ * Ilman syytä raita väistyisi omaa hiljennystään ja jäisi puoleen
+ * tasoon koko ajon ajaksi.
+ *
+ *   syyt   voimassa olevat hiljennyssyyt ('pollo', 'lehti', 'linssi'…)
+ *   pohja  pyydetty väistö ilman hiljennysten kattoa — se kerroin,
+ *          joka jää voimaan, kun oma hiljennys jätetään huomiotta.
+ *
+ * Kolmas argumentti on VALINNAINEN: vanhat väistäjät (js/linssit/
+ * radio.js) lukevat vain kertoimen ja keston eivätkä muutu.
+ */
+const vaistonTiedot = () => ({ syyt: [...hiljennykset], pohja: pyydettyVaisto });
+
 /** Asettaa väistökertoimen ja ajaa kaikki soivat kierrokset sen mukaiseksi. */
 function saadaVaistoa(kerroin) {
   pyydettyVaisto = kerroin;
@@ -1398,7 +1416,7 @@ export function lisaaVaistaja(fn) {
   // Nykytila heti: kesken luennan käynnistyvä lähde ei saa aloittaa
   // täydellä voimalla.
   try {
-    fn(voimassaVaisto(), 0);
+    fn(voimassaVaisto(), 0, vaistonTiedot());
   } catch {
     /* väistäjä ei saa kaataa äänipolkua */
   }
@@ -1408,9 +1426,10 @@ export function lisaaVaistaja(fn) {
 /** Ajaa voimassa olevan kertoimen kaikkiin soiviin raitoihin. */
 function ajaVaisto(kesto = HAIVYTYS_MS) {
   const kerroin = voimassaVaisto();
+  const tiedot = vaistonTiedot();
   for (const vaistaja of vaistajat) {
     try {
-      vaistaja(kerroin, kesto);
+      vaistaja(kerroin, kesto, tiedot);
     } catch {
       /* väistäjä ei saa kaataa äänipolkua */
     }

@@ -1,9 +1,10 @@
 # Siirtymämusiikki ja pelin äänet — tuotanto-ohje
 
 Sitovat linjaukset ovat Raamatussa (js/tyohuone-raamattu.js). Tämä
-dokumentti kertoo, miten musiikkiraidat (siirtymät ja linssit)
-tuotetaan ja viedään. Koodin kuvaus on moduulin
-js/siirtymamusiikki.js otsikkokommentissa.
+dokumentti kertoo, miten musiikkiraidat (siirtymät ja linssit) ja
+ämpärissä asuvat ääniefektit tuotetaan ja viedään. Koodin kuvaus on
+moduulien js/siirtymamusiikki.js ja js/tehosteet.js
+otsikkokommenteissa.
 
 ## Siirtymämusiikki (omistaja 2.9.2026)
 
@@ -36,7 +37,7 @@ raidan sietäminen ovat samat — mutta mitat ovat toiset.
 | kesto | 45–60 s; linssi kestää minuutteja (25 pysäkkiä), joten lyhyt kierto alkaisi kuulua silmukaksi |
 | looppi | saumaton äänitteessä itsessään, kuten siirtymäraidoilla |
 | taso ja formaatti | −33 LUFS; mp3, mono, 128 kbps, 44,1 kHz |
-| luonne | 1800-luvun keksintöjen aikakausi: hillitty kellokoneiston tikitys ja tasainen mekaaninen pulssi pohjalla, uteliaisuus ja odotus; akustinen (jouset, puupuhaltimet, kevyt vasarapiano tai cembalo) |
+| luonne | pohjalla levossa olevan **sydämen syke** (n. 60 bpm, omistajan tarkennus 3.9.2026) ja sen päällä hillitty 1800-luvun kellokoneisto: tikitys, uteliaisuus ja odotus; akustinen (jouset, puupuhaltimet, kevyt vasarapiano tai cembalo) |
 | ei | ei elektronista, ei laulua, ei tekstiä, ei liian tunnelmoivaa — kello ja filminauha liikkuvat musiikin päällä |
 
 Peli feidaa sisään 600 ms ja ulos 800 ms (siirtymää rauhallisemmin:
@@ -50,6 +51,67 @@ on hiljainen.
 
 Generointi on sama työkalu: `--laji keksinnot`. Valinta `kaikki` EI
 sisällä sitä (ks. alla).
+
+## Linssitilan äänimaailma (omistaja 3.9.2026)
+
+Omistajan tilaus: *"Kun linssitila menee päälle, niin kaikki muut
+äänet saisi vaieta taustalta ja oma linssin generoitu musiikki saisi
+alkaa toistua taustalla."*
+
+| hetki | mitä tapahtuu |
+|---|---|
+| linssi käynnistyy | `hiljennaAmbienssi('linssi')` vie kaupunkiäänet, pohjavireen, visamusiikin ja radion alas yhdellä syyllä; `pysaytaLukija()` vaientaa kesken olevan luennan |
+| linssin oma raita | alkaa samalla hetkellä eikä väisty omaa hiljennystään (js/siirtymamusiikki.js `lajinVaisto`) — pöllö, kertoja ja lukija vaimentavat sen yhä |
+| vuosi vaihtuu | **kohahdus** ämpäristä (alla); jos varianttia ei ole, kellon oma syntetisoitu naksahdus (js/sound.js `vuosi`) |
+| linssi suljetaan | `palautaAmbienssi('linssi')` samalla syyllä purussa |
+
+## Ääniefektit: kohahdus (omistaja 3.9.2026)
+
+Omistajan tilaus: *"se efektiääni vuodenvaihtuessa voisi olla joku
+uuu-huudahdus, aivan kuin yleisö kohahtaisi, kun uusi hieno keksintö
+saapuu maailmaan. Niitä vain pitäisi sitten generoida useampia
+variantteja, jotta sama ääniefekti ei toistuisi peräjälkeen. Ne
+voisivat kuitenkin olla aika lähellä toisiaan."*
+
+| ominaisuus | vaatimus |
+|---|---|
+| tiedostot | `aanet/tehosteet/kohahdus-1.mp3` … `kohahdus-4.mp3` |
+| kesto | n. 1,5 s (hyväksytään 1,0–2,4 s) |
+| taso ja formaatti | −30 LUFS (3 dB musiikkia kovempi); mp3, mono, 128 kbps, 44,1 kHz |
+| luonne | pienen 1800-luvun luentosalin yleisö, hillitty ihastunut "uuu"; ei aplodeja, ei puhetta, kuiva sisätila |
+| variantit | neljä samasta promptista — *"aika lähellä toisiaan"*, ero mallin omasta satunnaisuudesta |
+| päät | hiljaisuus leikattu pois, 30 ms häivytykset |
+
+Peli (js/tehosteet.js) esilataa variantit `preload="metadata"`
+-elementteinä, arpoo yhden eikä koskaan soita samaa kahdesti
+peräkkäin, ei aloita uutta ennen kuin edellinen on soinut loppuun ja
+kunnioittaa mykistystä ja taustatilaa. Voimakkuus on 0,35 ×
+linssiraidan voima — omistaja: *"ei tarvitse nousta merkittävästi
+taustamusiikin päälle"*.
+
+```
+node tools/generoi-tehosteet.mjs --laji kohahdus
+node tools/generoi-tehosteet.mjs --laji kohahdus --maara 1 --ei-vientia
+node tools/generoi-tehosteet.mjs --laji kohahdus --kuiva
+```
+
+| lippu | merkitys |
+|---|---|
+| `--laji kohahdus` | pakollinen (toistaiseksi ainoa laji) |
+| `--maara N` | montako varianttia, 1–8 (oletus 4). **Jokainen on oma maksullinen kutsunsa.** |
+| `--kuiva` | ei APIa eikä vientiä: tulostaa promptin ja ajaa ffmpeg-ketjun syntetisoidulla äänellä |
+| `--ei-vientia` | generoi ja viimeistele, mutta jätä tiedostot levylle |
+
+Rajapinta on ElevenLabsin **sound-generation**
+(`POST /v1/sound-generation`, kentät `text`, `duration_seconds`,
+`prompt_influence`) — eri kuin musiikin `/v1/music`. Ketju: kutsu per
+variantti, hiljaisuus pois päistä (`silenceremove` molempiin suuntiin),
+30 ms häivytykset, taso mitataan loudnormilla ja korjataan yhdellä
+lineaarisella vahvistuksella −30 LUFSiin. Tiedostot kirjoitetaan
+`media/tehosteet/`-kansioon (.gitignoressa) ja viedään ämpärin
+`aanet/tehosteet/`-kansioon; raakatuotos jää `media/tehosteet-raaka/`.
+Ajo: `.github/workflows/generoi-tehosteet.yml` (workflow_dispatch,
+inputit `laji` ja `maara`, samat salaisuudet kuin musiikkiajolla).
 
 ## Vienti
 

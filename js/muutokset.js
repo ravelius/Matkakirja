@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1490, teksti: 'Linssin paikkamerkki, kohahdus ja Musiikki-sivu' },
   { v: 1489, teksti: 'Livian kuplapino: Sofia kommentoi osissa' },
   { v: 1488, teksti: 'Keksintolinssi: 21 uutta ilmiokuvaa' },
   { v: 1487, teksti: 'Linssin vuosiluku rullaa; raitatarkistus kuntoon' },

@@ -1688,6 +1688,8 @@ const SOUNDS = {
    *      kanavasta (hissNopea) eikä luo solmuja per naksahdus —
    *      sama oppi kuin kirjoituskoneen naputuksessa.
    * Oma äänite olisi tähän ylimitoitettu: naksu ei kaipaa tiedostoa.
+   * VARAÄÄNI, EI PÄÄOSA: kun ämpärin kohahdus (js/tehosteet.js) on
+   * ladattu, se soi tämän sijaan (js/aikajana.js vuosiAani).
    */
   vuosi: (s) => {
     s.hissNopea({ dur: 0.028, type: 'highpass', freq: 5200, sweepTo: 3200, gain: 0.014, q: 0.7 });

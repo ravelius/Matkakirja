@@ -107,12 +107,13 @@
  *                  lento  = ilmava ja liikkumaton; soi kabiiniäänen
  *                           ALLA (v1097), joten sen oma taso on
  *                           matalin kolmesta.
- *                  keksinnot = linssin ajo: 1800-luvun keksintöjen
- *                           aikakausi, hillitty kellokoneisto ja
- *                           tasainen mekaaninen pulssi pohjalla; EI
- *                           tunnelmapala, koska kello ja filminauha
- *                           liikkuvat sen päällä. Looppi 45–60 s,
- *                           koska ajo kestää minuutteja.
+ *                  keksinnot = linssin ajo: pohjalla levossa olevan
+ *                           SYDÄMEN SYKE (n. 60 bpm, omistajan
+ *                           tarkennus 3.9.2026) ja sen päällä hillitty
+ *                           1800-luvun kellokoneisto; EI tunnelmapala,
+ *                           koska kello ja filminauha liikkuvat sen
+ *                           päällä. Looppi 45–60 s, koska ajo kestää
+ *                           minuutteja.
  *   NIMET          siirtyma-jalan.mp3, siirtyma-laiva.mp3,
  *                  siirtyma-lento.mp3, linssi-keksinnot.mp3.
  *   VIENTI         Generoitu raita menee `assets/audio/`-kansioon,
@@ -225,8 +226,28 @@ let soiva = null;
  * epäonnistuvan soittimen ja tuottaisi kaksi 404:ää.
  */
 const puuttuvatRaidat = new Set();
+/*
+ * LINSSIN HILJENNYSSYY (omistajan tilaus 3.9.2026: *"Kun linssitila
+ * menee päälle, niin kaikki muut äänet saisi vaieta taustalta ja oma
+ * linssin generoitu musiikki saisi alkaa toistua taustalla."*).
+ *
+ * Aikajanalinssi hiljentää maiseman tällä syyllä
+ * (js/ambience-stream.js hiljennaAmbienssi) ja soittaa sen alla omaa
+ * raitaansa. Nimi on TÄSSÄ eikä linssissä, koska sitä tarvitaan
+ * kahdessa paikassa: linssi asettaa hiljennyksen, ja tämä moduuli
+ * jättää sen huomiotta oman raitansa kohdalla (ks. lajinVaisto).
+ */
+export const LINSSIN_HILJENNYS = 'linssi';
+
 /* Väistökerroin (kertoja, pöllö, lukija) — sama totuus kuin taustalla. */
 let siirtymanVaisto = 1;
+/*
+ * Väistön syyt ja pohjakerroin (js/ambience-stream.js vaistonTiedot).
+ * Näiden varassa linssin raita EI väisty omaa hiljennystään: muuten
+ * linssi vaimentaisi itsensä puoleen tasoon koko ajon ajaksi.
+ */
+let vaistonSyyt = [];
+let vaistonPohja = 1;
 /*
  * AJON OMA HIMMENNYS (0…1). Väistö tulee muualta pelistä, tämä
  * soivan raidan omistajalta: aikajanalinssi puolittaa raidan, kun
@@ -258,8 +279,22 @@ function siirtymanLiuku(audio, kohde, kesto, done) {
   requestAnimationFrame(askel);
 }
 
+/**
+ * Lajin väistökerroin. Sama kuin taustan kaikilla muilla — paitsi
+ * linssiraidalla silloin, kun väistön syynä on linssin OMA hiljennys:
+ * silloin käytetään pohjakerrointa, eli sitä väistöä joka jäisi
+ * voimaan ilman hiljennystä. Pöllö, kertoja ja lukija vaimentavat
+ * linssiraidan yhä (pohja seuraa niitä).
+ */
+function lajinVaisto(laji) {
+  if (RAIDAT[laji]?.ryhma === 'linssi' && vaistonSyyt.includes(LINSSIN_HILJENNYS)) {
+    return vaistonPohja;
+  }
+  return siirtymanVaisto;
+}
+
 /** Lajin tavoitetaso juuri nyt: oma kerroin kertaa väistö kertaa himmennys. */
-const raidanTaso = (laji) => (RAIDAT[laji]?.voima ?? 0) * siirtymanVaisto * ajonHimmennys;
+const raidanTaso = (laji) => (RAIDAT[laji]?.voima ?? 0) * lajinVaisto(laji) * ajonHimmennys;
 
 /** Sammuttaa soittimen lopullisesti ja vapauttaa sen. */
 function vapautaRaita(audio) {
@@ -367,8 +402,10 @@ export function siirtymamusiikkiSoi() {
  * maisemakin. Rekisteröinti tehdään moduulin latauksessa, jolloin
  * kerroin on oikea heti ensimmäisestä siirrosta lähtien.
  */
-lisaaVaistaja((kerroin, kesto) => {
+lisaaVaistaja((kerroin, kesto, tiedot) => {
   siirtymanVaisto = kerroin;
+  vaistonSyyt = tiedot?.syyt ?? [];
+  vaistonPohja = tiedot?.pohja ?? kerroin;
   if (soiva) siirtymanLiuku(soiva.audio, raidanTaso(soiva.laji), kesto || nousuMs(soiva.laji));
 });
 
@@ -576,5 +613,7 @@ export function nollaaSiirtymamusiikki() {
   lopetaVaramusiikki();
   varaKytkinMuisti = null;
   siirtymanVaisto = 1;
+  vaistonSyyt = [];
+  vaistonPohja = 1;
   ajonHimmennys = 1;
 }

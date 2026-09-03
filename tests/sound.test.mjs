@@ -96,7 +96,8 @@ const NIMET = [
   // Pöllön omat äänet (13.8.2026): huhuilu paneelin avautuessa ja
   // kirjoituskoneen rivinvaihtokello vastauksen valmistuessa.
   'owl', 'typeBell',
-  // Aikajanan vuosiluvun naksahdus (3.9.2026).
+  // Aikajanan vuosiluvun naksahdus (3.9.2026): varaääni sille,
+  // kun ämpärin kohahdusta (js/tehosteet.js) ei ole ladattu.
   'vuosi',
 ];
 
