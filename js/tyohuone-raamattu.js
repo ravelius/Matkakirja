@@ -2640,7 +2640,17 @@ export const RAAMATTU = {
           + 'TUMMA -> VAALEA siirtyma - leima lyodaan tummassa '
           + 'valokeilassa ja pohja kirkastuu vasta sitten vaaleaan '
           + 'lopputilaan. AVOINNA: vaaleapohjaiset paaaarrekuvat '
-          + '(7+2) ja Livian jalkikommentit paljastukselle.',
+          + '(7+2) ja Livian jalkikommentit paljastukselle. PAIVITYS '
+          + '3.9.2026 (omistaja Hymettoksen hunajan kortista, '
+          + 'sanatarkasti: "tama kaipaa viela saatoa. taustan voisi '
+          + 'levittaa koko ruudun alueella ja poistaa vinjetit"): '
+          + 'paikallisaarteen paljastus on KOKO RUUDUN tasainen '
+          + 'pergamentti - ei purppuraa laitaa, ei valokeilaa, ei kuvan '
+          + 'sateittaista maskia; kuva sulautuu darken-sulautuksella ja '
+          + 'vain uloin 9 % reunasta hoyhennetaan sauman takia. Jatka '
+          + 'matkaa -nappi tumma pergamentilla. Kuvat, joiden oma pohja '
+          + 'on teksturoitu (esim. FIN tervatynnyri), erottuvat himmeasti '
+          + '- ne voi generoida uudelleen tasaiselle pohjalle. (v1499)',
         'Löytöteksti: lyhyt tosi fakta aarteesta + onnentoivotus '
           + '(fakta-kenttä valmiina; kortille kun parit tulevat).',
         'Huudahdukset: pääaarteen luetut säilyvät; muut ovat '
