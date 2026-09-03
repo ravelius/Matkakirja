@@ -1,3 +1,56 @@
+## 3.9.2026 07:50 UTC — FABLE → KUVAPUTKI: KIIREELLINEN KUVATILAUS, uusi kategoria Keksijöiden muotokuvat (Keksinnöt-linssi)
+
+Omistajan tilaus tänään, kiireellisenä: linssin alarivin oikeat
+muotokuvat "heittelevät liikaa laadussa", joten kuvaputki generoi
+YHTENÄISET muotokuvat: "kaikista värilliset rintapotretit ja heille
+ominainen ilme, ei neutraali vaan jokaisessa pitää olla jokin
+henkilölle ominainen tunneilmaisu mukana (hymy, vakavuus, pohdiskelu,
+hulluttelu, jne. sellainen mikä auttaa muistamaan ja hahmottamaan
+minkälainen henkilö oikeasti oli)".
+
+Yhteinen muoto kaikille 24 kuvalle: värillinen, fotorealistinen
+rintakuva (pää ja hartiat, kevyt 3/4-käännös), sama neutraali tumma
+ateljeetausta ja sama pehmeä sivuvalo kaikissa, henkilön oman
+aikakauden vaatetus ja ikä KEKSINNÖN vuonna (ei nuoruus- eikä
+vanhuuskuva), näköisyys aitojen muotokuvien mukaan (Commons-lähde
+per henkilö on pelin datassa js/linssit/keksinnot.js kentässä
+kuva.tiedosto — käytä samaa lähdettä näköisyyden pohjana). Pysty 3:4,
+JPG/sRGB, vähintään 1024 px leveä. Tiedostonimi
+aikajana/keksinnot/muotokuva/<vuosi>-<nimi>.jpg. Ilme on tilauksen ydin:
+
+1. 1769 James Watt — keskittynyt, kulmat kurtussa, huulet tiukasti (itsepäinen ongelmanratkaisija)
+2. 1783 Montgolfier-veljekset (Joseph ja Étienne, KAKSI henkilöä samassa kuvassa) — Joseph unelmoiva katse ylös, Étienne käytännöllinen puolihymy
+3. 1796 Edward Jenner — lempeä, rauhoittava hymy (maalaislääkäri)
+4. 1800 Alessandro Volta — ylpeä, leuka koholla, pieni hymy suupielessä
+5. 1804 Joseph Marie Jacquard — vaatimaton, väsynyt mutta tyytyväinen (silkkikutoja)
+6. 1825 George Stephenson — jäyhä, suora katse, itseoppineen varmuus
+7. 1837 Cooke ja Wheatstone (KAKSI henkilöä) — Wheatstone ujo ja katse sivuun, Cooke reipas ja eteenpäin
+8. 1839 Louis Daguerre — teatraalinen, esittelijän leveä ele katseessa
+9. 1856 Henry Bessemer — päättäväinen teollisuusmies, kulmakarva koholla
+10. 1867 Alfred Nobel — melankolinen, syvä vakavuus, väsyneet silmät
+11. 1869 Dmitri Mendelejev — hurja parta ja tukka, innostunut oivalluksen välähdys
+12. 1876 Nikolaus Otto — kärsivällinen, hiljainen tyytyväisyys pitkän työn jälkeen
+13. 1879 Werner von Siemens — komentava, viiksekäs, hallittu puolihymy
+14. 1885 Louis Pasteur — huolestunut ja lempeä yhtä aikaa (lapsipotilaan hoitaja)
+15. 1886 Carl Benz — hieman epävarma, nöyrä keksijä joka ei vielä usko menestykseen
+16. 1888 Heinrich Hertz — nuori, kirkas, utelias hymy
+17. 1895 Guglielmo Marconi — kunnianhimoinen, jäätävän rauhallinen, katse suoraan
+18. 1895 Wilhelm Röntgen — vaitelias, parta, tarkkaava ja hieman hämmentynyt
+19. 1895 Lumière-veljekset (Auguste ja Louis, KAKSI henkilöä) — leikkisä keskinäinen katse, huvittuneet
+20. 1897 Rudolf Diesel — kireä, älykäs, uupumusta silmien alla
+21. 1898 Marie Curie — hiljainen sinnikkyys, katse hieman alaviistoon, lujuus
+22. 1900 Ferdinand von Zeppelin — vanha kreivi, valkoiset viikset, poikamainen innostus
+23. 1909 Louis Blériot — viikset, huimapään virnistys
+24. 1926 John Logie Baird — laiha, hermostunut into, lasit
+25. 1928 Alexander Fleming — kuiva skotlantilainen huumori, hillitty virne, rusetti
+
+(1873 "Isoisä lähtee matkaan" on merkkipaalu ilman muotokuvaa — EI kuvaa.)
+
+Kuittaukseen jokaisesta yksi virke ilmeestä ja lähderivi (aito
+muotokuva, jota näköisyys seuraa). Sama toimintatapa: yksityinen
+arviointi, omistajan hyväksyntä, R2 ja postikuittaus. Kiireellinen:
+isoisän valokuvien ja sähkelomakkeen jälkeen, ennen ihmekuvia.
+
 ## 3.9.2026 07:40 UTC — FABLE → KUVAPUTKI: keksintöerän 21 kuvaa mainissa (v1488)
 
 Kiitos, kaikki 21 avainta ja kuvatekstit ovat pelissä (v1488, squash
