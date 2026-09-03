@@ -82,13 +82,16 @@ import { taytaLahderivi } from './tekijakortti.js';
 import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, TOAST_MS } from './ui-apurit.js';
 import { el, maare } from './mapart.js';
 import {
-  avaaKohdeSuurennos, elainmerkinNapautusLuovutettu, suljeKohdeSuurennos,
+  avaaKohdeSuurennos, elainmerkinNapautusLuovutettu, maanLadontaEsteet, suljeKohdeSuurennos,
 } from './fokuskohteet.js';
 import { nostosymKortinYlarivi, piirraNostosymKartalle } from './fokusnosto-symbolit.js';
 import { piirraKarttavalo } from './karttavalot.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { nostoOnPoltettu } from './laattapyramidi.js';
-import { nostoladontaKattoPorras, nostoladontaTiiviste } from './nostoladonta.js';
+import {
+  NOSTOLADONTA_S, nostoladontaKattoPorras, nostoladontaTiiviste,
+} from './nostoladonta.js';
+import { elaintakyKarttarivit, elaintakyNimioKylki } from './elaintaky-rivit.js';
 import { ELAINTAKYT } from './packs/elaintakyt.js';
 import { assetOsoite } from './media.js';
 import { sfx } from './sound.js';
@@ -192,50 +195,19 @@ function elaintakyAsteenLeveys(lauta) {
   return Math.abs(b.x - a.x);
 }
 
+/*
+ * KARTTARIVIT JA NIMIÖ ASUVAT js/elaintaky-rivit.js:SSÄ (3.9.2026):
+ * kohdekerros lukee täyn paikan omaan ladontaansa ja tämä kerros
+ * lukee kohdekerroksen ladonnan omaan kylkeensä — kumpikaan ei voi
+ * tuoda toista ilman kehää. Laattageneraattori ja kohdekerros tuovat
+ * rivit suoraan sieltä.
+ */
+
 /**
- * Tämän laudan eläintäyt paikkoineen.
- *
- * Maa kelpaa vain jos LAUTA TUNTEE SEN (countryShapes): maalehti,
- * maapilleri ja kartuutsi lukevat maan nimen samasta taulusta, eikä
- * kartalle saa ilmestyä merkkiä maahan, jota lauta ei muuten tunne.
- * Laudan reunan ulkopuolelle jäävä piste jätetään pois — Vanjärvi on
- * Euroopan laudan itäreunan takana (js/packs/elaintakyt.js).
+ * Tämän laudan eläintäyt paikkoineen (ks. js/elaintaky-rivit.js).
  */
 export function elaintakyLaudalla(ui) {
   return elaintakyKarttarivit(ui?.game?.pack);
-}
-
-/**
- * SAMA LISTA LAUDAN PAKETISTA, ILMAN PELIÄ JA ILMAN DOMia.
- *
- * Viety ulos samasta syystä kuin skandaaleilla ja historian hetkillä
- * (js/skandaalit.js skandaaliKarttarivit): LAATTAGENERAATTORI POLTTAA
- * NÄMÄ MERKIT (tools/fokuskartta/nostot.mjs), ja niiden tunnus, nimiö
- * ja paikka on saatava samasta koodista kuin pelin oma merkki —
- * muuten poltettu kilpikonna olisi eri paikassa tai eri nimellä kuin
- * elävä.
- *
- * Merkin TUNNUS on `elaintaky-<ISO>`: sama muoto kuin syvennyksillä ja
- * skandaaleilla (`syvennys-`, `skandaali-`), ja se on luettelon avain,
- * jolla peli tunnistaa poltetun merkkinsä (js/laattapyramidi.js
- * nostoOnPoltettu).
- */
-export function elaintakyKarttarivit(pack) {
-  const map = pack?.map;
-  if (!map?.countryShapes) return [];
-  const tulos = [];
-  for (const [iso, taky] of Object.entries(ELAINTAKYT)) {
-    if (!map.countryShapes[iso]) continue;
-    const piste = projisoiLaudalle(pack.id, taky.lon, taky.lat);
-    if (!piste) continue;
-    if (piste.x < 0 || piste.y < 0) continue;
-    if (map.width > 0 && piste.x > map.width) continue;
-    if (map.height > 0 && piste.y > map.height) continue;
-    tulos.push({
-      iso, taky, tunnus: `elaintaky-${iso}`, nimio: elaintakyNimio(taky), x: piste.x, y: piste.y,
-    });
-  }
-  return tulos;
 }
 
 /** Maan nimi laudan omasta taulusta — sama lähde kuin kartuutsilla. */
@@ -265,17 +237,6 @@ function elaintakyVarmistaKerros(ui) {
     ui.elaintakyKerros = kerros;
   }
   return ui.elaintakyKerros;
-}
-
-/**
- * Merkin nimiö: eläimen nimi kartan nimiötypografialla, isolla
- * alkukirjaimella kuten muutkin kartan nimet. `nimio`-kenttä on
- * datan oma karttanimi silloin, kun eläimen nimi ei mahdu nimiöön
- * (sama sopimus kuin kohteilla, js/fokuskohteet.js kohteenKarttanimi).
- */
-function elaintakyNimio(taky) {
-  const nimi = taky.nimio ?? taky.elain ?? '';
-  return `${nimi.charAt(0).toUpperCase()}${nimi.slice(1)}`;
 }
 
 /* ============ POLTETTU ELÄINTÄKY EI PIIRRY UUDESTAAN ==============
@@ -364,7 +325,18 @@ function elaintakyPiirraMerkki(ui, ryhma, tieto) {
   // Poltettu merkki on jo laatassa: elävä piirto jäisi sen päälle
   // kaksinkertaiseksi musteeksi (ks. lohko yllä).
   if (!elaintakyOnPoltettu(tieto)) {
-    piirraNostosymKartalle(glyyfi, 'elain', tieto.nimio, 'elain');
+    /*
+     * KYLKI MAAN LADONNAN YMPÄRILTÄ (3.9.2026, js/elaintaky-rivit.js
+     * elaintakyNimioKylki): sama päätös samasta funktiosta kuin
+     * laattageneraattorilla (tools/fokuskartta/nostot.mjs
+     * keraaElaintakyt), samalla portaalla — täyn merkki on lehden
+     * vakiomitassa (NOSTOLADONTA_S) eikä maan omassa.
+     */
+    const kylki = elaintakyNimioKylki(
+      tieto, ELAINTAKY_SYMBOLI_SKAALA * NOSTOLADONTA_S,
+      maanLadontaEsteet(ui.game?.pack, tieto.iso),
+    );
+    piirraNostosymKartalle(glyyfi, 'elain', tieto.nimio, 'elain', kylki);
   }
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();

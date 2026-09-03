@@ -149,8 +149,9 @@ import {
   nippuLaattaEsteet,
 } from './fokusniput.js';
 import { laatoissaOnNostoja, nostoOnPoltettu } from './laattapyramidi.js';
+import { elaintakyKarttarivit } from './elaintaky-rivit.js';
 import {
-  nostoladontaKattoPorras, nostoladontaSkaala, nostoladontaTiiviste,
+  NOSTOLADONTA_S, nostoladontaKattoPorras, nostoladontaSkaala, nostoladontaTiiviste,
 } from './nostoladonta.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
@@ -815,6 +816,18 @@ const KOHDE_MAALAHTEET = [];
 
 export function rekisteroiMaanKohteet(hae, jarjestys = 0) {
   if (typeof hae !== 'function' || KOHDE_MAALAHTEET.some((r) => r.hae === hae)) return;
+  /*
+   * YKSI LÄHDE JÄRJESTYSNUMEROA KOHTI (3.9.2026). kytke*-funktiot
+   * (js/fokusnosto.js, js/syvennys.js, js/skandaalit.js,
+   * js/historian-hetket.js) luovat sulkeuman joka kutsulla, ja
+   * laattageneraattori kutsuu niitä nyt itse (tools/fokuskartta/
+   * nostot.mjs keraaNostot), samoin testit — toinen kutsu korvaa
+   * edellisen samalla numerolla eikä kahdenna rivejä. Kahdennettu rivi
+   * olisi kaksi merkkiä samassa sarakkeessa ja koko maan ladonta eri
+   * kuin poltettu.
+   */
+  const vanha = KOHDE_MAALAHTEET.findIndex((r) => r.jarjestys === jarjestys);
+  if (vanha >= 0) KOHDE_MAALAHTEET.splice(vanha, 1);
   KOHDE_MAALAHTEET.push({ hae, jarjestys });
   KOHDE_MAALAHTEET.sort((a, b) => a.jarjestys - b.jarjestys);
 }
@@ -2490,6 +2503,17 @@ function laskeKohdeNimioPaatokset(ui, s) {
    * loppuun sellaisenaan.
    */
   const laatat = nippuLaattaEsteet(ui, s);
+  /*
+   * ULKOISET ESTEET (3.9.2026, ks. NAAPURIMAAT LADOTAAN JÄRJESTYKSESSÄ
+   * alempana): edeltävien maiden poltettu ladonta ja oman maan
+   * eläintäyn symboli. Symbolit ovat pehmeitä esteitä omien symbolien
+   * perässä — indeksi ei koskaan ole minkään rivin oma — ja nimiöt
+   * menevät suoraan `varatut`-joukkoon, joka ei putoa millään
+   * kierroksella.
+   */
+  const omiaSymboleja = symbolit.length;
+  const ulkoiset = ladonnanUlkoisetEsteet(ui);
+  for (const este of ulkoiset.symbolit) symbolit.push(este);
   // Kohteittain, ei kopioittain: kiertävän laudan kopiot samaan riviin.
   const jono = new Map();
   ryhmat.forEach((r, i) => {
@@ -2530,7 +2554,12 @@ function laskeKohdeNimioPaatokset(ui, s) {
     rivi.kehykset.push(vaihtoehdot);
     jono.set(r.id, rivi);
   });
-  const varatut = [];
+  const varatut = [...ulkoiset.nimiot];
+  // Kunkin varatun omistaja: oman rivin tunnus, tai null ulkoiselle.
+  // Naapurin siirto (yritaSiirtaen) tarvitsee tiedon siitä, kenen
+  // nimiö kylkeä tukkii ja voiko sen siirtää.
+  const varatutOmistaja = varatut.map(() => null);
+  const omatNimiot = [];
   /*
    * PIILOSSA JÄÄ TYHJÄKSI (2.9.2026, ks. SYMBOLI EI JÄÄ ILMAN NIMEÄ).
    * Kenttä säilyy, koska sen lukijat ovat sopimusta — piirto
@@ -2565,8 +2594,91 @@ function laskeKohdeNimioPaatokset(ui, s) {
     }));
   const hyvaksy = (id, rivi, valittu) => {
     puolet.set(id, rivi.puolet[valittu]);
-    varatut.push(...rivi.kehykset.map((vaihtoehdot) => vaihtoehdot[valittu]));
+    const omat = rivi.kehykset.map((vaihtoehdot) => vaihtoehdot[valittu]);
+    varatut.push(...omat);
+    omat.forEach(() => varatutOmistaja.push(id));
+    omatNimiot.push(...omat);
     rivi.indeksit.forEach((indeksi, n) => kehykset.set(indeksi, rivi.kehykset[n][valittu]));
+  };
+  /** Hyväksytyn rivin nimiöt pois varauksista (naapurin siirtoa varten). */
+  const peru = (id) => {
+    for (let i = varatut.length - 1; i >= 0; i -= 1) {
+      if (varatutOmistaja[i] !== id) continue;
+      const [laatikko] = varatut.splice(i, 1);
+      varatutOmistaja.splice(i, 1);
+      const k = omatNimiot.indexOf(laatikko);
+      if (k >= 0) omatNimiot.splice(k, 1);
+    }
+    puolet.delete(id);
+  };
+  /*
+   * ====== NAAPURI SIIRTYY, JOS SILLE ON TILAA (3.9.2026) ============
+   *
+   * Mitattuna (tools/tarkista-nimiolimitys.mjs) Romanian Moldoveanu jäi
+   * ilman vapaata kylkeä vain siksi, että Karhusanktuaari oli ottanut
+   * ensimmäisellä kierroksella oikean kylkensä — vaikka sille olisi
+   * ollut vapaa toinenkin kylki. Ahne järjestys ei näe sitä.
+   *
+   * Yksi askel taaksepäin riittää: ennen kuin nimiö pakotetaan toisen
+   * päälle, katsotaan kylki kerrallaan, tukkivatko sitä VAIN oman maan
+   * nimiöt, ja mahtuuko jokainen niistä toiselle kyljelle samoilla
+   * esteillä. Jos mahtuu, naapuri siirtyy ja tämä nimiö saa kyljen —
+   * kukaan ei ole kenenkään päällä. Ulkoinen nimiö (edeltävä maa) ei
+   * siirry koskaan: sen ladonta on jo poltettu.
+   *
+   * Yritys on transaktio: varaukset otetaan talteen ja palautetaan,
+   * jos yksikin naapuri jää ilman kylkeä. Kokeilujärjestys on kiinteä
+   * (kylki, sitten naapurit tunnusjärjestyksessä), joten tulos on
+   * deterministinen.
+   */
+  const yritaSiirtaen = (id, rivi, esteet) => {
+    for (let p = 0; p < rivi.puolet.length; p += 1) {
+      const omat = rivi.kehykset.map((vaihtoehdot) => vaihtoehdot[p]);
+      const kova = omat.some((kehys, n) => (esteet.symbolit
+        && symbolit.some((sym, j) => j !== rivi.indeksit[n] && kohdeLimittyy(kehys, sym)))
+        || (esteet.laatat && laatat.some((laatta) => kohdeLimittyy(kehys, laatta))));
+      if (kova) continue;
+      const tukkijat = [];
+      let vieras = false;
+      varatut.forEach((varattu, i) => {
+        if (!omat.some((kehys) => kohdeLimittyy(kehys, varattu))) return;
+        const omistaja = varatutOmistaja[i];
+        if (omistaja === null) vieras = true;
+        else if (!tukkijat.includes(omistaja)) tukkijat.push(omistaja);
+      });
+      if (vieras || !tukkijat.length) continue;
+      tukkijat.sort();
+      const talteen = {
+        varatut: varatut.slice(),
+        omistajat: varatutOmistaja.slice(),
+        omat: omatNimiot.slice(),
+        puolet: tukkijat.map((t) => puolet.get(t)),
+        kehykset: tukkijat.map((t) => jono.get(t).indeksit.map((i) => kehykset.get(i))),
+      };
+      for (const t of tukkijat) peru(t);
+      hyvaksy(id, rivi, p);
+      let onnistui = true;
+      for (const t of tukkijat) {
+        const toinen = jono.get(t);
+        const q = valitseKylki(toinen, esteet);
+        if (q < 0) { onnistui = false; break; }
+        hyvaksy(t, toinen, q);
+      }
+      if (onnistui) return p;
+      varatut.length = 0;
+      varatut.push(...talteen.varatut);
+      varatutOmistaja.length = 0;
+      varatutOmistaja.push(...talteen.omistajat);
+      omatNimiot.length = 0;
+      omatNimiot.push(...talteen.omat);
+      puolet.delete(id);
+      tukkijat.forEach((t, n) => {
+        puolet.set(t, talteen.puolet[n]);
+        jono.get(t).indeksit.forEach((i, m) => kehykset.set(i, talteen.kehykset[n][m]));
+      });
+      rivi.indeksit.forEach((i) => kehykset.delete(i));
+    }
+    return -1;
   };
   /* ── ENSIMMÄINEN KIERROS: kaikki esteet voimassa ───────────────── */
   const jaljella = [];
@@ -2612,6 +2724,9 @@ function laskeKohdeNimioPaatokset(ui, s) {
    * luku, jonka pitää painua kohti nollaa, kun ladonta paranee.
    */
   for (const [id, rivi] of jaljella) {
+    // Ensin naapurin siirto kaikilla esteillä: jos se onnistuu, kukaan
+    // ei tingi mistään eikä merkki ole pakotettu.
+    if (yritaSiirtaen(id, rivi, { symbolit: true, laatat: true }) >= 0) continue;
     kirjaaNimionPudotus(ui, id, rivi, { symbolit, laatat, varatut });
     pakotetut.add(id);
     /*
@@ -2634,11 +2749,54 @@ function laskeKohdeNimioPaatokset(ui, s) {
      */
     let valittu = valitseKylki(rivi, { symbolit: false, laatat: true });
     if (valittu < 0) valittu = valitseKylki(rivi, { symbolit: false, laatat: false });
-    hyvaksy(id, rivi, valittu < 0 ? 0 : valittu);
+    // Naapurin siirto vielä ilman lievempiä esteitä, ennen kuin nimiö
+    // menee toisen nimiön päälle.
+    if (valittu < 0 && yritaSiirtaen(id, rivi, { symbolit: false, laatat: false }) >= 0) continue;
+    /*
+     * VIIMEINEN OLKI ON PIENIN LIMITYS, EI ENSIMMÄINEN KYLKI (3.9.2026).
+     * Mitattuna (tools/tarkista-nimiolimitys.mjs) kolme merkkiä
+     * maailmassa — Rijeka, Risnjak ja Moldoveanu — oli tässä
+     * tilanteessa: jokainen neljästä kyljestä osui toiseen nimiöön, ja
+     * vanha sääntö otti oikean kyljen katsomatta, kuinka paljon se
+     * peittää. Nyt valitaan kylki, jonka limitys jo hyväksyttyjen
+     * nimiöiden kanssa on pienin; tasapelin ratkaisee
+     * kokeilujärjestys, joten päätös on yhä kiinteä.
+     */
+    if (valittu < 0) valittu = pieninLimitys(rivi, varatut);
+    hyvaksy(id, rivi, valittu);
   }
   return {
-    piilossa, pakotetut, puolet, kehykset,
+    piilossa,
+    pakotetut,
+    puolet,
+    kehykset,
+    /*
+     * OMAN MAAN LAATIKOT SEURAAVILLE LUKIJOILLE (3.9.2026): symbolit
+     * (ilman ulkoisia) ja hyväksytyt nimiöt laudan yksiköissä. Näistä
+     * seuraava maa maatunnusjärjestyksessä ja oman maan eläintäky
+     * lukevat esteensä (maanLadontaEsteet).
+     */
+    esteet: { symbolit: symbolit.slice(0, omiaSymboleja), nimiot: omatNimiot },
   };
+}
+
+/** Kahden laatikon limityksen pinta-ala laudan yksiköissä. */
+function limitysAla(a, b) {
+  const w = Math.min(a.x2, b.x2) - Math.max(a.x1, b.x1);
+  const h = Math.min(a.y2, b.y2) - Math.max(a.y1, b.y1);
+  return w > 0 && h > 0 ? w * h : 0;
+}
+
+/** Kylki, jonka kehykset limittyvät varattujen kanssa vähiten. */
+function pieninLimitys(rivi, varatut) {
+  let paras = 0;
+  let pienin = Infinity;
+  rivi.puolet.forEach((_, p) => {
+    const ala = rivi.kehykset.reduce((summa, vaihtoehdot) => summa
+      + varatut.reduce((s2, v) => s2 + limitysAla(vaihtoehdot[p], v), 0), 0);
+    if (ala < pienin) { pienin = ala; paras = p; }
+  });
+  return paras;
 }
 
 export function paivitaKohdeNimiot(ui, s) {
@@ -2915,16 +3073,124 @@ export function maanPoltetutVaraukset(pack, iso, pohja, onPoltettu = nostoOnPolt
   return poltettujenNostojenVaraukset(tynka, tynka.__s, tynka.fokuskohdeNimioPaatokset);
 }
 
-/**
- * YKSI LADONTA, KAKSI LUKIJAA: yhden maan ladottu tynkä valmiiksi
- * ajettuna (kasaus, erottelu, nimiöväistö, poltettu-liput). Varaukset
- * (maanPoltetutVaraukset) ja osumamuodot (maanPoltetutMerkit) lukevat
- * saman tuloksen — kaksi ladontaa ajautuisi eri vastauksiin, ja juuri
- * sen estäminen on koko ketjun sääntö (ks. lohko yllä).
+/* ============ NAAPURIMAAT LADOTAAN JÄRJESTYKSESSÄ ==================
  *
- * @returns {?object} tynkä, kenttä `__s` on käytetty mittakaava
+ * OMISTAJAN HAVAINTO 3.9.2026 (Bulgaria, 100 km:n näkymä): Kırkpınar-
+ * nosto limittyy toisen nimen kanssa. Toinen nimi oli Kreikan Évros —
+ * kaksi naapurimaan merkkiä samassa Edirnen pisteessä, kummankin
+ * nimiö oikealla. Mitattuna (tools/tarkista-nimiolimitys.mjs) pareja
+ * oli maailmassa kuusi: Mostar + Sveti Jure, Neretva + Korčula,
+ * Vjetrenica + Stonin muurit, Pyhä Bernhard + Mont Blanc, Sněžka +
+ * Śnieżka ja Évros + Kırkpınar. Jokainen on rajan kahta puolta.
+ *
+ * ── JUURISYY ──────────────────────────────────────────────────────
+ *
+ * Jokainen maa ladottiin OMILLAAN: kasaus, erottelu ja nimiöväistö
+ * tunsivat vain oman maan merkit, ja laattaan paloi kaikkien maiden
+ * ladonta päällekkäin. Kahden ladonnan välillä ei voi olla väistöä.
+ *
+ * ── SÄÄNTÖ ────────────────────────────────────────────────────────
+ *
+ * Saman laudan maat ladotaan MAATUNNUSJÄRJESTYKSESSÄ (ISO-koodi,
+ * aakkosellisesti), ja jokainen maa saa edeltäjiensä valmiin ladonnan
+ * ESTEIKSI nimiöväistöönsä: edeltäjän nimiöt ovat kovia esteitä
+ * (kuin omat hyväksytyt nimiöt) ja edeltäjän symbolit pehmeitä (kuin
+ * omat). Merkkien PAIKAT eivät riipu naapurista lainkaan — kasaus ja
+ * erottelu ovat yhä maan omia — vain nimiön kylki väistää. Järjestys
+ * on kiinteä eikä makuasia: GRC latoo ennen TUR:ia, joten Évros saa
+ * kylkensä ensin ja Kırkpınar väistää.
+ *
+ * ── SAMA KETJU PELISSÄ JA GENERAATTORISSA ─────────────────────────
+ *
+ * Esteet tulevat samasta funktiosta (maanUlkoisetEsteet) kummallekin:
+ * peli latoo nykyisen maan elävänä ja tynkänä (naapurin osumamuodot),
+ * generaattori tynkänä (tools/fokuskartta/nostot.mjs), ja jokainen
+ * kysyy edeltäjänsä täältä. Ketju on laudan datan funktio ja
+ * välimuistissa maittain (LADONTATYNGAT), joten Euroopan neljäkymmentä
+ * maata maksavat kerran laudalla — Nodessa koko maailma on 0,6 s.
+ *
+ * Oman maan ELÄINTÄKY on samassa listassa pehmeänä esteenä (symbolin
+ * laatikko): täky latoo nimiönsä viimeisenä kaiken muun ympäriltä
+ * (js/elaintaky-rivit.js elaintakyNimioKylki), mutta sen symboli on
+ * kartalla joka tapauksessa, eikä noston nimiön kuulu mennä sen yli.
  */
-function poltettuTynka(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
+
+/** Laudan lehdelliset maat maatunnusjärjestyksessä: [[iso, pohja]]. */
+function maatJarjestyksessa(pack) {
+  return Object.entries(FOKUS_POHJAT)
+    .filter(([, pohja]) => pohja?.lauta === pack?.id && pohja.bbox)
+    .sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0));
+}
+
+const ULKOISET_ESTEET = new Map();
+
+/**
+ * MAAN NIMIÖVÄISTÖN ULKOISET ESTEET laudan yksiköissä {x1,y1,x2,y2}:
+ * edeltävien maiden ladonta ja oman maan eläintäyn symboli.
+ *
+ * @returns {{ symbolit: Array, nimiot: Array }}
+ */
+export function maanUlkoisetEsteet(pack, iso) {
+  if (!pack?.id || !iso) return { symbolit: [], nimiot: [] };
+  const avain = `${pack.id}|${iso}`;
+  const muistissa = ULKOISET_ESTEET.get(avain);
+  if (muistissa) return muistissa;
+  const symbolit = [];
+  const nimiot = [];
+  for (const rivi of elaintakyKarttarivit(pack)) {
+    if (rivi.iso !== iso) continue;
+    // Sama mitta kuin omilla symboleilla (laskeKohdeNimioPaatokset),
+    // täyn omalla portaalla: lehden vakio NOSTOLADONTA_S.
+    const r = (KOHDE_SYMBOLI_R + KOHDE_NIMIO_VARA) * NOSTOLADONTA_S;
+    symbolit.push({
+      x1: rivi.x - r, x2: rivi.x + r, y1: rivi.y - r, y2: rivi.y + r,
+    });
+  }
+  for (const [toinen] of maatJarjestyksessa(pack)) {
+    if (toinen >= iso) break;
+    const esteet = maanLadontaEsteet(pack, toinen);
+    symbolit.push(...esteet.symbolit);
+    nimiot.push(...esteet.nimiot);
+  }
+  const tulos = { symbolit, nimiot };
+  ULKOISET_ESTEET.set(avain, tulos);
+  return tulos;
+}
+
+/** Ulkoiset esteet ladottavalle `ui`:lle — tynkä kantaa maansa itse. */
+function ladonnanUlkoisetEsteet(ui) {
+  return maanUlkoisetEsteet(ui?.game?.pack, ui?.fokuskohdeIso ?? nykyinenIso(ui));
+}
+
+/**
+ * MAAN OMAN LADONNAN LAATIKOT seuraaville lukijoille (ks. yllä):
+ * symbolit ja hyväksytyt nimiöt laudan yksiköissä {x1,y1,x2,y2}.
+ * Ilman lehden ikkunaa (FOKUS_POHJAT) maa ei lado mitään.
+ *
+ * @returns {{ symbolit: Array, nimiot: Array }}
+ */
+export function maanLadontaEsteet(pack, iso) {
+  const pohja = iso ? FOKUS_POHJAT[iso] : null;
+  const tynka = pohja?.lauta === pack?.id ? maanLadontaTynka(pack, iso, pohja) : null;
+  return tynka?.fokuskohdeNimioPaatokset?.esteet ?? { symbolit: [], nimiot: [] };
+}
+
+const LADONTATYNGAT = new Map();
+
+/**
+ * YHDEN MAAN LADOTTU TYNKÄ VÄLIMUISTISTA — kasaus, erottelu ja
+ * nimiöväistö ajettuina, ilman poltettu-lippuja. Kaksi lukijaa
+ * (poltettuTynka, maanLadontaEsteet) ja yksi laskenta.
+ */
+function maanLadontaTynka(pack, iso, pohja) {
+  const avain = `${pack?.id}|${iso}`;
+  if (LADONTATYNGAT.has(avain)) return LADONTATYNGAT.get(avain);
+  const tynka = ladoMaanTynka(pack, iso, pohja);
+  LADONTATYNGAT.set(avain, tynka);
+  return tynka;
+}
+
+function ladoMaanTynka(pack, iso, pohja) {
   const s = nostoladontaSkaala(pohja?.rajaus);
   const bbox = pohja?.bbox;
   if (!(s > 0) || !bbox || !pack) return null;
@@ -2945,7 +3211,8 @@ function poltettuTynka(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
    * TYNKÄ `ui` — samat kentät kuin generaattorilla. `kiertoKohdat`
    * antaa yhden kohdan: kiertävän laudan toinen kopio on kutsujan asia
    * (naapurienPoltetutVaraukset siirtää valmiit laatikot), eikä ladonta
-   * saa riippua siitä, kummasta kopiosta puhutaan.
+   * saa riippua siitä, kummasta kopiosta puhutaan. `fokuskohdeIso`
+   * kertoo väistölle maan, jonka edeltäjät ovat sen ulkoiset esteet.
    */
   const tynka = {
     __s: s,
@@ -2956,6 +3223,7 @@ function poltettuTynka(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
     fokusPohjaBbox: bbox,
     fokusPohjanAlla: pohjanAlla,
     kiertoKohdat: (x) => [x],
+    fokuskohdeIso: iso,
     fokuskohdeKaupungit: kaupungit,
     fokuskohdeAvain: `${iso}:naapuri`,
     fokuskohdeEroAvain: null,
@@ -2973,8 +3241,25 @@ function poltettuTynka(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
   niputaFokusmerkit(tynka, s);
   eritteleKohdeRyhmat(tynka, s);
   paivitaKohdeNimiot(tynka, s);
+  return tynka;
+}
+
+/**
+ * YKSI LADONTA, KAKSI LUKIJAA: yhden maan ladottu tynkä valmiiksi
+ * ajettuna (kasaus, erottelu, nimiöväistö, poltettu-liput). Varaukset
+ * (maanPoltetutVaraukset) ja osumamuodot (maanPoltetutMerkit) lukevat
+ * saman tuloksen — kaksi ladontaa ajautuisi eri vastauksiin, ja juuri
+ * sen estäminen on koko ketjun sääntö (ks. lohko yllä).
+ *
+ * @returns {?object} tynkä, kenttä `__s` on käytetty mittakaava
+ */
+function poltettuTynka(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
+  const tynka = maanLadontaTynka(pack, iso, pohja);
+  if (!tynka) return null;
   // Poltettu-lippu samasta tiivisteestä kuin nykyisellä maalla
   // (kohdeOnPoltettu); vain lippu, ei piirtoa — tyngällä ei ole solmuja.
+  // Lippu kirjoitetaan joka kutsulla: luettelo voi saapua verkosta
+  // kesken istunnon, ja testi antaa oman luettelonsa.
   for (const r of tynka.fokuskohdeRyhmat) {
     r.poltettu = onPoltettu(r.id, kohteenNostotiiviste(tynka, r));
   }
@@ -3027,6 +3312,9 @@ export function maanPoltetutMerkit(pack, iso, pohja, onPoltettu = nostoOnPoltett
        * raportoi ne polttovelkana eikä hyväksy niitä hiljaa.
        */
       pakotettu: Boolean(tynka.fokuskohdeNimioPaatokset?.pakotetut?.has(r.id)),
+      // Väistön valitsema kylki — testi vertaa sen generaattorin
+      // polttamaan (tests/nimiolimitys.test.mjs).
+      puoli: tynka.fokuskohdeNimioPaatokset?.puolet?.get(r.id) ?? null,
       x,
       y,
       sade,

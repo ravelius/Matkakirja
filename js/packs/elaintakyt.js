@@ -284,8 +284,18 @@ export const ELAINTAKYT = {
     lahde: 'en-Wikipedia "Wildlife of Romania", osio "Mammals", ja en-Wikipedia '
       + '"Brown bear". Tarkistettu 1.9.2026.',
     kuva: 'assets/elaimet/elain-rou.jpg',
-    lon: 25,
-    lat: 45.6,
+    /*
+     * BĂILE TUȘNAD, ITÄ-KARPAATIT (3.9.2026). Piste oli Zărneștin
+     * karhutarhalla (25, 45.6), jossa on jo syvennystarina
+     * Karhusanktuaari, ja samalla rivillä Negoiu, Transfăgărășan,
+     * Moldoveanu, Bran ja Peleș — seitsemän merkkiä 36 lautayksikössä,
+     * eikä yksikään ladonta saa niiden nimiä erilleen
+     * (tools/tarkista-nimiolimitys.mjs). Kylpyläkaupunki Harghitan
+     * vuorten juurella on Romanian tunnetuin karhukaupunki: karhut
+     * kävelevät kaduilla (en-Wikipedia "Băile Tușnad").
+     */
+    lon: 25.86,
+    lat: 46.14,
   },
   HUN: {
     elain: 'mangalitsa',
