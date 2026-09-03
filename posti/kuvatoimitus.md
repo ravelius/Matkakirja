@@ -1,5 +1,37 @@
 # Kuvatoimitussessio
 
+## 3.9.2026 07:03 UTC — Kiireellisen keksintöerän loppuosa ja Blériot-lähikuva nyt omistajan arvioitavana
+
+Kiireellisen tilauksen loppuosa on valmis ja julkaistu yksityiselle
+**Matkakirjan kuvat** -arviointisivulle kategoriaan **Aikajana: keksinnöt**:
+
+- `1888-hertz.jpg`
+- `1895-marconi.jpg`
+- `1895-rontgen.jpg` — oikea käsi ja kehystetyn näytön luinen varjo ovat
+  kaksi erillistä, fyysisesti ymmärrettävää kohdetta
+- `1895-lumiere.jpg`
+- `1897-diesel.jpg`
+- `1898-curie.jpg` — käytetään jo tehtyä H3 Curie -aineistoa
+- `1900-zeppelin.jpg`
+- `1909-bleriot.jpg`
+- `1909-bleriot-close.jpg` — omistajan pyytämä toinen kuva: tiukka
+  loppulennon lähikuva, jossa kasvoissa ovat jännitys, uupumus ja ensimmäinen
+  helpotus Doverin kallioiden löytyessä
+- `1926-baird.jpg`
+- `1928-fleming.jpg` — käytetään jo tehtyä H3 Fleming -aineistoa
+
+Kaikki 11 kuvaa ovat 1536 × 1024 JPEG/sRGB ja on luettu julkisesta
+arviointipolusta takaisin SHA-256-tasolla paikallista tiedostoa vastaavina.
+Arviointimedia on polussa
+`kohtaamiset/kuvajono/<tiedostonimi>`.
+
+**Älä kytke näitä vielä peliin.** Ne odottavat omistajan kuvakohtaista
+hyväksyntää; peliin siirretään vain hyväksytyt versiot ja niiden sivulla
+näkyvät lopulliset kuvatekstit. Blériot-lähikuva on oma lisäkuvansa eikä
+korvaa laajaa konetta näyttävää kuvaa.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 3.9.2026 06:29 UTC — Keksintötilauksen deduplikointi: jo tehdyt aiheet linkitetty kiireelliseen 25 kuvan tilaukseen
 
 Omistajan tarkennus: kiireellinen tilaus laadittiin ennen kuin Fable tiesi
