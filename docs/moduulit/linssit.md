@@ -1114,3 +1114,31 @@ kaksi) → havainnekuva(t) → `.tiedeliite-keksija` (väliotsikko = nimi,
 henkilöteksti kentästä `henkilojuttu`, aito Commons-kuva `kuvaAito`
 oikealla) → lähderivi. Ilman `henkilojuttu`-kenttää henkilöosio ja aito
 kuva jäävät pois. Kapealla ruudulla (≤560 px) kuva siirtyy tekstin ylle.
+
+## Matkamittari, napautettavat lamput ja raahattava paneeli (omistaja 3.9.2026 ilta, v1512)
+
+Raamattu: LINSSIN VUOSILUKU JUOKSEE JATKUVASTI, PISTEET KLIKATTAVIA,
+HAVAINNEKUVA SIIRRETTAVA.
+
+- **Kello on matkamittari.** `asetaMatkamittari(rullat, vuosi, {liuku, heti})`
+  (js/aikajana.js) saa käyvältä kellolta murto-osavuoden joka kehyksellä:
+  ykkösrulla nousee osuuden verran, ylemmät rullat vain kun kaikki alemmat
+  ovat 9:ssä. Tapahtuman tauolla `aikajanaAskel` ei seisota kelloa vaan
+  hiipii `AIKAJANA_TAUON_OSUUS`:n (0,6 digitiä) koko tauon aikana ja jatkaa
+  tauon jälkeen normaalia tahtia; tila kantaa `viiveTaysi`-kentän. Saman
+  vuoden ketju (1895 kahdesti) ei peruuta mittaria. Pysäytetyn kellon hyppy
+  (`siirry`) rullaa vaihtuvat numerot yhdellä liu'ulla (`liuku`), avaus ja
+  prefers-reduced-motion asettavat numerot paikoilleen (`heti`).
+- **Lamput ovat napautettavia.** Palava lamppu (`.aikajana-valo.palaa`)
+  ottaa osumia; napautus kutsuu `napautaValoa(i)` → `siirry(i)` ja jää
+  tauolle, nykyisen lampun napautus vain pysäyttää. Lampulla on `<title>`
+  ja aria-label (vuosi: keksintö, keksijä).
+- **Ilmiöpaneeli on raahattava.** `kytkeRaahaus` kuuntelee paneelin
+  pointerdownia ja ikkunan pointermovea/-upia; alle `PANEELIN_RAAHAUSKYNNYS`
+  (6 px) jäävä liike on napautus (kuva avaa jutun kuten ennen). Siirto on
+  CSS-muuttujina `--aikajana-paneeli-dx/-dy` (`rajaaPaneelinSiirto` pitää
+  paneelin linssin alueella) ja muistetaan istunnon ajan. Kartta ei lähde
+  mukaan: `.aikajana-ilmio` on js/kartta.js KELLUVA_UI-listassa.
+- Testit: tests/aikajana.test.mjs (matkamittari, hiipimä, rajaus,
+  kytkennät); savuke scratchpadissa (kaappaa-linssi2.mjs).
+

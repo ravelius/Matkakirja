@@ -3094,7 +3094,11 @@ export const RAAMATTU = {
           + 'kohdalla hitaammin), mutta liike ei pysahdy ajon aikana; '
           + '2) kartan lamput ovat napautettavia: napautus siirtyy siihen '
           + 'pysakkiin (siirry) ja pysayttaa kellon; 3) ilmiopaneelia voi '
-          + 'raahata sormella tai hiirella, paikka sailyy istunnon ajan.',
+          + 'raahata sormella tai hiirella, paikka sailyy istunnon ajan. '
+          + 'TOTEUTETTU v1512 (js/aikajana.js asetaMatkamittari, '
+          + 'aikajanaAskel hiipii tauolla AIKAJANA_TAUON_OSUUS = 0.6 '
+          + 'digitista, napautaValoa, kytkeRaahaus; kartta ei lahde mukaan '
+          + 'paneelin vedosta, js/kartta.js KELLUVA_UI).',
         'KARUSELLIN KUVAT VALMIIKSI PIENINA (omistaja 3.9.2026 ilta: '
           + '"pyorisiko alareunan kuvakaruselli paremmin, jos kuvat '
           + 'pienentaisi valmiiksi tata nakymaa varten? haluaisin etta kuvat '

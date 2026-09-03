@@ -156,6 +156,12 @@
   /* Vuosipalkin alapuolelta mitatusti (js asettele → --aikajana-paneeli-yla). */
   top: var(--aikajana-paneeli-yla, 3.9rem);
   right: 0.6rem;
+  /* Raahattu siirto (js kytkeRaahaus); kahvana koko paneeli. */
+  transform: translate(var(--aikajana-paneeli-dx, 0px), var(--aikajana-paneeli-dy, 0px));
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
   width: min(21rem, 46%);
   min-height: 9rem;
   border-radius: 12px;
@@ -164,6 +170,8 @@
   box-shadow: var(--aikajana-varjo);
   overflow: hidden;
 }
+.aikajana-ilmio.raahataan { cursor: grabbing; box-shadow: 0 14px 34px rgba(0, 0, 0, 0.7); }
+.aikajana-ilmio.raahataan .aikajana-ilmio-sivu { pointer-events: none; }
 .aikajana-ilmio-sivu {
   position: absolute;
   inset: 0;
@@ -442,6 +450,9 @@
  * jossa kerrotaan miksi vanha pari siirsi merkin väärään paikkaan.
  */
 .aikajana-valot { pointer-events: none; }
+/* Palava lamppu ottaa napautuksen (js napautaValoa); sammunut on näkymätön. */
+.aikajana-valo.palaa { pointer-events: auto; cursor: pointer; }
+.aikajana-valo.palaa:focus-visible { outline: none; }
 .aikajana-valo-sisus {
   transform: scale(0);
   opacity: 0;

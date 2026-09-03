@@ -151,6 +151,15 @@ export const AIKAJANA_VUOSI_MS = 260;
 export const AIKAJANA_VIIVE_MS = 4600;
 /** Merkkipaalu (ei valoa, esim. isoisän matka 1873) pysäyttää lyhyemmin. */
 export const AIKAJANA_PAALU_MS = 3200;
+/*
+ * KELLO ON MATKAMITTARI (omistaja 3.9.2026 ilta: *"saisiko vuosinumerot
+ * juoksemaan kokoajan kuin hedelmäpelissä ... numerot olisivat kokoajan
+ * ainakin jonkinlaisessa liikkeessä"*). Tapahtuman tauolla kello ei
+ * seiso: ykkösrulla hiipii tämän osuuden digitistä koko tauon aikana ja
+ * jatkaa tauon jälkeen normaalia tahtia loppumatkan. Näin liike ei
+ * pysähdy koskaan ajon aikana, mutta keksinnön kohdalla se on hidasta.
+ */
+export const AIKAJANA_TAUON_OSUUS = 0.6;
 
 /**
  * Tauolla musiikki jää soimaan PUOLEEN tasoon (omistajan tilaus:
@@ -209,6 +218,39 @@ const TUMMENNUKSEN_ULOTTUVUUS = 1e6;
 const TUMMENNUKSEN_POISTUMA_MS = 700;
 /** Paneelin kuvan dekoodauksen enimmäisodotus ennen ristihäivytystä. */
 const PANEELIN_DEKOODAUSKATTO_MS = 250;
+/** Raahaus alkaa vasta tämän liikkeen jälkeen; sitä lyhyempi on napautus. */
+export const PANEELIN_RAAHAUSKYNNYS = 6;
+/** Paneelin siirto muistetaan istunnon ajan (kytkeRaahaus). */
+const PANEELIN_SIIRTO = { dx: 0, dy: 0 };
+
+/**
+ * Rajaa paneelin siirron niin, että paneeli pysyy linssin alueella
+ * (vähintään reunan verran näkyvissä joka suuntaan). Puhdas mittojen
+ * suhteen: paneelin ja juuren laatikot annetaan tai mitataan.
+ *
+ * @param {{getBoundingClientRect:Function}} paneeli
+ * @param {{getBoundingClientRect:Function}} juuri
+ * @param {number} dx haluttu siirto
+ * @param {number} dy haluttu siirto
+ * @param {{dx:number, dy:number}} [nykyinen] nyt voimassa oleva siirto
+ */
+export function rajaaPaneelinSiirto(paneeli, juuri, dx, dy, nykyinen = PANEELIN_SIIRTO) {
+  const p = paneeli?.getBoundingClientRect?.();
+  const j = juuri?.getBoundingClientRect?.();
+  if (!p || !j || !(p.width > 0) || !(j.width > 0)) return { dx, dy };
+  // Paneelin paikka ilman siirtoa.
+  const vasen = p.left - nykyinen.dx;
+  const yla = p.top - nykyinen.dy;
+  const vara = 8;
+  const minX = j.left + vara - vasen;
+  const maxX = j.right - vara - (vasen + p.width);
+  const minY = j.top + vara - yla;
+  const maxY = j.bottom - vara - (yla + p.height);
+  return {
+    dx: Math.min(Math.max(dx, Math.min(minX, maxX)), Math.max(minX, maxX)),
+    dy: Math.min(Math.max(dy, Math.min(minY, maxY)), Math.max(minY, maxY)),
+  };
+}
 
 /**
  * Naksahduksia enintään kahdeksan sekunnissa (omistajan tilaus
@@ -234,19 +276,28 @@ export function aikajanaAskel(tila, dt, tapahtumat, tahti = {}) {
   const viiveMs = tahti.viiveMs ?? AIKAJANA_VIIVE_MS;
   const paaluMs = tahti.paaluMs ?? AIKAJANA_PAALU_MS;
   let { vuosi, i, viive } = tila;
+  let tauolta = false;
   if (viive > 0) {
+    const taysi = tila.viiveTaysi ?? viive;
     viive = Math.max(0, viive - dt);
-    if (viive > 0) return { tila: { vuosi, i, viive }, syttyi: null, loppu: false };
+    // Tauolla ykkösrulla hiipii (AIKAJANA_TAUON_OSUUS) — kello ei seiso.
+    const hiipima = taysi > 0 ? AIKAJANA_TAUON_OSUUS * (1 - viive / taysi) : 0;
+    vuosi = Math.floor(vuosi) + Math.max(vuosi - Math.floor(vuosi), hiipima);
+    if (viive > 0) return { tila: { vuosi, i, viive, viiveTaysi: taysi }, syttyi: null, loppu: false };
     if (i >= tapahtumat.length - 1) return { tila: { vuosi, i, viive: 0 }, syttyi: null, loppu: true };
     dt = 0;
+    tauolta = true;
   }
   const seuraava = tapahtumat[i + 1];
   if (!seuraava) return { tila: { vuosi, i, viive: 0 }, syttyi: null, loppu: true };
   vuosi += dt / vuosiMs;
   if (vuosi < seuraava.vuosi) return { tila: { vuosi, i, viive: 0 }, syttyi: null, loppu: false };
   i += 1;
+  const uusiViive = seuraava.paalu ? paaluMs : viiveMs;
   return {
-    tila: { vuosi: seuraava.vuosi, i, viive: seuraava.paalu ? paaluMs : viiveMs },
+    // Kello napsahtaa tapahtuman vuoteen. Saman vuoden ketjussa (tauolta
+    // suoraan seuraavaan) hiipinyt osuus säilyy, ettei mittari peruuta.
+    tila: { vuosi: tauolta ? Math.max(vuosi, seuraava.vuosi) : seuraava.vuosi, i, viive: uusiViive, viiveTaysi: uusiViive },
     syttyi: i,
     loppu: false,
   };
@@ -585,39 +636,71 @@ function asetaRivi(rivi, y, siirtyma) {
 }
 
 /**
- * Näyttää vuosiluvun rullissa ja palauttaa ne rullat, jotka liikkuivat.
+ * MATKAMITTARI: näyttää vuosiluvun rullissa murto-osaa myöten.
+ *
+ * Omistaja 3.9.2026 ilta: *"viimeisin numero liikkuu kokoajan alhaalta
+ * ylös paljastaen aina uuden numeron ja samalla lailla myös isommat
+ * kymmenet ja sadat vaihtuvat, tosin vasta numeron 9 kohdalla alkaa
+ * niissä liike"*. Jokaisessa rullassa on kaksi riviä: `vanha` näyttää
+ * nykyisen numeron ja `uusi` sitä seuraavan numeron alapuolella. Rivit
+ * nousevat murto-osan verran: ykkösrulla kellon murto-osavuoden
+ * mukaan, ylemmät rullat vain silloin, kun kaikki alemmat ovat 9:ssä
+ * (mekaanisen matkamittarin tapaan).
+ *
+ * Kellon käydessä kutsu tulee joka kehyksellä ilman siirtymää; `liuku`
+ * on pysäytetyn kellon hyppy pysäkiltä toiselle, jolloin vaihtuvat
+ * numerot rullaavat yhdellä liikkeellä (vanha alas, uusi ylhäältä)
+ * Raamatun animaatiosäännön kestolla. `heti` asettaa merkit paikoilleen
+ * ilman liikettä (avaus, prefers-reduced-motion).
  *
  * @param {Array<{vanha:object, uusi:object, merkki:?string}>} rullat
- * @param {string} teksti nelimerkkinen vuosiluku ('1769')
- * @param {{heti?:boolean}} [asetukset]
+ * @param {number} vuosi vuosiluku murto-osineen (1769.4)
+ * @param {{liuku?:boolean, heti?:boolean}} [asetukset]
+ * @returns {Array} rullat, joiden numero vaihtui
  */
-export function rullaaVuosi(rullat, teksti, { heti = false } = {}) {
+export function asetaMatkamittari(rullat, vuosi, { liuku = false, heti = false } = {}) {
+  const arvo = Math.max(0, Number.isFinite(vuosi) ? vuosi : 0);
+  const kokonainen = Math.floor(arvo);
+  const teksti = String(kokonainen).padStart(rullat.length, '0');
+  const osuus = heti ? 0 : arvo - kokonainen;
+  const siirtyma = liuku && !heti ? `transform ${VUOSI_RULLAUS_MS}ms ${VUOSI_RULLAUS_KAARI}` : 'none';
   const muuttuneet = [];
-  rullat.forEach((rulla, k) => {
-    const merkki = teksti[k] ?? '';
-    if (rulla.merkki === merkki) return;
-    rulla.vanha.textContent = rulla.merkki ?? '';
-    rulla.uusi.textContent = merkki;
-    rulla.merkki = merkki;
-    muuttuneet.push(rulla);
-  });
-  if (!muuttuneet.length) return muuttuneet;
-  // Lähtöasento ilman siirtymää: vanha merkki vielä ikkunassa, uusi
-  // sen yläpuolella piilossa.
-  for (const rulla of muuttuneet) {
-    asetaRivi(rulla.vanha, 0, 'none');
-    asetaRivi(rulla.uusi, -100, 'none');
+  const hypyt = [];
+  let alemmatYsia = true;
+  for (let k = rullat.length - 1; k >= 0; k -= 1) {
+    const rulla = rullat[k];
+    const merkki = teksti[k] ?? '0';
+    const seuraava = String((Number(merkki) + 1) % 10);
+    const f = alemmatYsia ? osuus : 0;
+    if (rulla.merkki !== merkki) {
+      muuttuneet.push(rulla);
+      if (siirtyma !== 'none' && rulla.merkki != null) {
+        // Hyppy: vanha numero liukuu alas, uusi tulee ylhäältä.
+        rulla.vanha.textContent = rulla.merkki;
+        rulla.uusi.textContent = merkki;
+        asetaRivi(rulla.vanha, 0, 'none');
+        asetaRivi(rulla.uusi, -100, 'none');
+        hypyt.push(rulla);
+        rulla.merkki = merkki;
+        alemmatYsia = alemmatYsia && merkki === '9';
+        continue;
+      }
+      rulla.merkki = merkki;
+    }
+    rulla.vanha.textContent = merkki;
+    rulla.uusi.textContent = seuraava;
+    // Kolmen desimaalin tarkkuus riittää ruudulle ja pitää tyylin siistinä.
+    asetaRivi(rulla.vanha, Math.round(-f * 100000) / 1000, 'none');
+    asetaRivi(rulla.uusi, Math.round((1 - f) * 100000) / 1000, 'none');
+    alemmatYsia = alemmatYsia && merkki === '9';
   }
-  /*
-   * Yksi pakotettu asettelu koko ryhmälle: ilman lukua selain laskisi
-   * lähtö- ja loppuasennon samassa tyylilaskennassa eikä siirtymä
-   * lähtisi lainkaan (numerot vain vaihtuisivat).
-   */
-  void muuttuneet[0].uusi.offsetHeight;
-  const siirtyma = heti ? 'none' : `transform ${VUOSI_RULLAUS_MS}ms ${VUOSI_RULLAUS_KAARI}`;
-  for (const rulla of muuttuneet) {
-    asetaRivi(rulla.vanha, 100, siirtyma);
-    asetaRivi(rulla.uusi, 0, siirtyma);
+  if (hypyt.length) {
+    // Yksi pakotettu asettelu: ilman lukua siirtymä ei lähtisi lainkaan.
+    void hypyt[0].uusi.offsetHeight;
+    for (const rulla of hypyt) {
+      asetaRivi(rulla.vanha, 100, siirtyma);
+      asetaRivi(rulla.uusi, 0, siirtyma);
+    }
   }
   return muuttuneet;
 }
@@ -667,7 +750,7 @@ class Aikajana {
     this.kello.type = 'button';
     this.kello.title = 'Pysäytä tai jatka';
     this.kello.setAttribute('aria-live', 'off');
-    // Neljä rullaa, joissa kaksi päällekkäistä riviä (ks. rullaaVuosi).
+    // Neljä rullaa, joissa kaksi päällekkäistä riviä (ks. asetaMatkamittari).
     this.rullat = [];
     for (let k = 0; k < 4; k += 1) {
       const rulla = solmu('span', 'vuosi-numero');
@@ -698,6 +781,7 @@ class Aikajana {
     // 4. Ilmiöpaneeli
     this.paneeli = solmu('div', 'aikajana-ilmio');
     this.paneeli.hidden = true;
+    this.kytkeRaahaus();
 
     // 3. Filminauha
     this.nauha = solmu('div', 'aikajana-nauha');
@@ -784,9 +868,18 @@ class Aikajana {
       width: 2 * TUMMENNUKSEN_ULOTTUVUUS, height: 2 * TUMMENNUKSEN_ULOTTUVUUS, mask: 'url(#aikajana-maski)',
     }, this.tummennus);
     this.valokerros = el('g', { class: 'aikajana-valot' }, ui.svg);
-    this.valot = this.tapahtumat.map((t) => {
+    this.valot = this.tapahtumat.map((t, i) => {
       if (t.paalu || !Number.isFinite(t.x) || !Number.isFinite(t.y)) return null;
-      const g = el('g', { class: 'aikajana-valo' }, this.valokerros);
+      const g = el('g', { class: 'aikajana-valo', role: 'button', tabindex: '-1' }, this.valokerros);
+      /*
+       * LAMPPU ON NAPAUTETTAVA (omistaja 3.9.2026 ilta: *"kartan pisteet
+       * saisivat olla myös klikattavissa"*): napautus siirtyy pysäkkiin
+       * kuten kortin napautus (siirry) ja jää tauolle. Vain palava
+       * lamppu on näkyvissä ja ottaa osumia (css .aikajana-valo.palaa).
+       */
+      el('title', {}, g).textContent = `${t.vuosi}: ${t.otsikko}${t.henkilo ? `, ${t.henkilo}` : ''}`;
+      g.setAttribute('aria-label', `${t.vuosi}: ${t.otsikko}`);
+      g.addEventListener('click', (e) => { e.stopPropagation(); this.napautaValoa(i); });
       const sisus = el('g', { class: 'aikajana-valo-sisus' }, g);
       /*
        * NELJÄ YMPYRÄÄ, KAIKKI KESKIPISTEESSÄ (0,0) — ks. MERKIN_SADE.
@@ -1025,7 +1118,7 @@ class Aikajana {
     const { tila, syttyi, loppu } = aikajanaAskel(this.tila, dt, this.tapahtumat, this.reducedMotion
       ? { vuosiMs: 40 } : {});
     this.tila = tila;
-    this.naytaVuosi(Math.floor(tila.vuosi));
+    this.naytaVuosi(tila.vuosi);
     if (syttyi !== null) this.sytyta(syttyi);
     this.paivitaMittakaava();
     if (loppu) {
@@ -1056,16 +1149,24 @@ class Aikajana {
 
   /* ---------- näyttö ---------- */
 
+  /**
+   * Kello on matkamittari (asetaMatkamittari): käydessään se saa
+   * murto-osavuoden joka kehyksellä ja rullat nousevat jatkuvasti;
+   * pysäytettynä (siirry) numerot hyppäävät yhdellä liu'ulla, ja
+   * `heti` asettaa ne paikoilleen ilman liikettä (avaus, alustus,
+   * prefers-reduced-motion).
+   */
   naytaVuosi(vuosi, heti = false) {
-    const teksti = String(Math.max(0, Math.round(vuosi))).padStart(4, '0');
-    if (teksti === this.kelloTeksti) return;
-    // ELÄVÄ VAIHDOS = kello liikkui itse. Rakentaminen ja Alusta
-    // asettavat luvun `heti`-lipulla ilman rullausta, eikä
+    const arvo = this.reducedMotion ? Math.floor(Math.max(0, vuosi)) : Math.max(0, vuosi);
+    const teksti = String(Math.floor(arvo)).padStart(4, '0');
+    // ELÄVÄ VAIHDOS = kello liikkui itse kokonaisen vuoden. Rakentaminen
+    // ja Alusta asettavat luvun `heti`-lipulla ilman rullausta, eikä
     // ensimmäinen asetus (ei edellistä lukemaa) ole vaihdos lainkaan.
-    const elava = !heti && this.kelloTeksti !== undefined;
+    const vaihtui = teksti !== this.kelloTeksti;
+    const elava = vaihtui && !heti && this.kelloTeksti !== undefined;
     this.kelloTeksti = teksti;
-    rullaaVuosi(this.rullat, teksti, { heti: heti || this.reducedMotion });
-    this.kello.setAttribute('aria-label', `Vuosi ${Number(teksti)}`);
+    asetaMatkamittari(this.rullat, arvo, { heti: heti || this.reducedMotion, liuku: !this.kaynnissa });
+    if (vaihtui) this.kello.setAttribute('aria-label', `Vuosi ${Number(teksti)}`);
     // Ääni vain elävästä vaihdosta: avaus ja alustus ovat `heti`,
     // ja pysäytetty kello on hiljainen (kortista toiseen kelaus myös).
     // Vuosiluvun vaihdos NAKSAHTAA; kohahdus kuuluu keksinnölle
@@ -1271,6 +1372,76 @@ class Aikajana {
   }
 
   /**
+   * PANEELI ON RAAHATTAVA (omistaja 3.9.2026 ilta: *"tuota havainnekuvan
+   * paikkaa pitäisi saada liikuttaa"*). Veto mistä tahansa paneelin
+   * kohdasta siirtää sitä; alle kynnyksen jäävä liike on napautus, joka
+   * menee kuvalle (avaa jutun) kuten ennenkin. Siirto on CSS-muuttujina
+   * (--aikajana-paneeli-dx/-dy), jotta vuosipalkin alta mitattu
+   * yläreuna (asetaPaneelinYla) ja siirto eivät sotke toisiaan, ja se
+   * rajataan linssin alueelle. Paikka muistetaan istunnon ajan
+   * (PANEELIN_SIIRTO), jotta linssin uudelleenavaus ei palauta sitä.
+   */
+  kytkeRaahaus() {
+    const paneeli = this.paneeli;
+    this.asetaPaneelinSiirto(PANEELIN_SIIRTO.dx, PANEELIN_SIIRTO.dy);
+    let veto = null;
+    paneeli.addEventListener('pointerdown', (e) => {
+      if (e.button !== 0 && e.pointerType === 'mouse') return;
+      veto = { id: e.pointerId, x: e.clientX, y: e.clientY, dx: PANEELIN_SIIRTO.dx, dy: PANEELIN_SIIRTO.dy, liikkui: false };
+    });
+    // Liike ja irrotus kuunnellaan ikkunasta: kaappaus ei ole varma
+    // (kartta ottaa osoittimen omaan käyttöönsä), ja veto saa jatkua
+    // paneelin ulkopuolellakin.
+    const liikkuu = (e) => {
+      if (!veto || e.pointerId !== veto.id) return;
+      const dx = e.clientX - veto.x;
+      const dy = e.clientY - veto.y;
+      if (!veto.liikkui) {
+        if (Math.hypot(dx, dy) < PANEELIN_RAAHAUSKYNNYS) return;
+        veto.liikkui = true;
+        paneeli.classList.add('raahataan');
+        paneeli.setPointerCapture?.(e.pointerId);
+      }
+      e.preventDefault();
+      const raja = rajaaPaneelinSiirto(paneeli, this.juuri, veto.dx + dx, veto.dy + dy);
+      this.asetaPaneelinSiirto(raja.dx, raja.dy);
+    };
+    const lopeta = (e) => {
+      if (!veto || e.pointerId !== veto.id) return;
+      if (veto.liikkui) {
+        paneeli.classList.remove('raahataan');
+        paneeli.releasePointerCapture?.(e.pointerId);
+        // Napautus ei saa mennä kuvalle raahauksen päätteeksi.
+        this.raahattiin = true;
+        setTimeout(() => { this.raahattiin = false; }, 0);
+      }
+      veto = null;
+    };
+    const irrota = () => {
+      globalThis.removeEventListener?.('pointermove', liikkuu);
+      globalThis.removeEventListener?.('pointerup', paata);
+      globalThis.removeEventListener?.('pointercancel', paata);
+    };
+    const paata = (e) => { lopeta(e); if (!veto) irrota(); };
+    paneeli.addEventListener('pointerdown', () => {
+      globalThis.addEventListener?.('pointermove', liikkuu);
+      globalThis.addEventListener?.('pointerup', paata);
+      globalThis.addEventListener?.('pointercancel', paata);
+    });
+    this.irrotaRaahaus = irrota;
+    paneeli.addEventListener('click', (e) => {
+      if (this.raahattiin) { e.stopPropagation(); e.preventDefault(); }
+    }, true);
+  }
+
+  asetaPaneelinSiirto(dx, dy) {
+    PANEELIN_SIIRTO.dx = dx;
+    PANEELIN_SIIRTO.dy = dy;
+    this.paneeli.style.setProperty('--aikajana-paneeli-dx', `${Math.round(dx)}px`);
+    this.paneeli.style.setProperty('--aikajana-paneeli-dy', `${Math.round(dy)}px`);
+  }
+
+  /**
    * ILMIÖPANEELI ALKAA VUOSIPALKIN ALTA (omistaja 3.9.2026: *"havainne-
    * kuvan ruutu ei saisi olla kiinni vuosipalkissa ylhäällä"*). Palkin
    * korkeus riippuu kirjasimesta ja ruudun leveydestä, joten sen alareuna
@@ -1304,6 +1475,13 @@ class Aikajana {
     this.siirry(i);
   }
 
+  /** Lampun napautus: nykyinen pysäkki vain pysäyttää, muu siirtyy siihen. */
+  napautaValoa(i) {
+    if (!this.tapahtumat[i]) return;
+    if (i === this.tila.i) { this.pysayta(); return; }
+    this.siirry(i);
+  }
+
   /**
    * Siirtyminen pysäkkiin `i` tauolla. Lamput palavat pysäkkiin asti
    * ja sammuvat sen jälkeen, joten Jatka jatkaa juuri tästä kohdasta
@@ -1316,7 +1494,8 @@ class Aikajana {
     this.pysayta();
     this.loppu = false;
     this.juuri.classList.remove('lopussa');
-    this.tila = { vuosi: t.vuosi, i, viive: t.paalu ? AIKAJANA_PAALU_MS : AIKAJANA_VIIVE_MS };
+    const viive = t.paalu ? AIKAJANA_PAALU_MS : AIKAJANA_VIIVE_MS;
+    this.tila = { vuosi: t.vuosi, i, viive, viiveTaysi: viive };
     this.naytaVuosi(t.vuosi);
     this.valot.forEach((valo, k) => { if (valo) this.asetaValonTila(valo, k <= i, k === i); });
     if (this.valot[i]) this.valokerros.appendChild(this.valot[i].g);
@@ -1369,6 +1548,8 @@ class Aikajana {
     this.pysayta();
     suljeTiedeliite(this.ui);
     this.lopetaMusiikki();
+    this.irrotaRaahaus?.();
+    this.irrotaRaahaus = null;
     if (this.koonMuutos) globalThis.removeEventListener?.('resize', this.koonMuutos);
     this.koonMuutos = null;
     if (this.nappainkuuntelija) document.removeEventListener?.('keydown', this.nappainkuuntelija);

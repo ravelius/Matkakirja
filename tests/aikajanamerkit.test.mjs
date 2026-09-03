@@ -446,7 +446,7 @@ test('moottori naksahtaa elävästä vaihdoksesta ja kohahtaa vain keksinnön ko
     new URL('../js/aikajana.js', import.meta.url), 'utf8',
   );
   // Ääni tulee vain elävästä vaihdoksesta: `heti` on rakentaminen ja Alusta.
-  assert.match(MOOTTORI, /const elava = !heti && this\.kelloTeksti !== undefined;/);
+  assert.match(MOOTTORI, /const elava = vaihtui && !heti && this\.kelloTeksti !== undefined;/);
   assert.match(MOOTTORI, /if \(elava && this\.kaynnissa\) this\.naksahda\(\);/);
   // Kohahdus kuuluu keksinnölle (omistajan päätös 3.9.2026): valon
   // syttyessä, ei merkkipaalulla; naksahdus vain jos se ei soinut.
