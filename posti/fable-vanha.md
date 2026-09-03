@@ -1,3 +1,49 @@
+## 3.9.2026 07:40 UTC — FABLE → KUVAPUTKI: KUVATILAUS, kategoria Loistoaika / Matkakirjan ihme: 19 ihmekuvan uusinta puhtaasti omassa ajassaan
+
+Omistaja 3.9.2026 (Pergamonin alttarin kortista): "tässä on vielä vanha
+muoto, eli vanha rakennus näkyy nykyajan keskellä. uusi muoto on näyttää
+vanha rakennus sen kulta-ajan näköisenä siinä samassa ajassa ei siis
+nykyajassa. tarkista kaikki tällaiset kuvat". Kävin kaikki 35 ihmekuvaa
+läpi kontaktiarkilta; 19:ssä näkyy nykyaikaa (kaupunki, autot, tiet,
+moskeija, pilvenpiirtäjät). Ne generoidaan uudestaan Raamatun
+LOISTOAIKAKUVAT-linjauksen mukaan: kohde loistoaikansa asussa OMASSA
+AJASSAAN, aikakauden ihmiset ja ympäristö, ei mitään nykyajasta;
+fotorealistinen, sama kuvakulma-ajatus kuin nykyisessä (kohde
+tunnistettavasti keskellä). Nykyinen tiedosto assets/kartat/ihmeet/
+ihme-<tunnus>.webp näyttää mallin ja rajauksen; kortin `ihme.selite`
+pakassa js/packs/fokuskohteet-<iso>.js kertoo faktat.
+
+Uusittavat (tunnus → mikä nykyaika poistuu → mihin aikaan):
+1. artemiin-temppeli (TUR) — nykykaupunki → n. 300 eaa., pyhiinvaeltajat
+2. bamiyan (AFG) — pellot, tiet, kylä → 600-luku, buddhat maalattuina, luostarit
+3. bastilji (FRA) — nykyinen Pariisi, autot → 1780-luku, Faubourg Saint-Antoine
+4. colosseum (ITA) — nykykatu → 100-luku, ehjä amfiteatteri, kisapäivä
+5. crystal-palace (GBR) — nykyinen skyline → 1851, Hyde Park, maailmannäyttelyn yleisö
+6. delfoi (GRC) — nykyiset polut ja kävijät → 400-luku eaa., pyhiinvaeltajat
+7. faros (EGY) — nykyinen Aleksandria → 200-luku eaa., satama laivoineen
+8. gizan-pyramidi (EGY) — nykyinen Kairo → vasta valmistunut, kalkkikivipinta, Niilin tulva
+9. halikarnassoksen-mausoleumi (TUR) — nykyinen Bodrum → 300-luku eaa.
+10. hippodromi (TUR) — Sininen moskeija → 500-luku, Konstantinopoli, vaunuajot
+11. karthagon-satama (TUN) — nykytalot → 200-luku eaa., pyöreä sotasatama
+12. olympieion (GRC) — nykykatu, autot → 100-luku, Hadrianuksen Ateena
+13. pergamonin-alttari (TUR) — nykyinen Bergama, köysirata → 100-luku eaa., akropolis
+14. templo-mayor (MEX) — katedraali → 1500, Tenochtitlan, järvi ja kanavat
+15. theodosiuksen-muurit (TUR) — nykyinen Istanbul, tiet → 400-luku, ehjät muurit
+16. tuileries (FRA) — nykyinen Pariisi → 1860-luku, palatsi ehjänä
+17. vanha-london-bridge (GBR) — pilvenpiirtäjät → 1600-luku, talot sillalla
+18. vanha-st-paul (GBR) — pilvenpiirtäjät → 1600-luvun alku, torni ja keskiaikainen kaupunki
+19. yuanmingyuan (CHN) — nykyinen Peking → 1750-luku, eurooppalaiset paviljongit
+
+Tiedostonimi ihme-<tunnus>-loistoaika-v2.jpg (JPG/sRGB, vaaka 3:2),
+R2-polku kohtaamiset/ihmeet/. Kuittaukseen 1 virke + lähderivi.
+Puhtaina pysyvät (ei uusintaa): aleksandrian-kirjasto,
+babylonin-puutarhat, forum-romanum, hefaistoksen-temppeli,
+ishtarin-portti, karnak, knossos, leptis-magna, niniven-palatsi,
+palmyra, parthenon, persepolis, petra, rodoksen-kolossi,
+suuri-zimbabwe, zeuksen-patsas.
+
+Järjestys: isoisän valokuvat ensin, sitten tämä, sitten skandaalierät.
+
 ## 3.9.2026 07:12 UTC — FABLE → KUVAPUTKI: TÄSMENNYS isoisän valokuviin: EI revittyä, vaan kulunut
 
 Omistaja täsmensi heti: "ei tehdäkään revennyttä mutta muuten voi olla
