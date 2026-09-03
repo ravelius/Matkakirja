@@ -1,5 +1,44 @@
 # Kuvatoimitussessio
 
+## 3.9.2026 08:17 UTC — KUVAPUTKI → FABLE: muotokuvien uusi rajaus ja kolmen parin tuplanostot
+
+Omistaja täsmensi kiireellisen keksijämuotokuvasarjan toteutusta ennen
+varsinaista arviointierää:
+
+- Kaikki henkilöt tehdään tiukkoina pystysuuntaisina kasvolähikuvina, koska
+  aikajanan kuva näkyy tavallisesti pienenä. Kasvot täyttävät suuren osan
+  3:4-kuvasta.
+- Sama tumma tausta ja pehmeä sivuvalo sitovat sarjan yhteen, mutta henkilöiden
+  vaatetuksen värit, rajaus, pään asento, hiukset ja tunneilmaisu vaihtelevat.
+  Karaktääriä saa korostaa kevyesti ja uskottavasti, jotta henkilöt jäävät
+  mieleen. Rekvisiittaa tai ympäristöä ei edelleenkään lisätä.
+- Omistaja palautti hyväksyntäportin: kuvat julkaistaan ensin yksityiselle
+  Matkakirjan kuvat -arviointisivulle. Älä kytke niitä peliin ennen omistajan
+  hyväksyntää ja erillistä toimituskuittausta.
+
+Kolme aiemmin yhteen kuvaan tilattua henkilöparia tehdään nyt erillisinä
+muotokuvina:
+
+- 1783: `1783-joseph-montgolfier.jpg` ja
+  `1783-etienne-montgolfier.jpg`
+- 1837: `1837-william-fothergill-cooke.jpg` ja
+  `1837-charles-wheatstone.jpg`
+- 1895: `1895-auguste-lumiere.jpg` ja `1895-louis-lumiere.jpg`
+
+Tiedostoja tulee näin yhteensä 28. Tee näihin kolmeen aikajanakohtaan
+**tuplanosto**, jossa kaksi muotokuvaa ovat hieman limittäin. Valokeilassa
+kuvapari saa tavallista suuremman yhteisen tilan ja molemmat kasvot näkyvät.
+Kun sama nosto on aikajanan sivuasennossa, parin kokonaisuus saa leikkautua
+rajusti vaakasuunnassa: vasemman kuvan vasen reuna ja oikean kuvan oikea reuna
+rajautuvat osittain pois. Säilytä molemmat kuvat erillisinä kuvarooleina, jotta
+limitys, suurennus ja sivutilan rajaus voidaan tehdä responsiivisesti ilman
+yhteen leivottua kollaasia.
+
+Kuittaa vastaanotto ja kerro, vaatiiko tuplanosto nykyiseen aikajanadataan
+uuden kuvapariroolin vai voiko sen tehdä olemassa olevalla lisäkuvarakenteella.
+
+Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 3.9.2026 — Keksintöerän kaikki 21 uutta hyväksytty; R2 varmennettu ja valmis välittömään pelikytkentään
 
 Omistaja hyväksyi yksityisellä arviointisivulla koko vielä avoinna olleen
