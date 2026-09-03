@@ -2448,3 +2448,37 @@ Käyttäjän yksityisen arvioinnin tämänhetkinen hyväksytty määrä ei ole 1
 M1 näkyy jo pelin datan kautta, koska `js/packs/miniatyyrit.js` nimeää nämä neljä R2-tunnusta. Kytke H2:n hyväksytyt kuvat seuraavassa pelierässä `js/packs/historian-hetket.js`-kuvalistoihin ja niitä peilaaviin kaupunki-/maalehtien gallerioihin. Säilytä vanhat H1-tiedostot R2:ssa, mutta käytä hyväksyttyä H2-kaukoa vanhan kaukon tilalla Kolumbuksella, Magalhãesilla, Cookilla ja Amundsenilla; lisää hyväksytty H2-lähikuva listan alkuun Darwinille, Nansenille, Trafalgarille, Vasco da Gamalle ja Amundsenille. Älä kytke hylättyjä H2-versioita.
 
 Drive-välivarasto: `1X7Kj-nQnOdg_V5987YNK7Uewyoawa-ik` (13 tiedostoa, vanhoja versioita korvaamatta).
+
+## 3.9.2026 00:20 UTC — KUVAPUTKI → FABLE: 34 hyväksyttyä historian kuvaa R2:ssa
+
+Omistaja hyväksyi yksityisellä Matkakirjan kuvat -sivulla 34 uutta
+fotorealistista historian kuvaa: 30 vaakaformaattista lähi-/laajakuvaa
+ja neljä oikeilla lehtinimillä tehtyä pystykuvaa (The Daily Graphic,
+Verdens Gang, Tidens Tegn ja The Times).
+
+Kuvaputki siirsi VAIN nämä hyväksytyt versiot polkuun
+`kohtaamiset/historian-hetket/<tiedostonimi>` aiempia versioita
+korvaamatta. GitHub Actions -ajo 33699084021 onnistui kokonaan:
+Drive-lähteen SHA-256, JPEG-mitat, fyysisesti upotettu sRGB-ICC, MIME,
+CORS ja julkinen R2-takaisinluku tarkistettiin jokaiselle tiedostolle
+tavutasolla. Työnkulun commit on
+`be877a60c1dd414fa23ef3b65a906d1a10503352`. Drive-välivarasto on
+`1KMl7iu4me_MvpWHt1zPxdci1amE4zHS3`.
+
+Kytke pelin nykyiseen H1/H2-dataan hyväksytyt photo-v3-lähi- ja
+laajakuvat sekä käyttäjän hyväksymät uudet, yksilöihin nojaavat
+kuvatekstit. Lisää myös hyväksytyt lehtikuvat omaksi lehtiroolikseen
+Titanic-, Nansen-, Amundsen- ja Trafalgar-hetkiin. Uudet aiheet, joilla
+ei vielä ole pelitietuetta, ovat Kolumbuksen Portugalin rahoitusyritys
+1484, Santa Fen sopimus 1492, Röntgenin käsikuva 1895, Einsteinin
+patenttitoimisto 1905 ja Wrightien lento 1903. Nykyiset kymmenen
+meren-/löytöretkihetkeä saivat molemmat photo-v3-kuvat; Roskilden
+hyväksytyn kuvan tunnuksessa vuosi on arkeologisen referenssin mukaan
+1040.
+
+Kuvatekstien auktoritatiivinen lähde on yksityisen arviointisivun
+`lib/unified-images.ts` (commit
+`0b18ee537871a1e259633212994ea4da54b91e40`). Älä käytä vanhoja
+kuvailevia H1/H2-tekstejä photo-v3-kuvien kanssa. Kuittaa tähän, kun
+peliviitteet, lehtisivut ja testit on julkaistu mainiin. Ei kuvadataa
+eikä salaisuuksia postiin.
