@@ -13,6 +13,7 @@ import { readFileSync } from 'node:fs';
 
 import {
   aikajanaAskel, asetaMatkamittari, rajaaPaneelinSiirto, PANEELIN_RAAHAUSKYNNYS,
+  rajaaPaneelinKoko, PANEELIN_KOKO_MIN, PANEELIN_KOKO_MAX,
   AIKAJANA_TAUON_OSUUS, VUOSI_RULLAUS_MS, AIKAJANA_NAKSU_VALI_MS,
   AIKAJANA_VIIVE_MS, AIKAJANA_PAALU_MS, AIKAJANA_TAUKO_HIMMENNYS, AIKAJANA_VUOSI_MS,
   aikajananNopeus, AIKAJANA_POHJANOPEUS, AIKAJANA_KIIHTYMISMATKA, AIKAJANA_ALIASKEL_MS,
@@ -287,6 +288,25 @@ test('pysäytetyn kellon hyppy rullaa muuttuneet numerot yhdellä liikkeellä', 
   assert.equal(rullat[3].vanha.style.transform, 'translateY(-10%)');
 });
 
+test('paneelin koko nipistämällä: kerroin rajataan vakioväliin ja linssin leveyteen', () => {
+  assert.ok(PANEELIN_KOKO_MIN < 1 && PANEELIN_KOKO_MAX > 1.5);
+  assert.equal(rajaaPaneelinKoko(1), 1);
+  assert.equal(rajaaPaneelinKoko(0.1), PANEELIN_KOKO_MIN);
+  assert.equal(rajaaPaneelinKoko(9), PANEELIN_KOKO_MAX);
+  assert.equal(rajaaPaneelinKoko(NaN), 1);
+  // Paneeli 300 px kertoimella 1 → perusleveys 300; linssi 800 px → enintään (800-16)/300.
+  assert.ok(Math.abs(rajaaPaneelinKoko(5, { leveys: 300, kokoNyt: 1, juuriLeveys: 500 }) - 484 / 300) < 1e-9);
+  assert.equal(rajaaPaneelinKoko(1.5, { leveys: 300, kokoNyt: 1, juuriLeveys: 800 }), 1.5);
+  assert.equal(rajaaPaneelinKoko(5, { leveys: 300, kokoNyt: 1, juuriLeveys: 5000 }), PANEELIN_KOKO_MAX);
+  // Kytkentä: kaksi osoitinta nipistää, rulla mitoittaa, koko muistetaan laitteella.
+  assert.match(MOOTTORI, /if \(sormet\.size >= 2\) \{ aloitaNipistys\(\); return; \}/);
+  assert.match(MOOTTORI, /paneeli\.addEventListener\('wheel', \(e\) => \{\n\s*e\.preventDefault\(\);\n\s*e\.stopPropagation\(\);/);
+  assert.match(MOOTTORI, /localStorage\?\.setItem\(PANEELIN_MUISTIAVAIN/);
+  const CSS = readFileSync(new URL('../css/aikajana.css', import.meta.url), 'utf8');
+  assert.match(CSS, /width: calc\(var\(--aikajana-paneeli-leveys\) \* var\(--aikajana-paneeli-koko, 1\)\)/);
+  assert.match(CSS, /\.aikajana-ilmio\.nipistetaan \{ transition: none; \}/);
+});
+
 test('paneelin siirto rajataan linssin alueelle ja raahauskynnys erottaa napautuksen', () => {
   assert.ok(PANEELIN_RAAHAUSKYNNYS >= 4 && PANEELIN_RAAHAUSKYNNYS <= 12);
   const laatikko = (left, top, width, height) => ({ getBoundingClientRect: () => ({ left, top, width, height, right: left + width, bottom: top + height }) });
@@ -469,7 +489,7 @@ test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa se
   // Lamput ovat napautettavia (omistaja 3.9.2026) ja paneeli raahattava.
   assert.match(MOOTTORI, /g\.addEventListener\('click', \(e\) => \{ e\.stopPropagation\(\); this\.napautaValoa\(i\); \}\)/);
   assert.match(MOOTTORI, /napautaValoa\(i\) \{[\s\S]{0,200}this\.siirry\(i\);/);
-  assert.match(MOOTTORI, /kytkeRaahaus\(\) \{[\s\S]{0,2500}rajaaPaneelinSiirto\(paneeli, this\.juuri/);
+  assert.match(MOOTTORI, /kytkeRaahaus\(\) \{[\s\S]{0,6000}rajaaPaneelinSiirto\(paneeli, this\.juuri/);
   const CSS = readFileSync(new URL('../css/aikajana.css', import.meta.url), 'utf8');
   assert.match(CSS, /\.aikajana-valo\.palaa \{ pointer-events: auto; cursor: pointer; \}/);
   assert.match(CSS, /translate\(var\(--aikajana-paneeli-dx, 0px\), var\(--aikajana-paneeli-dy, 0px\)\)/);
@@ -748,8 +768,8 @@ test('havainnekuvapaneelin ristihäivytyksessä on liikettä ja korkeus liukuu',
   // Ristihäivytys ajetaan linssin omalla kaarella, ei selaimen ease-oletuksella.
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu \{[\s\S]*?opacity var\(--aikajana-kesto\) var\(--aikajana-kaari\),\s*transform var\(--aikajana-kesto\) var\(--aikajana-kaari\);/);
   // Korkeus liukuu, mutta raahaus ei saa liukua perässä.
-  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio \{ transition: height var\(--aikajana-kesto\) var\(--aikajana-kaari\); \}/);
-  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio\.raahataan \{ transition: none; \}/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio \{ transition: height var\(--aikajana-kesto\) var\(--aikajana-kaari\), width 180ms var\(--aikajana-kaari\); \}/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio\.raahataan, \.aikajana-ilmio\.nipistetaan \{ transition: none; \}/);
 });
 
 test('paneelinvaihto pakottaa lähtöarvon ja liuuttaa korkeuden vanhasta uuteen', () => {

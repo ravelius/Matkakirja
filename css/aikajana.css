@@ -176,7 +176,15 @@
   touch-action: none;
   user-select: none;
   -webkit-user-select: none;
-  width: min(21rem, 46%);
+  /*
+   * NIPISTÄMÄLLÄ SUUREMMAKSI TAI PIENEMMÄKSI (omistaja 3.9.2026 ilta:
+   * *"nipistämällä kuva suurenee tai pienenee. Näin eri kokoisilla
+   * näytöillä pelaaja voi itse asetella sopivaan kokoon"*). Perusleveys
+   * on muuttuja, jota mediakyselyt vaihtavat; kerroin tulee js
+   * kytkeRaahaus (kaksi sormea tai hiiren rulla) ja muistetaan.
+   */
+  --aikajana-paneeli-leveys: min(21rem, 46%);
+  width: calc(var(--aikajana-paneeli-leveys) * var(--aikajana-paneeli-koko, 1));
   min-height: 9rem;
   border-radius: 12px;
   border: 1px solid var(--aikajana-reuna);
@@ -196,8 +204,8 @@
  * Raahaus on `transform`-muuttujissa eikä siinä ole siirtymää, joten
  * paneeli seuraa osoitinta yhä kehyksen tarkkuudella.
  */
-.aikajana-ilmio { transition: height var(--aikajana-kesto) var(--aikajana-kaari); }
-.aikajana-ilmio.raahataan { transition: none; }
+.aikajana-ilmio { transition: height var(--aikajana-kesto) var(--aikajana-kaari), width 180ms var(--aikajana-kaari); }
+.aikajana-ilmio.raahataan, .aikajana-ilmio.nipistetaan { transition: none; }
 .aikajana-ilmio-sivu {
   position: absolute;
   inset: 0;
@@ -639,14 +647,14 @@
   .aikajana-ylarivi { gap: 0.45rem; padding: 0.3rem 0.45rem; }
   .aikajana-otsikko { display: none; }
   .aikajana-paikka { max-width: 7rem; font-size: 0.78rem; }
-  .aikajana-ilmio { top: 3.6rem; width: min(17rem, 62%); }
+  .aikajana-ilmio { top: 3.6rem; --aikajana-paneeli-leveys: min(17rem, 62%); }
   .aikajana-ilmio-selite { font-size: 0.82rem; }
   .aikajana-nappi { padding: 0.28rem 0.42rem; font-size: 0.68rem; }
 }
 
 /* ISO NÄYTTÖ: ilmiökuva selvästi isompana (omistaja 3.9.2026). */
 @media (min-width: 1200px) {
-  .aikajana-ilmio { width: min(34rem, 44%); }
+  .aikajana-ilmio { --aikajana-paneeli-leveys: min(34rem, 44%); }
 }
 
 @media (prefers-reduced-motion: reduce) {

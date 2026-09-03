@@ -282,8 +282,46 @@ const PANEELIN_DEKOODAUSKATTO_MS = 250;
 const PANEELIN_HAIVYTYS_MS = 700;
 /** Raahaus alkaa vasta tämän liikkeen jälkeen; sitä lyhyempi on napautus. */
 export const PANEELIN_RAAHAUSKYNNYS = 6;
-/** Paneelin siirto muistetaan istunnon ajan (kytkeRaahaus). */
-const PANEELIN_SIIRTO = { dx: 0, dy: 0 };
+/**
+ * Paneelin siirto ja koko muistetaan laitteella (kytkeRaahaus):
+ * omistaja 3.9.2026 ilta: "eri kokoisilla näytöillä pelaaja voi itse
+ * asetella sopivaan kokoon". Selaimen muisti on mukavuus, ei tila —
+ * puuttuessaan oletus.
+ */
+const PANEELIN_SIIRTO = { dx: 0, dy: 0, koko: 1 };
+const PANEELIN_MUISTIAVAIN = 'matkakirja-linssi-paneeli';
+export const PANEELIN_KOKO_MIN = 0.55;
+export const PANEELIN_KOKO_MAX = 2.4;
+/** Hiiren rullan askel: yksi pykälä (100 yksikköä) ≈ 12 % koon muutos. */
+export const PANEELIN_RULLAN_HERKKYYS = 0.0012;
+
+function lataaPaneelinMuisti() {
+  try {
+    const m = JSON.parse(globalThis.localStorage?.getItem(PANEELIN_MUISTIAVAIN) ?? 'null');
+    if (m && Number.isFinite(m.koko)) PANEELIN_SIIRTO.koko = rajaaPaneelinKoko(m.koko);
+    if (m && Number.isFinite(m.dx) && Number.isFinite(m.dy)) { PANEELIN_SIIRTO.dx = m.dx; PANEELIN_SIIRTO.dy = m.dy; }
+  } catch { /* ei muistia */ }
+}
+
+function tallennaPaneelinMuisti() {
+  try { globalThis.localStorage?.setItem(PANEELIN_MUISTIAVAIN, JSON.stringify(PANEELIN_SIIRTO)); } catch { /* ei muistia */ }
+}
+
+/**
+ * Rajaa paneelin kokokertoimen: vakioväli ja lisäksi paneelin on
+ * mahduttava linssin alueelle (leveys nyt / kerroin nyt = perusleveys).
+ *
+ * @param {number} koko haluttu kerroin
+ * @param {{leveys?:number, kokoNyt?:number, juuriLeveys?:number}} [mitat]
+ */
+export function rajaaPaneelinKoko(koko, mitat = {}) {
+  let ylaraja = PANEELIN_KOKO_MAX;
+  const { leveys, kokoNyt, juuriLeveys } = mitat;
+  if (leveys > 0 && kokoNyt > 0 && juuriLeveys > 0) {
+    ylaraja = Math.min(ylaraja, Math.max(PANEELIN_KOKO_MIN, (juuriLeveys - 16) / (leveys / kokoNyt)));
+  }
+  return Math.min(Math.max(Number.isFinite(koko) ? koko : 1, PANEELIN_KOKO_MIN), ylaraja);
+}
 
 /**
  * Rajaa paneelin siirron niin, että paneeli pysyy linssin alueella
@@ -1558,16 +1596,63 @@ class Aikajana {
    */
   kytkeRaahaus() {
     const paneeli = this.paneeli;
+    lataaPaneelinMuisti();
+    this.asetaPaneelinKoko(PANEELIN_SIIRTO.koko);
     this.asetaPaneelinSiirto(PANEELIN_SIIRTO.dx, PANEELIN_SIIRTO.dy);
     let veto = null;
+    /*
+     * NIPISTYS (omistaja 3.9.2026 ilta: *"nipistämällä kuva suurenee tai
+     * pienenee"*): kaksi osoitinta paneelilla mitoittavat sen; veto
+     * keskeytyy nipistyksen ajaksi eikä jatku, kun toinen sormi nousee.
+     * Hiirellä sama tehdään rullalla paneelin päällä (alla).
+     */
+    const sormet = new Map();
+    let nipistys = null;
+    const aloitaNipistys = () => {
+      const [a, b] = [...sormet.values()];
+      nipistys = { etaisyys: Math.max(1, Math.hypot(a.x - b.x, a.y - b.y)), koko: PANEELIN_SIIRTO.koko };
+      veto = null;
+      paneeli.classList.add('nipistetaan');
+    };
     paneeli.addEventListener('pointerdown', (e) => {
       if (e.button !== 0 && e.pointerType === 'mouse') return;
+      sormet.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (sormet.size >= 2) { aloitaNipistys(); return; }
       veto = { id: e.pointerId, x: e.clientX, y: e.clientY, dx: PANEELIN_SIIRTO.dx, dy: PANEELIN_SIIRTO.dy, liikkui: false };
     });
+    const nipista = (e) => {
+      if (!nipistys || !sormet.has(e.pointerId)) return false;
+      sormet.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (sormet.size < 2) return true;
+      const [a, b] = [...sormet.values()];
+      const etaisyys = Math.hypot(a.x - b.x, a.y - b.y);
+      e.preventDefault();
+      this.asetaPaneelinKoko(this.rajattuPaneelinKoko(nipistys.koko * (etaisyys / nipistys.etaisyys)));
+      return true;
+    };
+    const paataSormi = (e) => {
+      sormet.delete(e.pointerId);
+      if (nipistys && sormet.size < 2) {
+        nipistys = null;
+        paneeli.classList.remove('nipistetaan');
+        this.raahattiin = true;
+        setTimeout(() => { this.raahattiin = false; }, 0);
+        tallennaPaneelinMuisti();
+      }
+    };
+    paneeli.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const kerroin = Math.exp(-e.deltaY * PANEELIN_RULLAN_HERKKYYS);
+      this.asetaPaneelinKoko(this.rajattuPaneelinKoko(PANEELIN_SIIRTO.koko * kerroin));
+      clearTimeout(this.rullanAjastin);
+      this.rullanAjastin = setTimeout(tallennaPaneelinMuisti, 300);
+    }, { passive: false });
     // Liike ja irrotus kuunnellaan ikkunasta: kaappaus ei ole varma
     // (kartta ottaa osoittimen omaan käyttöönsä), ja veto saa jatkua
     // paneelin ulkopuolellakin.
     const liikkuu = (e) => {
+      if (nipista(e)) return;
       if (!veto || e.pointerId !== veto.id) return;
       const dx = e.clientX - veto.x;
       const dy = e.clientY - veto.y;
@@ -1582,6 +1667,7 @@ class Aikajana {
       this.asetaPaneelinSiirto(raja.dx, raja.dy);
     };
     const lopeta = (e) => {
+      paataSormi(e);
       if (!veto || e.pointerId !== veto.id) return;
       if (veto.liikkui) {
         paneeli.classList.remove('raahataan');
@@ -1589,6 +1675,7 @@ class Aikajana {
         // Napautus ei saa mennä kuvalle raahauksen päätteeksi.
         this.raahattiin = true;
         setTimeout(() => { this.raahattiin = false; }, 0);
+        tallennaPaneelinMuisti();
       }
       veto = null;
     };
@@ -1597,7 +1684,7 @@ class Aikajana {
       globalThis.removeEventListener?.('pointerup', paata);
       globalThis.removeEventListener?.('pointercancel', paata);
     };
-    const paata = (e) => { lopeta(e); if (!veto) irrota(); };
+    const paata = (e) => { lopeta(e); if (!veto && !sormet.size) irrota(); };
     paneeli.addEventListener('pointerdown', () => {
       globalThis.addEventListener?.('pointermove', liikkuu);
       globalThis.addEventListener?.('pointerup', paata);
@@ -1614,6 +1701,21 @@ class Aikajana {
     PANEELIN_SIIRTO.dy = dy;
     this.paneeli.style.setProperty('--aikajana-paneeli-dx', `${Math.round(dx)}px`);
     this.paneeli.style.setProperty('--aikajana-paneeli-dy', `${Math.round(dy)}px`);
+  }
+
+  /** Kokokerroin rajattuna linssin alueeseen (mitat ruudulta). */
+  rajattuPaneelinKoko(koko) {
+    const leveys = this.paneeli?.getBoundingClientRect?.().width;
+    const juuriLeveys = this.juuri?.getBoundingClientRect?.().width;
+    return rajaaPaneelinKoko(koko, { leveys, kokoNyt: PANEELIN_SIIRTO.koko, juuriLeveys });
+  }
+
+  asetaPaneelinKoko(koko) {
+    PANEELIN_SIIRTO.koko = koko;
+    this.paneeli.style.setProperty('--aikajana-paneeli-koko', koko.toFixed(3));
+    // Suurempi paneeli ei saa työntyä linssin alueen yli.
+    const raja = rajaaPaneelinSiirto(this.paneeli, this.juuri, PANEELIN_SIIRTO.dx, PANEELIN_SIIRTO.dy);
+    if (raja.dx !== PANEELIN_SIIRTO.dx || raja.dy !== PANEELIN_SIIRTO.dy) this.asetaPaneelinSiirto(raja.dx, raja.dy);
   }
 
   /**

@@ -3143,6 +3143,15 @@ export const RAAMATTU = {
           + 'paikkamerkki); tilaus postissa 3.9. 21:12 UTC, kaanon '
           + 'docs/tarina.md, sama henkilo kuin Kanton/Bombay. Kytketaan, kun '
           + 'omistaja on hyvaksynyt ja kuva on R2:ssa.',
+        'HAVAINNEKUVAPANEELI NIPISTAMALLA SOPIVAN KOKOISEKSI (omistaja '
+          + '3.9.2026 ilta, sanatarkasti: "Tee kartan havainnekuvassa lisaksi '
+          + 'myos suurennettava. Eli nipistamalla kuva suurenee tai pienenee. '
+          + 'Nain eri kokoisilla naytoilla pelaaja voi itse asetella sopivaan '
+          + 'kokoon"): kaksi sormea paneelilla mitoittaa sen (kerroin '
+          + '0.55-2.4, aina linssin alueen sisalla), hiirella sama rullalla '
+          + 'paneelin paalla (kartta ei zoomaa); koko ja paikka muistetaan '
+          + 'laitteella (selaimen muisti, oletus jos puuttuu). Toteutettu '
+          + 'v1513.',
         'LAMPUT TUMMUVAT, KARTTA TUMMEMPI, VINJETTI IKKUNAN REUNOILLA '
           + '(omistaja 3.9.2026 ilta, sanatarkasti: "pisteet saisivat tummua '
           + 'enemman alkuleimahduksen jalkeen, niin uusi paikka erottuu '
