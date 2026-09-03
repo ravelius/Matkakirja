@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1514, teksti: 'Nostojen kuvateksti kuvan levyiseksi kaikissa korteissa' },
   { v: 1513, teksti: 'Linssi: pehmeat liikkeet, Tiedeliite kaikille keksijoille' },
   { v: 1512, teksti: 'Linssi: juokseva vuosimittari, lamput ja paneeli' },
   { v: 1511, teksti: 'Tiedeliite: Wattin luonnekuva; isoisan kuva vain lennolle' },

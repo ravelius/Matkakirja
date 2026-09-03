@@ -164,3 +164,10 @@ test('keksinnöt: karusellilla on oikeaa sisältöä (kahden kuvan pysäkki)', (
     }
   }
 });
+
+test('nostokuvan kehys kutistuu kuvan levyiseksi eikä kuvateksti määrää leveyttä (omistaja 3.9.2026)', () => {
+  const css = readFileSync(new URL('../css/fokusnosto.css', import.meta.url), 'utf8');
+  assert.match(css, /\.fokusnosto-kuva \{[\s\S]{0,900}width: fit-content;\s*max-width: 100%;\s*margin: 0 auto 0\.55rem;/);
+  assert.match(css, /\.fokusnosto-kuvateksti \{[\s\S]{0,400}width: 0;\s*min-width: 100%;/);
+  assert.match(css, /\.fokusnosto-valokuva \{[\s\S]{0,200}margin: 0\.8rem auto 0 0;/);
+});

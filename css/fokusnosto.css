@@ -154,7 +154,19 @@
 /* Kuva on kortin ensimmäinen iso asia, kuten fokusvirran kortilla:
    nosto myytiin kuvalla, joten kuva näkyy heti kunnolla. */
 .fokusnosto-kuva {
-  margin: 0 0 0.55rem;
+  /*
+   * KUVATEKSTI EI SAA OLLA KUVAA LEVEÄMPI (omistaja 3.9.2026 ilta,
+   * Visočican skandaalikortti). Kuva kapenee korkeuskattoon (alla
+   * max-height) ja keskittyy, joten kehys kutistuu kuvan levyiseksi
+   * (fit-content, sama kaava kuin saapumiskortin kuvakotelossa) ja
+   * kuvateksti sekä lähderivi alkavat ja päättyvät kuvan reunoissa.
+   * Vaakakuva täyttää palstan, jolloin mikään ei muutu. Koskee kaikkia
+   * kortteja, jotka piirtävät kuvan piirraNostonKuva-funktiolla
+   * (nostot, skandaalit, syvennystarinat, Tiedeliite).
+   */
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 0.55rem;
 }
 
 .fokusnosto-kuva[hidden] { display: none; }
@@ -214,6 +226,11 @@ button.fokusnosto-kuvanappi:focus-visible { background: transparent; }
 }
 
 .fokusnosto-kuvateksti {
+  /* Teksti ei saa määrätä kehyksen leveyttä (fit-content laskisi sen
+     pisimmän rivin mukaan): leveys 0 sisäiseen mitoitukseen, sitten
+     täysi kuvan leveys. */
+  width: 0;
+  min-width: 100%;
   margin: 0.3rem 0 0;
   font-size: 0.8rem;
   line-height: 1.4;
@@ -238,7 +255,8 @@ button.fokusnosto-kuvanappi:focus-visible { background: transparent; }
  */
 .fokusnosto-valokuva {
   max-width: 62%;
-  margin: 0.8rem 0 0;
+  /* Vasempaan laitaan, kuvan levyisenä (ks. .fokusnosto-kuva). */
+  margin: 0.8rem auto 0 0;
 }
 
 .fokusnosto-valokuva img { max-height: 20vh; }

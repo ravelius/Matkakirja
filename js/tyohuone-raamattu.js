@@ -3131,7 +3131,16 @@ export const RAAMATTU = {
           + 'samanlaiset kehykset kuin henkilokuvalla"): Tiedeliitteen '
           + 'havainnekuvat saavat saman kehyksen kuin kasvokuvat, ja '
           + '(omistaja: "kuvateksti ei saa olla leveampi kuin kuva") '
-          + 'kuvateksti ja lahderivi ovat tasmalleen kuvan levyisia.',
+          + 'kuvateksti ja lahderivi ovat tasmalleen kuvan levyisia. '
+          + 'SAMA SAANTO KAIKISSA NOSTOISSA (omistaja 4.9.2026 00:31, '
+          + 'Visocican skandaalikortti: "Tassa viela vanha taitto. Tutki '
+          + 'onko muissa sama ongelma"): juurisyy oli jaettu nostokuvan '
+          + 'tyyli (css/fokusnosto.css .fokusnosto-kuva) - kuva kapenee '
+          + 'korkeuskattoon mutta kuvateksti jai palstan levyiseksi; '
+          + 'kehys kutistuu nyt kuvan levyiseksi kaikissa korteissa, jotka '
+          + 'piirtavat kuvan piirraNostonKuva-funktiolla (nostot, '
+          + 'skandaalit, syvennystarinat, Tiedeliite, kakkoskuva). '
+          + 'Toteutettu v1514.',
         'KUVAPUTKEN PYYNNOT AINA KIIREELLISINA (omistaja 3.9.2026 ilta, '
           + 'sanatarkasti: "pyyda kuvaputkelta tahan joku pystymuotoinen '
           + 'isoisan matkustus kuva" ja "laita kiireellisena aina tallaiset '
