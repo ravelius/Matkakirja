@@ -1,0 +1,178 @@
+name: Vie hyväksytyt 28 keksijämuotokuvaa R2:een 2026-09-03
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/vie-hyvaksytyt-28-keksijamuotokuvaa-2026-09-03.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vie-hyvaksytyt-28-keksijamuotokuvaa-2026-09-03
+  cancel-in-progress: false
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      DRIVE_AVAIN: ${{ secrets.SAMIREIVINEN_DRIVE_API }}
+      R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_AMPARI: ${{ secrets.R2_BUCKET }}
+      JULKINEN: https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev
+
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Tarkista yhteydet
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$DRIVE_AVAIN" ] || puuttuu="$puuttuu SAMIREIVINEN_DRIVE_API"
+          [ -n "$R2_TILI" ] || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ] || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "$R2_AMPARI" ] || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Puuttuvat repository secretit:$puuttuu"
+            exit 1
+          fi
+
+      - name: Nouda Drivestä ja tarkista hyväksytyt JPG-kuvat
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'SKRIPTI'
+          import { mkdir, writeFile } from 'node:fs/promises';
+          import { createHash } from 'node:crypto';
+
+          const kuvat = [
+            ['1bpcAGdj3iuUjDl-zMNy-TnelL2JmwLHG', '1769-james-watt.jpg', '3f40684fb08e9c8bf8f2ffe0e136b6d8983d682dbd6777515649a5728e56d40e'],
+            ['1jz6CiSQk0cyu6WqCw5eVw6HY3IwIEdem', '1783-etienne-montgolfier.jpg', 'd222115be6a0022724a987df6978dfb2712805eabe14e4fa989c83abfb60c973'],
+            ['1Pl0UwwTrnsmqDz_Plc7kSahygUtITr22', '1783-joseph-montgolfier.jpg', '0d5eb8b0b0279ed23523fdb3ffe3abdceecc739e17f433743ad49a4e8cc09eea'],
+            ['1cmcrx7YZqaGUJYN-Ghf3WSIVaMfP7yAx', '1796-edward-jenner.jpg', '89fba2c4ee51e9f08e7a247368d388a3843e58bc66fff203024d12d0ebca1500'],
+            ['1hjeXImSAKmCf8MHUNoCwsm-tg-UFZ3NC', '1800-alessandro-volta.jpg', 'dbc0e0d8b9b6022caf986c31e79efccb87fc83a37353f2deb41e4ec98a603536'],
+            ['1GbO12TGTjs941r8RXtnEX3659Oeo6H-n', '1804-joseph-marie-jacquard.jpg', 'bcc65cfc7aa17a2f2f75db1eaa462be921f071667298209b4396dcb2e1a34781'],
+            ['15find5dHutMNgGbCYL7d7msIvHfoqu1z', '1825-george-stephenson.jpg', 'ac82503c006981f14aa43c9fbcebfc5d41ffebefaf8655829b65e94787d04233'],
+            ['1FOywvIQJZI-o-YewlZNFoXJFFWWgRPzK', '1837-charles-wheatstone.jpg', 'ff29a49c3f80d0e42f75d978ccf64c45c2fd96de7b86369e27de5caa71990684'],
+            ['1-_ehZujAcRNevq4W10sIKyPy-VIhgAlV', '1837-william-fothergill-cooke.jpg', 'fc0c5453d5fe351c6bfc3f846296f6e5984a2a000e69f49e21c5342b8c7f4cf2'],
+            ['1kW8VJxvRTkcTWKQ5ZMB2bkjX5DfaxhBN', '1839-louis-daguerre.jpg', 'f280d93ff6d2c1b4322b857c4b7eed0f93e179be0f3e35765d120f0e251c928a'],
+            ['1Bh07BRLdyftO1beK5fiWSPy5245Irkmq', '1856-henry-bessemer.jpg', '0686b35664415c03963f273a707a67a0916659e72360718ee564d981bad847c1'],
+            ['1q1q7POKLQNvgVWFDUW7QMbhochq4Cx3P', '1867-alfred-nobel.jpg', '2129082b329b0f05dd8a13029129594047d765197d3adb37a2dd85698e84eae5'],
+            ['1lDHP4QkZiyape7sef0OdJggPIW3cuS0w', '1869-dmitri-mendeleev.jpg', 'b837a2d9f8eb8e2384a0f5ee9dbe01a1243085d49268410ab4ac63ea7545af37'],
+            ['1E77tuNtrYM6f03EXBZx_cL1dCwuMEsBl', '1876-nikolaus-otto.jpg', 'ac202fdf3b697d06a15fdd4659d2358418c7605d0b294e01a4de23f4c030ab60'],
+            ['1CWaAaxOKTcgyYviaLcAa9HpJh_TqfcYi', '1879-werner-von-siemens.jpg', '4ada35d934a3c1467ee6118803a262118383a0054aa79ee94bc677d97bc7f21f'],
+            ['1XD56e62Rpy5FuUrs6ikD1N5jInDtset-', '1885-louis-pasteur.jpg', '739f9360decf5a0ea15cc3d6c3ab36c5ec0c6f680334a2891fdcca6dbad7db16'],
+            ['1S40n9vpILRfqgQyhUoDdLPFB5i_EwPR2', '1886-carl-benz.jpg', '69764498f78ffbcb56000e99c0c3507c3bb724fb9bc405eceb06361c807c1687'],
+            ['1kzcBCFZ8bGZ6nXR7LL2VrjMiQ_4yLKPt', '1888-heinrich-hertz.jpg', '4d745a9678daa55301ba90d26b33d56e0d06e9850d125824f2de796eac6d4c6e'],
+            ['1RZcG3UPTlub2ee9z8kaKRaUm2epk_4OB', '1895-auguste-lumiere.jpg', '2da0dbf39adb32beb60937774ab543db30505d8d60d92e720122032cb27bead8'],
+            ['1oUrkOKR5AjpN-Seom-0KCph9S4_XVzqd', '1895-guglielmo-marconi.jpg', 'ca3d8029523f5d1067441d7ddac75107cbb6542155d4789097289c5e3e787f37'],
+            ['1KKIbruKQvrjqisb6y4S_JkS67su4FtlS', '1895-louis-lumiere.jpg', '0eba48f320c4bc14200319b736b8c112999ddeec7ed2687d1894409d2dc25015'],
+            ['1VneZ1nfvhoPzySu3EjoQhgZsu_Qi2BVl', '1895-wilhelm-rontgen.jpg', 'fd28aa8a9a3a8eeece6d60c851771540f6c495abd812b039110560a1e5d462a8'],
+            ['1R_rq0fGGS8EmW7fj6sDOWasbJCq_HtwJ', '1897-rudolf-diesel.jpg', 'b22f93d3ddc84ebd899cff5af7923b5e71e7594941b31b103e2bc737e2ca5b38'],
+            ['1awOJZNJt1mQMyQ2-91jdqsyQizxSEBQh', '1898-marie-curie.jpg', '84c6a68a19d645f868c3e0397a49594dc7c6e873138470bf455c937051ad5660'],
+            ['1SgCZC7u3J_m_tzxyZ8kmsOfDLuoXmqGb', '1900-ferdinand-von-zeppelin.jpg', '582353fc9cb5cb6c873bc28641600288f06a39f9097972a49e43bced1d1b5b9c'],
+            ['1jqa1LDnfeivaqjKnbueyRYTDFGg731Y_', '1909-louis-bleriot.jpg', '751dacc0ef8ed1dc838a64e67adedc9d8dcd175df50f81888f9ec1ba9275d1ff'],
+            ['16WWekZBQnyop_xCB1uuZo9HeSJemKZNU', '1926-john-logie-baird.jpg', '4fe63d7cc1f80def1245e3a38a9fb764d2a9de0ea06ffad4aa384e9b8a220a87'],
+            ['13Bgz-rHk4-lgXe673w_n7Inb2MwxxAOf', '1928-alexander-fleming.jpg', '73a2e3f8724b59a86a50871f64e564387c324db537be421663eabad17ba80dcb'],
+          ];
+
+          function jpegMitat(data) {
+            if (data[0] !== 0xff || data[1] !== 0xd8) throw new Error('ei ole JPEG');
+            let i = 2;
+            while (i + 9 < data.length) {
+              if (data[i] !== 0xff) { i += 1; continue; }
+              const merkki = data[i + 1];
+              if (merkki === 0xd8 || merkki === 0xd9) { i += 2; continue; }
+              const pituus = data.readUInt16BE(i + 2);
+              if (pituus < 2 || i + 2 + pituus > data.length) break;
+              if ([0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf].includes(merkki)) {
+                return { korkeus: data.readUInt16BE(i + 5), leveys: data.readUInt16BE(i + 7) };
+              }
+              i += 2 + pituus;
+            }
+            throw new Error('JPEG-mittoja ei löytynyt');
+          }
+
+          await mkdir('r2-out', { recursive: true });
+          for (const [id, nimi, odotettuSha] of kuvat) {
+            if (!nimi.endsWith('.jpg')) throw new Error(`${nimi}: vain JPG sallitaan`);
+
+            const kohdeUrl = `${process.env.JULKINEN}/aikajana/keksinnot/muotokuva/${nimi}?t=${Date.now()}`;
+            const vanha = await fetch(kohdeUrl, { headers: { 'Cache-Control': 'no-cache' } });
+            if (vanha.ok) {
+              const vanhaData = Buffer.from(await vanha.arrayBuffer());
+              const vanhaSha = createHash('sha256').update(vanhaData).digest('hex');
+              if (vanhaSha !== odotettuSha) throw new Error(`${nimi}: nimiristiriita, R2:ssa eri sisältö`);
+              console.log(`${nimi}: sama hyväksytty versio oli jo R2:ssa`);
+            } else if (vanha.status !== 404) {
+              throw new Error(`${nimi}: R2-esitarkistus HTTP ${vanha.status}`);
+            }
+
+            const driveUrl = `https://www.googleapis.com/drive/v3/files/${id}?alt=media&key=${process.env.DRIVE_AVAIN}`;
+            const vastaus = await fetch(driveUrl);
+            if (!vastaus.ok) throw new Error(`${nimi}: Drive HTTP ${vastaus.status}`);
+            const data = Buffer.from(await vastaus.arrayBuffer());
+            const sha = createHash('sha256').update(data).digest('hex');
+            if (sha !== odotettuSha) throw new Error(`${nimi}: SHA-256 ei täsmää`);
+            const mitat = jpegMitat(data);
+            if (mitat.leveys < 1024 || mitat.korkeus <= mitat.leveys) {
+              throw new Error(`${nimi}: ${mitat.leveys}x${mitat.korkeus}, odotettiin vähintään 1024 px leveä pystykuva`);
+            }
+            const exifSrgbBe = Buffer.from([0xa0, 0x01, 0x00, 0x03, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01]);
+            const exifSrgbLe = Buffer.from([0x01, 0xa0, 0x03, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00]);
+            const onSrgb = data.includes(Buffer.from('ICC_PROFILE')) || data.includes(exifSrgbBe) || data.includes(exifSrgbLe);
+            if (!onSrgb) throw new Error(`${nimi}: sRGB-merkintä puuttuu`);
+
+            await writeFile(`r2-out/${nimi}`, data);
+            console.log(`${nimi}: Drive, JPG, ${mitat.leveys}x${mitat.korkeus}, sRGB ja SHA-256 kunnossa`);
+          }
+          SKRIPTI
+
+      - name: Vie JPG-kuvat R2-mediämpäriin
+        run: |
+          set -euo pipefail
+          aws s3 sync r2-out "s3://$R2_AMPARI/aikajana/keksinnot/muotokuva" \
+            --endpoint-url "https://$R2_TILI.r2.cloudflarestorage.com" \
+            --no-progress --size-only --content-type image/jpeg \
+            --cache-control "public, max-age=31536000, immutable"
+
+      - name: Varmista julkinen R2 tavutasolla
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'SKRIPTI'
+          import { readFile, readdir } from 'node:fs/promises';
+          import { createHash } from 'node:crypto';
+
+          const nimet = (await readdir('r2-out')).sort();
+          if (nimet.length !== 28) throw new Error(`tiedostoja ${nimet.length}, odotettiin 28`);
+          for (const nimi of nimet) {
+            const paikallinen = await readFile(`r2-out/${nimi}`);
+            let vastaus;
+            for (let yritys = 1; yritys <= 12; yritys += 1) {
+              vastaus = await fetch(`${process.env.JULKINEN}/aikajana/keksinnot/muotokuva/${nimi}?t=${Date.now()}`, {
+                headers: { Origin: 'https://ravelius.github.io', 'Cache-Control': 'no-cache' },
+              });
+              if (vastaus.ok) break;
+              await new Promise((resolve) => setTimeout(resolve, 2000));
+            }
+            if (!vastaus?.ok) throw new Error(`${nimi}: R2 HTTP ${vastaus?.status}`);
+            const tyyppi = vastaus.headers.get('content-type') ?? '';
+            if (!tyyppi.startsWith('image/jpeg')) throw new Error(`${nimi}: R2 MIME ${tyyppi}`);
+            if (!vastaus.headers.get('access-control-allow-origin')) throw new Error(`${nimi}: CORS puuttuu`);
+            const ladattu = Buffer.from(await vastaus.arrayBuffer());
+            const paikallinenSha = createHash('sha256').update(paikallinen).digest('hex');
+            const ladattuSha = createHash('sha256').update(ladattu).digest('hex');
+            if (ladattuSha !== paikallinenSha) throw new Error(`${nimi}: takaisinluettu SHA-256 ei täsmää`);
+            console.log(`${nimi}: julkinen JPG, CORS ja tavut kunnossa`);
+          }
+          SKRIPTI
+
