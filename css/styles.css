@@ -91,6 +91,21 @@ body.paivittyy .app { visibility: hidden; }
 
   --radius: 12px;
   --gap: 0.6rem;
+
+  /*
+   * LIIKKEEN KÄYRÄT (omistajan linjaus 3.9.2026: *"kaikki kohdat
+   * pelissä pyritään animoimaan ja niissä käytetään näitä pehmeitä
+   * kiihdytyksiä ja jarrutuksia"*).
+   *
+   * Kolme käyrää riittää koko pelille: sisään tuleva osa jarruttaa
+   * pehmeästi paikalleen, paikkaa vaihtava kiihtyy ja jarruttaa, ja
+   * poistuva kiihtyy pois. Uusi animaatio ottaa käyränsä täältä eikä
+   * kirjoita omaa cubic-bezieriään — silloin koko peli liikkuu samalla
+   * tavalla.
+   */
+  --liike-sisaan: cubic-bezier(0.22, 0.9, 0.24, 1);
+  --liike-pehmea: cubic-bezier(0.45, 0, 0.2, 1);
+  --liike-ulos: cubic-bezier(0.4, 0, 1, 1);
   /* iOS:n turva-alueet myös muuttujina: JavaScript ei näe env()-arvoja
    * suoraan, ja kehittäjätilan mittarivi tarvitsee ne. */
   --turva-yla: env(safe-area-inset-top, 0px);
@@ -18550,7 +18565,7 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
  * kuplaa ei saanut pois tieltä.
  */
 .pollo-vihje {
-  position: fixed;
+  position: relative;
   z-index: 40;
   cursor: pointer;
   max-width: min(17rem, calc(100vw - 1.6rem));
@@ -18582,6 +18597,99 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
 
 .pollo-vihje[hidden] { display: none; }
 
+/*
+ * Valikkovihje on pinon ulkopuolinen yksittäiskupla (js/pollo.js
+ * naytaVihje 'valikko'): se kelluu itse, koska se osoittaa ruudun
+ * toiseen laitaan hampurilaisnappiin.
+ */
+.pollo-vihje-yksin { position: fixed; }
+
+/*
+ * ── KUPLAPINO (omistajan tilaus 3.9.2026) ───────────────────────────
+ *
+ * *"uusi kupla tulee vanhan alle siirtäen pehmeästi aiemman kuplan
+ * ylöspäin … maksimikorkeus jonka jälkeen kuplat feidautuvat yläosasta
+ * näkymättömiin pienellä läpinäkyvyysliu'ulla, mutta ovat pelaajan
+ * skrollattavissa … kuplien oikeaan yläreunaan pieni x."*
+ *
+ * Kehys kelluu pöllönapin yläpuolella ja on asemoitu ALAREUNASTAAN
+ * (js/pollo.js asetaPinonPaikka), joten pino kasvaa ylöspäin. Kuplat
+ * ovat oikeaan reunaan tasattuja, koska kärki on kuplan oikeassa
+ * alanurkassa ja osoittaa pöllöön.
+ */
+.pollo-kuplapino-kehys {
+  position: fixed;
+  z-index: 40;
+  max-width: min(23rem, calc(100vw - 1.6rem));
+}
+
+.pollo-kuplapino-kehys[hidden] { display: none; }
+
+.pollo-kuplapino {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  max-height: min(44vh, 24rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  /* Kärki ja varjo mahtuvat: leikkaava overflow söisi ne muuten. */
+  padding: 0.5rem 0.6rem 0.7rem;
+  margin: -0.5rem -0.6rem -0.7rem;
+  scrollbar-width: none;
+}
+
+.pollo-kuplapino::-webkit-scrollbar { display: none; }
+
+/* Puhelin: pino ei saa syödä puolta kartasta. */
+@media (max-width: 599px) {
+  .pollo-kuplapino { max-height: min(40vh, 19rem); }
+}
+
+/*
+ * Ylivuoto: pino on täynnä, joten yläreuna häivytetään ja loput jäävät
+ * vieritettäviksi. Luokan asettaa js/pollo.js paivitaYlivuoto, koska
+ * CSS ei osaa kysyä onko sisältöä enemmän kuin tilaa.
+ */
+.pollo-kuplapino-yli .pollo-kuplapino {
+  mask-image: linear-gradient(to bottom, transparent 0, #000 2.6rem);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 2.6rem);
+}
+
+/*
+ * Sulkunappi kehyksen oikeassa yläkulmassa: sama paperinen pikkuruksi
+ * kuin nostokorteilla (.fokusnosto-kortti-sulje), mutta pyöreänä ja
+ * puoliksi kuplan ulkopuolella, jottei se peitä ensimmäistä riviä.
+ */
+.pollo-kuplapino-sulje {
+  position: absolute;
+  top: -0.55rem;
+  right: -0.25rem;
+  /* Kuplien z-index on 40 samassa pinoutuskontekstissa: ruksin on
+     oltava niiden yläpuolella, tai napautus osuu kuplaan. */
+  z-index: 41;
+  display: grid;
+  place-items: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  min-height: 0;
+  padding: 0;
+  border: 1px solid rgba(122, 85, 20, 0.42);
+  border-radius: 50%;
+  background: rgba(245, 240, 226, 0.94);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  color: rgba(33, 29, 24, 0.7);
+  font-size: 0.72rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.pollo-kuplapino-sulje:hover,
+.pollo-kuplapino-sulje:focus-visible {
+  background: rgba(245, 240, 226, 1);
+  color: #16130f;
+}
+
 /* Pieni kärki alaspäin kohti pöllönappia. */
 .pollo-vihje::after {
   content: '';
@@ -18597,13 +18705,12 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
 }
 
 /*
- * KAKSI KUPLAA ALLEKKAIN (omistajan tilaus 26.8.2026,
- * saapumissekvenssi). Alempi kupla on pöllön vieressä ja pitää
- * kärkensä; ylempi luopuu omastaan, koska kärki osoittaisi suoraan
- * toisen kuplan paperiin. Paikat laskee js/pollo.js
- * asetaVihjeenPaikka.
+ * KÄRKI VAIN PINON VIIMEISELLÄ (omistajan tilaus 26.8.2026, kuplapino
+ * 3.9.2026). Alin kupla on pöllön vieressä ja pitää kärkensä; muut
+ * luopuvat omastaan, koska kärki osoittaisi suoraan toisen kuplan
+ * paperiin.
  */
-.pollo-vihje-parina::after { display: none; }
+.pollo-kuplapino .pollo-vihje:not(:last-child)::after { display: none; }
 
 /*
  * Kärki ylöspäin: valikkovihje ankkuroituu hampurilaisnapin ALLE
@@ -18625,9 +18732,33 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Liikeherkkyys: kupla vain ilmestyy. */
+/*
+ * PINON KUPLA TULEE ALHAALTA (omistajan tilaus 3.9.2026). Uusi kupla
+ * nousee paikalleen pehmeästi jarruttaen, ja samalla FLIP-siirtymä
+ * (js/pollo.js lisaaPinoon) työntää vanhat ylöspäin. Kaksi liikettä,
+ * yksi ele.
+ */
+.pollo-kuplapino .pollo-vihje {
+  animation: pollo-kupla-saapuu 320ms var(--liike-sisaan);
+}
+
+@keyframes pollo-kupla-saapuu {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Liikeherkkyys: kupla vain ilmestyy, ei liiku. */
 @media (prefers-reduced-motion: reduce) {
   .pollo-vihje { animation: none; }
+
+  .pollo-kuplapino .pollo-vihje {
+    animation: pollo-kupla-havahtuu 120ms linear;
+  }
+
+  @keyframes pollo-kupla-havahtuu {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 }
 
 /*

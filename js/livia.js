@@ -33,7 +33,7 @@
  * ajoituksen ja portit.
  */
 
-import { polloAvauskupla, polloSaapumiskupla, polloVihjePois } from './pollo.js';
+import { polloAvauskupla, polloKuplatPois, polloSaapumiskupla } from './pollo.js';
 
 /* ------------------------------------------------------------------ *
  * Avausesittely
@@ -175,7 +175,14 @@ function naytaRepliikki(ui, i) {
   avausAjastin = setTimeout(() => seuraavaRepliikki(ui, i + 1), lukuaika(teksti));
 }
 
-/** Kupla pois, pieni tauko ja seuraava repliikki — tai sarjan loppu. */
+/*
+ * Kupla pois, pieni tauko ja seuraava repliikki — tai sarjan loppu.
+ *
+ * KAIKKI KUPLAT POIS eikä pelkät ohjekuplat (kuplapino 3.9.2026):
+ * avaussarjan repliikit ovat PUHEKUPLIA, ja ne on tarkoitus näyttää
+ * yksi kerrallaan — aloitusvalinnassa Livia puhuu lyhyitä lauseita,
+ * eikä niistä kasvateta pinoa kartan päälle.
+ */
 function seuraavaRepliikki(ui, i) {
   clearTimeout(avausAjastin);
   avausAjastin = null;
@@ -184,16 +191,16 @@ function seuraavaRepliikki(ui, i) {
     lopetaAvaus();
     return;
   }
-  polloVihjePois();
+  polloKuplatPois();
   avausAjastin = setTimeout(() => naytaRepliikki(ui, i), KUPLIEN_VALI);
 }
 
-/** Sarja päättyy: ajastin pois ja kupla pois. */
+/** Sarja päättyy: ajastin pois ja kuplat pois (ks. seuraavaRepliikki). */
 function lopetaAvaus() {
   clearTimeout(avausAjastin);
   avausAjastin = null;
   avausKesken = false;
-  polloVihjePois();
+  polloKuplatPois();
 }
 
 /**
@@ -442,6 +449,9 @@ export function nollaaLivianVihjeet() {
   peruLivianAvaus();
   clearTimeout(paljastusAjastin);
   paljastusAjastin = null;
+  // Uusi peli aloittaa myös kuplapinon tyhjänä: edellisen pelin
+  // puheenvuorot eivät jää uuden kartan päälle (js/pollo.js).
+  polloKuplatPois();
   mannerivihjeenMaat.clear();
   mannerivihjeAnnettu = false;
   mannerivihjeenOdotus = null;

@@ -40,8 +40,12 @@ import {
   vastauskuvanAihe,
 } from '../js/pollo.js';
 // Kuplan napautusnielu asuu ui-apureissa: sama vuoto koskee kaikkia
-// kelluvia kuplia (ks. tämän tiedoston loppu).
-import { nielaiseSulkevaNapautus } from '../js/ui-apurit.js';
+// kelluvia kuplia (ks. tämän tiedoston loppu). Puheenvuoron jako osiin
+// asuu samassa tiedostossa (kuplapino, 3.9.2026).
+import { jaaPuheenvuoroksi, nielaiseSulkevaNapautus } from '../js/ui-apurit.js';
+// Sofian maadoitus on kaanonia ja omistajan hyväksymä malliesimerkki:
+// jaon testi lukee sen paketista eikä kopioi tekstiä tänne.
+import { FOKUSVIRTA_SOFIA } from '../js/packs/fokusvirta-sofia.js';
 
 import {
   KYSYMYKSEN_KATTO,
@@ -1496,12 +1500,61 @@ test('kauempana osuva napautus kulkee nielun läpi', () => {
   assert.equal(doc.kuulijat.length, 0, 'nielua ei saa purettua');
 });
 
-test('pöllön molemmat kuplat sitovat napautusnielun', () => {
+/*
+ * KUPLAPINO (omistajan tilaus 3.9.2026) siirsi kuplat yhdestä
+ * elementistä pinoon, jossa jokainen kupla on oma solmunsa. Nielu ei
+ * saa jäädä sitomatta yhdeltäkään: siksi vartija vaatii, että kaikki
+ * pinon kuplat syntyvät YHDESSÄ tehtaassa (luoKupla), joka sitoo
+ * nielun — ja että pinon ulkopuolinen valikkovihje sitoo sen yhä itse.
+ * Myös sulkuruksi nielaisee oman napautuksensa, koska sekin hävittää
+ * kosketuspinnan sormen alta.
+ */
+test('pöllön kaikki kuplat sitovat napautusnielun', () => {
   const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
-  assert.match(lahde, /this\.sidoKuplanNapautus\(this\.vihje\);/, 'vihjekupla ilman nielua');
-  assert.match(lahde, /this\.sidoKuplanNapautus\(this\.vihjeLisa\);/, 'toinen kupla ilman nielua');
+  const tehdas = lahde.match(/\n {2}luoKupla\(laji\) \{[\s\S]*?\n {2}\}/);
+  assert.ok(tehdas, 'kuplatehdasta luoKupla ei löydy');
+  assert.match(tehdas[0], /this\.sidoKuplanNapautus\(kupla\);/,
+    'pinon kuplat syntyvät ilman nielua');
+  assert.match(lahde, /this\.sidoKuplanNapautus\(this\.vihje\);/, 'valikkovihje ilman nielua');
   assert.match(lahde, /nielaiseSulkevaNapautus\(tapahtuma, \{ doc: this\.doc \}\);/,
     'sulkeva napautus ei kuluta clickiä');
+  // Kuplat luodaan vain tehtaan kautta: uusi kuplalaji ei saa ohittaa
+  // sitä omalla polloElementti-kutsullaan.
+  const suorat = lahde.match(/polloElementti\('div', 'pollo-vihje'\)/g) ?? [];
+  assert.equal(suorat.length, 1, 'kupla luodaan tehtaan ohi');
+});
+
+/* ---------------------------------------------------------------- */
+/* Puheenvuoron jako osiin (kuplapino)                                */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJAN TILAUS 3.9.2026: *"pulu voisi kommentoida sitä muutamissa
+ * osissa. huudahtaa vaikka ensin sen 'kääk, onpa hurja juttu' ja sitten
+ * vähän ajan päästä jatkaa."*
+ *
+ * Tärkein väite on SANOJEN SÄILYMINEN: jako on esitystapa, ei
+ * sisältömuutos, joten osat yhdistettynä on täsmälleen alkuperäinen
+ * kaanonteksti. Toinen on se, ettei lyhyt huudahdus jää yksin kuplaan.
+ */
+test('puheenvuoro jakautuu osiin sanoja hukkaamatta', () => {
+  const teksti = FOKUSVIRTA_SOFIA.pollo.maadoitus;
+  const osat = jaaPuheenvuoroksi(teksti);
+  assert.ok(osat.length >= 2 && osat.length <= 3, `osia ${osat.length}`);
+  assert.equal(osat[0], 'Kääk. No johan oli hurja juttu — luin sen kahdesti.');
+  assert.equal(osat.join(' '), teksti, 'sanat muuttuivat jaossa');
+  assert.match(osat.at(-1), /Mut kyllä sen kestää lukea/);
+});
+
+test('kirjoittajan kappalerajat voittavat puheenvuoron jaossa', () => {
+  assert.deepEqual(jaaPuheenvuoroksi('Eka pala.\n\nToka pala tässä.'),
+    ['Eka pala.', 'Toka pala tässä.']);
+});
+
+test('yhden virkkeen puheenvuoro on yksi osa', () => {
+  assert.deepEqual(jaaPuheenvuoroksi('Kuule, tämä on yksi virke.'),
+    ['Kuule, tämä on yksi virke.']);
+  assert.deepEqual(jaaPuheenvuoroksi('   '), []);
 });
 
 /* ==================================================================== */

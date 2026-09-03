@@ -1102,6 +1102,108 @@ export function jaaKappaleiksi(teksti) {
   return [virkkeet.slice(0, puoli).join(' '), virkkeet.slice(puoli).join(' ')].filter(Boolean);
 }
 
+/*
+ * ── LIVIAN PUHEENVUORO OSIIN (omistajan tilaus 3.9.2026) ────────────
+ *
+ * *"pulu voisi kommentoida sitä muutamissa osissa. huudahtaa vaikka
+ * ensin sen 'kääk, onpa hurja juttu' ja sitten vähän ajan päästä
+ * jatkaa."*
+ *
+ * Yksi pitkä puheenvuoro on yksi seinä tekstiä: pelaaja lukee sen
+ * kerralla tai ei ollenkaan. Osiin jaettuna se on keskustelu — ensin
+ * säikähdys, sitten sen selitys. Jako on TÄSSÄ eikä sisältöpaketeissa,
+ * koska kaanoniteksti pysyy yhtenä kappaleena (vain Fable kirjoittaa
+ * siihen) ja esitystapa kuuluu koodiin.
+ *
+ * KOLME SÄÄNTÖÄ:
+ *  1. Kirjoittajan omat kappalerajat voittavat — sama sopimus kuin
+ *     jaaKappaleiksi-funktiolla.
+ *  2. Ensimmäinen osa on ensimmäinen virke, mutta lyhyt huudahdus
+ *     ("Kääk.") ei ole oma kuplansa: se saa parikseen seuraavan
+ *     virkkeen, jolloin ensimmäinen kupla sanoo jotain.
+ *  3. Loput virkkeet niputetaan enintään OSAN_KATTO-mittaisiksi
+ *     osiksi, ja osia on enintään OSIA_ENINTAAN — viimeinen saa venyä,
+ *     koska kolmen kuplan jälkeen neljäs olisi jo saarna.
+ *
+ * Sanat säilyvät täsmälleen: osat välilyönnillä yhdistettynä on
+ * alkuperäinen teksti (ilman kappalevaihtoja). Testi vartioi sitä.
+ */
+const PUHEENVUORON_OSAN_KATTO = 220;
+const PUHEENVUORON_OSIA_ENINTAAN = 3;
+const PUHEENVUORON_LYHYT_ALKU = 4;
+
+/*
+ * Puheenvuoron virkejako on virkkeiksi():n sukulainen, mutta se
+ * tuntee kaksi merkkiä lisää: kolme pistettä päättää virkkeen, ja
+ * ajatusviiva aloittaa sellaisen (Livia puhuu ajatusviivoilla).
+ * Erillinen siksi, ettei leipätekstin ja sitaattinostojen virkejako
+ * muutu tämän mukana.
+ */
+const PUHEEN_VIRKKEEN_ALKU = /[0-9A-ZÅÄÖÜÉ"“«—–]/;
+const PUHEEN_VIRKKEEN_LOPPU = '.!?…';
+
+function puheenVirkkeet(teksti) {
+  const t = String(teksti ?? '');
+  const ulos = [];
+  let alku = 0;
+  for (let i = 0; i < t.length; i++) {
+    const merkki = t[i];
+    if (!PUHEEN_VIRKKEEN_LOPPU.includes(merkki)) continue;
+    // Järjestysluvun piste ei päätä virkettä (ks. virkkeiksi).
+    if (merkki === '.' && /[0-9]/.test(t[i - 1] ?? '')) continue;
+    const osuma = /^\s+(.)/.exec(t.slice(i + 1));
+    if (!osuma) break;
+    if (!PUHEEN_VIRKKEEN_ALKU.test(osuma[1])) continue;
+    ulos.push(t.slice(alku, i + 1).trim());
+    alku = i + 1;
+  }
+  if (alku < t.length) ulos.push(t.slice(alku).trim());
+  return ulos.filter(Boolean);
+}
+
+/** Sanamäärä — puheenvuoron viiveet ja lyhyt alku lasketaan siitä. */
+export function sanamaara(teksti) {
+  return String(teksti ?? '').trim().split(/\s+/).filter(Boolean).length;
+}
+
+/**
+ * Puheenvuoro kuplasarjaksi (js/pollo.js polloPuheenvuoro).
+ *
+ * @param {string} teksti koko puheenvuoro.
+ * @returns {string[]} osat lukujärjestyksessä; tyhjä teksti antaa [].
+ */
+export function jaaPuheenvuoroksi(teksti) {
+  const koko = String(teksti ?? '').trim();
+  if (!koko) return [];
+  if (koko.includes('\n\n')) {
+    return koko.split(/\n{2,}/).map((k) => k.trim()).filter(Boolean);
+  }
+  const virkkeet = puheenVirkkeet(koko);
+  if (virkkeet.length <= 1) return [koko];
+  const osat = [];
+  let seuraava = 1;
+  let ensimmainen = virkkeet[0];
+  // Lyhyt huudahdus ei jää yksin: "Kääk." + sen jatko samaan kuplaan.
+  if (sanamaara(ensimmainen) <= PUHEENVUORON_LYHYT_ALKU && virkkeet[1]) {
+    ensimmainen = `${ensimmainen} ${virkkeet[1]}`;
+    seuraava = 2;
+  }
+  osat.push(ensimmainen);
+  let kertyma = '';
+  for (let i = seuraava; i < virkkeet.length; i++) {
+    const ehdokas = kertyma ? `${kertyma} ${virkkeet[i]}` : virkkeet[i];
+    const tilaaJaljella = osat.length < PUHEENVUORON_OSIA_ENINTAAN - 1;
+    if (kertyma && ehdokas.length > PUHEENVUORON_OSAN_KATTO && tilaaJaljella) {
+      osat.push(kertyma);
+      kertyma = virkkeet[i];
+      continue;
+    }
+    kertyma = ehdokas;
+  }
+  if (kertyma) osat.push(kertyma);
+  return osat;
+}
+
 export function piirraLeipa(kohde, teksti, { anfangi = false } = {}) {
   const kappaleet = jaaKappaleiksi(teksti);
   /*

@@ -1,0 +1,163 @@
+# Tee aikajanalinssin ilmiökuvista pienet 640 px WebP-versiot ja vie ne
+# ämpäriin.
+#
+# Omistajan havainto 3.9.2026: *"kaikki kuvat pitää ladata ennakkoon
+# taustalle ainakin tuossa pienemmässä koossa mikä näkyy linssin
+# animaation aikana. pitäisikö näille linssikuville generoida oma
+# pienempi versio, joka latautuisi nopeammin?"* — kyllä. Alkuperäiset
+# ovat 1536×1024 ja 400–760 kt kappale; ilmiöpaneelissa kuva näkyy noin
+# 450 px leveänä, joten animaation ajaksi riittää 640 px WebP (alle
+# 90 kt). Iso ladataan vasta "Lue juttu" -napista.
+#
+#   alkuperäinen  aikajana/keksinnot/<nimi>.jpg        (kuvaputken vienti)
+#   pieni         aikajana/keksinnot/pieni/<nimi>.webp (tämä ajo)
+#
+# LISTAA EI OLE TÄSSÄ EIKÄ TYÖKALUSSA. Työkalu lukee kuvien osoitteet
+# suoraan linssin datasta (js/linssit/keksinnot.js, kentät
+# `ilmio.osoite` ja `ilmioLisa.osoite`), joten uusi hyväksytty kuva
+# tulee mukaan seuraavalla ajolla ilman että mitään listaa päivitetään.
+#
+# KÄSIAJETTAVA (workflow_dispatch). Automaattista triggeriä ei ole:
+# kuvaputki vie alkuperäiset omalla ajollaan, ja tämä ajetaan sen
+# jälkeen. Ajo on ilmainen (ei API-kutsuja), joten sen voi ajaa
+# uudestaan koska tahansa — sama tiedosto kirjoittuu ämpärissä yli.
+#
+# TÄMÄ AJO EI COMMITTOI MITÄÄN. Työkalu kirjoittaa media/-kansioon,
+# joka on .gitignoressa (tarkistetaan koneellisesti ennen kirjoitusta)
+# ja vie tuloksen sieltä ämpäriin — Raamatun linjaus "kaikki aina
+# ämpäriin".
+#
+# FFMPEG asennetaan apt:llä: ubuntu-latest-ajurissa sitä ei ole, ja
+# pienennys, WebP-koodaus ja mittojen tarkistus ovat sen varassa.
+#
+# Salaisuudet ovat tämän repon Actions-asetuksissa eivätkä koskaan
+# täällä — samat neljä kuin vie-kohtaamiskuvat.yml:ssä ja
+# generoi-siirtymamusiikki.yml:ssä:
+#   R2_ACCOUNT_ID  R2_ACCESS_KEY_ID  R2_SECRET_ACCESS_KEY  R2_BUCKET
+
+name: Tee pienet linssikuvat
+
+on:
+  workflow_dispatch:
+    inputs:
+      vain:
+        description: >-
+          Yksi kuva nimellä (esim. 1769-watt). Tyhjänä tehdään kaikki
+          kuvat, jotka linssin datassa on.
+        required: false
+        type: string
+        default: ''
+      kuiva:
+        description: >-
+          Kuiva ajo: listaa vain suunnitelman ja tarkistaa alkuperäisten
+          osoitteet HEADilla. Ei pienennä eikä vie ämpäriin.
+        required: true
+        type: choice
+        default: 'ei'
+        options: ['ei', 'kylla']
+
+permissions:
+  contents: read
+
+# Yksi ajo kerrallaan: kaksi rinnakkaista kirjoittaisi ämpärin samoihin
+# avaimiin. Oma ryhmänsä — alkuperäisten vienti on eri ajo ja eri kansio.
+concurrency:
+  group: tee-pienet-kuvat
+  cancel-in-progress: false
+
+jobs:
+  tee:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      # Vienti on työkalun sisällä, mutta salaisuudet tulevat tästä —
+      # samat nimet ja sama endpoint-tyyli kuin vie-kohtaamiskuvat.yml:ssä.
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      # R2 ei hyväksy AWS:n uudempia tarkistussummaotsakkeita, jotka
+      # aws-cli 2.23:sta alkaen lähtevät oletuksena mukaan.
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Puuttuva salaisuus tulisi muuten vastaan vasta aws-clin
+      # "Invalid endpoint" -virheenä, ja vasta sen jälkeen kun kaikki
+      # kuvat on jo noudettu ja pienennetty. Arvoja ei tulosteta, vain
+      # onko ne asetettu.
+      - name: Tarkista että salaisuudet ovat tallessa
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "${R2_ACCOUNT_ID:-}" ]         || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ]     || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "${R2_BUCKET:-}" ]             || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            echo "Lisää ne: Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          echo "Kaikki neljä salaisuutta löytyvät."
+
+      - name: Asenna ffmpeg
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          if command -v ffmpeg >/dev/null 2>&1; then
+            echo "ffmpeg on jo ajurissa."
+          else
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+          ffmpeg -version | head -1
+
+      # Kuiva ajo aina ensin, myös oikeassa ajossa: suunnitelma ja
+      # alkuperäisten osoitteet tulevat tarkistetuiksi ennen kuin
+      # yhtäkään tavua noudetaan. Se on nopea (pelkkiä HEADeja) ja
+      # kertoo lokissa tarkalleen, mitä ajo aikoo tehdä.
+      - name: Kuiva ajo (suunnitelma ja HEAD-tarkistus)
+        run: |
+          set -euo pipefail
+          if [ -n "${VAIN}" ]; then
+            node tools/tee-pienet-kuvat.mjs --kuiva --vain "${VAIN}"
+          else
+            node tools/tee-pienet-kuvat.mjs --kuiva
+          fi
+        env:
+          VAIN: ${{ inputs.vain }}
+
+      - name: Tee pienet versiot ja vie ämpäriin
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          if [ -n "${VAIN}" ]; then
+            node tools/tee-pienet-kuvat.mjs --vain "${VAIN}"
+          else
+            node tools/tee-pienet-kuvat.mjs
+          fi
+        env:
+          VAIN: ${{ inputs.vain }}
+
+      # Vartija sille, mitä tämä ajo lupaa: repoon ei jää mitään.
+      # Työkalu kirjoittaa media/-kansioon, joka on .gitignoressa — jos
+      # se joskus muuttuisi, se paljastuisi tässä eikä vasta seuraavan
+      # session hämmästyneessä git statusissa.
+      - name: Varmista ettei repoon jäänyt mitään
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::Ajo muutti työhakemistoa — media kuuluu ämpäriin, ei repoon."
+            git status --porcelain
+            exit 1
+          fi
+          echo "Työhakemisto on siisti."

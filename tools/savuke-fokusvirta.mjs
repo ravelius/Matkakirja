@@ -260,19 +260,33 @@ const sofianKupla = await sivu.evaluate(async () => {
     await new Promise((r) => setTimeout(r, 250));
   }
   ui.diaryVoice?.pause();
-  for (let i = 0; i < 40; i += 1) {
-    const k = document.querySelector('.pollo-vihje');
-    if (k && !k.hidden && k.classList.contains('pollo-vihje-maadoitus')) {
-      return {
-        nimilappu: k.querySelector('.pollo-vihje-nimilappu')?.textContent ?? '',
-        yliviivaus: Boolean(k.querySelector('.pollo-vihje-nimilappu .pollo-yliviivattu')),
-        teksti: [...k.querySelectorAll('.pollo-vihje-lause')]
-          .map((p) => p.textContent).join(' '),
-      };
-    }
+  /*
+   * KUPLAPINO (omistajan tilaus 3.9.2026): maadoitus tulee nyt
+   * MONTANA kuplana peräkkäin (js/pollo.js naytaPuheenvuoro), joten
+   * väitteen mittaama teksti on pinon kaikkien kuplien teksti
+   * yhdistettynä ja nimilappu luetaan sarjan ENSIMMÄISESTÄ kuplasta —
+   * jatkokuplissa nimeä ei toisteta. Odotus jatkuu, kunnes
+   * puheenvuoron viimeinen lause on pinossa (jatko-osat tulevat
+   * 1,8–4,2 s välein), enintään 12 sekuntia.
+   */
+  const lueKuplat = () => {
+    const kuplat = [...document.querySelectorAll('.pollo-kuplapino .pollo-vihje-maadoitus')];
+    const eka = kuplat[0] ?? null;
+    return {
+      kuplia: kuplat.length,
+      nimilappu: eka?.querySelector('.pollo-vihje-nimilappu')?.textContent ?? '',
+      yliviivaus: Boolean(eka?.querySelector('.pollo-vihje-nimilappu .pollo-yliviivattu')),
+      teksti: kuplat
+        .flatMap((k) => [...k.querySelectorAll('.pollo-vihje-lause')].map((p) => p.textContent))
+        .join(' '),
+    };
+  };
+  for (let i = 0; i < 24; i += 1) {
+    const tulos = lueKuplat();
+    if (/Mut kyllä sen kestää lukea/.test(tulos.teksti)) return tulos;
     await new Promise((r) => setTimeout(r, 500));
   }
-  return { teksti: '', nimilappu: '', yliviivaus: false };
+  return lueKuplat();
 });
 /*
  * VÄITE MITTAA PARIPERIAATTEEN (Raamattu v1262): Sofian merkintä on
@@ -294,6 +308,8 @@ const sofianKupla = await sivu.evaluate(async () => {
  */
 vaadi('Sofiassa isoisän maadoitus tulee Livian saapumiskuplaan',
   /^Kääk\./.test(sofianKupla.teksti)
+    // Puheenvuoro tulee osissa (kuplapino 3.9.2026): yksi kupla ei riitä.
+    && sofianKupla.kuplia >= 2
     && /hurja juttu/.test(sofianKupla.teksti)
     && /1873/.test(sofianKupla.teksti)
     && /sataviisikymmentä vuotta/.test(sofianKupla.teksti)
@@ -348,8 +364,11 @@ await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-maadoituskupla.png') });
  */
 const venetsianKupla = await sivu.evaluate(async () => {
   const { ui, game } = window.matkakirja;
-  // Sofian puheenvuoro pois samasta solmusta (ks. yllä).
-  window.matkakirjaPollo?.piilotaVihje();
+  // Sofian puheenvuoro pois pinosta (ks. yllä). Kuplapinon myötä
+  // (3.9.2026) piilotaVihje koskee vain ohjekupliin, joten sarjan
+  // kaikki kuplat kaadetaan tyhjennaPinolla — sama kutsu kuin
+  // sulkuruksi tekee.
+  window.matkakirjaPollo?.tyhjennaPino();
   game.player.pos = { type: 'city', city: 'kreeta' };
   game.world.visited.add('kreeta');
   game.arrivalFact = { packId: game.pack.id, cityId: 'kreeta' };
@@ -361,8 +380,9 @@ const venetsianKupla = await sivu.evaluate(async () => {
   }
   ui.diaryVoice?.pause();
   for (let i = 0; i < 40; i += 1) {
-    const k = document.querySelector('.pollo-vihje');
-    if (k && !k.hidden && k.classList.contains('pollo-vihje-maadoitus')) {
+    // Sarjan ensimmäinen kupla kantaa nimilapun (kuplapino 3.9.2026).
+    const k = document.querySelector('.pollo-kuplapino .pollo-vihje-maadoitus');
+    if (k) {
       return {
         teksti: [...k.querySelectorAll('.pollo-vihje-lause')]
           .map((p) => p.textContent).join(' '),

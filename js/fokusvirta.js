@@ -83,8 +83,8 @@
  */
 
 import {
-  fokusmoodiPaalla, html, jaaKappaleiksi, lehtivinkkiPiilotettu, nielaiseSulkevaNapautus,
-  piilotaLehtivinkki, polloNimilappu,
+  fokusmoodiPaalla, html, jaaKappaleiksi, jaaPuheenvuoroksi, lehtivinkkiPiilotettu,
+  nielaiseSulkevaNapautus, piilotaLehtivinkki, polloNimilappu,
 } from './ui-apurit.js';
 import { asetaTehtavakuittaus, fokusAarreAvattu, fokusAarreVastattu } from './fokustehtavat.js';
 import { asetaKuva, julisteUrl } from './media.js';
@@ -108,7 +108,7 @@ import {
   POLLO_KEHITTAJAKOODI_AVAIN,
   POLLO_KEHITTAJA_OTSAKE,
   arvoMietinta,
-  polloSaapumiskupla,
+  polloPuheenvuoro,
 } from './pollo.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 import { sfx } from './sound.js';
@@ -721,7 +721,15 @@ export function fokusvirtaSaapumiskupla(ui, city) {
       // Pelaaja on voinut lähteä kaupungista tai aloittaa uuden pelin
       // luennan aikana: puheenvuoro kuuluu vain tähän kaupunkiin.
       if (ui.game?.cityOf?.()?.id !== city.id) return;
-      polloSaapumiskupla(teksti);
+      /*
+       * PUHEENVUORO OSISSA (omistajan tilaus 3.9.2026): maadoitus on
+       * pisin kupla pelissä, ja yhtenä seinänä se jää lukematta. Sama
+       * ehto vartioi myös jatko-osia — kaupungista lähtenyt pelaaja ei
+       * kuule tämän kaupungin puheenvuoron loppua.
+       */
+      polloPuheenvuoro(jaaPuheenvuoroksi(teksti), {
+        jatkuuko: () => !ui.dead && ui.game?.cityOf?.()?.id === city.id,
+      });
     }, SAAPUMISKUPLAN_TAUKO_MS);
   };
   const luenta = luennanLoppuun(ui);

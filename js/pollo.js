@@ -60,7 +60,9 @@ import { asetaKuva } from './media.js';
 // (ks. sidoKuplanNapautus). Apuri asuu ui-apureissa, koska sama vuoto
 // koskee muitakin kelluvia kuplia — ja se on niputuksessa jo ennen
 // pöllöä (tools/build-standalone.mjs MODULES).
-import { jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu } from './ui-apurit.js';
+import {
+  jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu, sanamaara,
+} from './ui-apurit.js';
 import { POLLON_LINKKIKATTO, etsiAnkkuri, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
 import {
   nykyinenPoimintaAvain, paivitaPillerit, poimintaKehittaja, tallennaPoiminta,
@@ -737,6 +739,19 @@ const POLLO_ALANAPPIRIVISSA = false;
  */
 const KELLUVAN_NAPIN_VARAPAIKKA = { reuna: 18, koko: 46, pohja: 85 };
 
+/*
+ * OSIIN JAETUN PUHEENVUORON RYTMI (ks. naytaPuheenvuoro).
+ *
+ * Viive lasketaan EDELLISEN osan sanamäärästä: lyhyt huudahdus saa
+ * lyhyen tauon, pitkä kappale pitkän. Rajat pitävät rytmin
+ * puhemaisena — alle 1,8 sekunnissa kupla ei ehdi tulla luetuksi, ja
+ * yli 4,2 sekunnin tauko tuntuu jo siltä että Livia unohti asian.
+ */
+const PUHEENVUORON_PERUSVIIVE = 1400;
+const PUHEENVUORON_SANAVIIVE = 55;
+const PUHEENVUORON_VIIVE_ALA = 1800;
+const PUHEENVUORON_VIIVE_YLA = 4200;
+
 /**
  * Seepiapöllö. Viivapiirros samaan tapaan kuin pelin muut kuvakkeet
  * (.viiva-ikoni): pelkkä ääriviiva, täyttö vain silmäterissä, jotta se
@@ -1353,12 +1368,26 @@ class Pollo {
      */
     this.luentaVirta = null;
     this.luettuun = 0;
+    /*
+     * KUPLAPINO (omistajan tilaus 3.9.2026, ks. varmistaPino).
+     * `pinoKehys` on kelluva säiliö, `pino` sen vieritettävä sisus.
+     * Kumpikin luodaan laiskasti ensimmäisen kuplan mukana.
+     */
+    this.pinoKehys = null;
+    this.pino = null;
+    /*
+     * Osiin jaettu puheenvuoro (naytaPuheenvuoro): ajastimen kahva ja
+     * jonon tila. null tarkoittaa, ettei sarjaa ole kesken.
+     */
+    this.puheenvuoroAjastin = null;
+    this.puheenvuoro = null;
     // Sanelu on ensisijainen syöttötapa; näppäimistö on varalla.
     this.tila = saneluTuettu() ? 'sanelu' : 'kirjoitus';
     this.rakenna();
     this.seuraaPaneelinKokoa();
     this.seuraaNakymaa();
     this.seuraaSulkemista();
+    this.seuraaRuudunKokoa();
     this.paivitaNakyvyys();
   }
 
@@ -1969,7 +1998,9 @@ class Pollo {
     const nakyy = this.nakyyko();
     this.nappi.hidden = !nakyy;
     if (!nakyy && this.auki) this.sulje();
-    if (!nakyy) this.piilotaVihje();
+    // Nappi piiloon: kuplilla ei ole enää mitään mihin osoittaa, joten
+    // koko pino väistyy — myös puheenvuorot (ks. tyhjennaPino).
+    if (!nakyy) this.tyhjennaPino();
     // Löytöhetkellä nappi nytkähtää kerran esiin, jottei se vain
     // ilmesty riviin huomaamatta. Luokka poistetaan animaation
     // jälkeen, ettei se jää estämään seuraavaa nytkäystä.
@@ -1991,11 +2022,8 @@ class Pollo {
    * keskustelua, vaan ilmestyy pöllönapin viereen, kun peli on jäänyt
    * odottamaan pelaajan valintaa (js/ui.js paivitaValintavihje).
    *
-   * Kupla asuu bodyssa ja asemoidaan napin senhetkisen paikan mukaan,
-   * koska nappi vaihtaa paikkaa kolmen kodin välillä: alanappirivi,
-   * kelluva nappi kartalla ja lehden sisällä kelluva nappi. Napautus
-   * menee kuplan LÄPI (css: pointer-events: none), jotta se ei varasta
-   * kartalta yhtään osumaa.
+   * Kupla menee KUPLAPINOON (ks. varmistaPino) — paitsi valikkovihje,
+   * joka on ainoa kupla ruudun toisessa laidassa (ks. alla).
    */
   naytaVihje(teksti, kohde) {
     if (!teksti || this.auki || this.nappi.hidden) return;
@@ -2018,17 +2046,26 @@ class Pollo {
      * paikalleen itsestään (polloAnkkuri).
      */
     this.kiinnita();
-    const kupla = this.varmistaKupla();
-    this.nollaaKuplanAsu(kupla);
-    kupla.classList.toggle('pollo-vihje-ylos', Boolean(this.vihjeAnkkuri));
+    /*
+     * VALIKKOVIHJE ON PINON POIKKEUS. Se osoittaa hampurilaisnappiin
+     * ruudun YLÄlaidassa kärki ylöspäin, eikä sillä ole mitään tekemistä
+     * pöllön vieressä kasvavan jonon kanssa — kaksi eri suuntaan
+     * osoittavaa kuplaa samassa pinossa olisi virhe eikä ominaisuus.
+     * Siksi se on yhä oma yksittäiselementtinsä vanhalla koodilla.
+     */
+    if (this.vihjeAnkkuri) {
+      const kupla = this.varmistaKupla();
+      this.nollaaKuplanAsu(kupla);
+      kupla.classList.add('pollo-vihje-ylos');
+      kupla.textContent = teksti;
+      kupla.hidden = false;
+      this.asetaVihjeenPaikka();
+      this.kuplanAani();
+      return;
+    }
+    const kupla = this.luoKupla('vihje');
     kupla.textContent = teksti;
-    kupla.hidden = false;
-    // Uusi yksittäinen vihje aloittaa puhtaalta pöydältä: mahdollinen
-    // toinen kupla kuului edelliseen puheenvuoroon.
-    if (this.vihjeLisa) this.vihjeLisa.hidden = true;
-    kupla.classList.remove('pollo-vihje-parina');
-    this.asetaVihjeenPaikka();
-    this.kuplanAani();
+    this.lisaaPinoon(kupla);
   }
 
   /**
@@ -2051,21 +2088,19 @@ class Pollo {
    * ALLE, ensimmäinen EI häviä"*).
    *
    * Sama kuplaperhe kuin vihjeellä — sama paperi, sama typografia,
-   * sama napautussopimus — mutta kaksi elementtiä päällekkäin: alempi
-   * on pöllön vieressä ja pitää kärjen, ylempi nousee sen yläpuolelle
-   * ja luopuu kärjestään (kaksi kärkeä osoittaisi toistensa päälle).
+   * sama napautussopimus. Kuplapinon myötä (3.9.2026) tämä on vain
+   * pinon seuraava kupla: pino hoitaa pinoamisen, kärjen ja liikkeen,
+   * eikä paria tarvitse enää asemoida käsin.
    *
    * Ilman ensimmäistä kuplaa tämä ei tee mitään: pari on pari.
    */
   naytaLisavihje(teksti) {
     if (!teksti || this.auki || this.nappi.hidden) return;
-    if (!this.vihje || this.vihje.hidden) return;
-    const kupla = this.varmistaKupla(true);
+    const edellinen = this.pinonKuplat().at(-1) ?? null;
+    if (edellinen?.dataset?.laji !== 'vihje') return;
+    const kupla = this.luoKupla('vihje');
     kupla.textContent = teksti;
-    kupla.hidden = false;
-    this.vihje.classList.add('pollo-vihje-parina');
-    this.asetaVihjeenPaikka();
-    this.kuplanAani();
+    this.lisaaPinoon(kupla);
   }
 
   /**
@@ -2096,29 +2131,31 @@ class Pollo {
    * @param {(() => void)|null} [asetukset.kuittaus] napautus kuplaan vie
    *   sarjan seuraavaan repliikkiin (js/livia.js ensisaapumisen
    *   paljastus); yksittäinen puheenvuoro jättää tämän pois.
-   * @returns {boolean} näkyikö kupla.
+   * @param {boolean} [asetukset.nimilappu] osiin jaetun puheenvuoron
+   *   jatkokuplissa nimeä ei toisteta (ks. naytaPuheenvuoro).
+   * @returns {boolean} näkyikö kupla PINOSSA (chatin ollessa auki
+   *   puheenvuoro menee pelkkään virtaan ja tästä palaa epätosi).
    */
-  naytaSaapumiskupla(teksti, { kuittaus = null } = {}) {
-    if (!teksti || this.auki || this.nappi.hidden) return false;
+  naytaSaapumiskupla(teksti, { kuittaus = null, nimilappu = true } = {}) {
+    if (!teksti || this.nappi.hidden) return false;
+    // Puhekupla kuuluu chattiin aina, myös silloin kun se ei ehdi
+    // pinoon asti (ks. kirjaaKuplaViestiin).
+    this.kirjaaKuplaViestiin(teksti);
+    if (this.auki) return false;
     this.vihjeAnkkuri = null;
     this.kiinnita();
-    const kupla = this.varmistaKupla();
-    this.nollaaKuplanAsu(kupla);
+    const kupla = this.luoKupla('puhe');
     kupla.classList.add('pollo-vihje-maadoitus');
-    kupla.replaceChildren();
-    kupla.appendChild(polloNimilappu(
-      polloElementti('p', 'pollo-vihje-nimilappu'), {},
-    ));
+    if (nimilappu) {
+      kupla.appendChild(polloNimilappu(
+        polloElementti('p', 'pollo-vihje-nimilappu'), {},
+      ));
+    }
     for (const kappale of jaaKappaleiksi(teksti)) {
       kupla.appendChild(polloElementti('p', 'pollo-vihje-lause', kappale));
     }
-    kupla.hidden = false;
-    // Saapumiskupla on oma puheenvuoronsa: mahdollinen parikupla kuului
-    // edelliseen, ja kaksi eri puheenvuoroa yhtä aikaa olisi sekava.
-    if (this.vihjeLisa) this.vihjeLisa.hidden = true;
-    this.kuplanKuittaus = kuittaus;
-    this.asetaVihjeenPaikka();
-    this.kuplanAani();
+    kupla.polloKuittaus = kuittaus;
+    this.lisaaPinoon(kupla);
     return true;
   }
 
@@ -2150,16 +2187,16 @@ class Pollo {
    * @returns {boolean} näkyikö kupla.
    */
   naytaAvauskupla(teksti, { kuva = '', lennahda = false, kuittaus = null } = {}) {
-    if (!teksti || this.auki) return false;
+    if (!teksti) return false;
+    this.kirjaaKuplaViestiin(teksti);
+    if (this.auki) return false;
     this.vihjeAnkkuri = null;
-    const kupla = this.varmistaKupla();
-    this.nollaaKuplanAsu(kupla);
+    const kupla = this.luoKupla('puhe');
     kupla.classList.add('pollo-vihje-maadoitus', 'pollo-vihje-avaus');
-    // Liike aloittaa uudestaan vain kun sarja alkaa: luokka pois ja
-    // takaisin pakottaisi animaation joka repliikillä, ja Livia
-    // lennähtää paikalle kerran.
+    // Liike aloittaa uudestaan vain kun sarja alkaa: Livia lennähtää
+    // paikalle kerran, seuraavat repliikit saavat pinon oman
+    // ilmestymisliikkeen.
     if (lennahda) kupla.classList.add('pollo-vihje-lennahtaa');
-    kupla.replaceChildren();
     kupla.appendChild(this.avauksenKuvapaikka(kuva));
     const puhe = polloElementti('div', 'pollo-vihje-puhe');
     puhe.appendChild(polloNimilappu(
@@ -2169,11 +2206,8 @@ class Pollo {
       puhe.appendChild(polloElementti('p', 'pollo-vihje-lause', kappale));
     }
     kupla.appendChild(puhe);
-    kupla.hidden = false;
-    if (this.vihjeLisa) this.vihjeLisa.hidden = true;
-    this.kuplanKuittaus = kuittaus;
-    this.asetaVihjeenPaikka();
-    this.kuplanAani();
+    kupla.polloKuittaus = kuittaus;
+    this.lisaaPinoon(kupla);
     return true;
   }
 
@@ -2205,42 +2239,30 @@ class Pollo {
   }
 
   /**
-   * Kuplan asu ja kuittaus perustilaan ennen uutta puheenvuoroa.
+   * Valikkovihjeen asu perustilaan (ks. naytaVihje 'valikko').
    *
-   * Sama elementti palvelee vihjettä, juhlaa, saapumista ja avausta,
-   * joten edellisen asun luokat on siivottava — muuten juhlakupla
-   * perisi avauksen kuvapaikan asettelun. Kuittaus nollataan samalla:
-   * se kuuluu sille puheenvuorolle, joka sen asetti.
-   *
-   * Parikupla kuuluu myös edelliseen puheenvuoroon: kun ylempi kupla
-   * luopuu parisuhteestaan (luokka pois), alempi ei saa jäädä yksin
-   * kertomaan puolikasta lausetta.
+   * Sama yksittäiselementti palvelee valikkovihjettä kerta toisensa
+   * jälkeen, joten edellisen asun luokat on siivottava.
    */
   nollaaKuplanAsu(kupla) {
     kupla.classList.remove(
-      'pollo-vihje-juhla', 'pollo-vihje-maadoitus', 'pollo-vihje-parina',
+      'pollo-vihje-juhla', 'pollo-vihje-maadoitus',
       'pollo-vihje-ylos', 'pollo-vihje-avaus', 'pollo-vihje-lennahtaa',
     );
-    if (this.vihjeLisa) this.vihjeLisa.hidden = true;
-    this.kuplanKuittaus = null;
+    kupla.polloKuittaus = null;
+    kupla.replaceChildren();
   }
 
   /**
-   * Kupla bodyyn kerran; sama elementti palvelee vihjettä ja juhlaa.
-   * `lisa` antaa parin alemman kuplan (ks. naytaLisavihje).
+   * Valikkovihjeen kupla bodyyn kerran (ks. naytaVihje 'valikko').
+   *
+   * Pinon kuplat syntyvät luoKupla-tehtaassa; tämä on pinon ainoa
+   * poikkeus, ja se sitoo saman napautusnielun.
    */
-  varmistaKupla(lisa = false) {
-    if (lisa) {
-      if (!this.vihjeLisa) {
-        this.vihjeLisa = polloElementti('div', 'pollo-vihje pollo-vihje-lisa');
-        this.vihjeLisa.setAttribute('role', 'status');
-        this.sidoKuplanNapautus(this.vihjeLisa);
-        this.doc.body.appendChild(this.vihjeLisa);
-      }
-      return this.vihjeLisa;
-    }
+  varmistaKupla() {
     if (!this.vihje) {
-      this.vihje = polloElementti('div', 'pollo-vihje');
+      this.vihje = polloElementti('div', 'pollo-vihje pollo-vihje-yksin');
+      this.vihje.dataset.laji = 'vihje';
       // role="status": ruudunlukija kertoo vihjeen ilman että se
       // sieppaa kohdistuksen kesken vuoron.
       this.vihje.setAttribute('role', 'status');
@@ -2248,6 +2270,215 @@ class Pollo {
       this.doc.body.appendChild(this.vihje);
     }
     return this.vihje;
+  }
+
+  /* --- kuplapino --------------------------------------------------- */
+
+  /**
+   * KUPLAPINO (omistajan tilaus 3.9.2026).
+   *
+   * *"pulun puhekuplat saisi animoida niin että uusi kupla tulee vanhan
+   * alle siirtäen pehmeästi aiemman kuplan ylöspäin … maksimikorkeus
+   * jonka jälkeen kuplat feidautuvat yläosasta näkymättömiin, mutta
+   * ovat pelaajan skrollattavissa … oikeaan yläreunaan pieni x."*
+   *
+   * JUURISYY, JONKA TÄMÄ KORJAA (omistajan Sofia-havainto 3.9.2026:
+   * Livia ei "kommentoinut matkakirjan hurjaa tekstiä"): kuplia oli
+   * yksi ainoa elementti, joten jokainen uusi puheenvuoro pyyhki
+   * edellisen — ja kartan kosketus (js/ui.js peruValintavihje) piilotti
+   * saman elementin riippumatta siitä, kenen puheenvuoro siinä oli.
+   * Livian saapumiskupla katosi sormen liikahduksesta. Nyt kuplat ovat
+   * omia elementtejään pinossa, ja kartan kosketus koskee vain
+   * OHJEKUPLIA (data-laji="vihje"); puheenvuorot jäävät ruudulle.
+   *
+   * RAKENNE. Kehys on kelluva ja asemoidaan alareunastaan pöllönapin
+   * yläpuolelle (asetaPinonPaikka), joten pino kasvaa ylöspäin. Sen
+   * sisällä on vieritettävä pino ja sulkunappi ×. Kuplat ovat samaa
+   * kuplaperhettä kuin ennenkin — sama paperi, sama typografia, samat
+   * alaluokat — ja kärki on CSS:ssä vain pinon viimeisellä, koska vain
+   * se on pöllön vieressä.
+   */
+  varmistaPino() {
+    if (this.pino) return this.pino;
+    const kehys = polloElementti('div', 'pollo-kuplapino-kehys');
+    kehys.hidden = true;
+    const pino = polloElementti('div', 'pollo-kuplapino');
+    const sulje = polloElementti('button', 'pollo-kuplapino-sulje', '✕');
+    sulje.type = 'button';
+    sulje.setAttribute('aria-label', 'Sulje kuplat');
+    /*
+     * Sulkunapin napautus nielaistaan samalla sopimuksella kuin kuplan
+     * oma (ks. sidoKuplanNapautus): kuplat katoavat jo pointerdownissa,
+     * ja ilman nielua sama napautus valitsisi kartalta kohteen.
+     */
+    sulje.addEventListener('pointerdown', (tapahtuma) => {
+      tapahtuma.stopPropagation();
+      tapahtuma.preventDefault();
+      nielaiseSulkevaNapautus(tapahtuma, { doc: this.doc });
+      this.tyhjennaPino();
+    });
+    sulje.addEventListener('click', (tapahtuma) => {
+      tapahtuma.stopPropagation();
+      tapahtuma.preventDefault();
+    });
+    kehys.appendChild(sulje);
+    kehys.appendChild(pino);
+    this.doc.body.appendChild(kehys);
+    this.pinoKehys = kehys;
+    this.pino = pino;
+    return pino;
+  }
+
+  /** Pinon kuplat lukujärjestyksessä (vanhin ensin). */
+  pinonKuplat() {
+    return this.pino ? [...this.pino.children] : [];
+  }
+
+  /**
+   * Yksi kupla pinoon: sama paperi, sama napautussopimus, sama nielu.
+   *
+   * TEHDAS ON YKSI, jotta napautusnielua ei voi vahingossa jättää
+   * sitomatta uudesta kuplalajista (tests/pollo.test.mjs vartioi tätä).
+   *
+   * @param {'vihje'|'puhe'} laji ohjekupla katoaa kartan kosketuksesta,
+   *   puheenvuoro jää (ks. piilotaVihje).
+   */
+  luoKupla(laji) {
+    const kupla = polloElementti('div', 'pollo-vihje');
+    kupla.dataset.laji = laji;
+    kupla.setAttribute('role', 'status');
+    kupla.polloKuittaus = null;
+    this.sidoKuplanNapautus(kupla);
+    return kupla;
+  }
+
+  /** Liikeherkkyys: pelaaja on pyytänyt vähemmän liikettä. */
+  vahaLiiketta() {
+    try {
+      const ikkuna = this.doc.defaultView ?? (typeof window === 'undefined' ? null : window);
+      return Boolean(ikkuna?.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
+    } catch {
+      return false;
+    }
+  }
+
+  /**
+   * Uusi kupla pinon pohjalle, vanhat pehmeästi ylöspäin (FLIP).
+   *
+   * Vanhojen kuplien nousu mitataan eikä arvata: paikat ennen ja
+   * jälkeen lisäyksen, erotus takaisin transformina, ja vasta sitten
+   * siirtymä nollaan. Näin liike on aina täsmälleen sen mittainen kuin
+   * uusi kupla vaatii — myös silloin kun kupla on kolmirivinen.
+   *
+   * Kun pino on jo maksimikorkeudessaan, erotus on nolla ja liikkeen
+   * hoitaa vieritys pohjaan (vierita).
+   */
+  lisaaPinoon(kupla) {
+    const pino = this.varmistaPino();
+    const vanhat = this.pinonKuplat();
+    const vaha = this.vahaLiiketta();
+    const ennen = vaha ? null : vanhat.map((k) => k.getBoundingClientRect().top);
+    this.pinoKehys.hidden = false;
+    pino.appendChild(kupla);
+    this.asetaPinonPaikka();
+    if (ennen) {
+      const liikkuneet = [];
+      vanhat.forEach((k, i) => {
+        const ero = ennen[i] - k.getBoundingClientRect().top;
+        if (Math.abs(ero) <= 0.5) return;
+        k.style.transition = 'none';
+        k.style.transform = `translateY(${ero}px)`;
+        liikkuneet.push(k);
+      });
+      // Pakotettu asettelu: ilman tätä selain yhdistäisi lähtö- ja
+      // loppuarvon samaksi tyylimuutokseksi eikä siirtymää syntyisi.
+      void pino.offsetWidth;
+      for (const k of liikkuneet) {
+        k.style.transition = 'transform 360ms var(--liike-pehmea)';
+        k.style.transform = '';
+        const siivoa = () => {
+          k.style.transition = '';
+          k.style.transform = '';
+          k.removeEventListener('transitionend', siivoa);
+        };
+        k.addEventListener('transitionend', siivoa);
+      }
+    }
+    this.vierita();
+    this.paivitaYlivuoto();
+    this.kuplanAani();
+  }
+
+  /** Pino pohjaan: uusin kupla on aina näkyvissä pöllön vieressä. */
+  vierita() {
+    const pino = this.pino;
+    if (!pino) return;
+    const kaytos = this.vahaLiiketta() ? 'auto' : 'smooth';
+    if (typeof pino.scrollTo === 'function') {
+      pino.scrollTo({ top: pino.scrollHeight, behavior: kaytos });
+      return;
+    }
+    pino.scrollTop = pino.scrollHeight;
+  }
+
+  /**
+   * Ylivuodon merkki kehykselle: pino on täynnä, joten yläreuna
+   * häivytetään (css mask-image) ja loput jäävät vieritettäviksi.
+   */
+  paivitaYlivuoto() {
+    const pino = this.pino;
+    if (!pino || !this.pinoKehys) return;
+    const yli = (pino.scrollHeight ?? 0) - (pino.clientHeight ?? 0) > 1;
+    this.pinoKehys.classList.toggle('pollo-kuplapino-yli', yli);
+  }
+
+  /** Kehys piiloon, kun viimeinenkin kupla on poistunut. */
+  paivitaPinonNakyvyys() {
+    if (!this.pinoKehys) return;
+    this.pinoKehys.hidden = this.pinonKuplat().length === 0;
+    this.paivitaYlivuoto();
+  }
+
+  /**
+   * Kuplat pois pehmeästi häivyttäen; poisto vasta liikkeen jälkeen.
+   *
+   * Varmistin (setTimeout) on pakollinen: transitionend jää tulematta,
+   * jos elementti on jo läpinäkyvä tai välilehti on taustalla, ja
+   * silloin kupla jäisi ruudulle ikuisiksi ajoiksi.
+   */
+  poistaKuplat(kuplat) {
+    const vaha = this.vahaLiiketta();
+    for (const kupla of kuplat) {
+      if (!kupla || kupla.polloPoistuu) continue;
+      kupla.polloPoistuu = true;
+      kupla.polloKuittaus = null;
+      kupla.style.pointerEvents = 'none';
+      const poista = () => {
+        if (!kupla.isConnected) return;
+        kupla.remove();
+        this.paivitaPinonNakyvyys();
+      };
+      kupla.style.transition = vaha
+        ? 'opacity 120ms linear'
+        : 'opacity 200ms var(--liike-ulos), transform 200ms var(--liike-ulos)';
+      kupla.style.opacity = '0';
+      if (!vaha) kupla.style.transform = 'translateY(6px)';
+      kupla.addEventListener('transitionend', poista, { once: true });
+      setTimeout(poista, vaha ? 140 : 220);
+    }
+  }
+
+  /**
+   * Kaikki kuplat pois (×, chatin avaus, pöllön katoaminen, uusi peli).
+   *
+   * Kesken oleva puheenvuoro perutaan samalla — ja sen loput osat
+   * kirjataan chattiin (peruPuheenvuoro), jotta historia on täysi
+   * vaikka pelaaja ei halunnut lukea puheenvuoroa kuplina.
+   */
+  tyhjennaPino() {
+    this.peruPuheenvuoro();
+    if (this.vihje) this.vihje.hidden = true;
+    this.poistaKuplat(this.pinonKuplat());
   }
 
   /**
@@ -2265,6 +2496,14 @@ class Pollo {
    *
    * Kuplan omat painikkeet ja linkit jäävät ennalleen: napautus niiden
    * päällä on valinta eikä sulku, eikä sitä nielaista.
+   *
+   * KOLME ERI LOPPUA (omistajan tilaus 3.9.2026):
+   *  1. Kuittauksellinen kupla (kuplasarja, aloitusvalinta) vie sarjan
+   *     eteenpäin JA JÄÄ PINOON — sarjan aiemmat repliikit saavat jäädä
+   *     luettaviksi, se on koko pinon idea.
+   *  2. Ohjekupla katoaa kosketuksesta, kuten ennenkin.
+   *  3. Puheenvuoro avaa chatin: *"jos pelaaja klikkaa kuplaa tai
+   *     pöllön kuvaketta, kuplat avautuvat normaaliin chattinäkymään."*
    */
   sidoKuplanNapautus(kupla) {
     const omaHallinta = (tapahtuma) => Boolean(
@@ -2274,16 +2513,27 @@ class Pollo {
       if (omaHallinta(tapahtuma)) return;
       nielaiseSulkevaNapautus(tapahtuma, { doc: this.doc });
       /*
-       * KUITTAUS OTETAAN TALTEEN ENNEN SULKUA. Napautus vie
+       * KUITTAUS OTETAAN TALTEEN ENNEN MITÄÄN MUUTA. Napautus vie
        * kuplasarjan seuraavaan repliikkiin (js/livia.js), mutta
-       * piilotaVihje voi tulla myös muualta — silloin sarja ei saa
-       * edetä. Siksi takaisinkutsu laukeaa vain tästä eleestä, ja se
-       * kelpaa kerran.
+       * tyhjennys voi tulla myös muualta — silloin sarja ei saa edetä.
+       * Siksi takaisinkutsu laukeaa vain tästä eleestä, ja se kelpaa
+       * kerran.
        */
-      const kuittaus = this.kuplanKuittaus;
-      this.kuplanKuittaus = null;
-      this.piilotaVihje();
-      kuittaus?.();
+      const kuittaus = kupla.polloKuittaus ?? null;
+      kupla.polloKuittaus = null;
+      if (kuittaus) {
+        kuittaus();
+        return;
+      }
+      if (kupla === this.vihje) {
+        this.piilotaVihje();
+        return;
+      }
+      if (kupla.dataset?.laji === 'vihje') {
+        this.poistaKuplat([kupla]);
+        return;
+      }
+      this.avaa();
     });
     /*
      * Toinen vartio samalle napautukselle: jos kupla on clickin
@@ -2304,27 +2554,23 @@ class Pollo {
    * lausuu sen. Sama kuplaperhe kuin vihjeellä: sama paperi, sama
    * kärki, sama paikannus. Vain sisältö on juhlava.
    *
+   * KUPLAPINON MYÖTÄ (3.9.2026) juhla on pinon kupla muiden joukossa:
+   * se ei enää ankkuroidu matkalaukun pilleriin, koska yksi puhuja
+   * puhuu yhdestä paikasta — pinosta pöllön vieressä.
+   *
    * @param {object} p
    * @param {string} p.teksti onnittelulause (pakollinen; ilman sitä ei kuplaa).
    * @param {string} [p.kuva] tason avatarin polku.
    * @param {string[]} [p.sakeet] värssyn säkeet omille riveilleen.
    */
   naytaOnnittelu({ teksti = '', kuva = '', sakeet = [] } = {}) {
-    if (!teksti || this.auki || this.nappi.hidden) return;
+    if (!teksti || this.nappi.hidden) return;
+    this.kirjaaKuplaViestiin(teksti);
+    if (this.auki) return;
     this.kiinnita();
-    /*
-     * Juhlakupla ilmestyy MATKALAUKUN kohdalle ylös (omistaja
-     * 18.8.2026: "sehän pitää tulla matkalaukun kohdalle ylös") —
-     * tasonnousu näkyy laukun tietäjärivillä, joten kupla osoittaa
-     * sinne. Ilman pilleriä (esim. työhuoneen esikatselu) pudotaan
-     * pöllönapin viereen.
-     */
-    this.vihjeAnkkuri = this.doc.getElementById('turn-pill');
-    const kupla = this.varmistaKupla();
-    this.nollaaKuplanAsu(kupla);
-    kupla.classList.toggle('pollo-vihje-ylos', Boolean(this.vihjeAnkkuri));
+    this.vihjeAnkkuri = null;
+    const kupla = this.luoKupla('puhe');
     kupla.classList.add('pollo-vihje-juhla');
-    kupla.replaceChildren();
     if (kuva) {
       const kuvake = document.createElement('img');
       kuvake.className = 'pollo-vihje-avatar';
@@ -2333,11 +2579,14 @@ class Pollo {
       kuvake.decoding = 'async';
       kuvake.draggable = false;
       /*
-       * Kuva muuttaa kuplan korkeutta latautuessaan, ja kupla on
+       * Kuva muuttaa kuplan korkeutta latautuessaan, ja pino on
        * asemoitu alareunastaan napin yläpuolelle — ilman uutta
        * mittausta se hyppäisi paikaltaan juuri kun pelaaja katsoo sitä.
        */
-      kuvake.addEventListener('load', () => this.asetaVihjeenPaikka(), { once: true });
+      kuvake.addEventListener('load', () => {
+        this.asetaPinonPaikka();
+        this.vierita();
+      }, { once: true });
       kupla.appendChild(kuvake);
     }
     if (sakeet.length) {
@@ -2348,64 +2597,96 @@ class Pollo {
       kupla.appendChild(varssy);
     }
     kupla.appendChild(polloElementti('p', 'pollo-vihje-lause', teksti));
-    kupla.hidden = false;
-    this.asetaVihjeenPaikka();
+    this.lisaaPinoon(kupla);
   }
 
-  /** Kupla napin yläpuolelle, ruudun reunojen sisään. */
+  /**
+   * Valikkovihje hampurilaisnapin alle, ruudun reunojen sisään.
+   *
+   * Vain pinon poikkeuskupla kulkee tästä (ks. naytaVihje); pinon oma
+   * paikannus on asetaPinonPaikka.
+   */
   asetaVihjeenPaikka() {
     const kupla = this.vihje;
     if (!kupla || kupla.hidden) return;
     const ikkuna = this.doc.defaultView ?? window;
-    // Ankkuri on yleensä pöllönappi; valikkovihjeellä hampurilainen
-    // (ks. naytaVihje). Ankkurin alle mentäessä kärki on ylhäällä,
-    // joten kupla asemoidaan topilla — bottom ja top nollataan
-    // ristiin, koska sama elementti kiertää molemmissa asennoissa.
     const ankkuri = this.vihjeAnkkuri ?? this.nappi;
     const nappi = this.ankkuriLaatikko(ankkuri, ikkuna);
-    /*
-     * KUPLA IRTI SIVURAJOISTA (omistajan pelitestipalaute v1119:
-     * *"kuplat hieman irti sivurajoista — nyt kiinni oikeassa
-     * laidassa — esim. 12–16 px marginaali"*). Kahdeksan pikseliä
-     * riitti pitämään kuplan ruudulla, muttei erottamaan sitä
-     * reunasta: iPadilla saapumiskuplat näyttivät liimautuneen kiinni
-     * oikeaan laitaan.
-     */
+    kupla.style.left = `${Math.round(this.vaakapaikka(this.luontainenLeveys(kupla), nappi, ikkuna))}px`;
+    // Ankkurin ALLA kärki on ylhäällä, joten kupla asemoidaan topilla.
+    kupla.style.bottom = '';
+    kupla.style.top = `${Math.round(nappi.bottom + 10)}px`;
+  }
+
+  /**
+   * Kelluvan osan vasen reuna: keskitetty ankkuriin, ruudun sisään.
+   *
+   * KUPLA IRTI SIVURAJOISTA (omistajan pelitestipalaute v1119:
+   * *"kuplat hieman irti sivurajoista — nyt kiinni oikeassa laidassa —
+   * esim. 12–16 px marginaali"*). Kahdeksan pikseliä riitti pitämään
+   * kuplan ruudulla, muttei erottamaan sitä reunasta: iPadilla
+   * saapumiskuplat näyttivät liimautuneen kiinni oikeaan laitaan.
+   */
+  vaakapaikka(leveys, nappi, ikkuna) {
     const marginaali = 14;
-    const vasemmalle = (osa) => {
-      const leveys = osa.getBoundingClientRect().width;
-      const keskitetty = nappi.left + nappi.width / 2 - leveys / 2;
-      return Math.max(marginaali,
-        Math.min(keskitetty, (ikkuna.innerWidth || 0) - leveys - marginaali));
+    const keskitetty = nappi.left + nappi.width / 2 - leveys / 2;
+    return Math.max(marginaali,
+      Math.min(keskitetty, (ikkuna.innerWidth || 0) - leveys - marginaali));
+  }
+
+  /**
+   * Kelluvan osan LUONTAINEN leveys, ei senhetkinen.
+   *
+   * Kiinteästi asemoitu laatikko kutistuu sen mukaan, paljonko sen
+   * vasemmalta reunalta on tilaa oikeaan laitaan — eli oman edellisen
+   * paikkansa mukaan. Mitattu leveys olisi siis seurausta paikasta,
+   * jota ollaan vasta laskemassa, ja pino ryömisi oikeaan laitaan
+   * kupla kuplalta. Mittaus tehdään siksi vasemmasta reunasta, jossa
+   * tilaa on koko ruudun verran; välitilaa ei ehditä piirtää, koska
+   * getBoundingClientRect pakottaa asettelun heti.
+   */
+  luontainenLeveys(osa) {
+    const vanha = osa.style.left;
+    osa.style.left = '0px';
+    const leveys = osa.getBoundingClientRect().width;
+    osa.style.left = vanha;
+    return leveys;
+  }
+
+  /**
+   * Kuplapino pöllönapin yläpuolelle, ruudun reunojen sisään.
+   *
+   * Kehys asemoidaan ALAREUNASTAAN, joten uusi kupla työntää pinoa
+   * ylöspäin eikä alaspäin kohti nappia. Vaakasuunta on sama kuin
+   * yksittäisillä kuplilla ennenkin (vaakapaikka), ja ankkurin
+   * varapaikka hoitaa aloitusvalinnan, jossa nappia ei vielä ole.
+   */
+  asetaPinonPaikka() {
+    const kehys = this.pinoKehys;
+    if (!kehys || kehys.hidden) return;
+    const ikkuna = this.doc.defaultView ?? window;
+    const nappi = this.ankkuriLaatikko(this.nappi, ikkuna);
+    const leveys = this.luontainenLeveys(kehys);
+    kehys.style.left = `${Math.round(this.vaakapaikka(leveys, nappi, ikkuna))}px`;
+    kehys.style.bottom = `${Math.round((ikkuna.innerHeight || 0) - nappi.top + 10)}px`;
+  }
+
+  /**
+   * Ruudun koko tai vieritys muuttui: pino seuraa nappia.
+   *
+   * Sama polku päivittää myös ylivuodon merkin, koska pinon
+   * enimmäiskorkeus on ruudun korkeuden suhde (css max-height).
+   */
+  seuraaRuudunKokoa() {
+    const ikkuna = this.doc.defaultView ?? (typeof window === 'undefined' ? null : window);
+    if (typeof ikkuna?.addEventListener !== 'function') return;
+    const paivita = () => {
+      this.asetaPinonPaikka();
+      this.paivitaYlivuoto();
+      this.asetaVihjeenPaikka();
     };
-    kupla.style.left = `${Math.round(vasemmalle(kupla))}px`;
-    /*
-     * PARI PINOTAAN ALHAALTA YLÖS. Alempi kupla on siinä, missä yksi
-     * kupla muutenkin olisi, ja ylempi nousee sen korkeuden verran
-     * ylemmäs. Järjestys on lukujärjestys: ensimmäinen lause on
-     * ylempänä, sen jatko alempana lähempänä pöllöä.
-     */
-    const lisa = this.vihjeLisa && !this.vihjeLisa.hidden ? this.vihjeLisa : null;
-    if (lisa) lisa.style.left = `${Math.round(vasemmalle(lisa))}px`;
-    if (this.vihjeAnkkuri) {
-      kupla.style.bottom = '';
-      kupla.style.top = `${Math.round(nappi.bottom + 10)}px`;
-      if (lisa) {
-        const korkeus = kupla.getBoundingClientRect().height;
-        lisa.style.bottom = '';
-        lisa.style.top = `${Math.round(nappi.bottom + 18 + korkeus)}px`;
-      }
-      return;
-    }
-    const alaReuna = Math.round((ikkuna.innerHeight || 0) - nappi.top + 10);
-    kupla.style.top = '';
-    if (lisa) {
-      lisa.style.top = '';
-      lisa.style.bottom = `${alaReuna}px`;
-      kupla.style.bottom = `${Math.round(alaReuna + lisa.getBoundingClientRect().height + 8)}px`;
-      return;
-    }
-    kupla.style.bottom = `${alaReuna}px`;
+    ikkuna.addEventListener('resize', paivita);
+    ikkuna.addEventListener('orientationchange', paivita);
   }
 
   /**
@@ -2437,13 +2718,124 @@ class Pollo {
     };
   }
 
-  /** Kupla pois: pelaaja teki valinnan, koski karttaa tai vaihe vaihtui. */
+  /**
+   * OHJEKUPLAT pois: pelaaja teki valinnan, koski karttaa tai vaihe
+   * vaihtui.
+   *
+   * PUHEENVUOROT JÄÄVÄT (omistajan Sofia-havainto 3.9.2026, ks.
+   * varmistaPino): kartan kosketus on merkki siitä, ettei pelaaja
+   * tarvitse ohjetta — ei siitä, ettei hän halua kuulla Liviaa.
+   * Kaikki kuplat pois on eri kutsu (tyhjennaPino).
+   */
   piilotaVihje() {
-    // Pari häviää yhdessä: toinen puoli lausetta jäisi kummittelemaan.
-    if (this.vihjeLisa) this.vihjeLisa.hidden = true;
-    if (!this.vihje) return;
-    this.vihje.hidden = true;
-    this.vihje.classList.remove('pollo-vihje-parina');
+    if (this.vihje) this.vihje.hidden = true;
+    this.poistaKuplat(this.pinonKuplat().filter((k) => k.dataset?.laji === 'vihje'));
+  }
+
+  /* --- puheenvuoro osissa ------------------------------------------ */
+
+  /**
+   * PUHEENVUORO USEANA KUPLANA (omistajan tilaus 3.9.2026: *"pulu voisi
+   * kommentoida sitä muutamissa osissa. huudahtaa vaikka ensin sen
+   * 'kääk, onpa hurja juttu' ja sitten vähän ajan päästä jatkaa."*).
+   *
+   * Osat tulevat pinoon yksi kerrallaan, ja viive on suhteessa EDELLISEN
+   * osan pituuteen: pelaaja ehtii lukea sen ennen kuin seuraava
+   * työntää sitä ylöspäin. Nimilappu on vain ensimmäisessä — sama
+   * puhuja jatkaa, eikä nimeä toisteta joka kuplassa.
+   *
+   * KESKEYTYS. Sarja perutaan, kun pelaaja sulkee kuplat (×), avaa
+   * chatin tai pöllö katoaa (tyhjennaPino), ja `jatkuuko` katkaisee
+   * sen, kun puheenvuoron kohde ei ole enää ruudulla (esim. pelaaja
+   * lähti kaupungista). Sulkemisesta jääneet osat kirjataan CHATTIIN
+   * (peruPuheenvuoro): puheenvuoro on sanottu, vaikkei pelaaja
+   * halunnut lukea sitä kuplina — chatti-ikkunassa se on tallella.
+   *
+   * @param {string[]} osat puheenvuoro osiin jaettuna (jaaPuheenvuoroksi).
+   * @param {object} [asetukset]
+   * @param {(() => void)|null} [asetukset.kuittaus] napautus VIIMEISEEN
+   *   kuplaan vie sarjan eteenpäin (kuplasarjat, js/livia.js).
+   * @param {() => boolean} [asetukset.jatkuuko] ehto, joka tarkistetaan
+   *   ennen jokaista jatko-osaa.
+   * @returns {boolean} näkyikö ensimmäinen kupla.
+   */
+  naytaPuheenvuoro(osat, { kuittaus = null, jatkuuko = () => true } = {}) {
+    const palat = (Array.isArray(osat) ? osat : [osat])
+      .map((osa) => String(osa ?? '').trim()).filter(Boolean);
+    if (!palat.length) return false;
+    // Uusi puheenvuoro syrjäyttää edellisen: kaksi puhujaa yhtä aikaa
+    // olisi sekasotku, vaikka puhuja on sama lintu.
+    this.peruPuheenvuoro();
+    const yksi = palat.length === 1;
+    const nakyi = this.naytaSaapumiskupla(palat[0], {
+      kuittaus: yksi ? kuittaus : null,
+    });
+    if (!nakyi || yksi) return nakyi;
+    this.puheenvuoro = { palat, seuraava: 1, kuittaus, jatkuuko };
+    this.ajastaPuheenvuoro();
+    return true;
+  }
+
+  /** Seuraava osa vuorossa; viive kasvaa edellisen osan pituuden mukaan. */
+  ajastaPuheenvuoro() {
+    const tila = this.puheenvuoro;
+    if (!tila) return;
+    const edellinen = tila.palat[tila.seuraava - 1] ?? '';
+    const viive = Math.min(PUHEENVUORON_VIIVE_YLA, Math.max(PUHEENVUORON_VIIVE_ALA,
+      PUHEENVUORON_PERUSVIIVE + PUHEENVUORON_SANAVIIVE * sanamaara(edellinen)));
+    clearTimeout(this.puheenvuoroAjastin);
+    this.puheenvuoroAjastin = setTimeout(() => {
+      this.puheenvuoroAjastin = null;
+      const nyt = this.puheenvuoro;
+      if (!nyt) return;
+      // Kohde on voinut vaihtua kesken sarjan (pelaaja lähti
+      // kaupungista): loppuja ei sanota eikä kirjata.
+      if (!nyt.jatkuuko()) {
+        this.puheenvuoro = null;
+        return;
+      }
+      const i = nyt.seuraava;
+      nyt.seuraava += 1;
+      const viimeinen = nyt.seuraava >= nyt.palat.length;
+      this.naytaSaapumiskupla(nyt.palat[i], {
+        kuittaus: viimeinen ? nyt.kuittaus : null,
+        nimilappu: false,
+      });
+      if (viimeinen) {
+        this.puheenvuoro = null;
+        return;
+      }
+      this.ajastaPuheenvuoro();
+    }, viive);
+  }
+
+  /** Sarja poikki; loput osat chatin virtaan (ks. naytaPuheenvuoro). */
+  peruPuheenvuoro() {
+    clearTimeout(this.puheenvuoroAjastin);
+    this.puheenvuoroAjastin = null;
+    const tila = this.puheenvuoro;
+    this.puheenvuoro = null;
+    if (!tila) return;
+    for (let i = tila.seuraava; i < tila.palat.length; i += 1) {
+      this.kirjaaKuplaViestiin(tila.palat[i]);
+    }
+  }
+
+  /**
+   * PUHEKUPLA MYÖS CHATTIIN (omistajan tilaus 3.9.2026: *"vanhat kuplat
+   * näkyvät silti vielä chatti-ikkunassa"*).
+   *
+   * Jokainen puheenvuoro kirjataan virtaan SILLÄ HETKELLÄ, kun se
+   * sanotaan — ei vasta chatin avautuessa. Näin ×:llä suljetut ja
+   * chatin alta ohi menneet kuplat ovat luettavissa jälkikäteen, ja
+   * järjestys on se, jossa Livia ne sanoi. Ohjekuplia ei kirjata: ne
+   * ovat käyttöliittymää, eivät puhetta.
+   */
+  kirjaaKuplaViestiin(teksti) {
+    if (!teksti || !this.virta) return null;
+    const viesti = this.lisaaViesti('pollo', teksti);
+    viesti.classList.add('pollo-kuplaviesti');
+    return viesti;
   }
 
   /**
@@ -2521,7 +2913,16 @@ class Pollo {
        * kuin se avaisi sen uudelleen. Kortin oma sulkusopimus säilyy
        * ennallaan (js/fokuskohteet.js).
        */
-      if (e.target?.closest?.('.pollo-paneeli, .pollo-nappi, .fokuskohde-popup')) return;
+      /*
+       * KUPLAPINO EI OLE "ULKOPUOLTA" (kuplapino 3.9.2026): puhekuplan
+       * napautus AVAA chatin (sidoKuplanNapautus), ja sama pointerdown
+       * kuplii tänne heti perään — ilman tätä rajausta chat sulkeutuisi
+       * samasta eleestä, joka juuri avasi sen. Chatin ollessa auki
+       * pinossa ei ole kuplia, joten mitään ei jää tämän taakse.
+       */
+      if (e.target?.closest?.(
+        '.pollo-paneeli, .pollo-nappi, .fokuskohde-popup, .pollo-kuplapino-kehys',
+      )) return;
       this.sulje();
     });
     this.doc.addEventListener('keydown', (e) => {
@@ -2556,8 +2957,14 @@ class Pollo {
     pysaytaLukija();
     // Liuku peittäisi pöllön napin: se väistyy, kun chat aukeaa.
     this.haeUi?.()?.suljeLiuku?.();
-    // Keskustelu korvaa vihjeen: kupla ei jää paneelin viereen.
-    this.piilotaVihje();
+    /*
+     * KESKUSTELU KORVAA KUPLAT (omistaja 3.9.2026: *"jos pelaaja
+     * klikkaa kuplaa tai pöllön kuvaketta, kuplat avautuvat normaaliin
+     * chattinäkymään"*). Pino tyhjenee, mutta mitään ei menetetä: joka
+     * puhekupla on kirjattu virtaan jo sanomishetkellään
+     * (kirjaaKuplaViestiin), joten ne ovat tässä alla.
+     */
+    this.tyhjennaPino();
     this.kiinnita();
     this.auki = true;
     // Edellisen vastauksen tyhjä varaus pois ennen kuin paneeli näkyy:
@@ -2592,9 +2999,16 @@ class Pollo {
       this.naytaNukkuva();
       return;
     }
-    // Ehdotuslaatikko asuu virrassa, joten tervehdystä ei etsitä
-    // lapsimäärästä vaan viesteistä.
-    if (!this.virta.querySelector('.pollo-viesti')) this.lisaaViesti('pollo', TERVEHDYS);
+    /*
+     * Ehdotuslaatikko asuu virrassa, joten tervehdystä ei etsitä
+     * lapsimäärästä vaan viesteistä. Kuplaviestit eivät laske: ne ovat
+     * Livian omia puheenvuoroja (kirjaaKuplaViestiin), eivät alkanut
+     * keskustelu — ilman tätä rajausta tervehdys jäisi kokonaan pois
+     * heti ensimmäisen kuplan jälkeen.
+     */
+    if (!this.virta.querySelector('.pollo-viesti:not(.pollo-kuplaviesti)')) {
+      this.lisaaViesti('pollo', TERVEHDYS);
+    }
     // Kehittäjätila voi vaihtua kesken pelin, joten kenttä katsotaan
     // joka avauksella eikä kerran käynnistyksessä.
     this.naytaSyote();
@@ -4805,9 +5219,30 @@ export function polloAvauskupla(teksti, asetukset = {}) {
   return Boolean(nykyinenPollo?.naytaAvauskupla(teksti, asetukset));
 }
 
-/** Vihjekupla pois. */
+/**
+ * Livian puheenvuoro osissa (js/fokusvirta.js fokusvirtaSaapumiskupla).
+ * Osat tulevat kuplapinoon peräkkäin, ks. naytaPuheenvuoro.
+ *
+ * @returns {boolean} näkyikö ensimmäinen kupla.
+ */
+export function polloPuheenvuoro(osat, asetukset = {}) {
+  return Boolean(nykyinenPollo?.naytaPuheenvuoro(osat, asetukset));
+}
+
+/**
+ * OHJEKUPLAT pois (js/ui.js peruValintavihje). Livian puheenvuorot
+ * jäävät pinoon — ne eivät ole ohjeita (ks. piilotaVihje).
+ */
 export function polloVihjePois() {
   nykyinenPollo?.piilotaVihje();
+}
+
+/**
+ * KAIKKI kuplat pois: uusi peli, kuplasarjan loppu, pöllön katoaminen.
+ * Kesken oleva puheenvuoro perutaan ja sen loput kirjataan chattiin.
+ */
+export function polloKuplatPois() {
+  nykyinenPollo?.tyhjennaPino();
 }
 
 /**

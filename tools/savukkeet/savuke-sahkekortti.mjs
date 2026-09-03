@@ -131,7 +131,7 @@ for (const ruutu of RUUDUT) {
     ui.busy = false;
     ui.render();
     await new Promise((r) => setTimeout(r, 1200));
-    document.querySelector('.pollo-vihje')?.remove();
+    window.matkakirjaPollo?.tyhjennaPino();
     const ok = fv.avaaFokusKohtaaminen(ui, game.cityOf());
     await new Promise((r) => setTimeout(r, 700));
     return { ok, kortti: Boolean(document.querySelector('.fokusvirta-kortti')) };
