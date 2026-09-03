@@ -1014,7 +1014,51 @@ tulevat oikealla tarkkoina.
 
 ---
 
-## 10. Tarkistuslista ennen kuin linssi on valmis
+## 10. Tiedeliite — keksijän oma lehtisivu (3.9.2026)
+
+Raamattu KEKSIJAT LINSSIN ALARIVILLA JA TIEDELIITE, kohta 3: nykyisen
+kortin napautus ja ilmiöpaneelin "Lue juttu" avaavat keksijän sivun
+**Lisälehden taittoperheessä** (js/tiedeliite.js, kuori css/aikajana.css
+osio TIEDELIITE, rivit css/fokusnosto.css osio 9). Sivu ei ole
+nähtävyyskortti (js/nahtavyydet.js) eikä kaupunkilehden sivu: se on
+linssin oma lehti, joka elää aikajanan päällä ja katoaa sen mukana.
+
+| rivi | luokka | sisältö |
+|---|---|---|
+| nimiö | `looppi-nimio` | "Tiedeliite" |
+| päiväys | `looppi-paivays` | vuosi · paikka |
+| pääotsikko | `looppi-otsikko` | keksintö (`otsikko`) |
+| keksijä | `tiedeliite-henkilo` | `henkilo` harvennettuna versaalina |
+| ingressi | `looppi-ingressi` | `selite` |
+| kasvorivi | `tiedeliite-kasvot` | `kuva`, `kuvaToinen`, `kuvaAito` vierekkäin kuvateksteineen |
+| ilmiökuvat | `fokusnosto-kuva` | `ilmio`, `ilmioLisa` (Blériot'n lähikuva näkyy nyt) |
+| leipäteksti | `looppi-leipa` | `juttu` kappaleittain, anfangi ja kaksi palstaa |
+| lähderivi | `fokusnosto-lahde` | `lahde` |
+| alanapit | `tiedeliite-navi` | ‹ edellinen keksijä · seuraava keksijä › |
+
+Liikkuminen: alanapit ja nuolinäppäimet vievät edelliseen ja
+seuraavaan keksijään, hampurilainen (kortin vasen yläkulma) avaa
+sisällyksen, jossa kaikki keksijät vuosineen. Merkkipaalu (1873)
+ohitetaan — sillä ei ole keksijää eikä juttua
+(`onTiedeliitteenSivu`). Sivun vaihto on ristihäivytys samassa
+kortissa (Raamattu: KAIKKI LIIKE ANIMOIDAAN PEHMEASTI); moottori saa
+vaihdosta tiedon (`kunVaihtuu`) ja näyttää saman keksijän
+ilmiöpaneelissa kuten menneen kortin napautuksessa — kello ja valot
+eivät liiku. Linssin musiikki väistyy sivun ajaksi ja palaa
+sulkukoukusta (`kunSuljetaan`).
+
+Kuvat ovat sivulla ALKUPERÄISINÄ (ei pieniä versioita): sivu on
+lukunäkymä, jossa kuvaa katsotaan isona ja napautus suurentaa sen
+(js/fokuskohteet.js avaaKohdeSuurennos, ui-avain `tiedeliiteZoom`).
+Latautumaton kuva pudotetaan riviltä, jottei paperille jää tyhjää
+laatikkoa.
+
+Testit: tests/tiedeliite.test.mjs (puhtaat apurit ja datan
+sopivuus), tests/aikajana.test.mjs (kytkentä moottoriin).
+
+---
+
+## 11. Tarkistuslista ennen kuin linssi on valmis
 
 - [ ] `js/linssit/<tunnus>.js` vie `LINSSI`-vakion, jossa on `tunnus`,
       `nimi`, `lyhyt`, `ikoni`, `laudat`, `lahde` ja `piirra`.

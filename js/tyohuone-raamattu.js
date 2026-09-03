@@ -2871,7 +2871,11 @@ export const RAAMATTU = {
           + 'alanapeista ja hampurilaisesta. 4) LINSSIKUVAT ESILADATAAN '
           + 'pienina (640 px WebP, ampari aikajana/keksinnot/pieni/) linssin '
           + 'avautuessa; iso kuva vasta Lue juttu -napista. Korjataan samalla: '
-          + 'suurennettu kortti leikkautui ylareunasta.',
+          + 'suurennettu kortti leikkautui ylareunasta. TEHTY: muotokuvat '
+          + 'kortteihin ja leikkautuminen (v1493), karuselli ja pienet '
+          + 'versiot (v1494), Tiedeliite alanapein ja hampurilaisin (v1495); '
+          + 'aito Commons-kuva on Tiedeliitteen kasvorivilla generoidun '
+          + 'rinnalla.',
         'LINSSIN VUOSILUKU RULLAA JA NAKSAHTAA (omistaja 3.9.2026: "sen '
           + 'vuosiluvun animoida niin, etta numero pyorahtaa ylhaalta alas, '
           + 'kuin hedelmapeli automaatissa ... kun vuosiluku vaihtuu, niin '

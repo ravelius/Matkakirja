@@ -25,6 +25,7 @@ import { tarkistaLinssi } from '../js/linssit/kerros.js';
 
 // Moottorin lähde tekstinä: kytkennät, joita puhdas funktio ei näytä.
 const MOOTTORI = readFileSync(new URL('../js/aikajana.js', import.meta.url), 'utf8');
+const TIEDELIITE = readFileSync(new URL('../js/tiedeliite.js', import.meta.url), 'utf8');
 const TAPAHTUMAT = [{ vuosi: 1770 }, { vuosi: 1773, paalu: true }, { vuosi: 1780 }];
 const TAHTI = { vuosiMs: 100, viiveMs: 500, paaluMs: 200 };
 
@@ -161,8 +162,10 @@ test('moottori näyttää pienen version ja esilataa koko kaaren pienenä', () =
   assert.match(MOOTTORI, /kaynnista\(\) \{[\s\S]{0,200}this\.esilataaPienet\(\);/);
   assert.match(MOOTTORI, /esilataaPienet\(\) \{[\s\S]{0,400}for \(const t of this\.tapahtumat\)[\s\S]{0,300}pieniOsoite\(kuva\.osoite\)/);
   assert.ok(!/esilataaSeuraavat/.test(MOOTTORI), 'kolmen pysäkin ikkuna on korvattu');
-  // "Lue juttu" -galleria saa yhä alkuperäiset kuvatiedot.
-  assert.match(MOOTTORI, /const kuvat = \[t\.ilmio, \.\.\.muotokuvat\(t\), t\.kuvaAito\]\.filter\(onKuva\);/);
+  // "Lue juttu" avaa Tiedeliitteen, joka saa alkuperäiset kuvatiedot
+  // (js/tiedeliite.js piirtää ne itse; pieni versio on vain moottorin).
+  assert.match(MOOTTORI, /avaaJuttu\(t\) \{[\s\S]{0,300}avaaTiedeliite\(this\.ui, this\.tapahtumat, i, \{/);
+  assert.ok(!/pieniOsoite/.test(TIEDELIITE), 'Tiedeliite ei pienennä kuvia');
 });
 
 /* ==================== KARUSELLI ==================== */
@@ -290,9 +293,12 @@ test('moottori käskee musiikkia käynnistyksessä, tauolla, jutussa ja purussa'
   assert.match(MOOTTORI, /pysayta\(\) \{[\s\S]{0,200}this\.saadaMusiikki\(\)/);
   assert.match(MOOTTORI, /jatka\(\) \{[\s\S]{0,200}this\.saadaMusiikki\(\)/);
   assert.match(MOOTTORI, /saadaMusiikki\([\s\S]{0,200}himmennaSiirtymamusiikki\(ajossa \? 1 : AIKAJANA_TAUKO_HIMMENNYS\)/);
-  // Juttu nähtävyyskorttina: raita pois ja takaisin kortin sulkeutuessa.
-  assert.match(MOOTTORI, /avaaJuttu\(t\) \{[\s\S]{0,600}this\.vaimennaJutunAjaksi\(\)/);
-  assert.match(MOOTTORI, /vaimennaJutunAjaksi\(\) \{[\s\S]{0,600}addEventListener\('close'[\s\S]{0,200}this\.aloitaMusiikki\(\)/);
+  // Juttu Tiedeliitteenä: raita pois kun sivu aukeaa ja takaisin
+  // kortin sulkukoukusta (kunSuljetaan → palautaJutunJalkeen).
+  assert.match(MOOTTORI, /avaaJuttu\(t\) \{[\s\S]{0,900}if \(auki\) this\.vaimennaJutunAjaksi\(\)/);
+  assert.match(MOOTTORI, /kunSuljetaan: \(\) => this\.palautaJutunJalkeen\(\)/);
+  assert.match(MOOTTORI, /palautaJutunJalkeen\(\) \{[\s\S]{0,200}this\.aloitaMusiikki\(\)/);
+  assert.match(MOOTTORI, /pura\(\) \{[\s\S]{0,120}suljeTiedeliite\(this\.ui\)/);
   // Kaari ilman musiikki-kenttää ei koske soittimeen.
   assert.match(MOOTTORI, /this\.musiikkiLaji = kaari\.musiikki \?\? null;/);
   for (const metodi of ['aloitaMusiikki', 'saadaMusiikki', 'lopetaMusiikki', 'vaimennaJutunAjaksi']) {
