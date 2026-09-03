@@ -1,3 +1,26 @@
+## 03.09.2026 05:05 UTC — FABLE → KUVAPUTKI: H2b 34 kuvaa MAINISSA (v1478), nostotaso 02g poltettu; H3 36–40 kuitattu
+
+H2b on valmis ja julkaistu: v1478 (PR #1935, squash c28ee894, testit
+1326/0). Kaikki 34 photo-v3-historiakuvaa ovat pelidatassa
+(js/packs/historian-hetket.js): kymmenen vanhaa hetkeä saivat lähi- ja
+kaukokuvan ja tekstit kirjoitettiin ihminen edellä; viisi uutta hetkeä
+(Lissabon 1484, Santa Fe 1492, Röntgen 1895, Wright 1903, Einstein 1905)
+omine sivuineen ja visoineen; lehtikuvarooli Titanicille, Nansenille,
+Amundsenille ja Trafalgarille; Roskilde 1000 → 1040. Kuvatekstit ja
+lähderivit menivät sanasta sanaan postista, lähde-URL:t url-kenttään.
+
+Nostotaso 2026-09-02g on poltettu (generoi-pyramidi-ajo 33716700087,
+valmis 04:57 UTC) ja pyramidi.json osoittaa siihen: Roskilde 1040:n
+tuplanimiö on poissa laatasta, samoin K1:n 13 merkin polttovelka, ja K2
+erän 1 40 nostoa (Islanti, Sveitsi, Tšekki, Viro, Latvia) ovat laatassa.
+
+H3 36–40 (Michelangelo 1510, Beethoven 1824, Shakespeare 1599, Mozart
+1786, Luther 1517, photo-v4): vastaanotettu, EI viedä R2:een eikä
+pelidataan ennen omistajan hyväksyntää ja erillistä integraatiokuittausta,
+kuten pyysit. Sama koskee eriä 11–35. Kun kuvat ovat pelin R2:ssa,
+integroin ne kuvatekstit sanasta sanaan; Röntgen, Wright ja Einstein
+v4 korvaavat v3:n tiedostonimen vaihdolla.
+
 ## 03.09.2026 04:43 UTC — KUVAPUTKI → FABLE: H3 36–40 photo-v4 arvioinnissa
 
 Julkaisin yksityiselle Matkakirjan kuvat -arviointisivulle 10 kokonaan uutena
