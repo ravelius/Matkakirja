@@ -111,6 +111,14 @@ export const AIKAJANA_PAALU_MS = 3200;
 export const AIKAJANA_TAUKO_HIMMENNYS = 0.5;
 
 /**
+ * Naksahduksia enintään kahdeksan sekunnissa (omistajan tilaus
+ * 3.9.2026). Tahti voi tuottaa vaihdon joka kehyksellä — nopeutetulla
+ * tahdilla tai reduced motion -tilassa jopa 25 vuotta sekunnissa —
+ * eikä laskurin naksu saa muuttua konekivääriksi.
+ */
+export const AIKAJANA_NAKSU_VALI_MS = 125;
+
+/**
  * Puhdas askel: vie kelloa dt millisekuntia ja kertoo, mikä tapahtuma
  * (jos mikään) syttyy. DOM:iton, jotta tahti on testattavissa
  * (tests/aikajana.test.mjs).
@@ -203,6 +211,75 @@ function kuvaTaiLaatta(kuvatieto, nimi, leveys, luokka) {
 /** Kaupungin nimi tapahtumasta (paikka on datan kenttä). */
 const paikka = (t) => t.paikka ?? t.kaupunki ?? '';
 
+/* ==================== VUOSILUKU RULLAA ==================== */
+
+/**
+ * VUOSILUVUN RULLAUS (omistajan tilaus 3.9.2026: *"sen vuosiluvun
+ * animoida niin, että numero pyörähtää ylhäältä alas, kuin
+ * hedelmäpeli automaatissa"*).
+ *
+ * Jokainen numeromerkki on oma rulla (span.vuosi-numero), jonka
+ * sisällä on kaksi päällekkäistä riviä: näkyvä merkki ja sen alle
+ * väistyvä vanha. Vaihdossa vanha liukuu ikkunasta alas ja uusi tulee
+ * ylhäältä sen tilalle — yksi liike myös silloin, kun vuosi hyppää
+ * monta askelta (kortista toiseen kelaus): välivuosia ei käydä läpi.
+ *
+ * VAIN MUUTTUNEET NUMEROT LIIKKUVAT: 1769 → 1770 rullaa kaksi oikeaa
+ * numeroa, vuosituhat ja -sata seisovat paikallaan. Kesto ja kaari
+ * ovat Raamatun animaatiosäännön rajoissa (nopeutus ja hidastus,
+ * 200–400 ms); `heti` on sekä linssin avaus että
+ * prefers-reduced-motion, joissa merkki vaihtuu ilman liikettä.
+ *
+ * DOM:iton siltä osin kuin mahdollista: rulla on pelkkä
+ * `{ vanha, uusi, merkki }` -pari, joten tahdin tapaan tämäkin on
+ * testattavissa tyngällä (tests/aikajana.test.mjs).
+ */
+export const VUOSI_RULLAUS_MS = 320;
+export const VUOSI_RULLAUS_KAARI = 'cubic-bezier(0.22, 0.9, 0.24, 1)';
+
+function asetaRivi(rivi, y, siirtyma) {
+  rivi.style.transition = siirtyma;
+  rivi.style.transform = `translateY(${y}%)`;
+}
+
+/**
+ * Näyttää vuosiluvun rullissa ja palauttaa ne rullat, jotka liikkuivat.
+ *
+ * @param {Array<{vanha:object, uusi:object, merkki:?string}>} rullat
+ * @param {string} teksti nelimerkkinen vuosiluku ('1769')
+ * @param {{heti?:boolean}} [asetukset]
+ */
+export function rullaaVuosi(rullat, teksti, { heti = false } = {}) {
+  const muuttuneet = [];
+  rullat.forEach((rulla, k) => {
+    const merkki = teksti[k] ?? '';
+    if (rulla.merkki === merkki) return;
+    rulla.vanha.textContent = rulla.merkki ?? '';
+    rulla.uusi.textContent = merkki;
+    rulla.merkki = merkki;
+    muuttuneet.push(rulla);
+  });
+  if (!muuttuneet.length) return muuttuneet;
+  // Lähtöasento ilman siirtymää: vanha merkki vielä ikkunassa, uusi
+  // sen yläpuolella piilossa.
+  for (const rulla of muuttuneet) {
+    asetaRivi(rulla.vanha, 0, 'none');
+    asetaRivi(rulla.uusi, -100, 'none');
+  }
+  /*
+   * Yksi pakotettu asettelu koko ryhmälle: ilman lukua selain laskisi
+   * lähtö- ja loppuasennon samassa tyylilaskennassa eikä siirtymä
+   * lähtisi lainkaan (numerot vain vaihtuisivat).
+   */
+  void muuttuneet[0].uusi.offsetHeight;
+  const siirtyma = heti ? 'none' : `transform ${VUOSI_RULLAUS_MS}ms ${VUOSI_RULLAUS_KAARI}`;
+  for (const rulla of muuttuneet) {
+    asetaRivi(rulla.vanha, 100, siirtyma);
+    asetaRivi(rulla.uusi, 0, siirtyma);
+  }
+  return muuttuneet;
+}
+
 /* ==================== MOOTTORI ==================== */
 
 class Aikajana {
@@ -222,6 +299,9 @@ class Aikajana {
     this.viime = 0;
     this.kortit = [];
     this.valot = [];
+    // Naksahduksen katto: nolla on "kauan sitten", koska kello
+    // käynnistyy vasta kamera-ajon jälkeen.
+    this.viimeNaksu = 0;
     this.skaala = null;
     // Kaari kertoo raidan; ilman kenttää ajo on hiljainen.
     this.musiikkiLaji = kaari.musiikki ?? null;
@@ -245,14 +325,15 @@ class Aikajana {
     this.kello.type = 'button';
     this.kello.title = 'Pysäytä tai jatka';
     this.kello.setAttribute('aria-live', 'off');
+    // Neljä rullaa, joissa kaksi päällekkäistä riviä (ks. rullaaVuosi).
     this.rullat = [];
     for (let k = 0; k < 4; k += 1) {
-      const rulla = solmu('span', 'aikajana-rulla');
-      const nauha = solmu('span', 'aikajana-rullanauha');
-      for (let d = 0; d < 10; d += 1) nauha.appendChild(solmu('span', 'aikajana-numero', String(d)));
-      rulla.appendChild(nauha);
+      const rulla = solmu('span', 'vuosi-numero');
+      const vanha = solmu('span', 'vuosi-merkki');
+      const uusi = solmu('span', 'vuosi-merkki');
+      rulla.append(vanha, uusi);
       this.kello.appendChild(rulla);
-      this.rullat.push(nauha);
+      this.rullat.push({ vanha, uusi, merkki: null });
     }
     this.kello.addEventListener('click', () => (this.kaynnissa ? this.pysayta() : this.jatka()));
     const otsikot = solmu('div', 'aikajana-otsikot');
@@ -511,13 +592,26 @@ class Aikajana {
     const teksti = String(Math.max(0, Math.round(vuosi))).padStart(4, '0');
     if (teksti === this.kelloTeksti) return;
     this.kelloTeksti = teksti;
-    this.rullat.forEach((nauha, k) => {
-      const d = Number(teksti[k]);
-      if (heti) nauha.style.transition = 'none';
-      nauha.style.transform = `translateY(${-d * 10}%)`;
-      if (heti) requestAnimationFrame(() => { nauha.style.transition = ''; });
-    });
+    rullaaVuosi(this.rullat, teksti, { heti: heti || this.reducedMotion });
     this.kello.setAttribute('aria-label', `Vuosi ${Number(teksti)}`);
+    // Naksahdus vain elävästä vaihdosta: avaus ja alustus ovat `heti`,
+    // ja pysäytetty kello on hiljainen (kortista toiseen kelaus myös).
+    if (!heti && this.kaynnissa) this.naksahda();
+  }
+
+  /**
+   * MEKAANISEN LASKURIN NAKSAHDUS vuoden vaihtuessa (omistajan tilaus
+   * 3.9.2026: *"kun vuosiluku vaihtuu, niin siinäkin voisi olla pieni
+   * ääniefekti taustalla"*). Ääni on js/sound.js:n 'vuosi' — hyvin
+   * hiljainen, ja mykistyksen sekä taustatilan hoitaa SoundKit itse.
+   * Liian tiheät ohitetaan (AIKAJANA_NAKSU_VALI_MS).
+   */
+  naksahda() {
+    const nyt = performance.now();
+    if (nyt - this.viimeNaksu < AIKAJANA_NAKSU_VALI_MS) return false;
+    this.viimeNaksu = nyt;
+    sfx.play('vuosi');
+    return true;
   }
 
   sytyta(i) {

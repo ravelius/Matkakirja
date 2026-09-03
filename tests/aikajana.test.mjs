@@ -12,7 +12,8 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import {
-  aikajanaAskel, AIKAJANA_VIIVE_MS, AIKAJANA_PAALU_MS, AIKAJANA_TAUKO_HIMMENNYS,
+  aikajanaAskel, rullaaVuosi, VUOSI_RULLAUS_MS, AIKAJANA_NAKSU_VALI_MS,
+  AIKAJANA_VIIVE_MS, AIKAJANA_PAALU_MS, AIKAJANA_TAUKO_HIMMENNYS,
 } from '../js/aikajana.js';
 import { KEKSINNOT, KEKSINTO_KUVAJUURI, LINSSI } from '../js/linssit/keksinnot.js';
 import { projisoiLaudalle } from '../js/fokusmitat.js';
@@ -20,6 +21,8 @@ import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
 import { tarkistaLinssi } from '../js/linssit/kerros.js';
 
+// Moottorin lähde tekstinä: kytkennät, joita puhdas funktio ei näytä.
+const MOOTTORI = readFileSync(new URL('../js/aikajana.js', import.meta.url), 'utf8');
 const TAPAHTUMAT = [{ vuosi: 1770 }, { vuosi: 1773, paalu: true }, { vuosi: 1780 }];
 const TAHTI = { vuosiMs: 100, viiveMs: 500, paaluMs: 200 };
 
@@ -59,6 +62,64 @@ test('oletustahti: tapahtuman viive on pidempi kuin paalun', () => {
   assert.ok(AIKAJANA_VIIVE_MS > AIKAJANA_PAALU_MS);
 });
 
+/* ==================== VUOSILUKU RULLAA ==================== */
+
+/*
+ * Vuosiluvun rullaus (omistajan tilaus 3.9.2026). Rulla on pelkkä
+ * kahden rivin pari, joten DOM-tynkä riittää: tässä mitataan se, mikä
+ * rikkoutuisi hiljaa — että luku jakautuu numeroittain ja että VAIN
+ * muuttuneet numerot liikkuvat. Jos päivitys vaihtaisi kaikki neljä,
+ * kello näyttäisi yhä oikein mutta vuosisata hyppisi joka vuosi.
+ */
+const tynkaRivi = () => ({ textContent: '', style: {} });
+const tynkaRullat = () => [0, 1, 2, 3].map(() => ({
+  vanha: tynkaRivi(), uusi: tynkaRivi(), merkki: null,
+}));
+
+test('vuosinäyttö jakaa luvun rulliin ja vaihtaa vain muuttuneet numerot', () => {
+  const rullat = tynkaRullat();
+  // Avaus: merkit paikoilleen ilman liikettä.
+  const avaus = rullaaVuosi(rullat, '1769', { heti: true });
+  assert.equal(avaus.length, 4);
+  assert.deepEqual(rullat.map((r) => r.uusi.textContent), ['1', '7', '6', '9']);
+  assert.equal(rullat[3].uusi.style.transition, 'none', 'avaus ei saa rullata');
+
+  // 1769 → 1770: kaksi oikeanpuoleista rullaa, kaksi vasenta seisoo.
+  const askel = rullaaVuosi(rullat, '1770');
+  assert.equal(askel.length, 2, 'vain muuttuneet numerot liikkuvat');
+  assert.deepEqual(rullat.map((r) => r.merkki), ['1', '7', '7', '0']);
+  // Vanha merkki liukuu alas näkyvistä, uusi tulee ylhäältä tilalle.
+  assert.equal(rullat[3].vanha.textContent, '9');
+  assert.equal(rullat[3].uusi.textContent, '0');
+  assert.equal(rullat[3].vanha.style.transform, 'translateY(100%)');
+  assert.equal(rullat[3].uusi.style.transform, 'translateY(0%)');
+  assert.equal(rullat[3].uusi.style.transition, `transform ${VUOSI_RULLAUS_MS}ms cubic-bezier(0.22, 0.9, 0.24, 1)`);
+  // Vuosituhat ei liikahtanut eikä saanut vanhaa merkkiä.
+  assert.equal(rullat[0].vanha.textContent, '');
+  assert.equal(rullat[0].uusi.style.transform, 'translateY(0%)');
+
+  // Kelaus monen vuoden yli tehdään yhdellä liikkeellä, ei välivuosina.
+  const hyppy = rullaaVuosi(rullat, '1928');
+  assert.equal(hyppy.length, 3);
+  assert.equal(rullat[1].vanha.textContent, '7');
+  assert.equal(rullat[1].uusi.textContent, '9');
+  // Sama vuosi uudelleen ei liikuta mitään.
+  assert.equal(rullaaVuosi(rullat, '1928').length, 0);
+});
+
+test('rullauksen kesto on Raamatun animaatiosäännön rajoissa', () => {
+  assert.ok(VUOSI_RULLAUS_MS >= 200 && VUOSI_RULLAUS_MS <= 400, `kesto ${VUOSI_RULLAUS_MS} ms`);
+});
+
+test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa sekunnissa', () => {
+  assert.ok(AIKAJANA_NAKSU_VALI_MS >= 125, `${AIKAJANA_NAKSU_VALI_MS} ms sallisi yli 8 naksua sekunnissa`);
+  // Kytkentä: avaus ja alustus ovat `heti`, pysäytetty kello hiljainen.
+  assert.match(MOOTTORI, /naytaVuosi\(vuosi, heti = false\) \{[\s\S]{0,600}if \(!heti && this\.kaynnissa\) this\.naksahda\(\);/);
+  assert.match(MOOTTORI, /naksahda\(\) \{[\s\S]{0,300}AIKAJANA_NAKSU_VALI_MS[\s\S]{0,200}sfx\.play\('vuosi'\);/);
+  // prefers-reduced-motion vaihtaa merkin ilman liikettä.
+  assert.match(MOOTTORI, /rullaaVuosi\(this\.rullat, teksti, \{ heti: heti \|\| this\.reducedMotion \}\)/);
+});
+
 /* ==================== MUSIIKKI ==================== */
 
 /*
@@ -69,8 +130,6 @@ test('oletustahti: tapahtuman viive on pidempi kuin paalun', () => {
  * kohdissa. Kytkentä on juuri sellainen, joka katoaa huomaamatta:
  * kaikki neljä pintaa toimisivat ilman ainuttakaan ääntä.
  */
-
-const MOOTTORI = readFileSync(new URL('../js/aikajana.js', import.meta.url), 'utf8');
 
 test('kaari nimeää oman raitansa ja tauko hiljentää sen puoleen', () => {
   assert.equal(LINSSI.aikajana.musiikki, 'keksinnot');

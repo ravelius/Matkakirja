@@ -96,6 +96,8 @@ const NIMET = [
   // Pöllön omat äänet (13.8.2026): huhuilu paneelin avautuessa ja
   // kirjoituskoneen rivinvaihtokello vastauksen valmistuessa.
   'owl', 'typeBell',
+  // Aikajanan vuosiluvun naksahdus (3.9.2026).
+  'vuosi',
 ];
 
 test('jokainen tehoste tuottaa äänilähteitä', async () => {
@@ -107,6 +109,35 @@ test('jokainen tehoste tuottaa äänilähteitä', async () => {
       `ääni "${nimi}" ei käynnistänyt yhtään äänilähdettä`,
     );
   }
+});
+
+/*
+ * AIKAJANAN VUOSILUVUN NAKSAHDUS (omistajan tilaus 3.9.2026: *"kun
+ * vuosiluku vaihtuu, niin siinäkin voisi olla pieni ääniefekti
+ * taustalla"*). Ääni on kirjastossa oma nimensä, jotta js/aikajana.js
+ * voi soittaa sen tavallisella sfx.play('vuosi'):lla — mykistys ja
+ * taustatila tulevat silloin ilmaiseksi. Taso on tarkoituksella
+ * murto-osa paperin kahahduksesta: naksu toistuu vuosi toisensa
+ * jälkeen koko kaaren ajan, eikä se saa nousta musiikin päälle.
+ */
+test("vuosiluvun naksahdus on kirjastossa ja paperia hiljaisempi", async () => {
+  const { sfx, ctx } = await lataaSfx();
+  sfx.play('vuosi');
+  assert.ok(ctx.aloitetut.length > 0, "ääntä 'vuosi' ei ole kirjastossa");
+
+  const lahde = readFileSync(new URL('../js/sound.js', import.meta.url), 'utf8');
+  const kohta = lahde.indexOf('  vuosi: (s) => {');
+  assert.ok(kohta > 0, "SOUNDS-kirjastosta puuttuu 'vuosi'");
+  const runko = lahde.slice(kohta, lahde.indexOf('},', kohta));
+  const paperi = Number(lahde.match(/paper: \(s\) => s\.hiss\(\{[^}]*gain: ([\d.]+)/)[1]);
+  const voimat = [...runko.matchAll(/gain: ([\d.]+)/g)].map((m) => Number(m[1]));
+  assert.ok(voimat.length >= 1, 'naksahduksella ei ole voimakkuutta');
+  for (const v of voimat) {
+    assert.ok(v < paperi / 2, `naksahduksen taso ${v} ei ole selvästi paperia (${paperi}) hiljaisempi`);
+  }
+  // Lyhyt kuin mekaanisen laskurin naksu: jokainen osa alle 40 ms.
+  const kestot = [...runko.matchAll(/dur: ([\d.]+)/g)].map((m) => Number(m[1]));
+  assert.ok(kestot.length >= 1 && kestot.every((d) => d <= 0.04), `naksahdus on liian pitkä: ${kestot}`);
 });
 
 test('tehosteita ei ole portitettu sallitulla listalla', async () => {

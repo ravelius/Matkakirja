@@ -1674,6 +1674,26 @@ const SOUNDS = {
   },
   tick: (s) => s.hiss({ dur: 0.025, freq: 3200, gain: 0.03, q: 2.4 }),
   /*
+   * AIKAJANAN VUOSILUKU NAKSAHTAA (omistajan tilaus 3.9.2026: *"kun
+   * vuosiluku vaihtuu, niin siinäkin voisi olla pieni ääniefekti
+   * taustalla"*). Mekaanisen laskurin naksu: korkea suodatettu kohina
+   * ja sen päällä yksi kuiva klik, yhteensä alle 40 ms.
+   *
+   * KAKSI SYYTÄ, MIKSI TÄMÄ ON JUURI NÄIN HILJAINEN JA HALPA:
+   *   1. Ääni on TAUSTAA, ei kuittaus — taso on murto-osa paperin
+   *      kahahduksesta (0,075), koska se toistuu vuosi toisensa
+   *      jälkeen koko kaaren ajan.
+   *   2. Naksu voi soida kahdeksan kertaa sekunnissa (js/aikajana.js
+   *      AIKAJANA_NAKSU_VALI_MS), joten kohina tulee kierrätetystä
+   *      kanavasta (hissNopea) eikä luo solmuja per naksahdus —
+   *      sama oppi kuin kirjoituskoneen naputuksessa.
+   * Oma äänite olisi tähän ylimitoitettu: naksu ei kaipaa tiedostoa.
+   */
+  vuosi: (s) => {
+    s.hissNopea({ dur: 0.028, type: 'highpass', freq: 5200, sweepTo: 3200, gain: 0.014, q: 0.7 });
+    s.knock({ freqs: [2400], dur: 0.022, gain: 0.03, q: 12 });
+  },
+  /*
    * Kuplan varapolku ilman äänitettä: hyvin lyhyt pehmeä paperin
    * kahahdus (ks. REAL_PLAYERS.kupla). Ei kelloa eikä sointua — kupla
    * ei ilmoita mitään, se vain ilmestyy.
