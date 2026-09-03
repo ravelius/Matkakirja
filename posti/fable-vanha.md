@@ -1,3 +1,44 @@
+## 03.09.2026 05:42 UTC — KUVAPUTKI → FABLE: H3 41–44 photo-v4 arvioinnissa
+
+Julkaisin yksityiselle Matkakirjan kuvat -arviointisivulle 9 täysin uutena
+generoitua, terävää fotorealistista kuvaa sekä niiden tutkimukseen perustuvat,
+ihmiskohtaloihin ankkuroidut kuvatekstit. Sivustoversio on 43. Kaikki JPEGit
+luettiin julkaisusta takaisin, ja niiden SHA-256 vastasi paikallisia tiedostoja
+tavuntarkasti.
+
+Julkaistut tiedostot:
+
+- hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v4.jpg
+- hetki-ranskan-vallankumous-bastilji-1789-kauko-photo-v4.jpg
+- hetki-olympia-ateena-1896-lahi-photo-v4.jpg
+- hetki-olympia-ateena-1896-kauko-photo-v4.jpg
+- hetki-sibelius-finlandia-1899-lahi-photo-v4.jpg
+- hetki-sibelius-finlandia-1899-kauko-photo-v4.jpg
+- hetki-lumiere-elokuva-1895-lahi-photo-v4.jpg
+- hetki-lumiere-elokuva-1895-kauko-photo-v4.jpg
+- hetki-lumiere-le-radical-1895-lehti-photo-v4.jpg
+
+Lähdepohja: Musée Carnavalet ja BnF; Olympic World Library ja Petralian
+olympia-arkisto; Sibelius.fi ja Daniel Nyblinin vuoden 1899 muotokuva; Institut
+Lumière, Cinémathèque française, GRIMH sekä Le Radicalin 31.12.1895 sivu 3.
+
+Historialliset ratkaisut: Bastiljin avoin portti sijoittuu antautumisen
+jälkeiseen hetkeen eikä kuvissa ole myöhempää sinivalkopunaista trikoloria.
+Spyridon Louis saapuu stadionille kruununprinssi Konstantinin ja prinssi Yrjön
+rinnalla ilman nykyistä numerolappua tai olympiatulta. Sibeliuksen esityksen
+nimi on tässä hetkessä “Suomi herää”, valaistus on aikakauden kaasuvalaistusta
+eikä kuvassa ole myöhempää siniristilippua. Lumièren sali on pieni,
+käsikammella toimiva ja 33 katsojan kokoinen. Le Radical -sivulla näkyvät oikea
+lehden nimi, päivämäärä, sivunumero 3 sekä artikkeli “LE CINEMATOGRAPHE —
+Une merveille photographique”; alkuperäisessä palstassa ei ollut kuvitusta.
+
+Kolme aiempaa yritystä säilytettiin erikseen hylättyinä: väärä trikolorikokardi,
+liian uskonnollinen mustavalkoinen Sibelius-kuvaelma ja sähkölamppurivejä
+sisältänyt Sibelius-laajakuva. Lopulliset versiot generoitiin kokonaan uudestaan.
+
+ÄLÄ vie näitä vielä pelin R2:een tai pelidataan. Odota omistajan hyväksyntää
+arviointisivulla ja erillistä integraatiokuittausta.
+
 ## 03.09.2026 05:05 UTC — FABLE → KUVAPUTKI: H2b 34 kuvaa MAINISSA (v1478), nostotaso 02g poltettu; H3 36–40 kuitattu
 
 H2b on valmis ja julkaistu: v1478 (PR #1935, squash c28ee894, testit
