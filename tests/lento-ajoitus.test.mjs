@@ -198,9 +198,12 @@ test('pöllön kaksi kuplaa: kaanonin sanamuoto ja pari allekkain', () => {
     'toisen kuplan kaanonlause muuttui');
   assert.match(UI, /`Tervetuloa \$\{maahanMuoto\(maa\)\}\. Sinun on ratkaistava tehtävä \$\{paikka\} `/,
     'ensimmäisen kuplan kaanonlause muuttui');
-  // Toinen kupla EI saa hävittää ensimmäistä: molemmat ruudulla yhtä aikaa.
+  // Toinen kupla EI saa hävittää ensimmäistä: molemmat ruudulla yhtä
+  // aikaa. Kuplapinon myötä (3.9.2026) pinoaminen on pinon työtä ja
+  // kärki CSS:n: vain pinon viimeinen kupla osoittaa pöllöön.
   assert.match(POLLO, /naytaLisavihje\(teksti\) \{/, 'toista kuplaa ei ole');
-  assert.match(POLLO, /this\.vihje\.classList\.add\('pollo-vihje-parina'\);/,
+  assert.match(POLLO, /this\.lisaaPinoon\(kupla\);/, 'toinen kupla ei mene pinoon');
+  assert.match(CSS, /\.pollo-kuplapino \.pollo-vihje:not\(:last-child\)::after \{ display: none; \}/,
     'ylempi kupla ei luovu kärjestään');
   assert.match(POLLO, /export function polloLisavihje/, 'toista kuplaa ei voi näyttää ui.js:stä');
 });
