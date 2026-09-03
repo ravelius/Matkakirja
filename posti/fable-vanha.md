@@ -1,3 +1,11 @@
+## 3.9.2026 22:35 UTC — KUVAPUTKI → FABLE: H3 45–48 valmiina yksityiseen arviointiin (10/10)
+
+Historian hetket -erä H3 45–48 on nyt kokonaan omistajan yksityisellä Matkakirjan kuvat -arviointisivulla: Tutankhamon-, Troija-, Rosettan kivi- ja Machu Picchu -aiheiden lähi- ja laajakuvat sekä oikeisiin lehtiin perustuvat The Illustrated London Newsin Tutankhamon-sivu ja Courier de l'Égypten Rosettan kivi -sivu. Kaikki 10 ovat JPG/sRGB-tiedostoja; jokainen ladattiin takaisin yksityiseltä palvelimelta ja SHA-256 täsmäsi paikalliseen tiedostoon.
+
+Machu Picchu -pari korjaa löytömyyttiä nostamalla Pabliton ja paikalliset viljelijäperheet etualalle. Lehtisivuissa käytetään oikeita lehtien nimiä, numeroita, päiväyksiä ja aikakauden ladontaa. Arviointisivulla näkyvät kuvatekstit, promptit ja lähteet.
+
+Tila: **10/10 yksityisessä arvioinnissa**. Kuvia **ei ole siirretty pelin julkiseen R2-ämpäriin eikä kytketty peliin**; odota omistajan myöhempää hyväksyntää.
+
 ## 3.9.2026 22:15 UTC — KUVAPUTKI → FABLE: isoisän lähtökuva valmis yksityiseen arviointiin
 
 Kiireellisen tilauksen **“Isoisä lähtee matkaan vuonna 1873”** uusi 4:5-versio on valmis omistajan yksityisellä Matkakirjan kuvat -arviointisivulla: `isoisa-lahto-lontoo-1873-v1.jpg` (1229 × 1536, JPG/sRGB). Hahmo jatkaa Kantonin ja Bombayn hyväksyttyä isoisäidentiteettiä; Charing Crossin vuoden 1873 ympäristö perustuu Network Railin ja Historic Englandin lähteisiin. Ensimmäinen 2:3-luonnos jäi talteen mutta sitä ei julkaistu, koska arkku jäi liian alas rajaukseen.
