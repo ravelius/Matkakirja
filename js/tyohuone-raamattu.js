@@ -2950,7 +2950,14 @@ export const RAAMATTU = {
           + 'Lisaksi: "Meidan taytyy lisaksi keksia joku parempi paikka '
           + 'generoida musiikkia, nimittain nuo nykyiset ovat aivan '
           + 'surkeita. Ehka taytyy vain ostaa tai etsia rojaltivapaita '
-          + 'musiikkeja." - musiikin lahde paatetaan omistajan kortilla.',
+          + 'musiikkeja." MUSIIKIN LAHDE (omistajan kortti 3.9.2026): '
+          + 'OSTETAAN LISENSSI (Epidemic Sound tai Artlist). Omistaja hankkii '
+          + 'tunnuksen; Fable valitsee ja leikkaa raidat (siirtymat, linssit, '
+          + 'paletti) samoihin mittoihin ja tasoihin kuin nyt (docs/moduulit/'
+          + 'aanet.md). Lisensoituja raitoja EI committoida repoon - ne '
+          + 'viedaan ampariin samoihin polkuihin (aanet/...), jolloin peli '
+          + 'ottaa ne kayttoon ilman koodimuutosta. Generointityokalut '
+          + 'jaavat varalle.',
         'OMISTAJAN PAATOKSET KORTILLA 3.9.2026 (iltapaiva, neljan kohdan '
           + 'kysymyskortti): 1) JUHLAKUPLA tietajatason noustessa menee '
           + 'Livian kuplapinoon (ei matkalaukun kohdalle) - nain se jo on '
