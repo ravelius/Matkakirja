@@ -92,6 +92,7 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1508: TIEDELIITTEEN TAITTO (pilotti Watt) - avaa linssi, napauta Wattin korttia: leipateksti vasemmalla ja pieni muotokuva oikealla, alla havainnekuva, lopussa Keksija-osio henkilotekstilla ja aidolla kuvalla oikealla. Muut keksijat: sama taitto ilman henkilo-osiota.',
   'v1507: KUPLAPINO PEHMEASTI - Sofiaan saapuessa kolme kuplaa: pino ei hypi vaakasuunnassa, uusi kupla nousee samaan tahtiin kuin vanhat vaistyvat. LINSSIN VIIMEISTELY - Keksinnot-linssi: kartuutsi, mittajana ja asteviivaimet poissa, ilmiopaneeli irti vuosipalkista, karuselli ja kuvanvaihto sulavampia.',
   'v1506: KAMERA-AJOT PEHMEASTI - heita noppa maan yleiskuvasta ja valitse kohde heti: kartta ei hyppaa vaan jatkaa liikkeesta saumatta, iso zoomi kestaa pidempaan (n. 1,1-1,5 s), pieni ele pysyy ripeana; nappula lahtee vasta zoomin pysahdyttya.',
   'v1505: KARTTANIMIOT EIVAT LIMITY - Bulgaria 100 km: Pelastuskarhu ja Veda Slovena erillaan; nostotason uudelleenpolton (2026-09-03b) jalkeen myos Kirkpinar/Evros (Edirne) ja Romanian karhurypas (Moldoveanu, Karhusanktuaari; elaintaky siirtyi Baile Tusnadiin). Kunnes nostotaso on poltettu, nostot piirtyvat elavina (v10-laatat eivat kelpaa).',
