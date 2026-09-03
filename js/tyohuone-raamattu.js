@@ -2765,6 +2765,28 @@ export const RAAMATTU = {
       otsikko: 'Viisas Pöllö',
       tila: 'luonnos — ideointi, ei vielä toteutukseen',
       kohdat: [
+        'ISOISAN VALOKUVAT (omistaja 3.9.2026, kiireellinen, sanatarkasti: '
+          + '"isoisasta voisi generoida muutaman mustavalkoisen kuvan sen '
+          + 'ajan tekniikalla toteutettuna hymyilemassa jossain pain '
+          + 'matkaa eksoottisessa paikassa (kiina tms). voitaisiin lisata '
+          + 'yksi kuva pienena ja ehka blurrattuna pelin ensimmaiselle '
+          + 'sivulle ja toinen sitten siihen ensimmaiseen '
+          + 'lentokonekohtaukseen kartan paalle. pelaaja loytaisi siis '
+          + 'matkakirjan valista yhden kuvan lentokoneessa istuessaan '
+          + 'isoisastaan. kuvan paperi saisi olla revennyt sen verran etta '
+          + 'osa kuvasta puuttuu"): kuvaputkelle uusi kategoria ISOISAN '
+          + 'VALOKUVAT - albumiinivedoksen ilme 1873, sama henkilo '
+          + 'kaikissa (noin 35-40 v, brittilainen herrasmiesmatkailija, '
+          + 'vilpiton hymy), kohtaukset Shanghai, Kanton, Bombay; kustakin '
+          + 'puhdas vedos (JPG) ja revitty cabinet card (PNG alfa). '
+          + 'KAANON: kuvat maarittavat isoisan ulkonaon - kun omistaja '
+          + 'hyvaksyy ne, Fable kirjaa ulkonaon docs/tarina.md:hen. '
+          + 'KYTKENTA (Fable tekee itse, uusi juttutyyppi): 1) aloitussivun '
+          + 'kuva pienena ja sumennettuna; 2) ensimmainen lentokohtaus: '
+          + 'revitty valokuva loytyy matkakirjan valista kartan paalle, '
+          + 'pehmea animaatio (Arkkikirjaston animaatiosaanto), napautus '
+          + 'suurentaa. Tilaus postissa 3.9. 07:05 UTC, skandaalierien '
+          + 'edelle.',
         'LIVIAN KUPLAPINO (omistaja 3.9.2026, Sofian havainto: "pulu ei '
           + 'jostain syysta kommentoinut matkakirjan hurjaa tekstia"; '
           + 'juurisyy: kartan kosketus piilotti Livian puheenvuoron samalla '

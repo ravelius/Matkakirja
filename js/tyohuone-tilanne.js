@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '3.9.2026 aamu — v1482 salama skandaalin merkiksi + lööppi 40 rem; v1481 lööppitaitto pilotti (sofia-korut, nimiö Lisälehti); v1479 hetket kaupungin kohdalla (omistajan kortti); v1478 mainissa 04:53 UTC + nostotaso 02g poltettu (H2b 34 photo-v3 + 5 uutta hetkeä, keksintökuvat 1–5, K1 karttamerkit, K2 erä 1); 2.9. v1460–v1467; illan karttaerä (kapiteelit, kaupungin nostot pois pääkartalta, tuplanäkymä, Balkanvuoret), H2-kuvat, 16 kohtaamiskuvaa, siirtymämusiikin työkalu',
+  paivitetty: '3.9.2026 aamupäivä — tilattu kiireellisenä isoisän valokuvat 1873 (kuvaputki, 3 kohtausta × 2 versiota) → aloitussivu + lentokohtaus; agentit: Livian kuplapino, lööppi kaikkiin skandaaleihin; v1483 salama muoto 2 + poltto 02j; v1482 salama skandaalin merkiksi + lööppi 40 rem; v1481 lööppitaitto pilotti (sofia-korut, nimiö Lisälehti); v1479 hetket kaupungin kohdalla (omistajan kortti); v1478 mainissa 04:53 UTC + nostotaso 02g poltettu (H2b 34 photo-v3 + 5 uutta hetkeä, keksintökuvat 1–5, K1 karttamerkit, K2 erä 1); 2.9. v1460–v1467; illan karttaerä (kapiteelit, kaupungin nostot pois pääkartalta, tuplanäkymä, Balkanvuoret), H2-kuvat, 16 kohtaamiskuvaa, siirtymämusiikin työkalu',
   tavoite: 'Kartta yhtenaiseksi ja teravyys arvioitavaksi. Mainissa: '
     + 'maareitit yhtenaisena lamminna viivana ja meri katkoina (v1423), '
     + 'noston teksti kokonaan napautettava (v1424), rajat samaa reittia '
