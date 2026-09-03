@@ -103,7 +103,7 @@ import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 // Rekisteri myös kokonaisena: sähketehtävän sisältöhakemisto kerää
 // maan kaupunkien virroista täkyjen ja nostojen otsikot.
 import { FOKUSVIRRAT, fokusvirtaKaupungille } from './packs/fokusvirrat.js';
-import { livianPaljastusOdottaa } from './livia.js';
+import { livianPaljastusKesken } from './livia.js';
 import { luennanLoppuun } from './luenta.js';
 import { natiiviVastaus } from './natiivi.js';
 // Sähketehtävän vapaa vastaus lainaa pöllöltä kaksi asiaa: odotusrivin
@@ -667,6 +667,10 @@ const LIVIAN_SAAPUMISET = {
  * kertoja saa lopettaa lauseensa ennen kuin Livia aloittaa omansa.
  */
 const SAAPUMISKUPLAN_TAUKO_MS = 900;
+/** Kuinka usein kommentti kysyy, onko Livian paljastussarja ohi. */
+const SAAPUMISKUPLAN_PALJASTUSVALI_MS = 500;
+/** Enimmäisodotus paljastukselle; sen jälkeen kommentti tulee joka tapauksessa. */
+const SAAPUMISKUPLAN_PALJASTUSKATTO_MS = 90_000;
 
 /**
  * Livian saapumispuheenvuoro kuplana, kerran per saapuminen.
@@ -699,13 +703,15 @@ export function fokusvirtaSaapumiskupla(ui, city) {
   if (!city || SAAPUMISKUPLA_VAITI.has(city.id)) return false;
   if (!ui?.game?.pack) return false;
   /*
-   * ENSISAAPUMISEN TUURAUSPALJASTUS VOITTAA (omistaja 29.8.2026).
-   * Livian kahden kuplan paljastus ON sen saapumisen puheenvuoro, ja
-   * yksi puheenvuoro per saapuminen on kuplien sääntö — maadoitus
-   * väistyy sen tieltä ja palaa seuraavissa kaupungeissa
-   * (js/livia.js livianPaljastusOdottaa).
+   * ENSISAAPUMISEN TUURAUSPALJASTUS ENSIN, KOMMENTTI SEN JÄLKEEN.
+   * 29.8.2026 paljastus VOITTI ja maadoitus jäi ensimmäisessä
+   * kaupungissa kokonaan pois ("yksi puheenvuoro per saapuminen").
+   * Omistaja 3.9.2026 (Sarajevo ensimmäisenä kaupunkina): *"pulu ei
+   * vieläkään kommentoi isoisän matkakirjan tekstiä kun saavutaan
+   * uuteen kaupunkiin"*. Kuplapinon (v1489) jälkeen sääntö on
+   * tarpeeton: paljastus tulee ensin, ja kommentti odottaa sen
+   * päättymistä (odotaPaljastus alla) ja tulee samaan pinoon.
    */
-  if (livianPaljastusOdottaa(ui)) return false;
   const maadoitus = fokusvirtaSisalto(ui, city)?.pollo?.maadoitus ?? null;
   /*
    * Korttivirrassa maadoitus on jo pöllökortin ensimmäinen kappale
@@ -719,9 +725,24 @@ export function fokusvirtaSaapumiskupla(ui, city) {
   ui.saapumiskuplaNaytetty ??= new Set();
   if (ui.saapumiskuplaNaytetty.has(avain)) return false;
   ui.saapumiskuplaNaytetty.add(avain);
+  /*
+   * Paljastus on kuplasarja, joka alkaa vasta luennan ja viiveen
+   * jälkeen (js/ui.js saapumisenKuplat) ja etenee napautuksin tai
+   * lukuajoin. Kommentti kysyy puolen sekunnin välein, onko sarja ohi;
+   * katto pitää huolen, ettei kommentti jää ikuisesti odottamaan, jos
+   * sarja ei jostain syystä koskaan ala (esim. katselutila).
+   */
+  const odotaPaljastus = (jatka, jaljella = SAAPUMISKUPLAN_PALJASTUSKATTO_MS) => {
+    if (ui.dead) return;
+    if (!livianPaljastusKesken(ui) || jaljella <= 0) { jatka(); return; }
+    ui.saapumiskuplaAjastin = setTimeout(
+      () => odotaPaljastus(jatka, jaljella - SAAPUMISKUPLAN_PALJASTUSVALI_MS),
+      SAAPUMISKUPLAN_PALJASTUSVALI_MS,
+    );
+  };
   const nayta = () => {
     clearTimeout(ui.saapumiskuplaAjastin);
-    ui.saapumiskuplaAjastin = setTimeout(() => {
+    ui.saapumiskuplaAjastin = setTimeout(() => odotaPaljastus(() => {
       if (ui.dead) return;
       // Pelaaja on voinut lähteä kaupungista tai aloittaa uuden pelin
       // luennan aikana: puheenvuoro kuuluu vain tähän kaupunkiin.
@@ -735,7 +756,7 @@ export function fokusvirtaSaapumiskupla(ui, city) {
       polloPuheenvuoro(jaaPuheenvuoroksi(teksti), {
         jatkuuko: () => !ui.dead && ui.game?.cityOf?.()?.id === city.id,
       });
-    }, SAAPUMISKUPLAN_TAUKO_MS);
+    }), SAAPUMISKUPLAN_TAUKO_MS);
   };
   const luenta = luennanLoppuun(ui);
   if (luenta) {

@@ -244,6 +244,8 @@ export const LIVIA_PALJASTUS_TALLE = 'matkakirja-livia-paljastus';
 let paljastusAnnettu = false;
 let paljastusAjastin = null;
 let paljastusKaupunki = null;
+/** Kuplasarja käynnissä (alkanut, ei vielä päättynyt eikä keskeytynyt). */
+let paljastusKesken = false;
 
 /** Onko tuurauspaljastus jo nähty tällä laitteella? */
 function paljastusNahty() {
@@ -274,6 +276,23 @@ export function livianPaljastusOdottaa(ui) {
 }
 
 /**
+ * Onko paljastus vielä TULOSSA tai KESKEN tässä saapumisessa — eli
+ * pitääkö muiden puheenvuorojen odottaa (js/fokusvirta.js
+ * fokusvirtaSaapumiskupla). Ero livianPaljastusOdottaa-funktioon:
+ * tuo pysyy totena koko ensimmäisen kaupungin ajan (sarjan jälkeenkin),
+ * tämä palaa epätodeksi heti kun sarja on päättynyt tai keskeytynyt.
+ * Omistaja 3.9.2026: *"pulu ei vieläkään kommentoi isoisän matkakirjan
+ * tekstiä kun saavutaan uuteen kaupunkiin"* — ensimmäisessä
+ * kaupungissa paljastus söi kommentin kokonaan; nyt kommentti tulee
+ * paljastuksen JÄLKEEN samaan kuplapinoon.
+ */
+export function livianPaljastusKesken(ui) {
+  if (!ui || ui.dead || ui.katselu) return false;
+  if (paljastusKesken) return true;
+  return !paljastusAnnettu && !paljastusNahty();
+}
+
+/**
  * Tuurauspaljastus kuplasarjana, jos se on tälle saapumiselle
  * ajankohtainen.
  *
@@ -289,6 +308,7 @@ export function naytaLivianPaljastus(ui, { jalkeen = null } = {}) {
   if (!city) return false;
   paljastusAnnettu = true;
   paljastusKaupunki = city.id;
+  paljastusKesken = true;
   try {
     localStorage.setItem(LIVIA_PALJASTUS_TALLE, '1');
   } catch {
@@ -302,12 +322,13 @@ export function naytaLivianPaljastus(ui, { jalkeen = null } = {}) {
 function paljastusRepliikki(ui, cityId, i, jalkeen) {
   clearTimeout(paljastusAjastin);
   paljastusAjastin = null;
-  if (ui.dead) return;
+  if (ui.dead) { paljastusKesken = false; return; }
   // Pelaaja on voinut lähteä kaupungista kesken sarjan: puheenvuoro
   // kuuluu vain siihen saapumiseen, jossa se alkoi.
-  if (ui.game?.cityOf?.()?.id !== cityId) return;
+  if (ui.game?.cityOf?.()?.id !== cityId) { paljastusKesken = false; return; }
   const teksti = LIVIAN_PALJASTUS[i];
   if (!teksti) {
+    paljastusKesken = false;
     jalkeen?.();
     return;
   }
@@ -315,6 +336,7 @@ function paljastusRepliikki(ui, cityId, i, jalkeen) {
   if (!polloSaapumiskupla(teksti, { kuittaus: seuraava })) {
     // Kupla ei mahtunut ruudulle (paneeli auki): ohjekuplat hoitavat
     // saapumisen, eikä sarjaa jäädä odottamaan.
+    paljastusKesken = false;
     jalkeen?.();
     return;
   }
@@ -439,6 +461,7 @@ export function nollaaLivianVihjeet() {
   peruLivianAvaus();
   clearTimeout(paljastusAjastin);
   paljastusAjastin = null;
+  paljastusKesken = false;
   // Uusi peli aloittaa myös kuplapinon tyhjänä: edellisen pelin
   // puheenvuorot eivät jää uuden kartan päälle (js/pollo.js).
   polloKuplatPois();
