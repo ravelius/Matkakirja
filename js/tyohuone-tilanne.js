@@ -10,7 +10,7 @@
  */
 
 export const TILANNE = {
-  paivitetty: '2.9.2026 myöhäisilta — v1460–v1467; illan karttaerä (kapiteelit, kaupungin nostot pois pääkartalta, tuplanäkymä, Balkanvuoret), H2-kuvat, 16 kohtaamiskuvaa, siirtymämusiikin työkalu',
+  paivitetty: '3.9.2026 yö — v1478 odottaa julkaisua (H2b 34 photo-v3 + 5 uutta hetkeä, keksintökuvat 1–5, K1 karttamerkit, K2 erä 1); 2.9. v1460–v1467; illan karttaerä (kapiteelit, kaupungin nostot pois pääkartalta, tuplanäkymä, Balkanvuoret), H2-kuvat, 16 kohtaamiskuvaa, siirtymämusiikin työkalu',
   tavoite: 'Kartta yhtenaiseksi ja teravyys arvioitavaksi. Mainissa: '
     + 'maareitit yhtenaisena lamminna viivana ja meri katkoina (v1423), '
     + 'noston teksti kokonaan napautettava (v1424), rajat samaa reittia '
@@ -92,6 +92,10 @@ export const TILANNE = {
  * rivit siivotaan kun ne on katsottu.
  */
 export const TESTATTAVAA = [
+  'v1478 + POLTTO 02g: H2b - 34 PHOTO-V3-HISTORIAKUVAA: kaikki 10 vanhaa hetkea saivat lahi+kauko-parin ja tekstit kirjoitettiin ihminen edella; 5 UUTTA HETKEA (Lissabon 1484, Santa Fe 1492, Wurzburg/Rontgen 1895, Kitty Hawk/Wright 1903, Bern/Einstein 1905); LEHTIKUVA (pystykuva, 3/3) Titanic, Nansen, Amundsen, Trafalgar; Roskilde 1000 -> 1040 (laatassa vanha nimio kunnes nostotaso poltetaan). Avaa Lissabonin kaksi hetkea, Trafalgarin kortti 3/3 ja suurennos, Granadan lehti.',
+  'v1478: KEKSINNOT-LINSSI - Watt, Montgolfier, Jenner, Volta, Jacquard saivat kuvaputken ilmiokuvan (aikajana/keksinnot/). Kehittajavalikko > aikajana: keksinnot, katso ilmiopaneeli 1769-1804.',
+  'v1478 + POLTTO 02g: K1 KARTTAMERKIT - jokaisella nakyvalla merkilla nimi ja napautus (Dinaariset Alpit, Dinara, Sveti Jure, naapurimaan poltetut merkit); 13 merkin polttovelka poistuu vasta nostotason 02g myota. Bosnia/Kroatia 50 km ja 200 km.',
+  'v1478 + POLTTO 02g: K2 ERA 1 - Islanti, Sveitsi, Tsekki, Viro, Latvia saivat 8 kohdetta kukin (40 uutta paakartan nostoa, ei kohdekartoille). Selaa nama maat 50 km -nakymassa; kattavuustaulukko docs/moduulit/karttanostot-kattavuus.md.',
   'v1470: AIKAJANALINSSI (pilotti) - kehittajavalikko > "aikajana: keksinnot". Kamera Eurooppaan, kello rullaa 1765->1928, 25 valoa syttyy ja jaa palamaan, filminauha (seuraava sumeana vasemmalla, nykyinen, menneet oikealle), ilmiopaneeli oikealla ylhaalla. Napauta kelloa (tauko), nykyista korttia (juttu), Sulje. Ilmiokuvat PD-varakuvia kunnes generoidut tulevat; Otto, Siemens ja Benz ilman muotokuvaa (nimikirjaimet).',
   'v1469 + POLTTO: (N1) WIEN ei enaa leikkaa naapurimaan poltettua nostonimea Bulgarian 200 km -nakymassa - kaupunkinimi vaistaa myos naapurimaiden poltettuja nostoja. (N2) Akropolis, Colosseum, Forum Romanum, Bastilji, Tuileries, Vanha London Bridge, St Paul, Hippodromi, Karnak, Apadana, Al-Khazneh, Ninive pois paakartalta - loytyvat kaupunkilehden omalta kartalta. Nostotaso v10-kohdekartta: kunnes uusi poltto on ajettu, nostot piirtyvat elavina.',
   'v1468: FOKUSVIRRAN KORTIT POIS - saapuminen ei avaa matkakirja-/Livia-/oppitunti-/kohtaamiskorttia missaan 39 kaupungissa. Lehden tehtavanappi (Tapaa ...) nakyy heti; AARTEEN AVAUS sytyttaa vihrean pisteen, joka avaa laattakysymyksen suoraan. Livian saapumiskupla (yksi napautus) sailyy. Testaa Ateena ja Sofia.',
