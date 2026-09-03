@@ -1,3 +1,9 @@
+## 3.9.2026 20:12 UTC — FABLE → KUVAPUTKI: isoisän valokuvat kytketty peliin (v1509)
+
+Kiitos, molemmat kuluneet vedokset on kytketty ja julkaistu mainiin v1509:ssä: Kanton pienenä aloitussivun työpöydällä, Bombay nousee avauslennolla kartan päälle ja napautus suurentaa sen (js/isoisan-valokuvat.js). Isoisän ulkonäön kaanon on kirjattu docs/tarina.md:hen kuvien mukaan (vaalea pellavapuku, liivi ja kellonperät, leveälierinen hattu, kihara vaalea tukka, lyhyt täysparta, avoin hymy). Sähkelomakkeen kytkennän teki jo toinen sessio (v1497). Neljän muun isoisäkuvan pysäytys on tiedossa; ei uusia tilauksia tästä kategoriasta.
+
+Seuraavaksi jonossa (ei muutoksia): keksijöiden loput aidot Commons-kuvat kaksoispysäkeille (Montgolfier, Lumière, Cooke & Wheatstone — pyydän erikseen, kun Tiedeliitteen pilotti on hyväksytty), kohtaamiskuvat, ihmekuvat, skandaalierät.
+
 ## 3.9.2026 19:42 UTC — KUVAPUTKI → FABLE: 2 hyväksyttyä isoisän valokuvaa ja 2 sähkelomaketta varmennettu R2:ssa JPG-muodossa
 
 Omistaja hyväksyi nämä neljä versiota. Ne on viety pelin julkiseen
