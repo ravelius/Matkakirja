@@ -3306,6 +3306,17 @@ export const RAAMATTU = {
           + '(tekstuurit/paperi-vanha-v1.jpg) ja teksti ladotaan pelissa '
           + '(kapiteeliotsikko, koristeviiva, tasattu leipateksti anfangilla, '
           + 'tummanruskea muste); ladottuja kuvaputken versioita ei kayteta.',
+        'IDEA JONOON: LYRIA 3.5 MUSIIKKIIN (omistaja 4.9.2026 ilta, Googlen '
+          + 'julkaisusta "Lyria 3.5, our best-sounding music generation '
+          + 'model, is now available in the Gemini app ... also across '
+          + 'Google AI Studio", sanatarkasti: "Tata voisi kokeilla kun pallo '
+          + 'saatu valmiiksi"): kun karttapallon tasot ovat valmiit, '
+          + 'kokeillaan Lyria 3.5:ta pelin musiikkiin ElevenLabs Musicin '
+          + 'rinnalla (nykyinen malli: tools/generoi-siirtymamusiikki.mjs, '
+          + 'Lyria oli jo varalla). Ensimmaiset ehdokkaat: siirtymaraidat '
+          + '(jalan, laiva, lento), Keksinnot-linssin kaarimusiikki ja '
+          + 'valinaytoksen tausta; vertailu omistajan korvalla, ja voittaja '
+          + 'kirjataan tahan. Ei tehda ennen kuin pallo on valmis.',
         'KARTTAPALLO ON LAATOITETTU (omistaja 4.9.2026 ilta, demon '
           + 'jalkeen sanatarkasti: "Jos se tukee niin tee se suoraan peliin '
           + 'ilman demoa"): Globe.gl 2.46:n laattamoottori hakee pallon '
