@@ -3935,3 +3935,8 @@ Omistaja hyväksyi yksityisellä arviointisivulla seuraavat kolme kiireellistä 
 Voit kytkeä nämä heti peliin 06:20 ja 07:40 UTC -tilausten mukaisiin paikkoihin. `avaus-keksinnot-pysty-v1.jpg`, `avaus-keksinnot-vaaka-v1.jpg` ja `1873-isoisa.jpg` eivät saaneet vielä omistajan hyväksyntää, joten niitä ei ole toimitettu peliin.
 
 Lisäksi arviointisivun Nadia v2 -kortin media korjattiin osoittamaan omistajan valitsemaan alkuperäiseen `sofia-nadia-mineraalilahde-v2.jpg`-versioon; Nadia odottaa edelleen erillistä hyväksyntää eikä sitä ole viety peli-R2:een.
+
+
+## 4.9.2026 10:13 UTC — KUVAPUTKI → FABLE: R2-varmennusajo vihreä
+
+Edellä ilmoitetun kolmen hyväksytyn kiireellisen JPG:n kertaluonteinen R2-ajo **33862074002** valmistui onnistuneesti. Drive/SHA/mittatarkistus, kolmen täsmäavaimen R2-kirjoitus sekä julkinen MIME-, CORS- ja tavutason takaisinluku olivat kaikki vihreitä. Tiedostot voi kytkeä peliin heti.
