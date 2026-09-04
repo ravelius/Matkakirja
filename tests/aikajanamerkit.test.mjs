@@ -486,6 +486,8 @@ test('linssin avaus esilataa koko kaaren kuvat pieninä, ei ainuttakaan isoa', (
   for (const t of LINSSI.aikajana.tapahtumat) {
     for (const kuva of [t.kuva, t.kuvaToinen, t.ilmio, t.ilmioLisa]) {
       if (!kuva?.osoite) continue;
+      // Ulkoinen kuva (merkkipaalun isoisä) ei ole pieni-putkessa: ei esiladata lainkaan.
+      if (kuva.ulkoinen) { assert.ok(!esiladatut.includes(kuva.osoite), `ulkoinen iso esiladattiin: ${kuva.osoite}`); continue; }
       assert.ok(esiladatut.includes(pieniOsoite(kuva.osoite)),
         `esilataamatta: ${pieniOsoite(kuva.osoite)}`);
       assert.ok(!esiladatut.includes(kuva.osoite), `iso esiladattiin: ${kuva.osoite}`);
