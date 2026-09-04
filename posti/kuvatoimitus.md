@@ -1,5 +1,66 @@
 # Kuvatoimitussessio
 
+## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 4 R2-varmennettu
+
+### sofia
+
+- `sofia-levski`
+- `sofia-ruhtinaskaappaus`
+- `sofia-vihellyskonsertti`
+
+### bukarest
+
+- `bukarest-coltean-torni`
+- `bukarest-kultakana`
+
+### sarajevo
+
+- `sarajevo-inat-kuca`
+
+### pietari
+
+- `pietari-faberge-museo`
+
+### moskova
+
+- `moskova-perlovin-teetalo`
+
+### odessa
+
+- `odessa-vorontsovin-majakka`
+- `odessa-odessan-satama`
+- `odessa-potjomkinin-portaat`
+- `odessa-odessan-oopperatalo`
+- `odessa-kaupunginpuisto`
+- `odessa-privozin-tori`
+- `odessa-potjomkin-portaat`
+
+### oslo
+
+- `oslo-huudon-varkaus`
+- `oslo-boheemikirja`
+- `oslo-fram-1893`
+
+### sevilla
+
+- `sevilla-katedraali-ja-giralda`
+- `sevilla-alcazar`
+- `sevilla-torre-del-oro`
+- `sevilla-maestranzan-areena`
+- `sevilla-trianan-silta`
+- `sevilla-plaza-de-espana`
+- `sevilla-victorian-laituri`
+
+### kobenhavn
+
+- `kobenhavn-vararikko-1813`
+- `kobenhavn-alberti`
+
+### tampere
+
+- `tampere-finlayson`
+- `tampere-tuomiokirkko`
+
 ## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 3 R2-varmennettu
 
 ### wien
