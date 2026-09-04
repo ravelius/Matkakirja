@@ -1,3 +1,21 @@
+## 4.9.2026 11:50 UTC — KUVAPUTKI → FABLE: skandaalien erä 2/9 aloitettu, kuvat 11–13 yksityisessä arvioinnissa
+
+Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu, generoitu kokonaan uusina, tarkistettu ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle. Kuvia ei ole vielä viety pelin R2-ämpäriin eikä kytketty peliin.
+
+- `skandaali-vedenpaisumuksen-todistaja-photo-v1.jpg` — Zürich 1726, Scheuchzer, epäilevä kaivertaja ja todellisen fossiililaatan muoto. 1536 × 1024 JPG/sRGB, SHA-256 `dd31dac31343863d5363c69eb450703205b3c568641db5f7acdec199c9d79ede`.
+  - Kuvateksti: **“Kaivertajan terä pysähtyy, kun Johann Jakob Scheuchzer osoittaa kivessä kalloa ja nimeää sen vedenpaisumuksessa kuolleeksi ihmiseksi. Kahdeksankymmentäviisi vuotta myöhemmin Cuvier näkee samassa hahmossa jättiläissalamanterin — erehdys syntyy katsojan varmuudesta, ei muuttuneesta kivestä.”**
+  - Lähdepohja: Swiss National Museum; ETH-Bibliothek; Wellcome Collection.
+- `skandaali-kuninkaanhovin-kasikirjoitukset-photo-v1.jpg` — Praha 1886, nuori Masaryk Athenaeumin toimituksessa, käsikirjoitus ja painoapulaisen reaktio. 1536 × 1024 JPG/sRGB, SHA-256 `72c499d91e5945a7450c47571d93ec530e68cf04c19800470ae31ecf53618745`.
+  - Kuvateksti: **“Nuori latoja jää oviaukkoon kuuntelemaan, kun 36-vuotias Masaryk pyytää kollegoitaan asettamaan kansallisen ylpeyden todisteiden jälkeen. Käsikirjoitusten aitouden epäily teki professorista hetkeksi vihollisen, mutta juuri huoneen hiljainen pelko kertoo, miksi kysymys oli niin vaikea esittää.”**
+  - Lähdepohja: Tšekin National Museum ja ČT24:n alkuperäisen käsikirjoituksen valokuva.
+- `skandaali-kelley-alkemistihuijari-photo-v1.jpg` — Křivoklát 1591, 36-vuotias Kelley, epäonnistunut upokas, keisarin lähettiläs ja nuori vartija. 1536 × 1024 JPG/sRGB, SHA-256 `50b3a2e17a8e0c74f9a8408659d67d8760de03d1e25cdbff9ff5d3ae79bf2803`.
+  - Kuvateksti: **“Nuori linnanvartija yrittää olla katsomatta tyhjää upokasta, kun keisarin lähettiläs odottaa Edward Kelleyltä luvattua kultaa. Kelleyn vankeus alkoi kielletyn kaksintaistelun jälkeen, mutta portit pysyivät kiinni myös siksi, ettei Rudolf II halunnut päästää ‘kullantekijää’ pakoon ennen tuloksia.”**
+  - Lähdepohja: Křivoklátin valtionlinna, Prague City Tourism ja Wellcome Collection.
+
+Kelleyn ensimmäinen sisäinen vedos hylättiin itsearvioinnissa liian iäkkään hahmon vuoksi; julkaistu kuva on kokonaan uusi generointi, jossa ikä korjattiin. Tuotantosivulta takaisinluenta varmennettiin kaikille kolmelle: HTTP 200, `image/jpeg`, SHA-256 3/3.
+
+Tila: **3/3 yksityisessä arvioinnissa**. Odota omistajan hyväksyntää ennen R2-siirtoa ja pelikytkentää.
+
 ## 4.9.2026 11:28 UTC — KUVAPUTKI → FABLE: Machu Picchu- ja Galilei-korjaukset photo-v5 yksityisessä arvioinnissa
 
 Omistajan täsmäpalautteiden perusteella kolme kuvaa tehtiin kokonaan uusina generointeina ja julkaistiin yksityiselle Matkakirjan kuvat -arviointisivulle. Niitä ei ole vielä viety pelin R2-ämpäriin eikä kytketty peliin.
