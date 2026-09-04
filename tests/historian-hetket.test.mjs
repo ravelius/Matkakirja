@@ -81,9 +81,9 @@ function lehtisivu(hetki) {
   return (sivut ?? []).find((s) => s.id === `hetki-${hetki.id}`) ?? null;
 }
 
-test('hetkiä on viisitoista ja jokaisella on kortin kentät', () => {
-  assert.equal(HISTORIAN_HETKET.length, 15,
-    'photo-v3-erän jälkeen hetkiä on viisitoista');
+test('hetkiä on kahdeksantoista ja jokaisella on kortin kentät', () => {
+  assert.equal(HISTORIAN_HETKET.length, 18,
+    'H3 45–47 -erän jälkeen hetkiä on kahdeksantoista (Machu Picchu odottaa kaukokuvaa)');
   const tunnukset = new Set();
   for (const hetki of HISTORIAN_HETKET) {
     assert.ok(!tunnukset.has(hetki.id),
@@ -134,7 +134,7 @@ test('jokaisella hetkellä on lähi- ja kaukokuva tässä järjestyksessä', () 
   }
 });
 
-test('lehtikuva on vain niillä neljällä hetkellä, joille sellainen tehtiin', () => {
+test('lehtikuva on vain niillä kuudella hetkellä, joille sellainen tehtiin', () => {
   /*
    * Lehtisivun rekonstruktio on PYSTYKUVA (1024 × 1536) ja siksi oma
    * asiansa kortin vaakakuvien rinnalla: kortin kehys sallii
@@ -145,13 +145,15 @@ test('lehtikuva on vain niillä neljällä hetkellä, joille sellainen tehtiin',
   assert.deepEqual(Object.keys(HETKI_LEHTIKUVAT).sort(), [
     'amundsen-etelanapa-1911',
     'nansen-fram-1893',
+    'rosettan-kivi-1799',
     'titanic-southampton-1912',
     'trafalgar-victory-1805',
+    'tutankhamon-carter-1922',
   ], 'lehtikuvien lista muuttui — uusi lehtisivu on kuvatilaus, ei koodierä');
   const tunnukset = new Set(HISTORIAN_HETKET.map((h) => h.id));
   for (const [id, tiedosto] of Object.entries(HETKI_LEHTIKUVAT)) {
     assert.ok(tunnukset.has(id), `${id}: lehtikuva osoittaa hetkeen, jota ei ole`);
-    assert.match(tiedosto, /^hetki-[a-z0-9-]+-lehti-photo-v3\.jpg$/,
+    assert.match(tiedosto, /^hetki-[a-z0-9-]+-lehti-photo-v[34]\.jpg$/,
       `${id}: lehtikuvan nimi "${tiedosto}" ei noudata kaavaa`);
     const kuvat = hetkenKuvat(HISTORIAN_HETKET.find((h) => h.id === id));
     const lehtikuva = kuvat.find((k) => k.rooli === 'lehti');
@@ -179,12 +181,14 @@ test('kuvien osoitteet osoittavat pelin omaan ämpäriin oikealla nimikaavalla',
        * jäivät ämpäriin, mutta niihin ei enää viitata (Raamattu,
        * "KAIKKI GENEROIDUT KUVAT MAHDOLLISIMMAN VALOKUVAMAISIA").
        */
+      // H3 45–48 (4.9.2026) on photo-v4-erä: versio luetaan hetken kentästä.
+      const versio = hetki.kuvaversio ?? 3;
       const odotettu = kuva.rooli === 'lehti'
         ? HETKI_LEHTIKUVAT[hetki.id]
-        : `hetki-${hetki.id}-${kuva.rooli}-photo-v3.jpg`;
+        : `hetki-${hetki.id}-${kuva.rooli}-photo-v${versio}.jpg`;
       assert.equal(kuva.tiedosto, odotettu,
         `${hetki.id}: kuvan nimi "${kuva.tiedosto}" ei noudata kaavaa`);
-      assert.match(kuva.tiedosto, /-photo-v3\.jpg$/,
+      assert.match(kuva.tiedosto, /-photo-v[34]\.jpg$/,
         `${hetki.id}: vanha kuvaerä on yhä käytössä (${kuva.tiedosto})`);
       assert.equal(kuva.osoite, `${HETKI_KUVAJUURI}/${kuva.tiedosto}`,
         `${hetki.id}: osoite ei synny kuvajuuresta`);
