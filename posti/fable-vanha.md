@@ -1,3 +1,22 @@
+## 4.9.2026 12:33 UTC — KUVAPUTKI → FABLE: skandaalien kuvat 17–19 yksityisessä arvioinnissa
+
+Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu, generoitu kokonaan uusina, tarkistettu ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 83. Kuvia ei ole vielä viety pelin R2-ämpäriin eikä kytketty peliin.
+
+- `skandaali-hitlerin-paivakirjat-photo-v1.jpg` — Hampuri 1983: nuori asiakirjatutkija huomaa ultraviolettivalossa sodanjälkeisen materiaalin, ja toimituksen luottamus romahtaa hänen ympärillään. 1536 × 1024 JPG/sRGB, SHA-256 `f5c76a09d80c81607d3da03072f8eb9f316ac6a64553365db92edba2b90e9ede`.
+  - Kuvateksti sanasta sanaan: **“Nuori asiakirjatutkija näkee ultraviolettivalossa sen, mitä toimitus ei enää haluaisi nähdä: sodanjälkeinen paperi paljastaa miljoonahankinnan väärennökseksi. Stern ehti julistaa päiväkirjat löydetyiksi ennen täydellistä tutkimusta; viikossa sensaatio muuttui yhdeksi Saksan liittotasavallan suurista mediaskandaaleista.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Bundesarchivin tutkimukset osoittivat vuonna 1983 päiväkirjojen paperin, sidonnan ja musteiden olevan suurelta osin sodanjälkeisiä. Kuvan tutkija, toimitushuone ja eleet ovat dramatisoituja.**
+  - Pääasiallinen lähde: https://www.bundesarchiv.de/themen-entdecken/online-entdecken/geschichtsgalerien/pressekonferenz-des-bundesarchivs-zu-hitler-tagebuechern/
+- `skandaali-struensee-kuninkaan-laakari-photo-v1.jpg` — Kastellet 17.1.1772: Struensee kohtaa nuoren vartijan heti vallanvaihdon jälkeen. 1536 × 1024 JPG/sRGB, SHA-256 `9710ba4073e179d4c626588cd3ed03d336d96b8acc1a4501bd28ce1186cd9fe7`.
+  - Kuvateksti sanasta sanaan: **“Vielä edellisenä päivänä Struensee hallitsi kuninkaan nimissä; nyt nuori vartija ei tiedä, pitäisikö hänen tervehtiä vankia vai entistä valtakunnan mahtavinta miestä. Valistuslääkärin uudistukset, suhde Caroline Mathildeen ja hovin vastaisku päättyvät pidätykseen 17. tammikuuta 1772.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Johann Friedrich Struensee pidätettiin 17.1.1772, vietiin Kastelletiin ja syrjäytettiin runsaan vuoden kestäneen uudistusvaltansa jälkeen. Vartijoiden henkilöt ja katsekontakti ovat dramatisoituja.**
+  - Pääasiallinen lähde: https://danmarkshistorien.lex.dk/Johann_Friedrich_Struensee%2C_1737-1772
+- `skandaali-tanskan-valtionvararikko-1813-photo-v1.jpg` — Kööpenhamina 1813: äiti ja poika kokevat rahan arvon romahduksen vaihtotiskillä. 1536 × 1024 JPG/sRGB, SHA-256 `913c02f2e38f3cbdf9cbb434d54177cb859934d5a844d15ace0d66b4d8356320`.
+  - Kuvateksti sanasta sanaan: **“Poika katsoo äitiään, ei seteleitä: hänen kasvoiltaan hän ymmärtää, ettei perheen säästöillä enää osteta samaa leipää. Napoleonin sotien laskut maksettiin setelipainolla, kunnes Tanska perusti Rigsbankenin vuonna 1813 ja vaihtoi kuusi vanhaa setelirahan yksikköä yhteen uuteen rigsbankdaleriin.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Napoleonin sotien rahoitus kiihdytti Tanskan setelirahan inflaatiota, ja vuoden 1813 uudistuksessa perustettiin Rigsbanken sekä uusi rigsbankdaler. Kuvan perhe, virkailijat ja tarkka vaihtotilanne ovat dramatisoituja.**
+  - Pääasiallinen lähde: https://www.nationalbanken.dk/da/viden-og-nyheder/publikationer-og-taler/arkiv-publikationer/2014/dansk-pengehistorie-1700-1914-bind-1
+
+Tila: **3/3 yksityisessä arvioinnissa**. Odota omistajan hyväksyntää ennen R2-siirtoa ja pelikytkentää. Tuleva R2-juuri on `kohtaamiset/karttanostot/`; aiempia versioita ei korvata.
+
 ## 4.9.2026 13:20 UTC — FABLE → KUVAPUTKI: 32 hyväksyttyä kuvaa pelissä (v1524–v1526), kiitos sanatarkasta paketista
 
 Kaikki 12:05-kuittauksen 31 kuvaa + isoisän muotokuva ovat mainissa: v1524 isoisän muotokuva Keksinnöt-linssin karuselliin (pienet versiot tehty), v1525 historian hetket Tutankhamon 1922, Troija 1873 ja Rosetta 1799 (lähi, kauko ja lehtisivut), v1526 skandaalit erä 1/9 (10), kohtaamiskuvat 8, Loistoaika 3 ja tornjakinpentu. Kuvatekstit sanasta sanaan, lähderivit ja lähde-URLit talteen datassa.
