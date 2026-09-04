@@ -1,5 +1,101 @@
 # Kuvatoimitussessio
 
+## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 1 R2-varmennettu
+
+### damaskos
+
+- `damaskos-damaskoksen-linnoitus`
+- `damaskos-umaijadien-moskeija`
+- `damaskos-hamidiyyan-suuki`
+- `damaskos-khan-as-ad-pashan`
+- `damaskos-itaportti`
+- `damaskos-kisanin-portti`
+
+### isfahan
+
+- `isfahan-jameh-moskeija`
+- `isfahan-isfahanin-basaari`
+- `isfahan-ali-qapu`
+- `isfahan-shaahin-moskeija`
+- `isfahan-hasht-behesht`
+- `isfahan-chahar-baghin-koulu`
+
+### tabriz
+
+- `tabriz-tabrizin-basaari`
+- `tabriz-perustuslakitalo`
+- `tabriz-arg`
+- `tabriz-saat-torni`
+- `tabriz-azerbaidzanin-museo`
+- `tabriz-sininen-moskeija`
+
+### riad
+
+- `riad-masmakin-linnoitus`
+- `riad-imam-turkin-suurmoskeija`
+- `riad-punainen-palatsi`
+- `riad-riadin-vesitorni`
+- `riad-murabban-palatsi`
+- `riad-saudi-arabian-kansallismuseo`
+
+### luxor
+
+- `luxor-luxorin-temppeli`
+- `luxor-luxorin-museo`
+- `luxor-sfinksikuja`
+- `luxor-mutin-temppeli`
+- `luxor-khonsun-temppeli`
+- `luxor-karnakin-suuri-pylvassali`
+
+### halab
+
+- `halab-aleppon-linnoitus`
+- `halab-antiokian-portti`
+- `halab-qinnesrinin-portti`
+- `halab-saippuakhan`
+- `halab-arghunin-sairaala`
+- `halab-beit-ajiqbash`
+
+### masqat
+
+- `masqat-masqatin-portti`
+- `masqat-al-miranin-linnake`
+- `masqat-al-jalalin-linnake`
+- `masqat-al-alamin-palatsi`
+- `masqat-bait-al-zubair`
+- `masqat-motishwar-mandir`
+
+### kuwait
+
+- `kuwait-kuwait-tornit`
+- `kuwait-al-hamra-torni`
+- `kuwait-seifin-palatsi`
+- `kuwait-kuwaitin-suurmoskeija`
+- `kuwait-mubarakiyan-tori`
+- `kuwait-sadu-house`
+
+### nikosia
+
+- `nikosia-selimiyen-moskeija`
+- `nikosia-buyuk-han`
+- `nikosia-faneromenin-kirkko`
+- `nikosia-omeryen-hamam`
+- `nikosia-kyproksen-museo`
+- `nikosia-leventis-museo`
+
+### doha
+
+- `doha-islamilaisen-taiteen-museo`
+- `doha-corniche`
+- `doha-souq-waqif`
+- `doha-qatarin-kansallismuseo`
+- `doha-al-koot-linnake`
+- `doha-msheireb`
+
+### varusteet
+
+- `varuste-pallo`
+
 ## 2026-09-04 22:54 UTC — KUVAPUTKI → FABLE: Jerusalemin tarkoituksellinen maaton luokitus säilyy
 
 Aiempi metatietokysymys ratkesi nykyisestä main-haarasta (0e9bd7eca270bd68db4fc30017b71f5c78ce80a1), tiedosto js/packs/middleeast-countries.js. Siinä Jerusalem jätetään nimenomaisesti ilman ISR/PSE-maatunnusta. Emme määritä kaupungille maata. Paikallisessa arviointikortissa käytetään alueotsikkoa Lähi-itä, countryCode=null ja lähde kirjataan; pelidataa ei muuteta. Kaikkien 28 Lähi-idän kuvan tuotanto voi siis jatkua nykyhetken kaanonin mukaisesti.
