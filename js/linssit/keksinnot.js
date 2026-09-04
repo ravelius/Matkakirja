@@ -53,8 +53,8 @@
  *
  * Kaikki 25 pysäkkiä on kytketty sekä generoituun muotokuvaan (28
  * kuvaa, kaksoispysäkit mukaan lukien) että generoituun ilmiökuvaan;
- * vain merkkipaalu 1873 on ilman kuvaa, ja se näkyy
- * nimikirjainlaattana.
+ * merkkipaalu 1873 sai 4.9.2026 isoisän hassuttelevan muotokuvan
+ * (ei ilmiökuvaa eikä Tiedeliitettä).
  *
  * ── HENKILÖJUTTU ──────────────────────────────────────────────────
  *
@@ -701,17 +701,24 @@ export const KEKSINNOT = [
     selite: 'Isoisä kirjoitti päiväkirjaansa maailmassa, jossa oli jo '
       + 'rautatie, lennätin ja valokuva — mutta ei vielä puhelinta, autoa eikä sähkövaloa.',
     /*
-     * KARUSELLIKORTIN MUOTOKUVA ODOTTAA KUVAPUTKEA. Kortilla on
-     * toistaiseksi nimikirjainlaatta (js/aikajana.js muotokuvaKehys),
-     * ja kun putki toimittaa hassuttelevan studiomuotokuvan osoitteeseen
-     * `${KEKSINTO_KUVAJUURI}/muotokuva/1873-isoisa.jpg`, se kirjoitetaan
-     * tähän kenttään yhtenä rivinä — mitään muuta ei tarvitse muuttaa.
+     * KARUSELLIKORTIN MUOTOKUVA: kuvaputken hassutteleva studiomuotokuva
+     * (omistaja hyväksyi 4.9.2026, R2 10:52 UTC). Kuvateksti on
+     * kuvaputken kuittauksesta (4.9. 07:35 UTC) sanasta sanaan. Paalu
+     * ei ole henkilöjuttu, joten Tiedeliite ei avaudu; kortti ja
+     * karuselli näyttävät kuvan samalla kehyksellä kuin keksijöillä.
      * Luennan tiedostonimi EI seuraa mukana: merkkipaalun runko
      * ladotaan aina vuodesta ja otsikosta (js/linssipuhe.js
      * luennanRunko), joten valmis 1873-matkakirjan-vuosi.mp3 pysyy
-     * paikallaan vaikka paalu saa kasvot.
+     * paikallaan vaikka paalu sai kasvot.
      */
-    kuva: null, ilmio: null,
+    kuva: {
+      osoite: `${KEKSINTO_KUVAJUURI}/muotokuva/1873-isoisa.jpg`,
+      selite: 'Isoisä kallistaa hattunsa vinoon ja puristaa matkakirjaa '
+        + 'rintaansa — seikkailu näyttää olevan hänelle vakava asia vain '
+        + 'hetken kerrallaan.',
+      lahde: 'Kuvaputken generoitu valokuva',
+    },
+    ilmio: null,
     /*
      * VÄLINÄYTÖS (omistajan tilaus 4.9.2026 aamu, sanatarkasti:
      * *"Kertoja voisi myös kertoa vähän pidemmin isoisän kohdalla mihin

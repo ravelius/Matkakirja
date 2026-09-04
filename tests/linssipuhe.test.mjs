@@ -65,7 +65,7 @@ test('jokaisella pysäkillä on runko ja rungot ovat yksikäsitteisiä', () => {
 
 test('runko on muotokuvan runko — vuosi yksin ei riittäisi', () => {
   for (const t of KEKSINNOT) {
-    if (!t.kuva?.osoite) continue;
+    if (!t.kuva?.osoite || t.paalu) continue;
     const odotettu = t.kuva.osoite.split('/').pop().replace(/\.[a-z0-9]+$/i, '');
     assert.equal(luennanRunko(t), odotettu, `${t.vuosi}: runko ei seuraa muotokuvaa`);
   }
@@ -78,7 +78,9 @@ test('runko on muotokuvan runko — vuosi yksin ei riittäisi', () => {
 test('merkkipaalu saa rungon vuodesta ja otsikosta', () => {
   const paalu = KEKSINNOT.find((t) => t.paalu);
   assert.ok(paalu, 'merkkipaalu puuttuu kaaresta');
-  assert.equal(paalu.kuva, null, 'merkkipaalulla ei kuulu olla muotokuvaa');
+  // Paalulla on isoisän muotokuva (4.9.2026), mutta runko ei seuraa sitä:
+  // valmis 1873-matkakirjan-vuosi.mp3 pysyy paikallaan.
+  assert.ok(paalu.kuva?.osoite, 'merkkipaalulla on isoisän muotokuva');
   assert.equal(luennanRunko(paalu), '1873-matkakirjan-vuosi');
 });
 

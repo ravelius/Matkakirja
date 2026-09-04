@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1524, teksti: 'Isoisan muotokuva Keksinnot-linssin karuselliin' },
   { v: 1523, teksti: 'Siivoa haarat: suojalista kasin suojattaville' },
   { v: 1522, teksti: 'Valinaytoksen kuva ja kuvaputken paperi kaytossa' },
   { v: 1521, teksti: 'Linssi: kello seisoo luennan ajan, ovaali havainnekuva' },
