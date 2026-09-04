@@ -3306,6 +3306,17 @@ export const RAAMATTU = {
           + '(tekstuurit/paperi-vanha-v1.jpg) ja teksti ladotaan pelissa '
           + '(kapiteeliotsikko, koristeviiva, tasattu leipateksti anfangilla, '
           + 'tummanruskea muste); ladottuja kuvaputken versioita ei kayteta.',
+        'KARTTAPALLO ON LAATOITETTU (omistaja 4.9.2026 ilta, demon '
+          + 'jalkeen sanatarkasti: "Jos se tukee niin tee se suoraan peliin '
+          + 'ilman demoa"): Globe.gl 2.46:n laattamoottori hakee pallon '
+          + 'pinnan Web Mercator -laattoina (256 px, tasot 0-7 = 32768 px / '
+          + '360 astetta) vain katsotulle alueelle, joten yhden tekstuurin '
+          + 'muisti- ja tarkkuuskatto poistui. Laatat lasketaan pelin '
+          + 'julisteesta (tools/tee-pallolaatat.mjs, workflow tee-pallolaatat, '
+          + 'ampari julisteet/pallo/laatat/<versio>/); kaikki laatat '
+          + 'kirjoitetaan, myos meri ja napojen paperi. Yksi z4-tekstuuri jaa '
+          + 'varaksi, jos laattaluetteloa ei saada. Pinnoitteen paalle ei '
+          + 'edelleenkaan lisata mitaan. Toteutettu v1543.',
         'KARTTAPALLO: PELKKA PINNOITE Z4, LINSSI LAUKUSSA (omistaja '
           + '4.9.2026 ilta, sanatarkasti: "Tee z4 ainoaksi ja ala lisaa '
           + 'mitaan sen paalle. Eli ei reitteja tai nimia. Lisaa pallo '

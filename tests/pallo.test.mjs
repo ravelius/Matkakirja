@@ -1,7 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { pallonKaupungit, sukelluskohta, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_SUKELLUSLEVEYS } from '../js/pallo.js';
+import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS } from '../js/pallo.js';
+import { laatanReunat, rivinLeveysaste, julisteenLeveysvali, tasonLaatat, lahdetaso, laattojenKansio, LAATTA } from '../tools/tee-pallolaatat.mjs';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
 import { LINSSI as PALLOLINSSI } from '../js/linssit/pallo.js';
 import { PERUSLINSSIT, omistetut } from '../js/linssit/omistus.js';
@@ -68,6 +69,36 @@ test('kirjasto ja pinnoite tulevat pelin ämpäristä, ei reposta', () => {
   assert.match(wf, /s3:\/\/\$\{R2_BUCKET\}\/vendor\/globe\.gl-\$\{v\}\.min\.js/);
   assert.match(wf, /cat pallotekstuuri-ulos\/avain\.txt/);
   assert.equal(PINNOITE.leveys, PINNOITE.korkeus * 2, 'tasavälinen pinnoite on 2:1');
+});
+
+test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', async () => {
+  // Kirjasto on laattamoottorin tuova 2.46 tai uudempi.
+  const versio = PALLO_KIRJASTO.match(/globe\.gl-(\d+)\.(\d+)\.\d+\.min\.js$/);
+  assert.ok(versio && (Number(versio[1]) > 2 || Number(versio[2]) >= 46), PALLO_KIRJASTO);
+  assert.equal(PALLO_LAATAT, `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/${laattojenKansio(PALLO_LAATTAVERSIO)}`);
+  assert.equal(pallonLaatta(3, 5, 4), `${PALLO_LAATAT}4/3/5.jpg`);
+  assert.equal(PALLO_LAATTATASO_MAX, 7);
+  // Luettelon puute tai virhe → varatekstuuri, ei kaatumista.
+  assert.equal(await laatatSaatavilla(async () => ({ ok: false })), false);
+  const pallo = lue('../js/pallo.js');
+  assert.match(pallo, /globeTileEngineUrl\(pallonLaatta\)\.globeTileEngineMaxLevel\(PALLO_LAATTATASO_MAX\)/);
+  assert.match(pallo, /pallo\.globeImageUrl\(PALLO_TEKSTUURI\)/);
+  // Laattatyökalu: slippy map -geometria ja lähdetasot.
+  assert.equal(LAATTA, 256);
+  assert.deepEqual(laatanReunat(0, 0, 0).lansi, -180);
+  assert.ok(Math.abs(laatanReunat(1, 1, 0).pohjoinen - 85.0511) < 1e-3);
+  assert.ok(Math.abs(rivinLeveysaste(1, 1, 255) + 85.0511) < 0.2);
+  assert.equal(lahdetaso(0), 0); assert.equal(lahdetaso(7), 6);
+  assert.equal(tasonLaatat(3).length, 64);
+  assert.equal(tasonLaatat(3, [-10, 40, 30, 70]).length, 6, 'Eurooppa osuu kuuteen Z3-laattaan (2 saraketta x 3 rivia)');
+  const luettelo = { projektio: { tyyppi: 'miller', leveys: 12000, lon0: -175, pohjoinen: 76 }, rajaus: { x: 0, y: -611.3, w: 12000, h: 6422.7 } };
+  const vali = julisteenLeveysvali(luettelo);
+  assert.ok(vali.pohjoinen > 80 && vali.pohjoinen < 86 && vali.etela < -60 && vali.etela > -70, JSON.stringify(vali));
+  // Workflow vie laatat ja luettelon oikeaan kansioon.
+  const wf = lue('../.github/workflows/tee-pallolaatat.yml');
+  assert.match(wf, /cat pallolaatat-ulos\/kansio\.txt/);
+  assert.match(wf, /--include '\*\.jpg'/);
+  assert.match(wf, /laatat\.json/);
 });
 
 test('pinnoitteen pikselihaku: juliste kattaa 76° N – Etelämanner, navat jäävät ulkopuolelle', () => {
