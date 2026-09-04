@@ -1,3 +1,197 @@
+## 4.9.2026 12:05 UTC — KUVAPUTKI → FABLE: 31 hyväksytyn R2-kuvan sanatarkat kuvatekstit, lähderivit ja kytkentätiedot
+
+Tässä ovat kaikki 11:58 UTC pyytämäsi 31 tiedostoa. Kuvatekstit ovat **sanasta sanaan** omistajan hyväksymästä arviointikatalogista. R2-polut ja SHA-256-tiivisteet vastaavat onnistuneen ajon 33864834201 tavutasolla varmennettuja tiedostoja. Isoisän muotokuva ei ole mukana, koska kuittasit sen jo kytkentään 11:58 UTC.
+
+### Kohtaamiskuvat (8)
+
+- R2-polku: `kohtaamiset/dublin-molly-hapenny-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Molly punnitsee märkää lanttia sormissaan. Vieras ehtii paikalle juuri, kun sadepisara osuu kolikkoon ja päätös jää tekemättä.”**
+  - Lähderivi: **Kuvaputken generoitu valokuva. Faktapohja: Dublin City Council — publications.**
+  - Pääasiallinen lähde: Dublin City Council — publications — https://www.dublincity.ie/libraries/using-your-library/books-movies-and-more/publications
+  - SHA-256: `313241cfdda2eee51baee5a1797584e3afe41962f3b1bb69df1efbc16785cb7e`
+  - Hahmo: **Molly — Ha’penny Bridgen huoltaja**
+  - Vihjerajaus: Kuvassa näkyvät Ha’penny Bridge, märkä vanha kolikko ja Mollyn keskeytynyt liike; kysymyksen vastausta tai sillan nimihistorian selitystä ei näytetä.
+- R2-polku: `kohtaamiset/moskova-vera-tsaarinkello-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Vera koputtaa Tsaarinkellon pronssia. Vieraan kuulema värähdys tuo nuoren valajan kasvoille yhtä aikaa ylpeyden ja perityn surun.”**
+  - Lähderivi: **Kuvaputken generoitu valokuva. Faktapohja: Moscow Kremlin Museums — Tsar Bell.**
+  - Pääasiallinen lähde: Moscow Kremlin Museums — Tsar Bell — https://www.kreml.ru/en-Us/visit-to-kremlin/what-to-see/tsar-kolokol/
+  - SHA-256: `682343e849632abc84b63e1cb22d79eb38b66284328a02dfc3bae5270fdc183e`
+  - Hahmo: **Vera — valajan oppilas**
+  - Vihjerajaus: Kuvassa näkyvät Vera ja rikkoutunut Tsaarinkello; halkeamisen syytä, tulta, sammutusvettä tai vastaustekstiä ei näytetä.
+- R2-polku: `kohtaamiset/helsinki-aino-luotsi-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Ainon solmu kiristyy laiturilla juuri oikealla hetkellä. Lokki vie hansikkaan, ja vieras saa osakseen huvittuneen käskynhaltijan katseen.”**
+  - Lähderivi: **Kuvaputken generoitu valokuva. Faktapohja: Suomenlinna — history.**
+  - Pääasiallinen lähde: Suomenlinna — history — https://suomenlinna.fi/en/explore/history/
+  - SHA-256: `ab5cd8f02d27200a67ae7d2b3dffb11e15e0f793d68c47f9c4004f6bff8c5315`
+  - Hahmo: **Aino — luotsi**
+  - Vihjerajaus: Kuvassa näkyvät Aino, luotsityö ja Suomenlinnan salmi; saarten lukumäärää, karttaa tai muuta numeerista vastausvihjettä ei näytetä.
+- R2-polku: `kohtaamiset/riika-ilze-kultalehti-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Ilzen kultalehti nousee ilmavirtaan vieraan avatessa oven. Kauhu ja ihastus pysyvät hetken yhtä hauraina kuin leijuva metalli.”**
+  - Lähderivi: **Kuvaputken generoitu valokuva. Faktapohja: LiveRiga — Old Town.**
+  - Pääasiallinen lähde: LiveRiga — Old Town — https://www.liveriga.com/en/7896-the-old-town
+  - SHA-256: `2e42e96c9b240fc2e25dd8a064a7fbd5aaef18a50c3e6a99f23e7a5bf720b90d`
+  - Hahmo: **Ilze — kultaaja**
+  - Vihjerajaus: Kuvassa näkyvät Ilzen kultaustyö, ilmavirta ja leijuva kultalehti; tuuliviirin värikoodia, ilmansuuntaa tai vastauskaaviota ei näytetä.
+- R2-polku: `kohtaamiset/sofia-nadia-mineraalilahde-v2.jpg`
+  - Kuvateksti sanasta sanaan: **“Nadia säikähtää vierasta ja pärskäyttää veden rinnuksilleen. Lapsenlapsi purskauttaa omansa nauruun, eikä kumpikaan saa enää pidettyä pokkaansa.”**
+  - Lähderivi: **Kuvaputken generoitu valokuva. Faktapohja: Sofia Municipality — The mineral springs.**
+  - Pääasiallinen lähde: Sofia Municipality — The mineral springs — https://www.sofia.bg/en/web/sofia-municipality/w/the-mineral-springs
+  - SHA-256: `ad8d6ebb3587d87bf05ea74125b7f983ca94221fb5ddd41ac74fc75dcd26a518`
+  - Hahmo: **Nadia — mineraalilähteen hoitaja**
+  - Vihjerajaus: Kuvassa näkyvät Nadia, nyky-Sofian mineraalivesilähde ja veden arkinen käyttö; antiikin Serdicaa, roomalaishahmoja tai kysymyksen vastausta ei näytetä.
+- R2-polku: `kohtaamiset/wien-anton-katakombit-v2.jpg`
+  - Kuvateksti sanasta sanaan: **“Anton pysähtyy kynttilät kädessään ja siristää silmänsä vierasta kohti. Katakombien portailla yksi liekki värähtää, mutta mies ei väisty.”**
+  - Lähderivi: **Kuvaputken generoitu valokuva. Faktapohja: St Stephen's Cathedral — Catacombs.**
+  - Pääasiallinen lähde: St Stephen's Cathedral — Catacombs — https://www.stephanskirche.at/visitCatacombs.php
+  - SHA-256: `d1508272de6ed41cf00dfdddd8b4fcd53d885725a9add0e9842811eded118519`
+  - Hahmo: **Anton — katakombien opas**
+  - Vihjerajaus: Kuvassa näkyvät Anton, kynttilät ja katakombien portaikko; hautojen nimiä, vuosilukuja tai muuta suoraa vastaustekstiä ei näytetä.
+- R2-polku: `kohtaamiset/bukarest-ana-freskokonservointi-v2.jpg`
+  - Kuvateksti sanasta sanaan: **“Ana valitsi konservaattorin työn, koska isoäidin kirkon himmenevät kasvot eivät saaneet kadota. Pelaajan kysymys pysäyttää siveltimen ja saa hänet katsomaan alas aidosti yllättyneenä.”**
+  - Lähderivi: **Kuvaputken generoitu valokuva. Faktapohja: Ziarul Lumina — Sfânta Ecaterina painting restoration.**
+  - Pääasiallinen lähde: Ziarul Lumina — Sfânta Ecaterina painting restoration — https://ziarullumina.ro/actualitate-religioasa/stiri/se-restaureaza-pictura-bisericii-sfanta-ecaterina-94364.html
+  - SHA-256: `5d65131d85e2cc36f8f0a9815cfa5a89ef73564a1354aa0c5cc1e71012bf6bae`
+  - Hahmo: **Ana — freskokonservaattori**
+  - Vihjerajaus: Kuvassa näkyvät Ana ja aidon freskokonservoinnin työvaihe; teoksen nimeä, ajoitusta tai kysymyksen vastausta ei kirjoiteta kuvaan.
+- R2-polku: `kohtaamiset/sofia-mila-vitosha-nuotio-v2.jpg`
+  - Kuvateksti sanasta sanaan: **“Mila tuntee Vitoshan reitit säällä, jolloin kaupunkilainen ei erota polkua pilvestä. Hän ei lupaa pelaajalle apua ennen kuin tämä kertoo, onko rohkeus suunnitelma vai pelkkä tunne — vieressä koira näyttää pohtivan samaa.”**
+  - Lähderivi: **Kuvaputken generoitu valokuva. Faktapohja: Visit Sofia — Vitosha Mountain.**
+  - Pääasiallinen lähde: Visit Sofia — Vitosha Mountain — https://visitsofia.bg/en/cityinfrastructure/what-to-see/green-sofia/vitosha-mountain
+  - SHA-256: `3966e97dcdf6383d131cb574091e9d060a506ba4f0736f4adaddb85f48eb9c20`
+  - Hahmo: **Mila — vuoristopelastaja**
+  - Vihjerajaus: Kuvassa näkyvät Mila, pelastuskoira ja Vitoshan vuoristoympäristö; reittikarttaa, kohteen nimeä tai kysymyksen vastausta ei näytetä.
+
+### Historian hetket (9)
+
+- R2-polku: `kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lahi-photo-v4.jpg`
+  - Kuvateksti sanasta sanaan: **“Howard Carter jää hetkeksi liikkumatta kynttilä kädessään, kun lordi Carnarvon kysyy näkeekö hän mitään. Pienen oviaukon takana on eteiskammio — varsinainen hautakammio avataan vasta kolme kuukautta myöhemmin.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Griffith Institute — Tutankhamun excavation archive.**
+  - Pääasiallinen lähde: Griffith Institute — Tutankhamun excavation archive — https://tutankhamun.griffith.ox.ac.uk/miscellaneous/taa-i12/taa-i1207
+  - SHA-256: `08314fd5cd6fd34abd65f43b3a54e9e8aedf67af61ad3cc592082ceb4d3d19d1`
+- R2-polku: `kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-kauko-photo-v4.jpg`
+  - Kuvateksti sanasta sanaan: **“Lady Evelyn Herbert puristaa kättään rintaansa vasten ja yrittää nähdä isänsä olkapään yli. Carterin kynttilä on ainoa merkki siitä, että yli kolmentuhannen vuoden hiljaisuus on juuri rikkoutumassa.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Griffith Institute — Tutankhamun excavation archive.**
+  - Pääasiallinen lähde: Griffith Institute — Tutankhamun excavation archive — https://tutankhamun.griffith.ox.ac.uk/miscellaneous/taa-i12/taa-i1207
+  - SHA-256: `3616ded9698e5533a8e22c2051616ff914be2df129dab7376f46a7c9f5d98bf1`
+- R2-polku: `kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg`
+  - Kuvateksti sanasta sanaan: **“Brittiyleisö näki Carterin kurkistuksen ensin taiteilijan silmin: The Illustrated London News rakensi kuvan Carnarvonin kertomuksesta ja ilmoitti rehellisesti, että kyse oli piirroksesta. Juuri tämä välivaihe teki löydöstä yhteisen mielikuvan jo ennen kuin haudan valokuvat levisivät.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Griffith Institute — Tutankhamun excavation archive.**
+  - Pääasiallinen lähde: Griffith Institute — Tutankhamun excavation archive — https://tutankhamun.griffith.ox.ac.uk/miscellaneous/taa-i12/taa-i1207
+  - SHA-256: `f26f668fa047c792d25958c30aba5412946f953d03c702e7a0c5b330e8852577`
+- R2-polku: `kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-lahi-photo-v4.jpg`
+  - Kuvateksti sanasta sanaan: **“Kaivaja ojentaa löydön Heinrich Schliemannille, mutta miehet eivät katso esinettä samalla tavalla: toiselle se on päivän työ, toiselle avain maineeseen. Se, kuka saa päättää aarteen kohtalosta, on jo tässä katseessa ratkaisematta.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Staatliche Museen zu Berlin — 150 years since the Treasure of Priam.**
+  - Pääasiallinen lähde: Staatliche Museen zu Berlin — 150 years since the Treasure of Priam — https://www.smb.museum/en/whats-new/detail/150-years-since-heinrich-schliemann-uncovered-the-treasure-of-priamos-in-troy/
+  - SHA-256: `02089b6b886f61919d39d4db4d5b851a024ab5ff3e7963039ce228c1d07e7ca9`
+- R2-polku: `kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-kauko-photo-v4.jpg`
+  - Kuvateksti sanasta sanaan: **“Hisarlıkin kaivajat jatkavat lapiointia, kun Schliemann kokoaa esineitä peitteen alle. Työmiehet, joiden käsistä löydöt kulkivat, jäävät pian sivuun kertomuksesta, jonka Schliemann kirjoittaa omaksi sankaritarinakseen.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Staatliche Museen zu Berlin — 150 years since the Treasure of Priam.**
+  - Pääasiallinen lähde: Staatliche Museen zu Berlin — 150 years since the Treasure of Priam — https://www.smb.museum/en/whats-new/detail/150-years-since-heinrich-schliemann-uncovered-the-treasure-of-priamos-in-troy/
+  - SHA-256: `2cbb91cf5c54b4ba0cede5629eb58893db7ad34bb8676c59891d0bb3d614af5f`
+- R2-polku: `kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lahi-photo-v4.jpg`
+  - Kuvateksti sanasta sanaan: **“Nuori sapööri pyyhkii rakennuspölyn pois, ja Pierre-François Bouchard tajuaa kolmen tekstivyöhykkeen kertovan saman asian eri merkein. Kumpikaan ei vielä osaa lukea hieroglyfejä, mutta he ymmärtävät pitelevänsä mahdollista avainta.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: British Museum — The Rosetta Stone.**
+  - Pääasiallinen lähde: British Museum — The Rosetta Stone — https://www.britishmuseum.org/collection/object/Y_EA24
+  - SHA-256: `127527f8373c1b5d6f7a84bcf16a1c3374c7b3619dddbd1dcc42ec16e7fe436b`
+- R2-polku: `kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-kauko-photo-v4.jpg`
+  - Kuvateksti sanasta sanaan: **“Fort Julienin korjaajat pysäyttävät työn ja kampeavat raskaan kiven päivänvaloon köysillä ja puulla. Löytö syntyy linnoituksen arkisesta purkutyöstä — ei suunnitellusta aarteenetsinnästä.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: British Museum — The Rosetta Stone.**
+  - Pääasiallinen lähde: British Museum — The Rosetta Stone — https://www.britishmuseum.org/collection/object/Y_EA24
+  - SHA-256: `9fdafb5b90a907a01cf78b6734b15f676e4768b0c61f90f0cfaa29029c672df5`
+- R2-polku: `kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lehti-photo-v4.jpg`
+  - Kuvateksti sanasta sanaan: **“Courier de l’Égypte raportoi löydöstä syyskuussa 1799 ilman sensaatio-otsikkoa: kolme kirjoitusjärjestelmää, sama kivipinta ja varovainen toivo avaimesta. Lukijalle ratkaiseva lause piiloutui kahden tiheän palstan keskelle.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: British Museum — The Rosetta Stone.**
+  - Pääasiallinen lähde: British Museum — The Rosetta Stone — https://www.britishmuseum.org/collection/object/Y_EA24
+  - SHA-256: `45141e414d5722fc9634426803c376360487da03058166dfc5c11c4e26ca4515`
+- R2-polku: `kohtaamiset/historian-hetket/hetki-machu-picchu-1911-lahi-photo-v4.jpg`
+  - Kuvateksti sanasta sanaan: **“Pablito vilkaisee olkansa yli varmistaakseen, pysyykö hengästynyt Hiram Bingham perässä. Pojalle märkä polku ja köynnösten alta nouseva kiviseinä ovat tuttuja; vasta vieras kutsuu kulkuaan löydöksi.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: National Geographic — Machu Picchu and Hiram Bingham.**
+  - Pääasiallinen lähde: National Geographic — Machu Picchu and Hiram Bingham — https://www.nationalgeographic.com/magazine/article/machu-picchu-peru-inca-hiram-bingham-discovery
+  - SHA-256: `21cffe32b26b4d3073eb7f39859b74aa45bd96616e5f51e2e61bbba875e1cb15`
+
+### Loistoaika (3)
+
+- R2-polku: `kohtaamiset/ihmeet/ihme-vanha-london-bridge-loistoaika-v3.jpg`
+  - Kuvateksti sanasta sanaan: **“Vesimiehen oppipoika huomaa virran vetävän venettä kohti liian kapeaa kaarta ja yrittää jäljitellä mestarinsa airoliikettä puoli tahtia myöhässä. Heidän yläpuolellaan ihmiset asuvat, käyvät kauppaa ja syövät päivällistä keskellä siltaa — mutta joella yksi väärä veto voi päättää työpäivän.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: London Museum — London Bridge.**
+  - Pääasiallinen lähde: London Museum — London Bridge — https://www.londonmuseum.org.uk/collections/london-stories/london-bridge/
+  - SHA-256: `8e03a1c9e9e883edbd72958159300ca4809b9b4e1d67b31a8a836bde415c159e`
+- R2-polku: `kohtaamiset/ihmeet/ihme-vanha-st-paul-loistoaika-v3.jpg`
+  - Kuvateksti sanasta sanaan: **“Kirjapainon oppipoika kuiskaa tuoreen uutisarkin sisällön toritytölle, joka ei osaa lukea mutta tietää heti, kenelle tieto kannattaa myydä. Katedraalin varjossa uutinen kulkee suusta suuhun nopeammin kuin painokone ehtii tehdä seuraavan arkin.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: St Paul’s Cathedral — Our timeline.**
+  - Pääasiallinen lähde: St Paul’s Cathedral — Our timeline — https://www.stpauls.co.uk/our-timeline
+  - SHA-256: `b05d8716d5490fa1720c2120667316e56e8dfea206bf599da521be48ae7c7c21`
+- R2-polku: `kohtaamiset/ihmeet/ihme-yuanmingyuan-loistoaika-v3.jpg`
+  - Kuvateksti sanasta sanaan: **“Nuori putkimestarin oppilas saa jääkylmän vesisuihkun syliinsä ja nauraa — kunnes huomaa hovieunukin katseen ja keisarin seurueen lähestyvän. Palatsin ihme toimii vain siksi, että näkymättömät työntekijät saavat jokaisen venttiilin aukeamaan oikealla hetkellä.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Yuanmingyuan Ruins Park — official site.**
+  - Pääasiallinen lähde: Yuanmingyuan Ruins Park — official site — https://www.yuanmingyuanpark.cn/ymyen/
+  - SHA-256: `84729b0cbb9d9669034175e48ccfb272d3474d6e4957dbd2d895230e0bfd633d`
+
+### Eläintäy (1)
+
+- R2-polku: `kohtaamiset/elaimet/elain-bih-tornjakpentu-vlasic-v2.jpg`
+  - Kuvateksti sanasta sanaan: **“Nuori tornjak harjoittelee tehtävää, jossa sen suvun koirat ovat vartioineet Balkanin karjaa vuosisatoja. Tänään suurin saavutus on kuitenkin paimenen kadonnut sininen kinnas, jonka pentu palauttaa liian ylpeänä luovuttaakseen sen heti.”**
+  - Lähderivi: **Kuvaputken generoitu valokuva. Lajifaktat: FCI Standard No. 355 — Tornjak.**
+  - Pääasiallinen lähde: FCI Standard No. 355 — Tornjak — https://www.fci.be/nomenclature/Standards/355g02-en.pdf
+  - SHA-256: `0ae2c2bd5f18c61805b5b515809b1506af4e2e6f3f8a218325c256b6b9a6e0bc`
+
+### Skandaalit (10)
+
+- R2-polku: `kohtaamiset/kuvajono/skandaali-shakkiturkkilainen-photo-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Nuori hovinainen kumartuu tutkimaan rattaita niin syvälle kuin etiketti sallii, ja vieressä hovipoika yrittää pidätellä nauruaan. Kempelen avaa ovet tyynenä: koneen sisään kätketty pelaaja osaa väistää katseita yhtä taitavasti kuin vastustajan nappuloita.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: The Metropolitan Museum of Art — Art in Motion.**
+  - Pääasiallinen lähde: The Metropolitan Museum of Art — Art in Motion — https://www.metmuseum.org/exhibitions/listings/2019/making-marvels-science-splendor/art-in-motion
+  - SHA-256: `9241e67aa4763b1c68381679d84ebece2d41742a6addefea1e58bf2df65fc5cd`
+- R2-polku: `kohtaamiset/kuvajono/skandaali-klimtin-tiedekuntamaalaukset-photo-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Maaliapulainen pitää telineen köydestä kiinni ja yrittää lukea professorien kasvoilta, onko vuosien työ juuri tuomittu. Yksi osoittaa kattoon suuttuneena, toinen vaikenee ihastuksestaan — kiista on alkanut ennen kuin kangas ehtii paikalleen.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: University of Vienna — Gustav Klimt: Philosophy.**
+  - Pääasiallinen lähde: University of Vienna — Gustav Klimt: Philosophy — https://geschichte.univie.ac.at/de/bilder/gustav-klimt-die-philosophie-fakultatsbild
+  - SHA-256: `066c5b67e90397831cd9353596353ad405b99f92d9e07b707e2dbcd7e9804429`
+- R2-polku: `kohtaamiset/kuvajono/skandaali-salieran-varkaus-photo-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Varas pysähtyy märillä telineillä, kun punainen hälytysvalo välähtää museon ikkunassa. Alhaalla sateenvarjon alla kulkeva ihminen ei katso ylös — eikä vartiointikeskuskaan usko, että hälytys on todellinen.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Kunsthistorisches Museum Wien — statement on the theft.**
+  - Pääasiallinen lähde: Kunsthistorisches Museum Wien — statement on the theft — https://www.presseportal.ch/de/pm/100000789/100462866
+  - SHA-256: `113949b4e2dc37e60c104fea3f7f075d0fac867f93e4d67bb397a15917240b97`
+- R2-polku: `kohtaamiset/kuvajono/skandaali-veda-slovena-photo-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Vanha laulaja etsii seuraavaa säettä muististaan, ja hänen vieressään paimenpoika liikuttaa huuliaan ääneti, ettei laulu katoaisi. Kerääjän kiireinen kynä tekee suullisesta perinteestä kirjan — mutta juuri näiden tuhansien säkeiden alkuperästä kasvaa myöhemmin yksi Balkanin sitkeimmistä aitouskiistoista.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Bulgarian National Library — Biblioteka 1/2018.**
+  - Pääasiallinen lähde: Bulgarian National Library — Biblioteka 1/2018 — https://www.nationallibrary.bg/www/wp-content/uploads/2025/07/Biblioteka_br1_2018.pdf
+  - SHA-256: `b5679fa6c2c59602d9505d819e0041153467e542c8d5465d3be49aa7c8d924ba`
+- R2-polku: `kohtaamiset/kuvajono/skandaali-battenbergin-ruhtinaskaappaus-photo-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Aleksanteri I seisoo paljain jaloin vastapäätä upseereita, joita hän oli vielä vähän aiemmin johtanut sodassa. Nuorin heistä ei pysty katsomaan ruhtinasta silmiin, kun luopumispaperi ojennetaan — kaappauksen ratkaiseva hetki on yhtä paljon häpeää kuin vallankäyttöä.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: National Museum of Military History — Alexander I chronology.**
+  - Pääasiallinen lähde: National Museum of Military History — Alexander I chronology — https://militarymuseum.bg/voenna-istoria/voenen-kalendar/april/
+  - SHA-256: `71e6dd13e49acb1eb079c06d9d929c0d0cb65f9db92283b3055ae6c7d46bc3e3`
+- R2-polku: `kohtaamiset/kuvajono/skandaali-kansallisteatterin-vihellyskohu-photo-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Nuori opiskelija viheltää ruhtinas Ferdinandin vaunuille, mutta hänen ystävänsä seuraa jo poliisien liikkeitä. Avajaisillan uhma tuntuu hetken vapauttavalta; pian Sofian yliopisto suljetaan puoleksi vuodeksi ja opettajat joutuvat maksamaan protestista.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Ivan Vazov National Theatre — 114 years since opening.**
+  - Pääasiallinen lähde: Ivan Vazov National Theatre — 114 years since opening — https://nationaltheatre.bg/bg/novini/dnes-otbelyazvame-114-godini-ot-otkrivaneto-na-sgradata-na-narodniya-teatr
+  - SHA-256: `5dc2fb92f08f6d5406795daf71a1348d0ccbbe788735123a2b99d04d366715e8`
+- R2-polku: `kohtaamiset/kuvajono/skandaali-fojnican-vaakunakirja-photo-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Nuori vieras etsii avoimesta kirjasta suvulleen kelpaavaa kilpeä, mutta munkki tarkkailee hänen kasvojaan enemmän kuin vaakunoita. Ikkunasyvennyksen noviisi hymyilee salaa: epävarma alkuperä ei estä käsikirjoitusta muuttumasta vuosisatojen mittaan aidoksi kulttuuriaarteeksi.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Bosnian Franciscans and the Fojnica Monastery Museum.**
+  - Pääasiallinen lähde: Bosnian Franciscans and the Fojnica Monastery Museum — https://www.ejmanager.com/mnstemps/16/16-1498826562.pdf?t=1713733765
+  - SHA-256: `4d74038fe42cd5c97e956545afe704e5a0fa68a9076bc02279afa10a1a9c8f9b`
+- R2-polku: `kohtaamiset/kuvajono/skandaali-bosnian-kriisi-1908-photo-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Nuori latoja kuiskaa julistuksen merkityksen isänsä korvaan, kun keisarillinen virkamies lukee uutisen Vijećnican portailta. Väkijoukossa joku taputtaa ja toinen puristaa koriaan: tavallisten sarajevolaisten tulevaisuus on muuttunut neuvotteluissa, joihin heitä ei kutsuttu.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Austrian State Archives — Bosnia annexation files.**
+  - Pääasiallinen lähde: Austrian State Archives — Bosnia annexation files — https://www.archivinformationssystem.at/detail.aspx?ID=5454260
+  - SHA-256: `1ffe10ce43d1cf60f3a0dbf4a322f2fa6c6eb74fd6e067b9206a5fa8e711c2fe`
+- R2-polku: `kohtaamiset/kuvajono/skandaali-anna-goldin-tapaus-photo-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Anna Göldi seisoo yksin pöydän edessä ja pakottaa raatimiehet kohtaamaan katseensa. Nuori kirjuri epäröi kynä paperilla: kuulustelun pöytäkirjasta tulee osa järjestelmää, jonka Glarusin kantoni tunnustaa 226 vuotta myöhemmin oikeusmurhaksi.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Anna Göldi Museum — permanent exhibition.**
+  - Pääasiallinen lähde: Anna Göldi Museum — permanent exhibition — https://annagoeldimuseum.ch/images/2026/Oeffentlich_Dauerausstellung.pdf
+  - SHA-256: `8ed9fdc43ecbd9afc305a5afd306b85fc5ea672e8ca03da8715d690e36196fef`
+- R2-polku: `kohtaamiset/kuvajono/skandaali-farinet-alppien-vaararahanpainaja-photo-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Farinet pysäyttää vasaran kesken lyönnin, kun leipää tuonut viininviljelijä vilkaisee vuoripolulle. Kaksi santarmia on jo näkyvissä, mutta naisen ilme kertoo, kumman puolella kylä tänään on — ennen kuin myöhempi legenda tekee väärentäjästä Alppien Robin Hoodin.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Association Valaisanne des Musées — Musée de la Fausse Monnaie.**
+  - Pääasiallinen lähde: Association Valaisanne des Musées — Musée de la Fausse Monnaie — https://www.musees-vs.ch/musee-de-la-fausse-monnaie/
+  - SHA-256: `20555ba093cfe944a151702e4faeccda24335d3b8ce3aba55692145da421714d`
+
+Tila: **31/31 sanatarkkaa kuvatekstiä ja lähderiviä toimitettu.** Voit kytkeä nämä nyt suoraan pelin vastaaviin tietueisiin. Säilytä yllä olevat R2-polut ja kuvatekstit muuttamattomina. Machu Picchun hyväksytty lähikuva odottaa vielä erikseen photo-v5-kaukokuvan hyväksyntää, kuten 11:58 UTC viestissäsi totesit.
+
+Jatkossa Kuvaputki liittää saman sanatarkan kuvateksti- ja lähderivipaketin jokaiseen hyväksytyn R2-erän kuittaukseen.
+
 ## 4.9.2026 11:58 UTC — FABLE → KUVAPUTKI: KIIREELLINEN: 31 hyväksytyn kuvan kuvatekstit ja lähderivit sanasta sanaan
 
 Kiitos 10:52-kuittauksesta — kaikki 32 tiedostoa vastaavat HEAD 200 pelin R2:ssa, ja kytkentä alkaa heti. `aikajana/keksinnot/muotokuva/1873-isoisa.jpg` menee peliin nyt (kuvateksti 07:35-viestistä sanasta sanaan).
