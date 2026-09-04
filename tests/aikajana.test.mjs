@@ -1224,11 +1224,20 @@ test('kertoja lukee ensin, pulu kommentoi vasta sen jälkeen', () => {
 
 test('välinäytöksen laatikko on avauksen tyyliperhettä ja pulun kuplien alla', () => {
   const lohko = AIKAJANA_CSS.match(/\.aikajana-valinaytos \{[\s\S]*?\.aikajana-valinaytos-nappi:focus-visible[^\n]*\n/)[0];
-  // Sama paperi ja sama pillerinappi kuin avausjaksossa.
-  const avaus = AIKAJANA_CSS.match(/\.aikajana-avaus-laatikko \{[\s\S]*?\n\}/)[0];
+  // Välinäytös pitää linssin tumman asun; avauslaatikko on paperia (omistaja 4.9.2026).
   for (const sailyy of ['border-radius: 14px', 'background: #201a14', 'border: 1px solid rgba(217, 161, 59, 0.38)']) {
-    assert.ok(avaus.includes(sailyy) && lohko.includes(sailyy), `tyyliperhe eroaa: ${sailyy}`);
+    assert.ok(lohko.includes(sailyy), `välinäytöksen asu muuttui: ${sailyy}`);
   }
+  const avaus = AIKAJANA_CSS.match(/\.aikajana-avaus-laatikko \{[\s\S]*?\n\}/)[0];
+  assert.match(avaus, /background-color: #d9c69c;/);
+  assert.match(avaus, /feTurbulence/, 'paperin kuitu tulee SVG-kohinasta kuvana');
+  assert.match(avaus, /rgba\(58, 38, 14, 0\.55\) 100%/, 'paperi tummuu alaspäin');
+  assert.match(AIKAJANA_CSS, /\.aikajana-avaus-laatikko::before \{[\s\S]*?animation: aikajana-lepatus-a 3\.7s ease-in-out infinite;/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-avaus-laatikko::after \{[\s\S]*?animation: aikajana-lepatus-b 5\.3s ease-in-out infinite;/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-avaus-laatikko::before, \.aikajana-avaus-laatikko::after \{ animation: none; \}/);
+  // Havainnekuva valokeilassa: pelkkä kuva -paneeli ilman laatikkoa, reunat läpinäkyviksi maskilla (ei suodatin).
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child,[\s\S]*?mask-image: radial-gradient\(ellipse 58% 58% at 50% 50%, #000 42%/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio:has\(> \.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child\) \{\n  border-color: transparent;\n  background: transparent;\n  box-shadow: none;\n\}/);
   // Tausta himmenee KEVYESTI eikä mustaan: valot näkyvät laatikon takaa.
   const alfa = Number(lohko.match(/\.aikajana-valinaytos-peite \{[\s\S]*?rgba\(6, 4, 3, ([\d.]+)\)/)[1]);
   assert.ok(alfa > 0.2 && alfa < 0.6, `himmennys ${alfa} ei ole kevyt`);

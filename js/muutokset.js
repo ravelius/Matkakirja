@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1519, teksti: 'Linssi: havainnekuva valokeilassa, avauslaatikko paperia' },
   { v: 1518, teksti: 'Linssi: 1873 on valinaytos - kertoja, pulu ja Jatka' },
   { v: 1517, teksti: 'Linssin avausjakso: musta, esittely, Kaynnista' },
   { v: 1516, teksti: 'Linssi: ennakoiva karuselli, selostaja, blokkaus' },
