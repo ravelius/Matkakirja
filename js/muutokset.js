@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1539, teksti: 'Miniatyyrit: 566 tunnusta kohdekartoille (M3 tilattu)' },
   { v: 1538, teksti: 'Karttapallo: z4 ainoaksi, ei mitaan paalle, linssi laukkuun' },
   { v: 1537, teksti: 'Kohdekartan nimet vain zoomattuna, Sarajevon nimet erilleen' },
   { v: 1536, teksti: 'Karttapallo: Globe.gl-maailmanvalikko (pilotti)' },
