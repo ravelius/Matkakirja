@@ -149,7 +149,8 @@ export const hetkenKuvaOsoite = (tiedosto) => `${HETKI_KUVAJUURI}/${tiedosto}`;
  *
  * KUVAERÄN VERSIO: H1–H3 36–44 ovat `-photo-v3`, ja H3 45–48 (4.9.2026)
  * `-photo-v4` — hetken `kuvaversio`-kenttä (oletus 3) kertoo tiedoston
- * päätteen, ja testi johtaa nimen siitä.
+ * päätteen, ja testi johtaa nimen siitä. Yksittäinen uusittu kuva saa
+ * oman `versio`-kentän (Machu Picchu: lähi v4, kauko v5; Galilei v5).
  */
 export const HETKI_KUVAROOLIT = new Set(['lahi', 'kauko', 'lehti']);
 
@@ -1796,6 +1797,196 @@ export const HISTORIAN_HETKET = [
       oikea: 2,
       fakta: 'Britannia sai kiven vuoden 1801 antautumissopimuksen ehtona; '
         + 'Egypti on pyytänyt sitä takaisin.',
+    },
+  },
+  /*
+   * 19. PADOVA, TAMMIKUU 1610 — JUPITERIN KUUT.
+   * Galilei oli Padovan yliopiston professori (Venetsian tasavalta) ja
+   * havaitsi kuut kotoaan Padovasta; piste on 19 laudan yksikköä
+   * Venetsiasta, joten hetki on pääkartalla omalla merkillään ja sivu
+   * Venetsian kaupunkilehdessä. Kuvat photo-v5 (omistaja hylkäsi v4:n
+   * kaukoputken asennon). Lähde: en.wikipedia.org: Galilean moons,
+   * Sidereus Nuncius, Galileo Galilei
+   */
+  {
+    id: 'galilei-kaukoputki-1610',
+    otsikko: 'Padova 1610 — neljä valopistettä Jupiterin vieressä',
+    nimio: 'Padova 1610',
+    paivays: 'tammikuu 1610',
+    paikka: 'Padova, Venetsian tasavalta',
+    iso: 'ITA',
+    lat: 45.4064, lon: 11.8768,
+    kuvaversio: 5,
+    teksti: 'Tammikuun 7. päivän iltana 1610 Galileo Galilei suuntaa itse '
+      + 'rakentamansa, noin kaksikymmentä kertaa suurentavan kaukoputken '
+      + 'Jupiteriin ja näkee planeetan vieressä kolme pientä valopistettä '
+      + 'suorassa rivissä. Hän pitää niitä tähtinä. Seuraavana iltana ne '
+      + 'ovat vaihtaneet paikkaa, ja 13. tammikuuta niitä on neljä. Ilta '
+      + 'illan jälkeen hän piirtää pisteiden asemat muistiin, apulainen '
+      + 'kirjaa ja kynttilä hyytyy tammikuun kylmässä, kunnes selitys ei '
+      + 'enää voi olla muu: pisteet kiertävät Jupiteria. Se on ensimmäinen '
+      + 'kerta, kun jonkin nähdään kiertävän muuta kuin Maata — ja '
+      + 'Ptolemaioksen maailma, jossa kaikki kiertää Maata, saa ensimmäisen '
+      + 'näkyvän kolhunsa. Galilei on 45-vuotias matematiikan professori '
+      + 'Padovan yliopistossa Venetsian tasavallassa, ja hän on hionut '
+      + 'linssinsä itse edellisestä syksystä alkaen. Maaliskuussa 1610 hän '
+      + 'julkaisee Venetsiassa ohuen kirjan Sidereus nuncius, Tähtien '
+      + 'sanansaattaja, jossa ovat Kuun vuoret, Linnunradan lukemattomat '
+      + 'tähdet ja neljä "Medicin tähteä", jotka hän nimeää Toscanan '
+      + 'suurherttuan suvulle päästäkseen tämän hoviin. Kuut tunnetaan nyt '
+      + 'Galilein kuina: Io, Europa, Ganymedes ja Kallisto. Kirja tekee '
+      + 'hänestä Euroopan kuuluisimman luonnontutkijan — ja aloittaa tien, '
+      + 'joka päättyy inkvisition eteen vuonna 1633.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-galilei-kaukoputki-1610-lahi-photo-v5.jpg',
+        kuvateksti: 'Galileo painaa silmänsä kapeaan okulaariin ja yrittää '
+          + 'pitää Jupiterin näkökentässä paljain käsin tammikuun kylmyydessä. '
+          + 'Valopisteet ovat jälleen vaihtaneet paikkaa: havainto on hiljainen, '
+          + 'mutta hänen ilmeestään näkee, ettei vanha taivaanjärjestys enää '
+          + 'riitä selitykseksi.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: dramatisoitu fotorealistinen '
+          + 'rekonstruktio Padovan tammikuun 1610 havainnoista; kaukoputken '
+          + 'rakenne ja havaintojakso perustuvat Museo Galileon säilyneeseen '
+          + 'instrumenttiin ja Sidereus nuncius -aineistoon; tarkistettu '
+          + '4.9.2026.',
+        url: 'https://catalogue.museogalileo.it/object/GalileosTelescope.html',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-galilei-kaukoputki-1610-kauko-photo-v5.jpg',
+        kuvateksti: 'Apulainen yrittää saada Galileon sanelemat pisteet '
+          + 'paperille ennen kuin kynttilä tai sormet hyytyvät kylmään. Kun '
+          + 'sama työ toistuu yö toisensa jälkeen, valojen liike alkaa näyttää '
+          + 'siltä mitä se on: neljä kuuta kiertää Jupiteria.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: dramatisoitu fotorealistinen '
+          + 'rekonstruktio 7.1.–2.3.1610 tehdyistä toistuvista havainnoista; '
+          + 'kaukoputki perustuu Museo Galileon säilyneeseen noin 1610 '
+          + 'instrumenttiin; tarkistettu 4.9.2026.',
+        url: 'https://catalogue.museogalileo.it/object/GalileosTelescope.html',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'kaupunki', avain: 'venetsia' },
+    visa: {
+      kysymys: 'Mitä Galilei näki tammikuussa 1610 Jupiterin vieressä?',
+      vaihtoehdot: [
+        'Neljä kuuta, jotka kiertävät planeettaa',
+        'Saturnuksen renkaat',
+        'Pyrstötähden',
+      ],
+      oikea: 0,
+    },
+    lehtiJohdanto: 'Tammikuussa 1610 Padovan yliopiston professori suuntasi '
+      + 'itse rakentamansa kaukoputken Jupiteriin ja näki neljä valopistettä, '
+      + 'jotka ilta illalta vaihtoivat paikkaa — ensimmäiset kappaleet, joiden '
+      + 'nähtiin kiertävän muuta kuin Maata.',
+    lehtiTehtava: {
+      kysymys: 'Miksi Galilei nimesi kuut "Medicin tähdiksi"?',
+      vaihtoehdot: [
+        'Ne löytyivät Medicien palatsin katolta',
+        'Hän halusi Toscanan suurherttuan hoviin',
+        'Medicit rahoittivat kaukoputken',
+        'Paavi määräsi nimen',
+      ],
+      oikea: 1,
+      fakta: 'Omistus toimi: samana vuonna 1610 Galilei sai hovimatemaatikon '
+        + 'viran Firenzestä.',
+    },
+  },
+  /*
+   * 20. MACHU PICCHU 24.7.1911 — POIKA NÄYTTÄÄ TIEN.
+   * Piste on Andeilla, 8 laudan yksikköä laudan omasta Machu Picchu
+   * -kohteesta (yli katon säteen, ei kattoVapaata), joten hetki on
+   * pääkartalla omalla merkillään. Perulla ei ole maalehteä, joten
+   * sivu on Liman kaupunkilehdessä (Binghamin retkikunta lähti Limasta).
+   * Lähikuva on photo-v4, kaukokuva photo-v5 (omistaja hylkäsi
+   * ensimmäisen kaukokuvan): versio kuvakohtaisesti.
+   * Lähde: en.wikipedia.org: Hiram Bingham III, Machu Picchu
+   */
+  {
+    id: 'machu-picchu-1911',
+    otsikko: 'Machu Picchu 1911 — poika, joka näytti tien',
+    nimio: 'Machu Picchu 1911',
+    paivays: '24.7.1911',
+    paikka: 'Machu Picchu, Peru',
+    iso: 'PER',
+    lat: -13.1631, lon: -72.5450,
+    teksti: 'Polku on märkä ja jyrkkä, ja edellä kulkee yksitoistavuotias '
+      + 'Pablito Richarte, joka on kulkenut sen sata kertaa. Hänen perässään '
+      + 'hengästyy Yalen yliopiston historianlehtori Hiram Bingham, 35, joka '
+      + 'on maksanut Urubamban laaksossa asuvalle Melchor Arteagalle yhden '
+      + 'solin oppaan palkkiona ja saanut kuulla, että vuoren harjanteella '
+      + 'on vanhoja raunioita. Harjanteella asuu kaksi perhettä, Richarte '
+      + 'ja Álvarez; he viljelevät inkojen terasseja, ja lapset leikkivät '
+      + 'köynnösten peittämien muurien välissä. Bingham näkee sinä päivänä '
+      + 'graniittiseinät, jotka on hakattu niin tarkasti, ettei saumaan '
+      + 'mahdu veistä, ja kirjoittaa päiväkirjaansa, että paikka on '
+      + 'ihmeellinen. Hän uskoo löytäneensä inkojen viimeisen pakolinnan '
+      + 'Vilcabamban — se oli toisaalla — ja National Geographicin vuoden '
+      + '1913 numero tekee hänestä kadonneen kaupungin löytäjän. '
+      + 'Löytäjäksi hänet nimeävät lehdet, eivät ne, jotka asuivat '
+      + 'paikalla: yhteen muuriin oli jo vuonna 1902 kaivertanut nimensä '
+      + 'paikallinen Agustín Lizárraga. Kaupungin rakensi inkakuningas '
+      + 'Pachacútec 1400-luvun puolivälissä, ja espanjalaiset eivät '
+      + 'löytäneet sitä koskaan — siksi se on säilynyt.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        versio: 4,
+        tiedosto: 'hetki-machu-picchu-1911-lahi-photo-v4.jpg',
+        kuvateksti: 'Pablito vilkaisee olkansa yli varmistaakseen, pysyykö '
+          + 'hengästynyt Hiram Bingham perässä. Pojalle märkä polku ja '
+          + 'köynnösten alta nouseva kiviseinä ovat tuttuja; vasta vieras '
+          + 'kutsuu kulkuaan löydöksi.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: National Geographic — Machu '
+          + 'Picchu and Hiram Bingham; tarkistettu 4.9.2026.',
+        url: 'https://www.nationalgeographic.com/magazine/article/machu-picchu-peru-inca-hiram-bingham-discovery',
+      },
+      {
+        rooli: 'kauko',
+        versio: 5,
+        tiedosto: 'hetki-machu-picchu-1911-kauko-photo-v5.jpg',
+        kuvateksti: 'Pablito vilkaisee mutaiselta polulta, pysyykö hengästynyt '
+          + 'Bingham perässä, samalla kun Richarten ja Álvarezin perheiden '
+          + 'päivä jatkuu maissipellolla. Heille kiviseinät eivät ole löytö vaan '
+          + 'tuttu ympäristö, jota ulkopuolinen alkaa vasta kutsua '
+          + 'maailmansensaatioksi.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: dramatisoitu fotorealistinen '
+          + 'rekonstruktio Machu Picchusta heinäkuussa 1911 ennen vuoden 1912 '
+          + 'laajaa raivausta; paikalliset asukkaat ja viljely nostetaan '
+          + 'tarkoituksella Binghamin rinnalle; National Geographic — Machu '
+          + 'Picchu and Hiram Bingham; tarkistettu 4.9.2026.',
+        url: 'https://www.nationalgeographic.com/magazine/article/machu-picchu-peru-inca-hiram-bingham-discovery',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'kaupunki', avain: 'lima' },
+    visa: {
+      kysymys: 'Kuka johdatti Hiram Binghamin Machu Picchun raunioille 1911?',
+      vaihtoehdot: [
+        'Perun armeijan kartoitusosasto',
+        'Paikallinen viljelijä Melchor Arteaga ja Richarten perheen poika',
+        'Vanha inkakartta Cuscon arkistosta',
+      ],
+      oikea: 1,
+    },
+    lehtiJohdanto: 'Heinäkuussa 1911 yalelainen Hiram Bingham kiipesi paikallisen '
+      + 'viljelijän ja yksitoistavuotiaan pojan perässä harjanteelle, jolla '
+      + 'kaksi perhettä viljeli inkojen terasseja — ja lehdet tekivät hänestä '
+      + 'kadonneen kaupungin löytäjän.',
+    lehtiTehtava: {
+      kysymys: 'Miksi Machu Picchu säilyi niin hyvin?',
+      vaihtoehdot: [
+        'Inkat purkivat sen itse ja rakensivat uudelleen',
+        'Espanjalaiset valloittajat eivät koskaan löytäneet sitä',
+        'Se oli koko ajan Perun valtion suojelussa',
+        'Se rakennettiin vasta 1800-luvulla',
+      ],
+      oikea: 1,
+      fakta: 'Pachacútecin 1400-luvulla rakennuttama kaupunki hylättiin '
+        + 'valloituksen aikoihin ja jäi köynnösten alle.',
     },
   },
 ];
