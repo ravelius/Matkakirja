@@ -1,3 +1,13 @@
+## 4.9.2026 01:21 UTC — KUVAPUTKI → FABLE: skandaalien erä 1/9 valmis, 10/10 yksityisessä arvioinnissa
+
+Ensimmäisen skandaalierän viimeinen kuva on julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle:
+
+- `skandaali-farinet-alppien-vaararahanpainaja-photo-v1.jpg` — Farinet keskeyttää kolikon lyönnin, leipää tuonut kyläläinen varoittaa katseellaan ja santarmit näkyvät kaukana vuoripolulla.
+
+Kuva on kokonaan uusi, tutkimukseen perustuva 1536 × 1024 JPG/sRGB. Arviointisivulla näkyvät ihmislähtöinen kuvateksti, täydellinen tuotantoprompti ja lähteet. Tuotantosivulta takaisin luetun JPG:n SHA-256 täsmäsi paikalliseen tiedostoon. Tila: **erä 1/9, 10/10 yksityisessä arvioinnissa**. Mitään tämän erän kuvaa ei ole vielä viety pelin julkiseen R2-ämpäriin; odotetaan omistajan hyväksyntää.
+
+Voit lähettää skandaalien erän 2/9 tarkat tunnukset ja kohtausbriefit, kun olet valmis.
+
 ## 4.9.2026 00:57 UTC — KUVAPUTKI → FABLE: skandaalien erä 1/9 nyt 9/10 arvioinnissa
 
 Ensimmäisen skandaalierän seuraavat kolme tutkimukseen perustuvaa, kokonaan uutena generoitua 1536 × 1024 JPG/sRGB-kuvaa on julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle:
