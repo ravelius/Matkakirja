@@ -1,0 +1,137 @@
+name: Vie isoisän Kanton-kuva R2:een 2026-09-04
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/vie-isoisa-kanton-kuva-r2-2026-09-04.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vie-isoisa-kanton-kuva-r2-2026-09-04
+  cancel-in-progress: true
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      DRIVE_AVAIN: ${{ secrets.SAMIREIVINEN_DRIVE_API }}
+      R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_AMPARI: ${{ secrets.R2_BUCKET }}
+      JULKINEN: https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev
+      DRIVE_ID: 13TdvqI9S-Xf8z2YbEWieBEj1oyJwgYXD
+      R2_POLKU: kohtaamiset/isoisa/isoisa-kanton-1873-kuva-v1.jpg
+      SHA256: 977007c6c83b3f15a297a2899ce4ba44b7cc9f9ac05ed42868609276c8a2fa7f
+
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Tarkista yhteydet
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$DRIVE_AVAIN" ] || puuttuu="$puuttuu SAMIREIVINEN_DRIVE_API"
+          [ -n "$R2_TILI" ] || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ] || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "$R2_AMPARI" ] || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Puuttuvat repository secretit:$puuttuu"
+            exit 1
+          fi
+
+      - name: Nouda ja tarkista hyväksytty JPG
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'SKRIPTI'
+          import { mkdir, writeFile } from 'node:fs/promises';
+          import { dirname } from 'node:path';
+          import { createHash } from 'node:crypto';
+
+          function jpegMitat(data) {
+            if (data[0] !== 0xff || data[1] !== 0xd8) throw new Error('ei ole JPEG');
+            let i = 2;
+            while (i + 9 < data.length) {
+              if (data[i] !== 0xff) { i += 1; continue; }
+              const merkki = data[i + 1];
+              if (merkki === 0xd8 || merkki === 0xd9) { i += 2; continue; }
+              const pituus = data.readUInt16BE(i + 2);
+              if (pituus < 2 || i + 2 + pituus > data.length) break;
+              if ([0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf].includes(merkki)) {
+                return { korkeus: data.readUInt16BE(i + 5), leveys: data.readUInt16BE(i + 7) };
+              }
+              i += 2 + pituus;
+            }
+            throw new Error('JPEG-mittoja ei löytynyt');
+          }
+
+          const nykyinen = await fetch(`${process.env.JULKINEN}/${process.env.R2_POLKU}?t=${Date.now()}`, {
+            headers: { 'Cache-Control': 'no-cache' },
+          });
+          if (nykyinen.ok) {
+            const data = Buffer.from(await nykyinen.arrayBuffer());
+            const sha = createHash('sha256').update(data).digest('hex');
+            if (sha !== process.env.SHA256) throw new Error('R2-polussa on eri sisältö');
+            console.log('Täsmälleen sama hyväksytty kuva oli jo R2:ssa');
+            process.exit(0);
+          }
+          if (nykyinen.status !== 404) throw new Error(`R2-esitarkistus HTTP ${nykyinen.status}`);
+
+          const vastaus = await fetch(`https://www.googleapis.com/drive/v3/files/${process.env.DRIVE_ID}?alt=media&key=${process.env.DRIVE_AVAIN}`);
+          if (!vastaus.ok) throw new Error(`Drive HTTP ${vastaus.status}`);
+          const data = Buffer.from(await vastaus.arrayBuffer());
+          const sha = createHash('sha256').update(data).digest('hex');
+          if (sha !== process.env.SHA256) throw new Error(`SHA-256 ${sha} ei täsmää`);
+          const mitat = jpegMitat(data);
+          if (mitat.leveys !== 1536 || mitat.korkeus !== 1024) {
+            throw new Error(`${mitat.leveys}x${mitat.korkeus}, odotettiin 1536x1024`);
+          }
+          if (!data.includes(Buffer.from('ICC_PROFILE'))) throw new Error('ICC-profiili puuttuu');
+          const kohde = `r2-out/${process.env.R2_POLKU}`;
+          await mkdir(dirname(kohde), { recursive: true });
+          await writeFile(kohde, data);
+          console.log(`${process.env.R2_POLKU}: JPEG, 1536x1024, ICC ja SHA-256 kunnossa`);
+          SKRIPTI
+
+      - name: Vie R2-mediämpäriin
+        run: |
+          set -euo pipefail
+          if [ -f "r2-out/$R2_POLKU" ]; then
+            aws s3 cp "r2-out/$R2_POLKU" "s3://$R2_AMPARI/$R2_POLKU" \
+              --endpoint-url "https://$R2_TILI.r2.cloudflarestorage.com" \
+              --no-progress --content-type image/jpeg \
+              --cache-control "public, max-age=31536000, immutable"
+          fi
+
+      - name: Varmista julkinen R2 tavutasolla
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'SKRIPTI'
+          import { createHash } from 'node:crypto';
+          let vastaus;
+          for (let yritys = 1; yritys <= 12; yritys += 1) {
+            vastaus = await fetch(`${process.env.JULKINEN}/${process.env.R2_POLKU}?t=${Date.now()}`, {
+              headers: { Origin: 'https://ravelius.github.io', 'Cache-Control': 'no-cache' },
+            });
+            if (vastaus.ok) break;
+            await new Promise((resolve) => setTimeout(resolve, 2000));
+          }
+          if (!vastaus?.ok) throw new Error(`R2 HTTP ${vastaus?.status}`);
+          const tyyppi = vastaus.headers.get('content-type') ?? '';
+          if (!tyyppi.startsWith('image/jpeg')) throw new Error(`R2 MIME ${tyyppi}`);
+          if (!vastaus.headers.get('access-control-allow-origin')) throw new Error('R2 CORS puuttuu');
+          const data = Buffer.from(await vastaus.arrayBuffer());
+          const sha = createHash('sha256').update(data).digest('hex');
+          if (sha !== process.env.SHA256) throw new Error(`takaisinluettu SHA-256 ${sha} ei täsmää`);
+          console.log(`${process.env.R2_POLKU}: julkinen JPEG, CORS ja tavut kunnossa`);
+          SKRIPTI
