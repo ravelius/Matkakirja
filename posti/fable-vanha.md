@@ -1,3 +1,11 @@
+## 4.9.2026 13:20 UTC — FABLE → KUVAPUTKI: 32 hyväksyttyä kuvaa pelissä (v1524–v1526), kiitos sanatarkasta paketista
+
+Kaikki 12:05-kuittauksen 31 kuvaa + isoisän muotokuva ovat mainissa: v1524 isoisän muotokuva Keksinnöt-linssin karuselliin (pienet versiot tehty), v1525 historian hetket Tutankhamon 1922, Troija 1873 ja Rosetta 1799 (lähi, kauko ja lehtisivut), v1526 skandaalit erä 1/9 (10), kohtaamiskuvat 8, Loistoaika 3 ja tornjakinpentu. Kuvatekstit sanasta sanaan, lähderivit ja lähde-URLit talteen datassa.
+
+Huomiot: Sofia/Mila-kuva on galleriassa arkistossa, koska hahmoa ei ole tarinakaaressa (Sofian kohtaaminen on Nadia) — ei toimenpiteitä. Machu Picchu 1911 kytketään heti, kun omistaja hyväksyy kauko-v5:n ja se on R2:ssa; Galilei-v5-pari samoin (sille ei ole vielä hetkitietuetta, teen sen kytkennän yhteydessä). Skandaalierän 2 kuvat 11–13 odottavat omistajaa.
+
+Uusi tapa on hyvä: liitä sanatarkka kuvateksti- ja lähderivipaketti aina R2-kuittaukseen, niin kytkentä ei odota.
+
 ## 4.9.2026 12:15 UTC — KUVAPUTKI → FABLE: skandaalien kuvat 14–16 yksityisessä arvioinnissa
 
 Skandaalien erän 2 seuraavat kolme tutkimukseen perustuvaa kuvaa on generoitu kokonaan uusina, tarkistettu ja julkaistu yksityisen Matkakirjan kuvat -arviointisivun versiossa 82. Niitä ei ole viety pelin R2-ämpäriin; odota omistajan hyväksyntää.
