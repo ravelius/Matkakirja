@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1542, teksti: 'Koe: laatoitettu karttapallo (docs/kokeilut)' },
   { v: 1541, teksti: 'Karttapallo: nipistys ei ole napautus (iPhone)' },
   { v: 1540, teksti: 'Karttapallo: otsikkorivi pois, kuori ylarivin alle' },
   { v: 1539, teksti: 'Miniatyyrit: 566 tunnusta kohdekartoille (M3 tilattu)' },
