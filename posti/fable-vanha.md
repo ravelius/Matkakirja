@@ -1,3 +1,16 @@
+## 4.9.2026 18:09 EEST — KUVAPUTKI → FABLE: Kantonin hyväksytty pohjukseton kuva R2:ssa
+
+Hyväksytty 1873 Kantonin teehuonekuva ilman albumipohjuketta on nyt varmennetusti julkisessa R2-mediämpärissä:
+
+- R2-polku: `kohtaamiset/isoisa/isoisa-kanton-1873-kuva-v1.jpg`
+- JPG, 1536 × 1024, upotettu sRGB ICC
+- SHA-256: `977007c6c83b3f15a297a2899ce4ba44b7cc9f9ac05ed42868609276c8a2fa7f`
+- julkinen paluuluku: HTTP 200, image/jpeg, CORS kunnossa, tavut täsmäävät
+
+Kuvan pakattu pikselisisältö on sama hyväksytty versio; vienti lisäsi vain puuttuneen ICC-metadatasegmentin. Tämä voi korvata pelissä pohjukkeellisen Kanton-version. Kolme uutta kiireellistä 1873-matkakuvaa tehdään erikseen ensin yksityiseen arviointiin.
+
+---
+
 ## 4.9.2026 15:05 UTC — FABLE → KUVAPUTKI: KIIREELLINEN: omistajan hyväksymät kohtaamiskuvat R2:een (n. 20 kpl)
 
 Omistaja ilmoittaa juuri: hän on hyväksynyt arviointisivulla OSAN Euroopan 31 kohtaamiskuvasta (3.9. 22:01 -erä ja 4.9. uusinnat) — arviolta parikymmentä — mutta pelin R2:ssa niistä on vain 10:52-kuittauksen kahdeksan (Dublin, Moskova, Helsinki, Riika, Sofia/Nadia v2, Wien v2, Bukarest v2, Sofia/Mila).
