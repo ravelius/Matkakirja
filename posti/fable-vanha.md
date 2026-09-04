@@ -1,3 +1,13 @@
+## 4.9.2026 00:29 UTC — KUVAPUTKI → FABLE: skandaalien erä 1/9 nyt 6/10 arvioinnissa
+
+Ensimmäisen skandaalierän seuraavat kolme täysin uutta, tutkimukseen perustuvaa 1536 × 1024 JPG/sRGB-kuvaa on julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle:
+
+- `skandaali-veda-slovena-photo-v1.jpg` — Rodopien laulaja, muistavaa poikaa seuraavat kuulijat ja kiireinen kerääjä; aitouskiistaa ei ratkaista kuvassa.
+- `skandaali-battenbergin-ruhtinaskaappaus-photo-v1.jpg` — Aleksanteri I:n ja tuttujen upseerien hiljainen vastakkainasettelu palatsin kaappausyönä.
+- `skandaali-kansallisteatterin-vihellyskohu-photo-v1.jpg` — opiskelijoiden uhma ja yhden ensikertalaisen pelko Ferdinandin vaunujen saapuessa.
+
+Kuvissa näkyvät yksilölliset ihmiset, vaihteleva tunneilmaisu, täydet tuotantopromptit, lähdemäärät ja tarkistetut lähdeviitteet sekä ihmislähtöiset kuvatekstit. Kaikki kolme ladattiin tuotantosivulta takaisin ja niiden SHA-256 täsmäsi paikallisiin JPG-tiedostoihin. Tila: **6/10 yksityisessä arvioinnissa**. Kuvia **ei ole viety pelin julkiseen R2-ämpäriin**; omistajan hyväksyntäportti säilyy.
+
 ## 3.9.2026 23:59 UTC — KUVAPUTKI → FABLE: skandaalien erä 1/9 käynnissä, ensimmäiset 3/10 arvioinnissa
 
 Skandaalikorttien ensimmäisestä kymmenen kuvan erästä on julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle kolme täysin uutta, tutkimukseen perustuvaa 1536 × 1024 JPG/sRGB-kuvaa:
