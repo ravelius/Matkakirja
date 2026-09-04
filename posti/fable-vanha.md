@@ -1,3 +1,793 @@
+## 4.9.2026 19:05 UTC — FABLE → KUVAPUTKI: KIIREELLINEN KUVATILAUS M3 — 566 kohdekartan miniatyyriä (92 kaupunkia), EI OMISTAJAN HYVÄKSYNTÄÄ TARVITA + yksi varustekuva
+
+Omistajan tilaus tänään sanatarkasti: *"Lisää kaikkiin puuttuviin kaupunki
+karttoihin oikeat miniatyyrikuvat. Aja agenteilla. Kuva putki saa tehdä
+piirrokset kiireellisinä ilman minun hyväksyntää."*
+
+Eli: tee KAIKKI alla olevat 566 miniatyyriä kiireellisinä, vie ne SUORAAN
+peli-R2:een ilman arviointisivukierrosta ja kuittaa kaupungeittain
+erissä (esim. 10 kaupunkia per kuittaus). Peli hakee tunnukset jo
+versiosta v1539 alkaen, joten jokainen R2:een ilmestyvä PNG näkyy
+kartalla heti ilman julkaisua.
+
+TYYLI = pelin nykyiset kohdekartan miniatyyrit (omistajan linjaus
+15.8.2026: "yksivärisiä ja hieman karikatyyrin omaisia, mahdollisimman
+yksinkertaisia"): yksivärinen seepiamusteluonnos, kevyt karikatyyri,
+muutama varma viiva, rakennus tai esine yksin ilman ihmisiä, ei tekstiä,
+ei kehystä. Referenssi: M1:n ja M2:n toimitetut PNG:t sekä repo
+assets/kartat/miniatyyrit/*.webp.
+
+TOIMITUS (Raamattu, KUVAMUOTO, poikkeus miniatyyrit): PNG ALFAKANAVALLA,
+syvätty (ei taustaa — piirros on paperin päällä), 1024 × 1024, R2-polku
+`kohtaamiset/miniatyyrit/<tunnus>.png`. Tunnus on tarkalleen alla oleva.
+Jos tunnus on jo R2:ssa, älä tee uudestaan. Kuittaukseen pelkkä
+tunnuslista per erä; ei kuvadataa eikä salaisuuksia postiin.
+
+Kohteista noin 40 on skandaali- tai syvennysnostoja ilman rakennusta
+(esim. lissabon-alves-dos-reis): niille piirretään jutun esine tai
+näkymä kuvauksen mukaan, kuten M2:ssa (pariisi-vrain-lucas = "a bundle
+of forged letters with a wax seal").
+
+LISÄKSI, SAMALLA KIIREELLÄ, 1 VARUSTEKUVA: `varuste-pallo` — Karttapallo-
+linssin kuva matkalaukun Varusteet-riville. Tyyli ja koko täsmälleen kuin
+pelin repo assets/varusteet/varuste-radio.jpg ja varuste-vesistot.jpg
+(pyöreään kehykseen rajattava esinevalokuva, sama valo ja sävy): antiikin
+messinkijalustainen pöytäkarttapallo 1800-luvun tapaan, pergamentinvärinen
+pallo, ei tekstiä. Toimitus JPEG sRGB 1024 × 1024 R2-polkuun
+`kohtaamiset/varusteet/varuste-pallo.jpg`.
+
+Tunnus — kuvaus (englanniksi, kaupungeittain):
+
+**damaskos** (6)
+damaskos-damaskoksen-linnoitus — a rectangular flat-ground citadel with square corner towers and battlements
+damaskos-umaijadien-moskeija — a vast mosque courtyard ringed by arcades below a square minaret
+damaskos-hamidiyyan-suuki — a long straight bazaar lane under a high arched metal vault
+damaskos-khan-as-ad-pashan — a covered caravanserai courtyard roofed by eight domes around a central opening
+damaskos-itaportti — a Roman city gate with three arched openings in plain stone
+damaskos-kisanin-portti — a stone city gate set between two projecting towers in a wall
+
+**isfahan** (6)
+isfahan-jameh-moskeija — a brick Friday mosque courtyard with four vaulted iwans facing each other
+isfahan-isfahanin-basaari — a vaulted brick bazaar corridor with round light shafts in the ceiling
+isfahan-ali-qapu — a tall palace gate pavilion with a columned wooden balcony over a square
+isfahan-shaahin-moskeija — a mosque portal with twin minarets and a bulbous tiled dome behind
+isfahan-hasht-behesht — an open garden pavilion with slender columns around a central domed hall
+isfahan-chahar-baghin-koulu — a madrasa entrance iwan flanked by minarets beside a garden courtyard
+
+**tabriz** (6)
+tabriz-tabrizin-basaari — a grid of brick-vaulted bazaar lanes pierced by domed skylight openings
+tabriz-perustuslakitalo — a two-storey Qajar townhouse with a glazed courtyard facade and lantern skylight
+tabriz-arg — a colossal ruined brick arch buttress standing alone above the city
+tabriz-saat-torni — a carved stone town hall with a central four-faced clock tower
+tabriz-azerbaidzanin-museo — a low modern museum block with a plain arcaded stone facade
+tabriz-sininen-moskeija — a tile-clad mosque portal with a low dome and stumpy minaret stubs
+
+**riad** (6)
+riad-masmakin-linnoitus — a mud-brick fort with four round corner towers and a small studded door
+riad-imam-turkin-suurmoskeija — a plain mud-plastered grand mosque with a slender square minaret
+riad-punainen-palatsi — a two-storey concrete palace with long balconies over an arcaded ground floor
+riad-riadin-vesitorni — a concrete water tower with a wide tank capping a tapering shaft
+riad-murabban-palatsi — a square mud-brick walled palace with triangular parapet crenellations
+riad-saudi-arabian-kansallismuseo — a long curving museum wall of layered sandstone on an open desert plaza
+
+**luxor** (6)
+luxor-luxorin-temppeli — a massive temple pylon fronted by an obelisk and a colonnaded court
+luxor-luxorin-museo — a two-storey modern museum block along a river promenade
+luxor-sfinksikuja — a long straight avenue lined with rows of ram-headed stone sphinxes
+luxor-mutin-temppeli — a ruined temple precinct wrapped by a crescent-shaped sacred lake
+luxor-khonsun-temppeli — a small complete Egyptian temple with pylon, open court and hypostyle hall
+luxor-karnakin-suuri-pylvassali — a forest of giant papyrus columns carrying broken roof slabs and window grilles
+
+**halab** (6)
+halab-aleppon-linnoitus — a hilltop citadel entered by an arched stone bridge across a moat
+halab-antiokian-portti — a city gate between two hexagonal bastions with a bent entrance passage
+halab-qinnesrinin-portti — a stone city gate with a deep arched passage and metal-plated doors
+halab-saippuakhan — a khan facade with a carved window above a banded stone doorway
+halab-arghunin-sairaala — a stone hospital courtyard with vaulted iwans around a small central pool
+halab-beit-ajiqbash — a merchant house courtyard with carved stone facades and an arched iwan
+
+**masqat** (6)
+masqat-masqatin-portti — an arched gateway through a low town wall with round watchtowers
+masqat-al-miranin-linnake — a fort of irregular walls and round towers growing from a harbour cliff
+masqat-al-jalalin-linnake — a clifftop fort with one round and one square tower above arched gun ports
+masqat-al-alamin-palatsi — a palace facade of flaring mushroom columns under a wide flat roof slab
+masqat-bait-al-zubair — an old town house museum with carved wooden doors and a walled courtyard
+masqat-motishwar-mandir — a low temple courtyard with scalloped arches and a ribbed domed finial
+
+**kuwait** (6)
+kuwait-kuwait-tornit — a cluster of three tapering towers, two carrying spiked spheres, on a point
+kuwait-al-hamra-torni — a twisting skyscraper with a sweeping curved wall cut from one quarter
+kuwait-seifin-palatsi — a clock tower with an onion dome and tiled square belfry above a wall
+kuwait-kuwaitin-suurmoskeija — a square mosque with a wide dome, arcaded court and one tall minaret
+kuwait-mubarakiyan-tori — a low market quarter of narrow shaded lanes under stretched awnings
+kuwait-sadu-house — a stone courtyard house with iron window grilles and carved wooden doors
+
+**nikosia** (6)
+nikosia-selimiyen-moskeija — a Gothic cathedral front with two slender minarets added on its towers
+nikosia-buyuk-han — a caravanserai courtyard of two-tier arcades around a small domed pillared mosque
+nikosia-faneromenin-kirkko — a large stone church with a low dome and a freestanding bell tower
+nikosia-omeryen-hamam — a sunken stone bathhouse with small domes pierced by star-shaped skylights
+nikosia-kyproksen-museo — a neoclassical museum hall displaying ranks of small terracotta figurines
+nikosia-leventis-museo — a restored townhouse museum with a shuttered facade and inner courtyard
+
+**doha** (6)
+doha-islamilaisen-taiteen-museo — a stacked stone museum cube on its own island with a faceted dome
+doha-corniche — a crescent seafront boulevard curving around a bay past distant towers
+doha-souq-waqif — a market alley of mud-plastered shopfronts with protruding timber beams
+doha-qatarin-kansallismuseo — a museum of interlocking disc-shaped slabs resembling a desert rose
+doha-al-koot-linnake — a square plastered fort with three round towers and one square tower
+doha-msheireb — a district of low flat-roofed blocks with slatted screens and narrow shaded lanes
+
+**lissabon** (3)
+lissabon-alves-dos-reis — an engraved banknote printing plate beside a stack of uncut sheets
+lissabon-ultimaatum-1890 — an unrolled colonial map of Africa with a broad shaded band across it
+lissabon-kolumbus-1484 — a table with an unrolled sea chart, dividers and a small globe
+
+**barcelona** (2)
+barcelona-font-de-canaletes — an ornate cast-iron drinking fountain with four spouts on a tree-lined promenade
+barcelona-roviran-aukio — a small hillside square where chamfered octagonal street corners meet
+
+**granada** (8)
+granada-sacromonten-luolat — a hillside of plastered cave dwellings with short chimneys and stepped terraces
+granada-albaicinin-nakoalapaikka — a hilltop terrace viewpoint facing a fortified palace across a valley
+granada-generalife — a long garden courtyard with a narrow water channel between arched pavilions
+granada-granadan-katedraali — a massive Renaissance cathedral facade of deep arched recesses with one tower
+granada-alhambra — a long fortified palace complex with square towers on a wooded ridge
+granada-manuel-de-fallan-talo — a modest plastered villa with a tiled roof and a small garden terrace
+granada-irvingin-huoneet — a neglected palace chamber with horseshoe arches and a shuttered window
+granada-alcaiceria — a narrow bazaar lane of small arched shopfronts under carved plasterwork
+
+**marseille** (6)
+marseille-mucem — a stone cube wrapped in a lacy concrete lattice beside the sea
+marseille-marseillen-katedraali — a domed cathedral with banded stonework and twin towers on the front
+marseille-saint-victorin-kirkko — a fortified abbey church with battlemented towers above a crypt entrance
+marseille-vanhasatama — a rectangular harbour basin crowded with masts between two flanking forts
+marseille-notre-dame-de-la-garde — a hilltop basilica with a square belfry topped by a standing statue
+marseille-saint-charlesin-asema — a railway station above a monumental flight of stairs descending to the city
+
+**helsinki** (5)
+helsinki-loyly-ja-avanto — a lakeside wooden sauna with steps leading down into an ice hole
+helsinki-kantele — a small wooden lap harp with strings stretched across a carved soundbox
+helsinki-finlandia — an open orchestral score on a conductor's stand in an empty hall
+helsinki-pirtukuningas — a fast open motorboat riding low with a load of metal canisters
+helsinki-nurmen-kohu — a cinder running track with a stopwatch resting on the starting line
+
+**amsterdam** (2)
+amsterdam-timanttihiomo — a diamond polishing wheel on a workbench in a canal-side workshop window
+amsterdam-amsterdam-laiva — a three-masted East Indiaman heeled over on a shallow beach
+
+**dublin** (2)
+dublin-kellsin-kirja — an open vellum codex covered in interlaced knotwork ornament in a display case
+dublin-ouzel-galley — a small merchant sailing ship entering harbour between two stone piers
+
+**pariisi** (1)
+pariisi-bastilji — a medieval fortress of eight round towers joined by a high wall
+
+**budapest** (3)
+budapest-maanalainen — a shallow underground station with cast-iron columns under a tiled tunnel vault
+budapest-elmyr-de-hory — an easel holding an unsigned canvas beside a stack of framed paintings
+budapest-seuson-hopeat — a large ornamented silver platter with ewers and bowls on a table
+
+**praha** (1)
+praha-tycho-brahe — a carved tomb slab in a church floor beside a large brass quadrant
+
+**wien** (2)
+wien-klimtin-maalaukset — an empty ceiling panel frame in a grand columned university hall
+wien-saliera — an ornate table salt cellar with a boat-shaped shell on an oval base
+
+**lontoo** (1)
+lontoo-vanha-london-bridge — a stone river bridge crowded with tall houses over nineteen narrow arches
+
+**berliini** (2)
+berliini-kulta-liisa — a tall fluted victory column topped by a winged figure on a stone base
+berliini-hobrechtin-putket — an open street trench with large brick sewer pipes waiting beside it
+
+**madrid** (3)
+madrid-casa-de-fieras — a park menagerie of arched stone cages stacked in two tiers behind railings
+madrid-filipin-patsas — a bronze equestrian statue rearing on its hind legs on a square pedestal
+madrid-baldomera — a plain money lender's desk with a thick ledger and an open strongbox
+
+**tukholma** (3)
+tukholma-setelipankki — a huge copper plate coin leaning against a small stack of paper notes
+tukholma-naamiaislaukaus — an empty opera house ballroom with a dropped masquerade mask on the floor
+tukholma-kreuger — a matchbox with spilled matches beside a bundle of bond certificates
+
+**venetsia** (9)
+venetsia-canal-grande — a wide S-curving canal lined with tall palace facades and mooring poles
+venetsia-la-fenicen-oopperatalo — a horseshoe opera auditorium of tiered boxes under a painted ceiling
+venetsia-rialton-silta — a single-arch stone bridge carrying rows of small shops over a canal
+venetsia-pyhan-markuksen-tori — a long arcaded square closing on a domed basilica and tall campanile
+venetsia-san-giorgio-maggiore — an island church with a classical temple front and a tall brick campanile
+venetsia-arsenaali — a fortified shipyard gateway with twin towers flanking a water entrance
+venetsia-markuksen-hevoset — a row of four bronze horses standing abreast on a basilica balcony
+venetsia-dogen-palatsi — a palace with two arcaded lower storeys under a patterned upper wall
+venetsia-aldon-paino — a wooden hand printing press with type cases and a small pocket book
+
+**rooma** (2)
+rooma-forum-romanum — a sunken field of ruined columns, arches and paving between two hills
+rooma-banca-romana — a bank counter behind a teller's grille with a stack of banknotes
+
+**krakova** (6)
+krakova-barbakaani — a round brick barbican ringed with pointed turrets and arrow slits
+krakova-collegium-maius — a Gothic university courtyard with pointed arcades and an outside stair
+krakova-mariankirkko — a brick Gothic church with two front towers of unequal height
+krakova-wawelin-linna — a hilltop castle above a river with an arcaded Renaissance courtyard
+krakova-wawelin-lohikaarme — a bronze dragon sculpture crouched at a cave mouth beside a river
+krakova-kazimierz — a huge market square with a long arcaded former town hall
+
+**varsova** (1)
+varsova-wienin-asema — a low arcaded railway terminus with a long train shed behind it
+
+**tallinna** (3)
+tallinna-e-valtio — a chipped identity card slotted into a small desktop card reader
+tallinna-lyhyen-jalan-torni — a narrow gate tower closing a stepped lane climbing to an upper town
+tallinna-pirtulaivat — a fast open boat at a rocky shore stacked with metal canisters
+
+**sofia** (3)
+sofia-levski — a slender stone memorial obelisk with a cross-shaped top on open ground
+sofia-ruhtinaskaappaus — a palace facade with a shuttered balcony above an arched carriage entrance
+sofia-vihellyskonsertti — a neoclassical theatre facade with a columned portico and a low dome
+
+**bukarest** (2)
+bukarest-coltean-torni — a tall slender bell tower rising above a low church roof
+bukarest-kultakana — a heavy twisted metal neck-ring broken into pieces on a museum stand
+
+**sarajevo** (1)
+sarajevo-inat-kuca — a small Ottoman house with an overhanging upper storey facing a river
+
+**pietari** (1)
+pietari-faberge-museo — an ornate jewelled egg on a stand in a mirrored palace hall
+
+**moskova** (1)
+moskova-perlovin-teetalo — a shopfront with pagoda-like tiers and dragon ornament on a city street
+
+**odessa** (7)
+odessa-vorontsovin-majakka — a slender banded lighthouse standing on a breakwater at a harbour mouth
+odessa-odessan-satama — a long harbour mole with warehouses and moored sailing ships
+odessa-potjomkinin-portaat — a monumental stone stairway descending in wide flights toward a harbour
+odessa-odessan-oopperatalo — an ornate opera house with a curved colonnaded loggia and low dome
+odessa-kaupunginpuisto — a city park with a pillared rotunda pavilion among old trees
+odessa-privozin-tori — a covered market hall with long arcades and open stalls outside
+odessa-potjomkin-portaat — a wide stepped stairway with broad landings seen from the bottom step
+
+**oslo** (3)
+oslo-huudon-varkaus — a gallery window standing open with a ladder leaning against the facade
+oslo-boheemikirja — a stack of confiscated books tied with string on a bare table
+oslo-fram-1893 — a broad round-bottomed polar sailing ship leaving a fjord harbour
+
+**sevilla** (7)
+sevilla-katedraali-ja-giralda — a vast gothic cathedral beside a square moorish bell tower
+sevilla-alcazar — a moorish palace courtyard with scalloped arches and a reflecting pool
+sevilla-torre-del-oro — a twelve-sided riverside watchtower topped by a small domed turret
+sevilla-maestranzan-areena — a round baroque bullring facade with tiered arcaded galleries
+sevilla-trianan-silta — an iron arch bridge on stone piers crossing a river
+sevilla-plaza-de-espana — a vast semicircular brick colonnade curving behind a canal bridge
+sevilla-victorian-laituri — a small square-rigged carrack moored at a stone river quay
+
+**kobenhavn** (2)
+kobenhavn-vararikko-1813 — an open iron-bound treasury chest standing empty in a vault
+kobenhavn-alberti — a neoclassical police headquarters entrance with a lantern above the door
+
+**tampere** (2)
+tampere-finlayson — a long brick cotton mill with tall chimneys beside rapids
+tampere-tuomiokirkko — a granite church with a squat tower and steep shingled roofs
+
+**firenze** (2)
+firenze-poggin-terassi — a hillside balustraded terrace overlooking a domed city below
+firenze-porcellino — a bronze boar fountain seated under a market loggia arch
+
+**dubrovnik** (6)
+dubrovnik-mincetan-torni — a round crenellated corner tower crowning a coastal city wall
+dubrovnik-pilen-portti — a stone gateway arch reached by a bridge over a dry moat
+dubrovnik-sponzan-palatsi — a palace facade with an arcaded loggia and gothic upper windows
+dubrovnik-vanhasatama — a walled harbour basin with moored boats beneath a fortress
+dubrovnik-lovrijenacin-linnake — a triangular fortress standing on a sea cliff above the water
+dubrovnik-dubrovnikin-katedraali — a baroque domed cathedral with a columned pedimented front
+
+**vilna** (3)
+vilna-kirjankantajat — a bundle of books wrapped in cloth beside a forest cart track
+vilna-salattu-avioliitto — a renaissance palace chapel doorway with a carved stone arch
+vilna-boratynka — a small worn copper coin lying beside a leather purse
+
+**tromssa** (6)
+tromssa-polaarimuseo — a timber quayside warehouse standing on wooden piles at the water
+tromssa-tromssan-silta — a long low concrete beam bridge on many piers across a strait
+tromssa-tromssan-tuomiokirkko — a wooden gothic-revival church with a slender pointed spire
+tromssa-jaamerenkatedraali — a church of tilted triangular concrete panels rising in steps
+tromssa-polaria — a waterfront building of tilted slabs stacked like drifting ice floes
+tromssa-fjellheisenin-koysirata — a cable car gondola climbing a wire above a steep mountainside
+
+**jerusalem** (6)
+jerusalem-damaskoksen-portti — an ottoman city gate with crenellated towers above a stepped plaza
+jerusalem-pyhan-haudan-kirkko — a crusader church front with paired arched doors and a dome
+jerusalem-kalliomoskeija — an octagonal shrine with a great dome on a raised platform
+jerusalem-lantinen-muuri — a high retaining wall of massive weathered ashlar courses
+jerusalem-jaffan-portti — an angled gate arch in a city wall beside a citadel
+jerusalem-al-aqsa-moskeija — a long lead-domed mosque fronted by an arcaded seven-arched porch
+
+**petra** (9)
+petra-ad-deir — a huge rock-cut facade crowned by an urn-topped round pavilion
+petra-bysanttilainen-kirkko — a ruined basilica of column stumps under a modern shelter roof
+petra-kuninkaanhaudat — a row of weathered rock-cut tomb facades in a cliff
+petra-qasr-al-bint — a freestanding block temple of masonry standing on a high podium
+petra-suuri-temppeli — a ruined temple precinct of toppled columns and broad stairs
+petra-teatteri — a theatre of curved seat rows carved into a rock slope
+petra-siq — a narrow winding gorge between towering vertical rock walls
+petra-al-khazneh — a rock-cut columned temple facade seen from a gorge mouth
+petra-uhripaikka — a levelled rock summit with a carved altar and shallow basins
+
+**persepolis** (8)
+persepolis-kaikkien-kansojen-portti — a stone gateway flanked by colossal winged bull figures
+persepolis-artakserkses-iii-n-hauta — a cross-shaped tomb facade carved into a cliff above a terrace
+persepolis-sadan-pylvaan-sali — a ruined hall of many broken stone column stumps
+persepolis-apadana — a raised palace platform with tall fluted columns and a carved stairway
+persepolis-kolmen-oven-sali — a small palace ruin with three carved stone doorframes still standing
+persepolis-aarrekammio — a low ruined complex of mudbrick wall foundations on a terrace
+persepolis-tachara — a palace ruin with polished stone doorframes and window openings
+persepolis-hadishin-palatsi — a palace ruin standing directly on bare rock above the terrace
+
+**medina** (7)
+medina-qiblatayn-moskeija — a mosque with twin domes and two slender minarets
+medina-seitseman-moskeijaa — a cluster of small domed mosques on a rocky hillside
+medina-profeetan-moskeija — a vast mosque courtyard with a ribbed dome and tall minarets
+medina-al-baqin-hautausmaa — a walled cemetery of low plain grave stones beside a mosque
+medina-al-ghamama-moskeija — a small stone mosque with six shallow domes in a row
+medina-hidzaz-radan-asema — a stone railway terminus hall with arched windows beside empty tracks
+medina-quba-moskeija — a mosque with four corner minarets and a broad central dome
+
+**mekka** (6)
+mekka-jabal-al-nour — a steep pointed mountain with a smaller peak on its summit
+mekka-jannat-al-mu-alla — a walled hillside cemetery of plain low grave markers
+mekka-jinnien-moskeija — a small square mosque with one dome and a short minaret
+mekka-mekan-kirjasto — a plain library building with arched windows on a city street
+mekka-suuri-moskeija — a cubic shrine at the centre of a great arcaded courtyard
+mekka-kellotorni — a colossal clock tower with a crescent-topped spire above a hill
+
+**sana** (6)
+sana-al-bakiriyyan-moskeija — an ottoman mosque with one large dome and a pencil minaret
+sana-suolatori — a narrow lane of low market stalls beneath tall tower houses
+sana-talhan-moskeija — a domed mosque with a plain stone minaret in an old quarter
+sana-suuri-moskeija — a wide flat-roofed mosque with a courtyard and two minarets
+sana-al-mahdin-moskeija — a mosque with a single dome and one brick minaret
+sana-bab-al-yaman — a great arched city gate in a mudbrick town wall
+
+**aden** (4)
+aden-steamer-point — a colonial waterfront terrace of arcaded buildings behind a steamer pier
+aden-kansallismuseo — a former sultan's palace with arcaded verandas and a low dome
+aden-craterin-tori — a grid of low market streets on a volcanic crater floor
+aden-tawilan-altaat — a series of stepped stone cisterns cut into a rocky ravine
+
+**salalah** (7)
+salalah-sultan-qaboosin-moskeija — a large modern mosque with a central dome and two minarets
+salalah-al-husnin-palatsi — a walled palace with crenellated parapets near the seafront
+salalah-al-haffan-basaari — a row of low shopfronts along a narrow seaside market lane
+salalah-nabi-umranin-hauta — a plain rectangular tomb building enclosing an unusually long grave
+salalah-burj-an-nahda — a slender clock tower with tiered arches on a roundabout
+salalah-al-baleedin-puisto — a coastal field of low ruined stone walls beside a lagoon
+salalah-suitsukemuseo — a museum entrance of three pointed arches in a crenellated limestone wall
+
+**mosul** (7)
+mosul-kuyunjikin-kumpu — a broad flat excavation mound with open trenches above a river plain
+mosul-bash-tapian-linna — a ruined stone castle bastion standing on a river bank
+mosul-qara-saray — a ruined palace wall with a deep arched niche and carved stucco
+mosul-nabi-yunusin-kumpu — a mosque-crowned settlement mound rising above surrounding houses
+mosul-al-masfin-moskeija — an old congregational mosque with a squat minaret and courtyard
+mosul-al-nabi-jirjisin-moskeija — a mosque beside a small domed mausoleum in a walled yard
+mosul-al-nurin-moskeija — a mosque with a leaning cylindrical brick minaret patterned in relief
+
+**bangkok** (9)
+bangkok-sanam-luang — a large open oval field lined with rows of tamarind trees
+bangkok-wat-saket-ja-kultainen-vuori — a bell-shaped stupa crowning an artificial hill with a spiral stairway
+bangkok-sao-ching-cha — a tall teak swing frame of two posts and a carved crossbeam
+bangkok-wat-phra-kaew — a temple hall with tiered roofs and slender pointed spires
+bangkok-suurpalatsi — a palace hall with a tiered spired roof behind a crenellated wall
+bangkok-wat-pho — a temple compound with a reclining-buddha hall and many small stupas
+bangkok-wat-arun — a tall tapering riverside prang flanked by four smaller ornamented towers
+bangkok-yaowarat — a curving street of narrow shophouses with balconies and awnings
+bangkok-hua-lamphong — a railway station with a vaulted arched train shed and ornate front
+
+**peking** (10)
+peking-vanha-kesapalatsi — a ruined baroque stone palace facade standing among garden rubble
+peking-kesapalatsi — a lakeside pavilion and long covered walkway beneath a temple-crowned hill
+peking-yonghe-temppeli — a tall lamasery hall with tiered eaves in a walled courtyard
+peking-nanluoguxiang — a long narrow alley between courtyard-house walls and carved gateways
+peking-rumpu-ja-kellotorni — two massive gate towers facing each other across a paved square
+peking-jingshanin-puisto — an artificial hill topped by a pavilion above a palace roofline
+peking-kielletty-kaupunki — a vast walled palace of tiered halls seen across a moat
+peking-tiananmen — a double-eaved gate tower above a wall with five marble bridges
+peking-zhengyangmen — a tall gatehouse and separate archery tower across a wide avenue
+peking-taivaan-temppeli — a circular triple-roofed temple standing on three round marble terraces
+
+**jakutsk** (8)
+jakutsk-saha-teatteri — a modern theatre with a wide glazed front and stylised northern ornament
+jakutsk-jaroslavskin-museo — a two-storey museum building with arched windows on a main street
+jakutsk-spasskin-luostari — a monastery church with an onion dome and a tent-roofed bell tower
+jakutsk-nikolskin-kirkko — a plastered church with a three-tiered bell tower and slim spire
+jakutsk-pushkinin-draamateatteri — a classical theatre front with corinthian columns and a pediment
+jakutsk-kansallinen-taidemuseo — a boxy mid-century museum building with a broad stepped entrance
+jakutsk-vanhakaupunki — a block of reconstructed timber houses along a wood-paved lane
+jakutsk-ooppera-ja-balettiteatteri — a concrete opera house with a deep colonnade across its front
+
+**magadan** (7)
+magadan-kaupungin-sauna — a low bathhouse with two broad pilasters and three narrow windows
+magadan-severovostokzoloton-talo — a long three-storey office block with paired columns and window pediments
+magadan-leninin-valtakatu-18 — a stepped row of apartment blocks climbing a sloping avenue
+magadan-kinoteatteri-gornjak — a cinema building with tall pilasters and a flat roof parapet
+magadan-nagajevanlahti — a long sheltered bay with a harbour at its head between hills
+magadan-urheilupalatsi — an ornate sports hall facade with small column balconies and balustrades
+magadan-pushkinin-kirjasto — a curving three-storey brick library with a lower entrance wing
+
+**delhi** (8)
+delhi-delhi-junction — a fortress-like railway station with battlemented towers and an arched entrance
+delhi-delhin-kaupungintalo — a colonial town hall with an arcaded front and clock turret
+delhi-fatehpuri-moskeija — a sandstone mosque with one bulbous dome closing a market street
+delhi-chandni-chowk — a broad straight bazaar street lined with low shopfronts
+delhi-punainen-linnoitus — a long sandstone fort wall with a domed twin-towered gateway
+delhi-gurdwara-sis-ganj-sahib — a gurdwara with a fluted dome and a tall flagpole
+delhi-jama-masjid — a great mosque with three domes, two minarets and a wide stairway
+delhi-humayunin-mausoleumi — a domed garden tomb standing on a high arcaded plinth
+
+**vladivostok** (9)
+vladivostok-pokrovskin-puisto — a park with a five-domed church among trees on a slope
+vladivostok-linnoitusmuseo — a concrete coastal battery with a gun on a hillside above the sea
+vladivostok-kotkanpesan-kukkula — a hilltop viewpoint above a harbour bay with a bridge beyond
+vladivostok-funikulaari — a small funicular car on a short steep track up a hillside
+vladivostok-arsenjevin-museo — a two-storey merchant house museum with arched windows and a cornice
+vladivostok-gum-tavaratalo — an ornate department store facade with bay windows and corner turrets
+vladivostok-sukellusvene-s-56 — a submarine mounted on a concrete plinth beside a waterfront street
+vladivostok-rautatieasema — a station in old russian style with tent roofs and arches
+vladivostok-kultaisen-sarven-silta — a cable-stayed bridge with two tall pylons spanning a harbour bay
+
+**jekaterinburg** (7)
+jekaterinburg-vanha-rautatieasema — a station building in old russian style with an arched central gable
+jekaterinburg-kharitonovin-kartano — a neoclassical manor with a columned portico above a park pond
+jekaterinburg-uralin-valtionyliopisto — a monumental neoclassical university building with a tall columned portico
+jekaterinburg-historiallinen-aukio — a stone river dam beside the long walls of an old ironworks
+jekaterinburg-kuvataidemuseo — a low eighteenth-century ironworks hospital building housing a museum
+jekaterinburg-suuri-zlatoust — a tall tiered bell tower church crowned with onion domes
+jekaterinburg-kolminaisuuden-katedraali — a classicist orthodox cathedral with a central dome and bell tower
+
+**novosibirsk** (5)
+novosibirsk-novosibirsk-glavnyi — a railway station front dominated by one huge arched central portal
+novosibirsk-kaupungin-kauppatalo — a two-storey brick trade building with ornate stepped gables
+novosibirsk-taidemuseo — a restrained constructivist museum building with a rounded street corner
+novosibirsk-satohuoneiston-talo — a symmetrical art-deco apartment block faced with tall square pilasters
+novosibirsk-aleksanteri-nevskin-katedraali — a byzantine-revival brick cathedral under a broad central dome
+
+**irkutsk** (7)
+irkutsk-znamenskin-luostari — a walled monastery church with a baroque tower and low outbuildings
+irkutsk-epifanian-katedraali — a siberian-baroque cathedral with a tented bell tower by a square
+irkutsk-taivaaseenastumisen-kirkko — a neo-gothic catholic church with a tall slender spire
+irkutsk-rautatieasema — a long classicist railway station seen from its platforms
+irkutsk-ristin-ylentamisen-kirkko — a densely ornamented siberian-baroque church with a tiered tower
+irkutsk-130-kortteli — a street of wooden houses with carved window frames and eaves
+irkutsk-jaanmurtaja-angara — a riveted steel icebreaker with one funnel moored at a quay
+
+**kioto** (10)
+kioto-kinkaku-ji — a three-storey lakeside pavilion mirrored in a still pond
+kioto-ginkaku-ji — a two-storey wooden pavilion beside a raked sand garden
+kioto-keisarillinen-palatsi — a wide-roofed palace hall across a raked gravel courtyard
+kioto-nijo-linna — a moated castle gate with sloping stone walls and tiled roofs
+kioto-nishiki-tori — a narrow covered market arcade under an arched glazed roof
+kioto-gion — a narrow lane of wooden latticed townhouses with tiled eaves
+kioto-kiyomizu-dera — a temple hall on a tall wooden stage over a wooded slope
+kioto-sanjusangen-do — an extremely long low wooden hall under one continuous tiled roof
+kioto-to-ji — a five-storey wooden pagoda rising beside temple halls
+kioto-fushimi-inari-taisha — a tunnel of close-set torii gates climbing a wooded hillside
+
+**singapore** (10)
+singapore-sultan-moskeija — a mosque with a large bulbous dome and slender corner minarets
+singapore-raffles-hotel — a colonial hotel with arcaded verandahs and a carriage portico
+singapore-fort-canningin-kukkula — a wooded hill park entered through a brick gothic fort gateway
+singapore-clarke-quay — a riverside row of low warehouse shophouses with moored boats
+singapore-empress-place — a long colonial government office building along a riverbank
+singapore-boat-quay — a curving river quay lined with narrow tiled shophouses
+singapore-merlion-puisto — a lion-headed fish statue spouting water on a waterfront promenade
+singapore-gardens-by-the-bay — a grove of tall lattice supertrees beside two domed glasshouses
+singapore-sri-mariamman-temppeli — a hindu temple gateway tower tiered with sculpted figures
+singapore-thian-hock-keng-temppeli — a chinese temple with swooping ridged roofs around a courtyard
+
+**samarkand** (9)
+samarkand-ulugbekin-observatorio — an underground curved stone sextant arc set in a rock trench
+samarkand-khoja-doniyorin-mausoleumi — a long low mausoleum roofed with five small domes
+samarkand-afrasiyabin-rauniokumpu — an eroded earthen ruin mound cut by excavation trenches
+samarkand-hazrat-khizrin-moskeija — a hilltop mosque with a columned wooden porch and small dome
+samarkand-shah-i-zindan-hautakuja — a narrow stepped lane between tall tiled mausoleum portals
+samarkand-bibi-khanymin-moskeija — a colossal ruined portal arch beside a ribbed melon dome
+samarkand-registanin-aukio — a square framed by three madrasa portals and leaning minarets
+samarkand-gur-e-amir — a fluted ribbed dome on a tall drum above a portal arch
+samarkand-ishratkhanan-mausoleumi — a ruined brick mausoleum with a broken portal and bare drum
+
+**xian** (9)
+xian-xi-anin-rautatieasema — a railway station with sweeping tiled roofs below a city wall
+xian-anyuan-portti — a brick city gate platform carrying a tiered timber gate tower
+xian-suuri-moskeija — a chinese-style mosque courtyard with a pagoda-like minaret pavilion
+xian-rumpitorni — a triple-eaved timber drum tower standing on an arched brick base
+xian-kellotorni — a tiered bell tower on a square brick base at a crossroads
+xian-steelametsa — a temple hall filled with rows of upright stone stelae
+xian-yongning-portti — a walled gate complex with moat, bridge and tiered timber towers
+xian-shaanxin-historiallinen-museo — a tang-style museum with a central hall and corner pavilions
+xian-suuri-villihanhipagoda — a square seven-storey brick pagoda tapering above temple roofs
+
+**varanasi** (8)
+varanasi-dhamek-stupa — a massive cylindrical stone stupa carved with geometric bands
+varanasi-chaukhandi-stupa — a stepped brick mound topped by an octagonal domed tower
+varanasi-manikarnika-ghat — a riverside stone ghat with stacked firewood and leaning towers
+varanasi-kashi-vishwanath-temppeli — a temple spire and dome rising above a dense lane of houses
+varanasi-dashashwamedh-ghat — a broad flight of river steps lined with wide ceremonial umbrellas
+varanasi-assi-ghat — a wide riverbank ghat of steps with moored wooden boats
+varanasi-durga-kund-temppeli — a nagara-style temple tower beside a rectangular stepped water tank
+varanasi-ramnagarin-linnoitus — a riverside palace fort on a high embankment with twin towers
+
+**hanoi** (8)
+hanoi-long-bienin-silta — a long steel truss railway bridge crossing a wide river
+hanoi-thang-longin-keisarilinna — a brick citadel gate with arched openings and an upper pavilion
+hanoi-ong-xuanin-tori — a market hall facade with five arched gables above its entrances
+hanoi-yhden-pilarin-pagodi — a small wooden shrine raised on a single stone pillar in a pond
+hanoi-hanoin-lippulinna — a tiered brick flag tower narrowing to a small lookout turret
+hanoi-ngoc-sonin-temppeli — a lake island temple reached by an arched wooden footbridge
+hanoi-pyhan-joosefin-katedraali — a neo-gothic cathedral front with two square weathered bell towers
+hanoi-kirjallisuuden-temppeli — a walled temple courtyard with a small gate pavilion above a pond
+
+**ulanbator** (8)
+ulanbator-gandantegchinlenin-luostari — a tall tiered monastery temple inside a walled courtyard
+ulanbator-mongolian-kansallismuseo — a plain modernist museum block with a broad columned entrance
+ulanbator-sukhbaatarin-aukio — a vast square before a colonnaded parliament with a central statue
+ulanbator-choijin-laman-temppeli — a walled temple compound of tiered roofs and ornate gates
+ulanbator-rautatieasema — a symmetrical station building with a central tower and spire
+ulanbator-kansallisstadion — a concrete stadium bowl with a cantilevered canopy over one stand
+ulanbator-bogd-khanin-talvipalatsi — a two-storey european-style palace behind an ornate temple gate
+ulanbator-zaisanin-muistomerkki — a circular concrete ring monument on a hilltop above long stairs
+
+**kathmandu** (8)
+kathmandu-boudhanath — a huge domed stupa on a stepped square base with painted eyes
+kathmandu-swayambhunath — a hilltop stupa with a tall spire above a long steep stairway
+kathmandu-unelmien-puutarha — a walled neoclassical garden with a columned pavilion and pond
+kathmandu-pashupatinath — a two-tiered pagoda temple above riverside cremation ghats
+kathmandu-rani-pokhari — a rectangular pond with a small domed temple on a central island
+kathmandu-kathmandun-durbar-aukio — a palace square crowded with tiered pagoda temples on stepped plinths
+kathmandu-dharahara — a tall tapering round tower with a balcony and small pinnacle
+kathmandu-patanin-durbar-aukio — a brick palace facade facing a row of stone and pagoda temples
+
+**astana** (8)
+astana-astana-opera — a modern neoclassical opera house with a broad columned portico
+astana-khan-shatyr — a giant leaning tent hung from one mast and taut cables
+astana-bajterek — a slender tower whose splayed struts cradle a large sphere
+astana-nurjol-bulevardi — a wide axial pedestrian boulevard flanked by tall towers
+astana-akorda — a domed presidential palace with a columned portico and slender spire
+astana-hazrat-sultanin-moskeija — a large mosque with a central dome and four tall minarets
+astana-rauhan-ja-sovinnon-palatsi — a glass-clad pyramid standing on a low earth-covered plinth
+astana-kansallismuseo — an angular modern museum of stacked blocks with a glazed facade
+
+**kanton** (8)
+kanton-zhenhai-torni — a five-storey watchtower with tiered eaves on a wooded hill
+kanton-guangxiao-temppeli — a broad-roofed temple hall with a small iron pagoda in the yard
+kanton-chenin-suvun-sali — an ancestral hall with long roof ridges of dense ceramic figures
+kanton-liurong-temppeli — an octagonal nine-storey pagoda with flared eaves over temple roofs
+kanton-huaisheng-moskeija — a smooth round minaret tower rising inside a walled mosque yard
+kanton-pyhan-sydamen-katedraali — a twin-spired granite gothic cathedral with a rose window
+kanton-kolmentoista-faktorian-paikka — a riverside row of arcaded trading houses with tall flagpoles
+kanton-shamianin-saari — a tree-lined island avenue of arcaded colonial trading houses
+
+**yangon** (9)
+yangon-chaukhtatgyin-temppeli — a colossal reclining buddha image under a wide open hall roof
+yangon-shwedagon-pagodi — a towering bell-shaped stupa ringed by small spired shrines
+yangon-kandawgyi-jarvi-ja-karaweik — an ornate royal barge shaped like a mythical bird on a lake
+yangon-yangonin-keskusasema — a railway station crowned with tiered burmese pyatthat roofs
+yangon-bogyoken-markkinat — a two-storey colonial market hall with an arcaded entrance front
+yangon-sihteeristo — a vast victorian brick secretariat with arcades and a central dome
+yangon-sule-pagodi — an octagonal tiered stupa rising from a circular road island
+yangon-strand-hotelli — a long colonial hotel facade with shuttered windows and awnings
+yangon-botataung-pagodi — a slender hollow stupa on a riverside terrace with small pavilions
+
+**mandalay** (9)
+mandalay-mandalay-kukkula — a temple-topped hill with covered stairways climbing its slopes
+mandalay-kuthodaw-pagodi — a tiered stupa ringed by rows of small identical stone-slab shrines
+mandalay-kyauktawgyi-pagodi — a tiered temple hall sheltering a large seated marble buddha
+mandalay-sandamuni-pagodi — a field of small identical stupas around a central tiered pagoda
+mandalay-shwenandaw-luostari — a carved teak monastery raised on a platform under tiered roofs
+mandalay-mandalayn-palatsi — a low teak palace on a broad platform crowned by a tiered spire
+mandalay-zegyo-tori — a large iron-framed market hall with rows of open stalls
+mandalay-setkyathiha-pagodi — a stupa terrace beside an open hall holding a large bronze buddha
+mandalay-mahamuni-temppeli — a tiered temple shrine housing a large seated buddha image
+
+**taipei** (10)
+taipei-baoan-temppeli — a temple with upswept swallowtail roofs and carved dragon columns
+taipei-dihua-katu — a street of arcaded shophouses with ornate baroque parapet fronts
+taipei-pohjoisportti — a stone city gate with a squat closed masonry upper chamber
+taipei-presidentinlinna — a brick colonial-era government palace with a tall central tower
+taipei-punainen-talo — an octagonal brick building with a cross-shaped hall behind it
+taipei-lungshan-temppeli — a temple courtyard with layered swallowtail roofs and stone columns
+taipei-bopiliaon-vanha-kortteli — a preserved lane of low brick arcaded houses with tiled roofs
+taipei-chiang-kai-shek-muistosali — a memorial hall with an octagonal tiered roof above wide stairs
+taipei-kasvitieteellinen-puutarha — a botanical garden pond thick with lotus leaves and tall palms
+taipei-taipei-101 — a tapering skyscraper of eight stacked flared sections on a podium
+
+**hongkong** (9)
+hongkong-tsim-sha-tsuin-kellotorni — a lone brick clock tower with a domed cupola near the harbour
+hongkong-western-market — an edwardian brick market building with banded corner towers
+hongkong-star-ferryn-laituri — a covered ferry pier with a clock tower over the harbour
+hongkong-man-mo-temppeli — a small temple interior hung with large spiral incense coils
+hongkong-tai-kwun — a granite colonial courtyard enclosed by arcaded barrack blocks
+hongkong-pyhan-johanneksen-katedraali — a gothic colonial cathedral with a battlemented tower among trees
+hongkong-victoria-peak — a peak viewpoint above a dense harbour skyline and steep slopes
+hongkong-sininen-talo — a four-storey tenement with stacked balconies overhanging the pavement
+hongkong-vaunuradan-alaterminaali — a hillside tram terminus with a single track and a clock face
+
+**jakarta** (10)
+jakarta-sunda-kelapan-satama — a harbour quay lined with wooden schooners and leaning bowsprits
+jakarta-merenkulkumuseo — a row of long dutch warehouses with shuttered windows and tiled roofs
+jakarta-kota-intanin-nostosilta — a small wooden dutch drawbridge over a narrow canal
+jakarta-fatahillah-aukio — a wide cobbled colonial square before a dutch town hall
+jakarta-toko-merah — a two-storey dutch colonial townhouse with shuttered windows beside a canal
+jakarta-jakarta-kotan-asema — an art-deco railway station facade with a broad arched entrance
+jakarta-kim-tek-ie-temppeli — a chinese temple with upswept tiled roof ridges and hanging lanterns
+jakarta-jakartan-katedraali — a neo-gothic cathedral with twin openwork iron spires
+jakarta-istiqlal-moskeija — a vast modernist mosque with one huge dome and slender minaret
+jakarta-kansallismonumentti-monas — a tall marble obelisk topped by a flame on an open plaza
+
+**manila** (10)
+manila-binondon-kirkko — a baroque church with a tall octagonal granite bell tower
+manila-quiapon-kirkko — a twin-towered church facade with a central dome behind
+manila-escolta-katu — a narrow city street lined with ornate early commercial facades
+manila-jones-silta — a low arched road bridge crossing a wide city river
+manila-fort-santiago — a stone fortress gate with a carved relief above its arch
+manila-manilan-katedraali — a romanesque cathedral with a ribbed dome and large rose window
+manila-san-agustinin-kirkko — a massive stone baroque church with one surviving bell tower
+manila-kansallinen-taidemuseo — a neoclassical museum block with a tall columned portico
+manila-baluarte-de-san-diego — a ruined spade-shaped stone bastion with grassy overgrown ramparts
+manila-rizal-puisto — a seaside park with an obelisk monument beside a reflecting pool
+
+**kashgar** (7)
+kashgar-afaq-khojan-mausoleumi — a tiled-dome mausoleum flanked by four squat corner minarets
+kashgar-chini-bagh — a walled consulate house with a veranda above a terraced garden
+kashgar-suuri-basaari — a bazaar gateway arch opening into covered market alleys
+kashgar-id-kahin-moskeija — a broad brick mosque portal flanked by two round minarets
+kashgar-vanhakaupunki — a cluster of stacked mudbrick houses with carved balconies on a bluff
+kashgar-kansanpuisto — a city park gate with a lake and pavilion beyond
+kashgar-yusuf-khass-hajibin-mausoleumi — a domed mausoleum behind a tall tiled entrance portal
+
+**lhasa** (7)
+lhasa-ramoche-temppeli — a tibetan temple front with a gilded roof pavilion above
+lhasa-potala-palatsi — a massive hilltop fortress palace with inward-sloping walls and flat roofs
+lhasa-norbulingka — a tibetan garden palace pavilion among trees and walled paths
+lhasa-jokhang-temppeli — a temple roof with a dharma wheel flanked by kneeling deer
+lhasa-chagpori — a steep rocky hill topped by buildings beside a palace ridge
+lhasa-tiibetin-museo — an l-shaped modern museum with tibetan eaves and a gilded roof
+lhasa-lhasan-suuri-moskeija — a small mosque with a dome and minaret in tibetan-chinese style
+
+**kolkata** (10)
+kolkata-howrah-silta — a steel cantilever bridge with tall lattice towers over a river
+kolkata-howrahin-rautatieasema — a broad brick railway terminus with square corner towers
+kolkata-marble-palace — a colonnaded marble mansion behind a walled garden courtyard
+kolkata-nakhodan-moskeija — a sandstone mosque with a high gateway and slender minarets
+kolkata-college-street — a narrow street of stacked book stalls with tram rails between
+kolkata-writers-building — a long colonial administrative block with a central pedimented portico
+kolkata-st-john-sin-kirkko — a colonial church with a tall stone steeple above a portico
+kolkata-shaheed-minar — a tall fluted column monument with a balcony and domed top
+kolkata-intian-museo — a colonnaded museum courtyard behind a long arcaded facade
+kolkata-victoria-memorial — a domed marble palace with corner cupolas above a reflecting pool
+
+**kabul** (8)
+kabul-timur-shahin-mausoleumi — an octagonal brick mausoleum crowned by a large dome
+kabul-shah-do-shamshiran-moskeija — a two-storey riverside mosque with ottoman-style arched windows
+kabul-ka-faroshin-lintutori — a narrow bazaar alley hung with stacked wicker birdcages
+kabul-bala-hissar — a ruined hilltop citadel with thick walls and round towers
+kabul-baburin-puutarhat — a terraced walled garden with a central water channel and pavilion
+kabul-kabulin-vanha-kaupunginmuuri — an ancient stone wall running along a bare mountain ridge
+kabul-chihil-sutunin-palatsi — a ruined columned palace standing in a walled park
+kabul-darul-amanin-palatsi — a neoclassical hilltop palace with a columned central portico
+
+**chennai** (10)
+chennai-madrasin-ylin-oikeus — an indo-saracenic courthouse with onion domes and a lighthouse turret
+chennai-chennai-centralin-asema — a railway terminus facade with a central clock tower and arcades
+chennai-ripon-building — a neoclassical civic building with a tall central clock tower
+chennai-fort-st-george — a low thick fort rampart with a very tall flagstaff behind
+chennai-chennai-egmoren-asema — an indo-saracenic station with domed corner towers and entrance porch
+chennai-government-museum — an indo-saracenic brick museum with a rounded arcaded veranda
+chennai-chepaukin-palatsi — an indo-saracenic palace block with a tall central tower
+chennai-marina-beach — a long sandy beach curving beside a wide seafront promenade
+chennai-kapaleeshwararin-temppeli — a tiered dravidian gopuram tower of carved figures above a temple tank
+chennai-san-thomen-basilika — a neo-gothic basilica with a single tall spire
+
+**mumbai** (10)
+mumbai-crawford-market — a gothic stone market hall with a slender clock tower
+mumbai-marine-drive — a curving seafront boulevard sweeping around a wide bay
+mumbai-chhatrapati-shivaji-maharaj-terminus — a victorian gothic railway terminus with a ribbed central dome
+mumbai-st-thomasin-katedraali — a colonial church with a squat square tower and arched windows
+mumbai-town-hall — a neoclassical hall behind a broad flight of steps and columns
+mumbai-bombayn-korkein-oikeus — a gothic revival courthouse with a tall central tower
+mumbai-rajabain-kellotorni — a venetian gothic clock tower rising into a slender spire
+mumbai-david-sassoonin-kirjasto — a small victorian library with a pedimented front and stone veranda
+mumbai-prince-of-walesin-museo — an indo-saracenic museum crowned by a large tiled dome
+mumbai-gateway-of-india — a basalt triumphal arch standing on a waterfront quay
+
+**colombo** (9)
+colombo-colombon-satama — a harbour basin behind long breakwaters with quayside cranes
+colombo-wolvendaalin-kirkko — a thick-walled dutch colonial church built on a cross plan
+colombo-punainen-moskeija — a striped brick mosque bristling with onion-shaped turrets
+colombo-fortin-kellotorni — a slender clock tower with a lighthouse lantern at a street corner
+colombo-fortin-rautatieasema — a station front with a clock gable and long platform canopies
+colombo-beira-jarvi — a city lake with a small island pavilion among trees
+colombo-galle-face-hotel — a long colonial hotel facade facing a seafront green
+colombo-gangaramayan-temppeli — a buddhist temple courtyard with a stupa and carved shrine hall
+colombo-colombon-kansallismuseo — an italianate museum with a columned portico and low dome
+
+**karachi** (10)
+karachi-empress-market — a stone market hall with a tall gothic clock tower
+karachi-karachin-kaupungintalo — a large civic hall with a dome and long arcaded wings
+karachi-denso-hall — a small sandstone library with a gabled porch on a triangular corner
+karachi-pyhan-kolminaisuuden-katedraali — a sandstone church with a stout truncated bell tower
+karachi-wazir-mansion — a three-storey stone house with tiered wooden balconies
+karachi-merewetherin-kellotorni — a gothic stone clock tower standing at a crossroads
+karachi-karachi-cityn-rautatieasema — a station facade of arched bays between two corner towers
+karachi-frere-hall — a venetian gothic hall with a tall clock tower in gardens
+karachi-satamahallinnon-talo — an ornate colonial office building topped by a ribbed dome
+karachi-mohatta-palace — a stone palace with corner domes and carved stone balconies
+
+**newyork** (1)
+newyork-times-square — a wedge-shaped tower at a diagonal junction of two avenues
+
+**auckland** (10)
+auckland-ferry-building — an edwardian waterfront ferry building with a central clock tower
+auckland-victoria-park-market — a brick market hall beside a tall round chimney stack
+auckland-albert-park — a hillside park with an ornate tiered fountain among mature trees
+auckland-aucklandin-kaupungintalo — a wedge-shaped town hall with a corner clock tower
+auckland-karangahape-road — a ridge street of two-storey shopfronts under verandah canopies
+auckland-symonds-streetin-hautausmaa — a wooded hillside cemetery of leaning weathered headstones
+auckland-ewelme-cottage — a timber colonial cottage with steep gables and a veranda
+auckland-highwic — a carpenter-gothic timber house with steep gables and fretted bargeboards
+auckland-eden-park — a rectangular sports ground ringed by tiered grandstands
+auckland-maungawhau — a volcanic scoria cone with a deep bowl-shaped crater
+
+**sanfrancisco** (10)
+sanfrancisco-ghirardelli-square — a brick factory complex with a clock tower above a waterfront square
+sanfrancisco-coit-tower — a fluted cylindrical tower standing on a steep hilltop
+sanfrancisco-ferry-building — a long arcaded ferry terminal with a tall central clock tower
+sanfrancisco-transamerica-pyramid — a tapering pyramid skyscraper with two side wing buttresses
+sanfrancisco-haas-lilienthalin-talo — a queen anne victorian house with a round corner turret
+sanfrancisco-old-st-mary-s-katedraali — a brick gothic church with a square tower on a street corner
+sanfrancisco-grace-cathedral — a gothic cathedral with twin west towers on a hill crest
+sanfrancisco-palace-hotel — a large victorian hotel block with tiers of bay windows
+sanfrancisco-union-square — a city square with a tall column monument among high buildings
+sanfrancisco-san-franciscon-kaupungintalo — a beaux-arts city hall crowned by a huge ribbed dome
+
+**buenosaires** (10)
+buenosaires-pilarin-basilika — a colonial baroque church with a single tiled bell tower
+buenosaires-plaza-san-martin — a sloping park square with huge spreading trees and an equestrian statue
+buenosaires-palacio-de-aguas-corrientes — an ornate tile-clad palace block with mansard roofs and turrets
+buenosaires-museo-mitre — a colonial townhouse with grilled windows around a central patio
+buenosaires-buenos-airesin-katedraali — a cathedral fronted by a neoclassical temple portico of tall columns
+buenosaires-cafe-tortoni — an old corner cafe front with carved woodwork and awnings
+buenosaires-palacio-barolo — a tall narrow office tower topped by a domed lighthouse turret
+buenosaires-kongressipalatsi — a domed parliament building with a bronze quadriga above its portico
+buenosaires-manzana-de-las-luces — a colonial jesuit block with a plain church facade and cloister
+buenosaires-santo-domingon-luostari — a colonial church with two unequal bell towers
+
+**sydney** (10)
+sydney-sydney-harbour-bridge — a steel through-arch bridge with stone pylons over a harbour
+sydney-sydneyn-oopperatalo — a cluster of shell-shaped roofs on a harbour headland
+sydney-mrs-macquarie-s-chair — a bench carved into a sandstone ledge above the harbour
+sydney-sydneyn-konservatorio — a castellated sandstone stable building with corner turrets
+sydney-hyde-park-barracks — a three-storey brick barracks with a pedimented clock gable
+sydney-pyrmontin-silta — a steel swing bridge with a central control cabin over water
+sydney-pyhan-marian-katedraali — a gothic sandstone cathedral with twin front spires
+sydney-pyhan-andreaksen-katedraali — a gothic cathedral with two square pinnacled towers
+sydney-australian-museo — a sandstone museum front with a tall columned portico
+sydney-anzac-muistomerkki — an art-deco stepped stone memorial above a long reflecting pool
+
+**rio** (10)
+rio-sao-benton-luostari — a plain hilltop monastery church with two squat towers
+rio-vanha-katedraali-antiga-se — a baroque church facade with one bell tower on a narrow street
+rio-central-do-brasilin-asema — an art-deco station tower with a four-faced clock
+rio-real-gabinete-kirjasto — a neo-manueline library facade of carved stone tracery
+rio-quinta-da-boa-vista — a hilltop palace with a columned front above a landscaped park
+rio-kansallinen-historiallinen-museo — a colonial fort complex around a courtyard beside the waterfront
+rio-theatro-municipal — a beaux-arts opera house with twin domes and a colonnaded front
+rio-maracanan-stadion — a huge oval stadium ringed by a low overhanging roof
+rio-lapan-akvedukti — a double-tiered arcaded aqueduct striding across a valley
+rio-passeio-publico — an old walled public garden with a stone gateway and terrace
+
 ## 4.9.2026 21.16 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 53–55 yksityisessä arvioinnissa
 
 Seuraava tutkimukseen perustuva kolmen kuvan erä on julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle. Kaikki kuvat ovat täysin uusia Codexin sisäisiä ImageGen-generointeja, 1536 × 1024 JPG/sRGB. Sivuston tuotantoversio **101** julkaistiin onnistuneesti. **Älä vie kuvia peliin tai peli-R2:een ennen omistajan erillistä hyväksyntää.**
