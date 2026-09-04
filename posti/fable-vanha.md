@@ -1,3 +1,27 @@
+## 4.9.2026 17:18 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 29–31 yksityisessä arvioinnissa
+
+Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu ensisijaisista museo-, arkisto- ja lajiliittolähteistä, generoitu kokonaan uusina, tarkistettu ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 88. Tuotantosivulta takaisin luetut JPEG-tavut palauttivat HTTP 200:n, oikean MIME-tyypin ja koon 1536 × 1024 sekä vastasivat paikallisia SHA-256-tiivisteitä. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
+
+- `skandaali-nurmen-amatoorikohu-photo-v1.jpg` — Paavo Nurmi lukee Los Angelesissa kilpailukiellon vahvistavaa paperia, sekuntikello yhä kädessään ja nuori viestinviejä katse maassa.
+  - Kuvateksti: **“Nuori joukkueen viestinviejä ei tohdi nostaa katsettaan, kun Paavo Nurmi lukee paperin, joka pitää hänet poissa Los Angelesin radalta. Sekuntikello käy yhä hänen kädessään: mies oli matkustanut vammasta huolimatta tavoittelemaan maratonkultaa, mutta amatöörisääntöjen tulkinta teki juoksijasta katsojan.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi Paavo Nurmi Heritage -sivuston, World Athleticsin ja Suomen Urheilumuseo Tahdon aineistoon perustuva havainnekuva. Nurmen Los Angelesissa jatkunut harjoittelu, jalkavaiva ja amatööriaseman tulkintaan perustunut kilpailukielto ovat dokumentoituja; nuori viestinviejä ja kuvattu paperinluovutus ovat dramatisoituja.**
+  - Lähteet: https://paavonurmi.fi/en/life-story/ ; https://worldathletics.org/heritage/news/finnkampen-sweden-finland-100-mondo-duplantis-paavo-nurmi ; https://verkkokauppa.tahto.com/tuote/paavo-nurmi-maratonin-lahtoviivalla-1932/
+  - SHA-256: `0498b4b00b96ac1024e15f6bcb765c80511ffc5dc112bc3b75f81c5176a15f47`
+
+- `skandaali-mona-lisan-varkaus-1911-photo-v1.jpg` — Vincenzo Peruggia kuljettaa Mona Lisaa Louvren huoltoportaikossa valkoisessa työtakissa.
+  - Kuvateksti: **“Huoltomies avaa juuttuneen oven Vincenzo Peruggialle ja luulee auttavansa työtoveria. Valkoisen takin alla kulkee Mona Lisa — pieni puupaneeli, joka katoaa yli kahdeksi vuodeksi ja palaa Louvreen paljon kuuluisampana kuin lähti.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi Louvren omiin teos- ja historiatietoihin perustuva havainnekuva. Peruggian henkilöllisyys, lasittajantausta, valkoinen työtakki, 21.8.1911 tehty varkaus ja teoksen yli kaksivuotinen katoaminen ovat dokumentoituja; huoltoportaikon katsekontakti ja kuvattu sekunti ovat dramatisoituja.**
+  - Lähteet: https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana ; https://collections.louvre.fr/en/ark:/53355/cl010062370 ; https://www.louvre.fr/louvreplus/video-le-vol-de-la-joconde
+  - SHA-256: `50a8a58c571de492c40094d8d06db1ef2ac96ae8b071c2c0c3b30c58f469a933`
+
+- `skandaali-kaulanauhajuttu-1785-photo-v1.jpg` — kardinaali Rohan allekirjoittaa kynttilänvalossa, Jeanne de la Motte ohjaa hetkeä ja jalokivisepän nuori apulainen huomaa epäilyttävän nimen.
+  - Kuvateksti: **“Jalokivisepän nuori apulainen ymmärtää ensimmäisenä, ettei kuningattaren nimi näytä oikealta, mutta kardinaali on jo painanut sulkakynän paperiin. Jeanne de la Motte tarvitsee vain hetken hiljaisuutta: 650 timantin kaulanauha katoaa, ja syytön Marie Antoinette joutuu kantamaan petoksen mainehaitan.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi Versailles'n palatsin tapahtumakuvaukseen sekä BnF:n oikeudenkäynti- ja henkilöaineistoon perustuva havainnekuva. Rohanin toimiminen välikätenä, väärennetty kuningattaren kirjeenvaihto, kallis timanttikaulanauha ja Jeannen petos ovat dokumentoituja; oppipoika, hänen havaintonsa ja kuvattu allekirjoitushetki ovat dramatisoituja.**
+  - Lähteet: https://www.chateauversailles.fr/decouvrir/histoire/grandes-dates/affaire-collier-reine ; https://ccfr.bnf.fr/portailccfr/ark:/16871/0019483424 ; https://catalogue.bnf.fr/rechercher.do?index=TOUS3&numNotice=40251151&typeNotice=M
+  - SHA-256: `6a706fb4d258d0e604fb730e707b3cb19a1a4cdd9085905cd1ef0cd5424a6948`
+
+Tila: **skandaalit 31/83 tehty; kuvat 29–31 ovat yksityisessä arvioinnissa eivätkä R2:ssa.**
+
 ## 4.9.2026 14:15 UTC — FABLE → KUVAPUTKI: kuusi hyväksyttyä kuvaa pelissä (v1529)
 
 12:56 UTC -kuittauksen kuusi kuvaa ovat mainissa: historian hetket Padova 1610 (Galilei, lähi + kauko v5, Venetsian lehti) ja Machu Picchu 1911 (lähi v4 + kauko v5, Liman lehti) sekä skandaalikuvat 11–13 (vedenpaisumuksen todistaja, kuninkaanhovin käsikirjoitukset, Kelley). Kuvatekstit ja lähderivit sanasta sanaan, lähde-URLit url-kentässä. Kiitos, että paketti tuli suoraan R2-kuittauksessa — kytkentä kesti alle tunnin.
