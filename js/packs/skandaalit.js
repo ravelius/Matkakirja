@@ -80,7 +80,12 @@
  *            Saman päivän toinen posti (15:56 EEST) toi erän kuvat
  *            11–13: vedenpaisumuksen-todistaja, kuninkaanhovin-
  *            kasikirjoitukset ja kelley-alkemistihuijari saivat kukin
- *            yhden alkion `kuvat`-listan samalla kaavalla.
+ *            yhden alkion `kuvat`-listan samalla kaavalla. Kolmas posti
+ *            (18:34 EEST) toi kuvat 14–31: kahdeksantoista siihen asti
+ *            kuvatonta skandaalia Tanskasta Ranskaan (tycho-brahen-
+ *            kuolinmysteeri … kaulanauhajuttu-1785) saivat kukin oman
+ *            yhden alkion `kuvat`-listansa, jälleen samalla kaavalla.
+ *            Skandaalisarjasta on nyt kuvitettu 31 / 83.
  *   visa     minivisa: kysymys, kolme vaihtoehtoa, oikean indeksi.
  *            Oikean paikan jakauma tasattiin koko erän yli
  *            (28/28/27), ettei se painotu yhteen indeksiin.
@@ -1025,6 +1030,22 @@ export const SKANDAALIT = {
         + 'Kepleriä saattamaan Rudolfiiniset taulukot loppuun — sen Kepler teki, '
         + 'joskin omalla tavallaan.',
       lahde: 'en-Wikipedia "Tycho Brahe". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-tycho-brahen-kuolinmysteeri-photo-v1.jpg`,
+          selite: 'Nuori palveluspoika huomaa Tycho Brahen kivun ennen muita, '
+            + 'mutta ei uskalla rikkoa juhlapöydän sääntöjä hänen puolestaan. '
+            + 'Astronomi kuolee yksitoista päivää myöhemmin; tutkimukset '
+            + 'sulkevat pois tappavan elohopeamyrkytyksen, mutta tarkka '
+            + 'kuolinsyy jää yhä avoimeksi.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Aarhus University — '
+            + 'Mercury poisoning ruled out; Brahen ikä, näköisyys ja tunnettu '
+            + 'kertomus pidätellystä virtsaamisesta ovat tutkimuslähteistä, '
+            + 'palveluspoika, huone ja eleet dramatisoituja. Kuva ei väitä '
+            + 'myrkytystä eikä ratkaise kuolinsyytä.',
+          url: 'https://projekter.au.dk/en/tycho-brahe/pressreleases/mercury-poisoning-ruled-out-as-cause-of-tycho-brahes-death',
+        },
+      ],
       visa: {
         kysymys: 'Mitä Tycho Brahen vuoden 2010 haudanavaus paljasti '
           + 'myrkytyshuhuista?',
@@ -1078,6 +1099,23 @@ export const SKANDAALIT = {
         + 'yhä valhekiviksi, ja osa niistä on Oxfordin yliopistomuseon ja Teylerin '
         + 'museon kokoelmissa.',
       lahde: 'en-Wikipedia "Beringer\'s Lying Stones". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-beringerin-valhekivet-photo-v1.jpg`,
+          selite: 'Louhoksen poika ymmärtää liian nopeasti, miksi oppineiden '
+            + 'miesten kori on täynnä sammakoiksi ja tähdiksi kaiverrettuja '
+            + 'kiviä. Johann Bartholomew Beringer julkaisee löydöt vuonna '
+            + '1726 luonnon ihmeinä; pilasta tulee tieteen historian kuuluisa '
+            + 'varoitus, vaikka sen yksityiskohdista kerrotaan myöhemmin '
+            + 'ristiriitaisesti.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Würzburg University '
+            + 'Library — Lügensteine; kivien muodot ja löytöpaikka ovat '
+            + 'lähdepohjaisia, poika, miesten henkilöllisyydet ja kohtaaminen '
+            + 'dramatisoituja, sillä tapauksen myöhempi kertomus sisältää '
+            + 'myös legendaa.',
+          url: 'https://www.bibliothek.uni-wuerzburg.de/ueber-uns/veranstaltungen/fakt-fake/luegensteine/',
+        },
+      ],
       visa: {
         kysymys: 'Ketkä olivat kätkeneet väärennetyt \'fossiilit\' Beringerin '
           + 'löydettäviksi?',
@@ -1127,6 +1165,23 @@ export const SKANDAALIT = {
         + 'puolellaan, ja keisari Wilhelm II armahti hänet 16. elokuuta 1908 '
         + 'vajaan kahden vuoden istumisen jälkeen.',
       lahde: 'en-Wikipedia "Wilhelm Voigt". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-kopenickin-kapteeni-photo-v1.jpg`,
+          selite: 'Nuori sotilas tekee kunniaa ennen kuin ehtii kysyä, kuka '
+            + 'käytetyssä kapteeninpuvussa oikeastaan käskee. Wilhelm Voigt '
+            + 'saa Köpenickin raatihuoneen kassasta rahat pelkän univormun '
+            + 'voimalla; virkailijan katseessa huvittava temppu muuttuu '
+            + 'hetkeksi pelottavaksi kysymykseksi siitä, miksi kaikki '
+            + 'tottelevat.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Museum Köpenick — Der '
+            + 'Hauptmann von Köpenick; Voigtin näköisyys, käytetty '
+            + 'kapteeninunivormu, sotilaiden totteleminen ja raatihuoneen '
+            + 'kassan haltuunotto 16. lokakuuta 1906 ovat dokumentoituja, '
+            + 'virkailijan ja sotilaan eleet dramatisoituja.',
+          url: 'https://www.berlin.de/museum-treptow-koepenick/museen/hauptmannausstellung/',
+        },
+      ],
       visa: {
         kysymys: 'Mihin \'Köpenickin kapteenin\' vallankäyttö perustui?',
         vaihtoehdot: [
@@ -1178,6 +1233,23 @@ export const SKANDAALIT = {
         + 'vapautui 1987, avasi Stuttgartiin gallerian ja myi Dalín ja Mirón '
         + 'töiden jäljennöksiä omalla nimellään signeerattuina.',
       lahde: 'en-Wikipedia "Hitler Diaries". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-hitlerin-paivakirjat-photo-v1.jpg`,
+          selite: 'Nuori asiakirjatutkija näkee ultraviolettivalossa sen, '
+            + 'mitä toimitus ei enää haluaisi nähdä: sodanjälkeinen paperi '
+            + 'paljastaa miljoonahankinnan väärennökseksi. Stern ehti '
+            + 'julistaa päiväkirjat löydetyiksi ennen täydellistä tutkimusta; '
+            + 'viikossa sensaatio muuttui yhdeksi Saksan liittotasavallan '
+            + 'suurista mediaskandaaleista.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Bundesarchiv — gefälschte '
+            + 'Hitler-Tagebücher; päiväkirjojen määrä, Sternin maksu ja '
+            + 'sodanjälkeiset materiaalit ovat dokumentoituja, nuori tutkija, '
+            + 'toimitushuone ja eleet dramatisoituja. Kuvassa ei kopioida '
+            + 'alkuperäistä sivua eikä esitetä natsisymboliikkaa.',
+          url: 'https://www.bundesarchiv.de/themen-entdecken/online-entdecken/geschichtsgalerien/pressekonferenz-des-bundesarchivs-zu-hitler-tagebuechern/',
+        },
+      ],
       visa: {
         kysymys: 'Miten Hitlerin päiväkirjat lopulta paljastuivat väärennöksiksi?',
         vaihtoehdot: [
@@ -1231,6 +1303,21 @@ export const SKANDAALIT = {
         + 'vallan anastaminen. Struensee ja Brandt mestattiin 28. huhtikuuta 1772, '
         + 'ja kuningatar vietiin valtiovankina Kronborgin linnaan.',
       lahde: 'en-Wikipedia "Johann Friedrich Struensee". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-struensee-kuninkaan-laakari-photo-v1.jpg`,
+          selite: 'Vielä edellisenä päivänä Struensee hallitsi kuninkaan '
+            + 'nimissä; nyt nuori vartija ei tiedä, pitäisikö hänen tervehtiä '
+            + 'vankia vai entistä valtakunnan mahtavinta miestä. '
+            + 'Valistuslääkärin uudistukset, suhde Caroline Mathildeen ja '
+            + 'hovin vastaisku päättyvät pidätykseen 17. tammikuuta 1772.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Danmarkshistorien — '
+            + 'Johann Friedrich Struensee; Struenseen näköisyys, ikä, pidätys '
+            + 'ja vankeuspaikka Kastellet ovat lähdepohjaisia, vartijoiden '
+            + 'henkilöt, katsekontakti ja sellin tilanne dramatisoituja.',
+          url: 'https://danmarkshistorien.lex.dk/Johann_Friedrich_Struensee%2C_1737-1772',
+        },
+      ],
       visa: {
         kysymys: 'Mikä oli Johann Friedrich Struenseen virallinen tehtävä Tanskan '
           + 'hovissa?',
@@ -1283,6 +1370,21 @@ export const SKANDAALIT = {
         + 'Napoleonin liittolaisena silloinkin, kun Ruotsi ja Venäjä olivat jo '
         + 'vaihtaneet puolta.',
       lahde: 'en-Wikipedia "Danish state bankruptcy of 1813". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-tanskan-valtionvararikko-1813-photo-v1.jpg`,
+          selite: 'Poika katsoo äitiään, ei seteleitä: hänen kasvoiltaan hän '
+            + 'ymmärtää, ettei perheen säästöillä enää osteta samaa leipää. '
+            + 'Napoleonin sotien laskut maksettiin setelipainolla, kunnes '
+            + 'Tanska perusti Rigsbankenin vuonna 1813 ja vaihtoi kuusi '
+            + 'vanhaa setelirahan yksikköä yhteen uuteen rigsbankdaleriin.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Danmarks Nationalbank — '
+            + 'historical banknotes; setelipainon käyttö, korkea inflaatio, '
+            + 'Rigsbankenin perustaminen ja vaihtosuhde ovat dokumentoituja, '
+            + 'perhe, virkailijat ja Børsenin vaihtotilanne dramatisoituja.',
+          url: 'https://www.nationalbanken.dk/en/what-we-do/notes-and-coins/historical-banknotes',
+        },
+      ],
       visa: {
         kysymys: 'Mikä ajoi Tanskan valtion vararikkoon vuonna 1813?',
         vaihtoehdot: [
@@ -1333,6 +1435,22 @@ export const SKANDAALIT = {
         + 'kukaan laski summia. Tapausta pidetään yhä Tanskan uuden ajan '
         + 'vakavimpiin kuuluvana petoksena.',
       lahde: 'en-Wikipedia "Peter Adler Alberti". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-alberti-skandaali-photo-v1.jpg`,
+          selite: 'Nuori poliisikirjuri ehtii tarttua kynään, mutta ei vielä '
+            + 'käsittää, miksi entinen oikeusministeri tuo avaimensa ja '
+            + 'tilikirjansa hänen pöydälleen. Peter Adler Alberti '
+            + 'ilmoittautui itse 8. syyskuuta 1908; vuosia peitellyt petos '
+            + 'kaatoi samalla hallituksen luottamuksen.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Lex — P.A. Alberti; '
+            + 'Albertin ikä, näköisyys, ero ministerinvirasta, '
+            + 'ilmoittautumispäivä ja petoksen mittakaava ovat '
+            + 'dokumentoituja, poliisiaseman henkilöt, avaimet ja eleet '
+            + 'dramatisoituja.',
+          url: 'https://lex.dk/P.A._Alberti',
+        },
+      ],
       visa: {
         kysymys: 'Miten oikeusministeri Albertin kavallukset paljastuivat '
           + 'lopullisesti vuonna 1908?',
@@ -1385,6 +1503,22 @@ export const SKANDAALIT = {
         + 'luita ei ole koskaan virallisesti kiistetty, ja niitä kunnioitetaan '
         + 'luostarissa yhä.',
       lahde: 'en-Wikipedia "Lead Books of Sacromonte". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-sacromonten-lyijykirjat-photo-v1.jpg`,
+          selite: 'Nuori moriscotulkki tunnistaa lyijystä kielen, joka lupaa '
+            + 'hänen yhteisölleen paikan Granadan vanhimmassa kristillisessä '
+            + 'menneisyydessä — ja näkee papin jo uskovan. Vuosina 1595–1599 '
+            + 'löytyneistä levyistä tuli toivon, vallan ja väärennöksen '
+            + 'solmu, jonka Rooma tuomitsi vasta vuonna 1682.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Universidad de Granada — '
+            + 'Los plomos del Sacromonte; löytöpaikka, levyjen materiaali ja '
+            + 'kielten sekoitus ovat lähdepohjaisia, nuori työntekijä, '
+            + 'moriscotulkki ja pappi dramatisoituja. Kuva ei väitä tiettyä '
+            + 'henkilöä väärentäjäksi.',
+          url: 'https://editorial.ugr.es/libro/los-plomos-del-sacromonte_139224/',
+        },
+      ],
       visa: {
         kysymys: 'Mistä materiaalista Sacromonten \'muinaiset kirjat\' oli tehty?',
         vaihtoehdot: [
@@ -1433,6 +1567,21 @@ export const SKANDAALIT = {
         + 'puoli vuosisataa myöhemmin Charles Ponzilta; Baldomera oli maailman '
         + 'toinen tunnettu tapaus saksalaisen Adele Spitzederin jälkeen.',
       lahde: 'es-Wikipedia "Baldomera Larra". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-baldomera-larra-pyramidi-photo-v1.jpg`,
+          selite: 'Vanha ompelijatar näkee Baldomeran kädessä lupaamansa '
+            + 'voiton; hänen takanaan tyttö huomaa, että rahat tulevat juuri '
+            + 'sisään astuneen perheen kukkarosta. Caja de Imposiciones '
+            + 'keräsi tuhansien madridilaisten säästöjä, kunnes uusien '
+            + 'tallettajien virta loppui joulukuussa 1876.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: BOE — Baldomera Larran '
+            + 'oikeusprosessi; Baldomeran henkilöllisyys, poikkeuksellinen '
+            + 'korkolupaus ja järjestelmän romahdus ovat lähdepohjaisia, '
+            + 'asiakkaat, tyttö ja kuvattu maksutapahtuma dramatisoituja.',
+          url: 'https://www.boe.es/biblioteca_juridica/abrir_pdf.php?id=PUB-DH-2014-37_1',
+        },
+      ],
       visa: {
         kysymys: 'Miten Baldomera Larran \'talletuskassa\' maksoi luvatut suuret '
           + 'korot?',
@@ -1486,6 +1635,25 @@ export const SKANDAALIT = {
         + 'lahjoittaja tunnistaisi omansa.',
       lahde: 'en-Wikipedia "Cerro de los Santos" ja es-Wikipedia "Cerro de los '
         + 'Santos". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-cerro-de-los-santos-vaarennokset-photo-v1.jpg`,
+          selite: 'Nuori museoapulainen katsoo ensin tuoretta uurretta ja '
+            + 'vasta sitten pöydän ääressä seisovia miehiä: jos hän sanoo '
+            + 'epäilyn ääneen, koko löytöhuuma alkaa horjua. Vicente Juan y '
+            + 'Amat myi Madridin arkeologiselle museolle sekä aitoja että '
+            + 'väärennettyjä tai muunneltuja esineitä; nykykäsityksen mukaan '
+            + 'hän ei välttämättä itse veistänyt väärennöksiä, vaan osti ja '
+            + 'välitti niitä.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Museo Arqueológico '
+            + 'Nacional — väärennökseksi luokiteltu patsas MAN 3501; patsaat '
+            + 'jäljittelevät museon dokumentoimaa väärennöstä MAN 3501 ja '
+            + 'aitoa Dama Oferentea MAN 3500, nuori apulainen ja epäilyn '
+            + 'hetki ovat dramatisoituja. Kuva ei väitä Amatia väärennösten '
+            + 'tekijäksi.',
+          url: 'https://ceres.mcu.es/pages/Main?idt=31468&inventary=3501&museum=MAN&table=FMUS',
+        },
+      ],
       visa: {
         kysymys: 'Miksi Cerro de los Santosin löytöjen joukkoon ilmestyi '
           + 'väärennöksiä 1800-luvulla?',
@@ -1540,6 +1708,23 @@ export const SKANDAALIT = {
         + 'haastattelujen pohjalta — osa lähtijöistä nimittäin pääsi perille, '
         + 'vaikkei laivalla.',
       lahde: 'en-Wikipedia "Juhan Leinberg". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-lasnamaen-valkea-laiva-photo-v1.jpg`,
+          selite: 'Äiti etsii tyttärensä kasvoilta vastausta, jota tyhjä '
+            + 'horisontti ei anna: kuinka monta aamua heidän pitää vielä '
+            + 'odottaa? Juhan Leinberg oli jo lähtenyt Krimille, mutta sadat '
+            + 'seuraajat viipyivät Lasnamäellä viikkoja valkean laivan '
+            + 'toivossa, kunnes epätoivo ja sotilaiden painostus hajottivat '
+            + 'joukon.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Eesti Kirjandusmuuseum — '
+            + 'Mare Kõiva: The White Ship; tummat yhtenäiset takit, kaulassa '
+            + 'riippuvat valkoiset pussit, suuri kokoontumiskivi ja viikkojen '
+            + 'odotus ovat arkistokuvauksista, äiti, tytär ja poika '
+            + 'dramatisoituja.',
+          url: 'https://www.folklore.ee/rl/pubte/ee/sator/sator6/8marekoiva.pdf',
+        },
+      ],
       visa: {
         kysymys: 'Mitä maltsvetilaiset odottivat Lasnamäen kalliolla 1861?',
         vaihtoehdot: [
@@ -1591,6 +1776,21 @@ export const SKANDAALIT = {
         + 'jälkeen ja väkijuomat palasivat myymälöihin: kysyntä siirtyi '
         + 'laillisille markkinoille yhdessä aamupäivässä.',
       lahde: 'fi-Wikipedia "Kieltolaki (Suomi)". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-pirtukauppa-suomenlahdella-photo-v1.jpg`,
+          selite: 'Nuori apumies kuulee tulliveneen moottorin juuri kun '
+            + 'seuraava pirtukanisteri laskeutuu hänen käsiinsä. Kieltolaki '
+            + 'teki tavallisista rannikon ihmisistä salakuljettajia: suuret '
+            + 'emälaivat odottivat ulapalla, ja pienet nopeat veneet '
+            + 'kuljettivat lastin, pelon ja ansion pimeän veden yli.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Helsingin Satama — '
+            + 'Kieltolaki toi satamiin draamaa; alukset, kanisterit ja tullin '
+            + 'etsintävalot ovat lähdepohjaisia, nuori apumies, nainen, '
+            + 'vanhempi välittäjä ja kuvattu vaaran sekunti dramatisoituja.',
+          url: 'https://www.portofhelsinki.fi/tietoa-meista/helsingin-satama/historia/itsenaisen-suomen-kasvava-paasatama/kieltolaki-toi-satamiin-draamaa/',
+        },
+      ],
       visa: {
         kysymys: 'Mistä pirtu pääosin salakuljetettiin Suomeen kieltolain '
           + 'alkuvuosina?',
@@ -1641,6 +1841,23 @@ export const SKANDAALIT = {
         + 'myöhemmistä vuosista. Tuomio päättyi 1894, kun Rummo oli 38-vuotias. '
         + 'Kuolinaikaa ja -paikkaa ei tiedetä.',
       lahde: 'et-Wikipedia "Rummu Jüri". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-rummu-jyri-mestarikarkuri-photo-v1.jpg`,
+          selite: 'Keittiöpiika nostaa katseensa juuri kun Rummu Jüri solmii '
+            + 'lakanaköyttä, ja päättää olla huutamatta. Tarina kattoreiästä '
+            + 'ja tornista laskeutumisesta kuuluu mestarikarkurin legendaan; '
+            + 'kansan suojeluksessa elänyt nuori renki muuttui jo omana '
+            + 'aikanaan mieheksi, josta vartijat eivät tienneet, päättyikö '
+            + 'pako selliin vai lauluun.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: ERR — Rummu Jürin '
+            + 'Toompean-pako legendana; kattoreitti ja köydellä laskeutuminen '
+            + 'esitetään lähteiden tavoin legendana, vankilan piha on '
+            + 'paikkalähteestä, Jürin, vartijan ja keittiöpiian kuvattu '
+            + 'sekunti on dramatisoitu.',
+          url: 'https://eeter.err.ee/1608505163/vaiko-epliku-uued-sugulased-on-kurikuulus-rummu-juri-ja-laulja-thea-paluoja',
+        },
+      ],
       visa: {
         kysymys: 'Miten Rummu Jüri pakeni Toompean lossivankilasta?',
         vaihtoehdot: [
@@ -1695,6 +1912,23 @@ export const SKANDAALIT = {
         + 'Jukolan talolle on löydetty Palojoelta kaksikin esikuvaa.',
       lahde: 'fi-Wikipedia "Seitsemän veljestä" ja fi-Wikipedia "August Ahlqvist". '
         + 'Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-seitseman-veljesta-kirjasota-photo-v1.jpg`,
+          selite: 'Kirjapainon poika tuo Aleksis Kivelle myynnistä vedetyt '
+            + 'vihkot, mutta piilottaa yhden takkinsa alle: hän haluaa lukea '
+            + 'itse ennen kuin uskoo professoria. August Ahlqvistin '
+            + 'murska-arvostelu pysäytti romaanin levityksen, mutta tässä '
+            + 'kuvitteellisessa katseessa elää jo lukija, joka ei hylkää '
+            + 'veljeksiä.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: SKS Tietävä — Seitsemän '
+            + 'veljeksen julkaiseminen 1870; vihkojen vetäminen pois '
+            + 'myynnistä on dokumentoitu, Fanjunkarsin lähettipoika, '
+            + 'piilotettu kappale, Charlotta Lönnqvist ja kuvattu kohtaaminen '
+            + 'ovat dramatisoituja.',
+          url: 'https://tietava.finlit.fi/7-veljesta/seitseman-veljeksen-julkaiseminen-1870/',
+        },
+      ],
       visa: {
         kysymys: 'Mitä Seitsemän veljeksen tyrmäävästä arvostelusta seurasi vuonna '
           + '1870?',
@@ -1748,6 +1982,24 @@ export const SKANDAALIT = {
         + 'Viron puolella, ja sama tarina alkaa Tallinnan satamasta.',
       lahde: 'fi-Wikipedia "Kieltolaki (Suomi)" ja fi-Wikipedia "Algoth Niska". '
         + 'Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-kieltolaki-ja-pirtukuningas-photo-v1.jpg`,
+          selite: 'Satamapoika näkee silakoiden alta paljastuvan '
+            + 'pirtukanisterin ja etsii Algoth Niskan kasvoilta ohjetta ennen '
+            + 'kuin tullimies ehtii lähemmäs. Entinen '
+            + 'maajoukkuejalkapalloilija teki kieltolaista merellisen '
+            + 'kissa–hiiri-leikin; maine herrasmiesrikollisena syntyi juuri '
+            + 'tällaisesta tyyneydestä, vaikka riskin kantoivat myös hänen '
+            + 'ympärillään työskennelleet tavalliset ihmiset.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Museovirasto / Finna — '
+            + 'Algoth Niska vuonna 1906; Niskan henkilöllisyys, merimies- ja '
+            + 'jalkapallotausta sekä pirtukauppa ovat dokumentoituja, '
+            + 'satamapoika, kalakauppias, piilotettu lasti ja tullimiehen '
+            + 'lähestyminen dramatisoituja.',
+          url: 'https://finna.fi/Record/museovirasto.BD1BEAA87B8815A58A0CB541B6870519',
+        },
+      ],
       visa: {
         kysymys: 'Kuinka kauan Suomen kieltolaki oli voimassa?',
         vaihtoehdot: [
@@ -1801,6 +2053,23 @@ export const SKANDAALIT = {
         + 'maaottelut Ruotsin kanssa vuoteen 1939 asti.',
       lahde: 'en-Wikipedia "Paavo Nurmi" ja fi-Wikipedia "Paavo Nurmi". '
         + 'Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-nurmen-amatoorikohu-photo-v1.jpg`,
+          selite: 'Nuori joukkueen viestinviejä ei tohdi nostaa katsettaan, '
+            + 'kun Paavo Nurmi lukee paperin, joka pitää hänet poissa Los '
+            + 'Angelesin radalta. Sekuntikello käy yhä hänen kädessään: mies '
+            + 'oli matkustanut vammasta huolimatta tavoittelemaan '
+            + 'maratonkultaa, mutta amatöörisääntöjen tulkinta teki '
+            + 'juoksijasta katsojan.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Paavo Nurmi Heritage — '
+            + 'Life story: Los Angeles 1932; Nurmen Los Angelesissa jatkunut '
+            + 'harjoittelu, jalkavaiva ja amatööriasemaan perustunut '
+            + 'kilpailukielto ovat dokumentoituja, nuori viestinviejä ja '
+            + 'kuvattu paperinluovutus dramatisoituja.',
+          url: 'https://paavonurmi.fi/en/life-story/',
+        },
+      ],
       visa: {
         kysymys: 'Miksi Paavo Nurmi ei saanut kilpailla Los Angelesin '
           + 'olympialaisissa 1932?',
@@ -1855,6 +2124,21 @@ export const SKANDAALIT = {
         + 'valituksen jälkeen seitsemän kuukautta. Taulu kiersi ensin näyttelyissä '
         + 'Italiassa ja palasi Louvreen samana vuonna.',
       lahde: 'en-Wikipedia "Vincenzo Peruggia". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-mona-lisan-varkaus-1911-photo-v1.jpg`,
+          selite: 'Huoltomies avaa juuttuneen oven Vincenzo Peruggialle ja '
+            + 'luulee auttavansa työtoveria. Valkoisen takin alla kulkee Mona '
+            + 'Lisa — pieni puupaneeli, joka katoaa yli kahdeksi vuodeksi ja '
+            + 'palaa Louvreen paljon kuuluisampana kuin lähti.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Louvre — The theft of the '
+            + 'century; Peruggian henkilöllisyys, lasittajantausta, valkoinen '
+            + 'työtakki, 21.8.1911 tehty varkaus ja teoksen yli kaksivuotinen '
+            + 'katoaminen ovat dokumentoituja, huoltoportaikon katsekontakti '
+            + 'ja kuvattu sekunti dramatisoituja.',
+          url: 'https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana',
+        },
+      ],
       visa: {
         kysymys: 'Missä kaupungissa Mona Lisa löytyi yli kaksi vuotta varkauden '
           + 'jälkeen?',
@@ -1913,6 +2197,23 @@ export const SKANDAALIT = {
         + 'totesi Marie Antoinetten syyttömäksi; yleisö ei uskonut, ja '
         + 'kuningattaren maine ei toipunut.',
       lahde: 'en-Wikipedia "Affair of the Diamond Necklace". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-kaulanauhajuttu-1785-photo-v1.jpg`,
+          selite: 'Jalokivisepän nuori apulainen ymmärtää ensimmäisenä, ettei '
+            + 'kuningattaren nimi näytä oikealta, mutta kardinaali on jo '
+            + 'painanut sulkakynän paperiin. Jeanne de la Motte tarvitsee '
+            + 'vain hetken hiljaisuutta: 650 timantin kaulanauha katoaa, ja '
+            + 'syytön Marie Antoinette joutuu kantamaan petoksen mainehaitan.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Château de Versailles — '
+            + 'L\'affaire du collier de la Reine; Rohanin toimiminen '
+            + 'välikätenä, väärennetty kuningattaren kirjeenvaihto, kallis '
+            + 'timanttikaulanauha ja Jeannen petos ovat dokumentoituja, '
+            + 'oppipoika, hänen havaintonsa ja kuvattu allekirjoitushetki '
+            + 'dramatisoituja.',
+          url: 'https://www.chateauversailles.fr/decouvrir/histoire/grandes-dates/affaire-collier-reine',
+        },
+      ],
       visa: {
         kysymys: 'Kenen nimissä huijari Jeanne de la Motte sai kardinaali de Rohanin '
           + 'ostamaan timanttikaulanauhan?',
