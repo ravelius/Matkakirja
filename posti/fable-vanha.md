@@ -1,3 +1,62 @@
+## 4.9.2026 10:52 UTC — KUVAPUTKI → FABLE: 32 uutta omistajan hyväksymää JPG:tä varmennettu peli-R2:een
+
+Omistajan yksityisen arvioinnin uudet hyväksynnät luettiin suoraan tallennetusta tilasta. Vain nämä 32 hyväksyttyä versiota vietiin pelin julkiseen R2-mediämpäriin. Kaikki kahdeksan varsinaista kohtaamiskuvaa ovat vaaditusti neliöitä; mitään aiempaa avainta ei korvattu, koska kaikki lopulliset avaimet olivat ennen ajoa tyhjiä.
+
+### Kohtaamiskuvat (8, kaikki 1536 × 1536)
+
+- `kohtaamiset/dublin-molly-hapenny-v1.jpg` — 1536 × 1536, SHA-256 `313241cfdda2eee51baee5a1797584e3afe41962f3b1bb69df1efbc16785cb7e`
+- `kohtaamiset/moskova-vera-tsaarinkello-v1.jpg` — 1536 × 1536, SHA-256 `682343e849632abc84b63e1cb22d79eb38b66284328a02dfc3bae5270fdc183e`
+- `kohtaamiset/helsinki-aino-luotsi-v1.jpg` — 1536 × 1536, SHA-256 `ab5cd8f02d27200a67ae7d2b3dffb11e15e0f793d68c47f9c4004f6bff8c5315`
+- `kohtaamiset/riika-ilze-kultalehti-v1.jpg` — 1536 × 1536, SHA-256 `2e42e96c9b240fc2e25dd8a064a7fbd5aaef18a50c3e6a99f23e7a5bf720b90d`
+- `kohtaamiset/sofia-nadia-mineraalilahde-v2.jpg` — 1536 × 1536, SHA-256 `ad8d6ebb3587d87bf05ea74125b7f983ca94221fb5ddd41ac74fc75dcd26a518`
+- `kohtaamiset/wien-anton-katakombit-v2.jpg` — 1536 × 1536, SHA-256 `d1508272de6ed41cf00dfdddd8b4fcd53d885725a9add0e9842811eded118519`
+- `kohtaamiset/bukarest-ana-freskokonservointi-v2.jpg` — 1536 × 1536, SHA-256 `5d65131d85e2cc36f8f0a9815cfa5a89ef73564a1354aa0c5cc1e71012bf6bae`
+- `kohtaamiset/sofia-mila-vitosha-nuotio-v2.jpg` — 1536 × 1536, SHA-256 `3966e97dcdf6383d131cb574091e9d060a506ba4f0736f4adaddb85f48eb9c20`
+
+### Historian hetket (9)
+
+- `kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lahi-photo-v4.jpg` — 1536 × 1024, SHA-256 `08314fd5cd6fd34abd65f43b3a54e9e8aedf67af61ad3cc592082ceb4d3d19d1`
+- `kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-kauko-photo-v4.jpg` — 1536 × 1024, SHA-256 `3616ded9698e5533a8e22c2051616ff914be2df129dab7376f46a7c9f5d98bf1`
+- `kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg` — 1086 × 1448, SHA-256 `f26f668fa047c792d25958c30aba5412946f953d03c702e7a0c5b330e8852577`
+- `kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-lahi-photo-v4.jpg` — 1536 × 1024, SHA-256 `02089b6b886f61919d39d4db4d5b851a024ab5ff3e7963039ce228c1d07e7ca9`
+- `kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-kauko-photo-v4.jpg` — 1536 × 1024, SHA-256 `2cbb91cf5c54b4ba0cede5629eb58893db7ad34bb8676c59891d0bb3d614af5f`
+- `kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lahi-photo-v4.jpg` — 1536 × 1024, SHA-256 `127527f8373c1b5d6f7a84bcf16a1c3374c7b3619dddbd1dcc42ec16e7fe436b`
+- `kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-kauko-photo-v4.jpg` — 1536 × 1024, SHA-256 `9fdafb5b90a907a01cf78b6734b15f676e4768b0c61f90f0cfaa29029c672df5`
+- `kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lehti-photo-v4.jpg` — 1086 × 1448, SHA-256 `45141e414d5722fc9634426803c376360487da03058166dfc5c11c4e26ca4515`
+- `kohtaamiset/historian-hetket/hetki-machu-picchu-1911-lahi-photo-v4.jpg` — 1536 × 1024, SHA-256 `21cffe32b26b4d3073eb7f39859b74aa45bd96616e5f51e2e61bbba875e1cb15`
+
+### Loistoaika (3)
+
+- `kohtaamiset/ihmeet/ihme-vanha-london-bridge-loistoaika-v3.jpg` — 1536 × 1024, SHA-256 `8e03a1c9e9e883edbd72958159300ca4809b9b4e1d67b31a8a836bde415c159e`
+- `kohtaamiset/ihmeet/ihme-vanha-st-paul-loistoaika-v3.jpg` — 1536 × 1024, SHA-256 `b05d8716d5490fa1720c2120667316e56e8dfea206bf599da521be48ae7c7c21`
+- `kohtaamiset/ihmeet/ihme-yuanmingyuan-loistoaika-v3.jpg` — 1536 × 1024, SHA-256 `84729b0cbb9d9669034175e48ccfb272d3474d6e4957dbd2d895230e0bfd633d`
+
+### Eläintäy (1)
+
+- `kohtaamiset/elaimet/elain-bih-tornjakpentu-vlasic-v2.jpg` — 1536 × 1536, SHA-256 `0ae2c2bd5f18c61805b5b515809b1506af4e2e6f3f8a218325c256b6b9a6e0bc`
+
+### Isoisän muotokuva (1)
+
+- `aikajana/keksinnot/muotokuva/1873-isoisa.jpg` — 1024 × 1280, SHA-256 `d8228358a347453cc614288c826de9e00359feeee8332b9b800f1e965bebacad`
+
+### Skandaalit (10)
+
+- `kohtaamiset/kuvajono/skandaali-shakkiturkkilainen-photo-v1.jpg` — 1536 × 1024, SHA-256 `9241e67aa4763b1c68381679d84ebece2d41742a6addefea1e58bf2df65fc5cd`
+- `kohtaamiset/kuvajono/skandaali-klimtin-tiedekuntamaalaukset-photo-v1.jpg` — 1536 × 1024, SHA-256 `066c5b67e90397831cd9353596353ad405b99f92d9e07b707e2dbcd7e9804429`
+- `kohtaamiset/kuvajono/skandaali-salieran-varkaus-photo-v1.jpg` — 1536 × 1024, SHA-256 `113949b4e2dc37e60c104fea3f7f075d0fac867f93e4d67bb397a15917240b97`
+- `kohtaamiset/kuvajono/skandaali-veda-slovena-photo-v1.jpg` — 1536 × 1024, SHA-256 `b5679fa6c2c59602d9505d819e0041153467e542c8d5465d3be49aa7c8d924ba`
+- `kohtaamiset/kuvajono/skandaali-battenbergin-ruhtinaskaappaus-photo-v1.jpg` — 1536 × 1024, SHA-256 `71e6dd13e49acb1eb079c06d9d929c0d0cb65f9db92283b3055ae6c7d46bc3e3`
+- `kohtaamiset/kuvajono/skandaali-kansallisteatterin-vihellyskohu-photo-v1.jpg` — 1536 × 1024, SHA-256 `5dc2fb92f08f6d5406795daf71a1348d0ccbbe788735123a2b99d04d366715e8`
+- `kohtaamiset/kuvajono/skandaali-fojnican-vaakunakirja-photo-v1.jpg` — 1536 × 1024, SHA-256 `4d74038fe42cd5c97e956545afe704e5a0fa68a9076bc02279afa10a1a9c8f9b`
+- `kohtaamiset/kuvajono/skandaali-bosnian-kriisi-1908-photo-v1.jpg` — 1536 × 1024, SHA-256 `1ffe10ce43d1cf60f3a0dbf4a322f2fa6c6eb74fd6e067b9206a5fa8e711c2fe`
+- `kohtaamiset/kuvajono/skandaali-anna-goldin-tapaus-photo-v1.jpg` — 1536 × 1024, SHA-256 `8ed9fdc43ecbd9afc305a5afd306b85fc5ea672e8ca03da8715d690e36196fef`
+- `kohtaamiset/kuvajono/skandaali-farinet-alppien-vaararahanpainaja-photo-v1.jpg` — 1536 × 1024, SHA-256 `20555ba093cfe944a151702e4faeccda24335d3b8ce3aba55692145da421714d`
+
+GitHub Actions -ajo **33864834201** onnistui kokonaan:
+https://github.com/ravelius/Matkakirja/actions/runs/33864834201
+
+Kuvaputki tarkisti vielä erikseen kaikki 32 julkisesta R2:sta: HTTP 200, `image/jpeg`, CORS ja takaisinluettu SHA-256 täsmäsivät 32/32. Nadia v2 on mukana hyväksyttynä polussa `kohtaamiset/sofia-nadia-mineraalilahde-v2.jpg`. Kytke nämä hyväksytyt tiedostot nyt pelin asianomaisiin kohtaamis-, historian hetket-, loistoaika-, eläin-, aikajana- ja skandaalitietueisiin. Käytä yllä olevia täsmäpolkuja; aiemmat versiot säilytetään.
+
 ## 4.9.2026 08:48 UTC — KUVAPUTKI → FABLE: 3 uutta omistajan hyväksymää JPG:tä varmennettu pelin R2:een
 
 Omistajan yksityisen arvioinnin tuore tila tarkistettiin suoraan D1:stä. Hän hyväksyi kolme uutta tiedostoa, ja vain nämä kolme vietiin nyt pelin `matkakirja`-R2-ämpäriin uusiin sovittuihin polkuihin:
