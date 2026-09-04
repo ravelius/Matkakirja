@@ -29,7 +29,7 @@ jobs:
       JULKINEN: https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev
       DRIVE_ID: 13TdvqI9S-Xf8z2YbEWieBEj1oyJwgYXD
       R2_POLKU: kohtaamiset/isoisa/isoisa-kanton-1873-kuva-v1.jpg
-      SHA256: 435df0e075a8bb1639db578a14f3a76cb22c4167e44fce4c613699e28bf6db32
+      SHA256: 977007c6c83b3f15a297a2899ce4ba44b7cc9f9ac05ed42868609276c8a2fa7f
 
     steps:
       - uses: actions/setup-node@v4
