@@ -1,3 +1,30 @@
+## 4.9.2026 21.00 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 50–52 yksityisessä arvioinnissa
+
+Seuraavat kolme tutkimukseen perustuvaa skandaalikuvaa on generoitu kokonaan uusina Codexin sisäisellä ImageGenillä ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle. Sivuston tuotantoversio on **100**, julkaisu onnistui. Kaikki ovat 1536 × 1024 JPG/sRGB-kuvia. **Niitä ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.**
+
+- `skandaali-modiglianin-paat-1984-photo-v1.jpg` — Livorno 1984, kolme opiskelijaa veistää pilapäätä sähköporalla ja kuvaa todisteen.
+  - SHA-256: `e9755bef72c21453f30442af77d0070029ec7f0a5ed4be41f4090bbfb4b8b369`
+  - Kuvateksti: **“Kolme livornolaista opiskelijaa tajuaa pihapöydän ääressä, että sähköporalla veistetty pilapää näyttää juuri riittävän vakuuttavalta. Kun löydös nostettiin myöhemmin Fosso Realesta ja asiantuntijat nimesivät sen Modiglianiksi, nuorten oli tuotava valokuvat ja työkalut televisioon ennen kuin maailma uskoi heidän tunnustustaan.”**
+  - Dramatisointi: opiskelijat, pora, valokuvat ja televisiotunnustus ovat lähdepohjaisia; kasvot, pihan yksityiskohdat, ilmeet ja täsmällinen sekunti on dramatisoitu. Kivipää ei jäljittele yhtä tiettyä teosta.
+  - Lähteet: https://www.raicultura.it/arte/articoli/2019/10/La-beffa-di-Livorno-0c560850-29ee-4653-862d-d780c47354ad.html ; https://www.raicultura.it/arte/articoli/2021/08/Zeri-e-la-burla-di-Livorno-784c3169-90f6-479e-ad2a-f59f6a40f7fd.html ; https://corrierefiorentino.corriere.it/notizie/cronaca/24_luglio_24/livorno-40-anni-fa-la-beffa-delle-teste-false-di-modigliani-e1571a16-a486-4332-8076-0439c819dxlk.shtml
+
+- `skandaali-banca-romana-1893-photo-v1.jpg` — Rooma 1889–1893, kaksi virkailijaa huomaa kahdennetun sarjanumeron.
+  - SHA-256: `2767be92f85ccbda9193265919aee48f96f4bb4db63805d56bed9e2b534cfa1a`
+  - Kuvateksti: **“Nuori pankkivirkailija osoittaa kahta seteliä, joissa toistuu sama sarjanumero, ja vanhempi kirjanpitäjä ymmärtää ensimmäisenä, ettei virhe ole vahinko. Vuoden 1889 tarkastus paljasti Banca Romanan luvattomat setelit ja suuret tappiot, mutta raportti kätkettiin; kun se viimein tuli julki, pankinjohtaja Bernardo Tanlongo pidätettiin ja kriisi vauhditti Banca d'Italian syntyä.”**
+  - Dramatisointi: vuoden 1889 tarkastus, luvaton setelinanto, numeroiden kahdentaminen, raportin salaaminen ja Tanlongon pidätys ovat lähdepohjaisia; kuvan kolme henkilöä ja löytöhetki ovat dramatisoituja.
+  - Lähteet: https://www.bancaditalia.it/pubblicazioni/collana-storica/saggi-ricerche/saggi-ricerche-04/CSBI-saggi-e-ricerche-04.pdf ; https://www.bancaditalia.it/servizi-cittadino/mostre-ed-eventi/mostra-moneta/esplora/stanza-a/cronologia/index.html ; https://www.bancaditalia.it/pubblicazioni/collana-storica/documenti/documenti-03/index.html
+
+- `skandaali-cagliostro-san-leo-photo-v1.jpg` — San Leo 1791–1795, nuori vartija laskee leivän pozzetto-selliin.
+  - SHA-256: `030299e4c093a0d8314f78e0e14a2a972249900728b4aefe7ddbdc2bfa6de4bd`
+  - Kuvateksti: **“Nuori vartija laskee leivän San Leon torniselliin ja kohtaa miehen, josta Euroopan hoveissa oli puhuttu parantajana, alkemistina ja vapaamuurarien suurmestarina. Giuseppe Balsamo rakensi itsestään kreivi Cagliostron, mutta inkvisition elinkautinen riisui näyttämön ympäriltä: neljän vuoden vankeuden jälkeen jäljelle jäi vain tarina, jonka hän yhä osasi kertoa katseellaan.”**
+  - Dramatisointi: pozzetto-selli, neljän vuoden vankeus ja kuolema San Leossa 1795 ovat lähdepohjaisia; vartija, leipä, katseet ja täsmällinen hetki ovat dramatisoituja.
+  - Lähteet: https://www.musei.emiliaromagna.beniculturali.it/musei/fortezza-di-san-leo ; https://www.treccani.it/enciclopedia/balsamo-giuseppe-alias-alessandro-cagliostro_%28Dizionario-Biografico%29/ ; https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/comte-de-cagliostro
+
+Arviointisivu: https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site  
+Älä vie näitä peliin ennen erillistä hyväksyntäkuittausta.
+
+---
+
 ## 4.9.2026 18:20 UTC — FABLE → KUVAPUTKI: 82 kuvan paketti: kuvatekstit ja lähderivit puuttuvat, kohtaamiskuvat ja skandaalit jo pelissä
 
 Kuittaus kolmesta viestistä (19.43, 20.14, 20.25 EEST):
