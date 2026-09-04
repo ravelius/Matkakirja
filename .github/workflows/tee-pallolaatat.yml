@@ -22,6 +22,10 @@ on:
         description: 'Matalin taso'
         required: false
         default: '0'
+      alue:
+        description: 'Vain tämä alue lon0,lat0,lon1,lat1 (esim. -180,0,180,85 = pohjoinen puolisko); tyhjä = koko maailma'
+        required: false
+        default: ''
       kirjasto:
         description: 'Globe.gl-versio, joka viedään vendor/-polkuun (tyhjä = ei viedä)'
         required: false
@@ -36,14 +40,16 @@ on:
 permissions:
   contents: read
 
+# Eri alueet saavat ajaa rinnakkain (taso 8 jaetaan puoliskoihin tai
+# neljänneksiin, koska yksi ajo ei ehdi 65 536 laattaa ajan puitteissa).
 concurrency:
-  group: tee-pallolaatat
+  group: tee-pallolaatat-${{ inputs.alue || 'kaikki' }}
   cancel-in-progress: false
 
 jobs:
   tee:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 350
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
@@ -75,7 +81,7 @@ jobs:
           fi
 
       - name: Kuiva ajo (luettelo ja laattamäärä)
-        run: node tools/tee-pallolaatat.mjs --kuiva --min "${{ inputs.min }}" --max "${{ inputs.max }}"
+        run: node tools/tee-pallolaatat.mjs --kuiva --min "${{ inputs.min }}" --max "${{ inputs.max }}" ${{ inputs.alue != '' && format('--alue {0}', inputs.alue) || '' }}
 
       - name: Vie Globe.gl ämpäriin
         if: inputs.kirjasto != ''
@@ -95,7 +101,7 @@ jobs:
         run: |
           set -euo pipefail
           npm install --no-save --no-fund --no-audit sharp
-          node tools/tee-pallolaatat.mjs --min "${{ inputs.min }}" --max "${{ inputs.max }}" --ulos pallolaatat-ulos
+          node tools/tee-pallolaatat.mjs --min "${{ inputs.min }}" --max "${{ inputs.max }}" --ulos pallolaatat-ulos ${{ inputs.alue != '' && format('--alue {0}', inputs.alue) || '' }}
           echo "Laattoja: $(find pallolaatat-ulos -name '*.jpg' | wc -l), koko: $(du -sh pallolaatat-ulos | cut -f1)"
 
       - name: Vie laatat ämpäriin
@@ -109,7 +115,8 @@ jobs:
             --exclude '*' --include '*.jpg' --no-progress \
             --content-type image/jpeg --cache-control 'public, max-age=31536000, immutable'
           # Luettelo viimeisenä: peli koettaa sen olemassaoloa ennen laattojen käyttöä.
-          aws s3 cp pallolaatat-ulos/laatat.json "s3://${R2_BUCKET}/${kansio}laatat.json" \
+          # Osa-alueen ajo ei kirjoita luetteloa (koko maailman ajo omistaa sen).
+          [ -z "${{ inputs.alue }}" ] && aws s3 cp pallolaatat-ulos/laatat.json "s3://${R2_BUCKET}/${kansio}laatat.json" \
             --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
             --no-progress --content-type application/json --cache-control 'public, max-age=3600'
           echo "Viety: ${kansio} (tasot ${{ inputs.min }}–${{ inputs.max }})"
