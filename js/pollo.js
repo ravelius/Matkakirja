@@ -2437,6 +2437,7 @@ class Pollo {
      * jälkeen (ks. siivoa), jotta oikea ylivuoto ei jää huomaamatta.
      */
     this.paivitaYlivuoto();
+    this.mittaaYlivuotoMyohemmin();
     if (ennen) {
       const liikkuneet = [];
       vanhat.forEach((k, i) => {
@@ -2488,8 +2489,25 @@ class Pollo {
   paivitaYlivuoto() {
     const pino = this.pino;
     if (!pino || !this.pinoKehys) return;
-    const yli = (pino.scrollHeight ?? 0) - (pino.clientHeight ?? 0) > 1;
+    // Piilotettu kehys mittaa nollaa: silloin ei ole ylivuotoa.
+    const yli = !this.pinoKehys.hidden && (pino.scrollHeight ?? 0) - (pino.clientHeight ?? 0) > 1;
     this.pinoKehys.classList.toggle('pollo-kuplapino-yli', yli);
+  }
+
+  /**
+   * MITTAUS UUDESTAAN LIIKKEEN JÄLKEEN (omistajan havainto 4.9.2026:
+   * "pulun ensimmäisessä puhekuplassa näkyy häivytys heti yläreunassa
+   * mutta se häviää kun tulee lisää kuplia"). Ensimmäisellä kuplalla ei
+   * ole FLIP-siirtoa eikä siis transitionend-mittausta, ja saapumis-
+   * animaation (pollo-vihje-saapuu) aikana vieritysalue näytti
+   * vuotavan yli — häivytys jäi päälle. Nyt jokainen lisäys mittaa
+   * uudestaan animaation päätyttyä.
+   */
+  mittaaYlivuotoMyohemmin() {
+    const doc = this.doc ?? globalThis.document;
+    const nyt = () => this.paivitaYlivuoto();
+    if (typeof doc?.defaultView?.requestAnimationFrame === 'function') doc.defaultView.requestAnimationFrame(nyt);
+    setTimeout(nyt, PINON_NOUSU_MS + 80);
   }
 
   /** Kehys piiloon, kun viimeinenkin kupla on poistunut. */

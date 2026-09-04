@@ -195,35 +195,12 @@
               <span class="kehittaja-kytkin-nimi">kysymykset</span>
               <span class="kehittaja-kytkin-tila">heti</span>
             </button>
-            <!-- Siirtymämusiikki (omistajan tilaus 2.9.2026): kolmen
-                 raidan olemassaolo ämpärissä yhdellä rivillä. Napautus
-                 kysyy tilanteen uudelleen (HEAD), joten kesken
-                 istunnon viety raita näkyy heti. Rivi ei ole kytkin
-                 vaan mittari — siksi ei aria-pressediä. -->
-            <button id="kehittaja-siirtymamusiikki-btn" class="ghost kehittaja-kytkin"
-                    type="button">
-              <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18V6.5l9-2V16"/><circle cx="7" cy="18" r="2"/><circle cx="16" cy="16" r="2"/></svg></span>
-              <span class="kehittaja-kytkin-nimi">siirtymämusiikki</span>
-              <span class="kehittaja-kytkin-tila laaja">jalan ? laiva ? lento ? keksinnot ?</span>
-            </button>
-            <!-- Aikajanalinssi (omistajan tilaus 2.9.2026): ensimmäinen
-                 aikajana, keksinnöt Euroopassa. Käynnistin on toistaiseksi
-                 täällä; pelillinen ovi päätetään myöhemmin. -->
-            <button id="kehittaja-aikajana-btn" class="ghost kehittaja-kytkin"
-                    type="button" aria-pressed="false">
-              <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><path d="M12 7.5V12l3 2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2"/></svg></span>
-              <span class="kehittaja-kytkin-nimi">aikajana: keksinnöt</span>
-              <span class="kehittaja-kytkin-tila">pois</span>
-            </button>
-            <!-- Varamusiikki: syntetisoitu kevyt kuvio silloin kun
-                 oikeaa raitaa ei vielä ole. OLETUS POIS (omistajan
-                 sanatarkka rajaus 2.9.2026). -->
-            <button id="kehittaja-varamusiikki-btn" class="ghost kehittaja-kytkin"
-                    type="button" aria-pressed="false">
-              <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 14.5c1.6-4 3.2-6 4.8-6s3.2 6 4.8 6 3.2-4 4.8-4"/><path d="M4 18.5h16"/></svg></span>
-              <span class="kehittaja-kytkin-nimi">varamusiikki</span>
-              <span class="kehittaja-kytkin-tila">pois</span>
-            </button>
+            <!-- Siirtymämusiikin mittari, aikajanalinssin kytkin ja
+                 varamusiikki poistettiin rattaasta 4.9.2026 (omistaja:
+                 "kehittäjätilan rattaasta voi ottaa tuon linssin,
+                 siirtymämusiikin ja varamusiikin pois"). Linssi
+                 käynnistyy pelissä linssivalitsimesta; js/main.js:n
+                 käsittelijät ovat null-turvallisia. -->
             <!-- Yhden rivin vihje: mittarin kytkentä kertoo tuloksensa
                  tässä ("laita kartta näkyviin" / "lataa sivu uudelleen"),
                  ja generointi sen, lähtikö haku. -->

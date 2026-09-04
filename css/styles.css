@@ -18959,7 +18959,15 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
    * kasvaa napista ylöspäin ja jättää ruudun yläkolmanneksen vapaaksi.
    * Ylivuoto ei katoa: häivytys ja vieritys hoitavat pidemmät sarjat.
    */
-  max-height: min(60vh, 34rem);
+  /*
+   * KAHDEKSAN RIVIN KATTO (omistaja 4.9.2026: *"noin 8 tekstirivin
+   * korkeudella puhekuplan yläreuna alkaa muuttua näkymättömäksi. ja
+   * pelaaja voisi skrollata puhekuplia ylös ja alas, jos ne eivät mahdu
+   * tuon 8 rivin sisään"*). Rivi on 0.92 rem × 1.35 ≈ 1.24 rem, joten
+   * kahdeksan riviä kuplien pehmusteineen on noin 12.5 rem; yli jäävä
+   * osa häipyy yläreunasta (.pollo-kuplapino-yli) ja on vieritettävissä.
+   */
+  max-height: min(60vh, 12.5rem);
   overflow-y: auto;
   overscroll-behavior: contain;
   /* Kärki ja varjo mahtuvat: leikkaava overflow söisi ne muuten. */
@@ -18976,7 +18984,7 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
  * silti kolme tavallista kuplaa.
  */
 @media (max-width: 599px) {
-  .pollo-kuplapino { max-height: min(52vh, 24rem); }
+  .pollo-kuplapino { max-height: min(52vh, 12.5rem); }
 }
 
 /*

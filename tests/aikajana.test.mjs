@@ -1254,7 +1254,7 @@ test('välinäytöksen laatikko on avauksen tyyliperhettä ja pulun kuplien alla
   assert.match(metodi('avaaAvausjakso'), /this\.sammutaLyhdyt = sytytaLyhdyt\(laatikko, \{ reducedMotion: this\.reducedMotion \}\);/);
   assert.match(metodi('puraAvaus'), /this\.sammutaLyhdyt\?\.\(\);/);
   // Havainnekuva valokeilassa: pelkkä kuva -paneeli ilman laatikkoa, reunat läpinäkyviksi maskilla (ei suodatin).
-  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child,[\s\S]*?mask-image: radial-gradient\(ellipse 52% 52% at 50% 50%, #000 46%, rgba\(0, 0, 0, 0\.72\) 64%, rgba\(0, 0, 0, 0\.26\) 84%, transparent 100%\);/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child,[\s\S]*?mask-image: radial-gradient\(ellipse 50% 50% at 50% 50%, #000 44%, rgba\(0, 0, 0, 0\.72\) 62%, rgba\(0, 0, 0, 0\.24\) 82%, transparent 97%\);/);
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio:has\(> \.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child\) \{\n  border-color: transparent;\n  background: transparent;\n  box-shadow: none;\n\}/);
   // Tausta himmenee KEVYESTI eikä mustaan: valot näkyvät laatikon takaa.
   const alfa = Number(lohko.match(/\.aikajana-valinaytos-peite \{[\s\S]*?rgba\(6, 4, 3, ([\d.]+)\)/)[1]);
