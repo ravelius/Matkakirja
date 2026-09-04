@@ -132,6 +132,7 @@ import { asetaKuva } from './media.js';
 import { sfx } from './sound.js';
 import { hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream } from './ambience-stream.js';
 import { stopDiaryVoice } from './luenta.js';
+import { pysaytaLinssiluenta, soitaLinssiluenta } from './linssipuhe.js';
 import { pysaytaLukija } from './lukija.js';
 import { esilataaKuvat } from './ui-apurit.js';
 import { avaaTiedeliite, suljeTiedeliite } from './tiedeliite.js';
@@ -1267,6 +1268,7 @@ class Aikajana {
 
   alusta() {
     this.pysayta();
+    pysaytaLinssiluenta(this.ui);
     this.loppu = false;
     this.tila = { vuosi: this.kaari.alku, i: -1, viive: 0 };
     for (const valo of this.valot) this.asetaValonTila(valo, false, false);
@@ -1425,6 +1427,8 @@ class Aikajana {
     this.paikkarivi.textContent = [t.vuosi, paikka(t)].filter(Boolean).join(' · ');
     this.vaihdaPaneeli(t);
     this.asettele();
+    // Kertoja lukee vuoden, keksijän ja keksinnön (js/linssipuhe.js).
+    soitaLinssiluenta(this.ui, t);
   }
 
   /**
@@ -1834,6 +1838,7 @@ class Aikajana {
 
   pura() {
     this.pysayta();
+    pysaytaLinssiluenta(this.ui);
     suljeTiedeliite(this.ui);
     this.lopetaMusiikki();
     this.irrotaRaahaus?.();

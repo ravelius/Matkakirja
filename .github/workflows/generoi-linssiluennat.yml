@@ -1,0 +1,182 @@
+# Generoi keksintölinssin luennat ja vie ne ämpäriin.
+#
+# Omistajan tilaus 4.9.2026, sanatarkasti: *"Generoi selostajan
+# äänellä jokaiseen kohtaan vuosiluku, keksijän nimi ja keksintö, eli
+# se tulisi aina Keksinnön vaihtoessa lukijan äänellä."* Pelin puoli on
+# valmis (js/linssipuhe.js, kytketty js/aikajana.js:n sytyta-kohtaan)
+# ja odottaa tiedostoja; työn tekee tools/generoi-linssiluennat.mjs.
+#
+#   26 luentaa  aikajana/keksinnot/puhe/<muotokuvan runko>.mp3
+#               esim. 1769-james-watt.mp3 → "1769. James Watt.
+#               Höyrykoneen lauhdutin."
+#
+# TIEDOSTONIMI TULEE DATASTA. Runko on pysäkin muotokuvan runko
+# (js/linssipuhe.js luennanRunko) — vuosi yksin ei riittäisi, koska
+# kaaressa on kolme vuoden 1895 pysäkkiä (Marconi, Röntgen, Lumière).
+# Peli ja työkalu lukevat saman funktion, joten nimi ei voi eriytyä.
+#
+# JOKAINEN PYSÄKKI ON OMA MAKSULLINEN KUTSUNSA. Ajo tekee kuitenkin
+# HEADin julkiseen osoitteeseen ennen kutsua ja OHITTAA sen, mikä on jo
+# ämpärissä: uuden pysäkin lisääminen kaareen maksaa yhden kutsun eikä
+# kahtakymmentäkuutta. Syötteellä `pysakit` rajataan vuosiin, ja
+# uudelleenäänitys tehdään työkalun `--pakota`-lipulla käsin (sitä ei
+# ole tässä syötteenä tahallaan: yhden vahingossa jätetyn valintaruudun
+# hinta olisi koko kaari uudelleen).
+#
+# KÄSIAJETTAVA (workflow_dispatch), sama syy kuin
+# generoi-tehosteet.yml:llä ja generoi-luennat.yml:llä: generointi
+# maksaa rahaa, ja luenta on sanasta sanaan sidottu pelidataan — se
+# äänitetään vasta kun teksti on mainissa.
+#
+# TÄMÄ AJO EI COMMITTOI MITÄÄN. Luennat ovat mediaa ja media kuuluu
+# ämpäriin, ei repoon (Raamattu: "kaikki aina ämpäriin"). Työkalu
+# kirjoittaa media/-kansioon, joka on .gitignoressa — se tarkistetaan
+# koneellisesti ennen ensimmäistäkään maksullista kutsua — ja vie
+# tiedostot sieltä ämpärin aikajana/keksinnot/puhe/-kansioon samalla
+# aws s3 cp -komennolla kuin vie-aanet.yml. Peli hakee tasan sen polun,
+# joten luennat kuuluvat pelissä heti ajon jälkeen ilman julkaisua.
+#
+# KUUNTELE LUENNAT AJON JÄLKEEN. Ajo tarkistaa koneellisesti keston ja
+# tason (−17 LUFS, sama perhe kuin ämpärin muut kertojaluennat), mutta
+# ei sitä, taivuttaako malli nimen oikein tai jääkö vuosiluvun ja nimen
+# väliin tauko — se kuullaan.
+#
+# FFMPEG asennetaan apt:llä: ubuntu-latest-ajurissa sitä ei ole, ja
+# hiljaisuuden leikkaus, hännän paddaus ja tason mittaus ovat sen
+# varassa.
+#
+# Salaisuudet ovat tämän repon Actions-asetuksissa eivätkä koskaan
+# täällä: ELEVEN_API_KEY (sama kuin generoi-luennat.yml ja
+# generoi-tehosteet.yml) sekä neljä R2-salaisuutta (samat kuin
+# vie-aanet.yml ja peilaa.yml):
+#   R2_ACCOUNT_ID  R2_ACCESS_KEY_ID  R2_SECRET_ACCESS_KEY  R2_BUCKET
+# Avain ei tulostu lokiin: työkalu ei tulosta sitä eikä tämä ajo echoa
+# sitä — GitHub peittää secretit joka tapauksessa, mutta siihen ei nojata.
+
+name: Generoi linssiluennat
+
+on:
+  workflow_dispatch:
+    inputs:
+      pysakit:
+        description: >-
+          Vuodet pilkuin TAI välilyönnein (esim. "1769,1783" tai
+          "1769 1783"). Tyhjä = koko kaari, 26 pysäkkiä. HUOM: vuosi
+          1895 valitsee kaikki kolme sen vuoden pysäkkiä.
+        required: false
+        default: ''
+      kuiva:
+        description: >-
+          Kuiva ajo: tulostaa tekstit ja kohdetiedostot, ei kutsu APIa
+          eikä vie ämpäriin.
+        required: true
+        type: choice
+        default: 'ei'
+        options: ['ei', 'kyllä']
+
+permissions:
+  contents: read
+
+# Yksi ajo kerrallaan: kaksi rinnakkaista kirjoittaisi ämpärin samoihin
+# avaimiin. Oma ryhmänsä — tämä koskee kansiota aikajana/keksinnot/puhe/.
+concurrency:
+  group: generoi-linssiluennat
+  cancel-in-progress: false
+
+jobs:
+  generoi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      # Vienti on työkalun sisällä, mutta salaisuudet tulevat tästä —
+      # samat nimet ja sama endpoint-tyyli kuin vie-aanet.yml:ssä.
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      # R2 ei hyväksy AWS:n uudempia tarkistussummaotsakkeita, jotka
+      # aws-cli 2.23:sta alkaen lähtevät oletuksena mukaan.
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Puuttuva salaisuus tulisi muuten vastaan vasta ElevenLabsin
+      # 401:nä tai aws-clin "Invalid endpoint" -virheenä — ja pahimmassa
+      # järjestyksessä vasta sen jälkeen, kun kutsut on jo maksettu.
+      # Arvoja ei tulosteta, vain onko ne asetettu.
+      - name: Tarkista että salaisuudet ovat tallessa
+        if: ${{ inputs.kuiva != 'kyllä' }}
+        env:
+          AVAIN: ${{ secrets.ELEVEN_API_KEY }}
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$AVAIN" ]                        || puuttuu="$puuttuu ELEVEN_API_KEY"
+          [ -n "${R2_ACCOUNT_ID:-}" ]            || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ]        || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ]    || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "${R2_BUCKET:-}" ]                || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            echo "Lisää ne: Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          echo "Kaikki viisi salaisuutta löytyvät."
+
+      - name: Asenna ffmpeg
+        if: ${{ inputs.kuiva != 'kyllä' }}
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          ffmpeg -version | head -1
+
+      # Kuiva ajo ensin AINA: jokainen pysäkki ja sen luettava teksti
+      # tulostuvat lokiin ennen kuin yhtäkään maksullista kutsua on
+      # tehty. Väärä vuosiluku syötteessä kaataa ajon tässä.
+      # Syöte kulkee ympäristömuuttujan kautta, ei ${{ }}-sijoituksena
+      # komentoriville: käsin kirjoitettu kenttä ei saa päätyä shellin
+      # tulkittavaksi. Lainausmerkitön $PYSAKIT hajoaa välilyönneistä
+      # useaksi argumentiksi, ja työkalu kerää ne kaikki --pysakit-
+      # lipun perään (pilkkukin kelpaa erottimeksi).
+      - name: Kuiva ajo (tekstit ja kohdetiedostot)
+        env:
+          PYSAKIT: ${{ inputs.pysakit }}
+        run: |
+          set -euo pipefail
+          if [ -n "$PYSAKIT" ]; then
+            node tools/generoi-linssiluennat.mjs --kuiva --pysakit $PYSAKIT
+          else
+            node tools/generoi-linssiluennat.mjs --kuiva
+          fi
+
+      - name: Generoi luennat ja vie ämpäriin
+        if: ${{ inputs.kuiva != 'kyllä' }}
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          PYSAKIT: ${{ inputs.pysakit }}
+        run: |
+          set -euo pipefail
+          if [ -n "$PYSAKIT" ]; then
+            node tools/generoi-linssiluennat.mjs --pysakit $PYSAKIT
+          else
+            node tools/generoi-linssiluennat.mjs
+          fi
+
+      # Vartija sille, mitä tämä ajo lupaa: repoon ei jää mitään.
+      - name: Varmista ettei repoon jäänyt mitään
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::Ajo muutti työhakemistoa — media kuuluu ämpäriin, ei repoon."
+            git status --porcelain
+            exit 1
+          fi
+          echo "Työhakemisto on siisti."
