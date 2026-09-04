@@ -1,3 +1,99 @@
+## 4.9.2026 20.25 EEST — KUVAPUTKI → FABLE: hyväksyntäauditointi korjasi 82 puuttunutta R2-toimitusta
+
+Omistajan huomio 24 hyväksytystä kohtaamiskuvasta paljasti, että arviointisivun D1-hyväksynnät ja toimitusseuranta eivät olleet kaikissa kategorioissa synkronissa. Koko arviointitila käytiin läpi kuva kuvalta ja sitä verrattiin julkiseen peli-R2:een.
+
+Puuttuvina löytyivät **66 hyväksyttyä Historian hetket -kuvaa** ja **16 hyväksyttyä Loistoaika-kuvaa**. Kaikki 82 vietiin nyt alla oleviin uusiin, ennen siirtoa 404:n palauttaneisiin avaimiin. Aiempiin tiedostoihin ei koskettu. Takaisinluenta varmisti jokaiselle HTTP 200:n, `image/jpeg`-tyypin ja paikalliseen hyväksyttyyn JPG:hen täsmäävän SHA-256:n. Yhdessä jo R2:ssa olleiden kuvien kanssa Historian hetket + Loistoaika + hyväksytty eläinkuva täsmäsivät auditoinnissa **128/128**.
+
+### Historian hetket: 66 uutta R2-avainta
+
+- `kohtaamiset/historian-hetket/hetki-marie-curie-hangaari-1898-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-marie-curie-hangaari-1898-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-newton-prisma-1666-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-newton-prisma-1666-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-franklin-leija-1752-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-lavoisier-laboratorio-1780-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-lavoisier-laboratorio-1780-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-jenner-rokotus-1796-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-jenner-rokotus-1796-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-faraday-luento-1831-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-faraday-luento-1831-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-pasteur-pullot-1862-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-pasteur-pullot-1862-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-mendelejev-kortit-1869-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-mendelejev-kortit-1869-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-edison-lamppu-1879-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-edison-lamppu-1879-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-fleming-malja-1928-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-fleming-malja-1928-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-gutenberg-paino-1454-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-gutenberg-paino-1454-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-brunel-thames-tunnel-1827-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-brunel-thames-tunnel-1827-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-pietari-perustus-1703-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-pietari-perustus-1703-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-lehti-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-lehti-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-vesuvius-pompeji-79-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-vesuvius-pompeji-79-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-konstantinopoli-1453-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-konstantinopoli-1453-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-lehti-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-lehti-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-michelangelo-sikstus-1510-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-michelangelo-sikstus-1510-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-beethoven-yhdeksas-1824-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-beethoven-yhdeksas-1824-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-shakespeare-globe-1599-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-shakespeare-globe-1599-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-mozart-wien-1786-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-mozart-wien-1786-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-luther-wittenberg-1517-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-luther-wittenberg-1517-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-olympia-ateena-1896-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-olympia-ateena-1896-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-sibelius-finlandia-1899-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-sibelius-finlandia-1899-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-lahi-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-kauko-photo-v4.jpg`
+- `kohtaamiset/historian-hetket/hetki-lumiere-le-radical-1895-lehti-photo-v4.jpg`
+
+### Loistoaika: 16 uutta R2-avainta
+
+- `kohtaamiset/ihmeet/ihme-artemiin-temppeli-loistoaika-v2.jpg`
+- `kohtaamiset/ihmeet/ihme-bamiyan-loistoaika-v2.jpg`
+- `kohtaamiset/ihmeet/ihme-bastilji-loistoaika-v2.jpg`
+- `kohtaamiset/ihmeet/ihme-colosseum-loistoaika-v2.jpg`
+- `kohtaamiset/ihmeet/ihme-crystal-palace-loistoaika-v2.jpg`
+- `kohtaamiset/ihmeet/ihme-delfoi-loistoaika-v2.jpg`
+- `kohtaamiset/ihmeet/ihme-faros-loistoaika-v2.jpg`
+- `kohtaamiset/ihmeet/ihme-gizan-pyramidi-loistoaika-v2.jpg`
+- `kohtaamiset/ihmeet/ihme-halikarnassoksen-mausoleumi-loistoaika-v2.jpg`
+- `kohtaamiset/ihmeet/ihme-hippodromi-loistoaika-v2.jpg`
+- `kohtaamiset/ihmeet/ihme-karthagon-satama-loistoaika-v2.jpg`
+- `kohtaamiset/ihmeet/ihme-olympieion-loistoaika-v2.jpg`
+- `kohtaamiset/ihmeet/ihme-pergamonin-alttari-loistoaika-v2.jpg`
+- `kohtaamiset/ihmeet/ihme-templo-mayor-loistoaika-v2.jpg`
+- `kohtaamiset/ihmeet/ihme-theodosiuksen-muurit-loistoaika-v2.jpg`
+- `kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg`
+
+Muut tarkistetut käyttäjän hyväksymät ryhmät olivat jo oikeissa R2-poluissa: 24 Kohtaamiskuvaa, 39 Karttanostoa, 4 Miniatyyriä, 4 lehtikuvaa Historian hetket -polussa, 55 keksintöaikajanan kuvaa, 4 Isoisän valokuvaa, 2 Kuvituskuvaa ja 2 Tekstuuria. Eläintäyn tornjakinpentu oli jo oikeassa `kohtaamiset/elaimet/`-polussa. Kytke nyt 66 + 16 yllä lueteltua hyväksyttyä kuvaa peliin; käytä arviointikatalogin nykyisiä kuvatekstejä, lähderivejä ja aihekohtaisia metatietoja.
+
 ## 4.9.2026 20.20 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 47–49 yksityisessä arvioinnissa
 
 Seuraavat kolme tutkimukseen perustuvaa täydentävää skandaalikuvaa on generoitu kokonaan uusina ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle. Tuotantojulkaisu on versio 98 ja tila `succeeded`. Kaikki ovat 1536 × 1024 JPG-kuvia. **Niitä ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.**
