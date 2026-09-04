@@ -106,7 +106,7 @@ import { fileURLToPath } from 'node:url';
 
 import { LINSSI } from '../js/linssit/keksinnot.js';
 import {
-  KAAREN_AVAIMET, kaarenPuheet, luennanPuhe, luennanRunko, luennanTeksti, luennanTiedosto,
+  KAAREN_AVAIMET, kaarenPuheet, luennanPuhe, luennanRunko, luennanTeksti, luennanTiedosto, puheeksi,
 } from '../js/linssipuhe.js';
 import { leikkaaHiljaisuusSuodatin } from './generoi-tehosteet.mjs';
 import { julkinenJuuri, tulkitseEbur128, tulkitseLoudnorm } from './generoi-siirtymamusiikki.mjs';
@@ -278,7 +278,8 @@ export function valitsePysakit(kaari, valinta = []) {
       runko: puhe.runko,
       nimi: puhe.nimi,
       teksti: puhe.teksti,
-      puhe: puhe.teksti,
+      // Vuosiluvut sanoina mallille (js/linssipuhe.js puheeksi).
+      puhe: puheeksi(puhe.teksti),
     });
   }
   const loydetyt = new Set(tyot.map((tyo) => tyo.vuosi));
@@ -490,6 +491,8 @@ async function main() {
       + `${tyot.length} luentaa, ääni Viisas Kertoja, malli ${MALLI}.`);
     for (const tyo of tyot) {
       console.log(`${AMPARIN_KANSIO}/${tyo.nimi}  ·  "${tyo.teksti}"`);
+      // Mallille lähtevä muoto, jos se eroaa (vuodet sanoina, tauot).
+      if (tyo.puhe && tyo.puhe !== tyo.teksti) console.log(`    mallille: "${tyo.puhe}"`);
     }
     console.log(`Kuiva ajo valmis: ${tyot.length} kohdetta, `
       + `${new Set(tyot.map((t) => t.nimi)).size} eri tiedostonimeä.`);

@@ -632,8 +632,21 @@
 .aikajana-ilmio-sivu.esilla > .aikajana-ilmiokuva:only-child,
 .aikajana-ilmio-sivu.poistuu > .aikajana-ilmiokuva:only-child {
   background: transparent;
-  -webkit-mask-image: radial-gradient(ellipse 58% 58% at 50% 50%, #000 42%, rgba(0, 0, 0, 0.72) 62%, rgba(0, 0, 0, 0.28) 82%, transparent 100%);
-  mask-image: radial-gradient(ellipse 58% 58% at 50% 50%, #000 42%, rgba(0, 0, 0, 0.72) 62%, rgba(0, 0, 0, 0.28) 82%, transparent 100%);
+  /*
+   * Joka reuna häipyy nollaan (omistaja 4.9.2026: *"Saisiko tuon
+   * havainnekuvan joka reunan häipymään, jotta neliöraja ei näkyisi
+   * missään? Riittää, kun aivan ääri reuna häipyy."*): kaksi
+   * suoraviivaista maskia leikataan yhteen, joten reunaviivaa ei jää
+   * mihinkään ja kuvan keskusta on täysin peittävä.
+   */
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, #000 11%, #000 89%, transparent),
+    linear-gradient(to bottom, transparent, #000 13%, #000 87%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent, #000 11%, #000 89%, transparent),
+    linear-gradient(to bottom, transparent, #000 13%, #000 87%, transparent);
+  mask-composite: intersect;
 }
 .aikajana-ilmio-teksti { padding: 0.5rem 0.7rem 0.65rem; }
 /*
