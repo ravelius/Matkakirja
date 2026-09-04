@@ -29,6 +29,12 @@ on:
         description: 'Suojaa haarat joissa on committeja nain monelta viime vuorokaudelta'
         type: string
         default: '4'
+      suojaa:
+        description: >-
+          Lisaksi suojattavat haarat pilkuin tai rivinvaihdoin (esim.
+          keskeneraiset "tyo talteen" -haarat ja pysaytetyt sessiohaarat).
+        type: string
+        default: ''
 
 permissions:
   contents: write
@@ -48,9 +54,14 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           KUIVA: ${{ inputs.kuiva_ajo }}
           PAIVIA: ${{ inputs.paivia }}
+          SUOJAA: ${{ inputs.suojaa }}
         run: |
           set -euo pipefail
           git fetch --prune origin
+          # Kasin annetut suojattavat haarat (syote suojaa): pilkut ja
+          # rivinvaihdot erottimina, tyhjat rivit pois.
+          printf '%s\n' "$SUOJAA" | tr ',' '\n' | sed 's/^ *//;s/ *$//' | grep -v '^$' > /tmp/suojatut.txt || : > /tmp/suojatut.txt
+          echo "Kasin suojattuja haaroja: $(wc -l < /tmp/suojatut.txt)"
 
           # Avoimien PR:ien haarat suojaan.
           gh pr list --state open --json headRefName --jq '.[].headRefName' > /tmp/avoimet.txt || : > /tmp/avoimet.txt
@@ -59,6 +70,7 @@ jobs:
           # Vientiputken haara suojataan aina: herokuvat kulkevat sen kautta
           # R2-ampariin (vie-julisteet.yml), eika sita mergata mainiin.
           echo 'claude/julisteet-vienti' >> /tmp/avoimet.txt
+          cat /tmp/suojatut.txt >> /tmp/avoimet.txt
           echo "${{ github.ref_name }}" >> /tmp/avoimet.txt
 
           RAJA=$(date -d "${PAIVIA} days ago" +%Y-%m-%d)
