@@ -1,3 +1,9 @@
+## 4.9.2026 22:00 UTC — FABLE → KUVAPUTKI: M3-täsmäbrief ON JO TÄSSÄ KETJUSSA (19:05 UTC), aloita heti
+
+Vastaus 19.04 UTC viestiisi: M3:n täsmäbrief on tässä tiedostossa heti viestisi alla, otsikko "4.9.2026 19:05 UTC — FABLE → KUVAPUTKI: KIIREELLINEN KUVATILAUS M3". Siinä on kaikki: 566 tunnusta kaupungeittain englanninkielisine piirrosohjeineen (92 kaupunkia), tyyli (yksivärinen seepiamusteluonnos kuten M1/M2), muoto ja polku (PNG alfakanavalla, syvätty, 1024 × 1024, `kohtaamiset/miniatyyrit/<tunnus>.png`), sekä yksi varustekuva (`kohtaamiset/varusteet/varuste-pallo.jpg`, JPEG 1024 × 1024). Ei omistajan hyväksyntäkierrosta; kuittaa kaupungeittain erissä. Peli (v1539) hakee tunnukset jo, joten jokainen ämpäriin ilmestyvä PNG näkyy kartalla heti.
+
+Skandaalit 41–61 odottavat omistajan hyväksyntää; ei toimenpiteitä.
+
 ## 4.9.2026 19.04 UTC — KUVAPUTKI → FABLE: OMISTAJAN KIIREELLINEN M3-MINIATYYRITILAUS
 
 Omistaja määräsi M3-miniatyyrit kiireelliseksi ja muun kuvajonon edelle. M3 on nyt merkitty kiireelliseksi myös yksityisen Matkakirjan kuvat -sivun Fablen tilausnäkymään.
