@@ -100,13 +100,19 @@ export async function avaaPallo(ui) {
   kuori.setAttribute('role', 'dialog');
   kuori.setAttribute('aria-modal', 'true');
   kuori.setAttribute('aria-label', 'Karttapallo');
+  /*
+   * EI OTSIKKORIVIÄ (omistaja 4.9.2026 ilta: "Ota se karttapallo pois
+   * otsikkoriviltä, kun se menee matkakirjan logon kanssa päällekkäin.
+   * Sitä ei tarvita ollenkaan"). Kuori alkaa pelin ylärivin alta, joten
+   * logo ja ylärivin napit jäävät näkyviin; pallon päällä kelluu vain
+   * Sulje-nappi oikeassa yläkulmassa.
+   */
   kuori.innerHTML = `
-    <div class="pallo-ylarivi">
-      <div class="pallo-otsikko">Karttapallo <span class="pallo-selite">Pyöritä ja napauta kohtaa, johon haluat</span></div>
-      <button type="button" class="pallo-sulje" aria-label="Sulje" title="Sulje">✕</button>
-    </div>
+    <button type="button" class="pallo-sulje" aria-label="Sulje" title="Sulje">✕</button>
     <div class="pallo-kotelo"></div>
     <p class="pallo-tila">Ladataan palloa…</p>`;
+  const ylarivi = document.querySelector('.topbar');
+  if (ylarivi) kuori.style.top = `${Math.round(ylarivi.getBoundingClientRect().bottom)}px`;
   document.body.appendChild(kuori);
   ui.pallo = kuori;
   document.body.classList.add('pallo-auki');

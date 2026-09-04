@@ -23160,28 +23160,14 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   transition: opacity 420ms ease;
 }
 .pallo-kuori.esilla { opacity: 1; }
-.pallo-ylarivi {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.7rem 1rem 0.5rem;
-  border-bottom: 1px solid rgba(217, 161, 59, 0.3);
-}
-.pallo-otsikko {
-  font-family: var(--font-luku, Georgia, serif);
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-.pallo-selite {
-  margin-left: 0.8rem;
-  font-family: var(--font-ui, system-ui, sans-serif);
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: #a8987a;
-}
+/* Otsikkorivi poistui 4.9.2026 (omistaja: menee logon kanssa
+ * päällekkäin, ei tarvita); kuori alkaa ylärivin alta (js/pallo.js
+ * asettaa top) ja Sulje kelluu oikeassa yläkulmassa. */
 .pallo-sulje {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.8rem;
+  z-index: 2;
   min-height: 0;
   width: 2.2rem;
   height: 2.2rem;
