@@ -56,9 +56,9 @@ jobs:
           import { createHash } from 'node:crypto';
 
           const kuvat = [
-            ['1W4MCQB_VVY0Bv5LDOvvLbgcNvb0DJN5T', 'kohtaamiset/isoisa/isoisa-lahto-1873-kulunut-v1.jpg', '8324cb0369011204b8484fbf0c29c97ff577725f074a2373656e32adbe95b218', 1536, 960],
-            ['1A7MG6BPhI1rYRfqTsRf9yplhp_-TvCyn', 'tekstuurit/paperi-vanha-v1.jpg', 'ecff0759a64d3cfbc10c8dd608677decbf698745a82ae3ef99590efd222bf6a3', 1024, 1280],
-            ['1lo-HotH6dFnun18VujYZQQ6bZjJEaNJV', 'tekstuurit/paperi-vanha-vaaka-v1.jpg', 'fce524657f10bd49c7a4be1cc414e4d43431dc7cb418aa5cb36ccc01f740037f', 2048, 1024],
+            ['1W4MCQB_VVY0Bv5LDOvvLbgcNvb0DJN5T', 'kohtaamiset/isoisa/isoisa-lahto-1873-kulunut-v1.jpg', 'b32f4bca3b502039a49095ea637225045b9d4d8a56f4d23de6e274f4d1324684', 1536, 960, '8324cb0369011204b8484fbf0c29c97ff577725f074a2373656e32adbe95b218'],
+            ['1A7MG6BPhI1rYRfqTsRf9yplhp_-TvCyn', 'tekstuurit/paperi-vanha-v1.jpg', 'e23c1366b140e1d4952a22798402ffcc23ec1cf0a6fe2ca47f50f7b1a1dd8a9d', 1024, 1280, null],
+            ['1lo-HotH6dFnun18VujYZQQ6bZjJEaNJV', 'tekstuurit/paperi-vanha-vaaka-v1.jpg', 'b3e0c985e8d6c23986536eabc28e93f1815b1d04d4e67aac867f0b91b214dc0c', 2048, 1024, null],
           ];
 
           function jpegMitat(data) {
@@ -78,14 +78,18 @@ jobs:
             throw new Error('JPEG-mittoja ei löytynyt');
           }
 
-          for (const [id, polku, odotettuSha, leveys, korkeus] of kuvat) {
+          for (const [id, polku, odotettuSha, leveys, korkeus, sallittuVanhaSha] of kuvat) {
             const julkinen = `${process.env.JULKINEN}/${polku}?t=${Date.now()}`;
             const vanha = await fetch(julkinen, { headers: { 'Cache-Control': 'no-cache' } });
             if (vanha.ok) {
               const vanhaData = Buffer.from(await vanha.arrayBuffer());
               const vanhaSha = createHash('sha256').update(vanhaData).digest('hex');
-              if (vanhaSha !== odotettuSha) throw new Error(`${polku}: nimiristiriita, R2:ssa eri sisältö`);
-              console.log(`${polku}: sama hyväksytty versio oli jo R2:ssa`);
+              if (vanhaSha !== odotettuSha && vanhaSha !== sallittuVanhaSha) {
+                throw new Error(`${polku}: nimiristiriita, R2:ssa eri sisältö`);
+              }
+              console.log(vanhaSha === odotettuSha
+                ? `${polku}: sama hyväksytty versio oli jo R2:ssa`
+                : `${polku}: sama kuva ilman fyysistä ICC-lohkoa päivitetään toimitusmuotoon`);
             } else if (vanha.status !== 404) {
               throw new Error(`${polku}: R2-esitarkistus HTTP ${vanha.status}`);
             }
