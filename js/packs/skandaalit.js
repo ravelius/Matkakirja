@@ -77,6 +77,10 @@
  *            ovat kuvaputken toimittamia sanasta sanaan (posti
  *            4.9.2026 12:05 UTC), joten selite on nyt 2–3 virkettä ja
  *            lähderivi muotoa "Matkakirjan havainnekuva. Faktat: …".
+ *            Saman päivän toinen posti (15:56 EEST) toi erän kuvat
+ *            11–13: vedenpaisumuksen-todistaja, kuninkaanhovin-
+ *            kasikirjoitukset ja kelley-alkemistihuijari saivat kukin
+ *            yhden alkion `kuvat`-listan samalla kaavalla.
  *   visa     minivisa: kysymys, kolme vaihtoehtoa, oikean indeksi.
  *            Oikean paikan jakauma tasattiin koko erän yli
  *            (28/28/27), ettei se painotu yhteen indeksiin.
@@ -816,6 +820,21 @@ export const SKANDAALIT = {
         + 'kuva. Erehdys jäi siis kahteen kertaan tieteen nimistöön. Fossiili on '
         + 'yhä Teylerin museossa alkuperäisessä vitriinissään.',
       lahde: 'en-Wikipedia "Andrias scheuchzeri". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-vedenpaisumuksen-todistaja-photo-v1.jpg`,
+          selite: 'Kaivertajan terä pysähtyy, kun Johann Jakob Scheuchzer '
+            + 'osoittaa kivessä kalloa ja nimeää sen vedenpaisumuksessa '
+            + 'kuolleeksi ihmiseksi. Kahdeksankymmentäviisi vuotta myöhemmin '
+            + 'Cuvier näkee samassa hahmossa jättiläissalamanterin — erehdys '
+            + 'syntyy katsojan varmuudesta, ei muuttuneesta kivestä.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Swiss National Museum '
+            + '— A Witness to the Deluge; fossiilin muoto, vuoden 1726 '
+            + 'kuparipiirros ja Scheuchzerin näköisyys ovat arkistolähteistä, '
+            + 'kaivertajan läsnäolo ja keskustelu dramatisoituja.',
+          url: 'https://blog.nationalmuseum.ch/en/2024/07/a-witness-to-the-deluge/',
+        },
+      ],
       visa: {
         kysymys: 'Mikä Scheuchzerin \'vedenpaisumuksen todistaja\' todellisuudessa '
           + 'oli?',
@@ -872,6 +891,22 @@ export const SKANDAALIT = {
         + 'paremmin kuin runojen tekijät.',
       lahde: 'en-Wikipedia "Manuscripts of Dvůr Králové and Zelená Hora". '
         + 'Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-kuninkaanhovin-kasikirjoitukset-photo-v1.jpg`,
+          selite: 'Nuori latoja jää oviaukkoon kuuntelemaan, kun 36-vuotias '
+            + 'Masaryk pyytää kollegoitaan asettamaan kansallisen ylpeyden '
+            + 'todisteiden jälkeen. Käsikirjoitusten aitouden epäily teki '
+            + 'professorista hetkeksi vihollisen, mutta juuri huoneen hiljainen '
+            + 'pelko kertoo, miksi kysymys oli niin vaikea esittää.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: National Museum, Praha '
+            + '— T. G. Masaryk ja Athenaeum-lehden käsikirjoituskiista 1886; '
+            + 'Masarykin näköisyys ja käsikirjoituksen mittakaava ovat valokuva- '
+            + 'ja esinereferensseistä, toimitushuoneen kohtaaminen on '
+            + 'dramatisoitu.',
+          url: 'https://muzeum3000.nm.cz/zajimavosti/vynaseni-do-nebes-vlaceni-blatem-t-g-masaryk',
+        },
+      ],
       visa: {
         kysymys: 'Kuka johti taistelua käsikirjoitusten paljastamiseksi '
           + 'väärennöksiksi 1886?',
@@ -922,6 +957,21 @@ export const SKANDAALIT = {
         + 'kolme alkemistista tutkielmaa. Kelleyn nimiin pannaan myös enkelien '
         + 'kieli, jota kutsutaan enokiaaniksi.',
       lahde: 'en-Wikipedia "Edward Kelley". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-kelley-alkemistihuijari-photo-v1.jpg`,
+          selite: 'Nuori linnanvartija yrittää olla katsomatta tyhjää upokasta, '
+            + 'kun keisarin lähettiläs odottaa Edward Kelleyltä luvattua kultaa. '
+            + 'Kelleyn vankeus alkoi kielletyn kaksintaistelun jälkeen, mutta '
+            + 'portit pysyivät kiinni myös siksi, ettei Rudolf II halunnut '
+            + 'päästää ‘kullantekijää’ pakoon ennen tuloksia.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Křivoklátin valtionlinna '
+            + '— Edward Kelley; Huderka-torni, vaatetus ja henkilön näköisyys '
+            + 'ovat lähdeankkuroituja, epäonnistunut upokas ja lähettilään '
+            + 'odotus dramatisoituja.',
+          url: 'https://www.hrad-krivoklat.cz/cs/o-hradu/vyznamne-osobnosti/edward-kelley',
+        },
+      ],
       visa: {
         kysymys: 'Miksi keisari Rudolf II vangitutti alkemisti Edward Kelleyn?',
         vaihtoehdot: [
