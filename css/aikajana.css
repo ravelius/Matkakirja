@@ -639,14 +639,12 @@
    * suoraviivaista maskia leikataan yhteen, joten reunaviivaa ei jää
    * mihinkään ja kuvan keskusta on täysin peittävä.
    */
-  -webkit-mask-image:
-    linear-gradient(to right, transparent, #000 11%, #000 89%, transparent),
-    linear-gradient(to bottom, transparent, #000 13%, #000 87%, transparent);
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(to right, transparent, #000 11%, #000 89%, transparent),
-    linear-gradient(to bottom, transparent, #000 13%, #000 87%, transparent);
-  mask-composite: intersect;
+  /* Enemmän ovaali (omistaja 4.9.2026: "havainnekuvan reunoja voi
+     häivyttää lisää, niin että muodosta tulee enemmän ovaali"):
+     ellipsi, jonka säde ulottuu juuri reunan keskikohtaan, joten
+     jokainen reuna ja kulma on läpinäkyvä ja keskusta täysin peittävä. */
+  -webkit-mask-image: radial-gradient(ellipse 52% 52% at 50% 50%, #000 46%, rgba(0, 0, 0, 0.72) 64%, rgba(0, 0, 0, 0.26) 84%, transparent 100%);
+  mask-image: radial-gradient(ellipse 52% 52% at 50% 50%, #000 46%, rgba(0, 0, 0, 0.72) 64%, rgba(0, 0, 0, 0.26) 84%, transparent 100%);
 }
 .aikajana-ilmio-teksti { padding: 0.5rem 0.7rem 0.65rem; }
 /*

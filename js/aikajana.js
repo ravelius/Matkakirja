@@ -1660,13 +1660,24 @@ class Aikajana {
     return !a.paused || a.readyState < 3;
   }
 
+  /*
+   * KELLO SEISOO LUENNAN AJAN (omistaja 4.9.2026: *"vuosiluvut voisi
+   * pysähtyä siksiaikaa pyörimästä kun lukija puhuu ja sitten hieman
+   * ennen vaihtoa kelautua tarvittavalla nopeudella seuraavan
+   * vuosilukuun"*). Luennan aikana tauko pidetään vakiona
+   * (LUENNAN_TAUKOVARA_MS) ja hiipimä nollassa; kun ääni päättyy,
+   * jäljellä on juuri vara, jonka aikana ykkösrulla hiipii nollasta
+   * täyteen hiipimään ja kello kiihtyy siitä seuraavaan vuoteen.
+   */
   pidataTaukoaLuennalle() {
     if (!(this.tila.viive > 0) || !this.luentaSoi()) return;
     if (performance.now() - (this.luennanAlku ?? 0) > LUENNAN_PISIN_MS) return;
-    if (this.tila.viive < LUENNAN_TAUKOVARA_MS) {
-      const lisa = LUENNAN_TAUKOVARA_MS - this.tila.viive;
-      this.tila = { ...this.tila, viive: LUENNAN_TAUKOVARA_MS, viiveTaysi: (this.tila.viiveTaysi ?? this.tila.viive) + lisa };
-    }
+    this.tila = {
+      ...this.tila,
+      vuosi: Math.floor(this.tila.vuosi),
+      viive: LUENNAN_TAUKOVARA_MS,
+      viiveTaysi: LUENNAN_TAUKOVARA_MS,
+    };
   }
 
   kehys(nyt) {

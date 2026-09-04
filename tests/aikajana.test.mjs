@@ -977,7 +977,7 @@ test('ennakko liikuttaa vain kortteja; lamput, kello ja paneeli vaihtuvat syttym
   // Kehys laskee saapumisajan ja aloittaa ennakon vain kun sitä ei ole.
   assert.match(MOOTTORI, /if \(syttyi !== null\) this\.sytyta\(syttyi\);\s*\n\s*else if \(!this\.luentaSoi\(\)\) this\.tarkistaEnnakko\(tahti\);/);
   // Selostaja saa puhua loppuun: tauko pidätetään luennan ajan (omistaja 4.9.2026).
-  assert.match(MOOTTORI, /pidataTaukoaLuennalle\(\) \{[\s\S]{0,600}viive: LUENNAN_TAUKOVARA_MS/);
+  assert.match(MOOTTORI, /pidataTaukoaLuennalle\(\) \{[\s\S]{0,700}vuosi: Math\.floor\(this\.tila\.vuosi\),\s*\n\s*viive: LUENNAN_TAUKOVARA_MS,\s*\n\s*viiveTaysi: LUENNAN_TAUKOVARA_MS,/);
   assert.match(MOOTTORI, /this\.pidataTaukoaLuennalle\(\);\s*\n\s*const \{ tila, syttyi, loppu \} = aikajanaAskel/);
   assert.match(MOOTTORI, /tarkistaEnnakko\(tahti\) \{[\s\S]{0,900}aikaSeuraavaan\(this\.tila, this\.tapahtumat, tahti, KARUSELLIN_ENNAKKO_MS \+ AIKAJANA_ALIASKEL_MS\)/);
   assert.match(MOOTTORI, /tarkistaEnnakko\(tahti\) \{[\s\S]{0,900}if \(kesto > 0\) this\.aloitaEnnakko\(kohde, kesto\);/);
@@ -1239,7 +1239,7 @@ test('välinäytöksen laatikko on avauksen tyyliperhettä ja pulun kuplien alla
   assert.match(AIKAJANA_CSS, /\.aikajana-avaus-laatikko::after \{[\s\S]*?animation: aikajana-lepatus-b 5\.3s ease-in-out infinite;/);
   assert.match(AIKAJANA_CSS, /\.aikajana-avaus-laatikko::before, \.aikajana-avaus-laatikko::after \{ animation: none; \}/);
   // Havainnekuva valokeilassa: pelkkä kuva -paneeli ilman laatikkoa, reunat läpinäkyviksi maskilla (ei suodatin).
-  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child,[\s\S]*?mask-image:\s*\n\s*linear-gradient\(to right, transparent, #000 11%, #000 89%, transparent\),\s*\n\s*linear-gradient\(to bottom, transparent, #000 13%, #000 87%, transparent\);\s*\n\s*mask-composite: intersect;/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child,[\s\S]*?mask-image: radial-gradient\(ellipse 52% 52% at 50% 50%, #000 46%, rgba\(0, 0, 0, 0\.72\) 64%, rgba\(0, 0, 0, 0\.26\) 84%, transparent 100%\);/);
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio:has\(> \.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child\) \{\n  border-color: transparent;\n  background: transparent;\n  box-shadow: none;\n\}/);
   // Tausta himmenee KEVYESTI eikä mustaan: valot näkyvät laatikon takaa.
   const alfa = Number(lohko.match(/\.aikajana-valinaytos-peite \{[\s\S]*?rgba\(6, 4, 3, ([\d.]+)\)/)[1]);
