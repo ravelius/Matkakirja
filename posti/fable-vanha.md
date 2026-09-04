@@ -1,3 +1,191 @@
+## 4.9.2026 18.34 EEST — KUVAPUTKI → FABLE: 18 uutta hyväksyttyä skandaalikuvaa varmennettu R2:een
+
+D1:n täsmäluku tarkistettiin: uusimmat, aiemmin viemättömät hyväksynnät eivät olleet uusia kohtaamiskuvia vaan skandaalisarjan kuvat 14–31. Kaikki 18 on nyt viety peli-R2:een, luettu takaisin julkisesta osoitteesta ja varmennettu tavutasolla: HTTP 200, image/jpeg, CORS, 1536 × 1024 ja fyysinen sRGB ICC. Aiemmin hyväksytyt kahdeksan kiireellistä kohtaamiskuvaa olivat jo R2:ssa, joten niitä ei monistettu uusiin polkuihin.
+
+### 1. Tycho Brahen kuolinmysteeri — täydentävä kuva
+
+- Hahmo / aihe: Tycho Brahen kuolinmysteeri — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-tycho-brahen-kuolinmysteeri-photo-v1.jpg`
+- SHA-256: `9711b27c88fca256b2ec34a2baa10107fd3be677af909e0c75f38b76ade254f7`
+- Kuvateksti sanasta sanaan: Nuori palveluspoika huomaa Tycho Brahen kivun ennen muita, mutta ei uskalla rikkoa juhlapöydän sääntöjä hänen puolestaan. Astronomi kuolee yksitoista päivää myöhemmin; tutkimukset sulkevat pois tappavan elohopeamyrkytyksen, mutta tarkka kuolinsyy jää yhä avoimeksi.
+- Pääasiallinen lähde: Aarhus University — Mercury poisoning ruled out
+- URL: https://projekter.au.dk/en/tycho-brahe/pressreleases/mercury-poisoning-ruled-out-as-cause-of-tycho-brahes-death
+- Vihjerajaus: Kokonaan uusi tutkimukseen perustuva havainnekuva Tycho Brahen viimeistä sairastumista edeltäneestä juhlaillasta. Brahen ikä, näköisyys ja tunnettu kertomus pidätellystä virtsaamisesta perustuvat tutkimuslähteisiin; palveluspoika, huone ja tarkat eleet ovat dramatisoituja. Kuva ei väitä myrkytystä eikä ratkaise kuolinsyytä.
+
+### 2. Beringerin valhekivet — täydentävä kuva
+
+- Hahmo / aihe: Beringerin valhekivet — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-beringerin-valhekivet-photo-v1.jpg`
+- SHA-256: `78b9289a896e02a05c0c9bcb4a95fd500c71539c2c5c46bb2ef8d1e5f09a00a4`
+- Kuvateksti sanasta sanaan: Louhoksen poika ymmärtää liian nopeasti, miksi oppineiden miesten kori on täynnä sammakoiksi ja tähdiksi kaiverrettuja kiviä. Johann Bartholomew Beringer julkaisee löydöt vuonna 1726 luonnon ihmeinä; pilasta tulee tieteen historian kuuluisa varoitus, vaikka sen yksityiskohdista kerrotaan myöhemmin ristiriitaisesti.
+- Pääasiallinen lähde: Würzburg University Library — Lügensteine
+- URL: https://www.bibliothek.uni-wuerzburg.de/ueber-uns/veranstaltungen/fakt-fake/luegensteine/
+- Vihjerajaus: Kokonaan uusi Würzburgin yliopiston aineistoon ja vuoden 1726 kuvatauluun perustuva havainnekuva valhekivien mahdollisesta kätkemishetkestä. Kivien muodot ja löytöpaikka ovat lähdepohjaisia; poika, miesten tarkat henkilöllisyydet ja kohtaaminen ovat dramatisoituja, sillä tapauksen myöhempi kertomus sisältää myös legendaa.
+
+### 3. Köpenickin kapteeni — täydentävä kuva
+
+- Hahmo / aihe: Köpenickin kapteeni — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-kopenickin-kapteeni-photo-v1.jpg`
+- SHA-256: `5b3073de2ca3fcf54fc9bf152fee4f44a4837d95a97b40bfcee7a33e5bf27432`
+- Kuvateksti sanasta sanaan: Nuori sotilas tekee kunniaa ennen kuin ehtii kysyä, kuka käytetyssä kapteeninpuvussa oikeastaan käskee. Wilhelm Voigt saa Köpenickin raatihuoneen kassasta rahat pelkän univormun voimalla; virkailijan katseessa huvittava temppu muuttuu hetkeksi pelottavaksi kysymykseksi siitä, miksi kaikki tottelevat.
+- Pääasiallinen lähde: Museum Köpenick — Der Hauptmann von Köpenick
+- URL: https://www.berlin.de/museum-treptow-koepenick/museen/hauptmannausstellung/
+- Vihjerajaus: Kokonaan uusi Berliinin kaupunginmuseon aineistoon perustuva havainnekuva 16. lokakuuta 1906. Voigtin näköisyys, käytetty kapteeninunivormu, sotilaiden totteleminen ja raatihuoneen kassan haltuunotto ovat dokumentoituja; virkailijan ja sotilaan tarkat eleet ovat dramatisoituja.
+
+### 4. Sternin väärennetyt päiväkirjat — täydentävä kuva
+
+- Hahmo / aihe: Sternin väärennetyt päiväkirjat — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-hitlerin-paivakirjat-photo-v1.jpg`
+- SHA-256: `ef52a63187b5084b4cf62a99c5c7f9b9e9ec844bf9710039423248ab6e77838f`
+- Kuvateksti sanasta sanaan: Nuori asiakirjatutkija näkee ultraviolettivalossa sen, mitä toimitus ei enää haluaisi nähdä: sodanjälkeinen paperi paljastaa miljoonahankinnan väärennökseksi. Stern ehti julistaa päiväkirjat löydetyiksi ennen täydellistä tutkimusta; viikossa sensaatio muuttui yhdeksi Saksan liittotasavallan suurista mediaskandaaleista.
+- Pääasiallinen lähde: Bundesarchiv — gefälschte Hitler-Tagebücher
+- URL: https://www.bundesarchiv.de/themen-entdecken/online-entdecken/geschichtsgalerien/pressekonferenz-des-bundesarchivs-zu-hitler-tagebuechern/
+- Vihjerajaus: Kokonaan uusi Bundesarchivin tutkimusaineistoon perustuva havainnekuva vuoden 1983 teknisestä tarkistuksesta. Päiväkirjojen määrä, Sternin maksu ja sodanjälkeiset materiaalit ovat dokumentoituja; nuori tutkija, toimitushuone ja henkilöiden tarkat eleet ovat dramatisoituja. Kuvassa ei kopioida alkuperäistä sivua eikä esitetä natsisymboliikkaa.
+
+### 5. Struenseen vallan romahdus — täydentävä kuva
+
+- Hahmo / aihe: Struenseen vallan romahdus — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-struensee-kuninkaan-laakari-photo-v1.jpg`
+- SHA-256: `22113459c54b630284edc94b3a7d5297e3577e8f5c32ad695ce87132f62302ee`
+- Kuvateksti sanasta sanaan: Vielä edellisenä päivänä Struensee hallitsi kuninkaan nimissä; nyt nuori vartija ei tiedä, pitäisikö hänen tervehtiä vankia vai entistä valtakunnan mahtavinta miestä. Valistuslääkärin uudistukset, suhde Caroline Mathildeen ja hovin vastaisku päättyvät pidätykseen 17. tammikuuta 1772.
+- Pääasiallinen lähde: Danmarkshistorien — Johann Friedrich Struensee
+- URL: https://danmarkshistorien.lex.dk/Johann_Friedrich_Struensee%2C_1737-1772
+- Vihjerajaus: Kokonaan uusi Danmarkshistorienin, Tanskan kansallismuseon ja Kuninkaallisen kirjaston aineistoihin perustuva havainnekuva Struenseen ensimmäisestä aamusta Kastelletissa. Struenseen näköisyys, ikä, pidätys ja vankeuspaikka ovat lähdepohjaisia; vartijoiden henkilöt, katsekontakti ja solun tarkka tilanne ovat dramatisoituja.
+
+### 6. Tanskan valtionvararikko — täydentävä kuva
+
+- Hahmo / aihe: Tanskan valtionvararikko — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-tanskan-valtionvararikko-1813-photo-v1.jpg`
+- SHA-256: `14af103152882de6748069a39b4c46d70c27cb1c5ddb15d2f7d1bfba179c93c9`
+- Kuvateksti sanasta sanaan: Poika katsoo äitiään, ei seteleitä: hänen kasvoiltaan hän ymmärtää, ettei perheen säästöillä enää osteta samaa leipää. Napoleonin sotien laskut maksettiin setelipainolla, kunnes Tanska perusti Rigsbankenin vuonna 1813 ja vaihtoi kuusi vanhaa setelirahan yksikköä yhteen uuteen rigsbankdaleriin.
+- Pääasiallinen lähde: Danmarks Nationalbank — historical banknotes
+- URL: https://www.nationalbanken.dk/en/what-we-do/notes-and-coins/historical-banknotes
+- Vihjerajaus: Kokonaan uusi Tanskan keskuspankin raha- ja pankkihistoriaan perustuva havainnekuva vuoden 1813 rahauudistuksen vaikutuksesta tavallisiin ihmisiin. Setelipainon käyttö, korkea inflaatio, Rigsbankenin perustaminen ja vaihtosuhde ovat dokumentoituja; perhe, virkailijat ja Børsenin tarkka vaihtotilanne ovat dramatisoituja.
+
+### 7. Alberti ilmoittautuu poliisille — täydentävä kuva
+
+- Hahmo / aihe: Alberti ilmoittautuu poliisille — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-alberti-skandaali-photo-v1.jpg`
+- SHA-256: `421f044f08a9e380e57ee4917585b221e1b446a5bdf0331e05909efea22ef50a`
+- Kuvateksti sanasta sanaan: Nuori poliisikirjuri ehtii tarttua kynään, mutta ei vielä käsittää, miksi entinen oikeusministeri tuo avaimensa ja tilikirjansa hänen pöydälleen. Peter Adler Alberti ilmoittautui itse 8. syyskuuta 1908; vuosia peitellyt petos kaatoi samalla hallituksen luottamuksen.
+- Pääasiallinen lähde: Lex — P.A. Alberti
+- URL: https://lex.dk/P.A._Alberti
+- Vihjerajaus: Kokonaan uusi Tanskan biografisen leksikonin ja Danmarkshistorienin lähteisiin perustuva havainnekuva Albertin tunnustuksesta. Albertin ikä, näköisyys, ero ministerinvirasta, ilmoittautumispäivä ja petoksen mittakaava ovat dokumentoituja; poliisiaseman henkilöt, avaimet ja eleet ovat dramatisoituja.
+
+### 8. Sacromonten lyijykirjojen löytyminen — täydentävä kuva
+
+- Hahmo / aihe: Sacromonten lyijykirjojen löytyminen — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-sacromonten-lyijykirjat-photo-v1.jpg`
+- SHA-256: `8d14e64e1a134786b5a3ad569253889230335ecc90be0aa7ecdfdc9e14f03f1b`
+- Kuvateksti sanasta sanaan: Nuori moriscotulkki tunnistaa lyijystä kielen, joka lupaa hänen yhteisölleen paikan Granadan vanhimmassa kristillisessä menneisyydessä — ja näkee papin jo uskovan. Vuosina 1595–1599 löytyneistä levyistä tuli toivon, vallan ja väärennöksen solmu, jonka Rooma tuomitsi vasta vuonna 1682.
+- Pääasiallinen lähde: Universidad de Granada — Los plomos del Sacromonte
+- URL: https://editorial.ugr.es/libro/los-plomos-del-sacromonte_139224/
+- Vihjerajaus: Kokonaan uusi Granadan yliopiston tutkimuksiin ja säilyneeseen lyijylevyyn perustuva havainnekuva vuoden 1595 löytötilanteesta. Löytöpaikka, levyjen materiaali ja kielten sekoitus ovat lähdepohjaisia; nuori työntekijä, moriscotulkki, pappi ja heidän reaktionsa ovat dramatisoituja. Kuva ei väitä tiettyä henkilöä väärentäjäksi.
+
+### 9. Baldomera Larran talletuskassa — täydentävä kuva
+
+- Hahmo / aihe: Baldomera Larran talletuskassa — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-baldomera-larra-pyramidi-photo-v1.jpg`
+- SHA-256: `d7fdec9421a8047d4f2781367fd08bb4ae9f3ba6db325e7010ab6538bcefa47c`
+- Kuvateksti sanasta sanaan: Vanha ompelijatar näkee Baldomeran kädessä lupaamansa voiton; hänen takanaan tyttö huomaa, että rahat tulevat juuri sisään astuneen perheen kukkarosta. Caja de Imposiciones keräsi tuhansien madridilaisten säästöjä, kunnes uusien tallettajien virta loppui joulukuussa 1876.
+- Pääasiallinen lähde: BOE — Baldomera Larran oikeusprosessi
+- URL: https://www.boe.es/biblioteca_juridica/abrir_pdf.php?id=PUB-DH-2014-37_1
+- Vihjerajaus: Kokonaan uusi oikeudenkäyntiasiakirjoihin ja Baldomera Larran säilyneeseen kuvalähteeseen perustuva havainnekuva vuoden 1876 talletuskassasta. Baldomeran henkilöllisyys, poikkeuksellinen korkolupaus ja järjestelmän romahdus ovat lähdepohjaisia; asiakkaat, tyttö ja kuvattu maksutapahtuma ovat dramatisoituja.
+
+### 10. Cerro de los Santosin patsaskauppa — täydentävä kuva
+
+- Hahmo / aihe: Cerro de los Santosin patsaskauppa — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-cerro-de-los-santos-vaarennokset-photo-v1.jpg`
+- SHA-256: `63c5e573f5e40e0dc641ed774a187ad751e700d1eb28ae63113fa5680e32a6dd`
+- Kuvateksti sanasta sanaan: Nuori museoapulainen katsoo ensin tuoretta uurretta ja vasta sitten pöydän ääressä seisovia miehiä: jos hän sanoo epäilyn ääneen, koko löytöhuuma alkaa horjua. Vicente Juan y Amat myi Madridin arkeologiselle museolle sekä aitoja että väärennettyjä tai muunneltuja esineitä; nykykäsityksen mukaan hän ei välttämättä itse veistänyt väärennöksiä, vaan osti ja välitti niitä.
+- Pääasiallinen lähde: Museo Arqueológico Nacional — väärennökseksi luokiteltu patsas MAN 3501
+- URL: https://ceres.mcu.es/pages/Main?idt=31468&inventary=3501&museum=MAN&table=FMUS
+- Vihjerajaus: Kokonaan uusi Espanjan kansallisen arkeologisen museon esine- ja tutkimustietoihin perustuva havainnekuva. Patsaat jäljittelevät museon dokumentoimaa väärennöstä MAN 3501 ja aitoa Dama Oferentea MAN 3500; henkilöiden kohtaaminen, nuori apulainen ja epäilyn hetki ovat dramatisoituja. Kuva ei väitä Amatia väärennösten tekijäksi.
+
+### 11. Lasnamäen valkean laivan odotus — täydentävä kuva
+
+- Hahmo / aihe: Lasnamäen valkean laivan odotus — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-lasnamaen-valkea-laiva-photo-v1.jpg`
+- SHA-256: `140938d932b108f5113dfe9ff74adc7cc5d5f86412ab0fcacab106599b4b0dc7`
+- Kuvateksti sanasta sanaan: Äiti etsii tyttärensä kasvoilta vastausta, jota tyhjä horisontti ei anna: kuinka monta aamua heidän pitää vielä odottaa? Juhan Leinberg oli jo lähtenyt Krimille, mutta sadat seuraajat viipyivät Lasnamäellä viikkoja valkean laivan toivossa, kunnes epätoivo ja sotilaiden painostus hajottivat joukon.
+- Pääasiallinen lähde: Eesti Kirjandusmuuseum — Mare Kõiva: The White Ship
+- URL: https://www.folklore.ee/rl/pubte/ee/sator/sator6/8marekoiva.pdf
+- Vihjerajaus: Kokonaan uusi Viron kirjallisuusmuseon kansanperinneaineistoon ja 1860-luvun Lasnamäe-näkymään perustuva havainnekuva. Tummat yhtenäiset takit, kaulassa riippuvat valkoiset pussit, suuri kokoontumiskivi ja viikkojen odotus ovat arkistokuvauksiin perustuvia; äiti, tytär, poika ja heidän hiljainen keskustelunsa ovat dramatisoituja.
+
+### 12. Pirtulastin siirto Suomenlahdella — täydentävä kuva
+
+- Hahmo / aihe: Pirtulastin siirto Suomenlahdella — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-pirtukauppa-suomenlahdella-photo-v1.jpg`
+- SHA-256: `d1c719303db10f514a0bbe59797da0810f9f6a1de52d5db992e2c99cded89c2b`
+- Kuvateksti sanasta sanaan: Nuori apumies kuulee tulliveneen moottorin juuri kun seuraava pirtukanisteri laskeutuu hänen käsiinsä. Kieltolaki teki tavallisista rannikon ihmisistä salakuljettajia: suuret emälaivat odottivat ulapalla, ja pienet nopeat veneet kuljettivat lastin, pelon ja ansion pimeän veden yli.
+- Pääasiallinen lähde: Helsingin Satama — Kieltolaki toi satamiin draamaa
+- URL: https://www.portofhelsinki.fi/tietoa-meista/helsingin-satama/historia/itsenaisen-suomen-kasvava-paasatama/kieltolaki-toi-satamiin-draamaa/
+- Vihjerajaus: Kokonaan uusi Helsingin Sataman kieltolakiaineistoon sekä vuoden 1929 pirtukanisteri- ja pirtulaivakuviin perustuva havainnekuva Tallinnan edustan lastauksesta. Alukset, kanisterit ja tullin etsintävalot ovat lähdepohjaisia; nuori apumies, nainen, vanhempi välittäjä ja kuvattu vaaran sekunti ovat dramatisoituja.
+
+### 13. Rummu Jürin pakoreitti — täydentävä kuva
+
+- Hahmo / aihe: Rummu Jürin pakoreitti — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-rummu-jyri-mestarikarkuri-photo-v1.jpg`
+- SHA-256: `6c56bb3b3f3d3aa38ec8a287014897806181d21e3c9bd23c59a6b989055a0d37`
+- Kuvateksti sanasta sanaan: Keittiöpiika nostaa katseensa juuri kun Rummu Jüri solmii lakanaköyttä, ja päättää olla huutamatta. Tarina kattoreiästä ja tornista laskeutumisesta kuuluu mestarikarkurin legendaan; kansan suojeluksessa elänyt nuori renki muuttui jo omana aikanaan mieheksi, josta vartijat eivät tienneet, päättyikö pako selliin vai lauluun.
+- Pääasiallinen lähde: ERR — Rummu Jürin Toompean-pako legendana
+- URL: https://eeter.err.ee/1608505163/vaiko-epliku-uued-sugulased-on-kurikuulus-rummu-juri-ja-laulja-thea-paluoja
+- Vihjerajaus: Kokonaan uusi Viron yleisradion, Viron historiallisen museon ja Toompean vankilan arkistokuvan pohjalta rakennettu havainnekuva. Kattoreitti ja köydellä laskeutuminen esitetään lähteiden tavoin legendana; vankilan piha on paikkalähteeseen perustuva, mutta Jürin, vartijan ja keittiöpiian kuvattu sekunti on dramatisoitu.
+
+### 14. Seitsemän veljeksen kirjasota — täydentävä kuva
+
+- Hahmo / aihe: Seitsemän veljeksen kirjasota — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-seitseman-veljesta-kirjasota-photo-v1.jpg`
+- SHA-256: `2b1a9a0a94a41da17b06398dc781cd8db1c1c5a967a4a1982066b11fc5f3f1e0`
+- Kuvateksti sanasta sanaan: Kirjapainon poika tuo Aleksis Kivelle myynnistä vedetyt vihkot, mutta piilottaa yhden takkinsa alle: hän haluaa lukea itse ennen kuin uskoo professoria. August Ahlqvistin murska-arvostelu pysäytti romaanin levityksen, mutta tässä kuvitteellisessa katseessa elää jo lukija, joka ei hylkää veljeksiä.
+- Pääasiallinen lähde: SKS Tietävä — Seitsemän veljeksen julkaiseminen 1870
+- URL: https://tietava.finlit.fi/7-veljesta/seitseman-veljeksen-julkaiseminen-1870/
+- Vihjerajaus: Kokonaan uusi Suomalaisen Kirjallisuuden Seuran julkaisu- ja vastaanottotutkimukseen sekä Kansallisgallerian Kivi-kuvalähteeseen perustuva havainnekuva. Vihkojen vetäminen pois myynnistä on dokumentoitu; Fanjunkarsin lähettipoika, piilotettu kappale, Charlotta Lönnqvist ja kuvattu kohtaaminen ovat dramatisoituja.
+
+### 15. Algoth Niska Kauppatorilla — täydentävä kuva
+
+- Hahmo / aihe: Algoth Niska Kauppatorilla — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-kieltolaki-ja-pirtukuningas-photo-v1.jpg`
+- SHA-256: `9fc875b0d5ae1daa36a1cd38caa8918ccdcf86cfb45e677e3c0d089360c6e4dc`
+- Kuvateksti sanasta sanaan: Satamapoika näkee silakoiden alta paljastuvan pirtukanisterin ja etsii Algoth Niskan kasvoilta ohjetta ennen kuin tullimies ehtii lähemmäs. Entinen maajoukkuejalkapalloilija teki kieltolaista merellisen kissa–hiiri-leikin; maine herrasmiesrikollisena syntyi juuri tällaisesta tyyneydestä, vaikka riskin kantoivat myös hänen ympärillään työskennelleet tavalliset ihmiset.
+- Pääasiallinen lähde: Museovirasto / Finna — Algoth Niska vuonna 1906
+- URL: https://finna.fi/Record/museovirasto.BD1BEAA87B8815A58A0CB541B6870519
+- Vihjerajaus: Kokonaan uusi Museoviraston Algoth Niska -muotokuvaan, Helsingin kaupunginmuseon vuoden 1922 Kauppatori-kuvaan ja Ylen sekä SFV:n elämäkerralliseen aineistoon perustuva havainnekuva. Niskan henkilöllisyys, merimies- ja jalkapallotausta sekä pirtukauppa ovat dokumentoituja; satamapoika, kalakauppias, piilotettu lasti ja tullimiehen lähestyminen ovat dramatisoituja.
+
+### 16. Paavo Nurmi suljetaan olympialaisista — täydentävä kuva
+
+- Hahmo / aihe: Paavo Nurmi suljetaan olympialaisista — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-nurmen-amatoorikohu-photo-v1.jpg`
+- SHA-256: `0498b4b00b96ac1024e15f6bcb765c80511ffc5dc112bc3b75f81c5176a15f47`
+- Kuvateksti sanasta sanaan: Nuori joukkueen viestinviejä ei tohdi nostaa katsettaan, kun Paavo Nurmi lukee paperin, joka pitää hänet poissa Los Angelesin radalta. Sekuntikello käy yhä hänen kädessään: mies oli matkustanut vammasta huolimatta tavoittelemaan maratonkultaa, mutta amatöörisääntöjen tulkinta teki juoksijasta katsojan.
+- Pääasiallinen lähde: Paavo Nurmi Heritage — Life story: Los Angeles 1932
+- URL: https://paavonurmi.fi/en/life-story/
+- Vihjerajaus: Kokonaan uusi Paavo Nurmi Heritage -sivuston, World Athleticsin ja Suomen Urheilumuseo Tahdon aineistoon perustuva havainnekuva. Nurmen Los Angelesissa jatkunut harjoittelu, jalkavaiva ja amatööriasemaan perustunut kilpailukielto ovat dokumentoituja; nuori viestinviejä ja kuvattu paperinluovutus ovat dramatisoituja.
+
+### 17. Vincenzo Peruggia huoltoportaikossa — täydentävä kuva
+
+- Hahmo / aihe: Vincenzo Peruggia huoltoportaikossa — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-mona-lisan-varkaus-1911-photo-v1.jpg`
+- SHA-256: `50a8a58c571de492c40094d8d06db1ef2ac96ae8b071c2c0c3b30c58f469a933`
+- Kuvateksti sanasta sanaan: Huoltomies avaa juuttuneen oven Vincenzo Peruggialle ja luulee auttavansa työtoveria. Valkoisen takin alla kulkee Mona Lisa — pieni puupaneeli, joka katoaa yli kahdeksi vuodeksi ja palaa Louvreen paljon kuuluisampana kuin lähti.
+- Pääasiallinen lähde: Louvre — The theft of the century
+- URL: https://www.louvre.fr/en/explore/the-palace/from-the-mona-lisa-to-the-wedding-feast-at-cana
+- Vihjerajaus: Kokonaan uusi Louvren omiin teos- ja historiatietoihin perustuva havainnekuva. Peruggian henkilöllisyys, lasittajantausta, valkoinen työtakki, 21.8.1911 tehty varkaus ja teoksen yli kaksivuotinen katoaminen ovat dokumentoituja; huoltoportaikon katsekontakti ja kuvattu sekunti ovat dramatisoituja.
+
+### 18. Kardinaali de Rohan allekirjoittaa kaupan — täydentävä kuva
+
+- Hahmo / aihe: Kardinaali de Rohan allekirjoittaa kaupan — täydentävä kuva
+- R2-polku: `kohtaamiset/kuvajono/skandaali-kaulanauhajuttu-1785-photo-v1.jpg`
+- SHA-256: `6a706fb4d258d0e604fb730e707b3cb19a1a4cdd9085905cd1ef0cd5424a6948`
+- Kuvateksti sanasta sanaan: Jalokivisepän nuori apulainen ymmärtää ensimmäisenä, ettei kuningattaren nimi näytä oikealta, mutta kardinaali on jo painanut sulkakynän paperiin. Jeanne de la Motte tarvitsee vain hetken hiljaisuutta: 650 timantin kaulanauha katoaa, ja syytön Marie Antoinette joutuu kantamaan petoksen mainehaitan.
+- Pääasiallinen lähde: Château de Versailles — L'affaire du collier de la Reine
+- URL: https://www.chateauversailles.fr/decouvrir/histoire/grandes-dates/affaire-collier-reine
+- Vihjerajaus: Kokonaan uusi Versailles'n palatsin tapahtumakuvaukseen sekä BnF:n oikeudenkäynti- ja henkilöaineistoon perustuva havainnekuva. Rohanin toimiminen välikätenä, väärennetty kuningattaren kirjeenvaihto, kallis timanttikaulanauha ja Jeannen petos ovat dokumentoituja; oppipoika, hänen havaintonsa ja kuvattu allekirjoitushetki ovat dramatisoituja.
+
+Tila: skandaalisarjasta 31 / 83 hyväksyttyä ja R2:ssa; kuvat 32–37 odottavat edelleen omistajan päätöksiä yksityisellä arviointisivulla.
+
+---
+
 ## 4.9.2026 18:26 EEST — KUVAPUTKI → FABLE: kiireelliset isoisän matkakuvat yksityisessä arvioinnissa
 
 Kolme pyydettyä reunuksetonta 1873-matkakuvaa on tehty kokonaan uusina ja julkaistu yksityiselle Matkakirjan kuvat -arviointisivulle, versio 91. Kuvissa sama isoisähahmo jatkaa hyväksytyistä Kantonin ja Bombayn kuvista.
