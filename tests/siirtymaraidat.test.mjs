@@ -160,8 +160,11 @@ test('"kaikki" on vain siirtymäryhmä — linssiraita pyydetään nimeltä', ()
 test('--kuiva ja --ei-vientia luetaan lipuiksi', () => {
   const liput = tulkitseArgumentit(['--laji', 'kaikki', '--kuiva', '--ei-vientia']);
   assert.equal(liput.virhe, undefined);
-  assert.deepEqual(liput, { laji: 'kaikki', kuiva: true, vienti: false });
+  assert.deepEqual(liput, { laji: 'kaikki', kuiva: true, vienti: false, moottori: 'eleven' });
   assert.equal(tulkitseArgumentit(['--laji', 'jalan']).vienti, true);
+  // Lyria-moottori (4.9.2026): oma pääte, ettei pelin raita korvaudu.
+  assert.equal(tulkitseArgumentit(['--laji', 'jalan', '--moottori', 'lyria']).moottori, 'lyria');
+  assert.match(tulkitseArgumentit(['--laji', 'jalan', '--moottori', 'suno']).virhe, /--moottori/);
 });
 
 /* --- 5. kytkentä peliin ja vaatimuksiin ---------------------------- */

@@ -154,6 +154,20 @@ if (process.argv[1] === TAMA && !process.env.NODE_USE_ENV_PROXY
 const OSOITE = 'https://api.elevenlabs.io/v1/music';
 const MALLI = 'music_v2';
 const MUOTO = 'mp3_44100_128';
+/*
+ * TOINEN MOOTTORI: LYRIA 3.5 (omistaja 4.9.2026 ilta Googlen julkaisusta:
+ * "Tätä voisi kokeilla kun pallo saatu valmiiksi" / "Tee se lyyria nyt kun
+ * odottelet"). Gemini API:n Interactions-rajapinta, malli lyria-3.5,
+ * avain GOOGLE_API_KEY. Lyria-raidat viedään OMALLA NIMELLÄ (pääte
+ * -lyria ennen .mp3), jotta ElevenLabsin raita jää peliin ja omistaja
+ * voi kuunnella molemmat rinnakkain; voittaja vaihdetaan erikseen.
+ */
+const LYRIA_OSOITE = 'https://generativelanguage.googleapis.com/v1beta/interactions';
+const LYRIA_MALLI = 'lyria-3.5';
+export const MOOTTORIT = ['eleven', 'lyria'];
+/** Raidan tiedostonimi moottorin mukaan: lyria saa oman päätteen. */
+export const raidanTiedosto = (raita, moottori) => (moottori === 'lyria'
+  ? raita.tiedosto.replace(/\.mp3$/, '-lyria.mp3') : raita.tiedosto);
 
 /*
  * Mallilta tilataan reilusti pidempi pätkä kuin looppi: leikkaus
@@ -338,13 +352,17 @@ export const LAJIT = {
 
 /** Komentoriviliput. Palauttaa `{ virhe }`, jos syöte ei kelpaa. */
 export function tulkitseArgumentit(argumentit) {
-  const liput = { laji: null, kuiva: false, vienti: true };
+  const liput = { laji: null, kuiva: false, vienti: true, moottori: 'eleven' };
   for (let i = 0; i < argumentit.length; i += 1) {
     const arg = argumentit[i];
     if (arg === '--laji') {
       liput.laji = argumentit[i + 1] ?? null;
       i += 1;
       if (!liput.laji) return { ...liput, virhe: '--laji ilman arvoa' };
+    } else if (arg === '--moottori') {
+      liput.moottori = argumentit[i + 1] ?? null;
+      i += 1;
+      if (!MOOTTORIT.includes(liput.moottori)) return { ...liput, virhe: `--moottori: ${MOOTTORIT.join('|')}` };
     } else if (arg === '--kuiva') {
       liput.kuiva = true;
     } else if (arg === '--ei-vientia') {
@@ -557,6 +575,42 @@ async function haeApista(raita, avain, kohde) {
   return data.length;
 }
 
+/**
+ * Lyria 3.5 Gemini API:n kautta. Vastaus on JSON, jonka steps[].content[]
+ * sisältää audio-lohkon base64-datana (mp3 oletuksena). Raita pyydetään
+ * instrumentaalina ja lyhyenä; loopin leikkaus ja tason normalisointi
+ * ovat samat kuin ElevenLabsilla.
+ */
+async function haeLyriasta(raita, avain, kohde) {
+  const sekunnit = Math.round(lahdeMs(raita) / 1000);
+  const vastaus = await fetch(LYRIA_OSOITE, {
+    method: 'POST',
+    headers: { 'x-goog-api-key': avain, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      model: LYRIA_MALLI,
+      input: `${raita.prompt} Instrumental only, absolutely no vocals or singing. `
+        + `A short cue of about ${sekunnit} seconds that could loop seamlessly.`,
+    }),
+    signal: AbortSignal.timeout(300000),
+  });
+  if (!vastaus.ok) {
+    throw new Error(`Lyria HTTP ${vastaus.status}: ${(await vastaus.text()).slice(0, 400)}`);
+  }
+  const json = await vastaus.json();
+  const lohkot = [];
+  const kerää = (x) => {
+    if (!x || typeof x !== 'object') return;
+    if (Array.isArray(x)) { x.forEach(kerää); return; }
+    if (x.type === 'audio' && typeof x.data === 'string') lohkot.push(x);
+    for (const v of Object.values(x)) if (v && typeof v === 'object') kerää(v);
+  };
+  kerää(json);
+  if (!lohkot.length) throw new Error(`Lyria: vastauksessa ei audio-lohkoa (${JSON.stringify(json).slice(0, 300)})`);
+  const data = Buffer.from(lohkot[0].data, 'base64');
+  writeFileSync(kohde, data);
+  return data.length;
+}
+
 /** Leikkaa looppi, normalisoi taso ja kirjoita mp3. */
 function leikkaaLooppi(lahde, kohde, raita, tyokansio) {
   const lahteenKesto = kestoSekunteina(lahde);
@@ -688,9 +742,11 @@ async function main() {
     }
   }
 
-  const avain = process.env.ELEVEN_API_KEY ?? process.env.ELEVENLABS_API_KEY;
+  const avain = liput.moottori === 'lyria'
+    ? (process.env.GOOGLE_API_KEY ?? process.env.GEMINI_API_KEY)
+    : (process.env.ELEVEN_API_KEY ?? process.env.ELEVENLABS_API_KEY);
   if (!liput.kuiva && !avain) {
-    console.error('ELEVEN_API_KEY puuttuu ympäristöstä — musiikkia ei voi generoida.');
+    console.error(`${liput.moottori === 'lyria' ? 'GOOGLE_API_KEY' : 'ELEVEN_API_KEY'} puuttuu ympäristöstä — musiikkia ei voi generoida.`);
     console.error('Kuivan ajon saa ilman avainta: --laji kaikki --kuiva');
     process.exit(1);
   }
@@ -715,21 +771,23 @@ async function main() {
   let virheita = 0;
   try {
     for (const nimi of lajit) {
-      const raita = LAJIT[nimi];
+      const raita = { ...LAJIT[nimi], tiedosto: raidanTiedosto(LAJIT[nimi], liput.moottori) };
       const kohde = join(kohdekansio, raita.tiedosto);
       const lahde = join(raakakansio, `raaka-${raita.tiedosto}`);
       console.log(`\n── ${nimi} → ${AMPARIN_KANSIO}/${raita.tiedosto} (${raita.kuvaus})`);
       console.log(`   looppi ${raita.looppi} s, sauma ${raita.risti} s, `
         + `lähde ${(lahdeMs(raita) / 1000).toFixed(0)} s, `
-        + `kesto ${kestoRajat(raita).min}–${kestoRajat(raita).max} s, malli ${MALLI}, `
-        + `muoto ${MUOTO}, force_instrumental`);
+        + `kesto ${kestoRajat(raita).min}–${kestoRajat(raita).max} s, `
+        + (liput.moottori === 'lyria' ? `moottori Lyria (${LYRIA_MALLI})` : `malli ${MALLI}, muoto ${MUOTO}, force_instrumental`));
       console.log(`   prompti: ${raita.prompt}`);
 
       if (liput.kuiva) {
         syntetisoiLahde(lahde, lahdeMs(raita) / 1000);
       } else {
         // eslint-disable-next-line no-await-in-loop
-        const tavut = await haeApista(raita, avain, lahde);
+        const tavut = liput.moottori === 'lyria'
+          ? await haeLyriasta(raita, avain, lahde)
+          : await haeApista(raita, avain, lahde);
         console.log(`   API: ${(tavut / 1024).toFixed(0)} kt → ${lahde}`);
       }
 
