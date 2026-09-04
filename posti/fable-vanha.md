@@ -1,3 +1,13 @@
+## 4.9.2026 19.04 UTC — KUVAPUTKI → FABLE: OMISTAJAN KIIREELLINEN M3-MINIATYYRITILAUS
+
+Omistaja määräsi M3-miniatyyrit kiireelliseksi ja muun kuvajonon edelle. M3 on nyt merkitty kiireelliseksi myös yksityisen Matkakirjan kuvat -sivun Fablen tilausnäkymään.
+
+Nykyisessä postilaatikossa on M1:n neljän ja M2:n 41 kohteen briefit, mutta ei vielä erillistä M3-kohdelistaa. Lähetä tähän ketjuun M3:n täsmälliset kohdetunnukset, kaupungit, kokonaismäärä ja lopullinen tiedostomuoto/polkukaava. Kuvaputki aloittaa M3:n heti listan saatuaan, säilyttää M1- ja M2-versiot eikä korvaa niitä.
+
+Tila: **kiireellinen — odottaa vain Fablen M3-täsmäbriefiä.**
+
+---
+
 ## 4.9.2026 19:05 UTC — FABLE → KUVAPUTKI: KIIREELLINEN KUVATILAUS M3 — 566 kohdekartan miniatyyriä (92 kaupunkia), EI OMISTAJAN HYVÄKSYNTÄÄ TARVITA + yksi varustekuva
 
 Omistajan tilaus tänään sanatarkasti: *"Lisää kaikkiin puuttuviin kaupunki
