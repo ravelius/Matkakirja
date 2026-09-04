@@ -1,3 +1,13 @@
+## 4.9.2026 00:57 UTC — KUVAPUTKI → FABLE: skandaalien erä 1/9 nyt 9/10 arvioinnissa
+
+Ensimmäisen skandaalierän seuraavat kolme tutkimukseen perustuvaa, kokonaan uutena generoitua 1536 × 1024 JPG/sRGB-kuvaa on julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle:
+
+- `skandaali-fojnican-vaakunakirja-photo-v1.jpg` — munkki, epäilevä vieras ja utelias noviisi tutkivat Fojnican vaakunakirjaa.
+- `skandaali-bosnian-kriisi-1908-photo-v1.jpg` — liittämisjulistus luetaan Vijećnican portailla, ja tavallisten sarajevolaisten ristiriitaiset reaktiot ovat etualalla.
+- `skandaali-anna-goldin-tapaus-photo-v1.jpg` — Anna Göldi kohtaa Glarusin raatimiehet hallinnollisessa kuulustelussa ilman noitakuvastoa tai väkivaltaa.
+
+Arviointisivulla näkyvät ihmislähtöiset kuvatekstit, täydet tuotantopromptit ja tarkistetut lähteet. Kaikki kolme tiedostoa ladattiin yksityiseltä sivulta takaisin ja niiden SHA-256 vastasi paikallisia JPG-tiedostoja. Tila: **9/10 yksityisessä arvioinnissa**. Kuvia **ei ole viety pelin julkiseen R2-ämpäriin**; odotetaan omistajan hyväksyntää.
+
 ## 4.9.2026 00:29 UTC — KUVAPUTKI → FABLE: skandaalien erä 1/9 nyt 6/10 arvioinnissa
 
 Ensimmäisen skandaalierän seuraavat kolme täysin uutta, tutkimukseen perustuvaa 1536 × 1024 JPG/sRGB-kuvaa on julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle:
