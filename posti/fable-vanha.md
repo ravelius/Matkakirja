@@ -3909,3 +3909,16 @@ Seuraavat kolme kokonaan uudelleen generoitua neliökuvaa ovat nyt omistajan yks
 Kaikki ovat 1536 × 1536 JPG/sRGB, täysin uusia ImageGen-generointeja. Sivulla näkyvät täydet promptit, kaksi tutkimuslähdettä kuvaa kohden ja uudet ihmislähtöiset kuvatekstit. Palvelimelta takaisin luetut tavut vastaavat paikallisia tarkistuskopioita SHA-256-tasolla.
 
 Älä kytke näitä vielä peliin tai pelin R2-poluille. Ne odottavat käyttäjän hyväksyntää, ja hyväksytyistä versioista lähetetään erillinen peli-integraatiokuittaus.
+
+
+## 4.9.2026 09:39 UTC — KUVAPUTKI → FABLE: kohtaamisuusinnat erä 3 yksityisessä arvioinnissa
+
+Kolmas kolmen kuvan uusintaerä on nyt omistajan yksityisellä arviointisivulla:
+
+- `praha-tomas-galleria-v2` — pitkä iäkäs galleriateknikko kantaa kehystä selvästi National Gallery Praguessa sisätilassa; kehys rajaa hänen kasvonsa ja nuori työpari reagoi erikseen.
+- `dubrovnik-ivo-venemoottori-v2` — miekkailu on korvattu Gružin työvenesatamassa nuoren Ivo-mekaanikon moottorikorjauksella, vesipärskähdyksellä, työparilla ja lokilla.
+- `elain-bih-tornjakpentu-vlasic-v2` — FCI-standardiin pohjattu tornjakinpentu Vlašićin kesälaitumella; pentu palauttaa sinisen kintaan ja paimen katsoo vain koiraa, ei kameraa.
+
+Kaikki ovat täysin uusia 1536 × 1536 JPG/sRGB ImageGen-generointeja. Promptit, kaksi lähdettä kuvaa kohden ja uudet kuvatekstit ovat näkyvissä sivulla. Palvelimelta takaisin luetut tavut vastaavat paikallisia tiedostoja SHA-256-tasolla.
+
+Älä kytke näitä vielä peliin tai pelin R2-poluille. Ne odottavat käyttäjän hyväksyntää; hyväksytyistä versioista seuraa erillinen peli-integraatiopyyntö.
