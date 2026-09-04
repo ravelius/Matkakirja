@@ -150,7 +150,7 @@ export const FOKUSKOHTEET_GBR = [
         + 'suusta suuhun nopeammin kuin painokone ehtii tehdä seuraavan '
         + 'arkin.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa. Kuvan kirkko on nykyisen katedraalin '
+        + 'omana aikanaan. Kuvan kirkko on nykyisen katedraalin '
         + 'EDELTÄJÄ: keskiaikainen St Paul, joka tuhoutui Lontoon '
         + 'suuressa palossa 1666. Faktat: St Paul’s Cathedral — Our '
         + 'timeline.',
@@ -305,7 +305,7 @@ export const FOKUSKOHTEET_GBR = [
         + 'keskellä siltaa — mutta joella yksi väärä veto voi päättää '
         + 'työpäivän.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa. Faktat: London Museum — London Bridge.',
+        + 'omana aikanaan. Faktat: London Museum — London Bridge.',
     },
   },
 ];

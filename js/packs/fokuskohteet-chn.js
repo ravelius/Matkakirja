@@ -109,7 +109,7 @@ export const FOKUSKOHTEET_CHN = [
         + 'siksi, että näkymättömät työntekijät saavat jokaisen '
         + 'venttiilin aukeamaan oikealla hetkellä.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa. Faktat: Yuanmingyuan Ruins Park — official '
+        + 'omana aikanaan. Faktat: Yuanmingyuan Ruins Park — official '
         + 'site.',
     },
   },

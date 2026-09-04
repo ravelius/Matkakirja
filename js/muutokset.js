@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1526, teksti: 'Kuvaputken 32 kuvaa: skandaalit, kohtaamiset, ihmeet, BIH' },
   { v: 1525, teksti: 'Historian hetket: Tutankhamon, Troija ja Rosetta' },
   { v: 1524, teksti: 'Isoisan muotokuva Keksinnot-linssin karuselliin' },
   { v: 1523, teksti: 'Siivoa haarat: suojalista kasin suojattaville' },
