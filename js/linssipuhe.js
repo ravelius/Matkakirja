@@ -207,6 +207,38 @@ export function luennanTeksti(t) {
 /** Tauko pisteiden kohdalla (eleven_v3 tukee break-tagia). */
 export const LUENNAN_TAUKO = '<break time="0.4s" />';
 
+/*
+ * VUOSILUKU SANOINA MALLILLE (omistajan havainto 4.9.2026: *"Lukija
+ * muuten lukee väärin ainakin 1700-luvun vuosiluvut. Jostain sanoi
+ * 1900 jotain."*). Numeroina annettu vuosi jää mallin arvattavaksi;
+ * sanoina se ei voi mennä väärin. Näytöllä vuosi on yhä numeroina —
+ * tämä koskee vain puhetekstiä (luennanPuhe, puheeksi).
+ */
+const YKSIKOT = ['', 'yksi', 'kaksi', 'kolme', 'neljä', 'viisi', 'kuusi', 'seitsemän', 'kahdeksan', 'yhdeksän'];
+
+/** 1000–2999 suomeksi yhteen kirjoitettuna: 1769 → tuhatseitsemänsataakuusikymmentäyhdeksän. */
+export function vuosiSanoina(vuosi) {
+  const v = Number(vuosi);
+  if (!Number.isInteger(v) || v < 1000 || v > 2999) return String(vuosi);
+  const tuhannet = Math.floor(v / 1000);
+  const sadat = Math.floor((v % 1000) / 100);
+  const kymmenet = Math.floor((v % 100) / 10);
+  const ykkoset = v % 10;
+  let sanat = tuhannet === 1 ? 'tuhat' : `${YKSIKOT[tuhannet]}tuhatta`;
+  if (sadat) sanat += sadat === 1 ? 'sata' : `${YKSIKOT[sadat]}sataa`;
+  if (kymmenet === 1) sanat += ykkoset ? `${YKSIKOT[ykkoset]}toista` : 'kymmenen';
+  else {
+    if (kymmenet) sanat += `${YKSIKOT[kymmenet]}kymmentä`;
+    if (ykkoset) sanat += YKSIKOT[ykkoset];
+  }
+  return sanat;
+}
+
+/** Vaihtaa tekstin nelinumeroiset vuosiluvut sanoiksi (välit ja ajatusviivat säilyvät). */
+export function puheeksi(teksti) {
+  return String(teksti ?? '').replace(/\b(1\d{3}|2\d{3})\b/g, (m) => vuosiSanoina(m));
+}
+
 /**
  * Sama teksti mallille lähetettävässä muodossa: pieni tauko jokaisen
  * pisteen kohdalle, jottei vuosi, nimi ja keksintö sula yhdeksi
@@ -215,7 +247,9 @@ export const LUENNAN_TAUKO = '<break time="0.4s" />';
 export function luennanPuhe(t) {
   const osat = luennanOsat(t);
   if (!osat.length) return null;
-  return `${osat.join(`. ${LUENNAN_TAUKO} `)}.`;
+  // Vuosi sanoina, muu sellaisenaan (ks. vuosiSanoina).
+  const puhuttavat = osat.map((osa, k) => (k === 0 ? vuosiSanoina(osa) : osa));
+  return `${puhuttavat.join(`. ${LUENNAN_TAUKO} `)}.`;
 }
 
 /**

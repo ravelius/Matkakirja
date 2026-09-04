@@ -163,6 +163,10 @@ export const AIKAJANA_PAALU_MS = 3200;
  * pysähdy koskaan ajon aikana, mutta keksinnön kohdalla se on hidasta.
  */
 export const AIKAJANA_TAUON_OSUUS = 0.6;
+/** Tauko ei pääty ennen kuin selostaja on lopettanut: jäljelle jäävä vara (ms). */
+export const LUENNAN_TAUKOVARA_MS = 900;
+/** Luennan odotuksen katto syttymisestä (ms) — verkko voi jättää äänen lataamatta. */
+export const LUENNAN_PISIN_MS = 14000;
 
 /*
  * ── PEHMEÄT KIIHDYTYKSET JA JARRUTUKSET ────────────────────────────
@@ -1639,6 +1643,32 @@ class Aikajana {
     this.jatka();
   }
 
+  /**
+   * SELOSTAJA SAA PUHUA LOPPUUN (omistajan havainto 4.9.2026: *"Lukija
+   * ei ehdi lukea lausettaan loppuun ennen kuin tulee jo seuraava
+   * kortti."*). Pysäkin tauko (AIKAJANA_VIIVE_MS) on lyhyempi kuin
+   * luenta, joten kello pidättää tauon loppua niin kauan kuin luenta
+   * on kesken tai vasta alkamassa: viive ei laske alle
+   * LUENNAN_TAUKOVARA_MS ennen kuin ääni on päättynyt. Hiipimä käyttää
+   * max-sääntöä eikä peruuta. Katto (LUENNAN_PISIN_MS) estää ikuisen
+   * odotuksen, jos ääni ei koskaan lataudu.
+   */
+  luentaSoi() {
+    const a = this.ui?.linssiluenta;
+    if (!a || a.ended) return false;
+    if (this.ui.linssiluentaAjastin) return true;
+    return !a.paused || a.readyState < 3;
+  }
+
+  pidataTaukoaLuennalle() {
+    if (!(this.tila.viive > 0) || !this.luentaSoi()) return;
+    if (performance.now() - (this.luennanAlku ?? 0) > LUENNAN_PISIN_MS) return;
+    if (this.tila.viive < LUENNAN_TAUKOVARA_MS) {
+      const lisa = LUENNAN_TAUKOVARA_MS - this.tila.viive;
+      this.tila = { ...this.tila, viive: LUENNAN_TAUKOVARA_MS, viiveTaysi: (this.tila.viiveTaysi ?? this.tila.viive) + lisa };
+    }
+  }
+
   kehys(nyt) {
     if (!this.kaynnissa) return;
     const dt = Math.min(200, nyt - this.viime);
@@ -1646,11 +1676,12 @@ class Aikajana {
     // Reduced motion: nopeutettu ja LINEAARINEN — pehmeät kiihdytykset
     // ovat juuri sitä liikettä, jota tässä tilassa vältetään.
     const tahti = this.reducedMotion ? { vuosiMs: 40, lineaarinen: true } : {};
+    this.pidataTaukoaLuennalle();
     const { tila, syttyi, loppu } = aikajanaAskel(this.tila, dt, this.tapahtumat, tahti);
     this.tila = tila;
     this.naytaVuosi(tila.vuosi);
     if (syttyi !== null) this.sytyta(syttyi);
-    else this.tarkistaEnnakko(tahti);
+    else if (!this.luentaSoi()) this.tarkistaEnnakko(tahti);
     this.paivitaMittakaava();
     if (loppu) {
       this.lopeta();
@@ -1888,7 +1919,10 @@ class Aikajana {
      * pysäkkiriviä sen päälle. Muualla kertoja lukee vuoden, keksijän
      * ja keksinnön (js/linssipuhe.js).
      */
-    if (!this.avaaValinaytos(t)) soitaLinssiluenta(this.ui, t);
+    if (!this.avaaValinaytos(t)) {
+      soitaLinssiluenta(this.ui, t);
+      this.luennanAlku = performance.now();
+    }
   }
 
   /* ---------- välinäytös (ks. VÄLINÄYTÖS tiedoston alussa) ---------- */

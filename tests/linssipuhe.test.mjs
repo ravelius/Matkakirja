@@ -38,6 +38,8 @@ import {
   kaarenPuheet,
   luennanOsoite,
   luennanPuhe,
+  vuosiSanoina,
+  puheeksi,
   luennanRunko,
   luennanTeksti,
   luennanTiedosto,
@@ -118,11 +120,19 @@ test('merkkipaalua ei lueta keksijänä', () => {
 
 test('mallille lähtevässä tekstissä on tauko jokaisen pisteen kohdalla', () => {
   const puhe = luennanPuhe(KEKSINNOT[0]);
-  assert.equal(puhe, `1769. ${LUENNAN_TAUKO} James Watt. ${LUENNAN_TAUKO} Höyrykoneen lauhdutin.`);
+  // Vuosi sanoina mallille (omistajan havainto 4.9.2026: luki 1700-luvun vuodet väärin).
+  assert.equal(puhe, `tuhatseitsemänsataakuusikymmentäyhdeksän. ${LUENNAN_TAUKO} James Watt. ${LUENNAN_TAUKO} Höyrykoneen lauhdutin.`);
+  assert.equal(vuosiSanoina(1873), 'tuhatkahdeksansataaseitsemänkymmentäkolme');
+  assert.equal(vuosiSanoina(1900), 'tuhatyhdeksänsataa');
+  assert.equal(vuosiSanoina(1910), 'tuhatyhdeksänsataakymmenen');
+  assert.equal(vuosiSanoina(1911), 'tuhatyhdeksänsataayksitoista');
+  assert.equal(vuosiSanoina(1804), 'tuhatkahdeksansataaneljä');
+  assert.equal(vuosiSanoina(2026), 'kaksituhattakaksikymmentäkuusi');
+  assert.equal(puheeksi('Vuosi 1873. Kaari 1765–1928.'), 'Vuosi tuhatkahdeksansataaseitsemänkymmentäkolme. Kaari tuhatseitsemänsataakuusikymmentäviisi–tuhatyhdeksänsataakaksikymmentäkahdeksan.');
   assert.match(LUENNAN_TAUKO, /^<break time="[\d.]+s" \/>$/);
   // Tauot pois → sama teksti kuin pelissä näkyvä muoto.
   assert.equal(puhe.split(LUENNAN_TAUKO).join('').replace(/\s+/g, ' ').trim(),
-    luennanTeksti(KEKSINNOT[0]));
+    puheeksi(luennanTeksti(KEKSINNOT[0])));
 });
 
 /* ── työkalu ──────────────────────────────────────────────────────── */

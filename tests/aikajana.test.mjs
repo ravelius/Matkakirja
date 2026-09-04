@@ -975,7 +975,10 @@ test('ennakko alkaa vasta kahden sekunnin päässä ja kestää jäljellä oleva
 
 test('ennakko liikuttaa vain kortteja; lamput, kello ja paneeli vaihtuvat syttymisessä', () => {
   // Kehys laskee saapumisajan ja aloittaa ennakon vain kun sitä ei ole.
-  assert.match(MOOTTORI, /if \(syttyi !== null\) this\.sytyta\(syttyi\);\s*\n\s*else this\.tarkistaEnnakko\(tahti\);/);
+  assert.match(MOOTTORI, /if \(syttyi !== null\) this\.sytyta\(syttyi\);\s*\n\s*else if \(!this\.luentaSoi\(\)\) this\.tarkistaEnnakko\(tahti\);/);
+  // Selostaja saa puhua loppuun: tauko pidätetään luennan ajan (omistaja 4.9.2026).
+  assert.match(MOOTTORI, /pidataTaukoaLuennalle\(\) \{[\s\S]{0,600}viive: LUENNAN_TAUKOVARA_MS/);
+  assert.match(MOOTTORI, /this\.pidataTaukoaLuennalle\(\);\s*\n\s*const \{ tila, syttyi, loppu \} = aikajanaAskel/);
   assert.match(MOOTTORI, /tarkistaEnnakko\(tahti\) \{[\s\S]{0,900}aikaSeuraavaan\(this\.tila, this\.tapahtumat, tahti, KARUSELLIN_ENNAKKO_MS \+ AIKAJANA_ALIASKEL_MS\)/);
   assert.match(MOOTTORI, /tarkistaEnnakko\(tahti\) \{[\s\S]{0,900}if \(kesto > 0\) this\.aloitaEnnakko\(kohde, kesto\);/);
   // Reduced motion ei ennakoi lainkaan.
@@ -1161,7 +1164,7 @@ test('avausjakso vaientaa selostajan ja omii näppäimistön', () => {
 test('1873 pysäyttää kellon ja avaa laatikon vain elävässä ajossa', () => {
   const sytyta = metodi('sytyta');
   // Syttyminen on ainoa ovi: pysäytetty kelaus (siirry) ei avaa mitään.
-  assert.match(sytyta, /if \(!this\.avaaValinaytos\(t\)\) soitaLinssiluenta\(this\.ui, t\);/);
+  assert.match(sytyta, /if \(!this\.avaaValinaytos\(t\)\) \{\s*\n\s*soitaLinssiluenta\(this\.ui, t\);\s*\n\s*this\.luennanAlku = performance\.now\(\);/);
   const siirry = metodi('siirry');
   assert.ok(!siirry.includes('alinaytos'), 'siirry ei saa koskea välinäytökseen');
 
@@ -1236,7 +1239,7 @@ test('välinäytöksen laatikko on avauksen tyyliperhettä ja pulun kuplien alla
   assert.match(AIKAJANA_CSS, /\.aikajana-avaus-laatikko::after \{[\s\S]*?animation: aikajana-lepatus-b 5\.3s ease-in-out infinite;/);
   assert.match(AIKAJANA_CSS, /\.aikajana-avaus-laatikko::before, \.aikajana-avaus-laatikko::after \{ animation: none; \}/);
   // Havainnekuva valokeilassa: pelkkä kuva -paneeli ilman laatikkoa, reunat läpinäkyviksi maskilla (ei suodatin).
-  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child,[\s\S]*?mask-image: radial-gradient\(ellipse 58% 58% at 50% 50%, #000 42%/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child,[\s\S]*?mask-image:\s*\n\s*linear-gradient\(to right, transparent, #000 11%, #000 89%, transparent\),\s*\n\s*linear-gradient\(to bottom, transparent, #000 13%, #000 87%, transparent\);\s*\n\s*mask-composite: intersect;/);
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio:has\(> \.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child\) \{\n  border-color: transparent;\n  background: transparent;\n  box-shadow: none;\n\}/);
   // Tausta himmenee KEVYESTI eikä mustaan: valot näkyvät laatikon takaa.
   const alfa = Number(lohko.match(/\.aikajana-valinaytos-peite \{[\s\S]*?rgba\(6, 4, 3, ([\d.]+)\)/)[1]);
