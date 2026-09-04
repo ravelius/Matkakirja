@@ -24,17 +24,19 @@
  * Maailmankartta on ainoa pelilauta (Raamattu 30.8.2026), joten
  * kaupungin napautus sulkee pallon ja ajaa kameran kaupunkiin
  * (js/kartta.js ajaKamera) — ei laudan vaihtoa. Pallo avataan
- * hampurilaisvalikosta (#pallo-btn, js/main.js → ui.avaaPallo).
+ * matkalaukun Karttapallo-linssistä (js/ui.js → ui.avaaPallo).
  */
 
-import { laudaltaAsteiksi } from './fokusmitat.js';
+import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 
 const R2 = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/';
 /** Globe.gl:n UMD-paketti pelin ämpärissä (workflow tee-pallotekstuuri vie sen). */
 export const PALLO_KIRJASTO = `${R2}vendor/globe.gl-2.35.0.min.js`;
 /** Pinnoitteen versio = sen laattapyramidin versio, josta se käännettiin. */
 export const PALLO_TEKSTUURIVERSIO = '2026-09-03a';
-export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/tekstuuri.jpg`;
+/** Laattataso, josta pinnoite on käännetty: z4 on ainoa (omistaja 4.9.2026). */
+export const PALLO_TEKSTUURITASO = 4;
+export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/tekstuuri-z${PALLO_TEKSTUURITASO}.jpg`;
 /** Sukelluksen näkyvä leveys laudan yksikköinä (maan kokoinen ikkuna). */
 export const PALLO_SUKELLUSLEVEYS = 620;
 export const PALLO_LAUTA = 'maailmankartta';
@@ -48,10 +50,13 @@ export function pallonKaupungit(pack, kaydyt = new Set()) {
   }).filter(Boolean);
 }
 
-/** Laudan reitit kaarina: molempien päiden on oltava pallolla. */
-export function pallonReitit(pack, kaupungit) {
-  const k = new Map(kaupungit.map((c) => [c.id, c]));
-  return (pack?.edges ?? []).map((e) => ({ a: k.get(e.a), b: k.get(e.b) })).filter((r) => r.a && r.b);
+/**
+ * Napautettu piste laudan koordinaatiksi: asteet → laudan (x, y). Null,
+ * jos piste ei ole laudalla (napa-alueet julisteen ulkopuolella).
+ */
+export function sukelluskohta(lat, lon) {
+  const p = projisoiLaudalle(PALLO_LAUTA, lon, lat);
+  return p && Number.isFinite(p.x) && Number.isFinite(p.y) ? { x: p.x, y: p.y } : null;
 }
 
 let kirjastoLupaus = null;
@@ -97,7 +102,7 @@ export async function avaaPallo(ui) {
   kuori.setAttribute('aria-label', 'Karttapallo');
   kuori.innerHTML = `
     <div class="pallo-ylarivi">
-      <div class="pallo-otsikko">Karttapallo <span class="pallo-selite">Pyöritä ja napauta kaupunkia</span></div>
+      <div class="pallo-otsikko">Karttapallo <span class="pallo-selite">Pyöritä ja napauta kohtaa, johon haluat</span></div>
       <button type="button" class="pallo-sulje" aria-label="Sulje" title="Sulje">✕</button>
     </div>
     <div class="pallo-kotelo"></div>
@@ -124,34 +129,22 @@ export async function avaaPallo(ui) {
   if (ui.pallo !== kuori) return false;
   const kotelo = kuori.querySelector('.pallo-kotelo');
   const pack = ui.game.pack;
-  const kaydyt = ui.game.world?.visited ?? new Set();
-  const kaupungit = pallonKaupungit(pack, kaydyt);
-  const reitit = pallonReitit(pack, kaupungit);
+  const kaupungit = pallonKaupungit(pack);
   const pos = ui.game.player?.pos;
   const oma = pos?.type === 'city' ? kaupungit.find((k) => k.id === pos.city) : null;
+  // Pelkkä pinnoite: ei pisteitä, nimiä, kaaria eikä renkaita (omistaja
+  // 4.9.2026: "älä lisää mitään sen päälle").
   const pallo = Globe()(kotelo)
     .width(kotelo.clientWidth).height(kotelo.clientHeight)
     .backgroundColor('rgba(0,0,0,0)')
     .globeImageUrl(PALLO_TEKSTUURI)
     .showAtmosphere(true).atmosphereColor('#d9a13b').atmosphereAltitude(0.18)
-    .pointsData(kaupungit).pointLat('lat').pointLng('lon').pointAltitude(0.004)
-    .pointRadius((k) => (k.alku || k.kayty ? 0.55 : 0.32))
-    .pointColor((k) => (k.kayty ? '#ffd27a' : k.alku ? '#e6b04a' : '#b07a2a'))
-    .pointLabel((k) => k.n)
-    .labelsData(kaupungit.filter((k) => k.alku || k.kayty)).labelLat('lat').labelLng('lon').labelText('n')
-    .labelSize(1.1).labelDotRadius(0).labelColor(() => '#f3e4bf').labelResolution(2)
-    .arcsData(reitit)
-    .arcStartLat((r) => r.a.lat).arcStartLng((r) => r.a.lon).arcEndLat((r) => r.b.lat).arcEndLng((r) => r.b.lon)
-    .arcColor(() => 'rgba(120, 80, 30, 0.55)').arcStroke(0.25).arcAltitudeAutoScale(0.15)
-    .onPointClick((k) => {
+    .onGlobeClick(({ lat, lng }) => {
+      const kohta = sukelluskohta(lat, lng);
+      if (!kohta) return;
       sulje();
-      ui.kartta?.ajaKamera?.({ x: k.x, y: k.y, leveys: PALLO_SUKELLUSLEVEYS }, { kesto: 1400 });
+      ui.kartta?.ajaKamera?.({ x: kohta.x, y: kohta.y, leveys: PALLO_SUKELLUSLEVEYS }, { kesto: 1400 });
     });
-  if (oma) {
-    // Pelaajan paikka: sykkivä rengas kuten kartan oma nappula.
-    pallo.ringsData([oma]).ringLat('lat').ringLng('lon').ringColor(() => (t) => `rgba(255, 210, 122, ${1 - t})`)
-      .ringMaxRadius(3).ringPropagationSpeed(1.2).ringRepeatPeriod(1400);
-  }
   const koti = oma ?? kaupungit.find((k) => k.id === 'lontoo') ?? kaupungit[0];
   if (koti) pallo.pointOfView({ lat: koti.lat, lng: koti.lon, altitude: 1.9 }, 0);
   const ohjaimet = pallo.controls();

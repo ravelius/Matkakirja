@@ -117,7 +117,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1537';
+const APP_VERSION = '2026-08-09.1538';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1528,11 +1528,6 @@ document.getElementById('raamattu-lehti-btn')?.addEventListener('click', () => {
 });
 document.getElementById('tilanne-lehti-btn')?.addEventListener('click', () => {
   window.matkakirja?.ui?.avaaTilanneLehti();
-});
-// Karttapallo (omistaja 4.9.2026): valikko kiinni, pallo kartan päälle.
-document.getElementById('pallo-btn')?.addEventListener('click', () => {
-  suljeValikko();
-  window.matkakirja?.ui?.avaaPallo();
 });
 document.getElementById('poiminnat-lehti-btn')?.addEventListener('click', () => {
   window.matkakirja?.ui?.avaaPoiminnatLehti();

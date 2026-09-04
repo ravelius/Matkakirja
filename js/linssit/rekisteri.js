@@ -39,6 +39,7 @@ export const LINSSIT = [
   // { tunnus: 'ilmasto',      manner: 'oceania',       tuo: () => import('./ilmasto.js') },
   // { tunnus: 'kielet',       manner: 'europe',        tuo: () => import('./kielet.js') },
   { tunnus: 'keksinnot',    manner: null,            tuo: () => import('./keksinnot.js') },
+  { tunnus: 'pallo',        manner: null,            tuo: () => import('./pallo.js') },
   // { tunnus: 'leviaminen',   manner: 'africa',        tuo: () => import('./leviaminen.js') },
   // { tunnus: 'maaluvut',     manner: null,            tuo: () => import('./maaluvut.js') },
   // { tunnus: 'muuttoliike',  manner: null,            tuo: () => import('./muuttoliike.js') },

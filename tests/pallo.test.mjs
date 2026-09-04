@@ -1,15 +1,20 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { pallonKaupungit, pallonReitit, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_SUKELLUSLEVEYS } from '../js/pallo.js';
+import { pallonKaupungit, sukelluskohta, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_SUKELLUSLEVEYS } from '../js/pallo.js';
+import { LINSSIT } from '../js/linssit/rekisteri.js';
+import { LINSSI as PALLOLINSSI } from '../js/linssit/pallo.js';
+import { PERUSLINSSIT, omistetut } from '../js/linssit/omistus.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from '../js/fokusmitat.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
-import { arkinPikseli, pinnoitteenAvain, PINNOITE } from '../tools/tee-pallotekstuuri.mjs';
+import { arkinPikseli, pinnoitteenAvain, pinnoitteenMitat, PINNOITE } from '../tools/tee-pallotekstuuri.mjs';
 
 /*
- * KARTTAPALLO (omistaja 4.9.2026: "Globe GL toimii hienosti"). Pallo on
- * maailmanvalikko: kaupungit ja reitit laudalta asteiksi, napautus
- * sukeltaa laudalle. Kirjasto ja pinnoite tulevat ämpäristä.
+ * KARTTAPALLO (omistaja 4.9.2026: "Globe GL toimii hienosti"; illalla
+ * "Tee z4 ainoaksi ja älä lisää mitään sen päälle. Eli ei reittejä tai
+ * nimiä. Lisää pallo yhdeksi linssiksi matkalaukkuun ja ota pois
+ * kehittäjä valikosta"). Pallo on pelkkä pinnoite; napautus sukeltaa
+ * laudalle napautettuun kohtaan. Kirjasto ja pinnoite tulevat ämpäristä.
  */
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
@@ -26,20 +31,31 @@ test('laudalta asteiksi on projisoinnin käänteinen ja osuu tunnettuihin kaupun
   assert.equal(laudaltaAsteiksi('maailmankartta', NaN, 1), null);
 });
 
-test('pallon kaupungit ja reitit tulevat laudalta, käydyt ja aloituskaupungit merkittyinä', () => {
+test('pallon kaupungit tulevat laudalta ja napautus sukeltaa napautettuun kohtaan', () => {
   const kaupungit = pallonKaupungit(MAAILMANKARTTA, new Set(['lontoo', 'pariisi']));
   assert.equal(kaupungit.length, MAAILMANKARTTA.cities.length);
   const lontoo = kaupungit.find((k) => k.id === 'lontoo');
-  assert.ok(lontoo.kayty && lontoo.alku && lontoo.x === 5829.5, 'Lontoo: käyty, aloitus, laudan x säilyy sukellusta varten');
+  assert.ok(lontoo.kayty && lontoo.alku && lontoo.x === 5829.5, 'Lontoo: käyty, aloitus, laudan x säilyy kameran kotia varten');
   assert.ok(kaupungit.every((k) => Math.abs(k.lat) <= 90 && Math.abs(k.lon) <= 180));
-  const reitit = pallonReitit(MAAILMANKARTTA, kaupungit);
-  assert.equal(reitit.length, MAAILMANKARTTA.edges.length, 'jokaisen reitin molemmat päät ovat pallolla');
-  assert.ok(reitit.every((r) => r.a.n && r.b.n));
+  // Napautus Lontoon asteisiin osuu Lontoon laudan koordinaattiin.
+  const kohta = sukelluskohta(lontoo.lat, lontoo.lon);
+  assert.ok(Math.abs(kohta.x - lontoo.x) < 1e-6 && Math.abs(kohta.y - lontoo.y) < 1e-6, JSON.stringify(kohta));
+  assert.equal(sukelluskohta(NaN, 0), null);
+  // Pallolla ei ole mitään pinnoitteen päällä.
+  const pallo = lue('../js/pallo.js');
+  for (const kielletty of ['pointsData', 'labelsData', 'arcsData', 'ringsData', 'htmlElementsData']) {
+    assert.ok(!pallo.includes(`.${kielletty}(`), `${kielletty}: pallon päälle ei lisätä mitään (omistaja 4.9.2026)`);
+  }
+  assert.match(pallo, /\.onGlobeClick\(/);
 });
 
 test('kirjasto ja pinnoite tulevat pelin ämpäristä, ei reposta', () => {
   assert.match(PALLO_KIRJASTO, /^https:\/\/pub-[a-z0-9]+\.r2\.dev\/vendor\/globe\.gl-\d+\.\d+\.\d+\.min\.js$/);
-  assert.equal(PALLO_TEKSTUURI, `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/${pinnoitteenAvain(PALLO_TEKSTUURIVERSIO)}`);
+  assert.equal(PALLO_TEKSTUURITASO, 4, 'z4 on ainoa pinnoite (omistaja 4.9.2026)');
+  assert.equal(PALLO_TEKSTUURI, `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/${pinnoitteenAvain(PALLO_TEKSTUURIVERSIO, 4)}`);
+  assert.match(PALLO_TEKSTUURI, /tekstuuri-z4\.jpg$/);
+  assert.deepEqual(pinnoitteenMitat(4), { leveys: 8192, korkeus: 4096, laatu: 82 });
+  assert.match(lue('../.github/workflows/tee-pallotekstuuri.yml'), /default: '4'/);
   assert.ok(PALLO_SUKELLUSLEVEYS > 300 && PALLO_SUKELLUSLEVEYS < 2000);
   // Workflow vie samat kaksi: pinnoitteen avaimen ja kirjaston vendor-polun.
   const wf = lue('../.github/workflows/tee-pallotekstuuri.yml');
@@ -65,14 +81,25 @@ test('pinnoitteen pikselihaku: juliste kattaa 76° N – Etelämanner, navat jä
   assert.ok(arkinPikseli(luettelo, taso, -175, 0).px < 1);
 });
 
-test('pallo on valikossa, ui avaa sen laiskasti ja kuori on SHELLissä', () => {
-  assert.match(lue('../index.html'), /id="pallo-btn"/);
-  assert.match(lue('../js/main.js'), /getElementById\('pallo-btn'\)\?\.addEventListener\('click', \(\) => \{\n  suljeValikko\(\);\n  window\.matkakirja\?\.ui\?\.avaaPallo\(\);/);
-  assert.match(lue('../js/ui.js'), /async avaaPallo\(\) \{[\s\S]{0,300}import\('\.\/pallo\.js'\)/);
+test('pallo on matkalaukun linssi, ei valikossa; ui avaa sen laiskasti ja kuori on SHELLissä', () => {
+  assert.ok(!lue('../index.html').includes('pallo-btn'), 'valikkonappi poistui (omistaja 4.9.2026)');
+  assert.ok(!lue('../js/main.js').includes('pallo-btn'));
+  const ui = lue('../js/ui.js');
+  assert.match(ui, /async avaaPallo\(\) \{[\s\S]{0,300}import\('\.\/pallo\.js'\)/);
+  // Linssin valinta avaa pallon eikä vaihda valittua linssiä.
+  assert.match(ui, /if \(tunnus === 'pallo'\) \{[\s\S]{0,200}void this\.avaaPallo\(\);\n      return;/);
   assert.match(lue('../sw.js'), /'\.\/js\/pallo\.js'/);
+  assert.match(lue('../sw.js'), /'\.\/js\/linssit\/pallo\.js'/);
+  // Rekisterissä, kerrokseton, maailmankartalla, perusvaruste.
+  assert.ok(LINSSIT.some((r) => r.tunnus === 'pallo' && r.manner === null));
+  assert.equal(PALLOLINSSI.tunnus, 'pallo');
+  assert.equal(PALLOLINSSI.kerros, false);
+  assert.deepEqual(PALLOLINSSI.laudat, ['maailmankartta']);
+  assert.ok(PERUSLINSSIT.includes('pallo'));
+  assert.ok(omistetut(null, { linssit: [] }).has('pallo'), 'pallo on omistettu heti');
   const pallo = lue('../js/pallo.js');
   // Sukellus on kamera-ajo nykyiselle laudalle, ei laudan vaihto.
-  assert.match(pallo, /ui\.kartta\?\.ajaKamera\?\.\(\{ x: k\.x, y: k\.y, leveys: PALLO_SUKELLUSLEVEYS \}, \{ kesto: 1400 \}\)/);
+  assert.match(pallo, /ui\.kartta\?\.ajaKamera\?\.\(\{ x: kohta\.x, y: kohta\.y, leveys: PALLO_SUKELLUSLEVEYS \}, \{ kesto: 1400 \}\)/);
   // Kirjaston latausvirhe ei kaada peliä vaan näkyy kuoressa.
   assert.match(pallo, /tila\.textContent = 'Karttapallo ei latautunut/);
   assert.match(lue('../css/styles.css'), /\.pallo-kuori \{[\s\S]*?z-index: 45;/);
