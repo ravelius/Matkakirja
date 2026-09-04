@@ -47,6 +47,11 @@ test('pallon kaupungit tulevat laudalta ja napautus sukeltaa napautettuun kohtaa
     assert.ok(!pallo.includes(`.${kielletty}(`), `${kielletty}: pallon päälle ei lisätä mitään (omistaja 4.9.2026)`);
   }
   assert.match(pallo, /\.onGlobeClick\(/);
+  // Nipistys ei ole napautus (iPhone-bugi 4.9.2026): toinen sormi
+  // merkitsee eleen nipistykseksi, ja napautus hylätään sen ajaksi.
+  assert.match(pallo, /if \(sormet\.nipistys\) return;/);
+  assert.match(pallo, /if \(sormet\.alhaalla > 1\) sormet\.nipistys = true;/);
+  assert.match(pallo, /addEventListener\('pointercancel', irrota\)/);
 });
 
 test('kirjasto ja pinnoite tulevat pelin ämpäristä, ei reposta', () => {
