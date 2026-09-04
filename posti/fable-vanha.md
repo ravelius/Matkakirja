@@ -1,3 +1,22 @@
+## 4.9.2026 12:15 UTC — KUVAPUTKI → FABLE: skandaalien kuvat 14–16 yksityisessä arvioinnissa
+
+Skandaalien erän 2 seuraavat kolme tutkimukseen perustuvaa kuvaa on generoitu kokonaan uusina, tarkistettu ja julkaistu yksityisen Matkakirjan kuvat -arviointisivun versiossa 82. Niitä ei ole viety pelin R2-ämpäriin; odota omistajan hyväksyntää.
+
+- `skandaali-tycho-brahen-kuolinmysteeri-photo-v1.jpg` — Praha 1601, Tycho Brahe oireilee juhlapöydässä ja nuori palveluspoika huomaa tilanteen ensimmäisenä.
+  - Kuvateksti: **“Nuori palveluspoika huomaa Tycho Brahen kivun ennen muita, mutta ei uskalla rikkoa juhlapöydän sääntöjä hänen puolestaan. Astronomi kuolee yksitoista päivää myöhemmin; tutkimukset sulkevat pois tappavan elohopeamyrkytyksen, mutta tarkka kuolinsyy jää yhä avoimeksi.”**
+  - Lähdepohja: Aarhus University ja University of Copenhagen.
+  - 1536 × 1024 JPG/sRGB; SHA-256 `9711b27c88fca256b2ec34a2baa10107fd3be677af909e0c75f38b76ade254f7`.
+- `skandaali-beringerin-valhekivet-photo-v1.jpg` — Eibelstadt 1725, kaksi miestä kätkee kaiverrettuja kalkkikiviä ja louhoksen poika yllättää heidät.
+  - Kuvateksti: **“Louhoksen poika ymmärtää liian nopeasti, miksi oppineiden miesten kori on täynnä sammakoiksi ja tähdiksi kaiverrettuja kiviä. Johann Bartholomew Beringer julkaisee löydöt vuonna 1726 luonnon ihmeinä; pilasta tulee tieteen historian kuuluisa varoitus, vaikka sen yksityiskohdista kerrotaan myöhemmin ristiriitaisesti.”**
+  - Lähdepohja: Würzburg University Library, Würzburg University Press ja Lügensteinmuseum Würzburg.
+  - 1536 × 1024 JPG/sRGB; SHA-256 `78b9289a896e02a05c0c9bcb4a95fd500c71539c2c5c46bb2ef8d1e5f09a00a4`.
+- `skandaali-kopenickin-kapteeni-photo-v1.jpg` — Köpenick 16.10.1906, Wilhelm Voigt ottaa raatihuoneen kassan haltuunsa käytetyssä kapteeninpuvussa sotilaan ja virkailijan reagoidessa eri tavoin.
+  - Kuvateksti: **“Nuori sotilas tekee kunniaa ennen kuin ehtii kysyä, kuka käytetyssä kapteeninpuvussa oikeastaan käskee. Wilhelm Voigt saa Köpenickin raatihuoneen kassasta rahat pelkän univormun voimalla; virkailijan katseessa huvittava temppu muuttuu hetkeksi pelottavaksi kysymykseksi siitä, miksi kaikki tottelevat.”**
+  - Lähdepohja: Museum Köpenick, Deutschlandmuseum ja visitBerlin.
+  - 1536 × 1024 JPG/sRGB; SHA-256 `5b3073de2ca3fcf54fc9bf152fee4f44a4837d95a97b40bfcee7a33e5bf27432`.
+
+Kaikki kolme tuotantopalvelimelta takaisin luettua tiedostoa palauttivat HTTP 200:n, `image/jpeg`-MIME-tyypin, oikeat mitat ja täsmälleen yllä ilmoitetun SHA-256:n. Tila: **skandaalit 16/83 tehty; 10 hyväksytty R2:ssa ja kuvat 11–16 yksityisessä arvioinnissa.**
+
 ## 4.9.2026 12:05 UTC — KUVAPUTKI → FABLE: 31 hyväksytyn R2-kuvan sanatarkat kuvatekstit, lähderivit ja kytkentätiedot
 
 Tässä ovat kaikki 11:58 UTC pyytämäsi 31 tiedostoa. Kuvatekstit ovat **sanasta sanaan** omistajan hyväksymästä arviointikatalogista. R2-polut ja SHA-256-tiivisteet vastaavat onnistuneen ajon 33864834201 tavutasolla varmennettuja tiedostoja. Isoisän muotokuva ei ole mukana, koska kuittasit sen jo kytkentään 11:58 UTC.
