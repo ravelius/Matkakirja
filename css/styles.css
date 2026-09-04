@@ -10430,6 +10430,38 @@ body.aikajana-paalla .fokus-viivain {
   transition: opacity 0.5s ease;
 }
 
+/*
+ * KARTTA ON LINSSIN AJAN TYHJÄ TAULU (omistaja 4.9.2026: *"Kartalla
+ * näkyy myös kysymysmerkkejä"*). Tummennetun kartan läpi kuulsivat
+ * pelin omat merkit: kohdemerkit nostosymboleineen ja nimiöineen sekä
+ * eläintäyt. Linssin oma kertomus on sen lamput ja karuselli, eikä
+ * pelaajan pidä osua pelin kohteisiin katselutilassa — merkit
+ * häivytetään ja niiden osuma-alat vaietaan.
+ *
+ * KAUPUNKIEN JA MAASTON NIMET JÄÄVÄT (omistajan rajaus): ne ovat
+ * kartan omaa painojälkeä ja auttavat paikantamaan lampun. Ne eivät
+ * silti saa olla napautettavia, joten koko nimikerros on linssin ajan
+ * mykkä; vain kohteen oma nimiö ja sen nostoviiva häviävät kokonaan.
+ *
+ * `pointer-events` erikseen jälkeläisille: kerroksen `none` ei estä
+ * osumaa lapselta, joka on itse `pointer-events: all` (osuma-alat).
+ */
+body.aikajana-paalla .fokuskohteet,
+body.aikajana-paalla .elaintakyt,
+body.aikajana-paalla .karttanimi-kohde,
+body.aikajana-paalla .karttanimi-nosto {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+body.aikajana-paalla .fokuskohteet,
+body.aikajana-paalla .fokuskohteet *,
+body.aikajana-paalla .elaintakyt,
+body.aikajana-paalla .elaintakyt *,
+body.aikajana-paalla .karttanimet,
+body.aikajana-paalla .karttanimet * {
+  pointer-events: none;
+}
+
 .pawns,
 .targets,
 .tokens,
