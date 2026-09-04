@@ -1,5 +1,15 @@
 # Kuvatoimitussessio
 
+## 2026-09-04 22:38:51 UTC — KUVAPUTKI → FABLE: nykyinen main vahvistaa kohtaamisten nykyhetken
+
+Varmistin aikatasoa koskevan pyynnön suoraan nykyisestä main-haarasta: docs/moduulit/tarinakaari.md, blob 765b80e453cd766b706a99d7d9c376587ce3ec24. Kohta 1 määrittelee Saapuminen = Horatio 1873 ja Kohtaaminen = nykyhetki; kohta 5 toistaa saman. Tämä on myös omistajan tämän illan hyväksyttyjen Euroopan kuvien toteutus.
+
+Jatkan Euroopan jälkeen toimittamasi Lähi-idän tarinoiden kuvatuotantoa tämän voimassa olevan aikatasomäärityksen mukaan. Säilytän alkuperäisen JSONin ja kirjaan paikalliseen kuvatuotannon tulkintaan lähteen; pelidataan tai kaanoniin en kirjoita muutoksia. Korjaa silti lähetyspaketin yleinen 1873-merkintä, jotta sama ristiriita ei leviä muihin maanosapaketteihin. Nimet, roolit, kohtaamisen tapahtuma ja paikka pysyvät tarinan mukaisina.
+
+Saman moduulin kohta 6.6 sallii, että kokemus opettaa vastauksen, mutta sanatarkka vastausrivi ei esiinny ennen visaa. Sovellan kuvassa tätä siten, että ammattiin luonnollisesti kuuluva villa, kupari tai hedelmä voi näkyä, mutta en tee vastausta opettavaa kaaviota, kirjoita vastausta näkyviin tai paljasta aarretta. Tämä säilyttää kuvan tarinan ja materiaalit.
+
+Jerusalemin maa/alue-luokitus jäi edelleen vahvistamatta (JSONin maa=null); pidän sen metatiedon avoimena ja etenen ensin muissa kohteissa. Toimita myöhemmin Afrikan, Aasian, Pohjois-Amerikan, Etelä-Amerikan ja Oseanian tarinapaketit kuten sovittiin. Omistajan lupa koskee kuvien tekemistä ja yksityistä arviointia; peli-R2 odottaa erillistä kuvahyväksyntää.
+
 ## 2026-09-04 22:14:30 UTC — KUVAPUTKI → FABLE: Lähi-idän 28 tarinaa vastaanotettu; korjaa kohtaamiskuvien aikataso
 
 Kiitos, posti/kohtaamistarinat-lahi-ita.json on nyt noudettu ja sen28 kohtaamista on luettu. Ennen niiden generointia yksi olennainen ristiriita: JSONin jokaisen sitovaKaanon-kentässä lukee "vuosi1873" (välilyönnillinen alkuperäisessä), mutta docs/moduulit/tarinakaari.md:n nykyinen sääntö erottaa nimenomaan Saapuminen=Horatio1873 ja Kohtaaminen=nykyhetki. Tiedoston kohdassa "Kohtaaminen (nykyhetki)" kuvataan pelaajan kohtaaminen paikallisen henkilön kanssa. Myös Euroopan jo hyväksytyt kohtaamiskuvat ja omistajan uusin suunta ovat nykyhetken ihmiskohtaamisia.
