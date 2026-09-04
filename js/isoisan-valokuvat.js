@@ -26,7 +26,11 @@ export const ISOISAN_KUVAJUURI = `${AANI_JUURI}kohtaamiset/isoisa/`;
 export const ISOISAN_VALOKUVAT = {
   kanton: {
     osoite: `${ISOISAN_KUVAJUURI}isoisa-kanton-1873-kulunut-v1.jpg`,
-    rajaus: { x0: 0.054, y0: 0.032, x1: 0.943, y1: 0.956 },
+    // Rajaus kortin pahvireunan SISÄPUOLELLE (omistaja 4.9.2026 ilta:
+    // "isoisän kuvassa näkyy reunoilla vielä valkoista"): pahvin vaalea
+    // kehys ja pyöristetyt kulmat jäivät näkyviin, kun leikattiin vain
+    // valkoinen tausta pois. Mitattu kuvasta (1536 × 1024).
+    rajaus: { x0: 0.13, y0: 0.115, x1: 0.873, y1: 0.866 },
     selite: 'Isoisä teehuoneen pöydässä Kantonissa 1873. Kulunut cabinet card '
       + 'isoisän matkalaukusta.',
     lahde: 'Kuvaputken generoitu valokuva',
@@ -34,7 +38,8 @@ export const ISOISAN_VALOKUVAT = {
   },
   bombay: {
     osoite: `${ISOISAN_KUVAJUURI}isoisa-bombay-1873-kulunut-v1.jpg`,
-    rajaus: { x0: 0.076, y0: 0.091, x1: 0.923, y1: 0.915 },
+    // Sama sisärajaus kuin Kantonissa (4.9.2026): valokuva ilman pahvia.
+    rajaus: { x0: 0.125, y0: 0.13, x1: 0.875, y1: 0.873 },
     selite: 'Isoisä Bombayn satamalaiturilla matka-arkkunsa vieressä 1873. '
       + 'Valokuva löytyi matkakirjan välistä.',
     lahde: 'Kuvaputken generoitu valokuva',

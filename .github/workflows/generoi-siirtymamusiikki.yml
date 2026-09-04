@@ -67,6 +67,15 @@ on:
         type: choice
         default: 'kaikki'
         options: ['kaikki', 'jalan', 'laiva', 'lento', 'keksinnot']
+      moottori:
+        description: >-
+          Musiikkimoottori: eleven = ElevenLabs Music (pelin raidat),
+          lyria = Google Lyria 3.5 (vertailuraidat päätteellä -lyria,
+          eivät korvaa pelin raitoja).
+        required: false
+        type: choice
+        default: 'eleven'
+        options: ['eleven', 'lyria']
 
 permissions:
   contents: read
@@ -108,11 +117,11 @@ jobs:
       # Arvoja ei tulosteta, vain onko ne asetettu.
       - name: Tarkista että salaisuudet ovat tallessa
         env:
-          AVAIN: ${{ secrets.ELEVEN_API_KEY }}
+          AVAIN: ${{ inputs.moottori == 'lyria' && secrets.GOOGLE_API_KEY || secrets.ELEVEN_API_KEY }}
         run: |
           set -euo pipefail
           puuttuu=""
-          [ -n "$AVAIN" ]                        || puuttuu="$puuttuu ELEVEN_API_KEY"
+          [ -n "$AVAIN" ]                        || puuttuu="$puuttuu ${{ inputs.moottori == 'lyria' && 'GOOGLE_API_KEY' || 'ELEVEN_API_KEY' }}"
           [ -n "${R2_ACCOUNT_ID:-}" ]            || puuttuu="$puuttuu R2_ACCOUNT_ID"
           [ -n "${AWS_ACCESS_KEY_ID:-}" ]        || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
           [ -n "${AWS_SECRET_ACCESS_KEY:-}" ]    || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
@@ -136,12 +145,13 @@ jobs:
       # maksullista kutsua on tehty. Tulostaa myös promptit sellaisina
       # kuin ne APIin lähtevät.
       - name: Kuiva ajo (ffmpeg-ketju ja promptit)
-        run: node tools/generoi-siirtymamusiikki.mjs --laji ${{ inputs.laji }} --kuiva
+        run: node tools/generoi-siirtymamusiikki.mjs --laji ${{ inputs.laji }} --moottori ${{ inputs.moottori || 'eleven' }} --kuiva
 
       - name: Generoi, leikkaa looppi ja vie ämpäriin
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
-        run: node tools/generoi-siirtymamusiikki.mjs --laji ${{ inputs.laji }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: node tools/generoi-siirtymamusiikki.mjs --laji ${{ inputs.laji }} --moottori ${{ inputs.moottori || 'eleven' }}
 
       # Vartija sille, mitä tämä ajo lupaa: repoon ei jää mitään.
       # Työkalu kirjoittaa media/-kansioon, joka on .gitignoressa —

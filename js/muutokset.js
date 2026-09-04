@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1547, teksti: 'Lyria 3.5 -moottori musiikkiin, isoisan kuvat ilman pahvia' },
   { v: 1546, teksti: 'Pallolaatat: noutotahti ja 429-odotus' },
   { v: 1545, teksti: 'Karttapallo: sormi pysyy kartan kohdassa vedossa' },
   { v: 1544, teksti: 'Pallolaatat: alue-ajo rinnakkain tasoa 8 varten' },
