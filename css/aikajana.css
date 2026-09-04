@@ -178,7 +178,7 @@
    */
   background-image:
     linear-gradient(180deg, rgba(255, 246, 222, 0.42) 0%, rgba(214, 190, 140, 0) 42%, rgba(58, 38, 14, 0.55) 100%),
-    url("https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/tekstuurit/paperi-vanha-v1.jpg"),
+    url("https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/tekstuurit/paperi-vanha-vaaka-v1.jpg"),
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='k'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.36 0 0 0 0 0.26 0 0 0 0 0.12 0 0 0 0.22 0'/></filter><rect width='240' height='240' filter='url(%23k)'/></svg>");
   background-size: 100% 100%, cover, 240px 240px;
   background-position: center, center, 0 0;

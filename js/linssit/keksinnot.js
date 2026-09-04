@@ -756,7 +756,10 @@ export const KEKSINNOT = [
        */
       kuva: {
         osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-lahto-1873-kulunut-v1.jpg',
-        selite: 'Isoisä lähdössä matkaan Lontoossa 1873.',
+        // Kuvaputken kuvateksti sanasta sanaan (toimitus 4.9.2026 08:48 UTC).
+        selite: 'Isoisä nousee Charing Crossilla maailmanympärimatkansa ensimmäiseen '
+          + 'junaan ja vilkuttaa vielä kameralle, ennen kuin tuttu laituri jää '
+          + 'höyryn taakse.',
         lahde: 'Kuvaputken generoitu valokuva',
       },
     },
