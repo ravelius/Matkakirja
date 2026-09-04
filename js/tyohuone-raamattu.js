@@ -3222,6 +3222,18 @@ export const RAAMATTU = {
           + 'iOS-kuoressa (backdrop-filter tai valmiiksi sumennettu kerros, '
           + 'ei pelkka filter), ja tarkistetaan WebKit-emulaatiossa. '
           + 'Toteutus karuselliagentin jalkeen (sama tiedosto).',
+        'LINSSIN SELOSTAJA LUKEE PYSAKIN (omistaja 4.9.2026 aamu, '
+          + 'sanatarkasti: "Generoi selostajan aanella jokaiseen kohtaan '
+          + 'vuosiluku, keksijan nimi ja keksinto, eli se tulisi aina '
+          + 'Keksinnon vaihtoessa lukijan aanella."): jokaiselle Keksinnot-'
+          + 'linssin pysakille Viisaan Kertojan luenta "<vuosi>. <keksija>. '
+          + '<keksinto>." (ElevenLabs eleven_v3, GitHub Actions '
+          + 'generoi-linssiluennat.yml secretilla, tuotos vain R2:een '
+          + 'aikajana/keksinnot/puhe/<runko>.mp3); peli soittaa sen '
+          + 'keksinnon syttyessa kilahduksen jalkeen, kertojan kytkin ja '
+          + 'taustan vaisto kuten muissa luennoissa; pysaytetyn kellon '
+          + 'siirto ei lue. Tyo Opus-agentilla, Fable ajaa workflow\'n '
+          + 'mainista ja kytkee.',
         'HAVAINNEKUVAPANEELI NIPISTAMALLA SOPIVAN KOKOISEKSI (omistaja '
           + '3.9.2026 ilta, sanatarkasti: "Tee kartan havainnekuvassa lisaksi '
           + 'myos suurennettava. Eli nipistamalla kuva suurenee tai pienenee. '
