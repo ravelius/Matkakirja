@@ -2127,10 +2127,17 @@ export const SKANDAALIT = {
       kuvat: [
         {
           osoite: `${SKANDAALI_KUVAJUURI}skandaali-mona-lisan-varkaus-1911-photo-v1.jpg`,
+          /*
+           * Fablen muotoilu 4.9.2026 (omistaja: "Muotoile itse"): kuvaputken
+           * teksti sanoi "Valkoisen takin alla kulkee Mona Lisa", mutta
+           * kortin oma teksti (korjaus 2.9.2026) kertoo, ettei taulu
+           * mahtunut työtakin alle — Peruggia kantoi sen käärittynä.
+           */
           selite: 'Huoltomies avaa juuttuneen oven Vincenzo Peruggialle ja '
-            + 'luulee auttavansa työtoveria. Valkoisen takin alla kulkee Mona '
-            + 'Lisa — pieni puupaneeli, joka katoaa yli kahdeksi vuodeksi ja '
-            + 'palaa Louvreen paljon kuuluisampana kuin lähti.',
+            + 'luulee auttavansa työtoveria. Valkoisen työtakin ja käärön '
+            + 'suojissa kulkee Mona Lisa — pieni puupaneeli, joka katoaa yli '
+            + 'kahdeksi vuodeksi ja palaa Louvreen paljon kuuluisampana kuin '
+            + 'lähti.',
           lahde: 'Matkakirjan havainnekuva. Faktat: Louvre — The theft of the '
             + 'century; Peruggian henkilöllisyys, lasittajantausta, valkoinen '
             + 'työtakki, 21.8.1911 tehty varkaus ja teoksen yli kaksivuotinen '
