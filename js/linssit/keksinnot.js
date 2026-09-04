@@ -775,7 +775,8 @@ export const KEKSINNOT = [
      * syttynyt 11 valoa (1769–1869) ja edessä on 14 (1876–1928).
      */
     valinaytos: {
-      otsikko: '1873. Isoisä lähtee matkaan.',
+      // Ilman vuosilukua (omistaja 4.9.2026: "tulee muuten toistoa" — ensimmäinen rivi on "Vuosi 1873.").
+      otsikko: 'Isoisä lähtee matkaan.',
       kertoja: 'Vuosi 1873. Kartalla palaa yksitoista valoa: höyry vetää junia, '
         + 'lennätin vie sanan meren yli, ja valokuva pysäyttää hetken. Isoisä '
         + 'lähtee matkaan. Edessä on neljätoista valoa lisää, eikä hän tiedä '

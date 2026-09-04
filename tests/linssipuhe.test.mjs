@@ -252,7 +252,8 @@ test('välinäytöksen data on kaikilta osin paikallaan', () => {
   const paalu = KEKSINNOT.find((t) => t.paalu);
   const v = paalu.valinaytos;
   assert.ok(v, 'merkkipaalulta puuttuu välinäytös');
-  assert.match(v.otsikko, /1873/);
+  // Otsikko ilman vuosilukua (omistaja 4.9.2026): kertojan ensimmäinen rivi on "Vuosi 1873.".
+  assert.equal(v.otsikko, 'Isoisä lähtee matkaan.');
   // Kertoja summaa nähdyn ja suuntaa tulevaan (omistajan tilaus).
   assert.ok(v.kertoja.length > 150, 'kertojan teksti on liian lyhyt');
   assert.match(v.kertoja, /yksitoista/);
