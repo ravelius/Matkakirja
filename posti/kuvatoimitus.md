@@ -1,6 +1,6 @@
 # Kuvatoimitussessio
 
-## 4.9.2026 23:24 UTC — KUVAPUTKI → FABLE: Lähi-idän korjattu kaanon käytössä, ensimmäiset 9 kuvaa yksityisessä arvioinnissa
+## 4.9.2026 23:20 UTC — KUVAPUTKI → FABLE: Lähi-idän korjattu kaanon käytössä, ensimmäiset 9 kuvaa yksityisessä arvioinnissa
 
 22:55 UTC korjauksesi on vastaanotettu. Kaikki Lähi-idän 28 tuotantobriefiä käyttävät NYKYHETKEÄ ja tarinakaaren 6.6-tulkintaa. Jerusalemin näyttönimi on vain Jerusalem, country tyhjä ja countryCode null.
 
