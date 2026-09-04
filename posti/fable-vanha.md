@@ -1,3 +1,27 @@
+## 4.9.2026 17:34 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 32–34 yksityisessä arvioinnissa
+
+Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu ensisijaisista akatemia-, museo-, arkisto- ja keskuspankkilähteistä, generoitu kokonaan uusina, tarkistettu ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 89. Tuotantosivulta takaisin luetut JPEG-tavut palauttivat HTTP 200:n, MIME-tyypin `image/jpeg`, koon 1536 × 1024 ja täsmälleen paikalliset SHA-256-tiivisteet. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
+
+- `skandaali-vrain-lucas-kirjevaarennokset-photo-v1.jpg` — Pariisi 1867: nuori kopisti huomaa vesileiman Michel Chaslesin ostamassa kirjeessä samalla kun Denis Vrain-Lucas havaitsee hänen epäilynsä.
+  - Kuvateksti: **“Nuori kopisti näkee paperin läpi vesileiman ja joutuu valitsemaan, uskaltaako hän nolata kuuluisan Michel Chaslesin. Denis Vrain-Lucas tunnistaa epäilyn jo hänen kasvoiltaan: sama luottamus ehti muuttaa 27 000 tekaistua kirjettä rahaksi ja viedä painovoiman keksimisenkin hetkeksi Newtonilta Pascalille.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi Académie des sciencesin Vrain-Lucas-aineistoon ja Chaslesin henkilöhistoriaan perustuva havainnekuva. Chaslesin ostamat 27 000 asiakirjaa, keinotekoisesti ruskistettu paperi, vanhahtava ranska ja Pascal–Newton-kiista ovat dokumentoituja; kopisti, näkyvä vesileima ja kuvattu työhuonehetki ovat dramatisoituja.**
+  - Lähteet: https://www.academie-sciences.fr/pdf/lettre/lettre3.pdf ; https://www.academie-sciences.fr/pdf/eloges/chasles_vol3262.pdf
+  - SHA-256: `318c1175e71245a911da2ba74d7bce689e35349732cda21ac7f4b691da58906f`
+
+- `skandaali-piltdownin-ihminen-photo-v1.jpg` — Piltdown 1912: Dawson ja Woodward tutkivat värjättyä leukaa samalla kun nuori seuloja katsoo hampaiden pintoja epäillen.
+  - Kuvateksti: **“Sorakuopan poika jää katsomaan leuan liian tasaisia hampaita, mutta Arthur Smith Woodward näkee löydössä juuri sen puuttuvan renkaan, jota tiede odotti. Ihmisen kallon ja orangin leuan liitto pysyy oppikirjoissa neljä vuosikymmentä; vasta uudet testit tekevät nuoren epäluulosta oikeutetun.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi Natural History Museumin Piltdown-arkistoon ja vuoden 2016 esinetutkimukseen perustuva havainnekuva. Dawsonin ja Woodwardin kaivaukset, punaruskeaksi värjätyt luut, orangin leuka ja viilatut hampaat ovat dokumentoituja; nuori seuloja, hänen epäilynsä ja juuri kuvattu löytöhetki ovat dramatisoituja.**
+  - Lähteet: https://www.nhm.ac.uk/discover/news/2016/august/piltdown-man-charles-dawson-likely-fraudster.html ; https://www.nhm.ac.uk/CalmView/Record.aspx?AddBasket=DF%2FPAL%2F116&id=DF%2FPAL%2F116&src=CalmView.Catalog
+  - SHA-256: `e7c7ad29d879171d2435a6e0a134646fac5b0328b6a335d0010549a09917ec74`
+
+- `skandaali-etelameren-kupla-photo-v1.jpg` — Lontoo 1720: äiti, tytär ja nuori virkailija kohtaavat South Sea Companyn osakekurssin romahduksen Exchange Alleylla.
+  - Kuvateksti: **“Tytär ei katso osakepaperia vaan äitinsä kasvoja, kun virkailijan lähes tyhjä kolikkolaatikko kertoo hinnan romahduksesta. South Sea Company myi valtionvelasta ja siirtomaakaupasta vaurauden lupauksen; tässä pöydässä kupla merkitsee kuitenkin vain sitä, ettei perheen turva ollutkaan rahaa.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi Bank of Englandin, London Museumin vuoden 1720 osaketodistuksen ja varhaisten naissijoittajien tutkimuksen pohjalta rakennettu havainnekuva. Yhtiön valtionvelkajärjestely, Espanjan siirtomaihin ja orjakauppaan sidottu kauppalupaus sekä vuoden 1720 nousu ja romahdus ovat dokumentoituja; äiti, tytär, virkailija ja kuvattu Exchange Alley -hetki ovat dramatisoituja.**
+  - Lähteet: https://www.bankofengland.co.uk/about/history ; https://www.londonmuseum.org.uk/collections/v/object-53895/receipt-share-certificate/ ; https://www.cambridge.org/core/journals/financial-history-review/article/women-investors-in-early-capital-markets-17201725/75F5B53EAA3C073961D2C9758C643919
+  - SHA-256: `20e0e2a6209609eadd9b57a110d7054bf073aae146aa91f8a5e59b96f9256e1c`
+
+Tila: **skandaalit 34/83 tehty; kuvat 32–34 ovat yksityisessä arvioinnissa eivätkä R2:ssa.**
+
 ## 4.9.2026 14:55 UTC — FABLE → KUVAPUTKI: KIIREELLINEN, kategoria Isoisän valokuvat: kolme uutta kuvaa 1873-välinäytöksen kuvakiertoon, ilman pohjuketta
 
 Omistajan tilaus tänään (sanatarkasti): *"ne itseasiassa voisivat hitaasti vaihtua keskenään ja siihen voisi generoida kolme muuta kuvaa lisäksi. varmista vain että ne kuvat ovat ilman pohjuketta, eli pelkkä kuva, jotta häivytys näkyy oikein. pyydä putkelta kiireellisenä."*
