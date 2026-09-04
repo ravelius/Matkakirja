@@ -28,8 +28,10 @@
  * peilaamalla: taustaa jatketaan kuvan omalla, peilatulla reunalla,
  * jolloin 3:2-ikkuna leviää ja korkeutta tulee lisää. Sauma on
  * jatkuva, ja lähteen tausta on epätarkka ylänkö, joten peilaus ei
- * näy. Poikkeus on eläinkohtainen ja kirjataan alle, jotta ajo
- * toistuu samanlaisena.
+ * näy. Reunan voi jättää myös toiselle puolelle kokonaan pois, jos
+ * siellä on ihminen tai muu hahmo, jonka kahdentuminen näkyisi (BIH).
+ * Poikkeus on eläinkohtainen ja kirjataan alle, jotta ajo toistuu
+ * samanlaisena.
  *
  * PAKKAUS TEHDÄÄN CHROMIUMIN CANVASILLA (sama kaava kuin
  * tools/leikkaa-miniatyyrit.mjs): repossa ei ole sharpia eikä
@@ -66,15 +68,30 @@ const SUHDE = 3 / 2;
  * `reunat` on pikseleinä kummallekin sivulle peilattavan taustan määrä
  * (leveämpi ikkuna = korkeampi ikkuna) ja `ylareuna` ikkunan yläreuna
  * lähdekuvan pikseleinä (ilman sitä ikkuna keskitetään pystysuunnassa).
+ * Reunan voi antaa myös toispuolisena (`vasen`/`oikea`), kun toisella
+ * laidalla on kuvassa jotain, mitä ei saa kahdentaa — peilaus toistaa
+ * reunan sisällön, ja ihminen tai muu tunnistettava hahmo paljastaisi
+ * tempun heti. `reunat` on näiden molempien oletus, joten vanhat
+ * poikkeukset toimivat ennallaan.
  *
  * TUR: angoravuohen kili on 1536 pikselin neliössä sarvenkärjistä
  * (y ≈ 265) sorkkiin (y ≈ 1420), eli noin 1160 pikseliä korkea, kun
  * keskitettyyn ikkunaan mahtuisi 1024. Peilatut 170 pikselin reunat
  * nostavat ikkunan 1876 x 1251:een, ja yläreuna 217 asettaa kilin
  * keskelle: sarville ja sorkille jää noin 20 pikselin ilma.
+ *
+ * BIH: tornjakinpentu juoksee kohti kameraa korvankärjistä (y ≈ 285)
+ * etutassuihin (y ≈ 1465), eli noin 1180 pikseliä — sekin yli
+ * keskitetyn 1024:n. Peilaus tehdään vain vasemmalle (300 px), koska
+ * oikeassa laidassa kyykkii paimen: symmetrinen peilaus monistaisi
+ * hänet toiseksi ihmiseksi kuvan reunaan. Vasen laita on rinnettä,
+ * laidunta ja lammaslauman reuna, joka kestää jatkamisen. Ikkunaksi
+ * tulee 1836 x 1224 ja yläreunaksi 263: korville ja tassuille jää noin
+ * 20 pikselin ilma, ja kinnas on kokonaan mukana.
  */
 const RAJAUSPOIKKEUKSET = {
   tur: { reunat: 170, ylareuna: 217 },
+  bih: { vasen: 300, oikea: 0, ylareuna: 263 },
 };
 
 if (!lahde || !existsSync(lahde)) {
@@ -109,29 +126,29 @@ for (const nimi of tiedostot) {
   }
   const b64 = readFileSync(resolve(lahde, nimi)).toString('base64');
   const poikkeus = RAJAUSPOIKKEUKSET[tunnus] ?? {};
-  const ulos = await sivu.evaluate(async ({ data, leveys, laatu, suhde, reunat, ylareuna }) => {
+  const ulos = await sivu.evaluate(async ({ data, leveys, laatu, suhde, vasen, oikea, ylareuna }) => {
     const kuva = new Image();
     kuva.src = `data:image/jpeg;base64,${data}`;
     await kuva.decode();
 
     // Peilatut sivureunat (vain poikkeuksille; muuten lahde = kuva).
-    const lahdeLeveys = kuva.width + 2 * reunat;
+    const lahdeLeveys = kuva.width + vasen + oikea;
     let lahdeKuva = kuva;
-    if (reunat > 0) {
+    if (vasen > 0 || oikea > 0) {
       const tyo = document.createElement('canvas');
       tyo.width = lahdeLeveys;
       tyo.height = kuva.height;
       const t = tyo.getContext('2d');
       t.imageSmoothingEnabled = true;
       t.imageSmoothingQuality = 'high';
-      for (const siirto of [reunat, reunat + 2 * kuva.width]) {
+      for (const siirto of [vasen, vasen + 2 * kuva.width]) {
         t.save();
         t.translate(siirto, 0);
         t.scale(-1, 1);
         t.drawImage(kuva, 0, 0);
         t.restore();
       }
-      t.drawImage(kuva, reunat, 0);
+      t.drawImage(kuva, vasen, 0);
       lahdeKuva = tyo;
     }
 
@@ -162,7 +179,8 @@ for (const nimi of tiedostot) {
     leveys: LEVEYS,
     laatu: LAATU,
     suhde: SUHDE,
-    reunat: poikkeus.reunat ?? 0,
+    vasen: poikkeus.vasen ?? poikkeus.reunat ?? 0,
+    oikea: poikkeus.oikea ?? poikkeus.reunat ?? 0,
     ylareuna: poikkeus.ylareuna ?? null,
   });
   const puskuri = Buffer.from(ulos.b64, 'base64');

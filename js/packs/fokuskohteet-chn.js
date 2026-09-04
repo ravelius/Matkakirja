@@ -103,20 +103,14 @@ export const FOKUSKOHTEET_CHN = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-yuanmingyuan.webp',
       kadonnut: true,
-      selite: 'Yuanmingyuan oli Kiinan keisarien varsinainen koti ja '
-        + 'aikansa suurin puutarha-alue: 3,5 neliökilometriä saleja, '
-        + 'paviljonkeja ja lampia, joiden joukossa eurooppalaistyyliset '
-        + 'Xiyang Lou -palatsit suihkulähteineen. Keisari hoiti täältä '
-        + 'valtakunnan asiat suuren osan vuodesta, ja puiston '
-        + 'kauppakadulla eunukit esittivät kauppiaita, jotta hovi sai '
-        + 'leikkiä tavallista ostoksilla käyntiä. Britti- ja '
-        + 'ranskalaisjoukot ryöstivät ja polttivat alueen lokakuussa '
-        + '1860 — kolmetoista vuotta ennen isoisän matkaa, joten hän '
-        + 'olisi nähnyt tästä vain tuoreet rauniot. Paikalla on nyt '
-        + 'puisto, jonka kuuluisin näky ovat kivipalatsien kaatuneet '
-        + 'julkisivut.',
+      selite: 'Nuori putkimestarin oppilas saa jääkylmän vesisuihkun '
+        + 'syliinsä ja nauraa — kunnes huomaa hovieunukin katseen ja '
+        + 'keisarin seurueen lähestyvän. Palatsin ihme toimii vain '
+        + 'siksi, että näkymättömät työntekijät saavat jokaisen '
+        + 'venttiilin aukeamaan oikealla hetkellä.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+        + 'omana aikanaan. Faktat: Yuanmingyuan Ruins Park — official '
+        + 'site.',
     },
   },
 ];

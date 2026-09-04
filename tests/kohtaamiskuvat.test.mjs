@@ -10,7 +10,13 @@ import { TARINAKAARI } from '../js/packs/tarinakaari.js';
 test('kohtaamiskuvagalleria käyttää vain R2-mediaa', async () => {
   assert.match(KOHTAAMIS_R2_JUURI, /^https:\/\/[^/]+\.r2\.dev\/kohtaamiset$/);
   for (const kohtaaminen of kohtaamiskuvat) {
-    assert.match(kohtaaminen.tiedosto, /^kasvo-[a-z0-9-]+\.jpg$/);
+    /*
+     * Pelkkä tiedostonimi, ei polkua eikä isoja kirjaimia — osoite
+     * syntyy aina KOHTAAMIS_R2_JUURI + '/' + tiedosto. Vanhat kuvat
+     * ovat kasvo-alkuisia, 4.9.2026 alkaen kuvaputken erät nimeävät
+     * tiedoston suoraan kaupungin ja hahmon mukaan.
+     */
+    assert.match(kohtaaminen.tiedosto, /^[a-z0-9-]+\.jpg$/);
     await assert.rejects(stat(new URL(`../${kohtaaminen.tiedosto}`, import.meta.url)));
   }
 });

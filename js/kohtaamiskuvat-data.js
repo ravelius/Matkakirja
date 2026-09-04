@@ -306,6 +306,132 @@ export const kohtaamiskuvat = [
     hetki: 'Kiipeäminen pysähtyy katon reunalle, mutta tuuli, hiukset ja takki jatkavat liikettä hänen ympärillään.',
     vihje: 'Vilnan katot ja vartijan myrskyinen kierros luovat paikan paljastamatta rautaisen suden arvoitusta.',
   },
+  /*
+   * KUVAPUTKEN ERÄ 4.9.2026 (8 kuvaa). Kuvatekstit ja vihjerajaukset
+   * ovat kuvaputken toimittamassa muodossa sanasta sanaan. Tiedostot
+   * ovat ämpärin juuressa ilman kasvo-etuliitettä, joten nimi kertoo
+   * kaupungin, hahmon ja aiheen sellaisenaan.
+   *
+   * Faktapohjat (kortti ja galleria näyttävät kiinteän lähderivin
+   * "Matkakirjan kuvitus", joten näille ei ole omaa kenttää):
+   *   dublin-molly-hapenny — Dublin City Council, publications
+   *     https://www.dublincity.ie/libraries/using-your-library/books-movies-and-more/publications
+   *   moskova-vera-tsaarinkello — Moscow Kremlin Museums, Tsar Bell
+   *     https://www.kreml.ru/en-Us/visit-to-kremlin/what-to-see/tsar-kolokol/
+   *   helsinki-aino-luotsi — Suomenlinna, history
+   *     https://suomenlinna.fi/en/explore/history/
+   *   riika-ilze-kultalehti — LiveRiga, Old Town
+   *     https://www.liveriga.com/en/7896-the-old-town
+   *   sofia-nadia-mineraalilahde — Sofia Municipality, The mineral springs
+   *     https://www.sofia.bg/en/web/sofia-municipality/w/the-mineral-springs
+   *   wien-anton-katakombit — St Stephen's Cathedral, Catacombs
+   *     https://www.stephanskirche.at/visitCatacombs.php
+   *   bukarest-ana-freskokonservointi — Ziarul Lumina, Sfanta Ecaterina
+   *     https://ziarullumina.ro/actualitate-religioasa/stiri/se-restaureaza-pictura-bisericii-sfanta-ecaterina-94364.html
+   *   sofia-mila-vitosha-nuotio — Visit Sofia, Vitosha Mountain
+   *     https://visitsofia.bg/en/cityinfrastructure/what-to-see/green-sofia/vitosha-mountain
+   *
+   * MILA JÄÄ ARKISTOON: tarinakaaressa Sofian kohtaamisen hahmo on
+   * lähteenvartija Nadia, eikä vuoristopelastaja Milalle löydy omaa
+   * kaaren kohdetta. Kuva säilyy galleriassa ja odottaa kohdetta;
+   * pelin kohtaamiskortille menee Sofiassa Nadia.
+   */
+  {
+    id: 'dublin-molly-hapenny',
+    kaupunki: 'Dublin',
+    maa: 'Irlanti',
+    hahmo: 'Molly',
+    tiedosto: 'dublin-molly-hapenny-v1.jpg',
+    tila: 'tarkistettu',
+    alt: 'Molly punnitsee märkää kolikkoa sormissaan Ha’penny Bridgellä.',
+    kuvateksti: 'Molly punnitsee märkää lanttia sormissaan. Vieras ehtii paikalle juuri, kun sadepisara osuu kolikkoon ja päätös jää tekemättä.',
+    hetki: 'Sadepisara osuu kolikkoon juuri kun vieras ehtii paikalle, ja päätös jää tekemättä.',
+    vihje: 'Kuvassa näkyvät Ha’penny Bridge, märkä vanha kolikko ja Mollyn keskeytynyt liike; kysymyksen vastausta tai sillan nimihistorian selitystä ei näytetä.',
+  },
+  {
+    id: 'moskova-vera-tsaarinkello',
+    kaupunki: 'Moskova',
+    maa: 'Venäjä',
+    hahmo: 'Vera',
+    tiedosto: 'moskova-vera-tsaarinkello-v1.jpg',
+    tila: 'tarkistettu',
+    alt: 'Vera koputtaa Tsaarinkellon pronssia ja kuuntelee sen värähdystä.',
+    kuvateksti: 'Vera koputtaa Tsaarinkellon pronssia. Vieraan kuulema värähdys tuo nuoren valajan kasvoille yhtä aikaa ylpeyden ja perityn surun.',
+    hetki: 'Pronssi värähtää koputuksen jäljiltä, ja Veran kasvoille nousee ylpeys ja peritty suru.',
+    vihje: 'Kuvassa näkyvät Vera ja rikkoutunut Tsaarinkello; halkeamisen syytä, tulta, sammutusvettä tai vastaustekstiä ei näytetä.',
+  },
+  {
+    id: 'helsinki-aino-luotsi',
+    kaupunki: 'Helsinki',
+    maa: 'Suomi',
+    hahmo: 'Aino',
+    tiedosto: 'helsinki-aino-luotsi-v1.jpg',
+    tila: 'tarkistettu',
+    alt: 'Aino kiristää solmun laiturilla, kun lokki vie hänen hansikkaansa.',
+    kuvateksti: 'Ainon solmu kiristyy laiturilla juuri oikealla hetkellä. Lokki vie hansikkaan, ja vieras saa osakseen huvittuneen käskynhaltijan katseen.',
+    hetki: 'Solmu kiristyy oikealla hetkellä, lokki nappaa hansikkaan ja vieras saa huvittuneen katseen.',
+    vihje: 'Kuvassa näkyvät Aino, luotsityö ja Suomenlinnan salmi; saarten lukumäärää, karttaa tai muuta numeerista vastausvihjettä ei näytetä.',
+  },
+  {
+    id: 'riika-ilze-kultalehti',
+    kaupunki: 'Riika',
+    maa: 'Latvia',
+    hahmo: 'Ilze',
+    tiedosto: 'riika-ilze-kultalehti-v1.jpg',
+    tila: 'tarkistettu',
+    alt: 'Ilzen kultalehti leijuu ilmavirrassa avautuvan oven edessä.',
+    kuvateksti: 'Ilzen kultalehti nousee ilmavirtaan vieraan avatessa oven. Kauhu ja ihastus pysyvät hetken yhtä hauraina kuin leijuva metalli.',
+    hetki: 'Ovi avautuu, ilmavirta nostaa kultalehden ja kauhu ja ihastus pysyvät yhtä hauraina.',
+    vihje: 'Kuvassa näkyvät Ilzen kultaustyö, ilmavirta ja leijuva kultalehti; tuuliviirin värikoodia, ilmansuuntaa tai vastauskaaviota ei näytetä.',
+  },
+  {
+    id: 'sofia-nadia-mineraalilahde',
+    kaupunki: 'Sofia',
+    maa: 'Bulgaria',
+    hahmo: 'Nadia',
+    tiedosto: 'sofia-nadia-mineraalilahde-v2.jpg',
+    tila: 'tarkistettu',
+    alt: 'Nadia pärskäyttää vettä rinnuksilleen mineraalilähteellä lapsenlapsensa nauraessa.',
+    kuvateksti: 'Nadia säikähtää vierasta ja pärskäyttää veden rinnuksilleen. Lapsenlapsi purskauttaa omansa nauruun, eikä kumpikaan saa enää pidettyä pokkaansa.',
+    hetki: 'Vesi pärskähtää rinnuksille säikähdyksestä, ja lapsenlapsen nauru vie viimeisenkin pokan.',
+    vihje: 'Kuvassa näkyvät Nadia, nyky-Sofian mineraalivesilähde ja veden arkinen käyttö; antiikin Serdicaa, roomalaishahmoja tai kysymyksen vastausta ei näytetä.',
+  },
+  {
+    id: 'wien-anton-katakombit',
+    kaupunki: 'Wien',
+    maa: 'Itävalta',
+    hahmo: 'Anton',
+    tiedosto: 'wien-anton-katakombit-v2.jpg',
+    tila: 'tarkistettu',
+    alt: 'Anton pysähtyy kynttilät kädessään katakombien portaille.',
+    kuvateksti: 'Anton pysähtyy kynttilät kädessään ja siristää silmänsä vierasta kohti. Katakombien portailla yksi liekki värähtää, mutta mies ei väisty.',
+    hetki: 'Yksi liekki värähtää portailla, mutta Anton siristää silmänsä vierasta kohti eikä väisty.',
+    vihje: 'Kuvassa näkyvät Anton, kynttilät ja katakombien portaikko; hautojen nimiä, vuosilukuja tai muuta suoraa vastaustekstiä ei näytetä.',
+  },
+  {
+    id: 'bukarest-ana-freskokonservointi',
+    kaupunki: 'Bukarest',
+    maa: 'Romania',
+    hahmo: 'Ana',
+    tiedosto: 'bukarest-ana-freskokonservointi-v2.jpg',
+    tila: 'tarkistettu',
+    alt: 'Ana pysäyttää siveltimen freskon ääressä ja katsoo alas yllättyneenä.',
+    kuvateksti: 'Ana valitsi konservaattorin työn, koska isoäidin kirkon himmenevät kasvot eivät saaneet kadota. Pelaajan kysymys pysäyttää siveltimen ja saa hänet katsomaan alas aidosti yllättyneenä.',
+    hetki: 'Kysymys pysäyttää siveltimen kesken konservoinnin, ja Ana katsoo alas aidosti yllättyneenä.',
+    vihje: 'Kuvassa näkyvät Ana ja aidon freskokonservoinnin työvaihe; teoksen nimeä, ajoitusta tai kysymyksen vastausta ei kirjoiteta kuvaan.',
+  },
+  {
+    id: 'sofia-mila-vitosha-nuotio',
+    kaupunki: 'Sofia',
+    maa: 'Bulgaria',
+    hahmo: 'Mila',
+    tiedosto: 'sofia-mila-vitosha-nuotio-v2.jpg',
+    tila: 'arkisto',
+    alt: 'Mila puhuu pelaajalle Vitoshan rinteellä, vieressään pelastuskoira.',
+    kuvateksti: 'Mila tuntee Vitoshan reitit säällä, jolloin kaupunkilainen ei erota polkua pilvestä. Hän ei lupaa pelaajalle apua ennen kuin tämä kertoo, onko rohkeus suunnitelma vai pelkkä tunne — vieressä koira näyttää pohtivan samaa.',
+    hetki: 'Mila jättää lupauksensa auki, kunnes pelaaja vastaa, ja koira näyttää pohtivan samaa.',
+    vihje: 'Kuvassa näkyvät Mila, pelastuskoira ja Vitoshan vuoristoympäristö; reittikarttaa, kohteen nimeä tai kysymyksen vastausta ei näytetä.',
+  },
 ];
 
 /**

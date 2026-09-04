@@ -886,8 +886,15 @@ test('kadonnut ihme saa kartalle tähden, olemassa oleva pitää oman merkkinsä
   assert.equal(tuileries.ihme.kadonnut, true, 'Tuileries purettiin 1883');
   assert.equal(tuileries.kuva, undefined, 'puretusta palatsista ei ole valokuvaa');
   assert.equal(stPaul.ihme.kadonnut, false, 'Ludgate Hillin katedraali on paikallaan');
-  assert.ok(/EDELTÄJÄ/.test(stPaul.ihme.selite),
-    'vanhan St Paulin selite kertoo kuvan olevan nykyisen edeltäjä');
+  /*
+   * Edeltäjämaininta saa olla selitteessä TAI lähderivillä: kortti
+   * piirtää lähderivin heti selitteen perään samaan figcaptioniin
+   * (js/fokuskohteet.js piirraKohdeKuva), joten pelaaja lukee ne
+   * yhtenä tekstinä. 4.9.2026 selite vaihtui kuvaputken sanatarkkaan
+   * kuvatekstiin, ja maininta siirtyi lähderiville.
+   */
+  assert.ok(/EDELTÄJÄ/.test(`${stPaul.ihme.selite} ${stPaul.ihme.lahde}`),
+    'vanhan St Paulin kuvateksti kertoo kuvan olevan nykyisen edeltäjä');
 
   /*
    * MAAILMAN ERÄ 27.8.2026. Kolme vartiota, jotka kaikki koskevat

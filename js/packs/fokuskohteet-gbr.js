@@ -132,27 +132,28 @@ export const FOKUSKOHTEET_GBR = [
      * kartalla säilyy historian pylväs ja valokuvan alle tulee "Koe
      * ihme" -nappi.
      *
-     * SELITE SANOO ENSIMMÄISESSÄ VIRKKEESSÄÄN, ETTÄ KUVAN KIRKKO ON
-     * EDELTÄJÄ. Tämä on erän ainoa ihme, jossa kuvan rakennus ja
-     * pääkuvan rakennus ovat eri rakennuksia, joten pelaajalle on
-     * kerrottava se ennen kuin hän ehtii luulla muuta.
+     * KUVATEKSTIN VIERESSÄ SANOTAAN, ETTÄ KUVAN KIRKKO ON EDELTÄJÄ.
+     * Tämä on erän ainoa ihme, jossa kuvan rakennus ja pääkuvan
+     * rakennus ovat eri rakennuksia, joten pelaajalle on kerrottava se
+     * ennen kuin hän ehtii luulla muuta. 4.9.2026 selite vaihtui
+     * kuvaputken sanatarkkaan kuvatekstiin, joka ei sano sitä — siksi
+     * edeltäjämaininta on nyt LÄHDERIVILLÄ, jonka kortti piirtää heti
+     * selitteen perään (js/fokuskohteet.js piirraKohdeKuva). Vartio
+     * lukee molemmat (tests/fokusvirta.test.mjs).
      */
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-vanha-st-paul.webp',
       kadonnut: false,
-      selite: 'Kuvan kirkko on nykyisen katedraalin EDELTÄJÄ: '
-        + 'keskiaikainen St Paul, joka tuhoutui Lontoon suuressa '
-        + 'palossa 1666. Sen torninhuippu oli keskiajan Euroopan '
-        + 'korkeimpia — perinteisen mitan mukaan noin 149 metriä — ja '
-        + 'huippu paloi salamaniskussa jo 1561 eikä sitä rakennettu '
-        + 'takaisin. Kirkon keskilaiva oli Lontoon uutistori: "Paul\'s '
-        + 'Walk" -nimellä tunnetulla käytävällä herrasmiehet, kauppiaat '
-        + 'ja taskuvarkaat kävelivät edestakaisin, sopivat kauppoja ja '
-        + 'kuulivat päivän juorut aikana ennen sanomalehtiä. '
-        + 'Samalla Ludgate Hillin tontilla seisoo nyt '
-        + 'Christopher Wrenin kupolikirkko.',
+      selite: 'Kirjapainon oppipoika kuiskaa tuoreen uutisarkin sisällön '
+        + 'toritytölle, joka ei osaa lukea mutta tietää heti, kenelle '
+        + 'tieto kannattaa myydä. Katedraalin varjossa uutinen kulkee '
+        + 'suusta suuhun nopeammin kuin painokone ehtii tehdä seuraavan '
+        + 'arkin.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+        + 'omana aikanaan. Kuvan kirkko on nykyisen katedraalin '
+        + 'EDELTÄJÄ: keskiaikainen St Paul, joka tuhoutui Lontoon '
+        + 'suuressa palossa 1666. Faktat: St Paul’s Cathedral — Our '
+        + 'timeline.',
     },
   },
   /*
@@ -297,15 +298,14 @@ export const FOKUSKOHTEET_GBR = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-vanha-london-bridge.webp',
       kadonnut: true,
-      selite: 'Keskiaikainen London Bridge valmistui 1209 ja kantoi '
-        + 'yli kuudensadan vuoden ajan kokonaista katua: parhaimmillaan '
-        + '140 taloa, joista jokainen oli myös kauppa. Talot purettiin '
-        + '1761 ja itse silta 1831. Samassa kohdassa jokea menee yhä '
-        + 'silta, mutta se on eri silta: isoisä kulki 1873 John '
-        + 'Rennien graniittisillan yli, joka myytiin 1968 ja pystytettiin '
-        + 'uudelleen Arizonaan, ja nykyinen betonisilta on vuodelta 1973.',
+      selite: 'Vesimiehen oppipoika huomaa virran vetävän venettä kohti '
+        + 'liian kapeaa kaarta ja yrittää jäljitellä mestarinsa '
+        + 'airoliikettä puoli tahtia myöhässä. Heidän yläpuolellaan '
+        + 'ihmiset asuvat, käyvät kauppaa ja syövät päivällistä '
+        + 'keskellä siltaa — mutta joella yksi väärä veto voi päättää '
+        + 'työpäivän.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+        + 'omana aikanaan. Faktat: London Museum — London Bridge.',
     },
   },
 ];

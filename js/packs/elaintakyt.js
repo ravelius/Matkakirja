@@ -323,6 +323,25 @@ export const ELAINTAKYT = {
       + '"Activities" ja "Care". Tarkistettu 2.9.2026.',
     kuva: 'assets/elaimet/elain-bih.jpg',
     /*
+     * KUVAPUTKEN KUVATEKSTI (toimitus 4.9.2026 12:05 UTC) sanasta
+     * sanaan. Eläintäyn kortti latoo kuvan selitteen itse ("Tornjak,
+     * Bosnia ja Hertsegovina", js/elaintaky.js elaintakyPiirraKuva),
+     * eikä täyllä ole selitekenttää — teksti säilytetään siksi tässä
+     * sellaisenaan, jotta se on tallessa, jos kenttä joskus tulee:
+     *
+     *   "Nuori tornjak harjoittelee tehtävää, jossa sen suvun koirat
+     *   ovat vartioineet Balkanin karjaa vuosisatoja. Tänään suurin
+     *   saavutus on kuitenkin paimenen kadonnut sininen kinnas, jonka
+     *   pentu palauttaa liian ylpeänä luovuttaakseen sen heti."
+     *
+     * Lähde on kuvan oma eikä kortin tekstin (`lahde` yllä on
+     * en-Wikipedia): kuvan lähderivi ladotaan kentästä `kuvaLahde`.
+     * Lajifaktojen lähde kokonaisuudessaan:
+     * https://www.fci.be/nomenclature/Standards/355g02-en.pdf
+     */
+    kuvaLahde: 'Kuvaputken generoitu valokuva. Lajifaktat: FCI Standard No. 355 '
+      + '— Tornjak.',
+    /*
      * Piste on keskisen Bosnian vuorilaitumilla Vlašićin länsipuolella
      * eikä Vlašićin huipulla: huipun kohdalta (lon 17,65) Sarajevoon
      * jäisi 34,6 laudan yksikköä, kun kaupunkimerkiltä vaaditaan 35
