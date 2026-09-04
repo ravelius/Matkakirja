@@ -57,15 +57,26 @@
  *            tiedosto putoaa sarjasta itsestään, joten havainnekuvan
  *            voi lisätä listan kärkeen heti kun kuvajono on sen
  *            tehnyt. Yhden kuvan lista piirtyy kuten ennenkin.
+ *            Havainnekuvalla saa lisäksi olla `url`: kuvaputken
+ *            toimittama faktalähteen osoite. Sitä ei ladota kortille
+ *            (lähderivi on tekstiä, ja pitkä osoite täyttäisi puolet
+ *            rivistä) vaan se säilytetään samassa kuvassa kuten
+ *            historian hetkillä (js/packs/historian-hetket.js).
  *   kuva     VANHA yhden kuvan kenttä { osoite, selite, lahde }. Yhä
  *            tuettu (js/skandaalit.js skandaalinKuvat lukee sen yhden
  *            alkion listana), eikä sitä tarvitse muuttaa: erän
  *            1.9.2026 kolme Wienin havainnekuvaa piirtyvät ennallaan.
  *            `osoite` on valmis osoite pelin omassa ämpärissä — nämä
  *            ovat Matkakirjan omia havainnekuvia, joten lähderivi
- *            alkaa "Matkakirjan havainnekuva:" ja saa selitelinkin
- *            (js/havainnekuva.js). Selite on yksi virke siitä, mitä
- *            kuvassa on.
+ *            alkaa "Matkakirjan havainnekuva" ja saa selitelinkin
+ *            (js/havainnekuva.js).
+ *
+ *            KUVAPUTKEN ERÄ photo-v1 (4.9.2026) toi näille kolmelle ja
+ *            seitsemälle muulle skandaalille valokuvamaisen kuvan
+ *            (`skandaali-<id>-photo-v1.jpg`). Kuvateksti ja lähderivi
+ *            ovat kuvaputken toimittamia sanasta sanaan (posti
+ *            4.9.2026 12:05 UTC), joten selite on nyt 2–3 virkettä ja
+ *            lähderivi muotoa "Matkakirjan havainnekuva. Faktat: …".
  *   visa     minivisa: kysymys, kolme vaihtoehtoa, oikean indeksi.
  *            Oikean paikan jakauma tasattiin koko erän yli
  *            (28/28/27), ettei se painotu yhteen indeksiin.
@@ -137,10 +148,14 @@ export const SKANDAALIT = {
         + 'shakkilauta oli säilytyksessä muualla ja on tallella.',
       lahde: 'en-Wikipedia "Mechanical Turk". Tarkistettu 2.9.2026.',
       kuva: {
-        osoite: `${SKANDAALI_KUVAJUURI}skandaali-shakkiturkkilainen.jpg`,
-        selite: 'Kaapin ovet on avattu yleisölle: rattaiden ja vipujen '
-          + 'takana on tila, johon shakinpelaaja mahtui istumaan.',
-        lahde: 'Matkakirjan havainnekuva: kaappi avattuna ennen näytöstä',
+        osoite: `${SKANDAALI_KUVAJUURI}skandaali-shakkiturkkilainen-photo-v1.jpg`,
+        selite: 'Nuori hovinainen kumartuu tutkimaan rattaita niin syvälle kuin '
+          + 'etiketti sallii, ja vieressä hovipoika yrittää pidätellä nauruaan. '
+          + 'Kempelen avaa ovet tyynenä: koneen sisään kätketty pelaaja osaa '
+          + 'väistää katseita yhtä taitavasti kuin vastustajan nappuloita.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: The Metropolitan Museum of Art '
+          + '— Art in Motion.',
+        url: 'https://www.metmuseum.org/exhibitions/listings/2019/making-marvels-science-splendor/art-in-motion',
       },
       visa: {
         kysymys: 'Miten shakkiturkkilainen todellisuudessa pelasi?',
@@ -195,10 +210,14 @@ export const SKANDAALIT = {
       lahde: 'en-Wikipedia "Klimt University of Vienna Ceiling Paintings". '
         + 'Tarkistettu 2.9.2026.',
       kuva: {
-        osoite: `${SKANDAALI_KUVAJUURI}skandaali-klimtin-tiedekuntamaalaukset.jpg`,
-        selite: 'Juhlasalin kullattu kattokehys jäi tyhjäksi, ja tilattu '
-          + 'kangas makaa pukkien päällä rullalla telineiden alla.',
-        lahde: 'Matkakirjan havainnekuva: ripustamatta jäänyt tilaustyö',
+        osoite: `${SKANDAALI_KUVAJUURI}skandaali-klimtin-tiedekuntamaalaukset-photo-v1.jpg`,
+        selite: 'Maaliapulainen pitää telineen köydestä kiinni ja yrittää lukea '
+          + 'professorien kasvoilta, onko vuosien työ juuri tuomittu. Yksi osoittaa '
+          + 'kattoon suuttuneena, toinen vaikenee ihastuksestaan — kiista on alkanut '
+          + 'ennen kuin kangas ehtii paikalleen.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: University of Vienna — Gustav '
+          + 'Klimt: Philosophy.',
+        url: 'https://geschichte.univie.ac.at/de/bilder/gustav-klimt-die-philosophie-fakultatsbild',
       },
       visa: {
         kysymys: 'Mikä oli Klimtin tiedekuntamaalausten lopullinen kohtalo?',
@@ -249,11 +268,14 @@ export const SKANDAALIT = {
         + 'soinut ajallaan — kukaan vain ei uskonut sitä.',
       lahde: 'en-Wikipedia "Cellini Salt Cellar". Tarkistettu 2.9.2026.',
       kuva: {
-        osoite: `${SKANDAALI_KUVAJUURI}skandaali-salieran-varkaus.jpg`,
-        selite: 'Cellinin kultainen suola-astia vitriinissään särkyneen '
-          + 'lasin takana; ikkunan ulkopuolella näkyvät rakennustelineet, '
-          + 'joita pitkin varas tuli sisään.',
-        lahde: 'Matkakirjan havainnekuva: murtoyö museosalissa',
+        osoite: `${SKANDAALI_KUVAJUURI}skandaali-salieran-varkaus-photo-v1.jpg`,
+        selite: 'Varas pysähtyy märillä telineillä, kun punainen hälytysvalo '
+          + 'välähtää museon ikkunassa. Alhaalla sateenvarjon alla kulkeva ihminen '
+          + 'ei katso ylös — eikä vartiointikeskuskaan usko, että hälytys on '
+          + 'todellinen.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Kunsthistorisches Museum Wien '
+          + '— statement on the theft.',
+        url: 'https://www.presseportal.ch/de/pm/100000789/100462866',
       },
       visa: {
         kysymys: 'Mistä Saliera löytyi vuonna 2006?',
@@ -307,6 +329,17 @@ export const SKANDAALIT = {
         + 'menneisyydestä. Sellaisena sitä yhä luetaan — mystifikaationa.',
       lahde: 'en-Wikipedia "Veda Slovena". Tarkistettu 2.9.2026.',
       kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-veda-slovena-photo-v1.jpg`,
+          selite: 'Vanha laulaja etsii seuraavaa säettä muististaan, ja hänen '
+            + 'vieressään paimenpoika liikuttaa huuliaan ääneti, ettei laulu '
+            + 'katoaisi. Kerääjän kiireinen kynä tekee suullisesta perinteestä '
+            + 'kirjan — mutta juuri näiden tuhansien säkeiden alkuperästä kasvaa '
+            + 'myöhemmin yksi Balkanin sitkeimmistä aitouskiistoista.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Bulgarian National Library '
+            + '— Biblioteka 1/2018.',
+          url: 'https://www.nationallibrary.bg/www/wp-content/uploads/2025/07/Biblioteka_br1_2018.pdf',
+        },
         {
           tiedosto: 'Veda-slovena-1874.gif',
           selite: 'Veda Slovenan ensimmäisen niteen nimiölehti; kokoelma '
@@ -374,6 +407,17 @@ export const SKANDAALIT = {
       lahde: 'en-Wikipedia "Alexander of Battenberg". Tarkistettu 2.9.2026.',
       kuvat: [
         {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-battenbergin-ruhtinaskaappaus-photo-v1.jpg`,
+          selite: 'Aleksanteri I seisoo paljain jaloin vastapäätä upseereita, '
+            + 'joita hän oli vielä vähän aiemmin johtanut sodassa. Nuorin heistä '
+            + 'ei pysty katsomaan ruhtinasta silmiin, kun luopumispaperi ojennetaan '
+            + '— kaappauksen ratkaiseva hetki on yhtä paljon häpeää kuin '
+            + 'vallankäyttöä.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: National Museum of Military '
+            + 'History — Alexander I chronology.',
+          url: 'https://militarymuseum.bg/voenna-istoria/voenen-kalendar/april/',
+        },
+        {
           tiedosto: 'Alexander I of Bulgaria by Dimitar Karastoyanov.jpg',
           selite: 'Bulgarian ensimmäinen ruhtinas Aleksanteri Battenberg '
             + 'sofialaisen hovivalokuvaajan Dimitar Karastojanovin ottamassa '
@@ -433,6 +477,16 @@ export const SKANDAALIT = {
       lahde: 'en-Wikipedia "Sofia University" ja en-Wikipedia "Ivan Vazov National '
         + 'Theatre". Tarkistettu 2.9.2026.',
       kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-kansallisteatterin-vihellyskohu-photo-v1.jpg`,
+          selite: 'Nuori opiskelija viheltää ruhtinas Ferdinandin vaunuille, mutta '
+            + 'hänen ystävänsä seuraa jo poliisien liikkeitä. Avajaisillan uhma '
+            + 'tuntuu hetken vapauttavalta; pian Sofian yliopisto suljetaan puoleksi '
+            + 'vuodeksi ja opettajat joutuvat maksamaan protestista.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Ivan Vazov National Theatre '
+            + '— 114 years since opening.',
+          url: 'https://nationaltheatre.bg/bg/novini/dnes-otbelyazvame-114-godini-ot-otkrivaneto-na-sgradata-na-narodniya-teatr',
+        },
         {
           tiedosto: 'BASA-3K-7-328-5a-Sofia Ivan Vazov National Theatre, 1907.jpg',
           selite: 'Kansallisteatteri Sofiassa vuonna 1907, samana vuonna kun talo '
@@ -506,6 +560,19 @@ export const SKANDAALIT = {
         + 'vaakunakirja.',
       lahde: 'en-Wikipedia "Fojnica Armorial" ja en-Wikipedia "Korjenić-Neorić '
         + 'Armorial". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-fojnican-vaakunakirja-photo-v1.jpg`,
+          selite: 'Nuori vieras etsii avoimesta kirjasta suvulleen kelpaavaa '
+            + 'kilpeä, mutta munkki tarkkailee hänen kasvojaan enemmän kuin '
+            + 'vaakunoita. Ikkunasyvennyksen noviisi hymyilee salaa: epävarma '
+            + 'alkuperä ei estä käsikirjoitusta muuttumasta vuosisatojen mittaan '
+            + 'aidoksi kulttuuriaarteeksi.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Bosnian Franciscans and the '
+            + 'Fojnica Monastery Museum.',
+          url: 'https://www.ejmanager.com/mnstemps/16/16-1498826562.pdf?t=1713733765',
+        },
+      ],
       visa: {
         kysymys: 'Miksi amiraali Petar Ohmučević teetti vaakunakirjan keksittyine '
           + 'vaakunoineen?',
@@ -558,6 +625,19 @@ export const SKANDAALIT = {
         + 'diplomaattinen voitto jäi Wienille, mutta naapurisuhteet eivät '
         + 'toipuneet.',
       lahde: 'en-Wikipedia "Bosnian Crisis". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-bosnian-kriisi-1908-photo-v1.jpg`,
+          selite: 'Nuori latoja kuiskaa julistuksen merkityksen isänsä korvaan, '
+            + 'kun keisarillinen virkamies lukee uutisen Vijećnican portailta. '
+            + 'Väkijoukossa joku taputtaa ja toinen puristaa koriaan: tavallisten '
+            + 'sarajevolaisten tulevaisuus on muuttunut neuvotteluissa, joihin '
+            + 'heitä ei kutsuttu.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Austrian State Archives '
+            + '— Bosnia annexation files.',
+          url: 'https://www.archivinformationssystem.at/detail.aspx?ID=5454260',
+        },
+      ],
       visa: {
         kysymys: 'Mitä Venäjän ulkoministeri tavoitteli Buchlaun salaisissa '
           + 'neuvotteluissa 1908 vastineeksi Bosnian liittämisestä?',
@@ -612,6 +692,18 @@ export const SKANDAALIT = {
         + 'ennen: Eveline Haslerin romaani ilmestyi 1982, kaksisataa vuotta '
         + 'mestauksen jälkeen.',
       lahde: 'en-Wikipedia "Anna Göldi". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-anna-goldin-tapaus-photo-v1.jpg`,
+          selite: 'Anna Göldi seisoo yksin pöydän edessä ja pakottaa raatimiehet '
+            + 'kohtaamaan katseensa. Nuori kirjuri epäröi kynä paperilla: '
+            + 'kuulustelun pöytäkirjasta tulee osa järjestelmää, jonka Glarusin '
+            + 'kantoni tunnustaa 226 vuotta myöhemmin oikeusmurhaksi.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Anna Göldi Museum '
+            + '— permanent exhibition.',
+          url: 'https://annagoeldimuseum.ch/images/2026/Oeffentlich_Dauerausstellung.pdf',
+        },
+      ],
       visa: {
         kysymys: 'Milloin Glarusin kantoni palautti Anna Göldin maineen '
           + 'virallisesti?',
@@ -665,6 +757,19 @@ export const SKANDAALIT = {
         + 'nimitys Alppien Robin Hood, jolla Valais\'ssa yhä muistetaan mies, jota '
         + 'poliisi jahtasi vuosikausia vuorilla.',
       lahde: 'fr-Wikipedia "Joseph-Samuel Farinet". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-farinet-alppien-vaararahanpainaja-photo-v1.jpg`,
+          selite: 'Farinet pysäyttää vasaran kesken lyönnin, kun leipää tuonut '
+            + 'viininviljelijä vilkaisee vuoripolulle. Kaksi santarmia on jo '
+            + 'näkyvissä, mutta naisen ilme kertoo, kumman puolella kylä tänään on '
+            + '— ennen kuin myöhempi legenda tekee väärentäjästä Alppien Robin '
+            + 'Hoodin.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Association Valaisanne des '
+            + 'Musées — Musée de la Fausse Monnaie.',
+          url: 'https://www.musees-vs.ch/musee-de-la-fausse-monnaie/',
+        },
+      ],
       visa: {
         kysymys: 'Miksi Valais\'n kansa suojeli rahanväärentäjä Farinet\'ta?',
         vaihtoehdot: [
