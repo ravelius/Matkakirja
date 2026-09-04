@@ -6228,6 +6228,8 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Vijećnica', lat: 43.85917, lon: 18.43335, wiki: 'Vijećnica',
         nosto: 'skandaali-bosnian-kriisi-1908',
+        // Nimi vasemmalle: Inat kuća on 90 metriä kaakkoon (4.9.2026).
+        nimiPuoli: 'vasen',
       },
       { nimi: 'Latinalaissilta', lat: 43.85763, lon: 18.42893 },
       { nimi: 'Keltainen linnake', lat: 43.86146, lon: 18.43772 },
@@ -6247,6 +6249,7 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Inat kuća', lat: 43.8585, lon: 18.4343,
         nosto: 'syvennys-sarajevo-inat-kuca',
+        nimiPuoli: 'oikea',
       },
     ],
   },

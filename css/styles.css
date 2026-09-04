@@ -16401,7 +16401,19 @@ button.opas-nauha:hover { filter: brightness(1.06); }
     0 0 6px rgba(247, 239, 220, 0.9),
     0 0 9px rgba(247, 239, 220, 0.85);
   pointer-events: none;
+  /*
+   * NIMET NÄKYVÄT VAIN ZOOMATTUNA (omistaja 4.9.2026 ilta, Sarajevon
+   * kuvakaappaus: "Kartassa ei pitäisi näkyä selitteitä"). Lepotilassa
+   * kartta on pelkkiä merkkejä ja piirroksia; nimet ovat listassa
+   * kartan alla ja tulevat kartalle vasta, kun pelaaja zoomaa — juuri
+   * niin kuin 23.8. tilaus sanoi ("pitää vähän zoomata että näkee").
+   * Kehys saa luokan .zoomattu js/karttazoom.js:stä.
+   */
+  opacity: 0;
+  transition: opacity 0.35s ease-out;
 }
+
+.kartta-kehys.zoomattu .kohde-nimi { opacity: 1; }
 
 /*
  * KAPEALLA RUUDULLA VIELÄ PIENEMPI. Kartan kohteet ovat kartalla
@@ -16423,6 +16435,24 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * laatikon alareunasta: matala rakennus jättää laatikon alalaitaan
  * läpinäkyvää tyhjää, jossa nimi olisi turhan kaukana. */
 .kohde-piirros > .kohde-nimi { top: var(--nimi-top, 104%); }
+
+/*
+ * NIMI EI KASVA KARTAN MUKANA (4.9.2026, samassa erässä kuin nimien
+ * piilotus lepotilassa). Kun nimi näkyy vain zoomattuna, sen tehtävä
+ * on olla luettava juuri silloin — ja zoomaus levittää merkit
+ * erilleen vain, jos nimi pysyy ruudulla samankokoisena eikä paisu
+ * merkkien mukana (Sarajevon kolme basaarikohdetta menivät ristiin
+ * joka zoomilla, koska välit ja tekstit kasvoivat samassa suhteessa).
+ * Piirros itse kasvaa lavan mukana, joten nimi vastaskaalataan
+ * lavan --zoom-arvolla; täplä on jo vastaskaalattu, joten sen nimi
+ * ei tarvitse kerrointa lainkaan. Origo tekstin yläreunassa pitää
+ * nimen kiinni merkin jalassa.
+ */
+.kohde-piirros > .kohde-nimi {
+  transform: translateX(calc(-50% + var(--nimi-siirto, 0px))) scale(calc(1 / var(--zoom, 1)));
+  transform-origin: top center;
+}
+.kartta-kehys.zoomattu .kohde-nimi { font-size: 0.72rem; }
 
 /*
  * NIMIÖN VÄISTÖ (omistajan tilaus 2.9.2026:n erässä, kun kartalle tuli
@@ -16452,7 +16482,9 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * alaspäin eikä sen päälle.
  */
 .kartta-lava .maakartta-piste:not(.kohde-piirros) > .kohde-nimi {
-  transform: translateX(calc(-50% + var(--nimi-siirto, 0px))) scale(var(--zoom, 1));
+  /* 4.9.2026: zoomkerroin poistettu — nimi pysyy ruudulla
+   * samankokoisena kuin täplänsä (ks. .kohde-piirros > .kohde-nimi). */
+  transform: translateX(calc(-50% + var(--nimi-siirto, 0px)));
   transform-origin: top center;
 }
 
