@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1533, teksti: 'Skandaalikuvat 14-31 ja Kantonin pohjukkeeton kuva' },
   { v: 1532, teksti: 'Valinaytoksen otsikko ilman vuosilukua' },
   { v: 1531, teksti: 'Valinaytos kartalle, yksi Tauko/Jatka, kuvakierto, chat' },
   { v: 1530, teksti: 'Kuplapinon 8 rivin katto, linssin paluu, ratas siivottu' },
