@@ -1356,6 +1356,24 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
         mittarit.epaonnistui += 1;
         // Saapumaton laatta ei saa jäädä odottajaksi ikuisesti.
         delete kuva.dataset.odottaa;
+        /*
+         * === SININEN KYSYMYSMERKKI KARTALLA (omistaja 4.9.2026) ===
+         *
+         * Omistaja näki keksintölinssin päällä *"ison sumean sinisen
+         * suorakulmion"* ja *"kysymysmerkkejä"* kartalla. Ne olivat
+         * TÄMÄ laatta: kun tiedosto ei tule (mitattu puuttuva
+         * `.../viivat/z5/18/5.webp`), WebKit maalaa <image>-elementin
+         * paikalle oman rikkinäisen kuvan merkkinsä — sinisen laatikon
+         * ja valkoisen kysymysmerkin — venytettynä laatan koko alaan,
+         * eli sumeana ja suurena. Chromium ei piirrä mitään, joten
+         * vika näkyi vain omistajan iPhonella ja iPadilla.
+         *
+         * Osoitteen poisto vie merkin: laatta jää tyhjäksi kuten
+         * lataamaton laatta, ja alla oleva karkeampi taso näkyy läpi.
+         * Uutta hakua ei tule (osoite asetetaan vain kerran, luonnissa),
+         * joten tämä ei myöskään jää yrittämään uudelleen.
+         */
+        kuva.removeAttribute('href');
       }
       if (!nakyy || !tila.vanhat) return;
       // Uusi taso on ruudulla kokonaan: vanha saa mennä (sääntö 2).

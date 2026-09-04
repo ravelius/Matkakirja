@@ -433,6 +433,85 @@ export function aikajanaAskel(tila, dt, tapahtumat, tahti = {}) {
   };
 }
 
+/*
+ * ── KARUSELLI LÄHTEE LIIKKEELLE ENNAKKOON ─────────────────────────
+ *
+ * Omistaja 4.9.2026 aamu, sanatarkasti: *"Alareunan muotokuvien
+ * siirtymisen animointi kannattaa lähteä jo vähän ennakkoon
+ * liikkeelle, eli kuva alkaa jo pienentyä vähän ennen vaihtoa ja
+ * seuraava suurentua niin että kun kohde vuosi vaihtuu niin animaatio
+ * juuri valmistuu. Alareunan animaatio saisi olla noin 2sek
+ * pituinen."*
+ *
+ * MIKSI ETUKÄTEEN LASKETTU SAAPUMISAIKA. Kello ei kulje
+ * vakionopeudella (aikajananNopeus), joten "kaksi sekuntia ennen"
+ * EI ole sama kuin "kahden sekunnin matka jäljellä" — jarrutuksessa
+ * viimeinen vuosi voi kestää monta sekuntia ja täydessä vauhdissa
+ * neljäsosasekunnin. Ainoa rehellinen tapa tietää saapumishetki on
+ * ajaa sama askel eteenpäin (aikaSeuraavaan), ja se on tässä puhtaana
+ * funktiona samasta syystä kuin tahtikin: se rikkoutuu hiljaa.
+ *
+ * MITÄ ENNAKKO LIIKUTTAA. Vain karusellin kortit. Lamput, kello,
+ * paneeli ja paikkarivi vaihtuvat vasta syttymishetkellä (sytyta) —
+ * ennakko on liikettä, ei tiedon paljastamista, eikä keksinnön nimeä
+ * saa lukea kartalta ennen sen vuotta.
+ */
+export const KARUSELLIN_ENNAKKO_MS = 2000;
+/**
+ * Lyhinkään ennakko ei mene tätä alle. Kaksi lähekkäistä pysäkkiä
+ * (1895 ja 1896) tai pysäytetystä kellosta jatkaminen antavat vain
+ * murto-osan sekunnista aikaa; silloin siirtymä saa valmistua vähän
+ * syttymisen jälkeen, koska hyppäys olisi pahempi kuin myöhästyminen.
+ */
+export const KARUSELLIN_ENNAKKO_POHJA_MS = 400;
+
+/**
+ * KUINKA MONTA MILLISEKUNTIA SEURAAVAAN SYTTYMISEEN.
+ *
+ * Integroi aikajanaAskelta eteenpäin kiinteällä aliaskeleella samalla
+ * nopeusprofiililla kuin oikea ajo — tauon jäljellä oleva viive siis
+ * mukaan luettuna, koska sekin on odotusta ennen seuraavaa pysäkkiä.
+ * `katto` katkaisee laskennan: kehyksessä riittää tietää, onko
+ * saapuminen jo ennakon päässä, eikä kaukaisen pysäkin tarkkaa
+ * hetkeä tarvitse laskea joka kehyksellä.
+ *
+ * @param {{vuosi:number, i:number, viive:number}} tila kellon tila
+ * @param {Array<{vuosi:number, paalu?:boolean}>} tapahtumat
+ * @param {object} [tahti] sama tahti kuin aikajanaAskelilla
+ * @param {number} [katto] enimmäisaika, joka jaksetaan laskea
+ * @returns {number} millisekuntia syttymiseen; Infinity jos kaari
+ *   loppuu ennen sitä tai syttyminen ei osu katon sisään
+ */
+export function aikaSeuraavaan(tila, tapahtumat, tahti = {}, katto = 120000) {
+  if (!Array.isArray(tapahtumat) || !tapahtumat.length) return Infinity;
+  let t = tila;
+  let kulunut = 0;
+  while (kulunut < katto) {
+    const askel = Math.min(AIKAJANA_ALIASKEL_MS, katto - kulunut);
+    const tulos = aikajanaAskel(t, askel, tapahtumat, tahti);
+    kulunut += askel;
+    if (tulos.syttyi !== null) return kulunut;
+    if (tulos.loppu) return Infinity;
+    t = tulos.tila;
+  }
+  return Infinity;
+}
+
+/**
+ * ENNAKON PÄÄTÖS JA KESTO YHTENÄ LUKUNA: nolla tarkoittaa "ei vielä".
+ *
+ * Siirtymä kestää sen, mitä syttymiseen on aikaa, jotta se valmistuu
+ * juuri vuosiluvun vaihtuessa. Kaukainen pysäkki (yli ennakon) ei
+ * käynnistä mitään; hyvin lähelläkin siirtymä saa pohjakestonsa.
+ *
+ * @param {number} eta millisekuntia syttymiseen (aikaSeuraavaan)
+ * @returns {number} siirtymän kesto ms, tai 0 jos ennakko ei ala
+ */
+export function ennakonKesto(eta, ennakko = KARUSELLIN_ENNAKKO_MS, pohja = KARUSELLIN_ENNAKKO_POHJA_MS) {
+  if (!Number.isFinite(eta) || eta < 0 || eta > ennakko) return 0;
+  return Math.min(ennakko, Math.max(pohja, eta));
+}
+
 /* ==================== TYYLI ==================== */
 
 const TYYLIN_TUNNUS = 'aikajana-tyyli';
@@ -886,6 +965,14 @@ class Aikajana {
     this.viime = 0;
     this.kortit = [];
     this.valot = [];
+    /*
+     * ENNAKON TILA. `ennakkoKohde` on se pysäkki, johon karuselli on
+     * jo matkalla vaikkei kello ole vielä siellä; null = karuselli
+     * seuraa kelloa. `teravoitus` on kuuntelija, joka vaihtaa sumean
+     * muotokuvan terävään kortin päästyä täyteen mittaansa.
+     */
+    this.ennakkoKohde = null;
+    this.teravoitus = null;
     // Naksahduksen katto: nolla on "kauan sitten", koska kello
     // käynnistyy vasta kamera-ajon jälkeen.
     this.viimeNaksu = 0;
@@ -1258,6 +1345,8 @@ class Aikajana {
   pysayta() {
     if (!this.kaynnissa) return;
     this.kaynnissa = false;
+    // Pysäytetty kello ei ole matkalla mihinkään: karuselli palaa.
+    this.peruEnnakko();
     this.saadaMusiikki();
     cancelAnimationFrame(this.raf);
     this.raf = 0;
@@ -1267,6 +1356,7 @@ class Aikajana {
 
   alusta() {
     this.pysayta();
+    this.paattaEnnakko();
     this.loppu = false;
     this.tila = { vuosi: this.kaari.alku, i: -1, viive: 0 };
     for (const valo of this.valot) this.asetaValonTila(valo, false, false);
@@ -1289,17 +1379,102 @@ class Aikajana {
     this.viime = nyt;
     // Reduced motion: nopeutettu ja LINEAARINEN — pehmeät kiihdytykset
     // ovat juuri sitä liikettä, jota tässä tilassa vältetään.
-    const { tila, syttyi, loppu } = aikajanaAskel(this.tila, dt, this.tapahtumat, this.reducedMotion
-      ? { vuosiMs: 40, lineaarinen: true } : {});
+    const tahti = this.reducedMotion ? { vuosiMs: 40, lineaarinen: true } : {};
+    const { tila, syttyi, loppu } = aikajanaAskel(this.tila, dt, this.tapahtumat, tahti);
     this.tila = tila;
     this.naytaVuosi(tila.vuosi);
     if (syttyi !== null) this.sytyta(syttyi);
+    else this.tarkistaEnnakko(tahti);
     this.paivitaMittakaava();
     if (loppu) {
       this.lopeta();
       return;
     }
     this.raf = requestAnimationFrame((t) => this.kehys(t));
+  }
+
+  /* ---------- ennakko (KARUSELLIN_ENNAKKO_MS) ---------- */
+
+  /**
+   * Onko seuraava pysäkki jo ennakon päässä? Laskenta katkaistaan
+   * heti ennakon jälkeen (katto), joten kehyskohtainen työ on
+   * enintään pari sataa aliaskelta eikä koko välin integrointi.
+   * Reduced motion ohittaa ennakon kokonaan: kortit vaihtavat
+   * paikkaa ilman liikettä, eikä ennakoitavaa liikettä ole.
+   */
+  tarkistaEnnakko(tahti) {
+    if (this.reducedMotion) return;
+    const kohde = this.tila.i + 1;
+    if (this.ennakkoKohde === kohde || kohde >= this.tapahtumat.length) return;
+    const eta = aikaSeuraavaan(this.tila, this.tapahtumat, tahti, KARUSELLIN_ENNAKKO_MS + AIKAJANA_ALIASKEL_MS);
+    const kesto = ennakonKesto(eta);
+    if (kesto > 0) this.aloitaEnnakko(kohde, kesto);
+  }
+
+  /**
+   * Karuselli lähtee kohti pysäkkiä `kohde` niin, että liike valmistuu
+   * vuosiluvun vaihtuessa. Kesto menee nauhan omaan muuttujaan, joten
+   * se koskee vain kortteja — paneelin ristihäivytys pitää oman
+   * kestonsa. Muuta näkymää ei kosketa.
+   */
+  aloitaEnnakko(kohde, kesto) {
+    this.ennakkoKohde = kohde;
+    this.nauha.style.setProperty('--aikajana-kesto', `${Math.round(kesto)}ms`);
+    this.asettele();
+    this.odotaTaysikokoista(kohde);
+  }
+
+  /**
+   * TERÄVÄ KUVA VASTA TÄYSIKOKOISENA (omistaja 4.9.2026: *"vasta kun
+   * muotokuva on täysikokoinen, niin sitten voi päivittää sen terävän
+   * kuvan sumean tilalle"*). Siirtymän ajan kortti skaalaa valmiiksi
+   * sumennettua pientä tiedostoa — se on kevyt eikä vaadi suodatinta —
+   * ja terävä vaihdetaan siirtymän päätyttyä. Jos syttyminen ehtii
+   * ensin (lyhyt väli), vaihdon tekee asettele syttymishetkellä.
+   */
+  odotaTaysikokoista(kohde) {
+    const kortti = this.kortit[kohde];
+    if (!kortti) return;
+    this.lopetaTeravoitus();
+    const teravoita = (e) => {
+      // Kortilla liukuu sekä transform että opacity: vain toinen kelpaa.
+      if (e?.propertyName && e.propertyName !== 'transform') return;
+      this.teravoitaKortti(kohde);
+    };
+    this.teravoitus = { kortti, teravoita };
+    kortti.addEventListener('transitionend', teravoita);
+  }
+
+  lopetaTeravoitus() {
+    if (this.teravoitus) this.teravoitus.kortti.removeEventListener('transitionend', this.teravoitus.teravoita);
+    this.teravoitus = null;
+  }
+
+  teravoitaKortti(i) {
+    this.lopetaTeravoitus();
+    const kortti = this.kortit[i];
+    // Peruttu ennakko vei kortin takaisin tulevaksi: se pysyy sumeana.
+    if (!kortti?.classList.contains('nykyinen')) return;
+    for (const img of kortti.querySelectorAll('img[data-terava]')) vaihdaKorttikuva(img, img.dataset.terava);
+  }
+
+  /** Ennakko päättyy: kortit ovat perillä ja nauha palaa perustahtiin. */
+  paattaEnnakko() {
+    this.lopetaTeravoitus();
+    if (this.ennakkoKohde === null) return;
+    this.ennakkoKohde = null;
+    this.nauha?.style.removeProperty('--aikajana-kesto');
+  }
+
+  /**
+   * Ennakko perutaan, kun kello pysäytetään tai alustetaan ennen
+   * syttymistä: karuselli liukuu takaisin nykyiseen pysäkkiin
+   * perustahdilla, eikä ennakoitu kortti jää keskelle ruutua.
+   */
+  peruEnnakko() {
+    if (this.ennakkoKohde === null) { this.lopetaTeravoitus(); return; }
+    this.paattaEnnakko();
+    this.asettele();
   }
 
   lopeta() {
@@ -1424,6 +1599,13 @@ class Aikajana {
     this.keksinnonAani(t);
     this.paikkarivi.textContent = [t.vuosi, paikka(t)].filter(Boolean).join(' · ');
     this.vaihdaPaneeli(t);
+    /*
+     * Ennakko on tässä joko juuri valmistunut tai (lyhyellä välillä)
+     * yhä kesken. Kummassakin tapauksessa karuselli on jo oikeassa
+     * kohteessa, joten asettele ei enää liikuta kortteja — se vaihtaa
+     * vain sumean muotokuvan terävään, jos siirtymä ei ehtinyt.
+     */
+    this.paattaEnnakko();
     this.asettele();
   }
 
@@ -1565,7 +1747,14 @@ class Aikajana {
    * Ne eivät ole napautettavia eivätkä fokusoitavia (aria-hidden).
    */
   asettele() {
-    const nyt = this.tila.i;
+    /*
+     * KARUSELLI SAA OLLA KELLOA EDELLÄ. Ennakon aikana kohde on
+     * seuraava pysäkki, vaikka kello on yhä edellisessä — ks.
+     * aloitaEnnakko. Ilman tätä eroa ikkunan koon muutos (koonMuutos)
+     * nykäisisi karusellin takaisin kesken siirtymän.
+     */
+    const nyt = this.ennakkoKohde ?? this.tila.i;
+    const ennakossa = this.ennakkoKohde !== null;
     const leveys = this.nauhanLeveysKortteina();
     this.kortit.forEach((kortti, i) => {
       const { paikka: paikkaX, mitta, luokka, himmeys, sumennus, jarjestys } = karusellinPaikat(i, nyt, leveys);
@@ -1575,11 +1764,17 @@ class Aikajana {
       kortti.style.setProperty('--himmeys', himmeys.toFixed(2));
       kortti.style.setProperty('--sumennus', `${sumennus.toFixed(2)}px`);
       kortti.style.zIndex = String(jarjestys);
-      // Tuleva pysäkki näyttää valmiiksi sumennetun tiedoston, muut
-      // terävän. Vaihto menee dekoodauksen kautta (vaihdaKorttikuva),
-      // jottei liukuvassa kortissa välähdä tyhjää kehystä.
+      /*
+       * Tuleva pysäkki näyttää valmiiksi sumennetun tiedoston, muut
+       * terävän. Vaihto menee dekoodauksen kautta (vaihdaKorttikuva),
+       * jottei liukuvassa kortissa välähdä tyhjää kehystä.
+       * ENNAKON AIKANA myös saapuva kortti pysyy sumeana: pieni kuva
+       * on kevyt skaalata, ja terävä tulee vasta täydessä mitassa
+       * (odotaTaysikokoista) — omistajan tilaus 4.9.2026.
+       */
+      const sumeana = luokka === 'tuleva' || (ennakossa && luokka === 'nykyinen');
       for (const img of kortti.querySelectorAll('img[data-terava]')) {
-        vaihdaKorttikuva(img, luokka === 'tuleva' ? img.dataset.sumea : img.dataset.terava);
+        vaihdaKorttikuva(img, sumeana ? img.dataset.sumea : img.dataset.terava);
       }
       const piilossa = luokka === 'piilossa';
       kortti.setAttribute('aria-hidden', piilossa ? 'true' : 'false');
