@@ -16267,6 +16267,17 @@ export class UI {
 
   /** Valitsimen rivin napautus. tunnus === null = "Ei linssiä". */
   valitseLinssi(tunnus) {
+    /*
+     * KARTTAPALLO ON TOIMINTO, EI TILA (omistaja 4.9.2026: "Lisää pallo
+     * yhdeksi linssiksi matkalaukkuun"). Valinta sulkee laukun ja avaa
+     * pallon; valittu linssi ei vaihdu, joten radio tai muu päällä oleva
+     * varuste jatkaa, kun pallo suljetaan (js/linssit/pallo.js).
+     */
+    if (tunnus === 'pallo') {
+      if (this.passportDialog?.open) this.passportDialog.close();
+      void this.avaaPallo();
+      return;
+    }
     if (this.linssiValittu === tunnus) return;
     this.linssiValittu = tunnus;
     tallennaLinssi(tunnus);
@@ -16380,8 +16391,9 @@ export class UI {
 
   /**
    * KARTTAPALLO (omistaja 4.9.2026, Globe.gl): maailmanvalikko pallona
-   * kartan päällä; kaupungin napautus sukeltaa laudalle. Moduuli ja
-   * kirjasto ladataan vasta avattaessa (js/pallo.js).
+   * kartan päällä; napautus sukeltaa laudalle. Avataan matkalaukun
+   * Karttapallo-linssistä (valitseLinssi). Moduuli ja kirjasto
+   * ladataan vasta avattaessa (js/pallo.js).
    */
   async avaaPallo() {
     if (this.dead) return false;

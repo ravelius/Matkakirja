@@ -1,7 +1,7 @@
 /*
  * KARTTAPALLON PINNOITE — juliste Millerista tasaväliseksi.
  *
- *   node tools/tee-pallotekstuuri.mjs [--kuiva] [--taso 3] [--ulos polku.jpg]
+ *   node tools/tee-pallotekstuuri.mjs [--kuiva] [--taso 4] [--ulos polku.jpg]
  *
  * Pallo (js/pallo.js, Globe.gl) tarvitsee pinnoitteeksi tasavälisen
  * (equirectangular) kuvan: leveys 360°, korkeus 180°, pohjoisnapa
@@ -41,8 +41,14 @@ if (process.argv[1] === TAMA && !process.env.NODE_USE_ENV_PROXY
 
 export const JULKINEN_JUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/';
 const LUETTELO = `${JULKINEN_JUURI}julisteet/pyramidi/pyramidi.json`;
-/** Pinnoitteen mitat: 2:1, riittää pallolle jonka halkaisija on alle 1500 px. */
-export const PINNOITE = { leveys: 4096, korkeus: 2048, laatu: 82 };
+/**
+ * Pinnoitteen mitat tasosta: 2:1, leveys 2048 × 2^(z−2) — z3 = 4096,
+ * z4 = 8192 (omistaja 4.9.2026: "Tee z4 ainoaksi"; 8192 × 4096 JPEG on
+ * noin 3–4 Mt ja mahtuu puhelintenkin GPU-rajaan 8192 px).
+ */
+export const pinnoitteenMitat = (z) => ({ leveys: 2048 * 2 ** (z - 2), korkeus: 1024 * 2 ** (z - 2), laatu: 82 });
+/** Oletusmitat z3:lle (vanhat kutsujat ja testi). */
+export const PINNOITE = pinnoitteenMitat(3);
 /** Napojen paperinsävy (pohjoinen hieman vaaleampi kuin etelä). */
 const PAPERI = { pohjoinen: [210, 197, 164], etela: [205, 192, 160] };
 const RAD = Math.PI / 180;
@@ -69,8 +75,8 @@ export function arkinPikseli(luettelo, taso, lon, lat) {
   return { px, py };
 }
 
-/** Ämpärin avain, johon pinnoite viedään. */
-export const pinnoitteenAvain = (versio) => `julisteet/pallo/${versio}/tekstuuri.jpg`;
+/** Ämpärin avain, johon pinnoite viedään: taso on nimessä, jotta selaimen välimuisti ei sekoita tasoja. */
+export const pinnoitteenAvain = (versio, z = 3) => `julisteet/pallo/${versio}/tekstuuri-z${z}.jpg`;
 
 async function noudaJson(url) {
   const v = await fetch(url, { cache: 'no-store' });
@@ -96,7 +102,7 @@ async function paa() {
   const taso = luettelo.tasot.find((t) => t.z === z);
   if (!taso) throw new Error(`tasoa z${z} ei ole luettelossa`);
   const viivaversio = luettelo.viivataso?.versio ?? null;
-  const avain = pinnoitteenAvain(luettelo.versio);
+  const avain = pinnoitteenAvain(luettelo.versio, z);
   console.log(`pyramidi ${luettelo.versio}, viivat ${viivaversio ?? '-'}, taso z${z} `
     + `${taso.leveys}x${taso.korkeus} (${taso.sarakkeita}x${taso.riveja} laattaa) → ${avain}`);
   if (kuiva) { console.log('Kuiva ajo: ei nouda laattoja eikä kirjoita.'); return; }
@@ -137,7 +143,7 @@ async function paa() {
     if (arkki[i * 4 + 3] === 0) { arkki[i * 4] = meri[0]; arkki[i * 4 + 1] = meri[1]; arkki[i * 4 + 2] = meri[2]; arkki[i * 4 + 3] = 255; }
   }
 
-  const { leveys: OW, korkeus: OH } = PINNOITE;
+  const { leveys: OW, korkeus: OH, laatu } = pinnoitteenMitat(z);
   const out = Buffer.alloc(OW * OH * 3);
   for (let oy = 0; oy < OH; oy += 1) {
     const lat = 90 - 180 * (oy + 0.5) / OH;
@@ -158,7 +164,7 @@ async function paa() {
       }
     }
   }
-  const jpg = await sharp(out, { raw: { width: OW, height: OH, channels: 3 } }).jpeg({ quality: PINNOITE.laatu }).toBuffer();
+  const jpg = await sharp(out, { raw: { width: OW, height: OH, channels: 3 } }).jpeg({ quality: laatu }).toBuffer();
   const { mkdirSync } = await import('node:fs');
   const { dirname } = await import('node:path');
   mkdirSync(dirname(ulos), { recursive: true });

@@ -2,7 +2,7 @@ name: Tee karttapallon pinnoite
 
 # KARTTAPALLON PINNOITE JA KIRJASTO ÄMPÄRIIN (omistaja 4.9.2026: Globe.gl
 # valittu maailmanvalikon moottoriksi). Kaksi vientiä samalla ajolla:
-#   1. julisteet/pallo/<pyramidin versio>/tekstuuri.jpg — pelin juliste
+#   1. julisteet/pallo/<pyramidin versio>/tekstuuri-z<taso>.jpg — pelin juliste
 #      käännettynä Millerista tasaväliseksi (tools/tee-pallotekstuuri.mjs);
 #   2. vendor/globe.gl-<versio>.min.js — Globe.gl:n UMD-paketti npm:stä,
 #      jotta peli lataa sen omasta ämpäristään eikä repo kanna 700 kt:n
@@ -13,10 +13,10 @@ on:
   workflow_dispatch:
     inputs:
       taso:
-        description: 'Pyramidin taso, josta pinnoite lasketaan (3 = 5400 px leveä arkki)'
+        description: 'Pyramidin taso, josta pinnoite lasketaan (4 = 8192 px leveä pinnoite, pelin ainoa)'
         required: false
         type: string
-        default: '3'
+        default: '4'
       kirjasto:
         description: 'Globe.gl:n versio npm:stä (tyhjä = ei viedä kirjastoa)'
         required: false

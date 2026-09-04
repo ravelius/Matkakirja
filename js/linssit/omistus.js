@@ -100,8 +100,18 @@ function kehittajaTila() {
   }
 }
 
+/*
+ * PERUSVARUSTEET: omistettu heti, ei kynnyksen takana (omistaja
+ * 4.9.2026: "Lisää pallo yhdeksi linssiksi matkalaukkuun"). Karttapallo
+ * on navigointiväline, jota ilman uusi pelaaja ei näe, missä päin
+ * maailmaa lauta on; tarkistaKynnys ohittaa jo omistetun, joten
+ * kynnyslinssien järjestys ei muutu.
+ */
+export const PERUSLINSSIT = ['pallo'];
+
 export function omistetut(game, player = game?.player) {
   const ulos = passinLinssit();
+  for (const tunnus of PERUSLINSSIT) ulos.add(tunnus);
   for (const tunnus of player?.linssit ?? []) ulos.add(tunnus);
   if (kehittajaTila()) for (const r of LINSSIT) ulos.add(r.tunnus);
   return ulos;
