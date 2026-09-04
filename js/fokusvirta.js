@@ -84,7 +84,7 @@
 
 import {
   fokusmoodiPaalla, html, jaaKappaleiksi, jaaPuheenvuoroksi, lehtivinkkiPiilotettu,
-  nielaiseSulkevaNapautus, piilotaLehtivinkki, polloNimilappu,
+  linssiEstaa, nielaiseSulkevaNapautus, piilotaLehtivinkki, polloNimilappu,
 } from './ui-apurit.js';
 import {
   asetaTehtavakuittaus, fokusAarreAvattu, fokusAarreVastattu,
@@ -734,9 +734,18 @@ export function fokusvirtaSaapumiskupla(ui, city) {
    */
   const odotaPaljastus = (jatka, jaljella = SAAPUMISKUPLAN_PALJASTUSKATTO_MS) => {
     if (ui.dead) return;
-    if (!livianPaljastusKesken(ui) || jaljella <= 0) { jatka(); return; }
+    /*
+     * LINSSI PYSÄYTTÄÄ KELLON (omistajan tilaus 4.9.2026: linssin
+     * aikana kaikki muu on kiinni). Paljastussarja odottaa linssin
+     * sulkeutumista (js/livia.js paljastusRepliikki), joten myös
+     * kommentin katto pysähtyy siksi aikaa: muuten 90 sekunnin katto
+     * laukeaisi pelkän linssiajon takia ja kommentti tulisi
+     * paljastuksen PÄÄLLE heti kun linssi sulkeutuu.
+     */
+    const linssissa = linssiEstaa();
+    if (!linssissa && (!livianPaljastusKesken(ui) || jaljella <= 0)) { jatka(); return; }
     ui.saapumiskuplaAjastin = setTimeout(
-      () => odotaPaljastus(jatka, jaljella - SAAPUMISKUPLAN_PALJASTUSVALI_MS),
+      () => odotaPaljastus(jatka, linssissa ? jaljella : jaljella - SAAPUMISKUPLAN_PALJASTUSVALI_MS),
       SAAPUMISKUPLAN_PALJASTUSVALI_MS,
     );
   };

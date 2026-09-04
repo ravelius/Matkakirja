@@ -1857,6 +1857,14 @@ class Aikajana {
     }
     if (this.vastaskaala) this.ui.nipistysVastaskaalaajat?.delete(this.vastaskaala);
     document.body.classList.remove('aikajana-paalla');
+    /*
+     * LUOKKA POIS → LIVIA SAA VUORON (ks. suljeKelluvat tiedoston
+     * lopussa). Koukku on TÄSSÄ eikä pysaytaAikajana-funktiossa, koska
+     * "Sulje" ja linssinapin purku menevät js/ui.js:n oman
+     * pysaytaAikajanan kautta, joka kutsuu suoraan tätä purkua —
+     * moottorin oma pysaytaAikajana on vain toinen sisäänkäynti samaan.
+     */
+    polloLinssiPaattyi();
     if (this.ui.kameraVapaa) this.vapautaKamera(false);
     this.juuri = null;
     this.valokerros = null;
@@ -1871,6 +1879,50 @@ class Aikajana {
 
 /* ==================== JULKINEN RAJAPINTA ==================== */
 
+/*
+ * LINSSIN AIKANA KAIKKI MUU ON KIINNI (omistajan tilaus 4.9.2026:
+ * *"Pöllön kommentit saattavat tulla vielä kesken linssin. Tosin itse
+ * käynnistin linssin kesken kaiken mutta silti pitää kaikki muu blokata
+ * varmuuden vuoksi kun linssi alkaa."*).
+ *
+ * Kaksi puolta, ja kumpikin asuu yhdessä paikassa:
+ *   1. AVAAMISEN PORTTI on ui-apureissa (linssiEstaa) ja lukee bodyn
+ *      luokan, jonka tämä moduuli asettaa — kelluvien korttien avaajat
+ *      kysyvät siltä itse (js/pollo.js, js/fokuskohteet.js,
+ *      js/fokusnosto.js).
+ *   2. RUUDUN TYHJENNYS on tässä: se mikä oli jo auki linssin
+ *      alkaessa, suljetaan. Tuonnit ovat tarkoituksella tiedoston
+ *      lopussa kytkennän vieressä — tämä on ainoa kohta, jossa
+ *      aikajanamoottori tietää muusta käyttöliittymästä.
+ */
+import { polloKuplatPois, polloLinssiAlkoi, polloLinssiPaattyi } from './pollo.js';
+import { suljeFokuskohde } from './fokuskohteet.js';
+import { suljeNostonKortti } from './fokusnosto.js';
+import { suljeElaintaky } from './elaintaky.js';
+import { suljeSyvennys } from './syvennys.js';
+
+/**
+ * Kartan päällä kelluvat kortit pois linssin tieltä.
+ *
+ * JOKAINEN KELLUVA KORTTI ERIKSEEN: kohdekortilla, täkynostolla,
+ * eläintäyllä ja syvennystarinalla on kullakin OMA kerrosluokkansa
+ * (`.fokusnosto-kerros`, `.elaintaky-kerros`, `.syvennys-kerros`),
+ * jottei toisen sulkeminen veisi toista mukanaan — sama ero pätee
+ * tässäkin, ja siksi kutsuja on neljä. Kuvasuurennokset ovat korttien
+ * omia jatkeita ja lähtevät niiden mukana.
+ */
+function suljeKelluvat(ui) {
+  // Pöllö ensin: kuplapino ja chatti (omistajan kuvakaappaus 4.9.2026,
+  // kuplapino keskellä keksintölinssin ajoa). Kuplien tekstit jäävät
+  // chatin virtaan, joten mitään ei menetetä.
+  polloLinssiAlkoi();
+  polloKuplatPois();
+  suljeFokuskohde(ui);
+  suljeNostonKortti(ui);
+  suljeElaintaky(ui);
+  suljeSyvennys(ui);
+}
+
 /**
  * Käynnistää linssin aikajanan kartan päälle. Edellinen aikajana
  * puretaan ensin: kartalla on kerrallaan yksi kello.
@@ -1883,11 +1935,16 @@ export function kaynnistaAikajana(ui, linssi) {
   const ajo = new Aikajana(ui, linssi);
   if (!ajo.kaynnista()) return false;
   ui.aikajana = ajo;
+  // Vasta kun ajo on pystyssä: bodyn luokka on paikallaan, joten
+  // portti pitää eivätkä juuri suljetut kortit avaudu takaisin.
+  suljeKelluvat(ui);
   return true;
 }
 
 export function pysaytaAikajana(ui) {
   if (!ui?.aikajana) return false;
+  // Purku poistaa bodyn luokan ja päästää lykätyt puheenvuorot ulos
+  // (pura → polloLinssiPaattyi).
   ui.aikajana.pura();
   ui.aikajana = null;
   return true;

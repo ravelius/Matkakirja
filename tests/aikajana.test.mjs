@@ -818,3 +818,72 @@ test('paneelinvaihto pakottaa lähtöarvon ja liuuttaa korkeuden vanhasta uuteen
   // Raahaus säilyy: siirto on yhä CSS-muuttujissa eikä korkeuslukko koske siihen.
   assert.match(MOOTTORI, /asetaPaneelinSiirto\(raja\.dx, raja\.dy\)/);
 });
+
+/* ==================== LINSSIN AIKANA KAIKKI MUU ON KIINNI ==================== */
+
+/*
+ * OMISTAJAN TILAUS 4.9.2026: *"Pöllön kommentit saattavat tulla vielä
+ * kesken linssin. Tosin itse käynnistin linssin kesken kaiken mutta
+ * silti pitää kaikki muu blokata varmuuden vuoksi kun linssi alkaa."*
+ *
+ * Kytkentä katoaa hiljaa: linssi näyttäisi täsmälleen oikealta,
+ * kunnes kuplapino tai kohdekortti nousee sen päälle keskellä ajoa
+ * (omistajan kuvakaappaus). Kaksi puolta vartioidaan:
+ *   1. KÄYNNISTYS sulkee sen, mikä oli jo auki, ja PYSÄYTYS päästää
+ *      lykätyt puheenvuorot ulos.
+ *   2. AVAAJAT kysyvät yhteistä porttia (js/ui-apurit.js linssiEstaa),
+ *      jotta uusi avaaja ei unohda sitä.
+ */
+
+const POLLO_LAHDE = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+const KOHTEET_LAHDE = readFileSync(new URL('../js/fokuskohteet.js', import.meta.url), 'utf8');
+const NOSTO_LAHDE = readFileSync(new URL('../js/fokusnosto.js', import.meta.url), 'utf8');
+const VIRTA_LAHDE = readFileSync(new URL('../js/fokusvirta.js', import.meta.url), 'utf8');
+const LIVIA_LAHDE = readFileSync(new URL('../js/livia.js', import.meta.url), 'utf8');
+
+test('linssin käynnistys sulkee kuplat ja kelluvat kortit, pysäytys purkaa jonon', () => {
+  // Sulkeminen tehdään VASTA kun ajo on pystyssä: bodyn luokka on
+  // silloin paikallaan, joten portti pitää eivätkä kortit palaa.
+  assert.match(MOOTTORI, /ui\.aikajana = ajo;[\s\S]{0,200}suljeKelluvat\(ui\);\n  return true;/);
+  // Jokaisella kelluvalla kortilla on oma kerrosluokkansa, joten
+  // jokainen suljetaan erikseen — yksi kutsu ei vie toista mukanaan.
+  assert.match(MOOTTORI, /function suljeKelluvat\(ui\) \{[\s\S]{0,600}polloLinssiAlkoi\(\);[\s\S]{0,300}polloKuplatPois\(\);[\s\S]{0,300}suljeFokuskohde\(ui\);[\s\S]{0,200}suljeNostonKortti\(ui\);[\s\S]{0,200}suljeElaintaky\(ui\);[\s\S]{0,200}suljeSyvennys\(ui\);/);
+  /*
+   * Koukku on PURUSSA eikä pysaytaAikajana-funktiossa: "Sulje" ja
+   * linssinappi menevät js/ui.js:n oman pysaytaAikajanan kautta, joka
+   * kutsuu pura():a suoraan. Funktioon jätetty koukku ei siis laukeaisi
+   * kertaakaan oikeassa pelissä.
+   */
+  assert.match(MOOTTORI, /document\.body\.classList\.remove\('aikajana-paalla'\);[\s\S]{0,600}polloLinssiPaattyi\(\);/);
+  // Kytkennän tuonnit ovat oikeista moduuleista (ei omaa kopiota).
+  assert.match(MOOTTORI, /import \{ polloKuplatPois, polloLinssiAlkoi, polloLinssiPaattyi \} from '\.\/pollo\.js';/);
+  assert.match(MOOTTORI, /import \{ suljeFokuskohde \} from '\.\/fokuskohteet\.js';/);
+  assert.match(MOOTTORI, /import \{ suljeNostonKortti \} from '\.\/fokusnosto\.js';/);
+});
+
+test('kartan avaajat eivät avaa mitään linssin aikana', () => {
+  // Yksi apuri, jota kaikki avaajat kysyvät.
+  assert.match(readFileSync(new URL('../js/ui-apurit.js', import.meta.url), 'utf8'),
+    /export function linssiEstaa\(doc[\s\S]{0,200}contains\('aikajana-paalla'\)/);
+  // Kohdekortti ja kohdemerkin napautus (myös kaupungin laatta merkin alta).
+  assert.match(KOHTEET_LAHDE, /export function avaaFokuskohde\(ui, kohde\) \{[\s\S]{0,600}if \(linssiEstaa\(\)\) return false;/);
+  assert.match(KOHTEET_LAHDE, /const avaa = \(tapahtuma\) => \{[\s\S]{0,300}if \(linssiEstaa\(\)\) return;/);
+  // Eläintäky: kerros kysyy tätä ensin, ja tosi tarkoittaa "jo hoidettu".
+  assert.match(KOHTEET_LAHDE, /export function elainmerkinNapautusLuovutettu\(ui, tapahtuma, g\) \{[\s\S]{0,600}if \(linssiEstaa\(\)\) return true;/);
+  // Nosto: sekä kartan merkistä että kohdekortin napista.
+  assert.match(NOSTO_LAHDE, /function avaaNosto\(ui, nosto\) \{[\s\S]{0,500}if \(linssiEstaa\(\)\) return false;/);
+  assert.match(NOSTO_LAHDE, /function avaaNostonKortti\(ui, nosto\) \{[\s\S]{0,300}if \(linssiEstaa\(\)\) return false;/);
+  // Pöllönappi jää näkyviin, mutta chatti ei aukea linssin päälle.
+  assert.match(POLLO_LAHDE, /avaa\(\) \{[\s\S]{0,700}if \(linssiEstaa\(this\.doc\)\) return;/);
+});
+
+test('Livian paljastus odottaa linssin yli eikä 90 sekunnin katto laukea sen takia', () => {
+  // Paljastussarja ei katkea vaan kysyy uudelleen linssin sulkeuduttua.
+  assert.match(LIVIA_LAHDE, /if \(linssiEstaa\(\)\) \{\s*\n\s*paljastusAjastin = setTimeout\(\s*\n\s*\(\) => paljastusRepliikki\(ui, cityId, i, jalkeen\), PALJASTUKSEN_LINSSIVALI,/);
+  // Maadoituskommentin katto pysähtyy linssin ajaksi (muuten kommentti
+  // tulisi paljastuksen päälle heti linssin sulkeuduttua).
+  assert.match(VIRTA_LAHDE, /const linssissa = linssiEstaa\(\);\s*\n\s*if \(!linssissa && \(!livianPaljastusKesken\(ui\) \|\| jaljella <= 0\)\) \{ jatka\(\); return; \}/);
+  assert.match(VIRTA_LAHDE, /linssissa \? jaljella : jaljella - SAAPUMISKUPLAN_PALJASTUSVALI_MS/);
+  // Mannerivihje ei kuluta kertalippujaan linssin aikana.
+  assert.match(LIVIA_LAHDE, /function ruutuVarattu\(doc = document\) \{[\s\S]{0,400}if \(linssiEstaa\(doc\)\) return true;/);
+});
