@@ -28,11 +28,12 @@
    "fakta": "Adenin vanhin osa, nimeltäänkin Crater, lepää sammuneen tulivuoren sisällä. Kalliot suojaavat kaupunkia, ja sadevesi kerättiin talteen kivisiin Tawilan säiliöihin — sadetta kun tulee vain kourallinen vuodessa.",
    "aarteenPaljastus": "Kätkö odotti kuivan säiliön pohjakivien alla. Said katsoi mittakeppiään: \"Tämä säiliö on ollut tyhjä sukupolven — mutta pohjalla oli tuoreita kengänjälkiä ennen sinun jälkiäsi.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Sammuneen tulivuoren kraatteriin) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-ankara",
@@ -57,11 +58,12 @@
    "fakta": "Angoravuohi kantaa Ankaran vanhaa nimeä Angora. Sulttaanit kielsivät pitkään elävien vuohien viennin, ja kun laumoja lopulta salakuljetettiinkin, hienoin villa syntyi yhä Anatolian ylängön ilmastossa — mohair pysyi vuosisatoja tämän seudun aarteena.",
    "aarteenPaljastus": "Paalin sisällä, villan keskellä, odotti kätkö. Elif kiersi narun sormelleen: \"Solmu on merimiehen käsialaa, jota ei opita ylängöllä — kuka sitoi paalin, joka ei ole koskaan käynyt satamassa?\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Vuohien maastavienti oli pitkään kielletty, ja muualla niiden villa karheni) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-bagdad",
@@ -86,11 +88,12 @@
    "fakta": "Al-Mansurin Bagdad oli pyöreä kaupunki, jonka virallinen nimi oli Madinat as-Salam, Rauhan kaupunki. Kehämuurien keskellä olivat palatsi ja moskeija, ja portteja oli neljä — yksi kuhunkin ilmansuuntaan.",
    "aarteenPaljastus": "Kirjan selkämyksen ontelossa odotti kätkö. Yusuf sulki kannen varovasti: \"Kun kopioin reunamerkinnät kymmenen vuotta sitten, viimeinen lukema puuttui — nyt se on siinä, ja muste on tuoretta.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Täysin pyöreä, ja sitä kutsuttiin Rauhan kaupungiksi) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-damaskos",
@@ -115,11 +118,12 @@
    "fakta": "Damasti on kangasta, jonka kuvio syntyy kudonnasta itsestään: kiiltävä ja himmeä pinta vaihtavat paikkaa, joten kuvio välkehtii valossa. Damaskos oli kuuluisa myös damaskoteräksestään — kaupungin nimi kulki maailmalle kahta tietä.",
    "aarteenPaljastus": "Pakan sydämestä löytyi litteä kätkö. Amina laski kankaan hitaasti: \"Joku on avannut kankaan ja kutonut sen kiinni — taidolla, jota en opettanut kenellekään.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Kuvio on kudottu kankaaseen niin, että se näkyy valoa vasten) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-doha",
@@ -144,11 +148,12 @@
    "fakta": "Monsuuni puhaltaa Intian valtamerellä puoli vuotta kohti Intiaa ja kääntyy sitten vastakkaiseksi. Dhow-kauppiaat purjehtivat menomatkan yhdellä monsuunilla, odottivat käännettä ja palasivat toisella — aikataulu oli taivaassa.",
    "aarteenPaljastus": "Purjetaskussa odotti öljykankainen kätkö. Jassim silitti ommelta: \"Tasku on ommeltu minun pistoillani, mutta lanka on vahattu tavalla, jota käytti vain isoisäni — ja hän kuoli ennen kuin minä opin ompelemaan.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Monsuunituulet, jotka puhaltavat puoli vuotta yhteen ja puoli vuotta toiseen suuntaan) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-dubai",
@@ -173,11 +178,12 @@
    "fakta": "Helmensukeltaja laskeutui pohjaan painokiven varassa, sieraimet sulkijalla suljettuina, ja poimi simpukoita niin kauan kuin henki riitti — minuutin tai kaksi kerrallaan. Köysimies veti hänet ylös nykäisystä. Lahden helmet elättivät kaupunkia sukupolvien ajan.",
    "aarteenPaljastus": "Lipas nousi veneen pohjalaudan alta, kuivana ja rasvattuna. Vasta laiturissa Rashid sanoi: \"Isäni isä ei osannut lukea — silti hän rasvasi lippaan joka kuukausi, niin kuin olisi tiennyt, että sen sisällä on paperia.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Painokiven avulla, pelkän hengityksensä varassa) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-halab",
@@ -202,11 +208,12 @@
    "fakta": "Halabin saippua keitetään oliiviöljystä ja laakerinmarjaöljystä. Se kypsyy varastossa kuukausia tai vuosia: pinta hapettuu ruskeaksi, mutta sisus pysyy laakerinvihreänä — leikkauspinta paljastaa aidon saippuan.",
    "aarteenPaljastus": "Kuution sisään oli valettu pieni kätkö. Karim punnitsi puolikkaita kädessään: \"Sata vuotta hyllyllä, mutta vaha kätkön ympärillä on pehmeää — joku on avannut ja valanut sen uudelleen tällä vuosikymmenellä.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Laakerinmarjaöljy) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-isfahan",
@@ -231,11 +238,12 @@
    "fakta": "Sanonta Esfahan nesf-e jahan — Isfahan on puoli maailmaa — syntyi, kun kaupunki oli Persian loistava pääkaupunki: kupolit, sillat ja maailman suurimpiin kuuluva tori saivat matkalaiset tuntemaan, että puoli maailmaa oli koossa yhdessä kaupungissa.",
    "aarteenPaljastus": "Holvin irtokiven takana odotti kätkö. Farhad pani kiven paikalleen ja lauloi hiljaa yhden säkeen: \"Kaiku vastasi väärästä holvista — joku istuu iltaisin siellä, missä ei pitäisi olla ketään.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Isfahan on puoli maailmaa) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-izmir",
@@ -260,18 +268,19 @@
    "fakta": "Izmir — silloiselta nimeltään Smyrna — oli viikunoiden ja rusinoiden suursatama. Smyrnan viikuna oli oma käsitteensä maailman markkinoilla, ja sadonkorjuun aikaan satama eli hedelmäkoreista.",
    "aarteenPaljastus": "Paperikääreen sisällä ei ollut viikunaa vaan kätkö, viikunan muotoiseksi vahattu. Selin haisteli käärettä: \"Vaha on tuoretta mehiläisvahaa — sata vuotta varastossa maannut kääre tuoksuisi pölyltä.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Viikunoita ja rusinoita) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-jerusalem",
    "kaupunkiId": "jerusalem",
    "kaupunki": "Jerusalem",
    "maa": null,
-   "maanNimi": null,
+   "maanNimi": "Jerusalem",
    "maanosa": "Lähi-itä",
    "otsikko": "Jerusalem — portti joka on kiinni",
    "hahmo": "Elias",
@@ -289,11 +298,13 @@
    "fakta": "Portti nimettiin määränpään mukaan: Damaskoksen portista lähti tie kohti Damaskosta, Jaffan portista satamaan Jaffaan. Kahdeksas portti, Kultainen portti, on ollut muurattuna vuosisatoja — ainoana siitä ei kuljeta minnekään.",
    "aarteenPaljastus": "Kätkö oli muurin juurella, irtokiven takana kolmen aaltoviivan kohdalla. Elias katsoi merkkiä kauan: \"Suvussani portinvartijat ovat piirtäneet nämä viivat hiekkaan niin kauan kuin muistan — sinä olet ensimmäinen, jonka kohdalla ne tarkoittivat jotakin.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Kaupungeista, joihin portista lähtevä tie aikanaan johti) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan.",
+   "alue": "Jerusalem (pelin luokituksessa ilman maakoodia; näyttönimenä pelkkä kaupunki)"
   },
   {
    "tunnus": "kohtaaminen-kairo",
@@ -318,11 +329,12 @@
    "fakta": "Niilin tulva toi pelloille veden ja lietteen. Nilometrin viivoilta luettiin, riittäisikö tulva satoon: matala vesi tiesi nälkää, sopiva runsautta — ja lukeman mukaan määrättiin jopa verot.",
    "aarteenPaljastus": "Ristin kohdalta, asteikon takaa, aukesi kapea kolo ja siinä kätkö. Fatima pyyhki viivan huolella: \"Viime kuussa risti oli himmeä, nyt se on terävä — joku on syventänyt sitä.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Tulvan korkeus kertoi, kuinka hyvä sato oli tulossa) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-kapadokia",
@@ -347,11 +359,12 @@
    "fakta": "Derinkuyun kaltaiset maanalaiset kaupungit porrastuvat monta kerrosta pehmeään tuffikiveen — syvimmillään kymmeniä metrejä. Niissä oli asuinhuoneita, talleja, kaivoja ja pyöreät kivioven, jotka vieritettiin käytävän tukkeeksi.",
    "aarteenPaljastus": "Käytävän päässä, kiviovien takana, odotti kätkö ja sammunut lyhty. Meryem käänsi lyhtyä valossa: \"Tällaisia ei ole taottu isoisoäitini aikojen jälkeen — joku on kulkenut täällä syvemmälle kauan ennen kirjasi omistajaa.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Monta kerrosta — syvimmät ulottuvat kymmenien metrien syvyyteen) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-kuwait",
@@ -376,11 +389,12 @@
    "fakta": "Dhow-veneiden tiikki ja kookospuu tuotiin Intian rannikolta samoilla kauppamatkoilla, joilla veneet kulkivat muutenkin. Aavikkokaupunki rakensi valtamerilaivastonsa tuodusta puusta — ja veistäjän silmä korvasi piirustukset.",
    "aarteenPaljastus": "Kätkö oli veistämön vanhimman veneen kölilaudan alla. Nasser silitti lankkua: \"Isäni sanoi aina, että tässä veneessä on yksi naula enemmän kuin hän on lyönyt — kumpikaan meistä ei ole löytänyt sitä.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Tiikki tuotiin purjehtien Intian rannikolta asti) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-luxor",
@@ -405,11 +419,12 @@
    "fakta": "Pyramidi näkyi kauas ja kertoi ryöstäjille, missä aarteet olivat — ja lähes kaikki ryöstettiin. Uuden valtakunnan faaraot hakkasivat hautansa piiloon Kuninkaiden laakson kallioihin, ja sisäänkäynnit peitettiin.",
    "aarteenPaljastus": "Kätkö odotti polun varressa kivenkolossa, jonka reunat olivat tuhansien hiekkamyrskyjen pyöristämät. \"Tämä paikka on ollut kätkö kauan ennen kirjasi omistajaa — hän ei valinnut sitä, hän löysi sen\", Ahmed sanoi.",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Kalliohaudat oli helpompi kätkeä ryöstäjiltä kuin pyramidit) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-masqat",
@@ -434,11 +449,12 @@
    "fakta": "Masqatin kalliosatama on harvoja suojaisia syvänteitä Intian valtameren kauppareitillä, ja siitä kilpailtiin vuosisatoja. Portugalilaiset rakensivat 1500-luvulla satamakallioille Mirani- ja Jalali-linnoitukset, jotka vartioivat lahtea yhä.",
    "aarteenPaljastus": "Kätkö oli vartiovalon lyhtykomerossa, öljyruukun takana. Salim nosti lyhtyä: \"Öljyä kuluu joka yö yhtä paljon, mutta viime kuussa ruukku hupeni kahden edestä — joku muukin on pitänyt valoa.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Se oli suojaisa syväsatama Intian kauppareitin varrella, jonka moni halusi itselleen) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-medina",
@@ -463,11 +479,12 @@
    "fakta": "Pyhiinvaellus kulki suurina kamelikaravaaneina: tuhansia ihmisiä, kameleita ja vesivarastoja eteni yhdessä noin neljäkymmentä päivää Damaskoksesta Medinaan. Karavaani oli kuin liikkuva kaupunki, jota kaivot ja levähdyspaikat rytmittivät.",
    "aarteenPaljastus": "Kätkö oli kaivon kivijalassa, nimikirjainten alla irtokiven takana. Omar laski kiven paikalleen: \"Kaivolla käy tuhansia käsiä vuodessa, ja silti juuri tämä kivi on aina ollut tiukassa — eilen se oli löysällä.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Kamelikaravaaneissa, joissa kulki tuhansia ihmisiä yhdessä) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-mekka",
@@ -492,11 +509,12 @@
    "fakta": "Rukoussuunta eli qibla osoittaa Mekkaan, Kaaban luo, joka puolelta maailmaa. Moskeijoissa suunnan näyttää seinäsyvennys nimeltä mihrab — ja merenkulkijat ja tähtitieteilijät laskivat qiblan suuntia jo keskiajalla.",
    "aarteenPaljastus": "Sauvan kädensijan sisällä odotti kapea kätkö. Bilal kiersi kädensijan takaisin: \"Sauva on saattanut kulkijoita neljä polvea — saattakoon se nyt sinut.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Kohti Mekkaa ja sen Kaabaa) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-mosul",
@@ -521,11 +539,12 @@
    "fakta": "Musliini kulki Eurooppaan Mosulin kauppateitse, ja kaupungin nimi tarttui kankaaseen: ranskan mousseline ja meidän musliinimme muistavat yhä Mosulin. Hienointa musliinia kudottiin niin ohueksi, että sitä kutsuttiin kudotuksi ilmaksi.",
    "aarteenPaljastus": "Harson sisältä paljastui kätkö, kevyt kuin tyhjä. Layla levitti kankaan valoa vasten: \"Reunan kuvio katosi kutojien mukana kauan ennen pantin jättäjää — mistä hän sai kankaan, joka oli jo hänen aikanaan kadonnutta työtä?\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Mosulista) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-nikosia",
@@ -550,11 +569,12 @@
    "fakta": "Kupari sai latinankielisen nimensä Kyproksesta: aes Cyprium, Kyproksen metalli, lyheni muotoon cuprum — siitä kupari. Saaren kaivokset olivat antiikin maailman tärkeimpiä, ja kuparia laivattiin härän taljan muotoisina harkkoina.",
    "aarteenPaljastus": "Harkko oli ontto; sisällä odotti kätkö. Andreas punnitsi puolikkaita: \"Merkki on lyöty valuun ennen kuin kupari jäähtyi, mutta valu on merkkiä vuosituhansia nuorempi — joku osaa yhä vanhan valajan työn.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Kupari) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-persepolis",
@@ -579,11 +599,12 @@
    "fakta": "Persepolis oli Persian kuninkaiden juhlakaupunki, jonne valtakunnan kansat toivat lahjansa Nowruzin, kevätpäiväntasauksen uudenvuodenjuhlan, aikaan. Nowruzia juhlitaan yhä — se on kevään ja uuden alun juhla.",
    "aarteenPaljastus": "Koristelemattoman arkun takana kivi oli irti, ja kolossa odotti kätkö. Dariush laski kiven takaisin: \"Lampaani eivät säikähdä mitään tuttua — kolme aamua sitten koko lauma pysähtyi tähän.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Kevään uudenvuodenjuhlaa, jota vietetään päiväntasauksena) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-petra",
@@ -608,11 +629,12 @@
    "fakta": "Nabatealaiset olivat vesimestareita: kallioon hakatut kanavat, padot ja säiliöt kokosivat vähäiset sateet koko kaupungin tarpeiksi. Siksi karavaanit pysähtyivät juuri Petrassa — vettä oli siellä, missä muualla ei ollut. Rakennuksetkin veistettiin suoraan kallioon, ylhäältä alas edeten.",
    "aarteenPaljastus": "Kallion juurella, veistäjien vanhan jalansijan kolossa, odotti kätkö. Suleiman pyyhkäisi punaista hiekkaa: \"Rotkon tuuli täyttää tällaisen kolon kuukaudessa — tämä oli lakaistu puhtaaksi.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Kallioon hakatut kanavat ja säiliöt, jotka keräsivät talteen jokaisen sateen) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-riad",
@@ -637,11 +659,12 @@
    "fakta": "Aavikon kaivonkaivaja lukee maata: sitkeät vihreät kasvit, aamulla pitempään kostea hiekka ja hyönteisten liike kertovat, missä vesi kulkee lähellä pintaa. Taito kulki suvuissa — ja Riadin nimi tarkoittaa puutarhoja: vettä osattiin löytää.",
    "aarteenPaljastus": "Kätkö nousi kaivosta samassa sangossa kuin vesi, savikuoreen valettuna. Abdullah rikkoi kuoren: \"Savi on meidän savontamme, mutta kääre sen sisällä on kuiva — se ei ole ollut kaivossa viikkoa kauempaa.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Maan merkeistä — tietyt kasvit ja aamulla kostea hiekka kielivät vedestä) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-rubalkhali",
@@ -666,11 +689,12 @@
    "fakta": "Rub al-Khali on arabiaa ja tarkoittaa Tyhjää neljännestä: hiekkameri peittää neljänneksen Arabian niemimaasta, ja sen ylittivät vain harvat. Dyynit myös laulavat oikeasti — valuva hiekka saa koko rinteen värisemään ja humisemaan.",
    "aarteenPaljastus": "Jälkien päässä, leirikiven alla, odotti kätkö — ja sen päällä puuttuva sivuni. Saif katsoi dyynien yli: \"Nämä jäljet on peitetty käsin — ja se, joka peittää jälkiä, aikoo palata.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Tyhjää neljännestä) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-salalah",
@@ -695,11 +719,12 @@
    "fakta": "Kesäinen khareef-monsuuni osuu Arabian niemimaalla juuri Dhofarin rannikkoon: meri-ilma nousee vuoria vasten usvaksi ja tihkuksi, ja Salalahin seutu vihertyy keskellä kuuminta kesää. Samoilta seuduilta kerätään maailman parasta suitsukepihkaa.",
    "aarteenPaljastus": "Vaakakaapin kaksoispohjasta löytyi kätkö. Mariam laski pihkapussin käteeni: \"Sama mitta, jonka hän vei — ja kätkö painaa täsmälleen saman, sillä se on punnittu tällä vaakakupilla.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Khareef-monsuuni tuo mereltä usvan ja sateet juuri tälle rannikolle) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-sana",
@@ -724,11 +749,12 @@
    "fakta": "Qamariya syntyy kipsistä ja lasista: kipsilevyyn leikataan kuvio ja värilasit valetaan suoraan kehykseen, ilman listoja. Kipsi kovettuu kerran eikä anna periksi — siksi ikkuna kestää, mutta sitä ei voi avata rikkomatta.",
    "aarteenPaljastus": "Ikkunakehyksen ontelosta löytyi kätkö. Hamza asetti puolikuun takaisin telineeseen: \"Kipsi kovettuu kerran, mutta tämä kehys on avattu taltalla ja kipsattu uudelleen — käsi oli taitava, eikä se ollut minun.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Värilasit valetaan kiinni kipsikehykseen) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-siinai",
@@ -753,11 +779,12 @@
    "fakta": "Luostari nousi 500-luvulla paikalle, jossa perimätiedon mukaan Mooses näki pensaan, joka paloi palamatta poroksi — pihalla vaalitaan yhä pensasta. Samassa suojassa kirjasto on säilyttänyt käsikirjoituksia keskeytyksettä puolitoista vuosituhatta.",
    "aarteenPaljastus": "Tyhjän kohdan takana, hyllylevyn alla, odotti litteä kätkö. Gabriel suoristi lapun: \"Pöly laskeutuu kirjastossa tasaisesti, ja tyhjästä kohdasta se puuttui — joku on koskettanut hyllyä tällä viikolla.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Sen pihalla kasvaa perimätiedon mukaan Mooseksen palava pensas) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-tabriz",
@@ -782,11 +809,12 @@
    "fakta": "Solmumatto syntyy käsin solmu kerrallaan: kutoja kiertää villalangan loimiin ja katkaisee sen, riviltä toiselle. Hienossa matossa on satoja solmuja neliösenttimetrillä — kokonaisessa matossa miljoonia — ja työ kestää kuukausia tai vuosia.",
    "aarteenPaljastus": "Maton kääröstä, loimien välistä, löytyi kätkö. Zahra laski sormensa keskeneräiselle riville: \"Tähän on solmittu kolme solmua, joita minä en ole solminut — oikein solmittuja, mutta lanka on värjätty toisessa kaupungissa.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Solmu kerrallaan käsin — isossa matossa solmuja on miljoonia) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   },
   {
    "tunnus": "kohtaaminen-teheran",
@@ -811,11 +839,13 @@
    "fakta": "Tarinan mukaan Euroopasta laivatut suuret peilit särkyivät matkalla — ja persialaiset mestarit tekivät tappiosta taidetta: sirpaleet ladottiin kipsiin mosaiikiksi, joka rikkoo valon tuhansiksi kimalluksiksi. Peilimosaiikista eli aina-karista tuli palatsien ylpeys.",
    "aarteenPaljastus": "Lokerossa odotti kätkö, peilinpalan kokoinen. Reza sovitti palan takaisin: \"Himmenneet palat vaihdan joka vuosi, tämän jätän — mutta kipsi ympärillä on uusittu, eikä uusija ollut minä.\"",
    "kuvassaEiSaaNayttaa": "Oikeaa vastausta (Peilit saapuivat Euroopasta rikkoutuneina, ja sirpaleista tehtiin mosaiikkia) eikä aarteen paljastusta; ei tekstiä kuvassa.",
-   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin saapuminen- ja kohtaaminen-teksteissä; vuosi 1873; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
-   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), vaatetus ja esineistö aikakauden ja paikan mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi).",
+   "sitovaKaanon": "Hahmon nimi, ammatti/rooli ja henkiloJaRooli-kuvaus; kohtaamisen paikka ja tilanne sellaisena kuin kohtaaminen-tekstissä; NYKYHETKI; kohde katsoo suoraan kameraan (matkaaja on juuri saapunut ja esittänyt kysymyksen).",
+   "sallitutTulkinnat": "Ulkonäkö, ikä (aikuinen), nykyaikainen vaatetus ja esineistö paikan ja ammatin mukaan; valo ja vuorokaudenaika vapaita, ellei tekstissä toisin; ilme vapaasti tekstin tunnelmasta (hämmästys, epäusko, huvittuneisuus, tuima arviointi). Ammattiin luonnollisesti kuuluva esineistö saa näkyä (tarinakaari.md 6.6), ei vastausta opettavaa kaaviota.",
    "olemassaOlevatKuvat": [],
    "luennat": false,
-   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)"
+   "tila": "kaanonin luonnos työhuoneessa, ei vielä pelissä (luennat generoimatta)",
+   "aikataso": "Kohtaaminen tapahtuu NYKYHETKESSÄ: pelaaja saapuu nykypäivänä ja kohtaa paikallisen ihmisen (docs/moduulit/tarinakaari.md kohdat 1 ja 5). Kenttä paikkaJaTilanne on isoisä Horation 1873-saapumismerkintä eli TAUSTATARINAA — sen höyrylaivat ja vaatetus eivät kuulu kohtaamiskuvaan."
   }
- ]
+ ],
+ "huomautus": "Korjattu 22:55 UTC: aikataso = nykyhetki (aiempi \"vuosi 1873\" koski vain saapumismerkintää). Jerusalem: ei maakoodia, näyttönimi Jerusalem."
 }

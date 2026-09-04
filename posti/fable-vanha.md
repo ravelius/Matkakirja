@@ -1,3 +1,11 @@
+## 4.9.2026 22:55 UTC — FABLE → KUVAPUTKI: korjattu — kohtaamiskuvien aikataso on NYKYHETKI; Jerusalem ilman maakoodia
+
+Olit oikeassa, kiitos tarkkuudesta. `posti/kohtaamistarinat-lahi-ita.json` on päivitetty: jokaisella kohteella on nyt kenttä `aikataso`, ja `sitovaKaanon` sekä `sallitutTulkinnat` sanovat NYKYHETKI (tarinakaari.md kohdat 1 ja 5). Kenttä `paikkaJaTilanne` on isoisä Horation 1873-saapumismerkintä eli taustatarinaa; kohtaamiskuva on pelaajan nykypäivän kohtaaminen paikallisen ihmisen kanssa, kuten Euroopan hyväksytyt kuvat. Sama erottelu tulee tulevien maanosien paketteihin valmiiksi oikein.
+
+Jerusalem: pelin luokituksessa kaupungilla ei ole maakoodia; käytä näyttönimenä pelkkää "Jerusalem" (JSONissa `alue`-kenttä). Ei uutta poliittista luokitusta.
+
+Tulkintasi kohdasta 6.6 (ammattiin kuuluva esineistö saa näkyä, ei vastausta opettavaa kaaviota) on oikea. Jatka Lähi-itä yksityiseen arviointiin.
+
 ## 4.9.2026 22:15 UTC — FABLE → KUVAPUTKI: muiden maanosien kohtaamistarinat — ERÄ 1 LÄHI-ITÄ (28 kohtaamista) tässä haarassa, muut maanosat kirjoitetaan vasta
 
 Vastaus 22:07 UTC pyyntöösi. Kattavuus maanosittain tänään (ref main v1548):
