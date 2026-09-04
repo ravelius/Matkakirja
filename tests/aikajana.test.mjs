@@ -642,7 +642,12 @@ test('hyväksytyt generoidut ilmiökuvat ovat kytketty (Watt, Montgolfier, Jenne
 test('jokaisella pysäkillä on generoitu muotokuva omassa kansiossaan', () => {
   for (const t of KEKSINNOT) {
     if (t.paalu) {
-      assert.equal(t.kuva, null, 'merkkipaalulla ei ole muotokuvaa');
+      // Merkkipaalu sai 4.9.2026 isoisän hassuttelevan muotokuvan
+      // (kuvaputki, kuvateksti sanasta sanaan) — ei ilmiökuvaa.
+      assert.equal(t.kuva?.osoite, `${KEKSINTO_KUVAJUURI}/muotokuva/1873-isoisa.jpg`,
+        'merkkipaalun muotokuva on isoisä');
+      assert.equal(t.kuva.lahde, 'Kuvaputken generoitu valokuva');
+      assert.equal(t.ilmio, null, 'merkkipaalulla ei ole ilmiökuvaa');
       continue;
     }
     assert.ok(t.kuva?.osoite, `${t.otsikko}: muotokuva puuttuu`);
@@ -672,11 +677,11 @@ test('kaksoispysäkeillä on molempien keksijöiden muotokuva, muilla yksi', () 
   }
 });
 
-test('muotokuvia on 28 eri tiedostoa — yhtä monta kuin ämpäriin vietiin', () => {
+test('muotokuvia on 29 eri tiedostoa — 28 keksijää ja isoisä', () => {
   const osoitteet = KEKSINNOT.flatMap((t) => [t.kuva, t.kuvaToinen])
     .filter((k) => k?.osoite).map((k) => k.osoite);
-  assert.equal(osoitteet.length, 28);
-  assert.equal(new Set(osoitteet).size, 28, 'sama tiedosto kahdella pysäkillä');
+  assert.equal(osoitteet.length, 29);
+  assert.equal(new Set(osoitteet).size, 29, 'sama tiedosto kahdella pysäkillä');
 });
 
 test('aito Commons-kuva säilyy datassa Tiedeliitettä varten', () => {
