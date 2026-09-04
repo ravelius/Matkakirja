@@ -139,6 +139,7 @@ import { pysaytaLukija } from './lukija.js';
 import { esilataaKuvat } from './ui-apurit.js';
 import { avaaTiedeliite, suljeTiedeliite } from './tiedeliite.js';
 import { sytytaLyhdyt } from './lyhty.js';
+import { rajausTyyli } from './isoisan-valokuvat.js';
 import {
   aloitaSiirtymamusiikki, himmennaSiirtymamusiikki, lopetaSiirtymamusiikki,
   LINSSIN_HILJENNYS,
@@ -380,11 +381,58 @@ export const PANEELIN_RAAHAUSKYNNYS = 6;
  * puuttuessaan oletus.
  */
 const PANEELIN_SIIRTO = { dx: 0, dy: 0, koko: 1 };
-const PANEELIN_MUISTIAVAIN = 'matkakirja-linssi-paneeli';
+/*
+ * Avaimen versio nousi 4.9.2026 (oletusasettelut näyttöluokittain,
+ * css .aikajana-ilmio): vanha muisti olisi pitänyt paneelin entisessä
+ * koossa ja paikassa eikä omistajan uusi oletus olisi näkynyt.
+ */
+const PANEELIN_MUISTIAVAIN = 'matkakirja-linssi-paneeli-v2';
 export const PANEELIN_KOKO_MIN = 0.55;
 export const PANEELIN_KOKO_MAX = 2.2;
 /** Hiiren rullan askel: yksi pykälä (100 yksikköä) ≈ 12 % koon muutos. */
 export const PANEELIN_RULLAN_HERKKYYS = 0.0012;
+
+/**
+ * KAMERALAATIKKO NÄYTÖN MUODON MUKAAN (omistaja 4.9.2026 iltapäivä,
+ * kolme kaappausta oletusasetteluista). Kaaren alue sovitetaan
+ * ruutuun, mutta paneeli ja karuselli vievät osan ruudusta, joten
+ * laatikkoa jatketaan niiden suuntaan: sovitus on sama, mutta
+ * sisältö istuu vapaaseen osaan.
+ *
+ *   - Nauha peittää alalaidan aina: laatikkoa jatketaan alas 28 %,
+ *     jotta kaaren eteläisimmät valot jäävät nauhan yläpuolelle.
+ *   - PYSTYNÄYTTÖ (puhelin, tabletti pystyssä): paneeli on ylhäällä
+ *     koko leveydeltä, joten laatikkoa jatketaan ylös — kartta
+ *     laskeutuu paneelin alle (Rovaniemi noin kolmanneksen kohdalle).
+ *   - VAAKANÄYTTÖ: Eurooppa täyttää ruudun lähes kokonaan ja paneeli
+ *     (oikea yläkulma, 45 %) peittää koillisnurkan; nauhalle riittää
+ *     pienempi jatke alas, ja laatikkoa jatketaan hieman vasemmalle,
+ *     jotta Eurooppa istuu aavistuksen oikealla (Lissabon irti
+ *     reunasta) kuten omistajan esimerkissä.
+ *
+ * Puhdas funktio: testi antaa juuren mitat itse.
+ */
+export const KAMERA_JATKE = { alas: 0.28, ylos: 0.5, vaakaAlas: 0.12, vaakaYlos: 0.14, vasemmalle: 0.08 };
+export function kaarenKameralaatikko(alue, juuri) {
+  const r = typeof juuri?.getBoundingClientRect === 'function' ? juuri.getBoundingClientRect() : null;
+  const pysty = r ? r.height > r.width : false;
+  if (pysty) {
+    return {
+      x: alue.x,
+      y: alue.y - alue.h * KAMERA_JATKE.ylos,
+      w: alue.w,
+      h: alue.h * (1 + KAMERA_JATKE.alas + KAMERA_JATKE.ylos),
+    };
+  }
+  // Pieni jatke ylös myös vaa'assa: vuosipalkki peittää ylälaidan, ja
+  // omistajan esimerkissä Bergen istuu noin neljänneksen kohdalla.
+  return {
+    x: alue.x - alue.w * KAMERA_JATKE.vasemmalle,
+    y: alue.y - alue.h * KAMERA_JATKE.vaakaYlos,
+    w: alue.w * (1 + KAMERA_JATKE.vasemmalle),
+    h: alue.h * (1 + KAMERA_JATKE.vaakaAlas + KAMERA_JATKE.vaakaYlos),
+  };
+}
 
 function lataaPaneelinMuisti() {
   try {
@@ -789,8 +837,14 @@ function kuvaTaiLaatta(kuvatieto, nimi, leveys, luokka) {
      * alkuperäinen varana (asetaAmpariKuva). Commons-kuva
      * (`tiedosto`) menee peilin ja Commonsin portaita kuten ennen.
      */
-    if (kuvatieto.osoite) asetaAmpariKuva(kuva, kuvatieto.osoite, leveys);
+    if (kuvatieto.ulkoinen && kuvatieto.osoite) {
+      // Kuva oman kansion ulkopuolelta (isoisän valokuva): ei pieni-versiota, ei varareittiä.
+      kuva.src = kuvatieto.osoite;
+    } else if (kuvatieto.osoite) asetaAmpariKuva(kuva, kuvatieto.osoite, leveys);
     else asetaKuva(kuva, valokuvaUrl(kuvatieto.tiedosto, leveys), valokuvaVara(kuvatieto.tiedosto, leveys));
+    // Cabinet cardin valkoinen reunus pois (js/isoisan-valokuvat.js rajausTyyli, css .isoisa-rajattu).
+    const rajaus = rajausTyyli(kuvatieto);
+    if (rajaus) { kuva.style.cssText += rajaus; kuva.classList.add('isoisa-rajattu'); }
     kehys.appendChild(kuva);
   } else {
     const kirjaimet = String(nimi ?? '?').split(/\s+/).map((s) => s[0] ?? '').join('').slice(0, 3);
@@ -1355,10 +1409,7 @@ class Aikajana {
     const { ui } = this;
     const alue = this.kaari.alue;
     if (!alue || !ui.kartta?.ajaKamera) return Promise.resolve(false);
-    // Nauha peittää alalaidan: laatikkoa jatketaan alas sen verran, että
-    // kaaren eteläisimmät valot jäävät nauhan yläpuolelle.
-    const laatikko = { x: alue.x, y: alue.y, w: alue.w, h: alue.h * 1.28 };
-    return ui.kartta.ajaKamera({ bbox: laatikko, marginaali: 0.05 }, { kesto });
+    return ui.kartta.ajaKamera({ bbox: kaarenKameralaatikko(alue, this.juuri), marginaali: 0.03 }, { kesto });
   }
 
   /* ---------- musiikki (js/siirtymamusiikki.js) ---------- */
@@ -1903,7 +1954,8 @@ class Aikajana {
     const osoitteet = [];
     for (const t of this.tapahtumat) {
       for (const kuva of [t.kuva, t.kuvaToinen, t.ilmio, t.ilmioLisa]) {
-        if (!kuva?.osoite) continue;
+        // Ulkoisella kuvalla ei ole pientä versiota; iso ladataan vasta pysäkillä.
+        if (!kuva?.osoite || kuva.ulkoinen) continue;
         osoitteet.push(pieniOsoite(kuva.osoite));
         // Muotokuvista myös karusellin terävä ja sumea versio.
         const karuselli = karuselliOsoite(kuva.osoite);

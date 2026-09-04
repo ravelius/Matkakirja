@@ -618,7 +618,23 @@
    * on muuttuja, jota mediakyselyt vaihtavat; kerroin tulee js
    * kytkeRaahaus (kaksi sormea tai hiiren rulla) ja muistetaan.
    */
-  --aikajana-paneeli-leveys: min(21rem, 46%);
+  /*
+   * OLETUSASETTELUT NÄYTTÖLUOKITTAIN (omistaja 4.9.2026 iltapäivä,
+   * kolme kaappausta: "Pystytkö muuttamaan näiden perusteella
+   * oletusasetteluita näytöille mahdollisimman tarkasti matkittuna?"):
+   *   - puhelin pystyssä: paneeli koko ruudun leveydeltä reunasta
+   *     reunaan, heti vuosipalkin alla; kartta sen alla ja karuselli
+   *     alareunassa;
+   *   - tabletti pystyssä: paneeli kaksi kolmasosaa leveydestä,
+   *     hieman oikealle painottuen, kartta sen alla;
+   *   - vaakanäyttö (pöytäkone, tabletti vaakaan): paneeli oikeassa
+   *     yläkulmassa 45 % leveydestä, kartta vasemmalla.
+   * Tämä on vaakanäytön arvo; pysty-luokat mediakyselyissä alla.
+   * Pelaajan raahaus ja nipistys muistetaan yhä laitteella
+   * (js/aikajana.js PANEELIN_MUISTIAVAIN), oletus koskee vain sitä
+   * ennen.
+   */
+  --aikajana-paneeli-leveys: min(60rem, 45%);
   width: calc(var(--aikajana-paneeli-leveys) * var(--aikajana-paneeli-koko, 1));
   min-height: 9rem;
   border-radius: 12px;
@@ -671,6 +687,8 @@
   overflow: hidden;
 }
 .aikajana-ilmiokuva img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Isoisän cabinet card (merkkipaalu): reunus leikattu, kortti skaalataan täyteen. */
+.aikajana-ilmiokuva img.isoisa-rajattu { transform: scale(var(--rskaala, 1)); transform-origin: 50% 50%; }
 /* Pelkkä kuva (omistaja 3.9.2026): kuva on nappi jutun avaamiseen. */
 .aikajana-ilmiokuva.avaa-jutun { cursor: pointer; }
 .aikajana-ilmiokuva.avaa-jutun:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
@@ -1131,14 +1149,15 @@
   .aikajana-ylarivi { gap: 0.4rem; padding: 0.15rem 0.4rem; }
   .aikajana-otsikko { display: none; }
   .aikajana-paikka { max-width: 7rem; font-size: 0.78rem; }
-  .aikajana-ilmio { top: 3.6rem; --aikajana-paneeli-leveys: min(17rem, 62%); }
+  /* Puhelin pystyssä: paneeli reunasta reunaan (omistaja 4.9.2026). */
+  .aikajana-ilmio { top: 3.6rem; right: 0; --aikajana-paneeli-leveys: 100%; border-radius: 0; border-left: 0; border-right: 0; }
   .aikajana-ilmio-selite { font-size: 0.82rem; }
   .aikajana-nappi { padding: 0.2rem 0.42rem; font-size: 0.68rem; }
 }
 
-/* ISO NÄYTTÖ: ilmiökuva selvästi isompana (omistaja 3.9.2026). */
-@media (min-width: 1200px) {
-  .aikajana-ilmio { --aikajana-paneeli-leveys: min(34rem, 44%); }
+/* Tabletti pystyssä: paneeli kaksi kolmasosaa leveydestä, hieman oikealle (omistaja 4.9.2026). */
+@media (min-width: 701px) and (orientation: portrait) {
+  .aikajana-ilmio { right: 3.5%; --aikajana-paneeli-leveys: 66%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

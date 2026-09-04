@@ -371,8 +371,9 @@ test('kelvoton syöte palautuu sellaisenaan eikä pieni kierry kahdesti', () => 
 });
 
 test('pieni osoite on sama kuin pienennystyökalun kirjoittama avain', () => {
+  // Ulkoinen kuva (merkkipaalun isoisä) ei kulje pieni-putken kautta.
   const osoitteet = KEKSINNOT.flatMap((t) => [t.kuva, t.kuvaToinen, t.ilmio, t.ilmioLisa])
-    .filter((k) => k?.osoite).map((k) => k.osoite);
+    .filter((k) => k?.osoite && !k.ulkoinen).map((k) => k.osoite);
   assert.ok(osoitteet.length >= 50, `osoitteita vain ${osoitteet.length}`);
   for (const osoite of osoitteet) {
     const { runko, alikansio } = runkoOsoitteesta(osoite);
@@ -610,7 +611,9 @@ test('kuvat ovat Commons-nimiä ilman polkua tai ämpäriosoitteita, ja jokaisel
       if (!k) continue;
       if (k.osoite) {
         // Generoitu kuva: valmis osoite kuvaputken kansiossa, ei tiedostoa.
-        assert.ok(k.osoite.startsWith(`${KEKSINTO_KUVAJUURI}/`) && /\.jpg$/.test(k.osoite),
+        // Ulkoinen (isoisän valokuva) saa asua kohtaamiset/isoisa-kansiossa.
+        const juuri = k.ulkoinen ? 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/' : `${KEKSINTO_KUVAJUURI}/`;
+        assert.ok(k.osoite.startsWith(juuri) && /\.jpg$/.test(k.osoite),
           `${t.otsikko}: ämpäriosoite ${k.osoite}`);
         assert.equal(k.tiedosto, undefined, `${t.otsikko}: osoite ja tiedosto yhtä aikaa`);
         assert.ok(k.lahde, `${t.otsikko}: generoidun kuvan lähderivi puuttuu`);
@@ -647,7 +650,10 @@ test('jokaisella pysäkillä on generoitu muotokuva omassa kansiossaan', () => {
       assert.equal(t.kuva?.osoite, `${KEKSINTO_KUVAJUURI}/muotokuva/1873-isoisa.jpg`,
         'merkkipaalun muotokuva on isoisä');
       assert.equal(t.kuva.lahde, 'Kuvaputken generoitu valokuva');
-      assert.equal(t.ilmio, null, 'merkkipaalulla ei ole ilmiökuvaa');
+      // Ilmiökuva on isoisän Kantonin teehuonekuva oman kansion ulkopuolelta (4.9.2026).
+      assert.ok(t.ilmio?.ulkoinen && /kohtaamiset\/isoisa\/isoisa-kanton-1873/.test(t.ilmio.osoite),
+        'merkkipaalun ilmiökuva on ulkoinen isoisän valokuva');
+      assert.ok(t.ilmio.rajaus, 'cabinet cardin reunus leikataan rajauksella');
       continue;
     }
     assert.ok(t.kuva?.osoite, `${t.otsikko}: muotokuva puuttuu`);
@@ -1277,4 +1283,32 @@ test('välinäytöksen kuvapaikka katoaa, jos kuvaa ei vielä ole', () => {
   // Osoite sellaisenaan: tämä kuva ei ole linssikuvien pieni/-putkessa.
   assert.match(kuva, /kuva\.src = kuvatieto\.osoite;/);
   assert.ok(!kuva.includes('asetaAmpariKuva'), 'välinäytöksen kuva ei kulje linssikuvien putkea');
+});
+
+/*
+ * OLETUSASETTELUT NÄYTTÖLUOKITTAIN (omistaja 4.9.2026 iltapäivä, kolme
+ * kaappausta): pystynäytöllä kartta laskeutuu paneelin alle, vaaka-
+ * näytöllä Eurooppa täyttää ruudun ja paneeli peittää koillisnurkan.
+ */
+test('kameralaatikko jatkuu pystynäytöllä ylös ja vaakanäytöllä vasemmalle', async () => {
+  const { kaarenKameralaatikko, KAMERA_JATKE } = await import('../js/aikajana.js');
+  const alue = { x: 5560, y: 830, w: 1700, h: 1000 };
+  const juuri = (w, h) => ({ getBoundingClientRect: () => ({ width: w, height: h }) });
+  const pysty = kaarenKameralaatikko(alue, juuri(820, 1100));
+  assert.equal(pysty.x, alue.x);
+  assert.equal(pysty.w, alue.w);
+  assert.ok(pysty.y < alue.y, 'pystynäytöllä laatikko jatkuu ylös (kartta laskeutuu paneelin alle)');
+  assert.equal(pysty.h, alue.h * (1 + KAMERA_JATKE.alas + KAMERA_JATKE.ylos));
+  const vaaka = kaarenKameralaatikko(alue, juuri(1440, 800));
+  assert.ok(vaaka.x < alue.x && vaaka.w > alue.w, 'vaakanäytöllä laatikko jatkuu vasemmalle');
+  assert.ok(vaaka.y < alue.y, 'vaa\'assa pieni jatke ylös (vuosipalkki)');
+  assert.equal(vaaka.h, alue.h * (1 + KAMERA_JATKE.vaakaAlas + KAMERA_JATKE.vaakaYlos));
+  // Ilman juurta (testien DOM-jäljitelmä) käytetään vaakalaatikkoa.
+  assert.deepEqual(kaarenKameralaatikko(alue, null), vaaka);
+  assert.match(metodi('sovitaKaareen'), /bbox: kaarenKameralaatikko\(alue, this\.juuri\), marginaali: 0\.03/);
+  // Paneelin oletusleveydet: vaaka 45 %, tabletti pystyssä 66 %, puhelin reunasta reunaan.
+  assert.match(AIKAJANA_CSS, /--aikajana-paneeli-leveys: min\(60rem, 45%\);/);
+  assert.match(AIKAJANA_CSS, /@media \(min-width: 701px\) and \(orientation: portrait\) \{\n  \.aikajana-ilmio \{ right: 3\.5%; --aikajana-paneeli-leveys: 66%; \}/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio \{ top: 3\.6rem; right: 0; --aikajana-paneeli-leveys: 100%;/);
+  assert.match(MOOTTORI, /PANEELIN_MUISTIAVAIN = 'matkakirja-linssi-paneeli-v2'/);
 });

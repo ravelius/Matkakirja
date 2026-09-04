@@ -203,7 +203,8 @@ export async function keraaKuvat() {
   for (const tapahtuma of tapahtumat) {
     for (const kentta of ['ilmio', 'ilmioLisa', 'kuva', 'kuvaToinen']) {
       const osoite = tapahtuma[kentta]?.osoite;
-      if (!osoite) continue;
+      // Ulkoinen kuva (isoisän valokuva merkkipaalulla) asuu toisessa kansiossa eikä pienene tässä.
+      if (!osoite || tapahtuma[kentta]?.ulkoinen) continue;
       const { runko, alikansio } = runkoOsoitteesta(osoite);
       const avain = ampariAvain(alikansio, runko);
       const vanha = kuvat.get(avain);

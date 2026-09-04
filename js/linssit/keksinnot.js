@@ -53,8 +53,8 @@
  *
  * Kaikki 25 pysäkkiä on kytketty sekä generoituun muotokuvaan (28
  * kuvaa, kaksoispysäkit mukaan lukien) että generoituun ilmiökuvaan;
- * merkkipaalu 1873 sai 4.9.2026 isoisän hassuttelevan muotokuvan
- * (ei ilmiökuvaa eikä Tiedeliitettä).
+ * merkkipaalu 1873 sai 4.9.2026 isoisän hassuttelevan muotokuvan ja
+ * ilmiökuvaksi Kantonin teehuonekuvan (ei Tiedeliitettä).
  *
  * ── HENKILÖJUTTU ──────────────────────────────────────────────────
  *
@@ -718,7 +718,24 @@ export const KEKSINNOT = [
         + 'hetken kerrallaan.',
       lahde: 'Kuvaputken generoitu valokuva',
     },
-    ilmio: null,
+    /*
+     * HAVAINNEKUVA KARTAN PÄÄLLE TEKSTILAATIKON TILALLE (omistaja
+     * 4.9.2026 iltapäivä: "sen tilalle voisi laittaa kuvan isoisästä,
+     * kun hän istuu jonkun paikallisen kanssa pöydässä. Tällainen kuva on
+     * jo generoitu"): isoisän Kantonin teehuonekuva (js/isoisan-
+     * valokuvat.js). Kuva asuu oman kansionsa ulkopuolella eikä sillä
+     * ole pieni/-variantteja, joten `ulkoinen: true` ohittaa pieni-putken
+     * (js/aikajana.js asetaAmpariKuva, tools/tee-pienet-kuvat.mjs) ja
+     * `rajaus` leikkaa cabinet cardin valkoisen reunuksen pois.
+     */
+    ilmio: {
+      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-kanton-1873-kulunut-v1.jpg',
+      rajaus: { x0: 0.054, y0: 0.032, x1: 0.943, y1: 0.956 },
+      ulkoinen: true,
+      selite: 'Isoisä teehuoneen pöydässä Kantonissa 1873. Kulunut cabinet card '
+        + 'isoisän matkalaukusta.',
+      lahde: 'Kuvaputken generoitu valokuva',
+    },
     /*
      * VÄLINÄYTÖS (omistajan tilaus 4.9.2026 aamu, sanatarkasti:
      * *"Kertoja voisi myös kertoa vähän pidemmin isoisän kohdalla mihin
