@@ -1,3 +1,27 @@
+## 4.9.2026 17:53 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 35–37 yksityisessä arvioinnissa
+
+Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu museo-, kirjasto-, arkisto- ja tutkimuslähteistä, generoitu kokonaan uusina ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 90. Tuotantosivulta takaisin luetut JPEG-tavut palauttivat HTTP 200:n, MIME-tyypin `image/jpeg`, koon 1536 × 1024, sRGB-profiilin ja täsmälleen paikalliset SHA-256-tiivisteet. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
+
+- `skandaali-poyaisin-huijaus-photo-v1.jpg` — Leith 22.1.1823: lähes 200 siirtolaisen lähtö Kennersley Castlella; nuori äiti yrittää suojella poikansa toivoa samalla kun isoisä alkaa epäillä Poyaisin karttaa.
+  - Kuvateksti: **“Poika on jo antanut leikkilaivalleen Poyaisin nimen; hänen äitinsä on vaihtanut perheen säästöt MacGregorin seteleihin, ja isoisä ehtii epäillä karttaa vasta lähtölaiturilla. Kennersley Castle vei Leithistä lähes 200 siirtolaista kohti luvattua pääkaupunkia — perillä odotti rakentamaton viidakko, jossa yli puolet heistä kuoli.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi National Library of Scotlandin Poyais-asiakirjoihin, British Museumin vuoden 1823 obligaatioon ja MacGregorin järjestelyä koskevaan tutkimukseen perustuva havainnekuva. Kennersley Castlen lähtö Leithistä, lähes 200 siirtolaista, Poyaisin paperiraha, maakirjat ja perillä odottanut rakentamaton rannikko ovat dokumentoituja; kuvattu perhe, leikkilaiva ja isoisän epäilyn hetki ovat dramatisoituja.**
+  - Lähteet: https://manuscripts.nls.uk/repositories/2/resources/20064 ; https://www.britishmuseum.org/collection/object/C_CIB-14659 ; https://www.cambridge.org/core/journals/enterprise-and-society/article/whats-in-a-fraud-the-many-worlds-of-gregor-macgregor-18171824/18C69E0C9D7E0878A96E17E2B0B9E12F/share/49e5171b4f9f4da86bf26cfc2575ae26b2b4d1a0
+  - SHA-256: `5d0676667c2cfb0fa27cf0518ea11b38812dbffbd59487774be0690d22aa2063`
+
+- `skandaali-elginin-marmorit-photo-v1.jpg` — Ateena 1802: nuori kivimies tukee köysissä riippuvaa friisilohkoa Lusierin johtaessa irrotusta ja Osmanien viranomaisen valvoessa.
+  - Kuvateksti: **“Nuori kivimies tuntee friisin painon käsissään ennen kuin ymmärtää, että pala saattaa lähteä temppelistä pysyvästi. Elginin asiamiehet veivät 1801–1805 noin puolet Parthenonissa säilyneistä veistoksista; luvan laajuudesta ja omistuksen oikeutuksesta kiistellään yhä Ateenan ja Lontoon välillä.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi British Museumin ja Akropolis-museon tapahtumakuvausten pohjalta rakennettu havainnekuva. Elginin asiamiehen Giovanni Battista Lusierin johtama irrotustyö, Osmanien hallinto ja noin puolet säilyneistä Parthenonin veistoksista käsittänyt siirto ovat dokumentoituja; nuori kivimies, irtoava siru ja kuvattu sekunti ovat dramatisoituja. Lähteet tulkitsevat luvan laajuutta eri tavoin, mikä on jätetty näkyväksi myös kuvatekstiin.**
+  - Lähteet: https://www.britishmuseum.org/about-us/british-museum-story/contested-objects-collection/parthenon-sculptures ; https://www.theacropolismuseum.gr/en/museum-history
+  - SHA-256: `a14717270b437f2becb1af69bc8119e08057987a8dd98fbc0f969ebfc2e39a6f`
+
+- `skandaali-simonides-kasikirjoitusvaarentaja-photo-v1.jpg` — Symi 1840-luku: nuori kirjansitojan oppipoika huomaa juuri ”antiikkisena” kirjoitetun tekstin musteen olevan vielä märkää.
+  - Kuvateksti: **“Oppipojan sormeen tarttuu märkä muste tekstistä, jonka Simonides aikoo myydä vuosisatoja vanhana. Symin saarelta lähtenyt mestarikalligrafi teki kadonneista teoksista uskottavia ”löytöjä”, keksi munkin todistajakseen ja päätyi lopulta väittämään myös aidon Codex Sinaiticuksen omaksi nuoruudentyökseen.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi British Libraryn Simonides-papereihin ja National Archivesin henkilötietueeseen perustuva havainnekuva. Simonideen paleografinen taito, väärennetyt papyrukset ja Aiskhyloksen Persialaiset-käärö sekä hänen keksimänsä Kallinikos-munkki ovat dokumentoituja; Symin työpaja, oppipoika, märkä muste ja kuvattu paljastumisen hetki ovat dramatisoituja.**
+  - Lähteet: https://searcharchives.bl.uk/catalog/040-002003075 ; https://discovery.nationalarchives.gov.uk/details/c/F67536
+  - SHA-256: `8d9ebdc02e6f52040a0c5f547e4f371bcebc83a27ef743c70b3c03c0e2cd2383`
+
+Tila: **skandaalit 37/83 tehty; kuvat 35–37 ovat yksityisessä arvioinnissa eivätkä R2:ssa.** Promptit, lähdemäärät ja lähdelinkit näkyvät arviointisivun omissa ponnahdusikkunoissa.
+
 ## 4.9.2026 17:34 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 32–34 yksityisessä arvioinnissa
 
 Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu ensisijaisista akatemia-, museo-, arkisto- ja keskuspankkilähteistä, generoitu kokonaan uusina, tarkistettu ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 89. Tuotantosivulta takaisin luetut JPEG-tavut palauttivat HTTP 200:n, MIME-tyypin `image/jpeg`, koon 1536 × 1024 ja täsmälleen paikalliset SHA-256-tiivisteet. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
