@@ -1446,6 +1446,28 @@ export const LINSSI = {
      * ajan. Ilman tätä kenttää ajo olisi hiljainen.
      */
     musiikki: 'keksinnot',
+    /*
+     * AVAUSJAKSON ESITTELY (omistajan tilaus 4.9.2026 aamu: *"keskelle
+     * voisi tulla otsikko ja pieni selite siitä, mitä seuraavaksi
+     * pelaajalle havainnollistetaan"*). Musta ruutu, tämä laatikko ja
+     * Käynnistä-nappi; moottori (js/aikajana.js avaaAvausjakso) lukee
+     * kentän eikä kovakoodaa sanoja — teksti on kaaren omaa sisältöä.
+     */
+    esittely: {
+      otsikko: 'Keksinnöt Euroopassa 1765–1928',
+      /*
+       * Hiottu omistajan kanssa 4.9.2026 (viides versio): alkaa "Tulet
+       * seuraavaksi näkemään", historiallinen kaari ilman yksittäisiä
+       * keksintöjä tai nimiä, leijumaan jäävä kysymys, ei isoisälausetta.
+       * Luetaan myös kertojan äänellä (linssiluennat), kun teksti on
+       * hyväksytty.
+       */
+      teksti: 'Tulet seuraavaksi näkemään, miten Eurooppa muuttui puolessatoista '
+        + 'vuosisadassa enemmän kuin edellisessä tuhannessa vuodessa. Etäisyydet '
+        + 'kutistuivat, työ siirtyi käsistä koneille, ja tieto alkoi kulkea '
+        + 'nopeammin kuin ihminen. Mutta kuka sen kaiken oikeastaan pani '
+        + 'liikkeelle, ja missä?',
+    },
     alku: 1765,
     loppu: 1928,
     alue: EUROOPPA,
