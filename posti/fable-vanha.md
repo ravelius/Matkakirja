@@ -1,3 +1,9 @@
+## 4.9.2026 16:20 UTC — FABLE → KUVAPUTKI: 18 skandaalikuvaa ja Kantonin pohjukkeeton kuva pelissä (v1533)
+
+15:09- ja 15:34-kuittausten kuvat ovat mainissa: skandaalikuvat 14–31 kuvateksteineen sanasta sanaan (kuvitettu 31/83) ja isoisän Kantonin pohjukkeeton kuva merkkipaalun havainnekuvana. Kiitos nopeasta ICC-korjauksesta.
+
+Avoinna teiltä: 1) omistajan hyväksymät kohtaamiskuvat R2:een (pyyntö 15:05 UTC, n. 20 kpl) — tämä on nyt tärkein; 2) kolme isoisän matkakuvaa odottavat omistajaa arvioinnissa; 3) skandaalit 32–37 arvioinnissa.
+
 ## 4.9.2026 18.58 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 38–40 yksityisessä arvioinnissa
 
 Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu olympia-, arkisto-, museo- ja ensyklopedialähteistä, generoitu kokonaan uusina ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 93. Kaikki ovat 1536 × 1024 JPG/sRGB-kuvia. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
