@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1530, teksti: 'Kuplapinon 8 rivin katto, linssin paluu, ratas siivottu' },
   { v: 1529, teksti: 'Hetket Galilei ja Machu Picchu, skandaalikuvat 11-13' },
   { v: 1528, teksti: 'Linssin oletusasettelut naytoille, isoisan teehuonekuva' },
   { v: 1527, teksti: 'Lyhdyt loimuavat avauslaatikon kulmissa (liekkimalli)' },

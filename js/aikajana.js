@@ -1405,6 +1405,20 @@ class Aikajana {
    * Palauttaa ajon lupauksen, jotta avaus tietää milloin tausta on
    * paikallaan.
    */
+  /**
+   * Paluu linssiä edeltäneeseen näkymään (ks. kaynnista). Ajetaan vasta
+   * kun kameran lukko on palautettu, joten lukko ei nykäise ajoa
+   * kesken; sama lauta on ehto, koska laudanvaihto purkaa linssin ja
+   * uuden laudan näkymä on jo oikea.
+   */
+  palautaKamera() {
+    const n = this.kameraEnnen;
+    this.kameraEnnen = null;
+    const { ui } = this;
+    if (!n || !ui.kartta?.ajaKamera || !ui.nakyvaAlue?.() || ui.game?.pack?.id !== this.laudanTunnus) return;
+    ui.kartta.ajaKamera({ x: n.x + n.w / 2, y: n.y + n.h / 2, leveys: n.w }, { kesto: this.reducedMotion ? 0 : 900 });
+  }
+
   sovitaKaareen(kesto = this.reducedMotion ? 0 : 1400) {
     const { ui } = this;
     const alue = this.kaari.alue;
@@ -1491,6 +1505,14 @@ class Aikajana {
    */
   kaynnista() {
     if (!this.rakenna()) return false;
+    /*
+     * KARTTA PALAA SIIHEN, MISSÄ PELAAJA OLI (omistajan kysymys
+     * 4.9.2026: "palaako kartta muuten juuri siihen kohtaan missä
+     * pelaaja oli kun käynnisti linssin?"). Näkymä otetaan talteen
+     * ennen kamera-ajoa ja ajetaan takaisin purussa (pura).
+     */
+    this.kameraEnnen = this.ui.nakyvaAlue?.() ?? null;
+    this.laudanTunnus = this.ui.game?.pack?.id ?? null;
     /*
      * Linssin omat elementit odottavat mustan alla, jottei mikään
      * pompahda ruudulle kesken pimennyksen. Luokka on CSS:ssä (siinä
@@ -2620,6 +2642,7 @@ class Aikajana {
      */
     polloLinssiPaattyi();
     if (this.ui.kameraVapaa) this.vapautaKamera(false);
+    this.palautaKamera();
     this.juuri = null;
     this.valokerros = null;
     this.tummennus = null;

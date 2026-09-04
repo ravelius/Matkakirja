@@ -729,8 +729,8 @@
      häivyttää lisää, niin että muodosta tulee enemmän ovaali"):
      ellipsi, jonka säde ulottuu juuri reunan keskikohtaan, joten
      jokainen reuna ja kulma on läpinäkyvä ja keskusta täysin peittävä. */
-  -webkit-mask-image: radial-gradient(ellipse 52% 52% at 50% 50%, #000 46%, rgba(0, 0, 0, 0.72) 64%, rgba(0, 0, 0, 0.26) 84%, transparent 100%);
-  mask-image: radial-gradient(ellipse 52% 52% at 50% 50%, #000 46%, rgba(0, 0, 0, 0.72) 64%, rgba(0, 0, 0, 0.26) 84%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 44%, rgba(0, 0, 0, 0.72) 62%, rgba(0, 0, 0, 0.24) 82%, transparent 97%);
+  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 44%, rgba(0, 0, 0, 0.72) 62%, rgba(0, 0, 0, 0.24) 82%, transparent 97%);
 }
 .aikajana-ilmio-teksti { padding: 0.5rem 0.7rem 0.65rem; }
 /*

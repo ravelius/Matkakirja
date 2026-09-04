@@ -1562,7 +1562,7 @@ test('puhekuplissa ei ole nimilappua eikä pöllökuvaketta', () => {
  * lukee CSS:n luvun, koska katto on kahdessa paikassa (perussääntö ja
  * kapean ruudun media) ja pelkkä toisen nosto jäisi huomaamatta.
  */
-test('kuplapinon katto kantaa useamman kuplan', () => {
+test('kuplapinon katto on kahdeksan tekstiriviä', () => {
   const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
   const lohko = css.match(/\n\.pollo-kuplapino \{([^}]*)\}/);
   assert.ok(lohko, 'pinon perussääntöä ei löydy');
@@ -1570,8 +1570,10 @@ test('kuplapinon katto kantaa useamman kuplan', () => {
   const kapea = css.match(/\.pollo-kuplapino \{ max-height: min\(\d+vh, ([\d.]+)rem\); \}/);
   assert.ok(tyopoyta, 'työpöydän max-height ei löydy');
   assert.ok(kapea, 'kapean ruudun max-height ei löydy');
-  assert.ok(Number(tyopoyta[1]) >= 28, `työpöydän katto ${tyopoyta[1]}rem — alle neljän kuplan`);
-  assert.ok(Number(kapea[1]) >= 21, `puhelimen katto ${kapea[1]}rem — alle kolmen kuplan`);
+  // Omistaja 4.9.2026: katto on noin kahdeksan tekstiriviä (≈ 12.5 rem),
+  // ylivuoto häipyy yläreunasta ja on vieritettävissä — ei enää 34 rem.
+  assert.ok(Number(tyopoyta[1]) >= 12 && Number(tyopoyta[1]) <= 14, `työpöydän katto ${tyopoyta[1]}rem — ei kahdeksaa riviä`);
+  assert.ok(Number(kapea[1]) >= 12 && Number(kapea[1]) <= 14, `puhelimen katto ${kapea[1]}rem — ei kahdeksaa riviä`);
 });
 
 /* ---------------------------------------------------------------- */
