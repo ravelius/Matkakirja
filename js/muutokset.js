@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1516, teksti: 'Linssi: ennakoiva karuselli, selostaja, blokkaus' },
   { v: 1515, teksti: 'Kohdekortin kuva aukeaa iOS-sovelluksessa: ele puretaan' },
   { v: 1514, teksti: 'Nostojen kuvateksti kuvan levyiseksi kaikissa korteissa' },
   { v: 1513, teksti: 'Linssi: pehmeat liikkeet, Tiedeliite kaikille keksijoille' },
