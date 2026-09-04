@@ -1,3 +1,25 @@
+## 4.9.2026 16:42 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 26–28 yksityisessä arvioinnissa
+
+Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu ensisijaisista museo-, arkisto- ja tutkimuslähteistä, generoitu kokonaan uusina, tarkistettu ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 87. Sivuston tuotantopalvelimelta takaisin luetut JPEG-tavut vastaavat paikallisia SHA-256-tarkistussummia. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
+
+- `skandaali-rummu-jyri-mestarikarkuri-photo-v1.jpg` — Toompean vankilan kattoreitillä Rummu Jüri solmii lakanaköyttä; nuori vartija ja pihalla katseensa nostava keittiöpiika tekevät legendasta inhimillisen hetken.
+  - Kuvateksti: Keittiöpiika nostaa katseensa juuri kun Rummu Jüri solmii lakanaköyttä, ja päättää olla huutamatta. Tarina kattoreiästä ja tornista laskeutumisesta kuuluu mestarikarkurin legendaan; kansan suojeluksessa elänyt nuori renki muuttui jo omana aikanaan mieheksi, josta vartijat eivät tienneet, päättyikö pako selliin vai lauluun.
+  - Lähde- ja dramatisointihuomio: Kokonaan uusi Viron yleisradion, Viron historiallisen museon ja Toompean vankilan arkistokuvan pohjalta rakennettu havainnekuva. Kattoreitti ja köydellä laskeutuminen esitetään lähteiden tavoin legendana; vankilan piha on paikkalähteeseen perustuva, mutta Jürin, vartijan ja keittiöpiian kuvattu sekunti on dramatisoitu.
+  - Lähteet: https://eeter.err.ee/1608505163/vaiko-epliku-uued-sugulased-on-kurikuulus-rummu-juri-ja-laulja-thea-paluoja ; https://ajapaik.ee/photo/54830/toompea-castle-prison-court/ ; https://ajaloomuuseum.ee/planeeri-kulastust/sundmused/tifs-esitleb-juri-rumm
+  - SHA-256: `3569c2f073932fb6196d365622fed47aeb3518535ee8cf4dc1f4e5401cc543b9`
+
+- `skandaali-seitseman-veljesta-kirjasota-photo-v1.jpg` — Fanjunkarsiin palautetut vihkot ja nuori kirjapainon lähetti, joka kätkee yhden kappaleen takkinsa alle.
+  - Kuvateksti: Kirjapainon poika tuo Aleksis Kivelle myynnistä vedetyt vihkot, mutta piilottaa yhden takkinsa alle: hän haluaa lukea itse ennen kuin uskoo professoria. August Ahlqvistin murska-arvostelu pysäytti romaanin levityksen, mutta tässä kuvitteellisessa katseessa elää jo lukija, joka ei hylkää veljeksiä.
+  - Lähde- ja dramatisointihuomio: Kokonaan uusi Suomalaisen Kirjallisuuden Seuran julkaisu- ja vastaanottotutkimukseen sekä Kansallisgallerian Kivi-kuvalähteeseen perustuva havainnekuva. Vihkojen vetäminen pois myynnistä on dokumentoitu; Fanjunkarsin lähettipoika, piilotettu kappale, Charlotta Lönnqvist ja kuvattu kohtaaminen ovat dramatisoituja.
+  - Lähteet: https://tietava.finlit.fi/7-veljesta/seitseman-veljeksen-julkaiseminen-1870/ ; https://digi.kansalliskirjasto.fi/sanomalehti/binding/475303 ; https://www.finna.fi/Record/kansallisgalleria.EA3FD2E2E0B8E779FDD740BECA0F2B34
+  - SHA-256: `bcaac3b33fcb965ee9477639e2c5d2c609a39f61f7c94ba09a5a1f6f81c38b4d`
+
+- `skandaali-kieltolaki-ja-pirtukuningas-photo-v1.jpg` — Algoth Niska nostaa Kauppatorilla kalalaatikkoa, jonka silakoiden alta pilkottaa pirtulasti tullimiehen lähestyessä.
+  - Kuvateksti: Satamapoika näkee silakoiden alta paljastuvan pirtukanisterin ja etsii Algoth Niskan kasvoilta ohjetta ennen kuin tullimies ehtii lähemmäs. Entinen maajoukkuejalkapalloilija teki kieltolaista merellisen kissa–hiiri-leikin; maine herrasmiesrikollisena syntyi juuri tällaisesta tyyneydestä, vaikka riskin kantoivat myös hänen ympärillään työskennelleet tavalliset ihmiset.
+  - Lähde- ja dramatisointihuomio: Kokonaan uusi Museoviraston Algoth Niska -muotokuvaan, Helsingin kaupunginmuseon vuoden 1922 Kauppatori-kuvaan ja Ylen sekä SFV:n elämäkerralliseen aineistoon perustuva havainnekuva. Niskan henkilöllisyys, merimies- ja jalkapallotausta sekä pirtukauppa ovat dokumentoituja; satamapoika, kalakauppias, piilotettu lasti ja tullimiehen lähestyminen ovat dramatisoituja.
+  - Lähteet: https://finna.fi/Record/museovirasto.BD1BEAA87B8815A58A0CB541B6870519 ; https://www.finna.fi/Record/hkm.55459190-F0C3-4F08-86F6-8099C82D4CF1 ; https://yle.fi/a/20-165446 ; https://sfv.fi/tempallaartiklar/article-144202-48988-gransfall-algoth-niska-fotbollsstjarnan-smugglaren-valgoraren?offset_144202=693
+  - SHA-256: `066cd7f9182ecb5b49b9a44ca7d0cf6a6865d53bfa8ab8a92d28ddaad7c46d15`
+
 ## 4.9.2026 16:23 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 23–25 yksityisessä arvioinnissa
 
 Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu ensisijaisista museo- ja arkistolähteistä, generoitu kokonaan uusina, tarkistettu ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 86. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
