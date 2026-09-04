@@ -85,7 +85,16 @@
  *            kuvatonta skandaalia Tanskasta Ranskaan (tycho-brahen-
  *            kuolinmysteeri … kaulanauhajuttu-1785) saivat kukin oman
  *            yhden alkion `kuvat`-listansa, jälleen samalla kaavalla.
- *            Skandaalisarjasta on nyt kuvitettu 31 / 83.
+ *            Neljäs posti (19:43 EEST) toi kuvat 32–40: kahdeksan
+ *            skandaalia Britanniasta, Kreikasta ja Kroatiasta
+ *            (piltdownin-ihminen, etelameren-kupla, poyaisin-huijaus,
+ *            elginin-marmorit, simonides-kasikirjoitusvaarentaja,
+ *            belokas-maratonhuijaus-1896, rijecka-krpica-1868 ja
+ *            pacta-conventa-vaarennosepaily, jonka kuvatiedosto on
+ *            `skandaali-pacta-conventa-photo-v1.jpg`) saivat kukin
+ *            yhden alkion `kuvat`-listan samalla kaavalla; erän
+ *            yhdeksäs kuva vrain-lucas odottaa yhä hyväksyntää.
+ *            Skandaalisarjasta on nyt kuvitettu 39 / 83.
  *   visa     minivisa: kysymys, kolme vaihtoehtoa, oikean indeksi.
  *            Oikean paikan jakauma tasattiin koko erän yli
  *            (28/28/27), ettei se painotu yhteen indeksiin.
@@ -2328,6 +2337,22 @@ export const SKANDAALIT = {
         + 'väärennös menee helpoiten läpi silloin, kun se kertoo juuri sen, mitä '
         + 'on toivottu kuultavan.',
       lahde: 'en-Wikipedia "Piltdown Man". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-piltdownin-ihminen-photo-v1.jpg`,
+          selite: 'Sorakuopan poika jää katsomaan leuan liian tasaisia '
+            + 'hampaita, mutta Arthur Smith Woodward näkee löydössä juuri sen '
+            + 'puuttuvan renkaan, jota tiede odotti. Ihmisen kallon ja '
+            + 'orangin leuan liitto pysyy oppikirjoissa neljä vuosikymmentä; '
+            + 'vasta uudet testit tekevät nuoren epäluulosta oikeutetun.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Natural History Museum — '
+            + 'Piltdown-arkisto ja vuoden 2016 esinetutkimus; Dawsonin ja '
+            + 'Woodwardin kaivaukset, punaruskeaksi värjätyt luut, orangin '
+            + 'leuka ja viilatut hampaat ovat dokumentoituja, nuori seuloja, '
+            + 'hänen epäilynsä ja kuvattu löytöhetki dramatisoituja.',
+          url: 'https://www.nhm.ac.uk/discover/news/2016/august/piltdown-man-charles-dawson-likely-fraudster.html',
+        },
+      ],
       visa: {
         kysymys: 'Mistä Piltdownin ihminen oli oikeasti koottu?',
         vaihtoehdot: [
@@ -2378,6 +2403,24 @@ export const SKANDAALIT = {
         + 'uusiksi ja jatkoi toimintaansa yli sadan vuoden ajan. Kilpailijan '
         + 'kaatuminen vahvisti Englannin Pankin aseman valtion pankkiirina.',
       lahde: 'en-Wikipedia "South Sea Company". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-etelameren-kupla-photo-v1.jpg`,
+          selite: 'Tytär ei katso osakepaperia vaan äitinsä kasvoja, kun '
+            + 'virkailijan lähes tyhjä kolikkolaatikko kertoo hinnan '
+            + 'romahduksesta. South Sea Company myi valtionvelasta ja '
+            + 'siirtomaakaupasta vaurauden lupauksen; tässä pöydässä kupla '
+            + 'merkitsee kuitenkin vain sitä, ettei perheen turva ollutkaan '
+            + 'rahaa.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Bank of England — history '
+            + 'sekä London Museumin vuoden 1720 osaketodistus ja varhaisten '
+            + 'naissijoittajien tutkimus; yhtiön valtionvelkajärjestely, '
+            + 'Espanjan siirtomaihin ja orjakauppaan sidottu kauppalupaus '
+            + 'sekä vuoden 1720 nousu ja romahdus ovat dokumentoituja, äiti, '
+            + 'tytär, virkailija ja Exchange Alley -hetki dramatisoituja.',
+          url: 'https://www.bankofengland.co.uk/about/history',
+        },
+      ],
       visa: {
         kysymys: 'Miksi South Sea Companyn luvattu Etelä-Amerikan kauppa ei koskaan '
           + 'tuottanut voittoa?',
@@ -2428,6 +2471,25 @@ export const SKANDAALIT = {
         + 'Poyais-järjestelyjä hän ehti pyörittää yhteensä kuusitoista vuotta, '
         + 'vuodesta 1821 vuoteen 1837.',
       lahde: 'en-Wikipedia "Gregor MacGregor". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-poyaisin-huijaus-photo-v1.jpg`,
+          selite: 'Poika on jo antanut leikkilaivalleen Poyaisin nimen; hänen '
+            + 'äitinsä on vaihtanut perheen säästöt MacGregorin seteleihin, '
+            + 'ja isoisä ehtii epäillä karttaa vasta lähtölaiturilla. '
+            + 'Kennersley Castle vei Leithistä lähes 200 siirtolaista kohti '
+            + 'luvattua pääkaupunkia — perillä odotti rakentamaton viidakko, '
+            + 'jossa yli puolet heistä kuoli.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: National Library of '
+            + 'Scotland — Poyais-asiakirjat sekä British Museumin vuoden 1823 '
+            + 'obligaatio ja MacGregorin järjestelyn tutkimus; Kennersley '
+            + 'Castlen lähtö Leithistä, lähes 200 siirtolaista, Poyaisin '
+            + 'paperiraha, maakirjat ja perillä odottanut rakentamaton '
+            + 'rannikko ovat dokumentoituja, perhe, leikkilaiva ja isoisän '
+            + 'epäilyn hetki dramatisoituja.',
+          url: 'https://manuscripts.nls.uk/repositories/2/resources/20064',
+        },
+      ],
       visa: {
         kysymys: 'Mitä Poyaisiin purjehtineet siirtolaiset löysivät perille '
           + 'päästyään?',
@@ -2482,6 +2544,24 @@ export const SKANDAALIT = {
         + 'kehotti 2021 Britanniaa ratkaisemaan asian valtioiden välillä. '
         + 'Neuvottelut jatkuvat.',
       lahde: 'en-Wikipedia "Elgin Marbles". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-elginin-marmorit-photo-v1.jpg`,
+          selite: 'Nuori kivimies tuntee friisin painon käsissään ennen kuin '
+            + 'ymmärtää, että pala saattaa lähteä temppelistä pysyvästi. '
+            + 'Elginin asiamiehet veivät 1801–1805 noin puolet Parthenonissa '
+            + 'säilyneistä veistoksista; luvan laajuudesta ja omistuksen '
+            + 'oikeutuksesta kiistellään yhä Ateenan ja Lontoon välillä.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: British Museum — '
+            + 'Parthenon-veistosten kiista ja Akropolis-museon '
+            + 'tapahtumakuvaus; Giovanni Battista Lusierin johtama '
+            + 'irrotustyö, Osmanien hallinto ja noin puolet säilyneistä '
+            + 'veistoksista käsittänyt siirto ovat dokumentoituja, nuori '
+            + 'kivimies, irtoava siru ja kuvattu sekunti dramatisoituja. '
+            + 'Lähteet tulkitsevat luvan laajuutta eri tavoin.',
+          url: 'https://www.britishmuseum.org/about-us/british-museum-story/contested-objects-collection/parthenon-sculptures',
+        },
+      ],
       visa: {
         kysymys: 'Missä suurin osa Parthenonin irrotetuista veistoksista on nykyään?',
         vaihtoehdot: [
@@ -2533,6 +2613,24 @@ export const SKANDAALIT = {
         + 'töitään julkaistiin Moskovassa, Odessassa, Englannissa ja Saksassa, ja '
         + 'osa jäi painamatta.',
       lahde: 'en-Wikipedia "Constantine Simonides". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-simonides-kasikirjoitusvaarentaja-photo-v1.jpg`,
+          selite: 'Oppipojan sormeen tarttuu märkä muste tekstistä, jonka '
+            + 'Simonides aikoo myydä vuosisatoja vanhana. Symin saarelta '
+            + 'lähtenyt mestarikalligrafi teki kadonneista teoksista '
+            + 'uskottavia ”löytöjä”, keksi munkin todistajakseen ja päätyi '
+            + 'lopulta väittämään myös aidon Codex Sinaiticuksen omaksi '
+            + 'nuoruudentyökseen.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: British Library — '
+            + 'Simonides-paperit ja National Archivesin henkilötietue; '
+            + 'Simonideen paleografinen taito, väärennetyt papyrukset, '
+            + 'Aiskhyloksen Persialaiset-käärö ja hänen keksimänsä '
+            + 'Kallinikos-munkki ovat dokumentoituja, Symin työpaja, '
+            + 'oppipoika, märkä muste ja paljastumisen hetki dramatisoituja.',
+          url: 'https://searcharchives.bl.uk/catalog/040-002003075',
+        },
+      ],
       visa: {
         kysymys: 'Minkä kuuluisan aidon käsikirjoituksen Simonides väitti '
           + 'kirjoittaneensa itse?',
@@ -2585,6 +2683,23 @@ export const SKANDAALIT = {
         + 'vanhat, kun niiden ensimmäinen tulosprotesti ratkaistiin.',
       lahde: 'en-Wikipedia "Athletics at the 1896 Summer Olympics – Men\'s '
         + 'marathon" ja en-Wikipedia "Spyridon Belokas". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-belokas-maratonhuijaus-1896-photo-v1.jpg`,
+          selite: 'Gyula Kellner näkee uupuneen Spyridon Belokasin '
+            + 'laskeutuvan kärryistä kesken olympiamaratonin. Tienvarren '
+            + 'nuori vedenkantaja ymmärtää asian heidän kasvoistaan jo ennen '
+            + 'tuomareita: Kellnerin vastalause hyväksytään, Belokas '
+            + 'tunnustaa kyydin ja yhden illan kestänyt kreikkalainen '
+            + 'kolmoisvoitto katoaa tulosluettelosta.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Hellenic Olympic '
+            + 'Committee — Spyridon Louis ja Olympic World Libraryn '
+            + 'aineistot; Belokasin kärrykyyti, Kellnerin vastalause ja '
+            + 'hylkäys ovat dokumentoituja, laskeutumisen tarkka paikka, '
+            + 'katsekontakti ja nuori vedenkantaja dramatisoituja.',
+          url: 'https://www.hoc.gr/en/athletes/louis-spyridon/',
+        },
+      ],
       visa: {
         kysymys: 'Miten Spyridon Belokas eteni osan vuoden 1896 olympiamaratonista?',
         vaihtoehdot: [
@@ -2639,6 +2754,25 @@ export const SKANDAALIT = {
         + 'provinsseihin.',
       lahde: 'hr-Wikipedia "Riječka krpica" ja en-Wikipedia "Croatian–Hungarian '
         + 'Settlement". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-rijecka-krpica-1868-photo-v1.jpg`,
+          selite: 'Nuori kansliakirjuri pitää korvaavaa paperiliuskaa vielä '
+            + 'ilmassa: vanha 66. artikla näkyy sen alla, mutta huoneen '
+            + 'vanhemmat miehet odottavat liimaa. Jo vahvistetun '
+            + 'kroaatinkielisen sovintotekstin päälle lisätty ”Rijekan lappu” '
+            + 'teki kaupungista, satamasta ja piiristä Unkarin kruunuun '
+            + 'erikseen liitetyn alueen — eikä Kroatian parlamentti saanut '
+            + 'muutoksesta uutta keskustelua.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Kroatian valtionarkisto — '
+            + 'Rijekan lappu sekä Kroatian ensyklopedia ja '
+            + 'oikeushistoriallinen tutkimus; säilyneen asiakirjan päälle '
+            + 'liimattu korvaava 66. artikla on dokumentoitu, nuori kirjuri, '
+            + 'virkamiehet, lähettipoika ja kuvattu epäröinnin sekunti '
+            + 'dramatisoituja.',
+          url: 'https://www.arhiv.hr/LinkClick.aspx?fileticket=s5y7cNLJpv0%3D&mid=2227&portalid=0&tabid=156',
+        },
+      ],
       visa: {
         kysymys: 'Miten Kroatian ja Unkarin sovintosopimuksen Rijekaa koskeva '
           + 'artikla muutettiin 1868?',
@@ -2689,6 +2823,26 @@ export const SKANDAALIT = {
         + 'alkuperäisenä; vasta sitten alettiin kysyä, miksi vanhin kappale on '
         + 'kaksisataa vuotta nuorempi kuin sopimus, jota se kuvaa.',
       lahde: 'en-Wikipedia "Pacta conventa (Croatia)". Tarkistettu 2.9.2026.',
+      kuvat: [
+        {
+          osoite: `${SKANDAALI_KUVAJUURI}skandaali-pacta-conventa-photo-v1.jpg`,
+          selite: 'Nuori trogirilainen kirjuri pysäyttää kynänsä, kun '
+            + 'aatelinen painaa kahdentoista suvun luetteloa lähemmäs. Hän ei '
+            + 'voi tietää, kopioiko vanhempaa sopimusta vai valmistaa '
+            + 'todistetta tulevaisuuden valtakiistaan: säilynyt '
+            + 'Qualiter-merkintä on vasta 1380-luvun käsikirjoituksessa, ja '
+            + 'nykyinen tutkimus hylkää sen yleensä aitona vuoden 1102 '
+            + 'asiakirjana.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Hrvatska enciklopedija — '
+            + 'Pacta conventa ja Kroatian historiallisen museon aineistot; '
+            + 'Qualiterin 1300-luvun käsikirjoitus, kahdentoista suvun '
+            + 'luettelo ja myöhempi poliittinen käyttö ovat lähdepohjaisia, '
+            + 'Trogirin kirjoitushuone, henkilöt, painostus ja tekstin '
+            + 'syntyhetki dramatisoituja. Kuva ei väitä ketään nimettyä '
+            + 'henkilöä väärentäjäksi.',
+          url: 'https://www.enciklopedija.hr/clanak/pacta-conventa',
+        },
+      ],
       visa: {
         kysymys: 'Miksi osa historioitsijoista epäilee vuoden 1102 Pacta conventaa '
           + 'väärennökseksi?',
