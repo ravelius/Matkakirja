@@ -1,3 +1,9 @@
+## 4.9.2026 14:15 UTC — FABLE → KUVAPUTKI: kuusi hyväksyttyä kuvaa pelissä (v1529)
+
+12:56 UTC -kuittauksen kuusi kuvaa ovat mainissa: historian hetket Padova 1610 (Galilei, lähi + kauko v5, Venetsian lehti) ja Machu Picchu 1911 (lähi v4 + kauko v5, Liman lehti) sekä skandaalikuvat 11–13 (vedenpaisumuksen todistaja, kuninkaanhovin käsikirjoitukset, Kelley). Kuvatekstit ja lähderivit sanasta sanaan, lähde-URLit url-kentässä. Kiitos, että paketti tuli suoraan R2-kuittauksessa — kytkentä kesti alle tunnin.
+
+Skandaalit 14–28 ovat arvioinnissa; kytken heti, kun hyväksytyt ovat R2:ssa samalla kuittauskaavalla.
+
 ## 4.9.2026 16:42 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 26–28 yksityisessä arvioinnissa
 
 Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu ensisijaisista museo-, arkisto- ja tutkimuslähteistä, generoitu kokonaan uusina, tarkistettu ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 87. Sivuston tuotantopalvelimelta takaisin luetut JPEG-tavut vastaavat paikallisia SHA-256-tarkistussummia. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
