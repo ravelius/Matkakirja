@@ -361,6 +361,14 @@ const AVAUS_POISTUMA_MS = 700;
  */
 /** Kuplien viive, kun kertojan luentaa ei ole tai se ei lähtenyt. */
 const VALINAYTOKSEN_KUPLAVIIVE_MS = 600;
+/** Jatka-napin hehku alkaa hetken päästä, ei heti (omistaja: "hetkenpäästä"). */
+export const VALINAYTOKSEN_HEHKUVIIVE_MS = 2500;
+/** Rivien väli ilman luentaa. */
+export const VALINAYTOKSEN_RIVIVALI_MS = 1900;
+/** Rivit ehtivät ennen luennan loppua: viimeinen syttyy noin 85 %:n kohdalla. */
+export const VALINAYTOKSEN_RIVIOSUUS = 0.92;
+/** Havainnekuvan kuvakierto merkkipaalulla: vaihtoväli ja häivytys (css). */
+export const KUVAKIERTO_MS = 7000;
 /** Laatikon poistumisliuku Jatka-napin jälkeen (css .aikajana-valinaytos). */
 const VALINAYTOKSEN_POISTUMA_MS = 420;
 
@@ -862,6 +870,15 @@ function kuvaTaiLaatta(kuvatieto, nimi, leveys, luokka) {
 const muotokuvat = (t) => [t.kuva, t.kuvaToinen].filter(onKuva);
 
 /**
+ * Teksti virkkeiksi rivi kerrallaan -ladontaa varten: katkaisu pisteen,
+ * huuto- tai kysymysmerkin jälkeen, jota seuraa välilyönti. Välimerkki
+ * jää virkkeen loppuun; tyhjät pätkät karsitaan.
+ */
+export function jaaVirkkeiksi(teksti) {
+  return String(teksti ?? '').split(/(?<=[.!?…])\s+/).map((v) => v.trim()).filter(Boolean);
+}
+
+/**
  * MUOTOKUVAKEHYS: yksi tai kaksi rintakuvaa samassa kehyksessä.
  *
  * Kaksi kuvaa menee vierekkäin (CSS .kaksi), ei päällekkäin — kortti
@@ -1146,6 +1163,10 @@ class Aikajana {
     this.valinaytos = null;
     this.valinaytosNahty = false;
     this.valinaytosAjastin = null;
+    this.valinaytosHehku = null;
+    this.valinaytosRiviAjastimet = [];
+    /** Havainnekuvan kuvakierron ajastin (kuvakierto). */
+    this.kuvakiertoAjastin = null;
     this.reducedMotion = Boolean(globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
   }
 
@@ -1181,22 +1202,29 @@ class Aikajana {
       this.kello.appendChild(rulla);
       this.rullat.push({ vanha, uusi, merkki: null });
     }
-    this.kello.addEventListener('click', () => (this.kaynnissa ? this.pysayta() : this.jatka()));
+    this.kello.addEventListener('click', () => this.taukoTaiJatka());
     const otsikot = solmu('div', 'aikajana-otsikot');
     this.otsikko = solmu('div', 'aikajana-otsikko', this.kaari.otsikko);
     this.paikkarivi = solmu('div', 'aikajana-paikka', `${this.kaari.alku}–${this.kaari.loppu}`);
     otsikot.append(this.otsikko, this.paikkarivi);
     const ohjaimet = solmu('div', 'aikajana-ohjaimet');
+    /*
+     * KAKSI NAPPIA (omistaja 4.9.2026 iltapäivä: *"siinä olisi vain yksi
+     * tauko/jatka nappi, jonka teksti muuttuisi tarpeen mukaan ja sulje
+     * muuttuisi pelkäksi (x) kuvakkeeksi"*). Alusta-nappi poistui
+     * palkista; alusta() on yhä olemassa näppäimistölle ja testeille.
+     * Välinäytöksen aikana sama Tauko/Jatka-nappi on sen Jatka: kehys
+     * alkaa hehkua hennon punaisena (css .aikajana-nappi.hehku).
+     */
     this.taukoNappi = solmu('button', 'aikajana-nappi', 'Tauko');
     this.taukoNappi.type = 'button';
-    this.taukoNappi.addEventListener('click', () => (this.kaynnissa ? this.pysayta() : this.jatka()));
-    const alusta = solmu('button', 'aikajana-nappi', 'Alusta');
-    alusta.type = 'button';
-    alusta.addEventListener('click', () => this.alusta());
-    const sulje = solmu('button', 'aikajana-nappi aikajana-sulje', 'Sulje');
+    this.taukoNappi.addEventListener('click', () => this.taukoTaiJatka());
+    const sulje = solmu('button', 'aikajana-nappi aikajana-sulje', '✕');
     sulje.type = 'button';
+    sulje.setAttribute('aria-label', 'Sulje');
+    sulje.title = 'Sulje';
     sulje.addEventListener('click', () => ui.pysaytaAikajana?.());
-    ohjaimet.append(this.taukoNappi, alusta, sulje);
+    ohjaimet.append(this.taukoNappi, sulje);
     ylarivi.append(otsikot, this.kello, ohjaimet);
 
     // 4. Ilmiöpaneeli
@@ -1684,8 +1712,16 @@ class Aikajana {
     this.avausNappi = null;
   }
 
+  /** Yksi nappi: välinäytöksessä Jatka, muuten tauko tai jatko. */
+  taukoTaiJatka() {
+    if (this.valinaytos) { this.jatkaValinaytoksesta(); return; }
+    if (this.kaynnissa) this.pysayta(); else this.jatka();
+  }
+
   jatka() {
     if (this.loppu || this.kaynnissa) return;
+    // Kello ei kulje välinäytöksen alla: teksti ja hehku pois ensin.
+    if (this.valinaytos) this.suljeValinaytos();
     this.kaynnissa = true;
     this.saadaMusiikki();
     this.viime = performance.now();
@@ -2045,57 +2081,87 @@ class Aikajana {
     // paalussa, joten pysäytys ei liikuta mitään.
     this.pysayta();
 
+    /*
+     * TEKSTI SUORAAN KARTAN PÄÄLLE, EI KORTTIA (omistaja 4.9.2026
+     * iltapäivä: *"voisi ehkä poistaa tuon kortin ja latoa teksti suoraan
+     * kartan päälle"* / *"tämä teksti ... voisi tulla rivi kerrallaan
+     * puheäänen kanssa euroopan kartan päälle"*). Kerros ei nappaa
+     * napautuksia (css pointer-events: none), joten kartta, karuselli
+     * ja pulun nappi pysyvät pelaajan käytössä; body-luokka avaa pulun
+     * chatin linssin portista (js/ui-apurit.js linssiEstaaChatin).
+     * Isoisän kuva ei ole enää tekstin kyljessä vaan havainnekuva-
+     * paneelin kuvakierrossa (kuvakierto, t.ilmioSarja).
+     */
     this.valinaytos = solmu('div', 'aikajana-valinaytos');
-    this.valinaytos.setAttribute('role', 'dialog');
-    this.valinaytos.setAttribute('aria-modal', 'true');
+    this.valinaytos.setAttribute('role', 'region');
+    this.valinaytos.setAttribute('aria-live', 'polite');
     this.valinaytos.setAttribute('aria-label', tiedot.otsikko ?? t.otsikko);
-    // Kevyt himmennys, EI mustaa: kartan valot jäävät näkyviin.
-    const peite = solmu('div', 'aikajana-valinaytos-peite');
-    peite.setAttribute('aria-hidden', 'true');
-    const laatikko = solmu('div', 'aikajana-valinaytos-laatikko');
-    laatikko.appendChild(solmu('h2', 'aikajana-valinaytos-otsikko', tiedot.otsikko ?? t.otsikko));
-    const sisus = solmu('div', 'aikajana-valinaytos-sisus');
-    sisus.appendChild(solmu('p', 'aikajana-valinaytos-teksti', tiedot.kertoja ?? ''));
-    const kuva = this.valinaytoksenKuva(tiedot.kuva);
-    if (kuva) sisus.appendChild(kuva);
-    laatikko.appendChild(sisus);
-    const nappi = solmu('button', 'aikajana-valinaytos-nappi', 'Jatka');
-    nappi.type = 'button';
-    nappi.addEventListener('click', () => this.jatkaValinaytoksesta());
-    laatikko.appendChild(nappi);
-    this.valinaytos.append(peite, laatikko);
+    const teksti = solmu('div', 'aikajana-valinaytos-teksti');
+    teksti.appendChild(solmu('h2', 'aikajana-valinaytos-otsikko', tiedot.otsikko ?? t.otsikko));
+    const rivit = jaaVirkkeiksi(tiedot.kertoja ?? '').map((rivi) => {
+      const p = solmu('p', 'aikajana-valinaytos-rivi', rivi);
+      teksti.appendChild(p);
+      return p;
+    });
+    this.valinaytos.appendChild(teksti);
     koti.appendChild(this.valinaytos);
+    document.body.classList.add('aikajana-valinaytos-auki');
     // Pakotettu asettelu, jotta liuku näkee alkuasennon omana tilanaan.
     void this.valinaytos.getBoundingClientRect?.();
     this.valinaytos.classList.add('esilla');
-    nappi.focus?.({ preventScroll: true });
+    /*
+     * JATKA ON YLÄPALKIN NAPPI (omistaja: *"hetkenpäästä yläreunan
+     * 'jatka' napin kehys voisi kevyesti alkaa hehkua hennon punaisena,
+     * hitaasti sykkien. näin kartalle ei tarvitsisi tehdä tekstin
+     * lisäksi mitään uutta nappia"*).
+     */
+    this.taukoNappi.textContent = 'Jatka';
+    this.valinaytosHehku = setTimeout(() => {
+      this.valinaytosHehku = null;
+      if (this.valinaytos?.isConnected) this.taukoNappi.classList.add('hehku');
+    }, VALINAYTOKSEN_HEHKUVIIVE_MS);
 
-    this.aloitaValinaytoksenPuhe(t, tiedot);
+    const luenta = this.aloitaValinaytoksenPuhe(t, tiedot);
+    this.ladoValinaytoksenRivit(rivit, luenta);
     return true;
   }
 
   /**
-   * Isoisän kuva tekstin kylkeen. KUVA EI OLE VIELÄ ÄMPÄRISSÄ (kuvaputki
-   * toimittaa), joten kuvapaikka piilotetaan latauksen kaatuessa ja
-   * teksti jää täysleveäksi — laatikko toimii kuvan kanssa ja ilman.
-   * Osoite otetaan sellaisenaan eikä pienennettynä: tämä on yksi kuva
-   * oman kansionsa ulkopuolelta (kohtaamiset/isoisa), eikä sillä ole
-   * linssikuvien pieni/-variantteja.
+   * RIVI KERRALLAAN PUHEEN TAHDISSA. Luennan kesto luetaan
+   * äänielementistä (loadedmetadata), ja jokainen virke syttyy siinä
+   * kohdassa, jossa sen ensimmäinen merkki on koko tekstin pituudesta —
+   * sanatarkkaa ajoitusta ei ole, mutta virkkeet ovat eri mittaisia ja
+   * suhde osuu korvalle riittävän hyvin. Ilman luentaa (kertoja pois,
+   * tiedosto puuttuu) rivit tulevat tasaisin välein; vähäisellä
+   * liikkeellä kaikki kerralla.
    */
-  valinaytoksenKuva(kuvatieto) {
-    if (!onKuva(kuvatieto) || !kuvatieto.osoite) return null;
-    const kehys = solmu('figure', 'aikajana-valinaytos-kuva');
-    const kuva = document.createElement('img');
-    kuva.alt = kuvatieto.selite ?? '';
-    kuva.decoding = 'async';
-    kuva.loading = 'eager';
-    kuva.addEventListener('error', () => { kehys.hidden = true; }, { once: true });
-    kuva.src = kuvatieto.osoite;
-    kehys.appendChild(kuva);
-    if (kuvatieto.selite) {
-      kehys.appendChild(solmu('figcaption', 'aikajana-valinaytos-kuvateksti', kuvatieto.selite));
-    }
-    return kehys;
+  ladoValinaytoksenRivit(rivit, luenta) {
+    this.tyhjennaValinaytoksenRivit();
+    if (!rivit.length) return;
+    const nayta = (i) => { rivit[i]?.classList.add('nakyy'); };
+    if (this.reducedMotion) { rivit.forEach((_, i) => nayta(i)); return; }
+    const pituudet = rivit.map((p) => (p.textContent ?? '').length + 1);
+    const yhteensa = pituudet.reduce((a, b) => a + b, 0) || 1;
+    const alut = pituudet.map((_, i) => pituudet.slice(0, i).reduce((a, b) => a + b, 0) / yhteensa);
+    const ajoita = (kestoMs) => {
+      this.tyhjennaValinaytoksenRivit();
+      rivit.forEach((_, i) => {
+        this.valinaytosRiviAjastimet.push(setTimeout(() => nayta(i), Math.round(alut[i] * kestoMs)));
+      });
+    };
+    // Tasainen vara heti: jos metatiedot eivät tule, rivit tulevat silti.
+    ajoita(rivit.length * VALINAYTOKSEN_RIVIVALI_MS);
+    const kesto = luenta?.duration;
+    if (Number.isFinite(kesto) && kesto > 0) { ajoita(kesto * 1000 * VALINAYTOKSEN_RIVIOSUUS); return; }
+    luenta?.addEventListener?.('loadedmetadata', () => {
+      if (!this.valinaytos?.isConnected || !Number.isFinite(luenta.duration) || luenta.duration <= 0) return;
+      ajoita(luenta.duration * 1000 * VALINAYTOKSEN_RIVIOSUUS);
+    }, { once: true });
+  }
+
+  tyhjennaValinaytoksenRivit() {
+    for (const a of this.valinaytosRiviAjastimet ?? []) clearTimeout(a);
+    this.valinaytosRiviAjastimet = [];
   }
 
   /**
@@ -2121,10 +2187,11 @@ class Aikajana {
       this.valinaytosAjastin = setTimeout(kuplat, VALINAYTOKSEN_KUPLAVIIVE_MS);
     };
     const luenta = soitaLinssiluenta(this.ui, t, { runko: valinaytoksenRunko(t) });
-    if (!luenta) { viiveella(); return; }
+    if (!luenta) { viiveella(); return null; }
     luenta.addEventListener('ended', kuplat, { once: true });
     // Puuttuva tiedosto on hiljainen, mutta pulu puhuu silti.
     luenta.addEventListener('error', viiveella, { once: true });
+    return luenta;
   }
 
   /** Jatka-nappi: kuplat pois, laatikko häipyy, kello jatkaa. */
@@ -2142,6 +2209,11 @@ class Aikajana {
   suljeValinaytos({ heti = false } = {}) {
     clearTimeout(this.valinaytosAjastin);
     this.valinaytosAjastin = null;
+    clearTimeout(this.valinaytosHehku);
+    this.valinaytosHehku = null;
+    this.tyhjennaValinaytoksenRivit();
+    this.taukoNappi?.classList.remove('hehku');
+    document.body?.classList.remove('aikajana-valinaytos-auki');
     const laatikko = this.valinaytos;
     this.valinaytos = null;
     if (!laatikko) return;
@@ -2152,6 +2224,58 @@ class Aikajana {
     laatikko.style.pointerEvents = 'none';
     if (heti || this.reducedMotion) laatikko.remove();
     else setTimeout(() => laatikko.remove(), VALINAYTOKSEN_POISTUMA_MS);
+  }
+
+  /**
+   * KUVAKIERTO (omistaja 4.9.2026 iltapäivä: *"ne itseasiassa voisivat
+   * hitaasti vaihtua keskenään ja siihen voisi generoida kolme muuta
+   * kuvaa lisäksi"*). Merkkipaalun havainnekuvapaneelissa on sarja
+   * isoisän kuvia (t.ilmio + t.ilmioSarja), jotka vaihtuvat hitaalla
+   * ristihäivytyksellä KUVAKIERTO_MS välein. Kehyksen pohjakuva on
+   * sarjan ensimmäinen; kaksi päällyskuvaa vuorottelevat, jotta uusi
+   * kuva häipyy aina suoraan edellisen päälle eikä pohjan kautta.
+   * Seuraava kuva dekoodataan ennen vaihtoa (ei välähdystä), ja kierto
+   * pysähtyy kun paneeli vaihtuu tai linssi puretaan.
+   */
+  aloitaKuvakierto(kehys, sarja, nimi) {
+    const paallys = [0, 1].map(() => {
+      const img = document.createElement('img');
+      img.className = 'aikajana-kiertokuva';
+      img.decoding = 'async';
+      img.setAttribute('aria-hidden', 'true');
+      kehys.appendChild(img);
+      return img;
+    });
+    let kohta = 0;
+    let vuoro = 0;
+    const vaihda = async () => {
+      if (!kehys.isConnected) { this.lopetaKuvakierto(); return; }
+      kohta = (kohta + 1) % sarja.length;
+      const tuleva = paallys[vuoro];
+      const vanha = paallys[1 - vuoro];
+      vuoro = 1 - vuoro;
+      if (kohta === 0) {
+        // Pohjakuva takaisin: molemmat päällykset pois.
+        for (const p of paallys) p.classList.remove('esilla');
+      } else {
+        const kuvatieto = sarja[kohta];
+        tuleva.alt = kuvatieto.selite ?? nimi ?? '';
+        tuleva.style.cssText = rajausTyyli(kuvatieto);
+        tuleva.classList.toggle('isoisa-rajattu', Boolean(kuvatieto.rajaus));
+        tuleva.src = kuvatieto.osoite;
+        if (typeof tuleva.decode === 'function') await tuleva.decode().catch(() => {});
+        if (!kehys.isConnected) return;
+        tuleva.classList.add('esilla');
+        vanha.classList.remove('esilla');
+      }
+      this.kuvakiertoAjastin = setTimeout(vaihda, KUVAKIERTO_MS);
+    };
+    this.kuvakiertoAjastin = setTimeout(vaihda, KUVAKIERTO_MS);
+  }
+
+  lopetaKuvakierto() {
+    clearTimeout(this.kuvakiertoAjastin);
+    this.kuvakiertoAjastin = null;
   }
 
   /**
@@ -2167,8 +2291,11 @@ class Aikajana {
      * ilmiökuvaan. Kuva on nappi, joka avaa jutun. Vain kuvattomalla
      * pysäkillä (loppusanat) paneeli näyttää tekstin.
      */
+    this.lopetaKuvakierto();
     if (onKuva(t.ilmio)) {
       const kehys = kuvaTaiLaatta(t.ilmio, t.otsikko, 640, 'aikajana-ilmiokuva');
+      const sarja = [t.ilmio, ...(t.ilmioSarja ?? [])].filter(onKuva);
+      if (sarja.length > 1) this.aloitaKuvakierto(kehys, sarja, t.otsikko);
       if (t.juttu) {
         kehys.classList.add('avaa-jutun');
         kehys.setAttribute('role', 'button');
@@ -2641,6 +2768,7 @@ class Aikajana {
      * moottorin oma pysaytaAikajana on vain toinen sisäänkäynti samaan.
      */
     polloLinssiPaattyi();
+    this.lopetaKuvakierto();
     if (this.ui.kameraVapaa) this.vapautaKamera(false);
     this.palautaKamera();
     this.juuri = null;

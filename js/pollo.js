@@ -61,7 +61,7 @@ import { asetaKuva } from './media.js';
 // koskee muitakin kelluvia kuplia — ja se on niputuksessa jo ennen
 // pöllöä (tools/build-standalone.mjs MODULES).
 import {
-  jaaKappaleiksi, linssiEstaa, nielaiseSulkevaNapautus, polloNimilappu, sanamaara,
+  jaaKappaleiksi, linssiEstaa, linssiEstaaChatin, nielaiseSulkevaNapautus, polloNimilappu, sanamaara,
 } from './ui-apurit.js';
 import { POLLON_LINKKIKATTO, etsiAnkkuri, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
 import {
@@ -3126,9 +3126,10 @@ class Pollo {
      * LINSSIN AIKANA CHATTI EI AUKEA (omistaja 4.9.2026: *"pitää kaikki
      * muu blokata varmuuden vuoksi kun linssi alkaa"*). Pöllönappi jää
      * näkyviin — se on osa alarivin maisemaa — mutta napautus ei avaa
-     * paneelia linssin päälle. Keskustelu odottaa linssin sulkemista.
+     * paneelia linssin päälle. Keskustelu odottaa linssin sulkemista —
+     * paitsi välinäytöksessä (linssiEstaaChatin, omistaja 4.9.2026).
      */
-    if (linssiEstaa(this.doc)) return;
+    if (linssiEstaaChatin(this.doc)) return;
     // Pöllön paneeli on ponnahdusikkuna siinä missä muutkin: lukija
     // vaikenee (omistajan tilaus 15.8.2026 "eikä pöllö [pysäytä]").
     // Paneeli on oma elementtinsä eikä dialog/postikortti, joten

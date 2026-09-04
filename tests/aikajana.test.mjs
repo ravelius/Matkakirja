@@ -9,6 +9,7 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { jaaVirkkeiksi } from '../js/aikajana.js';
 import { readFileSync } from 'node:fs';
 
 import {
@@ -905,7 +906,8 @@ test('kartan avaajat eivät avaa mitään linssin aikana', () => {
   assert.match(NOSTO_LAHDE, /function avaaNosto\(ui, nosto\) \{[\s\S]{0,500}if \(linssiEstaa\(\)\) return false;/);
   assert.match(NOSTO_LAHDE, /function avaaNostonKortti\(ui, nosto\) \{[\s\S]{0,300}if \(linssiEstaa\(\)\) return false;/);
   // Pöllönappi jää näkyviin, mutta chatti ei aukea linssin päälle.
-  assert.match(POLLO_LAHDE, /avaa\(\) \{[\s\S]{0,700}if \(linssiEstaa\(this\.doc\)\) return;/);
+  // Chatin portti on löysempi: välinäytöksessä pulun kanssa saa keskustella (4.9.2026).
+  assert.match(POLLO_LAHDE, /avaa\(\) \{[\s\S]{0,900}if \(linssiEstaaChatin\(this\.doc\)\) return;/);
 });
 
 test('Livian paljastus odottaa linssin yli eikä 90 sekunnin katto laukea sen takia', () => {
@@ -1185,11 +1187,16 @@ test('1873 pysäyttää kellon ja avaa laatikon vain elävässä ajossa', () => 
   // Kerran per ajo, eikä avausjakson aikana.
   assert.match(avaa, /if \(!tiedot \|\| this\.valinaytosNahty \|\| this\.avausKesken\) return false;/);
   assert.match(avaa, /this\.valinaytosNahty = true;/);
-  // Sisältö tulee DATASTA: otsikko, kertojan teksti, kuva ja Jatka.
+  // Sisältö tulee DATASTA: otsikko ja kertojan teksti virkkeiksi jaettuna
+  // (omistaja 4.9.2026 iltapäivä: teksti suoraan kartan päälle, ei korttia).
   assert.match(avaa, /tiedot\.otsikko \?\? t\.otsikko/);
-  assert.match(avaa, /tiedot\.kertoja/);
-  assert.match(avaa, /this\.valinaytoksenKuva\(tiedot\.kuva\)/);
-  assert.match(avaa, /solmu\('button', 'aikajana-valinaytos-nappi', 'Jatka'\)/);
+  assert.match(avaa, /jaaVirkkeiksi\(tiedot\.kertoja \?\? ''\)/);
+  assert.ok(!avaa.includes('aikajana-valinaytos-nappi'), 'kortin Jatka-nappi poistui: Jatka on yläpalkin nappi');
+  assert.ok(!avaa.includes('aikajana-valinaytos-laatikko'), 'kortti poistui');
+  // Yläpalkin nappi hehkuu viiveellä ja body-luokka avaa pulun chatin.
+  assert.match(avaa, /this\.taukoNappi\.classList\.add\('hehku'\)/);
+  assert.match(avaa, /document\.body\.classList\.add\('aikajana-valinaytos-auki'\)/);
+  assert.match(avaa, /this\.ladoValinaytoksenRivit\(rivit, luenta\)/);
 
   /*
    * KEHYSSILMUKKA EI SAA JATKUA pysäytyksen yli: ilman tätä tarkistusta
@@ -1226,7 +1233,7 @@ test('kertoja lukee ensin, pulu kommentoi vasta sen jälkeen', () => {
   // Kuplat luennan päätyttyä; puuttuva tai kytkimetön luenta viiveellä.
   assert.match(puhe, /luenta\.addEventListener\('ended', kuplat, \{ once: true \}\);/);
   assert.match(puhe, /luenta\.addEventListener\('error', viiveella, \{ once: true \}\);/);
-  assert.match(puhe, /if \(!luenta\) \{ viiveella\(\); return; \}/);
+  assert.match(puhe, /if \(!luenta\) \{ viiveella\(\); return null; \}/);
   // Kupla on linssin OMA poikkeus kuplaporttiin (js/pollo.js).
   assert.match(puhe, /polloLinssikupla\(osat\);/);
   // Sulkeutunut laatikko ei enää päästä kuplaa ruudulle.
@@ -1236,12 +1243,19 @@ test('kertoja lukee ensin, pulu kommentoi vasta sen jälkeen', () => {
   assert.match(metodi('aloitaAjo'), /pysaytaLinssiluenta\(this\.ui\);/);
 });
 
-test('välinäytöksen laatikko on avauksen tyyliperhettä ja pulun kuplien alla', () => {
-  const lohko = AIKAJANA_CSS.match(/\.aikajana-valinaytos \{[\s\S]*?\.aikajana-valinaytos-nappi:focus-visible[^\n]*\n/)[0];
-  // Välinäytös pitää linssin tumman asun; avauslaatikko on paperia (omistaja 4.9.2026).
-  for (const sailyy of ['border-radius: 14px', 'background: #201a14', 'border: 1px solid rgba(217, 161, 59, 0.38)']) {
-    assert.ok(lohko.includes(sailyy), `välinäytöksen asu muuttui: ${sailyy}`);
-  }
+test('välinäytös on tekstiä kartan päällä, ei korttia; Jatka hehkuu yläpalkissa', () => {
+  const lohko = AIKAJANA_CSS.match(/\.aikajana-valinaytos \{[\s\S]*?\.aikajana-ilmiokuva img\.aikajana-kiertokuva\.esilla[^\n]*\n/)[0];
+  // Kerros ei nappaa napautuksia: kartta, karuselli ja pulun nappi pysyvät käytössä.
+  assert.match(lohko, /\.aikajana-valinaytos \{[\s\S]*?pointer-events: none;/);
+  assert.ok(!lohko.includes('aikajana-valinaytos-laatikko') && !lohko.includes('aikajana-valinaytos-peite'), 'kortti ja peite poistuivat');
+  // Rivi kerrallaan: rivi on piilossa, kunnes js antaa luokan nakyy.
+  assert.match(lohko, /\.aikajana-valinaytos-rivi \{[\s\S]*?opacity: 0;[\s\S]*?transition: opacity 700ms ease/);
+  assert.match(lohko, /\.aikajana-valinaytos-rivi\.nakyy \{ opacity: 1; transform: none; \}/);
+  // Hehku: henno punainen, hidas syke.
+  assert.match(lohko, /\.aikajana-nappi\.hehku \{[\s\S]*?animation: aikajana-hehku 2\.8s ease-in-out infinite;/);
+  assert.match(lohko, /@keyframes aikajana-hehku/);
+  // Kuvakierto: päällyskuvat pohjakuvan päällä, hidas ristihäivytys.
+  assert.match(lohko, /\.aikajana-ilmiokuva img\.aikajana-kiertokuva \{[\s\S]*?opacity: 0;[\s\S]*?transition: opacity 1600ms ease;/);
   const avaus = AIKAJANA_CSS.match(/\.aikajana-avaus-laatikko \{[\s\S]*?\n\}/)[0];
   assert.match(avaus, /background-color: #d9c69c;/);
   assert.match(avaus, /feTurbulence/, 'paperin kuitu tulee SVG-kohinasta kuvana');
@@ -1256,33 +1270,38 @@ test('välinäytöksen laatikko on avauksen tyyliperhettä ja pulun kuplien alla
   // Havainnekuva valokeilassa: pelkkä kuva -paneeli ilman laatikkoa, reunat läpinäkyviksi maskilla (ei suodatin).
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child,[\s\S]*?mask-image: radial-gradient\(ellipse 50% 50% at 50% 50%, #000 44%, rgba\(0, 0, 0, 0\.72\) 62%, rgba\(0, 0, 0, 0\.24\) 82%, transparent 97%\);/);
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio:has\(> \.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child\) \{\n  border-color: transparent;\n  background: transparent;\n  box-shadow: none;\n\}/);
-  // Tausta himmenee KEVYESTI eikä mustaan: valot näkyvät laatikon takaa.
-  const alfa = Number(lohko.match(/\.aikajana-valinaytos-peite \{[\s\S]*?rgba\(6, 4, 3, ([\d.]+)\)/)[1]);
-  assert.ok(alfa > 0.2 && alfa < 0.6, `himmennys ${alfa} ei ole kevyt`);
   assert.ok(!lohko.includes('backdrop-filter'), 'välinäytös ei sumenna karttaa');
   /*
    * KERROS JÄÄ PULUN KUPLAPINON ALLE (.pollo-kuplapino-kehys z-index
    * 40): pulu kommentoi kertojan jälkeen, ja kuplan pitää näkyä
-   * himmennyksen päällä. Linssin oman juuren (7) yli sen on silti mentävä.
+   * tekstin päällä. Linssin oman juuren (7) yli sen on silti mentävä.
    */
   const z = Number(lohko.match(/z-index: (\d+)/)[1]);
   assert.ok(z > 7 && z < 40, `välinäytöksen kerros ${z} ei ole linssin ja kuplapinon välissä`);
-  // Kuva tekstin kyljessä, kapealla ruudulla sen yllä.
-  assert.match(lohko, /\.aikajana-valinaytos-sisus \{[\s\S]*?display: flex;/);
-  assert.match(lohko, /@media \(max-width: \d+px\) \{[\s\S]*?flex-direction: column-reverse;/);
 });
 
-test('välinäytöksen kuvapaikka katoaa, jos kuvaa ei vielä ole', () => {
-  /*
-   * Kuvaputki ei ole vielä toimittanut isoisän lähtökuvaa, joten
-   * laatikon on toimittava ilman sitä: 404 piilottaa kuvapaikan ja
-   * teksti jää täysleveäksi.
-   */
-  const kuva = metodi('valinaytoksenKuva');
-  assert.match(kuva, /kuva\.addEventListener\('error', \(\) => \{ kehys\.hidden = true; \}, \{ once: true \}\);/);
-  // Osoite sellaisenaan: tämä kuva ei ole linssikuvien pieni/-putkessa.
-  assert.match(kuva, /kuva\.src = kuvatieto\.osoite;/);
-  assert.ok(!kuva.includes('asetaAmpariKuva'), 'välinäytöksen kuva ei kulje linssikuvien putkea');
+test('yksi Tauko/Jatka-nappi ja (x): välinäytöksessä nappi on Jatka, kuvakierto paneelissa', () => {
+  const rakenna = metodi('rakenna');
+  assert.match(rakenna, /solmu\('button', 'aikajana-nappi aikajana-sulje', '✕'\)/);
+  assert.match(rakenna, /sulje\.setAttribute\('aria-label', 'Sulje'\)/);
+  assert.ok(!rakenna.includes("'Alusta'"), 'Alusta-nappi poistui palkista (omistaja 4.9.2026)');
+  assert.match(metodi('taukoTaiJatka'), /if \(this\.valinaytos\) \{ this\.jatkaValinaytoksesta\(\); return; \}/);
+  assert.match(metodi('jatka'), /if \(this\.valinaytos\) this\.suljeValinaytos\(\);/);
+  const sulje = metodi('suljeValinaytos');
+  assert.match(sulje, /this\.taukoNappi\?\.classList\.remove\('hehku'\);/);
+  assert.match(sulje, /classList\.remove\('aikajana-valinaytos-auki'\);/);
+  // Virkkeiksi jako säilyttää sanat ja välimerkit.
+  const osat = jaaVirkkeiksi('Vuosi 1873. Kartalla palaa yksitoista valoa: höyry vetää junia. Isoisä lähtee matkaan.');
+  assert.deepEqual(osat, ['Vuosi 1873.', 'Kartalla palaa yksitoista valoa: höyry vetää junia.', 'Isoisä lähtee matkaan.']);
+  // Kuvakierto: merkkipaalulla ilmion perässä Charing Crossin junakuva (ent. välinäytöksen kuva).
+  const paalu = KEKSINNOT.find((t) => t.paalu);
+  assert.ok(Array.isArray(paalu.ilmioSarja) && paalu.ilmioSarja.length >= 1, 'merkkipaalulla on kuvakierto');
+  for (const k of paalu.ilmioSarja) {
+    assert.ok(k.ulkoinen && /kohtaamiset\/isoisa\//.test(k.osoite) && k.selite && k.lahde, 'kiertokuva on isoisän ulkoinen kuva');
+  }
+  assert.equal(paalu.valinaytos.kuva, undefined, 'välinäytöksellä ei ole enää omaa kuvaa');
+  assert.match(metodi('vaihdaPaneeli'), /if \(sarja\.length > 1\) this\.aloitaKuvakierto\(kehys, sarja, t\.otsikko\);/);
+  assert.ok(PURA.includes('this.lopetaKuvakierto();'), 'purku ei pysäytä kuvakiertoa');
 });
 
 /*

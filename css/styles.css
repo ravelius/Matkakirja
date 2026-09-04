@@ -18964,10 +18964,11 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
    * korkeudella puhekuplan yläreuna alkaa muuttua näkymättömäksi. ja
    * pelaaja voisi skrollata puhekuplia ylös ja alas, jos ne eivät mahdu
    * tuon 8 rivin sisään"*). Rivi on 0.92 rem × 1.35 ≈ 1.24 rem, joten
-   * kahdeksan riviä kuplien pehmusteineen on noin 12.5 rem; yli jäävä
-   * osa häipyy yläreunasta (.pollo-kuplapino-yli) ja on vieritettävissä.
+   * kahdeksan riviä kahden kuplan pehmusteineen ja välineen on noin
+   * 14 rem; yli jäävä osa häipyy yläreunasta (.pollo-kuplapino-yli) ja
+   * on vieritettävissä.
    */
-  max-height: min(60vh, 12.5rem);
+  max-height: min(60vh, 14rem);
   overflow-y: auto;
   overscroll-behavior: contain;
   /* Kärki ja varjo mahtuvat: leikkaava overflow söisi ne muuten. */
@@ -18984,7 +18985,7 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
  * silti kolme tavallista kuplaa.
  */
 @media (max-width: 599px) {
-  .pollo-kuplapino { max-height: min(52vh, 12.5rem); }
+  .pollo-kuplapino { max-height: min(52vh, 14rem); }
 }
 
 /*
@@ -19089,10 +19090,18 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
   animation: pollo-kupla-saapuu 380ms var(--liike-pehmea);
 }
 
+/*
+ * LUUKUSTA, EI RÄPSÄHTÄEN (omistaja 4.9.2026 iltapäivä: *"vanhat eivät
+ * saisi räpsähtää vaan ensin vanhat liukuisivat pehmeästi ylöspäin ja
+ * samalla alaosasta (kuin näkymättömästä luukusta) liukuisi näkyviin
+ * uusi kupla yhtä pehmeästi"*). Kupla lähtee kokonaan pinon alareunan
+ * takaa (oma korkeus + kärjen vara) täydessä näkyvyydessä: pinon
+ * overflow leikkaa sen, joten se nousee esiin reunan alta eikä
+ * häivy sisään.
+ */
 @keyframes pollo-kupla-saapuu {
-  from { opacity: 0; transform: translateY(60%); }
-  60% { opacity: 1; }
-  to { opacity: 1; transform: translateY(0); }
+  from { transform: translateY(calc(100% + 0.8rem)); }
+  to { transform: translateY(0); }
 }
 
 /* Liikeherkkyys: kupla vain ilmestyy, ei liiku. */
