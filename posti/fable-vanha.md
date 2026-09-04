@@ -1,3 +1,22 @@
+## 4.9.2026 16:23 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 23–25 yksityisessä arvioinnissa
+
+Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu ensisijaisista museo- ja arkistolähteistä, generoitu kokonaan uusina, tarkistettu ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 86. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
+
+- `skandaali-cerro-de-los-santos-vaarennokset-photo-v1.jpg` — Montealegre del Castillo noin 1872. 1536 × 1024 JPG/sRGB, SHA-256 `4d8304a9af0bceb6a1dacbc8bbc3618ea3e8ca4bbdf7eeb9b8c07ed2133609a7`.
+  - Kuvateksti sanasta sanaan: **“Nuori museoapulainen katsoo ensin tuoretta uurretta ja vasta sitten pöydän ääressä seisovia miehiä: jos hän sanoo epäilyn ääneen, koko löytöhuuma alkaa horjua. Vicente Juan y Amat myi Madridin arkeologiselle museolle sekä aitoja että väärennettyjä tai muunneltuja esineitä; nykykäsityksen mukaan hän ei välttämättä itse veistänyt väärennöksiä, vaan osti ja välitti niitä.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat ja esineet: Museo Arqueológico Nacional, MAN 3501 ja MAN 3500. Museo huomauttaa, ettei Amatia nykykäsityksen mukaan välttämättä pidetä väärennösten materiaalisena tekijänä; kohtaaminen ja nuori apulainen ovat dramatisoituja.**
+  - Lähteet: https://ceres.mcu.es/pages/Main?idt=31468&inventary=3501&museum=MAN&table=FMUS ja https://ceres.mcu.es/pages/Main?idt=31467&inventary=3500&museum=MAN&table=FMUS
+- `skandaali-lasnamaen-valkea-laiva-photo-v1.jpg` — Tallinna, touko–kesäkuu 1861. 1536 × 1024 JPG/sRGB, SHA-256 `f33f65e0416b978046d23ef5294778bfe8650a96145e6e9cf17179c7b36f8807`.
+  - Kuvateksti sanasta sanaan: **“Äiti etsii tyttärensä kasvoilta vastausta, jota tyhjä horisontti ei anna: kuinka monta aamua heidän pitää vielä odottaa? Juhan Leinberg oli jo lähtenyt Krimille, mutta sadat seuraajat viipyivät Lasnamäellä viikkoja valkean laivan toivossa, kunnes epätoivo ja sotilaiden painostus hajottivat joukon.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat: Eesti Kirjandusmuuseumin tutkimus ja Eesti Kunstimuuseumin 1860-luvun Lasnamäe-näkymä. Tummat takit, valkoiset kaulapussit, suuri kivi ja viikkojen odotus ovat arkistokuvauksiin perustuvia; äiti, tytär ja heidän katseensa ovat dramatisoituja.**
+  - Lähteet: https://www.folklore.ee/rl/pubte/ee/sator/sator6/8marekoiva.pdf ja https://digikogu.ekm.ee/ekm/search/newwin-print/oid-12295
+- `skandaali-pirtukauppa-suomenlahdella-photo-v1.jpg` — Tallinnan edusta 1929. 1536 × 1024 JPG/sRGB, SHA-256 `518f23f63bc7272f40d223db8694b33a2d955523f5e864797a7cf7d4679eaf22`.
+  - Kuvateksti sanasta sanaan: **“Nuori apumies kuulee tulliveneen moottorin juuri kun seuraava pirtukanisteri laskeutuu hänen käsiinsä. Kieltolaki teki tavallisista rannikon ihmisistä salakuljettajia: suuret emälaivat odottivat ulapalla, ja pienet nopeat veneet kuljettivat lastin, pelon ja ansion pimeän veden yli.”**
+  - Lähderivi: **Matkakirjan havainnekuva. Faktat ja esinereferenssit: Helsingin Sataman kieltolakiaineisto ja vuoden 1929 kuvat pirtukanistereista sekä pirtulaivoista Carma, Magdalena ja Antoineta. Tallinnan lastaushetki ja henkilöt ovat dramatisoituja.**
+  - Lähde: https://www.portofhelsinki.fi/tietoa-meista/helsingin-satama/historia/itsenaisen-suomen-kasvava-paasatama/kieltolaki-toi-satamiin-draamaa/
+
+Kaikki kolme tuotantopalvelimelta takaisin luettua tiedostoa palauttivat HTTP 200:n, `image/jpeg`-MIME-tyypin, mitat 1536 × 1024 ja täsmälleen yllä ilmoitetut SHA-256-tiivisteet. Tila: **skandaalit 25/83 tehty; 13 hyväksytty ja varmennettu R2:ssa, kuvat 14–25 yksityisessä arvioinnissa.**
+
 ## 4.9.2026 16:01 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 20–22 yksityisessä arvioinnissa
 
 Kolme seuraavaa skandaalikortin täydentävää kuvaa on tutkittu, generoitu kokonaan uusina, tarkistettu ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 84. Kuvia ei ole viety peli-R2:een eikä kytketty peliin.
