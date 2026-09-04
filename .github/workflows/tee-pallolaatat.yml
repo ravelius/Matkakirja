@@ -1,0 +1,115 @@
+# Karttapallon laatat: pelin juliste Millerista Web Mercator -laatoiksi
+# (tools/tee-pallolaatat.mjs) ja vienti ämpäriin polkuun
+# julisteet/pallo/laatat/<pyramidin versio>/<Z>/<X>/<Y>.jpg sekä
+# laatat.json. Pallo (js/pallo.js) hakee laatat sieltä Globe.gl:n
+# laattamoottorilla vain katsotulle alueelle (omistaja 4.9.2026: "tee se
+# suoraan peliin ilman demoa").
+#
+# Ajo kestää tasoilla 0–7 (21 845 laattaa) arviolta 20–40 min: lähde-
+# laatat noudetaan tarpeen mukaan ja tulos viedään `aws s3 sync`:llä.
+# Ajetaan käsin (workflow_dispatch) aina, kun pyramidi on poltettu
+# uudestaan tai tasoja halutaan lisää.
+name: Tee karttapallon laatat
+
+on:
+  workflow_dispatch:
+    inputs:
+      max:
+        description: 'Syvin Mercator-taso (7 = 32768 px / 360°, lähde z6)'
+        required: false
+        default: '7'
+      min:
+        description: 'Matalin taso'
+        required: false
+        default: '0'
+      kirjasto:
+        description: 'Globe.gl-versio, joka viedään vendor/-polkuun (tyhjä = ei viedä)'
+        required: false
+        default: ''
+      kuiva:
+        description: 'Kuiva ajo: vain luettelo ja laattamäärä, ei laattoja eikä vientiä'
+        required: false
+        default: 'ei'
+        type: choice
+        options: ['ei', 'kylla']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tee-pallolaatat
+  cancel-in-progress: false
+
+jobs:
+  tee:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Tarkista että salaisuudet ovat tallessa
+        if: inputs.kuiva != 'kylla' || inputs.kirjasto != ''
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "${R2_ACCOUNT_ID:-}" ]         || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ]     || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "${R2_BUCKET:-}" ]             || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            exit 1
+          fi
+
+      - name: Kuiva ajo (luettelo ja laattamäärä)
+        run: node tools/tee-pallolaatat.mjs --kuiva --min "${{ inputs.min }}" --max "${{ inputs.max }}"
+
+      - name: Vie Globe.gl ämpäriin
+        if: inputs.kirjasto != ''
+        run: |
+          set -euo pipefail
+          v="${{ inputs.kirjasto }}"
+          curl -fsSL -o globe.gl.min.js "https://cdn.jsdelivr.net/npm/globe.gl@${v}/dist/globe.gl.min.js"
+          head -c 200 globe.gl.min.js | grep -q "globe.gl" || { echo "::error::ladattu tiedosto ei näytä Globe.gl:ltä"; exit 1; }
+          aws s3 cp globe.gl.min.js "s3://${R2_BUCKET}/vendor/globe.gl-${v}.min.js" \
+            --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --no-progress --content-type application/javascript \
+            --cache-control 'public, max-age=31536000, immutable'
+          echo "Viety: vendor/globe.gl-${v}.min.js"
+
+      - name: Asenna sharp ja laske laatat
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          npm install --no-save --no-fund --no-audit sharp
+          node tools/tee-pallolaatat.mjs --min "${{ inputs.min }}" --max "${{ inputs.max }}" --ulos pallolaatat-ulos
+          echo "Laattoja: $(find pallolaatat-ulos -name '*.jpg' | wc -l), koko: $(du -sh pallolaatat-ulos | cut -f1)"
+
+      - name: Vie laatat ämpäriin
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          kansio="$(cat pallolaatat-ulos/kansio.txt)"
+          # Laatat: pitkä välimuisti (versio on polussa).
+          aws s3 sync pallolaatat-ulos "s3://${R2_BUCKET}/${kansio}" \
+            --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --exclude '*' --include '*.jpg' --no-progress \
+            --content-type image/jpeg --cache-control 'public, max-age=31536000, immutable'
+          # Luettelo viimeisenä: peli koettaa sen olemassaoloa ennen laattojen käyttöä.
+          aws s3 cp pallolaatat-ulos/laatat.json "s3://${R2_BUCKET}/${kansio}laatat.json" \
+            --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --no-progress --content-type application/json --cache-control 'public, max-age=3600'
+          echo "Viety: ${kansio} (tasot ${{ inputs.min }}–${{ inputs.max }})"
