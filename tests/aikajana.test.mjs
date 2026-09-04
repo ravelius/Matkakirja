@@ -376,7 +376,7 @@ test('moottori näyttää pienen version ja esilataa koko kaaren pienenä', () =
   // Varareitti kerran, ei silmukkaa.
   assert.match(MOOTTORI, /function asetaAmpariKuva[\s\S]{0,1200}addEventListener\('error', \(\) => \{ kuva\.src = osoite; \}, \{ once: true \}\)/);
   // Esilataus: koko kaari pienenä heti käynnistyksessä, ei kolmen ikkunaa.
-  assert.match(MOOTTORI, /kaynnista\(\) \{[\s\S]{0,200}this\.esilataaPienet\(\);/);
+  assert.ok(MOOTTORI.match(/\n  kaynnista\(\) \{[\s\S]*?\n  \}/)[0].includes('this.esilataaPienet();'), 'käynnistys ei esilataa');
   assert.match(MOOTTORI, /esilataaPienet\(\) \{[\s\S]{0,400}for \(const t of this\.tapahtumat\)[\s\S]{0,300}pieniOsoite\(kuva\.osoite\)/);
   assert.ok(!/esilataaSeuraavat/.test(MOOTTORI), 'kolmen pysäkin ikkuna on korvattu');
   // "Lue juttu" avaa Tiedeliitteen, joka saa alkuperäiset kuvatiedot
@@ -516,8 +516,12 @@ test('kaari nimeää oman raitansa ja tauko hiljentää sen puoleen', () => {
 });
 
 test('moottori käskee musiikkia käynnistyksessä, tauolla, jutussa ja purussa', () => {
-  // Raita alkaa ajon mukana ja loppuu purussa.
-  assert.match(MOOTTORI, /kaynnista\(\) \{[\s\S]{0,400}this\.aloitaMusiikki\(true\)/);
+  /*
+   * Raita alkaa jo avausjaksossa mutta HILJAA (aloitaMusiikki(false)):
+   * täysi linssitaso tulee vasta Käynnistä-napista. Loppuu purussa.
+   */
+  assert.ok(MOOTTORI.match(/\n  kaynnista\(\) \{[\s\S]*?\n  \}/)[0].includes('this.aloitaMusiikki(false)'), 'käynnistys ei aloita musiikkia hiljaa');
+  assert.match(MOOTTORI, /aloitaAjo\(\) \{[\s\S]{0,900}this\.aloitaMusiikki\(true\)/);
   assert.match(MOOTTORI, /pura\(\) \{[\s\S]{0,200}this\.lopetaMusiikki\(\)/);
   // Tauko ja jatko säätävät tasoa, EIVÄT katkaise raitaa.
   assert.match(MOOTTORI, /pysayta\(\) \{[\s\S]{0,200}this\.saadaMusiikki\(\)/);
@@ -528,7 +532,7 @@ test('moottori käskee musiikkia käynnistyksessä, tauolla, jutussa ja purussa'
   assert.match(MOOTTORI, /avaaJuttu\(t\) \{[\s\S]{0,900}if \(auki\) this\.vaimennaJutunAjaksi\(\)/);
   assert.match(MOOTTORI, /kunSuljetaan: \(\) => this\.palautaJutunJalkeen\(\)/);
   assert.match(MOOTTORI, /palautaJutunJalkeen\(\) \{[\s\S]{0,200}this\.aloitaMusiikki\(\)/);
-  assert.match(MOOTTORI, /pura\(\) \{[\s\S]{0,120}suljeTiedeliite\(this\.ui\)/);
+  assert.match(MOOTTORI, /pura\(\) \{[\s\S]{0,240}suljeTiedeliite\(this\.ui\)/);
   // Kaari ilman musiikki-kenttää ei koske soittimeen.
   assert.match(MOOTTORI, /this\.musiikkiLaji = kaari\.musiikki \?\? null;/);
   for (const metodi of ['aloitaMusiikki', 'saadaMusiikki', 'lopetaMusiikki', 'vaimennaJutunAjaksi']) {
@@ -1032,4 +1036,94 @@ test('rikkinäinen karttalaatta ei maalaa selaimen kysymysmerkkiä kartalle', ()
   // (omistajan kuvakaappaus 4.9.2026). Osoitteen poisto vie merkin.
   const PYRAMIDI = readFileSync(new URL('../js/laattapyramidi.js', import.meta.url), 'utf8');
   assert.match(PYRAMIDI, /mittarit\.epaonnistui \+= 1;[\s\S]{0,1600}kuva\.removeAttribute\('href'\);/);
+});
+
+
+/* ==================== AVAUSJAKSO ==================== */
+
+/*
+ * Omistajan tilaus 4.9.2026 aamu: linssi alkaa mustasta ruudusta,
+ * jonka päällä on kaaren esittely ja Käynnistä-nappi. Kello ei käy
+ * ennen nappia, kartta sumenee peitteen backdrop-filterillä (ei
+ * kartan omalla filterillä) ja tummennus on aiempaa syvempi.
+ */
+
+test('käynnistys ei päästä kelloa liikkeelle: vain Käynnistä-nappi kutsuu jatkan', () => {
+  const kaynnista = MOOTTORI.match(/\n  kaynnista\(\) \{[\s\S]*?\n  \}/)[0];
+  assert.ok(!kaynnista.includes('this.jatka()'), 'kaynnista ei saa käynnistää kelloa itse');
+  assert.ok(kaynnista.includes('this.avaaAvausjakso()'), 'kaynnista avaa avausjakson');
+  // Linssin omat elementit odottavat mustan alla.
+  assert.match(kaynnista, /this\.juuri\.classList\.add\('avaus-piilossa'\)/);
+  // Musiikki alkaa hiljaa; täysi taso tulee vasta napista.
+  assert.match(kaynnista, /this\.aloitaMusiikki\(false\)/);
+  const aloita = MOOTTORI.match(/\n  aloitaAjo\(\) \{[\s\S]*?\n  \}/)[0];
+  assert.match(aloita, /this\.jatka\(\);/);
+  assert.match(aloita, /this\.aloitaMusiikki\(true\);/);
+  assert.match(aloita, /classList\.add\('pois'\)/);
+  // Toinen painallus ei tee mitään: jakso on jo ohi.
+  assert.match(aloita, /if \(!this\.avausKesken\) return;/);
+});
+
+test('avausjakson esittely tulee datasta eikä koodista', () => {
+  const esittely = LINSSI.aikajana.esittely;
+  assert.ok(esittely, 'keksintölinssiltä puuttuu aikajana.esittely');
+  assert.ok(esittely.otsikko?.length > 5, 'esittelyn otsikko puuttuu');
+  assert.ok(esittely.teksti?.length > 40, 'esittelyn selite puuttuu');
+  assert.match(esittely.otsikko, /1765/);
+  // Moottori lukee kentän eikä kirjoita omia sanojaan laatikkoon.
+  assert.match(MOOTTORI, /const esittely = this\.kaari\.esittely \?\? \{\};/);
+  assert.match(MOOTTORI, /esittely\.otsikko \?\? this\.kaari\.otsikko/);
+  assert.match(MOOTTORI, /if \(esittely\.teksti\) laatikko\.appendChild/);
+});
+
+test('avauksen peite sumentaa backdrop-filterillä ja sillä on varapolku', () => {
+  // Kartan tai SVG:n oma filter jäi iOS-kuoressa tyhjäksi kerrokseksi.
+  const lohko = AIKAJANA_CSS.match(/\.aikajana-avaus \{[\s\S]*?\.aikajana-avaus-nappi:focus-visible[^\n]*\n/)[0];
+  assert.ok(!/[^-]\bfilter: blur/.test(lohko), 'avaus ei saa käyttää pelkkää filter: bluria');
+  assert.match(lohko, /\.aikajana-avaus\.sumea \.aikajana-avaus-sumennin \{[\s\S]*?backdrop-filter: blur\(10px\)/);
+  assert.match(lohko, /-webkit-backdrop-filter: blur\(10px\)/);
+  assert.match(lohko, /@supports not \(\(backdrop-filter: blur\(4px\)\) or \(-webkit-backdrop-filter: blur\(4px\)\)\)/);
+  // Varapolku on tummempi läpinäkyvä peite — himmeä tausta ilman sumennusta.
+  const vara = lohko.match(/@supports not \([\s\S]*?\n\}/)[0];
+  const alfa = Number(vara.match(/rgba\(6, 4, 3, ([\d.]+)\)/)[1]);
+  assert.ok(alfa >= 0.8, `varapolun peite on liian ohut: ${alfa}`);
+  /*
+   * TUMMENNUS EI SAA RIIPPUA SUMENNUKSESTA. WebKit ilmoittaa tukevansa
+   * backdrop-filteriä mutta jätti koko elementin — myös sen värin —
+   * piirtämättä, kun sumennus ja väri olivat samassa peitteessä.
+   */
+  const peite = lohko.match(/\.aikajana-avaus-peite \{[\s\S]*?\n\}/)[0];
+  assert.ok(!peite.includes('backdrop-filter'), 'värikerros ei saa kantaa suodatinta');
+  assert.match(lohko, /\.aikajana-avaus\.sumea \.aikajana-avaus-peite \{[\s\S]*?background-color: rgba\(6, 4, 3, 0\.6\)/);
+  // Peite on linssin muiden kerrosten yläpuolella (.aikajana on 7).
+  const z = Number(lohko.match(/z-index: (\d+)/)[1]);
+  assert.ok(z > 7, `peitteen z-index ${z} ei nouse linssin yli`);
+  // Musta ensin, sumea sen jälkeen, pois viimeisenä (järjestys ratkaisee).
+  assert.ok(lohko.indexOf('.musta') < lohko.indexOf('.sumea'));
+  assert.ok(lohko.indexOf('.sumea') < lohko.indexOf('.pois'));
+  // Sumennin piirretään ENNEN väriä, jotta väri jää sen päälle.
+  assert.match(MOOTTORI, /this\.avaus\.append\(this\.avausSumennin, this\.avausPeite, laatikko\);/);
+});
+
+test('tummennus on aiempaa syvempi: kartta erottuu juuri ja juuri', () => {
+  const opacity = Number(AIKAJANA_CSS.match(/\.aikajana-tummennus\.paalla \.aikajana-tummennus-pinta \{ opacity: ([\d.]+); \}/)[1]);
+  assert.ok(opacity >= 0.85, `tummennus ${opacity} ei ole omistajan pyytämällä rajalla`);
+  assert.ok(opacity < 1, 'tummennus ei saa peittää karttaa kokonaan');
+});
+
+test('avausjakso vaientaa selostajan ja omii näppäimistön', () => {
+  // Luenta ei soi ennen Käynnistä-nappia.
+  assert.match(MOOTTORI, /if \(!this\.avausKesken\) soitaLinssiluenta\(this\.ui, t\);/);
+  const nappain = MOOTTORI.match(/\n  nappain\(e\) \{[\s\S]*?\n  \}/)[0];
+  assert.match(nappain, /if \(this\.avausKesken\) \{/);
+  assert.match(nappain, /e\.key === 'Enter' \|\| e\.key === ' '/);
+  assert.match(nappain, /this\.aloitaAjo\(\);/);
+  assert.match(nappain, /e\.key === 'Escape'[\s\S]{0,140}this\.ui\.pysaytaAikajana\?\.\(\)/);
+  // Purku vie peitteen, laatikon ja ajastimet kesken avauksenkin.
+  assert.match(MOOTTORI, /pura\(\) \{[\s\S]{0,200}this\.puraAvaus\(\);/);
+  assert.match(MOOTTORI, /puraAvaus\(\) \{[\s\S]*?this\.tyhjennaAvauksenAjastimet\(\);[\s\S]*?this\.avaus\?\.remove\(\);/);
+  // Alusta ei näytä avausta uudelleen.
+  const alusta = MOOTTORI.match(/\n  alusta\(\) \{[\s\S]*?\n  \}/)[0];
+  assert.ok(!alusta.includes('avaaAvausjakso'), 'Alusta ei saa avata avausjaksoa uudestaan');
+  assert.match(alusta, /this\.jatka\(\);/);
 });

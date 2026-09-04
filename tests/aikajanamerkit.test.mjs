@@ -132,6 +132,15 @@ class TynkaSolmu {
 
   click() { for (const fn of [...(this.kuuntelijat.get('click') ?? [])]) fn({}); }
 
+  /*
+   * Avausjakso pakottaa asettelun ennen mustaa (js/aikajana.js
+   * avaaAvausjakso) ja siirtää fokuksen Käynnistä-nappiin. Tyngälle
+   * riittää, että kumpikin on olemassa: mittoja ei tässä tarkisteta.
+   */
+  getBoundingClientRect() { return { x: 0, y: 0, left: 0, top: 0, width: 0, height: 0, right: 0, bottom: 0 }; }
+
+  focus() { this.fokus = true; }
+
   querySelector() { return null; }
 
   querySelectorAll() { return []; }

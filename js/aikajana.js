@@ -273,6 +273,52 @@ export const REIAN_SUHDE = 9;
 const TUMMENNUKSEN_ULOTTUVUUS = 1e6;
 /** Tummennuksen poistumisliuku (css .aikajana-tummennus-pinta). */
 const TUMMENNUKSEN_POISTUMA_MS = 700;
+
+/* ==================== AVAUSJAKSO ==================== */
+
+/**
+ * AVAUSJAKSO (omistajan tilaus 4.9.2026 aamu: *"Kun linssi painetaan
+ * päälle, kartta voisi ja kaikki muutkin elementit ruudulta
+ * kartta-alueella voisi feidautua kokonaan mustaan. Sen jälkeen keskelle
+ * voisi tulla otsikko ja pieni selite siitä, mitä seuraavaksi pelaajalle
+ * havainnollistetaan. Sillä aikaa peli voi taustalla siirtyä ja piirtää
+ * ... Ja peli alkaa vasta, kun käyttäjä klikkaa aloitustekstin alla
+ * olevaa käynnistä nappia."*).
+ *
+ * KOLME VAIHETTA (css .aikajana-avaus; peite on kaksikerroksinen,
+ * ks. tyylitiedoston oma selitys):
+ *
+ *   1. MUSTA   kartta-alue häipyy kokonaan mustaan
+ *              (AVAUS_PIMENNYS_MS). Linssin oma juuri on rakennettu
+ *              mutta odottaa näkymättömänä (.avaus-piilossa), joten
+ *              kello ja karuselli eivät pompahda ruudulle. Mustan
+ *              päälle tulee kaaren esittelylaatikko.
+ *   2. SUMEA   tausta on valmis — kamera-ajo on ajettu pimeässä ja
+ *              laatat ehtineet piirtyä, katto AVAUS_TAUSTAN_KATTO_MS —
+ *              ja peite ohenee sumentavaksi: kartta ja linssin
+ *              elementit tulevat himmeinä ja sumeina laatikon taakse.
+ *   3. POIS    Käynnistä-nappi: laatikko häipyy, sumennus katoaa ja
+ *              kello lähtee samalla hetkellä.
+ *
+ * Kello EI käy ennen nappia, eikä selostaja lue (sytyta vaikenee
+ * avausjakson ajan). Alusta-nappi ei tuo avausta takaisin: se kuuluu
+ * vain käynnistykseen.
+ */
+/** Kartta-alueen häivytys mustaan linssin kytkeytyessä. */
+const AVAUS_PIMENNYS_MS = 500;
+/** Kamera-ajo tehdään pimeässä, joten se saa olla lyhyt — sitä ei nähdä. */
+const AVAUS_KAMERA_MS = 700;
+/** Taustan valmistumista odotetaan enintään tämän verran avauksesta. */
+const AVAUS_TAUSTAN_KATTO_MS = 2500;
+/**
+ * Otsikko saa mustan rauhassa vähintään näin kauan. Ilman alarajaa
+ * nopea kamera-ajo (mitattu WebKitissä: alle 400 ms) vei sumennukseen
+ * ennen kuin laatikko oli edes ehtinyt liukua esiin.
+ */
+const AVAUS_LUKUAIKA_MS = 900;
+/** Peitteen poistuminen Käynnistä-napin jälkeen (css .aikajana-avaus.pois). */
+const AVAUS_POISTUMA_MS = 700;
+
 /** Paneelin kuvan dekoodauksen enimmäisodotus ennen ristihäivytystä. */
 const PANEELIN_DEKOODAUSKATTO_MS = 250;
 /**
@@ -980,6 +1026,18 @@ class Aikajana {
     this.skaala = null;
     // Kaari kertoo raidan; ilman kenttää ajo on hiljainen.
     this.musiikkiLaji = kaari.musiikki ?? null;
+    /*
+     * AVAUSJAKSON TILA. `avausKesken` on tosi mustan peitteen ja
+     * Käynnistä-napin välisen ajan: silloin kello ei käy, selostaja
+     * vaikenee eikä näppäimistö selaa pysäkkejä. Ajastimet ovat
+     * listassa, jotta purku voi perua ne kesken vaiheen.
+     */
+    this.avaus = null;
+    this.avausSumennin = null;
+    this.avausPeite = null;
+    this.avausNappi = null;
+    this.avausKesken = false;
+    this.avausAjastimet = [];
     this.reducedMotion = Boolean(globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
   }
 
@@ -1232,17 +1290,21 @@ class Aikajana {
     ui.kartta?.tarkistaFokusZoom?.();
   }
 
-  sovitaKaareen() {
+  /**
+   * Kamera kaaren alueeseen. Kesto on parametri, koska avausjaksossa
+   * ajo tehdään mustan peitteen alla: sitä ei nähdä, joten se saa olla
+   * lyhyt (AVAUS_KAMERA_MS). Alusta-nappi ajaa saman matkan näkyvissä.
+   * Palauttaa ajon lupauksen, jotta avaus tietää milloin tausta on
+   * paikallaan.
+   */
+  sovitaKaareen(kesto = this.reducedMotion ? 0 : 1400) {
     const { ui } = this;
     const alue = this.kaari.alue;
-    if (!alue || !ui.kartta?.ajaKamera) return;
+    if (!alue || !ui.kartta?.ajaKamera) return Promise.resolve(false);
     // Nauha peittää alalaidan: laatikkoa jatketaan alas sen verran, että
     // kaaren eteläisimmät valot jäävät nauhan yläpuolelle.
     const laatikko = { x: alue.x, y: alue.y, w: alue.w, h: alue.h * 1.28 };
-    void ui.kartta.ajaKamera(
-      { bbox: laatikko, marginaali: 0.05 },
-      { kesto: this.reducedMotion ? 0 : 1400 },
-    );
+    return ui.kartta.ajaKamera({ bbox: laatikko, marginaali: 0.05 }, { kesto });
   }
 
   /* ---------- musiikki (js/siirtymamusiikki.js) ---------- */
@@ -1317,20 +1379,162 @@ class Aikajana {
     if (!this.ui.dead) this.ui.syncAmbience?.();
   }
 
+  /**
+   * Linssi kytkeytyy päälle: kaikki rakennetaan heti, mutta ruudulla
+   * näkyy vain musta ja sen päällä kaaren esittely. Kello lähtee vasta
+   * Käynnistä-napista (aloitaAjo) — ks. AVAUS_PIMENNYS_MS.
+   */
   kaynnista() {
     if (!this.rakenna()) return false;
-    // Koko kaaren pienet kuvat taustalle jo kamera-ajon aikana.
+    /*
+     * Linssin omat elementit odottavat mustan alla, jottei mikään
+     * pompahda ruudulle kesken pimennyksen. Luokka on CSS:ssä (siinä
+     * myös liuku), mutta sama arvo pannaan INLINE-tyyliin varmuudeksi:
+     * css/aikajana.css ladataan vasta linssin auetessa (lataaTyyli), ja
+     * ennen sen saapumista pelkkä luokka ei piilottaisi mitään.
+     */
+    this.juuri.classList.add('avaus-piilossa');
+    this.juuri.style.opacity = '0';
+    // Koko kaaren pienet kuvat taustalle jo pimennyksen aikana.
     this.esilataaPienet();
     this.avaaAanimaailma();
-    // Musiikki lähtee kamera-ajon kanssa, ennen kelloa: linssi alkaa
-    // äänestä eikä vasta ensimmäisestä valosta.
-    this.aloitaMusiikki(true);
+    // Musiikki alkaa jo pimennyksessä mutta HILJAA: täysi linssitaso
+    // tulee vasta Käynnistä-napista, kuten kellokin.
+    this.aloitaMusiikki(false);
     this.vapautaKamera(true);
-    this.sovitaKaareen();
-    // Kamera-ajo ensin, kello lähtee sen jälkeen — pelaaja näkee mistä
-    // aloitetaan ennen kuin ensimmäinen valo syttyy.
-    setTimeout(() => { if (this.juuri?.isConnected && !this.loppu) this.jatka(); }, this.reducedMotion ? 200 : 1500);
+    this.avaaAvausjakso();
     return true;
+  }
+
+  /* ---------- avausjakso ---------- */
+
+  /** Avausjakson ajastin: kaikki talteen, jotta purku voi perua ne. */
+  avausViive(tehtava, ms) {
+    if (!(ms > 0)) { tehtava(); return; }
+    this.avausAjastimet.push(setTimeout(tehtava, ms));
+  }
+
+  tyhjennaAvauksenAjastimet() {
+    for (const id of this.avausAjastimet) clearTimeout(id);
+    this.avausAjastimet.length = 0;
+  }
+
+  /**
+   * Musta peite kartta-alueen päälle ja sen keskelle kaaren esittely.
+   * Teksti tulee DATASTA (linssin `aikajana.esittely`), ei koodista:
+   * omistaja hioo sanat kaarikohtaisesti.
+   */
+  avaaAvausjakso() {
+    const koti = this.ui.mapPane;
+    if (!koti) return;
+    const esittely = this.kaari.esittely ?? {};
+    const otsikko = esittely.otsikko ?? this.kaari.otsikko;
+    this.avaus = solmu('div', 'aikajana-avaus');
+    this.avaus.setAttribute('role', 'dialog');
+    this.avaus.setAttribute('aria-modal', 'true');
+    this.avaus.setAttribute('aria-label', otsikko);
+    /*
+     * KAKSI KERROSTA LAATIKON ALLA (ks. css/aikajana.css AVAUSJAKSO):
+     * alimpana sumennin (pelkkä backdrop-filter, ei omaa väriä) ja sen
+     * päällä peite (pelkkä väri, ei suodattimia). Jos selain ei piirrä
+     * sumennusta — mitattu WebKitissä 4.9.2026 — musta ja himmennys
+     * tulevat silti. Laatikko on kummankin päällä ja pysyy terävänä.
+     */
+    this.avausSumennin = solmu('div', 'aikajana-avaus-sumennin');
+    this.avausSumennin.setAttribute('aria-hidden', 'true');
+    this.avausPeite = solmu('div', 'aikajana-avaus-peite');
+    this.avausPeite.setAttribute('aria-hidden', 'true');
+    const laatikko = solmu('div', 'aikajana-avaus-laatikko');
+    laatikko.appendChild(solmu('h2', 'aikajana-avaus-otsikko', otsikko));
+    if (esittely.teksti) laatikko.appendChild(solmu('p', 'aikajana-avaus-teksti', esittely.teksti));
+    this.avausNappi = solmu('button', 'aikajana-avaus-nappi', 'Käynnistä');
+    this.avausNappi.type = 'button';
+    this.avausNappi.addEventListener('click', () => this.aloitaAjo());
+    laatikko.appendChild(this.avausNappi);
+    this.avaus.append(this.avausSumennin, this.avausPeite, laatikko);
+    koti.appendChild(this.avaus);
+    this.avausKesken = true;
+
+    const heti = this.reducedMotion;
+    // Pakotettu asettelu, jotta selain näkee alkuasennon (opacity 0)
+    // omana tilanaan eikä hyppää suoraan mustaan.
+    void this.avaus.getBoundingClientRect();
+    this.avaus.classList.add('musta');
+    /*
+     * TAUSTA VALMIIKSI PIMEÄSSÄ. Kamera-ajo lähtee vasta kun ruutu on
+     * musta, joten kartan hyppyä ei näe. Sumennusvaiheeseen siirrytään
+     * kun ajo on ohi ja laatat ehtineet piirtyä (kaksi kehystä) — tai
+     * viimeistään katon täytyttyä, jottei hidas laatta jumita avausta.
+     */
+    const katto = new Promise((valmis) => this.avausViive(valmis, heti ? 0 : AVAUS_TAUSTAN_KATTO_MS));
+    this.avausViive(() => {
+      if (!this.avausKesken) return;
+      this.avaus.classList.add('laatikko-nakyy');
+      this.avausNappi?.focus?.({ preventScroll: true });
+      const ajo = Promise.resolve(this.sovitaKaareen(heti ? 0 : AVAUS_KAMERA_MS))
+        .then(() => new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok))));
+      // Alaraja on otsikon lukuaika, yläraja katto: kumpikin täyttyy.
+      const lukuaika = new Promise((ok) => this.avausViive(ok, heti ? 0 : AVAUS_LUKUAIKA_MS));
+      Promise.all([Promise.race([ajo, katto]), lukuaika]).then(() => this.sumennaTausta());
+    }, heti ? 0 : AVAUS_PIMENNYS_MS);
+  }
+
+  /**
+   * Vaihe 2: musta ohenee himmeäksi ja linssin omat elementit tulevat
+   * sen taakse näkyviin. Sumennus on SUMENTIMEN backdrop-filter eikä
+   * kartan oma suodatin: filter-kerros kartta- tai SVG-solmussa jäi
+   * iOS-kuoressa mitatusti tyhjäksi.
+   */
+  sumennaTausta() {
+    if (!this.avausKesken || !this.avaus?.isConnected) return;
+    this.avaus.classList.add('sumea');
+    this.naytaLinssi();
+  }
+
+  /** Linssin juuri esiin: sekä inline-varmistus että luokka pois. */
+  naytaLinssi() {
+    if (!this.juuri) return;
+    this.juuri.style.opacity = '';
+    this.juuri.classList.remove('avaus-piilossa');
+  }
+
+  /**
+   * KÄYNNISTÄ-NAPPI (omistaja 4.9.2026 aamu: *"kun käynnistän nappia
+   * painetaan, niin lähinnä aloitustekstilaatikko häviää ja bluraus
+   * poistuu ja silloin ollaan jo heti aloitus näkymässä ja vuosiluvut
+   * alkavat virrata"*). Laatikko häipyy, peite katoaa ja kello lähtee
+   * samalla hetkellä; musiikki nousee täyteen linssitasoon.
+   */
+  aloitaAjo() {
+    if (!this.avausKesken) return;
+    this.avausKesken = false;
+    this.tyhjennaAvauksenAjastimet();
+    this.naytaLinssi();
+    const avaus = this.avaus;
+    this.avausNappi = null;
+    this.avausPeite = null;
+    this.avausSumennin = null;
+    if (avaus) {
+      avaus.classList.remove('laatikko-nakyy');
+      avaus.classList.add('pois');
+      // Väistyvä peite ei enää nappaa napautuksia: kartta on pelaajan.
+      avaus.style.pointerEvents = 'none';
+      const pois = () => { avaus.remove(); if (this.avaus === avaus) this.avaus = null; };
+      if (this.reducedMotion) pois(); else setTimeout(pois, AVAUS_POISTUMA_MS);
+    }
+    this.jatka();
+    this.aloitaMusiikki(true);
+  }
+
+  /** Avausjakso pois yhdellä kertaa: ajastimet, peite ja laatikko. */
+  puraAvaus() {
+    this.avausKesken = false;
+    this.tyhjennaAvauksenAjastimet();
+    this.avaus?.remove();
+    this.avaus = null;
+    this.avausPeite = null;
+    this.avausSumennin = null;
+    this.avausNappi = null;
   }
 
   jatka() {
@@ -1610,7 +1814,8 @@ class Aikajana {
     this.paattaEnnakko();
     this.asettele();
     // Kertoja lukee vuoden, keksijän ja keksinnön (js/linssipuhe.js).
-    soitaLinssiluenta(this.ui, t);
+    // Avausjakson aikana selostaja vaikenee: esitys alkaa vasta napista.
+    if (!this.avausKesken) soitaLinssiluenta(this.ui, t);
   }
 
   /**
@@ -1996,6 +2201,22 @@ class Aikajana {
   /** Nuolinäppäimet selaavat pysäkkejä (sama tauko kuin napautuksessa). */
   nappain(e) {
     if (!this.juuri?.isConnected || this.ui.dead) return;
+    /*
+     * AVAUSJAKSO OMII NÄPPÄIMISTÖN: Enter tai välilyönti käynnistää
+     * esityksen, Esc sulkee linssin. Nuolet eivät selaa pysäkkejä
+     * ennen kuin ajo on alkanut. preventDefault estää myös fokusoidun
+     * napin oman napautuksen, joten Käynnistä ei laukea kahdesti.
+     */
+    if (this.avausKesken) {
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        this.aloitaAjo();
+      } else if (e.key === 'Escape' || e.key === 'Esc') {
+        e.preventDefault();
+        this.ui.pysaytaAikajana?.();
+      }
+      return;
+    }
     if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
     const kohde = this.tila.i + (e.key === 'ArrowRight' ? 1 : -1);
     if (kohde < 0 || kohde >= this.tapahtumat.length) return;
@@ -2033,6 +2254,8 @@ class Aikajana {
 
   pura() {
     this.pysayta();
+    // Sulkeminen kesken avauksen: peite, laatikko ja ajastimet pois.
+    this.puraAvaus();
     pysaytaLinssiluenta(this.ui);
     suljeTiedeliite(this.ui);
     this.lopetaMusiikki();
