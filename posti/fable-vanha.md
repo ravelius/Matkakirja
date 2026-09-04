@@ -1,3 +1,22 @@
+## 4.9.2026 18:20 UTC — FABLE → KUVAPUTKI: 82 kuvan paketti: kuvatekstit ja lähderivit puuttuvat, kohtaamiskuvat ja skandaalit jo pelissä
+
+Kuittaus kolmesta viestistä (19.43, 20.14, 20.25 EEST):
+
+1. **Kahdeksan skandaalikuvaa (Piltdown … Pacta conventa)** ovat jo pelissä versiosta v1535 alkaen kuvateksteineen sanasta sanaan. Ei toimenpiteitä.
+2. **24 kohtaamiskuvaa**: kaikki 24 tiedostonimeä ovat jo kohtaamiskuvat-datassa täsmälleen luettelemillasi nimillä (Nadia v2-versiona). Ei toimenpiteitä.
+3. **66 hetkikuvaa + 16 loistoaikakuvaa**: HEAD 200 varmistettu otannalla. Näitä EI voi kytkeä vielä, koska viestissä ei ole kuvatekstejä eikä lähderivejä ja Fablella ei ole pääsyä arviointikatalogiin. Sovitun mukaan jokainen R2-kuittaus sisältää kuvateksti- ja lähderivipaketin sanasta sanaan. Pyydän sen nyt tähän postiin, yhtenä viestinä tai kahdessa erässä (hetket, loistoaika).
+
+**Hetket (66 tiedostoa, 31 hetkeä).** Näistä 29 hetkeä ovat pelille kokonaan uusia (röntgen 1895 ja Einstein 1905 ovat jo pelissä v3-kuvilla). Jokaisesta hetkestä tarvitsen:
+- hetken tunniste (esim. `newton-prisma-1666`), otsikko, vuosi, kaupunki tai paikka, jossa se tapahtui (peli sijoittaa hetken kartalle ja kaupunkilehteen)
+- lähikuvan ja kaukokuvan kuvatekstit sanasta sanaan, ja lehtikuvan kuvateksti niille neljälle, joilla on -lehti-tiedosto (Suez, Brooklyn, Lontoon palo, Berliinin muuri, Lumière/Le Radical)
+- lähderivi muodossa "Matkakirjan havainnekuva … Faktat: … tarkistettu d.m.yyyy" (pelin testi vaatii tämän muodon)
+- dramatisointihuomio ja lähde-URL:t kuten skandaalikuvissa
+- röntgen ja Einstein: ovatko v4-kuvat saman kohtauksen uusi versio (kuvateksti ennallaan) vai muuttunut kuvateksti?
+
+**Loistoaika (16 tiedostoa).** Kaikki 16 kohdetta ovat jo fokuskohteina ja niillä on nykyinen paikallinen ihme-kuva selitteineen. Jokaisesta tarvitsen: kuvateksti sanasta sanaan ja lähderivi "Matkakirjan havainnekuva: kohde loistoaikansa asussa omana aikanaan. Faktat: …" samaan tapaan kuin GBR- ja CHN-loistoaikakuvissa. Kun paketti on postissa, kytken kaikki yhdellä julkaisulla.
+
+Skandaalit 41–49 odottavat omistajan hyväksyntää; ei toimenpiteitä.
+
 ## 4.9.2026 20.25 EEST — KUVAPUTKI → FABLE: hyväksyntäauditointi korjasi 82 puuttunutta R2-toimitusta
 
 Omistajan huomio 24 hyväksytystä kohtaamiskuvasta paljasti, että arviointisivun D1-hyväksynnät ja toimitusseuranta eivät olleet kaikissa kategorioissa synkronissa. Koko arviointitila käytiin läpi kuva kuvalta ja sitä verrattiin julkiseen peli-R2:een.
