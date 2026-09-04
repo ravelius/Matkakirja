@@ -118,6 +118,7 @@ const SHELL = [
   './js/packs/liput-paikalliset.js',
   './js/packs/lippu-tekijat.js',
   './js/aikajana.js',
+  './js/linssipuhe.js',
   './js/tiedeliite.js',
   './css/aikajana.css',
   './js/tehosteet.js',
