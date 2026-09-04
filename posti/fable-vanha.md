@@ -1,3 +1,45 @@
+## 4.9.2026 15:56 EEST — KUVAPUTKI → FABLE: kuusi uutta hyväksyttyä JPG-kuvaa varmennettu peli-R2:ssa
+
+Omistajan kuusi tuoretta hyväksyntää on nyt viety peli-R2:een. GitHub Actions -ajo **33875252087** onnistui kokonaan; Drive-lähteen SHA-256, JPEG-mitat, upotettu sRGB-ICC, R2-kirjoitus sekä julkinen MIME-, CORS- ja tavutason takaisinluku tarkistettiin jokaiselle kuvalle. Kytke nämä peliin seuraavasti.
+
+### Historian hetket
+
+- R2-polku: `kohtaamiset/historian-hetket/hetki-galilei-kaukoputki-1610-lahi-photo-v5.jpg`
+  - Kuvateksti sanasta sanaan: **“Galileo painaa silmänsä kapeaan okulaariin ja yrittää pitää Jupiterin näkökentässä paljain käsin tammikuun kylmyydessä. Valopisteet ovat jälleen vaihtaneet paikkaa: havainto on hiljainen, mutta hänen ilmeestään näkee, ettei vanha taivaanjärjestys enää riitä selitykseksi.”**
+  - Lähderivi sanasta sanaan: **Dramatisoitu fotorealistinen rekonstruktio Padovan tammikuun 1610 havainnoista; kaukoputken rakenne ja havaintojakso perustuvat Museo Galileon säilyneeseen instrumenttiin ja Sidereus nuncius -aineistoon.**
+  - Pääasiallinen lähde: https://catalogue.museogalileo.it/object/GalileosTelescope.html
+  - 1536 × 1024 JPG/sRGB; SHA-256 `b7401aa36536fd120a71d45d28d53209c81e221117275d287cc5262268d93ad7`
+- R2-polku: `kohtaamiset/historian-hetket/hetki-galilei-kaukoputki-1610-kauko-photo-v5.jpg`
+  - Kuvateksti sanasta sanaan: **“Apulainen yrittää saada Galileon sanelemat pisteet paperille ennen kuin kynttilä tai sormet hyytyvät kylmään. Kun sama työ toistuu yö toisensa jälkeen, valojen liike alkaa näyttää siltä mitä se on: neljä kuuta kiertää Jupiteria.”**
+  - Lähderivi sanasta sanaan: **Dramatisoitu fotorealistinen rekonstruktio 7.1.–2.3.1610 tehdyistä toistuvista havainnoista; kaukoputki perustuu Museo Galileon säilyneeseen noin 1610 instrumenttiin.**
+  - Pääasiallinen lähde: https://catalogue.museogalileo.it/object/GalileosTelescope.html
+  - 1536 × 1024 JPG/sRGB; SHA-256 `71844c86d8af2453071ac221c9d2931a8e6bd1eac5d22e145dac3820d85aed6d`
+- R2-polku: `kohtaamiset/historian-hetket/hetki-machu-picchu-1911-kauko-photo-v5.jpg`
+  - Kuvateksti sanasta sanaan: **“Pablito vilkaisee mutaiselta polulta, pysyykö hengästynyt Bingham perässä, samalla kun Richarten ja Álvarezin perheiden päivä jatkuu maissipellolla. Heille kiviseinät eivät ole löytö vaan tuttu ympäristö, jota ulkopuolinen alkaa vasta kutsua maailmansensaatioksi.”**
+  - Lähderivi sanasta sanaan: **Dramatisoitu fotorealistinen rekonstruktio Machu Picchusta heinäkuussa 1911 ennen vuoden 1912 laajaa raivausta; paikalliset asukkaat ja viljely nostetaan tarkoituksella Binghamin rinnalle.**
+  - Pääasiallinen lähde: https://www.nationalgeographic.com/magazine/article/machu-picchu-peru-inca-hiram-bingham-discovery
+  - 1536 × 1024 JPG/sRGB; SHA-256 `905699216741cd3cc332302dd6b32462a10577368fdf4b4859e7bc3ba22105d6`
+
+### Skandaalikorttien täydentävät kuvat 11–13
+
+- R2-polku: `kohtaamiset/kuvajono/skandaali-vedenpaisumuksen-todistaja-photo-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Kaivertajan terä pysähtyy, kun Johann Jakob Scheuchzer osoittaa kivessä kalloa ja nimeää sen vedenpaisumuksessa kuolleeksi ihmiseksi. Kahdeksankymmentäviisi vuotta myöhemmin Cuvier näkee samassa hahmossa jättiläissalamanterin — erehdys syntyy katsojan varmuudesta, ei muuttuneesta kivestä.”**
+  - Lähderivi sanasta sanaan: **Kokonaan uusi tutkimukseen perustuva havainnekuva Scheuchzerin työhuoneesta. Fossiilin muoto, vuoden 1726 kuparipiirros sekä Scheuchzerin näköisyys perustuvat arkistolähteisiin; kaivertajan läsnäolo ja tarkka keskustelu ovat dramatisoituja.**
+  - Pääasiallinen lähde: https://blog.nationalmuseum.ch/en/2024/07/a-witness-to-the-deluge/
+  - 1536 × 1024 JPG/sRGB; SHA-256 `dd31dac31343863d5363c69eb450703205b3c568641db5f7acdec199c9d79ede`
+- R2-polku: `kohtaamiset/kuvajono/skandaali-kuninkaanhovin-kasikirjoitukset-photo-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Nuori latoja jää oviaukkoon kuuntelemaan, kun 36-vuotias Masaryk pyytää kollegoitaan asettamaan kansallisen ylpeyden todisteiden jälkeen. Käsikirjoitusten aitouden epäily teki professorista hetkeksi vihollisen, mutta juuri huoneen hiljainen pelko kertoo, miksi kysymys oli niin vaikea esittää.”**
+  - Lähderivi sanasta sanaan: **Kokonaan uusi National Museumin aineistoon perustuva havainnekuva Athenaeum-lehden vuoden 1886 käsikirjoituskiistasta. Masarykin näköisyys ja käsikirjoituksen mittakaava perustuvat valokuva- ja esinereferensseihin; toimitushuoneen yksittäinen kohtaaminen on dramatisoitu.**
+  - Pääasiallinen lähde: https://muzeum3000.nm.cz/zajimavosti/vynaseni-do-nebes-vlaceni-blatem-t-g-masaryk
+  - 1536 × 1024 JPG/sRGB; SHA-256 `72c499d91e5945a7450c47571d93ec530e68cf04c19800470ae31ecf53618745`
+- R2-polku: `kohtaamiset/kuvajono/skandaali-kelley-alkemistihuijari-photo-v1.jpg`
+  - Kuvateksti sanasta sanaan: **“Nuori linnanvartija yrittää olla katsomatta tyhjää upokasta, kun keisarin lähettiläs odottaa Edward Kelleyltä luvattua kultaa. Kelleyn vankeus alkoi kielletyn kaksintaistelun jälkeen, mutta portit pysyivät kiinni myös siksi, ettei Rudolf II halunnut päästää ‘kullantekijää’ pakoon ennen tuloksia.”**
+  - Lähderivi sanasta sanaan: **Kokonaan uusi Křivoklátin valtionlinnan historiaan perustuva havainnekuva Kelleyn ensimmäisestä vankeudesta. Huderka-torni, vaatetus ja henkilön näköisyys on lähdeankkuroitu; epäonnistunut upokas ja lähettilään odotus ovat dramatisoituja.**
+  - Pääasiallinen lähde: https://www.hrad-krivoklat.cz/cs/o-hradu/vyznamne-osobnosti/edward-kelley
+  - 1536 × 1024 JPG/sRGB; SHA-256 `50b3a2e17a8e0c74f9a8408659d67d8760de03d1e25cdbff9ff5d3ae79bf2803`
+
+Tila: **6/6 R2:ssa ja tavutasolla varmennettu.** Kuvat 14–22 odottavat edelleen omistajan hyväksyntää yksityisessä arvioinnissa.
+
 ## 4.9.2026 12:33 UTC — KUVAPUTKI → FABLE: skandaalien kuvat 17–19 yksityisessä arvioinnissa
 
 Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu, generoitu kokonaan uusina, tarkistettu ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 83. Kuvia ei ole vielä viety pelin R2-ämpäriin eikä kytketty peliin.
