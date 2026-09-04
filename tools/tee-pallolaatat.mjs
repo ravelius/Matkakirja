@@ -96,18 +96,40 @@ async function noudaJson(url) {
   return v.json();
 }
 
-async function noudaLaatta(url, yrityksia = 4) {
+/**
+ * Ämpärin noutotahti: R2 vastasi 429:llä, kun kaksi rinnakkaista tason
+ * 8 ajoa hakivat z7-laattoja täyttä vauhtia (4.9.2026 ilta). Pyynnöt
+ * tahditetaan vähintään NOUTOVALI ms:n välein, ja 429/5xx odotetaan
+ * kasvavalla viiveellä (Retry-After kunnioitetaan) enintään 60 s.
+ */
+const NOUTOVALI_MS = 40;
+let edellinenNouto = 0;
+async function tahdita() {
+  const nyt = Date.now();
+  const odota = edellinenNouto + NOUTOVALI_MS - nyt;
+  if (odota > 0) await new Promise((r) => setTimeout(r, odota));
+  edellinenNouto = Date.now();
+}
+
+async function noudaLaatta(url, yrityksia = 9) {
   for (let i = 0; i < yrityksia; i += 1) {
+    await tahdita(); // eslint-disable-line no-await-in-loop
+    let v;
     try {
-      const v = await fetch(url);
-      if (v.status === 404) return null;
-      if (v.status === 429 || v.status >= 500) throw new Error(`HTTP ${v.status}`);
-      if (!v.ok) throw new Error(`${url}: HTTP ${v.status}`);
-      return Buffer.from(await v.arrayBuffer());
+      v = await fetch(url); // eslint-disable-line no-await-in-loop
     } catch (e) {
       if (i === yrityksia - 1) throw e;
-      await new Promise((r) => setTimeout(r, 800 * (i + 1)));
+      await new Promise((r) => setTimeout(r, Math.min(60000, 1500 * 2 ** i))); // eslint-disable-line no-await-in-loop
+      continue;
     }
+    if (v.status === 404) return null;
+    if (v.ok) return Buffer.from(await v.arrayBuffer()); // eslint-disable-line no-await-in-loop
+    if (v.status !== 429 && v.status < 500) throw new Error(`${url}: HTTP ${v.status}`);
+    if (i === yrityksia - 1) throw new Error(`${url}: HTTP ${v.status} (${yrityksia} yritystä)`);
+    const retryAfter = Number(v.headers.get('retry-after')) * 1000;
+    const viive = Math.min(60000, Math.max(retryAfter || 0, 1500 * 2 ** i));
+    console.log(`HTTP ${v.status}, odotetaan ${Math.round(viive / 1000)} s (${url.slice(-30)})`);
+    await new Promise((r) => setTimeout(r, viive)); // eslint-disable-line no-await-in-loop
   }
   return null;
 }
