@@ -1,3 +1,40 @@
+## 4.9.2026 20.14 EEST — KUVAPUTKI → FABLE: KORJAUS — kaikki 24 hyväksyttyä kohtaamiskuvaa ovat R2:ssa
+
+Omistaja vahvisti kuvakaappauksella, että Kohtaamiskuvat-kategoriassa on **24 hyväksyttyä kuvaa**. Aiempi kuittaukseni kahdeksasta tuoreesta hyväksynnästä oli liian kapea: se koski vain viimeisintä erää, ei kategorian koko hyväksyttyä joukkoa.
+
+Tarkistin D1:n kaikki 24 hyväksyttyä kohtaamiskuvatietuetta, paikalliset JPG:t ja julkisen peli-R2:n. Jokainen alla oleva tiedosto on neliö 1536 × 1536 JPG, palauttaa julkisesta R2-osoitteesta HTTP 200 ja vastaa paikallista hyväksyttyä tiedostoa täsmälleen SHA-256-tasolla. Yhtäkään tiedostoa ei kirjoitettu uudelleen eikä aiempaa versiota korvattu, koska kaikki 24 olivat jo tavuntarkasti R2:ssa.
+
+Julkinen juuri: `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/`
+
+- `dublin-molly-hapenny-v1.jpg` — `313241cfdda2eee51baee5a1797584e3afe41962f3b1bb69df1efbc16785cb7e`
+- `moskova-vera-tsaarinkello-v1.jpg` — `682343e849632abc84b63e1cb22d79eb38b66284328a02dfc3bae5270fdc183e`
+- `helsinki-aino-luotsi-v1.jpg` — `ab5cd8f02d27200a67ae7d2b3dffb11e15e0f793d68c47f9c4004f6bff8c5315`
+- `riika-ilze-kultalehti-v1.jpg` — `2e42e96c9b240fc2e25dd8a064a7fbd5aaef18a50c3e6a99f23e7a5bf720b90d`
+- `sofia-nadia-mineraalilahde-v2.jpg` — `ad8d6ebb3587d87bf05ea74125b7f983ca94221fb5ddd41ac74fc75dcd26a518`
+- `wien-anton-katakombit-v2.jpg` — `d1508272de6ed41cf00dfdddd8b4fcd53d885725a9add0e9842811eded118519`
+- `kasvo-vilna-rasa-myrskytorni.jpg` — `f2b86f6f1de619f91483784b706ac23bb53902b43c5a6826948ebf4d80c39b7f`
+- `kasvo-lissabon-ines-laattapaja.jpg` — `af0a12489e9d06cf85da6c0331a1d2c542fdd715495686c271cec07730c52478`
+- `kasvo-berliini-lotte-auto.jpg` — `d093fa74239ca89ffe14f2f851d8d918944765e53746c1bc490d6bc810ad2dee`
+- `kasvo-amsterdam-pyorailija-aamu.jpg` — `bb1d803dcb54350e99a6d1639cb6580eb959f15a20f95f4471b00947529c00d8`
+- `kasvo-istanbul-emine-riipunta-a.jpg` — `ec7dcb9736f53dfb85f7c108bc283ca09a7e452d1c3d366299d06684f490b8c4`
+- `kasvo-la-paz-killi-killi.jpg` — `db4006d42b9ff67ae91fe8902622a97d0c7d979ae075ccdf63abb77a42cd1717`
+- `kasvo-budapest-aiti-tytar-smoothie.jpg` — `86b2569adbabc2fc7605e061970c08448ca0964b647980b9dc6b83234f5c5230`
+- `kasvo-amsterdam-koysityontekija.jpg` — `d584315489eb82d9e409c66f5a1137dc009f35b99e53931f42f7dd0d77b3c652`
+- `kasvo-barcelona-merce-konfetti.jpg` — `cf9c5e0603769ae4e6a5122cad0dc26ad76f533a5f8d6c717e420a4d96cfbee4`
+- `kasvo-budapest-marta-kylpyla-a.jpg` — `9b550a161c89aa5faad8c2c75d0f249cacda3c81627ce8aa0b67d00bad02bc09`
+- `kasvo-venetsia-lucia-naamio-vene.jpg` — `04307d820721e76bd80747d7d730261da1321c304e0b0ff50ed62f8f47c6a640`
+- `kasvo-palermo-marionettipari.jpg` — `6c8a6c6b3dcca8e2f7e3bb09d6c991809fdf25ad1398eb5adeb53f51bd7febee`
+- `kasvo-pariisi-kirjamyyjat-pulu.jpg` — `061ecc996b5536a4da61541b233d8b9a4468de68d218bf253b10ad0763604cc8`
+- `kasvo-madrid-pilar-puerta-del-sol.jpg` — `1d8702137a4c36151413173cabeadb5aa514216f164e2ce095e23b088c1568e7`
+- `kasvo-krakova-stanislaw-trumpetti.jpg` — `1eda41015b5e5571505f667a8669d7cb5195727a720f044789aa096bac7d6b3f`
+- `kasvo-tukholma-astrid-maailmanpyora-c.jpg` — `effdcaebe6c4d7f2c06e94489161c4f76ebdaaa7a27d5a46cf59e838000e05cc`
+- `bukarest-ana-freskokonservointi-v2.jpg` — `5d65131d85e2cc36f8f0a9815cfa5a89ef73564a1354aa0c5cc1e71012bf6bae`
+- `sofia-mila-vitosha-nuotio-v2.jpg` — `3966e97dcdf6383d131cb574091e9d060a506ba4f0736f4adaddb85f48eb9c20`
+
+Kytke nämä kaikki hyväksytyiksi kohtaamiskuviksi peliin. Käytä `sofia-nadia-mineraalilahde-v2.jpg`-versiota Nadialle muiden Nadia-versioiden sijaan. Säilytä vanhat tiedostot R2:ssa; niitä ei tarvitse poistaa.
+
+---
+
 ## 4.9.2026 19.43 EEST — KUVAPUTKI → FABLE: kahdeksan uutta hyväksyttyä skandaalikuvaa varmennettu peli-R2:ssa
 
 Omistajan tämäniltaiset kahdeksan uutta skandaalikuvahyväksyntää on viety suoraan peli-R2:n `kohtaamiset/kuvajono/`-polkuun. Ennen kirjoitusta kaikki kohteet palauttivat HTTP 404:n, joten yhtäkään aiempaa versiota ei korvattu. Kirjoituksen jälkeen jokaisesta varmennettiin julkinen `image/jpeg`-MIME, CORS, upotettu sRGB-ICC ja täsmälleen paikallista hyväksyttyä JPG:tä vastaava SHA-256. Kytke ne seuraaviin skandaalikortteihin.
