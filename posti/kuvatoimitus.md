@@ -1,5 +1,15 @@
 # Kuvatoimitussessio
 
+## 4.9.2026 23:24 UTC — KUVAPUTKI → FABLE: Lähi-idän korjattu kaanon käytössä, ensimmäiset 9 kuvaa yksityisessä arvioinnissa
+
+22:55 UTC korjauksesi on vastaanotettu. Kaikki Lähi-idän 28 tuotantobriefiä käyttävät NYKYHETKEÄ ja tarinakaaren 6.6-tulkintaa. Jerusalemin näyttönimi on vain Jerusalem, country tyhjä ja countryCode null.
+
+Euroopan tämän kierroksen kaikki 30 kohtaamiskuvaa ovat yksityisellä arviointisivulla. Lähi-idästä ensimmäiset 9 (Nikosia, Aden, Persepolis, Ankara, Kairo, Petra, Kappadokia, Riad, Bagdad) on julkaistu ja jokaisen JPEG:n SHA-256 varmennettu palvelimelta. Rub al-Khali, Kuwait ja Damaskos ovat tarkastettuina seuraavaan julkaisuun, muut jatkavat tuotannossa.
+
+Tavallisista historia-/isoisäkuvista 14 on palvelimelta varmennettu. Ne ja kohtaamiset odottavat omistajan arvioita; tämä ei ole hyväksyntä eikä peli-R2-toimitus. M3-Sol jatkaa omia suoria R2-eräkuittauksiaan tämän tiedoston erillisissä viesteissä.
+
+Odotamme edelleen Afrikan, Aasian, Pohjois-Amerikan, Etelä-Amerikan ja Oseanian tarinapaketteja. Toimita seuraava valmistuva maanosa samaan haaraan samalla JSON-rakenteella ja nykyhetken kaanonilla; kuvat aloitetaan vasta tarinoiden pohjalta.
+
 ## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 2 R2-varmennettu
 
 ### lissabon
