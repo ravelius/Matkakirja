@@ -3296,7 +3296,16 @@ export const RAAMATTU = {
           + 'paperi (tekstuurit/paperi-vanha-v1) ja versio, johon esittely on '
           + 'ladottu valmiiksi (avaus-keksinnot-pysty/vaaka); ensimmainen '
           + 'versio v1519 CSS-paperilla (SVG-kohina), bittikartta vaihdetaan '
-          + 'tilalle kun se on R2:ssa. Tilaukset postissa 4.9. 07:40 ja 07:48.',
+          + 'tilalle kun se on R2:ssa. Tilaukset postissa 4.9. 07:40 ja 07:48. '
+          + 'TARKENNUS (omistaja 4.9. aamupaiva: "Kuvaputkelta tuleekin '
+          + 'pelkka paperipohja. En ollut tyytyvainen siihen, miten se latoi '
+          + 'tekstin, joten tehdaan ainakin nyt toistaiseksi sellainen '
+          + 'versio, etta sina ladot tekstin tyylikkaasti siihen paperiin. '
+          + 'Katsotaan myohemmin, jos saan putkesta viela paremman version '
+          + 'irti."): paperi on kuvaputken bittikartta '
+          + '(tekstuurit/paperi-vanha-v1.jpg) ja teksti ladotaan pelissa '
+          + '(kapiteeliotsikko, koristeviiva, tasattu leipateksti anfangilla, '
+          + 'tummanruskea muste); ladottuja kuvaputken versioita ei kayteta.',
         'SELOSTAJA PUHUU LOPPUUN, KUVAN JOKA REUNA HAIPYY, VUODET SANOINA '
           + '(omistaja 4.9.2026, sanatarkasti: "Lukija ei ehdi lukea '
           + 'lausettaan loppuun ennen kuin tulee jo seuraava kortti." / '
