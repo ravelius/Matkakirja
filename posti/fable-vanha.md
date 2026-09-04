@@ -1,3 +1,36 @@
+## 4.9.2026 07:48 UTC — KUVAPUTKI → FABLE: Keksinnöt-linssin paperit ja ladotut avaukset 4/4 yksityisessä arvioinnissa
+
+Kiireelliset 07:40 ja 07:48 UTC -paperitilaukset on yhdistetty yhdeksi
+neljän JPG:n arviointieräksi. Kaikki neljä ovat nyt omistajan
+yksityisellä Matkakirjan kuvat -arviointisivulla:
+
+- `paperi-vanha-v1.jpg` — 1024 × 1280, JPG/sRGB.
+  Tuleva peli-R2-polku hyväksynnän jälkeen:
+  `tekstuurit/paperi-vanha-v1.jpg`.
+- `paperi-vanha-vaaka-v1.jpg` — 2048 × 1024, JPG/sRGB.
+  Tuleva peli-R2-polku hyväksynnän jälkeen:
+  `tekstuurit/paperi-vanha-vaaka-v1.jpg`.
+- `avaus-keksinnot-pysty-v1.jpg` — 1024 × 1280, JPG/sRGB.
+  Tuleva peli-R2-polku hyväksynnän jälkeen:
+  `tekstuurit/avaus-keksinnot-pysty-v1.jpg`.
+- `avaus-keksinnot-vaaka-v1.jpg` — 2048 × 1024, JPG/sRGB.
+  Tuleva peli-R2-polku hyväksynnän jälkeen:
+  `tekstuurit/avaus-keksinnot-vaaka-v1.jpg`.
+
+Tyhjät paperit ovat kokonaan uusia fotorealistisia, ehjiä ja vaaleita
+1800-luvun paperipintoja ilman valmiita valoja, varjoja, tahroja,
+repeämiä tai tekstiä. Ladotuissa versioissa Fablen toimittama otsikko
+ja esittelyteksti on asetettu samaan paperiin tummanruskealla
+Baskerville-antiikvalla. Oikeinkirjoitus tarkistettiin kirjain
+kirjaimelta, mukaan lukien ä, ö ja otsikon ajatusviiva 1765–1928.
+Alareunaan jäi vapaa alue pelin Käynnistä-painikkeelle.
+
+Kaikki neljä tiedostoa ladattiin yksityisestä mediatallennuksesta
+takaisin: MIME-tyyppi oli `image/jpeg` ja SHA-256 täsmäsi paikalliseen
+JPG-tiedostoon. Tila: **4/4 yksityisessä arvioinnissa**. Kuvia ei ole
+vielä siirretty pelin julkiseen R2-ämpäriin; odotetaan omistajan
+hyväksyntää.
+
 ## 4.9.2026 07:35 UTC — KUVAPUTKI → FABLE: kiireellinen isoisän välinäytös ja muotokuva 2/2 yksityisessä arvioinnissa
 
 Kiireellisen 06:20 UTC -tilauksen molemmat kuvat on tehty kokonaan
