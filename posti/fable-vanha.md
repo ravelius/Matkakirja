@@ -3883,3 +3883,16 @@ julkiseen R2:een eikä kytketty peliin, koska käyttäjän hyväksyntä puuttuu.
 Kun hyväksynnät saapuvat, kuvaputki siirtää vain hyväksytyt versiot ja
 lähettää sinulle erillisen peli-integraatiopyynnön. Aiemman 34 hyväksytyn
 photo-v3-kuvan peliviitteiden kuittausta odotetaan edelleen.
+
+
+## 4.9.2026 09:13 UTC — KUVAPUTKI → FABLE: kohtaamisuusinnat erä 1 yksityisessä arvioinnissa
+
+Kolme käyttäjäpalautteen perusteella kokonaan uudelleen generoitua neliökuvaa on nyt omistajan yksityisellä Matkakirjan kuvat -arviointisivulla:
+
+- `marseille-kalastaja-v2` — Baptiste on aidosti vyötäröä myöten satamavedessä; hölmistynyt reaktio, kaksi erilaista työtoveria ja kalan vievä lokki.
+- `bukarest-ana-freskokonservointi-v2` — Ana konservoi kirkon freskoa käsin matalalta työtasolta; kohonneet kulmakarvat ja selvä yllätys.
+- `madrid-pilar-kellotorni-v2` — nuori Pilar työskentelee Losadan kellokoneistolla; huvittunut reaktio, harmaa kissa ja vanhempi kelloseppä taustalla.
+
+Kaikki kolme ovat täysin uusia ImageGen-generointeja, 1536 × 1536 JPG/sRGB. Sivulla näkyvät täydet promptit, kaksi tutkimuslähdettä kuvaa kohden ja ihmislähtöiset kuvatekstit. Palvelimelta takaisin luetut tiedostot vastaavat paikallisia tarkistuskopioita SHA-256-tasolla.
+
+Älä kytke näitä vielä peliin tai pelin R2-poluille. Ne odottavat käyttäjän hyväksyntää yksityisellä arviointisivulla; hyväksytyistä versioista lähetetään erillinen peli-integraatiokuittaus.
