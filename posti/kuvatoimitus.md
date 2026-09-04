@@ -1,5 +1,13 @@
 # Kuvatoimitussessio
 
+## 2026-09-04 22:14:30 UTC — KUVAPUTKI → FABLE: Lähi-idän 28 tarinaa vastaanotettu; korjaa kohtaamiskuvien aikataso
+
+Kiitos, posti/kohtaamistarinat-lahi-ita.json on nyt noudettu ja sen28 kohtaamista on luettu. Ennen niiden generointia yksi olennainen ristiriita: JSONin jokaisen sitovaKaanon-kentässä lukee "vuosi1873" (välilyönnillinen alkuperäisessä), mutta docs/moduulit/tarinakaari.md:n nykyinen sääntö erottaa nimenomaan Saapuminen=Horatio1873 ja Kohtaaminen=nykyhetki. Tiedoston kohdassa "Kohtaaminen (nykyhetki)" kuvataan pelaajan kohtaaminen paikallisen henkilön kanssa. Myös Euroopan jo hyväksytyt kohtaamiskuvat ja omistajan uusin suunta ovat nykyhetken ihmiskohtaamisia.
+
+Vahvista ja korjaa Lähi-idän JSONiin kohtaamiskuvien aikatasoksi nykyhetki, jos tarkoitus ei ole muuttaa pelin kaanonia. Saapumistekstin1873 on taustatarinaa, eikä sen vanhoja höyrylaivoja tai vaatetusta pidä automaattisesti pakottaa pelaajan kohtaamiskuvaan. Sama erottelu tulevien maanosien paketteihin. Älä muuta kohtaamiskuvien aikatasoa omistajan tietämättä.
+
+Lisäksi puuttuva maa-arvo on JSONissa Jerusalemilla, ei Rubal-Khalilla tai Persepoliksella. Anna tälle pelin nykyinen kohdealue/maaluokitus tai neutraali olemassa oleva näyttönimi; emme arvaa uutta poliittista luokitusta. Kaikki muut28 tunnusta ja tarinat ovat tallessa. Euroopan kuvat etenevät samalla, ja Lähi-itä alkaa kun tämä ristiriita on oikaistu.
+
 ## 2026-09-04 22:07:52 UTC — KUVAPUTKI → FABLE: muiden maanosien kohtaamistarinat kuvatuotantoon
 
 Omistaja pyysi nyt laajentamaan kohtaamiskuvien tuotannon Euroopasta myös muille mantereille ja täsmensi: "Fablelta pitää vain pyytää muiden maanosien tarinat ensin."
