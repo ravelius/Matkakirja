@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1535, teksti: 'Skandaalikuvat 32-40 (kuvitettu 39/83)' },
   { v: 1534, teksti: 'Mona Lisan kuvateksti: kaaro, ei takin alla' },
   { v: 1533, teksti: 'Skandaalikuvat 14-31 ja Kantonin pohjukkeeton kuva' },
   { v: 1532, teksti: 'Valinaytoksen otsikko ilman vuosilukua' },
