@@ -842,7 +842,7 @@ test('paneelinvaihto pakottaa lähtöarvon ja liuuttaa korkeuden vanhasta uuteen
   assert.match(MOOTTORI, /this\.paneeli\.style\.height = `\$\{Math\.max\(sivu\.offsetHeight \+ reunat, pohja\)\}px`;/);
   // Pohjan ehto katsoo ESILLÄ olevaa sivua: vaihdon aikana paneelissa
   // on kaksi sivua, ja väistyvä kuvasivu antoi väärän pohjan.
-  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio:has\(> \.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child\) \{ min-height: 0; \}/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio:has\(> \.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:first-child\) \{ min-height: 0; \}/);
   // Lukko avataan häivytyksen jälkeen, ja vanhentunut ajastin ei avaa uudempaa.
   assert.match(MOOTTORI, /this\.paneelinKorkeusMerkki === merkki\) this\.paneeli\.style\.height = '';/);
   assert.match(MOOTTORI, /setTimeout\(\(\) => v\.remove\(\), PANEELIN_HAIVYTYS_MS\)/);
@@ -1268,8 +1268,8 @@ test('välinäytös on tekstiä kartan päällä, ei korttia; Jatka hehkuu yläp
   assert.match(metodi('avaaAvausjakso'), /this\.sammutaLyhdyt = sytytaLyhdyt\(laatikko, \{ reducedMotion: this\.reducedMotion \}\);/);
   assert.match(metodi('puraAvaus'), /this\.sammutaLyhdyt\?\.\(\);/);
   // Havainnekuva valokeilassa: pelkkä kuva -paneeli ilman laatikkoa, reunat läpinäkyviksi maskilla (ei suodatin).
-  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child,[\s\S]*?mask-image: radial-gradient\(ellipse 50% 50% at 50% 50%, #000 44%, rgba\(0, 0, 0, 0\.72\) 62%, rgba\(0, 0, 0, 0\.24\) 82%, transparent 97%\);/);
-  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio:has\(> \.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child\) \{\n  border-color: transparent;\n  background: transparent;\n  box-shadow: none;\n\}/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:first-child,[\s\S]*?mask-image: radial-gradient\(ellipse 50% 50% at 50% 50%, #000 44%, rgba\(0, 0, 0, 0\.72\) 62%, rgba\(0, 0, 0, 0\.24\) 82%, transparent 97%\);/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio:has\(> \.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:first-child\) \{\n  border-color: transparent;\n  background: transparent;\n  box-shadow: none;\n\}/);
   assert.ok(!lohko.includes('backdrop-filter'), 'välinäytös ei sumenna karttaa');
   /*
    * KERROS JÄÄ PULUN KUPLAPINON ALLE (.pollo-kuplapino-kehys z-index
