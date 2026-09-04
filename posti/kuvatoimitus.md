@@ -1,5 +1,70 @@
 # Kuvatoimitussessio
 
+## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 2 R2-varmennettu
+
+### lissabon
+
+- `lissabon-alves-dos-reis`
+- `lissabon-ultimaatum-1890`
+- `lissabon-kolumbus-1484`
+
+### barcelona
+
+- `barcelona-font-de-canaletes`
+- `barcelona-roviran-aukio`
+
+### granada
+
+- `granada-sacromonten-luolat`
+- `granada-albaicinin-nakoalapaikka`
+- `granada-generalife`
+- `granada-granadan-katedraali`
+- `granada-alhambra`
+- `granada-manuel-de-fallan-talo`
+- `granada-irvingin-huoneet`
+- `granada-alcaiceria`
+
+### marseille
+
+- `marseille-mucem`
+- `marseille-marseillen-katedraali`
+- `marseille-saint-victorin-kirkko`
+- `marseille-vanhasatama`
+- `marseille-notre-dame-de-la-garde`
+- `marseille-saint-charlesin-asema`
+
+### helsinki
+
+- `helsinki-loyly-ja-avanto`
+- `helsinki-kantele`
+- `helsinki-finlandia`
+- `helsinki-pirtukuningas`
+- `helsinki-nurmen-kohu`
+
+### amsterdam
+
+- `amsterdam-timanttihiomo`
+- `amsterdam-amsterdam-laiva`
+
+### dublin
+
+- `dublin-kellsin-kirja`
+- `dublin-ouzel-galley`
+
+### pariisi
+
+- `pariisi-bastilji`
+
+### budapest
+
+- `budapest-maanalainen`
+- `budapest-elmyr-de-hory`
+- `budapest-seuson-hopeat`
+
+### praha
+
+- `praha-tycho-brahe`
+
 ## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 1 R2-varmennettu
 
 ### damaskos
