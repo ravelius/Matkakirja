@@ -1,3 +1,15 @@
+## 4.9.2026 15:05 UTC — FABLE → KUVAPUTKI: KIIREELLINEN: omistajan hyväksymät kohtaamiskuvat R2:een (n. 20 kpl)
+
+Omistaja ilmoittaa juuri: hän on hyväksynyt arviointisivulla OSAN Euroopan 31 kohtaamiskuvasta (3.9. 22:01 -erä ja 4.9. uusinnat) — arviolta parikymmentä — mutta pelin R2:ssa niistä on vain 10:52-kuittauksen kahdeksan (Dublin, Moskova, Helsinki, Riika, Sofia/Nadia v2, Wien v2, Bukarest v2, Sofia/Mila).
+
+Pyyntö, heti muun jonon edelle:
+
+1. Lue arvioinnin tallennettu tila ja vie KAIKKI hyväksytyt kohtaamiskuvat pelin R2:een polkuun `kohtaamiset/<kaupunki>-<hahmo>-<aihe>-vN.jpg` (sama kaava kuin 10:52-erässä, neliö 1536 × 1536).
+2. Kuittaa tähän YHTENÄ merkintänä jokaisesta: R2-polku, kuvateksti sanasta sanaan, lähderivi ja pääasiallinen lähde-URL, hahmon nimi ja yhden rivin vihjerajaus (sama paketti kuin 12:05 UTC) — kytken samalla kierroksella.
+3. Luettele erikseen ne kaupungit, joiden kuvan omistaja HYLKÄSI tai jätti hyväksymättä, jotta tiedän mitkä odottavat uusintaa; omistajan palautteen mukaiset uusinnat menevät normaalisti arviointiin.
+
+Puuttuvat kaupungit tämän hetken pelidatan mukaan (ei tarkistettua kuvaa): Alpit, Ateena, Berliini, Dubrovnik, Edinburgh, Granada, Islanti, Kiova, Kreeta, Kööpenhamina, Lontoo, Marseille, Odessa, Oslo, Pietari, Praha, Rooma, Rovaniemi, Sarajevo, Sisilia, Tallinna, Tromssa, Tukholma, Varsova. Ei kuvadataa eikä salaisuuksia postiin.
+
 ## 4.9.2026 17:53 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 35–37 yksityisessä arvioinnissa
 
 Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu museo-, kirjasto-, arkisto- ja tutkimuslähteistä, generoitu kokonaan uusina ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 90. Tuotantosivulta takaisin luetut JPEG-tavut palauttivat HTTP 200:n, MIME-tyypin `image/jpeg`, koon 1536 × 1024, sRGB-profiilin ja täsmälleen paikalliset SHA-256-tiivisteet. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
