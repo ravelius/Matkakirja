@@ -1,3 +1,45 @@
+## 4.9.2026 19.43 EEST — KUVAPUTKI → FABLE: kahdeksan uutta hyväksyttyä skandaalikuvaa varmennettu peli-R2:ssa
+
+Omistajan tämäniltaiset kahdeksan uutta skandaalikuvahyväksyntää on viety suoraan peli-R2:n `kohtaamiset/kuvajono/`-polkuun. Ennen kirjoitusta kaikki kohteet palauttivat HTTP 404:n, joten yhtäkään aiempaa versiota ei korvattu. Kirjoituksen jälkeen jokaisesta varmennettiin julkinen `image/jpeg`-MIME, CORS, upotettu sRGB-ICC ja täsmälleen paikallista hyväksyttyä JPG:tä vastaava SHA-256. Kytke ne seuraaviin skandaalikortteihin.
+
+- `kohtaamiset/kuvajono/skandaali-piltdownin-ihminen-photo-v1.jpg`
+  - SHA-256: `e7c7ad29d879171d2435a6e0a134646fac5b0328b6a335d0010549a09917ec74`
+  - Kuvateksti: **“Sorakuopan poika jää katsomaan leuan liian tasaisia hampaita, mutta Arthur Smith Woodward näkee löydössä juuri sen puuttuvan renkaan, jota tiede odotti. Ihmisen kallon ja orangin leuan liitto pysyy oppikirjoissa neljä vuosikymmentä; vasta uudet testit tekevät nuoren epäluulosta oikeutetun.”**
+
+- `kohtaamiset/kuvajono/skandaali-etelameren-kupla-photo-v1.jpg`
+  - SHA-256: `20e0e2a6209609eadd9b57a110d7054bf073aae146aa91f8a5e59b96f9256e1c`
+  - Kuvateksti: **“Tytär ei katso osakepaperia vaan äitinsä kasvoja, kun virkailijan lähes tyhjä kolikkolaatikko kertoo hinnan romahduksesta. South Sea Company myi valtionvelasta ja siirtomaakaupasta vaurauden lupauksen; tässä pöydässä kupla merkitsee kuitenkin vain sitä, ettei perheen turva ollutkaan rahaa.”**
+
+- `kohtaamiset/kuvajono/skandaali-poyaisin-huijaus-photo-v1.jpg`
+  - SHA-256: `5d0676667c2cfb0fa27cf0518ea11b38812dbffbd59487774be0690d22aa2063`
+  - Kuvateksti: **“Poika on jo antanut leikkilaivalleen Poyaisin nimen; hänen äitinsä on vaihtanut perheen säästöt MacGregorin seteleihin, ja isoisä ehtii epäillä karttaa vasta lähtölaiturilla. Kennersley Castle vei Leithistä lähes 200 siirtolaista kohti luvattua pääkaupunkia — perillä odotti rakentamaton viidakko, jossa yli puolet heistä kuoli.”**
+
+- `kohtaamiset/kuvajono/skandaali-elginin-marmorit-photo-v1.jpg`
+  - SHA-256: `a14717270b437f2becb1af69bc8119e08057987a8dd98fbc0f969ebfc2e39a6f`
+  - Kuvateksti: **“Nuori kivimies tuntee friisin painon käsissään ennen kuin ymmärtää, että pala saattaa lähteä temppelistä pysyvästi. Elginin asiamiehet veivät 1801–1805 noin puolet Parthenonissa säilyneistä veistoksista; luvan laajuudesta ja omistuksen oikeutuksesta kiistellään yhä Ateenan ja Lontoon välillä.”**
+
+- `kohtaamiset/kuvajono/skandaali-simonides-kasikirjoitusvaarentaja-photo-v1.jpg`
+  - SHA-256: `8d9ebdc02e6f52040a0c5f547e4f371bcebc83a27ef743c70b3c03c0e2cd2383`
+  - Kuvateksti: **“Oppipojan sormeen tarttuu märkä muste tekstistä, jonka Simonides aikoo myydä vuosisatoja vanhana. Symin saarelta lähtenyt mestarikalligrafi teki kadonneista teoksista uskottavia ”löytöjä”, keksi munkin todistajakseen ja päätyi lopulta väittämään myös aidon Codex Sinaiticuksen omaksi nuoruudentyökseen.”**
+
+- `kohtaamiset/kuvajono/skandaali-belokas-maratonhuijaus-1896-photo-v1.jpg`
+  - SHA-256: `9866d4ceb7926b96b8fdd8f9c5bbf8831b61392279433c6d06fd4a6331942f1c`
+  - Kuvateksti: **“Gyula Kellner näkee uupuneen Spyridon Belokasin laskeutuvan kärryistä kesken olympiamaratonin. Tienvarren nuori vedenkantaja ymmärtää asian heidän kasvoistaan jo ennen tuomareita: Kellnerin vastalause hyväksytään, Belokas tunnustaa kyydin ja yhden illan kestänyt kreikkalainen kolmoisvoitto katoaa tulosluettelosta.”**
+
+- `kohtaamiset/kuvajono/skandaali-rijecka-krpica-1868-photo-v1.jpg`
+  - SHA-256: `5166cd9984898e5b9f73cac5cdac5e1e730583377f8b65aa6259b3a7d96fea87`
+  - Kuvateksti: **“Nuori kansliakirjuri pitää korvaavaa paperiliuskaa vielä ilmassa: vanha 66. artikla näkyy sen alla, mutta huoneen vanhemmat miehet odottavat liimaa. Jo vahvistetun kroaatinkielisen sovintotekstin päälle lisätty ”Rijekan lappu” teki kaupungista, satamasta ja piiristä Unkarin kruunuun erikseen liitetyn alueen — eikä Kroatian parlamentti saanut muutoksesta uutta keskustelua.”**
+
+- `kohtaamiset/kuvajono/skandaali-pacta-conventa-photo-v1.jpg`
+  - SHA-256: `2b291f41f13d8c087711039f98baa323e0714bd59ff554483e66dd95080c4f53`
+  - Kuvateksti: **“Nuori trogirilainen kirjuri pysäyttää kynänsä, kun aatelinen painaa kahdentoista suvun luetteloa lähemmäs. Hän ei voi tietää, kopioiko vanhempaa sopimusta vai valmistaa todistetta tulevaisuuden valtakiistaan: säilynyt Qualiter-merkintä on vasta 1380-luvun käsikirjoituksessa, ja nykyinen tutkimus hylkää sen yleensä aitona vuoden 1102 asiakirjana.”**
+
+Julkinen juuri: `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/`
+
+Tämän jälkeen skandaalikuvista **39 on hyväksytty ja R2-varmennettu**. Edelleen arviointia odottavat Vrain-Lucas sekä kuvat 41–46. Lähteet ja dramatisointihuomiot ovat jo aiemmissa toimitusviesteissä sekä arviointisivun tietueissa.
+
+---
+
 ## 4.9.2026 19.39 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 44–46 yksityisessä arvioinnissa
 
 Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu museo-, tutkimus-, parlamentti- ja elämäkertalähteistä, generoitu kokonaan uusina ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 95. Kaikki ovat 1536 × 1024 JPG/sRGB-kuvia. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
