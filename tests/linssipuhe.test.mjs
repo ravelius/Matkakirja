@@ -263,9 +263,11 @@ test('välinäytöksen data on kaikilta osin paikallaan', () => {
   // Pulun kommentti on osissa: kuplat tulevat pinoon peräkkäin.
   assert.ok(Array.isArray(v.pulu) && v.pulu.length >= 2, 'pulun kommentti ei ole osissa');
   assert.match(v.pulu[0], /Kääk/);
-  // Kuva on ämpärin isoisä-kansiossa (js/isoisan-valokuvat.js sisar).
-  assert.match(v.kuva.osoite, /\/kohtaamiset\/isoisa\/[\w-]+\.jpg$/);
-  assert.ok(v.kuva.selite, 'kuvalta puuttuu selite');
+  // Kuva siirtyi välinäytöksen kortista havainnekuvan kuvakiertoon (4.9.2026 iltapäivä).
+  assert.equal(v.kuva, undefined, 'välinäytöksellä ei ole enää omaa kuvaa');
+  const kierto = KEKSINNOT.find((t) => t.paalu).ilmioSarja;
+  assert.match(kierto[0].osoite, /\/kohtaamiset\/isoisa\/[\w-]+\.jpg$/);
+  assert.ok(kierto[0].selite, 'kiertokuvalta puuttuu selite');
 });
 
 /* ── kytkentä aikajanamoottoriin ──────────────────────────────────── */

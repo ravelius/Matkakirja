@@ -1386,6 +1386,17 @@ export function linssiEstaa(doc = (typeof document === 'undefined' ? null : docu
   return Boolean(doc?.body?.classList?.contains('aikajana-paalla'));
 }
 
+/**
+ * Chatin portti on löysempi kuin kuplien: välinäytöksen aikana (kello
+ * seisoo, teksti kartalla) pulun kanssa saa keskustella (omistaja
+ * 4.9.2026 iltapäivä: *"olisi hyvä saada mahdollisuus chatata pulun
+ * kanssa tässä tilanteessa"*). Luokan asettaa js/aikajana.js
+ * avaaValinaytos ja purkaa suljeValinaytos.
+ */
+export function linssiEstaaChatin(doc = (typeof document === 'undefined' ? null : document)) {
+  return linssiEstaa(doc) && !doc?.body?.classList?.contains('aikajana-valinaytos-auki');
+}
+
 /*
  * === KEHITTÄJÄN YKSI YLÄRIVIN NAPPI: MAAILMANÄKYMÄ ==================
  * === (omistajan tilaus 27.8.2026) ===================================

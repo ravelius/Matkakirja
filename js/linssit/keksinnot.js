@@ -737,6 +737,28 @@ export const KEKSINNOT = [
       lahde: 'Kuvaputken generoitu valokuva',
     },
     /*
+     * KUVAKIERTO (omistaja 4.9.2026 iltapäivä: *"ne itseasiassa voisivat
+     * hitaasti vaihtua keskenään ja siihen voisi generoida kolme muuta
+     * kuvaa lisäksi"*): havainnekuvapaneeli vaihtaa merkkipaalulla
+     * hitaasti ilmion ja tämän sarjan kuvien välillä (js/aikajana.js
+     * aloitaKuvakierto). Charing Crossin junakuva siirtyi tänne
+     * välinäytöksen kortista, joka poistui. Kolme uutta kuvaa (höyry-
+     * laiva, lennätin, rautatie) on tilattu kuvaputkelta 4.9. 14:55 UTC
+     * ilman pohjuketta, ja Kantonin kuva vaihtuu pohjukkeettomaan
+     * versioon, kun se on R2:ssa.
+     */
+    ilmioSarja: [
+      {
+        osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-lahto-1873-kulunut-v1.jpg',
+        ulkoinen: true,
+        // Kuvaputken kuvateksti sanasta sanaan (toimitus 4.9.2026 08:48 UTC).
+        selite: 'Isoisä nousee Charing Crossilla maailmanympärimatkansa ensimmäiseen '
+          + 'junaan ja vilkuttaa vielä kameralle, ennen kuin tuttu laituri jää '
+          + 'höyryn taakse.',
+        lahde: 'Kuvaputken generoitu valokuva',
+      },
+    ],
+    /*
      * VÄLINÄYTÖS (omistajan tilaus 4.9.2026 aamu, sanatarkasti:
      * *"Kertoja voisi myös kertoa vähän pidemmin isoisän kohdalla mihin
      * pulu sitten vain kommentoisi. Aika voisi pysähtyä siinä kohtaa
@@ -746,9 +768,10 @@ export const KEKSINNOT = [
      * kanssa. … Animaatio jatkuisi vasta popup tekstin alla olevasta
      * napista. Näin pitkään animaatioon tulee pieni hengähdys tauko."*).
      *
-     * Kello pysähtyy tähän itsestään, laatikko nousee kartan keskelle
-     * ja ajo jatkuu vasta Jatka-napista (js/aikajana.js
-     * avaaValinaytos). Luvut ovat kaaren omat: 1873 mennessä on
+     * Kello pysähtyy tähän itsestään, kertojan teksti ladotaan rivi
+     * kerrallaan suoraan kartan päälle luennan tahdissa ja ajo jatkuu
+     * yläpalkin hehkuvasta Jatka-napista (js/aikajana.js
+     * avaaValinaytos; kortti poistui 4.9.2026 iltapäivällä). Luvut ovat kaaren omat: 1873 mennessä on
      * syttynyt 11 valoa (1769–1869) ja edessä on 14 (1876–1928).
      */
     valinaytos: {
@@ -770,22 +793,6 @@ export const KEKSINNOT = [
         'Isoisä luuli lähtevänsä valmiiseen maailmaan. Kello näyttää, että se oli '
           + 'vasta puolivälissä.',
       ],
-      /*
-       * Isoisän kuva tekstin kylkeen. Kansio on sama kuin muilla isoisän
-       * valokuvilla (js/isoisan-valokuvat.js ISOISAN_KUVAJUURI); kuvaputki
-       * toimittaa tiedoston, ja siihen asti laatikko näyttää pelkän
-       * tekstin täysleveänä (js/aikajana.js piilottaa kuvapaikan 404:sta).
-       * Rajaus irti valkoisesta taustasta (rajausTyyli) lisätään vasta
-       * kun kuva on ämpärissä ja reunat on mitattu.
-       */
-      kuva: {
-        osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-lahto-1873-kulunut-v1.jpg',
-        // Kuvaputken kuvateksti sanasta sanaan (toimitus 4.9.2026 08:48 UTC).
-        selite: 'Isoisä nousee Charing Crossilla maailmanympärimatkansa ensimmäiseen '
-          + 'junaan ja vilkuttaa vielä kameralle, ennen kuin tuttu laituri jää '
-          + 'höyryn taakse.',
-        lahde: 'Kuvaputken generoitu valokuva',
-      },
     },
   },
   {

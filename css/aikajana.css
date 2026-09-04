@@ -341,126 +341,87 @@
         himmennyksen päällä eikä sen alla.
    =========================================================================== */
 
+/*
+ * TEKSTI SUORAAN KARTAN PÄÄLLE, EI KORTTIA (omistaja 4.9.2026 iltapäivä:
+ * *"voisi ehkä poistaa tuon kortin ja latoa teksti suoraan kartan
+ * päälle ... tämä teksti voisi tulla rivi kerrallaan puheäänen kanssa
+ * euroopan kartan päälle"*). Kerros ei nappaa napautuksia: kartta,
+ * karuselli ja pulun nappi pysyvät käytössä, ja pulun kuplapino
+ * (z-index 40) nousee tekstin päälle. Vaakanäytöllä teksti istuu
+ * kartan vasemmassa puoliskossa (paneeli peittää koillisnurkan),
+ * pystynäytöllä paneelin alla koko leveydeltä. Isoisän kuva on
+ * havainnekuvapaneelin kuvakierrossa (.aikajana-kiertokuva).
+ */
 .aikajana-valinaytos {
   position: absolute;
   inset: 0;
   z-index: 30;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+  pointer-events: none;
 }
-.aikajana-valinaytos-peite {
+.aikajana-valinaytos-teksti {
   position: absolute;
-  inset: 0;
-  background-color: rgba(6, 4, 3, 0.42);
-  opacity: 0;
-  transition: opacity 420ms ease;
-}
-.aikajana-valinaytos.esilla .aikajana-valinaytos-peite { opacity: 1; }
-
-.aikajana-valinaytos-laatikko {
-  position: relative;
-  z-index: 1;
-  box-sizing: border-box;
-  max-width: min(46rem, 94%);
-  max-height: calc(100% - 2rem);
-  overflow-y: auto;
-  padding: 1.3rem 1.5rem 1.4rem;
-  border-radius: 14px;
-  border: 1px solid rgba(217, 161, 59, 0.38);
-  background: #201a14;
-  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.66);
+  left: 5%;
+  top: 52%;
+  max-width: min(30rem, 46%);
+  transform: translateY(-50%);
   color: #f1e6d0;
   font-family: var(--font-luku);
-  text-align: center;
-  opacity: 0;
-  transform: translateY(10px) scale(0.97);
-  transition: opacity 420ms ease, transform 420ms cubic-bezier(0.45, 0.03, 0.22, 1);
+  text-align: left;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 18px rgba(0, 0, 0, 0.85);
 }
-.aikajana-valinaytos.esilla .aikajana-valinaytos-laatikko { opacity: 1; transform: none; }
-
+@media (orientation: portrait) {
+  .aikajana-valinaytos-teksti { left: 6%; right: 6%; max-width: none; top: 56%; }
+}
 .aikajana-valinaytos-otsikko {
-  margin: 0 0 0.8rem;
+  margin: 0 0 0.7rem;
   font-size: 1.18rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   color: #f3dfae;
+  opacity: 0;
+  transition: opacity 700ms ease;
 }
-
-/*
- * KUVA TEKSTIN KYLJESSÄ OIKEALLA, kapealla ruudulla tekstin YLLÄ
- * (`column-reverse` kääntää DOM-järjestyksen teksti → kuva niin, että
- * kuva nousee päälle). Ilman kuvaa — kuvaputki ei ole vielä toimittanut,
- * ja kuvapaikka piiloutuu 404:stä — teksti jää yksin täysleveänä.
- */
-.aikajana-valinaytos-sisus {
-  display: flex;
-  /* Keskitetty: lyhyt teksti ja korkea kuva eivät jätä laatikkoon koloa. */
-  align-items: center;
-  gap: 1.1rem;
-  text-align: left;
-}
-.aikajana-valinaytos-teksti {
-  flex: 1 1 auto;
-  min-width: 0;
-  margin: 0;
-  font-size: 0.98rem;
+.aikajana-valinaytos.esilla .aikajana-valinaytos-otsikko { opacity: 1; }
+/* Rivi kerrallaan luennan tahdissa (js ladoValinaytoksenRivit). */
+.aikajana-valinaytos-rivi {
+  margin: 0 0 0.45rem;
+  font-size: 1.02rem;
   line-height: 1.55;
   color: #ddd0b6;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 700ms ease, transform 700ms cubic-bezier(0.45, 0.03, 0.22, 1);
 }
-.aikajana-valinaytos-kuva {
-  flex: 0 0 auto;
-  width: min(15rem, 38%);
-  margin: 0;
-}
-.aikajana-valinaytos-kuva img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  border: 1px solid rgba(217, 161, 59, 0.28);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
-}
-.aikajana-valinaytos-kuvateksti {
-  margin: 0.4rem 0 0;
-  font-size: 0.76rem;
-  line-height: 1.35;
-  color: #b7a888;
-}
+.aikajana-valinaytos-rivi.nakyy { opacity: 1; transform: none; }
+.aikajana-valinaytos:not(.esilla) .aikajana-valinaytos-teksti { opacity: 0; transition: opacity 420ms ease; }
+
 /*
- * KAPEA RUUTU: kuva tekstin YLLE ja laatikko YLÖS. Pulun kuplapino
- * kasvaa oikeasta alanurkasta ylöspäin (css/styles.css
- * .pollo-kuplapino-kehys), ja puhelimessa kaksi pitkää kuplaa peittäisi
- * keskelle asetetun laatikon tekstin ja Jatka-napin — mitattu 390 x 844.
- * Ylälaidassa laatikko ja kuplat mahtuvat rinnakkain, ja pitkä teksti
- * vierii laatikon sisällä (max-height + overflow-y).
+ * JATKA HEHKUU (omistaja 4.9.2026 iltapäivä: *"hetkenpäästä yläreunan
+ * 'jatka' napin kehys voisi kevyesti alkaa hehkua hennon punaisena,
+ * hitaasti sykkien"*). Luokan asettaa js avaaValinaytos viiveellä ja
+ * purkaa suljeValinaytos.
  */
-@media (max-width: 620px) {
-  .aikajana-valinaytos { align-items: flex-start; padding-top: 3.1rem; }
-  .aikajana-valinaytos-laatikko { max-height: calc(100% - 4.2rem); padding: 1rem 1.1rem 1.1rem; }
-  .aikajana-valinaytos-sisus { flex-direction: column-reverse; align-items: stretch; gap: 0.8rem; }
-  .aikajana-valinaytos-kuva { width: min(9.5rem, 52%); align-self: center; }
-  .aikajana-valinaytos-kuvateksti { text-align: center; }
-  .aikajana-valinaytos-nappi { margin-top: 0.9rem; }
+.aikajana-nappi.hehku {
+  border-color: rgba(214, 96, 72, 0.8);
+  animation: aikajana-hehku 2.8s ease-in-out infinite;
+}
+@keyframes aikajana-hehku {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(214, 96, 72, 0); }
+  50% { box-shadow: 0 0 10px 3px rgba(214, 96, 72, 0.5); }
 }
 
-.aikajana-valinaytos-nappi {
-  min-height: 0;
-  margin-top: 1.2rem;
-  padding: 0.5rem 1.6rem;
-  border-radius: 999px;
-  border: 1px solid rgba(217, 161, 59, 0.6);
-  background: rgba(217, 161, 59, 0.16);
-  color: #f6e6bd;
-  font-family: inherit;
-  font-size: 0.95rem;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  transition: background-color 200ms ease, border-color 200ms ease;
+/*
+ * KUVAKIERTO havainnekuvapaneelissa (js aloitaKuvakierto): kaksi
+ * päällyskuvaa pohjakuvan päällä, hidas ristihäivytys.
+ */
+.aikajana-ilmiokuva { position: relative; }
+.aikajana-ilmiokuva img.aikajana-kiertokuva {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1600ms ease;
 }
-.aikajana-valinaytos-nappi:hover,
-.aikajana-valinaytos-nappi:focus-visible { background: rgba(217, 161, 59, 0.3); border-color: rgba(217, 161, 59, 0.9); }
+.aikajana-ilmiokuva img.aikajana-kiertokuva.esilla { opacity: 1; }
 
 /* ==================== YLÄRIVI: KELLO ==================== */
 
@@ -590,7 +551,7 @@
 }
 .aikajana-nappi:hover { background: rgba(217, 161, 59, 0.22); }
 .aikajana-nappi:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.aikajana-sulje { border-style: dashed; }
+.aikajana-sulje { border-style: dashed; padding-inline: 0.55rem; font-size: 0.9em; line-height: 1; }
 
 /* ==================== ILMIÖPANEELI ==================== */
 
@@ -1166,10 +1127,12 @@
   .vuosi-merkki, .aikajana-valo-sisus, .aikajana-tummennus-pinta, .aikajana-reika, .aikajana-valo-kajo, .aikajana-vinjetti { transition: none; }
   /* Avausjakso ja välinäytös: laatikko ja peite vaihtavat tilaa ilman liukua. */
   .aikajana, .aikajana-avaus-peite, .aikajana-avaus-sumennin, .aikajana-avaus-laatikko,
-  .aikajana-valinaytos-peite, .aikajana-valinaytos-laatikko { transition: none; }
-  .aikajana-avaus-laatikko, .aikajana-valinaytos-laatikko { transform: none; }
+  .aikajana-valinaytos-teksti { transition: none; }
+  .aikajana-avaus-laatikko { transform: none; }
   /* Lyhdyt palavat tasaisesti: js/lyhty.js ei käynnistä silmukkaa. */
   .aikajana-lyhty { transform: none; }
+  .aikajana-nappi.hehku { animation: none; box-shadow: 0 0 6px 2px rgba(214, 96, 72, 0.35); }
+  .aikajana-valinaytos-rivi, .aikajana-valinaytos-otsikko, .aikajana-kiertokuva { transition: none; }
   /*
    * Ei sykettä eikä vilkkua: nykyinen keksintö erottuu pelkällä
    * kirkkaudella, jälki jää himmeäksi kuten muutenkin.
