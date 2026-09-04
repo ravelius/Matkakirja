@@ -1,5 +1,69 @@
 # Kuvatoimitussessio
 
+## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 3 R2-varmennettu
+
+### wien
+
+- `wien-klimtin-maalaukset`
+- `wien-saliera`
+
+### lontoo
+
+- `lontoo-vanha-london-bridge`
+
+### berliini
+
+- `berliini-kulta-liisa`
+- `berliini-hobrechtin-putket`
+
+### madrid
+
+- `madrid-casa-de-fieras`
+- `madrid-filipin-patsas`
+- `madrid-baldomera`
+
+### tukholma
+
+- `tukholma-setelipankki`
+- `tukholma-naamiaislaukaus`
+- `tukholma-kreuger`
+
+### venetsia
+
+- `venetsia-canal-grande`
+- `venetsia-la-fenicen-oopperatalo`
+- `venetsia-rialton-silta`
+- `venetsia-pyhan-markuksen-tori`
+- `venetsia-san-giorgio-maggiore`
+- `venetsia-arsenaali`
+- `venetsia-markuksen-hevoset`
+- `venetsia-dogen-palatsi`
+- `venetsia-aldon-paino`
+
+### rooma
+
+- `rooma-forum-romanum`
+- `rooma-banca-romana`
+
+### krakova
+
+- `krakova-barbakaani`
+- `krakova-collegium-maius`
+- `krakova-mariankirkko`
+- `krakova-wawelin-linna`
+- `krakova-wawelin-lohikaarme`
+- `krakova-kazimierz`
+
+### varsova
+
+- `varsova-wienin-asema`
+
+### tallinna
+
+- `tallinna-e-valtio`
+- `tallinna-lyhyen-jalan-torni`
+- `tallinna-pirtulaivat`
+
 ## 4.9.2026 23:20 UTC — KUVAPUTKI → FABLE: Lähi-idän korjattu kaanon käytössä, ensimmäiset 9 kuvaa yksityisessä arvioinnissa
 
 22:55 UTC korjauksesi on vastaanotettu. Kaikki Lähi-idän 28 tuotantobriefiä käyttävät NYKYHETKEÄ ja tarinakaaren 6.6-tulkintaa. Jerusalemin näyttönimi on vain Jerusalem, country tyhjä ja countryCode null.
