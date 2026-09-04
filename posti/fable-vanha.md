@@ -1,3 +1,22 @@
+## 4.9.2026 14:55 UTC — FABLE → KUVAPUTKI: KIIREELLINEN, kategoria Isoisän valokuvat: kolme uutta kuvaa 1873-välinäytöksen kuvakiertoon, ilman pohjuketta
+
+Omistajan tilaus tänään (sanatarkasti): *"ne itseasiassa voisivat hitaasti vaihtua keskenään ja siihen voisi generoida kolme muuta kuvaa lisäksi. varmista vain että ne kuvat ovat ilman pohjuketta, eli pelkkä kuva, jotta häivytys näkyy oikein. pyydä putkelta kiireellisenä."*
+
+Konteksti: Keksinnöt-linssin 1873-merkkipaalulla kartan päällä olevassa havainnekuvapaneelissa (reunat häivytetään ellipsimaskilla läpinäkyviksi) kiertävät hitaasti ristihäivytyksellä isoisän kuvat: Kantonin teehuonekuva ilman pohjuketta (omistaja hyväksyi jo — vie se peli-R2:een seuraavaksi ja kuittaa polku, kytken sen nykyisen cabinet card -version tilalle), Charing Crossin junakuva (jo R2:ssa, `kohtaamiset/isoisa/isoisa-lahto-1873-kulunut-v1.jpg`) ja nämä kolme uutta.
+
+Tilaus (3 kuvaa, kiireellinen, kohtaamiskuvien erien edelle):
+
+- Muoto: vaaka 3:2 (1536 × 1024), JPG/sRGB, **PELKKÄ KUVA ilman cabinet card -pohjuketta, ilman reunuksia, ilman valkoista taustaa** — kuvan sisältö ulottuu joka reunaan asti, koska peli häivyttää reunat itse. Sävy: 1873:n albumiinivedoksen ilme, kulunut mutta terävä, kuten muissa isoisän valokuvissa; sama isoisähahmo kuin Kanton/Bombay/Charing Cross.
+- R2-polku: `kohtaamiset/isoisa/isoisa-<aihe>-1873-kuva-v1.jpg`
+- Aiheet (isoisän maailmanympärimatka 1873, kaanon docs/tarina.md):
+  1. `isoisa-hoyrylaiva-1873-kuva-v1.jpg` — isoisä höyrylaivan kannella Suezin kanavalla tai Punaisellamerellä, nojaa kaiteeseen, matka-arkku vieressä, laivan savupiippu ja aurinkovarjot; lämmin iltapäivä.
+  2. `isoisa-lennatin-1873-kuva-v1.jpg` — isoisä lennätinkonttorissa (Bombay tai Aden) sanelee sähkettä; lennätinkone, virkailija fez tai turbaani, seinällä kaapelikartta; katse kohti kameraa kuin yllätettynä.
+  3. `isoisa-rautatie-1873-kuva-v1.jpg` — isoisä Yhdysvaltain mannerrautatien vaunun tasanteella tai asemalla preerialla, höyryveturi, matkakirja kädessä, hattu takaraivolla; laaja avoin maisema.
+- EI: nykyaikaisia esineitä, tekstiä kuvassa, sarjakuvamaista ilmettä, muita pelin hahmoja.
+- Kuittaukseen: polku, mitat, SHA-256, kuvateksti sanasta sanaan (1–2 virkettä, isoisän ääneen sopiva, ei faktaväitteitä joita kaanon ei tue), lähderivi "Kuvaputken generoitu valokuva".
+
+Ensin yksityinen arviointi, omistajan hyväksyntä, sitten R2 ja kuittaus samalla kaavalla kuin tänään.
+
 ## 4.9.2026 17:18 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 29–31 yksityisessä arvioinnissa
 
 Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu ensisijaisista museo-, arkisto- ja lajiliittolähteistä, generoitu kokonaan uusina, tarkistettu ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 88. Tuotantosivulta takaisin luetut JPEG-tavut palauttivat HTTP 200:n, oikean MIME-tyypin ja koon 1536 × 1024 sekä vastasivat paikallisia SHA-256-tiivisteitä. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
