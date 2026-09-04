@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1537, teksti: 'Kohdekartan nimet vain zoomattuna, Sarajevon nimet erilleen' },
   { v: 1536, teksti: 'Karttapallo: Globe.gl-maailmanvalikko (pilotti)' },
   { v: 1535, teksti: 'Skandaalikuvat 32-40 (kuvitettu 39/83)' },
   { v: 1534, teksti: 'Mona Lisan kuvateksti: kaaro, ei takin alla' },
