@@ -214,3 +214,66 @@ animatePawnSisalla` ei enää sammuta jalan-raitaa siirron päättyessä, jos
 pelaaja jäi reitin välipisteeseen (`player.pos.type === 'edge'`): raita
 jatkaa seuraavan heiton ja siirron yli ja feidaa vasta kaupunkiin
 saavuttaessa. Laiva ja lento sammuvat siirron päättyessä kuten ennen.
+
+## Keksintölinssin luennat (omistaja 4.9.2026)
+
+Omistaja: *"Generoi selostajan äänellä jokaiseen kohtaan vuosiluku,
+keksijän nimi ja keksintö, eli se tulisi aina Keksinnön vaihtoessa
+lukijan äänellä."*
+
+**Teksti ja tiedostonimi tulevat datasta.** `js/linssipuhe.js` on
+ainoa paikka, jossa molemmat ladotaan, ja sekä peli että
+generointityökalu lukevat samat funktiot:
+
+- `luennanTeksti(t)` → `"<vuosi>. <henkilö>. <keksintö>."`, esimerkiksi
+  `"1769. James Watt. Höyrykoneen lauhdutin."` Kaksoispysäkillä
+  henkilö on jo datassa yhtenä nimenä (*Montgolfier-veljekset*).
+  Merkkipaalu 1873 luetaan ilman henkilöä: `"1873. Matkakirjan vuosi."`
+- `luennanPuhe(t)` on sama teksti mallille: pisteiden kohdalla
+  `<break time="0.4s" />` (eleven_v3 tukee break-tagia).
+- `luennanRunko(t)` → tiedostorunko = **muotokuvan runko** eli pysäkin
+  `kuva.osoite`-tiedostonimi ilman päätettä (`1769-james-watt`). Vuosi
+  yksin ei kelpaa: kaaressa on kolme vuoden 1895 pysäkkiä (Marconi,
+  Röntgen, Lumière). Kuvaton merkkipaalu saa rungon vuodesta ja
+  otsikosta (`1873-matkakirjan-vuosi`).
+
+Osoite on muotokuvien sisarkansio ämpärissä:
+`aikajana/keksinnot/puhe/<runko>.mp3`.
+
+**Pelissä.** `soitaLinssiluenta(ui, t)` kutsutaan yhdeltä riviltä
+`js/aikajana.js`:n `sytyta(i)`:n lopussa — siis vain ELÄVÄSTÄ
+syttymisestä. Pysäytetyn kellon selailu (`siirry(i)`, kortin tai lampun
+napautus) ei lue ääneen. Kilahdus (`keksinnonAani`) soi ensin ja luenta
+alkaa 350 ms sen jälkeen (`LUENNAN_VIIVE_MS`). `pura()` ja `alusta()`
+kutsuvat `pysaytaLinssiluenta(ui)`.
+
+Luenta noudattaa kertojan kytkintä (`js/luenta.js luentaKytkinPaalla`)
+ja puheen voimakkuutta (`puheVoima`), ja `merkitsePuhuja` hoitaa
+väistön: puhujalaskuri nostaa ambienssin väistön, ja koska väistö menee
+myös ulkoisille väistäjille, **linssin oma raita hiljenee samalla**
+(`js/siirtymamusiikki.js lajinVaisto` sivuuttaa vain oman
+linssihiljennyksensä, ei puheen väistöä). Soitin on oma eikä
+`playDiaryVoice`, koska tuo yrittää peilin pettäessä repon
+`assets/audio`-varareittiä ja kutsuisi `peiliPetti('aanet')` — puuttuva
+luenta kaataisi äänipeilin katkaisijan koko istunnoksi. Puuttuva
+tiedosto (404) on hiljainen, ei virhe.
+
+**Generointi.** `tools/generoi-linssiluennat.mjs`, sama resepti kuin
+matkakirjaluennoilla (Viisas Kertoja, `eleven_v3`,
+`/v1/text-to-dialogue`, mp3_44100_128, stability 0,5). Viimeistely
+ffmpegillä: hiljaisuus pois molemmista päistä, 30 ms häivytykset,
+taso **−17 LUFS** (mitattu 4.9.2026 ämpärin muista kertojaluennoista:
+intro-puhe −17,1 · puhe-lento-alku −17,4 · puhe-fokus-matkakirja-lontoo
+−17,1) yhtenä lineaarisena vahvistuksena, 150 ms hiljainen häntä, mono
+44,1 kHz 128 kbit. Liput: `--kuiva` (tekstit ja kohteet, ei APIa),
+`--pysakit 1769,1783` (tyhjä = kaikki 26), `--pakota` (ohittaa HEAD-
+tarkistuksen, joka muuten jättää ämpärissä jo olevat generoimatta),
+`--ei-vientia`.
+
+Tuotos menee **vain ämpäriin**, ei repoon: työkalu kirjoittaa
+`media/linssiluennat/`-kansioon (.gitignoressa, tarkistetaan ennen
+ensimmäistäkään maksullista kutsua) ja vie tiedostot `aws s3 cp`
+-komennolla. Ajo on `.github/workflows/generoi-linssiluennat.yml`
+(workflow_dispatch, syötteet `pysakit` ja `kuiva`), salaisuudet
+`ELEVEN_API_KEY` + neljä R2-salaisuutta. Vartija:
+`tests/linssipuhe.test.mjs`.

@@ -34,6 +34,7 @@
  */
 
 import { polloAvauskupla, polloKuplatPois, polloSaapumiskupla } from './pollo.js';
+import { linssiEstaa } from './ui-apurit.js';
 
 /* ------------------------------------------------------------------ *
  * Avausesittely
@@ -240,6 +241,9 @@ export const LIVIAN_PALJASTUS = [
  */
 export const LIVIA_PALJASTUS_TALLE = 'matkakirja-livia-paljastus';
 
+/** Kuinka usein paljastus kysyy, onko linssi jo suljettu (ks. paljastusRepliikki). */
+const PALJASTUKSEN_LINSSIVALI = 700;
+
 /** Sarjan tila: istunnon lippu, ajastin ja kaupunki, jossa sarja soi. */
 let paljastusAnnettu = false;
 let paljastusAjastin = null;
@@ -326,6 +330,21 @@ function paljastusRepliikki(ui, cityId, i, jalkeen) {
   // Pelaaja on voinut lähteä kaupungista kesken sarjan: puheenvuoro
   // kuuluu vain siihen saapumiseen, jossa se alkoi.
   if (ui.game?.cityOf?.()?.id !== cityId) { paljastusKesken = false; return; }
+  /*
+   * LINSSI ON PÄÄLLÄ: SARJA ODOTTAA, EI PÄÄTY (omistajan tilaus
+   * 4.9.2026). Kupla ei tule linssin päälle (js/pollo.js
+   * naytaSaapumiskupla lykkäisi sen jonoon), mutta paljastus ei myöskään
+   * saa katketa kesken — se on kertaluontoinen ja kaanonia. Sarja
+   * jää siis kysymään vuoroaan, ja `paljastusKesken` pysyy totena,
+   * joten maadoituskommenttikin odottaa (js/fokusvirta.js
+   * odotaPaljastus, jonka katto pysähtyy linssin ajaksi).
+   */
+  if (linssiEstaa()) {
+    paljastusAjastin = setTimeout(
+      () => paljastusRepliikki(ui, cityId, i, jalkeen), PALJASTUKSEN_LINSSIVALI,
+    );
+    return;
+  }
   const teksti = LIVIAN_PALJASTUS[i];
   if (!teksti) {
     paljastusKesken = false;
@@ -386,6 +405,10 @@ let mannerivihjeenOdotus = null;
  * pelaajan oma valinta. Vihje odottaa niiden yli — se ei ole kiireinen.
  */
 function ruutuVarattu(doc = document) {
+  // Linssi omistaa ruudun kokonaan (omistaja 4.9.2026): mannerivihje
+  // ei mene jonoon eikä kuluta kertalippujaan, vaan tilanne kokeillaan
+  // uudelleen seuraavassa piirrossa linssin sulkeuduttua.
+  if (linssiEstaa(doc)) return true;
   if (doc.querySelector('.fokusvirta-kupla, .fokusvirta-kortti')) return true;
   return Boolean(doc.querySelector('dialog[open]'));
 }

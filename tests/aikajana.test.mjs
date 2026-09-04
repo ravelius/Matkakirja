@@ -19,6 +19,7 @@ import {
   aikajananNopeus, AIKAJANA_POHJANOPEUS, AIKAJANA_KIIHTYMISMATKA, AIKAJANA_ALIASKEL_MS,
   pieniOsoite, PIENEN_KATTO, karusellinPaikat, karusellinMitta, KARUSELLIN_MITAT,
   karuselliOsoite, sumeaOsoite, KARUSELLIN_KATTO,
+  aikaSeuraavaan, ennakonKesto, KARUSELLIN_ENNAKKO_MS, KARUSELLIN_ENNAKKO_POHJA_MS,
 } from '../js/aikajana.js';
 import { runkoOsoitteesta } from '../tools/tee-pienet-kuvat.mjs';
 import { KEKSINNOT, KEKSINTO_KUVAJUURI, LINSSI } from '../js/linssit/keksinnot.js';
@@ -464,7 +465,7 @@ test('lähempi kortti peittää kauemman', () => {
 });
 
 test('moottori asettelee karusellin mitatusta leveydestä eikä kehyskohtaisesti', () => {
-  assert.match(MOOTTORI, /asettele\(\) \{[\s\S]{0,400}karusellinPaikat\(i, nyt, leveys\)/);
+  assert.match(MOOTTORI, /asettele\(\) \{[\s\S]{0,900}karusellinPaikat\(i, nyt, leveys\)/);
   assert.match(MOOTTORI, /nauhanLeveysKortteina\(\) \{[\s\S]{0,400}nauha \/ kortti/);
   // Koon muutos laskee asettelun uudelleen — kuuntelijalla, ei ajastimella.
   assert.match(MOOTTORI, /addEventListener\?\.\('resize', this\.koonMuutos\)/);
@@ -783,7 +784,8 @@ test('kortti liukuu ja skaalautuu yhdellä transform-siirtymällä, ei left/widt
 
 test('kortin terävä/sumea vaihtuu vasta dekoodatusta kuvasta, ei tyhjän kehyksen kautta', () => {
   // Suoraa src-sijoitusta ei enää tehdä asettelussa: se välähti tyhjänä.
-  assert.match(MOOTTORI, /vaihdaKorttikuva\(img, luokka === 'tuleva' \? img\.dataset\.sumea : img\.dataset\.terava\)/);
+  assert.match(MOOTTORI, /const sumeana = luokka === 'tuleva' \|\| \(ennakossa && luokka === 'nykyinen'\);/);
+  assert.match(MOOTTORI, /vaihdaKorttikuva\(img, sumeana \? img\.dataset\.sumea : img\.dataset\.terava\)/);
   assert.match(MOOTTORI, /function vaihdaKorttikuva[\s\S]{0,900}esilataus\.decode\(\)\.then\(pane, pane\)/);
   // Kilpailun esto: vanhentunut lataus ei kirjoita korttiin.
   assert.match(MOOTTORI, /function vaihdaKorttikuva[\s\S]{0,900}kuva\.dataset\.vaihtoon !== osoite\) return;/);
@@ -817,4 +819,217 @@ test('paneelinvaihto pakottaa lähtöarvon ja liuuttaa korkeuden vanhasta uuteen
   assert.match(MOOTTORI, /const PANEELIN_HAIVYTYS_MS = 700;/);
   // Raahaus säilyy: siirto on yhä CSS-muuttujissa eikä korkeuslukko koske siihen.
   assert.match(MOOTTORI, /asetaPaneelinSiirto\(raja\.dx, raja\.dy\)/);
+});
+
+/* ==================== LINSSIN AIKANA KAIKKI MUU ON KIINNI ==================== */
+
+/*
+ * OMISTAJAN TILAUS 4.9.2026: *"Pöllön kommentit saattavat tulla vielä
+ * kesken linssin. Tosin itse käynnistin linssin kesken kaiken mutta
+ * silti pitää kaikki muu blokata varmuuden vuoksi kun linssi alkaa."*
+ *
+ * Kytkentä katoaa hiljaa: linssi näyttäisi täsmälleen oikealta,
+ * kunnes kuplapino tai kohdekortti nousee sen päälle keskellä ajoa
+ * (omistajan kuvakaappaus). Kaksi puolta vartioidaan:
+ *   1. KÄYNNISTYS sulkee sen, mikä oli jo auki, ja PYSÄYTYS päästää
+ *      lykätyt puheenvuorot ulos.
+ *   2. AVAAJAT kysyvät yhteistä porttia (js/ui-apurit.js linssiEstaa),
+ *      jotta uusi avaaja ei unohda sitä.
+ */
+
+const POLLO_LAHDE = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+const KOHTEET_LAHDE = readFileSync(new URL('../js/fokuskohteet.js', import.meta.url), 'utf8');
+const NOSTO_LAHDE = readFileSync(new URL('../js/fokusnosto.js', import.meta.url), 'utf8');
+const VIRTA_LAHDE = readFileSync(new URL('../js/fokusvirta.js', import.meta.url), 'utf8');
+const LIVIA_LAHDE = readFileSync(new URL('../js/livia.js', import.meta.url), 'utf8');
+
+test('linssin käynnistys sulkee kuplat ja kelluvat kortit, pysäytys purkaa jonon', () => {
+  // Sulkeminen tehdään VASTA kun ajo on pystyssä: bodyn luokka on
+  // silloin paikallaan, joten portti pitää eivätkä kortit palaa.
+  assert.match(MOOTTORI, /ui\.aikajana = ajo;[\s\S]{0,200}suljeKelluvat\(ui\);\n  return true;/);
+  // Jokaisella kelluvalla kortilla on oma kerrosluokkansa, joten
+  // jokainen suljetaan erikseen — yksi kutsu ei vie toista mukanaan.
+  assert.match(MOOTTORI, /function suljeKelluvat\(ui\) \{[\s\S]{0,600}polloLinssiAlkoi\(\);[\s\S]{0,300}polloKuplatPois\(\);[\s\S]{0,300}suljeFokuskohde\(ui\);[\s\S]{0,200}suljeNostonKortti\(ui\);[\s\S]{0,200}suljeElaintaky\(ui\);[\s\S]{0,200}suljeSyvennys\(ui\);/);
+  /*
+   * Koukku on PURUSSA eikä pysaytaAikajana-funktiossa: "Sulje" ja
+   * linssinappi menevät js/ui.js:n oman pysaytaAikajanan kautta, joka
+   * kutsuu pura():a suoraan. Funktioon jätetty koukku ei siis laukeaisi
+   * kertaakaan oikeassa pelissä.
+   */
+  assert.match(MOOTTORI, /document\.body\.classList\.remove\('aikajana-paalla'\);[\s\S]{0,600}polloLinssiPaattyi\(\);/);
+  // Kytkennän tuonnit ovat oikeista moduuleista (ei omaa kopiota).
+  assert.match(MOOTTORI, /import \{ polloKuplatPois, polloLinssiAlkoi, polloLinssiPaattyi \} from '\.\/pollo\.js';/);
+  assert.match(MOOTTORI, /import \{ suljeFokuskohde \} from '\.\/fokuskohteet\.js';/);
+  assert.match(MOOTTORI, /import \{ suljeNostonKortti \} from '\.\/fokusnosto\.js';/);
+});
+
+test('kartan avaajat eivät avaa mitään linssin aikana', () => {
+  // Yksi apuri, jota kaikki avaajat kysyvät.
+  assert.match(readFileSync(new URL('../js/ui-apurit.js', import.meta.url), 'utf8'),
+    /export function linssiEstaa\(doc[\s\S]{0,200}contains\('aikajana-paalla'\)/);
+  // Kohdekortti ja kohdemerkin napautus (myös kaupungin laatta merkin alta).
+  assert.match(KOHTEET_LAHDE, /export function avaaFokuskohde\(ui, kohde\) \{[\s\S]{0,600}if \(linssiEstaa\(\)\) return false;/);
+  assert.match(KOHTEET_LAHDE, /const avaa = \(tapahtuma\) => \{[\s\S]{0,300}if \(linssiEstaa\(\)\) return;/);
+  // Eläintäky: kerros kysyy tätä ensin, ja tosi tarkoittaa "jo hoidettu".
+  assert.match(KOHTEET_LAHDE, /export function elainmerkinNapautusLuovutettu\(ui, tapahtuma, g\) \{[\s\S]{0,600}if \(linssiEstaa\(\)\) return true;/);
+  // Nosto: sekä kartan merkistä että kohdekortin napista.
+  assert.match(NOSTO_LAHDE, /function avaaNosto\(ui, nosto\) \{[\s\S]{0,500}if \(linssiEstaa\(\)\) return false;/);
+  assert.match(NOSTO_LAHDE, /function avaaNostonKortti\(ui, nosto\) \{[\s\S]{0,300}if \(linssiEstaa\(\)\) return false;/);
+  // Pöllönappi jää näkyviin, mutta chatti ei aukea linssin päälle.
+  assert.match(POLLO_LAHDE, /avaa\(\) \{[\s\S]{0,700}if \(linssiEstaa\(this\.doc\)\) return;/);
+});
+
+test('Livian paljastus odottaa linssin yli eikä 90 sekunnin katto laukea sen takia', () => {
+  // Paljastussarja ei katkea vaan kysyy uudelleen linssin sulkeuduttua.
+  assert.match(LIVIA_LAHDE, /if \(linssiEstaa\(\)\) \{\s*\n\s*paljastusAjastin = setTimeout\(\s*\n\s*\(\) => paljastusRepliikki\(ui, cityId, i, jalkeen\), PALJASTUKSEN_LINSSIVALI,/);
+  // Maadoituskommentin katto pysähtyy linssin ajaksi (muuten kommentti
+  // tulisi paljastuksen päälle heti linssin sulkeuduttua).
+  assert.match(VIRTA_LAHDE, /const linssissa = linssiEstaa\(\);\s*\n\s*if \(!linssissa && \(!livianPaljastusKesken\(ui\) \|\| jaljella <= 0\)\) \{ jatka\(\); return; \}/);
+  assert.match(VIRTA_LAHDE, /linssissa \? jaljella : jaljella - SAAPUMISKUPLAN_PALJASTUSVALI_MS/);
+  // Mannerivihje ei kuluta kertalippujaan linssin aikana.
+  assert.match(LIVIA_LAHDE, /function ruutuVarattu\(doc = document\) \{[\s\S]{0,400}if \(linssiEstaa\(doc\)\) return true;/);
+});
+
+/* ==================== ENNAKKO: KARUSELLI LÄHTEE ENNEN VUOTTA ==================== */
+
+/*
+ * Omistajan tilaus 4.9.2026 aamu, sanatarkasti: *"Alareunan
+ * muotokuvien siirtymisen animointi kannattaa lähteä jo vähän
+ * ennakkoon liikkeelle … niin että kun kohde vuosi vaihtuu niin
+ * animaatio juuri valmistuu. Alareunan animaatio saisi olla noin 2sek
+ * pituinen … vasta kun muotokuva on täysikokoinen, niin sitten voi
+ * päivittää sen terävän kuvan sumean tilalle."*
+ *
+ * Kolme asiaa, jotka rikkoutuvat hiljaa eivätkä näy lokissa:
+ *
+ *   1. SAAPUMISAIKA. Kello ei kulje vakionopeudella, joten ennakko on
+ *      laskettava samalla profiililla (aikaSeuraavaan). Väärä luku ei
+ *      kaada mitään — animaatio vain alkaa liian aikaisin tai myöhään.
+ *   2. TAUKO. Jos tauon jäljellä oleva viive unohtuu, ennakko lähtee
+ *      kesken lukurauhan ja kortit vaihtuvat ennen aikojaan.
+ *   3. TIETOVUOTO. Ennakko saa liikuttaa VAIN kortteja: lamppu, kello,
+ *      paneeli ja paikkarivi kertoisivat keksinnön ennen sen vuotta.
+ */
+
+test('aikaSeuraavaan laskee saapumisen samalla profiililla kuin ajo', () => {
+  const tapahtumat = [{ vuosi: 1800 }, { vuosi: 1840 }, { vuosi: 1842 }];
+  // Pitkä väli (40 vuotta): saapumiseen on selvästi yli ennakon.
+  const kaukana = { vuosi: 1800 + AIKAJANA_TAUON_OSUUS, i: 0, viive: 0, alku: 1800 + AIKAJANA_TAUON_OSUUS };
+  const pitka = aikaSeuraavaan(kaukana, tapahtumat);
+  assert.ok(pitka > KARUSELLIN_ENNAKKO_MS, `pitkä väli ${pitka} ms ei ylitä ennakkoa`);
+  // Sama luku kuin oikealla ajolla (ajaKunnesSyttyy) parin prosentin sisällä.
+  const mitattu = ajaKunnesSyttyy(kaukana, tapahtumat, {}, 16).kesto;
+  assert.ok(Math.abs(pitka - mitattu) < mitattu * 0.03, `laskettu ${pitka} ms vs. ajettu ${mitattu} ms`);
+  // Lyhyt väli (2 vuotta) mahtuu ennakon sisään.
+  const lahella = { vuosi: 1840 + AIKAJANA_TAUON_OSUUS, i: 1, viive: 0, alku: 1840 + AIKAJANA_TAUON_OSUUS };
+  const lyhyt = aikaSeuraavaan(lahella, tapahtumat);
+  assert.ok(lyhyt > 0 && lyhyt < KARUSELLIN_ENNAKKO_MS, `lyhyt väli ${lyhyt} ms ei ole ennakon sisällä`);
+  // Kaaren viimeisestä pysäkistä ei ole seuraavaa: ei myöskään ennakkoa.
+  assert.equal(aikaSeuraavaan({ vuosi: 1842, i: 2, viive: 0 }, tapahtumat), Infinity);
+  assert.equal(ennakonKesto(Infinity), 0);
+});
+
+test('tauon jäljellä oleva viive lasketaan saapumisaikaan mukaan', () => {
+  const tapahtumat = [{ vuosi: 1800 }, { vuosi: 1802 }];
+  const taysi = { vuosi: 1800, i: 0, viive: AIKAJANA_VIIVE_MS, viiveTaysi: AIKAJANA_VIIVE_MS };
+  const puolikas = { ...taysi, viive: AIKAJANA_VIIVE_MS / 2 };
+  const a = aikaSeuraavaan(taysi, tapahtumat);
+  const b = aikaSeuraavaan(puolikas, tapahtumat);
+  assert.ok(Number.isFinite(a) && Number.isFinite(b));
+  // Puolet taukoa vähemmän = puolet taukoa lyhyempi matka (± aliaskel).
+  assert.ok(Math.abs((a - b) - AIKAJANA_VIIVE_MS / 2) < 8 * AIKAJANA_ALIASKEL_MS, `ero ${a - b} ms`);
+  // Kesken tauon ennakko ei vielä ala, sen lopussa alkaa.
+  assert.equal(ennakonKesto(a), 0);
+  assert.ok(ennakonKesto(aikaSeuraavaan({ ...taysi, viive: 200 }, tapahtumat)) > 0);
+});
+
+test('ennakko alkaa vasta kahden sekunnin päässä ja kestää jäljellä olevan ajan', () => {
+  assert.equal(KARUSELLIN_ENNAKKO_MS, 2000);
+  // Kaukana: ei ennakkoa. Rajalla: täysi kesto. Sisällä: jäljellä oleva aika.
+  assert.equal(ennakonKesto(KARUSELLIN_ENNAKKO_MS + 1), 0);
+  assert.equal(ennakonKesto(KARUSELLIN_ENNAKKO_MS), KARUSELLIN_ENNAKKO_MS);
+  assert.equal(ennakonKesto(1200), 1200);
+  // Lähekkäiset pysäkit ja pysäytetystä kellosta jatkaminen: pohjakesto.
+  assert.equal(ennakonKesto(30), KARUSELLIN_ENNAKKO_POHJA_MS);
+  assert.equal(ennakonKesto(0), KARUSELLIN_ENNAKKO_POHJA_MS);
+  assert.ok(KARUSELLIN_ENNAKKO_POHJA_MS >= 400, 'pohjakesto ei saa olla hyppäys');
+});
+
+test('ennakko liikuttaa vain kortteja; lamput, kello ja paneeli vaihtuvat syttymisessä', () => {
+  // Kehys laskee saapumisajan ja aloittaa ennakon vain kun sitä ei ole.
+  assert.match(MOOTTORI, /if \(syttyi !== null\) this\.sytyta\(syttyi\);\s*\n\s*else this\.tarkistaEnnakko\(tahti\);/);
+  assert.match(MOOTTORI, /tarkistaEnnakko\(tahti\) \{[\s\S]{0,900}aikaSeuraavaan\(this\.tila, this\.tapahtumat, tahti, KARUSELLIN_ENNAKKO_MS \+ AIKAJANA_ALIASKEL_MS\)/);
+  assert.match(MOOTTORI, /tarkistaEnnakko\(tahti\) \{[\s\S]{0,900}if \(kesto > 0\) this\.aloitaEnnakko\(kohde, kesto\);/);
+  // Reduced motion ei ennakoi lainkaan.
+  assert.match(MOOTTORI, /tarkistaEnnakko\(tahti\) \{\s*\n\s*if \(this\.reducedMotion\) return;/);
+  // Ennakko koskee VAIN nauhaa: kesto menee nauhan omaan muuttujaan.
+  assert.match(MOOTTORI, /aloitaEnnakko\(kohde, kesto\) \{[\s\S]{0,400}this\.nauha\.style\.setProperty\('--aikajana-kesto', `\$\{Math\.round\(kesto\)\}ms`\);/);
+  const ennakko = MOOTTORI.match(/aloitaEnnakko\(kohde, kesto\) \{[\s\S]*?\n {2}\}/)[0];
+  for (const kielletty of ['asetaValonTila', 'vaihdaPaneeli', 'paikkarivi', 'naytaVuosi']) {
+    assert.ok(!ennakko.includes(kielletty), `ennakko ei saa koskea: ${kielletty}`);
+  }
+  // Syttyminen päättää ennakon; pysäytys ja alustus peruvat sen.
+  assert.match(MOOTTORI, /this\.paattaEnnakko\(\);\s*\n\s*this\.asettele\(\);\s*\n\s*\}/);
+  assert.match(MOOTTORI, /pysayta\(\) \{[\s\S]{0,300}this\.peruEnnakko\(\);/);
+  assert.match(MOOTTORI, /alusta\(\) \{[\s\S]{0,200}this\.paattaEnnakko\(\);/);
+  // Karuselli saa olla kelloa edellä: asettelu lukee ennakon kohteen.
+  assert.match(MOOTTORI, /const nyt = this\.ennakkoKohde \?\? this\.tila\.i;/);
+});
+
+test('sumea muotokuva vaihtuu terävään vasta kortin ollessa täysikokoinen', () => {
+  // Vaihto tulee siirtymän päätöksestä (transform, ei opacity) tai syttymisestä.
+  assert.match(MOOTTORI, /odotaTaysikokoista\(kohde\) \{[\s\S]{0,900}kortti\.addEventListener\('transitionend', teravoita\);/);
+  assert.match(MOOTTORI, /if \(e\?\.propertyName && e\.propertyName !== 'transform'\) return;/);
+  // Peruttu ennakko ei terävöi: kortti on takaisin tulevana ja sumeana.
+  assert.match(MOOTTORI, /if \(!kortti\?\.classList\.contains\('nykyinen'\)\) return;/);
+  // Terävä osoite menee saman dekoodaavan vaihdon kautta kuin muutkin.
+  assert.match(MOOTTORI, /teravoitaKortti\(i\) \{[\s\S]{0,600}vaihdaKorttikuva\(img, img\.dataset\.terava\)/);
+  // Kuuntelija irrotetaan aina, ettei vanha kortti jää odottamaan.
+  assert.match(MOOTTORI, /lopetaTeravoitus\(\) \{[\s\S]{0,300}removeEventListener\('transitionend', this\.teravoitus\.teravoita\)/);
+});
+
+/* ==================== YLÄPALKKI ON VUOSILUVUN KORKUINEN ==================== */
+
+test('yläpalkki on vuosinumeroiden korkuinen: kosketuskorkeus purettu, napit kellon mittaan', () => {
+  // Pelin yleinen `@media (pointer: coarse) { button { min-height: 46px } }`
+  // venytti kellon ja napit puhelimella yli kaksinkertaisiksi.
+  assert.match(AIKAJANA_CSS, /\.aikajana-kello \{[\s\S]*?min-height: 0;/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-nappi \{[\s\S]*?min-height: 0;/);
+  // Napit saavat korkeutensa riviltä, eivät omasta pehmusteestaan.
+  assert.match(AIKAJANA_CSS, /\.aikajana-ohjaimet \{ display: flex; align-self: stretch; align-items: stretch;/);
+  // Palkin pystypehmuste on hiuksenohut sekä leveällä että kapealla ruudulla.
+  const ylarivi = AIKAJANA_CSS.match(/\.aikajana-ylarivi \{[\s\S]*?\n\}/)[0];
+  const pysty = ylarivi.match(/padding: ([\d.]+)rem/);
+  assert.ok(pysty && Number(pysty[1]) <= 0.16, `ylärivin pystypehmuste ${pysty?.[1]}rem on liian iso`);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ylarivi \{ gap: [\d.]+rem; padding: 0\.15rem/);
+  // Kaksi otsikkoriviä eivät saa nostaa palkkia kellon yli.
+  assert.match(AIKAJANA_CSS, /\.aikajana-otsikko \{[\s\S]*?line-height: 1\.1;/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-paikka \{[\s\S]*?line-height: 1\.15;/);
+});
+
+/* ==================== KARTTA ON LINSSIN AJAN TYHJÄ TAULU ==================== */
+
+test('linssi häivyttää kartan omat merkit eikä jätä napautettavia jälkiä', () => {
+  const STYLES = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  const lohko = STYLES.match(/body\.aikajana-paalla \.fokuskohteet[\s\S]*?pointer-events: none;\n\}/g);
+  assert.ok(lohko && lohko.length >= 1, 'body.aikajana-paalla ei piilota kartan merkkejä');
+  const kaikki = lohko.join('\n');
+  for (const merkki of ['.fokuskohteet', '.elaintakyt', '.karttanimi-kohde', '.karttanimi-nosto']) {
+    assert.ok(kaikki.includes(`body.aikajana-paalla ${merkki}`), `${merkki} jää näkyviin linssin ajaksi`);
+  }
+  // Osuma-alat ovat itse `pointer-events: all`, joten lapsetkin vaietaan.
+  assert.match(kaikki, /body\.aikajana-paalla \.fokuskohteet \*,/);
+  assert.match(kaikki, /body\.aikajana-paalla \.elaintakyt \*,/);
+  assert.match(kaikki, /body\.aikajana-paalla \.karttanimet \*/);
+  // Häivytys, ei leikkaus — ja palautuu kun luokka lähtee bodylta.
+  assert.match(kaikki, /transition: opacity 0\.5s ease;/);
+  assert.match(MOOTTORI, /document\.body\.classList\.remove\('aikajana-paalla'\)/);
+});
+
+test('rikkinäinen karttalaatta ei maalaa selaimen kysymysmerkkiä kartalle', () => {
+  // WebKit piirtää saapumattoman <image>-elementin tilalle sinisen
+  // laatikon ja kysymysmerkin, venytettynä laatan koko alaan
+  // (omistajan kuvakaappaus 4.9.2026). Osoitteen poisto vie merkin.
+  const PYRAMIDI = readFileSync(new URL('../js/laattapyramidi.js', import.meta.url), 'utf8');
+  assert.match(PYRAMIDI, /mittarit\.epaonnistui \+= 1;[\s\S]{0,1600}kuva\.removeAttribute\('href'\);/);
 });

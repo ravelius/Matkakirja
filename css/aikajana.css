@@ -58,6 +58,23 @@
 
 /* ==================== YLÄRIVI: KELLO ==================== */
 
+/*
+ * PALKKI ON VUOSILUVUN KORKUINEN (omistajan tilaus 4.9.2026:
+ * *"Yläpalkki pitää olla matalampi niin että sopii vuosi numeroiden
+ * korkeuteen"*).
+ *
+ * MIKSI SE OLI KORKEA. Kello ja ohjaimet ovat `<button>`-elementtejä,
+ * ja pelin yleinen kosketussääntö (styles.css `@media (pointer:
+ * coarse) { button { min-height: 46px } }`) venytti ne 46 pikseliin,
+ * vaikka nelinumeroinen rulla on vain 24 px korkea. Palkki oli siis
+ * puhelimella 58 px eli yli kaksi kertaa numeroiden korkuinen —
+ * täsmälleen se, minkä omistaja näki kuvakaappauksessaan.
+ *
+ * Sääntö puretaan tästä palkista (`min-height: 0`), ja napit saavat
+ * korkeutensa kellosta: `.aikajana-ohjaimet` venyy rivin mittaan ja
+ * napit sen sisällä. Kosketusala ei silti katoa — napit ovat leveitä,
+ * ja kellon rinnalla on aina Jatka-nappi samaan tarkoitukseen.
+ */
 .aikajana-ylarivi {
   position: absolute;
   top: 0.6rem;
@@ -65,18 +82,21 @@
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 0.7rem;
-  padding: 0.35rem 0.6rem 0.35rem 0.8rem;
-  border-radius: 12px;
+  gap: 0.5rem;
+  /* Pystysuunnassa vain hiuksenohut vara: palkki = kello + 2 x 0,15rem. */
+  padding: 0.15rem 0.5rem 0.15rem 0.7rem;
+  border-radius: 10px;
   border: 1px solid var(--aikajana-reuna);
   background: var(--aikajana-paperi);
   box-shadow: var(--aikajana-varjo);
   max-width: calc(100% - 1.2rem);
 }
-.aikajana-otsikot { display: flex; flex-direction: column; min-width: 0; }
+.aikajana-otsikot { display: flex; flex-direction: column; justify-content: center; min-width: 0; }
 .aikajana-otsikko {
   font-family: var(--font-type);
   font-size: 0.72rem;
+  /* Tiivis rivi: kaksi otsikkoriviä eivät saa nostaa palkkia kellon yli. */
+  line-height: 1.1;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #6b4d1c;
@@ -84,6 +104,7 @@
 }
 .aikajana-paikka {
   font-size: 0.86rem;
+  line-height: 1.15;
   font-style: italic;
   color: #3d3126;
   white-space: nowrap;
@@ -95,7 +116,9 @@
 .aikajana-kello {
   display: inline-flex;
   gap: 2px;
-  padding: 0.15rem 0.35rem;
+  padding: 0.1rem 0.35rem;
+  /* Kosketuskorkeus pois: kello on juuri numeroidensa korkuinen. */
+  min-height: 0;
   border: 1px solid rgba(70, 51, 31, 0.5);
   border-radius: 6px;
   background: #2a1f16;
@@ -141,12 +164,18 @@
   will-change: transform;
 }
 
-.aikajana-ohjaimet { display: flex; gap: 0.3rem; }
+/*
+ * NAPIT OVAT KELLON KORKUISIA, EIVÄT KORKEAMPIA: ohjainrivi venyy
+ * palkin sisältökorkeuteen (`align-self: stretch` kumoaa ylärivin
+ * `align-items: center` -keskityksen) ja napit sen sisällä.
+ */
+.aikajana-ohjaimet { display: flex; align-self: stretch; align-items: stretch; gap: 0.3rem; }
 .aikajana-nappi {
   font-family: var(--font-type);
   font-size: 0.74rem;
   letter-spacing: 0.04em;
-  padding: 0.3rem 0.55rem;
+  padding: 0.2rem 0.55rem;
+  min-height: 0;
   border: 1px solid rgba(217, 161, 59, 0.45);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.07);
@@ -336,6 +365,12 @@
   overflow: hidden;
   /* Nauha itsessään on läpinäkyvä kartan päällä: kortit ovat paperia. */
   pointer-events: none;
+  /*
+   * Ensimmäinen pysäkki tulee ENNAKKOON (js/aikajana.js
+   * aloitaEnnakko), joten nauha ei saa pompata esiin: se häipyy
+   * esiin samalla kestolla kuin korttien liuku, eli ennakon ajan 2 s.
+   */
+  transition: opacity var(--aikajana-kesto) var(--aikajana-kaari);
 }
 .aikajana-nauha.tyhja { opacity: 0; }
 
@@ -644,12 +679,13 @@
    * ruudusta: ilmiöpaneeli ja kello jäävät vapaiksi.
    */
   .aikajana { --aikajana-kortti-w: clamp(92px, 25vw, 112px); }
-  .aikajana-ylarivi { gap: 0.45rem; padding: 0.3rem 0.45rem; }
+  /* Kapealla ruudulla palkissa on vain paikkarivi, kello ja napit. */
+  .aikajana-ylarivi { gap: 0.4rem; padding: 0.15rem 0.4rem; }
   .aikajana-otsikko { display: none; }
   .aikajana-paikka { max-width: 7rem; font-size: 0.78rem; }
   .aikajana-ilmio { top: 3.6rem; --aikajana-paneeli-leveys: min(17rem, 62%); }
   .aikajana-ilmio-selite { font-size: 0.82rem; }
-  .aikajana-nappi { padding: 0.28rem 0.42rem; font-size: 0.68rem; }
+  .aikajana-nappi { padding: 0.2rem 0.42rem; font-size: 0.68rem; }
 }
 
 /* ISO NÄYTTÖ: ilmiökuva selvästi isompana (omistaja 3.9.2026). */

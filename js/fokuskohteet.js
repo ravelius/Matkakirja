@@ -109,7 +109,9 @@ import {
 } from './karttanimet.js';
 import { karttavaloKarkisymboli, piirraKarttavalo } from './karttavalot.js';
 import { asetaKuva, assetOsoite } from './media.js';
-import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu } from './ui-apurit.js';
+import {
+  html, jaaKappaleiksi, linssiEstaa, nielaiseSulkevaNapautus, polloNimilappu,
+} from './ui-apurit.js';
 import { piirraReaktiot } from './reaktiot.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { FOKUSKOHTEET_AFG } from './packs/fokuskohteet-afg.js';
@@ -1638,6 +1640,14 @@ function avaaTaiSuljeKohde(ui, kohde) {
  *   kaupungille ja se on jo hoidettu; false kun kysyjä itse voitti.
  */
 export function elainmerkinNapautusLuovutettu(ui, tapahtuma, g) {
+  /*
+   * LINSSIN PORTTI MYÖS ELÄINTÄYLLE (omistaja 4.9.2026). Eläinkerros
+   * (js/elaintaky.js) kysyy tätä ensimmäisenä ja jättää napautuksen
+   * sikseen, kun vastaus on tosi — linssin aikana napautus on siis
+   * "jo hoidettu" eikä avaa mitään, ilman että eläinkerroksen
+   * tarvitsee tietää linssistä.
+   */
+  if (linssiEstaa()) return true;
   const voittaja = merkkiNapautuksenVoittaja(ui, tapahtuma, null, g);
   // Laatta voitti: napautus on kaupungin, myös silloin kun kaupunkia ei
   // juuri nyt voi avata (kiire, ei tutkittavaa) — sama kuin kohdemerkillä.
@@ -1786,6 +1796,9 @@ function kytkeMerkinNapautus(ui, g, kohde) {
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();
+    // Linssin aikana merkki ei avaa mitään — ei korttia eikä kaupunkia
+    // (ks. avaaFokuskohde ja js/ui-apurit.js linssiEstaa).
+    if (linssiEstaa()) return;
     // Osuma-alueet limittyvät (KOHDE_OSUMA_R on sormen mitta, ei
     // merkin): voittajan valitsee etäisyys eikä piirtojärjestys.
     // Kaupungin laatta (omistaja 28.8.2026, js/fokusniput.js sääntö 9)
@@ -5446,6 +5459,13 @@ function piirraKohteenSisus(ui, sailio, kohde) {
 
 export function avaaFokuskohde(ui, kohde) {
   if (typeof document === 'undefined' || !kohde) return null;
+  /*
+   * LINSSIN PORTTI (omistaja 4.9.2026: *"pitää kaikki muu blokata …
+   * kun linssi alkaa"*). Kortti ei nouse tummennetun kartan ja
+   * juoksevan kellon päälle; napautus jää siihen. Portti on yhteinen
+   * kaikille kelluvien korttien avaajille (js/ui-apurit.js linssiEstaa).
+   */
+  if (linssiEstaa()) return false;
   /*
    * LISÄKOHDE AVAA OMAN KORTTINSA (YHTENÄINEN KOHDEMALLI): täkynoston
    * ja syvennystarinan merkki on kartalla tavallinen kohdemerkki, mutta

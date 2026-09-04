@@ -1361,6 +1361,32 @@ export function asetaFokusmoodi(paalla) {
 }
 
 /*
+ * === LINSSIN PORTTI: LINSSIN AIKANA KAIKKI MUU ON KIINNI ============
+ * === (omistajan tilaus 4.9.2026) ====================================
+ *
+ * *"Pöllön kommentit saattavat tulla vielä kesken linssin. Tosin itse
+ * käynnistin linssin kesken kaiken mutta silti pitää kaikki muu blokata
+ * varmuuden vuoksi kun linssi alkaa."*
+ *
+ * Linssi (js/aikajana.js) omistaa koko ruudun sen ajan kuin se on
+ * päällä: kartta on tummennettu, valot palavat ja kello juoksee. Sen
+ * päälle ei saa avautua mitään — ei Livian kuplaa, ei kohdekorttia,
+ * ei nostoa eikä chattia — koska ne peittäisivät juuri sen, mitä
+ * pelaaja katsoo (omistajan kuvakaappaus: kuplapino keskellä
+ * keksintölinssin ajoa).
+ *
+ * TILA LUETAAN BODYN LUOKASTA eikä ui-oliosta: porttia tarvitsevat
+ * kaikki kelluvien korttien avaajat pitkin koodikantaa, eikä niillä
+ * läheskään aina ole ui:ta käsillä. Luokan `aikajana-paalla` linssi
+ * asettaa kytkeytyessään ja poistaa purkautuessaan (aikajanaPaalla(ui)
+ * kertoo saman ui-oliosta). YKSI APURI, jotta uusi avaaja ei unohda
+ * porttia: kaikki kysyvät tästä.
+ */
+export function linssiEstaa(doc = (typeof document === 'undefined' ? null : document)) {
+  return Boolean(doc?.body?.classList?.contains('aikajana-paalla'));
+}
+
+/*
  * === KEHITTÄJÄN YKSI YLÄRIVIN NAPPI: MAAILMANÄKYMÄ ==================
  * === (omistajan tilaus 27.8.2026) ===================================
  *
