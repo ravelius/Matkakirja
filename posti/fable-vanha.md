@@ -1,3 +1,29 @@
+## 4.9.2026 21.16 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 53–55 yksityisessä arvioinnissa
+
+Seuraava tutkimukseen perustuva kolmen kuvan erä on julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle. Kaikki kuvat ovat täysin uusia Codexin sisäisiä ImageGen-generointeja, 1536 × 1024 JPG/sRGB. Sivuston tuotantoversio **101** julkaistiin onnistuneesti. **Älä vie kuvia peliin tai peli-R2:een ennen omistajan erillistä hyväksyntää.**
+
+- `skandaali-barbora-salainen-avioliitto-photo-v1.jpg` — Vilna 1547, Barboran ja Sigismund Augustin salainen vihkiminen.
+  - SHA-256: `739bf1b61da34586baf6f54a4b30a3cb42adde9db64360826b6aba65af27b5c3`
+  - Kuvateksti: **“Barbora Radvilaitė kuulee askeleet kappelin oven takaa juuri, kun pappi sulkee sormuksen hänen käteensä; Sigismund August vastaa puristamalla tiukemmin. Salainen avioliitto antoi nuorelle leskelle rakastetun mutta teki hänestä samalla valtakunnan kiistellyimmän naisen — puolison, jota kuninkaan äiti ja Puolan aateli eivät aikoneet hyväksyä kruunulle.”**
+  - Dramatisointi: salainen avioliitto, yksityinen katedraalikappeli ja poliittinen vastustus ovat lähdepohjaisia; oven askeleet, kamarineito, tarkat eleet ja sekunti ovat dramatisoituja.
+  - Lähteet: https://lnm.lt/en/news/how-16th-century-princesses-and-noblewomen-married-from-bona-sforza-to-barbara-radziwill/ ; https://lnm.lt/en/news/in-the-footsteps-of-sigismund-augustus-and-barbara-radziwill-legend-heritage-and-modern-inspiration/ ; https://www.valdovurumai.lt/en/palace-history/i/5371/historical-outline/
+
+- `skandaali-lituanican-viimeinen-lento-photo-v1.jpg` — Lituanican viimeiset lentotunnit vuonna 1933.
+  - SHA-256: `37444bebe627ff525568599f94b0d9f3ce24748a735581064e3984996ac80b2c`
+  - Kuvateksti: **“Steponas Darius pitää Lituanican käsiohjaimet liikkumatta, kun Stasys Girėnas erottaa sateen takaa Euroopan rannikon ja osoittaa sitä paljaalla kädellään. Atlantti oli jo voitettu, mutta miehet eivät tienneet, että 37 tunnin lennosta puuttuisi Kaunasiin enää 650 kilometriä — eikä myöhempi tutkinta pystyisi kertomaan varmasti, miksi kone putosi.”**
+  - Dramatisointi: kone, matka, lentoaika ja säilyneet ohjaamolaitteet ovat lähdepohjaisia; rannikon näkeminen, ilmeet, käsimerkit ja säähetki ovat dramatisoituja. Kuva ei väitä onnettomuuden syytä.
+  - Lähteet: https://archyvai.lrv.lt/lt/naujienos/lietuvos-centrinis-valstybes-archyvas-mini-lituanicos-skrydzio-per-atlanta-90-asias-metines/ ; https://www.limis.lt/v-exhibition/exhibitions/linear/805412/123171 ; https://kam.lt/wp-content/uploads/2022/03/lituanica.pdf
+
+- `skandaali-boratynka-kuparikohu-photo-v1.jpg` — Vilna noin 1664, sotilasperheen palkkasäkki menettää ostovoimansa.
+  - SHA-256: `86d6709a1904e331a9d30a75b7ff30f89460f6104e5b892faecb44e18ca4afe5`
+  - Kuvateksti: **“Sotilaan tytär yrittää nostaa isänsä palkkasäkkiä samalla kun leipäkauppias punnitsee kädessään yhtä kunnollista hopearahaa. Valtion velka armeijalle oli viimein maksettu — mutta sadoilla miljoonilla pienillä kuparisilla boratynkoilla, joiden pakkoarvo ei vastannut metallia ja joilla perheen oli yhä vaikeampi ostaa ruokaa.”**
+  - Dramatisointi: Burattinin ehdotus, kupariset šillingit, armeijan palkkavelat, lyöntimäärät, huono ostovoima ja väärentäminen ovat lähdepohjaisia; perhe, kauppias ja maksutilanne ovat dramatisoituja.
+  - Lähteet: https://nbp.pl/wp-content/uploads/2022/11/bankoteka_dzieje_zlotego-1.pdf ; https://nbp.pl/wp-content/uploads/2022/11/2018_08___boratynka_en.pdf ; https://www.pinigumuziejus.lt/uploads/publications/docs/3305_3f472a82741fe81254cefb1f93aecd89.pdf
+
+Arviointisivu: https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site
+
+---
+
 ## 4.9.2026 21.00 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 50–52 yksityisessä arvioinnissa
 
 Seuraavat kolme tutkimukseen perustuvaa skandaalikuvaa on generoitu kokonaan uusina Codexin sisäisellä ImageGenillä ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle. Sivuston tuotantoversio on **100**, julkaisu onnistui. Kaikki ovat 1536 × 1024 JPG/sRGB-kuvia. **Niitä ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.**
