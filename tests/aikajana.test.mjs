@@ -652,9 +652,9 @@ test('jokaisella pysäkillä on generoitu muotokuva omassa kansiossaan', () => {
         'merkkipaalun muotokuva on isoisä');
       assert.equal(t.kuva.lahde, 'Kuvaputken generoitu valokuva');
       // Ilmiökuva on isoisän Kantonin teehuonekuva oman kansion ulkopuolelta (4.9.2026).
-      assert.ok(t.ilmio?.ulkoinen && /kohtaamiset\/isoisa\/isoisa-kanton-1873/.test(t.ilmio.osoite),
-        'merkkipaalun ilmiökuva on ulkoinen isoisän valokuva');
-      assert.ok(t.ilmio.rajaus, 'cabinet cardin reunus leikataan rajauksella');
+      assert.ok(t.ilmio?.ulkoinen && /kohtaamiset\/isoisa\/isoisa-kanton-1873-kuva-v1\.jpg$/.test(t.ilmio.osoite),
+        'merkkipaalun ilmiökuva on isoisän pohjukkeeton Kantonin kuva');
+      assert.equal(t.ilmio.rajaus, undefined, 'pohjukkeeton kuva ei tarvitse rajausta');
       continue;
     }
     assert.ok(t.kuva?.osoite, `${t.otsikko}: muotokuva puuttuu`);

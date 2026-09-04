@@ -725,12 +725,13 @@ export const KEKSINNOT = [
      * jo generoitu"): isoisän Kantonin teehuonekuva (js/isoisan-
      * valokuvat.js). Kuva asuu oman kansionsa ulkopuolella eikä sillä
      * ole pieni/-variantteja, joten `ulkoinen: true` ohittaa pieni-putken
-     * (js/aikajana.js asetaAmpariKuva, tools/tee-pienet-kuvat.mjs) ja
-     * `rajaus` leikkaa cabinet cardin valkoisen reunuksen pois.
+     * (js/aikajana.js asetaAmpariKuva, tools/tee-pienet-kuvat.mjs).
+     * Pohjukkeeton versio 4.9.2026 illalla: rajausta ei enää tarvita.
      */
     ilmio: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-kanton-1873-kulunut-v1.jpg',
-      rajaus: { x0: 0.054, y0: 0.032, x1: 0.943, y1: 0.956 },
+      // Pohjukkeeton versio (omistaja hyväksyi 4.9.2026, kuvaputki R2 15:09 UTC):
+      // pelkkä kuva, jotta paneelin häivytys näkyy oikein — ei rajausta.
+      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-kanton-1873-kuva-v1.jpg',
       ulkoinen: true,
       selite: 'Isoisä teehuoneen pöydässä Kantonissa 1873. Kulunut cabinet card '
         + 'isoisän matkalaukusta.',
