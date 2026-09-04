@@ -81,6 +81,14 @@ on:
         type: choice
         default: 'ei'
         options: ['ei', 'kyllä']
+      pakota:
+        description: >-
+          Generoi uudelleen, vaikka tiedosto on jo ämpärissä. Toimii VAIN
+          kun pysakit-lista on annettu — koko kaarta ei uusita vahingossa.
+        required: true
+        type: choice
+        default: 'ei'
+        options: ['ei', 'kyllä']
 
 permissions:
   contents: read
@@ -170,11 +178,20 @@ jobs:
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
           PYSAKIT: ${{ inputs.pysakit }}
+          PAKOTA: ${{ inputs.pakota }}
         run: |
           set -euo pipefail
           if [ -n "$PYSAKIT" ]; then
-            node tools/generoi-linssiluennat.mjs --pysakit $PYSAKIT
+            if [ "$PAKOTA" = "kyllä" ]; then
+              node tools/generoi-linssiluennat.mjs --pakota --pysakit $PYSAKIT
+            else
+              node tools/generoi-linssiluennat.mjs --pysakit $PYSAKIT
+            fi
           else
+            if [ "$PAKOTA" = "kyllä" ]; then
+              echo "pakota vaatii pysakit-listan — koko kaarta ei uusita vahingossa." >&2
+              exit 1
+            fi
             node tools/generoi-linssiluennat.mjs
           fi
 

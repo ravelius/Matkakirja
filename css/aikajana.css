@@ -162,15 +162,26 @@
   position: relative;
   z-index: 1;
   box-sizing: border-box;
-  max-width: min(30rem, 88%);
-  padding: 1.5rem 1.6rem 1.5rem;
-  border-radius: 6px;
+  max-width: min(31rem, 88%);
+  padding: 1.7rem 2rem 1.6rem;
+  border-radius: 4px;
   border: 1px solid rgba(60, 40, 16, 0.55);
   background-color: #d9c69c;
+  /*
+   * PAPERI ON KUVAPUTKEN BITTIKARTTA, TEKSTI LADOTAAN TÄSSÄ (omistaja
+   * 4.9.2026: *"Kuvaputkelta tuleekin pelkkä paperipohja. En ollut
+   * tyytyväinen siihen, miten se latoi tekstin, joten tehdään ainakin
+   * nyt toistaiseksi sellainen versio, että sinä ladot tekstin
+   * tyylikkäästi siihen paperiin."*). Kerrokset ylhäältä alas: tummuma
+   * alaspäin, kuvaputken vanha hyväkuntoinen paperi (R2) ja sen alla
+   * SVG-kuitu varana, jos bittikartta ei lataudu.
+   */
   background-image:
-    linear-gradient(180deg, rgba(255, 246, 222, 0.55) 0%, rgba(214, 190, 140, 0) 45%, rgba(58, 38, 14, 0.55) 100%),
+    linear-gradient(180deg, rgba(255, 246, 222, 0.42) 0%, rgba(214, 190, 140, 0) 42%, rgba(58, 38, 14, 0.55) 100%),
+    url("https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/tekstuurit/paperi-vanha-v1.jpg"),
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='k'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.36 0 0 0 0 0.26 0 0 0 0 0.12 0 0 0 0.22 0'/></filter><rect width='240' height='240' filter='url(%23k)'/></svg>");
-  background-size: 100% 100%, 240px 240px;
+  background-size: 100% 100%, cover, 240px 240px;
+  background-position: center, center, 0 0;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7), inset 0 0 40px rgba(70, 45, 15, 0.35);
   color: #2b2116;
   font-family: var(--font-luku);
@@ -223,29 +234,57 @@
   100% { opacity: 0.92; }
 }
 .aikajana-avaus.laatikko-nakyy .aikajana-avaus-laatikko { opacity: 1; transform: none; }
+/*
+ * LADONTA (Fable): otsikko kapiteeleina harvennettuna, sen alla ohut
+ * koristeviiva, leipäteksti tasattuna anfangilla kuten Tiedeliitteessä,
+ * muste tummanruskeaa — ei kirkasta mustaa.
+ */
 .aikajana-avaus-otsikko {
-  margin: 0 0 0.6rem;
-  font-size: 1.18rem;
+  margin: 0 0 0.85rem;
+  font-family: var(--font-luku);
+  font-size: 1.22rem;
   font-weight: 600;
-  letter-spacing: 0.01em;
-  color: #3b2a12;
+  font-variant: small-caps;
+  letter-spacing: 0.09em;
+  color: #3a2812;
+}
+.aikajana-avaus-otsikko::after {
+  content: '';
+  display: block;
+  width: 6rem;
+  height: 2px;
+  margin: 0.55rem auto 0;
+  background: linear-gradient(90deg, rgba(90, 64, 32, 0), rgba(90, 64, 32, 0.85) 30%, rgba(90, 64, 32, 0.85) 70%, rgba(90, 64, 32, 0));
 }
 .aikajana-avaus-teksti {
-  margin: 0 0 1.1rem;
-  font-size: 0.92rem;
-  line-height: 1.5;
-  color: #33281b;
+  margin: 0 0 1.2rem;
+  font-family: var(--font-luku);
+  font-size: 0.98rem;
+  line-height: 1.58;
+  /* Vasen liehu: tasaus jätti anfangin viereen leveät sanavälit. */
+  text-align: left;
+  text-wrap: pretty;
+  color: #2b2116;
+}
+.aikajana-avaus-teksti::first-letter {
+  float: left;
+  margin: 0.08em 0.28rem 0 0;
+  font-size: 2.55em;
+  line-height: 0.82;
+  font-weight: 600;
+  color: #3a2812;
 }
 .aikajana-avaus-nappi {
   min-height: 0;
-  padding: 0.5rem 1.6rem;
+  padding: 0.5rem 1.7rem;
   border-radius: 999px;
-  border: 1px solid rgba(60, 40, 16, 0.7);
-  background: rgba(60, 40, 16, 0.12);
+  border: 1px solid rgba(60, 40, 16, 0.75);
+  background: rgba(60, 40, 16, 0.1);
   color: #2b2116;
-  font-family: inherit;
+  font-family: var(--font-luku);
   font-size: 0.95rem;
-  letter-spacing: 0.04em;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
   cursor: pointer;
   transition: background-color 200ms ease, border-color 200ms ease;
 }
@@ -639,14 +678,12 @@
    * suoraviivaista maskia leikataan yhteen, joten reunaviivaa ei jää
    * mihinkään ja kuvan keskusta on täysin peittävä.
    */
-  -webkit-mask-image:
-    linear-gradient(to right, transparent, #000 11%, #000 89%, transparent),
-    linear-gradient(to bottom, transparent, #000 13%, #000 87%, transparent);
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(to right, transparent, #000 11%, #000 89%, transparent),
-    linear-gradient(to bottom, transparent, #000 13%, #000 87%, transparent);
-  mask-composite: intersect;
+  /* Enemmän ovaali (omistaja 4.9.2026: "havainnekuvan reunoja voi
+     häivyttää lisää, niin että muodosta tulee enemmän ovaali"):
+     ellipsi, jonka säde ulottuu juuri reunan keskikohtaan, joten
+     jokainen reuna ja kulma on läpinäkyvä ja keskusta täysin peittävä. */
+  -webkit-mask-image: radial-gradient(ellipse 52% 52% at 50% 50%, #000 46%, rgba(0, 0, 0, 0.72) 64%, rgba(0, 0, 0, 0.26) 84%, transparent 100%);
+  mask-image: radial-gradient(ellipse 52% 52% at 50% 50%, #000 46%, rgba(0, 0, 0, 0.72) 64%, rgba(0, 0, 0, 0.26) 84%, transparent 100%);
 }
 .aikajana-ilmio-teksti { padding: 0.5rem 0.7rem 0.65rem; }
 /*
