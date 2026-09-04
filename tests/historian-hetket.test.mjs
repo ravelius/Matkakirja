@@ -81,9 +81,9 @@ function lehtisivu(hetki) {
   return (sivut ?? []).find((s) => s.id === `hetki-${hetki.id}`) ?? null;
 }
 
-test('hetkiä on kahdeksantoista ja jokaisella on kortin kentät', () => {
-  assert.equal(HISTORIAN_HETKET.length, 18,
-    'H3 45–47 -erän jälkeen hetkiä on kahdeksantoista (Machu Picchu odottaa kaukokuvaa)');
+test('hetkiä on kaksikymmentä ja jokaisella on kortin kentät', () => {
+  assert.equal(HISTORIAN_HETKET.length, 20,
+    'H3 45–48 ja Galilei: kaksikymmentä hetkeä');
   const tunnukset = new Set();
   for (const hetki of HISTORIAN_HETKET) {
     assert.ok(!tunnukset.has(hetki.id),
@@ -182,13 +182,13 @@ test('kuvien osoitteet osoittavat pelin omaan ämpäriin oikealla nimikaavalla',
        * "KAIKKI GENEROIDUT KUVAT MAHDOLLISIMMAN VALOKUVAMAISIA").
        */
       // H3 45–48 (4.9.2026) on photo-v4-erä: versio luetaan hetken kentästä.
-      const versio = hetki.kuvaversio ?? 3;
+      const versio = kuva.versio ?? hetki.kuvaversio ?? 3;
       const odotettu = kuva.rooli === 'lehti'
         ? HETKI_LEHTIKUVAT[hetki.id]
         : `hetki-${hetki.id}-${kuva.rooli}-photo-v${versio}.jpg`;
       assert.equal(kuva.tiedosto, odotettu,
         `${hetki.id}: kuvan nimi "${kuva.tiedosto}" ei noudata kaavaa`);
-      assert.match(kuva.tiedosto, /-photo-v[34]\.jpg$/,
+      assert.match(kuva.tiedosto, /-photo-v[345]\.jpg$/,
         `${hetki.id}: vanha kuvaerä on yhä käytössä (${kuva.tiedosto})`);
       assert.equal(kuva.osoite, `${HETKI_KUVAJUURI}/${kuva.tiedosto}`,
         `${hetki.id}: osoite ei synny kuvajuuresta`);
