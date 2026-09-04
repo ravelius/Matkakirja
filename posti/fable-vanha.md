@@ -1,3 +1,31 @@
+## 4.9.2026 19.39 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 44–46 yksityisessä arvioinnissa
+
+Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu museo-, tutkimus-, parlamentti- ja elämäkertalähteistä, generoitu kokonaan uusina ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 95. Kaikki ovat 1536 × 1024 JPG/sRGB-kuvia. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
+
+- `skandaali-seuso-aarteen-kiista-photo-v1.jpg` — New York 1990: PELSO-kaiverrus herättää epäilyn Seuso-aarteen libanonilaiseksi väitetystä alkuperästä.
+  - Kuvateksti sanasta sanaan: **“Nuori unkarilainen arkeologi tunnistaa valtavan hopeavadin reunasta sanan PELSO — roomalaisen nimen Balatonjärvelle. Löytö ei yksin ratkaissut aarteen omistusta, mutta se sai libanonilaiseksi väitetyn alkuperän horjumaan ja muutti Sotheby’sin loisteliaan myyntiesittelyn kansainväliseksi oikeuskiistaksi.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi Unkarin kansallismuseon, vuoden 1990 tutkimusjulkaisun ja New Yorkin oikeuskiistaa kokoavan Art-Law Centren aineistoihin perustuva havainnekuva. Aarteen New Yorkin esittely, PELSO-kaiverrus sekä kiista libanonilaisista vientiasiakirjoista ovat lähdepohjaisia; tutkijaryhmä, asiakirjakansio ja kuvattu tunnistamisen sekunti ovat dramatisoituja. Kuva ei väitä yhden havainnon todistaneen asiakirjoja vääriksi eikä ota kantaa ratkaisematta jääneeseen löytöpaikkaan.**
+  - Lähteet: https://mnm.hu/en/exhibitions/seuso-treasure-currently-closed-visitors ; https://seuso.mnm.hu/hu/a-seuso-kincs/a-kincs-modern-kori-t%C3%B6rt%C3%A9nete ; https://www.persee.fr/doc/crai_0065-0536_1990_num_134_1_14836 ; https://plone.unige.ch/art-adr/cases-affaires/sevso-treasure-2013-lebanon-et-al-v-marquess-of-northampton
+  - SHA-256: `95e96faa3bc4aba2d712c3636f1cd712ef53eb2d90eb14c25c80a279cf08b469`
+
+- `skandaali-pigottin-vaarennetyt-kirjeet-photo-v1.jpg` — Lontoo 1889: Richard Pigottin toistuva kirjoitusvirhe alkaa paljastaa Parnell-kirjeiden väärennöksen.
+  - Kuvateksti sanasta sanaan: **“Richard Pigottin sormet jäävät musteeseen, kun Charles Russell pyytää häntä kirjoittamaan sanan, jonka kömpelö kirjoitusasu toistuu myös Parnellin nimiin tehdyissä kirjeissä. Nuori pikakirjoittaja tajuaa ansan ensimmäisenä: pienestä kielivirheestä alkaa purkautua väärennös, josta The Times oli maksanut omaisuuden.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi Oireachtasin historialliseen aineistoon ja parlamentin aikalaiskeskusteluihin perustuva havainnekuva. Pigottin ristikuulustelu, toistuva kirjoitusvirhe, tunnustus ja Parnellin vapautuminen epäilyistä ovat lähdepohjaisia; nuori pikakirjoittaja, tarkat eleet, paperien asettelu ja kuvattu hiljainen reaktio ovat dramatisoituja.**
+  - Lähteet: https://www.oireachtas.ie/en/visit-and-learn/history-and-buildings/historical-documents/in-the-display-case/ ; https://api.parliament.uk/historic-hansard/commons/1889/mar/22/vote-on-account ; https://api.parliament.uk/historic-hansard/lords/1890/mar/21/ireland-special-commission-1888-report
+  - SHA-256: `3bca879992f685942af014d884e14a1bebcba8f9b3c0249478866c47a225e738`
+
+- `skandaali-parnellin-lankeemus-photo-v1.jpg` — Lontoo 1890: Parnell jää Committee Room 15:een puolueen enemmistön poistuessa.
+  - Kuvateksti sanasta sanaan: **“Parnell jää pöydän ääreen, kun enemmistö hänen omista kansanedustajistaan marssii ulos Committee Room 15:stä. Ovella nuori irlantilainen edustaja katsoo vielä kerran takaisin: hänen on valittava johtaja, jonka varaan kotihallinto oli rakennettu, tai liittolaiset, joita ilman se ei ehkä koskaan toteutuisi.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi Dictionary of Irish Biographyn, Irlannin kansalliskirjaston ja parlamenttihistoriallisten lähteiden pohjalta tehty havainnekuva. Puolueen 1.–6. joulukuuta 1890 käymät kokoukset, enemmistön poistuminen Parnellin johdosta ja Committee Room 15 ovat lähdepohjaisia; nuori epäröivä edustaja, yksittäiset katseet, valaistus ja kuvattu sekunti ovat dramatisoituja. Kuva käsittelee poliittista hajaannusta eikä moralisoi yksityiselämää.**
+  - Lähteet: https://www.dib.ie/biography/parnell-charles-stewart-a7199 ; https://catalogue.nli.ie/Record/vtls000170522 ; https://www.dib.ie/biography/dillon-john-a2603
+  - SHA-256: `6512d67960a84b349facd2a071f8df1a7d923f7f31f159001ccd539447b44947`
+
+Arviointisivu: https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site  
+Julkaisu: versio 95, tuotantotila `succeeded`; kaikki kolme JPG:tä vastasivat tuotannossa HTTP 200.  
+Käsittely: odota omistajan hyväksyntää; hyväksytty JPG voidaan sen jälkeen viedä R2:een uutena versiona ja kytkeä kyseiseen skandaalikorttiin.
+
+---
+
 ## 4.9.2026 19.24 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 41–43 yksityisessä arvioinnissa
 
 Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu ensyklopedia-, museo-, muistelma- ja yliopistolähteistä, generoitu kokonaan uusina ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 94. Kaikki ovat 1536 × 1024 JPG/sRGB-kuvia. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
