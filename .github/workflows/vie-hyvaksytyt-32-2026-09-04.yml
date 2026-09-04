@@ -1,0 +1,597 @@
+name: Vie hyväksytyt 32 kuvaa R2:een 2026-09-04
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/vie-hyvaksytyt-32-2026-09-04.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vie-hyvaksytyt-32-2026-09-04
+  cancel-in-progress: true
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      DRIVE_AVAIN: ${{ secrets.SAMIREIVINEN_DRIVE_API }}
+      R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_AMPARI: ${{ secrets.R2_BUCKET }}
+      JULKINEN: https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev
+
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Tarkista yhteydet
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$DRIVE_AVAIN" ] || puuttuu="$puuttuu SAMIREIVINEN_DRIVE_API"
+          [ -n "$R2_TILI" ] || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ] || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "$R2_AMPARI" ] || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Puuttuvat repository secretit:$puuttuu"
+            exit 1
+          fi
+
+      - name: Nouda Drivestä ja tarkista hyväksytyt JPEG-kuvat
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'SKRIPTI'
+          import { mkdir, writeFile } from 'node:fs/promises';
+          import { dirname } from 'node:path';
+          import { createHash } from 'node:crypto';
+
+          const kuvat = [
+  [
+    "1HHW5pC0GmazhIhu50C2uh_f9rJpirt_v",
+    "kohtaamiset/dublin-molly-hapenny-v1.jpg",
+    "313241cfdda2eee51baee5a1797584e3afe41962f3b1bb69df1efbc16785cb7e",
+    1536,
+    1536
+  ],
+  [
+    "1ijVTcTTsX5Wl07jCgiNVd8D1ioUw9UV7",
+    "kohtaamiset/moskova-vera-tsaarinkello-v1.jpg",
+    "682343e849632abc84b63e1cb22d79eb38b66284328a02dfc3bae5270fdc183e",
+    1536,
+    1536
+  ],
+  [
+    "1VP6yuh1p_OLAwakLvnzBcudoqnLE-TjZ",
+    "kohtaamiset/helsinki-aino-luotsi-v1.jpg",
+    "ab5cd8f02d27200a67ae7d2b3dffb11e15e0f793d68c47f9c4004f6bff8c5315",
+    1536,
+    1536
+  ],
+  [
+    "1i3n2aMo9_engnYtT1FfYKiw-5ryy7sIT",
+    "kohtaamiset/riika-ilze-kultalehti-v1.jpg",
+    "2e42e96c9b240fc2e25dd8a064a7fbd5aaef18a50c3e6a99f23e7a5bf720b90d",
+    1536,
+    1536
+  ],
+  [
+    "1kpDZ4IDWC5cFBbSAxXuBzWLgzWDbDtzn",
+    "kohtaamiset/sofia-nadia-mineraalilahde-v2.jpg",
+    "ad8d6ebb3587d87bf05ea74125b7f983ca94221fb5ddd41ac74fc75dcd26a518",
+    1536,
+    1536
+  ],
+  [
+    "1c8Z8owMDZ5k0GeYXLQX8_4sjLM9BoG-M",
+    "kohtaamiset/wien-anton-katakombit-v2.jpg",
+    "d1508272de6ed41cf00dfdddd8b4fcd53d885725a9add0e9842811eded118519",
+    1536,
+    1536
+  ],
+  [
+    "1CRzyCTcZzexisSD1YNrMyI647oQOeA5E",
+    "kohtaamiset/bukarest-ana-freskokonservointi-v2.jpg",
+    "5d65131d85e2cc36f8f0a9815cfa5a89ef73564a1354aa0c5cc1e71012bf6bae",
+    1536,
+    1536
+  ],
+  [
+    "1hDQMUELEVnw_jpgRyCf5fpagnapgUDTA",
+    "kohtaamiset/sofia-mila-vitosha-nuotio-v2.jpg",
+    "3966e97dcdf6383d131cb574091e9d060a506ba4f0736f4adaddb85f48eb9c20",
+    1536,
+    1536
+  ],
+  [
+    "19j6RdT-qjGB61_IDd7VzjgLe6k5wWMs3",
+    "kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lahi-photo-v4.jpg",
+    "08314fd5cd6fd34abd65f43b3a54e9e8aedf67af61ad3cc592082ceb4d3d19d1",
+    1536,
+    1024
+  ],
+  [
+    "1hv9C8sqneafGv_bHpTUmRQYvKlH3k6nE",
+    "kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-kauko-photo-v4.jpg",
+    "3616ded9698e5533a8e22c2051616ff914be2df129dab7376f46a7c9f5d98bf1",
+    1536,
+    1024
+  ],
+  [
+    "1s81uOsAbQdcMZ02ruHW5obYPddYW57lN",
+    "kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg",
+    "f26f668fa047c792d25958c30aba5412946f953d03c702e7a0c5b330e8852577",
+    1086,
+    1448
+  ],
+  [
+    "1qslzeSPVr9D7xiHtdOaWgjw8UXzlcaEr",
+    "kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-lahi-photo-v4.jpg",
+    "02089b6b886f61919d39d4db4d5b851a024ab5ff3e7963039ce228c1d07e7ca9",
+    1536,
+    1024
+  ],
+  [
+    "1TuL00dL27tJ_2AOqC1_H4QsignB73SNo",
+    "kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-kauko-photo-v4.jpg",
+    "2cbb91cf5c54b4ba0cede5629eb58893db7ad34bb8676c59891d0bb3d614af5f",
+    1536,
+    1024
+  ],
+  [
+    "1tbbFC_tXIYeoclFSzA2MDvviHAd-GlQ6",
+    "kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lahi-photo-v4.jpg",
+    "127527f8373c1b5d6f7a84bcf16a1c3374c7b3619dddbd1dcc42ec16e7fe436b",
+    1536,
+    1024
+  ],
+  [
+    "1T4IUVmrEnzFi_p5SDPg9-6yCv5AG1iHC",
+    "kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-kauko-photo-v4.jpg",
+    "9fdafb5b90a907a01cf78b6734b15f676e4768b0c61f90f0cfaa29029c672df5",
+    1536,
+    1024
+  ],
+  [
+    "1Sw6xW_BB-2bfBSXDsqyml-0p4mHZofwC",
+    "kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lehti-photo-v4.jpg",
+    "45141e414d5722fc9634426803c376360487da03058166dfc5c11c4e26ca4515",
+    1086,
+    1448
+  ],
+  [
+    "1VhALZV5CzYsCykVVREvjcc-q__smgO9d",
+    "kohtaamiset/historian-hetket/hetki-machu-picchu-1911-lahi-photo-v4.jpg",
+    "21cffe32b26b4d3073eb7f39859b74aa45bd96616e5f51e2e61bbba875e1cb15",
+    1536,
+    1024
+  ],
+  [
+    "1cM5zKJKG74YWPHD2RFNClOeEhgmPwDIP",
+    "kohtaamiset/ihmeet/ihme-vanha-london-bridge-loistoaika-v3.jpg",
+    "8e03a1c9e9e883edbd72958159300ca4809b9b4e1d67b31a8a836bde415c159e",
+    1536,
+    1024
+  ],
+  [
+    "1q2Dk6gsc0tq79TYzpPn9IaEsu8agVIJx",
+    "kohtaamiset/ihmeet/ihme-vanha-st-paul-loistoaika-v3.jpg",
+    "b05d8716d5490fa1720c2120667316e56e8dfea206bf599da521be48ae7c7c21",
+    1536,
+    1024
+  ],
+  [
+    "1C1hgW_JnrdHPvO9-l-_qW3-Z4B07NMgC",
+    "kohtaamiset/ihmeet/ihme-yuanmingyuan-loistoaika-v3.jpg",
+    "84729b0cbb9d9669034175e48ccfb272d3474d6e4957dbd2d895230e0bfd633d",
+    1536,
+    1024
+  ],
+  [
+    "1SZs5S4k5bSO3-BNdDmQN-rkw3MKlP6_L",
+    "kohtaamiset/elaimet/elain-bih-tornjakpentu-vlasic-v2.jpg",
+    "0ae2c2bd5f18c61805b5b515809b1506af4e2e6f3f8a218325c256b6b9a6e0bc",
+    1536,
+    1536
+  ],
+  [
+    "1H1p7sHpcRB4edvsj0BuNUhB6_DFB_bFt",
+    "aikajana/keksinnot/muotokuva/1873-isoisa.jpg",
+    "d8228358a347453cc614288c826de9e00359feeee8332b9b800f1e965bebacad",
+    1024,
+    1280
+  ],
+  [
+    "1NrqgslgGi8PrEcQIJAiwHOHCROSKpFJN",
+    "kohtaamiset/kuvajono/skandaali-shakkiturkkilainen-photo-v1.jpg",
+    "9241e67aa4763b1c68381679d84ebece2d41742a6addefea1e58bf2df65fc5cd",
+    1536,
+    1024
+  ],
+  [
+    "1Gv8GWKzI_zvCqMCVfhVTmZq8TlNL9mmP",
+    "kohtaamiset/kuvajono/skandaali-klimtin-tiedekuntamaalaukset-photo-v1.jpg",
+    "066c5b67e90397831cd9353596353ad405b99f92d9e07b707e2dbcd7e9804429",
+    1536,
+    1024
+  ],
+  [
+    "1w6fPZiilhsuTPIWlL8dPeDDTFhlqvHvc",
+    "kohtaamiset/kuvajono/skandaali-salieran-varkaus-photo-v1.jpg",
+    "113949b4e2dc37e60c104fea3f7f075d0fac867f93e4d67bb397a15917240b97",
+    1536,
+    1024
+  ],
+  [
+    "1BDJJ5G-MyfsEfcHTl1cuwyx2wLvEOSME",
+    "kohtaamiset/kuvajono/skandaali-veda-slovena-photo-v1.jpg",
+    "b5679fa6c2c59602d9505d819e0041153467e542c8d5465d3be49aa7c8d924ba",
+    1536,
+    1024
+  ],
+  [
+    "1WZhxGs7YmccbLwGx-SwbCjDQGTWMc841",
+    "kohtaamiset/kuvajono/skandaali-battenbergin-ruhtinaskaappaus-photo-v1.jpg",
+    "71e6dd13e49acb1eb079c06d9d929c0d0cb65f9db92283b3055ae6c7d46bc3e3",
+    1536,
+    1024
+  ],
+  [
+    "1irLZ7NIFCq98dlYpi82NaPurAezr8CVY",
+    "kohtaamiset/kuvajono/skandaali-kansallisteatterin-vihellyskohu-photo-v1.jpg",
+    "5dc2fb92f08f6d5406795daf71a1348d0ccbbe788735123a2b99d04d366715e8",
+    1536,
+    1024
+  ],
+  [
+    "1aUYUaPNp_c-XCP12-27eSPDdSAZ-m2zR",
+    "kohtaamiset/kuvajono/skandaali-fojnican-vaakunakirja-photo-v1.jpg",
+    "4d74038fe42cd5c97e956545afe704e5a0fa68a9076bc02279afa10a1a9c8f9b",
+    1536,
+    1024
+  ],
+  [
+    "1y0gRsW_S_KXdZswLOZTLgq1Lz7ysSafH",
+    "kohtaamiset/kuvajono/skandaali-bosnian-kriisi-1908-photo-v1.jpg",
+    "1ffe10ce43d1cf60f3a0dbf4a322f2fa6c6eb74fd6e067b9206a5fa8e711c2fe",
+    1536,
+    1024
+  ],
+  [
+    "1EK1keXBbEDdIM7tRsunYUq2j-4vPaxJY",
+    "kohtaamiset/kuvajono/skandaali-anna-goldin-tapaus-photo-v1.jpg",
+    "8ed9fdc43ecbd9afc305a5afd306b85fc5ea672e8ca03da8715d690e36196fef",
+    1536,
+    1024
+  ],
+  [
+    "19OeZtYdAIj1TAfrbRoSPWYk1qyPjj_kO",
+    "kohtaamiset/kuvajono/skandaali-farinet-alppien-vaararahanpainaja-photo-v1.jpg",
+    "20555ba093cfe944a151702e4faeccda24335d3b8ce3aba55692145da421714d",
+    1536,
+    1024
+  ]
+];
+
+          function jpegMitat(data) {
+            if (data[0] !== 0xff || data[1] !== 0xd8) throw new Error('ei ole JPEG');
+            let i = 2;
+            while (i + 9 < data.length) {
+              if (data[i] !== 0xff) { i += 1; continue; }
+              const merkki = data[i + 1];
+              if (merkki === 0xd8 || merkki === 0xd9) { i += 2; continue; }
+              const pituus = data.readUInt16BE(i + 2);
+              if (pituus < 2 || i + 2 + pituus > data.length) break;
+              if ([0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf].includes(merkki)) {
+                return { korkeus: data.readUInt16BE(i + 5), leveys: data.readUInt16BE(i + 7) };
+              }
+              i += 2 + pituus;
+            }
+            throw new Error('JPEG-mittoja ei löytynyt');
+          }
+
+          for (const [id, polku, odotettuSha, leveys, korkeus] of kuvat) {
+            const julkinen = `${process.env.JULKINEN}/${polku}?t=${Date.now()}`;
+            const vanha = await fetch(julkinen, { headers: { 'Cache-Control': 'no-cache' } });
+            if (vanha.ok) {
+              const vanhaData = Buffer.from(await vanha.arrayBuffer());
+              const vanhaSha = createHash('sha256').update(vanhaData).digest('hex');
+              if (vanhaSha !== odotettuSha) throw new Error(`${polku}: nimiristiriita, R2:ssa eri sisältö`);
+              console.log(`${polku}: sama hyväksytty versio oli jo R2:ssa`);
+            } else if (vanha.status !== 404) {
+              throw new Error(`${polku}: R2-esitarkistus HTTP ${vanha.status}`);
+            }
+
+            const url = `https://www.googleapis.com/drive/v3/files/${id}?alt=media&key=${process.env.DRIVE_AVAIN}`;
+            const vastaus = await fetch(url);
+            if (!vastaus.ok) throw new Error(`${polku}: Drive HTTP ${vastaus.status}`);
+            const data = Buffer.from(await vastaus.arrayBuffer());
+            const sha = createHash('sha256').update(data).digest('hex');
+            if (sha !== odotettuSha) throw new Error(`${polku}: SHA-256 ei täsmää`);
+            const mitat = jpegMitat(data);
+            if (mitat.leveys !== leveys || mitat.korkeus !== korkeus) {
+              throw new Error(`${polku}: ${mitat.leveys}x${mitat.korkeus}, odotettiin ${leveys}x${korkeus}`);
+            }
+            if (polku.startsWith('kohtaamiset/') && !polku.includes('/historian-hetket/') && !polku.includes('/ihmeet/') && !polku.includes('/kuvajono/') && !polku.includes('/elaimet/') && leveys !== korkeus) {
+              throw new Error(`${polku}: kohtaamiskuvan pitää olla neliö`);
+            }
+            const kohde = `r2-out/${polku}`;
+            await mkdir(dirname(kohde), { recursive: true });
+            await writeFile(kohde, data);
+            console.log(`${polku}: Drive, JPEG, ${leveys}x${korkeus} ja SHA-256 kunnossa`);
+          }
+          SKRIPTI
+
+      - name: Vie kuvat R2-mediämpäriin
+        run: |
+          set -euo pipefail
+          while IFS= read -r tiedosto; do
+            avain="${tiedosto#r2-out/}"
+            aws s3 cp "$tiedosto" "s3://$R2_AMPARI/$avain"               --endpoint-url "https://$R2_TILI.r2.cloudflarestorage.com"               --no-progress --content-type image/jpeg               --cache-control "public, max-age=31536000, immutable"
+          done < <(find r2-out -type f -name '*.jpg' -print | sort)
+
+      - name: Varmista julkinen R2 tavutasolla
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'SKRIPTI'
+          import { readFile } from 'node:fs/promises';
+          import { createHash } from 'node:crypto';
+
+          const kuvat = [
+  [
+    "1HHW5pC0GmazhIhu50C2uh_f9rJpirt_v",
+    "kohtaamiset/dublin-molly-hapenny-v1.jpg",
+    "313241cfdda2eee51baee5a1797584e3afe41962f3b1bb69df1efbc16785cb7e",
+    1536,
+    1536
+  ],
+  [
+    "1ijVTcTTsX5Wl07jCgiNVd8D1ioUw9UV7",
+    "kohtaamiset/moskova-vera-tsaarinkello-v1.jpg",
+    "682343e849632abc84b63e1cb22d79eb38b66284328a02dfc3bae5270fdc183e",
+    1536,
+    1536
+  ],
+  [
+    "1VP6yuh1p_OLAwakLvnzBcudoqnLE-TjZ",
+    "kohtaamiset/helsinki-aino-luotsi-v1.jpg",
+    "ab5cd8f02d27200a67ae7d2b3dffb11e15e0f793d68c47f9c4004f6bff8c5315",
+    1536,
+    1536
+  ],
+  [
+    "1i3n2aMo9_engnYtT1FfYKiw-5ryy7sIT",
+    "kohtaamiset/riika-ilze-kultalehti-v1.jpg",
+    "2e42e96c9b240fc2e25dd8a064a7fbd5aaef18a50c3e6a99f23e7a5bf720b90d",
+    1536,
+    1536
+  ],
+  [
+    "1kpDZ4IDWC5cFBbSAxXuBzWLgzWDbDtzn",
+    "kohtaamiset/sofia-nadia-mineraalilahde-v2.jpg",
+    "ad8d6ebb3587d87bf05ea74125b7f983ca94221fb5ddd41ac74fc75dcd26a518",
+    1536,
+    1536
+  ],
+  [
+    "1c8Z8owMDZ5k0GeYXLQX8_4sjLM9BoG-M",
+    "kohtaamiset/wien-anton-katakombit-v2.jpg",
+    "d1508272de6ed41cf00dfdddd8b4fcd53d885725a9add0e9842811eded118519",
+    1536,
+    1536
+  ],
+  [
+    "1CRzyCTcZzexisSD1YNrMyI647oQOeA5E",
+    "kohtaamiset/bukarest-ana-freskokonservointi-v2.jpg",
+    "5d65131d85e2cc36f8f0a9815cfa5a89ef73564a1354aa0c5cc1e71012bf6bae",
+    1536,
+    1536
+  ],
+  [
+    "1hDQMUELEVnw_jpgRyCf5fpagnapgUDTA",
+    "kohtaamiset/sofia-mila-vitosha-nuotio-v2.jpg",
+    "3966e97dcdf6383d131cb574091e9d060a506ba4f0736f4adaddb85f48eb9c20",
+    1536,
+    1536
+  ],
+  [
+    "19j6RdT-qjGB61_IDd7VzjgLe6k5wWMs3",
+    "kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lahi-photo-v4.jpg",
+    "08314fd5cd6fd34abd65f43b3a54e9e8aedf67af61ad3cc592082ceb4d3d19d1",
+    1536,
+    1024
+  ],
+  [
+    "1hv9C8sqneafGv_bHpTUmRQYvKlH3k6nE",
+    "kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-kauko-photo-v4.jpg",
+    "3616ded9698e5533a8e22c2051616ff914be2df129dab7376f46a7c9f5d98bf1",
+    1536,
+    1024
+  ],
+  [
+    "1s81uOsAbQdcMZ02ruHW5obYPddYW57lN",
+    "kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg",
+    "f26f668fa047c792d25958c30aba5412946f953d03c702e7a0c5b330e8852577",
+    1086,
+    1448
+  ],
+  [
+    "1qslzeSPVr9D7xiHtdOaWgjw8UXzlcaEr",
+    "kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-lahi-photo-v4.jpg",
+    "02089b6b886f61919d39d4db4d5b851a024ab5ff3e7963039ce228c1d07e7ca9",
+    1536,
+    1024
+  ],
+  [
+    "1TuL00dL27tJ_2AOqC1_H4QsignB73SNo",
+    "kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-kauko-photo-v4.jpg",
+    "2cbb91cf5c54b4ba0cede5629eb58893db7ad34bb8676c59891d0bb3d614af5f",
+    1536,
+    1024
+  ],
+  [
+    "1tbbFC_tXIYeoclFSzA2MDvviHAd-GlQ6",
+    "kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lahi-photo-v4.jpg",
+    "127527f8373c1b5d6f7a84bcf16a1c3374c7b3619dddbd1dcc42ec16e7fe436b",
+    1536,
+    1024
+  ],
+  [
+    "1T4IUVmrEnzFi_p5SDPg9-6yCv5AG1iHC",
+    "kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-kauko-photo-v4.jpg",
+    "9fdafb5b90a907a01cf78b6734b15f676e4768b0c61f90f0cfaa29029c672df5",
+    1536,
+    1024
+  ],
+  [
+    "1Sw6xW_BB-2bfBSXDsqyml-0p4mHZofwC",
+    "kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lehti-photo-v4.jpg",
+    "45141e414d5722fc9634426803c376360487da03058166dfc5c11c4e26ca4515",
+    1086,
+    1448
+  ],
+  [
+    "1VhALZV5CzYsCykVVREvjcc-q__smgO9d",
+    "kohtaamiset/historian-hetket/hetki-machu-picchu-1911-lahi-photo-v4.jpg",
+    "21cffe32b26b4d3073eb7f39859b74aa45bd96616e5f51e2e61bbba875e1cb15",
+    1536,
+    1024
+  ],
+  [
+    "1cM5zKJKG74YWPHD2RFNClOeEhgmPwDIP",
+    "kohtaamiset/ihmeet/ihme-vanha-london-bridge-loistoaika-v3.jpg",
+    "8e03a1c9e9e883edbd72958159300ca4809b9b4e1d67b31a8a836bde415c159e",
+    1536,
+    1024
+  ],
+  [
+    "1q2Dk6gsc0tq79TYzpPn9IaEsu8agVIJx",
+    "kohtaamiset/ihmeet/ihme-vanha-st-paul-loistoaika-v3.jpg",
+    "b05d8716d5490fa1720c2120667316e56e8dfea206bf599da521be48ae7c7c21",
+    1536,
+    1024
+  ],
+  [
+    "1C1hgW_JnrdHPvO9-l-_qW3-Z4B07NMgC",
+    "kohtaamiset/ihmeet/ihme-yuanmingyuan-loistoaika-v3.jpg",
+    "84729b0cbb9d9669034175e48ccfb272d3474d6e4957dbd2d895230e0bfd633d",
+    1536,
+    1024
+  ],
+  [
+    "1SZs5S4k5bSO3-BNdDmQN-rkw3MKlP6_L",
+    "kohtaamiset/elaimet/elain-bih-tornjakpentu-vlasic-v2.jpg",
+    "0ae2c2bd5f18c61805b5b515809b1506af4e2e6f3f8a218325c256b6b9a6e0bc",
+    1536,
+    1536
+  ],
+  [
+    "1H1p7sHpcRB4edvsj0BuNUhB6_DFB_bFt",
+    "aikajana/keksinnot/muotokuva/1873-isoisa.jpg",
+    "d8228358a347453cc614288c826de9e00359feeee8332b9b800f1e965bebacad",
+    1024,
+    1280
+  ],
+  [
+    "1NrqgslgGi8PrEcQIJAiwHOHCROSKpFJN",
+    "kohtaamiset/kuvajono/skandaali-shakkiturkkilainen-photo-v1.jpg",
+    "9241e67aa4763b1c68381679d84ebece2d41742a6addefea1e58bf2df65fc5cd",
+    1536,
+    1024
+  ],
+  [
+    "1Gv8GWKzI_zvCqMCVfhVTmZq8TlNL9mmP",
+    "kohtaamiset/kuvajono/skandaali-klimtin-tiedekuntamaalaukset-photo-v1.jpg",
+    "066c5b67e90397831cd9353596353ad405b99f92d9e07b707e2dbcd7e9804429",
+    1536,
+    1024
+  ],
+  [
+    "1w6fPZiilhsuTPIWlL8dPeDDTFhlqvHvc",
+    "kohtaamiset/kuvajono/skandaali-salieran-varkaus-photo-v1.jpg",
+    "113949b4e2dc37e60c104fea3f7f075d0fac867f93e4d67bb397a15917240b97",
+    1536,
+    1024
+  ],
+  [
+    "1BDJJ5G-MyfsEfcHTl1cuwyx2wLvEOSME",
+    "kohtaamiset/kuvajono/skandaali-veda-slovena-photo-v1.jpg",
+    "b5679fa6c2c59602d9505d819e0041153467e542c8d5465d3be49aa7c8d924ba",
+    1536,
+    1024
+  ],
+  [
+    "1WZhxGs7YmccbLwGx-SwbCjDQGTWMc841",
+    "kohtaamiset/kuvajono/skandaali-battenbergin-ruhtinaskaappaus-photo-v1.jpg",
+    "71e6dd13e49acb1eb079c06d9d929c0d0cb65f9db92283b3055ae6c7d46bc3e3",
+    1536,
+    1024
+  ],
+  [
+    "1irLZ7NIFCq98dlYpi82NaPurAezr8CVY",
+    "kohtaamiset/kuvajono/skandaali-kansallisteatterin-vihellyskohu-photo-v1.jpg",
+    "5dc2fb92f08f6d5406795daf71a1348d0ccbbe788735123a2b99d04d366715e8",
+    1536,
+    1024
+  ],
+  [
+    "1aUYUaPNp_c-XCP12-27eSPDdSAZ-m2zR",
+    "kohtaamiset/kuvajono/skandaali-fojnican-vaakunakirja-photo-v1.jpg",
+    "4d74038fe42cd5c97e956545afe704e5a0fa68a9076bc02279afa10a1a9c8f9b",
+    1536,
+    1024
+  ],
+  [
+    "1y0gRsW_S_KXdZswLOZTLgq1Lz7ysSafH",
+    "kohtaamiset/kuvajono/skandaali-bosnian-kriisi-1908-photo-v1.jpg",
+    "1ffe10ce43d1cf60f3a0dbf4a322f2fa6c6eb74fd6e067b9206a5fa8e711c2fe",
+    1536,
+    1024
+  ],
+  [
+    "1EK1keXBbEDdIM7tRsunYUq2j-4vPaxJY",
+    "kohtaamiset/kuvajono/skandaali-anna-goldin-tapaus-photo-v1.jpg",
+    "8ed9fdc43ecbd9afc305a5afd306b85fc5ea672e8ca03da8715d690e36196fef",
+    1536,
+    1024
+  ],
+  [
+    "19OeZtYdAIj1TAfrbRoSPWYk1qyPjj_kO",
+    "kohtaamiset/kuvajono/skandaali-farinet-alppien-vaararahanpainaja-photo-v1.jpg",
+    "20555ba093cfe944a151702e4faeccda24335d3b8ce3aba55692145da421714d",
+    1536,
+    1024
+  ]
+];
+          for (const [, polku, odotettuSha] of kuvat) {
+            const paikallinen = await readFile(`r2-out/${polku}`);
+            let vastaus;
+            for (let yritys = 1; yritys <= 12; yritys += 1) {
+              vastaus = await fetch(`${process.env.JULKINEN}/${polku}?t=${Date.now()}`, {
+                headers: { Origin: 'https://ravelius.github.io', 'Cache-Control': 'no-cache' },
+              });
+              if (vastaus.ok) break;
+              await new Promise((resolve) => setTimeout(resolve, 2000));
+            }
+            if (!vastaus?.ok) throw new Error(`${polku}: R2 HTTP ${vastaus?.status}`);
+            const tyyppi = vastaus.headers.get('content-type') ?? '';
+            if (!tyyppi.startsWith('image/jpeg')) throw new Error(`${polku}: R2 MIME ${tyyppi}`);
+            if (!vastaus.headers.get('access-control-allow-origin')) throw new Error(`${polku}: CORS puuttuu`);
+            const ladattu = Buffer.from(await vastaus.arrayBuffer());
+            const ladattuSha = createHash('sha256').update(ladattu).digest('hex');
+            const paikallinenSha = createHash('sha256').update(paikallinen).digest('hex');
+            if (ladattuSha !== paikallinenSha || ladattuSha !== odotettuSha) {
+              throw new Error(`${polku}: takaisinluettu SHA-256 ei täsmää`);
+            }
+            console.log(`${polku}: julkinen JPEG, CORS ja tavut kunnossa`);
+          }
+          SKRIPTI
