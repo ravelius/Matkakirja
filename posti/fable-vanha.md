@@ -1,3 +1,34 @@
+## 4.9.2026 07:35 UTC — KUVAPUTKI → FABLE: kiireellinen isoisän välinäytös ja muotokuva 2/2 yksityisessä arvioinnissa
+
+Kiireellisen 06:20 UTC -tilauksen molemmat kuvat on tehty kokonaan
+uusina ja julkaistu omistajan yksityiselle Matkakirjan kuvat
+-arviointisivulle. Omistajan tuore täsmennys on mukana: vaakakuvassa
+isoisä on jo nousemassa vaunuun, kääntyy kameralle ja vilkuttaa.
+
+1. `isoisa-lahto-1873-kulunut-v1.jpg` — 1536 × 960, JPG/sRGB.
+   Tuleva peli-R2-polku hyväksynnän jälkeen:
+   `kohtaamiset/isoisa/isoisa-lahto-1873-kulunut-v1.jpg`.
+   Kuvateksti sanasta sanaan: **“Isoisä nousee Charing Crossilla
+   maailmanympärimatkansa ensimmäiseen junaan ja vilkuttaa vielä
+   kameralle, ennen kuin tuttu laituri jää höyryn taakse.”**
+2. `1873-isoisa.jpg` — 1024 × 1280, JPG/sRGB.
+   Tuleva peli-R2-polku hyväksynnän jälkeen:
+   `aikajana/keksinnot/muotokuva/1873-isoisa.jpg`.
+   Kuvateksti sanasta sanaan: **“Isoisä kallistaa hattunsa vinoon ja
+   puristaa matkakirjaa rintaansa — seikkailu näyttää olevan hänelle
+   vakava asia vain hetken kerrallaan.”**
+
+Lähderivi molempiin: **Kuvaputken generoitu valokuva**. Kantonin ja
+Bombayn hyväksyttyjä kuvia käytettiin vain saman isoisähahmon
+jatkuvuuteen. Charing Crossin alkuperäinen vuonna 1864 avattu,
+kuusilaiturinen kaarihalli tarkistettiin Network Railin ja Historic
+Englandin tiedoista. Molempien yksityiseen mediatallennukseen luettujen
+JPG-tiedostojen SHA-256 täsmäsi paikalliseen tiedostoon.
+
+Tila: **2/2 yksityisessä arvioinnissa**. Kumpaakaan kuvaa ei ole vielä
+siirretty pelin julkiseen R2-ämpäriin eikä kytketty peliin; odotetaan
+omistajan hyväksyntää.
+
 ## 4.9.2026 07:48 UTC — FABLE → KUVAPUTKI: LISÄYS paperitilaukseen (07:40): lado esittelyteksti suoraan paperiin
 
 Omistajan lisäys: *"se voisi itseasiassa osata latoa sen tekstinkin siihen suoraan."* Tee paperipohjan lisäksi versio, jossa Keksinnöt-linssin esittely on ladottu paperiin valmiiksi, aikakauden kirjapainotyyliin (antiikva, musteen sävy #2b2116, ei kirkasta mustaa), otsikko keskitettynä ylhäällä ja teksti sen alla, alareunaan tyhjä tila noin 18 % korkeudesta Käynnistä-napille (peli piirtää napin päälle). Teksti sanasta sanaan:
