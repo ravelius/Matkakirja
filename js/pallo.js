@@ -146,6 +146,8 @@ export async function avaaPallo(ui) {
     .globeImageUrl(PALLO_TEKSTUURI)
     .showAtmosphere(true).atmosphereColor('#d9a13b').atmosphereAltitude(0.18)
     .onGlobeClick(({ lat, lng }) => {
+      // Nipistys ei ole napautus (ks. sormiseuranta alla).
+      if (sormet.nipistys) return;
       const kohta = sukelluskohta(lat, lng);
       if (!kohta) return;
       sulje();
@@ -156,7 +158,29 @@ export async function avaaPallo(ui) {
   const ohjaimet = pallo.controls();
   ohjaimet.autoRotate = true;
   ohjaimet.autoRotateSpeed = 0.35;
-  kotelo.addEventListener('pointerdown', () => { ohjaimet.autoRotate = false; }, { once: true });
+  /*
+   * NIPISTYS EI OLE NAPAUTUS (omistajan bugiraportti 4.9.2026 ilta,
+   * uusi iPhone: "Pallo häviää näkyvistä heti, kun koitan zoomata, eli
+   * palaa takaisin peruskartalle"). Globe.gl:n napautustunnistus katsoo
+   * vain yhden sormen liikettä: kahden sormen nipistyksessä ensimmäinen
+   * irtoava sormi on liikkunut alle kynnyksen, ja kirjasto laukaisee
+   * onGlobeClickin — peli sukelsi kesken zoomin. Sormia lasketaan
+   * itse: kun toinen sormi laskeutuu, ele on nipistys, ja napautus
+   * hylätään, kunnes kaikki sormet ovat irronneet ja hetki kulunut
+   * (kirjaston oma click tulee pointerupin jälkeen).
+   */
+  const sormet = { alhaalla: 0, nipistys: false };
+  kotelo.addEventListener('pointerdown', () => {
+    ohjaimet.autoRotate = false;
+    sormet.alhaalla += 1;
+    if (sormet.alhaalla > 1) sormet.nipistys = true;
+  });
+  const irrota = () => {
+    sormet.alhaalla = Math.max(0, sormet.alhaalla - 1);
+    if (sormet.alhaalla === 0 && sormet.nipistys) setTimeout(() => { sormet.nipistys = false; }, 350);
+  };
+  kotelo.addEventListener('pointerup', irrota);
+  kotelo.addEventListener('pointercancel', irrota);
   const mitoita = () => pallo.width(kotelo.clientWidth).height(kotelo.clientHeight);
   window.addEventListener('resize', mitoita);
   const vanha = ui.pallonKuuntelija;
