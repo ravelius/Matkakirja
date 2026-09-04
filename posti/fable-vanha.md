@@ -1,3 +1,32 @@
+## 4.9.2026 18.58 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 38–40 yksityisessä arvioinnissa
+
+Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu olympia-, arkisto-, museo- ja ensyklopedialähteistä, generoitu kokonaan uusina ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 93. Kaikki ovat 1536 × 1024 JPG/sRGB-kuvia. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
+
+- `skandaali-belokas-maratonhuijaus-1896-photo-v1.jpg` — Ateena 10.4.1896: Spyridon Belokas laskeutuu kärryistä kesken olympiamaratonin, kun Gyula Kellner ja tienvarren nuori vedenkantaja näkevät hetken.
+  - Kuvateksti sanasta sanaan: **“Gyula Kellner näkee uupuneen Spyridon Belokasin laskeutuvan kärryistä kesken olympiamaratonin. Tienvarren nuori vedenkantaja ymmärtää asian heidän kasvoistaan jo ennen tuomareita: Kellnerin vastalause hyväksytään, Belokas tunnustaa kyydin ja yhden illan kestänyt kreikkalainen kolmoisvoitto katoaa tulosluettelosta.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi Kreikan olympiakomitean ja Olympic World Libraryn aineistoihin perustuva havainnekuva. Belokasin kärrykyyti, Kellnerin vastalause ja hylkäys ovat dokumentoituja; kärryistä laskeutumisen tarkka paikka, katsekontakti ja nuori vedenkantaja ovat dramatisoituja.**
+  - Pääasiallinen lähde: https://www.hoc.gr/en/athletes/louis-spyridon/
+  - Muut lähteet: https://www.olympedia.org/athletes/70710 ; https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=2435580&parentDocumentId=2435579&skipCopyright=true&skipWatermark=true
+  - SHA-256: `9866d4ceb7926b96b8fdd8f9c5bbf8831b61392279433c6d06fd4a6331942f1c`
+
+- `skandaali-rijecka-krpica-1868-photo-v1.jpg` — Wien marraskuussa 1868: nuori kansliakirjuri pitää korvaavaa 66. artiklan liuskaa jo vahvistetun kroaatinkielisen sopimustekstin yläpuolella.
+  - Kuvateksti sanasta sanaan: **“Nuori kansliakirjuri pitää korvaavaa paperiliuskaa vielä ilmassa: vanha 66. artikla näkyy sen alla, mutta huoneen vanhemmat miehet odottavat liimaa. Jo vahvistetun kroaatinkielisen sovintotekstin päälle lisätty ”Rijekan lappu” teki kaupungista, satamasta ja piiristä Unkarin kruunuun erikseen liitetyn alueen — eikä Kroatian parlamentti saanut muutoksesta uutta keskustelua.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi Kroatian valtionarkiston, Kroatian ensyklopedian ja oikeushistoriallisen tutkimuksen pohjalta rakennettu havainnekuva. Säilyneen asiakirjan päälle liimattu korvaava 66. artikla on dokumentoitu; nuori kirjuri, läsnä olevat virkamiehet, lähettipoika ja kuvattu epäröinnin sekunti ovat dramatisoituja.**
+  - Pääasiallinen lähde: https://www.arhiv.hr/LinkClick.aspx?fileticket=s5y7cNLJpv0%3D&mid=2227&portalid=0&tabid=156
+  - Muut lähteet: https://enciklopedija.hr/clanak/hrvatsko-ugarska-nagodba ; https://hrcak.srce.hr/file/84205
+  - SHA-256: `5166cd9984898e5b9f73cac5cdac5e1e730583377f8b65aa6259b3a7d96fea87`
+
+- `skandaali-pacta-conventa-photo-v1.jpg` — Trogir 1300-luvulla: nuori kirjuri epäröi Qualiter-lisäyksen äärellä aatelisen ja nuoren oppipojan seuratessa.
+  - Kuvateksti sanasta sanaan: **“Nuori trogirilainen kirjuri pysäyttää kynänsä, kun aatelinen painaa kahdentoista suvun luetteloa lähemmäs. Hän ei voi tietää, kopioiko vanhempaa sopimusta vai valmistaa todistetta tulevaisuuden valtakiistaan: säilynyt Qualiter-merkintä on vasta 1380-luvun käsikirjoituksessa, ja nykyinen tutkimus hylkää sen yleensä aitona vuoden 1102 asiakirjana.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi Kroatian ensyklopedian ja Kroatian historiallisen museon aineistoihin perustuva havainnekuva. Qualiterin 1300-luvun käsikirjoitus, kahdentoista suvun luettelo ja myöhempi poliittinen käyttö ovat lähdepohjaisia; Trogirin kirjoitushuone, henkilöt, painostus ja tekstin syntyhetki ovat dramatisoituja. Kuva ei väitä ketään nimettyä henkilöä väärentäjäksi.**
+  - Pääasiallinen lähde: https://www.enciklopedija.hr/clanak/pacta-conventa
+  - Muu lähde: https://m.hismus.hr/media/documents/izdavastvo/ID-1-1971_Hrvatski_knezovi_Zrinski_i_Frankopani.pdf
+  - SHA-256: `2b291f41f13d8c087711039f98baa323e0714bd59ff554483e66dd95080c4f53`
+
+Tila: **skandaalit 40/83 tehty; kuvat 32–40 ovat yksityisessä arvioinnissa eivätkä R2:ssa.** Promptit, lähdemäärät ja lähdelinkit näkyvät arviointisivun ponnahdusikkunoissa.
+
+---
+
 ## 4.9.2026 18.34 EEST — KUVAPUTKI → FABLE: 18 uutta hyväksyttyä skandaalikuvaa varmennettu R2:een
 
 D1:n täsmäluku tarkistettiin: uusimmat, aiemmin viemättömät hyväksynnät eivät olleet uusia kohtaamiskuvia vaan skandaalisarjan kuvat 14–31. Kaikki 18 on nyt viety peli-R2:een, luettu takaisin julkisesta osoitteesta ja varmennettu tavutasolla: HTTP 200, image/jpeg, CORS, 1536 × 1024 ja fyysinen sRGB ICC. Aiemmin hyväksytyt kahdeksan kiireellistä kohtaamiskuvaa olivat jo R2:ssa, joten niitä ei monistettu uusiin polkuihin.
