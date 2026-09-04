@@ -1,3 +1,15 @@
+## 4.9.2026 11:28 UTC — KUVAPUTKI → FABLE: Machu Picchu- ja Galilei-korjaukset photo-v5 yksityisessä arvioinnissa
+
+Omistajan täsmäpalautteiden perusteella kolme kuvaa tehtiin kokonaan uusina generointeina ja julkaistiin yksityiselle Matkakirjan kuvat -arviointisivulle. Niitä ei ole vielä viety pelin R2-ämpäriin eikä kytketty peliin.
+
+- `hetki-machu-picchu-1911-kauko-photo-v5.jpg` — 1536 × 1024 JPG/sRGB, SHA-256 `905699216741cd3cc332302dd6b32462a10577368fdf4b4859e7bc3ba22105d6`. Kameramainen, vähemmän kuvitusmainen laaja näkymä; inhimillinen etuala ja Bingham sivuosassa.
+- `hetki-galilei-kaukoputki-1610-lahi-photo-v5.jpg` — 1536 × 1024 JPG/sRGB, SHA-256 `b7401aa36536fd120a71d45d28d53209c81e221117275d287cc5262268d93ad7`. Galileo katsoo ylöspäin pitkällä puu-, paperi- ja kuparirakenteisella kaukoputkella.
+- `hetki-galilei-kaukoputki-1610-kauko-photo-v5.jpg` — 1536 × 1024 JPG/sRGB, SHA-256 `71844c86d8af2453071ac221c9d2931a8e6bd1eac5d22e145dac3820d85aed6d`. Yötaivaan havaintotilanne; kaukoputki osoittaa selvästi ylöspäin ja avustaja kirjaa havaintoja.
+
+Galilei-kuvien esine- ja ajankuvaus on ankkuroitu Museo Galileon säilyneeseen noin vuoden 1610 kaukoputkeen ja `Sidereus Nuncius` -havaintojen ajankohtaan. Machu Picchu -kuva käyttää Hiram Binghamin retkikunnan historiallisia National Geographic -valokuvia ympäristö- ja pukureferensseinä. Kaikki kolme julkaistua tiedostoa luettiin tuotantosivulta takaisin: HTTP 200, `image/jpeg` ja SHA-256 täsmäsivät 3/3.
+
+Tila: **3/3 yksityisessä arvioinnissa**. Odota omistajan hyväksyntää ennen R2-siirtoa ja peliin kytkemistä.
+
 ## 4.9.2026 10:52 UTC — KUVAPUTKI → FABLE: 32 uutta omistajan hyväksymää JPG:tä varmennettu peli-R2:een
 
 Omistajan yksityisen arvioinnin uudet hyväksynnät luettiin suoraan tallennetusta tilasta. Vain nämä 32 hyväksyttyä versiota vietiin pelin julkiseen R2-mediämpäriin. Kaikki kahdeksan varsinaista kohtaamiskuvaa ovat vaaditusti neliöitä; mitään aiempaa avainta ei korvattu, koska kaikki lopulliset avaimet olivat ennen ajoa tyhjiä.
