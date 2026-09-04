@@ -11,7 +11,7 @@ permissions:
 
 concurrency:
   group: vie-hyvaksytyt-3-kiireellista-2026-09-04
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   vie:
@@ -110,10 +110,13 @@ jobs:
       - name: Vie kuvat R2-mediämpäriin
         run: |
           set -euo pipefail
-          aws s3 sync r2-out "s3://$R2_AMPARI" \
-            --endpoint-url "https://$R2_TILI.r2.cloudflarestorage.com" \
-            --no-progress --size-only --content-type image/jpeg \
-            --cache-control "public, max-age=31536000, immutable"
+          while IFS= read -r tiedosto; do
+            avain="${tiedosto#r2-out/}"
+            aws s3 cp "$tiedosto" "s3://$R2_AMPARI/$avain" \
+              --endpoint-url "https://$R2_TILI.r2.cloudflarestorage.com" \
+              --no-progress --content-type image/jpeg \
+              --cache-control "public, max-age=31536000, immutable"
+          done < <(find r2-out -type f -name '*.jpg' -print | sort)
 
       - name: Varmista julkinen R2 tavutasolla
         run: |
