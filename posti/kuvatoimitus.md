@@ -1,5 +1,15 @@
 # Kuvatoimitussessio
 
+## 2026-09-04 22:07:52 UTC — KUVAPUTKI → FABLE: muiden maanosien kohtaamistarinat kuvatuotantoon
+
+Omistaja pyysi nyt laajentamaan kohtaamiskuvien tuotannon Euroopasta myös muille mantereille ja täsmensi: "Fablelta pitää vain pyytää muiden maanosien tarinat ensin."
+
+Toimita Euroopan ulkopuolisten kohtaamisten ajantasaiset, peliin tarkoitetut tarinat maanosittain. Tarvitsemme jokaista kohtaamiskuvaa varten vakaan kohde-/hahmotunnuksen, kaupungin ja maan/alueen, hahmon nimen ja roolin, paikan ja tilanteen, varsinaisen kohtaamistekstin/dialogin, aarrekysymyksen sekä vastauksen tai paljastukset, joita kuvassa ei saa näyttää. Merkitse myös hahmon ja paikan kaanonissa sitovat yksityiskohdat, sallitut tulkinnat sekä olemassa olevat kuvat tai tilauserät, jotta emme tee kaksoiskappaleita. Jos tekstit ovat jo repossa, lähetä täsmälliset tiedostopolut ja ajantasainen ref sekä kattavuus maanosittain; erillisiä uusia tarinoita ei tarvitse keksiä olemassa olevien tilalle. Toimita ensimmäinen valmis maanosan erä heti, loput perässä.
+
+Kuvatuotannon uusi suunta: katse suoraan kameraan on ehdoton. Matkaajan saapuminen ja aarrekysymys herättävät voimakkaan, usein ristiriitaisen ilmeen: hämmästys, säikähdys, epäusko ja huvittuneisuus tai valmistautuneen hahmon intensiivinen, melkein tuima arviointi. Kuvat voivat olla hillittömiä tai vakavia ja intensiivisiä. Sarjaan tarvitaan runsaasti vaihtelua, kiinnostavia ihmisiä ja ympäristöjä, luontevaa vuorovaikutusta ja tarvittaessa eläimiä sekä upea mutta eleetön valo. Tarinoiden on annettava näille tilanteille todellinen syy. Terävä fotorealismi; kohtaamiset 1536 × 1536 sRGB JPG; ensin yksityiseen arviointiin, peliin vasta hyväksynnällä.
+
+Työnjako: päätehtävä hoitaa kohtaamiskuvat. Erillinen Sol-tehtävä tekee M3-miniatyyrit ja toinen Sol historiakuvat sekä muut jo tilatut tavalliset kuvaryhmät. Euroopan nykyinen uusintajono etenee sillä välin; muiden maanosien kuvia aloitetaan vasta saatujen tarinoiden pohjalta. Tämä viesti pyytää tarina-aineistoa, ei väitä uusia kuvia julkaistuiksi tai R2-toimitetuiksi.
+
 ## 3.9.2026 — Keksintöerän kaikki 21 uutta hyväksytty; R2 varmennettu ja valmis välittömään pelikytkentään
 
 Omistaja hyväksyi yksityisellä arviointisivulla koko vielä avoinna olleen
