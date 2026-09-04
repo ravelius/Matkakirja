@@ -145,7 +145,11 @@ export const hetkenKuvaOsoite = (tiedosto) => `${HETKI_KUVAJUURI}/${tiedosto}`;
 
 /**
  * Sallitut kuvaroolit: lähikuva ihmisistä, kaukokuva kohtauksesta ja
- * aikakauden lehtisivu (pystykuva, vain neljällä hetkellä).
+ * aikakauden lehtisivu (pystykuva, vain kuudella hetkellä).
+ *
+ * KUVAERÄN VERSIO: H1–H3 36–44 ovat `-photo-v3`, ja H3 45–48 (4.9.2026)
+ * `-photo-v4` — hetken `kuvaversio`-kenttä (oletus 3) kertoo tiedoston
+ * päätteen, ja testi johtaa nimen siitä.
  */
 export const HETKI_KUVAROOLIT = new Set(['lahi', 'kauko', 'lehti']);
 
@@ -159,6 +163,9 @@ export const HETKI_LEHTIKUVAT = {
   'nansen-fram-1893': 'hetki-nansen-verdens-gang-1893-lehti-photo-v3.jpg',
   'amundsen-etelanapa-1911': 'hetki-amundsen-tidens-tegn-1912-lehti-photo-v3.jpg',
   'titanic-southampton-1912': 'hetki-titanic-daily-graphic-1912-lehti-photo-v3.jpg',
+  // H3 45–48 (photo-v4, 4.9.2026): The Illustrated London News ja Courier de l'Égypte.
+  'tutankhamon-carter-1922': 'hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg',
+  'rosettan-kivi-1799': 'hetki-rosettan-kivi-1799-lehti-photo-v4.jpg',
 };
 
 /**
@@ -1503,6 +1510,292 @@ export const HISTORIAN_HETKET = [
       oikea: 2,
       fakta: 'Vuotta kutsutaan siksi ihmevuodeksi, annus mirabilisiksi; '
         + 'yliopiston virkaan Einstein pääsi vasta 1909.',
+    },
+  },
+  /*
+   * 16. KUNINKAIDEN LAAKSO 26.11.1922 — REIKÄ HAUDAN OVEEN.
+   * Piste on Luxorin laatan vieressä (2 laudan yksikköä), Niilin
+   * länsirannalla ja Luxorin kohdekartan rajauksen ulkopuolella, joten
+   * hetki on pääkartalla kattoVapaa-lipulla (tests/nostot-kartalla:
+   * hetki ei ole nähtävyys, ja sen kortti aukeaa vain pääkartalta).
+   * Sivu on Luxorin kaupunkilehdessä. Kuvat photo-v4 (H3 45–48).
+   * Lähde: en.wikipedia.org: Tomb of Tutankhamun, Howard Carter
+   */
+  {
+    id: 'tutankhamon-carter-1922',
+    otsikko: 'Kuninkaiden laakso 1922 — "Näen ihmeellisiä asioita"',
+    nimio: 'Luxor 1922',
+    paivays: '26.11.1922',
+    paikka: 'Kuninkaiden laakso, Egypti',
+    iso: 'EGY',
+    lat: 25.7402, lon: 32.6014,
+    kuvaversio: 4,
+    teksti: 'Kynttilän liekki lepattaa, kun sitä työnnetään reiästä, jonka '
+      + 'Howard Carter on juuri kaivertanut muurattuun oveen. Kuuma ilma '
+      + 'virtaa vastaan kammiosta, joka on ollut suljettuna yli kolme tuhatta '
+      + 'vuotta. Carterin takana käytävässä seisovat kaivauksen rahoittaja '
+      + 'lordi Carnarvon, hänen tyttärensä Evelyn Herbert ja apulainen Arthur '
+      + 'Callender. Ensin ei näy mitään; sitten silmät tottuvat, ja pimeydestä '
+      + 'nousee kullan hohdetta — eläinhahmoisia vuoteita, vaunuja, '
+      + 'patsaita. "Näkyykö mitään?" Carnarvon kysyy. "Näkyy, ihmeellisiä '
+      + 'asioita", Carter vastaa. Viikkoa aiemmin, 4. marraskuuta, työmiehet '
+      + 'olivat löytäneet kallioon hakatun portaikon ensimmäisen askelman '
+      + 'työmiesmajojen alta; Carnarvon oli rahoittanut Carterin kaivauksia '
+      + 'vuodesta 1907 ja suostunut vielä yhteen, viimeiseen kauteen. '
+      + 'Tämän oven takana on esikammio ja sen takana hautakammio, jonka '
+      + 'sinetti murretaan vasta helmikuussa 1923. Hauta on ainoa lähes '
+      + 'koskemattomana löydetty faaraonhauta, ja sen tyhjentäminen '
+      + 'kestää kymmenen vuotta: esineitä on yli viisituhatta. Carnarvon ei '
+      + 'näe niistä kuin alun — hän kuolee Kairossa huhtikuussa 1923 '
+      + 'tulehtuneen hyttysenpureman jälkeen, ja lehdet keksivät faaraon '
+      + 'kirouksen.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-tutankhamon-carter-1922-lahi-photo-v4.jpg',
+        kuvateksti: 'Howard Carter jää hetkeksi liikkumatta kynttilä kädessään, kun lordi '
+          + 'Carnarvon kysyy näkeekö hän mitään. Pienen oviaukon takana on '
+          + 'eteiskammio — varsinainen hautakammio avataan vasta kolme kuukautta '
+          + 'myöhemmin.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Griffith Institute — Tutankhamun '
+          + 'excavation archive; tarkistettu 4.9.2026.',
+        url: 'https://tutankhamun.griffith.ox.ac.uk/miscellaneous/taa-i12/taa-i1207',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-tutankhamon-carter-1922-kauko-photo-v4.jpg',
+        kuvateksti: 'Lady Evelyn Herbert puristaa kättään rintaansa vasten ja yrittää nähdä '
+          + 'isänsä olkapään yli. Carterin kynttilä on ainoa merkki siitä, että yli '
+          + 'kolmentuhannen vuoden hiljaisuus on juuri rikkoutumassa.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Griffith Institute — Tutankhamun '
+          + 'excavation archive; tarkistettu 4.9.2026.',
+        url: 'https://tutankhamun.griffith.ox.ac.uk/miscellaneous/taa-i12/taa-i1207',
+      },
+      {
+        rooli: 'lehti',
+        tiedosto: 'hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg',
+        kuvateksti: 'Brittiyleisö näki Carterin kurkistuksen ensin taiteilijan silmin: The '
+          + 'Illustrated London News rakensi kuvan Carnarvonin kertomuksesta ja '
+          + 'ilmoitti rehellisesti, että kyse oli piirroksesta. Juuri tämä '
+          + 'välivaihe teki löydöstä yhteisen mielikuvan jo ennen kuin haudan '
+          + 'valokuvat levisivät.',
+        lahde: 'Matkakirjan havainnekuva. Lehtireferenssi: The Illustrated London News '
+          + '1922–1923; faktat: Griffith Institute — Tutankhamun excavation '
+          + 'archive; tarkistettu 4.9.2026.',
+        url: 'https://tutankhamun.griffith.ox.ac.uk/miscellaneous/taa-i12/taa-i1207',
+      },
+    ],
+    kartalla: true,
+    kattoVapaa: true,
+    lehti: { laji: 'kaupunki', avain: 'luxor' },
+    visa: {
+      kysymys: 'Mitä Howard Carter vastasi, kun häneltä kysyttiin, näkyykö reiästä mitään?',
+      vaihtoehdot: [
+        '"Ei mitään — hauta on ryöstetty"',
+        '"Näkyy, ihmeellisiä asioita"',
+        '"Kultaa, pelkkää kultaa"',
+      ],
+      oikea: 1,
+    },
+    lehtiJohdanto: 'Marraskuussa 1922 Howard Carter työnsi kynttilän reiästä '
+      + 'oveen, joka oli ollut muurattuna yli kolme tuhatta vuotta — ja '
+      + 'Kuninkaiden laaksosta löytyi ainoa lähes koskematon faaraonhauta.',
+    lehtiTehtava: {
+      kysymys: 'Kuinka kauan Tutankhamonin haudan tyhjentäminen kesti?',
+      vaihtoehdot: [
+        'Yhden talven',
+        'Kolme vuotta',
+        'Kymmenen vuotta',
+        'Sen tyhjentäminen on yhä kesken',
+      ],
+      oikea: 2,
+      fakta: 'Yli viisituhatta esinettä luetteloitiin ja pakattiin '
+        + 'yksitellen; työ valmistui 1932.',
+    },
+  },
+  /*
+   * 17. HISARLIK, TOUKOKUUN LOPPU 1873 — "PRIAMOKSEN AARRE".
+   * Sama kumpu kuin Turkin fokuskohde Troija (js/packs/fokuskohteet-tur.js),
+   * 67 laudan yksikköä Izmiristä, joten hetki on pääkartalla omalla
+   * merkillään. Sivu on Turkin maalehdessä. Kuvat photo-v4 (H3 45–48).
+   * Sofia Schliemannin muotokuva koruissa on jo Kreikan skandaalinosto
+   * (Mykene), joten kuvassa ja tekstissä ollaan Hisarlıkissa.
+   * Lähde: en.wikipedia.org: Priam's Treasure, Heinrich Schliemann
+   */
+  {
+    id: 'schliemann-troija-1873',
+    otsikko: 'Hisarlık 1873 — kulta kaivannon seinämässä',
+    nimio: 'Troija 1873',
+    paivays: 'toukokuu 1873',
+    paikka: 'Hisarlık, Turkki',
+    iso: 'TUR',
+    lat: 39.9575, lon: 26.2389,
+    kuvaversio: 4,
+    teksti: 'Kaivannon seinämän juuresta, muurin alta, on tullut esiin '
+      + 'kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, '
+      + 'korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja '
+      + 'pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, '
+      + 'joka on tullut kummulle todistaakseen, että Homeroksen Troija oli '
+      + 'totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman '
+      + 'kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan '
+      + 'esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin '
+      + 'epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt '
+      + 'kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan '
+      + 'hän kirjoitti myös, että vaimo Sophia oli vieressä kääntämässä koruja '
+      + 'huiviinsa — todellisuudessa Sophia oli Ateenassa, minkä hän myönsi '
+      + 'myöhemmin itsekin. Aarre salakuljetetaan Kreikkaan, ottomaanien '
+      + 'kaivausvalvoja Amin Efendi saa vankeustuomion, ja Schliemann sopii '
+      + 'Ottomaanien valtion kanteen maksamalla korvauksen. Vuonna 1881 hän '
+      + 'lahjoittaa aarteen Berliinille, josta puna-armeija vie sen 1945; '
+      + 'Moskova myöntää sen olemassaolon vasta 1993. Se on lisäksi väärä '
+      + 'Troija: kerros, josta kulta nousi, on noin tuhat vuotta Homeroksen '
+      + 'sotaa vanhempi.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-schliemann-troija-1873-lahi-photo-v4.jpg',
+        kuvateksti: 'Kaivaja ojentaa löydön Heinrich Schliemannille, mutta miehet eivät '
+          + 'katso esinettä samalla tavalla: toiselle se on päivän työ, toiselle '
+          + 'avain maineeseen. Se, kuka saa päättää aarteen kohtalosta, on jo tässä '
+          + 'katseessa ratkaisematta.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Staatliche Museen zu Berlin — 150 '
+          + 'years since the Treasure of Priam; tarkistettu 4.9.2026.',
+        url: 'https://www.smb.museum/en/whats-new/detail/150-years-since-heinrich-schliemann-uncovered-the-treasure-of-priamos-in-troy/',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-schliemann-troija-1873-kauko-photo-v4.jpg',
+        kuvateksti: 'Hisarlıkin kaivajat jatkavat lapiointia, kun Schliemann kokoaa '
+          + 'esineitä peitteen alle. Työmiehet, joiden käsistä löydöt kulkivat, '
+          + 'jäävät pian sivuun kertomuksesta, jonka Schliemann kirjoittaa omaksi '
+          + 'sankaritarinakseen.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Staatliche Museen zu Berlin — 150 '
+          + 'years since the Treasure of Priam; tarkistettu 4.9.2026.',
+        url: 'https://www.smb.museum/en/whats-new/detail/150-years-since-heinrich-schliemann-uncovered-the-treasure-of-priamos-in-troy/',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'maa', avain: 'TUR' },
+    visa: {
+      kysymys: 'Mitä Priamoksen aarteen löytökerroksesta tiedetään nykyään?',
+      vaihtoehdot: [
+        'Se on Homeroksen Troijan sodan aikainen',
+        'Se on noin tuhat vuotta Homeroksen sotaa vanhempi',
+        'Se on roomalaisajalta',
+      ],
+      oikea: 1,
+    },
+    lehtiJohdanto: 'Toukokuun lopulla 1873 Hisarlıkin kaivannon seinämästä '
+      + 'nousi kuparinen astia täynnä kultaa, ja Heinrich Schliemann nimesi '
+      + 'sen Priamoksen aarteeksi — väärästä kerroksesta.',
+    lehtiTehtava: {
+      kysymys: 'Missä Priamoksen aarre on nykyään?',
+      vaihtoehdot: [
+        'Istanbulin arkeologisessa museossa',
+        'Berliinissä, jonne Schliemann lahjoitti sen',
+        'Moskovassa, jonne puna-armeija vei sen 1945',
+        'Ateenassa Schliemannin kotitalossa',
+      ],
+      oikea: 2,
+      fakta: 'Venäjä myönsi vasta 1993, että aarre on Puškin-museossa; '
+        + 'Berliini pyytää sitä yhä takaisin.',
+    },
+  },
+  /*
+   * 18. RASHID (ROSETTA), HEINÄKUU 1799 — KIVI LINNOITUKSEN MUURISTA.
+   * Piste on Fort Julienin kohdalla Niilin Rosettan suuhaaran rannalla,
+   * 58 laudan yksikköä Kairosta: pääkartalla omalla merkillään, sivu
+   * Egyptin maalehdessä. Kuvat photo-v4 (H3 45–48); lehtisivu on
+   * Courier de l'Égypte, joka kertoi löydöstä syyskuussa 1799.
+   * Lähde: en.wikipedia.org: Rosetta Stone
+   */
+  {
+    id: 'rosettan-kivi-1799',
+    otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
+    nimio: 'Rosetta 1799',
+    paivays: 'heinäkuu 1799',
+    paikka: 'Rashid (Rosetta), Egypti',
+    iso: 'EGY',
+    lat: 31.4044, lon: 30.4194,
+    kuvaversio: 4,
+    teksti: 'Ranskalaiset sotilaat purkavat vanhaa muuria Fort Julienin '
+      + 'linnoituksessa Niilin suistossa, kun lapio kolahtaa kiveen, joka ei '
+      + 'ole tavallinen. Se on musta, sileäksi hiottu paasi, ja sen pintaan '
+      + 'on kaiverrettu kolme erilaista kirjoitusta päällekkäin: ylinnä '
+      + 'hieroglyfejä, keskellä tuntemattomia kursiivimerkkejä, alinna '
+      + 'kreikkaa. Pioneeriupseeri Pierre-François Bouchard ymmärtää heti, '
+      + 'että kreikkalainen teksti voi olla avain kahteen muuhun, ja kivi '
+      + 'lähetetään Napoleonin tutkijoille Kairoon. Egyptin retkikunnan oma '
+      + 'lehti Courier de l\'Égypte kertoo löydöstä syyskuussa 1799. Kivi ei '
+      + 'jää ranskalaisille: kun Britannia voittaa vuonna 1801, se '
+      + 'siirtyy antautumissopimuksen ehtona Lontooseen ja on ollut British '
+      + 'Museumissa vuodesta 1802. Teksti osoittautuu papiston päätökseksi '
+      + 'vuodelta 196 eaa. nuoren kuninkaan Ptolemaios V:n kunniaksi — sama '
+      + 'sisältö kolmella kirjoituksella. Sen avulla Thomas Young ja lopulta '
+      + 'Jean-François Champollion vuonna 1822 murtavat hieroglyfit, joita '
+      + 'kukaan ei ollut osannut lukea lähes puoleentoista vuosituhanteen. '
+      + 'Sotilaat eivät sitä vielä tiedä: he näkevät vain painavan kiven, '
+      + 'joka on kannettava pois muurin tieltä.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-rosettan-kivi-1799-lahi-photo-v4.jpg',
+        kuvateksti: 'Nuori sapööri pyyhkii rakennuspölyn pois, ja Pierre-François Bouchard '
+          + 'tajuaa kolmen tekstivyöhykkeen kertovan saman asian eri merkein. '
+          + 'Kumpikaan ei vielä osaa lukea hieroglyfejä, mutta he ymmärtävät '
+          + 'pitelevänsä mahdollista avainta.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: British Museum — The Rosetta Stone; '
+          + 'tarkistettu 4.9.2026.',
+        url: 'https://www.britishmuseum.org/collection/object/Y_EA24',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-rosettan-kivi-1799-kauko-photo-v4.jpg',
+        kuvateksti: 'Fort Julienin korjaajat pysäyttävät työn ja kampeavat raskaan kiven '
+          + 'päivänvaloon köysillä ja puulla. Löytö syntyy linnoituksen arkisesta '
+          + 'purkutyöstä — ei suunnitellusta aarteenetsinnästä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: British Museum — The Rosetta Stone; '
+          + 'tarkistettu 4.9.2026.',
+        url: 'https://www.britishmuseum.org/collection/object/Y_EA24',
+      },
+      {
+        rooli: 'lehti',
+        tiedosto: 'hetki-rosettan-kivi-1799-lehti-photo-v4.jpg',
+        kuvateksti: 'Courier de l’Égypte raportoi löydöstä syyskuussa 1799 ilman '
+          + 'sensaatio-otsikkoa: kolme kirjoitusjärjestelmää, sama kivipinta ja '
+          + 'varovainen toivo avaimesta. Lukijalle ratkaiseva lause piiloutui '
+          + 'kahden tiheän palstan keskelle.',
+        lahde: 'Matkakirjan havainnekuva. Lehtireferenssi: Courier de l’Égypte, '
+          + 'syyskuu 1799; faktat: British Museum — The Rosetta Stone; tarkistettu '
+          + '4.9.2026.',
+        url: 'https://www.britishmuseum.org/collection/object/Y_EA24',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'maa', avain: 'EGY' },
+    visa: {
+      kysymys: 'Miksi Rosettan kivi oli niin tärkeä?',
+      vaihtoehdot: [
+        'Se oli ainoa säilynyt kuva Ptolemaios V:stä',
+        'Sama teksti oli kaiverrettu siihen kolmella kirjoituksella, joista yksi oli kreikkaa',
+        'Se paljasti, missä Aleksanterin hauta oli',
+      ],
+      oikea: 1,
+    },
+    lehtiJohdanto: 'Heinäkuussa 1799 ranskalaiset sotilaat kaivoivat Rosettan '
+      + 'linnoituksen muurista mustan kiven, jonka kolme kirjoitusta avasivat '
+      + 'parikymmentä vuotta myöhemmin hieroglyfit.',
+    lehtiTehtava: {
+      kysymys: 'Missä Rosettan kivi on ollut vuodesta 1802?',
+      vaihtoehdot: [
+        'Louvressa Pariisissa',
+        'Egyptin museossa Kairossa',
+        'British Museumissa Lontoossa',
+        'Institut d\'Égyptessä Aleksandriassa',
+      ],
+      oikea: 2,
+      fakta: 'Britannia sai kiven vuoden 1801 antautumissopimuksen ehtona; '
+        + 'Egypti on pyytänyt sitä takaisin.',
     },
   },
 ];

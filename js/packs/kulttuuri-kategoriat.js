@@ -30074,6 +30074,94 @@ export const KULTTUURI_KATEGORIAT = {
           + 'päärata on yli kaksi kertaa leveämpi.',
       },
     },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `tutankhamon-carter-1922`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-tutankhamon-carter-1922',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Luxor 1922',
+      johdanto: 'Marraskuussa 1922 Howard Carter työnsi kynttilän reiästä oveen, '
+        + 'joka oli ollut muurattuna yli kolme tuhatta vuotta — ja Kuninkaiden '
+        + 'laaksosta löytyi ainoa lähes koskematon faaraonhauta.',
+      tehtava: {
+        kysymys: 'Kuinka kauan Tutankhamonin haudan tyhjentäminen kesti?',
+        vaihtoehdot: [
+          'Yhden talven',
+          'Kolme vuotta',
+          'Kymmenen vuotta',
+          'Sen tyhjentäminen on yhä kesken',
+        ],
+        oikea: 2,
+        fakta: 'Yli viisituhatta esinettä luetteloitiin ja pakattiin yksitellen; '
+          + 'työ valmistui 1932.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kuninkaiden laakso 1922 — "Näen ihmeellisiä asioita"',
+          aika: '26.11.1922',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lahi-photo-v4.jpg',
+          teksti: 'Kynttilän liekki lepattaa, kun sitä työnnetään reiästä, jonka '
+            + 'Howard Carter on juuri kaivertanut muurattuun oveen. Kuuma ilma '
+            + 'virtaa vastaan kammiosta, joka on ollut suljettuna yli kolme '
+            + 'tuhatta vuotta. Carterin takana käytävässä seisovat kaivauksen '
+            + 'rahoittaja lordi Carnarvon, hänen tyttärensä Evelyn Herbert ja '
+            + 'apulainen Arthur Callender. Ensin ei näy mitään; sitten silmät '
+            + 'tottuvat, ja pimeydestä nousee kullan hohdetta — eläinhahmoisia '
+            + 'vuoteita, vaunuja, patsaita. "Näkyykö mitään?" Carnarvon kysyy. '
+            + '"Näkyy, ihmeellisiä asioita", Carter vastaa. Viikkoa aiemmin, 4. '
+            + 'marraskuuta, työmiehet olivat löytäneet kallioon hakatun portaikon '
+            + 'ensimmäisen askelman työmiesmajojen alta; Carnarvon oli '
+            + 'rahoittanut Carterin kaivauksia vuodesta 1907 ja suostunut vielä '
+            + 'yhteen, viimeiseen kauteen. Tämän oven takana on esikammio ja sen '
+            + 'takana hautakammio, jonka sinetti murretaan vasta helmikuussa '
+            + '1923. Hauta on ainoa lähes koskemattomana löydetty faaraonhauta, '
+            + 'ja sen tyhjentäminen kestää kymmenen vuotta: esineitä on yli '
+            + 'viisituhatta. Carnarvon ei näe niistä kuin alun — hän kuolee '
+            + 'Kairossa huhtikuussa 1923 tulehtuneen hyttysenpureman jälkeen, ja '
+            + 'lehdet keksivät faaraon kirouksen.',
+          selite: 'Howard Carter jää hetkeksi liikkumatta kynttilä kädessään, kun '
+            + 'lordi Carnarvon kysyy näkeekö hän mitään. Pienen oviaukon takana '
+            + 'on eteiskammio — varsinainen hautakammio avataan vasta kolme '
+            + 'kuukautta myöhemmin.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Griffith Institute — '
+            + 'Tutankhamun excavation archive; tarkistettu 4.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Kuninkaiden laakso 1922 — "Näen ihmeellisiä asioita"',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-kauko-photo-v4.jpg',
+              selite: 'Lady Evelyn Herbert puristaa kättään rintaansa vasten ja '
+                + 'yrittää nähdä isänsä olkapään yli. Carterin kynttilä on ainoa '
+                + 'merkki siitä, että yli kolmentuhannen vuoden hiljaisuus on '
+                + 'juuri rikkoutumassa.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Griffith Institute — '
+                + 'Tutankhamun excavation archive; tarkistettu 4.9.2026.',
+            },
+            {
+              otsikko: 'Kuninkaiden laakso 1922 — "Näen ihmeellisiä asioita"',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg',
+              selite: 'Brittiyleisö näki Carterin kurkistuksen ensin taiteilijan '
+                + 'silmin: The Illustrated London News rakensi kuvan Carnarvonin '
+                + 'kertomuksesta ja ilmoitti rehellisesti, että kyse oli '
+                + 'piirroksesta. Juuri tämä välivaihe teki löydöstä yhteisen '
+                + 'mielikuvan jo ennen kuin haudan valokuvat levisivät.',
+              lahde: 'Matkakirjan havainnekuva. Lehtireferenssi: The Illustrated '
+                + 'London News 1922–1923; faktat: Griffith Institute — '
+                + 'Tutankhamun excavation archive; tarkistettu 4.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
   ],
   /*
    * RIADIN KANSISIVU (nippu 2, 13.8.2026). SAU-maalehdellä on

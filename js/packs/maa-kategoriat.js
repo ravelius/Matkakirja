@@ -2640,6 +2640,92 @@ export const MAA_KATEGORIAT = {
           + 'kangasseiniä, joita pystytetään yhä juhliin ja suruajaksi.',
       },
     },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `rosettan-kivi-1799`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-rosettan-kivi-1799',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Rosetta 1799',
+      johdanto: 'Heinäkuussa 1799 ranskalaiset sotilaat kaivoivat Rosettan '
+        + 'linnoituksen muurista mustan kiven, jonka kolme kirjoitusta avasivat '
+        + 'parikymmentä vuotta myöhemmin hieroglyfit.',
+      tehtava: {
+        kysymys: 'Missä Rosettan kivi on ollut vuodesta 1802?',
+        vaihtoehdot: [
+          'Louvressa Pariisissa',
+          'Egyptin museossa Kairossa',
+          'British Museumissa Lontoossa',
+          'Institut d\'Égyptessä Aleksandriassa',
+        ],
+        oikea: 2,
+        fakta: 'Britannia sai kiven vuoden 1801 antautumissopimuksen ehtona; '
+          + 'Egypti on pyytänyt sitä takaisin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
+          aika: 'heinäkuu 1799',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lahi-photo-v4.jpg',
+          teksti: 'Ranskalaiset sotilaat purkavat vanhaa muuria Fort Julienin '
+            + 'linnoituksessa Niilin suistossa, kun lapio kolahtaa kiveen, joka '
+            + 'ei ole tavallinen. Se on musta, sileäksi hiottu paasi, ja sen '
+            + 'pintaan on kaiverrettu kolme erilaista kirjoitusta päällekkäin: '
+            + 'ylinnä hieroglyfejä, keskellä tuntemattomia kursiivimerkkejä, '
+            + 'alinna kreikkaa. Pioneeriupseeri Pierre-François Bouchard ymmärtää '
+            + 'heti, että kreikkalainen teksti voi olla avain kahteen muuhun, ja '
+            + 'kivi lähetetään Napoleonin tutkijoille Kairoon. Egyptin '
+            + 'retkikunnan oma lehti Courier de l\'Égypte kertoo löydöstä '
+            + 'syyskuussa 1799. Kivi ei jää ranskalaisille: kun Britannia voittaa '
+            + 'vuonna 1801, se siirtyy antautumissopimuksen ehtona Lontooseen ja '
+            + 'on ollut British Museumissa vuodesta 1802. Teksti osoittautuu '
+            + 'papiston päätökseksi vuodelta 196 eaa. nuoren kuninkaan Ptolemaios '
+            + 'V:n kunniaksi — sama sisältö kolmella kirjoituksella. Sen avulla '
+            + 'Thomas Young ja lopulta Jean-François Champollion vuonna 1822 '
+            + 'murtavat hieroglyfit, joita kukaan ei ollut osannut lukea lähes '
+            + 'puoleentoista vuosituhanteen. Sotilaat eivät sitä vielä tiedä: he '
+            + 'näkevät vain painavan kiven, joka on kannettava pois muurin tieltä.',
+          selite: 'Nuori sapööri pyyhkii rakennuspölyn pois, ja Pierre-François '
+            + 'Bouchard tajuaa kolmen tekstivyöhykkeen kertovan saman asian eri '
+            + 'merkein. Kumpikaan ei vielä osaa lukea hieroglyfejä, mutta he '
+            + 'ymmärtävät pitelevänsä mahdollista avainta.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: British Museum — The Rosetta '
+            + 'Stone; tarkistettu 4.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-kauko-photo-v4.jpg',
+              selite: 'Fort Julienin korjaajat pysäyttävät työn ja kampeavat '
+                + 'raskaan kiven päivänvaloon köysillä ja puulla. Löytö syntyy '
+                + 'linnoituksen arkisesta purkutyöstä — ei suunnitellusta '
+                + 'aarteenetsinnästä.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: British Museum — The '
+                + 'Rosetta Stone; tarkistettu 4.9.2026.',
+            },
+            {
+              otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lehti-photo-v4.jpg',
+              selite: 'Courier de l’Égypte raportoi löydöstä syyskuussa 1799 '
+                + 'ilman sensaatio-otsikkoa: kolme kirjoitusjärjestelmää, sama '
+                + 'kivipinta ja varovainen toivo avaimesta. Lukijalle ratkaiseva '
+                + 'lause piiloutui kahden tiheän palstan keskelle.',
+              lahde: 'Matkakirjan havainnekuva. Lehtireferenssi: Courier de '
+                + 'l’Égypte, syyskuu 1799; faktat: British Museum — The Rosetta '
+                + 'Stone; tarkistettu 4.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
     {
       id: 'menovinkit',
       nimi: 'Menovinkit',
@@ -13574,6 +13660,83 @@ export const MAA_KATEGORIAT = {
         fakta: 'Boza ei kestä lämpöä, joten sen kausi alkaa vasta ilmojen '
           + 'kylmetessä; Vefan puotia on pitänyt sama suku vuodesta 1876.',
       },
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `schliemann-troija-1873`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-schliemann-troija-1873',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Troija 1873',
+      johdanto: 'Toukokuun lopulla 1873 Hisarlıkin kaivannon seinämästä nousi '
+        + 'kuparinen astia täynnä kultaa, ja Heinrich Schliemann nimesi sen '
+        + 'Priamoksen aarteeksi — väärästä kerroksesta.',
+      tehtava: {
+        kysymys: 'Missä Priamoksen aarre on nykyään?',
+        vaihtoehdot: [
+          'Istanbulin arkeologisessa museossa',
+          'Berliinissä, jonne Schliemann lahjoitti sen',
+          'Moskovassa, jonne puna-armeija vei sen 1945',
+          'Ateenassa Schliemannin kotitalossa',
+        ],
+        oikea: 2,
+        fakta: 'Venäjä myönsi vasta 1993, että aarre on Puškin-museossa; Berliini '
+          + 'pyytää sitä yhä takaisin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Hisarlık 1873 — kulta kaivannon seinämässä',
+          aika: 'toukokuu 1873',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-lahi-photo-v4.jpg',
+          teksti: 'Kaivannon seinämän juuresta, muurin alta, on tullut esiin '
+            + 'kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, '
+            + 'korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja '
+            + 'pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, '
+            + 'joka on tullut kummulle todistaakseen, että Homeroksen Troija oli '
+            + 'totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman '
+            + 'kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi '
+            + 'kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat '
+            + 'sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien '
+            + 'kautta löydöt kulkivat, jäivät hänen sankaritarinansa '
+            + 'ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että vaimo Sophia '
+            + 'oli vieressä kääntämässä koruja huiviinsa — todellisuudessa Sophia '
+            + 'oli Ateenassa, minkä hän myönsi myöhemmin itsekin. Aarre '
+            + 'salakuljetetaan Kreikkaan, ottomaanien kaivausvalvoja Amin Efendi '
+            + 'saa vankeustuomion, ja Schliemann sopii Ottomaanien valtion '
+            + 'kanteen maksamalla korvauksen. Vuonna 1881 hän lahjoittaa aarteen '
+            + 'Berliinille, josta puna-armeija vie sen 1945; Moskova myöntää sen '
+            + 'olemassaolon vasta 1993. Se on lisäksi väärä Troija: kerros, josta '
+            + 'kulta nousi, on noin tuhat vuotta Homeroksen sotaa vanhempi.',
+          selite: 'Kaivaja ojentaa löydön Heinrich Schliemannille, mutta miehet '
+            + 'eivät katso esinettä samalla tavalla: toiselle se on päivän työ, '
+            + 'toiselle avain maineeseen. Se, kuka saa päättää aarteen '
+            + 'kohtalosta, on jo tässä katseessa ratkaisematta.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Staatliche Museen zu Berlin — '
+            + '150 years since the Treasure of Priam; tarkistettu 4.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Hisarlık 1873 — kulta kaivannon seinämässä',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-kauko-photo-v4.jpg',
+              selite: 'Hisarlıkin kaivajat jatkavat lapiointia, kun Schliemann '
+                + 'kokoaa esineitä peitteen alle. Työmiehet, joiden käsistä '
+                + 'löydöt kulkivat, jäävät pian sivuun kertomuksesta, jonka '
+                + 'Schliemann kirjoittaa omaksi sankaritarinakseen.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Staatliche Museen zu '
+                + 'Berlin — 150 years since the Treasure of Priam; tarkistettu '
+                + '4.9.2026.',
+            },
+          ],
+        },
+      ],
     },
     {
       id: 'menovinkit',
