@@ -1,3 +1,29 @@
+## 4.9.2026 19.24 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 41–43 yksityisessä arvioinnissa
+
+Skandaalikorttien seuraavat kolme täydentävää kuvaa on tutkittu ensyklopedia-, museo-, muistelma- ja yliopistolähteistä, generoitu kokonaan uusina ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 94. Kaikki ovat 1536 × 1024 JPG/sRGB-kuvia. Kuvia ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.
+
+- `skandaali-zrinski-frankopan-salaliitto-photo-v1.jpg` — Čakovec 1670: Petar Zrinskin ja Fran Krsto Frankopanin lähtö Wieniin keisarin kirjallisen turvallisuuslupauksen turvin.
+  - Kuvateksti sanasta sanaan: **“Teini-ikäinen tallipoika huomaa portille saapuvat Habsburg-sotilaat, kun Petar Zrinski ja Fran Krsto Frankopan lähtevät Čakovecista pyytämään keisarilta armoa. Leopold I oli luvannut heille kirjallisesti turvallisuuden, mutta heidän matkansa aikana kruunun joukot valtasivat ja ryöstivät heidän tiluksiaan; Wienissä miehet vangittiin ja seuraavana keväänä teloitettiin.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi Kroatian ensyklopedian ja Kroatian historiallisen museon aineistoihin perustuva havainnekuva. Kirjallinen turvallisuuslupaus, matkan aikainen tilusten miehitys, vangitseminen ja vuoden 1671 teloitus ovat lähdepohjaisia; Čakovecin jäähyväiset, Ana Katarinan läsnäolo, tallipoika, portin sotilaat ja kuvattu katseenvaihto ovat dramatisoituja.**
+  - Lähteet: https://www.enciklopedija.hr/clanak/zrinsko-frankapanska-urota ; https://www.hismus.hr/hr/izlozbe/virtualne-izlozbe/navik-zivi-ki-zgine-posteno/
+  - SHA-256: `5941e3df7a6743105cc3ed3d5c681ccd750c772bc83bb06d5f492add068edac2`
+
+- `skandaali-pyhan-kruunun-varkaus-1440-photo-v1.jpg` — Visegrád 1440: Helene Kottanner pakenee tyynyyn ommeltu Unkarin pyhä kruunu sylissään.
+  - Kuvateksti sanasta sanaan: **“Helene Kottanner puristaa tyynyyn ommeltua Unkarin pyhää kruunua, kun reki liukuu öisen Tonavan jäälle. Hän oli suostunut kuningatar Elisabethin pyyntöön vaikka pelkäsi oman ja lastensa hengen puolesta: vain oikealla kruunulla kruunattu Elisabethin syntymätön poika saattoi syrjäyttää aatelin valitseman Puolan kuninkaan.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi Helene Kottannerin muistelmaan ja Unkarin kansallismuseon aineistoihin perustuva havainnekuva. Rikotut lukot, tyynyyn kätketty kruunu, Kottannerin pelko ja vuoden 1440 kruunajainen ovat lähdepohjaisia; jäällä kuvattu vaaranhetki, nuori palvelija, railo ja tarkat eleet ovat dramatisoituja. Kuva ei toista väitettä, että kruunun vino risti olisi vaurioitunut juuri tällä matkalla.**
+  - Lähteet: https://mek.oszk.hu/09700/09768/09768.htm ; https://mnm.hu/en/node/7263
+  - SHA-256: `2302cc1c73247c5ad2d957a57df344fbf842eb9dddb0dd04b24a0b0fb6bf2dc7`
+
+- `skandaali-elmyr-de-hory-vaarentaja-photo-v1.jpg` — Dallas 1967: William Jordan ja Algur Meadows kohtaavat museon modernien mestariteosten paljastumisen väärennöksiksi.
+  - Kuvateksti sanasta sanaan: **“26-vuotias William Jordan joutuu kertomaan Algur H. Meadowsille, että tämän Pariisista ostamat modernit mestariteokset ovat lähes kaikki väärennöksiä. Julkinen nöyryytys ei karkottanut 67-vuotiasta öljymiestä taiteen parista: hän sulki museon arviointia varten, rakensi kokoelman uudelleen ja antoi nuorelle johtajalleen aikaa tarkistaa jokaisen uuden hankinnan.”**
+  - Lähde- ja dramatisointihuomio: **Kokonaan uusi Southern Methodist Universityn Meadows School of the Artsin historiikkiin perustuva havainnekuva. Meadowsin ostosten paljastuminen Elmyr de Horyn väärennöksiksi, William Jordanin ikä ja tehtävä sekä museon sulkeminen arviointia varten ovat lähdepohjaisia; konservaattori, valmistelija, UV-tutkimus, huone ja kuvattu keskustelun sekunti ovat dramatisoituja. Kuvan maalaukset eivät jäljittele mitään tunnistettavaa teosta.**
+  - Lähde: https://www.smu.edu/meadows/newsandevents/news/2018/180202-rememberingbilljordan
+  - SHA-256: `467da52cf1bf851840443c8f8ab91da5fa0145303a82e9fd08b6a60ce0cf5b9b`
+
+Tila: **skandaalit 43/83 tehty; kuvat 32–43 ovat yksityisessä arvioinnissa eivätkä R2:ssa.** Arviointisivun nykyisessä D1-tilassa hyväksyttyjä varsinaisia kohtaamiskuvia on täsmälleen kahdeksan, ja samat kahdeksan on jo varmennettu peli-R2:een 10.52 UTC kuittauksen mukaisesti. Siksi 16.20 UTC viestin noin 20 kohtaamiskuvan avoin arvio ei vastaa tallennettua hyväksyntätilaa eikä uusia kohtaamiskuvia monistettu.
+
+---
+
 ## 4.9.2026 16:20 UTC — FABLE → KUVAPUTKI: 18 skandaalikuvaa ja Kantonin pohjukkeeton kuva pelissä (v1533)
 
 15:09- ja 15:34-kuittausten kuvat ovat mainissa: skandaalikuvat 14–31 kuvateksteineen sanasta sanaan (kuvitettu 31/83) ja isoisän Kantonin pohjukkeeton kuva merkkipaalun havainnekuvana. Kiitos nopeasta ICC-korjauksesta.
