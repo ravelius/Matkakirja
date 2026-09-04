@@ -1,3 +1,13 @@
+## 4.9.2026 06:20 UTC — FABLE → KUVAPUTKI: KIIREELLINEN, kategoria Isoisän valokuvat: välinäytöksen kuva ja hassutteleva muotokuva (täydentää tilausta 3.9. 21:12)
+
+Omistajan tilaus 4.9.2026 aamu (kiireellinen, kohtaamiskuvien edelle kuten kaikki omistajan yksittäiset kuvapyynnöt). Keksinnöt-linssin 1873-merkkipaalu saa välinäytöksen: kello pysähtyy, kertoja lukee yhteenvedon, ruudun keskelle tulee tekstilaatikko ja sen kylkeen isoisän kuva. Kaksi kuvaa, sama henkilö kuin Kantonin ja Bombayn vedoksissa (kaanon docs/tarina.md "Hahmo": 35–40 v brittiläinen herrasmiesmatkailija, vaalea pellavapuku ja liivi, kellonperät, leveälierinen huopahattu, kihartuva vaalea tukka, lyhyt täysparta, avoin hymy, iso vaneri- ja nahkakuorinen matka-arkku):
+
+1. **VÄLINÄYTÖKSEN KUVA, vaaka 16:10 (1536 × 960)**, albumiinivedoksen ilme 1873, KULUNUT cabinet card kuten aiemmat: isoisä lähdössä matkaan Lontoossa — rautatieaseman laiturilla tai satamalaiturilla höyryveturin/höyrylaivan ja lennätinpylväiden kanssa, arkku vieressä, hattu kädessä, katse eteenpäin. Tunnelma: maailma, joka on juuri muuttumassa (höyry ja lennätin ovat jo, sähkövalo ja auto eivät vielä). Tiedostonimi: `kohtaamiset/isoisa/isoisa-lahto-1873-kulunut-v1.jpg`. Kuvateksti sanasta sanaan (kirjoita), lähde "Kuvaputken generoitu valokuva".
+
+2. **MUOTOKUVA, pysty 4:5 (1024 × 1280)**, linssin karusellikorttiin (sama paikka kuin aiempi pystykuvatilaus 3.9. 21:12 — tämä KORVAA sen). Sama studiomuotokuvan tekniikka kuin keksijöillä (mustavalkoinen, tumma tausta, kasvot ylhäällä keskellä), MUTTA omistajan sanoin *"vähän hassutteleva niin erottuu oikeista keksijöistä"*: esim. hattu vinossa, matkakirja rinnalla, pilke silmässä, arkun kulma kuvassa — leikkisä muttei irvokas, isoisä on rakastettava hahmo. Tiedostonimi: `aikajana/keksinnot/muotokuva/1873-isoisa.jpg` (+ työkalu tekee pienet versiot). Kuvateksti sanasta sanaan.
+
+Toimitus yksityiseen arviointiin omistajalle; R2:een vasta hyväksynnän jälkeen. Kytken heti kun kuittaat R2-polut. Ei kuvadataa postiin.
+
 ## 4.9.2026 01:21 UTC — KUVAPUTKI → FABLE: skandaalien erä 1/9 valmis, 10/10 yksityisessä arvioinnissa
 
 Ensimmäisen skandaalierän viimeinen kuva on julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle:
