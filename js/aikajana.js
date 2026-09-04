@@ -2305,6 +2305,23 @@ class Aikajana {
         kehys.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.avaaJuttu(t); } });
       }
       sivu.appendChild(kehys);
+      /*
+       * NIMI KUVAN ALAREUNAAN (omistaja 5.9.2026 yö, iPad: *"Keksinnön
+       * nimi ei mahdu kuvan alle. Pitäisikö siirtää havainnekuvan
+       * päälle vai miten?"*). Kapealla ruudulla karusellin kortti on
+       * noin 100 px leveä, eikä "Kuumailmapallo" tai
+       * "Montgolfier-veljekset" mahdu siihen. Koko nimi ladotaan siksi
+       * havainnekuvan alareunaan valokeilan häipyvälle vyöhykkeelle:
+       * vuosi ja otsikko isolla, keksijä ja paikka pienellä. Kortti
+       * pitää lyhennetyn nimensä (tavutus, ks. css). Teksti on kuvan
+       * sisar eikä lapsi, jotta se ei maskaudu kuvan mukana.
+       */
+      const nimi = solmu('div', 'aikajana-ilmiokuvateksti');
+      nimi.append(
+        solmu('span', 'aikajana-ilmiokuvateksti-otsikko', `${t.vuosi} · ${t.otsikko}`),
+        solmu('span', 'aikajana-ilmiokuvateksti-rivi', [t.henkilo, paikka(t)].filter(Boolean).join(' · ')),
+      );
+      sivu.appendChild(nimi);
     } else {
       const teksti = solmu('div', 'aikajana-ilmio-teksti');
       const henkilorivi = solmu('div', 'aikajana-ilmio-henkilo');

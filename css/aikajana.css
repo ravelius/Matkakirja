@@ -660,7 +660,7 @@
  * väistyvä kuvasivu piti pohjan nollassa juuri silloin, kun
  * js/aikajana.js mittaa uuden korkeuden korkeusliukua varten.
  */
-.aikajana-ilmio:has(> .aikajana-ilmio-sivu.esilla > .aikajana-ilmiokuva:only-child) { min-height: 0; }
+.aikajana-ilmio:has(> .aikajana-ilmio-sivu.esilla > .aikajana-ilmiokuva:first-child) { min-height: 0; }
 /*
  * HAVAINNEKUVA VALOKEILASSA (omistaja 4.9.2026: *"linssin havainnekuvan
  * voisi muuttaa niin että se vinjetoituisi läpinäkyväksi kaikilta
@@ -671,13 +671,13 @@
  * osumatestiin, joten raahaus ja napautus toimivat koko alalta.
  * Tekstisivu (loppusanat) pitää laatikkonsa.
  */
-.aikajana-ilmio:has(> .aikajana-ilmio-sivu.esilla > .aikajana-ilmiokuva:only-child) {
+.aikajana-ilmio:has(> .aikajana-ilmio-sivu.esilla > .aikajana-ilmiokuva:first-child) {
   border-color: transparent;
   background: transparent;
   box-shadow: none;
 }
-.aikajana-ilmio-sivu.esilla > .aikajana-ilmiokuva:only-child,
-.aikajana-ilmio-sivu.poistuu > .aikajana-ilmiokuva:only-child {
+.aikajana-ilmio-sivu.esilla > .aikajana-ilmiokuva:first-child,
+.aikajana-ilmio-sivu.poistuu > .aikajana-ilmiokuva:first-child {
   background: transparent;
   /*
    * Joka reuna häipyy nollaan (omistaja 4.9.2026: *"Saisiko tuon
@@ -692,6 +692,41 @@
      jokainen reuna ja kulma on läpinäkyvä ja keskusta täysin peittävä. */
   -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 44%, rgba(0, 0, 0, 0.72) 62%, rgba(0, 0, 0, 0.24) 82%, transparent 97%);
   mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 44%, rgba(0, 0, 0, 0.72) 62%, rgba(0, 0, 0, 0.24) 82%, transparent 97%);
+}
+/*
+ * KEKSINNÖN NIMI KUVAN ALAREUNASSA (omistaja 5.9.2026: nimi ei mahdu
+ * kortin alle kapealla ruudulla). Kuvan sisar, ei lapsi: maski ei osu
+ * siihen. Istuu valokeilan häipyvälle vyöhykkeelle kuvan alalaidassa,
+ * varjo pitää tekstin luettavana sekä kuvan että tumman kartan päällä.
+ * pointer-events: none — napautus menee kuvaan (avaa jutun).
+ */
+.aikajana-ilmiokuvateksti {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  bottom: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  text-align: center;
+  color: #f1e3c2;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.8), 0 0 22px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+.aikajana-ilmiokuvateksti-otsikko {
+  font-family: var(--font-luku, Georgia, serif);
+  font-size: clamp(0.95rem, 2.4vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  text-wrap: balance;
+}
+.aikajana-ilmiokuvateksti-rivi {
+  font-family: var(--font-type);
+  font-size: clamp(0.62rem, 1.5vw, 0.8rem);
+  letter-spacing: 0.06em;
+  color: #d9ccb4;
 }
 .aikajana-ilmio-teksti { padding: 0.5rem 0.7rem 0.65rem; }
 /*
@@ -920,6 +955,11 @@
   font-weight: 700;
   line-height: 1.15;
   margin-top: 0.1rem;
+  /* Pitkä yhdyssana ("Kuumailmapallo") katkeaa tavuviivalla eikä
+   * kolmella pisteellä (5.9.2026); koko nimi on kuvan alareunassa. */
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  -webkit-hyphens: auto;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
