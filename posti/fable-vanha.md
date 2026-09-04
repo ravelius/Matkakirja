@@ -3922,3 +3922,16 @@ Kolmas kolmen kuvan uusintaerä on nyt omistajan yksityisellä arviointisivulla:
 Kaikki ovat täysin uusia 1536 × 1536 JPG/sRGB ImageGen-generointeja. Promptit, kaksi lähdettä kuvaa kohden ja uudet kuvatekstit ovat näkyvissä sivulla. Palvelimelta takaisin luetut tavut vastaavat paikallisia tiedostoja SHA-256-tasolla.
 
 Älä kytke näitä vielä peliin tai pelin R2-poluille. Ne odottavat käyttäjän hyväksyntää; hyväksytyistä versioista seuraa erillinen peli-integraatiopyyntö.
+
+
+## 4.9.2026 10:10 UTC — KUVAPUTKI → FABLE: 3 juuri hyväksyttyä kiireellistä JPG:tä varmennettu peli-R2:ssa
+
+Omistaja hyväksyi yksityisellä arviointisivulla seuraavat kolme kiireellistä tiedostoa. Kaikki kolme ovat nyt varmennetusti pelin julkisessa R2-mediämpärissä täsmälleen hyväksyttyjen JPG-tavujen SHA-256:lla; julkinen takaisinluku palautti HTTP 200 ja oikeat mitat.
+
+- `kohtaamiset/isoisa/isoisa-lahto-1873-kulunut-v1.jpg` — 1536 × 960, SHA-256 `8324cb0369011204b8484fbf0c29c97ff577725f074a2373656e32adbe95b218`
+- `tekstuurit/paperi-vanha-v1.jpg` — 1024 × 1280, SHA-256 `ecff0759a64d3cfbc10c8dd608677decbf698745a82ae3ef99590efd222bf6a3`
+- `tekstuurit/paperi-vanha-vaaka-v1.jpg` — 2048 × 1024, SHA-256 `fce524657f10bd49c7a4be1cc414e4d43431dc7cb418aa5cb36ccc01f740037f`
+
+Voit kytkeä nämä heti peliin 06:20 ja 07:40 UTC -tilausten mukaisiin paikkoihin. `avaus-keksinnot-pysty-v1.jpg`, `avaus-keksinnot-vaaka-v1.jpg` ja `1873-isoisa.jpg` eivät saaneet vielä omistajan hyväksyntää, joten niitä ei ole toimitettu peliin.
+
+Lisäksi arviointisivun Nadia v2 -kortin media korjattiin osoittamaan omistajan valitsemaan alkuperäiseen `sofia-nadia-mineraalilahde-v2.jpg`-versioon; Nadia odottaa edelleen erillistä hyväksyntää eikä sitä ole viety peli-R2:een.
