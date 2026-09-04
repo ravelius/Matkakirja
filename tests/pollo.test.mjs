@@ -23,9 +23,11 @@ import { readFileSync } from 'node:fs';
 
 import {
   KONTEKSTIN_ENIMMAISPITUUS,
+  LINSSIJONON_KATTO,
   LIVIAN_MIETINNAT,
   MIETINNAN_JATKOVIIVE,
   arvoMietinta,
+  linssijonoLisaa,
   jasennaKasitteet,
   kehysLaji,
   kokoaKonteksti,
@@ -42,7 +44,7 @@ import {
 // Kuplan napautusnielu asuu ui-apureissa: sama vuoto koskee kaikkia
 // kelluvia kuplia (ks. tämän tiedoston loppu). Puheenvuoron jako osiin
 // asuu samassa tiedostossa (kuplapino, 3.9.2026).
-import { jaaPuheenvuoroksi, nielaiseSulkevaNapautus } from '../js/ui-apurit.js';
+import { jaaPuheenvuoroksi, linssiEstaa, nielaiseSulkevaNapautus } from '../js/ui-apurit.js';
 // Sofian maadoitus on kaanonia ja omistajan hyväksymä malliesimerkki:
 // jaon testi lukee sen paketista eikä kopioi tekstiä tänne.
 import { FOKUSVIRTA_SOFIA } from '../js/packs/fokusvirta-sofia.js';
@@ -1792,4 +1794,82 @@ test('vanha peli ei kutsu sähkereittiä — muut tehtävät ovat ennallaan', ()
   assert.match(lahde, /runko\?\.tehtava === 'puhe'/, 'puhehaara katosi');
   assert.match(lahde, /runko\?\.tehtava === 'ehdotukset' \? 'ehdotukset' : 'vastaus'/,
     'chat-reitin oletus muuttui');
+});
+
+/* ---------------------------------------------------------------- */
+/* Linssin portti: kuplat odottavat vuoroaan                         */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJAN TILAUS 4.9.2026: *"Pöllön kommentit saattavat tulla vielä
+ * kesken linssin. Tosin itse käynnistin linssin kesken kaiken mutta
+ * silti pitää kaikki muu blokata varmuuden vuoksi kun linssi alkaa."*
+ *
+ * Tämä rikkoutuu hiljaa kahdella tavalla, eikä kumpikaan näy diffistä:
+ * kupla tulee linssin päälle (omistajan kuvakaappaus: kuplapino peitti
+ * keksintölinssin) tai — pahempi — kupla ei tule KOSKAAN, koska se
+ * pudotettiin näyttämättä. Jono on siksi vartioitu kummaltakin
+ * puolelta: portti estää näyttämisen ja purku palauttaa puheenvuoron.
+ */
+
+/** Bodyn luokka on portin ainoa tieto — tynkä riittää sen mittaamiseen. */
+function linssitynka(paalla) {
+  return { body: { classList: { contains: (nimi) => paalla && nimi === 'aikajana-paalla' } } };
+}
+
+test('linssiEstaa lukee bodyn luokan eikä kaadu ilman dokumenttia', () => {
+  assert.equal(linssiEstaa(linssitynka(true)), true);
+  assert.equal(linssiEstaa(linssitynka(false)), false);
+  assert.equal(linssiEstaa(null), false);
+  assert.equal(linssiEstaa({}), false);
+});
+
+test('lykätyt puheenvuorot purkautuvat samassa järjestyksessä, katto pitää', () => {
+  const jono = [];
+  const sanotut = [];
+  for (const sana of ['eka', 'toka', 'kolmas']) {
+    linssijonoLisaa(jono, () => sanotut.push(sana));
+  }
+  // Muu kuin funktio ei mene jonoon: purku kutsuu alkioita sellaisenaan.
+  linssijonoLisaa(jono, null);
+  assert.equal(jono.length, 3);
+  for (const tekija of jono) tekija();
+  assert.deepEqual(sanotut, ['eka', 'toka', 'kolmas'], 'järjestys ei säilynyt');
+
+  // Katto: pitkä linssiajo ei kasaa seinää, vaan vanhin putoaa.
+  const pitka = [];
+  const numerot = [];
+  for (let i = 0; i < LINSSIJONON_KATTO + 3; i += 1) {
+    linssijonoLisaa(pitka, () => numerot.push(i));
+  }
+  assert.equal(pitka.length, LINSSIJONON_KATTO);
+  for (const tekija of pitka) tekija();
+  assert.equal(numerot[0], 3, 'kattoon osunut jono ei pudottanut vanhinta');
+  assert.equal(numerot.at(-1), LINSSIJONON_KATTO + 2, 'uusin puheenvuoro katosi');
+});
+
+test('linssin aikana puhekuplat menevät jonoon ja ohjekuplat pudotetaan', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  // Puhe odottaa vuoroaan: saapumiskupla, puheenvuoro (osineen yhtenä)
+  // ja onnittelu lykätään.
+  assert.match(lahde, /return this\.lykkaaLinssiin\(\(\) => this\.naytaSaapumiskupla\(/);
+  assert.match(lahde, /return this\.lykkaaLinssiin\(\(\) => this\.naytaPuheenvuoro\(palat, \{ kuittaus, jatkuuko \}\)\);/);
+  assert.match(lahde, /this\.lykkaaLinssiin\(\(\) => this\.naytaOnnittelu\(/);
+  // Portti on ENNEN chattiin kirjaamista: muuten virran järjestys olisi
+  // eri kuin se, jossa repliikit lopulta sanotaan.
+  const saapumis = lahde.slice(lahde.indexOf('naytaSaapumiskupla(teksti, { kuittaus = null }'));
+  assert.ok(
+    saapumis.indexOf('linssiEstaa') < saapumis.indexOf('kirjaaKuplaViestiin'),
+    'kupla kirjataan chattiin ennen linssiporttia',
+  );
+  // Ohjekupla ei jää jonoon (tilanne on linssin jälkeen jo toinen).
+  assert.match(lahde, /naytaVihje\(teksti, kohde\) \{[\s\S]{0,600}?if \(linssiEstaa\(this\.doc\)\) return;/);
+  assert.match(lahde, /naytaLisavihje\(teksti\) \{[\s\S]{0,400}?if \(linssiEstaa\(this\.doc\)\) return;/);
+  // Chatti ei aukea linssin päälle, vaikka pöllönappi jää näkyviin.
+  assert.match(lahde, /avaa\(\) \{[\s\S]{0,700}?if \(linssiEstaa\(this\.doc\)\) return;/);
+  // Purku ei puhu linssin päälle eikä katkaise kesken olevaa puheenvuoroa.
+  assert.match(lahde, /if \(linssiEstaa\(this\.doc\) \|\| !this\.linssijono\.length\) return;/);
+  assert.match(lahde, /if \(!this\.puheenvuoro\) this\.linssijono\.shift\(\)\?\.\(\);/);
+  // Linssin alkaessa pino ja chatti kiinni, ja jonon purku peruuntuu.
+  assert.match(lahde, /linssiAlkoi\(\) \{[\s\S]{0,300}?if \(this\.auki\) this\.sulje\(\);\s*\n\s*this\.tyhjennaPino\(\);/);
 });

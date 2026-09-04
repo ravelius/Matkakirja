@@ -72,7 +72,8 @@
  * NOSTO_/nosto-etuliitteellä.
  */
 import {
-  fokusmoodiPaalla, html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu,
+  fokusmoodiPaalla, html, jaaKappaleiksi, linssiEstaa, nielaiseSulkevaNapautus,
+  polloNimilappu,
 } from './ui-apurit.js';
 import { asetaKuva, assetOsoite } from './media.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
@@ -866,10 +867,17 @@ function nostoKohteelle(ui, kohdeId) {
  * tiedoston alku); kortti aukeaa aina, myös luettuna.
  */
 function avaaNosto(ui, nosto) {
-  if (!nosto) return;
+  if (!nosto) return false;
+  /*
+   * LINSSIN PORTTI (omistaja 4.9.2026: *"pitää kaikki muu blokata …
+   * kun linssi alkaa"*): kortti ei nouse tummennetun kartan päälle,
+   * eikä paperi kahahda — napautus jää siihen. Sama portti kuin
+   * kohdekortilla (js/ui-apurit.js linssiEstaa).
+   */
+  if (linssiEstaa()) return false;
   sfx.play('paper');
   nostoMerkitseLuetuksi(nosto.id);
-  avaaNostonKortti(ui, nosto);
+  return avaaNostonKortti(ui, nosto);
 }
 
 /* ==================== LUNASTUSKORTTI ==================== */
@@ -960,6 +968,9 @@ function piirraNostonSisus(ui, sisalto, nosto) {
 }
 
 function avaaNostonKortti(ui, nosto) {
+  // Sama portti kuin avaaNostossa: kortin voi avata muualtakin
+  // (kohdekortin nappi), eikä linssin päälle nouse mitään.
+  if (linssiEstaa()) return false;
   nostoLataaTyyli();
   suljeNostonKortti(ui);
 
@@ -1031,6 +1042,7 @@ function avaaNostonKortti(ui, nosto) {
   void kerros.offsetWidth;
   kerros.classList.add('fokusnosto-kortti-auki');
   sfx.play('paper');
+  return true;
 }
 
 /**

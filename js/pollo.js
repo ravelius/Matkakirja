@@ -61,7 +61,7 @@ import { asetaKuva } from './media.js';
 // koskee muitakin kelluvia kuplia — ja se on niputuksessa jo ennen
 // pöllöä (tools/build-standalone.mjs MODULES).
 import {
-  jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu, sanamaara,
+  jaaKappaleiksi, linssiEstaa, nielaiseSulkevaNapautus, polloNimilappu, sanamaara,
 } from './ui-apurit.js';
 import { POLLON_LINKKIKATTO, etsiAnkkuri, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
 import {
@@ -762,6 +762,43 @@ const PUHEENVUORON_SANAVIIVE = 55;
 const PUHEENVUORON_VIIVE_ALA = 1800;
 const PUHEENVUORON_VIIVE_YLA = 4200;
 
+/*
+ * === LINSSIN AIKANA LIVIA ODOTTAA VUOROAAN ==========================
+ * === (omistajan tilaus 4.9.2026) ====================================
+ *
+ * *"Pöllön kommentit saattavat tulla vielä kesken linssin … pitää
+ * kaikki muu blokata varmuuden vuoksi kun linssi alkaa."*
+ *
+ * Kupla ei tule linssin päälle — mutta se ei myöskään katoa: puhe on
+ * puhetta ja kuuluu pelaajalle. Puheenvuoro pannaan JONOON ja
+ * sanotaan, kun linssi sulkeutuu, samassa järjestyksessä kuin se
+ * syntyi. Osiin jaettu puheenvuoro on jonossa YKSI alkio (se puhutaan
+ * kokonaisena, omalla rytmillään), ja pelkät OHJEKUPLAT (vihjeet)
+ * pudotetaan kokonaan: ne kertovat mitä pelaajan pitäisi juuri nyt
+ * tehdä, ja linssin jälkeen tilanne on jo toinen.
+ */
+/** Jonon katto: vanhin putoaa, jottei pitkä linssiajo kasaa seinää. */
+export const LINSSIJONON_KATTO = 6;
+/** Kuinka usein purku kysyy, ehtiikö edellinen puheenvuoro loppuun. */
+const LINSSIJONON_VALI_MS = 700;
+
+/**
+ * Lykätty puheenvuoro jonon perälle, katto huomioiden.
+ *
+ * Oma funktionsa, koska tämä on jonon ainoa sääntö (FIFO, vanhin
+ * putoaa) ja se on testattavissa ilman selainta.
+ *
+ * @param {Array<() => void>} jono
+ * @param {() => void} tekija puheenvuoro sellaisena kuin se sanotaan.
+ * @returns {Array<() => void>} sama jono.
+ */
+export function linssijonoLisaa(jono, tekija, katto = LINSSIJONON_KATTO) {
+  if (typeof tekija !== 'function') return jono;
+  jono.push(tekija);
+  while (jono.length > katto) jono.shift();
+  return jono;
+}
+
 /**
  * Seepiapöllö. Viivapiirros samaan tapaan kuin pelin muut kuvakkeet
  * (.viiva-ikoni): pelkkä ääriviiva, täyttö vain silmäterissä, jotta se
@@ -1391,6 +1428,13 @@ class Pollo {
      */
     this.puheenvuoroAjastin = null;
     this.puheenvuoro = null;
+    /*
+     * LINSSIN AJAKSI LYKÄTYT PUHEENVUOROT (ks. lykkaaLinssiin). Jono
+     * on tyhjä aina kun linssi ei ole päällä; purkuajastin kelaa sen
+     * läpi linssin sulkeuduttua.
+     */
+    this.linssijono = [];
+    this.linssijonoAjastin = null;
     // Sanelu on ensisijainen syöttötapa; näppäimistö on varalla.
     this.tila = saneluTuettu() ? 'sanelu' : 'kirjoitus';
     this.rakenna();
@@ -2009,8 +2053,15 @@ class Pollo {
     this.nappi.hidden = !nakyy;
     if (!nakyy && this.auki) this.sulje();
     // Nappi piiloon: kuplilla ei ole enää mitään mihin osoittaa, joten
-    // koko pino väistyy — myös puheenvuorot (ks. tyhjennaPino).
-    if (!nakyy) this.tyhjennaPino();
+    // koko pino väistyy — myös puheenvuorot (ks. tyhjennaPino) ja
+    // linssin ajaksi lykätyt. Uusi peli piilottaa pöllön (js/ui.js
+    // mount), eikä edellisen pelin jono saa purkautua uudelle kartalle.
+    if (!nakyy) {
+      this.tyhjennaPino();
+      clearTimeout(this.linssijonoAjastin);
+      this.linssijonoAjastin = null;
+      this.linssijono.length = 0;
+    }
     // Löytöhetkellä nappi nytkähtää kerran esiin, jottei se vain
     // ilmesty riviin huomaamatta. Luokka poistetaan animaation
     // jälkeen, ettei se jää estämään seuraavaa nytkäystä.
@@ -2037,6 +2088,11 @@ class Pollo {
    */
   naytaVihje(teksti, kohde) {
     if (!teksti || this.auki || this.nappi.hidden) return;
+    // OHJEKUPLA EI JÄÄ JONOON (ks. LINSSIJONON_KATTO): se kertoo mitä
+    // pelaajan pitäisi juuri nyt tehdä, ja linssin jälkeen tilanne on
+    // toinen — ohje pyydetään tarvittaessa uudestaan (paivitaValintavihje
+    // ajaa joka piirrossa).
+    if (linssiEstaa(this.doc)) return;
     /*
      * Kupla voi osoittaa muuallekin kuin pöllönappiin: 'valikko'
      * ankkuroi sen hampurilaisnapin alle kärki ylöspäin, koska
@@ -2106,6 +2162,8 @@ class Pollo {
    */
   naytaLisavihje(teksti) {
     if (!teksti || this.auki || this.nappi.hidden) return;
+    // Ohjekupla kuten naytaVihje: linssin aikana ei näytetä eikä jonoteta.
+    if (linssiEstaa(this.doc)) return;
     const edellinen = this.pinonKuplat().at(-1) ?? null;
     if (edellinen?.dataset?.laji !== 'vihje') return;
     const kupla = this.luoKupla('vihje');
@@ -2147,6 +2205,12 @@ class Pollo {
    */
   naytaSaapumiskupla(teksti, { kuittaus = null } = {}) {
     if (!teksti || this.nappi.hidden) return false;
+    // LINSSI PÄÄLLÄ: puheenvuoro odottaa vuoroaan (ks. lykkaaLinssiin).
+    // Portti on ENNEN chattiin kirjaamista, jotta virran järjestys on
+    // se, jossa repliikit lopulta sanotaan.
+    if (linssiEstaa(this.doc)) {
+      return this.lykkaaLinssiin(() => this.naytaSaapumiskupla(teksti, { kuittaus }));
+    }
     // Puhekupla kuuluu chattiin aina, myös silloin kun se ei ehdi
     // pinoon asti (ks. kirjaaKuplaViestiin).
     this.kirjaaKuplaViestiin(teksti);
@@ -2194,6 +2258,14 @@ class Pollo {
    */
   naytaAvauskupla(teksti, { lennahda = false, kuittaus = null } = {}) {
     if (!teksti) return false;
+    /*
+     * LINSSIN PORTTI ILMAN JONOA: avausrepliikit kuuluvat
+     * aloitusvalintaan, ja sarja lopettaa itsensä siististi, kun kupla
+     * ei näy (js/livia.js naytaRepliikki). Jonoon jäänyt avausrepliikki
+     * putkahtaisi linssin jälkeen aivan väärään näkymään; sarja tulee
+     * sen sijaan kokonaisena seuraavalla aloituksella.
+     */
+    if (linssiEstaa(this.doc)) return false;
     this.kirjaaKuplaViestiin(teksti);
     if (this.auki) return false;
     this.vihjeAnkkuri = null;
@@ -2467,6 +2539,68 @@ class Pollo {
     this.poistaKuplat(this.pinonKuplat());
   }
 
+  /* --- linssin portti ja lykkäysjono ------------------------------ */
+
+  /**
+   * Puheenvuoro odottamaan linssin sulkeutumista (ks. LINSSIJONON_KATTO).
+   *
+   * @param {() => void} tekija puheenvuoro sellaisena kuin se sanotaan.
+   * @returns {false} kutsujalle sama vastaus kuin kuplasta, joka ei
+   *   näkynyt: kupla EI ole ruudulla.
+   */
+  lykkaaLinssiin(tekija) {
+    linssijonoLisaa(this.linssijono, tekija);
+    return false;
+  }
+
+  /**
+   * LINSSI ALKOI: ruutu tyhjäksi Livian osalta.
+   *
+   * Kuplat pois ja chatti kiinni — pino saattoi olla juuri auki, kun
+   * pelaaja käynnisti linssin (omistajan kuvakaappaus 4.9.2026).
+   * Kuplien tekstit ovat tallessa chatin virrassa
+   * (kirjaaKuplaViestiin), joten mitään ei menetetä.
+   */
+  linssiAlkoi() {
+    clearTimeout(this.linssijonoAjastin);
+    this.linssijonoAjastin = null;
+    if (this.auki) this.sulje();
+    this.tyhjennaPino();
+  }
+
+  /** LINSSI SULKEUTUI: jono puretaan siinä järjestyksessä kuin se syntyi. */
+  linssiPaattyi() {
+    this.puraLinssijono();
+  }
+
+  /**
+   * Jonon purku: yksi puheenvuoro kerrallaan, ja OSIIN JAETTU
+   * puheenvuoro saa puhua loppuun ennen seuraavaa — muuten seuraava
+   * alkio katkaisisi sen (naytaPuheenvuoro syrjäyttää edellisen).
+   * Jos linssi ehtii käynnistyä uudelleen kesken purun, loput jäävät
+   * jonoon odottamaan seuraavaa sulkemista.
+   */
+  puraLinssijono() {
+    clearTimeout(this.linssijonoAjastin);
+    this.linssijonoAjastin = null;
+    const jatka = () => {
+      this.linssijonoAjastin = null;
+      if (linssiEstaa(this.doc) || !this.linssijono.length) return;
+      // Edellinen puheenvuoro on yhä kesken: annetaan sen puhua loppuun.
+      if (!this.puheenvuoro) this.linssijono.shift()?.();
+      if (!this.linssijono.length) return;
+      this.linssijonoAjastin = setTimeout(jatka, LINSSIJONON_VALI_MS);
+    };
+    /*
+     * HENGÄHDYS ENSIN, EI HETI: linssi liukuu pois ja kartta vaalenee
+     * takaisin, eikä Livia puhu sen liikkeen päälle. Sama viive suojaa
+     * myös linssistä toiseen vaihtamiselta — kaynnistaAikajana pysäyttää
+     * edellisen ajon ennen uuden käynnistystä, ja linssiAlkoi ehtii
+     * peruuttaa purun ennen ensimmäistä kuplaa.
+     */
+    this.linssijonoAjastin = setTimeout(jatka, LINSSIJONON_VALI_MS);
+  }
+
   /**
    * KUPLAN NAPAUTUSSOPIMUS: napautus sulkee kuplan EIKÄ TEE MITÄÄN MUUTA.
    *
@@ -2551,6 +2685,11 @@ class Pollo {
    */
   naytaOnnittelu({ teksti = '', kuva = '', sakeet = [] } = {}) {
     if (!teksti || this.nappi.hidden) return;
+    // Onnittelu on puhetta eikä ohje: se odottaa linssin sulkeutumista.
+    if (linssiEstaa(this.doc)) {
+      this.lykkaaLinssiin(() => this.naytaOnnittelu({ teksti, kuva, sakeet }));
+      return;
+    }
     this.kirjaaKuplaViestiin(teksti);
     if (this.auki) return;
     this.kiinnita();
@@ -2764,6 +2903,11 @@ class Pollo {
     const palat = (Array.isArray(osat) ? osat : [osat])
       .map((osa) => String(osa ?? '').trim()).filter(Boolean);
     if (!palat.length) return false;
+    // LINSSI PÄÄLLÄ: koko puheenvuoro OSINEEN yhtenä jonon alkiona —
+    // sen rytmi kuuluu sille itselleen (ks. lykkaaLinssiin).
+    if (linssiEstaa(this.doc)) {
+      return this.lykkaaLinssiin(() => this.naytaPuheenvuoro(palat, { kuittaus, jatkuuko }));
+    }
     // Uusi puheenvuoro syrjäyttää edellisen: kaksi puhujaa yhtä aikaa
     // olisi sekasotku, vaikka puhuja on sama lintu.
     this.peruPuheenvuoro();
@@ -2950,6 +3094,13 @@ class Pollo {
   }
 
   avaa() {
+    /*
+     * LINSSIN AIKANA CHATTI EI AUKEA (omistaja 4.9.2026: *"pitää kaikki
+     * muu blokata varmuuden vuoksi kun linssi alkaa"*). Pöllönappi jää
+     * näkyviin — se on osa alarivin maisemaa — mutta napautus ei avaa
+     * paneelia linssin päälle. Keskustelu odottaa linssin sulkemista.
+     */
+    if (linssiEstaa(this.doc)) return;
     // Pöllön paneeli on ponnahdusikkuna siinä missä muutkin: lukija
     // vaikenee (omistajan tilaus 15.8.2026 "eikä pöllö [pysäytä]").
     // Paneeli on oma elementtinsä eikä dialog/postikortti, joten
@@ -5243,6 +5394,24 @@ export function polloVihjePois() {
  */
 export function polloKuplatPois() {
   nykyinenPollo?.tyhjennaPino();
+}
+
+/**
+ * LINSSI KYTKEYTYI PÄÄLLE (js/aikajana.js kaynnistaAikajana).
+ *
+ * Kuplat pois ja chatti kiinni; tämän jälkeen uudet puheenvuorot
+ * menevät jonoon (ks. lykkaaLinssiin) eivätkä ruudulle.
+ */
+export function polloLinssiAlkoi() {
+  nykyinenPollo?.linssiAlkoi();
+}
+
+/**
+ * LINSSI SULKEUTUI (js/aikajana.js pysaytaAikajana): jonoon jääneet
+ * puheenvuorot sanotaan nyt, samassa järjestyksessä kuin ne syntyivät.
+ */
+export function polloLinssiPaattyi() {
+  nykyinenPollo?.linssiPaattyi();
 }
 
 /**
