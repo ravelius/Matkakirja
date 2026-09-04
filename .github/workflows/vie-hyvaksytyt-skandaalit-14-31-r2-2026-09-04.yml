@@ -1,0 +1,166 @@
+name: Vie hyväksytyt skandaalit 14–31 R2:een 2026-09-04
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/vie-hyvaksytyt-skandaalit-14-31-r2-2026-09-04.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vie-hyvaksytyt-skandaalit-14-31-r2-2026-09-04
+  cancel-in-progress: true
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      DRIVE_AVAIN: ${{ secrets.SAMIREIVINEN_DRIVE_API }}
+      R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_AMPARI: ${{ secrets.R2_BUCKET }}
+      JULKINEN: https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev
+      DRIVE_ID: 1O1qn_Y0ksBfy4YtAxbL0gpOvSL4m1E80
+      ZIP_SHA256: 7f79db4f808368bfe3ff9d7ed9ae9201d7c8bb593d82a20745eb8209720a5f92
+      R2_HAKEMISTO: kohtaamiset/kuvajono
+
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Tarkista yhteydet
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$DRIVE_AVAIN" ] || puuttuu="$puuttuu SAMIREIVINEN_DRIVE_API"
+          [ -n "$R2_TILI" ] || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ] || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "$R2_AMPARI" ] || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Puuttuvat repository secretit:$puuttuu"
+            exit 1
+          fi
+
+      - name: Nouda hyväksytty ZIP
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location             "https://www.googleapis.com/drive/v3/files/$DRIVE_ID?alt=media&key=$DRIVE_AVAIN"             --output batch.zip
+          printf '%s  %s\n' "$ZIP_SHA256" batch.zip | sha256sum --check
+          mkdir -p r2-out
+          unzip -q batch.zip -d r2-out
+
+      - name: Tarkista kaikki JPG-tiedostot
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'SKRIPTI'
+          import { createHash } from 'node:crypto';
+          import { readFile, readdir } from 'node:fs/promises';
+
+          const expected = {
+            'skandaali-alberti-skandaali-photo-v1.jpg': '421f044f08a9e380e57ee4917585b221e1b446a5bdf0331e05909efea22ef50a',
+            'skandaali-baldomera-larra-pyramidi-photo-v1.jpg': 'd7fdec9421a8047d4f2781367fd08bb4ae9f3ba6db325e7010ab6538bcefa47c',
+            'skandaali-beringerin-valhekivet-photo-v1.jpg': '78b9289a896e02a05c0c9bcb4a95fd500c71539c2c5c46bb2ef8d1e5f09a00a4',
+            'skandaali-cerro-de-los-santos-vaarennokset-photo-v1.jpg': '63c5e573f5e40e0dc641ed774a187ad751e700d1eb28ae63113fa5680e32a6dd',
+            'skandaali-hitlerin-paivakirjat-photo-v1.jpg': 'ef52a63187b5084b4cf62a99c5c7f9b9e9ec844bf9710039423248ab6e77838f',
+            'skandaali-kaulanauhajuttu-1785-photo-v1.jpg': '6a706fb4d258d0e604fb730e707b3cb19a1a4cdd9085905cd1ef0cd5424a6948',
+            'skandaali-kieltolaki-ja-pirtukuningas-photo-v1.jpg': '9fc875b0d5ae1daa36a1cd38caa8918ccdcf86cfb45e677e3c0d089360c6e4dc',
+            'skandaali-kopenickin-kapteeni-photo-v1.jpg': '5b3073de2ca3fcf54fc9bf152fee4f44a4837d95a97b40bfcee7a33e5bf27432',
+            'skandaali-lasnamaen-valkea-laiva-photo-v1.jpg': '140938d932b108f5113dfe9ff74adc7cc5d5f86412ab0fcacab106599b4b0dc7',
+            'skandaali-mona-lisan-varkaus-1911-photo-v1.jpg': '50a8a58c571de492c40094d8d06db1ef2ac96ae8b071c2c0c3b30c58f469a933',
+            'skandaali-nurmen-amatoorikohu-photo-v1.jpg': '0498b4b00b96ac1024e15f6bcb765c80511ffc5dc112bc3b75f81c5176a15f47',
+            'skandaali-pirtukauppa-suomenlahdella-photo-v1.jpg': 'd1c719303db10f514a0bbe59797da0810f9f6a1de52d5db992e2c99cded89c2b',
+            'skandaali-rummu-jyri-mestarikarkuri-photo-v1.jpg': '6c56bb3b3f3d3aa38ec8a287014897806181d21e3c9bd23c59a6b989055a0d37',
+            'skandaali-sacromonten-lyijykirjat-photo-v1.jpg': '8d14e64e1a134786b5a3ad569253889230335ecc90be0aa7ecdfdc9e14f03f1b',
+            'skandaali-seitseman-veljesta-kirjasota-photo-v1.jpg': '2b1a9a0a94a41da17b06398dc781cd8db1c1c5a967a4a1982066b11fc5f3f1e0',
+            'skandaali-struensee-kuninkaan-laakari-photo-v1.jpg': '22113459c54b630284edc94b3a7d5297e3577e8f5c32ad695ce87132f62302ee',
+            'skandaali-tanskan-valtionvararikko-1813-photo-v1.jpg': '14af103152882de6748069a39b4c46d70c27cb1c5ddb15d2f7d1bfba179c93c9',
+            'skandaali-tycho-brahen-kuolinmysteeri-photo-v1.jpg': '9711b27c88fca256b2ec34a2baa10107fd3be677af909e0c75f38b76ade254f7',
+          };
+
+          function jpegMitat(data) {
+            if (data[0] !== 0xff || data[1] !== 0xd8) throw new Error('ei ole JPEG');
+            let i = 2;
+            while (i + 9 < data.length) {
+              if (data[i] !== 0xff) { i += 1; continue; }
+              const merkki = data[i + 1];
+              if (merkki === 0xd8 || merkki === 0xd9) { i += 2; continue; }
+              const pituus = data.readUInt16BE(i + 2);
+              if (pituus < 2 || i + 2 + pituus > data.length) break;
+              if ([0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7, 0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf].includes(merkki)) {
+                return { korkeus: data.readUInt16BE(i + 5), leveys: data.readUInt16BE(i + 7) };
+              }
+              i += 2 + pituus;
+            }
+            throw new Error('JPEG-mittoja ei löytynyt');
+          }
+
+          const files = (await readdir('r2-out')).sort();
+          const names = Object.keys(expected).sort();
+          if (JSON.stringify(files) !== JSON.stringify(names)) {
+            throw new Error(`ZIP-sisältö ei täsmää: ${files.join(', ')}`);
+          }
+          for (const [file, wantedSha] of Object.entries(expected)) {
+            const data = await readFile(`r2-out/${file}`);
+            const sha = createHash('sha256').update(data).digest('hex');
+            if (sha !== wantedSha) throw new Error(`${file}: SHA-256 ${sha} ei täsmää`);
+            const mitat = jpegMitat(data);
+            if (mitat.leveys !== 1536 || mitat.korkeus !== 1024) {
+              throw new Error(`${file}: ${mitat.leveys}x${mitat.korkeus}, odotettiin 1536x1024`);
+            }
+            if (!data.includes(Buffer.from('ICC_PROFILE'))) throw new Error(`${file}: ICC-profiili puuttuu`);
+            const url = `${process.env.JULKINEN}/${process.env.R2_HAKEMISTO}/${file}?t=${Date.now()}`;
+            const current = await fetch(url, { headers: { 'Cache-Control': 'no-cache' } });
+            if (current.ok) {
+              const oldData = Buffer.from(await current.arrayBuffer());
+              const oldSha = createHash('sha256').update(oldData).digest('hex');
+              if (oldSha !== wantedSha) throw new Error(`${file}: R2:ssa on eri aiempi sisältö`);
+            } else if (current.status !== 404) {
+              throw new Error(`${file}: R2-esitarkistus HTTP ${current.status}`);
+            }
+            console.log(`${file}: JPEG, 1536x1024, ICC ja SHA-256 kunnossa`);
+          }
+          SKRIPTI
+
+      - name: Vie R2-mediämpäriin
+        run: |
+          set -euo pipefail
+          for file in r2-out/*.jpg; do
+            aws s3 cp "$file" "s3://$R2_AMPARI/$R2_HAKEMISTO/$(basename "$file")"               --endpoint-url "https://$R2_TILI.r2.cloudflarestorage.com"               --no-progress --content-type image/jpeg               --cache-control "public, max-age=31536000, immutable"
+          done
+
+      - name: Varmista julkinen R2 tavutasolla
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'SKRIPTI'
+          import { createHash } from 'node:crypto';
+          import { readFile, readdir } from 'node:fs/promises';
+          const files = await readdir('r2-out');
+          for (const file of files) {
+            const wanted = createHash('sha256').update(await readFile(`r2-out/${file}`)).digest('hex');
+            let response;
+            for (let attempt = 1; attempt <= 15; attempt += 1) {
+              response = await fetch(`${process.env.JULKINEN}/${process.env.R2_HAKEMISTO}/${file}?t=${Date.now()}`, {
+                headers: { Origin: 'https://ravelius.github.io', 'Cache-Control': 'no-cache' },
+              });
+              if (response.ok) break;
+              await new Promise((resolve) => setTimeout(resolve, 2000));
+            }
+            if (!response?.ok) throw new Error(`${file}: R2 HTTP ${response?.status}`);
+            const type = response.headers.get('content-type') ?? '';
+            if (!type.startsWith('image/jpeg')) throw new Error(`${file}: MIME ${type}`);
+            if (!response.headers.get('access-control-allow-origin')) throw new Error(`${file}: CORS puuttuu`);
+            const data = Buffer.from(await response.arrayBuffer());
+            const sha = createHash('sha256').update(data).digest('hex');
+            if (sha !== wanted) throw new Error(`${file}: takaisinluettu SHA-256 ${sha} ei täsmää`);
+            console.log(`${file}: julkinen JPEG, CORS ja tavut kunnossa`);
+          }
+          SKRIPTI
