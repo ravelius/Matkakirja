@@ -700,7 +700,66 @@ export const KEKSINNOT = [
     henkilo: 'Isoisä lähtee matkaan', otsikko: 'Matkakirjan vuosi',
     selite: 'Isoisä kirjoitti päiväkirjaansa maailmassa, jossa oli jo '
       + 'rautatie, lennätin ja valokuva — mutta ei vielä puhelinta, autoa eikä sähkövaloa.',
+    /*
+     * KARUSELLIKORTIN MUOTOKUVA ODOTTAA KUVAPUTKEA. Kortilla on
+     * toistaiseksi nimikirjainlaatta (js/aikajana.js muotokuvaKehys),
+     * ja kun putki toimittaa hassuttelevan studiomuotokuvan osoitteeseen
+     * `${KEKSINTO_KUVAJUURI}/muotokuva/1873-isoisa.jpg`, se kirjoitetaan
+     * tähän kenttään yhtenä rivinä — mitään muuta ei tarvitse muuttaa.
+     * Luennan tiedostonimi EI seuraa mukana: merkkipaalun runko
+     * ladotaan aina vuodesta ja otsikosta (js/linssipuhe.js
+     * luennanRunko), joten valmis 1873-matkakirjan-vuosi.mp3 pysyy
+     * paikallaan vaikka paalu saa kasvot.
+     */
     kuva: null, ilmio: null,
+    /*
+     * VÄLINÄYTÖS (omistajan tilaus 4.9.2026 aamu, sanatarkasti:
+     * *"Kertoja voisi myös kertoa vähän pidemmin isoisän kohdalla mihin
+     * pulu sitten vain kommentoisi. Aika voisi pysähtyä siinä kohtaa
+     * automaattisesti. Kertoja voisi isoisän kohdalla myös summata jo
+     * nähtyä ja suunnata myös tulevaan. Nämä voisivat tulla kartan
+     * keskelle myös tekstimuodossa yhdessä isoisän jonkun kuvan
+     * kanssa. … Animaatio jatkuisi vasta popup tekstin alla olevasta
+     * napista. Näin pitkään animaatioon tulee pieni hengähdys tauko."*).
+     *
+     * Kello pysähtyy tähän itsestään, laatikko nousee kartan keskelle
+     * ja ajo jatkuu vasta Jatka-napista (js/aikajana.js
+     * avaaValinaytos). Luvut ovat kaaren omat: 1873 mennessä on
+     * syttynyt 11 valoa (1769–1869) ja edessä on 14 (1876–1928).
+     */
+    valinaytos: {
+      otsikko: '1873. Isoisä lähtee matkaan.',
+      kertoja: 'Vuosi 1873. Kartalla palaa yksitoista valoa: höyry vetää junia, '
+        + 'lennätin vie sanan meren yli, ja valokuva pysäyttää hetken. Isoisä '
+        + 'lähtee matkaan. Edessä on neljätoista valoa lisää, eikä hän tiedä '
+        + 'niistä yhtään.',
+      /*
+       * Pulun kommentti kertojan jälkeen (omistaja: *"Pulu voi
+       * kommentoida isoisän kohdalla jotain siitä mitä hänen aikana oli
+       * ja mitä puuttui ja tämä jotenkin nasevasti pulun tyylillä."*).
+       * Kaksi osaa, jotka tulevat kuplapinoon peräkkäin.
+       */
+      pulu: [
+        'Kääk, tässä kohtaa isoisä pakkaa arkkunsa. Junat kulkevat jo, lennätin '
+          + 'naputtaa ja valokuvakin osataan ottaa. Mutta puhelinta ei ole, ei '
+          + 'hehkulamppua, ei autoa, ei edes polkupyörää sellaisena kuin sinä sen tunnet.',
+        'Isoisä luuli lähtevänsä valmiiseen maailmaan. Kello näyttää, että se oli '
+          + 'vasta puolivälissä.',
+      ],
+      /*
+       * Isoisän kuva tekstin kylkeen. Kansio on sama kuin muilla isoisän
+       * valokuvilla (js/isoisan-valokuvat.js ISOISAN_KUVAJUURI); kuvaputki
+       * toimittaa tiedoston, ja siihen asti laatikko näyttää pelkän
+       * tekstin täysleveänä (js/aikajana.js piilottaa kuvapaikan 404:sta).
+       * Rajaus irti valkoisesta taustasta (rajausTyyli) lisätään vasta
+       * kun kuva on ämpärissä ja reunat on mitattu.
+       */
+      kuva: {
+        osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-lahto-1873-kulunut-v1.jpg',
+        selite: 'Isoisä lähdössä matkaan Lontoossa 1873.',
+        lahde: 'Kuvaputken generoitu valokuva',
+      },
+    },
   },
   {
     vuosi: 1876, paikka: 'Köln', lat: 50.9375, lon: 6.9603, x: 6065.3, y: 1349.2,

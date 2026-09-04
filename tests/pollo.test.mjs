@@ -1857,7 +1857,7 @@ test('linssin aikana puhekuplat menevät jonoon ja ohjekuplat pudotetaan', () =>
   assert.match(lahde, /this\.lykkaaLinssiin\(\(\) => this\.naytaOnnittelu\(/);
   // Portti on ENNEN chattiin kirjaamista: muuten virran järjestys olisi
   // eri kuin se, jossa repliikit lopulta sanotaan.
-  const saapumis = lahde.slice(lahde.indexOf('naytaSaapumiskupla(teksti, { kuittaus = null }'));
+  const saapumis = lahde.slice(lahde.indexOf('naytaSaapumiskupla(teksti, { kuittaus = null, linssinOma = false }'));
   assert.ok(
     saapumis.indexOf('linssiEstaa') < saapumis.indexOf('kirjaaKuplaViestiin'),
     'kupla kirjataan chattiin ennen linssiporttia',
@@ -1872,4 +1872,30 @@ test('linssin aikana puhekuplat menevät jonoon ja ohjekuplat pudotetaan', () =>
   assert.match(lahde, /if \(!this\.puheenvuoro\) this\.linssijono\.shift\(\)\?\.\(\);/);
   // Linssin alkaessa pino ja chatti kiinni, ja jonon purku peruuntuu.
   assert.match(lahde, /linssiAlkoi\(\) \{[\s\S]{0,300}?if \(this\.auki\) this\.sulje\(\);\s*\n\s*this\.tyhjennaPino\(\);/);
+});
+
+test('linssin oma kupla ohittaa portin — mutta vain linssin kutsumana', () => {
+  /*
+   * Merkkipaalun välinäytös on linssin OMA kohtaus (omistajan tilaus
+   * 4.9.2026 aamu: *"Pulu voi kommentoida isoisän kohdalla jotain siitä
+   * mitä hänen aikana oli ja mitä puuttui"*), joten sen kupla tulee
+   * ruudulle vaikka linssi on päällä. Kaikki muu menee yhä jonoon —
+   * ohitus saa asua tasan yhdessä vientifunktiossa.
+   */
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  assert.match(lahde, /export function polloLinssikupla\(osat, asetukset = \{\}\) \{\n\s*return Boolean\(nykyinenPollo\?\.naytaPuheenvuoro\(osat, \{ \.\.\.asetukset, linssinOma: true \}\)\);/);
+  // Portti kysyy lipun kummassakin kuplafunktiossa.
+  assert.match(lahde, /if \(!linssinOma && linssiEstaa\(this\.doc\)\) \{\n\s*return this\.lykkaaLinssiin\(\(\) => this\.naytaSaapumiskupla\(/);
+  assert.match(lahde, /if \(!linssinOma && linssiEstaa\(this\.doc\)\) \{\n\s*return this\.lykkaaLinssiin\(\(\) => this\.naytaPuheenvuoro\(/);
+  // Osiin jaettu puheenvuoro puhuu loppuun: lippu kulkee jatko-osiin.
+  assert.match(lahde, /this\.puheenvuoro = \{\n\s*palat, seuraava: 1, kuittaus, jatkuuko, linssinOma,\n\s*\};/);
+  assert.match(lahde, /linssinOma: nyt\.linssinOma,/);
+  // Muut vientifunktiot EIVÄT saa lippua: ohitus on vain linssin.
+  for (const nimi of ['polloSaapumiskupla', 'polloPuheenvuoro', 'polloAvauskupla']) {
+    const lohko = lahde.match(new RegExp(`export function ${nimi}\\([\\s\\S]*?\\n\\}`))[0];
+    assert.ok(!lohko.includes('linssinOma'), `${nimi} ei saa ohittaa linssiporttia`);
+  }
+  // Kutsuja on aikajanamoottori ja vain se.
+  const aikajana = readFileSync(new URL('../js/aikajana.js', import.meta.url), 'utf8');
+  assert.match(aikajana, /polloLinssikupla\(osat\);/);
 });

@@ -7,12 +7,16 @@
  *
  *   node tools/generoi-linssiluennat.mjs --kuiva
  *   node tools/generoi-linssiluennat.mjs --pysakit 1769,1783
+ *   node tools/generoi-linssiluennat.mjs --pysakit esittely,valinaytos
  *   node tools/generoi-linssiluennat.mjs            (koko kaari)
  *
  *   --kuiva          tulostaa tekstit ja kohteet, ei kutsu APIa
  *   --pysakit 1769,1783   vain nämä vuodet (tyhjä = kaikki). HUOM:
  *                    kaaressa on KOLME vuoden 1895 pysäkkiä (Marconi,
  *                    Röntgen, Lumière), ja vuosi valitsee ne kaikki.
+ *                    Sama lippu ottaa KAAREN OMAT PUHEET avaimina:
+ *                    `esittely` (avausjakson selite) ja `valinaytos`
+ *                    (merkkipaalujen pidemmät kertojatekstit).
  *   --pakota         generoi vaikka tiedosto on jo ämpärissä
  *   --ei-vientia     generoi ja viimeistele, mutta jätä levylle
  *
@@ -36,10 +40,16 @@
  *
  * Runko on MUOTOKUVAN runko (js/linssipuhe.js luennanRunko): pysäkin
  * `kuva.osoite`-tiedostonimi ilman päätettä. Vuosi yksin ei kelpaisi —
- * vuodella 1895 on kolme pysäkkiä. Merkkipaalu (1873) on ainoa
- * kuvaton, ja sen runko ladotaan vuodesta ja otsikosta
- * (1873-matkakirjan-vuosi). Peli lukee saman funktion, joten nimi ei
- * voi eriytyä kutsujan muistiin.
+ * vuodella 1895 on kolme pysäkkiä. Merkkipaalun (1873) runko ladotaan
+ * aina vuodesta ja otsikosta (1873-matkakirjan-vuosi), vaikka paalu
+ * saisi oman muotokuvan. Peli lukee saman funktion, joten nimi ei voi
+ * eriytyä kutsujan muistiin.
+ *
+ * KAAREN OMAT PUHEET (js/linssipuhe.js kaarenPuheet) noudattavat samaa
+ * sääntöä omilla rungoillaan: avausjakson esittely on `esittely` ja
+ * merkkipaalun välinäytös `valinaytos-<vuosi>`. Ne ovat pitkää proosaa
+ * eivätkä kolmen sanan riviä, joten break-tageja ei ladota — lauseet
+ * kantavat oman rytminsä.
  *
  * ------------------------------------------------------------------
  * TASO: −17 LUFS (kertojan taso, ei tehosteen)
@@ -94,9 +104,9 @@ import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { KEKSINNOT } from '../js/linssit/keksinnot.js';
+import { LINSSI } from '../js/linssit/keksinnot.js';
 import {
-  luennanPuhe, luennanRunko, luennanTeksti, luennanTiedosto,
+  KAAREN_AVAIMET, kaarenPuheet, luennanPuhe, luennanRunko, luennanTeksti, luennanTiedosto,
 } from '../js/linssipuhe.js';
 import { leikkaaHiljaisuusSuodatin } from './generoi-tehosteet.mjs';
 import { julkinenJuuri, tulkitseEbur128, tulkitseLoudnorm } from './generoi-siirtymamusiikki.mjs';
@@ -159,6 +169,13 @@ const HANNAN_PADDING_S = 0.15;
 /** Kolme sanaa kestää sekunteja, ei minuutteja — selvä hälytysraja. */
 const KESTO_MIN_S = 1.0;
 const KESTO_MAX_S = 14.0;
+/**
+ * KAAREN OMAT PUHEET ovat kokonaisia kappaleita eivätkä kolmen sanan
+ * rivejä: esittely on noin puoli minuuttia ja välinäytös vajaan.
+ * Yläraja on silti olemassa — se erottaa pitkän tekstin siitä, että
+ * malli on jäänyt jauhamaan.
+ */
+const KAAREN_KESTO_MAX_S = 50.0;
 
 // ── argumentit ─────────────────────────────────────────────────────
 
@@ -184,10 +201,26 @@ export function tulkitseArgumentit(argumentit) {
         palat.push(argumentit[i]);
       }
       if (!palat.length) return { ...liput, virhe: '--pysakit ilman vuosia' };
-      const vuodet = palat.join(',').split(/[,\s]+/).map((pala) => pala.trim()).filter(Boolean);
-      for (const vuosi of vuodet) {
-        if (!/^\d{3,4}$/.test(vuosi)) return { ...liput, virhe: `pysäkki ei ole vuosiluku: ${vuosi}` };
-        liput.pysakit.push(Number(vuosi));
+      const valinnat = palat.join(',').split(/[,\s]+/).map((pala) => pala.trim()).filter(Boolean);
+      for (const valinta of valinnat) {
+        if (/^\d{3,4}$/.test(valinta)) {
+          liput.pysakit.push(Number(valinta));
+          continue;
+        }
+        /*
+         * KAAREN OMAT PUHEET OVAT SAMASSA LIPUSSA: `esittely` on
+         * avausjakson selite ja `valinaytos` merkkipaalujen pidemmät
+         * kertojatekstit (js/linssipuhe.js kaarenPuheet). Vuosi ei
+         * kelpaisi valitsimeksi kummallekaan — esittely ei ole yhdessä
+         * vuodessa, ja välinäytös jakaa vuotensa pysäkin kanssa.
+         */
+        if (!KAAREN_AVAIMET.includes(valinta)) {
+          return {
+            ...liput,
+            virhe: `pysäkki ei ole vuosiluku eikä ${KAAREN_AVAIMET.join('/')}: ${valinta}`,
+          };
+        }
+        liput.pysakit.push(valinta);
       }
     } else if (arg === '--kuiva') {
       liput.kuiva = true;
@@ -203,26 +236,60 @@ export function tulkitseArgumentit(argumentit) {
 }
 
 /**
- * Ajettavat pysäkit vuosivalinnan mukaan. Tyhjä valinta = koko kaari.
- * Palauttaa `{ tyot, tuntemattomat }`, jotta väärä vuosi huomataan
- * ennen ensimmäistäkään maksullista kutsua eikä vasta hiljaisuutena.
+ * Ajettavat työt valinnan mukaan. Tyhjä valinta = KOKO KAARI: kaikki
+ * pysäkit sekä kaaren omat puheet (esittely ja välinäytökset).
+ *
+ * Valinta on sekalista: vuosiluvut poimivat pysäkit, avaimet
+ * (`esittely`, `valinaytos`) kaaren omat puheet. Palauttaa
+ * `{ tyot, tuntemattomat }`, jotta väärä valinta huomataan ennen
+ * ensimmäistäkään maksullista kutsua eikä vasta hiljaisuutena.
+ *
+ * @param {object} kaari linssin `aikajana`-lohko
+ * @param {Array<number|string>} valinta
  */
-export function valitsePysakit(tapahtumat, vuodet = []) {
+export function valitsePysakit(kaari, valinta = []) {
+  const vuodet = valinta.filter((v) => typeof v === 'number');
+  const avaimet = valinta.filter((v) => typeof v === 'string');
+  const kaikki = !valinta.length;
   const tyot = [];
-  for (const t of tapahtumat) {
-    if (vuodet.length && !vuodet.includes(t.vuosi)) continue;
+  for (const t of kaari?.tapahtumat ?? []) {
+    if (!kaikki && !vuodet.includes(t.vuosi)) continue;
     const nimi = luennanTiedosto(t);
     if (!nimi) continue;
     tyot.push({
       vuosi: t.vuosi,
+      avain: String(t.vuosi),
       runko: luennanRunko(t),
       nimi,
       teksti: luennanTeksti(t),
       puhe: luennanPuhe(t),
     });
   }
+  /*
+   * KAAREN OMAT PUHEET ovat pitkää proosaa eivätkä kolmen sanan
+   * riviä: niihin ei ladota break-tageja, vaan lauseet kantavat oman
+   * rytminsä. Malli saa siis tekstin sellaisenaan.
+   */
+  for (const puhe of kaarenPuheet(kaari)) {
+    if (!kaikki && !avaimet.includes(puhe.avain)) continue;
+    tyot.push({
+      vuosi: null,
+      avain: puhe.avain,
+      runko: puhe.runko,
+      nimi: puhe.nimi,
+      teksti: puhe.teksti,
+      puhe: puhe.teksti,
+    });
+  }
   const loydetyt = new Set(tyot.map((tyo) => tyo.vuosi));
-  return { tyot, tuntemattomat: vuodet.filter((v) => !loydetyt.has(v)) };
+  const avainLoydot = new Set(tyot.map((tyo) => tyo.avain));
+  return {
+    tyot,
+    tuntemattomat: [
+      ...vuodet.filter((v) => !loydetyt.has(v)),
+      ...avaimet.filter((a) => !avainLoydot.has(a)),
+    ],
+  };
 }
 
 // ── apurit ─────────────────────────────────────────────────────────
@@ -349,15 +416,15 @@ function viimeistele(lahde, kohde, tyokansio) {
 }
 
 /** Valmiin luennan tarkistukset: kesto ja taso. */
-function tarkista(kohde) {
+function tarkista(kohde, kestoMax = KESTO_MAX_S) {
   const pituus = kestoSekunteina(kohde);
   const taso = tulkitseEbur128(aja('ffmpeg', [
     '-hide_banner', '-v', 'info', '-i', kohde, '-af', 'ebur128=peak=true',
     '-f', 'null', '-',
   ]).loki);
   const virheet = [];
-  if (pituus < KESTO_MIN_S || pituus > KESTO_MAX_S) {
-    virheet.push(`kesto ${pituus.toFixed(2)} s ei ole välillä ${KESTO_MIN_S}–${KESTO_MAX_S} s`);
+  if (pituus < KESTO_MIN_S || pituus > kestoMax) {
+    virheet.push(`kesto ${pituus.toFixed(2)} s ei ole välillä ${KESTO_MIN_S}–${kestoMax} s`);
   }
   if (taso === null) {
     virheet.push('tasoa ei saatu mitattua (ebur128)');
@@ -400,14 +467,14 @@ async function main() {
     process.exit(1);
   }
 
-  const { tyot, tuntemattomat } = valitsePysakit(KEKSINNOT, liput.pysakit);
+  const { tyot, tuntemattomat } = valitsePysakit(LINSSI.aikajana, liput.pysakit);
   if (tuntemattomat.length) {
-    console.error(`Näitä vuosia ei ole kaaressa: ${tuntemattomat.join(', ')} `
+    console.error(`Näitä ei ole kaaressa: ${tuntemattomat.join(', ')} `
       + '— tarkista js/linssit/keksinnot.js. Ei generoida mitään.');
     process.exit(1);
   }
   if (!tyot.length) {
-    console.error('Yhtään pysäkkiä ei valittu.');
+    console.error('Yhtään luentaa ei valittu.');
     process.exit(1);
   }
 
@@ -420,7 +487,7 @@ async function main() {
    */
   if (liput.kuiva) {
     console.log(`KUIVA AJO (--kuiva) — APIa ei kutsuta, ämpäriin ei viedä. `
-      + `${tyot.length} pysäkkiä, ääni Viisas Kertoja, malli ${MALLI}.`);
+      + `${tyot.length} luentaa, ääni Viisas Kertoja, malli ${MALLI}.`);
     for (const tyo of tyot) {
       console.log(`${AMPARIN_KANSIO}/${tyo.nimi}  ·  "${tyo.teksti}"`);
     }
@@ -480,7 +547,8 @@ async function main() {
       console.log(`   leikkaus: ${kestoSekunteina(lahde).toFixed(2)} s → ${leikattu.toFixed(2)} s, `
         + `taso ${mitattu.taso.toFixed(1)} LUFS, korjaus ${korjaus.toFixed(2)} dB`);
 
-      const tulos = tarkista(kohde);
+      // Kaaren oma puhe (esittely, välinäytös) saa oman kestokattonsa.
+      const tulos = tarkista(kohde, tyo.vuosi === null ? KAAREN_KESTO_MAX_S : KESTO_MAX_S);
       console.log(`   valmis: ${tulos.pituus.toFixed(2)} s, `
         + `${tulos.taso === null ? '?' : tulos.taso.toFixed(1)} LUFS → ${kohde}`);
       if (tulos.virheet.length) {

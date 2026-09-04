@@ -9,11 +9,18 @@
 #   26 luentaa  aikajana/keksinnot/puhe/<muotokuvan runko>.mp3
 #               esim. 1769-james-watt.mp3 → "1769. James Watt.
 #               Höyrykoneen lauhdutin."
+#    2 puhetta  kaaren omat, pidemmät tekstit (omistajan tilaus
+#               4.9.2026 aamu): esittely.mp3 on avausjakson selite ja
+#               valinaytos-1873.mp3 merkkipaalun välinäytös, jonka
+#               kohdalla kello pysähtyy ja pulu kommentoi. Yhteensä
+#               siis 28 kohdetta.
 #
 # TIEDOSTONIMI TULEE DATASTA. Runko on pysäkin muotokuvan runko
 # (js/linssipuhe.js luennanRunko) — vuosi yksin ei riittäisi, koska
 # kaaressa on kolme vuoden 1895 pysäkkiä (Marconi, Röntgen, Lumière).
-# Peli ja työkalu lukevat saman funktion, joten nimi ei voi eriytyä.
+# Kaaren omilla puheilla on omat runkonsa (kaarenPuheet): `esittely` ja
+# `valinaytos-<vuosi>`. Peli ja työkalu lukevat saman funktion, joten
+# nimi ei voi eriytyä.
 #
 # JOKAINEN PYSÄKKI ON OMA MAKSULLINEN KUTSUNSA. Ajo tekee kuitenkin
 # HEADin julkiseen osoitteeseen ennen kutsua ja OHITTAA sen, mikä on jo
@@ -61,7 +68,8 @@ on:
       pysakit:
         description: >-
           Vuodet pilkuin TAI välilyönnein (esim. "1769,1783" tai
-          "1769 1783"). Tyhjä = koko kaari, 26 pysäkkiä. HUOM: vuosi
+          "1769 1783"), tai kaaren omat puheet avaimina "esittely" ja
+          "valinaytos". Tyhjä = koko kaari, 28 kohdetta. HUOM: vuosi
           1895 valitsee kaikki kolme sen vuoden pysäkkiä.
         required: false
         default: ''
@@ -138,9 +146,9 @@ jobs:
           sudo apt-get install -y --no-install-recommends ffmpeg
           ffmpeg -version | head -1
 
-      # Kuiva ajo ensin AINA: jokainen pysäkki ja sen luettava teksti
+      # Kuiva ajo ensin AINA: jokainen kohde ja sen luettava teksti
       # tulostuvat lokiin ennen kuin yhtäkään maksullista kutsua on
-      # tehty. Väärä vuosiluku syötteessä kaataa ajon tässä.
+      # tehty. Väärä vuosiluku tai tuntematon avain kaataa ajon tässä.
       # Syöte kulkee ympäristömuuttujan kautta, ei ${{ }}-sijoituksena
       # komentoriville: käsin kirjoitettu kenttä ei saa päätyä shellin
       # tulkittavaksi. Lainausmerkitön $PYSAKIT hajoaa välilyönneistä

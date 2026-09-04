@@ -31,6 +31,18 @@ import { tarkistaLinssi } from '../js/linssit/kerros.js';
 // Moottorin lähde tekstinä: kytkennät, joita puhdas funktio ei näytä.
 const MOOTTORI = readFileSync(new URL('../js/aikajana.js', import.meta.url), 'utf8');
 const TIEDELIITE = readFileSync(new URL('../js/tiedeliite.js', import.meta.url), 'utf8');
+
+/** Yhden metodin lohko lähteestä (sisennys erottaa metodin lopun). */
+function metodi(nimi) {
+  const osuma = MOOTTORI.match(new RegExp(`\\n  ${nimi}\\([^)]*\\) \\{[\\s\\S]*?\\n  \\}`));
+  assert.ok(osuma, `moottorista ei löydy metodia ${nimi}`);
+  return osuma[0];
+}
+/*
+ * PURKU KASVAA JOKA KERROKSESTA (avausjakso, välinäytös), joten sen
+ * vartiot lukevat koko lohkon eivätkä ensimmäisiä merkkejä.
+ */
+const PURA = metodi('pura');
 const TAPAHTUMAT = [{ vuosi: 1770 }, { vuosi: 1773, paalu: true }, { vuosi: 1780 }];
 const TAHTI = { vuosiMs: 100, viiveMs: 500, paaluMs: 200 };
 /* Reduced motion ajaa saman tahdin ilman nopeusprofiilia. */
@@ -522,7 +534,9 @@ test('moottori käskee musiikkia käynnistyksessä, tauolla, jutussa ja purussa'
    */
   assert.ok(MOOTTORI.match(/\n  kaynnista\(\) \{[\s\S]*?\n  \}/)[0].includes('this.aloitaMusiikki(false)'), 'käynnistys ei aloita musiikkia hiljaa');
   assert.match(MOOTTORI, /aloitaAjo\(\) \{[\s\S]{0,900}this\.aloitaMusiikki\(true\)/);
-  assert.match(MOOTTORI, /pura\(\) \{[\s\S]{0,200}this\.lopetaMusiikki\(\)/);
+  // Koko metodilohko eikä merkkilaskuri: purkuun tulee rivejä lisää
+  // aina kun linssiin tulee uusi kerros (avausjakso, välinäytös).
+  assert.ok(PURA.includes('this.lopetaMusiikki();'), 'purku ei lopeta musiikkia');
   // Tauko ja jatko säätävät tasoa, EIVÄT katkaise raitaa.
   assert.match(MOOTTORI, /pysayta\(\) \{[\s\S]{0,200}this\.saadaMusiikki\(\)/);
   assert.match(MOOTTORI, /jatka\(\) \{[\s\S]{0,200}this\.saadaMusiikki\(\)/);
@@ -532,7 +546,7 @@ test('moottori käskee musiikkia käynnistyksessä, tauolla, jutussa ja purussa'
   assert.match(MOOTTORI, /avaaJuttu\(t\) \{[\s\S]{0,900}if \(auki\) this\.vaimennaJutunAjaksi\(\)/);
   assert.match(MOOTTORI, /kunSuljetaan: \(\) => this\.palautaJutunJalkeen\(\)/);
   assert.match(MOOTTORI, /palautaJutunJalkeen\(\) \{[\s\S]{0,200}this\.aloitaMusiikki\(\)/);
-  assert.match(MOOTTORI, /pura\(\) \{[\s\S]{0,240}suljeTiedeliite\(this\.ui\)/);
+  assert.ok(PURA.includes('suljeTiedeliite(this.ui);'), 'purku ei sulje Tiedeliitettä');
   // Kaari ilman musiikki-kenttää ei koske soittimeen.
   assert.match(MOOTTORI, /this\.musiikkiLaji = kaari\.musiikki \?\? null;/);
   for (const metodi of ['aloitaMusiikki', 'saadaMusiikki', 'lopetaMusiikki', 'vaimennaJutunAjaksi']) {
@@ -862,7 +876,7 @@ test('linssin käynnistys sulkee kuplat ja kelluvat kortit, pysäytys purkaa jon
    */
   assert.match(MOOTTORI, /document\.body\.classList\.remove\('aikajana-paalla'\);[\s\S]{0,600}polloLinssiPaattyi\(\);/);
   // Kytkennän tuonnit ovat oikeista moduuleista (ei omaa kopiota).
-  assert.match(MOOTTORI, /import \{ polloKuplatPois, polloLinssiAlkoi, polloLinssiPaattyi \} from '\.\/pollo\.js';/);
+  assert.match(MOOTTORI, /import \{\n  polloKuplatPois, polloLinssiAlkoi, polloLinssikupla, polloLinssiPaattyi,\n\} from '\.\/pollo\.js';/);
   assert.match(MOOTTORI, /import \{ suljeFokuskohde \} from '\.\/fokuskohteet\.js';/);
   assert.match(MOOTTORI, /import \{ suljeNostonKortti \} from '\.\/fokusnosto\.js';/);
 });
@@ -975,7 +989,7 @@ test('ennakko liikuttaa vain kortteja; lamput, kello ja paneeli vaihtuvat syttym
   // Syttyminen päättää ennakon; pysäytys ja alustus peruvat sen.
   assert.match(MOOTTORI, /this\.paattaEnnakko\(\);\s*\n\s*this\.asettele\(\);\s*\n\s*\}/);
   assert.match(MOOTTORI, /pysayta\(\) \{[\s\S]{0,300}this\.peruEnnakko\(\);/);
-  assert.match(MOOTTORI, /alusta\(\) \{[\s\S]{0,200}this\.paattaEnnakko\(\);/);
+  assert.ok(metodi('alusta').includes('this.paattaEnnakko();'), 'Alusta ei päätä ennakkoa');
   // Karuselli saa olla kelloa edellä: asettelu lukee ennakon kohteen.
   assert.match(MOOTTORI, /const nyt = this\.ennakkoKohde \?\? this\.tila\.i;/);
 });
@@ -1112,18 +1126,134 @@ test('tummennus on aiempaa syvempi: kartta erottuu juuri ja juuri', () => {
 });
 
 test('avausjakso vaientaa selostajan ja omii näppäimistön', () => {
-  // Luenta ei soi ennen Käynnistä-nappia.
-  assert.match(MOOTTORI, /if \(!this\.avausKesken\) soitaLinssiluenta\(this\.ui, t\);/);
+  // Luenta ei soi ennen Käynnistä-nappia: syttyminen palaa siihen
+  // paikkaan, jossa avausjakso on yhä kesken.
+  assert.match(metodi('sytyta'), /if \(this\.avausKesken\) return;/);
   const nappain = MOOTTORI.match(/\n  nappain\(e\) \{[\s\S]*?\n  \}/)[0];
   assert.match(nappain, /if \(this\.avausKesken\) \{/);
   assert.match(nappain, /e\.key === 'Enter' \|\| e\.key === ' '/);
   assert.match(nappain, /this\.aloitaAjo\(\);/);
   assert.match(nappain, /e\.key === 'Escape'[\s\S]{0,140}this\.ui\.pysaytaAikajana\?\.\(\)/);
   // Purku vie peitteen, laatikon ja ajastimet kesken avauksenkin.
-  assert.match(MOOTTORI, /pura\(\) \{[\s\S]{0,200}this\.puraAvaus\(\);/);
+  assert.ok(PURA.includes('this.puraAvaus();'), 'purku ei pura avausjaksoa');
   assert.match(MOOTTORI, /puraAvaus\(\) \{[\s\S]*?this\.tyhjennaAvauksenAjastimet\(\);[\s\S]*?this\.avaus\?\.remove\(\);/);
   // Alusta ei näytä avausta uudelleen.
   const alusta = MOOTTORI.match(/\n  alusta\(\) \{[\s\S]*?\n  \}/)[0];
   assert.ok(!alusta.includes('avaaAvausjakso'), 'Alusta ei saa avata avausjaksoa uudestaan');
   assert.match(alusta, /this\.jatka\(\);/);
+});
+
+
+/* ==================== VÄLINÄYTÖS 1873 ==================== */
+
+/*
+ * Omistajan tilaus 4.9.2026 aamu, sanatarkasti: *"Kertoja voisi myös
+ * kertoa vähän pidemmin isoisän kohdalla mihin pulu sitten vain
+ * kommentoisi. Aika voisi pysähtyä siinä kohtaa automaattisesti …
+ * Animaatio jatkuisi vasta popup tekstin alla olevasta napista. Näin
+ * pitkään animaatioon tulee pieni hengähdys tauko."*
+ *
+ * Näissä vartioissa on kolme asiaa, jotka pettävät hiljaa: laatikko
+ * avautuu väärässä tilanteessa (kelaus), kello ei enää jatku napista,
+ * tai hengähdystauko toistuu joka kierroksella.
+ */
+
+test('1873 pysäyttää kellon ja avaa laatikon vain elävässä ajossa', () => {
+  const sytyta = metodi('sytyta');
+  // Syttyminen on ainoa ovi: pysäytetty kelaus (siirry) ei avaa mitään.
+  assert.match(sytyta, /if \(!this\.avaaValinaytos\(t\)\) soitaLinssiluenta\(this\.ui, t\);/);
+  const siirry = metodi('siirry');
+  assert.ok(!siirry.includes('alinaytos'), 'siirry ei saa koskea välinäytökseen');
+
+  const avaa = metodi('avaaValinaytos');
+  // Kello pysähtyy automaattisesti.
+  assert.match(avaa, /this\.pysayta\(\);/);
+  // Kerran per ajo, eikä avausjakson aikana.
+  assert.match(avaa, /if \(!tiedot \|\| this\.valinaytosNahty \|\| this\.avausKesken\) return false;/);
+  assert.match(avaa, /this\.valinaytosNahty = true;/);
+  // Sisältö tulee DATASTA: otsikko, kertojan teksti, kuva ja Jatka.
+  assert.match(avaa, /tiedot\.otsikko \?\? t\.otsikko/);
+  assert.match(avaa, /tiedot\.kertoja/);
+  assert.match(avaa, /this\.valinaytoksenKuva\(tiedot\.kuva\)/);
+  assert.match(avaa, /solmu\('button', 'aikajana-valinaytos-nappi', 'Jatka'\)/);
+
+  /*
+   * KEHYSSILMUKKA EI SAA JATKUA pysäytyksen yli: ilman tätä tarkistusta
+   * Jatka käynnistäisi toisen rinnakkaisen silmukan ja kello kulkisi
+   * kaksinkertaista vauhtia.
+   */
+  const kehys = metodi('kehys');
+  assert.match(kehys, /if \(!this\.kaynnissa\) return;\n\s*this\.raf = requestAnimationFrame/);
+});
+
+test('Jatka-nappi vie kuplat, laatikon ja käynnistää kellon', () => {
+  const jatka = metodi('jatkaValinaytoksesta');
+  assert.match(jatka, /if \(!this\.valinaytos\) return;/);
+  assert.match(jatka, /this\.suljeValinaytos\(\);/);
+  assert.match(jatka, /this\.jatka\(\);/);
+  const sulje = metodi('suljeValinaytos');
+  assert.match(sulje, /clearTimeout\(this\.valinaytosAjastin\);/);
+  assert.match(sulje, /pysaytaLinssiluenta\(this\.ui\);/);
+  assert.match(sulje, /polloKuplatPois\(\);/);
+  // Näppäimistö: Enter/väli on Jatka, Esc sulkee linssin.
+  const nappain = MOOTTORI.match(/\n  nappain\(e\) \{[\s\S]*?\n  \}/)[0];
+  assert.match(nappain, /if \(this\.valinaytos\) \{[\s\S]{0,300}this\.jatkaValinaytoksesta\(\);/);
+  // Alusta ja purku vievät laatikon; Alusta nollaa myös muistin.
+  const alusta = metodi('alusta');
+  assert.match(alusta, /this\.suljeValinaytos\(\{ heti: true \}\);/);
+  assert.match(alusta, /this\.valinaytosNahty = false;/);
+  assert.ok(PURA.includes('this.suljeValinaytos({ heti: true });'), 'purku ei sulje välinäytöstä');
+});
+
+test('kertoja lukee ensin, pulu kommentoi vasta sen jälkeen', () => {
+  const puhe = metodi('aloitaValinaytoksenPuhe');
+  // Oma runko: valinaytos-<vuosi>, ei pysäkin kolmen sanan riviä.
+  assert.match(puhe, /soitaLinssiluenta\(this\.ui, t, \{ runko: valinaytoksenRunko\(t\) \}\)/);
+  // Kuplat luennan päätyttyä; puuttuva tai kytkimetön luenta viiveellä.
+  assert.match(puhe, /luenta\.addEventListener\('ended', kuplat, \{ once: true \}\);/);
+  assert.match(puhe, /luenta\.addEventListener\('error', viiveella, \{ once: true \}\);/);
+  assert.match(puhe, /if \(!luenta\) \{ viiveella\(\); return; \}/);
+  // Kupla on linssin OMA poikkeus kuplaporttiin (js/pollo.js).
+  assert.match(puhe, /polloLinssikupla\(osat\);/);
+  // Sulkeutunut laatikko ei enää päästä kuplaa ruudulle.
+  assert.match(puhe, /if \(!this\.valinaytos\?\.isConnected\) return;/);
+  // Esittely luetaan laatikon auetessa, ja Käynnistä katkaisee sen.
+  assert.match(metodi('avaaAvausjakso'), /soitaLinssiluenta\(this\.ui, null, \{ runko: ESITTELYN_RUNKO \}\)/);
+  assert.match(metodi('aloitaAjo'), /pysaytaLinssiluenta\(this\.ui\);/);
+});
+
+test('välinäytöksen laatikko on avauksen tyyliperhettä ja pulun kuplien alla', () => {
+  const lohko = AIKAJANA_CSS.match(/\.aikajana-valinaytos \{[\s\S]*?\.aikajana-valinaytos-nappi:focus-visible[^\n]*\n/)[0];
+  // Sama paperi ja sama pillerinappi kuin avausjaksossa.
+  const avaus = AIKAJANA_CSS.match(/\.aikajana-avaus-laatikko \{[\s\S]*?\n\}/)[0];
+  for (const sailyy of ['border-radius: 14px', 'background: #201a14', 'border: 1px solid rgba(217, 161, 59, 0.38)']) {
+    assert.ok(avaus.includes(sailyy) && lohko.includes(sailyy), `tyyliperhe eroaa: ${sailyy}`);
+  }
+  // Tausta himmenee KEVYESTI eikä mustaan: valot näkyvät laatikon takaa.
+  const alfa = Number(lohko.match(/\.aikajana-valinaytos-peite \{[\s\S]*?rgba\(6, 4, 3, ([\d.]+)\)/)[1]);
+  assert.ok(alfa > 0.2 && alfa < 0.6, `himmennys ${alfa} ei ole kevyt`);
+  assert.ok(!lohko.includes('backdrop-filter'), 'välinäytös ei sumenna karttaa');
+  /*
+   * KERROS JÄÄ PULUN KUPLAPINON ALLE (.pollo-kuplapino-kehys z-index
+   * 40): pulu kommentoi kertojan jälkeen, ja kuplan pitää näkyä
+   * himmennyksen päällä. Linssin oman juuren (7) yli sen on silti mentävä.
+   */
+  const z = Number(lohko.match(/z-index: (\d+)/)[1]);
+  assert.ok(z > 7 && z < 40, `välinäytöksen kerros ${z} ei ole linssin ja kuplapinon välissä`);
+  // Kuva tekstin kyljessä, kapealla ruudulla sen yllä.
+  assert.match(lohko, /\.aikajana-valinaytos-sisus \{[\s\S]*?display: flex;/);
+  assert.match(lohko, /@media \(max-width: \d+px\) \{[\s\S]*?flex-direction: column-reverse;/);
+});
+
+test('välinäytöksen kuvapaikka katoaa, jos kuvaa ei vielä ole', () => {
+  /*
+   * Kuvaputki ei ole vielä toimittanut isoisän lähtökuvaa, joten
+   * laatikon on toimittava ilman sitä: 404 piilottaa kuvapaikan ja
+   * teksti jää täysleveäksi.
+   */
+  const kuva = metodi('valinaytoksenKuva');
+  assert.match(kuva, /kuva\.addEventListener\('error', \(\) => \{ kehys\.hidden = true; \}, \{ once: true \}\);/);
+  // Osoite sellaisenaan: tämä kuva ei ole linssikuvien pieni/-putkessa.
+  assert.match(kuva, /kuva\.src = kuvatieto\.osoite;/);
+  assert.ok(!kuva.includes('asetaAmpariKuva'), 'välinäytöksen kuva ei kulje linssikuvien putkea');
 });
