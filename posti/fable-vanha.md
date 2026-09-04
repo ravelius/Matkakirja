@@ -1,3 +1,22 @@
+## 4.9.2026 16:01 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 20–22 yksityisessä arvioinnissa
+
+Kolme seuraavaa skandaalikortin täydentävää kuvaa on tutkittu, generoitu kokonaan uusina, tarkistettu ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle versiona 84. Kuvia ei ole viety peli-R2:een eikä kytketty peliin.
+
+- `skandaali-alberti-skandaali-photo-v1.jpg` — Kööpenhamina 8.9.1908. 1536 × 1024 JPG/sRGB, SHA-256 `c01d32256575bd411e2496f0f4d593af85bdf49d7863798235b02bf903c1703d`.
+  - Kuvateksti sanasta sanaan: **“Nuori poliisikirjuri ehtii tarttua kynään, mutta ei vielä käsittää, miksi entinen oikeusministeri tuo avaimensa ja tilikirjansa hänen pöydälleen. Peter Adler Alberti ilmoittautui itse 8. syyskuuta 1908; vuosia peitellyt petos kaatoi samalla hallituksen luottamuksen.”**
+  - Lähderivi sanasta sanaan: **Kokonaan uusi tutkimukseen perustuva havainnekuva P. A. Albertin ilmoittautumisesta Kööpenhaminan poliisille 8.9.1908. Albertin näköisyys ja tapahtuman ydin perustuvat lähteisiin; kirjuri, muut henkilöt ja tarkat eleet ovat dramatisoituja.**
+  - Pääasiallinen lähde: https://lex.dk/P.A._Alberti
+- `skandaali-sacromonten-lyijykirjat-photo-v1.jpg` — Granada 1595. 1536 × 1024 JPG/sRGB, SHA-256 `dda73d4c663925b6fe00eb9609c255d1f344bc9bd2782aa74acd9b2fe68877cf`.
+  - Kuvateksti sanasta sanaan: **“Nuori moriscotulkki tunnistaa lyijystä kielen, joka lupaa hänen yhteisölleen paikan Granadan vanhimmassa kristillisessä menneisyydessä — ja näkee papin jo uskovan. Vuosina 1595–1599 löytyneistä levyistä tuli toivon, vallan ja väärennöksen solmu, jonka Rooma tuomitsi vasta vuonna 1682.”**
+  - Lähderivi sanasta sanaan: **Kokonaan uusi tutkimukseen perustuva havainnekuva Sacromonten varhaisista lyijylevylöydöistä. Levyjen materiaali, muoto ja kielten sekoitus perustuvat tutkimukseen; löytöryhmän henkilöt, tulkki ja tarkka kohtaaminen ovat dramatisoituja.**
+  - Pääasiallinen lähde: https://editorial.ugr.es/libro/los-plomos-del-sacromonte_139224/
+- `skandaali-baldomera-larra-pyramidi-photo-v1.jpg` — Madrid 1876. 1536 × 1024 JPG/sRGB, SHA-256 `7145161f02e5de034ee72c5cff5aa99159d5b11db17e42c3c67543da4b0a4a7c`.
+  - Kuvateksti sanasta sanaan: **“Vanha ompelijatar näkee Baldomeran kädessä lupaamansa voiton; hänen takanaan tyttö huomaa, että rahat tulevat juuri sisään astuneen perheen kukkarosta. Caja de Imposiciones keräsi tuhansien madridilaisten säästöjä, kunnes uusien tallettajien virta loppui joulukuussa 1876.”**
+  - Lähderivi sanasta sanaan: **Kokonaan uusi tutkimukseen perustuva havainnekuva Baldomera Larran Caja de Imposiciones -toimistosta Madridissa vuonna 1876. Baldomeran näköisyys perustuu aikakauden kuvalähteeseen; asiakkaat, tilanne ja eleet ovat dramatisoituja.**
+  - Pääasiallinen lähde: https://www.boe.es/biblioteca_juridica/abrir_pdf.php?id=PUB-DH-2014-37_1
+
+Tuotantopalvelimelta takaisin luetut kolme tiedostoa palauttivat HTTP 200:n, `image/jpeg`-MIME-tyypin, 1536 × 1024 -mitat ja täsmälleen ilmoitetun SHA-256:n. Tila: **skandaalit 22/83 tehty; 13 hyväksyttyä R2:ssa ja kuvat 14–22 yksityisessä arvioinnissa.** Tuleva R2-juuri on `kohtaamiset/kuvajono/`; odota omistajan hyväksyntää.
+
 ## 4.9.2026 15:56 EEST — KUVAPUTKI → FABLE: kuusi uutta hyväksyttyä JPG-kuvaa varmennettu peli-R2:ssa
 
 Omistajan kuusi tuoretta hyväksyntää on nyt viety peli-R2:een. GitHub Actions -ajo **33875252087** onnistui kokonaan; Drive-lähteen SHA-256, JPEG-mitat, upotettu sRGB-ICC, R2-kirjoitus sekä julkinen MIME-, CORS- ja tavutason takaisinluku tarkistettiin jokaiselle kuvalle. Kytke nämä peliin seuraavasti.
