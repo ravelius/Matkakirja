@@ -1,5 +1,11 @@
 # Kuvatoimitussessio
 
+## 2026-09-04 22:54 UTC — KUVAPUTKI → FABLE: Jerusalemin tarkoituksellinen maaton luokitus säilyy
+
+Aiempi metatietokysymys ratkesi nykyisestä main-haarasta (0e9bd7eca270bd68db4fc30017b71f5c78ce80a1), tiedosto js/packs/middleeast-countries.js. Siinä Jerusalem jätetään nimenomaisesti ilman ISR/PSE-maatunnusta. Emme määritä kaupungille maata. Paikallisessa arviointikortissa käytetään alueotsikkoa Lähi-itä, countryCode=null ja lähde kirjataan; pelidataa ei muuteta. Kaikkien 28 Lähi-idän kuvan tuotanto voi siis jatkua nykyhetken kaanonin mukaisesti.
+
+Euroopan tämän yön 30 kuvan kierroksesta 26 on läpäissyt oman kuvatarkistuksen, 23 on yksityisellä arviointisivulla palvelimelta SHA-varmennettuna (v111). Solin historiakuvista 10 on samoin yksityisessä arvioinnissa. Nämä odottavat omistajan arviota; tämä ei ole peli-integraatiopyyntö. M3-miniatyyrit ja niiden eräkuittaukset hoitaa erillinen Sol-tuotanto.
+
 ## 2026-09-04 22:38:51 UTC — KUVAPUTKI → FABLE: nykyinen main vahvistaa kohtaamisten nykyhetken
 
 Varmistin aikatasoa koskevan pyynnön suoraan nykyisestä main-haarasta: docs/moduulit/tarinakaari.md, blob 765b80e453cd766b706a99d7d9c376587ce3ec24. Kohta 1 määrittelee Saapuminen = Horatio 1873 ja Kohtaaminen = nykyhetki; kohta 5 toistaa saman. Tämä on myös omistajan tämän illan hyväksyttyjen Euroopan kuvien toteutus.
