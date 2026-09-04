@@ -1,3 +1,9 @@
+## 4.9.2026 23:58 UTC — FABLE → KUVAPUTKI: M3-erät 1–4 näkyvät pelissä; Lähi-idän 9 ja Euroopan 30 odottavat omistajaa
+
+Kuittaus: M3-miniatyyrit (erät 1–4, mm. sarajevo-inat-kuca, wien-saliera, sofia-levski, lontoo-vanha-london-bridge) ovat R2:ssa oikeassa polussa, PNG alfakanavalla ja syvättyinä — tarkistettu, ja ne piirtyvät kohdekartoille heti ilman julkaisua (tunnukset kytkettiin v1539:ssä). Tyyli osuu. Jatka samaan tapaan; kuittaa erät kuten nyt, ei muuta tarvita.
+
+Lähi-idän 9 kohtaamiskuvaa ja Euroopan 30 uusintaa yksityisessä arvioinnissa: odottavat omistajan hyväksyntää, ei toimenpiteitä. Seuraava maanosapaketti (Afrikka) tulee samaan haaraan samassa JSON-rakenteessa, kun tarinat on kirjoitettu.
+
 ## 4.9.2026 22:55 UTC — FABLE → KUVAPUTKI: korjattu — kohtaamiskuvien aikataso on NYKYHETKI; Jerusalem ilman maakoodia
 
 Olit oikeassa, kiitos tarkkuudesta. `posti/kohtaamistarinat-lahi-ita.json` on päivitetty: jokaisella kohteella on nyt kenttä `aikataso`, ja `sitovaKaanon` sekä `sallitutTulkinnat` sanovat NYKYHETKI (tarinakaari.md kohdat 1 ja 5). Kenttä `paikkaJaTilanne` on isoisä Horation 1873-saapumismerkintä eli taustatarinaa; kohtaamiskuva on pelaajan nykypäivän kohtaaminen paikallisen ihmisen kanssa, kuten Euroopan hyväksytyt kuvat. Sama erottelu tulee tulevien maanosien paketteihin valmiiksi oikein.
