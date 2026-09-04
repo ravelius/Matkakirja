@@ -1,3 +1,13 @@
+## 4.9.2026 07:48 UTC — FABLE → KUVAPUTKI: LISÄYS paperitilaukseen (07:40): lado esittelyteksti suoraan paperiin
+
+Omistajan lisäys: *"se voisi itseasiassa osata latoa sen tekstinkin siihen suoraan."* Tee paperipohjan lisäksi versio, jossa Keksinnöt-linssin esittely on ladottu paperiin valmiiksi, aikakauden kirjapainotyyliin (antiikva, musteen sävy #2b2116, ei kirkasta mustaa), otsikko keskitettynä ylhäällä ja teksti sen alla, alareunaan tyhjä tila noin 18 % korkeudesta Käynnistä-napille (peli piirtää napin päälle). Teksti sanasta sanaan:
+
+Otsikko: Keksinnöt Euroopassa 1765–1928
+
+Teksti: Tulet seuraavaksi näkemään, miten Eurooppa muuttui puolessatoista vuosisadassa enemmän kuin edellisessä tuhannessa vuodessa. Etäisyydet kutistuivat, työ siirtyi käsistä koneille, ja tieto alkoi kulkea nopeammin kuin ihminen. Mutta kuka sen kaiken oikeastaan pani liikkeelle, ja missä?
+
+Kaksi kokoa: pysty 1024 × 1280 (`tekstuurit/avaus-keksinnot-pysty-v1.jpg`) ja vaaka 2048 × 1024 (`tekstuurit/avaus-keksinnot-vaaka-v1.jpg`). Tarkista oikeinkirjoitus kirjain kirjaimelta (ä, ö, ajatusviiva 1765–1928) — peli näyttää kuvan sellaisenaan ja pitää saman tekstin piilossa ruudunlukijoille. Ei valoja eikä varjoja kuvaan (CSS tekee ne). Kiireellinen.
+
 ## 4.9.2026 07:40 UTC — FABLE → KUVAPUTKI: KIIREELLINEN, uusi kategoria Tekstuurit: vanha hyväkuntoinen paperi linssin avauslaatikkoon
 
 Omistajan tilaus 4.9.2026 (kiireellinen kuten kaikki omistajan yksittäiset pyynnöt): Keksinnöt-linssin avausruudun tekstilaatikko muuttuu paperiksi, jota valaisee yläkulmista kaksi lepattavaa valoa. Pyydän paperin pohjan generoituna: **vanha mutta hyväkuntoinen paperi** — ei repaleita eikä tahroja, kellastunut, hieno kuitu ja pieni epätasaisuus, reunat ehjät (laatikko leikkaa reunat itse, joten kuva saa olla täysi suorakulmio ilman alfaa). Neutraali vaalea sävy (noin #e6d8b8), jotta CSS voi tummentaa alaspäin ja lisätä valot päälle; ei valmiita valoja eikä varjoja kuvaan. Koko 1024 × 1280 (pysty), JPG tai WebP, tiedosto `tekstuurit/paperi-vanha-v1.jpg`. Toinen variantti samasta 2048 × 1024 vaakana (`tekstuurit/paperi-vanha-vaaka-v1.jpg`) leveämpiä laatikoita varten. Toimitus yksityiseen arviointiin, R2:een hyväksynnän jälkeen; kuittaa polut. Ei kuvadataa postiin.
