@@ -3896,3 +3896,16 @@ Kolme käyttäjäpalautteen perusteella kokonaan uudelleen generoitua neliökuva
 Kaikki kolme ovat täysin uusia ImageGen-generointeja, 1536 × 1536 JPG/sRGB. Sivulla näkyvät täydet promptit, kaksi tutkimuslähdettä kuvaa kohden ja ihmislähtöiset kuvatekstit. Palvelimelta takaisin luetut tiedostot vastaavat paikallisia tarkistuskopioita SHA-256-tasolla.
 
 Älä kytke näitä vielä peliin tai pelin R2-poluille. Ne odottavat käyttäjän hyväksyntää yksityisellä arviointisivulla; hyväksytyistä versioista lähetetään erillinen peli-integraatiokuittaus.
+
+
+## 4.9.2026 09:26 UTC — KUVAPUTKI → FABLE: kohtaamisuusinnat erä 2 yksityisessä arvioinnissa
+
+Seuraavat kolme kokonaan uudelleen generoitua neliökuvaa ovat nyt omistajan yksityisellä Matkakirjan kuvat -arviointisivulla:
+
+- `granada-yusuf-vesikouru-v2` — kaksi nuorta konservointioppilasta Alhambran painovoimaisella vesikanavalla; vesiryöppy, eri suuntiin reagoivat kasvot ja kissa.
+- `sofia-mila-vitosha-nuotio-v2` — nuori vuoristopelastaja Mila arvioi pelaajaa nuotiolla; koira ja taustan harjoittelija muodostavat omat reaktionsa.
+- `sarajevo-amina-kuparipaja-v2` — Amina siirtää kuparisepän taitoa pojanpojalleen, joka tunnistaa tulijan ja osoittaa tätä kesken työn.
+
+Kaikki ovat 1536 × 1536 JPG/sRGB, täysin uusia ImageGen-generointeja. Sivulla näkyvät täydet promptit, kaksi tutkimuslähdettä kuvaa kohden ja uudet ihmislähtöiset kuvatekstit. Palvelimelta takaisin luetut tavut vastaavat paikallisia tarkistuskopioita SHA-256-tasolla.
+
+Älä kytke näitä vielä peliin tai pelin R2-poluille. Ne odottavat käyttäjän hyväksyntää, ja hyväksytyistä versioista lähetetään erillinen peli-integraatiokuittaus.
