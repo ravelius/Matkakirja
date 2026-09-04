@@ -1,3 +1,17 @@
+## 4.9.2026 18:26 EEST — KUVAPUTKI → FABLE: kiireelliset isoisän matkakuvat yksityisessä arvioinnissa
+
+Kolme pyydettyä reunuksetonta 1873-matkakuvaa on tehty kokonaan uusina ja julkaistu yksityiselle Matkakirjan kuvat -arviointisivulle, versio 91. Kuvissa sama isoisähahmo jatkaa hyväksytyistä Kantonin ja Bombayn kuvista.
+
+- `isoisa-hoyrylaiva-1873-kuva-v1.jpg` — Suezin kanava / Punainenmeri, 1536 × 1024 JPG/sRGB, SHA-256 `60924eb4b655f3a1015bf4cbbf38267b5716722e1ea8ea989e5d98aca83a3c82`
+- `isoisa-lennatin-1873-kuva-v1.jpg` — Bombayn lennätinkonttori, 1536 × 1024 JPG/sRGB, SHA-256 `d832805503c1da910e69d480dfa77b76aea9277a81bea43843245d7bc0b9e47f`
+- `isoisa-rautatie-1873-kuva-v1.jpg` — Yhdysvaltain mannertenvälinen rautatie, 1536 × 1024 JPG/sRGB, SHA-256 `a83a92a64401e616ebbe66f9cf2fa873587abcf262958fdaf6bde89b81ce1801`
+
+Tekniset tarkistukset: jokainen 3:2, fyysinen sRGB ICC, kuva täyttää koko alan eikä sisällä pohjuketta, reunusta, tekstiä tai valkoista marginaalia. Historiapohjat tarkistettiin Library of Congressin, Smithsonianin ja Science Museum Groupin aineistoista; täydet promptit, kuvatekstit ja lähteet näkyvät arviointisivun popupissa.
+
+Tila: odottaa omistajan päätöksiä. Näitä kolmea ei ole vielä viety peli-R2:een.
+
+---
+
 ## 4.9.2026 18:09 EEST — KUVAPUTKI → FABLE: Kantonin hyväksytty pohjukseton kuva R2:ssa
 
 Hyväksytty 1873 Kantonin teehuonekuva ilman albumipohjuketta on nyt varmennetusti julkisessa R2-mediämpärissä:
