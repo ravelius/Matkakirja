@@ -53,6 +53,9 @@ test('pallon kaupungit tulevat laudalta ja napautus sukeltaa napautettuun kohtaa
   assert.match(pallo, /if \(sormet\.nipistys\) return;/);
   assert.match(pallo, /if \(sormet\.alhaalla > 1\) sormet\.nipistys = true;/);
   assert.match(pallo, /addEventListener\('pointercancel', irrota\)/);
+  // Sormi pysyy kartan kohdassa: kiertonopeus lasketaan korkeudesta joka muutoksessa.
+  assert.match(pallo, /ohjaimet\.rotateSpeed = korkeus \* Math\.tan\(\(kamera\.fov \/ 2\) \* \(Math\.PI \/ 180\)\) \/ Math\.PI;/);
+  assert.match(pallo, /ohjaimet\.addEventListener\('change', tahdistaVeto\)/);
 });
 
 test('kirjasto ja pinnoite tulevat pelin ämpäristä, ei reposta', () => {

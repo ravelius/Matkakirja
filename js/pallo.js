@@ -109,6 +109,7 @@ export function suljePallo(ui) {
   const kuori = ui.pallo;
   if (!kuori) return false;
   ui.pallo = null;
+  ui.pallonInstanssi = null;
   kuori.classList.remove('esilla');
   document.body.classList.remove('pallo-auki');
   ui.pallonKuuntelija?.();
@@ -190,6 +191,8 @@ export async function avaaPallo(ui) {
       sulje();
       ui.kartta?.ajaKamera?.({ x: kohta.x, y: kohta.y, leveys: PALLO_SUKELLUSLEVEYS }, { kesto: 1400 });
     });
+  // Instanssi talteen mittausta ja savukkeita varten (suljettaessa pois).
+  ui.pallonInstanssi = pallo;
   const koti = oma ?? kaupungit.find((k) => k.id === 'lontoo') ?? kaupungit[0];
   if (koti) pallo.pointOfView({ lat: koti.lat, lng: koti.lon, altitude: 1.9 }, 0);
   const ohjaimet = pallo.controls();
@@ -218,6 +221,53 @@ export async function avaaPallo(ui) {
   };
   kotelo.addEventListener('pointerup', irrota);
   kotelo.addEventListener('pointercancel', irrota);
+  /*
+   * SORMI PYSYY KARTAN KOHDASSA (omistajan havainto 4.9.2026 ilta:
+   * "sormella liikutus ei ole synkassa kartan kanssa. Eli pallo liikkuu
+   * eri tahtiin kuin sormi vierittää"). OrbitControls kiertää palloa
+   * ruudun pikseleistä vakiokertoimella, ja Globe.gl skaalaa kertoimen
+   * korkeudesta vain karkeasti (0,3 × korkeus) — pallo karkasi sormen
+   * edelle. Kierto tehdään siksi itse Google Earthin tapaan: sormen
+   * alla oleva pinnan piste otetaan talteen painalluksessa, ja joka
+   * liikkeessä kameraa siirretään täsmälleen sen verran, että sama
+   * piste on taas sormen alla (toGlobeCoords + pointOfView). Nipistys
+   * ja hiiren rulla jäävät OrbitControlsille (zoom), yhden sormen
+   * kierto sille ei. Kertoimen tarkka kaava jää varalle sitä hetkeä
+   * varten, kun sormi on pallon ulkopuolella (tahdistaVeto).
+   */
+  const kamera = pallo.camera();
+  const sade = pallo.getGlobeRadius();
+  const tahdistaVeto = () => {
+    const korkeus = Math.max(0.01, (kamera.position.length() - sade) / sade);
+    ohjaimet.rotateSpeed = korkeus * Math.tan((kamera.fov / 2) * (Math.PI / 180)) / Math.PI;
+  };
+  tahdistaVeto();
+  ohjaimet.addEventListener('change', tahdistaVeto);
+  ohjaimet.enableRotate = false;
+  let tartunta = null; // pinnan piste sormen alla painalluksessa
+  const sormenKohta = (e) => {
+    const r = kotelo.getBoundingClientRect();
+    return pallo.toGlobeCoords(e.clientX - r.left, e.clientY - r.top);
+  };
+  kotelo.addEventListener('pointerdown', (e) => {
+    tartunta = sormet.alhaalla === 1 ? sormenKohta(e) : null;
+  });
+  kotelo.addEventListener('pointermove', (e) => {
+    if (!tartunta || sormet.alhaalla !== 1) return;
+    const nyt = sormenKohta(e);
+    if (!nyt) return;
+    const pov = pallo.pointOfView();
+    let dLng = nyt.lng - tartunta.lng;
+    if (dLng > 180) dLng -= 360; else if (dLng < -180) dLng += 360;
+    pallo.pointOfView({
+      lat: Math.max(-89.5, Math.min(89.5, pov.lat - (nyt.lat - tartunta.lat))),
+      lng: pov.lng - dLng,
+      altitude: pov.altitude,
+    }, 0);
+  });
+  const paasta = () => { tartunta = null; };
+  kotelo.addEventListener('pointerup', paasta);
+  kotelo.addEventListener('pointercancel', paasta);
   const mitoita = () => pallo.width(kotelo.clientWidth).height(kotelo.clientHeight);
   window.addEventListener('resize', mitoita);
   const vanha = ui.pallonKuuntelija;
