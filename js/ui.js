@@ -16378,6 +16378,23 @@ export class UI {
     return lahti;
   }
 
+  /**
+   * KARTTAPALLO (omistaja 4.9.2026, Globe.gl): maailmanvalikko pallona
+   * kartan päällä; kaupungin napautus sukeltaa laudalle. Moduuli ja
+   * kirjasto ladataan vasta avattaessa (js/pallo.js).
+   */
+  async avaaPallo() {
+    if (this.dead) return false;
+    let pallo = null;
+    try {
+      pallo = await import('./pallo.js');
+    } catch (syy) {
+      console.warn('Karttapalloa ei voitu ladata.', syy);
+      return false;
+    }
+    return pallo.avaaPallo(this);
+  }
+
   /** Purkaa päällä olevan aikajanan; ilman aikajanaa ei tee mitään. */
   pysaytaAikajana() {
     if (!this.aikajana) return false;

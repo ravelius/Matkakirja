@@ -270,6 +270,24 @@ export function laskeMittajana(ui) {
  * kissa ei mahdu sille laudalle lainkaan ja merkki jätetään siellä
  * piirtämättä.
  */
+/**
+ * Laudan paikasta asteiksi — projisoiLaudalle-funktion käänteinen.
+ * Karttapallo (js/pallo.js) asettaa kaupungit ja reitit pallolle tästä:
+ * laudan data on x/y-yksiköinä, pallo tarvitsee lon/lat. Sama taulu ja
+ * samat kaavat kuin edestakaisin, joten piste palaa täsmälleen.
+ */
+export function laudaltaAsteiksi(lauta, x, y) {
+  const projektio = FOKUS_LAUTAPROJEKTIOT[lauta];
+  const kaavat = projektionKaavat(projektio);
+  if (!kaavat || !Number.isFinite(x) || !Number.isFinite(y)) return null;
+  let lon = kaavat.lon(x);
+  const lat = kaavat.lat(y);
+  if (!Number.isFinite(lon) || !Number.isFinite(lat)) return null;
+  while (lon > 180) lon -= 360;
+  while (lon < -180) lon += 360;
+  return { lon, lat };
+}
+
 export function projisoiLaudalle(lauta, lon, lat) {
   const projektio = FOKUS_LAUTAPROJEKTIOT[lauta];
   const kaavat = projektionKaavat(projektio);
