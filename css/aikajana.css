@@ -177,7 +177,7 @@
    * SVG-kuitu varana, jos bittikartta ei lataudu.
    */
   background-image:
-    linear-gradient(180deg, rgba(255, 246, 222, 0.42) 0%, rgba(214, 190, 140, 0) 42%, rgba(58, 38, 14, 0.55) 100%),
+    linear-gradient(180deg, rgba(255, 246, 222, 0.14) 0%, rgba(214, 190, 140, 0) 42%, rgba(58, 38, 14, 0.55) 100%),
     url("https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/tekstuurit/paperi-vanha-vaaka-v1.jpg"),
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='k'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.36 0 0 0 0 0.26 0 0 0 0 0.12 0 0 0 0.22 0'/></filter><rect width='240' height='240' filter='url(%23k)'/></svg>");
   background-size: 100% 100%, cover, 240px 240px;
@@ -192,46 +192,75 @@
   transition: opacity 420ms ease, transform 420ms cubic-bezier(0.45, 0.03, 0.22, 1);
 }
 .aikajana-avaus-laatikko > * { position: relative; z-index: 2; }
-/* Valot yläkulmissa: kaksi lämmintä kajoa, joiden lepatus on kahden eri jakson summa. */
-.aikajana-avaus-laatikko::before,
+/*
+ * TUMMUMA JA PAPERIN VALO. Paperi itsessään on hämärä: sen ainoa valo
+ * tulee lyhdyistä (alla), joten yläreunan yleishohde on vaimea ja
+ * alareuna painuu varjoon (::after, paikallaan).
+ */
 .aikajana-avaus-laatikko::after {
   content: '';
   position: absolute;
   inset: 0;
+  z-index: 0;
   pointer-events: none;
   border-radius: inherit;
-}
-.aikajana-avaus-laatikko::before {
-  z-index: 1;
   background:
-    radial-gradient(ellipse 46% 40% at 4% 0%, rgba(255, 214, 140, 0.62), rgba(255, 190, 100, 0.18) 45%, rgba(255, 180, 90, 0) 70%),
-    radial-gradient(ellipse 46% 40% at 96% 0%, rgba(255, 214, 140, 0.62), rgba(255, 190, 100, 0.18) 45%, rgba(255, 180, 90, 0) 70%);
-  mix-blend-mode: soft-light;
-  animation: aikajana-lepatus-a 3.7s ease-in-out infinite;
-  transform-origin: 50% 0%;
+    radial-gradient(ellipse 70% 60% at 50% 30%, rgba(30, 18, 6, 0) 40%, rgba(30, 18, 6, 0.24) 100%),
+    linear-gradient(180deg, rgba(20, 12, 4, 0.22) 0%, rgba(20, 12, 4, 0.3) 45%, rgba(20, 12, 4, 0.56) 100%);
 }
-.aikajana-avaus-laatikko::after {
+/*
+ * LYHDYT (omistaja 4.9.2026: *"valot loimuamaan kuin valo tulisi
+ * padasta ... illuusion valolla että yläreunan kummassakin nurkassa
+ * olisi lyhty joiden valot eläisivät (alueelliset valovaihtelut liekin
+ * lailla) paperin päällä"*). Kummassakin yläkulmassa on kaksi kerrosta:
+ * `.kajo` on laaja pehmeä valokeila paperilla ja `.ydin` pieni kuuma
+ * keskus nurkassa. Kirkkaus, siirtymä ja koko tulevat js/lyhty.js:n
+ * liekkimallista muuttujina kehys kerrallaan — CSS ei animoi itse,
+ * jotta loimu ei toistu jaksollisesti. Valo istuu paperin päällä
+ * sekoitustilalla, joten kuitu ja kuvaputken paperi näkyvät sen läpi.
+ */
+.aikajana-lyhty {
+  --lyhty-kajo: 0.85;
+  --lyhty-ydin: 0.9;
+  --lyhty-dx: 0px;
+  --lyhty-dy: 0px;
+  --lyhty-koko: 1;
+  position: absolute;
+  top: -8%;
+  width: 82%;
+  height: 104%;
   z-index: 1;
-  background:
-    radial-gradient(ellipse 34% 30% at 6% 2%, rgba(255, 226, 170, 0.5), rgba(255, 200, 120, 0) 70%),
-    radial-gradient(ellipse 34% 30% at 94% 2%, rgba(255, 226, 170, 0.5), rgba(255, 200, 120, 0) 70%),
-    linear-gradient(180deg, rgba(20, 12, 4, 0) 40%, rgba(20, 12, 4, 0.42) 100%);
-  animation: aikajana-lepatus-b 5.3s ease-in-out infinite;
-  transform-origin: 50% 0%;
+  pointer-events: none;
+  transform: translate(var(--lyhty-dx), var(--lyhty-dy)) scale(var(--lyhty-koko));
+  /* Tummuma (::after, z-index 0) jää valon alle; sisältö (z-index 2) sen päälle. */
+  will-change: transform;
 }
-@keyframes aikajana-lepatus-a {
-  0% { opacity: 0.86; transform: scale(1); }
-  23% { opacity: 1; transform: scale(1.025); }
-  41% { opacity: 0.9; transform: scale(0.995); }
-  67% { opacity: 0.98; transform: scale(1.015); }
-  100% { opacity: 0.86; transform: scale(1); }
+.aikajana-lyhty.vasen { left: -14%; transform-origin: 17% 7%; }
+.aikajana-lyhty.oikea { right: -14%; transform-origin: 83% 7%; }
+.aikajana-lyhty > span {
+  position: absolute;
+  inset: 0;
+  will-change: opacity;
 }
-@keyframes aikajana-lepatus-b {
-  0% { opacity: 0.92; }
-  31% { opacity: 1; }
-  58% { opacity: 0.88; }
-  79% { opacity: 0.97; }
-  100% { opacity: 0.92; }
+.aikajana-lyhty > .kajo {
+  opacity: var(--lyhty-kajo);
+  mix-blend-mode: screen;
+}
+.aikajana-lyhty.vasen > .kajo {
+  background: radial-gradient(ellipse 78% 72% at 17% 7%, rgba(255, 210, 132, 0.72), rgba(255, 186, 100, 0.42) 32%, rgba(255, 166, 74, 0.16) 60%, rgba(255, 150, 60, 0) 82%);
+}
+.aikajana-lyhty.oikea > .kajo {
+  background: radial-gradient(ellipse 78% 72% at 83% 7%, rgba(255, 210, 132, 0.72), rgba(255, 186, 100, 0.42) 32%, rgba(255, 166, 74, 0.16) 60%, rgba(255, 150, 60, 0) 82%);
+}
+.aikajana-lyhty > .ydin {
+  opacity: var(--lyhty-ydin);
+  mix-blend-mode: screen;
+}
+.aikajana-lyhty.vasen > .ydin {
+  background: radial-gradient(ellipse 26% 22% at 17% 7%, rgba(255, 228, 164, 0.85), rgba(255, 182, 92, 0.36) 45%, rgba(255, 150, 60, 0) 75%);
+}
+.aikajana-lyhty.oikea > .ydin {
+  background: radial-gradient(ellipse 26% 22% at 83% 7%, rgba(255, 228, 164, 0.85), rgba(255, 182, 92, 0.36) 45%, rgba(255, 150, 60, 0) 75%);
 }
 .aikajana-avaus.laatikko-nakyy .aikajana-avaus-laatikko { opacity: 1; transform: none; }
 /*
@@ -1120,7 +1149,8 @@
   .aikajana, .aikajana-avaus-peite, .aikajana-avaus-sumennin, .aikajana-avaus-laatikko,
   .aikajana-valinaytos-peite, .aikajana-valinaytos-laatikko { transition: none; }
   .aikajana-avaus-laatikko, .aikajana-valinaytos-laatikko { transform: none; }
-  .aikajana-avaus-laatikko::before, .aikajana-avaus-laatikko::after { animation: none; }
+  /* Lyhdyt palavat tasaisesti: js/lyhty.js ei käynnistä silmukkaa. */
+  .aikajana-lyhty { transform: none; }
   /*
    * Ei sykettä eikä vilkkua: nykyinen keksintö erottuu pelkällä
    * kirkkaudella, jälki jää himmeäksi kuten muutenkin.

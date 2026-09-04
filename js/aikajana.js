@@ -138,6 +138,7 @@ import {
 import { pysaytaLukija } from './lukija.js';
 import { esilataaKuvat } from './ui-apurit.js';
 import { avaaTiedeliite, suljeTiedeliite } from './tiedeliite.js';
+import { sytytaLyhdyt } from './lyhty.js';
 import {
   aloitaSiirtymamusiikki, himmennaSiirtymamusiikki, lopetaSiirtymamusiikki,
   LINSSIN_HILJENNYS,
@@ -1081,6 +1082,8 @@ class Aikajana {
     this.avausNappi = null;
     this.avausKesken = false;
     this.avausAjastimet = [];
+    /** Lyhtyjen sammutin (js/lyhty.js), kun avauslaatikko on ruudulla. */
+    this.sammutaLyhdyt = null;
     /*
      * VÄLINÄYTÖKSEN TILA. `valinaytos` on laatikon juuri sen ollessa
      * ruudulla, `valinaytosNahty` estää saman hengähdystauon toistumisen
@@ -1496,6 +1499,13 @@ class Aikajana {
     this.avausPeite = solmu('div', 'aikajana-avaus-peite');
     this.avausPeite.setAttribute('aria-hidden', 'true');
     const laatikko = solmu('div', 'aikajana-avaus-laatikko');
+    /*
+     * LYHDYT YLÄKULMISSA (omistaja 4.9.2026: *"valot loimuamaan kuin
+     * valo tulisi padasta ... alueelliset valovaihtelut liekin lailla
+     * paperin päällä"*): js/lyhty.js ohjaa kahta valoa kehys kerrallaan;
+     * sammutin kutsutaan, kun laatikko väistyy (aloitaAjo, puraAvaus).
+     */
+    this.sammutaLyhdyt = sytytaLyhdyt(laatikko, { reducedMotion: this.reducedMotion });
     laatikko.appendChild(solmu('h2', 'aikajana-avaus-otsikko', otsikko));
     if (esittely.teksti) laatikko.appendChild(solmu('p', 'aikajana-avaus-teksti', esittely.teksti));
     this.avausNappi = solmu('button', 'aikajana-avaus-nappi', 'Käynnistä');
@@ -1576,6 +1586,7 @@ class Aikajana {
     this.avausPeite = null;
     this.avausSumennin = null;
     if (avaus) {
+      // Lyhdyt palavat vielä häipymisen ajan; silmukka pysähtyy, kun laatikko irtoaa.
       avaus.classList.remove('laatikko-nakyy');
       avaus.classList.add('pois');
       // Väistyvä peite ei enää nappaa napautuksia: kartta on pelaajan.
@@ -1591,6 +1602,8 @@ class Aikajana {
   puraAvaus() {
     this.avausKesken = false;
     this.tyhjennaAvauksenAjastimet();
+    this.sammutaLyhdyt?.();
+    this.sammutaLyhdyt = null;
     this.avaus?.remove();
     this.avaus = null;
     this.avausPeite = null;

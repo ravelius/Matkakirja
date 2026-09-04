@@ -1240,9 +1240,13 @@ test('välinäytöksen laatikko on avauksen tyyliperhettä ja pulun kuplien alla
   assert.match(avaus, /background-color: #d9c69c;/);
   assert.match(avaus, /feTurbulence/, 'paperin kuitu tulee SVG-kohinasta kuvana');
   assert.match(avaus, /rgba\(58, 38, 14, 0\.55\) 100%/, 'paperi tummuu alaspäin');
-  assert.match(AIKAJANA_CSS, /\.aikajana-avaus-laatikko::before \{[\s\S]*?animation: aikajana-lepatus-a 3\.7s ease-in-out infinite;/);
-  assert.match(AIKAJANA_CSS, /\.aikajana-avaus-laatikko::after \{[\s\S]*?animation: aikajana-lepatus-b 5\.3s ease-in-out infinite;/);
-  assert.match(AIKAJANA_CSS, /\.aikajana-avaus-laatikko::before, \.aikajana-avaus-laatikko::after \{ animation: none; \}/);
+  // Lyhdyt (omistaja 4.9.2026): kaksi kerrosta per nurkka, skriptin ohjaamat muuttujat, ei CSS-keyframeja.
+  assert.doesNotMatch(AIKAJANA_CSS, /aikajana-lepatus/, 'keyframe-lepatus korvattiin liekkimallilla (js/lyhty.js)');
+  assert.match(AIKAJANA_CSS, /\.aikajana-lyhty > \.kajo \{\n  opacity: var\(--lyhty-kajo\);\n  mix-blend-mode: screen;/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-lyhty > \.ydin \{\n  opacity: var\(--lyhty-ydin\);\n  mix-blend-mode: screen;/);
+  assert.match(AIKAJANA_CSS, /transform: translate\(var\(--lyhty-dx\), var\(--lyhty-dy\)\) scale\(var\(--lyhty-koko\)\);/);
+  assert.match(metodi('avaaAvausjakso'), /this\.sammutaLyhdyt = sytytaLyhdyt\(laatikko, \{ reducedMotion: this\.reducedMotion \}\);/);
+  assert.match(metodi('puraAvaus'), /this\.sammutaLyhdyt\?\.\(\);/);
   // Havainnekuva valokeilassa: pelkkä kuva -paneeli ilman laatikkoa, reunat läpinäkyviksi maskilla (ei suodatin).
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child,[\s\S]*?mask-image: radial-gradient\(ellipse 52% 52% at 50% 50%, #000 46%, rgba\(0, 0, 0, 0\.72\) 64%, rgba\(0, 0, 0, 0\.26\) 84%, transparent 100%\);/);
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio:has\(> \.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:only-child\) \{\n  border-color: transparent;\n  background: transparent;\n  box-shadow: none;\n\}/);
