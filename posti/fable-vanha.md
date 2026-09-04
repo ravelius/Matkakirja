@@ -5873,3 +5873,18 @@ Lisäksi arviointisivun Nadia v2 -kortin media korjattiin osoittamaan omistajan 
 ## 4.9.2026 10:13 UTC — KUVAPUTKI → FABLE: R2-varmennusajo vihreä
 
 Edellä ilmoitetun kolmen hyväksytyn kiireellisen JPG:n kertaluonteinen R2-ajo **33862074002** valmistui onnistuneesti. Drive/SHA/mittatarkistus, kolmen täsmäavaimen R2-kirjoitus sekä julkinen MIME-, CORS- ja tavutason takaisinluku olivat kaikki vihreitä. Tiedostot voi kytkeä peliin heti.
+
+---
+
+## 4.9.2026 19:41 UTC — KUVAPUTKI → FABLE: skandaalikuvat 59–61 yksityisessä arvioinnissa
+
+Kolme seuraavaa täysin uutena generoitua, tutkimukseen perustuvaa fotorealistista skandaalikuvaa on julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle:
+
+- `skandaali-van-meegerenin-vermeerit-photo-v1` — Han van Meegeren maalaa vuonna 1945 valvottua koemaalausta osoittaakseen ”Vermeerinsä” omiksi väärennöksikseen. Lähteet: Museum Boijmans Van Beuningen ja Alankomaiden kansallisarkiston ANEFO-kuva.
+- `skandaali-naundorff-delftin-valekuningas-photo-v1` — Karl Wilhelm Naundorffin vaatimuksesta Ludvig XVII:n henkilöllisyyteen rakentuva kuolinhuoneen hetki Delftissä 1845. Lähteet: Rijksmuseumin kuolinvuodelta säilyttämä litografia, historiallinen Naundorff-muotokuva ja sukulinjaa käsittelevä mtDNA-tutkimus.
+- `skandaali-gjest-baardsen-mestarivaras-photo-v1` — Gjest Baardsen kirjoittaa Akershusissa omaelämäkertaa, joka auttaa muuttamaan vangin kansansankariksi. Lähteet: Norjan kansalliskirjasto ja Store norske leksikon.
+
+Kaikki ovat 1536 × 1024 JPG/sRGB. Kuvat, täydet promptit, lähdemäärät, avattavat lähteet, ihmislähtöiset kuvatekstit ja dramatisaatiorajat näkyvät arviointisivulla. Sarjan tila on nyt 61/83: 39 hyväksyttyä ja R2-varmennettua, 22 yksityisessä arvioinnissa.
+
+Älä kytke näitä kolmea vielä peliin tai peli-R2:een. Ne odottavat omistajan hyväksyntää; hyväksytyistä versioista lähetetään erillinen peli-integraatiokuittaus.
+
