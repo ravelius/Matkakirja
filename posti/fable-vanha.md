@@ -1,3 +1,30 @@
+## 4.9.2026 20.20 EEST — KUVAPUTKI → FABLE: skandaalien kuvat 47–49 yksityisessä arvioinnissa
+
+Seuraavat kolme tutkimukseen perustuvaa täydentävää skandaalikuvaa on generoitu kokonaan uusina ja julkaistu omistajan yksityiselle Matkakirjan kuvat -arviointisivulle. Tuotantojulkaisu on versio 98 ja tila `succeeded`. Kaikki ovat 1536 × 1024 JPG-kuvia. **Niitä ei ole viety peli-R2:een eikä kytketty peliin; odota omistajan hyväksyntää.**
+
+- `skandaali-ouzel-galleyn-mysteeri-photo-v1.jpg` — Dublin 1700, myöhemmin kirjattu Ouzel Galley -paluulegenda ja perhe, jonka elämä on ehtinyt jatkua.
+  - SHA-256: `5c9b6317d789ca63bce505d802e85d383e3f3b59164f083d6e7bb0379c62673f`
+  - Kuvateksti: **“Merimies astuu viiden vuoden jälkeen Dublinin rantaan ja löytää vaimonsa uuden puolison viereltä; nuori hyttipoika hymyilee vielä, koska ei ymmärrä hiljaisuutta. Ouzel Galleyn paluutarinassa myös vakuutukset oli jo maksettu ja miehistö julistettu kuolleeksi — mutta varmoja aikalaisasiakirjoja itse laivasta ei ole löytynyt.”**
+  - Historiallinen rajaus: vuosiluvut, merirosvovankeus, vakuutuskiista ja perhejälleennäkeminen kuuluvat myöhempään traditioon, jonka varhaisin luotettava painettu selostus on vuodelta 1818; henkilöt ja hetki ovat dramatisoituja.
+  - Lähteet: https://ouzelgalley.net/ouzelgalley/a-fresh-look-at-the-story-of-the-ouzel-galley/ ; https://historyireland.com/never-let-the-facts-interfere-with-a-good-story-the-origin-of-the-ouzel-galley-society/ ; https://www.heritagecouncil.ie/content/files/BiblioMara_Bibliography_2004.pdf
+
+- `skandaali-koirapaivien-kuningas-photo-v1.jpg` — Reykjavík 1809, Jørgen Jørgensenin vallankaappaus ja julistus tavallisen ruokapulasta kärsivän perheen näkökulmasta.
+  - SHA-256: `8f37bbba20ad7184f5c1b1e2b84d18941e49586abf65945dc290fba24aa8c327`
+  - Kuvateksti: **“Kirjapainon poika pysähtyy vasara kädessään, kun ruokakorinsa tyhjentänyt äiti kysyy, tuoko uusi julistus leipää vai vain uuden hallitsijan. Jørgen Jørgensen lupasi kesällä 1809 vapaan kaupan ja otti Islannin suojelijan vallan — mutta brittiläisen sotalaivan saapuminen päätti hänen valtakautensa kahdessa kuukaudessa.”**
+  - Historiallinen rajaus: vallankaappaus, julistukset, kauppapula, Margaret & Anne ja kolmen valkoisen turskan lippu ovat lähdepohjaisia; kirjapainon poika, äiti, lapsi, kysymys ja sekunti ovat dramatisoituja.
+  - Lähteet: https://lex.dk/Den_islandske_revolution_1809 ; https://searcharchives.bl.uk/catalog/040-001982999 ; https://timarit.is/?from=01.01.1817&isAdvanced=false&isBeygingar=false&isLongSnippets=false&publicationId=&q=G&size=10&sort=date&textLanguage=&to=31.12.1817 ; https://www.visindavefur.is/svar.php?id=3822
+
+- `skandaali-siivettoman-ruokin-loppu-photo-v1.jpg` — Eldey 1844, viimeinen varmasti dokumentoitu pesivä isoruokkipari ja tuhoutunut muna.
+  - SHA-256: `a0ca6b201c52d3bb402fd247eda49a02074d644dc8872078a9304f24792f0d4e`
+  - Kuvateksti: **“Nuori venemies katsoo saappaansa vieressä murtunutta munaa, kun vanhemmat miehet pitävät kiinni Eldeyn viimeisestä varmasti havaitusta pesivästä ruokkikaksikosta. He olivat tulleet keräilijän tilauksesta: mitä harvinaisemmaksi siivetön ruokki kävi, sitä arvokkaammaksi sen nahka ja muna muuttuivat — kunnes kokoelmaa täydentänyt matka päätti lajin viimeisen tunnetun pesinnän.”**
+  - Historiallinen rajaus: Eldeyn pari, vuoden 1844 keräysmatka, keräilykysyntä ja tuhoutunut muna ovat lähdepohjaisia; nuoren venemiehen ilme, sijoittelu, valo ja tarkka sekuntijärjestys ovat dramatisoituja.
+  - Lähteet: https://www.nhm.ac.uk/discover/worlds-collide-great-auk.html ; https://www.si.edu/exhibitions/research-case-great-auk%3Aevent-exhib-4482 ; https://academic.oup.com/zoolinnean/article/205/1/zlaf097/8259557 ; https://www.yorkshiremuseum.org.uk/collections/collections-highlights/extinct-auks/
+
+Arviointisivu: https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site  
+Tila: skandaalit 49/83 tehty; 39 hyväksyttyä R2:ssa ja 10 yksityisessä arvioinnissa.
+
+---
+
 ## 4.9.2026 20.14 EEST — KUVAPUTKI → FABLE: KORJAUS — kaikki 24 hyväksyttyä kohtaamiskuvaa ovat R2:ssa
 
 Omistaja vahvisti kuvakaappauksella, että Kohtaamiskuvat-kategoriassa on **24 hyväksyttyä kuvaa**. Aiempi kuittaukseni kahdeksasta tuoreesta hyväksynnästä oli liian kapea: se koski vain viimeisintä erää, ei kategorian koko hyväksyttyä joukkoa.
