@@ -1455,8 +1455,18 @@ export const LINSSI = {
      */
     esittely: {
       otsikko: 'Keksinnöt Euroopassa 1765–1928',
-      teksti: 'Kello lähtee vuodesta 1765. Jokainen valo kartalla on paikka, jossa '
-        + 'maailma muuttui. Isoisä matkusti vuonna 1873, keskellä tätä kaarta.',
+      /*
+       * Hiottu omistajan kanssa 4.9.2026 (viides versio): alkaa "Tulet
+       * seuraavaksi näkemään", historiallinen kaari ilman yksittäisiä
+       * keksintöjä tai nimiä, leijumaan jäävä kysymys, ei isoisälausetta.
+       * Luetaan myös kertojan äänellä (linssiluennat), kun teksti on
+       * hyväksytty.
+       */
+      teksti: 'Tulet seuraavaksi näkemään, miten Eurooppa muuttui puolessatoista '
+        + 'vuosisadassa enemmän kuin edellisessä tuhannessa vuodessa. Etäisyydet '
+        + 'kutistuivat, työ siirtyi käsistä koneille, ja tieto alkoi kulkea '
+        + 'nopeammin kuin ihminen. Mutta kuka sen kaiken oikeastaan pani '
+        + 'liikkeelle, ja missä?',
     },
     alku: 1765,
     loppu: 1928,
