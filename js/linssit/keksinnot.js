@@ -1446,6 +1446,18 @@ export const LINSSI = {
      * ajan. Ilman tätä kenttää ajo olisi hiljainen.
      */
     musiikki: 'keksinnot',
+    /*
+     * AVAUSJAKSON ESITTELY (omistajan tilaus 4.9.2026 aamu: *"keskelle
+     * voisi tulla otsikko ja pieni selite siitä, mitä seuraavaksi
+     * pelaajalle havainnollistetaan"*). Musta ruutu, tämä laatikko ja
+     * Käynnistä-nappi; moottori (js/aikajana.js avaaAvausjakso) lukee
+     * kentän eikä kovakoodaa sanoja — teksti on kaaren omaa sisältöä.
+     */
+    esittely: {
+      otsikko: 'Keksinnöt Euroopassa 1765–1928',
+      teksti: 'Kello lähtee vuodesta 1765. Jokainen valo kartalla on paikka, jossa '
+        + 'maailma muuttui. Isoisä matkusti vuonna 1873, keskellä tätä kaarta.',
+    },
     alku: 1765,
     loppu: 1928,
     alue: EUROOPPA,
