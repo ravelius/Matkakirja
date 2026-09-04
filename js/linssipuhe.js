@@ -3,7 +3,9 @@
  *
  * Omistajan tilaus 4.9.2026, sanatarkasti: *"Generoi selostajan
  * äänellä jokaiseen kohtaan vuosiluku, keksijän nimi ja keksintö, eli
- * se tulisi aina Keksinnön vaihtoessa lukijan äänellä."*
+ * se tulisi aina Keksinnön vaihtoessa lukijan äänellä."* Saman päivän
+ * aamuna kertoja sai kaksi pidempää vuoroa: avausjakson esittelyn ja
+ * merkkipaalun välinäytöksen (ks. KAAREN OMAT PUHEET alempana).
  *
  * Luenta on VALMIS ÄÄNITE, ei selaimen puhesyntetisaattori: sama
  * "Viisas Kertoja" kuin matkakirjaluennoissa (tools/
@@ -17,8 +19,14 @@
  * Runko on MUOTOKUVAN RUNKO (`kuva.osoite`-tiedostonimi ilman
  * päätettä), koska se on jo valmiiksi yksikäsitteinen — vuosi ei ole:
  * kaaressa on kolme vuoden 1895 pysäkkiä (Marconi, Röntgen,
- * Lumière-veljekset). Merkkipaalulla (1873) ei ole muotokuvaa, joten
- * sen runko ladotaan vuodesta ja otsikosta.
+ * Lumière-veljekset). MERKKIPAALU (1873) on poikkeus: sen runko
+ * ladotaan aina vuodesta ja otsikosta, myös silloin kun paalu saa oman
+ * muotokuvan — muuten kuvan saapuminen nimeäisi jo generoidun luennan
+ * uudelleen ja peli olisi siinä kohtaa hiljainen.
+ *
+ * KAAREN OMILLA PUHEILLA on omat runkonsa (`esittely`,
+ * `valinaytos-<vuosi>`, ks. kaarenPuheet alempana): ne eivät ole
+ * pysäkkejä vaan avausjakson ja välinäytöksen pidempiä tekstejä.
  *
  * Sama funktio ajetaan pelissä ja työkalussa. Jos nimi ja kenttä
  * eriytyisivät, ajo maksaisi tiedostosta, jota peli ei koskaan hae —
@@ -84,17 +92,83 @@ function tunnukseksi(teksti) {
  * saa yksikäsitteistä nimeä.
  */
 export function luennanRunko(t) {
-  const osoite = t?.kuva?.osoite;
-  if (typeof osoite === 'string' && osoite) {
-    const nimi = osoite.split(/[?#]/)[0].split('/').pop() ?? '';
-    const runko = nimi.replace(/\.[a-z0-9]+$/i, '');
-    if (runko) return runko;
+  /*
+   * MERKKIPAALU EI OTA RUNKOAAN KUVASTA, vaikka sillä olisi sellainen.
+   * Paalun kortille on tulossa isoisän oma studiomuotokuva
+   * (js/linssit/keksinnot.js), eikä se saa nimetä jo generoitua
+   * luentaa uudelleen: paalun runko on aina vuosi ja otsikko.
+   */
+  if (!t?.paalu) {
+    const osoite = t?.kuva?.osoite;
+    if (typeof osoite === 'string' && osoite) {
+      const nimi = osoite.split(/[?#]/)[0].split('/').pop() ?? '';
+      const runko = nimi.replace(/\.[a-z0-9]+$/i, '');
+      if (runko) return runko;
+    }
   }
   // Kuvaton pysäkki (merkkipaalu): vuosi ja otsikko.
   if (!Number.isFinite(t?.vuosi) || !t?.otsikko) return null;
   const hanta = tunnukseksi(t.otsikko);
   return hanta ? `${t.vuosi}-${hanta}` : null;
 }
+
+/*
+ * ── KAAREN OMAT PUHEET ─────────────────────────────────────────────
+ *
+ * Pysäkkiluentojen lisäksi kaarella on kaksi omaa puhetta, ja
+ * kummankin teksti on DATASSA eikä koodissa:
+ *
+ *   ESITTELY     avausjakson laatikon selite (linssin
+ *                `aikajana.esittely.teksti`), luetaan kun musta ruutu
+ *                on noussut ja laatikko on esillä — Käynnistä-nappi
+ *                katkaisee sen (js/aikajana.js avaaAvausjakso).
+ *   VÄLINÄYTÖS   merkkipaalun pidempi kertojanteksti
+ *                (`tapahtuma.valinaytos.kertoja`), luetaan kun kello
+ *                pysähtyy paaluun ja laatikko nousee kartan keskelle.
+ *
+ * SAMA RUNKOSÄÄNTÖ KUIN PYSÄKEILLÄ: nimi johdetaan datasta, jotta peli
+ * ja generointityökalu (tools/generoi-linssiluennat.mjs) osuvat samaan
+ * tiedostoon ilman erillistä nimilistaa.
+ */
+
+/** Avausjakson esittelyn runko: kaarella on niitä yksi. */
+export const ESITTELYN_RUNKO = 'esittely';
+
+/** Välinäytöksen runko, esim. `valinaytos-1873`. Null ilman välinäytöstä. */
+export function valinaytoksenRunko(t) {
+  if (!t?.valinaytos?.kertoja || !Number.isFinite(t?.vuosi)) return null;
+  return `valinaytos-${t.vuosi}`;
+}
+
+/**
+ * KAAREN OMAT PUHEET yhtenä listana: sama funktio pelissä ja
+ * työkalussa. `avain` on komentorivin valitsin (--pysakit esittely).
+ *
+ * @param {object} kaari linssin `aikajana`-lohko
+ * @returns {Array<{avain:string, runko:string, nimi:string, teksti:string}>}
+ */
+export function kaarenPuheet(kaari) {
+  const puheet = [];
+  const esittely = String(kaari?.esittely?.teksti ?? '').trim();
+  if (esittely) {
+    puheet.push({
+      avain: 'esittely', runko: ESITTELYN_RUNKO, nimi: `${ESITTELYN_RUNKO}.mp3`, teksti: esittely,
+    });
+  }
+  for (const t of kaari?.tapahtumat ?? []) {
+    const runko = valinaytoksenRunko(t);
+    const teksti = String(t?.valinaytos?.kertoja ?? '').trim();
+    if (runko && teksti) {
+      puheet.push({
+        avain: 'valinaytos', runko, nimi: `${runko}.mp3`, teksti,
+      });
+    }
+  }
+  return puheet;
+}
+
+/** Kaaren puheiden valitsimet komentorivillä (--pysakit esittely). */
+export const KAAREN_AVAIMET = ['esittely', 'valinaytos'];
 
 /** Pysäkin luennan tiedostonimi ämpärissä. */
 export function luennanTiedosto(t) {
@@ -179,18 +253,22 @@ export function pysaytaLinssiluenta(ui) {
  * Puuttuva tiedosto on hiljainen: luenta voi puuttua kokonaiselta
  * kaarelta, eikä se ole virhe vaan tila.
  *
+ * `runko` ohittaa pysäkin oman nimen: kaaren omat puheet (esittely,
+ * välinäytös) soitetaan samalla soittimella samasta kansiosta, ja vain
+ * tiedostonimi tulee muualta (ks. kaarenPuheet).
+ *
  * @returns {HTMLAudioElement|null} soittimen kahva, tai null jos
  *   luentaa ei aloitettu
  */
-export function soitaLinssiluenta(ui, t, { viive = LUENNAN_VIIVE_MS } = {}) {
+export function soitaLinssiluenta(ui, t, { viive = LUENNAN_VIIVE_MS, runko = null } = {}) {
   pysaytaLinssiluenta(ui);
-  if (!ui || !t || typeof Audio === 'undefined') return null;
+  if (!ui || (!t && !runko) || typeof Audio === 'undefined') return null;
   // Kertojan kytkin on yksi ja sama koko pelissä (js/luenta.js).
   if (!luentaKytkinPaalla()) return null;
   // Radiotilassa ei kaksi ääntä päällekkäin — sama ehto kuin
   // matkakirjaluennalla.
   if (ui.radioModuuli && !ui.radioModuuli.luentaSallittu()) return null;
-  const url = luennanOsoite(t);
+  const url = runko ? `${LINSSILUENTA_JUURI}/${runko}.mp3` : luennanOsoite(t);
   if (!url) return null;
 
   const audio = new Audio(url);

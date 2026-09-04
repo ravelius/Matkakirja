@@ -191,6 +191,148 @@
 .aikajana-avaus-nappi:hover,
 .aikajana-avaus-nappi:focus-visible { background: rgba(217, 161, 59, 0.3); border-color: rgba(217, 161, 59, 0.9); }
 
+/* ===========================================================================
+   VÄLINÄYTÖS — merkkipaalun hengähdystauko kartan keskellä
+   ---------------------------------------------------------------------------
+   Omistajan tilaus 4.9.2026 aamu: *"Nämä voisivat tulla kartan keskelle myös
+   tekstimuodossa yhdessä isoisän jonkun kuvan kanssa … Animaatio jatkuisi
+   vasta popup tekstin alla olevasta napista. Näin pitkään animaatioon tulee
+   pieni hengähdys tauko."*
+
+   SAMA TYYLIPERHE KUIN AVAUSJAKSOLLA: sama paperi, sama kultareunus, sama
+   pillerinappi ja sama liuku. Kolme eroa, ja jokainen on tilattu:
+
+     1. TAUSTA HIMMENEE KEVYESTI, ei mustaan. Avausjakso peittää kartan,
+        koska sitä ei ole vielä nähty; välinäytöksessä kartalla PALAA
+        yksitoista valoa, ja ne kuuluvat näkyä laatikon takana. Peite on
+        siksi yksi kerros ilman sumennusta.
+     2. LAATIKKO ON LEVEÄMPI: teksti ja kuva vierekkäin.
+     3. KERROS JÄÄ PULUN KUPLAPINON ALLE (z-index 30 < .pollo-kuplapino-kehys
+        40): pulun kommentti tulee kertojan jälkeen, ja sen pitää näkyä
+        himmennyksen päällä eikä sen alla.
+   =========================================================================== */
+
+.aikajana-valinaytos {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.aikajana-valinaytos-peite {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(6, 4, 3, 0.42);
+  opacity: 0;
+  transition: opacity 420ms ease;
+}
+.aikajana-valinaytos.esilla .aikajana-valinaytos-peite { opacity: 1; }
+
+.aikajana-valinaytos-laatikko {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  max-width: min(46rem, 94%);
+  max-height: calc(100% - 2rem);
+  overflow-y: auto;
+  padding: 1.3rem 1.5rem 1.4rem;
+  border-radius: 14px;
+  border: 1px solid rgba(217, 161, 59, 0.38);
+  background: #201a14;
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.66);
+  color: #f1e6d0;
+  font-family: var(--font-luku);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px) scale(0.97);
+  transition: opacity 420ms ease, transform 420ms cubic-bezier(0.45, 0.03, 0.22, 1);
+}
+.aikajana-valinaytos.esilla .aikajana-valinaytos-laatikko { opacity: 1; transform: none; }
+
+.aikajana-valinaytos-otsikko {
+  margin: 0 0 0.8rem;
+  font-size: 1.18rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #f3dfae;
+}
+
+/*
+ * KUVA TEKSTIN KYLJESSÄ OIKEALLA, kapealla ruudulla tekstin YLLÄ
+ * (`column-reverse` kääntää DOM-järjestyksen teksti → kuva niin, että
+ * kuva nousee päälle). Ilman kuvaa — kuvaputki ei ole vielä toimittanut,
+ * ja kuvapaikka piiloutuu 404:stä — teksti jää yksin täysleveänä.
+ */
+.aikajana-valinaytos-sisus {
+  display: flex;
+  /* Keskitetty: lyhyt teksti ja korkea kuva eivät jätä laatikkoon koloa. */
+  align-items: center;
+  gap: 1.1rem;
+  text-align: left;
+}
+.aikajana-valinaytos-teksti {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: #ddd0b6;
+}
+.aikajana-valinaytos-kuva {
+  flex: 0 0 auto;
+  width: min(15rem, 38%);
+  margin: 0;
+}
+.aikajana-valinaytos-kuva img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(217, 161, 59, 0.28);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+.aikajana-valinaytos-kuvateksti {
+  margin: 0.4rem 0 0;
+  font-size: 0.76rem;
+  line-height: 1.35;
+  color: #b7a888;
+}
+/*
+ * KAPEA RUUTU: kuva tekstin YLLE ja laatikko YLÖS. Pulun kuplapino
+ * kasvaa oikeasta alanurkasta ylöspäin (css/styles.css
+ * .pollo-kuplapino-kehys), ja puhelimessa kaksi pitkää kuplaa peittäisi
+ * keskelle asetetun laatikon tekstin ja Jatka-napin — mitattu 390 x 844.
+ * Ylälaidassa laatikko ja kuplat mahtuvat rinnakkain, ja pitkä teksti
+ * vierii laatikon sisällä (max-height + overflow-y).
+ */
+@media (max-width: 620px) {
+  .aikajana-valinaytos { align-items: flex-start; padding-top: 3.1rem; }
+  .aikajana-valinaytos-laatikko { max-height: calc(100% - 4.2rem); padding: 1rem 1.1rem 1.1rem; }
+  .aikajana-valinaytos-sisus { flex-direction: column-reverse; align-items: stretch; gap: 0.8rem; }
+  .aikajana-valinaytos-kuva { width: min(9.5rem, 52%); align-self: center; }
+  .aikajana-valinaytos-kuvateksti { text-align: center; }
+  .aikajana-valinaytos-nappi { margin-top: 0.9rem; }
+}
+
+.aikajana-valinaytos-nappi {
+  min-height: 0;
+  margin-top: 1.2rem;
+  padding: 0.5rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(217, 161, 59, 0.6);
+  background: rgba(217, 161, 59, 0.16);
+  color: #f6e6bd;
+  font-family: inherit;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background-color 200ms ease, border-color 200ms ease;
+}
+.aikajana-valinaytos-nappi:hover,
+.aikajana-valinaytos-nappi:focus-visible { background: rgba(217, 161, 59, 0.3); border-color: rgba(217, 161, 59, 0.9); }
+
 /* ==================== YLÄRIVI: KELLO ==================== */
 
 /*
@@ -842,9 +984,10 @@
   .aikajana { --aikajana-kesto: 0.01s; }
   /* Rullaus vaihtaa merkin ilman liikettä (rullaaVuosi: heti). */
   .vuosi-merkki, .aikajana-valo-sisus, .aikajana-tummennus-pinta, .aikajana-reika, .aikajana-valo-kajo, .aikajana-vinjetti { transition: none; }
-  /* Avausjakso: laatikko ja peite vaihtavat tilaa ilman liukua. */
-  .aikajana, .aikajana-avaus-peite, .aikajana-avaus-sumennin, .aikajana-avaus-laatikko { transition: none; }
-  .aikajana-avaus-laatikko { transform: none; }
+  /* Avausjakso ja välinäytös: laatikko ja peite vaihtavat tilaa ilman liukua. */
+  .aikajana, .aikajana-avaus-peite, .aikajana-avaus-sumennin, .aikajana-avaus-laatikko,
+  .aikajana-valinaytos-peite, .aikajana-valinaytos-laatikko { transition: none; }
+  .aikajana-avaus-laatikko, .aikajana-valinaytos-laatikko { transform: none; }
   /*
    * Ei sykettä eikä vilkkua: nykyinen keksintö erottuu pelkällä
    * kirkkaudella, jälki jää himmeäksi kuten muutenkin.

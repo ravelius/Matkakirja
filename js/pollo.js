@@ -2200,15 +2200,17 @@ class Pollo {
    * @param {(() => void)|null} [asetukset.kuittaus] napautus kuplaan vie
    *   sarjan seuraavaan repliikkiin (js/livia.js ensisaapumisen
    *   paljastus); yksittäinen puheenvuoro jättää tämän pois.
+   * @param {boolean} [asetukset.linssinOma] LINSSIN OMA KUPLA: ohittaa
+   *   linssiportin (ks. LINSSIN OMA POIKKEUS alla).
    * @returns {boolean} näkyikö kupla PINOSSA (chatin ollessa auki
    *   puheenvuoro menee pelkkään virtaan ja tästä palaa epätosi).
    */
-  naytaSaapumiskupla(teksti, { kuittaus = null } = {}) {
+  naytaSaapumiskupla(teksti, { kuittaus = null, linssinOma = false } = {}) {
     if (!teksti || this.nappi.hidden) return false;
     // LINSSI PÄÄLLÄ: puheenvuoro odottaa vuoroaan (ks. lykkaaLinssiin).
     // Portti on ENNEN chattiin kirjaamista, jotta virran järjestys on
     // se, jossa repliikit lopulta sanotaan.
-    if (linssiEstaa(this.doc)) {
+    if (!linssinOma && linssiEstaa(this.doc)) {
       return this.lykkaaLinssiin(() => this.naytaSaapumiskupla(teksti, { kuittaus }));
     }
     // Puhekupla kuuluu chattiin aina, myös silloin kun se ei ehdi
@@ -2897,15 +2899,17 @@ class Pollo {
    *   kuplaan vie sarjan eteenpäin (kuplasarjat, js/livia.js).
    * @param {() => boolean} [asetukset.jatkuuko] ehto, joka tarkistetaan
    *   ennen jokaista jatko-osaa.
+   * @param {boolean} [asetukset.linssinOma] LINSSIN OMA PUHEENVUORO:
+   *   ohittaa linssiportin (ks. LINSSIN OMA POIKKEUS alla).
    * @returns {boolean} näkyikö ensimmäinen kupla.
    */
-  naytaPuheenvuoro(osat, { kuittaus = null, jatkuuko = () => true } = {}) {
+  naytaPuheenvuoro(osat, { kuittaus = null, jatkuuko = () => true, linssinOma = false } = {}) {
     const palat = (Array.isArray(osat) ? osat : [osat])
       .map((osa) => String(osa ?? '').trim()).filter(Boolean);
     if (!palat.length) return false;
     // LINSSI PÄÄLLÄ: koko puheenvuoro OSINEEN yhtenä jonon alkiona —
     // sen rytmi kuuluu sille itselleen (ks. lykkaaLinssiin).
-    if (linssiEstaa(this.doc)) {
+    if (!linssinOma && linssiEstaa(this.doc)) {
       return this.lykkaaLinssiin(() => this.naytaPuheenvuoro(palat, { kuittaus, jatkuuko }));
     }
     // Uusi puheenvuoro syrjäyttää edellisen: kaksi puhujaa yhtä aikaa
@@ -2914,9 +2918,12 @@ class Pollo {
     const yksi = palat.length === 1;
     const nakyi = this.naytaSaapumiskupla(palat[0], {
       kuittaus: yksi ? kuittaus : null,
+      linssinOma,
     });
     if (!nakyi || yksi) return nakyi;
-    this.puheenvuoro = { palat, seuraava: 1, kuittaus, jatkuuko };
+    this.puheenvuoro = {
+      palat, seuraava: 1, kuittaus, jatkuuko, linssinOma,
+    };
     this.ajastaPuheenvuoro();
     return true;
   }
@@ -2944,6 +2951,9 @@ class Pollo {
       const viimeinen = nyt.seuraava >= nyt.palat.length;
       this.naytaSaapumiskupla(nyt.palat[i], {
         kuittaus: viimeinen ? nyt.kuittaus : null,
+        // Jatko-osat kulkevat samasta portista kuin ensimmäinen: linssin
+        // oma puheenvuoro puhutaan loppuun, vaikka linssi on yhä päällä.
+        linssinOma: nyt.linssinOma,
       });
       if (viimeinen) {
         this.puheenvuoro = null;
@@ -5378,6 +5388,27 @@ export function polloAvauskupla(teksti, asetukset = {}) {
  */
 export function polloPuheenvuoro(osat, asetukset = {}) {
   return Boolean(nykyinenPollo?.naytaPuheenvuoro(osat, asetukset));
+}
+
+/**
+ * LINSSIN OMA POIKKEUS KUPLAPORTTIIN (omistajan tilaus 4.9.2026 aamu,
+ * merkkipaalun välinäytös: *"Pulu voi kommentoida isoisän kohdalla
+ * jotain siitä mitä hänen aikana oli ja mitä puuttui ja tämä jotenkin
+ * nasevasti pulun tyylillä."*).
+ *
+ * Sääntö on yhä se, että linssin päälle ei tule kuplia
+ * (js/ui-apurit.js linssiEstaa): jokainen MUUALTA tuleva puheenvuoro
+ * menee jonoon ja odottaa linssin sulkeutumista. Välinäytös on linssin
+ * OMA kohtaus — kertoja lukee, pulu kommentoi, kello odottaa — joten
+ * se ohittaa portin. Ulkoasu, pino ja chattiin kirjaus ovat samat kuin
+ * muilla kuplilla; ainoa ero on portti, ja siksi ohitus on VAIN tässä
+ * yhdessä vientifunktiossa: kutsuja on js/aikajana.js avaaValinaytos.
+ *
+ * @param {string[]} osat puheenvuoro osissa (datan `valinaytos.pulu`).
+ * @returns {boolean} näkyikö ensimmäinen kupla.
+ */
+export function polloLinssikupla(osat, asetukset = {}) {
+  return Boolean(nykyinenPollo?.naytaPuheenvuoro(osat, { ...asetukset, linssinOma: true }));
 }
 
 /**

@@ -132,7 +132,9 @@ import { asetaKuva } from './media.js';
 import { sfx } from './sound.js';
 import { hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream } from './ambience-stream.js';
 import { stopDiaryVoice } from './luenta.js';
-import { pysaytaLinssiluenta, soitaLinssiluenta } from './linssipuhe.js';
+import {
+  ESITTELYN_RUNKO, pysaytaLinssiluenta, soitaLinssiluenta, valinaytoksenRunko,
+} from './linssipuhe.js';
 import { pysaytaLukija } from './lukija.js';
 import { esilataaKuvat } from './ui-apurit.js';
 import { avaaTiedeliite, suljeTiedeliite } from './tiedeliite.js';
@@ -318,6 +320,43 @@ const AVAUS_TAUSTAN_KATTO_MS = 2500;
 const AVAUS_LUKUAIKA_MS = 900;
 /** Peitteen poistuminen Käynnistä-napin jälkeen (css .aikajana-avaus.pois). */
 const AVAUS_POISTUMA_MS = 700;
+
+/* ==================== VÄLINÄYTÖS ==================== */
+
+/**
+ * VÄLINÄYTÖS MERKKIPAALUSSA (omistajan tilaus 4.9.2026 aamu,
+ * sanatarkasti: *"Kertoja voisi myös kertoa vähän pidemmin isoisän
+ * kohdalla mihin pulu sitten vain kommentoisi. Aika voisi pysähtyä
+ * siinä kohtaa automaattisesti. Kertoja voisi isoisän kohdalla myös
+ * summata jo nähtyä ja suunnata myös tulevaan. Nämä voisivat tulla
+ * kartan keskelle myös tekstimuodossa yhdessä isoisän jonkun kuvan
+ * kanssa. … Animaatio jatkuisi vasta popup tekstin alla olevasta
+ * napista. Näin pitkään animaatioon tulee pieni hengähdys tauko."*).
+ *
+ * KULKU, kun kello saapuu paaluun ELÄVÄSSÄ AJOSSA (sytyta):
+ *
+ *   1. Kello PYSÄHTYY itsestään. Karuselli ja vuosimittari ovat jo
+ *      paalussa, joten mikään ei liiku enää taustalla.
+ *   2. Laatikko nousee kartan keskelle (css .aikajana-valinaytos):
+ *      otsikko, kertojan teksti ja sen kyljessä isoisän kuva — kapealla
+ *      ruudulla kuva tekstin yllä. Tausta himmenee KEVYESTI, ei mustaan:
+ *      kartan valot jäävät näkyviin laatikon takana.
+ *   3. Kertoja lukee saman tekstin (js/linssipuhe.js, runko
+ *      `valinaytos-<vuosi>`). Puuttuva tiedosto on hiljainen.
+ *   4. Luennan päätyttyä — tai heti, jos luentaa ei ole — PULU
+ *      kommentoi kuplapinossa (js/pollo.js polloLinssikupla, linssin
+ *      oma poikkeus kuplaporttiin).
+ *   5. Jatka-nappi: kuplat pois, laatikko häipyy, kello jatkaa.
+ *
+ * KERRAN PER AJO. Paalu voi tulla kohdalle uudestaan (pelaaja selaa
+ * taaksepäin ja antaa kellon käydä), eikä hengähdystauko saa toistua;
+ * Alusta nollaa muistin. Pysäytetystä kelaus (siirry) ei avaa
+ * välinäytöstä lainkaan — silloin pelaaja selaa itse.
+ */
+/** Kuplien viive, kun kertojan luentaa ei ole tai se ei lähtenyt. */
+const VALINAYTOKSEN_KUPLAVIIVE_MS = 600;
+/** Laatikon poistumisliuku Jatka-napin jälkeen (css .aikajana-valinaytos). */
+const VALINAYTOKSEN_POISTUMA_MS = 420;
 
 /** Paneelin kuvan dekoodauksen enimmäisodotus ennen ristihäivytystä. */
 const PANEELIN_DEKOODAUSKATTO_MS = 250;
@@ -1038,6 +1077,14 @@ class Aikajana {
     this.avausNappi = null;
     this.avausKesken = false;
     this.avausAjastimet = [];
+    /*
+     * VÄLINÄYTÖKSEN TILA. `valinaytos` on laatikon juuri sen ollessa
+     * ruudulla, `valinaytosNahty` estää saman hengähdystauon toistumisen
+     * samalla ajolla (Alusta nollaa sen).
+     */
+    this.valinaytos = null;
+    this.valinaytosNahty = false;
+    this.valinaytosAjastin = null;
     this.reducedMotion = Boolean(globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
   }
 
@@ -1471,6 +1518,14 @@ class Aikajana {
       if (!this.avausKesken) return;
       this.avaus.classList.add('laatikko-nakyy');
       this.avausNappi?.focus?.({ preventScroll: true });
+      /*
+       * KERTOJA LUKEE ESITTELYN LAATIKON AUETESSA — ei Käynnistä-napista.
+       * Nappi on lähtölaukaus, ja teksti kuuluu siihen hetkeen, jolloin
+       * se on luettavissa. Sama runkosääntö ja sama soitin kuin
+       * pysäkeillä (js/linssipuhe.js kaarenPuheet); puuttuva tiedosto on
+       * hiljainen, ja Käynnistä katkaisee luennan kesken (aloitaAjo).
+       */
+      if (esittely.teksti) soitaLinssiluenta(this.ui, null, { runko: ESITTELYN_RUNKO });
       const ajo = Promise.resolve(this.sovitaKaareen(heti ? 0 : AVAUS_KAMERA_MS))
         .then(() => new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok))));
       // Alaraja on otsikon lukuaika, yläraja katto: kumpikin täyttyy.
@@ -1509,6 +1564,8 @@ class Aikajana {
     if (!this.avausKesken) return;
     this.avausKesken = false;
     this.tyhjennaAvauksenAjastimet();
+    // Esittelyn luenta katkeaa napista: pelaaja luki jo ja lähtee.
+    pysaytaLinssiluenta(this.ui);
     this.naytaLinssi();
     const avaus = this.avaus;
     this.avausNappi = null;
@@ -1561,6 +1618,9 @@ class Aikajana {
 
   alusta() {
     this.pysayta();
+    // Hengähdystauko alkaa alusta sekin: laatikko pois ja muisti nolliin.
+    this.suljeValinaytos({ heti: true });
+    this.valinaytosNahty = false;
     pysaytaLinssiluenta(this.ui);
     this.paattaEnnakko();
     this.loppu = false;
@@ -1596,6 +1656,13 @@ class Aikajana {
       this.lopeta();
       return;
     }
+    /*
+     * SYTTYMINEN SAATTOI PYSÄYTTÄÄ KELLON (merkkipaalun välinäytös
+     * pysäyttää sen itse). Ilman tätä tarkistusta silmukka tilaisi
+     * silti uuden kehyksen, ja Jatka käynnistäisi TOISEN rinnakkaisen
+     * silmukan — kello kulkisi siitä eteenpäin kaksinkertaista vauhtia.
+     */
+    if (!this.kaynnissa) return;
     this.raf = requestAnimationFrame((t) => this.kehys(t));
   }
 
@@ -1813,9 +1880,146 @@ class Aikajana {
      */
     this.paattaEnnakko();
     this.asettele();
-    // Kertoja lukee vuoden, keksijän ja keksinnön (js/linssipuhe.js).
     // Avausjakson aikana selostaja vaikenee: esitys alkaa vasta napista.
-    if (!this.avausKesken) soitaLinssiluenta(this.ui, t);
+    if (this.avausKesken) return;
+    /*
+     * MERKKIPAALUN VÄLINÄYTÖS SYRJÄYTTÄÄ PYSÄKKILUENNAN: laatikko lukee
+     * oman, pidemmän tekstinsä (avaaValinaytos) eikä kolmen sanan
+     * pysäkkiriviä sen päälle. Muualla kertoja lukee vuoden, keksijän
+     * ja keksinnön (js/linssipuhe.js).
+     */
+    if (!this.avaaValinaytos(t)) soitaLinssiluenta(this.ui, t);
+  }
+
+  /* ---------- välinäytös (ks. VÄLINÄYTÖS tiedoston alussa) ---------- */
+
+  /**
+   * Merkkipaalun hengähdystauko: kello seis, laatikko kartan keskelle,
+   * kertoja ja sen jälkeen pulu. Palauttaa epätoden, jos pysäkillä ei
+   * ole välinäytöstä tai se on jo nähty — silloin kutsuja soittaa
+   * tavallisen pysäkkiluennan.
+   *
+   * @param {object} t pysäkki
+   * @returns {boolean} avautuiko laatikko
+   */
+  avaaValinaytos(t) {
+    const tiedot = t?.valinaytos;
+    if (!tiedot || this.valinaytosNahty || this.avausKesken) return false;
+    const koti = this.ui.mapPane;
+    if (!koti) return false;
+    this.valinaytosNahty = true;
+    // Kello pysähtyy automaattisesti (omistaja: *"Aika voisi pysähtyä
+    // siinä kohtaa automaattisesti."*). Karuselli ja mittari ovat jo
+    // paalussa, joten pysäytys ei liikuta mitään.
+    this.pysayta();
+
+    this.valinaytos = solmu('div', 'aikajana-valinaytos');
+    this.valinaytos.setAttribute('role', 'dialog');
+    this.valinaytos.setAttribute('aria-modal', 'true');
+    this.valinaytos.setAttribute('aria-label', tiedot.otsikko ?? t.otsikko);
+    // Kevyt himmennys, EI mustaa: kartan valot jäävät näkyviin.
+    const peite = solmu('div', 'aikajana-valinaytos-peite');
+    peite.setAttribute('aria-hidden', 'true');
+    const laatikko = solmu('div', 'aikajana-valinaytos-laatikko');
+    laatikko.appendChild(solmu('h2', 'aikajana-valinaytos-otsikko', tiedot.otsikko ?? t.otsikko));
+    const sisus = solmu('div', 'aikajana-valinaytos-sisus');
+    sisus.appendChild(solmu('p', 'aikajana-valinaytos-teksti', tiedot.kertoja ?? ''));
+    const kuva = this.valinaytoksenKuva(tiedot.kuva);
+    if (kuva) sisus.appendChild(kuva);
+    laatikko.appendChild(sisus);
+    const nappi = solmu('button', 'aikajana-valinaytos-nappi', 'Jatka');
+    nappi.type = 'button';
+    nappi.addEventListener('click', () => this.jatkaValinaytoksesta());
+    laatikko.appendChild(nappi);
+    this.valinaytos.append(peite, laatikko);
+    koti.appendChild(this.valinaytos);
+    // Pakotettu asettelu, jotta liuku näkee alkuasennon omana tilanaan.
+    void this.valinaytos.getBoundingClientRect?.();
+    this.valinaytos.classList.add('esilla');
+    nappi.focus?.({ preventScroll: true });
+
+    this.aloitaValinaytoksenPuhe(t, tiedot);
+    return true;
+  }
+
+  /**
+   * Isoisän kuva tekstin kylkeen. KUVA EI OLE VIELÄ ÄMPÄRISSÄ (kuvaputki
+   * toimittaa), joten kuvapaikka piilotetaan latauksen kaatuessa ja
+   * teksti jää täysleveäksi — laatikko toimii kuvan kanssa ja ilman.
+   * Osoite otetaan sellaisenaan eikä pienennettynä: tämä on yksi kuva
+   * oman kansionsa ulkopuolelta (kohtaamiset/isoisa), eikä sillä ole
+   * linssikuvien pieni/-variantteja.
+   */
+  valinaytoksenKuva(kuvatieto) {
+    if (!onKuva(kuvatieto) || !kuvatieto.osoite) return null;
+    const kehys = solmu('figure', 'aikajana-valinaytos-kuva');
+    const kuva = document.createElement('img');
+    kuva.alt = kuvatieto.selite ?? '';
+    kuva.decoding = 'async';
+    kuva.loading = 'eager';
+    kuva.addEventListener('error', () => { kehys.hidden = true; }, { once: true });
+    kuva.src = kuvatieto.osoite;
+    kehys.appendChild(kuva);
+    if (kuvatieto.selite) {
+      kehys.appendChild(solmu('figcaption', 'aikajana-valinaytos-kuvateksti', kuvatieto.selite));
+    }
+    return kehys;
+  }
+
+  /**
+   * Kertoja ensin, pulu sen jälkeen (omistaja: *"Kertoja voisi myös
+   * kertoa vähän pidemmin isoisän kohdalla mihin pulu sitten vain
+   * kommentoisi."*).
+   *
+   * Kuplat lähtevät luennan 'ended'-tapahtumasta. Puuttuva tiedosto tai
+   * pois kytketty kertoja johtaa samaan lopputulokseen pienen viiveen
+   * päästä: kupla ei saa ilmestyä samassa silmänräpäyksessä laatikon
+   * kanssa, koska silloin niitä ei lue kumpaakaan.
+   */
+  aloitaValinaytoksenPuhe(t, tiedot) {
+    const osat = Array.isArray(tiedot.pulu) ? tiedot.pulu : [tiedot.pulu];
+    const kuplat = () => {
+      this.valinaytosAjastin = null;
+      // Laatikko ehti sulkeutua (Jatka, Alusta, linssin purku).
+      if (!this.valinaytos?.isConnected) return;
+      polloLinssikupla(osat);
+    };
+    const viiveella = () => {
+      clearTimeout(this.valinaytosAjastin);
+      this.valinaytosAjastin = setTimeout(kuplat, VALINAYTOKSEN_KUPLAVIIVE_MS);
+    };
+    const luenta = soitaLinssiluenta(this.ui, t, { runko: valinaytoksenRunko(t) });
+    if (!luenta) { viiveella(); return; }
+    luenta.addEventListener('ended', kuplat, { once: true });
+    // Puuttuva tiedosto on hiljainen, mutta pulu puhuu silti.
+    luenta.addEventListener('error', viiveella, { once: true });
+  }
+
+  /** Jatka-nappi: kuplat pois, laatikko häipyy, kello jatkaa. */
+  jatkaValinaytoksesta() {
+    if (!this.valinaytos) return;
+    this.suljeValinaytos();
+    this.jatka();
+  }
+
+  /**
+   * Laatikko pois yhdellä kertaa: ajastin, kesken oleva luenta ja
+   * kuplat. Kuplien tekstit jäävät chatin virtaan (kirjaaKuplaViestiin),
+   * joten pinon tyhjennys ei hukkaa puhetta.
+   */
+  suljeValinaytos({ heti = false } = {}) {
+    clearTimeout(this.valinaytosAjastin);
+    this.valinaytosAjastin = null;
+    const laatikko = this.valinaytos;
+    this.valinaytos = null;
+    if (!laatikko) return;
+    pysaytaLinssiluenta(this.ui);
+    polloKuplatPois();
+    laatikko.classList.remove('esilla');
+    // Väistyvä laatikko ei enää nappaa napautuksia: kartta on pelaajan.
+    laatikko.style.pointerEvents = 'none';
+    if (heti || this.reducedMotion) laatikko.remove();
+    else setTimeout(() => laatikko.remove(), VALINAYTOKSEN_POISTUMA_MS);
   }
 
   /**
@@ -2217,6 +2421,21 @@ class Aikajana {
       }
       return;
     }
+    /*
+     * VÄLINÄYTÖS OMII NÄPPÄIMISTÖN SAMALLA SOPIMUKSELLA: Enter tai
+     * välilyönti on Jatka, Esc sulkee linssin, eivätkä nuolet selaa
+     * pysäkkejä hengähdystauon aikana.
+     */
+    if (this.valinaytos) {
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        this.jatkaValinaytoksesta();
+      } else if (e.key === 'Escape' || e.key === 'Esc') {
+        e.preventDefault();
+        this.ui.pysaytaAikajana?.();
+      }
+      return;
+    }
     if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
     const kohde = this.tila.i + (e.key === 'ArrowRight' ? 1 : -1);
     if (kohde < 0 || kohde >= this.tapahtumat.length) return;
@@ -2256,6 +2475,8 @@ class Aikajana {
     this.pysayta();
     // Sulkeminen kesken avauksen: peite, laatikko ja ajastimet pois.
     this.puraAvaus();
+    // Sama kesken välinäytöksen: laatikko, ajastin ja kuplat pois.
+    this.suljeValinaytos({ heti: true });
     pysaytaLinssiluenta(this.ui);
     suljeTiedeliite(this.ui);
     this.lopetaMusiikki();
@@ -2318,7 +2539,9 @@ class Aikajana {
  *      lopussa kytkennän vieressä — tämä on ainoa kohta, jossa
  *      aikajanamoottori tietää muusta käyttöliittymästä.
  */
-import { polloKuplatPois, polloLinssiAlkoi, polloLinssiPaattyi } from './pollo.js';
+import {
+  polloKuplatPois, polloLinssiAlkoi, polloLinssikupla, polloLinssiPaattyi,
+} from './pollo.js';
 import { suljeFokuskohde } from './fokuskohteet.js';
 import { suljeNostonKortti } from './fokusnosto.js';
 import { suljeElaintaky } from './elaintaky.js';
