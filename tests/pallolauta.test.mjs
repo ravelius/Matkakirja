@@ -3,12 +3,13 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 
 /*
- * PALLOLAUTA, VAIHE 1 (omistaja 5.9.2026, Raamattu KARTTAPALLO ON
- * PELILAUTA; docs/moduulit/karttapallo.md luku 7). Vartioi vaiheen
+ * PALLOLAUTA, VAIHEET 1–2 (omistaja 5.9.2026, Raamattu KARTTAPALLO ON
+ * PELILAUTA; docs/moduulit/karttapallo.md luku 7). Vartioi vaiheiden
  * hyväksymisehdot: (c) yksi kytkin ja yksi vakio, pelitila sama
  * kummallakin laudalla; (b) tasokartta pois tieltä yhdestä portista;
- * kaava leveys ↔ korkeus; ja "kartta laatoissa, peli päällä" — pallolla
- * vain sallitut kerrokset.
+ * kaava leveys ↔ korkeus; "kartta laatoissa, peli päällä" — pallolla
+ * vain sallitut kerrokset; ja vaihe 2: siirrot pallolla yhdellä
+ * koreografialla, Liiku ei herätä tasokarttaa.
  */
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
@@ -114,9 +115,11 @@ test('näkyvä leveys ↔ korkeus: suunnitelman kaava, katot ja käänteisyys', 
 });
 
 test('pallolla vain pelin merkit: sallitut kerrokset lueteltu, kartan kerrokset kiellettyjä', () => {
-  assert.deepEqual(PALLOLAUDAN_KERROKSET, ['pointsData', 'htmlElementsData']);
+  // Vaihe 2: pisteet (kaupungit, askelhelmet), html-merkit (nappula,
+  // kohteet), polut (naapurireitit) ja kaaret (lennot) — täsmälleen nämä.
+  assert.deepEqual(PALLOLAUDAN_KERROKSET, ['pointsData', 'htmlElementsData', 'pathsData', 'arcsData']);
   const kansio = new URL('../js/pallolauta/', import.meta.url);
-  const kielletyt = ['labelsData', 'arcsData', 'pathsData', 'ringsData', 'polygonsData', 'hexBinPointsData', 'tilesData', 'customLayerData'];
+  const kielletyt = ['labelsData', 'ringsData', 'polygonsData', 'hexBinPointsData', 'tilesData', 'customLayerData', 'objectsData', 'heatmapsData'];
   for (const nimi of readdirSync(kansio)) {
     const src = readFileSync(new URL(nimi, kansio), 'utf8');
     for (const k of kielletyt) {
@@ -134,7 +137,9 @@ test('pallolla vain pelin merkit: sallitut kerrokset lueteltu, kartan kerrokset 
   const lauta = lue('../js/pallolauta/lauta.js');
   assert.match(lauta, /const siirtyma = ui\.reducedMotion \? 0 : MERKKIEN_SIIRTYMA_MS;/);
   assert.match(lauta, /\.pointsTransitionDuration\(siirtyma\)/);
-  assert.match(lauta, /\.htmlTransitionDuration\(siirtyma\)/);
+  assert.match(lue('../js/pallolauta/merkit.js'), /\.htmlTransitionDuration\(siirtyma\)/);
+  assert.match(lue('../js/pallolauta/reitit.js'), /\.pathTransitionDuration\(siirtyma\)/);
+  assert.match(lue('../js/pallolauta/reitit.js'), /\.arcsTransitionDuration\(siirtyma\)/);
   assert.match(lue('../js/pallolauta/kamera.js'), /if \(ui\?\.reducedMotion \|\| !\(kesto > 0\)\)/);
   // Render-silmukka lepää lehden takana ja piilossa.
   assert.match(lauta, /pallo\.pauseAnimation\?\.\(\)/);
@@ -163,8 +168,11 @@ test('tasokartta pois tieltä yhdestä portista; kamera kulkee delegaatin kautta
   assert.ok(!ui.includes('const kartta = this.kartta;'), 'ajot kulkevat this.kamera():n kautta');
   assert.ok((ui.match(/const kartta = this\.kamera\(\);/g) ?? []).length >= 3);
   assert.match(ui, /if \(this\.pallolautaPaalla\(\)\) return this\.pallolauta\.kamera\.nakyvaAlue\(\);/);
-  // Liiku avaa linssikartan pallolaudalla; perillä se sulkeutuu.
-  assert.match(ui, /if \(this\.liukuAuki && this\.pallolautaPaalla\(\)\) this\.avaaLinssikartta\(\);/);
+  // Vaihe 2: Liiku EI avaa linssikarttaa — siirrot tehdään pallolla, ja
+  // linssikartta jää vain linsseille (valitseLinssi).
+  const liiku = ui.match(/ {2}vaihdaLiuku\(\) \{[\s\S]*?\n {2}\}\n/)[0];
+  assert.doesNotMatch(liiku, /avaaLinssikartta/, 'Liiku herättää yhä tasokartan');
+  assert.match(ui, /if \(tunnus && this\.pallolautaPaalla\(\)\) this\.avaaLinssikartta\(\{ linssi: true \}\);/);
   assert.match(ui, /^  tarkistaLinssikartta\(\) \{/m);
   // Varapolku: kartta herää vain tälle istunnolle; laitteen valintaa ei
   // kirjoiteta (pallo on oletus — yksi verkoton käynnistys ei saa lukita
@@ -178,10 +186,75 @@ test('tasokartta pois tieltä yhdestä portista; kamera kulkee delegaatin kautta
   assert.match(main, /asetaLautaValinta\(halutaan \? 'pallo' : 'kartta'\);/);
   assert.match(main, /osoite\.searchParams\.delete\('lauta'\);/);
   const sw = lue('../sw.js');
-  assert.match(sw, /'\.\/js\/pallolauta\/lauta\.js'/);
-  assert.match(sw, /'\.\/js\/pallolauta\/kamera\.js'/);
+  for (const nimi of ['lauta', 'kamera', 'merkit', 'reitit', 'siirto']) {
+    assert.match(sw, new RegExp(`'\\./js/pallolauta/${nimi}\\.js'`), `${nimi}.js puuttuu SHELListä`);
+  }
   // Yhden tiedoston versio ei niputa palloa: dynaaminen tuonti kaatuu
   // siellä hallitusti varapolkuun (karttapallo.md luku 6).
   assert.ok(!lue('../tools/build-standalone.mjs').includes('js/pallolauta/'));
   assert.match(ui, /await import\('\.\/pallolauta\/lauta\.js'\)/);
+});
+
+/*
+ * VAIHE 2: SIIRROT PALLOLLA (karttapallo.md luku 7, rivi 2). Koreografia
+ * on yhdessä paikassa (animatePawnSisalla) ja vain nappulan käsittely
+ * haarautuu laudan mukaan kuljettajalle; noppa ja lento haarautuvat
+ * samoin; pallo ei enää tuo ui.js:ää (kehäriippuvuus poistui).
+ */
+test('vaihe 2: siirto haarautuu laudan mukaan kuljettajalle, koreografia pysyy yhtenä', () => {
+  const ui = lue('../js/ui.js');
+  const siirto = ui.match(/async animatePawnSisalla\([\s\S]*?\n {2}\}\n/)[0];
+  // Kuljettaja valitaan laudan mukaan; sama sopimus molemmilla.
+  assert.match(ui, /^  nappulanKuljettaja\(player, \{ lento = false \} = \{\}\) \{\n    if \(this\.pallolautaPaalla\(\)\) return this\.pallolauta\.nappulanKuljettaja\(player, \{ lento \}\);\n    return this\.tasokartanKuljettaja\(player\);/m);
+  for (const kutsu of ['kuljettaja.nosta()', 'kuljettaja.aseta(from)', 'await kuljettaja.hyppaa(paikka, pos, stepMs)', 'kuljettaja.laske()']) {
+    assert.ok(siirto.includes(kutsu), `animatePawnSisalla ei kutsu ${kutsu}`);
+  }
+  // Musiikin, äänten ja kameran koukut ovat yhä siirrossa TÄSMÄLLEEN
+  // entiseen tapaan (musiikin sammutus kahdesti: kuollut peli ja perillä).
+  const koukut = {
+    'this.aloitaSiirronMusiikki(musiikki)': 1,
+    'this.lopetaSiirronMusiikki()': 2,
+    'this.ennakoiSiirtoZoomi(': 1,
+    'this.aloitaSaattavaKamera(': 1,
+    'this.aloitaJalkamatkanAani()': 1,
+    "sfx.play(viimeinen ? 'arrive' : 'step')": 1,
+    'this.piilotaNoppa()': 1,
+  };
+  for (const [koukku, maara] of Object.entries(koukut)) {
+    assert.equal(siirto.split(koukku).length - 1, maara, `${koukku} ei ole siirrossa ${maara} kertaa`);
+  }
+  const pallolauta = ['lauta', 'kamera', 'merkit', 'reitit', 'siirto'].map((n) => lue(`../js/pallolauta/${n}.js`)).join('\n');
+  for (const koukku of ['aloitaSiirronMusiikki', 'lopetaSiirronMusiikki', 'aloitaJalkamatkanAani', 'sfx.play(', 'ennakoiSiirtoZoomi', 'aloitaSaattavaKamera']) {
+    assert.ok(!pallolauta.includes(koukku), `pallolauta kutsuu ${koukku} itse — ui.js:n kutsut kahdentuisivat`);
+  }
+  // Ennakkozoomi ja saatto eivät vaadi pallolta yleiskuvan porrasta.
+  for (const metodi of ['ennakoiSiirtoZoomi', 'aloitaSaattavaKamera']) {
+    const alku = ui.search(new RegExp(`^  (?:async )?${metodi}\\(`, 'm'));
+    assert.ok(alku > 0, `${metodi} puuttuu`);
+    const runko = ui.slice(alku, alku + 900);
+    assert.match(runko, /if \(!this\.pallolautaPaalla\(\) && !this\.mannerZoom\) return;/, `${metodi}: pallolla ei ole yleiskuvaa`);
+  }
+  // Lento: doFly ja mannerlento kertovat kuljettajalle lennosta; pallolla kone.
+  assert.ok((ui.match(/MANNER_LENTO_MS, \{ lento: true \}\)/g) ?? []).length >= 2, 'doFly ja mannerlento eivät kerro lennosta');
+  assert.match(lue('../js/pallolauta/siirto.js'), /el = lento\n\s+\? koneElementti\(\)\n\s+: nappulaElementti\(/);
+  // Noppa: pallolla lähtö on nappulan ruutupiste, lepopaikka ruudulta.
+  assert.match(ui, /const from = pallolla\n\s+\? \(this\.pallolauta\.ruutupiste\(player\.pos\) \?\? to\)/);
+  assert.match(ui, /if \(!pallolla\) this\.kartta\.merkitseNopanPaikka\(to\);/);
+  // Reitit: yksi sääntö (matkareittienValinta), kaksi piirtäjää.
+  assert.match(ui, /^  matkareittienValinta\(\) \{/m);
+  assert.match(ui, /if \(this\.kartta\.lepotila\) \{ this\.pallolauta\?\.paivita\(\); return; \}/);
+  assert.match(lue('../js/pallolauta/reitit.js'), /pointAlong\(reitti\.poly, i \/ askelia\)/, 'helmet eivät ole samalla kaavalla kuin pixelOf');
+  assert.match(lue('../js/pallolauta/lauta.js'), /const valinta = ui\.matkareittienValinta\(\);/);
+  // Kehäriippuvuus poistui: pallolauta ei tuo ui.js:ää; koreografian
+  // luvut tulevat kummallekin laudalle samasta moduulista.
+  assert.ok(!pallolauta.includes("from '../ui.js'"), 'js/pallolauta tuo ui.js:ää');
+  assert.match(lue('../js/pallolauta/kamera.js'), /import \{ siirtoajonPehmennys \} from '\.\.\/siirtokoreografia\.js';/);
+  assert.match(ui, /from '\.\/siirtokoreografia\.js';/);
+  // Kohteet napautettavissa: lähin kohde 44 px → doMove; R-malli, ei elementin click.
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /ui\.doMove\(kohde\.key\)/);
+  assert.match(lauta, /const kohde = lahinKohde\(lat, lng\);/);
+  assert.match(lue('../css/styles.css'), /\.pallolauta-kohde \{\n  pointer-events: none;/);
+  // Kamera seuraa teleporttia, ei siirtoa: kuljettaja kirjaa paikkansa perillä.
+  assert.match(lue('../js/pallolauta/siirto.js'), /lauta\.merkitseNappulanPaikka\(perilla\)/);
 });

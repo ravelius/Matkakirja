@@ -1,6 +1,11 @@
 // Käyttöliittymä: aarrekartan piirto, ohjauspaneeli, tietovisa ja bottien ohjaus.
 
 import { pixelOf, pointAlong, posKey } from './rules.js';
+import {
+  ENNAKKOZOOMIN_MS, ENNAKON_ASKELIA, ENNAKON_HENGAHDYS_MS, HYPYN_TAUKO_MS,
+  NAPPULAN_LAHDON_VIIVE_MS, SAATON_PEHMENNYS, SAATON_VAHIN_OSUUS, SAATON_VAHIN_PX,
+  SIIRTOZOOMIN_LAHENNYS, STEP_MS, hypynHuippu, hypynVaihe, jalkamatkanAskel, siirtoajonKesto,
+} from './siirtokoreografia.js';
 import { ISOISAN_VALOKUVAT, LENNON_VALOKUVAN_VIIVE_MS, rajausTyyli, valokuvanKuvateksti } from './isoisan-valokuvat.js';
 import {
   chooseDuelAnswer,
@@ -369,342 +374,16 @@ const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
  */
 const KOHTAAMISKUVAN_LAHDE = 'Matkakirjan kuvitus';
 
-// Animaatioiden rytmi millisekunteina.
-
-const STEP_MS = 190; // yhden hypyn lentoaika kartalla
 /*
- * NAPPULAN HYPPY (omistajan tilaus #100).
- *
- * `STEP_MS` on nyt HYPYN LENTOAIKA, ja tauko on oma lukunsa: askel
- * kestää yhteensä lento + tauko. Jako on tarkoituksellinen, koska
- * tulossa on erikseen hitaampi jalkamatkasiirtymä (#96) — silloin
- * riittää kasvattaa lentoaikaa (parametri `stepMs`), ja tauko pysyy
- * sinä pienenä hengähdyksenä, joka tekee liikkeestä siirretyn
- * pelinappulan eikä liukuvan pisteen.
- *
- * Kaaren korkeus laudan yksiköinä on suhteessa hypyn pituuteen, mutta
- * rajoissa: lyhyt askel ei saa jäädä litteäksi eikä pitkä (lento,
- * jossa askelia on yksi) kaartaa ruudun ulkopuolelle.
- */
-const HYPYN_TAUKO_MS = 190; // näkymätön käsi laskee nappulan ja tarttuu uudelleen
-const HYPYN_KAARI = 0.34; // kaaren huippu suhteessa hypyn pituuteen
-const HYPYN_KORKEUS_MIN = 9;
-const HYPYN_KORKEUS_MAX = 30;
-/*
- * JALKAMATKAN OMA ASKEL (omistajan tilaus #96: *"Matkustusanimaatio
- * jalan saisi olla hitaampi."*).
- *
- * Muutos on täsmälleen se, jota #100 varautui: kasvatetaan HYPYN
- * LENTOAIKAA, ei taukoa. Tauko on se pieni hengähdys, joka tekee
- * liikkeestä siirretyn pelinappulan; jos sekin venyisi, jalkamatka
- * muuttuisi nykiväksi odotteluksi. Lento (STEP_MS, FLIGHT_MS,
- * MANNER_LENTO_MS) jää ennalleen — tilaus koski maareittejä.
- *
- * 190 → 640 ms eli 3,4×. Ensimmäinen yritys oli 340 ms (1,8×), mutta
- * omistajan pelitesti 27.8.2026 (iPhone) oikaisi sen: *"pelinappulan
- * etenemisvauhti pitäisi olla paljon hitaampi"* — paljon, ei vähän.
- * 640 ms on se aika, jossa silmä ehtii seurata yhden hypyn kaaren
- * alusta loppuun ja liike lukee käden siirroksi eikä lentoradaksi.
- *
- * VIELÄ HITAAMPI, MUTTA PORRASTETTUNA (omistajan tilaus 1.9.2026 ilta:
- * *"pelaajan nappulat saisi edetä vähän hitaammin"*).
- *
- * 640 → 860 ms eli 1,34×. "Vähän hitaammin" on tässä juuri se ero,
- * jonka silmä lukee rauhallisuudeksi eikä hitaudeksi: kaari nousee ja
- * laskee näkyvästi omassa ajassaan, mutta askel ei ala tuntua
- * pysähdykseltä. Tauko (HYPYN_TAUKO_MS) pysyy ennallaan — se on
- * käden hengähdys, ei vauhdin säädin.
- *
- * PORRASTUS ON PAKKO OLLA. Kuutosella hyppyjä on kuusi, ja pelkkä
- * kertoiminen tekisi matkasta 6 × 860 + 5 × 190 ≈ 6,1 s odottelua —
- * ja sen PÄÄLLE tulee vielä ennakkozoomi (ENNAKKOZOOMIN_MS). Siksi
- * askel lyhenee sitä mukaa kuin heitto pitenee: matkan hyppyihin ja
- * taukoihin varataan enintään JALKAMATKAN_KATTO_MS, ja pitkän heiton
- * askel kutistuu kattoon mahtuvaksi.
- *
- * ALARAJA ON VANHA ASKEL. Kutistus ei koskaan vie nopeammaksi kuin
- * ennen tätä muutosta (JALKAMATKAN_STEP_LYHIN_MS = 640), joten myös
- * pisin heitto on omistajan mittapuulla hitaampi kuin v1400-sarjan
- * peli — ei nopeampi. Käytännön luvut (tauko 190 ms):
- *
- *   1 askel  860 ms → matka 0,9 s
- *   3 askelta 860 ms → matka 3,0 s
- *   5 askelta 860 ms → matka 5,1 s
- *   6 askelta 708 ms → matka 5,2 s   (katto puree vasta tässä)
- */
-const JALKAMATKAN_STEP_MS = 860;
-const JALKAMATKAN_STEP_LYHIN_MS = 640;
-const JALKAMATKAN_KATTO_MS = 5200;
-
-/**
- * Yhden hypyn lentoaika jalkamatkalla, kun matkassa on `askelia` hyppyä.
- *
- * Puhdas funktio ja tarkoituksella oma nimensä: tämä on se yksi paikka,
- * jossa askeltahdin porrastus lasketaan (ks. JALKAMATKAN_STEP_MS), ja
- * tests/siirtoajoitus.test.mjs vartioi sitä lukuina eikä lähdetekstinä.
- */
-export function jalkamatkanAskel(askelia) {
-  const n = Math.max(1, Math.round(askelia || 1));
-  // Taukoja on yksi vähemmän kuin hyppyjä; katto koskee koko matkaa.
-  const varattu = JALKAMATKAN_KATTO_MS - (n - 1) * HYPYN_TAUKO_MS;
-  const mahtuva = varattu / n;
-  return Math.round(Math.max(JALKAMATKAN_STEP_LYHIN_MS, Math.min(JALKAMATKAN_STEP_MS, mahtuva)));
-}
-/*
- * SAATTAVA KAMERA (omistajan tilaus #96: *"Kartta voisi samalla myös
- * hitaasti siirtyä uuteen kohteeseen ja paljastaa sitä näkyviin sitä
- * mukaa kun nappula etenee."*).
- *
- * Kamera ei seuraa nappulaa hypyittäin — se olisi nykivä, koska hyppy
- * on paraabeli ja välissä on tauko — vaan LIUKUU koko matkan ajan
- * kohti määränpäätä yhtenä ajona (js/kartta.js ajaKamera). Se on
- * samalla se tapa, jolla kohde "paljastuu sitä mukaa": uutta maastoa
- * tulee näkyviin ruudun reunasta täsmälleen sitä tahtia kuin nappula
- * etenee.
- *
- * KAMERA MENEE MYÖS LÄHEMMÄS (omistajan pelitesti 27.8.2026, iPhone:
- * *"kamera-animaatio ei seuraa järkevästi pelinappulaa. pitäisi olla
- * ainakin lähempänä jotta lauta liikkuisi enemmän"*).
- *
- * Ensimmäinen toteutus piti mittakaavan ennallaan ja siirsi vain
- * keskipistettä. Ongelma ei ollut liu'ussa vaan siinä, ETTEI LAUTA
- * LIIKKUNUT TARPEEKSI: kaukaa katsottuna koko matka mahtuu ruudulle,
- * ja kamera siirtyy muutaman kymmenen pikseliä — silmä ei näe sitä
- * seuraamisena. Lähikuvassa sama matka on ruudullinen liikettä, ja
- * juuri se on "kartta siirtyy uuteen kohteeseen".
- *
- * === ZOOMI ENSIN, VASTA SITTEN NAPPULA (omistajan tilaus 1.9.2026
- * ilta: *"kartta saisi zoomautua lähemmäksi ensin ja sitten vasta
- * pelaaja alkaisi liikkua"*) =======================================
- *
- * Vanha ketju teki molemmat yhtä aikaa: yksi ajo, joka sekä zoomasi
- * että siirsi keskipisteen, ja nappula lähti samalla kehyksellä.
- * Silloin zoomi kilpaili nappulan kanssa katseesta eikä kumpikaan
- * lukenut selvästi. Nyt siirto on KAKSI PERÄKKÄISTÄ VAIHETTA:
- *
- *   1. ENNAKKOZOOMI (ennakoiSiirtoZoomi). Kamera ajaa lähemmäs
- *      nappulan ja reitin ensimmäisten askelten ympärille. Ajoa
- *      ODOTETAAN — nappulaa ei edes poimita laudalta ennen kuin zoomi
- *      on perillä, ja perään jää lyhyt hengähdys, jotta vaiheet
- *      erottuvat toisistaan eivätkä sula yhdeksi liikkeeksi.
- *   2. SAATTO (aloitaSaattavaKamera). Kamera liukuu määränpäähän
- *      nappulan tahdissa PITÄEN ennakkozoomin mittakaavan. Tämä on se
- *      vanha tilaus #96 sellaisenaan: uutta maastoa tulee näkyviin
- *      ruudun reunasta sitä mukaa kuin nappula etenee.
- *
- * SIIRTOZOOMIN MÄÄRÄ on kerroin nykyiseen zoomiin: 1,7× (portaikon
- * askel on 1,5, joten tämä on runsas yksi porras ja alle kahden). Ylä-
- * rajat hoitaa kartta.siirtoZoomiKerroin — se ei mene lähemmäs kuin
- * pelaajan sallittu lähin porras EIKÄ lähemmäs kuin siirtonäkymän oma
- * katto, eikä se koskaan zoomaa ULOS pelaajan omasta lähikuvasta.
- *
- * EI PALUUTA — KAMERA JÄÄ SINNE (sama tilaus). Aiemmin perillä ajettiin
- * takaisin lähtökertoimeen (SAATON_PALUU_MS 900), ja sille oli yksi
- * oikea syy: saattozoomi oli SUHTEELLINEN, joten ilman paluuta jokainen
- * heitto olisi kertonut zoomin uudelleen 1,7:llä ja kolmen siirron
- * jälkeen kartta olisi ollut portaikon pohjassa. Syy poistui, kun
- * katosta tuli absoluuttinen (kartta.siirtoZoomiKerroin): tavoite
- * kylläänty muutamassa siirrossa siirtonäkymän kattoon eikä nouse siitä
- * enää, joten kamera saa jäädä sinne minne se ajettiin. Samalla katosi
- * se nykäisy, jossa juuri katsottu lähikuva loittoni heti perillä.
- *
- * SAATOLLA ON OMA KÄYRÄNSÄ, EI KAMERA-AJON KUUTIOTA: kuutio seisoo
- * lähes paikallaan matkan ensimmäisen neljänneksen, ja kamera jäisi
- * jälkeen ja kirisi lopussa. Käyrä oli ensin smoothstep ja on
- * 2.9.2026 alkaen trapetsi (ks. seuraava osio) — molemmat lähtevät ja
- * pysähtyvät pehmeästi, mutta vain trapetsi kulkee välillä aidosti
- * tasaista vauhtia. Ennakkozoomi käyttää yhä kamera-ajon omaa
- * kuutiokäyrää: se on kohtaus eikä seuranta, ja Raamatun
- * KAMERA-AJOT-linjaus haluaa siihen kiihdytyksen ja jarrutuksen.
- *
- * ELE VOITTAA: ajon keskeyttää sormi kartalla, nipistys, rulla tai
- * zoomipainike (kartta.pysaytaKameraAjo), ja kartta jää siihen mihin
- * ajo ehti. Sitä ei yritetä jatkaa — pelaajan oma ele on viimeinen
- * sana kartan paikasta. Keskeytetty ennakkozoomi ei myöskään estä
- * nappulaa lähtemästä: matka jatkuu siitä näkymästä, jonka pelaaja
- * itse valitsi.
+ * SIIRRON KOREOGRAFIAN LUVUT JA KÄYRÄT (STEP_MS, HYPYN_TAUKO_MS,
+ * jalkamatkanAskel, NAPPULAN_LAHDON_VIIVE_MS, siirtoajonPehmennys,
+ * siirtoajonKesto, SIIRTOZOOMIN_LAHENNYS, ENNAKKOZOOMIN_MS, ENNAKON_*,
+ * SAATON_VAHIN_*) asuvat js/siirtokoreografia.js:ssä: ne ovat
+ * lautariippumattomia, ja karttapallo (js/pallolauta/) lukee samat
+ * luvut (pallolauta vaihe 2, docs/moduulit/karttapallo.md luku 7).
+ * Siirto oli sanatarkka kommentteineen — perustelut ovat siellä.
  */
 
-/*
- * ══════════════════════════════════════════════════════════════════
- * SIIRRON KOREOGRAFIA: KAMERA EDELLÄ, NAPPULA PERÄSSÄ, PERILLE ENNEN
- * ══════════════════════════════════════════════════════════════════
- *
- * Omistajan tilaus 2.9.2026, sanatarkasti: *"Kun pelinappula liikkuu
- * jalan, niin se nappulan liikkeelle lähtö voisi olla hieman
- * viivytetty niin, että kartta ehtii lähteä hitaasti jo rullaamaan
- * eteenpäin, juuri sellaisella vauhdilla, että kun se ensin vähän
- * hitaasti kiihdyttää, sitten pysyy vakionopeudessa ja lopussa taas
- * hitaasti jarruttaa, niin laatta ehtii viivytetysti lähtemään
- * liikkeelle ja etenemään loppuun asti, niin, että laatta saapuu
- * perille vähän ennen, kuin kartan panorointiliike loppuu."*
- *
- * Tilauksessa on kolme erillistä lukua, ja jokainen on oma vakionsa:
- *
- *   1. VIIVE (NAPPULAN_LAHDON_VIIVE_MS). Kamera lähtee ensin ja
- *      nappula vasta viiveen päästä. Viive on tarkoituksella se aika,
- *      jossa kiihdytysramppi ehtii juuri ohi (ks. SAATON_RAMPPI): kun
- *      nappula lähtee, kartta on jo vakionopeudessa, ja liike lukee
- *      nimenomaan "kartta rullaa jo, nappula lähtee mukaan".
- *   2. SAAPUMISERO (NAPPULAN_SAAPUMISERO_MS). Kamera-ajo jatkuu
- *      nappulan laskeuduttua vielä hetken ja pysähtyy pehmeästi.
- *      Ilman tätä matka päättyisi kahteen yhtaikaiseen pysähdykseen,
- *      ja se lukee töksähdyksenä; nyt liike sammuu vasta kun nappula
- *      on jo levossa.
- *   3. KÄYRÄ (siirtoajonPehmennys). Smoothstep oli ease-in-out mutta
- *      sen nopeus on paraabeli 6t(1−t) — se ei ole hetkeäkään
- *      vakio, vaan kiihtyy puoliväliin ja hidastuu heti perään.
- *      Tilaus sanoo *"ensin vähän hitaasti kiihdyttää, sitten pysyy
- *      vakionopeudessa ja lopussa taas hitaasti jarruttaa"* eli
- *      TRAPETSI: kiihdytysramppi, tasainen keskiosa, jarrutusramppi.
- *
- * KESTORAJAT. Kameran ajo on viive + nappulan oma kesto +
- * saapumisero, ja nappulan kesto on jo porrastettu heiton pituuden
- * mukaan (jalkamatkanAskel). Rajat ovat siis vartijoita eivätkä
- * säätimiä: nykyisillä luvuilla lyhin siirto on 1 440 ms ja pisin
- * 5 758 ms, eli kumpikaan raja ei pure. Ne ovat olemassa siksi,
- * ettei tuleva askeltahdin muutos voi vahingossa tehdä kamera-ajosta
- * välähdystä eikä minuutin ryömintää.
- */
-/*
- * MITATUT LUVUT, EI ARVATUT (tools/savukkeet/savuke-siirtokoreografia.mjs,
- * Chromium iPhone 402x874 ja iPad 834x1112, 2.9.2026). Ruudulla mitattu
- * viive ja saapumisero jäävät nimellisiä pienemmiksi, koska sekä
- * `wait()` että nappulan hypyt pyöristyvät kehysrajoille ja matka
- * kerää sitä ylitystä joka hypyllä. Nimellinen 300 ms mittautui
- * 340-380 ms:ksi (viive jää kehyksen verran myöhäiseksi) ja nimellinen
- * 280 ms mittautui 170-245 ms:ksi (nappula myöhästyy hyppyjen
- * ylityksellä). Molemmat osuvat omistajan haarukoihin RUUDULLA
- * (250-400 ms ja 150-300 ms), ja juuri se on se luku, joka
- * merkitsee.
- *
- * SAAPUMISERO ON HAARUKAN YLÄPÄÄSSÄ TARKOITUKSELLA. Nappulan matka on
- * kehysvetoinen (hypyt + `wait`-tauot) ja kamera-ajo aikavetoinen,
- * joten hidas laite venyttää nappulaa muttei kameraa — ero kutistuu
- * juuri silloin kun kehykset ovat harvassa. Mitattu ero oli kontin
- * Chromiumissa 60-200 ms, eli järjestys säilyi jokaisessa ajossa,
- * mutta vara ei ole suuri. Jos jollakin laitteella nappula ehtii
- * kameran ohi, tätä lukua nostetaan — ei nappulan tahtia lasketa.
- */
-const NAPPULAN_LAHDON_VIIVE_MS = 300;
-const NAPPULAN_SAAPUMISERO_MS = 280;
-const SIIRTOAJON_LYHIN_MS = 1200;
-const SIIRTOAJON_PISIN_MS = 6200;
-/*
- * Kiihdytyksen ja jarrutuksen osuus ajosta, kumpikin erikseen. 0,3
- * jättää keskelle 40 % matkasta tasaista vauhtia — tarpeeksi, että
- * silmä ehtii lukea sen vakionopeudeksi, ja niin vähän, etteivät
- * päät tunnu äkkinäisiltä. Ramppien summa ei saa ylittää ykköstä
- * (siirtoajonPehmennys rajaa 0,49:ään varmuuden vuoksi).
- */
-const SAATON_RAMPPI = 0.3;
-
-/**
- * Trapetsipehmennys: kiihdytys → vakionopeus → jarrutus.
- *
- * Palauttaa kuljetun matkan osuuden (0…1) ajan osuudella `t`.
- *
- * NOPEUSRAMPIT OVAT ITSEKIN PEHMEITÄ (smoothstep) eivätkä lineaarisia.
- * Lineaarisella rampilla kiihtyvyys hyppäisi askelmana ramppien
- * päissä, ja juuri se hyppy näkyy kartalla pieninä nytkähdyksinä
- * silloin kun koko ruutu liikkuu. Smoothstep-rampin pinta-ala on
- * täsmälleen sama kuin lineaarisen (1/2), joten huippunopeus on
- * kummallakin `1/(1−r)` — pehmennys ei siis muuta ajoituksia
- * lainkaan, vain kiihtyvyyden muodon.
- *
- * Kaava paloittain, kun r = ramppi ja v = 1/(1−r):
- *   t < r        s = v·r·(a³ − a⁴/2),  a = t/r
- *   r ≤ t ≤ 1−r  s = v·(t − r/2)
- *   t > 1−r      s = 1 − v·r·(b³ − b⁴/2),  b = (1−t)/r
- *
- * Palat kohtaavat: molemmissa saumoissa arvo on v·r/2 ja 1 − v·r/2.
- */
-export function siirtoajonPehmennys(t, ramppi = SAATON_RAMPPI) {
-  const x = Math.min(1, Math.max(0, t));
-  const r = Math.min(0.49, Math.max(0.0001, ramppi));
-  const v = 1 / (1 - r);
-  if (x < r) {
-    const a = x / r;
-    return v * r * (a ** 3 - (a ** 4) / 2);
-  }
-  if (x > 1 - r) {
-    const b = (1 - x) / r;
-    return 1 - v * r * (b ** 3 - (b ** 4) / 2);
-  }
-  return v * (x - r / 2);
-}
-
-/**
- * Kamera-ajon kesto, kun nappulan oma matka kestää `nappulanKesto` ms.
- *
- * Puhdas funktio ja oma nimensä samasta syystä kuin jalkamatkanAskel:
- * tämä on se yksi paikka, jossa koreografian ajoitus lasketaan, ja
- * tests/siirtoajoitus.test.mjs vartioi sitä lukuina.
- */
-export function siirtoajonKesto(nappulanKesto) {
-  const kokonais = NAPPULAN_LAHDON_VIIVE_MS
-    + Math.max(0, nappulanKesto || 0)
-    + NAPPULAN_SAAPUMISERO_MS;
-  return Math.round(Math.min(SIIRTOAJON_PISIN_MS, Math.max(SIIRTOAJON_LYHIN_MS, kokonais)));
-}
-
-const SAATON_PEHMENNYS = (t) => siirtoajonPehmennys(t);
-/*
- * SIIRTOZOOMIN MÄÄRÄ 1,7 → 2,0 (omistaja 2.9.2026: *"tässä kartta saa
- * olla suht lähelle zoomattuna, jolloin liikkeestä tulee
- * dynaamisemman näköinen"*).
- *
- * Kerroin on suhteellinen, mutta sen katto on absoluuttinen
- * (js/kartta.js siirtoZoomiKerroin, SIIRTONAKYMAN_LAHIN_KERROIN 3,5×
- * lähimmästä portaasta), joten nosto EI vie lähemmäs kuin ennen — se
- * vie kattoon NOPEAMMIN. Ero näkyy juuri siinä missä omistaja sen
- * pyysi: ensimmäisessä heitossa maan yleisnäkymästä. Vanhalla 1,7:llä
- * kattoon tarvittiin kaksi heittoa, uudella yksi, ja jo ensimmäinen
- * siirto liikuttaa lautaa ruudullisen verran.
- */
-const SIIRTOZOOMIN_LAHENNYS = 2.0;
-/*
- * Ennakkozoomin kesto ja sen jälkeinen hengähdys.
- *
- * 760 ms on lyhyempi kuin kartan muut ajot (kartta.js AJO_MS 2000,
- * saapuminen): tämä toistuu joka heitolla, joten se saa olla ripeä
- * ele eikä kohtaus. Hengähdys on tarkoituksellisen lyhyt — se erottaa
- * vaiheet toisistaan (*"ja sitten vasta pelaaja alkaisi liikkua"*)
- * ilman että peli tuntuu jumittuvan.
- */
-const ENNAKKOZOOMIN_MS = 760;
-const ENNAKON_HENGAHDYS_MS = 120;
-/*
- * Montako reitin ensimmäistä askelta ennakkozoomi ottaa rajaukseensa
- * nappulan lisäksi. Kaksi askelta kertoo katsojalle SUUNNAN — mihin
- * päin nappula on lähdössä — mutta ei vielä vedä kameraa määränpäähän,
- * joka on saaton oma tehtävä.
- */
-const ENNAKON_ASKELIA = 2;
-/*
- * Alle tämän jäävää siirtoa ei ajeta lainkaan: kohde on jo käytännössä
- * ruudun keskellä, ja pikkuliike näyttäisi vain siltä että kartta
- * värähtää nappulan lähtiessä. Mitta on RUUDUN pikseleitä.
- *
- * KYNNYS ON RUUDUN KOKOON SUHTEUTETTU (mitattu 2.9.2026,
- * tools/savukkeet/savuke-siirtokoreografia.mjs). Kiinteä 60 px oli
- * puhelimen kokoisella ruudulla liikaa: mittaus löysi Ateenasta
- * kahden askeleen maasiirron, jossa iPadilla kamera saattoi normaalisti
- * mutta iPhonella (402 px leveä) ajo jäi kokonaan tekemättä — sama
- * matka lautayksikköinä on kapealla ruudulla noin 40 % pikseleistä,
- * koska yleiskuvan mittakaava lasketaan ruudun leveydestä. Silloin
- * omistajan tilaus jäisi toteutumatta juuri sillä laitteella, jolla
- * peliä pelataan: *"kartta ehtii lähteä hitaasti jo rullaamaan
- * eteenpäin."*
- *
- * "Näkyykö liike" on ruudun kokoon suhteutettu kysymys, joten kynnys
- * on nyt osuus karttaruudun leveydestä ja absoluuttinen pohja sen
- * alle. 6 % on iPhonella 24 px ja iPadilla 50 px — kummallakin selvästi
- * enemmän kuin pyöristysvirhe, mutta vähemmän kuin puolet
- * askelvälistä.
- */
-const SAATON_VAHIN_PX = 24;
-const SAATON_VAHIN_OSUUS = 0.06;
 /*
  * JALKAMATKAN ÄÄNIMAISEMA (#96: *"Taustalle pitää kehitellä sopiva
  * äänimaisema siirtymän ajaksi."*).
@@ -3130,8 +2809,8 @@ export class UI {
      * `pallolauta` on js/pallolauta/lauta.js:n olio, kun karttapallo on
      * pelin lauta; tasokartta on silloin lepotilassa (js/kartta.js) ja
      * herää vain LINSSIKARTAKSI (`linssikartta`: siirron tai linssin
-     * ajaksi, avaaLinssikartta/suljeLinssikartta). Vaiheessa 1 siirrot
-     * tehdään linssikartalla — pallolla on kaupungit ja nappula.
+     * ajaksi, avaaLinssikartta/suljeLinssikartta). Vaiheesta 2 alkaen
+     * siirrot tehdään pallolla; linssikartta on vain linsseille.
      */
     this.pallolauta = null;
     this.pallolautaAvautuu = false;
@@ -4036,10 +3715,12 @@ export class UI {
    * (js/ui-apurit.js lautaValinta), ei pelitilan kenttä. Kun lauta on
    * pallo, tasokartta (js/kartta.js) nukkuu ja karttapallo
    * (js/pallolauta/lauta.js) asuu karttaruudussa sen paikalla. Tasokartta
-   * herää LINSSIKARTAKSI vain kahdesta syystä: siirto (vaihe 1:
-   * Matkusta-nappi avaa sen ja perillä se sulkeutuu) ja linssi
-   * (matkalaukun valinta). Kamera-ajot kulkevat `kamera()`-delegaatin
-   * kautta, joka valitsee hereillä olevan laudan.
+   * herää LINSSIKARTAKSI vain linssin ajaksi (matkalaukun valinta,
+   * valitseLinssi); siirrot, laiva, lento, noppa ja kohteet ovat
+   * pallolla (vaihe 2, js/pallolauta/{siirto,merkit,reitit}.js).
+   * Kamera-ajot kulkevat `kamera()`-delegaatin kautta, joka valitsee
+   * hereillä olevan laudan, ja nappulan liike laudan kuljettajan
+   * kautta (nappulanKuljettaja).
    *
    * VARAPOLKU: jos Globe.gl ei lataudu (ei verkkoa, yhden tiedoston
    * versio, WebGL puuttuu), kartta herää tälle istunnolle ja laitteen
@@ -4107,18 +3788,12 @@ export class UI {
       return false;
     }
     this.pallolauta = lauta;
-    const pos = this.game.player?.pos;
-    if (pos?.type === 'city') {
-      // Kartta nukkumaan (jos se ehti herätä, esim. aloituslennon jälkeen)
-      // ja pallo näkyviin nykyisen kaupungin ylle.
-      this.kartta.nuku();
-      lauta.nayta();
-      lauta.kamera.kotiin();
-    } else {
-      // Matka on kesken reitillä: se jatkuu linssikartalla (vaihe 1), ja
-      // pallo ottaa laudan takaisin vasta kaupungissa.
-      this.avaaLinssikartta();
-    }
+    // Kartta nukkumaan (jos se ehti herätä, esim. aloituslennon jälkeen)
+    // ja pallo näkyviin pelaajan paikan ylle — kaupungin tai reitin
+    // välipisteen, matka jatkuu pallolla kummastakin (vaihe 2).
+    this.kartta.nuku();
+    lauta.nayta();
+    lauta.kamera.kotiin();
     this.render();
     return true;
   }
@@ -4158,6 +3833,11 @@ export class UI {
     nollaaFokuskohteet(this);
     nollaaFokuspiste(this);
     nollaaElaintakyt(this);
+    // Ruutuun ankkuroidut kalusteet (maataulu, mittajana, asteikot) pois:
+    // ne ovat tasokartan omia (karttapallo.md luku 4) eivätkä saa jäädä
+    // pallon päälle, kun linssikartta suljetaan (savuke-pallolauta,
+    // kaappaus pallolauta-siirto 5.9.2026).
+    nollaaFokusmitat(this);
     this.pysaytaAikajana();
     this.maastonimiTunniste = null;
     this.countryKey = null;
@@ -4167,11 +3847,13 @@ export class UI {
   }
 
   /**
-   * LINSSIKARTTA: tasokartta herää pallon päälle. Vaiheessa 1 tämä on
-   * kevyin mahdollinen kuori — pallo piiloon, kartta hereille, kamera
-   * pallon näkymään — jotta siirrot, nopanheitto ja linssit toimivat
-   * täsmälleen kuten tasokartalla. `lahto` on kaupunki, josta lähdettiin:
-   * kuori sulkeutuu, kun ollaan perillä toisessa kaupungissa.
+   * LINSSIKARTTA: tasokartta herää pallon päälle LINSSIN AJAKSI
+   * (valitseLinssi). Kevyin mahdollinen kuori — pallo piiloon, kartta
+   * hereille, kamera pallon näkymään — jotta linssit toimivat
+   * täsmälleen kuten tasokartalla; vaihe 4 hioo kuoren. Siirrot eivät
+   * enää kulje tästä (vaihe 2: ne ovat pallolla). `lahto` jää
+   * tarkistaLinssikartalle: ilman linssiä avattu kuori sulkeutuu, kun
+   * ollaan perillä toisessa kaupungissa.
    */
   avaaLinssikartta(tiedot = {}) {
     if (!this.pallolauta || this.linssikartta) return false;
@@ -4189,9 +3871,9 @@ export class UI {
   /** Linssikartta kiinni: kartta nukkumaan, pallo takaisin kaupunkiin. */
   suljeLinssikartta() {
     if (!this.pallolauta || !this.linssikartta) return false;
-    // Kesken matkan (reitillä tai siirtoanimaatiossa) ei palata pallolle:
-    // vaiheessa 1 matka jatkuu vain linssikartalla.
-    if (this.busy || this.movingPlayerId || this.game.player?.pos?.type !== 'city') return false;
+    // Kesken siirtoanimaation ei vaihdeta lautaa; reitin välipisteestä
+    // palataan pallolle kuten kaupungista (vaihe 2: matka on pallolla).
+    if (this.busy || this.movingPlayerId != null) return false;
     this.linssikartta = null;
     document.body.classList.remove('linssikartta-auki');
     this.suljeLiuku();
@@ -4205,7 +3887,7 @@ export class UI {
   /** Perillä? Linssikartta sulkeutuu, kun siirto päättyi uuteen kaupunkiin. */
   tarkistaLinssikartta() {
     const lk = this.linssikartta;
-    if (!lk || lk.linssi || this.busy || this.movingPlayerId) return;
+    if (!lk || lk.linssi || this.busy || this.movingPlayerId != null) return;
     const { game } = this;
     if (game.phase === 'move' || game.phase === 'roll' || game.phase === 'over') return;
     const pos = game.player?.pos;
@@ -7264,49 +6946,55 @@ export class UI {
    * niihin ruutuihin, joilla nappula pysähtyy — yhtä monta joka
    * reitillä, tasavälein, myös merellä.
    */
-  paivitaMatkareitit() {
-    const kerros = this.matkaLayer;
-    if (!kerros) return;
+  /**
+   * MITKÄ MATKAREITIT JA LENTOKAARET NÄYTETÄÄN — yksi sääntö kahdelle
+   * laudalle (pallolauta vaihe 2: js/pallolauta/reitit.js piirtää
+   * täsmälleen saman valinnan pallolle, joten sääntö on tässä eikä
+   * piirrossa).
+   *
+   * Reitit näkyvät siirtovaiheessa (heitto tai siirto) ja liu'un
+   * ollessa auki; ei katselutilassa eikä botin vuorolla. Kaupungissa
+   * naapurireitit, kesken reittiä pelkkä se reitti, jolla nappula on —
+   * silloin muut reitit eivät ole valittavissa eikä niitä siis kuulu
+   * näkyä.
+   *
+   * === LENTOKAARET OVAT ELÄVIÄ, EIVÄT LAATOISSA (omistaja 1.9.2026)
+   *
+   * Sanatarkasti: *"Poistetaan lentoreitit kokonaan näkyvistä.
+   * Piirretään ne näkyviin reaaliajassa vasta sitten jos pelaaja
+   * päättää mennä lentokoneella."* Laatoista ne poistuvat
+   * viivatason ajossa (tools/generoi-laattapyramidi.mjs LENNOT
+   * EIVÄT OLE VIIVATASOLLA); tässä on se, mikä tulee tilalle.
+   *
+   * Kaari näkyy kahdessa hetkessä ja katoaa itsestään molemmista:
+   *   1. kun pelaaja on avannut LENTÄEN-listan (travelSuodatin
+   *      'air'), jokaiseen valittavaan kohteeseen — silloin lista
+   *      ja kartta puhuvat samasta matkasta;
+   *   2. valitun lennon ajan (`lentoKaari`), kunnes nappula on
+   *      perillä ja doFly nollaa sen.
+   *
+   * Kaari on SAMA muoto kuin laudan omilla lentoreiteillä oli
+   * (neljännespoikkeama 0,12 · jänne), jotta pelaajan muistikuva
+   * kartasta ei muutu — vain elinikä muuttuu.
+   *
+   * VAIN LAATTALAUDALLA. Mantereiden omilla laudoilla lentoreitit
+   * piirtyvät yhä kartan kuvaan (drawBoard `air-routes`), eikä
+   * samaa yhteyttä saa olla ruudulla kahdesti.
+   *
+   * @returns {{ reittiTunnukset: string[], lennot: string[],
+   *   lentoLahto: string|null, avain: string }} tyhjä avain = ei mitään
+   */
+  matkareittienValinta() {
     const { game } = this;
     const vaiheessa = game.phase === 'roll' || game.phase === 'move';
     const naytetaan = !this.katselu && !game.player?.isBot
       && (this.liukuAuki || vaiheessa);
-    /*
-     * MITKÄ REITIT PIIRRETÄÄN. Kaupungissa naapurireitit, kesken
-     * reittiä pelkkä se reitti, jolla nappula on — silloin muut
-     * reitit eivät ole valittavissa eikä niitä siis kuulu näkyä.
-     */
     const kaupunki = game.cityOf?.();
     const kesken = !kaupunki && game.player?.pos?.type === 'edge'
       ? game.player.pos.edge : null;
     const reittiTunnukset = kaupunki
       ? [...(game.board.adj.get(kaupunki.id) ?? [])]
       : (kesken ? [kesken] : []);
-    /*
-     * === LENTOKAARET OVAT ELÄVIÄ, EIVÄT LAATOISSA (omistaja 1.9.2026)
-     *
-     * Sanatarkasti: *"Poistetaan lentoreitit kokonaan näkyvistä.
-     * Piirretään ne näkyviin reaaliajassa vasta sitten jos pelaaja
-     * päättää mennä lentokoneella."* Laatoista ne poistuvat
-     * viivatason ajossa (tools/generoi-laattapyramidi.mjs LENNOT
-     * EIVÄT OLE VIIVATASOLLA); tässä on se, mikä tulee tilalle.
-     *
-     * Kaari näkyy kahdessa hetkessä ja katoaa itsestään molemmista:
-     *   1. kun pelaaja on avannut LENTÄEN-listan (travelSuodatin
-     *      'air'), jokaiseen valittavaan kohteeseen — silloin lista
-     *      ja kartta puhuvat samasta matkasta;
-     *   2. valitun lennon ajan (`lentoKaari`), kunnes nappula on
-     *      perillä ja doFly nollaa sen.
-     *
-     * Kaari on SAMA muoto kuin laudan omilla lentoreiteillä oli
-     * (neljännespoikkeama 0,12 · jänne), jotta pelaajan muistikuva
-     * kartasta ei muutu — vain elinikä muuttuu.
-     */
-    /*
-     * VAIN LAATTALAUDALLA. Mantereiden omilla laudoilla lentoreitit
-     * piirtyvät yhä kartan kuvaan (drawBoard `air-routes`), eikä
-     * samaa yhteyttä saa olla ruudulla kahdesti.
-     */
     const lennotElavana = pyramidiKattaa(game.pack.id);
     const lentoKohteet = [];
     if (lennotElavana && naytetaan && kaupunki
@@ -7320,6 +7008,19 @@ export class UI {
     const avain = naytetaan && (reittiTunnukset.length || lennot.length)
       ? `${game.pack.id}:${kaupunki?.id ?? kesken}:${game.phase}`
         + `:${lentoLahto ?? ''}>${lennot.join(',')}` : '';
+    return { reittiTunnukset, lennot, lentoLahto, avain };
+  }
+
+  paivitaMatkareitit() {
+    // Pallolaudalla reitit ovat pallon kerroksia (js/pallolauta/reitit.js);
+    // sama sääntö (matkareittienValinta), eri piirtäjä.
+    if (this.kartta.lepotila) { this.pallolauta?.paivita(); return; }
+    const kerros = this.matkaLayer;
+    if (!kerros) return;
+    const { game } = this;
+    const {
+      reittiTunnukset, lennot, lentoLahto, avain,
+    } = this.matkareittienValinta();
     if (this.matkareittiAvain === avain) return;
     this.matkareittiAvain = avain;
     kerros.textContent = '';
@@ -10524,6 +10225,33 @@ export class UI {
       btn.addEventListener('click', () => {
         this.suljeMatkavalikko();
         sfx.play('flight');
+        /*
+         * PALLOLLA MANNERLENTO LENTÄÄ (pallolauta vaihe 2, karttapallo.md:
+         * "mannerlento samoin"): kaari ja kone mantereelta toiselle, sama
+         * kuljettaja kuin doFlyn lennolla. Tasokartalla mannerlento on
+         * ennallaan pelkkä siirto ilman animaatiota — `?lauta=kartta`
+         * antaa täsmälleen entisen pelin.
+         */
+        if (this.pallolautaPaalla()) {
+          const player = game.player;
+          const from = player.pos;
+          const lahto = game.cityOf();
+          if (lahto) this.lentoKaari = { a: lahto.id, b: kohde.city };
+          this.paivitaMatkareitit();
+          this.run(() => game.actionMannerLento(kohde.city), {
+            after: async () => {
+              try {
+                sfx.startFlight(MANNER_LENTO_MS);
+                await this.animatePawn(player, from, [player.pos], MANNER_LENTO_MS, { lento: true });
+                sfx.stopFlight();
+              } finally {
+                this.lentoKaari = null;
+                this.paivitaMatkareitit();
+              }
+            },
+          });
+          return;
+        }
         this.doAction(() => game.actionMannerLento(kohde.city));
       });
       this.actionsEl.appendChild(btn);
@@ -10928,12 +10656,11 @@ export class UI {
     // Liuku peittää pöllön napin, joten avautuessaan se sulkee chatin.
     if (this.liukuAuki) polloSulje();
     /*
-     * PALLOLAUDALLA MATKUSTA AVAA LINSSIKARTAN (vaihe 1, karttapallo.md
-     * luku 7): siirron koreografia, kohteet ja noppa elävät vielä
-     * tasokartalla, joten kartta herää pallon päälle ja siirto tehdään
-     * siellä; perillä kuori sulkeutuu ja pallo palaa (tarkistaLinssikartta).
+     * PALLOLAUDALLA SIIRROT TEHDÄÄN PALLOLLA (vaihe 2, karttapallo.md
+     * luku 7): Liiku ei enää herätä tasokarttaa — kohteet, reitit,
+     * noppa ja nappula elävät pallolla (js/pallolauta/lauta.js), ja
+     * linssikartta jää vain linsseille (valitseLinssi).
      */
-    if (this.liukuAuki && this.pallolautaPaalla()) this.avaaLinssikartta();
     /*
      * MATKUSTA EI LIIKUTA KARTTAA (omistaja 2.9.2026: *"Kun pelaaja
      * painaa Matkusta, niin kartta voisi pysyä paikallaan."*). Tässä
@@ -17999,10 +17726,12 @@ export class UI {
           // hurinan saattelemana (omistajan toive).
           if (game.pack.id === 'maailma') {
             await this.animateFlight(lahto?.name ?? '', kohde?.name ?? '', line, suunta);
-            await this.animatePawn(player, from, [player.pos], FLIGHT_MS);
+            await this.animatePawn(player, from, [player.pos], FLIGHT_MS, { lento: true });
           } else {
             sfx.startFlight(MANNER_LENTO_MS);
-            await this.animatePawn(player, from, [player.pos], MANNER_LENTO_MS);
+            // `lento` kertoo kuljettajalle, että askel on lento: pallolla
+            // kaaren ylittää kone, ei hyppivä nappula (js/pallolauta/siirto.js).
+            await this.animatePawn(player, from, [player.pos], MANNER_LENTO_MS, { lento: true });
             sfx.stopFlight();
           }
         } finally {
@@ -19643,7 +19372,10 @@ export class UI {
   async ennakoiSiirtoZoomi(from, path) {
     if (this.reducedMotion || this.dead) return;
     const kartta = this.kamera();
-    if (!kartta?.ajaKamera || !this.mannerZoom) return;
+    // Pallolla ei ole yleiskuvan porrasta: se on aina "lähikuvassa"
+    // (kamera on korkeus, ei portaikko), joten ehto 2 koskee vain karttaa.
+    if (!kartta?.ajaKamera) return;
+    if (!this.pallolautaPaalla() && !this.mannerZoom) return;
     const board = this.game.board;
     const lahto = pixelOf(board, from);
     // Askel, joka kertoo suunnan: ENNAKON_ASKELIA:s tai lyhyellä
@@ -19685,7 +19417,9 @@ export class UI {
   aloitaSaattavaKamera(path, kesto) {
     if (this.reducedMotion || this.dead) return;
     const kartta = this.kamera();
-    if (!kartta?.ajaKamera || !this.mannerZoom) return;
+    if (!kartta?.ajaKamera) return;
+    // Sama lautaehto kuin ennakolla: pallolla ei ole yleiskuvaa.
+    if (!this.pallolautaPaalla() && !this.mannerZoom) return;
     const maali = path[path.length - 1];
     if (!maali) return;
     const kohta = pixelOf(this.game.board, maali);
@@ -19790,7 +19524,7 @@ export class UI {
    */
   hyppaaAskel(g, hahmo, varjo, a, b, kesto, koko) {
     const matka = Math.hypot(b.x - a.x, b.y - a.y);
-    const huippu = Math.min(HYPYN_KORKEUS_MAX, Math.max(HYPYN_KORKEUS_MIN, matka * HYPYN_KAARI));
+    const huippu = hypynHuippu(matka);
     return new Promise((valmis) => {
       const alku = performance.now();
       const kehys = (nyt) => {
@@ -19799,9 +19533,10 @@ export class UI {
         // koko matka syöksy läpi yhdessä kehyksessä.
         if (this.dead) { valmis(); return; }
         const t = Math.min(1, (nyt - alku) / kesto);
-        // Vaaka: ease-in-out. Pysty: paraabeli, nolla päissä.
-        const e = t < 0.5 ? 2 * t * t : 1 - ((-2 * t + 2) ** 2) / 2;
-        const korkeus = huippu * 4 * t * (1 - t);
+        // Vaaka: ease-in-out. Pysty: paraabeli, nolla päissä — kaava
+        // on js/siirtokoreografia.js hypynVaihe, sama kuin pallolla.
+        const { e, nousu } = hypynVaihe(t);
+        const korkeus = huippu * nousu;
         const osuus = huippu > 0 ? korkeus / huippu : 0;
         g.style.transform =
           `translate(${(a.x + (b.x - a.x) * e).toFixed(2)}px, ${(a.y + (b.y - a.y) * e).toFixed(2)}px)${koko}`;
@@ -19818,13 +19553,86 @@ export class UI {
     });
   }
 
+  /**
+   * NAPPULAN KULJETTAJA — LAUDAN OMA OSA SIIRROSTA (pallolauta vaihe 2,
+   * docs/moduulit/karttapallo.md luku 7).
+   *
+   * Siirron koreografia — musiikki, ennakkozoomi, saatto, lähdön viive,
+   * äänet, tauot, saapuminen — on YHDESSÄ paikassa (animatePawnSisalla)
+   * kummallekin laudalle, ja vain nappulan fyysinen käsittely
+   * delegoidaan laudalle: tasokartalla SVG-kerros ja hyppaaAskel
+   * (tasokartanKuljettaja), pallolla DOM-elementti pallon pinnalla
+   * (js/pallolauta/siirto.js). Näin ui.js:n kutsut musiikkiin ja ääniin
+   * eivät kahdennu, ja tests/siirtoajoitus.test.mjs:n vartioima
+   * järjestys on sama laudasta riippumatta.
+   *
+   * Kuljettajan sopimus: `nosta()` luo liikkuvan nappulan (paikallaan
+   * oleva on jo piilossa movingPlayerId:n takia); `aseta(pos)` panee
+   * sen laudan paikkaan ilman liikettä (lähtöruutu, liikeherkkyys);
+   * `hyppaa(a, b, kesto)` on yksi hyppy paikasta toiseen ja ratkeaa
+   * laskeutuessa; `laske()` poistaa liikkuvan nappulan. Paikat ovat
+   * pelin `pos`-olioita, ei pikseleitä — pikselit ovat laudan asia.
+   */
+  nappulanKuljettaja(player, { lento = false } = {}) {
+    if (this.pallolautaPaalla()) return this.pallolauta.nappulanKuljettaja(player, { lento });
+    return this.tasokartanKuljettaja(player);
+  }
+
+  /** Tasokartan kuljettaja: sama koodi kuin ennen vaihetta 2, sopimuksen muodossa. */
+  tasokartanKuljettaja(player) {
+    const { board } = this.game;
+    let g = null;
+    let hahmo = null;
+    let varjo = null;
+    let koko = null;
+    let paikka = null;
+    return {
+      nosta: () => {
+        g = this.pawnShape(this.pawnLayer, player, false);
+        g.classList.add('pawn-moving');
+        hahmo = g.querySelector('.pawn-hahmo');
+        varjo = g.querySelector('.pawn-varjo');
+      },
+      aseta: (pos) => {
+        /*
+         * LIIKKUVA NAPPULA ON YHTÄ PIENI KUIN PAIKALLAAN OLEVA. Siirron
+         * paikka on TYYLISSÄ (hyppy kirjoittaa sen joka kehyksellä), ja
+         * tyyli voittaa transform-määreen — fokusnäkymän käänteisskaalaus
+         * on siksi kirjoitettava tähän samaan merkkijonoon eikä
+         * paivitaFokusMerkkiMitatiin. Kerroin luetaan KERRAN, ennakko- ja
+         * saattoajon asettamasta lopullisesta mittakaavasta (ensimmäinen
+         * aseta-kutsu on lähtöruutu, ja se tulee saaton jälkeen).
+         */
+        if (koko === null) {
+          const kerroin = this.fokusNappulaKerroin();
+          koko = Math.abs(kerroin - 1) < 0.0005 ? '' : ` scale(${kerroin.toFixed(4)})`;
+        }
+        paikka = pixelOf(board, pos);
+        g.style.transform = `translate(${paikka.x}px, ${paikka.y}px)${koko}`;
+      },
+      hyppaa: async (a, b, kesto) => {
+        const kohta = pixelOf(board, b);
+        await this.hyppaaAskel(g, hahmo, varjo, paikka, kohta, kesto, koko);
+        paikka = kohta;
+      },
+      laske: () => { g?.remove(); g = null; },
+    };
+  }
+
+  /** Paikallaan olevat nappulat laudan mukaan: SVG-kerros tai pallon merkit. */
+  piirraNappulat() {
+    if (this.kartta.lepotila) this.pallolauta?.paivita();
+    else this.drawPawns();
+  }
+
   /** Nappulan varsinainen siirto; kääre yllä hiljentää kartan animaatiot. */
   async animatePawnSisalla(
     player, from, path, stepMs = STEP_MS,
-    { saatto = false, maitse = false, musiikki = null } = {},
+    {
+      saatto = false, maitse = false, musiikki = null, lento = false,
+    } = {},
   ) {
     if (!path || path.length === 0) return;
-    const { board } = this.game;
     /*
      * SIIRTYMÄMUSIIKKI ALKAA HETI, KOKO KOREOGRAFIAN ALUSSA (omistajan
      * tilaus 2.9.2026: *"oman pienen musiikin, joka tulisi aina
@@ -19856,11 +19664,11 @@ export class UI {
     if (this.dead) { if (musiikki) this.lopetaSiirronMusiikki(); return; }
 
     this.movingPlayerId = player.id;
-    this.drawPawns();
-    const g = this.pawnShape(this.pawnLayer, player, false);
-    g.classList.add('pawn-moving');
-    const hahmo = g.querySelector('.pawn-hahmo');
-    const varjo = g.querySelector('.pawn-varjo');
+    this.piirraNappulat();
+    // Laudan oma kuljettaja (ks. nappulanKuljettaja): liikkuva nappula
+    // syntyy nyt, paikkansa se saa vasta saaton jälkeen (alla).
+    const kuljettaja = this.nappulanKuljettaja(player, { lento });
+    kuljettaja.nosta();
 
     /*
      * === 2. MATKAN LISÄT LAUDALLA (#96) ENNEN MITOITUSTA ===========
@@ -19902,17 +19710,13 @@ export class UI {
     }
 
     /*
-     * LIIKKUVA NAPPULA ON YHTÄ PIENI KUIN PAIKALLAAN OLEVA. Siirron
-     * paikka on TYYLISSÄ (hyppy kirjoittaa sen joka kehyksellä), ja
-     * tyyli voittaa transform-määreen — fokusnäkymän käänteisskaalaus
-     * on siksi kirjoitettava tähän samaan merkkijonoon eikä
-     * paivitaFokusMerkkiMitatiin. Kerroin luetaan kerran, ennakko- ja
-     * saattoajon asettamasta lopullisesta mittakaavasta (ks. yllä).
+     * Nappula lähtöruutuunsa VASTA saaton jälkeen: tasokartalla
+     * kuljettaja lukee tässä fokusnäkymän käänteisskaalauksen
+     * lopullisesta mittakaavasta (ks. tasokartanKuljettaja), pallolla
+     * ruudun pisteen kamera-ajon alettua.
      */
-    const kerroin = this.fokusNappulaKerroin();
-    const koko = Math.abs(kerroin - 1) < 0.0005 ? '' : ` scale(${kerroin.toFixed(4)})`;
-    let paikka = pixelOf(board, from);
-    g.style.transform = `translate(${paikka.x}px, ${paikka.y}px)${koko}`;
+    kuljettaja.aseta(from);
+    let paikka = from;
 
     /*
      * === 3. NAPPULA LÄHTEE VIIVEELLÄ KAMERAN JÄLKEEN ===============
@@ -19931,7 +19735,6 @@ export class UI {
     if (saatto && !this.reducedMotion) await this.wait(NAPPULAN_LAHDON_VIIVE_MS);
 
     for (const [i, pos] of path.entries()) {
-      const kohta = pixelOf(board, pos);
       const viimeinen = i === path.length - 1;
       // Määränpään äänimaisema lähtee nousemaan jo viimeisellä
       // askeleella, jotta ristihäivytys on käynnissä saapumishetkellä
@@ -19949,9 +19752,9 @@ export class UI {
         this.ennakoiAmbienssi(pos);
       }
       if (this.reducedMotion) {
-        g.style.transform = `translate(${kohta.x}px, ${kohta.y}px)${koko}`;
+        kuljettaja.aseta(pos);
       } else {
-        await this.hyppaaAskel(g, hahmo, varjo, paikka, kohta, stepMs, koko);
+        await kuljettaja.hyppaa(paikka, pos, stepMs);
       }
       /*
        * NAKSAHDUS KUULUU LASKEUTUMISEEN, ei lähtöön: nappula kolahtaa
@@ -19960,7 +19763,7 @@ export class UI {
        * alussa.
        */
       sfx.play(viimeinen ? 'arrive' : 'step');
-      paikka = kohta;
+      paikka = pos;
       /*
        * TAUKO VÄLIPISTEESSÄ (omistajan tilaus #100: *"kuin näkymätön
        * käsi siirtäisi pelinappulaa laudalla aavistuksen
@@ -19970,10 +19773,10 @@ export class UI {
       if (!viimeinen && !this.reducedMotion) await this.wait(HYPYN_TAUKO_MS);
     }
 
-    g.remove();
+    kuljettaja.laske();
     this.movingPlayerId = null;
     this.revealShownFor = null;
-    this.drawPawns();
+    this.piirraNappulat();
     /*
      * SIIRTYMÄMUSIIKKI POIS PERILLÄ. Häivytys on 500 ms (js/
      * siirtymamusiikki.js LASKU_MS) eli hitaampi kuin sisääntulo, ja
@@ -20061,10 +19864,23 @@ export class UI {
      * (dieRestingSpot); vasta pysähdyttyään noppa lukitaan siihen
      * kohtaan KARTTAA, johon se jäi.
      */
-    const from = this.kartta.paneKuoreen(this.kartta.mapToPane(pixelOf(this.game.board, player.pos)));
-    const to = this.kartta.paneKuoreen(this.kartta.dieRestingSpot());
+    /*
+     * PALLOLAUDALLA NOPPA ON KUORESSA PALLON PÄÄLLÄ (vaihe 2): lähtö on
+     * nappulan ruutupiste pallolta ja lepopaikka sama ruudulta arvottu
+     * avomeren kolkka (dieRestingSpot on ruudun mitoista, ei laudan).
+     * Noppaa ei ankkuroida palloon — se lepää ruudulla kuten
+     * karttapallo.md luku 4 sanoo: "nopan paikka lasketaan ruudulta".
+     */
+    const pallolla = this.pallolautaPaalla();
+    const to = pallolla
+      ? this.kartta.dieRestingSpot()
+      : this.kartta.paneKuoreen(this.kartta.dieRestingSpot());
+    // Pallon takana oleva lähtöpiste (ei ruudulla) → noppa lähtee lepopaikasta.
+    const from = pallolla
+      ? (this.pallolauta.ruutupiste(player.pos) ?? to)
+      : this.kartta.paneKuoreen(this.kartta.mapToPane(pixelOf(this.game.board, player.pos)));
     this.dieThrown = true;
-    this.kartta.merkitseNopanPaikka(to);
+    if (!pallolla) this.kartta.merkitseNopanPaikka(to);
 
     /*
      * Noppa tuntuu kädessä kahdesti (iOS-kuori; selaimessa mykkä):

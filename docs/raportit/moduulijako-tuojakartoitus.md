@@ -32,9 +32,20 @@ edelleen LÖYTÄÄ kohteensa (ei hiljaista ohitusta).
 | kirjoituksenKesto | tests/lento-ajoitus.test.mjs:14 |
 | polunPituus, alkuKehykset, kierraKehykset, jaljenKehykset, ALKUREITIT, JALJEN_PYYHKAISY | tests/alkureitit.test.mjs:14–17 |
 | SAAPUMISLUENNAT | ei tuojia (europe-saapumiset.js:4 viittaa vain kommentissa) — M1:ssä siirtyy datatiedostoon vapaasti |
+| ~~jalkamatkanAskel, siirtoajonKesto, siirtoajonPehmennys~~ | SIIRRETTY (pallolauta vaihe 2, 5.9.2026): asuvat js/siirtokoreografia.js:ssä STEP_MS-, HYPYN_*-, JALKAMATKAN_*-, NAPPULAN_*-, SIIRTOAJON_*-, SAATON_*-, SIIRTOZOOMIN_LAHENNYS- ja ENNAKKO*-vakioiden kanssa (ui.js v1553 rivit 372–707 sanatarkasti). Tuojat: js/ui.js, js/pallolauta/kamera.js (aiemmin ui.js:stä — kehäriippuvuus poistui), js/pallolauta/siirto.js, tests/siirtoajoitus.test.mjs, tests/siirtokoreografia.test.mjs. ui.js EI enää vie näitä. |
 
 M2 siirtää kehysmatikan ja kirjoituksenKeston → alkureitit- ja
 lento-ajoitus-testien tuonnit päivittyvät samassa PR:ssä.
+
+**Pallolauta vaihe 2 (5.9.2026):** tests/siirtoajoitus.test.mjs lukee
+koreografian VAKIOT nyt js/siirtokoreografia.js:stä (`luku(KOREO, …)`)
+ja siirron JÄRJESTYKSEN yhä ui.js:stä (animatePawnSisalla,
+ennakoiSiirtoZoomi, aloitaSaattavaKamera); tests/pallolauta.test.mjs
+ja tests/siirtokoreografia.test.mjs lukevat ui.js:ää tekstinä
+(nappulanKuljettaja, matkareittienValinta, animateDie, doFly).
+tools/build-standalone.mjs MODULES: js/siirtokoreografia.js ennen
+js/ui.js:ää; sw.js SHELL: js/siirtokoreografia.js ja
+js/pallolauta/{merkit,reitit,siirto}.js.
 
 ## 3. Muut kytkökset
 

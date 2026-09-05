@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS, laattakynnykset, lepokerroin, LAATU_TERAVYYS, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE } from '../js/pallo.js';
 import { laatanReunat, rivinLeveysaste, julisteenLeveysvali, tasonLaatat, lahdetaso, laattojenKansio, LAATTA } from '../tools/tee-pallolaatat.mjs';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
@@ -54,12 +54,15 @@ test('pallon kaupungit tulevat laudalta ja napautus sukeltaa napautettuun kohtaa
   for (const kielletty of ['pointsData', 'labelsData', 'arcsData', 'ringsData', 'htmlElementsData', 'pathsData']) {
     assert.ok(!pallo.includes(`.${kielletty}(`), `${kielletty}: valikkopallon päälle ei lisätä mitään (omistaja 4.9.2026)`);
   }
-  const lauta = lue('../js/pallolauta/lauta.js');
-  for (const kielletty of ['labelsData', 'arcsData', 'ringsData', 'pathsData', 'polygonsData', 'hexBinPointsData']) {
-    assert.ok(!lauta.includes(`.${kielletty}(`), `${kielletty}: pallolaudalle ei piirretä karttaa kerroksena (Raamattu 5.9.2026)`);
+  // Pallolauta on kansio (lauta, kamera, merkit, reitit, siirto — vaihe 2):
+  // kartan kerrokset kiellettyjä kaikissa, pelin merkit jossakin niistä.
+  const kansio = new URL('../js/pallolauta/', import.meta.url);
+  const pallolauta = readdirSync(kansio).map((nimi) => readFileSync(new URL(nimi, kansio), 'utf8')).join('\n');
+  for (const kielletty of ['labelsData', 'ringsData', 'polygonsData', 'hexBinPointsData', 'tilesData']) {
+    assert.ok(!pallolauta.includes(`.${kielletty}(`), `${kielletty}: pallolaudalle ei piirretä karttaa kerroksena (Raamattu 5.9.2026)`);
   }
-  for (const sallittu of ['pointsData', 'htmlElementsData']) {
-    assert.ok(lauta.includes(`.${sallittu}(`), `${sallittu}: pelin merkit ovat pallolaudalla (Raamattu 5.9.2026)`);
+  for (const sallittu of ['pointsData', 'htmlElementsData', 'pathsData', 'arcsData']) {
+    assert.ok(pallolauta.includes(`.${sallittu}(`), `${sallittu}: pelin merkit ovat pallolaudalla (Raamattu 5.9.2026)`);
   }
   assert.match(pallo, /\.onGlobeClick\(/);
   // Nipistys ei ole napautus (iPhone-bugi 4.9.2026): toinen sormi

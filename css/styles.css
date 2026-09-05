@@ -23250,3 +23250,46 @@ body.linssikartta-auki .linssikartta-palaa { display: inline-block; }
 @media (prefers-reduced-motion: reduce) {
   .pallolauta-nappula { transition: none; }
 }
+
+/* ============ PALLOLAUTA, VAIHE 2: SIIRROT PALLOLLA ============ */
+/*
+ * Nopanheiton kohde pallolla (js/pallolauta/merkit.js, htmlElementsData):
+ * halo, piste ja nimi samoilla luokilla kuin tasokartan fokusKohdeMerkki
+ * (.target-halo.fokus, .target-piste, .target-nimi yllä), joten väri ja
+ * hengitys tulevat samasta säännöstä. Ei ota napautuksia — osuma on
+ * pallon oma (lähin kohde 44 px, js/pallolauta/lauta.js).
+ */
+.pallolauta-kohde {
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: opacity 250ms ease;
+}
+.pallolauta-kohde svg { display: block; overflow: visible; }
+/*
+ * Liikkuva nappula ja lentokone (js/pallolauta/siirto.js) ovat pelin
+ * omaa DOMia kotelon päällä: paikka kirjoitetaan joka kehys pallon
+ * pinnan pisteestä. Kotelon yleissääntö (.pallo-kotelo > div, inset 0)
+ * ei saa venyttää niitä koko ruudun kokoisiksi — siksi tarkempi
+ * valitsin ja oma laatikko. CSS2D-kerroksen (kirjaston div) jälkeen
+ * DOMissa, joten ne piirtyvät paikallaan olevien merkkien päälle.
+ */
+.pallo-kotelo > .pallolauta-liikkuva,
+.pallo-kotelo > .pallolauta-kone {
+  position: absolute;
+  inset: auto;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  pointer-events: none;
+  will-change: transform;
+  transform-origin: 50% 50%;
+}
+.pallo-kotelo > .pallolauta-liikkuva { transition: none; }
+.pallolauta-kone svg { display: block; overflow: visible; }
+/* Noppa kuoressa pallon päällä laudan ajaksi (js/pallolauta/lauta.js
+   noppaKuoreen): sama kerros kuin kartan siirtokuoressa, ruudun px. */
+.pallo-kuori.pallolauta > .die-layer { position: absolute; inset: 0; z-index: 3; }
+@media (prefers-reduced-motion: reduce) {
+  .pallolauta-kohde { transition: none; }
+}
