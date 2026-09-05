@@ -37,60 +37,43 @@
  *
  * ── VARAPOLUT ──────────────────────────────────────────────────────
  *
- *   ei lippua      → ei mitään (oletus on POIS, kunnes omistaja on
- *                    nähnyt tämän; kehittäjävalikon vipu "etusivupallo")
+ *   pallolauta     → PÄÄLLÄ ilman lippua (aalto 1D, omistaja 5.9.2026:
+ *                    *"Käännä kaikki pallolle, niin voidaan sulkea vanha
+ *                    kartta kokonaan."*); lippu on enää poiskytkin
+ *                    (?etusivupallo=0, kehittäjävalikon vipu)
+ *   ?lauta=kartta  → pois: etusivu jää vanhaan pienoiskarttaan
+ *                    (poistuu aallossa 3)
  *   ei verkkoa     → luettelo tai video ei lataudu → kerros puretaan ja
- *                    etusivu jää ENNALLEEN (vanha pienoiskartta)
+ *                    etusivu jää PELKÄKSI PAPERIKSI: tasokarttaa ei
+ *                    herätetä pallolaudalla, joten ylälohkossa on
+ *                    pergamentti ja julisteotsikko, ei koskaan tyhjä ruutu
  *   dist/          → dynaaminen tuonti kaatuu js/ui.js:ssä (kuten
- *                    linsseillä ja pallolaudalla) → vanha etusivu
+ *                    linsseillä ja pallolaudalla) → tasokartta herätetään
+ *                    ja etusivu on entinen pienoiskartta
  *   reduced motion → yksi pysäytyskuva (juliste) ja kone paikallaan
  */
 
 import { laudaltaAsteiksi } from './fokusmitat.js';
 import { PEILI_JUURI } from './media.js';
 import { ISOISAN_VALOKUVAT, rajausTyyli, valokuvanKuvateksti } from './isoisan-valokuvat.js';
+import {
+  ETUSIVUPALLO_AVAIN, asetaEtusivupallo, etusivupalloOletus,
+  etusivupalloOsoitteesta, etusivupalloPaalla,
+} from './ui-apurit.js';
 
 /* ==================== LIPPU ======================================= */
 
-/**
- * Pelaajan/kehittäjän lippu (localStorage). Oletus POIS: vain '1'
- * kytkee etusivun pallon päälle. Sama malli kuin sivunkääntö
- * (js/sivunkaanto.js) ja lautavalinta (js/ui-apurit.js), mutta
- * käänteisellä oletuksella — omistaja ei ole vielä nähnyt tätä.
+/*
+ * LIPPU ASUU js/ui-apurit.js:SSÄ laudan valinnan vieressä (aalto 1D):
+ * js/ui.js:n mount päättää ENNEN ensimmäistä piirtoa, alustetaanko
+ * tasokartta etusivua varten, eikä se voi odottaa tämän moduulin
+ * dynaamista tuontia. Rajapinta viedään tästä edelleen ulos, jotta
+ * js/main.js:n vipu ja testit näkevät saman moduulin kuin ennenkin.
  */
-export const ETUSIVUPALLO_AVAIN = 'matkakirja-etusivupallo';
-
-/** URL-parametri ohittaa muistin savukkeita ja esittelyä varten. */
-export function etusivupalloOsoitteesta(win = globalThis) {
-  try {
-    const arvo = new URLSearchParams(win.location?.search ?? '').get('etusivupallo');
-    if (arvo === null) return null;
-    return arvo !== '0' && arvo !== 'ei';
-  } catch {
-    return null;
-  }
-}
-
-/** Onko etusivun pallo kytketty päälle? (URL › muisti › oletus pois) */
-export function etusivupalloPaalla(win = globalThis) {
-  const osoitteesta = etusivupalloOsoitteesta(win);
-  if (osoitteesta !== null) return osoitteesta;
-  try {
-    return win.localStorage?.getItem(ETUSIVUPALLO_AVAIN) === '1';
-  } catch {
-    return false;
-  }
-}
-
-/** Kytkee etusivun pallon päälle ('1') tai pois (avain poistuu). */
-export function asetaEtusivupallo(paalla, win = globalThis) {
-  try {
-    if (paalla) win.localStorage?.setItem(ETUSIVUPALLO_AVAIN, '1');
-    else win.localStorage?.removeItem(ETUSIVUPALLO_AVAIN);
-  } catch {
-    /* yksityinen tila */
-  }
-}
+export {
+  ETUSIVUPALLO_AVAIN, asetaEtusivupallo, etusivupalloOletus,
+  etusivupalloOsoitteesta, etusivupalloPaalla,
+};
 
 /* ==================== ÄMPÄRIN POLUT =============================== */
 

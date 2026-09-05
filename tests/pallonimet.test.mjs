@@ -195,7 +195,9 @@ test('poltetut nostot luetaan pallon omasta luettelosta, jonka laattatyökalu ki
 });
 
 test('sallitut kerrokset eivät kasvaneet; uudet moduulit ovat SHELLissä; pallolauta ei kutsu ui.js:n koukkuja', () => {
-  assert.deepEqual(PALLOLAUDAN_KERROKSET, ['pointsData', 'htmlElementsData', 'pathsData', 'arcsData']);
+  // Nimet ja nostot eivät tarvinneet uutta kerrosta; polygonsData tuli
+  // 5.9.2026 LINSSILLE (karttapallo.md luku 10.1), ei kartalle.
+  assert.deepEqual(PALLOLAUDAN_KERROKSET, ['pointsData', 'htmlElementsData', 'pathsData', 'arcsData', 'polygonsData']);
   const sw = lue('../sw.js');
   for (const nimi of ['nimet', 'nostot']) {
     assert.match(sw, new RegExp(`'\\./js/pallolauta/${nimi}\\.js'`), `${nimi}.js puuttuu SHELListä`);

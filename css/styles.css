@@ -5524,6 +5524,12 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * --intro-kartta-korkeus-muuttujaan. Kartan pienentää js/kartta.js
  * INTRO_SPACE (pergamenttia jatketaan laudan alle). Prosentti tässä on
  * vain varasija ennen ensimmäistä mittausta.
+ *
+ * PALLOLAUDALLA VARASIJA ON LOPULLINEN (aalto 1D): etusivun pallo
+ * (js/etusivupallo.js) täyttää lohkon, eikä tasokarttaa alusteta
+ * lainkaan — placeIntro ei siis mittaa mitään. Mitattu ero vanhaan on
+ * pieni (mitattu lauta antoi 42 %, varasija on 44 %), joten sommitelma
+ * pysyy entisenä.
  */
 .intro {
   position: absolute;
@@ -23770,6 +23776,65 @@ svg.rough-annotation { pointer-events: none; }
 /* Nimen muste ja kirjasin tulevat .karttanimi-luokasta (tasokartan sama
    sääntö); svg:n sisällä teksti asettuu keskilinjaan kuten kartalla. */
 .pallolauta-nimi text { dominant-baseline: middle; }
+/*
+ * VESISTÖLINSSIN JOKINIMET PALLOLLA (js/linssit/vesistot.js pallolle).
+ *
+ * Tasokartalla nimet tulevat maastonimikerroksesta (.maastonimi-joki);
+ * pallolla kerrosta ei ole, joten linssi tuo omat merkkinsä. Asu on sama
+ * kuin kartalla — kaunokirjoitus kursiivina, meren muste — ja koko on
+ * ruutuvakio kuten kaikilla pallon merkeillä (karttapallo.md luku 6).
+ */
+.pallolauta-vesinimi {
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-family: var(--font-kauno);
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: rgba(20, 44, 68, 0.98);
+  text-shadow: 0 0 3px rgba(247, 241, 226, 0.85);
+}
+
+/*
+ * MAAN NIMI PALLOLLA (vertailutila, js/vertailu.js aalto 1C). Sama
+ * käsiala ja muste kuin tasokartan .vertailu-maa-nimi, mutta koko on
+ * ruutuvakio: CSS2D-elementti ei skaalaudu pallon mukana, joten
+ * tasokartan leveydestä laskettua kirjasinkokoa ei ole mistä ottaa.
+ * Vaalea ääriviiva erottaa nimen laatan mereltä ja maalta.
+ */
+.pallolauta-maanimi {
+  font-family: var(--font-hand);
+  font-size: 13px;
+  color: rgba(70, 51, 31, 0.85);
+  white-space: nowrap;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  text-shadow:
+    0 0 3px rgba(247, 237, 216, 0.85),
+    0 0 3px rgba(247, 237, 216, 0.85);
+}
+
+/*
+ * MAAT EDELLÄ, PELI VÄISTÄÄ — sama sääntö kuin tasokartalla
+ * (body.vertailu-tila .cities/.tokens/.targets/.pawns): kun vertailu
+ * tai maaselain on auki, pallon omat merkit väistyvät maakerroksen
+ * tieltä. HUOM: kaupunkien PISTEET ovat Globe.gl:n pointsData eivätkä
+ * DOM-elementtejä, joten ne eivät katoa css:llä — se on laudan oma
+ * ehto (js/pallolauta/lauta.js pisteNakyy, kirjattu aallon 1C
+ * raporttiin).
+ */
+body.vertailu-tila .pallolauta-nimi,
+body.vertailu-tila .pallolauta-nosto,
+body.vertailu-tila .pallolauta-piste,
+body.vertailu-tila .pallolauta-kohde,
+body.vertailu-tila .pallolauta-nappula,
+body.maatiedot-tila .pallolauta-nimi,
+body.maatiedot-tila .pallolauta-nosto,
+body.maatiedot-tila .pallolauta-piste,
+body.maatiedot-tila .pallolauta-kohde,
+body.maatiedot-tila .pallolauta-nappula { display: none; }
+
 /* Lunastettu eläintäky haalistuu kuten kartalla (js/elaintaky.js). */
 .pallolauta-nosto.lunastettu { opacity: 0.55; }
 .pallolauta-nosto.lunastettu.pallolauta-takana,

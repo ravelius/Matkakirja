@@ -35,7 +35,7 @@ import {
   pisteMonikulmiossa, polloNimilappu, polunPituus,
   cachedImage, cachedSummary, fokusmoodiPaalla,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, unohdaKehittajaKytkimet,
-  lautaValinta, palloTurvatilassa,
+  lautaValinta, palloTurvatilassa, etusivupalloPaalla,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
 import { onAarre } from './tokens.js';
@@ -2801,6 +2801,13 @@ export class UI {
     this.linssiTunniste = null; // valikoiman tunniste: valikko rakennetaan vain muutoksesta
     this.linssiAskeleet = new Map(); // valittu askel linssiä kohti
     /*
+     * PALLOLLA OLEVA LINSSI (karttapallo.md luku 10, aalto 1A):
+     * { tunnus, kahva } kun linssi on piirretty pallon pinnalle
+     * linssimoottorilla (js/pallolauta/linssit.js). Kahvan `pura()`
+     * ottaa kerrokset pois; linssikarttaa ei silloin avata lainkaan.
+     */
+    this.pallolinssi = null;
+    /*
      * Valitsin ei enää avaudu eikä sulkeudu: se on osa päävalikkoa ja
      * katoaa sen mukana. Sulkeutumisen kuuntelijat (napautus muualle,
      * Esc) poistuivat samalla — päävalikko hoitaa molemmat.
@@ -2897,7 +2904,16 @@ export class UI {
      * pysyy pois tieltä"*). Pallo itse avataan renderistä
      * (paivitaPallolauta), ja jos se ei lataudu, kartta herää varapolkuna.
      */
-    if (this.pallolautaHalutaan()) this.kartta.lepotila = true;
+    /*
+     * ETUSIVU ON MYÖS PALLOA (aalto 1D, omistaja 5.9.2026: *"Käännä
+     * kaikki pallolle, niin voidaan sulkea vanha kartta kokonaan."*).
+     * Lähtövalinnassa pallolautaHalutaan on vielä epätosi (pelin lauta
+     * otetaan vasta kaupungin valinnasta), mutta tasokarttaa ei silti
+     * alusteta: avausnäkymän pienoiskartan tilalla on esirenderöity
+     * pallovideo (js/etusivupallo.js). Ilman tätä svg#board sai 188
+     * elementtiä ja laattapyramidi heräisi pelkkää etusivua varten.
+     */
+    if (this.pallolautaHalutaan() || this.etusivunPalloKaytossa()) this.kartta.lepotila = true;
     else this.drawBoardFor(this.game.pack);
     /*
      * NOPPA KARTAN SIIRTOKUOREEN, EI KARTTARUUTUUN (#98). Kuori on se
@@ -3773,6 +3789,21 @@ export class UI {
     return lautaValinta() === 'pallo';
   }
 
+  /**
+   * Onko AVAUSNÄKYMÄN pallo käytössä (aalto 1D)? Jos on, tasokarttaa ei
+   * alusteta etusivua varten lainkaan: ylälohkon täyttää esirenderöity
+   * pallovideo (js/etusivupallo.js), ja jos video ei lataudu, lohkoon
+   * jää pergamentti ja julisteotsikko — ei koskaan tyhjää ruutua.
+   *
+   * Lippu on enää poiskytkin (?etusivupallo=0 tai ratasvalikon vipu):
+   * pois kytkettynä tämä on epätosi ja etusivu palaa vanhaan
+   * pienoiskarttaan. Sama koskee `?lauta=kartta`-tilaa, joka poistuu
+   * vasta aallossa 3 (docs/moduulit/karttapallo.md luku 10).
+   */
+  etusivunPalloKaytossa() {
+    return this.aloituslentoPallolla() && etusivupalloPaalla();
+  }
+
   /** Onko pallo ruudulla pelin lautana (kartta nukkuu, pallo näkyy)? */
   pallolautaPaalla() {
     return Boolean(this.pallolauta && this.kartta.lepotila);
@@ -3795,6 +3826,13 @@ export class UI {
       return;
     }
     if (this.pallolautaHalutaan() && !this.pallolautaAvautuu) void this.avaaPallolauta();
+    /*
+     * ETUSIVU EI HERÄTÄ KARTTAA (aalto 1D). Lähtövalinnassa pallolautaa
+     * ei vielä haluta, mutta lepotila on tarkoituksellinen: etusivun
+     * pallo hoitaa ylälohkon, ja kartta herää vasta jos pallolauta
+     * kaatuu (pallolautaVarapolku) tai lippu käännetään pois.
+     */
+    else if (this.etusivunPalloKaytossa() && this.game.phase === 'pickstart') { /* pallo on etusivulla */ }
     else if (!this.pallolautaAvautuu && this.kartta.heraa()) {
       // Lepotila ilman palloa (esim. valinta vaihtui): kartta hereille.
       this.render();
@@ -3848,6 +3886,8 @@ export class UI {
      * käynnistys yrittää palloa uudestaan.
      */
     this.pallolautaEpaonnistui = true;
+    // Pallolla ollut linssi katoaa laudan mukana; kahva pois kirjoista.
+    this.pallolinssi = null;
     this.pallolauta?.pura();
     this.pallolauta = null;
     if (this.kartta.lepotila) this.kartta.heraa();
@@ -3943,6 +3983,8 @@ export class UI {
   }
 
   destroy() {
+    // Laudan purku vie linssikerroksetkin (lauta.linssit.pura).
+    this.pallolinssi = null;
     this.pallolauta?.pura();
     this.pallolauta = null;
     // Kuollut instanssi ei saa enää koskea jaettuun DOM:iin: sen
@@ -9394,6 +9436,15 @@ export class UI {
 
   drawTargets() {
     const { game } = this;
+    /*
+     * NUKKUVALLA KARTALLA EI OLE KERROSTA (karttapallo.md luku 3).
+     * Pallolaudalla kohteet piirtää pallo (js/pallolauta/merkit.js), ja
+     * tasokartan kerrokset syntyvät vasta drawBoardissa. Radion ja
+     * linssin tahdistus kutsuu tätä myös silloin, kun kartta nukkuu —
+     * pallolle käännetty linssi ei enää herätä sitä (luku 10) — joten
+     * portti on tässä eikä jokaisessa kutsujassa.
+     */
+    if (!this.targetLayer) return;
     this.targetLayer.textContent = '';
     /*
      * MITKÄ KAUPUNGIT OVAT JUURI NYT VALITTAVIA KOHTEITA?
@@ -14965,16 +15016,41 @@ export class UI {
     // terävä, ja portilla on oma tummennuksensa.
     this.introEl.classList.toggle('intro-aloitettu', Boolean(nakyy && this.aloitettu));
     /*
-     * ETUSIVUN ESIRENDERÖITY PALLO (pallolauta vaihe 5a, omistaja
-     * 5.9.2026). Yksi koukku: moduuli lukee lipun (oletus POIS),
-     * hakee videon ämpäristä ja purkaa itsensä. Dynaaminen tuonti
-     * kaatuu yhden tiedoston versiossa kuten linsseillä ja
-     * pallolaudalla, ja ilman verkkoa kerros ei synny — kummassakin
-     * tapauksessa etusivu jää vanhaan karttaan.
+     * ETUSIVUN ESIRENDERÖITY PALLO (pallolauta vaihe 5a, oletukseksi
+     * aallossa 1D). Yksi koukku: moduuli lukee lipun (oletus PÄÄLLÄ
+     * pallolaudalla, pois `?lauta=kartta`-tilassa), hakee videon
+     * ämpäristä ja purkaa itsensä. Dynaaminen tuonti kaatuu yhden
+     * tiedoston versiossa kuten linsseillä ja pallolaudalla, ja ilman
+     * verkkoa kerros ei synny: tasokartalla etusivu jää vanhaan
+     * karttaan, pallolaudalla pelkäksi pergamentiksi (karttaa ei
+     * herätetä — etusivunPalloKaytossa).
      */
-    if (nakyy || this.etusivupallo) {
+    if (nakyy && etusivupalloPaalla()) {
       void import('./etusivupallo.js')
-        .then((m) => m.paivitaEtusivupallo(this, nakyy)).catch(() => {});
+        .then((m) => m.paivitaEtusivupallo(this, nakyy))
+        .catch(() => {
+          /*
+           * MODUULIA EI OLE (yhden tiedoston versio): silloin etusivun
+           * pallo on mahdoton, ja vanha pienoiskartta on ainoa etusivu —
+           * kartta herätetään lepotilasta, johon mount sen pani. Tämä on
+           * eri asia kuin verkkovika: siinä moduuli on olemassa ja päättää
+           * itse jättää ylälohkon pergamentiksi.
+           */
+          if (this.kartta.lepotila && !this.pallolauta) {
+            this.kartta.heraa();
+            this.render();
+          }
+        });
+    } else {
+      /*
+       * PURKU ON SYNKRONINEN eikä odota moduulia (aalto 1D): kehittäjän
+       * vipu sammuttaa kerroksen SAMASSA piirrossa, jossa tasokartta
+       * herää — muuten ruudulla olisi hetken sekä pallo että vanha
+       * pienoiskartta. Kesken oleva avaus (etusivupalloAvautuu) purkaa
+       * itsensä moduulin omassa vartiossa.
+       */
+      this.etusivupallo?.pura();
+      this.etusivupallo = null;
     }
     if (!nakyy) {
       this.introShown = false;
@@ -15073,6 +15149,18 @@ export class UI {
     // Häivytys ensin ja zoomaus vasta sen alettua: kartta saa liikkua
     // pehmenevän tekstin alla eikä ruutu välähdä tyhjäksi väliltä.
     this.introEl.classList.add('intro-fade');
+    /*
+     * LÄHTÖKAUPUNKI VALITAAN YHÄ TASOKARTALTA (aalto 1D). Etusivun pallo
+     * pitää kartan lepotilassa koko avausnäkymän ajan, mutta tämä nappi
+     * avaa saman lähikuvan kuin ennenkin — kartta herätetään vasta
+     * TÄSSÄ, jolloin alustus (svg#board, kohdepisteet) maksetaan
+     * napautuksesta eikä etusivun avauksesta. Kun lähtövalintakin
+     * siirtyy pallolle, tämä herätys poistuu (karttapallo.md luku 10).
+     */
+    if (this.kartta.lepotila && !this.pallolauta) {
+      this.kartta.heraa();
+      this.render();
+    }
     const lontoo = this.game.board.cityById.get(ALOITUSLENNON_LAHTO);
     this.kartta.zoomaaAloituskartta(lontoo ? { x: lontoo.x, y: lontoo.y } : null);
   }
@@ -16299,6 +16387,17 @@ export class UI {
      * unohdetaan; tasokartalla (?lauta=kartta) tänne ei tulla.
      */
     if (this.kartta.lepotila) {
+      /*
+       * PALLOLINSSI ON POIKKEUS (karttapallo.md luku 10, aalto 1A):
+       * linssi, jolla on `pallolle`, piirtyy pallon pinnalle eikä
+       * tarvitse kuorta lainkaan. Valintaa ei siis unohdeta, ja jos
+       * kahva puuttuu (uusi lauta, uusi peli), linssi sytytetään
+       * uudelleen — kuten tasokartalla tyhjä kerros sytytetään alla.
+       */
+      if (this.pallolinssiKelpaa(haluttu, nakyvat)) {
+        if (this.pallolinssi?.tunnus !== haluttu) await this.sytytaLinssi(haluttu);
+        return;
+      }
       if (haluttu && !this.linssikartta) {
         this.linssiValittu = null;
         tallennaLinssi(null);
@@ -16317,24 +16416,79 @@ export class UI {
     }
   }
 
+  /**
+   * LINSSI PALLOLLE VAI KARTALLE (karttapallo.md luku 10.1). Pallolauta
+   * piirtää linssin itse, jos linssillä on `pallolle` ja laudan
+   * linssimoottori on pystyssä. Muut linssit avaavat linssikartan kuten
+   * ennen, kunnes nekin on käännetty pallolle.
+   */
+  pallolinssiKelpaa(tunnus, lista = this.linssiTuki?.kaikki ?? []) {
+    if (!tunnus || !this.pallolautaPaalla() || !this.pallolauta?.linssit) return false;
+    return typeof lista.find((l) => l.tunnus === tunnus)?.pallolle === 'function';
+  }
+
+  /** Pallolla oleva linssi pois: kahvan pura() ottaa kerrokset. */
+  sammutaPallolinssi() {
+    const nyt = this.pallolinssi;
+    this.pallolinssi = null;
+    if (!nyt) return;
+    this.linssiTuki?.moottori?.poistaLuokat();
+    try {
+      nyt.kahva?.pura?.();
+    } catch (syy) {
+      console.warn(`Pallolinssin "${nyt.tunnus}" purku epäonnistui.`, syy);
+    }
+  }
+
   /** Sytyttää linssin kartalle; tunnus === null sammuttaa. */
   async sytytaLinssi(tunnus) {
     const tuki = await this.lataaLinssit();
     if (!tuki || this.dead) return;
     const askel = tunnus ? this.linssiAskeleet.get(tunnus) ?? null : null;
+    const tila = tuki.kerros.linssitila(this.game.pack, askel);
+    // Edellinen pallolinssi pois aina — myös silloin kun uusi linssi
+    // piirtyy kartalle tai valinta nollataan.
+    this.sammutaPallolinssi();
     let tulos = null;
-    try {
-      tulos = await tuki.moottori.vaihda(tunnus, tuki.kerros.linssitila(this.game.pack, askel));
-    } catch (syy) {
+    if (this.pallolinssiKelpaa(tunnus, tuki.kaikki)) {
       /*
-       * Moottori heittää sopimusrikkeestä tarkoituksella: se on aina
-       * linssimoduulin oma vika ja se pitää nähdä. Peli ei silti saa
-       * kaatua siihen — rikkinäinen linssi pudotetaan valikoimasta ja
-       * kartta jää entiselleen.
+       * PALLOLLA MOOTTORI ON LAUDAN OMA (karttapallo.md luku 10, aalto
+       * 1A): linssi piirtää pallon pinnalle js/pallolauta/linssit.js:n
+       * kautta, ja tasokartan kerrosmoottori sammutetaan, jottei
+       * nukkuvaan karttaan jää edellisen linssin piirrosta.
        */
-      console.error(syy);
-      this.pudotaLinssi(tunnus);
-      return;
+      const linssi = tuki.kaikki.find((l) => l.tunnus === tunnus);
+      tuki.moottori.sammuta();
+      try {
+        // Aineisto haetaan kuten kerrosmoottorissa (kerros.js vaihda):
+        // linssin lataa() tuo pakat ja kuvat ennen piirtoa.
+        await linssi.lataa?.();
+        if (this.dead || this.linssiValittu !== tunnus) return;
+        // Body-luokat (linssi-paalla, linssi-<tunnus>, linssi-valokuva)
+        // ovat samat kuin kartalla: selite, sävyt ja rakeisuus lukevat ne.
+        tuki.moottori.merkitseLuokat(linssi);
+        this.pallolinssi = { tunnus, kahva: linssi.pallolle(this.pallolauta, tila) ?? null };
+        tulos = { tunnus, linssi, elementteja: 0, rasteroitu: false };
+      } catch (syy) {
+        console.error(syy);
+        this.pudotaLinssi(tunnus);
+        return;
+      }
+      if (this.dead) return;
+    } else {
+      try {
+        tulos = await tuki.moottori.vaihda(tunnus, tila);
+      } catch (syy) {
+        /*
+         * Moottori heittää sopimusrikkeestä tarkoituksella: se on aina
+         * linssimoduulin oma vika ja se pitää nähdä. Peli ei silti saa
+         * kaatua siihen — rikkinäinen linssi pudotetaan valikoimasta ja
+         * kartta jää entiselleen.
+         */
+        console.error(syy);
+        this.pudotaLinssi(tunnus);
+        return;
+      }
     }
     if (this.dead) return;
     this.linssiPiirretty = this.linssiKerros;
@@ -16379,6 +16533,9 @@ export class UI {
   /** Ottaa linssin pois valikoimasta ja palaa linssittömään karttaan. */
   pudotaLinssi(tunnus) {
     if (tunnus) this.linssiPois.add(tunnus);
+    // Pallolla oleva kerros pois heti: pudotettu linssi ei saa jäädä
+    // pallon pinnalle odottamaan seuraavaa sytytystä.
+    this.sammutaPallolinssi();
     this.linssiValittu = null;
     tallennaLinssi(null);
     this.linssiTunniste = null;
@@ -16401,12 +16558,27 @@ export class UI {
     }
     if (this.linssiValittu === tunnus) return;
     /*
-     * LINSSIT VANHALLA KARTALLA (omistaja 5.9.2026): pallolaudalla
-     * linssin valinta herättää tasokartan linssikartaksi, ja "Ei linssiä"
-     * palauttaa pallon. Vaihe 4 hioo kuoren; tässä on kevyin toteutus.
+     * Portti alla lukee ladattua linssiluetteloa (linssiTuki). Jos
+     * luetteloa ei vielä ole (valinta tulee ennen laukun avaamista,
+     * esim. tallennettu valinta tai kehittäjätila), ladataan ensin —
+     * muuten pallolle käännetty linssi avaisi turhaan linssikartan.
      */
-    if (tunnus && this.pallolautaPaalla()) this.avaaLinssikartta({ linssi: true });
-    else if (!tunnus && this.linssikartta?.linssi) this.suljeLinssikartta();
+    if (tunnus && !this.linssiTuki && this.pallolautaPaalla()) {
+      void this.lataaLinssit().then(() => { if (!this.dead) this.valitseLinssi(tunnus); });
+      return;
+    }
+    /*
+     * KAIKKI PALLOLLE (omistaja 5.9.2026, Raamattu KAIKKI PALLOLLE,
+     * VANHA KARTTA SULJETAAN: *"Käännä kaikki pallolle, niin voidaan
+     * sulkea vanha kartta kokonaan"*). Pallolle käännetty linssi
+     * (`pallolle`) piirtyy pallon pinnalle, eikä linssikarttaa avata
+     * lainkaan — ja jos kuori oli auki edellisen linssin takia, se
+     * sulkeutuu. Kääntämätön linssi herättää tasokartan linssikartaksi
+     * kuten ennen, kunnes se on aallossa 1–2 käännetty (luku 10.2).
+     */
+    const pallolle = this.pallolinssiKelpaa(tunnus);
+    if (tunnus && this.pallolautaPaalla() && !pallolle) this.avaaLinssikartta({ linssi: true });
+    else if ((!tunnus || pallolle) && this.linssikartta?.linssi) this.suljeLinssikartta();
     this.linssiValittu = tunnus;
     tallennaLinssi(tunnus);
     // Merkintä valikkoon heti, kerros hetkeä myöhemmin: raskas linssi

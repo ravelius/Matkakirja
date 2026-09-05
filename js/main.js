@@ -122,7 +122,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1577';
+const APP_VERSION = '2026-08-09.1578';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1423,11 +1423,12 @@ const sivunkaantoNappi = document.getElementById('kehittaja-sivunkaanto-btn');
  */
 const pallolautaNappi = document.getElementById('kehittaja-pallolauta-btn');
 /*
- * ETUSIVUN ESIRENDERÖITY PALLO (omistaja 5.9.2026, pallolauta vaihe 5a).
- * Oma lohkonsa: vipu kääntää yhden lipun (js/etusivupallo.js) ja etusivu
+ * ETUSIVUN ESIRENDERÖITY PALLO (omistaja 5.9.2026, pallolauta vaihe 5a;
+ * oletukseksi aallossa 1D). Oma lohkonsa: vipu kääntää yhden lipun
+ * (js/ui-apurit.js, viety ulos js/etusivupallo.js:stä) ja etusivu
  * rakentuu uudestaan seuraavassa piirrossa — sivulatausta ei tarvita,
- * koska kerros syntyy ja purkautuu renderIntron koukusta. OLETUS POIS,
- * kunnes omistaja on nähnyt sen; sama valinta ?etusivupallo=1.
+ * koska kerros syntyy ja purkautuu renderIntron koukusta. OLETUS ON
+ * PÄÄLLÄ pallolaudalla; vipu on poiskytkin, sama kuin ?etusivupallo=0.
  */
 const etusivupalloNappi = document.getElementById('kehittaja-etusivupallo-kytkin');
 /*
@@ -1579,12 +1580,13 @@ function paivitaKehittajaValikko() {
   merkitseKytkin(etusivupalloNappi, etusivupallo);
   if (etusivupalloNappi) {
     etusivupalloNappi.title = etusivupallo
-      ? 'Etusivun pallo on PÄÄLLÄ: avaussivun kartan tilalla esirenderöity '
-        + 'sumennettu pallo, jonka päällä lentokone piirtää punaista viivaa '
-        + 'Lontoosta Aasiaan — kytke pois palataksesi vanhaan etusivun karttaan'
-      : 'Etusivun pallo on pois (oletus): avaussivulla on vanha pienoiskartta '
-        + '— kytke päälle nähdäksesi esirenderöidyn pallon, koneen ja isoisän '
-        + 'aikalaiskuvat (sama kuin ?etusivupallo=1)';
+      ? 'Etusivun pallo on PÄÄLLÄ (oletus pallolaudalla): avaussivun kartan '
+        + 'tilalla esirenderöity sumennettu pallo, jonka päällä lentokone '
+        + 'piirtää punaista viivaa Lontoosta Aasiaan, eikä tasokarttaa alusteta '
+        + 'lainkaan — kytke pois palataksesi vanhaan etusivun pienoiskarttaan'
+      : 'Etusivun pallo on pois: avaussivulla on vanha pienoiskartta — kytke '
+        + 'päälle nähdäksesi esirenderöidyn pallon, koneen ja isoisän '
+        + 'aikalaiskuvat (oletus pallolaudalla; sama kuin ?etusivupallo=1)';
   }
   /*
    * KARTTAPALLON TURVATILA (pallolauta vaihe 5c): laskuri kertoo, montako
@@ -1716,12 +1718,18 @@ etusivupalloNappi?.addEventListener('click', () => {
     const halutaan = !moduuli.etusivupalloPaalla();
     moduuli.asetaEtusivupallo(halutaan);
     paivitaKehittajaValikko();
-    // Etusivu rakentuu koukusta (js/ui.js renderIntro): pyydetään piirto,
-    // niin kerros syntyy tai purkautuu heti ilman sivulatausta.
-    ui?.renderIntro?.();
+    /*
+     * Etusivu rakentuu koukusta (js/ui.js renderIntro): pyydetään piirto,
+     * niin kerros syntyy tai purkautuu heti ilman sivulatausta. KOKO
+     * PIIRTO eikä pelkkä renderIntro (aalto 1D): pallolaudalla tasokartta
+     * on lepotilassa etusivun takia, ja pois kytkettäessä se herää tästä
+     * kutsusta (js/ui.js paivitaPallolauta) — muuten ylälohkoon jäisi
+     * pelkkä pergamentti.
+     */
+    ui?.render?.();
     naytaKehittajaVihje(halutaan
       ? 'Etusivun pallo päälle: näkyy avaussivulla (uusi peli tai sivun lataus).'
-      : 'Etusivun pallo pois: vanha etusivun kartta.');
+      : 'Etusivun pallo pois: vanha etusivun pienoiskartta.');
   });
 });
 

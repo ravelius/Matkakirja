@@ -582,3 +582,132 @@ tests/pallolauta.test.mjs.
 | 3 | poisto: kartta.js, kerros.js, linssikartta.js, laattapyramidi.js, mapart.js, karttanimet.js, LAUTA-kytkin, turvatilan varapolku, testit, sw.js, css, dokumentit | — | L |
 
 Toteutusmerkinnät kirjataan tämän luvun loppuun aalloittain.
+
+### 10.3 Toteutusmerkinnät
+
+**Aalto 1A — linssimoottori ja topografia (5.9.2026).** Sopimuksen 10.1
+taulukko on toteutettu tiedostossa `js/pallolauta/linssit.js`
+(`luoLinssit`): `kalvo`, `polut`, `polygonit`, `merkit`,
+`kalvoRuudulle`, `pura`. Muutokset:
+
+- **Osarekisterit.** `js/pallolauta/reitit.js` sai `aseta(osa, lista)`
+  samaan tapaan kuin `merkit.js`; pelin naapurireitit ovat osa `peli`,
+  linssien viivat lisätään perään ja yksi `pathsData`-kutsu yhdistää.
+  `pathStroke` ja katko luetaan nyt datumista (pelin reitit saavat
+  oletuksensa).
+- **Uusi kerros.** `polygonsData` on `PALLOLAUDAN_KERROKSET`-listalla
+  LINSSIN kerroksena; peli ei piirrä sinne mitään
+  (tests/pallolauta.test.mjs, tests/pallo.test.mjs, tests/pallonimet.test.mjs
+  päivitetty samalla kommentilla).
+- **Kalvo.** THREE haetaan heijastuksella pallon näyttämöstä (Globe.gl ei
+  vie sitä ulos): pinnan pallomesh antaa Meshin ja geometrian, jonkin
+  materiaalin `map` antaa Texturen. Kalvo on pinnan SISARUS, koska
+  laattamoottori pitää pinnan oman meshin piilotettuna. Säde on
+  1,0015 × pinta eikä 1,002: reittiviivat ovat korkeudella 0,002, ja
+  samassa pinnassa kaksi kerrosta välkkyisi toistensa läpi.
+- **Topografia.** `js/linssit/topografia.js` sai `pallolle(lauta)`, joka
+  pyytää yhden kalvon peittävyydellä 0,72. Kuva on uudelleenprojisoitu
+  laudan Milleristä tasaväliseksi (`tools/tee-pallotopografia.mjs` →
+  `assets/linssit/topografia-pallo.webp`, 4096 × 2048, 431 kt; navat
+  läpinäkyviä, koska lauta kattaa 76° P … 58° E). Selitekortti toimii
+  kuten ennen; kaistat eivät koske palloa.
+- **Käyttöliittymä.** `ui.pallolinssiKelpaa` on se yksi portti, joka
+  päättää piirretäänkö pallolle vai avataanko linssikartta;
+  `ui.sytytaLinssi` kutsuu `pallolle`:a ja `ui.sammutaPallolinssi`
+  kahvan `pura()`:a. Nukkuva kartta ei enää unohda pallolinssin
+  valintaa. `drawTargets` sai portin nukkuvalle kartalle (radion ja
+  linssin tahdistus kutsuu sitä myös pallolla, jolloin `targetLayer`
+  ei ole olemassa).
+- Vartijat: `tests/pallolinssit.test.mjs` (uusi). Selaimessa varmistettu
+  Chromiumilla: kalvo syttyy, osuu maantieteellisesti kohdalleen,
+  linssikarttaa ei avata, "Ei linssiä" purkaa kalvon ja uudelleensytytys
+  toimii.
+
+**Aalto 1B — vesistöt pallolle (js/linssit/vesistot.js).** Linssi sai
+`pallolle(lauta)`, joka kutsuu `lauta.linssit`-apuria neljästi: kalvo
+(reliefi tasavälisenä, `TOPOGRAFIA_PALLOKUVA` =
+`assets/linssit/topografia-pallo.webp`, peittävyys 0,72), polygonit (38
+järveä GeoJSON-renkaina, korkeus 0,003), polut (84 pengertä + 169 uomaa
+= 253, paksuus asteina 0,14/0,10 ja 0,06/0,04/0,025 tärkeysluokittain)
+ja merkit (20 tärkeimmän joen nimet, `.pallolauta-vesinimi`; kytkin
+`VESINIMET_PALLOLLA`, ohitetaan jos merkit-osaa ei ole). Muunnos on
+puhtaana funktiona `vesistotPallolle({ maasto, nimet }, asteet)` — ei
+selainta, ei Globe.gl:ää — ja se ajetaan kerran, tulos muistiin.
+Pehmennystä ei ole (pathResolution riittää); yli 2° välit tihennetään
+isoympyrällä ja kiertävän laudan sauma katkaisee polun. Vartiointi:
+tests/vesistot-pallolla.test.mjs. AVOIN: pathStroke on asteita, joten
+uoma ohenee maailmankuvassa alle pikselin — jos apuri joskus asettaa
+listat uudelleen kameran pysähtyessä, paksuudet on kerrottava korkeudella.
+
+**Aalto 1C — vertailu ja maaselain pallolle (js/vertailu.js).**
+Molemmat tilat piirtävät maat pallolaudalla laudan linssiapurilla:
+`polygonit('vertailu' | 'maatiedot', …)` (datum `{ avain: iso,
+geometry, vari, reuna, korkeus 0,004, napautus }`) ja vertailussa
+lisäksi `merkit('vertailu-nimet', …)` maan keskukseen samalla
+leveysehdolla kuin kartalla (`leveys >= 60`, 126 nimeä 133 maasta);
+tilan sammuessa `pura('vertailu')` + `pura('vertailu-nimet')` ja
+`pura('maatiedot')`. Valinnan vaihtuessa lista asetetaan uudestaan
+(värit) — kerrosta ei pureta. Sävyt ovat samat kuin css:n
+`.vertailu-maa` ja `.maatiedot-maa` (rgba-merkkijonoina, koska pallon
+pinnalla ei ole css:ää); kolmas sävy `himmea` on pallon oma lisä
+täydelle vertailulle, jossa hiiren osoitinta ei ole kertomassa
+napautettavia maita. Ele on kummallakin laudalla sama: vertailu kerää
+maat alapalkkiin, maaselain valitsee maan ja maakyltti avaa lehden
+(kyltti asuu mapPanessa, ei laudassa, joten se toimii sellaisenaan).
+
+Muunnos on puhtaana funktiona `maapolygonitPallolle(map, asteet)` — ei
+selainta, ei Globe.gl:ää — ja se ajetaan kerran pakkaa kohti (WeakMap):
+maailmankartalla 133 maata, 400 rengasta, 26 220 pistettä, 53 ms.
+Kiertävän laudan sauma puretaan renkaan sisällä (peräkkäiset pisteet
+pidetään lähekkäin) ja rengas siirretään takaisin keskelle, joten
+Venäjä, Fidži ja Aleutit jäävät ehjiksi kappaleiksi eikä yksikään
+renkaan sivu ylitä 180:tä astetta (mitattu suurin 27,6°, Kanada).
+Jokainen rengas on oma monikulmionsa (MultiPolygon), koska laudan
+aineisto ei erottele saaria ja reikiä. Vartiointi:
+tests/maapolygonit-pallolla.test.mjs.
+
+AVOIN (tarvitsee lauta.js-muutoksen, ei tehty tässä aallossa):
+kaupunkien PISTEET ovat Globe.gl:n `pointsData` eivätkä DOM-elementtejä,
+joten body-luokka ei piilota niitä. Css piilottaa nyt pallon
+DOM-merkit (`.pallolauta-nimi/-nosto/-piste/-kohde/-nappula`) näissä
+tiloissa; pisteitä varten `js/pallolauta/lauta.js` tarvitsee ehdon
+`pisteNakyy`-funktioon (esim. `maatEdella()` = body-luokka
+`vertailu-tila` tai `maatiedot-tila` → epätosi) sekä nimien katoksi 0
+`ladoLevossa`-funktiossa, ja luokkien vaihto on jo kuunneltu
+(`valovahti`-MutationObserver → `paivitaPisteet` + `pyydaLadonta`).
+
+**Aalto 1D — etusivu pallolle (5.9.2026).** (1) Etusivun
+esirenderöity pallo (js/etusivupallo.js, vaihe 5a) on PALLOLAUDALLA
+OLETUS ilman lippua; lippu jäi poiskytkimeksi (`?etusivupallo=0`,
+ratasvalikon vipu), ja `?lauta=kartta` pitää etusivun vielä vanhassa
+pienoiskartassa (poistuu aallossa 3). (2) Lippu muutti osoitetta: se
+asuu nyt js/ui-apurit.js:ssä laudan valinnan vieressä ja
+js/etusivupallo.js vie sen edelleen ulos, koska js/ui.js:n mount päättää
+ENNEN ensimmäistä piirtoa, alustetaanko tasokartta — se ei voi odottaa
+dynaamista tuontia. Oletus on `lautaValinta() === 'pallo'`, ja
+poiskytkentä tallentuu arvona '0' (oletuksen mukainen valinta poistaa
+avaimen, kuten laudalla). (3) TASOKARTTA EI ALUSTU ETUSIVUA VARTEN:
+mount panee `kartta.lepotila`n päälle myös lähtövalinnassa
+(`etusivunPalloKaytossa`), ja renderin pallohaara ei enää herätä karttaa
+pickstart-vaiheessa. Mitattu 390×844 dpr 2: svg#board 188 → **0
+elementtiä**, pyramidipyyntöjä 0 (oli 0 jo ennestään, koska avausnäkymä
+ei zoomaa). (4) LÄHTÖKAUPUNKI VALITAAN YHÄ TASOKARTALTA: "Valitse
+aloituskaupunki" herättää kartan lepotilasta (js/ui.js aloitaKartalta),
+joten alustus maksetaan vasta napautuksesta eikä avausnäkymästä —
+lähikuva, kohdepisteet ja Livian repliikit ovat entisellään. Kun
+lähtövalintakin siirtyy pallolle, tämä herätys poistuu. (5) Varapolut:
+reduced motion → juliste ilman videota; verkkovika tai vanhentunut
+luettelo → kerrosta ei synny EIKÄ karttaa herätetä, jolloin ylälohkoon
+jää pergamentti ja julisteotsikko (pelkkä paperi, ei koskaan tyhjä
+ruutu); dist → dynaaminen tuonti kaatuu ja kartta HERÄTETÄÄN, jolloin
+yhden tiedoston versio saa entisen pienoiskarttansa. (6) Vivun
+poiskytkentä purkaa kerroksen SYNKRONISESTI js/ui.js:ssä ja pyytää koko
+piirron (js/main.js), jolloin vanha pienoiskartta herää samassa
+piirrossa. (7) Ylälohkon korkeus tulee pallolaudalla CSS:n varasijalta
+(`--intro-kartta-korkeus`, 44 %), koska mittauksen tekee js/kartta.js
+placeIntro vain hereillä — mitattu ero vanhaan (42 %) on silmällä
+olematon. Portit: tests/etusivupallo.test.mjs (oletus laudan mukaan,
+poiskytkin, lepotilan vartijat), tests/pallolauta.test.mjs ja
+savuke-etusivupallo (E1d tasokartta ei alustu, E5d vanha kartta herää
+lipulla pois, E8 pelkkä paperi) — savuke ajetaan nyt oletuslaudalla
+eikä `?lauta=kartta`-tilassa.

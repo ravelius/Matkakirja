@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1577';
+const CACHE = 'matkakirja-2026-08-09.1578';
 const SHELL = [
   './',
   './index.html',
@@ -141,6 +141,7 @@ const SHELL = [
   './js/pallolauta/avaus.js',
   './js/pallolauta/kamera.js',
   './js/pallolauta/linssikartta.js',
+  './js/pallolauta/linssit.js',
   './js/pallolauta/merkit.js',
   './js/pallolauta/nimet.js',
   './js/pallolauta/nostot.js',
@@ -455,6 +456,9 @@ const SHELL = [
   // selaillaan eniten.
   './assets/linssit/yokartta.jpg',
   './assets/linssit/topografia.webp',
+  // Sama reliefi pallon pinnalle tasavälisenä (karttapallo.md luku 10,
+  // aalto 1A; tools/tee-pallotopografia.mjs).
+  './assets/linssit/topografia-pallo.webp',
   // Varustekuvat (linssien toimintakuvat, 10.8.2026).
   './assets/varusteet/varuste-topografia.jpg',
   './assets/varusteet/varuste-vesistot.jpg',

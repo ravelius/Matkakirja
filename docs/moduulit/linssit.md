@@ -1187,3 +1187,82 @@ Lyhyesti:
 - Savuke: `tools/savukkeet/savuke-geo.mjs` (kirjasto ämpäristä, 261
   kaupunkia, isokaari, Natural Earthin rajat laudan sisällä, varapolku).
 
+
+## Linssit pallolla (5.9.2026)
+
+*(Omistajan linjaus, Raamattu KAIKKI PALLOLLE, VANHA KARTTA SULJETAAN,
+sanatarkasti: "Käännä kaikki pallolle, niin voidaan sulkea vanha kartta
+kokonaan" / "Käytä agenttia parvia". Sopimus ja aallot:
+docs/moduulit/karttapallo.md luku 10 — se voittaa ristiriidassa tämän
+luvun, joka kertoo MITEN moottori toimii.)*
+
+Karttapallo on pelin lauta, ja tasokartta suljetaan. Linssit eivät siis
+jää tasokartalle: jokainen linssi saa toisen piirtotavan `piirra`:n
+rinnalle.
+
+**Sopimus.** `pallolle(lauta, tila)` piirtää linssin pallon pinnalle ja
+palauttaa kahvan `{ pura() }`. `tila` on täsmälleen sama jäädytetty olio
+kuin `piirra(ryhma, tila)`:lla (`packId`, `map`, `leveys`, `korkeus`,
+`kiertava`, `askel`). Pallolaudalla `ui.sytytaLinssi` kutsuu
+`pallolle`-funktiota **eikä avaa linssikarttaa**; kun linssi vaihtuu tai
+sammuu, `ui.sammutaPallolinssi` kutsuu kahvan `pura()`:n. Linssi, jolla
+ei vielä ole `pallolle`-funktiota, herättää tasokartan linssikartaksi
+kuten ennen (`ui.pallolinssiKelpaa` on se yksi portti, joka päättää
+kummin päin mennään). `lataa()`:a EI kutsuta pallopolulla — pallolle
+piirtävä linssi vastaa itse aineistostaan, jottei tasokartan raskasta
+kuvaa haeta turhaan.
+
+**Moottori.** Piirto tapahtuu vain `lauta.linssit`-apurin kautta
+(`js/pallolauta/linssit.js`, `luoLinssit`) — linssi ei koske
+Globe.gl-instanssiin. Rajapinta on luvun 10.1 taulukko:
+
+| kutsu | mitä tekee |
+|---|---|
+| `kalvo(osa, { kuva, peittavyys })` | tasavälinen (equirectangular, 2:1) rasteri omana pallokuorenaan pinnan päällä |
+| `polut(osa, lista)` | `pathsData` reittikerroksen osarekisterin kautta (`reitit.aseta`) |
+| `polygonit(osa, lista)` | `polygonsData` (linssin oma kerros; peli ei piirrä sinne) |
+| `merkit(osa, lista)` | `htmlElementsData` merkkirekisterin kautta (`merkit.aseta`, laji `linssi`) |
+| `kalvoRuudulle(osa, { reika })` | CSS-kalvo kotelon päälle, reikä pinnan pisteessä (`lauta.ruudulla`) |
+| `pura(osa)` | kaikki osan kerrokset pois siirtymällä (ilman nimeä: kaikki) |
+
+Kolme sääntöä, jotka moottori pitää yllä:
+
+1. **Yksi kerros, monta osaa.** Globe.gl:llä on kutakin lajia tasan yksi
+   kerros. Jokainen kutsu kirjaa listansa OSAN nimellä, ja kerros
+   kootaan osista — peli omistaa osan `peli`, linssit lisäävät omansa
+   perään. Linssi ei voi pyyhkiä pelin reittejä eikä merkkejä.
+2. **Kaikki liike animoidaan.** Kalvo häivytetään sisään ja ulos
+   `siirtyma` millisekunnissa (peittävyysanimaatio
+   requestAnimationFramella, sama tapa kuin lennon harsolla); polut,
+   polygonit ja merkit saavat kirjaston omat siirtymät. Reduced motion
+   tulee laudalta nollana, jolloin kaikki tapahtuu heti.
+3. **Kalvo jää pelin viivojen alle.** Sopimus sanoi säteen × 1,002, mutta
+   reittiviivat piirretään korkeudelle 0,002 — kaksi samassa pinnassa
+   olevaa kerrosta välkkyisi toistensa läpi. Kalvon kerroin on siksi
+   `KALVON_SADE = 1,0015`: silmälle sama paikka, mutta reitit,
+   askelhelmet (0,0025) ja kaupunkipisteet (0,003) jäävät kalvon päälle
+   kuten tasokartalla linssin päällä.
+
+**Kolme three.js-luokkaa heijastuksella.** Globe.gl kantaa three.js:n
+sisällään eikä vie sitä ulos, joten kalvon Mesh, materiaali ja Texture
+haetaan pallon omasta näyttämöstä: pinnan pallomesh (säde lähinnä
+`getGlobeRadius()`:ia, kokonainen pallo) antaa Meshin ja geometrian —
+sama säde, samat UV:t ja sama kierto kuin pinnalla — ja jonkin
+materiaalin `map` antaa Texturen. Kalvo lisätään pinnan SISARUKSEKSI,
+koska laattamoottori pitää pinnan oman meshin piilotettuna. Sivulle ei
+siis ladata toista three.js:ää. Jos luokkia ei löydy, kalvo jää pois ja
+lokiin tulee varoitus — peli ei kaadu.
+
+**Kuvat pallolle.** Pallo lukee pinnan tekstuurin tasavälisenä, eikä
+laudan Milleriin projisoitu linssikuva kelpaa sinne sellaisenaan (se
+työntäisi mantereet pohjoiseen). Topografialinssin kuva on siksi
+uudelleenprojisoitu kerran rakennusaikana:
+`node tools/tee-pallotopografia.mjs` →
+`assets/linssit/topografia-pallo.webp` (4096 × 2048, 431 kt). Lauta
+kattaa 76° P … 58° E, joten navat jäävät kuvassa läpinäkyviksi ja pallon
+oma laattapinta näkyy niiden kohdalla läpi. Sama kuvio kelpaa muillekin
+rasterilinsseille: uusi kuva, ei uutta aineistoa.
+
+**Vartijat.** `tests/pallolinssit.test.mjs` (rajapinta, osarekisterit,
+topografian `pallolle`, ui:n portti) ja `tests/pallolauta.test.mjs`
+(sallitut Globe.gl-kerrokset).

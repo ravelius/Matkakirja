@@ -1588,6 +1588,73 @@ export function asetaLautaValinta(lauta) {
 }
 
 /*
+ * === ETUSIVUN ESIRENDERÖITY PALLO (aalto 1D) ========================
+ *
+ * OMISTAJA 5.9.2026, sanatarkasti: *"Käännä kaikki pallolle, niin
+ * voidaan sulkea vanha kartta kokonaan."*
+ *
+ * OLETUS SEURAA LAUTAA. Pallolaudalla (lautaValinta() === 'pallo')
+ * etusivun esirenderöity pallo (js/etusivupallo.js) on käytössä ilman
+ * yhtään lippua; lippu jäi vain POISKYTKIMEKSI (`?etusivupallo=0` tai
+ * ratasvalikon vipu). `?lauta=kartta` pitää etusivun vielä vanhassa
+ * pienoiskartassa — se poistuu vasta aallossa 3.
+ *
+ * MIKSI TÄÄLLÄ EIKÄ js/etusivupallo.js:SSÄ: js/ui.js:n mount päättää
+ * ENNEN ensimmäistäkään piirtoa, alustetaanko tasokartta etusivua
+ * varten (karttapallo.md luku 3: "vanha kartta pysyy pois tieltä"),
+ * eikä se voi odottaa dynaamista tuontia. Sama kaava kuin laudan
+ * valinnalla yllä: URL › muistettu valinta › oletus, oma avain,
+ * try/catch. js/etusivupallo.js vie nämä edelleen ulos, joten moduulin
+ * rajapinta ei muutu.
+ */
+export const ETUSIVUPALLO_AVAIN = 'matkakirja-etusivupallo';
+
+/** URL-parametri ohittaa muistin savukkeita ja esittelyä varten. */
+export function etusivupalloOsoitteesta(win = globalThis) {
+  try {
+    const arvo = new URLSearchParams(win.location?.search ?? '').get('etusivupallo');
+    if (arvo === null) return null;
+    return arvo !== '0' && arvo !== 'ei';
+  } catch {
+    return null;
+  }
+}
+
+/** Oletus: pallolaudalla päällä, tasokartalla pois. */
+export function etusivupalloOletus() {
+  return lautaValinta() === 'pallo';
+}
+
+/** Onko etusivun pallo käytössä? (URL › muisti › laudan mukainen oletus) */
+export function etusivupalloPaalla(win = globalThis) {
+  const osoitteesta = etusivupalloOsoitteesta(win);
+  if (osoitteesta !== null) return osoitteesta;
+  try {
+    // Muistettu valinta on tallessa vain, kun se eroaa oletuksesta.
+    const muistettu = win.localStorage?.getItem(ETUSIVUPALLO_AVAIN);
+    if (muistettu === '1') return true;
+    if (muistettu === '0') return false;
+  } catch {
+    /* yksityinen selaus */
+  }
+  return etusivupalloOletus();
+}
+
+/**
+ * Kytkee etusivun pallon päälle tai pois. Oletuksen mukainen valinta
+ * POISTAA avaimen (kuten asetaLautaValinta), jotta oletuksen myöhempi
+ * vaihto tavoittaa myös ne laitteet, joilla vipua on käytetty.
+ */
+export function asetaEtusivupallo(paalla, win = globalThis) {
+  try {
+    if (Boolean(paalla) === etusivupalloOletus()) win.localStorage?.removeItem(ETUSIVUPALLO_AVAIN);
+    else win.localStorage?.setItem(ETUSIVUPALLO_AVAIN, paalla ? '1' : '0');
+  } catch {
+    /* yksityinen tila */
+  }
+}
+
+/*
  * === KARTTAPALLON TURVATILA (pallolauta vaihe 5c) ===================
  *
  * docs/moduulit/karttapallo.md luku 6: WKWebView'n sisältöprosessi voi

@@ -84,6 +84,7 @@ import {
   HELMEN_VARI, REITIN_VARIT, REITTIHELMEN_KORKEUS, REITTIHELMEN_SADE, luoReitit,
 } from './reitit.js';
 import { luoLinssikartta } from './linssikartta.js';
+import { luoLinssit } from './linssit.js';
 import { luoNappulanKuljettaja } from './siirto.js';
 import { luoAloituslennonKohtaus } from './avaus.js';
 
@@ -91,10 +92,16 @@ import { luoAloituslennonKohtaus } from './avaus.js';
  * Sallitut Globe.gl-kerrokset pallolaudalla (vaihe 3): pisteet
  * (kaupungit, askelhelmet, aihevalot), html-merkit (nappula, kohteet,
  * nimet, elävät nostot, kohtaamispiste), polut (naapurireitit) ja
- * kaaret (lennot). Ei labelsData-nimiä, ei renkaita, ei monikulmioita —
- * kartta on laatoissa. Vaihe 3 ei tarvinnut yhtään uutta kerrosta.
+ * kaaret (lennot). Ei labelsData-nimiä, ei renkaita — kartta on
+ * laatoissa. Vaihe 3 ei tarvinnut yhtään uutta kerrosta.
+ *
+ * LINSSIT 5.9.2026 (karttapallo.md luku 10, aalto 1A): monikulmiot
+ * (polygonsData) tulivat listalle, koska linssi piirtää pallolle maat ja
+ * järvet (js/pallolauta/linssit.js polygonit). Se on LINSSIN kerros eikä
+ * kartan: peli ei piirrä sinne mitään, ja kerros on tyhjä aina kun
+ * linssiä ei ole päällä.
  */
-export const PALLOLAUDAN_KERROKSET = ['pointsData', 'htmlElementsData', 'pathsData', 'arcsData'];
+export const PALLOLAUDAN_KERROKSET = ['pointsData', 'htmlElementsData', 'pathsData', 'arcsData', 'polygonsData'];
 /**
  * Kaupunkipisteen säde Globe.gl:n pointRadius-yksiköissä — karttavakio,
  * kasvaa lähennettäessä. Suunnitelma sanoi 0,12°, mutta kirjaston
@@ -901,6 +908,7 @@ export async function avaaPallolauta(ui) {
       eleet.pura();
       merkit.pura();
       noppaTakaisin();
+      lauta.linssit?.pura();
       pallo._destructor?.();
       kuori.remove();
       lauta.linssikartta?.pura();
@@ -914,6 +922,17 @@ export async function avaaPallolauta(ui) {
    * delegoivat tänne; kuori tuntee pallon kameran ja tämän kuoren.
    */
   lauta.linssikartta = luoLinssikartta({ ui, lauta });
+  /*
+   * LINSSIT PALLOLLE (karttapallo.md luku 10, aalto 1A; omistaja
+   * 5.9.2026: *"Käännä kaikki pallolle, niin voidaan sulkea vanha kartta
+   * kokonaan"*). Linssimoottori on laudan oma apuri: linssin
+   * `pallolle(lauta, tila)` pyytää siltä kalvon, polut, polygonit tai
+   * merkit eikä koske Globe.gl-instanssiin. Luodaan vasta tässä, koska
+   * se tarvitsee valmiin lauta-olion (ruudulla, heraa).
+   */
+  lauta.linssit = luoLinssit({
+    pallo, ui, lauta, merkit, reitit, siirtyma, kotelo,
+  });
   // Instanssi talteen mittausta ja savukkeita varten (sama kenttä kuin
   // valikkopallolla).
   ui.pallonInstanssi = pallo;
