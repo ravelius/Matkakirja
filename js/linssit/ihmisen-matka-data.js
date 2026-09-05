@@ -791,7 +791,7 @@ export const IHMISEN_MATKA = [
     n: 17, tunnus: 'beringia',
     vuosiaSitten: 20000, ajoitus: 'noin 20 000 vuotta sitten',
     otsikko: 'Maasilta, jota ei enää ole',
-    paikka: 'Beringia, Beringinsalmi', maa: 'Beringinsalmi', lat: 65.7500, lon: -168.9769,
+    paikka: 'Beringia', maa: 'Alaskan ja Siperian välillä', lat: 65.7500, lon: -168.9769,
     loyto: 'Beringiaa ei kaivettu esiin vaan pääteltiin. Kasvitieteilijä Eric Hultén '
       + 'nimesi 1937 kasvien levinneisyyden perusteella maa-alueen, jonka meri on '
       + 'sittemmin peittänyt; merenpinnan historia ja perimäntutkimus ovat '
@@ -876,7 +876,7 @@ export const IHMISEN_MATKA = [
     n: 19, tunnus: 'lapita',
     vuosiaSitten: 2850, ajoitus: 'noin 3 000 vuotta sitten',
     otsikko: 'Savenvalajat avomerellä',
-    paikka: 'Nukuleka, Tongatapu', maa: 'Tonga ja Samoa', lat: -21.1514, lon: -175.1261,
+    paikka: 'Nukuleka, Tongatapu', maa: 'Tonga', lat: -21.1514, lon: -175.1261,
     loyto: 'Kalastajakylän mullasta kaivettiin 2000-luvulla lapita-kulttuurin '
       + 'leimakuvioisia saviastioita. Korallista tehty hiomakivi ajoitettiin 2012 '
       + 'uraani-torium-menetelmällä noin 2 840 vuoden ikäiseksi.',
