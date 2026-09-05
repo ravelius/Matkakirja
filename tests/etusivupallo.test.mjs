@@ -42,11 +42,10 @@ const {
   ETUSIVUN_KAMERA, ETUSIVUN_KUVAKIERTO, ETUSIVUN_REITTI, ETUSIVUPALLO_AVAIN,
   ETUSIVUPALLO_TIEDOSTOT, ETUSIVUPALLO_VERSIO, HAIVYTYS_S, KERROKSEN_ILMESTYS_MS,
   KIERROKSEN_ASTEET,
-  LOPPU_PITO_S, PINON_HAIVYTYS_MS, PINON_KATTO, PINON_KULMA, PINON_LASKU_MS,
-  PINON_SIIRTO, SOVITUS_TAPA, SVG_SOVITUS,
+  LOPPU_PITO_S, SOVITUS_TAPA, SVG_SOVITUS,
   asetaEtusivupallo, etusivupalloOletus, etusivupalloPaalla, jaljenPisteet,
   kameranNakyma, kerroksenSovitus, koneenTila,
-  kaarietaisyys, liikeVahennetty, lueLuettelo, pallonPiste, pinonAsento, reitinPisteet,
+  kaarietaisyys, liikeVahennetty, lueLuettelo, pallonPiste, reitinPisteet,
   saapumisenKaupunki, saapumisenKuva,
   saapumisia, suurympyra, teeReitti, videostaRuudulle,
 } = await import('../js/etusivupallo.js');
@@ -390,9 +389,17 @@ test('punainen viiva pitenee, sulkee ympyrän Lontoossa ja häipyy vasta sen jä
   assert.ok(haivytys(reitti.kesto - 0.001) < 0.01, 'viiva on häipynyt ennen loopin alkua');
 });
 
-/* ==================== ISOISÄN KUVAT ================================ */
+/* ==================== ISOISÄN KUVAPAKKA ============================ */
 
-test('jokainen laskeutuminen tuo pinoon kuvan paikan ja vuoden kuvatekstillä', () => {
+/*
+ * KUVAT JÄTETTIIN POIS ETUSIVULTA (omistaja 6.9.2026 klo 01.20,
+ * sanatarkasti: *"Jätä isoisän kuvat pois etusivulta"*). Pakka ja sen
+ * valintasääntö jäävät — kuvat ovat aitoja aikalaisvedoksia ja
+ * odottavat uutta käyttöpaikkaansa (albumi, lentokohtaus) — joten
+ * niitä vartioidaan yhä täällä. Se, ETTEI etusivu näytä niitä, on oma
+ * testinsä alempana ("etusivulla ei ole isoisän kuvia").
+ */
+test('kuvapakan valintasääntö ja kuvatekstit pysyvät ennallaan', () => {
   assert.equal(saapumisia(reitti, 0), 0);
   assert.equal(saapumisia(reitti, reitti.kesto), pisteet.length - 1,
     'kaikki kymmenen laskeutumista näkyvät kierroksen aikana');
@@ -443,105 +450,143 @@ test('haaleus ja sumennus tulevat pakasta ja vaalea kuva jää selvemmäksi', ()
 });
 
 /*
- * PINO SIKIN SOKIN TEKSTIN ALLE (omistaja 5.9.2026 klo 22.45:
- * *"isoisän kuvat voivat olla blurrattuja ja haalealla ja jäädä tekstin
- * alle"*, *"ne voisivat pinoutua hieman sikin sokin toistensa
- * päälle"*). Vartioidaan neljä asiaa: pinon katto, deterministinen
- * asento, kerrosjärjestys (teksti > kuvat > video) ja se, ettei
- * esteväistöä ole enää missään.
+ * ISOISÄN KUVAT POIS ETUSIVULTA (omistajan päätös 6.9.2026 klo 01.20,
+ * sanatarkasti: *"Jätä isoisän kuvat pois etusivulta"*).
+ *
+ * Poisto EI OLE LIPPU vaan kaiken kuvapinoon liittyvän poisto: jos
+ * kerros vielä loisi pinon DOMin tai css:ssä olisi sen tyylit, jäisi
+ * kuollutta koodia ajoon ja seuraava lukija luulisi kuvien palanneen.
+ * Tämä testi vartioi, ettei mikään niistä palaa hiljaa takaisin —
+ * pakka (js/packs/etusivun-isoisakuvat.js) ja `saapumisenKuva` sen
+ * sijaan JÄÄVÄT, ja niitä vartioidaan yllä.
  */
-test('pinon asento on siemenellinen ja pysyy annetuissa rajoissa', () => {
-  for (let nro = 1; nro <= 30; nro++) {
-    const a = pinonAsento(nro);
-    assert.deepEqual(a, pinonAsento(nro), `laskeutuminen ${nro} ei ole deterministinen`);
-    assert.ok(Math.abs(a.dx) <= PINON_SIIRTO && Math.abs(a.dy) <= PINON_SIIRTO,
-      `siirto ${a.dx}/${a.dy} ylittää ±${PINON_SIIRTO} %`);
-    assert.ok(Math.abs(a.kulma) <= PINON_KULMA, `kallistus ${a.kulma} ylittää ±${PINON_KULMA}°`);
-  }
-  // Sikin sokin: peräkkäiset kortit eivät laskeudu samaan asentoon.
-  const asennot = new Set();
-  for (let nro = 1; nro <= PINON_KATTO; nro++) {
-    const a = pinonAsento(nro);
-    asennot.add(`${a.dx},${a.dy},${a.kulma}`);
-    if (nro > 1) {
-      const e = pinonAsento(nro - 1);
-      assert.ok(Math.hypot(a.dx - e.dx, a.dy - e.dy) > 0.5 || Math.abs(a.kulma - e.kulma) > 1,
-        `laskeutumiset ${nro - 1} ja ${nro} ovat käytännössä samassa asennossa`);
-    }
-  }
-  assert.equal(asennot.size, PINON_KATTO, 'jokainen pinon kortti on omassa asennossaan');
-  assert.ok(PINON_KATTO === 5 && PINON_LASKU_MS >= 600 && PINON_LASKU_MS <= 800,
-    'katto on viisi korttia ja laskeutuminen 600–800 ms');
-  assert.ok(PINON_HAIVYTYS_MS > 0);
-});
-
-test('kuvat pinoutuvat haaleina ja sumeina tekstin alle', () => {
+test('etusivulla ei ole isoisän kuvia: ei pinoa, ei kortteja, ei tyylejä', () => {
   const css = lue('../css/styles.css');
   const lahde = lue('../js/etusivupallo.js');
 
-  /* KERROSJÄRJESTYS: teksti > kuvat > verho > video. */
-  const pino = css.match(/\.etusivupallo-pino \{[\s\S]*?\n\}/)[0];
-  const pallo = css.match(/\.etusivupallo \{[\s\S]*?\n\}/)[0];
+  /* JS: kerros ei luo pinoa eikä kortteja. */
+  for (const kielletty of [
+    "className = 'etusivupallo-pino'", 'laskeKortti', 'pinonAsento', 'PINON_KATTO',
+    'PINON_SIIRTO', 'PINON_KULMA', 'PINON_LASKU_MS', 'PINON_HAIVYTYS_MS',
+    'kuvienLaskeutumiset', 'isoisakuvanSavy', 'rajausTyyli', 'valokuvanKuvateksti',
+  ]) {
+    assert.ok(!lahde.includes(kielletty),
+      `js/etusivupallo.js viittaa yhä kuvapinoon (${kielletty})`);
+  }
+  const kerros = lahde.slice(lahde.indexOf('export async function avaaEtusivupallo'));
+  // Kerroksessa saa yhä olla yksi <img>: videon juliste (poster).
+  assert.ok(!/createElement\('figure'\)|createElement\('figcaption'\)/.test(kerros),
+    'kerros luo yhä kuvakortin (figure/figcaption)');
+  assert.equal([...kerros.matchAll(/createElement\('img'\)/g)].length, 1,
+    'kerroksessa on oltava tasan yksi kuva: videon juliste');
+  // Perustelu on kirjattava koodiin, jottei poistoa kumota vahingossa.
+  assert.match(lahde, /Jätä isoisän kuvat pois etusivulta/,
+    'omistajan päätöstä ei ole kirjattu moduuliin');
+
+  /* CSS: pinon tyylit ovat poissa, myös harsokorjaus. */
+  for (const valitsin of [
+    '.etusivupallo-pino {', '.etusivupallo-kuva {', '.etusivupallo-kuva img {',
+    '.etusivupallo-kuva figcaption {', '--pino-harsokorjaus:',
+  ]) {
+    assert.ok(!css.includes(valitsin), `css:ssä on yhä kuvapinon tyyli (${valitsin})`);
+  }
+  // Kerrosjärjestys ilman pinoa: teksti > verho > video.
   const zLuku = (osa) => Number(osa.match(/z-index: (-?\d+);/)[1]);
-  const zPino = zLuku(pino);
-  const zPallo = zLuku(pallo);
+  const zPallo = zLuku(css.match(/\.etusivupallo \{[\s\S]*?\n\}/)[0]);
+  const zVerho = zLuku(css.match(/\.intro\.intro-pallolla \.intro-verho \{[\s\S]*?\n\}/)[0]);
   const zTeksti = zLuku(css.match(
     /\.intro\.intro-pallolla \.intro-kartta,\n\.intro\.intro-pallolla \.intro-arkki \{[^}]*\}/,
   )[0]);
-  const zVerho = zLuku(css.match(/\.intro\.intro-pallolla \.intro-verho \{[\s\S]*?\n\}/)[0]);
-  assert.ok(zTeksti > zPino && zPino > zVerho && zVerho > zPallo,
-    `kerrosjärjestyksen on oltava teksti (${zTeksti}) > kuvat (${zPino}) > verho (${zVerho}) `
-    + `> video (${zPallo})`);
+  assert.ok(zTeksti > zVerho && zVerho > zPallo,
+    `kerrosjärjestyksen on oltava teksti (${zTeksti}) > verho (${zVerho}) > video (${zPallo})`);
 
-  /* PAIKKA JA KOKO: kiinteä alue, selvästi isompi kuin ennen. */
-  assert.match(pino, /position: absolute;/);
-  assert.match(pino, /bottom: /, 'pino on paneelin alaosassa');
-  const leveys = pino.match(/width: clamp\((\d+)px, (\d+)vw, (\d+)px\);/);
-  assert.ok(leveys, 'koko annetaan clampilla eikä JS:llä');
-  assert.ok(Number(leveys[1]) >= 150,
-    `puhelimen kortti ${leveys[1]}px ei ole isompi kuin entinen (110px)`);
-  const poyta = css.match(
-    /@media \(min-width: 900px\) \{\n {2}\/\*[\s\S]*?\n {2}\.etusivupallo-pino \{[\s\S]*?\n {2}\}\n\}/,
-  );
-  assert.ok(poyta, 'työpöydälle on oma media query');
-  assert.match(poyta[0], /right: /, 'työpöydällä pino on paneelin oikeassa alaneljänneksessä');
-  assert.match(poyta[0], /width: clamp\(300px, 46vw, 600px\);/);
+  /* Pakka jää tallelle uutta käyttöpaikkaa varten. */
+  assert.ok(ETUSIVUN_KUVAKIERTO.length > 20, 'pakkaa ei saa tyhjentää poiston yhteydessä');
+});
 
-  /* HAALEA JA SUMEA: arvot tulevat pakasta muuttujina, oletus varana. */
-  const kuva = css.match(/\.etusivupallo-kuva img \{[\s\S]*?\n\}/)[0];
-  assert.match(kuva, /opacity: calc\(var\(--kuvan-haalea, 0\.55\) \+ var\(--pino-harsokorjaus, 0\)\);/,
-    'haaleus tulee pakasta, harsokorjaus pienten ruutujen tekstiharsolle');
-  assert.match(kuva, /filter: blur\(var\(--kuvan-sumennus, 1\.5px\)\);/,
-    'sumennus on <img>-elementillä (iOS-sääntö koskee SVG-kerrosta)');
-  assert.match(css, /iOS-SÄÄNNÖN POIKKEUS/, 'poikkeus on perusteltava kommentissa');
-  assert.match(lahde, /--kuvan-haalea:\$\{savy\.haalea\}/);
-  assert.match(lahde, /--kuvan-sumennus:\$\{savy\.sumennus\}px/);
+/*
+ * PERGAMENTTIHARSOJEN REUNAT EIVÄT SAA NÄKYÄ (omistajan tilaus 5.9.2026
+ * klo 00.25, sanatarkasti: *"konekirjoituksen tekstin takana oleva
+ * vaalennus pienemmälle teholle sekä isommalle alueella mutta niin että
+ * häivytys peittää elementin neliöt rajat. ylemmässä myös häivytyksen
+ * rajat pois näkyvistä (pohjalaatta vähän isompi ja häivytys pidemmälle
+ * matkalle)"*).
+ *
+ * Harso on pseudoelementin laatikko, ja liukuväri piirtyy vain sen
+ * sisään: jos väri ei ole ehtinyt nollaan laatan reunalla, reuna näkyy
+ * suorana viivana. Tämä testi LASKEE peittävyyden laatan reunalta
+ * liukuvärin pysäkeistä — ei tarkista tekstiä.
+ */
+test('harsojen liuku sammuu ennen laatan reunaa eikä jätä suoraa rajaa', () => {
+  const css = lue('../css/styles.css');
+  const yhteinen = css.match(
+    /\.intro\.intro-pallolla \.intro-palsta::before,\n\.intro\.intro-pallolla \.intro-juliste::before \{[\s\S]*?\n\}/,
+  )[0];
+  assert.match(yhteinen, /opacity: var\(--harson-peitto\);/,
+    'harson teho on nimetty muuttujaksi (--harson-peitto)');
+  assert.match(yhteinen, /--harson-sade: (\d+)%;/, 'ellipsin säde on nimetty muuttujaksi');
+  const sade = Number(yhteinen.match(/--harson-sade: (\d+)%;/)[1]);
+  assert.ok(sade <= 56, `säde ${sade} % jättää laatan reunaan näkyvää harsoa`);
 
-  /* KUVATEKSTI VAIN PÄÄLLIMMÄISELLE (luettavuus). */
-  assert.match(css, /\.etusivupallo-kuva figcaption \{[\s\S]*?white-space: nowrap;/);
-  assert.match(css, /\.etusivupallo-kuva\.uusin\.laskeutunut figcaption \{ opacity: 1; \}/,
-    'lappu näkyy vain päällimmäisellä kortilla');
+  /** Liukuvärin pysäkit: [peittävyys, kohta säteestä %] --harson-haivytyksen funktiona. */
+  const pysakit = (haivytys) => [...yhteinen.matchAll(/rgba\(243, 228, 196, ([\d.]+)\)\s+([^,\n]+)/g)]
+    .map((m) => {
+      const paikka = m[2].trim();
+      if (paikka === 'var(--harson-haivytys)') return [Number(m[1]), haivytys];
+      const c = /calc\(var\(--harson-haivytys\) \+ (\d+)%\)/.exec(paikka);
+      // Viimeisen pysäkin perässä on liukuvärin sulkeva sulku: parseFloat.
+      return [Number(m[1]), c ? haivytys + Number(c[1]) : parseFloat(paikka)];
+    });
+  /** Peittävyys laatan suoran reunan kohdalla (reuna on 50 % laatasta). */
+  const reunapeitto = (haivytys, peitto) => {
+    const lista = pysakit(haivytys);
+    assert.equal(lista[lista.length - 1][0], 0, 'viimeinen pysäkki ei ole täysin läpinäkyvä');
+    assert.equal(lista[lista.length - 1][1], 100, 'liuku ei sammu vasta ellipsin reunalla');
+    const kohta = (50 / sade) * 100;
+    for (let i = 1; i < lista.length; i++) {
+      const [a1, p1] = lista[i - 1];
+      const [a2, p2] = lista[i];
+      if (kohta <= p2) return peitto * (a1 + ((a2 - a1) * (kohta - p1)) / (p2 - p1));
+    }
+    return 0;
+  };
 
-  /* PINO: katto, siemenellinen asento, pehmeä laskeutuminen. */
-  assert.match(lahde, /while \(pinossa\.length > PINON_KATTO\) \{/,
-    'pinon katto leikkaa alimman kortin pois');
-  assert.match(lahde, /alin\.classList\.add\('haipyy'\);/, 'alin häivytetään pehmeästi');
-  assert.match(lahde, /const asento = pinonAsento\(nro\);/,
-    'asento on siemenellinen eikä Math.random');
-  assert.doesNotMatch(lahde, /Math\.random/, 'satunnaisuus on siemenellistä (testit vakaita)');
-  assert.match(css, new RegExp(`transition: opacity ${PINON_LASKU_MS}ms`),
-    'CSS:n laskeutuminen ja moduulin vakio ovat samat');
+  const osa = (valitsin) => {
+    /* Oma sääntönsä, ei yhteinen: valitaan se lohko, jossa arvot ovat. */
+    const lohko = [...css.matchAll(
+      new RegExp(`\\.intro\\.intro-pallolla \\${valitsin}::before \\{[\\s\\S]*?\\n\\}`, 'g'),
+    )].map((m) => m[0]).find((t) => t.includes('--harson-peitto:'));
+    assert.ok(lohko, `${valitsin} ei aseta omaa --harson-peittoaan`);
+    const inset = lohko.match(/inset: (-[\d.]+)em (-[\d.]+)em;/);
+    return {
+      peitto: Number(lohko.match(/--harson-peitto: ([\d.]+);/)[1]),
+      haivytys: Number(lohko.match(/--harson-haivytys: (\d+)%;/)[1]),
+      pysty: Math.abs(Number(inset[1])),
+      vaaka: Math.abs(Number(inset[2])),
+    };
+  };
+  const palsta = osa('.intro-palsta');
+  const juliste = osa('.intro-juliste');
 
-  /* EI ESTEVÄISTÖÄ EIKÄ PYSTYSIIRTOA: kuvat saavat jäädä tekstin alle. */
-  assert.doesNotMatch(lahde, /varmistaPaikka|valitseKuvapaikka|sijoitaKuva/,
-    'esteväistö ja pystysiirto poistuivat kokonaan');
-  assert.doesNotMatch(css, /--etusivupallo-kuva-siirto/, 'pystysiirron muuttujaa ei enää ole');
-  assert.doesNotMatch(lahde, /addEventListener\?\.\('resize'/,
-    'asettelun kuuntelija poistui esteväistön mukana');
+  /* Reunalta ei saa erottua mitään: alle 5 % peittävyyttä. */
+  for (const [nimi, h] of [['palsta', palsta], ['juliste', juliste]]) {
+    const reuna = reunapeitto(h.haivytys, h.peitto);
+    assert.ok(reuna < 0.05,
+      `${nimi}n harso on laatan reunalla vielä ${reuna.toFixed(3)} — suora raja näkyisi`);
+    // Häivytys kulkee pitkän matkan: yli puolet säteestä.
+    assert.ok(100 - h.haivytys > 50,
+      `${nimi}n häivytysmatka ${100 - h.haivytys} % säteestä on lyhyt`);
+  }
 
-  /* PINO SÄILYY LOOPIN YLI (perustelu kommentissa). */
-  assert.match(lahde, /KIERROS ALKOI ALUSTA — PINO JÄÄ/,
-    'loopin vaihteessa pinoa ei tyhjennetä, katto hoitaa');
+  /* KONEKIRJOITUKSEN HARSO: pienempi teho, isompi ala kuin ennen. */
+  assert.ok(palsta.peitto < 0.7,
+    `konekirjoituksen harson teho ${palsta.peitto} ei ole entistä (0,94) pienempi`);
+  assert.ok(palsta.pysty >= 2.4 && palsta.vaaka >= 4,
+    `konekirjoituksen harson ala (${palsta.pysty}em × ${palsta.vaaka}em) ei ole entistä isompi`);
+
+  /* JULISTEEN HARSO: pohjalaatta isompi kuin ennen (0,5em × 1,4em). */
+  assert.ok(juliste.pysty > 0.5 && juliste.vaaka > 1.4,
+    `julisteen pohjalaatta (${juliste.pysty}em × ${juliste.vaaka}em) ei ole entistä isompi`);
 });
 
 /* ==================== KYTKENTÄ ===================================== */

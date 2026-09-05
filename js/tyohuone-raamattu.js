@@ -3376,6 +3376,15 @@ export const RAAMATTU = {
           + 'pelaa linssin lapi selaimessa, kirjaa havainnot ja korjaa '
           + 'ennen kuin omistaja nakee sen. Rakennetaan agenttiparvella '
           + '(aineisto, moottori, kuvat, musiikki), Fable tarkistaa tekstit.',
+        'ISOISAN KUVAT POIS ETUSIVULTA (omistaja 6.9.2026 yo, sanatarkasti: '
+          + '"Jata isoisan kuvat pois etusivulta"): etusivun pallon paalla ei '
+          + 'nayteta isoisan kuvia lainkaan - pinokerros poistettiin koodista '
+          + '(ei lippu). Kuvapakka js/packs/etusivun-isoisakuvat.js (27 '
+          + 'kuvaputken vedosta) sailyy albumia ja avauslentoa varten. '
+          + 'Etusivun avaus (omistaja 5.9.2026 yo): pallo pyorii ja otsikko '
+          + 'nakyy heti, "Osa II" feidaa 2,3 s kohdalla (0,9 s), sitten '
+          + 'kirjoituskone ja luenta; otsikko ei liiku eika vaihda kokoa '
+          + 'missaan vaiheessa; harsot eivat nayta reunaa.',
         'MUSIIKKIA KAIKKIIN KOHTIIN, LUENNAT LYHYITA (omistaja 5.9.2026 yo, '
           + 'sanatarkasti: "ateenaan saavuttaessa voisi vaihtua kappale. '
           + 'generoi sinne oma musiikki" ja "generoi musiikkeja kaikkiin '
