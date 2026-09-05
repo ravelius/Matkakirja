@@ -1,0 +1,89 @@
+# Valmiin kirjaston vienti ämpärin vendor/-polkuun (docs/raportit/
+# valmiit-palikat-2026-09-04.md luku 10 ja Raamattu "VALMIIT KIRJASTOT":
+# kirjastot tulevat R2:n vendor/-polusta, eivät reposta eivätkä CDN:stä
+# tuotannossa — offline, palvelutyöntekijän välimuisti, ei kolmannen
+# osapuolen saatavuusriskiä). Sama malli kuin Globe.gl:n viennissä
+# (tee-pallolaatat.yml), mutta yleinen: npm-paketti, versio, tiedosto.
+# Lisenssitiedosto viedään rinnalle (pilari 5: MIT/BSD vaativat
+# lisenssitekstin säilyttämisen jakelussa).
+name: Vie kirjasto vendor-polkuun
+
+on:
+  workflow_dispatch:
+    inputs:
+      paketti:
+        description: 'npm-paketin nimi (esim. page-flip)'
+        required: true
+      versio:
+        description: 'Tarkka versio (esim. 2.0.7)'
+        required: true
+      tiedosto:
+        description: 'Tiedosto paketissa (esim. dist/js/page-flip.browser.js)'
+        required: true
+      kohde:
+        description: 'Tiedostonimi vendor/-polussa (esim. page-flip-2.0.7.browser.js)'
+        required: true
+      tunniste:
+        description: 'Merkkijono, jonka tiedoston alun on sisällettävä (tarkistus; tyhjä = ei tarkisteta)'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
+    steps:
+      - name: Tarkista että salaisuudet ovat tallessa
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "${R2_ACCOUNT_ID:-}" ]         || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ]     || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "${R2_BUCKET:-}" ]             || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            exit 1
+          fi
+
+      - name: Nouda kirjasto ja lisenssi npm-rekisteristä (jsDelivr)
+        run: |
+          set -euo pipefail
+          p="${{ inputs.paketti }}"; v="${{ inputs.versio }}"; t="${{ inputs.tiedosto }}"
+          curl -fsSL -o kirjasto.js "https://cdn.jsdelivr.net/npm/${p}@${v}/${t}"
+          tunniste='${{ inputs.tunniste }}'
+          if [ -n "$tunniste" ]; then
+            head -c 400 kirjasto.js | grep -q -- "$tunniste" || { echo "::error::ladattu tiedosto ei sisällä tunnistetta '$tunniste'"; exit 1; }
+          fi
+          lisenssi=""
+          for nimi in LICENSE LICENSE.md LICENSE.txt license LICENCE; do
+            if curl -fsSL -o LISENSSI "https://cdn.jsdelivr.net/npm/${p}@${v}/${nimi}" 2>/dev/null; then lisenssi="$nimi"; break; fi
+          done
+          [ -n "$lisenssi" ] || { echo "::error::lisenssitiedostoa ei löydy paketista ${p}@${v}"; exit 1; }
+          echo "Kirjasto: $(wc -c < kirjasto.js) tavua, lisenssi: $lisenssi ($(head -1 LISENSSI))"
+
+      - name: Vie ämpäriin
+        run: |
+          set -euo pipefail
+          kohde="${{ inputs.kohde }}"
+          aws s3 cp kirjasto.js "s3://${R2_BUCKET}/vendor/${kohde}" \
+            --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --no-progress --content-type application/javascript \
+            --cache-control 'public, max-age=31536000, immutable'
+          aws s3 cp LISENSSI "s3://${R2_BUCKET}/vendor/${kohde%.js}.LICENSE.txt" \
+            --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --no-progress --content-type 'text/plain; charset=utf-8' \
+            --cache-control 'public, max-age=31536000, immutable'
+          echo "Viety: vendor/${kohde} ja vendor/${kohde%.js}.LICENSE.txt"
