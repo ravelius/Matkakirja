@@ -55,10 +55,15 @@
  * (js/packs/kulttuuri-kategoriat.js). Uusia faktaväitteitä ei ole
  * kummassakaan.
  *
- * MIKSI EI VAPAUSKYSYMYSTÄ: kaupungin laattakysymys koskee tasavallan
- * lipun sanaa (ks. KOHTAAMINEN alempana). Jos lehden aarteen avaava
+ * MIKSI EI VAPAUSKYSYMYSTÄ: kaupungin laattakysymys koskee latinan
+ * sanaa Libertas (ks. KOHTAAMINEN alempana). Jos lehden aarteen avaava
  * tehtävä kysyisi samasta vapaudesta, aarrekysymys olisi ratkaistu
- * ennen kuin Ivo on tavattu.
+ * ennen kuin kohtaamishenkilö on tavattu.
+ *
+ * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10: rajaus on ennallaan, mutta hahmo
+ * vaihtui (muurinvartija Ivo → merimelontaopas Mara) ja kysymyksen
+ * sanamuoto ei enää puhu lipusta vaan sanasta — lipun täsmällistä
+ * käyttöä eri aikakausina ei väitetä.
  */
 const KARANTEENI_VISA = {
   kysymys: 'Vuonna 1377 Dubrovnikin suuri neuvosto määräsi '
@@ -491,67 +496,86 @@ export const FOKUSVIRTA_DUBROVNIK = {
 
   /*
    * ---------- 5. Kohtaaminen ----------
-   * Hahmo, kohtaamiskuva ja kysymys ovat tarinakaaren paketissa
-   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'dubrovnik'):
-   * muurinvartija Ivo kävelee kehän joka ilta ja laskee askeleensa.
    *
-   * KYSYMYSTÄ EI VAIHDETTU, ja se on harkittu. Raamattu (omistaja
-   * 28.8.2026): *"PELITEHTÄVÄN AIHE RATKAISEE… aarretehtävän aihe
-   * kytketään aina kaupungin muuhun tarinaverkkoon."* Kaaren vanha
-   * kysymys tasavallan lipun sanasta on jo täsmälleen siinä verkossa:
-   * merkintä alkaa ostetusta rauhasta, oppitunti kertoo mitä rauha
-   * maksoi ja mitä sanaa ei myyty, ja kohtaaminen lunastaa sen. Aallon
-   * 2 kolmesta muusta kaupungista poiketen täällä ei siis ollut mitään
-   * korjattavaa. Tämä kortti ei kertaa Ivon repliikkiä eikä paljasta
-   * vastausta.
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
+   *
+   * HAHMO VAIHDETTU: muurinvartija Ivo → merimelontaopas Mara
+   * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 19:05 UTC:
+   * *"Ivon henkilökertomus, saranoitu kivi ja lyhty poistuvat"*).
+   * Hahmo, kohtaamiskuva ja kysymys ovat tarinakaaren paketissa
+   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'dubrovnik').
+   *
+   * KYSYMYKSEN YDIN SÄILYI, SANAMUOTO EI. Laattakysymys koskee yhä
+   * Libertas-sanaa, mutta se ei enää väitä mitään lipun täsmällisestä
+   * käytöstä: Mara huomaa sanan kirjan reunaan kopioituna ja pyytää
+   * matkaajaa tulkitsemaan sen. Merkinnän ja oppitunnin kytkös pitää
+   * ennallaan — merkintä alkaa ostetusta rauhasta, oppitunti kertoo
+   * mitä rauha maksoi ja mitä sanaa ei myyty. Tämä kortti ei kertaa
+   * Maran repliikkiä eikä paljasta vastausta.
+   *
+   * EI SUKUSALAISUUTTA EIKÄ VARTIJAA. Mara ei tiedä kätköstä eikä
+   * tunne Horatiota; hänen etunsa on ammatillinen — hän osaa lukea
+   * rannan mereltä päin, ja juuri se ratkaisee pelaajan väärän
+   * oletuksen.
    */
   kohtaaminen: {
-    hahmo: 'Muurinvartija Ivo',
-    nappi: 'Tapaa muurinvartija',
-    teksti: 'Ivo kävelee kehän joka ilta ja laskee askeleensa, koska niin '
-      + 'on tehty vapaan tasavallan ajoista asti. Hän tuntee jokaisen '
-      + 'portaan, jokaisen tuulisen kulman ja sen kohdan, jossa meri '
-      + 'kuuluu kovimmin. Vieraita hän on nähnyt enemmän kuin haluaisi '
-      + 'laskea. Ennen kuin hän avaa portin ja päästää mukaansa, hän '
-      + 'haluaa tietää, onko vieras ymmärtänyt, mitä tämä kaupunki ei '
-      + 'suostunut myymään.',
+    hahmo: 'Merimelontaopas Mara',
+    nappi: 'Tapaa Mara',
+    teksti: 'Mara vie ryhmiä rantoihin, joihin ei pääse maalta: hän '
+      + 'tuntee kalliot siitä, miltä ne näyttävät veneen korkeudelta, '
+      + 'ja tietää tunnin tarkkuudella, milloin aallokko sallii '
+      + 'rantautumisen. Vieraita hän ohjaa kuivasti ja lyhyesti, ja '
+      + 'kastuneille tavaroille hän ei osoita sääliä. Ennen kuin hän '
+      + 'kääntää kajakin keulan rantaan, hän haluaa tietää, ymmärsikö '
+      + 'vieras sen sanan, joka on kopioitu kirjan reunaan.',
   },
 
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * KOHTAAMISPAIKKA: PILEN PORTTI. Kaaren teksti asettaa Ivon portin
-   * holviin avainrenkaineen, ja pelin oma Dubrovnik-aineisto sanoo,
-   * että Pilen portti on yksi vain kolmesta paikasta, joista
-   * muurikävelyn voi aloittaa (js/packs/nahtavyysjutut.js, "Pilen
-   * portti").
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
    *
-   * 42,64173333 N / 18,10681389 E — hr-Wikipedia "Vrata od Pila",
-   * prop=coordinates (haettu 29.8.2026). Muunnos on sama kaava ja
-   * samat vakiot kuin fokuskohteilla: maailmankartalla Millerin lieriö
-   * LEVEYS 12000 / LON0 −175 / POHJOINEN 76 (tools/fokuskartta/
-   * piirto.js laudanProjektio), Euroopan laudalla x = (lon + 11) × 19,2
-   * ja y = (72 − lat) × 26,3.
+   * KOHTAAMISPAIKKA VAIHDETTU: PILEN PORTTI → KALLIORANTA VANHAN
+   * KAUPUNGIN KAAKKOISPUOLELLA. Vanha piste kuului muurinvartija
+   * Ivolle; uusi kohtaaminen tapahtuu vedessä suuren kalliosuun edessä,
+   * eikä sinne pääse maalta — se on koko kaaren idea.
    *
-   * LASKU:
-   *   maailmankartta  x = ((18,10681389 − (−175)) mod 360) × (12000/360)
-   *                     = 193,10681389 × 33,3333… = 6436,9
-   *                   y = (millerY(76) − millerY(42,64173333)) × 12000/2π
-   *                     = 1697,8
-   *   europe          x = (18,10681389 + 11) × 19,2 = 558,9
-   *                   y = (72 − 42,64173333) × 26,3 = 772,1
+   * PAIKKAEHDOKAS ON BETINAN LUOLA, ja sitä EI ole vahvistettu
+   * kuvauspaikaksi eikä pääsyä luvata (kuvaputken ehdotus 5.9.2026:
+   * *"Betinan luolan seutu on tarkistettava paikkaehdokas"*). Luolalla
+   * ei ole omaa Wikipedia-artikkelia eikä OSM-kohdetta, joten
+   * koordinaattia EI ole otettu luolan nimestä. Piste on laskettu
+   * rannikkokohdasta, jonka Commonsin geotagatut kuvat vahvistavat
+   * (mm. "Adriatic Sea, Dubrovnik (5132063723).jpg" 42,641283 /
+   * 18,124179 ja "Küste bei Dubrovnik 8.jpg" 42,640026 / 18,125040,
+   * imageinfo haettu 5.9.2026): käytetty piste 42,6390 N / 18,1258 E on
+   * niiden välissä samalla rantaviivalla. FABLE/SONNET: jos kuvaputki
+   * vahvistaa tarkan luolan, koordinaatti päivitetään sen mukaan.
+   *
+   * Muunnos on sama kaava ja samat vakiot kuin fokuskohteilla:
+   * maailmankartalla Millerin lieriö LEVEYS 12000 / LON0 −175 /
+   * POHJOINEN 76 (tools/fokuskartta/piirto.js laudanProjektio),
+   * Euroopan laudalla x = (lon + 11) × 19,2 ja y = (72 − lat) × 26,3.
+   *
+   * LASKU (ajettu laudanProjektion omalla kaavalla):
+   *   maailmankartta  x = ((18,1258 − (−175)) mod 360) × (12000/360)
+   *                     = 193,1258 × 33,3333… = 6437,5
+   *                   y = (millerY(76) − millerY(42,6390)) × 12000/2π
+   *                     = 1697,9
+   *   europe          x = (18,1258 + 11) × 19,2 = 559,2
+   *                   y = (72 − 42,6390) × 26,3 = 772,2
    *
    * TARKISTUS LAATTAA VASTEN: Dubrovnikin laatta on Euroopan laudalla
    * 560 / 770 ja maailmankartalla 6438,9 / 1694,6, eli piste on sen
-   * vieressä parin yksikön päässä. Niin pitääkin — portti on
-   * vanhankaupungin länsireunassa, ja laudan yksikkö on
-   * maailmankartalla noin kolme kilometriä.
+   * vieressä muutaman yksikön päässä — käytännössä samassa kohdassa
+   * kuin vanha Pilen portti, vain kaupungin toisella puolella. Laudan
+   * yksikkö on maailmankartalla noin kolme kilometriä.
    */
   kohtaamispiste: {
-    nimi: 'Pilen portti',
+    nimi: 'Kallioranta vanhan kaupungin kaakkoispuolella',
     laudat: {
-      maailmankartta: { x: 6436.9, y: 1697.8 },
-      europe: { x: 558.9, y: 772.1 },
+      maailmankartta: { x: 6437.5, y: 1697.9 },
+      europe: { x: 559.2, y: 772.2 },
     },
   },
 

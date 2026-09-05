@@ -299,65 +299,72 @@ export const KAARI_PAKETIT = {
     {
       id: 'lontoo',
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
-      otsikko: 'Lontoo — laskuveden kello',
-      saapuminen: 'Sumu nousi joesta niin sakeana, että junani jäi odottamaan '
-        + 'sitä; aikataulukirjani ei tuntenut sumua, ja myönnän '
-        + 'kirjanneeni sen kirjan viaksi. Kävelin laskuveden '
-        + 'paljastamalle rannalle. Liejussa makasi taskukello, '
-        + 'viisarit pysähtyneinä; sumun takaa tornin suuri kello löi '
-        + 'tunnin, kuin kaupunki vastaisi. Sinä, joka tätä luet: '
-        + 'kello käy taas. Kuuntele.',
-      henkilo: 'Jokilöytäjä Ned etsii laskuveden liejusta joen pudottamia '
-        + 'esineitä, kuten hänen sukunsa on etsinyt sata vuotta.',
-      kohtaaminen: 'Rannalla jokilöytäjä Ned punnitsee taskukelloa kädessään. '
-        + '"Suvussani sanotaan: joki antaa takaisin sen, minkä '
-        + 'omistaja unohti. Kannessa on kaksi kirjainta — H. F. '
-        + 'Vastaa kirjan kysymykseen, niin kello on sinun."',
+      otsikko: 'Lontoo — valo löytää kadun',
       /*
-       * AIHE VAIHDETTU SUMUUN (v1308).
+       * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
        *
-       * Raamattu, osio "Fokusmoodi" (omistaja 28.8.2026 ilta):
-       * *"aarretehtävän aihe kytketään aina kaupungin muuhun
-       * tarinaverkkoon (matkakirjamerkintä, täyt, lehdet)."*
+       * KOKO KAARI VAIHDETTU (kuvaputken tarinaehdotus 5.9.2026,
+       * Fablen päätös samana iltana klo 19:05 UTC: *"Lontoo — Leila
+       * (hyväksytty sellaisenaan) … Molemmat Ned-versiot (kaari +
+       * vanha KOHTAAMISET) poistuvat"*). Jokilöytäjä Ned, H. F.
+       * -taskukello ja sumukysymys jäivät pois; tilalla on nykyhetken
+       * Lontoo, jossa tunnistus perustuu havaittuun muotoon eikä suvun
+       * salaisuuteen — kukaan ei tunnista Horatiota eikä odota
+       * perillistä (docs/isoisan-raamattu.md).
        *
-       * Vanha kysymys Big Benin nimestä oli hyvä tietovisa muttei
-       * kytkeytynyt mihinkään: fokusmoodissa kaupungin matkakirjakortin
-       * omistaa fokusvirta (js/packs/fokusvirta-lontoo.js), ja sen
-       * merkintä alkaa sanoilla *"Lontoossa sumu syö äänet ja kaupunki
-       * puhuu silti"*. Uusi kysymys tulee siitä lauseesta ja saa
-       * vastauksensa saman paketin oppitunnista, joka kertoo
-       * joulukuun 1873 sumusta ja siitä, mistä se oli tehty. Big Benin
-       * aineisto elää yhä pelissä (js/packs/nahtavyysjutut.js, "Big
-       * Ben") ja Livian herokuplassa.
+       * KIRJAN KATUPIIRROS on uusi hyväksytty fiktiivinen yksityiskohta:
+       * saapuminen piirtää kulman, kohtaaminen tunnistaa sen ja aarre
+       * käyttää sitä. Kätkö on kulman suojaisassa syvennyksessä eikä
+       * kiinnity mihinkään suojeltuun rakenteeseen.
        *
-       * Kaaren saapuminen, kohtaaminen ja aarre pysyvät ennallaan.
+       * KYSYMYS EI OLE HORATION JÄTTÄMÄ. Vuoden 1956 laki on 83 vuotta
+       * merkintää nuorempi, joten kysymys nousee Leilan omasta
+       * puheesta ("täällä ei ennen olisi näkynyt kuvattavaa, savulta")
+       * ja saa vastauksensa fokusvirran oppitunnista (js/packs/
+       * fokusvirta-lontoo.js), johon on lisätty lain oma kappale.
+       * Sanatarkka vastausrivi ei esiinny yhdessäkään ennen visaa
+       * näkyvässä kentässä (tarinakaari.md, sääntö 6).
        *
-       * FAKTAT: en-Wikipedia "19th-century London", sumua käsittelevä
-       * osio (lähteenä Peter Ackroyd, London: The Biography, 2000),
-       * sekä js/packs/maa-kategoriat.js GBR/luonto (pelin omaa
-       * tarkistettua aineistoa). Lähdeviitteet kokonaisuudessaan
-       * js/packs/fokusvirta-lontoo.js:n oppitunnin kommentissa.
+       * FAKTAT: Clean Air Act 1956 (legislation.gov.uk, ukpga/1956/52 —
+       * tumman savun kielto ja savuttomiksi määrättävät alueet;
+       * kuvaputken faktantarkistus 5.9.2026) sekä pelin oma tarkistettu
+       * aineisto js/packs/maa-kategoriat.js, GBR/luonto, nosto "Sumu,
+       * joka ei ollutkaan sumua" (1952 ja neljä vuotta myöhemmin
+       * säädetty laki). Fakta ei väitä ilmansaasteen kadonneen.
        */
+      saapuminen: 'Mittasin kadun leveyden kahdesti, koska en uskonut '
+        + 'ensimmäistä lukua. Aurinko ei yllä tänne alas, ja silti '
+        + 'vastapäisessä seinässä paloi kirkas laikku, joka siirtyi '
+        + 'minuutissa kämmenen leveyden. En löytänyt sille lähdettä. '
+        + 'Piirsin kulman muistiin niin tarkasti kuin taisin: piirros on '
+        + 'rehellisempi kuin selitys, jonka siitä keksisin.',
+      henkilo: 'Muotialan opiskelija Leila etsii kuvauspaikkaa kaduilta, '
+        + 'joille aurinko pääsee vain lasin kautta.',
+      kohtaaminen: 'Varjoisalla kadulla muotialan opiskelija Leila kääntää '
+        + 'puhelimensa näytön sinulle. "Aarretta? Minä etsin '
+        + 'kuvauspaikkaa. Tuo piirros on tämä kulma, kuvasin sen eilen. '
+        + 'Täällä ei ennen olisi näkynyt kuvattavaa, savulta. Vastaa, '
+        + 'niin näytän mistä katsoa."',
       kysymys: {
-        q: 'Isoisä kirjoitti, että Lontoossa sumu syö äänet. Mistä se '
-          + 'sumu oikeasti syntyi?',
+        q: 'Leila sanoo, ettei kadulla ennen näkynyt kuvattavaa savulta. '
+          + 'Mihin vuoden 1956 Clean Air Act erityisesti puuttui?',
         vaihtoehdot: [
-          'Kivihiilen savusta ja joen kosteudesta',
-          'Mereltä ajautuneesta suolausvasta',
-          'Höyryveturien ja tehtaiden päästämästä vesihöyrystä',
-          'Kaasulyhtyjen palamisjätteestä',
+          'Katumainosten ja näyteikkunoiden valaistukseen',
+          'Thamesin vuoroveden säännöstelyyn',
+          'Rakennusten ja tulisijojen savupäästöihin',
+          'Autojen ja bussien pakokaasuihin',
         ],
-        oikea: 0,
-        fakta: 'Rikkidioksidi ja noki sekoittuivat Thamesin laakson '
-          + 'kosteuteen. Isoisän matkavuoden sumu makasi kaupungin '
-          + 'päällä 7.–13. joulukuuta 1873, ja pahimpana päivänä koko '
-          + 'liikenne pysähtyi. Kaupungin oma nimi ilmiölle oli London '
-          + 'particular.',
+        oikea: 2,
+        fakta: 'Vuoden 1952 savusumun jälkeen säädetty laki kielsi tumman '
+          + 'savun päästämisen piipusta ja antoi kunnille vallan määrätä '
+          + 'kokonaisia alueita savuttomiksi: niissä kodin tulisijassa '
+          + 'sai polttaa vain savutonta polttoainetta. Ilma parani '
+          + 'vuosikymmenessä — puhdasta se ei ole vieläkään.',
       },
-      aarre: 'Ned avasi kellon ja antoi sen: sisällä oli isoisän '
-        + 'käsialalla pelkkä kellonaika, sama johon viisarit '
-        + 'pysähtyivät. "Joki ei pysäyttänyt tätä kelloa — joku '
-        + 'pysäytti sen tahallaan, ja liejussa oli tuoreet jäljet."',
+      aarre: 'Leila käski katsoa alaviistoon: kulmakiven takana, '
+        + 'suojaisassa syvennyksessä, oli rasia. "Minä etsin tähän '
+        + 'valoa. Sinä löysit jotain muuta." Torni, josta valo '
+        + 'heijastuu, on isoisän piirrosta uudempi.',
     },
     {
       id: 'pariisi',
@@ -1005,39 +1012,73 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'dubrovnik',
-      mykistetyt: ['saapuminen', 'aarre'],
-      otsikko: 'Dubrovnik — yhdeksässadas askel',
-      saapuminen: 'Kävelin muurin koko kehän ja laskin askeleet; vartija '
-        + 'käveli rinnallani ja laski ääneen omiaan, sillä hänen '
-        + 'mittansa oli toinen. Väittelimme puoli kierrosta. Muurin '
-        + 'syvennyksessä irvisti kivinaama, jonka päälle hyppääminen '
-        + 'tuo tarun mukaan onnea — hyppäsin, ja vartija merkitsi '
-        + 'senkin kirjaansa. Kohteliaisuutta on se, ettei kumpikaan '
-        + 'kysynyt miksi.',
-      henkilo: 'Muurinvartija Ivo kävelee muurin kehän joka ilta ja laskee '
-        + 'askeleensa, kuten vartijat vapaan tasavallan ajoista.',
-      kohtaaminen: 'Portin holvissa Ivo laskee avainrengastaan. "Kirjassa lukee, '
-        + 'että isoisäsi käveli kehän isoisäni kanssa ja pysähtyi '
-        + 'yhdeksännelläsadalla askeleella. Vastaa hänen kysymykseensä, '
-        + 'niin pysähdymme samassa kohdassa."',
+      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      otsikko: 'Dubrovnik — ranta näkyy vain mereltä',
+      /*
+       * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
+       *
+       * KOKO KAARI VAIHDETTU (kuvaputken tarinaehdotus 5.9.2026,
+       * Fablen päätös klo 19:05 UTC: *"Dubrovnik — Mara (hyväksytty
+       * sellaisenaan) … Ivon henkilökertomus, saranoitu kivi ja lyhty
+       * poistuvat"*). Muurinvartija Ivo, yhdeksässadas askel, saranoitu
+       * kivi ja lämmin lyhty ovat poissa; tilalla on merimelontaopas,
+       * joka lukee saman rannan mereltä päin.
+       *
+       * SAAPUMISEN KOLME ENSIMMÄISTÄ VIRKETTÄ ovat Fablen hyväksymä
+       * merkintäehdotus sanatarkasti ("Veneestä ranta aukeni kuin ovi.
+       * Maalta en löytänyt samaa kohtaa lainkaan. Soutaja käänsi
+       * piirrokseni oikein päin."); ympärille on kirjoitettu vain
+       * mittausele ja erän itseironia-annos. Soutaja on 1873 eikä
+       * kukaan tänään muista häntä.
+       *
+       * LIBERTAS-SILTA: kysymys ei roiku irrallaan rantaprofiilista,
+       * vaan Mara huomaa sanan kirjan reunaan kopioituna ja pyytää
+       * matkaajaa tulkitsemaan sen (Fablen hyväksymä uusi fiktiivinen
+       * reunamerkintä). Vastaus ei avaa mitään taianomaisesti — se
+       * herättää kiinnostuksen, ja kätkö löytyy vasta kun luonnosta
+       * verrataan rantaan.
+       *
+       * FAKTAT: Libertas = vapaus, ja sana on Lovrijenacin linnakkeen
+       * portin yllä olevassa lauseessa (Dubrovnik Tourist Board,
+       * tzdubrovnik.hr; kuvaputken faktantarkistus 5.9.2026). Lipun
+       * täsmällistä käyttöä eri aikakausina EI väitetä — vanha kysymys
+       * puhui lipusta, tämä ei.
+       *
+       * PAIKKAEHDOKAS: Betinan luola. Sitä ei nimetä tekstissä, koska
+       * kuvauspaikkaa eikä pääsyä ole vahvistettu.
+       */
+      saapuminen: 'Veneestä ranta aukeni kuin ovi. Maalta en löytänyt samaa '
+        + 'kohtaa lainkaan: kiersin kalliota kaksi tuntia ja merkitsin '
+        + 'karttaan kolme umpikujaa. Soutaja käänsi piirrokseni oikein '
+        + 'päin sanomatta mitään. Olin piirtänyt oikein ja '
+        + 'katsonut väärästä suunnasta. Kirjasin senkin.',
+      henkilo: 'Merimelontaopas Mara vie ryhmiä kallionalusrantoihin, '
+        + 'joihin ei pääse maalta.',
+      kohtaaminen: 'Kalliosuun edessä merimelontaopas Mara pitää kajakkia '
+        + 'paikoillaan yhdellä kädellä. "Aarretta? Pidä ensin kirja '
+        + 'kuivana." Hän kääntää sivun vedeltä. "Tämä on rantaprofiili, '
+        + 'piirretty mereltä. Reunaan on kopioitu yksi sana. Sano mitä '
+        + 'se tarkoittaa."',
       kysymys: {
-        q: 'Dubrovnik oli vuosisatoja pieni vapaa tasavalta suurten '
-          + 'valtojen välissä. Mikä sana sen lipussa luki?',
+        q: 'Kirjan reunaan on kopioitu latinan sana Libertas, joka lukee '
+          + 'myös Lovrijenacin linnakkeen portin yllä. Mitä se tarkoittaa?',
         vaihtoehdot: [
-          'Libertas — vapaus',
-          'Fortuna — onni',
-          'Veritas — totuus',
-          'Victoria — voitto',
+          'Onni',
+          'Vapaus',
+          'Voitto',
+          'Totuus',
         ],
-        oikea: 0,
-        fakta: 'Ragusan tasavallan lipussa luki Libertas. Kaupunki piti '
-          + 'vapautensa taidolla ja kaupankäynnillä, ei sodilla — ja sen '
-          + 'muurit ovat silti Euroopan vahvimpia.',
+        oikea: 1,
+        fakta: 'Libertas tarkoittaa vapautta. Ragusan tasavalta säilytti '
+          + 'itsenäisyytensä vuosisatoja taidolla ja kaupankäynnillä, ei '
+          + 'sodilla, ja Lovrijenacin linnakkeen portin yllä lukee yhä '
+          + 'lause, jonka mukaan vapautta ei myydä maailman kaikesta '
+          + 'kullasta.',
       },
-      aarre: 'Yhdeksässadas askel osui kiveen, joka kääntyi '
-        + 'saranoillaan: onkalossa odotti kätkö ja lyhty, jonka lasi '
-        + 'oli yhä lämmin. "Kehällä ei öisin kulje kukaan muu kuin '
-        + 'minä — ei ainakaan pitänyt kulkea", Ivo sanoi.',
+      aarre: 'Mara veti kajakin rantakivien väliin ja osoitti melalla. '
+        + 'Irtokiven alta tuli rasia. "Luulin meidän etsivän vain '
+        + 'rantaa." Isoisän piirroksessa on neljäs kallio. Sitä ei ole '
+        + 'edessämme eikä Maran merikartassa.',
     },
     {
       id: 'sarajevo',
@@ -1201,40 +1242,82 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'odessa',
-      mykistetyt: ['kohtaaminen', 'aarre'],
-      otsikko: 'Odessa — lyhty jota ei sytytetty',
-      saapuminen: 'Satamasta nousivat portaat, joita laskin sataan asti ennen '
-        + 'kuin luovutin. Alhaalta katsoen näin vain askelmia, ylhäältä '
-        + 'vain tasanteita — kuin portaikko näyttäisi eri asian '
-        + 'kummallekin kulkijalle. Puolivälin tasanteella '
-        + 'lyhtypylvääseen oli sidottu köydenpätkä merimiessolmulla. '
-        + 'Solmu oli isoisäni opettama. Vain hän sitoi sen niin.',
-      henkilo: 'Lyhdynsytyttäjä Fjodor sytyttää portaikon lyhdyt joka ilta '
-        + 'alhaalta ylös ja sammuttaa ne aamulla ylhäältä alas.',
-      kohtaaminen: 'Tasanteella Fjodor nojaa lyhtytankoonsa. "Solmun sitoi '
-        + 'kirjasi omistaja isoisoisäni nähden — ja sinä iltana hän '
-        + 'jätti tämän yhden lyhdyn sytyttämättä. Meillä sanotaan: '
-        + 'valo säästetään sille, joka vielä nousee portaat. Vastaa, '
-        + 'niin sytytän sen nyt."',
+      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      otsikko: 'Odessa — kuitti väärältä puolelta',
+      /*
+       * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
+       *
+       * KOKO KAARI VAIHDETTU (kuvaputken tarinaehdotus 5.9.2026,
+       * Fablen päätös klo 19:05 UTC: *"Odessa — Iryna ja Solomiia
+       * (hyväksytty yhdellä muutoksella)"*). Lyhdynsytyttäjä Fjodor,
+       * peritty lyhtylupaus ja 192 askelman visa poistuvat.
+       *
+       * FABLEN MUUTOS ON TOTEUTETTU: kirjan takakannen tasku EI sisällä
+       * kätköä, koska aarre löytyy aina kaupungin omasta kätköstä ja
+       * pelin todellinen tulos voi olla tyhjä. Taskussa on kuitin
+       * puuttuva puolisko ja siihen leimattu vaakamerkki, joka osoittaa
+       * torin vanhan vaakahuoneen kohdalle — rasia löytyy sieltä. Tasku
+       * on kertaluonteinen paljastus eikä se täyty uudelleen; tyhjän ja
+       * väärän vastauksen repliikit ovat js/packs/kohtaamiset.js:ssä
+       * eivätkä lupaa löytöä.
+       *
+       * SAAPUMISEN KAKSI VIRKETTÄ ovat Fablen hyväksymä merkintäehdotus
+       * sanatarkasti ("Kuitti oli vapaasataman ajoilta, minua vanhempi.
+       * Sen nurjalle puolelle oli kirjoitettu: Katso sidoksen alle.").
+       * Ajoitus riittää: vapaasatama lakkasi 1859, joten kuitti on
+       * varmasti Horatiota vanhempi ilman että syntymävuotta väitetään.
+       *
+       * KYSYMYS NOUSEE OPPITUNNISTA, joka on jo pelissä (js/packs/
+       * fokusvirta-odessa.js: *"Sen sisällä tavaran sai purkaa,
+       * varastoida, pakata uudelleen ja jalostaa maksamatta tullia"*,
+       * *"Järjestely lakkautettiin huhtikuussa 1859"*). Sanatarkka
+       * vastausrivi ei esiinny missään ennen visaa näkyvässä kentässä.
+       * SEURAUS SPOILERILISTAAN: fokusvirta-odessa.js:n kieltolistan K6
+       * ei ole enää askelmien määrä vaan vapaasataman tullietu — ks.
+       * saman tiedoston LUONNOS-huomautus.
+       *
+       * FAKTAT: pelin oma tarkistettu aineisto (fokusvirran oppitunti,
+       * jonka lähteet on nimetty siellä) ja kuvaputken faktantarkistus
+       * 5.9.2026 (Odessan kaupungin oma historiakatsaus: myöntäminen
+       * 1817, toiminta 1819–1859, etu koski tuontitavaran vastaanottoa
+       * ja varastointia). HUOM FABLELLE: kaupunkilehti (js/packs/
+       * kulttuuri-kategoriat.js, odessa) sanoo vuosiksi 1819–1858,
+       * fokusvirran oppitunti 1859 — tämä fakta seuraa oppituntia,
+       * mutta ristiriita on olemassa jo ennen tätä luonnosta.
+       */
+      saapuminen: 'Sain vaihtorahan sijasta kuitin, ja myyjä katsoi minua '
+        + 'kuin olisi maksanut liikaa. Kuitti oli vapaasataman ajoilta, '
+        + 'minua vanhempi. Sen nurjalle puolelle oli kirjoitettu: Katso '
+        + 'sidoksen alle. En tiedä kenelle ohje kuuluu, enkä keksinyt '
+        + 'sidosta, jonka alle katsoa. Panin kuitin kirjani väliin.',
+      henkilo: 'Torimyyjä Iryna punnitsee Privozilla samoilla vaaoilla '
+        + 'kuin äitinsä; tytär Solomiia pitää laatikkoa.',
+      kohtaaminen: 'Privozin katoksen alla torimyyjä Iryna pysäyttää '
+        + 'vierivän melonin käsivarrellaan. Tytär Solomiia nauraa '
+        + 'laatikkonsa takana. "Aarretta meidän torilta? Näytä se '
+        + 'kuitti." Iryna kääntää paperin nurin. "Vastaa yhteen '
+        + 'kysymykseen, niin luen tämän loppuun."',
       kysymys: {
-        q: 'Montako askelmaa Odessan jättiläisportaikossa on?',
+        q: 'Irynan kädessä on kuitti Odessan vapaasataman ajoilta. Mitä '
+          + 'vapaasataman tullietu tarkoitti?',
         vaihtoehdot: [
-          'Vajaat kaksisataa',
-          'Tasan sata',
-          'Yli viisisataa',
-          'Kolmekymmentäkolme',
+          'Laivojen ei tarvinnut ilmoittaa lastiaan viranomaisille',
+          'Tuontitavaran sai vastaanottaa ja varastoida tullitta',
+          'Kaikki tavarat olivat satamassa ilmaisia',
+          'Satamaan sai saapua vain ulkomaisilla laivoilla',
         ],
-        oikea: 0,
-        fakta: 'Portaikossa on 192 askelmaa ja kymmenen tasannetta, ja se '
-          + 'rakennettiin 1800-luvun alkupuoliskolla satamasta '
-          + 'kaupunkiin. Mittasuhteet tekevät tempun: alhaalta näkyvät '
-          + 'vain askelmat, ylhäältä vain tasanteet — siksi portaikko '
-          + 'näyttää loputtomalta.',
+        oikea: 1,
+        fakta: 'Odessan vapaasatama alkoi vuonna 1819. Sen alueella '
+          + 'tavaran sai ottaa vastaan ja varastoida maksamatta tullia, '
+          + 'mutta tulli perittiin heti kun tavara vietiin rajan yli '
+          + 'sisämaahan — ja raja oli kaivettu oja vartiopaikkoineen. '
+          + 'Järjestely lakkautettiin huhtikuussa 1859, joten isoisän '
+          + 'matkavuonna kuitti oli jo vanha paperi.',
       },
-      aarre: 'Sytyttämättömän lyhdyn jalustassa oli luukku, ja luukun '
-        + 'takana kätkö. Fjodor raapaisi tulen: "Lasi on puhdas — '
-        + 'joku on pessyt lyhdyn, jota ei ole sytytetty sataan '
-        + 'vuoteen."',
+      aarre: 'Takakannen taskussa oli kuitin toinen puolisko. Merkki '
+        + 'osoitti torin vanhaan vaakahuoneeseen, ja kynnyskiven alta '
+        + 'tuli rasia. "Kannoit vihjettä mukanasi. Minä vain katsoin '
+        + 'nurjalle puolelle." Isoisä ei löytänyt sitä.',
     },
     {
       id: 'moskova',

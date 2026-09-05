@@ -72,9 +72,13 @@
  * jonotetaan" tekstiä (js/packs/kulttuuri-kategoriat.js). Uusia
  * faktaväitteitä ei ole kummassakaan.
  *
- * MIKSI EI SUMUKYSYMYSTÄ: kaupungin laattakysymys koskee sumua (ks.
- * KOHTAAMINEN alempana). Jos lehden aarteen avaava tehtävä kysyisi
- * samasta sumusta, kysymys olisi ratkaistu ennen kuin Ned on tavattu.
+ * MIKSI EI SAVUKYSYMYSTÄ (Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10):
+ * kaupungin laattakysymys koskee savua ja vuoden 1956 Clean Air Actia
+ * (ks. KOHTAAMINEN alempana). Jos lehden aarteen avaava tehtävä kysyisi
+ * samasta savusta, kysymys olisi ratkaistu ennen kuin Leila on tavattu.
+ * Sama rajaus kuin ennen — vain kysymyksen aikakausi vaihtui, kun
+ * kaaren visa siirtyi vuoden 1873 sumusta sen loppuun johtaneeseen
+ * lakiin.
  */
 const JALUSTA_VISA = {
   kysymys: 'Trafalgar Squaren luoteiskulman jalusta jäi 1841 tyhjäksi, '
@@ -197,10 +201,13 @@ export const FOKUSVIRTA_LONTOO = {
   takyt: [
     {
       /*
-       * MIKSI TÄMÄ TÄKY: kohtaamisen hahmo on jokilöytäjä Ned, ja
-       * tämä on hänen työnsä. Täky on myös aarremerkinnän vastapari —
-       * merkintä kertoo vuorovedestä, joka hautaa, tämä täky
-       * vuorovedestä, joka paljastaa.
+       * MIKSI TÄMÄ TÄKY (Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10): täky
+       * kytkeytyi ennen kohtaamisen hahmoon, jokilöytäjä Nediin. Hahmo
+       * vaihtui Leilaksi (js/tyohuone-kehitys-data.js, KAARI_PAKETIT
+       * 'lontoo'), mutta täky JÄÄ paikalleen: se on yhä
+       * aarremerkinnän vastapari — merkintä kertoo vuorovedestä, joka
+       * hautaa, tämä täky vuorovedestä, joka paljastaa. Mudlarkit ovat
+       * kaupungin oma ilmiö eivätkä yhden hahmon omaisuutta.
        *
        * FAKTAT: js/packs/maa-kategoriat.js, GBR/luonto, nosto "Joki,
        * joka laskee joka päivä" (jo hyväksyttyä pelidataa) —
@@ -324,8 +331,10 @@ export const FOKUSVIRTA_LONTOO = {
        * MIKSI TÄMÄ TÄKY: isoisän sääntö on "älä usko ketään, joka
        * väittää, ettei aarteita ole". Tämä on Lontoon oma todiste —
        * kellarista kaivettu laatikko, jota kukaan ei osannut odottaa.
-       * Sattumalta myös kellotarina: aarteen omituisin esine on kello,
-       * ja Nedin löytö kaaressa on taskukello.
+       * Sattumalta myös kellotarina: aarteen omituisin esine on kello.
+       * (Uudistus 5.9.2026: rivin toinen puolisko viittasi Nedin
+       * taskukelloon, joka poistui kaaresta — kytkös on nyt vain
+       * kätkettyyn laatikkoon, ja se riittää.)
        *
        * FAKTAT (EI PELIDATASSA — tarkistettu 29.8.2026 kahdesta
        * riippumattomasta lähteestä):
@@ -401,9 +410,26 @@ export const FOKUSVIRTA_LONTOO = {
   /*
    * ---------- 4. Oppitunti ----------
    * Pohjustaa kohtaamisen laattakysymyksen (js/tyohuone-kehitys-data.js
-   * KAARI_PAKETIT, lontoo): mistä isoisän sumu oikeasti syntyi.
-   * Visasääntö täyttyy — vastaus on tekstissä, mutta kysymyksen
-   * sanamuoto ei toistu siinä sellaisenaan.
+   * KAARI_PAKETIT, lontoo). Visasääntö täyttyy — vastaus on tekstissä,
+   * mutta kysymyksen sanamuoto ei toistu siinä sellaisenaan.
+   *
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10: OPPITUNTIIN ON LISÄTTY VIIMEINEN
+   * KAPPALE vuoden 1956 Clean Air Actista, koska kaaren kysymys vaihtui
+   * sumun synnystä sen loppuun johtaneeseen lakiin (Fablen päätös
+   * 5.9.2026 klo 19:05 UTC: *"Kysymys … nousee Leilan puheesta ja
+   * oppitunnista"*). Vanha osuus — mistä sumu oli tehty ja mitä se
+   * teki — jää sanatarkasti ennalleen, koska se on yhä merkinnän oma
+   * vastapari. Kappale EI kirjoita vastausvaihtoehdon sanamuotoa
+   * ("rakennusten ja tulisijojen savupäästöihin") tekstiin.
+   *
+   * LISÄKAPPALEEN FAKTAT: Clean Air Act 1956 (legislation.gov.uk,
+   * ukpga/1956/52 — tumman savun kielto piipusta ja savuttomiksi
+   * määrättävät alueet; kuvaputken faktantarkistuksen tarkistama lähde
+   * 5.9.2026) sekä pelin oma tarkistettu aineisto js/packs/
+   * maa-kategoriat.js, GBR/luonto, nosto "Sumu, joka ei ollutkaan
+   * sumua" (savusumu alkoi 5.12.1952; neljä vuotta myöhemmin säädettiin
+   * laki, jonka nojalla kaupunginosia voitiin määrätä savuttomiksi).
+   * Teksti ei väitä ilmansaasteen kadonneen.
    *
    * FAKTAT (tarkistettu 29.8.2026 kahdesta riippumattomasta lähteestä):
    *   - en-Wikipedia "19th-century London", sumua käsittelevä osio
@@ -451,7 +477,15 @@ export const FOKUSVIRTA_LONTOO = {
       + 'hukkui pudottuaan sumussa jokeen, kanavaan tai satama-altaaseen. '
       + 'Charles Dickensin poika kirjoitti kuusi vuotta myöhemmin '
       + 'Lontoon-sanakirjassaan, että sellaisena päivänä onnellisin on '
-      + 'se, joka voi jäädä kotiin.',
+      + 'se, joka voi jäädä kotiin. Sumu ei loppunut isoisäsi eläessä '
+      + 'eikä sadassa vuodessa. Pahin savusumu tuli vasta 5. joulukuuta '
+      + '1952, ja neljä vuotta myöhemmin säädettiin laki, joka puuttui '
+      + 'siihen mistä savu tuli: piipusta ei enää saanut päästää tummaa '
+      + 'savua, ja kunnat saivat oikeuden määrätä kokonaisia alueita '
+      + 'savuttomiksi, jolloin kodin tulisijassa sai polttaa vain '
+      + 'savutonta polttoainetta. Ilma parani vuosikymmenessä enemmän '
+      + 'kuin edellisenä sadassa vuodessa. Puhdasta se ei ole '
+      + 'vieläkään — se vain ei enää näy.',
     /*
      * Commons 29.8.2026: 2323×1586, public domain, George Du Maurier
      * (1834–1896), julkaistu Punch-lehdessä 1889, kuvaus "Window
@@ -474,67 +508,81 @@ export const FOKUSVIRTA_LONTOO = {
 
   /*
    * ---------- 5. Kohtaaminen ----------
-   * Hahmo, kohtaamiskuva ja kysymys ovat tarinakaaren paketissa
-   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'lontoo'):
-   * jokilöytäjä Ned etsii laskuveden liejusta sitä, minkä joki
-   * pudottaa. Kysymys on v1308:ssa vaihdettu sumuun (ks. paketin oma
-   * kommentti), jotta aarretehtävän AIHE kytkeytyy merkintään ja
-   * oppituntiin — tämä kortti ei kertaa Nedin repliikkiä eikä paljasta
-   * vastausta.
    *
-   * LONTOON VANHA KOHTAAMINEN JÄÄ ENNALLEEN. js/packs/kohtaamiset.js
-   * antaa Lontoolle jokietsijä Nedin, ja se rivi on pelin vanhan polun
-   * kohtaaminen (js/visa.js). Hahmo on sama mies kuin kaaressa, joten
-   * tässä ei ole kahta lupausta samasta ovesta — vain sama Ned kahdella
-   * pinnalla. Kaaren kirjoitusasu "Jokilöytäjä" voittaa täällä, koska
-   * kaari on fokusmoodin lähde.
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
+   *
+   * HAHMO VAIHDETTU: jokilöytäjä Ned → muotialan opiskelija Leila
+   * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 19:05 UTC:
+   * *"Molemmat Ned-versiot (kaari + vanha KOHTAAMISET) poistuvat;
+   * fokusvirran Ned-viittaukset ja luennat synkronoidaan"*). Hahmo,
+   * kohtaamiskuva ja kysymys ovat tarinakaaren paketissa
+   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'lontoo'), ja
+   * kysymys koskee nyt vuoden 1956 Clean Air Actia, jonka vastauksen
+   * antaa tämän paketin oppitunti. Tämä kortti ei kertaa Leilan
+   * repliikkiä eikä paljasta vastausta.
+   *
+   * KAKSI PINTAA, SAMA IHMINEN. js/packs/kohtaamiset.js antaa
+   * Lontoolle nyt Leilan (nappi "Tapaa Leila", kehysrivi "Leila nostaa
+   * katseensa vanhasta katukuvasta ja kysyy" sekä löytö-, tyhjä- ja
+   * väärin-repliikit). Kirjoitusasu "muotialan opiskelija" on sama
+   * molemmilla pinnoilla.
+   *
+   * EI SUKUSALAISUUTTA. Leila ei tunne Horatiota eikä odota
+   * perillistä: hän tunnistaa katukulman muodosta, koska kuvasi sen
+   * eilen. Sama sääntö kuin kaaressa.
    */
   kohtaaminen: {
-    hahmo: 'Jokilöytäjä Ned',
-    nappi: 'Tapaa jokilöytäjä',
-    teksti: 'Ned lukee jokea kuin aikataulua: hän tietää tuntia tarkasti, '
-      + 'milloin ranta paljastuu ja mistä kohtaa kannattaa aloittaa. '
-      + 'Suvussa on etsitty samalta rannalta sata vuotta, ja hän tunnistaa '
-      + 'savipiipun katkelmasta vuosisadan. Kiirettä hän ei pidä, koska '
-      + 'joki ei pidä. Ennen kuin hän ojentaa löytönsä, hän haluaa '
-      + 'tietää, onko vieras ymmärtänyt, mistä isoisän sumu oikeasti '
-      + 'oli tehty.',
+    hahmo: 'Muotialan opiskelija Leila',
+    nappi: 'Tapaa Leila',
+    teksti: 'Leila lukee kaupunkia valon mukaan: hän tietää minuutin '
+      + 'tarkkuudella, milloin aurinko osuu lasijulkisivuun ja heittää '
+      + 'sen varjoiselle kadulle. Kuvia hän ottaa satoja ja säilyttää '
+      + 'kolme. Vanhoja katupiirroksia hän katsoo kuin muotilehteä: '
+      + 'ensin muoto, sitten vuosiluku. Ennen kuin hän kertoo, mistä '
+      + 'suunnasta kulmaa kannattaa katsoa, hän haluaa tietää, tunteeko '
+      + 'vieras kadun oman historian.',
   },
 
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * KOHTAAMISPAIKKA: MILLENNIUM BRIDGEN LASKUVESIRANTA. Kaaren teksti
-   * vie isoisän laskuveden paljastamalle rannalle, ja pelin oma
-   * Lontoo-aineisto osoittaa saman paikan: maalehden vuorovesinoston
-   * kuva on nimeltään "Mudlarks by Millennium Bridge".
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
    *
-   * 51,510173 N / −0,098438 E — en-Wikipedia "Millennium Bridge,
-   * London", prop=coordinates (haettu 29.8.2026). Muunnos on sama kaava
-   * ja samat vakiot kuin fokuskohteilla: maailmankartalla Millerin
-   * lieriö LEVEYS 12000 / LON0 −175 / POHJOINEN 76
+   * KOHTAAMISPAIKKA VAIHDETTU: MILLENNIUM BRIDGEN LASKUVESIRANTA →
+   * LEADENHALL MARKETIN KULMA. Vanha piste kuului jokilöytäjä Nedille;
+   * uusi kohtaaminen tapahtuu Bankin ja Leadenhallin seudun
+   * varjoisalla kadulla, jonne aurinko pääsee vain lasijulkisivun
+   * kautta (kuvaputken tarinaehdotus 5.9.2026, Fablen hyväksyntä klo
+   * 19:05 UTC). SEUTU ON PAIKKAEHDOKAS: tarkka katu ja heijastuksen
+   * geometria tarkistetaan kuvausvaiheessa, joten piste on ankkuroitu
+   * seudun tunnettuun kiinnepisteeseen eikä väitettyyn kuvauspaikkaan.
+   *
+   * 51,5128 N / −0,0835 E — en-Wikipedia "Leadenhall Market",
+   * prop=coordinates (haettu 5.9.2026). Muunnos on sama kaava ja samat
+   * vakiot kuin fokuskohteilla: maailmankartalla Millerin lieriö
+   * LEVEYS 12000 / LON0 −175 / POHJOINEN 76
    * (tools/fokuskartta/piirto.js laudanProjektio), Euroopan laudalla
    * x = (lon + 11) × 19,2 ja y = (72 − lat) × 26,3.
    *
-   * LASKU:
-   *   maailmankartta  x = ((−0,098438 − (−175)) mod 360) × (12000/360)
-   *                     = 174,901562 × 33,3333… = 5830,1
-   *                   y = (millerY(76) − millerY(51,510173)) × 12000/2π
-   *                     = 1323,9
-   *   europe          x = (−0,098438 + 11) × 19,2 = 209,3
-   *                   y = (72 − 51,510173) × 26,3 = 538,9
+   * LASKU (ajettu laudanProjektion omalla kaavalla):
+   *   maailmankartta  x = ((−0,0835 − (−175)) mod 360) × (12000/360)
+   *                     = 174,9165 × 33,3333… = 5830,6
+   *                   y = (millerY(76) − millerY(51,5128)) × 12000/2π
+   *                     = 1323,8
+   *   europe          x = (−0,0835 + 11) × 19,2 = 209,6
+   *                   y = (72 − 51,5128) × 26,3 = 538,8
    *
    * TARKISTUS LAATTAA VASTEN: Lontoon laatta on Euroopan laudalla
    * 209 / 539 ja maailmankartalla 5829,5 / 1324,1, eli piste osuu
-   * käytännössä laatan päälle. Niin pitääkin — silta on kaupungin
-   * keskellä, ja laudan yksikkö on maailmankartalla noin kolme
-   * kilometriä.
+   * käytännössä laatan päälle — kuten ennenkin. Niin pitääkin: kortteli
+   * on kaupungin keskellä, ja laudan yksikkö on maailmankartalla noin
+   * kolme kilometriä.
    */
   kohtaamispiste: {
-    nimi: 'Millennium Bridgen laskuvesiranta',
+    nimi: 'Leadenhall Marketin kulma',
     laudat: {
-      maailmankartta: { x: 5830.1, y: 1323.9 },
-      europe: { x: 209.3, y: 538.9 },
+      maailmankartta: { x: 5830.6, y: 1323.8 },
+      europe: { x: 209.6, y: 538.8 },
     },
   },
 

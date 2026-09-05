@@ -58,39 +58,104 @@
  * generoitu (sisaltotaulut.js: KOHTAAMISLUENNAT).
  */
 export const KOHTAAMISET = {
+  /*
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
+   *
+   * LONTOO: NED KORVATTU LEILALLA (kuvaputken tarinaehdotus 5.9.2026,
+   * Fablen päätös klo 19:05 UTC: *"Molemmat Ned-versiot (kaari + vanha
+   * KOHTAAMISET) poistuvat; fokusvirran Ned-viittaukset ja luennat
+   * synkronoidaan"*). Kaaren teksti on js/tyohuone-kehitys-data.js:ssä
+   * (KAARI_PAKETIT, 'lontoo'); tämä rivi antaa napin, kehysrivin ja
+   * kolme repliikkiä.
+   *
+   * LUENNAT: tervehdysLuenta ja loytoLuenta on kirjoitettu uusiksi
+   * sanasta sanaan uuden ruututekstin mukaan, JA 'lontoo' on poistettu
+   * js/sisaltotaulut.js:n KOHTAAMISLUENNAT-joukosta, jottei vanha mp3
+   * soi uusilla sanoilla. Rivi palautetaan sinne, kun
+   * tools/generoi-kohtaamiset.mjs on ajettu uudestaan.
+   *
+   * REPLIIKIT ON SIDOTTU PELIN KÄTKÖTULOKSEEN (js/visa.js: loyto vain
+   * kun quiz.explore tai quiz.found, muuten tyhja; vaarin väärästä
+   * vastauksesta). Tyhjä ja väärin eivät siis lupaa löytöä.
+   */
   lontoo: {
-    hahmo: 'jokietsijä Ned',
-    nappi: 'Tapaa jokietsijä',
-    frame: 'jokietsijä Ned pyyhkii mutaa käsistään ja kysyy',
-    /*
-     * Puolitettu 7.8.2026 (omistaja: "Se oli kiva kun aarre teksti
-     * liittyi matkakirjan tekstiin. Se saisi olla vain puolet
-     * lyhyempi.") — nimikirjainkoukku säilyy, kehystys karsittu.
-     */
-    tervehdys: 'Jokietsijä näkee kirjasi ja suoristautuu: "Nuo '
-      + 'nimikirjaimet minä tunnen. Näytä että tunnet maailmaa kuten '
-      + 'hän — niin joen löytö on sinun."',
+    hahmo: 'muotialan opiskelija Leila',
+    nappi: 'Tapaa Leila',
+    frame: 'Leila nostaa katseensa vanhasta katukuvasta ja kysyy',
+    tervehdys: 'Leila vertaa kirjaasi puhelimensa kuvaan: "Tämä on sama '
+      + 'kulma. Näytä että tunnet maailmaa kuten piirtäjä — niin näytän '
+      + 'mistä suunnasta sitä katsotaan."',
     tervehdysLuenta: [
-      { rooli: 'kertoja', teksti: 'Jokietsijä näkee kirjasi ja '
-        + 'suoristautuu:' },
-      { rooli: 'hahmo', teksti: '[curious] "Nuo nimikirjaimet minä '
-        + 'tunnen. [warmly] Näytä että tunnet maailmaa kuten hän — '
-        + 'niin joen löytö on sinun."' },
+      { rooli: 'kertoja', teksti: 'Leila vertaa kirjaasi puhelimensa '
+        + 'kuvaan:' },
+      { rooli: 'hahmo', teksti: '[curious] "Tämä on sama kulma. '
+        + '[warmly] Näytä että tunnet maailmaa kuten piirtäjä — niin '
+        + 'näytän mistä suunnasta sitä katsotaan."' },
     ],
-    loyto: 'Ned painaa kompassin käteesi: "Neula osoittaa yhä sinne, '
-      + 'minne isoisäsi oli menossa." — "Sitten kiireesti seuraavaan '
-      + 'paikkaan!"',
+    loyto: 'Leila kuvaa rasian ennen kuin ojentaa sen: "Minä etsin tähän '
+      + 'valoa. Sinä löysit jotain muuta." — "Ja minä olen jo myöhässä!"',
     loytoLuenta: [
-      { rooli: 'kertoja', teksti: 'Ned painaa kompassin käteesi:' },
-      { rooli: 'hahmo', teksti: '[softly] "Neula osoittaa yhä sinne, '
-        + 'minne isoisäsi oli menossa."' },
-      { rooli: 'pelaaja', teksti: '[excited] "Sitten kiireesti '
-        + 'seuraavaan paikkaan!"' },
+      { rooli: 'kertoja', teksti: 'Leila kuvaa rasian ennen kuin ojentaa '
+        + 'sen:' },
+      { rooli: 'hahmo', teksti: '[softly] "Minä etsin tähän valoa. Sinä '
+        + 'löysit jotain muuta."' },
+      { rooli: 'pelaaja', teksti: '[excited] "Ja minä olen jo '
+        + 'myöhässä!"' },
     ],
-    tyhja: 'Ned kohauttaa harteitaan: "Joki antaa ja joki ottaa. '
-      + 'Tänään se ei antanut — laskuvesi tulee huomennakin."',
-    vaarin: 'Ned palaa seulomiseen: "Ei vielä, kaveri. Joki ei '
-      + 'luovuta salaisuuksiaan ensimmäisellä yrityksellä."',
+    tyhja: 'Leila kurkistaa syvennykseen: "Tyhjä. Tässä kulmassa kulkee '
+      + 'tuhat ihmistä tunnissa — joku ehti ensin."',
+    vaarin: 'Leila kääntää puhelimen takaisin itseensä päin: "Ei vielä. '
+      + 'Minäkin palasin tähän kolmesti ennen kuin sain valon oikein."',
+  },
+  /*
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
+   *
+   * DUBROVNIK JA ODESSA SAAVAT ENSIMMÄISTÄ KERTAA OMAN RIVIN. Syy on
+   * Fablen linjaus 5.9.2026 klo 19:05 UTC: *"löytörepliikit sidotaan
+   * pelin kätkötulokseen (tyhjä ja väärä vastaus saavat omat
+   * repliikkinsä ilman löytölupausta)"*. Moottori lukee juuri nämä
+   * kentät (js/visa.js renderQuiz: loyto | tyhja | vaarin), eikä
+   * tarinakaaren paketissa ole niille paikkaa — ilman riviä
+   * kaupungeissa ei olisi lainkaan repliikkiä tyhjälle kätkölle eikä
+   * väärälle vastaukselle.
+   *
+   * TERVEHDYS EI NÄY KAAREN KOHTAAMISESSA: kaarikaupungissa visakortin
+   * avaustekstin omistaa KAARI_PAKETIT-paketin `kohtaaminen`
+   * (js/visa.js: kaariTarina voittaa). Tämän rivin tervehdys on siis
+   * kaupungin MYÖHEMPIEN tavallisten visojen avaus, samoin kuin
+   * Lontoossa, Venetsiassa ja Berliinissä.
+   *
+   * LUENTOJA EI OLE eikä niitä pidä lisätä ennen generointia:
+   * js/sisaltotaulut.js KOHTAAMISLUENNAT ei sisällä näitä kaupunkeja,
+   * joten löytödialogia ei yritetä soittaa.
+   */
+  dubrovnik: {
+    hahmo: 'merimelontaopas Mara',
+    nappi: 'Tapaa Mara',
+    frame: 'Mara pitää kajakin paikoillaan ja kysyy',
+    tervehdys: 'Mara kiertää kajakin köyden ranteensa ympäri ja katsoo '
+      + 'kirjaasi. "Se on piirretty mereltä. Näytä että tunnet maailmaa '
+      + 'kuten piirtäjä — niin viedään sinut samaan kohtaan."',
+    loyto: 'Mara nostaa rasian melansa varteen: "Luulin meidän etsivän '
+      + 'vain rantaa."',
+    tyhja: 'Mara kääntää kiven takaisin paikalleen: "Tyhjä. Meri siirtää '
+      + 'täällä kaiken, mikä ei ole kiinni kalliossa."',
+    vaarin: 'Mara työntää kajakin irti kivestä: "Ei tänään. Ranta on '
+      + 'huomennakin samassa paikassa."',
+  },
+  odessa: {
+    hahmo: 'torimyyjä Iryna',
+    nappi: 'Tapaa Iryna',
+    frame: 'Iryna vetää melonin turvaan ja kysyy',
+    tervehdys: 'Iryna pyyhkii kätensä esiliinaan ja ottaa kirjan '
+      + 'varovasti kuin munakennon. "Vanhaa paperia. Näytä että tunnet '
+      + 'maailmaa kuten sen kirjoittaja — niin luen mitä tässä lukee."',
+    loyto: 'Iryna työntää rasian tiskin yli: "Solomiia, kirjoita ylös. '
+      + 'Tämä ei ole päivän oudoin kauppa, mutta lähellä."',
+    tyhja: 'Iryna laskee kynnyskiven takaisin: "Tyhjä. Tori on vanha, ja '
+      + 'täällä on siivottu monta kertaa."',
+    vaarin: 'Iryna kääntää kuitin oikein päin: "Ei vielä. Paperi ei mene '
+      + 'mihinkään, ja minä olen tässä huomennakin."',
   },
   kairo: {
     hahmo: 'kirjakauppias Faruk',

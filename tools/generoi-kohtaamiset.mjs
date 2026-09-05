@@ -33,9 +33,24 @@ const KERTOJA = 'Sz0tRTEpybtDJ9ru2kgD'; // Viisas Kertoja
 const PELAAJA = 'JMfkzZiSsox62UXcXUqM'; // Jaakko — nuori Fogg
 // Hahmoääni per kaupunki. Uusi kaupunki tarvitsee rivin tänne —
 // valitse tilin äänistä hahmon ikään ja luonteeseen sopiva.
-const HAHMOT = {
-  lontoo: 'Gp43kq9FsSlavD7esRtx', // Vaino — vanha, rauhallinen: jokietsijä Ned
-};
+/*
+ * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
+ *
+ * LONTOON ÄÄNI ON POISTETTU TARKOITUKSELLA. Rivi oli
+ * `lontoo: 'Gp43kq9FsSlavD7esRtx'` (Vaino — vanha, rauhallinen), ja se
+ * valittiin jokietsijä Nedille. Kaupungin kohtaamishenkilö on nyt
+ * 24-vuotias muotialan opiskelija Leila (js/packs/kohtaamiset.js), eikä
+ * vanhan miehen ääni käy hänelle. Uusi ääni on VALITTAVA TILIN
+ * ÄÄNISTÄ ennen ajoa; siihen asti työkalu keskeytyy virheeseen
+ * "roolille hahmo ei ole ääntä", mikä on tarkoitus — väärä ääni olisi
+ * pahempi kuin keskeytynyt ajo.
+ *
+ * DUBROVNIK JA ODESSA eivät tarvitse riviä vielä: niiden kohtaamisilla
+ * ei ole tervehdysLuenta- eikä loytoLuenta-kenttiä, joten työkalu
+ * ohittaa ne. Jos Fable tilaa niille luennat, tänne tulee rivi
+ * kummallekin (Mara ~40 v, Iryna ~50 v).
+ */
+const HAHMOT = {};
 
 const avain = process.env.ELEVEN_API_KEY ?? process.env.ELEVENLABS_API_KEY;
 if (!avain) {

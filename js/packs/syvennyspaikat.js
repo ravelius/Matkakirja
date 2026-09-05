@@ -589,9 +589,12 @@ export const SYVENNYSPAIKAT = {
   lontoo: {
     /*
      * Millennium Bridgen laskuvesiranta (Thames-foreshore).
-     * Lähde: en-Wikipedia "Millennium Bridge, London" (sama koordinaatti
-     *   kuin paketin oma kohtaamispiste; mudlark-kuva on juuri tältä
-     *   kohdalta)
+     * Lähde: en-Wikipedia "Millennium Bridge, London" (mudlark-kuva on
+     *   juuri tältä kohdalta)
+     * Uudistus 5.9.2026: rivi oli ennen sama koordinaatti kuin Lontoon
+     *   kohtaamispiste, mutta kohtaamispiste siirtyi Leilan mukana
+     *   Leadenhallin seudulle (js/packs/fokusvirta-lontoo.js). Tämä on
+     *   VUOROVESITÄYN oma piste eikä liiku sen mukana.
      */
     vuorovesi: {
       lat: 51.510173, lon: -0.098438, symboli: 'luonto', nimio: 'Thamesin vuorovesi',
