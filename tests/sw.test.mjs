@@ -39,7 +39,7 @@ test('kaikki SHELLin tiedostot ovat olemassa', () => {
  *
  * Kun tänne syntyy uusi js-alihakemisto, se lisätään tähän listaan.
  */
-const SKANNATTAVAT = ['js', 'js/packs', 'js/linssit'];
+const SKANNATTAVAT = ['js', 'js/packs', 'js/linssit', 'js/pallolauta'];
 
 /**
  * Hakemiston .js-tiedostot repon juuresta laskettuina polkuina.
@@ -262,7 +262,7 @@ test('peilikuvalla on cors-noudon jälkeen varareitti ilman corsia', () => {
  */
 test('yhdistämismerkkejä ei ole jäänyt tiedostoihin', () => {
   const merkki = /^(<{7}|={7}|>{7})(\s|$)/m;
-  const kansiot = ['js', 'js/packs', 'js/linssit', 'css', 'tools', 'tests'];
+  const kansiot = ['js', 'js/packs', 'js/linssit', 'js/pallolauta', 'css', 'tools', 'tests'];
   const loydot = [];
   for (const kansio of kansiot) {
     const polku = join(JUURI, kansio);

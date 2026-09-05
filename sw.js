@@ -122,6 +122,11 @@ const SHELL = [
   './js/tiedeliite.js',
   './js/lyhty.js',
   './js/pallo.js',
+  // Pallolauta (karttapallo pelin lautana, 5.9.2026): tuodaan
+  // dynaamisesti kuten pallo.js, mutta kuuluu SHELLiin offline-käyttöä
+  // varten. Ei niputeta yhden tiedoston versioon (tests/sw.test.mjs).
+  './js/pallolauta/lauta.js',
+  './js/pallolauta/kamera.js',
   './css/aikajana.css',
   './js/tehosteet.js',
   './js/kehittajan-voimat.js',

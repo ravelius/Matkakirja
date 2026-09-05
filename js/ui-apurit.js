@@ -1282,11 +1282,14 @@ const KEHITTAJA_AVAIN = 'matkakirja-kehittaja';
  */
 let kehittajaMuisti = null;
 let kehittajaMaailmaMuisti = null;
+let lautaMuisti = null;
 
 /** Kytkinten muisti tyhjäksi: seuraava kysyjä lukee levyltä. */
 export function unohdaKehittajaKytkimet() {
   kehittajaMuisti = null;
   kehittajaMaailmaMuisti = null;
+  // Laudan valinta on samaa perhettä (ks. lautaValinta alempana).
+  lautaMuisti = null;
 }
 
 try {
@@ -1490,6 +1493,74 @@ export function asetaKehittajaMaailma(paalla) {
     /* yksityinen selaus: tila jää vain tälle istunnolle */
   }
   siivoaVanhatKehittajaAvaimet();
+}
+
+/*
+ * === PELILAUTA: KARTTAPALLO VAI TASOKARTTA ==========================
+ * === (omistaja 5.9.2026, Raamattu: KARTTAPALLO ON PELILAUTA) ========
+ *
+ * *"Voisiko pallon vaihtaa pelin kartaksi suoraan?"* / *"Kunhan vanha
+ * kartta pysyy pois tieltä eikä hidasta ollenkaan uuden kartan
+ * toimintaa. Mutta jos pallo ei toimi niin pidetään optio palauttaa
+ * se."*
+ *
+ * YKSI VALINTA, KOLME LÄHDETTÄ, YKSI VAKIO (docs/moduulit/karttapallo.md
+ * luku 2): URL-parametri `?lauta=pallo|kartta` voittaa aina (savukkeet,
+ * omistajan kokeilu), sitten laitteen muistettu valinta (kehittäjän
+ * ratasvalikon vipu), ja viimeisenä LAUTA_OLETUS. Palautus tuotantoon
+ * on tämän yhden vakion vaihto — ei muita koodimuutoksia.
+ *
+ * URL-PARAMETRI `lauta` ON JAETTU KATSELUTILAN KANSSA (js/main.js:
+ * `?lauta=<laudan id>` avaa laudan katseluun). Arvot 'pallo' ja
+ * 'kartta' eivät ole laudan tunnuksia, joten packById ei tunne niitä ja
+ * katselutila ei käynnisty; muut arvot ohitetaan täällä. Kumpikaan ei
+ * siis sotke toista.
+ *
+ * LAUDAN VALINTA EI OLE PELITILAN OSA: pelitila ja tallennus ovat samat
+ * kummallakin laudalla (js/game.js ei tiedä laudasta mitään). Sama
+ * kaava kuin kehittäjätilalla yllä: oma avain, try/catch, muisti eikä
+ * levyluku joka kehyksessä (kehittajaTilaPaalla). Vaihe 6 kääntää
+ * LAUTA_OLETUKSEN palloksi omistajan laitetestin jälkeen.
+ */
+export const LAUTA_OLETUS = 'kartta';
+const LAUTA_AVAIN = 'matkakirja-lauta';
+const LAUDAT = new Set(['pallo', 'kartta']);
+
+/** Laudan valinta: 'pallo' tai 'kartta'. */
+export function lautaValinta() {
+  if (lautaMuisti !== null) return lautaMuisti;
+  let valinta = null;
+  try {
+    const param = new URLSearchParams(globalThis.location?.search ?? '').get('lauta');
+    if (LAUDAT.has(param)) valinta = param;
+  } catch {
+    /* ei osoitetta (testiajo) */
+  }
+  if (!valinta) {
+    try {
+      const muistettu = localStorage.getItem(LAUTA_AVAIN);
+      if (LAUDAT.has(muistettu)) valinta = muistettu;
+    } catch {
+      /* yksityinen selaus */
+    }
+  }
+  lautaMuisti = valinta ?? LAUTA_OLETUS;
+  return lautaMuisti;
+}
+
+/**
+ * Tallentaa laudan valinnan laitteelle. Oletuksen valinta poistaa
+ * avaimen, jotta LAUTA_OLETUKSEN vaihto vaiheessa 6 tavoittaa myös ne
+ * laitteet, joilla vipua on käytetty.
+ */
+export function asetaLautaValinta(lauta) {
+  unohdaKehittajaKytkimet();
+  try {
+    if (LAUDAT.has(lauta) && lauta !== LAUTA_OLETUS) localStorage.setItem(LAUTA_AVAIN, lauta);
+    else localStorage.removeItem(LAUTA_AVAIN);
+  } catch {
+    /* yksityinen selaus: valinta jää vain tälle istunnolle */
+  }
 }
 
 /*
