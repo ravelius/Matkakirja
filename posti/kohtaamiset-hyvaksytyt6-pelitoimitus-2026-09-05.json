@@ -1,0 +1,1066 @@
+{
+  "schemaVersion": 1,
+  "status": "approved-game-delivery",
+  "count": 6,
+  "instructionFi": "Nämä kuusi omistaja on hyväksynyt arviointisivulla peliin. Kytke nyt R2-kuvat. Säilytä kuvatekstit sanasta sanaan ja anna eksplisiittinen kohde. Sovita Fable-vanhan 20:05 hyväksymät tarinamuutokset ennen kuvakenttiä. Tämä paketti ei hyväksy round2-ehdokkaita.",
+  "rows": [
+    {
+      "imageId": "alpit-anselm-feedback-r20260905-v1",
+      "cityId": "alpit",
+      "city": "Suuri Sankt Bernhard",
+      "country": "Sveitsi",
+      "character": "Anselm — hospitsiveli",
+      "sourceImageId": "alpit-anselm-r20260905-redo-v2",
+      "userApproval": {
+        "sourcePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/reviews-before-publish.json",
+        "sourceSha256": "d45ce84bdef7eefa14b3496f32ea66af7ab6c57b440f2e5eeeae14f369f46751",
+        "review": {
+          "imageId": "alpit-anselm-feedback-r20260905-v1",
+          "status": "jatkoon_v2",
+          "workflowStatus": "accepted",
+          "suggestion": "",
+          "regenerationPrompt": "",
+          "rewriteText": false,
+          "archived": false,
+          "updatedAt": "2026-09-05T19:08:26.052Z"
+        },
+        "approvedAt": "2026-09-05T19:08:26.052Z",
+        "meaning": "accepted/jatkoon; not completed"
+      },
+      "local": {
+        "metadataPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/alpit-anselm-feedback-r20260905-v1.json",
+        "metadataSha256": "fb136d5eab6548b52129d053dc021077ad6298f39c378110003db646c2cfb124",
+        "specPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/alpit-anselm-feedback-r20260905-v1.spec.json",
+        "promptPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/prompts/alpit-anselm-feedback-r20260905-v1.txt",
+        "promptFileSha256": "04bd9e90a5d44f6b8b740aafa8a2a3098c70e6c2730d9219d3d50cc16751a17c",
+        "exactPromptSha256": "04bd9e90a5d44f6b8b740aafa8a2a3098c70e6c2730d9219d3d50cc16751a17c",
+        "promptFileOnlyTrailingNewlineDifference": false,
+        "jpgPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/review/alpit-anselm-feedback-r20260905-v1.jpg",
+        "originalPngPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/originals/alpit-anselm-feedback-r20260905-v1.png",
+        "originalPngSha256": "b57ef99baa5c33d1c326085a2fc303b5d80ad8de504eb904182d62f73d209c6f",
+        "generatorOriginalPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-5469e848-f46b-4a47-935f-56ffeb4d62f7.png",
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "bytes": 1109736,
+        "sha256": "ff3dc73f80309189c851fe74ad63ed0124bdd8db4d54575a52492b3055162c01",
+        "dimensions": [
+          1536,
+          1536
+        ],
+        "mime": "image/jpeg",
+        "iccProfile": "sRGB IEC61966-2.1"
+      },
+      "exactPrompt": "Make an entirely NEW square 1536 x 1536 present-day documentary photograph. Reference 1 defines the fictional elderly brother Anselm and his affectionate short-coated Saint Bernard; reference 2 defines the REAL Great Saint Bernard Pass summer geology, austere grey rocky slopes and residual snow. Move the encounter completely OUTDOORS INTO NATURE in brilliant sunshine, away from any doorway or building. Anselm is sitting on a broad sun-warmed boulder beside a safe uneven mountain walking path, dog firmly seated against his knee; all feet on stable ground. A magnificent open alpine valley and a few high summer snow patches stretch behind them, distant hospice very small or outside frame. Bald elderly man with grey moustache, weathered expressive face, simple dark charcoal sweater and unzipped sage hiking jacket. The unseen traveler has just asked about a treasure: Anselm looks DIRECTLY INTO CAMERA, both eyes aligned with lens, sharply lifted brows, a partly open mouth and an incredulous interrupted chuckle. At the same instant the enormous dog's wet nose presses gently into his cheek, lifting one side of his face. Hand holds the dog's plain collar correctly; other hand steadies its shoulder. Natural warm relationship and humor, no clown expression. Low late-afternoon sunlight from one side brings beautiful directional light on face and fur, cool sky fills both eyes; deep true shadows, luminous thin ear edge, naturally blue alpine sky, green moss and grey rock. 35mm eye-level environmental portrait from knees up, subjects prominent but alpine nature occupies at least half the surrounding frame. Complete heads, hairline, ears, important hands and dog paws. Real optics around f/8, sharp eyes and naturally resolved coarse fur, background geological shapes readable without crunchy HDR. Modern clothing, real anatomy and weight, no barrel, text, border, vignette, painterly grain or studio posing.",
+      "caption": "Anselm pysähtyy aurinkoisella vuoripolulla. Bernhardinkoira painaa kuononsa hänen poskeensa juuri kun matkaaja kysyy aarteesta.",
+      "moment": "Avoin kesäinen vuoristoluonto, vanhan miehen häkeltynyt katse ja koiran painava läheisyys.",
+      "sourceNote": "Avoin kesäinen vuoristoluonto, vanhan miehen häkeltynyt katse ja koiran painava läheisyys. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Fondation Barry — Great Saint Bernard Pass",
+          "url": "https://www.fondation-barry.ch/en/experiences/great-saint-bernard-pass-85/"
+        },
+        {
+          "label": "Cédric Widmer — kesäinen sola, katsottu paikkareferenssi",
+          "url": "https://www.fondation-barry.ch/files/c-Cedric-Widmer_col_1304-129.jpg"
+        }
+      ],
+      "referenceFiles": [
+        {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounters-redo-2026-09-05-v2/c/alpit-anselm-r20260905-redo-v2.jpg",
+          "exists": true
+        },
+        {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounter-regeneration-2026-09-04-resumed/overnight/a/references/barry-pass.jpg",
+          "exists": true
+        }
+      ],
+      "rootQa": {
+        "verdict": "pass",
+        "reviewer": "root",
+        "originalVisuallyInspected": true,
+        "deliveryJpegVisuallyInspected": true,
+        "noteFi": "Ulkona luonnossa, koiran kuono poskella ja Anselmin säpsähtävä ilo toimivat. Kaksi kättä, koiran anatomia ja jalkojen tuki luettavia.",
+        "reviewedAt": "2026-09-05T19:03:14.272820+00:00"
+      },
+      "privateReview": {
+        "url": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/alpit-anselm-feedback-r20260905-v1.jpg",
+        "verifiedAt": "2026-09-05T19:11:36.735Z",
+        "verificationIsPriorMetadataRecord": true
+      },
+      "target": {
+        "bucket": "matkakirja",
+        "key": "kohtaamiset/alpit-anselm-feedback-r20260905-v1.jpg",
+        "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/alpit-anselm-feedback-r20260905-v1.jpg",
+        "newVersionKey": true,
+        "overwriteOlderVersion": false,
+        "uploadExecuted": false
+      },
+      "r2ReadChecks": [
+        {
+          "imageId": "alpit-anselm-feedback-r20260905-v1",
+          "key": "kohtaamiset/alpit-anselm-feedback-r20260905-v1.jpg",
+          "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/alpit-anselm-feedback-r20260905-v1.jpg",
+          "method": "GET",
+          "origin": "https://ravelius.github.io",
+          "checkedAt": "2026-09-05T19:52:01.157Z",
+          "bytesSavedToDisk": false,
+          "status": 404,
+          "mime": "text/html",
+          "allowOrigin": "https://ravelius.github.io",
+          "contentLength": "27150",
+          "etag": null,
+          "decision": "object-missing"
+        },
+        {
+          "imageId": "alpit-anselm-feedback-r20260905-v1",
+          "key": "kohtaamiset/kuvajono/alpit-anselm-feedback-r20260905-v1.jpg",
+          "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/alpit-anselm-feedback-r20260905-v1.jpg",
+          "method": "GET",
+          "origin": "https://ravelius.github.io",
+          "checkedAt": "2026-09-05T19:52:01.178Z",
+          "bytesSavedToDisk": false,
+          "status": 404,
+          "mime": "text/html",
+          "allowOrigin": "https://ravelius.github.io",
+          "contentLength": "27150",
+          "etag": null,
+          "decision": "object-missing"
+        }
+      ],
+      "gameBinding": {
+        "catalogPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/kohtaamiskuvat-data.js",
+        "resolver": "kohtaamiskuvaKohteelle(quiz.cityId)",
+        "explicitKohdeRequired": true,
+        "reasonFi": "Kuvakaupungin nimi ei normalisoidu pelin cityId:ksi; kohde-kenttä tarvitaan.",
+        "proposedFieldsForFable": {
+          "id": "alpit-anselm-feedback-r20260905-v1",
+          "kohde": "alpit",
+          "kaupunki": "Suuri Sankt Bernhard",
+          "maa": "Sveitsi",
+          "hahmo": "Anselm",
+          "tiedosto": "alpit-anselm-feedback-r20260905-v1.jpg",
+          "kuvateksti": "Anselm pysähtyy aurinkoisella vuoripolulla. Bernhardinkoira painaa kuononsa hänen poskeensa juuri kun matkaaja kysyy aarteesta.",
+          "lahde": "Avoin kesäinen vuoristoluonto, vanhan miehen häkeltynyt katse ja koiran painava läheisyys. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+          "lahdeUrl": "https://www.fondation-barry.ch/en/experiences/great-saint-bernard-pass-85/"
+        },
+        "activationFi": "Fable lisää uuden version vasta varmennetun R2-siirron ja tarvittavan tarinasynkronoinnin jälkeen. tila=tarkistettu ja aktiivinen!==false valitsee pelikortin kuvan; vanhat hyväksytyt versiot säilytetään galleriassa.",
+        "existingVersionsToPreserve": [],
+        "currentMainPerson": "Luostarinveli Anselm kasvattaa suurikokoisia koiriaan vuoristosolan hospitsissa, kuten veljet ennen häntä vuosisatojen ajan.",
+        "currentMainQuestion": "Alppien solissa pelastustyötä tekivät kuuluisat bernhardilaiskoirat. Mistä ne tunnetaan?",
+        "currentMainAnswer": "Ne etsivät lumeen eksyneitä ja hautautuneita kulkijoita"
+      },
+      "story": {
+        "state": "fable-approved-with-changes-main-pending",
+        "newPersonStoryPending": false,
+        "currentPerson": "Anselm",
+        "detailFi": "Ulkokohtaus ja Anselm hyväksytty. Fable poistaa samalla koiran sukupolvimuistin ja Horation tunnistuksen vuosisataisesta veljeslinjasta. Mainin tekstiä ei vielä muutettu."
+      },
+      "metadataCautions": [],
+      "deliveryState": "user-approved-root-qa-passed-r2-publicly-verified",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/alpit-anselm-feedback-r20260905-v1.jpg",
+      "publicReadback": {
+        "phase": "final",
+        "checkedAt": "2026-09-05T20:38:23.111Z",
+        "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/alpit-anselm-feedback-r20260905-v1.jpg",
+        "requestUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/alpit-anselm-feedback-r20260905-v1.jpg?_delivery_verify=080369bd-9838-4276-a2d1-ece46098fae8",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "etag": "\"c5dd61a84124a50a61728483200f842f\"",
+        "contentLength": "1109736",
+        "cacheStatus": null,
+        "bytes": 1109736,
+        "sha256": "ff3dc73f80309189c851fe74ad63ed0124bdd8db4d54575a52492b3055162c01",
+        "downloadedPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-round2-20260905/game-delivery-approved6/runs/2026-09-05T20-38-19.750Z-1ff3b581/remote/alpit-anselm-feedback-r20260905-v1-final.jpg"
+      },
+      "gameIntegrationConfirmed": false
+    },
+    {
+      "imageId": "amsterdam-yara-feedback-r20260905-v2",
+      "cityId": "amsterdam",
+      "city": "Amsterdam",
+      "country": "Alankomaat",
+      "character": "Yara — muuttoryhmän vetäjä",
+      "sourceImageId": "amsterdam-willem-strength-r20260905-v1",
+      "userApproval": {
+        "sourcePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/reviews-before-publish.json",
+        "sourceSha256": "d45ce84bdef7eefa14b3496f32ea66af7ab6c57b440f2e5eeeae14f369f46751",
+        "review": {
+          "imageId": "amsterdam-yara-feedback-r20260905-v2",
+          "status": "jatkoon_v2",
+          "workflowStatus": "accepted",
+          "suggestion": "",
+          "regenerationPrompt": "",
+          "rewriteText": false,
+          "archived": false,
+          "updatedAt": "2026-09-05T19:08:45.966Z"
+        },
+        "approvedAt": "2026-09-05T19:08:45.966Z",
+        "meaning": "accepted/jatkoon; not completed"
+      },
+      "local": {
+        "metadataPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/amsterdam-yara-feedback-r20260905-v2.json",
+        "metadataSha256": "38eb665277dcd51b9088a752ecdc33af29e68146b7821804fdff06560cb3c8bb",
+        "specPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/amsterdam-yara-feedback-r20260905-v2.spec.json",
+        "promptPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/prompts/amsterdam-yara-feedback-r20260905-v2.txt",
+        "promptFileSha256": "1fb410cf5e891461a079655c3ff2229b9ff447a42d7914a83d6c46827b42fd94",
+        "exactPromptSha256": "5b05ab97d35f98642130e697b80a7f069e53fece322fc5a4c1418393e7948c3d",
+        "promptFileOnlyTrailingNewlineDifference": true,
+        "jpgPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/review/amsterdam-yara-feedback-r20260905-v2.jpg",
+        "originalPngPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/originals/amsterdam-yara-feedback-r20260905-v2.png",
+        "originalPngSha256": "296095255ac96726a3d704969c0d8300eb6ffad2d5431bf5ddd4df404b162cb0",
+        "generatorOriginalPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-2b23e628-2d39-42f9-a370-261bca8d4de4.png",
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "bytes": 982919,
+        "sha256": "423832758d869afdc42c13bbce5c9c4cf784dfd94b43c22794200d12c2b3e910",
+        "dimensions": [
+          1536,
+          1536
+        ],
+        "mime": "image/jpeg",
+        "iccProfile": "sRGB IEC61966-2.1"
+      },
+      "exactPrompt": "Create ONE wholly NEW square 1536x1536 contemporary documentary PHOTOGRAPH for Matkakirja. The camera is an arriving traveler asking about a treasure. The principal person must respond with BOTH eyes looking DIRECTLY INTO THE LENS, a powerful spontaneous mixed expression, never a stock-photo welcome. Authentic photographic skin and materials, restrained natural optical rendering, no artificial bokeh, HDR, sharpening halos, CGI, illustration, text, logo, watermark, vintage finish, vignette or border. Include entire head and hair with some room. Anatomically credible hands and ordinary believable actions. Use real attached Amsterdam canal-house photo for authentic brown/red brick, cream sash windows, gables and ordinary narrow house scale. A NEW fictional Dutch moving-crew forewoman Yara35, medium brown skin, muscular broad build, asymmetric short black curls, small silver hoop, violet T-shirt and denim dungarees. Her body faces almost FRONT toward camera, her head tilts a little and both eyes stare straight into lens, with a piercing half-skeptical, half-amused expression, one brow up, chin slightly lifted and lips firmly closed around a small reluctant smile: the traveler has asked about a treasure in the middle of moving day. Composition centers on her head and torso, head to hips with both complete arms clearly traceable. Exactly TWO arms, both bare from shirt sleeve, exactly TWO BARE hands: her RIGHT arm is bent and RIGHT hand loosely holds one thick hanging stationary hoist rope at shoulder height; her LEFT arm hangs naturally at her left side and LEFT hand holds a small folded gray moving blanket at hip height. NO work gloves anywhere in the image, no hand on furniture, no hidden third arm. Behind her LEFT shoulder a mustard upholstered armchair sits firmly on pavement, no person touches it, absolutely no hand resting on the chair. One adult coworker leans at the upstairs window far behind on the opposite side, hands stay on his own windowsill, not near Yara. The vertical guide rope simply continues up and out of frame toward traditional house hoist, no need to show complete rig, chair is already safely grounded. A closed cardboard box beside the chair. Strong warm morning sun from side gives hair and cheek warm shape, shadows cool from canal sky, cream window grids and red brick make a graphic background. 45mm candid photographic scene from normal visitor height, not a posed fashion photo. Whole head and two complete forearms in frame, rich natural violet/yellow/brick palette, no exaggerated saturation. Important quality: believable two-arm anatomy, direct eye contact, layered work story and strong restrained light.",
+      "caption": "Yara on keskeyttänyt kanavatalon muuton vastatakseen matkaajalle. Yläikkunasta kurkistava työpari odottaa lupaa jatkaa, kun aarrekysymys muuttaa tilanteen suunnan.",
+      "moment": "Uusi henkilö ja toiminta, joka liittyy suoraan kanavatalojen nostokoukkuihin. Talojen mittasuhteet perustuvat paikkakuvaan; muutto ja henkilöt ovat fiktiivisiä.",
+      "sourceNote": "Uusi henkilö ja toiminta, joka liittyy suoraan kanavatalojen nostokoukkuihin. Talojen mittasuhteet perustuvat paikkakuvaan; muutto ja henkilöt ovat fiktiivisiä. Kokonaan uusi generointi; paikkareferenssi ei ole kuva pelin fiktiivisestä henkilöstä.",
+      "webReferenceUrls": [
+        {
+          "label": "I amsterdam — Bridges of Amsterdam, Torensluis",
+          "url": "https://www.iamsterdam.com/en/see-and-do/attractions-and-sights/bridges-of-amsterdam"
+        }
+      ],
+      "referenceFiles": [
+        {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounters-approved-strengthening-2026-09-05/references/amsterdam-torensluis.webp",
+          "exists": true
+        }
+      ],
+      "rootQa": {
+        "verdict": "pass",
+        "reviewer": "root",
+        "originalVisuallyInspected": true,
+        "deliveryJpegVisuallyInspected": true,
+        "noteFi": "Ylimääräinen käsi poistunut: kaksi paljasta kättä, köysi ja huopa selvästi. Tutkiva hieman huvittunut katsekontakti, värit ja luonnollinen aurinko toimivat. Hiukset kokonaan mukana, ylävara niukka.",
+        "reviewedAt": "2026-09-05T19:03:14.274887+00:00"
+      },
+      "privateReview": {
+        "url": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/amsterdam-yara-feedback-r20260905-v2.jpg",
+        "verifiedAt": "2026-09-05T19:11:36.736Z",
+        "verificationIsPriorMetadataRecord": true
+      },
+      "target": {
+        "bucket": "matkakirja",
+        "key": "kohtaamiset/amsterdam-yara-feedback-r20260905-v2.jpg",
+        "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/amsterdam-yara-feedback-r20260905-v2.jpg",
+        "newVersionKey": true,
+        "overwriteOlderVersion": false,
+        "uploadExecuted": false
+      },
+      "r2ReadChecks": [
+        {
+          "imageId": "amsterdam-yara-feedback-r20260905-v2",
+          "key": "kohtaamiset/amsterdam-yara-feedback-r20260905-v2.jpg",
+          "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/amsterdam-yara-feedback-r20260905-v2.jpg",
+          "method": "GET",
+          "origin": "https://ravelius.github.io",
+          "checkedAt": "2026-09-05T19:52:01.178Z",
+          "bytesSavedToDisk": false,
+          "status": 404,
+          "mime": "text/html",
+          "allowOrigin": "https://ravelius.github.io",
+          "contentLength": "27150",
+          "etag": null,
+          "decision": "object-missing"
+        },
+        {
+          "imageId": "amsterdam-yara-feedback-r20260905-v2",
+          "key": "kohtaamiset/kuvajono/amsterdam-yara-feedback-r20260905-v2.jpg",
+          "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/amsterdam-yara-feedback-r20260905-v2.jpg",
+          "method": "GET",
+          "origin": "https://ravelius.github.io",
+          "checkedAt": "2026-09-05T19:52:01.179Z",
+          "bytesSavedToDisk": false,
+          "status": 404,
+          "mime": "text/html",
+          "allowOrigin": "https://ravelius.github.io",
+          "contentLength": "27150",
+          "etag": null,
+          "decision": "object-missing"
+        }
+      ],
+      "gameBinding": {
+        "catalogPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/kohtaamiskuvat-data.js",
+        "resolver": "kohtaamiskuvaKohteelle(quiz.cityId)",
+        "explicitKohdeRequired": false,
+        "reasonFi": "Anna silti eksplisiittinen kohde, jotta nimi ei ohjaa väärään pelipaikkaan.",
+        "proposedFieldsForFable": {
+          "id": "amsterdam-yara-feedback-r20260905-v2",
+          "kohde": "amsterdam",
+          "kaupunki": "Amsterdam",
+          "maa": "Alankomaat",
+          "hahmo": "Yara",
+          "tiedosto": "amsterdam-yara-feedback-r20260905-v2.jpg",
+          "kuvateksti": "Yara on keskeyttänyt kanavatalon muuton vastatakseen matkaajalle. Yläikkunasta kurkistava työpari odottaa lupaa jatkaa, kun aarrekysymys muuttaa tilanteen suunnan.",
+          "lahde": "Uusi henkilö ja toiminta, joka liittyy suoraan kanavatalojen nostokoukkuihin. Talojen mittasuhteet perustuvat paikkakuvaan; muutto ja henkilöt ovat fiktiivisiä. Kokonaan uusi generointi; paikkareferenssi ei ole kuva pelin fiktiivisestä henkilöstä.",
+          "lahdeUrl": "https://www.iamsterdam.com/en/see-and-do/attractions-and-sights/bridges-of-amsterdam"
+        },
+        "activationFi": "Fable lisää uuden version vasta varmennetun R2-siirron ja tarvittavan tarinasynkronoinnin jälkeen. tila=tarkistettu ja aktiivinen!==false valitsee pelikortin kuvan; vanhat hyväksytyt versiot säilytetään galleriassa.",
+        "existingVersionsToPreserve": [
+          {
+            "id": "amsterdam-pyorailija-aamu",
+            "character": "Kanavasillan pyöräilijä",
+            "state": "tarkistettu",
+            "active": false,
+            "fileName": "kasvo-amsterdam-pyorailija-aamu.jpg",
+            "preserve": true
+          },
+          {
+            "id": "amsterdam-koysityontekija",
+            "character": "Willem",
+            "state": "tarkistettu",
+            "active": true,
+            "fileName": "kasvo-amsterdam-koysityontekija.jpg",
+            "preserve": true
+          }
+        ],
+        "currentMainPerson": "Siltavahti Willem vetää kammella auki saman kääntösillan, jota hänen sukunsa on avannut purjeille sukupolvien ajan.",
+        "currentMainQuestion": "Amsterdamin vanhojen talojen päädyssä on melkein aina koukku katonrajassa. Mitä varten?",
+        "currentMainAnswer": "Huonekalut nostetaan sisään ikkunoista, koska portaat ovat liian kapeat"
+      },
+      "story": {
+        "state": "fable-approved-with-changes-main-pending",
+        "newPersonStoryPending": true,
+        "currentPerson": "Willem",
+        "detailFi": "Yara hyväksytty. Kätkö tulee yleiselle kanavanvarren paikalle, ei yksityisasunnon ullakolle. Kohtaamispiste siirtyy Magere Brugilta kanavataloille. Mainissa edelleen Willem; kuva aktivoidaan yhdessä uuden kaaren kanssa."
+      },
+      "metadataCautions": [
+        "Metadata comparisonNote on periytynyt vanhasta Willem-kuvasta (avain/lukko/pyöräilijä). Toimituksessa käytetään yllä olevaa uuden Yara-kuvan tarkkaa caption/moment/sourceNotea ja rootQa:ta, ei comparisonNotea."
+      ],
+      "deliveryState": "user-approved-root-qa-passed-r2-publicly-verified",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/amsterdam-yara-feedback-r20260905-v2.jpg",
+      "publicReadback": {
+        "phase": "final",
+        "checkedAt": "2026-09-05T20:38:25.168Z",
+        "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/amsterdam-yara-feedback-r20260905-v2.jpg",
+        "requestUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/amsterdam-yara-feedback-r20260905-v2.jpg?_delivery_verify=6a2b74c9-a5ac-4b10-8418-0f602606b1d5",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "etag": "\"f444212b6f86b002b72d1dd9658ff9de\"",
+        "contentLength": "982919",
+        "cacheStatus": null,
+        "bytes": 982919,
+        "sha256": "423832758d869afdc42c13bbce5c9c4cf784dfd94b43c22794200d12c2b3e910",
+        "downloadedPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-round2-20260905/game-delivery-approved6/runs/2026-09-05T20-38-19.750Z-1ff3b581/remote/amsterdam-yara-feedback-r20260905-v2-final.jpg"
+      },
+      "gameIntegrationConfirmed": false
+    },
+    {
+      "imageId": "islanti-einar-feedback-r20260905-v2",
+      "cityId": "islanti",
+      "city": "Haukadalur",
+      "country": "Islanti",
+      "character": "Einar — geotermisen alueen opas",
+      "sourceImageId": "islanti-bjork-r20260905-redo-v2",
+      "userApproval": {
+        "sourcePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/reviews-before-publish.json",
+        "sourceSha256": "d45ce84bdef7eefa14b3496f32ea66af7ab6c57b440f2e5eeeae14f369f46751",
+        "review": {
+          "imageId": "islanti-einar-feedback-r20260905-v2",
+          "status": "jatkoon_v2",
+          "workflowStatus": "accepted",
+          "suggestion": "",
+          "regenerationPrompt": "",
+          "rewriteText": false,
+          "archived": false,
+          "updatedAt": "2026-09-05T19:12:31.643Z"
+        },
+        "approvedAt": "2026-09-05T19:12:31.643Z",
+        "meaning": "accepted/jatkoon; not completed"
+      },
+      "local": {
+        "metadataPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/islanti-einar-feedback-r20260905-v2.json",
+        "metadataSha256": "a4474dc966c4211eef1281a5a90816b7d7199487c7cb0b2ba33d4b38b158be19",
+        "specPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/islanti-einar-feedback-r20260905-v2.spec.json",
+        "promptPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/prompts/islanti-einar-feedback-r20260905-v2.txt",
+        "promptFileSha256": "4b65376bc3ce89028e7fc916867972f36897686075e7affc12a3ba866606cc66",
+        "exactPromptSha256": "2130f7da39804f2b0efb4d4bcaf7ee268fc0795f7ed27427dc762a9b84e6af75",
+        "promptFileOnlyTrailingNewlineDifference": true,
+        "jpgPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/review/islanti-einar-feedback-r20260905-v2.jpg",
+        "originalPngPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/originals/islanti-einar-feedback-r20260905-v2.png",
+        "originalPngSha256": "545e00aa32a1c1a36d9008b29e06fa5a7ade7d74303abbae1718149cc855d71e",
+        "generatorOriginalPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-0e72e720-38aa-4fd0-aeda-d1b1a3881e9d.png",
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "bytes": 969053,
+        "sha256": "ff7a7da7293a5e001251ae664d87514bbe7347c077302cba71fa3c9db790c9d7",
+        "dimensions": [
+          1536,
+          1536
+        ],
+        "mime": "image/jpeg",
+        "iccProfile": "sRGB IEC61966-2.1"
+      },
+      "exactPrompt": "Create ONE wholly NEW square 1536x1536 contemporary documentary PHOTOGRAPH for Matkakirja. The camera is an arriving traveler asking about a treasure. The principal person must respond with BOTH eyes looking DIRECTLY INTO THE LENS, a powerful spontaneous mixed expression, never a stock-photo welcome. Authentic photographic skin and materials, restrained natural optical rendering, no artificial bokeh, HDR, sharpening halos, CGI, illustration, text, logo, watermark, vintage finish, vignette or border. Include entire head and hair with some room. Anatomically credible hands and ordinary believable actions. Use the real Haukadalur/Geysir NEW WALKWAY photo for its broad curved metal grid path with wooden edge, low scrub and grasses, ordinary low geothermal steam wisps, distant low hills. Do not fabricate a giant geyser beside a visitor, lava, cliff, snowy alpine mountain or fenced farm; main person is safely ON the public path away from hot water. Windy Icelandic early spring, a passing rain squall with one break of bright low sun, steam moves sideways in background, cool expansive space. NEW fictional Icelandic guide Einar, 38, tall broad build, pale red-cheeked face, long straight blond hair escaping a hair tie, blond moustache and short beard, faded dark-red waterproof jacket, olive thermal midlayer, black outdoor trousers. His hood has just been flipped outward by wind and lies awkwardly up behind his neck like a little sail. One hand is catching it BEHIND shoulder, other firmly holds a small closed folded map by his side. He has been interrupted in his explanation by the treasure question: clear eyes wide directly to camera, brows asymmetrically raised, mouth starts a small open incredulous smile, shoulders momentarily braced against wind. It is hilarious weather and a very strange question but he is still assessing the traveler, not laughing wildly. An older female visitor far behind is steadying her knit hat and looking toward him, normal group life, not all people facing lens. 40mm medium photograph head to mid thigh; Einar on right half, curve of boardwalk leads from bottom left into misty distance. Genuine wind in hair and jacket, restrained fine raindrops only, broad low sunlight from left catches his face and a band of steam against a dark passing cloud. Beautiful strong tonal structure with credible weather, no stage backlight, no HDR. Mandatory clothing detail: the red waterproof jacket is completely GENERIC and UNBRANDED. Its entire chest and sleeves are plain continuous red fabric with only normal seams and zipper, no printed or embroidered mark, no emblem, lettering, white patch or decorative badge. Keep all clothing blank.",
+      "caption": "Tuuli kääntää Einarin sadetakin hupun väärinpäin juuri, kun hän kuulee matkaajan aarrekysymyksen. Hän jää katsomaan tulijaa huvittuneen epäuskoisena.",
+      "moment": "Uusi henkilö Geysirin alueen kävelyreitillä Haukadalurissa. Vuonna 2024 kuvatun reitin metalliritilä ja höyryävä alava maasto ovat paikkareferenssi; kuvassa ei väitetä näkyvän Strokkurin purkausaukkoa.",
+      "sourceNote": "Uusi henkilö Geysirin alueen kävelyreitillä Haukadalurissa. Vuonna 2024 kuvatun reitin metalliritilä ja höyryävä alava maasto ovat paikkareferenssi; kuvassa ei väitetä näkyvän Strokkurin purkausaukkoa. Kokonaan uusi generointi; paikkareferenssi ei ole kuva pelin fiktiivisestä henkilöstä.",
+      "webReferenceUrls": [
+        {
+          "label": "Visit South Iceland — Scenic walking path by Geysir",
+          "url": "https://www.south.is/en/travel-info/newsblog/scenic-walking-path-by-geysir"
+        }
+      ],
+      "referenceFiles": [
+        {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounter-regeneration-2026-09-04-resumed/overnight/c/references/haukadalur.jpg",
+          "exists": true
+        }
+      ],
+      "rootQa": {
+        "verdict": "pass",
+        "reviewer": "root",
+        "originalVisuallyInspected": true,
+        "deliveryJpegVisuallyInspected": true,
+        "noteFi": "Tuotemerkki poistunut. Suora yllättynyt katse, tuulen nostama huppu ja hiukset, sumupilvien välistä tuleva valo. Kaksi kättä, kartta ja todellisen Geysirin alueen ritiläreitti luettavat.",
+        "reviewedAt": "2026-09-05T19:03:14.280323+00:00"
+      },
+      "privateReview": {
+        "url": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/islanti-einar-feedback-r20260905-v2.jpg",
+        "verifiedAt": "2026-09-05T19:11:36.739Z",
+        "verificationIsPriorMetadataRecord": true
+      },
+      "target": {
+        "bucket": "matkakirja",
+        "key": "kohtaamiset/islanti-einar-feedback-r20260905-v2.jpg",
+        "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/islanti-einar-feedback-r20260905-v2.jpg",
+        "newVersionKey": true,
+        "overwriteOlderVersion": false,
+        "uploadExecuted": false
+      },
+      "r2ReadChecks": [
+        {
+          "imageId": "islanti-einar-feedback-r20260905-v2",
+          "key": "kohtaamiset/islanti-einar-feedback-r20260905-v2.jpg",
+          "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/islanti-einar-feedback-r20260905-v2.jpg",
+          "method": "GET",
+          "origin": "https://ravelius.github.io",
+          "checkedAt": "2026-09-05T19:52:01.179Z",
+          "bytesSavedToDisk": false,
+          "status": 404,
+          "mime": "text/html",
+          "allowOrigin": "https://ravelius.github.io",
+          "contentLength": "27150",
+          "etag": null,
+          "decision": "object-missing"
+        },
+        {
+          "imageId": "islanti-einar-feedback-r20260905-v2",
+          "key": "kohtaamiset/kuvajono/islanti-einar-feedback-r20260905-v2.jpg",
+          "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/islanti-einar-feedback-r20260905-v2.jpg",
+          "method": "GET",
+          "origin": "https://ravelius.github.io",
+          "checkedAt": "2026-09-05T19:52:01.179Z",
+          "bytesSavedToDisk": false,
+          "status": 404,
+          "mime": "text/html",
+          "allowOrigin": "https://ravelius.github.io",
+          "contentLength": "27150",
+          "etag": null,
+          "decision": "object-missing"
+        }
+      ],
+      "gameBinding": {
+        "catalogPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/kohtaamiskuvat-data.js",
+        "resolver": "kohtaamiskuvaKohteelle(quiz.cityId)",
+        "explicitKohdeRequired": true,
+        "reasonFi": "Kuvakaupungin nimi ei normalisoidu pelin cityId:ksi; kohde-kenttä tarvitaan.",
+        "proposedFieldsForFable": {
+          "id": "islanti-einar-feedback-r20260905-v2",
+          "kohde": "islanti",
+          "kaupunki": "Haukadalur",
+          "maa": "Islanti",
+          "hahmo": "Einar",
+          "tiedosto": "islanti-einar-feedback-r20260905-v2.jpg",
+          "kuvateksti": "Tuuli kääntää Einarin sadetakin hupun väärinpäin juuri, kun hän kuulee matkaajan aarrekysymyksen. Hän jää katsomaan tulijaa huvittuneen epäuskoisena.",
+          "lahde": "Uusi henkilö Geysirin alueen kävelyreitillä Haukadalurissa. Vuonna 2024 kuvatun reitin metalliritilä ja höyryävä alava maasto ovat paikkareferenssi; kuvassa ei väitetä näkyvän Strokkurin purkausaukkoa. Kokonaan uusi generointi; paikkareferenssi ei ole kuva pelin fiktiivisestä henkilöstä.",
+          "lahdeUrl": "https://www.south.is/en/travel-info/newsblog/scenic-walking-path-by-geysir"
+        },
+        "activationFi": "Fable lisää uuden version vasta varmennetun R2-siirron ja tarvittavan tarinasynkronoinnin jälkeen. tila=tarkistettu ja aktiivinen!==false valitsee pelikortin kuvan; vanhat hyväksytyt versiot säilytetään galleriassa.",
+        "existingVersionsToPreserve": [],
+        "currentMainPerson": "Tilallinen Björk asuu lähdelaakson talossa, jonka suku on opastanut matkalaisia kuumille lähteille kuusi polvea.",
+        "currentMainQuestion": "Islannin kuuluisin kuuma lähde on antanut nimen kaikille maailman purkautuville lähteille. Mikä sana siitä tuli?",
+        "currentMainAnswer": "Geysir"
+      },
+      "story": {
+        "state": "fable-approved-as-proposed-main-pending",
+        "newPersonStoryPending": true,
+        "currentPerson": "Björk",
+        "detailFi": "Opas Einar hyväksytty sellaisenaan tarinan ja kuvan osalta. Mainissa edelleen Björk; uusi kaari odottaa toteutusta."
+      },
+      "metadataCautions": [],
+      "deliveryState": "user-approved-root-qa-passed-r2-publicly-verified",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/islanti-einar-feedback-r20260905-v2.jpg",
+      "publicReadback": {
+        "phase": "final",
+        "checkedAt": "2026-09-05T20:38:27.253Z",
+        "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/islanti-einar-feedback-r20260905-v2.jpg",
+        "requestUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/islanti-einar-feedback-r20260905-v2.jpg?_delivery_verify=34e026dd-11c7-470d-be38-2dd2de901223",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "etag": "\"e069bcb788efd64af44b65710b8ef188\"",
+        "contentLength": "969053",
+        "cacheStatus": null,
+        "bytes": 969053,
+        "sha256": "ff7a7da7293a5e001251ae664d87514bbe7347c077302cba71fa3c9db790c9d7",
+        "downloadedPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-round2-20260905/game-delivery-approved6/runs/2026-09-05T20-38-19.750Z-1ff3b581/remote/islanti-einar-feedback-r20260905-v2-final.jpg"
+      },
+      "gameIntegrationConfirmed": false
+    },
+    {
+      "imageId": "odessa-iryna-feedback-r20260905-v1",
+      "cityId": "odessa",
+      "city": "Odessa",
+      "country": "Ukraina",
+      "character": "Iryna — torimyyjä",
+      "sourceImageId": "odessa-fjodor-lyhty-r20260905-redo-a02",
+      "userApproval": {
+        "sourcePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/reviews-before-publish.json",
+        "sourceSha256": "d45ce84bdef7eefa14b3496f32ea66af7ab6c57b440f2e5eeeae14f369f46751",
+        "review": {
+          "imageId": "odessa-iryna-feedback-r20260905-v1",
+          "status": "jatkoon_v2",
+          "workflowStatus": "accepted",
+          "suggestion": "",
+          "regenerationPrompt": "",
+          "rewriteText": false,
+          "archived": false,
+          "updatedAt": "2026-09-05T19:21:48.884Z"
+        },
+        "approvedAt": "2026-09-05T19:21:48.884Z",
+        "meaning": "accepted/jatkoon; not completed"
+      },
+      "local": {
+        "metadataPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/odessa-iryna-feedback-r20260905-v1.json",
+        "metadataSha256": "a24fefbe8b040f01ae6b7fa757adad8b22883a92c5419e74079bde6c49b06648",
+        "specPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/odessa-iryna-feedback-r20260905-v1.spec.json",
+        "promptPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/prompts/odessa-iryna-feedback-r20260905-v1.txt",
+        "promptFileSha256": "478b6f6a13d922a760dd79c470c7b7f822a43736c2e732d66136b17e98093d00",
+        "exactPromptSha256": "478b6f6a13d922a760dd79c470c7b7f822a43736c2e732d66136b17e98093d00",
+        "promptFileOnlyTrailingNewlineDifference": false,
+        "jpgPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/review/odessa-iryna-feedback-r20260905-v1.jpg",
+        "originalPngPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/originals/odessa-iryna-feedback-r20260905-v1.png",
+        "originalPngSha256": "204220c67cbf8488b2350e969b6b5ce12d0a83c01b6a8de7ddf525b6119880e4",
+        "generatorOriginalPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-d5d31485-d799-407c-b34e-dc5517c7732e.png",
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "bytes": 852212,
+        "sha256": "1cde5310f6209c6612b75c4f5fbfff5cc08a7a46e12f5c5b7347ae6b446cad33",
+        "dimensions": [
+          1536,
+          1536
+        ],
+        "mime": "image/jpeg",
+        "iccProfile": "sRGB IEC61966-2.1"
+      },
+      "exactPrompt": "Create ONE entirely NEW square 1536 x 1536 present-day documentary PHOTOGRAPH for Matkakirja. No old image is an edit target. Camera is the unseen arriving traveler's eyes; principal character MUST look DIRECTLY INTO THE CAMERA LENS with BOTH eyes, spontaneous powerful expression responding to an unexpected treasure question. Real human skin, believable fingers and weight, natural lens rendering, no illustration, CGI, artificial bokeh, HDR, orange filter, text, logos, watermark, vignette or border. Whole head and hair with breathing room; important hands visible. Use the actual Pryvoz reference ONLY for market spatial logic: a long counter, tiled square columns, vendors behind counters, shoppers in a receding aisle. Do not copy its meat or identifiable people. This fictional encounter is at a small FRUIT stall in present-day Odesa's Pryvoz market. Iryna, broad-shouldered Ukrainian woman about 50 with short copper-red hair, warm pale freckled face, tiny gold earrings, violet T-shirt and faded teal cotton apron, has caught a single round striped green watermelon under her right forearm against the stable counter, her hand visibly pressing it to stop rolling. Left palm planted on counter for balance. Her face has snapped up towards us at the treasure question: stunned very wide eyes and raised brows, an involuntary crooked grin only beginning, open lips caught on a protesting laugh. Her adult daughter Solomiia, about 25 in a simple yellow blouse and jeans, stands behind to one side holding a tilted wooden fruit crate securely in both hands; she looks at Iryna and is laughing, a different expression. Their faces and hands anatomically clean, melon firmly supported, no exploding produce. A few stacked melons, peaches in a shallow box and old metal scales; do not make chaos of every surface. Soft market roof shade pierced by an oblique stripe of midday sun that lights Iryna's face, one shoulder, green melon and crate rim; beautiful subdued reflected light, deep aisle behind. Close 35mm environmental portrait across the counter, principal woman large, daughter smaller but readable, three distant shoppers provide lived-in depth. Contemporary documentary warmth with distinct purple/teal/green/yellow colors, no romantic historical bazaar costume, no military or war props, no claims of an actual event. No text on scales.",
+      "caption": "Iryna nappaa vierivän melonin käsivartensa alle juuri kun matkaaja kysyy aarteesta. Solomiia yrittää nostaa laatikkoa paikoilleen ja purskahtaa nauruun.",
+      "moment": "Pryvozin myyntitiskien inspiroima fiktiivinen hedelmäkoju. Vanhan kuitin tulkintaan liittyvä uusi tarinaehdotus on lähetetty Fablelle.",
+      "sourceNote": "Pryvozin myyntitiskien inspiroima fiktiivinen hedelmäkoju. Vanhan kuitin tulkintaan liittyvä uusi tarinaehdotus on lähetetty Fablelle. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Kuldinboxru — Pryvozin aito myyntirivi 2010, tilarakenteen vertailu",
+          "url": "https://commons.wikimedia.org/wiki/File:OdessaPrivoz.JPG"
+        },
+        {
+          "label": "Odesan kaupungin Pryvoz-esittely",
+          "url": "https://odesa365.omr.gov.ua/en/locations/rinok-privoz"
+        }
+      ],
+      "referenceFiles": [
+        {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/references/odesa-pryvoz-selling-row-2010.jpg",
+          "exists": true
+        }
+      ],
+      "rootQa": {
+        "verdict": "pass",
+        "reviewer": "root",
+        "originalVisuallyInspected": true,
+        "deliveryJpegVisuallyInspected": true,
+        "noteFi": "Vahva yllätys ja tyttären nauru, vesimelonin paino ja kaksi kättä uskottavia. Myyntihalli on referenssiin perustuva fiktiivinen hedelmärivi.",
+        "reviewedAt": "2026-09-05T19:03:14.290673+00:00"
+      },
+      "privateReview": {
+        "url": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/odessa-iryna-feedback-r20260905-v1.jpg",
+        "verifiedAt": "2026-09-05T19:11:36.741Z",
+        "verificationIsPriorMetadataRecord": true
+      },
+      "target": {
+        "bucket": "matkakirja",
+        "key": "kohtaamiset/odessa-iryna-feedback-r20260905-v1.jpg",
+        "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/odessa-iryna-feedback-r20260905-v1.jpg",
+        "newVersionKey": true,
+        "overwriteOlderVersion": false,
+        "uploadExecuted": false
+      },
+      "r2ReadChecks": [
+        {
+          "imageId": "odessa-iryna-feedback-r20260905-v1",
+          "key": "kohtaamiset/odessa-iryna-feedback-r20260905-v1.jpg",
+          "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/odessa-iryna-feedback-r20260905-v1.jpg",
+          "method": "GET",
+          "origin": "https://ravelius.github.io",
+          "checkedAt": "2026-09-05T19:52:01.368Z",
+          "bytesSavedToDisk": false,
+          "status": 404,
+          "mime": "text/html",
+          "allowOrigin": "https://ravelius.github.io",
+          "contentLength": "27150",
+          "etag": null,
+          "decision": "object-missing"
+        },
+        {
+          "imageId": "odessa-iryna-feedback-r20260905-v1",
+          "key": "kohtaamiset/kuvajono/odessa-iryna-feedback-r20260905-v1.jpg",
+          "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/odessa-iryna-feedback-r20260905-v1.jpg",
+          "method": "GET",
+          "origin": "https://ravelius.github.io",
+          "checkedAt": "2026-09-05T19:52:01.368Z",
+          "bytesSavedToDisk": false,
+          "status": 404,
+          "mime": "text/html",
+          "allowOrigin": "https://ravelius.github.io",
+          "contentLength": "27150",
+          "etag": null,
+          "decision": "object-missing"
+        }
+      ],
+      "gameBinding": {
+        "catalogPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/kohtaamiskuvat-data.js",
+        "resolver": "kohtaamiskuvaKohteelle(quiz.cityId)",
+        "explicitKohdeRequired": false,
+        "reasonFi": "Anna silti eksplisiittinen kohde, jotta nimi ei ohjaa väärään pelipaikkaan.",
+        "proposedFieldsForFable": {
+          "id": "odessa-iryna-feedback-r20260905-v1",
+          "kohde": "odessa",
+          "kaupunki": "Odessa",
+          "maa": "Ukraina",
+          "hahmo": "Iryna",
+          "tiedosto": "odessa-iryna-feedback-r20260905-v1.jpg",
+          "kuvateksti": "Iryna nappaa vierivän melonin käsivartensa alle juuri kun matkaaja kysyy aarteesta. Solomiia yrittää nostaa laatikkoa paikoilleen ja purskahtaa nauruun.",
+          "lahde": "Pryvozin myyntitiskien inspiroima fiktiivinen hedelmäkoju. Vanhan kuitin tulkintaan liittyvä uusi tarinaehdotus on lähetetty Fablelle. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+          "lahdeUrl": "https://commons.wikimedia.org/wiki/File:OdessaPrivoz.JPG"
+        },
+        "activationFi": "Fable lisää uuden version vasta varmennetun R2-siirron ja tarvittavan tarinasynkronoinnin jälkeen. tila=tarkistettu ja aktiivinen!==false valitsee pelikortin kuvan; vanhat hyväksytyt versiot säilytetään galleriassa.",
+        "existingVersionsToPreserve": [],
+        "currentMainPerson": "Torimyyjä Iryna punnitsee Privozilla samoilla vaaoilla kuin äitinsä; tytär Solomiia pitää laatikkoa.",
+        "currentMainQuestion": "Irynan kädessä on kuitti Odessan vapaasataman ajoilta. Mitä vapaasataman tullietu tarkoitti?",
+        "currentMainAnswer": "Tuontitavaran sai vastaanottaa ja varastoida tullitta"
+      },
+      "story": {
+        "state": "implemented-in-main-v1593",
+        "newPersonStoryPending": false,
+        "currentPerson": "Iryna ja Solomiia",
+        "detailFi": "Uusi torikohtaus toteutettu. Kirjan taskussa on vain kuitin toinen puolisko/vaakamerkki; rasia kaupungin vaakahuoneen luona. Vanha vapaasatamakuitti ei tee vuodesta 1873 vapaasatamakautta. Lehden 1858/kaaren1859-ristiriita vielä Fablen korjattavana."
+      },
+      "metadataCautions": [],
+      "deliveryState": "user-approved-root-qa-passed-r2-publicly-verified",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/odessa-iryna-feedback-r20260905-v1.jpg",
+      "publicReadback": {
+        "phase": "final",
+        "checkedAt": "2026-09-05T20:38:29.052Z",
+        "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/odessa-iryna-feedback-r20260905-v1.jpg",
+        "requestUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/odessa-iryna-feedback-r20260905-v1.jpg?_delivery_verify=c8d740bd-7aaa-43aa-afa6-9b59b315786e",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "etag": "\"7cb850ec5b9f4dbcfde1aca19dfe6121\"",
+        "contentLength": "852212",
+        "cacheStatus": null,
+        "bytes": 852212,
+        "sha256": "1cde5310f6209c6612b75c4f5fbfff5cc08a7a46e12f5c5b7347ae6b446cad33",
+        "downloadedPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-round2-20260905/game-delivery-approved6/runs/2026-09-05T20-38-19.750Z-1ff3b581/remote/odessa-iryna-feedback-r20260905-v1-final.jpg"
+      },
+      "gameIntegrationConfirmed": false
+    },
+    {
+      "imageId": "rooma-nico-feedback-r20260905-v1",
+      "cityId": "rooma",
+      "city": "Rooma",
+      "country": "Italia",
+      "character": "Nico — pasunisti",
+      "sourceImageId": "rooma-enzo-trevi-r20260905-redo-a01",
+      "userApproval": {
+        "sourcePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/reviews-before-publish.json",
+        "sourceSha256": "d45ce84bdef7eefa14b3496f32ea66af7ab6c57b440f2e5eeeae14f369f46751",
+        "review": {
+          "imageId": "rooma-nico-feedback-r20260905-v1",
+          "status": "jatkoon_v2",
+          "workflowStatus": "accepted",
+          "suggestion": "",
+          "regenerationPrompt": "",
+          "rewriteText": false,
+          "archived": false,
+          "updatedAt": "2026-09-05T19:27:47.506Z"
+        },
+        "approvedAt": "2026-09-05T19:27:47.506Z",
+        "meaning": "accepted/jatkoon; not completed"
+      },
+      "local": {
+        "metadataPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/rooma-nico-feedback-r20260905-v1.json",
+        "metadataSha256": "69b76d2dd27f50e7f67cf2f811ad624639a8de5f4d7a1610d33c95b918f9ba66",
+        "specPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/rooma-nico-feedback-r20260905-v1.spec.json",
+        "promptPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/prompts/rooma-nico-feedback-r20260905-v1.txt",
+        "promptFileSha256": "215eec2ce0d4ec7e07d86a778beec4eb6ed411dc1c6545a28fa6ec2249262dde",
+        "exactPromptSha256": "215eec2ce0d4ec7e07d86a778beec4eb6ed411dc1c6545a28fa6ec2249262dde",
+        "promptFileOnlyTrailingNewlineDifference": false,
+        "jpgPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/review/rooma-nico-feedback-r20260905-v1.jpg",
+        "originalPngPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/originals/rooma-nico-feedback-r20260905-v1.png",
+        "originalPngSha256": "5020e5af99b37ffb2e708398a1cc9f51bbbf9c071d025e7a875417ccaa6cb985",
+        "generatorOriginalPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-0295dea4-b771-4e40-92c9-82aa1c3149e9.png",
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "bytes": 780495,
+        "sha256": "936300475e952cc5efaff72eae3085480a124c222bdae12aec66734f24907da1",
+        "dimensions": [
+          1536,
+          1536
+        ],
+        "mime": "image/jpeg",
+        "iccProfile": "sRGB IEC61966-2.1"
+      },
+      "exactPrompt": "Create ONE entirely NEW square 1536 x 1536 present-day documentary PHOTOGRAPH for Matkakirja. No old image is an edit target. Camera is the unseen arriving traveler's eyes; principal character MUST look DIRECTLY INTO THE CAMERA LENS with BOTH eyes, spontaneous powerful expression responding to an unexpected treasure question. Real human skin, believable fingers and weight, natural lens rendering, no illustration, CGI, artificial bokeh, HDR, orange filter, text, logos, watermark, vignette or border. Whole head and hair with breathing room; important hands visible. Use the real Trevi Fountain image for the actual baroque facade, central Oceanus and rocks, but make it a relatively SMALL, partly seen background across the plaza, not oversized behind the head. A captivating Roman street encounter after sunset during a fictional informal neighborhood musical celebration. NEW fictional Nico, Italian male trombonist about 43, lean tall build, curly dark hair, prominent Roman nose, narrow moustache and a little salt in the beard, dark plum velvet jacket over an unbuttoned cream shirt. He stands half turned from his band and rests his real brass trombone safely vertically at his side, one hand in its correct central brace, other hand loosely raised palm-in at chest height as if saying 'wait, what?'. The visitor's treasure question has caught him exactly as his laughter stopped: eyes pop alert toward the camera, brow wrinkles unevenly, the wide grin contracts to one incredulous upturned corner, mouth slightly open. Warm humor and sudden scrutiny, not full laughing mouth or stage performing pose. Behind him two adult bandmates and a few dancers remain absorbed in the celebration, some movement blur, small warm practical bulbs farther back, no signs or official event symbols. NIGHT with dark blue ambient shadows and a narrow warm pool of real light from a nearby doorway illuminating Nico's eyes and cheek and just a few brass edges. Trevi's ordinary evening lighting glows softly in the distance, highlights controlled, street shadows remain genuinely dark. 50mm waist-up photograph, face and lived-in jacket beautifully rendered, whole curls and essential trombone parts within frame. Intimate unplanned human contact in a real inhabited city, not an evenly lit party advertisement. No confetti covering face, costumes, visible treasure or coin-toss clue.",
+      "caption": "Nico on juuri lopettanut kappaleen Trevin lähistöllä. Matkaajan aarrekysymys pysäyttää hänet kesken naurun, kun muu soittajaryhmä jatkaa iltajuhlaa taustalla.",
+      "moment": "Uusi henkilö ja fiktiivinen katujuhla iltavalaistuksessa. Trevin veistosten ja altaan mittasuhteet pohjaavat kaupungin paikkakuvaan; aarretarinan roolimuutos sovitetaan Fablelle.",
+      "sourceNote": "Uusi henkilö ja fiktiivinen katujuhla iltavalaistuksessa. Trevin veistosten ja altaan mittasuhteet pohjaavat kaupungin paikkakuvaan; aarretarinan roolimuutos sovitetaan Fablelle. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Roma Capitale — Trevi maintenance, coin collection and basin drainage; real sculptural layout",
+          "url": "https://www.comune.roma.it/web/it/notizia/fontana-di-trevi-conclusa-manutenzione-straordinaria.page",
+          "inspected": "Official text read2026-09-05, including collection/drainage paragraph and Oceanus with two horse/Triton groups."
+        },
+        {
+          "label": "Roma Capitale actual Trevi photograph",
+          "url": "https://www.comune.roma.it/web-resources/cms/images/fontanatrevirestauro202401_d0.jpeg",
+          "localPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounters-redo-2026-09-05-v2/a/references/rooma-trevi-official.jpg",
+          "inspected": "Actually viewed660x440; rocky basin, facade niche, Oceanus and flanking sea-horse groups."
+        }
+      ],
+      "referenceFiles": [
+        {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounters-redo-2026-09-05-v2/a/references/rooma-trevi-official.jpg",
+          "exists": true
+        }
+      ],
+      "rootQa": {
+        "verdict": "pass",
+        "reviewer": "root",
+        "originalVisuallyInspected": true,
+        "deliveryJpegVisuallyInspected": true,
+        "noteFi": "Katsekontakti ja keskeytynyt epäuskoinen reaktio vahvoja, yövalo ja messinki toimivat. Soitin ja kaksi kättä luettavia; taustajuhla on fiktiivinen.",
+        "reviewedAt": "2026-09-05T19:03:14.293292+00:00"
+      },
+      "privateReview": {
+        "url": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/rooma-nico-feedback-r20260905-v1.jpg",
+        "verifiedAt": "2026-09-05T19:11:36.742Z",
+        "verificationIsPriorMetadataRecord": true
+      },
+      "target": {
+        "bucket": "matkakirja",
+        "key": "kohtaamiset/rooma-nico-feedback-r20260905-v1.jpg",
+        "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/rooma-nico-feedback-r20260905-v1.jpg",
+        "newVersionKey": true,
+        "overwriteOlderVersion": false,
+        "uploadExecuted": false
+      },
+      "r2ReadChecks": [
+        {
+          "imageId": "rooma-nico-feedback-r20260905-v1",
+          "key": "kohtaamiset/rooma-nico-feedback-r20260905-v1.jpg",
+          "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/rooma-nico-feedback-r20260905-v1.jpg",
+          "method": "GET",
+          "origin": "https://ravelius.github.io",
+          "checkedAt": "2026-09-05T19:52:01.369Z",
+          "bytesSavedToDisk": false,
+          "status": 404,
+          "mime": "text/html",
+          "allowOrigin": "https://ravelius.github.io",
+          "contentLength": "27150",
+          "etag": null,
+          "decision": "object-missing"
+        },
+        {
+          "imageId": "rooma-nico-feedback-r20260905-v1",
+          "key": "kohtaamiset/kuvajono/rooma-nico-feedback-r20260905-v1.jpg",
+          "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/rooma-nico-feedback-r20260905-v1.jpg",
+          "method": "GET",
+          "origin": "https://ravelius.github.io",
+          "checkedAt": "2026-09-05T19:52:01.369Z",
+          "bytesSavedToDisk": false,
+          "status": 404,
+          "mime": "text/html",
+          "allowOrigin": "https://ravelius.github.io",
+          "contentLength": "27150",
+          "etag": null,
+          "decision": "object-missing"
+        }
+      ],
+      "gameBinding": {
+        "catalogPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/kohtaamiskuvat-data.js",
+        "resolver": "kohtaamiskuvaKohteelle(quiz.cityId)",
+        "explicitKohdeRequired": false,
+        "reasonFi": "Anna silti eksplisiittinen kohde, jotta nimi ei ohjaa väärään pelipaikkaan.",
+        "proposedFieldsForFable": {
+          "id": "rooma-nico-feedback-r20260905-v1",
+          "kohde": "rooma",
+          "kaupunki": "Rooma",
+          "maa": "Italia",
+          "hahmo": "Nico",
+          "tiedosto": "rooma-nico-feedback-r20260905-v1.jpg",
+          "kuvateksti": "Nico on juuri lopettanut kappaleen Trevin lähistöllä. Matkaajan aarrekysymys pysäyttää hänet kesken naurun, kun muu soittajaryhmä jatkaa iltajuhlaa taustalla.",
+          "lahde": "Uusi henkilö ja fiktiivinen katujuhla iltavalaistuksessa. Trevin veistosten ja altaan mittasuhteet pohjaavat kaupungin paikkakuvaan; aarretarinan roolimuutos sovitetaan Fablelle. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+          "lahdeUrl": "https://www.comune.roma.it/web/it/notizia/fontana-di-trevi-conclusa-manutenzione-straordinaria.page"
+        },
+        "activationFi": "Fable lisää uuden version vasta varmennetun R2-siirron ja tarvittavan tarinasynkronoinnin jälkeen. tila=tarkistettu ja aktiivinen!==false valitsee pelikortin kuvan; vanhat hyväksytyt versiot säilytetään galleriassa.",
+        "existingVersionsToPreserve": [
+          {
+            "id": "rooma-enzo-suihkulahde",
+            "character": "Enzo",
+            "state": "arkisto",
+            "active": true,
+            "fileName": "kasvo-rooma-enzo-suihkulahde.jpg",
+            "preserve": true
+          }
+        ],
+        "currentMainPerson": "Suihkulähteenhoitaja Enzo nostaa Trevin kolikot talteen joka viikko, kuten hänen isänsä ja isoisänsä nostivat.",
+        "currentMainQuestion": "Mitä tarun mukaan tapahtuu, kun heittää kolikon Trevin suihkulähteeseen olkapään yli?",
+        "currentMainAnswer": "Palaat vielä Roomaan"
+      },
+      "story": {
+        "state": "fable-approved-with-changes-main-pending",
+        "newPersonStoryPending": true,
+        "currentPerson": "Enzo",
+        "detailFi": "Pasunisti Nico ja Trevin iltajuhla hyväksytty. Fable siirtää kohtaamispisteen Aventinuksen avaimenreiästä Trevin luo. Mainissa edelleen Enzo; uuden henkilön kaari odottaa toteutusta."
+      },
+      "metadataCautions": [],
+      "deliveryState": "user-approved-root-qa-passed-r2-publicly-verified",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/rooma-nico-feedback-r20260905-v1.jpg",
+      "publicReadback": {
+        "phase": "final",
+        "checkedAt": "2026-09-05T20:38:30.975Z",
+        "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/rooma-nico-feedback-r20260905-v1.jpg",
+        "requestUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/rooma-nico-feedback-r20260905-v1.jpg?_delivery_verify=0cd859ac-72ad-4dda-9186-993523b3ddf3",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "etag": "\"93996cecdfea24927b904d70ba6c75fb\"",
+        "contentLength": "780495",
+        "cacheStatus": null,
+        "bytes": 780495,
+        "sha256": "936300475e952cc5efaff72eae3085480a124c222bdae12aec66734f24907da1",
+        "downloadedPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-round2-20260905/game-delivery-approved6/runs/2026-09-05T20-38-19.750Z-1ff3b581/remote/rooma-nico-feedback-r20260905-v1-final.jpg"
+      },
+      "gameIntegrationConfirmed": false
+    },
+    {
+      "imageId": "venetsia-lucia-feedback-r20260905-v1",
+      "cityId": "venetsia",
+      "city": "Venetsia",
+      "country": "Italia",
+      "character": "Lucia — naamiontekijä",
+      "sourceImageId": "venetsia-lucia-strength-r20260905-v1",
+      "userApproval": {
+        "sourcePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/reviews-before-publish.json",
+        "sourceSha256": "d45ce84bdef7eefa14b3496f32ea66af7ab6c57b440f2e5eeeae14f369f46751",
+        "review": {
+          "imageId": "venetsia-lucia-feedback-r20260905-v1",
+          "status": "jatkoon_v2",
+          "workflowStatus": "accepted",
+          "suggestion": "",
+          "regenerationPrompt": "",
+          "rewriteText": false,
+          "archived": false,
+          "updatedAt": "2026-09-05T19:30:47.913Z"
+        },
+        "approvedAt": "2026-09-05T19:30:47.913Z",
+        "meaning": "accepted/jatkoon; not completed"
+      },
+      "local": {
+        "metadataPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/venetsia-lucia-feedback-r20260905-v1.json",
+        "metadataSha256": "e4e0c71db012f9b9cbd9300de396877373348adfa8354917159e1f749dce5ac4",
+        "specPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/venetsia-lucia-feedback-r20260905-v1.spec.json",
+        "promptPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/prompts/venetsia-lucia-feedback-r20260905-v1.txt",
+        "promptFileSha256": "e2b0b8b1aa373cf52c39871e71d0836af39132e29f38489275a3f380c1f04315",
+        "exactPromptSha256": "e2b0b8b1aa373cf52c39871e71d0836af39132e29f38489275a3f380c1f04315",
+        "promptFileOnlyTrailingNewlineDifference": false,
+        "jpgPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/review/venetsia-lucia-feedback-r20260905-v1.jpg",
+        "originalPngPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-feedback-20260905/root/originals/venetsia-lucia-feedback-r20260905-v1.png",
+        "originalPngSha256": "c1840abc6b484004c9ef409d6d795b25b7c2224c36a00c44ef05b6312087c952",
+        "generatorOriginalPath": "/Users/samireivinen/.codex/generated_images/01a06e21-9b03-73e1-8856-44c9ffffb635/exec-388409de-2756-4bb5-a5a3-47a8ff70d627.png",
+        "nativeDimensions": [
+          1254,
+          1254
+        ],
+        "bytes": 856402,
+        "sha256": "0c072b08500f9b4c998b44090c1ca0eca9e5ceb3f38d502a08c00e88ea1340da",
+        "dimensions": [
+          1536,
+          1536
+        ],
+        "mime": "image/jpeg",
+        "iccProfile": "sRGB IEC61966-2.1"
+      },
+      "exactPrompt": "Create ONE entirely new, exceptionally convincing contemporary documentary PHOTOGRAPH, square 1:1 1536 x 1536, for Matkakirja. Use image 1 solely as the previously successful fictional character/scene reference, image 2 as real Venetian mask-workshop craft reference, image 3 as actual white papier-mache plague-doctor mask reference. This is a fresh exposure and whole new generation, not a retouch or crop. Retain Lucia, a compelling woman around 50 with curly black hair tied up and a wide silver streak, natural freckles, mustard linen shirt and dark blue apron; the small authentic Venetian mask workshop, irregular plaster moulds on deep dark wooden shelves, a single plain white long-beaked mask supported correctly in her left hand, right arm raised to the shelf, orange cat asleep low in the background. No other person. The unseen traveler has unexpectedly asked about a treasure: she turns from the shelf and looks straight into the CAMERA LENS with BOTH eyes unmistakably meeting us. Preserve the caught, questioning expression between sudden astonishment and almost laughing disbelief; one brow higher, small open mouth, living wrinkles, not a fixed smile. THE REQUESTED CHANGE: strong but beautifully understated afternoon SUNLIGHT passes obliquely through the existing window at left and is softened at its edges by imperfect old glass and a light curtain. A coherent patch of warm sun lights her eyes, forehead and cheek, continuing across her raised forearm and a few mask edges. Opposite cheek and shelves remain in deep detailed shadow, slight cool daylight fill. Real falloff and luminous skin, no fog or visible light rays, no pattern that obscures pupils. Window itself stays controlled, not an enormous white hole. The work lamp is secondary. Natural close 40mm perspective and depth around f/5.6; eyes sharp, meaningful materials resolve naturally, dark shelves subtly softer, no gritty over-sharpening or painterly texture. Entire hair comfortably inside frame, beak and important hands fully visible. Keep human intimacy and layered workshop composition, neither sterile nor cluttered. No text, watermark, border or vignette.",
+      "caption": "Lucia kääntyy kesken naamioiden järjestämisen. Ikkunasta siivilöityvä aurinko osuu hänen häkeltyneeseen katseeseensa.",
+      "moment": "Matkaajan yllättävä kysymys keskeyttää työn. Aurinko valaisee kasvot ja käsivarren; kissa jatkaa uniaan.",
+      "sourceNote": "Matkaajan yllättävä kysymys keskeyttää työn. Aurinko valaisee kasvot ja käsivarren; kissa jatkaa uniaan. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Ca' Macana — katsottu käsityöläisen työkuva",
+          "url": "https://www.camacana.com/en-UK/rediscovering-traditional-venetian-masks.php"
+        },
+        {
+          "label": "Ca' Macana — katsottu valkoinen ruttolääkärinaamio ja cartapesta-materiaali",
+          "url": "https://www.camacana.com/en-UK/plague-doctor-classic.php"
+        }
+      ],
+      "referenceFiles": [
+        {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounters-approved-strengthening-2026-09-05/venetsia-lucia-strength-r20260905-v1.jpg",
+          "exists": true
+        },
+        {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounters-approved-strengthening-2026-09-05/references/venetsia-camacana.jpg",
+          "exists": true
+        },
+        {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounters-approved-strengthening-2026-09-05/references/venetsia-mask-white.jpg",
+          "exists": true
+        }
+      ],
+      "rootQa": {
+        "verdict": "pass",
+        "reviewer": "root",
+        "originalVisuallyInspected": true,
+        "deliveryJpegVisuallyInspected": true,
+        "noteFi": "Kasvojen ikkunavalo ja katsekontakti toteutuvat. Hahmo ja naamion ote säilyvät, hiukset kokonaan mukana; ylävara niukka mutta ehjä.",
+        "reviewedAt": "2026-09-05T19:03:14.299674+00:00"
+      },
+      "privateReview": {
+        "url": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/venetsia-lucia-feedback-r20260905-v1.jpg",
+        "verifiedAt": "2026-09-05T19:11:36.743Z",
+        "verificationIsPriorMetadataRecord": true
+      },
+      "target": {
+        "bucket": "matkakirja",
+        "key": "kohtaamiset/venetsia-lucia-feedback-r20260905-v1.jpg",
+        "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/venetsia-lucia-feedback-r20260905-v1.jpg",
+        "newVersionKey": true,
+        "overwriteOlderVersion": false,
+        "uploadExecuted": false
+      },
+      "r2ReadChecks": [
+        {
+          "imageId": "venetsia-lucia-feedback-r20260905-v1",
+          "key": "kohtaamiset/venetsia-lucia-feedback-r20260905-v1.jpg",
+          "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/venetsia-lucia-feedback-r20260905-v1.jpg",
+          "method": "GET",
+          "origin": "https://ravelius.github.io",
+          "checkedAt": "2026-09-05T19:52:01.369Z",
+          "bytesSavedToDisk": false,
+          "status": 404,
+          "mime": "text/html",
+          "allowOrigin": "https://ravelius.github.io",
+          "contentLength": "27150",
+          "etag": null,
+          "decision": "object-missing"
+        },
+        {
+          "imageId": "venetsia-lucia-feedback-r20260905-v1",
+          "key": "kohtaamiset/kuvajono/venetsia-lucia-feedback-r20260905-v1.jpg",
+          "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/venetsia-lucia-feedback-r20260905-v1.jpg",
+          "method": "GET",
+          "origin": "https://ravelius.github.io",
+          "checkedAt": "2026-09-05T19:52:01.369Z",
+          "bytesSavedToDisk": false,
+          "status": 404,
+          "mime": "text/html",
+          "allowOrigin": "https://ravelius.github.io",
+          "contentLength": "27150",
+          "etag": null,
+          "decision": "object-missing"
+        }
+      ],
+      "gameBinding": {
+        "catalogPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/kohtaamiskuvat-data.js",
+        "resolver": "kohtaamiskuvaKohteelle(quiz.cityId)",
+        "explicitKohdeRequired": false,
+        "reasonFi": "Anna silti eksplisiittinen kohde, jotta nimi ei ohjaa väärään pelipaikkaan.",
+        "proposedFieldsForFable": {
+          "id": "venetsia-lucia-feedback-r20260905-v1",
+          "kohde": "venetsia",
+          "kaupunki": "Venetsia",
+          "maa": "Italia",
+          "hahmo": "Lucia",
+          "tiedosto": "venetsia-lucia-feedback-r20260905-v1.jpg",
+          "kuvateksti": "Lucia kääntyy kesken naamioiden järjestämisen. Ikkunasta siivilöityvä aurinko osuu hänen häkeltyneeseen katseeseensa.",
+          "lahde": "Matkaajan yllättävä kysymys keskeyttää työn. Aurinko valaisee kasvot ja käsivarren; kissa jatkaa uniaan. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+          "lahdeUrl": "https://www.camacana.com/en-UK/rediscovering-traditional-venetian-masks.php"
+        },
+        "activationFi": "Fable lisää uuden version vasta varmennetun R2-siirron ja tarvittavan tarinasynkronoinnin jälkeen. tila=tarkistettu ja aktiivinen!==false valitsee pelikortin kuvan; vanhat hyväksytyt versiot säilytetään galleriassa.",
+        "existingVersionsToPreserve": [
+          {
+            "id": "venetsia-lucia-naamio-vene",
+            "character": "Lucia",
+            "state": "tarkistettu",
+            "active": true,
+            "fileName": "kasvo-venetsia-lucia-naamio-vene.jpg",
+            "preserve": true
+          }
+        ],
+        "currentMainPerson": "Naamiontekijä Lucia pitää pajaa kolmannessa polvessa; tilauskirjassa on vuosi 1873 ja nimikirjaimet H. F.",
+        "currentMainQuestion": "Miksi ruttolääkärin naamiossa on pitkä linnunnokka?",
+        "currentMainAnswer": "Nokkaan pantiin yrttejä, joiden uskottiin suojaavan taudilta"
+      },
+      "story": {
+        "state": "existing-lucia-story-retained-duplicate-character-fix-pending",
+        "newPersonStoryPending": false,
+        "currentPerson": "Lucia (KAARI), Matteo (KOHTAAMISET)",
+        "detailFi": "Pelkkä kuvatyö, Lucia säilyy. Fable korjaa erikseen Matteo/Lucia-kaksoishenkilön Lucian hyväksi. Mainin KOHTAAMISET.venetsia on vielä gondolieeri Matteo."
+      },
+      "metadataCautions": [],
+      "deliveryState": "user-approved-root-qa-passed-r2-publicly-verified",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/venetsia-lucia-feedback-r20260905-v1.jpg",
+      "publicReadback": {
+        "phase": "final",
+        "checkedAt": "2026-09-05T20:38:32.817Z",
+        "canonicalUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/venetsia-lucia-feedback-r20260905-v1.jpg",
+        "requestUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/venetsia-lucia-feedback-r20260905-v1.jpg?_delivery_verify=079ff3df-13ef-4ca6-ac4a-00b4eeb1233e",
+        "status": 200,
+        "mime": "image/jpeg",
+        "allowOrigin": "https://ravelius.github.io",
+        "etag": "\"4e681068ccf0c38443696c2f4c8ab022\"",
+        "contentLength": "856402",
+        "cacheStatus": null,
+        "bytes": 856402,
+        "sha256": "0c072b08500f9b4c998b44090c1ca0eca9e5ceb3f38d502a08c00e88ea1340da",
+        "downloadedPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/europe-encounters-round2-20260905/game-delivery-approved6/runs/2026-09-05T20-38-19.750Z-1ff3b581/remote/venetsia-lucia-feedback-r20260905-v1-final.jpg"
+      },
+      "gameIntegrationConfirmed": false
+    }
+  ]
+}

@@ -1,3 +1,15 @@
+## 2026-09-05 20:46 UTC — 6 hyväksyttyä kohtaamista R2:ssa + toinen palautekierros arvioitavana
+
+[Hyväksytyt 6: pelitoimitus](kohtaamiset-hyvaksytyt6-pelitoimitus-2026-09-05.json): Alpit, Amsterdam, Islanti, Odessa, Rooma ja Venetsia. Omistajan hyväksynnät luettu tuoreelta arviointisivulta, pääagentin PNG/JPG-laatutarkastus ja kaikki R2-takaisinlataukset SHA-varmennettu. Nämä saa kytkeä peliin nyt; kuvatekstit sanasta sanaan ja eksplisiittinen kohde joka riville.
+
+[Toinen palautekierros ja täsmälliset kuvapalautteet](kohtaamiset-round2-arviointi-2026-09-05.json), [tarinaehdotukset](kohtaamiset-round2-tarinaehdotukset-2026-09-05.md): 19 pääkuvaa, Dubrovnikin kaksi lisävaihtoehtoa ja Kiovan yksi lisävaihtoehto arvioitavana yksityisellä sivulla v142. Yhteensä 26 yritystä säilyvät näkyvissä vaihtoehtoina, myös pääagentin hylkäämät. Kaikki palvelinkuvat ja katalogit tarkistettu.
+
+Seitsemässä kohteessa ehdokas muuttui uudesta palautteesta: Lontoo Mina+Theo / St Helen’s Square, Dublin Aoife lasiluukun takana, Sarajevo Adnan+Lejla, Marseille Malik yksin veneessä, Pietari Polina / Vitebskin pääaula, Tallinna Rasmus pyörälähetti, Tromssa Nora+kolme ystävää alaviistosta ja trendikkäissä asuissa. Nämä odottavat vielä omistajan kuvavalintaa: aiemmat Leila/Matvei/Eve/Kjell-hyväksynnät eivät hyväksy uusia hahmoja. Tarkista ehdotusten kaanonkelpoisuus nyt; lukitse lopullinen toteutus vasta valinnan jälkeen. Uudet 12 saman hahmon kuvakorjausta eivät peru hyväksymiäsi aiempia kaanonkorjauksia.
+
+Kiitos isoisän 27 kuvan v1597-julkaisukuittauksesta ja v1598-kaaripäivityksen tiedosta. Varmennan pelikytkentöjä erikseen; tässä paketissa uudet arvioitavat henkilöt on erotettu jo hyväksyttyjen kuvien toimituksesta. Uusi Ihmisen matka -20-kuvan pyyntö on nähty erillisenä uutena tilauksena; se ei kuulu tämän toimituksen valmiiksi kuitattuihin kuviin.
+
+---
+
 ## 2026-09-05 20:24 UTC — ISOISÄKUVAT VALMIIT: lisä4 R2:ssa, yhteensä 27 kuvaa pelikäyttöön
 
 Aiemman 23 kuvan toimituksen lisäksi myös loput neljä on tarkastettu alkuperäisinä PNG-kuvina ja toimitus-JPG-kuvina, lähetetty pelin R2:een ja ladattu takaisin SHA-256-varmennuksella. [Lisätoimitus4](isoisa-vaaleat-lisa4-pelitoimitus-2026-09-05.json) sisältää suorat URL:t, sanatarkat lyhyet kuvatekstit, promptit ja aidot aikakausilähteet.
