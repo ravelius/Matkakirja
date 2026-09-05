@@ -1,5 +1,5 @@
 /*
- * HISTORIAN HETKIEN AINEISTO — 15 hetkeä, photo-v3-kuvaerä.
+ * HISTORIAN HETKIEN AINEISTO — 49 hetkeä, photo-v3/v4-kuvaerät.
  *
  * Hetki on sisältöä kahdessa paikassa yhtä aikaa: kartalla omana
  * kohdemerkkinään (js/historian-hetket.js) ja lehdessä omana sivunaan
@@ -81,9 +81,10 @@ function lehtisivu(hetki) {
   return (sivut ?? []).find((s) => s.id === `hetki-${hetki.id}`) ?? null;
 }
 
-test('hetkiä on kaksikymmentä ja jokaisella on kortin kentät', () => {
-  assert.equal(HISTORIAN_HETKET.length, 20,
-    'H3 45–48 ja Galilei: kaksikymmentä hetkeä');
+test('hetkiä on 49 ja jokaisella on kortin kentät', () => {
+  // 20 → 49 (5.9.2026): kuvaputken H3 51–81 -erä, 29 uutta hetkeä.
+  assert.equal(HISTORIAN_HETKET.length, 49,
+    'H3 45–48, Galilei ja H3 51–81: 49 hetkeä');
   const tunnukset = new Set();
   for (const hetki of HISTORIAN_HETKET) {
     assert.ok(!tunnukset.has(hetki.id),
@@ -112,15 +113,24 @@ test('jokaisella hetkellä on lähi- ja kaukokuva tässä järjestyksessä', () 
    * näyttävät aina listan ensimmäisen isona.
    *
    * KOLMAS ROOLI `lehti` on aikakauden lehtisivun rekonstruktio, ja
-   * sellainen tehtiin vain neljälle hetkelle; se on aina viimeisenä,
-   * koska se on lisäkuva eikä kuvakulma kohtaukseen.
+   * sellainen tehtiin vain osalle hetkistä (HETKI_LEHTIKUVAT); se on
+   * aina viimeisenä, koska se on lisäkuva eikä kuvakulma kohtaukseen.
+   *
+   * YKSIKUVAINEN POIKKEUS: Franklinin leijakokeesta (H3 51–81, 5.9.2026)
+   * kuvaputki toimitti vain lähikuvan. Hetki on kartalla ja lehdessä
+   * yhdellä kuvalla; kaukokuva on kuvatilaus, ei koodierä. Lista on
+   * tässä, jotta seuraava yksikuvainen hetki ei livahda läpi
+   * huomaamatta.
    */
+  const VAIN_LAHIKUVA = new Set(['franklin-leija-1752']);
   for (const hetki of HISTORIAN_HETKET) {
     const kuvat = hetkenKuvat(hetki);
     const roolit = kuvat.map((k) => k.rooli);
-    const odotus = HETKI_LEHTIKUVAT[hetki.id]
-      ? ['lahi', 'kauko', 'lehti']
-      : ['lahi', 'kauko'];
+    const odotus = VAIN_LAHIKUVA.has(hetki.id)
+      ? ['lahi']
+      : HETKI_LEHTIKUVAT[hetki.id]
+        ? ['lahi', 'kauko', 'lehti']
+        : ['lahi', 'kauko'];
     assert.deepEqual(roolit, odotus,
       `${hetki.id}: kuvaroolit ovat ${roolit.join('+')} — pitäisi olla ${odotus.join('+')}`);
     assert.ok(kuvat.length <= HETKI_KUVAROOLIT.size,
@@ -134,18 +144,24 @@ test('jokaisella hetkellä on lähi- ja kaukokuva tässä järjestyksessä', () 
   }
 });
 
-test('lehtikuva on vain niillä kuudella hetkellä, joille sellainen tehtiin', () => {
+test('lehtikuva on vain niillä yhdellätoista hetkellä, joille sellainen tehtiin', () => {
   /*
    * Lehtisivun rekonstruktio on PYSTYKUVA (1024 × 1536) ja siksi oma
    * asiansa kortin vaakakuvien rinnalla: kortin kehys sallii
    * pystysuhteen (css/fokusnosto.css `.fokusnosto-kuva img`), mutta
    * uusi lehtikuva ilman omistajan tilausta ei kuulu tähän joukkoon.
    * Lista on datassa (HETKI_LEHTIKUVAT), ja tämä testi lukitsee sen.
+   * 6 → 11 (5.9.2026): H3 51–81 -erän viisi lehtisivua.
    */
   assert.deepEqual(Object.keys(HETKI_LEHTIKUVAT).sort(), [
     'amundsen-etelanapa-1911',
+    'berliinin-muuri-1961',
+    'brooklyn-bridge-1883',
+    'lontoon-palo-1666',
+    'lumiere-elokuva-1895',
     'nansen-fram-1893',
     'rosettan-kivi-1799',
+    'suezin-kanava-avajaiset-1869',
     'titanic-southampton-1912',
     'trafalgar-victory-1805',
     'tutankhamon-carter-1922',

@@ -235,6 +235,12 @@ function nostonLahdeteksti(tunnus, kaupunki, cc) {
     if (nosto.teksti) return nosto.teksti;
     return Array.isArray(nosto.lunastus) ? nosto.lunastus.join('\n\n') : (nosto.lunastus ?? null);
   }
+  // Historian hetken kohdekartan juttu on hetken oma teksti (5.9.2026:
+  // 21 uutta pistettä samalla kaavalla kuin Kolumbus 1484 ja Fram 1893).
+  if (tunnus.startsWith('hetki-')) {
+    const id = tunnus.slice('hetki-'.length);
+    return HISTORIAN_HETKET.find((h) => h.id === id)?.teksti ?? null;
+  }
   return null;
 }
 
@@ -250,8 +256,42 @@ test('lehteen jätetyllä hetkellä on kirjattu syy', () => {
   // pääkartalla vaan kaupunkilehdessä ja sen kohdekartan pisteenä
   // (Lissabon 1484, Fram 1893). Lähelle osuva hetki siirretään datassa
   // irti kaupungista, ei pudoteta.
+  //
+  // 4 → 25 (5.9.2026): kuvaputken H3 51–81 -erän 29 hetkestä 21 osuu
+  // kohdekaupungin laatan päälle tai sen kohdekartan rajaukseen
+  // (Pariisi 6, Lontoo 5, Pietari 2, Wien 2, New York, Istanbul,
+  // Berliini, Rooma, Ateena, Helsinki). Jokaisella on saman säännön
+  // mukaan piste kaupungin kohdekartalla (js/packs/maakartat.js), ja
+  // seuraava testi vaatii sen.
   assert.deepEqual(poikkeukset.sort(),
-    ['amundsen-etelanapa-1911', 'darwin-galapagos-1835',
-      'kolumbus-portugali-1484', 'nansen-fram-1893'],
+    ['amundsen-etelanapa-1911', 'beethoven-yhdeksas-1824', 'berliinin-muuri-1961',
+      'brooklyn-bridge-1883', 'brunel-thames-tunnel-1827', 'darwin-galapagos-1835',
+      'eiffel-torni-1888', 'faraday-luento-1831', 'fleming-malja-1928',
+      'kolumbus-portugali-1484', 'konstantinopoli-1453', 'lavoisier-laboratorio-1780',
+      'lontoon-palo-1666', 'lumiere-elokuva-1895', 'marie-curie-hangaari-1898',
+      'mendelejev-kortit-1869', 'michelangelo-sikstus-1510', 'mozart-wien-1786',
+      'nansen-fram-1893', 'olympia-ateena-1896', 'pasteur-pullot-1862',
+      'pietari-perustus-1703', 'ranskan-vallankumous-bastilji-1789',
+      'shakespeare-globe-1599', 'sibelius-finlandia-1899'],
     'poikkeuslista muuttui — uusi lehteen jäävä hetki vaatii omistajan päätöksen');
+});
+
+test('laatan päälle osuvalla hetkellä on piste kaupungin kohdekartalla', () => {
+  /*
+   * Omistaja 3.9.2026: laatan päälle osuva hetki on "vain
+   * kaupunkilehdessä ja sen kohdekartalla". Lehtisivun tarkistaa
+   * tests/historian-hetket.test.mjs; tämä testi vaatii kohdekartan
+   * pisteen (js/packs/maakartat.js `nosto: 'hetki-<id>'`) jokaiselle
+   * kaupunkilehteen kirjoitetulle poikkeukselle. Etelänapa ja Galápagos
+   * ovat maalehdessä eikä niillä ole kohdekarttaa — ne jäävät tämän
+   * vaatimuksen ulkopuolelle syyllään.
+   */
+  const linkit = kohdekarttojenNostot();
+  for (const hetki of HISTORIAN_HETKET) {
+    if (!hetki.kartanUlkopuolella || hetki.lehti.laji !== 'kaupunki') continue;
+    const linkki = linkit.get(`hetki-${hetki.id}`);
+    assert.ok(linkki, `${hetki.id}: kohdekartalta puuttuu piste, joka kantaa nostoa hetki-${hetki.id}`);
+    assert.equal(linkki.kaupunki, hetki.lehti.avain,
+      `${hetki.id}: kohdekartan piste on kaupungissa ${linkki.kaupunki}, lehti on ${hetki.lehti.avain}`);
+  }
 });

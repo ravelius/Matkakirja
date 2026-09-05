@@ -9,10 +9,13 @@
  * Sarjan mitta on juuri tuo: KATSOJA ON PAIKALLA, silmien korkeudella,
  * siinä sekunnissa jolloin jotain on tapahtumassa.
  *
- * Hetkiä on viisitoista: H1-pilotin kymmenen meren ja löytöretkien
- * hetkeä sekä kuvaputken photo-v3-erän mukana saapunut viisikko —
- * Kolumbuksen kaksi rahoitushetkeä ja kolme tiedehistorian hetkeä
- * (Röntgen, Wrightin veljekset, Einstein).
+ * Hetkiä on 49: H1-pilotin kymmenen meren ja löytöretkien hetkeä,
+ * kuvaputken photo-v3-erän mukana saapunut viisikko (Kolumbuksen kaksi
+ * rahoitushetkeä ja kolme tiedehistorian hetkeä: Röntgen, Wrightin
+ * veljekset, Einstein), H3 45–48:n viisi arkeologian ja tähtitieteen
+ * hetkeä sekä kuvaputken 5.9.2026 toimittama 29 hetken erä (H3 51–81:
+ * tiede, tekniikka, kaupungit, taide ja politiikka Pompejista Berliinin
+ * muuriin). Sama erä uusi Röntgenin ja Einsteinin kuvat photo-v4:ksi.
  *
  * ── TEKSTIN SÄÄNTÖ: IHMINEN EDELLÄ ─────────────────────────────────
  *
@@ -99,8 +102,13 @@
  * (Verdens Gang), Amundsenille (Tidens Tegn) ja Trafalgarille (The
  * Times). Tiedostonimi ei ole `hetki-<id>-lehti-…` vaan lehden oma
  * (`hetki-titanic-daily-graphic-1912-lehti-photo-v3.jpg`), koska kuva
- * on nimetty julkaisunsa eikä hetken mukaan; testi lukitsee neljän
- * tiedoston listan.
+ * on nimetty julkaisunsa eikä hetken mukaan; testi lukitsee listan.
+ * H3 45–48 toi kaksi lisää (Tutankhamon, Rosetta) ja 5.9.2026:n erä
+ * viisi: Suez (The Illustrated London News), Brooklyn (Brooklyn Daily
+ * Eagle), Lontoon palo (The London Gazette), Berliinin muuri (BILD) ja
+ * Lumière (Le Radical — ainoa uusista, joka on nimetty lehden mukaan:
+ * `hetki-lumiere-le-radical-1895-lehti-photo-v4.jpg`). Lehtikuvia on
+ * yhteensä yhdellätoista hetkellä.
  *
  * ERÄ photo-v3 (3.9.2026) korvasi KAIKKI aiemmat kuvat. Omistajan
  * linjaus (Raamattu, "KAIKKI GENEROIDUT KUVAT MAHDOLLISIMMAN
@@ -145,12 +153,17 @@ export const hetkenKuvaOsoite = (tiedosto) => `${HETKI_KUVAJUURI}/${tiedosto}`;
 
 /**
  * Sallitut kuvaroolit: lähikuva ihmisistä, kaukokuva kohtauksesta ja
- * aikakauden lehtisivu (pystykuva, vain kuudella hetkellä).
+ * aikakauden lehtisivu (pystykuva, vain yhdellätoista hetkellä).
  *
  * KUVAERÄN VERSIO: H1–H3 36–44 ovat `-photo-v3`, ja H3 45–48 (4.9.2026)
- * `-photo-v4` — hetken `kuvaversio`-kenttä (oletus 3) kertoo tiedoston
- * päätteen, ja testi johtaa nimen siitä. Yksittäinen uusittu kuva saa
- * oman `versio`-kentän (Machu Picchu: lähi v4, kauko v5; Galilei v5).
+ * sekä H3 51–81 (5.9.2026) `-photo-v4` — hetken `kuvaversio`-kenttä
+ * (oletus 3) kertoo tiedoston päätteen, ja testi johtaa nimen siitä.
+ * Yksittäinen uusittu kuva saa oman `versio`-kentän (Machu Picchu: lähi
+ * v4, kauko v5; Galilei v5). Röntgen ja Einstein saivat 5.9.2026:n erässä
+ * uudet v4-kuvat ja -kuvatekstit; vanhat v3-tiedostot jäävät ämpäriin.
+ *
+ * FRANKLIN 1752 ON YKSIKUVAINEN: kuvaputki toimitti leijakokeesta vain
+ * lähikuvan (paketti 5.9.2026), ja testi sallii sen tälle hetkelle.
  */
 export const HETKI_KUVAROOLIT = new Set(['lahi', 'kauko', 'lehti']);
 
@@ -167,6 +180,13 @@ export const HETKI_LEHTIKUVAT = {
   // H3 45–48 (photo-v4, 4.9.2026): The Illustrated London News ja Courier de l'Égypte.
   'tutankhamon-carter-1922': 'hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg',
   'rosettan-kivi-1799': 'hetki-rosettan-kivi-1799-lehti-photo-v4.jpg',
+  // H3 51–81 (photo-v4, 5.9.2026): The Illustrated London News, Brooklyn
+  // Daily Eagle, The London Gazette, BILD ja Le Radical.
+  'suezin-kanava-avajaiset-1869': 'hetki-suezin-kanava-avajaiset-1869-lehti-photo-v4.jpg',
+  'brooklyn-bridge-1883': 'hetki-brooklyn-bridge-1883-lehti-photo-v4.jpg',
+  'lontoon-palo-1666': 'hetki-lontoon-palo-1666-lehti-photo-v4.jpg',
+  'berliinin-muuri-1961': 'hetki-berliinin-muuri-1961-lehti-photo-v4.jpg',
+  'lumiere-elokuva-1895': 'hetki-lumiere-le-radical-1895-lehti-photo-v4.jpg',
 };
 
 /**
@@ -1263,7 +1283,9 @@ export const HISTORIAN_HETKET = [
    * 13. WÜRZBURG 22.12.1895 — ENSIMMÄINEN RÖNTGENKUVA IHMISESTÄ.
    * Lähin kohdekaupunki on Alppien laatta 126 laudan yksikön päässä,
    * joten merkki menee kartalle sellaisenaan. Würzburgilla ei ole omaa
-   * kaupunkilehteä, joten sivu on Saksan maalehdessä.
+   * kaupunkilehteä, joten sivu on Saksan maalehdessä. Kuvat ja
+   * kuvatekstit uusittiin photo-v4:ksi 5.9.2026:n paketissa; teksti,
+   * visa ja lehtisivun oma sisältö säilyivät.
    * Lähde: en.wikipedia.org: Wilhelm Röntgen, X-ray
    */
   {
@@ -1274,6 +1296,7 @@ export const HISTORIAN_HETKET = [
     paikka: 'Würzburg, Saksa',
     iso: 'DEU',
     lat: 49.7969, lon: 9.9333,
+    kuvaversio: 4,
     teksti: 'Käsi ei saa liikkua. Anna Bertha Röntgen pitää sitä paikallaan '
       + 'minuutti toisensa jälkeen tietämättä, näkyykö levylle mitään. Kun kuva '
       + 'kehittyy, siinä ovat hänen sormiensa luut ja vihkisormuksen tumma '
@@ -1293,28 +1316,27 @@ export const HISTORIAN_HETKET = [
     kuvat: [
       {
         rooli: 'lahi',
-        tiedosto: 'hetki-rontgen-kasi-1895-lahi-photo-v3.jpg',
-        kuvateksti: 'Anna Bertha Röntgen pitää kättään liikkumatta pitkän '
-          + 'valotuksen ajan tietämättä, näkyykö levylle mitään. Kun luiden ja '
-          + 'vihkisormuksen tumma hahmo ilmestyy, aviopari katsoo ensimmäistä '
-          + 'kertaa elävän ihmisen sisään ilman veistä.',
-        lahde: 'Matkakirjan havainnekuva. Faktat ja alkuperäisen käsikuvan '
-          + 'referenssi: NobelPrize.org, Wilhelm Conrad Röntgenin elämäkerta ja '
-          + 'kuvagalleria; tarkistettu 3.9.2026.',
-        url: 'https://www.nobelprize.org/prizes/physics/1901/rontgen/biographical/',
+        tiedosto: 'hetki-rontgen-kasi-1895-lahi-photo-v4.jpg',
+        kuvateksti: 'Anna Bertha Röntgen pitää vasenta kättään liikkumatta '
+          + 'valokuvalevyllä, vaikka pöydän takana rätisevän laitteen '
+          + 'vaikutusta ei voi nähdä eikä tuntea. Arjessa tutut sormukset '
+          + 'jäävät kuvaan intiimeiksi merkeiksi: uusi säteily erottaa metallin '
+          + 'ja luut elävän käden sisältä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Deutsches Röntgen-Museum — '
+          + 'UNESCO dossier, tarkistettu 5.9.2026.',
+        url: 'https://roentgenmuseum.de/wp-content/uploads/2025/05/2025_DRM_DRG_UNESCO_Broschuere_A5.pdf',
       },
       {
         rooli: 'kauko',
-        tiedosto: 'hetki-rontgen-kasi-1895-kauko-photo-v3.jpg',
-        kuvateksti: 'Röntgen kertoo kokeistaan viikkoihin tuskin kenellekään ja '
-          + 'syökin usein laboratoriossa, kunnes tulos kestää hänen oman '
-          + 'epäilynsä. Vasta sitten hän pyytää Anna Berthaa valotukseen, josta '
-          + 'tulee sekä lääketieteellisen kuvantamisen alku että pelottavan '
-          + 'henkilökohtainen perhekuva.',
-        lahde: 'Matkakirjan havainnekuva. Faktat ja alkuperäisen käsikuvan '
-          + 'referenssi: NobelPrize.org, Wilhelm Conrad Röntgenin elämäkerta ja '
-          + 'kuvagalleria; tarkistettu 3.9.2026.',
-        url: 'https://www.nobelprize.org/prizes/physics/1901/rontgen/photo-gallery/',
+        tiedosto: 'hetki-rontgen-kasi-1895-kauko-photo-v4.jpg',
+        kuvateksti: 'Röntgen on pitänyt löytönsä lähes kokonaan omana tietonaan '
+          + 'ennen kuin pyytää vaimonsa pimeään laboratorioon. Anna Bertha ei '
+          + 'voi tietää näkymättömän säteilyn riskejä; hänen osakseen jää '
+          + 'luottaa mieheensä ja odottaa, kun perheenjäsenestä tulee '
+          + 'uudenlaisen ihmiskuvan ensimmäinen kohde.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Deutsches Röntgen-Museum — '
+          + 'UNESCO dossier, tarkistettu 5.9.2026.',
+        url: 'https://roentgenmuseum.de/wp-content/uploads/2025/05/2025_DRM_DRG_UNESCO_Broschuere_A5.pdf',
       },
     ],
     kartalla: true,
@@ -1432,7 +1454,9 @@ export const HISTORIAN_HETKET = [
    * 15. BERN 1905 — PATENTTITOIMISTON IHMEVUOSI.
    * Lähin kohdekaupunki on Alppien laatta 31 laudan yksikön päässä,
    * joten merkki menee kartalle sellaisenaan. Bernillä ei ole omaa
-   * kaupunkilehteä, joten sivu on Sveitsin maalehdessä.
+   * kaupunkilehteä, joten sivu on Sveitsin maalehdessä. Kuvat ja
+   * kuvatekstit uusittiin photo-v4:ksi 5.9.2026:n paketissa; teksti,
+   * visa ja lehtisivun oma sisältö säilyivät.
    * Lähde: en.wikipedia.org: Albert Einstein, Annus Mirabilis papers
    */
   {
@@ -1443,6 +1467,7 @@ export const HISTORIAN_HETKET = [
     paikka: 'Bern, Sveitsi',
     iso: 'CHE',
     lat: 46.9480, lon: 7.4474,
+    kuvaversio: 4,
     teksti: 'Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi '
       + 'tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin '
       + 'patenttiviraston kolmannen luokan tekninen asiantuntija Albert '
@@ -1462,28 +1487,27 @@ export const HISTORIAN_HETKET = [
     kuvat: [
       {
         rooli: 'lahi',
-        tiedosto: 'hetki-einstein-patenttitoimisto-1905-lahi-photo-v3.jpg',
-        kuvateksti: 'Patenttiviraston kolmannen luokan tekninen asiantuntija '
-          + 'Albert Einstein joutuu siirtämään fysiikan muistiinpanot syrjään '
-          + 'aina uuden hakemuksen saapuessa. Iltaisin hän palaa kysymykseen, '
-          + 'miltä valo näyttäisi, jos sitä voisi ajaa kiinni.',
-        lahde: 'Matkakirjan havainnekuva. Faktat ja työhuonereferenssi: Albert '
-          + 'Einstein Archives / einstein-website.de, *Patent Office*; '
-          + 'tarkistettu 3.9.2026.',
-        url: 'https://einstein-website.de/en/patent-office/',
+        tiedosto: 'hetki-einstein-patenttitoimisto-1905-lahi-photo-v4.jpg',
+        kuvateksti: 'Michele Besso kuuntelee, kun työtoveri yrittää purkaa valoa '
+          + 'ja samanaikaisuutta koskevan pulman arkiseksi ajatuskokeeksi. '
+          + 'Patenttivirasto maksaa Einsteinin vuokran; Besso on yksi harvoista, '
+          + 'joiden kanssa 26-vuotias tekninen asiantuntija voi ajatella ääneen '
+          + 'ennen kuin vuoden 1905 paperit lähtevät maailmalle.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Einstein Haus Bern — Einstein '
+          + 'and Bern, tarkistettu 5.9.2026.',
+        url: 'https://www.einstein-bern.ch/einstein-and-bern/',
       },
       {
         rooli: 'kauko',
-        tiedosto: 'hetki-einstein-patenttitoimisto-1905-kauko-photo-v3.jpg',
-        kuvateksti: 'Kotona odottavat Mileva-vaimo, pieni Hans Albert ja niukka '
-          + 'palkka; toimistossa odottaa pino patentteja. Tämän arkisen paineen '
-          + 'keskellä 26-vuotias Einstein kirjoittaa neljä tutkimusta, mutta '
-          + 'läheinen ystävä Michele Besso on niitä harvoja, joiden kanssa hän '
-          + 'voi ajatella ääneen.',
-        lahde: 'Matkakirjan havainnekuva. Faktat ja työhuonereferenssi: Albert '
-          + 'Einstein Archives / einstein-website.de, *Patent Office*; '
-          + 'tarkistettu 3.9.2026.',
-        url: 'https://einstein-website.de/en/patent-office/',
+        tiedosto: 'hetki-einstein-patenttitoimisto-1905-kauko-photo-v4.jpg',
+        kuvateksti: 'Viraston hakemukset on käsiteltävä ennen kuin oma fysiikka '
+          + 'saa tilaa, ja kotona odottavat Mileva sekä vuoden ikäinen Hans '
+          + 'Albert. Einstein ei näytä toimiston nerolta vaan yhdeltä '
+          + 'kiireiseltä virkailijalta — juuri siksi pöydän alle jäävä pieni '
+          + 'muistiinpanoliuska tuntuu niin epätodennäköiseltä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Einstein Haus Bern — Einstein '
+          + 'and Bern, tarkistettu 5.9.2026.',
+        url: 'https://www.einstein-bern.ch/einstein-and-bern/',
       },
     ],
     kartalla: true,
@@ -1987,6 +2011,2519 @@ export const HISTORIAN_HETKET = [
       oikea: 1,
       fakta: 'Pachacútecin 1400-luvulla rakennuttama kaupunki hylättiin '
         + 'valloituksen aikoihin ja jäi köynnösten alle.',
+    },
+  },
+  /*
+   * 21. PARIISI 1898 — RADIUM EROTETAAN PIHAVAJASSA.
+   * Piste on Pariisin laatan päällä (0,5 laudan yksikköä) ja Pariisin
+   * kohdekartan rajauksessa (ESPCI:n piha, rue Lhomond). Omistaja
+   * 3.9.2026: laatan päälle osuva hetki ei ole pääkartalla — sivu on
+   * Pariisin kaupunkilehdessä ja piste sen kohdekartalla
+   * (js/packs/maakartat.js "Curie 1898"). Kuvat photo-v4 (H3 51–81).
+   * Lähde: en.wikipedia.org: Marie Curie, ESPCI Paris
+   */
+  {
+    id: 'marie-curie-hangaari-1898',
+    otsikko: 'Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia',
+    nimio: 'Curie 1898',
+    paivays: '1898',
+    paikka: 'Pariisi, Ranska',
+    iso: 'FRA',
+    lat: 48.8420, lon: 2.3476,
+    kuvaversio: 4,
+    teksti: 'Olkapäät ovat puutuneet jo aamupäivällä, mutta tankoa ei voi '
+      + 'laskea. Marie Curie sekoittaa kiehuvaa pikivälkeliuosta '
+      + 'rautakattilassa, ja vaja, joka oli ennen lääketieteellisen koulun '
+      + 'ruumiinavaussali, vuotaa sateella katosta. Pierre mittaa vieressä '
+      + 'säteilyä; luku on se, joka kertoo työn kannattavan. Curiet olivat '
+      + 'ilmoittaneet poloniumin heinäkuussa 1898 ja radiumin 26. joulukuuta '
+      + 'samana vuonna, mutta ilmoitus ei riitä kemisteille — uusi alkuaine '
+      + 'on saatava käteen puhtaana. Se tarkoittaa tonneittain kaivosten '
+      + 'pikivälkejätettä, joka keitetään, suodatetaan ja '
+      + 'kiteytetään yhä uudelleen. Työ vie vuoteen 1902, jolloin tonnista '
+      + 'malmia on eristetty kymmenesosagramma radiumkloridia. Aviopari ei '
+      + 'tiedä, mitä näkymätön säteily tekee käsille ja verelle; Marie '
+      + 'kantaa koeputkia taskussaan ja ihailee niiden hohdetta pimeässä. '
+      + 'Vuonna 1903 hän jakaa fysiikan Nobelin Pierren ja Henri Becquerelin '
+      + 'kanssa, ensimmäisenä naisena, ja vuonna 1911 saa kemian palkinnon '
+      + 'yksin.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-marie-curie-hangaari-1898-lahi-photo-v4.jpg',
+        kuvateksti: 'Jokainen tankoa kiertävä liike nostaa padasta happamia '
+          + 'höyryjä, mutta Marie Curie jatkaa, koska mittari kertoo '
+          + 'jäännöksessä olevan jotakin uraania voimakkaampaa. Tuhansien '
+          + 'kilojen käsittely kuluttaa ruumista ennen kuin radiumia saadaan '
+          + 'näkyviin edes suolanjyvän verran.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Musée Curie — '
+          + 'näyttelyaineisto, tarkistettu 5.9.2026.',
+        url: 'https://musee.curie.fr/.uploads/2022-10/5257_curie-expo-10-ans_ok_ok-rvb-ce9c3f83.pdf',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-marie-curie-hangaari-1898-kauko-photo-v4.jpg',
+        kuvateksti: 'Marie ja Pierre Curien laboratorio ei ole loistokas '
+          + 'tiedepalatsi vaan kylmä pihavaja, jossa säkit, padat ja '
+          + 'mittaukset täyttävät päivän. Kumpikaan ei vielä tiedä, kuinka '
+          + 'kalliin hinnan jatkuva säteilyaltistus heidän terveydeltään '
+          + 'perii.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Musée Curie — '
+          + 'näyttelyaineisto, tarkistettu 5.9.2026.',
+        url: 'https://musee.curie.fr/.uploads/2022-10/5257_curie-expo-10-ans_ok_ok-rvb-ce9c3f83.pdf',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Pariisin laatan päällä (0,5 yksikköä) ja '
+      + 'Pariisin kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'pariisi' },
+    lehtiJohdanto: 'Rue Lhomondin pihalla seisoi vuosisadan vaihteessa vuotava '
+      + 'vaja, jossa aviopari keitti tonneittain kaivosjätettä saadakseen '
+      + 'siitä esiin suolanjyvän verran uutta alkuainetta.',
+    lehtiTehtava: {
+      kysymys: 'Paljonko radiumkloridia Curiet saivat eristettyä tonnista '
+        + 'pikivälkettä vuoteen 1902 mennessä?',
+      vaihtoehdot: [
+        'Kymmenesosagramman',
+        'Kilon',
+        'Sata grammaa',
+        'Kymmenen grammaa',
+      ],
+      oikea: 0,
+      fakta: 'Puhtaan radiummetallin Marie Curie eristi vasta 1910; '
+        + 'poloniumia hän ei saanut koskaan puhtaana talteen.',
+    },
+  },
+  /*
+   * 22. WOOLSTHORPE 1666 — PRISMA JA RUTTOVUOSI.
+   * Lähin kohdekaupunki Lontoo 61 laudan yksikön päässä — oma merkki
+   * kartalle. Woolsthorpella ei ole kaupunkilehteä, joten sivu on
+   * Britannian maalehdessä.
+   * Lähde: en.wikipedia.org: Isaac Newton, Woolsthorpe Manor
+   */
+  {
+    id: 'newton-prisma-1666',
+    otsikko: 'Woolsthorpe 1666 — valo, joka kantaa värit mukanaan',
+    nimio: 'Newton 1666',
+    paivays: '1666',
+    paikka: 'Woolsthorpe Manor, Lincolnshire, Englanti',
+    iso: 'GBR',
+    lat: 52.8092, lon: -0.6306,
+    kuvaversio: 4,
+    teksti: 'Mistä värit tulevat — lasista vai valosta? Kysymys on tuttu '
+      + 'jokaiselle, joka on nähnyt auringon prisman läpi, ja vastaus on '
+      + 'ollut vuosisatoja sama: lasi värjää valon. Kaksikymmentäkolmevuotias '
+      + 'Isaac Newton ei usko sitä. Hän istuu äitinsä talossa Woolsthorpessa, '
+      + 'koska rutto sulki Cambridgen yliopiston kesällä 1665, ja hänellä on '
+      + 'aikaa, hiljaisuutta ja kaksi prismaa. Ensimmäinen taittaa '
+      + 'ikkunaluukun reiästä tulevan säteen seinälle värinauhaksi, joka on '
+      + 'pitkulainen eikä pyöreä, vaikka reikä on pyöreä. Toinen prisma '
+      + 'näyttää ratkaisevan: punainen jää punaiseksi, sininen siniseksi. '
+      + 'Värit eivät siis synny lasissa, vaan valkoinen valo on niiden seos, '
+      + 'jonka prisma vain hajottaa. Samojen ruttovuosien aikana hän kehittää '
+      + 'differentiaalilaskennan alkeet ja miettii, miksi omena putoaa ja kuu '
+      + 'ei. Näitä kahta vuotta on kutsuttu tieteen historian '
+      + 'tuottoisimmiksi. Kirjaksi asti työ ehtii vasta 1704, teoksessa '
+      + 'Opticks — Newton ei pitänyt kiirettä eikä riitelystä.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-newton-prisma-1666-lahi-photo-v4.jpg',
+        kuvateksti: 'Newton peittää ikkunan lähes kokonaan ja päästää sisään '
+          + 'vain yhden valonsäteen, jotta pieni prisma saa vastata. Seinälle '
+          + 'venyvä värijono osoittaa, etteivät värit synny lasissa: valkoinen '
+          + 'valo kantaa ne jo mukanaan.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: National Trust — Woolsthorpe '
+          + 'Manor, tarkistettu 5.9.2026.',
+        url: 'https://www.nationaltrust.org.uk/visit/nottinghamshire-lincolnshire/woolsthorpe-manor/things-to-do-at-woolsthorpe-manor',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-newton-prisma-1666-kauko-photo-v4.jpg',
+        kuvateksti: 'Rutto on sulkenut Cambridgen, ja 23-vuotias Newton on '
+          + 'palannut lapsuudenkotiinsa vailla professoreita tai '
+          + 'laboratoriota. Pimennetty huone, ikkunaluukun reikä ja prisma '
+          + 'riittävät kokeeseen, joka pakottaa ajattelemaan valon uudelleen.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: National Trust — Woolsthorpe '
+          + 'Manor, tarkistettu 5.9.2026.',
+        url: 'https://www.nationaltrust.org.uk/visit/nottinghamshire-lincolnshire/woolsthorpe-manor/things-to-do-at-woolsthorpe-manor',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'maa', avain: 'GBR' },
+    visa: {
+      kysymys: 'Miksi Newton teki prismakokeensa kotitilallaan Woolsthorpessa eikä Cambridgessa?',
+      vaihtoehdot: [
+        'Cambridgen yliopisto oli erottanut hänet',
+        'Rutto oli sulkenut yliopiston',
+        'Woolsthorpessa oli Englannin ainoa prisma',
+      ],
+      oikea: 1,
+    },
+    lehtiJohdanto: 'Lincolnshiren maalaistalossa nuori mies pimensi huoneen ja '
+      + 'päästi luukun reiästä sisään yhden säteen — ja päätteli, että '
+      + 'valkoinen valo on värien seos eikä lasi värjää mitään.',
+    lehtiTehtava: {
+      kysymys: 'Mitä Newtonin toinen prisma osoitti?',
+      vaihtoehdot: [
+        'Että lasi lisää valoon uusia värejä',
+        'Että värit ovat silmän harhaa',
+        'Että kerran erotettu väri ei enää hajoa uusiksi väreiksi',
+        'Että auringonvalo on vihreää',
+      ],
+      oikea: 2,
+      fakta: 'Newton julkaisi valo-opin tuloksensa kirjana vasta 1704 '
+        + 'teoksessa Opticks — lähes neljäkymmentä vuotta kokeiden jälkeen.',
+    },
+  },
+  /*
+   * 23. PHILADELPHIA, KESÄKUU 1752 — LEIJA UKKOSPILVEN ALLA.
+   * Lähin kohdekaupunki New York 49 laudan yksikön päässä — oma merkki
+   * kartalle. Philadelphialla ei ole kaupunkilehteä, joten sivu on
+   * Yhdysvaltain maalehdessä. Paketissa on vain lähikuva (kuvaputki
+   * toimitti yhden kuvan), ja testi sallii sen tälle hetkelle.
+   * Lähde: en.wikipedia.org: Kite experiment, Benjamin Franklin
+   */
+  {
+    id: 'franklin-leija-1752',
+    otsikko: 'Philadelphia 1752 — kipinä avaimesta rystyseen',
+    nimio: 'Franklin 1752',
+    paivays: 'kesäkuu 1752',
+    paikka: 'Philadelphia, Pennsylvania',
+    iso: 'USA',
+    lat: 39.9528, lon: -75.1636,
+    kuvaversio: 4,
+    teksti: 'Pilvi tulee Philadelphian yli kesäkuussa 1752, ja kaksi miestä '
+      + 'odottaa sitä pellolla vajan suojassa. Benjamin Franklin on 46, ja '
+      + 'hänen poikansa William hieman yli kaksikymmentä. Silkkileija nousee, '
+      + 'sen kärjessä on teräväkärkinen lanka, ja hamppunaru kastuu sateessa. '
+      + 'Naru johtaa varauksen alas; kuivan silkkinauhan ja avaimen kohdalla '
+      + 'se pysähtyy. Franklin ei kerro leijakokeesta itse kuin lyhyesti '
+      + 'Pennsylvania Gazette -lehdessä 19. lokakuuta 1752, ilman päivää tai '
+      + 'paikkaa, ja tarkin kuvaus on Joseph Priestleyn vuonna 1767 '
+      + 'kirjoittama. Sen mukaan naru alkoi pörhistää säikeitään, ja '
+      + 'rystysestä avaimeen hyppäsi kipinä — ei salama, joka olisi '
+      + 'tappanut. Ranskassa Thomas-François Dalibard oli jo toukokuussa '
+      + 'kerännyt ukkosen sähköä Franklinin ohjeiden mukaan rautatangolla; '
+      + 'Pietarissa Georg Wilhelm Richmann kuoli seuraavana vuonna '
+      + 'yrittäessään samaa. Kokeesta kasvoi ukkosenjohdatin ja siitä '
+      + 'Franklinin maine Euroopassa — sama maine, jolla hän myöhemmin '
+      + 'neuvotteli Ranskan Amerikan siirtokuntien liittolaiseksi.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-franklin-leija-1752-lahi-photo-v4.jpg',
+        kuvateksti: 'Franklin ei odota salaman osuvan leijaan; hän odottaa '
+          + 'märkää narua pitkin kulkevan varauksen kokoontuvan avaimeen. '
+          + 'William näkee pienen kipinän isän rystysellä — juuri tarpeeksi '
+          + 'osoittamaan, että ukkospilven sähkö on samaa lajia kuin '
+          + 'laboratoriossa.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Smithsonian National Postal '
+          + 'Museum — Benjamin Franklin\'s kite experiment, tarkistettu '
+          + '5.9.2026.',
+        url: 'https://postalmuseum.si.edu/benjamin-franklin-his-famous-kite-celebrate-anniversary',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'maa', avain: 'USA' },
+    visa: {
+      kysymys: 'Osuiko salama Franklinin leijaan?',
+      vaihtoehdot: [
+        'Osui, ja leija paloi',
+        'Osui, mutta silkki eristi iskun',
+        'Ei — leijaan kertyi pilven varausta, ja avaimesta lähti kipinä',
+      ],
+      oikea: 2,
+    },
+    lehtiJohdanto: 'Philadelphian pellolla nousi kesäkuussa 1752 silkkileija '
+      + 'ukkospilven alle, ja narun päässä roikkuva avain kertoi, että '
+      + 'salama on samaa sähköä kuin laboratorion kipinä.',
+    lehtiTehtava: {
+      kysymys: 'Kuka kirjoitti tarkimman kuvauksen Franklinin leijakokeesta?',
+      vaihtoehdot: [
+        'Franklin itse Pennsylvania Gazetteen',
+        'William Franklin muistelmissaan',
+        'Thomas-François Dalibard Pariisissa',
+        'Joseph Priestley vuonna 1767',
+      ],
+      oikea: 3,
+      fakta: 'Franklinin oma lehtikirjoitus lokakuulta 1752 ei kerro päivää '
+        + 'eikä paikkaa; Priestley sai tiedot Franklinilta Lontoossa.',
+    },
+  },
+  /*
+   * 24. PARIISI, ARSENAALI 1780 — VAAKA JA MUISTIKIRJA.
+   * Piste on Pariisin laatan päällä (1 laudan yksikkö) ja kohdekartan
+   * rajauksessa (Arsenaali). Vain Pariisin kaupunkilehdessä ja sen
+   * kohdekartalla (js/packs/maakartat.js "Lavoisier 1780").
+   * Lähde: en.wikipedia.org: Antoine Lavoisier, Marie-Anne Paulze
+   * Lavoisier
+   */
+  {
+    id: 'lavoisier-laboratorio-1780',
+    otsikko: 'Arsenaali 1780 — mitään ei katoa, kaikki punnitaan',
+    nimio: 'Lavoisier 1780',
+    paivays: 'noin 1780',
+    paikka: 'Arsenaali, Pariisi',
+    iso: 'FRA',
+    lat: 48.8503, lon: 2.3635,
+    kuvaversio: 4,
+    teksti: 'Vaaka on huoneen kallein esine, ja se on tarkempi kuin mikään, '
+      + 'mitä Pariisin kello- tai kultasepät myyvät. Antoine Lavoisier on '
+      + 'tilannut sen varta vasten, sillä koko hänen kemiansa lepää yhden '
+      + 'vaatimuksen varassa: kaikki punnitaan ennen koetta ja sen jälkeen. '
+      + 'Arsenaalin laboratoriossa, jossa hän on asunut ruutikomission '
+      + 'jäsenenä vuodesta 1775, hän polttaa metalleja suljetuissa astioissa '
+      + 'ja osoittaa, ettei mikään katoa eikä synny tyhjästä — palaminen on '
+      + 'yhtymistä ilman osaan, jonka hän nimeää hapeksi. Vastapäätä istuu '
+      + 'Marie-Anne Paulze Lavoisier, joka naitettiin hänelle '
+      + 'kolmetoistavuotiaana vuonna 1771. Hän on oppinut englannin '
+      + 'kääntääkseen Priestleyn ja Kirwanin kirjoitukset, ja Jacques-Louis '
+      + 'Davidin oppilaana hän piirtää laitteet niin tarkasti, että muutkin '
+      + 'voivat toistaa kokeet. Vuonna 1789 ilmestyy Traité élémentaire de '
+      + 'chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista '
+      + 'Marie-Annen piirroksella. Viisi vuotta myöhemmin, 8. toukokuuta '
+      + '1794, vallankumous mestaa veronkantajana rikastuneen Lavoisierin.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-lavoisier-laboratorio-1780-lahi-photo-v4.jpg',
+        kuvateksti: 'Kun vaa\'an neula pysähtyy, Marie-Anne merkitsee luvun '
+          + 'ennen seuraavaa vaihetta. Lavoisierien läpimurto ei synny '
+          + 'näyttävästä reaktiosta vaan uskosta siihen, että aineet voidaan '
+          + 'punnita ennen ja jälkeen — eikä kadonnut massa ole selitys.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Science History Institute — '
+          + 'Lavoisier\'s instruments, tarkistettu 5.9.2026.',
+        url: 'https://www.sciencehistory.org/stories/magazine/revolutionary-instruments-lavoisiers-tools-as-objets-dart/',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-lavoisier-laboratorio-1780-kauko-photo-v4.jpg',
+        kuvateksti: 'Marie-Anne ei ole vain tarkkailija: hän pitää '
+          + 'koepäiväkirjoja, kuvaa laitteet mittakaavaan ja tekee työn '
+          + 'ymmärrettäväksi muille. Antoine mittaa kaasuja, mutta heidän '
+          + 'yhteinen laboratoriokielensä auttaa muuttamaan kemian '
+          + 'alkemistisista arvoituksista tarkaksi tieteeksi.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Science History Institute — '
+          + 'Lavoisier\'s instruments, tarkistettu 5.9.2026.',
+        url: 'https://www.sciencehistory.org/stories/magazine/revolutionary-instruments-lavoisiers-tools-as-objets-dart/',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Pariisin laatan päällä (1 yksikkö) ja '
+      + 'Pariisin kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'pariisi' },
+    lehtiJohdanto: 'Arsenaalin laboratoriossa aviopari punnitsi kaiken ennen '
+      + 'koetta ja sen jälkeen — ja kemia lakkasi olemasta alkemiaa, '
+      + 'vaikka vallankumous ei antanut sitä heille anteeksi.',
+    lehtiTehtava: {
+      kysymys: 'Mikä oli Marie-Anne Paulze Lavoisierin osuus kemian '
+        + 'vallankumouksessa?',
+      vaihtoehdot: [
+        'Hän rahoitti laboratorion perintörahoillaan',
+        'Hän keksi happi-sanan',
+        'Hän käänsi englantilaiset tutkimukset ja piirsi laitteet',
+        'Hän johti ruutikomissiota',
+      ],
+      oikea: 2,
+      fakta: 'Traité élémentaire de chimie (1789) sisältää kolmetoista '
+        + 'Marie-Annen piirrosta; Antoine mestattiin 8. toukokuuta 1794.',
+    },
+  },
+  /*
+   * 25. BERKELEY, GLOUCESTERSHIRE 14.5.1796 — NAARMU POJAN KÄSIVARTEEN.
+   * Lähin kohdekaupunki Lontoo 79 laudan yksikön päässä — oma merkki
+   * kartalle, sivu Britannian maalehdessä.
+   * Lähde: en.wikipedia.org: Edward Jenner
+   */
+  {
+    id: 'jenner-rokotus-1796',
+    otsikko: 'Berkeley 1796 — lypsäjän rakkula ja puutarhurin poika',
+    nimio: 'Jenner 1796',
+    paivays: '14.5.1796',
+    paikka: 'Berkeley, Gloucestershire, Englanti',
+    iso: 'GBR',
+    lat: 51.6910, lon: -2.4590,
+    kuvaversio: 4,
+    teksti: 'Kahdeksanvuotiaan pojan silmät kiertävät huonetta, kun lansetti '
+      + 'lähestyy. James Phipps on Edward Jennerin puutarhurin poika, ja '
+      + 'hänelle ei ole selitetty enempää kuin että lääkäri tekee pienen '
+      + 'naarmun. Berkeleyn kylässä Gloucestershiressä on 14. toukokuuta '
+      + '1796. Naarmuun Jenner hieroo nestettä, jonka hän on ottanut lypsäjä '
+      + 'Sarah Nelmesin käden rakkuloista; Sarah sai lehmärokon '
+      + 'Blossom-nimisestä lehmästä. Maalaislääkäri on kuullut vuosia '
+      + 'lypsäjien uskomuksen: lehmärokon sairastanut ei saa isorokkoa, '
+      + 'tautia, joka tappaa suuren osan sairastuneista ja arpeuttaa loput. '
+      + 'Poika saa kuumetta ja on muutaman päivän levoton, sitten hän '
+      + 'tervehtyy. Heinäkuun ensimmäisenä päivänä Jenner tekee vaarallisen '
+      + 'osan: hän istuttaa Jamesiin oikeaa isorokkoa. Tautia ei tule. '
+      + 'Jenner nimeää menetelmän lehmän mukaan — vacca, rokotus — ja '
+      + 'julkaisee sen 1798. Lähes kaksi vuosisataa myöhemmin, vuonna 1980, '
+      + 'Maailman terveysjärjestö julistaa isorokon hävitetyksi; se on ainoa '
+      + 'ihmisen tauti, jolle on käynyt niin.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-jenner-rokotus-1796-lahi-photo-v4.jpg',
+        kuvateksti: 'Kahdeksanvuotias James Phipps yrittää pitää käsivartensa '
+          + 'liikkumatta, kun Jenner tekee siihen pienen naarmun. Poika ei '
+          + 'voi antaa nykyisen kaltaista tietoon perustuvaa suostumusta; '
+          + 'heinäkuussa häntä odottaa vielä tarkoituksellinen '
+          + 'isorokkoaltistus, jolla lääkäri koettelee vaarallista '
+          + 'ajatustaan.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Dr Jenner\'s House — Phipps '
+          + 'Cottage, tarkistettu 5.9.2026.',
+        url: 'https://jennermuseum.com/phipps-cottage',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-jenner-rokotus-1796-kauko-photo-v4.jpg',
+        kuvateksti: 'Puutarhuri Christopher Phipps seisoo poikansa takana, ja '
+          + 'Sarah Nelmesin kädestä saatu lehmänrokkoaine odottaa pöydällä. '
+          + 'Toukokuun 1796 hiljainen huone on samalla lääketieteellinen '
+          + 'läpimurto ja muistutus siitä, kuinka usein historian edistys on '
+          + 'nojannut niihin, joilla oli vähiten valtaa kieltäytyä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Dr Jenner\'s House — Phipps '
+          + 'Cottage, tarkistettu 5.9.2026.',
+        url: 'https://jennermuseum.com/phipps-cottage',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'maa', avain: 'GBR' },
+    visa: {
+      kysymys: 'Mistä Jenner otti aineen, jonka hän hieroi James Phippsin naarmuun?',
+      vaihtoehdot: [
+        'Lypsäjä Sarah Nelmesin lehmärokkorakkuloista',
+        'Isorokkopotilaan rupista',
+        'Blossom-lehmän maidosta',
+      ],
+      oikea: 0,
+    },
+    lehtiJohdanto: 'Gloucestershiren maalaislääkäri otti toukokuussa 1796 '
+      + 'lypsäjän kädestä lehmärokkoa ja hieroi sen puutarhurinsa '
+      + 'kahdeksanvuotiaan pojan käsivarteen — ja rokotus sai nimensä '
+      + 'lehmästä.',
+    lehtiTehtava: {
+      kysymys: 'Mitä Jenner teki James Phippsille 1. heinäkuuta 1796?',
+      vaihtoehdot: [
+        'Antoi toisen lehmärokkoannoksen',
+        'Lähetti hänet Lontooseen tutkittavaksi',
+        'Rokotti hänen sisaruksensa',
+        'Altisti hänet tahallaan oikealle isorokolle',
+      ],
+      oikea: 3,
+      fakta: 'Tautia ei tullut. Isorokko julistettiin hävitetyksi 1980 — '
+        + 'ainoana ihmisen tautina.',
+    },
+  },
+  /*
+   * 26. LONTOO, ROYAL INSTITUTION 29.8.1831 — NEULA VÄRÄHTÄÄ.
+   * Piste on Lontoon laatan päällä (0,9 laudan yksikköä) ja kohdekartan
+   * rajauksessa (Albemarle Street). Vain Lontoon kaupunkilehdessä ja sen
+   * kohdekartalla (js/packs/maakartat.js "Faraday 1831").
+   * Lähde: en.wikipedia.org: Michael Faraday, Electromagnetic induction
+   */
+  {
+    id: 'faraday-luento-1831',
+    otsikko: 'Royal Institution 1831 — muutos synnyttää sähköä',
+    nimio: 'Faraday 1831',
+    paivays: '29.8.1831',
+    paikka: 'Royal Institution, Lontoo',
+    iso: 'GBR',
+    lat: 51.5098, lon: -0.1425,
+    kuvaversio: 4,
+    teksti: 'Mitään ei kuulu, ja juuri se hämää. Michael Faraday on kytkenyt '
+      + 'pariston toiseen käämiin ja odottaa, että toisessa käämissä, '
+      + 'rautarenkaan vastakkaisella puolella, syntyisi pysyvä virta. Ei '
+      + 'synny. Galvanometrin neula värähtää vain sillä hetkellä, kun virta '
+      + 'kytketään, ja uudelleen kun se katkaistaan; siinä välissä se lepää '
+      + 'nollassa. Royal Institutionin kellarilaboratoriossa on 29. elokuuta '
+      + '1831, ja 39-vuotias entinen kirjansitojan oppipoika on juuri '
+      + 'nähnyt, että muutos — ei magneetti sinänsä — synnyttää sähköä. '
+      + 'Kymmenen vuotta aiemmin hän oli pannut virtajohtimen kiertämään '
+      + 'magneettia, ensimmäisen sähkömoottorin, ja sen jälkeen häntä oli '
+      + 'syytetty tulosten varastamisesta ja työnnetty kemian töihin. Nyt '
+      + 'hän toistaa kokeen viikkoja: magneettitanko työnnetään kelaan, '
+      + 'neula heilahtaa; vedetään ulos, neula heilahtaa toiseen suuntaan. '
+      + 'Lokakuussa hän pyörittää kuparikiekkoa magneetin napojen välissä ja '
+      + 'saa tasaista virtaa, ensimmäisen generaattorin. Faraday ei osaa '
+      + 'matematiikkaa juuri lainkaan; hänen kenttäviivansa muuttaa James '
+      + 'Clerk Maxwell yhtälöiksi vasta 1860-luvulla.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-faraday-luento-1831-lahi-photo-v4.jpg',
+        kuvateksti: 'Galvanometrin neula nytkähtää vain silloin, kun Faraday '
+          + 'kytkee tai katkaisee virran ensimmäisestä käämistä. Hän on '
+          + 'etsinyt vuosia tapaa tehdä magnetismista sähköä; ratkaisu '
+          + 'ilmoittaa itsestään silmänräpäyksenä, jonka voisi helposti '
+          + 'jättää huomaamatta.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Royal Institution — '
+          + 'Faraday\'s ring-coil apparatus, tarkistettu 5.9.2026.',
+        url: 'https://www.rigb.org/explore-science/explore/collection/michael-faradays-ring-coil-apparatus',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-faraday-luento-1831-kauko-photo-v4.jpg',
+        kuvateksti: 'Avustajan on ehdittävä merkitä neulan lyhyt liike, ennen '
+          + 'kuin se palaa nollaan. Faradayn rautarengas on vain 17 '
+          + 'senttimetriä leveä, mutta sen kahden käämin välinen hetkellinen '
+          + 'virta avaa periaatteen, jolla muuntajat ja sähköverkot myöhemmin '
+          + 'toimivat.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Royal Institution — '
+          + 'Faraday\'s ring-coil apparatus, tarkistettu 5.9.2026.',
+        url: 'https://www.rigb.org/explore-science/explore/collection/michael-faradays-ring-coil-apparatus',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Lontoon laatan päällä (0,9 yksikköä) ja '
+      + 'Lontoon kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Lontoon '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'lontoo' },
+    lehtiJohdanto: 'Albemarle Streetin kellarissa entinen kirjansitojan '
+      + 'oppipoika näki elokuussa 1831 neulan värähtävän vain hetken — ja '
+      + 'siitä hetkestä kasvoivat generaattori, muuntaja ja sähköverkko.',
+    lehtiTehtava: {
+      kysymys: 'Milloin galvanometrin neula liikkui Faradayn rengaskokeessa?',
+      vaihtoehdot: [
+        'Koko ajan, kun virta kulki ensimmäisessä käämissä',
+        'Vain kun virta kytkettiin tai katkaistiin',
+        'Vasta kun rengas kuumeni',
+        'Ei koskaan — koe epäonnistui',
+      ],
+      oikea: 1,
+      fakta: 'Lokakuussa 1831 Faraday pyöritti kuparikiekkoa magneetin '
+        + 'välissä ja sai tasaista virtaa: ensimmäisen generaattorin.',
+    },
+  },
+  /*
+   * 27. PARIISI, ÉCOLE NORMALE SUPÉRIEURE 1862 — JOUTSENKAULAPULLOT.
+   * Piste on Pariisin laatan päällä (0,4 laudan yksikköä) ja kohdekartan
+   * rajauksessa (rue d'Ulm). Vain Pariisin kaupunkilehdessä ja sen
+   * kohdekartalla (js/packs/maakartat.js "Pasteur 1862").
+   * Lähde: en.wikipedia.org: Louis Pasteur
+   */
+  {
+    id: 'pasteur-pullot-1862',
+    otsikko: 'Rue d\'Ulm 1862 — liemi, joka pysyy kirkkaana',
+    nimio: 'Pasteur 1862',
+    paivays: '1862',
+    paikka: 'École normale supérieure, Pariisi',
+    iso: 'FRA',
+    lat: 48.8419, lon: 2.3444,
+    kuvaversio: 4,
+    teksti: 'Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. '
+      + 'Louis Pasteur nostaa sen valoa vasten École normale supérieuren '
+      + 'laboratoriossa rue d\'Ulmilla: keitetty lihaliemi, jonka '
+      + 'joutsenkaulan muotoinen lasikaula päästää ilman sisään mutta '
+      + 'pysäyttää pölyn mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, '
+      + 'on sameana ja haisee. Kysymys, jota Pasteur ratkoo, on vanha ja '
+      + 'kiihkeä: syntyykö elämä itsestään mätänevästä aineesta? Rouenin '
+      + 'museonjohtaja Félix Pouchet vakuuttaa, että ilma itsessään riittää '
+      + 'synnyttämään sen. Tiedeakatemia on luvannut 2 500 frangin '
+      + 'Alhumbert-palkinnon sille, joka ratkaisee kiistan kokeellisesti. '
+      + 'Pasteur vie pullojaan vuorille ja avaa niitä ohuessa ilmassa, jossa '
+      + 'pölyä on vähemmän: useimmat pysyvät kirkkaina. Palkinto myönnetään '
+      + 'hänelle 1862. Samaan aikaan hän on osoittanut, että käyminen on '
+      + 'elävien mikrobien työtä, ja vuonna 1865 hän patentoi viinin '
+      + 'kuumennuksen, jota nyt kutsutaan pastöroinniksi. Ajatus, että '
+      + 'näkymätön elämä tulee ulkoa eikä synny itsestään, muuttaa '
+      + 'myöhemmin kirurgian ja rokotukset.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-pasteur-pullot-1862-lahi-photo-v4.jpg',
+        kuvateksti: 'Ehjässä joutsenkaulapullossa liemi pysyy kirkkaana, '
+          + 'vaikka ilma pääsee sisään; katkaistussa se samenee. Pasteur ei '
+          + 'näe mikrobeja paljain silmin, mutta pölyviiva lasin mutkassa '
+          + 'kertoo, mistä elämä liemeen tulee.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Institut Pasteur — The '
+          + 'middle years 1862–1877, tarkistettu 5.9.2026.',
+        url: 'https://www.pasteur.fr/en/about-us/middle-years-1862-1877',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-pasteur-pullot-1862-kauko-photo-v4.jpg',
+        kuvateksti: 'Nuori avustaja on kirjoittanut samoihin pulloihin '
+          + 'päivämääriä viikkojen ajan ja odottanut muutosta, jota ei tule. '
+          + 'Juuri odottaminen tekee kokeesta vakuuttavan: keitetty liemi ei '
+          + 'synnytä elämää itsestään, ellei ilman pöly pääse siihen.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Institut Pasteur — The '
+          + 'middle years 1862–1877, tarkistettu 5.9.2026.',
+        url: 'https://www.pasteur.fr/en/about-us/middle-years-1862-1877',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Pariisin laatan päällä (0,4 yksikköä) ja '
+      + 'Pariisin kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'pariisi' },
+    lehtiJohdanto: 'Rue d\'Ulmin laboratoriossa rivi keitettyjä liemipulloja '
+      + 'odotti viikkoja samenemista, joka ei tullut — ja vanha usko '
+      + 'itsestään syntyvään elämään menetti palkintokilpailun.',
+    lehtiTehtava: {
+      kysymys: 'Miksi joutsenkaulapullon liemi pysyi kirkkaana, vaikka ilma '
+        + 'pääsi sisään?',
+      vaihtoehdot: [
+        'Lasin mutka pysäytti ilman mukana kulkevan pölyn ja mikrobit',
+        'Liemi oli suolattu',
+        'Pullo oli tiiviisti suljettu',
+        'Ilma ei ollut vielä keksitty koeaineeksi',
+      ],
+      oikea: 0,
+      fakta: 'Tiedeakatemian 2 500 frangin Alhumbert-palkinto myönnettiin '
+        + 'Pasteurille 1862; viinin kuumennuksen hän patentoi 1865.',
+    },
+  },
+  /*
+   * 28. PIETARI, YLIOPISTO 6.3.1869 — AUKOT TAULUKOSSA.
+   * Piste on Pietarin laatan päällä (0,2 laudan yksikköä) ja kohdekartan
+   * rajauksessa (Vasilinsaari). Vain Pietarin kaupunkilehdessä ja sen
+   * kohdekartalla (js/packs/maakartat.js "Mendelejev 1869").
+   * Lähde: en.wikipedia.org: Dmitri Mendeleev, Periodic table
+   */
+  {
+    id: 'mendelejev-kortit-1869',
+    otsikko: 'Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa',
+    nimio: 'Mendelejev 1869',
+    paivays: '6.3.1869',
+    paikka: 'Pietarin yliopisto, Venäjä',
+    iso: 'RUS',
+    lat: 59.9420, lon: 30.2990,
+    kuvaversio: 4,
+    teksti: 'Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama '
+      + 'ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. '
+      + 'Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian '
+      + 'oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi '
+      + 'esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja '
+      + 'huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin '
+      + 'hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen '
+      + 'herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa '
+      + 'rivejä on siirretty ja yliviivattu. Taulukko painetaan ja '
+      + 'lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura '
+      + 'kuulee esitelmän alkuaineiden ominaisuuksien riippuvuudesta '
+      + 'atomipainosta. Rohkeinta ovat aukot: Mendelejev jättää tyhjiä '
+      + 'paikkoja ja ennustaa niihin alkuaineet, joita kukaan ei ole nähnyt, '
+      + 'painoineen ja tiheyksineen. Gallium löytyy 1875, skandium 1879 ja '
+      + 'germanium 1886, ja ne sopivat aukkoihin. Saksalainen Lothar Meyer '
+      + 'julkaisee lähes saman taulukon muutamaa kuukautta myöhemmin — '
+      + 'mutta ilman ennusteita.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-mendelejev-kortit-1869-lahi-photo-v4.jpg',
+        kuvateksti: 'Mendelejev siirtää yhtä merkintää ja jättää viereen tyhjän '
+          + 'paikan — ei siksi, että työ olisi kesken, vaan koska '
+          + 'järjestyksen pitäisi ennustaa vielä tuntematon alkuaine. Rohkein '
+          + 'osa vuoden 1869 taulukossa ovatkin aukot, joihin hän uskaltaa '
+          + 'luottaa.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: American Chemical Society — '
+          + 'Assembling the periodic table, tarkistettu 5.9.2026.',
+        url: 'https://inchemistry.acs.org/atomic-news/assembling-the-periodic-table.html',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-mendelejev-kortit-1869-kauko-photo-v4.jpg',
+        kuvateksti: 'Tunnettu kertomus alkuainepasianssista on todennäköisesti '
+          + 'myöhempi legenda; arkistoon jäivät yliviivatut ryhmittelyt ja '
+          + 'jatkuvasti korjatut luonnokset. Kuvan nuori painoapulainen '
+          + 'odottaa viimeistä versiota, kun 35-vuotias Mendelejev päättää '
+          + 'lähettää 200 painosta kollegoilleen.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: American Chemical Society — '
+          + 'Assembling the periodic table, tarkistettu 5.9.2026.',
+        url: 'https://inchemistry.acs.org/atomic-news/assembling-the-periodic-table.html',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Pietarin laatan päällä (0,2 yksikköä) ja '
+      + 'Pietarin kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pietarin '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'pietari' },
+    lehtiJohdanto: 'Vasilinsaaren yliopistossa kemian professori järjesti '
+      + 'keväällä 1869 kuusikymmentäkolme alkuainetta painon mukaan ja '
+      + 'jätti taulukkoon aukkoja aineille, joita kukaan ei ollut nähnyt.',
+    lehtiTehtava: {
+      kysymys: 'Mikä teki Mendelejevin taulukosta rohkeamman kuin '
+        + 'kilpailijoiden?',
+      vaihtoehdot: [
+        'Se oli painettu värillisenä',
+        'Se sisälsi myös jalokaasut',
+        'Siinä oli tyhjiä paikkoja ja ennusteet niihin sopivista aineista',
+        'Se järjesti aineet aakkosjärjestykseen',
+      ],
+      oikea: 2,
+      fakta: 'Gallium (1875), skandium (1879) ja germanium (1886) löytyivät '
+        + 'ja sopivat Mendelejevin jättämiin aukkoihin.',
+    },
+  },
+  /*
+   * 29. MENLO PARK, NEW JERSEY 22.10.1879 — LANKA PALAA KOLMETOISTA TUNTIA.
+   * Lähin kohdekaupunki New York 14 laudan yksikön päässä (yli
+   * kaupunkikaton säteen) ja New Yorkin kohdekartan ulkopuolella — oma
+   * merkki kartalle ilman lippua. Sivu Yhdysvaltain maalehdessä.
+   * Lähde: en.wikipedia.org: Thomas Edison, Incandescent light bulb
+   */
+  {
+    id: 'edison-lamppu-1879',
+    otsikko: 'Menlo Park 1879 — kolmetoista ja puoli tuntia valoa',
+    nimio: 'Edison 1879',
+    paivays: '22.10.1879',
+    paikka: 'Menlo Park, New Jersey',
+    iso: 'USA',
+    lat: 40.5650, lon: -74.3375,
+    kuvaversio: 4,
+    teksti: 'Kello on jo pitkällä yössä, ja lasikuvun sisällä hehkuu '
+      + 'ompelulangan pätkä. Menlo Parkin laboratoriossa New Jerseyssä on '
+      + '22. lokakuuta 1879. Thomas Edison, 32, on kokeillut hehkulangaksi '
+      + 'platinaa, pahvia ja monenlaista kasvikuitua, ja ne kaikki palavat '
+      + 'hetkessä poikki. Nyt hiilletty puuvillalanka hehkuu hapettomassa '
+      + 'lasissa tunnin, toisen, ja Charles Batchelor kirjaa jokaisen tunnin '
+      + 'vihkoon. Lamppu sammuu vasta kolmentoista ja puolen tunnin jälkeen. '
+      + 'Hehkulamppu ei ole Edisonin keksintö — englantilainen Joseph Swan on '
+      + 'tehnyt omansa — mutta Edisonin lamppu on ensimmäinen, jossa lanka, '
+      + 'korkea tyhjiö ja suuri vastus toimivat yhdessä ja jonka ympärille '
+      + 'voi rakentaa koko sähköjärjestelmän. Patenttihakemus jätetään 4. '
+      + 'marraskuuta. Talven mittaan laboratorion ympärille vedetään johtoja '
+      + 'ja lamppuja, ja helmikuuhun 1880 mennessä katsojia saapuu junalla '
+      + 'katsomaan valojen kylää. Vasta seuraavana vuonna löytyy lanka, joka '
+      + 'kestää yli 1 200 tuntia: hiilletty japanilainen bambu. Patentissa '
+      + 'on Edisonin nimi, mutta yön valvoi kokonainen työryhmä.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-edison-lamppu-1879-lahi-photo-v4.jpg',
+        kuvateksti: 'Charles Batchelor merkitsee vihkoon uuden tunnin, ja '
+          + 'Edison uskaltaa viimein nojata lähemmäs haurasta lasia. Hiilletty '
+          + 'ompelulanka palaa lopulta 13,5 tuntia — tarpeeksi kauan, että '
+          + 'työryhmä voi uskoa löytäneensä muutakin kuin uuden lyhyen '
+          + 'välähdyksen.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: U.S. National Park Service — '
+          + 'Edison biography, tarkistettu 5.9.2026.',
+        url: 'https://home.nps.gov/edis/learn/historyculture/edison-biography.htm',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-edison-lamppu-1879-kauko-photo-v4.jpg',
+        kuvateksti: 'Menlo Parkin valo syntyy monen käsissä: Ludwig Boehm '
+          + 'puhaltaa lasin, John Kruesi tekee läpiviennit ja Batchelor '
+          + 'käsittelee hiuksenohutta hiililankaa. Edison johtaa koetta, mutta '
+          + 'yön valvoneelle työryhmälle onnistuminen on yhteinen, uupunut '
+          + 'helpotus.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: U.S. National Park Service — '
+          + 'Edison biography, tarkistettu 5.9.2026.',
+        url: 'https://home.nps.gov/edis/learn/historyculture/edison-biography.htm',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'maa', avain: 'USA' },
+    visa: {
+      kysymys: 'Mistä Edisonin 22. lokakuuta 1879 testaama hehkulanka oli tehty?',
+      vaihtoehdot: [
+        'Platinasta',
+        'Hiilletystä puuvillalangasta',
+        'Volframista',
+      ],
+      oikea: 1,
+    },
+    lehtiJohdanto: 'New Jerseyn maalaislaboratoriossa hiilletty ompelulanka '
+      + 'hehkui lokakuussa 1879 kolmetoista ja puoli tuntia — ja sen '
+      + 'ympärille rakennettiin kokonainen sähköjärjestelmä.',
+    lehtiTehtava: {
+      kysymys: 'Mikä hehkulanka kesti Edisonin kokeissa yli 1 200 tuntia?',
+      vaihtoehdot: [
+        'Hiilletty japanilainen bambu',
+        'Hiilletty puuvillalanka',
+        'Platinalanka',
+        'Hamppukuitu',
+      ],
+      oikea: 0,
+      fakta: 'Bambulanka löytyi vasta 1880; englantilainen Joseph Swan oli '
+        + 'tehnyt oman hehkulamppunsa jo ennen Edisonia.',
+    },
+  },
+  /*
+   * 30. LONTOO, ST MARY'S 3.9.1928 — HOMEPILKKU MALJASSA.
+   * Piste on Lontoon laatan päällä (2 laudan yksikköä) ja kohdekartan
+   * rajauksen länsireunassa (Praed Street, Paddington). Vain Lontoon
+   * kaupunkilehdessä ja sen kohdekartalla (js/packs/maakartat.js
+   * "Fleming 1928").
+   * Lähde: en.wikipedia.org: Alexander Fleming, Penicillin
+   */
+  {
+    id: 'fleming-malja-1928',
+    otsikko: 'St Mary\'s 1928 — malja, jota ei heitetty pois',
+    nimio: 'Fleming 1928',
+    paivays: '3.9.1928',
+    paikka: 'St Mary\'s Hospital, Paddington, Lontoo',
+    iso: 'GBR',
+    lat: 51.5174, lon: -0.1720,
+    kuvaversio: 4,
+    teksti: '”Sepä hassua”, Alexander Fleming sanoo, ja se on koko juhla. St '
+      + 'Mary\'sin sairaalan bakteriologian laboratoriossa Paddingtonissa on '
+      + '3. syyskuuta 1928, ja Fleming on juuri palannut perheensä kanssa '
+      + 'vietetyltä lomalta. Ennen lähtöään hän jätti stafylokokkiviljelmiä '
+      + 'maljoille penkin nurkkaan, ja nyt hän käy niitä läpi heittääkseen '
+      + 'ne pois. Yhdessä maljassa kasvaa homepilkku, ja sen ympärillä '
+      + 'bakteerit ovat kuolleet. Fleming näyttää maljan entiselle '
+      + 'apulaiselleen Merlin Prycelle, joka muistuttaa: juuri niin sinä '
+      + 'löysit lysotsyyminkin. Homeen hän tunnistaa Penicillium-sukuun, ja '
+      + 'seuraavat kuukaudet hän kutsuu sen erittämää ainetta homemehuksi, '
+      + 'kunnes antaa sille 7. maaliskuuta 1929 nimen penisilliini. Hän '
+      + 'osoittaa, että se tappaa monia bakteereja ja on vaaraton eläimille, '
+      + 'mutta aineen puhdistaminen ja säilyttäminen ei onnistu hänen '
+      + 'keinoillaan. Vasta Howard Floreyn ja Ernst Chainin ryhmä Oxfordissa '
+      + 'tekee siitä lääkkeen 1940-luvun alussa, ja kolmikko jakaa '
+      + 'lääketieteen Nobelin 1945.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-fleming-malja-1928-lahi-photo-v4.jpg',
+        kuvateksti: 'Fleming on vähällä siirtää sotkuisen viljelymaljan '
+          + 'syrjään, kun homepesäkkeen ympärillä oleva kirkas kehä pysäyttää '
+          + 'hänet. Kukaan ei hurraa: hänen edessään ei ole vielä lääke vaan '
+          + 'outo paikka, jossa stafylokokit eivät kasva.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Imperial College London — '
+          + 'Facing Infection Together, tarkistettu 5.9.2026.',
+        url: 'https://www.imperial.ac.uk/media/imperial-college/giving/public/Facing-Infection-Together_Institute-of-Infection.pdf',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-fleming-malja-1928-kauko-photo-v4.jpg',
+        kuvateksti: 'St Mary\'sin epäjärjestys auttaa sattumaa, mutta havainnon '
+          + 'ymmärtäminen vaatii Flemingin pysähtymään sen ääreen. Hän osaa '
+          + 'osoittaa homeen tuhoavan bakteereita, muttei tehdä siitä vakaata '
+          + 'hoitoa; vasta Floreyn ja Chainin myöhempi työryhmä muuttaa '
+          + 'pienen kehän penisilliiniksi.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Imperial College London — '
+          + 'Facing Infection Together, tarkistettu 5.9.2026.',
+        url: 'https://www.imperial.ac.uk/media/imperial-college/giving/public/Facing-Infection-Together_Institute-of-Infection.pdf',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Lontoon laatan päällä (2 yksikköä) ja '
+      + 'Lontoon kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Lontoon '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'lontoo' },
+    lehtiJohdanto: 'Paddingtonin sairaalan sotkuisessa laboratoriossa yksi '
+      + 'homeinen viljelymalja jäi syyskuussa 1928 heittämättä pois — ja '
+      + 'siitä alkoi antibioottien aika, vaikka lääkkeeksi asti kului '
+      + 'toistakymmentä vuotta.',
+    lehtiTehtava: {
+      kysymys: 'Miksi Fleming ei itse saanut penisilliinistä lääkettä?',
+      vaihtoehdot: [
+        'Hän ei uskonut aineen tehoavan ihmisiin',
+        'Sairaala kielsi jatkotutkimukset',
+        'Hän ei saanut ainetta puhdistettua ja säilymään',
+        'Hän myi keksinnön amerikkalaiselle yhtiölle',
+      ],
+      oikea: 2,
+      fakta: 'Howard Floreyn ja Ernst Chainin ryhmä Oxfordissa teki '
+        + 'penisilliinistä lääkkeen; kolmikko jakoi Nobelin 1945.',
+    },
+  },
+  /*
+   * 31. MAINZ 1454 — RAAMATTU PAINOSSA.
+   * Lähin kohdekaupunki Alppien laatta 105 laudan yksikön päässä — oma
+   * merkki kartalle. Mainzilla ei ole kaupunkilehteä, joten sivu on
+   * Saksan maalehdessä.
+   * Lähde: en.wikipedia.org: Johannes Gutenberg, Gutenberg Bible
+   */
+  {
+    id: 'gutenberg-paino-1454',
+    otsikko: 'Mainz 1454 — sivu syntyy metallista',
+    nimio: 'Gutenberg 1454',
+    paivays: '1454',
+    paikka: 'Mainz, Pyhä saksalais-roomalainen keisarikunta',
+    iso: 'DEU',
+    lat: 49.9994, lon: 8.2736,
+    kuvaversio: 4,
+    teksti: 'Sormenpäät ovat mustat ja pysyvät sellaisina. Latoja poimii '
+      + 'kirjasimen kerrallaan lokerikosta ja asettaa sen riville nurinpäin '
+      + 'ja peilikuvana; sivu on valmis vasta, kun rivejä on '
+      + 'neljäkymmentäkaksi ja jokainen niistä yhtä leveä. Mainzin '
+      + 'Humbrechthofissa painetaan latinankielistä Raamattua, ja työtä on '
+      + 'tehty vuodesta 1452. Johannes Gutenberg on lainannut siihen '
+      + 'rahanlainaaja Johann Fustilta kahdesti 800 guldenia, ja hänen '
+      + 'pajassaan on jo painettu kirkolle tuhansia anekirjeitä. Kostutettu '
+      + 'paperi painetaan viinipuristimesta muokatussa ruuviprässissä, ja '
+      + 'yhden sivun latomiseen kuluu ehkä puoli päivää. Maaliskuussa 1455 '
+      + 'tuleva paavi Pius II kirjoittaa nähneensä Frankfurtissa valmiita '
+      + 'arkkeja ja ostajien jo varanneen kappaleensa. Painos on noin 180 '
+      + 'kappaletta, neljännes pergamentille. Gutenberg ei ehdi nauttia '
+      + 'siitä: Fust haastaa hänet oikeuteen 1455 ja saa pajan haltuunsa, '
+      + 'ja ensimmäisen kirjan, jossa painajan nimi ja vuosi on merkitty, '
+      + 'julkaisevat Fust ja Peter Schöffer 1457. Keksijä kuolee 1468 '
+      + 'arkkipiispan eläkkeellä.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-gutenberg-paino-1454-lahi-photo-v4.jpg',
+        kuvateksti: 'Latoja-apulainen nostaa yhden käänteisen kirjaimen '
+          + 'kerrallaan ja tietää, että virhe voi pakottaa avaamaan koko '
+          + 'ladelman. Hänen sormiinsa jäävä muste on osa uutta käsityötä, '
+          + 'jossa Raamatun sivu syntyy metallista — mutta värilliset '
+          + 'alkukirjaimet lisätään yhä myöhemmin käsin.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Gutenberg-Museum Mainz — '
+          + 'Gutenberg Bibles, tarkistettu 5.9.2026.',
+        url: 'https://www.mainz.de/en/microsite/gutenberg-museum/Forschung_Sammlung_/Gutenberg_Bibeln',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-gutenberg-paino-1454-kauko-photo-v4.jpg',
+        kuvateksti: 'Gutenbergin Raamattu ei synny yhdestä nerokkaasta '
+          + 'painalluksesta: kostea paperi, mustepallot, ruuviprässi ja '
+          + 'kuivuvat arkit kulkevat monen työntekijän käsien kautta vuosien '
+          + 'ajan. Noin 180 kappaleen painos on valtava lupaus siitä, että '
+          + 'sama teksti voidaan valmistaa yhä uudelleen.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Gutenberg-Museum Mainz — '
+          + 'Gutenberg Bibles, tarkistettu 5.9.2026.',
+        url: 'https://www.mainz.de/en/microsite/gutenberg-museum/Forschung_Sammlung_/Gutenberg_Bibeln',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'maa', avain: 'DEU' },
+    visa: {
+      kysymys: 'Kuka sai Gutenbergin painopajan haltuunsa oikeudenkäynnin jälkeen 1455?',
+      vaihtoehdot: [
+        'Mainzin arkkipiispa',
+        'Rahanlainaaja Johann Fust',
+        'Tuleva paavi Pius II',
+      ],
+      oikea: 1,
+    },
+    lehtiJohdanto: 'Reinin rannan kauppakaupungissa latojat asettivat '
+      + '1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja '
+      + 'ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja '
+      + 'peri pajan mukana.',
+    lehtiTehtava: {
+      kysymys: 'Montako kappaletta Gutenbergin Raamattua arvioidaan '
+        + 'painetun?',
+      vaihtoehdot: [
+        'Noin kaksikymmentä',
+        'Noin 180',
+        'Noin tuhat',
+        'Noin kymmenentuhatta',
+      ],
+      oikea: 1,
+      fakta: 'Neljännes painoksesta tehtiin pergamentille; kappaleita on '
+        + 'säilynyt 49, niistä 21 täydellisinä.',
+    },
+  },
+  /*
+   * 32. PARIISI, ELOKUU 1888 — TOINEN KERROS KOOSSA.
+   * Piste on Pariisin laatan päällä (1,4 laudan yksikköä) ja kohdekartan
+   * rajauksessa (Champ de Mars; sama piste kuin kohde "Eiffel-torni").
+   * Vain Pariisin kaupunkilehdessä ja sen kohdekartalla
+   * (js/packs/maakartat.js "Torni 1888").
+   * Lähde: en.wikipedia.org: Eiffel Tower
+   */
+  {
+    id: 'eiffel-torni-1888',
+    otsikko: 'Champ de Mars 1888 — niitti kerrallaan taivaalle',
+    nimio: 'Torni 1888',
+    paivays: 'elokuu 1888',
+    paikka: 'Champ de Mars, Pariisi',
+    iso: 'FRA',
+    lat: 48.8582, lon: 2.2945,
+    kuvaversio: 4,
+    teksti: 'Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, '
+      + 'ja niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 '
+      + 'Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko '
+      + 'jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu '
+      + 'niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä '
+      + 'takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee '
+      + 'tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan '
+      + 'päällä: jokainen 18 038 osasta on piirretty Levallois-Perret\'n '
+      + 'konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se '
+      + 'lähetetään takaisin. Rakentajia on kolmisensataa, ja työn aikana '
+      + 'kuolee yksi. Suunnittelijat ovat Gustave Eiffelin insinöörit '
+      + 'Maurice Koechlin ja Émile Nouguier; Eiffel osti heidän '
+      + 'patenttinsa. Pariisin taiteilijat, Maupassant ja Garnier mukana, '
+      + 'ovat vastustaneet tornia julkisella vetoomuksella, ja sen luvattiin '
+      + 'seisovan vain kaksikymmentä vuotta. Torni valmistuu 31. maaliskuuta '
+      + '1889 maailmannäyttelyyn — ja jää, koska sen huipulle sopii '
+      + 'radioantenni.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-eiffel-torni-1888-lahi-photo-v4.jpg',
+        kuvateksti: 'Kuuma niitti ehtii jäähtyä nopeasti, joten neljän miehen '
+          + 'työketju ei saa katketa: yksi lämmittää, toinen pitää '
+          + 'paikoillaan, kolmas muotoilee kannan ja neljäs lyö liitoksen '
+          + 'kiinni. Korkealla ei ole suojakaiteita; jokainen vasaranisku '
+          + 'riippuu siitä, että työtoveri tekee oman osuutensa oikein.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Eiffel Tower official site — '
+          + 'history, tarkistettu 5.9.2026.',
+        url: 'https://www.toureiffel.paris/en/the-monument/history',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-eiffel-torni-1888-kauko-photo-v4.jpg',
+        kuvateksti: 'Elokuussa 1888 toinen taso on viimein koossa, mutta torni '
+          + 'jatkuu vielä avonaisena rautaristikkona taivaalle. Alhaalla '
+          + 'hevoskuormat tuovat Levallois’ssa millintarkasti esivalmistettuja '
+          + 'osia, ylhäällä höyrynosturi kiipeää rakenteen mukana — ja 150–300 '
+          + 'työntekijää muuttaa 18 038 piirustettua kappaletta yhdeksi '
+          + 'torniksi.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Eiffel Tower official site — '
+          + 'history, tarkistettu 5.9.2026.',
+        url: 'https://www.toureiffel.paris/en/the-monument/history',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Pariisin laatan päällä (1,4 yksikköä) ja '
+      + 'Pariisin kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'pariisi' },
+    lehtiJohdanto: 'Champ de Marsilla niittaajat seisoivat kesällä 1888 yli '
+      + 'sadan metrin korkeudessa ilman kaiteita ja takoivat kuumia '
+      + 'niittejä rautaan, jonka piti seisoa vain kaksikymmentä vuotta.',
+    lehtiTehtava: {
+      kysymys: 'Miksi Eiffel-tornin osiin ei porattu yhtään reikää '
+        + 'työmaalla?',
+      vaihtoehdot: [
+        'Porat eivät toimineet korkeudessa',
+        'Torni koottiin pulteilla ilman reikiä',
+        'Reiät porattiin vasta valmistumisen jälkeen',
+        'Osat oli valmistettu konepajalla niin tarkasti, että sopimaton osa '
+          + 'lähetettiin takaisin',
+      ],
+      oikea: 3,
+      fakta: 'Tornissa on 18 038 osaa ja 2,5 miljoonaa niittiä; se valmistui '
+        + '31. maaliskuuta 1889 maailmannäyttelyyn.',
+    },
+  },
+  /*
+   * 33. ROTHERHITHE, TOUKOKUU 1827 — KILPI THAMESIN ALLA.
+   * Piste on Lontoon laatan päällä (2 laudan yksikköä) ja kohdekartan
+   * rajauksessa (Rotherhithen kuilu). Vain Lontoon kaupunkilehdessä ja
+   * sen kohdekartalla (js/packs/maakartat.js "Tunneli 1827").
+   * Lähde: en.wikipedia.org: Thames Tunnel
+   */
+  {
+    id: 'brunel-thames-tunnel-1827',
+    otsikko: 'Rotherhithe 1827 — 36 lokeroa joen alla',
+    nimio: 'Tunneli 1827',
+    paivays: 'toukokuu 1827',
+    paikka: 'Rotherhithe, Lontoo',
+    iso: 'GBR',
+    lat: 51.5031, lon: -0.0544,
+    kuvaversio: 4,
+    teksti: 'Tihkuvan veden ääni ei lakkaa koskaan. Se tulee yläpuolelta, '
+      + 'missä Thames virtaa ohuen savikerroksen takana, ja jokainen kaivaja '
+      + 'kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen kuilussa '
+      + 'toukokuussa 1827 työskentelee Marc Brunelin keksimä tunnelikilpi: '
+      + 'kaksitoista valurautaista kehystä kolmessa kerroksessa, 36 lokeroa, '
+      + 'joissa kukin mies kaivaa oman tukilautansa takaa. Kun koko kilpi on '
+      + 'kaivettu tyhjäksi, ruuvitunkit työntävät sitä eteenpäin ja muurarit '
+      + 'muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom '
+      + 'Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. '
+      + 'Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen '
+      + 'jätevesi tihkuu tunneliin, sen metaani syttyy lampuista, ja miehet '
+      + 'sairastuvat. 18. toukokuuta joki murtautuu sisään, kun tunnelia on '
+      + 'kaivettu 167 metriä; Isambard laskeutuu sukelluskellolla tukkimaan '
+      + 'reiän savisäkeillä ja pitää korjatussa tunnelissa juhlaillallisen. '
+      + 'Tammikuussa 1828 tulva tappaa kuusi miestä. Tunneli avataan vasta '
+      + '25. maaliskuuta 1843, ensimmäisenä purjehduskelpoisen joen '
+      + 'alittajana.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-brunel-thames-tunnel-1827-lahi-photo-v4.jpg',
+        kuvateksti: 'Kaivaja näkee vain oman valurautaisen lokeronsa, '
+          + 'irrotettavan tukilaudan ja märkää savea muutaman kymmenen sentin '
+          + 'päässä kasvoistaan. Hän saa ottaa maata pois vain noin neljän '
+          + 'tuuman kaistaleen kerrallaan; Thames virtaa yläpuolella, eikä '
+          + 'kukaan tiedä, milloin tihkuminen muuttuu tulvaksi.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Brunel Museum — Thames '
+          + 'Tunnel archive, tarkistettu 5.9.2026.',
+        url: 'https://thebrunelmuseum.com/online/thames-tunnel-archive/',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-brunel-thames-tunnel-1827-kauko-photo-v4.jpg',
+        kuvateksti: '21-vuotias Isambard Kingdom Brunel kuuntelee puun, '
+          + 'ruuvitunkkien ja veden ääniä, kun kaksitoista kolmikerroksista '
+          + 'kehystä siirtyy tuuma tuumalta eteenpäin. Kilven 36 kaivajaa ja '
+          + 'heidän takanaan muuraavat miehet rakentavat maailman ensimmäistä '
+          + 'tunnelia purjehduskelpoisen joen alle — toukokuun 1827 tulva '
+          + 'osoittaa, kuinka ohut turva todella on.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Brunel Museum — Thames '
+          + 'Tunnel archive, tarkistettu 5.9.2026.',
+        url: 'https://thebrunelmuseum.com/online/thames-tunnel-archive/',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Lontoon laatan päällä (2 yksikköä) ja '
+      + 'Lontoon kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Lontoon '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'lontoo' },
+    lehtiJohdanto: 'Rotherhithen kuilussa 36 miestä kaivoi 1820-luvulla '
+      + 'valurautaisen kilven lokeroista savea Thamesin alla, ja uteliaat '
+      + 'maksoivat shillingin nähdäkseen, miten joen alitse mennään.',
+    lehtiTehtava: {
+      kysymys: 'Mitä Isambard Brunel teki, kun Thames murtautui tunneliin '
+        + 'toukokuussa 1827?',
+      vaihtoehdot: [
+        'Laskeutui sukelluskellolla tukkimaan reiän savisäkeillä',
+        'Hylkäsi hankkeen ja muutti Bristoliin',
+        'Räjäytti tunnelin suun umpeen',
+        'Pumppasi joen kuivaksi',
+      ],
+      oikea: 0,
+      fakta: 'Tunneli avattiin vasta 25. maaliskuuta 1843; vuodesta 1869 '
+        + 'siinä on kulkenut juna.',
+    },
+  },
+  /*
+   * 34. PORT SAID 17.11.1869 — KANAVA AVATAAN.
+   * Lähin kohdekaupunki Kairo 59 laudan yksikön päässä — oma merkki
+   * kartalle. Port Saidilla ei ole kaupunkilehteä, joten sivu on Egyptin
+   * maalehdessä. Kolmas kuva on The Illustrated London Newsin
+   * puukaiverrussivu (HETKI_LEHTIKUVAT).
+   * Lähde: en.wikipedia.org: Suez Canal, Port Said
+   */
+  {
+    id: 'suezin-kanava-avajaiset-1869',
+    otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
+    nimio: 'Suez 1869',
+    paivays: '17.11.1869',
+    paikka: 'Port Said, Egypti',
+    iso: 'EGY',
+    lat: 31.2625, lon: 32.3061,
+    kuvaversio: 4,
+    teksti: 'Keulan edessä ei ole enää mitään paitsi kaivettua vettä. '
+      + 'Keisarillinen huvijahti L\'Aigle kääntyy Port Saidista kanavaan 17. '
+      + 'marraskuuta 1869 ensimmäisenä, ja sen perässä jonoon asettuu '
+      + 'kymmeniä laivoja: Itävallan keisari Frans Joosef, Preussin '
+      + 'kruununprinssi, ruhtinaita ja lähettiläitä. Kannella seisoo '
+      + 'keisarinna Eugénie, jonka serkku Ferdinand de Lesseps on ajanut '
+      + 'hanketta viisitoista vuotta. Kaupunki, josta lähdetään, on itse '
+      + 'kanavan lapsi: Port Said perustettiin hiekkasärkälle huhtikuussa '
+      + '1859, kun kaivaminen alkoi. Kymmenen vuoden työ tehtiin aluksi '
+      + 'Egyptin talonpoikien pakkotyönä, corvéena, kunnes se kiellettiin '
+      + '1864 ja tilalle tuotiin ruoppaajia ja kauhakoneita. Työntekijöitä '
+      + 'oli yhteensä yli miljoona; kuolleiden määrästä kiistellään yhä. '
+      + 'Kanava lyhentää matkan Arabianmereltä Lontooseen lähes 9 000 '
+      + 'kilometriä, ja juuri siksi Britannia, joka vastusti sitä loppuun '
+      + 'asti, ostaa Egyptin osakkeet 1875 ja miehittää maan 1882. Rannalla '
+      + 'juhlavieraat näkevät lippuja ja savua; egyptiläisten kaivajien '
+      + 'vuosikymmen ei mahdu ohjelmaan.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-suezin-kanava-avajaiset-1869-lahi-photo-v4.jpg',
+        kuvateksti: 'Nuoren egyptiläisen köysimiehen tehtävä on arkinen: pitää '
+          + 'L’Aiglen kiinnitysköysi poissa vedestä, vaikka kannella seisoo '
+          + 'Ranskan keisarinna Eugénie. Hänen ympärillään Port Said on '
+          + 'muuttunut hetkeksi näyttämöksi, jolla tuhannet vieraat juhlivat '
+          + 'väylää, jonka kaivamiseen tavalliset kädet olivat käyttäneet '
+          + 'kymmenen vuotta.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Suez Canal Authority — Canal '
+          + 'history, tarkistettu 5.9.2026.',
+        url: 'https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalHistory.aspx',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-suezin-kanava-avajaiset-1869-kauko-photo-v4.jpg',
+        kuvateksti: 'L’Aigle kääntyy kanavaan ensimmäisenä, ja sen takana '
+          + 'odottaa 77 alusta. Hiekkarannalla lapsi laskee lippuja ja '
+          + 'savupiippuja sormillaan; hänelle maailman merireittien muutos on '
+          + 'tämä aamu, jolloin hiljainen ranta muuttuu kahden meren '
+          + 'väyläksi.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Suez Canal Authority — Canal '
+          + 'history, tarkistettu 5.9.2026.',
+        url: 'https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalHistory.aspx',
+      },
+      {
+        rooli: 'lehti',
+        tiedosto: 'hetki-suezin-kanava-avajaiset-1869-lehti-photo-v4.jpg',
+        kuvateksti: 'Kuvittaja William Simpson lähetti Port Saidista '
+          + 'kenttämuistiinpanot “kaikkien kansojen väkijoukosta”, ja '
+          + 'Lontoossa ne muutettiin viikkoja myöhemmin puukaiverrukseksi. '
+          + 'Lukija näki kuninkaalliset ja liput; tavallisten kaivajien '
+          + 'kymmenen vuotta tiivistyivät yhteen juhlasivuun.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Suez Canal Authority — Canal '
+          + 'history, tarkistettu 5.9.2026.',
+        url: 'https://www.suezcanal.gov.eg/English/About/SuezCanal/Pages/CanalHistory.aspx',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'maa', avain: 'EGY' },
+    visa: {
+      kysymys: 'Mikä alus kääntyi Suezin kanavaan ensimmäisenä avajaispäivänä 1869?',
+      vaihtoehdot: [
+        'Brittiläinen panssarilaiva',
+        'Kediivi Ismailin höyryjahti',
+        'Keisarinna Eugénien huvijahti L\'Aigle',
+      ],
+      oikea: 2,
+    },
+    lehtiJohdanto: 'Välimeren hiekkasärkälle vuonna 1859 perustettu '
+      + 'työmaakaupunki näki kymmenen vuotta myöhemmin keisarinnan jahdin '
+      + 'kääntyvän kanavaan, jonka egyptiläiset talonpojat olivat '
+      + 'kaivaneet alkuvuodet pakkotyönä.',
+    lehtiTehtava: {
+      kysymys: 'Miksi Britannia, joka vastusti kanavaa, osti Egyptin '
+        + 'kanavaosakkeet 1875?',
+      vaihtoehdot: [
+        'Ranska pakotti sen kauppasopimuksella',
+        'Osakkeet olivat arvottomia ja halpoja',
+        'Kanava lyhensi Intian-reittiä tuhansia kilometrejä',
+        'Kediivi lahjoitti ne kuningatar Victorialle',
+      ],
+      oikea: 2,
+      fakta: 'Matka Arabianmereltä Lontooseen lyheni lähes 9 000 kilometriä; '
+        + 'Britannia miehitti Egyptin 1882.',
+    },
+  },
+  /*
+   * 35. NEW YORK 24.5.1883 — SILTA AVATAAN.
+   * Piste on 10 laudan yksikköä New Yorkin laatasta mutta New Yorkin
+   * kohdekartan rajauksessa (East River). Raamattu: kohdekartan
+   * rajauksen sisällä oleva nosto piirretään VAIN kohdekartalle — sivu on
+   * New Yorkin kaupunkilehdessä ja piste sen kohdekartalla
+   * (js/packs/maakartat.js "Brooklyn 1883"). Kolmas kuva on Brooklyn
+   * Daily Eaglen erikoisnumero (HETKI_LEHTIKUVAT).
+   * Lähde: en.wikipedia.org: Brooklyn Bridge, Emily Warren Roebling
+   */
+  {
+    id: 'brooklyn-bridge-1883',
+    otsikko: 'East River 1883 — kuka tämän sillan rakensi?',
+    nimio: 'Brooklyn 1883',
+    paivays: '24.5.1883',
+    paikka: 'Brooklyn Bridge, New York',
+    iso: 'USA',
+    lat: 40.7057, lon: -73.9964,
+    kuvaversio: 4,
+    teksti: 'Kuka tämän sillan oikeastaan rakensi? Kysymys leijuu 24. '
+      + 'toukokuuta 1883 avajaisten yllä, vaikka kukaan ei sano sitä ääneen. '
+      + 'Suunnittelija John A. Roebling kuoli jalkavammaan jo 1869 ennen '
+      + 'töiden alkua. Hänen poikansa Washington Roebling johti työtä, '
+      + 'kunnes sukeltajantauti, joka syntyi kaivettaessa tornien '
+      + 'perustuksia paineilmakaissoneissa, lamautti hänet 1870-luvun alussa; '
+      + 'sen jälkeen hän seurasi työmaata kaukoputkella makuuhuoneestaan '
+      + 'Columbia Heightsilta. Hänen vaimonsa Emily Warren Roebling opetteli '
+      + 'lujuusopin ja köysikäyrien matematiikan, kuljetti ohjeet '
+      + 'insinööreille ja vastasi viranomaisille yli kymmenen vuotta. '
+      + 'Tänään hän ylittää sillan ensimmäisenä vaunuissa, ja presidentti '
+      + 'Chester A. Arthur kävelee Manhattanilta Brooklyniin '
+      + 'tykkilaukausten ja ilotulitusten saattamana. Silta on maailman '
+      + 'pisin riippusilta, jänneväliltään 486 metriä ja kaapeleiltaan '
+      + 'terästä, ja se on maksanut noin 27 työmiehen hengen. Ensimmäisenä '
+      + 'päivänä yli 150 000 ihmistä kävelee sen yli. Kuusi päivää myöhemmin '
+      + 'portaikossa syntyy tungos ja kaksitoista kuolee — silta on heti '
+      + 'liian suosittu.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-brooklyn-bridge-1883-lahi-photo-v4.jpg',
+        kuvateksti: 'Emily Roebling on vuosien ajan kuljettanut laskelmia ja '
+          + 'ohjeita työmaan sekä sukeltajantaudin sairastuttaman '
+          + 'Washingtonin välillä. Kun hän ylittää valmiin sillan '
+          + 'ensimmäisenä, aikalaiskertomukset asettavat hänen syliinsä '
+          + 'voittoa merkitsevän kukon — erikoisen yksityiskohdan vakavan '
+          + 'kysymyksen vierelle: kuka todella piti työn liikkeessä?',
+        lahde: 'Matkakirjan havainnekuva. Faktat: NYC DOT — Brooklyn Bridge, '
+          + 'tarkistettu 5.9.2026.',
+        url: 'https://www.nyc.gov/html/dot/html/pr2024/brooklyn-bridge-glow-up.shtml',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-brooklyn-bridge-1883-kauko-photo-v4.jpg',
+        kuvateksti: 'Washington Roebling ei seiso arvovieraiden joukossa vaan '
+          + 'seuraa juhlaa kodistaan Columbia Heightsilta. Presidentti, '
+          + 'tykkisalva ja väkijoukko ottavat sillan haltuunsa; neljäntoista '
+          + 'vuoden työ yhdistää kaksi kaupunkia lähes kaikkien muiden paitsi '
+          + 'sen viimeisiä vuosia johtaneen insinöörin silmien edessä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: NYC DOT — Brooklyn Bridge, '
+          + 'tarkistettu 5.9.2026.',
+        url: 'https://www.nyc.gov/html/dot/html/pr2024/brooklyn-bridge-glow-up.shtml',
+      },
+      {
+        rooli: 'lehti',
+        tiedosto: 'hetki-brooklyn-bridge-1883-lehti-photo-v4.jpg',
+        kuvateksti: 'Brooklyn Daily Eagle rikkoi avajaispäivänä '
+          + 'levikkiennätyksensä erikoisnumerolla, joka julisti Brooklynin ja '
+          + 'New Yorkin yhdistyneiksi. Lehden suurin uutinen oli silta; rivien '
+          + 'väliin jäi Emily Roeblingin työ, vaikka hänen laskelmansa ja '
+          + 'työmaatuntemuksensa olivat pitäneet hanketta liikkeessä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: NYC DOT — Brooklyn Bridge, '
+          + 'tarkistettu 5.9.2026.',
+        url: 'https://www.nyc.gov/html/dot/html/pr2024/brooklyn-bridge-glow-up.shtml',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on New Yorkin kohdekartan rajauksessa (East '
+      + 'River, 10 yksikköä laatasta): kohdekartan rajauksen sisällä oleva '
+      + 'nosto ei ole pääkartalla (Raamattu, omistaja 2.9.2026 ilta) vaan '
+      + 'New Yorkin kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'newyork' },
+    lehtiJohdanto: 'East Riverin yli avattiin toukokuussa 1883 maailman pisin '
+      + 'riippusilta, jonka viimeiset vuodet johti sairasvuoteelta '
+      + 'insinööri — ja hänen vaimonsa, jonka nimeä ei ollut missään '
+      + 'piirustuksessa.',
+    lehtiTehtava: {
+      kysymys: 'Miten Washington Roebling seurasi sillan rakentamista sen '
+        + 'viimeiset vuodet?',
+      vaihtoehdot: [
+        'Kaukoputkella makuuhuoneestaan Columbia Heightsilta',
+        'Paineilmakaissonista sillan alta',
+        'Höyrylaivasta East Riverillä',
+        'Kirjeitse Euroopasta',
+      ],
+      oikea: 0,
+      fakta: 'Emily Warren Roebling kuljetti hänen ohjeensa työmaalle ja '
+        + 'ylitti valmiin sillan ensimmäisenä 24. toukokuuta 1883.',
+    },
+  },
+  /*
+   * 36. JÄNISSAARI 27.5.1703 — LINNOITUS SUOHON.
+   * Piste on Pietarin laatan päällä (0,5 laudan yksikköä) ja kohdekartan
+   * rajauksessa (Pietari-Paavalin linnoitus). Vain Pietarin
+   * kaupunkilehdessä ja sen kohdekartalla (js/packs/maakartat.js
+   * "Jänissaari 1703").
+   * Lähde: en.wikipedia.org: Peter and Paul Fortress, Saint Petersburg
+   */
+  {
+    id: 'pietari-perustus-1703',
+    otsikko: 'Jänissaari 1703 — kuusi bastionia suohon',
+    nimio: 'Jänissaari 1703',
+    paivays: '27.5.1703',
+    paikka: 'Jänissaari, Nevan suisto',
+    iso: 'RUS',
+    lat: 59.9500, lon: 30.3167,
+    kuvaversio: 4,
+    teksti: 'Mittakeppi ja kartta ovat ainoat kuivat esineet Jänissaarella. '
+      + 'Vartiosotilas pitää kartan kulmasta kiinni, kun tsaari Pietari, '
+      + 'yli kaksimetrinen mies, kävelee saaren märkää rantaa ja näyttää, '
+      + 'mihin kuusi bastionia tulevat. On 27. toukokuuta 1703, ja kaksi '
+      + 'viikkoa aiemmin venäläiset valtasivat ylempänä Nevalla '
+      + 'ruotsalaisten Nyenskansin linnoituksen. Suuri Pohjan sota on '
+      + 'käynnissä, ja Ruotsin laivasto voi ilmestyä Suomenlahdelle milloin '
+      + 'tahansa; siksi linnake pitää saada saarelle jokisuuhun ennen '
+      + 'talvea, ensin maasta ja puusta. Kivi tulee myöhemmin, Domenico '
+      + 'Trezzinin piirustuksin vuodesta 1706. Sotilaille ja pakkotyöhön '
+      + 'käsketyille talonpojille paikka on suo, jossa on hyttysiä ja '
+      + 'kuolemaa; heille ei sanota, että tästä tehdään pääkaupunki. Pietari '
+      + 'nimeää linnoituksen suojeluspyhimyksensä apostoli Pietarin mukaan '
+      + 'ja siirtää hovin tänne 1712. Linnoituksesta ei koskaan ammuta '
+      + 'vihollista kohti — sen kuuluisin osa on vankila, jossa istuvat '
+      + 'myöhemmin Pietarin oma poika Aleksei, dekabristit ja Dostojevski.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-pietari-perustus-1703-lahi-photo-v4.jpg',
+        kuvateksti: 'Sotilaan mittakeppi uppoaa märkään maahan, ja lapioita '
+          + 'pitelevät miehet yrittävät nähdä kartasta saman kuusibastionisen '
+          + 'linnoituksen kuin tsaari. Heille Jänissaari ei vielä ole '
+          + 'pääkaupunki vaan kiireinen puolustustyö keskellä suurta Pohjan '
+          + 'sotaa.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Presidential Library — '
+          + 'foundation of St Petersburg, tarkistettu 5.9.2026.',
+        url: 'https://www.prlib.ru/node/619267',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-pietari-perustus-1703-kauko-photo-v4.jpg',
+        kuvateksti: 'Pietarin suunnitelma lupaa kuusi bastionia, mutta '
+          + 'toukokuussa 1703 paikalla on vasta soinen saari, mittanaruja ja '
+          + 'märkiä maavalleja. Työryhmän on saatava puu- ja maalinnake '
+          + 'valmiiksi ennen talvea; tuleva kaupunki on vielä ajatus, harmaa '
+          + 'Neva ja Ruotsin laivaston uhka ovat todellisia.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Presidential Library — '
+          + 'foundation of St Petersburg, tarkistettu 5.9.2026.',
+        url: 'https://www.prlib.ru/node/619267',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Pietarin laatan päällä (0,5 yksikköä) ja '
+      + 'Pietarin kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pietarin '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'pietari' },
+    lehtiJohdanto: 'Nevan suiston soisella saarella mitattiin toukokuussa 1703 '
+      + 'kuuden bastionin linnoitusta ruotsalaisia vastaan — kukaan '
+      + 'lapiomiehistä ei tiennyt seisovansa tulevan pääkaupungin '
+      + 'keskustassa.',
+    lehtiTehtava: {
+      kysymys: 'Miksi Pietari-Paavalin linnoitus rakennettiin juuri '
+        + 'toukokuussa 1703?',
+      vaihtoehdot: [
+        'Tsaari halusi kesäpalatsin merelle',
+        'Ruotsalaiset olivat luovuttaneet alueen rauhansopimuksessa',
+        'Moskova oli palanut edellisenä talvena',
+        'Ruotsin laivasto uhkasi juuri vallattua Nevan suuta',
+      ],
+      oikea: 3,
+      fakta: 'Linnoitus ei koskaan ampunut vihollista; sen vankilassa '
+        + 'istuivat Pietarin poika Aleksei, dekabristit ja Dostojevski.',
+    },
+  },
+  /*
+   * 37. POMPEJI 79 — HOHKAKIVISADE ALKAA.
+   * Lähin kohdekaupunki Rooma 80 laudan yksikön päässä — oma merkki
+   * kartalle. Napolilla ei ole laudalla kaupunkia, joten sivu on Italian
+   * maalehdessä.
+   * Lähde: en.wikipedia.org: Eruption of Mount Vesuvius in 79 AD, Pliny
+   * the Younger
+   */
+  {
+    id: 'vesuvius-pompeji-79',
+    otsikko: 'Pompeji 79 — ropina katolla',
+    nimio: 'Pompeji 79',
+    paivays: '79 jaa.',
+    paikka: 'Pompeji, Campania',
+    iso: 'ITA',
+    lat: 40.7500, lon: 14.4861,
+    kuvaversio: 4,
+    teksti: 'Ropina katolla kuulostaa ensin rakeilta. Sitten kadulle putoaa '
+      + 'kevyitä, vaaleita kiviä, joita voi pitää kädessä — hohkakiveä — ja '
+      + 'niitä sataa tunti tunnilta tiheämmin. Pompejin torilla on '
+      + 'iltapäivä vuonna 79, ja vuoren päällä seisoo pilvi, jota nuorempi '
+      + 'Plinius kuvaa myöhemmin kirjeessään Tacitukselle pinjapuuksi: '
+      + 'pitkä runko ja levenevä latva. Hän katselee sitä lahden toiselta '
+      + 'puolelta Misenumista, 29 kilometrin päästä, ja hänen enonsa Plinius '
+      + 'vanhempi, laivaston komentaja, lähtee laivalla pelastamaan ihmisiä '
+      + 'ja kuolee Stabiaen rannalla. Pompejissa kukaan ei kirjoita mitään. '
+      + 'Ensimmäisen päivän valkoinen hohkakivi kasaa katoille lähes kolmen '
+      + 'metrin kerroksen, ja katot romahtavat; se on viimeinen tilaisuus '
+      + 'lähteä. Yöllä tai aamulla pilvi romahtaa, ja kuumat kaasu- ja '
+      + 'tuhkavyöryt tulevat rinnettä alas kaupunkiin tappaen kaikki, jotka '
+      + 'jäivät. Tuhkasta on löydetty yli 1 500 ihmisen jäännökset Pompejista '
+      + 'ja Herculaneumista. Perinteinen päivä on 24. elokuuta, mutta '
+      + 'löydöt — syksyn hedelmät, lämmin vaatetus — puhuvat lokakuun '
+      + 'puolesta.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-vesuvius-pompeji-79-lahi-photo-v4.jpg',
+        kuvateksti: 'Kuvituksen nimetön torikauppias yrittää vielä pelastaa '
+          + 'vaa’an ja rahalippaan, kun hänen tyttärensä kuuntelee hohkakivien '
+          + 'alkavaa ropinaa katoksella. He eivät tiedä, onko viisaampaa '
+          + 'suojautua vai lähteä — juuri tämä epävarmuus jätti osan '
+          + 'pompejilaisista koteihin, joiden katoille kertyi lopulta '
+          + 'metreittäin lapilleja.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Archaeological Park of '
+          + 'Pompeii — date of the eruption, tarkistettu 5.9.2026.',
+        url: 'https://pompeiisites.org/e-journal-degli-scavi-di-pompei/la-data-della-distruzione-di-pompei-premesse-per-un-dibattito-aperto/',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-vesuvius-pompeji-79-kauko-photo-v4.jpg',
+        kuvateksti: 'Plinius vertasi Vesuviuksen päälle kohoavaa pilveä '
+          + 'pinjapuuhun: kapea runko levisi korkealla oksistoksi. Forumilla '
+          + 'vertaus ei vielä auta ketään. Yksi perhe kokoaa läheisiään, '
+          + 'toinen lukitsee puotinsa ja kolmas jää katsomaan, koska vuori oli '
+          + 'ollut hiljaa sukupolvien ajan.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Archaeological Park of '
+          + 'Pompeii — date of the eruption, tarkistettu 5.9.2026.',
+        url: 'https://pompeiisites.org/e-journal-degli-scavi-di-pompei/la-data-della-distruzione-di-pompei-premesse-per-un-dibattito-aperto/',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'maa', avain: 'ITA' },
+    visa: {
+      kysymys: 'Mihin nuorempi Plinius vertasi Vesuviuksen purkauspilveä kirjeessään Tacitukselle?',
+      vaihtoehdot: [
+        'Pinjapuuhun',
+        'Ukkospilveen',
+        'Purjeeseen',
+      ],
+      oikea: 0,
+    },
+    lehtiJohdanto: 'Napolinlahden kaupungissa satoi vuonna 79 ensin kevyttä '
+      + 'hohkakiveä, ja se oli viimeinen tilaisuus lähteä — kuumat '
+      + 'tuhkavyöryt tulivat yöllä, ja Plinius kirjoitti pilvestä, joka '
+      + 'näytti pinjapuulta.',
+    lehtiTehtava: {
+      kysymys: 'Miksi Vesuviuksen purkauksen päivämäärästä kiistellään?',
+      vaihtoehdot: [
+        'Pliniuksen kirjeet on kadotettu',
+        'Löydöt — syksyn hedelmät ja lämpimät vaatteet — sopivat huonosti '
+          + 'elokuuhun',
+        'Roomalaisilla ei ollut kalenteria',
+        'Purkauksia oli samana vuonna kaksi',
+      ],
+      oikea: 1,
+      fakta: 'Perinteinen päivä on 24. elokuuta, mutta moni tutkija pitää '
+        + 'lokakuuta todennäköisempänä.',
+    },
+  },
+  /*
+   * 38. KONSTANTINOPOLI 29.5.1453 — VIIMEINEN AAMU MUURILLA.
+   * Piste on Istanbulin laatan päällä (1,5 laudan yksikköä). Viimeinen
+   * hyökkäys kohdistui Theodosiuksen muurin Mesoteichioniin, joka on
+   * Istanbulin kohdekartan rajauksen länsipuolella; kohdekartan piste
+   * on siksi Hagia Sofialla, johon sama aamu päättyi
+   * (js/packs/maakartat.js "Konstantinopoli 1453"). Sivu on Istanbulin
+   * kaupunkilehdessä.
+   * Lähde: en.wikipedia.org: Fall of Constantinople
+   */
+  {
+    id: 'konstantinopoli-1453',
+    otsikko: 'Konstantinopoli 1453 — aamu tulee rumpujen mukana',
+    nimio: 'Konstantinopoli',
+    paivays: '29.5.1453',
+    paikka: 'Theodosiuksen muuri, Konstantinopoli',
+    iso: 'TUR',
+    lat: 41.0189, lon: 28.9226,
+    kuvaversio: 4,
+    teksti: 'Yö on lyhyt, ja aamu tulee rumpujen ja huutojen mukana. '
+      + 'Mesoteichionilla, Lykosjoen laakson muurinpätkällä, on 29. '
+      + 'toukokuuta 1453. Sulttaani Mehmed II, 21-vuotias, on piirittänyt '
+      + 'kaupunkia 6. huhtikuuta lähtien — 53 päivää — ja unkarilaisen '
+      + 'Orbanin valama jättiläistykki on murtanut muuria viikkokausia niin, '
+      + 'että puolustajat täyttävät aukkoja öisin. Kaupungissa on alle 50 000 '
+      + 'asukasta ja vain noin 7 000–8 000 aseellista miestä kahdentoista '
+      + 'mailin muureille; ulkopuolella on 50 000–80 000 osmania. Edellisenä '
+      + 'iltana keisari Konstantinos XI kävi Hagia Sofiassa viimeisessä '
+      + 'vesperissä, jossa latinalaiset ja kreikkalaiset rukoilivat samassa '
+      + 'kirkossa. Hyökkäys tulee aalloittain: ensin palkkasoturit, sitten '
+      + 'Anatolian väki, viimeisenä janitsaarit. Puolustusta johtava '
+      + 'genovalainen Giovanni Giustiniani haavoittuu ja kannetaan muurilta, '
+      + 'ja hänen miestensä perääntyminen aiheuttaa paniikin. Konstantinos '
+      + 'katoaa taistelun melskeeseen; ruumista ei tunnisteta varmasti. '
+      + 'Aamupäivällä osmanit murtavat Hagia Sofian ovet, joiden taakse '
+      + 'tuhannet olivat paenneet. Tuhat vuotta vanha keisarikunta päättyy, '
+      + 'ja Mehmed tekee kaupungista pääkaupunkinsa.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-konstantinopoli-1453-lahi-photo-v4.jpg',
+        kuvateksti: 'Yön aikana puolustajat ovat täyttäneet kanuunoiden '
+          + 'murtamaa aukkoa kivillä, tynnyreillä ja puulla. Nuori apumies ei '
+          + 'tiedä, kestääkö hänen tukemansa palkki seuraavan laukauksen; '
+          + 'rumpujen lähestyessä hän tietää vain, ettei vanhempaa uupunutta '
+          + 'toveria jätetä yksin.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Constantinople 1453 — '
+          + 'history, tarkistettu 5.9.2026.',
+        url: 'https://constantinople1453.org/en/history/',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-konstantinopoli-1453-kauko-photo-v4.jpg',
+        kuvateksti: 'Viimeinen hyökkäys tulee kolmessa aallossa. Ensimmäiset '
+          + 'väsyttävät puolustajia, toiset kasvattavat painetta ja '
+          + 'janitsaarit etenevät viimeisinä. Muurin harjalla kuuden viikon '
+          + 'piiritys on kutistunut yhden sotilaan kysymykseksi: yltääkö '
+          + 'seuraava hyökkääjä tikkaiden päästä hänen eteensä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Constantinople 1453 — '
+          + 'history, tarkistettu 5.9.2026.',
+        url: 'https://constantinople1453.org/en/history/',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Istanbulin laatan päällä (1,5 yksikköä): '
+      + 'kaupungin laatan päälle osuva hetki ei ole pääkartalla (omistaja '
+      + '3.9.2026) vaan Istanbulin kohdekartan piste (Hagia Sofia, johon '
+      + 'aamu päättyi; muuri on kartan rajauksen ulkopuolella)',
+    lehti: { laji: 'kaupunki', avain: 'istanbul' },
+    lehtiJohdanto: 'Toukokuun 29. päivän aamuna 1453 kahdeksantuhatta '
+      + 'puolustajaa seisoi kahdentoista mailin muurilla, ja sama aamu '
+      + 'päättyi Hagia Sofian ovien murtumiseen — tuhatvuotinen '
+      + 'keisarikunta loppui yhdessä päivässä.',
+    lehtiTehtava: {
+      kysymys: 'Kuinka kauan Konstantinopolin piiritys kesti vuonna 1453?',
+      vaihtoehdot: [
+        'Kolme päivää',
+        'Kolme viikkoa',
+        '53 päivää',
+        'Kaksi vuotta',
+      ],
+      oikea: 2,
+      fakta: 'Piiritys alkoi 6. huhtikuuta; 21-vuotias Mehmed II teki '
+        + 'kaupungista valtakuntansa pääkaupungin.',
+    },
+  },
+  /*
+   * 39. LONTOO 2.9.1666 — PUDDING LANE JA THAMES.
+   * Piste on Lontoon laatan päällä (1 laudan yksikkö) ja kohdekartan
+   * rajauksessa (Pudding Lane). Vain Lontoon kaupunkilehdessä ja sen
+   * kohdekartalla (js/packs/maakartat.js "Palo 1666"). Kolmas kuva on
+   * The London Gazetten numero 85 (HETKI_LEHTIKUVAT).
+   * Lähde: en.wikipedia.org: Great Fire of London
+   */
+  {
+    id: 'lontoon-palo-1666',
+    otsikko: 'Lontoo 1666 — soitin veneessä, kaupunki tulessa',
+    nimio: 'Palo 1666',
+    paivays: '2.–5.9.1666',
+    paikka: 'Pudding Lane, Lontoo',
+    iso: 'GBR',
+    lat: 51.5102, lon: -0.0853,
+    kuvaversio: 4,
+    teksti: 'Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä '
+      + 'veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666, ja '
+      + 'Samuel Pepys, laivaston virkamies, kirjoittaa iltapäivällä '
+      + 'päiväkirjaansa ihmisistä, jotka jäivät koteihinsa, kunnes tuli '
+      + 'kosketti niitä, ja pakenivat sitten veneisiin. Tulipalo alkoi yöllä '
+      + 'Thomas Farrinerin leipomosta Pudding Lanella; talon piika, joka ei '
+      + 'uskaltanut kiivetä ikkunasta naapurin katolle, oli ensimmäinen '
+      + 'kuollut. Pormestari Thomas Bloodworth ei purattanut taloja tulen '
+      + 'tieltä, ja itätuuli teki lopun: kesä oli ollut kuiva, ja '
+      + 'puukaupungin kadut olivat kapeita. Pepys itse kaivaa '
+      + 'parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina tuli '
+      + 'tavoittaa Pyhän Paavalin katedraalin, jonka korjaustelineet '
+      + 'syttyvät; lyijykatto sulaa ja valuu kaduille, ja kryptaan '
+      + 'varastoidut kirjakauppiaiden varastot palavat. Keskiviikkona tuuli '
+      + 'laantuu. Palo tuhosi 13 200 taloa ja 87 kirkkoa, mutta kirjattuja '
+      + 'kuolleita on vain kourallinen — luku, jota epäillään yhä.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-lontoon-palo-1666-lahi-photo-v4.jpg',
+        kuvateksti: 'Samuel Pepys huomasi Thamesilla jotain oudon arkista: '
+          + 'lähes joka kolmannessa kotinsa tavaroita kuljettavassa veneessä '
+          + 'oli virginal-soitin. Kuvituksen nuori nainen pitää oman '
+          + 'soittimensa kantta kiinni kipinäsateessa — koti saattaa palaa, '
+          + 'mutta perhe ei vielä suostu jättämään kaikkia entisen elämän '
+          + 'ääniä rannalle.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: The National Archives — '
+          + 'Samuel Pepys and the Great Fire, tarkistettu 5.9.2026.',
+        url: 'https://www.nationalarchives.gov.uk/education/resources/great-fire-of-london-examine-the-evidence/extracts-from-samuel-pepys-diary/',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-lontoon-palo-1666-kauko-photo-v4.jpg',
+        kuvateksti: 'Thames täyttyi veneistä, vuoteista, arkuista ja vedessä '
+          + 'kelluvista tavaroista. Pepys kirjoitti kipinöiden polttaneen '
+          + 'kasvoja joen toiselle puolelle asti; veneessä jokainen joutui '
+          + 'silti ratkaisemaan, auttaako vielä yhtä naapuria vai soutaako '
+          + 'oman perheensä turvaan.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: The National Archives — '
+          + 'Samuel Pepys and the Great Fire, tarkistettu 5.9.2026.',
+        url: 'https://www.nationalarchives.gov.uk/education/resources/great-fire-of-london-examine-the-evidence/extracts-from-samuel-pepys-diary/',
+      },
+      {
+        rooli: 'lehti',
+        tiedosto: 'hetki-lontoon-palo-1666-lehti-photo-v4.jpg',
+        kuvateksti: 'Palo tuhosi myös The London Gazetten painopaikan, ja '
+          + 'numero 85 ilmestyi viikon keskeytyksen jälkeen Savoyssa. '
+          + 'Virallinen selostus lupasi lukijoille “lyhyen mutta '
+          + 'totuudenmukaisen” kertomuksen; kadulle jääneille tuhansille se '
+          + 'oli ensimmäinen painettu yritys tehdä käsittämätön menetys '
+          + 'ymmärrettäväksi.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: The National Archives — '
+          + 'Samuel Pepys and the Great Fire, tarkistettu 5.9.2026.',
+        url: 'https://www.nationalarchives.gov.uk/education/resources/great-fire-of-london-examine-the-evidence/extracts-from-samuel-pepys-diary/',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Lontoon laatan päällä (1 yksikkö) ja '
+      + 'Lontoon kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Lontoon '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'lontoo' },
+    lehtiJohdanto: 'Pudding Lanen leipomosta syyskuun 1666 yönä lähtenyt tuli '
+      + 'poltti neljässä päivässä 13 200 taloa, ja Thames täyttyi veneistä, '
+      + 'joihin ihmiset pakkasivat sen, mitä ehtivät.',
+    lehtiTehtava: {
+      kysymys: 'Mitä Samuel Pepys hautasi puutarhaansa palon uhatessa?',
+      vaihtoehdot: [
+        'Parmesaanijuuston ja viininsä',
+        'Päiväkirjansa',
+        'Laivaston asiakirjat',
+        'Vaimonsa korut',
+      ],
+      oikea: 0,
+      fakta: 'Palo alkoi Thomas Farrinerin leipomosta sunnuntaina 2. '
+        + 'syyskuuta; keskiviikkona tuuli laantui ja palo sammui.',
+    },
+  },
+  /*
+   * 40. BERNAUER STRASSE 13.8.1961 — PIIKKILANKA KADUN POIKKI.
+   * Piste on Berliinin laatan päällä (0,6 laudan yksikköä) ja kohdekartan
+   * rajauksessa (Bernauer Straße). Vain Berliinin kaupunkilehdessä ja sen
+   * kohdekartalla (js/packs/maakartat.js "Muuri 1961"). Kolmas kuva on
+   * BILD-lehden etusivu 14.8.1961 (HETKI_LEHTIKUVAT).
+   * Lähde: en.wikipedia.org: Berlin Wall
+   */
+  {
+    id: 'berliinin-muuri-1961',
+    otsikko: 'Bernauer Straße 1961 — piikkilanka kadun poikki',
+    nimio: 'Muuri 1961',
+    paivays: '13.8.1961',
+    paikka: 'Bernauer Straße, Berliini',
+    iso: 'DEU',
+    lat: 52.5375, lon: 13.3933,
+    kuvaversio: 4,
+    teksti: 'Ilmavasaroiden ääni herättää Bernauer Straßen ennen aamunkoittoa. '
+      + 'On sunnuntai 13. elokuuta 1961, ja keskiyöllä Itä-Saksan poliisi, '
+      + 'armeija ja tehtaiden taisteluryhmät ovat alkaneet sulkea rajaa '
+      + 'Länsi-Berliiniin: katukiveys revitään, betonipylväät nostetaan '
+      + 'pystyyn, piikkilanka vedetään väliin 43 kilometrin matkalle '
+      + 'kaupungin halki. Kadulla, jolla talot ovat itää ja jalkakäytävä '
+      + 'länttä, ihmiset seisovat yöpuvuissaan ja katselevat. Kaksi '
+      + 'kuukautta aiemmin Walter Ulbricht oli sanonut '
+      + 'lehdistötilaisuudessa, ettei kenelläkään ole aikomusta rakentaa '
+      + 'muuria; edellisenä iltana hän allekirjoitti käskyn hallituksen '
+      + 'vierastalossa Döllnseellä. Sulkemisen syy on yksinkertainen: '
+      + 'DDR:stä on lähtenyt vuoden 1949 jälkeen noin 3,5 miljoonaa '
+      + 'ihmistä, nuoria ja koulutettuja. Länsi ei tee mitään — Kennedy saa '
+      + 'tiedon huvijahdillaan vasta puoliltapäivin. Seuraavina viikkoina '
+      + 'Bernauer Straßen talojen ovet ja ikkunat muurataan umpeen; 22. '
+      + 'elokuuta Ida Siekmann hyppää kolmannesta kerroksesta ja kuolee, '
+      + 'muurin ensimmäinen uhri. Betonimuuri seuraa piikkilankaa, ja se '
+      + 'seisoo 28 vuotta.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-berliinin-muuri-1961-lahi-photo-v4.jpg',
+        kuvateksti: 'Bernauer Straßella talon seinä kuului itään mutta '
+          + 'jalkakäytävä länteen. Kuvituksen sisarukset ovat yhä '
+          + 'huutoetäisyydellä, kun nuori poliisi kiristää lankaa heidän '
+          + 'väliinsä; kukaan heistä ei vielä tiedä, että ovet ja ikkunat '
+          + 'muurataan tulevina päivinä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Chronik der Mauer — 13 '
+          + 'August 1961, tarkistettu 5.9.2026.',
+        url: 'https://www.chronik-der-mauer.de/180100/mauerbau-13-august-1961',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-berliinin-muuri-1961-kauko-photo-v4.jpg',
+        kuvateksti: 'Opiskelijan pyörä on samalla kadulla kuin eilen, mutta '
+          + 'tie isän luo katkeaa betonipylväisiin ja piikkilankaan. Yli '
+          + '10 000 poliisia, sotilasta ja taisteluryhmäläistä sulkee '
+          + 'kaupungin rajan; nuorelle kaikki tiivistyy siihen, tunnistaako '
+          + 'isä hänet väkijoukon toiselta puolelta.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Chronik der Mauer — 13 '
+          + 'August 1961, tarkistettu 5.9.2026.',
+        url: 'https://www.chronik-der-mauer.de/180100/mauerbau-13-august-1961',
+      },
+      {
+        rooli: 'lehti',
+        tiedosto: 'hetki-berliinin-muuri-1961-lehti-photo-v4.jpg',
+        kuvateksti: 'BILD tiivisti 14.8.1961 yön tapahtumat otsikkoon “Berlin — '
+          + 'Panzer im Ostsektor”. Panssarit olivat totta, mutta Bernauer '
+          + 'Straßella uutisen mitta oli pienempi: tuttu ikkuna, naapurin '
+          + 'ääni ja perheenjäsen, jonka luo ei enää saanut ylittää katua.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Chronik der Mauer — 13 '
+          + 'August 1961, tarkistettu 5.9.2026.',
+        url: 'https://www.chronik-der-mauer.de/180100/mauerbau-13-august-1961',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Berliinin laatan päällä (0,6 yksikköä) ja '
+      + 'Berliinin kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Berliinin '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'berliini' },
+    lehtiJohdanto: 'Elokuun 1961 sunnuntaiaamuna berliiniläiset heräsivät '
+      + 'ilmavasaroihin: kadun poikki vedettiin piikkilanka, ja Bernauer '
+      + 'Straßella talon ovi ja sen edustan jalkakäytävä jäivät eri '
+      + 'valtioihin.',
+    lehtiTehtava: {
+      kysymys: 'Mitä Walter Ulbricht oli sanonut kaksi kuukautta ennen rajan '
+        + 'sulkemista?',
+      vaihtoehdot: [
+        'Että muuri rakennetaan syksyllä',
+        'Että Länsi-Berliini liitetään DDR:ään',
+        'Ettei kenelläkään ole aikomusta rakentaa muuria',
+        'Että raja avataan kokonaan',
+      ],
+      oikea: 2,
+      fakta: 'Ida Siekmann kuoli 22. elokuuta 1961 hypättyään kotinsa '
+        + 'ikkunasta Bernauer Straßella — muurin ensimmäinen uhri.',
+    },
+  },
+  /*
+   * 41. SIKSTUKSEN KAPPELI 1510 — TELINEELLÄ, PÄÄ TAAKSEPÄIN.
+   * Piste on Rooman laatan päällä (1,4 laudan yksikköä) ja kohdekartan
+   * rajauksessa (Vatikaani). Vain Rooman kaupunkilehdessä ja sen
+   * kohdekartalla (js/packs/maakartat.js "Sikstus 1510").
+   * Lähde: en.wikipedia.org: Sistine Chapel ceiling
+   */
+  {
+    id: 'michelangelo-sikstus-1510',
+    otsikko: 'Sikstuksen kappeli 1510 — giornata kerrallaan',
+    nimio: 'Sikstus 1510',
+    paivays: '1510',
+    paikka: 'Sikstuksen kappeli, Vatikaani',
+    iso: 'ITA',
+    lat: 41.9031, lon: 12.4544,
+    kuvaversio: 4,
+    teksti: 'Niska ei enää suoristu illalla, ja maali tippuu silmille. '
+      + 'Michelangelo Buonarroti seisoo — ei makaa, vaikka niin kerrotaan — '
+      + 'telineellä pää taaksepäin taivutettuna ja maalaa Sikstuksen '
+      + 'kappelin holvia. Paavi Julius II pakotti hänet työhön 1508, vaikka '
+      + 'hän on kuvanveistäjä eikä freskomaalari; sopimus lupaa 3 000 '
+      + 'dukaattia. Freskoa tehdään tuoreelle kalkkirappaukselle, giornata '
+      + 'kerrallaan: apulainen levittää aamulla sen verran laastia kuin '
+      + 'päivässä ehtii maalata, ja mikä ei ehdi, hakataan pois. Rappauksen '
+      + 'kosteus tuo homeen, ja ensimmäiset kuukaudet joudutaan tekemään '
+      + 'uudelleen. Syyskuussa 1510 holvin ensimmäinen puolisko, Nooan '
+      + 'juopumuksesta Eevan luomiseen, on valmis, ja työ katkeaa: paavi on '
+      + 'lähtenyt sotaan Bolognaan eikä maksa, eikä uutta telinettä ole. '
+      + 'Puolisko paljastetaan yleisölle 15. elokuuta 1511. Toinen puoli, '
+      + 'Aadamin luominen mukaan lukien, syntyy nopeammin ja suuremmin '
+      + 'hahmoin, ja koko katto — yli 300 hahmoa — avataan pyhäinpäiväksi '
+      + '1512. Michelangelo on 37.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-michelangelo-sikstus-1510-lahi-photo-v4.jpg',
+        kuvateksti: 'Freskomaalarilla on vain märän rappauksen verran aikaa. '
+          + 'Michelangelo kurottaa päivän uutta giornataa kohti, kun apulainen '
+          + 'odottaa värikupin kanssa ja tarkkailee pinnan kuivumista; jos '
+          + 'kalkki ehtii sitoutua, sävy ei enää uppoa seinään eikä virhettä '
+          + 'voi peittää seuraavana aamuna.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Vatican Museums — Sistine '
+          + 'Chapel ceiling, tarkistettu 5.9.2026.',
+        url: 'https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/cappella-sistina/volta.html',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-michelangelo-sikstus-1510-kauko-photo-v4.jpg',
+        kuvateksti: 'Vuonna 1510 vasta katon ensimmäinen puolisko on '
+          + 'valmistumassa. Telineellä yksi mies levittää tuoretta '
+          + 'pintalaastia, toinen nostaa vettä ja Michelangelo työskentelee '
+          + 'pienellä alueella kerrallaan — valtava kertomus syntyy '
+          + 'käytännössä ämpäri, sivellin ja niskaa jäytävä tunti kerrallaan.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Vatican Museums — Sistine '
+          + 'Chapel ceiling, tarkistettu 5.9.2026.',
+        url: 'https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/cappella-sistina/volta.html',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Rooman laatan päällä (1,4 yksikköä) ja '
+      + 'Rooman kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Rooman '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'rooma' },
+    lehtiJohdanto: 'Vatikaanin kappelin holvin alla seisoi vuonna 1510 '
+      + 'kuvanveistäjä, joka ei halunnut maalata, ja teki sen silti '
+      + 'päivän laastiannos kerrallaan — neljä vuotta ja yli 300 hahmoa.',
+    lehtiTehtava: {
+      kysymys: 'Missä asennossa Michelangelo maalasi Sikstuksen kappelin '
+        + 'kattoa?',
+      vaihtoehdot: [
+        'Selällään telineellä maaten',
+        'Riippuen köysissä katosta',
+        'Istuen tikkailla',
+        'Seisten pää taaksepäin taivutettuna',
+      ],
+      oikea: 3,
+      fakta: 'Katon ensimmäinen puolisko näytettiin 15. elokuuta 1511 ja '
+        + 'koko holvi pyhäinpäivänä 1512; Michelangelo oli 37.',
+    },
+  },
+  /*
+   * 42. WIEN, KÄRNTNERTOR-TEATTERI 7.5.1824 — SÄVELTÄJÄ KÄÄNNETÄÄN.
+   * Piste on Wienin laatan päällä (0,9 laudan yksikköä) ja kohdekartan
+   * rajauksessa (Valtionoopperan vieressä). Vain Wienin kaupunkilehdessä
+   * ja sen kohdekartalla (js/packs/maakartat.js "Yhdeksäs 1824").
+   * Lähde: en.wikipedia.org: Symphony No. 9 (Beethoven)
+   */
+  {
+    id: 'beethoven-yhdeksas-1824',
+    otsikko: 'Kärntnertor 1824 — suosionosoitukset, joita ei kuule',
+    nimio: 'Yhdeksäs 1824',
+    paivays: '7.5.1824',
+    paikka: 'Theater am Kärntnertor, Wien',
+    iso: 'AUT',
+    lat: 48.2033, lon: 16.3708,
+    kuvaversio: 4,
+    teksti: '”Kääntäkää hänet.” Kukaan ei tiedä, kuka sen sanoo, mutta Caroline '
+      + 'Unger tekee sen. Wienin Kärntnertor-teatterissa on 7. toukokuuta '
+      + '1824, ja yhdeksännen sinfonian viimeinen sointu on juuri vaiennut. '
+      + 'Ludwig van Beethoven, 53, seisoo orkesterin edessä selin saliin ja '
+      + 'lyö tahtia, sillä hän on lähes täysin kuuro eikä kuule, että teos '
+      + 'on ohi. Kapellimestari Michael Umlauf on neuvonut soittajia '
+      + 'seuraamaan häntä eikä säveltäjää; kaksi vuotta aiemmin hän näki '
+      + 'Beethovenin Fidelio-harjoituksen romahtavan. Kaksikymmentävuotias '
+      + 'alttolaulaja Unger ottaa säveltäjää hihasta ja kääntää hänet kohti '
+      + 'yleisöä. Sali on jaloillaan: ihmiset heiluttavat hattuja ja '
+      + 'nenäliinoja, jotta kuuro mies näkisi, mitä ei kuule. Ovaatioita '
+      + 'tulee viisi. Yleisössä ovat Schubert, Czerny ja kansleri '
+      + 'Metternich. Sinfonia on ensimmäinen, jossa suuri orkesteri saa '
+      + 'rinnalleen kuoron ja solistit — Schillerin Oodi ilolle, tekstinä, '
+      + 'jota Beethoven on kantanut mukanaan nuoruudestaan. Samassa '
+      + 'konsertissa kuullaan Missa solemniksen kolme osaa. Sävel on nyt '
+      + 'Euroopan hymni.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-beethoven-yhdeksas-1824-lahi-photo-v4.jpg',
+        kuvateksti: 'Caroline Unger koskettaa Beethovenin hihaa ja kääntää '
+          + 'hänet kohti salia. Säveltäjä ei kuule suosionosoituksia; hetken '
+          + 'ajan hän joutuu lukemaan oman teoksensa vastaanoton kasvoista, '
+          + 'kohoavista käsistä ja lattian värinästä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Beethoven-Haus Bonn — Ninth '
+          + 'Symphony, tarkistettu 5.9.2026.',
+        url: 'https://www.beethoven.de/en/g/bthvn2024',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-beethoven-yhdeksas-1824-kauko-photo-v4.jpg',
+        kuvateksti: 'Orkesterin alttoviulisti pitää katseensa Umlaufin '
+          + 'tahtipuikossa, vaikka Beethoven merkitsee vieressä tempoja koko '
+          + 'kehollaan. Muusikot ovat sopineet seuraavansa varsinaista '
+          + 'kapellimestaria — raskas mutta välttämätön ratkaisu, jotta kuuron '
+          + 'säveltäjän valtava partituuri pysyy koossa.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Beethoven-Haus Bonn — Ninth '
+          + 'Symphony, tarkistettu 5.9.2026.',
+        url: 'https://www.beethoven.de/en/g/bthvn2024',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Wienin laatan päällä (0,9 yksikköä) ja '
+      + 'Wienin kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Wienin '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'wien' },
+    lehtiJohdanto: 'Kärntnertor-teatterissa nousi toukokuussa 1824 sali '
+      + 'seisomaan viisi kertaa, ja kuuro säveltäjä näki sen vasta, kun '
+      + 'nuori alttolaulaja käänsi hänet yleisöön päin.',
+    lehtiTehtava: {
+      kysymys: 'Kuka johti yhdeksännen sinfonian kantaesityksen '
+        + 'virallisesti?',
+      vaihtoehdot: [
+        'Beethoven itse',
+        'Franz Schubert',
+        'Kapellimestari Michael Umlauf',
+        'Caroline Unger',
+      ],
+      oikea: 2,
+      fakta: 'Umlauf oli neuvonut soittajia seuraamaan häntä eikä lähes '
+        + 'kuuroa säveltäjää, joka löi tahtia lavan reunassa.',
+    },
+  },
+  /*
+   * 43. SOUTHWARK, SYYSKUU 1599 — JULIUS CAESAR GLOBESSA.
+   * Piste on Lontoon laatan päällä (0,7 laudan yksikköä) ja kohdekartan
+   * rajauksessa (Bankside). Vain Lontoon kaupunkilehdessä ja sen
+   * kohdekartalla (js/packs/maakartat.js "Globe 1599").
+   * Lähde: en.wikipedia.org: Globe Theatre
+   */
+  {
+    id: 'shakespeare-globe-1599',
+    otsikko: 'Globe 1599 — pihalla ei ole koskaan hiljaista',
+    nimio: 'Globe 1599',
+    paivays: '21.9.1599',
+    paikka: 'Globe-teatteri, Southwark, Lontoo',
+    iso: 'GBR',
+    lat: 51.5067, lon: -0.0947,
+    kuvaversio: 4,
+    teksti: 'Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon '
+      + 'keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa '
+      + 'näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää '
+      + 'Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. '
+      + 'Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on '
+      + 'rakennettu samana vuonna puusta, joka purettiin talvella '
+      + 'Shoreditchin vanhasta The Theatre -näyttämöstä, kun vuokraisäntä '
+      + 'yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat '
+      + 'siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu '
+      + 'noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta '
+      + 'nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on '
+      + 'ensimmäinen varma tieto Globen esityksestä. Naisia ei näyttämöllä '
+      + 'ole — Portian, Calpurnian ja Kleopatran roolit puhuvat '
+      + 'äänenmurroksen kynnyksellä olevat pojat. Teatteri palaa 29. '
+      + 'kesäkuuta 1613, kun tykki sytyttää olkikaton kesken Henrik VIII:n; '
+      + 'ainoa vahinko on mies, jonka palavat housut sammutetaan oluella.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-shakespeare-globe-1599-lahi-photo-v4.jpg',
+        kuvateksti: 'Nuori poikanäyttelijä astuu Calpurniana näyttämölle, vain '
+          + 'käsivarren mitan päähän äänekkäistä pihakatsojista. Hänen on '
+          + 'saatava Caesarin paha uni kuuluviin ilman mikrofonia, kulisseja '
+          + 'tai naamiota; yhdellä väärällä hengityksellä penniyleisö ehtii jo '
+          + 'vastata takaisin.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Shakespeare\'s Globe — '
+          + 'history of the Globe Theatre, tarkistettu 5.9.2026.',
+        url: 'https://www.shakespearesglobe.com/discover/about-us/globe-theatre/',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-shakespeare-globe-1599-kauko-photo-v4.jpg',
+        kuvateksti: 'Sveitsiläinen Thomas Platter kertoi ylittäneensä Thamesin '
+          + 'noin kahdelta ja nähneensä Julius Caesarin viidentoista '
+          + 'näyttelijän voimin. Pihalla tarina ei ollut hiljainen pyhä '
+          + 'toimitus: katsojat söivät, kommentoivat ja väistelivät toisiaan '
+          + 'samalla kun näyttelijät yrittivät pitää koko avoimen talon '
+          + 'otteessaan.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Shakespeare\'s Globe — '
+          + 'history of the Globe Theatre, tarkistettu 5.9.2026.',
+        url: 'https://www.shakespearesglobe.com/discover/about-us/globe-theatre/',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Lontoon laatan päällä (0,7 yksikköä) ja '
+      + 'Lontoon kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Lontoon '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'lontoo' },
+    lehtiJohdanto: 'Thamesin etelärannalle nousi 1599 vanhan teatterin '
+      + 'hirsistä pyöreä puutalo, jossa penniyleisö seisoi taivasalla ja '
+      + 'pojat näyttelivät naisia — ja sveitsiläinen matkailija kirjoitti '
+      + 'nähneensä siellä Julius Caesarin.',
+    lehtiTehtava: {
+      kysymys: 'Mistä Globe-teatterin rakennuspuu oli peräisin?',
+      vaihtoehdot: [
+        'Kuninkaan laivastotelakalta',
+        'Shoreditchin vanhasta The Theatre -näyttämöstä',
+        'Norjasta tuoduista tukeista',
+        'Puretusta Southwarkin luostarista',
+      ],
+      oikea: 1,
+      fakta: 'Globe paloi 29. kesäkuuta 1613, kun näytelmän tykki sytytti '
+        + 'olkikaton; se rakennettiin uudelleen seuraavana vuonna.',
+    },
+  },
+  /*
+   * 44. WIEN, BURGTHEATER 1.5.1786 — FIGARON HÄÄT.
+   * Piste on Wienin laatan päällä (1,1 laudan yksikköä) ja kohdekartan
+   * rajauksessa (vanha Burgtheater Michaelerplatzilla, Hofburgin
+   * vieressä). Vain Wienin kaupunkilehdessä ja sen kohdekartalla
+   * (js/packs/maakartat.js "Figaro 1786").
+   * Lähde: en.wikipedia.org: The Marriage of Figaro
+   */
+  {
+    id: 'mozart-wien-1786',
+    otsikko: 'Burgtheater 1786 — palvelijat nolaavat isäntänsä',
+    nimio: 'Figaro 1786',
+    paivays: '1.5.1786',
+    paikka: 'Burgtheater, Wien',
+    iso: 'AUT',
+    lat: 48.2078, lon: 16.3665,
+    kuvaversio: 4,
+    teksti: 'Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. '
+      + 'Wienin Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus '
+      + 'Mozart, 30, johtaa Figaron häitä soittimensa äärestä, kuten tapa '
+      + 'on. Ooppera perustuu Beaumarchais\'n näytelmään, jonka keisari '
+      + 'Joosef II on kieltänyt Wienin näyttämöiltä, koska siinä palvelija '
+      + 'nolaa isäntänsä; Lorenzo Da Ponte kirjoitti libreton kuudessa '
+      + 'viikossa, poisti poliittiset puheet ja sai keisarilta luvan '
+      + 'oopperalle. Susannaa laulaa englantilainen Nancy Storace, Figaroa '
+      + 'Francesco Benucci. Yleisö vaatii ensi-iltana viisi numeroa '
+      + 'uudelleen ja toisessa esityksessä seitsemän, kunnes keisari '
+      + 'määrää, ettei useamman laulajan numeroita saa toistaa — esitys '
+      + 'venyy muuten yöhön. Mozart on saanut työstä 450 floriinia, kolme '
+      + 'kertaa Salzburgin hovimuusikon vuosipalkan. Esityksiä tulee '
+      + 'Wienissä yhdeksän, eikä menestys ole valtava. Prahassa ooppera '
+      + 'villitsee talvella koko kaupungin, ja sen ihailijat maksavat '
+      + 'Mozartin matkan sinne tammikuussa 1787. Siitä syntyy tilaus Don '
+      + 'Giovannille.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-mozart-wien-1786-lahi-photo-v4.jpg',
+        kuvateksti: 'Anna Storace odottaa Susannan seuraavaa repliikkiä ja '
+          + 'etsii Mozartin katseesta sisääntulon. Cembalon äärestä johtava '
+          + 'säveltäjä voi auttaa vain pienellä nyökkäyksellä — näyttämöllä '
+          + 'laulajan on muutettava kuukausien hovijuorut, peruutukset ja '
+          + 'harjoitukset yhdeksi vaivattomalta kuulostavaksi lauseeksi.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Mozarteum — Le nozze di '
+          + 'Figaro critical edition, tarkistettu 5.9.2026.',
+        url: 'https://dme.mozarteum.at/DME/objs/pdf/nma_305_-30_-3_eng.pdf',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-mozart-wien-1786-kauko-photo-v4.jpg',
+        kuvateksti: 'Mozart johtaa Figaron kahta ensimmäistä esitystä '
+          + 'cembalosta, keskellä laulajia, soittajia ja pienen hoviteatterin '
+          + 'tiivistä yleisöä. Parterren nuori nuotinkääntäjä kuulee salin '
+          + 'naurun siirtyvän kohtauksesta toiseen ja tajuaa ennen '
+          + 'arvostelijoita, että yleisö seuraa palvelijoiden juonta yhtä '
+          + 'tarkasti kuin aatelisia.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Mozarteum — Le nozze di '
+          + 'Figaro critical edition, tarkistettu 5.9.2026.',
+        url: 'https://dme.mozarteum.at/DME/objs/pdf/nma_305_-30_-3_eng.pdf',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Wienin laatan päällä (1,1 yksikköä) ja '
+      + 'Wienin kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Wienin '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'wien' },
+    lehtiJohdanto: 'Hofburgin vieressä sijainneessa hoviteatterissa '
+      + 'kantaesitettiin toukokuussa 1786 ooppera kielletystä näytelmästä, '
+      + 'ja yleisö vaati numeroita uusiksi niin, että keisarin oli '
+      + 'puututtava asiaan.',
+    lehtiTehtava: {
+      kysymys: 'Miksi keisari Joosef II rajoitti Figaron häiden '
+        + 'uusintapyyntöjä?',
+      vaihtoehdot: [
+        'Esitys venyi toistojen takia liian pitkäksi',
+        'Hän piti oopperaa kumouksellisena',
+        'Laulajat vaativat lisäpalkkaa',
+        'Da Ponte oli loukannut häntä',
+      ],
+      oikea: 0,
+      fakta: 'Mozart johti kaksi ensimmäistä esitystä cembalon äärestä ja sai '
+        + 'työstä 450 floriinia.',
+    },
+  },
+  /*
+   * 45. WITTENBERG 31.10.1517 — KIRJE ARKKIPIISPALLE.
+   * Lähin kohdekaupunki Berliini 39 laudan yksikön päässä — oma merkki
+   * kartalle. Wittenbergillä ei ole kaupunkilehteä, joten sivu on Saksan
+   * maalehdessä.
+   * Lähde: en.wikipedia.org: Ninety-five Theses, Martin Luther
+   */
+  {
+    id: 'luther-wittenberg-1517',
+    otsikko: 'Wittenberg 1517 — kuka tämän oikein lukee?',
+    nimio: 'Luther 1517',
+    paivays: '31.10.1517',
+    paikka: 'Wittenberg, Saksi',
+    iso: 'DEU',
+    lat: 51.8664, lon: 12.6378,
+    kuvaversio: 4,
+    teksti: 'Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin '
+      + 'yliopiston teologian professori, taittaa 31. lokakuuta 1517 '
+      + 'kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 '
+      + 'väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa '
+      + 'aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa '
+      + 'virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta '
+      + 'uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se '
+      + 'olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. '
+      + 'Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, '
+      + 'naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp '
+      + 'Melanchthonin myöhempi kertomus, ja Luther itse sanoi aina '
+      + 'edenneensä virkatietä. Ratkaisevaa on painokone: teesit painetaan '
+      + 'Baselissa, Leipzigissä ja Nürnbergissä vielä samana vuonna, ja '
+      + 'saksannos kiertää käsin kopioituna. Albrecht lähettää ne Roomaan. '
+      + 'Vuonna 1521 paavi julistaa Lutherin pannaan, ja samana keväänä hän '
+      + 'seisoo Wormsin valtiopäivillä keisarin edessä kieltäytyen '
+      + 'perumasta. Kysymykseen vastaa lopulta koko Eurooppa.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-luther-wittenberg-1517-lahi-photo-v4.jpg',
+        kuvateksti: 'Luther sinetöi teesinsä arkkipiispa Albrechtille, ja nuori '
+          + 'yliopiston lähetti odottaa oven luona. Kumpikaan ei vielä kanna '
+          + '“uskonpuhdistajan” roolia: pöydällä on professorin kutsu '
+          + 'väittelyyn ja käytävällä mies, jonka tehtävä on vain saada kirje '
+          + 'perille.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Luther.de — the posting of '
+          + 'the theses, tarkistettu 5.9.2026.',
+        url: 'https://www.luther.de/en/legenden/tanschl.html',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-luther-wittenberg-1517-kauko-photo-v4.jpg',
+        kuvateksti: 'Linnankirkon ovi toimi yliopiston ilmoitustauluna, joten '
+          + 'avustajan kiinnittämä väittelykutsu ei välttämättä pysäytä montaa '
+          + 'ohikulkijaa. Emme tiedä varmasti, kiinnitettiinkö juuri nämä '
+          + 'teesit oveen 31. lokakuuta — niiden nopean leviämisen ratkaisi '
+          + 'joka tapauksessa kirjapaino, ei vasaran ääni.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Luther.de — the posting of '
+          + 'the theses, tarkistettu 5.9.2026.',
+        url: 'https://www.luther.de/en/legenden/tanschl.html',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'maa', avain: 'DEU' },
+    visa: {
+      kysymys: 'Kenelle Luther lähetti 95 teesinsä 31. lokakuuta 1517?',
+      vaihtoehdot: [
+        'Paavi Leo X:lle Roomaan',
+        'Mainzin arkkipiispa Albrechtille',
+        'Keisari Kaarle V:lle',
+      ],
+      oikea: 1,
+    },
+    lehtiJohdanto: 'Elben rannan yliopistokaupungista lähti lokakuussa 1517 '
+      + 'kohtelias kirje arkkipiispalle, ja sen liitteenä olleet 95 '
+      + 'latinankielistä väitettä levisivät painettuina nopeammin kuin '
+      + 'kukaan osasi odottaa.',
+    lehtiTehtava: {
+      kysymys: 'Mikä ratkaisi teesien nopean leviämisen?',
+      vaihtoehdot: [
+        'Linnankirkon oveen naulaaminen',
+        'Arkkipiispan julkinen vastaus',
+        'Keisarin kiertokirje',
+        'Painokoneet Baselissa, Leipzigissä ja Nürnbergissä',
+      ],
+      oikea: 3,
+      fakta: 'Naulaamisesta kertoi vasta Melanchthon myöhemmin; Luther itse '
+        + 'sanoi edenneensä virkatietä.',
+    },
+  },
+  /*
+   * 46. PARIISI 14.7.1789 — BASTILJIN PORTTI AUKEAA.
+   * Piste on Pariisin laatan päällä (1,3 laudan yksikköä) ja kohdekartan
+   * rajauksessa (Place de la Bastille; sama piste kuin kohde "Bastilji").
+   * Vain Pariisin kaupunkilehdessä ja sen kohdekartalla
+   * (js/packs/maakartat.js "Bastilji 1789").
+   * Lähde: en.wikipedia.org: Storming of the Bastille
+   */
+  {
+    id: 'ranskan-vallankumous-bastilji-1789',
+    otsikko: 'Bastilji 1789 — musketti ilman ruutia',
+    nimio: 'Bastilji 1789',
+    paivays: '14.7.1789',
+    paikka: 'Bastilji, Pariisi',
+    iso: 'FRA',
+    lat: 48.8533, lon: 2.3692,
+    kuvaversio: 4,
+    teksti: 'Musketti painaa olkapäällä, mutta siihen ei ole ruutia. '
+      + 'Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on '
+      + 'tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 '
+      + 'kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama '
+      + 'päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen '
+      + 'Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. '
+      + 'Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin '
+      + 'ympärille on koottu joukkoja; Camille Desmoulins on huutanut '
+      + 'Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa '
+      + 'on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä '
+      + 'krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. '
+      + 'Neuvottelut kestävät koko päivän. Iltapäivällä joukko pääsee '
+      + 'ulkopihalle, varuskunta ampuu, ja lähes sata hyökkääjää kuolee. '
+      + 'Kello viiden jälkeen de Launay antautuu; hänet raahataan '
+      + 'kaupungintalolle ja surmataan matkalla. Linnoitus puretaan '
+      + 'seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee '
+      + 'Versailles\'sta Pariisin kaupungintalolle ja kiinnittää hattuunsa '
+      + 'kaupungin sinipunaisen kokardin; Lafayette lisää siihen valkoisen, ja '
+      + 'siitä tulee trikolori.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v4.jpg',
+        kuvateksti: 'Kuvituksen pariisilainen metallityöläinen on kantanut '
+          + 'Invalidikirkolta hakemaansa muskettia tuntikausia, mutta ruutia '
+          + 'hän etsii yhä. Kun Bastiljin portti viimein avautuu, voitonriemu '
+          + 'sekoittuu pelkoon: savun takana odottaa piha, jolta äsken '
+          + 'ammuttiin väkijoukkoon.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Musée Carnavalet — Taking of '
+          + 'the Bastille, tarkistettu 5.9.2026.',
+        url: 'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/prise-de-la-bastille-le-14-juillet-1789-1',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-ranskan-vallankumous-bastilji-1789-kauko-photo-v4.jpg',
+        kuvateksti: 'Vankilan sveitsiläinen sotilas laskee aseensa ja yrittää '
+          + 'kadota sisäpihan reunaan ennen kuin virta saavuttaa hänet. '
+          + 'Portista tuleville pariisilaisille Bastilji on sortovallan linna; '
+          + 'hänelle se on paikka, jossa univormu voi yhtäkkiä tehdä ihmisestä '
+          + 'vihollisen.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Musée Carnavalet — Taking of '
+          + 'the Bastille, tarkistettu 5.9.2026.',
+        url: 'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/prise-de-la-bastille-le-14-juillet-1789-1',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Pariisin laatan päällä (1,3 yksikköä) ja '
+      + 'Pariisin kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'pariisi' },
+    lehtiJohdanto: 'Saint-Antoinen esikaupungin reunalla seisoi heinäkuussa '
+      + '1789 linnoitus, jossa oli seitsemän vankia ja 250 tynnyriä '
+      + 'ruutia — ja juuri ruudin takia väkijoukko tuli sen porteille.',
+    lehtiTehtava: {
+      kysymys: 'Miksi pariisilaiset marssivat Bastiljiin 14. heinäkuuta '
+        + '1789?',
+      vaihtoehdot: [
+        'Vapauttamaan satoja poliittisia vankeja',
+        'Hakemaan ruutia Invalidien musketteihin',
+        'Vangitsemaan kuninkaan',
+        'Polttamaan verokirjat',
+      ],
+      oikea: 1,
+      fakta: 'Vankeja oli seitsemän; kuvernööri de Launay antautui kello '
+        + 'viiden jälkeen ja surmattiin matkalla kaupungintalolle.',
+    },
+  },
+  /*
+   * 47. ATEENA, PANATHINAIKO 10.4.1896 — MARATONIN VOITTAJA SAAPUU.
+   * Piste on Ateenan laatan päällä (0,1 laudan yksikköä) ja kohdekartan
+   * rajauksessa (Kallimarmaro-stadion). Vain Ateenan kaupunkilehdessä ja
+   * sen kohdekartalla (js/packs/maakartat.js "Louis 1896").
+   * Lähde: en.wikipedia.org: 1896 Summer Olympics, Spyridon Louis
+   */
+  {
+    id: 'olympia-ateena-1896',
+    otsikko: 'Panathinaiko 1896 — jalat jatkavat, kun pää ei tiedä',
+    nimio: 'Louis 1896',
+    paivays: '10.4.1896',
+    paikka: 'Panathinaiko-stadion, Ateena',
+    iso: 'GRC',
+    lat: 37.9683, lon: 23.7411,
+    kuvaversio: 4,
+    teksti: 'Jalat ovat pölyn peitossa, ja ne jatkavat, vaikka pää ei enää '
+      + 'tiedä, missä on. Spyridon Louis, 23-vuotias vedenkantaja Marousin '
+      + 'kylästä Ateenan pohjoispuolelta, on juossut noin 40 kilometriä '
+      + 'Marathonin kylästä ja saapuu 10. huhtikuuta 1896 '
+      + 'Panathinaiko-stadionin marmoriportista sisään ensimmäisenä. '
+      + 'Katsomossa on kymmeniätuhansia — enemmän kuin missään '
+      + 'urheilutapahtumassa koskaan —, ja kuningas Yrjö I nousee '
+      + 'seisomaan. Kruununprinssi Konstantin ja prinssi Yrjö juoksevat '
+      + 'viimeisen kierroksen hänen vierellään. Aika on 2.58.50. Maratonia '
+      + 'ei ole koskaan aiemmin juostu: ranskalainen kielitieteilijä Michel '
+      + 'Bréal ehdotti kilpailua Feidippideen tarinan mukaan ja lahjoitti '
+      + 'voittajalle hopeamaljan. Kreikka on hävinnyt ensimmäisten '
+      + 'nykyaikaisten olympialaisten juoksulajit amerikkalaisille, ja tämä '
+      + 'yksi voitto on se, jota koko kaupunki odotti. Louis ei enää '
+      + 'kilpaile; kerrotaan, että hän pyysi palkinnoksi hevosen ja kärryt '
+      + 'vesikuljetuksiinsa. Kolmanneksi tullut Spyridon Belokas todetaan '
+      + 'pian huijariksi — hän oli matkustanut osan matkaa vaunuissa.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-olympia-ateena-1896-lahi-photo-v4.jpg',
+        kuvateksti: 'Spyridon Louis kuulee stadionin huudon ennen kuin ehtii '
+          + 'nähdä marmorikatsomot. Kruununprinssi Konstantin ja prinssi Yrjö '
+          + 'juoksevat hänen rinnalleen; 23-vuotiaan vedenkantajan on enää '
+          + 'pysyttävä jaloillaan kierros, jonka jokainen askel näyttää koko '
+          + 'Ateenan yhteiseltä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Olympic World Library — '
+          + 'Athens 1896 report, tarkistettu 5.9.2026.',
+        url: 'https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=2435580&parentDocumentId=2435579&skipCopyright=true&skipWatermark=true',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-olympia-ateena-1896-kauko-photo-v4.jpg',
+        kuvateksti: 'Louisin isä murtautuu radan reunalle ja etsii poikansa '
+          + 'pölyisiä kasvoja kahden prinssin välistä. Kuusikymmentätuhantinen '
+          + 'stadion juhlii Kreikan voittoa, mutta isälle väkijoukon keskellä '
+          + 'on vain yksi tärkeä kysymys: hengittääkö Spyros vielä '
+          + 'tasaisesti.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Olympic World Library — '
+          + 'Athens 1896 report, tarkistettu 5.9.2026.',
+        url: 'https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=2435580&parentDocumentId=2435579&skipCopyright=true&skipWatermark=true',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Ateenan laatan päällä (0,1 yksikköä) ja '
+      + 'Ateenan kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Ateenan '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'ateena' },
+    lehtiJohdanto: 'Marmoristadionille juoksi huhtikuussa 1896 Marousin '
+      + 'vedenkantaja kahden prinssin saattamana, ja ensimmäisten '
+      + 'nykyaikaisten olympialaisten isäntämaa sai voiton, jota se oli '
+      + 'odottanut koko kisojen ajan.',
+    lehtiTehtava: {
+      kysymys: 'Kuka ehdotti maratonjuoksua vuoden 1896 olympialaisiin?',
+      vaihtoehdot: [
+        'Pierre de Coubertin',
+        'Kruununprinssi Konstantin',
+        'Kielitieteilijä Michel Bréal',
+        'Spyridon Louis itse',
+      ],
+      oikea: 2,
+      fakta: 'Bréal lahjoitti voittajalle hopeamaljan; Louisin aika oli '
+        + '2.58.50, eikä hän kilpaillut enää koskaan.',
+    },
+  },
+  /*
+   * 48. HELSINKI, RUOTSALAINEN TEATTERI 4.11.1899 — SUOMI HERÄÄ.
+   * Piste on Helsingin kohdekartan rajauksessa (Erottaja; 16 laudan
+   * yksikköä Helsingin laatasta, joka on laudalla siirretty keskustasta).
+   * Raamattu: kohdekartan rajauksen sisällä oleva nosto piirretään VAIN
+   * kohdekartalle — sivu on Helsingin kaupunkilehdessä ja piste sen
+   * kohdekartalla (js/packs/maakartat.js "Suomi herää 1899").
+   * Lähde: en.wikipedia.org: Finlandia, Jean Sibelius
+   */
+  {
+    id: 'sibelius-finlandia-1899',
+    otsikko: 'Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen',
+    nimio: 'Suomi herää 1899',
+    paivays: '4.11.1899',
+    paikka: 'Ruotsalainen teatteri, Helsinki',
+    iso: 'FIN',
+    lat: 60.1672, lon: 24.9433,
+    kuvaversio: 4,
+    teksti: 'Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. '
+      + 'marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä keisarillinen '
+      + 'sensuuri on juuri lakkauttanut. Lehdistön päivien juhlaa vietetään '
+      + 'virallisesti sanomalehtimiesten eläkekassan hyväksi; oikeasti se on '
+      + 'protesti helmikuun manifestia vastaan, jolla Nikolai II on alkanut '
+      + 'supistaa Suomen autonomiaa. Ohjelmassa on kuusi historiallista '
+      + 'kuvaelmaa Väinämöisestä isoonvihaan, ja jokaiseen niistä Jean '
+      + 'Sibelius, 33, on kirjoittanut musiikin. Viimeinen on nimeltään '
+      + 'Suomi herää. Sen loppuun hän on säveltänyt rauhoittuvan hymnin, '
+      + 'jota yleisö luulee vanhaksi kansansävelmäksi; se on hänen omansa. '
+      + 'Sensori istuu salissa eikä voi kieltää kuvaelmaa, joka ei sano '
+      + 'mitään suoraan. Seuraavana vuonna Sibelius muokkaa kaksi viimeistä '
+      + 'osaa itsenäiseksi sävelrunoksi, joka esitetään heinäkuussa 1900 '
+      + 'Helsingissä ja viedään Robert Kajanuksen orkesterin kanssa Pariisin '
+      + 'maailmannäyttelyyn nimellä Finlandia. Venäjän vallan alla sitä '
+      + 'soitetaan peitenimillä, kuten Iloisia tunnelmia Suomen kevään '
+      + 'heräämisestä. Sanat hymniin kirjoittaa V. A. Koskenniemi vasta 1941.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-sibelius-finlandia-1899-lahi-photo-v4.jpg',
+        kuvateksti: 'Jean Sibelius nostaa tahtipuikon viimeiseen kuvaelmaan, '
+          + 'mutta eturivin nuori toimittaja kuuntelee myös salin '
+          + 'hiljaisuutta. Hänen lehtensä voidaan lakkauttaa seuraavaksi; '
+          + 'siksi “Suomi herää” tuntuu enemmän tunnussanalta kuin pelkältä '
+          + 'ohjelmanumerolta.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Sibelius.fi — Finlandia, '
+          + 'tarkistettu 5.9.2026.',
+        url: 'https://sibelius.fi/de/die-musik/orchesterwerke/finlandia/',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-sibelius-finlandia-1899-kauko-photo-v4.jpg',
+        kuvateksti: 'Orkesterin nuotinkääntäjä tietää, ettei illan protestia '
+          + 'lausuta suoraan. Se piilotetaan kuuteen historialliseen '
+          + 'kuvaelmaan, näyttämön eleisiin ja Sibeliuksen musiikkiin — niin, '
+          + 'että täysi sali ymmärtää ja sensuurin edustaja joutuu '
+          + 'teeskentelemään, ettei ymmärrä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Sibelius.fi — Finlandia, '
+          + 'tarkistettu 5.9.2026.',
+        url: 'https://sibelius.fi/de/die-musik/orchesterwerke/finlandia/',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Helsingin kohdekartan rajauksessa '
+      + '(Erottaja; 16 yksikköä laatasta, joka on laudalla siirretty '
+      + 'keskustasta): kohdekartan rajauksen sisällä oleva nosto ei ole '
+      + 'pääkartalla (Raamattu, omistaja 2.9.2026 ilta) vaan Helsingin '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'helsinki' },
+    lehtiJohdanto: 'Erottajan teatterissa esitettiin marraskuussa 1899 kuusi '
+      + 'historiallista kuvaelmaa sanomalehtimiesten eläkekassan hyväksi — '
+      + 'ja sensori joutui kuuntelemaan protestia, jota kukaan ei sanonut '
+      + 'ääneen.',
+    lehtiTehtava: {
+      kysymys: 'Millä nimellä Finlandiaa soitettiin Venäjän vallan aikana '
+        + 'sensuurin välttämiseksi?',
+      vaihtoehdot: [
+        'Karjalan sarja',
+        'Keisarin marssi',
+        'Iloisia tunnelmia Suomen kevään heräämisestä',
+        'Väinämöisen laulu',
+      ],
+      oikea: 2,
+      fakta: 'Sävelruno kantaesitettiin itsenäisenä teoksena heinäkuussa '
+        + '1900; hymnin sanat V. A. Koskenniemi kirjoitti 1941.',
+    },
+  },
+  /*
+   * 49. PARIISI, GRAND CAFÉ 28.12.1895 — SEINÄ MUUTTUU IKKUNAKSI.
+   * Piste on Pariisin laatan päällä (1,1 laudan yksikköä) ja kohdekartan
+   * rajauksessa (Boulevard des Capucines). Vain Pariisin
+   * kaupunkilehdessä ja sen kohdekartalla (js/packs/maakartat.js
+   * "Lumière 1895"). Kolmas kuva on Le Radical -lehden sivu
+   * (HETKI_LEHTIKUVAT; nimetty lehden mukaan).
+   * Lähde: en.wikipedia.org: Salon Indien du Grand Café, Lumière
+   * brothers
+   */
+  {
+    id: 'lumiere-elokuva-1895',
+    otsikko: 'Grand Café 1895 — miten seinä voi liikkua?',
+    nimio: 'Lumière 1895',
+    paivays: '28.12.1895',
+    paikka: 'Salon Indien du Grand Café, Pariisi',
+    iso: 'FRA',
+    lat: 48.8703, lon: 2.3294,
+    kuvaversio: 4,
+    teksti: 'Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard '
+      + 'des Capucines\'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama '
+      + 'kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota '
+      + 'mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren '
+      + 'tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, naiset '
+      + 'hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. Kymmenen '
+      + 'filmiä kestää yhteensä noin kaksikymmentä minuuttia, ja niiden '
+      + 'joukossa on puutarhuri, joka kastelee itsensä letkulla — '
+      + 'ensimmäinen elokuvavitsi. Auguste ja Louis Lumière ovat '
+      + 'valokuvalevytehtailijoita Lyonista; heidän laitteensa, patentoitu '
+      + 'helmikuussa 1895, sekä kuvaa, kopioi että heijastaa, ja sitä '
+      + 'pyöritetään käsin. He olivat esittäneet filmejä jo maaliskuussa '
+      + 'tiedeyleisölle, mutta tämä on ensimmäinen maksullinen näytös. '
+      + 'Yleisössä istuu taikuri Georges Méliès, joka yrittää heti ostaa '
+      + 'laitteen; Lumièret kieltäytyvät ja sanovat, ettei keksinnöllä ole '
+      + 'tulevaisuutta. Méliès rakentaa omansa ja keksii temppuelokuvan. '
+      + 'Viikon päästä ovella jonottaa satoja, ja lehdet, Le Radical '
+      + 'yhtenä, yrittävät selittää lukijoille, mitä liikkuva valokuva on.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-lumiere-elokuva-1895-lahi-photo-v4.jpg',
+        kuvateksti: 'Georges Méliès nojautuu eteenpäin, kun valkokankaan '
+          + 'tehdasportti aukeaa ja ihmiset kävelevät ulos kuin seinä olisi '
+          + 'muuttunut ikkunaksi. Taikuri tietää katsovansa uutta temppua, '
+          + 'mutta ei vielä sitä, että laite pakottaa hänet pian keksimään '
+          + 'koko oman elokuvallisen maailmansa.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Institut Lumière — Musée '
+          + 'Lumière, tarkistettu 5.9.2026.',
+        url: 'https://www.institut-lumiere.org/musee-lumiere-fr',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-lumiere-elokuva-1895-kauko-photo-v4.jpg',
+        kuvateksti: 'Koneen takana nuori avustaja pitää kammen tasaisena, '
+          + 'vaikka 33 katsojan jokainen naurahdus ja henkäys kuuluu pimeässä '
+          + 'kellarissa. Jos käsi nykäisee, kuva värisee; jos se pysyy '
+          + 'rytmissä, valokuvan ihmiset jatkavat kävelemistä vielä senkin '
+          + 'jälkeen, kun oikea hetki on jo ohi.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Institut Lumière — Musée '
+          + 'Lumière, tarkistettu 5.9.2026.',
+        url: 'https://www.institut-lumiere.org/musee-lumiere-fr',
+      },
+      {
+        rooli: 'lehti',
+        tiedosto: 'hetki-lumiere-le-radical-1895-lehti-photo-v4.jpg',
+        kuvateksti: 'Lehden nimetön toimittaja yrittää selittää liikkuvaa kuvaa '
+          + 'lukijoille, jotka eivät ole koskaan nähneet sellaista. Hän kutsuu '
+          + 'laitetta valokuvauksen ihmeeksi ja takertuu yhteen lähes '
+          + 'mahdottomalta tuntuvaan ajatukseen: kuolleen läheisen voisi '
+          + 'jonain päivänä nähdä jälleen liikkeessä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Institut Lumière — Musée '
+          + 'Lumière, tarkistettu 5.9.2026.',
+        url: 'https://www.institut-lumiere.org/musee-lumiere-fr',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'piste on Pariisin laatan päällä (1,1 yksikköä) ja '
+      + 'Pariisin kohdekartan rajauksessa: kaupungin laatan päälle osuva '
+      + 'hetki ei ole pääkartalla (omistaja 3.9.2026) vaan Pariisin '
+      + 'kohdekartan piste',
+    lehti: { laji: 'kaupunki', avain: 'pariisi' },
+    lehtiJohdanto: 'Boulevard des Capucines\'in kahvilan kellarissa muutama '
+      + 'kymmenen ihmistä maksoi joulukuussa 1895 frangin ja näki tehtaan '
+      + 'portin aukeavan valkokankaalla — yleisön joukossa taikuri, joka '
+      + 'halusi heti ostaa koneen.',
+    lehtiTehtava: {
+      kysymys: 'Mitä Lumièren veljekset vastasivat Georges Mélièsille, kun '
+        + 'tämä halusi ostaa Cinématographen?',
+      vaihtoehdot: [
+        'He myivät sen kaksinkertaiseen hintaan',
+        'He kieltäytyivät ja sanoivat, ettei keksinnöllä ole tulevaisuutta',
+        'He palkkasivat Mélièsin kuvaajakseen',
+        'He lahjoittivat koneen Ranskan tiedeakatemialle',
+      ],
+      oikea: 1,
+      fakta: 'Méliès rakensi oman laitteensa ja keksi temppuelokuvan; '
+        + 'Lumièret keskittyivät myöhemmin värivalokuvaukseen.',
     },
   },
 ];
