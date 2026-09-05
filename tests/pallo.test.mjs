@@ -42,10 +42,24 @@ test('pallon kaupungit tulevat laudalta ja napautus sukeltaa napautettuun kohtaa
   const kohta = sukelluskohta(lontoo.lat, lontoo.lon);
   assert.ok(Math.abs(kohta.x - lontoo.x) < 1e-6 && Math.abs(kohta.y - lontoo.y) < 1e-6, JSON.stringify(kohta));
   assert.equal(sukelluskohta(NaN, 0), null);
-  // Pallolla ei ole mitään pinnoitteen päällä.
+  /*
+   * KARTTA LAATOISSA, PELI PÄÄLLÄ (Raamattu 5.9.2026 täsmensi 4.9.:n
+   * "älä lisää mitään sen päälle"): valikkopallo (js/pallo.js) on yhä
+   * pelkkä pinnoite, ja pallolaudalla (js/pallolauta/) sallitaan VAIN
+   * pelin merkit — sallittujen kerrosten lista on lauta.js:n
+   * PALLOLAUDAN_KERROKSET (tests/pallolauta.test.mjs vartioi sen).
+   * Kartan kerrokset (nimet, reitit, renkaat) ovat kiellettyjä kummallakin.
+   */
   const pallo = lue('../js/pallo.js');
-  for (const kielletty of ['pointsData', 'labelsData', 'arcsData', 'ringsData', 'htmlElementsData']) {
-    assert.ok(!pallo.includes(`.${kielletty}(`), `${kielletty}: pallon päälle ei lisätä mitään (omistaja 4.9.2026)`);
+  for (const kielletty of ['pointsData', 'labelsData', 'arcsData', 'ringsData', 'htmlElementsData', 'pathsData']) {
+    assert.ok(!pallo.includes(`.${kielletty}(`), `${kielletty}: valikkopallon päälle ei lisätä mitään (omistaja 4.9.2026)`);
+  }
+  const lauta = lue('../js/pallolauta/lauta.js');
+  for (const kielletty of ['labelsData', 'arcsData', 'ringsData', 'pathsData', 'polygonsData', 'hexBinPointsData']) {
+    assert.ok(!lauta.includes(`.${kielletty}(`), `${kielletty}: pallolaudalle ei piirretä karttaa kerroksena (Raamattu 5.9.2026)`);
+  }
+  for (const sallittu of ['pointsData', 'htmlElementsData']) {
+    assert.ok(lauta.includes(`.${sallittu}(`), `${sallittu}: pelin merkit ovat pallolaudalla (Raamattu 5.9.2026)`);
   }
   assert.match(pallo, /\.onGlobeClick\(/);
   // Nipistys ei ole napautus (iPhone-bugi 4.9.2026): toinen sormi

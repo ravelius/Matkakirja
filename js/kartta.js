@@ -502,6 +502,56 @@ export class Kartta {
     this.ui = ui;
     // Kesken oleva kamera-ajo (ks. ajaKamera); null kun kamera on levossa.
     this.kameraAjo = null;
+    /*
+     * ============ LEPOTILA: TASOKARTTA POIS TIELTÄ ====================
+     *
+     * Omistaja 5.9.2026 (Raamattu, KARTTAPALLO ON PELILAUTA): *"Kunhan
+     * vanha kartta pysyy pois tieltä eikä hidasta ollenkaan uuden kartan
+     * toimintaa."* Kun pelilauta on karttapallo (js/ui-apurit.js
+     * lautaValinta, js/pallolauta/lauta.js), tasokartta on LEPOTILASSA:
+     * svg#board on tyhjä, eikä yhtään kerrosta synny.
+     *
+     * MITÄ LEPOTILA OHITTAA (mitattu 5.9.2026, docs/moduulit/
+     * karttapallo.md luku 3: Ateenassa ~1 650 SVG-elementtiä, koko
+     * pyramidiliikenne ja ~7 Mt keosta): ui.render ei kutsu drawBoardForia
+     * eikä yhtään kerrospiirtoa (staattinen, laattapyramidi, karttanimet,
+     * maastonimet, fokuskohteet, eläintäyt, fokuspiste, maatummennus,
+     * fokuslaatta, matkareitit, kohteet, nappulat, lento), joten
+     * paivitaPyramidi, taydennaTaide, karttanimien ladonta ja fokusmitat
+     * eivät koskaan käynnisty; täällä fitViewBox, ajaKamera,
+     * ajastaMannerZoom, zoomaaMantereelle ja tarkistaFokusZoom palaavat
+     * heti, ja karttaruudun eleet (asennaPanorointi) ohitetaan yhdestä
+     * portista. YKSI PORTTI METODIN ALUSSA, ei hajautettuja ehtoja.
+     *
+     * MITÄ EI OHITETA: moduulien lataus (staattiset tuonnit ui.js:ssä,
+     * SW-välimuistissa) — sen laiskoitus on oma erä (karttapallo.md 5b).
+     *
+     * Kartta herää linssin tai siirron ajaksi (heraa → drawBoardFor) ja
+     * nukkuu takaisin (nuku → kerrosten purku ja svg tyhjäksi).
+     */
+    this.lepotila = false;
+  }
+
+  /**
+   * Tasokartta lepotilaan: ajot seis, kerrokset puretaan ja svg#board
+   * jää tyhjäksi. Palauttaa false, jos kartta jo nukkui.
+   */
+  nuku() {
+    if (this.lepotila) return false;
+    this.lepotila = true;
+    // Lähikuva, liuku ja kamera-ajo puretaan kirjaamatta välivaihetta —
+    // sama polku kuin laudan vaihdossa (drawBoardFor → nollaaAloitusZoom).
+    this.nollaaAloitusZoom();
+    this.ui.puraLauta?.();
+    return true;
+  }
+
+  /** Tasokartta hereille: lauta piirretään kuten laudan vaihdossa. */
+  heraa() {
+    if (!this.lepotila) return false;
+    this.lepotila = false;
+    this.ui.drawBoardFor(this.ui.game.pack);
+    return true;
   }
 
   /*
@@ -751,6 +801,7 @@ export class Kartta {
   }
 
   fitViewBox() {
+    if (this.lepotila) return; // tasokartta nukkuu (ks. rakentaja)
     const pane = this.ui.mapPane;
     const w = pane.clientWidth;
     const h = pane.clientHeight;
@@ -1878,6 +1929,7 @@ export class Kartta {
    */
   ajastaMannerZoom() {
     clearTimeout(this.ui.mannerAjastin);
+    if (this.lepotila) return; // tasokartta nukkuu (ks. rakentaja)
     if (!this.mannerZoomTarpeen() || this.ui.mannerZoom) {
       document.body.classList.remove('manner-odottaa');
       return;
@@ -1906,7 +1958,7 @@ export class Kartta {
 
   /** Zoomaa mantereen kartan nappulan kohdalle pehmeästi liukuen. */
   zoomaaMantereelle() {
-    if (this.ui.mannerZoom) return;
+    if (this.ui.mannerZoom || this.lepotila) return;
     const [vx, vy, vw, vh] = (this.ui.svg.getAttribute('viewBox') ?? '0 0 1000 1000')
       .split(/\s+/).map(Number);
     // Kohde: pelaajan nappula, tai näkymän keskus jos sitä ei löydy.
@@ -2186,6 +2238,9 @@ export class Kartta {
   } = {}) {
     const pane = this.ui.mapPane;
     if (this.ui.dead || !pane) return Promise.resolve(false);
+    // Tasokartta nukkuu: pallolaudan kamera on js/pallolauta/kamera.js,
+    // ja ui.kamera() valitsee sen — tänne asti tullut ajo raukeaa.
+    if (this.lepotila) return Promise.resolve(false);
     /*
      * ALOITUSLENTO OMISTAA KAMERAN (omistaja 24.8.2026, Raamattu:
      * ALOITUSLENTO UUSIKSI). Lennon aikana kartalla on rajaus, johon
@@ -3081,6 +3136,7 @@ export class Kartta {
    * kartta rikkoo jo valmiiksi.
    */
   tarkistaFokusZoom() {
+    if (this.lepotila) return; // tasokartta nukkuu (ks. rakentaja)
     const rajat = this.fokusRajaukset();
     if (!rajat) return;
     const pohja = this.fokusZoomMinimi();
@@ -3226,8 +3282,30 @@ export class Kartta {
      * laskettu sormen paikka karkaisi eleen aikana. Kartan päällä
      * kelluvat kortit ovat myös ruudun lapsia (ks. KELLUVA_UI), joten
      * niiden tapahtumat kuplivat tänne vain ruudusta kuunneltaessa.
+     *
+     * LEPOTILAN PORTTI ON TÄSSÄ, EI JOKAISESSA KUUNTELIJASSA. Pallolauta
+     * (js/pallolauta/lauta.js) asuu karttaruudun sisällä, joten pallon
+     * eleet kuplivat myös tänne; nukkuvan kartan panorointi, nipistys ja
+     * napautus eivät saa ajaa riviäkään (*"eikä hidasta ollenkaan uuden
+     * kartan toimintaa"*). Kuuntelijoita on tässä metodissa
+     * parikymmentä, joten portti puetaan ruudun ympärille kerran:
+     * jokainen tästä eteenpäin lisätty kuuntelija ohittaa tapahtuman
+     * lepotilassa, ja muut ruudun jäsenet (mitat, kaappaus) kulkevat
+     * läpi sellaisenaan. Kaikki kuuntelijat ovat pysyviä (poistoa ei
+     * ole), joten kääre ei riko removeEventListeneriä.
      */
-    const pane = this.ui.mapPane;
+    const ruutu = this.ui.mapPane;
+    const pane = new Proxy(ruutu, {
+      get: (kohde, avain) => {
+        if (avain === 'addEventListener') {
+          return (nimi, kasittelija, valinnat) => kohde.addEventListener(nimi, (e) => {
+            if (!this.lepotila) kasittelija(e);
+          }, valinnat);
+        }
+        const arvo = kohde[avain];
+        return typeof arvo === 'function' ? arvo.bind(kohde) : arvo;
+      },
+    });
     let alku = null;
     let liikkui = false;
 

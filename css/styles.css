@@ -23196,3 +23196,57 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
 @media (prefers-reduced-motion: reduce) {
   .pallo-kuori { transition: none; }
 }
+
+/* ============ PALLOLAUTA (js/pallolauta/lauta.js, vaihe 1) ============ */
+/*
+ * Omistaja 5.9.2026 (Raamattu KARTTAPALLO ON PELILAUTA): pallo on pelin
+ * lauta, ei ikkuna. Kuori asuu KARTTARUUDUSSA tasokartan paikalla:
+ * ei kiinteää sijaintia, ei tummaa pohjaa (karttaruudun oma pohja
+ * riittää), ei Sulje-nappia. Pinontatasoa ei anneta: kuori on
+ * DOM-järjestyksessä kartan siirtokuoren jälkeen ja ennen kuplia ja
+ * nappeja, jotka kelluvat kartan päällä (event-toast, maalehti-nappi
+ * z-index 3), joten ne jäävät pallon päälle täsmälleen kuten kartan.
+ */
+.pallo-kuori.pallolauta {
+  position: absolute;
+  inset: 0;
+  z-index: auto;
+  background: transparent;
+  /* Ruudun oma pohja on tummaa nahkaa (.map-pane); pallo kelluu siinä. */
+}
+.pallo-kuori.pallolauta[hidden] { display: none; }
+/* Linssikartan kulma: takaisin pallolle ilman siirtoa (vaihe 1). */
+.linssikartta-palaa {
+  position: absolute;
+  right: 0.8rem;
+  top: 0.7rem;
+  z-index: 3;
+  display: none;
+  min-height: 0;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(217, 161, 59, 0.55);
+  background: rgba(36, 26, 18, 0.82);
+  color: #f3e4bf;
+  font-family: var(--font-ui, system-ui, sans-serif);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+body.linssikartta-auki .linssikartta-palaa { display: inline-block; }
+.linssikartta-palaa:hover, .linssikartta-palaa:focus-visible { background: rgba(217, 161, 59, 0.3); }
+/*
+ * Nappula pallolla (htmlElementsData): CSS2D-elementti kaupungin
+ * kohdalla, jalka pisteessä. Ei ota napautuksia — kaupungin piste
+ * ja pallon oma osumatesti hoitavat ne. Näkyvyys pallon takana
+ * vaihdetaan opacityllä (js/pallolauta/lauta.js), joten siirtymä
+ * pehmentää horisontin ylityksen.
+ */
+.pallolauta-nappula {
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+  transition: opacity 250ms ease;
+}
+.pallolauta-nappula svg { display: block; overflow: visible; }
+@media (prefers-reduced-motion: reduce) {
+  .pallolauta-nappula { transition: none; }
+}
