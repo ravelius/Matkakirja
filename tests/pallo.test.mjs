@@ -102,6 +102,13 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   assert.match(wf, /cat pallolaatat-ulos\/kansio\.txt/);
   assert.match(wf, /--include '\*\.jpg'/);
   assert.match(wf, /laatat\.json/);
+  // Nostotaso (nimet, karttanostot) poltetaan omaan kansioon (5.9.2026).
+  assert.equal(laattojenKansio('2026-09-03a', true), 'julisteet/pallo/laatat/2026-09-03a-nostot/');
+  assert.match(wf, /--nostot/);
+  // Liike jatkuu sormen irrottua: kitka ja kynnys (5.9.2026).
+  const pallo2 = lue('../js/pallo.js');
+  assert.match(pallo2, /const VAUHTI_KITKA = 0\.0028;/);
+  assert.match(pallo2, /requestAnimationFrame\(\(\) => liu\(/);
 });
 
 test('pinnoitteen pikselihaku: juliste kattaa 76° N – Etelämanner, navat jäävät ulkopuolelle', () => {
