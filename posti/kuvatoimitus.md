@@ -1,5 +1,114 @@
 # Kuvatoimitussessio
 
+## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 8 R2-varmennettu
+
+### astana
+- `astana-astana-opera`
+- `astana-khan-shatyr`
+- `astana-bajterek`
+- `astana-nurjol-bulevardi`
+- `astana-akorda`
+- `astana-hazrat-sultanin-moskeija`
+- `astana-rauhan-ja-sovinnon-palatsi`
+- `astana-kansallismuseo`
+
+### kanton
+- `kanton-zhenhai-torni`
+- `kanton-guangxiao-temppeli`
+- `kanton-chenin-suvun-sali`
+- `kanton-liurong-temppeli`
+- `kanton-huaisheng-moskeija`
+- `kanton-pyhan-sydamen-katedraali`
+- `kanton-kolmentoista-faktorian-paikka`
+- `kanton-shamianin-saari`
+
+### yangon
+- `yangon-chaukhtatgyin-temppeli`
+- `yangon-shwedagon-pagodi`
+- `yangon-kandawgyi-jarvi-ja-karaweik`
+- `yangon-yangonin-keskusasema`
+- `yangon-bogyoken-markkinat`
+- `yangon-sihteeristo`
+- `yangon-sule-pagodi`
+- `yangon-strand-hotelli`
+- `yangon-botataung-pagodi`
+
+### mandalay
+- `mandalay-mandalay-kukkula`
+- `mandalay-kuthodaw-pagodi`
+- `mandalay-kyauktawgyi-pagodi`
+- `mandalay-sandamuni-pagodi`
+- `mandalay-shwenandaw-luostari`
+- `mandalay-mandalayn-palatsi`
+- `mandalay-zegyo-tori`
+- `mandalay-setkyathiha-pagodi`
+- `mandalay-mahamuni-temppeli`
+
+### taipei
+- `taipei-baoan-temppeli`
+- `taipei-dihua-katu`
+- `taipei-pohjoisportti`
+- `taipei-presidentinlinna`
+- `taipei-punainen-talo`
+- `taipei-lungshan-temppeli`
+- `taipei-bopiliaon-vanha-kortteli`
+- `taipei-chiang-kai-shek-muistosali`
+- `taipei-kasvitieteellinen-puutarha`
+- `taipei-taipei-101`
+
+### hongkong
+- `hongkong-tsim-sha-tsuin-kellotorni`
+- `hongkong-western-market`
+- `hongkong-star-ferryn-laituri`
+- `hongkong-man-mo-temppeli`
+- `hongkong-tai-kwun`
+- `hongkong-pyhan-johanneksen-katedraali`
+- `hongkong-victoria-peak`
+- `hongkong-sininen-talo`
+- `hongkong-vaunuradan-alaterminaali`
+
+### jakarta
+- `jakarta-sunda-kelapan-satama`
+- `jakarta-merenkulkumuseo`
+- `jakarta-kota-intanin-nostosilta`
+- `jakarta-fatahillah-aukio`
+- `jakarta-toko-merah`
+- `jakarta-jakarta-kotan-asema`
+- `jakarta-kim-tek-ie-temppeli`
+- `jakarta-jakartan-katedraali`
+- `jakarta-istiqlal-moskeija`
+- `jakarta-kansallismonumentti-monas`
+
+### manila
+- `manila-binondon-kirkko`
+- `manila-quiapon-kirkko`
+- `manila-escolta-katu`
+- `manila-jones-silta`
+- `manila-fort-santiago`
+- `manila-manilan-katedraali`
+- `manila-san-agustinin-kirkko`
+- `manila-kansallinen-taidemuseo`
+- `manila-baluarte-de-san-diego`
+- `manila-rizal-puisto`
+
+### kashgar
+- `kashgar-afaq-khojan-mausoleumi`
+- `kashgar-chini-bagh`
+- `kashgar-suuri-basaari`
+- `kashgar-id-kahin-moskeija`
+- `kashgar-vanhakaupunki`
+- `kashgar-kansanpuisto`
+- `kashgar-yusuf-khass-hajibin-mausoleumi`
+
+### lhasa
+- `lhasa-ramoche-temppeli`
+- `lhasa-potala-palatsi`
+- `lhasa-norbulingka`
+- `lhasa-jokhang-temppeli`
+- `lhasa-chagpori`
+- `lhasa-tiibetin-museo`
+- `lhasa-lhasan-suuri-moskeija`
+
 ## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 7 R2-varmennettu
 
 ### novosibirsk
