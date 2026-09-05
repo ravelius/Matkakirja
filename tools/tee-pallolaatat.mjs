@@ -415,9 +415,17 @@ export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
     await lukija.varmista(z, a0.px, px1, Math.min(a0.py, a1.py), Math.max(a0.py, a1.py));
   }
   const meret = await lukija.mittaaMeri();
-  // Reunarivien lähdelaatat tämän laatan pituusasteille (sarakesävyt).
+  /*
+   * Reunarivien lähdelaatat ja sarakesävyt VAIN reunalaatoille (laatta
+   * ulottuu täytteeseen tai reunakaistaan). Kansion c ensimmäinen ajo
+   * (5.9.2026 klo 18.34–) haki reunarivit joka laatalle, mikä syrjäytti
+   * lähdelaattojen välimuistin (VALIMUISTI) ja lähes kaksinkertaisti
+   * ajan — Z8:n 65 536 laatalle se olisi tuntien ero.
+   */
+  const reunalaatta = reunat.pohjoinen > vali.pohjoinen - REUNAN_NOSTO
+    || reunat.etela < vali.etela + REUNAN_NOSTO;
   const reunaLat = { pohjoinen: vali.pohjoinen - REUNAN_MITTAUS, etela: vali.etela + REUNAN_MITTAUS };
-  for (const lat of [reunaLat.pohjoinen, reunaLat.etela]) {
+  for (const lat of (reunalaatta ? [reunaLat.pohjoinen, reunaLat.etela] : [])) {
     const b0 = arkinPikseli(luettelo, taso, reunat.lansi + 1e-9, lat);
     const b1 = arkinPikseli(luettelo, taso, reunat.ita - 1e-9, lat);
     if (!b0 || !b1) continue;
@@ -434,6 +442,7 @@ export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
    */
   const sarakesavyt = { pohjoinen: null, etela: null };
   const reunanSavy = (s, puoli) => {
+    if (!reunalaatta) return meret[puoli];
     if (!sarakesavyt[puoli]) {
       const raaka = [];
       for (let c = 0; c < LAATTA; c += 1) {
