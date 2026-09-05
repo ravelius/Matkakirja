@@ -1,5 +1,31 @@
 # Kuvatoimitussessio
 
+## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 10 R2-varmennettu
+
+### sydney
+- `sydney-sydney-harbour-bridge`
+- `sydney-sydneyn-oopperatalo`
+- `sydney-mrs-macquarie-s-chair`
+- `sydney-sydneyn-konservatorio`
+- `sydney-hyde-park-barracks`
+- `sydney-pyrmontin-silta`
+- `sydney-pyhan-marian-katedraali`
+- `sydney-pyhan-andreaksen-katedraali`
+- `sydney-australian-museo`
+- `sydney-anzac-muistomerkki`
+
+### rio
+- `rio-sao-benton-luostari`
+- `rio-vanha-katedraali-antiga-se`
+- `rio-central-do-brasilin-asema`
+- `rio-real-gabinete-kirjasto`
+- `rio-quinta-da-boa-vista`
+- `rio-kansallinen-historiallinen-museo`
+- `rio-theatro-municipal`
+- `rio-maracanan-stadion`
+- `rio-lapan-akvedukti`
+- `rio-passeio-publico`
+
 ## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 9 R2-varmennettu
 
 ### kolkata
