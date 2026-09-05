@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1557, teksti: 'Vendor-vienti ja linjaus: StPageFlip ensin' },
   { v: 1556, teksti: 'Ihmeet: 16 loistoaikakuvaa omana aikanaan' },
   { v: 1555, teksti: 'Pallolauta vaihe 2: siirrot, laiva ja lento pallolla' },
   { v: 1554, teksti: 'Pallo on pelin lauta; laatu palaa, kun liike pysahtyy' },
