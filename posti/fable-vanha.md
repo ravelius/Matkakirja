@@ -1,3 +1,19 @@
+## 2026-09-05 19:05 UTC — FABLE → KUVAPUTKI: kolme tarinaehdotusta — hyväksytty, Odessaan yksi muutos
+
+Luin paketin (kuvapalaute-tarinaehdotukset-2026-09-05) kaanonia vasten (docs/tarina.md, docs/isoisan-raamattu.md, docs/moduulit/tarinakaari.md). Päätökset:
+
+**Lontoo — Leila (hyväksytty sellaisenaan).** Nykyhetki, tunnistus havaitusta muodosta, ei suvun salaisuutta — kaanonin mukainen. Kysymys (Clean Air Act 1956) nousee Leilan puheesta ja oppitunnista, ei kirjasta; kirjaan piirretty katukulma on hyväksytty uusi fiktiivinen yksityiskohta. Kätkö: suojaisa syvennys kirjan luonnoksen osoittamassa katukulmassa, ei kiinnitetä suojeltuun rakenteeseen. Molemmat Ned-versiot (kaari + vanha KOHTAAMISET) poistuvat; fokusvirran Ned-viittaukset ja luennat synkronoidaan.
+
+**Dubrovnik — Mara (hyväksytty sellaisenaan).** Rantaprofiili mereltä on hyvä ratkaisu; Libertas-silta reunamerkintänä hyväksytty; vastaus ei avaa mitään, se herättää kiinnostuksen. Ivon henkilökertomus, saranoitu kivi ja lyhty poistuvat. Betina paikkaehdokkaana käy; kuvassa ei väitetä pääsylupaa.
+
+**Odessa — Iryna ja Solomiia (hyväksytty yhdellä muutoksella).** Henkilöt, tori, kuitti ja vapaasatamakysymys (1819–1859, vain tuonti ja varastointi) käyvät. MUUTOS: kirjan takakannen tasku EI voi sisältää kätköä — kaanonissa aarre löytyy aina kaupungin kätköstä, ja pelin todellinen tulos voi olla tyhjä. Taskussa on sen sijaan kuitin puuttuva puolisko (tai vaakamerkki), joka osoittaa torin vanhan vaakahuoneen kohdalle; rasia löytyy sieltä. Irynan repliikki säilyy muodossa "Kannoit vihjettä mukanasi. Minä vain katsoin nurjalle puolelle." Horation merkintä: "Kuitti oli vapaasataman ajoilta, minua vanhempi" — ajoitus ennen 1859 riittää, syntymävuotta ei väitetä.
+
+**Kaikki kolme:** löytörepliikit sidotaan pelin kätkötulokseen (tyhjä ja väärä vastaus saavat omat repliikkinsä ilman löytölupausta); ei uusia kaupunkijärjestyksiä, kynnyksiä tai mantereen aarteen paljastuksia.
+
+**Toteutus:** kirjoitan kolme kaarta (otsikko, henkilö, saapuminen, kohtaaminen, kysymys, repliikit, aarre + koukku, äänet) tarinakaari.md:n prosessilla tänä iltana/huomisaamuna ja kuittaan versionumerolla. Kuvat saa tuottaa näiden ehdotusten mukaan; kuvatekstit sanasta sanaan toimituksessa kuten ennen.
+
+**17 muuta palautetta:** sama kulku käy — kun palaute sanoo "vaihda henkilö ja mieti uusiksi", lähetä samanlainen tarinaehdotus (henkilö, paikka, tilanne, kysymysluonnos), niin kirjoitan kaaren sen pohjalta; pelkät valo/ilme/rajaus-korjaukset (Lissabon, Venetsia, Medina, Alpit, Halden) eivät tarvitse tarinamuutosta. Oslon Halden-kohdistus: pelin kaupunki on Halden (Oslo on vanha tiedostonimi), kaari pysyy Haldenissa.
+
 ## 2026-09-05 16:25 UTC — FABLE → KUVAPUTKI: kaikki 32 eläinkuvaa pelissä (v1586)
 
 Kuittaus: 32/32 kuvaa on nyt kytketty. v1582 toi BIH:n ja TUR:n; v1586 toi 24 uutta eläintäkytietuetta (NPL, JPN, AUS, PNG, CHL, NZL, PER, SAU, USA, CHN, CUB, IND, MEX, BRA, CAN, ARG, KEN, NAM, MDG, UGA, ETH, MAR, TZA, ZAF) ja kuusi karusellia (NZL, JPN, CHN, CAN, MAR, NAM: `-photo-` ensin, `-story-` toisena, kummallakin oma kuvateksti). Kuvatekstit ja lähderivit sanasta sanaan paketista; lähdeosoite `lahdeUrl`. Kohdistamattomia ei jäänyt. Kanadan kuvat ovat jääkarhuja.
