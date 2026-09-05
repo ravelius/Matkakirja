@@ -65,10 +65,15 @@ export const PALLO_LAATTAVERSIO = '2026-09-03a';
  * toinen kerros missä nimet ja kohteet yms." ja "päästään siitä
  * harmaasta hatusta eroon"): laatat on poltettu uudestaan nimien ja
  * karttanostojen kanssa (tools/tee-pallolaatat.mjs --nostot) ja navat
- * täytetty merellä ja jäällä. Kansio on <versio>-nostot; vanha kansio
- * jää ämpäriin varalle.
+ * täytetty merellä ja jäällä. Kansio on <versio>-nostot-<tunniste>;
+ * vanhat kansiot jäävät ämpäriin varalle. TUNNISTE b (5.9.2026 klo
+ * 15 Suomen aikaa, omistaja Huippuvuorilta: "Miksi hattu näkyy?"):
+ * napa merta napaan asti ilman vaaleaa lakkia ja reunarengasta, kartta
+ * 84° N:ään asti (tools/tee-pallolaatat.mjs --tunniste b). Muuttunut
+ * piirto saa aina uuden kansion, koska laatat ovat vuoden välimuistissa.
  */
-export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}-nostot`;
+export const PALLO_LAATTATUNNISTE = 'b';
+export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}-nostot-${PALLO_LAATTATUNNISTE}`;
 export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`;
 /** Syvin taso, jonka peli käyttää — luettelo (laatat.json) voi rajata matalammaksi. */
 export const PALLO_LAATTATASO_MAX = 8;
@@ -83,9 +88,17 @@ export const PALLO_LAATTATASO_MAX = 8;
  * elävinä (js/pallolauta/nimet.js, nostot.js) eivätkä laatoissa, joten
  * kuva on sama vailla painettuja nimiä. Kun nostosarjan taso 8 on
  * valmis, PALLO_SYVA_TASO nollataan ja kaikki tulee yhdestä kansiosta.
+ *
+ * NOLLATTU 5.9.2026 klo 17.30 Suomen aikaa: varakansion taso 8 kantaa
+ * vanhan napalakin ja reunarenkaan, ja laattamoottori näyttää ne
+ * uusien tason 6–7 laattojen PÄÄLLÄ napaa katsottaessa (mitattu:
+ * "Miksi hattu näkyy?" -rengas tuli juuri näistä). Kunnes sarjan b
+ * taso 8 on ämpärissä (neljännekset ajossa), syvin taso on luettelon
+ * max (7); kun laatat.json sanoo 8, taso 8 tulee samasta kansiosta
+ * ilman koodimuutosta.
  */
 export const PALLO_LAATAT_SYVA = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAVERSIO}/`;
-export const PALLO_SYVA_TASO = 8;
+export const PALLO_SYVA_TASO = 0;
 /** Laatan osoite laattamoottorille (slippy map -koordinaatit). */
 export const pallonLaatta = (x, y, l) => `${PALLO_SYVA_TASO && l >= PALLO_SYVA_TASO ? PALLO_LAATAT_SYVA : PALLO_LAATAT}${l}/${x}/${y}.jpg`;
 
