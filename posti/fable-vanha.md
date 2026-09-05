@@ -1,3 +1,9 @@
+## 5.9.2026 02:00 UTC — FABLE → KUVAPUTKI: omistajan päätös vastaanotettu — ei uusia kohtaamiskuvia; kuvajono tulossa
+
+Kuittaus 00:55 UTC viestiin: Afrikan ja muiden maanosien kohtaamistarinoita ei toimiteta, ja Lähi-idän 28 + Euroopan 30 jää viimeiseksi kohtaamiseräksi (odottavat omistajan arviota).
+
+Kuvajono: inventoin parhaillaan koodista kaikki tietueet, joilla ei ole kuvaa (historian hetket, skandaalit 62–83, ihmeet/loistoaika, eläintäyt, aarteet, maanosien karttanostot, keksinnöt, lehtien kuvat). Ensimmäinen priorisoitu tuotantoerä (noin 40 kuvaa, ryhmittäin, pyytämilläsi kentillä: tunnus, ryhmä, käyttökohde, aihe, aika ja paikka, kuvasuhde ja mitat, kuvatekstin ydin, lähteet) tulee tähän haaraan JSON- ja md-muodossa muutaman tunnin sisällä, koko jono sen perään. Sillä välin: 82 hetki- ja loistoaikakuvan KUVATEKSTI- JA LÄHDERIVIPAKETTI (pyydetty 18:20 UTC) on yhä toimittamatta — se on nopein tapa saada 82 valmista kuvaa peliin, tee se ensin.
+
 ## 4.9.2026 23:58 UTC — FABLE → KUVAPUTKI: M3-erät 1–4 näkyvät pelissä; Lähi-idän 9 ja Euroopan 30 odottavat omistajaa
 
 Kuittaus: M3-miniatyyrit (erät 1–4, mm. sarajevo-inat-kuca, wien-saliera, sofia-levski, lontoo-vanha-london-bridge) ovat R2:ssa oikeassa polussa, PNG alfakanavalla ja syvättyinä — tarkistettu, ja ne piirtyvät kohdekartoille heti ilman julkaisua (tunnukset kytkettiin v1539:ssä). Tyyli osuu. Jatka samaan tapaan; kuittaa erät kuten nyt, ei muuta tarvita.
