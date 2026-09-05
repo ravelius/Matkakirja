@@ -1,0 +1,962 @@
+{
+  "status": "reviewed-proposal-ready-for-fable",
+  "createdAt": "2026-09-05T17:42:05.170377+00:00",
+  "author": "Matkakirjan kuvat / root",
+  "scope": [
+    "lontoo",
+    "dubrovnik",
+    "odessa"
+  ],
+  "userApproved": false,
+  "fableSent": false,
+  "gameChanged": false,
+  "imagesGenerated": false,
+  "sources": {
+    "gameCommit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+    "gameRef": "origin/main",
+    "feedbackPath": "latest-intake.json",
+    "feedbackSha256": "bfac7cef7a105fe4d10596af3335363ad22a2ee53322b636fd11e702189b0f30",
+    "gameFiles": [
+      {
+        "path": "js/packs/kohtaamiset.js",
+        "blob": "0e535d404b3f769d16317c5ed9a19db7f5112e34"
+      },
+      {
+        "path": "js/packs/tarinakaari.js",
+        "blob": "4e4f8888300926583e67d3389ff9c6496dd436a7"
+      },
+      {
+        "path": "js/tyohuone-kehitys-data.js",
+        "blob": "539d90667eff15eeae3944ffdb2ce258f67f79c2"
+      },
+      {
+        "path": "js/packs/fokusvirta-lontoo.js",
+        "blob": "a80f8dfee24fcab0b9dbbc51391e71cf0312ed9e"
+      },
+      {
+        "path": "docs/tarina.md",
+        "blob": "b64feac27f5b03b3ed36ad98856351a660da4f33"
+      },
+      {
+        "path": "docs/isoisan-raamattu.md",
+        "blob": "44a916cc2d2fd9dbf95b5cb77a3cb87aef4c243a"
+      },
+      {
+        "path": "docs/kuvatuotanto-kohtaamiset.md",
+        "blob": "d6a642a67485792f9d7928fa0834a3999dd43d8f"
+      }
+    ],
+    "dependencyReadNote": "tarinakaari.js imports KAARI_PAKETIT from tyohuone-kehitys-data.js; the active London entry identifies fokusvirta-lontoo.js as the owner of London framing. These dependencies were read to avoid drafting against the legacy-only encounter layer.",
+    "oldQueueUsed": false,
+    "externalPlaceFactsVerified": "See fact-check appendix; precise scene geometry remains pending",
+    "originalDraftGameCommit": "b4d07569f9a879477327ba14adf3c71a99f7b3bb"
+  },
+  "canonConstraints": [
+    "Nykyhetken paikalliset eivät tunne Horatiota henkilökohtaisesti eivätkä odota perillistä.",
+    "Vuoden 1873 kirja yhdistyy nykyhetkeen havaintojen ja paikallisten ammattitaidon avulla.",
+    "Ei yliluonnollista varmuutta, uutta vuosisataista vartiointijärjestelyä tai keskiaikafantasiaa.",
+    "Ei revityn viimeisen sivun ratkaisua, uutta nimettyä kulkijaa tai kaupunkijärjestystä.",
+    "Pelin varsinainen kätkötulos määrää palkinnon ja tyhjän tuloksen; tarinakehys ei muuta mekanismia.",
+    "Tarkistamattomat paikannimet, käytännöt ja uudet kysymysfaktat ovat eksplisiittisiä ehdotuksia."
+  ],
+  "proposals": [
+    {
+      "cityId": "lontoo",
+      "city": "Lontoo",
+      "feedbackImageId": "lontoo-ned-r20260905-redo-c-v1",
+      "proposedTitle": "Lontoo — valo löytää kadun",
+      "proposedCharacter": {
+        "name": "Leila",
+        "age": 24,
+        "role": "muotialan opiskelija",
+        "secondaryPeople": "ohikulkeva keskustan ihmisvilinä"
+      },
+      "locationCandidate": "Bank–Leadenhall-seudun keskustakatu",
+      "current": {
+        "title": "Lontoo — laskuveden kello",
+        "character": "Jokilöytäjä Ned",
+        "question": "Isoisä kirjoitti, että Lontoossa sumu syö äänet. Mistä se sumu oikeasti syntyi?",
+        "correctAnswer": "Kivihiilen savusta ja joen kosteudesta",
+        "treasureFrame": "H. F. -taskukello; vanha KOHTAAMISET-polku käyttää kompassia"
+      },
+      "proposedQuestion": {
+        "q": "Mihin vuoden 1956 Clean Air Act erityisesti puuttui?",
+        "options": [
+          "Rakennusten ja tulisijojen savupäästöihin",
+          "Katumainosten valaistukseen",
+          "Thamesin vuoroveteen"
+        ],
+        "correctIndex": 0,
+        "status": "supported-by-original-1956-act",
+        "basis": "Clean Air Act 1956, sections 1 and 11; alkuperäinen laki, https://www.legislation.gov.uk/ukpga/1956/52/pdfs/ukpga_19560052_en.pdf"
+      },
+      "firstReaction": "Leila pysähtyy epäuskoisena ja katsoo suoraan matkaajaan; aarrekysymys muuttuu huvittuneeksi ammatilliseksi kiinnostukseksi vanhaan katukuvaan.",
+      "bookToPresent": "Kirjan vanhan näkymän muoto yhdistyy Leilan omaan nykyvalokuvaan. Horation nykyinen sumuteksti säilyy historiallisen vastaparin lähtönä; Ned ja taskukello poistuvat uudesta kohtaamisesta.",
+      "requiredChanges": [
+        "KAARI_PAKETIT.lontoo: otsikko, henkilo/nimi, saapuminen, kohtaaminen, kysymys, aarre",
+        "KOHTAAMISET.lontoo: hahmo, nappi, frame, tervehdys, loyto, tyhja, vaarin ja luentatekstit",
+        "FOKUSVIRTA_LONTOO: kohtaaminen, oppitunnin uuden kysymyksen pohjustus, täkyjen Ned-riippuvaiset viittaukset ja nykyhetken kehysteksti",
+        "Kuva-/henkilöviitteet ja ristiriitaisten vanhojen äänten mykistys ennen uusittuja luentoja"
+      ],
+      "verificationRequired": [
+        "Valittu todellinen katukulma, jalankulkuympäristö ja lasijulkisivun auringonheijastuksen geometria",
+        "Historiallisen katunäkymän ja nykyjulkisivujen uskottava vastaavuus; ei keksittyä 150 vuotta muuttumatonta yksityiskohtaa",
+        "Clean Air Act 1956:n täsmällinen sisältö ja uuden kysymyksen yksi oikea vastaus",
+        "Kätköpaikka fiktiivinen, ei tutkimatta oikean suojellun rakenteen osaksi"
+      ],
+      "originalFeedback": {
+        "imageId": "lontoo-ned-r20260905-redo-c-v1",
+        "suggestion": "Kokonaan uusi versio, niin, että ollaan aivan Lontoon ydinkeskustassa. Olisi hauska nähdä henkilö, nuori henkilö, muotivaatteet päällään ihmisvilinässä, yhtäkkiä pysäytettynä aurinkoisella kelillä, niin, että katu on varjossa, mutta kaupungin lasitaloista on heijastunut. Valon säteitä kasvoille, liike epäterävyyttä hieman pidemmällä valotusajalla kulkevissa ihmisissä.\n\nTähän täytyy siis vaihtaa myös kysymys tarina keksis sinäsen ja lähetä ehdotus fablelle siitä.",
+        "workflowStatus": "regenerate",
+        "updatedAt": "2026-09-05T17:12:06.818Z"
+      },
+      "currentEntrySource": "    {\n      id: 'lontoo',\n      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],\n      otsikko: 'Lontoo — laskuveden kello',\n      saapuminen: 'Sumu nousi joesta niin sakeana, että junani jäi odottamaan '\n        + 'sitä; aikataulukirjani ei tuntenut sumua, ja myönnän '\n        + 'kirjanneeni sen kirjan viaksi. Kävelin laskuveden '\n        + 'paljastamalle rannalle. Liejussa makasi taskukello, '\n        + 'viisarit pysähtyneinä; sumun takaa tornin suuri kello löi '\n        + 'tunnin, kuin kaupunki vastaisi. Sinä, joka tätä luet: '\n        + 'kello käy taas. Kuuntele.',\n      henkilo: 'Jokilöytäjä Ned etsii laskuveden liejusta joen pudottamia '\n        + 'esineitä, kuten hänen sukunsa on etsinyt sata vuotta.',\n      kohtaaminen: 'Rannalla jokilöytäjä Ned punnitsee taskukelloa kädessään. '\n        + '\"Suvussani sanotaan: joki antaa takaisin sen, minkä '\n        + 'omistaja unohti. Kannessa on kaksi kirjainta — H. F. '\n        + 'Vastaa kirjan kysymykseen, niin kello on sinun.\"',\n      /*\n       * AIHE VAIHDETTU SUMUUN (v1308).\n       *\n       * Raamattu, osio \"Fokusmoodi\" (omistaja 28.8.2026 ilta):\n       * *\"aarretehtävän aihe kytketään aina kaupungin muuhun\n       * tarinaverkkoon (matkakirjamerkintä, täyt, lehdet).\"*\n       *\n       * Vanha kysymys Big Benin nimestä oli hyvä tietovisa muttei\n       * kytkeytynyt mihinkään: fokusmoodissa kaupungin matkakirjakortin\n       * omistaa fokusvirta (js/packs/fokusvirta-lontoo.js), ja sen\n       * merkintä alkaa sanoilla *\"Lontoossa sumu syö äänet ja kaupunki\n       * puhuu silti\"*. Uusi kysymys tulee siitä lauseesta ja saa\n       * vastauksensa saman paketin oppitunnista, joka kertoo\n       * joulukuun 1873 sumusta ja siitä, mistä se oli tehty. Big Benin\n       * aineisto elää yhä pelissä (js/packs/nahtavyysjutut.js, \"Big\n       * Ben\") ja Livian herokuplassa.\n       *\n       * Kaaren saapuminen, kohtaaminen ja aarre pysyvät ennallaan.\n       *\n       * FAKTAT: en-Wikipedia \"19th-century London\", sumua käsittelevä\n       * osio (lähteenä Peter Ackroyd, London: The Biography, 2000),\n       * sekä js/packs/maa-kategoriat.js GBR/luonto (pelin omaa\n       * tarkistettua aineistoa). Lähdeviitteet kokonaisuudessaan\n       * js/packs/fokusvirta-lontoo.js:n oppitunnin kommentissa.\n       */\n      kysymys: {\n        q: 'Isoisä kirjoitti, että Lontoossa sumu syö äänet. Mistä se '\n          + 'sumu oikeasti syntyi?',\n        vaihtoehdot: [\n          'Kivihiilen savusta ja joen kosteudesta',\n          'Mereltä ajautuneesta suolausvasta',\n          'Höyryveturien ja tehtaiden päästämästä vesihöyrystä',\n          'Kaasulyhtyjen palamisjätteestä',\n        ],\n        oikea: 0,\n        fakta: 'Rikkidioksidi ja noki sekoittuivat Thamesin laakson '\n          + 'kosteuteen. Isoisän matkavuoden sumu makasi kaupungin '\n          + 'päällä 7.–13. joulukuuta 1873, ja pahimpana päivänä koko '\n          + 'liikenne pysähtyi. Kaupungin oma nimi ilmiölle oli London '\n          + 'particular.',\n      },\n      aarre: 'Ned avasi kellon ja antoi sen: sisällä oli isoisän '\n        + 'käsialalla pelkkä kellonaika, sama johon viisarit '\n        + 'pysähtyivät. \"Joki ei pysäyttänyt tätä kelloa — joku '\n        + 'pysäytti sen tahallaan, ja liejussa oli tuoreet jäljet.\"',\n    },",
+      "approvalStatus": "root-reviewed-proposal-awaiting-fable-alignment",
+      "userApproved": false,
+      "feedbackId": "lontoo-ned-r20260905-redo-c-v1:28025559ec9af015c09c61851ab6ab0ec7b8c35b8a9f72a27bde922a1a35a4c7",
+      "requestIds": [
+        "bee8f5f2-5505-4e7c-84e6-057704b17768"
+      ]
+    },
+    {
+      "cityId": "dubrovnik",
+      "city": "Dubrovnik",
+      "feedbackImageId": "dubrovnik-ivo-r20260905-redo-v1",
+      "proposedTitle": "Dubrovnik — ranta näkyy mereltä",
+      "proposedCharacter": {
+        "name": "Mara",
+        "age": 40,
+        "role": "merimelontaopas",
+        "secondaryPeople": "toinen aikuinen retkeläinen taempana"
+      },
+      "locationCandidate": "Betinan luolan seutu, tarkistettava",
+      "current": {
+        "title": "Dubrovnik — yhdeksässadas askel",
+        "character": "Muurinvartija Ivo",
+        "question": "Dubrovnik oli vuosisatoja pieni vapaa tasavalta suurten valtojen välissä. Mikä sana sen lipussa luki?",
+        "correctAnswer": "Libertas — vapaus",
+        "treasureFrame": "saranoitu muurikivi, kätkö ja lämmin lyhty"
+      },
+      "proposedQuestion": {
+        "q": "Mitä Dubrovnikissa käytetty latinan sana Libertas tarkoittaa?",
+        "options": [
+          "Vapaus",
+          "Onni",
+          "Totuus",
+          "Voitto"
+        ],
+        "correctIndex": 0,
+        "status": "translation-supported-by-local-tourist-board",
+        "basis": "Lovrjenacin latinankielinen teksti ja sen englanninnos: https://tzdubrovnik.hr/lang/en/get/spomenici/5339/mediji.html"
+      },
+      "firstReaction": "Mara vakauttaa kajakkia, katsoo kysyjään tiukasti ja vastaa kuivasti: Pidä ensin kirja kuivana.",
+      "bookToPresent": "Vuoden 1873 luonnos on mereltä katsottu rantaprofiili. Nykyopas ratkaisee suunnan, koska tuntee rannan vedestä nähtynä, ei koska hänen sukunsa vartioisi kätköä.",
+      "requiredChanges": [
+        "KAARI_PAKETIT.dubrovnik: koko Ivo-/muuri-/900 askelta-/lyhtytarina uuteen saapumiseen, henkilöön, kohtaamiseen ja löytöön",
+        "Kysymyksen sanamuoto ja faktaselitys; oikea vastaus Libertas/vapaus säilyy",
+        "Nappi ja frame sekä kohtaamiskuva ja kuvateksti Maran merelliseen tilanteeseen",
+        "Vanhojen tekstien luentojen mykistys ja myöhempi synkronoitu uusinta; Libertas-teeman opetussisältö lehteen"
+      ],
+      "verificationRequired": [
+        "Betinan luolan sijainti, todellinen rannikon muoto, valo ja ympäröivä näkymä",
+        "Nykyinen saavutettavuus, rantautuminen sekä tarvittavat luvat; ehdotus ei väitä pääsyä varmaksi",
+        "Vuoden 1873 näkymän uskottavuus; uusi sitaatti on ehdotus, ei olemassa oleva Horation teksti",
+        "Ragusan Libertas-tunnuksen täsmällinen käyttö; nykyisen faktan yleistykset eivät siirry automaattisesti"
+      ],
+      "originalFeedback": {
+        "imageId": "dubrovnik-ivo-r20260905-redo-v1",
+        "suggestion": "Keksi joku mielenkiintoisempi paikka. Tämä on joku kauppi ja vaida ihmiset ja koko tarina.\n\nAnnaa Pavlelle ohjeet tarvittaessa. Keksitään ylilainen kehystarina tukemaan uutta paikkaa.",
+        "workflowStatus": "regenerate",
+        "updatedAt": "2026-09-05T17:15:41.607Z"
+      },
+      "currentEntrySource": "    {\n      id: 'dubrovnik',\n      mykistetyt: ['saapuminen', 'aarre'],\n      otsikko: 'Dubrovnik — yhdeksässadas askel',\n      saapuminen: 'Kävelin muurin koko kehän ja laskin askeleet; vartija '\n        + 'käveli rinnallani ja laski ääneen omiaan, sillä hänen '\n        + 'mittansa oli toinen. Väittelimme puoli kierrosta. Muurin '\n        + 'syvennyksessä irvisti kivinaama, jonka päälle hyppääminen '\n        + 'tuo tarun mukaan onnea — hyppäsin, ja vartija merkitsi '\n        + 'senkin kirjaansa. Kohteliaisuutta on se, ettei kumpikaan '\n        + 'kysynyt miksi.',\n      henkilo: 'Muurinvartija Ivo kävelee muurin kehän joka ilta ja laskee '\n        + 'askeleensa, kuten vartijat vapaan tasavallan ajoista.',\n      kohtaaminen: 'Portin holvissa Ivo laskee avainrengastaan. \"Kirjassa lukee, '\n        + 'että isoisäsi käveli kehän isoisäni kanssa ja pysähtyi '\n        + 'yhdeksännelläsadalla askeleella. Vastaa hänen kysymykseensä, '\n        + 'niin pysähdymme samassa kohdassa.\"',\n      kysymys: {\n        q: 'Dubrovnik oli vuosisatoja pieni vapaa tasavalta suurten '\n          + 'valtojen välissä. Mikä sana sen lipussa luki?',\n        vaihtoehdot: [\n          'Libertas — vapaus',\n          'Fortuna — onni',\n          'Veritas — totuus',\n          'Victoria — voitto',\n        ],\n        oikea: 0,\n        fakta: 'Ragusan tasavallan lipussa luki Libertas. Kaupunki piti '\n          + 'vapautensa taidolla ja kaupankäynnillä, ei sodilla — ja sen '\n          + 'muurit ovat silti Euroopan vahvimpia.',\n      },\n      aarre: 'Yhdeksässadas askel osui kiveen, joka kääntyi '\n        + 'saranoillaan: onkalossa odotti kätkö ja lyhty, jonka lasi '\n        + 'oli yhä lämmin. \"Kehällä ei öisin kulje kukaan muu kuin '\n        + 'minä — ei ainakaan pitänyt kulkea\", Ivo sanoi.',\n    },",
+      "approvalStatus": "root-reviewed-proposal-awaiting-fable-alignment",
+      "userApproved": false,
+      "feedbackId": "dubrovnik-ivo-r20260905-redo-v1:12ae6370d463b6e5b27c588c9c25a05e6754557f13b8e8688eb98fae6af4eacd",
+      "requestIds": [
+        "797735de-a24c-4ee8-8f00-03e866dfa922"
+      ]
+    },
+    {
+      "cityId": "odessa",
+      "city": "Odessa",
+      "feedbackImageId": "odessa-fjodor-lyhty-r20260905-redo-a02",
+      "proposedTitle": "Odessa — kuitti väärältä puolelta",
+      "proposedCharacter": {
+        "name": "Iryna",
+        "age": 50,
+        "role": "torimyyjä",
+        "secondaryPeople": "aikuinen tytär Solomiia"
+      },
+      "locationCandidate": "Privozin torin myyntipaikka, tarkistettava",
+      "current": {
+        "title": "Odessa — lyhty jota ei sytytetty",
+        "character": "Lyhdynsytyttäjä Fjodor",
+        "question": "Montako askelmaa Odessan jättiläisportaikossa on?",
+        "correctAnswer": "Vajaat kaksisataa",
+        "treasureFrame": "peritty sytyttämätön lyhty, jalustan luukku ja puhdas lasi"
+      },
+      "proposedQuestion": {
+        "q": "Mitä vapaasataman tullietu tarkoitti?",
+        "options": [
+          "Tuontitavaraa voitiin vastaanottaa ja varastoida tullitta vapaasatama-alueella",
+          "Kaikki tavarat olivat ilmaisia",
+          "Satamaan sai tulla vain ulkomaisilla laivoilla"
+        ],
+        "correctIndex": 0,
+        "status": "historical-core-verified-local-scope-preserved",
+        "basis": "Odesan virallinen kaava, historiallinen selostus PDF-sivu 4: asema myönnettiin 1817, järjestelmä toimi 1819–1859. Tulliton tuonti ja varastointi rajatulla alueella, ei kaiken kaupan verottomuus. https://ombk.omr.gov.ua/images/DPT/DPT_032/dpt_032_zapiska.pdf"
+      },
+      "firstReaction": "Iryna pysäyttää melonin ja katsoo suoraan kysyjään yllättyneenä; Solomiian nauru muuttaa keskeytyksen yhteiseksi huvittuneisuudeksi.",
+      "bookToPresent": "Kirjaan talletettu vapaasataman ajalta peräisin oleva kuitti sisältää nurjalla puolellaan fiktiivisen sidokseen osoittavan vihjeen. Iryna tulkitsee kuitin kaupankäynnin yhteyttä ja auttaa pelaajaa tutkimaan kirjan vuorausta. Vihje ja kertaluonteinen taskuratkaisu sovitetaan Fablella olemassa olevaan löytömekaniikkaan.",
+      "requiredChanges": [
+        "KAARI_PAKETIT.odessa: otsikko, koko 1873-merkintä, henkilö, kohtaaminen, kysymys/fakta ja aarre",
+        "Fjodor, lyhdyt, peritty odotus ja portaiden lukumäärä poistuvat tästä kohtaamistarinalta; yleinen nähtävyystieto voi säilyä muualla",
+        "Nappi, frame, kuvateksti ja henkilökuva Irynaan ja Solomiiaan",
+        "Uuden vapaasatamakysymyksen vastaus opetetaan lehteen; tekstit ja tulevat luennat yhtenä kokonaisuutena"
+      ],
+      "verificationRequired": [
+        "Privozin todellinen myyntiympäristö, nykyinen pääsy ja historiallinen yhteys",
+        "Odessan vapaasatamajärjestelmän ajoitus ja paikallinen tullikäytäntö",
+        "Kuitin merkintätavan ja 1873 kirjaan sopivan sidostaskun uskottavuus; kumpikin on fiktiivinen toteutusluonnos",
+        "Uutta kirjan sisäistä kätkömekanismia ei monisteta kaupunkeihin eikä tehdä kaupunkikäyntien järjestysehdoksi"
+      ],
+      "originalFeedback": {
+        "imageId": "odessa-fjodor-lyhty-r20260905-redo-a02",
+        "suggestion": "Keksi joku parempi aihe ja muuta henkilöt kokonaan. Laita Fablelle viestiä muutoksesta, et mikäli tarinaa pitää muokata.",
+        "workflowStatus": "regenerate",
+        "updatedAt": "2026-09-05T17:17:05.111Z"
+      },
+      "currentEntrySource": "    {\n      id: 'odessa',\n      mykistetyt: ['kohtaaminen', 'aarre'],\n      otsikko: 'Odessa — lyhty jota ei sytytetty',\n      saapuminen: 'Satamasta nousivat portaat, joita laskin sataan asti ennen '\n        + 'kuin luovutin. Alhaalta katsoen näin vain askelmia, ylhäältä '\n        + 'vain tasanteita — kuin portaikko näyttäisi eri asian '\n        + 'kummallekin kulkijalle. Puolivälin tasanteella '\n        + 'lyhtypylvääseen oli sidottu köydenpätkä merimiessolmulla. '\n        + 'Solmu oli isoisäni opettama. Vain hän sitoi sen niin.',\n      henkilo: 'Lyhdynsytyttäjä Fjodor sytyttää portaikon lyhdyt joka ilta '\n        + 'alhaalta ylös ja sammuttaa ne aamulla ylhäältä alas.',\n      kohtaaminen: 'Tasanteella Fjodor nojaa lyhtytankoonsa. \"Solmun sitoi '\n        + 'kirjasi omistaja isoisoisäni nähden — ja sinä iltana hän '\n        + 'jätti tämän yhden lyhdyn sytyttämättä. Meillä sanotaan: '\n        + 'valo säästetään sille, joka vielä nousee portaat. Vastaa, '\n        + 'niin sytytän sen nyt.\"',\n      kysymys: {\n        q: 'Montako askelmaa Odessan jättiläisportaikossa on?',\n        vaihtoehdot: [\n          'Vajaat kaksisataa',\n          'Tasan sata',\n          'Yli viisisataa',\n          'Kolmekymmentäkolme',\n        ],\n        oikea: 0,\n        fakta: 'Portaikossa on 192 askelmaa ja kymmenen tasannetta, ja se '\n          + 'rakennettiin 1800-luvun alkupuoliskolla satamasta '\n          + 'kaupunkiin. Mittasuhteet tekevät tempun: alhaalta näkyvät '\n          + 'vain askelmat, ylhäältä vain tasanteet — siksi portaikko '\n          + 'näyttää loputtomalta.',\n      },\n      aarre: 'Sytyttämättömän lyhdyn jalustassa oli luukku, ja luukun '\n        + 'takana kätkö. Fjodor raapaisi tulen: \"Lasi on puhdas — '\n        + 'joku on pessyt lyhdyn, jota ei ole sytytetty sataan '\n        + 'vuoteen.\"',\n    },",
+      "approvalStatus": "root-reviewed-proposal-awaiting-fable-alignment",
+      "userApproved": false,
+      "feedbackId": "odessa-fjodor-lyhty-r20260905-redo-a02:d31840336a9c929f363c11d4832ef24d637cc2b187af0153b648f0e808c82295",
+      "requestIds": [
+        "8d4d23cb-8ed5-456e-bea9-47ebec1bb1ec"
+      ]
+    }
+  ],
+  "implementationNoteMarkdown": "## Toteutusrajaus Fablelle\n\nPäivitä kaaridatan otsikko, henkilö, saapuminen, kohtaaminen, kysymys ja aarre yhtenä kokonaisuutena. Lontoossa synkronoi lisäksi vanha `KOHTAAMISET` sekä fokuspaketin esittely, oppitunti, täkyjen Ned-viittaukset ja luennat. Muuttunut teksti ei saa soida vanhalla äänellä. Tyhjä/väärin-repliikit kirjoitetaan uusille hahmoille ilman löytölupausta. Rasia ja tasku ovat tarinakehyksiä: pelin todellinen kätkötulos määrää palkinnon, myös tyhjän tuloksen. Ei uusia kaupunkijärjestyksiä, matkakynnyksiä tai mantereen aarteen henkilöllisyyden paljastuksia.",
+  "rootReviewedAt": "2026-09-05T17:58:17.883236+00:00",
+  "factCheckMarkdown": "# Tarinaehdotusten rajattu faktantarkistus — 5.9.2026\n\nLuonnoksia ei ole muutettu. Tarkistus koskee kahta puuttuvaa faktaa ja tarinalogiikan avoimia kohtia. Root ilmoitti tuoreen mainin olevan `afb0ef6b5b03e34f213ad6c2ccca82023ce54c37` ja luonnosten käyttämien kaanonitiedostojen säilyneen samoina kuin `b4d07569…`; en tehnyt uutta kaanonvertailua tässä tarkistuksessa.\n\n## Varmistetut faktat\n\n**Dubrovnik: Libertas = vapaus.** Dubrovnik Tourist Boardin Lovrjenac-sivu esittää linnoituksen latinankielisen vapauslauseen ja sen englanninkielisen käännöksen. Tämä tukee yksiselitteisesti visan vastausta **vapaus**. Sivua ei pidä käyttää todisteena siitä, millaisessa lipussa sana esiintyi tiettynä aikakautena. Täsmällisempi kysymys on: ”Mitä Dubrovnikin historiaan liittyvä latinankielinen sana Libertas tarkoittaa?” [Virallinen Dubrovnik-lähde](https://tzdubrovnik.hr/lang/en/get/spomenici/5339/mediji.html).\n\n**Odessa: myöntäminen 1817, toiminta 1819–1859.** Kaupungin virallisen suunnitteluasiakirjan PDF-sivu **4**, painettu sivu **3**, luku **3. Краткая историческая справка**, erottaa aseman myöntämisen käytännön toiminnasta. Se määrittelee porto-francon tuontitavaroiden tullittomaksi tuonniksi ja varastoinniksi. Vuonna 1873 järjestelmä oli tämän lähteen mukaan jo päättynyt. Ehdotettu oikea vaihtoehto voidaan täsmentää: ”Tuontitavaraa voitiin vastaanottaa ja varastoida tullitta vapaasatama-alueella.” Tämä ei tarkoita kaikkien tavaroiden ilmaisuutta tai kaiken kaupankäynnin verottomuutta. Kyse on kunnan julkaisemasta historiallisesta katsauksesta, ei alkuperäisestä vuoden 1819 tullisäädöksestä. [Virallinen PDF, sivu 4](https://ombk.omr.gov.ua/images/DPT/DPT_032/dpt_032_zapiska.pdf#page=4).\n\nPDF luettiin sen tekstikerroksesta pypdf:llä: 73 sivua, 5 643 667 tavua, SHA-256 `ce5bcec717bdcbebe20300a415e56ee9773bdfb69c36c80c002f0a2e8c3ee880`. Sivukuvaa ei tarkastettu; teksti ja sivun oma numerointi olivat selviä.\n\n## Tarina- ja visalogiikan täsmennykset Fablelle\n\n- **Lontoo:** vuoden 1956 kysymys ei voi olla Horation vuonna 1873 kirjoittama kysymys. Se tulee Leilan nykyhetken keskustelusta ja sitä pohjustavasta oppitunnista. Kirjan katupiirros on uusi fiktiivinen lisäys, ei nykyisessä kaanonissa jo varmennettu esine.\n- **Dubrovnik:** Libertas-kysymys jää luonnoksessa irralliseksi rantaprofiilin tulkinnasta. Lyhyt silta tarvitaan: Mara huomaa sanan kirjan reunaan kopioituna ja kysyy, ymmärsikö matkaaja sen. Tällainen reunamerkintä on uusi ehdotus. Tiedon tunteminen herättää kiinnostuksen; se ei taianomaisesti avaa rasiaa.\n- **Odessa:** tyhjä tullisarake ei yksin todista vapaasatamakohtelua, eikä kahteen kertaan merkitty paino johda sellaisenaan takakannen taskuun. Kuitin kääntöpuolelle tarvitaan selvä fiktiivinen vihje sidoksesta. ”Kuitti oli minua vanhempi” tarkoittaa ennen Horation syntymää laadittua kuittia, ei vain ennen vuotta 1873 tehtyä; ajoitus on päätettävä tai lause täsmennettävä.\n- **Kaikki kolme:** luonnosten löytörepliikit lupaavat sisällön ehdottomasti. Ne tulee sitoa pelin todelliseen kätkötulokseen; tyhjä tulos tai väärä vastaus ei tuota luvattua löytöesinettä. Odessan kirjan sisäinen tasku sopii kertaluonteiseen paljastukseen, ei joka vierailulla uudelleen täyttyväksi palkinnoksi. Kaupunkitekstit eivät saa muuttaa vapaata käyntijärjestystä tai mantereen aarremekaniikkaa.\n\n## Rootin jo tarkistamat tukifaktat\n\nNäitä ei tutkittu uudestaan: [Clean Air Act 1956](https://www.legislation.gov.uk/ukpga/1956/52/pdfs/ukpga_19560052_en.pdf) — tumman savun rajoitus ja smoke control areas; [Betina](https://tzdubrovnik.hr/get/news_kongresni/81234/explore_the_walls_of_dubrovnik_and_the_secrets_of_the_island_of_lokrum_in_a_sea_adventure_by_kayak.html) — pääsy mereltä; [Pryvoz](https://odesa365.omr.gov.ua/en/locations/rinok-privoz) — perustamisvuosi 1827. Ne eivät vielä vahvista yksittäistä kuvauspaikkaa, auringon heijastusgeometriaa tai fiktiivistä kätköä.\n",
+  "otherFeedbackClassification": {
+    "schemaVersion": 1,
+    "generatedAt": "2026-09-05T17:55:42.836579Z",
+    "sourcePath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/story-feedback-routing-20260905/latest-intake.json",
+    "sourceGeneratedAt": "2026-09-05T17:51:31.642Z",
+    "sourceSha256": "bfac7cef7a105fe4d10596af3335363ad22a2ee53322b636fd11e702189b0f30",
+    "canonicalRef": "supplied current main afb0ef6",
+    "canonicalCommit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+    "inputCount": 20,
+    "classifiedCount": 17,
+    "excludedCount": 3,
+    "counts": {
+      "visual-only": 4,
+      "story-alignment-needed": 13
+    },
+    "classificationMeaning": {
+      "visual-only": "Palaute voidaan käsitellä kuvan visuaalisena muutoksena ilman pyydettyä henkilön tai tarinan vaihtoa.",
+      "story-alignment-needed": "Vähintään henkilö-/rooli-/paikkamuutoksen yhteensopivuus pelin tarinaan on tarkistettava; luokka ei yksin määrää koko tarinan tai visan uusimista."
+    },
+    "cases": [
+      {
+        "feedbackId": "ateena-nikos-r20260905-redo-v1:07486d9eff4cd3f5e3a530b62b1bc13b857686e513f17b78cae6c7e9346f5873",
+        "imageId": "ateena-nikos-r20260905-redo-v1",
+        "classification": "story-alignment-needed",
+        "reasonFi": "Henkilön vaihtaminen koskee nimettyä Nikosta, jonka rooli on osa kohtaamistekstiä. Uuden henkilön suhde tarinaan on tarkistettava; vuorokaudenaika ja ehdollinen pöllötoive ovat lisäksi visuaalisia muutoksia.",
+        "userConstraint": "Säilytä hyvä ympäristö; vaihda vuorokaudenaikaa ja henkilöä. Pöllö voisi näkyä hieman taustalla, jos se on Ateenassa mahdollinen.",
+        "canonicalCityId": "ateena",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 512,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'ateena')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:13:55.293Z",
+        "reviewCity": "Ateena",
+        "originalFeedback": "Ympäristö on hyvä, muuta vuorokauden aikaa ja henkilöä. Kuvassa voisi olla myös pöllö, mikä se on Atenassa mahdollista. Siis jossain vähä taustalla.",
+        "feedbackSha256": "07486d9eff4cd3f5e3a530b62b1bc13b857686e513f17b78cae6c7e9346f5873"
+      },
+      {
+        "feedbackId": "granada-yusuf-r20260905-redo-v1:8579e80d4e309b0c61812654479f46d516712c8c8a5b2d2bfbe0a8f8337f5888",
+        "imageId": "granada-yusuf-r20260905-redo-v1",
+        "classification": "story-alignment-needed",
+        "reasonFi": "Kokonaan uusien ihmisten ja tilanteen pyyntö voi muuttaa Yusufiin ja vesikouruihin sidottua kohtaamista. Henkilöt ja tilanne on sovitettava pelin tarinaan.",
+        "userConstraint": "Keksi kokonaan uudet ihmiset ja tilanne.",
+        "canonicalCityId": "granada",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 750,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'granada')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:14:39.745Z",
+        "reviewCity": "Granada",
+        "originalFeedback": "Keksit tähän kokonaan vielä uudet ihmiset ja tilanne.",
+        "feedbackSha256": "8579e80d4e309b0c61812654479f46d516712c8c8a5b2d2bfbe0a8f8337f5888"
+      },
+      {
+        "feedbackId": "alpit-anselm-r20260905-redo-v2:71df9454e3ae858449bf975513bfbf28931497ca47c850f0e46883f08d74db6f",
+        "imageId": "alpit-anselm-r20260905-redo-v2",
+        "classification": "visual-only",
+        "reasonFi": "Palaute koskee luonnonläheisempää ympäristöä ja auringonpaistetta. Henkilön, roolin, kysymyksen tai aarretarinan muutosta ei pyydetä.",
+        "userConstraint": "Kuva enemmän luonnossa ja auringonpaisteessa.",
+        "canonicalCityId": "alpit",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 896,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'alpit')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:21:38.960Z",
+        "reviewCity": "Suuri Sankt Bernhard",
+        "originalFeedback": "Tämä voisi olla enemmän luonnossa otettu kuva. Ja auringon paisteessa.",
+        "feedbackSha256": "71df9454e3ae858449bf975513bfbf28931497ca47c850f0e46883f08d74db6f"
+      },
+      {
+        "feedbackId": "kobenhavn-karen-r20260905-redo-v2:5d4eba6c0c707a195be3cd707692c9b9ad9689cee9216954e777404b566f5af3",
+        "imageId": "kobenhavn-karen-r20260905-redo-v2",
+        "classification": "story-alignment-needed",
+        "reasonFi": "Sekä henkilö että paikka vaihtuvat. Karenin Nyhavniin sidottu kohtaaminen edellyttää näiden muutosten tarinayhteensovitusta.",
+        "userConstraint": "Vaihda henkilö ja paikka.",
+        "canonicalCityId": "kobenhavn",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 1537,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'kobenhavn')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:26:04.038Z",
+        "reviewCity": "Kööpenhamina",
+        "originalFeedback": "Vaihda henkilö ja paikka",
+        "feedbackSha256": "5d4eba6c0c707a195be3cd707692c9b9ad9689cee9216954e777404b566f5af3"
+      },
+      {
+        "feedbackId": "tromssa-ingrid-satamavahti-r20260905-redo-a01:a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+        "imageId": "tromssa-ingrid-satamavahti-r20260905-redo-a01",
+        "classification": "story-alignment-needed",
+        "reasonFi": "Pyyntö vaihtaa nimetty Ingrid ja miettiä kokonaisuus uudelleen vaatii vähintään uuden henkilön sovittamisen satamavahtiin sidottuun kohtaamiseen.",
+        "userConstraint": "Vaihda henkilö ja mieti kokonaisuus uudelleen.",
+        "canonicalCityId": "tromssa",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 1609,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'tromssa')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:28:42.315Z",
+        "reviewCity": "Tromssa",
+        "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+        "feedbackSha256": "a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60"
+      },
+      {
+        "feedbackId": "pietari-dmitri-palatsisilta-r20260905-redo-a01:a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+        "imageId": "pietari-dmitri-palatsisilta-r20260905-redo-a01",
+        "classification": "story-alignment-needed",
+        "reasonFi": "Pyyntö vaihtaa nimetty Dmitri ja miettiä kokonaisuus uudelleen vaatii vähintään uuden henkilön sovittamisen sillanhoitoon sidottuun kohtaamiseen.",
+        "userConstraint": "Vaihda henkilö ja mieti kokonaisuus uudelleen.",
+        "canonicalCityId": "pietari",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 1275,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'pietari')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:29:15.137Z",
+        "reviewCity": "Pietari",
+        "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+        "feedbackSha256": "a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60"
+      },
+      {
+        "feedbackId": "kiova-oksana-kultainen-portti-r20260905-redo-a02:a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+        "imageId": "kiova-oksana-kultainen-portti-r20260905-redo-a02",
+        "classification": "story-alignment-needed",
+        "reasonFi": "Pyyntö vaihtaa nimetty Oksana ja miettiä kokonaisuus uudelleen vaatii vähintään uuden henkilön sovittamisen Kultaisen portin kohtaamiseen.",
+        "userConstraint": "Vaihda henkilö ja mieti kokonaisuus uudelleen.",
+        "canonicalCityId": "kiova",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 1164,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'kiova')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:29:57.599Z",
+        "reviewCity": "Kiova",
+        "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+        "feedbackSha256": "a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60"
+      },
+      {
+        "feedbackId": "rooma-enzo-trevi-r20260905-redo-a01:554afdb073f92bc80afc52fa9f2f51484f05ae7a7a10143bea9efbcfa7bae698",
+        "imageId": "rooma-enzo-trevi-r20260905-redo-a01",
+        "classification": "story-alignment-needed",
+        "reasonFi": "Henkilön vaihtaminen koskee Enzoon sidottua kohtaamista. Ilta, rajattu valo ja kaupungin juhla ovat visuaalisia lisätoiveita, mutta henkilömuutos vaatii tarinayhteensovituksen.",
+        "userConstraint": "Vaihda henkilö ja mieti kokonaisuus uudelleen. Kuva voisi olla illalla rajatussa valossa, ja kaupungilla voisi olla samaan aikaan juhla.",
+        "canonicalCityId": "rooma",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 438,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'rooma')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:31:09.590Z",
+        "reviewCity": "Rooma",
+        "originalFeedback": "Vaihda henkilö ja mieti uusiksi Voisi olla ilta ja rajattu valo. Menossa joku juhla kaupungilla samaan aikaan",
+        "feedbackSha256": "554afdb073f92bc80afc52fa9f2f51484f05ae7a7a10143bea9efbcfa7bae698"
+      },
+      {
+        "feedbackId": "islanti-bjork-r20260905-redo-v2:a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+        "imageId": "islanti-bjork-r20260905-redo-v2",
+        "classification": "story-alignment-needed",
+        "reasonFi": "Pyyntö vaihtaa nimetty Björk ja miettiä kokonaisuus uudelleen vaatii vähintään uuden henkilön sovittamisen lähdelaakson tilalliseen sidottuun kohtaamiseen.",
+        "userConstraint": "Vaihda henkilö ja mieti kokonaisuus uudelleen.",
+        "canonicalCityId": "islanti",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 1648,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'islanti')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:31:33.742Z",
+        "reviewCity": "Haukadalur",
+        "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+        "feedbackSha256": "a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60"
+      },
+      {
+        "feedbackId": "tallinna-kristjan-r20260905-redo-v1:a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+        "imageId": "tallinna-kristjan-r20260905-redo-v1",
+        "classification": "story-alignment-needed",
+        "reasonFi": "Pyyntö vaihtaa nimetty Kristjan ja miettiä kokonaisuus uudelleen vaatii vähintään uuden henkilön sovittamisen tornimestariin sidottuun kohtaamiseen.",
+        "userConstraint": "Vaihda henkilö ja mieti kokonaisuus uudelleen.",
+        "canonicalCityId": "tallinna",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 1347,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'tallinna')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:31:47.021Z",
+        "reviewCity": "Tallinna",
+        "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+        "feedbackSha256": "a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60"
+      },
+      {
+        "feedbackId": "oslo-sigrid-r20260905-redo-v3:09874b0a5677b602b4575fc78f86360ebd8f38c85c32f73e625d18fa73842aec",
+        "imageId": "oslo-sigrid-r20260905-redo-v3",
+        "classification": "story-alignment-needed",
+        "reasonFi": "Henkilön vaihto vaatii Sigridiin sidotun tarinan yhteensovituksen. Lisäksi kuvan city on Halden ja lähteistetty paikka Gjellestad, mutta pelin vahvistettu cityId ja tarinan otsikko ovat oslo/Oslo; tämä olemassa oleva paikkaristiriita on käsiteltävä erikseen.",
+        "userConstraint": "Vaihda henkilö ja mieti kokonaisuus uudelleen. Lisää auringonvalo.",
+        "canonicalCityId": "oslo",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 1500,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'oslo')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:32:20.915Z",
+        "reviewCity": "Halden",
+        "originalFeedback": "Vaihda henkilö ja mieti uusiksi . Auringon valo mukaan",
+        "feedbackSha256": "09874b0a5677b602b4575fc78f86360ebd8f38c85c32f73e625d18fa73842aec",
+        "placeMismatch": {
+          "reviewCity": "Halden",
+          "depictedLocationFromImageMetadata": "Gjellestad, Halden, Norway",
+          "canonicalCityId": "oslo",
+          "canonicalTitle": "Oslo — laiva mullan alla",
+          "imageMetadataPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounters-redo-2026-09-05-v2/c/oslo-sigrid-r20260905-redo-v3.json",
+          "imageMetadataCityId": "oslo",
+          "sourceNote": "Jellhaugenin matala ruohokumpu ja viljelytasanko perustuvat itse katsottuun NIKUn paikkavalokuvaan. Paikka on Haldenin Gjellestad, vaikka vanha kuvatunnus alkaa oslolla. Maanviljelijän, työparin ja koiran heinätilanne on tarinatulkinta; tutkan kuvaamaa laivaa tai kaivantoa ei näytetä.",
+          "finding": "Oslo-kohdistus on vahvistettu sekä kuvan cityId-metadatasta että nykyisestä pelidatasta. Halden on kuvan lähteistetty paikkapoikkeama, ei varmennettu uusi pelin kaupunkiavain. Käyttäjän tässä palautteessa ei pyydetä kaupungin vaihtamista.",
+          "needsStoryAlignment": true
+        }
+      },
+      {
+        "feedbackId": "lissabon-ines-strength-r20260905-v1:a732536c73e3c464b53b23c6da7e290c3b4ef27f241bed03fdc770b5918ed944",
+        "imageId": "lissabon-ines-strength-r20260905-v1",
+        "classification": "visual-only",
+        "reasonFi": "Palaute koskee taustalla olevan miehen liiallista läsnäoloa. Päähenkilön, roolin tai tarinan muutosta ei pyydetä.",
+        "userConstraint": "Taustalla oleva mies on liikaa.",
+        "canonicalCityId": "lissabon",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 556,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'lissabon')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:32:58.323Z",
+        "reviewCity": "Lissabon",
+        "originalFeedback": "Mies taustalla liikaa",
+        "feedbackSha256": "a732536c73e3c464b53b23c6da7e290c3b4ef27f241bed03fdc770b5918ed944"
+      },
+      {
+        "feedbackId": "dublin-molly-strength-r20260905-v1:6b57ad485233261f593ddab11da7c4eccf5bba8b8aef4f72f94445ee1da8e2a3",
+        "imageId": "dublin-molly-strength-r20260905-v1",
+        "classification": "story-alignment-needed",
+        "reasonFi": "Uusi henkilö ja lasin erottama lipputiskin virkailijatilanne muuttavat Mollyyn ja sillanvartijaan sidottua kohtaamista. Henkilö, työrooli ja tilanne on sovitettava tarinaan.",
+        "userConstraint": "Vaihda henkilö. Siirrä kohtaus lipputiskille, jossa lasi on pelaajan ja virkailijan välissä.",
+        "canonicalCityId": "dublin",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 633,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'dublin')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:34:45.441Z",
+        "reviewCity": "Dublin",
+        "originalFeedback": "Vaihda henkilö ja tee Kohtaus lippu tiskille missä lasi pelaajan ja virkailijan välillä.",
+        "feedbackSha256": "6b57ad485233261f593ddab11da7c4eccf5bba8b8aef4f72f94445ee1da8e2a3"
+      },
+      {
+        "feedbackId": "venetsia-lucia-strength-r20260905-v1:c2257f315a0800c8b7fe8aecbc80c9ecfe08545e35a3199310ff07ae986a7066",
+        "imageId": "venetsia-lucia-strength-r20260905-v1",
+        "classification": "visual-only",
+        "reasonFi": "Pyyntö muuttaa kasvoille tulevaa valoa; käyttäjä sanoo muun kuvan olevan hyvä. Henkilö- tai tarinamuutosta ei pyydetä.",
+        "userConstraint": "Tuo kasvoille auringonvaloa jonkin ikkunan kautta siivilöityneenä. Muuten kuva on hyvä.",
+        "canonicalCityId": "venetsia",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 201,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'venetsia')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:36:20.745Z",
+        "reviewCity": "Venetsia",
+        "originalFeedback": "Tuo auringon valo kasvoille jonkun ikkunan kautta siivilöityneenä. Muuten hyvä",
+        "feedbackSha256": "c2257f315a0800c8b7fe8aecbc80c9ecfe08545e35a3199310ff07ae986a7066"
+      },
+      {
+        "feedbackId": "amsterdam-willem-strength-r20260905-v1:a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+        "imageId": "amsterdam-willem-strength-r20260905-v1",
+        "classification": "story-alignment-needed",
+        "reasonFi": "Pyyntö vaihtaa nimetty Willem ja miettiä kokonaisuus uudelleen vaatii vähintään uuden henkilön sovittamisen siltavahtiin sidottuun kohtaamiseen.",
+        "userConstraint": "Vaihda henkilö ja mieti kokonaisuus uudelleen.",
+        "canonicalCityId": "amsterdam",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 594,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'amsterdam')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:36:44.183Z",
+        "reviewCity": "Amsterdam",
+        "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+        "feedbackSha256": "a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60"
+      },
+      {
+        "feedbackId": "nikosia-andreas-kupari-r20260905-redo-c1:a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+        "imageId": "nikosia-andreas-kupari-r20260905-redo-c1",
+        "classification": "story-alignment-needed",
+        "reasonFi": "Pyyntö vaihtaa nimetty Andreas ja miettiä kokonaisuus uudelleen vaatii vähintään uuden henkilön sovittamisen seppään ja kupariharkkoon sidottuun kohtaamiseen.",
+        "userConstraint": "Vaihda henkilö ja mieti kokonaisuus uudelleen.",
+        "canonicalCityId": "nikosia",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 2403,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'nikosia')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:41:26.167Z",
+        "reviewCity": "Nikosia",
+        "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+        "feedbackSha256": "a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60"
+      },
+      {
+        "feedbackId": "medina-omar-r20260905-redo-v2:b345b01807dce3a23cff9446abb080ec511b7c5d96b86843481de932ea05f82d",
+        "imageId": "medina-omar-r20260905-redo-v2",
+        "classification": "visual-only",
+        "reasonFi": "Pyyntö koskee ilmeen vaihtamista ja auringonvaloa. Omarin henkilöä, roolia tai tarinaa ei pyydetä vaihtamaan.",
+        "userConstraint": "Kokeile eri ilmettä ja lisää auringonvalo.",
+        "canonicalCityId": "medina",
+        "canonicalVerification": {
+          "commit": "afb0ef6b5b03e34f213ad6c2ccca82023ce54c37",
+          "repositoryPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox",
+          "file": "js/tyohuone-kehitys-data.js",
+          "line": 2284,
+          "selector": "KAARI_PAKETIT.kohteet.find(kohde => kohde.id === 'medina')"
+        },
+        "sourceUpdatedAt": "2026-09-05T17:42:15.411Z",
+        "reviewCity": "Medina",
+        "originalFeedback": "Kokeile eri ilme ja lisää auringon valo",
+        "feedbackSha256": "b345b01807dce3a23cff9446abb080ec511b7c5d96b86843481de932ea05f82d"
+      }
+    ],
+    "excludedAlreadyProposed": [
+      {
+        "feedbackId": "lontoo-ned-r20260905-redo-c-v1:28025559ec9af015c09c61851ab6ab0ec7b8c35b8a9f72a27bde922a1a35a4c7",
+        "imageId": "lontoo-ned-r20260905-redo-c-v1",
+        "reason": "Kolmen kaupungin tarinaehdotukset ovat jo erillisessä käsittelyssä; jätetty tämän luokittelun ulkopuolelle."
+      },
+      {
+        "feedbackId": "dubrovnik-ivo-r20260905-redo-v1:12ae6370d463b6e5b27c588c9c25a05e6754557f13b8e8688eb98fae6af4eacd",
+        "imageId": "dubrovnik-ivo-r20260905-redo-v1",
+        "reason": "Kolmen kaupungin tarinaehdotukset ovat jo erillisessä käsittelyssä; jätetty tämän luokittelun ulkopuolelle."
+      },
+      {
+        "feedbackId": "odessa-fjodor-lyhty-r20260905-redo-a02:d31840336a9c929f363c11d4832ef24d637cc2b187af0153b648f0e808c82295",
+        "imageId": "odessa-fjodor-lyhty-r20260905-redo-a02",
+        "reason": "Kolmen kaupungin tarinaehdotukset ovat jo erillisessä käsittelyssä; jätetty tämän luokittelun ulkopuolelle."
+      }
+    ],
+    "remoteMutationPerformed": false,
+    "siteCheckoutModified": false,
+    "imagesPlannedOrGenerated": false,
+    "storyDraftsWritten": false
+  },
+  "allCurrentFeedback": [
+    {
+      "feedbackId": "lontoo-ned-r20260905-redo-c-v1:28025559ec9af015c09c61851ab6ab0ec7b8c35b8a9f72a27bde922a1a35a4c7",
+      "imageId": "lontoo-ned-r20260905-redo-c-v1",
+      "sourceUpdatedAt": "2026-09-05T17:12:06.818Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Kokonaan uusi versio, niin, että ollaan aivan Lontoon ydinkeskustassa. Olisi hauska nähdä henkilö, nuori henkilö, muotivaatteet päällään ihmisvilinässä, yhtäkkiä pysäytettynä aurinkoisella kelillä, niin, että katu on varjossa, mutta kaupungin lasitaloista on heijastunut. Valon säteitä kasvoille, liike epäterävyyttä hieman pidemmällä valotusajalla kulkevissa ihmisissä.\n\nTähän täytyy siis vaihtaa myös kysymys tarina keksis sinäsen ja lähetä ehdotus fablelle siitä.",
+      "feedbackSha256": "28025559ec9af015c09c61851ab6ab0ec7b8c35b8a9f72a27bde922a1a35a4c7",
+      "requestIds": [
+        "bee8f5f2-5505-4e7c-84e6-057704b17768"
+      ],
+      "city": "Lontoo",
+      "country": "Englanti",
+      "character": "Ned — jokilöytäjä",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "ateena-nikos-r20260905-redo-v1:07486d9eff4cd3f5e3a530b62b1bc13b857686e513f17b78cae6c7e9346f5873",
+      "imageId": "ateena-nikos-r20260905-redo-v1",
+      "sourceUpdatedAt": "2026-09-05T17:13:55.293Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Ympäristö on hyvä, muuta vuorokauden aikaa ja henkilöä. Kuvassa voisi olla myös pöllö, mikä se on Atenassa mahdollista. Siis jossain vähä taustalla.",
+      "feedbackSha256": "07486d9eff4cd3f5e3a530b62b1bc13b857686e513f17b78cae6c7e9346f5873",
+      "requestIds": [
+        "b468396e-fe82-413e-ab4a-eec3d732cbd1"
+      ],
+      "city": "Ateena",
+      "country": "Kreikka",
+      "character": "Nikos — Akropoliin marmorikonservaattori",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "granada-yusuf-r20260905-redo-v1:8579e80d4e309b0c61812654479f46d516712c8c8a5b2d2bfbe0a8f8337f5888",
+      "imageId": "granada-yusuf-r20260905-redo-v1",
+      "sourceUpdatedAt": "2026-09-05T17:14:39.745Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Keksit tähän kokonaan vielä uudet ihmiset ja tilanne.",
+      "feedbackSha256": "8579e80d4e309b0c61812654479f46d516712c8c8a5b2d2bfbe0a8f8337f5888",
+      "requestIds": [
+        "41529360-f9da-4b87-b8cb-cd0601a8542f"
+      ],
+      "city": "Granada",
+      "country": "Espanja",
+      "character": "Yusuf — vesihuollon harjoittelija",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "dubrovnik-ivo-r20260905-redo-v1:12ae6370d463b6e5b27c588c9c25a05e6754557f13b8e8688eb98fae6af4eacd",
+      "imageId": "dubrovnik-ivo-r20260905-redo-v1",
+      "sourceUpdatedAt": "2026-09-05T17:15:41.607Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Keksi joku mielenkiintoisempi paikka. Tämä on joku kauppi ja vaida ihmiset ja koko tarina.\n\nAnnaa Pavlelle ohjeet tarvittaessa. Keksitään ylilainen kehystarina tukemaan uutta paikkaa.",
+      "feedbackSha256": "12ae6370d463b6e5b27c588c9c25a05e6754557f13b8e8688eb98fae6af4eacd",
+      "requestIds": [
+        "797735de-a24c-4ee8-8f00-03e866dfa922"
+      ],
+      "city": "Dubrovnik",
+      "country": "Kroatia",
+      "character": "Ivo — venemekaanikko",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "odessa-fjodor-lyhty-r20260905-redo-a02:d31840336a9c929f363c11d4832ef24d637cc2b187af0153b648f0e808c82295",
+      "imageId": "odessa-fjodor-lyhty-r20260905-redo-a02",
+      "sourceUpdatedAt": "2026-09-05T17:17:05.111Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Keksi joku parempi aihe ja muuta henkilöt kokonaan. Laita Fablelle viestiä muutoksesta, et mikäli tarinaa pitää muokata.",
+      "feedbackSha256": "d31840336a9c929f363c11d4832ef24d637cc2b187af0153b648f0e808c82295",
+      "requestIds": [
+        "8d4d23cb-8ed5-456e-bea9-47ebec1bb1ec"
+      ],
+      "city": "Odessa",
+      "country": "Ukraina",
+      "character": "Fjodor — katuvalaistuksen oppipoika",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "alpit-anselm-r20260905-redo-v2:71df9454e3ae858449bf975513bfbf28931497ca47c850f0e46883f08d74db6f",
+      "imageId": "alpit-anselm-r20260905-redo-v2",
+      "sourceUpdatedAt": "2026-09-05T17:21:38.960Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Tämä voisi olla enemmän luonnossa otettu kuva. Ja auringon paisteessa.",
+      "feedbackSha256": "71df9454e3ae858449bf975513bfbf28931497ca47c850f0e46883f08d74db6f",
+      "requestIds": [
+        "57b10846-9cd0-42e0-96e1-828bd06ff6bb"
+      ],
+      "city": "Suuri Sankt Bernhard",
+      "country": "Sveitsi",
+      "character": "Anselm — hospitsiveli",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "kobenhavn-karen-r20260905-redo-v2:5d4eba6c0c707a195be3cd707692c9b9ad9689cee9216954e777404b566f5af3",
+      "imageId": "kobenhavn-karen-r20260905-redo-v2",
+      "sourceUpdatedAt": "2026-09-05T17:26:04.038Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Vaihda henkilö ja paikka",
+      "feedbackSha256": "5d4eba6c0c707a195be3cd707692c9b9ad9689cee9216954e777404b566f5af3",
+      "requestIds": [
+        "b6d0729d-7b38-47e8-97a8-0e1dcfe3d447"
+      ],
+      "city": "Kööpenhamina",
+      "country": "Tanska",
+      "character": "Karen — sadunkertoja",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "tromssa-ingrid-satamavahti-r20260905-redo-a01:a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+      "imageId": "tromssa-ingrid-satamavahti-r20260905-redo-a01",
+      "sourceUpdatedAt": "2026-09-05T17:28:42.315Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+      "feedbackSha256": "a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+      "requestIds": [
+        "7dbde346-3b4a-4be9-b229-894dde61afa5"
+      ],
+      "city": "Tromssa",
+      "country": "Norja",
+      "character": "Ingrid — satamavahti",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "pietari-dmitri-palatsisilta-r20260905-redo-a01:a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+      "imageId": "pietari-dmitri-palatsisilta-r20260905-redo-a01",
+      "sourceUpdatedAt": "2026-09-05T17:29:15.137Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+      "feedbackSha256": "a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+      "requestIds": [
+        "05d19870-f154-4b16-a7d7-1fba6fb1fe7b"
+      ],
+      "city": "Pietari",
+      "country": "Venäjä",
+      "character": "Dmitri — siltamekaanikko",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "kiova-oksana-kultainen-portti-r20260905-redo-a02:a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+      "imageId": "kiova-oksana-kultainen-portti-r20260905-redo-a02",
+      "sourceUpdatedAt": "2026-09-05T17:29:57.599Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+      "feedbackSha256": "a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+      "requestIds": [
+        "a70266fe-98b2-42c0-8d5a-93135bc31959"
+      ],
+      "city": "Kiova",
+      "country": "Ukraina",
+      "character": "Oksana — portinvartija ja konservointiassistentti",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "rooma-enzo-trevi-r20260905-redo-a01:554afdb073f92bc80afc52fa9f2f51484f05ae7a7a10143bea9efbcfa7bae698",
+      "imageId": "rooma-enzo-trevi-r20260905-redo-a01",
+      "sourceUpdatedAt": "2026-09-05T17:31:09.590Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi Voisi olla ilta ja rajattu valo. Menossa joku juhla kaupungilla samaan aikaan",
+      "feedbackSha256": "554afdb073f92bc80afc52fa9f2f51484f05ae7a7a10143bea9efbcfa7bae698",
+      "requestIds": [
+        "0fe42af2-7310-4db1-aa7f-99a89311b3ad"
+      ],
+      "city": "Rooma",
+      "country": "Italia",
+      "character": "Enzo — Trevin suihkulähteen hoitaja",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "islanti-bjork-r20260905-redo-v2:a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+      "imageId": "islanti-bjork-r20260905-redo-v2",
+      "sourceUpdatedAt": "2026-09-05T17:31:33.742Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+      "feedbackSha256": "a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+      "requestIds": [
+        "94769ee3-a7bd-43f2-b584-46d7b4f8419d"
+      ],
+      "city": "Haukadalur",
+      "country": "Islanti",
+      "character": "Björk — maatilan emäntä",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "tallinna-kristjan-r20260905-redo-v1:a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+      "imageId": "tallinna-kristjan-r20260905-redo-v1",
+      "sourceUpdatedAt": "2026-09-05T17:31:47.021Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+      "feedbackSha256": "a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+      "requestIds": [
+        "98b52664-afc0-4551-a52c-a413ac57c6b6"
+      ],
+      "city": "Tallinna",
+      "country": "Viro",
+      "character": "Kristjan — tornimestari",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "oslo-sigrid-r20260905-redo-v3:09874b0a5677b602b4575fc78f86360ebd8f38c85c32f73e625d18fa73842aec",
+      "imageId": "oslo-sigrid-r20260905-redo-v3",
+      "sourceUpdatedAt": "2026-09-05T17:32:20.915Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi . Auringon valo mukaan",
+      "feedbackSha256": "09874b0a5677b602b4575fc78f86360ebd8f38c85c32f73e625d18fa73842aec",
+      "requestIds": [
+        "94c244d1-3381-4d96-a845-301d774a9fd7"
+      ],
+      "city": "Halden",
+      "country": "Norja",
+      "character": "Sigrid — maanviljelijä",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "lissabon-ines-strength-r20260905-v1:a732536c73e3c464b53b23c6da7e290c3b4ef27f241bed03fdc770b5918ed944",
+      "imageId": "lissabon-ines-strength-r20260905-v1",
+      "sourceUpdatedAt": "2026-09-05T17:32:58.323Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Mies taustalla liikaa",
+      "feedbackSha256": "a732536c73e3c464b53b23c6da7e290c3b4ef27f241bed03fdc770b5918ed944",
+      "requestIds": [
+        "9b775512-90b0-4278-816b-71157df859b2"
+      ],
+      "city": "Lissabon",
+      "country": "Portugali",
+      "character": "Inês — laattamestari",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "dublin-molly-strength-r20260905-v1:6b57ad485233261f593ddab11da7c4eccf5bba8b8aef4f72f94445ee1da8e2a3",
+      "imageId": "dublin-molly-strength-r20260905-v1",
+      "sourceUpdatedAt": "2026-09-05T17:34:45.441Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Vaihda henkilö ja tee Kohtaus lippu tiskille missä lasi pelaajan ja virkailijan välillä.",
+      "feedbackSha256": "6b57ad485233261f593ddab11da7c4eccf5bba8b8aef4f72f94445ee1da8e2a3",
+      "requestIds": [
+        "4ce46b66-bac6-459e-8c85-92f99cffdffe"
+      ],
+      "city": "Dublin",
+      "country": "Irlanti",
+      "character": "Molly — Ha’penny Bridgen huoltaja",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "venetsia-lucia-strength-r20260905-v1:c2257f315a0800c8b7fe8aecbc80c9ecfe08545e35a3199310ff07ae986a7066",
+      "imageId": "venetsia-lucia-strength-r20260905-v1",
+      "sourceUpdatedAt": "2026-09-05T17:36:20.745Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Tuo auringon valo kasvoille jonkun ikkunan kautta siivilöityneenä. Muuten hyvä",
+      "feedbackSha256": "c2257f315a0800c8b7fe8aecbc80c9ecfe08545e35a3199310ff07ae986a7066",
+      "requestIds": [
+        "6e40e42d-4552-495a-ae7b-bd34308c1e19"
+      ],
+      "city": "Venetsia",
+      "country": "Italia",
+      "character": "Lucia — naamiontekijä",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "amsterdam-willem-strength-r20260905-v1:a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+      "imageId": "amsterdam-willem-strength-r20260905-v1",
+      "sourceUpdatedAt": "2026-09-05T17:36:44.183Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+      "feedbackSha256": "a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+      "requestIds": [
+        "b8dfecae-2a0e-4041-9692-90e11a9feb3f"
+      ],
+      "city": "Amsterdam",
+      "country": "Alankomaat",
+      "character": "Willem, siltavahti",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "nikosia-andreas-kupari-r20260905-redo-c1:a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+      "imageId": "nikosia-andreas-kupari-r20260905-redo-c1",
+      "sourceUpdatedAt": "2026-09-05T17:41:26.167Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+      "feedbackSha256": "a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+      "requestIds": [
+        "e5639c00-fb38-4637-9ad6-7b3436719508"
+      ],
+      "city": "Nikosia",
+      "country": "Kypros",
+      "character": "Andreas — seppä",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    },
+    {
+      "feedbackId": "medina-omar-r20260905-redo-v2:b345b01807dce3a23cff9446abb080ec511b7c5d96b86843481de932ea05f82d",
+      "imageId": "medina-omar-r20260905-redo-v2",
+      "sourceUpdatedAt": "2026-09-05T17:42:15.411Z",
+      "workflowStatus": "regenerate",
+      "originalFeedback": "Kokeile eri ilme ja lisää auringon valo",
+      "feedbackSha256": "b345b01807dce3a23cff9446abb080ec511b7c5d96b86843481de932ea05f82d",
+      "requestIds": [
+        "dae267c2-5b6f-4409-9cd8-a3bfe0ea5a90"
+      ],
+      "city": "Medina",
+      "country": "Saudi-Arabia",
+      "character": "Omar — vedennostaja",
+      "categoryId": "kohtaamiset",
+      "requestMatch": "matched",
+      "previousProcessing": null
+    }
+  ],
+  "reviewedProposalMarkdown": "# Tarinaehdotukset Fablelle — pääagentin tarkistama ehdotus 5.9.2026\n\nTämä on kolmen kokonaisuuden muutosehdotus, ei hyväksytty kaanon, kuvabrief tai toteutuspäätös. Lähtö on tuore pelin main `afb0ef6b5b03e34f213ad6c2ccca82023ce54c37`. Kohtaamiset tapahtuvat nykyhetkessä; vuoden 1873 kirja tarvitsee paikallisen tulkintaa. Kukaan ei tunnista Horatiota henkilökohtaisesti, odota perillistä tai vartioi hänelle vuosisataista lupausta. Uudet nimet ja tapahtumat ovat ehdotuksia.\n\n## Lontoo — valo löytää kadun (`lontoo`)\n\nNykyinen kaari on **Lontoo — laskuveden kello**: jokilöytäjä Ned, H. F. -taskukello ja savusumukysymys. Vanhassa kohtaamispolussa löytyy eri esine, kompassi. Molemmat Ned-versiot korvataan.\n\n**Kuva ja henkilö:** Leila, 24-vuotias muotialan opiskelija, pysähtyy kesken ripeän kävelyn. Väljä näyttävä takki, huoliteltu katumuoti ja ihmisvilinä tekevät nykyhetken selväksi. Varjoisalle keskustakadulle heijastuu aurinkoa lasijulkisivusta; Leilan kasvot ovat tarkat, ohikulkijoissa liike pehmenee. Hän katsoo suoraan kysyvään matkaajaan ensin epäuskoisena, sitten huvittuneen kiinnostuneena. Bank–Leadenhall-seutu on **paikkaehdokas**; sopiva katu ja heijastuksen geometria tarkistetaan.\n\n**Kehys:** Horation nykyinen sumumerkintä säilyy historiallisena vastaparina. Nuoren havainto: ”Kirja käskee kuuntelemaan kaupunkia. Pysäytän ensimmäisen ihmisen, joka näyttää näkevän siinä jotain, mitä minä en.”\n\n**Kohtaaminen:** ”Aarretta? Minä etsin kuvauspaikkaa. Mutta tuo piirros näyttää katukulmalta, jonka kuvasin eilen.” Leila vertaa kirjan vanhaa näkymää puhelimensa kuvaan; tunnistus perustuu havaittuun muotoon, ei suvun salaisuuteen.\n\n**Nappi/frame:** ”Tapaa Leila” / ”Leila nostaa katseensa vanhasta katukuvasta ja kysyy”.\n\n**Uusi kysymys:** ”Mihin vuoden 1956 Clean Air Act erityisesti puuttui?” Vaihtoehdot: rakennusten ja tulisijojen savupäästöihin **(oikea)**, katumainosten valaistukseen, Thamesin vuoroveteen. Kysymys tulee Leilan nykyhetken puheesta, ei vuoden 1873 kirjasta. Oppitunti opettaa vastauksen; kirkas päivä ei väitä kaiken ilmansaasteen kadonneen.\n\n**Löytö:** Leila ohjaa katsomaan katukulmaa oikeasta suunnasta. Kirjan luonnoksen osoittamasta suojaisesta syvennyksestä löytyy rasia. ”Minä etsin tähän valoa. Sinä löysit jotain muuta.” Kätköpaikan toteutus on fiktiivinen, eikä sitä kiinnitetä tutkimatta oikeaan suojeltuun rakenteeseen.\n\n## Dubrovnik — ranta näkyy mereltä (`dubrovnik`)\n\nNykyisin **Dubrovnik — yhdeksässadas askel** yhdistää muurinvartija Ivon, Libertas-kysymyksen, saranoidun kiven ja lämpimän lyhdyn. Tämä henkilökertomus poistuu kokonaan.\n\n**Kuva ja henkilö:** Mara, noin 40-vuotias merimelontaopas, vakauttaa rantaan tulevaa kajakkia suuren kalliosuun edessä. Toinen aikuinen odottaa taempana. Avoin meri, kallion mittakaava ja veden heijastama viileä valo tekevät paikasta kiinnostavan. Mara kääntää katseensa suoraan matkaajaan: ensin keskittynyt pysäytys, sitten kuiva hymy. **Betinan luolan seutu on tarkistettava paikkaehdokas**, ei vahvistettu kuvauspaikka tai pääsylupaus.\n\n**Uusi vuoden 1873 merkintäehdotus:** ”Veneestä ranta aukeni kuin ovi. Maalta en löytänyt samaa kohtaa lainkaan. Soutaja käänsi piirrokseni oikein päin.”\n\n**Kohtaaminen:** ”Aarretta? Pidä ensin kirja kuivana.” Mara huomaa luonnoksen olevan mereltä katsottu rantaprofiili. Hän ei tiedä kätköstä; paikallinen näkökulma ratkaisee pelaajan väärän oletuksen.\n\n**Nappi/frame:** ”Tapaa Mara” / ”Mara pitää kajakin paikoillaan ja kysyy”.\n\n**Kysymys:** ”Mitä Dubrovnikissa käytetty latinan sana Libertas tarkoittaa?” Vapaus **(oikea)**, onni, totuus, voitto. Mara huomaa Libertas-sanan kirjan reunaan kopioituna ja pyytää matkaajaa tulkitsemaan sen. Tämä reunamerkintä on uusi fiktiivinen ehdotus. Vastaus syventää keskustelua, ei avaa kätköä taianomaisesti. Nykyisen visan ydin säilyy; lipun täsmällinen käyttö ja selitetekstin historialliset yleistykset tarkistetaan.\n\n**Löytö:** Oikean vastauksen jälkeen Mara auttaa vertaamaan luonnosta rantaan. Sovitulla rantautumispaikalla paljastuu pieni rasia irtokiven suojasta. ”Luulin meidän etsivän vain rantaa.” Loppu on yhteinen yllätys; ei lämmintä lyhtyä, salaista vartijaa tai uutta yliluonnollista arvoitusta.\n\n## Odessa — kuitti väärältä puolelta (`odessa`)\n\nNykyinen **Odessa — lyhty jota ei sytytetty** sisältää Fjodorin, perityn lyhtylupauksen ja 192 askelman visan. Ne korvataan uudella torikertomuksella.\n\n**Kuva ja henkilö:** Iryna, noin 50-vuotias torimyyjä, pysäyttää vierivän melonin käsivarrellaan juuri kun pelaaja kysyy aarteesta. Aikuinen tytär Solomiia pitelee vieressä laatikkoa ja alkaa nauraa. Irynan suora katse sekoittaa hämmästystä ja pidätettyä naurua. Katoksen pehmeä valo, tavaran liike ja torin syvyys tuovat oman rytminsä. **Privoz on paikkaehdokas**; myyntiympäristö, nykyinen pääsy ja historiallinen yhteys varmistetaan.\n\n**Uusi vuoden 1873 merkintäehdotus:** ”Kuitti oli vapaasataman ajoilta. Sen nurjalle puolelle oli kirjoitettu: Katso sidoksen alle.”\n\n**Kohtaaminen:** ”Aarretta meidän vaa'alta? Näytä se kuitti.” Iryna tunnistaa kaupankäynnin merkintätavan, ei kirjoittajaa. Pelaajan kirjaan talletettu vanha kuitti herättää hänen ammatillisen uteliaisuutensa.\n\n**Nappi/frame:** ”Tapaa Iryna” / ”Iryna vetää melonin turvaan ja kysyy”.\n\n**Uusi kysymysluonnos:** ”Mitä vapaasataman tullietu tarkoitti?” Tuontitavaraa voitiin vastaanottaa ja varastoida tullitta vapaasatama-alueella **(oikea)**; kaikki tavarat olivat ilmaisia; satamaan sai tulla vain ulkomaisilla laivoilla. Kaupungin historiallisen katsauksen mukaan järjestelmä toimi 1819–1859. Sanamuoto rajataan tuontiin ja varastointiin; etua ei väitetä voimassa olevaksi vuonna 1873 tai nykyään.\n\n**Löytö:** Iryna huomaa kuitin nurjalla puolella olevan sidokseen osoittavan vihjeen ja auttaa tutkimaan kirjan takakannen kaksinkertaista vuorausta. Sen tasku avautuu ja paljastaa kätkön: ”Kannoit sitä mukanasi. Minä vain katsoin nurjalle puolelle.” Tämä kirjaan liittyvä ratkaisu käytetään vain tässä kaupungissa ja vain kertaluonteisena paljastuksena. Fable tarkistaa sopivuuden palkinnon kokoon ja toistuviin käynteihin; tasku ei täyty uudelleen eikä käy mantereen aarteen korvikkeeksi.\n\n## Toteutusrajaus Fablelle\n\nPäivitä kaaridatan otsikko, henkilö, saapuminen, kohtaaminen, kysymys ja aarre yhtenä kokonaisuutena. Lontoossa synkronoi lisäksi vanha `KOHTAAMISET` sekä fokuspaketin esittely, oppitunti, täkyjen Ned-viittaukset ja luennat. Muuttunut teksti ei saa soida vanhalla äänellä. Tyhjä/väärin-repliikit kirjoitetaan uusille hahmoille ilman löytölupausta. Rasia ja tasku ovat tarinakehyksiä: pelin todellinen kätkötulos määrää palkinnon, myös tyhjän tuloksen. Ei uusia kaupunkijärjestyksiä, matkakynnyksiä tai mantereen aarteen henkilöllisyyden paljastuksia.\n\n## Alkuperäiset käyttäjäpalautteet\n\n### Lontoo\n\nKokonaan uusi versio, niin, että ollaan aivan Lontoon ydinkeskustassa. Olisi hauska nähdä henkilö, nuori henkilö, muotivaatteet päällään ihmisvilinässä, yhtäkkiä pysäytettynä aurinkoisella kelillä, niin, että katu on varjossa, mutta kaupungin lasitaloista on heijastunut. Valon säteitä kasvoille, liike epäterävyyttä hieman pidemmällä valotusajalla kulkevissa ihmisissä.\n\nTähän täytyy siis vaihtaa myös kysymys tarina keksis sinäsen ja lähetä ehdotus fablelle siitä.\n\n### Dubrovnik\n\nKeksi joku mielenkiintoisempi paikka. Tämä on joku kauppi ja vaida ihmiset ja koko tarina.\n\nAnnaa Pavlelle ohjeet tarvittaessa. Keksitään ylilainen kehystarina tukemaan uutta paikkaa.\n\n### Odessa\n\nKeksi joku parempi aihe ja muuta henkilöt kokonaan. Laita Fablelle viestiä muutoksesta, et mikäli tarinaa pitää muokata.\n\n\n## Faktantarkistus ja jäljellä olevat rajaukset\n\nAlla on tarkistuksen alkuperäinen muistio. Pääagentti on jo täsmentänyt yllä Lontoon kysymyksen aikakauden, Libertas-kysymyksen yhteyden kirjaan sekä Odessan kuitin ajoituksen, sidokseen osoittavan vihjeen ja kertaluonteisuuden. Palkinnon yhteensopivuus ja paikkojen tarkka kuvaussuunnittelu jäävät jatkokäsittelyyn.\n\n# Tarinaehdotusten rajattu faktantarkistus — 5.9.2026\n\nLuonnoksia ei ole muutettu. Tarkistus koskee kahta puuttuvaa faktaa ja tarinalogiikan avoimia kohtia. Root ilmoitti tuoreen mainin olevan `afb0ef6b5b03e34f213ad6c2ccca82023ce54c37` ja luonnosten käyttämien kaanonitiedostojen säilyneen samoina kuin `b4d07569…`; en tehnyt uutta kaanonvertailua tässä tarkistuksessa.\n\n## Varmistetut faktat\n\n**Dubrovnik: Libertas = vapaus.** Dubrovnik Tourist Boardin Lovrjenac-sivu esittää linnoituksen latinankielisen vapauslauseen ja sen englanninkielisen käännöksen. Tämä tukee yksiselitteisesti visan vastausta **vapaus**. Sivua ei pidä käyttää todisteena siitä, millaisessa lipussa sana esiintyi tiettynä aikakautena. Täsmällisempi kysymys on: ”Mitä Dubrovnikin historiaan liittyvä latinankielinen sana Libertas tarkoittaa?” [Virallinen Dubrovnik-lähde](https://tzdubrovnik.hr/lang/en/get/spomenici/5339/mediji.html).\n\n**Odessa: myöntäminen 1817, toiminta 1819–1859.** Kaupungin virallisen suunnitteluasiakirjan PDF-sivu **4**, painettu sivu **3**, luku **3. Краткая историческая справка**, erottaa aseman myöntämisen käytännön toiminnasta. Se määrittelee porto-francon tuontitavaroiden tullittomaksi tuonniksi ja varastoinniksi. Vuonna 1873 järjestelmä oli tämän lähteen mukaan jo päättynyt. Ehdotettu oikea vaihtoehto voidaan täsmentää: ”Tuontitavaraa voitiin vastaanottaa ja varastoida tullitta vapaasatama-alueella.” Tämä ei tarkoita kaikkien tavaroiden ilmaisuutta tai kaiken kaupankäynnin verottomuutta. Kyse on kunnan julkaisemasta historiallisesta katsauksesta, ei alkuperäisestä vuoden 1819 tullisäädöksestä. [Virallinen PDF, sivu 4](https://ombk.omr.gov.ua/images/DPT/DPT_032/dpt_032_zapiska.pdf#page=4).\n\nPDF luettiin sen tekstikerroksesta pypdf:llä: 73 sivua, 5 643 667 tavua, SHA-256 `ce5bcec717bdcbebe20300a415e56ee9773bdfb69c36c80c002f0a2e8c3ee880`. Sivukuvaa ei tarkastettu; teksti ja sivun oma numerointi olivat selviä.\n\n## Tarina- ja visalogiikan täsmennykset Fablelle\n\n- **Lontoo:** vuoden 1956 kysymys ei voi olla Horation vuonna 1873 kirjoittama kysymys. Se tulee Leilan nykyhetken keskustelusta ja sitä pohjustavasta oppitunnista. Kirjan katupiirros on uusi fiktiivinen lisäys, ei nykyisessä kaanonissa jo varmennettu esine.\n- **Dubrovnik:** Libertas-kysymys jää luonnoksessa irralliseksi rantaprofiilin tulkinnasta. Lyhyt silta tarvitaan: Mara huomaa sanan kirjan reunaan kopioituna ja kysyy, ymmärsikö matkaaja sen. Tällainen reunamerkintä on uusi ehdotus. Tiedon tunteminen herättää kiinnostuksen; se ei taianomaisesti avaa rasiaa.\n- **Odessa:** tyhjä tullisarake ei yksin todista vapaasatamakohtelua, eikä kahteen kertaan merkitty paino johda sellaisenaan takakannen taskuun. Kuitin kääntöpuolelle tarvitaan selvä fiktiivinen vihje sidoksesta. ”Kuitti oli minua vanhempi” tarkoittaa ennen Horation syntymää laadittua kuittia, ei vain ennen vuotta 1873 tehtyä; ajoitus on päätettävä tai lause täsmennettävä.\n- **Kaikki kolme:** luonnosten löytörepliikit lupaavat sisällön ehdottomasti. Ne tulee sitoa pelin todelliseen kätkötulokseen; tyhjä tulos tai väärä vastaus ei tuota luvattua löytöesinettä. Odessan kirjan sisäinen tasku sopii kertaluonteiseen paljastukseen, ei joka vierailulla uudelleen täyttyväksi palkinnoksi. Kaupunkitekstit eivät saa muuttaa vapaata käyntijärjestystä tai mantereen aarremekaniikkaa.\n\n## Rootin jo tarkistamat tukifaktat\n\nNäitä ei tutkittu uudestaan: [Clean Air Act 1956](https://www.legislation.gov.uk/ukpga/1956/52/pdfs/ukpga_19560052_en.pdf) — tumman savun rajoitus ja smoke control areas; [Betina](https://tzdubrovnik.hr/get/news_kongresni/81234/explore_the_walls_of_dubrovnik_and_the_secrets_of_the_island_of_lokrum_in_a_sea_adventure_by_kayak.html) — pääsy mereltä; [Pryvoz](https://odesa365.omr.gov.ua/en/locations/rinok-privoz) — perustamisvuosi 1827. Ne eivät vielä vahvista yksittäistä kuvauspaikkaa, auringon heijastusgeometriaa tai fiktiivistä kätköä.\n\n## Palautteiden kohdistus\n\n- **Lontoo**: kuva `lontoo-ned-r20260905-redo-c-v1`, pyyntö `bee8f5f2-5505-4e7c-84e6-057704b17768`.\n- **Dubrovnik**: kuva `dubrovnik-ivo-r20260905-redo-v1`, pyyntö `797735de-a24c-4ee8-8f00-03e866dfa922`.\n- **Odessa**: kuva `odessa-fjodor-lyhty-r20260905-redo-a02`, pyyntö `8d4d23cb-8ed5-456e-bea9-47ebec1bb1ec`.\n\n## Muut tämänhetkiset palautteet\n\nSeuraavat on vastaanotettu jonoon. Niille ei tässä viestissä vielä ehdoteta uutta kaanonia; henkilö- ja paikkamuutokset sovitetaan tarinaan ennen kuvan toimitusta. Alkuperäinen palaute säilytetään alla sanatarkasti.\n\n### Ateena — `ateena-nikos-r20260905-redo-v1`\n\nYmpäristö on hyvä, muuta vuorokauden aikaa ja henkilöä. Kuvassa voisi olla myös pöllö, mikä se on Atenassa mahdollista. Siis jossain vähä taustalla.\n\nPyyntö: b468396e-fe82-413e-ab4a-eec3d732cbd1.\n\n### Granada — `granada-yusuf-r20260905-redo-v1`\n\nKeksit tähän kokonaan vielä uudet ihmiset ja tilanne.\n\nPyyntö: 41529360-f9da-4b87-b8cb-cd0601a8542f.\n\n### Suuri Sankt Bernhard — `alpit-anselm-r20260905-redo-v2`\n\nTämä voisi olla enemmän luonnossa otettu kuva. Ja auringon paisteessa.\n\nPyyntö: 57b10846-9cd0-42e0-96e1-828bd06ff6bb.\n\n### Kööpenhamina — `kobenhavn-karen-r20260905-redo-v2`\n\nVaihda henkilö ja paikka\n\nPyyntö: b6d0729d-7b38-47e8-97a8-0e1dcfe3d447.\n\n### Tromssa — `tromssa-ingrid-satamavahti-r20260905-redo-a01`\n\nVaihda henkilö ja mieti uusiksi\n\nPyyntö: 7dbde346-3b4a-4be9-b229-894dde61afa5.\n\n### Pietari — `pietari-dmitri-palatsisilta-r20260905-redo-a01`\n\nVaihda henkilö ja mieti uusiksi\n\nPyyntö: 05d19870-f154-4b16-a7d7-1fba6fb1fe7b.\n\n### Kiova — `kiova-oksana-kultainen-portti-r20260905-redo-a02`\n\nVaihda henkilö ja mieti uusiksi\n\nPyyntö: a70266fe-98b2-42c0-8d5a-93135bc31959.\n\n### Rooma — `rooma-enzo-trevi-r20260905-redo-a01`\n\nVaihda henkilö ja mieti uusiksi Voisi olla ilta ja rajattu valo. Menossa joku juhla kaupungilla samaan aikaan\n\nPyyntö: 0fe42af2-7310-4db1-aa7f-99a89311b3ad.\n\n### Haukadalur — `islanti-bjork-r20260905-redo-v2`\n\nVaihda henkilö ja mieti uusiksi\n\nPyyntö: 94769ee3-a7bd-43f2-b584-46d7b4f8419d.\n\n### Tallinna — `tallinna-kristjan-r20260905-redo-v1`\n\nVaihda henkilö ja mieti uusiksi\n\nPyyntö: 98b52664-afc0-4551-a52c-a413ac57c6b6.\n\n### Halden — `oslo-sigrid-r20260905-redo-v3`\n\nVaihda henkilö ja mieti uusiksi . Auringon valo mukaan\n\nPyyntö: 94c244d1-3381-4d96-a845-301d774a9fd7.\n\n### Lissabon — `lissabon-ines-strength-r20260905-v1`\n\nMies taustalla liikaa\n\nPyyntö: 9b775512-90b0-4278-816b-71157df859b2.\n\n### Dublin — `dublin-molly-strength-r20260905-v1`\n\nVaihda henkilö ja tee Kohtaus lippu tiskille missä lasi pelaajan ja virkailijan välillä.\n\nPyyntö: 4ce46b66-bac6-459e-8c85-92f99cffdffe.\n\n### Venetsia — `venetsia-lucia-strength-r20260905-v1`\n\nTuo auringon valo kasvoille jonkun ikkunan kautta siivilöityneenä. Muuten hyvä\n\nPyyntö: 6e40e42d-4552-495a-ae7b-bd34308c1e19.\n\n### Amsterdam — `amsterdam-willem-strength-r20260905-v1`\n\nVaihda henkilö ja mieti uusiksi\n\nPyyntö: b8dfecae-2a0e-4041-9692-90e11a9feb3f.\n\n### Nikosia — `nikosia-andreas-kupari-r20260905-redo-c1`\n\nVaihda henkilö ja mieti uusiksi\n\nPyyntö: e5639c00-fb38-4637-9ad6-7b3436719508.\n\n### Medina — `medina-omar-r20260905-redo-v2`\n\nKokeile eri ilme ja lisää auringon valo\n\nPyyntö: dae267c2-5b6f-4409-9cd8-a3bfe0ea5a90.\n\n"
+}

@@ -1,3 +1,23 @@
+## 2026-09-05 17:58 UTC — KUVAPALAUTE → FABLE: kolme tarinaehdotusta ja jatkuva palautteiden yhteensovitus
+
+Omistaja valtuutti tänään käsittelemään arviointisivun koko tekstipalautteen myös tarina- ja aarteenkohtaamisen kehysmuutoksena sekä lähettämään muutosehdotukset Fablelle. `rewriteText:false` tai yleinen regenerointiluokka ei kumoa kirjoitettua ohjetta. Henkilöiden, paikan ja tilanteen vaihto voi vaatia tarinamuutoksen ilman erillistä Fable-mainintaa.
+
+[Luettava ehdotuspaketti](kuvapalaute-tarinaehdotukset-2026-09-05.md) · [Kohdistukset, alkuperäiset palautteet ja kaanonilähteet](kuvapalaute-tarinaehdotukset-2026-09-05.json)
+
+Pääagentti on tarkistanut kolme ehdotusta tuoretta mainia `afb0ef6b5b03e34f213ad6c2ccca82023ce54c37` vasten:
+
+- Lontoo: nuori Leila keskellä nykyistä katumuotia ja ihmisvirtaa; heijastunut aurinko, vanhan katupiirroksen tulkinta ja savupäästöihin liittyvä uusi kysymys.
+- Dubrovnik: Mara merimelontaoppaana suuren kalliosuun edessä; vanhan rantapiirroksen näkökulma ratkeaa mereltä, Libertas-kysymyksen ydin säilyy.
+- Odessa: Iryna ja Solomiia torilla kesken vierivän melonin pelastamisen; vanha kuitti ja kirjan nurjan puolen löytö korvaavat lyhdyn ja perityn lupauksen.
+
+Kuittaa ehdotusten sopivuus kehyskertomukseen ja kerro tarvittavat täsmennykset. Sovita mahdollisessa tekstityössä henkilöt, saapuminen, kohtaaminen, kysymys, väärä/tyhjä-tuloksen repliikit, palkinto, vanhat kohtaamispolut ja äänet yhteen. Tämä viesti on **muutosehdotus**, ei ilmoitus jo hyväksytyistä uusista kuvista tai peliin toteutetuista muutoksista. Uusia kohtaamiskuvia ei ole vielä tässä paketissa. Kuvan ja tekstin lopullinen yhteensopivuus tarkastetaan ennen toimitusta.
+
+Liitteessä on lisäksi 17 uudempaa palautetta odottamassa oman kohtauksensa suunnittelua tai kuvallista korjausta. Älä päättele niille uusia henkilöitä tai kaanonitunnuksia pelkistä kuvatiedostojen nimistä; erityisesti Oslo/kuvan Halden-kohdistus tarkistetaan. Kohtaamiskuvien tuotanto pysyy pääagentilla. Muut kuvatyypit voidaan delegoida Solille tarkastettavaksi. Isoisäkuvien Fable-toimituksen hoitaa omistaja itse.
+
+Käsittelytilat pidetään erillään: palaute vastaanotettu → ehdotus lähetetty → Fable vastannut → kuva hyväksytty → pelimuutos todennettu. Pelkän tarinaehdotuksen lähettäminen ei sulje kuvien uudelleengenerointipyyntöjä.
+
+---
+
 ## 2026-09-05 14:06 UTC — KUVAPUTKI → FABLE: 32 eläinkuvaa hyväksytty ja R2-varmennettu, saa kytkeä peliin
 
 Omistaja valtuutti pääagentin tarkastamaan kaikki eläinkuvat, hyväksymään hyvät hänen puolestaan ja lähettämään peliin. Olen katsonut tämän paketin kaikki 32 JPG:tä alkuperäiskoossa. Arviointisivun hyväksynnät on kirjoitettu ja luettu takaisin. R2:een tuli 31 uutta tiedostoa; aiempi ankaravuohi oli jo identtisenä paikallaan. Kaikki 32 on ladattu julkisesta R2:sta takaisin: SHA-256, tavumäärä, JPEG-MIME, sRGB ja pelin Originille salliva CORS on varmennettu.
