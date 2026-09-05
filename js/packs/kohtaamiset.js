@@ -191,39 +191,69 @@ export const KOHTAAMISET = {
     vaarin: 'Elsa naurahtaa: "Ei vielä. Koneen kanssa on sama '
       + 'juttu: opettele ensin, painele vasta sitten."',
   },
+  /*
+   * LUONNOS 5.9.2026, Fable tarkistaa.
+   *
+   * KAKSOISHENKILÖT PURETTU: MADRID JA VENETSIA. Molemmilla
+   * kaupungeilla oli kaksi eri kohtaamishenkilöä — tässä tiedostossa
+   * kirpputorikauppias Rosa ja gondolieeri Matteo, tarinakaaressa ja
+   * fokusvirrassa kellomestari Pilar ja naamiontekijä Lucia. Fablen
+   * päätös 5.9.2026 klo 20:05 UTC: *"Madridin (Rosa vs. Pilar) sekä
+   * Venetsian (Matteo vs. Lucia) kaksoishenkilöt — kaaren henkilö
+   * (Pilar, Lucia) voittaa."* Rivit on siis kirjoitettu uusiksi
+   * kaaren henkilöille; Rosa ja Matteo poistuvat pelistä kokonaan.
+   *
+   * SAMALLA POISTUI KAKSI KAANONIRIKETTÄ. Rosan tervehdys väitti, että
+   * kirjan omistaja osti hänen äidiltään messinkiavaimen, ja Matteon
+   * tervehdys, että hänen isoisänsä souti Horatiota laguunin halki ja
+   * puhui hänestä koko ikänsä. Kukaan nykyihminen ei tunnista
+   * Horatiota eikä odota perillistä (docs/isoisan-raamattu.md).
+   *
+   * TERVEHDYS EI NÄY KAAREN KOHTAAMISESSA: kaarikaupungissa visakortin
+   * avaustekstin omistaa KAARI_PAKETIT-paketin `kohtaaminen`
+   * (js/visa.js: kaariTarina voittaa). Näiden rivien tervehdys on siis
+   * kaupungin MYÖHEMPIEN tavallisten visojen avaus, ja repliikit
+   * (loyto / tyhja / vaarin) luetaan tästä joka kerta.
+   *
+   * REPLIIKIT ON SIDOTTU PELIN KÄTKÖTULOKSEEN (js/visa.js: loyto vain
+   * kun quiz.explore tai quiz.found, muuten tyhja; vaarin väärästä
+   * vastauksesta). Tyhjä ja väärin eivät lupaa löytöä.
+   *
+   * LUENNAT: js/sisaltotaulut.js KOHTAAMISLUENNAT on tyhjä joukko,
+   * eikä madridille tai venetsialle ole tervehdysLuenta- tai
+   * loytoLuenta-kenttiä, joten vanhoja ääniä ei ole soimassa uusilla
+   * sanoilla. Jos Fable tilaa näille luennat, tools/generoi-
+   * kohtaamiset.mjs tarvitsee myös HAHMOT-rivin kummallekin (Pilar
+   * ~55 v, Lucia ~45 v).
+   */
   madrid: {
-    hahmo: 'kirpputorikauppias Rosa',
-    nappi: 'Tapaa kirpputorikauppias',
-    frame: 'kirpputorikauppias Rosa pyyhkii pölyt kämmeneensä ja kysyy',
-    tervehdys: 'El Rastron tungoksessa Rosa levittää huovalleen '
-      + 'kelloja ja avaimia. Hän näkee kirjasi ja hymyilee: "Sen '
-      + 'kirjan omistaja seisoi tässä. Osti äidiltäni '
-      + 'messinkiavaimen eikä kertonut mihin oveen. Näytä että '
-      + 'tunnet maailmaa kuten hän — kerron, mitä hän jätti tänne."',
-    loyto: 'Rosa kaivaa huovan alta kuluneen postikortin: "Tämä '
-      + 'jäi tänne. Katso, mitä kääntöpuolelle on kirjoitettu."',
-    tyhja: 'Rosa kohauttaa harteitaan: "Joku ehti ennen sinua. '
-      + 'Rastro tyhjenee ja täyttyy joka sunnuntai — tule takaisin."',
-    vaarin: 'Rosa naurahtaa: "Ei vielä, hija. Täällä ei ole '
-      + 'kiire — palaa kun tiedät enemmän."',
+    hahmo: 'kellomestari Pilar',
+    nappi: 'Tapaa Pilar',
+    frame: 'Pilar nostaa katseensa kellokoneistosta ja kysyy',
+    tervehdys: 'Pilar pyyhkii öljyn sormistaan ja nostaa kämmenensä '
+      + 'pystyyn. "Odota. Ensin kerrot, mistä sait tuon kirjan. Näytä '
+      + 'että tunnet maailmaa kuten sen piirtäjä — sitten puhutaan."',
+    loyto: 'Pilar ojentaa rasian koneiston takaa: "Tämä on ollut täällä '
+      + 'kauemmin kuin minä. Ja minä olen ollut kauan."',
+    tyhja: 'Pilar sulkee huoltoluukun: "Tyhjä. Tässä tornissa käydään '
+      + 'joka viikko, ja on käyty kauan."',
+    vaarin: 'Pilar kääntyy takaisin koneiston puoleen: "Ei vielä. Kello '
+      + 'ei kiirehdi, enkä minäkään."',
   },
   venetsia: {
-    hahmo: 'gondolieeri Matteo',
-    nappi: 'Tapaa gondolieeri',
-    frame: 'gondolieeri Matteo nojaa airoonsa ja kysyy',
-    tervehdys: 'Rialton laiturilla harmaantunut gondolieeri laskee '
-      + 'aironsa nähdessään kirjasi. "Isoisäni souti tuon kirjan '
-      + 'omistajaa halki laguunin ja puhui hänestä koko ikänsä. '
-      + 'Näytä että tunnet maailmaa kuten hän — soudan sinut '
-      + 'paikkaan, jota ei löydy kartoista."',
-    loyto: 'Matteo ohjaa gondolin hiljaiselle syrjäkanavalle ja '
-      + 'osoittaa airollaan: "Tässä. Isoisäsi jälki päättyy tähän — '
-      + 'ja sinun alkaa."',
-    tyhja: 'Matteo tutkii tyhjää kätköä ja hymähtää: "Joku ehti '
-      + 'ensin. Mutta laguuni pitää monta salaisuutta — jatka '
-      + 'matkaa."',
-    vaarin: 'Matteo työntää gondolin takaisin virtaan: "Ei tänään, '
-      + 'ystäväni. Palaa, kun tunnet maailman paremmin."',
+    hahmo: 'naamiontekijä Lucia',
+    nappi: 'Tapaa Lucia',
+    frame: 'Lucia kääntyy naamioiden äärestä ja kysyy',
+    tervehdys: 'Lucia laskee keskeneräisen naamion pöydälle ja pyyhkii '
+      + 'liidun sormistaan. "Vieraita tulee yleensä vain karnevaaleina. '
+      + 'Näytä että tunnet maailmaa kuten kirjasi piirtäjä — niin avaan '
+      + 'tilauskirjan."',
+    loyto: 'Lucia työntää rasian pöydän yli kahdella sormella: "Tämä '
+      + 'palautettiin pajaan. Kukaan ei sanonut kenen se on."',
+    tyhja: 'Lucia kääntää tyhjän laatikon ylösalaisin: "Ei mitään. Vesi '
+      + 'käy täällä kaikessa, myös kätköissä."',
+    vaarin: 'Lucia palaa naamionsa ääreen: "Ei tänään. Cartapesta kuivuu '
+      + 'hitaasti, ja niin kuivuu tietokin."',
   },
   berliini: {
     hahmo: 'posetiivari Otto',

@@ -1165,7 +1165,7 @@ export const FOKUSKOHTEET_GRC = [
    *
    * 23,7261 E / 37,9715 N — en-Wikipedia "Acropolis of Athens"
    * (37°58′17″N 23°43′34″E). Sama piste kuin Ateenan kohtaamispisteellä
-   * (js/packs/fokusvirta-ateena.js): Nikos työskentelee siellä.
+   * (js/packs/fokusvirta-ateena.js): Dafnin työmaa on siellä.
    */
   {
     id: 'akropolis',

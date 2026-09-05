@@ -43,7 +43,9 @@ test('kysymys ja oikea vastaus vastaavat sanatarkasti pelin omaa dataa', () => {
   const kaari = TARINAKAARI.rooma;
   assert.equal(rooma.kysymys, kaari.kysymys.q);
   assert.equal(rooma.oikeaVastaus.teksti, kaari.kysymys.vaihtoehdot[kaari.kysymys.oikea]);
-  assert.equal(rooma.kohtaamispaikka, 'Aventinuksen avaimenreikä');
+  // Kohtaamispiste siirtyi 5.9.2026 Aventinuksen avaimenreiästä Trevin
+  // luo, kun kaupungin kohtaamishenkilöksi tuli pasunisti Nico.
+  assert.equal(rooma.kohtaamispaikka, 'Trevin suihkulähde');
   assert.equal(rooma.maa, 'Italia');
 });
 

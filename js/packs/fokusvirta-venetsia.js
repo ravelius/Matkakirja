@@ -772,9 +772,11 @@ export const FOKUSVIRTA_VENETSIA = {
    * MIKSI TÄMÄ AUKIO: kohtaaminen tapahtuu naamiopajassa, ja pajat ovat
    * San Polon sestierissä; Campo San Polo on sen suurin aukio ja ainoa
    * paikka lähistöllä, jolle Wikipediassa on omat koordinaatit. Piste ei
-   * osoita Rialton laiturille, koska siellä seisoo jo pelin vanhan polun
-   * gondolieeri Matteo (js/packs/kohtaamiset.js, venetsia) — kaksi eri
-   * kohtaamista samalla laiturilla olisi kartalla sekaannus.
+   * osoita Rialton laiturille: siellä seisoi ennen pelin vanhan polun
+   * gondolieeri Matteo, mutta hänet poistettiin 5.9.2026, kun
+   * kaupungin kaksoishenkilö purettiin kaaren Lucian hyväksi
+   * (js/packs/kohtaamiset.js, venetsia). Paja ja sen aukio ovat siis
+   * kaupungin ainoa kohtaamispaikka.
    *
    * 45,4375 N / 12,3299 E — en-Wikipedia "Campo San Polo",
    * prop=coordinates (haettu 29.8.2026). Muunnos on sama kaava ja samat

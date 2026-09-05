@@ -2963,7 +2963,7 @@ function paljastaSahkeAarre(ui, city, data) {
  *
  * Paikka on siis oma datakenttänsä (`kohtaamispiste`, js/packs/
  * fokusvirta-ateena.js) eikä kaupungin laattakoordinaatti: Ateenassa
- * Nikos on Akropoliilla, ei torilla. Kenttä on laudoittain sama malli
+ * Dafni on Akropoliilla, ei torilla. Kenttä on laudoittain sama malli
  * kuin kohdenostoilla — lauta, jolta koordinaatteja ei ole, ei saa
  * pistettä (mieluummin piirtämättä kuin väärään paikkaan).
  *

@@ -197,7 +197,8 @@ test('Ateenan fokusvirta on rakenteeltaan ehjä', () => {
   for (const kohta of ['matkakirja', 'pollo', 'oppitunti']) {
     assert.ok(ATEENA[kohta]?.teksti?.length > 80, `${kohta}: teksti puuttuu tai on liian lyhyt`);
   }
-  assert.ok(ATEENA.kohtaaminen.nappi.includes('Nikos'), 'kohtaamisnappi nimeää henkilön');
+  // Henkilö vaihtui 5.9.2026: vartija Nikos → konservaattori Dafni.
+  assert.ok(ATEENA.kohtaaminen.nappi.includes('Dafni'), 'kohtaamisnappi nimeää henkilön');
 
   // Täkyjä eli syvennystarinoita on 2–3 (ne avautuvat nykyään kartan
   // merkeistä, js/syvennys.js — sisältö on yhä tässä paketissa).

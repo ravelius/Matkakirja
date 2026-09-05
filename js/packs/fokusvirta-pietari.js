@@ -723,41 +723,45 @@ export const FOKUSVIRTA_PIETARI = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * FABLE KATSELMOI: kohtaamisluonnos
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
+   *
+   * HAHMO VAIHDETTU: sillanhoitaja Dmitri → huoltoteknikko Matvei
+   * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 20:05 UTC).
+   * Dmitrin kaanoninen repliikki sanoi isoisän *pyytäneen hänen sukuaan
+   * pitämään sivun auki* — se on yhtä aikaa Horation tunnistus ja
+   * Euroopan jo täyteen käytetty "Horation pieni pyyntö" -kiintiö.
+   * Sillanhoitajasuku poistuu kokonaan; myös tämän kortin vanha
+   * esittely rakentui sen varaan.
    *
    * HAHMOA EI OLE KEKSITTY TÄSSÄ. Pietarilla ON tarinakaaren paketti
    * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'pietari'), joka
    * antaa hahmon JA sen kysymyksen, jonka game.actionQuiz esittää
    * laatalla (js/game.js kaariTilanne, js/packs/tarinakaari.js). Hahmo
-   * on siis sillanhoitaja Dmitri, eikä tämä paketti kosketa hänen omaa
+   * on siis huoltoteknikko Matvei, eikä tämä paketti kosketa hänen omaa
    * repliikkiään eikä kysymystä millään tavalla — sama suhde kuin
-   * Ateenan Nikoksella, Sofian Nadialla ja Rooman Enzolla.
+   * Ateenan Dafnilla, Sofian Nadialla ja Rooman Nicolla.
    *
-   * ALLA OLEVA on siis kortin OMA ESITTELYTEKSTI, ei kaanonia, ja se on
-   * merkitty katselmoitavaksi omistajan ohjeen mukaan. Se on
-   * kirjoitettu niin, ettei se kertaa Dmitrin omaa repliikkiä
-   * ("Kirjaan merkitään laiva, joka ei ole vielä palannut…") eikä
+   * ALLA OLEVA on siis kortin OMA ESITTELYTEKSTI, ei kaanonia. Se on
+   * kirjoitettu niin, ettei se kertaa Matvein omaa repliikkiä eikä
    * paljasta vastausta.
+   *
+   * EI PERITTYÄ TEHTÄVÄÄ EIKÄ SUURTA KÄSIKAMPEA (kuvaputken rajaus):
+   * Matvei on työvuorossa oleva ammattilainen, ei sukunsa jatkaja,
+   * eikä siltaa avata käsin. Varallisuussääntö pitää kaikessa: isoisä
+   * ei maksa, tilaa eikä käske ketään, eikä kukaan odota perillistä.
    *
    * KUVAA EI OLE (omistajan linjaus): kohtaamiskortti rakennetaan ilman
    * kuvaa, joten kentät ovat hahmo, nappi, varmistus, vihjeOsio ja
    * teksti. Kansiossa assets/kohtaamiset ei myöskään ole Pietarin
    * kuvaa, eikä tänne kirjoiteta polkua, jota ei ole.
    *
-   * VARALLISUUSSÄÄNTÖ tarkistettu virke virkkeeltä: isoisä ei maksa
-   * mitään, ei tilaa mitään eikä komenna ketään. Dmitrin kaanoninen
-   * repliikki sisältää isoisän pienen pyynnön ("pyysi sukuani pitämään
-   * sivun auki"), ja juuri siksi ESITTELY EI TOISTA SITÄ: suvun oma syy
-   * jatkaa on tässä ammattitapa, ei velvoite.
-   *
-   * ÄÄNIPROFIILI (tarinakaari, luku 3): Dmitri on niitä, jotka
-   * tarkistavat saman asian joka yö vaikka tietävät vastauksen — ei
-   * puhelias, ei äreä, vaan tarkka.
+   * ÄÄNIPROFIILI (tarinakaari, luku 3): ÄREÄ. Matvei on erän tuima
+   * ääni — hän aloittaa käskyllä ja pehmenee vasta piirroksen nähtyään.
    */
   kohtaaminen: {
-    hahmo: 'Sillanhoitaja Dmitri',
-    nappi: 'Tapaa Dmitri',
-    varmistus: 'Haluatko varmasti tavata Dmitrin juuri nyt?',
+    hahmo: 'Huoltoteknikko Matvei',
+    nappi: 'Tapaa Matvei',
+    varmistus: 'Haluatko varmasti tavata Matvein juuri nyt?',
     /*
      * VIHJELINKIN OSIO (omistajan pelitestipalaute v1119, kohta 13):
      * rivi kertoo, MISTÄ PÄIN LEHTEÄ ratkaisu löytyy, vastausta
@@ -768,16 +772,16 @@ export const FOKUSVIRTA_PIETARI = {
      * "Kaupunki rakennettiin suolle" — siis 'kaupunki'.
      */
     vihjeOsio: 'kaupunki',
-    teksti: 'Dmitri tulee koneistokammioon puoli tuntia ennen nostoa ja '
-      + 'käy saman vivun läpi kuin edellisenä yönä, vaikka tietää sen '
-      + 'kunnon ulkoa. Suku on hoitanut siltoja niin kauan, ettei kukaan '
-      + 'muista kirjanpidon aloittajaa; Dmitri sanoo pitävänsä tapaa '
-      + 'pikemminkin ammattina kuin perintönä, ja jatkavansa siksi, että '
-      + 'kesken jätetty vuoro näkyisi heti joessa. Kaiteen takana seisoo '
-      + 'öisin väkeä katsomassa, eikä hän häädä ketään. Vierasta hän ei '
-      + 'päästä koneiston viereen ennen kuin tämä osaa vastata siihen, '
-      + 'mitä hän itse pitää kaupungin ainoana oikeana kysymyksenä: '
-      + 'minkä varaan tämä kaikki on ylipäätään pystytetty.',
+    teksti: 'Matvei tulee sillan alle puoli tuntia ennen nostoa ja käy '
+      + 'saman tarkastuskierroksen kuin edellisenä yönä, vaikka tietää '
+      + 'rakenteen kunnon ulkoa. Työtä hän on tehnyt kolme vuotta ja '
+      + 'sanoo oppineensa siinä ajassa, että kaikki liikkuva pettää '
+      + 'jostakin kohdasta ennemmin tai myöhemmin. Vieraita hän ei '
+      + 'odota eikä kaipaa: kaiteen takana seisoo öisin väkeä '
+      + 'katsomassa, ja se riittää. Rakenteen viereen hän ei päästä '
+      + 'ketään ennen kuin tämä osaa vastata siihen, mitä hän itse '
+      + 'pitää kaupungin ainoana oikeana kysymyksenä: minkä varaan tämä '
+      + 'kaikki on ylipäätään pystytetty.',
   },
 
   /*
@@ -787,7 +791,8 @@ export const FOKUSVIRTA_PIETARI = {
 
   /*
    * KOHTAAMISPAIKKA: PALATSISILTA, Nevan ylitys Talvipalatsin kohdalla.
-   * Dmitri on sillanhoitaja, ja Palatsisilta on se kääntösilta, jonka
+   * PISTE EI SIIRRY HENKILÖNVAIHDOSSA 5.9.2026: Matvei huoltaa saman
+   * sillan teräsrakennetta, ja Palatsisilta on se nostosilta, jonka
    * nousua kaanoninen Livian repliikki käy katsomassa.
    *
    * 59,941149 N / 30,308105 E — en-Wikipedia "Palace Bridge",

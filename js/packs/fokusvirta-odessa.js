@@ -101,7 +101,7 @@
  *       sai vastaanottaa ja varastoida tullitta*
  *   K7  kulttuurivisa: miten käytävät syntyivät → *oma louhos alla*
  *
- * K6 VAIHTUI 5.9.2026 (LUONNOS, Fable tarkistaa). Vanha K6 kysyi
+ * K6 VAIHTUI 5.9.2026 (Fable tarkistanut 5.9.2026). Vanha K6 kysyi
  * portaikon askelmien määrää; kaari kirjoitettiin uusiksi (torimyyjä
  * Iryna, vapaasataman kuitti), ja uusi kysymys saa vastauksensa TÄMÄN
  * PAKETIN OPPITUNNISTA — se on tarkoitus, ei vuoto: Raamatun

@@ -54,8 +54,9 @@
  * Kohtaamisen teksti on EHDOTUS päätoimittajalle (ks. FABLE KATSELMOI
  * alempana), ei kaanonia. Kuvaa siinä ei ole. Hahmo ja laattakysymys
  * tulevat tarinakaaren paketista (js/tyohuone-kehitys-data.js
- * KAARI_PAKETIT, 'amsterdam'): siltavahti Willem ja kysymys
- * kanavatalojen päädyissä olevasta koukusta.
+ * KAARI_PAKETIT, 'amsterdam'): muuttotyöntekijä Yara ja kysymys
+ * kanavatalojen päädyissä olevasta koukusta (henkilö vaihdettu
+ * 5.9.2026, ks. KOHTAAMINEN alempana).
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
@@ -92,7 +93,7 @@
  * MIKSI EI NOSTOKOUKKUKYSYMYSTÄ: kaupungin laattakysymys koskee
  * kanavatalon päädyssä olevaa koukkua (ks. KOHTAAMINEN alempana). Jos
  * lehden aarteen avaava tehtävä kysyisi samasta koukusta, aarrekysymys
- * olisi ratkaistu ennen kuin Willemiä on tavattu.
+ * olisi ratkaistu ennen kuin Yaraa on tavattu.
  *
  * HUOM. SIVUN 1 KULTTUURIVISA on Amsterdamin oma kysymys kapeista
  * kanavataloista (js/packs/europe-kulttuuri.js), ja js/fokustehtavat.js
@@ -638,86 +639,102 @@ export const FOKUSVIRTA_AMSTERDAM = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * TÄMÄ TEKSTI ON EHDOTUS EIKÄ KAANONIA. Hahmo, laattakysymys ja
-   * kohtaamisen oma repliikki ovat tarinakaaren paketissa
-   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, 'amsterdam'):
-   * siltavahti Willem kääntää kammella auki saman kääntösillan, jota
-   * hänen sukunsa on avannut purjeille sukupolvien ajan, ja hänen
-   * kirjaansa on merkitty jokainen vene, jolle silta on avattu.
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
    *
-   * MITÄ LUONNOS EI TEE: se ei kertaa Willemin repliikkiä, ei toista
-   * hänen kirjansa yksityiskohtaa isoisän veneestä eikä paljasta
-   * laattakysymyksen vastausta. Viimeinen virke on kehotus katsoa
-   * ylös — se on vihje, ei vastaus, ja lunastuu vasta visassa.
+   * HAHMO VAIHDETTU: siltavahti Willem → muuttotyöntekijä Yara
+   * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 20:05 UTC).
+   * Willemin kirja merkitsi isoisän veneen ja suku avasi siltaa
+   * sukupolvien ajan — molemmat ovat kaanonrikkeitä, ja koko henkilö
+   * poistuu pelistä. Hahmo, laattakysymys ja kohtaamisen oma repliikki
+   * ovat tarinakaaren paketissa (js/tyohuone-kehitys-data.js
+   * KAARI_PAKETIT, 'amsterdam'): Yara keskeyttää kanavatalon muuton ja
+   * tunnistaa kirjan piirroksesta oman työmaansa kulman.
    *
-   * KUVAA EI OLE (omistajan rajaus aallolle 4A).
+   * EI SUKUSALAISUUTTA: Yara ei tunne Horatiota eikä odota perillistä.
+   * Tunnistus syntyy ammattisilmästä — hän mittaa kaappeja ja tietää
+   * talojen mittasuhteet ulkoa.
+   *
+   * MITÄ LUONNOS EI TEE: se ei kertaa Yaran repliikkiä eikä paljasta
+   * laattakysymyksen vastausta. Viimeinen virke on sama kehotus katsoa
+   * ylös kuin ennenkin — vihje, ei vastaus, ja se lunastuu visassa.
+   *
+   * KUVAA EI OLE (omistajan rajaus aallolle 4A). Vanha Willem-kuva on
+   * arkistoitu myös kohtaamiskuvakatalogista (js/kohtaamiskuvat-data.js,
+   * `amsterdam-koysityontekija`), jottei pelissä näy eri ihminen kuin se,
+   * joka kysymyksen esittää.
    */
   kohtaaminen: {
-    hahmo: 'Siltavahti Willem',
-    nappi: 'Tapaa siltavahti',
+    hahmo: 'Muuttotyöntekijä Yara',
+    nappi: 'Tapaa Yara',
     /*
      * VARMISTUSKYSYMYS (omistajan pelitestipalaute v1119): lause on
      * datassa, koska suomen genetiivi ei taivu koneellisesti jokaisesta
      * nimestä.
      */
-    varmistus: 'Haluatko varmasti tavata Willemin juuri nyt?',
+    varmistus: 'Haluatko varmasti tavata Yaran juuri nyt?',
     /*
      * VIHJELINKIN OSIO on kaupunkilehden osion id (js/packs/
      * kulttuuri-kategoriat.js): Amsterdamin lehdessä on kaksi osiota,
-     * 'kaupunki' ("Amsterdam") ja 'taide' ("Taide"). Willemin kysymys
-     * koskee kanavatalon päätyä, ja lähin tuki sille on Amsterdam-osion
-     * nosto "Verotettiin julkisivun leveydestä". Se ei anna vastausta,
-     * vaan nyökkää siihen suuntaan.
+     * 'kaupunki' ("Amsterdam") ja 'taide' ("Taide"). Yaran kysymys koskee
+     * kanavatalon päätyä, ja lähin tuki sille on Amsterdam-osion nosto
+     * "Verotettiin julkisivun leveydestä". Se ei anna vastausta, vaan
+     * nyökkää siihen suuntaan.
      */
     vihjeOsio: 'kaupunki',
-    teksti: 'Willem seisoo kääntösillan kammen vieressä niin kuin hänen '
-      + 'isänsä ja isoisänsä seisoivat: avaa, odottaa, sulkee, merkitsee '
-      + 'rivin. Työ on tylsää kymmenen kertaa päivässä ja tarkkaa '
-      + 'yhdennellätoista, ja hän tekee sen samalla ilmeellä. Vieraita '
-      + 'hän ei karta eikä hae; hän vastaa kysymyksiin lyhyesti ja '
-      + 'palaa kampeen. Mutta kirjaa hän ei avaa kenelle tahansa. Ennen '
-      + 'kuin hän kääntää sivun vieraan nähden, hän haluaa tietää, onko '
-      + 'tulija katsonut kertaakaan ylös — sinne, missä kanavatalojen '
-      + 'päädyt ovat.',
+    teksti: 'Yara vetää muuttokuormat kanavatalojen läpi ja tietää tunnissa, '
+      + 'mikä menee ovesta ja mikä ei. Hän mittaa jokaisen kaapin ennen '
+      + 'kuin siihen kosketaan, ja työpari yläkerrassa odottaa hänen '
+      + 'merkkiään eikä toisin päin. Vieraita hän ei karta: hän puhuu '
+      + 'mielellään ja nopeasti, ja kesken lauseen hän saattaa kadota '
+      + 'nostamaan jotain raskasta. Ennen kuin hän neuvoo tulijaa '
+      + 'eteenpäin, hän haluaa tietää, onko tämä katsonut kertaakaan '
+      + 'ylös — sinne, missä kanavatalojen päädyt ovat.',
   },
 
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * KOHTAAMISPAIKKA: MAGERE BRUG. Willem on siltavahti, ja tämä on
-   * kaupungin tunnetuin käsin kammettava kääntösilta — pelin oma
-   * Amsterdam-aineisto nimeää sen (js/packs/kulttuuri-kategoriat.js,
-   * amsterdam/avauskuvat: *"Laiha silta eli Magere Brug on Amstelin yli
-   * johtava valkoinen puinen kääntösilta"*).
+   * KOHTAAMISPAIKKA SIIRRETTY 5.9.2026 (Fable tarkistanut 5.9.2026):
+   * MAGERE BRUG → HERENGRACHTIN KANAVATALOT. Vanha piste oli
+   * siltavahti Willemin työpaikka, ja Willem poistui kaaresta. Fablen
+   * päätös klo 20:05 UTC: *"Fokusvirran kohtaamispiste siirtyy Magere
+   * Brugilta kanavataloille."* Yara tekee muuttoa kanavatalon edessä,
+   * joten piste ankkuroidaan Herengrachtin kanavatalojaksoon, jonka
+   * hollantilainen nimi on Gouden Bocht.
    *
-   * 52,36361111 N / 4,9025 E — nl-Wikipedia "Magere Brug",
-   * prop=coordinates (haettu 29.8.2026). Muunnos on sama kaava ja samat
+   * PAIKKA ON JAKSO, EI OSOITE: yhtäkään taloa ei nimetä eikä
+   * yhteenkään taloon väitetä kätköä tai pääsyoikeutta. Kaaren kätkö on
+   * kanavan reunan kivilaiturissa, siis yleisellä paikalla (Fablen
+   * päätös: *"kätkö on kaupungin kätkö, ei yksityisasunnon ullakko"*).
+   *
+   * 52,36555556 N / 4,89 E — nl-Wikipedia "Gouden Bocht",
+   * prop=coordinates (haettu 5.9.2026). Muunnos on sama kaava ja samat
    * vakiot kuin fokuskohteilla: maailmankartalla Millerin lieriö
    * LEVEYS 12000 / LON0 −175 / POHJOINEN 76 (tools/fokuskartta/
    * piirto.js laudanProjektio), Euroopan laudalla x = (lon + 11) × 19,2
    * ja y = (72 − lat) × 26,3.
    *
-   * LASKU:
-   *   maailmankartta  x = ((4,9025 − (−175)) mod 360) × (12000/360)
-   *                     = 179,9025 × 33,3333… = 5996,8
-   *                   y = (millerY(76) − millerY(52,36361111)) × 12000/2π
-   *                     = 1285,9
-   *   europe          x = (4,9025 + 11) × 19,2 = 305,3
-   *                   y = (72 − 52,36361111) × 26,3 = 516,4
+   * LASKU (ajettu laudanProjektion omalla kaavalla):
+   *   maailmankartta  x = ((4,89 − (−175)) mod 360) × (12000/360)
+   *                     = 179,89 × 33,3333… = 5996,3
+   *                   y = (millerY(76) − millerY(52,36555556)) × 12000/2π
+   *                     = 1285,8
+   *   europe          x = (4,89 + 11) × 19,2 = 305,1
+   *                   y = (72 − 52,36555556) × 26,3 = 516,4
    *
    * TARKISTUS LAATTAA VASTEN: Amsterdamin laatta on Euroopan laudalla
    * 305 / 516 (js/packs/europe.js) ja maailmankartalla 5996,8 / 1285,7,
-   * eli piste osuu käytännössä laatan päälle. Niin pitääkin — silta on
-   * keskustassa runsaan kilometrin päässä Damista, ja laudan yksikkö on
-   * maailmankartalla noin kolme kilometriä. Piirtopuoli hoitaa erotuksen
-   * itse: alle 14 yksikön päässä laatasta piste siirretään koilliseen
-   * (js/fokuspiste.js PISTE_ERO_MIN).
+   * eli piste osuu käytännössä laatan päälle — kuten ennenkin. Niin
+   * pitääkin: kanavakehä on keskustassa alle kilometrin päässä Damista,
+   * ja laudan yksikkö on maailmankartalla noin kolme kilometriä.
+   * Piirtopuoli hoitaa erotuksen itse: alle 14 yksikön päässä laatasta
+   * piste siirretään koilliseen (js/fokuspiste.js PISTE_ERO_MIN).
    */
   kohtaamispiste: {
-    nimi: 'Magere Brug',
+    nimi: 'Herengrachtin kanavatalot',
     laudat: {
-      maailmankartta: { x: 5996.8, y: 1285.9 },
-      europe: { x: 305.3, y: 516.4 },
+      maailmankartta: { x: 5996.3, y: 1285.8 },
+      europe: { x: 305.1, y: 516.4 },
     },
   },
 

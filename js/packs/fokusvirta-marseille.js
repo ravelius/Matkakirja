@@ -740,28 +740,35 @@ export const FOKUSVIRTA_MARSEILLE = {
    * kohtaamisen oma repliikki ovat tarinakaaren paketissa
    * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, 'marseille'): soutaja
    * Baptiste kuljettaa kalastajia satamasta ja tuntee Ifin saaren
-   * virtaukset, ja hänen isänsä isä souti isoisän saarelle ja odotti
-   * kaksi vuorokautta. Luonnos käyttää samaa hahmoa, koska kaupungilla
-   * on jo hänet — uusi nimi tekisi kaupunkiin kaksi eri vartijaa.
+   * virtaukset. Luonnos käyttää samaa hahmoa, koska kaupungilla on jo
+   * hänet — uusi nimi tekisi kaupunkiin kaksi eri vartijaa.
+   *
+   * KAANONIRIKE KORJATTU 5.9.2026 (Fable tarkistanut 5.9.2026). Kaaren
+   * kohtaaminen sanoi ennen, että *"isäni isä souti isoisäsi saarelle ja
+   * odotti häntä kaksi vuorokautta"*, ja aarre jatkoi samaa muistoa.
+   * Horatiota ei tunnisteta missään (docs/isoisan-raamattu.md), joten
+   * molemmat kirjoitettiin uusiksi ja tämä kortti seuraa perässä: myös
+   * täältä poistui suvun muisto ulkomaalaisesta, jota odotettiin
+   * kalliolla. Baptisten oma suhde työhön ja reittiin säilyy
+   * sellaisenaan.
    *
    * MITÄ LUONNOS EI TEE: se ei kertaa Baptisten repliikkiä eikä toista
-   * sen yksityiskohtaa ylimääräisestä arkusta, koska se on aarteen
-   * palkinto eikä kortin sisältö. Se ei myöskään nimeä kirjaa, jota
-   * laattakysymys kysyy — vaikka kaanoninen pollo.teksti sen jo tekee
-   * (ks. SPOILERIHUOMIO tiedoston alussa), tämä paketti ei syvennä
-   * spoileria yhdelläkään sanalla.
+   * aarteen yksityiskohtaa, koska se on löydön palkinto eikä kortin
+   * sisältö. Se ei myöskään nimeä kirjaa, jota laattakysymys kysyy —
+   * vaikka kaanoninen pollo.teksti sen jo tekee (ks. SPOILERIHUOMIO
+   * tiedoston alussa), tämä paketti ei syvennä spoileria yhdelläkään
+   * sanalla.
    *
    * MITÄ LUONNOS YRITTÄÄ (docs/moduulit/tarinakaari.md, luku 3 ja 5):
-   *   - SUVUN JATKUMO ilman ostettua järjestelyä. Baptiste soutaa samaa
-   *     matkaa kuin isänsä ja isänsä isä, ja syy jatkaa on suvun oma:
-   *     vene ja reitti ovat hänen elantonsa, ei kenenkään toivomus.
-   *   - ÄÄNIPROFIILI ON EPÄUSKOINEN. Baptiste pitää sukunsa tarinaa
-   *     satamajuttuna — jokainen soutaja väittää sukunsa kuljettaneen
-   *     jotakuta — mutta airot ovat hänen kädessään.
+   *   - AMMATIN JATKUMO ilman ostettua järjestelyä ja ilman lupausta.
+   *     Baptiste soutaa samaa matkaa kuin isänsä ja isänsä isä, ja syy
+   *     jatkaa on hänen omansa: vene ja reitti ovat hänen elantonsa.
+   *   - ÄÄNIPROFIILI ON EPÄUSKOINEN. Baptiste pitää koko aarrepuhetta
+   *     laiturin tavallisena hulluutena — hän kuulee sitä joka päivä —
+   *     mutta airot ovat silti hänen kädessään.
    *   - VARALLISUUSSÄÄNTÖ tarkistettu virke virkkeeltä: isoisä ei maksa
-   *     mitään, ei tilaa mitään eikä käske ketään. Ainoa hänen jälkensä
-   *     on kaksi vuorokautta odotusta, ja sekin on Baptisten suvun oma
-   *     muisto eikä sopimus.
+   *     mitään ylimääräistä, ei tilaa mitään eikä käske ketään, eikä
+   *     kukaan odota perillistä.
    *   - PORTINVARTIJAKYSYMYS: Baptiste ei soudan sitä, joka ei tiedä
    *     miksi kaikki muutkin haluavat samalle kalliolle. Lupaus on
    *     käsin kosketeltava teko — hän irrottaa köyden — ja se lunastuu
@@ -790,13 +797,11 @@ export const FOKUSVIRTA_MARSEILLE = {
     vihjeOsio: 'kaupunki',
     teksti: 'Baptiste soutaa vieraita sataman suulle samaa matkaa, jota '
       + 'hänen isänsä ja isänsä isä soutivat, ja hän tietää ulkoa, missä '
-      + 'kohdassa virta kääntää veneen keulan itsestään. Suvussa '
-      + 'kerrotaan, että hänen isoisänsä isä odotti kerran erästä '
-      + 'ulkomaalaista kalliolla kaksi vuorokautta ja ettei kukaan '
-      + 'maksanut siitä ylimääräistä. Baptiste sanoo suoraan pitävänsä '
-      + 'juttua satamapuheena: jokaisella tämän laiturin soutajalla on '
-      + 'sukutarina jostakusta, jonka hän muka kuljetti. Airot hänellä on '
-      + 'silti, ja sama reitti. Vieraita hän vie mielellään, mutta ei '
+      + 'kohdassa virta kääntää veneen keulan itsestään. Aarteista hän '
+      + 'kuulee laiturilla joka viikko ja pitää koko puhetta '
+      + 'satamahulluutena: jokaisella tämän laiturin soutajalla on oma '
+      + 'juttunsa siitä, mitä kalliolta on muka löydetty. Airot hänellä '
+      + 'on silti, ja sama reitti. Vieraita hän vie mielellään, mutta ei '
       + 'ketä tahansa eikä kysymättä. Ennen kuin hän irrottaa köyden, hän '
       + 'haluaa tietää, tietääkö tulija ylipäätään, miksi puolet '
       + 'maailmasta haluaa juuri tuolle kalliolle.',

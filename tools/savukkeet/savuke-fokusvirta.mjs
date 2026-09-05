@@ -645,14 +645,15 @@ vaadi('oppituntikortti pohjustaa laattakysymystä',
 vaadi('kartalla ei ole kuvavinjettejä oppitunnilla',
   (await vinjetit()).maara === 0, JSON.stringify(await vinjetit()));
 
-await paina('Nikos');
+// Ateenan kohtaamishenkilö vaihtui 5.9.2026: Nikos → Dafni.
+await paina('Dafni');
 tila = await kortti();
 vaadi('kohtaaminen esittelee paikallisen',
-  tila?.vaihe === 'kohtaaminen' && tila.otsikko.includes('Nikos'), JSON.stringify(tila?.vaihe));
+  tila?.vaihe === 'kohtaaminen' && tila.otsikko.includes('Dafni'), JSON.stringify(tila?.vaihe));
 
 /*
  * KOHTAAMISEEN TULI KYLLÄ/EI-VARMISTUS 26.8.2026 (js/fokusvirta.js,
- * "KYLLÄ JA EI OVAT OIKEITA NAPPEJA"): "Tapaa Nikos" avaa varmistuksen,
+ * "KYLLÄ JA EI OVAT OIKEITA NAPPEJA"): "Tapaa Dafni" avaa varmistuksen,
  * ja luovutus laattamekaniikalle tapahtuu vasta Kyllä-napista. Väite
  * päivitettiin 29.8.2026 kortit päälle -päätöksen yhteydessä.
  */

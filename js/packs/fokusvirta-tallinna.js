@@ -65,7 +65,7 @@
  * MIKSI EI TUULIVIIRIKYSYMYSTÄ: kaupungin laattakysymys koskee Vana
  * Toomasin tarua (js/tyohuone-kehitys-data.js KAARI_PAKETIT, tallinna).
  * Jos lehden aarteen avaava tehtävä kysyisi samasta, kysymys olisi
- * ratkaistu ennen kuin Kristjan on tavattu.
+ * ratkaistu ennen kuin Eve on tavattu.
  */
 const SALAMA_VISA = {
   kysymys: 'Olevisten kirkon torni on Viron korkein kirkontorni. Mistä se '
@@ -441,35 +441,44 @@ export const FOKUSVIRTA_TALLINNA = {
 
   /*
    * ---------- 5. Kohtaaminen ----------
-   * Hahmo, kohtaamiskuva ja kysymys ovat tarinakaaren paketissa
-   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'tallinna'):
-   * tornimestari Kristjan rasvaa Vana Toomasin laakerit ja nousee
-   * torniin joka myrskyn jälkeen. Tämä kortti ei kertaa Kristjanin
-   * repliikkiä eikä paljasta vastausta.
    *
-   * TALLINNAN VANHA KOHTAAMINEN JÄÄ ENNALLEEN (js/packs/kohtaamiset.js):
-   * sama Kristjan kahdella pinnalla, ei kahta lupausta samasta ovesta.
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
+   *
+   * HAHMO VAIHDETTU: tornimestari Kristjan → opas Eve (kuvaputken
+   * tarinaehdotus 5.9.2026, Fablen päätös klo 20:05 UTC). Kristjanin
+   * kaanoninen repliikki nimesi vastatuulen päivän *"isoisäsi päiväksi"*
+   * — kaupungin kirjanpito siis muisti Horation, mikä on kaanonrike.
+   * Samalla poistui väite, että sama ihminen rasvaisi viirin laakerit;
+   * Vana Toomasin huolto ei ole oppaan työtä.
+   *
+   * Hahmo, kohtaamiskuva ja kysymys ovat tarinakaaren paketissa
+   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'tallinna'). Tämä
+   * kortti ei kertaa Even repliikkiä eikä paljasta vastausta.
+   *
+   * ÄÄNIPROFIILI: hämmästyvä ja huvittunut — Eve nauraa kysymykselle
+   * ennen kuin vastaa siihen.
    */
   kohtaaminen: {
-    hahmo: 'Tornimestari Kristjan',
-    nappi: 'Tapaa tornimestari',
-    teksti: 'Kristjan nousee torniin joka myrskyn jälkeen katsomaan, että '
-      + 'vartija kääntyy yhä. Hän kantaa öljykannua ja tietää portaiden '
-      + 'määrän ulkoa, koska on laskenut ne kerran eikä ole nähnyt syytä '
-      + 'laskea uudelleen. Kaupungin kirjanpito on hänelle tuttua lukemista: '
-      + 'siellä on merkitty myös ne päivät, joina tuuli teki jotain, mitä '
-      + 'sen ei olisi pitänyt tehdä. Ennen kuin hän avaa kirjauksen, hän '
-      + 'haluaa tietää, tunteeko vieras tornin oman tarun.',
+    hahmo: 'Opas Eve',
+    nappi: 'Tapaa Eve',
+    teksti: 'Eve nousee tornin portaat useita kertoja päivässä ja tietää '
+      + 'askelmien määrän ulkoa, koska on laskenut ne kerran eikä ole '
+      + 'nähnyt syytä laskea uudelleen. Ryhmiä hän ei hoputa: ylös pääsee '
+      + 'omaa tahtia, kunhan pääsee myös alas. Tornin opastusaineisto ja '
+      + 'vanhat havaintokirjat ovat hänelle tuttua lukemista, ja hän '
+      + 'huvittuu joka kerta siitä, kuinka moni tulee ylös kysymään yhtä '
+      + 'ja samaa tarua. Ennen kuin hän kertoo sen loppuun, hän haluaa '
+      + 'tietää, tunteeko vieras sen jo entuudestaan.',
     vihjeOsio: 'kaupunki',
   },
 
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * KOHTAAMISPAIKKA: RAATIHUONEEN TORNI. Kaaren teksti asettaa
-   * Kristjanin tornin portaisiin, ja pelin oma Tallinna-aineisto
-   * osoittaa saman paikan (js/packs/kulttuuri-kategoriat.js,
-   * tallinna/kaupunki).
+   * KOHTAAMISPAIKKA: RAATIHUONEEN TORNI. Piste EI siirry henkilön
+   * vaihdossa 5.9.2026: kaaren teksti asettaa Even tornin
+   * kierreportaisiin, ja pelin oma Tallinna-aineisto osoittaa saman
+   * paikan (js/packs/kulttuuri-kategoriat.js, tallinna/kaupunki).
    *
    * KOORDINAATIT LUETAAN LAUDALTA EIKÄ PROJEKTIOSTA — POIKKEUS, JOKA
    * PITÄÄ PERUSTELLA. Raatihuoneen todellinen paikka on 59,43709167 N /
