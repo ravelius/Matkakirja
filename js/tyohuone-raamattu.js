@@ -3317,6 +3317,16 @@ export const RAAMATTU = {
           + '(jalan, laiva, lento), Keksinnot-linssin kaarimusiikki ja '
           + 'valinaytoksen tausta; vertailu omistajan korvalla, ja voittaja '
           + 'kirjataan tahan. Ei tehda ennen kuin pallo on valmis.',
+        'KYSYMYSKORTIT AINA (omistaja 5.9.2026 aamu, sanatarkasti: "Tee '
+          + 'kysymys kortit aina"): kun Fablella on omistajalle kysymys, '
+          + 'se esitetaan aina kysymyskorttina (vaihtoehdot ja suositus '
+          + 'ensimmaisena), ei proosana viestin lopussa. Vastaukset '
+          + 'kirjataan Raamattuun. Ensimmaiset kortin vastaukset '
+          + '(5.9.2026): 1) kaupunkien nimet pallolaudalla ELAVINA '
+          + 'tekstielementteina laattojen paalla (kuten Google Earth: '
+          + 'kuva laatoissa, nimet ja rajat elavina), laatoissa lisaksi '
+          + 'poltettuina varana; 2) aloitussivu pallolaudalla: pallo '
+          + 'Lontoon ylla avaustekstin takana, aloituslento pallolta.',
         'KARTTAPALLO ON PELILAUTA, LINSSIT VANHALLA KARTALLA (omistaja '
           + '5.9.2026 aamu, sanatarkasti: "Voisiko pallon vaihtaa pelin '
           + 'kartaksi suoraan?" / Fablen arvion jalkeen "Linssit voi olla '
