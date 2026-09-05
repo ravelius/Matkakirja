@@ -53,6 +53,8 @@
  * KARTTASELITE_/karttaselite-etuliitteellä.
  */
 import { html } from './ui-apurit.js';
+// Ilmepaketti (omistaja 5.9.2026): selitteen levy saa käsin piirretyn kehyksen.
+import { karheaKehys } from './ilme.js';
 import { el } from './mapart.js';
 import { piirraNostosymMini } from './fokusnosto-symbolit.js';
 import {
@@ -258,6 +260,11 @@ export function kaynnistaKarttaselite(ui) {
     levy.classList.add('auki');
     nappi.setAttribute('aria-expanded', 'true');
     paivita();
+    // Käsin piirretty kehys ensimmäisellä avauksella (js/ilme.js, Rough.js);
+    // ilman kirjastoa levy pitää CSS-reunansa.
+    if (!levy.ilmeKehys) {
+      levy.ilmeKehys = karheaKehys(levy, { sade: 8, reunus: 1.5, paksuus: 1.2, vari: 'rgba(70, 51, 31, 0.78)' });
+    }
   };
   const sulje = () => {
     if (!levy.classList.contains('auki')) return;

@@ -413,6 +413,17 @@ pakettien otsikkokommentit).
 | Internet Archive ja Wikisource — lainaukset, joita Gutenbergissa ei ole | Alkuperäisteosten kirjoittajat | Public domain (teokset) |
 | Pelin omat tekstit: tarina, päiväkirja, kysymykset, väittämät, tapahtumat, pulmat, tiivistelmät | Sami Reivinen / VVI | Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy |
 
+### Avoimen lähdekoodin kirjastot
+
+Ladataan pelin ämpärin `vendor/`-polusta (ei reposta eikä CDN:stä);
+lisenssiteksti on ämpärissä kirjaston rinnalla (`<kirjasto>.LICENSE.txt`).
+
+| Kirjasto | Tekijä | Lisenssi |
+| --- | --- | --- |
+| Vivus 0.4.6 — musteviiva piirtyy (SVG-polkujen piirtoanimaatio) | maxwellito | MIT |
+| Rough.js 4.6.6 — käsin piirretyn näköiset kehykset ja viivat | Preet Shihn | MIT |
+| rough-notation 0.5.1 — kynän alleviivaus ja ympyröinti tekstiin | Preet Shihn | MIT |
+
 **Lisenssit tarkistettu 27.8.2026.** Aiemmin neljä riviä oli merkitty
 epäselväksi: V-Dem / Our World in Data, Yale Bright Star Catalogue, suorat
 radiolähetykset ja ElevenLabsilla tuotetut äänet. Kaikkien ehdot on nyt haettu

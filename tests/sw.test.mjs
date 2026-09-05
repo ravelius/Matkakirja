@@ -248,6 +248,31 @@ test('peilikuvalla on cors-noudon jälkeen varareitti ilman corsia', () => {
 });
 
 /*
+ * VALMIIT KIRJASTOT VÄLIMUISTIIN (Raamattu, VALMIIT KIRJASTOT: STPAGEFLIP
+ * ENSIN, sääntö 1–2). Ämpärin vendor/-polun tiedostot (Globe.gl,
+ * ilmepaketin Vivus, Rough.js ja rough-notation) ovat versionumeroituja
+ * ja muuttumattomia, joten niillä on oma pysyvä korinsa: versionvaihto
+ * ei saa tyhjentää sitä, ja noudossa on sama cors-ensin + varareitti
+ * -kaava kuin peilikuvilla. Ilman tätä peli menettäisi ilmeensä (ja
+ * pallon) heti kun verkko katkeaa.
+ */
+test('vendor-kirjastot säilyvät omassa korissaan, jota versionvaihto ei tyhjennä', () => {
+  const kori = sw.match(/const VENDORCACHE = '([^']+)'/)?.[1];
+  assert.ok(kori, 'sw.js: VENDORCACHE puuttuu');
+  assert.match(sw, /const VENDOR_POLKU = \/\^\\\/vendor\\\/\//, 'vendor/-polun tunnistus puuttuu');
+  const kohta = sw.indexOf('VENDOR_POLKU.test(osoite.pathname)');
+  assert.ok(kohta > 0, 'fetch-käsittelijä ei tunnista vendor/-polkua');
+  const lohko = sw.slice(kohta, kohta + 900).split('\n')
+    .filter((r) => !/^\s*(\*|\/\/|\/\*)/.test(r)).join('\n');
+  assert.match(lohko, /caches\.open\(VENDORCACHE\)/, 'kirjasto talletetaan VENDORCACHE-koriin');
+  const cors = lohko.search(/mode:\s*'cors'/);
+  const vara = lohko.search(/fetch\(event\.request\)/);
+  assert.ok(cors >= 0 && vara > cors, 'cors-noudon jälkeen on oltava tavallinen fetch varareittinä');
+  const siivous = sw.slice(sw.indexOf("addEventListener('activate'"), sw.indexOf("addEventListener('fetch'"));
+  assert.match(siivous, /k !== VENDORCACHE/, 'activate ei saa poistaa vendor-koria');
+});
+
+/*
  * Yhdistämismerkkejä ei saa päätyä julkaistuun koodiin.
  *
  * Tänään kävi juuri niin: neljään tiedostoon jäi purkamaton ristiriita

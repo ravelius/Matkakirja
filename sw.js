@@ -81,6 +81,8 @@ const SHELL = [
   './js/lahteet.js',
   './js/wiki.js',
   './js/media.js',
+  // Ilmepaketti (js/ilme.js): musteviiva, karhea kehys, kynäkorostus.
+  './js/ilme.js',
   './js/saa.js',
   './js/maakayrat.js',
   './js/maatummennus.js',
@@ -1384,6 +1386,18 @@ const OMA_VALOKUVA = (osoite) => osoite.pathname.includes('/assets/valokuvat/');
  */
 const AANICACHE = 'matkakirja-aanet-v1';
 
+/*
+ * VALMIIT KIRJASTOT (Raamattu, VALMIIT KIRJASTOT: STPAGEFLIP ENSIN, sääntö
+ * 1–2): ämpärin vendor/-polun tiedostot — Globe.gl (js/pallo.js),
+ * ilmepaketti Vivus + Rough.js + rough-notation (js/ilme.js) ja
+ * seuraavat — ovat versionumeroituja ja muuttumattomia
+ * (Cache-Control immutable, workflow vie-vendor), joten kerran nähty
+ * kirjasto kelpaa ikuisesti. Oma pysyvä kori: versionvaihto ei tyhjennä
+ * sitä, ja peli saa kirjastonsa lentokoneessa.
+ */
+const VENDORCACHE = 'matkakirja-vendor-v1';
+const VENDOR_POLKU = /^\/vendor\//;
+
 /**
  * Osittaisvastaus (206) välimuistista noudetusta kokonaisesta äänestä.
  *
@@ -1469,7 +1483,7 @@ self.addEventListener('activate', (event) => {
     caches
       .keys()
       .then((keys) => Promise.all(
-        keys.filter((k) => k !== CACHE && k !== KUVACACHE && k !== AANICACHE
+        keys.filter((k) => k !== CACHE && k !== KUVACACHE && k !== AANICACHE && k !== VENDORCACHE
           // Lukijaäänen pysyvät säilöt (js/puhe.js) eivät ole tämän
           // workerin omia — siivous ei saa tuhota niitä versionvaihdossa.
           && !k.startsWith('matkakirja-puhe-')).map((k) => caches.delete(k))))
@@ -1579,6 +1593,28 @@ self.addEventListener('fetch', (event) => {
      */
     if (osoite.hostname.endsWith('.r2.dev') && /^\/(?:audio|aanet)\//.test(osoite.pathname)) {
       event.respondWith(aaniPeilista(event.request));
+      return;
+    }
+    /*
+     * Valmiit kirjastot (vendor/): välimuisti ensin, talletus
+     * ensimmäisellä latauksella. Skriptin oma pyyntö on no-cors, joten
+     * vastaus haetaan ensin cors-tilassa (ämpärin CORS-sääntö sallii),
+     * jotta se kelpaa koriin; jos sääntö ei osu, tavallinen nouto jää
+     * varareitiksi kuten kuvilla — kirjasto latautuu, muttei säily.
+     */
+    if (osoite.hostname.endsWith('.r2.dev') && VENDOR_POLKU.test(osoite.pathname)) {
+      event.respondWith(
+        caches.open(VENDORCACHE).then(async (kori) => {
+          const osuma = await kori.match(event.request.url);
+          if (osuma) return osuma;
+          const vastaus = await fetch(event.request.url, { mode: 'cors' }).catch(() => null);
+          if (vastaus && vastaus.ok) {
+            kori.put(event.request.url, vastaus.clone());
+            return vastaus;
+          }
+          return fetch(event.request).catch(() => vastaus ?? Response.error());
+        }),
+      );
       return;
     }
     return;

@@ -1781,3 +1781,16 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
   background: rgba(122, 85, 20, 0.1);
   color: #16130f;
 }
+
+/* ===================================================================
+   ILMEPAKETTI (js/ilme.js korosta, omistaja 5.9.2026)
+   -------------------------------------------------------------------
+   Kun kynä on vetänyt viivan kysymysrivin alle, rivin oma lappu ja
+   varjo väistyvät — korostus on nyt viiva, ei laatta. Musteviiva
+   vasemmassa reunassa jää: se on rivin paino. Ilman kirjastoa luokkaa
+   ei tule ja lappu on ennallaan.
+   =================================================================== */
+.fokusvirta-sahkerivi.fokusvirta-sahkekysymys.ilme-korostettu {
+  background: none;
+  box-shadow: none;
+}
