@@ -1,5 +1,34 @@
 # Kuvatoimitussessio
 
+## 2026-09-05 — KUVAPUTKI → FABLE: P2 historia- ja muiden kuvien erä valmis Arvioitavaksi, Site v129
+
+### Toimitustaso
+- Yksityinen Arvioitavaksi-sivusto: **Site v129**
+- Tuotantokuvia yhteensä: **49**
+  - Loistoaika / Matkakirjan ihme: **19 / 19**
+  - Ennen/nyt (nykykuva): **18 / 18**
+  - Lehti- ja asiakirjanostot: **12 / 12**
+- Sivun juuri `/` ja `/api/reviews` vastasivat HTTP 200.
+- Kaikki 49 julkaistua JPG-tiedostoa ladattiin takaisin palvelimelta. MIME-tyyppi oli `image/jpeg` ja palvelinkopion SHA-256 täsmäsi paikalliseen hyväksyttyyn toimitusversioon.
+- Tämä on tavallinen yksityinen arviointitoimitus. Kuvia ei ole siirretty peli-R2:een eikä kytketty peliin ennen omistajan hyväksyntää.
+
+### Sisältö- ja QA-huomiot
+- Ennen/nyt-erän kaikki 18 nykykuvaa ovat aitoja lisensoituja valokuvia.
+- Belin ensimmäinen kirjelaatikollinen versio hylättiin ja säilytettiin. Arvioinnissa oleva v2 käyttää samaa Hamed Jafarnejadin/Tasnimin 800 × 557 CC BY 4.0 -valokuvaa. Se rajattiin 798 × 532 pikseliin ja suurennettiin dokumentoidusti noin 1,925-kertaiseksi Lanczos-menetelmällä ilman retusointia; kuvaajan palkki säilytettiin.
+- Loistoaika-erässä hylätyt versiot säilytettiin. Esimerkkejä: Forum Romanumin a01:n väärät natiivimitat, Great Zimbabwen a01:n ontto kartiotorni, Babylonin aiempien versioiden anakronismit ja Ishtarin a01:n epäselvät eläinreliefit. Arvioinnissa ovat korjatut versiot.
+- Lehti- ja asiakirjaerässä on 10 aitoa arkistofaksimilea ja kaksi selvästi merkittyä determinististä rekonstruktiota: Révolutions de Paris ja Estia. Rekonstruktioissa ei käytetty ImageGenin keksimää tekstiä.
+
+### Uusi kuvapyyntö
+Omistaja pyytää nyt **paljon lisää historia- ja muita tavallisia kuvia**, mutta **ei uusia kohtaamiskuvia**. Lähetä uusi suuri, deduplikoitu jono, jossa on kaupungin ja maanosan tarina sekä riittävä historiallinen konteksti jokaista kuvaa varten. Mukaan voivat tulla esimerkiksi:
+- historian hetket ja keksinnöt
+- loistoaika- ja ihmekuvat
+- Isoisän valokuvat
+- ennen/nyt-parit
+- karttanostot, lehti- ja asiakirjanostot, eläimet ja muu pelin tarvitsema kuvitus
+- miniatyyrit erillisenä suurena jonona
+
+Merkitse jokaiselle riville käyttökohde, kuvasuhde, vähimmäismitat, kuvatekstin ydin, lähdevaatimus, prioriteetti ja tieto siitä, onko kohde uusi vai aiemman kuvan uusinta. Älä lisää kohtaamiskuvia. Tavalliset kuvat kulkevat ensin yksityiseen Arvioitavaksi-näkymään; peli-R2 ja pelikytkentä vasta omistajan hyväksynnän jälkeen.
+
 ## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 10 R2-varmennettu
 
 ### sydney
