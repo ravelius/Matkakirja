@@ -45,7 +45,7 @@ const konteksti = await selain.newContext({ viewport: { width: 390, height: 844 
  */
 await konteksti.route('**samireivinen.workers.dev/**', (route) => route.abort());
 const sivu = await konteksti.newPage();
-await sivu.goto(`http://localhost:${palvelin.address().port}/`, { waitUntil: 'load' });
+await sivu.goto(`http://localhost:${palvelin.address().port}/?lauta=kartta`, { waitUntil: 'load' });
 await sivu.waitForTimeout(1800);
 await sivu.evaluate(() => {
   [...document.querySelectorAll('button')]

@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS } from '../js/pallo.js';
+import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS, laattakynnykset, lepokerroin, LAATU_TERAVYYS, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE } from '../js/pallo.js';
 import { laatanReunat, rivinLeveysaste, julisteenLeveysvali, tasonLaatat, lahdetaso, laattojenKansio, LAATTA } from '../tools/tee-pallolaatat.mjs';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
 import { LINSSI as PALLOLINSSI } from '../js/linssit/pallo.js';
@@ -163,4 +163,30 @@ test('pallo on matkalaukun linssi, ei valikossa; ui avaa sen laiskasti ja kuori 
   // Kirjaston latausvirhe ei kaada peliä vaan näkyy kuoressa.
   assert.match(pallo, /tila\.textContent = 'Karttapallo ei latautunut/);
   assert.match(lue('../css/styles.css'), /\.pallo-kuori \{[\s\S]*?z-index: 45;/);
+});
+
+test('laatu palaa levossa: kynnykset ruudun pikseleistä, liike kevyt (omistaja 5.9.2026)', () => {
+  // Kirjaston oma taulukko: taso t, kun 8/2^t ≤ korkeus.
+  const oletus = laattakynnykset();
+  assert.equal(oletus.length, 30);
+  assert.equal(oletus[0], 8);
+  assert.equal(oletus[3], 1);
+  // Lepokerroin iPhonen pystyruudulle (771 css-px × 3): 2^t ≥ 0,0263·H/h.
+  const k = lepokerroin(771 * 3);
+  const taso = (h, kerroin) => Math.min(PALLO_LAATTATASO_MAX, laattakynnykset(kerroin).findIndex((x) => x <= h));
+  assert.equal(taso(0.135, 1), 6, 'kirjaston taso korkeudella 0,135');
+  assert.equal(taso(0.135, k), 8, 'levossa syvin taso (kirjasto rajaa maxLeveliin)');
+  assert.equal(taso(2.5, k), 4, 'koko pallo levossa tasolla 4, ei 5 (128 laattaa)');
+  assert.equal(lepokerroin(100), 1, 'ei koskaan karkeampi kuin kirjasto');
+  assert.ok(LAATU_TERAVYYS >= 0.5 && LAATU_TERAVYYS <= 1);
+  assert.ok(k > 3.5 && k < 5, `kerroin ${k}`);
+  assert.ok(LAATU_LEPOVIIVE_MS >= 200 && LAATU_LEPOVIIVE_MS <= 400);
+  assert.ok(LAATU_LIIKEVIIVE_MS > 0 && LAATU_LIIKEVIIVE_MS < LAATU_LEPOVIIVE_MS);
+  assert.equal(LAATU_PIKSELISUHDE_LIIKE, 2, 'liikkeessä kirjaston katto');
+  assert.equal(LAATU_PIKSELISUHDE_LEPO, 3, 'levossa iPhonen koko dpr');
+  // Laatunosto kytketään vain laatoitettuun palloon; purkaja palauttaa.
+  const lahde = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
+  assert.match(lahde, /globeTileEngineMaxLevel\(PALLO_LAATTATASO_MAX\);\n\s+asennaLaatunosto\(pallo, kotelo\);/);
+  assert.match(lahde, /moottori\.updatePov = alkuperainen;/);
+  assert.match(lahde, /map\.anisotropy = maxAniso/);
 });

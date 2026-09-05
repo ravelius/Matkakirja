@@ -64,7 +64,7 @@ const sivu = await (await selain.newContext({ viewport: { width: 834, height: 11
  * verkkovirheeltä, jonka puskuri nielee hiljaa.
  */
 await sivu.route('**samireivinen.workers.dev/**', (route) => route.abort());
-await sivu.goto(`http://localhost:${palvelin.address().port}/`, { waitUntil: 'load' });
+await sivu.goto(`http://localhost:${palvelin.address().port}/?lauta=kartta`, { waitUntil: 'load' });
 await sivu.waitForTimeout(1500);
 
 /**

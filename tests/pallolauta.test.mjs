@@ -35,34 +35,34 @@ const { Game } = await import('../js/game.js');
 const { packById } = await import('../js/pack.js');
 const { PALLO_SUKELLUSLEVEYS } = await import('../js/pallo.js');
 
-test('laudan valinta: URL voittaa muistin, muisti voittaa oletuksen, oletus on kartta', () => {
-  assert.equal(LAUTA_OLETUS, 'kartta', 'vanha kartta on oletus vaiheen 6 alkuun asti (karttapallo.md luku 7)');
+test('laudan valinta: URL voittaa muistin, muisti voittaa oletuksen, oletus on pallo', () => {
+  assert.equal(LAUTA_OLETUS, 'pallo', 'pallo on oletuslauta (omistaja 5.9.2026: "Ota vanha kartta jo heti kokonaan pois ja korvaa pallolla")');
   unohdaKehittajaKytkimet();
-  assert.equal(lautaValinta(), 'kartta');
-  // Muisti ohjaa, kun URL ei sano mitään.
-  asetaLautaValinta('pallo');
-  assert.equal(varasto.get('matkakirja-lauta'), 'pallo');
   assert.equal(lautaValinta(), 'pallo');
-  // Oletuksen valinta poistaa avaimen: vakion vaihto tavoittaa laitteen.
+  // Muisti ohjaa, kun URL ei sano mitään: palautusoptio on vanha kartta.
   asetaLautaValinta('kartta');
-  assert.equal(varasto.has('matkakirja-lauta'), false);
+  assert.equal(varasto.get('matkakirja-lauta'), 'kartta');
   assert.equal(lautaValinta(), 'kartta');
+  // Oletuksen valinta poistaa avaimen: vakion vaihto tavoittaa laitteen.
+  asetaLautaValinta('pallo');
+  assert.equal(varasto.has('matkakirja-lauta'), false);
+  assert.equal(lautaValinta(), 'pallo');
   // URL-parametri voittaa muistin; vieras arvo ohitetaan (katselutilan
   // ?lauta=<laudan id> ei sotke).
-  asetaLautaValinta('pallo');
-  globalThis.location = { search: '?lauta=kartta' };
+  asetaLautaValinta('kartta');
+  globalThis.location = { search: '?lauta=pallo' };
   unohdaKehittajaKytkimet();
-  assert.equal(lautaValinta(), 'kartta');
+  assert.equal(lautaValinta(), 'pallo');
   globalThis.location = { search: '?lauta=maailmankartta' };
   unohdaKehittajaKytkimet();
-  assert.equal(lautaValinta(), 'pallo', 'tuntematon URL-arvo ei ole laudan valinta');
+  assert.equal(lautaValinta(), 'kartta', 'tuntematon URL-arvo ei ole laudan valinta');
   // Arvo muistetaan eikä lueta levyltä joka kerta.
-  varasto.set('matkakirja-lauta', 'kartta');
-  assert.equal(lautaValinta(), 'pallo', 'muistettu arvo pysyy, kunnes joku unohtaa sen');
+  varasto.set('matkakirja-lauta', 'pallo');
+  assert.equal(lautaValinta(), 'kartta', 'muistettu arvo pysyy, kunnes joku unohtaa sen');
   unohdaKehittajaKytkimet();
-  assert.equal(lautaValinta(), 'kartta');
+  assert.equal(lautaValinta(), 'pallo');
   globalThis.location = { search: '' };
-  asetaLautaValinta('kartta');
+  asetaLautaValinta('pallo');
   unohdaKehittajaKytkimet();
 });
 
@@ -166,8 +166,11 @@ test('tasokartta pois tieltä yhdestä portista; kamera kulkee delegaatin kautta
   // Liiku avaa linssikartan pallolaudalla; perillä se sulkeutuu.
   assert.match(ui, /if \(this\.liukuAuki && this\.pallolautaPaalla\(\)\) this\.avaaLinssikartta\(\);/);
   assert.match(ui, /^  tarkistaLinssikartta\(\) \{/m);
-  // Varapolku: kartta herää ja laitteen valinta palaa kartaksi.
-  assert.match(ui, /asetaLautaValinta\('kartta'\);/);
+  // Varapolku: kartta herää vain tälle istunnolle; laitteen valintaa ei
+  // kirjoiteta (pallo on oletus — yksi verkoton käynnistys ei saa lukita
+  // laitetta vanhaan karttaan).
+  assert.doesNotMatch(ui, /asetaLautaValinta\(/);
+  assert.match(ui, /this\.pallolautaEpaonnistui = true;/);
   assert.match(ui, /Karttapallo ei latautunut — pelataan kartalla/);
   // Kytkin: ratasvalikon vipu, URL-parametri ja SHELL.
   assert.match(lue('../index.html'), /id="kehittaja-pallolauta-btn"/);

@@ -108,7 +108,7 @@ await konteksti.route(/r2\.dev\/|wikimedia\.org\//, (route) => route.fulfill({
 const sivu = await konteksti.newPage();
 const pyynnot = [];
 sivu.on('request', (r) => pyynnot.push(r.url()));
-await sivu.goto(`http://localhost:${palvelin.address().port}/`, { waitUntil: 'load' });
+await sivu.goto(`http://localhost:${palvelin.address().port}/?lauta=kartta`, { waitUntil: 'load' });
 await sivu.waitForTimeout(1500);
 
 // 1. Nähtävyyskaruselli synteettisillä kuvilla: rakennetaan kehys ja

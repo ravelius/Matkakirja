@@ -1519,10 +1519,16 @@ export function asetaKehittajaMaailma(paalla) {
  * LAUDAN VALINTA EI OLE PELITILAN OSA: pelitila ja tallennus ovat samat
  * kummallakin laudalla (js/game.js ei tiedä laudasta mitään). Sama
  * kaava kuin kehittäjätilalla yllä: oma avain, try/catch, muisti eikä
- * levyluku joka kehyksessä (kehittajaTilaPaalla). Vaihe 6 kääntää
- * LAUTA_OLETUKSEN palloksi omistajan laitetestin jälkeen.
+ * levyluku joka kehyksessä (kehittajaTilaPaalla).
+ *
+ * OLETUS ON PALLO 5.9.2026 AAMUSTA (omistaja, sanatarkasti: *"Ota vanha
+ * kartta jo heti kokonaan pois ja korvaa pallolla. Ei haittaa vaikka
+ * peli ei toimi."*). Suunnitelman vaihe 6 (laitetesti ensin) ohitettiin
+ * omistajan päätöksellä: pallo on lauta heti, ja vaiheet 2–5 valmistuvat
+ * sen päälle. Vanha kartta jää linssikartaksi ja palautusoptioksi:
+ * `?lauta=kartta` tai ratasvalikon vipu palauttaa sen tälle laitteelle.
  */
-export const LAUTA_OLETUS = 'kartta';
+export const LAUTA_OLETUS = 'pallo';
 const LAUTA_AVAIN = 'matkakirja-lauta';
 const LAUDAT = new Set(['pallo', 'kartta']);
 

@@ -131,10 +131,179 @@ export function rakennaPallo(Globe, kotelo, laatat) {
     .showAtmosphere(true).atmosphereColor('#d9a13b').atmosphereAltitude(0.18);
   if (laatat && pallo.globeTileEngineUrl) {
     pallo.globeTileEngineUrl(pallonLaatta).globeTileEngineMaxLevel(PALLO_LAATTATASO_MAX);
+    asennaLaatunosto(pallo, kotelo);
   } else {
     pallo.globeImageUrl(PALLO_TEKSTUURI);
   }
   return pallo;
+}
+
+/*
+ * ======== LAATU PALAA, KUN LIIKE PYSÄHTYY ===========================
+ *
+ * OMISTAJA 5.9.2026 (sanatarkasti): *"saako pallon piirtämän kuvan
+ * röpeliäisyyttä pois vaikka sitten kun liike pysähtyy. Pallon koodi
+ * selvästi huonontaa kuvaa nopeuden kustannuksella mutta jos siihen
+ * saisi lisän mikä palauttaisi laadun kun vieritys pysähtyy"*.
+ *
+ * MISTÄ RÖPELIÄISYYS TULEE. Globe.gl:n laattamoottori valitsee tason
+ * pelkästä korkeudesta: taso t, kun 8/2^t ≤ korkeus (thresholds-
+ * taulukko), riippumatta ruudun pikseleistä. Korkeudella 0,35 se on taso
+ * 5 = 22,7 px/aste; iPhonen pystyruutu (1 170 laitepikseliä, näkyvä
+ * kaista ≈ 25° × korkeus) tarvitsisi tason 7–8. Kuva venyy siis 3–5-
+ * kertaiseksi ja lisäksi kirjasto piirtää enintään kahdella pikselillä
+ * css-pikseliä kohden (setPixelRatio(min(2, dpr)), iPhone on 3) ilman
+ * anisotrooppista suodatusta — reunat rakeistuvat ja vinot laatat
+ * sumenevat.
+ *
+ * MITÄ TEHDÄÄN. Kaksi laatutilaa, joita vaihdetaan laattamoottorin
+ * updatePov-koukussa (kirjasto kutsuu sitä joka kehys kameralla):
+ *   LIIKE  — kirjaston oletuskynnykset ja pikselisuhde ≤ 2: kevyt,
+ *            pyörii sulavasti (omistaja: "pyörii uskomattoman sulavasti").
+ *   LEPO   — kun kamera ei ole liikkunut LAATU_LEPOVIIVE_MS:ään: kynnykset
+ *            kerrotaan laitteen ruudun mukaan (taso, jolla laatan pikseli
+ *            ≈ laitepikseli / LAATU_TERAVYYS), pikselisuhde koko dpr:ään
+ *            (≤ 3) ja laattojen tekstuureille anisotrooppinen suodatus.
+ * Kynnysten kerroin: taso t tarvitaan, kun 2^t ≥ 0,0263 · H / korkeus (H =
+ * ruudun korkeus laitepikseleinä, fov 50°), eli kirjaston 8/2^t-kaavaan
+ * kerroin H / 304. Terävyys 0,55 sallii 1,8× venytyksen, jotta koko pallo
+ * (korkeus 2,5) pysyy tasolla 4 (128 laattaa) eikä hyppää tasolle 5
+ * (512). Liikkeessä karkeammat laatat jäävät pohjalle (kirjasto pitää
+ * matalammat tasot), joten tason vaihto ei välähdä tyhjää; levossa
+ * tarkat laatat latautuvat päälle sitä mukaa kuin ne saapuvat.
+ *
+ * Tason pudotus liikkeen alkaessa purkaa tarkat laatat (kirjaston oma
+ * käytös); levossa ne haetaan uudestaan selaimen välimuistista. Se on
+ * hinta sulavuudesta, jonka omistaja hyväksyi ("vaikka sitten kun liike
+ * pysähtyy"). Reduced motion ei vaikuta: kyse on tarkkuudesta, ei
+ * animaatiosta.
+ */
+/** Kuinka kauan kameran on oltava paikallaan ennen lepolaatua (ms). */
+export const LAATU_LEPOVIIVE_MS = 260;
+/**
+ * Kuinka kauan liikkeen on jatkuttava ennen kuin lepolaadusta luovutaan
+ * (ms). Yksi hidas kehys tai pieni korjaus ei pudota tasoa: pudotus
+ * purkaa tarkat laatat, ja edestakainen vaihto hakisi ne yhä uudestaan.
+ */
+export const LAATU_LIIKEVIIVE_MS = 120;
+/** Levossa sallittu venytys: 1 = laatan pikseli on laitepikseli. */
+export const LAATU_TERAVYYS = 0.55;
+/** Pikselisuhteen katto levossa (iPhone 3) ja liikkeessä (kirjasto 2). */
+export const LAATU_PIKSELISUHDE_LEPO = 3;
+export const LAATU_PIKSELISUHDE_LIIKE = 2;
+/** Kirjaston oma kynnystaulukko: taso t, kun 8/2^t ≤ korkeus. */
+export const laattakynnykset = (kerroin = 1) => Array.from({ length: 30 }, (_, t) => (8 * kerroin) / 2 ** t);
+/**
+ * Lepotilan kynnyskerroin ruudun korkeudesta laitepikseleinä: 2^t ≥
+ * 0,0263 · H / korkeus ⇔ 8k/2^t ≤ korkeus, kun k = H/304. Vähintään 1
+ * (ei koskaan karkeampi kuin kirjasto).
+ */
+export function lepokerroin(korkeusPx, teravyys = LAATU_TERAVYYS) {
+  return Math.max(1, (teravyys * korkeusPx) / 304);
+}
+
+/** Globe.gl:n laattamoottori pallon scenestä (Group, jolla thresholds). */
+function laattamoottori(pallo) {
+  let moottori = null;
+  pallo.scene()?.traverse?.((o) => {
+    if (!moottori && Array.isArray(o.thresholds) && typeof o.updatePov === 'function') moottori = o;
+  });
+  return moottori;
+}
+
+/**
+ * Asentaa laatutilat laattamoottoriin. Palauttaa purkajan. Ei tee
+ * mitään, jos moottoria ei löydy (kirjaston sisäinen muoto vaihtunut) —
+ * pallo toimii silloin kirjaston oletuslaadulla.
+ */
+export function asennaLaatunosto(pallo, kotelo, ikkuna = globalThis) {
+  /*
+   * Kirjasto kokoaa scenen vasta ensimmäisellä kehyksellä, joten heti
+   * rakentamisen jälkeen moottoria ei vielä ole: yritetään uudestaan
+   * pienin välein, kunnes se löytyy (tai luovutetaan 10 s:n jälkeen).
+   */
+  let purkaja = () => {};
+  let yritys = 0;
+  const yrita = () => {
+    const moottori = laattamoottori(pallo);
+    if (moottori) { purkaja = kytkeLaatunosto(moottori, pallo, kotelo, ikkuna); return; }
+    if (++yritys < 100) ikkuna.setTimeout(yrita, 100);
+  };
+  yrita();
+  return () => purkaja();
+}
+
+function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
+  const dpr = ikkuna.devicePixelRatio || 1;
+  const renderer = pallo.renderer?.();
+  const maxAniso = renderer?.capabilities?.getMaxAnisotropy?.() ?? 1;
+  const alkuperainen = moottori.updatePov;
+  let lepo = false;
+  let edellinen = null;
+  let kamera = null;
+  let lepoAjastin = 0;
+  const ajastimet = new Set();
+
+  const asetaTila = (lepoon) => {
+    lepo = lepoon;
+    const kerroin = lepoon ? lepokerroin(kotelo.clientHeight * dpr) : 1;
+    moottori.thresholds = laattakynnykset(kerroin);
+    const suhde = Math.min(dpr, lepoon ? LAATU_PIKSELISUHDE_LEPO : LAATU_PIKSELISUHDE_LIIKE);
+    if (renderer && renderer.getPixelRatio?.() !== suhde) renderer.setPixelRatio(suhde);
+  };
+  /** Laattojen tekstuureille anisotrooppinen suodatus (kerran per laatta). */
+  const teroita = () => {
+    if (maxAniso <= 1) return;
+    moottori.traverse((o) => {
+      const map = o.material?.map;
+      if (map && map.anisotropy !== maxAniso) { map.anisotropy = maxAniso; map.needsUpdate = true; }
+    });
+  };
+  /*
+   * Kirjasto kutsuu updatePovia vain, kun kamera liikkuu (controlsin
+   * change ja pointOfView), ei joka kehys — lepo todetaan siis
+   * ajastimella viimeisestä liikkeestä. Levossa moottorille annetaan
+   * sama kamera uudestaan uusilla kynnyksillä, jotta se valitsee
+   * tarkemman tason ja hakee laatat; terävöitys ajetaan vielä pari
+   * kertaa, kun laatat ovat ehtineet saapua.
+   */
+  const lepoon = () => {
+    lepoAjastin = 0;
+    if (lepo || !kamera) return;
+    asetaTila(true);
+    alkuperainen.call(moottori, kamera);
+    for (const viive of [0, 800, 2500]) {
+      const t = ikkuna.setTimeout(() => { ajastimet.delete(t); if (lepo) teroita(); }, viive);
+      ajastimet.add(t);
+    }
+  };
+
+  let liikeAlku = 0;
+  moottori.updatePov = function laatuPov(kam) {
+    if (kam?.position) {
+      kamera = kam;
+      const paikka = kam.position;
+      if (!edellinen || edellinen.distanceToSquared(paikka) > 1e-10) {
+        const nyt = ikkuna.performance?.now?.() ?? Date.now();
+        if (!edellinen || !lepoAjastin) liikeAlku = nyt;
+        edellinen = paikka.clone();
+        if (lepo && nyt - liikeAlku >= LAATU_LIIKEVIIVE_MS) asetaTila(false);
+        ikkuna.clearTimeout(lepoAjastin);
+        lepoAjastin = ikkuna.setTimeout(lepoon, LAATU_LEPOVIIVE_MS);
+      }
+    }
+    return alkuperainen.call(this, kam);
+  };
+  asetaTila(false);
+  // Kamera on jo paikallaan asennettaessa (kirjasto asetti sen ennen
+  // kuin moottori löytyi): ensimmäinen lepo ilman liikettä.
+  kamera = pallo.camera?.() ?? null;
+  if (kamera) lepoAjastin = ikkuna.setTimeout(lepoon, LAATU_LEPOVIIVE_MS);
+  return () => {
+    ikkuna.clearTimeout(lepoAjastin);
+    for (const t of ajastimet) ikkuna.clearTimeout(t);
+    moottori.updatePov = alkuperainen;
+  };
 }
 
 /**

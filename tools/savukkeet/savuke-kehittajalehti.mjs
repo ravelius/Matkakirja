@@ -38,7 +38,7 @@ const sivu = await konteksti.newPage();
 await sivu.addInitScript(() => {
   window.localStorage.setItem('matkakirja-kehittaja', '1');
 });
-await sivu.goto(`http://localhost:${palvelin.address().port}/`, { waitUntil: 'load' });
+await sivu.goto(`http://localhost:${palvelin.address().port}/?lauta=kartta`, { waitUntil: 'load' });
 await sivu.waitForTimeout(1800);
 await sivu.evaluate(() => {
   [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
