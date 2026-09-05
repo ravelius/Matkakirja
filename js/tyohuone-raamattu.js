@@ -3327,6 +3327,12 @@ export const RAAMATTU = {
           + 'kuva laatoissa, nimet ja rajat elavina), laatoissa lisaksi '
           + 'poltettuina varana; 2) aloitussivu pallolaudalla: pallo '
           + 'Lontoon ylla avaustekstin takana, aloituslento pallolta.',
+        'KELLONAJAT SUOMEN AIKAA (omistaja 5.9.2026 iltapaiva, sanatarkasti: '
+          + '"Anna kellonajat suomen aikaa aina"): kaikki kellonajat '
+          + 'omistajalle - chatissa, korteissa, raporteissa ja '
+          + 'muistutuksissa - annetaan Suomen aikaa (EET/EEST, kesalla '
+          + 'UTC+3, talvella UTC+2), ei UTC:na. Lokien ja ajojen UTC-ajat '
+          + 'muunnetaan ennen kuin ne sanotaan.',
         'ELAINKUVIIN TARINAA, KAKSI KUVAA SAMASTA AIHEESTA (omistajan '
           + 'paatos 5.9.2026 kuvaputken keskustelussa, kuvaputken '
           + 'valittamana postissa 09:23 UTC): 1) elainkuvissa saa olla '
