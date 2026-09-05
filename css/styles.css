@@ -5874,6 +5874,9 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 .etusivupallo {
   position: absolute;
   inset: 0;
+  /* Pohjimmainen kerros paneelissa: isoisän pino (z-index 2) on tämän
+     päällä ja teksti (z-index 3) niiden molempien päällä. */
+  z-index: 0;
   overflow: hidden;
   background-color: var(--paper);
   opacity: 0;
@@ -5928,92 +5931,151 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 .etusivupallo-kone { transition: opacity 260ms ease; }
 
 /*
- * ISOISÄN AIKALAISKUVA — ISOMPI JA AINA SAMASSA PAIKASSA (omistaja
- * 5.9.2026 klo 21.30: *"isoisän kuva saisi olla isompi ja vaihtua aina
- * samaan paikkaan"*). Aiemmin kortti etsi vapaan kaistan esteitä
- * väistäen ja kutistui mahtuakseen; nyt paikka on kiinteä ja koko
- * annetaan tässä. js/etusivupallo.js ei enää sijoita korttia lainkaan.
+ * ISOISÄN KUVAT PINONA, HAALEINA JA TEKSTIN ALLA (omistaja 5.9.2026 klo
+ * 22.45, sanatarkasti: *"isoisän kuvat voivat olla blurrattuja ja
+ * haalealla ja jäädä tekstin alle"* ja *"ne voisivat pinoutua hieman
+ * sikin sokin toistensa päälle"*).
  *
- * Kortti on KOKO avausnäkymän (.intro) lapsi eikä pallokerroksen, jotta
- * kerroksen overflow ei leikkaisi sitä. KORTTEJA ON KAKSI päällekkäin
- * samassa paikassa: vaihto on aito ristihäivytys (väistyvä häipyy
- * samalla kun tuleva kirkastuu), ei välähdys tyhjään.
+ * KERROSJÄRJESTYS ON KOKO IDEA: pino on videon PÄÄLLÄ mutta
+ * julisteotsikon, avaustekstin ja nappien ALLA. Kun kortit eivät enää
+ * kilpaile tekstin kanssa tilasta, ne saavat olla selvästi isompia,
+ * eikä esteväistöä tarvita lainkaan: moduulin paikanvarmistus ja sen
+ * pystysiirron muuttuja poistuivat kokonaan.
+ * Pinolla on siksi oma z-index .intro-paneelin sisällä:
  *
- * PAIKKA ON MITATTU (Chromium 5.9.2026, avausnäkymä sekä portin takana
- * että avaustekstin kanssa):
+ *   0  .etusivupallo   video, punainen viiva ja kone
+ *   1  .intro-verho    pergamenttihuntu
+ *   2  .etusivupallo-pino
+ *   3  .intro-kartta ja .intro-arkki (otsikko, teksti, napit)
  *
- *   puhelin 390×844  julisteotsikko päättyy 37 %:iin paneelista ja
- *   ja tabletti      avaustekstin palsta alkaa 49 %:sta → kortti
- *   768×1024         asettuu tuohon kaistaan oikeaan laitaan
- *                    (top 37,25 %). Kaista on PUHELIMELLA VAIN ~95 px
- *                    korkea, ja siksi kortti on siellä 110 px eikä
- *                    enempää: kuvateksti mahtuu yhdelle riville ja
- *                    kallistus on loiva (−3°), jotta koko kortti
- *                    kuvatekstiä myöten pysyy kaistassa.
- *   työpöytä ≥900px  avausteksti on kapea palsta keskellä, joten
- *                    paneelin OIKEA ALANURKKA on kokonaan vapaa
- *                    (myös "Laita äänet päälle" -rivi ja napit ovat
- *                    keskellä) → kortti nurkkaan ja selvästi isompana.
- *
- * VARMISTUS: js/etusivupallo.js siirtää korttia pystysuunnassa
- * (--etusivupallo-kuva-siirto), JOS kiinteä paikka jollain
- * kirjasinkoolla sattuisi leikkaamaan otsikkoa tai avaustekstiä. Siirto
- * lasketaan kerran asettelua kohti ja on sama molemmille korteille —
- * paikka ei siis vaihdu kuvien mukana.
+ * PAIKKA ON KIINTEÄ ALUE, SAMA JOKA LOOPILLA: puhelimella ja
+ * tabletilla keskellä alaosaa, työpöydällä (≥ 900 px) paneelin oikeassa
+ * alaneljänneksessä. Kortit ovat pinon sisällä absoluuttisesti
+ * ALAREUNASTAAN kiinni, joten eri korkuiset vedokset pinoutuvat samalle
+ * pohjalle.
  */
-.etusivupallo-kuva {
+.etusivupallo-pino {
   position: absolute;
-  /* Puhelin ja tabletti: julisteotsikon ja avaustekstin väliin oikealle. */
-  top: 37.25%;
-  right: 0.9rem;
-  width: clamp(110px, 28vw, 176px);
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-  transform: translateY(calc(14px + var(--etusivupallo-kuva-siirto, 0px))) rotate(-3deg);
-  transition: opacity 620ms var(--liike-pehmea), transform 620ms var(--liike-pehmea);
+  z-index: 2;
+  /* Avaustekstin harso lepää pinon päällä alle 900 px:n ruuduilla. */
+  --pino-harsokorjaus: 0.25;
+  left: 50%;
+  bottom: 3%;
+  transform: translateX(-50%);
+  /* Selvästi isompi kuin ennen (puhelimella 110px): kortti saa jäädä
+     tekstin alle, joten koko ei ole enää tekstin kaistasta kiinni.
+     Puhelimella pino on niin alhaalla kuin mahtuu, koska avaustekstin
+     pergamenttiharso (.intro-palsta::before) vaalentaa kaiken allaan. */
+  width: clamp(160px, 46vw, 250px);
+  pointer-events: none;
 }
 
 @media (min-width: 900px) {
-  /* Työpöytä: paneelin oikea alanurkka, selvästi isompi kortti. */
-  .etusivupallo-kuva {
-    top: auto;
-    bottom: 2.2rem;
-    right: 2.2rem;
-    width: clamp(170px, 18vw, 260px);
+  /* Työpöytä: paneelin oikea alaneljännes ja omistajan mitta. */
+  .etusivupallo-pino {
+    --pino-harsokorjaus: 0;
+    left: auto;
+    right: 5%;
+    bottom: 7%;
+    transform: none;
+    width: clamp(200px, 34vw, 420px);
   }
 }
 
-.etusivupallo-kuva.nakyy {
-  opacity: 1;
-  transform: translateY(var(--etusivupallo-kuva-siirto, 0px)) rotate(-3deg);
+/*
+ * KORTTI LASKEUTUU PINOON. Siirto (--pino-dx/--pino-dy, prosenttia
+ * kortin omasta koosta) ja kallistus (--pino-kulma) tulevat
+ * js/etusivupallo.js:n siemenellisestä `pinonAsento`-funktiosta: sama
+ * laskeutuminen on aina samassa asennossa.
+ *
+ * Lähtötila on hieman ylhäällä, isompana ja läpinäkyvänä; .laskeutunut
+ * asettaa kortin paikalleen PINON_LASKU_MS:n aikana (Raamattu: KAIKKI
+ * LIIKE ANIMOIDAAN PEHMEASTI). Vähennetyllä liikkeellä siirtymä on pois
+ * ja kortti on paikallaan heti.
+ */
+.etusivupallo-kuva {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transform:
+    translate(calc(var(--pino-dx, 0) * 1%), calc(var(--pino-dy, 0) * 1% - 4.5%))
+    rotate(var(--pino-kulma, 0deg)) scale(1.04);
+  transition: opacity 700ms var(--liike-pehmea), transform 700ms var(--liike-pehmea);
 }
 
+.etusivupallo-kuva.laskeutunut {
+  opacity: 1;
+  transform:
+    translate(calc(var(--pino-dx, 0) * 1%), calc(var(--pino-dy, 0) * 1%))
+    rotate(var(--pino-kulma, 0deg));
+}
+
+/* Alin kortti häipyy pehmeästi, kun pinon katto (5) ylittyy. */
+.etusivupallo-kuva.haipyy {
+  opacity: 0;
+  transition: opacity 620ms var(--liike-pehmea);
+}
+
+/*
+ * HAALEA JA SUMEA VEDOS. Peittävyys ja sumennus ovat KUVAKOHTAISIA
+ * (js/packs/etusivun-isoisakuvat.js sävyt: tumma 0,55 / vaalea 0,85),
+ * koska kuvaputken uudet kuvat ovat vaaleita (vinjetti vaaleaan) ja
+ * katoaisivat kokonaan tummien vedosten haaleudella. Seepia ja
+ * kuluneen vedoksen sävy tulevat kuvasta itsestään, ei suodattimesta.
+ *
+ * iOS-SÄÄNNÖN POIKKEUS, TIETOINEN: talon sääntö kieltää suodattimen
+ * SVG-KERROKSELTA kartalla (iOS:n webapp-tila palauttaa suodatetun
+ * SVG:n tyhjänä taustalta palattaessa). Tämä on tavallinen <img>, ei
+ * SVG-kerros, ja sumennus on staattinen — ei animoitu — joten se saa
+ * jäädä myös vähennetyn liikkeen tilassa.
+ *
+ * Suodatin on kuvassa eikä kortissa, jotta kuvateksti pysyy terävänä ja
+ * täydellä peittävyydellä (luettavuus).
+ */
 .etusivupallo-kuva img {
   display: block;
   width: 100%;
   height: auto;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  /*
+   * HARSOKORJAUS: puhelimella ja tabletilla pino jää avaustekstin
+   * pergamenttiharson (.intro-palsta::before, jopa 0,94 peittävä) alle,
+   * joka söisi haaleasta kortista vielä puolet — mitattu Chromiumilla
+   * 390 × 844. Työpöydällä pino on palstan vieressä eikä harsoa ole,
+   * joten korjaus on nolla.
+   */
+  opacity: calc(var(--kuvan-haalea, 0.55) + var(--pino-harsokorjaus, 0));
+  filter: blur(var(--kuvan-sumennus, 1.5px));
+  /* Varjo antaa haalealle kortille reunan vaalean pergamentin päällä —
+     ilman sitä sumennettu kuva sulaisi taustaansa. */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.34);
 }
 
 /*
- * Kuvateksti YHDELLE RIVILLE: kortin korkeus on silloin ennakoitava
- * (kuva + yksi rivi), ja juuri se mahtuu puhelimen kapeaan kaistaan.
- * Teksti on lyhyt jo lähteessä ("Isoisä, Bombay, 1873",
- * js/isoisan-valokuvat.js), ja keskitettynä se saa valua kortin yli
- * muutaman pikselin ilman että mikään leikkautuu.
+ * KUVATEKSTI VAIN PÄÄLLIMMÄISELLE KORTILLE (.uusin). Viisi kallistettua
+ * korttia päällekkäin toisi viisi lappua lähes samaan kohtaan, eikä
+ * yksikään olisi luettava; päällimmäinen on se, jota katse seuraa.
+ * Teksti on paikka + vuosi (Raamattu: ISOISA JAA ARVOITUKSEKSI) ja
+ * mahtuu yhdelle riville.
  */
 .etusivupallo-kuva figcaption {
   display: block;
   margin-top: 0.22rem;
   font-family: var(--font-type);
-  font-size: 0.55rem;
+  font-size: 0.62rem;
   letter-spacing: 0.06em;
   white-space: nowrap;
   color: #3a2a16;
   text-shadow: 0 0 4px rgba(255, 246, 224, 0.9), 0 0 1px rgba(255, 246, 224, 0.9);
   text-align: center;
+  opacity: 0;
+  transition: opacity 620ms var(--liike-pehmea);
 }
+
+.etusivupallo-kuva.uusin.laskeutunut figcaption { opacity: 1; }
 
 /*
  * SUMUVERHO KEVENEE PALLON PÄÄLLÄ. Video on jo sumennettu, joten
@@ -6021,6 +6083,9 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * pergamenttihuntu (omistajan ehto: efekti ei saa viedä etusivulla tehoja).
  */
 .intro.intro-pallolla .intro-verho {
+  /* Verho jää pallon ja isoisän pinon väliin (z-index 1): pino piirtyy
+     hunnun päälle, teksti molempien päälle. */
+  z-index: 1;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   background: rgba(239, 220, 180, 0.38);
@@ -6042,6 +6107,16 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * tekee palstasta oman pinon, jotta −1 jää palstan sisään eikä valu
  * pallokerroksen taakse (.intro on z-index: 3 ja siis oma pinonsa).
  */
+/*
+ * TEKSTI ON PINON PÄÄLLÄ (omistaja 5.9.2026 klo 22.45: isoisän kuvat
+ * *"saavat jäädä tekstin alle"*). Molemmat lohkot nostetaan pinon
+ * (z-index 2) yläpuolelle; palsta ja julisteotsikko pysyvät omina
+ * pinoinaan (z-index 0), jotta niiden pergamenttiharso (::before,
+ * z-index −1) jää lohkon sisään eikä valu pallokerroksen taakse.
+ */
+.intro.intro-pallolla .intro-kartta,
+.intro.intro-pallolla .intro-arkki { z-index: 3; }
+
 .intro.intro-pallolla .intro-palsta,
 .intro.intro-pallolla .intro-juliste { z-index: 0; }
 
@@ -6070,7 +6145,11 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .etusivupallo, .etusivupallo-kuva { transition: none; }
+  /* Kortti on paikallaan heti; STAATTINEN sumennus jää (se ei ole
+     liikettä), kuten omistajan ohje sallii. */
+  .etusivupallo,
+  .etusivupallo-kuva,
+  .etusivupallo-kuva figcaption { transition: none; }
 }
 
 .intro.intro-fade { opacity: 0; }

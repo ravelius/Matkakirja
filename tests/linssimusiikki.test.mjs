@@ -104,6 +104,9 @@ class TynkaAudio {
 globalThis.Audio = TynkaAudio;
 
 const musiikki = await import('../js/siirtymamusiikki.js');
+// Kehittäjän musiikkikerroin on oletuksena ×2,0 (omistaja 5.9.2026); nämä
+// testit mittaavat pelin OMIA tasoja, joten kerroin nollataan yhteen.
+const { asetaKehittajanKerroin } = await import('../js/kehittajan-voimat.js');
 const {
   MUSIIKKILAJIT, SIIRTYMALAJIT, aloitaSiirtymamusiikki, himmennaSiirtymamusiikki,
   lopetaSiirtymamusiikki, nollaaSiirtymamusiikki, siirtymamusiikinRivi, siirtymamusiikkiSoi,
@@ -111,6 +114,7 @@ const {
 
 /** Puhdas pöytä joka testille: ei soivaa raitaa, ei istunnon lippuja. */
 async function pystyta() {
+  asetaKehittajanKerroin('musiikki', 1);
   nollaaSiirtymamusiikki();
   soittimet = [];
   rafJono = [];

@@ -12,7 +12,9 @@
  * pyörii ja piirtää paksua punaista viivaa ja aina ei kaupunkien
  * välillä kun kone laskeutuu, tulee uusi isoisän aikalaiskuva jonnekin
  * kartan ulkopuolelle pienellä, niin että ei jää etusivun tekstin
- * päälle."*
+ * päälle."* — ja klo 22.45: *"isoisän kuvat voivat olla blurrattuja ja
+ * haalealla ja jäädä tekstin alle"*, *"ne voisivat pinoutua hieman
+ * sikin sokin toistensa päälle"*.
  *
  * ── VARTIOT ───────────────────────────────────────────────────────
  *
@@ -23,11 +25,15 @@
  *       *"pallo saisi pyöriä koko etusivun alalla"*).
  *   E2  Kone liikkuu: koneen muunnos vaihtuu näytteiden välillä.
  *   E3  Punainen viiva pitenee: polun pituus kasvaa eikä kutistu.
- *   E4  Isoisän aikalaiskuva ilmestyy laskeutumisella KIINTEÄÄN
- *       PAIKKAAN: kortti ei leikkaa avaustekstiä (.intro-palsta,
- *       #intro-text), julisteotsikkoa eikä avauksen säätimiä, se on
- *       selvästi entistä isompi, se ei liiku kuvien välillä, ja
- *       kuvateksti on sanasta sanaan js/isoisan-valokuvat.js:n lappu.
+ *   E4  Isoisän kuvat PINOUTUVAT SIKIN SOKIN TEKSTIN ALLE (omistaja
+ *       5.9.2026 klo 22.45): kortit laskeutuvat kiinteälle alueelle
+ *       pieniin satunnaisiin siirtoihin ja kallistuksiin, pinossa on
+ *       enintään PINON_KATTO korttia, kerrosjärjestys on teksti >
+ *       kuvat > video (kortti SAA jäädä tekstin alle), kortti on
+ *       selvästi entistä isompi ja haalea, jo laskeutunut kortti ei
+ *       liiku uuden alla, ja kuvateksti on sanasta sanaan pakan
+ *       (js/packs/etusivun-isoisakuvat.js) lappu — paikka + vuosi,
+ *       ei henkilökuvausta (Raamattu: ISOISA JAA ARVOITUKSEKSI).
  *   E10 COVER-SOVITUS: koneen ruutupiste, jonka SELAIN laski SVG:n
  *       xMidYMid slice -rajauksella, on sama kuin moduulin oma
  *       kerroksenSovitus + videostaRuudulle antaa — ja piste osuu
@@ -80,10 +86,11 @@ const KUVAKANSIO = process.argv[2] ?? null;
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
 const {
-  ETUSIVUPALLO_VERSIO, ETUSIVUN_KAMERA, ETUSIVUPALLO_TIEDOSTOT, SVG_SOVITUS, SOVITUS_TAPA,
+  ETUSIVUPALLO_VERSIO, ETUSIVUN_KAMERA, ETUSIVUPALLO_TIEDOSTOT, PINON_KATTO, PINON_KULMA,
+  PINON_SIIRTO, SVG_SOVITUS, SOVITUS_TAPA,
   kerroksenSovitus, reitinPisteet, teeReitti, videostaRuudulle,
 } = await import(`${JUURI}js/etusivupallo.js`);
-const { ISOISAN_VALOKUVAT } = await import(`${JUURI}js/isoisan-valokuvat.js`);
+const { ETUSIVUN_ISOISAKUVAT } = await import(`${JUURI}js/packs/etusivun-isoisakuvat.js`);
 const { packById } = await import(`${JUURI}js/pack.js`);
 
 const TYYPIT = {
@@ -281,9 +288,11 @@ const LUE_TILA = () => {
   };
   const kone = juuri?.querySelector('.etusivupallo-kone');
   const viiva = juuri?.querySelector('.etusivupallo-viiva');
-  // Kortti asuu koko avausnäkymässä (.intro), ei pallokerroksessa.
-  const kuva = document.querySelector('.etusivupallo-kuva.nakyy')
+  // Pino asuu koko avausnäkymässä (.intro), ei pallokerroksessa.
+  const pino = document.querySelector('.etusivupallo-pino');
+  const kuva = document.querySelector('.etusivupallo-kuva.uusin')
     ?? document.querySelector('.etusivupallo-kuva');
+  const z = (el) => (el ? getComputedStyle(el).zIndex : null);
   const kartta = document.querySelector('.intro-kartta');
   const paneeli = document.querySelector('#intro');
   const otsikko = document.querySelector('.intro-juliste');
@@ -297,6 +306,26 @@ const LUE_TILA = () => {
       ?? juuri.querySelector('.etusivupallo-juliste') ?? juuri).objectFit : null,
     svgPAR: juuri?.querySelector('.etusivupallo-reitti')?.getAttribute('preserveAspectRatio') ?? null,
     kortteja: document.querySelectorAll('.etusivupallo-kuva').length,
+    /*
+     * KERROSJÄRJESTYS SELAIMEN LASKEMANA: kuvat videon päällä, teksti
+     * kuvien päällä (omistaja: kuvat *"saavat jäädä tekstin alle"*).
+     */
+    zPino: z(pino),
+    zPallo: z(juuri),
+    zKartta: z(document.querySelector('.intro-kartta')),
+    zArkki: z(document.querySelector('.intro-arkki')),
+    // Kortin asennot: siirto ja kallistus (sikin sokin -vartio).
+    asennot: [...document.querySelectorAll('.etusivupallo-kuva')].map((el) => {
+      const r = el.getBoundingClientRect();
+      return {
+        x: Math.round(r.left), y: Math.round(r.top), w: Math.round(r.width),
+        muunnos: getComputedStyle(el).transform,
+        haalea: Number(getComputedStyle(el.querySelector('img')).opacity),
+        suodatin: getComputedStyle(el.querySelector('img')).filter,
+        teksti: el.querySelector('figcaption')?.textContent ?? '',
+        lappuNakyy: Number(getComputedStyle(el.querySelector('figcaption')).opacity) > 0.5,
+      };
+    }),
     koneenLaatikko: laatikko(kone),
     paneelinLaatikko: laatikko(paneeli),
     saatimet: [...document.querySelectorAll(
@@ -308,9 +337,9 @@ const LUE_TILA = () => {
     kartanLapsia: kartta ? kartta.children.length : 0,
     koneenMuunnos: kone?.getAttribute('transform') ?? null,
     viivanPituus: viiva?.getTotalLength ? Math.round(viiva.getTotalLength()) : 0,
-    kuvaNakyy: Boolean(kuva?.classList.contains('nakyy')),
+    kuvaNakyy: Boolean(kuva?.classList.contains('laskeutunut')),
     kuvateksti: kuva?.querySelector('figcaption')?.textContent ?? '',
-    kuvanLaatikko: kuva?.classList.contains('nakyy') ? laatikko(kuva) : null,
+    kuvanLaatikko: kuva?.classList.contains('laskeutunut') ? laatikko(kuva) : null,
     pallonLaatikko: laatikko(juuri),
     palstaLaatikko: laatikko(document.querySelector('.intro-palsta')),
     tekstiLaatikko: laatikko(document.getElementById('intro-text')),
@@ -357,16 +386,16 @@ const leikkaavat = (a, b) => Boolean(a && b
   && a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h);
 
 /**
- * Näkyvän kuvakortin laatikko VASTA KUN SE ON ASETTUNUT: kuva ladattu ja
- * ristihäivytyksen muunnos ohi (kaksi samaa mittausta peräkkäin). Kesken
- * siirtymän mitattu laatikko olisi vasta matkalla paikalleen.
+ * PÄÄLLIMMÄISEN kortin laatikko VASTA KUN SE ON ASETTUNUT: kuva ladattu
+ * ja laskeutumisen muunnos ohi (kaksi samaa mittausta peräkkäin). Kesken
+ * laskeutumisen mitattu laatikko olisi vasta matkalla paikalleen.
  */
 async function asettunutKortti(sivu, yrityksia = 40) {
   let edellinen = null;
   for (let i = 0; i < yrityksia; i++) {
     // eslint-disable-next-line no-await-in-loop
     const nyt = await sivu.evaluate(() => {
-      const el = document.querySelector('.etusivupallo-kuva.nakyy');
+      const el = document.querySelector('.etusivupallo-kuva.uusin.laskeutunut');
       const img = el?.querySelector('img');
       if (!el || !img?.complete || !img.naturalWidth) return null;
       const r = el.getBoundingClientRect();
@@ -437,48 +466,99 @@ if (koevideo) {
       `pituudet ${alku.viivanPituus} → ${keski.viivanPituus} → ${loppu.viivanPituus}`);
 
     const kuvassa = await sivu.waitForFunction(
-      () => document.querySelector('.etusivupallo-kuva.nakyy'), null, { timeout: 12000 },
+      () => document.querySelector('.etusivupallo-kuva.laskeutunut'), null, { timeout: 12000 },
     ).then(() => true).catch(() => false);
     const ekaKortti = await asettunutKortti(sivu);
     const kuvatila = { ...await sivu.evaluate(LUE_TILA), kuvanLaatikko: ekaKortti };
-    vaadi('E4a isoisän aikalaiskuva ilmestyy laskeutumisella', kuvassa && kuvatila.kuvaNakyy,
-      'kuvakortti ei saanut .nakyy-luokkaa 12 s:ssa');
-    const lappu = new Set(Object.values(ISOISAN_VALOKUVAT).map((k) => k.kuvateksti));
-    vaadi('E4b kuvateksti on sanasta sanaan isoisän valokuvan lappu',
-      lappu.has(kuvatila.kuvateksti), `"${kuvatila.kuvateksti}"`);
-    vaadi('E4c kuva ei leikkaa avaustekstiä, otsikkoa eikä säätimiä',
-      Boolean(kuvatila.kuvanLaatikko)
-      && !leikkaavat(kuvatila.kuvanLaatikko, kuvatila.palstaLaatikko)
-      && !leikkaavat(kuvatila.kuvanLaatikko, kuvatila.tekstiLaatikko)
-      && !leikkaavat(kuvatila.kuvanLaatikko, kuvatila.otsikkoLaatikko)
-      && !kuvatila.saatimet.some((s) => leikkaavat(kuvatila.kuvanLaatikko, s)),
-      `kuva ${JSON.stringify(kuvatila.kuvanLaatikko)}, palsta ${JSON.stringify(kuvatila.palstaLaatikko)}, `
-      + `otsikko ${JSON.stringify(kuvatila.otsikkoLaatikko)}, `
-      + `säätimet ${JSON.stringify(kuvatila.saatimet)}`);
+    vaadi('E4a isoisän kuva laskeutuu pinoon', kuvassa && kuvatila.kuvaNakyy,
+      'kuvakortti ei saanut .laskeutunut-luokkaa 12 s:ssa');
+    const lappu = new Set(ETUSIVUN_ISOISAKUVAT.map((k) => k.kuvateksti));
+    vaadi('E4b kuvateksti on sanasta sanaan pakan lappu (paikka + vuosi)',
+      lappu.has(kuvatila.kuvateksti) && /^[^,]+, 1873$/.test(kuvatila.kuvateksti),
+      `"${kuvatila.kuvateksti}"`);
     /*
-     * KIINTEÄ PAIKKA JA ISOMPI KOKO (omistaja 5.9.2026 klo 21.30:
-     * *"isoisän kuva saisi olla isompi ja vaihtua aina samaan
-     * paikkaan"*). Entinen kortti oli puhelimella 96 px leveä ja etsi
-     * paikkansa esteitä väistäen; nyt kortteja on kaksi päällekkäin
-     * samassa kohdassa ristihäivytystä varten.
+     * E4c KERROSJÄRJESTYS: kuvat ovat videon PÄÄLLÄ mutta tekstin ALLA
+     * (omistaja 5.9.2026 klo 22.45: kuvat *"saavat jäädä tekstin
+     * alle"*). Luvut ovat selaimen laskemat, eivät tiedoston tekstiä.
      */
-    vaadi('E4d kortti on selvästi entistä isompi (yli 110 px puhelimella)',
-      (kuvatila.kuvanLaatikko?.w ?? 0) > 110, `leveys ${kuvatila.kuvanLaatikko?.w}`);
-    vaadi('E4e kortteja on kaksi päällekkäin (ristihäivytys)', kuvatila.kortteja === 2,
-      `kortteja ${kuvatila.kortteja}`);
-    // Sama paikka seuraavallakin laskeutumisella: odotetaan kuvan vaihtoa.
-    const vaihtui = await sivu.waitForFunction((teksti) => {
-      const el = document.querySelector('.etusivupallo-kuva.nakyy figcaption');
-      return el && el.textContent !== teksti;
-    }, kuvatila.kuvateksti, { timeout: 20000 }).then(() => true).catch(() => false);
-    const tokaKortti = await asettunutKortti(sivu);
-    const toinen = await sivu.evaluate(LUE_TILA);
-    vaadi('E4f kuva vaihtuu AINA SAMAAN PAIKKAAN',
-      vaihtui && Boolean(tokaKortti && ekaKortti)
-      && tokaKortti.teksti !== ekaKortti.teksti
-      && Math.abs(tokaKortti.x - ekaKortti.x) < 1
-      && Math.abs(tokaKortti.y - ekaKortti.y) < 1,
-      `${JSON.stringify(ekaKortti)} → ${JSON.stringify(tokaKortti)}`);
+    const luku = (v) => (v === 'auto' || v == null ? 0 : Number(v));
+    vaadi('E4c kerrosjärjestys: teksti > kuvat > video',
+      luku(kuvatila.zPino) > luku(kuvatila.zPallo)
+      && luku(kuvatila.zKartta) > luku(kuvatila.zPino)
+      && luku(kuvatila.zArkki) > luku(kuvatila.zPino),
+      `pallo ${kuvatila.zPallo}, pino ${kuvatila.zPino}, `
+      + `kartta ${kuvatila.zKartta}, arkki ${kuvatila.zArkki}`);
+    /*
+     * E4d KOKO JA HAALEUS. Entinen kortti oli puhelimella 110 px leveä
+     * ja väisteli tekstiä; nyt se saa jäädä tekstin alle ja on siksi
+     * selvästi isompi, haalea ja sumea.
+     */
+    vaadi('E4d kortti on selvästi entistä isompi (yli 140 px puhelimella)',
+      (kuvatila.kuvanLaatikko?.w ?? 0) > 140, `leveys ${kuvatila.kuvanLaatikko?.w}`);
+    const paallimmainen = kuvatila.asennot[kuvatila.asennot.length - 1];
+    vaadi('E4e kuva on haalea ja sumea, kuvateksti terävä',
+      Boolean(paallimmainen) && paallimmainen.haalea > 0.3 && paallimmainen.haalea < 0.95
+      && /blur\(/.test(paallimmainen.suodatin) && paallimmainen.lappuNakyy,
+      `haalea ${paallimmainen?.haalea}, suodatin ${paallimmainen?.suodatin}, `
+      + `lappu ${paallimmainen?.lappuNakyy}`);
+    /*
+     * E4f PINO SIKIN SOKIN: odotetaan seuraavia laskeutumisia, kunnes
+     * pinossa on vähintään kolme korttia. Vartiot: kortteja on enemmän
+     * kuin yksi mutta enintään katto, asennot eroavat toisistaan, ja jo
+     * laskeutunut kortti EI liiku uuden alla.
+     */
+    const pinoutui = await sivu.waitForFunction(
+      (katto) => document.querySelectorAll('.etusivupallo-kuva.laskeutunut').length
+        >= Math.min(3, katto),
+      PINON_KATTO, { timeout: 40000 },
+    ).then(() => true).catch(() => false);
+    await asettunutKortti(sivu);
+    const pinotila = await sivu.evaluate(LUE_TILA);
+    vaadi('E4f kuvat pinoutuvat (3–5 korttia, katto pitää)',
+      pinoutui && pinotila.kortteja >= 3 && pinotila.kortteja <= PINON_KATTO,
+      `kortteja ${pinotila.kortteja}, katto ${PINON_KATTO}`);
+    /*
+     * Peräkkäiset kortit ovat eri asennoissa. Kaukaisemmat saavat
+     * toistaa asennon: asento on siemenellinen laskeutumisnumerosta,
+     * joten kierroksen jälkeen sama numero tuo saman asennon — tässä
+     * savukkeessa koevideo on 7 s, joten kierros ehtii vaihtua pinon
+     * sisällä (oikeassa 49,6 s videossa laskeutumisia on kymmenen ja
+     * pinossa viisi, jolloin toistoa ei tule).
+     */
+    const muunnokset = new Set(pinotila.asennot.map((a) => a.muunnos));
+    const vierekkain = pinotila.asennot.some(
+      (a, i) => i > 0 && a.muunnos === pinotila.asennot[i - 1].muunnos,
+    );
+    vaadi('E4g kortit ovat sikin sokin (peräkkäiset eri asennossa)',
+      muunnokset.size > 1 && !vierekkain,
+      `${muunnokset.size} eri asentoa / ${pinotila.asennot.length} korttia, `
+      + `vierekkäisiä samoja: ${vierekkain}`);
+    /*
+     * Siirto ja kallistus pysyvät moduulin rajoissa (±PINON_SIIRTO % ja
+     * ±PINON_KULMA°): pino on sikin sokin muttei hajallaan. Kulma
+     * luetaan selaimen muunnosmatriisista.
+     */
+    const kortinLeveys = pinotila.asennot[0]?.w ?? 1;
+    const siirrot = pinotila.asennot.map((a) => Math.abs(a.x - pinotila.asennot[0].x));
+    const kulmat = pinotila.asennot.map((a) => {
+      const m = /matrix\(([-\d.e]+), ([-\d.e]+)/.exec(a.muunnos);
+      return m ? Math.abs((Math.atan2(Number(m[2]), Number(m[1])) * 180) / Math.PI) : 0;
+    });
+    vaadi('E4h siirto ja kallistus pysyvät moduulin rajoissa',
+      Math.max(...siirrot) < (kortinLeveys * PINON_SIIRTO * 2) / 100 + 3
+      && Math.max(...kulmat) <= PINON_KULMA + 0.5,
+      `suurin siirto ${Math.max(...siirrot).toFixed(0)} px (kortti ${kortinLeveys} px), `
+      + `suurin kulma ${Math.max(...kulmat).toFixed(1)}°`);
+    const yhaPaikallaan = pinotila.asennot.find((a) => a.teksti === ekaKortti.teksti
+      && Math.abs(a.x - ekaKortti.x) < 1 && Math.abs(a.y - ekaKortti.y) < 1);
+    vaadi('E4i jo laskeutunut kortti ei liiku uuden alla',
+      Boolean(yhaPaikallaan),
+      `eka ${JSON.stringify(ekaKortti)}, pino ${JSON.stringify(pinotila.asennot)}`);
+    const lappuja = pinotila.asennot.filter((a) => a.lappuNakyy).length;
+    vaadi('E4j kuvateksti näkyy vain päällimmäisellä kortilla', lappuja === 1,
+      `näkyviä lappuja ${lappuja}`);
+    tieto('pinon asennot', pinotila.asennot.map((a) => a.muunnos).join(' | ').slice(0, 220));
+    const toinen = pinotila;
 
     /*
      * E10 COVER-SOVITUS: selain laski koneen paikan SVG:n slice-

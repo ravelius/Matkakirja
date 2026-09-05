@@ -1054,6 +1054,55 @@ ajettava, ennen sitä etusivu on varapolullaan pelkkää pergamenttia).
    nostettiin 12 → 24 näytteeseen (kierros käy nyt koko maapallon
    ympäri, joten laattoja tarvitaan kaksin verroin).
 
+**Isoisän kuvat pinona, haaleina, tekstin alla (5.9.2026 klo 22.45).**
+Omistaja sanatarkasti: *"isoisän kuvat voivat olla blurrattuja ja
+haalealla ja jäädä tekstin alle"* ja *"ne voisivat pinoutua hieman sikin
+sokin toistensa päälle"* — sekä klo 22.50: *"käytetään niitä uusia jotka
+toivottavasti olet saanut kuvaputkelta, jotka ovat aika vaaleita
+(vinjetti vaaleaan)"*. Muutos korvaa yllä olevan kohdan 2 (kiinteä
+paikka, ristihäivytys):
+
+- **Kerrosjärjestys ratkaisee.** Pino (`.etusivupallo-pino`) on oma
+  kerroksensa `.intro`-paneelissa: video 0, sumuverho 1, PINO 2,
+  otsikko- ja tekstilohkot 3. Kortit siis jäävät tekstin alle, ja juuri
+  siksi esteväistö (`varmistaPaikka`, `--etusivupallo-kuva-siirto`) ja
+  koko pystysiirto poistuivat ja kortti kasvoi: puhelin/tabletti
+  `clamp(160px, 46vw, 250px)` keskellä alaosaa, työpöytä
+  `clamp(200px, 34vw, 420px)` oikeassa alaneljänneksessä.
+- **Haalea ja sumea, KUVAKOHTAISESTI.** `<img>`-elementillä
+  `opacity: calc(var(--kuvan-haalea) + var(--pino-harsokorjaus))` ja
+  `filter: blur(var(--kuvan-sumennus))`. Arvot tulevat pakan sävystä
+  (tumma 0,55 / 1,5 px, vaalea 0,85 / 1,2 px), koska kuvaputken uudet
+  vedokset ovat vaaleita. Harsokorjaus (+0,25 alle 900 px) kompensoi
+  avaustekstin pergamenttiharson, joka lepää pinon päällä pienillä
+  ruuduilla. Suodatin `<img>`-elementillä on TIETOINEN poikkeus
+  iOS-sääntöön (sääntö koskee kartan SVG-kerroksia) ja staattinen, joten
+  se jää myös reduced motion -tilassa.
+- **Pino sikin sokin, katto viisi.** Jokainen laskeutuminen luo uuden
+  kortin pinon päälle siemenelliseen asentoon (`pinonAsento(nro)`:
+  siirto ±5 % kortin koosta, kallistus ±8°) — sama laskeutuminen aina
+  samassa asennossa, joten kaappaukset ja savuke ovat vakaita. Siemen on
+  laskeutumisnumero eikä kuvan indeksi, koska kahdella kuvalla
+  kuvasidonnainen asento pinoaisi kortit täsmälleen päällekkäin.
+  Laskeutuminen animoidaan 700 ms (pieni pudotus + kallistuksen
+  asettuminen); kuudennen laskeutuessa alin häivytetään 620 ms:ssa.
+  Loopin vaihteessa PINOA EI TYHJENNETÄ: viiden kortin yhtäaikainen
+  katoaminen osuisi juuri siihen saumaan, jonka video ylittää
+  huomaamatta — katto hoitaa siivouksen yksi kortti kerrallaan.
+- **Kuvateksti vain päällimmäiselle** (`.uusin`), terävänä ja täydellä
+  peittävyydellä: viisi kallistettua lappua päällekkäin olisi
+  lukukelvoton mössö. Teksti on paikka + vuosi ("Bombay, 1873"), ei
+  henkilökuvausta (Raamattu: ISOISA JAA ARVOITUKSEKSI).
+- **Kuvat ovat DATAA**: `js/packs/etusivun-isoisakuvat.js` (tunnus,
+  osoite, kuvateksti, kaupunki = reitin jakso, sävy, rajaus). Kuvaputken
+  toimitus lisätään sinne yhtenä rivinä; pakan otsikkokommentissa on
+  ohje ja odottavien kahdentoista kuvan tunnukset. Vartiot:
+  tests/etusivupallo.test.mjs (kerrosjärjestys, pinon katto,
+  deterministinen asento, ei esteväistöä, kuvateksti paikka + vuosi) ja
+  savuke E4a–E4j. Kaapattu Chromiumilla 390×844 / 768×1024 / 1400×900
+  (vanhalla 05b-videolla): teksti pysyy luettavana kolmen kortin pinon
+  päällä kaikissa kolmessa.
+
 AVOIN: työpöydällä video suurennetaan cover-sovituksessa 1,75-kertaiseksi
 (2000 px leveällä 2,5-kertaiseksi), joten sumennettu 800 px:n kuva on
 pehmeä. Jos omistaja haluaa terävämmän, `tools/tee-etusivupallo.mjs`

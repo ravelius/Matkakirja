@@ -808,8 +808,9 @@ test('kortti liukuu ja skaalautuu yhdellä transform-siirtymällä, ei left/widt
   assert.match(kortti, /transition:\s*transform var\(--aikajana-kesto\) var\(--aikajana-kaari\),\s*opacity var\(--aikajana-kesto\) var\(--aikajana-kaari\);/);
   assert.doesNotMatch(kortti, /transition:[^;]*\b(left|width|top|height)\b/, 'sommittelua ei animoida kehyksittäin');
   assert.match(kortti, /will-change: transform, opacity;/);
-  // Kortin teksti seuraa kortin kokoa liukuen eikä napsahda luokan vaihtuessa.
-  assert.match(AIKAJANA_CSS, /\.aikajana-kortti-otsikko \{ transition: font-size var\(--aikajana-kesto\) var\(--aikajana-kaari\); \}/);
+  // Kortin alla on vain henkilön nimi (omistaja 5.9.2026): vuosi ja otsikko
+  // luetaan havainnekuvan alta, eikä korttiin ladota niitä.
+  assert.doesNotMatch(AIKAJANA_CSS, /\.aikajana-kortti-(vuosi|otsikko)\b/);
 });
 
 test('kortin terävä/sumea vaihtuu vasta dekoodatusta kuvasta, ei tyhjän kehyksen kautta', () => {

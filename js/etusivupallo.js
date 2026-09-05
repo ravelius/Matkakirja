@@ -21,6 +21,10 @@
  * koko maapallon ympäri niin että se voi loopata. eli pysähtyy
  * lontooseen ja punainen viiva ottaa kiinni lopuksi."*
  *
+ * TÄSMENNYS 5.9.2026 klo 22.45, sanatarkasti: *"isoisän kuvat voivat
+ * olla blurrattuja ja haalealla ja jäädä tekstin alle"* ja *"ne voisivat
+ * pinoutua hieman sikin sokin toistensa päälle."*
+ *
  * (Raamattu: PELAAJAN LAUTAKYTKIN, VANHIN MAAILMANKUVA -LINSSI,
  * ETUSIVUN PALLO, kohta 3; docs/moduulit/karttapallo.md luku 0 kohta 5
  * ja luku 10.3.)
@@ -89,7 +93,8 @@
 
 import { laudaltaAsteiksi } from './fokusmitat.js';
 import { PEILI_JUURI } from './media.js';
-import { ISOISAN_VALOKUVAT, rajausTyyli, valokuvanKuvateksti } from './isoisan-valokuvat.js';
+import { rajausTyyli, valokuvanKuvateksti } from './isoisan-valokuvat.js';
+import { ETUSIVUN_ISOISAKUVAT, isoisakuvanSavy } from './packs/etusivun-isoisakuvat.js';
 import {
   ETUSIVUPALLO_AVAIN, asetaEtusivupallo, etusivupalloOletus,
   etusivupalloOsoitteesta, etusivupalloPaalla,
@@ -470,20 +475,74 @@ export function saapumisia(reitti, t) {
 /* ==================== ISOISÄN AIKALAISKUVAT ======================= */
 
 /*
- * KUVAT KIERTÄVÄT (js/isoisan-valokuvat.js). Kuvaputki on tuottanut
- * toistaiseksi kaksi albumiinivedosta (Bombay ja Kanton), joten
- * laskeutumisilla kierrätetään niitä vuorotellen; kun uusia
- * aikalaiskuvia tulee, ne lisätään ISOISAN_VALOKUVAT-tauluun ja tämä
- * kierto pitenee itsestään.
+ * KUVAT TULEVAT PAKASTA (js/packs/etusivun-isoisakuvat.js, omistaja
+ * 5.9.2026 klo 22.50). Pakka on totuus: kuvaputken toimitus lisätään
+ * SINNE yhtenä rivinä, eikä tähän moduuliin kosketa. Jokaisella kuvalla
+ * on `kaupunki` — se reitin jakso, jonka laskeutuessa kuva tulee
+ * pinoon — ja kuvat, joiden kaupunki ei ole reitillä, tulevat
+ * kiertovuorollaan.
  */
-export const ETUSIVUN_KUVAKIERTO = ['bombay', 'kanton'];
+export const ETUSIVUN_KUVAKIERTO = ETUSIVUN_ISOISAKUVAT;
 
-/** Monennenko laskeutumisen kuva (1 = ensimmäinen kohde Lontoon jälkeen). */
-export function saapumisenKuva(nro, kierto = ETUSIVUN_KUVAKIERTO) {
-  const avaimet = kierto.filter((k) => ISOISAN_VALOKUVAT[k]);
-  if (!avaimet.length || nro < 1) return null;
-  const avain = avaimet[(nro - 1) % avaimet.length];
-  return { avain, kuva: ISOISAN_VALOKUVAT[avain] };
+/** Monenteenko kaupunkiin kone laskeutui (nro = 1 → reitin toinen piste). */
+export function saapumisenKaupunki(reitti, nro) {
+  return reitti?.pisteet?.[nro]?.id ?? null;
+}
+
+/**
+ * Monennenko laskeutumisen kuva (1 = ensimmäinen kohde Lontoon jälkeen).
+ * Kaupungin oma kuva voittaa kierron; muuten kierretään pakkaa.
+ */
+export function saapumisenKuva(nro, kaupunki = null, kuvat = ETUSIVUN_ISOISAKUVAT) {
+  if (!kuvat.length || nro < 1) return null;
+  const oma = kaupunki ? kuvat.findIndex((k) => k.kaupunki === kaupunki) : -1;
+  const i = oma >= 0 ? oma : (nro - 1) % kuvat.length;
+  return { avain: kuvat[i].tunnus, kuva: kuvat[i] };
+}
+
+/* ==================== PINON ASENNOT =============================== */
+
+/*
+ * PINO SIKIN SOKIN (omistaja 5.9.2026 klo 22.45: *"ne voisivat pinoutua
+ * hieman sikin sokin toistensa päälle"*). Kortti laskeutuu pinon päälle
+ * pieneen siirtoon ja kallistukseen, ja edelliset jäävät alle.
+ */
+/** Siirto kortin leveyden prosentteina (± tämä). */
+export const PINON_SIIRTO = 5;
+/** Kallistus asteina (± tämä). */
+export const PINON_KULMA = 8;
+/** Pinossa kerrallaan enintään näin monta korttia. */
+export const PINON_KATTO = 5;
+/** Laskeutumisen kesto (ms) — sama luku kuin css .etusivupallo-kuvassa. */
+export const PINON_LASKU_MS = 700;
+/** Alimman kortin häivytys (ms) — sama luku kuin css .haipyy-tilassa. */
+export const PINON_HAIVYTYS_MS = 620;
+
+/** Kokonaisluvun sekoitus välille [0, 1) — sama luku antaa saman arvon. */
+function siemenluku(x) {
+  let h = Math.imul(x ^ 0x9e3779b9, 0x85ebca6b);
+  h ^= h >>> 13;
+  h = Math.imul(h, 0xc2b2ae35);
+  h ^= h >>> 16;
+  return (h >>> 0) / 4294967296;
+}
+
+/**
+ * Kortin asento pinossa: SIEMENELLINEN eli deterministinen. Sama
+ * laskeutumisnumero antaa aina saman siirron ja kallistuksen, joten
+ * pino näyttää joka loopilla samalta ja testit ovat vakaita.
+ *
+ * SIEMEN ON LASKEUTUMISNUMERO EIKÄ KUVAN INDEKSI: pakassa on
+ * toistaiseksi kaksi kuvaa, ja kuvaan sidottu asento pinoaisi ne
+ * täsmälleen päällekkäin — viiden kortin pino näyttäisi kahdelta
+ * kortilta eikä sikin sokin olevalta pinolta. Kun kuvaputken kaksitoista
+ * kuvaa tulevat pakkaan, jokainen laskeutuminen on yhä oma asentonsa.
+ */
+export function pinonAsento(nro) {
+  const luku = (siirto, laajuus) => Number(
+    ((siemenluku(nro * 3 + siirto) * 2 - 1) * laajuus).toFixed(2),
+  );
+  return { dx: luku(1, PINON_SIIRTO), dy: luku(2, PINON_SIIRTO), kulma: luku(3, PINON_KULMA) };
 }
 
 /* ==================== KERROS ETUSIVULLE =========================== */
@@ -493,15 +552,6 @@ const KONEEN_POLKU = 'M14,0 L-6,0 M-10,0 L-14,0 M2,0 L-8,-9 L-4,-9 L6,0 L-4,9 L-
   + 'M-11,0 L-15,-5 L-13,-5 L-9,0 L-13,5 L-15,5 z';
 /** Koneen koko videon pikseleinä (skaalautuu kerroksen mukana). */
 const KONEEN_SKAALA = 1.15;
-/**
- * Kuvan ristihäivytyksen kesto (ms) — sama luku kuin css/styles.css:n
- * .etusivupallo-kuva-siirtymässä. Kaksi korttia päällekkäin: väistyvä
- * häipyy samalla kun tuleva kirkastuu (Raamattu: KAIKKI LIIKE
- * ANIMOIDAAN PEHMEASTI).
- */
-export const KUVAN_VAIHTO_MS = 620;
-/** Kortin vähimmäisväli avaustekstin ja otsikon laatikoihin (px). */
-const KUVAN_VARA = 3;
 
 const svgEl = (nimi, attrit = {}, vanhempi = null) => {
   const el = document.createElementNS('http://www.w3.org/2000/svg', nimi);
@@ -604,35 +654,30 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
   kotelo.insertBefore(juuri, kotelo.firstChild);
 
   /*
-   * ISOISÄN KORTTI: KAKSI KORTTIA SAMASSA PAIKASSA (omistaja 5.9.2026
-   * klo 21.30: *"isoisän kuva saisi olla isompi ja vaihtua aina samaan
-   * paikkaan"*). Paikan ja koon antaa yksin css/styles.css
-   * (.etusivupallo-kuva) — esteväistöä ei enää ole, koska paikka on
-   * kiinteä. Kortteja on kaksi päällekkäin, jotta vaihto on aito
-   * ristihäivytys eikä välähdys tyhjään.
+   * ISOISÄN KUVAT PINOKSI TEKSTIN ALLE (omistaja 5.9.2026 klo 22.45:
+   * *"isoisän kuvat voivat olla blurrattuja ja haalealla ja jäädä
+   * tekstin alle"*, *"ne voisivat pinoutua hieman sikin sokin toistensa
+   * päälle"*). Pino on OMA KERROKSENSA .intro-paneelissa: videon
+   * PÄÄLLÄ mutta julisteotsikon, avaustekstin ja nappien ALLA
+   * (css/styles.css z-indexit). Siksi esteväistöä ja pystysiirtoa ei
+   * enää ole lainkaan — kortit saavat jäädä tekstin alle, ja juuri se
+   * antaa niille tilan olla selvästi isompia.
+   *
+   * Pinon paikan ja koon antaa yksin css/styles.css
+   * (.etusivupallo-pino): puhelimella keskellä alaosaa, työpöydällä
+   * paneelin oikeassa alaneljänneksessä. Sama paikka joka loopilla.
    */
   const paneeli = kotelo.closest?.('.intro') ?? kotelo;
-  const kortit = [0, 1].map(() => {
-    const kortti = document.createElement('figure');
-    kortti.className = 'etusivupallo-kuva';
-    kortti.setAttribute('aria-hidden', 'true');
-    const kuvaEl = document.createElement('img');
-    kuvaEl.className = 'isoisa-rajattu';
-    kuvaEl.decoding = 'async';
-    kuvaEl.draggable = false;
-    kuvaEl.alt = '';
-    const lappu = document.createElement('figcaption');
-    kortti.append(kuvaEl, lappu);
-    paneeli.appendChild(kortti);
-    return { kortti, kuvaEl, lappu };
-  });
+  const pino = document.createElement('div');
+  pino.className = 'etusivupallo-pino';
+  pino.setAttribute('aria-hidden', 'true');
+  paneeli.appendChild(pino);
 
   /* ---------- piirto ---------- */
 
   let purettu = false;
   let kehys = 0;
   let edellinenKuva = 0;
-  let vuoro = 0;
   let edellinenAika = 0;
   let suuntaAste = 0;
 
@@ -647,87 +692,93 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     sovitusNyt(),
   );
 
-  const piilotaKuvat = () => {
-    for (const k of kortit) k.kortti.classList.remove('nakyy');
-  };
-
   /*
-   * VARMISTUS, EI ESTEVÄISTÖÄ. Paikka tulee CSS:stä ja on kiinteä. Jos
-   * kortti kuitenkin jollain kirjasinkoolla leikkaisi julisteotsikkoa
-   * tai avaustekstiä, sitä siirretään pystysuunnassa lyhyintä tietä
-   * ulos — kerran asettelua kohti, sama luku molemmille korteille.
-   * Kuvan vaihtuminen ei siis liikuta korttia (omistaja 5.9.2026:
-   * *"vaihtua aina samaan paikkaan"*).
+   * KORTTI LASKEUTUU PINON PÄÄLLE. Asento on siemenellinen
+   * (pinonAsento), joten sama laskeutuminen tuo kortin aina samaan
+   * kohtaan — pino näyttää joka loopilla samalta eivätkä kaappaukset
+   * heilu. Laskeutuminen animoidaan pehmeästi (Raamattu: KAIKKI LIIKE
+   * ANIMOIDAAN PEHMEASTI): kortti aloittaa hieman ylhäältä, isompana ja
+   * läpinäkyvänä ja asettuu PINON_LASKU_MS:n aikana paikalleen.
+   * Vähennetyllä liikkeellä se on paikallaan heti (css poistaa
+   * siirtymän, ja luokka lisätään ilman kehysodotusta).
    */
-  const varmistaPaikka = () => {
-    const el = kortit.find((k) => k.kortti.classList.contains('nakyy'))?.kortti;
-    if (purettu || !el?.isConnected) return;
-    /*
-     * NYKYINEN SIIRTO LUETAAN, EI NOLLATA: nollaus käynnistäisi
-     * muunnoksen siirtymän, ja heti perään mitattu ulkolaatikko
-     * kertoisi yhä vanhan arvon — kortti heiluisi edestakaisin.
-     */
-    const nyt = parseFloat(paneeli.style.getPropertyValue('--etusivupallo-kuva-siirto')) || 0;
-    const laatikko = el.getBoundingClientRect();
-    const r = { top: laatikko.top - nyt, bottom: laatikko.bottom - nyt, height: laatikko.height };
-    r.left = laatikko.left;
-    r.right = laatikko.right;
-    const p = paneeli.getBoundingClientRect();
-    if (!(r.height > 0) || !(p.height > 0)) return;
-    // Esteitä ovat vain ne, jotka ovat kortin kanssa samalla pystykaistalla.
-    const esteet = ['.intro-juliste', '.intro-palsta']
-      .map((v) => paneeli.querySelector(v)?.getBoundingClientRect())
-      .filter((e) => e && e.height > 0 && r.left < e.right && e.left < r.right)
-      .sort((a, b) => a.top - b.top);
-    /*
-     * Vapaat pystykaistat paneelin sisällä esteiden väliin. KUVAN_VARA
-     * pitää kortin irti tekstin laatikon reunasta: pyöristys ja
-     * kallistuksen levittämä ulkolaatikko veisivät muuten viimeisen
-     * pikselin päällekkäin.
-     */
-    const kaistat = [];
-    let ylin = p.top + KUVAN_VARA;
-    for (const e of esteet) {
-      if (e.top - KUVAN_VARA - ylin > 1) kaistat.push({ yla: ylin, ala: e.top - KUVAN_VARA });
-      ylin = Math.max(ylin, e.bottom + KUVAN_VARA);
-    }
-    if (p.bottom - KUVAN_VARA - ylin > 1) kaistat.push({ yla: ylin, ala: p.bottom - KUVAN_VARA });
-    if (!kaistat.length) return;
-    // Se kaista, jossa kortin keskikohta on tai jota se on lähinnä.
-    const keski = r.top + r.height / 2;
-    const etaisyys = (k) => Math.max(k.yla - keski, keski - k.ala, 0);
-    const kaista = kaistat.reduce((a, b) => (etaisyys(b) < etaisyys(a) ? b : a));
-    const korkeus = kaista.ala - kaista.yla;
-    const haluttu = korkeus >= r.height
-      ? Math.min(Math.max(r.top, kaista.yla), kaista.ala - r.height)
-      : kaista.yla + (korkeus - r.height) / 2;
-    const siirto = Math.round(haluttu - r.top);
-    if (siirto !== nyt) paneeli.style.setProperty('--etusivupallo-kuva-siirto', `${siirto}px`);
+  const pinossa = [];
+  const ajastimet = new Set();
+  const ajasta = (fn, ms) => {
+    const id = win.setTimeout(() => { ajastimet.delete(id); fn(); }, ms);
+    ajastimet.add(id);
   };
-  const asettelunMuutos = () => varmistaPaikka();
-  win.addEventListener?.('resize', asettelunMuutos);
 
-  const naytaKuva = (nro) => {
-    const valinta = saapumisenKuva(nro);
+  const laskeKortti = (nro) => {
+    const valinta = saapumisenKuva(nro, saapumisenKaupunki(reitti, nro));
     if (!valinta || purettu) return;
-    const tuleva = kortit[vuoro % kortit.length];
-    const vaistyva = kortit[(vuoro + 1) % kortit.length];
-    vuoro += 1;
-    tuleva.kuvaEl.src = valinta.kuva.osoite;
-    tuleva.kuvaEl.alt = valinta.kuva.selite;
-    tuleva.kuvaEl.style.cssText = rajausTyyli(valinta.kuva);
-    tuleva.lappu.textContent = valokuvanKuvateksti(valinta.kuva);
+    const asento = pinonAsento(nro);
+    const savy = isoisakuvanSavy(valinta.kuva);
+
+    const kortti = document.createElement('figure');
+    kortti.className = 'etusivupallo-kuva';
+    kortti.setAttribute('aria-hidden', 'true');
+    kortti.style.setProperty('--pino-dx', String(asento.dx));
+    kortti.style.setProperty('--pino-dy', String(asento.dy));
+    kortti.style.setProperty('--pino-kulma', `${asento.kulma}deg`);
+
+    const kuvaEl = document.createElement('img');
+    kuvaEl.className = 'isoisa-rajattu';
+    kuvaEl.decoding = 'async';
+    kuvaEl.draggable = false;
+    // Kortti on aria-hidden (koriste), mutta selite kulkee mukana.
+    kuvaEl.alt = valinta.kuva.selite ?? '';
+    kuvaEl.src = valinta.kuva.osoite;
     /*
-     * Paikka mitataan ASETTUNEESTA kortista: ristihäivytyksen aikana
-     * muunnos on kesken, eikä ulkolaatikko kerro lopullista kohtaa.
-     * Siksi varmistus ajetaan ennen luokkien vaihtoa (edellinen kortti
-     * on paikallaan) ja uudestaan, kun häivytys on ohi.
+     * HAALEUS JA SUMENNUS OVAT KUVAKOHTAISIA (pakan sävy): kuvaputken
+     * uudet vedokset ovat vaaleita (vinjetti vaaleaan) eivätkä kestä
+     * samaa haaleutta kuin tummat albumiinivedokset.
      */
-    varmistaPaikka();
-    // Ristihäivytys: tuleva kirkastuu samalla kun väistyvä häipyy.
-    tuleva.kortti.classList.add('nakyy');
-    vaistyva.kortti.classList.remove('nakyy');
-    win.setTimeout(varmistaPaikka, KUVAN_VAIHTO_MS + 320);
+    kuvaEl.style.cssText = [
+      rajausTyyli(valinta.kuva),
+      `--kuvan-haalea:${savy.haalea}`,
+      `--kuvan-sumennus:${savy.sumennus}px`,
+    ].filter(Boolean).join(';');
+
+    const lappu = document.createElement('figcaption');
+    lappu.textContent = valokuvanKuvateksti(valinta.kuva);
+    kortti.append(kuvaEl, lappu);
+
+    /*
+     * KUVATEKSTI VAIN PÄÄLLIMMÄISELLE. Viisi kallistettua korttia
+     * päällekkäin toisi viisi lappua samaan kohtaan, eikä yksikään
+     * niistä olisi luettava; päällimmäinen on se, jota katse seuraa.
+     * Lappu ei ole sumennettu eikä haalea (suodatin ja peittävyys ovat
+     * <img>-elementillä), joten se pysyy luettavana.
+     */
+    for (const vanha of pinossa) vanha.classList.remove('uusin');
+    kortti.classList.add('uusin');
+    pino.appendChild(kortti);
+    pinossa.push(kortti);
+    if (vahennettyLiike) kortti.classList.add('laskeutunut');
+    else {
+      win.requestAnimationFrame(() => win.requestAnimationFrame(() => {
+        if (!purettu) kortti.classList.add('laskeutunut');
+      }));
+    }
+
+    /*
+     * PINOSSA ENINTÄÄN PINON_KATTO KORTTIA: kun katto ylittyy, ALIN
+     * häivytetään pehmeästi pois ja poistetaan vasta häivytyksen
+     * jälkeen.
+     */
+    while (pinossa.length > PINON_KATTO) {
+      const alin = pinossa.shift();
+      alin.classList.add('haipyy');
+      ajasta(() => alin.remove(), PINON_HAIVYTYS_MS + 80);
+    }
+  };
+
+  const tyhjennaPino = () => {
+    for (const id of ajastimet) win.clearTimeout(id);
+    ajastimet.clear();
+    pinossa.length = 0;
+    pino.remove();
   };
 
   const piirraHetki = (t) => {
@@ -767,20 +818,23 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     svg.style.opacity = Math.max(0, haivytys).toFixed(3);
 
     const saapunut = saapumisia(reitti, t);
-    if (saapunut !== edellinenKuva) {
-      edellinenKuva = saapunut;
-      if (saapunut > 0) naytaKuva(saapunut);
-      else piilotaKuvat();
-    }
+    if (saapunut > 0 && saapunut !== edellinenKuva) laskeKortti(saapunut);
+    edellinenKuva = saapunut;
   };
 
   const askel = () => {
     if (purettu) return;
     const t = (video.currentTime || 0) % kesto;
     if (t < edellinenAika) {
-      // Kierros alkoi alusta: kuva häipyy pois videon sauman kanssa.
+      /*
+       * KIERROS ALKOI ALUSTA — PINO JÄÄ. Laskuri nollataan, mutta
+       * kortteja ei häivytetä: viisi korttia katoaisi kerralla juuri
+       * siinä saumassa, jonka video ylittää huomaamatta, ja katse
+       * hakeutuisi tyhjään kohtaan. Pinon katto (PINON_KATTO) pitää
+       * huolen siitä, ettei pino kasva loputtomiin — vanhin kortti
+       * häipyy aina yksi kerrallaan uuden alta.
+       */
       edellinenKuva = 0;
-      piilotaKuvat();
     }
     edellinenAika = t;
     piirraHetki(t);
@@ -804,8 +858,7 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     });
     if (!valmis || purettu || !juuri.isConnected) {
       // Video ei latautunut → etusivu jää vanhaan karttaan.
-      win.removeEventListener?.('resize', asettelunMuutos);
-      for (const k of kortit) k.kortti.remove();
+      tyhjennaPino();
       juuri.remove();
       return null;
     }
@@ -836,9 +889,7 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
       try { video.pause(); } catch { /* ei väliä */ }
       video.removeAttribute('src');
       avaus?.classList.remove('intro-pallolla');
-      win.removeEventListener?.('resize', asettelunMuutos);
-      paneeli.style.removeProperty('--etusivupallo-kuva-siirto');
-      for (const k of kortit) k.kortti.remove();
+      tyhjennaPino();
       juuri.remove();
     },
   };
