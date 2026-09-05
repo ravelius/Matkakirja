@@ -99,7 +99,7 @@ export function asetaEtusivupallo(paalla, win = globalThis) {
  * version luetteloon, ja kerros kieltäytyy, jos versiot eivät täsmää:
  * väärällä videolla kone lentäisi väärässä paikassa.
  */
-export const ETUSIVUPALLO_VERSIO = '2026-09-05a';
+export const ETUSIVUPALLO_VERSIO = '2026-09-05b';
 export const ETUSIVUPALLO_JUURI = `${PEILI_JUURI}julisteet/etusivu/${ETUSIVUPALLO_VERSIO}/`;
 export const ETUSIVUPALLO_LUETTELO = `${ETUSIVUPALLO_JUURI}etusivu.json`;
 /**
