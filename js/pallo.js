@@ -252,6 +252,35 @@ export async function avaaPallo(ui) {
   kotelo.addEventListener('pointerdown', (e) => {
     tartunta = sormet.alhaalla === 1 ? sormenKohta(e) : null;
   });
+  /*
+   * LIIKE JATKUU SORMEN IRROTTUA (omistaja 5.9.2026: "Pallossa saisi olla
+   * Google earth vieritys joka ei pääty heti kun sormi päästää irti").
+   * Vedon aikana mitataan kulmanopeus (astetta/ms) viimeisten liikkeiden
+   * keskiarvona; irrotuksen jälkeen pallo jatkaa samaan suuntaan ja
+   * hidastuu eksponentiaalisesti (kitka), kunnes nopeus on alle
+   * kynnyksen. Uusi kosketus pysäyttää liu'un heti. Reduced motion:
+   * ei liukua.
+   */
+  const VAUHTI_KITKA = 0.0028; // 1/ms: nopeus puolittuu n. 250 ms:ssa
+  const VAUHTI_KYNNYS = 0.0006; // astetta/ms
+  const vauhti = { lat: 0, lng: 0, aika: 0, raf: 0 };
+  ui.pallonVauhti = vauhti; // mittausta varten (savukkeet)
+  const pysaytaLiuku = () => { if (vauhti.raf) cancelAnimationFrame(vauhti.raf); vauhti.raf = 0; };
+  const liu = (edellinen) => {
+    const nyt = performance.now();
+    const dt = Math.min(50, nyt - edellinen);
+    const pov = pallo.pointOfView();
+    pallo.pointOfView({
+      lat: Math.max(-89.5, Math.min(89.5, pov.lat + vauhti.lat * dt)),
+      lng: pov.lng + vauhti.lng * dt,
+      altitude: pov.altitude,
+    }, 0);
+    const vaimennus = Math.exp(-VAUHTI_KITKA * dt);
+    vauhti.lat *= vaimennus; vauhti.lng *= vaimennus;
+    if (Math.hypot(vauhti.lat, vauhti.lng) > VAUHTI_KYNNYS) vauhti.raf = requestAnimationFrame(() => liu(nyt));
+    else vauhti.raf = 0;
+  };
+  kotelo.addEventListener('pointerdown', () => { pysaytaLiuku(); vauhti.lat = 0; vauhti.lng = 0; });
   kotelo.addEventListener('pointermove', (e) => {
     if (!tartunta || sormet.alhaalla !== 1) return;
     const nyt = sormenKohta(e);
@@ -259,15 +288,34 @@ export async function avaaPallo(ui) {
     const pov = pallo.pointOfView();
     let dLng = nyt.lng - tartunta.lng;
     if (dLng > 180) dLng -= 360; else if (dLng < -180) dLng += 360;
+    const dLat = nyt.lat - tartunta.lat;
     pallo.pointOfView({
-      lat: Math.max(-89.5, Math.min(89.5, pov.lat - (nyt.lat - tartunta.lat))),
+      lat: Math.max(-89.5, Math.min(89.5, pov.lat - dLat)),
       lng: pov.lng - dLng,
       altitude: pov.altitude,
     }, 0);
+    // Nopeus: liukuva keskiarvo, jotta yksittäinen nykäys ei määrää liukua.
+    const aika = performance.now();
+    const dt = Math.max(1, aika - (vauhti.aika || aika));
+    if (vauhti.aika) {
+      vauhti.lat = vauhti.lat * 0.6 + (-dLat / dt) * 0.4;
+      vauhti.lng = vauhti.lng * 0.6 + (-dLng / dt) * 0.4;
+    }
+    vauhti.aika = aika;
   });
-  const paasta = () => { tartunta = null; };
+  const paasta = () => {
+    tartunta = null;
+    const seisahtunut = performance.now() - vauhti.aika > 150; // sormi pysähtyi ennen irrotusta
+    if (!ui.reducedMotion && !seisahtunut && Math.hypot(vauhti.lat, vauhti.lng) > VAUHTI_KYNNYS) {
+      pysaytaLiuku();
+      vauhti.raf = requestAnimationFrame(() => liu(performance.now()));
+    }
+    vauhti.aika = 0;
+  };
   kotelo.addEventListener('pointerup', paasta);
   kotelo.addEventListener('pointercancel', paasta);
+  const vanhaKuuntelija = ui.pallonKuuntelija;
+  ui.pallonKuuntelija = () => { pysaytaLiuku(); vanhaKuuntelija?.(); };
   const mitoita = () => pallo.width(kotelo.clientWidth).height(kotelo.clientHeight);
   window.addEventListener('resize', mitoita);
   const vanha = ui.pallonKuuntelija;

@@ -1,7 +1,7 @@
 /*
  * KARTTAPALLON LAATAT — juliste Millerista Web Mercator -laatoiksi.
  *
- *   node tools/tee-pallolaatat.mjs [--kuiva] [--min 0] [--max 7]
+ *   node tools/tee-pallolaatat.mjs [--kuiva] [--min 0] [--max 7] [--nostot]
  *        [--ulos pallolaatat-ulos] [--alue lon0,lat0,lon1,lat1]
  *
  * OMISTAJAN TILAUS 4.9.2026 ilta ("Jos se tukee niin tee se suoraan
@@ -65,8 +65,14 @@ const RAD = Math.PI / 180;
 /** Lähdelaattoja välimuistissa kerrallaan (512 × 512 × 4 t ≈ 1 Mt kukin). */
 const VALIMUISTI = 160;
 
-/** Ämpärin kansio, johon laatat viedään. */
-export const laattojenKansio = (versio) => `julisteet/pallo/laatat/${versio}/`;
+/**
+ * Ämpärin kansio, johon laatat viedään. Nostotasollinen sarja (nimet ja
+ * karttanostot poltettuina, omistaja 5.9.2026: "lisää palloon myös se
+ * toinen kerros missä nimet ja kohteet") saa oman kansion, koska laatat
+ * ovat selaimessa vuoden välimuistissa: sama polku eri sisällöllä
+ * näyttäisi vanhaa.
+ */
+export const laattojenKansio = (versio, nostot = false) => `julisteet/pallo/laatat/${versio}${nostot ? '-nostot' : ''}/`;
 
 /** Mercator-tason Z lähdetaso pyramidissa. */
 export const lahdetaso = (Z) => Math.max(0, Z - 1);
@@ -139,9 +145,12 @@ async function noudaLaatta(url, yrityksia = 9) {
  * Pohja ja viivataso yhdistetään laattaa noudettaessa; puuttuva
  * pohjalaatta on merta.
  */
-function teeLukija(luettelo, sharp) {
+function teeLukija(luettelo, sharp, { nostot = false } = {}) {
   const L = luettelo.laatta ?? 512;
   const viivaversio = luettelo.viivataso?.versio ?? null;
+  // Nostotaso (nimet, karttanostot) on vain tasoilla nostotaso.tasot (z5–z7).
+  const nostoversio = nostot ? (luettelo.nostotaso?.versio ?? null) : null;
+  const nostotasot = new Set(luettelo.nostotaso?.tasot ?? []);
   const muisti = new Map();
   let meri = null;
   const tilasto = { noudettu: 0, puuttui: 0 };
@@ -161,16 +170,18 @@ function teeLukija(luettelo, sharp) {
         const { data, info } = await sharp(pohja).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
         const kuva = { data, w: info.width, h: info.height };
         if (!meri && tx === 0 && ty === taso.riveja - 1) meri = [data[(8 * info.width + 8) * 4], data[(8 * info.width + 8) * 4 + 1], data[(8 * info.width + 8) * 4 + 2]];
-        if (viivaversio) {
-          const viivat = await noudaLaatta(`${JULKINEN_JUURI}julisteet/pyramidi/${viivaversio}/viivat/z${z}/${tx}/${ty}.webp`);
-          if (viivat) {
-            const v = await sharp(viivat).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-            const n = Math.min(v.info.width * v.info.height, info.width * info.height);
-            for (let i = 0; i < n; i += 1) {
-              const a = v.data[i * 4 + 3] / 255;
-              if (a <= 0) continue;
-              for (let c = 0; c < 3; c += 1) data[i * 4 + c] = Math.round(data[i * 4 + c] * (1 - a) + v.data[i * 4 + c] * a);
-            }
+        const kerrokset = [];
+        if (viivaversio) kerrokset.push(`${viivaversio}/viivat/z${z}/${tx}/${ty}.webp`);
+        if (nostoversio && nostotasot.has(z)) kerrokset.push(`${nostoversio}/nostot/z${z}/${tx}/${ty}.webp`);
+        for (const polku of kerrokset) {
+          const kerros = await noudaLaatta(`${JULKINEN_JUURI}julisteet/pyramidi/${polku}`); // eslint-disable-line no-await-in-loop
+          if (!kerros) continue;
+          const v = await sharp(kerros).ensureAlpha().raw().toBuffer({ resolveWithObject: true }); // eslint-disable-line no-await-in-loop
+          const n = Math.min(v.info.width * v.info.height, info.width * info.height);
+          for (let i = 0; i < n; i += 1) {
+            const a = v.data[i * 4 + 3] / 255;
+            if (a <= 0) continue;
+            for (let c = 0; c < 3; c += 1) data[i * 4 + c] = Math.round(data[i * 4 + c] * (1 - a) + v.data[i * 4 + c] * a);
           }
         }
         ulos = kuva;
@@ -287,18 +298,20 @@ async function paa() {
   const max = Number(lippu('--max') ?? 7);
   const ulos = lippu('--ulos') ?? 'pallolaatat-ulos';
   const alue = lippu('--alue')?.split(',').map(Number) ?? null;
+  const nostot = argv.includes('--nostot');
 
   const luettelo = await noudaJson(LUETTELO);
-  const kansio = laattojenKansio(luettelo.versio);
+  const kansio = laattojenKansio(luettelo.versio, nostot);
   let yhteensa = 0;
   for (let Z = min; Z <= max; Z += 1) yhteensa += tasonLaatat(Z, alue).length;
   console.log(`pyramidi ${luettelo.versio}, viivat ${luettelo.viivataso?.versio ?? '-'}, `
+    + `nostot ${nostot ? (luettelo.nostotaso?.versio ?? '-') : 'ei'}, `
     + `Mercator-tasot ${min}–${max} (lähteet z${lahdetaso(min)}–z${lahdetaso(max)}), `
     + `${yhteensa} laattaa → ${kansio}`);
   if (kuiva) { console.log('Kuiva ajo: ei nouda laattoja eikä kirjoita.'); return; }
 
   const sharp = (await import('sharp')).default;
-  const lukija = teeLukija(luettelo, sharp);
+  const lukija = teeLukija(luettelo, sharp, { nostot });
   mkdirSync(ulos, { recursive: true });
   let tehty = 0;
   const alku = Date.now();
@@ -318,6 +331,7 @@ async function paa() {
   writeFileSync(join(ulos, 'laatat.json'), `${JSON.stringify({
     versio: luettelo.versio,
     viivat: luettelo.viivataso?.versio ?? null,
+    nostot: nostot ? (luettelo.nostotaso?.versio ?? null) : null,
     tasot: { min, max },
     laatta: LAATTA,
     muoto: 'jpg',
