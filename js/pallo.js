@@ -50,7 +50,7 @@ export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/te
  */
 export const PALLO_LAATTAVERSIO = '2026-09-03a';
 export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAVERSIO}/`;
-export const PALLO_LAATTATASO_MAX = 7;
+export const PALLO_LAATTATASO_MAX = 8;
 /** Laatan osoite laattamoottorille (slippy map -koordinaatit). */
 export const pallonLaatta = (x, y, l) => `${PALLO_LAATAT}${l}/${x}/${y}.jpg`;
 

@@ -80,7 +80,7 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   assert.ok(versio && (Number(versio[1]) > 2 || Number(versio[2]) >= 46), PALLO_KIRJASTO);
   assert.equal(PALLO_LAATAT, `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/${laattojenKansio(PALLO_LAATTAVERSIO)}`);
   assert.equal(pallonLaatta(3, 5, 4), `${PALLO_LAATAT}4/3/5.jpg`);
-  assert.equal(PALLO_LAATTATASO_MAX, 7);
+  assert.equal(PALLO_LAATTATASO_MAX, 8, 'taso 8 kaytossa 5.9.2026');
   // Luettelon puute tai virhe → varatekstuuri, ei kaatumista.
   assert.equal(await laatatSaatavilla(async () => ({ ok: false })), false);
   const pallo = lue('../js/pallo.js');
