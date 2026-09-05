@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1562';
+const CACHE = 'matkakirja-2026-08-09.1563';
 const SHELL = [
   './',
   './index.html',
@@ -34,6 +34,9 @@ const SHELL = [
   './js/kohtaamiskuvat.js',
   './js/opas.js',
   './js/lehti.js',
+  // Sivunkääntö (5.9.2026): teatteri kuuluu SHELLiin; itse kirjasto
+  // (page-flip) tulee ämpärin vendor/-polusta ja säilyy VENDORCACHEssa.
+  './js/sivunkaanto.js',
   './js/ehdotukset.js',
   './js/kuvavinkki.js',
   './js/havainnekuva.js',
@@ -1391,18 +1394,16 @@ const OMA_VALOKUVA = (osoite) => osoite.pathname.includes('/assets/valokuvat/');
  * kuullut luennat kaikilla pelaajilla turhaan.
  */
 const AANICACHE = 'matkakirja-aanet-v1';
-
 /*
- * Valmiiden kirjastojen kori (Raamattu 5.9.2026 "VALMIIT KIRJASTOT":
- * kirjasto tulee ämpärin vendor/-polusta, ei reposta). Globe.gl
- * (js/pallo.js), Tuna (js/tehosteketju.js), ilmepaketti Vivus +
- * Rough.js + rough-notation (js/ilme.js) ja seuraavat haetaan
- * laiskasti, kun niitä ensi kerran tarvitaan, ja säilyvät sen jälkeen
- * offline. Oma kori, jota versionvaihto ei tyhjennä: tiedostonimessä on
- * versio (globe.gl-2.46.2, tuna-1.1.3), joten sama osoite on aina sama
- * sisältö (ämpäri lähettää Cache-Control: immutable), eikä pelin
- * versio muuta sitä. Uusi kirjastoversio on uusi osoite, ja vanha jää
- * koriin harmittomana, kunnes selain siivoaa kiintiötä.
+ * VALMIIT KIRJASTOT ÄMPÄRIN vendor/-POLUSTA (Raamattu 5.9.2026,
+ * VALMIIT KIRJASTOT: STPAGEFLIP ENSIN): page-flip, Globe.gl, Tuna,
+ * ilmepaketti ja d3-geo ladataan vasta tarvittaessa (js/sivunkaanto.js,
+ * js/pallo.js, js/tehosteketju.js, js/ilme.js, js/geo.js).
+ * Tiedostonimi kantaa versionumeron, joten sisältö ei koskaan muutu
+ * saman nimen alla — kori on pysyvä eikä tyhjene versionvaihdossa, ja
+ * kerran ladattu kirjasto toimii lentokoneessa. Skriptin oma pyyntö on
+ * no-cors (opaakki vastaus ei kelpaa koriin), joten nouto tehdään
+ * cors-tilassa kuten kuvilla, ja tavallinen fetch jää varareitiksi.
  */
 const VENDORCACHE = 'matkakirja-vendor-v1';
 
@@ -1619,11 +1620,20 @@ self.addEventListener('fetch', (event) => {
         caches.open(VENDORCACHE).then(async (kori) => {
           const osuma = await kori.match(event.request.url);
           if (osuma) return osuma;
-          const vastaus = await fetch(event.request).catch(() => null);
-          if (vastaus && (vastaus.ok || vastaus.type === 'opaque')) {
+          /*
+           * Nouto cors-tilassa: cors-vastaus kelpaa koriin ja palvelee
+           * myöhemmin sekä <script>-latauksen (no-cors) että
+           * moduulituonnin (import(), cors) — opaakki vastaus palvelisi
+           * vain edellistä. Jos cors ei onnistu (peli avattu muualta
+           * kuin omasta alkuperästä), tavallinen nouto jää varareitiksi
+           * eikä sitä säilötä.
+           */
+          const vastaus = await fetch(event.request.url, { mode: 'cors' }).catch(() => null);
+          if (vastaus && vastaus.ok) {
             kori.put(event.request.url, vastaus.clone());
+            return vastaus;
           }
-          return vastaus ?? Response.error();
+          return fetch(event.request).catch(() => vastaus ?? Response.error());
         }),
       );
       return;

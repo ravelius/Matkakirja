@@ -171,6 +171,23 @@ aina kun voit**, jotta kuvakkeet pysyvät tuttuina kaupungista toiseen.
 - **Yksi kuva esiintyy kaupungissa vain kerran.** Sama tarina ei saa
   toistua kahdessa aiheessa (Lontoosta siivottiin kaksi tällaista paria).
 
+## Sivunkääntö (js/sivunkaanto.js, 5.9.2026)
+
+Omistajan päätös 5.9.2026 (sanatarkasti *"Tee 2. Ensin"*, Raamattu
+VALMIIT KIRJASTOT: STPAGEFLIP ENSIN): lehti kääntyy kuin kirja. Kääntö
+on **teatteri**, ei sivupino — lehdessä on yhä yksi elävä sivu
+(`.dialog-card`), jonka `naytaTutkiSivu` piirtää uudestaan; StPageFlip
+kääntää käännöksen ajaksi kortin päälle nostetussa kerroksessa lähtevän
+ja saapuvan sivun klooneja, ja kerros katoaa, kun sivu on kääntynyt.
+Lukija, tarttuva otsikkorivi, visa ja etukäteispuskuri elävät oikealla
+sivulla kuten ennen. Taaksepäin on peilattu eteenpäin. Sormiveto
+(`kytkeTutkiSelaus` → `aloitaSivunVeto`) seuraa sormea; napit, sisällys,
+nuolinäppäimet ja jatkuva luenta kääntävät `naytaTutkiSivu`n `suunta`-
+parametrilla. Kirjasto (page-flip 2.0.7, MIT) tulee ämpärin
+`vendor/`-polusta laiskasti; ilman sitä (offline, dist, reduced motion,
+localStorage `matkakirja-sivunkaanto` = `0`) sivu liukuu kuten ennen.
+Vartijat: `tests/sivunkaanto.test.mjs`, `tools/savukkeet/savuke-sivunkaanto.mjs`.
+
 ## Kuvat
 
 - Commons-tiedosto, leveys ≥ 1200 px, lisenssi PD/CC0/CC BY/CC BY-SA,
