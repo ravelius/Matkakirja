@@ -1445,3 +1445,100 @@ häivyttää joka reunastaan läpinäkyväksi ja tehdä vähän isommaksi"*
   sijaan) — ämpäri vastaa 429:llä ja ohjelmistorasteroija ajaa
   saapumisen liian hitaasti mittausikkunaan. Ei liity tähän erään;
   kirjattu Fablelle.
+
+**Etusivun avaus: otsikko paikalleen, osa II myöhemmäksi, kolme kuvaa
+puolta pienempinä ja harsot näkymättömiin (5.9.2026 klo 00.20 ja
+00.25).** Omistaja katsoi etusivua työpöytäselaimella ja pyysi
+sanatarkasti:
+
+> *"etusivun otsikko hyppää alussa eri kokoon kun kirjoituskone teksti
+> alkaa. osa 2 saisi tulla sekunnin myöhemmin. ensimmäinen isoisän kuva
+> vasta noin 5 sek kohdalla ja puolet pienemmällä. kuvia saa tulla
+> yhteensä kolme, eli vähemmän kuin nyt ja hitaammin."*
+>
+> *"konekirjoituksen tekstin takana oleva vaalennus pienemmälle teholle
+> sekä isommalle alueella mutta niin että häivytys peittää elementin
+> neliöt rajat. ylemmässä myös häivytyksen rajat pois näkyvistä
+> (pohjalaatta vähän isompi ja häivytys pidemmälle matkalle)."*
+
+1. **OTSIKON HYPYN JUURISYY: kaksi eri lukua samasta koosta.** CSS:n
+   lähtökoko oli `.intro-juliste { font-size: 1.44rem }`, mutta
+   `js/ui.js fitIntro` aloittaa mittauksensa koosta
+   `INTRO_FONT_MAX × JULISTEEN_KERROIN` = 1,14 × 1,5 = **1,71rem** — ja
+   fitIntro ajettiin vasta kertomuksen alkaessa (`aloitaKertomus`,
+   `aloitaRunko`). Otsikko siis vaihtoi kokoa täsmälleen kirjoituskoneen
+   ensimmäisellä naksahduksella. Mitattu Playwrightilla ennen korjausta:
+   1400 × 900 kirjasin 23,04 px → 27,36 px, "MATKAKIRJA" 376,7 px →
+   447,5 px leveä ja y 166,0 → 138,9 (nousi 27 px); 1000 × 700 23,04 px
+   → 25,20 px (fitIntro kutisti yhden askeleen). Sama koski
+   tekstipalstaa: 15,36 px → 18,24 px, eli myös nappi ja työpöytäkuva
+   (em-mitat) hyppäsivät. Korjaus on kaksiosainen: css:n lähtöarvot ovat
+   nyt SAMAT luvut (`.intro-juliste` 1,71rem, `.intro-palsta` 1,14rem),
+   ja `renderIntro` ajaa `fitIntro`:n **jo portin takana** (ja portin
+   ohittavalla reitillä ennen ajastimia). Mittaus on idempotentti, joten
+   myöhemmät kutsut eivät liikuta mitään. Mitattu korjauksen jälkeen
+   1400 × 900 hetkillä 0,3 / 2,5 / 3,5 / 6 / 25 s: `.juliste-nimi`
+   47,0592 px ja 476,3 , 138,9 · 447,5 × 54,1 — sama luku joka
+   hetkellä; sama 2000 × 1300 ja 390 × 844.
+2. **OSA II SEKUNNIN MYÖHEMMIN.** `OSAN_VIIVE_MS` 1300 → **2300**;
+   `OSAN_HAIVYTYS_MS` pysyy 900 ms:ssä, ja kirjoituskone + luenta
+   alkavat yhä vasta häivytyksen jälkeen (siis 3,2 s napautuksesta).
+   Mitattu savukkeella: 2,0 s alaotsikon peitto 0,00 · 2,5 s 0,31 ·
+   3,0 s 0,91 · 3,5 s 1,00, paikkarivi tyhjä 3,0 s asti ja kirjoittunut
+   4,5 s kohdalla.
+3. **ISOISÄN KUVAT POIS ETUSIVULTA.** Omistaja katsoi kolmen kuvan
+   version ja päätti 6.9.2026 klo 01.20 sanatarkasti: *"Jätä isoisän
+   kuvat pois etusivulta"*. Tämä KUMOAA saman erän kohdat "kolme kuvaa
+   kierroksella, ensimmäinen noin 5 s kohdalla" ja "kortti puolet
+   pienemmäksi" — ne eivät päätyneet julkaisuun lainkaan. Poisto ei ole
+   lippu vaan koodin poisto, jottei etusivulle jää kuollutta koodia:
+   - js/etusivupallo.js: pinon DOM (`.etusivupallo-pino`), `laskeKortti`,
+     `pinonAsento`, `PINON_*`-vakiot, kuvien hetket
+     (`kuvienLaskeutumiset`) ja kierroslaskuri ovat poissa; kuvien
+     tuonnit (`rajausTyyli`, `valokuvanKuvateksti`, `isoisakuvanSavy`)
+     samoin. Piirto on nyt pelkkä viiva ja kone.
+   - css/styles.css: `.etusivupallo-pino`, `.etusivupallo-kuva` (kortti,
+     kuva, kuvateksti) ja `--pino-harsokorjaus` on poistettu.
+     Avauspaneelin kerrokset ovat pallo 0 · verho 1 · teksti 3.
+   - PAKKA JÄÄ: `js/packs/etusivun-isoisakuvat.js` (27 aikalaisvedosta),
+     `ETUSIVUN_KUVAKIERTO`, `saapumisenKaupunki` ja `saapumisenKuva`
+     ovat tallella vientinä — kuvat odottavat uutta käyttöpaikkaansa
+     (albumi, lentokohtaus), eikä niitä haeta uudelleen kuvaputkelta.
+     `saapumisenKuva` palasi kolmen argumentin muotoonsa (kierrossiirto
+     oli vain kolmen kuvan version tarve).
+   Vartiot: tests/etusivupallo.test.mjs *"etusivulla ei ole isoisän
+   kuvia: ei pinoa, ei kortteja, ei tyylejä"* (lähdevartio molempiin
+   tiedostoihin ja kerrosjärjestys) ja savuke E4a–E4c sekä E4k, joka
+   katsoo kahden ja puolen kierroksen ajan, ettei yhtään korttia
+   ilmesty. Palautus on käytännössä revert tästä commitista.
+4. *(kumottu kohdan 3 myötä: kortin koko)*
+5. **PERGAMENTTIHARSOT: YKSI KAAVA, KOLME MUUTTUJAA.** Harson reuna
+   näkyi, koska liukuvärin ellipsi oli laatikkoa suurempi (säde 74 %) ja
+   pseudon suorakulmio LEIKKASI harson kohdassa, jossa peittävyyttä oli
+   vielä 0,27 — juuri ne "elementin neliöt rajat". Nyt yhteinen sääntö
+   antaa `--harson-sade: 56%` (laatan reunalla ollaan 89 %:ssa sädettä,
+   eli käytännössä nollassa), seitsemän pysäkin liu'un ja peittävyyden
+   pseudon `opacity`iin muuttujana. Kaksi säädintä per harso:
+   konekirjoituksen teksti `--harson-peitto: 0.62` (ennen 0,94),
+   `--harson-haivytys: 42%`, laatta `-2.6em -5em` (ennen −1,2em/−1,6em);
+   julisteotsikko `--harson-peitto: 0.8`, `--harson-haivytys: 36%`,
+   laatta `-1.8em -3.6em` (ennen −0,5em/−1,4em). Laskettu peittävyys
+   laatan suoralla reunalla on nyt 0,036 (teksti) ja 0,030 (otsikko),
+   kun se oli 0,27 ja 0,24 — tests/etusivupallo.test.mjs LASKEE luvun
+   liukuvärin pysäkeistä eikä tarkista tekstiä. (Isoisän kortin
+   `--pino-harsokorjaus` poistui kuvien mukana, ks. kohta 3.)
+
+Vartijat: tests/lento-ajoitus.test.mjs (viive 2,2–2,5 s; css:n ja
+fitIntron kirjasinkoot sama luku; fitIntro ajetaan portin takana),
+tests/etusivupallo.test.mjs (etusivulla ei ole kuvapinoa missään
+muodossa, pakka ja sen valintasääntö tallella, harson reunapeitto alle
+0,05) ja savuke `tools/savukkeet/savuke-etusivupallo.mjs` E4a–E4c ja
+E4k (ei kuvia kahden ja puolen kierroksen aikana), E11d/E11e sekä uusi
+**E11f** (otsikon rivien laatikot ja kirjasinkoot samat 0,3 s ja 25 s
+kohdalla). Kaappaukset Chromiumilla 1400 × 900, 2000 × 1300 ja
+390 × 844 oikealla 2026-09-05c-videolla hetkiltä 0,3 / 2,5 / 3,5 / 6 /
+25 s.
+
+AVOIN: kuvat jäivät pois etusivulta, mutta pakka on olemassa ja
+maksettu — sille on löydettävä uusi paikka (albumi tai lentokohtaus),
+tai 27 vedosta jää käyttämättä.

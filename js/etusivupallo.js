@@ -25,6 +25,22 @@
  * olla blurrattuja ja haalealla ja jäädä tekstin alle"* ja *"ne voisivat
  * pinoutua hieman sikin sokin toistensa päälle."*
  *
+ * ── ISOISÄN KUVAT POIS ETUSIVULTA (6.9.2026 klo 01.20) ─────────────
+ *
+ * OMISTAJAN PÄÄTÖS, sanatarkasti: *"Jätä isoisän kuvat pois
+ * etusivulta"*. Kuvapino (kortit, asennot, katto, laskeutumisten
+ * kuvahetket) on POISTETTU kokonaan tästä kerroksesta: etusivulla ei
+ * synny pinon DOMia eikä sen tyylejä käytetä, joten kuolevaa koodia ei
+ * jää ajoon. Poistettu koodi on kokonaisuudessaan versiohistoriassa
+ * (viimeinen kuvallinen versio v1603:n jälkeen), joten palautus on
+ * käytännössä revert.
+ *
+ * PAKKA JÄÄ: js/packs/etusivun-isoisakuvat.js ja tämän moduulin
+ * `saapumisenKuva` / `saapumisenKaupunki` / `ETUSIVUN_KUVAKIERTO`
+ * pysyvät vientinä — kuvat ovat aitoja aikalaisvedoksia ja odottavat
+ * uutta käyttöpaikkaansa (albumi, lentokohtaus), eikä pakkaa haluta
+ * hakea uudelleen kuvaputkelta.
+ *
  * (Raamattu: PELAAJAN LAUTAKYTKIN, VANHIN MAAILMANKUVA -LINSSI,
  * ETUSIVUN PALLO, kohta 3; docs/moduulit/karttapallo.md luku 0 kohta 5
  * ja luku 10.3.)
@@ -107,8 +123,7 @@
 
 import { laudaltaAsteiksi } from './fokusmitat.js';
 import { PEILI_JUURI } from './media.js';
-import { rajausTyyli, valokuvanKuvateksti } from './isoisan-valokuvat.js';
-import { ETUSIVUN_ISOISAKUVAT, isoisakuvanSavy } from './packs/etusivun-isoisakuvat.js';
+import { ETUSIVUN_ISOISAKUVAT } from './packs/etusivun-isoisakuvat.js';
 import {
   ETUSIVUPALLO_AVAIN, asetaEtusivupallo, etusivupalloOletus,
   etusivupalloOsoitteesta, etusivupalloPaalla,
@@ -506,57 +521,17 @@ export function saapumisenKaupunki(reitti, nro) {
 /**
  * Monennenko laskeutumisen kuva (1 = ensimmäinen kohde Lontoon jälkeen).
  * Kaupungin oma kuva voittaa kierron; muuten kierretään pakkaa.
+ *
+ * ETUSIVU EI ENÄÄ KUTSU TÄTÄ (omistaja 6.9.2026 klo 01.20: *"Jätä
+ * isoisän kuvat pois etusivulta"*). Funktio jää, koska se on pakan
+ * ainoa valintasääntö ja odottaa kuvien uutta käyttöpaikkaa; vartiot
+ * ovat tests/etusivupallo.test.mjs:ssä.
  */
 export function saapumisenKuva(nro, kaupunki = null, kuvat = ETUSIVUN_ISOISAKUVAT) {
   if (!kuvat.length || nro < 1) return null;
   const oma = kaupunki ? kuvat.findIndex((k) => k.kaupunki === kaupunki) : -1;
   const i = oma >= 0 ? oma : (nro - 1) % kuvat.length;
   return { avain: kuvat[i].tunnus, kuva: kuvat[i] };
-}
-
-/* ==================== PINON ASENNOT =============================== */
-
-/*
- * PINO SIKIN SOKIN (omistaja 5.9.2026 klo 22.45: *"ne voisivat pinoutua
- * hieman sikin sokin toistensa päälle"*). Kortti laskeutuu pinon päälle
- * pieneen siirtoon ja kallistukseen, ja edelliset jäävät alle.
- */
-/** Siirto kortin leveyden prosentteina (± tämä). */
-export const PINON_SIIRTO = 5;
-/** Kallistus asteina (± tämä). */
-export const PINON_KULMA = 8;
-/** Pinossa kerrallaan enintään näin monta korttia. */
-export const PINON_KATTO = 5;
-/** Laskeutumisen kesto (ms) — sama luku kuin css .etusivupallo-kuvassa. */
-export const PINON_LASKU_MS = 700;
-/** Alimman kortin häivytys (ms) — sama luku kuin css .haipyy-tilassa. */
-export const PINON_HAIVYTYS_MS = 620;
-
-/** Kokonaisluvun sekoitus välille [0, 1) — sama luku antaa saman arvon. */
-function siemenluku(x) {
-  let h = Math.imul(x ^ 0x9e3779b9, 0x85ebca6b);
-  h ^= h >>> 13;
-  h = Math.imul(h, 0xc2b2ae35);
-  h ^= h >>> 16;
-  return (h >>> 0) / 4294967296;
-}
-
-/**
- * Kortin asento pinossa: SIEMENELLINEN eli deterministinen. Sama
- * laskeutumisnumero antaa aina saman siirron ja kallistuksen, joten
- * pino näyttää joka loopilla samalta ja testit ovat vakaita.
- *
- * SIEMEN ON LASKEUTUMISNUMERO EIKÄ KUVAN INDEKSI: pakassa on
- * toistaiseksi kaksi kuvaa, ja kuvaan sidottu asento pinoaisi ne
- * täsmälleen päällekkäin — viiden kortin pino näyttäisi kahdelta
- * kortilta eikä sikin sokin olevalta pinolta. Kun kuvaputken kaksitoista
- * kuvaa tulevat pakkaan, jokainen laskeutuminen on yhä oma asentonsa.
- */
-export function pinonAsento(nro) {
-  const luku = (siirto, laajuus) => Number(
-    ((siemenluku(nro * 3 + siirto) * 2 - 1) * laajuus).toFixed(2),
-  );
-  return { dx: luku(1, PINON_SIIRTO), dy: luku(2, PINON_SIIRTO), kulma: luku(3, PINON_KULMA) };
 }
 
 /* ==================== KERROS ETUSIVULLE =========================== */
@@ -703,31 +678,17 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
   avaus?.classList.add('intro-pallolla');
 
   /*
-   * ISOISÄN KUVAT PINOKSI TEKSTIN ALLE (omistaja 5.9.2026 klo 22.45:
-   * *"isoisän kuvat voivat olla blurrattuja ja haalealla ja jäädä
-   * tekstin alle"*, *"ne voisivat pinoutua hieman sikin sokin toistensa
-   * päälle"*). Pino on OMA KERROKSENSA .intro-paneelissa: videon
-   * PÄÄLLÄ mutta julisteotsikon, avaustekstin ja nappien ALLA
-   * (css/styles.css z-indexit). Siksi esteväistöä ja pystysiirtoa ei
-   * enää ole lainkaan — kortit saavat jäädä tekstin alle, ja juuri se
-   * antaa niille tilan olla selvästi isompia.
-   *
-   * Pinon paikan ja koon antaa yksin css/styles.css
-   * (.etusivupallo-pino): puhelimella keskellä alaosaa, työpöydällä
-   * paneelin oikeassa alaneljänneksessä. Sama paikka joka loopilla.
+   * ISOISÄN KUVAT JÄTETTIIN POIS ETUSIVULTA (omistaja 6.9.2026 klo
+   * 01.20, sanatarkasti: *"Jätä isoisän kuvat pois etusivulta"*).
+   * Tässä kohdassa syntyi ennen kuvapinon oma kerros
+   * (`.etusivupallo-pino`) — nyt paneeliin ei lisätä mitään pallon
+   * lisäksi, eikä kuvakortteja lasketa yhdelläkään laskeutumisella.
    */
-  const paneeli = avaus ?? kotelo;
-  const pino = document.createElement('div');
-  pino.className = 'etusivupallo-pino';
-  pino.setAttribute('aria-hidden', 'true');
-  paneeli.appendChild(pino);
 
   /* ---------- piirto ---------- */
 
   let purettu = false;
   let kehys = 0;
-  let edellinenKuva = 0;
-  let edellinenAika = 0;
   let suuntaAste = 0;
 
   /** Kerroksen mitat nyt — sovitus lasketaan näistä (cover). */
@@ -740,95 +701,6 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     pallonPiste(koneenTila(reitti, t), kameranNakyma(reitti, t, kamera), mitat),
     sovitusNyt(),
   );
-
-  /*
-   * KORTTI LASKEUTUU PINON PÄÄLLE. Asento on siemenellinen
-   * (pinonAsento), joten sama laskeutuminen tuo kortin aina samaan
-   * kohtaan — pino näyttää joka loopilla samalta eivätkä kaappaukset
-   * heilu. Laskeutuminen animoidaan pehmeästi (Raamattu: KAIKKI LIIKE
-   * ANIMOIDAAN PEHMEASTI): kortti aloittaa hieman ylhäältä, isompana ja
-   * läpinäkyvänä ja asettuu PINON_LASKU_MS:n aikana paikalleen.
-   * Vähennetyllä liikkeellä se on paikallaan heti (css poistaa
-   * siirtymän, ja luokka lisätään ilman kehysodotusta).
-   */
-  const pinossa = [];
-  const ajastimet = new Set();
-  const ajasta = (fn, ms) => {
-    const id = win.setTimeout(() => { ajastimet.delete(id); fn(); }, ms);
-    ajastimet.add(id);
-  };
-
-  const laskeKortti = (nro) => {
-    const valinta = saapumisenKuva(nro, saapumisenKaupunki(reitti, nro));
-    if (!valinta || purettu) return;
-    const asento = pinonAsento(nro);
-    const savy = isoisakuvanSavy(valinta.kuva);
-
-    const kortti = document.createElement('figure');
-    kortti.className = 'etusivupallo-kuva';
-    kortti.setAttribute('aria-hidden', 'true');
-    kortti.style.setProperty('--pino-dx', String(asento.dx));
-    kortti.style.setProperty('--pino-dy', String(asento.dy));
-    kortti.style.setProperty('--pino-kulma', `${asento.kulma}deg`);
-
-    const kuvaEl = document.createElement('img');
-    kuvaEl.className = 'isoisa-rajattu';
-    kuvaEl.decoding = 'async';
-    kuvaEl.draggable = false;
-    // Kortti on aria-hidden (koriste), mutta selite kulkee mukana.
-    kuvaEl.alt = valinta.kuva.selite ?? '';
-    kuvaEl.src = valinta.kuva.osoite;
-    /*
-     * HAALEUS JA SUMENNUS OVAT KUVAKOHTAISIA (pakan sävy): kuvaputken
-     * uudet vedokset ovat vaaleita (vinjetti vaaleaan) eivätkä kestä
-     * samaa haaleutta kuin tummat albumiinivedokset.
-     */
-    kuvaEl.style.cssText = [
-      rajausTyyli(valinta.kuva),
-      `--kuvan-haalea:${savy.haalea}`,
-      `--kuvan-sumennus:${savy.sumennus}px`,
-    ].filter(Boolean).join(';');
-
-    const lappu = document.createElement('figcaption');
-    lappu.textContent = valokuvanKuvateksti(valinta.kuva);
-    kortti.append(kuvaEl, lappu);
-
-    /*
-     * KUVATEKSTI VAIN PÄÄLLIMMÄISELLE. Viisi kallistettua korttia
-     * päällekkäin toisi viisi lappua samaan kohtaan, eikä yksikään
-     * niistä olisi luettava; päällimmäinen on se, jota katse seuraa.
-     * Lappu ei ole sumennettu eikä haalea (suodatin ja peittävyys ovat
-     * <img>-elementillä), joten se pysyy luettavana.
-     */
-    for (const vanha of pinossa) vanha.classList.remove('uusin');
-    kortti.classList.add('uusin');
-    pino.appendChild(kortti);
-    pinossa.push(kortti);
-    if (vahennettyLiike) kortti.classList.add('laskeutunut');
-    else {
-      win.requestAnimationFrame(() => win.requestAnimationFrame(() => {
-        if (!purettu) kortti.classList.add('laskeutunut');
-      }));
-    }
-
-    /*
-     * PINOSSA ENINTÄÄN PINON_KATTO KORTTIA: kun katto ylittyy, ALIN
-     * häivytetään pehmeästi pois ja poistetaan vasta häivytyksen
-     * jälkeen.
-     */
-    while (pinossa.length > PINON_KATTO) {
-      const alin = pinossa.shift();
-      alin.classList.add('haipyy');
-      ajasta(() => alin.remove(), PINON_HAIVYTYS_MS + 80);
-    }
-  };
-
-  const tyhjennaPino = () => {
-    for (const id of ajastimet) win.clearTimeout(id);
-    ajastimet.clear();
-    pinossa.length = 0;
-    pino.remove();
-  };
 
   const piirraHetki = (t) => {
     const nakyma = kameranNakyma(reitti, t, kamera);
@@ -866,27 +738,21 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     const haivytys = Math.min(1, t / HAIVYTYS_S, (kesto - t) / HAIVYTYS_S);
     svg.style.opacity = Math.max(0, haivytys).toFixed(3);
 
-    const saapunut = saapumisia(reitti, t);
-    if (saapunut > 0 && saapunut !== edellinenKuva) laskeKortti(saapunut);
-    edellinenKuva = saapunut;
+    /*
+     * LASKEUTUMINEN EI TUO ENÄÄ MITÄÄN (omistaja 6.9.2026 klo 01.20:
+     * *"Jätä isoisän kuvat pois etusivulta"*). Tässä luettiin ennen
+     * `saapumisia` ja laskettiin kortti pinoon; nyt piirto on pelkkä
+     * viiva ja kone.
+     */
   };
 
   const askel = () => {
     if (purettu) return;
-    const t = (video.currentTime || 0) % kesto;
-    if (t < edellinenAika) {
-      /*
-       * KIERROS ALKOI ALUSTA — PINO JÄÄ. Laskuri nollataan, mutta
-       * kortteja ei häivytetä: viisi korttia katoaisi kerralla juuri
-       * siinä saumassa, jonka video ylittää huomaamatta, ja katse
-       * hakeutuisi tyhjään kohtaan. Pinon katto (PINON_KATTO) pitää
-       * huolen siitä, ettei pino kasva loputtomiin — vanhin kortti
-       * häipyy aina yksi kerrallaan uuden alta.
-       */
-      edellinenKuva = 0;
-    }
-    edellinenAika = t;
-    piirraHetki(t);
+    /*
+     * Kierroksen saumaa ei enää tarvitse tunnistaa (ennen se nollasi
+     * kuvalaskurin): video looppaa itsestään ja piirto lukee kellon.
+     */
+    piirraHetki((video.currentTime || 0) % kesto);
     kehys = win.requestAnimationFrame(askel);
   };
 
@@ -911,7 +777,6 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
        * tässä vaiheessa voinut jo tulla näkyviin, joten kerros
        * HÄIVYTETÄÄN pois eikä napsauteta: pergamentti ei välähdä.
        */
-      tyhjennaPino();
       juuri.classList.remove('nakyy');
       avaus?.classList.remove('intro-pallolla');
       win.setTimeout(() => juuri.remove(), KERROKSEN_ILMESTYS_MS + 80);
@@ -940,7 +805,6 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
       try { video.pause(); } catch { /* ei väliä */ }
       video.removeAttribute('src');
       avaus?.classList.remove('intro-pallolla');
-      tyhjennaPino();
       juuri.remove();
     },
   };

@@ -1484,7 +1484,9 @@ const INTRO_TYPE_MS = 190;
  *      (js/etusivupallo.js),
  *   2. OSAN_VIIVE_MS:n päästä alaotsikko "osa II · unohdettu aarre"
  *      feidaa sisään OSAN_HAIVYTYS_MS:n ajan (css .juliste-osa,
- *      --osan-haivytys),
+ *      --osan-haivytys) — omistajan tarkennus 5.9.2026 klo 00.20,
+ *      sanatarkasti: *"osa 2 saisi tulla sekunnin myöhemmin"*, joten
+ *      viive on 1,3 s → 2,3 s,
  *   3. vasta häivytyksen jälkeen alkaa kirjoituskone ja sen perässä
  *      kertojan luenta — pari säilyttää keskinäisen järjestyksensä
  *      (paikkarivi naputetaan ensin, luenta alkaa rungon kanssa),
@@ -1493,7 +1495,7 @@ const INTRO_TYPE_MS = 190;
  * Vähennetyllä liikkeellä (prefers-reduced-motion) kaikki on ruudulla
  * heti eikä yhtään viivettä oteta (Raamattu, sääntö 4).
  */
-const OSAN_VIIVE_MS = 1300;
+const OSAN_VIIVE_MS = 2300;
 const OSAN_HAIVYTYS_MS = 900;
 /*
  * KIRJOITTAJAN RYTMI. Sanaväli huojuu, ja välimerkin jälkeen pidetään
@@ -1562,6 +1564,25 @@ export function kirjoituksenKesto(teksti, tahti = INTRO_TYPE_MS) {
  */
 const INTRO_FONT_MAX = 1.14;
 const INTRO_FONT_MIN = 0.6;
+/*
+ * JULISTEOTSIKON KERROIN: selaimen oma h2-koko. Otsikko oli ennen
+ * 26.8.2026 tekstipalstan lapsi ja peri kokonsa siitä kerrottuna
+ * 1,5:llä; kerroin pitää sen entisen kokoisena nyt, kun se on oma
+ * lohkonsa.
+ *
+ * LUKU ON MYÖS CSS:SSÄ (.intro-juliste font-size = INTRO_FONT_MAX ×
+ * tämä = 1,71rem; .intro-palsta = INTRO_FONT_MAX = 1,14rem), ja juuri
+ * siitä syystä se on nimetty vakioksi. Omistajan havainto 5.9.2026
+ * klo 00.20, sanatarkasti: *"etusivun otsikko hyppää alussa eri kokoon
+ * kun kirjoituskone teksti alkaa"* — css:n lähtökoko (1,44rem) ei ollut
+ * sama kuin fitIntron mittaama (1,71rem), ja koska fitIntro ajettiin
+ * vasta kirjoituskoneen alkaessa, otsikko kasvoi juuri silloin 19 %
+ * ja nousi 27 px ylemmäs (mitattu Chromiumilla 1400 × 900). Nyt
+ * lähtökoko on sama luku ja mittaus tehdään jo portin takana, joten
+ * otsikko on koko avauksen ajan samassa paikassa samankokoisena.
+ * Vartija: tests/lento-ajoitus.test.mjs.
+ */
+const JULISTEEN_KERROIN = 1.5;
 /*
  * AVAUKSEN YLÄLOHKON HAARUKKA (omistajan pelitestipalaute v1119:
  * *"maailmankarttakuva katkeaa nyt liian aikaisin, eteläinen
@@ -5969,12 +5990,16 @@ export class UI {
    */
   fitIntro() {
     /*
-     * Otsikon kerroin 1.5 on selaimen oma h2-koko: ennen 26.8.2026
-     * juliste oli tekstipalstan lapsi ja peri kokonsa siitä kerrottuna
-     * 1,5:llä. Nyt se on oma lohkonsa, ja sama kerroin pitää otsikon
-     * täsmälleen entisen kokoisena.
+     * Otsikon kerroin (JULISTEEN_KERROIN) on selaimen oma h2-koko:
+     * ennen 26.8.2026 juliste oli tekstipalstan lapsi ja peri kokonsa
+     * siitä kerrottuna 1,5:llä. Nyt se on oma lohkonsa, ja sama kerroin
+     * pitää otsikon täsmälleen entisen kokoisena.
+     *
+     * TÄMÄ AJETAAN JO PORTIN TAKANA (renderIntro): mittaus ei saa osua
+     * kirjoituskoneen alkuun, tai otsikko hyppäisi juuri siinä
+     * (omistaja 5.9.2026 klo 00.20).
      */
-    this.sovitaIntroLohko(this.introKartta, this.introOtsikko, 1.5);
+    this.sovitaIntroLohko(this.introKartta, this.introOtsikko, JULISTEEN_KERROIN);
     this.sovitaIntroLohko(this.introArkki, this.introPalsta);
   }
 
@@ -15243,6 +15268,17 @@ export class UI {
        * sumennettuna (css .start-gate), joten piilotus kuuluu tänne.
        */
       this.piilotaAvausosa();
+      /*
+       * KIRJASINKOKO MITATAAN JO PORTIN TAKANA (omistaja 5.9.2026 klo
+       * 00.20: *"etusivun otsikko hyppää alussa eri kokoon kun
+       * kirjoituskone teksti alkaa"*). fitIntro ajettiin ennen vasta
+       * kertomuksen alkaessa, ja koska se asettaa lohkoille eri koon
+       * kuin css:n lähtöarvo, julisteotsikko kasvoi ja nousi juuri
+       * kirjoituskoneen ensimmäisellä naksahduksella. Mittaus on
+       * idempotentti (sama lohkon korkeus → sama koko), joten myöhemmät
+       * kutsut eivät enää liikuta mitään.
+       */
+      this.fitIntro();
       this.showAloitusportti();
       return;
     }
@@ -15250,6 +15286,9 @@ export class UI {
     // Pelin resetistä palattaessa portti ohitetaan: alaotsikko piiloon
     // tässä samassa piirrossa, ennen kuin mitään ehtii näkyä.
     this.piilotaAvausosa();
+    // Sama mittaus myös tätä kautta (portti ohitettu): koko on
+    // paikallaan ennen ensimmäistäkään kirjainta.
+    this.fitIntro();
     /*
      * Avauslennon esilämmitys alkaa samasta hetkestä kuin kertomus:
      * pelaaja kuuntelee, peli rakentaa kohdelaudan taustalla

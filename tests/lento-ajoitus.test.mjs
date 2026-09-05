@@ -395,11 +395,16 @@ test('pöllön kuplat odottavat matkapäiväkirjan luennan loppumista', () => {
  * lähdekoodista niin kuin muutkin ajoitukset.
  */
 
-test('Osa II feidaa sisään reilun sekunnin päästä, vakioina', () => {
+test('Osa II feidaa sisään sekunnin myöhemmin kuin ennen, vakioina', () => {
   const viive = luku('OSAN_VIIVE_MS');
   const haivytys = luku('OSAN_HAIVYTYS_MS');
-  assert.ok(viive >= 1200 && viive <= 1500,
-    `alaotsikon viive ${viive} ms ei ole omistajan "reilu sekunti" (1,2-1,5 s)`);
+  /*
+   * SEKUNTI LISÄÄ (omistaja 5.9.2026 klo 00.20, sanatarkasti: *"osa 2
+   * saisi tulla sekunnin myöhemmin"*): 1,3 s → 2,3 s. Häivytys pysyy
+   * ennallaan, joten kirjoituskone ja luenta siirtyvät saman sekunnin.
+   */
+  assert.ok(viive >= 2200 && viive <= 2500,
+    `alaotsikon viive ${viive} ms ei ole sekuntia entistä myöhemmin (2,2-2,5 s)`);
   assert.ok(haivytys >= 700 && haivytys <= 1100,
     `häivytys ${haivytys} ms ei ole noin 900 ms`);
   // Häivytyksen kesto kulkee css:ään muuttujana: yksi luku, kaksi paikkaa.
@@ -412,6 +417,49 @@ test('Osa II feidaa sisään reilun sekunnin päästä, vakioina', () => {
   // Piilotus on peittävyyttä eikä displayta: mikään ei saa hypätä.
   assert.doesNotMatch(CSS, /\.intro-juliste\.osa-piilossa \.juliste-osa \{[^}]*display: none/,
     'alaotsikon piilotus siirtäisi julisteen rivejä');
+});
+
+/*
+ * OTSIKKO EI HYPPÄÄ AVAUKSEN AIKANA (omistajan havainto 5.9.2026 klo
+ * 00.20, sanatarkasti: *"etusivun otsikko hyppää alussa eri kokoon kun
+ * kirjoituskone teksti alkaa"*).
+ *
+ * JUURISYY oli kaksi eri lukua samasta koosta: css:n lähtökoko
+ * (.intro-juliste 1,44rem) ja js/ui.js fitIntron mittauksen lähtökoko
+ * (INTRO_FONT_MAX × JULISTEEN_KERROIN = 1,71rem). fitIntro ajettiin
+ * vasta kertomuksen alkaessa, joten julisteotsikko kasvoi 19 % ja
+ * nousi 27 px täsmälleen kirjoituskoneen ensimmäisellä naksahduksella
+ * (mitattu Chromiumilla 1400 × 900 ja 1000 × 700).
+ *
+ * Kaksi vartiota: luvut ovat samat, ja mittaus tehdään jo portin
+ * takana — ei vasta kirjoituskoneen kanssa.
+ */
+test('avausotsikon koko on css:ssä ja fitIntrossa sama luku', () => {
+  // Oma lukija: `luku` lukee kokonaislukuja, nämä ovat desimaaleja.
+  const desimaali = (nimi) => Number(UI.match(new RegExp(`const ${nimi} = ([\\d.]+)`))[1]);
+  const max = desimaali('INTRO_FONT_MAX');
+  const kerroin = desimaali('JULISTEEN_KERROIN');
+  assert.equal(kerroin, 1.5, 'julisteen kerroin on selaimen oma h2-koko');
+  const juliste = CSS.match(/\.intro-juliste \{[\s\S]*?\n\}/)[0];
+  const palsta = CSS.match(/\.intro-palsta \{[\s\S]*?\n\}/)[0];
+  const koko = (lohko) => Number(lohko.match(/font-size: ([\d.]+)rem;/)[1]);
+  assert.equal(koko(juliste), Number((max * kerroin).toFixed(4)),
+    'julisteotsikon lähtökoko ei ole INTRO_FONT_MAX × JULISTEEN_KERROIN — otsikko hyppäisi');
+  assert.equal(koko(palsta), max,
+    'tekstipalstan lähtökoko ei ole INTRO_FONT_MAX — palsta ja sen em-mittaiset lapset hyppäisivät');
+  // Kerroin luetaan vakiosta eikä kirjoiteta lukuna sovitukseen.
+  assert.match(UI, /this\.sovitaIntroLohko\(this\.introKartta, this\.introOtsikko, JULISTEEN_KERROIN\);/,
+    'fitIntro käyttää yhä irrallista lukua julisteen kertoimena');
+});
+
+test('kirjasinkoko mitataan jo portin takana, ei kirjoituskoneen kanssa', () => {
+  const render = UI.match(/ {2}renderIntro\(\) \{[\s\S]*?\n {2}\}\n/)[0];
+  // Portin haara: piilota alaotsikko, mittaa koko, näytä portti.
+  assert.match(render, /this\.piilotaAvausosa\(\);\n[\s\S]{0,900}?this\.fitIntro\(\);\n\s*this\.showAloitusportti\(\);/,
+    'fitIntro ei aja portin takana — otsikko saisi kokonsa vasta kirjoituskoneen alkaessa');
+  // Portin ohittava haara (pelin reset) mittaa myös ennen ajastimia.
+  assert.match(render, /this\.introShown = true;[\s\S]{0,600}?this\.fitIntro\(\);[\s\S]*?this\.naytaAvausosa\(/,
+    'resetistä palattaessa koko mitattaisiin vasta kertomuksen alkaessa');
 });
 
 test('kirjoituskone ja luenta alkavat vasta Osa II:n häivytyksen jälkeen', () => {

@@ -5726,8 +5726,13 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   flex-direction: column;
   align-items: center;
   /* Kokoa säätää js/ui.js fitIntro arkin korkeuden mukaan
-     (INTRO_FONT_MAX/MIN); tämä on lähtöarvo ennen mittausta. */
-  font-size: 0.96rem;
+     (INTRO_FONT_MAX/MIN). LÄHTÖARVO ON SAMA LUKU KUIN INTRO_FONT_MAX
+     (1,14rem): entinen 0,96rem ei ollut mittauksen lähtökoko, joten
+     palsta — ja sen em-mittainen nappi ja työpöytäkuva — hyppäsi
+     kokoa siinä hetkessä, jona fitIntro ensi kerran ajettiin
+     (omistaja 5.9.2026 klo 00.20). Kapealla ruudulla fitIntro kutistaa
+     tästä alaspäin, mutta se tapahtuu jo portin takana. */
+  font-size: 1.14rem;
   pointer-events: none;
 }
 
@@ -5746,10 +5751,16 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   position: relative; /* sumuverhon päälle */
   width: min(560px, 86%);
   margin: 0;
-  /* Lähtöarvo ennen fitIntron mittausta: INTRO_FONT_MAX kerrottuna
-     selaimen omalla h2-kertoimella (1,5), jolla otsikko latoutui myös
-     ennen — silloin se peri kokonsa tekstipalstalta. */
-  font-size: 1.44rem;
+  /*
+   * LÄHTÖARVO = INTRO_FONT_MAX × JULISTEEN_KERROIN (1,14 × 1,5 =
+   * 1,71rem), siis täsmälleen se koko, jolla js/ui.js fitIntro
+   * aloittaa mittauksensa. Entinen 1,44rem oli eri luku, ja otsikko
+   * kasvoi 19 % ja nousi 27 px juuri kirjoituskoneen alkaessa —
+   * omistajan havainto 5.9.2026 klo 00.20, sanatarkasti: *"etusivun
+   * otsikko hyppää alussa eri kokoon kun kirjoituskone teksti
+   * alkaa"*. Vartija: tests/lento-ajoitus.test.mjs.
+   */
+  font-size: 1.71rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6063,156 +6074,21 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 .etusivupallo-kone { transition: opacity 260ms ease; }
 
 /*
- * ISOISÄN KUVAT PINONA, HAALEINA JA TEKSTIN ALLA (omistaja 5.9.2026 klo
- * 22.45, sanatarkasti: *"isoisän kuvat voivat olla blurrattuja ja
- * haalealla ja jäädä tekstin alle"* ja *"ne voisivat pinoutua hieman
- * sikin sokin toistensa päälle"*).
- *
- * KERROSJÄRJESTYS ON KOKO IDEA: pino on videon PÄÄLLÄ mutta
- * julisteotsikon, avaustekstin ja nappien ALLA. Kun kortit eivät enää
- * kilpaile tekstin kanssa tilasta, ne saavat olla selvästi isompia,
- * eikä esteväistöä tarvita lainkaan: moduulin paikanvarmistus ja sen
- * pystysiirron muuttuja poistuivat kokonaan.
- * Pinolla on siksi oma z-index .intro-paneelin sisällä:
+ * ISOISÄN KUVAT JÄTETTIIN POIS ETUSIVULTA (omistajan päätös 6.9.2026
+ * klo 01.20, sanatarkasti: *"Jätä isoisän kuvat pois etusivulta"*).
+ * Tässä olivat kuvapinon tyylit (`.etusivupallo-pino`,
+ * `.etusivupallo-kuva`, kuvateksti ja `--pino-harsokorjaus`); ne on
+ * poistettu kokonaan, koska js/etusivupallo.js ei enää luo pinon
+ * DOMia — jäljelle jäänyt tyyli olisi kuollutta koodia. Palautus on
+ * revert versiohistoriasta. Avauspaneelin kerrokset ovat nyt:
  *
  *   0  .etusivupallo   video, punainen viiva ja kone
  *   1  .intro-verho    pergamenttihuntu
- *   2  .etusivupallo-pino
  *   3  .intro-kartta ja .intro-arkki (otsikko, teksti, napit)
  *
- * PAIKKA ON KIINTEÄ ALUE, SAMA JOKA LOOPILLA: puhelimella ja
- * tabletilla keskellä alaosaa, työpöydällä (≥ 900 px) paneelin oikeassa
- * alaneljänneksessä. Kortit ovat pinon sisällä absoluuttisesti
- * ALAREUNASTAAN kiinni, joten eri korkuiset vedokset pinoutuvat samalle
- * pohjalle.
+ * Pakka js/packs/etusivun-isoisakuvat.js jää tallelle: kuvat odottavat
+ * uutta käyttöpaikkaansa (albumi, lentokohtaus).
  */
-.etusivupallo-pino {
-  position: absolute;
-  z-index: 2;
-  /* Avaustekstin harso lepää pinon päällä alle 900 px:n ruuduilla. */
-  --pino-harsokorjaus: 0.25;
-  left: 50%;
-  bottom: 3%;
-  transform: translateX(-50%);
-  /* Selvästi isompi kuin ennen (puhelimella 110px): kortti saa jäädä
-     tekstin alle, joten koko ei ole enää tekstin kaistasta kiinni.
-     Omistaja 5.9.2026 ilta: "isoisän kuvan koko voi olla isompi kun se
-     menee tekstin alle blurrattuna" — mitat nostettiin vielä kerran.
-     Puhelimella pino on niin alhaalla kuin mahtuu, koska avaustekstin
-     pergamenttiharso (.intro-palsta::before) vaalentaa kaiken allaan. */
-  width: clamp(220px, 62vw, 340px);
-  pointer-events: none;
-}
-
-@media (min-width: 900px) {
-  /* Työpöytä: paneelin oikea alaneljännes ja omistajan mitta. */
-  .etusivupallo-pino {
-    --pino-harsokorjaus: 0;
-    left: auto;
-    right: 5%;
-    bottom: 7%;
-    transform: none;
-    width: clamp(300px, 46vw, 600px);
-  }
-}
-
-/*
- * KORTTI LASKEUTUU PINOON. Siirto (--pino-dx/--pino-dy, prosenttia
- * kortin omasta koosta) ja kallistus (--pino-kulma) tulevat
- * js/etusivupallo.js:n siemenellisestä `pinonAsento`-funktiosta: sama
- * laskeutuminen on aina samassa asennossa.
- *
- * Lähtötila on hieman ylhäällä, isompana ja läpinäkyvänä; .laskeutunut
- * asettaa kortin paikalleen PINON_LASKU_MS:n aikana (Raamattu: KAIKKI
- * LIIKE ANIMOIDAAN PEHMEASTI). Vähennetyllä liikkeellä siirtymä on pois
- * ja kortti on paikallaan heti.
- */
-.etusivupallo-kuva {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-  transform:
-    translate(calc(var(--pino-dx, 0) * 1%), calc(var(--pino-dy, 0) * 1% - 4.5%))
-    rotate(var(--pino-kulma, 0deg)) scale(1.04);
-  transition: opacity 700ms var(--liike-pehmea), transform 700ms var(--liike-pehmea);
-}
-
-.etusivupallo-kuva.laskeutunut {
-  opacity: 1;
-  transform:
-    translate(calc(var(--pino-dx, 0) * 1%), calc(var(--pino-dy, 0) * 1%))
-    rotate(var(--pino-kulma, 0deg));
-}
-
-/* Alin kortti häipyy pehmeästi, kun pinon katto (5) ylittyy. */
-.etusivupallo-kuva.haipyy {
-  opacity: 0;
-  transition: opacity 620ms var(--liike-pehmea);
-}
-
-/*
- * HAALEA JA SUMEA VEDOS. Peittävyys ja sumennus ovat KUVAKOHTAISIA
- * (js/packs/etusivun-isoisakuvat.js sävyt: tumma 0,55 / vaalea 0,85),
- * koska kuvaputken uudet kuvat ovat vaaleita (vinjetti vaaleaan) ja
- * katoaisivat kokonaan tummien vedosten haaleudella. Seepia ja
- * kuluneen vedoksen sävy tulevat kuvasta itsestään, ei suodattimesta.
- *
- * iOS-SÄÄNNÖN POIKKEUS, TIETOINEN: talon sääntö kieltää suodattimen
- * SVG-KERROKSELTA kartalla (iOS:n webapp-tila palauttaa suodatetun
- * SVG:n tyhjänä taustalta palattaessa). Tämä on tavallinen <img>, ei
- * SVG-kerros, ja sumennus on staattinen — ei animoitu — joten se saa
- * jäädä myös vähennetyn liikkeen tilassa.
- *
- * Suodatin on kuvassa eikä kortissa, jotta kuvateksti pysyy terävänä ja
- * täydellä peittävyydellä (luettavuus).
- */
-.etusivupallo-kuva img {
-  display: block;
-  width: 100%;
-  height: auto;
-  /*
-   * HARSOKORJAUS: puhelimella ja tabletilla pino jää avaustekstin
-   * pergamenttiharson (.intro-palsta::before, jopa 0,94 peittävä) alle,
-   * joka söisi haaleasta kortista vielä puolet — mitattu Chromiumilla
-   * 390 × 844. Työpöydällä pino on palstan vieressä eikä harsoa ole,
-   * joten korjaus on nolla.
-   */
-  opacity: calc(var(--kuvan-haalea, 0.55) + var(--pino-harsokorjaus, 0));
-  filter: blur(var(--kuvan-sumennus, 1.5px));
-  /* Varjo antaa haalealle kortille reunan vaalean pergamentin päällä —
-     ilman sitä sumennettu kuva sulaisi taustaansa. */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.34);
-}
-
-/*
- * KUVATEKSTI VAIN PÄÄLLIMMÄISELLE KORTILLE (.uusin). Viisi kallistettua
- * korttia päällekkäin toisi viisi lappua lähes samaan kohtaan, eikä
- * yksikään olisi luettava; päällimmäinen on se, jota katse seuraa.
- * Teksti on paikka + vuosi (Raamattu: ISOISA JAA ARVOITUKSEKSI) ja
- * mahtuu yhdelle riville.
- */
-.etusivupallo-kuva figcaption {
-  display: block;
-  margin-top: 0.22rem;
-  font-family: var(--font-type);
-  font-size: 0.62rem;
-  letter-spacing: 0.06em;
-  white-space: nowrap;
-  color: #3a2a16;
-  /* Kolme halokerrosta: lappu lukeutuu myös häivytetyn kuvan alalaidan
-     ja terävän laattakartan päällä (harso ei enää auta, 5.9.2026). */
-  text-shadow: 0 0 6px rgba(255, 246, 224, 0.95), 0 0 3px rgba(255, 246, 224, 0.95),
-    0 0 1px rgba(255, 246, 224, 0.95);
-  text-align: center;
-  opacity: 0;
-  transition: opacity 620ms var(--liike-pehmea);
-}
-
-.etusivupallo-kuva.uusin.laskeutunut figcaption { opacity: 1; }
 
 /*
  * SUMUVERHO KEVENEE PALLON PÄÄLLÄ. Video on jo sumennettu, joten
@@ -6220,8 +6096,7 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * pergamenttihuntu (omistajan ehto: efekti ei saa viedä etusivulla tehoja).
  */
 .intro.intro-pallolla .intro-verho {
-  /* Verho jää pallon ja isoisän pinon väliin (z-index 1): pino piirtyy
-     hunnun päälle, teksti molempien päälle. */
+  /* Verho jää pallon ja tekstilohkojen väliin (z-index 1). */
   z-index: 1;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
@@ -6238,18 +6113,16 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  *
  * HARSO ON OMA KERROKSENSA (::before) EIKÄ ELEMENTIN TAUSTA, koska
  * taustan reunan pehmentäminen vaatisi paddingia — ja padding
- * kasvattaisi otsikko- ja tekstilohkoa niin, että isoisän kortin kaista
- * niiden välissä katoaisi puhelimella (mitattu 5.9.2026). Pseudo
- * levittyy laatikon ulkopuolelle muuttamatta asettelua. `z-index: 0`
- * tekee palstasta oman pinon, jotta −1 jää palstan sisään eikä valu
- * pallokerroksen taakse (.intro on z-index: 3 ja siis oma pinonsa).
+ * kasvattaisi otsikko- ja tekstilohkoa. Pseudo levittyy laatikon
+ * ulkopuolelle muuttamatta asettelua. `z-index: 0` tekee palstasta
+ * oman pinon, jotta −1 jää palstan sisään eikä valu pallokerroksen
+ * taakse (.intro on z-index: 3 ja siis oma pinonsa).
  */
 /*
- * TEKSTI ON PINON PÄÄLLÄ (omistaja 5.9.2026 klo 22.45: isoisän kuvat
- * *"saavat jäädä tekstin alle"*). Molemmat lohkot nostetaan pinon
- * (z-index 2) yläpuolelle; palsta ja julisteotsikko pysyvät omina
- * pinoinaan (z-index 0), jotta niiden pergamenttiharso (::before,
- * z-index −1) jää lohkon sisään eikä valu pallokerroksen taakse.
+ * TEKSTILOHKOT VERHON JA PALLON PÄÄLLE (z-index 3); palsta ja
+ * julisteotsikko pysyvät omina pinoinaan (z-index 0), jotta niiden
+ * pergamenttiharso (::before, z-index −1) jää lohkon sisään eikä valu
+ * pallokerroksen taakse.
  */
 .intro.intro-pallolla .intro-kartta,
 .intro.intro-pallolla .intro-arkki { z-index: 3; }
@@ -6257,36 +6130,81 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 .intro.intro-pallolla .intro-palsta,
 .intro.intro-pallolla .intro-juliste { z-index: 0; }
 
+/*
+ * HARSON KAAVA ON YKSI, SÄÄTIMIÄ KOLME (omistajan tilaus 5.9.2026 klo
+ * 00.25, sanatarkasti: *"konekirjoituksen tekstin takana oleva
+ * vaalennus pienemmälle teholle sekä isommalle alueella mutta niin että
+ * häivytys peittää elementin neliöt rajat. ylemmässä myös häivytyksen
+ * rajat pois näkyvistä (pohjalaatta vähän isompi ja häivytys
+ * pidemmälle matkalle)"*).
+ *
+ *   --harson-peitto    koko harson voimakkuus (pseudon peittävyys):
+ *                      keskellä juuri tämä, reunoilla nolla.
+ *   --harson-haivytys  mistä kohtaa sädettä häivytys alkaa. Ennen
+ *                      tätä on tasainen lava, sen jälkeen seitsemän
+ *                      pysäkin liuku nollaan asti — pitkä matka, jolla
+ *                      silmä ei erota yhtään rajaa.
+ *   --harson-sade      liukuvärin ellipsin säde laatan mitoista.
+ *                      LIUVUN ON SAMMUTTAVA ENNEN LAATAN REUNAA:
+ *                      säteellä 56 % reuna (50 % laatasta) osuu jo
+ *                      89 %:iin sädettä, jolloin harso on siellä
+ *                      käytännössä nolla (≈ 0,03) — juuri tämä
+ *                      piilottaa "elementin neliöt rajat". Vanha 74 %
+ *                      leikkasi harson kohdassa, jossa peittävyyttä
+ *                      oli vielä 0,27, ja suorakulmio näkyi. Sitä
+ *                      pienempi säde taas kutistaisi harson alaa —
+ *                      laatan ala kasvatetaan insetillä, ei säteellä.
+ *
+ * Ala on em-mittainen ja siis tekstin kokoinen: kun fitIntro kutistaa
+ * kirjasinta, harso kutistuu mukana eikä irtoa tekstistään.
+ */
 .intro.intro-pallolla .intro-palsta::before,
 .intro.intro-pallolla .intro-juliste::before {
   content: '';
   position: absolute;
   z-index: -1;
   pointer-events: none;
+  --harson-sade: 56%;
+  opacity: var(--harson-peitto);
+  background: radial-gradient(ellipse var(--harson-sade) var(--harson-sade) at 50% 50%,
+    rgba(243, 228, 196, 1) 0%,
+    rgba(243, 228, 196, 0.97) var(--harson-haivytys),
+    rgba(243, 228, 196, 0.86) calc(var(--harson-haivytys) + 10%),
+    rgba(243, 228, 196, 0.66) calc(var(--harson-haivytys) + 19%),
+    rgba(243, 228, 196, 0.42) calc(var(--harson-haivytys) + 28%),
+    rgba(243, 228, 196, 0.2) calc(var(--harson-haivytys) + 37%),
+    rgba(243, 228, 196, 0.06) calc(var(--harson-haivytys) + 47%),
+    rgba(243, 228, 196, 0) 100%);
 }
 
+/*
+ * KONEKIRJOITUKSEN HARSO: PIENEMPI TEHO, ISOMPI ALA (omistaja 5.9.2026
+ * klo 00.25). Peitto 0,94 → 0,62 ja laatta liki kaksinkertainen
+ * (-1,2em/-1,6em → -2,6em/-5em), joten teksti lepää yhä pergamentilla
+ * mutta pallo näkyy sen läpi eikä harsosta erotu reunaa.
+ */
 .intro.intro-pallolla .intro-palsta::before {
-  inset: -1.2em -1.6em;
-  background: radial-gradient(ellipse 74% 68% at 50% 50%,
-    rgba(243, 228, 196, 0.94) 0%,
-    rgba(243, 228, 196, 0.9) 44%,
-    rgba(243, 228, 196, 0) 78%);
+  inset: -2.6em -5em;
+  --harson-peitto: 0.62;
+  --harson-haivytys: 42%;
 }
 
+/*
+ * JULISTEOTSIKON HARSO: POHJALAATTA ISOMPI JA HÄIVYTYS PIDEMMÄLLE
+ * (omistaja 5.9.2026 klo 00.25; kuvakaappauksessa 2000 px leveällä
+ * ruudulla soikion reuna erottui selvästi otsikon ympäriltä). Laatta
+ * -0,5em/-1,4em → -1,8em/-3,6em ja lava loppuu jo 36 %:n kohdalla,
+ * joten liuku kestää lähes kaksi kolmasosaa säteestä.
+ */
 .intro.intro-pallolla .intro-juliste::before {
-  inset: -0.5em -1.4em;
-  background: radial-gradient(ellipse 72% 66% at 50% 50%,
-    rgba(243, 228, 196, 0.84) 0%,
-    rgba(243, 228, 196, 0.74) 46%,
-    rgba(243, 228, 196, 0) 78%);
+  inset: -1.8em -3.6em;
+  --harson-peitto: 0.8;
+  --harson-haivytys: 36%;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* Kortti on paikallaan heti; STAATTINEN sumennus jää (se ei ole
-     liikettä), kuten omistajan ohje sallii. */
-  .etusivupallo,
-  .etusivupallo-kuva,
-  .etusivupallo-kuva figcaption { transition: none; }
+  /* Kerros on paikallaan heti (Raamattu, sääntö 4). */
+  .etusivupallo { transition: none; }
 }
 
 .intro.intro-fade { opacity: 0; }
