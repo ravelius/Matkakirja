@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1590, teksti: 'Pallo: kokeiluvipu tarkkuus liikkeessa' },
   { v: 1589, teksti: 'Pallolaatat: reunatyo vain reunalaatoille' },
   { v: 1588, teksti: 'Sivunkaanto: kaantopuolen huntu tiiviimmaksi' },
   { v: 1587, teksti: 'Kaikki pallolle 3A: lahtokaupungin valinta pallolle' },

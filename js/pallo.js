@@ -39,6 +39,7 @@
  */
 
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
+import { laatuAinaPaalla } from './ui-apurit.js';
 
 const R2 = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/';
 /**
@@ -444,6 +445,13 @@ export function asennaLaatunosto(pallo, kotelo, ikkuna = globalThis) {
 
 function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
   const dpr = ikkuna.devicePixelRatio || 1;
+  /*
+   * KOKEILUVIPU (omistaja 5.9.2026: "kokeile pyörisikö vieritys sillä
+   * korkeammalla tarkkuudella joka kytkeytyy nyt päälle vasta kun liike
+   * loppuu"): ?laatu=aina tai ratas → levon kynnykset ja pikselisuhde
+   * pysyvät päällä myös liikkeessä (js/ui-apurit.js laatuAinaPaalla).
+   */
+  const aina = laatuAinaPaalla(ikkuna);
   const renderer = pallo.renderer?.();
   const maxAniso = renderer?.capabilities?.getMaxAnisotropy?.() ?? 1;
   const alkuperainen = moottori.updatePov;
@@ -455,6 +463,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
 
   const asetaTila = (lepoon) => {
     lepo = lepoon;
+    if (aina) lepoon = true;
     const kerroin = lepoon ? lepokerroin(kotelo.clientHeight * dpr) : 1;
     moottori.thresholds = laattakynnykset(kerroin);
     const suhde = Math.min(dpr, lepoon ? LAATU_PIKSELISUHDE_LEPO : LAATU_PIKSELISUHDE_LIIKE);
