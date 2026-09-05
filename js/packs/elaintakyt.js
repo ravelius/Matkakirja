@@ -1,5 +1,5 @@
 /*
- * ELÄINTÄKYT — 29 maan eläin kartalla, kortti ja pieni punlöytö.
+ * ELÄINTÄKYT — 53 maan eläin kartalla, kortti ja pieni punlöytö.
  *
  * Omistajan tilaus 29.8.2026: *"Eläintäky kartalle — eläin ilmestyy
  * maan kartalle täkynä: klikkaus avaa kuvan + lyhyen faktatekstin +
@@ -9,7 +9,7 @@
  * (js/fokusvirta.js, 50 puntaa) kuuluvat yhden kaupungin
  * annostelukulkuun ja täkynostot (js/fokusnosto.js) maan pooliin, jonka
  * pisteet nousevat aarteen jälkeen. Eläintäky on kevyempi ja koskee
- * MAATA eikä kaupunkia: 29 maasta useimmilla ei ole fokuskaupunkia
+ * MAATA eikä kaupunkia: 53 maasta useimmilla ei ole fokuskaupunkia
  * lainkaan, joten kummankaan koneiston ehdot eivät koskisi niitä.
  * Palkkio on siksi myös pienempi, 20 puntaa (js/elaintaky.js
  * ELAINTAKY_PALKKIO) — kevyempi sisältö, kevyempi löytö.
@@ -38,6 +38,13 @@
  * kaanontekstejä (29.8.2026). Integroija ei muokkaa sanamuotoja: jos
  * fakta on väärin, se korjataan kaanoniin eikä tähän tauluun.
  *
+ * EUROOPAN ULKOPUOLINEN ERÄ 5.9.2026 (24 tietuetta NPL … ZAF): tulivat
+ * kuvaputken 32 kuvan toimituksen mukana. Opus luonnosteli tekstit
+ * lähteineen, ja Fable tarkisti ja kirjoitti lopulliset sanamuodot
+ * samana iltana (kahdeksan varauksellisen väitteen pehmennys: CHN, USA,
+ * MAR, PER, SAU, BRA, MEX) — tekstit ovat kaanonia kuten muutkin.
+ * Kuvatekstit ja kuvien lähderivit ovat toimituksesta sanasta sanaan.
+ *
  * BIH JA TUR PALASIVAT 2.9.2026 UUSINA ELÄIMINÄ. Ne poistettiin
  * 1.9.2026 kaksoiskappaleina — Livnon villihevoset olivat jo Sarajevon
  * syvennys (js/packs/syvennyspaikat.js) ja Vanin kissa oma
@@ -61,7 +68,7 @@
  * KUVAT OVAT OMISTAJAN OMIA generoituja kuvia, joten niillä ei ole
  * Commons-lähderiviä (vrt. js/packs/africa-valokuvat.js). Ne viedään
  * repoon työkalulla tools/elaintakykuvat.mjs (960 px, laatu 0,82) eikä
- * niitä ladata palvelutyöntekijän esilataukseen: 29 kuvaa paisuttaisi
+ * niitä ladata palvelutyöntekijän esilataukseen: kuvat paisuttaisivat
  * asennuksen, ja kortin kuva haetaan vasta kun kortti avataan.
  *
  * ── KAKSI KUVAA SAMASTA AIHEESTA (omistajan päätös 5.9.2026) ───────
@@ -504,6 +511,637 @@ export const ELAINTAKYT = {
     kuva: 'assets/elaimet/elain-rus.jpg',
     lon: 32,
     lat: 58.8,
+  },
+
+  /* ============ EUROOPAN ULKOPUOLINEN ERÄ (5.9.2026) ============
+   *
+   * Näiden 24 tietueen `otsikko` ja `teksti` ovat kaanonia: Opus
+   * luonnosteli, Fable tarkisti ja viimeisteli 5.9.2026 illalla (ks.
+   * tiedoston alku). Kuvatekstit ja kuvien lähderivit ovat kuvaputken
+   * toimituksesta SANASTA SANAAN (posti/animals-approved-32-20260905)
+   * eikä niitä muokata.
+   *
+   * Jokainen tekstin väite on tarkistettu `lahde`-rivin artikkelista ja
+   * osiosta 5.9.2026; osio "johdanto" tarkoittaa artikkelin alkukappaleita
+   * ennen ensimmäistä väliotsikkoa.
+   *
+   * KUUSI TIETUETTA KANTAA KARUSELLIN: NZL, JPN, CHN, CAN, MAR ja NAM
+   * saivat toimituksesta photo/story-parin, ja `kuvat`-listassa photo on
+   * ensimmäisenä eli kortin avautuessa näkyvä kuva (omistajan päätös
+   * 5.9.2026, ks. lohko "KAKSI KUVAA SAMASTA AIHEESTA").
+   *
+   * PAIKKA EI AINA OLE KUVATEKSTIN PAIKKA. Merkin on oltava maalla, oman
+   * maansa rajojen sisällä ja vähintään 35 laudan yksikön päässä
+   * kaupunkimerkistä (tests/elaintakyt.test.mjs). Kangaroo Island,
+   * Stewartin saari, Punta Tombon niemi ja Boulders Beach jäävät
+   * maailmankartan karkeassa muodossa mereen, ja Yellowstone, Churchill
+   * ja Xochimilco ovat käytännössä kaupunkimerkin alla — näissä piste on
+   * siirretty saman eläimen lähimmälle kelpaavalle alueelle ja syy on
+   * kirjattu tietueen omaan kommenttiin. Sama ratkaisu kuin BIH:llä ja
+   * TUR:lla 2.9.2026.
+   */
+  NPL: {
+    elain: 'punapanda',
+    otsikko: 'Nimi ennen isoa kaimaa',
+    teksti: 'Punapanda sai nimensä ennen kuuluisaa kaimaansa: sana panda tulee todennäköisesti nepalin sanasta ponya, joka tarkoittaa jalkapohjaa ja kynsiä. Yli neljänkymmenen vuoden ajan panda oli englannin kielessä vain tämä eläin — jättiläispanda kuvattiin ja nimettiin vasta vuonna 1869. Sukua ne eivät ole, mutta molemmilla on bambunkorren ympärille taipuva valepeukalo eli venynyt ranneluu. Punapanda elää yksin, kiipeilee puissa ja syö enimmäkseen bambun versoja ja lehtiä.',
+    lahde: 'en-Wikipedia "Red panda", osiot "Etymology" ja "Characteristics" sekä johdanto. '
+      + 'Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-npl-photo-r20260905-v1.jpg`,
+        kuvateksti: 'Punapanda ottaa varovaisen askeleen sammalrungolla Langtangin '
+          + 'viileässä metsässä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Ganga Raj '
+          + 'Sunuwar — punapanda Langtangissa 8.11.2024 (oma valokuva); Red Panda Network — '
+          + 'järjestön julkaisema aito punapandakuva; Red Panda Network — All About Red '
+          + 'Pandas (tietolehden hakuvälimuistissa luettu teksti)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Curious_Red_Panda_in_Langtang_National_Park.jpg',
+      },
+    ],
+    lon: 85.5,
+    lat: 28.2,
+  },
+  JPN: {
+    elain: 'lumiapina',
+    otsikko: 'Kylpijät pohjoisen rajalla',
+    teksti: 'Ihmistä lukuun ottamatta yksikään kädellinen ei elä yhtä pohjoisessa eikä yhtä kylmässä kuin japaninmakaki, joka kestää kahdenkymmenen asteen pakkasen ja on vielä taitava uimari. Jigokudanin lauma alkoi käydä kuumissa lähteissä vasta 1960-luvulla, kun apinoita houkuteltiin yhteen paikkaan pois viljelyksiltä. Talvikylvyllä on mitattu vaikutus: kylpevän eläimen stressitaso on matalampi, ja korkea-arvoiset naaraat pitävät niukan lämpimän veden itsellään.',
+    lahde: 'en-Wikipedia "Japanese macaque", osiot "Physical characteristics", '
+      + '"Intelligence and culture" ja "Ecology" sekä johdanto. Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-jpn-photo-r20260905-v1.jpg`,
+        kuvateksti: 'Lumiapina katsoo kivireunalta rauhallisesti kohti kuvaajaa Jigokudanin '
+          + 'lämpimässä vedessä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Jigokudani '
+          + 'Yaen-koen — puiston kuvaus ja aito allaskuva; Japanin ympäristöministeriö — '
+          + 'Jigokudani; Katsottu ministeriön talvikuva',
+        lahdeUrl: 'https://en.jigokudani-yaenkoen.co.jp/',
+      },
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-jpn-story-r20260905-v1.jpg`,
+        kuvateksti: 'Lumiapina hoitaa nuoren turkkia Jigokudanin lämpimän altaan reunalla.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Jigokudani — '
+          + 'elinkaari, emot, nuorten hoiva ja aidot valokuvat; Jigokudani — havainnointi, '
+          + 'oikea käden anatomia; Jigokudani — laji ja lyhyt häntä; Japanin '
+          + 'ympäristöministeriö — talvinen lähdeallas',
+        lahdeUrl: 'https://jigokudani-yaenkoen.co.jp/knowledge/lifetime/',
+      },
+    ],
+    /*
+     * Piste on Naganon vuorilla Jigokudanin seudulla; lähimpään
+     * kaupunkimerkkiin (Tokio) jää 55 laudan yksikköä, kun testi vaatii 35.
+     */
+    lon: 138.5,
+    lat: 36.7,
+  },
+  AUS: {
+    elain: 'koala',
+    otsikko: 'Kaksikymmentä tuntia unta',
+    teksti: 'Eukalyptuksen lehdissä on niin vähän energiaa, että koala nukkuu kaksikymmentä tuntia vuorokaudessa ja viettää maassa alle prosentin ajastaan. Poikanen syntyy alle puolen gramman painoisena ja ryömii emonsa pussiin kehittymään. Puolivuotiaana se saa emoltaan pehmeää umpisuolimassaa, bakteeriannoksen, joka valmistaa sen siirtymään kuituiseen ja myrkylliseen lehtiruokaan. Etelässä eläin on isompi: Victorian koalat painavat kaksi kertaa niin paljon kuin Queenslandin sukulaisensa.',
+    lahde: 'en-Wikipedia "Koala", osiot "Characteristics", "Foraging and activities" ja '
+      + '"Reproduction and development" sekä johdanto. Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-aus-photo-r20260905-v4.jpg`,
+        kuvateksti: 'Koalanpoikanen lepää leveässä eukalyptuksen haarassa Kangaroo '
+          + 'Islandilla ja seuraa hiljaa kuvaajaa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: SA Department '
+          + 'for Environment and Water — eteläisen ja pohjoisen koalan vertailu; SA '
+          + 'Department for Environment and Water — aidot Kangaroo Island/Cleland-koalat; '
+          + 'Australian Wildlife Society — tarttuvat etutassut ja eteläisen kannan turkki',
+        lahdeUrl: 'https://www.environment.sa.gov.au/topics/animals-and-plants/living-with-wildlife/koalas',
+      },
+    ],
+    /*
+     * Piste on Victorian Otway-vuoristossa eikä kuvatekstin Kangaroo
+     * Islandilla: saari on maailmankartan mittakaavassa niin pieni, että
+     * sen kohta osuu mereen (tests/elaintakyt.test.mjs). Otway on samaa
+     * eteläisen koalan aluetta, ja Melbourneen jää 61 yksikköä.
+     */
+    lon: 143.6,
+    lat: -38.4,
+  },
+  PNG: {
+    elain: 'paratiisilintu',
+    otsikko: 'Linnut ilman jalkoja',
+    teksti: 'Ensimmäiset paratiisilinnut päätyivät Eurooppaan Magalhãesin maailmanympäripurjehduksen mukana, ja paikalliset kauppiaat olivat valmistaneet nahat koristeiksi siivet ja jalat poistettuina. Sitä ei Euroopassa tiedetty, ja niinpä pääteltiin, ettei lintu koskaan laskeudu vaan pysyy ikuisesti ilmassa höyhentensä varassa; ison paratiisilinnun tieteellinen nimi on yhä apoda, jalaton. Heimossa on 44 lajia ja 17 sukua, ja koreat höyhenet kuuluvat lähes aina koiraille.',
+    lahde: 'en-Wikipedia "Bird-of-paradise", osio "Relationship with humans" sekä johdanto. '
+      + 'Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-png-photo-r20260905-v1.jpg`,
+        kuvateksti: 'Kuningasparatiisilintu pysähtyy oksalle; pitkät oranssinpunaiset '
+          + 'kylkihöyhenet ja kaksi tummaa pyrstöruotoa laskeutuvat sen taakse.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Cornell '
+          + 'Birds-of-Paradise Project — aito lajikuva ja suvun tuntomerkit; Cornellin '
+          + 'katsottu valokuva; Australian Museum — Raggiana Bird of Paradise',
+        lahdeUrl: 'https://www.birdsofparadiseproject.org/genera/',
+      },
+    ],
+    lon: 144.5,
+    lat: -6,
+  },
+  CHL: {
+    elain: 'guanako',
+    otsikko: 'Veri ohuessa ilmassa',
+    teksti: 'Guanako laiduntaa jopa neljän kilometrin korkeudessa, missä happea riittää niukalti. Sen veri on pakattu punasoluja täyteen: teelusikallisessa niitä on noin 68 miljoonaa, nelinkertaisesti ihmiseen verrattuna. Vasa eli chulengo kävelee heti syntymänsä jälkeen. Ketun uhatessa lauma ei pakene vaan asettuu renkaaksi poikasten ympärille ja ajaa sen tiehensä; pumaa vastaan sama temppu ei onnistuisi, ja avoimella arolla guanako pakenee 64 kilometrin tuntivauhtia.',
+    lahde: 'en-Wikipedia "Guanaco", osiot "Blood", "Ecology" ja "Mating season". '
+      + 'Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-chl-photo-r20260905-v2.jpg`,
+        kuvateksti: 'Nuori guanako kääntää päätään kuvaajaa kohti kesken kevyen askeleen.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: CONAF: Torres '
+          + 'del Painen kansallispuisto ja guanako; LBM1948: itse kuvattu guanako Torres '
+          + 'del Painessa 30.12.2012; Javiercamposg7: guanakon pään lähikuva 17.9.2024',
+        lahdeUrl: 'https://www.conaf.cl/parque_nacionales/parque-nacional-torres-del-paine/',
+      },
+    ],
+    lon: -72.9,
+    lat: -51,
+  },
+  NZL: {
+    elain: 'kiivi',
+    otsikko: 'Muna, joka täyttää emon',
+    teksti: 'Kiivin muna painaa noin 430 grammaa ja vie jopa viidenneksen emon painosta; hautominen kestää 75–90 päivää, ja poikanen lähtee pesästä muutaman päivän ikäisenä ruokkimaan itsensä. Naaraalla on kaksi toimivaa munasarjaa mutta vain yksi munanjohdin, jonka kautta molempien munat kulkevat. Sieraimet ovat pitkän nokan kärjessä, ja yössä liikkuva tokoeka etsii matoja ja toukkia maasta enemmän hajun kuin näön tai kuulon avulla. Fiordlandin metsissä lintuja on noin 15 000.',
+    lahde: 'en-Wikipedia "Southern brown kiwi", osiot "Taxonomy", "Description", "Diet" ja '
+      + '"Reproduction". Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-nzl-photo-r20260905-v1.jpg`,
+        kuvateksti: 'Rakiuran tokoeka pysähtyy tutkimaan kosteaa lehteä metsän pohjalla.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: DOC: Rakiuran '
+          + 'tokoeka ja päivällä liikkuminen; Katsottu DOC:n Rakiuran tokoekan valokuva; '
+          + 'New Zealand Birds Online: tokoekan laji, rakenne ja metsäelinympäristö; DOC: '
+          + 'Kiwi Best Practice Manual, perustuntomerkit',
+        lahdeUrl: 'https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kiwi/tokoeka/',
+      },
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-nzl-story-r20260905-v2.jpg`,
+        kuvateksti: 'Rakiuran kiivi tutkii kariketta alkuyön metsässä, kun etäinen '
+          + 'työntekijä kirjaa luontohavaintoja.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: DOC — '
+          + 'tokoeka, Rakiuran lajikuva ja käyttäytyminen; DOC — Rakiuran '
+          + 'rimu–kamahi-metsä, saniaiset ja punaisen valon ohje; DOC — How to count kiwi, '
+          + 'aidot kenttätyön ja akustisen tallentimen kuvat Fiordlandista',
+        lahdeUrl: 'https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kiwi/tokoeka/',
+      },
+    ],
+    /*
+     * Piste on Fiordlandin itälaidalla eikä kuvatekstin Rakiuralla eli
+     * Stewartin saarella: saari jää maailmankartan muodossa mereen.
+     * Fiordlandissa elää saman lajin oma alalaji, ja Milford Soundin
+     * merkkiin jää 37 yksikköä (vaaditaan 35).
+     */
+    lon: 167.8,
+    lat: -46.15,
+  },
+  PER: {
+    elain: 'vikunja',
+    otsikko: 'Kangas, joka kuului kuninkaalle',
+    teksti: 'Vikunjan villa on maailman hienoimpia kuituja, halkaisijaltaan kaksitoista mikrometriä, ja inkojen aikaan siihen sai pukeutua vain hallitsijasuku. Metsästys vei kannan kuuteentuhanteen 1960-luvulla; suojelun jälkeen eläimiä on jälleen noin 350 000, ja vikunja seisoo Perun vaakunassa. Se on yhä pääosin villi, vaikka alpakan uskotaan polveutuvan siitä. Villan saa yhä vain villistä eläimestä, joka ajetaan kokoon, keritään ja päästetään menemään — sama yksilö joka kolmas vuosi.',
+    lahde: 'en-Wikipedia "Vicuña", osiot "Conservation" ja "Vicuña wool" sekä johdanto. '
+      + 'Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-per-photo-r20260905-v2.jpg`,
+        kuvateksti: 'Vikunja pysähtyy punan matalalle harjanteelle ja katsoo kohti '
+          + 'kuvaajaa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: SERNANP: '
+          + 'vikunja ja puna Pampa Galerasissa; Katsottu SERNANPin vikunjavalokuva',
+        lahdeUrl: 'https://biodiversidadanp.sernanp.gob.pe/en/sabias-que/sabias-que-la-reserva-nacional-pampa-galeras-barbara-dachille-se-creo-para-salvar-de-la-extincion-a-una-especie/',
+      },
+    ],
+    lon: -74.5,
+    lat: -14.6,
+  },
+  SAU: {
+    elain: 'arabianoryksi',
+    otsikko: 'Yksisarvinen ilman toista sarvea',
+    teksti: 'Arabianoryksin suorat sarvet ovat onttoa luuta eivätkä kasva takaisin, joten toisen menettänyt eläin kulkee loppuikänsä yhdellä. Aristoteles ja Plinius vanhempi pitivät oryksia yksisarvisen esikuvana, ja tietystä kulmasta kaksi sarvea asettuukin yhdeksi. Kuivalla kaudella eläin makaa päivät varjossa liikkumatta ja laiduntaa vasta öisin; virtsan ja aineenvaihdunnan on mitattu putoavan puoleen. Villinä laji kuoli sukupuuttoon 1970-luvun alussa, palautettiin aavikolle 1980 ja nousi 2011 ensimmäisenä eläimenä luokasta "luonnosta hävinnyt" takaisin vaarantuneeksi.',
+    lahde: 'en-Wikipedia "Arabian oryx", osiot "Unicorn myth" ja "Adaptations for desert '
+      + 'environments" sekä johdanto. Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-sau-photo-r20260905-v1.jpg`,
+        kuvateksti: 'Arabianoryksi pysähtyy dyynin reunaan ja kääntää päänsä kohti kuvaajaa '
+          + 'Uruq Bani Ma’aridin aamussa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: NCW — Uruq '
+          + 'Bani Ma’aridin alue ja katsottu valokuva; Katsottu NCW:n dyynikuva; UNESCO — '
+          + 'todellinen suojelualue ja palautetut arabianoryksit; Phoenix Zoo — Arabian '
+          + 'oryx, lajikuvaus',
+        lahdeUrl: 'https://www.ncw.gov.sa/en/protected-areas',
+      },
+    ],
+    lon: 45.5,
+    lat: 19.5,
+  },
+  USA: {
+    elain: 'biisoninvasa',
+    otsikko: 'Sadan eläimen varassa',
+    teksti: '1870-luvun teurastus pudotti biisonin kuudestakymmenestä miljoonasta noin sataan eläimeen kuudessa karjassa; Yellowstonessa selvisi lisäksi 25 villiä, ja siellä laiduntaa yhä yksi harvoista laumoista, joihin ei ole sekoittunut nautakarjan perimää. Siitä pullonkaulasta kanta on kasvanut takaisin, ja vuonna 2016 biisonista tuli Yhdysvaltain kansallisnisäkäs. Punaruskea vasa on kaksi ensimmäistä kuukauttaan emoaan vaaleampi. Kesy eläin ei silti ole: vuosina 1980–1999 biisoni haavoitti Yellowstonessa 79 kävijää ja karhu 24.',
+    lahde: 'en-Wikipedia "American bison", osiot "Description", "Dangers to humans", '
+      + '"Genetics", "Population bottleneck and near extinction" ja "As a symbol". '
+      + 'Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-usa-photo-r20260905-v1.jpg`,
+        kuvateksti: 'Yellowstonen biisoninvasa kääntää katseensa kameraan kesken hieman '
+          + 'kömpelön keväisen raviaskelen.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: NPS — '
+          + 'Yellowstone bison ecology; NPS / A. Falgoust — Yellowstone calf photograph, 9 '
+          + 'May 2021; Photograph provenance and direct source URL',
+        lahdeUrl: 'https://www.nps.gov/yell/learn/nature/bison.htm/index.htm',
+      },
+    ],
+    /*
+     * Piste on Yellowstonen eteläpuolella Grand Tetonin laaksossa, ei
+     * kuvatekstin Yellowstonessa: puisto on laudalla oma kaupunkimerkkinsä,
+     * eikä täkyä saa latoa merkin päälle (tests/elaintakyt.test.mjs).
+     * Sama biisoniekosysteemi, 41 yksikköä etelämpänä.
+     */
+    lon: -110.5,
+    lat: 43.6,
+  },
+  CHN: {
+    elain: 'jättiläispanda',
+    otsikko: 'Kahdeksassadasosa emostaan',
+    teksti: 'Vastasyntynyt jättiläispanda on vaaleanpunainen, sokea ja hampaaton ja painaa 90–130 grammaa eli noin kahdeksassadasosan emonsa painosta — istukkanisäkkäiden pienin poikanen suhteessa emoon. Puolet synnytyksistä on kaksosia, mutta emo hoitaa vain vahvemman: rasvaa varastoimattoman naaraan maidon arvellaan riittävän yhdelle. Vuodesta 1984 Kiina ei ole lahjoittanut pandoja vaan lainaa niitä, ja ulkomailla syntyneet poikaset palaavat aikanaan Kiinaan. Villejä pandoja laskettiin vuosien 2011–2014 kartoituksessa 1 864.',
+    lahde: 'en-Wikipedia "Giant panda", osiot "Reproduction" ja "In captivity" sekä '
+      + 'johdanto. Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-chn-photo-r20260905-v2.jpg`,
+        kuvateksti: 'Pandanpoikanen maistelee bambua rauhallisessa Sichuanin metsässä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Smithsonian — '
+          + 'dated nine-month cub feeding and anatomy photographs; The Nature Conservancy — '
+          + 'Sichuan bamboo habitat and genuine wild mother/cub photo',
+        lahdeUrl: 'https://nationalzoo.si.edu/news/giant-panda-cub-xiao-qi-ji-media-resources',
+      },
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-chn-story-r20260905-v1.jpg`,
+        kuvateksti: 'Poikanen kurottaa emon bambunlehteen kesken ruokailuhetken Sichuanin '
+          + 'metsässä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Smithsonian '
+          + 'keeper observation — cub initiates play during mother\'s bamboo meals; '
+          + 'Smithsonian keeper observation — eight-month cub plays with mother and eats '
+          + 'bamboo; Smithsonian dated cub anatomy and bamboo-grip photos; The Nature '
+          + 'Conservancy — genuine wild mother/cub and bamboo-moss habitat',
+        lahdeUrl: 'https://nationalzoo.si.edu/animals/news/pandastory-playful-panda-cub',
+      },
+    ],
+    lon: 103,
+    lat: 31,
+  },
+  CUB: {
+    elain: 'mehiläiskolibri',
+    otsikko: 'Kahta grammaa kevyempi',
+    teksti: 'Mehiläiskolibri on maailman pienin lintu: koiras painaa alle kaksi grammaa ja on 5,5 senttiä pitkä, ja luonnossa se elää jopa seitsemän vuotta. Naaras munii kaksi kahvipavun kokoista munaa hämähäkinseitistä, kaarnasta ja jäkälästä punottuun pesään, jonka halkaisija on noin kaksi ja puoli senttiä. Siivet lyövät 80–200 kertaa sekunnissa, lintu voi kiertää päivässä 1 500 kukkaa ja syö puolet omasta painostaan. Sitä on kutsuttu myös maailman pienimmäksi dinosaurukseksi.',
+    lahde: 'en-Wikipedia "Bee hummingbird", osiot "Description", "Diet" ja "Breeding". '
+      + 'Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-cub-photo-r20260905-v1.jpg`,
+        kuvateksti: 'Mehiläiskolibri leijuu pienen kukan vieressä Zapatan metsän reunassa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Cornell Lab '
+          + 'eBird — Bee Hummingbird identification and genuine male photographs; BirdLife '
+          + 'International — world\'s smallest bird endemic to Cuba; BirdsCaribbean — '
+          + 'Zapata, Los Hondones and Bee Hummingbird habitat, PDF page 2',
+        lahdeUrl: 'https://ebird.org/species/beehum1',
+      },
+    ],
+    lon: -81.3,
+    lat: 22.3,
+  },
+  IND: {
+    elain: 'tiikerinpentu',
+    otsikko: 'Tassunjäljistä riistakameraan',
+    teksti: 'Bengalintiikerin pennut syntyvät silmät ja korvat kiinni, 780–1 600 gramman painoisina. Kahden kuukauden ikäisinä ne seuraavat emoa metsästysretkille ja viiden kuukauden iässä osallistuvat jo saaliin kaatamiseen. Intiassa tiikereitä laskettiin pitkään tassunjäljistä, mikä osoittautui epätarkaksi; nyt työn tekevät riistakamerat. Vuonna 2022 maassa arvioitiin olevan 3 167–3 682 tiikeriä, Ranthamboren yksilöt ovat kannan läntisimmät, ja laji on sekä Intian että Bangladeshin kansalliseläin.',
+    lahde: 'en-Wikipedia "Bengal tiger", osiot "India" ja "Reproduction and lifecycle" sekä '
+      + 'johdanto. Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-ind-photo-r20260905-v1.jpg`,
+        kuvateksti: 'Nuori bengalintiikeri ylittää matalan hiekkakivitasanteen Ranthamboren '
+          + 'kuivassa lehtimetsässä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: National '
+          + 'Tiger Conservation Authority — Ranthambhore dry deciduous Anogeissus forests '
+          + 'and sandstone/ruin landscape context; Michael J. Vickers — original young '
+          + 'Bengal tiger photo, Bandhavgarh May 2010; Michael J. Vickers — Ranthambhore '
+          + 'mother with 15-month offspring at waterhole, May 2015; WWF India — Nishant '
+          + 'Andrews field narrative of four-month Ranthambore cubs; text read, its photos '
+          + 'not accessible',
+        lahdeUrl: 'https://ntca.gov.in/assets/uploads/briefnote/ranthambore.pdf',
+      },
+    ],
+    lon: 76.5,
+    lat: 26,
+  },
+  MEX: {
+    elain: 'aksolotl',
+    otsikko: 'Kidukset koko elämän',
+    teksti: 'Aksolotl tulee sukukypsäksi käymättä koskaan läpi muodonmuutosta: se jää veteen ja kantaa haaroittuvia ulkokiduksiaan aikuisenakin. Se ei myöskään arpeudu vaan kasvattaa uudelleen raajan, hännän ja osia silmästä, sydämestä ja aivoista — se voi jopa ottaa vastaan toisen yksilön silmän tai aivojen osan ja saada sen toimimaan. Nimi on nahuatlia ja viittaa Xolotliin, atsteekkien tulen, kuolleiden, koirien ja kaksosten jumalaan. Villinä lajia arvioidaan olevan jäljellä 50–1 000 yksilöä Xochimilcon kanavissa.',
+    lahde: 'en-Wikipedia "Axolotl", osiot "Nomenclature" ja "Regeneration" sekä johdanto. '
+      + 'Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-mex-photo-r20260905-v2.jpg`,
+        kuvateksti: 'Tumma aksolotl etenee Xochimilcon suojaisalla lietepohjalla, kidusten '
+          + 'hienot rihmat veden mukana.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: UNAM — '
+          + 'axolotl ecology, wild color and genuine specimen/habitat photographs; UNAM — '
+          + 'Xochimilco census and chinampa refuges; San Diego Zoo — species account; UNAM '
+          + '2019 thesis — section 3.6, PDF page 17, four front and five hind digits, three '
+          + 'external gill pairs',
+        lahdeUrl: 'https://biotecmov.ibt.unam.mx/numeros/44/1.html',
+      },
+    ],
+    /*
+     * Piste on Mexico Cityn lounaispuolella ylängöllä, ei Xochimilcossa:
+     * kanavat ovat käytännössä kaupungin merkin alla (10 yksikköä, kun
+     * vaaditaan 35), ja kaksi merkkiä samassa pisteessä on yksi merkki.
+     * Tämä on lähin sallittu kohta Xochimilcon puolella kaupunkia.
+     */
+    lon: -99.4,
+    lat: 18.4,
+  },
+  BRA: {
+    elain: 'kultatamariini',
+    otsikko: 'Oranssi ilman karotenoidia',
+    teksti: 'Kultatamariinin hehkuvassa turkissa ei ole karotenoideja, joista luonnon oranssi väri yleensä syntyy. Laji on silkkiapinoista suurin — noin 26 senttiä ja 620 grammaa — ja elää vain Rio de Janeiron osavaltion atlantinmetsissä. 1970-luvulla yksilöitä arvioitiin olevan 100–600; suojelualueiden, istutusten ja metsäkäytävien jälkeen laskenta 2022–2023 päätyi yli 4 800:aan. Poikaset syntyvät useimmiten kaksosina, ja koko ryhmä kantaa niitä vuorotellen.',
+    lahde: 'en-Wikipedia "Golden lion tamarin", osiot "Physical characteristics", '
+      + '"Reproduction" ja "Conservation" sekä johdanto. Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-bra-photo-r20260905-v1.jpg`,
+        kuvateksti: 'Kultatamariini pysähtyy sammaleiselle oksalle Rio de Janeiron '
+          + 'osavaltion Atlantin sademetsässä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Smithsonian — '
+          + 'golden lion tamarin physical description, digit use and Atlantic Forest '
+          + 'habitat; Save the Golden Lion Tamarin — conservation program and genuine '
+          + 'animal photograph; Brazil\'s UNESCO tentative-list submission — Rio de Janeiro '
+          + 'lowland Atlantic Forest protected areas',
+        lahdeUrl: 'https://nationalzoo.si.edu/animals/golden-lion-tamarin',
+      },
+    ],
+    lon: -41.9,
+    lat: -22.1,
+  },
+  CAN: {
+    elain: 'jääkarhunpentu',
+    otsikko: 'Vankila karhuille',
+    teksti: 'Jääkarhun turkki ei ole valkoinen: peitinkarvat ovat onttoja ja väriaineettomia, valo siroaa niistä takaisin, ja rasvaeritys estää karvoja jäätymästä. Iho nenää ja huulia myöten on sen sijaan musta. Pentu syntyy talvipesään noin 600 gramman painoisena, silmät kiinni ensimmäisen kuukautensa, ja kun emo kaivautuu keväällä ulos, se painaa jo 10–15 kiloa. Churchillissä kaupunkiin eksyneet karhut viedään karhuvankilaan odottamaan meren jäätymistä.',
+    lahde: 'en-Wikipedia "Polar bear", osiot "Description", "Reproduction and development" '
+      + 'ja "Conflicts". Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-can-photo-r20260905-v1.jpg`,
+        kuvateksti: 'Churchillin jääkarhunpentu pysähtyy katsomaan tulijaa kesken askeleen '
+          + 'tuulen kovettamalla lumella.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Polar Bears '
+          + 'International — Churchill cub adoption, field account and Dave Sandford photo',
+        lahdeUrl: 'https://polarbearsinternational.org/news-media/articles/rare-polar-bear-cub-adoption-captured-on-video/',
+      },
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-can-story-r20260905-v3.jpg`,
+        kuvateksti: 'Churchillin jääkarhunpentu seuraa emon suuria jälkiä lumisella '
+          + 'rannikolla.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Polar Bears '
+          + 'International — genuine Churchill mother/cub field photograph and cub age; '
+          + 'Churchill Northern Studies Centre — coastal seasonal habitat and autumn '
+          + 'gathering; US Fish & Wildlife Service — genuine mother/cub walking photographs '
+          + 'and general behavior account; Beaufort Sea context; Polar Bears International '
+          + '— cub development and reliance on mother',
+        lahdeUrl: 'https://polarbearsinternational.org/news-media/articles/rare-polar-bear-cub-adoption-captured-on-video/',
+      },
+    ],
+    /*
+     * Piste on Hudsoninlahden länsirannikolla Churchillistä luoteeseen:
+     * Churchill on laudalla oma kaupunkimerkkinsä ja itse ranta jää
+     * maailmankartan muodossa mereen. Merkkiin jää 44 yksikköä.
+     */
+    lon: -95.2,
+    lat: 58.8,
+  },
+  ARG: {
+    elain: 'magellaninpingviini',
+    otsikko: 'Ääni tuntee puolison',
+    teksti: 'Magellaninpingviini kaivaa pesäkolonsa pensaan alle Patagonian rannikolle, ja Punta Tombo on lajin suurimpia yhdyskuntia. Pari pysyy samana vuodesta toiseen: koiras ottaa vanhan kolonsa haltuun ja odottaa, ja naaras tunnistaa kumppaninsa pelkästä äänestä. Kaksi munaa haudotaan vuorotellen 10–15 päivän vahdeissa, kun toinen käy merellä syömässä. Pesimäkauden jälkeen linnut vaeltavat pohjoiseen Perun ja Brasilian vesille; nimensä laji sai Magalhãesilta, joka näki sen vuonna 1520.',
+    lahde: 'en-Wikipedia "Magellanic penguin", osio "Breeding" sekä johdanto. Tarkistettu '
+      + '5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-arg-photo-r20260905-v1.jpg`,
+        kuvateksti: 'Magellaninpingviini astelee Punta Tombon sorarannalla, Atlantti '
+          + 'pehmeänä taustallaan.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Argentina '
+          + 'government — Punta Tombo and genuine adult penguin photographs; Aquarium of '
+          + 'the Pacific — adult band pattern, dense plumage and flipper structure; indexed '
+          + 'text read, direct page returned 403',
+        lahdeUrl: 'https://www.argentina.gob.ar/viaja-por-argentina/que-hacer/caminar-entre-pinguinos-de-magallanes',
+      },
+    ],
+    /*
+     * Piste on Chubutin arolla Punta Tombosta sisämaahan: niemi jää
+     * maailmankartan muodossa mereen, ja merkin on oltava maalla.
+     */
+    lon: -65.45,
+    lat: -44,
+  },
+  KEN: {
+    elain: 'kirahvinvasa',
+    otsikko: 'Viisi sarvennusta ja valkoiset sukat',
+    teksti: 'Rothschildinkirahvi on ainoa kirahvimuoto, joka syntyy viisi ossikonia eli nahkasarvea päässään: kahden tavallisen lisäksi yksi otsan keskellä ja yksi kummankin korvan takana. Alasäärissä ei ole lainkaan kuviota, joten eläin näyttää vetäneen jalkaansa valkoiset sukat. Kantoaika on 14–16 kuukautta ja vasoja syntyy yksi kerrallaan. Aikuisia arvioitiin villinä olevan 1 399 vuonna 2018, ja niitä näkee lähinnä Nakuru-järven ja Murchison Fallsin kansallispuistoissa.',
+    lahde: 'en-Wikipedia "Rothschild\'s giraffe", osiot "Characteristics", "Ecology and '
+      + 'behavior" ja "Threats and conservation efforts" sekä johdanto. Tarkistettu '
+      + '5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-ken-photo-r20260905-v2.jpg`,
+        kuvateksti: 'Rothschildinkirahvin vasa katsoo heinikon yli Nakurussa, pitkät '
+          + 'vaaleat sääret tukevasti maassa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: GCF — '
+          + 'Northern Giraffe ja TonyWildin katsottu nubialaisen kirahvin vasakuva; GCF — '
+          + 'Kenya Country Profile, Nakurun siirretty populaatio',
+        lahdeUrl: 'https://giraffeconservation.org/giraffe-species/northern-giraffe/',
+      },
+    ],
+    lon: 36.1,
+    lat: -0.4,
+  },
+  NAM: {
+    elain: 'erämaanorsu',
+    otsikko: 'Yön mittainen matka vedelle',
+    teksti: 'Namibian erämaanorsu ei ole oma lajinsa vaan afrikannorsu, joka on oppinut elämään ilman pysyviä jokia. Se kävelee yössä jopa 70 kilometriä vesipaikalle ja tulee toimeen kolme vuorokautta juomatta; jalkapohjat ovat leveämmät, jalat pidemmät ja ruumis pienempi kuin savannin sukulaisilla, ja kuivan kauden ruoka on mopanea, kamelipiikkiakaasiaa ja mirhapensasta. Kunenessa oli 1900-luvun alussa noin 3 000 norsua, 1980-luvulla enää murto-osa; suojelu on nostanut määrän noin kuuteensataan.',
+    lahde: 'en-Wikipedia "Desert elephant", osio "Behaviour" sekä johdanto. Tarkistettu '
+      + '5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-nam-photo-r20260905-v2.jpg`,
+        kuvateksti: 'Aikuinen erämaanorsu tavoittaa lehtiä Damaralandin kuivassa '
+          + 'jokiuomassa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Elephant '
+          + 'Human Relations Aid — Namibian erämaanorsujen laji, jokiuomat ja katsottu '
+          + 'norsuvalokuva',
+        lahdeUrl: 'https://www.ehranamibia.org/about-desert-elephants',
+      },
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-nam-story-r20260905-v2.jpg`,
+        kuvateksti: 'Norsunvasa kurottaa emon tavoittamiin lehtiin Damaralandin kuivassa '
+          + 'jokiuomassa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: EHRA — '
+          + 'Namibian erämaanorsut, kuivat jokiuomat ja puiden lehdet kuivakauden '
+          + 'ravintona; ElephantVoices — poikasten ravinnon oppiminen, katsotut vasa- ja '
+          + 'yhteisen ruokailun valokuvat; ElephantVoices Ethogram — Solicit-Food: poikanen '
+          + 'tavoittelee emon ravintoa',
+        lahdeUrl: 'https://www.ehranamibia.org/about-desert-elephants',
+      },
+    ],
+    lon: 14.4,
+    lat: -20.5,
+  },
+  MDG: {
+    elain: 'sifaka',
+    otsikko: 'Tanssi maassa, lento puissa',
+    teksti: 'Verreaux\'n sifaka kiipeää puiden pystyrunkoja pitkin ja hyppää niiden välillä yhdeksän, kymmenenkin metriä. Maassa se ei juokse neljällä jalalla vaan loikkii kahdella jalalla, kuin tanssien. Poikanen roikkuu emon vatsassa 6–8 viikkoa ja siirtyy sitten selkään seuraaviksi 19 viikoksi; noin kolmasosa poikasista päätyy fossan saaliiksi. Ryhmässä on kahdesta kahteentoista eläintä, ja arvojärjestyksessä naaraat ovat aina koiraiden yläpuolella.',
+    lahde: 'en-Wikipedia "Verreaux\'s sifaka", osiot "Behaviour" ja "Reproduction" sekä '
+      + 'johdanto. Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-mdg-photo-r20260905-v2.jpg`,
+        kuvateksti: 'Verreaux’n sifaka pysähtyy Berentyn kaatuneelle rungolle, pitkä vaalea '
+          + 'häntä rennosti puuta vasten.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Madagaskarin '
+          + 'PA-CIWT — Verreaux’n sifakan tuntomerkit, mitat ja lehtiruokavalio; American '
+          + 'Society of Mammalogists — B. D. Pattersonin katsottu Berentyn valokuva; Rhett '
+          + 'A. Butler — katsottu ruokailuvalokuva Berentystä; WildMadagascar — Berentyn '
+          + 'kuiva galleriametsä',
+        lahdeUrl: 'https://e-voary.mg/paciwt/Ficheverreauxi.php?lang=en',
+      },
+    ],
+    lon: 46.3,
+    lat: -25,
+  },
+  UGA: {
+    elain: 'gorillanpoikanen',
+    otsikko: 'Sormenjälki nenässä',
+    teksti: 'Jokaisella gorillalla on oma nenäkuvionsa, ja tutkijat tunnistavat yksilöt siitä kuin sormenjäljestä. Vuorigorillan turkki on usein muiden gorillojen turkkia paksumpi ja pidempi, sillä vuorilla on kylmä. Lajia elää kahdessa erillisessä kannassa, Virungan vuorilla ja Ugandan Bwindissä, ja vuonna 2019 niitä laskettiin kaikkiaan 1 063. Bwindissä aikuinen koiras syö päivässä lähes 19 kiloa lehtiä ja versoja; Dian Fossey aloitti kahdeksantoista vuoden tutkimuksensa 1967 ja teki ensimmäisen tarkan laskennan.',
+    lahde: 'en-Wikipedia "Mountain gorilla", osiot "Characteristics", "Diet" ja "Research" '
+      + 'sekä johdanto. Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-uga-photo-r20260905-v2.jpg`,
+        kuvateksti: 'Vuorigorillan poikanen tutkii pientä lehtiversoa Bwindi-metsän '
+          + 'matalalla rungolla.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Uganda '
+          + 'Wildlife Authority — vuorigorilla ja Bwindi; Gorilla Doctors — katsotut '
+          + 'Bwindi-kuvat, Ruterana vastasyntyneineen ja varttunut Kibumba',
+        lahdeUrl: 'https://ugandawildlife.org/animals/mountain-gorilla/',
+      },
+    ],
+    lon: 29.7,
+    lat: -1.05,
+  },
+  ETH: {
+    elain: 'gelada',
+    otsikko: 'Ruohonsyöjä jyrkänteellä',
+    teksti: 'Gelada on ainoa kädellinen, joka elää pääasiassa ruohosta: korret ja siemenet ovat jopa 90 prosenttia sen ruoasta, ja se pureskelee yhtä tehokkaasti kuin seepra. Se on myös sukunsa Theropithecus ainoa elossa oleva laji. Yönsä se nukkuu Etiopian ylängön jyrkänteillä ja ruokailee päivät niityillä, kyykyssä jalkojaan liu\'uttaen. Etiopiansusi saa kulkea lauman keskeltä ilman että kukaan liikahtaa — kylän koiran nähdessään koko lauma pakenee kallioille.',
+    lahde: 'en-Wikipedia "Gelada", osiot "Description", "Range and ecology" ja "Social '
+      + 'structure" sekä johdanto. Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-eth-photo-r20260905-v1.jpg`,
+        kuvateksti: 'Geladakoiras nyppii ruohoa Simienvuorten rinteellä ja nostaa välillä '
+          + 'katseensa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: African '
+          + 'Wildlife Foundation — geladan tuntomerkit, laidunnus ja Simien sekä katsottu '
+          + 'geladavalokuva',
+        lahdeUrl: 'https://www.awf.org/wildlife-conservation/gelada',
+      },
+    ],
+    lon: 38.2,
+    lat: 13.2,
+  },
+  MAR: {
+    elain: 'berberiapina',
+    otsikko: 'Apina ihmisen sijasta',
+    teksti: 'Galenos leikkeli 100-luvulla mitä ilmeisimmin juuri berberiapinoita ja oletti ihmisen olevan sisältä samanlainen; hänen virheensä jäivät lääketieteeseen yli tuhanneksi vuodeksi, kunnes Vesalius osoitti ne vääriksi 1500-luvulla. Lajissa on toinenkin poikkeus: laumat ovat äitilinjaisia, mutta poikasia hoitavat koiraat, myös vieraita, koska isyys jää epävarmaksi. Atlaksen setrimetsissä apinoita on enää 12 000–21 000, ja Gibraltarin kolmesataa ovat Euroopan ainoat villinä elävät apinat.',
+    lahde: 'en-Wikipedia "Barbary macaque", osiot "Taxonomy and phylogeny", "Behaviour and '
+      + 'ecology", "Parenting" ja "Threats" sekä johdanto. Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-mar-photo-r20260905-v1.jpg`,
+        kuvateksti: 'Nuori berberiapina pysähtyy setrinjuurelle Keski-Atlaksen metsässä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: AAP — Born to '
+          + 'be Wild, katsotut nuorten ja ruokailevan berberiapinan kuvat; IFAW — Ifranen '
+          + 'berberiapinat ja Atlas-setrimetsä',
+        lahdeUrl: 'https://en.aap.eu/born-to-be-wild/',
+      },
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-mar-story-r20260905-v1.jpg`,
+        kuvateksti: 'Nuoret berberiapinat valtaavat hetkeksi polun kaatuneen rungon. Opas '
+          + 'odottaa taaempana niiden väistymistä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Barbary '
+          + 'Macaque Project, Lincoln — katsottu Christopher Youngin valokuva puussa '
+          + 'leikkivistä nuorista; AAP — Born to be Wild, katsottu nuorten berberiapinoiden '
+          + 'kuva ja Keski-Atlaksen suojelutyö; Barbary Macaque Project — turvallinen '
+          + 'tarkkailuetäisyys ja ruokinnan välttäminen; Seltmann ym. 2013 — Ifranen setri- '
+          + 'ja tammimetsä sekä luonnonvaraisten berberiapinoiden ryhmäliike',
+        lahdeUrl: 'https://barbarymacaque.blogs.lincoln.ac.uk/',
+      },
+    ],
+    /*
+     * Piste on Keski-Atlaksen setrivyöhykkeellä Azroun eteläpuolella:
+     * Ifranen ja Azroun kohdalta Fèsin merkkiin jäisi 25 yksikköä,
+     * tästä 44 (vaaditaan 35).
+     */
+    lon: -5.6,
+    lat: 33,
+  },
+  TZA: {
+    elain: 'norsunvasa',
+    otsikko: 'Kaksikymmentäkaksi kuukautta',
+    teksti: 'Afrikannorsun kantoaika on noin 22 kuukautta, nisäkkäiden pisin. Tsavossa lokakuussa 1990 seuratussa synnytyksessä vastasyntynyt nousi jaloilleen puolessa tunnissa ja käveli kaksikymmentä minuuttia myöhemmin. Laumaa johtaa vanhin naaras, vasoista huolehditaan yhdessä — naaraat hoitavat myös toistensa poikasia — ja imetys jatkuu lähes viisi vuotta. Aikuinen syö päivässä noin 150 kiloa kasvillisuutta ja juo 230 litraa vettä; alle kaksivuotias vasa on yhä leijonan ja täplähyeenan saalis.',
+    lahde: 'en-Wikipedia "African bush elephant", osiot "Social behaviour", "Reproduction" '
+      + 'ja "Predators" sekä johdanto. Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-tza-photo-r20260905-v1.jpg`,
+        kuvateksti: 'Norsunvasa pysähtyy kesken askelen Serengetin ruohikossa, kärsän kärki '
+          + 'rennosti kiertyneenä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: '
+          + 'ElephantVoices — savanninorsun käyttäytyminen ja katsottu laumavalokuva '
+          + 'vasoineen; TANAPA — Serengetin savannit ja akaasiametsiköt',
+        lahdeUrl: 'https://www.elephantvoices.org/the-elephant-ethogram-user-guide',
+      },
+    ],
+    lon: 34.8,
+    lat: -2.3,
+  },
+  ZAF: {
+    elain: 'afrikanpingviini',
+    otsikko: 'Täplät kuin sormenjäljet',
+    teksti: 'Afrikanpingviinin rinnassa on mustia täpliä, joiden kuvio on jokaisella yksilöllä oma kuin sormenjälki. Silmien yläpuoliset paljaat läiskät ovat hikirauhasia, jotka jäähdyttävät verta ja punoittavat sitä kirkkaammin mitä kuumempi ilma on. Ääni on aasimainen kiljunta, josta lintu sai nimen aasipingviini. Vuonna 1910 lajia oli puolitoista miljoonaa; vuonna 2023 pesiviä pareja oli enää alle 10 000, ja pingviini luokiteltiin äärimmäisen uhanalaiseksi.',
+    lahde: 'en-Wikipedia "African penguin", osiot "Description" ja "Population" sekä '
+      + 'johdanto. Tarkistettu 5.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-zaf-photo-r20260905-v1.jpg`,
+        kuvateksti: 'Afrikanpingviini pysähtyy Boulders Beachin vaalealle hiekalle; sen '
+          + 'rinnassa kulkee lajille ominainen yksi musta vyö.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: BirdLife '
+          + 'South Africa — lajituntomerkit ja Neil Ebedesin katsottu pingviinivalokuva; '
+          + 'SANParks — Bouldersin afrikanpingviiniyhdyskunta ja suojaisa lohkareinen ranta',
+        lahdeUrl: 'https://www.birdlife.org.za/red-data-book/red-list/african-penguin/',
+      },
+    ],
+    /*
+     * Piste on Itä-Kapin rannikkoylängöllä Algoa Bayn takana eikä
+     * kuvatekstin Boulders Beachillä: Kapkaupungin ranta on kartan
+     * muodossa merta. Algoa Bay on lajin pesimäalueen itäpää.
+     */
+    lon: 25.45,
+    lat: -33.8,
   },
 };
 
