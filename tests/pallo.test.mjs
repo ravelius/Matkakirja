@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
-import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTAKANSIO, laattatasoMax, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS, laattakynnykset, lepokerroin, LAATU_TERAVYYS, NAPAKANNEN_LEVEYS, NAPAKANNEN_HAIVEPEITTO, NAPAKANSI_POHJOINEN, NAPAKANSI_ETELA, asennaNapakannet, kolmiulotteinen, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE } from '../js/pallo.js';
+import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTAKANSIO, laattatasoMax, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS, laattakynnykset, lepokerroin, LAATU_TERAVYYS, napakerroin, NAPAKERROIN_MIN, NAPAKANNEN_LEVEYS, NAPAKANNEN_HAIVEPEITTO, NAPAKANSI_POHJOINEN, NAPAKANSI_ETELA, asennaNapakannet, kolmiulotteinen, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE } from '../js/pallo.js';
 import { laatanReunat, rivinLeveysaste, julisteenLeveysvali, tasonLaatat, lahdetaso, laattojenKansio, LAATTA, tayteRivilla, nostaReuna, JAA_RAJA, JAA_SAVY, MERI_SAVY } from '../tools/tee-pallolaatat.mjs';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
 import { LINSSI as PALLOLINSSI } from '../js/linssit/pallo.js';
@@ -563,4 +563,19 @@ test('rulla: kaappausvaiheessa, cmd/ctrl zoomaa, muuten panorointi ja pehmeä li
     lue('../js/pallolauta/lauta.js'),
     /addEventListener\('wheel', heraa, \{ passive: true, capture: true \}\)/,
   );
+});
+
+test('napakerroin: navan lähellä karkeampi taso samalla terävyydellä (omistaja 5.9.2026: "ihmeen hitaasti lataa tuolla ylhäällä")', () => {
+  assert.equal(napakerroin(0), 1);
+  assert.ok(Math.abs(napakerroin(60) - 0.5) < 1e-9);
+  assert.ok(napakerroin(80) < 0.18 && napakerroin(80) >= NAPAKERROIN_MIN);
+  assert.equal(napakerroin(89), NAPAKERROIN_MIN, 'alaraja navan vieressä');
+  assert.equal(napakerroin(-60), napakerroin(60), 'etelä kuin pohjoinen');
+  assert.equal(napakerroin(NaN), 1);
+  // Kynnys pienenee ⇒ sama korkeus valitsee matalamman tason.
+  const taso = (kerroin, korkeus) => laattakynnykset(kerroin).findIndex((k) => k <= korkeus);
+  assert.ok(taso(napakerroin(80), 0.6) < taso(1, 0.6), 'navalla matalampi taso');
+  const pallo = lue('../js/pallo.js');
+  assert.match(pallo, /\* napakerroin\(kynnysLat\)/);
+  assert.match(pallo, /NAPAKERROIN_ASKEL\) asetaTila\(lepo\)/);
 });
