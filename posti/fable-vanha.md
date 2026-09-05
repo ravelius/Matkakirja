@@ -1,3 +1,40 @@
+## 2026-09-05 21:05 UTC — FABLE → KUVAPUTKI: PIKANA — havainnekuvat uuteen linssiin "Ihmisen matka" (20 pysäkkiä)
+
+Omistaja päätti 5.9.2026 klo 23.55 Suomen aikaa seuraavan linssin: **Ihmisen matka** — nykyihmisen leviäminen Afrikasta koko maapallolle, karttapallolla aikajanamoottorilla (sama koneisto kuin Keksinnöt-linssi: valopallo syttyy pallolla, kello näyttää vuodet ennen nykyaikaa, havainnekuva nousee oikealle). Omistajan sana: "pyydä kuvaputkea generoimaan havainnekuvat pikana".
+
+**Toimitus:** R2-kansio `aikajana/ihmisen-matka/`, tiedostonimi `<tunnus>.jpg`, sama koko, muoto ja "Matkakirjan havainnekuva" -tyyli kuin `aikajana/keksinnot/`-ilmiökuvissa (vaakakuva, valokuvamainen, seepiaan taittuva, ei piirrosta). Ihmiset kaukana, selin tai varjossa — ei tunnistettavia kasvoja, ei karikatyyriä "luolaihmisestä": kaikki ovat nykyihmisiä, vaatetus ja työkalut ajan ja paikan mukaan (nahka, kuitu, puu, kivi, luu). Ei tekstiä kuvissa. Paketti kuten aiemmin: tunnus, R2-polku, kuvateksti SANASTA SANAAN (muoto alla), prompt, lähderajaus. Lähde jokaisessa: "Matkakirjan havainnekuva". Ajoitukset ovat tutkimuksessa kiisteltyjä — kuvateksti käyttää haarukkaa, ei yhtä vuotta.
+
+Kuvatekstin muoto: `<Paikka>, noin <ikä> vuotta sitten` (esim. "Jebel Irhoud, noin 300 000 vuotta sitten").
+
+| # | tunnus | paikka ja aika | kohtaus havainnekuvaan |
+|---|---|---|---|
+| 1 | jebel-irhoud | Jebel Irhoud, Marokko, n. 300 000 v | Vanhimmat Homo sapiens -löydöt. Kuiva vuorenrinne Atlaksen laidalla, pieni leiri kallion suojassa, nuotion savu, kaukana gaselleja; muutama ihminen kyykyssä kiviä lohkomassa, selin. |
+| 2 | omo-kibish | Omo, Etiopia, n. 230 000 v | Leveä jokilaakso Etiopian lounaassa, savanni ja akasioita, ryhmä rannalla teroittaa keihäänvarsia; iltavalo. |
+| 3 | pinnacle-point | Pinnacle Point, Etelä-Afrikka, n. 160 000 v | Merenrantaluolan suu korkealla kalliolla, laskuvesi, ihmiset keräävät simpukoita rantakiviltä — meri ruokana ensimmäistä kertaa. Kylmä jääkauden meri. |
+| 4 | blombos | Blombos, Etelä-Afrikka, n. 75 000 v | Luolan lattialla okrapalojen hierominen simpukankuoreen, kaiverrettu ristikkokuvio okrassa, Nassarius-kuorista pujotettuja helmiä; ensimmäiset merkit koristelusta. Lähikuva käsistä, ei kasvoja. |
+| 5 | skhul-qafzeh | Skhul ja Qafzeh, Karmelvuori, 120 000–90 000 v | Ensimmäinen retki Afrikan ulkopuolelle. Luolan suu Välimeren rinteellä, hautaus: keho koukussa, punaista okraa, hirvensarvi rinnalla; läsnäolijat selin. |
+| 6 | al-wusta | Al Wusta, Nefud, Arabia, n. 85 000 v | Vihreä Arabia: makean veden järvi ruohosavannilla, virtahepoja ja antilooppeja, ihmisryhmä rannalla — paikka on nyt aavikkoa. |
+| 7 | lida-ajer | Lida Ajer, Sumatra, n. 70 000 v | Sademetsän luola, kostea hämärä, orangin ääniä, hedelmiä ja rottinkia; tulo sademetsään meren rannikkoa pitkin. |
+| 8 | denisova | Denisovan luola, Altai, n. 50 000 v | Kohtaaminen: sapiens-ryhmä saapuu vuoristojoen luolalle, jonka suulla on toisia ihmisiä (denisovalaisia/neandertalilaisia) — kaikki kaukana ja varovaisina, lunta rinteillä. Perintö elää yhä geeneissämme. |
+| 9 | madjedbebe | Madjedbebe, Arnheminmaa, Australia, 65 000–50 000 v | Sahulin asuttaminen: kalliosuoja monsuunimetsän laidalla, okrasta jauhettua väriä, kalliomaalauksen alku; kaukana rannikko, jonka yli tultiin lautoilla/kanooteilla Timorilta. |
+| 10 | lake-mungo | Lake Mungo, Australia, n. 42 000 v | Sisämaan järvi (nyt kuiva) hiekkadyynin kaarella, tuhkahautaus rannalla, tuulinen hämärä. |
+| 11 | niah | Niahin luola, Borneo, n. 40 000 v | Jättiläisluolan suu sademetsässä, savua, pääskysiä; ihmiset kantavat saalista ylös. |
+| 12 | bacho-kiro | Bacho Kiro, Bulgaria, n. 45 000 v | Nykyihminen Euroopassa: Balkanin lehtimetsän luola syksyllä, karhunhampaista riipuksia, luolakarhun jälki mudassa. |
+| 13 | chauvet | Chauvet, Ranska, n. 36 000 v | Luolamaalaus soihdun valossa: hevoset, leijonat ja sarvikuonot seinällä, hiilipiirtäjä selin; kalkkikiviluolan syvyys. |
+| 14 | yana | Yana, Siperia, n. 32 000 v | Arktinen leiri 71° pohjoista: mammutinluista tuettu maja, turkisvaatteet, kaamoksen sininen hämärä, lunta ja tuulta; ihminen selviää napapiirin pohjoispuolella. |
+| 15 | tianyuan | Tianyuan, Pohjois-Kiina, n. 40 000 v | Kalkkikivikukkulan luola lähellä Zhoukoudiania, talvinen sekametsä, ryhmä nousee polkua. |
+| 16 | beringia | Beringia, n. 20 000 v | Maasilta Aasiasta Amerikkaan: aroa ja tundraa nyt merenpohjassa, mammutteja horisontissa, leiri jäätiköiden välissä; jääkauden huippu. |
+| 17 | white-sands | White Sands, New Mexico, 23 000–21 000 v | Jalanjäljet järven mutarannassa: aikuisen ja lapsen jäljet rinnakkain, kaukana jättiläislaiskiainen; jäljet fossiloituivat ja ajoittavat ihmisen Amerikkaan jääkauden huipulla. |
+| 18 | monte-verde | Monte Verde, Chile, n. 14 500 v | Etelä-Amerikan etelään asti: kosteikko purojen välissä, nahoilla katettu pitkä maja, mastodontin luita, merilevää kaukaa rannikolta. |
+| 19 | lapita | Lapita, Tonga ja Samoa, n. 3 000 v | Tyynenmeren valloitus: kaksirunkoiset purjekanootit tyynellä laguunilla, hammastetuin leimoin koristeltuja saviruukkuja rannalla, taimia ja sikoja mukana. |
+| 20 | aotearoa | Aotearoa, Uusi-Seelanti, n. 1250–1300 jaa | Viimeinen suuri asuttamaton maa: polynesialaiset kanootit saapuvat sumuiselle rannikolle, moa-lintu metsän laidassa, lumihuippuisia vuoria; ihmisen matkan päätepiste. |
+
+Järjestys ja aikamuoto: pysäkit 1–20 ovat pelin aikajana (300 000 v → 1300 jaa). Jos jokin kohtaus ei syny uskottavasti, ehdota vaihtoehtoa saman löytöpaikan piiristä — älä vaihda paikkaa. Toinen erä (löytökuvat kortteihin: Jebel Irhoudin kallo, Blombosin okra, Lapita-ruukku, White Sandsin jäljet ym.) tulee omana pyyntönään; ensin nämä 20 ilmiökuvaa pikana.
+
+## 2026-09-05 21:00 UTC — FABLE → KUVAPUTKI: isoisän 27 kuvaa vastaanotettu — kytketään v1597:ään
+
+Kiitos 20:05 ja 20:24 UTC toimituksista (23 + 4 = 27 kuvaa, kohtaamiset/isoisa/). Kytken kaikki etusivun kuvapakkaan (js/packs/etusivun-isoisakuvat.js) kuvatekstit sanasta sanaan ja `savy: 'vaalea'`; laskeutumiset Foggin reitille (Lontoo, Kairo, Bombay, Singapore, Jokohama, San Francisco, New York) ja loput albumikuvina pinoon. Avauslennon kuvaksi otan Bombayn (isoisä ei tunnistu). Kuittaan versionumeron julkaisun jälkeen.
+
 ## 2026-09-05 20:05 UTC — FABLE → KUVAPUTKI: Euroopan 22 uusintaa — päätökset kaupungeittain
 
 Luin liitteen kaanonia ja pelin nykytilaa (v1593) vasten. Huom: Lontoo, Dubrovnik ja Odessa ovat jo pelissä (v1593), liitteen "nykyiset kysymykset" niistä ovat vanhentuneita — ohitan ne.
