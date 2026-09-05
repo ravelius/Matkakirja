@@ -744,6 +744,8 @@ const POLLO_ALANAPPIRIVISSA = false;
  * jotta kaksi liikettä lukee yhtenä eleenä eikä kahtena töksähdyksenä.
  */
 const PINON_NOUSU_MS = 380;
+/** Sormi saa liikkua tämän verran ja ele on yhä napautus, ei vieritys (px). */
+const KUPLAN_NAPAUTUSSADE_PX = 8;
 const PINON_MARGINAALI = 14;
 /** Kuplan kärjen keskikohta kuplan oikeasta reunasta (css right 1.1rem + 6px). */
 const PINON_KARJEN_SIIRTO = 24;
@@ -2429,6 +2431,37 @@ class Pollo {
     pino.appendChild(kupla);
     this.asetaPinonPaikka();
     /*
+     * YKSI LIIKE MYÖS TÄYDESSÄ PINOSSA (omistaja 5.9.2026: *"uudet
+     * puhekuplat edelleen tulevat vähän räpsähtäen, kun niiden pitäisi
+     * liukua sieltä alhaalta ylös. Nostain vanhoja puhekuplia pehmeästi
+     * samalla ylöspäin"*). Kun pino on maksimikorkeudessaan, uusi kupla
+     * ei enää kasvata kehystä vaan jää vieritysalueen alle, ja vanhat
+     * eivät liiku FLIP-mittauksessa lainkaan — liikkeen hoiti selaimen
+     * pehmeä vieritys OMALLA käyrällään ja tahdillaan, saapumis-
+     * animaation päälle. Kaksi eri liikettä samaan aikaan näytti
+     * räpsähdykseltä. Nyt vieritys tehdään HETI (ilman animaatiota)
+     * ennen FLIP-mittausta: vanhojen kuplien mitattu ero sisältää
+     * vierityksen, ja ne liukuvat ylös täsmälleen samalla käyrällä ja
+     * kestolla kuin uusi kupla nousee alareunan takaa. Yksi liike.
+     *
+     * VIERITYS LUONNOLLISEEN POHJAAN, EI SIIRRETTYYN. Saapumisanimaatio
+     * pitää uutta kuplaa alussa oman korkeutensa verran alempana
+     * (translateY), ja siirretty kupla LASKETAAN vieritysalueeseen:
+     * scrollHeight on hetken liian suuri, pohjaan vieritys menee liian
+     * alas, ja kun kupla nousee paikalleen, selain leikkaa vierityksen
+     * takaisin — koko pino nytkähtää. Siksi pohja mitataan ilman
+     * animaatiota (animation: none → scrollHeight → animaatio takaisin,
+     * joka samalla käynnistyy alusta) ja vieritetään siihen.
+     */
+    let pohja = pino.scrollHeight;
+    if (!vaha) {
+      kupla.style.animation = 'none';
+      void pino.offsetHeight;
+      pohja = pino.scrollHeight;
+      kupla.style.animation = '';
+    }
+    pino.scrollTop = Math.max(0, pohja - pino.clientHeight);
+    /*
      * YLIVUOTO MITATAAN ENNEN FLIP-SIIRTOA (korjaus 3.9.2026). Alla
      * vanhoille kuplille asetetaan hetkeksi translateY, ja selain
      * laskee siirretyn kuplan mukaan pinon vieritysalueeseen — mittaus
@@ -2466,15 +2499,18 @@ class Pollo {
         setTimeout(siivoa, PINON_NOUSU_MS + 60);
       }
     }
-    this.vierita();
     this.kuplanAani();
   }
 
-  /** Pino pohjaan: uusin kupla on aina näkyvissä pöllön vieressä. */
-  vierita() {
+  /**
+   * Pino pohjaan: uusin kupla on aina näkyvissä pöllön vieressä.
+   * Lisäyksessä vieritys on heti (liikkeen tekee FLIP, ks. lisaaPinoon);
+   * muualta kutsuttuna pehmeästi.
+   */
+  vierita({ heti = false } = {}) {
     const pino = this.pino;
     if (!pino) return;
-    const kaytos = this.vahaLiiketta() ? 'auto' : 'smooth';
+    const kaytos = heti || this.vahaLiiketta() ? 'auto' : 'smooth';
     if (typeof pino.scrollTo === 'function') {
       pino.scrollTo({ top: pino.scrollHeight, behavior: kaytos });
       return;
@@ -2627,12 +2663,14 @@ class Pollo {
    * Kupla häipyy kosketuksesta (omistaja 18.8.2026: *"Pöllön puhekuplia
    * pitää häipyä jos sitä koskettaa"*) — se ei siis päästä kosketusta
    * lävitseen, vaan ottaa sen sulkeutuakseen. Pelkkä sulkeminen ei
-   * kuitenkaan riitä: kupla katoaa jo pointerdownissa, ja selain etsii
-   * saman napautuksen click-kohteen vasta sormen noustessa. Kuplaa ei
+   * kuitenkaan riitä: kupla katoaa sormen noustessa (pointerup), ja
+   * selain etsii saman napautuksen click-kohteen sen jälkeen. Kuplaa ei
    * silloin enää ole, joten osuma valui kartalle ja avasi kohteen tai
    * jopa valitsi matkakohteen kuplan takaa (omistajan iPad-havainto
    * 27.8.2026). Nielu syö sen clickin kaappausvaiheessa
-   * (js/ui-apurit.js nielaiseSulkevaNapautus).
+   * (js/ui-apurit.js nielaiseSulkevaNapautus). Päätös tehdään vasta
+   * pointerupissa eikä pointerdownissa, jotta pinon vieritys sormella
+   * ei ole napautus (omistaja 5.9.2026, ks. alla).
    *
    * Kuplan omat painikkeet ja linkit jäävät ennalleen: napautus niiden
    * päällä on valinta eikä sulku, eikä sitä nielaista.
@@ -2649,8 +2687,27 @@ class Pollo {
     const omaHallinta = (tapahtuma) => Boolean(
       tapahtuma.target?.closest?.('a, button, label, input, select, textarea'),
     );
+    /*
+     * VIERITYS EI OLE NAPAUTUS (omistaja 5.9.2026: *"Kun yritän
+     * scrollata pöllön puhekuplia, niin se avaakin pöllön
+     * chatti-ikkunan"*). Ratkaisu tehdään vasta sormen NOUSTESSA: jos
+     * sormi on liikkunut yli KUPLAN_NAPAUTUSSADE_PX tai selain otti
+     * eleen vieritykseksi (pointercancel), kyse oli vierityksestä eikä
+     * mitään tehdä. Nielu asennetaan samassa kohdassa, joten se ei jää
+     * syömään seuraavaa napautusta vierityksen jälkeen.
+     */
+    let alku = null;
     kupla.addEventListener('pointerdown', (tapahtuma) => {
-      if (omaHallinta(tapahtuma)) return;
+      if (omaHallinta(tapahtuma)) { alku = null; return; }
+      alku = { x: tapahtuma.clientX, y: tapahtuma.clientY, id: tapahtuma.pointerId };
+    });
+    kupla.addEventListener('pointercancel', () => { alku = null; });
+    kupla.addEventListener('pointerup', (tapahtuma) => {
+      if (!alku || omaHallinta(tapahtuma)) { alku = null; return; }
+      const dx = Math.abs(tapahtuma.clientX - alku.x);
+      const dy = Math.abs(tapahtuma.clientY - alku.y);
+      alku = null;
+      if (dx > KUPLAN_NAPAUTUSSADE_PX || dy > KUPLAN_NAPAUTUSSADE_PX) return;
       nielaiseSulkevaNapautus(tapahtuma, { doc: this.doc });
       /*
        * KUITTAUS OTETAAN TALTEEN ENNEN MITÄÄN MUUTA. Napautus vie

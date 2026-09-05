@@ -1902,3 +1902,31 @@ test('linssin oma kupla ohittaa portin — mutta vain linssin kutsumana', () => 
   const aikajana = readFileSync(new URL('../js/aikajana.js', import.meta.url), 'utf8');
   assert.match(aikajana, /polloLinssikupla\(osat\);/);
 });
+
+/*
+ * VIERITYS EI OLE NAPAUTUS, JA PINO LIIKKUU YHTENÄ (omistaja 5.9.2026:
+ * *"Kun yritän scrollata pöllön puhekuplia, niin se avaakin pöllön
+ * chatti-ikkunan"* ja *"uudet puhekuplat edelleen tulevat vähän
+ * räpsähtäen, kun niiden pitäisi liukua sieltä alhaalta ylös. Nostain
+ * vanhoja puhekuplia pehmeästi samalla ylöspäin"*).
+ */
+test('kuplan napautus päätetään pointerupissa liikerajalla; pino vieritetään luonnolliseen pohjaan ennen FLIP-siirtoa', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  const sopimus = lahde.slice(lahde.indexOf('  sidoKuplanNapautus(kupla) {'), lahde.indexOf('  naytaOnnittelu('));
+  assert.match(sopimus, /kupla\.addEventListener\('pointercancel'/, 'vieritykseksi muuttunut ele ei ole napautus');
+  assert.match(sopimus, /kupla\.addEventListener\('pointerup', \(tapahtuma\) => \{/);
+  assert.match(sopimus, /if \(dx > KUPLAN_NAPAUTUSSADE_PX \|\| dy > KUPLAN_NAPAUTUSSADE_PX\) return;/);
+  // Nielu ja chatin avaus vasta pointerupissa, ei pointerdownissa.
+  const alas = sopimus.slice(sopimus.indexOf("addEventListener('pointerdown'"), sopimus.indexOf("addEventListener('pointercancel'"));
+  assert.doesNotMatch(alas, /nielaiseSulkevaNapautus|this\.avaa\(\)/);
+  const ylos = sopimus.slice(sopimus.indexOf("addEventListener('pointerup'"));
+  assert.match(ylos, /nielaiseSulkevaNapautus\(tapahtuma, \{ doc: this\.doc \}\);/);
+  assert.match(ylos, /this\.avaa\(\);/);
+  assert.match(lahde, /const KUPLAN_NAPAUTUSSADE_PX = 8;/);
+  // Lisäys: vieritys heti luonnolliseen pohjaan (animaatio pois mittauksen ajaksi), sitten FLIP.
+  const lisays = lahde.slice(lahde.indexOf('  lisaaPinoon(kupla) {'), lahde.indexOf('  vierita('));
+  assert.match(lisays, /kupla\.style\.animation = 'none';[\s\S]*pohja = pino\.scrollHeight;[\s\S]*kupla\.style\.animation = '';/);
+  assert.match(lisays, /pino\.scrollTop = Math\.max\(0, pohja - pino\.clientHeight\);/);
+  assert.ok(lisays.indexOf('pino.scrollTop = Math.max') < lisays.indexOf('const ero = ennen[i]'), 'vieritys ennen FLIP-mittausta');
+  assert.doesNotMatch(lisays, /this\.vierita\(\)/, 'pehmeä vieritys ei saa kilpailla FLIP-liikkeen kanssa');
+});
