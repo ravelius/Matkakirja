@@ -27,6 +27,26 @@ Kolme Opus-agenttia työskentelevät omissa worktreissään (`.claude/worktrees/
 - **Isoisän uudet kuvat** (omistaja 23.15: "kohta pitäisi tulla isoisän uusia kuvia, niin käytä niitä ennemmin"): kun kuvaputki toimittaa ne pelin R2:een (postikierros huomaa), kytke ne HETI etusivun kuvapakkaan ja avauslennon `lento`-avaimeen (ISOISAN_VALOKUVAT) — Bombay-rajaus on vain väliaikainen. Kuvatekstit sanasta sanaan, muoto "Isoisän kuva: <paikka>, 1873"; kasvoja ei näytetä (Raamattu ISOISA JAA ARVOITUKSEKSI).
 Fable tarkistaa ja viimeistelee tekstit (kuten v1586 ja v1593), poistaa LUONNOS-merkinnät, julkaisee. Päätökset kaupungeittain: posti/fable-vanha.md 20:05 UTC. Dublin on jäissä (henkilöä ei ole). Kuvaputkelta pyydetty isoisän vaaleat kuvat pelin R2:een kuvatekstein (posti 19:55 UTC).
 
+## Lisäys klo 23.35 — pulun kuplat (omistaja 23.30, kesken)
+
+Omistaja: "sen tervetuloa kreikkaan ja ratkaise tehtävä ohjeet voi ottaa pois ja
+kirjoittaa hauskemmin pulun noihin kahteen kommenttiin sisään." Toteutus:
+js/livia.js `LIVIAN_PALJASTUS` (kaksi repliikkiä, rivit ~229–242) parametrisoidaan
+maalla ja paikalla (js/ui-apurit.js `maahanMuoto`, `paikassaMuoto`); tervetuloa-
+ja "ratkaise tehtävä" -ohje sekä kultaisen merkin vinkki (js/ui.js
+`SAAPUMISEN_KUPLA_TOINEN`, rivi 748) kirjoitetaan hauskasti pulun kahteen
+repliikkiin; js/ui.js `saapumisenKuplat` (~18990) ei enää näytä
+`saapumisenOhjekuplat`-kuplia paljastuksen jälkeen (jos paljastus ei soi,
+vanhat ohjekuplat jäävät). Testit: tests/lento-ajoitus.test.mjs:246,
+tests/aikajana.test.mjs:915, tests/aloitus-pallolla.test.mjs:57; js/livia.js
+rivi 60 (avaus ja paljastus muutetaan yhdessä). Ei vielä koodattu.
+
+Huom. resetissä send_later-muistutukset (laatat c 23.12, video 23.24) eivät siirry
+uuteen sessioon: tarkista tilat itse (`gh`-vastine: mcp__github__actions_get run
+33985106951 ja 33987642916; R2 HEAD `julisteet/etusivu/2026-09-05c/etusivu.json`).
+Postikierros-rutiini trig_01SB7J6WarGdjvZY9e7weUuv on sidottu vanhaan sessioon —
+luo uusi tunneittainen rutiini uudelle sessiolle.
+
 ## Tänään julkaistu (v1553–v1594)
 
 Pallo oletuslaudaksi ja laatu levossa; kirjastot StPageFlip, Tuna,
