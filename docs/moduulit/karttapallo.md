@@ -350,6 +350,28 @@ Sessio = yksi Fablemax-erä ≈ yksi PR.
 | **5. Avaus, offline, laite** | avausnäkymä: ESIRENDERÖITY sumennettu pallo (kuvasarja/video laatoista, pyörii hitaasti Lontoosta Aasiaan) etusivun tekstin takana, päällä elävä kone + paksu punainen viiva kaupungista toiseen ja isoisän aikalaiskuvat pienenä kartan ulkopuolella (luku 0 kohta 5; siihen asti etusivu vanhalla kartalla), aloituslento pallolla + niukkuusharso; SW-välimuisti vendorille ja laatoille; varapolku + turvatila; Z8 käyttöön ja lähin korkeus laattatarkkuudesta; hover-raycast pois; **5b** mitattu käynnistysaika TestFlightissa → päätös staattisten karttatuontien laiskoittamisesta (erä vain jos mittaus näyttää > 300 ms hyötyä) | js/pallolauta/avaus.js, js/ui.js (renderIntro, aloituslento), sw.js, js/main.js, js/pallo.js | savuke-avauslento `--lauta pallo`, tests/sw.test.mjs (välimuistikatot), savuke-dist (ei palloa, kartta) | 2 | uusi peli alusta loppuun pallolla; ilman verkkoa peli käynnistyy kartalla |
 | **6. Pelaajan kytkin** (alun perin "Oletukseksi" — LAUTA_OLETUS = 'pallo' ja pallo-linssi pois laukusta tehtiin jo v1554:ssä omistajan päätöksellä) | pelaajan asetus "Pelilauta: karttapallo / vanha kartta" (asetusvalikko, sama avain matkakirja-lauta, ei pelitilaan); regressiotaulukko ennen/jälkeen (kehys, keko, tekstuurit, käynnistys); docs/moduulit/linssit.md ja kaupunkilehti.md viitteet; tuojakartoitus; muutosloki; vanha kartta jää linssikartaksi ja palautusoptioksi (ei poisteta) | js/main.js (asetus), js/ui-apurit.js, docs/ | kaikki savukkeet kummallakin laudalla | 1,5 | pelaaja valitsee laudan itse; `?lauta=kartta` palauttaa vanhan |
 
+**Vaiheen 3 toteutusmerkinnät (Fablemax 5.9.2026, PR "Pallolauta vaihe
+3: nimet ja nostot pallolla"):** (1) nimet ladotaan ruutuavaruudessa
+samalla sijoitusfunktiolla kuin laudalla (js/karttanimet.js
+sijoitaKaupunginNimi, ladoRuutunimet) — kynnys KYNNYS.kaupunki ei ole
+käytössä pallolla, vaan katto 40 ja tärkeysjärjestys (oma kaupunki,
+lähtökaupunki, lentokenttä, reittisolmun aste, lähin ruudun keskipistettä)
+yleistävät; pudotus sallitaan, ja pudonnut kaupunki jää pisteettä (PISTE
+VAIN NIMEN KANSSA). (2) Ladonta ajetaan vain levossa (LAATU_LEPOVIIVE_MS,
+sama hetki kuin laadun palautus). (3) Nostojen ladonta (nippu, erottelu,
+nimiön kylki) tulee tasokartan tyngästä (js/fokuskohteet.js
+maanKohdemerkit), ei omasta koodista; poltetut luetaan PALLON laatat.json-
+luettelon `nostotaso.nostot`-kentästä (tools/tee-pallolaatat.mjs --nostot
+kirjoittaa sen), tunnuksella ja tiivisteellä kun se on annettu. Pallon
+nykyinen sarja (2026-09-03a) on pohjasarja ilman nostotasoa, joten kaikki
+nostot ovat toistaiseksi eläviä H-merkkejä. (4) Kortit ankkuroidaan
+merkin ruutupisteestä (avaaFokuskohde { ankkuri }) ja seuraavat merkkiä
+levossa. (5) Aihevalot ovat pistekerroksen täpliä; selitteen laskurit
+tulevat pallolta (ui.karttavaloLaskuri). (6) Uutta Globe.gl-kerrosta ei
+tarvittu: PALLOLAUDAN_KERROKSET on ennallaan. Portit:
+tests/pallonimet.test.mjs, tools/tarkista-pallomerkit.mjs,
+savuke-pallolauta vartiot 12–15.
+
 Yhteensä **13 sessiota** (vaiheet 1–6; 5b mahdollinen +1). Vaihe 1 on
 "uuden jutun ensimmäinen kierros" (roolitus.md): Fable/Fablemax tekee
 sen itse ja hioo omistajan kanssa; vasta vaiheet 2–3 voi jakaa

@@ -186,7 +186,7 @@ test('tasokartta pois tieltä yhdestä portista; kamera kulkee delegaatin kautta
   assert.match(main, /asetaLautaValinta\(halutaan \? 'pallo' : 'kartta'\);/);
   assert.match(main, /osoite\.searchParams\.delete\('lauta'\);/);
   const sw = lue('../sw.js');
-  for (const nimi of ['lauta', 'kamera', 'merkit', 'reitit', 'siirto']) {
+  for (const nimi of ['lauta', 'kamera', 'merkit', 'nimet', 'nostot', 'reitit', 'siirto']) {
     assert.match(sw, new RegExp(`'\\./js/pallolauta/${nimi}\\.js'`), `${nimi}.js puuttuu SHELListä`);
   }
   // Yhden tiedoston versio ei niputa palloa: dynaaminen tuonti kaatuu
@@ -223,7 +223,7 @@ test('vaihe 2: siirto haarautuu laudan mukaan kuljettajalle, koreografia pysyy y
   for (const [koukku, maara] of Object.entries(koukut)) {
     assert.equal(siirto.split(koukku).length - 1, maara, `${koukku} ei ole siirrossa ${maara} kertaa`);
   }
-  const pallolauta = ['lauta', 'kamera', 'merkit', 'reitit', 'siirto'].map((n) => lue(`../js/pallolauta/${n}.js`)).join('\n');
+  const pallolauta = ['lauta', 'kamera', 'merkit', 'nimet', 'nostot', 'reitit', 'siirto'].map((n) => lue(`../js/pallolauta/${n}.js`)).join('\n');
   for (const koukku of ['aloitaSiirronMusiikki', 'lopetaSiirronMusiikki', 'aloitaJalkamatkanAani', 'sfx.play(', 'ennakoiSiirtoZoomi', 'aloitaSaattavaKamera']) {
     assert.ok(!pallolauta.includes(koukku), `pallolauta kutsuu ${koukku} itse — ui.js:n kutsut kahdentuisivat`);
   }

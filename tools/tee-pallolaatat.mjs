@@ -36,6 +36,19 @@
  * julisteet/pallo/laatat/<pyramidin versio>/ ja js/pallo.js osoittaa
  * versioon PALLO_LAATTAVERSIO.
  *
+ * NOSTOTASON TIIVISTE LUETTELOON (pallolauta vaihe 3, karttapallo.md
+ * luku 4.2). `--nostot`-ajossa laatat.json saa kentän `nostotaso`:
+ * { versio, saanto, tasot: [Mercator-tasot, joilla nostot ovat],
+ *   nostot: { tunnus: tiiviste } } — kopio pyramidi.jsonin
+ * nostotaso-kentästä (tools/generoi-laattapyramidi.mjs), tasot
+ * käännettyinä pallon omiksi (Z = z + 1, ks. lahdetaso). Pallo lukee
+ * TÄSTÄ, mitkä nostot ovat sen laatoissa (js/pallo.js
+ * pallonNostoOnPoltettu) ja piirtää vain muut elävinä
+ * (js/pallolauta/nostot.js) — pyramidin oma luettelo ei kelpaa, koska
+ * pallon sarja poltetaan eri hetkellä ja voi olla eri versiota.
+ * Pohjasarjassa (ilman --nostot) kenttää ei ole: silloin laatoissa ei
+ * ole yhtään nostoa ja pallo piirtää kaikki elävinä.
+ *
  * Kuvankäsittely on sharp-kirjastolla (workflow asentaa sen ajoon).
  */
 import { spawnSync } from 'node:child_process';
@@ -288,6 +301,25 @@ export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
   return ulos;
 }
 
+/**
+ * Nostotason kirjaus pallon luetteloon: pyramidin nostotaso pallon
+ * tasoina. Vain ne Mercator-tasot, joiden lähdetaso (lahdetaso) on
+ * nostotasolla JA jotka tämä ajo kirjoitti.
+ */
+export function pallonNostotaso(luettelo, min, max) {
+  const nt = luettelo?.nostotaso;
+  if (!nt) return null;
+  const lahteet = new Set(nt.tasot ?? []);
+  const tasot = [];
+  for (let Z = min; Z <= max; Z += 1) if (lahteet.has(lahdetaso(Z))) tasot.push(Z);
+  return {
+    versio: nt.versio ?? null,
+    saanto: nt.saanto ?? null,
+    tasot,
+    nostot: { ...(nt.nostot ?? {}) },
+  };
+}
+
 /** Laatat, jotka osuvat annettuun alueeseen (tai kaikki). */
 export function tasonLaatat(Z, alue = null) {
   const n = 2 ** Z;
@@ -350,6 +382,8 @@ async function paa() {
     laatta: LAATTA,
     muoto: 'jpg',
     tehty: new Date().toISOString(),
+    // Mitkä nostot ovat laatoissa (ks. tiedoston alku, NOSTOTASON TIIVISTE).
+    ...(nostot && luettelo.nostotaso ? { nostotaso: pallonNostotaso(luettelo, min, max) } : {}),
   }, null, 1)}\n`);
   writeFileSync(join(ulos, 'kansio.txt'), `${kansio}\n`);
   console.log(`kirjoitettu ${tehty} laattaa kansioon ${ulos}; ämpärin kansio: ${kansio}`);
