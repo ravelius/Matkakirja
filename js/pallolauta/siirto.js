@@ -33,6 +33,13 @@
  *
  * Reduced motion: aseta hyppää perille, kamera-ajot ovat hyppyjä
  * (kamera.js), kone ei lennä vaan ilmestyy perille.
+ *
+ * AVAUSLENTO KÄYTTÄÄ SAMAA KULJETTAJAA (vaihe 5b,
+ * js/pallolauta/avaus.js): Lontoo → aloituskaupunki on pallolla sama
+ * kaari ja sama kone kuin mikä tahansa lento, ja js/ui.js:n avauksen
+ * koreografia — repliikki, kertoja, kabiiniääni, ohitus, saapumiskortti
+ * — pysyy yhdessä paikassa kummallekin laudalle. Ohitus tarvitsee
+ * kuljettajalta yhden lisän: `paata()` alla.
  */
 
 import { pixelOf, pointAlong } from '../rules.js';
@@ -65,6 +72,22 @@ function reitinOsuus(reitti, pos) {
     if (reitti.b === pos.city) return 1;
   }
   return null;
+}
+
+/**
+ * Lennon rajaus: lähtö ja kohde laudan yksiköissä (marginaali erikseen,
+ * LENNON_RAJAUKSEN_MARGINAALI). Vietynä, koska AVAUSLENTO PALLOLLA
+ * (js/pallolauta/avaus.js) tarvitsee TÄSMÄLLEEN saman laatikon: se ajaa
+ * kameran rajaukseen jo pergamenttiarkin takana, ja kun kuljettajan oma
+ * ajo (hyppaa alla) laskee saman kohteen, ajo on nolla-ajo eikä kamera
+ * nytkähdä koneen lähtiessä.
+ */
+export function lennonRajaus(board, a, b) {
+  const pa = pixelOf(board, a);
+  const pb = pixelOf(board, b);
+  const x = Math.min(pa.x, pb.x);
+  const y = Math.min(pa.y, pb.y);
+  return { x, y, w: Math.abs(pb.x - pa.x), h: Math.abs(pb.y - pa.y) };
 }
 
 /** Reitti, jolla kaksi peräkkäistä paikkaa ovat (askel on aina yhdellä reitillä). */
@@ -220,15 +243,6 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false }) {
     el = null;
   }
 
-  /** Lennon rajaus: lähtö ja kohde laudan yksiköissä marginaalilla. */
-  const lennonRajaus = (a, b) => {
-    const pa = pixelOf(board, a);
-    const pb = pixelOf(board, b);
-    const x = Math.min(pa.x, pb.x);
-    const y = Math.min(pa.y, pb.y);
-    return { x, y, w: Math.abs(pb.x - pa.x), h: Math.abs(pb.y - pa.y) };
-  };
-
   return {
     nosta: () => {
       if (el) return;
@@ -267,7 +281,7 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false }) {
         // odoteta — kone lähtee kartan jo liikkuessa, ja paikka lasketaan
         // joka kehys, joten kone pysyy kaarellaan kameran liikkuessa.
         void kamera.ajaKamera(
-          { bbox: lennonRajaus(a, b), marginaali: LENNON_RAJAUKSEN_MARGINAALI },
+          { bbox: lennonRajaus(board, a, b), marginaali: LENNON_RAJAUKSEN_MARGINAALI },
           { kesto: LENNON_KAMERA_MS },
         );
         edellinenRuutu = null;
@@ -290,6 +304,25 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false }) {
         valmis,
       };
     }),
+    /**
+     * OHITUS VIE HYPYN LOPPUUN HETI (js/ui.js ohitaLento, omistaja
+     * 26.8.2026: *"napauttamalla ruutua animaatio katkeaa kesken ja
+     * pelaaja pääsee siirtymään mantereelle välittömästi"*).
+     *
+     * Tasokartalla lento on selaimen oma animaatio ja ohitus on sen
+     * `finish()`; pallolla kone kulkee rAF-silmukassa, joten sama teko
+     * on tämä: kesken oleva hyppy päätetään perille, lupaus ratkeaa ja
+     * kone piirretään kohteen ylle. Ilman tätä ohitus jäisi odottamaan
+     * juuri sitä lentoa, jonka pelaaja äsken katkaisi.
+     */
+    paata: () => {
+      if (!hyppy) return;
+      const { b, valmis } = hyppy;
+      hyppy = null;
+      ankkuri = b;
+      valmis();
+      if (el) { if (lento) piirraKone(performance.now()); else piirraNappula(performance.now()); }
+    },
     laske: () => {
       const perilla = ankkuri;
       pura();
