@@ -742,3 +742,46 @@ poiskytkin, lepotilan vartijat), tests/pallolauta.test.mjs ja
 savuke-etusivupallo (E1d tasokartta ei alustu, E5d vanha kartta herää
 lipulla pois, E8 pelkkä paperi) — savuke ajetaan nyt oletuslaudalla
 eikä `?lauta=kartta`-tilassa.
+
+**Aalto 2B — maailmanradio pallolle (js/linssit/radio.js).** Radio on
+kartan TILA eikä kerros, joten pallolla muuttui tasan yksi asia:
+kaupunkien play-napit. Linssi sai `pallolle(lauta)`, joka pyytää yhden
+merkkiosan (`lauta.linssit.merkit('radio', …)`); datum on `{ avain:
+kaupungin id, laji: 'linssi', lat, lng, elementti, asettele }` ja
+elementti on div + svg (rooli `button`, `aria-label` "Kaupunki —
+asema"), mitat RUUTUPIKSELEINÄ kuten muillakin pallon merkeillä
+(laatikko 44 px = osuma-ala, rengas 13, hehku 21, ulkokehä 17). Kolme
+ulkoasua ovat samat kuin kartalla (soiva, asema olemassa, ei asemaa) ja
+karsinta on sama `radionKaupungit` (mitattu maailmankartalla 113 nappia,
+110 kanavaa) — kiertoKohtia ei ole, koska pallolla ei ole saumaa.
+Soivan aseman vaihtuessa lista asetetaan uudelleen SAMOILLA AVAIMILLA
+(kerroMuutos → tahdistaPallonNapit), joten elementit siirtyvät eivätkä
+synny uudestaan; `asettele` piirtää sisuksen vain kun asu vaihtui.
+Soitin, pistenäyttö, viritysäänet ja js/packs/radiot.js ovat kartasta
+riippumattomia eivätkä muuttuneet.
+
+- **Napautus kulkee elementin kautta** — poikkeus riskin 3 R-malliin.
+  Nappi ei koske peliin, ja se on ainoa joka tietää kaupunkinsa;
+  `.pallolauta-merkki` on pointer-events: none, joten radion nappi
+  kumoaa sen kaksiosaisella valitsimella (css/radio.css), ja pallon
+  takana oleva (häivytetty) nappi ei ota napautusta.
+- **Radiotila omistaa pallon.** Pinnan ja kaupunkipisteen napautus on
+  vaiti radiotilassa (js/pallolauta/lauta.js napautaKaupunki,
+  napautaKohde: `ui.radioPaalla()`) ja nopanheiton kohteet ovat piilossa
+  (`body.radio-tila .pallolauta-kohde`) — sama kuin tasokartalla, jossa
+  drawTargets piirtää radiotilassa vain radion napit. Kaupunkien nimet
+  ja nappula jäävät kuten kartallakin.
+- **Kamera ajaa vain kun asemaa ei näe.** Napautettu nappi on jo
+  ruudulla; nauhalta voi valita aseman pallon toiselta puolen, ja
+  silloin `lauta.kamera.ajaKamera` vie sinne (varmistettu selaimessa:
+  Lontoo ei liikuttanut kameraa, Tokio ajoi 30/20 → 35,7/139,7).
+- Vartijat: tests/radio-pallolla.test.mjs (uusi) ja ennallaan pysynyt
+  tests/radio.test.mjs. Selaimessa varmistettu Chromiumilla: linssi
+  'radio' → 113 nappia pallolla, soitin ja pistenäyttö näkyvissä,
+  linssikarttaa ei avata; napautus virittää (soiva nappi punaisena);
+  sulku vie napit, soittimen ja `radio-tila`-luokan.
+
+AVOIN: kaupunkien PISTEET (Globe.gl pointsData) jäävät nappien alle
+näkyviin — sama laudan `pisteNakyy`-muutos ratkaisisi tämän ja aallon 1C
+saman avoimen kohdan kerralla; napit ovat pisteitä isompia, joten piste
+ei ota napautusta itselleen.

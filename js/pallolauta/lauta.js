@@ -526,6 +526,14 @@ export async function avaaPallolauta(ui) {
    */
   const napautaKaupunki = (k) => {
     if (ui.dead || ui.busy || !k) return false;
+    /*
+     * RADIOTILASSA KAUPUNGIT OVAT PLAY-NAPPEJA (js/linssit/radio.js
+     * pallolle; omistaja 4.8.2026: *"kaikki muu toiminto häviää"*).
+     * Napautuksen ottaa radion oma nappi, eikä pinnan napautus saa avata
+     * lehteä tai sukeltaa kameralla — sama sääntö kuin tasokartalla,
+     * jossa drawTargets piirtää radiotilassa vain radion napit.
+     */
+    if (ui.radioPaalla?.()) return false;
     const city = laudanKaupunki(k);
     if (!city) return false;
     heraa();
@@ -556,6 +564,9 @@ export async function avaaPallolauta(ui) {
    */
   const napautaKohde = (kohde) => {
     if (ui.dead || ui.busy || !kohde) return false;
+    // Radiotilassa kartalla ei liikuta (sama portti kuin ui.doRollissa
+    // ja napautaKaupungissa): kohteet ovat myös piilossa (css/radio.css).
+    if (ui.radioPaalla?.()) return false;
     const { game } = ui;
     if (game.phase !== 'move' || game.player?.isBot) return false;
     heraa();

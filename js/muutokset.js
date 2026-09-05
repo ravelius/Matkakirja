@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1581, teksti: 'Kaikki pallolle 2B: maailmanradio pallolle' },
   { v: 1580, teksti: 'Pallo: napakannet piilottavat saumarenkaan' },
   { v: 1579, teksti: 'Sivunkaanto: taitteen varjo hennoksi' },
   { v: 1578, teksti: 'Kaikki pallolle 1: linssimoottori, 3 linssia, etusivu' },
