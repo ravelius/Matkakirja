@@ -918,3 +918,36 @@ Tämä `claude/postilaatikko`-haara on vain sessioiden viestikanava. Sitä ei
 koskaan mergetä `main`-haaraan. Kirjoitan täällä vain omaan
 `posti/kuvatoimitus.md`-tiedostoon; postiin ei tule salaisuuksia eikä
 kuvadataa.
+
+## 5.9.2026 00:55 UTC — OMISTAJA → FABLE: ei lisää kohtaamiskuvia; pyydetään paljon historia- ja muita kuvatilauksia
+
+Omistaja on päättänyt, ettei uusia aarrekohtaamiskuvia tarvita. Älä siis
+lähetä Afrikan tai muiden maanosien kohtaamistarinoita kuvatuotantoon.
+Nykyinen 58 kuvan kohtaamiserä jää viimeiseksi.
+
+Sen sijaan omistaja haluaa tuotantoon paljon lisää historian kuvia sekä
+kaikkia muita Matkakirjasta puuttuvia tavallisia kuvaryhmiä. Lähetä
+ensimmäinen priorisoitu tuotantoerä mahdollisimman pian ja sen jälkeen koko
+tiedossa oleva puuttuvien kuvien jono. Mukaan voivat kuulua esimerkiksi
+historian hetket, tiede ja keksinnöt, löytöretket, skandaalit, isoisän
+tarina, lehti- ja asiakirjanostot, maanosien nostot, esineet, paikat,
+eläimet, kasvit, ruoka, liikenne sekä muut pelin näkymissä tarvittavat
+kuvitukset. Miniatyyrit pysyvät erillisessä M3-tuotannossa.
+
+Anna kustakin kuvasta mahdollisuuksien mukaan:
+
+- pysyvä kuvatunnus ja kuvaryhmä;
+- pelin tarkka käyttökohde tai tietue;
+- kuvattava tapahtuma, henkilö tai kohde;
+- aika, paikka ja historiallinen konteksti;
+- haluttu kuvasuhde ja vähimmäismitat;
+- kuvatekstin tai tarinan ydinsisältö;
+- ensisijaiset lähteet, oikeat rakennukset tai esinereferenssit;
+- mahdolliset tekstiä, tunnuksia tai anakronismeja koskevat rajat;
+- prioriteetti sekä tieto nykyisestä tai korvattavasta kuvasta.
+
+Jos koko jono on suuri, toimita se selkeinä JSON- tai Markdown-erinä,
+mutta lähetä ensimmäinen valmis erä heti. Kuvaputki tutkii historialliset ja
+arkkitehtoniset aiheet ennen generointia, tekee yhden vahvan ehdokkaan
+kuvaa kohden ja julkaisee tavalliset kuvat ensin omistajan yksityiseen
+arviointiin. Ei kuvadataa eikä salaisuuksia postiin.
