@@ -17,7 +17,7 @@
  * Kohtauksen sopimus (js/ui.js aloituslennonKohtaus):
  *   rajaus        { bbox, marginaali } laudan yksiköissä — null tarkoittaa,
  *                 ettei tällä laudalla voi lentää (silloin vanha kalvo)
- *   valmistele()  lauta lennon tilaan (harso, niukat nimet, kaari)
+ *   valmistele()  lauta lennon tilaan (niukat nimet, kaari, tarkka laatu)
  *   odotaKartta() valinnainen: laudan oma "kartta on valmis" arkin takana
  *   rakenna()     kone kiitoradalle kamera-ajon jälkeen
  *   lenna(kesto)  { animaatiot, perilla } — kone matkaan
@@ -32,6 +32,26 @@
  * kuin vaiheen 2 lennolla. Kuljettaja pyydetään ui.nappulanKuljettajalta
  * (`{ lento: true }`), jolloin sama sopimus palvelee molempia lentoja
  * eikä koneen kuljetusta ole kahdessa paikassa.
+ *
+ * ── KOLME OMISTAJAN TILAUSTA 5.9.2026 KLO 00.35 ───────────────────
+ *
+ * Uusi kaappaus samasta lennosta (v1601), sanatarkasti:
+ * *"lentokonekohtauksessa kartta voi näkyä ilman sumennusta.
+ * lentokoneen ei tarvitse kääntyä alussa vaan voi lehtää heti oikeaan
+ * suuntaa ja jättää paksun punaisen viivan. isoisän kuva pitää
+ * häivyttää joka reunastaan läpinäkyväksi ja tehdä vähän isommaksi"*
+ *
+ *   1. SUMENNUS POIS — niukkuusharso poistettiin pallolta kokonaan
+ *      (js/pallolauta/lauta.js aloitaLentotila), ja koska kartta on nyt
+ *      näkyvissä terävänä, `valmistele` PYYTÄÄ TARKAN LAATUTILAN koko
+ *      lennon ajaksi (`pakotaPallonLaatu`, js/pallo.js) ja `pura`
+ *      vapauttaa sen laskeutumisessa.
+ *   2. SUORA LÄHTÖ — koneen asento luetaan kaaresta eikä edellisestä
+ *      kehyksestä, ja käännöksen kesto on nolla (js/pallolauta/siirto.js
+ *      KONEEN_KAANNOKSEN_MS). Kone on lentosuunnassa jo ilmestyessään,
+ *      ja paksu viiva alkaa kasvaa samalla kehyksellä kuin lento.
+ *   3. ISOISÄN KUVA — kortin koko ja reunojen häivytys ovat css
+ *      (.lento-valokuva), ei tämän moduulin asia.
  *
  * ── KOLME OMISTAJAN TILAUSTA 5.9.2026 KLO 23.10 ───────────────────
  *
@@ -70,6 +90,7 @@
  * "feidautuu sisään suoraan oikeassa zoomitilassa" kuten kartalla.
  */
 
+import { pakotaPallonLaatu } from '../pallo.js';
 import { hypynVaihe } from '../siirtokoreografia.js';
 import { PALLOLAUDAN_LEVEYS } from './kamera.js';
 import { REITIN_KORKEUS, lentokaarenKohta } from './reitit.js';
@@ -140,6 +161,7 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
   let kuljettaja = null;
   let purettu = false;
   let jalkiKehys = 0;
+  let laatuPyydetty = false;
 
   /*
    * NÄKYMÄ LÄHTEE PUOLI PYÖRINTÄÄ LÄNNEMPÄÄ. Rajauslaatikkoa siirretään
@@ -186,11 +208,27 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
 
     valmistele() {
       /*
-       * NIUKKA LAUTA ENNEN KAMERA-AJOA, kuten tasokartalla: harso ja
-       * kahden nimen sääntö ovat voimassa jo silloin kun kuva asettuu
-       * rajaukseen, eikä maailma himmene kesken liikkeen.
+       * NIUKKA LAUTA ENNEN KAMERA-AJOA, kuten tasokartalla: kahden
+       * nimen sääntö on voimassa jo silloin kun kuva asettuu
+       * rajaukseen, eikä nimiä ehdi ladota kesken liikkeen. Harsoa ei
+       * ole (omistaja 5.9.2026 klo 00.35), joten niukkuus on vain tämä.
        */
       lauta.lento.aloita({ lahto, kohde });
+      /*
+       * TARKAT LAATAT KOKO LENNON AJAN (omistaja 5.9.2026 klo 00.35:
+       * *"lentokonekohtauksessa kartta voi näkyä ilman sumennusta"*).
+       * Harso on poissa, joten laattakartta on lennon pääosassa — eikä
+       * se saa olla liikkeen ajan lepolaatua karkeampi juuri silloin,
+       * kun kamera liukuu koko lennon läpi (AVAUSLENNON_PYORINTA_AST).
+       * Sama vipu kuin keksintölinssin ajolla (js/pallo.js
+       * pakotaPallonLaatu, omistaja 5.9.2026: *"pidä kokoajan terävä
+       * tila päällä"*); pyytäjiä lasketaan, joten vapautus `pura`:ssa
+       * ei voi sammuttaa toisen pyytäjän terävyyttä.
+       */
+      if (!laatuPyydetty) {
+        laatuPyydetty = true;
+        pakotaPallonLaatu(true);
+      }
       /*
        * ELÄVÄ KAARI, EI LAATTOJEN LENTOREITTI (omistaja 1.9.2026:
        * *"Piirretään ne näkyviin reaaliajassa vasta sitten jos pelaaja
@@ -244,9 +282,15 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
       lauta.ladoHeti();
       kuljettaja = ui.nappulanKuljettaja(ui.game.player, { lento: true });
       kuljettaja.nosta();
-      // Kone kiitoradalle Lontoon ylle: se on ruudulla jo ennen kuin
-      // arkki väistyy, kuten tasokartalla (kone.style.transform).
-      kuljettaja.aseta(lahtoPos);
+      /*
+       * KONE KIITORADALLE JO LENTOSUUNNASSA (omistaja 5.9.2026 klo
+       * 00.35: *"lentokoneen ei tarvitse kääntyä alussa vaan voi lehtää
+       * heti oikeaan suuntaa"*). Kaari annetaan `aseta`lle, jolloin
+       * kuljettaja lukee asennon siitä eikä liikkeestä
+       * (siirto.js koneenKulma): kone on ruudulla oikeassa asennossa jo
+       * ennen kuin arkki väistyy, eikä lähdössä ole kaartoa.
+       */
+      kuljettaja.aseta(lahtoPos, lentokaari());
     },
 
     lenna(kesto) {
@@ -304,6 +348,11 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
       if (kaari && ui.reducedMotion) {
         piirraJalki(1);
       } else if (kaari) {
+        // Viiva alkaa lähdöstä eikä vasta ensimmäisestä kehyksestä:
+        // kerros on olemassa samalla hetkellä kuin kone lähtee
+        // (omistaja 5.9.2026: *"lehtää heti … ja jättää paksun punaisen
+        // viivan"*).
+        piirraJalki(hypynVaihe(0).e);
         const askel = (hetki) => {
           if (purettu || ui.dead) return;
           const t = Math.min(1, (hetki - alkuhetki) / Math.max(1, kesto));
@@ -349,6 +398,12 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
       // Kone pois ja kamera sukeltaa kohdekaupunkiin (siirto.js laske).
       kuljettaja?.laske();
       kuljettaja = null;
+      // Terävä tila vapautetaan laskeutumisessa: pallo palaa omaan
+      // liike/lepo-rytmiinsä (js/pallo.js asetaTila).
+      if (laatuPyydetty) {
+        laatuPyydetty = false;
+        pakotaPallonLaatu(false);
+      }
       ui.lentoKaari = null;
       lauta.lento.paata();
     },

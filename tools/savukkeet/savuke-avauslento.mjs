@@ -38,7 +38,10 @@
  *   P2  LENTO ON PALLOLLA. Lennon aikana pallolla on yksi kaari
  *       (arcsData) ja yksi kone (.pallolauta-kone) — samat kerrokset
  *       kuin vaiheen 2 lennolla.
- *   P3  NIUKKUUSHARSO. Harso on esillä lennon ajan ja poissa perillä.
+ *   P3  EI SUMENNUSTA. Pallolla ei ole lennon aikana harsoa eikä
+ *       muutakaan kalvoa kotelon päällä (omistaja 5.9.2026 klo 00.35:
+ *       *"lentokonekohtauksessa kartta voi näkyä ilman sumennusta"*),
+ *       ja terävä laatutila on pakotettuna päälle koko lennon ajan.
  *   P4  VAIN KAKSI NIMEÄ, EI PELITILAA. Lennon aikana pallolla on
  *       Lontoon ja kohdekaupungin nimet, ei nappulaa eikä kohteita;
  *       perillä nappula on takaisin.
@@ -107,7 +110,14 @@ const vaadi = (nimi, ehto, lisa = '') => {
 
 const selain = await chromium.launch({
   executablePath: '/opt/pw-browsers/chromium',
-  args: ['--autoplay-policy=no-user-gesture-required'],
+  /*
+   * WebGL ohjelmistorasteroijalla, kuten savuke-etusivupallossa: ilman
+   * näitä lippuja Globe.gl ei rakenna kontekstia kontissa, ja
+   * `--lauta pallo` mittaisi varapolkua eikä avauslentoa. Kartalla
+   * liput eivät vaikuta mihinkään.
+   */
+  args: ['--autoplay-policy=no-user-gesture-required',
+    '--use-gl=swiftshader', '--enable-webgl', '--ignore-gpu-blocklist'],
 });
 const ctx = await selain.newContext({
   viewport: { width: 834, height: 1194 },
@@ -207,8 +217,14 @@ await sivu.waitForTimeout(2500);
  * lennon ajan: arkin väistymisen hetki (aloitusverho poistuu DOMista)
  * on se, jota L1 katsoo, eikä sitä voi odottaa jälkikäteen.
  */
-await sivu.evaluate((kohde) => {
+await sivu.evaluate(async (kohde) => {
   const ui = window.matkakirja.ui;
+  /*
+   * Terävän laatutilan pakotus (js/pallo.js pakotaPallonLaatu) ei näy
+   * DOMissa, joten moduuli tuodaan samasta osoitteesta kuin peli — sama
+   * URL, sama moduuli-instanssi, sama laskuri (P3).
+   */
+  window.__pallo = await import('/js/pallo.js').catch(() => null);
   window.__nayte = [];
   window.__vaihe = { verhoPois: null, lentoAlkoi: null };
   const nyt = () => Math.round(performance.now());
@@ -235,7 +251,8 @@ await sivu.evaluate((kohde) => {
     svgLapsia: ui.svg?.childElementCount ?? 0,
     kaaria: ui.pallonInstanssi?.arcsData?.().length ?? 0,
     koneita: document.querySelectorAll('.pallolauta-kone').length,
-    harso: Boolean(document.querySelector('.pallolauta-harso.esilla')),
+    harso: Boolean(document.querySelector('.pallolauta-harso')),
+    laatuPakotettu: Boolean(window.__pallo?.pallonLaatuPakotettu?.()),
     pallonimia: [...document.querySelectorAll('.pallolauta-nimi')]
       .map((e) => e.dataset.kaupunki),
     nappuloita: document.querySelectorAll('.pallolauta-nappula').length,
@@ -295,7 +312,8 @@ const lennonTila = await sivu.evaluate(() => {
     svgLapsia: ui.svg?.childElementCount ?? 0,
     kaaria: ui.pallonInstanssi?.arcsData?.().length ?? 0,
     koneita: document.querySelectorAll('.pallolauta-kone').length,
-    harso: Boolean(document.querySelector('.pallolauta-harso.esilla')),
+    harso: Boolean(document.querySelector('.pallolauta-harso')),
+    laatuPakotettu: Boolean(window.__pallo?.pallonLaatuPakotettu?.()),
     pallonimia: [...document.querySelectorAll('.pallolauta-nimi')].map((e) => e.dataset.kaupunki),
     nappuloita: document.querySelectorAll('.pallolauta-nappula').length,
     kohteita: document.querySelectorAll('.pallolauta-kohde').length,
@@ -328,7 +346,8 @@ const tulos = await sivu.evaluate((kohde) => {
     pallo: Boolean(ui.pallolauta),
     pallolautaPaalla: Boolean(ui.pallolautaPaalla?.()),
     svgLapsia: ui.svg?.childElementCount ?? 0,
-    harso: Boolean(document.querySelector('.pallolauta-harso.esilla')),
+    harso: Boolean(document.querySelector('.pallolauta-harso')),
+    laatuPakotettu: Boolean(window.__pallo?.pallonLaatuPakotettu?.()),
     koneita: document.querySelectorAll('.pallolauta-kone').length,
     nappuloita: document.querySelectorAll('.pallolauta-nappula').length,
     kaaria: ui.pallonInstanssi?.arcsData?.().length ?? 0,
@@ -364,7 +383,8 @@ if (PALLOLLA) {
   for (const n of tulos.nayte) {
     console.log(`  ${String(n.t).padStart(6)}  ${n.verho ? 'arkki' : '     '} `
       + `${n.lento ? 'lento' : '     '}  svg=${String(n.svgLapsia).padStart(3)} `
-      + `kaaria=${n.kaaria} koneita=${n.koneita} harso=${n.harso ? 'on' : '- '}`
+      + `kaaria=${n.kaaria} koneita=${n.koneita} harso=${n.harso ? 'on' : '- '} `
+      + `laatu=${n.laatuPakotettu ? 'terävä' : '-     '}`
       + `  nimet=[${n.pallonimia.join(', ')}]  nappula=${n.nappuloita} kohteet=${n.kohteita}`);
   }
   /*
@@ -386,9 +406,10 @@ if (PALLOLLA) {
   vaadi('P2 lento pallolla: kaari ja kone',
     lennonTila.pallo && lennonTila.kaaria === 1 && lennonTila.koneita === 1,
     `pallo=${lennonTila.pallo} kaaria=${lennonTila.kaaria} koneita=${lennonTila.koneita}`);
-  vaadi('P3 niukkuusharso lennolla, pois perillä',
-    lennonTila.harso && !tulos.harso,
-    `lennolla=${lennonTila.harso} perillä=${tulos.harso}`);
+  vaadi('P3 ei sumennusta lennolla; terävä laatu pakotettuna ja vapautettuna perillä',
+    !lennonTila.harso && !tulos.harso && lennonTila.laatuPakotettu && !tulos.laatuPakotettu,
+    `harso lennolla=${lennonTila.harso} perillä=${tulos.harso}, `
+    + `laatu pakotettu lennolla=${lennonTila.laatuPakotettu} perillä=${tulos.laatuPakotettu}`);
   vaadi('P4 vain Lontoo ja kohde, ei pelitilaa lennon aikana',
     lennonTila.pallonimia.length === 2
       && lennonTila.pallonimia.includes('lontoo') && lennonTila.pallonimia.includes(KOHDE)

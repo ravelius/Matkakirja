@@ -59,6 +59,42 @@ export const LENNON_KAMERA_MS = 900;
 export const LENNON_RAJAUKSEN_MARGINAALI = 0.35;
 /** Koneen koko ruudulla (px) ja kaaren korkeuden ruutuvastine pallon säteinä. */
 const KONEEN_KOKO_PX = 44;
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KONE ON HETI LENTOSUUNNASSA — EI ALKUKÄÄNNÖSTÄ (omistaja 5.9.2026
+ * klo 00.35)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Sanatarkasti: *"lentokoneen ei tarvitse kääntyä alussa vaan voi
+ * lehtää heti oikeaan suuntaa ja jättää paksun punaisen viivan."*
+ *
+ * VANHA KÄYTÖS. Kulma laskettiin EDELLISEN KEHYKSEN ruutupisteestä:
+ * kun kone ilmestyi Lontoon ylle, edellistä pistettä ei ollut ja kulma
+ * oli nolla eli nokka itään. Hypyn pehmennys (hypynVaihe) lähtee
+ * hitaasti, joten ensimmäisillä kehyksillä siirtymä jäi alle puolen
+ * pikselin kynnyksen ja kulma pysyi nollassa — kone seisoi väärässä
+ * asennossa ja kääntyi vasta kun vauhti kasvoi. Juuri se näytti
+ * alkukaarrolta.
+ *
+ * UUSI KÄYTÖS. Kulma luetaan KAARESTA eikä liikkeestä: kaksi pistettä
+ * kaarella (osuus e ja e + KONEEN_SUUNTANAYTE) projisoidaan ruudulle ja
+ * niiden välinen kulma on koneen asento. Se on oikea jo ensimmäisellä
+ * kehyksellä, myös silloin kun kone vielä seisoo lähtökaupungin yllä —
+ * ja koska paikka lasketaan joka kehys, asento seuraa myös pallon
+ * pyörintää lennon aikana.
+ *
+ * KÄÄNNÖKSEN KESTO ON NOLLA. Vakio menee elementin css-muuttujaan
+ * (--koneen-kaannos-ms), josta transformin siirtymä luetaan: selain ei
+ * voi animoida kiertoa, vaikka joku myöhemmin lisäisi koneelle
+ * transition-säännön. Peittävyys sen sijaan liukuu
+ * (--koneen-ilmestys-ms), jotta kone HÄIVYTTYY näkyviin — oikeassa
+ * asennossa, ilman nykäystä.
+ */
+export const KONEEN_KAANNOKSEN_MS = 0;
+/** Koneen häivytys näkyviin (peittävyys; asento on jo oikea). */
+export const KONEEN_ILMESTYS_MS = 420;
+/** Suuntanäytteen pituus kaaren osuutena (kaksi pistettä → kulma). */
+const KONEEN_SUUNTANAYTE = 0.004;
 
 /**
  * Reitin osuudet, joilla `pos` on reitillä `reitti`: 0 = reitin a-pää,
@@ -119,7 +155,8 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false }) {
   let ankkuri = null; // pos, jossa nappula lepää (ei hypyssä)
   let hyppy = null; // { a, b, reitti, ta, tb, alku, kesto, huippu, valmis }
   let kehys = 0;
-  let edellinenRuutu = null; // koneen suunta
+  let koneenKaari = null; // lennon kaari: koneen asento myös paikallaan
+  let koneenOsuus = 0; // koneen osuus kaarella (0 = lähtö, 1 = perillä)
 
   /** Pallon pinnan piste ruudulla (kotelon px) laudan kohdasta. */
   const ruutu = (kohta, korkeus = MERKIN_KORKEUS) => {
@@ -185,7 +222,31 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false }) {
     polku.setAttribute('transform', 'scale(1.3)');
     svg.appendChild(polku);
     kone.appendChild(svg);
+    // Käännöksen kesto ja ilmestyminen tyyliin samasta vakiosta (css
+    // .pallo-kotelo > .pallolauta-kone): asento ei koskaan animoidu.
+    kone.style.setProperty('--koneen-kaannos-ms', `${KONEEN_KAANNOKSEN_MS}ms`);
+    kone.style.setProperty('--koneen-ilmestys-ms', `${KONEEN_ILMESTYS_MS}ms`);
     return kone;
+  };
+
+  /** Kaaren piste ruudulla (kotelon px) osuudella e. */
+  const kaarenRuutu = (kaari, e) => {
+    const kohta = lentokaarenKohta(kaari, e, MERKIN_KORKEUS);
+    return pallo.getScreenCoords(kohta.lat, kohta.lng, kohta.korkeus);
+  };
+
+  /**
+   * Koneen asento asteina: kaaren suunta ruudulla osuudella e. Luetaan
+   * KAARESTA eikä edellisestä kehyksestä, joten kone on lentosuunnassa
+   * jo ilmestyessään (ks. KONE ON HETI LENTOSUUNNASSA yllä).
+   */
+  const koneenKulma = (kaari, e) => {
+    if (!kaari) return 0;
+    const a = Math.max(0, Math.min(1 - KONEEN_SUUNTANAYTE, e));
+    const p1 = kaarenRuutu(kaari, a);
+    const p2 = kaarenRuutu(kaari, a + KONEEN_SUUNTANAYTE);
+    if (!p1 || !p2) return 0;
+    return (Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180) / Math.PI;
   };
 
   const piirraKone = (hetki) => {
@@ -196,8 +257,9 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false }) {
       // Kone kaaren korkeudella: sama paraabeli kuin kaaren muodolla —
       // ja sama kaava kuin avauslennon paksulla viivalla, joka piirtyy
       // koneen perään (reitit.js lentokaarenKohta).
-      const kohta = lentokaarenKohta(hyppy.kaari, e, MERKIN_KORKEUS);
-      piste = pallo.getScreenCoords(kohta.lat, kohta.lng, kohta.korkeus);
+      koneenKaari = hyppy.kaari;
+      koneenOsuus = e;
+      piste = kaarenRuutu(hyppy.kaari, e);
       if (t >= 1) {
         ankkuri = hyppy.b;
         const { valmis } = hyppy;
@@ -208,14 +270,7 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false }) {
       piste = ruutu(pixelOf(board, ankkuri));
     }
     if (!piste) return;
-    let kulma = 0;
-    if (edellinenRuutu) {
-      const dx = piste.x - edellinenRuutu.x;
-      const dy = piste.y - edellinenRuutu.y;
-      if (Math.hypot(dx, dy) > 0.5) kulma = (Math.atan2(dy, dx) * 180) / Math.PI;
-      else kulma = edellinenRuutu.kulma;
-    }
-    edellinenRuutu = { x: piste.x, y: piste.y, kulma };
+    const kulma = koneenKulma(koneenKaari, koneenOsuus);
     el.style.transform = `translate(${(piste.x - KONEEN_KOKO_PX / 2).toFixed(2)}px, `
       + `${(piste.y - KONEEN_KOKO_PX / 2).toFixed(2)}px) rotate(${kulma.toFixed(1)}deg)`;
   };
@@ -256,12 +311,26 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false }) {
         varjo = el.querySelector('.pawn-varjo');
       }
       kotelo.appendChild(el);
-      kehys = requestAnimationFrame(silmukka);
+      /*
+       * KONE HÄIVYTTYY NÄKYVIIN OIKEASSA ASENNOSSA: asento on laskettu
+       * jo ensimmäisellä piirrolla (aseta), ja luokka `nakyy` päästää
+       * pelkän peittävyyden liukumaan seuraavassa kehyksessä.
+       */
+      kehys = requestAnimationFrame((hetki) => {
+        if (lento) el?.classList.add('nakyy');
+        silmukka(hetki);
+      });
     },
-    aseta: (pos) => {
+    /**
+     * Nappula (tai kone) paikalleen. `kaari` on lennon oma lisä: kone
+     * saa asentonsa kaaresta jo seistessään lähtökaupungin yllä, joten
+     * lähdössä ei ole alkukäännöstä (KONEEN_KAANNOKSEN_MS = 0).
+     */
+    aseta: (pos, kaari = null) => {
       ankkuri = pos;
       hyppy = null;
       el.dataset.vaihe = 'lepo';
+      if (lento && kaari) { koneenKaari = kaari; koneenOsuus = 0; }
       if (lento) piirraKone(performance.now()); else piirraNappula(performance.now());
     },
     hyppaa: (a, b, kesto) => new Promise((valmis) => {
@@ -284,7 +353,8 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false }) {
           { bbox: lennonRajaus(board, a, b), marginaali: LENNON_RAJAUKSEN_MARGINAALI },
           { kesto: LENNON_KAMERA_MS },
         );
-        edellinenRuutu = null;
+        koneenKaari = kaari;
+        koneenOsuus = 0;
         hyppy = { a, b, kaari, alku: performance.now(), kesto, valmis };
         return;
       }

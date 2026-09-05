@@ -401,7 +401,7 @@ test('vaihe 5b: kone on vaiheen 2 kuljettaja, kaari vaiheen 2 kaari', () => {
   const siirto = lue('../js/pallolauta/siirto.js');
   // Kuljettaja pyydetään samalla sopimuksella kuin siirrossa.
   assert.match(avaus, /kuljettaja = ui\.nappulanKuljettaja\(ui\.game\.player, \{ lento: true \}\);/);
-  for (const kutsu of ['kuljettaja.nosta();', 'kuljettaja.aseta(lahtoPos);',
+  for (const kutsu of ['kuljettaja.nosta();', 'kuljettaja.aseta(lahtoPos, lentokaari());',
     'kuljettaja.hyppaa(lahtoPos, kohdePos, kesto)', 'kuljettaja?.laske();']) {
     assert.ok(avaus.includes(kutsu), `avauslento ei kutsu kuljettajalta ${kutsu}`);
   }
@@ -421,14 +421,11 @@ test('vaihe 5b: kone on vaiheen 2 kuljettaja, kaari vaiheen 2 kaari', () => {
   assert.ok(!PALLOLAUDAN_KERROKSET.includes('objectsData') && PALLOLAUDAN_KERROKSET.includes('arcsData'),
     'avauslento ei saa tarvita uutta Globe.gl-kerrosta');
   assert.match(avaus, /ui\.lentoKaari = \{ a: lahto\.id, b: kohde\.id \};/);
-  // Niukkuus: ei nappulaa, ei kohteita, ei nostoja, kaksi nimeä, harso.
+  // Niukkuus: ei nappulaa, ei kohteita, ei nostoja, kaksi nimeä.
   assert.match(lauta, /merkit\.paivita\(\{ nappula: liikkuu \|\| lento \? null : kohta, kohteet \}\);/);
   assert.match(lauta, /const kohteet = lento \? \[\] : kohdevalinta\(\);/);
   assert.match(lauta, /katto: lento \? 0 : Math\.min\(NOSTOJEN_KATTO/);
-  assert.match(lauta, /harso\.className = 'pallolauta-harso';/);
-  // Harso on CSS-kalvo eikä toista WebGL-kontekstia (karttapallo.md luku 4).
-  assert.ok(!lauta.includes('objectsData'), 'harso lisäisi three.js-objektin');
-  assert.match(lue('../css/styles.css'), /\.pallolauta-harso \{\n {2}position: absolute;/);
+  assert.ok(!lauta.includes('objectsData'), 'lentotila lisäisi three.js-objektin');
   // Kamera ei sukella nappulan perään lennon aikana (peli on jo perillä).
   assert.match(lauta, /if \(!liikkuu && !lento && pos\) \{/);
 });
@@ -583,7 +580,8 @@ test('avauslento: viiva kulkee tasan koneen alla — yksi kaava, yksi kello', ()
   const avaus = lue('../js/pallolauta/avaus.js');
   const siirto = lue('../js/pallolauta/siirto.js');
   // Kone ja jälki lukevat saman kaaripisteen (reitit.js lentokaarenKohta).
-  assert.match(siirto, /lentokaarenKohta\(hyppy\.kaari, e, MERKIN_KORKEUS\)/);
+  assert.match(siirto, /const kohta = lentokaarenKohta\(kaari, e, MERKIN_KORKEUS\);/);
+  assert.match(siirto, /piste = kaarenRuutu\(hyppy\.kaari, e\);/);
   assert.match(avaus, /lentokaarenKohta\(kaari, i \/ AVAUSLENNON_JALJEN_PISTEET, REITIN_KORKEUS\)/);
   assert.ok(!/isoympyranPiste/.test(siirto), 'koneen paikka lasketaan vain yhdessä paikassa');
   // Sama pehmennys ja sama kello kuin koneella (hypynVaihe).
@@ -597,4 +595,71 @@ test('avauslento: viiva kulkee tasan koneen alla — yksi kaava, yksi kello', ()
   // Viivakerros lukee korkeuden pisteestä, kun se on annettu.
   assert.match(lue('../js/pallolauta/reitit.js'),
     /\.pathPointAlt\(\(p\) => \(p\.length > 2 \? p\[2\] : REITIN_KORKEUS\)\)/);
+});
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * AVAUSLENNON KOLME KORJAUSTA (omistaja 5.9.2026 klo 00.35)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Uusi kaappaus avauslennolta (v1601), sanatarkasti: *"lentokone-
+ * kohtauksessa kartta voi näkyä ilman sumennusta. lentokoneen ei
+ * tarvitse kääntyä alussa vaan voi lehtää heti oikeaan suuntaa ja
+ * jättää paksun punaisen viivan. isoisän kuva pitää häivyttää joka
+ * reunastaan läpinäkyväksi ja tehdä vähän isommaksi"* (kolmas kohta:
+ * tests/isoisan-valokuvat.test.mjs).
+ */
+test('avauslento: pallolla ei ole sumennusta lennon aikana', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  const css = lue('../css/styles.css');
+  // Kalvo on poistettu kokonaan: ei elementtiä, ei luokkaa, ei sääntöä.
+  assert.ok(!lauta.includes("'pallolauta-harso'"), 'harsoelementti on palannut laudalle');
+  assert.doesNotMatch(css, /^\.pallolauta-harso[\s.,{]/m, 'harson tyylit ovat palanneet');
+  // Lentotila ei saa tuoda mitään muutakaan sumentavaa: ei suodatinta
+  // eikä kalvoa (iOS-sääntö, ks. tests/lento-ajoitus).
+  const lennossa = css.match(/\.pallolauta-lennossa[^{]*\{[^}]*\}/g) ?? [];
+  assert.ok(lennossa.length > 0, 'lennon pinontatason sääntö puuttuu');
+  for (const saanto of lennossa) {
+    assert.doesNotMatch(saanto, /filter:/, `lentotila sumentaa: ${saanto}`);
+    assert.doesNotMatch(saanto, /backdrop-filter/, `lentotila sumentaa: ${saanto}`);
+  }
+  // Merkit jäävät pelin kerrosten päälle, vaikka kalvo lähti.
+  assert.match(lauta, /kuori\.classList\.add\('pallolauta-lennossa'\);/);
+  assert.match(css, /\.pallolauta-lennossa \.pallolauta-kone \{ z-index: 3; \}/);
+});
+
+test('avauslento: terävä laatutila pakotetaan lennon ajaksi ja vapautetaan laskeutumisessa', () => {
+  const avaus = lue('../js/pallolauta/avaus.js');
+  assert.match(avaus, /import \{ pakotaPallonLaatu \} from '\.\.\/pallo\.js';/);
+  // Pyyntö valmistelussa, vapautus purussa — ja kumpikin kerran, koska
+  // js/pallo.js laskee pyytäjiä.
+  assert.match(avaus, /valmistele\(\) \{[\s\S]*?pakotaPallonLaatu\(true\);/);
+  assert.match(avaus, /pura\(\) \{[\s\S]*?pakotaPallonLaatu\(false\);/);
+  assert.match(avaus, /if \(!laatuPyydetty\) \{/, 'pyyntö voisi tulla kahdesti');
+  assert.match(avaus, /if \(laatuPyydetty\) \{[\s\S]*?laatuPyydetty = false;/,
+    'vapautus voisi tulla ilman pyyntöä');
+  assert.equal((avaus.match(/pakotaPallonLaatu\(/g) ?? []).length, 2);
+});
+
+test('avauslento: kone on heti lentosuunnassa — käännöksen kesto on nolla', () => {
+  const siirto = lue('../js/pallolauta/siirto.js');
+  const avaus = lue('../js/pallolauta/avaus.js');
+  const css = lue('../css/styles.css');
+  // Vakio on nolla ja se menee elementin tyyliin, josta transformin
+  // siirtymä luetaan — selain ei voi animoida kiertoa.
+  assert.equal(siirtoModuuli.KONEEN_KAANNOKSEN_MS, 0, 'alkukäännös animoituisi');
+  assert.ok(siirtoModuuli.KONEEN_ILMESTYS_MS > 0, 'kone ei häivyttyisi näkyviin');
+  assert.match(siirto, /kone\.style\.setProperty\('--koneen-kaannos-ms', `\$\{KONEEN_KAANNOKSEN_MS\}ms`\);/);
+  assert.match(siirto, /kone\.style\.setProperty\('--koneen-ilmestys-ms', `\$\{KONEEN_ILMESTYS_MS\}ms`\);/);
+  assert.match(css, /transition: transform var\(--koneen-kaannos-ms, 0ms\) linear,/);
+  assert.match(css, /\.pallo-kotelo > \.pallolauta-kone\.nakyy \{ opacity: 1; \}/);
+  // Kulma luetaan KAARESTA eikä edellisestä kehyksestä.
+  assert.match(siirto, /const koneenKulma = \(kaari, e\) => \{/);
+  assert.match(siirto, /const kulma = koneenKulma\(koneenKaari, koneenOsuus\);/);
+  assert.ok(!siirto.includes('edellinenRuutu'), 'kulma tulee yhä edellisestä kehyksestä');
+  // Kone saa kaarensa jo seistessään Lontoon yllä (aseta), ja jälki
+  // alkaa piirtyä samalla kehyksellä kuin lento.
+  assert.match(siirto, /aseta: \(pos, kaari = null\) => \{/);
+  assert.match(avaus, /kuljettaja\.aseta\(lahtoPos, lentokaari\(\)\);/);
+  assert.match(avaus, /piirraJalki\(hypynVaihe\(0\)\.e\);/);
 });

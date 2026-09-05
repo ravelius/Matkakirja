@@ -1369,3 +1369,79 @@ tätä erää: aalto 1C teki maatiedot-linssistä pallolinssin, joten
 linssikarttaa ei enää avata siitä — sama FAIL tulee origin/mainissa
 (todennettu 5.9.2026). Laiskoitus ei siihen koske; savuke odottaa
 päivitystä aallon 1C mukaiseksi.
+
+**Avauslento: ei sumennusta, suora lähtö, häivytetty isoisän kuva
+(5.9.2026 klo 00.35).** Omistaja edellisen erän (v1601) kaappauksesta,
+sanatarkasti: *"lentokonekohtauksessa kartta voi näkyä ilman
+sumennusta. lentokoneen ei tarvitse kääntyä alussa vaan voi lehtää heti
+oikeaan suuntaa ja jättää paksun punaisen viivan. isoisän kuva pitää
+häivyttää joka reunastaan läpinäkyväksi ja tehdä vähän isommaksi"*
+
+- **Sumennus pois.** Vaiheen 5b niukkuusharso (`.pallolauta-harso`,
+  pergamentti rgba(238, 225, 196, 0.62) kotelon päällä) on poistettu
+  KOKONAAN pallolta: elementti, luokka ja css-sääntö. Se jäljitteli
+  tasokartan lentoharsoa, mutta pallolla se peitti juuri sen, mitä
+  avauksessa katsotaan — laattakartan maapallon. Niukkuus jää siihen
+  mitä se oikeasti on: kaksi nimeä (Lontoo + kohde), ei muita pisteitä
+  eikä pelitilaa. Lennon nimiasu (täysi muste + pergamenttihalo) jää,
+  koska nimen on luettava myös terävän laattakartan päällä, samoin
+  merkkien pinontataso (`.pallolauta-lennossa`, z-index 3). Vanhalla
+  kartalla (`?lauta=kartta`) harso on kartan oman lentokerroksen asia
+  eikä muuttunut.
+- **Terävät laatat koko lennon ajan.** Koska kartta on nyt lennon
+  pääosassa, `js/pallolauta/avaus.js valmistele()` pyytää terävän tilan
+  (`pakotaPallonLaatu(true)`, js/pallo.js, v1603) ja `pura()` vapauttaa
+  sen laskeutumisessa. Vipu laskee pyytäjiä, joten vapautus ei voi
+  sammuttaa toisen pyytäjän terävyyttä. MITATTU: pakotus ei kasvattanut
+  laattapyyntöjä — savuke pyysi pallolaattoja 1856 kertaa koko
+  avauksesta perille, kun origin/main pyysi samalla ajolla 1864.
+- **Suora lähtö, ei alkukäännöstä.** Koneen kulma laskettiin ennen
+  EDELLISEN KEHYKSEN ruutupisteestä: ilmestyessään koneella ei ollut
+  edellistä pistettä, joten kulma oli 0° eli nokka itään, ja koska
+  hypyn pehmennys lähtee hitaasti, ensimmäisten kehysten siirtymä jäi
+  alle puolen pikselin kynnyksen — kone seisoi väärässä asennossa ja
+  kääntyi vasta vauhdin kasvaessa. Nyt kulma luetaan KAARESTA
+  (`js/pallolauta/siirto.js koneenKulma`: kaaren pisteet osuuksilla e ja
+  e + `KONEEN_SUUNTANAYTE` 0,004 ruudulle projisoituina), joten asento
+  on oikea jo ensimmäisellä kehyksellä ja seuraa myös pallon pyörintää.
+  `aseta(pos, kaari)` sai kaaren toiseksi parametrikseen, ja avaus antaa
+  sen jo kiitoradalla. Käännöksen kesto on nolla vakiolla
+  `KONEEN_KAANNOKSEN_MS` (0 ms), joka menee elementin css-muuttujaan
+  `--koneen-kaannos-ms`: transformin siirtymä on siis rakenteellisesti
+  nolla eikä selain voi animoida kiertoa. Peittävyys sen sijaan liukuu
+  (`KONEEN_ILMESTYS_MS` 420 ms, `--koneen-ilmestys-ms`), joten kone
+  häivyttyy näkyviin jo oikeassa asennossa. Paksu punainen viiva
+  kirjoitetaan nyt heti lähdössä (`piirraJalki(hypynVaihe(0).e)`) eikä
+  vasta ensimmäisessä rAF-kehyksessä.
+- **Isoisän kuva häivytettynä ja isompana.** Kortti (`.lento-valokuva`)
+  kasvoi noin neljänneksen ja koko on yksi muuttuja
+  `--lento-valokuvan-leveys`: työpöydällä min(30vw, 280px) →
+  min(37,5vw, 350px), puhelimessa min(44vw, 200px) → min(55vw, 250px).
+  Häivytys on MASKI EIKÄ SUODATIN (iOS-sääntö, tests/lento-ajoitus):
+  vaaka- ja pystysuuntainen lineaarinen liuku leikkauksena
+  (`mask-composite: intersect` + `-webkit-mask-composite: source-in`,
+  sama kaava kuin `.reveal-overlay.paikallis .reveal-aarrekuva`), vyöt
+  `--lento-valokuvan-haivytys-x` 15 % ja `-y` 18 % — jokainen neljästä
+  reunasta päätyy läpinäkyvään eikä yhtäkään kovaa reunaa jää.
+  `box-shadow` poistettiin: se piirtyy elementin LAATIKON mukaan eikä
+  maskin, eli olisi jättänyt juuri sen terävän suorakaiteen, jonka
+  häivytyksen on määrä poistaa. Kuvateksti *"Isoisä, Bombay, 1873"* on
+  kortin oma span kuvan ALLA eikä kuvan sisällä, joten se jää
+  häivytyksen ulkopuolelle ja pysyy täysin luettavana; negatiivinen
+  ylämarginaali (-0,6 rem) nostaa lapun kiinni kuvan viimeiseen
+  näkyvään riviin.
+- Vartijat: tests/pallolauta.test.mjs (kolme uutta: ei sumennusta, laatu
+  pakotettu ja vapautettu, käännöksen kesto 0),
+  tests/isoisan-valokuvat.test.mjs (maski kaikilta reunoilta, koko
+  +25 %, ei varjoa, kuvateksti häivytyksen ulkopuolella),
+  tests/lento-ajoitus.test.mjs (kohtaus ei sumenna karttaa).
+  `node --test tests/*.test.mjs` 1714 ok / 0 fail. savuke-avauslento sai
+  swiftshader-liput (ilman niitä `--lauta pallo` mittasi varapolkua) ja
+  P3 on nyt *"ei sumennusta lennolla; terävä laatu pakotettuna ja
+  vapautettuna perillä"*. Ajettu: 5/7 (P1–P5 vihreinä). AVOIN: saman
+  savukkeen P6 (lehti aukeaa perillä) ja P7 (kamera perillä) kaatuvat
+  TÄSMÄLLEEN SAMOILLA LUVUILLA myös origin/mainissa (todennettu tässä
+  kontissa 5.9.2026: poikkeama 37,7 %, leveys 1113,3 odotuksen 240
+  sijaan) — ämpäri vastaa 429:llä ja ohjelmistorasteroija ajaa
+  saapumisen liian hitaasti mittausikkunaan. Ei liity tähän erään;
+  kirjattu Fablelle.

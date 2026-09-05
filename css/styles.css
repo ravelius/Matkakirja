@@ -6203,7 +6203,10 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   letter-spacing: 0.06em;
   white-space: nowrap;
   color: #3a2a16;
-  text-shadow: 0 0 4px rgba(255, 246, 224, 0.9), 0 0 1px rgba(255, 246, 224, 0.9);
+  /* Kolme halokerrosta: lappu lukeutuu myös häivytetyn kuvan alalaidan
+     ja terävän laattakartan päällä (harso ei enää auta, 5.9.2026). */
+  text-shadow: 0 0 6px rgba(255, 246, 224, 0.95), 0 0 3px rgba(255, 246, 224, 0.95),
+    0 0 1px rgba(255, 246, 224, 0.95);
   text-align: center;
   opacity: 0;
   transition: opacity 620ms var(--liike-pehmea);
@@ -10554,13 +10557,42 @@ body.katselu #newgame-btn { display: none; }
  * Kulunut cabinet card nousee kartan päälle vasemmasta alakulmasta
  * repliikin alettua, pehmeästi jarruttaen (Raamatun animaatiosääntö), ja
  * napautus suurentaa sen. EI suodatinta (ks. tests/lento-ajoitus).
+ *
+ * ── KORTTI HÄIPYY JOKA REUNASTAAN, JA ON ISOMPI (omistaja 5.9.2026
+ * klo 00.35, sanatarkasti: *"isoisän kuva pitää häivyttää joka
+ * reunastaan läpinäkyväksi ja tehdä vähän isommaksi"*) ─────────────
+ *
+ * KOKO on yksi muuttuja (--lento-valokuvan-leveys) ja se kasvoi noin
+ * neljänneksen: työpöydällä min(30vw, 280px) → min(37.5vw, 350px),
+ * puhelimessa min(44vw, 200px) → min(55vw, 250px).
+ *
+ * HÄIVYTYS ON MASKI EIKÄ SUODATIN (iOS-sääntö, ks.
+ * tests/lento-ajoitus): kaksi lineaarista liukua — vaaka ja pysty —
+ * yhdistetään leikkaukseksi, jolloin jokainen neljästä reunasta päätyy
+ * läpinäkyvään eikä yhtäkään kovaa reunaa jää. Sama kaava kuin
+ * aarrekuvan reunanpehmennyksellä (.reveal-overlay.paikallis
+ * .reveal-aarrekuva), joka on todettu toimivaksi myös WebKitissä
+ * (-webkit-mask-composite: source-in).
+ *
+ * VARJO ON POISSA. box-shadow piirtyy elementin LAATIKON mukaan eikä
+ * maskin, joten se olisi jättänyt juuri sen terävän suorakaiteen, jonka
+ * häivytyksen on määrä poistaa.
+ *
+ * KUVATEKSTI JÄÄ HÄIVYTYKSEN ULKOPUOLELLE: se on kortin oma <span>
+ * kuvan alla, ei kuvan sisällä, joten "Isoisä, Bombay, 1873" pysyy
+ * täysin luettavana. Sen negatiivinen ylämarginaali nostaa lapun
+ * kiinni kuvan viimeiseen näkyvään riviin — muuten häivytetty alalaita
+ * jättäisi lapun leijumaan irralleen.
  */
 .lento-valokuva {
+  --lento-valokuvan-leveys: min(37.5vw, 350px);
+  --lento-valokuvan-haivytys-x: 15%;
+  --lento-valokuvan-haivytys-y: 18%;
   position: absolute;
   left: clamp(0.8rem, 4vw, 3rem);
   /* Repliikin yläpuolella: teksti asuu alalaidassa (.flight-alaosa). */
   bottom: clamp(10rem, 30vh, 16rem);
-  width: min(30vw, 280px);
+  width: var(--lento-valokuvan-leveys);
   padding: 0;
   border: 0;
   background: none;
@@ -10575,7 +10607,18 @@ body.katselu #newgame-btn { display: none; }
   display: block;
   width: 100%;
   height: auto;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0, #000 var(--lento-valokuvan-haivytys-x),
+      #000 calc(100% - var(--lento-valokuvan-haivytys-x)), transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 var(--lento-valokuvan-haivytys-y),
+      #000 calc(100% - var(--lento-valokuvan-haivytys-y)), transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0, #000 var(--lento-valokuvan-haivytys-x),
+      #000 calc(100% - var(--lento-valokuvan-haivytys-x)), transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 var(--lento-valokuvan-haivytys-y),
+      #000 calc(100% - var(--lento-valokuvan-haivytys-y)), transparent 100%);
+  mask-composite: intersect;
 }
 /*
  * Kuvateksti kortin alla, samassa kallistuksessa kuin kuva (omistaja
@@ -10585,17 +10628,30 @@ body.katselu #newgame-btn { display: none; }
  */
 .lento-valokuva .lento-valokuvateksti {
   display: block;
-  margin-top: 0.45rem;
+  /* Lappu kiinni kuvan viimeiseen näkyvään riviin (ks. häivytys yllä). */
+  margin-top: -0.6rem;
   font-family: var(--font-type);
   font-size: clamp(0.62rem, 1.4vw, 0.8rem);
   letter-spacing: 0.08em;
   color: #3a2a16;
-  text-shadow: 0 0 4px rgba(255, 246, 224, 0.9), 0 0 1px rgba(255, 246, 224, 0.9);
+  /* Kolme halokerrosta: lappu lukeutuu myös häivytetyn kuvan alalaidan
+     ja terävän laattakartan päällä (harso ei enää auta, 5.9.2026). */
+  text-shadow: 0 0 6px rgba(255, 246, 224, 0.95), 0 0 3px rgba(255, 246, 224, 0.95),
+    0 0 1px rgba(255, 246, 224, 0.95);
   text-align: center;
 }
 .lento-valokuva:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 @media (max-width: 599px) {
-  .lento-valokuva { width: min(44vw, 200px); bottom: clamp(12rem, 34vh, 18rem); }
+  /*
+   * Puhelimessa kortti on kapeammalla ruudulla suhteessa isompi, joten
+   * se nostetaan hitusen ylemmäs pois repliikin päältä — ja koska sen
+   * reunat ovat nyt läpinäkyviä, se ei enää katkaise lentoreittiä
+   * yläkulmallaan (v1601: kortti sivusi viivaa).
+   */
+  .lento-valokuva {
+    --lento-valokuvan-leveys: min(55vw, 250px);
+    bottom: clamp(12rem, 34vh, 18rem);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .lento-valokuva { transition: none; }
@@ -23917,6 +23973,19 @@ body.radio-tila .linssikartta-kehys, body.aikajana-paalla .linssikartta-kehys { 
  * DOMissa, joten ne piirtyvät paikallaan olevien merkkien päälle.
  */
 .pallo-kotelo > .pallolauta-liikkuva,
+/*
+ * KONE ON HETI LENTOSUUNNASSA — ASENTO EI ANIMOIDU (omistaja 5.9.2026
+ * klo 00.35: *"lentokoneen ei tarvitse kääntyä alussa vaan voi lehtää
+ * heti oikeaan suuntaa"*).
+ *
+ * Kaksi lukua tulee js/pallolauta/siirto.js:stä elementin omina
+ * muuttujina, jotta vakio ja tyyli eivät voi erkaantua:
+ * KONEEN_KAANNOKSEN_MS (0 ms) on transformin — siis myös kiertokulman —
+ * siirtymä, ja KONEEN_ILMESTYS_MS on se peittävyyden liuku, jolla kone
+ * häivyttyy näkyviin JO OIKEASSA ASENNOSSA. Kulma itse luetaan joka
+ * kehys kaaresta (siirto.js koneenKulma), joten lähdössä ei ole
+ * kaartoa eikä nykäystä.
+ */
 .pallo-kotelo > .pallolauta-kone {
   position: absolute;
   inset: auto;
@@ -23925,8 +23994,15 @@ body.radio-tila .linssikartta-kehys, body.aikajana-paalla .linssikartta-kehys { 
   width: auto;
   height: auto;
   pointer-events: none;
-  will-change: transform;
+  will-change: transform, opacity;
   transform-origin: 50% 50%;
+  opacity: 0;
+  transition: transform var(--koneen-kaannos-ms, 0ms) linear,
+    opacity var(--koneen-ilmestys-ms, 420ms) ease;
+}
+.pallo-kotelo > .pallolauta-kone.nakyy { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .pallo-kotelo > .pallolauta-kone { transition: none; }
 }
 .pallo-kotelo > .pallolauta-liikkuva { transition: none; }
 .pallolauta-kone svg { display: block; overflow: visible; }
@@ -23937,59 +24013,39 @@ body.radio-tila .linssikartta-kehys, body.aikajana-paalla .linssikartta-kehys { 
   .pallolauta-kohde { transition: none; }
 }
 
-/* ============ PALLOLAUTA, VAIHE 5b: AVAUSLENNON HARSO ============ */
+/* ====== PALLOLAUTA, VAIHE 5b: AVAUSLENTO ILMAN SUMENNUSTA ====== */
 /*
- * NIUKKUUSHARSO PALLOLLA (Raamattu, ALOITUSLENTO UUSIKSI;
- * docs/moduulit/karttapallo.md luku 4 rivi "Aloituslento Lontoosta").
+ * KARTTA NÄKYY TERÄVÄNÄ LENNON AIKANA (omistaja 5.9.2026 klo 00.35,
+ * sanatarkasti: *"lentokonekohtauksessa kartta voi näkyä ilman
+ * sumennusta"*).
  *
- * Tasokartalla lennon harso on koko laudan kokoinen suorakaide lennon
- * omassa kerroksessa (js/kartta.js aloituslennonNiukkuus, css
- * .fokus-sumu-harso). Pallolla sama tehdään KALVONA KOTELON PÄÄLLE.
- *
- * MIKSI KALVO EIKÄ TOINEN PALLO. Suunnitelma tarjosi kaksi tapaa:
- * puoliläpinäkyvä pallo säteellä 1,001 (oma three.js-objekti) tai kalvo
- * kotelon päälle. Kalvo valittiin, koska se ei lisää yhtään
- * Globe.gl-kerrosta eikä three.js-objektia — PALLOLAUDAN_KERROKSET
- * pysyy ennallaan eikä WKWebView saa yhtään lisätyötä WebGL-puolelle —
- * ja koska sen sisään- ja ulostulo on pelkkää peittävyyttä
- * kompositorissa. Ei suodattimia (iOS-sääntö).
- *
- * VÄRI ON PERGAMENTTIA, EI VARJOA — täsmälleen sama sävy kuin
- * tasokartan harsolla (.fokus-sumu-harso), koska kartta on paperia
- * kummallakin laudalla ja lennon pitää näyttää samalta.
+ * TÄSSÄ OLI HARSO. Vaihe 5b laski kotelon päälle pergamentin värisen
+ * kalvon (.pallolauta-harso, rgba(238, 225, 196, 0.62)), joka
+ * jäljitteli tasokartan lentoharsoa (.fokus-sumu-harso, js/kartta.js
+ * aloituslennonNiukkuus). Pallolla se peitti juuri sen, mitä
+ * avauksessa katsotaan: laattakartan maapallon. Kalvo on poistettu
+ * kokonaan, ja niukkuus on nyt vain kaksi nimeä ja pelitilan
+ * poissaolo (js/pallolauta/lauta.js aloitaLentotila). Vanha kartta
+ * (?lauta=kartta) pitää oman harsonsa: se on kartan oman
+ * lentokerroksen asia eikä tämän laudan.
  */
-.pallolauta-harso {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  background: rgba(238, 225, 196, 0.62);
-  opacity: 0;
-  transition: opacity 420ms ease;
-}
-.pallolauta-harso.esilla { opacity: 1; }
 /*
- * MERKIT HARSON PÄÄLLÄ, KUTEN KARTALLA. Tasokartalla lennon oma kerros
- * — reitti, päätepisteet ja kaksi nimeä — piirtyy harson PÄÄLLE ja on
- * siksi terävä (js/kartta.js aloituslennonNiukkuus). Pallolla harso on
- * kalvo kotelon päällä, joten CSS2D-merkit ja kone nostetaan sen yli
- * pinontatasolla. Kotelo ei ole oma pinontakontekstinsa (position:
- * relative ilman z-indexiä), joten merkin oma z-index riittää — ja
- * sääntö on voimassa vain lennon ajan, jottei muu peli muuta pinoaan.
- * Kaari on pallon pinnassa (WebGL) eikä sitä voi nostaa kalvon yli;
- * se lukeutuu harson läpi omalla täydellä sävyllään
- * (js/pallolauta/reitit.js REITIN_VARIT.avauslento).
+ * MERKIT PELIN PÄÄLLÄ LENNON AJAN. Pinontataso jäi, vaikka harso
+ * lähti: kone ja kaksi nimeä piirtyvät pelin muiden kerrosten päälle,
+ * jottei mikään myöhemmin lisätty kerros peitä niitä. Kotelo ei ole
+ * oma pinontakontekstinsa (position: relative ilman z-indexiä), joten
+ * merkin oma z-index riittää — ja sääntö on voimassa vain lennon ajan,
+ * jottei muu peli muuta pinoaan.
  */
 .pallo-kuori.pallolauta.pallolauta-lennossa .pallolauta-nimi,
 .pallo-kuori.pallolauta.pallolauta-lennossa .pallolauta-kone { z-index: 3; }
 /*
- * LENNON KAKSI NIMEÄ LUETAAN HARSON LÄPI. Kirjaston oma CSS2D-kerros
- * on pinontakonteksti, joten nimen elementtiä ei saa harson yli
- * pinontatasolla (kone on pelin omaa DOMia ja nousee, nimi ei). Sama
- * lopputulos saadaan typografialla: lennon ajan nimet saavat saman
- * asun kuin tasokartan lentonimet (.aloituslento-nimi) — täysi muste ja
- * pergamenttihalo, jotka lukeutuvat harson läpi. Halon leveys on
- * ruutuvakio, koska pallon nimi on ruutuvakio (js/pallolauta/nimet.js).
+ * LENNON KAKSI NIMEÄ LUKEUTUVAT MYÖS TERÄVÄN KARTAN PÄÄLLÄ. Asu on
+ * sama kuin tasokartan lentonimillä (.aloituslento-nimi) — täysi muste
+ * ja pergamenttihalo — ja se pysyy, vaikka harso poistui: laattakartta
+ * on paikoin tumma ja paikoin vaalea, ja halo on se, joka pitää nimen
+ * luettavana molempien päällä. Halon leveys on ruutuvakio, koska pallon
+ * nimi on ruutuvakio (js/pallolauta/nimet.js).
  */
 .pallo-kuori.pallolauta.pallolauta-lennossa .pallolauta-nimi text {
   fill: rgba(52, 36, 22, 0.98);
@@ -23999,16 +24055,12 @@ body.radio-tila .linssikartta-kehys, body.aikajana-paalla .linssikartta-kehys { 
   stroke-linejoin: round;
 }
 /*
- * Kohtaus väistyy saapumiskortin alla: kone ja harso häipyvät samassa
- * tahdissa kuin tasokartan lentokerros (.lento-poistuu, 280 ms).
+ * Kohtaus väistyy saapumiskortin alla: kone häipyy samassa tahdissa
+ * kuin tasokartan lentokerros (.lento-poistuu, 280 ms).
  */
-.pallo-kuori.pallolauta.pallolauta-lento-poistuu .pallolauta-harso,
 .pallo-kuori.pallolauta.pallolauta-lento-poistuu .pallolauta-kone {
   opacity: 0;
   transition: opacity 280ms ease;
-}
-@media (prefers-reduced-motion: reduce) {
-  .pallolauta-harso { transition: none; }
 }
 
 /* ==================================================================   ILMEPAKETTI (js/ilme.js; omistaja 5.9.2026, kartoituksen TOP 6 kohta 6)
