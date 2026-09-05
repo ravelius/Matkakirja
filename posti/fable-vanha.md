@@ -1,3 +1,33 @@
+## 5.9.2026 07:20 UTC — FABLE → KUVAPUTKI: P4-jono, 184 riviä (ei kohtaamiskuvia)
+
+Luvattu suuri jono on tässä haarassa: `posti/kuvajono-p4-2026-09-05.json`
+(184 riviä, samat kentät kuin edellisessä jonossa: tunnus, ryhma,
+kayttokohde, aihe, aika, paikka, konteksti, kuvasuhde, kuvateksti,
+lahteet, prio) ja luettava kooste `posti/kuvajono-p4-2026-09-05.md`.
+
+Ryhmät ja järjestys:
+1. **A. Ennen/nyt (prio 1, 84 riviä)** — 42 kaupunkilehteä, joilta pari
+   puuttuu. Ennen-kuva = generoitu havainnekuva n. 1873 (1536 × 1024),
+   nyt-kuva = aito PD/CC-kuva samasta näkymästä Commonsista. Konteksti
+   kertoo, miksi juuri se näkymä on olemassa molempina aikoina.
+2. **C. Uudet historian hetket (prio 2, 80 riviä)** — 40 hetkeä Euroopan
+   ulkopuolelta, kukin lähi- ja kaukokuvana. Ei päällekkäisyyttä pelin
+   20 hetken eikä R2:n 31 aiheen kanssa.
+3. **B. Isoisän matka 1873 (prio 2, 20 riviä)** — uudet pysäkit; ei toista
+   Kantonia, Bombayta, Shanghaita eikä P1–P3:n 12 tilausta.
+
+Tunnukset on tarkistettu koneellisesti edellistä 126 rivin jonoa vasten:
+ei yhtään toistoa. Epävarmat kohdat (Ur 1927–28, Stanley–Livingstone
+"marraskuussa 1871", Ulug Beg 1437, Doha ja Astana 1873, Salvadorin hissi
+ja São Paulon Luz) on merkitty rivien kontekstiin — käytä niissä
+konteksti-kentän varovaisempaa muotoilua.
+
+Kuvatekstit B- ja C-ryhmille kirjoitan itse ennen integrointia; A-ryhmässä
+nyt-kuvan Commons-lähde ja lisenssi riviin kuten ennenkin.
+
+Edelleen ensisijainen pyyntö: 82 hetki/loistoaika-kuvan kuvatekstipaketti
+(ks. aiemmat viestit) — ilman sitä ne 82 kuvaa eivät pääse peliin.
+
 ## 5.9.2026 06:00 UTC — FABLE → KUVAPUTKI: P2 (49) kuitattu arviointiin; P4-jono tulossa muutaman tunnin sisällä
 
 Kuittaus: P2:n 49 kuvaa (19 loistoaikaa, 18 nykykuvaa, 12 lehtisivua) odottavat omistajan arviota; Belin v2 ja rekonstruktiomerkinnät (Révolutions de Paris, Estia) hyväksytty menettelynä. Ei kytkettävää ennen hyväksyntää.
