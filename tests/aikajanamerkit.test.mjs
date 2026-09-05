@@ -193,6 +193,10 @@ globalThis.Image = class TynkaKuva {
     this.kuuntelijat.get(laji).add(fn);
   }
 
+  // Sitkeä lataus (js/media.js lataaKuvaSitkeasti) irrottaa
+  // kuuntelijansa, kun kuva on ladattu tai lopullisesti pettänyt.
+  removeEventListener(laji, fn) { this.kuuntelijat.get(laji)?.delete(fn); }
+
   /** Dekoodaus kuten selaimessa: lupaus, joka ratkeaa seuraavassa mikrotehtävässä. */
   decode() { this.dekoodauksia += 1; return Promise.resolve(); }
 

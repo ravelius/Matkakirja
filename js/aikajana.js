@@ -148,7 +148,7 @@
 
 import { el, maare } from './mapart.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
-import { asetaKuva } from './media.js';
+import { asetaKuva, lataaKuvaSitkeasti } from './media.js';
 import { sfx } from './sound.js';
 import { hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream } from './ambience-stream.js';
 import { stopDiaryVoice } from './luenta.js';
@@ -1234,14 +1234,31 @@ function luoKuvavarasto(katto = KUVAVARASTON_KATTO) {
       const tieto = { kuva, valmis: false };
       kuvat.set(osoite, tieto);
       const merkitse = () => { tieto.valmis = kuva.naturalWidth > 0; };
-      kuva.addEventListener('load', () => {
-        // Dekoodaus valmiiksi asti: pelkkä lataus jättäisi WebP:n
-        // purkamisen siihen kehykseen, jossa valo syttyy.
-        if (typeof kuva.decode === 'function') kuva.decode().then(merkitse, merkitse);
-        else merkitse();
-      }, { once: true });
-      kuva.addEventListener('error', () => kuvat.delete(osoite), { once: true });
-      kuva.src = osoite;
+      /*
+       * SITKEÄSTI (6.9.2026, r2.dev 429): kaaren
+       * havainnekuvat tulevat samasta ämpäristä kuin kaikki muukin
+       * media, ja ohimenevä purskerajoitus jätti esilatauksen
+       * tekemättä juuri niiltä pysäkeiltä, joihin ollaan menossa.
+       * Uusinta hoitaa sen (js/media.js), ja dekoodaus tehdään vasta
+       * onnistuneen latauksen jälkeen kuten ennenkin.
+       */
+      void lataaKuvaSitkeasti(kuva, osoite, {
+        /*
+         * JONON OHI. Varasto valmistaa vain kahden seuraavan pysäkin
+         * kuvat (enintään kuusi) ja niitä tarvitaan sekunneissa;
+         * koko kaaren taustaesilataus (esilataaPienet) on samassa
+         * jonossa ja veisi vuorot pitkäksi aikaa. Uusinta on silti
+         * mukana — se on tämän muutoksen ydin.
+         */
+        jonota: false,
+        onLatasi: () => {
+          // Dekoodaus valmiiksi asti: pelkkä lataus jättäisi WebP:n
+          // purkamisen siihen kehykseen, jossa valo syttyy.
+          if (typeof kuva.decode === 'function') kuva.decode().then(merkitse, merkitse);
+          else merkitse();
+        },
+        onVirhe: () => kuvat.delete(osoite),
+      });
     },
     /** Onko osoite jo dekoodattu valmiiksi? */
     onValmis(osoite) { return Boolean(kuvat.get(osoite)?.valmis); },

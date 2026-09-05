@@ -550,7 +550,14 @@ export function aaniOsoite(url) {
 export async function haeAani(url) {
   const peili = aaniOsoite(url);
   if (peili !== url) {
-    const vastaus = await fetch(peili).catch(() => null);
+    /*
+     * Kaksi yritystä ennen varareittiä (6.9.2026, r2.dev 429): ämpäri
+     * rajoittaa pyyntötahtia, ja yksi ohimeneva 429 vei ennen tätä
+     * äänen alkuperäiseen lähteeseen — ja kolmantena laukaisi peilin
+     * katkaisijan koko lajilta. Puuttuva tiedosto (404) palautuu yhä
+     * heti, joten varareitti ei hidastu (js/media.js haeSitkeasti).
+     */
+    const vastaus = await haeSitkeasti(peili, { yrityksia: 2 });
     if (vastaus?.ok) return vastaus;
     peiliPetti('aanet');
   }
@@ -577,18 +584,300 @@ export function onPeilista(osoite) {
   return peilinLaji(osoite) !== null;
 }
 
+// --- sitkeä lataus ------------------------------------------------------------
+
+/*
+ * R2.DEV RAJOITTAA PYYNTÖJÄ — YKSI PURSKE EI SAA RIKKOA KARTTAA.
+ *
+ * Omistajan kuvakaappaus 6.9.2026 klo 01.09 (iPhone, Ateenan
+ * kaupunkilehti): *"Kartalla pisteitä jotka eivät toimi"* — viisi
+ * kohdetta kahdestatoista näkyi pelkkänä täplänä piirroksen sijaan.
+ * Juurisyy mitattiin samalta osoitteelta: peli hakee mediansa
+ * julkisesta `pub-….r2.dev`-osoitteesta, joka on Cloudflaren OMA
+ * rajoitettu kehitysosoite, ja HEAD-kysely kaikille kahdelletoista
+ * Ateenan miniatyyrille yhtä aikaa vastasi **429 Too Many Requests**
+ * jokaiselle. Tiedostot ovat ämpärissä ja kunnossa; vain pyyntötahti
+ * oli liikaa.
+ *
+ * Kuva ei kerro JS:lle HTTP-statustaan — `<img>` antaa pelkän
+ * `error`-tapahtuman — joten 429:ää ei voi erottaa 404:stä kuvapolulla.
+ * Siksi jokainen kuvavirhe uusitaan rajallisesti: neljä yritystä,
+ * ensimmäinen odotus 800 ms ja siitä kaksinkertaistuen hajonnalla.
+ * Puuttuva tiedosto (aito 404) maksaa siis neljä pyyntöä ennen kuin
+ * merkki putoaa täpläksi — se on halpaa, koska niitä on vähän, ja
+ * väärä päätös toiseen suuntaan näkyy pelaajalle rikkinäisenä karttana.
+ * Fetch-polut (js/media.js haeSitkeasti) sen sijaan LUKEVAT statuksen
+ * ja uusivat vain 429:n ja 5xx:n — ja kunnioittavat `Retry-After`ia.
+ *
+ * OSOITE EI MUUTU UUSINNASSA. Vanha asetaKuva lisäsi kolmanteen
+ * yritykseen `?yritys=2`-parametrin, jotta selaimen oma välimuisti ei
+ * tarjoilisi äsken epäonnistunutta vastausta. Se ei enää käy: sw.js
+ * välimuistittaa median POLULLA, joten lisäparametri ohittaisi korin ja
+ * tekisi kerran nähdystä kuvasta uuden pyynnön joka kerta. Sama osoite
+ * asetetaan uudestaan `src`-sijoituksella; selain lataa rikkinäisen
+ * kuvan uudestaan, koska sen tila on "broken" eikä "completely
+ * available" (HTML: update the image data).
+ *
+ * PYSYVÄ KORJAUS ON OMISTAJAN PUOLELLA: kun ämpärille kytketään oma
+ * verkkotunnus (Cloudflare R2 → Settings → Public access → Custom
+ * domain), r2.dev-rajoitus poistuu kokonaan. Tämä on pelin puolen
+ * sietokyky, ei rajoituksen kiertäminen.
+ */
+
+/** Montako yritystä yhdelle kuvalle (ensimmäinen mukaan luettuna). */
+export const KUVAN_YRITYKSET = 4;
+/** Ensimmäinen odotus uusinnan edellä; kaksinkertaistuu joka kierroksella. */
+export const UUSINNAN_VIIVE_MS = 800;
+/** Odotuksen kerroin (800 → 1600 → 3200 ms, kuhunkin oma hajonta). */
+export const UUSINNAN_KERROIN = 2;
+/** Montako yritystä fetch-polulla (429/5xx; muut palautuvat heti). */
+export const HAUN_YRITYKSET = 3;
+/** Kunnioitetaan Retry-Afteria korkeintaan tähän asti. */
+export const RETRY_AFTER_KATTO_MS = 10000;
+
+/*
+ * PYYNTÖJONO: NELJÄ KERRALLAAN.
+ *
+ * Kohdekartta pyytää 10–25 miniatyyriä samalla piirrolla, ja juuri se
+ * synnytti purskeen, jonka r2.dev torjui. Jono ei hidasta mitään
+ * havaittavasti — neljä rinnakkaista pyyntöä on sama luku, jolla
+ * laattapyramidi noutaa laattojaan (js/laattapyramidi.js
+ * NOUTO_RINNAKKAIN = 4) ja jonka HTTP/1.1-selaimet muutenkin sallivat
+ * per palvelin — mutta se levittää pyynnöt niin, ettei peli itse tee
+ * purskeita.
+ *
+ * Jono koskee VAIN sitkeän latauksen kautta kulkevia kuvia. Sivun omat
+ * <img src>-elementit (lehden taitto) menevät selaimen omaa reittiä
+ * kuten ennenkin.
+ */
+export const KUVAJONON_LEVEYS = 4;
+
+/*
+ * VUORO VAPAUTUU VIIMEISTÄÄN TÄSSÄ AJASSA.
+ *
+ * Selain ei lupaa `load`- eikä `error`-tapahtumaa jokaisesta pyynnöstä:
+ * roikkuva yhteys tai DOM:ista poistettu kuva voi jäädä molempia vaille.
+ * Ilman vahtia neljä sellaista lukitsisi jonon lopullisesti, eikä
+ * yksikään kuva latautuisi enää istunnon aikana. Vahti EI keskeytä
+ * latausta — kuva saa yhä valmistua ja näkyä — se vain päästää
+ * seuraavan pyynnön liikkeelle.
+ */
+export const VUORON_KATTO_MS = 15000;
+
+let jonossaKaynnissa = 0;
+const jononOdottajat = [];
+
+function varaaVuoro() {
+  if (jonossaKaynnissa < KUVAJONON_LEVEYS) {
+    jonossaKaynnissa += 1;
+    return null;
+  }
+  return new Promise((jatka) => { jononOdottajat.push(jatka); });
+}
+
+function vapautaVuoro() {
+  const seuraava = jononOdottajat.shift();
+  // Vuoro siirtyy suoraan seuraavalle: laskuria ei lasketa välissä
+  // alas, tai kaksi yhtaikaista vapautusta päästäisi viisi kerralla.
+  if (seuraava) seuraava();
+  else jonossaKaynnissa = Math.max(0, jonossaKaynnissa - 1);
+}
+
+/** Vain mittaukseen ja testeihin: montako pyyntöä menossa ja jonossa. */
+export function kuvajononTila() {
+  return { kaynnissa: jonossaKaynnissa, jonossa: jononOdottajat.length };
+}
+
+/** Vain testejä varten: tyhjentää jonon ja vapauttaa kaikki vuorot. */
+export function nollaaKuvajono() {
+  jononOdottajat.length = 0;
+  jonossaKaynnissa = 0;
+}
+
+/*
+ * MEDIAMITTARI (kehittäjävalikon "media"-rivi, js/main.js).
+ * Omistaja näkee yhdellä silmäyksellä, kuinka moni kuva tuli suoraan,
+ * kuinka moni vasta uusinnalla ja kuinka moni jäi kokonaan saamatta —
+ * eli näkyykö r2.dev-rajoitus juuri nyt vai ei.
+ */
+const mediaLaskurit = { onnistui: 0, uusinta: 0, epaonnistui: 0 };
+
+/** Istunnon medialukemat: { onnistui, uusinta, epaonnistui }. */
+export function mediaLukemat() {
+  return { ...mediaLaskurit };
+}
+
+/** Vain testejä varten: nollaa medialukemat. */
+export function nollaaMediaLukemat() {
+  mediaLaskurit.onnistui = 0;
+  mediaLaskurit.uusinta = 0;
+  mediaLaskurit.epaonnistui = 0;
+}
+
+/** Odotus, jossa on hajontaa: [odotus, 2 × odotus). */
+function hajonnalla(odotus) {
+  return Math.round(odotus * (1 + Math.random()));
+}
+
+/**
+ * Lataa kuvan ja uusii saman osoitteen, jos lataus pettää.
+ *
+ * Palauttaa lupauksen, joka ratkeaa `true`:ksi latauksen onnistuessa ja
+ * `false`:ksi vasta kun kaikki yritykset ovat menneet — vasta silloin
+ * kutsutaan `onVirhe`, eli vasta silloin kuvaa ei oikeasti ole.
+ *
+ * Sama `<img>` uusiokäytetään galleriassa ja kohdekartalla, joten
+ * jokainen askel tarkistaa, että kuva yhä yrittää juuri sitä osoitetta
+ * jolle tämä ketju asetettiin. Muuten vanha ketju jatkaisi uuden kuvan
+ * päällä.
+ *
+ * @param {HTMLImageElement} kuva
+ * @param {string} osoite
+ * @param {object} [asetukset] yrityksia, viive, kerroin, jonota,
+ *   onLatasi, onVirhe
+ */
+export function lataaKuvaSitkeasti(kuva, osoite, asetukset = {}) {
+  const {
+    yrityksia = KUVAN_YRITYKSET,
+    viive = UUSINNAN_VIIVE_MS,
+    kerroin = UUSINNAN_KERROIN,
+    jonota = true,
+    onLatasi = null,
+    onVirhe = null,
+  } = asetukset;
+  if (!kuva || !osoite) return Promise.resolve(false);
+
+  return new Promise((valmis) => {
+    let yritys = 0;
+    let odotus = viive;
+    let vuorolla = false;
+    let vahti = null;
+    const yhaTama = () => kuva.getAttribute('src') === osoite;
+    const paastaVuoro = () => {
+      if (vahti !== null) { clearTimeout(vahti); vahti = null; }
+      if (!vuorolla) return;
+      vuorolla = false;
+      vapautaVuoro();
+    };
+    const irrota = () => {
+      kuva.removeEventListener('load', latasi);
+      kuva.removeEventListener('error', petti);
+    };
+
+    function latasi() {
+      irrota();
+      paastaVuoro();
+      mediaLaskurit.onnistui += 1;
+      onLatasi?.();
+      valmis(true);
+    }
+
+    function petti() {
+      irrota();
+      paastaVuoro();
+      // Kuva vaihdettiin toiseen kesken latauksen: tämä ketju ei enää
+      // koske ketään, eikä sen pidä pudottaa uutta kuvaa täpläksi.
+      if (!yhaTama()) { valmis(false); return; }
+      if (yritys >= yrityksia) {
+        mediaLaskurit.epaonnistui += 1;
+        onVirhe?.();
+        valmis(false);
+        return;
+      }
+      mediaLaskurit.uusinta += 1;
+      const odota = hajonnalla(odotus);
+      odotus *= kerroin;
+      setTimeout(() => {
+        if (!yhaTama()) { valmis(false); return; }
+        void aloita();
+      }, odota);
+    }
+
+    async function aloita() {
+      yritys += 1;
+      if (jonota) {
+        const vuoro = varaaVuoro();
+        vuorolla = true;
+        if (vuoro) await vuoro;
+        // Jonossa odottaessa kuva ehti vaihtua toiseen.
+        if (yritys > 1 && !yhaTama()) { paastaVuoro(); valmis(false); return; }
+        // Vahti: vuoro ei jää roikkumaan, vaikka kumpikaan tapahtuma
+        // ei koskaan tulisi (ks. VUORON_KATTO_MS).
+        vahti = setTimeout(paastaVuoro, VUORON_KATTO_MS);
+      }
+      kuva.addEventListener('load', latasi, { once: true });
+      kuva.addEventListener('error', petti, { once: true });
+      // Sama osoite uudestaan — EI cache-bustingia, ks. lohkokommentti.
+      kuva.src = osoite;
+    }
+
+    void aloita();
+  });
+}
+
+/** Retry-After otsakkeesta millisekunteina, tai null. */
+export function retryAfterMs(vastaus) {
+  const otsake = vastaus?.headers?.get?.('Retry-After');
+  if (!otsake) return null;
+  const sekunteina = Number(otsake);
+  const ms = Number.isFinite(sekunteina)
+    ? sekunteina * 1000
+    : Date.parse(otsake) - Date.now();
+  if (!Number.isFinite(ms) || ms <= 0) return null;
+  return Math.min(ms, RETRY_AFTER_KATTO_MS);
+}
+
+/**
+ * Fetch, joka uusii vain ohimenevän virheen (429 ja 5xx sekä verkon
+ * katkos) ja kunnioittaa `Retry-After`ia. Muut vastaukset — myös 404 —
+ * palautuvat heti sellaisenaan: puuttuva tiedosto ei parane odottamalla.
+ *
+ * Palauttaa saman kuin fetch (tai null, jos verkko ei vastannut
+ * kertaakaan), joten kutsuja voi lukea statuksen kuten ennenkin.
+ */
+export async function haeSitkeasti(osoite, asetukset = {}) {
+  const {
+    yrityksia = HAUN_YRITYKSET,
+    viive = UUSINNAN_VIIVE_MS,
+    kerroin = UUSINNAN_KERROIN,
+    haku = globalThis.fetch?.bind(globalThis),
+    ...init
+  } = asetukset;
+  if (typeof haku !== 'function') return null;
+  let odotus = viive;
+  for (let yritys = 1; ; yritys += 1) {
+    // eslint-disable-next-line no-await-in-loop
+    const vastaus = await haku(osoite, init).catch(() => null);
+    if (vastaus?.ok) {
+      mediaLaskurit.onnistui += 1;
+      return vastaus;
+    }
+    const ohimeneva = !vastaus || vastaus.status === 429 || vastaus.status >= 500;
+    if (!ohimeneva || yritys >= yrityksia) {
+      mediaLaskurit.epaonnistui += 1;
+      return vastaus;
+    }
+    mediaLaskurit.uusinta += 1;
+    const odota = retryAfterMs(vastaus) ?? hajonnalla(odotus);
+    odotus *= kerroin;
+    // eslint-disable-next-line no-await-in-loop
+    await new Promise((jatka) => { setTimeout(jatka, odota); });
+  }
+}
+
 // --- kuvan asettaminen --------------------------------------------------------
 
 /**
  * Asettaa kuvan osoitteen niin, että peilin pettäessä siirrytään
  * varareitille. `onVirhe` kutsutaan vasta, kun kumpikin osoite on
- * epäonnistunut — silloin kuvaa ei oikeasti ole.
+ * epäonnistunut kaikilla yrityksillään — silloin kuvaa ei oikeasti ole.
  *
- * Sama <img> uusiokäytetään galleriassa, joten kuuntelija tarkistaa
- * ennen toimintaansa, että kuva yhä yrittää juuri sitä osoitetta jolle
- * se asetettiin. Muuten vanha kuuntelija voisi pudottaa uuden kuvan
- * edellisen varareitille. Ketju on enintään kahden pyynnön mittainen
- * eikä voi jäädä silmukkaan.
+ * Kumpikin osoite kulkee sitkeän latauksen läpi (lataaKuvaSitkeasti),
+ * eli neljä yritystä kasvavalla odotuksella. Ketju on siis enintään
+ * kahden osoitteen mittainen eikä voi jäädä silmukkaan: varareitille
+ * siirrytään vasta kun peiliosoite on lopullisesti pettänyt, ja
+ * peilin katkaisija (peiliPetti) saa tiedon vasta silloin — yksi
+ * ohimenevä purske ei siis enää sulje koko peiliä.
  */
 export function asetaKuva(kuva, osoite, vara, onVirhe = null) {
   const kohde = osoite ?? vara;
@@ -596,52 +885,12 @@ export function asetaKuva(kuva, osoite, vara, onVirhe = null) {
   if (kuva.getAttribute('src') === kohde) return;
 
   const varalla = Boolean(vara) && vara !== kohde;
-  const yha = (odotettu) => kuva.getAttribute('src') === odotettu;
 
-  /*
-   * UUSINTA HETKEN PÄÄSTÄ, LISÄPARAMETRILLA.
-   *
-   * Kun kuvia pyydetään kymmeniä kerralla (lehden kansi), palvelin
-   * rajoittaa purskeita ja osa pyynnöistä kaatuu ohimenevästi. Lyhyt
-   * odotus riittää yleensä avaamaan rajan. Lisäparametri on pakollinen:
-   * ilman sitä selain tarjoilee äsken epäonnistuneen vastauksen omasta
-   * välimuististaan eikä pyydä mitään.
-   */
-  const uusiHetkenPaasta = (nykyinen, sitten) => {
-    setTimeout(() => {
-      if (!yha(nykyinen)) return;
-      const uusi = `${nykyinen}${nykyinen.includes('?') ? '&' : '?'}yritys=2`;
-      kuva.addEventListener('error', () => { if (yha(uusi)) sitten(); }, { once: true });
-      kuva.src = uusi;
-    }, 4000);
-  };
-
-  kuva.addEventListener('error', () => {
-    if (!yha(kohde)) return;
-    if (!varalla) {
-      /*
-       * EI ERILLISTÄ VARAREITTIÄ — MUTTA EI MYÖSKÄÄN HETI LUOVUTETA.
-       *
-       * Näin käy aina, kun peilin katkaisija on lauennut: silloin
-       * valokuvaUrl palauttaa jo valmiiksi Commonsin osoitteen, ja
-       * varareitti on sama osoite. Aiemmin tässä luovutettiin
-       * ENSIMMÄISESTÄ virheestä ilman yhtään uusintaa — ja koska
-       * katkaisija kesti koko välilehden eliniän, kuva jäi rikki myös
-       * sivun uudelleenlatauksen jälkeen (omistajan havainto
-       * 6.8.2026). Nyt sama uusinta kuin varareitilläkin.
-       */
-      uusiHetkenPaasta(kohde, () => onVirhe?.());
-      return;
-    }
-    peiliPetti(peilinLaji(kohde) ?? 'kuvat');
-    kuva.addEventListener('error', () => {
-      if (!yha(vara)) return;
-      // Kolmas yritys hetken päästä (omistajan havainto 6.8.2026:
-      // Venetsian kannesta puuttui kuvia).
-      uusiHetkenPaasta(vara, () => onVirhe?.());
-    }, { once: true });
-    kuva.src = vara;
-  }, { once: true });
-
-  kuva.src = kohde;
+  void lataaKuvaSitkeasti(kuva, kohde, {
+    onVirhe: () => {
+      if (!varalla) { onVirhe?.(); return; }
+      peiliPetti(peilinLaji(kohde) ?? 'kuvat');
+      void lataaKuvaSitkeasti(kuva, vara, { onVirhe: () => onVirhe?.() });
+    },
+  });
 }

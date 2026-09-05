@@ -122,7 +122,7 @@
  */
 
 import { laudaltaAsteiksi } from './fokusmitat.js';
-import { PEILI_JUURI } from './media.js';
+import { lataaKuvaSitkeasti, PEILI_JUURI, UUSINNAN_VIIVE_MS } from './media.js';
 import { ETUSIVUN_ISOISAKUVAT } from './packs/etusivun-isoisakuvat.js';
 import {
   ETUSIVUPALLO_AVAIN, asetaEtusivupallo, etusivupalloOletus,
@@ -635,7 +635,15 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
   juliste.className = 'etusivupallo-juliste';
   juliste.decoding = 'async';
   juliste.alt = '';
-  juliste.src = `${ETUSIVUPALLO_JUURI}${ETUSIVUPALLO_TIEDOSTOT.juliste}`;
+  /*
+   * SITKEÄSTI (6.9.2026, r2.dev 429): juliste on avausruudun ainoa
+   * kuva ja tulee samasta ämpäristä kuin muukin media. Ohimenevä
+   * purskerajoitus jätti avaussivun pergamentiksi — uusinta hoitaa
+   * sen (js/media.js). Jonon ohi, koska tämä on ruudun ainoa kuva
+   * eikä saa jäädä odottamaan kaaren esilatauksia.
+   */
+  void lataaKuvaSitkeasti(juliste, `${ETUSIVUPALLO_JUURI}${ETUSIVUPALLO_TIEDOSTOT.juliste}`,
+    { jonota: false });
 
   /*
    * JULISTE POHJALLE JA NÄKYVIIN HETI, video sen päälle. Reduced
@@ -767,7 +775,24 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
       let ratkaistu = false;
       const paata = (arvo) => { if (!ratkaistu) { ratkaistu = true; ok(arvo); } };
       video.addEventListener('loadeddata', () => paata(true), { once: true });
-      video.addEventListener('error', () => paata(false), { once: true });
+      /*
+       * YKSI UUSINTA MYÖS VIDEOLLE (6.9.2026, r2.dev 429). Video ei
+       * kerro statustaan sen paremmin kuin kuvakaan, ja ohimeneva
+       * rajoitus pudotti koko kerroksen pois (paluu vanhaan
+       * etusivuun). Ensimmäinen virhe käynnistää siis uuden `load()`:n
+       * lyhyen odotuksen jälkeen, ja vasta toinen luovuttaa. Osoite ei
+       * muutu — lähteet ovat <source>-elementeissä, ja sw.js
+       * välimuistittaa polulla.
+       */
+      let uusittu = false;
+      video.addEventListener('error', () => {
+        if (uusittu) { paata(false); return; }
+        uusittu = true;
+        win.setTimeout(() => {
+          if (ratkaistu) return;
+          try { video.load(); } catch { paata(false); }
+        }, UUSINNAN_VIIVE_MS);
+      });
       win.setTimeout(() => paata(video.readyState >= 2), 9000);
       try { video.load(); } catch { paata(false); }
     });
