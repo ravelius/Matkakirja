@@ -2797,6 +2797,15 @@ export class UI {
     this.radioAani = null;
     this.linssiLataus = null; // kesken oleva tuonti; jaetaan kaikille kutsujille
     this.linssiValittu = tallennettuLinssi();
+    /*
+     * LAUKUSSA ESIKATSELTU LINSSI (omistaja 5.9.2026, ks.
+     * esikatseleLinssi): `undefined` = laukussa ei ole napautettu
+     * mitään, jolloin selite kertoo päällä olevasta linssistä kuten
+     * ennen. Muuten arvo on napautetun ruudun tunnus — ja null on
+     * kelvollinen arvo ("Ei linssiä"), joten tyhjä tila EI voi olla
+     * null.
+     */
+    this.linssiEsikatselu = undefined;
     this.linssiPiirretty = null; // mihin kerrokseen linssi on piirretty
     this.linssiPois = new Set(); // linssit, joilla ei ollut tälle laudalle mitään
     this.linssiLauta = null; // mille laudalle valikoima on laskettu
@@ -15845,6 +15854,9 @@ export class UI {
    * linssi on siellä heti eikä vasta seuraavan piirron jälkeen.
    */
   openPassport() {
+    // Uusi avaus alkaa puhtaalta pöydältä: selite kertoo päällä
+    // olevasta linssistä, kunnes jotain ruutua napautetaan.
+    this.linssiEsikatselu = undefined;
     this.renderProgress();
     this.renderAarteet();
     this.renderFinds();
@@ -15856,6 +15868,15 @@ export class UI {
     document.body.classList.add('laukku-auki');
     this.nollaaDialoginVieritys(this.passportDialog);
     this.asemoiLaukku();
+  }
+
+  /**
+   * Sulkee matkalaukun, jos se on auki. Siivous (pikkuseloste,
+   * julistegalleria, body.laukku-auki) tapahtuu dialogin omassa
+   * close-kuuntelijassa, joten tämä on tarkoituksella vain portti.
+   */
+  suljeLaukku() {
+    if (this.passportDialog?.open) this.passportDialog.close();
   }
 
   /*
@@ -16665,6 +16686,9 @@ export class UI {
 
   /** Valitsimen rivin napautus. tunnus === null = "Ei linssiä". */
   valitseLinssi(tunnus) {
+    // Kytketty linssi on tosiasia, ei esikatselu: laukun selite palaa
+    // kertomaan päällä olevasta linssistä (esikatseleLinssi).
+    this.linssiEsikatselu = undefined;
     /*
      * KARTTAPALLO ON TOIMINTO, EI TILA (omistaja 4.9.2026: "Lisää pallo
      * yhdeksi linssiksi matkalaukkuun"). Valinta sulkee laukun ja avaa
@@ -16672,7 +16696,7 @@ export class UI {
      * varuste jatkaa, kun pallo suljetaan (js/linssit/pallo.js).
      */
     if (tunnus === 'pallo') {
-      if (this.passportDialog?.open) this.passportDialog.close();
+      this.suljeLaukku();
       void this.avaaPallo();
       return;
     }
@@ -16737,6 +16761,8 @@ export class UI {
     // Vanha tietolohko jäi irralleen puusta: viittaus siihen kirjoittaisi
     // näkymättömään elementtiin.
     this.linssiTiedot = null;
+    // Ruudukko on uusi, joten napautusmuisti ei koske siihen.
+    this.linssiEsikatselu = undefined;
     if (!linssit.length) return;
 
     const liuskat = html('nav', 'linssi-liuskat');
@@ -16773,8 +16799,39 @@ export class UI {
       // kuvien kanssa mutta selvästi "paljain silmin" -valintana.
       nappi.innerHTML = liuskaIkoniSvg(LINSSI_EI_IKONI, 30);
     }
-    nappi.addEventListener('click', () => this.valitseLinssi(tunnus));
+    /*
+     * NAPAUTUS EI SYTYTÄ, VAAN SELITTÄÄ (omistaja 5.9.2026 sanatarkasti:
+     * *"kun linssi klikataan matkalaukussa niin silloin päivittyy vasta
+     * selite teksti ja tekstin loppuun tulee "aktivoi", mitä
+     * klikkaamalla linssi menee päälle ja matkalaukku sulkeutuu"*).
+     * Kytkentä on siis kaksivaiheinen: ruudun napautus vaihtaa
+     * selitteen, ja selitteen perässä oleva "aktivoi" kytkee linssin.
+     */
+    nappi.addEventListener('click', () => this.esikatseleLinssi(tunnus));
     return nappi;
+  }
+
+  /**
+   * Laukun ruudun napautus: merkitsee linssin katsotuksi ja kirjoittaa
+   * sen selitteen ruudukon alle. EI kytke linssiä — sen tekee vasta
+   * selitteen perässä oleva "aktivoi" (aktivoiLinssi).
+   *
+   * @param {string|null} tunnus napautettu linssi; null = "Ei linssiä"
+   */
+  esikatseleLinssi(tunnus) {
+    this.linssiEsikatselu = tunnus ?? null;
+    this.paivitaLinssiTiedot();
+  }
+
+  /**
+   * Selitteen "aktivoi" (tai päällä olevan linssin kohdalla
+   * "sammuta"): kytkee linssin ja sulkee laukun, jotta kartta jää
+   * heti näkyviin.
+   */
+  aktivoiLinssi(tunnus) {
+    this.linssiEsikatselu = undefined;
+    this.valitseLinssi(tunnus);
+    this.suljeLaukku();
   }
 
   /* ==================== AIKAJANALINSSIT (js/aikajana.js) ==================== */
@@ -16891,25 +16948,54 @@ export class UI {
     return this.linssiTuki?.kaikki.find((l) => l.tunnus === this.linssiValittu) ?? null;
   }
 
+  /** Linssimoduuli tunnuksella; null = "Ei linssiä" eikä siis moduulia. */
+  linssiTunnuksella(tunnus) {
+    if (!tunnus) return null;
+    return this.linssiTuki?.kaikki.find((l) => l.tunnus === tunnus) ?? null;
+  }
+
   /** Valittu rivi korostetaan ja sen kuvaus kirjoitetaan rivien alle. */
   paivitaLinssiTiedot() {
     // Linssikartan otsikkorivi seuraa valintaa (js/pallolauta/linssikartta.js).
     this.pallolauta?.linssikartta?.paivita();
     if (!this.linssiValikko) return;
+    /*
+     * KAKSI KOROSTUSTA, KAKSI ERI ASIAA (omistaja 5.9.2026). `paalla`
+     * on messinkirengas päällä olevan linssin ympärillä — se kertoo,
+     * mikä kartalla nyt on. `esikatselu` on kevyt rengas juuri
+     * napautetun ruudun ympärillä: se kertoo, mistä alla oleva selite
+     * puhuu. Ne voivat olla eri ruuduissa yhtä aikaa, ja juuri siksi
+     * ne ovat eri luokkia.
+     */
+    const esikatselussa = this.linssiEsikatselu !== undefined;
     for (const nappi of this.linssiValikko.querySelectorAll('.linssi-liuskat button')) {
-      const paalla = (nappi.dataset.linssi || null) === this.linssiValittu;
+      const tunnus = nappi.dataset.linssi || null;
+      const paalla = tunnus === this.linssiValittu;
       nappi.classList.toggle('paalla', paalla);
+      nappi.classList.toggle('esikatselu', esikatselussa && tunnus === this.linssiEsikatselu);
       nappi.setAttribute('aria-pressed', String(paalla));
     }
     if (!this.linssiTiedot) return;
     this.linssiTiedot.replaceChildren();
-    const linssi = this.paallaOlevaLinssi();
+    // Napautettu ruutu selitetään; ilman napautusta selite kertoo
+    // päällä olevasta linssistä kuten ennen.
+    const tunnus = esikatselussa ? this.linssiEsikatselu : this.linssiValittu;
+    const linssi = this.linssiTunnuksella(tunnus);
     if (!linssi) {
-      this.linssiTiedot.appendChild(html('p', 'linssi-lyhyt', 'Kartta sellaisena kuin isoisä sen piirsi.'));
+      // "Ei linssiä" on napautettuna yhtä lailla varuste: sillä on nimi
+      // ja selite, ja sen "aktivoi" palauttaa paljaan kartan.
+      if (esikatselussa) this.linssiTiedot.appendChild(html('h3', 'linssi-nimi', 'Paljain silmin'));
+      const teksti = html('p', 'linssi-lyhyt', 'Kartta sellaisena kuin isoisä sen piirsi.');
+      if (esikatselussa) this.lisaaLinssinAktivointi(teksti, null, null);
+      this.linssiTiedot.appendChild(teksti);
+      this.havaitseLinssiTietojenVaihto();
       return;
     }
     this.linssiTiedot.appendChild(html('h3', 'linssi-nimi', linssi.nimi));
-    this.linssiTiedot.appendChild(html('p', 'linssi-lyhyt', linssi.lyhyt));
+    const teksti = html('p', 'linssi-lyhyt', linssi.lyhyt);
+    if (esikatselussa) this.lisaaLinssinAktivointi(teksti, tunnus, linssi);
+    this.linssiTiedot.appendChild(teksti);
+    this.havaitseLinssiTietojenVaihto();
 
     /*
      * LÄHDELINKKI POISTETTU VALIKOSTA (omistaja 5.8.2026: "poista myös,
@@ -16926,6 +17012,58 @@ export class UI {
      * merkintöinä lisensseineen. Jos joskus tulee CC BY -aineistoon
      * perustuva linssi, sen nimeäminen kuuluu sinne, ei tähän.
      */
+  }
+
+  /**
+   * "aktivoi" SELITTEEN PERÄÄN (omistaja 5.9.2026 sanatarkasti: *"kun
+   * linssi klikataan matkalaukussa niin silloin päivittyy vasta selite
+   * teksti ja tekstin loppuun tulee "aktivoi", mitä klikkaamalla
+   * linssi menee päälle ja matkalaukku sulkeutuu"*).
+   *
+   * Nappi on VIRKKEEN OSA eikä oma rivinsä: se ladotaan selitteen
+   * perään samaan kappaleeseen, tekstilinkin näköisenä kuten muutkin
+   * tämän lohkon toiminnot (.linssi-lahde-avaa). Painettava sana on
+   * silti oikea `<button>`, joten se saa näppäimistön ja ruudunlukijan
+   * ilman lisätemppuja — ja aria-label kertoo, mitä se tekee, koska
+   * pelkkä "aktivoi" ei kerro mitä aktivoidaan.
+   *
+   * Päällä olevan linssin kohdalla sana on "sammuta" ja se kytkee
+   * linssin pois (valitseLinssi(null)) — sama nappi, käänteinen
+   * suunta, ei uutta käyttöliittymää.
+   *
+   * @param {Element} teksti selitekappale, jonka perään nappi tulee
+   * @param {string|null} tunnus esikatseltu linssi (null = paljain silmin)
+   * @param {object|null} linssi linssimoduuli, jos tunnus osoittaa sellaiseen
+   */
+  lisaaLinssinAktivointi(teksti, tunnus, linssi) {
+    const paalla = Boolean(tunnus) && tunnus === this.linssiValittu;
+    const nappi = html('button', 'linssi-aktivoi', paalla ? 'sammuta' : 'aktivoi');
+    nappi.type = 'button';
+    const nimi = linssi?.nimi ?? 'Paljain silmin';
+    if (paalla) nappi.setAttribute('aria-label', `Sammuta linssi ${nimi}`);
+    else if (linssi) nappi.setAttribute('aria-label', `Aktivoi linssi ${nimi}`);
+    else nappi.setAttribute('aria-label', 'Katso karttaa paljain silmin');
+    // Välilyönti sanan eteen: nappi on inline-elementti kappaleen
+    // sisällä, eikä selite saa liimautua siihen kiinni.
+    teksti.appendChild(document.createTextNode(' '));
+    teksti.appendChild(nappi);
+    nappi.addEventListener('click', () => this.aktivoiLinssi(paalla ? null : tunnus));
+    return nappi;
+  }
+
+  /**
+   * Selitteen vaihto häivytetään sisään (css: .linssi-tiedot.vaihtui).
+   * Luokka otetaan pois ja pannaan takaisin, jotta sama animaatio
+   * lähtee alusta joka napautuksella; välissä oleva asettelun luku
+   * pakottaa selaimen huomaamaan muutoksen. Reduced motion nollaa
+   * keston tyylitiedostossa, joten tästä ei tarvitse kysyä.
+   */
+  havaitseLinssiTietojenVaihto() {
+    const lohko = this.linssiTiedot;
+    if (!lohko?.classList) return;
+    lohko.classList.remove('vaihtui');
+    void lohko.offsetWidth;
+    lohko.classList.add('vaihtui');
   }
 
   /**

@@ -1044,6 +1044,18 @@ button, .brand, .turn-pill, .fact-card h2 {
   border-color: var(--accent-dark);
 }
 
+/*
+ * NAPAUTETTU MUTTA VIELÄ SYTYTTÄMÄTÖN (omistaja 5.9.2026). Napautus
+ * vaihtaa vain selitteen, joten ruutu tarvitsee oman, kevyemmän
+ * merkkinsä: haalea reunus kertoo "tästä puhutaan", kun taas päällä
+ * olevan linssin täysi kulta kertoo "tämä on kartalla". Kaksi tilaa
+ * voivat olla eri ruuduissa yhtä aikaa.
+ */
+.linssi-valikko .linssi-liuskat button.esikatselu {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent-dark);
+}
+
 .linssi-liuskat button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 1px;
@@ -1087,6 +1099,63 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 
 .linssi-lahde-avaa:hover { color: var(--ink-light); }
+
+/*
+ * "aktivoi" SELITTEEN PERÄSSÄ (omistaja 5.9.2026: *"kun linssi
+ * klikataan matkalaukussa niin silloin päivittyy vasta selite teksti ja
+ * tekstin loppuun tulee "aktivoi", mitä klikkaamalla linssi menee
+ * päälle ja matkalaukku sulkeutuu"*).
+ *
+ * Sana on virkkeen jatke, ei nappi: `display: inline` pitää sen samalla
+ * rivillä kappaleen kanssa ja kirjasin peritään selitteestä, jotta rivi
+ * lukeutuu yhtenä lauseena. Pisteviivan alleviivaus on sama kuin muilla
+ * tämän pelin tekstilinkeillä (.wiki-btn, .linssi-lahde-avaa).
+ */
+/*
+ * Valitsinta on KAKSI, ja se on tarkoituksellista: laukku on dialogi,
+ * ja `.dialog button` (0,1,1) maalaisi tähänkin pergamenttinapin
+ * reunuksineen. `.dialog .linssi-aktivoi` (0,2,0) voittaa sen, ja
+ * yksinäinen luokka pitää tyylin voimassa myös kartan puolella.
+ */
+.linssi-aktivoi,
+.dialog .linssi-aktivoi {
+  display: inline;
+  width: auto;
+  min-height: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  color: var(--accent);
+  font: inherit;
+  letter-spacing: 0.03em;
+  text-decoration: underline dotted;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.linssi-aktivoi:hover:not(:disabled),
+.linssi-aktivoi:focus-visible,
+.dialog .linssi-aktivoi:hover:not(:disabled),
+.dialog .linssi-aktivoi:focus-visible { background: none; color: var(--ink-light); }
+
+/*
+ * Selitteen vaihto häivytetään sisään: napautuksesta napautukseen
+ * teksti vaihtuu pehmeästi eikä hyppää (js/ui.js
+ * havaitseLinssiTietojenVaihto lisää luokan joka piirrolla).
+ */
+@keyframes linssiSelitteenVaihto {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: none; }
+}
+
+.linssi-tiedot.vaihtui { animation: linssiSelitteenVaihto 220ms ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .linssi-tiedot.vaihtui { animation: none; }
+}
 
 .linssi-lahde {
   margin-top: 0.35rem;
@@ -4079,11 +4148,36 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   background: rgba(252, 241, 212, 0.9);
 }
 
+/*
+ * Napautettu varuste, jota ei ole vielä aktivoitu: ohut messinkiviiva
+ * ilman messinkirengasta. Ero päällä olevaan (2,5 px + hohde) on
+ * tarkoituksella selvä — rengas kuuluu vain kartalla olevalle
+ * linssille. Siirtymä pitää valinnan pehmeänä sormen alla.
+ */
+.passport-card .linssi-valikko .linssi-liuskat button {
+  transition: box-shadow 180ms ease;
+}
+
+.passport-card .linssi-valikko .linssi-liuskat button.esikatselu:not(.paalla) {
+  box-shadow: 0 0 0 1.5px rgba(122, 85, 20, 0.55), 0 0 0 4px rgba(198, 158, 82, 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .passport-card .linssi-valikko .linssi-liuskat button { transition: none; }
+}
+
 /* Valitun varusteen nimi ja kuvaus liuskojen alla: keskitetty kuten
    tavaroiden selitteet, ja laukun oma muste. */
 .passport-card .linssi-tiedot { padding-top: 0.6rem; text-align: center; }
 .passport-card .linssi-nimi { color: #46331f; }
 .passport-card .linssi-lyhyt { color: rgba(70, 51, 31, 0.85); }
+
+/* Laukku on pergamenttia: "aktivoi" saa saman tumman kullan kuin muut
+   pergamentin tekstilinkit (.wiki-btn), ei paneelin vaaleaa aksenttia. */
+.passport-card .linssi-aktivoi { color: #7a5514; }
+
+.passport-card .linssi-aktivoi:hover:not(:disabled),
+.passport-card .linssi-aktivoi:focus-visible { color: #9c6f1e; }
 
 
 /*
