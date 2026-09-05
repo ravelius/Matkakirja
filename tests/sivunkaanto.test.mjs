@@ -5,6 +5,7 @@ import {
   SIVUNKAANTO_AVAIN, SIVUNKAANTO_KIRJASTO, SIVUNKAANTO_KYNNYS, SIVUNKAANTO_VERSIO,
   asetaSivunkaanto, kaannaSivu, aloitaSivunVeto, lataaSivunkaanto,
   sivunkaantoMahdollinen, sivunkaantoPaalla, sivunkaantoValmis, sivunkaantoDistVersio,
+  SIVUNKAANTO_VARJO,
 } from '../js/sivunkaanto.js';
 
 /*
@@ -192,4 +193,10 @@ test('sivu kääntyy tasaisena arkkina, ei nurkasta (omistaja 5.9.2026)', () => 
   const veto = lahde.slice(lahde.indexOf('  tartu(clientX, clientY) {'), lahde.indexOf('  /** rAF-ajuri'));
   assert.doesNotMatch(veto, /y: p\.y/, 'sormen pystypaikka ei saa ohjata taitetta');
   assert.match(veto, /this\.kaanto\.kulma = 'ala';/);
+});
+
+test('taitteen varjo on hento, ei kiiltävä (omistaja 5.9.2026: "Saako tästä vähemmän kiiltävän?")', () => {
+  assert.ok(SIVUNKAANTO_VARJO > 0 && SIVUNKAANTO_VARJO <= 0.25, String(SIVUNKAANTO_VARJO));
+  const lahde = readFileSync(new URL('../js/sivunkaanto.js', import.meta.url), 'utf8');
+  assert.match(lahde, /maxShadowOpacity: SIVUNKAANTO_VARJO/);
 });

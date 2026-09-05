@@ -92,6 +92,13 @@ export const SIVUNKAANTO_KIRJASTO = `${PEILI_JUURI}vendor/page-flip-${SIVUNKAANT
 export const SIVUNKAANTO_AVAIN = 'matkakirja-sivunkaanto';
 /** Napista tai valikosta ajetun käännön kesto (ms), ease-in-out. */
 export const SIVUNKAANTO_KESTO_MS = 460;
+/*
+ * Taitteen varjon voimakkuus (kirjaston maxShadowOpacity, 0–1). Oli 0,55:
+ * omistaja 5.9.2026 klo 17.30 (iPad, Ateenan lehti kesken käännön):
+ * *"Saako tästä vähemmän kiiltävän?"* — vaalea paperi näytti lasilta.
+ * 0,2 jättää taitteeseen hennon varjon, joka kertoo suunnan muttei kiillä.
+ */
+export const SIVUNKAANTO_VARJO = 0.2;
 /** Sormesta irrotetun käännön loppumatka (ms), ease-out. */
 export const SIVUNKAANTO_LOPPU_MS = 300;
 /** Vedon osuus sivun leveydestä, jonka jälkeen irrotus vie sivun yli. */
@@ -248,7 +255,7 @@ class Kaantoteatteri {
       autoSize: false,
       showCover: false,
       drawShadow: true,
-      maxShadowOpacity: 0.55,
+      maxShadowOpacity: SIVUNKAANTO_VARJO,
       flippingTime: KIRJASTON_KESTO_MS,
       useMouseEvents: false,
       mobileScrollSupport: false,

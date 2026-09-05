@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1579, teksti: 'Sivunkaanto: taitteen varjo hennoksi' },
   { v: 1578, teksti: 'Kaikki pallolle 1: linssimoottori, 3 linssia, etusivu' },
   { v: 1577, teksti: 'Pallo: laatat kansiosta b, napa merta' },
   { v: 1576, teksti: 'Raamattu: kellonajat Suomen aikaa' },
