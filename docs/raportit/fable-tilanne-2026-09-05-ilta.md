@@ -17,6 +17,14 @@ FABLEMAX VAIN TARPEESEEN).
 | **Postikierros** | rutiini trig_01SB7J6WarGdjvZY9e7weUuv tunneittain; viimeksi käsitelty kuvaputken commit 1d32042c, Fablen viimeisin 5f3273ba | — |
 | **Omistajan päätökset auki** | SunCalc (suositus: seuraava) ja tsParticles kirjastoista; Lyria 4 raitaa; laitekalibroinnit (rullan herkkyys, tarkkuus liikkeessä -vipu); puhelimen isoisän kuvan koko (110 px, isompi vaatii tekstin päälle menon) | kysymyskortit, kun omistaja on paikalla |
 
+## Lisäys klo 23.05 — agentit työn alla resetin hetkellä
+
+Kolme Opus-agenttia työskentelevät omissa worktreissään (`.claude/worktrees/agent-*`, haarat `worktree-agent-*`); niiden commitit cherry-pickataan työhaaraan, kun ne valmistuvat (jos raportti katosi resetissä: `git worktree list` ja `git log worktree-agent-<id> -1`):
+- **Isoisän kuvapino** (adc874d5131370d3d): etusivun kuvat pinoon sikin sokin, haaleina ja sumeina tekstin alle; kuvalista datavetoiseksi (uusi pakka), Raamattu ISOISA JAA ARVOITUKSEKSI. Base = työhaara (v1594), menee samaan PR #2051:een.
+- **Kaaret erä A** (aa23b5fd3656479fb): Amsterdam (Yara), Islanti (Einar), Pietari (Matvei), Tallinna (Eve), Tromssa (Kjell), Alpit (Anselm, koiran sukumuisti pois), Marseille (rike pois).
+- **Kaaret erä B** (aca9da3e54bda2713): Ateena (Dafni), Kiova (Taras), Granada (Inés), Kööpenhamina (Freja, Tivoli), Rooma (Nico, Trevi), Oslo (Oskar, Gjellestad-kysymys), Varsova (Zofia), Madrid/Venetsia kaksoishenkilöt.
+Fable tarkistaa ja viimeistelee tekstit (kuten v1586 ja v1593), poistaa LUONNOS-merkinnät, julkaisee. Päätökset kaupungeittain: posti/fable-vanha.md 20:05 UTC. Dublin on jäissä (henkilöä ei ole). Kuvaputkelta pyydetty isoisän vaaleat kuvat pelin R2:een kuvatekstein (posti 19:55 UTC).
+
 ## Tänään julkaistu (v1553–v1594)
 
 Pallo oletuslaudaksi ja laatu levossa; kirjastot StPageFlip, Tuna,
