@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTAKANSIO, laattatasoMax, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS, laattakynnykset, lepokerroin, LAATU_TERAVYYS, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE } from '../js/pallo.js';
-import { laatanReunat, rivinLeveysaste, julisteenLeveysvali, tasonLaatat, lahdetaso, laattojenKansio, LAATTA } from '../tools/tee-pallolaatat.mjs';
+import { laatanReunat, rivinLeveysaste, julisteenLeveysvali, tasonLaatat, lahdetaso, laattojenKansio, LAATTA, tayteRivilla, nostaReuna, JAA_RAJA, JAA_SAVY, MERI_SAVY } from '../tools/tee-pallolaatat.mjs';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
 import { LINSSI as PALLOLINSSI } from '../js/linssit/pallo.js';
 import { PERUSLINSSIT, omistetut } from '../js/linssit/omistus.js';
@@ -134,8 +134,10 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   assert.equal(tasonLaatat(3, [-10, 40, 30, 70]).length, 6, 'Eurooppa osuu kuuteen Z3-laattaan (2 saraketta x 3 rivia)');
   const luettelo = { projektio: { tyyppi: 'miller', leveys: 12000, lon0: -175, pohjoinen: 76 }, rajaus: { x: 0, y: -611.3, w: 12000, h: 6422.7 }, kehys: { yla: 232, ala: 240 } };
   const vali = julisteenLeveysvali(luettelo);
-  // Vain kartta: kartussi ja kehys (76–84° N, arkin alakehys etelässä) jäävät pois (5.9.2026).
-  assert.equal(vali.pohjoinen, 76, JSON.stringify(vali));
+  // Vain kartta: kartussi ja kehys (rajauksen yläpuoli, arkin alakehys etelässä) jäävät
+  // pois (5.9.2026), mutta kartta ulottuu rajauksen yläreunaan ≈ 84° N — Huippuvuoret ja
+  // Frans Joosefin maa eivät katoa (5.9.2026 iltapäivä: "Miksi hattu näkyy?").
+  assert.ok(vali.pohjoinen > 83.9 && vali.pohjoinen < 84.1, JSON.stringify(vali));
   assert.ok(vali.etela < -60 && vali.etela > -64, JSON.stringify(vali));
   const ilmanKehysta = julisteenLeveysvali({ ...luettelo, kehys: undefined });
   assert.ok(ilmanKehysta.etela < -65 && ilmanKehysta.etela > -67, 'ilman kehystietoa rajaus sellaisenaan');
@@ -147,6 +149,27 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   // Nostotaso (nimet, karttanostot) poltetaan omaan kansioon (5.9.2026).
   assert.equal(laattojenKansio('2026-09-03a', true), 'julisteet/pallo/laatat/2026-09-03a-nostot/');
   assert.match(wf, /--nostot/);
+  // Muuttunut piirto → uusi kansio (laatat vuoden välimuistissa): --tunniste (5.9.2026).
+  assert.equal(laattojenKansio('2026-09-03a', true, 'b'), 'julisteet/pallo/laatat/2026-09-03a-nostot-b/');
+  assert.match(wf, /--tunniste \{0\}/);
+  assert.match(wf, /inputs\.tunniste/);
+  // Napalakki: pohjoisessa täyte on merta napaan asti, etelässä meri liukuu jääksi ilman rajaa.
+  assert.equal(JAA_RAJA.pohjoinen, null);
+  assert.deepEqual(tayteRivilla(85, [200, 194, 175]), [200, 194, 175], 'Jäämeri on merta');
+  assert.deepEqual(tayteRivilla(-69, [200, 194, 175]), [200, 194, 175]);
+  assert.deepEqual(tayteRivilla(-85, [200, 194, 175]), JAA_SAVY, 'Etelämanner on jäätä');
+  const puoli = tayteRivilla(JAA_RAJA.etela - 2, [200, 194, 175]);
+  assert.ok(puoli[0] > 200 && puoli[0] < JAA_SAVY[0], `liuku ${puoli}`);
+  assert.deepEqual(tayteRivilla(80), MERI_SAVY, 'oletus ilman mittausta');
+  // Reunavarjon nosto: merenkaltainen tumma pikseli nousee merisävyyn, maa ja rantaviiva eivät.
+  const meri = [200, 194, 175];
+  const puskuri = Uint8Array.from([189, 181, 162, 235, 215, 150, 90, 80, 60, 200, 194, 175]);
+  assert.equal(nostaReuna(puskuri, 0, meri, 1), true);
+  assert.deepEqual([...puskuri.slice(0, 3)], meri, 'varjo → meri');
+  assert.equal(nostaReuna(puskuri, 3, meri, 1), false, 'maa (kyllainen) jää');
+  assert.equal(nostaReuna(puskuri, 6, meri, 1), false, 'rantaviiva (tumma) jää');
+  assert.equal(nostaReuna(puskuri, 9, meri, 0), false, 'kaistan ulkopuolella ei nosteta');
+  assert.deepEqual([...puskuri.slice(3)], [235, 215, 150, 90, 80, 60, 200, 194, 175]);
   // Liike jatkuu sormen irrottua: kitka ja kynnys (5.9.2026).
   const pallo2 = lue('../js/pallo.js');
   assert.match(pallo2, /const VAUHTI_KITKA = 0\.0028;/);
