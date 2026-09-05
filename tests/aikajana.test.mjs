@@ -509,7 +509,9 @@ test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa se
   assert.ok(!/vuosiAani/.test(MOOTTORI), 'vuosiAani on korvattu');
   assert.match(MOOTTORI, /naksahda\(\) \{[\s\S]{0,300}AIKAJANA_NAKSU_VALI_MS[\s\S]{0,200}sfx\.play\('vuosi'\);/);
   // prefers-reduced-motion vaihtaa merkin ilman liikettä; pysäytetty kello liukuu.
-  assert.match(MOOTTORI, /asetaMatkamittari\(this\.rullat, arvo, \{ heti: heti \|\| this\.reducedMotion, liuku: !this\.kaynnissa \}\)/);
+  // (Askel ja suunta ovat "vuotta sitten" -asteikon jatke (5.9.2026): keksinnöillä
+  // ne ovat 1 ja 1, eli entinen kello — ks. tests/ihmisen-matka.test.mjs.)
+  assert.match(MOOTTORI, /asetaMatkamittari\(this\.rullat, arvo, \{\n\s*heti: heti \|\| this\.reducedMotion, liuku: !this\.kaynnissa, askel, suunta,\n\s*\}\)/);
   // Käyvä kello antaa mittarille murto-osavuoden joka kehyksellä.
   assert.match(MOOTTORI, /this\.tila = tila;\n\s*this\.naytaVuosi\(tila\.vuosi\);/);
   // Lamput ovat napautettavia (omistaja 3.9.2026) ja paneeli raahattava.
@@ -837,7 +839,7 @@ test('havainnekuvapaneelin ristihäivytyksessä on liikettä ja korkeus liukuu',
   // Ristihäivytys ajetaan linssin omalla kaarella, ei selaimen ease-oletuksella.
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu \{[\s\S]*?opacity var\(--aikajana-kesto\) var\(--aikajana-kaari\),\s*transform var\(--aikajana-kesto\) var\(--aikajana-kaari\);/);
   // Korkeus liukuu, mutta raahaus ei saa liukua perässä.
-  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio \{ transition: height var\(--aikajana-kesto\) var\(--aikajana-kaari\), width 180ms var\(--aikajana-kaari\); \}/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio \{\s*transition:\s*height var\(--aikajana-kesto\) var\(--aikajana-kaari\),\s*width 180ms var\(--aikajana-kaari\),/);
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio\.raahataan, \.aikajana-ilmio\.nipistetaan \{ transition: none; \}/);
 });
 
@@ -1042,16 +1044,20 @@ test('sumea muotokuva vaihtuu terävään vasta kortin ollessa täysikokoinen', 
  * etäisyydelle.
  */
 
-test('lähikuva on omistajan mitta: mitattu 1 530 km ruudun leveydellä', () => {
+test('lähikuva on omistajan mitta: mitattu 1 525 km ruudun leveydellä', () => {
   /*
-   * LUKU ON MITATTU SELAIMESSA, EI LASKETTU KAAVASTA. korkeusLeveydesta
-   * on tasokuvan kaava pystysuunnan avauskulmalla, joten ruudulla
-   * näkyvä vaakakaista on noin 1,8-kertainen pyydettyyn nähden
-   * (mitattu Chromiumilla 1400 × 900: 240 → 1 406 km, 260 → 1 530 km,
-   * 300 → 1 782 km). Vartija pitää mitatun luvun paikallaan: jos
-   * kaavaa tai avauskulmaa muutetaan, mittaus on tehtävä uudestaan.
+   * LUKU ON MITATTU SELAIMESSA, EI LASKETTU KAAVASTA. Ensimmäinen mitta
+   * oli 260, koska korkeusLeveydesta asetti pyydetyn leveyden ruudun
+   * KORKEUDELLE (fov on pystykulma) ja vaakakaista oli työpöydällä
+   * 1,7-kertainen. Kaava sai kuvasuhteen 5.9.2026 yöllä
+   * (js/pallolauta/kamera.js), ja luku kalibroitiin uudelleen niin, että
+   * RUUDULLA NÄKYVÄ KAISTA ON SAMA KUIN ENNEN: mitattu Chromiumilla
+   * 1400 × 900 korjauksen jälkeen 260 → 898 km, 400 → 1 403 km,
+   * 434 → n. 1 525 km, 450 → 1 588 km. Vartija pitää mitatun luvun
+   * paikallaan: jos kaavaa tai avauskulmaa muutetaan, mittaus on tehtävä
+   * uudestaan.
    */
-  assert.equal(AIKAJANAN_LAHIKUVA_LEVEYS, 260);
+  assert.equal(AIKAJANAN_LAHIKUVA_LEVEYS, 434);
   // Ei koskaan laattojen tarkkuusrajan alle (js/pallolauta/kamera.js
   // PALLOLAUDAN_SIIRTOLEVEYS = 120 on lähin sallittu näkymä).
   assert.ok(AIKAJANAN_LAHIKUVA_LEVEYS > PALLOLAUDAN_SIIRTOLEVEYS, 'lähikuva menee laattojen tarkkuuden alle');
@@ -1059,7 +1065,7 @@ test('lähikuva on omistajan mitta: mitattu 1 530 km ruudun leveydellä', () => 
   assert.ok(AIKAJANAN_LAHIKUVA_LEVEYS < 1200, 'lähikuva ei ole lähikuva');
   // Pyydetty kaista asteina — sama luku kuin toteutusmerkinnässä.
   const asteet = (AIKAJANAN_LAHIKUVA_LEVEYS / 12000) * 360;
-  assert.ok(Math.abs(asteet - 7.8) < 0.1, `pyydetty kaista ${asteet}°`);
+  assert.ok(Math.abs(asteet - 13) < 0.2, `pyydetty kaista ${asteet}°`);
 });
 
 test('kameran ennakko on 40 % pysäkin kestosta ja jälkijättö sen päälle', () => {
@@ -1096,7 +1102,11 @@ test('kameran pehmennys lähtee ja pysähtyy nollanopeudella', () => {
 
 test('kamera seuraa pysäkkejä vain pallolla ja ajo alkaa lähikuvasta', () => {
   assert.match(metodi('ajaPysakille'), /if \(!this\.pallolla \|\| !t \|\| !kamera\?\.ajaKamera\) return Promise\.resolve\(false\);/);
-  assert.match(metodi('ajaPysakille'), /leveys: AIKAJANAN_LAHIKUVA_LEVEYS,/);
+  // Leveys tulee kaaren omasta mitasta (5.9.2026): ilman `lahikuva`-kenttää
+  // se on AIKAJANAN_LAHIKUVA_LEVEYS, eli keksinnöillä entinen vakio.
+  assert.match(metodi('ajaPysakille'), /leveys: this\.pysakinLeveys\(i\),/);
+  assert.match(metodi('pysakinLeveys'), /return this\.lahikuva;/);
+  assert.match(MOOTTORI, /this\.lahikuva = kaari\.lahikuva \?\? AIKAJANAN_LAHIKUVA_LEVEYS;/);
   assert.match(metodi('ajaPysakille'), /pehmennys: aikajananKameranPehmennys/);
   assert.match(metodi('sovitaAlkuun'), /if \(this\.pallolla\) \{[\s\S]{0,300}return this\.ajaPysakille\(i, kesto\);/);
   assert.match(metodi('sovitaAlkuun'), /return this\.sovitaKaareen\(kesto\);/);
@@ -1204,7 +1214,8 @@ test('yläpalkki on vuosinumeroiden korkuinen: kosketuskorkeus purettu, napit ke
   const ylarivi = AIKAJANA_CSS.match(/\.aikajana-ylarivi \{[\s\S]*?\n\}/)[0];
   const pysty = ylarivi.match(/padding: ([\d.]+)rem/);
   assert.ok(pysty && Number(pysty[1]) <= 0.16, `ylärivin pystypehmuste ${pysty?.[1]}rem on liian iso`);
-  assert.match(AIKAJANA_CSS, /\.aikajana-ylarivi \{ gap: [\d.]+rem; padding: 0\.15rem/);
+  // Kapean ruudun sääntö on nyt monirivinen (palkki keskitetään takaisin).
+  assert.match(AIKAJANA_CSS, /\.aikajana-ylarivi \{\s*gap: [\d.]+rem;\s*padding: 0\.15rem/);
   // Kaksi otsikkoriviä eivät saa nostaa palkkia kellon yli.
   assert.match(AIKAJANA_CSS, /\.aikajana-otsikko \{[\s\S]*?line-height: 1\.1;/);
   assert.match(AIKAJANA_CSS, /\.aikajana-paikka \{[\s\S]*?line-height: 1\.15;/);
@@ -1346,7 +1357,7 @@ test('avausjakso vaientaa selostajan ja omii näppäimistön', () => {
 test('1873 pysäyttää kellon ja avaa laatikon vain elävässä ajossa', () => {
   const sytyta = metodi('sytyta');
   // Syttyminen on ainoa ovi: pysäytetty kelaus (siirry) ei avaa mitään.
-  assert.match(sytyta, /if \(!this\.avaaValinaytos\(t\)\) \{\s*\n\s*soitaLinssiluenta\(this\.ui, t\);\s*\n\s*this\.luennanAlku = performance\.now\(\);/);
+  assert.match(sytyta, /if \(!this\.avaaValinaytos\(t\)\) \{\s*\n\s*soitaLinssiluenta\(this\.ui, t, \{ juuri: this\.luentajuuri \}\);\s*\n\s*this\.luennanAlku = performance\.now\(\);/);
   const siirry = metodi('siirry');
   assert.ok(!siirry.includes('alinaytos'), 'siirry ei saa koskea välinäytökseen');
 
@@ -1398,7 +1409,7 @@ test('Jatka-nappi vie kuplat, laatikon ja käynnistää kellon', () => {
 test('kertoja lukee ensin, pulu kommentoi vasta sen jälkeen', () => {
   const puhe = metodi('aloitaValinaytoksenPuhe');
   // Oma runko: valinaytos-<vuosi>, ei pysäkin kolmen sanan riviä.
-  assert.match(puhe, /soitaLinssiluenta\(this\.ui, t, \{ runko: valinaytoksenRunko\(t\) \}\)/);
+  assert.match(puhe, /soitaLinssiluenta\(this\.ui, t, \{ runko: valinaytoksenRunko\(t\), juuri: this\.luentajuuri \}\)/);
   // Kuplat luennan päätyttyä; puuttuva tai kytkimetön luenta viiveellä.
   assert.match(puhe, /luenta\.addEventListener\('ended', kuplat, \{ once: true \}\);/);
   assert.match(puhe, /luenta\.addEventListener\('error', viiveella, \{ once: true \}\);/);
@@ -1408,7 +1419,7 @@ test('kertoja lukee ensin, pulu kommentoi vasta sen jälkeen', () => {
   // Sulkeutunut laatikko ei enää päästä kuplaa ruudulle.
   assert.match(puhe, /if \(!this\.valinaytos\?\.isConnected\) return;/);
   // Esittely luetaan laatikon auetessa, ja Käynnistä katkaisee sen.
-  assert.match(metodi('avaaAvausjakso'), /soitaLinssiluenta\(this\.ui, null, \{ runko: ESITTELYN_RUNKO \}\)/);
+  assert.match(metodi('avaaAvausjakso'), /soitaLinssiluenta\(this\.ui, null, \{ runko: ESITTELYN_RUNKO, juuri: this\.luentajuuri \}\)/);
   assert.match(metodi('aloitaAjo'), /pysaytaLinssiluenta\(this\.ui\);/);
 });
 

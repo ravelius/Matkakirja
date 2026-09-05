@@ -73,6 +73,19 @@ export const LIVIA_AVAUS_TALLE = 'matkakirja-livia-avaus';
 
 /** Hengähdys kartan avautumisen ja ensimmäisen kuplan välissä. */
 const AVAUKSEN_VIIVE = 900;
+/*
+ * KUPLAT TULEVAT PUOLITOISTA SEKUNTIA MYÖHEMMIN (omistaja 5.9.2026 klo
+ * 00.30 työpöytäselaimesta, sanatarkasti: *"pulun kommentit noin 1,5 sek
+ * myöhemmin"*). Lisäviive tulee VAIN ENSIMMÄISEN kuplan eteen: kuplien
+ * keskinäinen rytmi (KUPLIEN_VALI, lukuaika) on ennallaan, joten sarja
+ * kuulostaa samalta — se vain alkaa, kun pallo on jo asettunut
+ * valintanäkymään ja pelaaja ehtinyt katsoa karttaa.
+ *
+ * REDUCED MOTION: ei lisäviivettä. Odottaminen on osa liikkeen
+ * koreografiaa (pallon asettuminen ja hidas pyörintä), ja liikkeetön
+ * ruutu vain seisoisi tyhjänä pidempään.
+ */
+export const LIVIAN_AVAUKSEN_VIIVE_MS = 1500;
 
 /** Tauko kuplien välissä: uusi repliikki saa oman ilmestymisensä. */
 const KUPLIEN_VALI = 280;
@@ -131,7 +144,8 @@ export function naytaLivianAvaus(ui) {
   if (avausKesken || livianAvausNahty()) return false;
   avausKesken = true;
   clearTimeout(avausAjastin);
-  avausAjastin = setTimeout(() => naytaRepliikki(ui, 0), AVAUKSEN_VIIVE);
+  const viive = AVAUKSEN_VIIVE + (ui.reducedMotion ? 0 : LIVIAN_AVAUKSEN_VIIVE_MS);
+  avausAjastin = setTimeout(() => naytaRepliikki(ui, 0), viive);
   return true;
 }
 

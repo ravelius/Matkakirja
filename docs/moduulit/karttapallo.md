@@ -1542,3 +1542,326 @@ kohdalla). Kaappaukset Chromiumilla 1400 × 900, 2000 × 1300 ja
 AVOIN: kuvat jäivät pois etusivulta, mutta pakka on olemassa ja
 maksettu — sille on löydettävä uusi paikka (albumi tai lentokohtaus),
 tai 27 vedosta jää käyttämättä.
+**Aloitusnäkymä lähemmäs, hidas pyörintä ja Livian viive — sekä
+kameran kuvasuhdekorjaus (5.9.2026 klo 00.30).** Omistaja katsoi
+lähtökaupungin valintaa työpöytäselaimella (2000 × 1300) ja pyysi
+kolme asiaa, sanatarkasti:
+
+> *"kartan zoom taso heti aloituksessa lähemmäksi. ks. 2 kuva.
+> karttapallo saisi pyöriä hitaast täydessä terävyydessä. pulun
+> kommentit noin 1,5 sek myöhemmin"*
+
+1. **KAMERAN KAAVA SAI KUVASUHTEEN — juurisyy zoomiin.** `PALLO_FOV`
+   (50°) on Globe.gl:n PYSTYSUUNNAN avauskulma, mutta
+   `korkeusLeveydesta` muutti pyydetyn LEVEYDEN korkeudeksi ilman
+   kuvasuhdetta: sama pyyntö näytti työpöydällä (1379 × 826)
+   1,67-kertaisen ja puhelimella (374 × 777) 0,48-kertaisen kaistan
+   pyydettyyn nähden, ja `kameranKohde`n bbox-haara laski
+   korkeusehdon (`bbox.h · vara · W/H`) siis täsmälleen väärinpäin.
+   Korjaus: `korkeusLeveydesta`, `leveysKorkeudesta` ja `lahinKorkeus`
+   saivat `kuvasuhde`-parametrin (oletus 1 = neliöruutu, jolloin
+   yksikkötestit ja apufunktiot säilyivät ennallaan), ja
+   `luoPallokamera` antaa aina kotelon oman suhteen — kutsuttaessa,
+   koska ruutu kääntyy. Nyt `leveys` tarkoittaa lautayksiköitä RUUDUN
+   LEVEYDELLÄ jokaisella laitteella, ja bbox mahtuu molempiin suuntiin.
+   *Mitattu Chromiumilla (swiftshader, r2.dev Noden fetchillä; ruudun
+   laitojen pisteet `toGlobeCoords`illa asteiksi ja väli isoympyränä,
+   sama tapa kuin aikajanan lähikuvassa):* sama pyyntö (260 yksikköä)
+   antoi ennen 1 530 km (1400 × 900) ja 430 km (390 × 844), nyt
+   898 km ja 872 km — eli kaikki laitteet näyttävät saman kaistan.
+   - **Aikajanan lähikuva kalibroitiin uudelleen samaksi kuvaksi:**
+     `AIKAJANAN_LAHIKUVA_LEVEYS` **260 → 434**, mitattu 1400 × 900:
+     260 → 898 km, 400 → 1 403 km, **434 → n. 1 525 km**, 450 →
+     1 588 km. Omistajan mitta (*"Irlannista Tanskaan ≈ 1 500 km"*)
+     pysyy siis pikselilleen entisenä työpöydällä — ja puhelin näyttää
+     nyt saman 1 450 km:n kaistan entisen 430 km:n sijaan, eli luvun 5c
+     AVOIN-kohta ratkesi tässä.
+   - **Avauslento:** `AVAUSLENNON_RAJAUKSEN_MARGINAALI` jätettiin
+     ennalleen (0,2) TIETOISESTI, ja mitattu rajaus muuttui:
+     1400 × 900 8 990 → **5 390 km**, 390 × 844 1 870 → **3 890 km**.
+     Syy: vanha luku oli sama kaava väärinpäin, eikä sitä voi palauttaa
+     molemmille laitteille yhtä aikaa — työpöydällä kuva oli
+     kaksinkertaisesti kaukana siitä, mitä omistaja pyysi (*"näkymä
+     saisi olla zoomautunut hieman lähemmäs"*, 5.9. klo 23.10), ja
+     puhelimella laatikko EI mahtunut leveyssuunnassa (siksi Ateena jäi
+     11 px kotelon ulkopuolelle ja rajausta piti siirtää lännemmäs).
+     Nyt kone ja molemmat päät ovat kuvassa kummallakin (mitattu
+     1400 × 900: Lontoo x 487, Ateena x 1 069 / 1 379; 390 × 844:
+     x 122 ja x 312 / 374). Jos omistaja haluaa vanhan kaukaisemman
+     kuvan takaisin, se on yksi luku (0,2 → 0,67 antaa entisen
+     työpöytärajauksen).
+   - **Saapumis- ja siirtonäkymä (240 ja 120 yksikköä) jätettiin
+     ennalleen**, koska niiden omat kommentit puhuvat asteista
+     (*"~7°"*, *"~3,6°"*) — ja vasta nyt ne pitävät paikkansa.
+     Mitattu vaikutus: saapuminen työpöydällä 1 345 → 840 km (lähemmäs,
+     omistajan toivomaan suuntaan) ja puhelimella 370 → 840 km
+     (kauemmas, mutta terävämpi: laatat eivät ole enää 1,9× venytettyjä
+     vaan alle 1×). Sama koskee tavallisen lennon rajausta
+     (`LENNON_RAJAUKSEN_MARGINAALI` 0,35). Jos jokin näistä halutaan
+     toisin, kukin on yksi rivi.
+2. **ALOITUKSEN RAJAUS.** `ALOITUSVALINNAN_MARGINAALI` **0,8 → 0,12**
+   (js/pallolauta/lauta.js). Vanha luku oli reilu juuri siksi, että
+   kaava veti kuvan kauas; korjatulla kaavalla valinta on nyt lennon
+   rajausta (0,35) TIUKEMPI. Kuplavara muuttui samalla osuudesta
+   PIKSELEIKSI (`ALOITUSVALINNAN_KUPLAVARA_PX` = 190 ja
+   `ALOITUSVALINNAN_KUPLALEVEYS_PX` = 336, ennen 0,34 ruudun
+   korkeudesta): Livian kuplapino on tekstiä, ja se mitattiin
+   336 × 129 px:ksi 2000 × 1300:ssa mutta 336 × 180 px:ksi
+   390 × 844:ssä — osuutena vara söi työpöydällä juuri sen zoomin, jota
+   omistaja pyysi. Siirto on VINO, koska kuplat ovat NURKASSA: sisältö
+   nousee ja siirtyy vasemmalle puolella kuplakaistasta, kumpaankin
+   suuntaan enintään neljänneksen laatikon ja reunan välistä
+   (`Math.min(kuplavara, (näkyvä − laatikko) / 4)`). Ensimmäinen mitta
+   ilman vaakasiirtoa jätti Ateenan nimen 1400 × 900:ssa kuplapinon
+   reunan alle (mitattu: merkki x 1 029, kuplat x ≥ 1 047); vaakasiirto
+   (90 yksikköä ≈ 107 px) vie sen selvästi sivuun, ja puhelimella siirto
+   on itsestään ~0, koska siellä laatikon leveys sitoo rajauksen.
+   *Mitattu ruudun leveys (km) valintanäkymässä ennen → jälkeen:*
+   2000 × 1300 **13 143 → 4 375**, 1400 × 900 **13 512 → 4 592**,
+   390 × 844 **3 453 → 3 419**. Puhelin ei siis muuttunut (siellä
+   laatikon leveys sitoo), työpöytä lähentyi kolminkertaisesti:
+   Irlanti on ylävasemmalla, Pohjois-Afrikan rannikko alalaidassa ja
+   Lontoo–Ateena-pari täyttää ruudun kuten omistajan kuvassa 2.
+3. **PALLO PYÖRII HITAASTI TÄYDESSÄ TERÄVYYDESSÄ.**
+   `ALOITUKSEN_PYORINTA_AST_S` = **0,4 °/s** itään (täysi kierros
+   15 min) ja `ALOITUKSEN_PYSAYTYS_MS` = 900. Pyörintä on OMA
+   rAF-silmukkansa eikä kamera-ajo: ajo on matka pisteestä toiseen,
+   tämä on tasainen liuku, joka lukee ja kirjoittaa `pointOfView`n
+   kehys kerrallaan SEINÄKELLOSTA (dt katkaistaan 100 ms:iin, jottei
+   taustavälilehdestä palaava ruutu hypäytä palloa). Koska nykyinen
+   kohta luetaan joka kehyksellä, pelaajan oma veto ja nipistys jäävät
+   voimaan. Kolme pysäytintä: sormi tai rulla koteloon → PEHMEÄ
+   hidastus (`pyorinnanPehmennys`, sama smootherstep kuin avauslennon
+   pyörinnässä, ei nykäisyä); toinen kamera-ajo omistaa kuvan → seis
+   samassa kehyksessä; vaihe vaihtuu tai lauta menee piiloon → seis ja
+   pakotus pois. Terävä tila on pakotettuna koko valinnan ajan
+   (`pakotaPallonLaatu(true)` jo ennen kamera-ajoa, `false` kun
+   kaupunki on valittu, lauta piilotetaan tai puretaan) — sama vipu
+   kuin aikajana-ajossa (v1603), joten laattataso ei putoa liikkeessä.
+   Reduced motion: ei pyörintää. Merkit ja nimet ovat kirjaston
+   CSS2D-pisteitä ja seuraavat pintaa itsestään, ja osuma lasketaan
+   napautuksen hetkellä ruudulta (R-malli), joten pyörivä pallo on yhtä
+   napautettava kuin paikallaan oleva. *Mitattu Chromiumilla
+   1400 × 900:* pyörii true, `pallonLaatuPakotettu()` true, lng
+   12,29 → 13,09; sormen jälkeen lng juoksi vielä 0,16° ja pysähtyi
+   (Δ 0,000° seuraavan 3 s aikana); kaupungin valinnan jälkeen pyörii
+   false ja laatupakotus false. (Kontin ohjelmistorasteroijalla kehysväli
+   on 200–300 ms, joten mitattu kulmanopeus on ~0,2 °/s; oikealla
+   laitteella kello antaa täyden 0,4 °/s.)
+4. **LIVIAN KUPLAT 1,5 s MYÖHEMMIN.** `LIVIAN_AVAUKSEN_VIIVE_MS` =
+   1 500 (js/livia.js) lisätään entisen `AVAUKSEN_VIIVE`n (900 ms)
+   päälle VAIN ensimmäisen kuplan eteen: kuplien keskinäinen rytmi
+   (`KUPLIEN_VALI` 280 ms, lukuaika) on ennallaan. Reduced motionissa
+   ei lisäviivettä — odotus on osa liikkeen koreografiaa, ja
+   liikkeetön ruutu vain seisoisi tyhjänä pidempään.
+5. **KAKSI NIMEÄ ATEENAN KOHDALLA — SELVITETTY JA KORJATTU.**
+   Omistajan kuvassa 1 luki päällekkäin harmaa kapiteeli "ATEENA" ja
+   tumma lihavoitu "Ateena". Molemmat olivat pysyviä: edellinen on
+   pallon KARTTANIMIKERROS (js/pallolauta/nimet.js; lähtövalinnassa
+   `vain` = Lontoo + valittavat), jälkimmäinen valittavan kaupungin
+   KOHDEMERKIN oma lappu (js/pallolauta/merkit.js `kohdeElementti`,
+   `.target-nimi` — sama kuin tasokartan kohderenkaassa). Merkin nimi
+   voittaa: se on kehotus toimia, se on lähempänä silmää ja se on sama
+   molemmilla laudoilla. Ladonta rajataan siksi uudella `aloitusNimet()`
+   -joukolla (näkyvät miinus valittavat) — käytännössä Lontooseen — ja
+   PISTE VAIN NIMEN KANSSA -sääntö pysyy ennallaan (`pisteNakyy` lukee
+   yhä koko näkyvää joukkoa, koska kohdemerkki on nimi).
+
+Vartijat: tests/aloitus-pallolla.test.mjs (rajauksen luvut, pyörinnän
+kolme pysäytintä, laatupakotus ja sen vapautus kolmesta paikasta,
+yksi nimi valittavalle, Livian viive), tests/pallolauta.test.mjs
+(kuvasuhde kaavassa ja kameran kaikissa kolmessa suunnassa),
+tests/pallonimet.test.mjs, tests/aikajana.test.mjs ja
+tests/aikajanamerkit.test.mjs (uusi mitattu lähikuva) sekä
+savuke-etusivupallo E9b/E9e/E9f. Ajettu: `node --test tests/*.test.mjs`
+1715 ok / 0 fail, tarkista-kaksoisavaimet, tarkista-niputus,
+tarkista-savukkeet, tarkista-nimiolimitys (0 nimiö nimiön päällä),
+savuke-etusivupallo 37/39, savuke-pallolauta (vartiot 1–6 ja 12–15
+läpi) ja savuke-avauslento `--lauta pallo` (P1–P5, P7 läpi). Kolme
+FAILia ovat VANHOJA ja tulevat samoina origin/mainissa (todennettu
+stashaamalla tämä erä pois 5.9.2026): savuke-etusivupallo E4b ja E4e
+(isoisän kortin kuvateksti ja haaleus), savuke-pallolauta vartio 7
+(linssikartta, vanhentunut jo aallossa 1C) ja savuke-avauslento P6
+(kaupunkilehti ei ehdi auki kontin hitaudessa; pallolaattapyyntöjä
+mainissa 1 870, tässä erässä 1 765 — lähikuva ei siis lisännyt
+laattakuormaa).
+**Elävä liekkivalo, häipyvä havainnekuva ja vasen vuosipalkki (5.9.2026
+klo 00.45–00.50).** Omistaja työpöytäkaappauksesta, sanatarkasti:
+*"havainnekuvan pitää häipyä kun kartan animaatio alkaa. samoin
+valopallo tuli nyt jotenkin liikuen paikoilleen. saisiko valopallosta
+epäsäännöllisemmän ja elävämmän muotoisen ja niin että se sykkisi kuin
+tulen liekki? … valon syttyminenkin voisi olla animoitu niin että se
+hetken hehkuu pienempänä ja sitten laajenee. keskiosa saisi olla
+kirkkaampi ja sitten häipyä pidemmällä matkalla ja pehmeämmin, mutta
+logaritmisesti (tai ainakin melkein) aivan kuin oikea valo. valot
+voisivat myös olla hieman erilaisia keskenään varioiden kirkkautta,
+kokoa, värilämpötilaa ja muotoa. havainnekuvan teksti saisi olla vähän
+pienempi ja ehkä hieman tummempi. pitäisikö vuosiluvun jälkeen olla
+tähtisymboli? joku mikä sopisi tyylillisesti"* — ja klo 00.50:
+*"vuosipalkin voisi yläreinassa siirtää vasempaan laitaan mutta ei ihan
+kiinni."*
+
+- **LIUKUMISEN JUURISYY EI OLLUT LAMPPU VAAN TUMMENNUKSEN REIKÄ.**
+  Mitattu Chromiumilla 1400 × 900 (lamppujen ruutupaikat ja kalvon
+  liukuvärin keskipiste 150 näytettä): jokainen uusi lamppu ILMESTYI
+  täsmälleen ruudun keskelle (700, 478) eikä liikkunut omin voimin —
+  kirjaston html-kerros (globe.gl 2.46.2) tweenaa vain OLEMASSA olevan
+  merkin siirtymän, ja uusi saa paikkansa kerralla
+  (`!t.__currentTargetD ? applyPosition : tween`). Liikkuva valo oli
+  `siirraReika`n 700 ms:n rAF-liuku: kalvon kirkas aukko lipui edellisen
+  lampun kohdalta uuden kohdalle (mitattu (1007, 462) → (689, 410))
+  juuri kun uusi valo syttyi, ja tummalla pallolla se lukee valopallona,
+  joka tulee liikkuen paikoilleen. Nyt reikä siirtyy KERRALLA
+  (`PALLON_REIAN_LIUKU_MS = 0`), ja liike on lampun omassa
+  syttymisessä. Kameran oma jälkijättö (`AIKAJANAN_KAMERAN_JALKIJATTO_MS`
+  750 ms) on ennallaan: se on omistajan aiempi tilaus 5.9. illalta.
+- **VALO ON CANVAS-KERROS: js/aikajana-valo.js (uusi).** SVG-ympyröillä
+  ei voi tehdä kolmea pyydettyä asiaa (epäsäännöllinen reuna, liekin
+  syke, likimain käänteinen neliö), koska `radialGradient` interpoloi
+  pysäkkiensä välit lineaarisesti ja muoto on aina ympyrä. Moottori
+  pyytää moduulilta kolme asiaa — `lamppu(n)`, `tila(n, palaa,
+  nykyinen)`, `pura()` — ja lamppu on div, jonka sisällä on canvas.
+  Profiili on **I(r) = 1 / (1 + (r/r0)²)**, r0 = 0,20 × säde,
+  normalisoituna niin että laidalla arvo on tasan 0 (ei reunaviivaa):
+  kirkas ydin, pitkä pehmeä häntä, ja etäisyyden kaksinkertaistuminen
+  neljännestää intensiteetin (mitattu testissä 1,13× ihanteesta).
+  Profiili maalataan KERRAN valoa kohti offscreen-canvasiin 28
+  gradienttipysäkillä; kehyksessä tehdään kolme `drawImage`-vetoa
+  (häntä, epäsäännöllisen maskin läpi piirretty runko, kirkas ydin).
+  Vakiot: säde 49 px (= entinen kajo, MERKIN_SADE × KAJON_SUHDE),
+  ruutu 128 px, syttymä 300 ms hehku (koko 0,30, kirkkaus 1,35) +
+  900 ms laajeneminen ease-outilla, syke 0,8–1,6 Hz (säde ±7 %,
+  kirkkaus ±9 %, eri vaiheessa) ja muoto 2–4 kulmaharmonista + oma
+  value-noise. Variaatio siemennetään tapahtuman numerosta: kirkkaus
+  ±15 %, koko ±20 %, värilämpötila lämpimästä oranssista (n. 1 800 K)
+  vaaleaan kellertävään (n. 2 700 K), harmoniat. EI KIRJASTOA:
+  arpoja, kohina ja profiili ovat kymmenen riviä omaa koodia.
+- **Suorituskyky mitattu** Chromiumilla (swiftshader, 1400 × 900,
+  kerroksen oma `piirra` 120 kehyksen keskiarvona): **1 palava lamppu
+  0,03–0,05 ms, kaikki 25 palavaa 0,6–1,0 ms kehystä kohti** eli 2–3 %
+  30 fps:n budjetista ohjelmistorasteroijalla. Piirto on kuristettu
+  33 ms:iin (`VALON_PIIRTOVALI_MS`), sammunutta ei piirretä ja
+  kehyskatto on 25. Reduced motion: silmukkaa ei käynnistetä lainkaan,
+  valo on staattinen täysi profiili ja jälki himmenee ilman liukua.
+- **VAIN PALLOLAUTA.** Tasokartan (`?lauta=kartta`) lamput ovat kartan
+  omassa svg:ssä laudan koordinaatistossa ja skaalautuvat zoomin mukana
+  (`paivitaMittakaava`), joten yhteistä kerrosta ei ole; vanha kartta
+  suljetaan aallossa 3B, joten liekki on pallon oma ja kartan lamput
+  jäävät ennalleen. Ilman canvas-tukea (esim. testien tynkäselain)
+  `lamppu()` palauttaa null ja pallolle piirtyy entinen neljän ympyrän
+  SVG-lamppu — linssi ei jää pimeäksi.
+- **Havainnekuva häipyy kameran mukana.** `tarkistaKameraEnnakko`
+  kutsuu `haivytaPaneeli()`n samassa lauseessa, jossa ennakoiva ajo
+  lähtee (n. 1 840 ms ennen syttymistä): paneeli saa luokan `haipyy`
+  (opacity → 0, 600 ms ease, `PANEELIN_ENNAKKOHAIVYTYS_MS`), ja uusi
+  kuva nousee vasta syttymisen ristihäivytyksessä, joka poistaa luokan.
+  Tauko ja Alusta poistavat luokan, jottei paneeli jää näkymättömäksi
+  odottamaan syttymistä, jota ei tule. Mitattu selaimessa: 1 → 0,93
+  (67 ms) → 0,48 (201 ms) → 0,09 (406 ms) → 0 (666 ms).
+- **Havainnekuvan teksti** on 0,85 × entinen (`clamp(0,81rem, 2,04vw,
+  1,15rem)`, mitattu 1400 px:llä 21,6 → 18,4 px) ja sävy pergamentin
+  tummaa kultaa `#d7bd88` entisen lähes valkoisen `#f1e3c2` sijaan.
+  Erotin vuosiluvun jälkeen on PELIN OMA MERKKI ◈ — sama kuin etusivun
+  julisteen hiusviivakoristeessa (index.html `.juliste-viiva`) ja
+  unohdetun aarteen tunnuksena — pisteen `·` tilalla, kultaisena,
+  0,6em ja hieman kohotettuna. Merkki on yhtenä vakiona
+  (`AIKAJANAN_EROTIN`, js/aikajana.js), joten se vaihtuu yhdeltä
+  riviltä; ruudunlukija ohittaa sen (`aria-hidden`).
+- **Vuosipalkki vasempaan laitaan** (`.aikajana-ylarivi`): marginaali on
+  oma muuttujansa `--aikajana-ylarivi-marginaali` (1,25rem), pystysija
+  ennallaan (0,6rem). Mitattu 1400 × 900: palkin vasen laita 20 px
+  linssin reunasta. Puhelimella (`max-width: 640px`, mitattu 390 × 844)
+  palkki on 255 px leveä 374 px:n ruudulla eli lähes ruudun levyinen,
+  joten se jää KESKELLE kuten ennen (vara 59 px molemmin puolin).
+- Vartijat: tests/aikajana-valo.test.mjs (uusi, 19 väitettä: profiilin
+  monotonisuus ja käänteinen neliö, syttymisen vaiheet, sykkeen ja
+  muodon rajat, deterministinen siemenvariaatio, reduced motion,
+  kehysbudjetti, EI SIJAINNIN SIIRTYMÄÄ missään päässä, paneelin
+  häivytys, teksti ja erotin, vuosipalkin laita) sekä päivitetyt
+  tests/aikajana.test.mjs-vartiot. Kaappaukset 1400 × 900 Chromiumilla:
+  syttymisen alku (150 ms, pieni kirkas piste), täysi valo, kuusi eri
+  valoa rinnakkain (koko, kirkkaus ja värilämpötila vaihtelevat) ja
+  havainnekuva häivytyksen keskellä.
+**Aalto 2C — ihmisen matka -linssi: kello ilman vuosilukuja, reittiviiva
+ja hyppykamera (5.9.2026).** Omistajan päätös 5.9.2026: toinen
+aikajanalinssi on nykyihmisen leviäminen Afrikasta koko maapallolle, 20
+pysäkkiä 300 000 vuotta sitten → n. 1300 jaa.
+(`js/linssit/ihmisen-matka.js` + `ihmisen-matka-data.js`). Kaari on
+ensimmäinen, joka ei mahdu keksintölinssin oletuksiin, ja moottori
+(js/aikajana.js) yleistettiin kolmesta kohdasta. JOKAINEN YLEISTYS ON
+KAAREN VALINTA: ilman kenttää käytös on entinen, ja keksintölinssi on
+rivin tarkkuudella ennallaan (tests/aikajana*.test.mjs).
+
+- **Kello ilman vuosilukuja** (`asteikko: 'vuosiaSitten'`). 300 000
+  vuotta keksintöjen tahdilla (1 vuosi = 260 ms) olisi 22 tuntia, joten
+  kellon paikka EI ole vuosiluku vaan pysäkkien koordinaatisto: jokainen
+  väli on `ASTEIKON_VALI` = 10 yksikköä, eli sama reaaliaika kuin
+  keksinnöissä keskimääräisellä välillä (~2,6 s + pysäkin 4,6 s tauko).
+  Näytettävä LUKEMA interpoloidaan välillä LOGARITMISESTI
+  (`vuosiaSittenLukema`, geometrinen keskiarvo): 300 000 → 3 000
+  puolivälissä on 30 000, ei 151 500. Kello pyöristää suuruuden mukaan
+  (`kellonAskel`: 1000 / 100 / 10 / 1), koska pyöristämätön viimeinen
+  rulla pyörisi kymmeniä tuhansia numeroita sekunnissa; rullia on kuusi,
+  niiden välissä on tuhaterotin ja perässä yksikkö ("v. sitten").
+  Etunollat jäävät paikoilleen näkymättöminä (`.vuosi-numero.tyhja`),
+  jotta numeroiden paikat eivät hypi. `asetaMatkamittari` sai kaksi
+  valinnaista lukua — `askel` ja `suunta` — ja `suunta: -1` kääntää
+  mittarin laskevaksi (uusi numero tulee ylhäältä, seuraava luku on
+  pienempi). Pysäkillä näytettävä teksti tulee DATASTA
+  (`ajoitus`: "300 000 vuotta sitten", "n. 1250 jaa."), ja moottorissa
+  on sitä varten yksi apuri (`ajoitus(t) = t.ajoitus ?? t.vuosi`), jota
+  kortti, lamppu, kellorivi, havainnekuvan teksti ja Tiedeliite lukevat.
+- **Reittiviiva** (`reitti: true`). Valot eivät ole erillisiä paikkoja
+  vaan yksi matka: `lauta.linssit.polut(PALLON_OSA, …)` piirtää
+  pysäkkien väliin isoympyrää seuraavan viivan (`reitinPisteet`, yli 2°
+  välit tihennetään), ja lista kasvaa sitä mukaa kuin valot syttyvät
+  (`paivitaReitti(i)`; selailu taaksepäin lyhentää sen, Alusta vie sen
+  pois, kaaren loppu näyttää koko matkan). Viiva on VALOJEN KANSSA
+  SAMASSA OSASSA, joten `pura('aikajana')` vie kummatkin. **Paksuus on
+  3 RUUTUPIKSELIÄ eikä asteita** — sama mitattu havainto kuin
+  avauslennon jäljellä (luku 10.3 yllä): asteina laskettu viiva jää alle
+  pikselin eli näkymättömiin.
+- **Väljempi lähikuva ja hyppykamera** (`lahikuva: 520`,
+  `hyppykamera: true`). Keksinnöissä naapuripysäkit ovat saman maanosan
+  sisällä; tässä ne ovat eri mantereilla, joten perusmitta on
+  kaksinkertainen (2 × 260). Valtameren ylityksessä (Beringia, Sahul,
+  Lapita, Aotearoa) kameran leveys lasketaan EDELLISEN pysäkin
+  etäisyydestä isoympyränä (`pysakinLeveys` → `pysakinLahikuva`, kerroin
+  2,2, katto 3600 yksikköä), jolloin lähtöranta ja reittiviiva ovat yhä
+  kuvassa. Dataan ei tarvitse merkitä, mikä väli on merimatka. Kameran
+  ennakko, jälkijättö ja pehmennys ovat entiset (v1603).
+- **Kuvat.** Kortilla on LÖYTÖ (`esine`: kallo, kivityökalu,
+  kalastuskoukku) eikä muotokuvaa — 300 000 vuoden takaa ei ole kasvoja
+  — ja havainnekuva (`kuva`) on oikean laidan paneelissa kuten ennen.
+  Muunnos moottorin kentiksi on linssin oma puhdas funktio
+  (`ihmisenMatkanPysakit`), joten moottori ei tunne kumpaakaan kaarta.
+  Kuvaputken kuvat ovat 1536 × 1024 ja niissä on noin 20 %
+  ympäristövaraa reunamaskia varten, joten kaari pyytää
+  `kuvasovitus: 'contain'` (cover-rajaus leikkaisi varan pois ennen
+  maskia). Havainnekuvan alla on iso rivi = otsikko ja pieni rivi =
+  kuvaputken oma `kuvateksti` ("Omo Kibish, noin 300 000 vuotta
+  sitten"), joka sisältää jo ajoituksen; ilman kuvatekstiä muoto on
+  entinen "ajoitus · otsikko".
+- **Ääni.** Oma musiikkilaji `ihmisen-matka` (js/siirtymamusiikki.js
+  RAIDAT, ryhmä `linssi`, voima 0,11 kuten keksinnöillä; prompti
+  tools/generoi-siirtymamusiikki.mjs LAJIT: syvä ja hidas, rumpu kuin
+  sydämen syke ja sanaton kaukainen ihmisääni, 50 s looppi). Raita
+  generoidaan erikseen — puuttuva tiedosto on hiljainen eikä riko ajoa.
+  Kaari sai myös oman LUENTAKANSIONSA (`luentajuuri`,
+  js/linssipuhe.js `soitaLinssiluenta({ juuri })`); ilman sitä ajo olisi
+  soittanut keksintökaaren luennat.
+- **Vartijat:** tests/ihmisen-matka.test.mjs (uusi: linssisopimus,
+  asteikko, logaritminen interpolointi, laskeva mittari, reittiviiva,
+  kamerarajat, kortin ja havainnekuvan tekstit, musiikkilaji, SHELL) ja
+  päivitetyt tests/aikajana.test.mjs, tests/linssipuhe.test.mjs,
+  tests/linssimusiikki.test.mjs, tests/siirtymaraidat.test.mjs,
+  tests/musiikkilehti.test.mjs. Ajettu: `node --test tests/*.test.mjs`
+  1729 ok / 0 fail, tarkista-kaksoisavaimet, -niputus, -savukkeet,
+  -nimiolimitys, build-standalone. Selaimessa varmistettu Chromiumilla
+  1400 × 900 (swiftshader): avausjakso ja Käynnistä, kello "286 000 v.
+  sitten" rullaa, kellorivi "300 000 vuotta sitten · Omo Kibish",
+  havainnekuva contain-sovituksella ja kuvateksti sen alla, lamppu
+  syttyy, reittiviiva kasvaa (0 → 1 pätkää) ja kamera nousee
+  valtameren ylityksessä (altitude 0,13 → 2,02). AINEISTO ON TYNKÄ:
+  js/linssit/ihmisen-matka-data.js sisältää kolme pysäkkiä, ja
+  sisältöagentti korvaa sen 20 pysäkillä samaa rajapintaa vasten.

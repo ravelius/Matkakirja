@@ -64,7 +64,7 @@
 
 import {
   LAATU_LEPOVIIVE_MS, PALLO_LAATTATASO_MAX, PALLO_LAUTA, asennaPallonEleet, esilataaPallolaatat,
-  laatatSaatavilla, laattatasoMax, lataaPallokirjasto,
+  laatatSaatavilla, laattatasoMax, lataaPallokirjasto, pakotaPallonLaatu,
   pallonKaupungit, pallonNostoOnPoltettu, rakennaPallo, webglTuettu,
 } from '../pallo.js';
 import { asemoiFokuskohde } from '../fokuskohteet.js';
@@ -87,7 +87,7 @@ import {
 import { luoLinssikartta } from './linssikartta.js';
 import { luoLinssit } from './linssit.js';
 import { luoNappulanKuljettaja } from './siirto.js';
-import { luoAloituslennonKohtaus } from './avaus.js';
+import { luoAloituslennonKohtaus, pyorinnanPehmennys } from './avaus.js';
 
 /**
  * Sallitut Globe.gl-kerrokset pallolaudalla (vaihe 3): pisteet
@@ -117,11 +117,49 @@ export const MERKKIEN_SIIRTYMA_MS = 250;
 export const NAPAUTUKSEN_SADE_PX = 44;
 /**
  * LÄHTÖVALINNAN NÄKYMÄ (aalto 3A, ks. aloitusnakyma alempana):
- * marginaali laatikon ympärille ja ruudun alalaitaan jätettävä osuus,
+ * marginaali laatikon ympärille ja ruudun alalaitaan jätettävä kaista,
  * jottei Livian kuplapino peitä valittavia kaupunkeja.
+ *
+ * MARGINAALI 0,8 → 0,12 (omistaja 5.9.2026 klo 00.30 työpöytäselaimesta
+ * 2000 × 1300, sanatarkasti: *"kartan zoom taso heti aloituksessa
+ * lähemmäksi"*). Kaksi syytä samaan lukuun: kameran kaava sai
+ * kuvasuhteen (js/pallolauta/kamera.js), joten pyydetty leveys on nyt
+ * ruudun leveys eikä 1,6-kertainen kaista, ja tilalle jäävä marginaali
+ * mitoitettiin omistajan kuvan mukaan — Lontoo–Ateena-pari ja koko
+ * Eurooppa Irlannista Mustallemerelle täyttävät ruudun (mitattu
+ * Chromiumilla 4 377 km ruudun leveydellä 2000 × 1300, ennen 13 143 km;
+ * 1400 × 900 4 592 km ja 390 × 844 3 418 km).
  */
-export const ALOITUSVALINNAN_MARGINAALI = 0.8;
-export const ALOITUSVALINNAN_KUPLAVARA = 0.34;
+export const ALOITUSVALINNAN_MARGINAALI = 0.12;
+/**
+ * KUPLAVARA ON PIKSELEITÄ, EI OSUUS RUUDUSTA. Livian kuplapino on
+ * TEKSTIÄ ruudun oikeassa alanurkassa: mitattuna kolme kuplaa vievät
+ * 336 × 129 px (2000 × 1300) ja 336 × 180 px (390 × 844) riippumatta
+ * ruudun koosta, joten osuutena (ennen 0,34 ruudun korkeudesta) vara
+ * oli työpöydällä moninkertainen tarpeeseen nähden ja söi juuri sen
+ * zoomin, jota omistaja pyysi.
+ *
+ * SIIRTO ON VINO, koska kuplat ovat NURKASSA: sisältö nousee ja siirtyy
+ * vasemmalle puolella kuplakaistasta — kumpaankin suuntaan enintään
+ * neljänneksen siitä ilmasta, joka laatikon ja ruudun reunan väliin jää
+ * (muuten Lontoo nousisi yläreunan yli tai valuisi vasemmalle ulos).
+ * Puhelimella vaakasiirto jää siksi itsestään nollaan: siellä laatikon
+ * leveys sitoo rajauksen eikä ilmaa ole.
+ */
+export const ALOITUSVALINNAN_KUPLAVARA_PX = 190;
+export const ALOITUSVALINNAN_KUPLALEVEYS_PX = 336;
+/**
+ * PALLO PYÖRII HITAASTI VALINTANÄKYMÄSSÄ (omistaja 5.9.2026 klo 00.30:
+ * *"karttapallo saisi pyöriä hitaast täydessä terävyydessä"*). Kamera
+ * liukuu itään tämän verran sekunnissa — 0,4°/s eli täysi kierros noin
+ * 15 minuutissa: liike näkyy, mutta kartta pysyy luettavana eikä valinta
+ * karkaa. Terävä tila (js/pallo.js pakotaPallonLaatu) on pakotettuna
+ * päällä koko valinnan ajan, joten laatat eivät pudota tasoa liikkeessä.
+ * Reduced motion: ei pyörintää.
+ */
+export const ALOITUKSEN_PYORINTA_AST_S = 0.4;
+/** Pysähtymisen kesto (ms), kun pelaaja koskee palloon: pehmeä ease-out. */
+export const ALOITUKSEN_PYSAYTYS_MS = 900;
 /**
  * CSS2D-elementtejä pallolla enintään (karttapallo.md luku 6: nimet 40,
  * kohteet 12, elävät nostot 40 → priorisoidaan). Pelin merkit ja nostot
@@ -564,23 +602,47 @@ export async function avaaPallolauta(ui) {
     if (!k) return null;
     return { key: `aloitus:${city.id}`, x: k.x, y: k.y, city };
   }).filter(Boolean);
+  /*
+   * VALITTAVAN KAUPUNGIN NIMI TULEE MERKISTÄ, EI NIMIKERROKSESTA
+   * (omistajan kaappaus 5.9.2026 klo 00.30: Ateenan kohdalla luki KAKSI
+   * nimeä päällekkäin — harmaa kapiteeli "ATEENA" nimikerroksesta ja
+   * tumma lihavoitu "Ateena" kohdemerkin omasta lapusta). Molemmat ovat
+   * pysyviä: nimikerros latoo lähtövalinnassa Lontoon ja valittavat
+   * (aloitusNakyvat), ja kohdemerkki piirtää nimensä aina
+   * (js/pallolauta/merkit.js kohdeElementti, sama .target-nimi kuin
+   * tasokartan kohderenkaassa). MERKIN NIMI VOITTAA: se on kehotus
+   * toimia, se on lähempänä silmää ja se on sama molemmilla laudoilla —
+   * karttanimi jää siis pois valittavilta kaupungeilta. Lontoo on
+   * lähtöpiste eikä valinta, joten se pitää karttanimensä.
+   */
+  const aloitusNimet = () => {
+    const nakyvat = aloitusNakyvat();
+    if (!nakyvat) return null;
+    const kohteet = new Set(aloitusKohteet().map((k) => k.city.id));
+    if (!kohteet.size) return nakyvat;
+    return new Set([...nakyvat].filter((id) => !kohteet.has(id)));
+  };
   /**
    * VALINTANÄKYMÄN RAJAUS: Lontoo ja valittavat kaupungit samassa
    * laatikossa — pallon vastine tasokartan aloituskartalle.
    *
    * KAMERA TÄHTÄÄ LAATIKON ALAPUOLELLE. Livian avausrepliikit
-   * pinoutuvat ruudun alalaitaan (js/livia.js, js/pollo.js) ja peittävät
-   * mitatusti alimman noin 40 % karttaruudusta. Tasokartalla ne eivät
-   * osu valintaan, koska aloituskartta on Lontoon lähikuva; pallolla
-   * koko Eurooppa mahtuu ruutuun, ja keskitettynä Ateena jäi täsmälleen
-   * kuplapinon alle (mitattu Chromiumilla 390 × 844, kaappaus
-   * 3a-2-valintatila). Siksi keskipiste siirretään etelään: sisältö
-   * nousee ruudulla kuplien yläpuolelle. Omistajan sääntö on sama
-   * molemmilla laudoilla — *"kuplat eivät estä valintaa"* (29.8.2026).
+   * pinoutuvat ruudun alalaitaan (js/livia.js, js/pollo.js), ja
+   * keskitettynä Ateena jäi täsmälleen kuplapinon alle (mitattu
+   * Chromiumilla 390 × 844, kaappaus 3a-2-valintatila). Siksi
+   * keskipiste siirretään etelään: sisältö nousee ruudulla kuplien
+   * yläpuolelle. Omistajan sääntö on sama molemmilla laudoilla —
+   * *"kuplat eivät estä valintaa"* (29.8.2026). Vara on PIKSELEITÄ
+   * (ALOITUSVALINNAN_KUPLAVARA_PX ja -_KUPLALEVEYS_PX), koska kupla on
+   * tekstiä eikä osuus ruudusta, ja siirto on VINO — kuplat ovat
+   * nurkassa, joten sisältö nousee ja siirtyy vasemmalle. Kumpikin
+   * rajataan neljännekseen laatikon ja reunan välistä, jottei Lontoo
+   * nouse yläreunan yli eikä valu vasemmalle ulos.
    *
-   * Marginaali on lennon rajausta reilumpi (0,35 → 0,8): pallon
-   * perspektiivi levittää reunimmaiset pisteet, ja tiukalla laatikolla
-   * Lontoo ja Ateena jäivät ruudun laitoihin puoliksi leikkautuneina.
+   * ZOOM LÄHEMMÄS (omistaja 5.9.2026 klo 00.30, ks.
+   * ALOITUSVALINNAN_MARGINAALI): marginaali on nyt lennon rajausta
+   * tiukempi (0,35 → 0,12) ja kameran kaava tuntee kuvasuhteen, joten
+   * pyydetty leveys on todella se, mikä ruudulla näkyy.
    */
   const aloitusnakyma = ({ kesto = 0 } = {}) => {
     const nakyvat = aloitusNakyvat();
@@ -599,12 +661,110 @@ export async function avaaPallolauta(ui) {
     const vara = 1 + 2 * ALOITUSVALINNAN_MARGINAALI;
     const leveys = Math.max(w * vara, (h * vara * ruutuW) / ruutuH);
     const korkeus = (leveys * ruutuH) / ruutuW;
-    return kamera.ajaKamera({
-      x: x0 + w / 2,
-      y: y0 + h / 2 + (korkeus * ALOITUSVALINNAN_KUPLAVARA) / 2,
-      leveys,
-    }, { kesto });
+    // Kuplavara pikseleistä lautayksiköiksi kumpaankin suuntaan;
+    // enintään neljännes siitä ilmasta, joka laatikon ja reunan väliin
+    // jää. Etelään + itään = sisältö nousee ja siirtyy vasemmalle,
+    // poispäin kuplien nurkasta.
+    const kuplavaraY = (ALOITUSVALINNAN_KUPLAVARA_PX / 2) * (korkeus / ruutuH);
+    const kuplavaraX = (ALOITUSVALINNAN_KUPLALEVEYS_PX / 2) * (leveys / ruutuW);
+    const siirtoY = Math.min(kuplavaraY, Math.max(0, (korkeus - h) / 4));
+    const siirtoX = Math.min(kuplavaraX, Math.max(0, (leveys - w) / 4));
+    // Terävä tila päälle heti: valinnassa pallo pyörii, eikä liike saa
+    // pudottaa laattatasoa (omistaja: *"täydessä terävyydessä"*).
+    pyydaAloituksenLaatu();
+    const ajo = kamera.ajaKamera({ x: x0 + w / 2 + siirtoX, y: y0 + h / 2 + siirtoY, leveys }, { kesto });
+    void ajo.then((valmis) => { if (valmis) aloitaAloituksenPyorinta(); });
+    return ajo;
   };
+
+  /*
+   * ══════════════════════════════════════════════════════════════════
+   * PALLO PYÖRII HITAASTI VALINTANÄKYMÄSSÄ (omistaja 5.9.2026 klo 00.30
+   * työpöytäselaimesta: *"karttapallo saisi pyöriä hitaast täydessä
+   * terävyydessä"*)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * Pyörintä on OMA rAF-silmukkansa eikä kamera-ajo: ajo on matka
+   * pisteestä toiseen (kesto ja pehmennys), tämä on tasainen liuku, joka
+   * jatkuu kunnes valinta tehdään. Kierto luetaan ja kirjoitetaan
+   * pointOfView'lla kehys kerrallaan SEINÄKELLOSTA (astetta sekunnissa),
+   * joten hidas kehysväli ei hidasta pyörintää — ja koska nykyinen kohta
+   * luetaan joka kehyksellä, pelaajan oma veto ja nipistys jäävät
+   * voimaan (kirjaston OrbitControls kirjoittaa saman kameran).
+   *
+   * KOLME PYSÄYTINTÄ. (1) Sormi tai rulla koteloon → PEHMEÄ hidastus
+   * (ALOITUKSEN_PYSAYTYS_MS, sama smootherstep kuin avauslennon
+   * pyörinnässä) — ei nykäisyä. (2) Toinen kamera-ajo omistaa kuvan
+   * (kaupungin napautus, avauslento) → seis heti samassa kehyksessä,
+   * jotta kaksi kirjoittajaa eivät kamppaile. (3) Vaihe vaihtuu tai
+   * lauta menee piiloon → seis ja terävän tilan pakotus pois.
+   *
+   * NAPAUTUS EI KÄRSI: merkit ja nimet ovat kirjaston CSS2D-pisteitä,
+   * jotka seuraavat pintaa itsestään, ja osuma lasketaan napautuksen
+   * hetkellä ruudulta (R-malli), joten pyörivä pallo on yhtä
+   * napautettava kuin paikallaan oleva.
+   */
+  let pyorinta = null;
+  let aloituksenLaatu = false;
+  const pyydaAloituksenLaatu = () => {
+    if (aloituksenLaatu) return;
+    aloituksenLaatu = true;
+    pakotaPallonLaatu(true);
+  };
+  const vapautaAloituksenLaatu = () => {
+    if (!aloituksenLaatu) return;
+    aloituksenLaatu = false;
+    pakotaPallonLaatu(false);
+  };
+  const seisAloituksenPyorinta = () => {
+    if (!pyorinta) return;
+    cancelAnimationFrame(pyorinta.kehys);
+    pyorinta = null;
+  };
+  /** Valinta ohi: pyörintä seis ja terävän tilan pakotus pois. */
+  const paataAloitusvalinta = () => {
+    seisAloituksenPyorinta();
+    vapautaAloituksenLaatu();
+  };
+  /** Pehmeä pysähdys (ease-out) — pelaaja koski palloon. */
+  const hidastaAloituksenPyorinta = () => {
+    if (pyorinta && !pyorinta.hidastus) pyorinta.hidastus = performance.now();
+  };
+  const aloitaAloituksenPyorinta = () => {
+    if (pyorinta || ui.dead || ui.reducedMotion) return false;
+    if (ui.game.phase !== 'pickstart' || kuori.hidden) return false;
+    const oma = { kehys: 0, hidastus: 0, edellinen: performance.now() };
+    pyorinta = oma;
+    const askel = (hetki) => {
+      if (pyorinta !== oma) return;
+      // Kehysväli katkaistaan: taustavälilehdestä palaava ruutu ei saa
+      // hypäyttää palloa sekuntien verran kerralla.
+      const dt = Math.min(100, Math.max(0, hetki - oma.edellinen));
+      oma.edellinen = hetki;
+      if (ui.dead || ui.game.phase !== 'pickstart' || kuori.hidden) { paataAloitusvalinta(); return; }
+      if (kamera.kameraAjossa()) { seisAloituksenPyorinta(); return; }
+      let kerroin = 1;
+      if (oma.hidastus) {
+        const t = Math.min(1, (hetki - oma.hidastus) / ALOITUKSEN_PYSAYTYS_MS);
+        if (t >= 1) { seisAloituksenPyorinta(); return; }
+        kerroin = 1 - pyorinnanPehmennys(t);
+      }
+      const pov = pallo.pointOfView();
+      if (pov) {
+        pallo.pointOfView({
+          lat: pov.lat,
+          lng: pov.lng + ALOITUKSEN_PYORINTA_AST_S * kerroin * (dt / 1000),
+          altitude: pov.altitude,
+        }, 0);
+      }
+      oma.kehys = requestAnimationFrame(askel);
+    };
+    heraa();
+    oma.kehys = requestAnimationFrame(askel);
+    return true;
+  };
+  kotelo.addEventListener('pointerdown', hidastaAloituksenPyorinta);
+  kotelo.addEventListener('wheel', hidastaAloituksenPyorinta, { passive: true, capture: true });
 
   /**
    * Pelin paikka (pos) PALLON laudan koordinaateiksi. Muulloin se on
@@ -873,8 +1033,8 @@ export async function avaaPallolauta(ui) {
       katto: lento ? 0 : Math.min(NOSTOJEN_KATTO, Math.max(0, HTML_MERKKIEN_KATTO - pelia)),
     });
     // Niukka nimijoukko: avauslennolla kaksi päätä, lähtövalinnassa
-    // Lontoo ja valittavat (aalto 3A) — muulloin koko lauta budjetilla.
-    const vain = lento?.nimet ?? aloitusNakyvat();
+    // Lontoo (aalto 3A) — muulloin koko lauta budjetilla.
+    const vain = lento?.nimet ?? aloitusNimet();
     const katto = vain
       ? vain.size
       : Math.min(NIMIEN_KATTO, Math.max(0, HTML_MERKKIEN_KATTO - pelia - nostoTulos.maara));
@@ -934,6 +1094,12 @@ export async function avaaPallolauta(ui) {
    */
   const paivita = () => {
     if (ui.dead) return;
+    /*
+     * LÄHTÖVALINTA OHI (kaupunki valittu): pyörintä ja terävän tilan
+     * pakotus pois myös silloin, kun silmukka oli jo pysähtynyt sormeen
+     * — pakotus on istunnon laskuri eikä saa jäädä päälle.
+     */
+    if (aloituksenLaatu && ui.game.phase !== 'pickstart') paataAloitusvalinta();
     const { game } = ui;
     const kaydyt = game.world?.visited ?? new Set();
     const pos = game.player?.pos ?? null;
@@ -1061,6 +1227,8 @@ export async function avaaPallolauta(ui) {
      * `kotiin`-ajon sijasta, kun peli on vielä pickstart-vaiheessa.
      */
     aloitusnakyma,
+    /** Pyöriikö valintanäkymä juuri nyt (savukkeet ja vartijat). */
+    aloitusvalinnanPyorinta: () => Boolean(pyorinta),
     napautaKaupunki: (id) => napautaKaupunki(kaupunkiId.get(id)),
     napautaKohde: (key) => napautaKohde(merkit.kohteet().find((k) => k.key === key)),
     napautaNosto: (id) => napautaNosto(nostot.osumat().find((o) => o.id === id)),
@@ -1070,6 +1238,10 @@ export async function avaaPallolauta(ui) {
     piilota: () => { kuori.hidden = true; noppaTakaisin(); tahdistaLepo(); },
     pura: () => {
       doc.body.classList.remove('pallolauta-paalla');
+      // Valintanäkymän pyörintä ja terävän tilan pakotus pois ENSIN:
+      // pakotus on istunnon laskuri (js/pallo.js), eikä se saa jäädä
+      // päälle puretun laudan jälkeen.
+      paataAloitusvalinta();
       clearTimeout(lepoAjastin);
       clearTimeout(esilatausAjastin);
       clearTimeout(vakausAjastin);

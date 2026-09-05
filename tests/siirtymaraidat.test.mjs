@@ -155,7 +155,12 @@ test('"kaikki" on vain siirtymäryhmä — linssiraita pyydetään nimeltä', ()
   assert.deepEqual(valitseLajit('kaikki'), ['jalan', 'laiva', 'lento']);
   for (const nimi of valitseLajit('kaikki')) assert.equal(LAJIT[nimi].ryhma, 'siirtyma');
   assert.equal(LAJIT.keksinnot.ryhma, 'linssi');
-  assert.ok(!valitseLajit('kaikki').includes('keksinnot'));
+  // Toinen aikajanalinssi sai oman raitansa 5.9.2026 (ihmisen matka).
+  assert.equal(LAJIT['ihmisen-matka'].ryhma, 'linssi');
+  assert.deepEqual(valitseLajit('ihmisen-matka'), ['ihmisen-matka']);
+  for (const linssiraita of ['keksinnot', 'ihmisen-matka']) {
+    assert.ok(!valitseLajit('kaikki').includes(linssiraita), `${linssiraita} luiskahti "kaikki"-valintaan`);
+  }
 });
 
 test('Lyria-haku tulee yhteisestä moduulista eikä kopiona', () => {
@@ -193,8 +198,9 @@ test('--kuiva ja --ei-vientia luetaan lipuiksi', () => {
 test('työkalu kirjoittaa tasan ne tiedostot, jotka peli hakee', () => {
   // Peli soittaa Lyrian raidat (pääte -lyria, omistaja 5.9.2026): työkalun
   // oletusmoottori kirjoittaa tasan ne nimet.
-  const pelinNimet = [...PELI.matchAll(/aanet\/((?:siirtyma|linssi)-[a-z]+-lyria\.mp3)/g)].map((m) => m[1]);
-  assert.equal(pelinNimet.length, 4, 'peli hakee neljä raitaa ämpärin aanet/-kansiosta');
+  // Lajin nimessä saa olla väliviiva (linssi-ihmisen-matka-lyria.mp3).
+  const pelinNimet = [...PELI.matchAll(/aanet\/((?:siirtyma|linssi)-[a-z-]+-lyria\.mp3)/g)].map((m) => m[1]);
+  assert.equal(pelinNimet.length, 5, 'peli hakee viisi raitaa ämpärin aanet/-kansiosta');
   const tyokalunNimet = Object.values(LAJIT).map((r) => raidanTiedosto(r, tulkitseArgumentit(['--laji', 'kaikki']).moottori));
   assert.deepEqual([...tyokalunNimet].sort(), [...pelinNimet].sort());
   // Siirtymälajit ovat työkalun siirtymäryhmä, samassa järjestyksessä.
@@ -203,16 +209,22 @@ test('työkalu kirjoittaa tasan ne tiedostot, jotka peli hakee', () => {
   assert.deepEqual(valitseLajit('kaikki'), lajit);
   // Peli listaa MUSIIKKILAJIT taulukostaan: samat avaimet kuin työkalulla.
   assert.match(PELI, /export const MUSIIKKILAJIT = Object\.keys\(RAIDAT\)/);
-  const pelinLajit = [...PELI.matchAll(/^ {2}([a-z]+): \{$/gm)].map((m) => m[1]);
+  // Väliviivallinen laji on lainausmerkeissä ('ihmisen-matka': { … }).
+  const pelinLajit = [...PELI.matchAll(/^ {2}'?([a-z-]+)'?: \{$/gm)].map((m) => m[1]);
   assert.deepEqual(pelinLajit.filter((n) => Object.hasOwn(LAJIT, n)), Object.keys(LAJIT));
 });
 
 test('linssiraita on pitkä looppi ja siirtymäraidat lyhyitä', () => {
   /*
-   * Linssin ajo kestää minuutteja ja pysähtyy 25 kertaa: 10–20 s
+   * Linssin ajo kestää minuutteja ja pysähtyy 20–25 kertaa: 10–20 s
    * looppi alkaisi kuulua silmukaksi. Siirtymä taas kestää sekunteja,
    * eikä pidempää looppia ehdittäisi koskaan kuulla.
    */
+  for (const nimi of ['keksinnot', 'ihmisen-matka']) {
+    const linssi = LAJIT[nimi];
+    assert.deepEqual(kestoRajat(linssi), { min: 45, max: 60 }, `${nimi}: kestorajat`);
+    assert.ok(linssi.looppi >= 45 && linssi.looppi <= 60, `${nimi}: looppi ${linssi.looppi} s`);
+  }
   const rajat = kestoRajat(LAJIT.keksinnot);
   assert.deepEqual(rajat, { min: 45, max: 60 });
   assert.ok(LAJIT.keksinnot.looppi >= rajat.min && LAJIT.keksinnot.looppi <= rajat.max);
@@ -258,6 +270,16 @@ test('promptit ovat instrumentaaleja ja kieltävät elektroniikan', () => {
   assert.match(LAJIT.keksinnot.prompt, /clockwork/);
   assert.match(LAJIT.keksinnot.prompt, /heartbeat/);
   assert.match(LAJIT.keksinnot.prompt, /60 beats per minute/);
+  /*
+   * Ihmisen matka (omistaja 5.9.2026): *"syvä, hidas, rumpu kuin
+   * sydämen syke ja kaukainen ihmisääni ilman sanoja, ei melodiaa"*.
+   * Jokainen neljästä on vartioitu, koska prompti on tilaus.
+   */
+  const matka = LAJIT['ihmisen-matka'].prompt;
+  assert.match(matka, /heartbeat/);
+  assert.match(matka, /wordlessly|wordless/);
+  assert.match(matka, /No melody to follow/);
+  assert.match(matka, /deep, slow/);
   assert.match(TYOKALU, /force_instrumental: true/);
 });
 

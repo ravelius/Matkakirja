@@ -442,11 +442,21 @@
  * napit sen sisällä. Kosketusala ei silti katoa — napit ovat leveitä,
  * ja kellon rinnalla on aina Jatka-nappi samaan tarkoitukseen.
  */
+/*
+ * VUOSIPALKKI VASEMPAAN LAITAAN (omistaja 5.9.2026 klo 00.50,
+ * sanatarkasti: *"vuosipalkin voisi yläreinassa siirtää vasempaan
+ * laitaan mutta ei ihan kiinni"*). Marginaali on oma muuttujansa
+ * (--aikajana-ylarivi-marginaali, 1,25rem = sama vara kuin kartan
+ * reunuksella), jotta laita on vaihdettavissa yhdestä paikasta.
+ * Pystysijainti on ennallaan. KAPEALLA RUUDULLA (alle 600 px) palkki
+ * jää keskelle: siellä se on lähes ruudun levyinen, eikä vasen laita
+ * ole enää valinta vaan ainoa paikka — mediakysely alempana.
+ */
 .aikajana-ylarivi {
   position: absolute;
   top: 0.6rem;
-  left: 50%;
-  transform: translateX(-50%);
+  --aikajana-ylarivi-marginaali: 1.25rem;
+  left: var(--aikajana-ylarivi-marginaali);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -456,7 +466,7 @@
   border: 1px solid var(--aikajana-reuna);
   background: var(--aikajana-paperi);
   box-shadow: var(--aikajana-varjo);
-  max-width: calc(100% - 1.2rem);
+  max-width: calc(100% - var(--aikajana-ylarivi-marginaali) - 0.6rem);
 }
 .aikajana-otsikot { display: flex; flex-direction: column; justify-content: center; min-width: 0; }
 .aikajana-otsikko {
@@ -529,6 +539,26 @@
   /* Lepoasento ennen ensimmäistä vuotta: rivi on ikkunan alapuolella. */
   transform: translateY(100%);
   will-change: transform;
+}
+
+/*
+ * ── "VUOTTA SITTEN" -ASTEIKON KELLO (5.9.2026, ihmisen matka) ──────
+ *
+ * Kuusi rullaa, tuhaterotin kolmen välein ja yksikkö perässä:
+ * "300 000 v. sitten". Pienemmässä luvussa etunollat jäävät PAIKOILLEEN
+ * mutta näkymättömiin (js/aikajana.js kellonSelite), jotta numeroiden
+ * paikat eivät hypi rullan vaihtuessa — sama syy kuin taulukon
+ * tasalevyisillä numeroilla.
+ */
+.vuosi-erotin { display: inline-block; width: 0.3em; }
+.vuosi-numero.tyhja, .vuosi-erotin.tyhja { visibility: hidden; }
+.aikajana-kelloyksikko {
+  align-self: flex-end;
+  margin-left: 0.3em;
+  padding-bottom: 0.06em;
+  font-size: 0.5em;
+  letter-spacing: 0.02em;
+  opacity: 0.72;
 }
 
 /*
@@ -616,8 +646,24 @@
  * Raahaus on `transform`-muuttujissa eikä siinä ole siirtymää, joten
  * paneeli seuraa osoitinta yhä kehyksen tarkkuudella.
  */
-.aikajana-ilmio { transition: height var(--aikajana-kesto) var(--aikajana-kaari), width 180ms var(--aikajana-kaari); }
+.aikajana-ilmio {
+  transition:
+    height var(--aikajana-kesto) var(--aikajana-kaari),
+    width 180ms var(--aikajana-kaari),
+    opacity var(--aikajana-ennakkohaivytys, 600ms) ease;
+}
 .aikajana-ilmio.raahataan, .aikajana-ilmio.nipistetaan { transition: none; }
+/*
+ * HAVAINNEKUVA HÄIPYY, KUN KARTAN ANIMAATIO ALKAA (omistaja 5.9.2026
+ * klo 00.45, sanatarkasti: *"havainnekuvan pitää häipyä kun kartan
+ * animaatio alkaa"*). Luokan panee js/aikajana.js haivytaPaneeli sillä
+ * hetkellä, kun kameran ennakoiva ajo lähtee (n. 1 840 ms ennen
+ * seuraavan valon syttymistä), ja poistaa sen uuden sivun myötä.
+ * Koko paneeli häipyy — kuva JA sen alla oleva "vuosi ◈ otsikko" —
+ * koska ne ovat saman ikkunan sisältöä. Kesto on 600 ms
+ * (js/aikajana.js PANEELIN_ENNAKKOHAIVYTYS_MS).
+ */
+.aikajana-ilmio.haipyy { opacity: 0; }
 .aikajana-ilmio-sivu {
   position: absolute;
   inset: 0;
@@ -648,6 +694,15 @@
   overflow: hidden;
 }
 .aikajana-ilmiokuva img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/*
+ * KOKO KUVA NÄKYVIIN (kuvatoimitus 5.9.2026, ihmisen matka): kuvaputken
+ * kuvassa on noin 20 % ympäristövaraa joka reunalla juuri sitä varten,
+ * että pehmeä reunamaski saa syödä sitä — cover-rajaus leikkaisi varan
+ * pois ennen maskia ja veisi ihmisten päät. Kehys on kuvan oma 3:2,
+ * joten contain ei jätä palkkeja.
+ */
+.aikajana-ilmiokuva.kokonaan { aspect-ratio: 3 / 2; }
+.aikajana-ilmiokuva.kokonaan img { object-fit: contain; }
 /* Isoisän cabinet card (merkkipaalu): reunus leikattu, kortti skaalataan täyteen. */
 .aikajana-ilmiokuva img.isoisa-rajattu { transform: scale(var(--rskaala, 1)); transform-origin: 50% 50%; }
 /* Pelkkä kuva (omistaja 3.9.2026): kuva on nappi jutun avaamiseen. */
@@ -718,16 +773,51 @@
   align-items: center;
   gap: 0.15rem;
   text-align: center;
-  color: #f1e3c2;
+  /*
+   * PIENEMPI JA TUMMEMPI (omistaja 5.9.2026 klo 00.45: *"havainnekuvan
+   * teksti saisi olla vähän pienempi ja ehkä hieman tummempi"*).
+   * Sävy on pergamentin tumma kulta (#d7bd88) eikä entinen lähes
+   * valkoinen (#f1e3c2): teksti asettuu kuvan päälle vieraaksi
+   * jäämättä, ja varjot pitävät sen luettavana myös vaalealla kuvalla.
+   */
+  color: #d7bd88;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.8), 0 0 22px rgba(0, 0, 0, 0.6);
   pointer-events: none;
 }
 .aikajana-ilmiokuvateksti-otsikko {
   font-family: var(--font-luku, Georgia, serif);
-  font-size: clamp(0.95rem, 2.4vw, 1.35rem);
+  /* 0,85 x entinen (0,95 → 0,81 rem, 2,4 → 2,04 vw, 1,35 → 1,15 rem). */
+  font-size: clamp(0.81rem, 2.04vw, 1.15rem);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: 0.02em;
+  text-wrap: balance;
+}
+/*
+ * VUOSILUVUN JA OTSIKON EROTIN (omistaja 5.9.2026 klo 00.45:
+ * *"pitäisikö vuosiluvun jälkeen olla tähtisymboli? joku mikä sopisi
+ * tyylillisesti"*). Merkki on pelin oma ◈ — sama kuin etusivun
+ * julisteen hiusviivakoristeessa — ja se tulee yhdestä vakiosta
+ * (js/aikajana.js AIKAJANAN_EROTIN). Kultainen, pieni ja hieman
+ * kohotettu, jotta se lukee koristeena eikä välimerkkinä.
+ */
+.aikajana-erotin {
+  font-size: 0.6em;
+  color: var(--kulta, #d9a13b);
+  vertical-align: 0.18em;
+  letter-spacing: 0;
+  margin: 0 0.5em;
+}
+
+/*
+ * Kuvaputken kuvateksti otsikon alla: pienempi ja hillitympi, koska se
+ * on kuvan selitys eikä pysäkin nimi (js/aikajana.js vaihdaPaneeli).
+ */
+.aikajana-ilmiokuvateksti-kuvateksti {
+  font-family: var(--font-luku, Georgia, serif);
+  font-size: clamp(0.7rem, 1.6vw, 0.86rem);
+  line-height: 1.25;
+  opacity: 0.9;
   text-wrap: balance;
 }
 .aikajana-ilmio-teksti { padding: 0.5rem 0.7rem 0.65rem; }
@@ -1123,8 +1213,18 @@
    * ruudusta: ilmiöpaneeli ja kello jäävät vapaiksi.
    */
   .aikajana { --aikajana-kortti-w: clamp(92px, 25vw, 112px); }
-  /* Kapealla ruudulla palkissa on vain paikkarivi, kello ja napit. */
-  .aikajana-ylarivi { gap: 0.4rem; padding: 0.15rem 0.4rem; }
+  /* Kapealla ruudulla palkissa on vain paikkarivi, kello ja napit —
+     ja palkki on lähes ruudun levyinen, joten se jää KESKELLE kuten
+     ennen (omistaja 5.9.2026: vasen laita on työpöydän asia).
+     Mitattu 390 x 844: vasempaan laitaan siirretty palkki työntyisi
+     oikeasta reunasta yli. */
+  .aikajana-ylarivi {
+    gap: 0.4rem;
+    padding: 0.15rem 0.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100% - 1.2rem);
+  }
   .aikajana-otsikko { display: none; }
   .aikajana-paikka { max-width: 7rem; font-size: 0.78rem; }
   /* Puhelin pystyssä: paneeli reunasta reunaan (omistaja 4.9.2026). */
@@ -1633,6 +1733,23 @@
 .aikajana-valo-pallolla,
 .aikajana-valo-pallolla.palaa { pointer-events: none; cursor: default; }
 .aikajana-valo-pallolla svg { display: block; overflow: visible; }
+/*
+ * ELÄVÄ LIEKKI (js/aikajana-valo.js, omistaja 5.9.2026 klo 00.45:
+ * *"saisiko valopallosta epäsäännöllisemmän ja elävämmän muotoisen ja
+ * niin että se sykkisi kuin tulen liekki?"*).
+ *
+ * Canvasilla EI OLE YHTÄÄN SIIRTYMÄÄ eikä animaatiota: koko liike —
+ * syttymisen hehku, laajeneminen, syke ja muodon kumpuilu — piirretään
+ * moduulissa kehys kerrallaan. Näin valo syttyy täsmälleen siinä
+ * pisteessä, johon kirjasto sen asetti, eikä mikään css-liuku voi
+ * liu'uttaa sitä paikoilleen. Näkyvyyden (pallon takana, purku) hoitaa
+ * yhä .pallolauta-merkki-luokan peittävyys.
+ */
+.aikajana-valo-liekki {
+  display: block;
+  /* mix-blend-mode ei ole tässä: kalvo on merkkien ALLA (kalvoRuudulle
+     `alle`), joten valo hehkuu jo valmiiksi tummennuksen päällä. */
+}
 
 /*
  * PELIN OMAT MERKIT VÄISTYVÄT LINSSIN AJAKSI. Tasokartalla kartan

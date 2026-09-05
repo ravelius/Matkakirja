@@ -176,10 +176,17 @@ export function luennanTiedosto(t) {
   return runko ? `${runko}.mp3` : null;
 }
 
-/** Pysäkin luennan koko osoite ämpärissä. */
-export function luennanOsoite(t) {
+/**
+ * Pysäkin luennan koko osoite ämpärissä.
+ *
+ * `juuri` on KAAREN oma luentakansio: keksinnöillä muotokuvien
+ * sisarkansio (oletus), uudella aikajanalinssillä sen oma kansio
+ * (linssin `aikajana.luentajuuri`). Ilman tätä toisen kaaren ajo
+ * soittaisi keksintöjen luennat.
+ */
+export function luennanOsoite(t, juuri = LINSSILUENTA_JUURI) {
   const nimi = luennanTiedosto(t);
-  return nimi ? `${LINSSILUENTA_JUURI}/${nimi}` : null;
+  return nimi ? `${juuri}/${nimi}` : null;
 }
 
 /** Luennan osat siinä järjestyksessä kuin ne luetaan. */
@@ -294,7 +301,9 @@ export function pysaytaLinssiluenta(ui) {
  * @returns {HTMLAudioElement|null} soittimen kahva, tai null jos
  *   luentaa ei aloitettu
  */
-export function soitaLinssiluenta(ui, t, { viive = LUENNAN_VIIVE_MS, runko = null } = {}) {
+export function soitaLinssiluenta(ui, t, {
+  viive = LUENNAN_VIIVE_MS, runko = null, juuri = LINSSILUENTA_JUURI,
+} = {}) {
   pysaytaLinssiluenta(ui);
   if (!ui || (!t && !runko) || typeof Audio === 'undefined') return null;
   // Kertojan kytkin on yksi ja sama koko pelissä (js/luenta.js).
@@ -302,7 +311,7 @@ export function soitaLinssiluenta(ui, t, { viive = LUENNAN_VIIVE_MS, runko = nul
   // Radiotilassa ei kaksi ääntä päällekkäin — sama ehto kuin
   // matkakirjaluennalla.
   if (ui.radioModuuli && !ui.radioModuuli.luentaSallittu()) return null;
-  const url = runko ? `${LINSSILUENTA_JUURI}/${runko}.mp3` : luennanOsoite(t);
+  const url = runko ? `${juuri}/${runko}.mp3` : luennanOsoite(t, juuri);
   if (!url) return null;
 
   const audio = new Audio(url);

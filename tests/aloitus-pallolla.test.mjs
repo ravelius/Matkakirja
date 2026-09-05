@@ -20,7 +20,11 @@ import { readFileSync } from 'node:fs';
  */
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
-const { ALOITUSVALINNAN_KUPLAVARA, ALOITUSVALINNAN_MARGINAALI } = await import('../js/pallolauta/lauta.js');
+const {
+  ALOITUKSEN_PYORINTA_AST_S, ALOITUKSEN_PYSAYTYS_MS,
+  ALOITUSVALINNAN_KUPLALEVEYS_PX, ALOITUSVALINNAN_KUPLAVARA_PX, ALOITUSVALINNAN_MARGINAALI,
+} = await import('../js/pallolauta/lauta.js');
+const { LIVIAN_AVAUKSEN_VIIVE_MS } = await import('../js/livia.js');
 const { LENNON_RAJAUKSEN_MARGINAALI } = await import('../js/pallolauta/siirto.js');
 const ui = lue('../js/ui.js');
 const lauta = lue('../js/pallolauta/lauta.js');
@@ -125,15 +129,126 @@ test('valintanäkymä rajaa Lontoon ja valittavat kuplien yläpuolelle', () => {
   assert.match(lauta, /const aloitusnakyma = \(\{ kesto = 0 \} = \{\}\) => \{/);
   // Livian kuplapino peittää ruudun alalaidan (js/livia.js): kamera
   // tähtää laatikon keskipisteen ETELÄPUOLELLE, jolloin valittavat
-  // nousevat ruudulla kuplien yläpuolelle.
-  assert.match(lauta, /y: y0 \+ h \/ 2 \+ \(korkeus \* ALOITUSVALINNAN_KUPLAVARA\) \/ 2,/);
-  assert.match(lauta, /const vara = 1 \+ 2 \* ALOITUSVALINNAN_MARGINAALI;/);
-  assert.ok(ALOITUSVALINNAN_MARGINAALI > LENNON_RAJAUKSEN_MARGINAALI,
-    'pallon perspektiivi levittää reunapisteet: valinta tarvitsee lentoa reilumman marginaalin');
-  assert.ok(ALOITUSVALINNAN_KUPLAVARA > 0.2 && ALOITUSVALINNAN_KUPLAVARA < 0.5);
+  // nousevat ruudulla kuplien yläpuolelle. Vara on PIKSELEITÄ (kupla on
+  // tekstiä, ei osuus ruudusta) ja rajattu puoleen laatikon ja reunan
+  // välistä, jottei Lontoo nouse yläreunan yli tiukassa rajauksessa.
+  assert.match(lauta, /const kuplavaraY = \(ALOITUSVALINNAN_KUPLAVARA_PX \/ 2\) \* \(korkeus \/ ruutuH\);/);
+  assert.match(lauta, /const kuplavaraX = \(ALOITUSVALINNAN_KUPLALEVEYS_PX \/ 2\) \* \(leveys \/ ruutuW\);/);
+  assert.match(lauta, /const siirtoY = Math\.min\(kuplavaraY, Math\.max\(0, \(korkeus - h\) \/ 4\)\);/);
+  assert.match(lauta, /const siirtoX = Math\.min\(kuplavaraX, Math\.max\(0, \(leveys - w\) \/ 4\)\);/);
+  // Etelään JA itään: sisältö nousee ja siirtyy vasemmalle, poispäin
+  // kuplien nurkasta (kuplapino on oikeassa alalaidassa).
+  assert.match(lauta, /\{ x: x0 \+ w \/ 2 \+ siirtoX, y: y0 \+ h \/ 2 \+ siirtoY, leveys \}/);
+  assert.ok(ALOITUSVALINNAN_KUPLAVARA_PX >= 120 && ALOITUSVALINNAN_KUPLAVARA_PX <= 300,
+    'kuplapino on mitattu 129 px (2000 × 1300) ja 180 px (390 × 844) korkeaksi');
+  assert.equal(ALOITUSVALINNAN_KUPLALEVEYS_PX, 336, 'kuplapinon mitattu leveys');
   assert.match(lauta, /^ {4}aloitusnakyma,$/m, 'lauta vie näkymän ulos ui.js:lle');
   assert.match(ui, /if \(this\.game\.phase === 'pickstart'\) lauta\.aloitusnakyma\(\);\n\s*else lauta\.kamera\.kotiin\(\);/,
     'avaaPallolauta ei kutsu kotiin-ajoa ennen kuin matkaajalla on paikka');
+});
+
+/*
+ * ZOOM LÄHEMMÄS (omistaja 5.9.2026 klo 00.30 työpöytäselaimesta
+ * 2000 × 1300, sanatarkasti: *"kartan zoom taso heti aloituksessa
+ * lähemmäksi. ks. 2 kuva"*). Kaksi asiaa muuttui samalla: kameran kaava
+ * sai kuvasuhteen (tests/pallolauta.test.mjs) ja marginaali kalibroitiin
+ * mittaamalla. Luku on MITTA — jos se muuttuu, kuva on mitattava uudelleen.
+ */
+test('aloituksen rajaus on mitattu: Eurooppa täyttää ruudun', () => {
+  assert.match(lauta, /const vara = 1 \+ 2 \* ALOITUSVALINNAN_MARGINAALI;/);
+  assert.equal(ALOITUSVALINNAN_MARGINAALI, 0.12);
+  // Ennen kuvasuhdekorjausta valinta tarvitsi lentoa REILUMMAN
+  // marginaalin (0,8), koska pyydetty leveys tarkoitti ruudun korkeutta;
+  // nyt sama laatikko mahtuu tiukemmalla kuin lennon rajaus.
+  assert.ok(ALOITUSVALINNAN_MARGINAALI < LENNON_RAJAUKSEN_MARGINAALI,
+    'korjatulla kaavalla valinta on lentoa tiukempi rajaus');
+});
+
+/* ================================================================== *
+ * 2b. Pallo pyörii hitaasti valinnassa, täydessä terävyydessä
+ * ================================================================== */
+
+/*
+ * Omistaja 5.9.2026 klo 00.30 sanatarkasti: *"karttapallo saisi pyöriä
+ * hitaast täydessä terävyydessä"*.
+ */
+test('valinnassa pallo pyörii hitaasti itään seinäkellosta', () => {
+  assert.ok(ALOITUKSEN_PYORINTA_AST_S >= 0.3 && ALOITUKSEN_PYORINTA_AST_S <= 0.5,
+    'omistajan mitta: hidas pyörintä on 0,3–0,5 astetta sekunnissa');
+  assert.ok(ALOITUKSEN_PYSAYTYS_MS >= 400 && ALOITUKSEN_PYSAYTYS_MS <= 1500);
+  const silmukka = lauta.match(/ {2}const aloitaAloituksenPyorinta = \(\) => \{[\s\S]*?\n {2}\};/)[0];
+  // Reduced motion ja väärä vaihe eivät pyöritä.
+  assert.match(silmukka, /if \(pyorinta \|\| ui\.dead \|\| ui\.reducedMotion\) return false;/);
+  assert.match(silmukka, /if \(ui\.game\.phase !== 'pickstart' \|\| kuori\.hidden\) return false;/);
+  // Aste sekunnissa seinäkellosta, itään, korkeus ennallaan.
+  assert.match(silmukka, /lng: pov\.lng \+ ALOITUKSEN_PYORINTA_AST_S \* kerroin \* \(dt \/ 1000\)/);
+  assert.match(silmukka, /altitude: pov\.altitude,/);
+  assert.match(silmukka, /const dt = Math\.min\(100, Math\.max\(0, hetki - oma\.edellinen\)\);/);
+  // Kolme pysäytintä: ele (pehmeä), toinen kamera-ajo (heti), vaihe.
+  assert.match(silmukka, /if \(kamera\.kameraAjossa\(\)\) \{ seisAloituksenPyorinta\(\); return; \}/);
+  assert.match(silmukka, /\{ paataAloitusvalinta\(\); return; \}/);
+  assert.match(lauta, /kerroin = 1 - pyorinnanPehmennys\(t\);/,
+    'pysähdys on ease-out samalla pehmennyksellä kuin avauslennon pyörintä');
+  assert.match(lauta, /kotelo\.addEventListener\('pointerdown', hidastaAloituksenPyorinta\);/);
+  assert.match(lauta, /kotelo\.addEventListener\('wheel', hidastaAloituksenPyorinta, \{ passive: true, capture: true \}\);/);
+  // Ajo käynnistää pyörinnän vasta perillä (ei kesken kamera-ajon).
+  assert.match(lauta, /void ajo\.then\(\(valmis\) => \{ if \(valmis\) aloitaAloituksenPyorinta\(\); \}\);/);
+});
+
+test('terävä tila on pakotettuna valinnan ajan ja vapautuu purussa', () => {
+  assert.match(lauta, /laatatSaatavilla, laattatasoMax, lataaPallokirjasto, pakotaPallonLaatu,/);
+  assert.match(lauta, /const pyydaAloituksenLaatu = \(\) => \{\n\s*if \(aloituksenLaatu\) return;\n\s*aloituksenLaatu = true;\n\s*pakotaPallonLaatu\(true\);/);
+  assert.match(lauta, /const vapautaAloituksenLaatu = \(\) => \{\n\s*if \(!aloituksenLaatu\) return;\n\s*aloituksenLaatu = false;\n\s*pakotaPallonLaatu\(false\);/);
+  // Pyyntö lähtee jo ennen kamera-ajoa: laatat haetaan terävinä heti.
+  assert.match(lauta, /pyydaAloituksenLaatu\(\);\n\s*const ajo = kamera\.ajaKamera\(/);
+  // Vapautus kolmesta paikasta: silmukka, piirto (kaupunki valittu) ja purku.
+  assert.match(lauta, /if \(aloituksenLaatu && ui\.game\.phase !== 'pickstart'\) paataAloitusvalinta\(\);/);
+  const pura = lauta.match(/ {4}pura: \(\) => \{[\s\S]*?\n {4}\},/)[0];
+  assert.match(pura, /paataAloitusvalinta\(\);/,
+    'pakotus on istunnon laskuri — se ei saa jäädä päälle puretun laudan jälkeen');
+});
+
+/* ================================================================== *
+ * 2c. Valittavalla kaupungilla on yksi nimi, ei kahta
+ * ================================================================== */
+
+/*
+ * Omistajan kaappauksessa 5.9.2026 klo 00.30 Ateenan kohdalla oli KAKSI
+ * nimeä: nimikerroksen harmaa kapiteeli ja kohdemerkin oma tumma lappu.
+ * Merkin nimi voittaa — se on kehotus toimia ja sama molemmilla laudoilla.
+ */
+test('valittavan kaupungin nimi tulee merkistä, ei nimikerroksesta', () => {
+  assert.match(lauta, /const aloitusNimet = \(\) => \{/);
+  assert.match(lauta, /const kohteet = new Set\(aloitusKohteet\(\)\.map\(\(k\) => k\.city\.id\)\);/);
+  assert.match(lauta, /return new Set\(\[\.\.\.nakyvat\]\.filter\(\(id\) => !kohteet\.has\(id\)\)\);/);
+  assert.match(lauta, /const vain = lento\?\.nimet \?\? aloitusNimet\(\);/,
+    'ladonta rajaa nimet aloitusNimet-joukkoon (Lontoo), ei koko näkyvään joukkoon');
+  // Piste näkyy edelleen molemmilta (PISTE VAIN NIMEN KANSSA ei koske
+  // valintaa: kohdemerkki on nimi).
+  assert.match(lauta, /const valinta = aloitusNakyvat\(\);\n\s*if \(valinta\) return valinta\.has\(k\.id\);/);
+  // Kohdemerkki piirtää nimen (js/pallolauta/merkit.js kohdeElementti).
+  assert.match(lue('../js/pallolauta/merkit.js'), /nimi\.textContent = kohde\.city\.name;/);
+});
+
+/* ================================================================== *
+ * 2d. Livian kuplat 1,5 s myöhemmin
+ * ================================================================== */
+
+/*
+ * Omistaja 5.9.2026 klo 00.30 sanatarkasti: *"pulun kommentit noin
+ * 1,5 sek myöhemmin"*. Lisäviive on VAIN ensimmäisen kuplan edessä:
+ * kuplien keskinäinen rytmi (KUPLIEN_VALI, lukuaika) on ennallaan.
+ */
+test('Livian avaus alkaa 1,5 s myöhemmin, rytmi ennallaan', () => {
+  assert.equal(LIVIAN_AVAUKSEN_VIIVE_MS, 1500);
+  const livia = lue('../js/livia.js');
+  assert.match(livia, /const AVAUKSEN_VIIVE = 900;/);
+  assert.match(livia, /const viive = AVAUKSEN_VIIVE \+ \(ui\.reducedMotion \? 0 : LIVIAN_AVAUKSEN_VIIVE_MS\);/,
+    'reduced motion: ei lisäviivettä');
+  assert.match(livia, /avausAjastin = setTimeout\(\(\) => naytaRepliikki\(ui, 0\), viive\);/);
+  // Kuplien keskinäinen rytmi ei muuttunut.
+  assert.match(livia, /const KUPLIEN_VALI = 280;/);
+  assert.match(livia, /avausAjastin = setTimeout\(\(\) => seuraavaRepliikki\(ui, i \+ 1\), lukuaika\(teksti\)\);/);
 });
 
 test('nappula seisoo Lontoossa PALLON koordinaateissa myös lähtövalinnassa', () => {

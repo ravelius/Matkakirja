@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1612, teksti: 'Ihmisen matka -linssi; liekkivalot; aloitus lahemmas' },
   { v: 1611, teksti: 'Etusivu: otsikko paikallaan, Osa II 2,3 s, kuvat pois' },
   { v: 1610, teksti: 'Pallolaatat kansio c: etelan reuna tasoitettu' },
   { v: 1609, teksti: 'Avauslento: terava kartta, suora lahto, haivytetty kuva' },

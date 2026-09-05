@@ -134,6 +134,13 @@ export function tiedeliitteenNaapurit(tapahtumat, i) {
 /** Kaupungin nimi tapahtumasta (paikka on datan kenttä). */
 const paikka = (t) => t.paikka ?? t.kaupunki ?? '';
 
+/*
+ * Näytettävä ajoitus: vuosiluku (keksinnöt) tai pysäkin oma teksti
+ * ("300 000 vuotta sitten"), kun kaaren kello ei kulje vuosiluvuissa
+ * (js/aikajana.js KELLON ASTEIKKO). Sama apuri kuin moottorissa.
+ */
+const ajoitus = (t) => t.ajoitus ?? t.vuosi;
+
 /* ==================== SIVUN SISUS ==================== */
 
 /**
@@ -423,7 +430,7 @@ function piirraIlmiokaruselli(ui, sailio, kuvat, henkilo) {
  */
 function piirraTiedeliitteenSivu(ui, sailio, t, lahdeVara) {
   sailio.appendChild(html('p', 'looppi-nimio', 'Tiedeliite'));
-  const paivays = [t.vuosi, paikka(t)].filter(Boolean).join(' · ');
+  const paivays = [ajoitus(t), paikka(t)].filter(Boolean).join(' · ');
   if (paivays) sailio.appendChild(html('p', 'looppi-paivays', paivays));
   sailio.appendChild(html('h3', 'fokusnosto-kortti-otsikko looppi-otsikko', t.otsikko));
   if (t.henkilo) sailio.appendChild(html('p', 'tiedeliite-henkilo', t.henkilo));
@@ -576,9 +583,9 @@ export function avaaTiedeliite(ui, tapahtumat, i, {
     const nimi = t.henkilo ?? t.otsikko;
     nappi.append(
       html('span', 'tiedeliite-navimerkki', merkki),
-      html('span', 'tiedeliite-navinimi', `${t.vuosi} ${nimi}`),
+      html('span', 'tiedeliite-navinimi', `${ajoitus(t)} ${nimi}`),
     );
-    nappi.setAttribute('aria-label', `${ennen ? 'Edellinen' : 'Seuraava'} keksijä: ${t.vuosi} ${nimi}`);
+    nappi.setAttribute('aria-label', `${ennen ? 'Edellinen' : 'Seuraava'} keksijä: ${ajoitus(t)} ${nimi}`);
   };
 
   const suljeSisallys = () => {
@@ -593,7 +600,7 @@ export function avaaTiedeliite(ui, tapahtumat, i, {
       const rivi = html('button', `tiedeliite-sisallysrivi${j === nykyinen ? ' nykyinen' : ''}`);
       rivi.type = 'button';
       rivi.append(
-        html('span', 'tiedeliite-sisallysvuosi', String(t.vuosi)),
+        html('span', 'tiedeliite-sisallysvuosi', String(ajoitus(t))),
         html('span', 'tiedeliite-sisallysnimi', t.henkilo ?? t.otsikko),
       );
       if (j === nykyinen) rivi.setAttribute('aria-current', 'page');

@@ -359,6 +359,42 @@ export const LAJIT = {
       + 'and must stay the main thing. '
       + `${SAUMA} ${TYYLI}`,
   },
+  /*
+   * IHMISEN MATKA (omistajan tilaus 5.9.2026, linssin oma raita).
+   * Kaari on 300 000 vuotta pitkä ja kello etenee hitaasti pysäkiltä
+   * toiselle, joten raita on keksintöjä hitaampi ja syvempi: pohjalla
+   * rumpu kuin sydämen syke ja sen yllä kaukainen ihmisääni ILMAN
+   * SANOJA — ei melodiaa, joka veisi huomion kartalta. Mitat ovat
+   * samat kuin keksinnöillä (50 s looppi 66 s lähteestä), koska ajo
+   * kestää yhtä lailla minuutteja.
+   *
+   * Tiedostonimessä on väliviiva (linssi-ihmisen-matka.mp3), koska
+   * lajin nimi on linssin tunnus — sama merkkijono pelin RAIDAT-
+   * taulussa ja kaaren `musiikki`-kentässä.
+   */
+  'ihmisen-matka': {
+    ryhma: 'linssi',
+    tiedosto: 'linssi-ihmisen-matka.mp3',
+    kuvaus: 'Syvä ja hidas: sydämen syke ja kaukainen ihmisääni',
+    looppi: 50,
+    risti: 2.5,
+    lahdeMs: 66000,
+    kestoMin: 45,
+    kestoMax: 60,
+    prompt: 'A deep, slow underscore for the story of humankind spreading across '
+      + 'the whole earth over hundreds of thousands of years. Underneath '
+      + 'everything a low drum like a resting heartbeat, soft and unhurried, '
+      + 'played with a padded mallet on a large frame drum. Above it a distant '
+      + 'human voice humming wordlessly, far away and slightly veiled, joined '
+      + 'now and then by a low bowed string or a breathy wooden flute holding '
+      + 'one long note. No melody to follow and no chord progression: the music '
+      + 'stays in one place and simply breathes. Ancient, spacious and patient, '
+      + 'never sad and never triumphant. Acoustic only: skin drum, low strings, '
+      + 'wooden flute, wordless voice. No drum kit, no electronic sounds, no '
+      + 'synthesiser, no vocals with words, no lyrics. A map and a clock move '
+      + 'on top of this music and must stay the main thing. '
+      + `${SAUMA} ${TYYLI}`,
+  },
 };
 
 // ── argumentit ─────────────────────────────────────────────────────

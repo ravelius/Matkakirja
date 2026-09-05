@@ -26,15 +26,27 @@
  * Kartan ajot pyytävät `leveys` (lautayksikköä ruudun leveydellä).
  * Pallolle (karttapallo.md luku 5):
  *
- *   korkeus(leveysYks) = (leveysYks · 360/12000) / (2 · tan(fov/2) · 180/π)
+ *   korkeus(leveysYks) = (leveysYks · 360/12000) / (kuvasuhde · 2 · tan(fov/2) · 180/π)
  *
- * eli Globe.gl:n oletus-fovilla 50° ≈ leveysYks / 1780. Kaava on tasokuva,
- * tarkka vain pienillä korkeuksilla; suurilla käytetään pallon
+ * eli Globe.gl:n oletus-fovilla 50° ≈ leveysYks / (1780 · kuvasuhde). Kaava
+ * on tasokuva, tarkka vain pienillä korkeuksilla; suurilla käytetään pallon
  * geometriaa (näkyvä kaari = 2·acos(1/(1+h)), eli h = 1/cos(kaari/2) − 1),
  * ja kummastakin otetaan se, joka vaatii korkeamman kameran — molemmat
  * ovat kasvavia, joten käänteinen on niiden käänteisten minimi.
  * Kaukaisin korkeus on 2,5 (koko pallo); lähin sidotaan laattojen
  * tarkkuuteen (Z8 182 px/aste, enintään 2× venytys → ~70 yksikköä).
+ *
+ * KUVASUHDE ON PAKOLLINEN OSA KAAVAA (korjattu 5.9.2026, omistajan
+ * palaute *"kartan zoom taso heti aloituksessa lähemmäksi"*). Globe.gl:n
+ * fov on PYSTYSUUNNAN avauskulma, joten ilman kuvasuhdetta kaava asetti
+ * pyydetyn leveyden ruudun KORKEUDELLE: työpöydällä (1379 × 826) ruudulla
+ * näkyi 1,67-kertainen kaista pyydettyyn nähden ja puhelimella (374 × 777)
+ * vain 0,48-kertainen — sama pyyntö tarkoitti eri asiaa eri laitteella, ja
+ * bbox-rajaus (kameranKohde) laski korkeusehdon täsmälleen väärinpäin.
+ * `kuvasuhde` = kotelon leveys / korkeus; oletus 1 pitää yksikkötestien
+ * ja apufunktioiden vanhan merkityksen (neliöruutu), ja laudan kamera
+ * antaa aina kotelon oman suhteen. Mitatut seuraukset ja vakioiden
+ * kalibrointi: docs/moduulit/karttapallo.md luku 10.3.
  *
  * ── TRAPETSI, EI CUBIC.INOUT ──────────────────────────────────────
  *
@@ -109,13 +121,19 @@ function tasokuvanKerroin(fov) {
   return 2 * Math.tan((fov / 2) * (Math.PI / 180)) * (180 / Math.PI);
 }
 
-/** Näkyvä leveys (lautayksikköä) → Globe.gl:n altitude. */
+/**
+ * Näkyvä leveys (lautayksikköä) → Globe.gl:n altitude.
+ *
+ * `kuvasuhde` = kotelon leveys / korkeus. Fov on pystysuunnan kulma,
+ * joten pyydetty LEVEYS jaetaan kuvasuhteella ennen kuin se muutetaan
+ * korkeudeksi; oletus 1 = neliöruutu (yksikkötestit, apufunktiot).
+ */
 export function korkeusLeveydesta(leveysYks, {
-  fov = PALLO_FOV, laudanLeveys = PALLOLAUDAN_LEVEYS, min = PALLO_KORKEUS_MIN,
+  fov = PALLO_FOV, laudanLeveys = PALLOLAUDAN_LEVEYS, min = PALLO_KORKEUS_MIN, kuvasuhde = 1,
 } = {}) {
   if (!(leveysYks > 0)) return PALLO_KORKEUS_MAX;
   const asteet = asteetLeveydesta(leveysYks, laudanLeveys);
-  const taso = asteet / tasokuvanKerroin(fov);
+  const taso = asteet / (Math.max(0.01, kuvasuhde) * tasokuvanKerroin(fov));
   // Pallon geometria: kaari mahtuu näkyviin vasta, kun horisontti on
   // sen takana. Yli 180° kaari ei mahdu koskaan → katto.
   const kaari = asteet < 180 ? 1 / Math.cos((asteet / 2) * (Math.PI / 180)) - 1 : Infinity;
@@ -162,14 +180,18 @@ export function lahinLeveys({
 
 /** Lähin sallittu korkeus (altitude) laattatarkkuudesta. */
 export function lahinKorkeus(valinnat) {
-  const { fov = PALLO_FOV, laudanLeveys = PALLOLAUDAN_LEVEYS } = valinnat;
-  return korkeusLeveydesta(lahinLeveys(valinnat), { fov, laudanLeveys, min: 0 });
+  const { fov = PALLO_FOV, laudanLeveys = PALLOLAUDAN_LEVEYS, kuvasuhde = 1 } = valinnat;
+  return korkeusLeveydesta(lahinLeveys(valinnat), {
+    fov, laudanLeveys, kuvasuhde, min: 0,
+  });
 }
 
 /** Globe.gl:n altitude → näkyvä leveys lautayksikköinä (käänteinen). */
-export function leveysKorkeudesta(korkeus, { fov = PALLO_FOV, laudanLeveys = PALLOLAUDAN_LEVEYS } = {}) {
+export function leveysKorkeudesta(korkeus, {
+  fov = PALLO_FOV, laudanLeveys = PALLOLAUDAN_LEVEYS, kuvasuhde = 1,
+} = {}) {
   const h = Math.max(1e-6, korkeus);
-  const tasoAsteet = h * tasokuvanKerroin(fov);
+  const tasoAsteet = h * tasokuvanKerroin(fov) * Math.max(0.01, kuvasuhde);
   const kaariAsteet = 2 * Math.acos(1 / (1 + h)) * (180 / Math.PI);
   const asteet = Math.min(360, Math.min(tasoAsteet, kaariAsteet));
   return (asteet / 360) * laudanLeveys;
@@ -197,6 +219,13 @@ export function luoPallokamera({
 
   const ruudunLeveys = () => kotelo?.clientWidth || 1;
   const ruudunKorkeus = () => kotelo?.clientHeight || 1;
+  /*
+   * KUVASUHDE LUETAAN KUTSUTTAESSA, ei kerran: ruutu kääntyy, ikkuna
+   * muuttaa kokoa ja lehti avautuu kotelon päälle. Sama luku menee sekä
+   * leveys → korkeus että korkeus → leveys -suuntaan, joten pyydetty
+   * leveys on aina lautayksikköä RUUDUN LEVEYDELLÄ.
+   */
+  const kuvasuhde = () => ruudunLeveys() / ruudunKorkeus();
 
   /*
    * LÄHIN KORKEUS LAATTATARKKUUDESTA (vaihe 5c). Lasketaan kutsuttaessa
@@ -204,10 +233,14 @@ export function luoPallokamera({
    * laattaluettelon syvin taso vaihtuu, kun uusi taso ajetaan ämpäriin.
    */
   const korkeusMin = () => lahinKorkeus({
-    taso: laattataso, leveysPx: ruudunLeveys(), dpr, laudanLeveys,
+    taso: laattataso, leveysPx: ruudunLeveys(), dpr, laudanLeveys, kuvasuhde: kuvasuhde(),
   });
   /** Näkyvä leveys → korkeus laitteen tarkkuusrajalla. */
-  const korkeus = (leveysYks) => korkeusLeveydesta(leveysYks, { laudanLeveys, min: korkeusMin() });
+  const korkeus = (leveysYks) => korkeusLeveydesta(leveysYks, {
+    laudanLeveys, kuvasuhde: kuvasuhde(), min: korkeusMin(),
+  });
+  /** Korkeus → näkyvä leveys samalla kuvasuhteella. */
+  const leveys = (korkeusArvo) => leveysKorkeudesta(korkeusArvo, { laudanLeveys, kuvasuhde: kuvasuhde() });
 
   const pysaytaKameraAjo = () => {
     if (!ajo) return false;
@@ -233,10 +266,10 @@ export function luoPallokamera({
     if (!pov || !Number.isFinite(pov.lat)) return null;
     const kohta = projisoiLaudalle(lauta, pov.lng, pov.lat);
     if (!kohta) return null;
-    const leveys = leveysKorkeudesta(pov.altitude);
+    const nakyva = leveys(pov.altitude);
     return {
-      x: kohta.x, y: kohta.y, leveys, korkeus: pov.altitude, lat: pov.lat, lng: pov.lng,
-      skaala: ruudunLeveys() / leveys,
+      x: kohta.x, y: kohta.y, leveys: nakyva, korkeus: pov.altitude, lat: pov.lat, lng: pov.lng,
+      skaala: ruudunLeveys() / nakyva,
     };
   };
 
@@ -257,6 +290,14 @@ export function luoPallokamera({
     let y = kohde.y;
     let leveys = kohde.leveys ?? null;
     if (kohde.bbox) {
+      /*
+       * LAATIKKO MAHTUU MOLEMPIIN SUUNTIIN. Korkeusehto muutetaan
+       * leveydeksi kuvasuhteella (h · W/H), ja tiukempi voittaa. Tämä
+       * kaava oli oikein jo ennen 5.9.2026, mutta korkeusLeveydesta
+       * tulkitsi tuloksen ruudun KORKEUDEKSI (fov on pystykulma), joten
+       * ehto meni käytännössä väärinpäin; nyt kamera saa kuvasuhteen ja
+       * `leveys` tarkoittaa lautayksiköitä ruudun leveydellä.
+       */
       const { bbox, marginaali = 0 } = kohde;
       x = bbox.x + bbox.w / 2;
       y = bbox.y + bbox.h / 2;
@@ -315,7 +356,7 @@ export function luoPallokamera({
     if (sovita) {
       // Panorointi ruudullisina: kulmamatka suhteessa lähtönäkymän
       // leveyteen asteina (sama mitta kuin kartan matka / paneW).
-      const nakyvaAsteina = asteetLeveydesta(leveysKorkeudesta(alku.altitude), laudanLeveys);
+      const nakyvaAsteina = asteetLeveydesta(leveys(alku.altitude), laudanLeveys);
       kesto = sovitaAjonKesto(kesto, suhde, Math.hypot(dLat, dLng) / Math.max(1e-6, nakyvaAsteina));
     }
     return new Promise((valmis) => {
@@ -381,7 +422,7 @@ export function luoPallokamera({
     /** Lähin sallittu korkeus juuri nyt (OrbitControlsin minDistance). */
     korkeusMin,
     /** Lähin sallittu näkyvä leveys lautayksikköinä (savukkeet, vartijat). */
-    lahinLeveys: () => leveysKorkeudesta(korkeusMin()),
+    lahinLeveys: () => leveys(korkeusMin()),
     kameraAjossa: () => Boolean(ajo),
     pysaytaKameraAjo,
     siirtoZoomiKerroin,

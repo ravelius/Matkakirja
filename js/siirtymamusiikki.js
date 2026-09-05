@@ -198,6 +198,22 @@ const RAIDAT = {
     nousuMs: 600,
     laskuMs: 800,
   },
+  /*
+   * IHMISEN MATKA (omistajan päätös 5.9.2026). Sama ryhmä, sama voima
+   * ja samat feidaukset kuin keksinnöillä — ero on luonteessa: syvä ja
+   * hidas, rumpu kuin sydämen syke ja kaukainen ihmisääni ilman sanoja
+   * (ks. tools/generoi-siirtymamusiikki.mjs). Raita generoidaan
+   * erikseen; ennen sitä ajo on hiljainen, mikä on normaali tila eikä
+   * virhe.
+   */
+  'ihmisen-matka': {
+    ryhma: 'linssi',
+    ampari: `${AANI_JUURI}aanet/linssi-ihmisen-matka-lyria.mp3`,
+    oma: 'assets/audio/linssi-ihmisen-matka-lyria.mp3',
+    voima: 0.11,
+    nousuMs: 600,
+    laskuMs: 800,
+  },
 };
 
 /** Siirtymän lajit siinä järjestyksessä kuin ne matkassa esiintyvät. */
