@@ -16364,6 +16364,7 @@ export class UI {
     const nyt = this.pallolinssi;
     this.pallolinssi = null;
     if (!nyt) return;
+    this.linssiTuki?.moottori?.poistaLuokat();
     try {
       nyt.kahva?.pura?.();
     } catch (syy) {
@@ -16391,6 +16392,13 @@ export class UI {
       const linssi = tuki.kaikki.find((l) => l.tunnus === tunnus);
       tuki.moottori.sammuta();
       try {
+        // Aineisto haetaan kuten kerrosmoottorissa (kerros.js vaihda):
+        // linssin lataa() tuo pakat ja kuvat ennen piirtoa.
+        await linssi.lataa?.();
+        if (this.dead || this.linssiValittu !== tunnus) return;
+        // Body-luokat (linssi-paalla, linssi-<tunnus>, linssi-valokuva)
+        // ovat samat kuin kartalla: selite, sävyt ja rakeisuus lukevat ne.
+        tuki.moottori.merkitseLuokat(linssi);
         this.pallolinssi = { tunnus, kahva: linssi.pallolle(this.pallolauta, tila) ?? null };
         tulos = { tunnus, linssi, elementteja: 0, rasteroitu: false };
       } catch (syy) {
@@ -16481,6 +16489,16 @@ export class UI {
       return;
     }
     if (this.linssiValittu === tunnus) return;
+    /*
+     * Portti alla lukee ladattua linssiluetteloa (linssiTuki). Jos
+     * luetteloa ei vielä ole (valinta tulee ennen laukun avaamista,
+     * esim. tallennettu valinta tai kehittäjätila), ladataan ensin —
+     * muuten pallolle käännetty linssi avaisi turhaan linssikartan.
+     */
+    if (tunnus && !this.linssiTuki && this.pallolautaPaalla()) {
+      void this.lataaLinssit().then(() => { if (!this.dead) this.valitseLinssi(tunnus); });
+      return;
+    }
     /*
      * KAIKKI PALLOLLE (omistaja 5.9.2026, Raamattu KAIKKI PALLOLLE,
      * VANHA KARTTA SULJETAAN: *"Käännä kaikki pallolle, niin voidaan

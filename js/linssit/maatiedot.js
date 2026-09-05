@@ -33,6 +33,13 @@ export const LINSSI = {
   tunnus: 'maatiedot',
   jarjestys: 95,
   kerros: false,
+  /*
+   * PALLOLLA (karttapallo.md luku 10, aalto 1C): tila piirtää maat
+   * pallon pinnalle js/vertailu.js:n tahdistaMaatiedot-funktiossa laudan
+   * linssiapurilla (polygonit + merkit), joten linssikarttaa ei tarvita.
+   * Kahva on tyhjä — purku tapahtuu tilan sammuessa samassa paikassa.
+   */
+  pallolle() { return { pura() {} }; },
 
   nimi: 'Maiden tiedot',
   lyhyt: 'Napauta kartalta mitä tahansa maata ja lue sen oma lehti — ei tarvitse matkustaa perille.',
