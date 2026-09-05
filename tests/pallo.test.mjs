@@ -9,6 +9,20 @@ import { PERUSLINSSIT, omistetut } from '../js/linssit/omistus.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from '../js/fokusmitat.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 import { arkinPikseli, pinnoitteenAvain, pinnoitteenMitat, PINNOITE } from '../tools/tee-pallotekstuuri.mjs';
+// Vaihe 5c: laatat offline, varapolku ja turvatila.
+import {
+  ESILATAUKSEN_KAUPUNKITASO, ESILATAUKSEN_MAAILMATASO, esilataaPallolaatat, esilatauksenLaatat,
+  laatanKoordinaatit,
+} from '../js/pallo.js';
+import {
+  PALLON_SALLITTU_VENYTYS, PALLOLAUDAN_SAAPUMISLEVEYS, PALLOLAUDAN_SIIRTOLEVEYS, PALLO_KORKEUS_MIN,
+  korkeusLeveydesta, laatanTarkkuus, lahinKorkeus, lahinLeveys,
+} from '../js/pallolauta/kamera.js';
+import { OSOITTIMEN_JALKIVIIVE_MS } from '../js/pallolauta/lauta.js';
+import {
+  PALLON_TURVATILAN_RAJA, PALLON_TURVATILAN_UNOHDUS_MS, nollaaPallonKaatumiset, palloKaatui,
+  palloTurvatilassa, pallonKaatumiset,
+} from '../js/ui-apurit.js';
 
 /*
  * KARTTAPALLO (omistaja 4.9.2026: "Globe GL toimii hienosti"; illalla
@@ -115,9 +129,13 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   assert.equal(lahdetaso(0), 0); assert.equal(lahdetaso(7), 6);
   assert.equal(tasonLaatat(3).length, 64);
   assert.equal(tasonLaatat(3, [-10, 40, 30, 70]).length, 6, 'Eurooppa osuu kuuteen Z3-laattaan (2 saraketta x 3 rivia)');
-  const luettelo = { projektio: { tyyppi: 'miller', leveys: 12000, lon0: -175, pohjoinen: 76 }, rajaus: { x: 0, y: -611.3, w: 12000, h: 6422.7 } };
+  const luettelo = { projektio: { tyyppi: 'miller', leveys: 12000, lon0: -175, pohjoinen: 76 }, rajaus: { x: 0, y: -611.3, w: 12000, h: 6422.7 }, kehys: { yla: 232, ala: 240 } };
   const vali = julisteenLeveysvali(luettelo);
-  assert.ok(vali.pohjoinen > 80 && vali.pohjoinen < 86 && vali.etela < -60 && vali.etela > -70, JSON.stringify(vali));
+  // Vain kartta: kartussi ja kehys (76–84° N, arkin alakehys etelässä) jäävät pois (5.9.2026).
+  assert.equal(vali.pohjoinen, 76, JSON.stringify(vali));
+  assert.ok(vali.etela < -60 && vali.etela > -64, JSON.stringify(vali));
+  const ilmanKehysta = julisteenLeveysvali({ ...luettelo, kehys: undefined });
+  assert.ok(ilmanKehysta.etela < -65 && ilmanKehysta.etela > -67, 'ilman kehystietoa rajaus sellaisenaan');
   // Workflow vie laatat ja luettelon oikeaan kansioon.
   const wf = lue('../.github/workflows/tee-pallolaatat.yml');
   assert.match(wf, /cat pallolaatat-ulos\/kansio\.txt/);
@@ -196,4 +214,125 @@ test('laatu palaa levossa: kynnykset ruudun pikseleistä, liike kevyt (omistaja 
   assert.match(lahde, /globeTileEngineMaxLevel\(laattatasoMax\(laatat\)\);\n\s+asennaLaatunosto\(pallo, kotelo\);/);
   assert.match(lahde, /moottori\.updatePov = alkuperainen;/);
   assert.match(lahde, /map\.anisotropy = maxAniso/);
+});
+
+/*
+ * ======== VAIHE 5c: LAATAT OFFLINE, VARAPOLKU JA TURVATILA ==========
+ * (docs/moduulit/karttapallo.md luku 6 ja luvun 7 vaihe 5: *"SW-välimuisti
+ * vendorille ja laatoille; varapolku + turvatila; Z8 käyttöön ja lähin
+ * korkeus laattatarkkuudesta; hover-raycast pois"*)
+ */
+
+test('esilataus: karkea maailma ja aloituskaupunki laattojen koriin', () => {
+  const osoitteet = esilatauksenLaatat({ lat: 51.5, lon: -0.12 });
+  // Koko maailma tasoille 0–3 = 1 + 4 + 16 + 64 = 85 laattaa, ja
+  // aloituskaupungin ympäriltä 3 × 3 tasolla 4.
+  assert.equal(osoitteet.length, 85 + 9, `esilatauksessa ${osoitteet.length} laattaa`);
+  assert.equal(new Set(osoitteet).size, osoitteet.length, 'sama laatta kahdesti');
+  assert.ok(osoitteet.every((u) => u.startsWith(PALLO_LAATAT) && u.endsWith('.jpg')));
+  assert.ok(osoitteet.includes(pallonLaatta(0, 0, 0)), 'koko pallo tasolla 0');
+  assert.equal(osoitteet.filter((u) => u.includes(`${PALLO_LAATAT}3/`)).length, 64, 'taso 3 kokonaan');
+  // Lontoo on Z4-laatassa 7/5 (todennettu ämpäristä 5.9.2026).
+  assert.deepEqual(laatanKoordinaatit(51.5, -0.12, 4), { x: 7, y: 5 });
+  assert.ok(osoitteet.includes(pallonLaatta(7, 5, 4)), 'aloituskaupungin laatta');
+  assert.deepEqual(laatanKoordinaatit(0, 0, 1), { x: 1, y: 1 }, 'nollameridiaani ja päiväntasaaja');
+  // Luettelon matalampi katto rajaa myös esilatauksen.
+  const matala = esilatauksenLaatat({ maxTaso: 2 });
+  assert.equal(matala.length, 1 + 4 + 16, 'maxTaso rajaa maailman');
+  assert.ok(matala.every((u) => !u.includes(`${PALLO_LAATAT}4/`)), 'ei kaupunkitasoa ilman laattoja');
+  assert.equal(ESILATAUKSEN_MAAILMATASO, 3);
+  assert.equal(ESILATAUKSEN_KAUPUNKITASO, 4);
+});
+
+test('esilataus lähtee palvelutyöntekijälle kerran ja vain jos se on olemassa', async () => {
+  assert.equal(await esilataaPallolaatat({}, undefined), null, 'ei työntekijää (yhden tiedoston versio)');
+  const viestit = [];
+  const nav = {
+    serviceWorker: {
+      ready: Promise.resolve({ active: null }),
+      controller: { postMessage: (v) => viestit.push(v) },
+    },
+  };
+  await esilataaPallolaatat({ lat: 51.5, lon: -0.12 }, nav);
+  assert.equal(viestit.length, 1, 'viesti ei lähtenyt');
+  assert.equal(viestit[0].tyyppi, 'esilataa-pallolaatat');
+  assert.equal(viestit[0].kansio, PALLO_LAATTAKANSIO);
+  assert.ok(viestit[0].osoitteet.length >= 85);
+  await esilataaPallolaatat({}, nav);
+  assert.equal(viestit.length, 1, 'esilataus lähti kahdesti samassa istunnossa');
+});
+
+test('lähin korkeus tulee laattatarkkuudesta ja laitteen dpr:stä (Z8 = 182 px/aste)', () => {
+  assert.ok(Math.abs(laatanTarkkuus(8) - 182.04) < 0.1, `Z8 ${laatanTarkkuus(8)}`);
+  assert.equal(laatanTarkkuus(7) * 2, laatanTarkkuus(8), 'taso tuplaa tarkkuuden');
+  assert.equal(PALLON_SALLITTU_VENYTYS, 2, 'laatan pikseli enintään kahtena (karttapallo.md luku 6)');
+  // iPhone 390 css × dpr 2, Z8: 780 / (2 · 182) = 2,14° ≈ 71 lautayksikköä.
+  const leveys = lahinLeveys({ taso: 8, leveysPx: 390, dpr: 2 });
+  assert.ok(Math.abs(leveys - 71.4) < 2, `Z8 lähin leveys ${leveys}`);
+  // Sama korkeutena on suunnitelman 0,04 (PALLO_KORKEUS_MIN:n oletusarvo).
+  const korkeus = lahinKorkeus({ taso: 8, leveysPx: 390, dpr: 2 });
+  assert.ok(Math.abs(korkeus - PALLO_KORKEUS_MIN) < 0.004, `korkeus ${korkeus}`);
+  // Z7 (nykyinen laatat.json) on tasan kaksi kertaa kauempana (ilman kattoa).
+  assert.ok(Math.abs(lahinLeveys({ taso: 7, leveysPx: 390, dpr: 2, katto: Infinity }) - 2 * leveys) < 0.01);
+  // Tarkempi ruutu vaatii kauemmas: dpr 3 on 1,5-kertainen.
+  assert.ok(Math.abs(lahinLeveys({ taso: 8, leveysPx: 390, dpr: 3 }) - 1.5 * leveys) < 0.01);
+  // KATTO: raja ei koskaan estä pelin omaa lähintä näkymää (iPadilla
+  // Z7 vaatisi 305 yksikköä, jolloin ennakkozoomi ei zoomaisi mihinkään).
+  assert.equal(lahinLeveys({ taso: 7, leveysPx: 834, dpr: 2 }), PALLOLAUDAN_SIIRTOLEVEYS);
+  assert.ok(PALLOLAUDAN_SIIRTOLEVEYS < PALLOLAUDAN_SAAPUMISLEVEYS, 'siirtonäkymä on saapumista lähempänä');
+  assert.ok(lahinLeveys({ taso: 8, leveysPx: 390, dpr: 3 }) < PALLOLAUDAN_SIIRTOLEVEYS, 'puhelimella katto ei purista');
+  // Kamera ei mene rajan alle: korkeusLeveydesta saa minimin parametrina.
+  assert.equal(korkeusLeveydesta(1, { min: 0.08 }), 0.08);
+  // Lauta johtaa tason laattaluettelosta ja putoaa Z7:ään ilman luetteloa.
+  const lauta = readFileSync(new URL('../js/pallolauta/lauta.js', import.meta.url), 'utf8');
+  assert.match(lauta, /const laattataso = laatat \? laattatasoMax\(laatat\) : PALLO_LAATTATASO_MAX - 1;/);
+  assert.match(lauta, /ohj\.minDistance = pallonSade \* \(1 \+ kamera\.korkeusMin\(\)\);/);
+});
+
+test('turvatila: kaksi kaatumista peräkkäin sulkee pallon tältä laitteelta', () => {
+  // Laskuri on laitteen asetus (localStorage), ei pelitilan kenttä.
+  const muisti = new Map();
+  const varasto = {
+    getItem: (k) => (muisti.has(k) ? muisti.get(k) : null),
+    setItem: (k, v) => muisti.set(k, v),
+    removeItem: (k) => muisti.delete(k),
+  };
+  assert.equal(pallonKaatumiset(varasto), 0);
+  assert.equal(palloTurvatilassa(varasto), false);
+  assert.equal(palloKaatui(varasto), 1);
+  assert.equal(palloTurvatilassa(varasto), false, 'yksi kaatuminen ei sulje palloa');
+  assert.equal(palloKaatui(varasto), PALLON_TURVATILAN_RAJA);
+  assert.equal(palloTurvatilassa(varasto), true, 'kahden jälkeen turvatila');
+  assert.equal(muisti.get('matkakirja-pallo-kaatumiset'), '2', 'laskuri talteen omalla avaimella');
+  // Vipu (ratasvalikko) ja vakaa istunto nollaavat.
+  nollaaPallonKaatumiset(varasto);
+  assert.equal(pallonKaatumiset(varasto), 0);
+  assert.equal(palloTurvatilassa(varasto), false);
+  assert.ok(PALLON_TURVATILAN_UNOHDUS_MS >= 10000, 'vakaan istunnon mitta');
+  // Turvatila luetaan käynnistyksessä ja pelaaja saa yhden rivin.
+  const ui = lue('../js/ui.js');
+  assert.match(ui, /if \(palloTurvatilassa\(\)\) \{ this\.ilmoitaPallonTurvatila\(\); return false; \}/);
+  assert.match(ui, /Karttapallo pois käytöstä tällä laitteella — kytke päälle ratasvalikosta\./);
+  // Kaatumiset: WebGL puuttuu, rakentaminen kaatuu tai konteksti kuolee.
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /if \(!webglTuettu\(document\)\) \{\n\s+palloKaatui\(\);/);
+  assert.match(lauta, /addEventListener\('webglcontextlost', kontekstiKuoli\)/);
+  assert.match(lauta, /if \(uudelleenrakennuksia < 1\) \{/, 'yksi uudelleenrakennus ennen varapolkua');
+  assert.match(lauta, /ui\.pallolautaVarapolku\?\.\(\)/);
+  assert.match(lauta, /nollaaPallonKaatumiset\(\), PALLON_TURVATILAN_UNOHDUS_MS/);
+  // Kehittäjän/pelaajan vipu nollaa laskurin.
+  assert.match(lue('../index.html'), /id="kehittaja-pallo-turvatila-btn"/);
+  assert.match(lue('../js/main.js'), /palloTurvatilaNappi\?\.addEventListener\('click'/);
+});
+
+test('hover-raycast pois kosketuslaitteilla, napautus säilyy', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  // Kirjaston oma silmukka raycastaa joka kehys, kun tämä on päällä.
+  assert.match(lauta, /const kosketuslaite = Boolean\(globalThis\.matchMedia\?\.\('\(hover: none\)'\)\?\.matches\);/);
+  assert.match(lauta, /pallo\.enablePointerInteraction\?\.\(false\);/);
+  // Napautus tarvitsee raycastin: päälle sormen laskeutuessa (kaappaus
+  // ennen kirjaston omaa kuuntelijaa), pois vasta klikin jälkeen.
+  assert.match(lauta, /document\.addEventListener\('pointerdown', osoitinPaalle, true\);/);
+  assert.match(lauta, /pallo\.enablePointerInteraction\?\.\(true\);/);
+  assert.ok(OSOITTIMEN_JALKIVIIVE_MS >= 200 && OSOITTIMEN_JALKIVIIVE_MS <= 800);
 });

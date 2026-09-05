@@ -8,6 +8,7 @@ import { UI } from './ui.js';
 import {
   asetaKehittajaMaailma, asetaKehittajaTila, asetaLautaValinta,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, lautaValinta,
+  nollaaPallonKaatumiset, pallonKaatumiset, palloTurvatilassa,
 } from './ui-apurit.js';
 // Laitemittarin muistettu kytkin (hammasratasvalikko = ?mittari=1/0).
 import { asetaMittari, mittariPaalla } from './karttamittari.js';
@@ -121,7 +122,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1569';
+const APP_VERSION = '2026-08-09.1570';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1441,6 +1442,13 @@ const lataaEtusivupalloApurit = () => (etusivupalloHaku ??= import('./etusivupal
   .then((m) => { etusivupalloApurit = m; return m; })
   .catch(() => null));
 /*
+ * KARTTAPALLON TURVATILA (pallolauta vaihe 5c, karttapallo.md luku 6):
+ * kaksi kaatumista peräkkäin sulkee pallon tältä laitteelta, ja peli
+ * kertoo sen yhdellä rivillä. Tämä nappi on se "kehittäjän/pelaajan
+ * vipu", joka nollaa laskurin ja antaa pallolle uuden yrityksen.
+ */
+const palloTurvatilaNappi = document.getElementById('kehittaja-pallo-turvatila-btn');
+/*
  * ILMEPAKETTI (omistaja 5.9.2026, kartoituksen TOP 6 kohta 6): musteviiva,
  * karhea kehys ja kynäkorostus. Kytkin kääntää kolme lippua kerralla
  * (js/ilme.js asetaIlmePaketti) eikä vaadi sivulatausta: liput luetaan
@@ -1578,6 +1586,23 @@ function paivitaKehittajaValikko() {
         + '— kytke päälle nähdäksesi esirenderöidyn pallon, koneen ja isoisän '
         + 'aikalaiskuvat (sama kuin ?etusivupallo=1)';
   }
+  /*
+   * KARTTAPALLON TURVATILA (pallolauta vaihe 5c): laskuri kertoo, montako
+   * kertaa pallo on kaatunut peräkkäin tällä laitteella; kahden jälkeen
+   * peli avaa tasokartan. Nappi on nollain eikä kytkin — "päällä"
+   * tarkoittaa, että turvatila on ottanut pallon pois käytöstä.
+   */
+  const turvatila = palloTurvatilassa();
+  merkitseKytkin(palloTurvatilaNappi, turvatila);
+  if (palloTurvatilaNappi) {
+    palloTurvatilaNappi.title = turvatila
+      ? 'Karttapallo on POIS KÄYTÖSTÄ tällä laitteella: se kaatui kahdesti '
+        + 'peräkkäin. Napauta nollataksesi laskurin ja yrittääksesi palloa '
+        + 'uudelleen (sivu ladataan uudestaan)'
+      : `Karttapallon kaatumislaskuri: ${pallonKaatumiset()}. Kahden peräkkäisen `
+        + 'kaatumisen jälkeen peli avaa tasokartan ja kertoo siitä rivillä; '
+        + 'napautus nollaa laskurin';
+  }
   const ilme = ilmePakettiPaalla();
   merkitseKytkin(ilmeNappi, ilme);
   if (ilmeNappi) {
@@ -1698,6 +1723,19 @@ etusivupalloNappi?.addEventListener('click', () => {
       ? 'Etusivun pallo päälle: näkyy avaussivulla (uusi peli tai sivun lataus).'
       : 'Etusivun pallo pois: vanha etusivun kartta.');
   });
+});
+
+palloTurvatilaNappi?.addEventListener('click', () => {
+  const oliTurvatilassa = palloTurvatilassa();
+  nollaaPallonKaatumiset();
+  paivitaKehittajaValikko();
+  if (!oliTurvatilassa) {
+    naytaKehittajaVihje('Kaatumislaskuri nollattu.');
+    return;
+  }
+  // Turvatila purkautuu vasta käynnistyksessä (lauta valitaan silloin).
+  naytaKehittajaVihje('Karttapallo takaisin käyttöön — ladataan sivu…');
+  setTimeout(() => { location.reload(); }, 350);
 });
 
 ilmeNappi?.addEventListener('click', () => {

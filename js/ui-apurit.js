@@ -1588,6 +1588,72 @@ export function asetaLautaValinta(lauta) {
 }
 
 /*
+ * === KARTTAPALLON TURVATILA (pallolauta vaihe 5c) ===================
+ *
+ * docs/moduulit/karttapallo.md luku 6: WKWebView'n sisältöprosessi voi
+ * kaatua WebGL-kontekstin, laattojen ja pelin DOM:in yhteispainosta, ja
+ * kaatuminen näkyy pelaajalle logosilmukkana. Jos pallo kaatuu KAHDESTI
+ * PERÄKKÄIN samalla laitteella, seuraava käynnistys avaa tasokartan ja
+ * kertoo sen yhdellä rivillä — peli ei jää kaatumaan uudestaan.
+ *
+ * "PERÄKKÄIN" = laskuri nollautuu, kun pallo on pysynyt pystyssä
+ * TURVATILAN_UNOHDUS_MS ajan (js/pallolauta/lauta.js): yksi ohimenevä
+ * kaatuminen viikon takaa ei saa sulkea palloa. Kehittäjän ja pelaajan
+ * vipu (ratasvalikko) nollaa laskurin heti.
+ *
+ * Sama kaava kuin laudan valinnalla yllä: oma avain, try/catch (yksityinen
+ * selaus), muisti eikä levyluku joka piirrossa — pallolautaHalutaan
+ * kysyy tätä jokaisessa renderissä.
+ */
+export const PALLON_TURVATILAN_RAJA = 2;
+/** Kuinka kauan pallon on pysyttävä pystyssä, jotta laskuri nollataan. */
+export const PALLON_TURVATILAN_UNOHDUS_MS = 20000;
+const PALLON_KAATUMISET_AVAIN = 'matkakirja-pallo-kaatumiset';
+let kaatumisMuisti = null;
+
+/** Kaatumislaskuri laitteelta (muistista, jos jo luettu). */
+export function pallonKaatumiset(muisti = null) {
+  if (muisti !== null) return Number(muisti.getItem(PALLON_KAATUMISET_AVAIN)) || 0;
+  if (kaatumisMuisti !== null) return kaatumisMuisti;
+  try {
+    kaatumisMuisti = Number(localStorage.getItem(PALLON_KAATUMISET_AVAIN)) || 0;
+  } catch {
+    kaatumisMuisti = 0; // yksityinen selaus
+  }
+  return kaatumisMuisti;
+}
+
+/** Kirjaa kaatumisen ja palauttaa uuden lukeman. */
+export function palloKaatui(muisti = null) {
+  const luku = pallonKaatumiset(muisti) + 1;
+  if (muisti !== null) { muisti.setItem(PALLON_KAATUMISET_AVAIN, String(luku)); return luku; }
+  kaatumisMuisti = luku;
+  try {
+    localStorage.setItem(PALLON_KAATUMISET_AVAIN, String(luku));
+  } catch {
+    /* yksityinen selaus: laskuri jää tälle istunnolle */
+  }
+  return luku;
+}
+
+/** Nollaa laskurin (vakaa istunto tai ratasvalikon vipu). */
+export function nollaaPallonKaatumiset(muisti = null) {
+  if (muisti !== null) { muisti.removeItem(PALLON_KAATUMISET_AVAIN); return; }
+  if (kaatumisMuisti === 0) return;
+  kaatumisMuisti = 0;
+  try {
+    localStorage.removeItem(PALLON_KAATUMISET_AVAIN);
+  } catch {
+    /* yksityinen selaus */
+  }
+}
+
+/** Onko pallo suljettu tältä laitteelta kahden kaatumisen takia? */
+export function palloTurvatilassa(muisti = null) {
+  return pallonKaatumiset(muisti) >= PALLON_TURVATILAN_RAJA;
+}
+
+/*
  * PÖLLÖN LEHTIVINKKI (kevyt kulku -kokeilu, omistaja 24.8.2026, ilta).
  *
  * Raamatun KEVYT KULKU -KOKEILU: kun kaupunkilehti aukeaa, pöllö

@@ -767,7 +767,20 @@ export function paivitaEtusivupallo(ui, nakyy) {
      */
     esteet: (kehys) => {
       const oma = kehys.getBoundingClientRect();
-      return [ui.introPalsta, ui.introOtsikko, ui.introText]
+      /*
+       * Myös arkin säätimet ovat esteitä (kaappaus 5.9.2026: kuva jäi
+       * "Laita äänet päälle" -rivin ja Aloita-napin päälle): napit,
+       * äänirivi, valinnat ja linkit koko avausnäkymästä.
+       */
+      const intro = kehys.closest?.('#intro') ?? ui.introKartta?.closest?.('#intro') ?? null;
+      const doc = kehys.ownerDocument ?? document;
+      // Aloita seikkailu -portti (js/ui.js renderStartGate) on avausnäkymän
+      // päällä oma kerroksensa: äänirivi, nappi ja linkki.
+      const saatimet = [
+        ...(intro ? intro.querySelectorAll('button, label, a, .intro-aanet, .intro-valinta') : []),
+        ...doc.querySelectorAll('.start-gate-keskus, .start-aanet, .start-btn, .start-linkki'),
+      ];
+      return [ui.introPalsta, ui.introOtsikko, ui.introText, ...saatimet]
         .filter(Boolean)
         .map((el) => el.getBoundingClientRect())
         .filter((r) => r.width > 0 && r.height > 0)

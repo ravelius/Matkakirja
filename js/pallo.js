@@ -112,6 +112,119 @@ export function pallonLaattaluettelo() {
 }
 
 /*
+ * ======== KARKEA MAAILMA TALTEEN LENTOKONETTA VARTEN ================
+ * (pallolauta vaihe 5c, docs/moduulit/karttapallo.md luku 6: *"SW-
+ * välimuisti vendorille ja laatoille; varapolku + turvatila"*)
+ *
+ * Laattamoottori hakee vain sen, mitä kamera juuri katsoo. Ilman verkkoa
+ * avattu peli näkisi siis vain ne laatat, jotka on sattumalta katsottu
+ * aiemmin — ja koko pallon näkymässä ei mitään. Siksi pallolaudan
+ * ensimmäisellä avauksella palvelutyöntekijälle lähetetään lista
+ * osoitteita, jotka se hakee taustalla omaan koriinsa (sw.js
+ * LAATTACACHE, esilataaLaatat): KOKO MAAILMA tasoille 0–3 (85 laattaa,
+ * ~1 Mt) ja ALOITUSKAUPUNGIN ympäristö tasolle 4 (3 × 3 laattaa).
+ * Silloin lentotilassa pallo näyttää ainakin karkean maailman ja oman
+ * kaupungin ympäristön; tarkemmat tasot ovat korissa niiltä alueilta,
+ * joilla on jo pelattu.
+ *
+ * Geometria on TÄÄLLÄ eikä työntekijässä: laattojen kansio, tasokatto ja
+ * slippy map -koordinaatit ovat pallon omaa tietoa, ja työntekijä ei voi
+ * tuoda ES-moduulia.
+ */
+/** Esilataus: koko maailma tähän tasoon asti (0–3 = 85 laattaa). */
+export const ESILATAUKSEN_MAAILMATASO = 3;
+/** Esilataus: aloituskaupungin ympäristö tällä tasolla. */
+export const ESILATAUKSEN_KAUPUNKITASO = 4;
+/** Esilataus: kaupungin ympäriltä (2 · säde + 1)² laattaa. */
+export const ESILATAUKSEN_SADE = 1;
+/** Aloituskaupunki, jos pelaajan paikkaa ei tiedetä (Lontoo). */
+export const ESILATAUKSEN_KOTI = { lat: 51.5, lon: -0.12 };
+
+/** Slippy map -laatan (x, y) asteista tasolla `taso`. */
+export function laatanKoordinaatit(lat, lon, taso) {
+  const n = 2 ** taso;
+  const x = Math.floor((((lon + 180) % 360 + 360) % 360 / 360) * n);
+  const rad = (Math.max(-85.05, Math.min(85.05, lat)) * Math.PI) / 180;
+  const y = Math.floor(((1 - Math.log(Math.tan(rad) + 1 / Math.cos(rad)) / Math.PI) / 2) * n);
+  return { x: Math.max(0, Math.min(n - 1, x)), y: Math.max(0, Math.min(n - 1, y)) };
+}
+
+/** Esiladattavien laattojen osoitteet (koko maailma + kaupungin ympäristö). */
+export function esilatauksenLaatat({
+  lat = ESILATAUKSEN_KOTI.lat, lon = ESILATAUKSEN_KOTI.lon,
+  maailmataso = ESILATAUKSEN_MAAILMATASO, kaupunkitaso = ESILATAUKSEN_KAUPUNKITASO,
+  maxTaso = PALLO_LAATTATASO_MAX, sade = ESILATAUKSEN_SADE,
+} = {}) {
+  const osoitteet = [];
+  const maailma = Math.min(maailmataso, maxTaso);
+  for (let z = 0; z <= maailma; z += 1) {
+    const n = 2 ** z;
+    for (let y = 0; y < n; y += 1) {
+      for (let x = 0; x < n; x += 1) osoitteet.push(pallonLaatta(x, y, z));
+    }
+  }
+  const kz = Math.min(kaupunkitaso, maxTaso);
+  if (kz > maailma && Number.isFinite(lat) && Number.isFinite(lon)) {
+    const n = 2 ** kz;
+    const keski = laatanKoordinaatit(lat, lon, kz);
+    for (let dy = -sade; dy <= sade; dy += 1) {
+      for (let dx = -sade; dx <= sade; dx += 1) {
+        const y = keski.y + dy;
+        if (y < 0 || y >= n) continue;
+        osoitteet.push(pallonLaatta(((keski.x + dx) % n + n) % n, y, kz));
+      }
+    }
+  }
+  return osoitteet;
+}
+
+let esilatausLahetetty = false;
+/**
+ * Lähettää esilatauslistan palvelutyöntekijälle. Palauttaa lähetettyjen
+ * osoitteiden määrän, tai null jos työntekijää ei ole (yhden tiedoston
+ * versio, kehitys ilman SW:tä). Lähetetään kerran per istunto —
+ * työntekijä hakee laatat taustalla eikä peli jää odottamaan.
+ *
+ * `raportoi` saa työntekijän kuittauksen ({ pyydetty, uusia, jo, tavuja,
+ * kesto }), kun se saapuu; savukkeet mittaavat sillä esilatauksen.
+ */
+export async function esilataaPallolaatat(kohta = {}, nav = globalThis.navigator, raportoi = null) {
+  const tyontekijat = nav?.serviceWorker;
+  if (esilatausLahetetty || !tyontekijat) return null;
+  esilatausLahetetty = true;
+  const rekisteri = await Promise.resolve(tyontekijat.ready).catch(() => null);
+  const kohde = tyontekijat.controller ?? rekisteri?.active ?? null;
+  if (!kohde) { esilatausLahetetty = false; return null; }
+  const osoitteet = esilatauksenLaatat({ ...kohta, maxTaso: laattatasoMax(laattaluettelo) });
+  const viesti = { tyyppi: 'esilataa-pallolaatat', kansio: PALLO_LAATTAKANSIO, osoitteet };
+  if (raportoi && globalThis.MessageChannel) {
+    const kanava = new MessageChannel();
+    kanava.port1.onmessage = (e) => raportoi(e.data ?? null);
+    kohde.postMessage(viesti, [kanava.port2]);
+  } else {
+    kohde.postMessage(viesti);
+  }
+  return osoitteet.length;
+}
+
+/**
+ * Tukeeko laite WebGL:ää? Pallo ei ole ilman sitä mahdollinen, ja
+ * varapolku (tasokartta) on parempi kuin kaatunut kuori.
+ */
+export function webglTuettu(doc = document) {
+  try {
+    const kangas = doc.createElement('canvas');
+    const gl = kangas.getContext('webgl2') ?? kangas.getContext('webgl');
+    // Koekonteksti pois heti: selaimella on niitä vain kourallinen, ja
+    // pallo tarvitsee seuraavan itselleen.
+    gl?.getExtension('WEBGL_lose_context')?.loseContext();
+    return Boolean(gl);
+  } catch {
+    return false;
+  }
+}
+
+/*
  * MITKÄ NOSTOT OVAT PALLON LAATOISSA (pallolauta vaihe 3, karttapallo.md
  * luku 4.2: *"laattaversion vaihto nostotason mukana (luettelotiiviste:
  * mitkä nostot poltettu)"*). Pallon laatat ovat oma sarjansa, joka

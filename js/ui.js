@@ -35,7 +35,7 @@ import {
   pisteMonikulmiossa, polloNimilappu, polunPituus,
   cachedImage, cachedSummary, fokusmoodiPaalla,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, unohdaKehittajaKytkimet,
-  lautaValinta,
+  lautaValinta, palloTurvatilassa,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
 import { onAarre } from './tokens.js';
@@ -2821,6 +2821,8 @@ export class UI {
     this.pallolauta = null;
     this.pallolautaAvautuu = false;
     this.pallolautaEpaonnistui = false;
+    // Turvatilan rivi näytetään kerran istunnossa (ilmoitaPallonTurvatila).
+    this.pallonTurvatilaIlmoitettu = false;
     this.linssikartta = null;
     this.travelExpanded = false; // matkavalinnan toinen vaihe auki
     this.travelSuodatin = null; // 'sea' | 'air' | null — kumpi lista näytetään
@@ -3735,6 +3737,15 @@ export class UI {
 
   /** Halutaanko pallolauta juuri nyt: valinta, lauta ja pelin vaihe. */
   pallolautaHalutaan() {
+    if (this.pallolautaEpaonnistui || this.katselu || this.dead) return false;
+    if (lautaValinta() !== 'pallo') return false;
+    /*
+     * TURVATILA (vaihe 5c, karttapallo.md luku 6): kaksi kaatumista
+     * peräkkäin tällä laitteella → tasokartta ja yksi rivi. Laskuri on
+     * laitteen asetus (js/ui-apurit.js), ei pelitilan kenttä, ja
+     * ratasvalikon vipu nollaa sen.
+     */
+    if (palloTurvatilassa()) { this.ilmoitaPallonTurvatila(); return false; }
     if (!this.aloituslentoPallolla()) return false;
     // Pallo tuntee vain maailmankartan projektion (js/pallo.js PALLO_LAUTA).
     if (this.game.pack?.id !== 'maailmankartta') return false;
@@ -3842,6 +3853,21 @@ export class UI {
     if (this.kartta.lepotila) this.kartta.heraa();
     this.render();
     const box = this.buildToast({ kind: 'info', text: 'Karttapallo ei latautunut — pelataan kartalla.' });
+    setTimeout(() => this.removeToast(box), TOAST_MS.default * 3);
+  }
+
+  /**
+   * TURVATILAN RIVI (vaihe 5c): pallo on suljettu tältä laitteelta kahden
+   * kaatumisen jälkeen. Rivi näytetään kerran istunnossa — pallolautaHalutaan
+   * kysytään joka piirrossa, eikä ilmoitus saa toistua.
+   */
+  ilmoitaPallonTurvatila() {
+    if (this.pallonTurvatilaIlmoitettu || this.dead) return;
+    this.pallonTurvatilaIlmoitettu = true;
+    const box = this.buildToast({
+      kind: 'info',
+      text: 'Karttapallo pois käytöstä tällä laitteella — kytke päälle ratasvalikosta.',
+    });
     setTimeout(() => this.removeToast(box), TOAST_MS.default * 3);
   }
 

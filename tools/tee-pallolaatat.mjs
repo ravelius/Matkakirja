@@ -265,7 +265,20 @@ export function julisteenLeveysvali(luettelo) {
   const yP = millerY(p.pohjoinen);
   const kaannos = (laudanY) => ((Math.atan(Math.exp(-(laudanY / sk + yP) / 1.25)) - Math.PI / 4) / 0.4) / RAD;
   const { rajaus } = luettelo;
-  return { pohjoinen: kaannos(rajaus.y), etela: kaannos(rajaus.y + rajaus.h) };
+  /*
+   * VAIN KARTTA, EI ARKIN KALUSTEITA (löydös 5.9.2026 etusivun pallosta:
+   * julisteen kartussi "MATKAKIRJA" ja kehys näkyivät pallolla
+   * Jäämerellä). Rajaus kattaa arkin marginaalit kartan ylä- ja
+   * alapuolella (kehys, kartussi, painajanrivi), jotka kuuluvat
+   * tasokartalle mutta eivät pallon pinnalle. Pohjoisessa kartta
+   * päättyy projektion pohjoisreunaan (76°); etelässä arkin alakehys
+   * (kehys.ala px) vähennetään rajauksen alareunasta. Sen ulkopuoli
+   * täytetään merellä ja jäällä (laskeLaatta).
+   */
+  const pohjoinen = Math.min(kaannos(rajaus.y), p.pohjoinen);
+  const alakehys = Number(luettelo.kehys?.ala) || 0;
+  const etela = kaannos(rajaus.y + rajaus.h - alakehys);
+  return { pohjoinen, etela };
 }
 
 /** Laskee yhden Mercator-laatan RGB-puskurin. */

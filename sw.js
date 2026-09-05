@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1569';
+const CACHE = 'matkakirja-2026-08-09.1570';
 const SHELL = [
   './',
   './index.html',
@@ -1416,6 +1416,216 @@ const AANICACHE = 'matkakirja-aanet-v1';
  */
 const VENDORCACHE = 'matkakirja-vendor-v1';
 
+/*
+ * ======== PALLON LAATAT OMAAN KORIINSA (pallolauta vaihe 5c) =========
+ *
+ * Karttapallo on pelin lauta (Raamattu 5.9.2026, KARTTAPALLO ON
+ * PELILAUTA), ja sen pinta tulee ämpäristä Web Mercator -laattoina
+ * (js/pallo.js pallonLaatta). Ilman omaa koria lentokoneessa avattu
+ * peli näyttäisi tyhjän pallon: laatat ovat toisessa originissa eikä
+ * niitä ole SHELLissä (niitä on kymmeniä tuhansia).
+ *
+ * NELJÄ SÄÄNTÖÄ:
+ *
+ * 1. VÄLIMUISTI ENSIN, EIKÄ KOSKAAN UUDESTAAN. Laatan osoitteessa on
+ *    kansion nimessä versio (<versio>-nostot), ja ämpäri lähettää
+ *    `immutable`-otsakkeen: saman osoitteen sisältö ei muutu koskaan.
+ *    Kerran haettu laatta luetaan siis aina korista.
+ * 2. KORILLA ON KATTO. Z0–Z8 on yli 87 000 laattaa; ilman kattoa kori
+ *    kasvaisi satoihin megatavuihin ja selain kaataisi sen kokonaan
+ *    (silloin menisi myös se karkea maailma, joka lentokoneessa
+ *    tarvitaan). Katto on LAATTAKATTO laattaa ≈ 30 Mt (mitattu laatta
+ *    8–14 kt), ja ylityksessä poistetaan vanhimmat.
+ *
+ *    POISTOJÄRJESTYS ON KIRJOITUSJÄRJESTYS, EI VIIMEISIN KÄYTTÖ. Cache
+ *    API:n `keys()` palauttaa avaimet siinä järjestyksessä kuin ne on
+ *    kirjoitettu, joten FIFO on ilmainen: ei omaa kirjanpitoa, ei
+ *    IndexedDB:tä, ei ylimääräistä kirjoitusta jokaisesta osumasta.
+ *    Aito LRU vaatisi joko `delete`+`put`-parin JOKAISELLA osumalla
+ *    (kaksi kirjoitusta jokaista piirrettyä laattaa kohden) tai
+ *    erillisen aikaleimatietokannan — kumpikin on tässä kalliimpi kuin
+ *    se, mitä niillä voitetaan: laatat ovat muuttumattomia, ja
+ *    uudelleen haettu laatta maksaa yhden pyynnön.
+ * 3. LUETTELO (laatat.json) ON LYHYELLÄ VÄLIMUISTILLA: korin kappale
+ *    tarjotaan heti ja uusi haetaan sen rinnalla (stale-while-
+ *    revalidate). Luettelo kertoo, mihin tasoon asti laattoja on ajettu
+ *    (js/pallo.js laatatSaatavilla) ja muuttuu ajojen myötä saman nimen
+ *    alla, joten se ei saa jäädä pysyvästi voimaan — mutta pallo ei
+ *    myöskään saa odottaa verkkoa käynnistyessään.
+ * 4. VANHA KANSIO SIIVOTAAN, kun PALLO_LAATTAKANSIO vaihtuu: kansion
+ *    nimi on osa osoitetta, joten vanhat laatat tunnistaa polusta.
+ *    Siivous ajetaan activatessa (uusi versio = uusi laattakansio).
+ *
+ * Kori EI tyhjene versionvaihdossa (kuten kuvat, äänet ja kirjastot):
+ * laatta ei vanhene pelin version mukana.
+ */
+const LAATTACACHE = 'matkakirja-pallolaatat-v1';
+/** Laattojen polku ämpärissä (js/pallo.js PALLO_LAATAT). */
+const LAATTAPOLKU = '/julisteet/pallo/laatat/';
+/**
+ * Nykyinen laattakansio (js/pallo.js PALLO_LAATTAKANSIO). Kaksoiskappale
+ * on tahallinen: palvelutyöntekijä ei voi tuoda ES-moduulia, ja
+ * tests/sw.test.mjs vartioi, että luvut ovat samat.
+ */
+const LAATTAKANSIO = '2026-09-03a-nostot';
+/** Laattoja korissa enintään (≈ 30 Mt; yksi laatta 8–14 kt). */
+const LAATTAKATTO = 3000;
+/** Kerralla poistettava erä: yksi keys()-ajo riittää sadoiksi laatoiksi. */
+const LAATTASIIVOUS = 200;
+/** Esilatauksen rinnakkaiset noudot (ei pursketa ämpäriä). */
+const LAATTAESILATAUKSEN_LEVEYS = 6;
+
+/** Onko osoite pallon laatta tai sen luettelo (peili tai paikallinen peili)? */
+const PALLOLAATTA = (osoite) => osoite.pathname.includes(LAATTAPOLKU);
+
+/*
+ * Laattojen määrä muistissa, jotta keys() ei aja jokaisella laatalla —
+ * ja laskuri siitä, montako laattaa on kirjoitettu viimeisimmän
+ * todellisen mittauksen jälkeen. Palvelutyöntekijä nukahtaa ja unohtaa
+ * luvun; silloin se mitataan uudestaan.
+ */
+let laattojaKorissa = null;
+let laattojaMittauksesta = 0;
+let laattasiivousKesken = false;
+
+/**
+ * Poistaa vanhimmat laatat, jos katto ylittyy (FIFO, ks. sääntö 2).
+ *
+ * Korin todellinen koko MITATAAN (keys()) kolmessa tilanteessa: kun
+ * lukua ei tiedetä (työntekijä on juuri herännyt), kun arvio lähestyy
+ * kattoa, ja joka tapauksessa erän välein — arvio on vain arvio, sillä
+ * koria voi muuttaa myös toinen välilehti tai selaimen oma siivous.
+ * Mitattu 5.9.2026: keys() 3 000 laatan korista noin 200 ms, eli erän
+ * (LAATTASIIVOUS) välein ajettuna se on 1 ms laattaa kohden.
+ */
+async function siivoaLaatat(kori) {
+  laattojaMittauksesta += 1;
+  const arvio = laattojaKorissa ?? Infinity;
+  if (arvio + LAATTASIIVOUS < LAATTAKATTO && laattojaMittauksesta < LAATTASIIVOUS) return;
+  if (laattasiivousKesken) return;
+  laattasiivousKesken = true;
+  try {
+    const avaimet = await kori.keys();
+    laattojaKorissa = avaimet.length;
+    laattojaMittauksesta = 0;
+    if (avaimet.length <= LAATTAKATTO) return;
+    const poistettavat = avaimet
+      .filter((p) => !p.url.endsWith('laatat.json'))
+      .slice(0, Math.max(0, avaimet.length - LAATTAKATTO + LAATTASIIVOUS));
+    await Promise.all(poistettavat.map((p) => kori.delete(p).catch(() => {})));
+    laattojaKorissa = avaimet.length - poistettavat.length;
+  } finally {
+    laattasiivousKesken = false;
+  }
+}
+
+/** Laatta: välimuisti ensin, talletus ensimmäisellä piirrolla. */
+async function laattaPeilista(pyynto) {
+  const kori = await caches.open(LAATTACACHE);
+  const osuma = await kori.match(pyynto.url);
+  if (osuma) return osuma;
+  const vastaus = await fetch(pyynto.url, { mode: 'cors' }).catch(() => null);
+  if (vastaus && vastaus.ok) {
+    // Kiintiön täyttyminen ei saa jättää laattaa piirtymättä.
+    await kori.put(pyynto.url, vastaus.clone()).catch(() => {});
+    if (laattojaKorissa !== null) laattojaKorissa += 1;
+    void siivoaLaatat(kori);
+    return vastaus;
+  }
+  return fetch(pyynto).catch(() => vastaus ?? Response.error());
+}
+
+/**
+ * Laattaluettelo: korin kappale heti, päivitys taustalla (sääntö 3).
+ *
+ * Pallo EI SAA ODOTTAA verkkoa: luettelo luetaan ennen ensimmäistäkään
+ * laattaa (js/pallo.js laatatSaatavilla), ja hidas tai roikkuva pyyntö
+ * jättäisi laudan tyhjäksi juuri käynnistyksessä. Siksi vanha kappale
+ * kelpaa heti ja uusi haetaan sen rinnalla: uusi taso (esim. Z8) tulee
+ * käyttöön seuraavassa käynnistyksessä. Ilman koria odotetaan verkkoa.
+ */
+function laattaluettelo(event) {
+  const { url } = event.request;
+  return caches.open(LAATTACACHE).then(async (kori) => {
+    const paivitys = fetch(url, { mode: 'cors' })
+      .then((v) => {
+        if (v && v.ok) kori.put(url, v.clone()).catch(() => {});
+        return v;
+      })
+      .catch(() => null);
+    const osuma = await kori.match(url);
+    if (osuma) {
+      event.waitUntil(paivitys);
+      return osuma;
+    }
+    const tuore = await paivitys;
+    if (tuore && tuore.ok) return tuore;
+    return fetch(event.request).catch(() => tuore ?? Response.error());
+  });
+}
+
+/*
+ * ESILATAUS: KARKEA MAAILMA TALTEEN (sama malli kuin kuvien
+ * etukäteispuskurilla — pelaaja ei odota sitä, mutta se on paikalla,
+ * kun verkko katkeaa). Peli lähettää listan osoitteita, kun pallolauta
+ * on avattu (js/pallo.js esilataaPallolaatat: koko maailma tasoille
+ * 0–3 ja aloituskaupungin ympäristö tasolle 4), ja työntekijä hakee ne
+ * taustalla korkeintaan kuutena rinnakkaisena noutona. Lista tulee
+ * sivulta eikä työntekijältä, koska laattojen geometria ja kansio
+ * asuvat js/pallo.js:ssä — yksi totuus.
+ */
+async function esilataaLaatat(osoitteet, portti) {
+  const alku = Date.now();
+  const kori = await caches.open(LAATTACACHE);
+  const jono = (Array.isArray(osoitteet) ? osoitteet : [])
+    .filter((u) => typeof u === 'string' && u.includes(`${LAATTAPOLKU}${LAATTAKANSIO}/`))
+    .slice(0, LAATTAKATTO);
+  let seuraava = 0;
+  let uusia = 0;
+  let jo = 0;
+  let tavuja = 0;
+  const nouda = async () => {
+    while (seuraava < jono.length) {
+      const url = jono[seuraava];
+      seuraava += 1;
+      if (await kori.match(url)) { jo += 1; continue; }
+      const vastaus = await fetch(url, { mode: 'cors' }).catch(() => null);
+      if (!vastaus || !vastaus.ok) continue;
+      const kopio = vastaus.clone();
+      await kori.put(url, vastaus).catch(() => {});
+      uusia += 1;
+      if (laattojaKorissa !== null) laattojaKorissa += 1;
+      tavuja += (await kopio.arrayBuffer().catch(() => ({ byteLength: 0 }))).byteLength;
+      // Katto pitää myös pitkän esilatauksen aikana (erän välein mitattu).
+      await siivoaLaatat(kori);
+    }
+  };
+  await Promise.all(Array.from(
+    { length: Math.min(LAATTAESILATAUKSEN_LEVEYS, jono.length) }, nouda,
+  ));
+  await siivoaLaatat(kori);
+  portti?.postMessage({
+    tyyppi: 'pallolaatat-esiladattu', pyydetty: jono.length, uusia, jo, tavuja, kesto: Date.now() - alku,
+  });
+}
+
+/** Vanhan laattakansion laatat pois, kun kansio vaihtuu (sääntö 4). */
+async function siivoaVanhatLaatat() {
+  const kori = await caches.open(LAATTACACHE).catch(() => null);
+  if (!kori) return;
+  const nykyinen = `${LAATTAPOLKU}${LAATTAKANSIO}/`;
+  const avaimet = await kori.keys();
+  const vanhat = avaimet.filter((p) => !new URL(p.url).pathname.includes(nykyinen));
+  await Promise.all(vanhat.map((p) => kori.delete(p).catch(() => {})));
+  laattojaKorissa = avaimet.length - vanhat.length;
+}
+
+self.addEventListener('message', (event) => {
+  const viesti = event.data;
+  if (!viesti || viesti.tyyppi !== 'esilataa-pallolaatat') return;
+  event.waitUntil(esilataaLaatat(viesti.osoitteet, event.ports?.[0] ?? null));
+});
+
 /**
  * Osittaisvastaus (206) välimuistista noudetusta kokonaisesta äänestä.
  *
@@ -1502,9 +1712,13 @@ self.addEventListener('activate', (event) => {
       .keys()
       .then((keys) => Promise.all(
         keys.filter((k) => k !== CACHE && k !== KUVACACHE && k !== AANICACHE && k !== VENDORCACHE
+          && k !== LAATTACACHE
           // Lukijaäänen pysyvät säilöt (js/puhe.js) eivät ole tämän
           // workerin omia — siivous ei saa tuhota niitä versionvaihdossa.
           && !k.startsWith('matkakirja-puhe-')).map((k) => caches.delete(k))))
+      // Pallon laattakori jää, mutta vanhan laattakansion laatat pois
+      // (pallolauta vaihe 5c, sääntö 4): kansio on osa osoitetta.
+      .then(() => siivoaVanhatLaatat().catch(() => {}))
       .then(() => self.clients.claim()),
   );
 });
@@ -1515,6 +1729,19 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   const osoite = new URL(event.request.url);
+  /*
+   * PALLON LAATAT ENNEN MUITA (pallolauta vaihe 5c): laatta tunnistetaan
+   * POLUSTA eikä palvelimen nimestä, jotta sama haara palvelee ämpäriä
+   * ja paikallista peiliä (savuke-pallolaatat-offline ajaa laatat oman
+   * palvelimensa kautta — palvelutyöntekijän fetch ohittaa Playwrightin
+   * page.routen, joten muuta tapaa mitata tätä haaraa ei ole).
+   */
+  if (PALLOLAATTA(osoite)) {
+    event.respondWith(osoite.pathname.endsWith('/laatat.json')
+      ? laattaluettelo(event)
+      : laattaPeilista(event.request));
+    return;
+  }
   // Ulkoisista kutsuista välimuistitetaan vain wikikuvat (kuva kerran
   // nähtynä latautuu heti ja toimii offline). Muut ulkoiset kutsut
   // (esim. Wikipedian tiivistelmä-JSON) menevät suoraan verkkoon.

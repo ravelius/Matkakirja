@@ -63,14 +63,18 @@
  */
 
 import {
-  LAATU_LEPOVIIVE_MS, PALLO_LAUTA, asennaPallonEleet, laatatSaatavilla, lataaPallokirjasto,
-  pallonKaupungit, pallonNostoOnPoltettu, rakennaPallo,
+  LAATU_LEPOVIIVE_MS, PALLO_LAATTATASO_MAX, PALLO_LAUTA, asennaPallonEleet, esilataaPallolaatat,
+  laatatSaatavilla, laattatasoMax, lataaPallokirjasto,
+  pallonKaupungit, pallonNostoOnPoltettu, rakennaPallo, webglTuettu,
 } from '../pallo.js';
 import { asemoiFokuskohde } from '../fokuskohteet.js';
 import { laudaltaAsteiksi } from '../fokusmitat.js';
 import { pixelOf, posKey } from '../rules.js';
-import { kehittajaMaailmaPaalla, kehittajaTilaPaalla } from '../ui-apurit.js';
-import { PALLOKAMERAN_AJO_MS, luoPallokamera } from './kamera.js';
+import {
+  PALLON_TURVATILAN_UNOHDUS_MS, kehittajaMaailmaPaalla, kehittajaTilaPaalla,
+  nollaaPallonKaatumiset, palloKaatui,
+} from '../ui-apurit.js';
+import { PALLOKAMERAN_AJO_MS, PALLO_KORKEUS_MAX, luoPallokamera } from './kamera.js';
 import { MERKIN_KORKEUS, luoMerkit } from './merkit.js';
 import { NIMIEN_KATTO, luoNimet } from './nimet.js';
 import {
@@ -111,6 +115,23 @@ export const NAPAUTUKSEN_SADE_PX = 44;
 export const HTML_MERKKIEN_KATTO = 60;
 /** Ladonnan lepoviive: sama hetki kuin laadun palautus (js/pallo.js). */
 export const LADONNAN_LEPOVIIVE_MS = LAATU_LEPOVIIVE_MS;
+/**
+ * Laattojen esilataus (vaihe 5c) käynnistetään vasta tämän jälkeen: ensin
+ * pelaajan oma näkymä latautuu, sitten karkea maailma taustalle koriin.
+ */
+export const ESILATAUKSEN_VIIVE_MS = 3000;
+/**
+ * Hover-raycast pois kosketuslaitteilla (karttapallo.md luku 6): Globe.gl
+ * raycastaa 261 pistettä + polut JOKA KEHYS niin kauan kuin
+ * enablePointerInteraction on päällä (kirjaston oma silmukka, jarru 50 ms)
+ * — hiirettömällä laitteella siitä ei ole mitään hyötyä, koska
+ * hiirivihjettä ei ole. Napautus tarvitsee sen silti: kirjasto lukee
+ * klikissä viimeisimmän osuman (hoverObj), joten raycast kytketään päälle
+ * sormen laskeutuessa (documentin kaappausvaiheessa, ennen kirjaston omaa
+ * pointerdown-kuuntelijaa, jotta kirjasto ehtii lukea sormen paikan) ja
+ * pois tämän viiveen jälkeen, kun kirjaston oma klikki on käsitelty.
+ */
+export const OSOITTIMEN_JALKIVIIVE_MS = 400;
 
 /** Pisteen väri: käyty kultaa, aloituskaupunki vaaleaa, muut mustetta. */
 export function kaupunkipisteenVari(kaupunki) {
@@ -124,6 +145,14 @@ export function pallonAsteet(kohta) {
   if (!kohta || !Number.isFinite(kohta.x) || !Number.isFinite(kohta.y)) return null;
   return laudaltaAsteiksi(PALLO_LAUTA, kohta.x, kohta.y);
 }
+
+/*
+ * Kuinka monta kertaa pallo on rakennettu uudestaan WebGL-kontekstin
+ * menetyksen jälkeen TÄSSÄ istunnossa. Yksi yritys riittää: toinen
+ * menetys tarkoittaa, ettei laite jaksa palloa juuri nyt, ja peli
+ * putoaa tasokartalle (ui.pallolautaVarapolku).
+ */
+let uudelleenrakennuksia = 0;
 
 /** Avoinna oleva kelluva kortti (nielu: sulkeva napautus ei avaa uutta). */
 const KORTTIVALITSIN = '.fokuskohde-popup, .elaintaky-kerros, .skandaali-kerros, .hetki-kerros,'
@@ -149,6 +178,17 @@ export async function avaaPallolauta(ui) {
   void kuori.getBoundingClientRect();
   kuori.classList.add('esilla');
 
+  /*
+   * WEBGL PUUTTUU (vaihe 5c): vanha selain tai laite, jolta WebGL on
+   * kytketty pois. Kuori pois ja varapolku — kaatuva Globe.gl jättäisi
+   * pelin tyhjän ruudun ääreen. Tämä lasketaan kaatumiseksi: toinen
+   * peräkkäinen vie turvatilaan (js/ui-apurit.js).
+   */
+  if (!webglTuettu(document)) {
+    palloKaatui();
+    kuori.remove();
+    return null;
+  }
   let Globe = null;
   try {
     Globe = await lataaPallokirjasto();
@@ -161,7 +201,17 @@ export async function avaaPallolauta(ui) {
 
   const kotelo = kuori.querySelector('.pallo-kotelo');
   const tila = kuori.querySelector('.pallo-tila');
-  const pallo = rakennaPallo(Globe, kotelo, laatat);
+  let pallo = null;
+  try {
+    pallo = rakennaPallo(Globe, kotelo, laatat);
+  } catch (syy) {
+    // Kirjasto latautui mutta konteksti ei syntynyt (muisti loppu,
+    // ohjain kaatui): sama tie kuin puuttuvalla WebGL:llä.
+    console.warn('Karttapalloa ei voitu rakentaa.', syy);
+    palloKaatui();
+    kuori.remove();
+    return null;
+  }
   const eleet = asennaPallonEleet(pallo, kotelo, ui);
   // Lauta ei pyöri itsekseen: se on pelilauta, ei näyteikkuna.
   pallo.controls().autoRotate = false;
@@ -191,7 +241,113 @@ export async function avaaPallolauta(ui) {
   lehtivahti?.observe(ui.arrivalDialog, { attributes: true, attributeFilter: ['open'] });
 
   /* ---- kamera ------------------------------------------------------ */
-  const kamera = luoPallokamera({ pallo, kotelo, ui, lauta: PALLO_LAUTA, heraa });
+  /*
+   * LÄHIN KORKEUS TULEE LAATOISTA (vaihe 5c, karttapallo.md luku 6):
+   * kamera ei mene laattojen tarkkuuden alle. Syvin taso on
+   * laattaluettelon oma (laatat.json tasot.max, katto
+   * PALLO_LAATTATASO_MAX = 8); ilman luetteloa pallo piirtyy
+   * z4-varatekstuurista, jolloin raja lasketaan Z7:stä — muuten
+   * pelaaja jäisi katsomaan koko palloa.
+   */
+  const laattataso = laatat ? laattatasoMax(laatat) : PALLO_LAATTATASO_MAX - 1;
+  const kamera = luoPallokamera({
+    pallo, kotelo, ui, lauta: PALLO_LAUTA, heraa, laattataso,
+  });
+  /*
+   * SAMA RAJA MYÖS SORMELLE: kamera-ajot kulkevat kameran kautta, mutta
+   * nipistys ja rulla kulkevat OrbitControlsin läpi. minDistance on
+   * kirjaston oma katto pallon säteessä (etäisyys = säde · (1 + korkeus)).
+   */
+  const pallonSade = pallo.getGlobeRadius();
+  const tahdistaZoomirajat = () => {
+    const ohj = pallo.controls();
+    ohj.minDistance = pallonSade * (1 + kamera.korkeusMin());
+    ohj.maxDistance = pallonSade * (1 + PALLO_KORKEUS_MAX);
+  };
+  tahdistaZoomirajat();
+
+  /* ---- WebGL-kontekstin menetys: yksi uudelleenrakennus, sitten varapolku --- */
+  /*
+   * KONTEKSTI VOI KUOLLA KESKEN PELIN (karttapallo.md luku 6 ja riski 1):
+   * WKWebView vapauttaa GPU-muistia taustalta palatessa tai muistipiikissä,
+   * ja silloin selain lähettää canvasille webglcontextlost — kuva jäätyy
+   * mustaksi eikä three.js palaudu itsestään. Ensimmäisellä kerralla pallo
+   * rakennetaan kerran uudestaan (kuori pois, avaaPallolauta uudestaan);
+   * jos konteksti kuolee heti uudestaan, pudotaan tasokartalle tälle
+   * istunnolle. Kumpikin kirjataan kaatumislaskuriin: kaksi peräkkäistä
+   * sulkee pallon tältä laitteelta (turvatila, js/ui-apurit.js).
+   */
+  const kangas = pallo.renderer?.()?.domElement ?? null;
+  let konteksiMennyt = false;
+  /** Valmis lauta-olio (asetetaan lopussa) — kontekstin purkua varten. */
+  let omaLauta = null;
+  const kontekstiKuoli = (e) => {
+    // preventDefault sallii selaimen palauttaa kontekstin (webglcontextrestored).
+    e?.preventDefault?.();
+    if (konteksiMennyt) return;
+    konteksiMennyt = true;
+    palloKaatui();
+    clearTimeout(vakausAjastin);
+    // omaLauta asetetaan vasta lopussa: jos konteksti kuolee kesken
+    // rakentamisen, puretaan pelkkä kuori (lauta-oliota ei vielä ole).
+    if (omaLauta) {
+      if (ui.pallolauta === omaLauta) ui.pallolauta = null;
+      omaLauta.pura();
+    } else {
+      kuori.remove();
+    }
+    // Uudelleenrakennus vain kerran per istunto (modulin oma laskuri).
+    if (uudelleenrakennuksia < 1) {
+      uudelleenrakennuksia += 1;
+      void ui.avaaPallolauta?.();
+      return;
+    }
+    ui.pallolautaVarapolku?.();
+  };
+  kangas?.addEventListener('webglcontextlost', kontekstiKuoli);
+
+  /* ---- hover-raycast pois kosketuslaitteilla (OSOITTIMEN_JALKIVIIVE_MS) --- */
+  const kosketuslaite = Boolean(globalThis.matchMedia?.('(hover: none)')?.matches);
+  let osoitinAjastin = 0;
+  const osoitinPaalle = (e) => {
+    if (!kotelo.contains(e.target)) return;
+    clearTimeout(osoitinAjastin);
+    pallo.enablePointerInteraction?.(true);
+  };
+  const osoitinPois = () => {
+    clearTimeout(osoitinAjastin);
+    osoitinAjastin = setTimeout(() => {
+      if (!eleet.sormet.alhaalla) pallo.enablePointerInteraction?.(false);
+    }, OSOITTIMEN_JALKIVIIVE_MS);
+  };
+  if (kosketuslaite) {
+    pallo.enablePointerInteraction?.(false);
+    // Kaappausvaiheessa dokumentista: kirjaston oma pointerdown-kuuntelija
+    // on kotelossa ja lukee sormen paikan vasta jos raycast on jo päällä.
+    document.addEventListener('pointerdown', osoitinPaalle, true);
+    kotelo.addEventListener('pointerup', osoitinPois);
+    kotelo.addEventListener('pointercancel', osoitinPois);
+  }
+
+  /* ---- laattojen esilataus ja vakaa istunto ------------------------- */
+  /*
+   * KARKEA MAAILMA KORIIN (vaihe 5c): palvelutyöntekijä hakee taustalla
+   * tasot 0–3 ja oman kaupungin ympäristön, jotta lentotilassa avattu peli
+   * näyttää pallon eikä tyhjää palloa (js/pallo.js esilataaPallolaatat,
+   * sw.js esilataaLaatat). Vasta pelaajan oman näkymän jälkeen.
+   */
+  const esilatausAjastin = setTimeout(() => {
+    const oma = ui.game?.cityOf?.();
+    const kohta = oma && ui.game.board ? pixelOf(ui.game.board, { type: 'city', city: oma.id }) : null;
+    const asteet = pallonAsteet(kohta);
+    void esilataaPallolaatat(asteet ? { lat: asteet.lat, lon: asteet.lon } : {});
+  }, ESILATAUKSEN_VIIVE_MS);
+  /*
+   * VAKAA ISTUNTO NOLLAA KAATUMISLASKURIN: turvatila koskee vain kahta
+   * PERÄKKÄISTÄ kaatumista (js/ui-apurit.js). Kun pallo on ollut pystyssä
+   * PALLON_TURVATILAN_UNOHDUS_MS, edelliset kaatumiset unohdetaan.
+   */
+  const vakausAjastin = setTimeout(() => nollaaPallonKaatumiset(), PALLON_TURVATILAN_UNOHDUS_MS);
 
   /* ---- ruutupisteet ------------------------------------------------ */
   /**
@@ -645,7 +801,12 @@ export async function avaaPallolauta(ui) {
   };
 
   /* ---- mitat, näkyvyys ja purku -------------------------------------- */
-  const mitoita = () => { pallo.width(kotelo.clientWidth).height(kotelo.clientHeight); pyydaLadonta(); };
+  const mitoita = () => {
+    pallo.width(kotelo.clientWidth).height(kotelo.clientHeight);
+    // Ruudun leveys on osa laattojen tarkkuusrajaa (vaihe 5c).
+    tahdistaZoomirajat();
+    pyydaLadonta();
+  };
   const kokovahti = new ResizeObserver(mitoita);
   kokovahti.observe(kotelo);
 
@@ -693,6 +854,15 @@ export async function avaaPallolauta(ui) {
     piilota: () => { kuori.hidden = true; noppaTakaisin(); tahdistaLepo(); },
     pura: () => {
       clearTimeout(lepoAjastin);
+      clearTimeout(esilatausAjastin);
+      clearTimeout(vakausAjastin);
+      clearTimeout(osoitinAjastin);
+      kangas?.removeEventListener('webglcontextlost', kontekstiKuoli);
+      if (kosketuslaite) {
+        document.removeEventListener('pointerdown', osoitinPaalle, true);
+        kotelo.removeEventListener('pointerup', osoitinPois);
+        kotelo.removeEventListener('pointercancel', osoitinPois);
+      }
       document.removeEventListener('pointerdown', korttivahti, true);
       ohjaimet.removeEventListener('change', pyydaLadonta);
       valovahti.disconnect();
@@ -722,6 +892,7 @@ export async function avaaPallolauta(ui) {
   // Instanssi talteen mittausta ja savukkeita varten (sama kenttä kuin
   // valikkopallolla).
   ui.pallonInstanssi = pallo;
+  omaLauta = lauta;
   paivita();
   tila.textContent = '';
   tila.hidden = true;
