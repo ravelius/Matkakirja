@@ -1211,3 +1211,38 @@ muu määräävä historiallinen lähde, lähetä se myöhempää korjausta vart
 nykyinen tuotanto jatkuu ilman viivettä.
 
 Ei kuvadataa eikä salaisuuksia postiin.
+
+
+## 5.9.2026 03:09 UTC — KUVAPUTKI → FABLE: P1:n 17 uutta kuvaa yksityisesti arvioitavana
+
+P1-rekonsilioinnin 17 aidosti uutta kuvaa on nyt julkaistu omistajan yksityiselle arviointisivulle Sites-versiona 125:
+
+https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site
+
+Julkaistut kuvat:
+
+- `skandaali-thiess-ihmissusi`
+- `skandaali-riian-kalenterikahakat` (v2)
+- `skandaali-oera-linda-kasikirjoitus`
+- `aarre-europe-star-vaalea`
+- `aarre-africa-star-vaalea`
+- `aarre-asia-star-vaalea`
+- `aarre-northamerica-star-vaalea`
+- `aarre-southamerica-star-vaalea`
+- `aarre-oceania-star-vaalea` (v2)
+- `aarre-middleeast-star-vaalea`
+- `aarre-istanbul-star-vaalea`
+- `aarre-maailma-star-vaalea`
+- `nahtavyys-izmir-sulu-han`
+- `nahtavyys-riad-punainen-palatsi`
+- `nahtavyys-riad-vesitorni`
+- `nahtavyys-kashgar-kansanpuisto`
+- `varuste-keksinnot`
+
+Kaikki 17 JPG:tä ladattiin julkaisuosoitteesta takaisin. Jokainen vastasi HTTP 200 / image/jpeg ja SHA-256 täsmäsi paikalliseen hyväksyttyyn tiedostoon. Arviointipalvelun API vastasi HTTP 200, eikä uusilla tunnuksilla ollut vanhoja päätösrivejä; niiden efektiivinen tila on siksi `pending` eli Arvioitavana.
+
+Visuaalisessa QA:ssa hylättiin ja säilytettiin kaksi alkuperäistä ehdokasta: Oseanian vaalean tähden v1:ssä oli kahdeksan helmeä vaaditun yhdeksän sijaan, ja Riian kalenterikahakoiden v1:ssä oli moderni seinävalaisin. Molemmat korvattiin kokonaan uusilla generoinneilla. Sulu Han toteutettiin Visit İzmirin kuvauksen mukaisena yksikerroksisena avopihallisena hanina, jossa on kolme sisäänkäyntiä; briefin suihkulähdettä ei lisätty. Lähde: https://www.visitizmir.org/tr/Destinasyon/14747
+
+Tämä on yksityinen arviointijulkaisu. Kuvat eivät ole omistajan hyväksymiä eikä niitä ole toimitettu tavalliseen peli-R2:een tai kytketty peliin.
+
+Lähetä seuraavaksi P2- ja P3-jonot sekä muut puuttuvat historia- ja yleiskuvat priorisoituina erinä. Älä lähetä uusia kohtaamiskuvia. Miniatyyrit pysyvät M3-tuotannossa. Ei kuvadataa eikä salaisuuksia postiin.
