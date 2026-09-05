@@ -63,6 +63,14 @@ on:
         description: Generoi myös etusivun ja avauslennon luennat
         type: boolean
         default: false
+      kaaret:
+        description: >-
+          Tarinakaarien luennat (tools/generoi-kaari.mjs --mykistetyt):
+          kaupunkien avaimet välilyönnein, joiden mykistetyt-kenttien
+          osat generoidaan (esim. "lontoo dubrovnik odessa"). Tyhjä = ei
+          kaariluentoja. Mykistys puretaan käsin ajon jälkeen.
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -95,7 +103,7 @@ jobs:
           echo "Avain löytyy."
 
       - name: Tarkista että jotain on tilattu
-        if: ${{ inputs.kaupungit == '' && inputs.avaus == false }}
+        if: ${{ inputs.kaupungit == '' && inputs.avaus == false && inputs.kaaret == '' }}
         run: |
           echo "::error::Ei mitään generoitavaa — anna kaupungit ja/tai avaus."
           exit 1
@@ -119,6 +127,12 @@ jobs:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
         run: node tools/generoi-luennat.mjs ${{ inputs.kaupungit }}
 
+      - name: Generoi kaariluennat
+        if: ${{ inputs.kaaret != '' }}
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+        run: node tools/generoi-kaari.mjs --mykistetyt ${{ inputs.kaaret }}
+
       - name: Committoi tuotos omalle haaralleen
         run: |
           set -euo pipefail
@@ -131,6 +145,6 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           haara="claude/luennat-${{ github.run_number }}"
           git checkout -b "$haara"
-          git commit -m "Luennat: ${{ inputs.avaus == true && 'avaus ' || '' }}${{ inputs.kaupungit }}"
+          git commit -m "Luennat: ${{ inputs.avaus == true && 'avaus ' || '' }}${{ inputs.kaupungit }}${{ inputs.kaaret != '' && ' kaaret: ' || '' }}${{ inputs.kaaret }}"
           git push -u origin "$haara"
           echo "Valmis. Haara: $haara — kuuntele luennat ja tee PR."

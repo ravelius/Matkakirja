@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1607, teksti: 'Raamattu: illan linjaukset; kaariluennat tyonkulkuun' },
   { v: 1606, teksti: 'Pulun toinen kupla paattyy ohjeeseen' },
   { v: 1605, teksti: 'Pulu lukee tervetuloa-ohjeet pollon sahkeesta' },
   { v: 1604, teksti: 'Tasokartan moduulit laiskoiksi (-0,9 Mt kaynnistys)' },
