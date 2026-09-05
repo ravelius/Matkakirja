@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1566, teksti: 'Kehittajan kohtaamislista maanosittain' },
   { v: 1565, teksti: 'Pallolauta vaihe 4: linssikartta' },
   { v: 1564, teksti: 'Pollon kuplat: vieritys ei avaa chattia, yksi liike' },
   { v: 1563, teksti: 'Sivunkaanto: lehti kaantyy kuin kirja' },
