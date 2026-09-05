@@ -13,6 +13,19 @@ suunnitteluhistoria (luvut 0, 7 ja 8) jäi arkistoon
 docs/arkisto/linssit-suunnitelma.md. Tiivis tekijän polku on
 CONTRIBUTING.md:n "Uuden linssin lisääminen".)*
 
+**PELILAUTA VAIHTUI 5.9.2026 — TÄMÄN OHJEEN "KARTTA" ON LINSSIKARTTA.**
+Pelin lauta on karttapallo (Raamattu › KARTTAPALLO ON PELILAUTA;
+docs/moduulit/karttapallo.md), ja tässä dokumentissa kuvattu tasokartta
+(js/kartta.js, `svg#board`, `g.board-root`) herää enää LINSSIN AJAKSI:
+linssin valinta matkalaukusta avaa sen kuoreen pallon päälle, ja
+valinnan purku nukuttaa sen takaisin. Omistajan linjaus sanatarkasti:
+*"Linssit voi olla vanhalla kartalla."* Jokainen luku 1–5 pätee siis
+sellaisenaan — kerrosjärjestys, rajaus, suodatinkiellot ja selite ovat
+ennallaan — mutta kartta ei ole enää pelin pohja vaan linssin oma
+näyttämö. Sama tasokartta on myös pelaajan PALAUTUSOPTIO: päävalikon
+Pelilauta-rivi (tai `?lauta=kartta`) palauttaa sen laudaksi tälle
+laitteelle, jolloin linssit toimivat kuten ennenkin.
+
 ## 1. Linssikerroksen arkkitehtuuri
 
 ### 1.1 DOM-kohta: oma **elävä** kerros juuriryhmän sisällä
