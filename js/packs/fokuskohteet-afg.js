@@ -95,7 +95,10 @@ export const FOKUSKOHTEET_AFG = [
       + 'alkaen, ja patsaiden ympärillä on satoja luolia, joiden seiniä '
       + 'koristavat 500–700-luvuilla maalatut kuvat. Tšingis-kaanin '
       + 'joukot valtasivat laakson 1221 mutta jättivät patsaat '
-      + 'koskematta.',
+      + 'koskematta. Taleban räjäytti molemmat patsaat maaliskuussa 2001; '
+      + 'kallio, tyhjät syvennykset ja maalatut luolat ovat yhä '
+      + 'paikallaan, ja laakso on vuodesta 2003 ollut Unescon '
+      + 'maailmanperintökohde.',
     lahde: 'en-Wikipedia "Buddhas of Bamiyan", johdanto sekä osiot '
       + '"History" ja "Artworks" (tarkistettu 27.8.2026).',
     /*

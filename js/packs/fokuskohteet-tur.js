@@ -1466,7 +1466,10 @@ export const FOKUSKOHTEET_TUR = [
       + 'marmorialttari, neljäkymmentä jalkaa korkea, ja siinä on '
       + 'kolossaalisia veistoksia." Rakennelma purettiin osittain '
       + '600-luvulla, kun akropolis linnoitettiin, ja 1800-luvulla '
-      + 'paikallinen väki käytti rinnettä kivilouhoksena.',
+      + 'paikallinen väki käytti rinnettä kivilouhoksena. Saksalaiset '
+      + 'kaivaukset nostivat friisin palat esiin 1878–1886, ja alttarin '
+      + 'länsisivu portaineen on koottu uudelleen Berliinin '
+      + 'Pergamonmuseumiin; Bergamassa on jäljellä perustus.',
     lahde: 'en-Wikipedia "Pergamon Altar", johdanto sekä osiot '
       + '"Endowment and dating", "Function", "Until the close of '
       + 'antiquity", "From antiquity to 19th century excavations" ja '
