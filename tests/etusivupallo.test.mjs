@@ -30,11 +30,15 @@ globalThis.location = { search: '' };
 const {
   ETUSIVUN_KAMERA, ETUSIVUN_KUVAKIERTO, ETUSIVUN_REITTI, ETUSIVUPALLO_AVAIN,
   ETUSIVUPALLO_TIEDOSTOT, ETUSIVUPALLO_VERSIO, HAIVYTYS_S,
-  asetaEtusivupallo, etusivupalloPaalla, jaljenPisteet, kameranNakyma, koneenTila,
+  asetaEtusivupallo, etusivupalloOletus, etusivupalloPaalla, jaljenPisteet,
+  kameranNakyma, koneenTila,
   kaarietaisyys, liikeVahennetty, lueLuettelo, pallonPiste, reitinPisteet, saapumisenKuva,
   saapumisia, suurympyra, teeReitti, valitseKuvapaikka,
 } = await import('../js/etusivupallo.js');
 const { packById } = await import('../js/pack.js');
+// Laudan valinta muistetaan moduulissa (ui-apurit): oletus seuraa lautaa,
+// joten testin on unohdettava muisti aina kun ?lauta vaihtuu.
+const { unohdaKehittajaKytkimet } = await import('../js/ui-apurit.js');
 
 const pack = packById('maailmankartta');
 const pisteet = reitinPisteet(pack);
@@ -43,22 +47,45 @@ const MITAT = { leveys: 800, korkeus: 800, lava: 900, fov: 50 };
 
 /* ==================== LIPPU JA VARAPOLKU ========================== */
 
-test('lippu on oletuksena POIS ja URL voittaa muistin', () => {
+/*
+ * OLETUS SEURAA LAUTAA (aalto 1D, omistaja 5.9.2026: *"Käännä kaikki
+ * pallolle, niin voidaan sulkea vanha kartta kokonaan."*): pallolaudalla
+ * etusivun pallo on käytössä ilman lippua, ja lippu on enää poiskytkin.
+ */
+test('lippu on oletuksena PÄÄLLÄ pallolaudalla ja pois ?lauta=kartta-tilassa', () => {
   varasto.clear();
   globalThis.location.search = '';
-  assert.equal(etusivupalloPaalla(), false,
-    'etusivun pallo ei saa olla päällä ennen kuin omistaja on nähnyt sen');
-  asetaEtusivupallo(true);
-  assert.equal(varasto.get(ETUSIVUPALLO_AVAIN), '1');
-  assert.equal(etusivupalloPaalla(), true);
-  globalThis.location.search = '?etusivupallo=0';
-  assert.equal(etusivupalloPaalla(), false, 'URL ohittaa muistin');
+  unohdaKehittajaKytkimet();
+  assert.equal(etusivupalloOletus(), true, 'pallolauta on oletuslauta → pallo etusivulle');
+  assert.equal(etusivupalloPaalla(), true, 'pallolaudalla pallo näkyy ilman yhtään lippua');
+  globalThis.location.search = '?lauta=kartta';
+  unohdaKehittajaKytkimet();
+  assert.equal(etusivupalloOletus(), false, 'vanhalla kartalla etusivu jää pienoiskarttaan');
+  assert.equal(etusivupalloPaalla(), false);
   globalThis.location.search = '';
+  unohdaKehittajaKytkimet();
+});
+
+test('lippu on poiskytkin: URL voittaa muistin ja oletus poistaa avaimen', () => {
+  varasto.clear();
+  globalThis.location.search = '';
+  unohdaKehittajaKytkimet();
+  // Vipu pois: valinta on tallennettava, koska se eroaa oletuksesta.
   asetaEtusivupallo(false);
-  assert.equal(varasto.has(ETUSIVUPALLO_AVAIN), false, 'pois kytkeminen poistaa avaimen');
+  assert.equal(varasto.get(ETUSIVUPALLO_AVAIN), '0');
+  assert.equal(etusivupalloPaalla(), false, 'muistettu poiskytkentä pitää');
   globalThis.location.search = '?etusivupallo=1';
-  assert.equal(etusivupalloPaalla(), true, 'URL kytkee päälle ilman muistia');
+  assert.equal(etusivupalloPaalla(), true, 'URL ohittaa muistin');
+  globalThis.location.search = '?etusivupallo=0';
+  assert.equal(etusivupalloPaalla(), false, 'URL sammuttaa myös ilman muistia');
   globalThis.location.search = '';
+  // Takaisin oletukseen: avain poistuu, jotta oletuksen vaihto tavoittaa
+  // myös ne laitteet, joilla vipua on käytetty (sama kaava kuin laudalla).
+  asetaEtusivupallo(true);
+  assert.equal(varasto.has(ETUSIVUPALLO_AVAIN), false);
+  assert.equal(etusivupalloPaalla(), true);
+  varasto.clear();
+  unohdaKehittajaKytkimet();
 });
 
 test('luettelo hylätään ilman verkkoa, väärällä versiolla ja vajaana', async () => {
@@ -271,9 +298,17 @@ test('js/ui.js kutsuu moduulia yhdestä koukusta dynaamisella tuonnilla', () => 
   assert.equal(koukut.length, 1, 'koukkuja saa olla tasan yksi (renderIntro)');
   assert.match(ui, /import\('\.\/etusivupallo\.js'\)[\s\S]{0,160}?\.catch\(/,
     'tuonnin on kaaduttava siististi (dist ja verkoton käynnistys)');
+  // Yhden tiedoston versiossa moduulia ei ole: etusivu palaa vanhaan
+  // pienoiskarttaan, joten kaatunut tuonti herättää tasokartan.
+  assert.match(ui, /\.catch\(\(\) => \{[\s\S]{0,600}?this\.kartta\.heraa\(\);/,
+    'kaatunut tuonti herättää tasokartan (dist)');
   assert.doesNotMatch(ui, /^import .*etusivupallo/m,
     'staattinen tuonti veisi moduulin yhden tiedoston versioon');
   assert.match(ui, /paivitaEtusivupallo\(this, nakyy\)/);
+  // Purku ei odota moduulia (aalto 1D): vipu sammuttaa kerroksen samassa
+  // piirrossa, jossa tasokartta herää takaisin vanhaksi pienoiskartaksi.
+  assert.match(ui, /this\.etusivupallo\?\.pura\(\);\n\s*this\.etusivupallo = null;/,
+    'poiskytkentä purkaa kerroksen synkronisesti');
 });
 
 test('moduuli on SHELLissä muttei yhden tiedoston nipussa', () => {
@@ -291,7 +326,31 @@ test('kehittäjävalikossa on oma vipu ja se kääntää lipun ilman sivulataust
   assert.match(main, /etusivupalloNappi\?\.addEventListener\('click'/);
   assert.match(main, /import\('\.\/etusivupallo\.js'\)/,
     'main.js hakee moduulin dynaamisesti — staattinen tuonti rikkoisi dist-version');
-  assert.match(main, /ui\?\.renderIntro\?\.\(\)/, 'vipu piirtää etusivun heti uudelleen');
+  // Koko piirto eikä pelkkä renderIntro: pois kytkettäessä tasokartan on
+  // herättävä lepotilasta, jotta vanha pienoiskartta palaa ilman sivulatausta.
+  assert.match(main, /ui\?\.render\?\.\(\)/, 'vipu piirtää pelin heti uudelleen');
+  assert.match(main, /poiskytkin/, 'vivun teksti kertoo uuden oletuksen');
+});
+
+/*
+ * TASOKARTTA EI ALUSTU ETUSIVUA VARTEN (aalto 1D, karttapallo.md luku 3:
+ * "vanha kartta pysyy pois tieltä"). Ennen tätä erää pallolaudankin
+ * avausnäkymä piirsi svg#boardiin 188 elementtiä pelkän pienoiskartan
+ * takia. Portti on yksi: js/ui.js etusivunPalloKaytossa.
+ */
+test('pallolaudalla tasokarttaa ei alusteta etusivua varten', () => {
+  const ui = lue('../js/ui.js');
+  assert.match(ui, /etusivunPalloKaytossa\(\) \{\n\s*return this\.aloituslentoPallolla\(\) && etusivupalloPaalla\(\);/,
+    'portti lukee laudan ja lipun samasta paikasta');
+  assert.match(ui, /if \(this\.pallolautaHalutaan\(\) \|\| this\.etusivunPalloKaytossa\(\)\) this\.kartta\.lepotila = true;/,
+    'mount panee kartan lepotilaan jo ennen ensimmäistä piirtoa');
+  assert.match(ui, /this\.etusivunPalloKaytossa\(\) && this\.game\.phase === 'pickstart'/,
+    'render ei herätä karttaa lähtövalinnassa (paivitaPallolauta)');
+  // Lähtökaupunki valitaan yhä tasokartalta: nappi herättää kartan, jotta
+  // kohdepisteet (drawTargets) ovat olemassa, kun lähikuva avautuu.
+  const nappi = ui.match(/ {2}aloitaKartalta\(\) \{[\s\S]*?\n {2}\}\n/)[0];
+  assert.match(nappi, /if \(this\.kartta\.lepotila && !this\.pallolauta\) \{\n\s*this\.kartta\.heraa\(\);/,
+    'Valitse aloituskaupunki herättää tasokartan lepotilasta');
 });
 
 test('ämpärin polut ja tiedostonimet ovat samat työkalussa ja pelissä', () => {

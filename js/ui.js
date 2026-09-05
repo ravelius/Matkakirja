@@ -35,7 +35,7 @@ import {
   pisteMonikulmiossa, polloNimilappu, polunPituus,
   cachedImage, cachedSummary, fokusmoodiPaalla,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, unohdaKehittajaKytkimet,
-  lautaValinta, palloTurvatilassa,
+  lautaValinta, palloTurvatilassa, etusivupalloPaalla,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
 import { onAarre } from './tokens.js';
@@ -2904,7 +2904,16 @@ export class UI {
      * pysyy pois tieltä"*). Pallo itse avataan renderistä
      * (paivitaPallolauta), ja jos se ei lataudu, kartta herää varapolkuna.
      */
-    if (this.pallolautaHalutaan()) this.kartta.lepotila = true;
+    /*
+     * ETUSIVU ON MYÖS PALLOA (aalto 1D, omistaja 5.9.2026: *"Käännä
+     * kaikki pallolle, niin voidaan sulkea vanha kartta kokonaan."*).
+     * Lähtövalinnassa pallolautaHalutaan on vielä epätosi (pelin lauta
+     * otetaan vasta kaupungin valinnasta), mutta tasokarttaa ei silti
+     * alusteta: avausnäkymän pienoiskartan tilalla on esirenderöity
+     * pallovideo (js/etusivupallo.js). Ilman tätä svg#board sai 188
+     * elementtiä ja laattapyramidi heräisi pelkkää etusivua varten.
+     */
+    if (this.pallolautaHalutaan() || this.etusivunPalloKaytossa()) this.kartta.lepotila = true;
     else this.drawBoardFor(this.game.pack);
     /*
      * NOPPA KARTAN SIIRTOKUOREEN, EI KARTTARUUTUUN (#98). Kuori on se
@@ -3780,6 +3789,21 @@ export class UI {
     return lautaValinta() === 'pallo';
   }
 
+  /**
+   * Onko AVAUSNÄKYMÄN pallo käytössä (aalto 1D)? Jos on, tasokarttaa ei
+   * alusteta etusivua varten lainkaan: ylälohkon täyttää esirenderöity
+   * pallovideo (js/etusivupallo.js), ja jos video ei lataudu, lohkoon
+   * jää pergamentti ja julisteotsikko — ei koskaan tyhjää ruutua.
+   *
+   * Lippu on enää poiskytkin (?etusivupallo=0 tai ratasvalikon vipu):
+   * pois kytkettynä tämä on epätosi ja etusivu palaa vanhaan
+   * pienoiskarttaan. Sama koskee `?lauta=kartta`-tilaa, joka poistuu
+   * vasta aallossa 3 (docs/moduulit/karttapallo.md luku 10).
+   */
+  etusivunPalloKaytossa() {
+    return this.aloituslentoPallolla() && etusivupalloPaalla();
+  }
+
   /** Onko pallo ruudulla pelin lautana (kartta nukkuu, pallo näkyy)? */
   pallolautaPaalla() {
     return Boolean(this.pallolauta && this.kartta.lepotila);
@@ -3802,6 +3826,13 @@ export class UI {
       return;
     }
     if (this.pallolautaHalutaan() && !this.pallolautaAvautuu) void this.avaaPallolauta();
+    /*
+     * ETUSIVU EI HERÄTÄ KARTTAA (aalto 1D). Lähtövalinnassa pallolautaa
+     * ei vielä haluta, mutta lepotila on tarkoituksellinen: etusivun
+     * pallo hoitaa ylälohkon, ja kartta herää vasta jos pallolauta
+     * kaatuu (pallolautaVarapolku) tai lippu käännetään pois.
+     */
+    else if (this.etusivunPalloKaytossa() && this.game.phase === 'pickstart') { /* pallo on etusivulla */ }
     else if (!this.pallolautaAvautuu && this.kartta.heraa()) {
       // Lepotila ilman palloa (esim. valinta vaihtui): kartta hereille.
       this.render();
@@ -14985,16 +15016,41 @@ export class UI {
     // terävä, ja portilla on oma tummennuksensa.
     this.introEl.classList.toggle('intro-aloitettu', Boolean(nakyy && this.aloitettu));
     /*
-     * ETUSIVUN ESIRENDERÖITY PALLO (pallolauta vaihe 5a, omistaja
-     * 5.9.2026). Yksi koukku: moduuli lukee lipun (oletus POIS),
-     * hakee videon ämpäristä ja purkaa itsensä. Dynaaminen tuonti
-     * kaatuu yhden tiedoston versiossa kuten linsseillä ja
-     * pallolaudalla, ja ilman verkkoa kerros ei synny — kummassakin
-     * tapauksessa etusivu jää vanhaan karttaan.
+     * ETUSIVUN ESIRENDERÖITY PALLO (pallolauta vaihe 5a, oletukseksi
+     * aallossa 1D). Yksi koukku: moduuli lukee lipun (oletus PÄÄLLÄ
+     * pallolaudalla, pois `?lauta=kartta`-tilassa), hakee videon
+     * ämpäristä ja purkaa itsensä. Dynaaminen tuonti kaatuu yhden
+     * tiedoston versiossa kuten linsseillä ja pallolaudalla, ja ilman
+     * verkkoa kerros ei synny: tasokartalla etusivu jää vanhaan
+     * karttaan, pallolaudalla pelkäksi pergamentiksi (karttaa ei
+     * herätetä — etusivunPalloKaytossa).
      */
-    if (nakyy || this.etusivupallo) {
+    if (nakyy && etusivupalloPaalla()) {
       void import('./etusivupallo.js')
-        .then((m) => m.paivitaEtusivupallo(this, nakyy)).catch(() => {});
+        .then((m) => m.paivitaEtusivupallo(this, nakyy))
+        .catch(() => {
+          /*
+           * MODUULIA EI OLE (yhden tiedoston versio): silloin etusivun
+           * pallo on mahdoton, ja vanha pienoiskartta on ainoa etusivu —
+           * kartta herätetään lepotilasta, johon mount sen pani. Tämä on
+           * eri asia kuin verkkovika: siinä moduuli on olemassa ja päättää
+           * itse jättää ylälohkon pergamentiksi.
+           */
+          if (this.kartta.lepotila && !this.pallolauta) {
+            this.kartta.heraa();
+            this.render();
+          }
+        });
+    } else {
+      /*
+       * PURKU ON SYNKRONINEN eikä odota moduulia (aalto 1D): kehittäjän
+       * vipu sammuttaa kerroksen SAMASSA piirrossa, jossa tasokartta
+       * herää — muuten ruudulla olisi hetken sekä pallo että vanha
+       * pienoiskartta. Kesken oleva avaus (etusivupalloAvautuu) purkaa
+       * itsensä moduulin omassa vartiossa.
+       */
+      this.etusivupallo?.pura();
+      this.etusivupallo = null;
     }
     if (!nakyy) {
       this.introShown = false;
@@ -15093,6 +15149,18 @@ export class UI {
     // Häivytys ensin ja zoomaus vasta sen alettua: kartta saa liikkua
     // pehmenevän tekstin alla eikä ruutu välähdä tyhjäksi väliltä.
     this.introEl.classList.add('intro-fade');
+    /*
+     * LÄHTÖKAUPUNKI VALITAAN YHÄ TASOKARTALTA (aalto 1D). Etusivun pallo
+     * pitää kartan lepotilassa koko avausnäkymän ajan, mutta tämä nappi
+     * avaa saman lähikuvan kuin ennenkin — kartta herätetään vasta
+     * TÄSSÄ, jolloin alustus (svg#board, kohdepisteet) maksetaan
+     * napautuksesta eikä etusivun avauksesta. Kun lähtövalintakin
+     * siirtyy pallolle, tämä herätys poistuu (karttapallo.md luku 10).
+     */
+    if (this.kartta.lepotila && !this.pallolauta) {
+      this.kartta.heraa();
+      this.render();
+    }
     const lontoo = this.game.board.cityById.get(ALOITUSLENNON_LAHTO);
     this.kartta.zoomaaAloituskartta(lontoo ? { x: lontoo.x, y: lontoo.y } : null);
   }

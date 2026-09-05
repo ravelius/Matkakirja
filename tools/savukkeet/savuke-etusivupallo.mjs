@@ -25,15 +25,24 @@
  *       ULKOPUOLELLE: kortti ei leikkaa avaustekstin laatikkoa
  *       (.intro-palsta, #intro-text) eikä julisteotsikkoa, ja
  *       kuvateksti on sanasta sanaan js/isoisan-valokuvat.js:n lappu.
+ *   E1d Tasokarttaa EI alusteta etusivua varten (aalto 1D): kartta on
+ *       lepotilassa ja svg#board tyhjä koko avausnäkymän ajan.
  *   E5  Lippu pois → ENTINEN ETUSIVU: .intro-kartassa on vain
  *       julisteotsikko, ei etusivupallo-elementtiä eikä
- *       .intro-pallolla-luokkaa; sama DOM kuin ilman koko moduulia.
+ *       .intro-pallolla-luokkaa; sama DOM kuin ilman koko moduulia, ja
+ *       vanha pienoiskartta on hereillä.
  *   E6  Vipu purkaa kerroksen ilman sivulatausta (kehittäjävalikon
- *       tapa: lippu pois + renderIntro).
+ *       tapa: lippu '0' + render).
  *   E7  Reduced motion: ei <video>-elementtiä lainkaan, pysäytyskuva
  *       tilalla ja kone paikallaan.
- *   E8  Ei verkkoa (etusivu.json ei vastaa): kerrosta ei synny,
- *       etusivu jää ennalleen.
+ *   E8  Ei verkkoa (etusivu.json ei vastaa): kerrosta ei synny eikä
+ *       karttaa herätetä — etusivu on pelkkää paperia julisteotsikon
+ *       kanssa.
+ *
+ * LIPPU ON POISKYTKIN (aalto 1D, omistaja 5.9.2026: *"Käännä kaikki
+ * pallolle, niin voidaan sulkea vanha kartta kokonaan."*): oletus on
+ * PÄÄLLÄ pallolaudalla, ja savukkeen `lippu: false` kirjoittaa
+ * muistiin '0' niin kuin ratasvalikon vipukin.
  *
  * ── MISTÄ VIDEO TULEE TÄSSÄ SAVUKKEESSA ───────────────────────────
  *
@@ -185,11 +194,15 @@ async function avaaSivu({
     viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, reducedMotion,
     serviceWorkers: 'block',
   });
+  /*
+   * LIPPU ON POISKYTKIN (aalto 1D): oletus seuraa lautaa, joten pallolla
+   * pelkkä avaimen poisto EI enää sammuta kerrosta — pois kytkeminen
+   * kirjoittaa '0' (js/ui-apurit.js asetaEtusivupallo).
+   */
   await ctx.addInitScript((paalla) => {
     try {
       localStorage.setItem('matkakirja-kehittaja', '1');
-      if (paalla) localStorage.setItem('matkakirja-etusivupallo', '1');
-      else localStorage.removeItem('matkakirja-etusivupallo');
+      localStorage.setItem('matkakirja-etusivupallo', paalla ? '1' : '0');
     } catch { /* yksityinen tila */ }
   }, lippu);
   const sivu = await ctx.newPage();
@@ -224,8 +237,15 @@ async function avaaSivu({
     }
     route.fulfill(await ampariValimuisti.get(url));
   });
-  // ?lauta=kartta: etusivun vanha pienoiskartta on tämän erän vertailukohta.
-  await sivu.goto(`${osoite}?lauta=kartta`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  /*
+   * OLETUSLAUTA (aalto 1D): savuke ajetaan siinä tilassa, jossa peli
+   * käynnistyy — pallolaudalla. Vaiheessa 5a tässä oli `?lauta=kartta`,
+   * koska etusivun pallo oli lipun takana ja vertailukohta oli vanha
+   * pienoiskartta; nyt vertailukohta tehdään lipun poiskytkimellä
+   * (avaaSivu { lippu: false }), jolloin sama ajo mittaa myös sen,
+   * ettei tasokarttaa alusteta turhaan (E1d).
+   */
+  await sivu.goto(osoite, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await sivu.waitForFunction(() => window.matkakirja?.ui?.introEl, null, { timeout: 60000 });
   return { ctx, sivu, virheet };
 }
@@ -264,6 +284,14 @@ const LUE_TILA = () => {
     tekstiLaatikko: laatikko(document.getElementById('intro-text')),
     otsikkoLaatikko: laatikko(document.querySelector('.intro-juliste')),
     aika: document.querySelector('.etusivupallo-video')?.currentTime ?? null,
+    /*
+     * TASOKARTTA POIS TIELTÄ (aalto 1D): pallolaudalla avausnäkymän
+     * pienoiskarttaa ei alusteta lainkaan — svg#board jää tyhjäksi ja
+     * js/kartta.js on lepotilassa. Lipulla pois vanha kartta piirtyy
+     * entiseen tapaan, ja nämä kaksi lukua erottavat tilat toisistaan.
+     */
+    lepotila: window.matkakirja?.ui?.kartta?.lepotila ?? null,
+    laudanOsia: document.querySelector('svg#board')?.querySelectorAll('*').length ?? null,
   };
 };
 
@@ -318,6 +346,9 @@ if (koevideo) {
       `ensimmäinen lapsi "${alku.ekaLapsi}", otsikko jälkeen: ${alku.otsikkoJalkeen}`);
     vaadi('E1c video on kerroksessa ja soi', alku.videoita === 1 && alku.aika !== null,
       `videoita ${alku.videoita}, aika ${alku.aika}`);
+    vaadi('E1d tasokarttaa ei alusteta etusivua varten (lepotila, svg#board tyhjä)',
+      alku.lepotila === true && alku.laudanOsia === 0,
+      `lepotila ${alku.lepotila}, laudan osia ${alku.laudanOsia}`);
 
     await sivu.waitForTimeout(1500);
     const keski = await sivu.evaluate(LUE_TILA);
@@ -358,8 +389,10 @@ if (koevideo) {
 
     /* E6: vipu pois ilman sivulatausta. */
     const purettu = await sivu.evaluate(() => {
-      localStorage.removeItem('matkakirja-etusivupallo');
-      window.matkakirja.ui.renderIntro();
+      localStorage.setItem('matkakirja-etusivupallo', '0');
+      // Koko piirto kuten vivussa (js/main.js): pallolaudalla tasokartta
+      // herää samalla lepotilasta vanhaksi pienoiskartaksi.
+      window.matkakirja.ui.render();
       return new Promise((ok) => setTimeout(() => ok({
         kerros: Boolean(document.querySelector('.etusivupallo')),
         luokka: document.querySelector('.intro')?.classList.contains('intro-pallolla'),
@@ -384,6 +417,11 @@ if (koevideo) {
     tila.kartanLapsia === 1 && !html.includes('etusivupallo') && html.includes('intro-juliste'),
     `lapsia ${tila.kartanLapsia}`);
   vaadi('E5c sumuverho on ennallaan (ei .intro-pallolla)', !tila.pallollaLuokka);
+  // Poiskytkin palauttaa myös vanhan pienoiskartan: kartta on hereillä ja
+  // svg#board piirretty (aalto 1D — muuten ylälohkoon jäisi pergamentti).
+  vaadi('E5d vanha pienoiskartta on hereillä lipulla pois',
+    tila.lepotila === false && tila.laudanOsia > 0,
+    `lepotila ${tila.lepotila}, laudan osia ${tila.laudanOsia}`);
   const kehysaika = await mittaaKehysaika(sivu);
   tieto('kehysaika etusivulla, pallo POIS (vertailukohta)',
     `p50 ${kehysaika.p50} ms, p95 ${kehysaika.p95} ms (${kehysaika.kehyksia} kehystä)`);
@@ -418,8 +456,14 @@ if (koevideo) {
   const { ctx, sivu } = await avaaSivu({ lippu: true, aineisto: false });
   await sivu.waitForTimeout(3000);
   const tila = await sivu.evaluate(LUE_TILA);
-  vaadi('E8 ilman aineistoa etusivu jää ennalleen',
-    !tila.kerros && tila.kartanLapsia === 1, `lapsia ${tila.kartanLapsia}`);
+  /*
+   * Ilman aineistoa kerrosta ei synny — eikä tasokarttaa herätetä
+   * (aalto 1D): ylälohkoon jää pergamentti ja julisteotsikko, ei
+   * koskaan tyhjää ruutua.
+   */
+  vaadi('E8 ilman aineistoa etusivu on pelkkää paperia eikä kartta herää',
+    !tila.kerros && tila.kartanLapsia === 1 && tila.lepotila === true && tila.laudanOsia === 0,
+    `lapsia ${tila.kartanLapsia}, lepotila ${tila.lepotila}, laudan osia ${tila.laudanOsia}`);
   await ctx.close();
 }
 

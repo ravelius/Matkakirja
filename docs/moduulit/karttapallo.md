@@ -675,3 +675,39 @@ tiloissa; pisteitä varten `js/pallolauta/lauta.js` tarvitsee ehdon
 `vertailu-tila` tai `maatiedot-tila` → epätosi) sekä nimien katoksi 0
 `ladoLevossa`-funktiossa, ja luokkien vaihto on jo kuunneltu
 (`valovahti`-MutationObserver → `paivitaPisteet` + `pyydaLadonta`).
+
+**Aalto 1D — etusivu pallolle (5.9.2026).** (1) Etusivun
+esirenderöity pallo (js/etusivupallo.js, vaihe 5a) on PALLOLAUDALLA
+OLETUS ilman lippua; lippu jäi poiskytkimeksi (`?etusivupallo=0`,
+ratasvalikon vipu), ja `?lauta=kartta` pitää etusivun vielä vanhassa
+pienoiskartassa (poistuu aallossa 3). (2) Lippu muutti osoitetta: se
+asuu nyt js/ui-apurit.js:ssä laudan valinnan vieressä ja
+js/etusivupallo.js vie sen edelleen ulos, koska js/ui.js:n mount päättää
+ENNEN ensimmäistä piirtoa, alustetaanko tasokartta — se ei voi odottaa
+dynaamista tuontia. Oletus on `lautaValinta() === 'pallo'`, ja
+poiskytkentä tallentuu arvona '0' (oletuksen mukainen valinta poistaa
+avaimen, kuten laudalla). (3) TASOKARTTA EI ALUSTU ETUSIVUA VARTEN:
+mount panee `kartta.lepotila`n päälle myös lähtövalinnassa
+(`etusivunPalloKaytossa`), ja renderin pallohaara ei enää herätä karttaa
+pickstart-vaiheessa. Mitattu 390×844 dpr 2: svg#board 188 → **0
+elementtiä**, pyramidipyyntöjä 0 (oli 0 jo ennestään, koska avausnäkymä
+ei zoomaa). (4) LÄHTÖKAUPUNKI VALITAAN YHÄ TASOKARTALTA: "Valitse
+aloituskaupunki" herättää kartan lepotilasta (js/ui.js aloitaKartalta),
+joten alustus maksetaan vasta napautuksesta eikä avausnäkymästä —
+lähikuva, kohdepisteet ja Livian repliikit ovat entisellään. Kun
+lähtövalintakin siirtyy pallolle, tämä herätys poistuu. (5) Varapolut:
+reduced motion → juliste ilman videota; verkkovika tai vanhentunut
+luettelo → kerrosta ei synny EIKÄ karttaa herätetä, jolloin ylälohkoon
+jää pergamentti ja julisteotsikko (pelkkä paperi, ei koskaan tyhjä
+ruutu); dist → dynaaminen tuonti kaatuu ja kartta HERÄTETÄÄN, jolloin
+yhden tiedoston versio saa entisen pienoiskarttansa. (6) Vivun
+poiskytkentä purkaa kerroksen SYNKRONISESTI js/ui.js:ssä ja pyytää koko
+piirron (js/main.js), jolloin vanha pienoiskartta herää samassa
+piirrossa. (7) Ylälohkon korkeus tulee pallolaudalla CSS:n varasijalta
+(`--intro-kartta-korkeus`, 44 %), koska mittauksen tekee js/kartta.js
+placeIntro vain hereillä — mitattu ero vanhaan (42 %) on silmällä
+olematon. Portit: tests/etusivupallo.test.mjs (oletus laudan mukaan,
+poiskytkin, lepotilan vartijat), tests/pallolauta.test.mjs ja
+savuke-etusivupallo (E1d tasokartta ei alustu, E5d vanha kartta herää
+lipulla pois, E8 pelkkä paperi) — savuke ajetaan nyt oletuslaudalla
+eikä `?lauta=kartta`-tilassa.

@@ -165,7 +165,9 @@ test('tasokartta pois tieltä yhdestä portista; kamera kulkee delegaatin kautta
   assert.match(kartta, /const pane = new Proxy\(ruutu, \{/, 'karttaruudun eleet yhdestä portista');
   // ui.render: yksi portti, drawBoardFor ei aja pallolaudalla.
   assert.match(ui, /if \(this\.kartta\.lepotila\) \{\n      this\.paivitaPallolauta\(\);\n    \} else \{\n/);
-  assert.match(ui, /if \(this\.pallolautaHalutaan\(\)\) this\.kartta\.lepotila = true;\n    else this\.drawBoardFor\(this\.game\.pack\);/);
+  // Aalto 1D: myös avausnäkymä on pallolla, joten lepotila alkaa jo
+  // lähtövalinnassa (etusivunPalloKaytossa) eikä vasta pelin laudasta.
+  assert.match(ui, /if \(this\.pallolautaHalutaan\(\) \|\| this\.etusivunPalloKaytossa\(\)\) this\.kartta\.lepotila = true;\n    else this\.drawBoardFor\(this\.game\.pack\);/);
   // Delegaatti ja sen käyttö: kartta-oliota ei enää haeta suoraan ajoihin.
   assert.match(ui, /^  kamera\(\) \{\n    return this\.pallolautaPaalla\(\) \? this\.pallolauta\.kamera : this\.kartta;/m);
   assert.ok(!ui.includes('const kartta = this.kartta;'), 'ajot kulkevat this.kamera():n kautta');

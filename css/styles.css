@@ -5524,6 +5524,12 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * --intro-kartta-korkeus-muuttujaan. Kartan pienentää js/kartta.js
  * INTRO_SPACE (pergamenttia jatketaan laudan alle). Prosentti tässä on
  * vain varasija ennen ensimmäistä mittausta.
+ *
+ * PALLOLAUDALLA VARASIJA ON LOPULLINEN (aalto 1D): etusivun pallo
+ * (js/etusivupallo.js) täyttää lohkon, eikä tasokarttaa alusteta
+ * lainkaan — placeIntro ei siis mittaa mitään. Mitattu ero vanhaan on
+ * pieni (mitattu lauta antoi 42 %, varasija on 44 %), joten sommitelma
+ * pysyy entisenä.
  */
 .intro {
   position: absolute;

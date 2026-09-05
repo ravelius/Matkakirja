@@ -142,5 +142,5 @@ jobs:
             ls -l etusivupallo-ulos/pallo.webm etusivupallo-ulos/pallo.mp4 \
               etusivupallo-ulos/juliste.jpg | awk '{print "- " $9 ": " int($5/1024) " kt"}'
             echo ''
-            echo 'Kokeile: pelin kehittäjävalikon vipu "etusivupallo" tai ?etusivupallo=1'
+            echo 'Näkyy pallolaudalla oletuksena; poiskytkin: vipu "etusivupallo" tai ?etusivupallo=0'
           } >> "$GITHUB_STEP_SUMMARY"
