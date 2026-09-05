@@ -1,0 +1,1666 @@
+{
+  "packageId": "animals-approved-32-20260905",
+  "createdAt": "2026-09-05T14:04:32.320073+00:00",
+  "count": 32,
+  "approvalAuthority": "Owner explicitly authorized root to personally inspect, approve and deliver all good animal images to game/Fable on 2026-09-05. All selected images have been inspected.",
+  "deliveryState": "all-publicly-verified",
+  "gameIntegrationState": "awaiting-fable-integration-confirmation",
+  "reviewSite": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site",
+  "instructions": [
+    "24 photo renewals replace their previous logical animal image versions.",
+    "Six story images are approved separate alternatives, each linked to its primary. Keep both unique IDs. Do not silently replace the primary with its story alternative.",
+    "Owner allows two images per subject. Keep the current agreed game display until the pending pair/alternation decision is resolved with the owner.",
+    "Canada is a polar bear cub and mother, not an arctic fox.",
+    "The BIH tornjak and TUR Angora goat are E1 animal fills; match their own record IDs, do not overwrite an unrelated country animal record by country code alone.",
+    "Copy captions and source lines verbatim; source URL belongs to url. Full provenance and prompts are included for audit.",
+    "Grandfather images are excluded; owner handles their delivery and the owner-made verticals replace the earlier dark portrait.",
+    "Return an acknowledgement with integrated IDs and game version, and specify any deferred alternative display or unmatched record."
+  ],
+  "items": [
+    {
+      "id": "elain-npl-photo-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-npl",
+      "variantRole": "primary",
+      "primaryImageId": "elain-npl-photo-r20260905-v1",
+      "city": "Langtang",
+      "country": "Nepal",
+      "animal": "punapanda",
+      "r2Key": "kohtaamiset/kuvajono/elain-npl-photo-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-npl-photo-r20260905-v1.jpg",
+      "fileName": "elain-npl-photo-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "91b99bb8aab7239ccaca5dda3a653f7a70d50785f40bd8080b281bc84d5929aa",
+      "bytes": 717964,
+      "caption": "Punapanda ottaa varovaisen askeleen sammalrungolla Langtangin viileässä metsässä.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Ganga Raj Sunuwar — punapanda Langtangissa 8.11.2024 (oma valokuva); Red Panda Network — järjestön julkaisema aito punapandakuva; Red Panda Network — All About Red Pandas (tietolehden hakuvälimuistissa luettu teksti)",
+      "url": "https://commons.wikimedia.org/wiki/File:Curious_Red_Panda_in_Langtang_National_Park.jpg",
+      "sourceUrls": [
+        {
+          "label": "Ganga Raj Sunuwar — punapanda Langtangissa 8.11.2024 (oma valokuva)",
+          "url": "https://commons.wikimedia.org/wiki/File:Curious_Red_Panda_in_Langtang_National_Park.jpg"
+        },
+        {
+          "label": "Red Panda Network — järjestön julkaisema aito punapandakuva",
+          "url": "https://redpandanetwork.org/Home"
+        },
+        {
+          "label": "Red Panda Network — All About Red Pandas (tietolehden hakuvälimuistissa luettu teksti)",
+          "url": "https://redpandanetwork.org/files/galleries/Red_Panda_Infosheet_Print.pdf"
+        }
+      ],
+      "productionNotes": "Ganga Raj Sunuwarin marraskuussa 2024 Langtangissa ottama valokuva ohjaa vaalean otsan, tummien kyyneljuovien, sammalrungon ja metsän rakennetta. Red Panda Networkin katsottu kuva täydentää pitkän hännän ja mustan alaruumiin tuntomerkkejä; järjestön tietolehti kuvaa hännän tasapainokäyttöä ja puissa liikkumista. Uusi askelhetki on kuviteltu, eikä siinä esitetä tiettyä lähdeyksilöä.",
+      "generationPrompt": "A quiet, candid wildlife photograph of one adult Himalayan red panda, Ailurus fulgens, moving through temperate forest in Langtang, Nepal. Full landscape 3:2 frame, 1536 x 1024. The whole animal walks low along a broad moss-covered branch that slopes gently from left to right. Its near forepaw is lifted a few centimetres to test the next foothold; its other three paws bear its weight. Its head turns slightly toward the camera, small ordinary brown eyes alert to the observer. Its single long, thick tail extends behind it to the left and curves gently down as a counterbalance; keep the entire tail tip and all ears inside the frame with space around them. A few bamboo leaves lie just ahead of its closed muzzle.\n\nAccurate Himalayan red panda proportions and markings: modest head, cream-gray forehead, white cheeks and muzzle, russet patches beside the dark tear lines, small pointed white-fringed ears, black nose, rust-red back, brown-black legs and belly, muted alternating russet and buff tail rings. Natural animal face, no human smile or enlarged shiny eyes. Dense coat with subtle merged texture; the eye and muzzle are in focus while the far flank and tail soften gently with real optical depth. No etched individual-hair network or luminous fur outline.\n\nSoft cool morning daylight under the canopy. A restrained telephoto camera image with normal exposure, quiet color and modest microcontrast. Only a few broad defocused tree trunks, soft green bamboo foliage and dark forest depth behind it. Moss has real small variations without glitter or elaborate miniature detail. The grounded step and cautious look are the story. No mist effects, enclosure, people, other animals, text, logo, watermark or painted surface.",
+      "generationMethod": "built-in image_gen; entirely new text-based generation; deterministic JPG/sRGB conversion only",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:51:52.042950+00:00",
+        "notesFi": "Punapandan karvat erottuvat luonnollisesti, kolme tukevaa tassua ja yksi koholla, pitkä häntä kokonaan kuvassa. Metsän bokeh tasainen."
+      },
+      "r2VerifiedAt": "2026-09-05T14:00:47.699Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-npl"
+      ]
+    },
+    {
+      "id": "elain-jpn-photo-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-jpn",
+      "variantRole": "primary",
+      "primaryImageId": "elain-jpn-photo-r20260905-v1",
+      "city": "Jigokudani",
+      "country": "Japani",
+      "animal": "lumiapina kuumassa lähteessä",
+      "r2Key": "kohtaamiset/kuvajono/elain-jpn-photo-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-jpn-photo-r20260905-v1.jpg",
+      "fileName": "elain-jpn-photo-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "5fcbcb285aeed64bbfb5581bf15eadacf9b08b94fa83569c413993bc699bb7e2",
+      "bytes": 456873,
+      "caption": "Lumiapina katsoo kivireunalta rauhallisesti kohti kuvaajaa Jigokudanin lämpimässä vedessä.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Jigokudani Yaen-koen — puiston kuvaus ja aito allaskuva; Japanin ympäristöministeriö — Jigokudani; Katsottu ministeriön talvikuva",
+      "url": "https://en.jigokudani-yaenkoen.co.jp/",
+      "sourceUrls": [
+        {
+          "label": "Jigokudani Yaen-koen — puiston kuvaus ja aito allaskuva",
+          "url": "https://en.jigokudani-yaenkoen.co.jp/"
+        },
+        {
+          "label": "Japanin ympäristöministeriö — Jigokudani",
+          "url": "https://www.env.go.jp/nature/nationalparks/try/all/act652.html"
+        },
+        {
+          "label": "Katsottu ministeriön talvikuva",
+          "url": "https://www.env.go.jp/nature/nationalparks/images/activityPhoto/act652_1.jpg"
+        }
+      ],
+      "productionNotes": "Jigokudanin puiston ja Japanin ympäristöministeriön aidot kuvat tarkistettiin: kuumassa vedessä kylpevät japaninmakakit, harmaanruskea talviturkki, pienet silmät, punaiset paljaat kasvot ja käsien tuki kivireunaan. Oikea allas on rakennettu suurista kivistä; kuva ei väitä sitä koskemattomaksi luonnonlähteeksi. Yksittäinen talvinen lähitilanne on uusi kuvitus.",
+      "generationPrompt": "Create a new natural wildlife camera photograph, landscape 3:2, 1536 x 1024. One adult Japanese macaque (Macaca fuscata) bathing in the hot-spring-fed stone pool at Jigokudani, Japan, on a quiet snowy winter day. View close to water level, slightly from its side: the macaque sits chest-deep and turns its head gently toward the lens, looking at the photographer with normal small dark brown eyes. A calm alert animal, closed relaxed mouth, a clearly projecting short macaque muzzle, ordinary pink-red bare facial skin, no human smile. Retain real adult proportions, a modest brow, small ears partly within gray-brown winter fur, tiny wet eye catchlights.\n\nThe two forearms rest at different heights on the edge of one broad worn pool stone, with both hands visible and naturally curled long fingers, short thumbs and normal nails. Their attachment to the shoulders is clear. The torso continues into the water, hind legs submerged. Show the whole crown and both hands with generous room. Wet shoulder fur lies in dark irregular flattened clumps; the drier cheek and crown fur reads as a softly overlapping gray surface, only a few flyaway hairs at the silhouette. Focus on the eyes and near hand, natural gradual falloff across the rest of the animal.\n\nSoft cold daylight from a pale overcast sky, reflected by the snow, restrained warm red skin. Water is muted gray-green with only broad gentle ripples. Thin real steam stays behind the face. Background: the far low built pool edge of large rough stones topped by a continuous soft snowbank, with one dark out-of-focus winter ravine behind it. Quiet tonal areas, smooth optical blur, no busy twig or circular-dot texture. Believable photographic exposure, modest microcontrast, no exaggerated wet-fur sparkle or etched hair outlines, no dramatic haze, no illustration, plush face, text, watermark, people or other animals.",
+      "generationMethod": "built-in image_gen; entirely new text-based generation; deterministic JPG/sRGB conversion only",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:51:52.043068+00:00",
+        "notesFi": "Japaninmakakin märkä turkki ja kivireunan käsituet uskottavat, kasvoissa hyvä katse ja höyry hillitty. Luminen tausta rauhallinen."
+      },
+      "r2VerifiedAt": "2026-09-05T14:00:50.313Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-jpn"
+      ]
+    },
+    {
+      "id": "elain-aus-photo-r20260905-v4",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-aus",
+      "variantRole": "primary",
+      "primaryImageId": "elain-aus-photo-r20260905-v4",
+      "city": "Kangaroo Island",
+      "country": "Australia",
+      "animal": "koalanpoikanen",
+      "r2Key": "kohtaamiset/kuvajono/elain-aus-photo-r20260905-v4.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-aus-photo-r20260905-v4.jpg",
+      "fileName": "elain-aus-photo-r20260905-v4.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "95e5bdc0780692cf1bfa27273f26c6367b8c06783d322946912c7a4ee4bb93bc",
+      "bytes": 607700,
+      "caption": "Koalanpoikanen lepää leveässä eukalyptuksen haarassa Kangaroo Islandilla ja seuraa hiljaa kuvaajaa.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: SA Department for Environment and Water — eteläisen ja pohjoisen koalan vertailu; SA Department for Environment and Water — aidot Kangaroo Island/Cleland-koalat; Australian Wildlife Society — tarttuvat etutassut ja eteläisen kannan turkki",
+      "url": "https://www.environment.sa.gov.au/topics/animals-and-plants/living-with-wildlife/koalas",
+      "sourceUrls": [
+        {
+          "label": "SA Department for Environment and Water — eteläisen ja pohjoisen koalan vertailu",
+          "url": "https://www.environment.sa.gov.au/topics/animals-and-plants/living-with-wildlife/koalas"
+        },
+        {
+          "label": "SA Department for Environment and Water — aidot Kangaroo Island/Cleland-koalat",
+          "url": "https://www.environment.sa.gov.au/goodliving/posts/2020/07/cleland-koalas-update"
+        },
+        {
+          "label": "Australian Wildlife Society — tarttuvat etutassut ja eteläisen kannan turkki",
+          "url": "https://www.aws.org.au/koala/"
+        }
+      ],
+      "productionNotes": "Etelä-Australian ympäristöviraston aidot koalakuvat tarkistettiin: eteläisen kannan pidempi harmaa turkki, pienet silmät, leveä nahkamainen kuono ja puunrunkoon tukeutuva istuma-asento. Australian Wildlife Society vahvistaa etutassun kaksi vastakkain tarttuvaa sormea. Kuvassa säilyy koalanpoikanen ja Kangaroo Island; saaren nykyinen kanta polveutuu sinne 1900-luvulla siirretyistä koaloista. Uusi kuvitus ei esitä tiettyä pelastettua lähdeyksilöä.",
+      "generationPrompt": "An understated documentary photograph of ONE young koala in the wild on Kangaroo Island, Australia. 1536 x 1024, landscape 3:2. A genuine gray southern koala joey near independence, resting sideways in a broad eucalyptus fork. Its compact body recedes diagonally behind its head. Its chest leans on a thick almost horizontal branch, both forepaws resting separately over the bark, hindquarters seated securely in the fork with a bent rear foot braced against the trunk. It is awake and looks toward the camera, a quiet natural moment. Entire head, round ears and the support of its body are visible with ample space around them.\n\nUse the visual appearance of a neutral, unsharpened telephoto camera JPEG in soft cloudy daylight. The near eye and the leathery black nose have normal photographic definition; the pale-gray body and rear leg are softly out of focus. Fur forms dense matte gray shading, not a white fiber pattern. The animal has a broad dark nose, tiny partly-lidded brown eyes with dim reflections, ordinary closed mouth, cream chin, muted gray ears with soft fringes and natural grasping paws. No exaggerated juvenile proportions.\n\nA simple eucalyptus woodland behind it, three large smoothly blurred olive and pale-gray shapes, a few narrow leaves at one side. Natural soft side light and quiet color, without bright white patches or luminous edge lighting. The photograph feels candid and unstyled, with selective focus and natural softness. One koala only, no people, text, watermark or enclosure.",
+      "generationMethod": "built-in image_gen; entirely new text-based generation; deterministic JPG/sRGB conversion only",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:51:52.043070+00:00",
+        "notesFi": "Koalan v4 leveä oksatuki ja näkyvät etutassut uskottavat. Harmaa turkki hienojakoinen, korvat kokonaan ja tausta rauhallinen."
+      },
+      "r2VerifiedAt": "2026-09-05T14:00:52.355Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-aus"
+      ]
+    },
+    {
+      "id": "elain-png-photo-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-png",
+      "variantRole": "primary",
+      "primaryImageId": "elain-png-photo-r20260905-v1",
+      "city": "Ylängöt",
+      "country": "Papua-Uusi-Guinea",
+      "animal": "paratiisilintu",
+      "r2Key": "kohtaamiset/kuvajono/elain-png-photo-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-png-photo-r20260905-v1.jpg",
+      "fileName": "elain-png-photo-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "5452a14e6dcd9afa6fad61f8d528939a04e628fcf560d690ca1989a8365ca401",
+      "bytes": 397283,
+      "caption": "Kuningasparatiisilintu pysähtyy oksalle; pitkät oranssinpunaiset kylkihöyhenet ja kaksi tummaa pyrstöruotoa laskeutuvat sen taakse.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Cornell Birds-of-Paradise Project — aito lajikuva ja suvun tuntomerkit; Cornellin katsottu valokuva; Australian Museum — Raggiana Bird of Paradise",
+      "url": "https://www.birdsofparadiseproject.org/genera/",
+      "sourceUrls": [
+        {
+          "label": "Cornell Birds-of-Paradise Project — aito lajikuva ja suvun tuntomerkit",
+          "url": "https://www.birdsofparadiseproject.org/genera/"
+        },
+        {
+          "label": "Cornellin katsottu valokuva",
+          "url": "https://www.birdsofparadiseproject.org/wp-content/uploads/2021/09/4-Raggiana.jpg"
+        },
+        {
+          "label": "Australian Museum — Raggiana Bird of Paradise",
+          "url": "https://australian.museum/about/history/exhibitions/birds-of-paradise/raggiana-bird-of-paradise/"
+        }
+      ],
+      "productionNotes": "Cornellin aito kuningasparatiisilinnun kuva tarkistettiin: siniharmaa nokka, keltainen silmä ja niska, vihreä kurkku, tumma rintavyö sekä ruskeat siivet. Australian Museum vahvistaa kyljistä lähtevät oranssinpunaiset koristehöyhenet ja 0–1550 metrin metsäelinympäristön. Ylängöt-tunnus säilyy; näkymä tulkitaan niiden alemman vuoristometsän rinteeksi. Uusi kuvitus, ei dokumenttivalokuva tietystä paikasta.",
+      "generationPrompt": "Create one new wildlife camera photograph, 3:2 landscape, 1536 x 1024 pixels. A single adult male Raggiana bird-of-paradise (Paradisaea raggiana) on a naturally lichen-marked slanting branch in the lower montane rainforest foothills of Papua New Guinea. Catch a quiet instant between calls: body in three-quarter profile, folded wings, head turned so the near yellow iris and its small round dark pupil look at the photographer. Closed blue-gray bill, tiny natural catchlight. An alert actual bird, without a human expression.\n\nAccurate proportions and color placement: small head with yellow crown and nape, emerald green throat bounded below by a narrow yellow collar, dark blackish upper breast, maroon-brown body and two brown folded wings. A relaxed cascade of long orange-red flank plumes emerges from the sides BELOW the wings, lying behind the body rather than an enormous wing-shaped fan. The ordinary tail and exactly two long thin dark central tail wires continue separately behind it. Two gray-brown feet with curved claws securely wrap the branch; coherent weight and anatomy. Show the entire bird including both tail-wire ends with room around every edge. Bird and trailing plumage run diagonally from upper right toward lower left and occupy about three quarters of frame height.\n\nSoft open forest daylight from the right. Natural, modest contrast, with the crown and near eye in focus, body feathers merging into smooth overlapping color areas, and the wispy ends losing definition naturally. Background is deep green rainforest several metres away: two broad soft foliage masses and one indistinct trunk with continuous optical blur, no speckled dots or sharp leaf wallpaper. Lichen on the supporting branch stays understated. Natural camera color and quiet surface; no stylized glow, grain, global sharpening, illustrated texture, text, watermark, extra bird or person.",
+      "generationMethod": "built-in image_gen; entirely new text-based generation; deterministic JPG/sRGB conversion only",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:51:52.043072+00:00",
+        "notesFi": "Katsottu natiivina: kuningasparatiisilinnun keltainen pää, vihreä kurkku, ruskeat siivet, oranssit kylkihöyhenet ja kaksi tummaa pyrstöruotoa selkeät. Oksaote ja höyhentekstuuri uskottavat. Paradisaea raggiana -tuntomerkit tarkistettu Australian Museumista; suomen nimessä ei korjaustarvetta."
+      },
+      "r2VerifiedAt": "2026-09-05T14:00:54.597Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-png"
+      ]
+    },
+    {
+      "id": "elain-chl-photo-r20260905-v2",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-chl",
+      "variantRole": "primary",
+      "primaryImageId": "elain-chl-photo-r20260905-v2",
+      "city": "Torres del Paine",
+      "country": "Chile",
+      "animal": "guanako",
+      "r2Key": "kohtaamiset/kuvajono/elain-chl-photo-r20260905-v2.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-chl-photo-r20260905-v2.jpg",
+      "fileName": "elain-chl-photo-r20260905-v2.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "e208852a7c6aad1fc8c38e60180bff8a37e6c08f8178b11b48b2ba3feae40f37",
+      "bytes": 464231,
+      "caption": "Nuori guanako kääntää päätään kuvaajaa kohti kesken kevyen askeleen.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: CONAF: Torres del Painen kansallispuisto ja guanako; LBM1948: itse kuvattu guanako Torres del Painessa 30.12.2012; Javiercamposg7: guanakon pään lähikuva 17.9.2024",
+      "url": "https://www.conaf.cl/parque_nacionales/parque-nacional-torres-del-paine/",
+      "sourceUrls": [
+        {
+          "label": "CONAF: Torres del Painen kansallispuisto ja guanako",
+          "url": "https://www.conaf.cl/parque_nacionales/parque-nacional-torres-del-paine/"
+        },
+        {
+          "label": "LBM1948: itse kuvattu guanako Torres del Painessa 30.12.2012",
+          "url": "https://commons.wikimedia.org/wiki/File:Torres_del_Paine,_guanacos_05.jpg"
+        },
+        {
+          "label": "Javiercamposg7: guanakon pään lähikuva 17.9.2024",
+          "url": "https://commons.wikimedia.org/wiki/File:Retrato_de_guanaco_en_el_Parque_Nacional_Torres_del_Paine.jpg"
+        }
+      ],
+      "productionNotes": "Guanakon pää, värijako ja luonnollinen karvapeite perustuvat kahteen itse katsottuun Torres del Painen villieläinvalokuvaan. CONAF vahvistaa lajin ja aro-, järvi- sekä vuoristoympäristön. Nuoren eläimen askel ja rauhallinen kaukainen järvi ovat uutta sommittelua; tarkkaa rantapaikkaa ei väitetä.",
+      "generationPrompt": "A quiet, unembellished wildlife photograph of one young guanaco (Lama guanicoe) in Torres del Paine, Chile. Horizontal 3:2 landscape photograph, 1536 x 1024 pixels. Complete animal in a natural light walking step, body pointing LEFT, head gently turned toward the photographer. Four long correctly jointed legs, one front foot lifted, the other front foot and both hind feet in readable contact with bare soil. All feet, pointed ears and short tail have clear margins.\n\nThe young wild guanaco is lean, with a small gray face, dark narrow muzzle, modest dark eyes with tiny wet catchlights, straight pointed ears and a long slim neck. Warm muted tan back, white belly and pale underside of neck. Its body coat is a SHORT smooth layer of guard hair lying flat over the undercoat. From this camera distance it reads mainly as soft continuous shading, not visible curls, ridges, braids or individually engraved strands. No hanging white chest bib, no thick alpaca fleece, no long white belly fringe. Natural animal features without a human smile or oversized eyes.\n\nA real 300 mm lens at f/4.5, focus on the near eye and shoulder, with the rear body slightly softer. Soft side daylight under high thin cloud, restrained contrast, no rim lighting. Bare compact ground immediately beneath the feet, one low band of dry straw grass farther behind, then a broad smooth desaturated turquoise lake. Far Paine rock peaks are large, quietly blurred blue-gray forms. Smooth natural optical separation, no tiny repeating vegetation, circular bokeh or crunchy texture anywhere. One animal only, no humans, fence, harness, text or watermark.",
+      "generationMethod": "built-in image_gen; entirely new text-based generation; deterministic JPG/sRGB conversion only",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:51:52.043073+00:00",
+        "notesFi": "Guanakon neljä jalkaa ja yksi kohoava askel erottuvat, silmät ja korvat luonnolliset. Järvi ja vuoret rauhallinen valokuvamainen tausta."
+      },
+      "r2VerifiedAt": "2026-09-05T14:00:56.555Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-chl"
+      ]
+    },
+    {
+      "id": "elain-nzl-photo-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-nzl",
+      "variantRole": "primary",
+      "primaryImageId": "elain-nzl-photo-r20260905-v1",
+      "city": "Stewartin saari",
+      "country": "Uusi-Seelanti",
+      "animal": "kiivi",
+      "r2Key": "kohtaamiset/kuvajono/elain-nzl-photo-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-nzl-photo-r20260905-v1.jpg",
+      "fileName": "elain-nzl-photo-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "0f929056807578fdbe839fbe3ae15ac880d4c96ec50d4d742740b97212eba25f",
+      "bytes": 584840,
+      "caption": "Rakiuran tokoeka pysähtyy tutkimaan kosteaa lehteä metsän pohjalla.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: DOC: Rakiuran tokoeka ja päivällä liikkuminen; Katsottu DOC:n Rakiuran tokoekan valokuva; New Zealand Birds Online: tokoekan laji, rakenne ja metsäelinympäristö; DOC: Kiwi Best Practice Manual, perustuntomerkit",
+      "url": "https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kiwi/tokoeka/",
+      "sourceUrls": [
+        {
+          "label": "DOC: Rakiuran tokoeka ja päivällä liikkuminen",
+          "url": "https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kiwi/tokoeka/"
+        },
+        {
+          "label": "Katsottu DOC:n Rakiuran tokoekan valokuva",
+          "url": "https://www.doc.govt.nz/contentassets/da7901eaf0cf4e058cd096015c9ff4d2/stewart-island-brown-kiwi-565.jpg"
+        },
+        {
+          "label": "New Zealand Birds Online: tokoekan laji, rakenne ja metsäelinympäristö",
+          "url": "https://www.nzbirdsonline.org.nz/species/southern-brown-kiwi"
+        },
+        {
+          "label": "DOC: Kiwi Best Practice Manual, perustuntomerkit",
+          "url": "https://www.doc.govt.nz/documents/science-and-technical/sap262entire.pdf"
+        }
+      ],
+      "productionNotes": "Rakiuran tokoekan pieni silmä, nokan mittasuhteet ja tumma höyhenpeite on tarkistettu itse katsotusta DOC:n aidosta valokuvasta. DOC ja New Zealand Birds Online tukevat päiväaikaista ravinnonhakua myös saaren metsissä. Katsottu valokuva on hiekkarannalta, joten lehtikarikkeinen metsäkohta on uusi elinympäristöön sopiva sommittelu.",
+      "generationPrompt": "One entirely new natural wildlife photograph, horizontal 3:2 landscape, 1536 x 1024 pixels. A single adult Rakiura tokoeka, the Stewart Island form of southern brown kiwi (Apteryx australis), foraging quietly on damp leaf litter in native forest on Stewart Island, New Zealand, during overcast daytime.\n\nPhotograph the complete bird low at its eye height, in three-quarter side view. Its rounded pear-shaped brown body occupies the left-middle, small head extended toward the right, long narrow pale pink-gray bill angled gently down with the tip just touching a curled leaf. It pauses to notice the photographer with the one visible SMALL dark eye and a tiny catchlight. No large glass eye, human smile or cartoon expression. The bill is a single continuous slender shape, slightly downcurved, nostril situated near the tip rather than near the face. No visible tail and no exposed wing.\n\nSoft, loose hair-like dark-brown feathers with subdued reddish-brown variation lie irregularly over the body. They should merge into quiet natural low-contrast texture, not individually engraved golden stripes, rigid hedgehog spines or glossy fibers. Two short stout grayish-pink legs support the bird. The near foot's three forward toes and curved claws rest naturally on the ground; the far foot is partly behind the body but remains a single coherent foot. Do not duplicate toes, bill or legs. Keep full body, feet and entire bill with generous margins.\n\nAn ordinary 200 mm wildlife-lens photograph at f/4, sharpest at eye and bill base. Rear body, distant foot and foreground leaves gently soften. The leaf litter has a few broad damp brown leaves, a low mossy root and one fern at the side. Background native forest is several metres away: two or three broad muted vertical trunk shapes and smooth dark olive-green areas with continuous optical blur. No many tiny bokeh circles, detailed tangled leaves or synthetic mottled texture. Diffuse cool daylight through cloud and canopy, modest exposure and microcontrast, no spotlight, flash, bright rim, fog, beams or decorative steam. One bird only, no people, text, logo or watermark.",
+      "generationMethod": "built-in image_gen; entirely new text-based generation; deterministic JPG/sRGB conversion only",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:51:52.043074+00:00",
+        "notesFi": "Kiivin pitkä nokka lehdellä, jalat ja varpaat erottuvat. Ruskea höyhenpeite ei maalattu; märän karikkeen kiilto uskottava."
+      },
+      "r2VerifiedAt": "2026-09-05T14:00:58.522Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-nzl"
+      ]
+    },
+    {
+      "id": "elain-per-photo-r20260905-v2",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-per",
+      "variantRole": "primary",
+      "primaryImageId": "elain-per-photo-r20260905-v2",
+      "city": "Andit",
+      "country": "Peru",
+      "animal": "vikunja",
+      "r2Key": "kohtaamiset/kuvajono/elain-per-photo-r20260905-v2.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-per-photo-r20260905-v2.jpg",
+      "fileName": "elain-per-photo-r20260905-v2.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "7fb3c3627af22d3bef265b31c57250f9f7bddbb95f79ef46f7ffdcfbee65ce6d",
+      "bytes": 420208,
+      "caption": "Vikunja pysähtyy punan matalalle harjanteelle ja katsoo kohti kuvaajaa.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: SERNANP: vikunja ja puna Pampa Galerasissa; Katsottu SERNANPin vikunjavalokuva",
+      "url": "https://biodiversidadanp.sernanp.gob.pe/en/sabias-que/sabias-que-la-reserva-nacional-pampa-galeras-barbara-dachille-se-creo-para-salvar-de-la-extincion-a-una-especie/",
+      "sourceUrls": [
+        {
+          "label": "SERNANP: vikunja ja puna Pampa Galerasissa",
+          "url": "https://biodiversidadanp.sernanp.gob.pe/en/sabias-que/sabias-que-la-reserva-nacional-pampa-galeras-barbara-dachille-se-creo-para-salvar-de-la-extincion-a-una-especie/"
+        },
+        {
+          "label": "Katsottu SERNANPin vikunjavalokuva",
+          "url": "https://biodiversidadanp.sernanp.gob.pe/wp-content/uploads/2024/01/RN01_Vicuna_MarioCastroHeredia_baja-1536x1024.jpg"
+        }
+      ],
+      "productionNotes": "Vikunjan hoikat mittasuhteet, pitkä valkea rintakarvoitus ja punan kasvillisuus perustuvat itse katsottuun SERNANPin valokuvaan. Uusi sommittelu näyttää eläimen matalalla harjanteella; etäinen vuori ja pilvitaivas muodostavat rauhallisen optisen taustan. Kuva ei esitä dokumentoitua yksilöä tai täsmällistä kuvauspaikkaa.",
+      "generationPrompt": "An ordinary, beautiful wildlife camera photograph, horizontal 3:2, 1536 x 1024. One adult wild vicuña in the Peruvian Andes, standing quietly on a low ridge of bare pale soil between just two small clumps of puna grass. Complete animal, four slender legs and all four two-toed padded feet visibly planted on the soil, full pointed ears and short tail inside the frame.\n\nIts slim cinnamon body is three-quarter sideways, long delicate neck upright, small narrow wedge-shaped head turned toward the camera. Natural alert eye contact, small dark eyes with tiny catchlights, no large doll eyes. Fine short tawny coat, white underside, and a characteristic loose white bib hanging only from the lower chest. Real lean wild-camelid proportions, not a woolly alpaca or a plush baby.\n\nA calm field photograph taken from several metres away with a 300 mm lens at f/4. The animal fills about two thirds of the frame width. The eye and face are in focus; coat over the flank and far legs is softly resolved as low-contrast overlapping patches. Most individual body hairs are NOT separately visible. No etched filaments, no clarity enhancement, no glossy or stylized finish.\n\nBehind the ridge is empty smooth pale blue-gray distance: one broad out-of-focus Andean mountain silhouette and a large muted cloudy sky. The distant grassland is below the ridge and outside view. The background has broad continuous tonal areas with NO tiny spots, leaves, circular bokeh or repeated grass texture. A few soft grass shapes only at the bottom foreground. Natural soft overcast daylight, gentle shadows, neutral cinnamon and cream colors, no bright rim light, no dramatic sky. One animal only, no text, no people, no fence, no cartoon styling.",
+      "generationMethod": "built-in image_gen; entirely new text-based generation; deterministic JPG/sRGB conversion only",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:51:52.043075+00:00",
+        "notesFi": "Vikunjan neljä jalkaa erottuvat ja rinnan pidempi karva luonnollinen. Hillityt vuorisävyt ja silmäkontakti, ei kuohuvaa bokehia."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:00.466Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-per"
+      ]
+    },
+    {
+      "id": "elain-sau-photo-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-sau",
+      "variantRole": "primary",
+      "primaryImageId": "elain-sau-photo-r20260905-v1",
+      "city": "Uruq Bani Ma'arid",
+      "country": "Saudi-Arabia",
+      "animal": "arabianoryksi",
+      "r2Key": "kohtaamiset/kuvajono/elain-sau-photo-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-sau-photo-r20260905-v1.jpg",
+      "fileName": "elain-sau-photo-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "aedf3aea1dadb3829b2cd1da351090d4feb67b2bb23875fa2fa5c16c956bc31d",
+      "bytes": 399514,
+      "caption": "Arabianoryksi pysähtyy dyynin reunaan ja kääntää päänsä kohti kuvaajaa Uruq Bani Ma’aridin aamussa.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: NCW — Uruq Bani Ma’aridin alue ja katsottu valokuva; Katsottu NCW:n dyynikuva; UNESCO — todellinen suojelualue ja palautetut arabianoryksit; Phoenix Zoo — Arabian oryx, lajikuvaus",
+      "url": "https://www.ncw.gov.sa/en/protected-areas",
+      "sourceUrls": [
+        {
+          "label": "NCW — Uruq Bani Ma’aridin alue ja katsottu valokuva",
+          "url": "https://www.ncw.gov.sa/en/protected-areas"
+        },
+        {
+          "label": "Katsottu NCW:n dyynikuva",
+          "url": "https://www.ncw.gov.sa/assets/media/still-images/protected-areas/UBM.JPEG"
+        },
+        {
+          "label": "UNESCO — todellinen suojelualue ja palautetut arabianoryksit",
+          "url": "https://whc.unesco.org/en/list/1699/"
+        },
+        {
+          "label": "Phoenix Zoo — Arabian oryx, lajikuvaus",
+          "url": "https://www.phoenixzoo.org/blog/zoo-news/saving-species-arabian-oryx/"
+        }
+      ],
+      "productionNotes": "Saudi-Arabian luonnonsuojelukeskuksen aito Uruq Bani Ma’aridin kuva tarkistettiin: valkoiset arabianoryksit, pitkät lähes suorat sarvet, tummat jalat sekä laajat okrankeltaiset dyynit ja harvat pensaat. UNESCO vahvistaa vapaan palautuskannan tässä elinympäristössä. Phoenix Zoon lajikuvauksesta tarkistettiin kasvojen tumma kuviointi ja molempien sukupuolten kapeat sarvet. Yksittäinen lähelle pysähtynyt eläin ja valo ovat uusi kuvitustilanne.",
+      "generationPrompt": "Create a new natural wildlife photograph, 3:2 landscape, 1536 x 1024 pixels. A single adult Arabian oryx, Oryx leucoryx, pauses on a low sandy ridge at Uruq Bani Ma'arid in Saudi Arabia. Full animal in a three-quarter side view, body facing left, head turned toward the photographer with an attentive ordinary dark eye and tiny catchlight. Its four legs stand naturally apart, one forefoot slightly advanced. All four cloven hooves make clear contact with the sand. Exactly two very long slender dark horns, closely aligned, nearly straight with only a slight backward sweep and gently ringed lower portions; both separate tips fully visible, with a generous margin above them. A single tail hangs naturally behind the hindquarters.\n\nAccurate Arabian oryx proportions: compact white antelope with modest shoulder hump and short mane, long narrow head, dark nose blaze and dark eye-to-muzzle facial patches, dark brown lower legs, small pointed ears. It must not become a scimitar-horned oryx, addax or gazelle. The white coat is SHORT and lies flat, reading as soft continuous white and gray planes over a living body. Modest imperfections and dust on the knees. No individual-hair engraving across the body, no brushed plush texture or polished plastic skin.\n\nEarly morning sun from camera-left gives the white animal physical shape and an ordinary restrained shadow to the right. Keep white highlights within photographic exposure. Oryx occupies about two-thirds of the frame width and three-quarters of its height including horns. Calm backdrop with two large ochre dune curves in continuous soft telephoto focus falloff, a pale blue-gray sky and just one low distant shrub. Near sand has a few broad wind ripples and natural hoof impressions, becoming smooth with distance. Natural desert color, no orange poster grading, glowing rim, haze or dramatic beams. Focus on the near eye, face and front of the body, relaxed detail elsewhere. One animal only, no collar, herd, people, fence, vehicle, illustration, text or watermark.",
+      "generationMethod": "built-in image_gen; entirely new text-based generation; deterministic JPG/sRGB conversion only",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:51:52.043076+00:00",
+        "notesFi": "Oryksin molemmat sarvet kokonaan, neljä jalkaa ja paino uskottavia. Aamuvalon ja varjon suunta yhtenäinen, sileät dyynit."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:02.596Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-sau"
+      ]
+    },
+    {
+      "id": "elain-usa-photo-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-usa",
+      "variantRole": "primary",
+      "primaryImageId": "elain-usa-photo-r20260905-v1",
+      "city": "Yellowstone",
+      "country": "Yhdysvallat",
+      "animal": "biisoninvasa",
+      "r2Key": "kohtaamiset/kuvajono/elain-usa-photo-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-usa-photo-r20260905-v1.jpg",
+      "fileName": "elain-usa-photo-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "d93d1efdec5e14ec9097a54e28c94d5c34a275424b8e933f2662398094e6e4a4",
+      "bytes": 598854,
+      "caption": "Yellowstonen biisoninvasa kääntää katseensa kameraan kesken hieman kömpelön keväisen raviaskelen.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: NPS — Yellowstone bison ecology; NPS / A. Falgoust — Yellowstone calf photograph, 9 May 2021; Photograph provenance and direct source URL",
+      "url": "https://www.nps.gov/yell/learn/nature/bison.htm/index.htm",
+      "sourceUrls": [
+        {
+          "label": "NPS — Yellowstone bison ecology",
+          "url": "https://www.nps.gov/yell/learn/nature/bison.htm/index.htm"
+        },
+        {
+          "label": "NPS / A. Falgoust — Yellowstone calf photograph, 9 May 2021",
+          "url": "https://www.flickr.com/photos/yellowstonenps/53482547271"
+        },
+        {
+          "label": "Photograph provenance and direct source URL",
+          "url": "https://commons.wikimedia.org/wiki/File:Red_dog_standing_in_the_sagebrush_(53482547271).jpg"
+        }
+      ],
+      "productionNotes": "NPS:n katsottu Yellowstonen vasakuva ohjasi ruumiin mittasuhteita, pieniä sarvenalkuja ja punertavaa karvaa. Höyryvana jätettiin pois, jotta niittytausta pysyy rauhallisena; näkymä on fiktiivinen, lajille ja paikalle perusteltu.",
+      "generationPrompt": "Use case: photorealistic-natural\nMake ONE new wildlife photograph, landscape 3:2 aspect ratio, 1536x1024 pixels. Entirely new image from text, not an edit.\nOne American bison calf (Bison bison), about six weeks old, in a spring meadow in Yellowstone. Low animal-eye-height telephoto view; whole calf large in frame, seen three-quarter from the front as it takes one lively, slightly awkward trotting step across short spring grass. Its head turns toward the lens with naturally alert dark eyes and small wet catchlights. Four coherent legs, separate cloven hooves, small developing shoulder rise, short tail, broad short dark muzzle, normal little lateral ears. Warm reddish-tan juvenile coat; horn buds minute and mostly concealed in the hair, never adult horns. Long-legged real calf proportions, not a rounded plush mascot.\nThe photographic reference is an actual Yellowstone NPS calf photograph: fine flat facial hair, modest irregular woolly clumps on neck and flanks, dark small eyes, slender lower legs. Let the near eye and muzzle be clearly focused; body coat has restrained contrast, overlapping uneven clumps, softer detail away from the focus plane. No etched all-over individual hairs.\nQuiet Yellowstone habitat: short fresh meadow grass around the hooves, only two broad low sagebrush forms farther behind, and a distant dark conifer band. Use a long lens around 300mm, f/5.6, fast enough for the body but a trace of natural motion softness on the advancing hoof. Smooth continuous optical focus falloff; the distant meadow reads as broad connected muted green and ochre tones, no repeated tiny bokeh dots. Entire ears, tail and every hoof remain inside the frame with comfortable margins.\nSoft early morning side daylight through thin cloud, neutral natural color, gentle shadows and honest exposure. A convincing unretouched field photograph with modest microcontrast, not a glossy animal portrait. One animal only. No herd, humans, fence, road, buildings, steam plume, decorative sun rays, mist, rim glow, HDR, oversharpening, text, logo, watermark, illustration or 3D rendering. No enlarged glass eyes, human smile, extra limbs or duplicated hooves.\n",
+      "generationMethod": "AI generated image; exact recorded prompt provided where available",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:51:52.043077+00:00",
+        "notesFi": "Biisoninvasan raviaskel uskottava: neljä jalkaa, kaksi koholla ja kaksi tukena. Turkki ja niitty hienojakoisia, katse elävä."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:04.729Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-usa"
+      ]
+    },
+    {
+      "id": "elain-chn-photo-r20260905-v2",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-chn",
+      "variantRole": "primary",
+      "primaryImageId": "elain-chn-photo-r20260905-v2",
+      "city": "Sichuan",
+      "country": "Kiina",
+      "animal": "jättiläispandan poikanen",
+      "r2Key": "kohtaamiset/kuvajono/elain-chn-photo-r20260905-v2.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-chn-photo-r20260905-v2.jpg",
+      "fileName": "elain-chn-photo-r20260905-v2.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "66107a9884eb92d993fff00d72c5b9706c908e5174a123d596b7ad06d54389ee",
+      "bytes": 468063,
+      "caption": "Pandanpoikanen maistelee bambua rauhallisessa Sichuanin metsässä.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Smithsonian — dated nine-month cub feeding and anatomy photographs; The Nature Conservancy — Sichuan bamboo habitat and genuine wild mother/cub photo",
+      "url": "https://nationalzoo.si.edu/news/giant-panda-cub-xiao-qi-ji-media-resources",
+      "sourceUrls": [
+        {
+          "label": "Smithsonian — dated nine-month cub feeding and anatomy photographs",
+          "url": "https://nationalzoo.si.edu/news/giant-panda-cub-xiao-qi-ji-media-resources"
+        },
+        {
+          "label": "The Nature Conservancy — Sichuan bamboo habitat and genuine wild mother/cub photo",
+          "url": "https://www.nature.org/en-us/get-involved/how-to-help/animals-we-protect/giant-panda/"
+        }
+      ],
+      "productionNotes": "Smithsonianin 18.5.2021 kuvat näyttävät aidon noin yhdeksän kuukauden ikäisen poikasen bambuotteen ja mittasuhteet; ne ovat eläintarhakuvia. TNC:n Yong Yangen luontokuva ohjaa Sichuanin bambun ja sammalen ympäristöä. Oikeassa poikasessakin näkyy hienoa vatsakarvaa: rauhallisempi pinta saatiin sivuttain istuvalla asennolla, pienemmällä vaalealla alueella ja maltillisella optisella yksityiskohdalla.",
+      "generationPrompt": "Natural wildlife photograph, entirely new image from text. Native landscape 3:2 at 1536x1024 pixels. A single nine-to-twelve-month giant panda cub (Ailuropoda melanoleuca) in a Sichuan mountain bamboo forest, China. Restrained believable camera exposure, naturally quiet fur and calm optical depth.\nCreate a new candid composition: the cub sits in three-quarter side view, its body facing frame left, with its weight on its haunches beside a low gray stone. Its head turns back toward the camera and its small eyes meet the lens while it tastes the end of one thin fresh bamboo shoot. Both black forepaws hold this SAME short bamboo shoot horizontally just below the chin, one paw at the mouth and one a little lower farther along the shoot. The two forearms overlap naturally across the small shaded upper belly. Both bent hind legs lie forward toward frame left at distinct relaxed angles; the near hind foot rests on its outer edge in front, the farther hind foot is visible a short distance behind it. All four paws have separate readable anatomical connections. Show the complete cub, both ears, every visible paw and all of its body with margins. It occupies about two thirds of frame width. It is sitting on its haunches, not lying on its back, not presenting a round front-facing abdomen. A broad off-white flank curves over the seated hip; only a small belly portion is exposed behind the crossing forearms.\nThe cub has a real growing bear's body and a moderate-sized broad head with a slightly elongated blunt muzzle, black leathery nose and normal small dark eyes nested deep in black oval patches. Tiny dim eye catchlights, no round marbles. Black rounded ears, black shoulder saddle and four black limbs, off-white head and side. Correct panda coat pattern. The muzzle remains relaxed around the bamboo, not a human smile. Normal pale claw tips curve around the shoot; paws are compact furry bear paws with a wrist grip, not articulated human fingers.\nPhotographic fur: in this exposure, the softly illuminated white forehead and side are quiet dense cream surfaces. Fur lies close in gently compressed, irregular overlapping clumps. The nearest cheek has a little fine detail; the lower side, small shadowed belly and far paws fall gradually outside the narrow focus plane and are smooth at ordinary viewing scale. Slight earth staining on the hip, a few short hairs at the silhouette. Black shoulder fur forms broad soft volumes with subtle clumps. Keep local contrast low in the fur and avoid resolving a web of floating filaments. This coat is not cotton wool, tangled wisps or glossy meticulously combed strands. The eyes and nose remain sharply photographic while the coat is naturally less detailed.\nCamera at cub eye level, long lens, enough depth for all four paws to remain legible but clear gradual defocus behind. Soft cloudy daylight from camera right, neutral subdued greens and ivory, no rim light. Ground is a muted plane of damp earth and flat bamboo leaves, with only a few near leaves distinguishable. Background several metres away consists of three soft vertical bamboo stems and two broad green woodland masses; a few large bamboo leaf shapes only at the far left. Smooth continuous optical defocus without speckled bokeh, repeating tiny leaves or circular bright spots. The stone is one coherent matte form with a little dull moss.\nOne cub only, no mother or other animal, no person, enclosure, clothing, toys, lettering, watermark or border. No CGI, plush-toy design, inflated head, giant eyes, hair-by-hair sharpening, HDR, haze, decorative beams, bloom or painted background. Fully new photograph, not an edit or variation supplied from an input image.\n",
+      "generationMethod": "AI generated image; exact recorded prompt provided where available",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:51:52.043078+00:00",
+        "notesFi": "Pandan v2 bambuun tarttuvat etutassut ja erilliset takajalat uskottavia. Turkin hienot karvat, hillitty bambumetsä ja rauhallinen ilme täyttävät valokuvallisuuden."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:07.455Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-chn"
+      ]
+    },
+    {
+      "id": "elain-cub-photo-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-cub",
+      "variantRole": "primary",
+      "primaryImageId": "elain-cub-photo-r20260905-v1",
+      "city": "Zapata",
+      "country": "Kuuba",
+      "animal": "mehiläiskolibri",
+      "r2Key": "kohtaamiset/kuvajono/elain-cub-photo-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-cub-photo-r20260905-v1.jpg",
+      "fileName": "elain-cub-photo-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "8021b10ef4a692f180044940e33056ea914530caacc24214850aeccfdc9ee12c",
+      "bytes": 272284,
+      "caption": "Mehiläiskolibri leijuu pienen kukan vieressä Zapatan metsän reunassa.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Cornell Lab eBird — Bee Hummingbird identification and genuine male photographs; BirdLife International — world's smallest bird endemic to Cuba; BirdsCaribbean — Zapata, Los Hondones and Bee Hummingbird habitat, PDF page 2",
+      "url": "https://ebird.org/species/beehum1",
+      "sourceUrls": [
+        {
+          "label": "Cornell Lab eBird — Bee Hummingbird identification and genuine male photographs",
+          "url": "https://ebird.org/species/beehum1"
+        },
+        {
+          "label": "BirdLife International — world's smallest bird endemic to Cuba",
+          "url": "https://www.birdlife.org/birds/hummingbird/"
+        },
+        {
+          "label": "BirdsCaribbean — Zapata, Los Hondones and Bee Hummingbird habitat, PDF page 2",
+          "url": "https://www.birdscaribbean.org/wp-content/uploads/2024/11/BirdsCaribbean-Cuba-Trip-Itinerary-MARCH-2025.pdf"
+        }
+      ],
+      "productionNotes": "Kaksi Cornellin eBird-lajisivun oikeaa koiraskuvaa tarkistettiin niiden saatavilla olleessa 320 × 240 -koossa. Ne ohjasivat lyhyttä nokkaa ja valokulmasta riippuvaa kuparin–magentaista hohtoa. Zapatan elinympäristö perustuu BirdsCaribbeanin paikalliskuvaukseen; kuvan kukkaa ei ole määritetty varmistetuksi kasvilajiksi.",
+      "generationPrompt": "Use case: natural wildlife photograph for a Matkakirja animal card.\nCreate a completely new photograph, native landscape 3:2, 1536x1024 pixels. One adult male bee hummingbird (Mellisuga helenae), the tiny Cuban endemic, hovering beside a small woodland flower in the Zapata region of Cuba. A credible unposed instant captured with a long macro-telephoto lens.\nSubject and behavior: the single bird has paused a few centimetres from a tiny tubular orange-red flower on a slender stem at frame left. Its body is in three-quarter side view, head turning slightly toward the camera so its nearer small dark eye attends to the viewer. Bill remains closed, short, thin, straight and black, sized like a real bee hummingbird rather than a long curved sunbird bill. Whole bird including bill, two wings and short narrow tail fits comfortably inside the frame. The bird occupies roughly half the image width including wings; the tiny flower and slim twig make its miniature scale believable. Two very small feet are naturally tucked against the lower belly, not dangling like human hands.\nSpecies anatomy and color: adult male with small head, compact delicate body, short neck, fine pointed dark wing feathers. Crown and gorget show patchy angle-dependent reddish-pink and copper-magenta iridescence; some head and throat feathers facing away from the light are dull near-black. Turquoise-blue upper back with green-blue shoulder notes, pale gray-white chest and underside. Iridescence is confined to physically lit feather patches, not uniform metallic scales or glowing jewelry. Exactly two wings emerge from their proper shoulders, one toward upper left behind the head and one toward upper right; naturally translucent motion blur describes the fast wing strokes while the eye, closed bill and nearest head feathers are in focus. A compact dark blue-black tail balances the hovering body. No duplicated wing positions or extra limbs.\nPhotographic surface and optics: real overlapping fine feathers with soft irregular edges, subtle density changes and modest local contrast. Small natural wet catchlight in the eye. The pale belly reads as a soft continuous feather surface, not individually etched hairs. Feather detail diminishes gradually on the far side. Natural soft side daylight from an opening in the canopy, a little brighter on the nearer cheek and shoulder; normal highlight rolloff, open quiet shadows. A calm deep green woodland background several metres away, made from just a broad shaded leaf mass and one soft vertical brown trunk shape. Continuous optical defocus, no busy tiny mottled leaves, no spotty circular bokeh, no painted brushstrokes. Only the flower, a short length of its twig, and the bird are distinct. Subject separation comes from distance and focus, not a luminous outline.\nKeep the believable wild-bird proportions and restrained photographic color. No other bird, insect, person, feeder, enclosure, watermark, text, border, illustration, CGI, plush appearance, giant glass eye, sharpening halo, HDR, decorative haze, rim glow or exaggerated saturation. This is an entirely new generation from text, with no source image supplied.\n",
+      "generationMethod": "AI generated image; exact recorded prompt provided where available",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:51:52.043079+00:00",
+        "notesFi": "Kolibrin kaksi siipeä ja luonnollinen liikepehmennys, pieni nokka ja kukan mittakaava uskottavia. Sulat erottuvat ja tausta rauhallinen."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:09.623Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-cub"
+      ]
+    },
+    {
+      "id": "elain-ind-photo-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-ind",
+      "variantRole": "primary",
+      "primaryImageId": "elain-ind-photo-r20260905-v1",
+      "city": "Ranthambore",
+      "country": "Intia",
+      "animal": "bengalintiikerin poikanen",
+      "r2Key": "kohtaamiset/kuvajono/elain-ind-photo-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-ind-photo-r20260905-v1.jpg",
+      "fileName": "elain-ind-photo-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "c5ab136e6f080790768a1c4a5f25c0e0f538cbd6554cf85861e1f90010f5a416",
+      "bytes": 602359,
+      "caption": "Nuori bengalintiikeri ylittää matalan hiekkakivitasanteen Ranthamboren kuivassa lehtimetsässä.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: National Tiger Conservation Authority — Ranthambhore dry deciduous Anogeissus forests and sandstone/ruin landscape context; Michael J. Vickers — original young Bengal tiger photo, Bandhavgarh May 2010; Michael J. Vickers — Ranthambhore mother with 15-month offspring at waterhole, May 2015; WWF India — Nishant Andrews field narrative of four-month Ranthambore cubs; text read, its photos not accessible",
+      "url": "https://ntca.gov.in/assets/uploads/briefnote/ranthambore.pdf",
+      "sourceUrls": [
+        {
+          "label": "National Tiger Conservation Authority — Ranthambhore dry deciduous Anogeissus forests and sandstone/ruin landscape context",
+          "url": "https://ntca.gov.in/assets/uploads/briefnote/ranthambore.pdf"
+        },
+        {
+          "label": "Michael J. Vickers — original young Bengal tiger photo, Bandhavgarh May 2010",
+          "url": "https://www.tigersintheforest.co.uk/photography/young-male-tiger-at-bandhavgarh-panthera-tigris-tigris-243.html"
+        },
+        {
+          "label": "Michael J. Vickers — Ranthambhore mother with 15-month offspring at waterhole, May 2015",
+          "url": "https://www.tigersintheforest.co.uk/photography/tigress-panthera-tigris-tigris-noor-with-two-of-her-cubs-at-a-waterhole-474.html"
+        },
+        {
+          "label": "WWF India — Nishant Andrews field narrative of four-month Ranthambore cubs; text read, its photos not accessible",
+          "url": "https://www.wwfindia.org/wwf-india-updates/feature_stories/new_beginnings/"
+        }
+      ],
+      "productionNotes": "Katsotut Michael Vickersin alkuperäiset valokuvat ovat pienikokoisia esikatseluja: nuori eläin on Bandhavgarhista ja Ranthamboren vesipaikan poikaset jo noin 15 kuukauden ikäisiä. Ne ohjaavat lajin mittasuhteita ja pintaa, eivät väitä kuvaa tietystä yksilöstä. Kuiva dhok-lehtimetsä perustuu NTCA:n Ranthambore-kuvaukseen; nuorempi, noin viiden kuukauden ikä on kuvan tulkinta. WWF:n nelikuukautisten poikasten kenttäteksti luettiin, sen valokuvia ei lasketa katsotuiksi.",
+      "generationPrompt": "Natural wildlife photograph for a Matkakirja animal card. Create a completely new image from text, native 3:2 landscape at 1536x1024 pixels. A single Bengal tiger cub (Panthera tigris tigris), approximately five months old, in Ranthambore Tiger Reserve, Rajasthan, India. A close candid telephoto view with quiet natural optical depth and believable juvenile anatomy.\nMoment and composition: the cub is stepping diagonally toward the camera across a very low weathered red-brown sandstone ledge, body extending from the right rear toward the left foreground. The head is near the left third, turned just enough that its small attentive eyes meet the lens. It pauses with the nearer forepaw raised only a paw's width above the stone, wrist naturally bent and toes hanging together. The farther forepaw is planted at the ledge edge, and two separate hind paws support the hindquarters on the slightly higher level behind. All four legs have readable normal joint connections, no doubled or disconnected paws. Show the entire cub, from the tops of both ears through all four paws and its single continuous curved tail, with comfortable margins on every side. The tail curves loosely down and toward frame right, tip fully included. The animal remains large, about two thirds of image width, without enlarged perspective paws or a giant foreground head.\nSpecies and age: a real growing Bengal cub with a compact but lightly built body, normal juvenile head-to-body ratio, gently rounded prominent ears, moderately broad blunt muzzle and sturdy young paws. The eyes are ordinary amber-brown with small pupils and tiny restrained natural catchlights, normal dark eyelid contours; avoid huge pale glass eyes. Mouth closed, relaxed whisker pads, curious feline concentration, no smile or teeth display. Natural tawny orange coat with irregular black stripes following the body, some broken and asymmetric rather than mechanically mirrored. White cheek ruff, chin, eyebrow areas, throat and belly; a few actual whiskers curve irregularly from the muzzle. Black back of the ears with white ocelli visible only where the ear angle actually reveals that surface. Exactly one tail with dark rings and tip, no duplicated limbs or stripes detached from the fur.\nSurface and exposure: dense short juvenile fur forms a soft contiguous coat with subtle small overlaps. Sharpness belongs to eyes, nose and the nearer cheek; shoulder, flank and farther paws gradually lose fine detail. Let the tiger's markings provide most of the visible pattern, rather than a high-contrast mesh of individual hairs. Natural slight dust on lower paws, normal leathery nose, no plastic fur, no engraved pores or uniform parallel hairs. Soft early daylight filtered through light cloud, gently warmer from camera left, natural muted orange and dusty browns. The white cheeks retain tone; shadows have real quiet volume. No theatrical beams, rim glow, HDR or poster saturation.\nRanthambore habitat: dry deciduous forest with widely spaced dhok/Anogeissus-type trunks, pale dry grass, fallen dry leaves and low weathered sandstone. Around the feet only a few broad stone surfaces and flattened leaves are moderately defined. Several metres behind, a broad tawny grass mass and two or three gray-brown trunk shapes blend through continuous optical defocus, with one subdued olive canopy mass high in the background. Calm large shapes and believable distance, no clutter of sharp twigs, no restless spots or hundreds of tiny circular bokeh points. No ruin is necessary in this close forest view.\nOne cub only, no mother, sibling, prey, person, vehicle, fence, zoo architecture, collar or other prop. No human expression, cartoon, illustration, CGI, plush toy, oversharpening halos, graphic texture, text, watermark or border. This is an entirely new photographic image, not a partial edit of any earlier generation.\n",
+      "generationMethod": "AI generated image; exact recorded prompt provided where available",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:51:52.043080+00:00",
+        "notesFi": "Tiikerinpoikasen neljä raajaa erottuvat, kohotettu tassu ja häntä uskottavia. Katse ja viikset tarkat, kuiva lehtimetsä ja hiekkakivi luonnolliset."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:11.657Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-ind"
+      ]
+    },
+    {
+      "id": "elain-mex-photo-r20260905-v2",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-mex",
+      "variantRole": "primary",
+      "primaryImageId": "elain-mex-photo-r20260905-v2",
+      "city": "Xochimilco",
+      "country": "Meksiko",
+      "animal": "aksolotl",
+      "r2Key": "kohtaamiset/kuvajono/elain-mex-photo-r20260905-v2.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-mex-photo-r20260905-v2.jpg",
+      "fileName": "elain-mex-photo-r20260905-v2.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "8d4809e8b8c1ebdaa614e50ba4ddb5004057c0951bdc240059289b3f9ff71756",
+      "bytes": 623929,
+      "caption": "Tumma aksolotl etenee Xochimilcon suojaisalla lietepohjalla, kidusten hienot rihmat veden mukana.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: UNAM — axolotl ecology, wild color and genuine specimen/habitat photographs; UNAM — Xochimilco census and chinampa refuges; San Diego Zoo — species account; UNAM 2019 thesis — section 3.6, PDF page 17, four front and five hind digits, three external gill pairs",
+      "url": "https://biotecmov.ibt.unam.mx/numeros/44/1.html",
+      "sourceUrls": [
+        {
+          "label": "UNAM — axolotl ecology, wild color and genuine specimen/habitat photographs",
+          "url": "https://biotecmov.ibt.unam.mx/numeros/44/1.html"
+        },
+        {
+          "label": "UNAM — Xochimilco census and chinampa refuges",
+          "url": "https://www.dgcs.unam.mx/boletin/bdboletin/2024_847.html"
+        },
+        {
+          "label": "San Diego Zoo — species account",
+          "url": "https://animals.sandiegozoo.org/animals/axolotl"
+        },
+        {
+          "label": "UNAM 2019 thesis — section 3.6, PDF page 17, four front and five hind digits, three external gill pairs",
+          "url": "https://tesiunamdocumentos.dgb.unam.mx/ptd2019/abril/0787938/0787938.pdf"
+        }
+      ],
+      "productionNotes": "UNAM:n katsottu värimuotovaihtoehtojen kuva sisältää oikean vankeudessa kuvatun tumman aksolotlin; se ohjasi lajia ja ihon pintaa. Erillinen chinampa-valokuva ja kenttätutkimusteksti perustavat ympäristön. Vedenalainen sommittelu on tulkinta, ei dokumentoitu villiyksilön löytöpaikka.",
+      "generationPrompt": "Use case: photorealistic-natural\nGenerate one completely NEW underwater nature photograph in native 3:2 landscape, 1536x1024 pixels. No image inputs or editing.\nOne real wild-type Xochimilco axolotl, Ambystoma mexicanum, quietly walking over soft dark silt in a sheltered canal beside a chinampa in Mexico. Whole animal in frame, close and large, broad flattened head turned toward the lens in a low three-quarter frontal view, its long body receding diagonally and its single laterally flattened finned tail curving gently beside it. The camera is slightly above the animal's eye level so both neck sides and supporting feet can be understood. Tiny natural lidless dark eyes with only small water highlights; a thin closed mouth line, no human smile. Charcoal and olive-brown mottled wild coloration with irregular subdued speckles, soft moist skin, visible flank grooves, no shiny plastic or etched reptile scales.\nAnatomy is essential: exactly THREE distinct external gill stalks on each side of the head, SIX stalks total. Each side has one upper, one middle and one lower fleshy stalk, feathered with soft fine filaments. Each of the six stalks has one unbranched main stem and a visible separate base; the little filaments must not turn into extra stalks or coral branches. Four limbs only, two fore and two hind, all anatomically connected and visible. The nearest FRONT foot is broadside to the camera, flat on the silt and clearly separate from the head: it ends in EXACTLY FOUR toes, one short inner toe, two longer middle toes, and one short outer toe. FOUR visible terminal tips total, separated by three clear gaps. No fifth toe, no thumb-like nub and no claw that could look like another digit. The nearest HIND foot farther back has exactly FIVE separate slender toes. Give both these feet enough size and focus for unambiguous counting. Far feet follow the same correct anatomy, naturally smaller in perspective. Keep every toe and the whole tail within the image with breathing room; do not hide feet behind plants.\nPhotographic optics and quiet habitat: modest filtered overhead daylight in green-brown water. The near eye, mouth edge, nearest gill stems and both nearest feet are in the usable focus zone; the more distant tail and background lose fine contrast smoothly. The silt is a broad dark matte surface, not glittering sand. Only two broad soft aquatic-plant masses and a blurred chinampa-root shadow well behind the animal. A few barely visible suspended particles, no field of luminous dots. Natural underwater color and restrained exposure, one coherent soft light direction. Camera-like soft skin with modest microcontrast, no fantasy glow, decorative beams, extreme sharpness or all-over microtexture.\nOne animal only. No white, pink, golden or albino pet color; no aquarium gravel, glass, decoration, fish, people, text, logo, watermark, illustration, cartoon face, CGI, extra gills, duplicated limbs or tails.\n",
+      "generationMethod": "AI generated image; exact recorded prompt provided where available",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:53:26.833691+00:00",
+        "notesFi": "Aksolotlin villityypin tumma pilkullinen iho, kuusi kidushaaraa, näkyvän etujalan neljä ja takajalan viisi varvasta uskottavia. Kauemmat jalat peittyvät rungon taakse. Veden valo ja pohjan pinta valokuvallisia."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:13.962Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-mex"
+      ]
+    },
+    {
+      "id": "elain-bra-photo-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-bra",
+      "variantRole": "primary",
+      "primaryImageId": "elain-bra-photo-r20260905-v1",
+      "city": "Rio de Janeiron osavaltio",
+      "country": "Brasilia",
+      "animal": "kultatamariini",
+      "r2Key": "kohtaamiset/kuvajono/elain-bra-photo-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-bra-photo-r20260905-v1.jpg",
+      "fileName": "elain-bra-photo-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "368c13b7c2d69a4cd37f9002652d070c11ec2ef34c227644110b00251af65e7d",
+      "bytes": 513826,
+      "caption": "Kultatamariini pysähtyy sammaleiselle oksalle Rio de Janeiron osavaltion Atlantin sademetsässä.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Smithsonian — golden lion tamarin physical description, digit use and Atlantic Forest habitat; Save the Golden Lion Tamarin — conservation program and genuine animal photograph; Brazil's UNESCO tentative-list submission — Rio de Janeiro lowland Atlantic Forest protected areas",
+      "url": "https://nationalzoo.si.edu/animals/golden-lion-tamarin",
+      "sourceUrls": [
+        {
+          "label": "Smithsonian — golden lion tamarin physical description, digit use and Atlantic Forest habitat",
+          "url": "https://nationalzoo.si.edu/animals/golden-lion-tamarin"
+        },
+        {
+          "label": "Save the Golden Lion Tamarin — conservation program and genuine animal photograph",
+          "url": "https://www.savetheliontamarin.org/"
+        },
+        {
+          "label": "Brazil's UNESCO tentative-list submission — Rio de Janeiro lowland Atlantic Forest protected areas",
+          "url": "https://whc.unesco.org/en/tentativelists/6897/"
+        }
+      ],
+      "productionNotes": "Smithsonianin eläintarhakuva ja lajin suojelujärjestön oikea aikuisen ja poikasen valokuva ohjasivat kasvoja, karvan pintaa ja ruumiin mittasuhteita. Metsäympäristö perustuu Smithsonianin lajitekstiin ja Brasilian UNESCO-ehdotuksen Rio de Janeiron aluekuvaukseen. Jälkimmäinen on ehdokasluettelon aineisto, ei väite maailmanperintöstatuksesta.",
+      "generationPrompt": "Use case: a natural wildlife photograph for a Matkakirja animal card.\nEntirely new image from text, native 3:2 landscape, 1536x1024 pixels. One adult golden lion tamarin (Leontopithecus rosalia) in the lowland Atlantic rainforest of Rio de Janeiro state, Brazil. An intimate candid telephoto photograph at the animal's eye level, with normal wild-animal proportions and no stylization.\nMoment and composition: the tamarin was walking along a sturdy shallow-diagonal branch from left to right. It has paused low over the branch and turned its small dark face to look straight toward the camera, alert but calm, mouth closed. Show the whole slender adult, from all of its swept-back mane through its hindquarters and the entire long tail, plus all four supporting hands/feet, comfortably within the landscape frame. The body lies mostly left-to-right in three-quarter side view; the face near the right-hand third is the focal point. The long orange non-prehensile tail follows a loose downward curve back toward the lower left with its tip fully inside the picture; it does not coil around or grip the branch. Leave real space below and to the left of the tail tip. Two front hands grip the branch ahead of the chest, two hind feet grip behind the body, coherent load-bearing joints, narrow dark hands/feet with long slender digits and small clawlike nails. The far limbs may be partly overlapped naturally, but there are four anatomical limbs, never extra dangling hands.\nSpecies details: small slender primate, rich but natural reddish-golden orange coat, a long backswept mane that covers the ears and surrounds a dark charcoal-brown almost bare face. Small muzzle with flat nostril region, close-set brown eyes of real tamarin size, normal dark eyelid skin, two small soft natural eye reflections. No black cap, white tufts, lion muzzle or marmoset ear fans. Adult proportions, no infant riding on the back. Fur is irregular, slightly flattened into soft overlapping locks along the shoulders and flank, with a few distinct hairs at the nearest cheek and silhouette. The farther hip and tail lose fine detail gradually. Avoid combed parallel strands, etched fur, a glowing orange outline or a cosmetic perfect mane.\nEnvironment and light: humid Atlantic Forest canopy habitat with one weathered branch bearing a few broad damp moss patches. Behind it, several metres of depth: a single broad deep-green leaf mass, one out-of-focus trunk and the large soft silhouette of a bromeliad rosette off to the left. Enough coherent habitat to read rainforest without countless little bright leaves. Diffuse daylight from an overcast gap above and left shapes the face gently; muted copper-orange fur against quiet shaded greens, soft shadows, modest microcontrast, natural white balance. Real continuous optical blur in the background, smooth tonal transitions. Eye and near cheek in focus, branch surface around supporting hands moderately defined, everything farther gradually softer.\nOne animal only. No person, human expression, teeth display, feeding object, collar, enclosure, cartoon eye, toy appearance, painted foliage, mottled synthetic bokeh, spotlight, HDR, bloom, decorative fog, hyper-sharpening, text, watermark or border. Full uncut tail and mane are essential. Preserve the feeling of an actual measured wildlife exposure.\n",
+      "generationMethod": "AI generated image; exact recorded prompt provided where available",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:53:26.833809+00:00",
+        "notesFi": "Kultatamariinin neljä tarttuvaa raajaa, pitkä ehjä häntä ja hieno kiiltävä turkki uskottavia. Kasvot erottuvat tarkasti ja metsä pehmenee rauhallisesti."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:15.986Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-bra"
+      ]
+    },
+    {
+      "id": "elain-can-photo-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-can",
+      "variantRole": "primary",
+      "primaryImageId": "elain-can-photo-r20260905-v1",
+      "city": "Churchill",
+      "country": "Kanada",
+      "animal": "jääkarhunpentu",
+      "r2Key": "kohtaamiset/kuvajono/elain-can-photo-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-can-photo-r20260905-v1.jpg",
+      "fileName": "elain-can-photo-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "bc86807fd21095015836978cd4d71beca664791b28ac639eceddf1457535d98a",
+      "bytes": 365637,
+      "caption": "Churchillin jääkarhunpentu pysähtyy katsomaan tulijaa kesken askeleen tuulen kovettamalla lumella.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Polar Bears International — Churchill cub adoption, field account and Dave Sandford photo",
+      "url": "https://polarbearsinternational.org/news-media/articles/rare-polar-bear-cub-adoption-captured-on-video/",
+      "sourceUrls": [
+        {
+          "label": "Polar Bears International — Churchill cub adoption, field account and Dave Sandford photo",
+          "url": "https://polarbearsinternational.org/news-media/articles/rare-polar-bear-cub-adoption-captured-on-video/"
+        }
+      ],
+      "productionNotes": "Polar Bears Internationalin katsottu Churchillin kenttäkuva ohjasi pennun pitkähköä kuonoa, pieniä silmiä ja luonnollista turkkia. Kuvan yksittäinen noin kymmenkuinen pentu ja rannan sommittelu ovat tulkintaa; lähdekuvan emoa ja toista pentua ei kopioitu.",
+      "generationPrompt": "Use case: photorealistic-natural\nOne entirely NEW wildlife photograph from text. Native landscape 3:2 frame, 1536x1024 pixels.\nA single wild polar bear cub, Ursus maritimus, about ten months old, walking on wind-packed autumn snow near Churchill on western Hudson Bay, Manitoba. A quiet intimate telephoto observation from the cub's eye height. Show the whole cub large, its body moving diagonally across the frame while it lifts its head and looks directly into the lens with natural small dark almond eyes. Closed relaxed black lips, elongated tapered muzzle with broad wet black nose, modest rounded ears, short neck and long low body, broad furry paws. Real juvenile bear proportions, with a head much smaller relative to its body than a teddy bear. Four anatomically connected legs; one forepaw advances a little above the snow, the other three paws have credible support, all four remain readable and inside frame. No pose of waving.\nGenuine field-photograph surface: off-white dense fur lies in loose irregular slightly damp clumps along the shoulders and legs, pale gray shading on the chest, some faint dirty snow on lower paws. Near eye and nose focused, face short hair readable, shoulder fur softly resolved, rear coat gradually loses fine contrast. No all-over etched hair strands, long wispy belly halo, plush cotton-ball coat or glassy large eyes.\nRestrained cloudy subarctic daylight, naturally low contrast with a little side modeling, cool snow and cream fur separated by subtle tonal differences. The background is quiet and physically distant: a few large wind-shaped snow banks, a low softened gray-brown willow patch well behind the bear, then a smooth blue-gray band of Hudson Bay ice below a pale gray sky. No tiny bokeh circles or repeated little twigs. A real 400mm wildlife lens around f/5.6, continuous optical defocus, ordinary honest camera color and exposure. Plenty of room above ears and around every paw.\nOnly this one cub, no mother or second animal, no human, vehicle, building, enclosure or collar. No anthropomorphic expression or human smile, exaggerated cub head, neon blue shadows, theatrical rim light, bloom, smoke, decorative rays, HDR, aggressive sharpening, illustration, CGI, text, logo or watermark.\n",
+      "generationMethod": "AI generated image; exact recorded prompt provided where available",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:53:26.833811+00:00",
+        "notesFi": "Jääkarhunpennun kohotettu tassunpohja ja kolme tukijalkaa uskottavia. Vaalea turkki säilyttää yksityiskohdat lumesta erillisenä, ei muovinen pinta."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:18.020Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-can"
+      ]
+    },
+    {
+      "id": "elain-arg-photo-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-arg",
+      "variantRole": "primary",
+      "primaryImageId": "elain-arg-photo-r20260905-v1",
+      "city": "Punta Tombo",
+      "country": "Argentiina",
+      "animal": "magellaninpingviini",
+      "r2Key": "kohtaamiset/kuvajono/elain-arg-photo-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-arg-photo-r20260905-v1.jpg",
+      "fileName": "elain-arg-photo-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "60535b6f095a58f03b6beab9731f2595c4162e27758935503b7eb96a342d1f2d",
+      "bytes": 488045,
+      "caption": "Magellaninpingviini astelee Punta Tombon sorarannalla, Atlantti pehmeänä taustallaan.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Argentina government — Punta Tombo and genuine adult penguin photographs; Aquarium of the Pacific — adult band pattern, dense plumage and flipper structure; indexed text read, direct page returned 403",
+      "url": "https://www.argentina.gob.ar/viaja-por-argentina/que-hacer/caminar-entre-pinguinos-de-magallanes",
+      "sourceUrls": [
+        {
+          "label": "Argentina government — Punta Tombo and genuine adult penguin photographs",
+          "url": "https://www.argentina.gob.ar/viaja-por-argentina/que-hacer/caminar-entre-pinguinos-de-magallanes"
+        },
+        {
+          "label": "Aquarium of the Pacific — adult band pattern, dense plumage and flipper structure; indexed text read, direct page returned 403",
+          "url": "https://www.aquariumofpacific.org/onlinelearningcenter/species/magellanic_penguin"
+        }
+      ],
+      "productionNotes": "Argentiinan virallisen Punta Tombo -sivun kaksi oikeaa valokuvaa ohjasivat kahta rintavyötä, lyhyitä jalkoja ja tiivistä höyhenpintaa. Sarjan aiemman promptin kapea ylävyö korjattiin katsottujen kuvien ja Aquarium of the Pacificin indeksoidun lajitekstin mukaiseksi leveämmäksi kaulavyöksi. Meren ja pensaiden yhdistelmä on paikallisen elinympäristön tulkinta.",
+      "generationPrompt": "Use case: natural wildlife photograph for a Matkakirja animal card.\nCreate an entirely new photograph from text, native 3:2 landscape, 1536x1024 pixels. One adult Magellanic penguin (Spheniscus magellanicus) walking on the coastal steppe at Punta Tombo, Chubut, Argentina. A convincing low eye-level wildlife telephoto photograph with a calm Atlantic background.\nBehavior and framing: one adult bird approaches slowly in a natural waddling step, the body turned about fifteen degrees from frontal, its head looking into the lens with an attentive wild-bird gaze. Place the whole animal just left of centre, head through feet and short rear tail all within frame, roughly three quarters of image height. The nearer webbed foot has landed flat on a gently rounded pebble; the farther foot lifts only slightly behind it, toes flexed normally during the short step. Both elongated compact flippers hang slightly out from the flanks for balance with their anatomical roots attached normally; they are not spread like human arms. The chest remains fully visible to inspect its species markings. Keep plenty of breathing room above the head and below both feet.\nSpecies accuracy: adult Magellanic, black face and crown, a white band originating near each eye and curving around the sides of the head to meet at the throat. TWO separate black bands cross the front beneath the face: an upper broad black neck band below the white face outline, then a clear white gap, then a second black inverted horseshoe band arching across the upper breast and descending along the flanks. Exactly these two bands, no extra stripe. White belly with a few sparse natural dark spots, black back, black upper flippers with narrow pale edges. Normal short dark hooked bill with subtle pale worn areas and a little muted pink bare skin above the eye and near the bill root. Small dark eye with a tiny wet catchlight; no large glassy doll eyes. Real adult head, short neck, streamlined body and sturdy webbed gray-black feet, normal claws and coherent toes. The legs stay short and set back under the body, not long humanlike legs.\nSurface and light: close-set short waterproof feathers read primarily as a smooth matte densely feathered surface. Fine feather edges appear only around the focused face, neck and nearer flipper, not a carpet of etched miniature scales. Soft neutral late-afternoon daylight filtered by thin high cloud, gently brighter from camera right. Controlled whites retain tone and blacks retain subtle detail, no HDR contrast, no polished plastic shine or dramatic rim light.\nHabitat and optics: a narrow patch of weathered small gray-brown pebbles around the feet in moderate focus; a broad tawny coastal-soil plane behind. Two low gray-green Patagonian scrub mounds stand well behind the bird, separated into broad soft masses. A calm distant cold blue-gray Atlantic band and pale sky establish Punta Tombo coast. Long-lens continuous focus falloff, distant stones and twig detail naturally disappear. No repetitive speckled bokeh, no countless sharply outlined shrubs, no tiny decorative circular highlights. Keep the quiet optical depth and the engaging bird as the dominant subject.\nOnly one penguin. No colony, chick, person, sign, path furniture, aquarium, artificial island, illustration, CGI, anthropomorphic smile, enlarged eyes, text, watermark, border, bloom or poster color grading. Entirely new image, not an edit of an existing one.\n",
+      "generationMethod": "AI generated image; exact recorded prompt provided where available",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:53:26.833812+00:00",
+        "notesFi": "Magellaninpingviinin kaksi rintavyötä, kaksi siipeä ja kävelyaskel luettavia. Sorapohjan terävyys vähenee luontevasti taustaan."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:20.044Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-arg"
+      ]
+    },
+    {
+      "id": "elain-ken-photo-r20260905-v2",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-ken",
+      "variantRole": "primary",
+      "primaryImageId": "elain-ken-photo-r20260905-v2",
+      "city": "Nakuru",
+      "country": "Kenia",
+      "animal": "Rothschildinkirahvin vasa",
+      "r2Key": "kohtaamiset/kuvajono/elain-ken-photo-r20260905-v2.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-ken-photo-r20260905-v2.jpg",
+      "fileName": "elain-ken-photo-r20260905-v2.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "7538a4c8e002007b91601daa0d7d509c4ae9770b8c46c9d4938cb7792834fd95",
+      "bytes": 505772,
+      "caption": "Rothschildinkirahvin vasa katsoo heinikon yli Nakurussa, pitkät vaaleat sääret tukevasti maassa.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: GCF — Northern Giraffe ja TonyWildin katsottu nubialaisen kirahvin vasakuva; GCF — Kenya Country Profile, Nakurun siirretty populaatio",
+      "url": "https://giraffeconservation.org/giraffe-species/northern-giraffe/",
+      "sourceUrls": [
+        {
+          "label": "GCF — Northern Giraffe ja TonyWildin katsottu nubialaisen kirahvin vasakuva",
+          "url": "https://giraffeconservation.org/giraffe-species/northern-giraffe/"
+        },
+        {
+          "label": "GCF — Kenya Country Profile, Nakurun siirretty populaatio",
+          "url": "https://giraffeconservation.org/wp-content/uploads/2023/09/2023-Kenya-Country-Profile.pdf"
+        }
+      ],
+      "productionNotes": "GCF:n katsottu TonyWildin vasakuva ohjaa vasan turkin, vartalon ja jatkuvan kaulan mittasuhteita. GCF lukee aiemmin Rothschildinkirahvina tunnetun muodon nubialaiseen pohjoisenkirahvin alalajiin G. c. camelopardalis. Pelin hahmonimi säilyy. Nakurun populaatio on suojelusiirroin perustettu; katsotun vasakuvan tarkkaa kuvauspaikkaa ei varmennettu Nakuruksi.",
+      "generationPrompt": "Create a completely new natural wildlife photograph for a Matkakirja animal card. Landscape 3:2 composition, 1536 x 1024 pixels. It must look like a restrained camera photograph, with plausible optics and unretouched animal proportions.\n\nA six-month-old Rothschild's giraffe calf, the Nubian northern giraffe (Giraffa camelopardalis camelopardalis), standing in short grass near Lake Nakuru, Kenya. One whole calf seen almost in side profile, its head turned naturally toward the camera. Its front pair of legs and rear pair of legs are each staggered slightly along the walking direction: all four legs run continuously from body to four distinct cloven hooves resting on the ground, with a visible small gap between each pair at the bottom. The legs do not cross. A relaxed pause, not a dramatic action. The neck rises normally from the shoulders, largely upright with a mild forward slope, and the calf chews a tiny remnant of a green leaf. Long muzzle, dark normally sized eyes and natural calf proportions; two small fur-covered ossicones, two ears, short mane and one thin tufted tail.\n\nNubian giraffe coat: large irregular uneven-edged chestnut-brown blotches of varied shapes on a pale cream coat, separated by broad softly edged cream areas; a mixture of broad and smaller blotches, not a regular polygonal net. Largely plain pale lower legs. The coat is short and matte with low microcontrast. The body stretches horizontally across the landscape picture, while the neck gives height. All horn tips, ears and four hooves are inside the frame with comfortable margins; the calf occupies about four fifths of image height. Photograph from a normal wildlife telephoto distance, at the calf's shoulder level, with the near eye and body in useful focus.\n\nBright lightly overcast morning, gentle natural light from the left, soft dimensional shadows. The near grass is simple and short. Far behind is a broad muted olive grassy slope, a subdued gray-blue lake strip and only the soft edge of one distant acacia to the far side. A quiet continuous defocused background, no detailed tree behind the head or neck. Optical rendering: focus on the near eye and head, with enough depth to read the body's anatomy; detail and contrast fall away gently over the far body and into the background. Small natural eye catchlights. Surface detail is irregular and modest, never uniformly etched or sharpened. Quiet background made of a few broad coherent forms at real distances, continuous smooth defocus, no scattered bright bokeh dots or painted foliage. Natural color and normal dynamic range; no HDR, bloom, rim glow, theatrical rays, illustration, toy styling, oversized eyes or human expression.\n\nOne animal only, no mother, people, vehicles, fences, text or watermark. No extra limbs, overlapping hidden hooves, distorted neck, antlers, plush features or rigid decorative pattern.",
+      "generationMethod": "builtin-imagegen-new-text-generation",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:53:26.833813+00:00",
+        "notesFi": "Kirahvinvasan pitkät vaaleat sääret, neljä jalkaa ja matalat sarvet uskottavia. Täplät ja lyhyt turkki eivät muodosta häiritsevää pintaa, järvimaisema hillitty."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:22.149Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-ken"
+      ]
+    },
+    {
+      "id": "elain-nam-photo-r20260905-v2",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-nam",
+      "variantRole": "primary",
+      "primaryImageId": "elain-nam-photo-r20260905-v2",
+      "city": "Damaraland",
+      "country": "Namibia",
+      "animal": "erämaanorsu",
+      "r2Key": "kohtaamiset/kuvajono/elain-nam-photo-r20260905-v2.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-nam-photo-r20260905-v2.jpg",
+      "fileName": "elain-nam-photo-r20260905-v2.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "d3d67ddf05db2c415eaedb3f168fa81110ff1b254e46dbb3160eb2107fddcd0a",
+      "bytes": 694259,
+      "caption": "Aikuinen erämaanorsu tavoittaa lehtiä Damaralandin kuivassa jokiuomassa.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Elephant Human Relations Aid — Namibian erämaanorsujen laji, jokiuomat ja katsottu norsuvalokuva",
+      "url": "https://www.ehranamibia.org/about-desert-elephants",
+      "sourceUrls": [
+        {
+          "label": "Elephant Human Relations Aid — Namibian erämaanorsujen laji, jokiuomat ja katsottu norsuvalokuva",
+          "url": "https://www.ehranamibia.org/about-desert-elephants"
+        }
+      ],
+      "productionNotes": "EHRA:n katsottu Namibian norsuvalokuva ohjaa aikuisen vartalon, jalkojen ja pölyisen ihon mittasuhteita. EHRA vahvistaa populaation afrikanorsuksi, ei omaksi lajiksi tai alalajiksi, sekä kuivien jokiuomien merkityksen. Uusi kuva rajataan Damaralandin niukkaan jokikasvillisuuteen; tarkkaa jokiosuutta ja kuvan yksilöä ei väitetä tunnistetuksi.",
+      "generationPrompt": "Create a completely NEW ordinary wildlife field photograph of one adult desert-adapted African bush elephant in Damaraland, Namibia. Native landscape 3:2 frame, 1536 x 1024 pixels. Real restrained camera rendering with smooth tonal transitions, understated surface detail and natural optics.\n\nA healthy lean adult female African bush elephant (Loxodonta africana), standing quietly beside a river tree in a dry sandy ephemeral riverbed. Almost side-on body, head slightly toward us; the near eye is visible in profile. The trunk extends forward in a gentle curve and loosely gathers a small leafy twig on a low camel-thorn branch entering from the left. Broad African ears rest naturally, two modest tusks, thin tail, four sturdy legs ending in four distinct padded feet on the sand. The ordinary staggered stance is balanced and legs do not cross. Show the entire animal, trunk tip, ear edges, tail and all four feet with comfortable margins, large in the landscape frame.\n\nThe elephant stands fully in bright OPEN SHADE beside the tree, illuminated by broad blue-sky light and reflected light from pale sand. Neutral gray-brown skin with quiet cool shadows, small normal dark eye. Dust softens most of the skin into broad matte surfaces; gentle uneven patches of gray dust and large folds show the body's physical volume. Skin detail is only locally resolved around the near eye and trunk; the far flank and legs have subdued detail and contrast. No global fine-line pattern, no sharp outlined skin mesh, no orange color wash. This should look like a normal unretouched telephoto exposure, not a highly polished render.\n\nPhotograph with a 300 mm wildlife lens near the animal's chest level, focus at the head and forward shoulder. A broad sunlit pale sandbank lies a long distance behind it, completely out of focus as smooth continuous warm beige tones. Only the very soft silhouette of one distant muted ochre hill and a small green river-tree mass at the far edge suggest the landscape. No recognizable small rocks, cracks or repeated dunes in the background. The nearby sand beneath the feet shows a little soft natural texture. The single browsing branch has simple physically connected limbs and a few small compound leaves, not a screen of twigs.\n\nOnly this one elephant, a desert-adapted population of Loxodonta africana, not a separate species. No other animal, herd, human, vehicle, grassy savanna, fence, text or watermark. No extra legs, trunks, tusks, cartoon proportions, glassy eyes, HDR, artificial fog, glow, sunbeams, illustration, engraved microtexture or decorative bokeh.",
+      "generationMethod": "builtin-imagegen-new-text-generation",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:53:26.833814+00:00",
+        "notesFi": "Aikuisen norsun neljä jalkaa, kärsä ja molemmat syöksyhampaat erottuvat. Kärki tavoittaa lehvän, ihon pienet rypyt ja suuri korva luonnollisia; varjo on yhtenäinen."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:24.159Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-nam"
+      ]
+    },
+    {
+      "id": "elain-mdg-photo-r20260905-v2",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-mdg",
+      "variantRole": "primary",
+      "primaryImageId": "elain-mdg-photo-r20260905-v2",
+      "city": "Berenty",
+      "country": "Madagaskar",
+      "animal": "Verreaux'n sifaka",
+      "r2Key": "kohtaamiset/kuvajono/elain-mdg-photo-r20260905-v2.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-mdg-photo-r20260905-v2.jpg",
+      "fileName": "elain-mdg-photo-r20260905-v2.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "01189164cd7575299817ec6649b2aa1e472d5e4ab0505788f111e6bbf73ff3ac",
+      "bytes": 525022,
+      "caption": "Verreaux’n sifaka pysähtyy Berentyn kaatuneelle rungolle, pitkä vaalea häntä rennosti puuta vasten.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Madagaskarin PA-CIWT — Verreaux’n sifakan tuntomerkit, mitat ja lehtiruokavalio; American Society of Mammalogists — B. D. Pattersonin katsottu Berentyn valokuva; Rhett A. Butler — katsottu ruokailuvalokuva Berentystä; WildMadagascar — Berentyn kuiva galleriametsä",
+      "url": "https://e-voary.mg/paciwt/Ficheverreauxi.php?lang=en",
+      "sourceUrls": [
+        {
+          "label": "Madagaskarin PA-CIWT — Verreaux’n sifakan tuntomerkit, mitat ja lehtiruokavalio",
+          "url": "https://e-voary.mg/paciwt/Ficheverreauxi.php?lang=en"
+        },
+        {
+          "label": "American Society of Mammalogists — B. D. Pattersonin katsottu Berentyn valokuva",
+          "url": "https://mammalsociety.org/image-library/propithecus-verreauxi-1634"
+        },
+        {
+          "label": "Rhett A. Butler — katsottu ruokailuvalokuva Berentystä",
+          "url": "https://photos.wildmadagascar.org/images/pictures/sifaka_v_0159.shtml"
+        },
+        {
+          "label": "WildMadagascar — Berentyn kuiva galleriametsä",
+          "url": "https://www.wildmadagascar.org/conservation/parks/Berenty.html"
+        }
+      ],
+      "productionNotes": "Lähteinä katsottiin kaksi oikeaa Berentyn sifakakuvaa: B. D. Pattersonin kokovartaloinen liike ja Rhett Butlerin lehtiruokailu. Pitkä yksivärinen vaalea häntä, mustat kasvot ja pitkät takaraajat tarkistettiin lähteistä. Ympäristö rajautuu Berentyn kuivaan galleriametsään, joten koko eteläisen Madagaskarin piikkikasvivalikoimaa ei lisätä taustaan.",
+      "generationPrompt": "Create a completely new natural wildlife photograph for a Matkakirja animal card. Landscape 3:2 composition, 1536 x 1024 pixels. It must look like a restrained camera photograph, with plausible optics and unretouched animal proportions.\n\nOne adult Verreaux's sifaka (Propithecus verreauxi), a lean long-limbed lemur in the dry gallery forest of Berenty, southern Madagascar. It is seated naturally on a wide horizontal fallen tree trunk. The body is seen from the side and the head turns to glance at the camera. Its two long hind legs are folded in a relaxed seated posture with its two large grasping feet resting separately on top of the log close to its body. Both slim forearms extend forward from the shoulders, and the two hands rest separately on the log in front of it. Four limbs total, each limb has a clear continuous anatomical attachment. Nothing held in the hands. Long plain white tail lies loosely on the log and curves to one side, entirely within the frame.\n\nTrue adult sifaka proportions: lean elongated torso, narrow waist, long hind limbs, relatively small head. Mostly off-white coat with natural grayish areas, a small brown crown, black hairless face and muzzle, yellow-gold irises of ordinary size and dark pupils. The fur lies in irregular overlapping soft layers, a little compressed over the bent knees, with the animal's lean form visible beneath; no spherical fluffy body. It looks naturally alert, with relaxed closed mouth, not a toy's fixed wide-eyed stare.\n\nClose environmental wildlife photograph with a 200 mm lens near the animal's eye level. Show the whole head, both hands, both feet and full tail with comfortable margins. Gentle late-afternoon natural side light and broad open shade, with low contrast in the far coat and slightly clearer near face. Background several metres behind: broad subdued trunks and large olive-brown forest tones, dusty ground low in frame. No foreground leafy prop, no tiny scattered highlight holes or clutter of sharp twigs. Optical rendering: focus on the near eye and head, with enough depth to read the body's anatomy; detail and contrast fall away gently over the far body and into the background. Small natural eye catchlights. Surface detail is irregular and modest, never uniformly etched or sharpened. Quiet background made of a few broad coherent forms at real distances, continuous smooth defocus, no scattered bright bokeh dots or painted foliage. Natural color and normal dynamic range; no HDR, bloom, rim glow, theatrical rays, illustration, toy styling, oversized eyes or human expression.\n\nOne animal only, no rings on the tail, no extra hands or feet, no human, enclosure, text or watermark.",
+      "generationMethod": "builtin-imagegen-new-text-generation",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:53:26.833815+00:00",
+        "notesFi": "Sifakan kädet ja jalat tukeutuvat runkoon, pitkä häntä jatkuu ehjänä. Vaalea karva ja tumma kasvonaamio tarkkoja, metsä rauhallinen."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:26.308Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-mdg"
+      ]
+    },
+    {
+      "id": "elain-uga-photo-r20260905-v2",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-uga",
+      "variantRole": "primary",
+      "primaryImageId": "elain-uga-photo-r20260905-v2",
+      "city": "Bwindi",
+      "country": "Uganda",
+      "animal": "vuorigorillan poikanen",
+      "r2Key": "kohtaamiset/kuvajono/elain-uga-photo-r20260905-v2.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-uga-photo-r20260905-v2.jpg",
+      "fileName": "elain-uga-photo-r20260905-v2.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "c1c109e7d4a6380eae6072dabb2f6ac3b7e235a337da7249cf42ca136e4e2bdc",
+      "bytes": 559190,
+      "caption": "Vuorigorillan poikanen tutkii pientä lehtiversoa Bwindi-metsän matalalla rungolla.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Uganda Wildlife Authority — vuorigorilla ja Bwindi; Gorilla Doctors — katsotut Bwindi-kuvat, Ruterana vastasyntyneineen ja varttunut Kibumba",
+      "url": "https://ugandawildlife.org/animals/mountain-gorilla/",
+      "sourceUrls": [
+        {
+          "label": "Uganda Wildlife Authority — vuorigorilla ja Bwindi",
+          "url": "https://ugandawildlife.org/animals/mountain-gorilla/"
+        },
+        {
+          "label": "Gorilla Doctors — katsotut Bwindi-kuvat, Ruterana vastasyntyneineen ja varttunut Kibumba",
+          "url": "https://gorilladoctors.org/impact/"
+        }
+      ],
+      "productionNotes": "Katsottiin Gorilla Doctorsin oikeat Bwindi-kuvat Ruteranasta vastasyntyneineen sekä samasta poikasesta Kibumbasta nelivuotiaana nuorena. Ne osoittavat iän mukana muuttuvat kasvon ja turkin mittasuhteet. Uuden kuvan noin kaksivuotias poikanen on näiden väliin sijoittuva fiktiivinen yksilö, ei väite katsotun valokuvan tarkasta iästä. Perhe jää kuvarajan ulkopuolelle; lähteissä eläimet elävät perheryhmissä.",
+      "generationPrompt": "Create a completely new natural wildlife photograph for a Matkakirja animal card. Landscape 3:2 composition, 1536 x 1024 pixels. It must look like a restrained camera photograph, with plausible optics and unretouched animal proportions.\n\nA candid photograph of one two-year-old mountain gorilla infant (Gorilla beringei beringei) in Bwindi Impenetrable Forest, Uganda, quietly examining a green leaf. Small juvenile ape with real developing gorilla proportions: a lean torso and long arms, moderately rounded belly, a defined projecting muzzle, developing low brow and a modest sloping head shape. Small deep-set dark-brown eyes, only a tiny soft reflection and no large white eye highlights. Dark bare face with ordinary broad nostrils and naturally closed relaxed lips. The head is not spherical or overlarge.\n\nIt sits slightly hunched on a wide low mossy fallen trunk, body side-on and head turned only partly toward us, eyes directed at the leaf near its knee. One hand rests flat on the log to support its body; the other loosely holds the leaf just above the bent knee. Both hind legs are naturally folded, two separate grasping feet resting on the log. Each of the two arms and two legs connects clearly to the torso, no crossed or fused fingers. Show its whole body from crown to toes with comfortable margins, close enough to feel present but not distorted. Wildlife telephoto view at its seated eye level.\n\nDry, almost matte black coat with subtle warm brown in the light. Hair reads mainly as large quiet overlapping soft groups, with only a few short individual strands visible on the near brow and shoulder. Belly and far shoulder are broad subdued dark surfaces, not covered in bright wiry hair lines. Broad diffuse canopy daylight, no wet sheen except an ordinary subtle nose reflection; moderately bright exposure with gentle modeling in the dark fur. The animal's own absorbed behavior is the engaging moment, with no pose for the viewer.\n\nSeveral metres behind is a continuous soft deep green forest mass, one broad brown tree trunk and one blurred broad leaf off to the side. Calm optical focus falloff with no bright scattered holes or speckled bokeh. A little moss directly under the hands is in focus, other log texture gently softens with distance. Real photographic texture and color, no exaggerated microcontrast, HDR, artificial rim light, illustration, oversharpened hairs, oversized glass eyes or plush styling.\n\nOne infant only, family outside the frame, no other animal, human, clothing, enclosure, text or watermark.",
+      "generationMethod": "builtin-imagegen-new-text-generation",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:53:26.833815+00:00",
+        "notesFi": "Gorillanpoikanen tutkii lehteä, kannatteleva käsi ja kaksi erillistä jalkaa varpaineen uskottavia. Musta turkki säilyttää sävyerot ja katse luontevasti toiminnassa."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:28.400Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-uga"
+      ]
+    },
+    {
+      "id": "elain-eth-photo-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-eth",
+      "variantRole": "primary",
+      "primaryImageId": "elain-eth-photo-r20260905-v1",
+      "city": "Simien-vuoret",
+      "country": "Etiopia",
+      "animal": "geladapaviaani",
+      "r2Key": "kohtaamiset/kuvajono/elain-eth-photo-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-eth-photo-r20260905-v1.jpg",
+      "fileName": "elain-eth-photo-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "a964956293b4055e0d5596386bb9d1511fa9de99310a5c9550da143e9cf40c36",
+      "bytes": 509758,
+      "caption": "Geladakoiras nyppii ruohoa Simienvuorten rinteellä ja nostaa välillä katseensa.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: African Wildlife Foundation — geladan tuntomerkit, laidunnus ja Simien sekä katsottu geladavalokuva",
+      "url": "https://www.awf.org/wildlife-conservation/gelada",
+      "sourceUrls": [
+        {
+          "label": "African Wildlife Foundation — geladan tuntomerkit, laidunnus ja Simien sekä katsottu geladavalokuva",
+          "url": "https://www.awf.org/wildlife-conservation/gelada"
+        }
+      ],
+      "productionNotes": "AWF:n lajiteksti vahvistaa geladan maassa tapahtuvan ruohoruokailun, tuntomerkit ja Simienin suojeluyhteyden. Katsottu AWF:n pääkuva ohjaa silmien, tumman kuonon ja luonnollisen karvapinnan kuvausta; ikää ja sukupuolta ei sivulla yksilöity, joten aikuisen koiraan koko ja harja perustuvat lajitekstiin. Gelada ei nimestä geladapaviaani huolimatta ole varsinainen paviaani.",
+      "generationPrompt": "Create a completely new natural wildlife photograph for a Matkakirja animal card. Landscape 3:2 composition, 1536 x 1024 pixels. It must look like a restrained camera photograph, with plausible optics and unretouched animal proportions.\n\nOne adult male gelada (Theropithecus gelada) quietly feeding on a high grassy slope in Ethiopia's Simien Mountains. Mature and solidly built, with an elongated dark bare muzzle, small amber-brown eyes set under a natural brow, a coarse brown-gray coat and a long heavy golden-brown shoulder cape. The male's bare reddish hourglass-shaped chest area is visible between the parting coat, irregular and natural at the edges, not a bright graphic emblem. A calm closed-mouth expression and a brief glance toward the camera while eating; no bared teeth or human smile.\n\nHe sits three-quarter toward the lens in a normal grazing posture, knees bent, feet resting on the grass, the lower pelvis naturally hidden by the bent thighs and grass. One hand pinches a few grass blades close to the ground; the other rests near his knee. Exactly two arms and two hind legs, two natural hands and feet with continuous anatomy. Keep the entire head and mane, both hands and feet in frame, with breathing space below the toes. The animal fills much of the landscape frame, viewed with a 180 mm wildlife lens near his seated shoulder level. Face, near hand and front coat have clear focus; the long coat on the far shoulder gradually softens.\n\nCool bright mountain overcast with a modest lighter patch of sky from the left gives restrained dimensional light. The coarse cape falls in unequal overlapping locks, with a few worn and flattened sections; individual hairs only selectively visible, not every strand uniformly outlined. Background many metres away: a broad muted green highland slope and one distant slate-gray basalt escarpment shape, softly defocused with no dramatic sky or detailed cliff cracks. Only a limited small patch of grass by the hand is crisp. Optical rendering: focus on the near eye and head, with enough depth to read the body's anatomy; detail and contrast fall away gently over the far body and into the background. Small natural eye catchlights. Surface detail is irregular and modest, never uniformly etched or sharpened. Quiet background made of a few broad coherent forms at real distances, continuous smooth defocus, no scattered bright bokeh dots or painted foliage. Natural color and normal dynamic range; no HDR, bloom, rim glow, theatrical rays, illustration, toy styling, oversized eyes or human expression.\n\nOne gelada only, no troop or other animal, no person, fence, text, watermark, exposed genitals, extra hands, fused digits or baby proportions.",
+      "generationMethod": "builtin-imagegen-new-text-generation",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:53:26.833816+00:00",
+        "notesFi": "Geladan punainen paljas rintalaikku, pitkä karvaviitta ja ruohoa pitelevä käsi luonnollisia. Hiljainen katse ja vuoriston väljät tasot toimivat."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:30.468Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-eth"
+      ]
+    },
+    {
+      "id": "elain-mar-photo-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-mar",
+      "variantRole": "primary",
+      "primaryImageId": "elain-mar-photo-r20260905-v1",
+      "city": "Keski-Atlas",
+      "country": "Marokko",
+      "animal": "berberiapina",
+      "r2Key": "kohtaamiset/kuvajono/elain-mar-photo-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-mar-photo-r20260905-v1.jpg",
+      "fileName": "elain-mar-photo-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "1f8077d8c0ecc79730b8af854b9da674225843875feb95b90c1e33fe0a52e14b",
+      "bytes": 619048,
+      "caption": "Nuori berberiapina pysähtyy setrinjuurelle Keski-Atlaksen metsässä.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: AAP — Born to be Wild, katsotut nuorten ja ruokailevan berberiapinan kuvat; IFAW — Ifranen berberiapinat ja Atlas-setrimetsä",
+      "url": "https://en.aap.eu/born-to-be-wild/",
+      "sourceUrls": [
+        {
+          "label": "AAP — Born to be Wild, katsotut nuorten ja ruokailevan berberiapinan kuvat",
+          "url": "https://en.aap.eu/born-to-be-wild/"
+        },
+        {
+          "label": "IFAW — Ifranen berberiapinat ja Atlas-setrimetsä",
+          "url": "https://www.ifaw.org/international/journal/last-hope-barbary-macaque"
+        }
+      ],
+      "productionNotes": "AAP:n katsotuista valokuvista tarkistettiin nuorten berberiapinoiden hoikat mittasuhteet, kasvojen väri ja luonnollinen karvapinta sekä oma ravinnonetsintä. Kuvien vapautusohjelman yksilöitä ei kopioida. Keski-Atlaksen setri- ja tammimetsän tulkinta perustuu AAP:n Tazekka/Ifrane-työhön ja IFAW:n Ifranen kuvaukseen; katsotun nuorisokuvan tarkkaa kuvauspaikkaa ei varmennettu.",
+      "generationPrompt": "Create a completely new natural wildlife photograph for a Matkakirja animal card. Landscape 3:2 composition, 1536 x 1024 pixels. It must look like a restrained camera photograph, with plausible optics and unretouched animal proportions.\n\nOne young Barbary macaque (Macaca sylvanus), about two years old, in Morocco's Middle Atlas cedar and oak forest. A candid pause while exploring a thick exposed cedar root: the macaque stands naturally on all four limbs, its front hands on the slightly raised root and its hind feet on the adjacent rocky soil, body almost side-on. Its head turns back a little to look toward the camera with ordinary quiet alertness. Keep the torso, limb joints and all four hands/feet anatomically continuous and readable, no crossed limbs. The whole animal is in frame with breathing space around its crown, ears and fingers and toes. Its naturally virtually tailless rump is visible; no long tail.\n\nReal young macaque proportions: a lean active body, long practical hands with curved fingers, short modest muzzle and a pink-tan bare face, small rounded ears, a low brow shading normally sized dark-brown eyes. Shortish yellow-brown to gray-brown coat with a pale underside, no huge fluffy round head, no human smile. The coat follows the lean form and forms uneven small soft overlapping groups; the far flank is softly subdued. A few natural stray hairs are visible only on the near cheek and silhouette.\n\nClose wildlife photograph using a 200 mm lens near the macaque's shoulder level. Soft mild morning sunlight from the side reaches its cheek and shoulder, surrounded by cool open forest shade. The near eye and forehand are in focus; smooth gradual focus falloff over the far flank. Behind the animal, widely separated large muted cedar trunks and one olive oak foliage mass are softly defocused. No white sky holes, no busy forest floor panorama, no speckled artificial bokeh. A few natural stones and the root are visible near its feet, without competing fine detail across the frame. Optical rendering: focus on the near eye and head, with enough depth to read the body's anatomy; detail and contrast fall away gently over the far body and into the background. Small natural eye catchlights. Surface detail is irregular and modest, never uniformly etched or sharpened. Quiet background made of a few broad coherent forms at real distances, continuous smooth defocus, no scattered bright bokeh dots or painted foliage. Natural color and normal dynamic range; no HDR, bloom, rim glow, theatrical rays, illustration, toy styling, oversized eyes or human expression.\n\nOne young animal only, no adult, other animal, person, visitor food, objects held for the camera, enclosure, text or watermark. No long tail, duplicated limbs or exaggerated glossy eyes.",
+      "generationMethod": "builtin-imagegen-new-text-generation",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:53:26.833817+00:00",
+        "notesFi": "Berberiapinan kaksi kättä ja molemmat jalat saavat tuen puusta/maasta. Hännättömyys ja turkin hienot karvat uskottavia; valo erottelee katseen."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:32.476Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-mar"
+      ]
+    },
+    {
+      "id": "elain-tza-photo-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-tza",
+      "variantRole": "primary",
+      "primaryImageId": "elain-tza-photo-r20260905-v1",
+      "city": "Serengeti",
+      "country": "Tansania",
+      "animal": "norsunvasa",
+      "r2Key": "kohtaamiset/kuvajono/elain-tza-photo-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-tza-photo-r20260905-v1.jpg",
+      "fileName": "elain-tza-photo-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "159054f9f1d83c95d1ea42415fcd1865575eb5b7fac0b6c9890a27eb008659e1",
+      "bytes": 609719,
+      "caption": "Norsunvasa pysähtyy kesken askelen Serengetin ruohikossa, kärsän kärki rennosti kiertyneenä.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: ElephantVoices — savanninorsun käyttäytyminen ja katsottu laumavalokuva vasoineen; TANAPA — Serengetin savannit ja akaasiametsiköt",
+      "url": "https://www.elephantvoices.org/the-elephant-ethogram-user-guide",
+      "sourceUrls": [
+        {
+          "label": "ElephantVoices — savanninorsun käyttäytyminen ja katsottu laumavalokuva vasoineen",
+          "url": "https://www.elephantvoices.org/the-elephant-ethogram-user-guide"
+        },
+        {
+          "label": "TANAPA — Serengetin savannit ja akaasiametsiköt",
+          "url": "https://tanzaniaparks.go.tz/uploads/publications/en-1730196282-celebrityNewsmagazine00.pdf"
+        }
+      ],
+      "productionNotes": "ElephantVoicesin katsotusta laumakuvasta tarkistettiin vasojen korvien, vartalon ja raajojen mittasuhteet sekä levollinen kävely. Lähdekuvan tarkkaa paikkaa ei varmennettu Serengetiksi; ympäristö tulkitaan TANAPAn kuvaamaksi Serengetin ruohoston ja akaasiametsikön reunaksi. Muu lauma jää kuvan ulkopuolelle.",
+      "generationPrompt": "Create a completely new natural wildlife photograph for a Matkakirja animal card. Landscape 3:2 composition, 1536 x 1024 pixels. It must look like a restrained camera photograph, with plausible optics and unretouched animal proportions.\n\nOne African savanna elephant calf (Loxodonta africana), about one year old, at the woodland edge of the Serengeti, Tanzania. A candid small pause while walking through short dry straw-colored grass: its body is in three-quarter view, the head turns a little toward the camera, the trunk hangs down then curls its tip loosely inward. Relaxed ears at slightly unequal angles, not a symmetrical display. The near eye is attentive but calm. Normal calf anatomy: compact broad body, large African ears of believable size, short trunk, four weight-bearing legs in a simple slow walking step, rounded padded feet, thin tail, no grown tusks. The entire animal, both ear edges, trunk tip and all four feet are inside the frame with breathing space. The calf is large in the picture, around four fifths of its height, photographed at its shoulder level with a 200 mm lens from a natural observation distance.\n\nMild early-morning side light brings broad gentle modeling across dusty gray skin. Sparse fine calf hair is only noticeable at the crown and silhouette; softened irregular wrinkle folds and smooth dusty areas coexist. A small patch of short grass around the feet is in focus. Far behind, a single broad flat acacia canopy and the low tawny grassland merge into soft, low-contrast shapes; no postcard panorama, no crisp distant branches. Optical rendering: focus on the near eye and head, with enough depth to read the body's anatomy; detail and contrast fall away gently over the far body and into the background. Small natural eye catchlights. Surface detail is irregular and modest, never uniformly etched or sharpened. Quiet background made of a few broad coherent forms at real distances, continuous smooth defocus, no scattered bright bokeh dots or painted foliage. Natural color and normal dynamic range; no HDR, bloom, rim glow, theatrical rays, illustration, toy styling, oversized eyes or human expression.\n\nOnly this calf is visible. No adult, other animal, human, vehicle, enclosure, signs, text or watermark. No duplicate legs, trunks or ears.",
+      "generationMethod": "builtin-imagegen-new-text-generation",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:53:26.833818+00:00",
+        "notesFi": "Norsunvasan neljä jalkaa, yksi kohotettu takajalka, yhtenäinen kärsä ja korvat ehjiä. Sivuaurinko ja ihon uurteet luonnollisia, ruoho rauhallinen."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:34.778Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-tza"
+      ]
+    },
+    {
+      "id": "elain-zaf-photo-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-zaf",
+      "variantRole": "primary",
+      "primaryImageId": "elain-zaf-photo-r20260905-v1",
+      "city": "Boulders Beach",
+      "country": "Etelä-Afrikka",
+      "animal": "afrikanpingviini",
+      "r2Key": "kohtaamiset/kuvajono/elain-zaf-photo-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-zaf-photo-r20260905-v1.jpg",
+      "fileName": "elain-zaf-photo-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "89b80881858fce4c0bb30b4e27d19b2bf242e4007c6c508bc3cd1dbc6378e4dc",
+      "bytes": 412781,
+      "caption": "Afrikanpingviini pysähtyy Boulders Beachin vaalealle hiekalle; sen rinnassa kulkee lajille ominainen yksi musta vyö.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: BirdLife South Africa — lajituntomerkit ja Neil Ebedesin katsottu pingviinivalokuva; SANParks — Bouldersin afrikanpingviiniyhdyskunta ja suojaisa lohkareinen ranta",
+      "url": "https://www.birdlife.org.za/red-data-book/red-list/african-penguin/",
+      "sourceUrls": [
+        {
+          "label": "BirdLife South Africa — lajituntomerkit ja Neil Ebedesin katsottu pingviinivalokuva",
+          "url": "https://www.birdlife.org.za/red-data-book/red-list/african-penguin/"
+        },
+        {
+          "label": "SANParks — Bouldersin afrikanpingviiniyhdyskunta ja suojaisa lohkareinen ranta",
+          "url": "https://www.sanparks.org/parks/table-mountain/what-to-do/attractions/boulders-penguin-colony"
+        }
+      ],
+      "productionNotes": "Lajituntomerkit ja sulkapinnan luonne tarkistettiin BirdLife South African sivulta ja Neil Ebedesin aidosta valokuvasta. Bouldersin suojaisa hiekka- ja graniittiranta perustuu SANParksin kohdetietoon. SANParksin kuvatiedoston lataus estyi (403), joten sitä ei lasketa katsotuksi referenssiksi.",
+      "generationPrompt": "Create a completely new natural wildlife photograph for a Matkakirja animal card. Landscape 3:2 composition, 1536 x 1024 pixels. It must look like a restrained camera photograph, with plausible optics and unretouched animal proportions.\n\nOne adult African penguin (Spheniscus demersus) on pale sand at Boulders Beach, Simon's Town, South Africa. The bird has paused beside the water after a short waddle, body turned slightly three-quarter toward us, head angled back just enough for its near dark eye to meet the camera naturally. Bill closed, flippers held loosely a little away from its sides at unequal angles, both webbed feet resting on the sand. Show its whole head, body, both flippers and both feet, with generous sand below the toes. The penguin occupies about 75 percent of the frame height, photographed with a long wildlife lens at its chest level.\n\nAccurate adult identification: a dark face and crown framed by a broad white band sweeping above the eye and around the cheeks; a small pink patch of bare skin above the visible eye; a dark tapered bill; white belly with scattered irregular small black spots; exactly one black horseshoe-shaped chest band, with no second band. Dense short overlapping feathers form a mostly smooth matte water-resistant surface, a few slightly damp clumps on the flank, not engraved rows of identical scales.\n\nSoft bright maritime daylight from a thin coastal cloud layer, white plumage with real gentle shadow and retained tone. In the distance, one broad rounded pale Cape granite boulder and a soft blue-green band of False Bay water; the background stays simple and continuous with no sparkling water dots, no crowded rocks, no decorative kelp. The local sand is only detailed close to the feet. Optical rendering: focus on the near eye and head, with enough depth to read the body's anatomy; detail and contrast fall away gently over the far body and into the background. Small natural eye catchlights. Surface detail is irregular and modest, never uniformly etched or sharpened. Quiet background made of a few broad coherent forms at real distances, continuous smooth defocus, no scattered bright bokeh dots or painted foliage. Natural color and normal dynamic range; no HDR, bloom, rim glow, theatrical rays, illustration, toy styling, oversized eyes or human expression.\n\nOne bird only. No other animals, people, boardwalk, enclosure, bands or tags, text or watermark. No Magellanic penguin pattern, no extra feet or flippers.",
+      "generationMethod": "builtin-imagegen-new-text-generation",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:53:26.833819+00:00",
+        "notesFi": "Afrikanpingviinin yksi rintavyö, kaksi siipeä ja kaksi räpylää erottuvat. Höyhenpinta hienojakoinen, vaalea hiekka ja taustakallio valokuvallisia."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:36.775Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-zaf"
+      ]
+    },
+    {
+      "id": "elain-nzl-story-r20260905-v2",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-nzl",
+      "variantRole": "alternative-story",
+      "primaryImageId": "elain-nzl-photo-r20260905-v1",
+      "city": "Stewartin saari",
+      "country": "Uusi-Seelanti",
+      "animal": "kiivi",
+      "r2Key": "kohtaamiset/kuvajono/elain-nzl-story-r20260905-v2.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-nzl-story-r20260905-v2.jpg",
+      "fileName": "elain-nzl-story-r20260905-v2.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "0f48907c87faddd7ed7f3490e430a0a29f010c0728476b4d4a52cf875e9cf435",
+      "bytes": 554746,
+      "caption": "Rakiuran kiivi tutkii kariketta alkuyön metsässä, kun etäinen työntekijä kirjaa luontohavaintoja.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: DOC — tokoeka, Rakiuran lajikuva ja käyttäytyminen; DOC — Rakiuran rimu–kamahi-metsä, saniaiset ja punaisen valon ohje; DOC — How to count kiwi, aidot kenttätyön ja akustisen tallentimen kuvat Fiordlandista",
+      "url": "https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kiwi/tokoeka/",
+      "sourceUrls": [
+        {
+          "label": "DOC — tokoeka, Rakiuran lajikuva ja käyttäytyminen",
+          "url": "https://www.doc.govt.nz/nature/native-animals/birds/birds-a-z/kiwi/tokoeka/"
+        },
+        {
+          "label": "DOC — Rakiuran rimu–kamahi-metsä, saniaiset ja punaisen valon ohje",
+          "url": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/southland/places/stewart-island-rakiura/rakiura-national-park/things-to-do/rakiura-track/"
+        },
+        {
+          "label": "DOC — How to count kiwi, aidot kenttätyön ja akustisen tallentimen kuvat Fiordlandista",
+          "url": "https://blog.doc.govt.nz/2021/08/12/fiordland-kiwi-diaries-how-to-count-kiwi/"
+        }
+      ],
+      "productionNotes": "Lintu on Stewartin saaren Rakiuran tokoeka (Apteryx australis). DOC:n aito lajikuva ja Rakiura Track -kuvaus ohjaavat anatomiaa sekä rimu–kamahi-metsää. Yötyöntekijä ja tämä tutkimushetki ovat kuvitteellisia: äänihavainnointi ja tallennin perustuvat DOC:n Fiordlandin tutkimuskuvaukseen, eivät väitteeseen samasta Rakiuran työpisteestä. Himmeä punainen työvalo noudattaa DOC:n kiivien katseluohjetta; lintu kulkee vapaasti eikä sitä käsitellä.",
+      "generationPrompt": "Create a new, restrained wildlife field photograph on Stewart Island / Rakiura, New Zealand, at the end of blue twilight as a night survey begins. Landscape 3:2, 1536 x 1024. In the close lower-left foreground, one adult Rakiura tokoeka, southern brown kiwi (Apteryx australis), takes a slow short step across damp leaf litter while nudging the edge of one fallen leaf with the tip of its long closed pale bill. The entire bird, bill tip and two stout legs fit comfortably inside the frame. Its small head points to the right, one tiny dark eye visible, pear-shaped brown body, loose hairlike feathers lying naturally backward, no visible wing panels or external tail. Real kiwi proportions and strong scaly feet with clawed toes; the near planted foot has three forward toes and a small rear toe, while the other foot takes the next short step. This is its own quiet foraging, not a pose for the camera.\n\nFarther back on the right, about eight metres behind the bird, one small adult conservation fieldworker in practical muted green rainwear, boots and a knit cap records observations in a notebook held in one hand, writing with the other. The whole human figure occupies only about one fifth of the picture height and is softly out of focus. A tiny dim red headlamp points down toward the notebook. Beside the worker is one small upright acoustic bird-call recorder on a thin vertical metal stake: its yellow cylindrical battery housing stands VERTICALLY with a black cap on top, and a short narrow silver perforated microphone guard hangs below a dark lower collar. The device's whole long axis is vertical, parallel to its support stake; there is no horizontal barrel, no lens, no spotlight or telescope. It is modest in scale, positioned at the worker's knee height, a practical field instrument. The worker neither approaches nor touches the kiwi; no bait, trap, animal tag or handling. The research scene is fictional, with no agency logos or identifiable real person.\n\nLow camera near forest-floor height, moderate perspective, focus on the kiwi's eye and near bill, natural focus falloff across the body. Rimu and kamahi forest: only a few broad dark trunks, soft fern shapes and a gently receding patch of ground. Very weak cool skyglow from a small canopy opening supplies the available light; this remains a dark early-night photograph with quiet muted browns and blue-gray shadows. No white spotlight or flash on the bird. The distant red lamp is a small local accent, not a laser beam. Natural low-light camera rendering, subtle noise and modest contrast; dense feathers form soft tonal masses instead of etched hair, no painted foliage, elaborate bokeh dots, HDR, luminous edges, fog effects, text, watermark or extra animals.",
+      "generationMethod": "built-in image_gen; entirely new text-based generation; deterministic JPG/sRGB conversion only",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:54:34.712655+00:00",
+        "notesFi": "Kiivi liikkuu märässä karikkeessa, nokka ja molemmat jalat uskottavia. Etäinen luontotyöntekijä kirjoittaa, punainen otsavalo ja pimeä metsä muodostavat tarinan. Tumma kuva säilyttää eläimen pinnan ja tilan."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:38.805Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": []
+    },
+    {
+      "id": "elain-jpn-story-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-jpn",
+      "variantRole": "alternative-story",
+      "primaryImageId": "elain-jpn-photo-r20260905-v1",
+      "city": "Jigokudani",
+      "country": "Japani",
+      "animal": "lumiapina kuumassa lähteessä",
+      "r2Key": "kohtaamiset/kuvajono/elain-jpn-story-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-jpn-story-r20260905-v1.jpg",
+      "fileName": "elain-jpn-story-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "169098d73c60028c6cf93937b57a5a29500f711c32b52e7c70a401f08ff9b1c0",
+      "bytes": 556115,
+      "caption": "Lumiapina hoitaa nuoren turkkia Jigokudanin lämpimän altaan reunalla.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Jigokudani — elinkaari, emot, nuorten hoiva ja aidot valokuvat; Jigokudani — havainnointi, oikea käden anatomia; Jigokudani — laji ja lyhyt häntä; Japanin ympäristöministeriö — talvinen lähdeallas",
+      "url": "https://jigokudani-yaenkoen.co.jp/knowledge/lifetime/",
+      "sourceUrls": [
+        {
+          "label": "Jigokudani — elinkaari, emot, nuorten hoiva ja aidot valokuvat",
+          "url": "https://jigokudani-yaenkoen.co.jp/knowledge/lifetime/"
+        },
+        {
+          "label": "Jigokudani — havainnointi, oikea käden anatomia",
+          "url": "https://jigokudani-yaenkoen.co.jp/knowledge/point/"
+        },
+        {
+          "label": "Jigokudani — laji ja lyhyt häntä",
+          "url": "https://jigokudani-yaenkoen.co.jp/knowledge/"
+        },
+        {
+          "label": "Japanin ympäristöministeriö — talvinen lähdeallas",
+          "url": "https://www.env.go.jp/nature/nationalparks/try/all/act652.html"
+        }
+      ],
+      "productionNotes": "Jigokudanin puiston aidot perhe-, hoiva- ja käsikuvat sekä Japanin ympäristöministeriön talvinen allaskuva tarkistettiin. Puisto kuvaa emojen ja poikasten läheistä suhdetta sekä turkinhoitoa; tämän kuvan emo ja nuori ovat kuviteltuja yksilöitä. Paikka on kuuman lähteen syöttämä rakennettu kivireunainen allas. Tarinallinen rinnakkaiskuva säilyttää aiemman yhden lumiapinan vaihtoehdon.",
+      "generationPrompt": "A new candid wildlife photograph, 1536 x 1024, landscape 3:2. Two wild Japanese macaques, Macaca fuscata, share a quiet grooming moment at the stone edge of the hot-spring pool in Jigokudani, Japan, in winter. An adult mother sits on the right on a broad dry part of the stone lip, knees folded, while her young juvenile sits lower to her left, leaning its upper back into her thigh. The mother looks intently at the juvenile's nape and parts the damp fur there with both hands, one hand holding the fur aside and the other making a small precise grooming movement. The youngster tilts its head sideways to permit this, eyes half closed in ordinary relaxation, one small hand braced on the rock and the other resting on its own bent leg. The care and trust in their bodily relationship carry the picture. No human smile or exaggerated baby eyes.\n\nMedium-wide telephoto view with both complete heads, crowns and ears, two separate bodies, hands and their seated support comfortably within the frame. Natural macaque proportions: gray-brown winter fur, the adult's pink-red bare face and long muzzle, smaller juvenile with a paler pink face, modest brown eyes, long dexterous fingers and short tails. The two animals are distinct and anatomically coherent, without merged hands or extra limbs. A little wet fur near the wrists, dense matte coat elsewhere; natural soft clumps, no sharply outlined hair network.\n\nA subdued low winter sun from the upper left warms their cheek and knuckles while open snow shade stays cool. Calm normal camera exposure, modest contrast, gentle optical focus on faces and the grooming hands, receding fur softly resolved. The quiet pool occupies the lower left, one low broad snowbank and distant dark stone shapes blur smoothly behind them. Minimal wisps of steam stay close to the water. No other monkeys, people, costumes, objects, text, logo, border, cinematic haze or painted texture.",
+      "generationMethod": "built-in image_gen; entirely new text-based generation; deterministic JPG/sRGB conversion only",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:54:34.712811+00:00",
+        "notesFi": "Aikuinen sukii nuoren yläselkää kahdella kädellä, nuoren kädet ja jalat erotettavissa. Hoivahetki ja kallistunut katse toimivat, höyry ja vastavalo luonnollisia."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:40.987Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": []
+    },
+    {
+      "id": "elain-chn-story-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-chn",
+      "variantRole": "alternative-story",
+      "primaryImageId": "elain-chn-photo-r20260905-v2",
+      "city": "Sichuan",
+      "country": "Kiina",
+      "animal": "jättiläispanda ja poikanen",
+      "r2Key": "kohtaamiset/kuvajono/elain-chn-story-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-chn-story-r20260905-v1.jpg",
+      "fileName": "elain-chn-story-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "c2608e7f280db3b99116391a06de6e3ae04983e087541e91efa705dfeedee7fd",
+      "bytes": 634546,
+      "caption": "Poikanen kurottaa emon bambunlehteen kesken ruokailuhetken Sichuanin metsässä.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Smithsonian keeper observation — cub initiates play during mother's bamboo meals; Smithsonian keeper observation — eight-month cub plays with mother and eats bamboo; Smithsonian dated cub anatomy and bamboo-grip photos; The Nature Conservancy — genuine wild mother/cub and bamboo-moss habitat",
+      "url": "https://nationalzoo.si.edu/animals/news/pandastory-playful-panda-cub",
+      "sourceUrls": [
+        {
+          "label": "Smithsonian keeper observation — cub initiates play during mother's bamboo meals",
+          "url": "https://nationalzoo.si.edu/animals/news/pandastory-playful-panda-cub"
+        },
+        {
+          "label": "Smithsonian keeper observation — eight-month cub plays with mother and eats bamboo",
+          "url": "https://nationalzoo.si.edu/animals/news/pandastory-observant-cub"
+        },
+        {
+          "label": "Smithsonian dated cub anatomy and bamboo-grip photos",
+          "url": "https://nationalzoo.si.edu/news/giant-panda-cub-xiao-qi-ji-media-resources"
+        },
+        {
+          "label": "The Nature Conservancy — genuine wild mother/cub and bamboo-moss habitat",
+          "url": "https://www.nature.org/en-us/get-involved/how-to-help/animals-we-protect/giant-panda/"
+        }
+      ],
+      "productionNotes": "Kokonaan uusi fiktiivinen luontohetki, ei kuvaus nimetystä tapahtumasta. Smithsonianin hoitajat kuvaavat poikasen leikkiä emon bamburuokailun aikana ja noin kahdeksankuukautisen kiinnostusta samaan ravintoon. Katsotut eläintarhavalokuvat perustavat poikasen anatomian, TNC:n Yong Yangen oikea luontokuva emon ja poikasen sekä bambu–sammalympäristön. Tämä on lisävaihtoehto, aiempi yksittäinen panda säilyy.",
+      "generationPrompt": "Natural wildlife story photograph, a wholly new image from text. Native landscape 3:2, 1536x1024 pixels. One adult giant panda mother and her single approximately eight-month-old cub (Ailuropoda melanoleuca), together during an interrupted bamboo meal in a Sichuan mountain forest, China. A tender lively wild-animal relationship captured by a patient camera, not a human comedy or staged portrait.\nThe story must be immediately readable: the big mother sits low at frame left in three-quarter view, leisurely feeding from one thin leafy bamboo shoot. The much smaller cub at her right has stood up from its haunches to investigate the leafy end in her hand. Both of the cub's hind paws are firmly planted on a low flat mossed stone beside her; one forepaw braces on the mother's resting forearm, while its other forepaw reaches toward two hanging bamboo leaves just above its nose. The mother has paused her bite and lowered her broad head to watch the little reach, calm relaxed muzzle and natural partly lidded eyes. The cub's body stretches eagerly toward the leaf, ears forward, and its head turns three-quarter toward the lens for a small attentive glance in the middle of the action. Their faces, the reaching paw and the single continuous shoot form the focus of the photograph. Emotional force comes from their size difference, the cub's determined stretch and the mother's unhurried attention. No smiling lips, theatrical eyebrows or human gestures.\nKeep the physical support entirely credible. Mother's two hind legs support her seated weight, one front paw holds the bamboo near her mouth and the other forearm rests low across her thigh where the cub braces. Cub has exactly two hind legs supporting the stretch, one bracing forepaw and one reaching forepaw, never more. The mother's held shoot has one continuous green stem and a small cluster of leaves, no tangled bundle, floating fragments or impossible knots. Compact furry bear paws and normal pale claws, no human fingers. Do not disguise an extra limb in the overlap. The adult and cub are distinct bodies with clear separate heads and shoulder connections. Full ears, heads, bodies and visible paws fit inside the frame with real breathing room; naturally hidden far-side limbs may remain occluded.\nPhotograph low, around the cub's eye height, a slightly wider moderate telephoto framing than a solo animal portrait. The pair fills about seventy percent of the frame width, with the mother forming a stable larger mass and the cub a lighter rising diagonal at right. A broad mossed trunk behind the mother and three soft bamboo stems several metres behind the cub give believable forest layers. Foreground has just one low stone and flattened damp bamboo leaves. Background is quiet deep olive green with continuous optical defocus, a few large coherent leaf masses, no speckled bokeh, no busy repeated twigs or brushstroke foliage.\nNatural diffuse side daylight from frame right shapes the cub's face and the mother's cheek, while their shadow sides retain soft volume. Neutral cream-white fur, black limbs and saddle, black rounded ears and eye patches, black leathery noses. Small real dark eyes with tiny wet reflections. Cub proportions appropriate to eight months, visibly much smaller than mother, no enormous round head or doll eyes. Short dense face fur and irregular softly overlapping flank clumps, with modest microcontrast. Details fall off gradually away from the faces; shaded belly fur remains a small quiet area instead of a white mesh of hair. Retain a few naturally visible hairs without etched all-over fur, cosmetic polish or glowing outlines.\nExactly two pandas: one adult mother, one cub. No other animal or person, no feeding tools, zoo enclosure, clothing, toys, bowl, signs, text, watermark, border, CGI, illustration, HDR, bloom or decorative haze. This is a plausible fictional wildlife instant grounded in real panda play and feeding behavior, not a recreation of any named documented event. Entirely new image, no prior image supplied.\n",
+      "generationMethod": "AI generated image; exact recorded prompt provided where available",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:54:34.712814+00:00",
+        "notesFi": "Pandanpoikanen kurkottaa emon pitämään oksaan, toinen käsi saa tuen emosta ja molemmat takajalat kivestä. Emon neljä raajaa ja bambun ote uskottavia; vuorovaikutus välittää uteliaisuutta."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:43.063Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": []
+    },
+    {
+      "id": "elain-can-story-r20260905-v3",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-can",
+      "variantRole": "alternative-story",
+      "primaryImageId": "elain-can-photo-r20260905-v1",
+      "city": "Churchill",
+      "country": "Kanada",
+      "animal": "jääkarhunpentu ja emo",
+      "r2Key": "kohtaamiset/kuvajono/elain-can-story-r20260905-v3.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-can-story-r20260905-v3.jpg",
+      "fileName": "elain-can-story-r20260905-v3.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "b53aee94953356c9751315dc7def29d0acafb70ea224f7f4bf54be3347a8ee80",
+      "bytes": 427757,
+      "caption": "Churchillin jääkarhunpentu seuraa emon suuria jälkiä lumisella rannikolla.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Polar Bears International — genuine Churchill mother/cub field photograph and cub age; Churchill Northern Studies Centre — coastal seasonal habitat and autumn gathering; US Fish & Wildlife Service — genuine mother/cub walking photographs and general behavior account; Beaufort Sea context; Polar Bears International — cub development and reliance on mother",
+      "url": "https://polarbearsinternational.org/news-media/articles/rare-polar-bear-cub-adoption-captured-on-video/",
+      "sourceUrls": [
+        {
+          "label": "Polar Bears International — genuine Churchill mother/cub field photograph and cub age",
+          "url": "https://polarbearsinternational.org/news-media/articles/rare-polar-bear-cub-adoption-captured-on-video/"
+        },
+        {
+          "label": "Churchill Northern Studies Centre — coastal seasonal habitat and autumn gathering",
+          "url": "https://churchillscience.ca/about/the-churchill-area/polar-bears/"
+        },
+        {
+          "label": "US Fish & Wildlife Service — genuine mother/cub walking photographs and general behavior account; Beaufort Sea context",
+          "url": "https://www.fws.gov/story/polar-bear-year-spring"
+        },
+        {
+          "label": "Polar Bears International — cub development and reliance on mother",
+          "url": "https://polarbearsinternational.org/polar-bears/polar-bear-facts/life-cycle/"
+        }
+      ],
+      "productionNotes": "Oikea aihe on Churchillin jääkarhunpentu ja emo. PBI:n Dave Sandfordin Churchillin kenttäkuva perustaa pitkän kuonon, pienet silmät, turkin ja noin kymmenkuukautisen pennun ikätavoitteen. USFWS:n katsotut perhekuvat tukevat kokoa ja kulkua; niiden Beaufort Sea -ympäristöä ei esitetä Churchillin kuvauspaikkana. Lumijälkiä seuraava perhe on fiktiivinen luontohetki, ei lähdekuvan adoptiotapahtuma. V1-naali oli pääagentin briefivirhe ja säilyy tästä aiheesta irrotettuna kokeiluna; v2 säilyy visuaalisesti hylättynä yrityksenä.",
+      "generationPrompt": "Photorealistic-natural. Generate one entirely new landscape wildlife photograph, native 3:2, 1536x1024. An unposed field-camera moment on the flat western Hudson Bay shore near Churchill, Manitoba, in November: one polar bear mother and one cub about ten months old walking together on shallow wind-packed snow. This is a fictional natural moment, not a named family or a real documented incident.\n\nThe small story is following in a mother's very large footprints. The mother is ahead in the left middle distance, her full long body moving toward frame left. The cub follows at lower right, nearer the camera and more prominent. The cub has just lowered its nearer front paw into one of the mother's broad shallow snow depressions, which is clearly wider than the cub's paw. Its other front paw supports it slightly behind on ordinary level snow; two hind legs carry its body with a normal walking stance, the farther hind leg offset so its foot is still distinguishable. Exactly four connected legs, no merged forepaws. The cub lifts its head a little toward its mother while taking that step, showing its small normal dark eye and tapered black-nosed muzzle in three-quarter profile. No smile, no waving, no humanlike expression. The paw-size comparison, ordinary effort to keep up and the mother's nearby solid presence create natural tenderness.\n\nThe adult mother is roughly two metres ahead, fully visible with a low heavy body, long neck, narrow head and four naturally placed legs. She has paused briefly facing forward-left, sniffing the air, allowing the cub to catch up. Her head stays in a normal forward position, not twisted backward. Natural small eye, closed mouth, broad black nose; no dramatic emotion. Both bear bodies are distinct with a small clear gap, linked by three or four irregular broad footprints. No repeated perfect stamp shapes and no giant sculpted paw symbols. Both animals' ears, feet and rumps fit comfortably inside the image; no limb, body or ear is cut off. Cub is juvenile with a head proportional to its body and a long muzzle, not a tiny newborn teddy bear. Mother is much larger in real scale, though the slightly nearer cub receives visual emphasis.\n\nUse the look of an actual sober telephoto wildlife photograph, not a polished wildlife illustration. Low but not ground-level viewpoint and about a 300 mm lens at f/7.1. The cub's near eye, nose and advancing paw are in clear focus; the mother's edges are a little softer through distance, but her body and supporting legs remain readable. Dense ivory fur is a continuous matte surface with subdued gray-beige tonal variation and a few irregular compressed locks, not thousands of equally sharp engraved strands. Avoid the uniform knitted texture and glossy render look. Faint natural sensor grain is acceptable. Ordinary imperfect coats, a little dirty damp fur at the feet, realistic small eye catchlights, normal exposure. No sharpened outline or fake glowing hair.\n\nBroad quiet snow bands with a few low wind ripples; far behind, a single dark softened willow patch and horizontal gray-blue shore ice merge into the pale overcast sky. No close wall of detailed twigs, no mountains or iceberg cliff. Soft cloudy late-autumn daylight with gently directional tonal modeling, cool neutral shadows and cream highlights. The background is physically coherent and optically calm, not mottled circular bokeh. No props are needed: the animals, their track and flat coastal environment carry the picture.\n\nExactly one adult polar bear mother and one polar bear cub. No third bear, fox, person, collar, vehicle, building, enclosure, prey, bait, text, logo or watermark. No illustration, CGI, teddy-bear proportions, HDR, bloom, artificial fur sparkle, theatrical light or saturated grading. Entirely new generation from text; preserve the convincing ordinary photographic surface and legible four-legged walking anatomy.\n",
+      "generationMethod": "AI generated image; exact recorded prompt provided where available",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:54:34.712816+00:00",
+        "notesFi": "Jääkarhunpentu seuraa emoa ja suuria jälkiä. Molempien neljä jalkaa luettavissa, pennun takatassu kohoaa. Jäljet ja rauhallinen lumi muodostavat suuntaa ja tarinaa. Tämä on jääkarhu, ei naali."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:45.143Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": []
+    },
+    {
+      "id": "elain-mar-story-r20260905-v1",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-mar",
+      "variantRole": "alternative-story",
+      "primaryImageId": "elain-mar-photo-r20260905-v1",
+      "city": "Keski-Atlas",
+      "country": "Marokko",
+      "animal": "berberiapina",
+      "r2Key": "kohtaamiset/kuvajono/elain-mar-story-r20260905-v1.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-mar-story-r20260905-v1.jpg",
+      "fileName": "elain-mar-story-r20260905-v1.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "64ca36b805bbde7fc58e47980046c5f5337b044f97525fc92b5e09e01a1fd0c1",
+      "bytes": 725926,
+      "caption": "Nuoret berberiapinat valtaavat hetkeksi polun kaatuneen rungon. Opas odottaa taaempana niiden väistymistä.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Barbary Macaque Project, Lincoln — katsottu Christopher Youngin valokuva puussa leikkivistä nuorista; AAP — Born to be Wild, katsottu nuorten berberiapinoiden kuva ja Keski-Atlaksen suojelutyö; Barbary Macaque Project — turvallinen tarkkailuetäisyys ja ruokinnan välttäminen; Seltmann ym. 2013 — Ifranen setri- ja tammimetsä sekä luonnonvaraisten berberiapinoiden ryhmäliike",
+      "url": "https://barbarymacaque.blogs.lincoln.ac.uk/",
+      "sourceUrls": [
+        {
+          "label": "Barbary Macaque Project, Lincoln — katsottu Christopher Youngin valokuva puussa leikkivistä nuorista",
+          "url": "https://barbarymacaque.blogs.lincoln.ac.uk/"
+        },
+        {
+          "label": "AAP — Born to be Wild, katsottu nuorten berberiapinoiden kuva ja Keski-Atlaksen suojelutyö",
+          "url": "https://en.aap.eu/born-to-be-wild/"
+        },
+        {
+          "label": "Barbary Macaque Project — turvallinen tarkkailuetäisyys ja ruokinnan välttäminen",
+          "url": "https://barbarymacaque.blogs.lincoln.ac.uk/2018/01/16/reducing-the-potential-risk-of-primate-tourism/"
+        },
+        {
+          "label": "Seltmann ym. 2013 — Ifranen setri- ja tammimetsä sekä luonnonvaraisten berberiapinoiden ryhmäliike",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3689719/"
+        }
+      ],
+      "productionNotes": "Christopher Youngin katsottu kenttävalokuva näyttää nuorten berberiapinoiden leikin puun oksilla; kuvassa on tuotantokuvan nuoria pienempiä poikasia. AAP:n katsottu nuorisokuva täydentää noin kaksivuotiaan mittasuhteita ja turkin sävyä. Ifranen tutkittu setri-tammimetsä ja tutkijoiden yli kymmenen metrin tarkkailuetäisyyden suositus ohjaavat ympäristöä ja oppaan paikkaa. Fiktiivinen opas odottaa eläinten omaa toimintaa, ei houkuttele tai ruoki niitä.",
+      "generationPrompt": "Use case: photorealistic-natural. Create a completely NEW candid wildlife-and-trail photograph, landscape 3:2, native 1536 x 1024 pixels. A small layered incident on a footpath in Morocco's Middle Atlas cedar and oak woodland.\n\nTwo young Barbary macaques (Macaca sylvanus), about two years old, have momentarily taken over a low fallen cedar trunk across the path. The nearer young macaque is descending the sloping trunk toward the foreground: both front hands grip separate patches of bark lower down, both hind feet brace higher behind its hips. Its lean body stretches diagonally downward in a believable climbing posture. It twists just its head back toward its playmate. The second juvenile is a little farther back and higher on the SAME solid trunk, crouched facing the first, about to follow, its body and limbs separate from its companion. Their relationship reads as a pause in playful following, with no human expressions, no posed smiles, no aggression and no limbs tangled between animals.\n\nThe playful pair is the main subject in the left and middle foreground, with all their heads, ears, hands and feet inside the picture. Real young macaque anatomy: short muzzles, pink-tan faces, small ordinary dark eyes, lean limbs, practical long fingers, naturally almost tailless rumps. The closer animal has a muted tawny coat, the slightly smaller companion a cooler gray-brown coat. Neither is a fluffy round toy. Fur reads as soft irregular clumps following the body; only a few hairs resolve along the near cheek and silhouette.\n\nFarther down the path at frame right, at least TEN METRES BEHIND the monkeys, one local Moroccan woman trail guide about forty-five has stopped and quietly waits for them to pass. Her feet are still, body weight rests back, arms relaxed beside her, a small amused patience in her posture as she watches the monkeys. Plain deep green walking jacket, muted beige trousers, small practical backpack, dark hair tied back. She is a modest, clearly human background presence, naturally softer than the macaques, not the main portrait. No touching, approaching, feeding, food containers, outstretched offering hand, stick, dog or extra people.\n\nPhotograph with a 135 mm lens from the path side near the height of the fallen trunk. The trunk creates a strong diagonal from near bottom left to mid-frame; the waiting guide and curving path form a separate deeper layer at right. Focus holds the nearer macaque's eye and supporting hands and enough of the playmate to read its pose. A broad patch of gentle late-afternoon side sunlight warms the animals and bark. Cool forest shade behind them, just two broad cedar trunks and a few smooth muted green foliage masses, continuous natural optical defocus, no speckled white sky holes or decorative bokeh dots. Restrained camera color and normal contrast, no HDR, etched fur, theatrical beams, glow, smoke, illustration, text or watermark. The viewer notices the animals first, then discovers why the patient person has stopped.",
+      "generationMethod": "builtin-imagegen-new-text-generation",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:54:34.712817+00:00",
+        "notesFi": "Kahden berberiapinan askeleet kaatuneella rungolla ja keskinäinen katse uskottavia. Etäinen opas odottaa omalla maapohjallaan, luonteva sivujuonne. Karvat ja puu hienojakoisia."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:47.740Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": []
+    },
+    {
+      "id": "elain-nam-story-r20260905-v2",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-nam",
+      "variantRole": "alternative-story",
+      "primaryImageId": "elain-nam-photo-r20260905-v2",
+      "city": "Damaraland",
+      "country": "Namibia",
+      "animal": "erämaanorsu",
+      "r2Key": "kohtaamiset/kuvajono/elain-nam-story-r20260905-v2.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-nam-story-r20260905-v2.jpg",
+      "fileName": "elain-nam-story-r20260905-v2.jpg",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "9321b91007c69482179721f1e15af63835a921783230d62426c9eaf8c263c80e",
+      "bytes": 599123,
+      "caption": "Norsunvasa kurottaa emon tavoittamiin lehtiin Damaralandin kuivassa jokiuomassa.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: EHRA — Namibian erämaanorsut, kuivat jokiuomat ja puiden lehdet kuivakauden ravintona; ElephantVoices — poikasten ravinnon oppiminen, katsotut vasa- ja yhteisen ruokailun valokuvat; ElephantVoices Ethogram — Solicit-Food: poikanen tavoittelee emon ravintoa",
+      "url": "https://www.ehranamibia.org/about-desert-elephants",
+      "sourceUrls": [
+        {
+          "label": "EHRA — Namibian erämaanorsut, kuivat jokiuomat ja puiden lehdet kuivakauden ravintona",
+          "url": "https://www.ehranamibia.org/about-desert-elephants"
+        },
+        {
+          "label": "ElephantVoices — poikasten ravinnon oppiminen, katsotut vasa- ja yhteisen ruokailun valokuvat",
+          "url": "https://www.elephantvoices.org/elephant-social-learning"
+        },
+        {
+          "label": "ElephantVoices Ethogram — Solicit-Food: poikanen tavoittelee emon ravintoa",
+          "url": "https://www.elephantvoices.org/elephant-ethogram/ethogram-table/behaviorconstellation?cvid=OTI2LDkyNyw5MjgsOTI5LDkzMA%3D%3D&id=68"
+        }
+      ],
+      "productionNotes": "EHRA:n Namibian valokuvasta tarkistettiin erämaanorsun ja kuivan maiseman mittasuhteet. EHRA kuvaa puiden lehdet tärkeäksi kuivakauden ravinnoksi. ElephantVoicesin katsotut kuvat näyttävät vasan ruumiinrakenteen sekä aikuisten ravinnon tavoittelun; niiden kuvauspaikkaa ei väitetä Namibiaksi. ElephantVoicesin käyttäytymisaineisto kuvaa poikasen emon ravinnon tavoittelua ja sosiaalista oppimista. Täsmällinen emo–vasa-pari, oksa ja jokiuoman kohta ovat uusi fiktiivinen tilanne.",
+      "generationPrompt": "Use case: photorealistic-natural. Generate an entirely NEW candid wildlife photograph in native landscape 3:2, 1536 x 1024 pixels. Two desert-adapted African bush elephants, a female and her eighteen-month-old calf, in a dry Damaraland riverbed in Namibia.\n\nPhotograph a small, affecting moment of the calf investigating what its mother is eating. The mother has a little detached camel-thorn spray held in her trunk beneath her mouth. The calf reaches up with its own trunk and touches the lowest leaves. The trunks remain two separate unmistakable organs with air between their curves, not intertwined. Both animals are absorbed in the food, no posing toward the photographer, no human smiles.\n\nA layered diagonal composition: the calf is large in the NEAR RIGHT FOREGROUND, seen from a front three-quarter angle so both front legs and both hind legs are separately readable. Its near forefoot has stepped a short distance forward while its other three feet stay planted. Four whole calf feet at four distinct positions on the sand, ordinary stable weight, no legs hidden directly behind one another. Its head turns toward the mother at left, lifting the short trunk. The mother stands in the LEFT MIDDLE DISTANCE, body and head angled slightly toward us, not on the calf's baseline. Her complete body, whole head, natural ears, two modest tusks and four legs fit in frame with margins. Both tails can be visible naturally beside the rump. Their heads and the small spray form one clear diagonal story. Ordinary body proportions, the calf's shoulder height less than half the mother's.\n\nCamera at the calf's eye level using a 200 mm wildlife lens from a respectful distance. Moderate depth of field keeps both heads and the calf's feet readable. Their gray dusty skin reads as soft broad volumes, with selective natural creases; the distant flank has subdued detail. Small normal dark eyes, no glassy exaggeration.\n\nThe pair is in luminous open shade before the sun reaches the bottom of the dry riverbed. Pale sand reflects gentle light upward, neutral gray-brown elephants against a smoothly defocused pale ochre bank far behind them. Only one very soft dark green tree mass at the distant edge suggests river vegetation. NO rocky patterned hillside. Smooth continuous background tones, tiny patches of sand texture only under the feet. Quiet true photographic color and gentle natural contrast. No uniform golden filter, rim glow, etched skin mesh, decorative bokeh, painterly foliage, mist, HDR, extra animals, people, text or watermark.",
+      "generationMethod": "builtin-imagegen-new-text-generation",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:54:34.712818+00:00",
+        "notesFi": "Kaksi norsua muodostaa selkeän kokoeron ja ruokailuhetken. Molempien neljä jalkaa, kärsät, korvat ja oksan tuki uskottavia; ihon pinta luonnollinen."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:50.146Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": []
+    },
+    {
+      "id": "elain-bih-tornjakpentu-vlasic-v2",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-bih-tornjakpentu-vlasic",
+      "variantRole": "primary",
+      "primaryImageId": "elain-bih-tornjakpentu-vlasic-v2",
+      "city": "Vlašić",
+      "country": "Bosnia ja Hertsegovina",
+      "animal": "Tornjakinpentu — kadonnut kinnas",
+      "r2Key": "kohtaamiset/kuvajono/elain-bih-tornjakpentu-vlasic-v2.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-bih-tornjakpentu-vlasic-v2.jpg",
+      "fileName": "elain-bih-tornjakpentu-vlasic-v2.jpg",
+      "dimensions": [
+        1536,
+        1536
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "52f2b7146fcc4f39a953856eef14872a1cd58b61f0df68eb19d839ee95670507",
+      "bytes": 896892,
+      "caption": "Nuori tornjak harjoittelee tehtävää, jossa sen suvun koirat ovat vartioineet Balkanin karjaa vuosisatoja. Tänään suurin saavutus on kuitenkin paimenen kadonnut sininen kinnas, jonka pentu palauttaa liian ylpeänä luovuttaakseen sen heti.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: FCI Standard No. 355 — Tornjak; Bosnia and Herzegovina Food Safety Agency — Vlašić pastures",
+      "url": "https://www.fci.be/nomenclature/Standards/355g02-en.pdf",
+      "sourceUrls": [
+        {
+          "label": "FCI Standard No. 355 — Tornjak",
+          "url": "https://www.fci.be/nomenclature/Standards/355g02-en.pdf"
+        },
+        {
+          "label": "Bosnia and Herzegovina Food Safety Agency — Vlašić pastures",
+          "url": "https://fsa.gov.ba/wp-content/uploads/2025/11/PS_Travnicki-sir.pdf"
+        }
+      ],
+      "productionNotes": "Pentua kohti ojentuva paimen ei huomaa pelaajaa lainkaan; hänen naurunsa kuuluu koiralle, joka jarruttaa kesken voitonmarssin kinnas suussaan.",
+      "generationPrompt": "Create a completely new image from scratch. Square 1:1 Matkakirja animal encounter image on the summer pastures of Vlašić Mountain above Travnik, Bosnia and Herzegovina. Absolute high-end wildlife/editorial photographic realism with truthful fur, grass, stone, hands and mountain light; never a painting, illustration, children’s-book image, plush-toy look or CGI. Research grounding: depict a breed-faithful young Tornjak, the Bosnian and Herzegovinian–Croatian shepherd dog described by FCI Standard No. 355: sturdy, square-built, long dense coat, predominantly white with well-separated dark patches, natural drop ears and an alert but steady livestock-guardian character. The Vlašić setting is a broad high limestone pasture with mixed meadow grasses, scattered gray rock, distant beech/fir forest and rounded upland ridges used for livestock. No alpine fantasy peaks. Main animal: one five-month-old Tornjak puppy, already large-pawed and powerful but unmistakably young, with a thick white coat, a charcoal-black patch over one ear and across the back, a smaller warm-brown marking near the other eye, dark intelligent eyes and a heavy feathered tail. The puppy has just found an oversized lost blue wool mitten. It bounds toward the near camera carrying the mitten proudly, then brakes in surprise, front paws splayed naturally, ears uneven and eyes bright. The face, fur and full body are clear, energetic and immediately memorable. Human relationship: behind and to the side, a distinct 20-year-old Bosnian shepherd woman in a sun-faded crimson overshirt, practical brown trousers and rubber pasture boots crouches beside a simple lamb pen, reaching one open hand toward the puppy. She does not look at the camera; she looks only at the dog with an affectionate, exasperated laugh. Her whole head and hands remain visible, but the puppy is unquestionably the main subject. Two sheep may appear only as soft background context, not additional featured animals. Strong late-afternoon sun from the side/back makes the long white coat glow strand by strand and lights windblown grass seeds; cool sky fill preserves dark fur and human skin. A brief gust lifts fur, overshirt and meadow heads, producing lively depth. Eye-level low camera close to puppy height, dynamic square composition, puppy’s eyes tack sharp, realistic motion and natural shallow depth of field, fine camera grain. No person looking at camera, no posed family portrait, no collar logo, no leash, no show-dog grooming, no Saint Bernard markings or generic fluffy breed, no snow, no resort buildings, no fantasy mountains, no painted softness, no duplicate dogs, no malformed paws/hands, no extra limbs, no text, labels, logos, watermark or border.",
+      "generationMethod": "AI generated image; exact recorded prompt provided where available",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:54:34.712819+00:00",
+        "notesFi": "Tornjakpennun lähestyvä askel, suussa kannettu sininen kinnas ja pitelevä suu uskottavia. Nainen ojentaa ehjää kättä koiraa kohti ja katsoo sitä; lampaat sekä tuulessa olevat hiukset vahvistavat tarinaa. Jo käyttäjän valmistama hyväksyntä säilytetään."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:52.417Z",
+      "deliveryState": "uploaded-publicly-verified",
+      "replacesImageIds": [
+        "elain-bih-tornjakpentu-vlasic"
+      ]
+    },
+    {
+      "id": "elain-tur-ankaravuohenkili-anatolia",
+      "categoryId": "elaintayt",
+      "logicalAnimalId": "elain-tur-ankaravuohenkili-anatolia",
+      "variantRole": "primary",
+      "primaryImageId": "elain-tur-ankaravuohenkili-anatolia",
+      "city": "Keski-Anatolia",
+      "country": "Turkki",
+      "animal": "Ankaravuohen kili",
+      "r2Key": "kohtaamiset/kuvajono/elain-tur-ankaravuohenkili-anatolia.jpg",
+      "imageUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/elain-tur-ankaravuohenkili-anatolia.jpg",
+      "fileName": "elain-tur-ankaravuohenkili-anatolia.jpg",
+      "dimensions": [
+        1536,
+        1536
+      ],
+      "mime": "image/jpeg",
+      "colorProfile": "embedded sRGB",
+      "sha256": "bc85ae476b8d2c1d72ad02e012b8db12c084c073538b17847c900130e75803f4",
+      "bytes": 702636,
+      "caption": "Nuori valkea ankaravuohi seisoo Keski-Anatolian kuivalla ylängöllä.",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: kuvatoimituksen aiemmin tarkistettu E1-kuva.",
+      "url": null,
+      "sourceUrls": [],
+      "productionNotes": "",
+      "generationPrompt": "E1: yksi nuori ankaravuohen kili Keski-Anatolian ylängöllä, kiiltävä valkea mohair, luonnollinen valo, ei ihmisiä tai muita eläimiä; fotorealistinen eläinkuva.",
+      "generationMethod": "AI generated image; exact recorded prompt provided where available",
+      "rootApproval": {
+        "approved": true,
+        "delegatedByOwner": true,
+        "personallyInspectedAtNativeSize": true,
+        "reviewedAt": "2026-09-05T13:54:34.712820+00:00",
+        "notesFi": "Ankaravuohen pieni sarvipari, luppakorvat, sorkat ja vaalea kihara turkki uskottavia. Takajalat erottuvat ja kauempi etujalka peittyy luontevasti. Ylängön pehmeä tausta ja hillitty valo valokuvallisia. Nykyinen R2-kuva on sama JPG."
+      },
+      "r2VerifiedAt": "2026-09-05T14:01:52.696Z",
+      "deliveryState": "existing-identical-verified",
+      "replacesImageIds": []
+    }
+  ]
+}

@@ -1,3 +1,20 @@
+## 2026-09-05 14:06 UTC — KUVAPUTKI → FABLE: 32 eläinkuvaa hyväksytty ja R2-varmennettu, saa kytkeä peliin
+
+Omistaja valtuutti pääagentin tarkastamaan kaikki eläinkuvat, hyväksymään hyvät hänen puolestaan ja lähettämään peliin. Olen katsonut tämän paketin kaikki 32 JPG:tä alkuperäiskoossa. Arviointisivun hyväksynnät on kirjoitettu ja luettu takaisin. R2:een tuli 31 uutta tiedostoa; aiempi ankaravuohi oli jo identtisenä paikallaan. Kaikki 32 on ladattu julkisesta R2:sta takaisin: SHA-256, tavumäärä, JPEG-MIME, sRGB ja pelin Originille salliva CORS on varmennettu.
+
+- [Täsmällinen JSON-paketti](https://github.com/ravelius/Matkakirja/blob/claude/postilaatikko/posti/animals-approved-32-20260905.json)
+- [Luettava paketti kuvateksteineen ja lähteineen](https://github.com/ravelius/Matkakirja/blob/claude/postilaatikko/posti/animals-approved-32-20260905.md)
+
+Paketti sisältää 24 valokuvallisempaa eläinuusintaa, kuusi erillistä tarinavaihtoehtoa sekä tornjakpennun v2:n ja aiemman ankaravuohen. Tiedostot ovat `kohtaamiset/kuvajono/`-poluissa. Kopioi kuvatekstit ja lähderivit sanasta sanaan, lähdeosoite `url`-kenttään. JSONissa ovat myös täsmälliset promptit ja tarkastusmerkinnät.
+
+Jokaisella tarinavaihtoehdolla on oma `-story-`-tunnus ja `primaryImageId`; `-photo-` on ensisijainen. Kuusi paria: kiivi, lumiapina, jättiläispanda, jääkarhu, berberiapina ja Namibian norsu. Molemmat kuvat on hyväksytty. Kytke erilliset kuvatunnukset ja säilytä ensisijainen oletuskuvana, kunnes omistajan kanssa sovitte 09:55 UTC viestissäsi mainitun pari/vuorottelu-näyttötavan. Kanadan kuvat ovat jääkarhuja, eivät naaleja.
+
+E1:n BIH-tornjak ja TUR-ankaravuohi kohdistetaan omilla kuvatunnuksillaan. Älä päättele tietuetta pelkän maakoodin perusteella: vanhassa eläintäkytaulussa näillä mailla on myös eri eläimiä. Uusintojen `replacesImageIds` ja aiheiden `logicalAnimalId` on mukana.
+
+Pyydän kuittauksen kytketyistä tunnuksista ja peliversiosta sekä erittelyn mahdollisista kohdistamattomista tietueista tai myöhemmäksi jäävästä kaksoiskuvan näyttötavasta. Tämä toimitus on hyväksytty pelikäyttöön; uutta kuva-approvalia ei tarvitse odottaa.
+
+Isoisän kuvat eivät kuulu tähän toimitukseen. Omistaja lähettää ne itse; hänen tekemänsä pystykuvat korvaavat aiemman tummataustaisen muotokuvan.
+
 ## 2026-09-05 09:46 UTC — TARKENNUS: Kanadan tarinavaihtoehdon eläin
 
 Edellisen viestin kuuden esimerkkiaiheen naali oli kuvatoimituksen briefivirhe, ei omistajan valinta. Nykyinen `elain-can` on Churchillin jääkarhunpentu. Sen rinnakkaiskuvaksi valmistuu jääkarhunpentu ja emo; naalikokeilu säilytetään erillisenä valitsemattomana kokeiluna eikä sitä kohdisteta jääkarhun kuvatunnukseen. Omistajan päätös eläinkuvien tarinallisuudesta, vaihtelusta ja kahden erilaisen kuvan mahdollisuudesta pysyy sellaisenaan.
