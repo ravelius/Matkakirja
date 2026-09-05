@@ -25,6 +25,36 @@ kytkimellä vanha kartta palaa oletuslaudaksi ilman koodimuutoksia
 muualle, ja pelitila (tallennus) on sama kummallakin laudalla. Kohdat
 (b) ja (c) ovat jokaisen vaiheen hyväksymisehto (luku 7).
 
+3. Vaiheen 1 julkaisun jälkeen (v1553): *"Ota vanha kartta jo heti
+   kokonaan pois ja korvaa pallolla. Ei haittaa vaikka peli ei toimi."*
+   → LAUTA_OLETUS = 'pallo' v1554:stä alkaen; vaihe 6 ohitettiin, ja
+   vaiheet 2–5 valmistuvat pelin ollessa jo pallolla. Samalla *"saako
+   pallon piirtämän kuvan röpeliäisyyttä pois vaikka sitten kun liike
+   pysähtyy"* → laatunosto levossa (js/pallo.js asennaLaatunosto).
+4. v1554:n jälkeen: *"pelissä periaatteessa voisi olla lopulta kytkin,
+   millä pelaaja voisi valita haluaako pelata pallonäkymässä vai sillä
+   meidän vanhalla kartalla sitten kun ollaan saatu pallo toimimaan."*
+   → pelaajan asetus vaiheen 5 jälkeen (luku 7, uusi vaihe 6).
+5. *"etusivun kartan voi pitää aluksi vielä vanhassa mutta sitten kun
+   ehditään tehdä uusi, niin siihen kannattaa varmaan renderöidä oma
+   spesifi zoomattu pallo joka pyörii hitaasti lontoosta kohti aasiaa,
+   mutta on jo renderöity blurrattuna, jotta efekti ei vie etusivulla
+   tehoja. ja siinä lentokone voisi lentää eri kaupunkien välillä samalla
+   kun pallo pyörii ja piirtää paksua punaista viivaa ja aina ei
+   kaupunkien välillä kun kone laskeutuu, tulee uusi isoisän aikalaiskuva
+   jonnekin kartan ulkopuolelle pienellä, niin että ei jää etusivun
+   tekstin päälle. kone jatkaa automaattisesti lentoa uuteen kohteeseen
+   pysähtymättä, muuttaa vain hieman suuntaa."* → vaihe 5 (avaus)
+   täsmentyy: etusivun pallo on ESIRENDERÖITY (sumennettu kuvasarja tai
+   video pallon laatoista, Lontoo → Aasia), ei elävä WebGL-pallo; kone,
+   punainen viiva ja isoisän kuvat ovat eläviä DOM/SVG-elementtejä sen
+   päällä. Aloituslento pelin alussa on eri asia ja pysyy pallolla.
+6. Linssi-idea B7 (docs/linssikatalogi.md): *"voidaan näyttää esim.
+   afrikan kohdalla pallon päällä sitä kaikkein vanhinta projisointi
+   mallia 1500-luvulta ja osoittaa miten pielessä se on."* → oma linssi
+   pallolle vaiheen 3 jälkeen (vanha kartta verhottuna pallon pinnalle,
+   liukusäädin).
+
 Aiemmat Raamatun kirjaukset, jotka tämä KUMOAA tai TÄSMENTÄÄ, on
 listattu luvussa 8 — ne on kirjattava Raamattuun ennen vaihetta 6.
 
@@ -317,8 +347,8 @@ Sessio = yksi Fablemax-erä ≈ yksi PR.
 | **2. Siirrot pallolla** | js/siirtokoreografia.js (STEP_MS, HYPYN_TAUKO_MS, NAPPULAN_LAHDON_VIIVE_MS, siirtoajonKesto, ENNAKON_* siirretään ui.js:stä sanatarkasti — tuojakartoitus päivitetään); kohteet **H**, naapurireitit **T** + helmet **P**, nappula **H**/**D**, ennakkozoomi → saatto → nappula; laiva; automaattiheitto; siirtymämusiikki ja äänet samoista koukuista; lento **A** + kone **D** + kamera; mannerlento | js/pallolauta/{siirto,merkit,reitit}.js, js/ui.js (animatePawn haarautuu laudan mukaan; doFly), js/siirtokoreografia.js | savuke-siirtokoreografia saa `--lauta pallo` -tilan (samat aikaleimavartijat: nappula 300 ms kameran jälkeen, saapuu 280 ms ennen); savuke-nappula pallolle; tests/siirtokoreografia.test.mjs | 3 | siirrot, laiva, lento ja saapumiset kokonaan pallolla; Liiku ei enää avaa tasokarttaa |
 | **3. Merkit** | kaupunkinimet **H** ladonnalla (karttanimet.js:n säännöt ruutuavaruudessa, katto 40, piste vain nimen kanssa); poltettujen nostojen **R**-osuma; elävät nostot, eläintäyt, skandaalit, hetket, ihmeet **H** (katto); kohtaamispiste; kortit (avaaFokuskohde) ankkuri ruutupisteestä; karttaselite + valot; kehittäjätilan kaikki kaupungit; pallolaattojen nostoversion tiiviste laatat.jsonissa (mitkä nostot poltettu) | js/pallolauta/{nimet,nostot}.js, js/fokuskohteet.js (ankkurin ruutupiste parametriksi), js/karttanimet.js (ladonta ilman svg:tä), tools/tee-pallolaatat.mjs (tiiviste luetteloon), tools/tarkista-karttamerkit.mjs (pallotila) | tests/pallonimet.test.mjs (ladonta ei limity, piste vain nimen kanssa), tarkista-karttamerkit pallolla julkaisuportiksi, savuke-fokuskohteet `--lauta pallo` | 3 | koko pelin sisältö napautettavissa pallolta; Euroopan nostot samat kuin kartalla |
 | **4. Linssikartta** | valitseLinssi → linssikartan kuori (Kartta herää, kamera pallon näkymään); Sulje/valinta null → purku ja paluu; radio, vertailu, maatiedot, aikajana, keksinnöt toimivat kuoressa; Liiku ja lehdet estetty kuoressa (linssi blokkaa muun — Raamattu 4.9.); pallon oma linssi piiloon pallolaudalla | js/pallolauta/linssikartta.js, js/ui.js (valitseLinssi, sytytaLinssi), js/kartta.js (herätys/purku), css | tests/linssikartta.test.mjs (kamera synkka molempiin suuntiin ±5 %, purku jättää svg:n tyhjäksi), savuke-aikajana ja savuke-kartta-tila `--lauta pallo` | 1,5 | kaikki linssit pallolaudalla vanhalla kartalla; paluu palloon |
-| **5. Avaus, offline, laite** | avausnäkymä pallolla (renderIntro: pallo Lontoon yllä, avausteksti DOMissa; INTRO_SPACE ei koske palloa), aloituslento pallolla + niukkuusharso; SW-välimuisti vendorille ja laatoille; varapolku + turvatila; Z8 käyttöön ja lähin korkeus laattatarkkuudesta; hover-raycast pois; **5b** mitattu käynnistysaika TestFlightissa → päätös staattisten karttatuontien laiskoittamisesta (erä vain jos mittaus näyttää > 300 ms hyötyä) | js/pallolauta/avaus.js, js/ui.js (renderIntro, aloituslento), sw.js, js/main.js, js/pallo.js | savuke-avauslento `--lauta pallo`, tests/sw.test.mjs (välimuistikatot), savuke-dist (ei palloa, kartta) | 2 | uusi peli alusta loppuun pallolla; ilman verkkoa peli käynnistyy kartalla |
-| **6. Oletukseksi** | omistajan laitetesti (TestFlight-build); LAUTA_OLETUS = 'pallo'; pallo-linssi pois laukusta; Raamattu-kirjaus (luku 8, Fable); docs/moduulit/linssit.md ja kaupunkilehti.md viitteet; tuojakartoitus; muutosloki; vanha kartta jää linssikartaksi ja palautusoptioksi (ei poisteta) | js/ui-apurit.js (1 vakio), js/linssit/omistus.js, docs/, js/tyohuone-raamattu.js (Fable) | kaikki savukkeet oletuslaudalla; regressiotaulukko ennen/jälkeen (kehys, keko, tekstuurit, käynnistys) | 1,5 | pallo on pelin lauta kaikille; `?lauta=kartta` palauttaa vanhan |
+| **5. Avaus, offline, laite** | avausnäkymä: ESIRENDERÖITY sumennettu pallo (kuvasarja/video laatoista, pyörii hitaasti Lontoosta Aasiaan) etusivun tekstin takana, päällä elävä kone + paksu punainen viiva kaupungista toiseen ja isoisän aikalaiskuvat pienenä kartan ulkopuolella (luku 0 kohta 5; siihen asti etusivu vanhalla kartalla), aloituslento pallolla + niukkuusharso; SW-välimuisti vendorille ja laatoille; varapolku + turvatila; Z8 käyttöön ja lähin korkeus laattatarkkuudesta; hover-raycast pois; **5b** mitattu käynnistysaika TestFlightissa → päätös staattisten karttatuontien laiskoittamisesta (erä vain jos mittaus näyttää > 300 ms hyötyä) | js/pallolauta/avaus.js, js/ui.js (renderIntro, aloituslento), sw.js, js/main.js, js/pallo.js | savuke-avauslento `--lauta pallo`, tests/sw.test.mjs (välimuistikatot), savuke-dist (ei palloa, kartta) | 2 | uusi peli alusta loppuun pallolla; ilman verkkoa peli käynnistyy kartalla |
+| **6. Pelaajan kytkin** (alun perin "Oletukseksi" — LAUTA_OLETUS = 'pallo' ja pallo-linssi pois laukusta tehtiin jo v1554:ssä omistajan päätöksellä) | pelaajan asetus "Pelilauta: karttapallo / vanha kartta" (asetusvalikko, sama avain matkakirja-lauta, ei pelitilaan); regressiotaulukko ennen/jälkeen (kehys, keko, tekstuurit, käynnistys); docs/moduulit/linssit.md ja kaupunkilehti.md viitteet; tuojakartoitus; muutosloki; vanha kartta jää linssikartaksi ja palautusoptioksi (ei poisteta) | js/main.js (asetus), js/ui-apurit.js, docs/ | kaikki savukkeet kummallakin laudalla | 1,5 | pelaaja valitsee laudan itse; `?lauta=kartta` palauttaa vanhan |
 
 Yhteensä **13 sessiota** (vaiheet 1–6; 5b mahdollinen +1). Vaihe 1 on
 "uuden jutun ensimmäinen kierros" (roolitus.md): Fable/Fablemax tekee

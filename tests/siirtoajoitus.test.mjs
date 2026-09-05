@@ -26,9 +26,11 @@ import { readFileSync } from 'node:fs';
 
 import {
   jalkamatkanAskel, siirtoajonKesto, siirtoajonPehmennys,
-} from '../js/ui.js';
+} from '../js/siirtokoreografia.js';
 
 const UI = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+// Koreografian luvut asuvat omassa moduulissaan (pallolauta vaihe 2).
+const KOREO = readFileSync(new URL('../js/siirtokoreografia.js', import.meta.url), 'utf8');
 const KARTTA = readFileSync(new URL('../js/kartta.js', import.meta.url), 'utf8');
 
 const luku = (lahde, nimi) => Number(lahde.match(new RegExp(`const ${nimi} = ([\\d.]+)`))[1]);
@@ -36,8 +38,8 @@ const luku = (lahde, nimi) => Number(lahde.match(new RegExp(`const ${nimi} = ([\
 /* --- 1. tahti ------------------------------------------------------ */
 
 test('yhden askeleen tahti on vanhaa hitaampi, muttei paljon', () => {
-  const uusi = luku(UI, 'JALKAMATKAN_STEP_MS');
-  const vanha = luku(UI, 'JALKAMATKAN_STEP_LYHIN_MS');
+  const uusi = luku(KOREO, 'JALKAMATKAN_STEP_MS');
+  const vanha = luku(KOREO, 'JALKAMATKAN_STEP_LYHIN_MS');
   // Vanha askel 640 ms on nyt alaraja; uusi perusaskel on "vähän
   // hitaampi" eli 1,3–1,5× siitä. Yli 1,5× ei ole enää vähän.
   assert.equal(vanha, 640, 'alaraja ei ole enää entinen askel');
@@ -47,16 +49,16 @@ test('yhden askeleen tahti on vanhaa hitaampi, muttei paljon', () => {
 });
 
 test('lyhyet heitot kulkevat täydellä rauhalla', () => {
-  const perus = luku(UI, 'JALKAMATKAN_STEP_MS');
+  const perus = luku(KOREO, 'JALKAMATKAN_STEP_MS');
   for (const n of [1, 2, 3, 4, 5]) {
     assert.equal(jalkamatkanAskel(n), perus, `${n} askelta ei kulje perustahdilla`);
   }
 });
 
 test('kuutonen ei veny odotteluksi eikä alita vanhaa tahtia', () => {
-  const tauko = luku(UI, 'HYPYN_TAUKO_MS');
-  const katto = luku(UI, 'JALKAMATKAN_KATTO_MS');
-  const alaraja = luku(UI, 'JALKAMATKAN_STEP_LYHIN_MS');
+  const tauko = luku(KOREO, 'HYPYN_TAUKO_MS');
+  const katto = luku(KOREO, 'JALKAMATKAN_KATTO_MS');
+  const alaraja = luku(KOREO, 'JALKAMATKAN_STEP_LYHIN_MS');
   const askel = jalkamatkanAskel(6);
   const kesto = 6 * askel + 5 * tauko;
   assert.ok(askel >= alaraja, `kuutosen askel ${askel} ms alittaa vanhan tahdin`);
@@ -78,7 +80,7 @@ test('tahti ei koskaan kiihdy heiton pidetessä', () => {
 });
 
 test('lento ei hidastunut: tilaus koski maareittejä', () => {
-  assert.equal(luku(UI, 'STEP_MS'), 190, 'lennon askeltahti muuttui');
+  assert.equal(luku(KOREO, 'STEP_MS'), 190, 'lennon askeltahti muuttui');
   assert.match(UI, /maitse \? jalkamatkanAskel\(path\.length\) : STEP_MS/,
     'siirto ei enää erottele jalkamatkaa ja lentoa');
 });
@@ -127,11 +129,11 @@ test('saattoajo ei enää zoomaa itse eikä palaa perillä', () => {
 });
 
 test('ennakkozoomi on ripeämpi kuin kartan muut ajot', () => {
-  const ennakko = luku(UI, 'ENNAKKOZOOMIN_MS');
+  const ennakko = luku(KOREO, 'ENNAKKOZOOMIN_MS');
   const ajo = luku(KARTTA, 'AJO_MS');
   assert.ok(ennakko > 300 && ennakko < ajo,
     `ennakkozoomin ${ennakko} ms ei ole 300 ms – ${ajo} ms väliltä`);
-  assert.ok(luku(UI, 'ENNAKON_HENGAHDYS_MS') <= 250, 'hengähdys venyi tauoksi');
+  assert.ok(luku(KOREO, 'ENNAKON_HENGAHDYS_MS') <= 250, 'hengähdys venyi tauoksi');
 });
 
 /* --- 3. siirtozoomin katto ----------------------------------------- */
@@ -147,7 +149,7 @@ test('siirtozoomilla on absoluuttinen katto — muuten se kylläisi pohjaan', ()
   const kerroin = luku(KARTTA, 'SIIRTONAKYMAN_LAHIN_KERROIN');
   assert.ok(kerroin >= 2 && kerroin <= 6,
     `siirtonäkymän katto ${kerroin}× lähimmästä portaasta ei ole 2–6×`);
-  assert.ok(luku(UI, 'SIIRTOZOOMIN_LAHENNYS') > 1.2,
+  assert.ok(luku(KOREO, 'SIIRTOZOOMIN_LAHENNYS') > 1.2,
     'lähennys ei enää vie lähemmäs');
 });
 
@@ -166,10 +168,10 @@ test('siirtozoomilla on absoluuttinen katto — muuten se kylläisi pohjaan', ()
  */
 
 const nappulanMatka = (askelia) => askelia * jalkamatkanAskel(askelia)
-  + (askelia - 1) * luku(UI, 'HYPYN_TAUKO_MS');
+  + (askelia - 1) * luku(KOREO, 'HYPYN_TAUKO_MS');
 
 test('kamera lähtee ensin ja nappula viiveellä', () => {
-  const viive = luku(UI, 'NAPPULAN_LAHDON_VIIVE_MS');
+  const viive = luku(KOREO, 'NAPPULAN_LAHDON_VIIVE_MS');
   // Omistajan haarukka oli 250–400 ms: alle sen katse ei ehdi lukea
   // kartan lähtöä, yli sen peli tuntuu jumittuvan heiton jälkeen.
   assert.ok(viive >= 250 && viive <= 400, `viive ${viive} ms ei ole 250–400 ms`);
@@ -183,8 +185,8 @@ test('kamera lähtee ensin ja nappula viiveellä', () => {
 });
 
 test('nappula saapuu perille ennen kameraa, joka pituudella tahansa', () => {
-  const viive = luku(UI, 'NAPPULAN_LAHDON_VIIVE_MS');
-  const ero = luku(UI, 'NAPPULAN_SAAPUMISERO_MS');
+  const viive = luku(KOREO, 'NAPPULAN_LAHDON_VIIVE_MS');
+  const ero = luku(KOREO, 'NAPPULAN_SAAPUMISERO_MS');
   assert.ok(ero >= 150 && ero <= 300, `saapumisero ${ero} ms ei ole 150–300 ms`);
   for (let n = 1; n <= 6; n++) {
     const nappula = nappulanMatka(n);
@@ -198,8 +200,8 @@ test('nappula saapuu perille ennen kameraa, joka pituudella tahansa', () => {
 });
 
 test('kestorajat ovat vartijoita eivätkä pure nykytahdilla', () => {
-  const lyhin = luku(UI, 'SIIRTOAJON_LYHIN_MS');
-  const pisin = luku(UI, 'SIIRTOAJON_PISIN_MS');
+  const lyhin = luku(KOREO, 'SIIRTOAJON_LYHIN_MS');
+  const pisin = luku(KOREO, 'SIIRTOAJON_PISIN_MS');
   assert.ok(lyhin < pisin, 'kestorajat ovat väärin päin');
   for (let n = 1; n <= 6; n++) {
     const kesto = siirtoajonKesto(nappulanMatka(n));
@@ -229,7 +231,7 @@ test('saaton käyrä on trapetsi: kiihdytys, vakionopeus, jarrutus', () => {
     const t = i / 200;
     nopeus.push((siirtoajonPehmennys(t + dt) - siirtoajonPehmennys(t)) / dt);
   }
-  const ramppi = luku(UI, 'SAATON_RAMPPI');
+  const ramppi = luku(KOREO, 'SAATON_RAMPPI');
   const huippu = 1 / (1 - ramppi);
   // 1. KESKELLÄ VAKIO. Ramppien välissä nopeus on tasan huippunopeus.
   const keski = nopeus.slice(Math.round(200 * (ramppi + 0.05)),

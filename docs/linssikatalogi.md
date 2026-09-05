@@ -60,6 +60,7 @@ esitetä profeettoja kasvoista tunnistettavina; paikka, ihmiset ja hetki.
 | B4 | Sähkö ja viestintä | Eurooppa–Atlantti | 1800–1901 | Volta Pavia · Ørsted Kööpenhamina · Faraday Lontoo · Morse · Atlantin kaapeli 1866 · Marconi Poldhu 1901 | idea |
 | B5 | Kartografia ja mittaaminen | Eurooppa | 1569–1884 | Mercator Duisburg · Cassini Pariisi · Struven ketju Hammerfest–Izmail · Greenwichin nollameridiaani 1884 | idea |
 | B6 | Tähtitieteen observatoriot | maailma | 1576–1900 | Uraniborg · Greenwich · Pulkova · Lick · Ulugh Beg Samarkand | idea |
+| B7 | Vanhin maailmankuva pallolla | Afrikka ja muut mantereet | 1507–1873 | Waldseemüller 1507 · Ortelius 1570 · Blaeu 1662 · d'Anville 1749 · Stanleyn Kongo 1877 — vanha kartta verhottuna karttapallon pinnalle, liukusäädin vanha → 1873 → nyt näyttää vääristymän | idea (omistaja 5.9.2026: "osoittaa miten pielessä se on. hyvin opettavaista"; vaatii pallolaudan vaiheen 3) |
 
 ## C. Löytöretket ja liikkuminen
 
