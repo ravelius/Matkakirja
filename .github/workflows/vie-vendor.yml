@@ -71,6 +71,12 @@ jobs:
           for nimi in LICENSE LICENSE.md LICENSE.txt license LICENCE; do
             if curl -fsSL -o LISENSSI "https://cdn.jsdelivr.net/npm/${p}@${v}/${nimi}" 2>/dev/null; then lisenssi="$nimi"; break; fi
           done
+          # Osa paketeista (esim. tunajs) kantaa lisenssin vain tiedoston
+          # alkukommentissa: otetaan se talteen, jos siitä löytyy lupateksti.
+          if [ -z "$lisenssi" ] && head -c 3000 kirjasto.js | grep -q "Permission is hereby granted"; then
+            awk 'NR==1,/\*\//' kirjasto.js | head -60 > LISENSSI
+            lisenssi="tiedoston alkukommentti"
+          fi
           [ -n "$lisenssi" ] || { echo "::error::lisenssitiedostoa ei löydy paketista ${p}@${v}"; exit 1; }
           echo "Kirjasto: $(wc -c < kirjasto.js) tavua, lisenssi: $lisenssi ($(head -1 LISENSSI))"
 
