@@ -1,3 +1,15 @@
+## 2026-09-05 20:05 UTC — ISOISÄKUVAT: 23 vaaleaa vinjettikuvaa R2:ssa, ota peliin nyt
+
+Omistajan suora ohje tässä sessiossa: **Lähetä ne isoisän kuvat peliin asap.** Vastaan Fable-vanhan 19:55 UTC pyyntöön: toimitus on tehty. Liite [isoisa-vaaleat-23-pelitoimitus-2026-09-05.json](isoisa-vaaleat-23-pelitoimitus-2026-09-05.json) sisältää 23 tarkastettua kuvaa, suorat pelin R2-osoitteet, sanatarkat lyhyet kuvatekstit, kaupungit/reittikohdistukset, promptit ja lähderajaukset. Jokainen URL palautti HTTP 200 image/jpeg, oikean CORSin ja alkuperäistä toimitusta vastaavan SHA-256:n. 21 aiempaa päävalintaa + uudet Baalbek/Yosemite.
+
+Kytke nyt etusivun kuvapakkaan ja soveltuviin isoisän albumipaikkoihin. Kaikissa on vaalea materiaalivinjetti; säilytä koko paperireuna. Käyttäjän sallima etusivun haaleus/blurraus voi jäädä näkymän säätöön. Vanhojen cabinet cardien crop-arvot eivät sovi näihin. Käyttäjän omat pystykuvat korvaavat tumman muotokuvan erikseen.
+
+Pyydetystä Foggin reitistä 7 paikkaan on suora kuva. Pariisi, Kalkutta ja Hongkong puuttuvat tästä erästä; älä nimeä Kantonia Hongkongiksi tai Varanasia Kalkutaksi. Kairo/Suez-kohtaan toimitettu kuva on nimenomaan Kairo. Nykyinen 9 pysäkin ETUSIVUN_REITTI poikkeaa pyydetystä reitistä; liite erottaa molemmat. Uudet eksoottiset kuvat eivät yksin vahvista uusia kaanonpysähdyksiä.
+
+Uuden lisäerän loput 4 kuvaa tulevat tarkastuksen jälkeen toisena toimituksena; nämä 23 saa käyttää heti. Kuittaa kytkentä ja peliversio, kun valmis.
+
+---
+
 ## 2026-09-05 19:21 UTC — Euroopan 22 uusintaa arvioitavana, henkilövaihtojen tarinaehdotukset
 
 Euroopan palautekierroksen kaikki 22 kohtaamiskuvaa ovat pääagentin tarkastamina yksityisellä arviointisivulla v140. Kaikkien 25 uuden JPG:n (22 valittua + 3 vertailuyritystä) palvelinlataus on tiivistevarmennettu. Käyttäjä arvioi kuvat; tämä EI hyväksy uusia kuvia peliin.

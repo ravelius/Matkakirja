@@ -1,0 +1,1167 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-05T20:05:54.232755+00:00",
+  "title": "23 vaaleaa isoisän kuvaa — pelitoimitus",
+  "count": 23,
+  "authorization": "Omistaja tässä kuvasessiossa: Lähetä ne isoisän kuvat peliin asap. Tämä on toimitusvaltuutus; kaikkien23 valinnan root-QA pass.",
+  "status": "R2 publicly byte-verified; Fable game integration requested now",
+  "instructions": [
+    "Kytke nämä uudet vaaleat vinjettikuvat nyt etusivun kuvapakkaan ja soveltuviin isoisän albumin paikkoihin.",
+    "Kopioi caption sanatarkasti. Säilytä koko paperi ja vaalea vinjetti, älä peri aiemman cabinet-card-erän crop-koordinaatteja.",
+    "Lisähaaleuden/blurrauksen voi tehdä käyttäjän etusivuohjeen mukaan näkymän CSS:ssä; älä muuta toimitusoriginaaleja.",
+    "Kuvien uudet eksoottiset aiheet ovat kuvallisia fiktiivisiä matkamuistoja, eivät automaattisesti uusia kaanonpysähdyksiä tai reittimuutoksia. Kytke tarkka kaupunginnimi, älä korvaa Hongkongia Kantonilla tai Kalkuttaa Varanasilla.",
+    "Nykyisen reitin mumbai tarkoittaa tässä Bombayta, tokio-avain Jokohaman satamakuvaa nykyisen pelin mappingin mukaisesti. Kairo-kuva on Kairo, ei Suez.",
+    "Käyttäjän omat pystykuvat korvaavat vanhan tumman muotokuvan; niitä ei ole tässä23vaakaerässä. Näitä vaakakuvia ei nimetä hänen pystykuvikseen.",
+    "Lähetä ACK ja peliversio, kun kytkentä on tehty. Uuden6erän muut4kuvaa viimeistellään ja toimitetaan erikseen; ne eivät saa viivyttää näiden23käyttöä."
+  ],
+  "currentFrontPageRoute": {
+    "mainCommit": "acf2e6ed11c35f83010b126fd499283ebcb9be34",
+    "path": "js/etusivupallo.js",
+    "symbol": "ETUSIVUN_REITTI",
+    "stopIds": [
+      "lontoo",
+      "pariisi",
+      "wien",
+      "istanbul",
+      "kairo",
+      "mumbai",
+      "singapore",
+      "hongkong",
+      "tokio"
+    ],
+    "matchingImageCount": 6,
+    "uncoveredStopIds": [
+      "pariisi",
+      "wien",
+      "hongkong"
+    ]
+  },
+  "requestedFoggRoute": {
+    "mailboxCommit": "adc9391bd259c27dd2a3326fc1ac44df9ff3b23a",
+    "requestPath": "posti/fable-vanha.md",
+    "requestHeading": "2026-09-05 19:55 UTC — FABLE → KUVAPUTKI: isoisän vaaleat kuvat etusivulle — pyyntö toimittaa R2:een",
+    "mappingStatus": "read-only handoff mapping, not applied to game",
+    "coverage": [
+      {
+        "stop": "Lontoo",
+        "imageIds": [
+          "isoisa-departure-aged-r20260905-v1"
+        ],
+        "status": "available-direct-image"
+      },
+      {
+        "stop": "Pariisi",
+        "imageIds": [],
+        "status": "no-image-in-authorized23"
+      },
+      {
+        "stop": "Kairo/Suez",
+        "imageIds": [
+          "isoisa-cairo-aged-r20260905-v1"
+        ],
+        "status": "available-direct-image"
+      },
+      {
+        "stop": "Bombay",
+        "imageIds": [
+          "isoisa-bombay-aged-r20260905-v1"
+        ],
+        "status": "available-direct-image"
+      },
+      {
+        "stop": "Kalkutta",
+        "imageIds": [],
+        "status": "no-image-in-authorized23"
+      },
+      {
+        "stop": "Singapore",
+        "imageIds": [
+          "isoisa-singapore-aged-r20260905-v2"
+        ],
+        "status": "available-direct-image"
+      },
+      {
+        "stop": "Hongkong",
+        "imageIds": [],
+        "status": "no-image-in-authorized23"
+      },
+      {
+        "stop": "Jokohama",
+        "imageIds": [
+          "isoisa-yokohama-aged-r20260905-v1"
+        ],
+        "status": "available-direct-image"
+      },
+      {
+        "stop": "San Francisco",
+        "imageIds": [
+          "isoisa-sanfrancisco-aged-r20260905-v1"
+        ],
+        "status": "available-direct-image"
+      },
+      {
+        "stop": "New York",
+        "imageIds": [
+          "isoisa-newyork-aged-r20260905-v1"
+        ],
+        "status": "available-direct-image"
+      }
+    ],
+    "directImagesAvailable": 7,
+    "gaps": [
+      "Pariisi",
+      "Kalkutta",
+      "Hongkong"
+    ],
+    "partialStopNote": "Kairo/Suez is covered only with accurately labeled Kairo; no Suez image in this exact23 allowlist. The existing9-stop route differs from this requested10-stop list."
+  },
+  "items": [
+    {
+      "id": "isoisa-aden-aged-r20260905-v1",
+      "fileName": "isoisa-aden-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-aden-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-aden-aged-r20260905-v1.jpg",
+      "city": "Aden",
+      "year": 1873,
+      "caption": "Isoisä, Aden, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Isoisä ja hiilityöläinen istuvat samassa pienessä varjossa. Avara lahti jatkuu heidän edessään rauhallisena.",
+      "sourceNote": "Katsotut British Library/QDL:n Steamer Pointin 1876–77 maisemakuva ja 1870-luvun puolivälin työväen studiokuva tukevat rannikon, matalien talojen ja kiedottujen työvaatteiden yleismuotoa. Vuoden 1876 valurautainen laiturikatos jätetään pois. Nimetön aikuinen työntekijä, pieni ruokomattosuoja, kiviporras ja Horation istuva lepo ovat fiktiivinen yhdistelmä, eivät lähdehenkilön tai tietyn rantapaikan toisinto.",
+      "webReferenceUrls": [
+        {
+          "label": "British Library / QDL, T.11308/11",
+          "url": "https://www.qdl.qa/en/archive/81055/vdc_100023400730.0x000005"
+        },
+        {
+          "label": "British Library / QDL, T.11308/4",
+          "url": "https://www.qdl.qa/en/archive/81055/vdc_100023282096.0x000005"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": null,
+      "routeMatch": "no-direct-route-stop",
+      "routeAlignmentNoteFi": "Täydentävä matkamuisto; ei suora nykyisen tai 19:55 pyydetyn etusivureitin pysäkkikuva.",
+      "sha256": "896e43cf7518643fb3ab351005c8e6ea63cc56c0bb6d00889652cea2061d9859",
+      "bytes": 762252,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "A WIDE, SPACIOUS PHOTOGRAPHIC VIEW OF THE ADEN COALING SHORE AND BARREN BAY IN 1873, with two SMALL SEATED PEOPLE sharing shade in the lower-left middle distance. The landscape, empty shore, dry hills and calm bay occupy most of the image. This is an environmental panorama with a human moment inside it, not a close portrait. Entirely NEW historical-scene image, landscape 3:2, 1536 by 1024 pixels.\n\nThe whole picture is a worn physical WHITE PAPER albumen print. The photographic image fades broadly and irregularly to neutral WHITE at ALL FOUR SIDES AND CORNERS, but the paper sheet visibly continues beneath the fade: fine pale fibres, gentle tooth and slight relief are visible even on the white outer edges. No texture-free digital white band. The image vanishes into white paper; the paper itself does not disappear. Never use a yellow-brown parchment border, dark vignette, burnt corners or a dark outline.\n\nCamera looks from a slightly raised shore path across a broad stone-and-timber foreshore, a quiet moored wooden lighter, the open water and the low whitewashed crescent of Steamer Point buildings under the dry rocky hills. Use the actually viewed British Library/QDL Steamer Point photograph of 1876–77 for its barren slopes, scattered one-to-three-storey pale houses, open coal areas, small boats and low distant Little Aden. This scene is 1873, so EXCLUDE the cast-iron landing-pier shed built in 1876. The simple resting shade in this new scene is only a rough reed mat on a small timber frame against a low shore wall, not that later iron shed. No lush palms, modern port cranes, modern ships, grand waterfront or busy industrial complex. A small unnamed auxiliary steamer can be a subdued distant silhouette, with a low hull, one modest funnel and a couple of simple masts; its rigging is distant, no invented lettering.\n\nThe grandfather and one ADULT local coal worker sit on low broad stone shore steps within a single deep sheltered shadow beneath the small rough reed lean-to. Their seated bodies, head to feet, are about 20–24 percent of the image height, roughly 225 pixels tall, and together occupy only a small lower-left portion of the surviving photograph. Place the group at least eight metres from the camera with ample visible shore between us and them; keep both figures entirely inside the image area, separated from the white edge fade. The grandfather is the left person in a plain linen travelling jacket, trousers and boots, without named identity or distinctive facial features. Both boots rest on the lower step and his hands rest loosely on his knees. He inclines toward the worker just a little, a quietly engaged, resting posture. A coherent deep shadow covers his head, collar, shoulders and upper jacket. The bright coast determined the old exposure, so his facial details simply did not register: a dark soft head shape with no readable eyes, nose, mouth, beard or sharp profile. No face-only blur or mask and no hat deliberately hiding the face.\n\nThe adult worker to his right is resting on the same stone level with relaxed weight, a wrapped headcloth, simple checked waist cloth and bare shoulders, using ONLY the garment forms observed in the mid-1870s QDL studio photograph. Make him an adult around forty, not the young source sitter; do not copy the source pose or identity. He turns his head toward the grandfather with a small easy smile and one relaxed hand on his thigh. The worker's face may catch a little softer side light at the shadow's edge. A single grounded woven coal basket beside the worker explains the pause; no additional props. Hands, bent knees, separate feet and weight on the steps are physically coherent. They are companions in a short shared rest, no supervising pose, no task command, no invented trade or new canonical story. Their warmth is quiet, plausible for people holding still through an early plate exposure.\n\nMake the underlying scene convincingly photographed, but with the poor resolving power and uncertain exposure of a faded small 1873 albumen print: soft grey-brown detail, washed highlights, quiet dark shade, fine uneven photographic grain and a little rubbed-away image layer. Natural water and stone, real cloth, uninterrupted perspective, calm optics; no painting, CGI, illustration, modern sharpness, HDR or digitally theatrical sunset. Distant forms may be indistinct. Use a brighter afternoon bay with deep shared shade to make an intimate small refuge within a vast dry landscape.\n\nFor this print, use TWO substantial physical paper creases: a long irregular diagonal from the lower-right paper toward the upper-left inner area, and a shorter near-horizontal fold across the pale sky. Thin exposed white fibres, tiny adjacent relief shadows and local image loss make them physical paper damage. A few shallow scuffs and compressed fibres continue through the white vignette to the outer paper. Keep the folds away from both heads and avoid a regular grid, bark-like cracks or painted scratches on people. The paper texture must remain visible under the WHITE fade everywhere, while all outer sides remain light and neutral. No text, captions, stamps, numbers, watermark, frame, tabletop or album mount.\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:22.691Z"
+    },
+    {
+      "id": "isoisa-cairo-aged-r20260905-v1",
+      "fileName": "isoisa-cairo-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-cairo-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-cairo-aged-r20260905-v1.jpg",
+      "city": "Kairo",
+      "year": 1873,
+      "caption": "Isoisä, Kairo, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Puutarhan varjoisa porttikäytävä, Kairo 1873",
+      "sourceNote": "Ezbekiyehin ympäristön mittakaava, vaaleat ikkunaluukulliset rakennukset, puusto, matala rauta-aita ja kaasulamput perustuvat Christian Paierin noin 1860–1870 kuvaamaan Gettyn albumiinivedokseen. Puutarhaa uudistettiin ennen vuotta 1873, joten lähteen keskeneräistä maapintaa ei kopioida sellaisenaan. Etualan yksinkertainen huoltokäytävä ja henkilöiden kohtaaminen ovat fiktiivinen yhdistelmä; kuva ei esitä dokumentoitua tiettyä porttia tai Horation kaanonissa vahvistettua tapahtumaa.",
+      "webReferenceUrls": [
+        {
+          "label": "Getty: Christian Paier, Ezbekiah Garden",
+          "url": "https://www.getty.edu/art/collection/object/108PEZ"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": "kairo",
+      "requestedFoggRouteStop": "Kairo/Suez",
+      "routeMatch": "direct-current-and-requested",
+      "routeAlignmentNoteFi": "Kuva esittää Kairoa; se sopii pyydetyn Kairo/Suez-jakson Kairo-osaan. Suez-kuvaksi sitä ei nimetä.",
+      "sha256": "fed0902fd8c9bcc630a367b691b6c8f1be7efdf5bdba66bc5239f5d0f4387ac5",
+      "bytes": 853888,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "A WIDE VIEW OF AN 1873 CAIRO GARDEN EDGE, its bright dusty path, large shade trees, low iron fence and a plain deep entrance passage. Two moderately small standing people pause at the passage, while the garden and city retain most of the picture. Entirely new historical-scene photograph, landscape 3:2, 1536 by 1024 pixels. This is a place and a quiet human relationship, not a portrait.\n\nA physical WHITE PAPER photographic print covers the entire canvas. The IMAGE fades broadly, softly and irregularly into neutral WHITE on every side and corner. Under the fading image, the paper's fibres, fine tooth, shallow relief and physical creases continue visibly right out to the WHITE edges. Never make a blank texture-free digital border. The photograph fades but the sheet remains. No yellow or brown perimeter, dark vignette, burnt corners, harsh frame or dark paper outline.\n\nCairo, Ezbekiyeh Gardens, 1873. Base the place's proportions on the actually viewed Christian Paier Getty albumen photograph dated about 1860–1870: pale three- and four-storey shuttered buildings along the garden-edge street, a broad dusty road, a thin dark iron garden fence, slender gas lamps and spreading shade trees. The gardens had been redeveloped before this 1873 scene, so do not mechanically reproduce old unfinished ground works. Show only a small restrained portion of the planting and an open garden path. Do not invent a jungle, pyramids, a mosque skyline, a palace, a named hotel terrace or later hotel architecture.\n\nNear the middle-left is a modest deep rectangular SERVICE GATE PASSAGE through a plain thick plaster garden-edge wall, with a simple wooden door held open and a flat lintel. The passage and its exact location are fictional, not a claimed surviving entrance visible in the source. It is not a grand Islamic portal or ornate arch. The camera stands several metres away on the garden path, at ordinary adult eye height, with enough open foreground to keep the two people fully inside the surviving photograph. The brighter garden opens to the right; part of the period city street and shuttered houses appears beyond the thin boundary fence.\n\nThe grandfather stands just within the deep passage, a complete figure about 29–31 percent of image height, not filling the frame. Plain modest travelling jacket and trousers, unadorned boots. One hand rests lightly against the door jamb; the other hangs by his thigh. Both feet are planted, visible, and clear of the white image fade. He inclines slightly forward to hear an adult local gardener at the brighter edge of the doorway. A single natural deep shadow from the thick passage roof covers the grandfather's head, neck and upper body. The old exposure records the bright path but loses his facial information in the shadow. His head orientation is apparent but the eyes, nose, mouth, beard detail and exact profile do not resolve. No recognizable facial identity, separate blur patch, black mask or hat trick.\n\nThe gardener stands comfortably just outside the shadow, in plain local cotton working clothes, long work tunic, loose trousers and a simple headcloth. His grounded posture and one relaxed hand indicating a direction along the garden path show quiet practical knowledge. The other hand rests on the open door edge. His face can be softly readable as he attends to the grandfather. The grandfather is the listener, not a superior directing him. Their hands never fuse with each other or the door, no duplicated limbs. No letter, book, secret code, threat, invented command, named identity or kinship; only a small paused exchange. No exaggerated modern snapshot gesture.\n\nMake the underlying scene a convincingly photographed but poorly resolved, faded 1873 albumen paper image: weak neutral grey-brown tones, imperfect soft glass-plate optics, patchy exposure, pale garden highlights, under-recorded doorway shade, a little image-layer rubbing and limited distant detail. Retain real plaster, cotton, foliage, earth and iron perspectives. No illustration, painting, CGI, modern cinema grading, HDR, decorative sepia overlay or excessive mist. The emotional point is the traveller's attentive posture emerging from darkness toward a person who knows the place.\n\nFor THIS print use two uneven roughly vertical paper folds, widely spaced across the left and right parts of the picture, and one short oblique crease near a lower corner. Pale exposed fibres and tiny adjacent ridge shadows show the physical relief. Let the folds continue faintly across the white vignette, always in one paper plane, not painted onto the people or plaster. A few small rubbed image losses reveal the white sheet. The outer paper is WHITE with visible delicate fibres, never a blank white digital band or a dirty brown border. No lettering, stamps, numbers, signature, captions, watermark, tabletop, frame or album mount.\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:24.642Z"
+    },
+    {
+      "id": "isoisa-capetown-aged-r20260905-v1",
+      "fileName": "isoisa-capetown-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-capetown-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-capetown-aged-r20260905-v1.jpg",
+      "city": "Kapkaupunki",
+      "year": 1873,
+      "caption": "Isoisä, Kapkaupunki, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Verkkojen äärellä Pöytävuoren juurella, Kapkaupunki 1873",
+      "sourceNote": "Pöytävuoren pitkä tasainen laki, vasemmanpuoleinen Devil’s Peak ja matala kaupunki perustuvat katsottuun noin 1870 panoraamaan. Varhaisen sataman mittakaava perustuu Mooren vuoden 1872 näkymään, joka julkaistiin 1875, sekä Rijksmuseumin kahden satamavalokuvan aukeamaan (ajoitus noin 1870–1880). Yhteensä neljä lähdevalokuvaa kolmessa katsotussa tiedostossa; myöhempiä satamalaajennuksia ei siirretty vuoteen 1873 eikä aukeaman vastakkaisia vuorisuuntia yhdistetty. Etualan vaja, tarkka laituri, vene ja verkonkorjaushetki ovat fiktiivinen historiallinen yhdistelmä. Kalastajien vaatteita tai henkilöitä ei väitetä tietystä lähdekuvasta tunnistetuiksi.",
+      "webReferenceUrls": [
+        {
+          "label": "Neatline: Kapkaupungin valokuvapanoraaman keskiosa, noin 1870",
+          "url": "https://neatlinemaps.com/antiquemap/nl-01571-south-africa-photograph-panorama-of-cape-town"
+        },
+        {
+          "label": "Rijksmuseum: Cape Town — the docks, kaksi valokuvaa sisältävä aukeama, noin 1870–1880",
+          "url": "https://www.rijksmuseum.nl/en/collection/object/Cape-Town-the-docks--97cce9a659cd17e06570c42be8cdcb07"
+        },
+        {
+          "label": "Moore: Kapkaupungin satama 1872, julkaistu Cape Colonyn käsikirjassa 1875",
+          "url": "https://commons.wikimedia.org/wiki/File:1872_Cape_Town_Harbour_before_excavations_-_Cape_Colony.png"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": null,
+      "routeMatch": "no-direct-route-stop",
+      "routeAlignmentNoteFi": "Täydentävä matkamuisto; ei suora nykyisen tai 19:55 pyydetyn etusivureitin pysäkkikuva.",
+      "sha256": "a428e0ec274cbbdcd79d05ae6d2c27aa6c36a96b13635b4542ee4decc907a24a",
+      "bytes": 750993,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "A WIDE ENVIRONMENTAL PHOTOGRAPH OF CAPE TOWN'S SMALL EARLY HARBOUR IN 1873, viewed from a slightly raised dock approach toward a broad stretch of water, modest sailing vessels, low town and the enormous flat-topped Table Mountain. The harbour and mountain dominate; THREE SMALL PEOPLE occupy a modest area of the lower-left middle distance. A quiet human relationship can be discovered inside the large working landscape. Entirely NEW historical-scene image, landscape 3:2, 1536 by 1024 pixels.\n\nThe whole image is a worn physical WHITE PAPER albumen print. At ALL FOUR SIDES AND CORNERS the photograph fades broadly and irregularly into neutral WHITE, while the physical paper fibres, gentle tooth and shallow relief remain visible all the way to those white outer edges. Only the photographic image fades away; the paper continues underneath it across the entire surface. No texture-free digital white margin, no yellow parchment, dark brown outline, burnt corners, dark vignette or separate album mount.\n\nUse the actually viewed circa-1870 Cape Town photographic panorama for the long, nearly horizontal Table Mountain plateau with steep stratified cliffs and the lower, irregular Devil's Peak to the viewer's left. Let the broad mountain be recognisable without making it an impossibly isolated rectangular block. Low pale town buildings, open ground and foothills lie beneath it. Use the upper photograph of the Rijksmuseum 1870–1880 docks spread and the Moore 1872 harbour view for modest timber and stone quays, low pitched-roof sheds, sailing masts, a small basin, simple mooring ropes and stacks of timber. Do not combine the lower Rijksmuseum photograph's opposite Signal Hill / Lion's Head direction with this mountain view. Keep the harbour at its early Alfred-dock scale: no later Victoria Basin expansion, Clock Tower, modern cranes, containers, liners, modern skyline or road vehicles. The exact little quay and shed are a plausible fictional synthesis, not an asserted historical building.\n\nAcross a generous area of open quay, about ten metres away, the grandfather stands just inside the open working bay of a simple low timber dock shed at the left. His complete standing figure is only about 18–20 percent of the whole image height, roughly 190 pixels from head to boots. All three people and their feet remain well inside the surviving photographic area, away from the fading edges. The shed casts one continuous deep natural shadow across his head, shoulders, plain dark travelling coat and upper torso. The old plate was exposed for the bright harbour and sky, so his small face has recorded as an indistinct dark soft shape with no readable eyes, nose, mouth, beard or identifiable sharp profile. No face-only blur, black patch or hat-hiding trick. His weight rests naturally on two grounded boots. One relaxed hand rests against the shed's vertical timber jamb at waist height; the other hangs comfortably. He is turned slightly toward the people repairing a fishing net nearby, listening and watching with patient curiosity.\n\nTwo adult local fishermen work close together at the brighter edge of the same shed's shade beside a modest grounded heap of netting and a small moored wooden fishing boat. One sits on a low wooden box, net resting on his lap; the other squats comfortably beside the same net, supporting a small section with two hands. Give them plain worn shirts, trousers and soft practical caps, with no invented elaborate costume or uniform. One briefly turns toward the grandfather while still supporting the net; the other concentrates on the mesh. This is a warm pause in practical shared work, not the traveller supervising or giving orders. The net is physically supported by their laps, hands and the quay, never a floating web, and the boat is properly tied to the quay. No unnecessary props. Small simple anatomy, separate grounded feet and credible weight are more important than tiny sharp fingers.\n\nKeep the underlying scene genuinely photographic: real quiet water, weathered wood, masonry, matt cloth and coherent scale and perspective. However, the print has the poor optical resolution, uneven exposure and faded neutral grey-brown image of an inadequately preserved small 1873 albumen photograph. Soft fine grain, lost shadow detail, pale highlights and gently rubbed image areas, no modern crispness, HDR, CGI or illustration. A hazy bright late morning leaves the mountain readable in the upper middle distance while the tiny shelter and net repair feel intimate. This is a plausible fictional travel memory, not evidence of an exact documented event.\n\nFor this sheet use TWO strong irregular physical paper folds: a mostly horizontal fold across the lower quarter of the print and a diagonal from the top-right white paper into the central-left sky, ending before the human group. The folds have tiny light fibre ridges, shallow real relief shadows and adjacent loss of photographic material. Add a few broad rubbed patches and compressed fibres, not a dense decorative scratch pattern. The crease relief and fine white-paper texture continue visibly beneath the broad white vignette and out to all edges. Avoid cracks resembling tree bark, regular grids, dark paper borders or any texture painted onto bodies. No text, labels, letters, numbers, watermark, caption, frame or tabletop.\n\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:26.484Z"
+    },
+    {
+      "id": "isoisa-departure-aged-r20260905-v1",
+      "fileName": "isoisa-departure-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-departure-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-departure-aged-r20260905-v1.jpg",
+      "city": "Lontoo",
+      "year": 1873,
+      "caption": "Isoisä, Lontoo, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Isoisä viivähtää arkun vieressä. Vaunun ikkunassa näkyvä saattaja vastaa hänen pieneen hyvästieleeseensä.",
+      "sourceNote": "Alkuperäisen Charing Crossin yhden suuren kaarikaton rakenne perustuu katsottuun Kell Brothersin noin vuoden 1864 litografiaan. Pukuleikkausta ja arkun rakennetta verrattiin Metin 1873–76 villapukuun ja Henry Fordin 1860–1880 arkkuun; NGS:n vuoden 1863 albumiinikuva tuki valokuvapintaa ja rauhallista asentoa. Uusi vaunun osanäkymä, henkilöt ja valaistus ovat fiktiivistä synteesiä. Kevät 1873 korvaa vanhan promptin syksyn; sukulaisuutta ei määritellä.",
+      "webReferenceUrls": [
+        {
+          "label": "Kell Brothers: Interior of Charing Cross station, circa 1864, London Archives record 22684 / p5423254",
+          "url": "https://www.londonpicturearchive.org.uk/view-item?i=20571"
+        },
+        {
+          "label": "The Metropolitan Museum of Art: wool dress, American, 1873–76, C.I.55.26a,b",
+          "url": "https://www.metmuseum.org/art/collection/search/107852"
+        },
+        {
+          "label": "Victor Albert Prout: Countess of Fife in her pony carriage, August/September 1863, NGS PGP 162.54",
+          "url": "https://www.nationalgalleries.org/art-and-artists/42405"
+        },
+        {
+          "label": "The Henry Ford: Trunk, 1860–1880, THF188046",
+          "url": "https://www.thehenryford.org/collections/explore/articles/detail/articles/2021/10/08/what-we-wore-unpacking-a-trunk"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": "lontoo",
+      "requestedFoggRouteStop": "Lontoo",
+      "routeMatch": "direct-current-and-requested",
+      "routeAlignmentNoteFi": "Suora nimetty pysäkkikuva.",
+      "sha256": "ca0a1779ead0409b238141eeee4188023bd70747d260efea30c08a023dd938df",
+      "bytes": 541667,
+      "width": 1536,
+      "height": 960,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "Use case: historical-scene. Create one entirely NEW photograph, landscape 16:10, requested 1536 by 960 pixels.\n\nA PHYSICAL WHITE PAPER PHOTOGRAPH fills the canvas. The photographic IMAGE fades broadly, irregularly and softly into neutral WHITE on ALL FOUR SIDES AND CORNERS, but the PAPER remains visibly present underneath the fading image across the ENTIRE sheet: fine pale fibres, delicate tooth, tiny shallow relief and a little fold relief continue even in the white vignette and at the white outer edges. The picture fades; the physical paper does not vanish. No flat texture-free digital white band, no isolated cut-out image. Keep the edges neutral white with faint light-grey fibre shadows, never yellow parchment, brown framing, dark vignette, burnt corners or a dark perimeter outline.\n\nCharing Cross, London, SPRING 1873. A wide quiet view along an ordinary wooden British train standing at the platform. The grandfather waits beside his worn closed wood-and-dark-strap travel trunk, left of centre, about 33 percent of the total image height, roughly 317 pixels tall on this 960-pixel-high canvas. His entire head, both hands, complete body and both boots stay within the surviving photographic area, well away from the outer fade. Camera stands on the platform about six metres away, not in the grandfather's viewpoint. He wears a modest plain dark wool travelling coat, trousers and boots, no ornate accessories or named uniform. Do not describe or reveal an exact facial identity.\n\nHe stands in the deep natural near-side shadow cast by the wooden carriage and the opaque side bay of the original station hall. The same coherent shadow covers his head, collar, shoulders and upper coat, while some floor and coat-edge detail remains. The old exposure favours the bright glass roof and cannot resolve his shaded facial features. His head is turned gently toward a companion leaning a little out of a nearby open side-compartment window. His face is dark, soft and unreadable, with no clear eyes, nose, mouth, beard detail or sharp profile. No facial blur patch, artificial mask, hidden-face hat trick or close recognizable portrait.\n\nThe companion is an unnamed adult woman in modest early-1870s clothing, visible only to the waist within the open carriage window and supported naturally by the sill. Her softly attentive face and still small responding hand gesture convey warmth toward the grandfather, not toward the camera. Do not give her a name, kinship or invented message. His right hand is paused loosely at chest height in a restrained return farewell, his left hand resting on the travel trunk's handle without lifting it. A small, held, reluctant-to-finish exchange, still enough for a slow period exposure. Both hands and arms are physically plausible and separate; the trunk rests solidly on the platform. No rushing crowd or frozen dramatic action.\n\nThe station hall follows the actually viewed Kell Brothers circa-1864 lithograph: ONE immense shallow single-span arched iron-and-glass roof with repeated curved ribs and transverse triangulated ties, seen only partially above and beyond the carriage. A receding platform, a few modest gas-lamp standards and the wooden compartment carriage provide the scale. Do not create a series of independent little platform roofs or modern station vaults. No electric lighting, modern trains, overhead wires, readable signs, advertisements, clock numerals or fabricated lettering. The lithograph is only structural evidence; the result must have a photographic base, not its drawn rendering or watermark. The surviving Metropolitan Museum wool dress of 1873–76 informs only the companion's narrow collar, fitted buttoned bodice and ordinary long sleeves, not its American identity or bright tartan. The Henry Ford trunk of 1860–1880 informs wood construction and metal corner protection; simplify it to a modest closed travelling trunk, no decorated lining, labels or codes. Exact carriage fittings, the camera position, shadow and people are cautious fictional reconstruction.\n\nThe emotional weight comes from the shaded grandfather's readable still stance, the waiting trunk and the small exchange with the woman at the window. His mysterious presence matters, but his face stays for the player to imagine. Do not make him a tiny speck or a large foreground portrait. No new story fact, emergency, letter or invented canonical quotation.\n\nMake this a poor, much handled, faded 1873 albumen paper print photographed or scanned flat: low resolving power, soft glass-plate optics, uneven exposure, weak neutral grey-brown image, modest loss of detail and a little uneven silver-image wear. The photographic perspective, skin, timber, iron and cloth remain real beneath the poor preservation. No painterly strokes, illustration, CGI, modern sharpness, HDR or decorative sepia filter. The broad white fade must remain obvious all around, with WHITE PAPER FIBRES continuing visibly beneath it.\n\nFor this particular print use TWO strong physical folds: one uneven almost horizontal fold below the figures and one shorter near-vertical fold through the right half of the hall, plus a small bent-paper relief near an upper corner. Thin pale exposed fibres and subtle adjacent ridge shadows show that these are folds in one paper plane. The folds continue faintly through the white vignette as real paper relief; they do not become black lines or a rectangular frame. A little rubbed image loss reveals white paper. No dense crumpled pattern, tree-bark cracks or wood-grain scratches on the pictured subjects. No tabletop, album mount, lettering, numbers, caption or watermark.\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:28.283Z"
+    },
+    {
+      "id": "isoisa-giza-aged-r20260905-v1",
+      "fileName": "isoisa-giza-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-giza-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-giza-aged-r20260905-v1.jpg",
+      "city": "Giza",
+      "year": 1873,
+      "caption": "Isoisä, Giza, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Pieni hahmo Gizan aavikolla, 1873",
+      "sourceNote": "Uusi käyttäjän tilaama fiktiivinen matkamuisto, ei Fablen vahvistettu uusi kaanonpysähdys. Pääpyramidien järjestys ja eri mittakaavat perustuvat Gettyn Frithin vuosien 1859–1860 stereopariin; paljaat kivikurssit, kulunut huippu ja aavikon pintamuodot Metin Le Grayn 1865–1869 ja Frithin 1857 valokuviin. Khafren säilynyt huipun kalkkikiviverhous ja Menkauren pienempi koko tarkistettiin Egyptin muinaismuistohallinnon sivuilta. Eri lähdekuvien sfinksisuuntaa ei yhdistetty uuteen länsi–lounaisnäkymään. Tarkka kuvauspiste, etualan kivisuoja ja isoisän istumahetki ovat synteesiä; näkymä ei ole mitattu geodeettinen rekonstruktio. Neljä katsottua lähdevalokuvaa kolmessa tiedostossa sisältää stereoparin molemmat otokset.",
+      "webReferenceUrls": [
+        {
+          "label": "Getty: Francis Frith, The Pyramids of Geezeh, 1859–1860",
+          "url": "https://www.getty.edu/art/collection/object/1090NM"
+        },
+        {
+          "label": "Met: Gustave Le Gray, Pyramides de Gizèh, 1865–69",
+          "url": "https://www.metmuseum.org/art/collection/search/291659"
+        },
+        {
+          "label": "Met: Francis Frith, The Sphynx and Great Pyramid, Geezeh, 1857",
+          "url": "https://www.metmuseum.org/art/collection/search/271101"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": null,
+      "routeMatch": "no-direct-route-stop",
+      "routeAlignmentNoteFi": "Giza on Kairon läheinen kohde, mutta säilyy Giza-nimisenä eikä ole suora Kairo/Suez-pysäkkikuva.",
+      "sha256": "72d6df67422f47d1c85e9e65a4d395f31953fde63f450f31b67d3a6def28470a",
+      "bytes": 748258,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "AN IMMENSE, WIDE LANDSCAPE OF THE GIZA PYRAMIDS AND OPEN ROCKY DESERT IN 1873. Seen from a low, distant southwestern outlook, the three great pyramids rise beyond a broad empty expanse of sand, weathered limestone and subtle undulations. Monumental architecture, air and open ground occupy almost the whole horizontal photograph. A TINY seated traveller is a detail discovered near a small stone ledge, not a portrait. Entirely new historical photograph, landscape 3:2, 1536 by 1024 pixels.\n\nA worn physical WHITE PAPER albumen print, fading broadly and irregularly into neutral WHITE on all FOUR SIDES AND CORNERS. Fine paper fibres, gentle tooth and shallow relief remain visible under the white vignette right to every outer edge. The photographic image fades away but the physical paper continues across the whole sheet. Neutral white paper, not yellow or cream parchment; no dark border, burnt corners or smooth digital white band.\n\nFollow the actually viewed Francis Frith 1859–1860 Getty stereograph for the southwestern grouping: smaller Menkaure toward the left, Khafre prominent near the middle with surviving pale smooth limestone near its upper tip, and Khufu farther right in depth. Keep the different scales and overlap plausible, not three identical triangles in a row. The Ministry of Tourism and Antiquities confirms the much smaller Menkaure and Khafre's surviving summit casing. Use the actually viewed Met photographs by Le Gray, 1865–69, and Frith, 1857, for coarse exposed stone courses, weathered truncated Khufu summit, eroded limestone ground and the broad barren nineteenth-century setting. Do not transplant their Sphinx view into the southwestern outlook. No complete pristine white casing, golden caps, ancient builders, fantasy ruins, restored modern excavation plaza, city skyline, roads or visitor infrastructure. A few low subsidiary ruins may be small, weathered and subordinate. Keep the principal pyramid apices inside the surviving photographic field, clear of the white fade.\n\nNear the lower-right middle distance, well inside the photograph, the grandfather sits quietly on a low limestone shelf beside a natural rock ledge, his COMPLETE seated body from head to both boots only 8–12 percent of the entire frame height, approximately 100 pixels. He wears a plain dark 1873 travelling coat and trousers, hands resting on his knees, both boots supported on the ground. The rock casts one coherent shadow over his head and upper body. His face is tiny, dark and optically unresolved with no identifiable features or separate blur patch. He faces the vast pyramids, relaxed and absorbed; no extra props or people. Keep him small enough that the empty distance and the enormity of the pyramids carry the feeling of wonder.\n\nA genuine photographic basis with convincing ancient stone, ground and scale, seen through poor 1873 optics and a small faded albumen print: low resolution, soft fine grey-brown detail, uneven exposure, pale highlights, lost shadow information and a little abrasion of the image layer. Hazy morning side light shapes the pyramids without theatrical sunset. No painting, illustration, CGI, HDR or modern sharpness. This is a fictional visual travel memory, not an asserted documented journey or canonical incident.\n\nTwo or three strong PHYSICAL PAPER folds: a long gently uneven horizontal fold through the lower open ground, plus a short oblique fold descending from the upper-left white edge into the pale sky. Tiny lifted fibres, shallow adjacent relief shadows and pale losses of image emulsion identify the folds as real paper damage. Some rubbed paper continues beneath the white fade at the edges. Avoid uniform scratch grids, tree-bark patterns, texture painted onto bodies, writing, stamps, numbers, watermarks, captions, frame or tabletop. The final outer edges must remain light white fibrous paper, never brown.\n\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:30.149Z"
+    },
+    {
+      "id": "isoisa-railway-aged-r20260905-v1",
+      "fileName": "isoisa-railway-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-railway-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-railway-aged-r20260905-v1.jpg",
+      "city": "Yhdysvaltain länsi",
+      "year": 1873,
+      "caption": "Isoisä, Yhdysvaltain länsi, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Tauko vaununsillalla sateen jälkeen, Yhdysvaltain länsi 1873",
+      "sourceNote": "Vaunun avoin päätysilta, ohut kaide, sivuportaat, puinen kaari-ikkunallinen ovi ja kattouloke perustuvat LoC:n vuoden 1870 Sacramento-stereokorttiin sekä sen alkuperäisestä TIFFistä katsottuun detaljiin. Stereoparin kaksi valokuvaa lasketaan kahdeksi lähdekuvaksi; detalji ei lisää lukua. NPS:n ajoitukseltaan epävarma ylellinen sisäkuva katsottiin vertailuksi ja jätettiin käyttämättä. Vaunun koristelu on pelkistetty tavallisen matkavaunun fiktiiviseksi tulkinnaksi; ei vuoden 1887 suljettua eteistä. Nimeämätön pysäkki, sää ja hiljainen hetki ovat fiktiota, eivät vahvistettu kaanontapahtuma. Kuvan fyysinen maa on Yhdysvallat, mutta country säilyttää jonon albumiryhmittelyn Vuoden 1873 maailmanympärimatka.",
+      "webReferenceUrls": [
+        {
+          "label": "Library of Congress: Pullman Palace cars, at Sacramento, 1870, stereo.1s45510",
+          "url": "https://www.loc.gov/pictures/item/2022652382/"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": null,
+      "routeMatch": "no-direct-route-stop",
+      "routeAlignmentNoteFi": "Yhdysvaltain lännen rautatiejakso; tarkkaa kaupunkia tai reittiajoitusta ei väitetä.",
+      "sha256": "63876fe50040c7364750d4675c6f116a6afde7d57e0960c6000d58ea8a51a367",
+      "bytes": 838133,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "A WIDE HORIZONTAL PHOTOGRAPH OF A QUIET AMERICAN RAILWAY STOP AFTER RAIN IN 1873. A modest timber passenger carriage, wet platform boards, converging rails and the pale open western landscape occupy most of the picture; a single small traveller stands on the carriage's OPEN END PLATFORM. This is an environmental railway scene with a private pause inside it, not a close portrait. Entirely NEW historical-scene image, landscape 3:2, 1536 by 1024 pixels.\n\nThe picture is a poorly preserved physical WHITE PAPER albumen print. The photographic image fades broadly and irregularly to neutral WHITE on ALL FOUR SIDES AND CORNERS. Fine white paper fibres, soft tooth, tiny raised ridges and physical crease relief remain visible under the entire pale vignette and out to the outermost paper edges. The image disappears into white paper; the paper surface continues across the whole sheet. No smooth digital white strip, no yellow parchment, dark or burnt border, dark outline or separate album mount.\n\nBase the carriage construction on the actually viewed Library of Congress 1870 Sacramento stereograph and its full-resolution end-platform detail: a wooden passenger coach with a gently curved projecting roof, a raised clerestory centre along the roof, a narrow central timber end door with a tall round-topped glazed panel, an OPEN outdoor end platform, thin waist-height iron railing and short SIDE entry steps. This scene is 1873, so it has no enclosed vestibule, bellows, corridor bridge, electric lights, modern steel carriage or modern coupling. Simplify the lavish Pullman finish into an unnamed ordinary wooden passenger coach with plain panels and matt aged paint. Do not copy the reference's railway lettering, emblems or car numbers. Do not show the later luxury interior or copy any source photograph's mount.\n\nLook obliquely toward the stationary coach's rear from a small timber station platform, about seven metres away, at slightly below the carriage floor level. The complete open end platform, its side steps, part of the wheel truck, the projecting roof and a receding length of coach side are visible in the right half of the scene. The rails align under the wheels and run into the open distance; the left half contains wet platform boards, a little gravel, quiet flat country and a sparse distant tree line. Keep the modest railway engineering coherent and unshowy. No elaborate station building, mountains from a different region, locomotive spectacle or cloud of theatrical steam.\n\nThe grandfather stands upright on the open end platform close to its recessed doorway, his entire figure from head to boots about 29–32 percent of the image height. Place his head well below the upper photographic fade and both feet above the lower fade, all contained inside the surviving image. He wears an ordinary dark travelling coat, trousers and boots, no distinctive named identity. The deep natural shade beneath the projecting roof and within the doorway covers his whole head, collar, shoulders and upper coat continuously. The bright wet landscape has determined the old photographic exposure; his face therefore contains no readable eyes, mouth, nose, beard or recognisable sharp profile. A soft dark head turned three-quarters along the railway, not a separate face blur, painted mask or hat pulled down to conceal him. The glazed door behind him is subdued and has no face reflection.\n\nOne hand rests on the thin end railing, the other hangs beside his coat. His two boots stand firmly on the same level platform floor, feet separated, knees relaxed. His shoulders settle a little after the long ride, but he is stable and composed, not collapsing or in danger. His attention goes quietly down the line toward the distance, as though the journey has briefly stopped while his thoughts continue. Keep the small gesture and solitude gentle, without inventing a letter, emergency, injury, dramatic revelation or a documented canonical incident. A single plain closed soft travelling bag can rest securely against the carriage wall beside his boots, leaving the path and steps clear; no additional props and no extra people.\n\nPhotographic wood, rain-darkened cloth, wet iron and quiet diffuse daylight, with perspective and shadows that belong to one real scene. Then the low resolving power and uneven exposure of a small 1873 albumen print: faded neutral grey-brown tones, soft details, gentle mottled grain, worn highlights and slight image loss. Grey overcast light after rain makes this distinct from bright harbour scenes. The carriage recess is genuinely darker than the outside, not an artificial isolated facial shadow. No illustration, CGI, modern sharpness, HDR or digital vintage-filter gloss. Show stillness that could plausibly survive a slow early exposure.\n\nGive this physical sheet TWO substantial folds with a different arrangement from other prints: a near-vertical irregular crease through the open landscape left of centre, and a shorter diagonal dog-ear fold at the upper-right paper corner extending into pale sky only. Their thin exposed white fibres and shallow relief shadows are physical damage to the sheet. Add a broad lightly rubbed area in the lower-left ground and a few compressed paper fibres, without a decorative scratch grid. Fine paper texture and crease relief must continue through the WHITE vignette to all four edges. No bark-like texture painted on people, no text, captions, stamps, numbers, watermark, frame or tabletop.\n\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:32.160Z"
+    },
+    {
+      "id": "isoisa-varanasi-aged-r20260905-v1",
+      "fileName": "isoisa-varanasi-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-varanasi-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-varanasi-aged-r20260905-v1.jpg",
+      "city": "Varanasi",
+      "year": 1873,
+      "caption": "Isoisä, Varanasi, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Pieni hahmo Varanasin rantaportailla, 1873",
+      "sourceNote": "Uusi käyttäjän tilaama fiktiivinen kuvallinen matkamuisto, ei Fablen vahvistama uusi kaanonpysähdys. Arkkitehtuurin lähtökohtana on Gettyn Samuel Bournen vuosina 1865–1866 ottama Benares; The Great Mosque of Arungzebe, and Adjoining Ghats (84.XO.1224.1.30): porrastetut kivitasot, korkeat tukimuurit, pienet pilaripaviljongit ja kahden hoikan minareetin moskeija. Museon aito lähdekuva katsottiin 1800-pikselisenä. Uusi kamerapaikka on hieman joen puolella; lähdepaviljonkien tarkka sijoittelu ja etualan porttirakenne muuttuvat fiktiiviseksi yhdistelmäksi. Rakennuksia ei väitetä millintarkaksi lähteen tai vuoden 1873 tietyn kuvauspaikan toisinnoksi.",
+      "webReferenceUrls": [
+        {
+          "label": "Getty: Samuel Bourne, Benares; The Great Mosque of Arungzebe, and Adjoining Ghats, 1865–1866",
+          "url": "https://www.getty.edu/art/collection/object/109A3G"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": null,
+      "routeMatch": "no-direct-route-stop",
+      "routeAlignmentNoteFi": "Varanasi ei ole Kalkutta; ei automaattista Kalkutta-kytkentää.",
+      "sha256": "e334541c30bd0a374c5cc9b55a8eeaa20c932f229ed7240d82e4792bf4d0f527",
+      "bytes": 690690,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "A GRAND WIDE HORIZONTAL VIEW ALONG THE GANGES GHATS AT BENARES, NOW VARANASI, IN 1873. Monumental riverside steps, layered old buildings, small pavilions, moored wooden boats and a long quiet river perspective fill nearly the entire photograph. The camera looks diagonally along the bank from a low stationary boat near the shore, with spacious water in the right third and stone terraces receding into the distance. A VERY SMALL traveller is a minor detail in one shaded opening. Entirely new historical photograph, landscape 3:2, 1536 by 1024 pixels.\n\nThe scene is printed on worn physical WHITE PAPER. At ALL FOUR SIDES AND CORNERS the photographic image fades broadly and irregularly into neutral WHITE, but paper fibres, soft tooth and shallow physical relief remain visible beneath the entire vignette and right to its outer edges. Only the photograph fades; the paper sheet continues across the whole surface. Not a smooth digital margin, yellow parchment, dark vignette or framed album page.\n\nArchitectural anchor: the actually viewed Getty Museum albumen photograph by Samuel Bourne, 1865–1866, “Benares; The Great Mosque of Arungzebe, and Adjoining Ghats”, 84.XO.1224.1.30. Preserve its real riverbank character: high layered masonry retaining walls, broad uneven stair flights and horizontal landings, modest rectangular densely packed buildings, and the small projecting octagonal pillared pavilions with shallow roofs in the nearer left area. Farther along the bank, show the historic Aurangzeb mosque above the tall riverfront massing, with its domes and TWO very slender tall minarets as present in the 1860s photograph. Keep the mosque a distant landmark within the city, not an invented Taj Mahal. Use the old photograph's oblique river perspective and hierarchy of near pavilions, middle terraces and distant mosque, while moving the viewpoint slightly out over water for this wider new scene. Weathered pale stone and plaster, worn steps and calm river; no fantasy palace, identical repeated towers, generic ornate Indian city collage, modern embankment, railings, electrical cables, loudspeakers, motorboats or modern advertising.\n\nThe grandfather is a tiny COMPLETE standing figure, only 8–12 percent of the full image height, around 95 pixels, on a middle-left stair landing within a deep plain shaded gateway beneath a riverside building. He wears a simple dark 1873 travelling coat and trousers and stands on both grounded feet, one relaxed hand on the low stone edge, quietly looking toward the water. His whole head and upper torso share the natural gateway shade, and his small soft face has no identifiable features or face-only blur. Keep him well inside the photographic field, clear of the white fade, and no other near or large person. His still curious presence is discovered inside the vast city.\n\nA few much smaller local adults in plain cotton garments move slowly or sit on distant steps, and one or two modest wooden rowing boats lie securely moored at the lower terrace. No close ritual, spectacle, staged exotic costume or invented dramatic event. Their ordinary distant activity keeps the riverbank alive while the traveller's small quiet pause suggests wonder. Avoid added foreground props, giant pottery, piles of theatrical objects or a close boat passenger. This is a fictional visual travel memory requested by the user, not a documented event or a new canonical stop.\n\nKeep a genuine photographic basis with continuous masonry perspective, believable architecture, soft water reflections and naturally supported small figures. The final appearance is an inadequately preserved small 1873 albumen paper print: poor optical resolution, faded neutral grey-brown tones, gentle uneven exposure, soft atmospheric haze and rubbed-away image details. Low quiet morning light brings a pale gleam on water while the gateway remains naturally dark. Not a drawing, CGI, modern sharp image, HDR or digitally glossy vintage filter.\n\nTwo strong physical paper folds with visible fibre relief: an irregular almost-vertical fold through pale water right of centre, and a shorter bent diagonal fold from the lower-left white edge into the lowest empty steps, avoiding the small traveller. A few shallow scuffs and partial losses of photographic image expose pale paper. The folds and fine paper surface continue through the WHITE vignette to the outer edges; no dark border, regular grid, bark-like marks on people, readable text, labels, stamps, numbers, watermark, frame or tabletop.\n\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:34.604Z"
+    },
+    {
+      "id": "isoisa-angkor-aged-r20260905-v2",
+      "fileName": "isoisa-angkor-aged-r20260905-v2.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-angkor-aged-r20260905-v2.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-angkor-aged-r20260905-v2.jpg",
+      "city": "Angkor",
+      "year": 1873,
+      "caption": "Isoisä, Angkor, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Pieni matkustaja pysähtyy puun varjoon katsomaan Angkor Watin korkealle nousevia torneja. Kulunut kivikäytävä johdattaa katseen hänen ohitseen kohti temppelin porttia.",
+      "sourceNote": "Thomsonin vuoden 1866 porttivalokuva, Wellcome L0056123 / 19158i, ohjaa galleriatasoja, tornien muotoa ja kulunutta kivireittiä. Kuva on uusi fiktiivinen vuoden 1873 rekonstruktio: tarkkaa kivikohtaista säilymistilaa tai kasvillisuutta ei väitetä. Matkustaja on lähestymiskäytävällä puun varjossa, jotta hän erottuu oikeassa mittakaavassa rakennusta lähempänä. Angkoria ei väitetä Fablen vahvistamaksi kaanonpysähdykseksi.",
+      "webReferenceUrls": [
+        {
+          "label": "Wellcome Collection: John Thomson, Angkor Wat west gateway, 1866",
+          "url": "https://wellcomecollection.org/works/ksj3mt2h"
+        },
+        {
+          "label": "Wellcome source photograph L0056123 on Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/wiki/File:Nakhon_Thom,_Cambodia._Photograph_by_John_Thomson,_1866._Wellcome_L0056123.jpg"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": null,
+      "routeMatch": "no-direct-route-stop",
+      "routeAlignmentNoteFi": "Täydentävä matkamuisto; ei suora nykyisen tai 19:55 pyydetyn etusivureitin pysäkkikuva.",
+      "sha256": "962fe8c41f7854af0cebd9ad25117677f4c0fa362a39047ff14d28220771801a",
+      "bytes": 740252,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "A VERY WIDE historical landscape photograph of the monumental stone galleries and western gateway of Angkor Wat in 1873, seen from far back across the worn sandstone approach. Landscape 3:2, 1536 × 1024. Architecture, great age, tropical vegetation and distance dominate. Follow the actually studied John Thomson 1866 gateway photograph: broad low stone gallery roofs in horizontal tiers, three visible conical lotus-bud towers with many stepped sculpted rings, the taller centre tower over a projecting central porch, rectangular doorways and close-set stone baluster windows. The central porch has two solid vertical stone supports and a deeply dark entrance. Wide irregular sandstone flags lead toward it; weathered low stone remnants beside the approach, a fan palm and spreading leafy tree to the left, foliage at the outer sides. Keep the middle facade largely visible, as in the real 1866 photograph. No giant tree roots swallowing this gateway, no imaginary Gothic arches, no modern restoration scaffolding, railings, tourist paths or decorative fantasy towers.\n\nA small complete traveller stands on the stone approach in the MIDDLE DISTANCE to the LEFT of centre, beneath the spreading leafy tree's deep shade. He is nearer than the distant gateway, about 9–11 percent of the total image height (roughly 100 pixels tall), a clearly discoverable but small human measure within the enormous place. Simple dark 1873 coat and trousers, standing quietly turned toward the immense temple. His WHOLE HEAD, neck, shoulders and upper coat join ONE NATURAL DARK MASS of tree shade and shaded foliage; no pale face spot, no identifiable face or profile, no separate blur or black mask. Both complete legs and boots remain visible below, firmly supported by the flat stone path. Keep him safely away from the white edge fade. No other person at the temple door and no foreground portrait. The small traveller and the vast architecture are at different distances, so both have a believable real scale.\n\nAn authentic-looking POOR SMALL 1873 ALBUMEN PAPER PRINT, surviving worn and faded, photographed flat. Real old camera optics and subdued grey-brown monochrome tonal detail, softly resolved stone and leaves, uneven exposure; absolutely no drawing, painterly rendering, modern sharp HDR, cinematic colour or theatrical fog. A very broad neutral WHITE fade of the PHOTOGRAPHIC TONES on ALL FOUR EDGES AND CORNERS. Under that white vignette the SAME physical paper continues over the WHOLE surface: fine fibres, gentle tooth, slight shallow relief still visible at the outer edges. The photo fades away, the paper never disappears. No yellow or beige tint covering the sheet, no dark border, no smooth digital blank margin. Two strong worn paper folds at different heights, one almost horizontal through the pale upper sky, the second gently diagonal across the lower paving, with thin lifted white fibres and a few rubbed emulsion losses. Small natural edge ripples; not bark, cracked plaster, crumpled parchment or an X-shaped graphic overlay. A compelling quiet sense of a small visitor lost in the scale of a real ancient place. No text, date, labels, caption, album mount or watermark.",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:36.693Z"
+    },
+    {
+      "id": "isoisa-bali-aged-r20260905-v1",
+      "fileName": "isoisa-bali-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-bali-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-bali-aged-r20260905-v1.jpg",
+      "city": "Balin riisiterassit",
+      "year": 1873,
+      "caption": "Isoisä, Balin riisiterassit, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Isoisä istuu pienen peltokatoksen varjossa. Alempana viljelijä kulkee kapealla penkereellä, ja veden täyttämät riisilohkot kaartuvat palmujen reunustamaan laaksoon.",
+      "sourceNote": "Katsottu KITLV 43947 -valokuva on ajoitettu arviolta 1906–1916. Siitä käytetään riisilohkojen epäsäännöllisiä maapenkereitä, vettä, palmuja ja vaatimattomia katoksia; se ei todista täsmällistä vuoden 1873 maisemaa. UNESCO vahvistaa subak-pengerviljelyn pitkän historian. Tarkka katselupaikka, katos ja ihmiset ovat vuoden 1873 fiktiivinen tulkinta, eivät uusi Fablen vahvistama kaanonpysähdys. Kuva on kokonaan uusi generointi.",
+      "webReferenceUrls": [
+        {
+          "label": "KITLV/Leiden University Libraries: Paddy fields in Bali, 1906–1916",
+          "url": "https://hdl.handle.net/1887.1/item:808297"
+        },
+        {
+          "label": "Leidenin/KITLV:n lahjoittama alkuperäinen kuva Commonsissa",
+          "url": "https://commons.wikimedia.org/wiki/File:KITLV_-_43947_-_Kurkdjian,_N.V._Photografisch_Atelier_-_Soerabaia-Java_-_Paddy_fields_in_Bali_-_presumably_1906-1916.jpg"
+        },
+        {
+          "label": "UNESCO: Balin subak-kulttuurimaiseman historia ja pengerrakenne",
+          "url": "https://whc.unesco.org/en/list/1194/"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": null,
+      "routeMatch": "no-direct-route-stop",
+      "routeAlignmentNoteFi": "Täydentävä matkamuisto; ei suora nykyisen tai 19:55 pyydetyn etusivureitin pysäkkikuva.",
+      "sha256": "266aa352a0aa9d24532f27d43b646e791df74f187a04da5142e63abe4bff8228",
+      "bytes": 793933,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "A VERY WIDE sweeping historical landscape photograph of terraced rice cultivation on Bali in 1873, 1536 × 1024 pixels, landscape 3:2. Seen from a natural raised field bank, the irregular terraces descend across the whole valley in broad curving layers toward a shaded ravine, then rise again toward distant coconut palms and forested hills. Water in several freshly flooded plots softly reflects the pale sky; other plots contain irregular stands of traditional taller rice. Narrow earthen bunds and small irrigation channels visibly connect the levels. Follow the genuinely studied historical KITLV photograph 43947 for these varied, imperfect earth embankments, palm groves and modest field shelters. This is a fictional 1873 viewpoint based on those traditional forms, not a copy of a modern tourist location. No decorative perfectly repeated curves, concrete walls, hotels, paved paths, tourist swings, modern roofs, machinery, plastic or vivid modern postcard colour.\n\nIn the right-middle distance a SMALL plain open-sided field shelter with timber posts and a thatched roof stands on a level earth bank. A complete modest traveller sits quietly on its low wooden bench, about 8–11 percent of the entire picture height, roughly 90–110 pixels, gazing over the fields. Simple dark 1873 travel coat and trousers; both boots on the earth, hands resting on his knees. His entire head, neck and shoulders are deep within the roof's continuous natural shadow and join the shaded upper coat: no identifiable face or profile, no pale face spot, no separate blur or black patch. He remains fully within the photographic field, small beside the vast valley. Farther away one tiny adult Balinese farmer in simple practical wrapped cotton clothing has paused by an irrigation channel. No elaborate costume or posed exotic spectacle. Keep the complete landscape and its natural human scale.\n\nA poor, faded small ALBUMEN PHOTOGRAPHIC PAPER PRINT from 1873, flat to the viewer. Soft real old camera detail, restrained neutral grey-brown monochrome, unequal exposure, mild motion softness in distant foliage. Beautiful through scale and reflected light, never a painting or sharp digital travel advertisement. Very broad neutral WHITE fading of the photographic tones on ALL FOUR SIDES AND CORNERS. The underlying WHITE physical paper continues under that vignette right to every edge, with fine fibres, gentle tooth and small relief still visible in the pale areas. No smooth digitally blank margin, no yellow or dirty beige border. Two strong naturally worn physical folds, one near-vertical left of centre and one gently curved across the lower third, with delicate lifted white fibres and a little rubbed photographic emulsion. A short worn corner crease may join them. The sheet stays thin and quietly textured, not bark or crumpled parchment. Preserve the quiet image inside the broad white paper fade; no text, caption, date, album mount or watermark.",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:38.729Z"
+    },
+    {
+      "id": "isoisa-bombay-aged-r20260905-v1",
+      "fileName": "isoisa-bombay-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-bombay-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-bombay-aged-r20260905-v1.jpg",
+      "city": "Bombay",
+      "year": 1873,
+      "caption": "Isoisä, Bombay, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Venemies ojentaa kätensä, kun isoisä siirtyy Bombayn rantaportailta veneeseen. Kulunut vedos säilyttää pienen auttavan eleen ja avoimen sataman, mutta katoksen varjo jättää isoisän kasvot arvoitukseksi.",
+      "sourceNote": "Satamavesi ja alukset perustuvat katsottuun British Libraryn Lee-Warner-kokoelman 1870-luvun Bombayn kuvaan, joka katsottiin uudelleen ennen generointia. Frithin väljästi 1850–1870-luvuille ajoitettu Port of Bombay ohjaa matalan rantakaupungin mittakaavaa; Johnsonin noin 1855–1862 venemiesten kuva vaatetusta. Kiviportaat, veneen kangaskatos ja auttava tilanne ovat fiktiivisiä. Myöhempää 1890–1910 satamakuvaa ei käytetty. Vaalea paperi jatkuu uuden käyttäjäohjeen mukaisesti myös vinjetin alla.",
+      "webReferenceUrls": [
+        {
+          "label": "British Library: Bombay Harbour Docks, Photo 2/3(9), 1870s — katalogi",
+          "url": "https://searcharchives.bl.uk/?f%5Blevel_ssi%5D%5B%5D=%5B41%5D+Item&f%5Bmaterial_type_si%5D%5B%5D=Photographs&f%5Brelated_places_ssim%5D%5B%5D=Bombay%2C+Mumbai%2C+Maharashtra%2C+Mah%C4%81r%C4%81shtra%2C+India%2C+Asia&f%5Burl_non_blank_si%5D%5B%5D=No&page=4&per_page=50&sort=date"
+        },
+        {
+          "label": "British Library / Commons: Bombay Harbour Docks in the 1870s",
+          "url": "https://commons.wikimedia.org/wiki/File:Bombay_Harbour_Docks_in_the_1870s.jpg"
+        },
+        {
+          "label": "The Port, Bombay — Frithin albumiinivedos",
+          "url": "https://commons.wikimedia.org/wiki/File:The_Port,_Bombay_by_Francis_Frith.jpg"
+        },
+        {
+          "label": "SMU DeGolyer Library: William Johnson, Bombay-venemiehet, noin 1855–1862",
+          "url": "https://digitalcollections.smu.edu/cdm/ref/collection/eaa/id/771"
+        },
+        {
+          "label": "SMU:n kuva Commonsissa — kuvailu ja ladattu kuvatiedosto",
+          "url": "https://commons.wikimedia.org/wiki/File:Mahommedan_Boatman_of_Bombay_(9727842010).jpg"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": "mumbai",
+      "requestedFoggRouteStop": "Bombay",
+      "routeMatch": "direct-current-and-requested",
+      "routeAlignmentNoteFi": "Historiallinen kuvateksti Bombay; nykyisen pelireitin avain mumbai.",
+      "sha256": "066c7209fd7ce5973003c1c053a0485b0ee27336f441b72f9ca9e2c588ea7951",
+      "bytes": 674529,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "Use case: historical-scene.\nGenerate a completely NEW fictional photograph from scratch. Bombay harbour, 1873. The image is a close scan of the entire SURFACE of a fragile, poorly preserved 1873 photographic PAPER print, landscape 3:2, 1536 by 1024 pixels. The paper itself fills the canvas continuously. Across ALL FOUR SIDES and corners, the photographic image bleaches broadly, softly and irregularly into neutral WHITE PAPER. Crucially, the paper fibres, fine tooth, tiny relief and the physical folds remain visible beneath this pale white vignette, including at the outer edges. Only the photographic tones fade away; the white paper material does not vanish. No texture-free digital white margin, no solid RGB255 band, no floating rectangular card, cutout edge, tabletop, border or dark outline. White means neutral white, not yellow, ochre, dirty brown or grey framing.\n\nThe surviving central image is a real-looking but poor small 1873 albumen photograph: faded neutral grey-brown monochrome, imperfect exposure, weak shadow separation and modest period-lens resolving power. There is a believable optically made photograph underneath the physical wear, not a drawing or engraving. No modern crisp portrait, digital microcontrast, HDR, painting or CGI. Preserve enough continuous perspective, human posture and object support to understand the scene. Paper wear belongs to one flat physical paper plane and continues across all photographed objects without following their texture. No tree-bark cracks, crumpled parchment or dense fractured network. No writing, captions, invented numbers, signature, symbols, watermark or new plot revelation.\n\nA WIDE HARBOUR VIEW from a raised stone bank, looking downward across landing steps to a stationary wooden shore boat and out over pale open water. The people are small within the landscape; this is the more distant picture in a varied travel album. Low boats, open harbour water and simple landing geometry dominate. The grandfather is a FULL-BODY standing man in the lower-middle-right of the surviving photographic area, roughly 16–19 percent of the whole canvas height, about 180 pixels from head to boots in the 1024-high image. Both his body and the other worker must remain fully inside the central photograph with plenty of room before the broad white-paper fade. Do not frame a close portrait.\n\nThe modest stone landing has three or four broad low steps descending toward a moored wooden boat held alongside. The boat's gunwale is close to the final landing step. The grandfather has paused at this last step before completing a very short transfer aboard: one boot on the last stone tread and the other planted on a low secure wooden boarding tread, a physically easy small change in height rather than a dangerous leap. His knees are slightly flexed and shoulders lean toward a local adult boatman who offers one hand. Their hands meet in a small believable helping clasp, no stretched arm or suspended person. The boatman has both feet planted apart inside the boat and uses his other hand on the gunwale for support. Their relationship is a gentle practical moment, not colonial command or a rescue emergency. The grandfather's free hand rests lightly on a plain timber support beside the landing. Show a complete continuous landing, moored hull and the small step between them; no floating disconnected ramp or impossible gap.\n\nA low simple dark canvas shade is supported above the forward part of this boat by plain timber uprights. Its shadow covers the grandfather's whole head, collar and shoulders together with the adjacent boat interior. His head sits well within this ONE COHERENT SHELTERED SHADOW, away from the bright cloth edge. The old exposure favours the bright water and cannot resolve his facial tones: no readable eyes, nose, mouth, beard or recognizable profile. He wears a plain worn dark 1873 travelling coat and trousers. No facial identity description, no hat or object hiding his face, no separate facial blur, black patch or mask. A general head orientation toward the helping man is enough. Their arms and feet may be more legible than his dark head. His small dark worn wooden travel trunk rests safely on the boat floor farther forward, not being lifted.\n\nThe local adult boatman wears a simple long work tunic, light loose trousers and a modest wrapped headcloth, barefoot, based on the actually inspected William Johnson Bombay boatmen albumen photograph circa 1855–1862 from the SMU collection. Do not copy any real person's identity. The harbour and boats derive from the actually inspected British Library Lee-Warner collection 1870s Bombay harbour view: low workboats, mast-and-canvas structures, a modest distant steamship with a single plain funnel and large sailing craft at anchor. Francis Frith's Port of Bombay photograph, broadly dated 1850s–1870s, supports the low tile-roof and pale plaster waterfront scale. The precise landing steps, shore boat, canvas shade and transfer are fictional. Do not use the much later 1890–1910 coloured harbour photograph. No Gateway of India, later monumental harbour hotel, modern port cranes, motorboats or twentieth-century liner.\n\nBright slightly hazy tropical afternoon light exposes the open water to a faded pale tone, leaving the boat shade deep and continuous. A small strip of old low waterfront appears far across the harbour. The high viewpoint makes the shallow steps, two planted men, and moored hull understandable. Water has faint period-exposure ripple softness; no dramatic splashes or frozen acrobatics. The optical photograph is gently soft and worn, never illustrated.\n\nThis paper has a strong irregular mostly VERTICAL fold left of the centre, and a shorter low horizontal fold near the lower margin, meeting off-centre like a sheet once folded unevenly. Both are physical fibre ridges with a little adjacent relief shadow and intermittent image-layer loss. Fine paper texture and crease relief continue beneath the neutral WHITE vignette at every edge. Keep abrasions sparse and small across pale harbour water and stone, not a bark-like cracked overlay and not opaque damage on the helping hands. This photograph should feel like an imperfect, time-worn memory of someone quietly helping the grandfather aboard.",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:40.704Z"
+    },
+    {
+      "id": "isoisa-ceylon-aged-r20260905-v1",
+      "fileName": "isoisa-ceylon-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-ceylon-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-ceylon-aged-r20260905-v1.jpg",
+      "city": "Ceylonin ylänkö",
+      "year": 1873,
+      "caption": "Isoisä, Ceylonin ylänkö, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Ceylonin nuoren viljelmän laidalla paikallinen viljelijä näyttää isoisälle lehtiverson. Isoisä nojaa kevyesti työkatoksen tukeen, pää ja hartiat katon varjossa.",
+      "sourceNote": "Skeen & Companyn Plucking the Tea, Ceylon -albumiinikuva noin 1870–1890 katsottiin uudelleen ennen generointia. Sitä käytetään yksinkertaiseen puuvillavaatteen ja korin vertailuun; kuva voi olla vuotta 1873 myöhempi. Sri Lankan Tea Boardin aiemmin tarkistettu historia tukee varhaisen viljelyn mittakaavaa. Erilliset nuoret pensaat, nimeämätön rinne, puinen työkatos ja opastustilanne ovat fiktiivisiä, eivät täsmällinen Loolecondera-kartoitus.",
+      "webReferenceUrls": [
+        {
+          "label": "Museum of Photographic Arts: W. L. H. Skeen & Co., Plucking the Tea, Ceylon, noin 1870–1890",
+          "url": "https://www.flickr.com/photos/mopa1/7096858619/"
+        },
+        {
+          "label": "MOPA:n albumiinivedoksen Commons-kopio ja kuvailu",
+          "url": "https://commons.wikimedia.org/wiki/File:Plucking_the_Tea,_Ceylon_(7096858619).jpg"
+        },
+        {
+          "label": "Sri Lanka Tea Board: Story of Ceylon Tea — varhaisen viljelyn historia",
+          "url": "https://pureceylontea.com/story/"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": null,
+      "routeMatch": "no-direct-route-stop",
+      "routeAlignmentNoteFi": "Täydentävä matkamuisto; ei suora nykyisen tai 19:55 pyydetyn etusivureitin pysäkkikuva.",
+      "sha256": "b73713e8066b1a91b6ecda8670da7633d9ea5072ca0b6fa9abe398615622f1d3",
+      "bytes": 804704,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "Use case: historical-scene.\nMake one entirely NEW fictional 1873 photograph, not an edit. Hill-country Ceylon, not coastal Colombo. The image is a close scan of the entire SURFACE of a fragile, poorly preserved 1873 photographic PAPER print, landscape 3:2, 1536 by 1024 pixels. The paper itself fills the canvas continuously. Across ALL FOUR SIDES and corners, the photographic image bleaches broadly, softly and irregularly into neutral WHITE PAPER. Crucially, the paper fibres, fine tooth, tiny relief and the physical folds remain visible beneath this pale white vignette, including at the outer edges. Only the photographic tones fade away; the white paper material does not vanish. No texture-free digital white margin, no solid RGB255 band, no floating rectangular card, cutout edge, tabletop, border or dark outline. White means neutral white, not yellow, ochre, dirty brown or grey framing.\n\nThe surviving central image is a real-looking but poor small 1873 albumen photograph: faded neutral grey-brown monochrome, imperfect exposure, weak shadow separation and modest period-lens resolving power. There is a believable optically made photograph underneath the physical wear, not a drawing or engraving. No modern crisp portrait, digital microcontrast, HDR, painting or CGI. Preserve enough continuous perspective, human posture and object support to understand the scene. Paper wear belongs to one flat physical paper plane and continues across all photographed objects without following their texture. No tree-bark cracks, crumpled parchment or dense fractured network. No writing, captions, invented numbers, signature, symbols, watermark or new plot revelation.\n\nA wide, gently uphill view from a lower footpath toward a tiny young tea planting on a sloping wooded hillside. Irregular knee-high tea shrubs stand separately with bare earth and short uneven rows between them. Beyond this small clearing are ordinary scattered tall trees and soft rolling forested slopes. No vast mature clipped tea carpet, regimented modern plantation or factory. The scale is that of early small commercial cultivation, consistent with Sri Lanka Tea Board's history of the 1867 beginnings and still-small 1873 trade. The actually inspected Skeen & Company 'Plucking the Tea, Ceylon' albumen photograph is broadly dated 1870–1890 and may be later than the scene; use it for ordinary head-and-shoulder cotton work cloth, long garments and practical baskets, not for the mature planting scale. The exact clearing and people are fictional; do not claim this is a surveyed Loolecondera site.\n\nAt MIDDLE LEFT, roughly one-third into the image width and safely away from the broad paper fade, a small simple timber work shelter stands on a level patch of earth at the edge of the young planting. Its low sloping wooden-board roof and plain support posts make a darker interior, with a single rough work plank supported between the posts. It is a practical improvised shelter, not an ornate pavilion, identical boat canopy, canvas tent or later tea factory. The camera is several metres down the path, so the standing grandfather is only about 24–28 percent of the full canvas height, approximately 260 pixels from head to boot soles. This is a landscape with a small human exchange, not a portrait.\n\nThe grandfather stands ENTIRELY under the shelter, with his complete head and boots inside the central surviving photograph. Both boots are visibly planted on the clear level earth. His shoulders incline forward with curiosity, one forearm resting lightly on the low supported work plank, the other arm relaxed near his waist. He wears an ordinary worn dark 1873 travelling coat and trousers, modest and unceremonious. No facial identity description or old generated identity input. He is a guest learning, never directing labour.\n\nThe plank roof puts his ENTIRE head, collar, shoulders and upper coat in ONE CONTINUOUS DEEP NATURAL SHADOW shared with the back of the shelter. The overexposed bright planting outside has caused the old photograph to lose all facial tone separation here. His head orientation toward the farmer is only a soft dark mass, without readable eyes, nose, mouth, beard, expression or a sharp profile. Do not insert a separate face-shaped patch, mask or blur. Do not use a hat, arm or smoke to cover his face. The lower coat, resting forearm and boots remain more understandable than the unresolvable face.\n\nNear the front-right edge of the shelter, in softer open light, a local adult woman farmer has paused in a low kneeling position beside one small tea shrub rooted in the ground. She wears simple worn cotton head-and-shoulder cloth and a long plain work skirt, based on the observed period photograph, not a decorative costume. One hand rests on her knee for balance; with the other she gently lifts the end of a living leafy twig without pulling the plant from the ground. Her body turns toward the grandfather so that she can show the direction of the new growth. No giant botanical demonstration, no laboratory instrument, no dramatic gesture. A grounded plain woven basket nearby is sufficient; no extra props to fill the scene. Their different heights and patient pause carry interest and warmth.\n\nSoft morning light comes from the open slope on the RIGHT, finding the worker's cloth and the separate leaves while the grandfather's roof shade remains dark. Some foreground leaves are gently indistinct from the period optics, but the earth path, grounded feet, shelter supports and living bush must be coherent. A large area of the right half is left to the modest planting, hill and pale sky, for air and scale. Avoid a modern dramatic landscape or razor-sharp digitally etched foliage.\n\nThis thin white paper has TWO uneven OBLIQUE, roughly parallel fold ridges running at different distances across the sheet, rather than a centred cross. One lies through the open right-side hillside and pale sky; the other passes through the lower foreground path, avoiding the two people's heads and hands. The folds have narrow pale exposed fibres, a slight adjacent relief shadow and intermittent emulsion loss; they continue softly through the white vignette. Fine white paper tooth and slight worn relief remain visible at all four edges. Sparse rubs and small pale flaked areas are enough. Do not turn the photograph into cracked parchment or a bark pattern. The grandfather's curious lean should survive as a small uncertain memory inside the physically continuous old paper.",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:42.743Z"
+    },
+    {
+      "id": "isoisa-kanton-aged-r20260905-v1",
+      "fileName": "isoisa-kanton-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-kanton-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-kanton-aged-r20260905-v1.jpg",
+      "city": "Kanton",
+      "year": 1873,
+      "caption": "Isoisä, Kanton, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Isoisä istuu teehuoneen hämärässä ja seuraa, kuinka teeammattilainen näyttää lehtiä tarjottimelta. Käytössä taittunut vedos säilyttää yhteisen hetken mutta kadottaa isoisän kasvot varjoon.",
+      "sourceNote": "Aiemmassa työssä katsotut Thomsonin vuoden 1869 kauppiaat ja vuonna 1873 julkaistu teenmaistamohuone ohjaavat vaatetusta sekä työvälineitä. Teenmaistamohuone ja Metin noin 1869 albumiininen Tea Pavilion katsottiin myös uudelleen ennen tätä generointia; jälkimmäinen toimii menetelmän eikä teehuoneen arkkitehtuurin lähteenä. Huone, ihmiset ja tilanne ovat fiktiivisiä. Suez v5 oli katsottu tyyliesimerkki; uusin ohje säilyttää paperin materiaalin myös reunoilla.",
+      "webReferenceUrls": [
+        {
+          "label": "Wellcome / John Thomson: Three Chinese merchants, Canton, 1869 — märkälevynegatiivi",
+          "url": "https://wellcomecollection.org/works/djcpvraa"
+        },
+        {
+          "label": "John Thomson: A Tea-Tasting Room, Canton, julkaistu 1873 — Yale / Commons ja MoMA",
+          "url": "https://commons.wikimedia.org/wiki/File:A_TEA-TASTING_ROOM,_CANTON.jpg"
+        },
+        {
+          "label": "Metropolitan Museum: A Tea Pavilion, Canton, noin 1869 — albumiinivedos",
+          "url": "https://www.metmuseum.org/art/collection/search/289334"
+        },
+        {
+          "label": "MoMA: A Tea-Tasting Room, Canton, 1873; collotype",
+          "url": "https://www.moma.org/collection/works/92555"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": null,
+      "routeMatch": "no-direct-route-stop",
+      "routeAlignmentNoteFi": "Kanton ei ole Hongkong; ei automaattista Hongkong-kytkentää.",
+      "sha256": "b70a066d93c691ff6badd24736dd867361c187aec63b85d5dbdaf5411fdcb7eb",
+      "bytes": 725349,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "Use case: historical-scene.\nCreate a wholly NEW fictional historical photograph from scratch, not an edit of any earlier image. Canton, China, 1873. The image is a close scan of the entire SURFACE of a fragile, poorly preserved 1873 photographic PAPER print, landscape 3:2, 1536 by 1024 pixels. The paper itself fills the canvas continuously. Across ALL FOUR SIDES and corners, the photographic image bleaches broadly, softly and irregularly into neutral WHITE PAPER. Crucially, the paper fibres, fine tooth, tiny relief and the physical folds remain visible beneath this pale white vignette, including at the outer edges. Only the photographic tones fade away; the white paper material does not vanish. No texture-free digital white margin, no solid RGB255 band, no floating rectangular card, cutout edge, tabletop, border or dark outline. White means neutral white, not yellow, ochre, dirty brown or grey framing.\n\nThe surviving central image is a real-looking but poor small 1873 albumen photograph: faded neutral grey-brown monochrome, imperfect exposure, weak shadow separation and modest period-lens resolving power. There is a believable optically made photograph underneath the physical wear, not a drawing or engraving. No modern crisp portrait, digital microcontrast, HDR, painting or CGI. Preserve enough continuous perspective, human posture and object support to understand the scene. Paper wear belongs to one flat physical paper plane and continues across all photographed objects without following their texture. No tree-bark cracks, crumpled parchment or dense fractured network. No writing, captions, invented numbers, signature, symbols, watermark or new plot revelation.\n\nLook obliquely across a modest tea room from a little distance, not straight into a seated portrait. The photographer stands near the bright entrance in the near-right foreground and looks across a wide strip of worn plain floor to a small table farther inside. Let the room occupy most of the picture. A shelf with a few plain tea tins and simple timber uprights establishes working space, with a little pale courtyard visible through a side opening. This is an ordinary workplace, not a palace or elaborately ornamented tourist tea house. Research governs the setting: John Thomson's actually inspected Canton merchants photograph of 1869 shows plain long Qing robes, wide simple sleeves and small round caps; the tea-tasting-room photograph published in 1873 shows shallow cups, sample leaves, tin storage and restrained furniture. These are structural and clothing references, not copied identities. The exact two-person room arrangement is fictional. The positive albumen photograph of the Tea Pavilion around 1869 gives period photographic tonal behaviour, not this room's architecture.\n\nThe grandfather is VISIBLE, seated LEFT OF CENTRE well back inside the room, approximately 32 percent of the total image height from the top of his head to the bottoms of his boots, about 328 pixels tall, within 30–34 percent. His entire seated body, chair support, head, bent knees and boots are contained in the surviving central photographic area, safely away from the white edge fade. He wears a plain dark 1873 travelling coat, waistcoat and ordinary trousers with worn boots. No identifying hair, beard, face description or identity reference. He sits on a simple wooden chair angled toward the table and tea professional, shoulders gently leaning forward in interested attention. One forearm rests along the table edge, the other hand rests near his knee; both boots are planted on the floor. Natural support and readable calm posture, neither a proud colonial visitor nor a rich man supervising work.\n\nA deep area of unlit interior shade covers his whole head, collar, shoulders and upper coat as ONE CONTINUOUS NATURAL SHADOW. The bright entrance exposure fails to separate any facial tones within this shade. His head is turned diagonally toward the table, with no sharp profile outline. The body and general head orientation remain locatable, but no readable eyes, nose, mouth, beard or recognizable face. Do not create a distinct face-shaped black patch or separate blur. Do not use a hat, hand, smoke or object to conceal his face. The loss of facial information extends naturally into the shaded wall and clothing around him, as in an imperfect old print.\n\nOn the other side of the table, slightly right of centre and closer to the light boundary, a local adult tea professional in a plain light Qing long robe and small round cap has paused to show a few tea leaves on a shallow tray. The tray rests securely on the tabletop; one complete hand gently indicates the leaves while the other touches the tray edge. He is oriented toward the seated traveller rather than staring at the photographer. The relationship and their inclined postures carry a warm moment of patient teaching. Two modest handleless cups sit apart on the table. No ornate ritual, theatrical gesture, mysterious letter or crowded props.\n\nLight enters from the near right, falling across the floor and tea professional's sleeve. The grandfather sits several feet back from this boundary in deep natural shade. Keep the table, chair legs, forearm support and two men's relative positions clear beneath the faded exposure. The environment and small shared action should reward looking even though no grandfather portrait can be recovered.\n\nThe sheet bears TWO strong physical folds: a gently wavering almost-horizontal fold above the men's heads, and a different slanting fold through the lower-right floor area. They show a thin exposed pale fibre ridge, restrained adjacent relief shadow, occasional chipped image layer and short interruptions. The physical creases continue faintly through the WHITE PAPER vignette all the way to the sheet's outer regions. A few irregular abrasions remove photographic tones to reveal white paper, sparingly around the room and floor, not blotting out the figures. The paper remains thin, flat and fibrous rather than leathery or bark-like. Show the unrecognizable grandfather as an intimate but incomplete remembered presence inside a worn photograph, with a broad pale WHITE PAPER fade on every side.",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:44.575Z"
+    },
+    {
+      "id": "isoisa-newyork-aged-r20260905-v1",
+      "fileName": "isoisa-newyork-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-newyork-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-newyork-aged-r20260905-v1.jpg",
+      "city": "New York",
+      "year": 1873,
+      "caption": "Isoisä, New York, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Isoisä jää liikkeen oviaukon varjoon, kun nainen ja pieni koira pysähtyvät hänen kohdalleen. Leveä Broadway ja matala hevosomnibus jatkuvat hetken takana kauas.",
+      "sourceNote": "Broadwayn 4–5-kerroksinen rakennusrivi, markiisit ja katutila perustuvat katsottuun LoC:n noin 1870 stereokuvaan; matala tieomnibus LoC:n noin 1865 kuvaan. Naisen arkinen asu on Metin säilyneestä eurooppalaisesta 1870–74 puvusta pelkistetty tulkinta. Yksityiskokoelman lennätinkuvan tarkka vuosi on varmistamatta, joten käytössä on vain pylväsrakenteen perusmuoto maltillisella johdotuksella. Katselupiste, oviaukko, nainen, koira ja tilanne ovat fiktiivisiä. Kuva on uusi generointi, ei arkistovalokuva; vanhaa isoisän kasvoidentiteettiä ei käytetty.",
+      "webReferenceUrls": [
+        {
+          "label": "Library of Congress: Broadway near Grand St., noin 1870",
+          "url": "https://www.loc.gov/item/91793479/"
+        },
+        {
+          "label": "Library of Congress: Omnibus & cars, noin 1865, George Stacy",
+          "url": "https://www.loc.gov/pictures/item/2017647700/"
+        },
+        {
+          "label": "Joe Maurath Jr collection: Broadway telegraph stereograph, ajoitus epävarma",
+          "url": "https://www.insulators.info/pictures/?id=228191303"
+        },
+        {
+          "label": "The Met: European wool-and-cotton dress, 1870–74, C.I.38.23.245a–c",
+          "url": "https://www.metmuseum.org/art/collection/search/85360"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": "New York",
+      "routeMatch": "direct-requested",
+      "routeAlignmentNoteFi": "Suora nimetty pysäkkikuva.",
+      "sha256": "ce5cf167636cbf1776d7ade4d69f1607e5da3152af4af96b0c40b7ed7dd23881",
+      "bytes": 720349,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "VERY WIDE historical street photograph of Broadway near Grand Street, New York, in 1873, viewed diagonally along a broad stone-paved street from the opposite pavement. The architecture and street depth dominate this landscape 3:2 composition, 1536 × 1024 pixels. Four- and five-story Italianate masonry and cast-iron commercial buildings, repetitive narrow windows, heavy cornices, modest canvas shop awnings. Include a whole stretch of pavement and tall facades, with ample street and open pale sky. A single compact one-story horse-drawn road omnibus stands in the middle distance: one low arched roof, one row of windows, four large spoked wheels, only the driver's little bench at the front roof edge, no passengers on the roof. A modest number of fine telegraph wires on wooden crossarm poles recede into the distance. This is an ordinary 1873 city, without cars, skyscrapers, electric lamps, tram rails, huge later wire webs or legible invented sign lettering.\n\nOn the left-middle pavement, about ten metres from the camera, a small complete standing traveller in a plain dark 1873 coat and trousers has shifted politely into a shop's deep doorway to let a local woman and her small dog pass. His whole figure occupies only about 15–18 percent of the total image height; do not bring him close. The woman in a plain long early-1870s dress has paused with a loosely held dog lead. Her little dog has stopped quietly by the traveller's boot, so all three share a mildly amusing pause. Keep the encounter legible through their positions and body angles, without detailed facial portraiture. The traveller's entire head, neck and shoulders are naturally lost together in the doorway's deep shade, continuous with the coat and dark interior: no identifiable eyes, nose, mouth or beard, no separate black patch or blur, no hand or hat hiding the face. His entire body and shoes remain within the surviving photographic area. The woman, dog and traveller are settled and weight-bearing, not frozen in an athletic action. Give the whole scene the quiet slight movement softness of an old plate exposure.\n\nThis is a very old, poor small 1873 albumen photographic paper print, photographed straight on, not a clean modern photo and not a painted illustration. Softly resolved real camera optics, faded neutral grey-brown monochrome photographic tones, uneven old exposure and limited shadow detail. Richer shadows remain in the deep doorway. A broad irregular WHITE vignette on ALL FOUR SIDES AND ALL CORNERS makes ONLY the photographic image fade into neutral white paper. The underlying physical white paper continues across the entire canvas: fine paper fibres, faint tooth and shallow relief remain visible even at the outermost pale edges and beneath the white vignette. No yellow or beige wash, no dark frame, no smooth digitally blank margin. Two strong naturally worn physical folds, one slanting across the upper third and one near-vertical toward the right, with delicate raised exposed fibres and a few small rubbed losses of photographic emulsion. The sheet is gently worn and thin, not bark, crumpled parchment or a pile of scratches. Vary the fold pattern naturally; do not make an artificial X over a face. No mounted card, written caption, fake date, watermark or border rule. The surrounding magnificent ordinary street is the subject, with the small mysterious traveller discovered within it.",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:46.434Z"
+    },
+    {
+      "id": "isoisa-singapore-aged-r20260905-v2",
+      "fileName": "isoisa-singapore-aged-r20260905-v2.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-singapore-aged-r20260905-v2.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-singapore-aged-r20260905-v2.jpg",
+      "city": "Singapore",
+      "year": 1873,
+      "caption": "Isoisä, Singapore, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Isoisä odottaa varastokäytävän varjossa, kun paikallinen kantaja pysähtyy matka-arkun ääreen. Veneestä katsottuna he jäävät pieniksi hahmoiksi Boat Quayn pitkään varastoriviin.",
+      "sourceNote": "Katsotut NLB:n ja British Libraryn vuoden 1870 Boat Quay sekä Gettyn 1870–1880-lukujen Singapore ohjaavat varastojen ja matalien puuveneiden mittakaavaa. Gettyn kuva katsottiin myös uudelleen ennen tätä generointia. Tarkka varastokäytävä, lähilaituri ja ihmiset ovat fiktiivisiä; Gettyn laaja ajoitus ei varmista juuri vuoden 1873 jokaista yksityiskohtaa.",
+      "webReferenceUrls": [
+        {
+          "label": "NLB / British Library: Boat Quay, Singapore, general view, 1870",
+          "url": "https://www.nlb.gov.sg/main/book-detail?cmsuuid=47045a46-abf3-46f6-b8a1-58a97c4fd9c2"
+        },
+        {
+          "label": "Getty: Singapore, 1870s–1880s, albumen silver print, 84.XA.941.5.32",
+          "url": "https://www.getty.edu/art/collection/object/108WFW"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": "singapore",
+      "requestedFoggRouteStop": "Singapore",
+      "routeMatch": "direct-current-and-requested",
+      "routeAlignmentNoteFi": "Suora nimetty pysäkkikuva.",
+      "sha256": "cf2db4dcee21fc8e332f1f5ac65ae900d860bfad7b6e7ac8c460188dd057ae29",
+      "bytes": 508332,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "Use case: historical-scene.\nA VERY WIDE HISTORICAL RIVERFRONT VIEW on PALE NEUTRAL WHITE FIBROUS PAPER, Singapore River at Boat Quay in 1873. MOST IMPORTANT SURFACE: the photograph itself visibly disappears in a BROAD WHITE VIGNETTE around ALL FOUR EDGES, about the outer one-sixth of the canvas, with no surviving tan photographic border. It must have a clearly bleached WHITE perimeter with delicate paper fibre and fold relief still visible under it. Not an all-over yellow or beige antique photograph. Generate a wholly new landscape photograph, 1536 by 1024. Architecture, open water and low working boats dominate; people are incidental small figures within the view. Camera is low in a stationary boat FIFTEEN METRES from the quay. Show about FIVE nearest bays of COMPLETE TWO-STOREY godowns including their tiled pitched roofs, a long stretch of river landing, and generous water in front. No close or medium-distance people photograph. A tiny curved piece of the photographer's boat gunwale may enter the lower-left corner.\n\nThe actually inspected 1870 NLB / British Library 'Boat Quay, Singapore: general view' governs the modest pale plaster buildings: repeated narrow bays, wooden shutters, arched and rectangular upper openings, low restrained warehouse scale. The Getty albumen 'Singapore', 1870s–1880s, supplies the low long wooden lighters with simple woven-mat covers and poles, several receding along the river at left. No ocean steamer on this narrow river, modern promenade, skyline, motors, cranes or electrical fittings. Exact doorway, quay and people are fictional; Getty's broad date range does not verify every 1873 detail.\n\nAt a deep warehouse passage in the RIGHT THIRD, the grandfather is a SMALL FULL-BODY dark travelling figure, ideally only 15–20 percent of the full canvas height, around 185 pixels tall. Keep his whole body and boots inside the surviving photograph, clear of the white fade. The passage is modestly taller than he is, about 3 metres high; do not make a monumental nine-metre doorway or turn him into a tiny pin. He quietly leans a shoulder against the inner jamb while a local adult porter outside pauses beside one grounded worn wooden-and-leather trunk and looks toward a boat, considering where it will fit. The porter rests one hand on the lid. This modest waiting relationship is enough; no lifted cargo or elaborate action. Clothing is plain and suitable to 1873.\n\nThe grandfather's whole head, collar, shoulders and coat merge into ONE DEEP CONTINUOUS PASSAGE SHADOW. The old exposure for bright water cannot distinguish eyes, nose, mouth, beard or a sharp facial profile in that shade. No identifiable grandfather face, identity input, separate facial blur or black mask, and no hat or hand deliberately hiding him. The two people's general posture and grounded feet remain readable. Bright LEFT-side morning light touches the quay and pale buildings; the recessed passage stays dark.\n\nThis is a close scan of a badly preserved, small 1873 albumen PAPER photograph: very faded low-saturation grey-brown tones within the central image only, soft old optical resolving power and uneven exposure, clearly photographic rather than painted or etched. All FOUR sides and corners fade broadly and irregularly into PALE NEUTRAL WHITE PAPER. Only the photographic image fades; the paper fibres, fine tooth and small relief remain visible beneath the white vignette right to the outer edges. Do not remove the white paper grain to make a digital cutout. No texture-free RGB255 margin, dark/yellow border, floating card or tabletop. Paper is thin and smooth with delicate natural fibres, never bark or crumpled parchment.\n\nTWO strong mostly VERTICAL physical folds at unequal positions cross roofs, water and white vignette, as though the sheet was folded into a narrow packet. A fine exposed fibre ridge, slight adjacent relief shadow and a few lost image fragments make each fold real. One short corner crimp and sparse rubbed patches provide age, not a large diagonal cross or dense scratch network. The physical paper and creases continue across the whole canvas. No writing, date, caption, symbols, watermark or new plot secret. The grandfather remains a small, incomplete remembered presence amid a much larger working riverfront.\n\nFinal surface invariant: wide WHITE bleaching on the left, right, top, bottom and corners; central photographic greys fade into almost-white neutral fibre paper. The paper is lightly textured and creased even at the edge, but its shade is white, not brown, yellow or beige. No uniform sepia wash across the sheet. Retain the distant photographic composition.",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:48.323Z"
+    },
+    {
+      "id": "isoisa-ballarat-aged-r20260905-v1",
+      "fileName": "isoisa-ballarat-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-ballarat-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-ballarat-aged-r20260905-v1.jpg",
+      "city": "Melbourne / Ballarat, Australia",
+      "year": 1873,
+      "caption": "Isoisä, Melbourne / Ballarat, Australia, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Isoisä kuuntelee työmiehen selitystä vajan ovella. Pihan toisella puolella kaksi miestä jatkaa työtään lautapinon ääressä.",
+      "sourceNote": "Katsotut Museums Victorian noin vuoden 1870 Ballaratin ja Buninyongin valokuvat tukevat puuvajoja, kapenevaa puuverhoiltua nostotornia, materiaalipinoja ja tavallisia työvaatteita. Tämä piha ja ihmiset ovat fiktiivisiä, eivät yhden nimetyn kaivoksen kopio. Nostotornin yksityiskohtaista vaijerireititystä ei eroteta kuluneessa vedoksessa. Luokan sourceImageId:n Melbourne säilyy; kuvattu ympäristö on Ballaratin kultakenttä.",
+      "webReferenceUrls": [
+        {
+          "label": "Museums Victoria MM1775: kaivosrakennukset ja puinen nostotorni, Ballaratin seutu, noin 1870",
+          "url": "https://collections.museumsvictoria.com.au/items/767161"
+        },
+        {
+          "label": "Museums Victoria MM63, Moyle Studio: Imperial Minen kaivosmiehiä, Buninyong, noin 1870",
+          "url": "https://collections.museumsvictoria.com.au/items/771567"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": null,
+      "routeMatch": "no-direct-route-stop",
+      "routeAlignmentNoteFi": "Täydentävä matkamuisto; ei suora nykyisen tai 19:55 pyydetyn etusivureitin pysäkkikuva.",
+      "sha256": "9aa022f9cda3804b0e20d6e3453af9b02e35be4168bf29756ea221a47da19def",
+      "bytes": 670657,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "Use case: historical-scene. Create a completely NEW landscape 3:2 image, 1536 x 1024. A badly preserved little photographic WHITE PAPER print from an ordinary traveller's 1873 album.\n\nA single flat white paper sheet fills the canvas. Its photograph fades gradually and broadly to neutral WHITE on all four edges and corners, while the physical paper's fine fibres and low relief remain visible underneath the vignette right to the outer perimeter. No blank digital white strip, yellow or dark rim, tabletop or separate mount. Strong old paper wear: two roughly parallel, slightly buckled vertical folds at about one third and two thirds across the sheet, and a short dog-ear crease near the lower left corner. Exposed white fibres and narrow shallow relief shadows run in the SAME FLAT PAPER PLANE across objects and sky. Modest rubbed emulsion losses, not a dense crack network or woodgrain. The image is genuinely photographic but poor: faded grey-brown monochrome, soft old optics, patchy exposure, no modern sharp portrait detail, no painting or engraving.\n\nSETTING AND CAMERA: Ballarat goldfields, Victoria, Australia, 1873. A distant WIDE view taken from across an ordinary dry mine yard, roughly twenty metres from the people. The photograph is mostly the modest mining landscape: pale uneven earth across the lower middle, timber stacks, low timber-clad pitched-roof sheds and a small tapering wood-clad poppet head with one winding wheel in the middle distance. A thin chimney farther away. The viewed Museums Victoria circa-1870 photographs support these restrained buildings and workers' materials; reconstruct a fictional ordinary mine, not an exact named mine. NO monumental industrial complex, giant steel tower, huge gold nuggets, theatrical gold rush, modern safety clothing, machines or electrical lights.\n\nAt the middle LEFT stands a low timber shed with a BROAD OPEN DARK DOORWAY, not a freestanding awning. The grandfather stands completely inside this doorway's shade, about ONE QUARTER of the total image height, with generous visible yard around and below him. Keep the camera far away; nobody is in the foreground and this is not a close environmental portrait. Show his whole head, coat, legs and both boots, all wholly within the surviving central photograph. He wears a plain dark European travel coat of 1873, simple trousers and worn boots. His weight settles onto one leg, his body slightly inclined in attentive listening to an experienced mine worker just outside the doorway on the right. One relaxed hand rests at his side; the other lightly touches the timber doorjamb. His head is angled toward the worker but turned a little away from the camera. The shed's same continuous deep interior shadow covers his whole head, shoulders and upper coat. The face has no readable individual eye, nose, mouth, beard or expression, due to the large natural shadow and poor original exposure. No isolated black spot, face blur, sharp profile or hand covering the face.\n\nThe experienced worker is nearer the light, in worn light shirt, simple dark waistcoat, loose plain trousers and work boots. His grounded relaxed posture and one small open hand at waist level explain something to the silent traveller. Other hand rests on his hip; no contrived props or complex action. He is not posing at the camera. At a different depth on the RIGHT, two other small workers attend to a low stack of boards: one bends slightly with hands on a board still fully supported on the stack, the other stands at its far side. They work slowly, no suspended heavy timber or frozen athletic pose. Their different heights and depth prevent a line of four portraits.\n\nThe story is the traveller listening while ordinary hard work continues around him. His obscure face stays mysterious, his attentive body gives him humanity. The mine yard is unglamorous and the men are modestly scaled within it. Natural high open daylight bleaches the dust; the broad shed opening gives physically coherent darkness around the grandfather. Distant workers may be softened by slow exposure, but anatomy and ground support must be plausible. No new disaster, letter, treasure, personal revelation or invented quotation.\n\nFinal priorities: WIDE scene with small people and a complete quarter-height grandfather in a real dark DOORWAY; old photographic greys and brown rather than painted lines; broad WHITE emulsion fade with tangible white paper fibres and fold relief continuing under it. No text, numbers, symbols, signage or watermark.\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:50.118Z"
+    },
+    {
+      "id": "isoisa-galata-aged-r20260905-v3",
+      "fileName": "isoisa-galata-aged-r20260905-v3.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-galata-aged-r20260905-v3.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-galata-aged-r20260905-v3.jpg",
+      "city": "Konstantinopoli",
+      "year": 1873,
+      "caption": "Isoisä, Konstantinopoli, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Isoisä odottaa varjossa, kun kalastaja selvittää siimaansa. Matalana veden pinnalla kulkeva silta johtaa kaupunkiin, joka jo haalistuu paperilta.",
+      "sourceNote": "Root katsoi uudelleen Kargopoulon arkistovalokuvan ja Görenin s.90 vertailun. Kargopoulon kuva lähetettiin tällä kertaa myös ImageGenille visuaaliseksi rakenneviitteeksi. Matalana veden pinnalla kulkeva ponttonisilta ja kaupungin mittakaava perustuvat siihen; uusi matala kamera, laituri, suoja, ihmiset ja rakennusten yksityiskohdat ovat fiktiivinen rekonstruktio, eivät dokumentaarinen toisinto. Pieni 400×315 viite ei varmista yksittäisiä kaiteen liitoksia. Aiemmat v1/v2 poikkesivat sillan rakenteesta ja säilyvät vertailuina.",
+      "webReferenceUrls": [
+        {
+          "label": "Basile Kargopoulo, toinen Galatan silta Galatan tornista; Eski İstanbul -valokuva-arkisto",
+          "url": "https://www.eskiistanbul.net/3553/galata-kulesi-nden-2-galata-koprusu-basile-kargopoulo-fotografi"
+        },
+        {
+          "label": "Ahmet Kamil Gören, 2007, s.90; myöhemmän sillan valokuva sekä vuoden1863sillan piirros",
+          "url": "https://nek.istanbul.edu.tr/ekos/MAKALE/M6703.pdf"
+        },
+        {
+          "label": "Pascal Sébah, Les costumes populaires de la Turquie en 1873, I osa, taulu II (Caïkdji, Sakka, Hammal), Boston Public Library -leimattu digitoitu valokuvapohjainen painokuva",
+          "url": "https://commons.wikimedia.org/wiki/File:Les_costumes_populaires_de_la_Turquie_en_1873_-_Partie_1_-_Planche_002.jpg"
+        },
+        {
+          "label": "Pascal Sébah, Les costumes populaires de la Turquie en 1873, I osa, taulu I (Bourgeois de Constantinople, Aïwas)",
+          "url": "https://commons.wikimedia.org/wiki/File:Les_costumes_populaires_de_la_Turquie_en_1873_-_Partie_1_-_Planche_001.jpg"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": "istanbul",
+      "requestedFoggRouteStop": null,
+      "routeMatch": "direct-current",
+      "routeAlignmentNoteFi": "Historiallinen kuvateksti Konstantinopoli; nykyisen pelireitin avain istanbul. Tämä pysäkki on nykyisessä reitissä mutta ei Fable 19:55 -esimerkkiluettelossa.",
+      "sha256": "53406259c029212802299c7641cc7d8db027f33cb7c7b6f404e4ca9b2b2c7cdc",
+      "bytes": 722183,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "Create a WHOLLY NEW fictional 1873 historical travel photograph, not a retouch of the supplied image. Landscape 3:2, 1536x1024. The provided archival photograph is a STRUCTURAL REFERENCE for the second Galata Bridge and the Golden Horn's old waterfront, not a composition to copy, not an identity reference, not an edit target. Use the actual very low floating crossing visible in it. A historically grounded fictional new camera position and new people are required.\n\nThe output is the full surface of an old fragile white photographic paper print. A BROAD, soft, irregular WHITE vignette bleaches the photographic tones on all four sides and corners. The PAPER STAYS VISIBLE beneath that white vignette: fine fibres, slight tooth, tiny surface relief and physical paper creases continue throughout the pale edges. Only the image emulsion fades to white; the paper never vanishes into a blank digital margin. No dark perimeter, no brown or yellow frame, no tabletop, no external album or mount. Paper can have slight neutral natural fibre-tone variation. An old poor 1873 grey-brown monochrome albumen photograph survives in the centre, patchily exposed, gently blurred by limited period optics and loss of emulsion. It is a believable photographic scene beneath the wear, not an illustration or modern sharp cinematic photograph.\n\nSCENE AND ARCHITECTURE: 1873 Constantinople. A wide view from a modest shaded wooden landing at the Galata north bank toward the historic south bank of the Golden Horn. The second Galata Bridge (1863 wooden FLOATING bridge) crosses the water obliquely from the near right edge toward the distant bank near centre-left. Crucially the bridge lies VERY LOW on the water, just as in the supplied photograph: a thin low horizontal timber walking surface above dark broad floating hull/pontoon mass resting directly on the water. The solid dark underside almost meets its reflection. No tall gap under the deck, no spindly row of timber legs, no pier on vertical stilts, no arches, no trusses or later iron construction. Do not draw a long wharf parallel to the far waterfront. Both banks connect through this low floating crossing. The southern old-city waterfront has softly resolved low densely packed buildings with a few distant Ottoman domes and fine minarets. No Galata Tower on the far south bank. Do not invent readable shop signs or modern landmarks. Preserve the reference's calm narrow-harbour scale. A few modest moored sailing vessels remain faint in the distance; no giant liners.\n\nOn a small open landing at the LEFT of the photographic centre, under a simple low timber shelter supported by two plain posts, the grandfather waits patiently beside a seated local fisherman. These people occupy a modest part of the whole image, safely away from the edge fade; water and the distant floating bridge dominate. The standing grandfather is about one fifth of the canvas height, roughly 210px, whole body visible, ordinary dark 1873 travelling coat and trousers, worn boots planted naturally. Hands loosely behind his back, shoulders gently forward, listening to the fisherman's quiet comment. His head and upper body belong to ONE LARGE COHERENT UNLIT SHELTER SHADOW. The poor old exposure cannot separate facial tones from the shadows around his collar and upper coat. His bodily presence and head direction are readable, but no identifiable eyes, nose, mouth, beard or individual face. No sharp profile, no separately blurred or blacked-out face, no hand/hat deliberately covering it.\n\nThe fisherman is seated solidly on a plain small wooden chest, in ordinary 1870s Ottoman working clothes: wrapped small headcloth, short plain jacket and loose work trousers. He patiently untangles a tiny amount of fishing line across his knees, without modern reel or busy high-speed action. His face may be quietly perceptible, but he is not the grandfather. The mood is a shared unhurried pause; one traveller learning to wait, as another person finishes his work. No invented letter, relatives, emergency, treasure reveal or plot twist.\n\nTRUE PAPER DAMAGE: two strong irregular physical folds, one almost vertical in the right third and another slanting through the lower left; a small worn corner crease. A pale exposed-fibre ridge and narrow adjacent relief shadow in the same flat paper plane pass across photographed water and objects, through the white vignette and into the pale paper at the perimeter. A few small rub marks and chipped emulsion areas reveal white fibres. The paper grain is fine, not bark, leathery parchment, dense crack network or marble. The surviving photograph is subdued grey-brown, low contrast with imperfect exposure. Large coherent shelter shade hides the grandfather's face naturally. All four sides fade to WHITE PAPER THAT RETAINS ITS PHYSICAL SURFACE.\n\nShow only this one worn photographic surface. No text, numbers, caption, signature, watermark or separate frame. The true low floating bridge form in the supplied reference has priority over any generic mental picture of a bridge.\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:52.115Z"
+    },
+    {
+      "id": "isoisa-kyoto-aged-r20260905-v1",
+      "fileName": "isoisa-kyoto-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-kyoto-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-kyoto-aged-r20260905-v1.jpg",
+      "city": "Kioto",
+      "year": 1873,
+      "caption": "Isoisä, Kioto, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Bambujen korkeat rungot sulkeutuvat hiljaisen polun ympärille. Pieni isoisähahmo pysähtyy mutkaan ja katsoo metsän sisään.",
+      "sourceNote": "Uusi käyttäjän tilaama fiktiivinen matkamuistopaikka, ei Fablen vahvistama Horation kaanonpysähdys. Kioton Nishikyon ja Oharanon kahdesta katsotusta aidosta nykyvalokuvasta tarkistettiin paksujen nivelikkäiden bamburunkojen kasvu, lehdistö ja metsäpolun mittakaava. Nykyisiä portaita, aitoja tai opasteita ei kopioitu. Kew vahvistaa mosobambun alkuperän Kiinassa ja esiintymisen Japaniin tuotuna; USDA:n vuoden 1957 käsikirjan sivun 51 hakukatkelma ajoittaa tuonnin noin vuoteen 1738. Lähteet eivät dokumentoi tätä tarkkaa polkua tai kasvustoa vuonna 1873. Kuva on fiktiivinen aikakausirekonstruktio, ei nykyisen nähtävyyden vanhaksi väitetty arkistokuva.",
+      "webReferenceUrls": [
+        {
+          "label": "Kyoto City Tourism Association: The Bamboo Forest of Nishikyo-ku",
+          "url": "https://kyoto.travel/en/itineraries/the-bamboo-forest-of-nishikyo-ku/"
+        },
+        {
+          "label": "Royal Botanic Gardens Kew: Phyllostachys edulis, temperate species introduced to Japan",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A415998-1"
+        },
+        {
+          "label": "USDA, F. A. McClure, Bamboos of the Genus Phyllostachys (1957), p.51: introduction to Japan about1738",
+          "url": "https://www.govinfo.gov/content/pkg/GOVPUB-A-PURL-gpo19320/pdf/GOVPUB-A-PURL-gpo19320.pdf"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": null,
+      "routeMatch": "no-direct-route-stop",
+      "routeAlignmentNoteFi": "Täydentävä matkamuisto; ei suora nykyisen tai 19:55 pyydetyn etusivureitin pysäkkikuva.",
+      "sha256": "461f262e0785be2536425a4238958978948df375c4c90c0e2ec629132f9cac83",
+      "bytes": 822708,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "LANDSCAPE FIRST: a magnificent quiet temperate bamboo grove in the western outskirts of Kyoto, Japan, imagined in 1873. Completely NEW landscape 3:2 image, 1536 x 1024. The forest fills the photograph: many very tall straight and gently leaning jointed bamboo culms recede in unequal ranks, their narrow foliage high above, with a modest unpaved leaf-strewn path curving from the lower left into deep forest at centre-right. Some nearby culms are thicker, distant ones narrow and soften optically; natural internodes and nodes, fine branches bearing lance-shaped leaves, no fantasy giant tree trunks. Ground has dry bamboo leaves, a little fern-like undergrowth and low earth banks. The scale and atmospheric depth are the main subject. Pale humid daylight filters through the high canopy and becomes quieter toward the path's shaded bend; no theatrical fog.\n\nThe personally viewed genuine Kyoto Tourism photographs of Nishikyo bamboo groves establish local culm form, density, canopy and leaf litter. Use a conservative moso-type temperate grove (Phyllostachys edulis), an introduced bamboo already present in Japan before 1873. Reconstruct an unnamed historic forest path, NOT the exact modern Arashiyama tourist attraction. No modern bamboo fences, handrails, signboards, paved road, lights, gate, shrine prop or tourist crowd. No copying the contemporary references' logo or current path infrastructure.\n\nAt the far path bend, one TINY grandfather stands in a patch of continuous canopy shade, only 8–10 percent of TOTAL image height, around 90 pixels. Complete modest dark 1873 travel coat, trousers and two boots on the path, arms quietly lowered; body turned partly away as he looks into the bamboo. He is a distant secondary scale marker, not a close portrait. Head and shoulders share the grove's shade; no individual face details can be read through the distance and old exposure. His entire small body remains within the surviving photograph, not lost in edge fading. No other people, no new event or story revelation.\n\nThis is an actual-looking POOR SMALL 1873 PHOTOGRAPH, softly resolved and badly worn with time: faint neutral grey-brown monochrome, uneven old exposure and bleaching, limited period optics, gentle photographic depth, not a sharp modern travel photograph, drawing, painting, engraving, CGI or HDR. Awe and quiet curiosity come from the forest's height and the very small traveller inside it. The leaves and bark are photographed soft masses, not thousands of drawn needles or etched texture.\n\nONE FLAT WHITE PAPER SHEET occupies the whole canvas. The photograph fades broadly and softly into neutral WHITE on all FOUR sides and corners, but the physical WHITE PAPER remains visible UNDER the vignette: fine fibres, subtle tooth and shallow surface relief continue to every pale edge. No empty digital white frame, dark or yellow border, brown parchment, tabletop or mount. Strong physical paper wear: one long irregular near-horizontal fold across the upper third, a second shorter slanting fold entering from the lower right, and small emulsion losses. Pale exposed fibre ridges with narrow relief shadows occupy the SAME FLAT PAPER PLANE and cross bamboo and path independently, continuing through the white fade. These folds must read as paper, not giant bamboo joints or branches. No bark-like paper, dense crack network or woodgrain overlay.\n\nFinal priority: the vast bamboo environment dominates with one TINY complete shaded man, less than one eighth of the picture height; beautiful photographic forest depth in a damaged neutral-grey-brown 1873 print; broad WHITE vignette with physical white paper fibres and creases still visible underneath. No letters, numbers, symbols, title or watermark.\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:54.037Z"
+    },
+    {
+      "id": "isoisa-petra-aged-r20260905-v1",
+      "fileName": "isoisa-petra-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-petra-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-petra-aged-r20260905-v1.jpg",
+      "city": "Petra",
+      "year": 1873,
+      "caption": "Isoisä, Petra, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Korkeat hiekkakiviseinämät kaartuvat kapean reitin ympärille. Isoisä pysähtyy pienenä hahmona varjoiseen mutkaan.",
+      "sourceNote": "Uusi käyttäjän tilaama fiktiivinen matkamuistopaikka, ei Fablen vahvistama Horation kaanonpysähdys eikä vanhan kuvan korvaus. Siqin hiekkakivikerrokset, luonnollinen siirros ja suuri mittakaava tarkistettiin PDTRA:n paikkakuvauksesta ja katsotusta Matson-kokoelman aidosta valokuvasta (1898–1946, myöhempi kuin 1873). Katsottu Roberts/Haghe-litografia on julkaistu 1844–1845; se on 1800-luvun paikkalähde, ei valokuva, eikä sitä lasketa valokuvaviitteeksi. Siqin sisäänkäynnin kaari romahti lähteen mukaan 1895; uusi näkymä sijoittuu sisäsolaan, joten kaaren puuttuminen ei väitä sen puuttuneen vuonna 1873. Yksittäiset seinämän uurteet ja tarkka mutka ovat rekonstruktio.",
+      "webReferenceUrls": [
+        {
+          "label": "Library of Congress, Matson Collection: Petra, Siq entrance, 1898–1946",
+          "url": "https://www.loc.gov/pictures/item/2019702372/"
+        },
+        {
+          "label": "Library of Congress: David Roberts / Louis Haghe, Triumphal arch across the ravine leading to Petra, 1844–1845",
+          "url": "https://www.loc.gov/pictures/item/2002717539/"
+        },
+        {
+          "label": "Petra Development Tourism Regional Authority: The Siq, natural fault, sandstone and 1895 arch collapse",
+          "url": "https://pdtra.gov.jo/EN/ListDetails/Historical_Location/1234/1"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": null,
+      "routeMatch": "no-direct-route-stop",
+      "routeAlignmentNoteFi": "Täydentävä matkamuisto; ei suora nykyisen tai 19:55 pyydetyn etusivureitin pysäkkikuva.",
+      "sha256": "ef4c52ef73afbb81b08366d76b022d5930309f9cd065f9ccfd562a1853feafa9",
+      "bytes": 813789,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "LANDSCAPE FIRST: the immense narrow sandstone Siq gorge at Petra, in 1873. A completely NEW 3:2 landscape photograph, 1536 x 1024. Towering weathered sandstone walls occupy almost the entire scene, close on both sides, with the narrow gravel-and-sand route winding away around a dark bend right of centre. Real Siq geology: broad massive sandstone blocks, deep vertical joints, horizontal bedding, rounded erosion at the lower walls, coarse pitted surfaces; no fantasy cave, smooth Antelope Canyon ribbons or cathedral architecture. Great depth and awe through successive overlapping rock masses. The tops rise beyond the scene, with only a thin pale opening to the sky. Some small scattered rocks, sparse low scrub in a sheltered crack. The view is INSIDE the gorge beyond its outer entrance: neither the entrance arch nor the Treasury facade is in view. The 1844–1845 David Roberts lithograph establishes the nineteenth-century setting; the genuine later Matson Siq photograph establishes massive rock geometry and irregular ground, not the exact 1873 surface. This is a historically informed fictional view, not a claim of a documented Fogg itinerary.\n\nAt the distant bend, a SINGLE TINY grandfather stands on the shaded path, only 8–10 percent of the TOTAL image height, about 90 pixels head to boots. He is a minor scale marker far from the camera, never a foreground portrait. Complete body, ordinary dark 1873 travel coat and trousers, both boots on the ground, arms naturally lowered. He pauses to look into the gorge, his back turned slightly toward us. His face is wholly unreadable through distance, old exposure and the same deep rock shadow covering his head and shoulders. No face-shaped black mask. Keep the entire small silhouette inside surviving photographic tones, clear of white edge fading.\n\nThis is a SMALL, POOR, CENTURY-WORN 1873 PHOTOGRAPH ON WHITE PAPER. Photographically believable rock and perspective under soft limited period optics; faded neutral grey-brown monochrome, uneven exposure, the high pale rock bleached and the deep lower canyon underexposed. No modern crispness, painting, engraving, CGI, HDR, artificial spotlight or decorative mist. The feeling is a tiny traveller quietly dwarfed by the landscape, without heroic explorer gestures, invented treasure, danger, letter or plot revelation.\n\nThe physical WHITE PAPER fills the whole canvas. Photographic tones fade broadly into neutral WHITE on ALL FOUR sides and corners. The WHITE PAPER MATERIAL MUST remain visible underneath: fine paper fibres, restrained tooth and subtle relief persist even in the palest outer perimeter. No smooth empty digital border, dark or yellow rim, brown parchment, tabletop or separate mount. Two irregular strong physical folds: one long sloping crease across the upper-middle paper, and one shorter nearly vertical fold near the left third. Exposed pale fibre ridges and narrow shallow shadows lie in ONE FLAT PAPER PLANE, crossing the photographed cliffs independently and continuing through the white vignette. Modest rubbing and a few areas of missing emulsion, not dense cracks or woodgrain.\n\nMost important: magnificent wide rock environment dominates; grandfather stays TINY, at most one eighth of canvas height, wholly visible within the shadowed path; white fading photographic image with visible physical white paper underneath. No modern tourists, fences, carts, lights, signs, text, numbers or watermark.\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:55.960Z"
+    },
+    {
+      "id": "isoisa-rio-aged-r20260905-v1",
+      "fileName": "isoisa-rio-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-rio-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-rio-aged-r20260905-v1.jpg",
+      "city": "Rio de Janeiro",
+      "year": 1873,
+      "caption": "Isoisä, Rio de Janeiro, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Isoisä seisoo venevajan varjossa käsi puuveneen laidalla. Pieni koira odottaa rannassa, ja lahden yli erottuu Sokeritoppa.",
+      "sourceNote": "Georges Leuzingerin katsottu noin vuoden 1867 Itapuca-kuva Niteróista tukee kuvaussuuntaa: Sokeritopan pitkä vasen rinne ja jyrkempi oikea reuna jäävät lahden toiselle puolelle. Kuluneessa rekonstruktiossa huippu on lähdettä hieman tasaisempi; suurmuoto ja etäisyys säilyvät. Katsottu Botafogon noin vuoden 1875 kuva on käytetty vain matalan rantarakentamisen vertailuna, ei sen Corcovado-vuorta Sokeritoppana. Venevaja, vene, koira ja isoisän hetki ovat fiktiivisiä; kuva ei väitä tarkkaa olemassa ollutta vajaa.",
+      "webReferenceUrls": [
+        {
+          "label": "Instituto Moreira Salles: Leuzinger, Pedra de Itapuca e o Rio de Janeiro, noin 1867",
+          "url": "https://ims.com.br/titular-colecao/georges-leuzinger/"
+        },
+        {
+          "label": "Instituto Moreira Salles: Leuzinger, Praia de Botafogo, noin 1875",
+          "url": "https://ims.com.br/titular-colecao/georges-leuzinger/"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": null,
+      "routeMatch": "no-direct-route-stop",
+      "routeAlignmentNoteFi": "Täydentävä matkamuisto; ei suora nykyisen tai 19:55 pyydetyn etusivureitin pysäkkikuva.",
+      "sha256": "b6596a8c6e61f1bdd96ee635b93ec3e6f158198ae2a56e8f78b095e687e4d0f4",
+      "bytes": 549760,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "Use case: historical-scene. A wholly NEW landscape 3:2 image, 1536 x 1024, showing a badly worn, poor small 1873 photographic print on WHITE paper.\n\nThe actual physical white paper occupies the entire canvas. The photographic emulsion fades broadly and softly into neutral WHITE along ALL four edges and corners, but white paper fibres, gentle surface relief and physical fold ridges are still visible UNDER this white vignette to the outermost perimeter. No smooth empty digital frame, no black, dark, yellow or dirty rim, no tabletop, no separate mount. Two strong irregular nearly horizontal folds, one across the upper third and one below the lower middle, with a short bent diagonal at the upper right; not an X and not two vertical columns. Shallow relief shadows and exposed pale fibres cross the photographic scene in ONE FLAT PAPER PLANE. Small worn-away emulsion spots and restrained abrasion. It is an old photograph, never a drawing, painting, woodcut, bark texture or woodgrain overlay.\n\nPLACE AND VIEW: Guanabara Bay near Rio de Janeiro in 1873, seen from a modest Niteroi shore looking across toward Rio and Sugarloaf. Wide quiet water, vast pale sky, the distant asymmetric rounded granite Sugarloaf outline at LEFT of the horizon: a long sloping left shoulder rises to its rounded high summit, then a markedly steep right side. It is a low distant landform across the bay, not a mountain looming at the near shore. Lower distant hills extend to its right. The inspected Georges Leuzinger circa-1867 Itapuca photograph establishes this direction and geological silhouette. A few small rocks in the near water and a sparse low distant shore, not a modern urban wall. No Christ statue, cable car, high-rise buildings, bridge, concrete harbour or modern marina. Do not substitute the pointed Corcovado skyline for Sugarloaf. The precise little shore hut is fictional, not a claimed landmark.\n\nThe camera stands far back on a modest sandy and stony beach, at human chest height, looking obliquely past a small wooden BOATHOUSE on the RIGHT toward the immense open bay on the LEFT. Most of the photograph is air, water and shore. The people are not foreground portraits. The complete grandfather is a SMALL standing figure, only about one sixth of the total picture height, about 170 pixels head to boots. Place him right of centre, well INSIDE the surviving tones with generous white-free space around him. He stands two steps BACK within the broad dark open end of the boathouse, where its roof and walls block the sky. His plain dark 1873 travelling coat, simple trousers and both boots form a continuous natural silhouette against the low-lit interior. Head, neck, shoulders and upper body share the SAME deep shadow. His head is angled outward toward the bay but slightly away from the camera; not a readable facial profile. The aged underexposure cannot resolve any individual eye, nose, mouth, beard or expression. No separate black face blob, blur patch, spotlight on his cheek or hat used as a concealment device.\n\nOne hand rests lightly on the near wooden gunwale of a small plain rowing boat beside him. The boat is hauled completely ashore and sits stably on two low timber blocks, not levitating; its long axis runs from the boathouse into the shore at an angle. The hand merely rests, it does not lift the hull. His other arm hangs quietly at his side. Keep both legs and boots visible beside the boat, not hidden inside it. A small unremarkable short-haired dog sits on the shore just OUTSIDE the boathouse shade, a little nearer the water and on a different depth plane from the man, head turned toward him as it waits. Calm natural canine posture and proportions, no human smile or performing trick. No other people. No dramatic rescue, storm, secret letter or new story revelation.\n\nThe man's simple touch on the grounded boat and the dog's quiet waiting give the broad empty view its warmth. A far-away anonymous traveller with a small ordinary creature in a much larger landscape. Preserve their full small silhouettes and the calm physical boat support, without turning the composition into a close character study.\n\nPeriod photographic perspective, limited soft optical resolution, uneven exposure, faded neutral grey-brown monochrome, pale water and sky largely lost into the white paper. Restrained dark boathouse shadows contain the human figure. Real photographic material, no modern sharpness, HDR, CGI, engraved lines, theatrical fog or golden movie light. No readable writing, boat name, numbers, symbols, date or watermark.\n\nMost important: VERY WIDE bay with SMALL complete grandfather in coherent deep boathouse shadow, correct distant Sugarloaf shape from the Niteroi direction, ordinary dog and resting hand on a supported wooden boat, and a broad WHITE photographic fade that leaves physical white PAPER FIBRES AND CREASES visible underneath.\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:00:58.031Z"
+    },
+    {
+      "id": "isoisa-sanfrancisco-aged-r20260905-v1",
+      "fileName": "isoisa-sanfrancisco-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-sanfrancisco-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-sanfrancisco-aged-r20260905-v1.jpg",
+      "city": "San Francisco",
+      "year": 1873,
+      "caption": "Isoisä, San Francisco, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Isoisä tukeutuu hetkeksi matka-arkun kanteen varaston räystään alla. Lahdella pieni höyrylaiva etääntyy laiturista.",
+      "sourceNote": "Carleton Watkinsin katsottu Pacific Mail -satamakuva noin vuosilta 1870–1874 tukee matalia puisia harjakattoisia varastoja, paalulaitureita, mastoja ja höyrylaivoja. Tämä lähilaituri, räystäs ja taustan nimeämätön pieni höyryalus ovat aikakauden tyyppiin perustuva fiktiivinen rekonstruktio, eivät lähteen tietyn laivan tai rakennuksen kopio. Aluksen tarkkaa kansirakennetta ei voi varmentaa etäisestä kuluneesta kuvasta. Matka-arkku on tavallinen puinen nahalla ja metallilla vahvistettu arkku ilman uusia tunnuksia.",
+      "webReferenceUrls": [
+        {
+          "label": "NPS / San Francisco Maritime: Carleton Watkins, Pacific Mailin laituri, noin 1870–1874",
+          "url": "https://npgallery.nps.gov/SAFR/AssetDetail/d6db02f3-2fda-46ee-bdfe-52565c882bf1"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": "San Francisco",
+      "routeMatch": "direct-requested",
+      "routeAlignmentNoteFi": "Suora nimetty pysäkkikuva.",
+      "sha256": "ef251a4c776c07e79776b4eb5dce211a6fea0da67ce616649952581b831623b1",
+      "bytes": 606478,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "Use case: historical-scene. Generate a wholly NEW landscape 3:2 image, 1536 x 1024: a poor, soft, badly aged 1873 photographic print on WHITE paper, an ordinary traveller's worn memory.\n\nPHYSICAL PRINT: One flat white paper sheet fills the canvas. The photograph fades broadly and softly into neutral WHITE at every edge and every corner. Under that broad white fade, the actual paper must STILL show fine fibres and gentle relief even at the outer perimeter; not an empty digital white frame. A long worn fold lies near the far left, a second slightly oblique crease traverses the middle-lower print, and a short folded corner mark remains at the lower right. These are physical paper folds in one flat plane: pale torn fibre ridges, narrow soft relief shadows, crossing water, man and warehouse independently. A few emulsion losses and restrained rubbing. No yellow rim, dark border, brown parchment, tabletop, hard mount, woodgrain, bark or repetitive decorative crack network. Photograph is muted neutral grey-brown, weak and uneven, with soft limited period optical resolution. No sharp modern costume portrait, painting, engraving, CGI or dramatic cinematic grading.\n\nPLACE: San Francisco working waterfront, 1873. Actual period types from the personally inspected Carleton Watkins Pacific Mail wharves photograph, circa 1870–1874: low timber gabled warehouses, solid worn plank decks on wooden piles, narrow sailing masts and modest mast-and-funnel steamships. Reconstruct an ordinary unnamed wharf, not an exact photographed building. NO later Ferry Building clock tower, Golden Gate or Bay Bridge, high-rise skyline, steel container crane, asphalt, electric lights, modern safety gear or decorative Western saloon scene. No readable ship names or warehouse lettering.\n\nCOMPOSITION: A slightly LOW camera, about knee-to-waist height above the planks and several metres away, looks diagonally along the wharf. Broad pale plank lines lead from the lower middle into the open harbour at RIGHT. At LEFT-middle, a long plain warehouse wall and its deep projecting EAVE shelter the grandfather. The whole man is about one third of the total image height, complete from head to both boots, placed fully within surviving photographic tones and never cut by the white fade. Keep visible deck below his boots and space above his head; no giant foreground portrait. He is three quarters turned away from the camera, attending to a modest distant steamer slowly leaving the harbour on the right. The departing ship is small, seen over open water with soft masts and a thin pale trace of smoke; departure is quiet, not a crisis.\n\nThe grandfather wears a plain dark 1873 travel coat, simple trousers and worn leather boots, no specific face identity. His stance suggests a brief weary pause: knees relaxed and feet firmly spread just enough for balance, upper body bending slightly forward from the hips while ONE palm rests on the closed lid of his worn travel trunk beside him. The trunk is ordinary wood with dark leather reinforcing straps and restrained metal corners, on the deck at about knee height. The arm and small forward bend naturally reach it; do not make an impossibly tall trunk or a floating hand. His other arm hangs quietly at his side. This is a real standing lean, not sitting or an exaggerated collapse. The chest, legs and boots remain easy to read around the trunk.\n\nHis whole head, neck, shoulders and upper coat share ONE broad continuous deep shadow cast by the warehouse wall and eave. Aged underexposure loses all individual facial information. The head turns toward the vessel and away from us so there is no sharp readable nose profile, eye, mouth, beard or expression. No separate face-shaped black patch or artificial blur, no hand over the face, no hat concealment, no rim light on the cheek. The head remains naturally part of the shaded man, while the open wharf and harbour are bleached by pale daylight. Real imperfect old exposure, not a modern lighting effect.\n\nThe brief bodily rest, the hand on the worn trunk, and the ship going away make an emotionally legible quiet interval. No new letter, secret, relative, emergency or plot revelation. He is travelling, momentarily still within the working harbour. No other close portrait competes with him. Distant moored rigging is faint and simple, the whole scene historically photographic and unglamorous.\n\nFinal priorities: whole grandfather in coherent warehouse shade, believable one-hand lean onto an ordinary supported trunk, LOW diagonal wharf view and small departing period ship. Soft worn grey-brown photograph fading widely into WHITE with visible physical white PAPER fibres and folds underneath. No letters, numbers, logos, symbols, written caption, timestamp or watermark.\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:01:00.086Z"
+    },
+    {
+      "id": "isoisa-yokohama-aged-r20260905-v1",
+      "fileName": "isoisa-yokohama-aged-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-yokohama-aged-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-yokohama-aged-r20260905-v1.jpg",
+      "city": "Jokohama",
+      "year": 1873,
+      "caption": "Isoisä, Jokohama, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Isoisän avoin muistikirja lepää sylissä. Kuistin varjosta hän kääntyy kohti rantaa, jolla ohikulkija jatkaa matkaansa.",
+      "sourceNote": "Guimet'n katsottu Bund-valokuva on vuosilta 1877–1880, siis kohdevuotta myöhempi. Kiviranta, matalat ketjupylväät ja tiilikattoisen rannan mittakaava ovat sen tukemia rakennetyyppejä, eivät todistus täsmälleen samoista vuoden 1873 julkisivuista. Kuvan puinen kuisti ja talorivi ovat fiktiivinen, vaatimaton aikalaisrekonstruktio. Ohikulkijan työvaatetyyppiä tukee katsottu 1870-luvun valokuva. Uusi kuva näyttää isoisän tarkoituksella kasvottomana varjossa.",
+      "webReferenceUrls": [
+        {
+          "label": "Musée Guimet: Stillfried & Andersen, Yokohama, le Bund, 1877–1880, AP11412",
+          "url": "https://guimet-photo-japon.fr/notices/notice.php?id=242"
+        },
+        {
+          "label": "Duits Collection: riksan matkustajat ja kaksi shafua, 1870-luku, 120207-0172",
+          "url": "https://www.oldphotosjapan.com/photos/896/history-of-the-japanese-rickshaw-jinrikisha-vintage-photography"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": "tokio",
+      "requestedFoggRouteStop": "Jokohama",
+      "routeMatch": "direct-current-and-requested",
+      "routeAlignmentNoteFi": "Nykyinen etusivureitti käyttää Jokohaman satamalle tokio-avainta; kuvatekstin kaupunki säilyy Jokohamana (etusivupallo.js-kommentti).",
+      "sha256": "1b76553a69767bc9d51c3d09234b9bbe1dfecdf72461da11e7cd677822ef7c23",
+      "bytes": 692612,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "Use case: historical-scene. A completely NEW 3:2 landscape, 1536 x 1024: a small, poor, badly aged 1873 photographic print on WHITE paper. The real photograph is faint, soft, grey-brown monochrome with uneven exposure and century-worn emulsion. Not a sharp modern reenactment, drawing, engraving, painting or film still.\n\nThe single sheet of WHITE PAPER fills the image. The photograph gradually disappears into broad soft WHITE vignette on ALL four sides and corners. The white PAPER MATERIAL must remain visible beneath that fade: fine natural fibres and subdued relief across even the palest outer perimeter, without a smooth empty digital strip. Two deep old paper folds, one vertical toward the right third and one short slightly sloping fold across the upper left area, have exposed pale fibre ridges with thin shallow shadows. They lie in one FLAT PAPER PLANE and cross the emulsion, sky and objects without following the scene. Small rubbed emulsion losses, no dense crackle, woodgrain, bark, yellow rim, dark rim, tabletop, separate mount or decorative parchment.\n\nScene: Yokohama waterfront, Japan, 1873. Quiet oblique view along the edge of an unpretentious wooden veranda of a small lodging house near the foreign-settlement waterfront. The camera is outside, some distance away, looking DIAGONALLY along its floorboards. The shaded veranda and the grandfather are at the RIGHT of the central surviving photograph; a pale shore road and the harbour open to the LEFT. Beyond are a low stone seawall, a few short pale posts connected by loose dark chains and small distant moored sailing vessels. Far along the street are restrained low merchant buildings with hipped tile roofs and simple colonnaded verandas. The viewed Guimet Stillfried and Andersen 1877–1880 Bund photo informs the conservative waterfront types, NOT an exact claim that its later facades existed in 1873. No tall city, cranes, asphalt, motors, modern railings or electric fixtures.\n\nThe grandfather is visibly SITTING sideways on a plain wooden chair near the inner wall of the veranda, comfortably inside the surviving image, his complete seated figure about 28 percent of the whole canvas height. Plain dark European travelling coat of 1873, simple trousers and worn boots; no distinctive face identity. Both boots rest on the boards, knees bent naturally. His back and weight settle into the chair, one forearm on his thigh, both hands lightly around a SMALL OPEN plain worn dark-leather notebook resting on his lap. No visible writing or symbol. He has stopped writing and turns his head slightly toward the bright harbour. The head is turned three quarters away into the veranda's deep shade, without a sharp readable side profile. The whole head, neck, shoulders and upper coat belong to ONE CONTINUOUS, naturally underexposed shadow cast by the building's deep eaves. Poor period exposure and age leave no identifiable eyes, nose, mouth, beard or expression. Do not paint a separate black face blob, add a blur patch, hide him behind his hand or rely on a hat. His overall posture still reads as thoughtful listening to the waterfront. A slant of pale reflected light reaches only the boots, boards and notebook edge, not his face.\n\nA single small Japanese passerby farther back on the shore road walks slowly away, ordinary short plain work jacket and loose cropped trousers with straw sandals, informed by viewed 1870s clothing photographs; slight period motion softness, no theatrical action or pose. The passerby is on a different depth plane, not lined up with the seated man. The moment is a pause in taking notes as ordinary life keeps moving. No new message, letter, emergency, treasure revelation or invented companion relationship.\n\nHistorically photographic perspective, limited soft old optics, imperfect plate exposure, pale sea merging into worn paper, heavy dark cloth with barely surviving folds. Preserve enough quiet physical detail to read the chair supports, both feet, the notebook and the shaded seated silhouette. Entire man, chair and head remain well inside the photographic field, not clipped by the white fade. Emotional feeling comes from the interruption and his anonymous stillness.\n\nFinal priority: distinctly SITTING grandfather under a believable veranda shadow, unreadable face integrated with the shaded shoulders; broad neutral WHITE fade with white paper fibres and physical creases still visible UNDER and through it. No legible text, title, signage, numbers, watermark or artificial frame.\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:01:02.365Z"
+    },
+    {
+      "id": "isoisa-baalbek-more-r20260905-v1",
+      "fileName": "isoisa-baalbek-more-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-baalbek-more-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-baalbek-more-r20260905-v1.jpg",
+      "city": "Baalbek",
+      "year": 1873,
+      "caption": "Isoisä, Baalbek, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Isoisä jää pieneksi hahmoksi Baalbekin valtavien temppeliraunioiden ja kaatuneiden kivien keskelle.",
+      "sourceNote": "Bonfilsin aito 1870–1885 Baalbek-kuva ohjasi raunioiden mittakaavaa ja pylväikköä; LOC:n kortti nimeää negatiivimerkinnän Jupiterin temppelin portiksi, mutta kuvateksti jätetään varovasti yleiselle Baalbekin temppelirauniot -tasolle. Cameron ohjasi vain optista pehmeyttä ja vedoksen pintaa. Kohtaus ja matkustajan sijoitus ovat fiktiivisiä, eivät vahvistettu kaanonpysähdys.",
+      "webReferenceUrls": [
+        {
+          "label": "Félix Bonfils, Ruins of temple, Baalbek, 1870–1885, Library of Congress",
+          "url": "https://www.loc.gov/pictures/item/2001705569/"
+        },
+        {
+          "label": "Julia Margaret Cameron, Charles Hay Cameron in His Garden, 1865–67, Met 41.21.9",
+          "url": "https://www.metmuseum.org/art/collection/search/268719"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": null,
+      "routeMatch": "no-direct-route-stop",
+      "routeAlignmentNoteFi": "Fiktiivinen matkamuisto; ei suora pyydetyn Foggin reitin kaupunkiosuma.",
+      "sha256": "a4f69ce6f253bea92b8a12806b60a87b228676f63eed989b1a4842d9a4298773",
+      "bytes": 693537,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "Use case: historical-scene\nAsset type: fictional grandfather travel-memory photograph for game review, landscape 3:2\nPrimary request: Entirely new fictional photograph made as if in 1873 at the monumental entrance and fallen stone court of the Temple of Jupiter at Baalbek. A solitary young European male traveler, the grandfather, stands far inside the scene beside a huge fallen block, only 8–12 percent of image height. He looks toward the columns, not posing. His face has no legible identity: naturally lost in hat shadow, distance, optical softness and old-print tonal compression, with no artificial blur patch.\nInput images: Image 1 is Bonfils's authentic Baalbek temple photograph dated 1870–1885; use only its actual ancient masonry, column proportions, ruined court and period landscape. Image 2 is Julia Margaret Cameron's authentic 1865–67 garden photograph; use only its imperfect optical softness, strong broad tonal separations, irregular density, photographic grain and physical print character. Do not copy Cameron's person, clothing, pose, garden, handwriting or composition.\nScene/backdrop: immense weathered Roman stone blocks and surviving columns in the dry Bekaa light, sparse 1873 surroundings, no later restoration, railing, sign, electricity or modern building.\nSubject: environment dominates; one tiny complete traveler in restrained 1873 dark travel coat, trousers and soft brimmed hat, both feet visible.\nStyle/medium: convincing poor small 1873 albumen-paper photograph, grey-brown monochrome, camera-made realism, optically soft detail yet strong large-scale contrast, visibly coarse irregular film-like noise and print structure.\nComposition/framing: horizontal 3:2, wide architectural view, traveler fully within the image field, varied asymmetric composition.\nLighting/mood: hard high dry light, deep coherent architectural shadow, mysterious quiet scale.\nMaterials/textures: worn physical paper across the entire surface; two strong nonintersecting folds, small emulsion losses, restrained abrasion. A broad PALE neutral-white vignette on all four sides and corners remains visible, but only the photographic emulsion fades: fine paper fibers, subtle relief, dents and folds remain plainly visible beneath the pale vignette through the outermost edges. Do not erase scene edges completely.\nConstraints: historically plausible 1873; no identifiable new face; no text, caption, border label or watermark; no camera or photographer visible.\nAvoid: blank smooth white frame, texture-free RGB-white edge, dark or yellow dirty vignette, watercolor paper mask, illustration, painting, sepia-orange wash, crisp modern digital detail, modern people, modern clothing, modern architecture, artificial facial blur, giant foreground portrait.\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:01:02.813Z",
+      "webReferenceImageCount": 2
+    },
+    {
+      "id": "isoisa-yosemite-more-r20260905-v1",
+      "fileName": "isoisa-yosemite-more-r20260905-v1.jpg",
+      "url": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-yosemite-more-r20260905-v1.jpg",
+      "r2Key": "kohtaamiset/isoisa/isoisa-yosemite-more-r20260905-v1.jpg",
+      "city": "Yosemite",
+      "year": 1873,
+      "caption": "Isoisä, Yosemite, 1873",
+      "captionMustBeCopiedVerbatim": true,
+      "originalReviewCaption": "Isoisä istuu pienenä hahmona kaatuneen rungon vierellä Yosemiten laajan laakson yläpuolella.",
+      "sourceNote": "Watkinsin aidot 1860-luvun Yosemite-valokuvat ohjasivat maaston, El Capitanin, Bridalveil Fallin ja Inspiration Pointin mittakaavaa. Cameron ohjasi vain optista pintaa. Sommittelu ja isoisän läsnäolo ovat uusi fiktiivinen rekonstruktio, eivät vahvistettu kaanonpysähdys. WebReferenceImageCount=1 records the sole actual ImageGen image input (Cameron); Watkins pages were researched contextual references, not image inputs.",
+      "webReferenceUrls": [
+        {
+          "label": "Carleton Watkins, Yosemite Falls from Below, negative 1865–66, Getty",
+          "url": "https://www.getty.edu/art/collection/object/104EDW"
+        },
+        {
+          "label": "Getty, Carleton Watkins and Yosemite",
+          "url": "https://www.getty.edu/art/exhibitions/dialogue_giants/"
+        },
+        {
+          "label": "Julia Margaret Cameron, Charles Hay Cameron in His Garden, 1865–67, Met 41.21.9",
+          "url": "https://www.metmuseum.org/art/collection/search/268719"
+        }
+      ],
+      "paleVignette": true,
+      "paperVisibleUnderVignette": true,
+      "photographerPerspective": false,
+      "grandfatherVisible": true,
+      "keepFullImage": true,
+      "crop": null,
+      "section": "Isoisän valokuvat 1873",
+      "currentFrontPageRouteCityId": null,
+      "requestedFoggRouteStop": null,
+      "routeMatch": "no-direct-route-stop",
+      "routeAlignmentNoteFi": "Fiktiivinen matkamuisto; ei vahvistettu kaanonpysähdys eikä suora Foggin reitin kaupunkiosuma.",
+      "sha256": "48e8c924111bd5d98cb84836161ff75b4df6e8ee4423f687831938a8d7ec5315",
+      "bytes": 690470,
+      "width": 1536,
+      "height": 1024,
+      "mimeType": "image/jpeg",
+      "colorSpace": "sRGB",
+      "iccEmbedded": true,
+      "exactPrompt": "Use case: historical-scene\nAsset type: fictional 1873 grandfather travel-memory photograph, horizontal 3:2\nPrimary request: Entirely new 1873 photograph from Yosemite Valley's Inspiration Point/Mariposa Trail, grounded in Carleton Watkins's authentic 1865–67 photographs: El Capitan dominates left, Bridalveil Fall is a thin pale thread at right, Half Dome faint in the far center. A solitary young European male traveler sits far away beside a fallen pine trunk on the rocky trail, complete figure only 8–12 percent of image height, turned three-quarters away toward the valley. Face naturally illegible through hat shadow, distance, optical softness and old-print density; no blur patch and no identifiable new personality.\nInput image: Julia Margaret Cameron's authentic 1865–67 photograph supplies ONLY imperfect optical softness, broad strong tonal contrast, irregular print density, grain and physical paper character. Do not copy its person, garden, clothing, pose, handwriting or composition.\nStyle/medium: poor small 1873 albumen-paper photograph, grey-brown monochrome, camera-made realism, coarse irregular film-like noise and print structure, soft fine resolving power but preserved large-scale contrast.\nComposition: landscape panorama, immense valley dominates, traveler fully inside image. Do not imitate a modern tourism photograph.\nLighting: cool high-altitude afternoon, bright rock faces and deep pine shadows.\nPaper: broad PALE neutral-white vignette on all four sides and corners, but only emulsion fades; visible paper fibers, relief, dents and physical texture continue beneath vignette to outermost edges. Two strong varied diagonal/curved folds, small emulsion loss and abrasion. Scene edges remain faintly readable.\nConstraints: plausible 1873 clothing and untouched wilderness; no road, automobile, modern rail, signs, safety railing, modern buildings, camera, photographer, text or watermark.\nAvoid: blank smooth white frame, dark vignette, yellow dirty frame, watercolor mask, illustration, painted look, crisp digital detail, oversized traveler, portrait face.\n",
+      "deliveryState": "r2-publicly-byte-verified",
+      "verifiedAt": "2026-09-05T20:01:03.064Z",
+      "webReferenceImageCount": 1
+    }
+  ]
+}
