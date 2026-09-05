@@ -444,6 +444,49 @@ function laattamoottori(pallo) {
   return moottori;
 }
 
+/*
+ * ── TERÄVÄ TILA PAKOTETTUNA AJON AJAKSI ───────────────────────────
+ *
+ * Omistaja 5.9.2026 ilta, keksintölinssin ajo pallolla (sanatarkasti):
+ * *"pidä kokoajan terävä tila päällä"*. Aikajana-ajo liikuttaa kameraa
+ * lähes tauotta pysäkiltä toiselle, ja lepolaatu (asetaTila) ehtisi
+ * päälle vain hetkeksi jokaisen ajon jälkeen — kuva olisi juuri
+ * liikkeessä röpeliäinen, eli täsmälleen siinä kohdassa, jota
+ * katsotaan.
+ *
+ * VIPU ON SAMA KUIN ?laatu=aina, mutta se kytketään ajon ajaksi eikä
+ * istunnoksi: pyytäjiä lasketaan (pakotaPallonLaatu(true/false)), joten
+ * kaksi päällekkäistä pyytäjää ei sammuta toistensa terävyyttä ja
+ * linssin purku palauttaa laadun aina. Muutos ilmoitetaan asennetuille
+ * laatunostoille kuuntelijoilla — pallo-olioon ei tarvitse päästä
+ * käsiksi, ja kutsuja (js/aikajana.js) pysyy Globe.gl:stä erossa.
+ */
+/** Montako pyytäjää haluaa terävän tilan juuri nyt. */
+let laatuPakotukset = 0;
+/** Asennetut laatunostot: kukin kuuntelee pakotuksen vaihdoksia. */
+const laatuKuuntelijat = new Set();
+
+/** Onko terävä tila pakotettuna päälle (savukkeet ja vartijat). */
+export function pallonLaatuPakotettu() {
+  return laatuPakotukset > 0;
+}
+
+/**
+ * Pyytää tai vapauttaa terävän tilan. Palauttaa uuden tilan.
+ * Vapautus ei mene koskaan nollan alle: kahdesti purettu ajo ei
+ * kytke laatua pois toisen pyytäjän alta.
+ *
+ * @param {boolean} paalla true = pyydä, false = vapauta
+ * @returns {boolean} onko terävä tila pakotettuna
+ */
+export function pakotaPallonLaatu(paalla) {
+  const ennen = laatuPakotukset > 0;
+  laatuPakotukset = Math.max(0, laatuPakotukset + (paalla ? 1 : -1));
+  const nyt = laatuPakotukset > 0;
+  if (nyt !== ennen) for (const kuuntelija of laatuKuuntelijat) kuuntelija(nyt);
+  return nyt;
+}
+
 /**
  * Asentaa laatutilat laattamoottoriin. Palauttaa purkajan. Ei tee
  * mitään, jos moottoria ei löydy (kirjaston sisäinen muoto vaihtunut) —
@@ -474,7 +517,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
    * loppuu"): ?laatu=aina tai ratas → levon kynnykset ja pikselisuhde
    * pysyvät päällä myös liikkeessä (js/ui-apurit.js laatuAinaPaalla).
    */
-  const aina = laatuAinaPaalla(ikkuna);
+  const aina = () => laatuAinaPaalla(ikkuna) || laatuPakotukset > 0;
   const renderer = pallo.renderer?.();
   const maxAniso = renderer?.capabilities?.getMaxAnisotropy?.() ?? 1;
   const alkuperainen = moottori.updatePov;
@@ -488,7 +531,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
   const kameranLat = () => { const p = pallo.pointOfView?.(); return Number.isFinite(p?.lat) ? p.lat : 0; };
   const asetaTila = (lepoon) => {
     lepo = lepoon;
-    if (aina) lepoon = true;
+    if (aina()) lepoon = true;
     kynnysLat = kameranLat();
     const kerroin = (lepoon ? lepokerroin(kotelo.clientHeight * dpr) : 1) * napakerroin(kynnysLat);
     moottori.thresholds = laattakynnykset(kerroin);
@@ -541,11 +584,25 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     return alkuperainen.call(this, kam);
   };
   asetaTila(false);
+  /*
+   * PAKOTUS VAIKUTTAA HETI (pakotaPallonLaatu): kynnykset ja
+   * pikselisuhde asetetaan uudestaan samasta liike/lepo-tilasta, ja
+   * moottorille annetaan sama kamera, jotta se valitsee tarkemman
+   * tason ja hakee laatat odottamatta seuraavaa liikettä. Vapautus
+   * palauttaa saman tilan ilman pakotusta.
+   */
+  const pakotus = () => {
+    asetaTila(lepo);
+    if (kamera) alkuperainen.call(moottori, kamera);
+    teroita();
+  };
+  laatuKuuntelijat.add(pakotus);
   // Kamera on jo paikallaan asennettaessa (kirjasto asetti sen ennen
   // kuin moottori löytyi): ensimmäinen lepo ilman liikettä.
   kamera = pallo.camera?.() ?? null;
   if (kamera) lepoAjastin = ikkuna.setTimeout(lepoon, LAATU_LEPOVIIVE_MS);
   return () => {
+    laatuKuuntelijat.delete(pakotus);
     ikkuna.clearTimeout(lepoAjastin);
     for (const t of ajastimet) ikkuna.clearTimeout(t);
     moottori.updatePov = alkuperainen;

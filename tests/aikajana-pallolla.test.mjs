@@ -29,6 +29,7 @@ const LINSSIT = lue('../js/pallolauta/linssit.js');
 const MERKIT = lue('../js/pallolauta/merkit.js');
 const LAUTA = lue('../js/pallolauta/lauta.js');
 const CSS = lue('../css/aikajana.css');
+const PALLO = lue('../js/pallo.js');
 
 test('keksintölinssillä on pallolle ja se purkaa laudan osan', () => {
   assert.match(LINSSI, /\n {2}pallolle\(lauta\) \{/, 'linssiltä puuttuu pallolle');
@@ -65,6 +66,37 @@ test('kamera on hereillä olevan laudan oma, eikä fokuslukkoa käännetä pallo
   assert.ok(!/ui\.kartta\.ajaKamera/.test(MOOTTORI), 'kamera-ajo menee yhä suoraan tasokartalle');
   assert.match(MOOTTORI, /sovitaKaareen\(kesto = [^)]*\) \{[\s\S]{0,320}kamera\.ajaKamera\(\{ bbox: kaarenKameralaatikko/);
   assert.match(MOOTTORI, /vapautaKamera\(vapaa\) \{[\s\S]{0,600}if \(this\.pallolla\) return;/);
+});
+
+/*
+ * LÄHIKUVA JA TERÄVÄ TILA (omistaja 5.9.2026 ilta, ks. karttapallo.md
+ * luku 10.3). Nämä kytkennät ovat pallon omia: tasokartalla ajo
+ * sovittaa yhä koko kaaren ruutuun, eikä laattamoottoria ole.
+ */
+test('lähikuva, ennakoiva kamera ja terävä tila ovat pallon haarassa', () => {
+  // Pysäkkiajo tehdään laudan omalla kameralla, ei Globe.gl:llä.
+  const ajo = MOOTTORI.match(/ {2}ajaPysakille\(i, kesto\) \{[\s\S]*?\n {2}\}/)[0];
+  assert.match(ajo, /if \(!this\.pallolla/, 'lähikuva-ajo ei ole pallon haarassa');
+  assert.match(ajo, /kamera\.ajaKamera\(/);
+  assert.ok(!ajo.includes('pointOfView'), 'moottori koskee Globe.gl-instanssiin');
+  // Ennakko ja syttymisen varmistus kulkevat saman metodin kautta.
+  assert.match(MOOTTORI, /this\.ajaPysakille\(kohde, Math\.max\(AIKAJANAN_KAMERAN_POHJA_MS, eta \+ AIKAJANAN_KAMERAN_JALKIJATTO_MS\)\);/);
+  assert.match(MOOTTORI, /if \(this\.pallolla && this\.kameraKohde !== i\) \{/);
+  // Terävä tila tulee js/pallo.js:n laatunostolta eikä omalta vivulta.
+  assert.match(MOOTTORI, /import \{ pakotaPallonLaatu \} from '\.\/pallo\.js';/);
+  assert.match(PALLO, /export function pakotaPallonLaatu\(paalla\) \{/);
+  assert.match(PALLO, /const aina = \(\) => laatuAinaPaalla\(ikkuna\) \|\| laatuPakotukset > 0;/);
+  assert.match(MOOTTORI, /pakotaLaatu\(paalla\) \{[\s\S]{0,400}pakotaPallonLaatu\(paalla\);/);
+});
+
+test('havainnekuvan valokeila on epäsäännöllinen ja toimii kummallakin laudalla', () => {
+  // Muoto lasketaan moottorissa ja välitetään css:lle muuttujana, joten
+  // sama maski pätee pallolla ja vanhalla kartalla.
+  assert.match(MOOTTORI, /export function valokeilanMaski\(siemen = 0, lohkoja = VALOKEILAN_LOHKOT\) \{/);
+  assert.match(CSS, /mask-image: var\(--aikajana-valokeila, radial-gradient\(/);
+  // Ei suodattimia (iOS-sääntö): maski on liukuvärejä, ei feTurbulencea.
+  const maski = MOOTTORI.match(/export function valokeilanMaski[\s\S]*?\n\}/)[0];
+  assert.ok(!/feTurbulence|feDisplacementMap|filter/.test(maski), 'maski nojaa suodattimeen');
 });
 
 test('lampun napautus kulkee laudan osumatestin kautta, ei elementin', () => {

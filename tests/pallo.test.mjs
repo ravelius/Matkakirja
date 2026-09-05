@@ -470,10 +470,42 @@ test('tarkkuus liikkeessä -kokeiluvipu (omistaja 5.9.2026: "kokeile pyörisikö
   assert.equal(laatuAinaPaalla({ ...win, location: { search: '?laatu=aina' } }), true, 'URL voittaa');
   assert.equal(laatuAinaPaalla({ ...win, location: { search: '?laatu=0' } }), false);
   const pallo = lue('../js/pallo.js');
-  assert.match(pallo, /const aina = laatuAinaPaalla\(ikkuna\)/);
-  assert.match(pallo, /if \(aina\) lepoon = true;/);
+  // Vipu luetaan KUTSUTTAESSA eikä kerran: sen rinnalla on ajokohtainen
+  // pakotus (pakotaPallonLaatu), joka voi kytkeytyä kesken istunnon.
+  assert.match(pallo, /const aina = \(\) => laatuAinaPaalla\(ikkuna\) \|\| laatuPakotukset > 0;/);
+  assert.match(pallo, /if \(aina\(\)\) lepoon = true;/);
   const html = lue('../index.html');
   assert.match(html, /kehittaja-laatu-aina-kytkin/);
+});
+
+/*
+ * TERÄVÄ TILA PAKOTETTUNA AJON AJAKSI (omistaja 5.9.2026 ilta,
+ * keksintölinssi pallolla, sanatarkasti: *"pidä kokoajan terävä tila
+ * päällä"*). Kaksi asiaa rikkoutuisi hiljaa: pakotus jäisi päälle
+ * linssin jälkeen (koko peli pyörisi lepolaadulla) tai toisen pyytäjän
+ * vapautus sammuttaisi sen toisen alta.
+ */
+test('terävän tilan pakotus lasketaan pyytäjittäin ja purku palauttaa laadun', async () => {
+  const { pakotaPallonLaatu, pallonLaatuPakotettu } = await import('../js/pallo.js');
+  assert.equal(pallonLaatuPakotettu(), false, 'oletus pois');
+  assert.equal(pakotaPallonLaatu(true), true);
+  // Toinen pyytäjä: yksi vapautus ei riitä sammuttamaan.
+  pakotaPallonLaatu(true);
+  assert.equal(pakotaPallonLaatu(false), true, 'toisen pyytäjän vapautus sammutti laadun');
+  assert.equal(pakotaPallonLaatu(false), false, 'viimeinen vapautus ei sammuttanut');
+  // Ylimääräinen vapautus ei mene nollan alle (kahdesti purettu ajo).
+  assert.equal(pakotaPallonLaatu(false), false);
+  assert.equal(pakotaPallonLaatu(true), true, 'laskuri jäi negatiiviseksi');
+  pakotaPallonLaatu(false);
+
+  const pallo = lue('../js/pallo.js');
+  // Muutos ilmoitetaan asennetuille laatunostoille, ja kuuntelija
+  // irtoaa purkajassa (pallon vaihtuessa ei jää haamuja).
+  assert.match(pallo, /for \(const kuuntelija of laatuKuuntelijat\) kuuntelija\(nyt\);/);
+  assert.match(pallo, /laatuKuuntelijat\.add\(pakotus\);/);
+  assert.match(pallo, /laatuKuuntelijat\.delete\(pakotus\);/);
+  // Pakotus hakee tarkat laatat heti eikä vasta seuraavasta liikkeestä.
+  assert.match(pallo, /const pakotus = \(\) => \{\n\s*asetaTila\(lepo\);\n\s*if \(kamera\) alkuperainen\.call\(moottori, kamera\);\n\s*teroita\(\);/);
 });
 
 /*

@@ -137,6 +137,9 @@ import {
 } from './linssipuhe.js';
 import { pysaytaLukija } from './lukija.js';
 import { esilataaKuvat } from './ui-apurit.js';
+// Terävä tila pakotettuna ajon ajaksi (ks. pakotaLaatu). Moduuli on
+// kevyt: se tuo vain fokusmitat ja ui-apurit, ei Globe.gl:ää.
+import { pakotaPallonLaatu } from './pallo.js';
 import { avaaTiedeliite, suljeTiedeliite } from './tiedeliite.js';
 import { sytytaLyhdyt } from './lyhty.js';
 import { rajausTyyli } from './isoisan-valokuvat.js';
@@ -327,6 +330,99 @@ export const PALLON_TUMMENNUS = 'rgba(10, 7, 5, 0.86)';
 export const PALLON_TUMMENNUS_KESKI = 'rgba(10, 7, 5, 0.35)';
 /** Reiän liuku lampusta toiseen (ms); reduced motion hyppää suoraan. */
 export const PALLON_REIAN_LIUKU_MS = 700;
+
+/*
+ * ── LÄHIKUVA JA ENNAKOIVA KAMERA PALLOLLA ─────────────────────────
+ *
+ * Omistaja 5.9.2026 ilta työpöytäselaimella, sanatarkasti: *"zoomaa
+ * maapallo näin lähelle mutta liikuta palloa pehmeästi ja hieman jo
+ * ennakoiden kohti uutta valopalloa niin että kun valopallo syttyy
+ * kartan liike loppuu vasta vähän sen jälkeen. pidä kokoajan terävä
+ * tila päällä."*
+ *
+ * KUINKA LÄHELLE. Omistajan kuvakaappauksessa (2000 px leveä ruutu)
+ * näkyi Irlannista Tanskaan ja Pohjois-Saksaan, eli noin 1 500 km
+ * ruudun leveydellä; Pariisin valopallo oli halkaisijaltaan noin
+ * 160 px.
+ *
+ * LUKU ON MITATTU EIKÄ LASKETTU. `korkeusLeveydesta` (js/pallolauta/
+ * kamera.js) on tasokuvan kaava PYSTYSUUNNAN avauskulmalla, joten
+ * ruudulla oikeasti näkyvä vaakakaista on selvästi pyydettyä
+ * leveämpää — perspektiivi ja pallon kaarevuus vievät laidat kauas.
+ * Mitattu Chromiumilla 1400 × 900 (kotelo 1379 × 821, kamera Volta/
+ * Pavian yllä; ruudun laitojen pisteet käännettiin asteiksi ja niiden
+ * väli isoympyränä): 120 → 686 km, 200 → 1 162 km, 240 → 1 406 km,
+ * **260 → n. 1 530 km**, 300 → 1 782 km, 450 → 2 775 km. Omistajan
+ * mitta osuu siis lukuun 260 (altitude 0,146).
+ *
+ * MITTAKAAVA RIIPPUU IKKUNAN KOOSTA: korkeus on vakio, joten kilometriä
+ * pikseliä kohti on vakio (≈ 1,1 km/px) ja kapeampi ikkuna näyttää
+ * kapeamman kaistan. Luku on VAKIO eikä kaaren rajaus: sama lähikuva
+ * pätee jokaisella pysäkillä, ja kamera vain siirtyy lampusta toiseen.
+ * (Vertailuksi: saapumisnäkymä on 240 yksikköä ja siirtonäkymä 120,
+ * js/pallolauta/kamera.js.) Tasokartalla ajo sovittaa yhä koko kaaren
+ * ruutuun — lähikuva on pallon oma, koska vain siellä laatat riittävät.
+ *
+ * MILLOIN LIIKE ALKAA JA LOPPUU. Kamera lähtee kohti seuraavaa lamppua
+ * ENNEN sen syttymistä (AIKAJANAN_KAMERAN_ENNAKKO_OSUUS pysäkin
+ * kestosta = 40 % × 4 600 ms ≈ 1 840 ms) ja on perillä vasta
+ * AIKAJANAN_KAMERAN_JALKIJATTO_MS syttymisen JÄLKEEN. Saapumishetki
+ * lasketaan samalla puhtaalla funktiolla kuin karusellin ennakko
+ * (aikaSeuraavaan) — kello ei kulje vakionopeudella, joten "kaksi
+ * sekuntia ennen" ei ole sama kuin "kahden sekunnin matka jäljellä".
+ */
+/** Lähikuvan leveys lautayksikköinä pallolla (mitattu 1 530 km / 1400 px). */
+export const AIKAJANAN_LAHIKUVA_LEVEYS = 260;
+/** Osuus pysäkin kestosta, jonka kamera lähtee liikkeelle etuajassa. */
+export const AIKAJANAN_KAMERAN_ENNAKKO_OSUUS = 0.4;
+/** Ennakko millisekunteina: liike alkaa, kun syttymiseen on tämä aika. */
+export const AIKAJANAN_KAMERAN_ENNAKKO_MS = Math.round(AIKAJANA_VIIVE_MS * AIKAJANAN_KAMERAN_ENNAKKO_OSUUS);
+/** Ajo päättyy vasta tämän verran syttymisen jälkeen (omistaja: "vähän sen jälkeen"). */
+export const AIKAJANAN_KAMERAN_JALKIJATTO_MS = 750;
+/** Lyhinkin ajo kestää tämän: hyppy olisi pahempi kuin myöhästyminen. */
+export const AIKAJANAN_KAMERAN_POHJA_MS = 900;
+
+/**
+ * Kameran pehmennys ajon aikana: nolla nopeus molemmissa päissä
+ * (smootherstep). Kirjaston Cubic.InOut ja siirtokoreografian trapetsi
+ * lähtevät molemmat liikkeelle nykäisten, ja tässä liike on pitkä ja
+ * jatkuva — omistaja pyysi *"pehmeästi"* ja *"loppuu vasta vähän sen
+ * jälkeen"*, eli loppuvaiheen hiipuvan hännän.
+ *
+ * @param {number} t 0…1
+ * @returns {number} kuljettu osuus matkasta
+ */
+export function aikajananKameranPehmennys(t) {
+  const x = Math.min(1, Math.max(0, t));
+  return x * x * x * (x * (x * 6 - 15) + 10);
+}
+
+/*
+ * ── HAVAINNEKUVAT ESILADATAAN PYSÄKKI ETUKÄTEEN ───────────────────
+ *
+ * Omistaja 5.9.2026 ilta, sanatarkasti: *"havainnekuvat pitää
+ * esiladata, nyt tulivat vähän perässä."* Koko kaaren pienet kuvat
+ * haetaan jo linssin avautuessa (esilataaPienet), mutta pyyntö on vain
+ * pyyntö: selain saa yhä purkaa WebP:n vasta silloin, kun paneeli
+ * pyytää sitä ruudulle, ja juuri se näkyi viiveenä valon syttyessä.
+ *
+ * Siksi seuraavan KAHDEN pysäkin havainnekuva ja muotokuvat ladataan
+ * JA DEKOODATAAN jo edellisen pysäkin aikana (Image + decode), ja
+ * valmis Image-olio jää välimuistiin. Paneeli ottaa sen sellaisenaan
+ * (vaihdaPaneeli → kuvaTaiLaatta): silloin kuvaa ei ladata uudestaan
+ * eikä dekoodausta odoteta, vaan sivu piirtyy samalla kehyksellä kuin
+ * valo syttyy. Kirjanpito on sama kuin ui-apurit esilataaKuvat:lla —
+ * yksi pyyntö per osoite, ja kaikki puretaan linssin mukana.
+ */
+/** Montako pysäkkiä eteenpäin havainnekuvat dekoodataan valmiiksi. */
+export const PANEELIN_ESILATAUS_PYSAKKEJA = 2;
+/**
+ * Montako valmista Image-oliota varastossa pidetään. Kaksi pysäkkiä
+ * eteenpäin tarkoittaa enintään kuutta kuvaa (havainnekuva ja kaksi
+ * muotokuvaa kummaltakin), ja katto jättää varaa yhdelle kierrokselle
+ * — sitä vanhemmat ovat jo selaimen välimuistissa.
+ */
+export const KUVAVARASTON_KATTO = 12;
 
 /** Onko pallolauta se lauta, jolle tämä ajo piirtää? */
 function pallolautaAlla(ui) {
@@ -881,11 +977,159 @@ function vaihdaKorttikuva(kuva, osoite) {
   else pane();
 }
 
+/* ==================== VALOKEILAN EPÄSÄÄNNÖLLINEN REUNA ==================== */
+
+/*
+ * Omistaja 5.9.2026 ilta, sanatarkasti: *"saisiko havainnekuvan
+ * häivytyksen hieman epäsäännöllisemmän muotoiseksi?"*
+ *
+ * Reuna oli yksi säännöllinen ellipsi (css .aikajana-ilmiokuva
+ * mask-image), ja juuri sen säännöllisyys luki koneen tekemäksi. Nyt
+ * maski on MONTA soikiota eri keskipisteissä: mask-image-kerrokset
+ * yhdistyvät oletuksena unionina (alfa a + b(1−a)), joten keskusta on
+ * yhä täysin peittävä mutta ulkoreuna kumpuilee suuntansa mukaan —
+ * kuin vanhan valokuvan tai valokeilan pehmeä, epätasainen laita.
+ *
+ * KOLME EHTOA, JOTKA RATKAISIVAT TOTEUTUSTAVAN:
+ *   1. DETERMINISTINEN. Muoto lasketaan siemenluvusta (tapahtuman
+ *      indeksi), joten sama kuva saa aina saman reunan — myös
+ *      taaksepäin selatessa. Kuvien kesken muoto vaihtelee.
+ *   2. KERRAN, EI JOKA KEHYKSELLÄ. Suodattimia (feTurbulence,
+ *      feDisplacementMap) ei käytetä lainkaan: iPadilla ne maksaisivat
+ *      paneelin ristihäivytyksen jokaisella kehyksellä. Liukuvärit
+ *      lasketaan tässä kerran merkkijonoksi, ja selain rasteroi maskin
+ *      kerran elementtiä kohti.
+ *   3. EI KOVAA REUNAA. Jokainen soikio häipyy nollaan ennen laatikon
+ *      laitaa (keskipiste ± säde × ulottuvuus < 100 %), joten
+ *      neliöraja ei näy missään — sama vaatimus kuin aiemmin.
+ */
+/** Soikioita perusmuodon päällä (yksi pohja + nämä). */
+export const VALOKEILAN_LOHKOT = 6;
+
+/** Siemenluvusta toistettava arpoja (mulberry32). */
+function valokeilanArpoja(siemen) {
+  let a = (Math.imul(Math.floor(Math.abs(siemen)) + 1, 2654435761) + 1013904223) >>> 0;
+  return () => {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+/**
+ * Havainnekuvan valokeilamaski: pohjasoikio ja sen päälle
+ * epäsäännöllisiä lohkoja. Puhdas funktio (ei DOMia), jotta muodon
+ * säännöt ovat mitattavissa (tests/aikajana.test.mjs).
+ *
+ * @param {number} siemen tapahtuman indeksi — sama luku, sama muoto
+ * @param {number} [lohkoja] montako soikiota pohjan päälle
+ * @returns {string} CSS:n mask-image -arvo (pilkulla erotetut kerrokset)
+ */
+export function valokeilanMaski(siemen = 0, lohkoja = VALOKEILAN_LOHKOT) {
+  const arvo = valokeilanArpoja(siemen);
+  const luku = (n) => Math.round(n * 10) / 10;
+  const kerrokset = [
+    // Pohja: entinen soikio hieman kutistettuna, jotta lohkot pääsevät
+    // muotoilemaan reunan eikä pohja peitä niitä alleen.
+    'radial-gradient(ellipse 46% 47% at 50% 50%, #000 40%, rgba(0, 0, 0, 0.74) 60%,'
+    + ' rgba(0, 0, 0, 0.26) 82%, transparent 98%)',
+  ];
+  for (let i = 0; i < lohkoja; i += 1) {
+    // Lohkot kiertävät kehää tasavälein arvotulla poikkeamalla, jotta
+    // yksikään suunta ei jää ilman omaa kumpuaan.
+    const kulma = ((i + arvo() * 0.7) / lohkoja) * Math.PI * 2;
+    const etaisyys = 6 + arvo() * 5;
+    const cx = 50 + Math.cos(kulma) * etaisyys;
+    const cy = 50 + Math.sin(kulma) * etaisyys * 0.85;
+    const rx = 30 + arvo() * 10;
+    const ry = 28 + arvo() * 10;
+    kerrokset.push(`radial-gradient(ellipse ${luku(rx)}% ${luku(ry)}% at ${luku(cx)}% ${luku(cy)}%,`
+      + ' #000 26%, rgba(0, 0, 0, 0.6) 55%, transparent 92%)');
+  }
+  return kerrokset.join(', ');
+}
+
+/* ==================== ESILADATUT PANEELIKUVAT ==================== */
+
+/**
+ * Se osoite, jonka paneeli oikeasti pyytää: sama sääntö kuin
+ * asetaAmpariKuva:lla (pieni versio 640 px:iin asti, ulkoinen
+ * sellaisenaan). Ilman tätä esilataus hakisi eri tiedoston kuin
+ * paneeli — ja kuva tulisi silti perässä.
+ *
+ * @param {object} kuvatieto
+ * @param {number} leveys pyydetty leveys (kuvaTaiLaatan `leveys`)
+ * @returns {string|null} osoite tai null (Commons-tiedosto tai ei kuvaa)
+ */
+export function paneelikuvanOsoite(kuvatieto, leveys) {
+  const osoite = kuvatieto?.osoite;
+  if (!osoite) return null;
+  if (kuvatieto.ulkoinen) return osoite;
+  if (leveys <= KARUSELLIN_KATTO) return karuselliOsoite(osoite);
+  return leveys <= PIENEN_KATTO ? pieniOsoite(osoite) : osoite;
+}
+
+/**
+ * ESILADATTUJEN KUVIEN VARASTO. Yksi pyyntö per osoite (sama kirjanpito
+ * kuin ui-apurit esilataaKuvat), ja valmis Image-olio jää talteen,
+ * kunnes paneeli ottaa sen käyttöönsä. `ota` antaa elementin vain
+ * KERRAN: sama olio ei voi olla kahdessa paikassa DOM-puuta, ja
+ * uudelleen katsottu pysäkki saa oman kuvansa selaimen välimuistista.
+ */
+function luoKuvavarasto(katto = KUVAVARASTON_KATTO) {
+  const kuvat = new Map();
+  return {
+    /** Lataa ja dekoodaa osoitteen, ellei sitä jo ole jonossa. */
+    esilataa(osoite) {
+      if (!osoite || kuvat.has(osoite) || typeof Image !== 'function') return;
+      // Varasto on ETUKENOA eikä välimuisti: vanhin poistuu, kun katto
+      // täyttyy (Map muistaa lisäysjärjestyksen). Selaimen oma
+      // välimuisti hoitaa loput — nämä oliot vain pitävät bittikartan
+      // purettuna niiden parin pysäkin ajan, jotka ovat tulossa.
+      while (kuvat.size >= katto) kuvat.delete(kuvat.keys().next().value);
+      const kuva = new Image();
+      kuva.decoding = 'async';
+      const tieto = { kuva, valmis: false };
+      kuvat.set(osoite, tieto);
+      const merkitse = () => { tieto.valmis = kuva.naturalWidth > 0; };
+      kuva.addEventListener('load', () => {
+        // Dekoodaus valmiiksi asti: pelkkä lataus jättäisi WebP:n
+        // purkamisen siihen kehykseen, jossa valo syttyy.
+        if (typeof kuva.decode === 'function') kuva.decode().then(merkitse, merkitse);
+        else merkitse();
+      }, { once: true });
+      kuva.addEventListener('error', () => kuvat.delete(osoite), { once: true });
+      kuva.src = osoite;
+    },
+    /** Onko osoite jo dekoodattu valmiiksi? */
+    onValmis(osoite) { return Boolean(kuvat.get(osoite)?.valmis); },
+    /** Valmis elementti kerran; muuten null. */
+    ota(osoite) {
+      const tieto = kuvat.get(osoite);
+      if (!tieto?.valmis) return null;
+      kuvat.delete(osoite);
+      return tieto.kuva;
+    },
+    tyhjenna() { kuvat.clear(); },
+    get koko() { return kuvat.size; },
+  };
+}
+
 /** Kuva pergamentille; ilman lähdettä nimikirjainlaatta. */
-function kuvaTaiLaatta(kuvatieto, nimi, leveys, luokka) {
+function kuvaTaiLaatta(kuvatieto, nimi, leveys, luokka, varasto = null) {
   const kehys = solmu('div', `aikajana-kuvakehys ${luokka}`);
   if (onKuva(kuvatieto)) {
-    const kuva = document.createElement('img');
+    /*
+     * ESILADATTU OLIO SELLAISENAAN (omistaja 5.9.2026: *"havainnekuvat
+     * pitää esiladata, nyt tulivat vähän perässä"*): varastossa oleva
+     * kuva on jo ladattu JA dekoodattu, joten se liitetään suoraan
+     * paneeliin — uutta pyyntöä ei lähde eikä dekoodausta odoteta.
+     */
+    const esiladattu = varasto?.ota?.(paneelikuvanOsoite(kuvatieto, leveys)) ?? null;
+    const kuva = esiladattu ?? document.createElement('img');
+    if (esiladattu) kuva.dataset.esiladattu = '1';
     kuva.alt = kuvatieto.selite ?? nimi ?? '';
     kuva.decoding = 'async';
     kuva.loading = 'eager';
@@ -896,7 +1140,10 @@ function kuvaTaiLaatta(kuvatieto, nimi, leveys, luokka) {
      * alkuperäinen varana (asetaAmpariKuva). Commons-kuva
      * (`tiedosto`) menee peilin ja Commonsin portaita kuten ennen.
      */
-    if (kuvatieto.ulkoinen && kuvatieto.osoite) {
+    if (esiladattu) {
+      // src on jo paikallaan ja bittikartta muistissa: varareittejä ei
+      // tarvita, koska esilataus onnistui.
+    } else if (kuvatieto.ulkoinen && kuvatieto.osoite) {
       // Kuva oman kansion ulkopuolelta (isoisän valokuva): ei pieni-versiota, ei varareittiä.
       kuva.src = kuvatieto.osoite;
     } else if (kuvatieto.osoite) asetaAmpariKuva(kuva, kuvatieto.osoite, leveys);
@@ -1199,6 +1446,17 @@ class Aikajana {
      */
     this.ennakkoKohde = null;
     this.teravoitus = null;
+    /*
+     * KAMERAN ENNAKKO (omistaja 5.9.2026 ilta). `kameraKohde` on se
+     * pysäkki, jota kohti pallo on jo matkalla — sama kirjanpito kuin
+     * karusellin ennakolla, mutta oma luku, koska kamera lähtee eri
+     * hetkellä ja saa saapua vasta syttymisen jälkeen.
+     */
+    this.kameraKohde = null;
+    /** Terävä tila pakotettuna (js/pallo.js) — vain kerran ja aina takaisin. */
+    this.laatuPakotettu = false;
+    /** Seuraavien pysäkkien valmiiksi dekoodatut kuvat (luoKuvavarasto). */
+    this.paneelikuvat = luoKuvavarasto();
     // Naksahduksen katto: nolla on "kauan sitten", koska kello
     // käynnistyy vasta kamera-ajon jälkeen.
     this.viimeNaksu = 0;
@@ -1678,6 +1936,76 @@ class Aikajana {
     return kamera.ajaKamera({ bbox: kaarenKameralaatikko(alue, this.juuri), marginaali: 0.03 }, { kesto });
   }
 
+  /* ---------- lähikuva ja ennakoiva kamera pallolla ---------- */
+
+  /**
+   * AJON ALKUNÄKYMÄ. Pallolla ajo alkaa ENSIMMÄISEN lampun yltä
+   * lähikuvassa (omistaja 5.9.2026: *"zoomaa maapallo näin lähelle"*),
+   * koska koko kaaren rajaus veisi kameran heti sen jälkeen kauas siitä
+   * näkymästä, jossa ajo pysyy. Tasokartalla näkymä on entinen koko
+   * kaaren sovitus — lähikuva on pallon oma, siellä laatat riittävät.
+   */
+  sovitaAlkuun(kesto = this.reducedMotion ? 0 : 1400) {
+    if (this.pallolla) {
+      const i = this.tapahtumat.findIndex((t) => Number.isFinite(t.lat) && Number.isFinite(t.lon));
+      if (i >= 0) {
+        this.kameraKohde = i;
+        return this.ajaPysakille(i, kesto);
+      }
+    }
+    return this.sovitaKaareen(kesto);
+  }
+
+  /**
+   * Kamera pysäkin `i` ylle lähikuvaan. Vain pallolla: tasokartalla ajo
+   * sovittaa koko kaaren eikä seuraa pysäkkejä.
+   *
+   * @param {number} i pysäkin indeksi
+   * @param {number} kesto ajon kesto ms (0 = hyppy)
+   * @returns {Promise<boolean>}
+   */
+  ajaPysakille(i, kesto) {
+    const t = this.tapahtumat[i];
+    const kamera = this.kamera();
+    if (!this.pallolla || !t || !kamera?.ajaKamera) return Promise.resolve(false);
+    if (!Number.isFinite(t.lat) || !Number.isFinite(t.lon)) return Promise.resolve(false);
+    return kamera.ajaKamera(
+      {
+        x: t.x, y: t.y, lat: t.lat, lng: t.lon, leveys: AIKAJANAN_LAHIKUVA_LEVEYS,
+      },
+      { kesto: this.reducedMotion ? 0 : Math.max(0, kesto), pehmennys: aikajananKameranPehmennys },
+    );
+  }
+
+  /**
+   * KAMERA LÄHTEE ENNEN SYTTYMISTÄ JA SAAPUU VASTA SEN JÄLKEEN
+   * (omistaja 5.9.2026 ilta, ks. AIKAJANAN_KAMERAN_ENNAKKO_MS).
+   * Saapumisaika lasketaan samalla puhtaalla funktiolla kuin karusellin
+   * ennakko; kesto venytetään jälkijätöllä, jolloin pehmennyksen loppu
+   * jää hiipumaan syttymisen yli.
+   */
+  tarkistaKameraEnnakko(tahti) {
+    if (!this.pallolla || this.reducedMotion) return;
+    const kohde = this.tila.i + 1;
+    if (this.kameraKohde === kohde || kohde >= this.tapahtumat.length) return;
+    const eta = aikaSeuraavaan(this.tila, this.tapahtumat, tahti, AIKAJANAN_KAMERAN_ENNAKKO_MS + AIKAJANA_ALIASKEL_MS);
+    if (!Number.isFinite(eta)) return;
+    this.kameraKohde = kohde;
+    this.ajaPysakille(kohde, Math.max(AIKAJANAN_KAMERAN_POHJA_MS, eta + AIKAJANAN_KAMERAN_JALKIJATTO_MS));
+  }
+
+  /**
+   * TERÄVÄ TILA KOKO AJON AJAN (omistaja 5.9.2026: *"pidä kokoajan
+   * terävä tila päällä"*). Pyyntö menee js/pallo.js:n laatunostolle ja
+   * VAPAUTETAAN AINA purussa — lippu pitää huolen, ettei sama ajo
+   * pyydä kahdesti eikä vapauta toisen pyytäjän puolesta.
+   */
+  pakotaLaatu(paalla) {
+    if (!this.pallolla || paalla === this.laatuPakotettu) return;
+    this.laatuPakotettu = paalla;
+    pakotaPallonLaatu(paalla);
+  }
+
   /* ---------- musiikki (js/siirtymamusiikki.js) ---------- */
 
   /**
@@ -1776,6 +2104,11 @@ class Aikajana {
     this.juuri.style.opacity = '0';
     // Koko kaaren pienet kuvat taustalle jo pimennyksen aikana.
     this.esilataaPienet();
+    // Kahden ensimmäisen pysäkin havainnekuvat myös DEKOODATAAN, jotta
+    // ensimmäinen paneeli piirtyy heti valon syttyessä.
+    this.valmistaSeuraavat(-1);
+    // Terävä tila päälle koko ajon ajaksi (vapautetaan purussa).
+    this.pakotaLaatu(true);
     this.avaaAanimaailma();
     // Musiikki alkaa jo pimennyksessä mutta HILJAA: täysi linssitaso
     // tulee vasta Käynnistä-napista, kuten kellokin.
@@ -1865,7 +2198,7 @@ class Aikajana {
        * hiljainen, ja Käynnistä katkaisee luennan kesken (aloitaAjo).
        */
       if (esittely.teksti) soitaLinssiluenta(this.ui, null, { runko: ESITTELYN_RUNKO });
-      const ajo = Promise.resolve(this.sovitaKaareen(heti ? 0 : AVAUS_KAMERA_MS))
+      const ajo = Promise.resolve(this.sovitaAlkuun(heti ? 0 : AVAUS_KAMERA_MS))
         .then(() => new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok))));
       // Alaraja on otsikon lukuaika, yläraja katto: kumpikin täyttyy.
       const lukuaika = new Promise((ok) => this.avausViive(ok, heti ? 0 : AVAUS_LUKUAIKA_MS));
@@ -1987,7 +2320,9 @@ class Aikajana {
     this.paikkarivi.textContent = `${this.kaari.alku}–${this.kaari.loppu}`;
     this.asettele();
     this.naytaVuosi(this.kaari.alku, true);
-    this.sovitaKaareen();
+    this.kameraKohde = null;
+    this.sovitaAlkuun();
+    this.valmistaSeuraavat(-1);
     this.jatka();
   }
 
@@ -2040,7 +2375,7 @@ class Aikajana {
     this.tila = tila;
     this.naytaVuosi(tila.vuosi);
     if (syttyi !== null) this.sytyta(syttyi);
-    else if (!this.luentaSoi()) this.tarkistaEnnakko(tahti);
+    else if (!this.luentaSoi()) { this.tarkistaEnnakko(tahti); this.tarkistaKameraEnnakko(tahti); }
     this.paivitaMittakaava();
     if (loppu) {
       this.lopeta();
@@ -2144,6 +2479,17 @@ class Aikajana {
     this.loppu = true;
     this.pysayta();
     this.juuri.classList.add('lopussa');
+    /*
+     * KAAREN LOPUSSA KAMERA PERÄÄNTYY (lähikuvan seuraus, 5.9.2026):
+     * ajo katsoo yhtä lamppua kerrallaan, mutta loppusanat lupaavat,
+     * että *"kartalla palavat nyt kaikki kaaren valot"* — ja lähikuvassa
+     * niistä näkyisi yksi. Sama pehmeä ajo kuin muutkin, ja vain
+     * pallolla: tasokartta on jo koko kaaren näkymässä.
+     */
+    if (this.pallolla) {
+      this.kameraKohde = null;
+      this.sovitaKaareen();
+    }
     for (const valo of this.valot) { if (valo) this.asetaValonTila(valo, valo.g.classList.contains('palaa'), false); }
     const loppu = this.kaari.loppusanat;
     if (loppu) {
@@ -2249,6 +2595,32 @@ class Aikajana {
     esilataaKuvat(osoitteet);
   }
 
+  /**
+   * SEURAAVAT PYSÄKIT VALMIIKSI DEKOODATTUINA (omistaja 5.9.2026 ilta:
+   * *"havainnekuvat pitää esiladata, nyt tulivat vähän perässä"*).
+   *
+   * esilataaPienet pyytää koko kaaren pienet tiedostot heti, mutta
+   * pyyntö ei pura WebP:tä — se tehdään vasta, kun kuva pannaan
+   * ruudulle. Tässä seuraavan KAHDEN pysäkin havainnekuva ja
+   * muotokuvat ladataan JA dekoodataan jo edellisen pysäkin aikana,
+   * ja valmis Image-olio jää varastoon paneelin otettavaksi
+   * (kuvaTaiLaatta). Kutsutaan pysäkin vaihtuessa ja käynnistyksessä
+   * (`i = -1`), joten jonossa on aina enintään pari kuvaa.
+   *
+   * @param {number} i juuri syttynyt pysäkki (−1 ennen ensimmäistä)
+   */
+  valmistaSeuraavat(i) {
+    for (let n = 1; n <= PANEELIN_ESILATAUS_PYSAKKEJA; n += 1) {
+      const t = this.tapahtumat[i + n];
+      if (!t) return;
+      // Havainnekuva paneelin omalla leveydellä (640) ja muotokuvat
+      // karusellin mitassa (400) — samat osoitteet kuin ruudulla.
+      this.paneelikuvat.esilataa(paneelikuvanOsoite(t.ilmio, 640));
+      this.paneelikuvat.esilataa(paneelikuvanOsoite(t.kuva, 400));
+      this.paneelikuvat.esilataa(paneelikuvanOsoite(t.kuvaToinen, 400));
+    }
+  }
+
   sytyta(i) {
     const t = this.tapahtumat[i];
     for (const valo of this.valot) { if (valo) this.asetaValonTila(valo, valo.g.classList.contains('palaa'), false); }
@@ -2272,6 +2644,18 @@ class Aikajana {
      */
     this.paattaEnnakko();
     this.asettele();
+    /*
+     * KAMERA ON JO PERILLÄ TAI YHÄ MATKALLA (tarkistaKameraEnnakko).
+     * Jos ennakko ei ehtinyt lähteä — lyhyt väli, pysäytetystä
+     * jatkaminen tai ensimmäinen pysäkki — ajo lähtee nyt pohjakestolla,
+     * jotta lamppu ei jää ruudun ulkopuolelle lähikuvassa.
+     */
+    if (this.pallolla && this.kameraKohde !== i) {
+      this.kameraKohde = i;
+      this.ajaPysakille(i, AIKAJANAN_KAMERAN_POHJA_MS);
+    }
+    // Seuraavien pysäkkien kuvat valmiiksi jo tämän pysäkin aikana.
+    this.valmistaSeuraavat(i);
     // Avausjakson aikana selostaja vaikenee: esitys alkaa vasta napista.
     if (this.avausKesken) return;
     /*
@@ -2520,7 +2904,15 @@ class Aikajana {
      */
     this.lopetaKuvakierto();
     if (onKuva(t.ilmio)) {
-      const kehys = kuvaTaiLaatta(t.ilmio, t.otsikko, 640, 'aikajana-ilmiokuva');
+      const kehys = kuvaTaiLaatta(t.ilmio, t.otsikko, 640, 'aikajana-ilmiokuva', this.paneelikuvat);
+      /*
+       * VALOKEILAN EPÄSÄÄNNÖLLINEN REUNA (omistaja 5.9.2026 ilta:
+       * *"saisiko havainnekuvan häivytyksen hieman epäsäännöllisemmän
+       * muotoiseksi?"*). Muoto lasketaan kerran tapahtuman indeksistä,
+       * joten sama kuva saa aina saman reunan ja kuvat eroavat
+       * toisistaan; css lukee sen muuttujasta (css/aikajana.css).
+       */
+      kehys.style.setProperty('--aikajana-valokeila', valokeilanMaski(t.n ?? t.vuosi ?? 0));
       const sarja = [t.ilmio, ...(t.ilmioSarja ?? [])].filter(onKuva);
       if (sarja.length > 1) this.aloitaKuvakierto(kehys, sarja, t.otsikko);
       if (t.juttu) {
@@ -2580,7 +2972,10 @@ class Aikajana {
      * pitää huolen, ettei vaihto jää odottamaan verkkoa.
      */
     const kuva = sivu.querySelector('img');
-    const valmis = kuva && typeof kuva.decode === 'function'
+    // Esiladattua ei odoteta lainkaan: bittikartta on jo muistissa,
+    // joten sivu voi liukua esiin samalla kehyksellä kuin valo syttyy.
+    const esiladattu = Boolean(kuva?.dataset?.esiladattu) || Boolean(kuva?.complete && kuva.naturalWidth > 0);
+    const valmis = kuva && !esiladattu && typeof kuva.decode === 'function'
       ? Promise.race([kuva.decode().catch(() => {}), new Promise((ok) => setTimeout(ok, PANEELIN_DEKOODAUSKATTO_MS))])
       : Promise.resolve();
     void valmis.then(() => requestAnimationFrame(() => {
@@ -2900,6 +3295,11 @@ class Aikajana {
     this.paikkarivi.textContent = [t.vuosi, paikka(t)].filter(Boolean).join(' · ');
     this.vaihdaPaneeli(t);
     this.asettele();
+    // Selaus vie kameran mukanaan: lähikuvassa toinen pysäkki on
+    // ruudun ulkopuolella, eikä lamppua näkisi lainkaan.
+    this.kameraKohde = i;
+    this.ajaPysakille(i, AIKAJANAN_KAMERAN_POHJA_MS);
+    this.valmistaSeuraavat(i);
     this.taukoNappi.textContent = 'Jatka';
     this.juuri.classList.add('tauolla');
   }
@@ -3013,6 +3413,10 @@ class Aikajana {
     } else {
       maaritykset?.remove();
     }
+    // Terävän tilan pakotus pois AINA, myös kesken ajon suljettaessa.
+    this.pakotaLaatu(false);
+    this.paneelikuvat.tyhjenna();
+    this.kameraKohde = null;
     if (this.vastaskaala) this.ui.nipistysVastaskaalaajat?.delete(this.vastaskaala);
     document.body.classList.remove('aikajana-paalla');
     /*
