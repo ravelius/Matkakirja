@@ -301,7 +301,7 @@ export const KAARI_PAKETIT = {
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Lontoo — valo löytää kadun',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
        *
        * KOKO KAARI VAIHDETTU (kuvaputken tarinaehdotus 5.9.2026,
        * Fablen päätös samana iltana klo 19:05 UTC: *"Lontoo — Leila
@@ -1015,7 +1015,7 @@ export const KAARI_PAKETIT = {
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Dubrovnik — ranta näkyy vain mereltä',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
        *
        * KOKO KAARI VAIHDETTU (kuvaputken tarinaehdotus 5.9.2026,
        * Fablen päätös klo 19:05 UTC: *"Dubrovnik — Mara (hyväksytty
@@ -1050,7 +1050,7 @@ export const KAARI_PAKETIT = {
       saapuminen: 'Veneestä ranta aukeni kuin ovi. Maalta en löytänyt samaa '
         + 'kohtaa lainkaan: kiersin kalliota kaksi tuntia ja merkitsin '
         + 'karttaan kolme umpikujaa. Soutaja käänsi piirrokseni oikein '
-        + 'päin sanomatta mitään. Kartanpiirtäjä oli piirtänyt oikein ja '
+        + 'päin sanomatta mitään. Olin piirtänyt oikein ja '
         + 'katsonut väärästä suunnasta. Kirjasin senkin.',
       henkilo: 'Merimelontaopas Mara vie ryhmiä kallionalusrantoihin, '
         + 'joihin ei pääse maalta.',
@@ -1245,7 +1245,7 @@ export const KAARI_PAKETIT = {
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Odessa — kuitti väärältä puolelta',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
        *
        * KOKO KAARI VAIHDETTU (kuvaputken tarinaehdotus 5.9.2026,
        * Fablen päätös klo 19:05 UTC: *"Odessa — Iryna ja Solomiia

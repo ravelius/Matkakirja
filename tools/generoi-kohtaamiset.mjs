@@ -34,7 +34,7 @@ const PELAAJA = 'JMfkzZiSsox62UXcXUqM'; // Jaakko — nuori Fogg
 // Hahmoääni per kaupunki. Uusi kaupunki tarvitsee rivin tänne —
 // valitse tilin äänistä hahmon ikään ja luonteeseen sopiva.
 /*
- * LUONNOS 5.9.2026, Fable tarkistaa.
+ * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
  *
  * LONTOON ÄÄNI ON POISTETTU TARKOITUKSELLA. Rivi oli
  * `lontoo: 'Gp43kq9FsSlavD7esRtx'` (Vaino — vanha, rauhallinen), ja se

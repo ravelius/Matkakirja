@@ -72,7 +72,7 @@
  * jonotetaan" tekstiä (js/packs/kulttuuri-kategoriat.js). Uusia
  * faktaväitteitä ei ole kummassakaan.
  *
- * MIKSI EI SAVUKYSYMYSTÄ (LUONNOS 5.9.2026, Fable tarkistaa):
+ * MIKSI EI SAVUKYSYMYSTÄ (Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10):
  * kaupungin laattakysymys koskee savua ja vuoden 1956 Clean Air Actia
  * (ks. KOHTAAMINEN alempana). Jos lehden aarteen avaava tehtävä kysyisi
  * samasta savusta, kysymys olisi ratkaistu ennen kuin Leila on tavattu.
@@ -201,7 +201,7 @@ export const FOKUSVIRTA_LONTOO = {
   takyt: [
     {
       /*
-       * MIKSI TÄMÄ TÄKY (LUONNOS 5.9.2026, Fable tarkistaa): täky
+       * MIKSI TÄMÄ TÄKY (Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10): täky
        * kytkeytyi ennen kohtaamisen hahmoon, jokilöytäjä Nediin. Hahmo
        * vaihtui Leilaksi (js/tyohuone-kehitys-data.js, KAARI_PAKETIT
        * 'lontoo'), mutta täky JÄÄ paikalleen: se on yhä
@@ -332,7 +332,7 @@ export const FOKUSVIRTA_LONTOO = {
        * väittää, ettei aarteita ole". Tämä on Lontoon oma todiste —
        * kellarista kaivettu laatikko, jota kukaan ei osannut odottaa.
        * Sattumalta myös kellotarina: aarteen omituisin esine on kello.
-       * (LUONNOS 5.9.2026: rivin toinen puolisko viittasi Nedin
+       * (Uudistus 5.9.2026: rivin toinen puolisko viittasi Nedin
        * taskukelloon, joka poistui kaaresta — kytkös on nyt vain
        * kätkettyyn laatikkoon, ja se riittää.)
        *
@@ -413,7 +413,7 @@ export const FOKUSVIRTA_LONTOO = {
    * KAARI_PAKETIT, lontoo). Visasääntö täyttyy — vastaus on tekstissä,
    * mutta kysymyksen sanamuoto ei toistu siinä sellaisenaan.
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa: OPPITUNTIIN ON LISÄTTY VIIMEINEN
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10: OPPITUNTIIN ON LISÄTTY VIIMEINEN
    * KAPPALE vuoden 1956 Clean Air Actista, koska kaaren kysymys vaihtui
    * sumun synnystä sen loppuun johtaneeseen lakiin (Fablen päätös
    * 5.9.2026 klo 19:05 UTC: *"Kysymys … nousee Leilan puheesta ja
@@ -509,7 +509,7 @@ export const FOKUSVIRTA_LONTOO = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa.
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
    *
    * HAHMO VAIHDETTU: jokilöytäjä Ned → muotialan opiskelija Leila
    * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 19:05 UTC:
@@ -546,7 +546,7 @@ export const FOKUSVIRTA_LONTOO = {
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa.
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
    *
    * KOHTAAMISPAIKKA VAIHDETTU: MILLENNIUM BRIDGEN LASKUVESIRANTA →
    * LEADENHALL MARKETIN KULMA. Vanha piste kuului jokilöytäjä Nedille;

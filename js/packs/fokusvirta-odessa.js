@@ -126,7 +126,7 @@
  *     tasanteet" jäävät pois. TÄMÄ RATKAISI MYÖS PÖLLÖN KUVAN:
  *     kaupunkilehden portaikkohero olisi ollut luonteva valinta, mutta
  *     sen selite sanoo molemmat asiat ääneen, joten heroksi valittiin
- *     Vorontsovin kolonnadi. (LUONNOS 5.9.2026: rajoitus ei enää seuraa
+ *     Vorontsovin kolonnadi. (Uudistus 5.9.2026: rajoitus ei enää seuraa
  *     K6:sta vaan K2:sta ja siitä, että ratkaisu on jo tehty — kuvaa ja
  *     täkyä ei kirjoiteta uusiksi kysymyksen vaihtumisen takia.)
  *   - KATAKOMBEISTA EI OLE TÄKYÄ (K7), vaikka aihe on kaupungin
@@ -882,7 +882,7 @@ export const FOKUSVIRTA_ODESSA = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa.
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
    *
    * HAHMO VAIHDETTU: lyhdynsytyttäjä Fjodor → torimyyjä Iryna
    * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 19:05 UTC:
@@ -942,7 +942,7 @@ export const FOKUSVIRTA_ODESSA = {
    */
 
   /*
-   * LUONNOS 5.9.2026, Fable tarkistaa.
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
    *
    * KOHTAAMISPAIKKA VAIHDETTU: PORTAIKON PUOLIVÄLIN TASANNE → PRIVOZIN
    * TORI. Vanha piste kuului lyhdynsytyttäjä Fjodorille, jonka koko

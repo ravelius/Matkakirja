@@ -492,7 +492,7 @@ export const HAVAINTOLUENNAT = new Set([
  * kaupungeissa, joiden luentaa ei ole vielä tehty.
  */
 /*
- * LUONNOS 5.9.2026, Fable tarkistaa.
+ * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
  *
  * LONTOO POISTETTU TILAPÄISESTI. Kaupungin kohtaaminen kirjoitettiin
  * uusiksi (js/packs/kohtaamiset.js: jokietsijä Ned → muotialan

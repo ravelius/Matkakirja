@@ -59,7 +59,7 @@
  */
 export const KOHTAAMISET = {
   /*
-   * LUONNOS 5.9.2026, Fable tarkistaa.
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
    *
    * LONTOO: NED KORVATTU LEILALLA (kuvaputken tarinaehdotus 5.9.2026,
    * Fablen päätös klo 19:05 UTC: *"Molemmat Ned-versiot (kaari + vanha
@@ -108,7 +108,7 @@ export const KOHTAAMISET = {
       + 'Minäkin palasin tähän kolmesti ennen kuin sain valon oikein."',
   },
   /*
-   * LUONNOS 5.9.2026, Fable tarkistaa.
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
    *
    * DUBROVNIK JA ODESSA SAAVAT ENSIMMÄISTÄ KERTAA OMAN RIVIN. Syy on
    * Fablen linjaus 5.9.2026 klo 19:05 UTC: *"löytörepliikit sidotaan

@@ -60,7 +60,7 @@
  * tehtävä kysyisi samasta vapaudesta, aarrekysymys olisi ratkaistu
  * ennen kuin kohtaamishenkilö on tavattu.
  *
- * LUONNOS 5.9.2026, Fable tarkistaa: rajaus on ennallaan, mutta hahmo
+ * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10: rajaus on ennallaan, mutta hahmo
  * vaihtui (muurinvartija Ivo → merimelontaopas Mara) ja kysymyksen
  * sanamuoto ei enää puhu lipusta vaan sanasta — lipun täsmällistä
  * käyttöä eri aikakausina ei väitetä.
@@ -497,7 +497,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa.
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
    *
    * HAHMO VAIHDETTU: muurinvartija Ivo → merimelontaopas Mara
    * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 19:05 UTC:
@@ -533,7 +533,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa.
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
    *
    * KOHTAAMISPAIKKA VAIHDETTU: PILEN PORTTI → KALLIORANTA VANHAN
    * KAUPUNGIN KAAKKOISPUOLELLA. Vanha piste kuului muurinvartija
