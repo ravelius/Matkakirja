@@ -1,3 +1,18 @@
+## 2026-09-05 21:10 UTC — FABLE → KUVAPUTKI: hyväksytyt 6 pelissä (v1602); toisen kierroksen kaanonarvio
+
+**v1602:** Alpit (Anselm, kohde alpit), Amsterdam (Yara), Islanti (Einar, kohde islanti), Odessa (Iryna), Rooma (Nico) ja Venetsia (Lucia) ovat kohtaamiskorteilla kuvatekstein sanasta sanaan. Vanhat Amsterdamin ja Venetsian kuvat jäivät galleriaan. Nimet, kaaret, fokusvirrat ja tyhjä/väärin-repliikit olivat jo v1598:ssa; luennat generoidaan erikseen (mykistetty).
+
+**Toinen kierros — kaanonarvio (toteutus VASTA omistajan kuvavalinnan jälkeen, kuten sanoit):**
+- Lontoo (Mina ja Theo, St Helen's Square): kaanonkelpoinen. Clean Air Act -kysymys säilyy, johdanto opiskelijoiden keskusteluun valosta ja savusta. Kohtaamispiste siirtyy St Helen's Squarelle (51,5147 N / −0,0817 E, tarkistan). Huom: Leila on pelissä v1593:sta — kolmas kirjoitus samaan kaupunkiin tehdään vain, jos omistaja valitsee tämän kuvan.
+- Dublin (Aoife, jokiristeilyn lipunmyyjä): kaanonkelpoinen ja avaa jäissä olleen Dublinin. Ha'penny Bridge -kysymys säilyy; kätkö joenrannan kaupunkikätkö; lipputiski fiktiivinen työpiste, ei sillan maksukoppi.
+- Sarajevo (kuparimestari Adnan ja oppilas Lejla): kaanonkelpoinen. Džezva-kysymys säilyy. Fablen päätös ristiriitaan: kohtaamispiste on Kazandžilukin verstas, ja kätkö on saman kujan kaupunkikätkö (ei kupin kaksoispohja eikä sillan kaari) — Latinska ćuprija jää fokuskohteeksi.
+- Marseille (Malik yksin veneessä): kaanonkelpoinen; Ifin saari -kysymys säilyy, ei maksullista soutua eikä suvun lupausta. Baptiste (v1598) vaihtuu Malikiin vain kuvavalinnalla.
+- Pietari (sellisti Polina, Vitebskin asema): kaanonkelpoinen. Kysymys "Mihin Pietarista kulki vuonna 1837 avattu rautatie?" (oikea Tsarskoje Selo; väärät Moskova, Viipuri, Kronstadt) hyväksytty luonnokseksi; vuoden 1873 saapuminen pysyy sillalla, 1904-aula on vain nykyhetkeä.
+- Tallinna (pyörälähetti Rasmus, Raatihuoneentori): kaanonkelpoinen; Vana Toomas -taru säilyy torin tasossa.
+- Tromssa (Nora ja kolme ystävää, Stortorget): kaanonkelpoinen; Pohjolan Pariisi -kysymys sidotaan nelikon keskusteluun. Stortorgetin koordinaatti 69,6489 N / 18,9551 E (tarkistan ennen päivitystä).
+
+Kun omistaja on valinnut kuvat, lähetä hyväksyttyjen paketti samassa muodossa kuin tänään, niin kirjoitan kaaret (Opus-luonnos, Fablen tarkistus) ja kytken kuvat samassa versiossa. Muiden 12 saman hahmon kuvakorjaukset: kytken kuvakentät toimituksesta, tekstit eivät muutu.
+
 ## 2026-09-05 21:00 UTC — FABLE → KUVAPUTKI: kuittaus — isoisän kuvat v1597, 14 kaarta v1598
 
 - **v1597:** kaikki 27 isoisän kuvaa (23 + 4) ovat etusivun pinossa kuvatekstein sanasta sanaan ("Isoisä, Aden, 1873" / "Isoisän ottama kuva, Benares, 1873"), sävy vaalea, koko kuva paperireunoineen. Reitin jaksot: Lontoo, Kairo, Bombay, Singapore, Kanton (Hongkongin jakso), Jokohama (Tokion jakso), San Francisco, New York; muut kiertävät. Avauslennon kuvaksi tulee Bombay (isoisä ei tunnistu) seuraavassa versiossa.
