@@ -852,3 +852,138 @@ ja Käynnistä toimivat, lampun napautus siirtää pysäkkiin (myös Lontoon
 kaupunkipisteestä: pysäkki 1837 eikä kaupunkilehteä) ja "Ei linssiä"
 palauttaa pallon entiseen näkymään (lamput 25 → 0, kalvo pois,
 linssikartta false).
+
+**Aalto 3A — lähtökaupungin valinta pallolle (5.9.2026).** Aalto 1D
+jätti tähän yhden poikkeuksen (kohta 4: *"LÄHTÖKAUPUNKI VALITAAN YHÄ
+TASOKARTALTA"*), ja se oli pallolaudan VIIMEINEN pelitoiminto, joka
+herätti js/kartta.js:n: "Valitse aloituskaupunki" ajoi
+`kartta.heraa()` → `zoomaaAloituskartta` → `drawTargets`. Nyt
+valintanäkymä on pallon oma, eikä pallolaudalla ole enää yhtään
+kutsua, joka herättäisi kartan (aalto 3B voi poistaa sen). Vanha kulku
+säilyy `?lauta=kartta`-tilassa ja pallon varapolkuna.
+
+- **Nappi haarautuu, ei muutu.** `js/ui.js aloitaKartalta` soittaa
+  naksun ja häivyttää avaustekstin kuten ennen, ja jakautuu sitten
+  kahdeksi: `aloitaPallolta` (uusi) ja `aloitaTasokartalta` (entinen
+  runko sellaisenaan). Livian avausrepliikit lähtevät kummallakin
+  laudalla samasta kutsusta (`naytaLivianAvaus`), tekstit ja äänet ovat
+  ennallaan, ja valinta päätyy molemmilta `doPickStart`iin — peli ei
+  tiedä kummalta laudalta valinta tuli.
+- **Oma lippu, ei `aloitusZoom`.** Valintatilaa kantaa
+  `ui.aloitusvalintaPallolla`, ja `ui.aloitusvalintaAuki()` yhdistää
+  sen tasokartan lähikuvaan yhdeksi kysymykseksi. Syy on mitattu:
+  `aloitusZoom` on TASOKARTAN tila, jonka js/kartta.js nollaa aina kun
+  kartta nukahtaa (`nollaaAloitusZoom`) — ja juuri se tapahtuu, kun
+  pallo avataan hereillä olleen kartan päälle (`?etusivupallo=0`),
+  jolloin valintatila katosi samassa piirrossa kuin se syntyi.
+- **Pallo avautuu jo pickstart-vaiheessa.** `pallolautaHalutaan` palaa
+  pickstartissa lipun mukaan; muissa vaiheissa portti on entinen laudan
+  pakka. Avausnäkymässä ylälohkossa on yhä kevyt esirenderöity
+  pallovideo, ja se puretaan samassa piirrossa kuin lippu nousee
+  (`renderIntro`), joten WebGL-lauta maksetaan vasta napautuksesta.
+- **PALLON LAUTA ON AINA MAAILMANKARTTA.** Aloitusnäytön lauta
+  (js/packs/maailma.js) on eri koordinaatistossa, eikä sen pisteitä voi
+  projisoida pallolle. `js/pallolauta/lauta.js` ratkaisee siksi
+  `pack`in kerran (`ui.game.pack.id === PALLO_LAUTA ? … :
+  packById(PALLO_LAUTA)`) ja antaa saman pakan nimikerrokselle, joka
+  muistaa aineistonsa (`luoNimet({ …, pack })`) — muuten välimuistiin
+  olisi jäänyt väärän laudan pisteet. Pelin paikat (nappula, nopan
+  lähtö, laattojen esilataus) kulkevat `pallonKohta`-apurin läpi, joka
+  hakee kaupungin tunnuksella pallon laudalta silloin kun pelin lauta
+  on toinen; ilman sitä matkaajan nappula seisoi valinnassa
+  Tyynellämerellä.
+- **Valittavat ovat pallon kohdemerkkejä.** `ui.aloitusvalinnanKohteet`
+  antaa ETUSIVUN_KOHTEET-kaupungit (sama joukko ja sama "vasta napin
+  jälkeen" -portti kuin `drawTargets`), ja laudan `kohdevalinta` työntää
+  ne merkkikerroksen osaan `peli` lajilla `kohde` — täsmälleen sama
+  datum ja sama `kohdeElementti` kuin nopanheiton kohteilla, joten halo,
+  kultalevy ja nimi tulevat samasta säännöstä. Napautus on laudan oma
+  R-osuma (`napautaKohde` → `ui.doPickStart(kohde.city)`); Lontoo on
+  lähtöpiste eikä valinta, joten sen napautus on vaiti
+  (kehittäjän maailmanäkymä ohittaa tämän kuten kartallakin).
+- **Niukkuus samasta joukosta.** `ui.aloitusvalinnanNakyvat`
+  (ETUSIVUN_NAKYVAT) rajaa pallolla nimet (`nimet.lado` `vain`, katto 2)
+  ja pisteet (`pisteNakyy`) samaan kahteen kaupunkiin, joihin
+  tasokartta rajaa aloituskartan (`paivitaAloituskaupungit`).
+- **KAMERA TÄHTÄÄ LAATIKON ETELÄPUOLELLE.** Ensimmäinen toteutus rajasi
+  Lontoon ja Ateenan avauslennon omalla laatikolla
+  (LENNON_RAJAUKSEN_MARGINAALI 0,35). Mitattu Chromiumilla 390 × 844:
+  pallon perspektiivi levitti molemmat ruudun laitoihin puoliksi
+  leikkautuneina, ja Ateena jäi TÄSMÄLLEEN Livian kuplapinon alle —
+  napautus meni kuplaan eikä kaupunkiin. Omistajan sääntö *"kuplat
+  eivät estä valintaa"* (29.8.2026) pitää siis pallollakin, joten
+  `aloitusnakyma` käyttää reilumpaa marginaalia
+  (ALOITUSVALINNAN_MARGINAALI 0,8) ja siirtää keskipistettä etelään
+  ruudun korkeudesta lasketulla varalla (ALOITUSVALINNAN_KUPLAVARA
+  0,34): sisältö nousee ruudulla kuplien yläpuolelle. Kamera-ajo on
+  laudan oma (`lauta.kamera.ajaKamera`), ja `avaaPallolauta` kutsuu sitä
+  `kotiin`-ajon sijasta, koska matkaajalla ei vielä ole paikkaa.
+- **Häivytetty avausteksti ei ota napautuksia.** Tasokartalla teksti
+  työntyy ruudun alle (`.intro-pois`), pallolla se vain häipyy — ja
+  näkymätön "Valitse aloituskaupunki" (`.intro-valinta` on
+  pointer-events: auto) olisi vienyt pallon pyörityksen. Css sulkee
+  `.intro.intro-fade`-puun kokonaan sormelta.
+- **Varapolku.** Jos Globe.gl kaatuu kesken valinnan,
+  `pallolautaVarapolku` nollaa lipun ja antaa valinnan kartalle
+  (`aloitaTasokartalta`) — muuten valinta jäisi yleiskuvaan ilman
+  kohdepisteitä.
+- Vartijat: tests/aloitus-pallolla.test.mjs (uusi) sekä päivitetyt
+  tests/pallolauta.test.mjs, tests/etusivupallo.test.mjs ja
+  tests/pallonimet.test.mjs; savuke-etusivupallo sai vartiot E9a–E9d
+  (nappi ei herätä karttaa, valittavat ovat pallon kohdemerkkejä,
+  kuplat eivät peitä niitä, napautus käynnistää pelin) ja ajaa
+  Chromiumin nyt ohjelmistorasteroijalla, jotta pallo rakentuu.
+  Selaimessa varmistettu 390 × 844 dpr 2 ilman tallennetta: avausnäkymä
+  → "Valitse aloituskaupunki" → valintatila (kartta.lepotila true,
+  svg#board 0 elementtiä, 1 kohdemerkki `aloitus:ateena`, nimet Lontoo
+  ja Ateena, 2 pistettä, nappula Lontoossa) → Ateenan napautus →
+  vaihe 'action', pakka 'maailmankartta' → avauslento pallolla (1 kaari,
+  1 kone, harso, repliikki). Vanha kulku `?lauta=kartta` ennallaan
+  (svg#board 206 elementtiä, 1 kohderengas).
+
+**Mitä js/kartta.js:stä pallolauta vielä ajaa (mitattu aallon 3B
+työlistaksi).** Kartta-olion metodit käärittiin selaimessa laskuriin ja
+peli pelattiin läpi avausnäkymästä ensimmäiseen nopanheittoon asti
+(Chromium 390 × 844). Lepotilassa kutsuttiin VAIN näitä seitsemää:
+
+| metodi | mistä | mitä tekee lepotilassa |
+|---|---|---|
+| `fitViewBox` × 3 | mount, ResizeObserver, showAloitusportti | palaa heti (lepotilan portti) |
+| `boardBounds` × 1 | showAloitusportti (`ui.contentBox`) | laudan rajat pakan datasta |
+| `withIntroSpace`, `introKaistaKaytossa` | boardBoundsin sisältä | avaustekstin kaista |
+| `nuku` × 2 | `avaaPallolauta`, `doPickStart` | lepotilan asetus |
+| `dieRestingSpot`, `kiertava` × 1 | `animateDie` (nopan lepopaikka) | ruutupiste ja kierron leveys |
+
+`heraa` ei kutsuttu kertaakaan — lähtövalinta oli sen viimeinen kutsuja
+(tämä aalto). Jäljellä on siis kolme oikeaa riippuvuutta: laudan rajat
+aloitusportin mitoituksessa, nopan lepopaikka ja kierron leveys. Kaikki
+kolme ovat pakan dataa eivätkä piirtoa, joten ne siirtyvät pieninä
+funktioina laudan omaan moduuliin. NELJÄS on linssikartta: kuori
+(js/pallolauta/linssikartta.js `ui.kartta.heraa/nuku/ajaKamera/
+kameranTila`) herättää kartan sille linssille, jolla ei ole
+`pallolle`-funktiota — mutta 5.9.2026 rekisterissä
+(js/linssit/rekisteri.js) EI OLE ENÄÄ YHTÄÄN sellaista: topografia,
+vesistöt, vertailu, maatiedot, keksinnöt ja radio ovat pallolla, ja
+seitsemäs (`pallo`) on toiminto eikä kerros. Kuori on siis jo nyt
+kuollutta koodia, ja `ui.pallolinssiKelpaa` on ainoa portti, joka
+päättää asian. Aallon 3B työlista on siis:
+(1) `ui.pallolautaPaalla`/`kamera()`/`paivitaPallolauta` -portit ja
+`kartta.lepotila` kokonaan pois, kun tasokarttaa ei enää ole;
+(2) linssikartan kuori ja `ui.avaaLinssikartta`/`suljeLinssikartta`
+pois, kun jokaisella linssillä on `pallolle`; (3) `ui.puraLauta`,
+`drawBoardFor`, `drawTargets`, `drawTokens`, `drawPawns`,
+`paivitaFokusKerros`, `paivitaAloituskaupungit`, `zoomaaAloituskartta`,
+`aloitaTasokartalta` ja `tasokartanLentokohtaus` pois;
+(4) `pallolautaVarapolku` ja `palloTurvatila` uusiksi — ilman
+tasokarttaa varapolku on jokin muu (ilmoitus, uudelleenyritys);
+(5) tiedostot js/kartta.js, js/linssit/kerros.js,
+js/pallolauta/linssikartta.js, js/laattapyramidi.js ja js/mapart.js
+sekä `?lauta=kartta` ja LAUTA-kytkin pois.
+
+HUOM luvun 10 inventaarioon: **js/karttanimet.js EI POISTU** aallossa
+3B, vaikka luvun alun lista niin sanoo. Pallo latoo nimensä sen
+funktioilla (`ladoRuutunimet`, `karttanimienKaupungit`,
+`KARTTANIMI_FONTTI`, `KARTTANIMI_KOOT` —
+js/pallolauta/{nimet,nostot}.js), ja se on tarkoituksellista: ladonnan
+sääntö on YKSI molemmille laudoille. Tiedostosta poistuu vain se osa,
+joka piirtää tasokartan svg:hen.

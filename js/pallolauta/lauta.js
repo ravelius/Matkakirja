@@ -69,6 +69,7 @@ import {
 } from '../pallo.js';
 import { asemoiFokuskohde } from '../fokuskohteet.js';
 import { laudaltaAsteiksi } from '../fokusmitat.js';
+import { packById } from '../pack.js';
 import { pixelOf, posKey } from '../rules.js';
 import {
   PALLON_TURVATILAN_UNOHDUS_MS, kehittajaMaailmaPaalla, kehittajaTilaPaalla,
@@ -114,6 +115,13 @@ export const KAUPUNKIPISTEEN_SADE = 0.03;
 export const MERKKIEN_SIIRTYMA_MS = 250;
 /** Napautuksen osuma ruudulla: lähin kaupunki tai kohde tämän säteen sisällä (px). */
 export const NAPAUTUKSEN_SADE_PX = 44;
+/**
+ * LÄHTÖVALINNAN NÄKYMÄ (aalto 3A, ks. aloitusnakyma alempana):
+ * marginaali laatikon ympärille ja ruudun alalaitaan jätettävä osuus,
+ * jottei Livian kuplapino peitä valittavia kaupunkeja.
+ */
+export const ALOITUSVALINNAN_MARGINAALI = 0.8;
+export const ALOITUSVALINNAN_KUPLAVARA = 0.34;
 /**
  * CSS2D-elementtejä pallolla enintään (karttapallo.md luku 6: nimet 40,
  * kohteet 12, elävät nostot 40 → priorisoidaan). Pelin merkit ja nostot
@@ -369,8 +377,7 @@ export async function avaaPallolauta(ui) {
    */
   const esilatausAjastin = setTimeout(() => {
     const oma = ui.game?.cityOf?.();
-    const kohta = oma && ui.game.board ? pixelOf(ui.game.board, { type: 'city', city: oma.id }) : null;
-    const asteet = pallonAsteet(kohta);
+    const asteet = pallonAsteet(oma ? pallonKohta({ type: 'city', city: oma.id }) : null);
     void esilataaPallolaatat(asteet ? { lat: asteet.lat, lon: asteet.lon } : {});
   }, ESILATAUKSEN_VIIVE_MS);
   /*
@@ -411,13 +418,25 @@ export async function avaaPallolauta(ui) {
   /* ---- kerrokset: kaupungit + helmet + valot (P), merkit (H), reitit (T, A) --- */
   let kaupungit = [];
   const kaupunkiId = new Map(); // id → pallon kaupunki
-  const pack = ui.game.pack;
+  /*
+   * PALLON LAUTA ON AINA MAAILMANKARTTA (js/pallo.js PALLO_LAUTA): se on
+   * ainoa lauta, jolla on maantieteellinen projektio. Pelin lauta on sama
+   * paitsi LÄHTÖVALINNASSA (aalto 3A), jossa peli on vielä aloitusnäytön
+   * omalla laudalla (js/packs/maailma.js) — eri koordinaatistossa, eikä
+   * sen pisteitä voi projisoida pallolle. Valinta astuu joka tapauksessa
+   * maailmankartalle heti (maailma.js links → 'maailmankartta'), joten
+   * pallo piirtää sen kaupungit alusta asti: valinnan jälkeen mikään ei
+   * vaihdu eikä 261 pistettä synny uudestaan.
+   */
+  const pack = ui.game.pack?.id === PALLO_LAUTA ? ui.game.pack : packById(PALLO_LAUTA);
+  /** Laudan kaupunki tunnuksella (lähtövalinnan kohteet, ks. aloitusKohteet). */
+  const packKaupunki = new Map((pack?.cities ?? []).map((c) => [c.id, c]));
   const merkit = luoMerkit({
     pallo, ui, siirtyma, asteet: pallonAsteet, kotelo,
   });
   const reitit = luoReitit({ pallo, ui, siirtyma, asteet: pallonAsteet });
   const nimet = luoNimet({
-    ui, merkit, asteet: pallonAsteet, ruudulla, kotelo,
+    ui, merkit, asteet: pallonAsteet, ruudulla, kotelo, pack,
   });
   const nostot = luoNostot({
     ui, merkit, asteet: pallonAsteet, ruudulla, onPoltettu: pallonNostoOnPoltettu,
@@ -503,18 +522,107 @@ export async function avaaPallolauta(ui) {
     return true;
   };
 
+  /* ---- lähtökaupungin valinta (aalto 3A) --------------------------- */
+  /*
+   * LÄHTÖVALINTA ON PALLON OMA NÄKYMÄ (docs/moduulit/karttapallo.md luku
+   * 10.3; omistaja 5.9.2026: *"Käännä kaikki pallolle, niin voidaan
+   * sulkea vanha kartta kokonaan."*). Se on niukka samalla säännöllä
+   * kuin avauslento: näkyvissä ovat vain Lontoo ja valittavat kaupungit
+   * (js/ui.js ETUSIVUN_NAKYVAT, tasokartalla paivitaAloituskaupungit),
+   * ja valittavat saavat saman kohdemerkin kuin nopanheiton kohteet
+   * (js/pallolauta/merkit.js kohdeElementti) — sama muoto, sama väri ja
+   * sama nimi kuin tasokartan aloituskartalla.
+   *
+   * Tila ei ole tämän moduulin kenttä vaan pelin vaihe: ui.js päättää
+   * (aloitusvalinnanKohteet, aloitusvalinnanNakyvat), lauta piirtää.
+   */
+  /** Lähtövalinnan näkyvät kaupungit tai null, kun valintaa ei ole. */
+  const aloitusNakyvat = () => ui.aloitusvalinnanNakyvat?.() ?? null;
+  /**
+   * Valittavat aloituskaupungit pallon kohdemerkeiksi. Paikka tulee
+   * MAAILMANKARTAN koordinaateista (`packKaupunki`), koska pelin oma
+   * lauta on tässä vaiheessa aloitusnäytön eikä sitä voi projisoida;
+   * `city` on pelin laudan kaupunki, jonka doPickStart tarvitsee.
+   */
+  const aloitusKohteet = () => (ui.aloitusvalinnanKohteet?.() ?? []).map((city) => {
+    const k = packKaupunki.get(city.id);
+    if (!k) return null;
+    return { key: `aloitus:${city.id}`, x: k.x, y: k.y, city };
+  }).filter(Boolean);
+  /**
+   * VALINTANÄKYMÄN RAJAUS: Lontoo ja valittavat kaupungit samassa
+   * laatikossa — pallon vastine tasokartan aloituskartalle.
+   *
+   * KAMERA TÄHTÄÄ LAATIKON ALAPUOLELLE. Livian avausrepliikit
+   * pinoutuvat ruudun alalaitaan (js/livia.js, js/pollo.js) ja peittävät
+   * mitatusti alimman noin 40 % karttaruudusta. Tasokartalla ne eivät
+   * osu valintaan, koska aloituskartta on Lontoon lähikuva; pallolla
+   * koko Eurooppa mahtuu ruutuun, ja keskitettynä Ateena jäi täsmälleen
+   * kuplapinon alle (mitattu Chromiumilla 390 × 844, kaappaus
+   * 3a-2-valintatila). Siksi keskipiste siirretään etelään: sisältö
+   * nousee ruudulla kuplien yläpuolelle. Omistajan sääntö on sama
+   * molemmilla laudoilla — *"kuplat eivät estä valintaa"* (29.8.2026).
+   *
+   * Marginaali on lennon rajausta reilumpi (0,35 → 0,8): pallon
+   * perspektiivi levittää reunimmaiset pisteet, ja tiukalla laatikolla
+   * Lontoo ja Ateena jäivät ruudun laitoihin puoliksi leikkautuneina.
+   */
+  const aloitusnakyma = ({ kesto = 0 } = {}) => {
+    const nakyvat = aloitusNakyvat();
+    const pisteet = [...(nakyvat ?? [])].map((id) => packKaupunki.get(id)).filter(Boolean);
+    if (pisteet.length < 2) return Promise.resolve(false);
+    const xs = pisteet.map((c) => c.x);
+    const ys = pisteet.map((c) => c.y);
+    const x0 = Math.min(...xs);
+    const y0 = Math.min(...ys);
+    const w = Math.max(...xs) - x0;
+    const h = Math.max(...ys) - y0;
+    const ruutuW = Math.max(1, kotelo.clientWidth);
+    const ruutuH = Math.max(1, kotelo.clientHeight);
+    // Sama kaava kuin kameran bbox-haarassa (js/pallolauta/kamera.js
+    // kameranKohde), mutta näkyvä leveys tarvitaan tässä myös siirtoon.
+    const vara = 1 + 2 * ALOITUSVALINNAN_MARGINAALI;
+    const leveys = Math.max(w * vara, (h * vara * ruutuW) / ruutuH);
+    const korkeus = (leveys * ruutuH) / ruutuW;
+    return kamera.ajaKamera({
+      x: x0 + w / 2,
+      y: y0 + h / 2 + (korkeus * ALOITUSVALINNAN_KUPLAVARA) / 2,
+      leveys,
+    }, { kesto });
+  };
+
+  /**
+   * Pelin paikka (pos) PALLON laudan koordinaateiksi. Muulloin se on
+   * pelkkä pixelOf, mutta lähtövalinnassa peli on aloitusnäytön laudalla
+   * (js/packs/maailma.js), jonka x/y ei ole pallon projektiossa —
+   * kaupunki haetaan silloin tunnuksella pallon omasta laudasta. Ilman
+   * tätä matkaajan nappula seisoi lähtövalinnassa Tyynellämerellä
+   * (mitattu Chromiumilla 5.9.2026).
+   */
+  const pallonKohta = (pos) => {
+    if (!pos) return null;
+    if (ui.game.pack?.id === pack?.id) return ui.game.board ? pixelOf(ui.game.board, pos) : null;
+    if (pos.type !== 'city') return null;
+    const c = packKaupunki.get(pos.city);
+    return c ? { x: c.x, y: c.y } : null;
+  };
+
   /** Laudan kaupunki (x, y, id, name) pallon kaupungista. */
   const laudanKaupunki = (k) => ui.game.board?.cityById?.get(k.id) ?? null;
   /**
    * Näkyykö kaupungin piste: nimetty, oma tai kehittäjän maailmanäkymä.
-   * Avauslennolla vain reitin kaksi päätä (PISTE VAIN NIMEN KANSSA
-   * pitää silloinkin: nimet ovat samat kaksi).
+   * Avauslennolla vain reitin kaksi päätä ja lähtövalinnassa vain Lontoo
+   * ja valittavat (PISTE VAIN NIMEN KANSSA pitää silloinkin: nimet ovat
+   * täsmälleen samat kaupungit).
    */
-  const pisteNakyy = (k) => (lento
-    ? lento.nimet.has(k.id)
-    : nimet.nimetty(k.id)
+  const pisteNakyy = (k) => {
+    if (lento) return lento.nimet.has(k.id);
+    const valinta = aloitusNakyvat();
+    if (valinta) return valinta.has(k.id);
+    return nimet.nimetty(k.id)
       || ui.game.cityOf?.()?.id === k.id
-      || Boolean(ui.maailmanakyma?.()));
+      || Boolean(ui.maailmanakyma?.());
+  };
 
   /**
    * NAPAUTUS KAUPUNKIIN — sama teko kuin tasokartalla: nykyinen kaupunki
@@ -536,6 +644,16 @@ export async function avaaPallolauta(ui) {
     if (ui.radioPaalla?.()) return false;
     const city = laudanKaupunki(k);
     if (!city) return false;
+    /*
+     * LÄHTÖVALINNASSA VAIN KOHTEET OVAT NAPAUTETTAVIA (aalto 3A): sama
+     * sääntö kuin tasokartalla, jossa drawTargets piirtää pickstart-
+     * vaiheessa vain aloituskohteiden renkaat. Lontoo on lähtöpiste eikä
+     * valinta, eikä kamera saa sukeltaa sen ylle valintanäkymästä.
+     * Kehittäjän maailmanäkymä ohittaa tämän kuten kartallakin
+     * (doKehittajaSiirto → doPickStart).
+     */
+    if (ui.game.phase === 'pickstart'
+      && !(kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu)) return false;
     heraa();
     const { game } = ui;
     const oma = game.cityOf?.();
@@ -568,6 +686,17 @@ export async function avaaPallolauta(ui) {
     // ja napautaKaupungissa): kohteet ovat myös piilossa (css/radio.css).
     if (ui.radioPaalla?.()) return false;
     const { game } = ui;
+    /*
+     * LÄHTÖKAUPUNGIN VALINTA (aalto 3A): napautus tekee täsmälleen sen,
+     * minkä tasokartan kohderengas teki — doPickStart pelin laudan
+     * kaupungilla, ja avauslento lähtee siitä (js/ui.js doPickStart).
+     */
+    if (game.phase === 'pickstart') {
+      if (!kohde.city) return false;
+      heraa();
+      ui.doPickStart(kohde.city);
+      return true;
+    }
     if (game.phase !== 'move' || game.player?.isBot) return false;
     heraa();
     ui.doMove(kohde.key);
@@ -728,14 +857,17 @@ export async function avaaPallolauta(ui) {
       // Avauslennolla ei yhtään nostoa: lento on kartan niukin hetki.
       katto: lento ? 0 : Math.min(NOSTOJEN_KATTO, Math.max(0, HTML_MERKKIEN_KATTO - pelia)),
     });
-    const katto = lento
-      ? lento.nimet.size
+    // Niukka nimijoukko: avauslennolla kaksi päätä, lähtövalinnassa
+    // Lontoo ja valittavat (aalto 3A) — muulloin koko lauta budjetilla.
+    const vain = lento?.nimet ?? aloitusNakyvat();
+    const katto = vain
+      ? vain.size
       : Math.min(NIMIEN_KATTO, Math.max(0, HTML_MERKKIEN_KATTO - pelia - nostoTulos.maara));
     const nimiTulos = nimet.lado({
       varaukset: nostoTulos.laatikot,
       pinot: merkit.laatikot('peli'),
       katto,
-      vain: lento?.nimet ?? null,
+      vain,
     });
     paivitaPisteet();
     if (ui.fokuskohdeAuki?.ankkuri) asemoiFokuskohde(ui);
@@ -770,6 +902,8 @@ export async function avaaPallolauta(ui) {
   /** Nopanheiton kohteet: sama sääntö kuin drawTargets (siirtovaihe, ei botti). */
   const kohdevalinta = () => {
     const { game } = ui;
+    // Lähtövalinnassa kohteita ovat valittavat aloituskaupungit (aalto 3A).
+    if (game.phase === 'pickstart') return aloitusKohteet();
     if (game.phase !== 'move' || game.player?.isBot || ui.katselu) return [];
     return (game.moveOptions?.() ?? []).map((opt) => {
       const { x, y } = pixelOf(game.board, opt.pos);
@@ -788,7 +922,7 @@ export async function avaaPallolauta(ui) {
     const { game } = ui;
     const kaydyt = game.world?.visited ?? new Set();
     const pos = game.player?.pos ?? null;
-    const kohta = pos && game.board ? pixelOf(game.board, pos) : null;
+    const kohta = pallonKohta(pos);
     // Pelaajan id on 0, joten totuusarvo ei kelpaa: null tarkoittaa lepoa.
     const liikkuu = ui.movingPlayerId != null;
     // Avauslennolla lauta on niukka: ei kohteita, ei nappulaa, ja
@@ -839,8 +973,7 @@ export async function avaaPallolauta(ui) {
 
   /** Pelin paikan (pos) piste ruudulla (kotelon px) — nopan lähtö. */
   const ruutupiste = (pos) => {
-    const kohta = pos && ui.game.board ? pixelOf(ui.game.board, pos) : null;
-    const a = pallonAsteet(kohta);
+    const a = pallonAsteet(pallonKohta(pos));
     if (!a) return null;
     return pallo.getScreenCoords(a.lat, a.lon, 0);
   };
@@ -907,6 +1040,12 @@ export async function avaaPallolauta(ui) {
       paata: paataLentotila,
       paalla: () => Boolean(lento),
     },
+    /**
+     * Lähtövalinnan näkymä (aalto 3A): kamera Lontoon ja valittavien
+     * kaupunkien laatikkoon. js/ui.js avaaPallolauta kutsuu tätä
+     * `kotiin`-ajon sijasta, kun peli on vielä pickstart-vaiheessa.
+     */
+    aloitusnakyma,
     napautaKaupunki: (id) => napautaKaupunki(kaupunkiId.get(id)),
     napautaKohde: (key) => napautaKohde(merkit.kohteet().find((k) => k.key === key)),
     napautaNosto: (id) => napautaNosto(nostot.osumat().find((o) => o.id === id)),

@@ -5973,6 +5973,17 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 }
 
 .intro.intro-fade { opacity: 0; }
+/*
+ * HÄIVYTETTY AVAUSTEKSTI EI OTA NAPAUTUKSIA (aalto 3A, karttapallo.md
+ * luku 10.3). Tasokartalla teksti työntyy ruudun alle (.intro-pois),
+ * mutta pallolla lähtövalinta avautuu pelkällä häivytyksellä — ja
+ * näkymätön "Valitse aloituskaupunki" (.intro-valinta on
+ * pointer-events: auto) veisi silloin pallon pyörityksen ja Ateenan
+ * napautuksen itselleen. Sama sääntö kelpaa kummallekin laudalle:
+ * häivytetty teksti on poissa myös sormelta.
+ */
+.intro.intro-fade,
+.intro.intro-fade * { pointer-events: none; }
 
 /*
  * ALOITUSSIIRTYMÄN TYHJÄ PERGAMENTTIARKKI (js/ui.js naytaAloitusverho).

@@ -38,6 +38,12 @@
  *   E8  Ei verkkoa (etusivu.json ei vastaa): kerrosta ei synny eikä
  *       karttaa herätetä — etusivu on pelkkää paperia julisteotsikon
  *       kanssa.
+ *   E9  LÄHTÖKAUPUNGIN VALINTA PALLOLLA (aalto 3A): "Valitse
+ *       aloituskaupunki" avaa pallolaudan valintatilaan — tasokartta
+ *       PYSYY lepotilassa ja svg#board tyhjänä, valittavat kaupungit
+ *       ovat pallon kohdemerkkejä (Lontoo ja Ateena ainoat nimet), ja
+ *       kohdemerkin napautus käynnistää pelin. Aalto 1D jätti tähän
+ *       kartan herätyksen; tämä vartio pitää huolen ettei se palaa.
  *
  * LIPPU ON POISKYTKIN (aalto 1D, omistaja 5.9.2026: *"Käännä kaikki
  * pallolle, niin voidaan sulkea vanha kartta kokonaan."*): oletus on
@@ -123,7 +129,14 @@ tieto('reitin kesto oikeassa videossa', `${reitti.kesto.toFixed(1)} s (savukkees
 
 const selain = await chromium.launch({
   executablePath: '/opt/pw-browsers/chromium',
-  args: ['--autoplay-policy=no-user-gesture-required'],
+  /*
+   * WebGL ohjelmistorasteroijalla (aalto 3A): lähtövalinta on nyt
+   * pallolaudalla, ja ilman näitä lippuja Globe.gl ei rakenna
+   * kontekstia — savuke mittaisi silloin varapolkua eikä valintaa.
+   * Muihin vartioihin liput eivät vaikuta.
+   */
+  args: ['--autoplay-policy=no-user-gesture-required',
+    '--use-gl=swiftshader', '--enable-webgl', '--ignore-gpu-blocklist'],
 });
 
 /** Pieni WebM selaimessa nauhoitettuna (ks. tiedoston alku). */
@@ -447,6 +460,81 @@ if (koevideo) {
   vaadi('E7b reduced motion: kone seisoo paikallaan',
     Boolean(alku.koneenMuunnos) && alku.koneenMuunnos === loppu.koneenMuunnos,
     `${alku.koneenMuunnos} → ${loppu.koneenMuunnos}`);
+  await ctx.close();
+}
+
+/* ========== E9: LÄHTÖKAUPUNGIN VALINTA PALLOLLA (aalto 3A) ========== */
+
+/*
+ * Omistaja 5.9.2026 sanatarkasti: *"Käännä kaikki pallolle, niin
+ * voidaan sulkea vanha kartta kokonaan."* Aalto 1D jätti napin
+ * herättämään tasokartan; nyt valinta tehdään pallolta, ja tämä on
+ * savukkeen mittari sille.
+ */
+if (koevideo) {
+  const { ctx, sivu } = await avaaSivu({ lippu: true });
+  await sivu.waitForFunction(() => Boolean(document.querySelector('.etusivupallo')),
+    null, { timeout: 30000 }).catch(() => {});
+  await sivu.evaluate(() => {
+    [...document.querySelectorAll('button')]
+      .find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
+  });
+  // Nappi paljastuu vasta kun avausteksti on kirjoitettu loppuun.
+  const nappiNakyy = await sivu.waitForFunction(
+    () => document.querySelector('.intro-valinta')
+      && !document.querySelector('.intro-valinta').classList.contains('intro-valinta-piilossa'),
+    null, { timeout: 90000 },
+  ).then(() => true).catch(() => false);
+  await sivu.evaluate(() => document.querySelector('.intro-valinta')?.click());
+  const avautui = await sivu.waitForFunction(() => Boolean(window.matkakirja.ui.pallolauta),
+    null, { timeout: 90000 }).then(() => true).catch(() => false);
+  await sivu.waitForTimeout(6000);
+
+  const valinta = await sivu.evaluate(() => {
+    const { ui } = window.matkakirja;
+    const kohde = document.querySelector('.pallolauta-kohde');
+    const r = kohde?.getBoundingClientRect();
+    // Kuplapino ei saa peittää valittavaa kaupunkia (omistaja 29.8.2026).
+    const kuplat = [...document.querySelectorAll('.pollo-vihje, .pollo-kuplapino-kehys')]
+      .map((e) => e.getBoundingClientRect())
+      .filter((b) => b.width > 0);
+    const peitossa = r ? kuplat.some((b) => r.left < b.right && b.left < r.right
+      && r.top < b.bottom && b.top < r.bottom) : false;
+    return {
+      pallolauta: Boolean(ui.pallolauta),
+      lepotila: ui.kartta.lepotila,
+      laudanOsia: document.querySelector('svg#board')?.querySelectorAll('*').length ?? null,
+      etusivupallo: Boolean(document.querySelector('.etusivupallo')),
+      kohteet: [...document.querySelectorAll('.pallolauta-kohde')].map((e) => e.dataset.kohde),
+      nimet: [...document.querySelectorAll('.pallolauta-nimi')].map((e) => e.dataset.kaupunki).sort(),
+      peitossa,
+      piste: r ? { x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2) } : null,
+    };
+  });
+  vaadi('E9a nappi avaa pallolaudan eikä herätä tasokarttaa',
+    nappiNakyy && avautui && valinta.pallolauta && valinta.lepotila === true
+    && valinta.laudanOsia === 0 && !valinta.etusivupallo,
+    `pallolauta ${valinta.pallolauta}, lepotila ${valinta.lepotila}, laudan osia ${valinta.laudanOsia}`);
+  vaadi('E9b valittavat ovat pallon kohdemerkkejä, nimiä vain Lontoo ja Ateena',
+    valinta.kohteet.length === 1 && valinta.kohteet[0].startsWith('aloitus:')
+    && valinta.nimet.join(',') === 'ateena,lontoo',
+    `kohteet ${JSON.stringify(valinta.kohteet)}, nimet ${JSON.stringify(valinta.nimet)}`);
+  vaadi('E9c kuplat eivät peitä valittavaa kaupunkia', !valinta.peitossa,
+    `kohdemerkki ${JSON.stringify(valinta.piste)} jäi kuplapinon alle`);
+  if (KUVAKANSIO) {
+    await sivu.screenshot({ path: join(KUVAKANSIO, 'etusivupallo-valinta.png'), scale: 'css' });
+  }
+  if (valinta.piste) await sivu.mouse.click(valinta.piste.x, valinta.piste.y);
+  const alkoi = await sivu.waitForFunction(() => window.matkakirja.ui.game.phase !== 'pickstart',
+    null, { timeout: 30000 }).then(() => true).catch(() => false);
+  const jalkeen = await sivu.evaluate(() => ({
+    vaihe: window.matkakirja.ui.game.phase,
+    lepotila: window.matkakirja.ui.kartta.lepotila,
+    laudanOsia: document.querySelector('svg#board')?.querySelectorAll('*').length ?? null,
+  }));
+  vaadi('E9d kohdemerkin napautus käynnistää pelin ilman tasokarttaa',
+    alkoi && jalkeen.lepotila === true && jalkeen.laudanOsia === 0,
+    `vaihe ${jalkeen.vaihe}, lepotila ${jalkeen.lepotila}, laudan osia ${jalkeen.laudanOsia}`);
   await ctx.close();
 }
 

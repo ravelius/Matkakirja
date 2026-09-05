@@ -97,15 +97,22 @@ export function asetteleNimi(el, d) {
  * tai ruudun ulkopuolella; `merkit` on merkkirekisteri (osa `nimet`).
  */
 export function luoNimet({
-  ui, merkit, asteet, ruudulla, kotelo,
+  ui, merkit, asteet, ruudulla, kotelo, pack = null,
 }) {
   let kaupungit = null; // [{ c, lat, lng }] laudan ladontatietue + asteet
   let nimetyt = new Set();
   let tulos = { nimia: 0, pudotettu: 0, ehdokkaita: 0 };
 
+  /*
+   * LAUTA TULEE PALLOLTA EIKÄ PELISTÄ (aalto 3A). Aineisto ladotaan
+   * kerran ja jää muistiin, ja lähtövalinnassa (pickstart) pelin lauta
+   * on vielä aloitusnäytön oma — eri koordinaatistossa kuin pallo.
+   * `pack` on pallon oma lauta (js/pallolauta/lauta.js), jolloin
+   * välimuistiin ei voi jäädä väärän laudan pisteitä.
+   */
   const aineisto = () => {
     if (kaupungit) return kaupungit;
-    kaupungit = karttanimienKaupungit(ui.game.pack).map((c) => {
+    kaupungit = karttanimienKaupungit(pack ?? ui.game.pack).map((c) => {
       const a = asteet(c);
       return a ? { c, lat: a.lat, lng: a.lon } : null;
     }).filter(Boolean);
