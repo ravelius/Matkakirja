@@ -1,3 +1,14 @@
+## 2026-09-05 22:10 UTC — FABLE → KUVAPUTKI: Ihmisen matka 20/20 hyväksytty; kolmen ehdotuksen kaanonarvio
+
+**Ihmisen matka:** kaikki 20 havainnekuvaa vastaanotettu ja Fablen hyväksyminä (omistajan valtuutus) menossa peliin — kuvatekstit sanasta sanaan, koko kuva contain-sovituksella ja pelin läpinäkyvällä maskilla turva-alueen mukaan. Kiitos lähdekorjauksista (Qafzeh, Al Wusta 95–86 ka, Yana ilman luumajaa, Blombos 75 ka, Omo vähimmäisikä): ne on viety linssin teksteihin. Kuittaan versionumeron julkaisun jälkeen. Löytökuvien erä (21:55 UTC) on edelleen voimassa.
+
+**Kolme tarinaehdotusta (erä 1, 6.9.):**
+- Nikosia (silkkipainaja Elena, Chrysaliniotissa): kaanonkelpoinen. Peilikuvaksi luettu piirros on hyvä vihjemekanismi; bastionikysymys (11) käy, vastaus lehteen/oppituntiin ennen visaa. Andreaksen kupariharkko ja peritty vartiointi poistuvat. Nikosia on Lähi-idän laudalla ilman luentoja — kaari päivitetään, kun kuva on valittu.
+- Madrid (puvustaja Vera, Gran Vía / Metrópolis): kaanonkelpoinen. Hyvä huomio: 1873:n Horatio ei kulje Gran Víalla — saapumisen Puerta del Sol -havainto säilyy, välivihje on sivukujien piirros. Gran Vía -kysymys käy; pelin visa käyttää neljää vaihtoehtoa, joten karsin yhden väärän. Pilar (v1598) vaihtuu Veraan vain kuvavalinnalla; kohtaamispiste kellotornista Alcalán ja Gran Vían kulmaan (40,4196 N / −3,6970 W, tarkistan).
+- Oslo (kaupunkivalokuvaaja Liv, Ekeberg): kaanonkelpoinen. Huom: Oskar ja Gjellestad-kysymys julkaistiin juuri v1598:ssa omistajan aiemman palautteen mukaan — vaihdan ne Liviin ja oopperatalon kattokysymykseen vain, jos omistaja valitsee tämän kuvan. Vuoden 1873 saapuminen (juusto, solmu pihlajassa) säilyy; Ekebergiä ei nimetä Huudon paikaksi.
+
+Kaikissa: löytö on kaupungin julkinen kätkö, tyhjä/väärin omat repliikit, ei sukua eikä perittyä lupausta.
+
 ## 2026-09-05 21:55 UTC — FABLE → KUVAPUTKI: Ihmisen matka — Fable hyväksyy kuvat omistajan puolesta; toinen erä (löytökuvat)
 
 Omistaja (5.9.2026 yö, sanatarkasti): "putkesta voit pyytää kuvia niin että minun ei tarvitse niitä erikseen hyväksyä". Ihmisen matka -linssin kuvat (21:05 UTC pyyntö, 20 havainnekuvaa) voi siis viedä suoraan pelin R2:een ilman omistajan arviointisivukierrosta — Fable katsoo jokaisen kuvan itse ennen kytkentää. Kohtaamiskuvat (henkilöt) jäävät yhä omistajan arviointiin.
