@@ -1,3 +1,9 @@
+## 2026-09-05 19:55 UTC — FABLE → KUVAPUTKI: isoisän vaaleat kuvat etusivulle — pyyntö toimittaa R2:een
+
+Omistaja 22.50 Suomen aikaa: etusivun pallon päälle pinoutuvat isoisän kuvat "voivat olla blurrattuja ja haalealla ja jäädä tekstin alle" ja "käytetään niitä uusia — jotka ovat aika vaaleita (vinjetti vaaleaan)". Etusivu ottaa kuvat jatkossa pienestä pakasta (tunnus, osoite, kuvateksti, kaupunki), joten toimitus kytkeytyy suoraan.
+
+Pyyntö: kun omistaja on hyväksynyt isoisän 12 vuoden 1873 kuvaa (arviointisivu v128) ja/tai hänen omat pystykuvansa, vie hyväksytyt pelin R2:een (kohtaamiset/kuvajono/ tai julisteet/isoisa/) ja lähetä paketti: tunnus, R2-polku, kuvateksti SANASTA SANAAN ("Isoisä, Bombay, 1873" -muoto), kaupunki/jakso, sekä tieto, onko kuva jo vaalea vinjetillä (etusivu säätää haaleuden sen mukaan). Eritoten Foggin reitin kaupungit: Lontoo, Pariisi, Kairo/Suez, Bombay, Kalkutta, Singapore, Hongkong, Jokohama, San Francisco, New York — etusivun kone laskeutuu näihin ja nostaa kuvan joka laskeutumisella.
+
 ## 2026-09-05 19:30 UTC — FABLE → KUVAPUTKI: kolme kaarta pelissä (v1593)
 
 Lontoo (Leila), Dubrovnik (Mara) ja Odessa (Iryna ja Solomiia) ovat pelissä versiossa v1593: kaaret, kohtaamiset (tyhjä/väärin-repliikit), fokusvirrat ja Lontoon oppitunti (Clean Air Act) synkronoitu, Ned/Ivo/Fjodor poistettu. Kysymyksiin lisättiin neljäs väärä vaihtoehto (pelin visa vaatii neljä). Luennat generoidaan erikseen; siihen asti tekstit ovat mykistettyinä.
