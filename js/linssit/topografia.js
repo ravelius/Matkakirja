@@ -124,6 +124,25 @@ const MEREN_POHJA = '#5d5340';
  */
 const KAISTAN_VENYTYS = 90;
 
+/*
+ * SAMA RELIEFI PALLOLLE — TOINEN PROJEKTIO.
+ *
+ * Omistajan linjaus 5.9.2026 (Raamattu, KAIKKI PALLOLLE, VANHA KARTTA
+ * SULJETAAN): *"Käännä kaikki pallolle, niin voidaan sulkea vanha kartta
+ * kokonaan"*. Pallo lukee pinnan tekstuurin TASAVÄLISENÄ
+ * (equirectangular, 2:1), eikä yllä oleva laudan Milleriin projisoitu
+ * kuva kelpaa sinne: se työntäisi mantereet pohjoiseen. Sama kuva on
+ * siksi uudelleenprojisoitu kerran rakennusaikana
+ * (tools/tee-pallotopografia.mjs) — ei uutta aineistoa, ei uutta
+ * laskentaa, vain toinen projektio samasta reliefistä.
+ *
+ * Lauta ulottuu -58°:sta 76°:seen, joten navat ovat kuvassa
+ * läpinäkyviä: pallon oma laattapinta näkyy niiden kohdalla läpi.
+ * Kaistat (KAISTAN_VENYTYS) ovat tasokartan asia eivätkä koske palloa —
+ * pallolla ei ole ylä- eikä alareunaa.
+ */
+const PALLOKUVA = 'assets/linssit/topografia-pallo.webp';
+
 const SELITERIVIT = [
   { vari: '#e8e8eb', teksti: 'Lumiraja, yli 6000 m' },
   { vari: '#baa498', teksti: 'Paljas kivi' },
@@ -301,6 +320,26 @@ export const LINSSI = {
     // Kuva ja sen ylä- ja alakaistat; ks. piirraReliefi.
     piirraReliefi(ryhma, raja, kuvatiedot.kuva, PEITTAVYYS);
     return true;
+  },
+
+  /**
+   * Sama linssi pallolaudalla: yksi kalvo pallon pinnalle.
+   *
+   * Linssi ei koske Globe.gl-instanssiin — se pyytää kalvon laudan
+   * linssimoottorilta (js/pallolauta/linssit.js, sopimus
+   * docs/moduulit/karttapallo.md luku 10.1) ja palauttaa kahvan, jonka
+   * `pura()` ottaa kalvon pois häivyttäen.
+   *
+   * Kuvaa EI esiladata lataa():lla: tasokartan megatavun Miller-kuvaa ei
+   * tarvita pallolla lainkaan, ja moottori hakee pallokuvan itse.
+   * Selitekortti (selite) toimii kummallakin laudalla samoin.
+   */
+  pallolle(lauta) {
+    const kahva = lauta?.linssit?.kalvo('topografia', {
+      kuva: PALLOKUVA,
+      peittavyys: PEITTAVYYS,
+    });
+    return { pura: () => kahva?.pura?.() };
   },
 
   selite() {

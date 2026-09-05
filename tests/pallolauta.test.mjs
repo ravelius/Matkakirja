@@ -117,9 +117,12 @@ test('näkyvä leveys ↔ korkeus: suunnitelman kaava, katot ja käänteisyys', 
 test('pallolla vain pelin merkit: sallitut kerrokset lueteltu, kartan kerrokset kiellettyjä', () => {
   // Vaihe 2: pisteet (kaupungit, askelhelmet), html-merkit (nappula,
   // kohteet), polut (naapurireitit) ja kaaret (lennot) — täsmälleen nämä.
-  assert.deepEqual(PALLOLAUDAN_KERROKSET, ['pointsData', 'htmlElementsData', 'pathsData', 'arcsData']);
+  // LINSSIT 5.9.2026 (karttapallo.md luku 10, aalto 1A): monikulmiot
+  // (polygonsData) tulivat listalle LINSSIN kerroksena — peli ei piirrä
+  // sinne mitään, ja kerros on tyhjä aina kun linssiä ei ole päällä.
+  assert.deepEqual(PALLOLAUDAN_KERROKSET, ['pointsData', 'htmlElementsData', 'pathsData', 'arcsData', 'polygonsData']);
   const kansio = new URL('../js/pallolauta/', import.meta.url);
-  const kielletyt = ['labelsData', 'ringsData', 'polygonsData', 'hexBinPointsData', 'tilesData', 'customLayerData', 'objectsData', 'heatmapsData'];
+  const kielletyt = ['labelsData', 'ringsData', 'hexBinPointsData', 'tilesData', 'customLayerData', 'objectsData', 'heatmapsData'];
   for (const nimi of readdirSync(kansio)) {
     const src = readFileSync(new URL(nimi, kansio), 'utf8');
     for (const k of kielletyt) {
@@ -172,7 +175,9 @@ test('tasokartta pois tieltä yhdestä portista; kamera kulkee delegaatin kautta
   // linssikartta jää vain linsseille (valitseLinssi).
   const liiku = ui.match(/ {2}vaihdaLiuku\(\) \{[\s\S]*?\n {2}\}\n/)[0];
   assert.doesNotMatch(liiku, /avaaLinssikartta/, 'Liiku herättää yhä tasokartan');
-  assert.match(ui, /if \(tunnus && this\.pallolautaPaalla\(\)\) this\.avaaLinssikartta\(\{ linssi: true \}\);/);
+  // Aalto 1A: pallolle käännetty linssi ei avaa kuorta lainkaan
+  // (tests/pallolinssit.test.mjs vartioi sopimuksen).
+  assert.match(ui, /if \(tunnus && this\.pallolautaPaalla\(\) && !pallolle\) this\.avaaLinssikartta\(\{ linssi: true \}\);/);
   assert.match(ui, /^  tarkistaLinssikartta\(\) \{/m);
   // Varapolku: kartta herää vain tälle istunnolle; laitteen valintaa ei
   // kirjoiteta (pallo on oletus — yksi verkoton käynnistys ei saa lukita
@@ -389,7 +394,7 @@ test('vaihe 5b: kone on vaiheen 2 kuljettaja, kaari vaiheen 2 kaari', () => {
   assert.match(siirto, /\{ bbox: lennonRajaus\(board, a, b\), marginaali: LENNON_RAJAUKSEN_MARGINAALI \}/);
   // Kaari on reittikerroksen arcsData, ei uusi kerros.
   const lauta = lue('../js/pallolauta/lauta.js');
-  assert.deepEqual(PALLOLAUDAN_KERROKSET, ['pointsData', 'htmlElementsData', 'pathsData', 'arcsData'],
+  assert.ok(!PALLOLAUDAN_KERROKSET.includes('objectsData') && PALLOLAUDAN_KERROKSET.includes('arcsData'),
     'avauslento ei saa tarvita uutta Globe.gl-kerrosta');
   assert.match(avaus, /ui\.lentoKaari = \{ a: lahto\.id, b: kohde\.id \};/);
   // Niukkuus: ei nappulaa, ei kohteita, ei nostoja, kaksi nimeä, harso.

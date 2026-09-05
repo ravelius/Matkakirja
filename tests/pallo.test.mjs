@@ -72,7 +72,10 @@ test('pallon kaupungit tulevat laudalta ja napautus sukeltaa napautettuun kohtaa
   // kartan kerrokset kiellettyjä kaikissa, pelin merkit jossakin niistä.
   const kansio = new URL('../js/pallolauta/', import.meta.url);
   const pallolauta = readdirSync(kansio).map((nimi) => readFileSync(new URL(nimi, kansio), 'utf8')).join('\n');
-  for (const kielletty of ['labelsData', 'ringsData', 'polygonsData', 'hexBinPointsData', 'tilesData']) {
+  // polygonsData on 5.9.2026 alkaen LINSSIN kerros pallolaudalla
+  // (karttapallo.md luku 10.1, js/pallolauta/linssit.js): peli ei piirrä
+  // sinne mitään, joten kartan kerrosten kielto koskee muita.
+  for (const kielletty of ['labelsData', 'ringsData', 'hexBinPointsData', 'tilesData']) {
     assert.ok(!pallolauta.includes(`.${kielletty}(`), `${kielletty}: pallolaudalle ei piirretä karttaa kerroksena (Raamattu 5.9.2026)`);
   }
   for (const sallittu of ['pointsData', 'htmlElementsData', 'pathsData', 'arcsData']) {

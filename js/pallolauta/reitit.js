@@ -104,6 +104,15 @@ export function lentokaarenKorkeus(kulmaAst) {
 export function luoReitit({ pallo, ui, siirtyma, asteet }) {
   const reittiMuisti = new Map(); // edge id → { pisteet, pituusAst, helmet, datum }
   const kaariMuisti = new Map(); // "a>b" → datum
+  /*
+   * YKSI VIIVAKERROS, MONTA OSAA (karttapallo.md luku 10.1). Globe.gl:llä
+   * on tasan yksi pathsData, ja siihen kirjoittaa nyt pelin lisäksi
+   * linssi (joet, rajat, virrat — js/pallolauta/linssit.js polut).
+   * Jokainen osa asettaa oman listansa nimellään, ja kerros kootaan
+   * osista samaan tapaan kuin merkkikerroksessa (merkit.js aseta):
+   * linssi ei voi pyyhkiä pelin naapurireittejä pois eikä toisin päin.
+   */
+  const osat = new Map(); // osan nimi → datumit
   let edellinenAvain = null;
   let helmet = [];
 
@@ -113,8 +122,11 @@ export function luoReitit({ pallo, ui, siirtyma, asteet }) {
     .pathPointLat((p) => p[0]).pathPointLng((p) => p[1])
     .pathPointAlt(REITIN_KORKEUS)
     .pathColor((d) => d.vari)
-    .pathStroke(MATKAREITIN_PAKSUUS_AST)
-    .pathDashLength((d) => d.katko).pathDashGap((d) => d.katko)
+    // Paksuus ja katko datumista: pelin reitit saavat oletuksensa
+    // (MATKAREITIN_PAKSUUS_AST, katko laskettuna), linssin viiva omansa.
+    // Ilman katkoa viiva on yhtenäinen (jakso 1, väli 0).
+    .pathStroke((d) => d.paksuus ?? MATKAREITIN_PAKSUUS_AST)
+    .pathDashLength((d) => d.katko ?? 1).pathDashGap((d) => d.katko ?? 0)
     .pathTransitionDuration(siirtyma)
     .pathResolution(2);
   pallo
@@ -222,13 +234,31 @@ export function luoReitit({ pallo, ui, siirtyma, asteet }) {
       const d = kaari(lahto, kohde, elava === kohdeId && ui.lentoKaari?.a === lahto.id);
       if (d) { d.vari = kaarenVari; kaaret.push(d); }
     }
-    pallo.pathsData(polut);
+    aseta('peli', polut);
     pallo.arcsData(kaaret);
     return helmet;
   };
 
+  /** Koko viivakerros kirjastolle: osat järjestyksessä. */
+  const tyonna = () => {
+    const lista = [];
+    for (const o of osat.values()) lista.push(...o);
+    pallo.pathsData(lista);
+  };
+
+  /**
+   * Osan viivat. `peli` on pelin naapurireitit, linssien osat lisätään
+   * perään (js/pallolauta/linssit.js polut). Tyhjä lista poistaa osan
+   * viivat kerrokselta siirtymällä.
+   */
+  function aseta(nimi, lista = []) {
+    osat.set(nimi, lista);
+    tyonna();
+  }
+
   return {
     paivita,
+    aseta,
     helmet: () => helmet,
     /** Lentokaaren geometria koneelle: { alku, loppu, kulma, korkeus }. */
     lentokaari: (a, b) => {

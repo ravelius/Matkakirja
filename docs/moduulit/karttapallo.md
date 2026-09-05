@@ -582,3 +582,43 @@ tests/pallolauta.test.mjs.
 | 3 | poisto: kartta.js, kerros.js, linssikartta.js, laattapyramidi.js, mapart.js, karttanimet.js, LAUTA-kytkin, turvatilan varapolku, testit, sw.js, css, dokumentit | — | L |
 
 Toteutusmerkinnät kirjataan tämän luvun loppuun aalloittain.
+
+### 10.3 Toteutusmerkinnät
+
+**Aalto 1A — linssimoottori ja topografia (5.9.2026).** Sopimuksen 10.1
+taulukko on toteutettu tiedostossa `js/pallolauta/linssit.js`
+(`luoLinssit`): `kalvo`, `polut`, `polygonit`, `merkit`,
+`kalvoRuudulle`, `pura`. Muutokset:
+
+- **Osarekisterit.** `js/pallolauta/reitit.js` sai `aseta(osa, lista)`
+  samaan tapaan kuin `merkit.js`; pelin naapurireitit ovat osa `peli`,
+  linssien viivat lisätään perään ja yksi `pathsData`-kutsu yhdistää.
+  `pathStroke` ja katko luetaan nyt datumista (pelin reitit saavat
+  oletuksensa).
+- **Uusi kerros.** `polygonsData` on `PALLOLAUDAN_KERROKSET`-listalla
+  LINSSIN kerroksena; peli ei piirrä sinne mitään
+  (tests/pallolauta.test.mjs, tests/pallo.test.mjs, tests/pallonimet.test.mjs
+  päivitetty samalla kommentilla).
+- **Kalvo.** THREE haetaan heijastuksella pallon näyttämöstä (Globe.gl ei
+  vie sitä ulos): pinnan pallomesh antaa Meshin ja geometrian, jonkin
+  materiaalin `map` antaa Texturen. Kalvo on pinnan SISARUS, koska
+  laattamoottori pitää pinnan oman meshin piilotettuna. Säde on
+  1,0015 × pinta eikä 1,002: reittiviivat ovat korkeudella 0,002, ja
+  samassa pinnassa kaksi kerrosta välkkyisi toistensa läpi.
+- **Topografia.** `js/linssit/topografia.js` sai `pallolle(lauta)`, joka
+  pyytää yhden kalvon peittävyydellä 0,72. Kuva on uudelleenprojisoitu
+  laudan Milleristä tasaväliseksi (`tools/tee-pallotopografia.mjs` →
+  `assets/linssit/topografia-pallo.webp`, 4096 × 2048, 431 kt; navat
+  läpinäkyviä, koska lauta kattaa 76° P … 58° E). Selitekortti toimii
+  kuten ennen; kaistat eivät koske palloa.
+- **Käyttöliittymä.** `ui.pallolinssiKelpaa` on se yksi portti, joka
+  päättää piirretäänkö pallolle vai avataanko linssikartta;
+  `ui.sytytaLinssi` kutsuu `pallolle`:a ja `ui.sammutaPallolinssi`
+  kahvan `pura()`:a. Nukkuva kartta ei enää unohda pallolinssin
+  valintaa. `drawTargets` sai portin nukkuvalle kartalle (radion ja
+  linssin tahdistus kutsuu sitä myös pallolla, jolloin `targetLayer`
+  ei ole olemassa).
+- Vartijat: `tests/pallolinssit.test.mjs` (uusi). Selaimessa varmistettu
+  Chromiumilla: kalvo syttyy, osuu maantieteellisesti kohdalleen,
+  linssikarttaa ei avata, "Ei linssiä" purkaa kalvon ja uudelleensytytys
+  toimii.

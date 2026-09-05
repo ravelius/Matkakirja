@@ -2801,6 +2801,13 @@ export class UI {
     this.linssiTunniste = null; // valikoiman tunniste: valikko rakennetaan vain muutoksesta
     this.linssiAskeleet = new Map(); // valittu askel linssiä kohti
     /*
+     * PALLOLLA OLEVA LINSSI (karttapallo.md luku 10, aalto 1A):
+     * { tunnus, kahva } kun linssi on piirretty pallon pinnalle
+     * linssimoottorilla (js/pallolauta/linssit.js). Kahvan `pura()`
+     * ottaa kerrokset pois; linssikarttaa ei silloin avata lainkaan.
+     */
+    this.pallolinssi = null;
+    /*
      * Valitsin ei enää avaudu eikä sulkeudu: se on osa päävalikkoa ja
      * katoaa sen mukana. Sulkeutumisen kuuntelijat (napautus muualle,
      * Esc) poistuivat samalla — päävalikko hoitaa molemmat.
@@ -3848,6 +3855,8 @@ export class UI {
      * käynnistys yrittää palloa uudestaan.
      */
     this.pallolautaEpaonnistui = true;
+    // Pallolla ollut linssi katoaa laudan mukana; kahva pois kirjoista.
+    this.pallolinssi = null;
     this.pallolauta?.pura();
     this.pallolauta = null;
     if (this.kartta.lepotila) this.kartta.heraa();
@@ -3943,6 +3952,8 @@ export class UI {
   }
 
   destroy() {
+    // Laudan purku vie linssikerroksetkin (lauta.linssit.pura).
+    this.pallolinssi = null;
     this.pallolauta?.pura();
     this.pallolauta = null;
     // Kuollut instanssi ei saa enää koskea jaettuun DOM:iin: sen
@@ -9394,6 +9405,15 @@ export class UI {
 
   drawTargets() {
     const { game } = this;
+    /*
+     * NUKKUVALLA KARTALLA EI OLE KERROSTA (karttapallo.md luku 3).
+     * Pallolaudalla kohteet piirtää pallo (js/pallolauta/merkit.js), ja
+     * tasokartan kerrokset syntyvät vasta drawBoardissa. Radion ja
+     * linssin tahdistus kutsuu tätä myös silloin, kun kartta nukkuu —
+     * pallolle käännetty linssi ei enää herätä sitä (luku 10) — joten
+     * portti on tässä eikä jokaisessa kutsujassa.
+     */
+    if (!this.targetLayer) return;
     this.targetLayer.textContent = '';
     /*
      * MITKÄ KAUPUNGIT OVAT JUURI NYT VALITTAVIA KOHTEITA?
@@ -16299,6 +16319,17 @@ export class UI {
      * unohdetaan; tasokartalla (?lauta=kartta) tänne ei tulla.
      */
     if (this.kartta.lepotila) {
+      /*
+       * PALLOLINSSI ON POIKKEUS (karttapallo.md luku 10, aalto 1A):
+       * linssi, jolla on `pallolle`, piirtyy pallon pinnalle eikä
+       * tarvitse kuorta lainkaan. Valintaa ei siis unohdeta, ja jos
+       * kahva puuttuu (uusi lauta, uusi peli), linssi sytytetään
+       * uudelleen — kuten tasokartalla tyhjä kerros sytytetään alla.
+       */
+      if (this.pallolinssiKelpaa(haluttu, nakyvat)) {
+        if (this.pallolinssi?.tunnus !== haluttu) await this.sytytaLinssi(haluttu);
+        return;
+      }
       if (haluttu && !this.linssikartta) {
         this.linssiValittu = null;
         tallennaLinssi(null);
@@ -16317,24 +16348,71 @@ export class UI {
     }
   }
 
+  /**
+   * LINSSI PALLOLLE VAI KARTALLE (karttapallo.md luku 10.1). Pallolauta
+   * piirtää linssin itse, jos linssillä on `pallolle` ja laudan
+   * linssimoottori on pystyssä. Muut linssit avaavat linssikartan kuten
+   * ennen, kunnes nekin on käännetty pallolle.
+   */
+  pallolinssiKelpaa(tunnus, lista = this.linssiTuki?.kaikki ?? []) {
+    if (!tunnus || !this.pallolautaPaalla() || !this.pallolauta?.linssit) return false;
+    return typeof lista.find((l) => l.tunnus === tunnus)?.pallolle === 'function';
+  }
+
+  /** Pallolla oleva linssi pois: kahvan pura() ottaa kerrokset. */
+  sammutaPallolinssi() {
+    const nyt = this.pallolinssi;
+    this.pallolinssi = null;
+    if (!nyt) return;
+    try {
+      nyt.kahva?.pura?.();
+    } catch (syy) {
+      console.warn(`Pallolinssin "${nyt.tunnus}" purku epäonnistui.`, syy);
+    }
+  }
+
   /** Sytyttää linssin kartalle; tunnus === null sammuttaa. */
   async sytytaLinssi(tunnus) {
     const tuki = await this.lataaLinssit();
     if (!tuki || this.dead) return;
     const askel = tunnus ? this.linssiAskeleet.get(tunnus) ?? null : null;
+    const tila = tuki.kerros.linssitila(this.game.pack, askel);
+    // Edellinen pallolinssi pois aina — myös silloin kun uusi linssi
+    // piirtyy kartalle tai valinta nollataan.
+    this.sammutaPallolinssi();
     let tulos = null;
-    try {
-      tulos = await tuki.moottori.vaihda(tunnus, tuki.kerros.linssitila(this.game.pack, askel));
-    } catch (syy) {
+    if (this.pallolinssiKelpaa(tunnus, tuki.kaikki)) {
       /*
-       * Moottori heittää sopimusrikkeestä tarkoituksella: se on aina
-       * linssimoduulin oma vika ja se pitää nähdä. Peli ei silti saa
-       * kaatua siihen — rikkinäinen linssi pudotetaan valikoimasta ja
-       * kartta jää entiselleen.
+       * PALLOLLA MOOTTORI ON LAUDAN OMA (karttapallo.md luku 10, aalto
+       * 1A): linssi piirtää pallon pinnalle js/pallolauta/linssit.js:n
+       * kautta, ja tasokartan kerrosmoottori sammutetaan, jottei
+       * nukkuvaan karttaan jää edellisen linssin piirrosta.
        */
-      console.error(syy);
-      this.pudotaLinssi(tunnus);
-      return;
+      const linssi = tuki.kaikki.find((l) => l.tunnus === tunnus);
+      tuki.moottori.sammuta();
+      try {
+        this.pallolinssi = { tunnus, kahva: linssi.pallolle(this.pallolauta, tila) ?? null };
+        tulos = { tunnus, linssi, elementteja: 0, rasteroitu: false };
+      } catch (syy) {
+        console.error(syy);
+        this.pudotaLinssi(tunnus);
+        return;
+      }
+      if (this.dead) return;
+    } else {
+      try {
+        tulos = await tuki.moottori.vaihda(tunnus, tila);
+      } catch (syy) {
+        /*
+         * Moottori heittää sopimusrikkeestä tarkoituksella: se on aina
+         * linssimoduulin oma vika ja se pitää nähdä. Peli ei silti saa
+         * kaatua siihen — rikkinäinen linssi pudotetaan valikoimasta ja
+         * kartta jää entiselleen.
+         */
+        console.error(syy);
+        this.pudotaLinssi(tunnus);
+        return;
+      }
     }
     if (this.dead) return;
     this.linssiPiirretty = this.linssiKerros;
@@ -16379,6 +16457,9 @@ export class UI {
   /** Ottaa linssin pois valikoimasta ja palaa linssittömään karttaan. */
   pudotaLinssi(tunnus) {
     if (tunnus) this.linssiPois.add(tunnus);
+    // Pallolla oleva kerros pois heti: pudotettu linssi ei saa jäädä
+    // pallon pinnalle odottamaan seuraavaa sytytystä.
+    this.sammutaPallolinssi();
     this.linssiValittu = null;
     tallennaLinssi(null);
     this.linssiTunniste = null;
@@ -16401,12 +16482,17 @@ export class UI {
     }
     if (this.linssiValittu === tunnus) return;
     /*
-     * LINSSIT VANHALLA KARTALLA (omistaja 5.9.2026): pallolaudalla
-     * linssin valinta herättää tasokartan linssikartaksi, ja "Ei linssiä"
-     * palauttaa pallon. Vaihe 4 hioo kuoren; tässä on kevyin toteutus.
+     * KAIKKI PALLOLLE (omistaja 5.9.2026, Raamattu KAIKKI PALLOLLE,
+     * VANHA KARTTA SULJETAAN: *"Käännä kaikki pallolle, niin voidaan
+     * sulkea vanha kartta kokonaan"*). Pallolle käännetty linssi
+     * (`pallolle`) piirtyy pallon pinnalle, eikä linssikarttaa avata
+     * lainkaan — ja jos kuori oli auki edellisen linssin takia, se
+     * sulkeutuu. Kääntämätön linssi herättää tasokartan linssikartaksi
+     * kuten ennen, kunnes se on aallossa 1–2 käännetty (luku 10.2).
      */
-    if (tunnus && this.pallolautaPaalla()) this.avaaLinssikartta({ linssi: true });
-    else if (!tunnus && this.linssikartta?.linssi) this.suljeLinssikartta();
+    const pallolle = this.pallolinssiKelpaa(tunnus);
+    if (tunnus && this.pallolautaPaalla() && !pallolle) this.avaaLinssikartta({ linssi: true });
+    else if ((!tunnus || pallolle) && this.linssikartta?.linssi) this.suljeLinssikartta();
     this.linssiValittu = tunnus;
     tallennaLinssi(tunnus);
     // Merkintä valikkoon heti, kerros hetkeä myöhemmin: raskas linssi

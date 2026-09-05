@@ -227,8 +227,10 @@ test('Liiku ja lehdet estetty kuoressa; valinta null palauttaa pallon; pallon li
   assert.match(ui, /\|\| this\.linssikarttaEstaa\(\);\n/, 'Matkusta-nappi ei harmaannu kuoressa');
   assert.match(ui, /if \(this\.linssikarttaEstaa\(\)\) stayBtn\.disabled = true;/);
   // Valinta null sulkee kuoren; linssi avaa sen; kuori delegoi moduulille.
-  assert.match(ui, /if \(tunnus && this\.pallolautaPaalla\(\)\) this\.avaaLinssikartta\(\{ linssi: true \}\);/);
-  assert.match(ui, /else if \(!tunnus && this\.linssikartta\?\.linssi\) this\.suljeLinssikartta\(\);/);
+  // Aalto 1A (karttapallo.md luku 10): kuori avataan vain linssille,
+  // jota EI ole vielä käännetty pallolle (tests/pallolinssit.test.mjs).
+  assert.match(ui, /if \(tunnus && this\.pallolautaPaalla\(\) && !pallolle\) this\.avaaLinssikartta\(\{ linssi: true \}\);/);
+  assert.match(ui, /else if \(\(!tunnus \|\| pallolle\) && this\.linssikartta\?\.linssi\) this\.suljeLinssikartta\(\);/);
   assert.match(ui, /return Boolean\(this\.pallolauta\.linssikartta\?\.avaa\(tiedot\)\);/);
   assert.match(ui, /return Boolean\(this\.pallolauta\.linssikartta\?\.sulje\(\)\);/);
   // Aikajanan oma Sulje päättää linssin pallolaudalla.
