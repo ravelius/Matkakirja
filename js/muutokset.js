@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1586, teksti: 'Elaintakyt: 24 uutta maata, 32 kuvaa pelissa' },
   { v: 1585, teksti: 'Raamattu: vanha kartta jaa vivun taakse' },
   { v: 1584, teksti: 'Kaikki pallolle 2A: keksintolinssin aikajana pallolle' },
   { v: 1583, teksti: 'Pallolaatat: reunan tint sarakkeittain, kehys pois' },

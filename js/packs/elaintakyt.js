@@ -38,13 +38,12 @@
  * kaanontekstejä (29.8.2026). Integroija ei muokkaa sanamuotoja: jos
  * fakta on väärin, se korjataan kaanoniin eikä tähän tauluun.
  *
- * POIKKEUS: EUROOPAN ULKOPUOLINEN ERÄ ON LUONNOS 5.9.2026, FABLE
- * TARKISTAA. Taulun 24 viimeistä tietuetta (NPL … ZAF) tulivat
- * kuvaputken toimituksen mukana, ja niiden `otsikko` ja `teksti` ovat
- * Opuksen kirjoittamia luonnoksia: päätoimittaja käy ne läpi ja
- * kirjoittaa lopulliset sanamuodot, jolloin tämä poikkeus poistuu.
- * Kuvatekstit ja kuvien lähderivit ovat toimituksesta sanasta sanaan
- * jo nyt. Erän oma lohkokommentti on tietueiden edessä alempana.
+ * EUROOPAN ULKOPUOLINEN ERÄ 5.9.2026 (24 tietuetta NPL … ZAF): tulivat
+ * kuvaputken 32 kuvan toimituksen mukana. Opus luonnosteli tekstit
+ * lähteineen, ja Fable tarkisti ja kirjoitti lopulliset sanamuodot
+ * samana iltana (kahdeksan varauksellisen väitteen pehmennys: CHN, USA,
+ * MAR, PER, SAU, BRA, MEX) — tekstit ovat kaanonia kuten muutkin.
+ * Kuvatekstit ja kuvien lähderivit ovat toimituksesta sanasta sanaan.
  *
  * BIH JA TUR PALASIVAT 2.9.2026 UUSINA ELÄIMINÄ. Ne poistettiin
  * 1.9.2026 kaksoiskappaleina — Livnon villihevoset olivat jo Sarajevon
@@ -514,14 +513,13 @@ export const ELAINTAKYT = {
     lat: 58.8,
   },
 
-  /* ============ EUROOPAN ULKOPUOLINEN ERÄ (LUONNOS 5.9.2026) ============
+  /* ============ EUROOPAN ULKOPUOLINEN ERÄ (5.9.2026) ============
    *
-   * LUONNOS 5.9.2026, FABLE TARKISTAA. Näiden 24 tietueen `otsikko` ja
-   * `teksti` ovat Opuksen kirjoittamia LUONNOKSIA, eivät vielä kaanonia:
-   * päätoimittaja käy ne läpi ja kirjoittaa lopulliset sanamuodot (ks.
-   * tiedoston alku, "TEKSTIT OVAT KAANONIA"). Kuvatekstit ja kuvien
-   * lähderivit sen sijaan ovat kuvaputken toimituksesta SANASTA SANAAN
-   * (posti/animals-approved-32-20260905) eikä niitä muokata.
+   * Näiden 24 tietueen `otsikko` ja `teksti` ovat kaanonia: Opus
+   * luonnosteli, Fable tarkisti ja viimeisteli 5.9.2026 illalla (ks.
+   * tiedoston alku). Kuvatekstit ja kuvien lähderivit ovat kuvaputken
+   * toimituksesta SANASTA SANAAN (posti/animals-approved-32-20260905)
+   * eikä niitä muokata.
    *
    * Jokainen tekstin väite on tarkistettu `lahde`-rivin artikkelista ja
    * osiosta 5.9.2026; osio "johdanto" tarkoittaa artikkelin alkukappaleita
@@ -701,7 +699,7 @@ export const ELAINTAKYT = {
   PER: {
     elain: 'vikunja',
     otsikko: 'Kangas, joka kuului kuninkaalle',
-    teksti: 'Vikunjan villa on maailman hienoimpia kuituja, halkaisijaltaan kaksitoista mikrometriä, ja inkojen aikaan siihen sai pukeutua vain hallitsijasuku. Metsästys vei kannan kuuteentuhanteen 1960-luvulla; suojelun jälkeen eläimiä on jälleen noin 350 000, ja vikunja seisoo Perun vaakunassa. Se elää yhä villinä, vaikka alpakan uskotaan polveutuvan siitä. Villan saa yhä vain villistä eläimestä, joka ajetaan kokoon, keritään ja päästetään menemään — sama yksilö joka kolmas vuosi.',
+    teksti: 'Vikunjan villa on maailman hienoimpia kuituja, halkaisijaltaan kaksitoista mikrometriä, ja inkojen aikaan siihen sai pukeutua vain hallitsijasuku. Metsästys vei kannan kuuteentuhanteen 1960-luvulla; suojelun jälkeen eläimiä on jälleen noin 350 000, ja vikunja seisoo Perun vaakunassa. Se on yhä pääosin villi, vaikka alpakan uskotaan polveutuvan siitä. Villan saa yhä vain villistä eläimestä, joka ajetaan kokoon, keritään ja päästetään menemään — sama yksilö joka kolmas vuosi.',
     lahde: 'en-Wikipedia "Vicuña", osiot "Conservation" ja "Vicuña wool" sekä johdanto. '
       + 'Tarkistettu 5.9.2026.',
     kuvat: [
@@ -720,7 +718,7 @@ export const ELAINTAKYT = {
   SAU: {
     elain: 'arabianoryksi',
     otsikko: 'Yksisarvinen ilman toista sarvea',
-    teksti: 'Arabianoryksin suorat sarvet ovat onttoa luuta eivätkä kasva takaisin, joten toisen menettänyt eläin kulkee loppuikänsä yhdellä. Aristoteles ja Plinius vanhempi pitivät oryksia yksisarvisen esikuvana, ja tietystä kulmasta kaksi sarvea asettuukin yhdeksi. Kuivalla kaudella eläin makaa päivät varjossa liikkumatta ja laiduntaa vasta öisin; virtsan ja aineenvaihdunnan on mitattu putoavan puoleen. Villinä laji kuoli sukupuuttoon 1970-luvun alussa, palautettiin aavikolle 1980 ja nousi 2011 ensimmäisenä eläimenä sukupuuttoluokasta takaisin vaarantuneeksi.',
+    teksti: 'Arabianoryksin suorat sarvet ovat onttoa luuta eivätkä kasva takaisin, joten toisen menettänyt eläin kulkee loppuikänsä yhdellä. Aristoteles ja Plinius vanhempi pitivät oryksia yksisarvisen esikuvana, ja tietystä kulmasta kaksi sarvea asettuukin yhdeksi. Kuivalla kaudella eläin makaa päivät varjossa liikkumatta ja laiduntaa vasta öisin; virtsan ja aineenvaihdunnan on mitattu putoavan puoleen. Villinä laji kuoli sukupuuttoon 1970-luvun alussa, palautettiin aavikolle 1980 ja nousi 2011 ensimmäisenä eläimenä luokasta "luonnosta hävinnyt" takaisin vaarantuneeksi.',
     lahde: 'en-Wikipedia "Arabian oryx", osiot "Unicorn myth" ja "Adaptations for desert '
       + 'environments" sekä johdanto. Tarkistettu 5.9.2026.',
     kuvat: [
@@ -741,7 +739,7 @@ export const ELAINTAKYT = {
   USA: {
     elain: 'biisoninvasa',
     otsikko: 'Sadan eläimen varassa',
-    teksti: '1870-luvun teurastus pudotti biisonin kuudestakymmenestä miljoonasta noin sataan eläimeen kuudessa karjassa; Yellowstonessa selvisi lisäksi 25 villiä, ja siellä laiduntaa yhä yksi harvoista laumoista, joihin ei ole sekoittunut nautakarjan perimää. Nykyinen kanta polveutuu näistä, ja vuonna 2016 biisonista tuli Yhdysvaltain kansallisnisäkäs. Punaruskea vasa on kaksi ensimmäistä kuukauttaan emoaan vaaleampi. Lelu eläin ei silti ole: vuosina 1980–1999 biisoni haavoitti Yellowstonessa 79 kävijää ja karhu 24.',
+    teksti: '1870-luvun teurastus pudotti biisonin kuudestakymmenestä miljoonasta noin sataan eläimeen kuudessa karjassa; Yellowstonessa selvisi lisäksi 25 villiä, ja siellä laiduntaa yhä yksi harvoista laumoista, joihin ei ole sekoittunut nautakarjan perimää. Siitä pullonkaulasta kanta on kasvanut takaisin, ja vuonna 2016 biisonista tuli Yhdysvaltain kansallisnisäkäs. Punaruskea vasa on kaksi ensimmäistä kuukauttaan emoaan vaaleampi. Kesy eläin ei silti ole: vuosina 1980–1999 biisoni haavoitti Yellowstonessa 79 kävijää ja karhu 24.',
     lahde: 'en-Wikipedia "American bison", osiot "Description", "Dangers to humans", '
       + '"Genetics", "Population bottleneck and near extinction" ja "As a symbol". '
       + 'Tarkistettu 5.9.2026.',
@@ -768,7 +766,7 @@ export const ELAINTAKYT = {
   CHN: {
     elain: 'jättiläispanda',
     otsikko: 'Kahdeksassadasosa emostaan',
-    teksti: 'Vastasyntynyt jättiläispanda on vaaleanpunainen, sokea ja hampaaton ja painaa 90–130 grammaa eli noin kahdeksassadasosan emonsa painosta — istukkanisäkkäiden pienin poikanen suhteessa emoon. Puolet synnytyksistä on kaksosia, mutta emo valitsee vahvemman, koska rasvaa varastoimattoman naaraan maito ei riitä kahdelle. Vuodesta 1984 Kiina ei ole lahjoittanut pandoja vaan lainaa niitä, ja ulkomailla syntyneet poikaset palaavat aikanaan Kiinaan. Villejä pandoja laskettiin vuosien 2011–2014 kartoituksessa 1 864.',
+    teksti: 'Vastasyntynyt jättiläispanda on vaaleanpunainen, sokea ja hampaaton ja painaa 90–130 grammaa eli noin kahdeksassadasosan emonsa painosta — istukkanisäkkäiden pienin poikanen suhteessa emoon. Puolet synnytyksistä on kaksosia, mutta emo hoitaa vain vahvemman: rasvaa varastoimattoman naaraan maidon arvellaan riittävän yhdelle. Vuodesta 1984 Kiina ei ole lahjoittanut pandoja vaan lainaa niitä, ja ulkomailla syntyneet poikaset palaavat aikanaan Kiinaan. Villejä pandoja laskettiin vuosien 2011–2014 kartoituksessa 1 864.',
     lahde: 'en-Wikipedia "Giant panda", osiot "Reproduction" ja "In captivity" sekä '
       + 'johdanto. Tarkistettu 5.9.2026.',
     kuvat: [
@@ -842,7 +840,7 @@ export const ELAINTAKYT = {
   MEX: {
     elain: 'aksolotl',
     otsikko: 'Kidukset koko elämän',
-    teksti: 'Aksolotl tulee sukukypsäksi käymättä koskaan läpi muodonmuutosta: se jää veteen ja kantaa haaroittuvia ulkokiduksiaan aikuisenakin. Se ei myöskään arpeudu vaan kasvattaa uudelleen raajan, hännän ja osia silmästä, sydämestä ja aivoista — se voi jopa ottaa vastaan toisen yksilön silmän tai aivojen osan ja saada sen toimimaan. Nimi on nahuatlia ja viittaa Xolotliin, atsteekkien tulen, kuolleiden, koirien ja kaksosten jumalaan. Villinä lajia on jäljellä 50–1 000 yksilöä Xochimilcon kanavissa.',
+    teksti: 'Aksolotl tulee sukukypsäksi käymättä koskaan läpi muodonmuutosta: se jää veteen ja kantaa haaroittuvia ulkokiduksiaan aikuisenakin. Se ei myöskään arpeudu vaan kasvattaa uudelleen raajan, hännän ja osia silmästä, sydämestä ja aivoista — se voi jopa ottaa vastaan toisen yksilön silmän tai aivojen osan ja saada sen toimimaan. Nimi on nahuatlia ja viittaa Xolotliin, atsteekkien tulen, kuolleiden, koirien ja kaksosten jumalaan. Villinä lajia arvioidaan olevan jäljellä 50–1 000 yksilöä Xochimilcon kanavissa.',
     lahde: 'en-Wikipedia "Axolotl", osiot "Nomenclature" ja "Regeneration" sekä johdanto. '
       + 'Tarkistettu 5.9.2026.',
     kuvat: [
@@ -870,7 +868,7 @@ export const ELAINTAKYT = {
   BRA: {
     elain: 'kultatamariini',
     otsikko: 'Oranssi ilman karotenoidia',
-    teksti: 'Kultatamariinin hehkuvassa turkissa ei ole karotenoideja, joista luonnon oranssi väri yleensä syntyy. Laji on silkkiapinoista suurin — noin 26 senttiä ja 620 grammaa — ja elää vain Rio de Janeiron osavaltion atlantinmetsissä. 1970-luvulla yksilöitä arvioitiin olevan 100–600; suojelualueiden, istutusten ja metsäkäytävien jälkeen laskenta 2022–2023 päätyi yli 4 800:aan. Poikaset syntyvät useimmiten kaksosina, ja koko ryhmä kantaa niitä vuorotellen, sillä emo ei jaksa yksin.',
+    teksti: 'Kultatamariinin hehkuvassa turkissa ei ole karotenoideja, joista luonnon oranssi väri yleensä syntyy. Laji on silkkiapinoista suurin — noin 26 senttiä ja 620 grammaa — ja elää vain Rio de Janeiron osavaltion atlantinmetsissä. 1970-luvulla yksilöitä arvioitiin olevan 100–600; suojelualueiden, istutusten ja metsäkäytävien jälkeen laskenta 2022–2023 päätyi yli 4 800:aan. Poikaset syntyvät useimmiten kaksosina, ja koko ryhmä kantaa niitä vuorotellen.',
     lahde: 'en-Wikipedia "Golden lion tamarin", osiot "Physical characteristics", '
       + '"Reproduction" ja "Conservation" sekä johdanto. Tarkistettu 5.9.2026.',
     kuvat: [
@@ -1067,7 +1065,7 @@ export const ELAINTAKYT = {
   MAR: {
     elain: 'berberiapina',
     otsikko: 'Apina ihmisen sijasta',
-    teksti: 'Galenos leikkeli 100-luvulla mitä ilmeisimmin juuri berberiapinoita ja oletti ihmisen olevan sisältä samanlainen; hänen virheensä jäivät lääketieteeseen yli tuhanneksi vuodeksi, kunnes Vesalius osoitti ne vääriksi 1500-luvulla. Lajissa on toinenkin poikkeus: laumat ovat äitilinjaisia, mutta poikasia hoitavat koiraat, myös vieraita, koska isyys jää epävarmaksi. Atlaksen setrimetsissä apinoita on enää 12 000–21 000, ja Gibraltarin kolmesataa ovat Euroopan ainoat luonnonvaraiset kapeanenäapinat.',
+    teksti: 'Galenos leikkeli 100-luvulla mitä ilmeisimmin juuri berberiapinoita ja oletti ihmisen olevan sisältä samanlainen; hänen virheensä jäivät lääketieteeseen yli tuhanneksi vuodeksi, kunnes Vesalius osoitti ne vääriksi 1500-luvulla. Lajissa on toinenkin poikkeus: laumat ovat äitilinjaisia, mutta poikasia hoitavat koiraat, myös vieraita, koska isyys jää epävarmaksi. Atlaksen setrimetsissä apinoita on enää 12 000–21 000, ja Gibraltarin kolmesataa ovat Euroopan ainoat villinä elävät apinat.',
     lahde: 'en-Wikipedia "Barbary macaque", osiot "Taxonomy and phylogeny", "Behaviour and '
       + 'ecology", "Parenting" ja "Threats" sekä johdanto. Tarkistettu 5.9.2026.',
     kuvat: [
