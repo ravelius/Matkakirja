@@ -21,10 +21,15 @@ import {
   pieniOsoite, PIENEN_KATTO, karusellinPaikat, karusellinMitta, KARUSELLIN_MITAT,
   karuselliOsoite, sumeaOsoite, KARUSELLIN_KATTO,
   aikaSeuraavaan, ennakonKesto, KARUSELLIN_ENNAKKO_MS, KARUSELLIN_ENNAKKO_POHJA_MS,
+  AIKAJANAN_LAHIKUVA_LEVEYS, AIKAJANAN_KAMERAN_ENNAKKO_OSUUS, AIKAJANAN_KAMERAN_ENNAKKO_MS,
+  AIKAJANAN_KAMERAN_JALKIJATTO_MS, AIKAJANAN_KAMERAN_POHJA_MS, aikajananKameranPehmennys,
+  valokeilanMaski, VALOKEILAN_LOHKOT, paneelikuvanOsoite, PANEELIN_ESILATAUS_PYSAKKEJA,
+  KUVAVARASTON_KATTO,
 } from '../js/aikajana.js';
 import { runkoOsoitteesta } from '../tools/tee-pienet-kuvat.mjs';
 import { KEKSINNOT, KEKSINTO_KUVAJUURI, LINSSI } from '../js/linssit/keksinnot.js';
 import { projisoiLaudalle } from '../js/fokusmitat.js';
+import { PALLOLAUDAN_SIIRTOLEVEYS } from '../js/pallolauta/kamera.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
 import { tarkistaLinssi } from '../js/linssit/kerros.js';
@@ -392,7 +397,10 @@ test('moottori näyttää pienen version ja esilataa koko kaaren pienenä', () =
   // Esilataus: koko kaari pienenä heti käynnistyksessä, ei kolmen ikkunaa.
   assert.ok(MOOTTORI.match(/\n  kaynnista\(\) \{[\s\S]*?\n  \}/)[0].includes('this.esilataaPienet();'), 'käynnistys ei esilataa');
   assert.match(MOOTTORI, /esilataaPienet\(\) \{[\s\S]{0,400}for \(const t of this\.tapahtumat\)[\s\S]{0,300}pieniOsoite\(kuva\.osoite\)/);
-  assert.ok(!/esilataaSeuraavat/.test(MOOTTORI), 'kolmen pysäkin ikkuna on korvattu');
+  // Kolmen pysäkin IKKUNA on korvattu koko kaarella: esilataaPienet ei
+  // saa palata pysäkkikohtaiseksi. (Sen rinnalla ajava dekoodausjono
+  // valmistaSeuraavat on eri asia — se ei rajaa mitään pois, ks. alla.)
+  assert.ok(!/esilataaPienet\(i\)|esilataaPienet\(kohde\)/.test(MOOTTORI), 'kolmen pysäkin ikkuna on korvattu');
   // "Lue juttu" avaa Tiedeliitteen, joka saa alkuperäiset kuvatiedot
   // (js/tiedeliite.js piirtää ne itse; pieni versio on vain moottorin).
   assert.match(MOOTTORI, /avaaJuttu\(t\) \{[\s\S]{0,300}avaaTiedeliite\(this\.ui, this\.tapahtumat, i, \{/);
@@ -989,7 +997,7 @@ test('ennakko alkaa vasta kahden sekunnin päässä ja kestää jäljellä oleva
 
 test('ennakko liikuttaa vain kortteja; lamput, kello ja paneeli vaihtuvat syttymisessä', () => {
   // Kehys laskee saapumisajan ja aloittaa ennakon vain kun sitä ei ole.
-  assert.match(MOOTTORI, /if \(syttyi !== null\) this\.sytyta\(syttyi\);\s*\n\s*else if \(!this\.luentaSoi\(\)\) this\.tarkistaEnnakko\(tahti\);/);
+  assert.match(MOOTTORI, /if \(syttyi !== null\) this\.sytyta\(syttyi\);\s*\n\s*else if \(!this\.luentaSoi\(\)\) \{ this\.tarkistaEnnakko\(tahti\); this\.tarkistaKameraEnnakko\(tahti\); \}/);
   // Selostaja saa puhua loppuun: tauko pidätetään luennan ajan (omistaja 4.9.2026).
   assert.match(MOOTTORI, /pidataTaukoaLuennalle\(\) \{[\s\S]{0,700}vuosi: Math\.floor\(this\.tila\.vuosi\),\s*\n\s*viive: LUENNAN_TAUKOVARA_MS,\s*\n\s*viiveTaysi: LUENNAN_TAUKOVARA_MS,/);
   assert.match(MOOTTORI, /this\.pidataTaukoaLuennalle\(\);\s*\n\s*const \{ tila, syttyi, loppu \} = aikajanaAskel/);
@@ -1021,6 +1029,166 @@ test('sumea muotokuva vaihtuu terävään vasta kortin ollessa täysikokoinen', 
   assert.match(MOOTTORI, /teravoitaKortti\(i\) \{[\s\S]{0,600}vaihdaKorttikuva\(img, img\.dataset\.terava\)/);
   // Kuuntelija irrotetaan aina, ettei vanha kortti jää odottamaan.
   assert.match(MOOTTORI, /lopetaTeravoitus\(\) \{[\s\S]{0,300}removeEventListener\('transitionend', this\.teravoitus\.teravoita\)/);
+});
+
+/* ==================== LÄHIKUVA JA ENNAKOIVA KAMERA (5.9.2026 ilta) ==================== */
+
+/*
+ * Omistaja työpöytäselaimella, sanatarkasti: *"zoomaa maapallo näin
+ * lähelle mutta liikuta palloa pehmeästi ja hieman jo ennakoiden kohti
+ * uutta valopalloa niin että kun valopallo syttyy kartan liike loppuu
+ * vasta vähän sen jälkeen."* Luvut ovat mitta, ja mitta rikkoutuu
+ * hiljaa: muutos leveydessä ei kaada mitään, se vain vie kuvan väärälle
+ * etäisyydelle.
+ */
+
+test('lähikuva on omistajan mitta: mitattu 1 530 km ruudun leveydellä', () => {
+  /*
+   * LUKU ON MITATTU SELAIMESSA, EI LASKETTU KAAVASTA. korkeusLeveydesta
+   * on tasokuvan kaava pystysuunnan avauskulmalla, joten ruudulla
+   * näkyvä vaakakaista on noin 1,8-kertainen pyydettyyn nähden
+   * (mitattu Chromiumilla 1400 × 900: 240 → 1 406 km, 260 → 1 530 km,
+   * 300 → 1 782 km). Vartija pitää mitatun luvun paikallaan: jos
+   * kaavaa tai avauskulmaa muutetaan, mittaus on tehtävä uudestaan.
+   */
+  assert.equal(AIKAJANAN_LAHIKUVA_LEVEYS, 260);
+  // Ei koskaan laattojen tarkkuusrajan alle (js/pallolauta/kamera.js
+  // PALLOLAUDAN_SIIRTOLEVEYS = 120 on lähin sallittu näkymä).
+  assert.ok(AIKAJANAN_LAHIKUVA_LEVEYS > PALLOLAUDAN_SIIRTOLEVEYS, 'lähikuva menee laattojen tarkkuuden alle');
+  // Ja selvästi lähempänä kuin koko kaaren rajaus (Eurooppa ≈ 2 000 yks.).
+  assert.ok(AIKAJANAN_LAHIKUVA_LEVEYS < 1200, 'lähikuva ei ole lähikuva');
+  // Pyydetty kaista asteina — sama luku kuin toteutusmerkinnässä.
+  const asteet = (AIKAJANAN_LAHIKUVA_LEVEYS / 12000) * 360;
+  assert.ok(Math.abs(asteet - 7.8) < 0.1, `pyydetty kaista ${asteet}°`);
+});
+
+test('kameran ennakko on 40 % pysäkin kestosta ja jälkijättö sen päälle', () => {
+  assert.equal(AIKAJANAN_KAMERAN_ENNAKKO_OSUUS, 0.4);
+  assert.equal(AIKAJANAN_KAMERAN_ENNAKKO_MS, Math.round(AIKAJANA_VIIVE_MS * 0.4));
+  // Omistaja: liike loppuu "vasta vähän sen jälkeen" — 600–900 ms.
+  assert.ok(AIKAJANAN_KAMERAN_JALKIJATTO_MS >= 600 && AIKAJANAN_KAMERAN_JALKIJATTO_MS <= 900);
+  assert.ok(AIKAJANAN_KAMERAN_POHJA_MS >= 600, 'lyhinkin ajo ei saa olla hyppäys');
+  // Ajo kestää aina syttymisen yli, oli syttyminen miten lähellä tahansa.
+  for (const eta of [50, 400, 1200, AIKAJANAN_KAMERAN_ENNAKKO_MS]) {
+    const kesto = Math.max(AIKAJANAN_KAMERAN_POHJA_MS, eta + AIKAJANAN_KAMERAN_JALKIJATTO_MS);
+    assert.ok(kesto > eta, `eta ${eta} ms: ajo ehtisi loppuun ennen syttymistä`);
+  }
+});
+
+test('kameran pehmennys lähtee ja pysähtyy nollanopeudella', () => {
+  const p = aikajananKameranPehmennys;
+  assert.equal(p(0), 0);
+  assert.equal(p(1), 1);
+  assert.equal(p(0.5), 0.5, 'käyrä ei ole symmetrinen');
+  // Nolla nopeus päissä: ensimmäinen ja viimeinen prosentti liikkuu
+  // murto-osan tasaisesta vauhdista — ei nykäisyä kummassakaan päässä.
+  assert.ok(p(0.01) < 0.001 && 1 - p(0.99) < 0.001);
+  // Monotoninen: kamera ei peruuta kesken ajon.
+  let edellinen = -1;
+  for (let t = 0; t <= 1.0001; t += 0.02) {
+    const arvo = p(t);
+    assert.ok(arvo >= edellinen, `käyrä peruuttaa kohdassa ${t}`);
+    edellinen = arvo;
+  }
+  assert.equal(p(-1), 0);
+  assert.equal(p(2), 1);
+});
+
+test('kamera seuraa pysäkkejä vain pallolla ja ajo alkaa lähikuvasta', () => {
+  assert.match(metodi('ajaPysakille'), /if \(!this\.pallolla \|\| !t \|\| !kamera\?\.ajaKamera\) return Promise\.resolve\(false\);/);
+  assert.match(metodi('ajaPysakille'), /leveys: AIKAJANAN_LAHIKUVA_LEVEYS,/);
+  assert.match(metodi('ajaPysakille'), /pehmennys: aikajananKameranPehmennys/);
+  assert.match(metodi('sovitaAlkuun'), /if \(this\.pallolla\) \{[\s\S]{0,300}return this\.ajaPysakille\(i, kesto\);/);
+  assert.match(metodi('sovitaAlkuun'), /return this\.sovitaKaareen\(kesto\);/);
+  // Avausjakso ja Alusta ajavat alkunäkymään, eivät enää kaaren rajaukseen.
+  assert.match(metodi('avaaAvausjakso'), /this\.sovitaAlkuun\(heti \? 0 : AVAUS_KAMERA_MS\)/);
+  assert.ok(metodi('alusta').includes('this.sovitaAlkuun();'), 'Alusta ei aja alkunäkymään');
+  // Ennakko lasketaan samalla puhtaalla funktiolla kuin karusellin.
+  assert.match(metodi('tarkistaKameraEnnakko'), /aikaSeuraavaan\(this\.tila, this\.tapahtumat, tahti, AIKAJANAN_KAMERAN_ENNAKKO_MS \+ AIKAJANA_ALIASKEL_MS\)/);
+  assert.match(metodi('tarkistaKameraEnnakko'), /Math\.max\(AIKAJANAN_KAMERAN_POHJA_MS, eta \+ AIKAJANAN_KAMERAN_JALKIJATTO_MS\)/);
+  assert.match(metodi('tarkistaKameraEnnakko'), /if \(!this\.pallolla \|\| this\.reducedMotion\) return;/);
+  // Kaaren lopussa kamera peräytyy koko kaareen: loppusanat lupaavat
+  // kaikki valot, eikä lähikuvassa näkyisi kuin yksi.
+  assert.match(metodi('lopeta'), /if \(this\.pallolla\) \{\n\s*this\.kameraKohde = null;\n\s*this\.sovitaKaareen\(\);/);
+  // Terävä tila pyydetään käynnistyksessä ja vapautetaan purussa.
+  assert.ok(metodi('kaynnista').includes('this.pakotaLaatu(true);'), 'käynnistys ei pakota terävää tilaa');
+  assert.ok(PURA.includes('this.pakotaLaatu(false);'), 'purku ei vapauta terävää tilaa');
+  assert.match(metodi('pakotaLaatu'), /if \(!this\.pallolla \|\| paalla === this\.laatuPakotettu\) return;/);
+  assert.match(MOOTTORI, /import \{ pakotaPallonLaatu \} from '\.\/pallo\.js';/);
+});
+
+/* ============ HAVAINNEKUVAT ETUKÄTEEN JA VALOKEILAN REUNA (5.9.2026 ilta) ============ */
+
+test('havainnekuvat esiladataan kahdelle seuraavalle pysäkille ja paneeli käyttää valmista oliota', () => {
+  assert.equal(PANEELIN_ESILATAUS_PYSAKKEJA, 2);
+  // Esilataus osuu SIIHEN osoitteeseen, jonka paneeli pyytää.
+  const ilmio = { osoite: `${KEKSINTO_KUVAJUURI}/1769-watt.jpg` };
+  assert.equal(paneelikuvanOsoite(ilmio, 640), pieniOsoite(ilmio.osoite));
+  assert.equal(paneelikuvanOsoite({ osoite: 'https://x.test/a/muotokuva/b.jpg' }, 400),
+    karuselliOsoite('https://x.test/a/muotokuva/b.jpg'));
+  assert.equal(paneelikuvanOsoite({ osoite: 'https://x.test/iso.jpg', ulkoinen: true }, 640), 'https://x.test/iso.jpg');
+  assert.equal(paneelikuvanOsoite({ tiedosto: 'Watt.jpg' }, 640), null);
+  assert.equal(paneelikuvanOsoite(null, 640), null);
+
+  const valmista = metodi('valmistaSeuraavat');
+  assert.match(valmista, /for \(let n = 1; n <= PANEELIN_ESILATAUS_PYSAKKEJA; n \+= 1\)/);
+  assert.match(valmista, /paneelikuvanOsoite\(t\.ilmio, 640\)/);
+  assert.match(valmista, /paneelikuvanOsoite\(t\.kuva, 400\)/);
+  // Jono siirtyy pysäkin vaihtuessa ja käynnistyksessä.
+  assert.ok(metodi('kaynnista').includes('this.valmistaSeuraavat(-1);'));
+  assert.ok(metodi('sytyta').includes('this.valmistaSeuraavat(i);'));
+  assert.ok(metodi('siirry').includes('this.valmistaSeuraavat(i);'));
+  // Varasto: lataus JA dekoodaus, katto ja yksi otto per osoite.
+  assert.match(MOOTTORI, /if \(typeof kuva\.decode === 'function'\) kuva\.decode\(\)\.then\(merkitse, merkitse\);/);
+  assert.match(MOOTTORI, /while \(kuvat\.size >= katto\) kuvat\.delete\(kuvat\.keys\(\)\.next\(\)\.value\);/);
+  assert.ok(KUVAVARASTON_KATTO >= 6, 'katto ei mahduta kahta pysäkkiä');
+  // Paneeli ottaa valmiin olion eikä lataa uudestaan eikä odota dekoodausta.
+  assert.match(MOOTTORI, /const esiladattu = varasto\?\.ota\?\.\(paneelikuvanOsoite\(kuvatieto, leveys\)\) \?\? null;/);
+  assert.match(MOOTTORI, /const kuva = esiladattu \?\? document\.createElement\('img'\);/);
+  assert.match(MOOTTORI, /const valmis = kuva && !esiladattu && typeof kuva\.decode === 'function'/);
+  assert.match(metodi('vaihdaPaneeli'), /kuvaTaiLaatta\(t\.ilmio, t\.otsikko, 640, 'aikajana-ilmiokuva', this\.paneelikuvat\)/);
+  // Purku tyhjentää varaston: valmiit oliot eivät jää elämään.
+  assert.ok(PURA.includes('this.paneelikuvat.tyhjenna();'));
+});
+
+test('valokeilan maski on epäsäännöllinen, deterministinen ja pysyy laatikon sisällä', () => {
+  const maski = valokeilanMaski(3);
+  // Sama siemen, sama muoto — myös taaksepäin selatessa.
+  assert.equal(maski, valokeilanMaski(3));
+  assert.notEqual(maski, valokeilanMaski(4), 'kuvat saavat saman reunan');
+  // Monta soikiota eri keskipisteissä (pohja + lohkot).
+  const kerroksia = maski.split('radial-gradient').length - 1;
+  assert.equal(kerroksia, VALOKEILAN_LOHKOT + 1);
+  const keskipisteet = [...maski.matchAll(/at ([\d.]+)% ([\d.]+)%/g)].map((m) => [Number(m[1]), Number(m[2])]);
+  assert.equal(keskipisteet.length, kerroksia);
+  const eriPisteita = new Set(keskipisteet.map((k) => k.join(','))).size;
+  assert.ok(eriPisteita >= VALOKEILAN_LOHKOT, 'lohkot ovat päällekkäin: reuna olisi säännöllinen');
+  // EI KOVAA REUNAA: jokainen soikio häipyy nollaan ennen laatikon laitaa.
+  const lohkot = maski.split('radial-gradient(').slice(1).map((osa) => {
+    const muoto = /ellipse ([\d.]+)% ([\d.]+)% at ([\d.]+)% ([\d.]+)%/.exec(osa);
+    const loppu = /transparent ([\d.]+)%/.exec(osa);
+    assert.ok(muoto && loppu, `kerros ilman soikiota tai läpinäkyvää loppua: ${osa.slice(0, 60)}`);
+    return {
+      rx: Number(muoto[1]), ry: Number(muoto[2]), cx: Number(muoto[3]), cy: Number(muoto[4]), loppu: Number(loppu[1]),
+    };
+  });
+  assert.equal(lohkot.length, kerroksia, 'jokaisella kerroksella ei ole läpinäkyvää loppua');
+  for (const {
+    rx, ry, cx, cy, loppu,
+  } of lohkot) {
+    const ulottuvuus = loppu / 100;
+    assert.ok(cx + rx * ulottuvuus <= 100.001, `soikio ${cx}±${rx} leikkautuu vaakasuunnassa`);
+    assert.ok(cx - rx * ulottuvuus >= -0.001, `soikio ${cx}±${rx} leikkautuu vaakasuunnassa`);
+    assert.ok(cy + ry * ulottuvuus <= 100.001, `soikio ${cy}±${ry} leikkautuu pystysuunnassa`);
+    assert.ok(cy - ry * ulottuvuus >= -0.001, `soikio ${cy}±${ry} leikkautuu pystysuunnassa`);
+  }
+  // Reuna kumpuilee: kaikki lohkot eivät ole laatikon keskellä.
+  assert.ok(keskipisteet.some(([x, y]) => Math.abs(x - 50) > 3 || Math.abs(y - 50) > 3), 'maski on yhä keskitetty');
+  // EI SUODATTIMIA (iPad): maski on pelkkiä liukuvärejä.
+  assert.ok(!/filter|feTurbulence|url\(/.test(maski), 'maski käyttää suodatinta tai kuvaa');
+  // Muoto lasketaan tapahtuman indeksistä ja annetaan css:lle muuttujana.
+  assert.match(metodi('vaihdaPaneeli'), /kehys\.style\.setProperty\('--aikajana-valokeila', valokeilanMaski\(t\.n \?\? t\.vuosi \?\? 0\)\);/);
+  assert.match(AIKAJANA_CSS, /-webkit-mask-image: var\(--aikajana-valokeila,/);
 });
 
 /* ==================== YLÄPALKKI ON VUOSILUVUN KORKUINEN ==================== */
@@ -1269,7 +1437,9 @@ test('välinäytös on tekstiä kartan päällä, ei korttia; Jatka hehkuu yläp
   assert.match(metodi('avaaAvausjakso'), /this\.sammutaLyhdyt = sytytaLyhdyt\(laatikko, \{ reducedMotion: this\.reducedMotion \}\);/);
   assert.match(metodi('puraAvaus'), /this\.sammutaLyhdyt\?\.\(\);/);
   // Havainnekuva valokeilassa: pelkkä kuva -paneeli ilman laatikkoa, reunat läpinäkyviksi maskilla (ei suodatin).
-  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:first-child,[\s\S]*?mask-image: radial-gradient\(ellipse 50% 50% at 50% 50%, #000 44%, rgba\(0, 0, 0, 0\.72\) 62%, rgba\(0, 0, 0, 0\.24\) 82%, transparent 97%\);/);
+  // Maski tulee js:n laskemasta muuttujasta (epäsäännöllinen reuna,
+  // omistaja 5.9.2026 ilta); entinen yksi soikio on sen varasija.
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:first-child,[\s\S]*?mask-image: var\(--aikajana-valokeila, radial-gradient\(ellipse 50% 50% at 50% 50%, #000 44%, rgba\(0, 0, 0, 0\.72\) 62%, rgba\(0, 0, 0, 0\.24\) 82%, transparent 97%\)\);/);
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio:has\(> \.aikajana-ilmio-sivu\.esilla > \.aikajana-ilmiokuva:first-child\) \{\n  border-color: transparent;\n  background: transparent;\n  box-shadow: none;\n\}/);
   assert.ok(!lohko.includes('backdrop-filter'), 'välinäytös ei sumenna karttaa');
   /*

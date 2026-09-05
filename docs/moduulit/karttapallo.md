@@ -1178,3 +1178,109 @@ ajetaan `--kuva 1100 --lava 1240` -arvoilla (tiedostot kasvavat noin
 kaksinkertaisiksi). Erittäin leveillä näytöillä (kuvasuhde yli ~2 : 1)
 cover rajaa pystysuunnassa niin paljon, että koneen reitin pohjoisin
 kohta voisi jäädä ulos; mitatut koot 390×844 … 2000×1300 ovat kunnossa.
+
+**Aikajana-ajon lähikuva, ennakoiva kamera, esiladatut havainnekuvat ja
+epäsäännöllinen valokeila (5.9.2026 ilta).** Omistaja katsoi aallon 2A
+ajoa työpöytäselaimella ja pyysi neljä asiaa, sanatarkasti:
+
+> *"zoomaa maapallo näin lähelle mutta liikuta palloa pehmeästi ja
+> hieman jo ennakoiden kohti uutta valopalloa niin että kun valopallo
+> syttyy kartan liike loppuu vasta vähän sen jälkeen. pidä kokoajan
+> terävä tila päällä."*
+>
+> *"havainnekuvat pitää esiladata, nyt tulivat vähän perässä."*
+>
+> *"saisiko havainnekuvan häivytyksen hieman epäsäännöllisemmän
+> muotoiseksi?"*
+
+1. **LÄHIKUVA ON VAKIO, EI KAAREN RAJAUS.** `AIKAJANAN_LAHIKUVA_LEVEYS`
+   (js/aikajana.js) = **260 lautayksikköä** (pyydetty kaista 7,8°,
+   altitude 0,146). Ajo ei enää sovita koko kaarta ruutuun: `sovitaAlkuun`
+   vie kameran ENSIMMÄISEN lampun ylle lähikuvaan (`ajaPysakille`), ja
+   siitä eteenpäin kamera vain siirtyy lampusta toiseen samalla
+   korkeudella. Tasokartta (`?lauta=kartta`) pitää entisen koko kaaren
+   sovituksen — lähikuva on pallon oma, koska vain siellä on laatat.
+   LUKU ON MITATTU EIKÄ LASKETTU: `korkeusLeveydesta` on tasokuvan kaava
+   PYSTYSUUNNAN avauskulmalla, joten ruudulla näkyvä vaakakaista on noin
+   1,8-kertainen pyydettyyn nähden. Mitattu Chromiumilla 1400 × 900
+   (kotelo 1379 × 821, kamera Pavian yllä, ruudun laitojen pisteet
+   käännettiin asteiksi ja väli laskettiin isoympyränä):
+   120 → 686 km, 200 → 1 162 km, 240 → 1 406 km, **260 → 1 527 km**,
+   300 → 1 782 km, 450 → 2 775 km. Omistajan mitta (Irlannista
+   Tanskaan ≈ 1 500 km ruudun leveydellä) osuu siis lukuun 260.
+   Mittakaava on kilometriä pikseliä kohti (≈ 1,1 km/px), joten
+   kapeampi ikkuna näyttää kapeamman kaistan; luku on yksi rivi, jos
+   omistaja haluaa toisin. Lähikuva ei mene laattojen tarkkuusrajan
+   (`PALLOLAUDAN_SIIRTOLEVEYS` = 120) alle.
+2. **KAMERA LÄHTEE ENNEN SYTTYMISTÄ JA SAAPUU VASTA SEN JÄLKEEN.**
+   Saapumishetki lasketaan samalla puhtaalla funktiolla kuin karusellin
+   ennakko (`aikaSeuraavaan`) — kello ei kulje vakionopeudella, joten
+   "kaksi sekuntia ennen" ei ole sama kuin "kahden sekunnin matka
+   jäljellä". `tarkistaKameraEnnakko` ajetaan `kehys`issä karusellin
+   ennakon rinnalla ja käynnistää ajon, kun syttymiseen on enintään
+   `AIKAJANAN_KAMERAN_ENNAKKO_MS` = **1 840 ms** (=
+   `AIKAJANAN_KAMERAN_ENNAKKO_OSUUS` 0,4 × `AIKAJANA_VIIVE_MS` 4 600).
+   Kesto on `eta + AIKAJANAN_KAMERAN_JALKIJATTO_MS` (**750 ms**), pohja
+   `AIKAJANAN_KAMERAN_POHJA_MS` (**900 ms**), joten liike jatkuu vielä
+   syttymisen yli. Pehmennys on `aikajananKameranPehmennys`
+   (smootherstep): nollanopeus molemmissa päissä, ei nykäisyä lähdössä
+   eikä pysähdyksessä. Jos ennakko ei ehtinyt lähteä (lyhyt väli,
+   ensimmäinen pysäkki, kortin tai lampun napautus), `sytyta`/`siirry`
+   ajaa pohjakestolla — lamppu ei jää lähikuvassa ruudun ulkopuolelle.
+   Kaaren LOPUSSA kamera peräytyy koko kaareen (`lopeta` →
+   `sovitaKaareen`), koska loppusanat lupaavat kaikki valot kerralla.
+3. **TERÄVÄ TILA PAKOTETTUNA AJON AJAKSI.** js/pallo.js sai
+   `pakotaPallonLaatu(true/false)` ja `pallonLaatuPakotettu()`: sama
+   vipu kuin `?laatu=aina`, mutta pyytäjittäin laskettuna ja ajon
+   mittaisena. `kytkeLaatunosto` lukee vivun nyt kutsuttaessa
+   (`const aina = () => laatuAinaPaalla(ikkuna) || laatuPakotukset > 0`)
+   ja saa muutoksen kuuntelijana: pakotus asettaa kynnykset ja
+   pikselisuhteen levon arvoihin, ajaa moottorille saman kameran (tarkat
+   laatat haetaan heti) ja terävöittää tekstuurit. Aikajana pyytää sen
+   `kaynnista`ssa ja vapauttaa `pura`ssa — myös kesken ajon suljettaessa.
+4. **HAVAINNEKUVAT KAKSI PYSÄKKIÄ ETUKÄTEEN.** `esilataaPienet` pyytää
+   yhä koko kaaren pienet tiedostot heti, mutta pyyntö ei pura WebP:tä.
+   Uusi `valmistaSeuraavat(i)` lataa JA DEKOODAA seuraavan
+   `PANEELIN_ESILATAUS_PYSAKKEJA` = 2 pysäkin havainnekuvan (640 px) ja
+   muotokuvat (400 px) jo edellisen pysäkin aikana; valmis Image-olio
+   jää varastoon (`luoKuvavarasto`, katto `KUVAVARASTON_KATTO` = 12,
+   vanhin poistuu ensin) ja paneeli OTTAA SEN SELLAISENAAN
+   (`kuvaTaiLaatta(..., varasto)`), jolloin uutta latausta ei lähde eikä
+   dekoodausta odoteta (`vaihdaPaneeli` ohittaa decode-kilpailun, kun
+   kuva on esiladattu). Osoite lasketaan samalla säännöllä kuin paneeli
+   sen pyytää (`paneelikuvanOsoite`) — muuten esilataus hakisi eri
+   tiedoston. Varasto tyhjennetään purussa.
+5. **VALOKEILAN REUNA ON EPÄSÄÄNNÖLLINEN.** `valokeilanMaski(siemen)`
+   laskee CSS:n `mask-image`-arvon: pohjasoikio ja sen päälle
+   `VALOKEILAN_LOHKOT` = 6 soikiota eri keskipisteissä ja eri säteillä.
+   Kerrokset yhdistyvät unionina (alfa a + b(1−a)), joten keskusta on
+   yhä täysin peittävä mutta ulkoreuna kumpuilee suunnan mukaan.
+   Siemen on tapahtuman indeksi (`t.n`), joten muoto on sama joka kerta
+   samalla kuvalla ja eri kuvilla eri. EI SUODATTIMIA (feTurbulence,
+   feDisplacementMap) — iPadilla ne maksaisivat paneelin
+   ristihäivytyksen joka kehyksellä; liukuvärit lasketaan kerran
+   merkkijonoksi ja selain rasteroi maskin kerran. Css lukee sen
+   muuttujasta `--aikajana-valokeila` ja pitää entisen yhden soikion
+   varasijana, joten sama reuna toimii pallolla ja vanhalla kartalla.
+
+Vartijat: tests/aikajana.test.mjs (lähikuvan mitta, ennakon luvut,
+pehmennyksen käyrä, esilatauksen osoitteet ja varasto, maskin muoto),
+tests/aikajanamerkit.test.mjs (tynkäselain: ajo alkaa lähikuvasta,
+ennakko lähtee ennen syttymistä ja kesto ylittää sen, terävä tila
+päällä ajon ajan ja pois purussa, kahden pysäkin esilataus),
+tests/aikajana-pallolla.test.mjs ja tests/pallo.test.mjs (pakotuksen
+laskuri ja kuuntelijat). Selaimessa mitattu Chromiumilla 1400 × 900
+(ohjelmistorasteroija, laatat ämpäristä): lähikuva 1 527 km, kameran
+lähtö 2,7–2,9 s ennen syttymistä (kontin hitaat kehykset venyttävät
+kelloa, joten ennakko on siellä pidempi kuin lasketut 1,84 s),
+`pallonLaatuPakotettu()` true ajon ajan ja false purun jälkeen, paneelin
+kuva `data-esiladattu="1"` ja maskissa 7 kerrosta, ei sivuvirheitä.
+
+AVOIN: kontin ohjelmisto-WebGL:llä kehysväli katkaistaan
+(`dt = min(200, …)`), jolloin kello kulkee reaaliaikaa hitaammin ja
+ennakolla laskettu saapumishetki tulee liian aikaisin — ajo ehtii
+päättyä juuri ennen syttymistä. Oikealla laitteella (60 fps) ennuste on
+tarkka, sama kuin karusellin ennakolla. Toinen avoin: lähikuva on
+kiinteä korkeus, joten kapealla puhelinruudulla näkyvä kaista on
+noin 430 km — omistajan pyyntö koski työpöytää, ja jos puhelin
+tarvitsee oman lukunsa, se on yksi rivi lisää.

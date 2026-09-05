@@ -689,9 +689,17 @@
   /* Enemmän ovaali (omistaja 4.9.2026: "havainnekuvan reunoja voi
      häivyttää lisää, niin että muodosta tulee enemmän ovaali"):
      ellipsi, jonka säde ulottuu juuri reunan keskikohtaan, joten
-     jokainen reuna ja kulma on läpinäkyvä ja keskusta täysin peittävä. */
-  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 44%, rgba(0, 0, 0, 0.72) 62%, rgba(0, 0, 0, 0.24) 82%, transparent 97%);
-  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 44%, rgba(0, 0, 0, 0.72) 62%, rgba(0, 0, 0, 0.24) 82%, transparent 97%);
+     jokainen reuna ja kulma on läpinäkyvä ja keskusta täysin peittävä.
+
+     EPÄSÄÄNNÖLLINEN REUNA (omistaja 5.9.2026 ilta: "saisiko
+     havainnekuvan häivytyksen hieman epäsäännöllisemmän muotoiseksi?"):
+     js/aikajana.js valokeilanMaski laskee muuttujaan monta soikiota eri
+     keskipisteissä, ja mask-image-kerrokset yhdistyvät unionina —
+     keskusta pysyy peittävänä mutta laita kumpuilee. Muuttuja
+     asetetaan elementtiin (vaihdaPaneeli), ja tässä oleva yksi soikio
+     on varasija: sama entinen muoto, jos maskia ei jostain syystä ole. */
+  -webkit-mask-image: var(--aikajana-valokeila, radial-gradient(ellipse 50% 50% at 50% 50%, #000 44%, rgba(0, 0, 0, 0.72) 62%, rgba(0, 0, 0, 0.24) 82%, transparent 97%));
+  mask-image: var(--aikajana-valokeila, radial-gradient(ellipse 50% 50% at 50% 50%, #000 44%, rgba(0, 0, 0, 0.72) 62%, rgba(0, 0, 0, 0.24) 82%, transparent 97%));
 }
 /*
  * KEKSINNÖN NIMI KUVAN ALAREUNASSA (omistaja 5.9.2026: nimi ei mahdu

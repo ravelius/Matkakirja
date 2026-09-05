@@ -177,10 +177,27 @@ globalThis.window = { AudioContext: function Ctx() { return {}; } };
  * mitattavissa eikä vain vaiettu pois.
  */
 const esiladatut = [];
+/** Kaikki luodut tyngät, jotta lataus voidaan laukaista testistä. */
+const tynkakuvat = [];
 globalThis.Image = class TynkaKuva {
-  constructor() { this.decoding = ''; }
+  constructor() {
+    this.decoding = '';
+    this.naturalWidth = 8;
+    this.kuuntelijat = new Map();
+    this.dekoodauksia = 0;
+    tynkakuvat.push(this);
+  }
 
-  addEventListener() {}
+  addEventListener(laji, fn) {
+    if (!this.kuuntelijat.has(laji)) this.kuuntelijat.set(laji, new Set());
+    this.kuuntelijat.get(laji).add(fn);
+  }
+
+  /** Dekoodaus kuten selaimessa: lupaus, joka ratkeaa seuraavassa mikrotehtävässä. */
+  decode() { this.dekoodauksia += 1; return Promise.resolve(); }
+
+  /** Selaimen 'load': esilatausvarasto merkitsee kuvan valmiiksi vasta tästä. */
+  laukaiseLataus() { for (const fn of [...(this.kuuntelijat.get('load') ?? [])]) fn({ type: 'load' }); }
 
   set src(osoite) { this.osoite = osoite; esiladatut.push(osoite); }
 
@@ -233,7 +250,12 @@ globalThis.Audio = TynkaAudio;
 
 /* ── moduulit tyngän jälkeen ─────────────────────────────────────── */
 
-const { kaynnistaAikajana, pysaytaAikajana, MERKIN_SADE, pieniOsoite } = await import('../js/aikajana.js');
+const {
+  kaynnistaAikajana, pysaytaAikajana, MERKIN_SADE, pieniOsoite,
+  AIKAJANAN_LAHIKUVA_LEVEYS, AIKAJANAN_KAMERAN_ENNAKKO_MS, AIKAJANAN_KAMERAN_JALKIJATTO_MS,
+  AIKAJANAN_KAMERAN_POHJA_MS, aikaSeuraavaan, paneelikuvanOsoite, PANEELIN_ESILATAUS_PYSAKKEJA,
+} = await import('../js/aikajana.js');
+const { pallonLaatuPakotettu } = await import('../js/pallo.js');
 const { LINSSI } = await import('../js/linssit/keksinnot.js');
 const { lisaaVaistaja, nollaaHiljennykset } = await import('../js/ambience-stream.js');
 const { LINSSIN_HILJENNYS } = await import('../js/siirtymamusiikki.js');
@@ -500,6 +522,138 @@ test('pallolla kamera on laudan oma eikä fokuslukkoa kosketa', () => {
   const ajo = kirjattu.ajot.at(-1);
   assert.ok(ajo?.kohde?.bbox, 'kaaren sovitus ei mennyt laudan kameralle');
   assert.equal(ui.kameraVapaa, undefined, 'pallolla ei ole fokuslukkoa vapautettavaksi');
+  pysaytaAikajana(ui);
+});
+
+/*
+ * ── LÄHIKUVA, ENNAKOIVA KAMERA JA TERÄVÄ TILA (omistaja 5.9.2026 ilta,
+ *    sanatarkasti): *"zoomaa maapallo näin lähelle mutta liikuta palloa
+ *    pehmeästi ja hieman jo ennakoiden kohti uutta valopalloa niin että
+ *    kun valopallo syttyy kartan liike loppuu vasta vähän sen jälkeen.
+ *    pidä kokoajan terävä tila päällä."*
+ *
+ * Kolme asiaa rikkoutuisi hiljaa: kamera jäisi kaaren yleisnäkymään
+ * (lähikuva katoaisi), ajo lähtisi vasta syttymisestä (nykäisy juuri
+ * lukuhetkellä) tai terävä tila jäisi päälle linssin jälkeen.
+ */
+
+test('pallolla ajo alkaa ensimmäisen lampun yltä lähikuvassa, ei kaaren rajauksesta', () => {
+  const { ui, kirjattu } = tynkaPalloUi();
+  kaynnistaAikajana(ui, LINSSI);
+  ajaKehykset();
+  kirjattu.ajot.length = 0;
+  ui.aikajana.sovitaAlkuun(0);
+  const ajo = kirjattu.ajot.at(-1);
+  const eka = LINSSI.aikajana.tapahtumat[0];
+  assert.ok(!ajo.kohde.bbox, 'pallolla ei enää sovitella koko kaarta ruutuun');
+  assert.equal(ajo.kohde.leveys, AIKAJANAN_LAHIKUVA_LEVEYS, 'lähikuvan leveys ei ole vakio');
+  assert.equal(ajo.kohde.lat, eka.lat);
+  assert.equal(ajo.kohde.lng, eka.lon);
+  // Mitta on mitattu selaimessa (1400 × 900 → 1 530 km); tässä
+  // varmistetaan vain, ettei ajo palaa kaaren yleisnäkymään.
+  assert.equal(AIKAJANAN_LAHIKUVA_LEVEYS, 260, 'lähikuvan mitta vaihtui — mittaa selaimessa uudestaan');
+  pysaytaAikajana(ui);
+});
+
+test('kamera lähtee ennen syttymistä ja on perillä vasta sen jälkeen', () => {
+  const { ui, kirjattu } = tynkaPalloUi();
+  kaynnistaAikajana(ui, LINSSI);
+  ajaKehykset();
+  const ajo = ui.aikajana;
+  const tapahtumat = ajo.tapahtumat;
+
+  // 1. KAUKANA: pysäkin tauko on vasta alussa, eikä kamera lähde.
+  ajo.tila = {
+    vuosi: tapahtumat[0].vuosi, i: 0, viive: 4600, viiveTaysi: 4600,
+  };
+  ajo.kameraKohde = null;
+  kirjattu.ajot.length = 0;
+  ajo.tarkistaKameraEnnakko({});
+  assert.equal(kirjattu.ajot.length, 0, 'kamera lähti liikkeelle liian aikaisin');
+  assert.equal(ajo.kameraKohde, null);
+
+  // 2. ENNAKON SISÄLLÄ: kello on lähellä seuraavaa vuotta mutta EI
+  //    vielä siinä — liike alkaa, vaikka valo ei ole syttynyt.
+  ajo.tila = {
+    vuosi: tapahtumat[1].vuosi - 0.2, i: 0, viive: 0, alku: tapahtumat[0].vuosi + 0.6,
+  };
+  const eta = aikaSeuraavaan(ajo.tila, tapahtumat, {}, AIKAJANAN_KAMERAN_ENNAKKO_MS + 8);
+  assert.ok(Number.isFinite(eta) && eta > 0, `syttyminen ei ole ennakon sisällä (${eta})`);
+  ajo.tarkistaKameraEnnakko({});
+  const ennakko = kirjattu.ajot.at(-1);
+  assert.equal(ajo.kameraKohde, 1, 'kameran kohde ei ole seuraava pysäkki');
+  assert.equal(ennakko.kohde.lat, tapahtumat[1].lat, 'kamera ei lähtenyt kohti seuraavaa lamppua');
+  assert.equal(ennakko.kohde.leveys, AIKAJANAN_LAHIKUVA_LEVEYS);
+  // Kesto on syttymiseen jäävä aika PLUS jälkijättö: liike loppuu vasta
+  // syttymisen jälkeen, ja pehmennys on aikajanan oma (pehmeä pysähdys).
+  assert.equal(ennakko.valinnat.kesto, Math.max(AIKAJANAN_KAMERAN_POHJA_MS, eta + AIKAJANAN_KAMERAN_JALKIJATTO_MS));
+  assert.ok(ennakko.valinnat.kesto > eta, 'ajo ehtisi loppuun ennen syttymistä');
+  assert.equal(typeof ennakko.valinnat.pehmennys, 'function');
+  // Pehmennys on nollanopeuksinen molemmissa päissä (ei nykäisyä).
+  const p = ennakko.valinnat.pehmennys;
+  assert.equal(p(0), 0);
+  assert.equal(p(1), 1);
+  assert.ok(p(0.02) < 0.02 && p(0.98) > 0.98, 'pehmennys ei ole pehmeä päistään');
+
+  // 3. SYTTYMINEN EI ALOITA UUTTA AJOA, kun ennakko vei jo perille.
+  kirjattu.ajot.length = 0;
+  ajo.sytyta(1);
+  assert.equal(kirjattu.ajot.length, 0, 'syttyminen nykäisi kameraa uudelleen');
+
+  // 4. LYHYT VÄLI: ilman ennakkoa kamera ajaa pohjakestolla, jottei
+  //    lamppu jää lähikuvassa ruudun ulkopuolelle.
+  ajo.kameraKohde = null;
+  ajo.sytyta(2);
+  const varmistus = kirjattu.ajot.at(-1);
+  assert.equal(varmistus.kohde.lat, tapahtumat[2].lat);
+  assert.equal(varmistus.valinnat.kesto, AIKAJANAN_KAMERAN_POHJA_MS);
+  pysaytaAikajana(ui);
+});
+
+test('terävä tila on päällä koko ajon ja vapautuu purussa', () => {
+  const { ui } = tynkaPalloUi();
+  assert.equal(pallonLaatuPakotettu(), false, 'lähtötila ei ole puhdas');
+  kaynnistaAikajana(ui, LINSSI);
+  ajaKehykset();
+  assert.equal(pallonLaatuPakotettu(), true, 'terävää tilaa ei pakotettu ajon ajaksi');
+  pysaytaAikajana(ui);
+  assert.equal(pallonLaatuPakotettu(), false, 'terävä tila jäi päälle linssin jälkeen');
+
+  // Tasokartalla laatua ei pakoteta: se on pallon laattamoottorin asia.
+  const kartta = tynkaUi();
+  kaynnistaAikajana(kartta, LINSSI);
+  assert.equal(pallonLaatuPakotettu(), false, 'tasokartta pakotti pallon laadun');
+  pysaytaAikajana(kartta);
+});
+
+test('seuraavan kahden pysäkin havainnekuvat ladataan ja dekoodataan etukäteen', () => {
+  const { ui } = tynkaPalloUi();
+  kaynnistaAikajana(ui, LINSSI);
+  ajaKehykset();
+  const ajo = ui.aikajana;
+  const tapahtumat = ajo.tapahtumat;
+  assert.equal(PANEELIN_ESILATAUS_PYSAKKEJA, 2);
+
+  // Käynnistys valmistaa jo kaksi ensimmäistä pysäkkiä.
+  const osoite = (i) => paneelikuvanOsoite(tapahtumat[i].ilmio, 640);
+  assert.ok(esiladatut.includes(osoite(0)) && esiladatut.includes(osoite(1)), 'ensimmäiset pysäkit eivät ole jonossa');
+
+  // Pysäkin vaihtuessa jono siirtyy eteenpäin: 5 → 6 ja 7. (Lista on
+  // koko istunnon yhteinen, joten mitataan vain tämän jälkeen tulleet.)
+  const alku = esiladatut.length;
+  ajo.sytyta(5);
+  const uudet = esiladatut.slice(alku);
+  assert.ok(uudet.includes(osoite(6)), 'seuraavaa pysäkkiä ei esiladattu');
+  assert.ok(uudet.includes(osoite(7)), 'toista seuraavaa pysäkkiä ei esiladattu');
+  // Muotokuvat mukana (karusellikoossa), mutta kaukaisia pysäkkejä ei haeta.
+  assert.ok(uudet.includes(paneelikuvanOsoite(tapahtumat[6].kuva, 400)), 'muotokuva ei ole jonossa');
+  assert.ok(!uudet.includes(osoite(9)), 'jono kurottaa liian kauas');
+
+  // LADATTU JA DEKOODATTU: varasto merkitsee kuvan valmiiksi vasta
+  // decoden jälkeen, ja paneeli ottaa sen sellaisenaan.
+  const kuva = tynkakuvat.findLast((k) => k.osoite === osoite(6));
+  kuva.laukaiseLataus();
+  assert.equal(kuva.dekoodauksia, 1, 'esilataus ei dekoodannut kuvaa');
   pysaytaAikajana(ui);
 });
 
