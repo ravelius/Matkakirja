@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import {
   SIVUNKAANTO_AVAIN, SIVUNKAANTO_KIRJASTO, SIVUNKAANTO_KYNNYS, SIVUNKAANTO_VERSIO,
   asetaSivunkaanto, kaannaSivu, aloitaSivunVeto, lataaSivunkaanto,
-  sivunkaantoMahdollinen, sivunkaantoPaalla, sivunkaantoValmis, yhdenTiedostonVersio,
+  sivunkaantoMahdollinen, sivunkaantoPaalla, sivunkaantoValmis, sivunkaantoDistVersio,
 } from '../js/sivunkaanto.js';
 
 /*
@@ -65,9 +65,9 @@ test('lippu: oletus päällä, "0" palauttaa vanhan pinon', () => {
 test('yhden tiedoston versio ja reduced motion sammuttavat käännön', () => {
   const manifestilla = { querySelector: (v) => (v === 'link[rel="manifest"]' ? {} : null) };
   const ilman = { querySelector: () => null };
-  assert.equal(yhdenTiedostonVersio(ilman), true, 'ei manifestia = dist');
-  assert.equal(yhdenTiedostonVersio(manifestilla), false);
-  assert.equal(yhdenTiedostonVersio(undefined), true, 'ilman dokumenttia ei kääntöä');
+  assert.equal(sivunkaantoDistVersio(ilman), true, 'ei manifestia = dist');
+  assert.equal(sivunkaantoDistVersio(manifestilla), false);
+  assert.equal(sivunkaantoDistVersio(undefined), true, 'ilman dokumenttia ei kääntöä');
   const liikkuva = { matchMedia: () => ({ matches: false }) };
   const rauhallinen = { matchMedia: () => ({ matches: true }) };
   assert.equal(sivunkaantoMahdollinen({ doc: manifestilla, win: liikkuva, paalla: true }), true);

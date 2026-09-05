@@ -126,7 +126,7 @@ export function asetaSivunkaanto(paalla) {
  * palvelutyöntekijän rekisteröimättä. Raamattu: dist jää ilman
  * kirjastoja, joten siellä kääntöä ei edes yritetä ladata.
  */
-export function yhdenTiedostonVersio(doc = globalThis.document) {
+export function sivunkaantoDistVersio(doc = globalThis.document) {
   if (!doc?.querySelector) return true;
   return !doc.querySelector('link[rel="manifest"]');
 }
@@ -144,7 +144,7 @@ export function sivunkaantoLiikeVahennetty(win = globalThis) {
 export function sivunkaantoMahdollinen({
   doc = globalThis.document, win = globalThis, paalla = sivunkaantoPaalla(),
 } = {}) {
-  return Boolean(paalla) && !yhdenTiedostonVersio(doc) && !sivunkaantoLiikeVahennetty(win);
+  return Boolean(paalla) && !sivunkaantoDistVersio(doc) && !sivunkaantoLiikeVahennetty(win);
 }
 
 /** Kirjaston PageFlip-luokka, jos se on jo ladattu; muuten null. */
