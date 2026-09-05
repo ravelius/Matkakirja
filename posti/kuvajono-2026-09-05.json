@@ -1,0 +1,2535 @@
+{
+ "nimi": "Matkakirjan kuvatilausjono",
+ "paivays": "2026-09-05",
+ "laatija": "kuvatoimittajan apulainen (inventaario koodista)",
+ "rajaukset": [
+  "Kohtaamiskuvat jätetty pois (omistajan päätös 5.9.2026).",
+  "Miniatyyrit (M3) jätetty pois — erillinen tuotanto, 566 kohteen jono.",
+  "Kaikki mitat JPG/sRGB, ei WebP eikä PNG (Raamattu: KUVAMUOTO ON JPG). Poikkeus vain miniatyyrit.",
+  "Kaikki kuvat fotorealistisia valokuvia, ei piirroksia (Raamattu: KAIKKI GENEROIDUT KUVAT MAHDOLLISIMMAN VALOKUVAMAISIA).",
+  "Kuvat vain R2:een, ei repoon. Polku kohtaamiset/<kategoria>/.",
+  "Kuvateksti kertoo kohteesta, ei kuvasta; yksi virke."
+ ],
+ "yhteenveto": {
+  "jononPituus": 126,
+  "prioriteetti1": 41,
+  "prioriteetti2": 61,
+  "prioriteetti3": 24
+ },
+ "laajuus": [
+  {
+   "ryhma": "Skandaalit",
+   "yhteensa": 83,
+   "kuvitettu": 39,
+   "tilattuTaiArvioinnissa": 19,
+   "puuttuu": 25,
+   "tassaJonossa": 25,
+   "prioriteetti": 1,
+   "perustelu": "Kortti aukeaa kartalta ja lehdestä ilman kuvaa; loput 58 on jo kuvitettu tai arvioinnissa."
+  },
+  {
+   "ryhma": "Historian hetket",
+   "yhteensa": "20 pelissä + 31 R2:ssa (29 pelille uutta)",
+   "kuvitettu": "20/20 pelissä, 31/31 R2:ssa",
+   "puuttuu": "1 kuvakulma (franklin-leija-1752 kauko); hetkien kuvatekstit ja lähderivit puuttuvat 31 R2-hetkeltä",
+   "tassaJonossa": 1,
+   "prioriteetti": 1,
+   "perustelu": "Yksikään pelin hetki ei ole ilman kuvaa. Pullonkaula ei ole kuva vaan kuvatekstipaketti, jota Fable on pyytänyt postissa 4.9."
+  },
+  {
+   "ryhma": "Kuvituskuvat (kohdekartan nähtävyysjutut)",
+   "yhteensa": 902,
+   "puuttuu": 37,
+   "joistaOmiaAiheita": 4,
+   "tassaJonossa": 4,
+   "prioriteetti": 1,
+   "perustelu": "33 kuvatonta juttua on skandaali- tai hetkisivun kaksoiskappale ja saa kuvansa niiden mukana; nämä 4 ovat omia aiheitaan."
+  },
+  {
+   "ryhma": "Aarteet (pääaarre, vaalea pohja)",
+   "yhteensa": 9,
+   "puuttuu": 9,
+   "tassaJonossa": 9,
+   "prioriteetti": 1,
+   "perustelu": "Raamattu kirjaa avoimena: Aarnin luettelon diplomi päättyy vaaleaan pohjaan, mutta pääaarrekuvat ovat tummapohjaisia."
+  },
+  {
+   "ryhma": "Kuvituskuvat (varusteet)",
+   "yhteensa": 7,
+   "puuttuu": 2,
+   "tassaJonossa": 2,
+   "prioriteetti": 1,
+   "perustelu": "Keksinnöt- ja pallolinssi näyttävät valikossa rikkinäisen kuvan."
+  },
+  {
+   "ryhma": "Loistoaika / Matkakirjan ihme",
+   "yhteensa": 35,
+   "uusittuFotorealistiseksi": 16,
+   "puuttuu": 19,
+   "tassaJonossa": 19,
+   "prioriteetti": 2,
+   "perustelu": "Kuva on olemassa mutta vanhaa webp-erää ja lukee piirroksena — Raamatun mukaan hylkäysperuste."
+  },
+  {
+   "ryhma": "Ennen/nyt (nyt)",
+   "yhteensa": "18 ihmekohdetta ilman nykykuvaa",
+   "puuttuu": 18,
+   "tassaJonossa": 18,
+   "prioriteetti": 2,
+   "perustelu": "Kohteella on vain loistoaikakuva; ennen/nyt-pari ei synny ilman nykykuvaa. Commons-kuva on ensisijainen."
+  },
+  {
+   "ryhma": "Ennen/nyt (kaupunkilehdet)",
+   "yhteensa": 146,
+   "kuvitettu": 104,
+   "puuttuu": 42,
+   "tassaJonossa": 0,
+   "prioriteetti": 2,
+   "perustelu": "42 kaupunkilehdellä ei ole ennenNyt-paria (dubai, doha, salalah, astana, borneo, sumatra, kashgar, lhasa, kolkata, kabul, chennai, mumbai, colombo, karachi, wellington, sevilla, bergen, montreal, melbourne, vancouver, brisbane, chicago, perth, saopaulo, toronto, lima, quito, losangeles, montevideo, havanna, mexico, neworleans, bogota, adelaide, hobart, darwin, portmoresby, valparaiso, christchurch, manaus, caracas, salvador). 84 kuvaa. ODOTTAA VALINTAA: Fable nimeää kunkin kaupungin vertailunäkymän ennen tilausta."
+  },
+  {
+   "ryhma": "Isoisän tarina (1873-valokuvat)",
+   "yhteensa": "2 pelissä, 6 R2:ssa",
+   "tassaJonossa": 12,
+   "prioriteetti": 2,
+   "perustelu": "Maailmanympärimatka kattaa nyt kaikki mantereet, mutta kuvia on kaksi. Sama hahmo jatkuu."
+  },
+  {
+   "ryhma": "Lehti- ja asiakirjanostot",
+   "yhteensa": "11 tehty (rooli lehti)",
+   "tassaJonossa": 12,
+   "prioriteetti": 2,
+   "perustelu": "Aikakauden lehtisivu on hetken kolmas kuvakulma; se on tehty vain 11 hetkelle 51:stä."
+  },
+  {
+   "ryhma": "Eläintäyt",
+   "yhteensa": "134 maata maailmankartan countryShapes-taulussa",
+   "kuvitettu": 29,
+   "puuttuu": 105,
+   "tassaJonossa": 24,
+   "prioriteetti": 3,
+   "perustelu": "Eläintäky on vain Euroopan 29 maalla; muilla mantereilla ei yhtään. ODOTTAA SISÄLTÖÄ: Fable kirjoittaa kortin otsikon, tekstin ja lähteen ennen kuvaa."
+  },
+  {
+   "ryhma": "Aarteet (paikallisaarteet)",
+   "yhteensa": "134 maata x 2 = 268 kuvaa (Raamattu: ~220 paria)",
+   "kuvitettu": "29 maata / 58 kuvaa",
+   "puuttuu": "105 maata / 210 kuvaa",
+   "tassaJonossa": 0,
+   "prioriteetti": 3,
+   "perustelu": "Euroopan ulkopuolella maat käyttävät laudan yleistä aarrekuvaa (varakuva). ODOTTAA SISÄLTÖÄ: pieni + iso aarre on Fablen kirjoitettava (nimi + fakta) ennen kuvaa. Lisäksi teksturoidut vanhat pohjat (esim. FIN tervatynnyri) voi generoida uudelleen tasaiselle pohjalle."
+  },
+  {
+   "ryhma": "Karttanostot (maanosien nostot)",
+   "yhteensa": "114 nostoa 27 maassa + 28 kaupungissa",
+   "kuvitettu": "114/114 (49 havainnekuvaa, 65 Commons)",
+   "puuttuu": "Kaikki Euroopan ulkopuoliset mantereet — Afrikassa, Amerikoissa, Oseaniassa ja Aasiassa (pl. TUR) ei ole yhtään karttanostoa",
+   "tassaJonossa": 0,
+   "prioriteetti": 3,
+   "perustelu": "ODOTTAA SISÄLTÖÄ: nosto on ensin kirjoitettava. Arvio 3 nostoa x 30 uutta maata = ~90 kuvaa."
+  },
+  {
+   "ryhma": "Karttanostot (syvennykset)",
+   "yhteensa": 118,
+   "kuvitettu": "118/118 (3 havainnekuvaa, 115 Commons)",
+   "puuttuu": 0,
+   "tassaJonossa": 0,
+   "prioriteetti": 3,
+   "perustelu": "Ei aukkoja. Commons-kuvien laatu voidaan katselmoida erikseen."
+  },
+  {
+   "ryhma": "Kuvituskuvat (maastokohteet)",
+   "yhteensa": 556,
+   "kuvitettu": 0,
+   "puuttuu": 556,
+   "tassaJonossa": 0,
+   "prioriteetti": 3,
+   "perustelu": "Vuoret, joet ja meret aukeavat kartalta pelkkänä tekstinä. Raamattu sallii maastokohteiden havainnekuvat (NOSTOKUVAT FOTOREALISTISINA). Suurin yksittäinen aukko, mutta myös se, jossa Commons kattaa suuren osan (vrt. vuori-valokuvat.js 52 kuvaa)."
+  },
+  {
+   "ryhma": "Tiede ja keksinnöt (aikajana)",
+   "yhteensa": "26 pysäkkiä",
+   "kuvitettu": "26/26 muotokuva + ilmiökuva, 25/26 aito Commons-kuva",
+   "puuttuu": 0,
+   "tassaJonossa": 0,
+   "prioriteetti": 3,
+   "perustelu": "Aikajana on kuvitettu kokonaan. Laajennus (uusia pysäkkejä 1928 jälkeen tai väliin) on sisältötyö, ei kuva-aukko."
+  },
+  {
+   "ryhma": "Lehtien kansikuvat ja matkailijan oppaan kuvat",
+   "yhteensa": "146 kaupunkilehteä, 58 maalehteä",
+   "kuvitettu": "146/146 kaupunkia, 2170/2170 lehtinostoa",
+   "puuttuu": 0,
+   "tassaJonossa": 0,
+   "prioriteetti": 3,
+   "perustelu": "Yksikään kaupunki- tai maalehden nosto ei ole ilman kuvaa; kaikilla lehtikaupungeilla on valokuvarivi. Ei kuvatilausta tälle ryhmälle."
+  }
+ ],
+ "jono": [
+  {
+   "tunnus": "skandaali-thiess-ihmissusi",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.LVA → thiess-ihmissusi.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Thiess Kaltenbrunilainen tunnustaa oikeudessa olevansa ihmissusi",
+   "aika": "1692",
+   "paikka": "Zaube (entinen Jürgensburg), Latvia — oikeudenkäynnin pitäjä",
+   "konteksti": "Kahdeksankymppinen Thiess kertoo Jürgensburgin käräjillä olevansa \"Jumalan koira\", joka käy helvetissä hakemassa varastetun viljan takaisin. Kuvaan pysäytetään hetki, jossa vanha mies puhuu rauhallisesti ja tuomarit katsovat papereitaan tietämättä mitä tehdä.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Vastaaja myönsi heti olevansa ihmissusi — ja väitti olevansa hyvien puolella.",
+   "lahteet": [
+    "en-Wikipedia \"Thiess of Kaltenbrun\"",
+    "Liivinmaan 1600-luvun käräjätuvan sisustus ja pukeutuminen",
+    "Commons: \"Livonia 17th century\", \"Baltic German court room\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-riian-kalenterikahakat",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.LVA → riian-kalenterikahakat.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Riian kalenterikahakat raatihuoneentorilla",
+   "aika": "1584–1589",
+   "paikka": "Riian raatihuoneentori (Rātslaukums), Riika",
+   "konteksti": "Gregoriaanisen kalenterin käyttöönotto vei Riiasta kymmenen päivää ja kaupungin vuosiksi sekasortoon 1584–1589. Kuvaan otetaan kiihtynyt kansanjoukko raatihuoneentorilla, killan miehiä ja kalenterilehti kädessä.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kymmenen kalenterista pyyhittyä päivää sytytti Riiassa viisi vuotta kestäneen kahakan.",
+   "lahteet": [
+    "en-Wikipedia \"Calendar riots in Riga\"",
+    "Riian raatihuoneentori ja Mustainpäiden talo 1500-luvun asussa",
+    "Commons: \"Rātslaukums\", \"House of the Blackheads Riga\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-oera-linda-kasikirjoitus",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.NLD → oera-linda-kasikirjoitus.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Oera Linda -käsikirjoituksen tutkiminen Leeuwardenissa",
+   "aika": "1867–1879",
+   "paikka": "Tresoar (Frieslandin maakunta-arkisto), Leeuwarden",
+   "konteksti": "Oppineet kumartuvat \"muinaisfriisiläisen\" käsikirjoituksen ylle: paperi on liian uutta, muste liian tuoretta. Kuvassa käsikirjoitus on avattuna pöydälle ja suurennuslasi paperin kuidun päällä.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Käsikirjoitus lupasi friiseille kolmentuhannen vuoden historian paperilla, joka tuoksui vielä painomusteelta.",
+   "lahteet": [
+    "en-Wikipedia \"Oera Linda Book\"",
+    "Tresoar, Frieslandin maakunta-arkisto",
+    "Commons: \"Oera Linda Book\", \"Tresoar\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-huudon-varkaus",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.NOR → huudon-varkaus.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Huuto varastetaan Oslon kansallisgalleriasta olympia-aamuna 1994",
+   "aika": "1994",
+   "paikka": "Nasjonalgalleriet, Universitetsgata 13, Oslo",
+   "konteksti": "Lillehammerin avajaisaamuna kaksi varasta nousee tikapuita Nasjonalgalleriet-rakennuksen toisen kerroksen ikkunaan. Kuvassa hetki ikkunan alla: tikkaat seinää vasten, harmaa helmikuun aamu, tyhjä kehys sisällä.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Munchin Huuto vietiin tikapuilla samana aamuna kun koko maailma katsoi Lillehammeria.",
+   "lahteet": [
+    "en-Wikipedia \"The Scream\"",
+    "Nasjonalgalleriet, Universitetsgata 13, Oslo — julkisivu",
+    "Commons: \"Nasjonalgalleriet Oslo\", \"The Scream 1994 theft\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-boheemikirjan-takavarikko",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.NOR → boheemikirjan-takavarikko.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Hans Jægerin Kristiania-boheemin takavarikko",
+   "aika": "1885–1886",
+   "paikka": "Grand Café, Karl Johans gate, Oslo (Kristianian boheemien kantapaikkoja)",
+   "konteksti": "Poliisi kerää kirjakaupasta juuri ilmestyneen romaanin pinot pois, ja kadun toisella puolella boheemit katsovat Grand Cafén ikkunasta. Kuvassa 1880-luvun Kristiania, kirjapinot laatikossa ja kirjakauppiaan ilme.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kirja ehti tuskin kirjakauppaan, kun valtio jo keräsi sen pois.",
+   "lahteet": [
+    "no-Wikipedia \"Fra Kristiania-Bohêmen\"",
+    "en-Wikipedia \"Hans Jæger\"",
+    "Grand Café, Karl Johans gate",
+    "Commons: \"Grand Café Oslo\", \"Karl Johans gate 1885\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-szczerbiec-odysseia",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.POL → szczerbiec-odysseia.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Szczerbiec Pariisin maailmannäyttelyssä 1878 väärällä nimilapulla",
+   "aika": "1795–1928",
+   "paikka": "Wawelin linnan aarrekammio, Krakova",
+   "konteksti": "Puolalaisia kävijöitä seisoo vitriinin edessä, jossa \"saksalainen miekka\" lepää samettityynyllä. He tunnistavat kruunajaismiekkansa. Kuvassa vitriini, nimilappu ja kävijöiden tunnistava katse.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Puolan kruunajaismiekka oli maailmannäyttelyn vitriinissä väärällä nimilapulla — kotimatka kesti vielä viisikymmentä vuotta.",
+   "lahteet": [
+    "en-Wikipedia \"Szczerbiec\"",
+    "Wawelin aarrekammio",
+    "Commons: \"Szczerbiec\", \"Exposition Universelle 1878\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-walbrzychin-kultajuna",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.POL → walbrzychin-kultajuna.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Wałbrzychin kultajunan kaivaukset radan kilometrillä 65",
+   "aika": "1945 (legenda), 2015–2016 (kaivaukset)",
+   "paikka": "Wrocław–Wałbrzych-radan 'kilometri 65', Wałbrzych",
+   "konteksti": "Kaivinkone, maatutkalaitteisto ja pieni väkijoukko kameroineen rautatiepenkan vieressä 2016. Kuvassa nostetaan savea; kultaa ei ole. Etualalla tutkijan pettynyt ilme, taustalla toimittajien kalusto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Maatutka näytti junanmuotoisen kohteen, kaivinkoneet löysivät savea.",
+   "lahteet": [
+    "en-Wikipedia \"Nazi gold train\"",
+    "Wrocław–Wałbrzych-rata, kilometri 65",
+    "Commons: \"Wałbrzych gold train\", \"Książ\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-prokoszin-kronikka",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.POL → prokoszin-kronikka.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Joachim Lelewel osoittaa Prokoszin kronikan väärennökseksi",
+   "aika": "1825 (julkaisu ja paljastus 1826)",
+   "paikka": "Puolan kansalliskirjasto, Varsova (julkaisukaupunki)",
+   "konteksti": "Historioitsija vertaa kahta käsikirjoitusta kynttilänvalossa 1826 ja osoittaa sormella päiväystä, joka on väärässä ajassa. Kuvassa työpöytä, kaksi nidettä ja ratkaiseva rivi.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kronikka lupasi rivin muinaisia kuninkaita, joista kukaan muu ei ollut kuullut.",
+   "lahteet": [
+    "pl-Wikipedia \"Kronika Prokosza\"",
+    "en-Wikipedia \"Joachim Lelewel\"",
+    "Commons: \"Joachim Lelewel\", \"19th century manuscript study\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-alves-dos-reis-setelihuijaus",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.PRT → alves-dos-reis-setelihuijaus.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Alves dos Reisin 500 escudon setelit Banco de Portugalissa",
+   "aika": "1924–1925",
+   "paikka": "Banco de Portugal, Lissabon",
+   "konteksti": "Pankin virkailijat levittävät pöydälle kaksi seteliä, joissa on sama sarjanumero. Kuvassa 1925 Lissabon, pankkisali, kaksi identtistä seteliä ja oivalluksen hetki.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Reis ei väärentänyt seteleitä vaan paperit, joilla oikea setelipaino painoi hänelle aitoja.",
+   "lahteet": [
+    "en-Wikipedia \"Alves dos Reis\"",
+    "Banco de Portugal, Lissabon",
+    "Commons: \"Banco de Portugal\", \"500 escudos 1925\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-portugalilaisen-nunnan-kirjeet",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.PRT → portugalilaisen-nunnan-kirjeet.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Bejan luostarin \"Mértolan ikkuna\" ja portugalilaisen nunnan kirjeet",
+   "aika": "1669",
+   "paikka": "Convento da Conceição (Mértolan ikkuna), Beja",
+   "konteksti": "Convento da Conceiçãon ikkuna, jonka läpi kirjeiden nunnan kerrotaan katsoneen upseeria — vaikka koko nunnaa ei ehkä ollut. Kuvassa ikkuna sisältä, valo, kirjeniput ikkunalaudalla.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Bejassa näytetään yhä ikkunaa, josta rakkauskirjeiden nunnaa ei ehkä koskaan katsottu.",
+   "lahteet": [
+    "en-Wikipedia \"Letters of a Portuguese Nun\"",
+    "Convento da Conceição, Beja — Mértolan ikkuna",
+    "Commons: \"Convento da Conceição Beja\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-vaaleanpunainen-kartta-1890",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.PRT → vaaleanpunainen-kartta-1890.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Vaaleanpunainen kartta ja Britannian ultimaatum 1890",
+   "aika": "1890",
+   "paikka": "Sociedade de Geografia de Lisboa, Lissabon",
+   "konteksti": "Lissabonin maantieteellisessä seurassa levitetään pöydälle kartta, jossa Angolan ja Mosambikin väli on väritetty vaaleanpunaiseksi — samalla pöydällä on Britannian ultimaatumi. Kuvassa kartta, sinetöity kirje ja hiljaisuus.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Portugali väritti kartalle vyöhykkeen Atlantilta Intian valtamerelle; Britannia vastasi ultimaatumilla.",
+   "lahteet": [
+    "en-Wikipedia \"1890 British Ultimatum\"",
+    "Sociedade de Geografia de Lisboa — sali ja karttakokoelma",
+    "Commons: \"Mapa cor-de-rosa\", \"Sociedade de Geografia de Lisboa\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-strousbergin-rautatieskandaali",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.ROU → strousbergin-rautatieskandaali.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Strousbergin rautatiesopimus ja Romanian keskeneräiset kiskot",
+   "aika": "1868–1872",
+   "paikka": "Gara de Nord, Bukarest",
+   "konteksti": "Keskeneräinen rata preerian kaltaisella tasangolla, työmaa pysähdyksissä, ja etualalla sopimuspaperit ja laskupino. Kuvassa 1870-luvun Romania, kiskoja pinossa ja tyhjä ratapenkka.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kiskoja tuli hitaammin kuin laskuja, ja nuori valtio maksoi kalliisti ensimmäisen oppituntinsa kansainvälisestä rahoituksesta.",
+   "lahteet": [
+    "ro-Wikipedia \"Afacerea Strousberg\"",
+    "en-Wikipedia \"Bethel Henry Strousberg\"",
+    "Commons: \"Gara de Nord Bucuresti\", \"Romanian railways 1870\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-kultakanan-ryosto-1875",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.ROU → kultakanan-ryosto-1875.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Pietroaselen aarteen ryöstö 1875 ja katkottu riimukaularengas",
+   "aika": "löytö 1837, ryöstö 1875",
+   "paikka": "Romanian kansallishistorian museo, Bukarest (aarre esillä)",
+   "konteksti": "Aarteen \"kultakana poikasineen\" on revitty osiin; riimukirjoitettu kaularengas on sahattu paloiksi pöydälle. Kuvassa kultaesineet, sahanjälki ja yksi valokuva, joka pelasti tekstin.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Varas katkoi ainoan riimukirjoitetun kaularenkaan paloiksi, ja teksti pelastui vain valokuvan ansiosta.",
+   "lahteet": [
+    "en-Wikipedia \"Pietroasele Treasure\"",
+    "en-Wikipedia \"Ring of Pietroassa\"",
+    "Commons: \"Pietroasele Treasure\", \"Cloșca cu puii de aur\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-prinsessa-tarakanova",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.RUS → prinsessa-tarakanova.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Prinsessa Tarakanovan kuulustelu Pietari-Paavalin linnoituksessa",
+   "aika": "1774–1775",
+   "paikka": "Pietari-Paavalin linnoitus, Pietari",
+   "konteksti": "Nimetön nainen istuu kivisellä sellin penkillä kuulustelijan edessä 1775. Kuvassa kynttilä, pöytä, paperit ja nainen, jonka henkilöllisyyttä ei koskaan saada selville. Ei tulvaa — se on maalauksen legenda.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kuulustelijat eivät koskaan saaneet selville, kuka hän oli — eikä ole saanut kukaan muukaan.",
+   "lahteet": [
+    "en-Wikipedia \"Princess Tarakanova\"",
+    "Pietari-Paavalin linnoituksen Trubetskoin bastioni",
+    "Commons: \"Peter and Paul Fortress\", \"Princess Tarakanova\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-iivanan-kadonnut-kirjasto",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.RUS → iivanan-kadonnut-kirjasto.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Iivana Julman kadonneen kirjaston etsintä Kremlin kellareissa",
+   "aika": "1500-luku, etsintöjä nykypäivään",
+   "paikka": "Moskovan Kreml",
+   "konteksti": "Etsijä lyhty kädessä holvikäytävässä Kremlin alla; tyhjät hyllynsijat, tiiliholvi, pölyä. Kuvassa viisisataa vuotta etsintöjä ja nolla nidettä.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Viisisataa vuotta etsintöjä, nolla nidettä — ja joka sukupolvi laskeutuu kellariin uudestaan.",
+   "lahteet": [
+    "en-Wikipedia \"Lost Library of Ivan the Terrible\"",
+    "Moskovan Kremlin kellariholvit",
+    "Commons: \"Moscow Kremlin\", \"Liberea\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-sonja-kultakasi",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.RUS → sonja-kultakasi.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Sonja Kultakäden lavastettu jalokivikauppahuijaus",
+   "aika": "1870–1880-luvut",
+   "paikka": "Vagankovon hautausmaa, Moskova (Sonjan legendamuistomerkki)",
+   "konteksti": "Jalokivikaupan tiski 1880-luvulla: hyvin pukeutunut nainen, kauppias, ja hetki, jossa katse kääntyy pois väärään aikaan. Kuvassa rooli, lavastus ja täydellinen ajoitus.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Sonjan paras työkalu ei ollut tiirikka vaan hyvin harjoiteltu kohtaus.",
+   "lahteet": [
+    "en-Wikipedia \"Sonya Golden Hand\"",
+    "1880-luvun venäläinen jalokivikauppa",
+    "Commons: \"Sofia Blyuvshtein\", \"19th century jewellery shop\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-palmstruchin-setelipankki",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.SWE → palmstruchin-setelipankki.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Stockholms Bancon setelit ja kuparilevyraha",
+   "aika": "1657–1668",
+   "paikka": "Södra Bankohuset, Järntorget, Gamla Stan, Tukholma",
+   "konteksti": "Pankin tiskillä on rinnakkain kahdenkymmenen kilon kuparilevyraha ja ohut paperiseteli. Kuvassa 1660-luvun Tukholma, Södra Bankohusetin sali ja kaksi rahaa vierekkäin.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Setelin keksiminen oli nerokasta; toinen oivallus — että paperia voi painaa enemmän kuin kassassa on katetta — vei keksijän vankilaan.",
+   "lahteet": [
+    "en-Wikipedia \"Stockholms Banco\"",
+    "en-Wikipedia \"Johan Palmstruch\"",
+    "Södra Bankohuset, Järntorget",
+    "Commons: \"Plåtmynt\", \"Stockholms Banco note\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-naamiaisten-laukaus",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.SWE → naamiaisten-laukaus.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Kustaa III:n salamurha naamiaisissa 1792",
+   "aika": "1792",
+   "paikka": "Kuninkaallinen ooppera, Gustav Adolfs torg, Tukholma (murhapaikalla seisova nykyinen oopperatalo)",
+   "konteksti": "Naamioituneet vieraat oopperan salissa, kynttilänvalo, ja hetki juuri ennen laukausta: kuningas kääntyy, naamioitu mies lähestyy. Kuvassa ei väkivaltaa vaan sekunti sitä ennen.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Naamiaisissa kenenkään ei tarvinnut selittää, miksi lähestyi kuningasta.",
+   "lahteet": [
+    "en-Wikipedia \"Gustav III\"",
+    "Tukholman vanha kuninkaallinen ooppera, Gustav Adolfs torg",
+    "Commons: \"Gustav III of Sweden\", \"Masquerade ball 18th century\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-kreugerin-romahdus",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.SWE → kreugerin-romahdus.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Ivar Kreugerin tulitikkuimperiumin romahdus 1932",
+   "aika": "1932",
+   "paikka": "Tändstickspalatset (Tulitikkupalatsi), Västra Trädgårdsgatan 15, Tukholma",
+   "konteksti": "Tulitikkupalatsin työhuone kevään 1932 jälkeen: tyhjä pöytä, avoimet kirjanpitokansiot ja lehtipino, jonka otsikot kertovat romahduksesta. Kuvassa hiljainen huone kohun jälkeen.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kukaan ei kysynyt liian tarkkaan, mistä valtioille lainatut rahat tulivat — ennen kuin kevät 1932 vastasi kaikkien puolesta.",
+   "lahteet": [
+    "en-Wikipedia \"Ivar Kreuger\"",
+    "Tändstickspalatset, Västra Trädgårdsgatan 15",
+    "Commons: \"Tändstickspalatset\", \"Ivar Kreuger\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-kasikci-elmasi-legenda",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.TUR → kasikci-elmasi-legenda.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Lusikantekijän timantti Topkapın aarrekammiossa",
+   "aika": "1700-luku–",
+   "paikka": "Topkapın palatsin aarrekammio, Istanbul",
+   "konteksti": "Aarrekammion vitriinissä 86 karaatin timantti; sen vieressä legendan kolme puulusikkaa. Kuvassa kiven kiilto, tumma kammio ja tarina ilman kuittia.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kukaan ei tiedä, mistä 86 karaatin kivi tuli — nimen antoi kauppa, jossa toinen osapuoli sai kolme puulusikkaa.",
+   "lahteet": [
+    "en-Wikipedia \"Spoonmaker's Diamond\"",
+    "Topkapın palatsin aarrekammio",
+    "Commons: \"Topkapı Palace treasury\", \"Kaşıkçı Elması\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-osmanien-vararikko-1875",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.TUR → osmanien-vararikko-1875.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Osmanien valtionvelkahallinnon virasto Cağaloğlussa",
+   "aika": "1875–1881",
+   "paikka": "Osmanien valtionvelkahallinnon talo (nyk. Istanbul Erkek Lisesi), Cağaloğlu, Istanbul",
+   "konteksti": "Eurooppalaisten velkojien perustaman viraston sali täynnä virkailijoita, kirjanpitopöytiä ja veronkantokirjoja 1880-luvulla. Kuvassa suurvallan kirjanpito vieraissa käsissä.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kun imperiumi ei maksanut, velkojat perustivat Istanbuliin oman viraston keräämään sen verot.",
+   "lahteet": [
+    "en-Wikipedia \"Ottoman Public Debt Administration\"",
+    "Istanbul Erkek Lisesi (ent. velkahallinnon talo), Cağaloğlu",
+    "Commons: \"Ottoman Public Debt Administration\", \"Istanbul Erkek Lisesi\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-karun-aarre",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.TUR → karun-aarre.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Karun-aarteen hippokampos-solki ja sen väärennös",
+   "aika": "1966–2006",
+   "paikka": "Uşakin arkeologinen museo, Uşak",
+   "konteksti": "Museon vitriini Uşakissa: siivekäs merihevonen -solki nostettuna esiin, ja rinnalla se väärennös, joka oli tilalla vuosia. Kuvassa kaksi esinettä ja ero, jota kukaan ei huomannut.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Aarre voitettiin oikeudessa kotiin — ja sitten museon oma johtaja vaihtoi sen kuuluisimman soljen väärennökseen.",
+   "lahteet": [
+    "en-Wikipedia \"Karun Treasure\"",
+    "Uşakin arkeologinen museo",
+    "Commons: \"Lydian Hoard\", \"Uşak Museum\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-potemkinin-kulissikylat",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.UKR → potemkinin-kulissikylat.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Potemkinin kulissikylä Dneprin rannalla 1787",
+   "aika": "1787",
+   "paikka": "Herson, Potemkinin perustama kaupunki Dneprin varrella",
+   "konteksti": "Katariina II:n laivue liukuu joella; rannalla uusi kylä, maalatut julkisivut ja juhlivat asukkaat — kaikkien nähden rakennettu. Kuvassa julkisivu ja sen takapuoli samassa otoksessa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Potemkin koristeli minkä ehti, mutta teki sen kaikkien nähden; kulissikylistä kertoi innokkaimmin diplomaatti, joka ei ollut mukana.",
+   "lahteet": [
+    "en-Wikipedia \"Potemkin village\"",
+    "Herson ja Dneprin ranta 1787",
+    "Commons: \"Grigory Potemkin\", \"Catherine II Crimea journey\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-saitafernesin-tiaara",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.UKR → saitafernesin-tiaara.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Israel Rouhomovski takoo Louvressa todisteen omasta väärennöksestään",
+   "aika": "1896, tunnustus 1903",
+   "paikka": "Odessa, Rouhomovskin verstaan muistolaatta",
+   "konteksti": "Odessalainen kultaseppä istuu Pariisissa työpöydän ääressä ja takoo uuden palan tiaaraa museon asiantuntijoiden katsellessa. Kuvassa vasara, kultalevy ja uskomattomat kasvot ympärillä.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Museo ei uskonut väärentäjää ennen kuin tämä takoi uuden palan tiaaraa siinä paikassa.",
+   "lahteet": [
+    "en-Wikipedia \"Tiara of Saitaferne\"",
+    "Rouhomovskin verstaan muistolaatta, Odessa",
+    "Commons: \"Tiara of Saitaferne\", \"Israel Rouchomovsky\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "skandaali-velesin-kirja",
+   "ryhma": "Skandaalit",
+   "kayttokohde": "js/packs/skandaalit.js → SKANDAALIT.UKR → velesin-kirja.kuvat[0] (havainnekuva listan kärkeen); kortti kartalla ja kaupunki-/maalehden skandaalisivulla",
+   "aihe": "Velesin kirjan puulaudat, joita vain yksi mies näki",
+   "aika": "väitetty löytö 1919, julkaisu 1957–1959",
+   "paikka": "Velykyi Burluk, Harkovan alue (väitetty löytöpaikka)",
+   "konteksti": "Pöydällä koivulaudat, joihin on kaiverrettu \"muinaisslaavilaista\" tekstiä, ja niiden vieressä kopiot. Kuvassa yksi lamppu, laudat ja tyhjä tila siellä, missä alkuperäisten pitäisi olla.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Laudat näki vain yksi mies, kopiot teki vain yksi mies, ja alkuperäiset katosivat sodan jalkoihin.",
+   "lahteet": [
+    "en-Wikipedia \"Book of Veles\"",
+    "Velykyi Burluk, Harkovan alue",
+    "Commons: \"Book of Veles\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "nahtavyys-izmir-sulu-han",
+   "ryhma": "Kuvituskuvat (kohdekartan nähtävyysjuttu)",
+   "kayttokohde": "js/packs/nahtavyysjutut.js → izmir → \"Sulu Han\" (uusi kuva-kenttä); kaupunkilehden kohdekartan pop-up",
+   "aihe": "Sulu Hanin sisäpiha ja suihkulähde Kemeraltın basaarissa",
+   "aika": "1600-luku",
+   "paikka": "Kemeraltı, İzmir, Turkki",
+   "konteksti": "Karavaaniseraajin kaksikerroksinen kaarikäytävien kiertämä sisäpiha, jonka keskellä on suihkulähde. Alakerta tavaraa ja eläimiä, yläkerta matkustajia varten; yksi portti, josta kuormattu juhta mahtuu läpi.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Sulu Hanin nimi tarkoittaa vetistä: pihan suihkulähde oli hanin käyttövettä, ei koristetta.",
+   "lahteet": [
+    "en-Wikipedia \"Sulu Han\"",
+    "Kemeraltın hanit ja İzmirin basaarikorttelit",
+    "Commons: \"Sulu Han İzmir\", \"Kemeraltı\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "nahtavyys-riad-punainen-palatsi",
+   "ryhma": "Kuvituskuvat (kohdekartan nähtävyysjuttu)",
+   "kayttokohde": "js/packs/nahtavyysjutut.js → riad → \"Punainen palatsi\" (uusi kuva-kenttä); kaupunkilehden kohdekartan pop-up",
+   "aihe": "al-Qasr al-Ahmar, Saudi-Arabian ensimmäinen teräsbetonipalatsi",
+   "aika": "1948",
+   "paikka": "Riad, Saudi-Arabia",
+   "konteksti": "Kuningas Saudille rakennettu palatsi, jonka esikuva löytyi Hyderabadin brittiläisestä residenssistä. Punertava julkisivu, kaariveranta ja 1950-luvun hallintorakennuksen ilme.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Punainen palatsi valmistui 1948 ja oli lähteen mukaan Saudi-Arabian ensimmäinen teräsbetonirakennus.",
+   "lahteet": [
+    "en-Wikipedia \"Red Palace (Riyadh)\"",
+    "Murabban palatsin alue, Riad",
+    "Commons: \"Red Palace Riyadh\", \"Murabba Palace\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "nahtavyys-riad-vesitorni",
+   "ryhma": "Kuvituskuvat (kohdekartan nähtävyysjuttu)",
+   "kayttokohde": "js/packs/nahtavyysjutut.js → riad → \"Riadin vesitorni\" (uusi kuva-kenttä); kaupunkilehden kohdekartan pop-up",
+   "aihe": "Riadin 61-metrinen vesitorni, Örebron Svampenin sukulainen",
+   "aika": "1971",
+   "paikka": "al-Malazz, Riad, Saudi-Arabia",
+   "konteksti": "Ruotsalaisen Sune Lindströmin suunnittelema betonitorni, jonka leveä säiliö lepää rungon päällä kuin lakki. Valmistuessaan maan korkein rakennelma.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Riadin vesitornin esikuva on Örebron Svampen — saman arkkitehdin sieni 13 vuotta aiemmin.",
+   "lahteet": [
+    "en-Wikipedia \"Riyadh Water Tower\"",
+    "en-Wikipedia \"Svampen\"",
+    "Commons: \"Riyadh Water Tower\", \"Svampen Örebro\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "nahtavyys-kashgar-kansanpuisto",
+   "ryhma": "Kuvituskuvat (kohdekartan nähtävyysjuttu)",
+   "kayttokohde": "js/packs/nahtavyysjutut.js → kashgar → \"Kansanpuisto\" (uusi kuva-kenttä); kaupunkilehden kohdekartan pop-up",
+   "aihe": "Kašgarin Kansanpuiston varjoisa puistokäytävä ja tekojärvi",
+   "aika": "nykyhetki",
+   "paikka": "Kašgar, Xinjiang, Kiina",
+   "konteksti": "Kaupungin suurin puisto aavikon laidalla: 24 hehtaaria, yli 26 000 puuta, tekojärvi ja paviljonkeja. Kesäkuumalla puistokäytävä on se paikka, jossa kaupunkilaiset viettävät iltapäivän.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Aavikon laidalla puisto ei ole koriste vaan keitaan koko idea: varjo ja kastelu.",
+   "lahteet": [
+    "Wikipedia \"People's Park, Kashgar\"",
+    "Kašgarin Kansanaukio ja kulttuuripalatsi",
+    "Commons: \"Kashgar\", \"Kashgar People's Park\""
+   ],
+   "prioriteetti": 1
+  },
+  {
+   "tunnus": "aarre-europe-star-vaalea",
+   "ryhma": "Aarteet (pääaarre, vaalea pohja)",
+   "kayttokohde": "assets/aarteet/aarre-europe-star.jpg korvaava vaaleapohjainen versio R2:een; Aarnin luettelon diplomi (tumma → vaalea siirtymä, js/game.js aarreMantereella)",
+   "aihe": "Meripihkahuoneen aarre",
+   "aika": "ajaton esinekuva",
+   "paikka": "studio, vakiotausta",
+   "konteksti": "Meripihkapaneeli — hunajanvärisiä, läpikuultavia meripihkalevyjä kultauksin; Preussin lahja Pietari Suurelle 1716, kadonnut Königsbergistä 1945. Vaatimus: TASAINEN vaalea pergamenttipohja koko ruudulle, ei vinjettiä, ei tekstuuria, ei valokeilaa — diplomin loppuruutu kirkastuu tähän kuvaan.",
+   "kuvasuhde": "1:1 (neliö)",
+   "vahimmaismitat": "1024 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Esine sellaisenaan; kortin fakta kertoo aarteen tarinan, kuva ei selitä itseään.",
+   "lahteet": [
+    "js/packs/<pakka>.js themedTokenTypes.star (nimi ja fakta)",
+    "Raamattu: \"Aarteet ja eteneminen\" — AARREPALJASTUKSEN KOLME MALLIA",
+    "Nykyiset tummapohjaiset kuvat assets/aarteet/aarre-*-star.jpg vertailukohtana"
+   ],
+   "prioriteetti": 1,
+   "huomio": "Aarnin luettelon diplomi on ainoa paikka, jossa pääaarrekuva näkyy vaalealla; tummat versiot jäävät laudan omiin kortteihin."
+  },
+  {
+   "tunnus": "aarre-africa-star-vaalea",
+   "ryhma": "Aarteet (pääaarre, vaalea pohja)",
+   "kayttokohde": "assets/aarteet/aarre-africa-star.jpg korvaava vaaleapohjainen versio R2:een; Aarnin luettelon diplomi (tumma → vaalea siirtymä, js/game.js aarreMantereella)",
+   "aihe": "Suuren Zimbabwen kivilintu",
+   "aika": "ajaton esinekuva",
+   "paikka": "studio, vakiotausta",
+   "konteksti": "Suuren Zimbabwen rauniokaupungista löydettiin kahdeksan vuolukivilintua — yksi niistä on nykyään Zimbabwen lipussa. Mantereen pääaarre-esine vaalealla pergamentilla; nimi ja fakta js/packs/africa.js themedTokenTypes.star. Vaatimus: TASAINEN vaalea pergamenttipohja koko ruudulle, ei vinjettiä, ei tekstuuria, ei valokeilaa — diplomin loppuruutu kirkastuu tähän kuvaan.",
+   "kuvasuhde": "1:1 (neliö)",
+   "vahimmaismitat": "1024 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Esine sellaisenaan; kortin fakta kertoo aarteen tarinan, kuva ei selitä itseään.",
+   "lahteet": [
+    "js/packs/<pakka>.js themedTokenTypes.star (nimi ja fakta)",
+    "Raamattu: \"Aarteet ja eteneminen\" — AARREPALJASTUKSEN KOLME MALLIA",
+    "Nykyiset tummapohjaiset kuvat assets/aarteet/aarre-*-star.jpg vertailukohtana"
+   ],
+   "prioriteetti": 1,
+   "huomio": "Aarnin luettelon diplomi on ainoa paikka, jossa pääaarrekuva näkyy vaalealla; tummat versiot jäävät laudan omiin kortteihin."
+  },
+  {
+   "tunnus": "aarre-asia-star-vaalea",
+   "ryhma": "Aarteet (pääaarre, vaalea pohja)",
+   "kayttokohde": "assets/aarteet/aarre-asia-star.jpg korvaava vaaleapohjainen versio R2:een; Aarnin luettelon diplomi (tumma → vaalea siirtymä, js/game.js aarreMantereella)",
+   "aihe": "Keisarin jadesinetti",
+   "aika": "ajaton esinekuva",
+   "paikka": "studio, vakiotausta",
+   "konteksti": "Valtakunnan perintösinetti kaiverrettiin taruksi tulleesta jadesta, ja se siirtyi dynastialta toiselle yli tuhat vuotta — kunnes katosi 900-luvulla jäljettömiin. Mantereen pääaarre-esine vaalealla pergamentilla; nimi ja fakta js/packs/asia.js themedTokenTypes.star. Vaatimus: TASAINEN vaalea pergamenttipohja koko ruudulle, ei vinjettiä, ei tekstuuria, ei valokeilaa — diplomin loppuruutu kirkastuu tähän kuvaan.",
+   "kuvasuhde": "1:1 (neliö)",
+   "vahimmaismitat": "1024 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Esine sellaisenaan; kortin fakta kertoo aarteen tarinan, kuva ei selitä itseään.",
+   "lahteet": [
+    "js/packs/<pakka>.js themedTokenTypes.star (nimi ja fakta)",
+    "Raamattu: \"Aarteet ja eteneminen\" — AARREPALJASTUKSEN KOLME MALLIA",
+    "Nykyiset tummapohjaiset kuvat assets/aarteet/aarre-*-star.jpg vertailukohtana"
+   ],
+   "prioriteetti": 1,
+   "huomio": "Aarnin luettelon diplomi on ainoa paikka, jossa pääaarrekuva näkyy vaalealla; tummat versiot jäävät laudan omiin kortteihin."
+  },
+  {
+   "tunnus": "aarre-northamerica-star-vaalea",
+   "ryhma": "Aarteet (pääaarre, vaalea pohja)",
+   "kayttokohde": "assets/aarteet/aarre-northamerica-star.jpg korvaava vaaleapohjainen versio R2:een; Aarnin luettelon diplomi (tumma → vaalea siirtymä, js/game.js aarreMantereella)",
+   "aihe": "Montezuman aarre",
+   "aika": "ajaton esinekuva",
+   "paikka": "studio, vakiotausta",
+   "konteksti": "Kun espanjalaiset pakenivat Tenochtitlanista 'surullisena yönä' 1520, suuri osa Montezuman kullasta upposi järveen — sitä etsitään yhä. Mantereen pääaarre-esine vaalealla pergamentilla; nimi ja fakta js/packs/northamerica.js themedTokenTypes.star. Vaatimus: TASAINEN vaalea pergamenttipohja koko ruudulle, ei vinjettiä, ei tekstuuria, ei valokeilaa — diplomin loppuruutu kirkastuu tähän kuvaan.",
+   "kuvasuhde": "1:1 (neliö)",
+   "vahimmaismitat": "1024 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Esine sellaisenaan; kortin fakta kertoo aarteen tarinan, kuva ei selitä itseään.",
+   "lahteet": [
+    "js/packs/<pakka>.js themedTokenTypes.star (nimi ja fakta)",
+    "Raamattu: \"Aarteet ja eteneminen\" — AARREPALJASTUKSEN KOLME MALLIA",
+    "Nykyiset tummapohjaiset kuvat assets/aarteet/aarre-*-star.jpg vertailukohtana"
+   ],
+   "prioriteetti": 1,
+   "huomio": "Aarnin luettelon diplomi on ainoa paikka, jossa pääaarrekuva näkyy vaalealla; tummat versiot jäävät laudan omiin kortteihin."
+  },
+  {
+   "tunnus": "aarre-southamerica-star-vaalea",
+   "ryhma": "Aarteet (pääaarre, vaalea pohja)",
+   "kayttokohde": "assets/aarteet/aarre-southamerica-star.jpg korvaava vaaleapohjainen versio R2:een; Aarnin luettelon diplomi (tumma → vaalea siirtymä, js/game.js aarreMantereella)",
+   "aihe": "El Doradon aarre",
+   "aika": "ajaton esinekuva",
+   "paikka": "studio, vakiotausta",
+   "konteksti": "Muiscat upottivat kultaesineitä Guatavitan järveen uuden hallitsijan riittinä — tarina kullatusta miehestä, El Doradosta, syntyi juuri tästä. Mantereen pääaarre-esine vaalealla pergamentilla; nimi ja fakta js/packs/southamerica.js themedTokenTypes.star. Vaatimus: TASAINEN vaalea pergamenttipohja koko ruudulle, ei vinjettiä, ei tekstuuria, ei valokeilaa — diplomin loppuruutu kirkastuu tähän kuvaan.",
+   "kuvasuhde": "1:1 (neliö)",
+   "vahimmaismitat": "1024 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Esine sellaisenaan; kortin fakta kertoo aarteen tarinan, kuva ei selitä itseään.",
+   "lahteet": [
+    "js/packs/<pakka>.js themedTokenTypes.star (nimi ja fakta)",
+    "Raamattu: \"Aarteet ja eteneminen\" — AARREPALJASTUKSEN KOLME MALLIA",
+    "Nykyiset tummapohjaiset kuvat assets/aarteet/aarre-*-star.jpg vertailukohtana"
+   ],
+   "prioriteetti": 1,
+   "huomio": "Aarnin luettelon diplomi on ainoa paikka, jossa pääaarrekuva näkyy vaalealla; tummat versiot jäävät laudan omiin kortteihin."
+  },
+  {
+   "tunnus": "aarre-oceania-star-vaalea",
+   "ryhma": "Aarteet (pääaarre, vaalea pohja)",
+   "kayttokohde": "assets/aarteet/aarre-oceania-star.jpg korvaava vaaleapohjainen versio R2:een; Aarnin luettelon diplomi (tumma → vaalea siirtymä, js/game.js aarreMantereella)",
+   "aihe": "Eteläristin helmi",
+   "aika": "ajaton esinekuva",
+   "paikka": "studio, vakiotausta",
+   "konteksti": "Eteläristi on yhdeksän luonnonhelmen ristinmuotoinen ryhmä, joka löytyi Länsi-Australiasta 1883 — sitä kierrätettiin maailmannäyttelyissä ihmeenä. Mantereen pääaarre-esine vaalealla pergamentilla; nimi ja fakta js/packs/oceania.js themedTokenTypes.star. Vaatimus: TASAINEN vaalea pergamenttipohja koko ruudulle, ei vinjettiä, ei tekstuuria, ei valokeilaa — diplomin loppuruutu kirkastuu tähän kuvaan.",
+   "kuvasuhde": "1:1 (neliö)",
+   "vahimmaismitat": "1024 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Esine sellaisenaan; kortin fakta kertoo aarteen tarinan, kuva ei selitä itseään.",
+   "lahteet": [
+    "js/packs/<pakka>.js themedTokenTypes.star (nimi ja fakta)",
+    "Raamattu: \"Aarteet ja eteneminen\" — AARREPALJASTUKSEN KOLME MALLIA",
+    "Nykyiset tummapohjaiset kuvat assets/aarteet/aarre-*-star.jpg vertailukohtana"
+   ],
+   "prioriteetti": 1,
+   "huomio": "Aarnin luettelon diplomi on ainoa paikka, jossa pääaarrekuva näkyy vaalealla; tummat versiot jäävät laudan omiin kortteihin."
+  },
+  {
+   "tunnus": "aarre-middleeast-star-vaalea",
+   "ryhma": "Aarteet (pääaarre, vaalea pohja)",
+   "kayttokohde": "assets/aarteet/aarre-middleeast-star.jpg korvaava vaaleapohjainen versio R2:een; Aarnin luettelon diplomi (tumma → vaalea siirtymä, js/game.js aarreMantereella)",
+   "aihe": "Sheban kuningattaren aarre",
+   "aika": "ajaton esinekuva",
+   "paikka": "studio, vakiotausta",
+   "konteksti": "Saban kuningatar hallitsi suitsukereittien rikkainta valtakuntaa nykyisen Jemenin mailla — sen kulta ja pihka tuoksuivat temppeleissä Roomaa myöten. Mantereen pääaarre-esine vaalealla pergamentilla; nimi ja fakta js/packs/middleeast.js themedTokenTypes.star. Vaatimus: TASAINEN vaalea pergamenttipohja koko ruudulle, ei vinjettiä, ei tekstuuria, ei valokeilaa — diplomin loppuruutu kirkastuu tähän kuvaan.",
+   "kuvasuhde": "1:1 (neliö)",
+   "vahimmaismitat": "1024 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Esine sellaisenaan; kortin fakta kertoo aarteen tarinan, kuva ei selitä itseään.",
+   "lahteet": [
+    "js/packs/<pakka>.js themedTokenTypes.star (nimi ja fakta)",
+    "Raamattu: \"Aarteet ja eteneminen\" — AARREPALJASTUKSEN KOLME MALLIA",
+    "Nykyiset tummapohjaiset kuvat assets/aarteet/aarre-*-star.jpg vertailukohtana"
+   ],
+   "prioriteetti": 1,
+   "huomio": "Aarnin luettelon diplomi on ainoa paikka, jossa pääaarrekuva näkyy vaalealla; tummat versiot jäävät laudan omiin kortteihin."
+  },
+  {
+   "tunnus": "aarre-istanbul-star-vaalea",
+   "ryhma": "Aarteet (pääaarre, vaalea pohja)",
+   "kayttokohde": "assets/aarteet/aarre-istanbul-star.jpg korvaava vaaleapohjainen versio R2:een; Aarnin luettelon diplomi (tumma → vaalea siirtymä, js/game.js aarreMantereella)",
+   "aihe": "Sulttaanin timantti",
+   "aika": "ajaton esinekuva",
+   "paikka": "studio, vakiotausta",
+   "konteksti": "Topkapın palatsin Lusikantekijän timantti painaa 86 karaattia — tarun mukaan kalastaja vaihtoi sen kolmeen lusikkaan tietämättä, mitä piteli. Istanbulin laudan oma pääaarre vaalealla pergamentilla. Vaatimus: TASAINEN vaalea pergamenttipohja koko ruudulle, ei vinjettiä, ei tekstuuria, ei valokeilaa — diplomin loppuruutu kirkastuu tähän kuvaan.",
+   "kuvasuhde": "1:1 (neliö)",
+   "vahimmaismitat": "1024 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Esine sellaisenaan; kortin fakta kertoo aarteen tarinan, kuva ei selitä itseään.",
+   "lahteet": [
+    "js/packs/<pakka>.js themedTokenTypes.star (nimi ja fakta)",
+    "Raamattu: \"Aarteet ja eteneminen\" — AARREPALJASTUKSEN KOLME MALLIA",
+    "Nykyiset tummapohjaiset kuvat assets/aarteet/aarre-*-star.jpg vertailukohtana"
+   ],
+   "prioriteetti": 1,
+   "huomio": "Aarnin luettelon diplomi on ainoa paikka, jossa pääaarrekuva näkyy vaalealla; tummat versiot jäävät laudan omiin kortteihin."
+  },
+  {
+   "tunnus": "aarre-maailma-star-vaalea",
+   "ryhma": "Aarteet (pääaarre, vaalea pohja)",
+   "kayttokohde": "assets/aarteet/aarre-maailma-star.jpg korvaava vaaleapohjainen versio R2:een; Aarnin luettelon diplomi (tumma → vaalea siirtymä, js/game.js aarreMantereella)",
+   "aihe": "maailma-laudan pääaarre-esine",
+   "aika": "ajaton esinekuva",
+   "paikka": "studio, vakiotausta",
+   "konteksti": "Maailmankartan pääaarre — Aarnin luettelon revityn sivun arvoitus; esinettä ei nimetä pelaajalle. Vaatimus: TASAINEN vaalea pergamenttipohja koko ruudulle, ei vinjettiä, ei tekstuuria, ei valokeilaa — diplomin loppuruutu kirkastuu tähän kuvaan.",
+   "kuvasuhde": "1:1 (neliö)",
+   "vahimmaismitat": "1024 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Esine sellaisenaan; kortin fakta kertoo aarteen tarinan, kuva ei selitä itseään.",
+   "lahteet": [
+    "js/packs/<pakka>.js themedTokenTypes.star (nimi ja fakta)",
+    "Raamattu: \"Aarteet ja eteneminen\" — AARREPALJASTUKSEN KOLME MALLIA",
+    "Nykyiset tummapohjaiset kuvat assets/aarteet/aarre-*-star.jpg vertailukohtana"
+   ],
+   "prioriteetti": 1,
+   "huomio": "Aarnin luettelon diplomi on ainoa paikka, jossa pääaarrekuva näkyy vaalealla; tummat versiot jäävät laudan omiin kortteihin."
+  },
+  {
+   "tunnus": "hetki-franklin-leija-1752-kauko",
+   "ryhma": "Historian hetket (kauko)",
+   "kayttokohde": "R2 kohtaamiset/historian-hetket/hetki-franklin-leija-1752-kauko-photo-v4.jpg; hetken kortti ja lehtisivu (js/packs/historian-hetket.js)",
+   "aihe": "Benjamin Franklinin leijakoe ukkosmyrskyssä",
+   "aika": "kesäkuu 1752",
+   "paikka": "Philadelphia, Pennsylvania",
+   "konteksti": "Kaukokuva koko kohtauksesta mittakaavoineen: myrskypilvi, avoin kenttä, leija narun päässä ja kaksi pientä hahmoa suojassa. Lähikuva on jo R2:ssa (-lahi-photo-v4), pari puuttuu.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Franklinin koe osoitti salaman olevan sähköä — ja siitä syntyi ukkosenjohdatin.",
+   "lahteet": [
+    "en-Wikipedia \"Kite experiment\"",
+    "Sarjan muut -kauko-kuvat samasta erästä (photo-v4)",
+    "Commons: \"Benjamin Franklin kite experiment\""
+   ],
+   "prioriteetti": 1,
+   "huomio": "Ainoa 31 R2-hetkestä, jolta puuttuu kaukokuva; kaikilla muilla on lahi+kauko."
+  },
+  {
+   "tunnus": "varuste-keksinnot",
+   "ryhma": "Kuvituskuvat (varusteet)",
+   "kayttokohde": "assets/varusteet/varuste-keksinnot.jpg — js/ui.js aarreIkoni('assets/varusteet/varuste-${linssi}.jpg'); linssivalikko ja linssikatalogi",
+   "aihe": "Keksinnöt-linssi -varustekuva",
+   "aika": "ajaton esinekuva",
+   "paikka": "studio, vakiotausta",
+   "konteksti": "Messinkinen 1800-luvun optinen kojeen osa tai patenttipiirustuslasi matkalaukun samettipedillä — varustekuvien sarjan tyyli (vrt. assets/varusteet/varuste-radio.jpg).",
+   "kuvasuhde": "1:1 (neliö)",
+   "vahimmaismitat": "1024 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Ei kuvatekstiä — ikoni valikossa.",
+   "lahteet": [
+    "Nykyiset viisi varustekuvaa assets/varusteet/ (512 x 512, sama valo ja tausta)",
+    "js/linssit/rekisteri.js LINSSIT"
+   ],
+   "prioriteetti": 1,
+   "huomio": "Seitsemästä linssistä viidellä on kuva; nämä kaksi näyttävät valikossa rikkinäisen kuvan."
+  },
+  {
+   "tunnus": "varuste-pallo",
+   "ryhma": "Kuvituskuvat (varusteet)",
+   "kayttokohde": "assets/varusteet/varuste-pallo.jpg — js/ui.js aarreIkoni('assets/varusteet/varuste-${linssi}.jpg'); linssivalikko ja linssikatalogi",
+   "aihe": "Pallolinssi -varustekuva",
+   "aika": "ajaton esinekuva",
+   "paikka": "studio, vakiotausta",
+   "konteksti": "Pieni messinkijalustainen maapallo tai armillaarisfääri samalla sametilla ja samassa valossa kuin muut viisi varustekuvaa.",
+   "kuvasuhde": "1:1 (neliö)",
+   "vahimmaismitat": "1024 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Ei kuvatekstiä — ikoni valikossa.",
+   "lahteet": [
+    "Nykyiset viisi varustekuvaa assets/varusteet/ (512 x 512, sama valo ja tausta)",
+    "js/linssit/rekisteri.js LINSSIT"
+   ],
+   "prioriteetti": 1,
+   "huomio": "Seitsemästä linssistä viidellä on kuva; nämä kaksi näyttävät valikossa rikkinäisen kuvan."
+  },
+  {
+   "tunnus": "ihme-parthenon-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-grc.js → akropolis.ihme.osoite (nyt assets/kartat/ihmeet/ihme-parthenon.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Parthenon värillisenä ja ehjänä",
+   "aika": "440-luku eaa.",
+   "paikka": "Akropolis, Ateena",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-zeuksen-patsas-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-grc.js → olympia.ihme.osoite (nyt assets/kartat/ihmeet/ihme-zeuksen-patsas.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Feidiaan Zeuksen patsas temppelin sisällä",
+   "aika": "430-luku eaa.",
+   "paikka": "Olympia, Kreikka",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-rodoksen-kolossi-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-grc.js → rodoksen-kolossi.ihme.osoite (nyt assets/kartat/ihmeet/ihme-rodoksen-kolossi.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Rodoksen kolossi Mandrakin sataman yllä",
+   "aika": "280 eaa.",
+   "paikka": "Rodos, Kreikka",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-knossos-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-grc.js → knossos.ihme.osoite (nyt assets/kartat/ihmeet/ihme-knossos.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Knossoksen palatsi minolaisena loistoaikanaan",
+   "aika": "n. 1700 eaa.",
+   "paikka": "Knossos, Kreeta",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-hefaistoksen-temppeli-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-grc.js → antiikin-agora.ihme.osoite (nyt assets/kartat/ihmeet/ihme-hefaistoksen-temppeli.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Antiikin agora ja Hefaistoksen temppeli täydessä käytössä",
+   "aika": "400-luku eaa.",
+   "paikka": "Ateena",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-aleksandrian-kirjasto-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-egy.js → aleksandrian-kirjasto.ihme.osoite (nyt assets/kartat/ihmeet/ihme-aleksandrian-kirjasto.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Aleksandrian kirjaston lukusali ja kääröhyllyt",
+   "aika": "200-luku eaa.",
+   "paikka": "Aleksandria, Egypti",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-karnak-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-egy.js → karnakin-pylvassali.ihme.osoite (nyt assets/kartat/ihmeet/ihme-karnak.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Karnakin pylvässali maalattuna ja katettuna",
+   "aika": "1200-luku eaa.",
+   "paikka": "Karnak, Luxor",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-yuanmingyuan-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-chn.js → yuanmingyuan.ihme.osoite (nyt assets/kartat/ihmeet/ihme-yuanmingyuan.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Yuanmingyuanin eurooppalaiset paviljongit ennen 1860",
+   "aika": "1750-luku",
+   "paikka": "Peking, Kiina",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-vanha-st-paul-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-gbr.js → st-paulin-katedraali.ihme.osoite (nyt assets/kartat/ihmeet/ihme-vanha-st-paul.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Vanha St Paul goottilaisine tornineen ennen 1666",
+   "aika": "1500-luku",
+   "paikka": "Lontoo",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-vanha-london-bridge-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-gbr.js → vanha-london-bridge.ihme.osoite (nyt assets/kartat/ihmeet/ihme-vanha-london-bridge.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Vanha London Bridge taloineen sillan päällä",
+   "aika": "1600-luku",
+   "paikka": "Lontoo",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-persepolis-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-irn.js → apadana.ihme.osoite (nyt assets/kartat/ihmeet/ihme-persepolis.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Apadanan sali ja pylväikkö Persepoliksessa",
+   "aika": "500-luku eaa.",
+   "paikka": "Persepolis, Iran",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-babylonin-puutarhat-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-irq.js → babylonin-puutarhat.ihme.osoite (nyt assets/kartat/ihmeet/ihme-babylonin-puutarhat.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Babylonin riippuvat puutarhat kastelujärjestelmineen",
+   "aika": "600-luku eaa.",
+   "paikka": "Babylon, Irak",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-ishtarin-portti-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-irq.js → ishtarin-portti.ihme.osoite (nyt assets/kartat/ihmeet/ihme-ishtarin-portti.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Ishtarin portti sinisenä ja kokonaisena",
+   "aika": "575 eaa.",
+   "paikka": "Babylon, Irak",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-niniven-palatsi-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-irq.js → niniven-lounaispalatsi.ihme.osoite (nyt assets/kartat/ihmeet/ihme-niniven-palatsi.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Sanheribin lounaispalatsin reliefisalit",
+   "aika": "700-luku eaa.",
+   "paikka": "Ninive, Irak",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-forum-romanum-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-ita.js → forum-romanum.ihme.osoite (nyt assets/kartat/ihmeet/ihme-forum-romanum.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Forum Romanum toimivana kaupungin sydämenä",
+   "aika": "100-luku",
+   "paikka": "Rooma",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-petra-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-jor.js → al-khazneh.ihme.osoite (nyt assets/kartat/ihmeet/ihme-petra.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Al-Khazneh nabatealaisena, väreineen ja patsaineen",
+   "aika": "100-luku",
+   "paikka": "Petra, Jordania",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-leptis-magna-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-lby.js → leptis-magna.ihme.osoite (nyt assets/kartat/ihmeet/ihme-leptis-magna.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Leptis Magnan basilika ja forum Severuksen aikana",
+   "aika": "200-luku",
+   "paikka": "Leptis Magna, Libya",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-palmyra-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-syr.js → belin-temppeli.ihme.osoite (nyt assets/kartat/ihmeet/ihme-palmyra.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Belin temppeli Palmyrassa ehjänä",
+   "aika": "100-luku",
+   "paikka": "Palmyra, Syyria",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "ihme-suuri-zimbabwe-loistoaika-v2",
+   "ryhma": "Loistoaika / Matkakirjan ihme (uusinta)",
+   "kayttokohde": "js/packs/fokuskohteet-zwe.js → suuri-zimbabwe.ihme.osoite (nyt assets/kartat/ihmeet/ihme-suuri-zimbabwe.webp); kartan tähtimerkki ja \"Koe ihme\" -nappi",
+   "aihe": "Suuri Zimbabwe asuttuna kivikaupunkina",
+   "aika": "1300-luku",
+   "paikka": "Masvingo, Zimbabwe",
+   "konteksti": "Kohde loistoaikansa asussa omana aikanaan, fotorealistisena dokumenttivalokuvana eikä maalauksena. Nykyinen kuva on vanhaa webp-erää ja lukee piirroksena, mikä on Raamatun mukaan hylkäysperuste.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Kohde sellaisena kuin se oli — mitä se oli ja miksi se on merkittävä, ei kuvan visuaalista kuvailua.",
+   "lahteet": [
+    "Kohteen oma teksti ja lahde-rivi fokuskohteet-pakassa",
+    "Arkeologiset rekonstruktiot ja museoiden pienoismallit",
+    "Commons: kohteen nykytilan kuvat mittakaavan tarkistukseen"
+   ],
+   "prioriteetti": 2,
+   "huomio": "16 muuta loistoaikakuvaa on jo uusittu (loistoaika-v2, R2 4.9.2026); nämä 19 ovat jäljellä."
+  },
+  {
+   "tunnus": "nyt-bamiyanin-buddhat",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-afg.js → bamiyanin-buddhat.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Bamiyanin tyhjät nishit kalliossa",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Bamiyan, Afganistan",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-yuanmingyuan",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-chn.js → yuanmingyuan.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Yuanmingyuanin marmoriraunioiden puisto",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Haidian, Peking, Kiina",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-faroksen-majakka",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-egy.js → faroksen-majakka.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Qaitbayn linnake majakan paikalla",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Aleksandrian Corniche, Egypti",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-aleksandrian-kirjasto",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-egy.js → aleksandrian-kirjasto.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Bibliotheca Alexandrina antiikin kirjaston seudulla",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Aleksandria, Egypti",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-tuileries",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-fra.js → tuileries.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Jardin des Tuileries palatsin poltetulla paikalla",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Pariisi, Ranska",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-bastilji",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-fra.js → bastilji.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Place de la Bastille ja linnoituksen ääriviiva katukiveyksessä",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Pariisi, Ranska",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-crystal-palace",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-gbr.js → crystal-palace.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Crystal Palace Parkin terassit ja portaat ilman rakennusta",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Lontoo, Iso-Britannia",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-vanha-london-bridge",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-gbr.js → vanha-london-bridge.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Nykyinen London Bridge vanhan sillan paikalla",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Thames, Lontoo",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-rodoksen-kolossi",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-grc.js → rodoksen-kolossi.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Mandrakin sataman suuaukko ja hirvipatsaat",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Rodos, Kreikka",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-babylonin-puutarhat",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-irq.js → babylonin-puutarhat.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Babylonin kaivausalue ja rekonstruoidut muurit",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Babylon, Irak",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-ishtarin-portti",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-irq.js → ishtarin-portti.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Ishtarin portin pienoisrekonstruktio paikan päällä",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Babylon, Irak",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-niniven-lounaispalatsi",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-irq.js → niniven-lounaispalatsi.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Kuyunjikin kumpu palatsin päällä",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Mosul, Irak",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-templo-mayor",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-mex.js → templo-mayor.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Templo Mayorin kaivausalue katedraalin kupeessa",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Mexico City, Meksiko",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-belin-temppeli",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-syr.js → belin-temppeli.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Belin temppelin jäljellä oleva portaali",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Palmyra, Syyria",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-karthagon-sotasatama",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-tun.js → karthagon-sotasatama.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Pyöreän sotasataman lammikko nykyisessä esikaupungissa",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Karthago, Tunisia",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-halikarnassos",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-tur.js → halikarnassos.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Mausoleumin kaivauskuoppa kaupungin keskellä",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Bodrum, Turkki",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-hippodromi",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-tur.js → hippodromi.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Sultanahmetin aukio, obeliskit ja käärmepylväs",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Istanbul, Turkki",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "nyt-pergamonin-alttari",
+   "ryhma": "Ennen/nyt (nyt)",
+   "kayttokohde": "js/packs/fokuskohteet-tur.js → pergamonin-alttari.kuvat[0] (kohteella on nyt VAIN ihme-kuva); kartan tietoruutu ja ennen/nyt-pari",
+   "aihe": "Akropoliin tyhjä alttariterassi",
+   "aika": "nykyhetki (2020-luku)",
+   "paikka": "Bergama, Turkki",
+   "konteksti": "Kohteen nykytila samasta suunnasta kuin loistoaikakuva, jotta pari lukee vertailuna vuosilukuleimoin. Rehellinen nykykuva: raunio on raunio, puisto on puisto.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä paikalla on tänään ja miksi loistoajasta on jäljellä juuri tämä.",
+   "lahteet": [
+    "Commons: kohteen nykytilan valokuvat (ensisijainen — aito kuva voittaa havainnekuvan)",
+    "Kohteen ihme-kuvan kuvakulma fokuskohteet-pakassa",
+    "Unesco- ja museosivustojen paikkakuvat"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Tarkista ensin Commons: jos kelvollinen aito valokuva löytyy, sitä käytetään eikä havainnekuvaa generoida."
+  },
+  {
+   "tunnus": "isoisa-aden-hiilisatama-1873",
+   "ryhma": "Isoisän tarina (1873-valokuvat)",
+   "kayttokohde": "js/isoisan-valokuvat.js → ISOISAN_VALOKUVAT.aden; R2 kohtaamiset/isoisa/isoisa-aden-hiilisatama-1873-kuva-v1.jpg; Keksinnöt-linssin 1873-merkkipaalu ja lentokohtaukset",
+   "aihe": "Isoisä Adenin hiilisatamassa",
+   "aika": "1873",
+   "paikka": "Aden, Jemen",
+   "konteksti": "Höyrylaivan hiilikuormaus Steamer Pointissa; isoisä seisoo hiilikorien jonon vieressä muistivihko kädessä.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Yksi virke isoisän äänellä: missä hän on ja mitä hän juuri huomasi — ei faktaväitteitä, joita kaanon ei tue.",
+   "lahteet": [
+    "docs/tarina.md \"Hahmo\" — isoisän ulkonäkö (n. 35–40-vuotias brittiläinen herrasmiesmatkailija, vilpitön hymy)",
+    "Hyväksytyt kuvat isoisa-kanton-1873 ja isoisa-bombay-1873 hahmon jatkuvuudeksi",
+    "Commons/LoC: paikan 1870-luvun valokuvat (satamat, kadut, puvut)"
+   ],
+   "prioriteetti": 2,
+   "huomio": "PELKKÄ KUVA ilman cabinet card -pohjuketta ja ilman valkoista reunusta; 1873:n albumiinivedoksen sävy, kulunut mutta terävä. Sama isoisähahmo kaikissa."
+  },
+  {
+   "tunnus": "isoisa-kairo-ezbekiyeh-1873",
+   "ryhma": "Isoisän tarina (1873-valokuvat)",
+   "kayttokohde": "js/isoisan-valokuvat.js → ISOISAN_VALOKUVAT.kairo; R2 kohtaamiset/isoisa/isoisa-kairo-ezbekiyeh-1873-kuva-v1.jpg; Keksinnöt-linssin 1873-merkkipaalu ja lentokohtaukset",
+   "aihe": "Isoisä Kairon Ezbekiyehin puistossa",
+   "aika": "1873",
+   "paikka": "Kairo, Egypti",
+   "konteksti": "Hotellin terassi puiston laidalla; isoisä lukee sähkettä, taustalla vaunuja ja palmuja.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Yksi virke isoisän äänellä: missä hän on ja mitä hän juuri huomasi — ei faktaväitteitä, joita kaanon ei tue.",
+   "lahteet": [
+    "docs/tarina.md \"Hahmo\" — isoisän ulkonäkö (n. 35–40-vuotias brittiläinen herrasmiesmatkailija, vilpitön hymy)",
+    "Hyväksytyt kuvat isoisa-kanton-1873 ja isoisa-bombay-1873 hahmon jatkuvuudeksi",
+    "Commons/LoC: paikan 1870-luvun valokuvat (satamat, kadut, puvut)"
+   ],
+   "prioriteetti": 2,
+   "huomio": "PELKKÄ KUVA ilman cabinet card -pohjuketta ja ilman valkoista reunusta; 1873:n albumiinivedoksen sävy, kulunut mutta terävä. Sama isoisähahmo kaikissa."
+  },
+  {
+   "tunnus": "isoisa-galatan-silta-1873",
+   "ryhma": "Isoisän tarina (1873-valokuvat)",
+   "kayttokohde": "js/isoisan-valokuvat.js → ISOISAN_VALOKUVAT.galatan; R2 kohtaamiset/isoisa/isoisa-galatan-silta-1873-kuva-v1.jpg; Keksinnöt-linssin 1873-merkkipaalu ja lentokohtaukset",
+   "aihe": "Isoisä Galatan sillalla",
+   "aika": "1873",
+   "paikka": "Konstantinopoli (Istanbul)",
+   "konteksti": "Ponttonisilta täynnä väkeä ja kantajia; isoisä nojaa kaiteeseen, Kultainen sarvi takana.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Yksi virke isoisän äänellä: missä hän on ja mitä hän juuri huomasi — ei faktaväitteitä, joita kaanon ei tue.",
+   "lahteet": [
+    "docs/tarina.md \"Hahmo\" — isoisän ulkonäkö (n. 35–40-vuotias brittiläinen herrasmiesmatkailija, vilpitön hymy)",
+    "Hyväksytyt kuvat isoisa-kanton-1873 ja isoisa-bombay-1873 hahmon jatkuvuudeksi",
+    "Commons/LoC: paikan 1870-luvun valokuvat (satamat, kadut, puvut)"
+   ],
+   "prioriteetti": 2,
+   "huomio": "PELKKÄ KUVA ilman cabinet card -pohjuketta ja ilman valkoista reunusta; 1873:n albumiinivedoksen sävy, kulunut mutta terävä. Sama isoisähahmo kaikissa."
+  },
+  {
+   "tunnus": "isoisa-colombo-teeplantaasi-1873",
+   "ryhma": "Isoisän tarina (1873-valokuvat)",
+   "kayttokohde": "js/isoisan-valokuvat.js → ISOISAN_VALOKUVAT.colombo; R2 kohtaamiset/isoisa/isoisa-colombo-teeplantaasi-1873-kuva-v1.jpg; Keksinnöt-linssin 1873-merkkipaalu ja lentokohtaukset",
+   "aihe": "Isoisä Ceylonin teeplantaasilla",
+   "aika": "1873",
+   "paikka": "Ceylon (Sri Lanka)",
+   "konteksti": "Vasta istutettuja teepensaita rinteessä; isoisä poimijoiden seurassa hattu kädessä.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Yksi virke isoisän äänellä: missä hän on ja mitä hän juuri huomasi — ei faktaväitteitä, joita kaanon ei tue.",
+   "lahteet": [
+    "docs/tarina.md \"Hahmo\" — isoisän ulkonäkö (n. 35–40-vuotias brittiläinen herrasmiesmatkailija, vilpitön hymy)",
+    "Hyväksytyt kuvat isoisa-kanton-1873 ja isoisa-bombay-1873 hahmon jatkuvuudeksi",
+    "Commons/LoC: paikan 1870-luvun valokuvat (satamat, kadut, puvut)"
+   ],
+   "prioriteetti": 2,
+   "huomio": "PELKKÄ KUVA ilman cabinet card -pohjuketta ja ilman valkoista reunusta; 1873:n albumiinivedoksen sävy, kulunut mutta terävä. Sama isoisähahmo kaikissa."
+  },
+  {
+   "tunnus": "isoisa-singaporen-satama-1873",
+   "ryhma": "Isoisän tarina (1873-valokuvat)",
+   "kayttokohde": "js/isoisan-valokuvat.js → ISOISAN_VALOKUVAT.singaporen; R2 kohtaamiset/isoisa/isoisa-singaporen-satama-1873-kuva-v1.jpg; Keksinnöt-linssin 1873-merkkipaalu ja lentokohtaukset",
+   "aihe": "Isoisä Singaporen satamassa",
+   "aika": "1873",
+   "paikka": "Singapore",
+   "konteksti": "Godownien rivi ja jokivene; isoisä matka-arkkunsa päällä odottamassa laivaa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Yksi virke isoisän äänellä: missä hän on ja mitä hän juuri huomasi — ei faktaväitteitä, joita kaanon ei tue.",
+   "lahteet": [
+    "docs/tarina.md \"Hahmo\" — isoisän ulkonäkö (n. 35–40-vuotias brittiläinen herrasmiesmatkailija, vilpitön hymy)",
+    "Hyväksytyt kuvat isoisa-kanton-1873 ja isoisa-bombay-1873 hahmon jatkuvuudeksi",
+    "Commons/LoC: paikan 1870-luvun valokuvat (satamat, kadut, puvut)"
+   ],
+   "prioriteetti": 2,
+   "huomio": "PELKKÄ KUVA ilman cabinet card -pohjuketta ja ilman valkoista reunusta; 1873:n albumiinivedoksen sävy, kulunut mutta terävä. Sama isoisähahmo kaikissa."
+  },
+  {
+   "tunnus": "isoisa-jokohaman-ranta-1873",
+   "ryhma": "Isoisän tarina (1873-valokuvat)",
+   "kayttokohde": "js/isoisan-valokuvat.js → ISOISAN_VALOKUVAT.jokohaman; R2 kohtaamiset/isoisa/isoisa-jokohaman-ranta-1873-kuva-v1.jpg; Keksinnöt-linssin 1873-merkkipaalu ja lentokohtaukset",
+   "aihe": "Isoisä Jokohaman Bundilla",
+   "aika": "1873",
+   "paikka": "Jokohama, Japani",
+   "konteksti": "Ulkomaalaisasutuksen rantakatu 1873; isoisä riksan vieressä, taustalla laivoja.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Yksi virke isoisän äänellä: missä hän on ja mitä hän juuri huomasi — ei faktaväitteitä, joita kaanon ei tue.",
+   "lahteet": [
+    "docs/tarina.md \"Hahmo\" — isoisän ulkonäkö (n. 35–40-vuotias brittiläinen herrasmiesmatkailija, vilpitön hymy)",
+    "Hyväksytyt kuvat isoisa-kanton-1873 ja isoisa-bombay-1873 hahmon jatkuvuudeksi",
+    "Commons/LoC: paikan 1870-luvun valokuvat (satamat, kadut, puvut)"
+   ],
+   "prioriteetti": 2,
+   "huomio": "PELKKÄ KUVA ilman cabinet card -pohjuketta ja ilman valkoista reunusta; 1873:n albumiinivedoksen sävy, kulunut mutta terävä. Sama isoisähahmo kaikissa."
+  },
+  {
+   "tunnus": "isoisa-sanfrancisco-satama-1873",
+   "ryhma": "Isoisän tarina (1873-valokuvat)",
+   "kayttokohde": "js/isoisan-valokuvat.js → ISOISAN_VALOKUVAT.sanfrancisco; R2 kohtaamiset/isoisa/isoisa-sanfrancisco-satama-1873-kuva-v1.jpg; Keksinnöt-linssin 1873-merkkipaalu ja lentokohtaukset",
+   "aihe": "Isoisä San Franciscon laiturilla",
+   "aika": "1873",
+   "paikka": "San Francisco, Yhdysvallat",
+   "konteksti": "Pacific Mailin laituri, sumu ja mastometsä; isoisä nousee laivasta matkakirja kainalossa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Yksi virke isoisän äänellä: missä hän on ja mitä hän juuri huomasi — ei faktaväitteitä, joita kaanon ei tue.",
+   "lahteet": [
+    "docs/tarina.md \"Hahmo\" — isoisän ulkonäkö (n. 35–40-vuotias brittiläinen herrasmiesmatkailija, vilpitön hymy)",
+    "Hyväksytyt kuvat isoisa-kanton-1873 ja isoisa-bombay-1873 hahmon jatkuvuudeksi",
+    "Commons/LoC: paikan 1870-luvun valokuvat (satamat, kadut, puvut)"
+   ],
+   "prioriteetti": 2,
+   "huomio": "PELKKÄ KUVA ilman cabinet card -pohjuketta ja ilman valkoista reunusta; 1873:n albumiinivedoksen sävy, kulunut mutta terävä. Sama isoisähahmo kaikissa."
+  },
+  {
+   "tunnus": "isoisa-newyork-broadway-1873",
+   "ryhma": "Isoisän tarina (1873-valokuvat)",
+   "kayttokohde": "js/isoisan-valokuvat.js → ISOISAN_VALOKUVAT.newyork; R2 kohtaamiset/isoisa/isoisa-newyork-broadway-1873-kuva-v1.jpg; Keksinnöt-linssin 1873-merkkipaalu ja lentokohtaukset",
+   "aihe": "Isoisä Broadwaylla",
+   "aika": "1873",
+   "paikka": "New York, Yhdysvallat",
+   "konteksti": "Vilkas katunäkymä, hevosomnibusseja ja lennätinlankoja; isoisä katsoo ylös lankaviidakkoon.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Yksi virke isoisän äänellä: missä hän on ja mitä hän juuri huomasi — ei faktaväitteitä, joita kaanon ei tue.",
+   "lahteet": [
+    "docs/tarina.md \"Hahmo\" — isoisän ulkonäkö (n. 35–40-vuotias brittiläinen herrasmiesmatkailija, vilpitön hymy)",
+    "Hyväksytyt kuvat isoisa-kanton-1873 ja isoisa-bombay-1873 hahmon jatkuvuudeksi",
+    "Commons/LoC: paikan 1870-luvun valokuvat (satamat, kadut, puvut)"
+   ],
+   "prioriteetti": 2,
+   "huomio": "PELKKÄ KUVA ilman cabinet card -pohjuketta ja ilman valkoista reunusta; 1873:n albumiinivedoksen sävy, kulunut mutta terävä. Sama isoisähahmo kaikissa."
+  },
+  {
+   "tunnus": "isoisa-wien-maailmannayttely-1873",
+   "ryhma": "Isoisän tarina (1873-valokuvat)",
+   "kayttokohde": "js/isoisan-valokuvat.js → ISOISAN_VALOKUVAT.wien; R2 kohtaamiset/isoisa/isoisa-wien-maailmannayttely-1873-kuva-v1.jpg; Keksinnöt-linssin 1873-merkkipaalu ja lentokohtaukset",
+   "aihe": "Isoisä Wienin maailmannäyttelyssä 1873",
+   "aika": "1873",
+   "paikka": "Wien, Itävalta",
+   "konteksti": "Rotunden kupolin edusta näyttelyalueella; isoisä ohjelmalehtinen kädessä.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Yksi virke isoisän äänellä: missä hän on ja mitä hän juuri huomasi — ei faktaväitteitä, joita kaanon ei tue.",
+   "lahteet": [
+    "docs/tarina.md \"Hahmo\" — isoisän ulkonäkö (n. 35–40-vuotias brittiläinen herrasmiesmatkailija, vilpitön hymy)",
+    "Hyväksytyt kuvat isoisa-kanton-1873 ja isoisa-bombay-1873 hahmon jatkuvuudeksi",
+    "Commons/LoC: paikan 1870-luvun valokuvat (satamat, kadut, puvut)"
+   ],
+   "prioriteetti": 2,
+   "huomio": "PELKKÄ KUVA ilman cabinet card -pohjuketta ja ilman valkoista reunusta; 1873:n albumiinivedoksen sävy, kulunut mutta terävä. Sama isoisähahmo kaikissa."
+  },
+  {
+   "tunnus": "isoisa-kapkaupunki-taffelberg-1873",
+   "ryhma": "Isoisän tarina (1873-valokuvat)",
+   "kayttokohde": "js/isoisan-valokuvat.js → ISOISAN_VALOKUVAT.kapkaupunki; R2 kohtaamiset/isoisa/isoisa-kapkaupunki-taffelberg-1873-kuva-v1.jpg; Keksinnöt-linssin 1873-merkkipaalu ja lentokohtaukset",
+   "aihe": "Isoisä Kapkaupungin satamassa",
+   "aika": "1873",
+   "paikka": "Kapkaupunki, Etelä-Afrikka",
+   "konteksti": "Taffelberg taustalla, laituri ja hiililaiva; isoisä nojaa laivan kaiteeseen.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Yksi virke isoisän äänellä: missä hän on ja mitä hän juuri huomasi — ei faktaväitteitä, joita kaanon ei tue.",
+   "lahteet": [
+    "docs/tarina.md \"Hahmo\" — isoisän ulkonäkö (n. 35–40-vuotias brittiläinen herrasmiesmatkailija, vilpitön hymy)",
+    "Hyväksytyt kuvat isoisa-kanton-1873 ja isoisa-bombay-1873 hahmon jatkuvuudeksi",
+    "Commons/LoC: paikan 1870-luvun valokuvat (satamat, kadut, puvut)"
+   ],
+   "prioriteetti": 2,
+   "huomio": "PELKKÄ KUVA ilman cabinet card -pohjuketta ja ilman valkoista reunusta; 1873:n albumiinivedoksen sävy, kulunut mutta terävä. Sama isoisähahmo kaikissa."
+  },
+  {
+   "tunnus": "isoisa-rio-satama-1873",
+   "ryhma": "Isoisän tarina (1873-valokuvat)",
+   "kayttokohde": "js/isoisan-valokuvat.js → ISOISAN_VALOKUVAT.rio; R2 kohtaamiset/isoisa/isoisa-rio-satama-1873-kuva-v1.jpg; Keksinnöt-linssin 1873-merkkipaalu ja lentokohtaukset",
+   "aihe": "Isoisä Rio de Janeiron satamassa",
+   "aika": "1873",
+   "paikka": "Rio de Janeiro, Brasilia",
+   "konteksti": "Guanabaran lahti ja Sokeritoppa; isoisä veneen keulassa matka-arkun päällä.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Yksi virke isoisän äänellä: missä hän on ja mitä hän juuri huomasi — ei faktaväitteitä, joita kaanon ei tue.",
+   "lahteet": [
+    "docs/tarina.md \"Hahmo\" — isoisän ulkonäkö (n. 35–40-vuotias brittiläinen herrasmiesmatkailija, vilpitön hymy)",
+    "Hyväksytyt kuvat isoisa-kanton-1873 ja isoisa-bombay-1873 hahmon jatkuvuudeksi",
+    "Commons/LoC: paikan 1870-luvun valokuvat (satamat, kadut, puvut)"
+   ],
+   "prioriteetti": 2,
+   "huomio": "PELKKÄ KUVA ilman cabinet card -pohjuketta ja ilman valkoista reunusta; 1873:n albumiinivedoksen sävy, kulunut mutta terävä. Sama isoisähahmo kaikissa."
+  },
+  {
+   "tunnus": "isoisa-melbourne-kultakentta-1873",
+   "ryhma": "Isoisän tarina (1873-valokuvat)",
+   "kayttokohde": "js/isoisan-valokuvat.js → ISOISAN_VALOKUVAT.melbourne; R2 kohtaamiset/isoisa/isoisa-melbourne-kultakentta-1873-kuva-v1.jpg; Keksinnöt-linssin 1873-merkkipaalu ja lentokohtaukset",
+   "aihe": "Isoisä Victorian kultakentillä",
+   "aika": "1873",
+   "paikka": "Melbourne / Ballarat, Australia",
+   "konteksti": "Kaivosaukio, puiset kaivostornit ja pölyinen tie; isoisä kaivosmiesten seassa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB",
+   "kuvatekstinYdin": "Yksi virke isoisän äänellä: missä hän on ja mitä hän juuri huomasi — ei faktaväitteitä, joita kaanon ei tue.",
+   "lahteet": [
+    "docs/tarina.md \"Hahmo\" — isoisän ulkonäkö (n. 35–40-vuotias brittiläinen herrasmiesmatkailija, vilpitön hymy)",
+    "Hyväksytyt kuvat isoisa-kanton-1873 ja isoisa-bombay-1873 hahmon jatkuvuudeksi",
+    "Commons/LoC: paikan 1870-luvun valokuvat (satamat, kadut, puvut)"
+   ],
+   "prioriteetti": 2,
+   "huomio": "PELKKÄ KUVA ilman cabinet card -pohjuketta ja ilman valkoista reunusta; 1873:n albumiinivedoksen sävy, kulunut mutta terävä. Sama isoisähahmo kaikissa."
+  },
+  {
+   "tunnus": "hetki-wright-kitty-hawk-1903-lehti",
+   "ryhma": "Lehti- ja asiakirjanostot (historian hetken lehtisivu)",
+   "kayttokohde": "js/packs/historian-hetket.js → HETKI_LEHTIKUVAT[\"wright-kitty-hawk-1903\"]; hetken kortin ja lehtisivun kolmas kuva selailunuolten takana",
+   "aihe": "The Virginian-Pilot 18.12.1903 — etusivu ensilennosta",
+   "aika": "1903",
+   "paikka": "Norfolk, Virginia",
+   "konteksti": "Aikakauden julkaisun sivu rekonstruoituna: oikea taitto, oikea kirjasin, oikea paperi ja kulumat. Tiedostonimi tulee JULKAISUN mukaan, ei hetken tunnuksen (kuten hetki-titanic-daily-graphic-1912-lehti).",
+   "kuvasuhde": "2:3 (pysty)",
+   "vahimmaismitat": "1024 x 1536 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä julkaisu kertoi ja miten aikalaiset lukivat tapahtuman.",
+   "lahteet": [
+    "Kyseisen lehden tai julkaisun oma taitto samalta vuodelta",
+    "en-Wikipedia: julkaisun artikkeli",
+    "Commons / LoC Chronicling America: aikakauden etusivut"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Kuvassa saa olla tekstiä (se on lehden sivu) — poikkeus yleiseen ei-tekstiä-sääntöön, kuten neljässä jo hyväksytyssä lehtisivussa."
+  },
+  {
+   "tunnus": "hetki-rontgen-kasi-1895-lehti",
+   "ryhma": "Lehti- ja asiakirjanostot (historian hetken lehtisivu)",
+   "kayttokohde": "js/packs/historian-hetket.js → HETKI_LEHTIKUVAT[\"rontgen-kasi-1895\"]; hetken kortin ja lehtisivun kolmas kuva selailunuolten takana",
+   "aihe": "Die Presse, Wien 5.1.1896 — \"Eine sensationelle Entdeckung\"",
+   "aika": "1896",
+   "paikka": "Wien",
+   "konteksti": "Aikakauden julkaisun sivu rekonstruoituna: oikea taitto, oikea kirjasin, oikea paperi ja kulumat. Tiedostonimi tulee JULKAISUN mukaan, ei hetken tunnuksen (kuten hetki-titanic-daily-graphic-1912-lehti).",
+   "kuvasuhde": "2:3 (pysty)",
+   "vahimmaismitat": "1024 x 1536 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä julkaisu kertoi ja miten aikalaiset lukivat tapahtuman.",
+   "lahteet": [
+    "Kyseisen lehden tai julkaisun oma taitto samalta vuodelta",
+    "en-Wikipedia: julkaisun artikkeli",
+    "Commons / LoC Chronicling America: aikakauden etusivut"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Kuvassa saa olla tekstiä (se on lehden sivu) — poikkeus yleiseen ei-tekstiä-sääntöön, kuten neljässä jo hyväksytyssä lehtisivussa."
+  },
+  {
+   "tunnus": "hetki-edison-lamppu-1879-lehti",
+   "ryhma": "Lehti- ja asiakirjanostot (historian hetken lehtisivu)",
+   "kayttokohde": "js/packs/historian-hetket.js → HETKI_LEHTIKUVAT[\"edison-lamppu-1879\"]; hetken kortin ja lehtisivun kolmas kuva selailunuolten takana",
+   "aihe": "New York Herald 21.12.1879 — \"Edison's Light\"",
+   "aika": "1879",
+   "paikka": "New York",
+   "konteksti": "Aikakauden julkaisun sivu rekonstruoituna: oikea taitto, oikea kirjasin, oikea paperi ja kulumat. Tiedostonimi tulee JULKAISUN mukaan, ei hetken tunnuksen (kuten hetki-titanic-daily-graphic-1912-lehti).",
+   "kuvasuhde": "2:3 (pysty)",
+   "vahimmaismitat": "1024 x 1536 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä julkaisu kertoi ja miten aikalaiset lukivat tapahtuman.",
+   "lahteet": [
+    "Kyseisen lehden tai julkaisun oma taitto samalta vuodelta",
+    "en-Wikipedia: julkaisun artikkeli",
+    "Commons / LoC Chronicling America: aikakauden etusivut"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Kuvassa saa olla tekstiä (se on lehden sivu) — poikkeus yleiseen ei-tekstiä-sääntöön, kuten neljässä jo hyväksytyssä lehtisivussa."
+  },
+  {
+   "tunnus": "hetki-eiffel-torni-1888-lehti",
+   "ryhma": "Lehti- ja asiakirjanostot (historian hetken lehtisivu)",
+   "kayttokohde": "js/packs/historian-hetket.js → HETKI_LEHTIKUVAT[\"eiffel-torni-1888\"]; hetken kortin ja lehtisivun kolmas kuva selailunuolten takana",
+   "aihe": "Le Figaro de la Tour — tornin oma lehti",
+   "aika": "1889",
+   "paikka": "Pariisi",
+   "konteksti": "Aikakauden julkaisun sivu rekonstruoituna: oikea taitto, oikea kirjasin, oikea paperi ja kulumat. Tiedostonimi tulee JULKAISUN mukaan, ei hetken tunnuksen (kuten hetki-titanic-daily-graphic-1912-lehti).",
+   "kuvasuhde": "2:3 (pysty)",
+   "vahimmaismitat": "1024 x 1536 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä julkaisu kertoi ja miten aikalaiset lukivat tapahtuman.",
+   "lahteet": [
+    "Kyseisen lehden tai julkaisun oma taitto samalta vuodelta",
+    "en-Wikipedia: julkaisun artikkeli",
+    "Commons / LoC Chronicling America: aikakauden etusivut"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Kuvassa saa olla tekstiä (se on lehden sivu) — poikkeus yleiseen ei-tekstiä-sääntöön, kuten neljässä jo hyväksytyssä lehtisivussa."
+  },
+  {
+   "tunnus": "hetki-olympia-ateena-1896-lehti",
+   "ryhma": "Lehti- ja asiakirjanostot (historian hetken lehtisivu)",
+   "kayttokohde": "js/packs/historian-hetket.js → HETKI_LEHTIKUVAT[\"olympia-ateena-1896\"]; hetken kortin ja lehtisivun kolmas kuva selailunuolten takana",
+   "aihe": "Ateenalainen sanomalehti kisojen päätöspäivänä",
+   "aika": "1896",
+   "paikka": "Ateena",
+   "konteksti": "Aikakauden julkaisun sivu rekonstruoituna: oikea taitto, oikea kirjasin, oikea paperi ja kulumat. Tiedostonimi tulee JULKAISUN mukaan, ei hetken tunnuksen (kuten hetki-titanic-daily-graphic-1912-lehti).",
+   "kuvasuhde": "2:3 (pysty)",
+   "vahimmaismitat": "1024 x 1536 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä julkaisu kertoi ja miten aikalaiset lukivat tapahtuman.",
+   "lahteet": [
+    "Kyseisen lehden tai julkaisun oma taitto samalta vuodelta",
+    "en-Wikipedia: julkaisun artikkeli",
+    "Commons / LoC Chronicling America: aikakauden etusivut"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Kuvassa saa olla tekstiä (se on lehden sivu) — poikkeus yleiseen ei-tekstiä-sääntöön, kuten neljässä jo hyväksytyssä lehtisivussa."
+  },
+  {
+   "tunnus": "hetki-sibelius-finlandia-1899-lehti",
+   "ryhma": "Lehti- ja asiakirjanostot (historian hetken lehtisivu)",
+   "kayttokohde": "js/packs/historian-hetket.js → HETKI_LEHTIKUVAT[\"sibelius-finlandia-1899\"]; hetken kortin ja lehtisivun kolmas kuva selailunuolten takana",
+   "aihe": "Päivälehti marraskuu 1899 — arvio kantaesityksestä",
+   "aika": "1899",
+   "paikka": "Helsinki",
+   "konteksti": "Aikakauden julkaisun sivu rekonstruoituna: oikea taitto, oikea kirjasin, oikea paperi ja kulumat. Tiedostonimi tulee JULKAISUN mukaan, ei hetken tunnuksen (kuten hetki-titanic-daily-graphic-1912-lehti).",
+   "kuvasuhde": "2:3 (pysty)",
+   "vahimmaismitat": "1024 x 1536 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä julkaisu kertoi ja miten aikalaiset lukivat tapahtuman.",
+   "lahteet": [
+    "Kyseisen lehden tai julkaisun oma taitto samalta vuodelta",
+    "en-Wikipedia: julkaisun artikkeli",
+    "Commons / LoC Chronicling America: aikakauden etusivut"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Kuvassa saa olla tekstiä (se on lehden sivu) — poikkeus yleiseen ei-tekstiä-sääntöön, kuten neljässä jo hyväksytyssä lehtisivussa."
+  },
+  {
+   "tunnus": "hetki-ranskan-vallankumous-bastilji-1789-lehti",
+   "ryhma": "Lehti- ja asiakirjanostot (historian hetken lehtisivu)",
+   "kayttokohde": "js/packs/historian-hetket.js → HETKI_LEHTIKUVAT[\"ranskan-vallankumous-bastilji-1789\"]; hetken kortin ja lehtisivun kolmas kuva selailunuolten takana",
+   "aihe": "Révolutions de Paris, ensimmäinen numero heinäkuulta 1789",
+   "aika": "1789",
+   "paikka": "Pariisi",
+   "konteksti": "Aikakauden julkaisun sivu rekonstruoituna: oikea taitto, oikea kirjasin, oikea paperi ja kulumat. Tiedostonimi tulee JULKAISUN mukaan, ei hetken tunnuksen (kuten hetki-titanic-daily-graphic-1912-lehti).",
+   "kuvasuhde": "2:3 (pysty)",
+   "vahimmaismitat": "1024 x 1536 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä julkaisu kertoi ja miten aikalaiset lukivat tapahtuman.",
+   "lahteet": [
+    "Kyseisen lehden tai julkaisun oma taitto samalta vuodelta",
+    "en-Wikipedia: julkaisun artikkeli",
+    "Commons / LoC Chronicling America: aikakauden etusivut"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Kuvassa saa olla tekstiä (se on lehden sivu) — poikkeus yleiseen ei-tekstiä-sääntöön, kuten neljässä jo hyväksytyssä lehtisivussa."
+  },
+  {
+   "tunnus": "hetki-machu-picchu-1911-lehti",
+   "ryhma": "Lehti- ja asiakirjanostot (historian hetken lehtisivu)",
+   "kayttokohde": "js/packs/historian-hetket.js → HETKI_LEHTIKUVAT[\"machu-picchu-1911\"]; hetken kortin ja lehtisivun kolmas kuva selailunuolten takana",
+   "aihe": "Harper's Monthly / National Geographic -aukeama löydöstä",
+   "aika": "1913",
+   "paikka": "New York / Washington",
+   "konteksti": "Aikakauden julkaisun sivu rekonstruoituna: oikea taitto, oikea kirjasin, oikea paperi ja kulumat. Tiedostonimi tulee JULKAISUN mukaan, ei hetken tunnuksen (kuten hetki-titanic-daily-graphic-1912-lehti).",
+   "kuvasuhde": "2:3 (pysty)",
+   "vahimmaismitat": "1024 x 1536 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä julkaisu kertoi ja miten aikalaiset lukivat tapahtuman.",
+   "lahteet": [
+    "Kyseisen lehden tai julkaisun oma taitto samalta vuodelta",
+    "en-Wikipedia: julkaisun artikkeli",
+    "Commons / LoC Chronicling America: aikakauden etusivut"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Kuvassa saa olla tekstiä (se on lehden sivu) — poikkeus yleiseen ei-tekstiä-sääntöön, kuten neljässä jo hyväksytyssä lehtisivussa."
+  },
+  {
+   "tunnus": "hetki-schliemann-troija-1873-lehti",
+   "ryhma": "Lehti- ja asiakirjanostot (historian hetken lehtisivu)",
+   "kayttokohde": "js/packs/historian-hetket.js → HETKI_LEHTIKUVAT[\"schliemann-troija-1873\"]; hetken kortin ja lehtisivun kolmas kuva selailunuolten takana",
+   "aihe": "The Illustrated London News — Priamoksen aarre",
+   "aika": "1874",
+   "paikka": "Lontoo",
+   "konteksti": "Aikakauden julkaisun sivu rekonstruoituna: oikea taitto, oikea kirjasin, oikea paperi ja kulumat. Tiedostonimi tulee JULKAISUN mukaan, ei hetken tunnuksen (kuten hetki-titanic-daily-graphic-1912-lehti).",
+   "kuvasuhde": "2:3 (pysty)",
+   "vahimmaismitat": "1024 x 1536 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä julkaisu kertoi ja miten aikalaiset lukivat tapahtuman.",
+   "lahteet": [
+    "Kyseisen lehden tai julkaisun oma taitto samalta vuodelta",
+    "en-Wikipedia: julkaisun artikkeli",
+    "Commons / LoC Chronicling America: aikakauden etusivut"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Kuvassa saa olla tekstiä (se on lehden sivu) — poikkeus yleiseen ei-tekstiä-sääntöön, kuten neljässä jo hyväksytyssä lehtisivussa."
+  },
+  {
+   "tunnus": "hetki-pietari-perustus-1703-lehti",
+   "ryhma": "Lehti- ja asiakirjanostot (historian hetken lehtisivu)",
+   "kayttokohde": "js/packs/historian-hetket.js → HETKI_LEHTIKUVAT[\"pietari-perustus-1703\"]; hetken kortin ja lehtisivun kolmas kuva selailunuolten takana",
+   "aihe": "Vedomosti — Venäjän ensimmäinen painettu sanomalehti",
+   "aika": "1703",
+   "paikka": "Moskova / Pietari",
+   "konteksti": "Aikakauden julkaisun sivu rekonstruoituna: oikea taitto, oikea kirjasin, oikea paperi ja kulumat. Tiedostonimi tulee JULKAISUN mukaan, ei hetken tunnuksen (kuten hetki-titanic-daily-graphic-1912-lehti).",
+   "kuvasuhde": "2:3 (pysty)",
+   "vahimmaismitat": "1024 x 1536 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä julkaisu kertoi ja miten aikalaiset lukivat tapahtuman.",
+   "lahteet": [
+    "Kyseisen lehden tai julkaisun oma taitto samalta vuodelta",
+    "en-Wikipedia: julkaisun artikkeli",
+    "Commons / LoC Chronicling America: aikakauden etusivut"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Kuvassa saa olla tekstiä (se on lehden sivu) — poikkeus yleiseen ei-tekstiä-sääntöön, kuten neljässä jo hyväksytyssä lehtisivussa."
+  },
+  {
+   "tunnus": "hetki-einstein-patenttitoimisto-1905-lehti",
+   "ryhma": "Lehti- ja asiakirjanostot (historian hetken lehtisivu)",
+   "kayttokohde": "js/packs/historian-hetket.js → HETKI_LEHTIKUVAT[\"einstein-patenttitoimisto-1905\"]; hetken kortin ja lehtisivun kolmas kuva selailunuolten takana",
+   "aihe": "Annalen der Physik, nide 17 — artikkelin ensiaukeama",
+   "aika": "1905",
+   "paikka": "Leipzig / Bern",
+   "konteksti": "Aikakauden julkaisun sivu rekonstruoituna: oikea taitto, oikea kirjasin, oikea paperi ja kulumat. Tiedostonimi tulee JULKAISUN mukaan, ei hetken tunnuksen (kuten hetki-titanic-daily-graphic-1912-lehti).",
+   "kuvasuhde": "2:3 (pysty)",
+   "vahimmaismitat": "1024 x 1536 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä julkaisu kertoi ja miten aikalaiset lukivat tapahtuman.",
+   "lahteet": [
+    "Kyseisen lehden tai julkaisun oma taitto samalta vuodelta",
+    "en-Wikipedia: julkaisun artikkeli",
+    "Commons / LoC Chronicling America: aikakauden etusivut"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Kuvassa saa olla tekstiä (se on lehden sivu) — poikkeus yleiseen ei-tekstiä-sääntöön, kuten neljässä jo hyväksytyssä lehtisivussa."
+  },
+  {
+   "tunnus": "hetki-gutenberg-paino-1454-lehti",
+   "ryhma": "Lehti- ja asiakirjanostot (historian hetken lehtisivu)",
+   "kayttokohde": "js/packs/historian-hetket.js → HETKI_LEHTIKUVAT[\"gutenberg-paino-1454\"]; hetken kortin ja lehtisivun kolmas kuva selailunuolten takana",
+   "aihe": "Gutenbergin 31-rivinen anekirje — painettu asiakirja",
+   "aika": "1454",
+   "paikka": "Mainz",
+   "konteksti": "Aikakauden julkaisun sivu rekonstruoituna: oikea taitto, oikea kirjasin, oikea paperi ja kulumat. Tiedostonimi tulee JULKAISUN mukaan, ei hetken tunnuksen (kuten hetki-titanic-daily-graphic-1912-lehti).",
+   "kuvasuhde": "2:3 (pysty)",
+   "vahimmaismitat": "1024 x 1536 JPG/sRGB",
+   "kuvatekstinYdin": "Mitä julkaisu kertoi ja miten aikalaiset lukivat tapahtuman.",
+   "lahteet": [
+    "Kyseisen lehden tai julkaisun oma taitto samalta vuodelta",
+    "en-Wikipedia: julkaisun artikkeli",
+    "Commons / LoC Chronicling America: aikakauden etusivut"
+   ],
+   "prioriteetti": 2,
+   "huomio": "Kuvassa saa olla tekstiä (se on lehden sivu) — poikkeus yleiseen ei-tekstiä-sääntöön, kuten neljässä jo hyväksytyssä lehtisivussa."
+  },
+  {
+   "tunnus": "elain-tza",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.TZA (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "norsunvasa",
+   "aika": "nykyhetki",
+   "paikka": "Serengeti, Tansania",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-zaf",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.ZAF (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "afrikanpingviini",
+   "aika": "nykyhetki",
+   "paikka": "Boulders Beach, Etelä-Afrikka",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-ken",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.KEN (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "Rothschildinkirahvin vasa",
+   "aika": "nykyhetki",
+   "paikka": "Nakuru, Kenia",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-mdg",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.MDG (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "Verreaux'n sifaka",
+   "aika": "nykyhetki",
+   "paikka": "Berenty, Madagaskar",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-eth",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.ETH (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "geladapaviaani",
+   "aika": "nykyhetki",
+   "paikka": "Simien-vuoret, Etiopia",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-uga",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.UGA (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "vuorigorillan poikanen",
+   "aika": "nykyhetki",
+   "paikka": "Bwindi, Uganda",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-mar",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.MAR (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "berberiapina",
+   "aika": "nykyhetki",
+   "paikka": "Keski-Atlas, Marokko",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-nam",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.NAM (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "erämaanorsu",
+   "aika": "nykyhetki",
+   "paikka": "Damaraland, Namibia",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-usa",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.USA (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "biisoninvasa",
+   "aika": "nykyhetki",
+   "paikka": "Yellowstone, Yhdysvallat",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-can",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.CAN (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "jääkarhunpentu",
+   "aika": "nykyhetki",
+   "paikka": "Churchill, Manitoba, Kanada",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-mex",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.MEX (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "aksolotl",
+   "aika": "nykyhetki",
+   "paikka": "Xochimilco, Meksiko",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-cub",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.CUB (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "mehiläiskolibri",
+   "aika": "nykyhetki",
+   "paikka": "Zapata, Kuuba",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-bra",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.BRA (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "kultatamariini",
+   "aika": "nykyhetki",
+   "paikka": "Rio de Janeiron osavaltio, Brasilia",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-arg",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.ARG (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "magellaninpingviini",
+   "aika": "nykyhetki",
+   "paikka": "Punta Tombo, Argentiina",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-per",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.PER (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "vikunja",
+   "aika": "nykyhetki",
+   "paikka": "Andit, Peru",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-chl",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.CHL (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "guanako",
+   "aika": "nykyhetki",
+   "paikka": "Torres del Paine, Chile",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-aus",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.AUS (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "koalanpoikanen",
+   "aika": "nykyhetki",
+   "paikka": "Kangaroo Island, Australia",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-nzl",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.NZL (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "kiivi",
+   "aika": "nykyhetki",
+   "paikka": "Stewartin saari, Uusi-Seelanti",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-png",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.PNG (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "paratiisilintu",
+   "aika": "nykyhetki",
+   "paikka": "Ylängöt, Papua-Uusi-Guinea",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-jpn",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.JPN (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "lumiapina kuumassa lähteessä",
+   "aika": "nykyhetki",
+   "paikka": "Jigokudani, Japani",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-chn",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.CHN (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "jättiläispandan poikanen",
+   "aika": "nykyhetki",
+   "paikka": "Sichuan, Kiina",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-ind",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.IND (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "bengalintiikerin poikanen",
+   "aika": "nykyhetki",
+   "paikka": "Ranthambore, Intia",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-npl",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.NPL (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "punapanda",
+   "aika": "nykyhetki",
+   "paikka": "Langtang, Nepal",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  },
+  {
+   "tunnus": "elain-sau",
+   "ryhma": "Eläintäyt",
+   "kayttokohde": "js/packs/elaintakyt.js → ELAINTAKYT.SAU (uusi rivi); kartan eläinmerkki ja eläintäyn kortti",
+   "aihe": "arabianoryksi",
+   "aika": "nykyhetki",
+   "paikka": "Uruq Bani Ma'arid, Saudi-Arabia",
+   "konteksti": "Eläin LÄHIKUVASSA, ei maisemaa (Raamattu: ELÄINKOHTEEN KUVA NÄYTTÄÄ ITSE ELÄIMEN). Söpöysmerkin arvoinen otos: katse kameraan tai puuhaan, tausta pehmeä mutta ympäristö luettavissa.",
+   "kuvasuhde": "3:2 (vaaka)",
+   "vahimmaismitat": "1536 x 1024 JPG/sRGB (peli skaalaa 960 x 640)",
+   "kuvatekstinYdin": "Mikä laji on ja mikä tekee siitä juuri tämän maan eläimen — ei kuvan kuvailua.",
+   "lahteet": [
+    "Nykyiset 29 eläintäkykuvaa assets/elaimet/ (sama rajaus ja valo)",
+    "Commons: lajin lähikuvat tuntomerkkien tarkistukseen",
+    "en-Wikipedia: lajin artikkeli"
+   ],
+   "prioriteetti": 3,
+   "huomio": "ODOTTAA SISÄLTÖÄ: eläintäyn otsikko, teksti ja lähde ovat Fablen kaanontekstejä ja lajivalinta on vahvistettava ennen generointia."
+  }
+ ]
+}

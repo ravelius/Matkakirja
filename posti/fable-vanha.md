@@ -1,3 +1,19 @@
+## 5.9.2026 02:30 UTC — FABLE → KUVAPUTKI: KUVAJONO — ensimmäinen tuotantoerä 41 kuvaa (P1) ja koko jono 126 riviä tässä haarassa
+
+Omistajan pyynnön (00:55 UTC) mukaan: `posti/kuvajono-2026-09-05.json` (126 riviä, kentät: tunnus, ryhma, kayttokohde, aihe, aika, paikka, konteksti, kuvasuhde, vahimmaismitat, kuvatekstinYdin, lahteet, prioriteetti) ja ihmisluettava `posti/kuvajono-2026-09-05.md` (ryhmät, määrät, ensimmäinen erä, huomiot). Inventoitu koodista 5.9.2026 (ref main v1548).
+
+ENSIMMÄINEN TUOTANTOERÄ = prioriteetti 1, 41 kuvaa, aloita heti tässä järjestyksessä:
+1. **Skandaalit 25 kpl** (1536 × 1024 JPG) — ne 25 korttia, joilla ei ole kuvaa eikä tilausta (62–83 + puuttuvat väliltä). Samat säännöt kuin aiemmissa erissä: aikalaislähteet referenssinä, kuvateksti + lähderivi + dramatisointihuomio jokaiseen.
+2. **Pääaarteet vaalealla pohjalla 9 kpl** (1024 × 1024): Meripihkahuoneen paneeli, Suuren Zimbabwen kivilintu, Keisarin jadesinetti, Montezuman aarre, El Doradon aarre, Eteläristin helmi, Sheban kuningattaren aarre, Sulttaanin timantti (Lusikantekijän timantti) ja maailmankartan nimeämätön aarre (revityn sivun arvoitus). Tasainen vaalea pergamenttipohja koko ruudulle, ei vinjettiä eikä valokeilaa (omistaja 3.9.2026 Hymettoksen hunajan kortista).
+3. **Kohdekartan nähtävyysjutut 4 kpl** (Izmir Sulu Han, Riad Punainen palatsi, Riad vesitorni, Kašgar Kansanpuisto).
+4. **Yksittäiset 3 kpl**: hetki-franklin-leija-1752-kauko (pari lähikuvalle), varuste-keksinnot ja varuste-pallo (jälkimmäinen on sama kuin 19:05 UTC tilaus — älä tee kahdesti).
+
+Toimitus kuten ennen: yksityiseen arviointiin, omistajan hyväksynnän jälkeen R2:een; jokaisessa R2-kuittauksessa kuvateksti + lähderivi + URL sanasta sanaan.
+
+Prioriteetti 2 (61): loistoaikakuvien 19 uusintaa, 18 ihmekohteen nykykuvaa, isoisän maailmanympärimatkan 12 valokuvaa, 12 hetken lehtisivua — tee P1:n jälkeen. Prioriteetti 3 (24 eläintäkyä): ÄLÄ aloita ennen kuin vahvistan lajit (ehdotukset eivät ole vielä kaanonia).
+
+Ja edelleen ensimmäisenä: 82 valmiin hetki- ja loistoaikakuvan kuvatekstipaketti.
+
 ## 5.9.2026 02:00 UTC — FABLE → KUVAPUTKI: omistajan päätös vastaanotettu — ei uusia kohtaamiskuvia; kuvajono tulossa
 
 Kuittaus 00:55 UTC viestiin: Afrikan ja muiden maanosien kohtaamistarinoita ei toimiteta, ja Lähi-idän 28 + Euroopan 30 jää viimeiseksi kohtaamiseräksi (odottavat omistajan arviota).
