@@ -16,15 +16,22 @@
  *
  * ── VARTIOT ───────────────────────────────────────────────────────
  *
- *   E1  Kerros syntyy avauksen ylälohkoon (.intro-kartta) ja on
- *       TEKSTIN TAKANA: se on lohkon ensimmäinen lapsi, julisteotsikko
- *       tulee DOMissa sen jälkeen ja piirtyy siis päälle.
+ *   E1  Kerros syntyy KOKO AVAUSPANEELIIN (.intro) ja on TEKSTIN
+ *       TAKANA: se on paneelin ensimmäinen lapsi, julisteotsikko tulee
+ *       DOMissa sen jälkeen ja piirtyy siis päälle. Kerros on paneelin
+ *       kokoinen ja video rajataan cover-tavalla (omistaja 5.9.2026:
+ *       *"pallo saisi pyöriä koko etusivun alalla"*).
  *   E2  Kone liikkuu: koneen muunnos vaihtuu näytteiden välillä.
  *   E3  Punainen viiva pitenee: polun pituus kasvaa eikä kutistu.
- *   E4  Isoisän aikalaiskuva ilmestyy laskeutumisella KARTAN
- *       ULKOPUOLELLE: kortti ei leikkaa avaustekstin laatikkoa
- *       (.intro-palsta, #intro-text) eikä julisteotsikkoa, ja
+ *   E4  Isoisän aikalaiskuva ilmestyy laskeutumisella KIINTEÄÄN
+ *       PAIKKAAN: kortti ei leikkaa avaustekstiä (.intro-palsta,
+ *       #intro-text), julisteotsikkoa eikä avauksen säätimiä, se on
+ *       selvästi entistä isompi, se ei liiku kuvien välillä, ja
  *       kuvateksti on sanasta sanaan js/isoisan-valokuvat.js:n lappu.
+ *   E10 COVER-SOVITUS: koneen ruutupiste, jonka SELAIN laski SVG:n
+ *       xMidYMid slice -rajauksella, on sama kuin moduulin oma
+ *       kerroksenSovitus + videostaRuudulle antaa — ja piste osuu
+ *       videon pallolle (etäisyys keskeltä alle pallon säteen).
  *   E1d Tasokarttaa EI alusteta etusivua varten (aalto 1D): kartta on
  *       lepotilassa ja svg#board tyhjä koko avausnäkymän ajan.
  *   E5  Lippu pois → ENTINEN ETUSIVU: .intro-kartassa on vain
@@ -73,8 +80,8 @@ const KUVAKANSIO = process.argv[2] ?? null;
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
 const {
-  ETUSIVUPALLO_VERSIO, ETUSIVUN_KAMERA, ETUSIVUPALLO_TIEDOSTOT,
-  reitinPisteet, teeReitti,
+  ETUSIVUPALLO_VERSIO, ETUSIVUN_KAMERA, ETUSIVUPALLO_TIEDOSTOT, SVG_SOVITUS, SOVITUS_TAPA,
+  kerroksenSovitus, reitinPisteet, teeReitti, videostaRuudulle,
 } = await import(`${JUURI}js/etusivupallo.js`);
 const { ISOISAN_VALOKUVAT } = await import(`${JUURI}js/isoisan-valokuvat.js`);
 const { packById } = await import(`${JUURI}js/pack.js`);
@@ -274,15 +281,27 @@ const LUE_TILA = () => {
   };
   const kone = juuri?.querySelector('.etusivupallo-kone');
   const viiva = juuri?.querySelector('.etusivupallo-viiva');
-  // Kortti asuu koko avausnäkymässä (.intro), ei pallolohkossa.
-  const kuva = document.querySelector('.etusivupallo-kuva');
+  // Kortti asuu koko avausnäkymässä (.intro), ei pallokerroksessa.
+  const kuva = document.querySelector('.etusivupallo-kuva.nakyy')
+    ?? document.querySelector('.etusivupallo-kuva');
   const kartta = document.querySelector('.intro-kartta');
+  const paneeli = document.querySelector('#intro');
+  const otsikko = document.querySelector('.intro-juliste');
   return {
     kerros: Boolean(juuri),
-    ekaLapsi: kartta?.firstElementChild?.className ?? null,
-    otsikkoJalkeen: Boolean(juuri && kartta?.querySelector('.intro-juliste')
-      && (juuri.compareDocumentPosition(kartta.querySelector('.intro-juliste'))
-        & Node.DOCUMENT_POSITION_FOLLOWING)),
+    // Kerros on KOKO PANEELIN ensimmäinen lapsi (5.9.2026 ilta).
+    ekaLapsi: paneeli?.firstElementChild?.className ?? null,
+    otsikkoJalkeen: Boolean(juuri && otsikko
+      && (juuri.compareDocumentPosition(otsikko) & Node.DOCUMENT_POSITION_FOLLOWING)),
+    videoFit: juuri ? getComputedStyle(juuri.querySelector('.etusivupallo-video')
+      ?? juuri.querySelector('.etusivupallo-juliste') ?? juuri).objectFit : null,
+    svgPAR: juuri?.querySelector('.etusivupallo-reitti')?.getAttribute('preserveAspectRatio') ?? null,
+    kortteja: document.querySelectorAll('.etusivupallo-kuva').length,
+    koneenLaatikko: laatikko(kone),
+    paneelinLaatikko: laatikko(paneeli),
+    saatimet: [...document.querySelectorAll(
+      '#intro button, #intro a, .start-gate-keskus, .start-aanet, .start-btn, .start-linkki',
+    )].map(laatikko).filter(Boolean),
     videoita: juuri ? juuri.querySelectorAll('video').length : 0,
     julisteita: juuri ? juuri.querySelectorAll('img.etusivupallo-juliste').length : 0,
     pallollaLuokka: document.querySelector('.intro')?.classList.contains('intro-pallolla') ?? false,
@@ -337,6 +356,35 @@ const mittaaKehysaika = (sivu, ms = 3000) => sivu.evaluate((kesto) => new Promis
 const leikkaavat = (a, b) => Boolean(a && b
   && a.x < b.x + b.w && b.x < a.x + a.w && a.y < b.y + b.h && b.y < a.y + a.h);
 
+/**
+ * Näkyvän kuvakortin laatikko VASTA KUN SE ON ASETTUNUT: kuva ladattu ja
+ * ristihäivytyksen muunnos ohi (kaksi samaa mittausta peräkkäin). Kesken
+ * siirtymän mitattu laatikko olisi vasta matkalla paikalleen.
+ */
+async function asettunutKortti(sivu, yrityksia = 40) {
+  let edellinen = null;
+  for (let i = 0; i < yrityksia; i++) {
+    // eslint-disable-next-line no-await-in-loop
+    const nyt = await sivu.evaluate(() => {
+      const el = document.querySelector('.etusivupallo-kuva.nakyy');
+      const img = el?.querySelector('img');
+      if (!el || !img?.complete || !img.naturalWidth) return null;
+      const r = el.getBoundingClientRect();
+      return r.height > 40
+        ? {
+          x: r.left, y: r.top, w: r.width, h: r.height,
+          teksti: el.querySelector('figcaption')?.textContent ?? '',
+        } : null;
+    });
+    if (nyt && edellinen && Math.abs(nyt.y - edellinen.y) < 0.5
+      && Math.abs(nyt.h - edellinen.h) < 0.5 && nyt.teksti === edellinen.teksti) return nyt;
+    edellinen = nyt;
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.waitForTimeout(220);
+  }
+  return edellinen;
+}
+
 /* ================= LIPPU PÄÄLLÄ ================= */
 
 if (koevideo) {
@@ -354,7 +402,7 @@ if (koevideo) {
     await sivu.waitForTimeout(1200);
 
     const alku = await sivu.evaluate(LUE_TILA);
-    vaadi('E1b kerros on avauksen ylälohkon ensimmäinen lapsi (tekstin takana)',
+    vaadi('E1b kerros on avauspaneelin ensimmäinen lapsi (tekstin takana)',
       alku.ekaLapsi?.includes('etusivupallo') && alku.otsikkoJalkeen,
       `ensimmäinen lapsi "${alku.ekaLapsi}", otsikko jälkeen: ${alku.otsikkoJalkeen}`);
     vaadi('E1c video on kerroksessa ja soi', alku.videoita === 1 && alku.aika !== null,
@@ -362,6 +410,19 @@ if (koevideo) {
     vaadi('E1d tasokarttaa ei alusteta etusivua varten (lepotila, svg#board tyhjä)',
       alku.lepotila === true && alku.laudanOsia === 0,
       `lepotila ${alku.lepotila}, laudan osia ${alku.laudanOsia}`);
+    /*
+     * KOKO ETUSIVUN ALA (omistaja 5.9.2026 klo 21.30): kerros on
+     * paneelin kokoinen ±1 px, ja video täyttää sen cover-tavalla.
+     */
+    const p = alku.paneelinLaatikko;
+    const k = alku.pallonLaatikko;
+    vaadi('E1e kerros peittää koko avauspaneelin',
+      Boolean(p && k) && Math.abs(p.x - k.x) < 1 && Math.abs(p.y - k.y) < 1
+      && Math.abs(p.w - k.w) < 1 && Math.abs(p.h - k.h) < 1,
+      `paneeli ${JSON.stringify(p)} vs. kerros ${JSON.stringify(k)}`);
+    vaadi('E1f video ja SVG rajautuvat samoin (cover ≡ xMidYMid slice)',
+      alku.videoFit === SOVITUS_TAPA && alku.svgPAR === SVG_SOVITUS[SOVITUS_TAPA],
+      `object-fit ${alku.videoFit}, preserveAspectRatio ${alku.svgPAR}`);
 
     await sivu.waitForTimeout(1500);
     const keski = await sivu.evaluate(LUE_TILA);
@@ -378,19 +439,78 @@ if (koevideo) {
     const kuvassa = await sivu.waitForFunction(
       () => document.querySelector('.etusivupallo-kuva.nakyy'), null, { timeout: 12000 },
     ).then(() => true).catch(() => false);
-    const kuvatila = await sivu.evaluate(LUE_TILA);
+    const ekaKortti = await asettunutKortti(sivu);
+    const kuvatila = { ...await sivu.evaluate(LUE_TILA), kuvanLaatikko: ekaKortti };
     vaadi('E4a isoisän aikalaiskuva ilmestyy laskeutumisella', kuvassa && kuvatila.kuvaNakyy,
       'kuvakortti ei saanut .nakyy-luokkaa 12 s:ssa');
     const lappu = new Set(Object.values(ISOISAN_VALOKUVAT).map((k) => k.kuvateksti));
     vaadi('E4b kuvateksti on sanasta sanaan isoisän valokuvan lappu',
       lappu.has(kuvatila.kuvateksti), `"${kuvatila.kuvateksti}"`);
-    vaadi('E4c kuva on kartan ulkopuolella eikä leikkaa avaustekstiä',
+    vaadi('E4c kuva ei leikkaa avaustekstiä, otsikkoa eikä säätimiä',
       Boolean(kuvatila.kuvanLaatikko)
       && !leikkaavat(kuvatila.kuvanLaatikko, kuvatila.palstaLaatikko)
       && !leikkaavat(kuvatila.kuvanLaatikko, kuvatila.tekstiLaatikko)
-      && !leikkaavat(kuvatila.kuvanLaatikko, kuvatila.otsikkoLaatikko),
+      && !leikkaavat(kuvatila.kuvanLaatikko, kuvatila.otsikkoLaatikko)
+      && !kuvatila.saatimet.some((s) => leikkaavat(kuvatila.kuvanLaatikko, s)),
       `kuva ${JSON.stringify(kuvatila.kuvanLaatikko)}, palsta ${JSON.stringify(kuvatila.palstaLaatikko)}, `
-      + `otsikko ${JSON.stringify(kuvatila.otsikkoLaatikko)}`);
+      + `otsikko ${JSON.stringify(kuvatila.otsikkoLaatikko)}, `
+      + `säätimet ${JSON.stringify(kuvatila.saatimet)}`);
+    /*
+     * KIINTEÄ PAIKKA JA ISOMPI KOKO (omistaja 5.9.2026 klo 21.30:
+     * *"isoisän kuva saisi olla isompi ja vaihtua aina samaan
+     * paikkaan"*). Entinen kortti oli puhelimella 96 px leveä ja etsi
+     * paikkansa esteitä väistäen; nyt kortteja on kaksi päällekkäin
+     * samassa kohdassa ristihäivytystä varten.
+     */
+    vaadi('E4d kortti on selvästi entistä isompi (yli 110 px puhelimella)',
+      (kuvatila.kuvanLaatikko?.w ?? 0) > 110, `leveys ${kuvatila.kuvanLaatikko?.w}`);
+    vaadi('E4e kortteja on kaksi päällekkäin (ristihäivytys)', kuvatila.kortteja === 2,
+      `kortteja ${kuvatila.kortteja}`);
+    // Sama paikka seuraavallakin laskeutumisella: odotetaan kuvan vaihtoa.
+    const vaihtui = await sivu.waitForFunction((teksti) => {
+      const el = document.querySelector('.etusivupallo-kuva.nakyy figcaption');
+      return el && el.textContent !== teksti;
+    }, kuvatila.kuvateksti, { timeout: 20000 }).then(() => true).catch(() => false);
+    const tokaKortti = await asettunutKortti(sivu);
+    const toinen = await sivu.evaluate(LUE_TILA);
+    vaadi('E4f kuva vaihtuu AINA SAMAAN PAIKKAAN',
+      vaihtui && Boolean(tokaKortti && ekaKortti)
+      && tokaKortti.teksti !== ekaKortti.teksti
+      && Math.abs(tokaKortti.x - ekaKortti.x) < 1
+      && Math.abs(tokaKortti.y - ekaKortti.y) < 1,
+      `${JSON.stringify(ekaKortti)} → ${JSON.stringify(tokaKortti)}`);
+
+    /*
+     * E10 COVER-SOVITUS: selain laski koneen paikan SVG:n slice-
+     * rajauksella, moduuli laskee saman kerroksenSovituksella. Jos nämä
+     * eroavat, kone lentäisi videon pallon vierestä.
+     */
+    const muunnos = /translate\(([-\d.]+) ([-\d.]+)\)/.exec(toinen.koneenMuunnos ?? '');
+    const sovitus = kerroksenSovitus(luettelo.mitat, {
+      leveys: toinen.pallonLaatikko.w, korkeus: toinen.pallonLaatikko.h,
+    });
+    const oma = muunnos
+      ? videostaRuudulle({ x: Number(muunnos[1]), y: Number(muunnos[2]) }, sovitus) : null;
+    const selaimen = toinen.koneenLaatikko ? {
+      x: toinen.koneenLaatikko.x - toinen.pallonLaatikko.x + toinen.koneenLaatikko.w / 2,
+      y: toinen.koneenLaatikko.y - toinen.pallonLaatikko.y + toinen.koneenLaatikko.h / 2,
+    } : null;
+    vaadi('E10a moduulin sovitus = selaimen SVG-rajaus (alle 2 px ero)',
+      Boolean(oma && selaimen) && Math.hypot(oma.x - selaimen.x, oma.y - selaimen.y) < 2,
+      `oma ${JSON.stringify(oma)} vs. selain ${JSON.stringify(selaimen)}`);
+    /*
+     * Kone osuu videon PALLOLLE: pallon säde videon pikseleinä on
+     * f·sin θ/(D − cos θ) reunalla (cos θ = 1/D), fov 50° ja korkeus
+     * 1,55 → noin 411 px, kun lava on 900 ja kuva 800.
+     */
+    const D = 1 + ETUSIVUN_KAMERA.korkeus;
+    const f = (luettelo.mitat.lava / 2) / Math.tan((ETUSIVUN_KAMERA.fov * Math.PI) / 360);
+    const sade = (f * Math.sqrt(1 - 1 / D ** 2)) / (D - 1 / D);
+    const etaisyys = muunnos
+      ? Math.hypot(Number(muunnos[1]) - luettelo.mitat.leveys / 2,
+        Number(muunnos[2]) - luettelo.mitat.korkeus / 2) : Infinity;
+    vaadi('E10b kone on videon pallon pinnalla myös cover-rajauksessa', etaisyys < sade,
+      `etäisyys keskeltä ${etaisyys.toFixed(0)} px, pallon säde ${sade.toFixed(0)} px`);
     tieto('sumuverho kevennetty (.intro-pallolla)', kuvatila.pallollaLuokka);
     const kehysaika = await mittaaKehysaika(sivu);
     tieto('kehysaika etusivulla, pallo PÄÄLLÄ',

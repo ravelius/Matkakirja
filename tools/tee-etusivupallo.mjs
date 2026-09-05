@@ -3,13 +3,36 @@
  *
  *   node tools/tee-etusivupallo.mjs [--kuiva] [--fps 15] [--lava 900]
  *        [--kuva 800] [--sumennus 6] [--taso 5] [--kehykset N]
- *        [--ulos kansio] [--ffmpeg polku] [--ei-videota]
+ *        [--ulos kansio] [--ffmpeg polku] [--ei-videota] [--sauma]
  *
  * OMISTAJAN TILAUS 5.9.2026, sanatarkasti: *"etusivun kartan voi pitää
  * aluksi vielä vanhassa mutta sitten kun ehditään tehdä uusi, niin
  * siihen kannattaa varmaan renderöidä oma spesifi zoomattu pallo joka
  * pyörii hitaasti lontoosta kohti aasiaa, mutta on jo renderöity
  * blurrattuna, jotta efekti ei vie etusivulla tehoja."*
+ *
+ * TÄSMENNYS 5.9.2026 ilta, sanatarkasti: *"animaatio pitää mennä koko
+ * maapallon ympäri niin että se voi loopata. eli pysähtyy lontooseen ja
+ * punainen viiva ottaa kiinni lopuksi."*
+ *
+ * ── SAUMATON LOOPPI ────────────────────────────────────────────────
+ *
+ * Kierros on TÄSMÄLLEEN 360°: reitti päättyy Lontooseen, josta se
+ * lähti, ja js/etusivupallo.js laskee pituusasteet jatkuvina. Kamera on
+ * siksi jaksollinen, ja kehys hetkellä KESTO näyttää samalta kuin kehys
+ * hetkellä 0. Poltettuja kehyksiä on KEHYKSIA kappaletta hetkillä
+ * i × KESTO / KEHYKSIA (i = 0 … KEHYKSIA−1), eli viimeisen kehyksen
+ * jälkeen seuraava olisi tasan ensimmäinen — juuri niin video looppaa
+ * ilman hyppyä. Kuvataajuus annetaan ffmpegille murtolukuna
+ * (KEHYKSIA / KESTO), jotta videon kesto on tasan kierroksen kesto.
+ *
+ * Videoon EI enää polteta häivytystä (aiemmin kierroksen sauma
+ * häivytettiin paperiin): saumaa ei ole. Etusivulla häivytetään enää
+ * punainen viiva ja kone, kun ne ovat sulkeneet ympyrän Lontoossa.
+ *
+ * `--sauma` polttaa vain kaksi kehystä (t = 0 ja t = KESTO) ja vertaa
+ * niitä tavu tavulta: näin loopin saumattomuuden voi tarkistaa
+ * kontissa ilman koko sarjaa ja ilman ffmpegiä.
  *
  * ── MIKSI VIDEO EIKÄ KUVASARJA TAI PANORAAMA ───────────────────────
  *
@@ -50,7 +73,7 @@
 
 import { spawnSync } from 'node:child_process';
 import http from 'node:http';
-import { mkdirSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -66,6 +89,7 @@ if (process.argv[1] === TAMA && !process.env.NODE_USE_ENV_PROXY
 
 const {
   ETUSIVUPALLO_VERSIO, ETUSIVUN_KAMERA, ETUSIVUPALLO_TIEDOSTOT, HAIVYTYS_S,
+  KIERROKSEN_ASTEET, LOPPU_PITO_S,
   kameranNakyma, koneenTila, pallonPiste, reitinPisteet, teeReitti,
 } = await import('../js/etusivupallo.js');
 const { PALLO_LAATAT, PALLO_KIRJASTO, laattakynnykset } = await import('../js/pallo.js');
@@ -79,7 +103,9 @@ const arvo = (nimi, oletus) => {
 };
 
 const KUIVA = lippu('kuiva');
-const EI_VIDEOTA = lippu('ei-videota');
+const EI_VIDEOTA = lippu('ei-videota') || lippu('sauma');
+/** Saumakoe: vain kehykset t = 0 ja t = KESTO, ja niiden vertailu. */
+const SAUMA = lippu('sauma');
 const FPS = Number(arvo('fps', '15'));
 /** Lava = renderöity kangas; kuva rajataan sen keskeltä sumennuksen takia. */
 const LAVA = Number(arvo('lava', '900'));
@@ -94,22 +120,40 @@ const PAPERI = arvo('tausta', '#efdcb4');
 const pack = packById('maailmankartta');
 const reitti = teeReitti(reitinPisteet(pack));
 if (reitti.jaksot.length < 4) throw new Error('reitin kaupunkeja ei löytynyt paketista');
-const KEHYKSIA = Number(arvo('kehykset', String(Math.ceil(reitti.kesto * FPS))));
-const KESTO = KEHYKSIA / FPS;
+/*
+ * KIERROS ON KESTO — ei kehysmäärä jaettuna kuvataajuudella. Kehykset
+ * jaetaan tasan kierrokselle, ja ffmpeg saa murtolukuisen taajuuden,
+ * jotta videon kesto on tasan kierroksen kesto. Vain silloin videon
+ * aika ↔ kameran pituusaste pysyy kohdallaan koko loopin ajan.
+ */
+const KESTO = reitti.kesto;
+const KEHYKSIA = SAUMA ? 2 : Number(arvo('kehykset', String(Math.round(KESTO * FPS))));
+/** Todellinen kuvataajuus: kehykset jaettuna kierroksen kestolla. */
+const TAAJUUS = KEHYKSIA / KESTO;
+/** Kehyksen i hetki kierroksella (viimeisen jälkeen tulee taas nolla). */
+const kehyksenAika = (i) => (i * KESTO) / KEHYKSIA;
+/** Kierron kattavuus: pitää olla tasan 360°, muuten looppi hyppäisi. */
+const KIERTO = reitti.pisteet[reitti.pisteet.length - 1].lon - reitti.pisteet[0].lon;
+if (Math.abs(KIERTO - KIERROKSEN_ASTEET) > 1e-6) {
+  throw new Error(`reitti kiertää ${KIERTO.toFixed(3)}° eikä ${KIERROKSEN_ASTEET}° — `
+    + 'looppi ei olisi saumaton (js/etusivupallo.js ETUSIVUN_REITTI)');
+}
 /** Julisteen (pysäytyskuvan) hetki: puolimatkassa, jolloin viivaa on jo kertynyt. */
-const JULISTE_AIKA = Math.min(reitti.kesto, reitti.jaksot[4]?.alku ?? reitti.kesto / 2);
+const JULISTE_AIKA = Math.min(KESTO, reitti.jaksot[5]?.alku ?? KESTO / 2);
 
 const AVAIN = `julisteet/etusivu/${ETUSIVUPALLO_VERSIO}/`;
-
-/** Häivytys kierroksen saumassa — sama käyrä kuin js/etusivupallo.js:ssä. */
-const haivytys = (t) => Math.max(0, Math.min(1, t / HAIVYTYS_S, (KESTO - t) / HAIVYTYS_S));
 
 const luettelo = {
   versio: ETUSIVUPALLO_VERSIO,
   tehty: new Date().toISOString(),
   kesto: Number(KESTO.toFixed(4)),
-  fps: FPS,
+  fps: Number(TAAJUUS.toFixed(6)),
   kehyksia: KEHYKSIA,
+  /* Saumaton looppi: kierto tasan 360°, ei häivytystä videossa. */
+  saumaton: true,
+  kierrosAste: KIERROKSEN_ASTEET,
+  loppuPitoS: LOPPU_PITO_S,
+  haivytysS: HAIVYTYS_S,
   julisteAika: Number(JULISTE_AIKA.toFixed(3)),
   sumennus: SUMENNUS,
   laatat: PALLO_LAATAT,
@@ -132,9 +176,11 @@ const luettelo = {
   tiedostot: ETUSIVUPALLO_TIEDOSTOT,
 };
 
-console.log(`Etusivun pallo ${ETUSIVUPALLO_VERSIO}: ${KEHYKSIA} kehystä @ ${FPS} fps = `
-  + `${KESTO.toFixed(1)} s, lava ${LAVA}px → kuva ${KUVA}px, sumennus ${SUMENNUS}px, laattataso ${TASO}`);
-console.log(`Reitti: ${reitti.pisteet.map((p) => p.nimi).join(' → ')}`);
+console.log(`Etusivun pallo ${ETUSIVUPALLO_VERSIO}: ${KEHYKSIA} kehystä @ `
+  + `${TAAJUUS.toFixed(3)} fps = ${KESTO.toFixed(2)} s (kierto ${KIERTO.toFixed(2)}°), `
+  + `lava ${LAVA}px → kuva ${KUVA}px, sumennus ${SUMENNUS}px, laattataso ${TASO}`);
+console.log(`Reitti: ${reitti.pisteet.map((p) => p.nimi).join(' → ')} `
+  + `(+ ${LOPPU_PITO_S} s pysähdys Lontoossa)`);
 console.log(`Ämpärin polku: ${AVAIN}`);
 
 if (KUIVA) {
@@ -203,7 +249,8 @@ const SIVU = `<!doctype html><meta charset="utf-8">
     moottori.thresholds = kynnykset;
     return true;
   };
-  window.haivyta = (arvo) => { document.getElementById('pallo').style.opacity = String(arvo); };
+  // Kierroksen sauma on saumaton (360°), joten videoon ei polteta
+  // häivytystä — pallo on aina täydellä peittävyydellä.
 </script>`;
 
 const palvelin = http.createServer((req, res) => {
@@ -275,13 +322,12 @@ async function odotaLaatat(enintaanMs = 6000) {
   await sivu.evaluate(() => new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok))));
 }
 
-/** Kamera hetkelle t + häivytys. */
+/** Kamera hetkelle t. Ei häivytystä: looppi on saumaton. */
 async function asetaKehys(t) {
   const nakyma = kameranNakyma(reitti, t);
-  await sivu.evaluate(([n, h]) => {
+  await sivu.evaluate((n) => {
     window.pallo.pointOfView({ lat: n.lat, lng: n.lon, altitude: n.korkeus }, 0);
-    window.haivyta(h);
-  }, [nakyma, haivytys(t)]);
+  }, nakyma);
 }
 
 /*
@@ -306,18 +352,30 @@ const rajaus = {
  */
 const kaappaa = (polku) => sivu.screenshot({ path: polku, clip: rajaus });
 
-/* Esilämmitys: sama kierros kerran harvakseltaan, jotta laatat ovat
- * selaimen välimuistissa eikä ensimmäinen kierros ehdi sumeaksi. */
-for (let i = 0; i < 12; i++) {
-  await asetaKehys((i / 12) * KESTO);
+/*
+ * Esilämmitys: sama kierros kerran harvakseltaan, jotta laatat ovat
+ * selaimen välimuistissa eikä ensimmäinen kierros ehdi sumeaksi. Kierros
+ * on nyt koko maapallon ympäri (360°), joten näytteitä tarvitaan
+ * kaksinkertaisesti entiseen verrattuna — muuten Tyynenmeren laatat
+ * latautuisivat vasta poltossa.
+ */
+const ESILAMMITYS = 24;
+for (let i = 0; i < ESILAMMITYS; i++) {
+  await asetaKehys((i / ESILAMMITYS) * KESTO);
   await odotaLaatat(8000);
 }
 
 const numero = (i) => String(i).padStart(5, '0');
 let projektiovirhe = 0;
 const kehysajat = [];
+/*
+ * SAUMAKOE polttaa kehykset t = 0 ja t = KESTO. Jos looppi on
+ * saumaton, ne ovat sama kuva — ja koska kumpikin on Chromiumin
+ * deterministinen PNG samasta näkymästä, tavut täsmäävät.
+ */
+const KEHYSTEN_AJAT = SAUMA ? [0, KESTO] : null;
 for (let i = 0; i < KEHYKSIA; i++) {
-  const t = i / FPS;
+  const t = KEHYSTEN_AJAT ? KEHYSTEN_AJAT[i] : kehyksenAika(i);
   const alku = Date.now();
   await asetaKehys(t);
   await odotaLaatat();
@@ -332,11 +390,11 @@ for (let i = 0; i < KEHYKSIA; i++) {
   await kaappaa(join(KEHYSKANSIO, `kehys-${numero(i)}.png`));
   kehysajat.push(Date.now() - alku);
   if (i % 25 === 0 || i === KEHYKSIA - 1) {
-    console.log(`  kehys ${i + 1}/${KEHYKSIA} (t=${t.toFixed(1)} s, ${Date.now() - alku} ms)`);
+    console.log(`  kehys ${i + 1}/${KEHYKSIA} (t=${t.toFixed(2)} s, ${Date.now() - alku} ms)`);
   }
 }
 
-/* Juliste (pysäytyskuva) omalla hetkellään, ilman häivytystä. */
+/* Juliste (pysäytyskuva) omalla hetkellään. */
 await asetaKehys(JULISTE_AIKA);
 await odotaLaatat(8000);
 await kaappaa(join(ULOS, 'juliste.png'));
@@ -347,11 +405,37 @@ palvelin.close();
 
 console.log(`Kehykset valmiit: ${KEHYKSIA} kpl, keskimäärin `
   + `${Math.round(kehysajat.reduce((a, b) => a + b, 0) / kehysajat.length)} ms/kehys`);
+
 if (projektiovirhe > KUVA * 0.01) {
   throw new Error(`projektio eroaa kirjaston omasta ${projektiovirhe.toFixed(1)} px — `
     + 'kone lentäisi etusivulla väärässä paikassa (js/etusivupallo.js pallonPiste)');
 }
 console.log(`Projektiovartija: suurin ero kirjaston getScreenCoordsiin ${projektiovirhe.toFixed(2)} px`);
+
+if (SAUMA) {
+  /*
+   * SAUMAVARTIJA: kierroksen ensimmäinen ja "yli menevä" kehys ovat
+   * sama näkymä, joten PNG-tavujen on täsmättävä. Jos ne eroavat,
+   * kierto ei ole tasan 360° tai kamera ei ole jaksollinen — video
+   * hyppäisi loopin kohdalla.
+   */
+  const alkuPng = readFileSync(join(KEHYSKANSIO, `kehys-${numero(0)}.png`));
+  const loppuPng = readFileSync(join(KEHYSKANSIO, `kehys-${numero(1)}.png`));
+  const sama = alkuPng.length === loppuPng.length && alkuPng.equals(loppuPng);
+  const kamerat = [0, KESTO].map((t) => kameranNakyma(reitti, t));
+  const lonEro = (kamerat[1].lon - kamerat[0].lon) - KIERROKSEN_ASTEET;
+  const latEro = kamerat[1].lat - kamerat[0].lat;
+  console.log(`Saumakoe: kameran lon-ero 360°:sta ${lonEro.toExponential(2)}°, `
+    + `lat-ero ${latEro.toExponential(2)}°`);
+  console.log(`Saumakoe: kehykset t=0 ja t=${KESTO.toFixed(2)} `
+    + `${sama ? 'IDENTTISET (pikseliero 0)' : 'EROAVAT'} (${alkuPng.length} tavua)`);
+  if (Math.abs(lonEro) > 1e-6 || Math.abs(latEro) > 1e-9) {
+    throw new Error('kamera ei ole jaksollinen — looppi hyppäisi saumassa');
+  }
+  if (!sama) throw new Error('saumakehykset eroavat tavutasolla — looppi ei ole saumaton');
+  console.log('Saumakoe läpi. (Videoita ei poltettu: --sauma)');
+  process.exit(0);
+}
 
 /* ---------- videot ---------- */
 
@@ -365,7 +449,12 @@ const koko = (p) => {
 const kilot = (n) => `${(n / 1024).toFixed(0)} kt`;
 
 if (!EI_VIDEOTA) {
-  const syote = ['-y', '-framerate', String(FPS), '-i', join(KEHYSKANSIO, 'kehys-%05d.png')];
+  /*
+   * Kuvataajuus on MURTOLUKU (kehykset / kierroksen kesto): vain siten
+   * videon kesto on tasan kierroksen kesto ja looppi osuu kohdalleen.
+   */
+  const syote = ['-y', '-framerate', TAAJUUS.toFixed(6),
+    '-i', join(KEHYSKANSIO, 'kehys-%05d.png')];
   aja([...syote, '-c:v', 'libvpx-vp9', '-crf', '40', '-b:v', '0', '-row-mt', '1',
     '-pix_fmt', 'yuv420p', '-an', join(ULOS, ETUSIVUPALLO_TIEDOSTOT.webm)]);
   aja([...syote, '-c:v', 'libx264', '-crf', '30', '-preset', 'slow', '-profile:v', 'main',

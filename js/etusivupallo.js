@@ -12,9 +12,18 @@
  * kartan ulkopuolelle pienellä, niin että ei jää etusivun tekstin
  * päälle. kone jatkaa automaattisesti lentoa uuteen kohteeseen
  * pysähtymättä, muuttaa vain hieman suuntaa."*
+ *
+ * TÄSMENNYS 5.9.2026 klo 21.30, sanatarkasti: *"pallo saisi pyöriä koko
+ * etusivun alalla. isoisän kuva saisi olla isompi ja vaihtua aina
+ * samaan paikkaan."*
+ *
+ * TÄSMENNYS 5.9.2026 klo 21.45, sanatarkasti: *"animaatio pitää mennä
+ * koko maapallon ympäri niin että se voi loopata. eli pysähtyy
+ * lontooseen ja punainen viiva ottaa kiinni lopuksi."*
+ *
  * (Raamattu: PELAAJAN LAUTAKYTKIN, VANHIN MAAILMANKUVA -LINSSI,
  * ETUSIVUN PALLO, kohta 3; docs/moduulit/karttapallo.md luku 0 kohta 5
- * ja luku 7 vaihe 5.)
+ * ja luku 10.3.)
  *
  * ── MIKÄ ON ESIRENDERÖITY, MIKÄ ELÄÄ ───────────────────────────────
  *
@@ -35,6 +44,31 @@
  * Luettelo on totuus: video on poltettu niillä koordinaateilla, jotka
  * siinä lukevat.
  *
+ * ── KIERROS ON TÄSMÄLLEEN 360° (5.9.2026 ilta) ─────────────────────
+ *
+ * Reitti on Foggin oma maailmanympärimatka Lontoosta itään takaisin
+ * Lontooseen, ja pituusasteet lasketaan JATKUVINA: viimeisen pisteen
+ * pituusaste on tasan lähtöpisteen + 360°. Kamera on siksi jaksollinen
+ * (koneenTila kelaa sauman yli, kameranNakyma silottaa sen läpi), joten
+ * kierroksen viimeinen kehys on sama kuin ensimmäinen ja video looppaa
+ * ilman saumaa — työkalu ei enää polta häivytystä videoon.
+ *
+ * Kierroksen lopussa kone PYSÄHTYY LONTOOSEEN (LOPPU_PITO_S:n
+ * mittainen jakso ilman matkaa), jolloin punainen viiva ehtii sulkea
+ * ympyrän: viivan kärki on koneen kohdalla ja viivan alkupää samassa
+ * pisteessä. Vasta sen jälkeen SVG-kerros (viiva + kone) häivytetään
+ * pehmeästi pois HAIVYTYS_S:n aikana ja piirto alkaa loopin alusta
+ * tyhjältä (Raamattu: KAIKKI LIIKE ANIMOIDAAN PEHMEASTI).
+ *
+ * ── KERROS ON KOKO ETUSIVUN KOKOINEN ────────────────────────────────
+ *
+ * Kerros asuu KOKO avauspaneelin (.intro) taustalla eikä enää pelkässä
+ * ylälohkossa, ja video rajataan `object-fit: cover` -tavalla (SVG
+ * `preserveAspectRatio="xMidYMid slice"`). Sama muunnos molemmille
+ * tulee yhdestä funktiosta (kerroksenSovitus + videostaRuudulle),
+ * joten koneen ruutupiste osuu videon pallolle myös silloin, kun
+ * kerros on paljon leveämpi tai korkeampi kuin neliömäinen video.
+ *
  * ── VARAPOLUT ──────────────────────────────────────────────────────
  *
  *   pallolauta     → PÄÄLLÄ ilman lippua (aalto 1D, omistaja 5.9.2026:
@@ -45,7 +79,7 @@
  *                    (poistuu aallossa 3)
  *   ei verkkoa     → luettelo tai video ei lataudu → kerros puretaan ja
  *                    etusivu jää PELKÄKSI PAPERIKSI: tasokarttaa ei
- *                    herätetä pallolaudalla, joten ylälohkossa on
+ *                    herätetä pallolaudalla, joten paneelissa on
  *                    pergamentti ja julisteotsikko, ei koskaan tyhjä ruutu
  *   dist/          → dynaaminen tuonti kaatuu js/ui.js:ssä (kuten
  *                    linsseillä ja pallolaudalla) → tasokartta herätetään
@@ -81,8 +115,14 @@ export {
  * Videosarjan versio = kansio ämpärissä. Työkalu kirjoittaa saman
  * version luetteloon, ja kerros kieltäytyy, jos versiot eivät täsmää:
  * väärällä videolla kone lentäisi väärässä paikassa.
+ *
+ * 2026-09-05c = ensimmäinen TÄYSI KIERROS (360°, saumaton looppi).
+ * Video on poltettava uudelleen työnkululla tee-etusivupallo ennen kuin
+ * kerros näkyy — vanha 2026-09-05b hylätään versiotarkistuksessa, ja
+ * siihen asti etusivu on pelkkää pergamenttia julisteotsikon kanssa
+ * (sama varapolku kuin verkkovialla).
  */
-export const ETUSIVUPALLO_VERSIO = '2026-09-05b';
+export const ETUSIVUPALLO_VERSIO = '2026-09-05c';
 export const ETUSIVUPALLO_JUURI = `${PEILI_JUURI}julisteet/etusivu/${ETUSIVUPALLO_VERSIO}/`;
 export const ETUSIVUPALLO_LUETTELO = `${ETUSIVUPALLO_JUURI}etusivu.json`;
 /**
@@ -99,14 +139,22 @@ export const ETUSIVUPALLO_TIEDOSTOT = {
 /* ==================== REITTI JA KAMERA ============================ */
 
 /*
- * REITTI ON ISOISÄN 1873 (docs/tarina.md): Lontoosta itään kohti
- * Aasiaa. Tunnukset ovat pelin omat kaupunkitunnukset
- * (js/packs/maailmankartta.js) — Bombay on pelissä 'mumbai' ja
- * Jokohaman satama 'tokio', muut ovat nimensä näköisiä.
+ * REITTI ON FOGGIN KIERROS (docs/tarina.md; omistaja 5.9.2026 ilta:
+ * *"animaatio pitää mennä koko maapallon ympäri niin että se voi
+ * loopata"*): Lontoosta itään Suezin, Intian, Kiinan, Tyynenmeren ja
+ * Atlantin yli takaisin Lontooseen. Tunnukset ovat pelin omat
+ * kaupunkitunnukset (js/packs/maailmankartta.js) — Bombay on pelissä
+ * 'mumbai', Kalkutta 'kolkata', Jokohaman satama 'tokio' ja Suezin pää
+ * 'kairo'; muut ovat nimensä näköisiä. Lontoo on listassa kahdesti,
+ * lähtönä ja paluuna, ja juuri se tekee kierroksesta tasan 360°.
  */
 export const ETUSIVUN_REITTI = [
-  'lontoo', 'pariisi', 'wien', 'istanbul', 'kairo', 'mumbai', 'singapore', 'hongkong', 'tokio',
+  'lontoo', 'pariisi', 'kairo', 'mumbai', 'kolkata',
+  'singapore', 'hongkong', 'tokio', 'sanfrancisco', 'newyork', 'lontoo',
 ];
+
+/** Täysi kierros pituusasteina — saumattoman loopin ehto. */
+export const KIERROKSEN_ASTEET = 360;
 
 /**
  * Kamera: korkeus pallon säteinä (Globe.gl pointOfView), pystykulma
@@ -125,10 +173,21 @@ export const ETUSIVUN_KAMERA = {
   silotusS: 3.4,
 };
 
-/** Jakson kesto: pohja + matka asteina. Antaa noin 40 s kierroksen. */
-export const JAKSON_POHJA_S = 1.2;
-export const JAKSON_ASTE_S = 0.2;
-/** Kierroksen sauman häivytys (s): video häipyy paperiin ja takaisin. */
+/**
+ * Jakson kesto: pohja + matka asteina. Koko kierros (kymmenen jaksoa,
+ * 322° kaarta) ja Lontoon pysähdys antavat noin 50 s kierroksen —
+ * omistajan ehto oli, ettei koko kierros ole liian nopea.
+ */
+export const JAKSON_POHJA_S = 1.0;
+export const JAKSON_ASTE_S = 0.115;
+/**
+ * KONE PYSÄHTYY LONTOOSEEN kierroksen lopuksi (omistaja 5.9.2026 ilta:
+ * *"pysähtyy lontooseen ja punainen viiva ottaa kiinni lopuksi"*).
+ * Jakso ilman matkaa: viiva on silloin sulkenut ympyrän, ja pidon
+ * viimeinen HAIVYTYS_S häivyttää viivan pois ennen loopin alkua.
+ */
+export const LOPPU_PITO_S = 2.6;
+/** Viivan ja koneen häivytys kierroksen saumassa (s). Video ei häivy. */
 export const HAIVYTYS_S = 1.1;
 /** Jäljen näytteenotto asteina (isoympyrää pitkin). */
 export const JALJEN_ASKEL_ASTE = 1.5;
@@ -194,7 +253,8 @@ export function suurympyra(a, b, u) {
  * Reitin kaupungit asteina pelin omasta paketista: lauta (x, y) on
  * ainoa paikkatotuus (karttapallo.md luku 1), joten asteet lasketaan
  * js/fokusmitat.js laudaltaAsteiksi-funktiolla eikä talleteta mihinkään.
- * Pituusasteet jatkuvina, jotta reitti kulkee idän suuntaan.
+ * Pituusasteet jatkuvina, jotta reitti kulkee idän suuntaan — Lontoo
+ * listan lopussa saa siis lähtöarvonsa + 360°.
  */
 export function reitinPisteet(pack, tunnukset = ETUSIVUN_REITTI) {
   const kaupungit = new Map((pack?.cities ?? []).map((c) => [c.id, c]));
@@ -205,7 +265,17 @@ export function reitinPisteet(pack, tunnukset = ETUSIVUN_REITTI) {
     const p = laudaltaAsteiksi(pack.id, c.x, c.y);
     if (!p) continue;
     const edellinen = ulos[ulos.length - 1];
-    const lon = edellinen ? edellinen.lon + kaariAste(p.lon - edellinen.lon) : p.lon;
+    /*
+     * SAMA KAUPUNKI PERÄKKÄIN ON KIERROS, EI PAIKALLAAN OLOA: paluu
+     * Lontooseen on aina idän kautta, joten nollaeron tilalle tulee
+     * täysi kierros. Ilman tätä reitti päättyisi lähtöpisteeseen ja
+     * kamera jäisi paikalleen.
+     */
+    let lon = p.lon;
+    if (edellinen) {
+      const ero = kaariAste(p.lon - edellinen.lon);
+      lon = edellinen.lon + (Math.abs(ero) < 1e-9 ? KIERROKSEN_ASTEET : ero);
+    }
     ulos.push({ id, nimi: c.name, lat: p.lat, lon });
   }
   return ulos;
@@ -215,9 +285,10 @@ export function reitinPisteet(pack, tunnukset = ETUSIVUN_REITTI) {
  * Reitin jaksot ja koko kierroksen kesto. Jakson kesto on suhteessa
  * matkaan, joten kone lentää tasaista vauhtia eikä pysähdy kaupunkiin
  * (omistaja: *"kone jatkaa automaattisesti lentoa uuteen kohteeseen
- * pysähtymättä"*).
+ * pysähtymättä"*) — paitsi VIIMEISENÄ Lontoossa, jonne se jää
+ * odottamaan viivan sulkeutumista (omistaja 5.9.2026 ilta).
  */
-export function reitinJaksot(pisteet) {
+export function reitinJaksot(pisteet, pito = LOPPU_PITO_S) {
   const jaksot = [];
   let alku = 0;
   for (let i = 0; i + 1 < pisteet.length; i++) {
@@ -225,6 +296,13 @@ export function reitinJaksot(pisteet) {
     const kesto = JAKSON_POHJA_S + matka * JAKSON_ASTE_S;
     jaksot.push({ a: pisteet[i], b: pisteet[i + 1], matka, alku, kesto });
     alku += kesto;
+  }
+  if (pito > 0 && jaksot.length) {
+    const maali = pisteet[pisteet.length - 1];
+    jaksot.push({
+      a: maali, b: maali, matka: 0, alku, kesto: pito, pito: true,
+    });
+    alku += pito;
   }
   return { jaksot, kesto: alku };
 }
@@ -235,17 +313,30 @@ export function teeReitti(pisteet) {
   return { pisteet, jaksot, kesto };
 }
 
-/** Koneen paikka hetkellä t (s). Palauttaa myös jakson ja osuuden. */
+/**
+ * Koneen paikka hetkellä t (s). Palauttaa myös jakson ja osuuden.
+ *
+ * JAKSOLLINEN: t saa olla kierroksen ulkopuolella, jolloin pituusaste
+ * jatkuu 360° kierrosta kohti. Kameran silotus (kameranNakyma) kurkistaa
+ * sauman yli molempiin suuntiin, ja juuri tämä tekee kamerasta
+ * jaksollisen — ilman sitä videon ensimmäinen ja viimeinen kehys eivät
+ * olisi samat eikä looppi olisi saumaton.
+ */
 export function koneenTila(reitti, t) {
   const jaksot = reitti.jaksot;
-  if (!jaksot.length) return { lat: 0, lon: 0, jakso: 0, osuus: 0 };
-  const aika = Math.min(Math.max(t, 0), reitti.kesto);
+  if (!jaksot.length || !(reitti.kesto > 0)) {
+    return { lat: 0, lon: 0, jakso: 0, osuus: 0 };
+  }
+  const kierros = Math.floor(t / reitti.kesto);
+  const aika = t - kierros * reitti.kesto;
   let i = jaksot.length - 1;
   while (i > 0 && aika < jaksot[i].alku) i -= 1;
   const j = jaksot[i];
-  const osuus = Math.min(1, Math.max(0, (aika - j.alku) / j.kesto));
+  const osuus = j.kesto > 0 ? Math.min(1, Math.max(0, (aika - j.alku) / j.kesto)) : 1;
   const p = suurympyra(j.a, j.b, osuus);
-  return { lat: p.lat, lon: p.lon, jakso: i, osuus };
+  return {
+    lat: p.lat, lon: p.lon + kierros * KIERROKSEN_ASTEET, jakso: i, osuus,
+  };
 }
 
 /**
@@ -273,7 +364,7 @@ export function kameranNakyma(reitti, t, kamera = ETUSIVUN_KAMERA) {
 }
 
 /**
- * Pallon pinnan piste ruudulle. Sama perspektiivikamera kuin
+ * Pallon pinnan piste VIDEON pikseleiksi. Sama perspektiivikamera kuin
  * Globe.gl:llä: kamera etäisyydellä D = 1 + korkeus pallon säteinä,
  * pystykulma fov, kuvan korkeus = kankaan korkeus.
  *
@@ -299,15 +390,66 @@ export function pallonPiste(paikka, kamera, mitat) {
   return { x, y, nakyy: piste3(p, c) >= 1 / D };
 }
 
+/* ==================== SOVITUS: VIDEO JA SVG SAMOIN ================ */
+
+/*
+ * KOKO ETUSIVUN ALA (omistaja 5.9.2026 klo 21.30: *"pallo saisi pyöriä
+ * koko etusivun alalla"*). Kerros on paneelin kokoinen, video on
+ * neliö — joten video täyttää alan `cover`-tavalla ja ylimenevät reunat
+ * rajautuvat pois. SVG saa saman rajauksen sanaparilla
+ * `preserveAspectRatio="xMidYMid slice"`, joka on täsmälleen sama
+ * muunnos kuin CSS:n `object-fit: cover` oletusasemassa 50 % 50 %.
+ *
+ * Muunnos on YHDESSÄ funktiossa, jotta kone ja punainen viiva osuvat
+ * videon pallolle myös rajatussa näkymässä: SVG hoitaa piirron, ja sama
+ * laskenta on saatavilla JS:stä (kerroksenSovitus + videostaRuudulle,
+ * kahvan koneRuudulla), jotta savuke ja testit voivat tarkistaa osuman
+ * ilman selaimen SVG-moottoria.
+ */
+export const SOVITUS_TAPA = 'cover';
+/** CSS:n object-fit ↔ SVG:n preserveAspectRatio -parit. */
+export const SVG_SOVITUS = { cover: 'xMidYMid slice', contain: 'xMidYMid meet' };
+
+/**
+ * Videon (leveys × korkeus) sovitus kotelon (leveys × korkeus) sisään.
+ * Palauttaa skaalan ja keskityssiirtymän kotelon pikseleissä.
+ */
+export function kerroksenSovitus(mitat, kotelo, tapa = SOVITUS_TAPA) {
+  const lev = mitat?.leveys > 0 ? mitat.leveys : 1;
+  const kork = mitat?.korkeus > 0 ? mitat.korkeus : 1;
+  const kw = Math.max(0, kotelo?.leveys ?? 0);
+  const kh = Math.max(0, kotelo?.korkeus ?? 0);
+  const skaala = tapa === 'cover'
+    ? Math.max(kw / lev, kh / kork)
+    : Math.min(kw / lev, kh / kork);
+  return {
+    tapa,
+    skaala,
+    siirtoX: (kw - lev * skaala) / 2,
+    siirtoY: (kh - kork * skaala) / 2,
+  };
+}
+
+/** Videon pikselipiste kerroksen pikseleiksi (sama muunnos kuin SVG:llä). */
+export function videostaRuudulle(piste, sovitus) {
+  return {
+    x: sovitus.siirtoX + piste.x * sovitus.skaala,
+    y: sovitus.siirtoY + piste.y * sovitus.skaala,
+    nakyy: piste.nakyy,
+  };
+}
+
 /**
  * Lennetty jälki näytteinä hetkeen t asti (isoympyrää pitkin, noin
- * JALJEN_ASKEL_ASTE:n välein). Viimeinen näyte on kone itse.
+ * JALJEN_ASKEL_ASTE:n välein). Viimeinen näyte on kone itse — Lontoon
+ * pysähdyksessä se on sama piste kuin jäljen alku, eli ympyrä sulkeutuu.
  */
 export function jaljenPisteet(reitti, t, askel = JALJEN_ASKEL_ASTE) {
   const kone = koneenTila(reitti, t);
   const ulos = [];
   for (let i = 0; i <= kone.jakso; i++) {
     const j = reitti.jaksot[i];
+    if (!j || !(j.matka > 0)) continue; // Lontoon pysähdys ei piirrä uutta jälkeä
     const loppu = i === kone.jakso ? kone.osuus : 1;
     const naytteita = Math.max(1, Math.ceil((j.matka * loppu) / askel));
     for (let k = 0; k <= naytteita; k++) {
@@ -321,7 +463,7 @@ export function jaljenPisteet(reitti, t, askel = JALJEN_ASKEL_ASTE) {
 /** Monesko kaupunki on saavutettu hetkeen t mennessä (0 = ei yhtään). */
 export function saapumisia(reitti, t) {
   let n = 0;
-  for (const j of reitti.jaksot) if (t >= j.alku + j.kesto) n += 1;
+  for (const j of reitti.jaksot) if (!j.pito && t >= j.alku + j.kesto) n += 1;
   return n;
 }
 
@@ -344,78 +486,6 @@ export function saapumisenKuva(nro, kierto = ETUSIVUN_KUVAKIERTO) {
   return { avain, kuva: ISOISAN_VALOKUVAT[avain] };
 }
 
-/*
- * KUVA KARTAN ULKOPUOLELLE, EI TEKSTIN PÄÄLLE (omistaja sanatarkasti).
- * Ehdokaspaikat ovat pallolohkon neljä nurkkaa; valitaan se, joka
- * leikkaa vähiten avaustekstin laatikoita (juliste, palsta) — ja
- * tasapelissä eri puoli kuin edellinen kuva, jotta kuvat vaihtelevat
- * laidasta laitaan. Puhdas funktio: testi ajaa tämän ilman selainta.
- */
-export const KUVAPAIKAT = ['vasen', 'oikea'];
-/** Pystyhaun askel kuvapaikkaa etsittäessä (px). */
-export const KUVAHAUN_ASKEL = 8;
-
-function leikkaus(a, b) {
-  const w = Math.min(a.x + a.leveys, b.x + b.leveys) - Math.max(a.x, b.x);
-  const h = Math.min(a.y + a.korkeus, b.y + b.korkeus) - Math.max(a.y, b.y);
-  return w > 0 && h > 0 ? w * h : 0;
-}
-
-/**
- * Kuva PIENENEE, kunnes se mahtuu vapaaseen nurkkaan. Puhelimella
- * julisteotsikko täyttää lohkon keskiosan, joten täysikokoinen kortti
- * leikkaisi sitä joka nurkassa — omistajan ehto on, ettei kuva jää
- * tekstin päälle, ja "pienellä" on omistajan oma sana.
- */
-export const KUVAN_KUTISTUS = [1, 0.86, 0.74, 0.62, 0.52];
-
-/**
- * Kuvan paikka ja koko: { paikka, x, y, leveys, korkeus, leikkaus }.
- *
- * Kotelo on KOKO avausnäkymä (.intro), ei pelkkä pallolohko: puhelimella
- * julisteotsikko täyttää lohkon keskiosan, ja ainoa vapaa kaista on
- * pallon alalaidan ja avaustekstin arkin välissä. Siksi kuva haetaan
- * laidoilta pystysuunnassa skannaten sen sijaan että se lyötäisiin
- * nurkkaan: ensin täydellä koolla, sitten kutistaen. Esteet ovat
- * laatikoita kotelon koordinaateissa (julisteotsikko, avaustekstin
- * palsta), ja `toivottuY` vetää kuvan pallon alalaitaan, jotta se on
- * kartan vieressä eikä satunnaisessa kohdassa.
- */
-export function valitseKuvapaikka(kotelo, koko, esteet = [], edellinen = null, reunus = 6) {
-  const toivottu = Number.isFinite(kotelo.toivottuY)
-    ? kotelo.toivottuY : kotelo.korkeus - koko.korkeus - reunus;
-  let paras = null;
-  for (const kutistus of KUVAN_KUTISTUS) {
-    const mitta = {
-      leveys: Math.round(koko.leveys * kutistus),
-      korkeus: Math.round(koko.korkeus * kutistus),
-    };
-    const ylin = kotelo.korkeus - mitta.korkeus - reunus;
-    if (ylin < reunus) continue;
-    for (const paikka of KUVAPAIKAT) {
-      const x = paikka === 'vasen' ? reunus : kotelo.leveys - mitta.leveys - reunus;
-      for (let y = reunus; y <= ylin; y += KUVAHAUN_ASKEL) {
-        const laatikko = {
-          x, y, leveys: mitta.leveys, korkeus: mitta.korkeus,
-        };
-        const summa = esteet.reduce((s, e) => s + leikkaus(laatikko, e), 0);
-        const vaihtaaPuolta = !edellinen || paikka !== edellinen;
-        // Leikkaus ratkaisee ensin, sitten läheisyys toivottuun kohtaan
-        // ja viimeisenä puolen vaihto (kuvat vuorottelevat laidasta laitaan).
-        const pisteet = summa * 1000 + Math.abs(y - toivottu) + (vaihtaaPuolta ? 0 : 40);
-        if (!paras || pisteet < paras.pisteet - 1e-9) {
-          paras = {
-            paikka, x, y, leikkaus: summa, pisteet, ...mitta,
-          };
-        }
-      }
-    }
-    // Vapaa kaista löytyi tällä koolla — ei kutisteta turhaan.
-    if (paras && paras.leikkaus <= 0) break;
-  }
-  return paras;
-}
-
 /* ==================== KERROS ETUSIVULLE =========================== */
 
 /** Koneen piirros — sama runko kuin aloituslennolla (js/ui.js). */
@@ -423,12 +493,15 @@ const KONEEN_POLKU = 'M14,0 L-6,0 M-10,0 L-14,0 M2,0 L-8,-9 L-4,-9 L6,0 L-4,9 L-
   + 'M-11,0 L-15,-5 L-13,-5 L-9,0 L-13,5 L-15,5 z';
 /** Koneen koko videon pikseleinä (skaalautuu kerroksen mukana). */
 const KONEEN_SKAALA = 1.15;
-/** Kuvan leveys kotelon lyhyemmästä sivusta. */
-const KUVAN_OSUUS = 0.26;
-const KUVAN_LEVEYS_MIN = 66;
-const KUVAN_LEVEYS_MAX = 116;
-/** Kuvan vaihdon häivytys (ms): vanha pois, uusi tilalle. */
-const KUVAN_VAIHTO_MS = 360;
+/**
+ * Kuvan ristihäivytyksen kesto (ms) — sama luku kuin css/styles.css:n
+ * .etusivupallo-kuva-siirtymässä. Kaksi korttia päällekkäin: väistyvä
+ * häipyy samalla kun tuleva kirkastuu (Raamattu: KAIKKI LIIKE
+ * ANIMOIDAAN PEHMEASTI).
+ */
+export const KUVAN_VAIHTO_MS = 620;
+/** Kortin vähimmäisväli avaustekstin ja otsikon laatikoihin (px). */
+const KUVAN_VARA = 3;
 
 const svgEl = (nimi, attrit = {}, vanhempi = null) => {
   const el = document.createElementNS('http://www.w3.org/2000/svg', nimi);
@@ -471,7 +544,6 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     haku = globalThis.fetch?.bind(globalThis),
     win = globalThis,
     vahennettyLiike = liikeVahennetty(win),
-    esteet = () => [],
   } = asetukset;
   const luettelo = await lueLuettelo(haku);
   if (!luettelo || !kotelo?.isConnected) return null;
@@ -486,10 +558,10 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
   juuri.setAttribute('aria-hidden', 'true');
 
   /*
-   * Pallo: video tekstin TAAKSE. Sama rajaus kuin SVG:llä
-   * (preserveAspectRatio="xMidYMid meet" ≡ object-fit: contain), joten
+   * Pallo: video koko paneelin taakse. Sama rajaus kuin SVG:llä
+   * (object-fit: cover ≡ preserveAspectRatio="xMidYMid slice"), joten
    * koneen ruutupiste osuu videon pikseliin ilman omaa
-   * sovitusmatematiikkaa.
+   * sovitusmatematiikkaa piirrossa.
    */
   const video = document.createElement('video');
   video.className = 'etusivupallo-video';
@@ -523,7 +595,7 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
   const svg = svgEl('svg', {
     class: 'etusivupallo-reitti',
     viewBox: `0 0 ${mitat.leveys} ${mitat.korkeus}`,
-    preserveAspectRatio: 'xMidYMid meet',
+    preserveAspectRatio: SVG_SOVITUS[SOVITUS_TAPA],
   }, juuri);
   const viiva = svgEl('path', { class: 'etusivupallo-viiva', d: '' }, svg);
   const kone = svgEl('g', { class: 'etusivupallo-kone' }, svg);
@@ -532,95 +604,131 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
   kotelo.insertBefore(juuri, kotelo.firstChild);
 
   /*
-   * Isoisän kortti asuu KOKO avausnäkymässä eikä pallolohkossa: ainoa
-   * vapaa kaista puhelimella on pallon alalaidan ja avaustekstin arkin
-   * välissä, ja lohkon oma overflow leikkaisi kortin siitä poikki.
+   * ISOISÄN KORTTI: KAKSI KORTTIA SAMASSA PAIKASSA (omistaja 5.9.2026
+   * klo 21.30: *"isoisän kuva saisi olla isompi ja vaihtua aina samaan
+   * paikkaan"*). Paikan ja koon antaa yksin css/styles.css
+   * (.etusivupallo-kuva) — esteväistöä ei enää ole, koska paikka on
+   * kiinteä. Kortteja on kaksi päällekkäin, jotta vaihto on aito
+   * ristihäivytys eikä välähdys tyhjään.
    */
   const paneeli = kotelo.closest?.('.intro') ?? kotelo;
-  const kuvakortti = document.createElement('figure');
-  kuvakortti.className = 'etusivupallo-kuva';
-  const kuvaEl = document.createElement('img');
-  kuvaEl.className = 'isoisa-rajattu';
-  kuvaEl.decoding = 'async';
-  kuvaEl.draggable = false;
-  const lappu = document.createElement('figcaption');
-  kuvakortti.append(kuvaEl, lappu);
-  paneeli.appendChild(kuvakortti);
+  const kortit = [0, 1].map(() => {
+    const kortti = document.createElement('figure');
+    kortti.className = 'etusivupallo-kuva';
+    kortti.setAttribute('aria-hidden', 'true');
+    const kuvaEl = document.createElement('img');
+    kuvaEl.className = 'isoisa-rajattu';
+    kuvaEl.decoding = 'async';
+    kuvaEl.draggable = false;
+    kuvaEl.alt = '';
+    const lappu = document.createElement('figcaption');
+    kortti.append(kuvaEl, lappu);
+    paneeli.appendChild(kortti);
+    return { kortti, kuvaEl, lappu };
+  });
 
   /* ---------- piirto ---------- */
 
   let purettu = false;
   let kehys = 0;
   let edellinenKuva = 0;
-  let edellinenPaikka = null;
+  let vuoro = 0;
   let edellinenAika = 0;
+  let suuntaAste = 0;
 
-  const kuvanKoko = () => {
-    const lyhyt = Math.min(juuri.clientWidth || 320, juuri.clientHeight || 320);
-    const leveys = Math.round(Math.min(KUVAN_LEVEYS_MAX,
-      Math.max(KUVAN_LEVEYS_MIN, lyhyt * KUVAN_OSUUS)));
-    // Kortti on hieman korkeampi kuin leveä (cabinet card) + kuvateksti.
-    return { leveys, korkeus: Math.round(leveys * 1.42) };
+  /** Kerroksen mitat nyt — sovitus lasketaan näistä (cover). */
+  const sovitusNyt = () => kerroksenSovitus(mitat, {
+    leveys: juuri.clientWidth, korkeus: juuri.clientHeight,
+  });
+
+  /** Koneen paikka KERROKSEN pikseleinä hetkellä t (savuke ja testit). */
+  const koneRuudulla = (t) => videostaRuudulle(
+    pallonPiste(koneenTila(reitti, t), kameranNakyma(reitti, t, kamera), mitat),
+    sovitusNyt(),
+  );
+
+  const piilotaKuvat = () => {
+    for (const k of kortit) k.kortti.classList.remove('nakyy');
   };
 
   /*
-   * Kortin paikka MITATAAN eikä arvata: kortin todellinen korkeus
-   * riippuu kuvan mittasuhteesta ja kuvatekstin riveistä, ja kallistus
-   * (css rotate) kasvattaa sen ulkolaatikkoa. Siksi sijoitus tehdään
-   * kortin omasta getBoundingClientRectistä (joka sisältää kallistuksen)
-   * ja korjataan kerran, jos kortti jouduttiin kutistamaan. Sama funktio
-   * ajetaan uudestaan, kun avaustekstin koko muuttuu (fitIntro säätää
-   * julisteotsikon kirjasinkokoa vielä ilmestymisen jälkeen).
+   * VARMISTUS, EI ESTEVÄISTÖÄ. Paikka tulee CSS:stä ja on kiinteä. Jos
+   * kortti kuitenkin jollain kirjasinkoolla leikkaisi julisteotsikkoa
+   * tai avaustekstiä, sitä siirretään pystysuunnassa lyhyintä tietä
+   * ulos — kerran asettelua kohti, sama luku molemmille korteille.
+   * Kuvan vaihtuminen ei siis liikuta korttia (omistaja 5.9.2026:
+   * *"vaihtua aina samaan paikkaan"*).
    */
-  const sijoitaKuva = () => {
-    if (purettu || !kuvakortti.isConnected || !juuri.isConnected) return;
-    const paneelinLaatikko = paneeli.getBoundingClientRect();
-    const oma = juuri.getBoundingClientRect();
-    if (!(paneelinLaatikko.width > 0) || !(paneelinLaatikko.height > 0)) return;
-    const tila = esteet(paneeli);
-    for (let kierros = 0; kierros < 2; kierros++) {
-      const r = kuvakortti.getBoundingClientRect();
-      if (!(r.width > 0) || !(r.height > 0)) return;
-      const paikka = valitseKuvapaikka({
-        leveys: paneelinLaatikko.width,
-        korkeus: paneelinLaatikko.height,
-        toivottuY: oma.bottom - paneelinLaatikko.top - r.height - 6,
-      }, { leveys: r.width, korkeus: r.height }, tila, edellinenPaikka);
-      if (!paikka) return;
-      // Kallistus levittää ulkolaatikkoa tasan kummallekin puolelle,
-      // joten asettelulaatikko siirretään puolikkaan verran sisään.
-      const lisaX = (r.width - kuvakortti.offsetWidth) / 2;
-      const lisaY = (r.height - kuvakortti.offsetHeight) / 2;
-      kuvakortti.style.left = `${Math.round(paikka.x + lisaX)}px`;
-      kuvakortti.style.top = `${Math.round(paikka.y + lisaY)}px`;
-      edellinenPaikka = paikka.paikka;
-      if (paikka.leveys >= r.width - 0.5) break;
-      // Kutistettiin: sama suhde asettelulaatikkoon ja mitataan uudestaan.
-      kuvakortti.style.width = `${Math.round(kuvakortti.offsetWidth * (paikka.leveys / r.width))}px`;
+  const varmistaPaikka = () => {
+    const el = kortit.find((k) => k.kortti.classList.contains('nakyy'))?.kortti;
+    if (purettu || !el?.isConnected) return;
+    /*
+     * NYKYINEN SIIRTO LUETAAN, EI NOLLATA: nollaus käynnistäisi
+     * muunnoksen siirtymän, ja heti perään mitattu ulkolaatikko
+     * kertoisi yhä vanhan arvon — kortti heiluisi edestakaisin.
+     */
+    const nyt = parseFloat(paneeli.style.getPropertyValue('--etusivupallo-kuva-siirto')) || 0;
+    const laatikko = el.getBoundingClientRect();
+    const r = { top: laatikko.top - nyt, bottom: laatikko.bottom - nyt, height: laatikko.height };
+    r.left = laatikko.left;
+    r.right = laatikko.right;
+    const p = paneeli.getBoundingClientRect();
+    if (!(r.height > 0) || !(p.height > 0)) return;
+    // Esteitä ovat vain ne, jotka ovat kortin kanssa samalla pystykaistalla.
+    const esteet = ['.intro-juliste', '.intro-palsta']
+      .map((v) => paneeli.querySelector(v)?.getBoundingClientRect())
+      .filter((e) => e && e.height > 0 && r.left < e.right && e.left < r.right)
+      .sort((a, b) => a.top - b.top);
+    /*
+     * Vapaat pystykaistat paneelin sisällä esteiden väliin. KUVAN_VARA
+     * pitää kortin irti tekstin laatikon reunasta: pyöristys ja
+     * kallistuksen levittämä ulkolaatikko veisivät muuten viimeisen
+     * pikselin päällekkäin.
+     */
+    const kaistat = [];
+    let ylin = p.top + KUVAN_VARA;
+    for (const e of esteet) {
+      if (e.top - KUVAN_VARA - ylin > 1) kaistat.push({ yla: ylin, ala: e.top - KUVAN_VARA });
+      ylin = Math.max(ylin, e.bottom + KUVAN_VARA);
     }
+    if (p.bottom - KUVAN_VARA - ylin > 1) kaistat.push({ yla: ylin, ala: p.bottom - KUVAN_VARA });
+    if (!kaistat.length) return;
+    // Se kaista, jossa kortin keskikohta on tai jota se on lähinnä.
+    const keski = r.top + r.height / 2;
+    const etaisyys = (k) => Math.max(k.yla - keski, keski - k.ala, 0);
+    const kaista = kaistat.reduce((a, b) => (etaisyys(b) < etaisyys(a) ? b : a));
+    const korkeus = kaista.ala - kaista.yla;
+    const haluttu = korkeus >= r.height
+      ? Math.min(Math.max(r.top, kaista.yla), kaista.ala - r.height)
+      : kaista.yla + (korkeus - r.height) / 2;
+    const siirto = Math.round(haluttu - r.top);
+    if (siirto !== nyt) paneeli.style.setProperty('--etusivupallo-kuva-siirto', `${siirto}px`);
   };
+  const asettelunMuutos = () => varmistaPaikka();
+  win.addEventListener?.('resize', asettelunMuutos);
 
   const naytaKuva = (nro) => {
     const valinta = saapumisenKuva(nro);
-    if (!valinta) return;
-    kuvakortti.classList.remove('nakyy');
-    win.setTimeout(() => {
-      if (purettu) return;
-      kuvaEl.src = valinta.kuva.osoite;
-      kuvaEl.alt = valinta.kuva.selite;
-      kuvaEl.style.cssText = rajausTyyli(valinta.kuva);
-      lappu.textContent = valokuvanKuvateksti(valinta.kuva);
-      kuvakortti.style.width = `${kuvanKoko().leveys}px`;
-      sijoitaKuva();
-      kuvakortti.classList.add('nakyy');
-      // Kuva latautuu vasta nyt: korkeus voi muuttua, joten paikka
-      // tarkistetaan kerran uudestaan, kun asettelu on asettunut.
-      win.setTimeout(sijoitaKuva, 900);
-    }, KUVAN_VAIHTO_MS);
+    if (!valinta || purettu) return;
+    const tuleva = kortit[vuoro % kortit.length];
+    const vaistyva = kortit[(vuoro + 1) % kortit.length];
+    vuoro += 1;
+    tuleva.kuvaEl.src = valinta.kuva.osoite;
+    tuleva.kuvaEl.alt = valinta.kuva.selite;
+    tuleva.kuvaEl.style.cssText = rajausTyyli(valinta.kuva);
+    tuleva.lappu.textContent = valokuvanKuvateksti(valinta.kuva);
+    /*
+     * Paikka mitataan ASETTUNEESTA kortista: ristihäivytyksen aikana
+     * muunnos on kesken, eikä ulkolaatikko kerro lopullista kohtaa.
+     * Siksi varmistus ajetaan ennen luokkien vaihtoa (edellinen kortti
+     * on paikallaan) ja uudestaan, kun häivytys on ohi.
+     */
+    varmistaPaikka();
+    // Ristihäivytys: tuleva kirkastuu samalla kun väistyvä häipyy.
+    tuleva.kortti.classList.add('nakyy');
+    vaistyva.kortti.classList.remove('nakyy');
+    win.setTimeout(varmistaPaikka, KUVAN_VAIHTO_MS + 320);
   };
-
-  const asettelunMuutos = () => { if (kuvakortti.classList.contains('nakyy')) sijoitaKuva(); };
-  win.addEventListener?.('resize', asettelunMuutos);
 
   const piirraHetki = (t) => {
     const nakyma = kameranNakyma(reitti, t, kamera);
@@ -635,19 +743,25 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     viiva.setAttribute('d', d.trim());
 
     const nyt = koneenTila(reitti, t);
-    const edella = koneenTila(reitti, Math.min(kesto, t + 0.12));
+    const edella = koneenTila(reitti, t + 0.12);
     const a = pallonPiste(nyt, nakyma, mitat);
     const b = pallonPiste(edella, nakyma, mitat);
-    const suunta = Math.atan2(b.y - a.y, b.x - a.x) * (180 / Math.PI);
+    /*
+     * Lontoon pysähdyksessä kone ei liiku, joten suuntaa ei lasketa
+     * nollavektorista: se jää siihen, mihin kone saapui.
+     */
+    const liike = Math.hypot(b.x - a.x, b.y - a.y);
+    if (liike > 0.01) suuntaAste = Math.atan2(b.y - a.y, b.x - a.x) * (180 / Math.PI);
     kone.setAttribute('transform',
-      `translate(${a.x.toFixed(1)} ${a.y.toFixed(1)}) rotate(${suunta.toFixed(1)}) `
-      + `scale(${KONEEN_SKAALA})`);
+      `translate(${a.x.toFixed(1)} ${a.y.toFixed(1)}) `
+      + `rotate(${suuntaAste.toFixed(1)}) scale(${KONEEN_SKAALA})`);
     kone.style.opacity = a.nakyy ? '1' : '0';
 
     /*
-     * Kierroksen sauma häivytetään samalla käyrällä, joka on poltettu
-     * videoon: kone ja viiva katoavat paperiin eivätkä hyppää, kun
-     * kamera palaa Tokiosta Lontooseen.
+     * KIERROKSEN SAUMA: video looppaa saumattomasti (kierros on tasan
+     * 360°), joten häivytys koskee vain SVG:tä — punainen viiva sulkee
+     * ympyrän Lontoossa, häipyy pehmeästi pois pidon lopussa ja alkaa
+     * kasvaa uudestaan tyhjästä loopin alettua.
      */
     const haivytys = Math.min(1, t / HAIVYTYS_S, (kesto - t) / HAIVYTYS_S);
     svg.style.opacity = Math.max(0, haivytys).toFixed(3);
@@ -656,7 +770,7 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     if (saapunut !== edellinenKuva) {
       edellinenKuva = saapunut;
       if (saapunut > 0) naytaKuva(saapunut);
-      else kuvakortti.classList.remove('nakyy');
+      else piilotaKuvat();
     }
   };
 
@@ -666,7 +780,7 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     if (t < edellinenAika) {
       // Kierros alkoi alusta: kuva häipyy pois videon sauman kanssa.
       edellinenKuva = 0;
-      kuvakortti.classList.remove('nakyy');
+      piilotaKuvat();
     }
     edellinenAika = t;
     piirraHetki(t);
@@ -691,7 +805,7 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     if (!valmis || purettu || !juuri.isConnected) {
       // Video ei latautunut → etusivu jää vanhaan karttaan.
       win.removeEventListener?.('resize', asettelunMuutos);
-      kuvakortti.remove();
+      for (const k of kortit) k.kortti.remove();
       juuri.remove();
       return null;
     }
@@ -713,6 +827,8 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     kamera,
     kesto,
     piirraHetki,
+    koneRuudulla,
+    sovitus: sovitusNyt,
     pura() {
       if (purettu) return;
       purettu = true;
@@ -721,7 +837,8 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
       video.removeAttribute('src');
       avaus?.classList.remove('intro-pallolla');
       win.removeEventListener?.('resize', asettelunMuutos);
-      kuvakortti.remove();
+      paneeli.style.removeProperty('--etusivupallo-kuva-siirto');
+      for (const k of kortit) k.kortti.remove();
       juuri.remove();
     },
   };
@@ -740,38 +857,16 @@ export function paivitaEtusivupallo(ui, nakyy) {
     return;
   }
   if (ui.etusivupallo || ui.etusivupalloAvautuu) return;
-  const kotelo = ui.introKartta;
+  /*
+   * KOTELO ON KOKO AVAUSPANEELI (omistaja 5.9.2026: *"pallo saisi
+   * pyöriä koko etusivun alalla"*) eikä enää ylälohko .intro-kartta:
+   * kerros menee paneelin ensimmäiseksi lapseksi, siis sumuverhon ja
+   * molempien lohkojen taakse.
+   */
+  const kotelo = ui.introEl ?? ui.introKartta?.closest?.('.intro') ?? null;
   if (!kotelo) return;
   ui.etusivupalloAvautuu = true;
-  void avaaEtusivupallo(kotelo, {
-    /*
-     * Avaustekstin laatikot ovat esteitä: isoisän kuva ei saa jäädä
-     * niiden päälle (omistaja: *"ei jää etusivun tekstin päälle"*).
-     */
-    esteet: (kehys) => {
-      const oma = kehys.getBoundingClientRect();
-      /*
-       * Myös arkin säätimet ovat esteitä (kaappaus 5.9.2026: kuva jäi
-       * "Laita äänet päälle" -rivin ja Aloita-napin päälle): napit,
-       * äänirivi, valinnat ja linkit koko avausnäkymästä.
-       */
-      const intro = kehys.closest?.('#intro') ?? ui.introKartta?.closest?.('#intro') ?? null;
-      const doc = kehys.ownerDocument ?? document;
-      // Aloita seikkailu -portti (js/ui.js renderStartGate) on avausnäkymän
-      // päällä oma kerroksensa: äänirivi, nappi ja linkki.
-      const saatimet = [
-        ...(intro ? intro.querySelectorAll('button, label, a, .intro-aanet, .intro-valinta') : []),
-        ...doc.querySelectorAll('.start-gate-keskus, .start-aanet, .start-btn, .start-linkki'),
-      ];
-      return [ui.introPalsta, ui.introOtsikko, ui.introText, ...saatimet]
-        .filter(Boolean)
-        .map((el) => el.getBoundingClientRect())
-        .filter((r) => r.width > 0 && r.height > 0)
-        .map((r) => ({
-          x: r.left - oma.left, y: r.top - oma.top, leveys: r.width, korkeus: r.height,
-        }));
-    },
-  }).then((pallo) => {
+  void avaaEtusivupallo(kotelo).then((pallo) => {
     ui.etusivupalloAvautuu = false;
     if (!pallo) return;
     if (ui.dead || ui.game?.phase !== 'pickstart' || !etusivupalloPaalla()) { pallo.pura(); return; }

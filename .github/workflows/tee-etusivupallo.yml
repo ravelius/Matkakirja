@@ -8,8 +8,16 @@ name: Tee etusivun pallo
 # pallolaatoilla sumennetun kuvasarjan, pakkaa sen kahdeksi videoksi
 # (VP9/WebM ja H.264/MP4) sekä yhdeksi pysäytyskuvaksi, ja vie ne
 # ämpäriin polkuun julisteet/etusivu/<versio>/ luettelon (etusivu.json)
-# kanssa. Peli osoittaa versioon js/etusivupallo.js:n
-# ETUSIVUPALLO_VERSIO-vakiolla — jos vaihdat versiota, vaihda molemmat.
+# kanssa. VERSIO LUETAAN js/etusivupallo.js:n ETUSIVUPALLO_VERSIO-vakiosta:
+# työkalu kirjoittaa polun tiedostoon avain.txt, jonka vientivaihe lukee —
+# tässä tiedostossa ei siis ole versionumeroa lainkaan.
+#
+# KIERROS ON 360° (omistaja 5.9.2026 ilta: "animaatio pitää mennä koko
+# maapallon ympäri niin että se voi loopata"): kehykset jaetaan tasan
+# kierroksen kestolle (noin 50 s) ja ffmpeg saa murtolukuisen taajuuden,
+# jolloin videon viimeisen kehyksen jälkeen tulee tasan ensimmäinen.
+# Oletuksella 15 fps kehyksiä on noin 744 — jos ajo uhkaa venyä, aja
+# fps 12 (noin 595 kehystä).
 #
 # Repoon ei viedä kuvia eikä videoita (CLAUDE.md).
 # Sama neljän salaisuuden R2-kaava kuin tee-pallotekstuuri.yml:ssä.
@@ -18,7 +26,7 @@ on:
   workflow_dispatch:
     inputs:
       fps:
-        description: 'Kuvataajuus (15 = sulava ja pieni; 12 pienentää, 24 kasvattaa)'
+        description: 'Kuvataajuus (15 = sulava; 12 pienentää kehysmäärää ja ajoa)'
         required: false
         type: string
         default: '15'
@@ -59,7 +67,7 @@ concurrency:
 jobs:
   tee:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 150
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
