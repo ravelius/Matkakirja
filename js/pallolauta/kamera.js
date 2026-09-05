@@ -215,8 +215,12 @@ export function luoPallokamera({
 
   // ELE KESKEYTTÄÄ (Raamattu, KAMERA-AJOT): sormi tai rulla koteloon
   // pysäyttää ajon siihen, mihin se ehti — pallo ei nykäise takaisin.
+  // Rulla KAAPPAUSVAIHEESSA: panorointi (js/pallo.js asennaPallonEleet)
+  // katkaisee wheelin kotelon kaappauksessa, joten kuplintaan jäänyt
+  // kuuntelija ei enää saisi tapahtumaa. Saman solmun kaappaajat ajetaan
+  // kaikki (stopPropagation koskee vain seuraavaa solmua).
   kotelo?.addEventListener('pointerdown', () => pysaytaKameraAjo());
-  kotelo?.addEventListener('wheel', () => pysaytaKameraAjo(), { passive: true });
+  kotelo?.addEventListener('wheel', () => pysaytaKameraAjo(), { passive: true, capture: true });
 
   /** Näkymän tila: keskipiste laudalla, näkyvä leveys, korkeus, asteet. */
   const kameranTila = () => {
