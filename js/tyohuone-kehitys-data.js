@@ -451,13 +451,15 @@ export const KAARI_PAKETIT = {
        * Trevi, ilta, juhla kaupungilla) … kuvakenttä vaihtuu"* — rivi
        * päivitetään heti, kun kuvaputken uusi kuva
        * (rooma-nico-feedback-r20260905-v1) on hyväksytty ja viety
-       * R2:een. Siihen asti kortilla on vanha kuva.
+       * R2:een. Fable 5.9.2026 ilta: kuvakenttä POISTETTU siihen asti —
+       * kortti ilman kuvaa on parempi kuin kortti, jossa on eri ihminen
+       * kuin repliikissä. Rivi palaa muodossa
+       * kuva: 'assets/kohtaamiset/kohtaaminen-rooma.jpg' tai R2-polkuna.
        */
-      kuva: 'assets/kohtaamiset/kohtaaminen-rooma.jpg',
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Rooma — sävelmä sivukadulta',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
        *
        * KOKO KAARI UUSIKSI (kuvaputken tarinaehdotus 5.9.2026, Fablen
        * päätös samana iltana klo 20:05 UTC: *"Rooma (pasunisti Nico,
@@ -567,16 +569,17 @@ export const KAARI_PAKETIT = {
        * Dafni): uusi otsikko ja aarreteksti ilman pöllöä; kuvakenttä
        * vaihtuu, kun kuva on hyväksytty."* Rivi päivitetään heti, kun
        * kuvaputken uusi kuva (ateena-dafni-…, pöllötön versio) on
-       * hyväksytty ja viety R2:een. Siihen asti kortilla on vanha kuva
-       * ja väärä henkilö — tämä on tiedostettu välitila, ei unohdus.
+       * hyväksytty ja viety R2:een. Fable 5.9.2026 ilta: kuvakenttä
+       * POISTETTU siihen asti — kortti ilman kuvaa on parempi kuin
+       * kortti, jossa on eri ihminen kuin repliikissä. Rivi palaa
+       * muodossa kuva: 'assets/kohtaamiset/kohtaaminen-ateena.jpg'.
        */
-      kuva: 'assets/kohtaamiset/kohtaaminen-ateena.jpg',
       otsikko: 'Ateena — kaksi mittaa samasta kivestä',
       // Omistajan palaute 11.8.2026: lyhennetty ja pöllön ele sekä
       // päiväkirjakehys kirkastettu; kohtaamisen lupaus konkreettinen.
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
        *
        * HENKILÖ VAIHTUI, SAAPUMINEN EI. Fablen päätös 5.9.2026 klo
        * 20:05 UTC rajaa muutoksen tarkasti: *"uusi otsikko ja
@@ -682,7 +685,7 @@ export const KAARI_PAKETIT = {
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Amsterdam — väärä kerros',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
        *
        * KOKO KAARI UUSIKSI (kuvaputken tarinaehdotus 5.9.2026, Fablen
        * päätös samana iltana klo 20:05 UTC: *"Amsterdam (Yara): kätkö on
@@ -875,7 +878,7 @@ export const KAARI_PAKETIT = {
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Granada — kouru jota ei ole kartassa',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
        *
        * HENKILÖ JA LÖYTÖPAIKKA VAIHTUIVAT (kuvaputken tarinaehdotus
        * 5.9.2026, Fablen päätös samana iltana klo 20:05 UTC: *"Granada
@@ -938,7 +941,7 @@ export const KAARI_PAKETIT = {
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Marseille — saari josta palataan tarinoissa',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
        *
        * VAIN KAANONIRIKE KORJATTU — HENKILÖ, KYSYMYS JA PAIKKA PYSYVÄT
        * (kuvaputken toimitus 5.9.2026 luokitteli Marseillen pelkäksi
@@ -1006,7 +1009,7 @@ export const KAARI_PAKETIT = {
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Varsova — eränumero varastokirjassa',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
        *
        * KAKSOISHENKILÖ PURETTU, KOKO KAARI UUSIKSI (kuvaputken
        * havainto 5.9.2026 ja Fablen päätös samana iltana klo 20:05
@@ -1143,7 +1146,7 @@ export const KAARI_PAKETIT = {
       mykistetyt: ['kohtaaminen', 'aarre'],
       otsikko: 'Alpit — laukku jota kukaan ei kaivannut',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
        *
        * ANSELM SÄILYY, KOHTAAMINEN VAIHTUU (kuvaputken tarinaehdotus
        * 5.9.2026, Fablen päätös klo 20:05 UTC: *"Alpit (Anselm ulos
@@ -1495,7 +1498,7 @@ export const KAARI_PAKETIT = {
         + 'Tunnistin ne heti — samalla merkillä isoisäni sulki '
         + 'kirjeensä.',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
        *
        * HENKILÖ VAIHTUI JA KAANONIRIKE POISTUI (kuvaputken
        * tarinaehdotus 5.9.2026, Fablen päätös samana iltana klo 20:05
@@ -1587,7 +1590,7 @@ export const KAARI_PAKETIT = {
        * vastausrivi ei esiinny missään ennen visaa näkyvässä kentässä.
        * SEURAUS SPOILERILISTAAN: fokusvirta-odessa.js:n kieltolistan K6
        * ei ole enää askelmien määrä vaan vapaasataman tullietu — ks.
-       * saman tiedoston LUONNOS-huomautus.
+       * saman tiedoston 5.9.2026-huomautus.
        *
        * FAKTAT: pelin oma tarkistettu aineisto (fokusvirran oppitunti,
        * jonka lähteet on nimetty siellä) ja kuvaputken faktantarkistus
@@ -1672,7 +1675,7 @@ export const KAARI_PAKETIT = {
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Pietari — yö väärällä rannalla',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
        *
        * KOKO KAARI UUSIKSI (kuvaputken tarinaehdotus 5.9.2026, Fablen
        * päätös klo 20:05 UTC: *"Hyväksytty sellaisenaan … Pietari
@@ -1713,7 +1716,7 @@ export const KAARI_PAKETIT = {
        * (js/packs/fokusvirta-pietari.js) ja kaupunkilehden nostossa
        * "Kaupunki rakennettiin suolle".
        */
-      saapuminen: 'Sillat nousivat keskiyöllä, ja minä jäin väärälle '
+      saapuminen: 'Silta avattiin keskiyöllä laivoille, ja minä jäin väärälle '
         + 'rannalle. Valoon ei tässä kaupungissa voi luottaa: se ei suostu '
         + 'hämärtymään eikä siis varoita mistään. Vietin yön rantakivellä '
         + 'ja kirjasin ohi lipuvat laivat, kaksikymmentäyksi kappaletta. '
@@ -1785,7 +1788,7 @@ export const KAARI_PAKETIT = {
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Tallinna — makea lääke',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
        *
        * KOKO KAARI UUSIKSI (kuvaputken tarinaehdotus 5.9.2026, Fablen
        * päätös klo 20:05 UTC: *"Hyväksytty sellaisenaan … Tallinna (opas
@@ -1978,7 +1981,7 @@ export const KAARI_PAKETIT = {
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Oslo — laiva mullan alla',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
        *
        * HENKILÖ VAIHTUI JA KAKSI KAANONIRIKETTÄ POISTUI (kuvaputken
        * tarinaehdotus 5.9.2026, Fablen päätös samana iltana klo 20:05
@@ -2075,7 +2078,7 @@ export const KAARI_PAKETIT = {
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Kööpenhamina — valot palavat kahdesti',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
        *
        * HENKILÖ, PAIKKA JA KYSYMYS VAIHTUIVAT (omistajan palaute
        * kuvaan: *"Vaihda henkilö ja paikka"*; Fablen päätös 5.9.2026
@@ -2193,7 +2196,7 @@ export const KAARI_PAKETIT = {
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Tromssa — yö jota ei tullut',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
        *
        * KOKO KAARI UUSIKSI (kuvaputken tarinaehdotus 5.9.2026, Fablen
        * päätös klo 20:05 UTC: *"Hyväksytty sellaisenaan … Tromssa
@@ -2265,7 +2268,7 @@ export const KAARI_PAKETIT = {
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Islanti — kello jota lähde ei lue',
       /*
-       * LUONNOS 5.9.2026, Fable tarkistaa.
+       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
        *
        * KOKO KAARI UUSIKSI (kuvaputken tarinaehdotus 5.9.2026, Fablen
        * päätös klo 20:05 UTC: *"Hyväksytty sellaisenaan … Islanti (opas

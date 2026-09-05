@@ -639,7 +639,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa.
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
    *
    * HAHMO VAIHDETTU: siltavahti Willem → muuttotyöntekijä Yara
    * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 20:05 UTC).
@@ -694,7 +694,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * KOHTAAMISPAIKKA SIIRRETTY 5.9.2026 (LUONNOS, Fable tarkistaa):
+   * KOHTAAMISPAIKKA SIIRRETTY 5.9.2026 (Fable tarkistanut 5.9.2026):
    * MAGERE BRUG → HERENGRACHTIN KANAVATALOT. Vanha piste oli
    * siltavahti Willemin työpaikka, ja Willem poistui kaaresta. Fablen
    * päätös klo 20:05 UTC: *"Fokusvirran kohtaamispiste siirtyy Magere

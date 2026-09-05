@@ -723,7 +723,7 @@ export const FOKUSVIRTA_PIETARI = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa.
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
    *
    * HAHMO VAIHDETTU: sillanhoitaja Dmitri → huoltoteknikko Matvei
    * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 20:05 UTC).
@@ -739,7 +739,7 @@ export const FOKUSVIRTA_PIETARI = {
    * laatalla (js/game.js kaariTilanne, js/packs/tarinakaari.js). Hahmo
    * on siis huoltoteknikko Matvei, eikä tämä paketti kosketa hänen omaa
    * repliikkiään eikä kysymystä millään tavalla — sama suhde kuin
-   * Ateenan Nikoksella, Sofian Nadialla ja Rooman Enzolla.
+   * Ateenan Dafnilla, Sofian Nadialla ja Rooman Nicolla.
    *
    * ALLA OLEVA on siis kortin OMA ESITTELYTEKSTI, ei kaanonia. Se on
    * kirjoitettu niin, ettei se kertaa Matvein omaa repliikkiä eikä

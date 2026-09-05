@@ -661,7 +661,7 @@ export const FOKUSVIRTA_KIOVA = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa. HENKILÖ VAIHTUI: portinvartija
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. HENKILÖ VAIHTUI: portinvartija
    * Oksana → näyttelymestari Taras (js/tyohuone-kehitys-data.js
    * KAARI_PAKETIT, id 'kiova'). Syy on kaaren omassa
    * kommenttilohkossa: Oksanan repliikki odotti suoraan sanoen

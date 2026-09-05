@@ -410,7 +410,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
    * KAARI_PAKETIT, kobenhavn). Visasääntö täyttyy — vastaus on
    * tekstissä, mutta kysymyksen sanamuoto ei toistu siinä sellaisenaan.
    *
-   * VIIMEINEN KAPPALE LISÄTTY 5.9.2026 (LUONNOS, Fable tarkistaa).
+   * VIIMEINEN KAPPALE LISÄTTY 5.9.2026 (Fable tarkistanut 5.9.2026).
    * Laattakysymys vaihtui Andersenin sadusta Tivolin puisen
    * vuoristoradan jarrumieheen, joten oppitunnin oli opetettava uusi
    * vastaus — sama ratkaisu kuin Lontoossa v1593 (*"oppituntiin lisätty
@@ -503,7 +503,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
    * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'kobenhavn'). Tämä
    * kortti ei kertaa henkilön omaa repliikkiä eikä paljasta vastausta.
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa. HENKILÖ JA PAIKKA VAIHTUIVAT:
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. HENKILÖ JA PAIKKA VAIHTUIVAT:
    * sadunkertoja Karen Nyhavnin laiturilla → karusellinhoitaja Freja
    * Tivolissa (omistajan kuvapalaute *"Vaihda henkilö ja paikka"*,
    * Fablen päätös 5.9.2026 klo 20:05 UTC). Suvussa periytynyt arkku ja

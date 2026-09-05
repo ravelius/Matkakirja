@@ -762,7 +762,7 @@ export const FOKUSVIRTA_OSLO = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa. HENKILÖ VAIHTUI: talonpoika
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. HENKILÖ VAIHTUI: talonpoika
    * Sigrid → maanviljelijä Oskar (js/tyohuone-kehitys-data.js
    * KAARI_PAKETIT, 'oslo'; kuvaputken tarinaehdotus 5.9.2026, Fablen
    * päätös samana iltana klo 20:05 UTC). Perustelu on kaaren omassa

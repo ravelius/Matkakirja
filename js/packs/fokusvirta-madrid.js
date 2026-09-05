@@ -453,7 +453,7 @@ export const FOKUSVIRTA_MADRID = {
    * kaariTarina). Tämä kortti EI kosketa kysymystä eikä kertaa Pilarin
    * omaa repliikkiä — sama suhde kuin Sofian Nadialla.
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa. KAKSOISHENKILÖ PURETTU:
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. KAKSOISHENKILÖ PURETTU:
    * js/packs/kohtaamiset.js antoi
    * Madridille aiemmin kirpputorikauppias Rosan, eli kaupungissa oli
    * kaksi eri kohtaamishenkilöä. Fablen päätös 5.9.2026 klo 20:05 UTC

@@ -831,7 +831,7 @@ export const FOKUSVIRTA_VARSOVA = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa. KAKSOISHENKILÖ PURETTU.
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. KAKSOISHENKILÖ PURETTU.
    * Zofia on nyt myös KAAREN henkilö: js/tyohuone-kehitys-data.js
    * KAARI_PAKETIT, id 'varsova' kertoo hänestä ja antaa kysymyksen,
    * jonka game.actionQuiz esittää laatalla (js/game.js kaariTarina).

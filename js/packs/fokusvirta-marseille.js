@@ -743,7 +743,7 @@ export const FOKUSVIRTA_MARSEILLE = {
    * virtaukset. Luonnos käyttää samaa hahmoa, koska kaupungilla on jo
    * hänet — uusi nimi tekisi kaupunkiin kaksi eri vartijaa.
    *
-   * KAANONIRIKE KORJATTU 5.9.2026 (LUONNOS, Fable tarkistaa). Kaaren
+   * KAANONIRIKE KORJATTU 5.9.2026 (Fable tarkistanut 5.9.2026). Kaaren
    * kohtaaminen sanoi ennen, että *"isäni isä souti isoisäsi saarelle ja
    * odotti häntä kaksi vuorokautta"*, ja aarre jatkoi samaa muistoa.
    * Horatiota ei tunnisteta missään (docs/isoisan-raamattu.md), joten

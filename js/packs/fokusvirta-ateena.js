@@ -363,7 +363,7 @@ export const FOKUSVIRTA_ATEENA = {
    * ennallaan laattamekaniikassa (game.actionQuiz), eikä tämä paketti
    * kosketa sitä.
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa. HENKILÖ VAIHTUI: vartija Nikos
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. HENKILÖ VAIHTUI: vartija Nikos
    * → marmorikonservaattori Dafni (js/tyohuone-kehitys-data.js
    * KAARI_PAKETIT, 'ateena'). Perustelu on kaaren omassa
    * kommenttilohkossa; tämä kortti seuraa perässä, jottei kaupungissa

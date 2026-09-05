@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1598, teksti: '14 kaarta uusiksi: Eurooppa eria A ja B' },
   { v: 1597, teksti: 'Isoisan 27 kuvaa etusivulle, matkalaukun aktivoi' },
   { v: 1596, teksti: 'Isoisan kuvapino, keksintojen tekstit, musiikki x2' },
   { v: 1595, teksti: 'Lyria-raidat peliin, ElevenLabsin musiikki pois' },

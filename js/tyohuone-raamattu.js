@@ -4089,7 +4089,7 @@ export const RAAMATTU = {
           + '(yhtenäinen tyyli). Repliikki, kysymys, aarreteksti — '
           + 'luetaan ääneen.',
         'Aarrejahti on pelin satua; kaikki tieto paikoista totta.',
-        'Nappi nimeää henkilön ("Tapaa Nikos"). Aloita peli -nappi '
+        'Nappi nimeää henkilön ("Tapaa Dafni"). Aloita peli -nappi '
           + 'erottaa luennan ja tehtävän — tiimalasi ei kulu puheen '
           + 'aikana.',
         'Epäonnistumisesta yksi uusinta; toisesta arkku jää kiinni. '

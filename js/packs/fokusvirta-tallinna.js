@@ -442,7 +442,7 @@ export const FOKUSVIRTA_TALLINNA = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa.
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
    *
    * HAHMO VAIHDETTU: tornimestari Kristjan → opas Eve (kuvaputken
    * tarinaehdotus 5.9.2026, Fablen päätös klo 20:05 UTC). Kristjanin

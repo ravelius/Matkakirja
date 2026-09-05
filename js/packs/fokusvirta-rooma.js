@@ -527,7 +527,7 @@ export const FOKUSVIRTA_ROOMA = {
    * esittää laatalla (js/game.js kaariTarina); tämä paketti ei kosketa
    * kysymystä millään tavalla.
    *
-   * LUONNOS 5.9.2026, Fable tarkistaa. HENKILÖ VAIHTUI:
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. HENKILÖ VAIHTUI:
    * suihkulähteenhoitaja Enzo → pasunisti Nico (kuvaputken
    * tarinaehdotus 5.9.2026, Fablen päätös samana iltana klo 20:05 UTC:
    * *"Rooma (pasunisti Nico, Trevi, ilta, juhla kaupungilla)"*). Isältä
