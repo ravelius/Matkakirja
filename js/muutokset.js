@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1559, teksti: 'Historian hetket: 29 uutta ja kaksi v4-paivitysta' },
   { v: 1558, teksti: 'Vendor-vienti: lisenssi tiedoston alusta' },
   { v: 1557, teksti: 'Vendor-vienti ja linjaus: StPageFlip ensin' },
   { v: 1556, teksti: 'Ihmeet: 16 loistoaikakuvaa omana aikanaan' },

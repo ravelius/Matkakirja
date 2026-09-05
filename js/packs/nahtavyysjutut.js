@@ -786,6 +786,29 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
+    // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
+    // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
+    'Muuri 1961': {
+      nosto: 'hetki-berliinin-muuri-1961',
+      teksti: 'Ilmavasaroiden ääni herättää Bernauer Straßen ennen aamunkoittoa. '
+        + 'On sunnuntai 13. elokuuta 1961, ja keskiyöllä Itä-Saksan poliisi, '
+        + 'armeija ja tehtaiden taisteluryhmät ovat alkaneet sulkea rajaa '
+        + 'Länsi-Berliiniin: katukiveys revitään, betonipylväät nostetaan '
+        + 'pystyyn, piikkilanka vedetään väliin 43 kilometrin matkalle kaupungin '
+        + 'halki. Kadulla, jolla talot ovat itää ja jalkakäytävä länttä, ihmiset '
+        + 'seisovat yöpuvuissaan ja katselevat. Kaksi kuukautta aiemmin Walter '
+        + 'Ulbricht oli sanonut lehdistötilaisuudessa, ettei kenelläkään ole '
+        + 'aikomusta rakentaa muuria; edellisenä iltana hän allekirjoitti käskyn '
+        + 'hallituksen vierastalossa Döllnseellä. Sulkemisen syy on '
+        + 'yksinkertainen: DDR:stä on lähtenyt vuoden 1949 jälkeen noin 3,5 '
+        + 'miljoonaa ihmistä, nuoria ja koulutettuja. Länsi ei tee mitään — '
+        + 'Kennedy saa tiedon huvijahdillaan vasta puoliltapäivin. Seuraavina '
+        + 'viikkoina Bernauer Straßen talojen ovet ja ikkunat muurataan umpeen; '
+        + '22. elokuuta Ida Siekmann hyppää kolmannesta kerroksesta ja kuolee, '
+        + 'muurin ensimmäinen uhri. Betonimuuri seuraa piikkilankaa, ja se seisoo '
+        + '28 vuotta.',
+    },
   },
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE":
@@ -2347,6 +2370,103 @@ export const NAHTAVYYSJUTUT = {
         + 'julkisivu. Talot purettiin 1758–1761 ja koko silta 1831.',
       lahde: 'Wikipedia',
     },
+    // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
+    // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
+    // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
+    'Faraday 1831': {
+      nosto: 'hetki-faraday-luento-1831',
+      teksti: 'Mitään ei kuulu, ja juuri se hämää. Michael Faraday on kytkenyt '
+        + 'pariston toiseen käämiin ja odottaa, että toisessa käämissä, '
+        + 'rautarenkaan vastakkaisella puolella, syntyisi pysyvä virta. Ei synny. '
+        + 'Galvanometrin neula värähtää vain sillä hetkellä, kun virta kytketään, '
+        + 'ja uudelleen kun se katkaistaan; siinä välissä se lepää nollassa. '
+        + 'Royal Institutionin kellarilaboratoriossa on 29. elokuuta 1831, ja '
+        + '39-vuotias entinen kirjansitojan oppipoika on juuri nähnyt, että '
+        + 'muutos — ei magneetti sinänsä — synnyttää sähköä. Kymmenen vuotta '
+        + 'aiemmin hän oli pannut virtajohtimen kiertämään magneettia, '
+        + 'ensimmäisen sähkömoottorin, ja sen jälkeen häntä oli syytetty tulosten '
+        + 'varastamisesta ja työnnetty kemian töihin. Nyt hän toistaa kokeen '
+        + 'viikkoja: magneettitanko työnnetään kelaan, neula heilahtaa; vedetään '
+        + 'ulos, neula heilahtaa toiseen suuntaan. Lokakuussa hän pyörittää '
+        + 'kuparikiekkoa magneetin napojen välissä ja saa tasaista virtaa, '
+        + 'ensimmäisen generaattorin. Faraday ei osaa matematiikkaa juuri '
+        + 'lainkaan; hänen kenttäviivansa muuttaa James Clerk Maxwell yhtälöiksi '
+        + 'vasta 1860-luvulla.',
+    },
+    'Fleming 1928': {
+      nosto: 'hetki-fleming-malja-1928',
+      teksti: '”Sepä hassua”, Alexander Fleming sanoo, ja se on koko juhla. St '
+        + 'Mary\'sin sairaalan bakteriologian laboratoriossa Paddingtonissa on 3. '
+        + 'syyskuuta 1928, ja Fleming on juuri palannut perheensä kanssa '
+        + 'vietetyltä lomalta. Ennen lähtöään hän jätti stafylokokkiviljelmiä '
+        + 'maljoille penkin nurkkaan, ja nyt hän käy niitä läpi heittääkseen ne '
+        + 'pois. Yhdessä maljassa kasvaa homepilkku, ja sen ympärillä bakteerit '
+        + 'ovat kuolleet. Fleming näyttää maljan entiselle apulaiselleen Merlin '
+        + 'Prycelle, joka muistuttaa: juuri niin sinä löysit lysotsyyminkin. '
+        + 'Homeen hän tunnistaa Penicillium-sukuun, ja seuraavat kuukaudet hän '
+        + 'kutsuu sen erittämää ainetta homemehuksi, kunnes antaa sille 7. '
+        + 'maaliskuuta 1929 nimen penisilliini. Hän osoittaa, että se tappaa '
+        + 'monia bakteereja ja on vaaraton eläimille, mutta aineen puhdistaminen '
+        + 'ja säilyttäminen ei onnistu hänen keinoillaan. Vasta Howard Floreyn ja '
+        + 'Ernst Chainin ryhmä Oxfordissa tekee siitä lääkkeen 1940-luvun alussa, '
+        + 'ja kolmikko jakaa lääketieteen Nobelin 1945.',
+    },
+    'Tunneli 1827': {
+      nosto: 'hetki-brunel-thames-tunnel-1827',
+      teksti: 'Tihkuvan veden ääni ei lakkaa koskaan. Se tulee yläpuolelta, missä '
+        + 'Thames virtaa ohuen savikerroksen takana, ja jokainen kaivaja '
+        + 'kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen kuilussa '
+        + 'toukokuussa 1827 työskentelee Marc Brunelin keksimä tunnelikilpi: '
+        + 'kaksitoista valurautaista kehystä kolmessa kerroksessa, 36 lokeroa, '
+        + 'joissa kukin mies kaivaa oman tukilautansa takaa. Kun koko kilpi on '
+        + 'kaivettu tyhjäksi, ruuvitunkit työntävät sitä eteenpäin ja muurarit '
+        + 'muuraavat perässä. Työmaata johtaa Marcin poika Isambard Kingdom '
+        + 'Brunel, 21, joka otti vastuun edellisen insinöörin sairastuttua. '
+        + 'Lontoolaiset maksavat shillingin nähdäkseen kilven työssä. Joen '
+        + 'jätevesi tihkuu tunneliin, sen metaani syttyy lampuista, ja miehet '
+        + 'sairastuvat. 18. toukokuuta joki murtautuu sisään, kun tunnelia on '
+        + 'kaivettu 167 metriä; Isambard laskeutuu sukelluskellolla tukkimaan '
+        + 'reiän savisäkeillä ja pitää korjatussa tunnelissa juhlaillallisen. '
+        + 'Tammikuussa 1828 tulva tappaa kuusi miestä. Tunneli avataan vasta 25. '
+        + 'maaliskuuta 1843, ensimmäisenä purjehduskelpoisen joen alittajana.',
+    },
+    'Palo 1666': {
+      nosto: 'hetki-lontoon-palo-1666',
+      teksti: 'Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä '
+        + 'veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666, ja Samuel '
+        + 'Pepys, laivaston virkamies, kirjoittaa iltapäivällä päiväkirjaansa '
+        + 'ihmisistä, jotka jäivät koteihinsa, kunnes tuli kosketti niitä, ja '
+        + 'pakenivat sitten veneisiin. Tulipalo alkoi yöllä Thomas Farrinerin '
+        + 'leipomosta Pudding Lanella; talon piika, joka ei uskaltanut kiivetä '
+        + 'ikkunasta naapurin katolle, oli ensimmäinen kuollut. Pormestari Thomas '
+        + 'Bloodworth ei purattanut taloja tulen tieltä, ja itätuuli teki lopun: '
+        + 'kesä oli ollut kuiva, ja puukaupungin kadut olivat kapeita. Pepys itse '
+        + 'kaivaa parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina '
+        + 'tuli tavoittaa Pyhän Paavalin katedraalin, jonka korjaustelineet '
+        + 'syttyvät; lyijykatto sulaa ja valuu kaduille, ja kryptaan varastoidut '
+        + 'kirjakauppiaiden varastot palavat. Keskiviikkona tuuli laantuu. Palo '
+        + 'tuhosi 13 200 taloa ja 87 kirkkoa, mutta kirjattuja kuolleita on vain '
+        + 'kourallinen — luku, jota epäillään yhä.',
+    },
+    'Globe 1599': {
+      nosto: 'hetki-shakespeare-globe-1599',
+      teksti: 'Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon '
+        + 'keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa '
+        + 'näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää '
+        + 'Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. '
+        + 'Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on '
+        + 'rakennettu samana vuonna puusta, joka purettiin talvella Shoreditchin '
+        + 'vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää '
+        + 'rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja '
+        + 'William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. '
+        + 'Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä täällä '
+        + 'Julius Caesarin ja lopuksi tanssin; se on ensimmäinen varma tieto '
+        + 'Globen esityksestä. Naisia ei näyttämöllä ole — Portian, Calpurnian ja '
+        + 'Kleopatran roolit puhuvat äänenmurroksen kynnyksellä olevat pojat. '
+        + 'Teatteri palaa 29. kesäkuuta 1613, kun tykki sytyttää olkikaton kesken '
+        + 'Henrik VIII:n; ainoa vahinko on mies, jonka palavat housut sammutetaan '
+        + 'oluella.',
+    },
   },
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E3 (Raamattu, "TEKSTIEN PAINOPISTE"):
@@ -2929,6 +3049,46 @@ export const NAHTAVYYSJUTUT = {
         + 'Museovartioinnin oppikirjat saivat uuden luvun; suola pysyi koko '
         + 'ajan turvassa.',
       lahde: 'Wikipedia',
+    },
+    // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
+    // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
+    // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
+    'Yhdeksäs 1824': {
+      nosto: 'hetki-beethoven-yhdeksas-1824',
+      teksti: '”Kääntäkää hänet.” Kukaan ei tiedä, kuka sen sanoo, mutta Caroline '
+        + 'Unger tekee sen. Wienin Kärntnertor-teatterissa on 7. toukokuuta 1824, '
+        + 'ja yhdeksännen sinfonian viimeinen sointu on juuri vaiennut. Ludwig '
+        + 'van Beethoven, 53, seisoo orkesterin edessä selin saliin ja lyö '
+        + 'tahtia, sillä hän on lähes täysin kuuro eikä kuule, että teos on ohi. '
+        + 'Kapellimestari Michael Umlauf on neuvonut soittajia seuraamaan häntä '
+        + 'eikä säveltäjää; kaksi vuotta aiemmin hän näki Beethovenin '
+        + 'Fidelio-harjoituksen romahtavan. Kaksikymmentävuotias alttolaulaja '
+        + 'Unger ottaa säveltäjää hihasta ja kääntää hänet kohti yleisöä. Sali on '
+        + 'jaloillaan: ihmiset heiluttavat hattuja ja nenäliinoja, jotta kuuro '
+        + 'mies näkisi, mitä ei kuule. Ovaatioita tulee viisi. Yleisössä ovat '
+        + 'Schubert, Czerny ja kansleri Metternich. Sinfonia on ensimmäinen, '
+        + 'jossa suuri orkesteri saa rinnalleen kuoron ja solistit — Schillerin '
+        + 'Oodi ilolle, tekstinä, jota Beethoven on kantanut mukanaan '
+        + 'nuoruudestaan. Samassa konsertissa kuullaan Missa solemniksen kolme '
+        + 'osaa. Sävel on nyt Euroopan hymni.',
+    },
+    'Figaro 1786': {
+      nosto: 'hetki-mozart-wien-1786',
+      teksti: 'Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. Wienin '
+        + 'Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus Mozart, 30, '
+        + 'johtaa Figaron häitä soittimensa äärestä, kuten tapa on. Ooppera '
+        + 'perustuu Beaumarchais\'n näytelmään, jonka keisari Joosef II on '
+        + 'kieltänyt Wienin näyttämöiltä, koska siinä palvelija nolaa isäntänsä; '
+        + 'Lorenzo Da Ponte kirjoitti libreton kuudessa viikossa, poisti '
+        + 'poliittiset puheet ja sai keisarilta luvan oopperalle. Susannaa laulaa '
+        + 'englantilainen Nancy Storace, Figaroa Francesco Benucci. Yleisö vaatii '
+        + 'ensi-iltana viisi numeroa uudelleen ja toisessa esityksessä seitsemän, '
+        + 'kunnes keisari määrää, ettei useamman laulajan numeroita saa toistaa — '
+        + 'esitys venyy muuten yöhön. Mozart on saanut työstä 450 floriinia, '
+        + 'kolme kertaa Salzburgin hovimuusikon vuosipalkan. Esityksiä tulee '
+        + 'Wienissä yhdeksän, eikä menestys ole valtava. Prahassa ooppera '
+        + 'villitsee talvella koko kaupungin, ja sen ihailijat maksavat Mozartin '
+        + 'matkan sinne tammikuussa 1787. Siitä syntyy tilaus Don Giovannille.',
     },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
@@ -3859,6 +4019,126 @@ export const NAHTAVYYSJUTUT = {
         + 'Purkutyöt alkoivat heti, ja kivet myytiin muistoesineiksi.',
       lahde: 'Wikipedia',
     },
+    // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
+    // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
+    // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
+    'Curie 1898': {
+      nosto: 'hetki-marie-curie-hangaari-1898',
+      teksti: 'Olkapäät ovat puutuneet jo aamupäivällä, mutta tankoa ei voi '
+        + 'laskea. Marie Curie sekoittaa kiehuvaa pikivälkeliuosta '
+        + 'rautakattilassa, ja vaja, joka oli ennen lääketieteellisen koulun '
+        + 'ruumiinavaussali, vuotaa sateella katosta. Pierre mittaa vieressä '
+        + 'säteilyä; luku on se, joka kertoo työn kannattavan. Curiet olivat '
+        + 'ilmoittaneet poloniumin heinäkuussa 1898 ja radiumin 26. joulukuuta '
+        + 'samana vuonna, mutta ilmoitus ei riitä kemisteille — uusi alkuaine on '
+        + 'saatava käteen puhtaana. Se tarkoittaa tonneittain kaivosten '
+        + 'pikivälkejätettä, joka keitetään, suodatetaan ja kiteytetään yhä '
+        + 'uudelleen. Työ vie vuoteen 1902, jolloin tonnista malmia on eristetty '
+        + 'kymmenesosagramma radiumkloridia. Aviopari ei tiedä, mitä näkymätön '
+        + 'säteily tekee käsille ja verelle; Marie kantaa koeputkia taskussaan ja '
+        + 'ihailee niiden hohdetta pimeässä. Vuonna 1903 hän jakaa fysiikan '
+        + 'Nobelin Pierren ja Henri Becquerelin kanssa, ensimmäisenä naisena, ja '
+        + 'vuonna 1911 saa kemian palkinnon yksin.',
+    },
+    'Lavoisier 1780': {
+      nosto: 'hetki-lavoisier-laboratorio-1780',
+      teksti: 'Vaaka on huoneen kallein esine, ja se on tarkempi kuin mikään, '
+        + 'mitä Pariisin kello- tai kultasepät myyvät. Antoine Lavoisier on '
+        + 'tilannut sen varta vasten, sillä koko hänen kemiansa lepää yhden '
+        + 'vaatimuksen varassa: kaikki punnitaan ennen koetta ja sen jälkeen. '
+        + 'Arsenaalin laboratoriossa, jossa hän on asunut ruutikomission jäsenenä '
+        + 'vuodesta 1775, hän polttaa metalleja suljetuissa astioissa ja '
+        + 'osoittaa, ettei mikään katoa eikä synny tyhjästä — palaminen on '
+        + 'yhtymistä ilman osaan, jonka hän nimeää hapeksi. Vastapäätä istuu '
+        + 'Marie-Anne Paulze Lavoisier, joka naitettiin hänelle '
+        + 'kolmetoistavuotiaana vuonna 1771. Hän on oppinut englannin '
+        + 'kääntääkseen Priestleyn ja Kirwanin kirjoitukset, ja Jacques-Louis '
+        + 'Davidin oppilaana hän piirtää laitteet niin tarkasti, että muutkin '
+        + 'voivat toistaa kokeet. Vuonna 1789 ilmestyy Traité élémentaire de '
+        + 'chimie, ensimmäinen moderni kemian oppikirja, kolmellatoista '
+        + 'Marie-Annen piirroksella. Viisi vuotta myöhemmin, 8. toukokuuta 1794, '
+        + 'vallankumous mestaa veronkantajana rikastuneen Lavoisierin.',
+    },
+    'Pasteur 1862': {
+      nosto: 'hetki-pasteur-pullot-1862',
+      teksti: 'Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. Louis '
+        + 'Pasteur nostaa sen valoa vasten École normale supérieuren '
+        + 'laboratoriossa rue d\'Ulmilla: keitetty lihaliemi, jonka joutsenkaulan '
+        + 'muotoinen lasikaula päästää ilman sisään mutta pysäyttää pölyn '
+        + 'mutkaansa. Naapuripullo, jonka kaulan hän katkaisi, on sameana ja '
+        + 'haisee. Kysymys, jota Pasteur ratkoo, on vanha ja kiihkeä: syntyykö '
+        + 'elämä itsestään mätänevästä aineesta? Rouenin museonjohtaja Félix '
+        + 'Pouchet vakuuttaa, että ilma itsessään riittää synnyttämään sen. '
+        + 'Tiedeakatemia on luvannut 2 500 frangin Alhumbert-palkinnon sille, '
+        + 'joka ratkaisee kiistan kokeellisesti. Pasteur vie pullojaan vuorille '
+        + 'ja avaa niitä ohuessa ilmassa, jossa pölyä on vähemmän: useimmat '
+        + 'pysyvät kirkkaina. Palkinto myönnetään hänelle 1862. Samaan aikaan hän '
+        + 'on osoittanut, että käyminen on elävien mikrobien työtä, ja vuonna '
+        + '1865 hän patentoi viinin kuumennuksen, jota nyt kutsutaan '
+        + 'pastöroinniksi. Ajatus, että näkymätön elämä tulee ulkoa eikä synny '
+        + 'itsestään, muuttaa myöhemmin kirurgian ja rokotukset.',
+    },
+    'Torni 1888': {
+      nosto: 'hetki-eiffel-torni-1888',
+      teksti: 'Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja '
+        + 'niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 '
+        + 'Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko jatkuu '
+        + 'yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu niitti '
+        + 'lennätetään pihdeillä, painetaan reikään, ja kaksi miestä takoo sen '
+        + 'kannan kiinni ennen kuin se jäähtyy. Niittejä tulee tornin '
+        + 'valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan päällä: '
+        + 'jokainen 18 038 osasta on piirretty Levallois-Perret\'n konepajalla '
+        + 'kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se lähetetään '
+        + 'takaisin. Rakentajia on kolmisensataa, ja työn aikana kuolee yksi. '
+        + 'Suunnittelijat ovat Gustave Eiffelin insinöörit Maurice Koechlin ja '
+        + 'Émile Nouguier; Eiffel osti heidän patenttinsa. Pariisin taiteilijat, '
+        + 'Maupassant ja Garnier mukana, ovat vastustaneet tornia julkisella '
+        + 'vetoomuksella, ja sen luvattiin seisovan vain kaksikymmentä vuotta. '
+        + 'Torni valmistuu 31. maaliskuuta 1889 maailmannäyttelyyn — ja jää, '
+        + 'koska sen huipulle sopii radioantenni.',
+    },
+    'Bastilji 1789': {
+      nosto: 'hetki-ranskan-vallankumous-bastilji-1789',
+      teksti: 'Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa '
+        + 'on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt '
+        + 'Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei '
+        + 'panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten '
+        + 'Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin '
+        + 'reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun '
+        + 'rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; '
+        + 'Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että '
+        + 'verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 '
+        + 'invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, '
+        + 'joista neljä on väärentäjiä. Neuvottelut kestävät koko päivän. '
+        + 'Iltapäivällä joukko pääsee ulkopihalle, varuskunta ampuu, ja lähes '
+        + 'sata hyökkääjää kuolee. Kello viiden jälkeen de Launay antautuu; hänet '
+        + 'raahataan kaupungintalolle ja surmataan matkalla. Linnoitus puretaan '
+        + 'seuraavina kuukausina. Kolme päivää myöhemmin Ludvig XVI tulee '
+        + 'Versailles\'sta Pariisin kaupungintalolle ja kiinnittää hattuunsa '
+        + 'kaupungin sinipunaisen kokardin; Lafayette lisää siihen valkoisen, ja '
+        + 'siitä tulee trikolori.',
+    },
+    'Lumière 1895': {
+      nosto: 'hetki-lumiere-elokuva-1895',
+      teksti: 'Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard des '
+        + 'Capucines\'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama '
+        + 'kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota '
+        + 'mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren '
+        + 'tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, naiset '
+        + 'hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. Kymmenen filmiä '
+        + 'kestää yhteensä noin kaksikymmentä minuuttia, ja niiden joukossa on '
+        + 'puutarhuri, joka kastelee itsensä letkulla — ensimmäinen elokuvavitsi. '
+        + 'Auguste ja Louis Lumière ovat valokuvalevytehtailijoita Lyonista; '
+        + 'heidän laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi '
+        + 'että heijastaa, ja sitä pyöritetään käsin. He olivat esittäneet '
+        + 'filmejä jo maaliskuussa tiedeyleisölle, mutta tämä on ensimmäinen '
+        + 'maksullinen näytös. Yleisössä istuu taikuri Georges Méliès, joka '
+        + 'yrittää heti ostaa laitteen; Lumièret kieltäytyvät ja sanovat, ettei '
+        + 'keksinnöllä ole tulevaisuutta. Méliès rakentaa omansa ja keksii '
+        + 'temppuelokuvan. Viikon päästä ovella jonottaa satoja, ja lehdet, Le '
+        + 'Radical yhtenä, yrittävät selittää lukijoille, mitä liikkuva valokuva '
+        + 'on.',
+    },
   },
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E4 (Raamattu "TEKSTIEN
@@ -4264,6 +4544,29 @@ export const NAHTAVYYSJUTUT = {
         + 'vastausta ei virallisesti annettu koskaan, mutta maratonhaave jäi.',
       lahde: 'Wikipedia',
     },
+    // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
+    // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
+    // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
+    'Suomi herää 1899': {
+      nosto: 'hetki-sibelius-finlandia-1899',
+      teksti: 'Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. '
+        + 'marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä keisarillinen '
+        + 'sensuuri on juuri lakkauttanut. Lehdistön päivien juhlaa vietetään '
+        + 'virallisesti sanomalehtimiesten eläkekassan hyväksi; oikeasti se on '
+        + 'protesti helmikuun manifestia vastaan, jolla Nikolai II on alkanut '
+        + 'supistaa Suomen autonomiaa. Ohjelmassa on kuusi historiallista '
+        + 'kuvaelmaa Väinämöisestä isoonvihaan, ja jokaiseen niistä Jean '
+        + 'Sibelius, 33, on kirjoittanut musiikin. Viimeinen on nimeltään Suomi '
+        + 'herää. Sen loppuun hän on säveltänyt rauhoittuvan hymnin, jota yleisö '
+        + 'luulee vanhaksi kansansävelmäksi; se on hänen omansa. Sensori istuu '
+        + 'salissa eikä voi kieltää kuvaelmaa, joka ei sano mitään suoraan. '
+        + 'Seuraavana vuonna Sibelius muokkaa kaksi viimeistä osaa itsenäiseksi '
+        + 'sävelrunoksi, joka esitetään heinäkuussa 1900 Helsingissä ja viedään '
+        + 'Robert Kajanuksen orkesterin kanssa Pariisin maailmannäyttelyyn '
+        + 'nimellä Finlandia. Venäjän vallan alla sitä soitetaan peitenimillä, '
+        + 'kuten Iloisia tunnelmia Suomen kevään heräämisestä. Sanat hymniin '
+        + 'kirjoittaa V. A. Koskenniemi vasta 1941.',
+    },
   },
   ateena: {
     'Antiikin agora': {
@@ -4611,6 +4914,29 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
       lahde: 'Wikipedia',
+    },
+    // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
+    // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
+    // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
+    'Louis 1896': {
+      nosto: 'hetki-olympia-ateena-1896',
+      teksti: 'Jalat ovat pölyn peitossa, ja ne jatkavat, vaikka pää ei enää '
+        + 'tiedä, missä on. Spyridon Louis, 23-vuotias vedenkantaja Marousin '
+        + 'kylästä Ateenan pohjoispuolelta, on juossut noin 40 kilometriä '
+        + 'Marathonin kylästä ja saapuu 10. huhtikuuta 1896 '
+        + 'Panathinaiko-stadionin marmoriportista sisään ensimmäisenä. Katsomossa '
+        + 'on kymmeniätuhansia — enemmän kuin missään urheilutapahtumassa koskaan '
+        + '—, ja kuningas Yrjö I nousee seisomaan. Kruununprinssi Konstantin ja '
+        + 'prinssi Yrjö juoksevat viimeisen kierroksen hänen vierellään. Aika on '
+        + '2.58.50. Maratonia ei ole koskaan aiemmin juostu: ranskalainen '
+        + 'kielitieteilijä Michel Bréal ehdotti kilpailua Feidippideen tarinan '
+        + 'mukaan ja lahjoitti voittajalle hopeamaljan. Kreikka on hävinnyt '
+        + 'ensimmäisten nykyaikaisten olympialaisten juoksulajit '
+        + 'amerikkalaisille, ja tämä yksi voitto on se, jota koko kaupunki '
+        + 'odotti. Louis ei enää kilpaile; kerrotaan, että hän pyysi palkinnoksi '
+        + 'hevosen ja kärryt vesikuljetuksiinsa. Kolmanneksi tullut Spyridon '
+        + 'Belokas todetaan pian huijariksi — hän oli matkustanut osan matkaa '
+        + 'vaunuissa.',
     },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
@@ -5615,6 +5941,30 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
       lahde: 'Wikipedia',
+    },
+    // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
+    // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
+    // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
+    'Konstantinopoli 1453': {
+      nosto: 'hetki-konstantinopoli-1453',
+      teksti: 'Yö on lyhyt, ja aamu tulee rumpujen ja huutojen mukana. '
+        + 'Mesoteichionilla, Lykosjoen laakson muurinpätkällä, on 29. toukokuuta '
+        + '1453. Sulttaani Mehmed II, 21-vuotias, on piirittänyt kaupunkia 6. '
+        + 'huhtikuuta lähtien — 53 päivää — ja unkarilaisen Orbanin valama '
+        + 'jättiläistykki on murtanut muuria viikkokausia niin, että puolustajat '
+        + 'täyttävät aukkoja öisin. Kaupungissa on alle 50 000 asukasta ja vain '
+        + 'noin 7 000–8 000 aseellista miestä kahdentoista mailin muureille; '
+        + 'ulkopuolella on 50 000–80 000 osmania. Edellisenä iltana keisari '
+        + 'Konstantinos XI kävi Hagia Sofiassa viimeisessä vesperissä, jossa '
+        + 'latinalaiset ja kreikkalaiset rukoilivat samassa kirkossa. Hyökkäys '
+        + 'tulee aalloittain: ensin palkkasoturit, sitten Anatolian väki, '
+        + 'viimeisenä janitsaarit. Puolustusta johtava genovalainen Giovanni '
+        + 'Giustiniani haavoittuu ja kannetaan muurilta, ja hänen miestensä '
+        + 'perääntyminen aiheuttaa paniikin. Konstantinos katoaa taistelun '
+        + 'melskeeseen; ruumista ei tunnisteta varmasti. Aamupäivällä osmanit '
+        + 'murtavat Hagia Sofian ovet, joiden taakse tuhannet olivat paenneet. '
+        + 'Tuhat vuotta vanha keisarikunta päättyy, ja Mehmed tekee kaupungista '
+        + 'pääkaupunkinsa.',
     },
   },
   marseille: {
@@ -7473,6 +7823,27 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
       lahde: 'Wikipedia',
+    },
+    // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
+    // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
+    // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
+    'Sikstus 1510': {
+      nosto: 'hetki-michelangelo-sikstus-1510',
+      teksti: 'Niska ei enää suoristu illalla, ja maali tippuu silmille. '
+        + 'Michelangelo Buonarroti seisoo — ei makaa, vaikka niin kerrotaan — '
+        + 'telineellä pää taaksepäin taivutettuna ja maalaa Sikstuksen kappelin '
+        + 'holvia. Paavi Julius II pakotti hänet työhön 1508, vaikka hän on '
+        + 'kuvanveistäjä eikä freskomaalari; sopimus lupaa 3 000 dukaattia. '
+        + 'Freskoa tehdään tuoreelle kalkkirappaukselle, giornata kerrallaan: '
+        + 'apulainen levittää aamulla sen verran laastia kuin päivässä ehtii '
+        + 'maalata, ja mikä ei ehdi, hakataan pois. Rappauksen kosteus tuo '
+        + 'homeen, ja ensimmäiset kuukaudet joudutaan tekemään uudelleen. '
+        + 'Syyskuussa 1510 holvin ensimmäinen puolisko, Nooan juopumuksesta Eevan '
+        + 'luomiseen, on valmis, ja työ katkeaa: paavi on lähtenyt sotaan '
+        + 'Bolognaan eikä maksa, eikä uutta telinettä ole. Puolisko paljastetaan '
+        + 'yleisölle 15. elokuuta 1511. Toinen puoli, Aadamin luominen mukaan '
+        + 'lukien, syntyy nopeammin ja suuremmin hahmoin, ja koko katto — yli 300 '
+        + 'hahmoa — avataan pyhäinpäiväksi 1512. Michelangelo on 37.',
     },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
@@ -10157,6 +10528,46 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
       lahde: 'Wikipedia',
+    },
+    // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
+    // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
+    // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
+    'Jänissaari 1703': {
+      nosto: 'hetki-pietari-perustus-1703',
+      teksti: 'Mittakeppi ja kartta ovat ainoat kuivat esineet Jänissaarella. '
+        + 'Vartiosotilas pitää kartan kulmasta kiinni, kun tsaari Pietari, yli '
+        + 'kaksimetrinen mies, kävelee saaren märkää rantaa ja näyttää, mihin '
+        + 'kuusi bastionia tulevat. On 27. toukokuuta 1703, ja kaksi viikkoa '
+        + 'aiemmin venäläiset valtasivat ylempänä Nevalla ruotsalaisten '
+        + 'Nyenskansin linnoituksen. Suuri Pohjan sota on käynnissä, ja Ruotsin '
+        + 'laivasto voi ilmestyä Suomenlahdelle milloin tahansa; siksi linnake '
+        + 'pitää saada saarelle jokisuuhun ennen talvea, ensin maasta ja puusta. '
+        + 'Kivi tulee myöhemmin, Domenico Trezzinin piirustuksin vuodesta 1706. '
+        + 'Sotilaille ja pakkotyöhön käsketyille talonpojille paikka on suo, '
+        + 'jossa on hyttysiä ja kuolemaa; heille ei sanota, että tästä tehdään '
+        + 'pääkaupunki. Pietari nimeää linnoituksen suojeluspyhimyksensä apostoli '
+        + 'Pietarin mukaan ja siirtää hovin tänne 1712. Linnoituksesta ei koskaan '
+        + 'ammuta vihollista kohti — sen kuuluisin osa on vankila, jossa istuvat '
+        + 'myöhemmin Pietarin oma poika Aleksei, dekabristit ja Dostojevski.',
+    },
+    'Mendelejev 1869': {
+      nosto: 'hetki-mendelejev-kortit-1869',
+      teksti: 'Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama '
+        + 'ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri '
+        + 'Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja '
+        + 'tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. '
+        + 'Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet '
+        + 'toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin '
+        + 'taulukon unessa ja kirjoittaneensa sen herättyään paperille; '
+        + 'arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja '
+        + 'yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. '
+        + 'maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden '
+        + 'ominaisuuksien riippuvuudesta atomipainosta. Rohkeinta ovat aukot: '
+        + 'Mendelejev jättää tyhjiä paikkoja ja ennustaa niihin alkuaineet, joita '
+        + 'kukaan ei ole nähnyt, painoineen ja tiheyksineen. Gallium löytyy 1875, '
+        + 'skandium 1879 ja germanium 1886, ja ne sopivat aukkoihin. Saksalainen '
+        + 'Lothar Meyer julkaisee lähes saman taulukon muutamaa kuukautta '
+        + 'myöhemmin — mutta ilman ennusteita.',
     },
   },
   moskova: {
@@ -35786,6 +36197,29 @@ export const NAHTAVYYSJUTUT = {
         },
       ],
       lahde: 'Wikipedia',
+    },
+    // Historian hetkien kohdekartan pisteet (omistaja 3.9.2026, kuten
+    // Kolumbus 1484): juttu on sanatarkasti hetken oma teksti
+    // (js/packs/historian-hetket.js); tests/nostot-kartalla.test.mjs vertaa.
+    'Brooklyn 1883': {
+      nosto: 'hetki-brooklyn-bridge-1883',
+      teksti: 'Kuka tämän sillan oikeastaan rakensi? Kysymys leijuu 24. '
+        + 'toukokuuta 1883 avajaisten yllä, vaikka kukaan ei sano sitä ääneen. '
+        + 'Suunnittelija John A. Roebling kuoli jalkavammaan jo 1869 ennen töiden '
+        + 'alkua. Hänen poikansa Washington Roebling johti työtä, kunnes '
+        + 'sukeltajantauti, joka syntyi kaivettaessa tornien perustuksia '
+        + 'paineilmakaissoneissa, lamautti hänet 1870-luvun alussa; sen jälkeen '
+        + 'hän seurasi työmaata kaukoputkella makuuhuoneestaan Columbia '
+        + 'Heightsilta. Hänen vaimonsa Emily Warren Roebling opetteli lujuusopin '
+        + 'ja köysikäyrien matematiikan, kuljetti ohjeet insinööreille ja vastasi '
+        + 'viranomaisille yli kymmenen vuotta. Tänään hän ylittää sillan '
+        + 'ensimmäisenä vaunuissa, ja presidentti Chester A. Arthur kävelee '
+        + 'Manhattanilta Brooklyniin tykkilaukausten ja ilotulitusten saattamana. '
+        + 'Silta on maailman pisin riippusilta, jänneväliltään 486 metriä ja '
+        + 'kaapeleiltaan terästä, ja se on maksanut noin 27 työmiehen hengen. '
+        + 'Ensimmäisenä päivänä yli 150 000 ihmistä kävelee sen yli. Kuusi päivää '
+        + 'myöhemmin portaikossa syntyy tungos ja kaksitoista kuolee — silta on '
+        + 'heti liian suosittu.',
     },
   },
   /*
