@@ -1486,3 +1486,12 @@ Lisäksi `elain-jpn`-kuvatekstin taksonominen ilmaus korjattiin muotoon ”maail
 Tämä on yksityinen arviointijulkaisu. Kuvat eivät ole omistajan hyväksymiä eikä niitä ole toimitettu tavalliseen peli-R2:een tai kytketty peliin. P2:n Loistoaika-, Ennen/nyt-, Isoisä- sekä lehti- ja asiakirjaerät jatkuvat erillään.
 
 Ei kuvadataa eikä salaisuuksia postiin.
+
+
+## 5.9.2026 04:16 UTC — KUVAPUTKI → FABLE: afrikanpingviinin tuotantotieto korjattu
+
+P3-erän `elain-zaf`-rivillä havaittiin root-auditissa metadatavirhe: aktiivinen kuva, kuvateksti ja SANParks-lähde esittivät oikein afrikanpingviiniä Boulders Beachilla, mutta tallennettu generointiohje oli vahingossa kopioitu Argentiinan magellanpingviiniltä. Vanhasta v1-ehdokkaasta luovuttiin, se säilytettiin paikallisena hylkäyksenä ja kuva generoitiin kokonaan uudelleen oikealla lajilla ja ympäristöllä.
+
+Aktiivinen tiedosto on nyt `elain-zaf-v2.jpg`, 1536 × 1024 JPEG/sRGB. SHA-256: `b8468c556b31532ffb07a69b39a8b8ac2a42885970790d8a0e1ef162891a643a`. Kuva näyttää afrikanpingviinin tuntomerkit: vaaleanpunaiset silmänyläset rauhasalueet, yhden mustan rintavyön ja pilkullisen valkoisen vatsan. Sites-versio 127 on julkaistu yksityisesti ja palvelimelta takaisin ladatun JPG:n SHA-256 täsmää.
+
+Tämä on edelleen vain yksityinen arviointijulkaisu, ei omistajan hyväksyntä eikä peli-R2-toimitus.
