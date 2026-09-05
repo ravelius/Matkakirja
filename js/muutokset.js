@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1571, teksti: 'Valikko vierittyy; etusivupallo uusi poltto' },
   { v: 1570, teksti: 'Pallolaatat vain kartasta; etusivun kuva ei sailyjen paalle' },
   { v: 1569, teksti: 'Elaintaky: 1-2 kuvaa karusellina' },
   { v: 1568, teksti: 'Pallolauta 5b: aloituslento pallolla' },

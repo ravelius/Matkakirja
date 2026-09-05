@@ -352,6 +352,24 @@ button, .brand, .turn-pill, .fact-card h2 {
   border: 1px solid var(--line);
   border-radius: 10px;
   box-shadow: 0 10px 28px rgba(15, 10, 5, 0.45);
+  /*
+   * VALIKKO VIERITTYY (omistaja 5.9.2026 iPhone-kaappaus: *"Tee valikosta
+   * scrollattava. En pääse noihin alempiin enää puhelimella käsiksi
+   * muuten."*). Pelilauta-osio (v1567) kasvatti valikon puhelimen ruutua
+   * korkeammaksi, ja Työhuoneen alimmat rivit jäivät ruudun alle. Katto
+   * on ruudun korkeus miinus ylärivi ja marginaali (dvh ei sisällä
+   * Safarin osoiteriviä); ylivuoto vierittyy valikon sisällä eikä
+   * vieritä sivua (overscroll-behavior). Sama sääntö kattaa myös
+   * kehittäjävalikon (class="paavalikko kehittaja-valikko").
+   */
+  max-height: calc(100dvh - 5.6rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+@supports not (height: 100dvh) {
+  .paavalikko { max-height: calc(100vh - 6.4rem); }
 }
 
 .paavalikko button {
