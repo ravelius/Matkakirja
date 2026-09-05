@@ -16,6 +16,7 @@ const SHELL = [
   './js/muutokset.js',
   './js/main.js',
   './js/ui.js',
+  './js/siirtokoreografia.js',
   './js/kartta.js',
   './js/karttamittari.js',
   './js/fokusmitat.js',
@@ -127,6 +128,9 @@ const SHELL = [
   // varten. Ei niputeta yhden tiedoston versioon (tests/sw.test.mjs).
   './js/pallolauta/lauta.js',
   './js/pallolauta/kamera.js',
+  './js/pallolauta/merkit.js',
+  './js/pallolauta/reitit.js',
+  './js/pallolauta/siirto.js',
   './css/aikajana.css',
   './js/tehosteet.js',
   './js/kehittajan-voimat.js',

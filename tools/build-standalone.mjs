@@ -718,6 +718,9 @@ const MODULES = [
    * epäonnistuu ja efekti jää pois hiljaa.
    */
   'js/maatummennus.js',
+  // Siirron koreografian luvut ja käyrät (pallolauta vaihe 2): ui.js
+  // tuo staattisesti, joten riippuvuus ennen tuojaansa.
+  'js/siirtokoreografia.js',
   'js/ui.js',
 
   'js/muutokset.js',

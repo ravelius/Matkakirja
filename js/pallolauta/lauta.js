@@ -1,5 +1,6 @@
 /*
- * PALLOLAUTA — karttapallo pelin lautana (vaihe 1: perusta ja kytkin).
+ * PALLOLAUTA — karttapallo pelin lautana (vaihe 1: perusta ja kytkin;
+ * vaihe 2: siirrot pallolla).
  *
  * OMISTAJAN LINJAUS 5.9.2026 (Raamattu, KARTTAPALLO ON PELILAUTA,
  * sanatarkasti): *"Voisiko pallon vaihtaa pelin kartaksi suoraan?"* /
@@ -13,18 +14,29 @@
  * asennaPallonEleet), mutta kuori asuu KARTTARUUDUSSA tasokartan
  * paikalla — ilman tummaa pohjaa ja ilman Sulje-nappia, koska lauta ei
  * ole ikkuna, joka suljetaan. Tasokartta nukkuu sen alla tyhjänä
- * (js/kartta.js lepotila) ja herää linssikartaksi vain siirron tai
- * linssin ajaksi (js/ui.js avaaLinssikartta).
+ * (js/kartta.js lepotila) ja herää linssikartaksi vain linssin ajaksi
+ * (js/ui.js avaaLinssikartta).
  *
  * KARTTA LAATOISSA, PELI PÄÄLLÄ (Raamattu 5.9.2026, täsmennys "ei mitään
- * pinnoitteen päälle"): nimet, nostot ja reitit ovat laatoissa, eikä
- * niitä piirretä pallolle kerroksena. Pallolle piirretään vain PELI —
- * se, mikä vaihtuu pelin edetessä tai ottaa vastaan kosketuksen.
- * Vaiheessa 1 se on: kaupunkipisteet (pointsData; käydyt ja
- * aloituskaupungit erottuvat) ja nykyisen kaupungin nappula
- * (htmlElementsData). Sallitut kerrokset ovat PALLOLAUDAN_KERROKSET, ja
- * tests/pallolauta.test.mjs vartioi, ettei muita synny. Kaupunkien
- * nimet, reitit, kohteet ja nostot tulevat vaiheissa 2–3.
+ * pinnoitteen päälle"): nimet, nostot ja reittiverkko ovat laatoissa,
+ * eikä niitä piirretä pallolle kerroksena. Pallolle piirretään vain PELI
+ * — se, mikä vaihtuu pelin edetessä tai ottaa vastaan kosketuksen.
+ * Vaiheen 2 jälkeen se on: kaupunkipisteet ja askelhelmet (pointsData),
+ * nappula ja nopanheiton kohteet (htmlElementsData, js/pallolauta/
+ * merkit.js), nykyisen kaupungin naapurireitit tai kesken olevan matkan
+ * reitti (pathsData) ja lentokaaret lentolistan ollessa auki tai lennon
+ * ajan (arcsData) — täsmälleen se, mitä tasokartan elävä
+ * matkareittikerros näyttää (js/pallolauta/reitit.js,
+ * ui.matkareittienValinta). Sallitut kerrokset ovat PALLOLAUDAN_KERROKSET,
+ * ja tests/pallolauta.test.mjs vartioi, ettei muita synny. Kaupunkien
+ * nimet ja nostot tulevat vaiheessa 3.
+ *
+ * SIIRROT PALLOLLA (vaihe 2): nopanheitto, kohteen valinta, nappulan
+ * hyppy reittiä pitkin, laiva, lento ja mannerlento kulkevat js/ui.js:n
+ * samaa koreografiaa kuin tasokartalla; laudan oma osa on kuljettaja
+ * (js/pallolauta/siirto.js, ui.nappulanKuljettaja) ja kamera
+ * (js/pallolauta/kamera.js, ui.kamera()). Noppa on pelin DOM-kappale
+ * (js/die.js), joka siirretään kuoreen pallon päälle laudan ajaksi.
  *
  * KAIKKI LIIKE ANIMOIDAAN (Raamattu): merkkien ilmestyminen ja
  * paikanvaihto 250 ms, kamera-ajot trapetsilla (js/pallolauta/kamera.js);
@@ -41,11 +53,23 @@ import {
   PALLO_LAUTA, asennaPallonEleet, laatatSaatavilla, lataaPallokirjasto, pallonKaupungit,
   rakennaPallo,
 } from '../pallo.js';
+import { laudaltaAsteiksi } from '../fokusmitat.js';
+import { pixelOf, posKey } from '../rules.js';
 import { kehittajaMaailmaPaalla, kehittajaTilaPaalla } from '../ui-apurit.js';
-import { luoPallokamera } from './kamera.js';
+import { PALLOKAMERAN_AJO_MS, luoPallokamera } from './kamera.js';
+import { luoMerkit } from './merkit.js';
+import {
+  HELMEN_VARI, REITTIHELMEN_KORKEUS, REITTIHELMEN_SADE, luoReitit,
+} from './reitit.js';
+import { luoNappulanKuljettaja } from './siirto.js';
 
-/** Sallitut Globe.gl-kerrokset pallolaudalla (vaihe 1). */
-export const PALLOLAUDAN_KERROKSET = ['pointsData', 'htmlElementsData'];
+/**
+ * Sallitut Globe.gl-kerrokset pallolaudalla (vaihe 2): pisteet
+ * (kaupungit, askelhelmet), html-merkit (nappula, kohteet), polut
+ * (naapurireitit) ja kaaret (lennot). Ei nimiä, ei renkaita, ei
+ * monikulmioita — kartta on laatoissa.
+ */
+export const PALLOLAUDAN_KERROKSET = ['pointsData', 'htmlElementsData', 'pathsData', 'arcsData'];
 /**
  * Kaupunkipisteen säde Globe.gl:n pointRadius-yksiköissä — karttavakio,
  * kasvaa lähennettäessä. Suunnitelma sanoi 0,12°, mutta kirjaston
@@ -56,7 +80,7 @@ export const PALLOLAUDAN_KERROKSET = ['pointsData', 'htmlElementsData'];
 export const KAUPUNKIPISTEEN_SADE = 0.03;
 /** Merkkien ilmestymisen ja paikanvaihdon kesto (ms). */
 export const MERKKIEN_SIIRTYMA_MS = 250;
-/** Napautuksen osuma ruudulla: lähin kaupunki tämän säteen sisällä (px). */
+/** Napautuksen osuma ruudulla: lähin kaupunki tai kohde tämän säteen sisällä (px). */
 export const NAPAUTUKSEN_SADE_PX = 44;
 
 /** Pisteen väri: käyty kultaa, aloituskaupunki vaaleaa, muut mustetta. */
@@ -64,6 +88,12 @@ export function kaupunkipisteenVari(kaupunki) {
   if (kaupunki.kayty) return '#d9a13b';
   if (kaupunki.alku) return '#b28a4a';
   return '#3a2716';
+}
+
+/** Laudan kohta (x, y) asteiksi ({ lat, lon }) — yksi totuus on lauta. */
+export function pallonAsteet(kohta) {
+  if (!kohta || !Number.isFinite(kohta.x) || !Number.isFinite(kohta.y)) return null;
+  return laudaltaAsteiksi(PALLO_LAUTA, kohta.x, kohta.y);
 }
 
 /**
@@ -130,10 +160,12 @@ export async function avaaPallolauta(ui) {
   /* ---- kamera ------------------------------------------------------ */
   const kamera = luoPallokamera({ pallo, kotelo, ui, lauta: PALLO_LAUTA, heraa });
 
-  /* ---- kaupungit (P) ja nappula (H) ---------------------------------- */
+  /* ---- kerrokset: kaupungit + helmet (P), merkit (H), reitit (T, A) --- */
   let kaupungit = [];
   const kaupunkiId = new Map(); // id → pallon kaupunki
   const pack = ui.game.pack;
+  const merkit = luoMerkit({ pallo, ui, siirtyma, asteet: pallonAsteet });
+  const reitit = luoReitit({ pallo, ui, siirtyma, asteet: pallonAsteet });
 
   /** Laudan kaupunki (x, y, id, name) pallon kaupungista. */
   const laudanKaupunki = (k) => ui.game.board?.cityById?.get(k.id) ?? null;
@@ -169,80 +201,164 @@ export async function avaaPallolauta(ui) {
     return true;
   };
 
-  /** Lähin kaupunki ruudulla napautuskohdasta (R-osuma, ≥ 44 px). */
-  const lahinKaupunki = (lat, lng) => {
+  /**
+   * NAPAUTUS KOHTEESEEN (vaihe 2): nopanheiton kohde — kaupunki tai
+   * askelpiste reitin varrella — valitaan napauttamalla sen merkkiä.
+   * Osuma on R-malli (karttapallo.md riski 3): lähin kohde 44 px:n
+   * sisällä pallon omasta napautuksesta, ei merkin oma click, jotta
+   * doMove kutsutaan täsmälleen kerran.
+   */
+  const napautaKohde = (kohde) => {
+    if (ui.dead || ui.busy || !kohde) return false;
+    const { game } = ui;
+    if (game.phase !== 'move' || game.player?.isBot) return false;
+    heraa();
+    ui.doMove(kohde.key);
+    return true;
+  };
+
+  /** Lähin merkki ruudulla napautuskohdasta (R-osuma, ≥ 44 px). */
+  const lahin = (lat, lng, ehdokkaat, latOf, lngOf) => {
     const kohta = pallo.getScreenCoords(lat, lng, 0);
     if (!kohta) return null;
     let paras = null;
     let parasMatka = NAPAUTUKSEN_SADE_PX;
-    for (const k of kaupungit) {
-      const p = pallo.getScreenCoords(k.lat, k.lon, 0);
+    for (const e of ehdokkaat) {
+      const p = pallo.getScreenCoords(latOf(e), lngOf(e), 0);
       if (!p) continue;
       const d = Math.hypot(p.x - kohta.x, p.y - kohta.y);
-      if (d < parasMatka) { parasMatka = d; paras = k; }
+      if (d < parasMatka) { parasMatka = d; paras = e; }
     }
     return paras;
   };
+  const lahinKaupunki = (lat, lng) => lahin(lat, lng, kaupungit, (k) => k.lat, (k) => k.lon);
+  const lahinKohde = (lat, lng) => lahin(lat, lng, merkit.kohteet(), (k) => k.lat, (k) => k.lng);
 
-  const nappulaSvg = () => {
-    const el = document.createElement('div');
-    el.className = 'pallolauta-nappula';
-    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg.setAttribute('viewBox', '-8 -14 16 18');
-    svg.setAttribute('width', '32');
-    svg.setAttribute('height', '36');
-    svg.setAttribute('aria-hidden', 'true');
-    el.appendChild(svg);
-    // Sama hahmo kuin tasokartalla (js/ui.js pawnShape); liitteet
-    // (varjo, vuororengas, liukuvärit) syntyvät tähän pieneen svg:hen.
-    if (ui.game.player) ui.pawnShape(svg, ui.game.player, true);
-    return el;
+  /** Napautus pallon pintaan: kohde ennen kaupunkia (kohde on kehotus toimia). */
+  const napautaPintaan = (lat, lng) => {
+    const kohde = lahinKohde(lat, lng);
+    if (kohde) { napautaKohde(kohde); return; }
+    const k = lahinKaupunki(lat, lng);
+    if (k) napautaKaupunki(k);
   };
 
   pallo
     .pointsData([])
     .pointLat('lat').pointLng('lon')
-    .pointColor(kaupunkipisteenVari)
-    .pointAltitude(0.003)
-    .pointRadius(KAUPUNKIPISTEEN_SADE)
+    .pointColor((d) => (d.laji === 'helmi' ? HELMEN_VARI : kaupunkipisteenVari(d)))
+    .pointAltitude((d) => (d.laji === 'helmi' ? REITTIHELMEN_KORKEUS : 0.003))
+    .pointRadius((d) => (d.laji === 'helmi' ? REITTIHELMEN_SADE : KAUPUNKIPISTEEN_SADE))
     .pointResolution(16)
     .pointsMerge(false)
     .pointsTransitionDuration(siirtyma)
-    .onPointClick((k) => { if (!eleet.sormet.nipistys) napautaKaupunki(k); })
+    .onPointClick((d) => {
+      if (eleet.sormet.nipistys) return;
+      // Askelhelmi on reitin koriste: napautus siitä menee pinnalle.
+      if (d.laji === 'helmi') napautaPintaan(d.lat, d.lon);
+      else napautaKaupunki(d);
+    })
     .onGlobeClick(({ lat, lng }) => {
       // Nipistys ei ole napautus (js/pallo.js asennaPallonEleet); muuten
-      // lähin kaupunki 44 px:n sisällä saa napautuksen — pisteet ovat
-      // karttavakio, joten ne ovat pienet kaukaa katsottuna.
+      // lähin kohde tai kaupunki 44 px:n sisällä saa napautuksen —
+      // pisteet ovat karttavakio, joten ne ovat pienet kaukaa katsottuna.
       if (eleet.sormet.nipistys) return;
-      const k = lahinKaupunki(lat, lng);
-      if (k) napautaKaupunki(k);
-    })
-    .htmlElementsData([])
-    .htmlLat('lat').htmlLng('lng')
-    .htmlAltitude(0.004)
-    .htmlElement(nappulaSvg)
-    .htmlTransitionDuration(siirtyma);
-  // Nappula pallon takana piiloon (CSS2D ei itse leikkaa horisonttiin).
-  pallo.htmlElementVisibilityModifier?.((el, nakyy) => { el.style.opacity = nakyy ? '1' : '0'; });
+      napautaPintaan(lat, lng);
+    });
 
-  /** Merkit pelitilasta: käydyt kaupungit ja nykyinen sijainti. */
+  /* ---- merkit pelitilasta ------------------------------------------- */
   let merkkiAvain = null;
+  let pisteAvain = null;
+  /** posKey siitä paikasta, jossa nappula viimeksi NÄHTIIN laudalla. */
+  let nappulanPaikka = null;
+  const merkitseNappulanPaikka = (pos) => { nappulanPaikka = pos ? posKey(pos) : null; };
+
+  /** Nopanheiton kohteet: sama sääntö kuin drawTargets (siirtovaihe, ei botti). */
+  const kohdevalinta = () => {
+    const { game } = ui;
+    if (game.phase !== 'move' || game.player?.isBot || ui.katselu) return [];
+    return (game.moveOptions?.() ?? []).map((opt) => {
+      const { x, y } = pixelOf(game.board, opt.pos);
+      return { key: opt.key, x, y, city: opt.city ?? null };
+    });
+  };
+
+  /**
+   * Merkit pelitilasta: käydyt kaupungit, askelhelmet, reitit, kohteet
+   * ja nappula. Kutsutaan joka piirrossa (ui.paivitaPallolauta) ja
+   * reittien vaihtuessa (ui.paivitaMatkareitit); avain karsii turhat.
+   */
   const paivita = () => {
     if (ui.dead) return;
     const { game } = ui;
     const kaydyt = game.world?.visited ?? new Set();
-    const pos = game.player?.pos;
-    const oma = pos?.type === 'city' ? pos.city : null;
-    const avain = `${[...kaydyt].sort().join(',')}|${oma ?? ''}`;
+    const pos = game.player?.pos ?? null;
+    const kohta = pos && game.board ? pixelOf(game.board, pos) : null;
+    // Pelaajan id on 0, joten totuusarvo ei kelpaa: null tarkoittaa lepoa.
+    const liikkuu = ui.movingPlayerId != null;
+    const kohteet = kohdevalinta();
+    const valinta = ui.matkareittienValinta();
+    const posAvain = pos ? posKey(pos) : '';
+    const avain = [
+      [...kaydyt].sort().join(','), posAvain, liikkuu ? 'liikkuu' : '',
+      kohteet.map((k) => k.key).join(','), valinta.avain, ui.lentoKaari?.b ?? '',
+    ].join('|');
     if (avain === merkkiAvain) return;
     merkkiAvain = avain;
     heraa();
-    kaupungit = pallonKaupungit(pack, kaydyt);
-    kaupunkiId.clear();
-    for (const k of kaupungit) kaupunkiId.set(k.id, k);
-    pallo.pointsData(kaupungit);
-    const koti = oma ? kaupunkiId.get(oma) : null;
-    pallo.htmlElementsData(koti ? [{ id: 'nappula', lat: koti.lat, lng: koti.lon }] : []);
+    // Kaupungit kerran; käyntitieto päivitetään SAMOIHIN olioihin, jotta
+    // Globe.gl siirtää värin tweenillä eikä luo 261 pistettä uudestaan.
+    if (!kaupungit.length) {
+      kaupungit = pallonKaupungit(pack, kaydyt);
+      kaupunkiId.clear();
+      for (const k of kaupungit) kaupunkiId.set(k.id, k);
+    } else {
+      for (const k of kaupungit) k.kayty = kaydyt.has(k.id);
+    }
+    const helmet = reitit.paivita(valinta);
+    const uusiPisteAvain = `${[...kaydyt].sort().join(',')}|${helmet.map((h) => h.id).join(',')}`;
+    if (uusiPisteAvain !== pisteAvain) {
+      pisteAvain = uusiPisteAvain;
+      pallo.pointsData([...kaupungit, ...helmet]);
+    }
+    merkit.paivita({ nappula: liikkuu ? null : kohta, kohteet });
+    /*
+     * KAMERA SEURAA TELEPORTTIA. Siirron kuljettaja kirjaa perillä
+     * paikkansa (merkitseNappulanPaikka), joten tavallinen siirto ei
+     * osu tähän — kamera jää sinne minne saatto sen vei (omistaja
+     * 1.9.2026). Jos paikka vaihtui ILMAN siirtoa (kehittäjäsiirto,
+     * tallenteen lataus kesken pelin), kamera sukeltaa perään.
+     */
+    if (!liikkuu && pos) {
+      if (nappulanPaikka !== null && nappulanPaikka !== posAvain) {
+        void kamera.kotiin({ kesto: PALLOKAMERAN_AJO_MS });
+      }
+      nappulanPaikka = posAvain;
+    }
+  };
+
+  /** Pelin paikan (pos) piste ruudulla (kotelon px) — nopan lähtö. */
+  const ruutupiste = (pos) => {
+    const kohta = pos && ui.game.board ? pixelOf(ui.game.board, pos) : null;
+    const a = pallonAsteet(kohta);
+    if (!a) return null;
+    return pallo.getScreenCoords(a.lat, a.lon, 0);
+  };
+
+  /* ---- noppa kuoreen laudan ajaksi -------------------------------- */
+  /*
+   * Noppa (js/die.js) asuu tasokartan siirtokuoressa, joka on tämän
+   * kuoren alla. Laudan ajaksi sen kerros siirretään tähän kuoreen
+   * pallon päälle (paikat ovat ruudun pikseleitä, ks. ui.animateDie) ja
+   * palautetaan, kun kuori piilotetaan tai puretaan.
+   */
+  const noppaKuoreen = () => {
+    const kerros = ui.boardDie?.layer;
+    if (kerros && kerros.parentElement !== kuori) kuori.appendChild(kerros);
+  };
+  const noppaTakaisin = () => {
+    const kerros = ui.boardDie?.layer;
+    const koti = ui.karttaKuori ?? ui.mapPane;
+    if (kerros && koti && kerros.parentElement === kuori) koti.appendChild(kerros);
   };
 
   /* ---- mitat, näkyvyys ja purku -------------------------------------- */
@@ -251,9 +367,9 @@ export async function avaaPallolauta(ui) {
   kokovahti.observe(kotelo);
 
   /*
-   * "PALAA PALLOLLE" linssikartan kulmaan (vaihe 1): tasokartta herää
-   * siirron ja linssin ajaksi, ja tästä pääsee takaisin ilman siirtoa.
-   * Kesken matkan nappi ei tee mitään (ui.suljeLinssikartta kieltäytyy).
+   * "PALAA PALLOLLE" linssikartan kulmaan: tasokartta herää linssin
+   * ajaksi, ja tästä pääsee takaisin. Kesken siirtoanimaation nappi ei
+   * tee mitään (ui.suljeLinssikartta kieltäytyy).
    */
   const palaa = document.createElement('button');
   palaa.type = 'button';
@@ -264,20 +380,33 @@ export async function avaaPallolauta(ui) {
 
   const lauta = {
     kuori,
+    kotelo,
     pallo,
     kamera,
+    merkit,
+    reitit,
+    heraa,
+    asteet: pallonAsteet,
     paivita,
+    ruutupiste,
+    merkitseNappulanPaikka,
+    /** Siirron kuljettaja (ui.nappulanKuljettaja → js/pallolauta/siirto.js). */
+    nappulanKuljettaja: (player, valinnat) => luoNappulanKuljettaja({
+      ui, lauta, player, ...valinnat,
+    }),
     napautaKaupunki: (id) => napautaKaupunki(kaupunkiId.get(id)),
+    napautaKohde: (key) => napautaKohde(merkit.kohteet().find((k) => k.key === key)),
     kaupunki: (id) => kaupunkiId.get(id) ?? null,
     paalla: () => !kuori.hidden,
-    nayta: () => { kuori.hidden = false; mitoita(); tahdistaLepo(); },
-    piilota: () => { kuori.hidden = true; tahdistaLepo(); },
+    nayta: () => { kuori.hidden = false; mitoita(); noppaKuoreen(); tahdistaLepo(); },
+    piilota: () => { kuori.hidden = true; noppaTakaisin(); tahdistaLepo(); },
     pura: () => {
       kokovahti.disconnect();
       lehtivahti?.disconnect();
       document.removeEventListener('visibilitychange', tahdistaLepo);
       kamera.pysaytaKameraAjo();
       eleet.pura();
+      noppaTakaisin();
       pallo._destructor?.();
       kuori.remove();
       palaa.remove();

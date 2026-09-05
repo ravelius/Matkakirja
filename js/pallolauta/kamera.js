@@ -39,7 +39,7 @@
  * ── TRAPETSI, EI CUBIC.INOUT ──────────────────────────────────────
  *
  * Globe.gl:n oma pointOfView-tween on Cubic.InOut eikä tunne SIIRRON
- * KOREOGRAFIAN trapetsia (js/ui.js siirtoajonPehmennys), eikä sitä voi
+ * KOREOGRAFIAN trapetsia (js/siirtokoreografia.js siirtoajonPehmennys), eikä sitä voi
  * keskeyttää kirjaamalla välivaihe. Ajo lasketaan siksi itse kehys
  * kerrallaan requestAnimationFramessa ja kirjoitetaan pointOfView(pov, 0)
  * — sama koodi kuin pallon liuku (js/pallo.js). Korkeus interpoloidaan
@@ -49,7 +49,9 @@
  */
 
 import { laudaltaAsteiksi, projisoiLaudalle } from '../fokusmitat.js';
-import { siirtoajonPehmennys } from '../ui.js';
+import { pixelOf } from '../rules.js';
+import { siirtoajonPehmennys } from '../siirtokoreografia.js';
+import { sovitaAjonKesto } from '../kartta.js';
 
 /** Globe.gl:n kameran oletusavauskulma (astetta, pystysuunta). */
 export const PALLO_FOV = 50;
@@ -68,6 +70,13 @@ export const PALLOLAUDAN_LAUTA = 'maailmankartta';
  * (~7°, ~1300 px Z8:aa) terävänä. Kalibroidaan omistajan laitteella.
  */
 export const PALLOLAUDAN_SAAPUMISLEVEYS = 240;
+/**
+ * Siirtonäkymän lähin leveys (siirtoZoomiKerroin): ennakkozoomi vie
+ * SIIRTOZOOMIN_LAHENNYS kertaa lähemmäs, mutta ei tämän alle. Puolet
+ * saapumisleveydestä eli yksi lähennys saapumisnäkymästä (~3,6°, Z8 noin
+ * 1,8× venytettynä iPhonen dpr 3:lla) — siitä eteenpäin laatat sumenevat.
+ */
+export const PALLOLAUDAN_SIIRTOLEVEYS = 120;
 /** Sukellus kaupunkiin: sama kesto kuin valikkopallon sukelluksella. */
 export const PALLOKAMERAN_AJO_MS = 1400;
 
@@ -190,8 +199,16 @@ export function luoPallokamera({
   /**
    * Ajaa kameran kohteeseen. Palauttaa lupauksen: true perillä, false jos
    * ajo keskeytyi tai ei lähtenyt.
+   *
+   * `sovita` (kartta.js sovitaAjonKesto, omistaja 3.9.2026: ajot
+   * pehmeästi peräkkäin): kesto venyy liikkeen mukaan — +50 % per
+   * zoomioktaavi ja +50 % per ruudullinen panorointi, katto 1800 ms —
+   * täsmälleen samalla kaavalla kuin tasokartalla, jotta ennakkozoomi
+   * ja kohdesovitus kestävät pallolla saman kuin kartalla.
    */
-  const ajaKamera = (kohde, { kesto = PALLOKAMERAN_AJO_MS, pehmennys = siirtoajonPehmennys } = {}) => {
+  const ajaKamera = (kohde, {
+    kesto = PALLOKAMERAN_AJO_MS, pehmennys = siirtoajonPehmennys, sovita = false,
+  } = {}) => {
     if (ui?.dead) return Promise.resolve(false);
     const maali = kameranKohde(kohde);
     if (!maali) return Promise.resolve(false);
@@ -211,8 +228,14 @@ export function luoPallokamera({
       pallo.pointOfView(maali, 0);
       return Promise.resolve(true);
     }
+    if (sovita) {
+      // Panorointi ruudullisina: kulmamatka suhteessa lähtönäkymän
+      // leveyteen asteina (sama mitta kuin kartan matka / paneW).
+      const nakyvaAsteina = asteetLeveydesta(leveysKorkeudesta(alku.altitude), laudanLeveys);
+      kesto = sovitaAjonKesto(kesto, suhde, Math.hypot(dLat, dLng) / Math.max(1e-6, nakyvaAsteina));
+    }
     return new Promise((valmis) => {
-      const oma = { kehys: 0, valmis, nyt: { ...alku }, alkuhetki: performance.now() };
+      const oma = { kehys: 0, valmis, nyt: { ...alku }, alkuhetki: performance.now(), kesto };
       ajo = oma;
       const askel = (hetki) => {
         if (ajo !== oma) return;
@@ -237,18 +260,34 @@ export function luoPallokamera({
     });
   };
 
-  /** Kerroin nykyisestä leveydestä: `lahennys` kertaa lähemmäs. */
+  /**
+   * Kerroin nykyisestä leveydestä: `lahennys` kertaa lähemmäs.
+   *
+   * KATTO ON ABSOLUUTTINEN, kuten tasokartalla (js/kartta.js
+   * siirtoZoomiKerroin, SIIRTONAKYMAN_LAHIN_KERROIN): kerroin on
+   * suhteellinen, joten ilman kattoa jokainen heitto veisi puolet
+   * lähemmäs ja kolmen siirron jälkeen pallo olisi laattojen
+   * tarkkuusrajassa. Siirtonäkymä ei mene PALLOLAUDAN_SIIRTOLEVEYTTÄ
+   * lähemmäs — eikä koskaan ULOS pelaajan omasta lähikuvasta.
+   */
   const siirtoZoomiKerroin = (lahennys = 1) => {
     const tila = kameranTila();
     const leveys = tila?.leveys ?? laudanLeveys;
-    return laudanLeveys / (leveys / Math.max(0.01, lahennys));
+    const katto = Math.max(leveys / Math.max(0.01, lahennys), PALLOLAUDAN_SIIRTOLEVEYS);
+    return laudanLeveys / Math.min(leveys, katto);
   };
 
-  /** Nykyisen kaupungin ylle saapumisnäkymään (kesto 0 = heti). */
+  /**
+   * Pelaajan paikan ylle saapumisnäkymään (kesto 0 = heti). Paikka on
+   * kaupunki tai reitin välipiste — sama pixelOf kuin tasokartalla.
+   */
   const kotiin = ({ kesto = 0 } = {}) => {
-    const city = ui?.game?.cityOf?.();
-    if (!city || !Number.isFinite(city.x)) return Promise.resolve(false);
-    return ajaKamera({ x: city.x, y: city.y, leveys: PALLOLAUDAN_SAAPUMISLEVEYS }, { kesto });
+    const { game } = ui ?? {};
+    const pos = game?.player?.pos;
+    if (!pos || !game.board) return Promise.resolve(false);
+    const kohta = pixelOf(game.board, pos);
+    if (!Number.isFinite(kohta?.x)) return Promise.resolve(false);
+    return ajaKamera({ x: kohta.x, y: kohta.y, leveys: PALLOLAUDAN_SAAPUMISLEVEYS }, { kesto });
   };
 
   return {
@@ -260,5 +299,15 @@ export function luoPallokamera({
     siirtoZoomiKerroin,
     kameranKohde,
     kotiin,
+    /**
+     * Kesken oleva ajo mittausta varten (savuke-siirtokoreografia
+     * `--lauta pallo`): sama muoto kuin Kartta.kameraAjo — nykyinen
+     * kehys laudan yksiköissä, kesto ja alkuhetki. Null, kun ajoa ei ole.
+     */
+    get kameraAjo() {
+      if (!ajo?.nyt) return null;
+      const kohta = projisoiLaudalle(lauta, ajo.nyt.lng, ajo.nyt.lat);
+      return { nyt: { x: kohta?.x, y: kohta?.y }, kesto: ajo.kesto, alkuhetki: ajo.alkuhetki };
+    },
   };
 }
