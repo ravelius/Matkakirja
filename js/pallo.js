@@ -72,8 +72,22 @@ export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}-nostot`;
 export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`;
 /** Syvin taso, jonka peli käyttää — luettelo (laatat.json) voi rajata matalammaksi. */
 export const PALLO_LAATTATASO_MAX = 8;
+/*
+ * SYVIN TASO VARAKANSIOSTA, KUNNES NOSTOSARJA ON POLTETTU (omistaja
+ * 5.9.2026: *"kartta näkyi ennen palloa jo 7 tasolla paljon tarkemmin.
+ * Eikä tarkennu vaikka odottaa"*). Tasokartan pyramidin z7 vastaa
+ * Mercatorin tasoa 8, joten pallo oli saapumisnäkymässä puolet
+ * tasokartan tarkkuudesta niin kauan kuin nostosarjassa oli vain
+ * tasot 0–7. Pohjasarjassa (ilman nostoja) taso 8 on jo kokonaan
+ * ämpärissä, joten se haetaan sieltä: nimet ja nostot ovat tasolla 8
+ * elävinä (js/pallolauta/nimet.js, nostot.js) eivätkä laatoissa, joten
+ * kuva on sama vailla painettuja nimiä. Kun nostosarjan taso 8 on
+ * valmis, PALLO_SYVA_TASO nollataan ja kaikki tulee yhdestä kansiosta.
+ */
+export const PALLO_LAATAT_SYVA = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAVERSIO}/`;
+export const PALLO_SYVA_TASO = 8;
 /** Laatan osoite laattamoottorille (slippy map -koordinaatit). */
-export const pallonLaatta = (x, y, l) => `${PALLO_LAATAT}${l}/${x}/${y}.jpg`;
+export const pallonLaatta = (x, y, l) => `${PALLO_SYVA_TASO && l >= PALLO_SYVA_TASO ? PALLO_LAATAT_SYVA : PALLO_LAATAT}${l}/${x}/${y}.jpg`;
 
 let laatatLupaus = null;
 /** Pallon laattaluettelo (laatat.json), kun se on saatu; muuten null. */
@@ -103,7 +117,10 @@ export function laatatSaatavilla(haku = globalThis.fetch) {
 /** Syvin käytettävä taso: pelin katto tai luettelon katto, kumpi on matalampi. */
 export function laattatasoMax(laatat) {
   const luettelo = Number(laatat?.tasot?.max);
-  return Number.isFinite(luettelo) ? Math.min(PALLO_LAATTATASO_MAX, luettelo) : PALLO_LAATTATASO_MAX;
+  if (!Number.isFinite(luettelo)) return PALLO_LAATTATASO_MAX;
+  // Varakansio kantaa syvimmän tason, vaikka nostosarjan luettelo ei vielä.
+  const syva = PALLO_SYVA_TASO ? Math.max(luettelo, PALLO_SYVA_TASO) : luettelo;
+  return Math.min(PALLO_LAATTATASO_MAX, syva);
 }
 
 /** Saatu laattaluettelo (testit ja pallolauta) tai null. */

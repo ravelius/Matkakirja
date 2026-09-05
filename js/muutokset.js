@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1574, teksti: 'Pallo: taso 8 varakansiosta, paivakirja laatikossa' },
   { v: 1573, teksti: 'Sivunkaanto: koko sivu kaantyy, ei nurkka' },
   { v: 1572, teksti: 'Matkakirja ylanurkkaan myos pallolla' },
   { v: 1571, teksti: 'Valikko vierittyy; etusivupallo uusi poltto' },

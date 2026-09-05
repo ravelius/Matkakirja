@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1573';
+const CACHE = 'matkakirja-2026-08-09.1574';
 const SHELL = [
   './',
   './index.html',
@@ -1468,6 +1468,9 @@ const LAATTAPOLKU = '/julisteet/pallo/laatat/';
  * tests/sw.test.mjs vartioi, että luvut ovat samat.
  */
 const LAATTAKANSIO = '2026-09-03a-nostot';
+/** Varakansio syvimmälle tasolle (js/pallo.js PALLO_LAATAT_SYVA), kunnes nostosarja kattaa sen. */
+const LAATTAKANSIO_SYVA = '2026-09-03a';
+const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA];
 /** Laattoja korissa enintään (≈ 30 Mt; yksi laatta 8–14 kt). */
 const LAATTAKATTO = 3000;
 /** Kerralla poistettava erä: yksi keys()-ajo riittää sadoiksi laatoiksi. */
@@ -1578,7 +1581,7 @@ async function esilataaLaatat(osoitteet, portti) {
   const alku = Date.now();
   const kori = await caches.open(LAATTACACHE);
   const jono = (Array.isArray(osoitteet) ? osoitteet : [])
-    .filter((u) => typeof u === 'string' && u.includes(`${LAATTAPOLKU}${LAATTAKANSIO}/`))
+    .filter((u) => typeof u === 'string' && LAATTAKANSIOT.some((k) => u.includes(`${LAATTAPOLKU}${k}/`)))
     .slice(0, LAATTAKATTO);
   let seuraava = 0;
   let uusia = 0;
@@ -1613,9 +1616,9 @@ async function esilataaLaatat(osoitteet, portti) {
 async function siivoaVanhatLaatat() {
   const kori = await caches.open(LAATTACACHE).catch(() => null);
   if (!kori) return;
-  const nykyinen = `${LAATTAPOLKU}${LAATTAKANSIO}/`;
+  const nykyiset = LAATTAKANSIOT.map((k) => `${LAATTAPOLKU}${k}/`);
   const avaimet = await kori.keys();
-  const vanhat = avaimet.filter((p) => !new URL(p.url).pathname.includes(nykyinen));
+  const vanhat = avaimet.filter((p) => !nykyiset.some((n) => new URL(p.url).pathname.includes(n)));
   await Promise.all(vanhat.map((p) => kori.delete(p).catch(() => {})));
   laattojaKorissa = avaimet.length - vanhat.length;
 }

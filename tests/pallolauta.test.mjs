@@ -409,3 +409,13 @@ test('matkakirja on vasemmassa ylänurkassa myös pallolla (omistaja 5.9.2026)',
   assert.match(lauta, /ui\.factCard\.dataset\.corner = 'tl';/);
   assert.match(lue('../index.html'), /class="card fact-card" data-corner="tl"/, 'HTML:n oletusnurkka on sama kuin kartan päätös');
 });
+
+test('päiväkirja on laatikossa ja kutistuu vedosta myös pallolla (omistaja 5.9.2026)', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /doc\.body\.classList\.add\('pallolauta-paalla'\);/);
+  assert.match(lauta, /doc\.body\.classList\.remove\('pallolauta-paalla'\);/);
+  assert.match(lauta, /ui\.asetaPaivakirjanKoko\?\.\(true\);/);
+  const css = lue('../css/styles.css');
+  assert.match(css, /body\.pallolauta-paalla \.fact-card::before \{/);
+  assert.match(css, /body\.pallolauta-paalla \.fact-card\.pieni::before \{ opacity: 0; \}/);
+});
