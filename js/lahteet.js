@@ -294,6 +294,12 @@ export const LAHTEET = [
         tekija: 'Pelin omaa aineistoa (js/sound.js)',
         lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',
       },
+      {
+        nimi: 'Tuna 1.1.3 — Web Audio -efektiketjut (megafoni, radio, puhelin, '
+          + 'luola, ulkoilma; js/tehosteketju.js)',
+        tekija: 'DinahMoe AB & Oskar Eriksson, github.com/Theodeus/tuna',
+        lisenssi: 'MIT — lisenssiteksti kirjaston rinnalla (vendor/tuna-1.1.3.LICENSE.txt)',
+      },
     ],
   },
   {
@@ -323,6 +329,49 @@ export const LAHTEET = [
           + 'väittämät, tapahtumakortit, pulmat ja tiivistelmät',
         tekija: 'Sami Reivinen / VVI',
         lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',
+      },
+    ],
+  },
+  /*
+   * VALMIIT KIRJASTOT (Raamattu, VALMIIT KIRJASTOT: STPAGEFLIP ENSIN,
+   * sääntö 3: lisenssiteksti ämpäriin kirjaston rinnalle ja maininta
+   * lähdesivulle — pilari 5). Kirjastot ladataan pelin ämpärin
+   * vendor/-polusta, ja MIT-lisenssin teksti on siellä tiedostossa
+   * <kirjasto>.LICENSE.txt. Yksi rivi per kirjasto, jotta rinnakkaiset
+   * lisäykset yhdistyvät riveittäin.
+   */
+  {
+    otsikko: 'Avoimen lähdekoodin kirjastot',
+    johdanto: 'Pelin ämpärin vendor/-polusta ladattavat kirjastot ja niiden lisenssit.',
+    rivit: [
+      {
+        nimi: 'Vivus 0.4.6 — musteviiva piirtyy (SVG-polkujen piirtoanimaatio)',
+        tekija: 'maxwellito',
+        lisenssi: 'MIT',
+        huom: 'Tarkistettu 5.9.2026 (vendor/vivus-0.4.6.min.LICENSE.txt).',
+      },
+      {
+        nimi: 'Rough.js 4.6.6 — käsin piirretyn näköiset kehykset ja viivat',
+        tekija: 'Preet Shihn',
+        lisenssi: 'MIT',
+        huom: 'Tarkistettu 5.9.2026 (vendor/rough-4.6.6.LICENSE.txt).',
+      },
+      {
+        nimi: 'rough-notation 0.5.1 — kynän alleviivaus ja ympyröinti tekstiin',
+        tekija: 'Preet Shihn',
+        lisenssi: 'MIT',
+        huom: 'Tarkistettu 5.9.2026 (vendor/rough-notation-0.5.1.iife.LICENSE.txt).',
+      },
+      {
+        nimi: 'd3-geo 3.1.1 ja d3-geo-projection 4.0.0 — karttaprojektiot: '
+          + 'maailmanaineisto pelin laudalle, isokaaret ja etäisyydet (js/geo.js)',
+        tekija: 'Mike Bostock',
+        lisenssi: 'ISC',
+      },
+      {
+        nimi: 'topojson-client 3.1.0 — TopoJSON-aineiston purku kartalle',
+        tekija: 'Mike Bostock',
+        lisenssi: 'ISC',
       },
     ],
   },

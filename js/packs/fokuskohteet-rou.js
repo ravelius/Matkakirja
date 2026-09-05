@@ -511,6 +511,8 @@ export const FOKUSKOHTEET_ROU = [
   {
     id: 'turda',
     nimi: 'Turdan suolakaivos',
+    // Puhujan akustiikka kortilla (js/tehosteketju.js): kaivoksen kaiku.
+    akustiikka: 'luola',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'tekniikka',
     tyyppi: 'muu',

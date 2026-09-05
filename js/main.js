@@ -2,6 +2,7 @@
 
 import { MUUTOKSET } from './muutokset.js';
 import { kehittajanKerroinTeksti, saadaKehittajanKerrointa } from './kehittajan-voimat.js';
+import { KUUNTELUN_ASKEL_S, TEHOSTEKETJUT, kuunteleTehosteketjut } from './tehosteketju.js';
 import { Game } from './game.js';
 import { UI } from './ui.js';
 import {
@@ -10,6 +11,8 @@ import {
 } from './ui-apurit.js';
 // Laitemittarin muistettu kytkin (hammasratasvalikko = ?mittari=1/0).
 import { asetaMittari, mittariPaalla } from './karttamittari.js';
+// Ilmepaketti (omistaja 5.9.2026): kehittäjäkytkin ja kirjastojen esilataus.
+import { asetaIlmePaketti, esilataaIlme, ilmePakettiPaalla } from './ilme.js';
 import { sfx } from './sound.js';
 import { packById } from './pack.js';
 import {
@@ -117,7 +120,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1560';
+const APP_VERSION = '2026-08-09.1561';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1318,6 +1321,24 @@ const mittariNappi = document.getElementById('kehittaja-mittari-btn');
  */
 const pallolautaNappi = document.getElementById('kehittaja-pallolauta-btn');
 /*
+ * ILMEPAKETTI (omistaja 5.9.2026, kartoituksen TOP 6 kohta 6): musteviiva,
+ * karhea kehys ja kynäkorostus. Kytkin kääntää kolme lippua kerralla
+ * (js/ilme.js asetaIlmePaketti) eikä vaadi sivulatausta: liput luetaan
+ * jokaisessa piirrossa, joten seuraava reitti, kortti ja selite
+ * noudattavat uutta tilaa. Kirjastot esiladataan joutilaana, jotta jo
+ * ensimmäinen reitti piirtyy ilmeen kanssa — mutta vasta sivun
+ * load-tapahtuman JÄLKEEN: skriptitagi ennen sitä siirtäisi loadia
+ * (ja palvelutyöntekijän rekisteröintiä) niin kauan kuin ämpäri
+ * vastaa hitaasti tai ei lainkaan.
+ */
+const ilmeNappi = document.getElementById('kehittaja-ilme-btn');
+const esilataaIlmeJoutilaana = () => {
+  const joutilaana = globalThis.requestIdleCallback ?? ((f) => setTimeout(f, 2500));
+  joutilaana(() => { esilataaIlme().catch(() => {}); });
+};
+if (document.readyState === 'complete') esilataaIlmeJoutilaana();
+else window.addEventListener('load', esilataaIlmeJoutilaana, { once: true });
+/*
  * KEHITTÄJÄN VOIMAKKUUSSÄÄTIMET (omistaja 3.9.2026): taustaääni ja
  * taustamusiikki, +/- askelittain pelin nykyiseen tasoon nähden.
  * Kerroin ja tallennus ovat js/kehittajan-voimat.js:ssä; ambienssi ja
@@ -1414,6 +1435,16 @@ function paivitaKehittajaValikko() {
       : 'Pallolauta on pois: pelin lauta on tasokartta — kytke päälle pelataksesi '
         + 'karttapallolla (sivu ladataan uudestaan; sama kuin ?lauta=pallo)';
   }
+  const ilme = ilmePakettiPaalla();
+  merkitseKytkin(ilmeNappi, ilme);
+  if (ilmeNappi) {
+    ilmeNappi.title = ilme
+      ? 'Ilmepaketti on PÄÄLLÄ: reitti piirtyy musteviivana, selitteellä on käsin '
+        + 'piirretty kehys ja pöllön korostus on kynällä — kytke pois nähdäksesi '
+        + 'entisen ilmeen (liput matkakirja-ilme-musteviiva/-karhea/-korostus)'
+      : 'Ilmepaketti on pois: peli näyttää entiseltä — kytke päälle, niin '
+        + 'seuraava reitti, kortti ja selite saavat ilmeen (ei sivulatausta)';
+  }
   merkitseSiirtymamusiikki();
   if (siirtymaMusiikkiNappi) {
     siirtymaMusiikkiNappi.title = 'Pelin omat musiikkiraidat: löytyykö raita ämpäristä '
@@ -1499,6 +1530,15 @@ pallolautaNappi?.addEventListener('click', () => {
   setTimeout(() => { location.href = osoite.href; }, 350);
 });
 
+ilmeNappi?.addEventListener('click', () => {
+  const halutaan = !ilmePakettiPaalla();
+  asetaIlmePaketti(halutaan);
+  paivitaKehittajaValikko();
+  naytaKehittajaVihje(halutaan
+    ? 'Ilmepaketti päälle: näkyy seuraavassa reitissä, kortissa ja selitteessä.'
+    : 'Ilmepaketti pois: uudet piirrot ilman musteviivaa, kehystä ja kynää.');
+});
+
 siirtymaMusiikkiNappi?.addEventListener('click', () => {
   naytaKehittajaVihje('Kysytään raitoja…');
   tarkistaSiirtymaraidat().then((tila) => {
@@ -1558,6 +1598,24 @@ polloGenerointiNappi?.addEventListener('click', () => {
     'ei-palvelinta': 'Pöllöpalvelinta ei ole kytketty.',
     kesken: 'Edellinen vastaus on kesken.',
   }[tulos] ?? 'Generointi ei lähtenyt.');
+});
+
+/*
+ * TEHOSTEKETJUJEN KUUNTELU (omistajan päätös 5.9.2026, Tuna 1.1.3):
+ * testiääni ensin suoraan ja sitten jokaisen ketjun läpi, jotta ketjut
+ * voi kuunnella iPhonella ratasvalikosta. Kirjasto latautuu laiskasti
+ * ämpäristä; ilman sitä soi vain suora ääni ja vihje kertoo syyn.
+ */
+document.getElementById('kehittaja-tehosteketjut-btn')?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  naytaKehittajaVihje('Ladataan tehosteketjuja…');
+  kuunteleTehosteketjut().then((tulos) => {
+    naytaKehittajaVihje({
+      ok: `Suora → ${TEHOSTEKETJUT.join(' → ')} (${String(KUUNTELUN_ASKEL_S).replace('.', ',')} s välein)`,
+      'aanet-pois': 'Pelin äänet ovat pois — kytke ne päälle asetuksista.',
+      'ei-kirjastoa': 'Tuna ei latautunut (offline tai yhden tiedoston versio): vain suora ääni.',
+    }[tulos] ?? 'Kuuntelu ei lähtenyt.');
+  });
 });
 
 paivitaKehittajaValikko();

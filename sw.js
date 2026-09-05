@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1560';
+const CACHE = 'matkakirja-2026-08-09.1561';
 const SHELL = [
   './',
   './index.html',
@@ -64,6 +64,9 @@ const SHELL = [
   './js/pollo.js',
   './js/livia.js',
   './js/puhe.js',
+  // Tehosteketjut (Tuna, 5.9.2026): moduuli kuuluu kuoreen, kirjasto
+  // itse tulee ämpärin vendor/-polusta ja säilyy VENDORCACHE-korissa.
+  './js/tehosteketju.js',
   './js/puhe-oletukset.js',
   './js/pollo-haku.js',
   './js/pollopoiminnat.js',
@@ -81,6 +84,9 @@ const SHELL = [
   './js/lahteet.js',
   './js/wiki.js',
   './js/media.js',
+  // Ilmepaketti (js/ilme.js): musteviiva, karhea kehys, kynäkorostus.
+  './js/ilme.js',
+  './js/geo.js',
   './js/saa.js',
   './js/maakayrat.js',
   './js/maatummennus.js',
@@ -1384,6 +1390,20 @@ const OMA_VALOKUVA = (osoite) => osoite.pathname.includes('/assets/valokuvat/');
  */
 const AANICACHE = 'matkakirja-aanet-v1';
 
+/*
+ * Valmiiden kirjastojen kori (Raamattu 5.9.2026 "VALMIIT KIRJASTOT":
+ * kirjasto tulee ämpärin vendor/-polusta, ei reposta). Globe.gl
+ * (js/pallo.js), Tuna (js/tehosteketju.js), ilmepaketti Vivus +
+ * Rough.js + rough-notation (js/ilme.js) ja seuraavat haetaan
+ * laiskasti, kun niitä ensi kerran tarvitaan, ja säilyvät sen jälkeen
+ * offline. Oma kori, jota versionvaihto ei tyhjennä: tiedostonimessä on
+ * versio (globe.gl-2.46.2, tuna-1.1.3), joten sama osoite on aina sama
+ * sisältö (ämpäri lähettää Cache-Control: immutable), eikä pelin
+ * versio muuta sitä. Uusi kirjastoversio on uusi osoite, ja vanha jää
+ * koriin harmittomana, kunnes selain siivoaa kiintiötä.
+ */
+const VENDORCACHE = 'matkakirja-vendor-v1';
+
 /**
  * Osittaisvastaus (206) välimuistista noudetusta kokonaisesta äänestä.
  *
@@ -1469,7 +1489,7 @@ self.addEventListener('activate', (event) => {
     caches
       .keys()
       .then((keys) => Promise.all(
-        keys.filter((k) => k !== CACHE && k !== KUVACACHE && k !== AANICACHE
+        keys.filter((k) => k !== CACHE && k !== KUVACACHE && k !== AANICACHE && k !== VENDORCACHE
           // Lukijaäänen pysyvät säilöt (js/puhe.js) eivät ole tämän
           // workerin omia — siivous ei saa tuhota niitä versionvaihdossa.
           && !k.startsWith('matkakirja-puhe-')).map((k) => caches.delete(k))))
@@ -1579,6 +1599,31 @@ self.addEventListener('fetch', (event) => {
      */
     if (osoite.hostname.endsWith('.r2.dev') && /^\/(?:audio|aanet)\//.test(osoite.pathname)) {
       event.respondWith(aaniPeilista(event.request));
+      return;
+    }
+    /*
+     * Valmiit kirjastot (vendor/): välimuisti ensin, talletus
+     * ensimmäisellä latauksella — ks. VENDORCACHE. Pyyntö menee
+     * sellaisenaan: moduulituonti (js/tehosteketju.js import()) on
+     * CORS-pyyntö ja saa tavallisen vastauksen, <script>-lataus
+     * (js/pallo.js) no-cors-pyyntö ja opaakin vastauksen; kumpikin
+     * kelpaa koriin (vain 206 ei kelpaa), ja koriin kerran pantu
+     * tavallinen vastaus kelpaa myös no-cors-pyynnölle. Jos
+     * kirjastoa ei saada, virhe palaa kutsujalle, joka jatkaa ilman
+     * kirjastoa (laiska lataus + virhehaara).
+     */
+    if (osoite.hostname.endsWith('.r2.dev') && osoite.pathname.startsWith('/vendor/')) {
+      event.respondWith(
+        caches.open(VENDORCACHE).then(async (kori) => {
+          const osuma = await kori.match(event.request.url);
+          if (osuma) return osuma;
+          const vastaus = await fetch(event.request).catch(() => null);
+          if (vastaus && (vastaus.ok || vastaus.type === 'opaque')) {
+            kori.put(event.request.url, vastaus.clone());
+          }
+          return vastaus ?? Response.error();
+        }),
+      );
       return;
     }
     return;

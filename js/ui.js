@@ -91,6 +91,8 @@ import {
 } from './natiivi.js';
 // Matkalaukun alalaidan "Unohdettu aarre": tekijänoikeus ja lähdeluettelo.
 import { LAHTEET, LAHTEITA, PELI } from './lahteet.js';
+// Ilmepaketti (omistaja 5.9.2026): matkareitti piirtyy musteviivana.
+import { piirraMusteviiva } from './ilme.js';
 import { fetchArticle, fetchImages, suurennusportaat } from './wiki.js';
 // HUOM: tuonnit ilman aliasta. Yhden tiedoston versio (tools/build-standalone.mjs)
 // niputtaa moduulit samaan näkyvyysalueeseen ja poistaa import-rivit, joten alias
@@ -7024,7 +7026,8 @@ export class UI {
     if (this.matkareittiAvain === avain) return;
     this.matkareittiAvain = avain;
     kerros.textContent = '';
-    if (!avain) return;
+    // Tyhjä kerros nollaa musteviivan tunnisteen: seuraava ilmestyminen piirtyy.
+    if (!avain) { piirraMusteviiva(kerros); return; }
     const skaala = this.nakyvaAlue()?.skaala || 1;
     const lahtoKaupunki = lentoLahto ? game.board.cityById.get(lentoLahto) : null;
     for (const kohdeId of lahtoKaupunki ? lennot : []) {
@@ -7076,6 +7079,13 @@ export class UI {
         }, kerros);
       }
     }
+    /*
+     * MUSTEVIIVA (ilmepaketti, omistaja 5.9.2026): uudet reitit piirtyvät
+     * kynällä alusta loppuun (js/ilme.js, Vivus). Kertaluonteinen ja vain
+     * uusille poluille; ilman kirjastoa tai reduced motionilla reitti on
+     * heti valmis kuten ennenkin. Kamera ja linssikerros eivät osallistu.
+     */
+    piirraMusteviiva(kerros);
   }
 
   /**

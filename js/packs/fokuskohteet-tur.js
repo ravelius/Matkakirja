@@ -237,6 +237,9 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'kappadokia',
     nimi: 'Kappadokia',
+    // Puhujan akustiikka kortilla (js/tehosteketju.js): kortin teksti on
+    // kallioon hakatuista kirkoista ja maanalaisista kaupungeista.
+    akustiikka: 'luola',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
     tyyppi: 'muu',
