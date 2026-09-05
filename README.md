@@ -404,6 +404,17 @@ pakettien otsikkokommentit).
 | Peliäänet ja avaustekstin lukuääni (`efekti-*.mp3`, `intro-puhe.mp3`) | Tuotettu ElevenLabsilla | Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy (ElevenLabsin käyttöehdot 4(c): tuotos jää tekijälle) |
 | Syntetisoidut tehosteet ja ambienssi (Web Audio) | Sami Reivinen / VVI | Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy |
 
+### Ohjelmakirjastot
+
+Valmiit kirjastot ladataan ämpärin `vendor/`-polusta vasta tarvittaessa
+(Raamattu 5.9.2026: VALMIIT KIRJASTOT); lisenssiteksti kulkee kirjaston
+rinnalla samassa kansiossa, yhden tiedoston versio jää ilman niitä.
+
+| Kirjasto | Tekijä | Lisenssi |
+| --- | --- | --- |
+| StPageFlip 2.0.7 (`page-flip`) — lehden sivunkääntö | Nodlik (Oleg Litovski), github.com/Nodlik/StPageFlip | MIT |
+| Globe.gl 2.46.2 (three.js mukana) — karttapallo ja pallolauta | Vasco Asturiano (vasturiano), github.com/vasturiano/globe.gl | MIT |
+
 ### Tekstit
 
 | Aineisto | Tekijä / julkaisija | Lisenssi |

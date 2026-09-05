@@ -34,6 +34,9 @@ const SHELL = [
   './js/kohtaamiskuvat.js',
   './js/opas.js',
   './js/lehti.js',
+  // Sivunkääntö (5.9.2026): teatteri kuuluu SHELLiin; itse kirjasto
+  // (page-flip) tulee ämpärin vendor/-polusta ja säilyy VENDORCACHEssa.
+  './js/sivunkaanto.js',
   './js/ehdotukset.js',
   './js/kuvavinkki.js',
   './js/havainnekuva.js',
@@ -1391,6 +1394,17 @@ const OMA_VALOKUVA = (osoite) => osoite.pathname.includes('/assets/valokuvat/');
  * kuullut luennat kaikilla pelaajilla turhaan.
  */
 const AANICACHE = 'matkakirja-aanet-v1';
+/*
+ * VALMIIT KIRJASTOT ÄMPÄRIN vendor/-POLUSTA (Raamattu 5.9.2026,
+ * VALMIIT KIRJASTOT: STPAGEFLIP ENSIN): page-flip ja Globe.gl ladataan
+ * <script>-tagilla vasta tarvittaessa (js/sivunkaanto.js, js/pallo.js).
+ * Tiedostonimi kantaa versionumeron, joten sisältö ei koskaan muutu
+ * saman nimen alla — kori on pysyvä eikä tyhjene versionvaihdossa, ja
+ * kerran ladattu kirjasto toimii lentokoneessa. Skriptin oma pyyntö on
+ * no-cors (opaakki vastaus ei kelpaa koriin), joten nouto tehdään
+ * cors-tilassa kuten kuvilla, ja tavallinen fetch jää varareitiksi.
+ */
+const VENDORCACHE = 'matkakirja-vendor-v1';
 
 /*
  * Valmiiden kirjastojen kori (Raamattu 5.9.2026 "VALMIIT KIRJASTOT":

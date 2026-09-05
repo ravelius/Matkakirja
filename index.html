@@ -208,6 +208,16 @@
               <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18c3-6 6-9 9.5-11.5l2.5 2.5C13.5 12.5 10.5 15.5 4.5 18.5z"/><path d="M15.5 4.5l4 4"/><path d="M4 20h16"/></svg></span>
               <span class="kehittaja-kytkin-nimi">ilme</span>
               <span class="kehittaja-kytkin-tila">päällä</span>
+            <!-- Sivunkääntö: lehti kääntyy kuin kirja (StPageFlip, omistaja
+                 5.9.2026 "Tee 2. Ensin"). Vipu on paluuoptio vanhaan
+                 sivupinoon (js/sivunkaanto.js, localStorage
+                 matkakirja-sivunkaanto=0); oletus päällä, jos kirjasto
+                 latautuu ämpäristä. -->
+            <button id="kehittaja-sivunkaanto-btn" class="ghost kehittaja-kytkin"
+                    type="button" aria-pressed="false">
+              <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h9v14H4z"/><path d="M13 5c3 0 5 1 7 3v11c-2-2-4-3-7-3"/><path d="M13 19c2-2 4-3 7-3"/></svg></span>
+              <span class="kehittaja-kytkin-nimi">sivunkääntö</span>
+              <span class="kehittaja-kytkin-tila">pois</span>
             </button>
             <button id="kehittaja-pollo-btn" class="ghost kehittaja-kytkin"
                     type="button">
