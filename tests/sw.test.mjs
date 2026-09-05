@@ -236,8 +236,15 @@ test('välimuistin nimi seuraa sovelluksen versiota', () => {
  * jonka poisto rikkoisi kuvat uudelleen.
  */
 test('peilikuvalla on cors-noudon jälkeen varareitti ilman corsia', () => {
-  const kohta = sw.indexOf('r2.dev');
-  assert.ok(kohta > 0, 'sw.js ei enää tunne peiliä — onko ehto poistettu?');
+  /*
+   * Ikkuna alkaa KUVAHAARASTA eikä ensimmäisestä r2.dev-maininnasta
+   * (5.9.2026): ämpäriin osoittavia haaroja on nyt kolme (kuvat, äänet,
+   * vendor-kirjastot), ja ensimmäinen maininta saattaa olla jonkin muun
+   * haaran. Testin kohde on koko ajan sama kuvahaara.
+   */
+  const haara = sw.indexOf('const kuvalahde');
+  const kohta = sw.indexOf('r2.dev', haara);
+  assert.ok(haara > 0 && kohta > 0, 'sw.js ei enää tunne peiliä — onko ehto poistettu?');
   const lohko = sw.slice(kohta, kohta + 3200);
   const rivit = lohko.split('\n').filter((r) => !/^\s*(\*|\/\/|\/\*)/.test(r));
   const corsRivi = rivit.findIndex((r) => /mode:\s*'cors'/.test(r));
@@ -280,4 +287,27 @@ test('yhdistämismerkkejä ei ole jäänyt tiedostoihin', () => {
   }
   assert.deepEqual(loydot, [],
     'näihin tiedostoihin on jäänyt purkamaton yhdistämisristiriita');
+});
+
+/*
+ * VALMIIT KIRJASTOT SÄILYVÄT OMASSA KORISSAAN.
+ *
+ * Raamattu 5.9.2026 ("VALMIIT KIRJASTOT"): kirjasto tulee ämpärin
+ * vendor/-polusta laiskasti ladattuna (js/pallo.js lataaPallokirjasto,
+ * js/geo.js lataaGeo). Ilman omaa koria jokainen julkaisu latauttaisi
+ * kirjastot uudelleen — ne ovat pelin raskaimpia tiedostoja eivätkä
+ * muutu, koska versio on osa osoitetta. Ja jos kori unohtuisi activaten
+ * säästölistalta, versionvaihto tyhjentäisi sen joka kerta: kori olisi
+ * olemassa muttei tekisi mitään.
+ */
+test('vendor-kirjastoilla on oma kori, jota versionvaihto ei tyhjennä', () => {
+  assert.match(sw, /const KIRJASTOCACHE = '[^']+'/,
+    'sw.js:stä puuttuu kirjastojen oma kori (KIRJASTOCACHE)');
+  assert.match(sw, /startsWith\('\/vendor\/'\)/,
+    'sw.js ei tunnista ämpärin vendor/-polkua');
+  assert.match(sw, /KIRJASTOLAHDE\(osoite\)/,
+    'sw.js:n fetch-käsittelijä ei ohjaa vendor-pyyntöä kirjastokoriin');
+  const suoja = sw.match(/keys\s*\.filter\(\(k\) => ([\s\S]*?)\)\s*\.map/);
+  assert.ok(suoja && suoja[1].includes('KIRJASTOCACHE'),
+    'KIRJASTOCACHE puuttuu activaten säästölistalta — versionvaihto tyhjentäisi sen');
 });

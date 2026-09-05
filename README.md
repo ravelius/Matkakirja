@@ -413,6 +413,17 @@ pakettien otsikkokommentit).
 | Internet Archive ja Wikisource — lainaukset, joita Gutenbergissa ei ole | Alkuperäisteosten kirjoittajat | Public domain (teokset) |
 | Pelin omat tekstit: tarina, päiväkirja, kysymykset, väittämät, tapahtumat, pulmat, tiivistelmät | Sami Reivinen / VVI | Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy |
 
+### Ohjelmistokirjastot
+
+Valmiit kirjastot ladataan ämpärin `vendor/`-polusta vasta kun niitä
+tarvitaan; lisenssiteksti on ämpärissä kirjaston vieressä
+(`vendor/<nimi>.LICENSE.txt`).
+
+| Kirjasto | Tekijä | Lisenssi |
+| --- | --- | --- |
+| d3-geo 3.1.1 ja d3-geo-projection 4.0.0 — karttaprojektiot, isokaaret ja etäisyydet (`js/geo.js`) | Mike Bostock | ISC |
+| topojson-client 3.1.0 — TopoJSON-aineiston purku kartalle | Mike Bostock | ISC |
+
 **Lisenssit tarkistettu 27.8.2026.** Aiemmin neljä riviä oli merkitty
 epäselväksi: V-Dem / Our World in Data, Yale Bright Star Catalogue, suorat
 radiolähetykset ja ElevenLabsilla tuotetut äänet. Kaikkien ehdot on nyt haettu

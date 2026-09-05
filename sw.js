@@ -68,6 +68,9 @@ const SHELL = [
   './js/pollo-haku.js',
   './js/pollopoiminnat.js',
   './js/game.js',
+  // Geo-apuri (d3-geo laudalle) on moduuli kuten muutkin; itse kirjasto
+  // tulee ämpärin vendor/-polusta ja saa oman korinsa (KIRJASTOCACHE).
+  './js/geo.js',
   './js/tietajatasot.js',
   './js/tietajagalleria.js',
   './js/minipopup.js',
@@ -1384,6 +1387,48 @@ const OMA_VALOKUVA = (osoite) => osoite.pathname.includes('/assets/valokuvat/');
  */
 const AANICACHE = 'matkakirja-aanet-v1';
 
+/*
+ * VALMIIDEN KIRJASTOJEN KORI (Raamattu 5.9.2026, "VALMIIT KIRJASTOT":
+ * kirjasto tulee ämpärin vendor/-polusta, ei reposta eikä CDN:stä).
+ *
+ * Kirjastot ovat pelin raskaimpia yksittäisiä tiedostoja (Globe.gl noin
+ * 700 kt, d3-geo-projection 60 kt) ja kaikkein muuttumattomimpia:
+ * versio on osa tiedostonimeä, joten sama osoite EI koskaan tarkoita eri
+ * sisältöä. Siksi kori on OMANSA eikä versionvaihdon mukana kaatuva
+ * pääkori — muuten jokainen pelin julkaisu latauttaisi kaikki kirjastot
+ * uudelleen, vaikka niistä ei ole muuttunut tavuakaan. Sama syy kuin
+ * kuvilla ja äänillä.
+ *
+ * Uusi kirjastoversio saa uuden nimen ja tulee koriin sen viereen;
+ * vanha jää roikkumaan, kunnes selain siivoaa kiintiön täyttyessä.
+ * Se on halvempi kuin koko korin kaataminen.
+ */
+const KIRJASTOCACHE = 'matkakirja-kirjastot-v1';
+
+/** Ämpärin vendor/-polku: valmiit kirjastot ja niiden lisenssitekstit. */
+const KIRJASTOLAHDE = (osoite) => osoite.hostname.endsWith('.r2.dev')
+  && osoite.pathname.startsWith('/vendor/');
+
+/**
+ * Kirjasto korista, muuten verkosta ja koriin.
+ *
+ * CORS-nouto kuten peilikuvilla: ämpäri lähettää pelin alkuperälle
+ * Access-Control-Allow-Originin, jolloin vastaus kelpaa koriin. Jos se
+ * ei onnistu (peli avattu muualta, esim. levyltä), pyyntö menee läpi
+ * sellaisenaan eikä sitä säilötä — skripti latautuu silti.
+ */
+async function kirjastoAmparista(pyynto) {
+  const kori = await caches.open(KIRJASTOCACHE);
+  const osuma = await kori.match(pyynto.url);
+  if (osuma) return osuma;
+  const vastaus = await fetch(pyynto.url, { mode: 'cors' }).catch(() => null);
+  if (vastaus && vastaus.ok) {
+    kori.put(pyynto.url, vastaus.clone()).catch(() => {});
+    return vastaus;
+  }
+  return fetch(pyynto).catch(() => vastaus ?? Response.error());
+}
+
 /**
  * Osittaisvastaus (206) välimuistista noudetusta kokonaisesta äänestä.
  *
@@ -1470,6 +1515,7 @@ self.addEventListener('activate', (event) => {
       .keys()
       .then((keys) => Promise.all(
         keys.filter((k) => k !== CACHE && k !== KUVACACHE && k !== AANICACHE
+          && k !== KIRJASTOCACHE
           // Lukijaäänen pysyvät säilöt (js/puhe.js) eivät ole tämän
           // workerin omia — siivous ei saa tuhota niitä versionvaihdossa.
           && !k.startsWith('matkakirja-puhe-')).map((k) => caches.delete(k))))
@@ -1579,6 +1625,16 @@ self.addEventListener('fetch', (event) => {
      */
     if (osoite.hostname.endsWith('.r2.dev') && /^\/(?:audio|aanet)\//.test(osoite.pathname)) {
       event.respondWith(aaniPeilista(event.request));
+      return;
+    }
+    /*
+     * Valmiit kirjastot (vendor/): välimuisti ensin omasta koristaan.
+     * Kirjasto ladataan skriptinä vasta kun sitä tarvitaan (js/pallo.js
+     * lataaPallokirjasto, js/geo.js lataaGeo), ja versio on osoitteessa —
+     * kerran haettu kirjasto ei lähde verkkoon uudelleen. Ks. KIRJASTOCACHE.
+     */
+    if (KIRJASTOLAHDE(osoite)) {
+      event.respondWith(kirjastoAmparista(event.request));
       return;
     }
     return;

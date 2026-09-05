@@ -1142,3 +1142,35 @@ HAVAINNEKUVA SIIRRETTAVA.
 - Testit: tests/aikajana.test.mjs (matkamittari, hiipimä, rajaus,
   kytkennät); savuke scratchpadissa (kaappaa-linssi2.mjs).
 
+## Geo-apuri: maailmanaineisto laudalle (js/geo.js, 5.9.2026)
+
+Omistajan päätös 5.9.2026 (kirjastokartoituksen TOP 6, kohta 3):
+**d3-geo 3.1.1 + d3-geo-projection 4.0.0 + topojson-client 3.1.0** (ISC)
+ämpärin `vendor/`-polusta. Uuden linssin ei siis tarvitse enää kirjoittaa
+omaa projisointiaan — **rajapinta ja kaikki säännöt ovat `js/geo.js`:n
+alkukommentissa** (omaa ohjedokumenttia ei tehty: Raamatun
+dokumenttikartta on Fablen kirjoitettava, ks. tests/dokumentit.test.mjs).
+
+Lyhyesti:
+
+- `await lataaGeo()` lataa kirjaston laiskasti ja palauttaa `null`, jos
+  sitä ei saada. **Kaikki apurin funktiot palauttavat silloin `null`, ja
+  kutsujan on käytettävä vanhaa polkuaan** (`projisoiLaudalle` piste
+  kerrallaan) — yhden tiedoston versio (`dist/`) jää ilman kirjastoa
+  kuten se jää ilman linssejä (luku 2.1).
+- `laudanProjektio(lauta)` antaa d3-projektion, joka vastaa pelin omaa
+  `projisoiLaudalle`-funktiota (mitattu ero 261 kaupungilla 3,6e-12
+  lautayksikköä; tests/geo.test.mjs vartioi rajaa 0,01).
+- `geojsonLaudalle(geojson, lauta, { rajaus })` antaa valmiin
+  SVG-polkudatan laudan yksiköissä. `rajaus` leikkaa polun laudan
+  suorakaiteeseen — ilman sitä esimerkiksi Etelämanner jää laudan
+  alareunan alle (lauta kattaa 76° P … n. 57,6° E).
+- `isokaari`, `etaisyysKm`, `nakyvyysympyra` ja `pallolle` ovat samaa
+  pakettia: reitti kaartuu oikein, kantama on ympyrä pallolla eikä
+  kartalla, ja sama aineisto kelpaa myös pallolaudalle.
+- Elementtikatto (luku 1) pätee ennallaan: yksi `<path>` on yksi
+  elementti, joten rajaviivasto kannattaa antaa kerroksen rasteroitavaksi
+  aivan kuten ennenkin.
+- Savuke: `tools/savukkeet/savuke-geo.mjs` (kirjasto ämpäristä, 261
+  kaupunkia, isokaari, Natural Earthin rajat laudan sisällä, varapolku).
+

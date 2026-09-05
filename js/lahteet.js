@@ -326,6 +326,38 @@ export const LAHTEET = [
       },
     ],
   },
+  /*
+   * VALMIIT OHJELMISTOKIRJASTOT (Raamattu 5.9.2026, "VALMIIT KIRJASTOT",
+   * ja kartoituksen luku 10 kohta 3: *"lisenssitiedosto mukaan ämpäriin
+   * ja maininta pelin lähdesivulle"*).
+   *
+   * Kirjastot eivät ole aineistoa vaan koodia, mutta ne kuuluvat tähän
+   * samasta syystä kuin aineistot: MIT-, BSD- ja ISC-lisenssit vaativat
+   * tekijänoikeusmerkinnän säilyttämisen jakelussa, ja pilari 5 vaatii
+   * näyttämään sen pelaajalle. Lisenssiteksti itsessään on ämpärissä
+   * kirjaston vieressä (vendor/<nimi>.LICENSE.txt).
+   *
+   * YKSI RIVI YHTÄ KIRJASTOA KOHTI. Ryhmää täydentävät eri sessiot eri
+   * aikaan; erillinen rivi ei törmää naapurin riviin.
+   */
+  {
+    otsikko: 'Ohjelmistokirjastot',
+    johdanto: 'Valmiit kirjastot, jotka peli lataa käyttöön sitä mukaa kuin '
+      + 'niitä tarvitaan. Lisenssitekstit ovat kirjastojen mukana.',
+    rivit: [
+      {
+        nimi: 'd3-geo 3.1.1 ja d3-geo-projection 4.0.0 — karttaprojektiot: '
+          + 'maailmanaineisto pelin laudalle, isokaaret ja etäisyydet (js/geo.js)',
+        tekija: 'Mike Bostock',
+        lisenssi: 'ISC',
+      },
+      {
+        nimi: 'topojson-client 3.1.0 — TopoJSON-aineiston purku kartalle',
+        tekija: 'Mike Bostock',
+        lisenssi: 'ISC',
+      },
+    ],
+  },
 ];
 
 /** Rivien yhteismäärä — otsikkoon, jottei sitä tarvitse laskea käsin. */
