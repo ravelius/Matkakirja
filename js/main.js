@@ -121,7 +121,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1565';
+const APP_VERSION = '2026-08-09.1566';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1637,6 +1637,18 @@ document.getElementById('kehittaja-tehosteketjut-btn')?.addEventListener('click'
       'ei-kirjastoa': 'Tuna ei latautunut (offline tai yhden tiedoston versio): vain suora ääni.',
     }[tulos] ?? 'Kuuntelu ei lähtenyt.');
   });
+});
+
+/*
+ * KOHTAAMISLISTA (omistajan tilaus 5.9.2026): kaikki aarrekohtaamiset
+ * maanosittain, ja rivin napautus avaa kohtaamisen hiekkalaatikossa —
+ * pelitila ei muutu (js/kohtaamistesti.js). Valikko suljetaan, koska
+ * lehti täyttää ruudun; muut rattaan rivit ovat säätimiä ja jäävät auki.
+ */
+document.getElementById('kehittaja-kohtaamiset-btn')?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  suljeKehittajaValikko();
+  window.matkakirja?.ui?.avaaKohtaamistesti();
 });
 
 paivitaKehittajaValikko();

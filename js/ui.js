@@ -39,6 +39,9 @@ import {
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
 import { onAarre } from './tokens.js';
+// Kehittäjän kohtaamislista (omistaja 5.9.2026): oma moduulinsa, joka
+// hoitaa lehden, hiekkalaatikon ja pelin kloonauksen kokonaan itse.
+import { avaaKohtaamistesti } from './kohtaamistesti.js';
 // Remontin M5a: lehden sivukoneisto.
 import {
   avaaGrafiikkaLehti,
@@ -12365,7 +12368,15 @@ export class UI {
     this.syncAmbience();
     if (this.dead) return;
     this.primePhotoPool();
-    this.onChange?.(this.game);
+    /*
+     * KOHTAAMISTESTIN HIEKKALAATIKKO (js/kohtaamistesti.js, omistajan
+     * tilaus 5.9.2026): kehittäjän kohtaamislistasta avattu testi ajaa
+     * KLOONATTUA peliä, eikä siitä saa jäädä laitteelle jälkeä. Lippu
+     * sulkee renderin molemmat kirjoittajat — tallennuksen (onChange)
+     * ja passin leimat (stampPassport, alempana). Kaikki muu piirtyy
+     * kuten pelissä, koska juuri sitä testissä katsotaan.
+     */
+    if (!this.kohtaamistesti) this.onChange?.(this.game);
     // Aloituskartalla asettelu on kahdessa palstassa; pelin käynnistyttyä
     // kartta täyttää koko ruudun ja paneelit kelluvat sen päällä.
     // Katselutila käyttäytyy kuin peli olisi jo käynnissä.
@@ -12388,7 +12399,8 @@ export class UI {
     // vaiheissa se suljetaan, jottei se jää roikkumaan kartan päälle.
     if (this.game.phase !== 'offer' || this.game.player.isBot) this.closeArrival();
     this.renderIntro();
-    this.stampPassport();
+    // Kohtaamistestissä passia ei leimata (ks. lippu ylempänä).
+    if (!this.kohtaamistesti) this.stampPassport();
     /*
      * TASOKARTAN PIIRTO ON YHDEN PORTIN TAKANA (js/kartta.js lepotila).
      * Pallolaudalla mikään alla olevista kerroksista ei synny: lauta,
@@ -13862,6 +13874,16 @@ export class UI {
   avaaMusiikkiLehti() { return avaaMusiikkiLehti(this); }
 
   avaaLukijoiltaLehti() { return avaaLukijoiltaLehti(this); }
+
+  /*
+   * KEHITTÄJÄN KOHTAAMISLISTA (omistajan tilaus 5.9.2026) — kaikki
+   * aarrekohtaamiset maanosittain, jokainen avattavissa
+   * hiekkalaatikossa. Koko toteutus on js/kohtaamistesti.js:ssä; se
+   * vaihtaa testin ajaksi this.gamen klooniin ja nostaa
+   * this.kohtaamistesti-lipun, joka estää renderiä kirjoittamasta
+   * tallennetta tai passin leimoja (ks. render).
+   */
+  avaaKohtaamistesti() { return avaaKohtaamistesti(this); }
 
   piirraMinitehtava(kohde, kategoria) {
     const { tehtava } = kategoria;

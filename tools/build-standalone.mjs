@@ -740,6 +740,14 @@ const MODULES = [
   // Siirron koreografian luvut ja käyrät (pallolauta vaihe 2): ui.js
   // tuo staattisesti, joten riippuvuus ennen tuojaansa.
   'js/siirtokoreografia.js',
+  /*
+   * Kehittäjän kohtaamislista (5.9.2026) ennen ui.js:ää: ui tuo sen
+   * staattisesti. Omat riippuvuudet — game, pack, tarinakaari,
+   * kehitysdata, kohtaamiskuvat-data, fokusvirrat, europe-puzzles ja
+   * ui-apurit — ovat kaikki jo yllä, eikä mitään lasketa ennen kuin
+   * lehti avataan kehittäjätilassa.
+   */
+  'js/kohtaamistesti.js',
   'js/ui.js',
 
   'js/muutokset.js',
