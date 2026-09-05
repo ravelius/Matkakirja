@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
-import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS, laattakynnykset, lepokerroin, LAATU_TERAVYYS, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE } from '../js/pallo.js';
+import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTAKANSIO, laattatasoMax, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS, laattakynnykset, lepokerroin, LAATU_TERAVYYS, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE } from '../js/pallo.js';
 import { laatanReunat, rivinLeveysaste, julisteenLeveysvali, tasonLaatat, lahdetaso, laattojenKansio, LAATTA } from '../tools/tee-pallolaatat.mjs';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
 import { LINSSI as PALLOLINSSI } from '../js/linssit/pallo.js';
@@ -95,13 +95,17 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   // Kirjasto on laattamoottorin tuova 2.46 tai uudempi.
   const versio = PALLO_KIRJASTO.match(/globe\.gl-(\d+)\.(\d+)\.\d+\.min\.js$/);
   assert.ok(versio && (Number(versio[1]) > 2 || Number(versio[2]) >= 46), PALLO_KIRJASTO);
-  assert.equal(PALLO_LAATAT, `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/${laattojenKansio(PALLO_LAATTAVERSIO)}`);
+  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-nostot`, 'nimet ja kohteet laatoissa, navat ilman hattua (5.9.2026)');
+  assert.equal(PALLO_LAATAT, `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/${laattojenKansio(PALLO_LAATTAVERSIO, true)}`);
   assert.equal(pallonLaatta(3, 5, 4), `${PALLO_LAATAT}4/3/5.jpg`);
   assert.equal(PALLO_LAATTATASO_MAX, 8, 'taso 8 kaytossa 5.9.2026');
   // Luettelon puute tai virhe → varatekstuuri, ei kaatumista.
-  assert.equal(await laatatSaatavilla(async () => ({ ok: false })), false);
+  assert.equal(await laatatSaatavilla(async () => ({ ok: false })), null);
+  assert.equal(laattatasoMax({ tasot: { min: 0, max: 7 } }), 7, 'luettelo rajaa syvimman tason');
+  assert.equal(laattatasoMax({ tasot: { min: 0, max: 9 } }), PALLO_LAATTATASO_MAX);
+  assert.equal(laattatasoMax(null), PALLO_LAATTATASO_MAX);
   const pallo = lue('../js/pallo.js');
-  assert.match(pallo, /globeTileEngineUrl\(pallonLaatta\)\.globeTileEngineMaxLevel\(PALLO_LAATTATASO_MAX\)/);
+  assert.match(pallo, /globeTileEngineUrl\(pallonLaatta\)\.globeTileEngineMaxLevel\(laattatasoMax\(laatat\)\)/);
   assert.match(pallo, /pallo\.globeImageUrl\(PALLO_TEKSTUURI\)/);
   // Laattatyökalu: slippy map -geometria ja lähdetasot.
   assert.equal(LAATTA, 256);
@@ -189,7 +193,7 @@ test('laatu palaa levossa: kynnykset ruudun pikseleistä, liike kevyt (omistaja 
   assert.equal(LAATU_PIKSELISUHDE_LEPO, 3, 'levossa iPhonen koko dpr');
   // Laatunosto kytketään vain laatoitettuun palloon; purkaja palauttaa.
   const lahde = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
-  assert.match(lahde, /globeTileEngineMaxLevel\(PALLO_LAATTATASO_MAX\);\n\s+asennaLaatunosto\(pallo, kotelo\);/);
+  assert.match(lahde, /globeTileEngineMaxLevel\(laattatasoMax\(laatat\)\);\n\s+asennaLaatunosto\(pallo, kotelo\);/);
   assert.match(lahde, /moottori\.updatePov = alkuperainen;/);
   assert.match(lahde, /map\.anisotropy = maxAniso/);
 });
