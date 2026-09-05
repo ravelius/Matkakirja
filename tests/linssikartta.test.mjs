@@ -233,8 +233,14 @@ test('Liiku ja lehdet estetty kuoressa; valinta null palauttaa pallon; pallon li
   assert.match(ui, /else if \(\(!tunnus \|\| pallolle\) && this\.linssikartta\?\.linssi\) this\.suljeLinssikartta\(\);/);
   assert.match(ui, /return Boolean\(this\.pallolauta\.linssikartta\?\.avaa\(tiedot\)\);/);
   assert.match(ui, /return Boolean\(this\.pallolauta\.linssikartta\?\.sulje\(\)\);/);
-  // Aikajanan oma Sulje päättää linssin pallolaudalla.
-  assert.match(ui, /if \(this\.linssikartta\?\.linssi && tunnus && this\.linssiValittu === tunnus\) this\.valitseLinssi\(null\);/);
+  /*
+   * Aikajanan oma Sulje päättää linssin pallolaudalla. Aalto 2A: portti
+   * on nyt LAUTA itse — keksintölinssi piirtyy pallolle eikä avaa
+   * linssikarttaa lainkaan, joten pelkkä kuoren ehto jättäisi valinnan
+   * päälle ilman ajoa.
+   */
+  assert.match(ui, /const linssinSulje = this\.pallolautaPaalla\(\) \|\| Boolean\(this\.linssikartta\?\.linssi\);/);
+  assert.match(ui, /if \(linssinSulje && tunnus && this\.linssiValittu === tunnus\) this\.valitseLinssi\(null\);/);
   // Muistettu linssi ei jää valituksi ilman kuorta.
   assert.match(ui, /if \(haluttu && !this\.linssikartta\) \{\n\s+this\.linssiValittu = null;\n\s+tallennaLinssi\(null\);/);
   // Pallon oma linssi ei näy laukussa pallolaudalla (v1554).

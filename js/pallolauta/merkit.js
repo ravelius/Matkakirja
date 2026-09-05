@@ -290,6 +290,21 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null }) {
     maara: (osa) => (osat.get(osa) ?? []).length,
     /** Näkyvät kohteet osumatestiä varten ({ key, lat, lng, city }). */
     kohteet: () => kohteet,
+    /**
+     * NAPAUTETTAVAT LINSSIMERKIT (aalto 2A). Linssin merkki
+     * (js/pallolauta/linssit.js merkit, laji `linssi`) saa datumiinsa
+     * `napautus(d)`, ja osuma lasketaan pallon omasta napautuksesta
+     * kuten kaikilla muillakin merkeillä — elementti itse ei ota
+     * osumia (ks. NAPAUTUS EI KULJE ELEMENTIN KAUTTA yllä). Poistuva
+     * merkki ei enää vastaa.
+     */
+    napautettavat: () => {
+      const ulos = [];
+      for (const lista of osat.values()) {
+        for (const d of lista) if (!d.poistuu && typeof d.napautus === 'function') ulos.push(d);
+      }
+      return ulos;
+    },
     pura: () => {
       for (const t of poistuvat.values()) clearTimeout(t);
       poistuvat.clear();

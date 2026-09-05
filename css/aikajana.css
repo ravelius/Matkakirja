@@ -1627,3 +1627,49 @@
   .tiedeliite-karuselli-piste::before { transition: none; }
   .tiedeliite-karuselli-teksti.vaihtui { animation: none; }
 }
+
+/* ===========================================================================
+   AIKAJANA PALLOLAUDALLA (docs/moduulit/karttapallo.md luku 10, aalto 2A)
+   ---------------------------------------------------------------------------
+   Omistaja 5.9.2026 (Raamattu, KAIKKI PALLOLLE, VANHA KARTTA SULJETAAN):
+   *"Käännä kaikki pallolle, niin voidaan sulkea vanha kartta kokonaan"*.
+
+   Lamppu on pallolla sama neljän ympyrän merkki kuin kartalla — samat
+   luokat, samat mitat, sama syke — mutta HTML-elementtinä pallon pinnan
+   pisteessä (CSS2D, js/pallolauta/merkit.js). Kaksi eroa, ja kummallakin
+   on syynsä:
+
+   1. KOKO ON JO RUUDUN PIKSELEITÄ. Kartalla merkki vastaskaalataan
+      zoomin mukaan (js/aikajana.js paivitaMittakaava); pallolla CSS2D-
+      elementti ei skaalaudu kameran mukana, joten svg piirretään
+      sellaisenaan ja keskitetään pisteeseen (translate -50 %).
+   2. EI OTA NAPAUTUKSIA. Kartalla palava lamppu on itse napautettava;
+      pallolla osuma lasketaan pallon omasta napautuksesta lähimpään
+      merkkiin (js/pallolauta/lauta.js R-malli, karttapallo.md riski 3).
+      Ilman tätä sääntöä kajon 98 pikselin levyinen kehys söisi pallon
+      pyörityksen aina lampun kohdalla.
+   =========================================================================== */
+
+.aikajana-valo-pallolla {
+  transform: translate(-50%, -50%);
+}
+.aikajana-valo-pallolla,
+.aikajana-valo-pallolla.palaa { pointer-events: none; cursor: default; }
+.aikajana-valo-pallolla svg { display: block; overflow: visible; }
+
+/*
+ * PELIN OMAT MERKIT VÄISTYVÄT LINSSIN AJAKSI. Tasokartalla kartan
+ * tummennus (0,86) on kaupunkien nimien ja nappulan PÄÄLLÄ — ne jäävät
+ * mustaan, ja vain lamput hehkuvat. Pallolla tummennus on CSS-kalvo,
+ * joka jää kirjaston merkkikerroksen alle (js/pallolauta/linssit.js
+ * kalvoRuudulle `alle`), joten DOM-merkit eivät tummene sen alla:
+ * sama lopputulos tehdään piilottamalla ne linssin ajaksi, kuten
+ * vertailu- ja maatiedot-tiloissa (css/styles.css). Kaupunkien PISTEET
+ * ovat pallon pintaa (WebGL) ja jäävät kalvon alle itsestään.
+ */
+body.aikajana-paalla .pallolauta-nimi,
+body.aikajana-paalla .pallolauta-nosto,
+body.aikajana-paalla .pallolauta-piste,
+body.aikajana-paalla .pallolauta-kohde,
+body.aikajana-paalla .pallolauta-vesinimi,
+body.aikajana-paalla .pallolauta-nappula { display: none; }

@@ -1516,6 +1516,14 @@ export const KEKSINNOT = [
   },
 ];
 
+/**
+ * Linssiosan nimi laudan linssiapurissa. Sama merkkijono kuin
+ * js/aikajana.js PALLON_OSA — moottori kirjaa valot ja tummennuksen
+ * sillä, ja kahvan `pura()` vie ne pois myös silloin, jos ajo on jo
+ * purettu muualta.
+ */
+const PALLON_OSA = 'aikajana';
+
 export const LINSSI = {
   tunnus: 'keksinnot',
   jarjestys: 25,
@@ -1531,6 +1539,23 @@ export const LINSSI = {
     osoite: 'https://en.wikipedia.org/wiki/Timeline_of_historic_inventions',
     haettu: '2026-09-02',
   },
+  /**
+   * LINSSI PALLOLLE (docs/moduulit/karttapallo.md luku 10.1, aalto 2A;
+   * omistaja 5.9.2026: *"Käännä kaikki pallolle, niin voidaan sulkea
+   * vanha kartta kokonaan"*).
+   *
+   * Aikajanalinssi on KERROKSETON: se ei piirrä pysyvää karttakerrosta
+   * vaan käynnistää ajon, ja ajon piirtää moottori (js/aikajana.js) —
+   * pallolla laudan linssiapurin kautta, tasokartalla svg:hen. Käynnistin
+   * on js/ui.js tahdistaAikajana, joka ajetaan heti tämän jälkeen, joten
+   * tämä kahva on kevyt: sen tehtävä on VARMISTAA, että laudan kerrokset
+   * (valot merkkeinä, tummennus ruutukalvona) lähtevät pois, kun linssi
+   * vaihtuu tai putoaa valikoimasta.
+   */
+  pallolle(lauta) {
+    return { pura: () => lauta?.linssit?.pura(PALLON_OSA) };
+  },
+
   aikajana: {
     otsikko: 'Keksinnöt Euroopassa',
     /*

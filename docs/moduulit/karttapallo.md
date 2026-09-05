@@ -785,3 +785,65 @@ AVOIN: kaupunkien PISTEET (Globe.gl pointsData) jäävät nappien alle
 näkyviin — sama laudan `pisteNakyy`-muutos ratkaisisi tämän ja aallon 1C
 saman avoimen kohdan kerralla; napit ovat pisteitä isompia, joten piste
 ei ota napautusta itselleen.
+
+**Aalto 2A — keksintölinssi eli aikajana-ajo pallolle (5.9.2026).**
+`js/linssit/keksinnot.js` sai `pallolle(lauta)`, mutta itse piirto
+vaihdetaan MOOTTORIN sisällä (js/aikajana.js): linssi on kerrokseton,
+joten kahva vain purkaa laudan osan `aikajana`, ja ajon käynnistää kuten
+ennen `ui.tahdistaAikajana`. Noin 80 % moottorista — kello, karuselli,
+ilmiöpaneeli, avausjakso, välinäytös, musiikki, luenta, Tiedeliite,
+lyhdyt, paneelin raahaus — on kartasta riippumatonta DOMia ja säilyi
+koskemattomana. Kaksi asiaa oli tasokartan svg:tä, ja ne kääntyivät:
+
+- **Valot.** `lauta.linssit.merkit('aikajana', …)`, datum
+  `{ avain: 'aikajana:<i>', laji: 'linssi', lat, lng, elementti(d),
+  napautus(d) }`. Elementti on sama neljän ympyrän lamppu samoilla
+  luokilla (`aikajana-valo-kajo/-syke/-hehku/-pallo`) ja samoilla
+  mitoilla, mutta divinä pallon pinnan pisteessä; se RAKENNETAAN HETI
+  eikä vasta kirjaston tehtaassa, koska moottori lukee ja kirjoittaa
+  lampun tilaa luokkina (`palaa`, `nykyinen`) myös silloin, kun merkki on
+  pallon takana. Liukuvärit (`url(#aikajana-lamppu)`, `#aikajana-kajo`)
+  tulevat linssin omassa piilotetussa svg:ssä, koska kartan `defs` ei ole
+  olemassa. Koko on ruutuvakio → `merkkiSkaala`/`paivitaMittakaava` ja
+  nipistyksen vastaskaalaus jäivät karttahaaraksi.
+- **Tummennus.** `lauta.linssit.kalvoRuudulle('aikajana', { reika })`.
+  Sävy on sama kuin css:n maskissa (`rgba(10, 7, 5, 0.86)`, puolivälissä
+  0,35), reikä on 63 ruutupikseliä (`MERKIN_SADE × REIAN_SUHDE`) ja sen
+  reuna pehmeä kolmella pysäkillä. Kartan maskissa on reikä joka
+  palavalle lampulle; CSS-kalvolla reikiä on YKSI ja se LIUKUU lampusta
+  toiseen (700 ms, lyhintä pituuspiiriä; reduced motion hyppää).
+  Kalvo pyydetään `alle: true` — apuri sijoittaa sen kirjaston
+  CSS2D-kerroksen ETEEN (`.scene-container`, mitattu Chromiumilla), jotta
+  pinta, kaupunkipisteet ja reitit jäävät sen alle mutta lamput hehkuvat
+  sen päällä. Pelin omat DOM-merkit (nimet, nappula, nostot) eivät jää
+  kalvon alle, joten ne piilotetaan linssin ajaksi css:llä
+  (`body.aikajana-paalla`) — kartalla ne jäävät 0,86:n tummennuksen alle
+  eli käytännössä näkymättömiin.
+
+**Napautus** kulkee laudan omaa R-mallia (riski 3): merkki ei ota
+osumia (`.aikajana-valo-pallolla { pointer-events: none }` — kajon kehys
+on 98 px ja söisi pallon pyörityksen), vaan `js/pallolauta/merkit.js`
+sai `napautettavat()` ja `js/pallolauta/lauta.js` ratkaisee linssin
+merkit ENNEN kaupunkeja ja nostoja (lamppu istuu usein täsmälleen
+kaupungin päällä; myös kaupunkipisteen napautus antaa vuoron lampulle).
+
+**Kamera** on `ui.kamera()` eli hereillä olevan laudan oma — pallolla
+`js/pallolauta/kamera.js ajaKamera` samalla bbox-allekirjoituksella,
+joten `sovitaKaareen`, avausjakson ajo ja paluu edelliseen näkymään
+toimivat sellaisenaan. `vapautaKamera` ohitetaan pallolla: fokuslukko on
+tasokartan oma eikä nukkuvaa karttaa saa herättää sen takia.
+`ui.tahdistaAikajana` hakee linssin nyt TUNNUKSELLA eikä
+kerrosmoottorista (pallohaarassa moottori on sammutettu, joten sen
+`linssi` on null), ja aikajanan oma ✕/Esc päättää linssin myös
+pallolaudalla (`pysaytaAikajana` ei enää katso pelkkää linssikarttaa).
+
+Vartijat: tests/aikajanamerkit.test.mjs osio 1 b (samat säännöt pallolla:
+merkit laudan apurille, syke, jälki, reiän liuku, kamera, purku),
+tests/aikajana-pallolla.test.mjs (haarat ja kytkennät tekstinä).
+Selaimessa varmistettu Chromiumilla 900×700: svg#board 0 elementtiä koko
+ajon ajan, 25 lamppua htmlElementsDatassa, kalvo `.scene-container`in
+lapsena merkkikerroksen edellä, kello ja karuselli ruudulla, avausjakso
+ja Käynnistä toimivat, lampun napautus siirtää pysäkkiin (myös Lontoon
+kaupunkipisteestä: pysäkki 1837 eikä kaupunkilehteä) ja "Ei linssiä"
+palauttaa pallon entiseen näkymään (lamput 25 → 0, kalvo pois,
+linssikartta false).
