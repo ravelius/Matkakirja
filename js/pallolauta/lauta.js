@@ -611,6 +611,21 @@ export async function avaaPallolauta(ui) {
     return lahin(lat, lng, ehdokkaat, (e) => e.lat, (e) => e.lng);
   };
 
+  /**
+   * LINSSIN MERKKI VOITTAA (aalto 2A). Linssin merkki
+   * (js/pallolauta/linssit.js merkit, datumissa `napautus`) on
+   * napautettava kuten tasokartalla — aikajanan lamppu siirtää
+   * pysäkkiin (omistaja 3.9.2026: *"kartan pisteet saisivat olla myös
+   * klikattavissa"*) — ja se ratkaistaan ENNEN kaupunkeja ja nostoja:
+   * linssi on oma näkymänsä, jonka aikana muu peli on kiinni, ja moni
+   * lamppu istuu täsmälleen kaupungin päällä. Pallon takana oleva
+   * merkki ei ota osumia.
+   */
+  const lahinLinssimerkki = (lat, lng) => {
+    const ehdokkaat = merkit.napautettavat().filter((d) => edessa(d.lat, d.lng));
+    return ehdokkaat.length ? lahin(lat, lng, ehdokkaat, (d) => d.lat, (d) => d.lng) : null;
+  };
+
   /*
    * SULKEVA NAPAUTUS EI AVAA MITÄÄN UUTTA (omistaja 31.8.2026): kortin
    * oma kuuntelija sulkee kortin jo pointerdownissa, ja ilman tätä
@@ -630,6 +645,8 @@ export async function avaaPallolauta(ui) {
     if (korttiOliAuki) { korttiOliAuki = false; return; }
     const kohde = lahinKohde(lat, lng);
     if (kohde) { napautaKohde(kohde); return; }
+    const linssimerkki = lahinLinssimerkki(lat, lng);
+    if (linssimerkki) { heraa(); linssimerkki.napautus(linssimerkki); return; }
     const voittaja = lahinMerkki(lat, lng);
     if (!voittaja) return;
     if (voittaja.laji === 'kaupunki') napautaKaupunki(voittaja.k);
@@ -662,6 +679,9 @@ export async function avaaPallolauta(ui) {
       // Askelhelmi ja valo ovat koristeita: napautus niistä menee pinnalle.
       if (d.laji === 'helmi' || d.laji === 'valo') napautaPintaan(d.lat, d.lon);
       else if (korttiOliAuki) korttiOliAuki = false;
+      // Linssin merkki kaupungin päällä (aikajanan lamppu) saa napautuksen
+      // sen sijaan: sama sääntö kuin pinnan napautuksessa.
+      else if (lahinLinssimerkki(d.lat, d.lon)) napautaPintaan(d.lat, d.lon);
       else napautaKaupunki(d);
     })
     .onGlobeClick(({ lat, lng }) => {

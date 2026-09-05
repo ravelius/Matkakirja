@@ -58,6 +58,15 @@ export const POLYGONIN_KORKEUS = 0.004;
 /** Ruutukalvon reiän oletussäde pikseleinä. */
 export const REIAN_SADE_PX = 140;
 /**
+ * Reiän pehmeä reuna: osuus säteestä, joka on TÄYSIN kirkas ennen kuin
+ * tummennus alkaa nousta. Tasokartalla sama profiili tulee maskin
+ * liukuvärista (js/aikajana.js #aikajana-reika: musta 0 %, harmaa 50 %,
+ * valkoinen 100 %), joten reunan on oltava pitkä eikä terävä.
+ */
+export const REIAN_KIRKAS_OSUUS = 0.12;
+/** Puolivälin sävyn oletus, kun kutsuja ei anna omaansa (ks. kalvoRuudulle). */
+export const REIAN_KESKI_OSUUS = 0.5;
+/**
  * Ruutukalvon päivitysjarru (ms). Reikä seuraa kameraa, mutta kotelon
  * pikselipaikka lasketaan enintään näin tiheästi — 30 kertaa sekunnissa
  * riittää silmälle ja jättää kehyksen pelille.
@@ -367,6 +376,38 @@ export function luoLinssit({
   /* -------------------------------------------------- ruudun kalvo --- */
 
   /**
+   * Kirjaston CSS2D-kerros kotelon sisällä eli se elementti, jonka
+   * lapsina merkit ovat (mitattu Chromiumilla 5.9.2026:
+   * `.pallo-kotelo > div > div > .scene-container > div`). Palauttaa
+   * null, jos yhtään merkkiä ei vielä ole piirretty.
+   */
+  const merkkikerros = () => {
+    const merkki = kotelo?.querySelector?.('.pallolauta-merkki');
+    const kerros = merkki?.parentElement ?? null;
+    return kerros && kerros !== kotelo && kotelo.contains(kerros) ? kerros : null;
+  };
+
+  /**
+   * Ruutukalvon paikka pinossa. Oletus on kotelon päällimmäisenä (kuten
+   * lennon harso). `alle` panee kalvon kirjaston CSS2D-kerroksen ETEEN
+   * samaan vanhempaan: silloin se peittää pallon pinnan ja
+   * kaupunkipisteet (WebGL-kangas) mutta jää DOM-merkkien alle, jolloin
+   * aikajanan lamput hehkuvat tummennuksen PÄÄLLÄ kuten tasokartalla
+   * (siellä valokerros on tummennuksen jälkeen samassa svg:ssä).
+   * Kerros syntyy vasta ensimmäisestä merkistä, joten paikka
+   * tarkistetaan uudelleen silmukassa, kunnes se löytyy.
+   */
+  const sijoitaKalvo = (el, alle) => {
+    const kerros = alle ? merkkikerros() : null;
+    if (kerros?.parentElement) {
+      kerros.parentElement.insertBefore(el, kerros);
+      return true;
+    }
+    kotelo.appendChild(el);
+    return !alle;
+  };
+
+  /**
    * Tummennus kotelon päälle, reikä yhden pisteen kohdalla (aikajanan
    * valokiila). CSS-kalvo eikä SVG-maski: sama syy kuin lennon harsolla
    * (js/pallolauta/lauta.js) — ei uutta three.js-oliota, ei suodatinta,
@@ -374,20 +415,25 @@ export function luoLinssit({
    *
    * Reikä on { lat, lng, sade } tai null (tasainen tummennus). Piste
    * lasketaan pallon pinnasta ruudulle (lauta.ruudulla) ja päivitetään
-   * kameran liikkuessa jarrutettuna (KALVON_JARRU_MS).
+   * kameran liikkuessa jarrutettuna (KALVON_JARRU_MS). `vari` on reiän
+   * ULKOPUOLINEN sävy ja `keski` puolivälin sävy — kaksi pysäkkiä tekee
+   * reunasta pehmeän niin kuin tasokartan maskin liukuväri.
    */
-  const kalvoRuudulle = (nimi, { reika = null, vari = 'rgba(18, 14, 8, 0.55)', peittavyys = 1 } = {}) => {
+  const kalvoRuudulle = (nimi, {
+    reika = null, vari = 'rgba(18, 14, 8, 0.55)', keski = null, peittavyys = 1, alle = false,
+  } = {}) => {
     const o = osa(nimi);
     puraRuutukalvo(o);
     if (!kotelo) return { pura: () => {}, paivita: () => {} };
     const el = document.createElement('div');
     el.className = 'pallolauta-kalvo';
-    el.style.cssText = 'position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;'
+    el.style.cssText = `position:absolute;inset:0;z-index:${alle ? 0 : 2};pointer-events:none;opacity:0;`
       + `transition:opacity ${siirtyma}ms ease;`;
-    kotelo.appendChild(el);
     const tila = {
-      el, reika, vari, peittavyys, edellinen: null, viimeksi: 0, kehys: 0, peruttu: false,
+      el, reika, vari, keski, peittavyys, alle, paikallaan: false,
+      edellinen: null, viimeksi: 0, kehys: 0, peruttu: false,
     };
+    tila.paikallaan = sijoitaKalvo(el, alle);
     o.ruutukalvo = tila;
 
     const maalaa = () => {
@@ -399,14 +445,20 @@ export function luoLinssit({
         return;
       }
       const sade = r.sade ?? REIAN_SADE_PX;
-      el.style.background = `radial-gradient(circle ${sade}px at ${Math.round(piste.x)}px `
-        + `${Math.round(piste.y)}px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 55%, ${tila.vari} 100%)`;
+      const kirkas = Math.round(REIAN_KIRKAS_OSUUS * 100);
+      const keskiSavy = tila.keski ?? tila.vari;
+      el.style.background = `radial-gradient(circle ${Math.round(sade)}px at ${Math.round(piste.x)}px `
+        + `${Math.round(piste.y)}px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) ${kirkas}%, `
+        + `${keskiSavy} ${Math.round(REIAN_KESKI_OSUUS * 100)}%, ${tila.vari} 100%)`;
       tila.edellinen = piste;
     };
     const silmukka = (nyt) => {
       if (tila.peruttu) return;
       if (nyt - tila.viimeksi >= KALVON_JARRU_MS) {
         tila.viimeksi = nyt;
+        // Merkkikerros syntyy vasta ensimmäisestä merkistä: kalvo
+        // siirretään sen alle heti kun kerros on olemassa.
+        if (!tila.paikallaan) tila.paikallaan = sijoitaKalvo(el, tila.alle);
         const r = tila.reika;
         const piste = r ? lauta?.ruudulla?.(r.lat, r.lng, REIAN_SADE_PX) : null;
         const e = tila.edellinen;

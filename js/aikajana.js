@@ -282,6 +282,57 @@ const TUMMENNUKSEN_ULOTTUVUUS = 1e6;
 /** Tummennuksen poistumisliuku (css .aikajana-tummennus-pinta). */
 const TUMMENNUKSEN_POISTUMA_MS = 700;
 
+/* ==================== AIKAJANA PALLOLAUDALLA ==================== */
+
+/*
+ * KAIKKI PALLOLLE (omistaja 5.9.2026, Raamattu KAIKKI PALLOLLE, VANHA
+ * KARTTA SULJETAAN, sanatarkasti: *"Käännä kaikki pallolle, niin
+ * voidaan sulkea vanha kartta kokonaan"*; docs/moduulit/karttapallo.md
+ * luku 10, aalto 2A).
+ *
+ * Neljä pintaa viidestä ovat DOM:ia kartan päällä eivätkä tiedä
+ * laudasta mitään: kello, karuselli, ilmiöpaneeli, avausjakso,
+ * välinäytös, musiikki, luenta ja Tiedeliite ovat samat kummallakin
+ * laudalla. Vain KAKSI asiaa oli tasokartan svg:tä, ja ne käännetään
+ * tässä laudan linssiapurille (js/pallolauta/linssit.js):
+ *
+ *   VALOT       `lauta.linssit.merkit('aikajana', …)`. Sama
+ *               kolmiosainen lamppu (kajo, syke, hehku, pallo) ja samat
+ *               css-luokat, mutta HTML-elementtinä pallon pinnan
+ *               pisteessä (CSS2D). Koko on ruutuvakio, joten
+ *               vastaskaalausta (merkkiSkaala, paivitaMittakaava) ei
+ *               tarvita — se jää tasokartan haaraksi.
+ *   TUMMENNUS   `lauta.linssit.kalvoRuudulle('aikajana', { reika })`.
+ *               CSS-kalvo kotelon päällä, reikä nykyisen lampun
+ *               kohdalla ruutupikseleinä; tasokartan maski (yksi reikä
+ *               per palava lamppu) ei käänny CSS-kalvolle, joten reikä
+ *               on YKSI ja se seuraa nykyistä lamppua liukuen.
+ *
+ * Kamera on `ui.kamera()` eli hereillä olevan laudan oma (pallolla
+ * js/pallolauta/kamera.js ajaKamera, sama allekirjoitus bbox mukaan
+ * lukien). Fokuslukkoa ei pallolla ole, joten vapautaKamera ohitetaan.
+ */
+
+/** Linssiosan nimi laudan linssiapurissa (js/linssit/keksinnot.js pallolle). */
+export const PALLON_OSA = 'aikajana';
+/** Reiän säde ruutupikseleinä: sama mitta kuin tasokartan maskireiällä. */
+export const PALLON_REIAN_SADE_PX = MERKIN_SADE * REIAN_SUHDE;
+/**
+ * Tummennuksen sävy pallolla. Tasokartalla pinta on `fill: #0a0705` ja
+ * `opacity: 0.86` (css/aikajana.css .aikajana-tummennus-pinta), ja
+ * maskin liukuväri vaalentaa reiän reunaa puolivälissä noin 41 %:iin —
+ * samat luvut rgba-sävyinä, koska pallon kalvo on CSS-tausta.
+ */
+export const PALLON_TUMMENNUS = 'rgba(10, 7, 5, 0.86)';
+export const PALLON_TUMMENNUS_KESKI = 'rgba(10, 7, 5, 0.35)';
+/** Reiän liuku lampusta toiseen (ms); reduced motion hyppää suoraan. */
+export const PALLON_REIAN_LIUKU_MS = 700;
+
+/** Onko pallolauta se lauta, jolle tämä ajo piirtää? */
+function pallolautaAlla(ui) {
+  return Boolean(ui?.pallolautaPaalla?.() && ui.pallolauta?.linssit);
+}
+
 /* ==================== AVAUSJAKSO ==================== */
 
 /**
@@ -1128,6 +1179,19 @@ class Aikajana {
     this.kortit = [];
     this.valot = [];
     /*
+     * LAUTA RATKAISTAAN KERRAN (aalto 2A). Pallolaudalla valot ja
+     * tummennus piirretään laudan linssiapurilla, tasokartalla
+     * ui.svg:hen; lauta ei voi vaihtua kesken ajon, koska laudan vaihto
+     * purkaa aikajanan (js/ui.js drawBoard → pysaytaAikajana).
+     */
+    this.lauta = pallolautaAlla(ui) ? ui.pallolauta : null;
+    this.pallolla = Boolean(this.lauta);
+    /** Ruutukalvon kahva pallolla ({ pura, paivita }) ja reiän liuku. */
+    this.kalvo = null;
+    this.reianLiuku = 0;
+    this.reianMerkki = 0;
+    this.reianPaikka = null;
+    /*
      * ENNAKON TILA. `ennakkoKohde` on se pysäkki, johon karuselli on
      * jo matkalla vaikkei kello ole vielä siellä; null = karuselli
      * seuraa kelloa. `teravoitus` on kuuntelija, joka vaihtaa sumean
@@ -1277,6 +1341,7 @@ class Aikajana {
 
   rakennaValot() {
     const { ui } = this;
+    if (this.pallolla) { this.rakennaValotPallolle(); return; }
     if (!ui.svg) return;
     /*
      * MÄÄRITYKSET: lampun ja kajon liukuvärit sekä tummennuksen maski.
@@ -1352,6 +1417,142 @@ class Aikajana {
     }
   }
 
+  /* ---------- valot pallolaudalla (aalto 2A) ---------- */
+
+  /**
+   * VALOT PALLON PINNALLE. Sama lamppu kuin kartalla — kajo, syke,
+   * hehku ja pallo samoilla luokilla ja samoilla mitoilla — mutta
+   * HTML-elementtinä pallon pinnan pisteessä (CSS2D). Mitat ovat jo
+   * ruudun pikseleitä, joten mikään ei vastaskaalaudu: siksi
+   * `paivitaMittakaava` ei tee pallolla mitään.
+   *
+   * ELEMENTTI RAKENNETAAN HETI eikä vasta kirjaston tehtaassa: koko
+   * moottori lukee ja kirjoittaa lampun tilaa luokkina (`asetaValonTila`,
+   * `sytyta`, `siirry`, `alusta`, `lopeta`), joten `valo.g`:n on oltava
+   * olemassa myös silloin, kun merkki on pallon takana eikä kirjasto
+   * ole vielä pyytänyt elementtiä.
+   */
+  rakennaValotPallolle() {
+    const linssit = this.lauta.linssit;
+    // Liukuvärit (lamppu ja kajo) ovat css:n `url(#…)`-viittauksia,
+    // eikä pallolla ole kartan svg:tä, jossa ne asuisivat: linssi tuo
+    // omat määrityksensä mukanaan piilotetussa svg:ssä.
+    this.maaritykset = this.pallonMaaritykset();
+    this.valot = this.tapahtumat.map((t, i) => {
+      if (t.paalu || !Number.isFinite(t.lat) || !Number.isFinite(t.lon)) return null;
+      const valo = {
+        g: this.pallonLamppu(t), reika: null, x: t.x, y: t.y, lat: t.lat, lng: t.lon,
+      };
+      valo.datum = {
+        avain: `${PALLON_OSA}:${i}`,
+        lat: t.lat,
+        lng: t.lon,
+        elementti: () => valo.g,
+        napautus: () => this.napautaValoa(i),
+      };
+      return valo;
+    });
+    linssit.merkit(PALLON_OSA, this.valot.filter(Boolean).map((v) => v.datum));
+    /*
+     * TUMMENNUS ON RUUTUKALVO (karttapallo.md luku 10.1): kotelon
+     * päälle laskeutuva CSS-kalvo, jonka reikä on nykyisen lampun
+     * kohdalla. `alle` panee sen kirjaston merkkikerroksen alle, jotta
+     * lamput hehkuvat tummennuksen päällä kuten tasokartalla — pallon
+     * pinta, kaupunkipisteet ja reitit jäävät sen alle.
+     */
+    this.kalvo = linssit.kalvoRuudulle(PALLON_OSA, {
+      reika: null,
+      vari: PALLON_TUMMENNUS,
+      keski: PALLON_TUMMENNUS_KESKI,
+      alle: true,
+    });
+    const vinjetti = this.vinjetti;
+    if (this.reducedMotion) vinjetti?.classList.add('paalla');
+    else requestAnimationFrame(() => vinjetti?.classList.add('paalla'));
+  }
+
+  /** Lampun liukuvärit piilotettuun svg:hen linssin juuressa. */
+  pallonMaaritykset() {
+    const svg = el('svg', {
+      class: 'aikajana-maaritykset', width: 0, height: 0, 'aria-hidden': 'true',
+    });
+    svg.style.position = 'absolute';
+    const defs = el('defs', {}, svg);
+    const lamppu = el('radialGradient', { id: 'aikajana-lamppu' }, defs);
+    el('stop', { offset: '0%', 'stop-color': '#fff7dc' }, lamppu);
+    el('stop', { offset: '42%', 'stop-color': '#ffd066' }, lamppu);
+    el('stop', { offset: '100%', 'stop-color': '#f09a2a', 'stop-opacity': '0.2' }, lamppu);
+    const kajo = el('radialGradient', { id: 'aikajana-kajo' }, defs);
+    el('stop', { offset: '0%', 'stop-color': '#ffe2a0', 'stop-opacity': '0.8' }, kajo);
+    el('stop', { offset: '100%', 'stop-color': '#ffd98a', 'stop-opacity': '0' }, kajo);
+    this.juuri?.appendChild(svg);
+    return svg;
+  }
+
+  /** Yksi lamppu pallon pinnalle: div, jossa kartan neljä ympyrää. */
+  pallonLamppu(t) {
+    const laita = MERKIN_SADE * KAJON_SUHDE;
+    const kehys = solmu('div', 'aikajana-valo aikajana-valo-pallolla');
+    kehys.setAttribute('role', 'button');
+    kehys.setAttribute('aria-label', `${t.vuosi}: ${t.otsikko}`);
+    kehys.title = `${t.vuosi}: ${t.otsikko}${t.henkilo ? `, ${t.henkilo}` : ''}`;
+    const svg = el('svg', {
+      viewBox: `${-laita} ${-laita} ${2 * laita} ${2 * laita}`,
+      width: 2 * laita,
+      height: 2 * laita,
+      'aria-hidden': 'true',
+    }, kehys);
+    const sisus = el('g', { class: 'aikajana-valo-sisus' }, svg);
+    // Sama järjestys ja samat mitat kuin kartalla (ks. rakennaValot).
+    el('circle', { class: 'aikajana-valo-kajo', r: MERKIN_SADE * KAJON_SUHDE }, sisus);
+    el('circle', { class: 'aikajana-valo-syke', r: MERKIN_SADE }, sisus);
+    el('circle', { class: 'aikajana-valo-hehku', r: MERKIN_SADE * HEHKUN_SUHDE }, sisus);
+    el('circle', { class: 'aikajana-valo-pallo', r: MERKIN_SADE }, sisus);
+    return kehys;
+  }
+
+  /**
+   * REIKÄ SEURAA NYKYISTÄ LAMPPUA. Tasokartan maskissa on reikä
+   * jokaiselle palavalle lampulle; CSS-kalvolla reikiä on yksi, joten
+   * se liukuu lampusta toiseen (KAIKKI LIIKE ANIMOIDAAN). `valo === null`
+   * palauttaa tasaisen tummennuksen (Alusta).
+   */
+  siirraReika(valo) {
+    if (!this.pallolla || !this.kalvo?.paivita) return;
+    cancelAnimationFrame(this.reianLiuku);
+    /*
+     * MERKKI EIKÄ PELKKÄ PERUUTUS: kesken oleva liuku on peruttava
+     * varmasti myös silloin, kun cancelAnimationFrame ei ehdi (Alusta
+     * pyyhkii reiän samalla kehyksellä, jolla edellinen liuku vielä
+     * odottaa vuoroaan) — sama kuvio kuin paneelin korkeuslukossa.
+     */
+    const merkki = (this.reianMerkki ?? 0) + 1;
+    this.reianMerkki = merkki;
+    const maali = valo ? { lat: valo.lat, lng: valo.lng, sade: PALLON_REIAN_SADE_PX } : null;
+    const alku = this.reianPaikka;
+    this.reianPaikka = maali;
+    if (!maali || !alku || this.reducedMotion) { this.kalvo.paivita(maali); return; }
+    // Lyhin matka pituuspiirillä: kaari ei saa kiertää palloa väärin päin.
+    const dLng = ((maali.lng - alku.lng + 540) % 360) - 180;
+    // Aika luetaan KEHYKSEN omasta leimasta (ensimmäinen kehys on
+    // nolla): rAF:n kello ei ole kaikkialla sama kuin performance.now.
+    let t0 = null;
+    const askel = (nyt) => {
+      if (merkki !== this.reianMerkki) return;
+      if (t0 === null) t0 = nyt;
+      const t = Math.max(0, Math.min(1, (nyt - t0) / PALLON_REIAN_LIUKU_MS));
+      // Pehmeä lähtö ja pysähdys (sama tuntuma kuin kameran ajoilla).
+      const p = t < 0.5 ? 2 * t * t : 1 - ((-2 * t + 2) ** 2) / 2;
+      this.kalvo?.paivita?.({
+        lat: alku.lat + (maali.lat - alku.lat) * p,
+        lng: alku.lng + dLng * p,
+        sade: PALLON_REIAN_SADE_PX,
+      });
+      if (t < 1) this.reianLiuku = requestAnimationFrame(askel);
+    };
+    this.reianLiuku = requestAnimationFrame(askel);
+  }
+
   /**
    * Lampun ja sen maskireiän tila yhdessä: `palaa` = syttynyt (jää
    * hehkumaan), `nykyinen` = viimeksi syttynyt (kirkkain, sykkii).
@@ -1364,6 +1565,8 @@ class Aikajana {
     valo.g.classList.toggle('nykyinen', nykyinen);
     valo.reika?.classList.toggle('reika-palaa', palaa);
     valo.reika?.classList.toggle('reika-nykyinen', nykyinen);
+    // Pallolla reikiä on yksi ja se on nykyisen lampun kohdalla.
+    if (nykyinen) this.siirraReika(valo);
   }
 
   /**
@@ -1396,6 +1599,8 @@ class Aikajana {
   }
 
   paivitaMittakaava(suhde = 1) {
+    // Pallolla merkki on ruutuvakio (CSS2D), joten vastaskaalausta ei ole.
+    if (this.pallolla) return;
     const s = this.merkkiSkaala(suhde);
     if (!(s > 0)) return;
     const zoom = s.toFixed(4);
@@ -1419,11 +1624,28 @@ class Aikajana {
    * uudestaan samoin kuin kehittäjän maailmanäkymässä.
    */
   vapautaKamera(vapaa) {
+    /*
+     * PALLOLLA EI OLE FOKUSLUKKOA (aalto 2A): rajaus, panoroinnin
+     * vapaus ja zoomin pohja ovat tasokartan omia (js/kartta.js
+     * fokusRajaukset), ja pallon kamera on aina vapaa. Lippua ei siis
+     * käännetä eikä nukkuvaa karttaa herätetä sen takia.
+     */
+    if (this.pallolla) return;
     const { ui } = this;
     ui.kameraVapaa = vapaa;
     ui.fokusAvain = null;
     ui.paivitaMaailmanRajaus?.();
     ui.kartta?.tarkistaFokusZoom?.();
+  }
+
+  /**
+   * Hereillä olevan laudan kamera: pallolla js/pallolauta/kamera.js,
+   * tasokartalla js/kartta.js. Allekirjoitus on sama kummallakin
+   * (ajaKamera { x, y, leveys } tai { bbox, marginaali }), joten
+   * aikajana ei tiedä laudasta muuta kuin tämän valinnan.
+   */
+  kamera() {
+    return this.ui.kamera?.() ?? this.ui.kartta ?? null;
   }
 
   /**
@@ -1443,15 +1665,16 @@ class Aikajana {
     const n = this.kameraEnnen;
     this.kameraEnnen = null;
     const { ui } = this;
-    if (!n || !ui.kartta?.ajaKamera || !ui.nakyvaAlue?.() || ui.game?.pack?.id !== this.laudanTunnus) return;
-    ui.kartta.ajaKamera({ x: n.x + n.w / 2, y: n.y + n.h / 2, leveys: n.w }, { kesto: this.reducedMotion ? 0 : 900 });
+    const kamera = this.kamera();
+    if (!n || !kamera?.ajaKamera || !ui.nakyvaAlue?.() || ui.game?.pack?.id !== this.laudanTunnus) return;
+    kamera.ajaKamera({ x: n.x + n.w / 2, y: n.y + n.h / 2, leveys: n.w }, { kesto: this.reducedMotion ? 0 : 900 });
   }
 
   sovitaKaareen(kesto = this.reducedMotion ? 0 : 1400) {
-    const { ui } = this;
     const alue = this.kaari.alue;
-    if (!alue || !ui.kartta?.ajaKamera) return Promise.resolve(false);
-    return ui.kartta.ajaKamera({ bbox: kaarenKameralaatikko(alue, this.juuri), marginaali: 0.03 }, { kesto });
+    const kamera = this.kamera();
+    if (!alue || !kamera?.ajaKamera) return Promise.resolve(false);
+    return kamera.ajaKamera({ bbox: kaarenKameralaatikko(alue, this.juuri), marginaali: 0.03 }, { kesto });
   }
 
   /* ---------- musiikki (js/siirtymamusiikki.js) ---------- */
@@ -1752,6 +1975,8 @@ class Aikajana {
     this.loppu = false;
     this.tila = { vuosi: this.kaari.alku, i: -1, viive: 0 };
     for (const valo of this.valot) this.asetaValonTila(valo, false, false);
+    // Pallolla tummennus palaa tasaiseksi: yksikään lamppu ei ole nykyinen.
+    this.siirraReika(null);
     this.paneeli.hidden = true;
     this.paneeli.replaceChildren();
     // Korkeuslukko pois: tyhjä paneeli ei saa jäädä vanhaan mittaansa.
@@ -2030,7 +2255,8 @@ class Aikajana {
     if (valo) {
       this.asetaValonTila(valo, true, true);
       // Palava valo päällimmäiseksi, jottei myöhempi naapuri peitä sitä.
-      this.valokerros.appendChild(valo.g);
+      // (Pallolla kerrosta ei ole: kirjasto pinoaa merkit itse.)
+      this.valokerros?.appendChild(valo.g);
     } else {
       sfx.play('paper');
     }
@@ -2670,7 +2896,7 @@ class Aikajana {
     this.tila = { vuosi: t.vuosi, i, viive, viiveTaysi: viive };
     this.naytaVuosi(t.vuosi);
     this.valot.forEach((valo, k) => { if (valo) this.asetaValonTila(valo, k <= i, k === i); });
-    if (this.valot[i]) this.valokerros.appendChild(this.valot[i].g);
+    if (this.valot[i]) this.valokerros?.appendChild(this.valot[i].g);
     this.paikkarivi.textContent = [t.vuosi, paikka(t)].filter(Boolean).join(' · ');
     this.vaihdaPaneeli(t);
     this.asettele();
@@ -2764,6 +2990,18 @@ class Aikajana {
     this.nappainkuuntelija = null;
     this.juuri?.remove();
     this.valokerros?.remove();
+    /*
+     * PALLOLAUDALLA VALOT JA TUMMENNUS OVAT LAUDAN KERROKSIA (aalto 2A):
+     * osan purku vie merkit ja ruutukalvon pois siirtymällä
+     * (js/pallolauta/linssit.js pura). Reiän liuku pysäytetään ensin,
+     * jottei kehys enää maalaa purettua kalvoa.
+     */
+    if (this.pallolla) {
+      cancelAnimationFrame(this.reianLiuku);
+      this.reianPaikka = null;
+      this.kalvo = null;
+      this.lauta?.linssit?.pura(PALLON_OSA);
+    }
     // Tummennus liukuu pois ja poistuu vasta sen jälkeen; määritykset
     // (maski) sen mukana, koska pinta viittaa niihin.
     const tummennus = this.tummennus;
@@ -2793,6 +3031,7 @@ class Aikajana {
     this.tummennus = null;
     this.maaritykset = null;
     this.maski = null;
+    this.lauta = null;
     // Tausta takaisin vasta kun linssi on poissa: syncAmbiencen portti
     // lukee juuren kytkentää.
     this.suljeAanimaailma();

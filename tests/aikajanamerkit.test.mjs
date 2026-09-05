@@ -42,6 +42,9 @@ function ajaKehykset(kierroksia = 3) {
 
 class TynkaTyyli {
   setProperty(nimi, arvo) { this[nimi] = arvo; }
+
+  // Karuselli poistaa ennakon oman keston, kun ennakko päättyy.
+  removeProperty(nimi) { delete this[nimi]; }
 }
 
 /** classList luetaan ja kirjoitetaan `class`-määreeseen — myös SVG:llä. */
@@ -276,6 +279,59 @@ function tynkaUi() {
   return ui;
 }
 
+/**
+ * Tynkä-UI PALLOLAUDALLA (aalto 2A, docs/moduulit/karttapallo.md luku
+ * 10): sama moottori, mutta kartan svg:tä EI ole lainkaan — valot ja
+ * tummennus menevät laudan linssiapurille (js/pallolauta/linssit.js).
+ * Apuri on tässä tynkä, joka vain ottaa talteen sen, mitä sille
+ * annetaan: näin testi mittaa moottorin sopimusta eikä Globe.gl:ää.
+ */
+function tynkaPalloUi() {
+  const pane = luo('div');
+  body.appendChild(pane);
+  const kirjattu = { merkit: new Map(), kalvo: null, ajot: [], puretut: [] };
+  const lauta = {
+    linssit: {
+      merkit: (osa, lista) => {
+        kirjattu.merkit.set(osa, lista);
+        return { pura: () => kirjattu.merkit.delete(osa) };
+      },
+      kalvoRuudulle: (osa, asetukset) => {
+        kirjattu.kalvo = { osa, asetukset, reika: asetukset.reika ?? null };
+        return {
+          pura: () => { kirjattu.kalvo = null; },
+          paivita: (reika) => { kirjattu.kalvo.reika = reika; },
+        };
+      },
+      pura: (osa) => {
+        kirjattu.puretut.push(osa);
+        kirjattu.merkit.delete(osa);
+        kirjattu.kalvo = null;
+      },
+    },
+    kamera: {
+      ajaKamera: (kohde, valinnat) => { kirjattu.ajot.push({ kohde, valinnat }); return Promise.resolve(true); },
+    },
+  };
+  const ui = {
+    mapPane: pane,
+    pallolauta: lauta,
+    pallolautaPaalla: () => true,
+    kamera: () => lauta.kamera,
+    nakyvaAlue: () => ({
+      x: 5000, y: 700, w: 2000, h: 1200, skaala: 0.5,
+    }),
+    game: { pack: { id: 'maailmankartta' } },
+    pysaytaAikajana: () => pysaytaAikajana(ui),
+  };
+  return { ui, kirjattu };
+}
+
+/** Datumin elementistä löytyvät ympyrät luokan mukaan. */
+function ympyrat(el, luokka) {
+  return etsi(el, luokka);
+}
+
 /* ══════════════════════════════════════════════════════════════════
  * 1. PAIKKAMERKKI
  * ══════════════════════════════════════════════════════════════════ */
@@ -343,6 +399,108 @@ test('nykyinen keksintö sykkii ja edellinen jää himmeäksi jäljeksi', () => 
   assert.equal(etsi(ui.svg, 'palaa').length, 0, 'Alusta jätti merkit palamaan');
   pysaytaAikajana(ui);
   assert.equal(etsi(ui.svg, 'aikajana-valo').length, 0, 'Sulje jätti merkkikerroksen kartalle');
+});
+
+/* ══════════════════════════════════════════════════════════════════
+ * 1 b. SAMA MERKKI PALLOLAUDALLA (aalto 2A)
+ *
+ * Säännöt ovat samat kuin kartalla — kolmiosainen merkki, nykyinen
+ * sykkii, edellinen jää himmeäksi jäljeksi, Alusta sammuttaa ja Sulje
+ * purkaa — mutta pinta on toinen: laudan linssiapuri
+ * (js/pallolauta/linssit.js merkit + kalvoRuudulle) eikä kartan svg.
+ * ══════════════════════════════════════════════════════════════════ */
+
+test('pallolaudalla valot ovat laudan merkkejä ja tummennus ruutukalvo — kartan svg:hen ei kirjoiteta', () => {
+  const { ui, kirjattu } = tynkaPalloUi();
+  assert.equal(kaynnistaAikajana(ui, LINSSI), true);
+  ajaKehykset();
+
+  const lista = kirjattu.merkit.get('aikajana');
+  assert.ok(lista, 'valot eivät menneet laudan linssiapurille osalla "aikajana"');
+  // 26 tapahtumaa, joista yksi on merkkipaalu (1873) ilman merkkiä.
+  assert.equal(lista.length, 25);
+  const eka = lista[0];
+  const paikka = LINSSI.aikajana.tapahtumat[0];
+  assert.equal(eka.lat, paikka.lat, 'merkki ei ole tapahtuman leveyspiirillä');
+  assert.equal(eka.lng, paikka.lon, 'merkki ei ole tapahtuman pituuspiirillä');
+  assert.equal(typeof eka.elementti, 'function');
+  assert.equal(typeof eka.napautus, 'function', 'lamppu ei ole napautettava');
+
+  const el = eka.elementti(eka);
+  assert.ok(el.classList.contains('aikajana-valo'), 'merkki ei käytä kartan luokkaa');
+  assert.ok(el.classList.contains('aikajana-valo-pallolla'), 'pallon merkki ei ole tunnistettavissa');
+  for (const osa of ['aikajana-valo-kajo', 'aikajana-valo-syke', 'aikajana-valo-hehku', 'aikajana-valo-pallo']) {
+    assert.equal(ympyrat(el, osa).length, 1, `${osa} puuttuu pallon merkistä`);
+  }
+  // Mitat ovat ruudun pikseleitä sellaisenaan: ei vastaskaalausta.
+  assert.equal(Number(ympyrat(el, 'aikajana-valo-pallo')[0].getAttribute('r')), MERKIN_SADE);
+  assert.equal(el.getAttribute('transform'), null, 'pallon merkkiä ei siirretä muunnoksella');
+  assert.equal(ui.aikajana.skaala, null, 'pallolla ei saa laskea mittakaavaa');
+
+  // Tummennus on ruutukalvo, joka jää kirjaston merkkikerroksen alle.
+  assert.ok(kirjattu.kalvo, 'tummennusta ei pyydetty laudalta');
+  assert.equal(kirjattu.kalvo.osa, 'aikajana');
+  assert.equal(kirjattu.kalvo.asetukset.alle, true, 'kalvo ei jää merkkien alle');
+  assert.match(kirjattu.kalvo.asetukset.vari, /^rgba\(10, 7, 5, 0\.86\)$/, 'sävy ei ole sama kuin css:n maskissa');
+  assert.equal(kirjattu.kalvo.reika, null, 'ennen ensimmäistä keksintöä ei ole reikää');
+  pysaytaAikajana(ui);
+});
+
+test('pallolla nykyinen keksintö sykkii, edellinen jää jäljeksi ja reikä seuraa nykyistä', () => {
+  const { ui, kirjattu } = tynkaPalloUi();
+  kaynnistaAikajana(ui, LINSSI);
+  ajaKehykset();
+  const lista = kirjattu.merkit.get('aikajana');
+  const el = (i) => lista[i].elementti(lista[i]);
+  assert.ok(!el(0).classList.contains('palaa'), 'merkki palaa ennen syttymistään');
+
+  ui.aikajana.sytyta(0);
+  ajaKehykset();
+  assert.ok(el(0).classList.contains('palaa') && el(0).classList.contains('nykyinen'));
+  assert.deepEqual(
+    { lat: kirjattu.kalvo.reika.lat, lng: kirjattu.kalvo.reika.lng },
+    { lat: lista[0].lat, lng: lista[0].lng },
+    'reikä ei ole ensimmäisen lampun kohdalla',
+  );
+
+  ui.aikajana.sytyta(1);
+  ajaKehykset(60);
+  assert.ok(el(0).classList.contains('palaa'), 'edellinen merkki sammui kokonaan');
+  assert.ok(!el(0).classList.contains('nykyinen'), 'edellinen merkki jäi sykkimään');
+  assert.ok(el(1).classList.contains('nykyinen'), 'uusi merkki ei sykki');
+  assert.equal(lista.filter((d) => d.elementti(d).classList.contains('nykyinen')).length, 1);
+  // Reikä liukuu lampusta toiseen ja on perillä liu'un jälkeen (liuku
+  // laskee pituuspiirin lyhintä matkaa, joten sallitaan pyöristys).
+  assert.ok(Math.abs(kirjattu.kalvo.reika.lat - lista[1].lat) < 1e-6
+    && Math.abs(kirjattu.kalvo.reika.lng - lista[1].lng) < 1e-6,
+  `reikä ei liukunut toisen lampun kohdalle: ${JSON.stringify(kirjattu.kalvo.reika)}`);
+
+  // Lampun napautus siirtää pysäkkiin kuten kartalla.
+  lista[3].napautus(lista[3]);
+  assert.equal(ui.aikajana.tila.i, 3, 'lampun napautus ei siirtänyt pysäkkiin');
+
+  // Alusta sammuttaa jäljen ja palauttaa tasaisen tummennuksen.
+  ui.aikajana.alusta();
+  ajaKehykset();
+  assert.equal(lista.filter((d) => d.elementti(d).classList.contains('palaa')).length, 0);
+  assert.equal(kirjattu.kalvo.reika, null, 'Alusta jätti reiän kartalle');
+
+  // Sulje purkaa osan kerrokset laudalta.
+  pysaytaAikajana(ui);
+  assert.ok(kirjattu.puretut.includes('aikajana'), 'purku ei vienyt laudan kerroksia');
+  assert.equal(kirjattu.merkit.get('aikajana'), undefined);
+  assert.equal(kirjattu.kalvo, null);
+});
+
+test('pallolla kamera on laudan oma eikä fokuslukkoa kosketa', () => {
+  const { ui, kirjattu } = tynkaPalloUi();
+  kaynnistaAikajana(ui, LINSSI);
+  ajaKehykset();
+  ui.aikajana.sovitaKaareen(0);
+  const ajo = kirjattu.ajot.at(-1);
+  assert.ok(ajo?.kohde?.bbox, 'kaaren sovitus ei mennyt laudan kameralle');
+  assert.equal(ui.kameraVapaa, undefined, 'pallolla ei ole fokuslukkoa vapautettavaksi');
+  pysaytaAikajana(ui);
 });
 
 /* ══════════════════════════════════════════════════════════════════

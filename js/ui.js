@@ -16716,14 +16716,16 @@ export class UI {
     this.aikajanaTunnus = null;
     document.dispatchEvent(new CustomEvent('aikajana-tila', { detail: { paalla: false } }));
     /*
-     * LINSSIKARTALLA AIKAJANAN SULJE ON LINSSIN SULJE (vaihe 4): pallo-
-     * laudalla aikajanan oma ✕ ja Esc päättävät linssin, jotta kuori
-     * palaa pallolle eikä jää tyhjänä karttana ruudulle. Tasokartalla
-     * (?lauta=kartta) linssikartta on aina null ja valinta jää kuten
-     * ennen. Ei kehää: valitseLinssi(null) nollaa valinnan ennen kuin
-     * sen oma tahdistus kutsuu tätä uudestaan.
+     * AIKAJANAN SULJE ON LINSSIN SULJE (vaihe 4, aalto 2A): aikajanan
+     * oma ✕ ja Esc päättävät linssin, jotta laukun valinta ei jää
+     * päälle ilman ajoa. Pallolaudalla (aalto 2A) portti on lauta itse
+     * — linssikarttaa ei enää avata aikajanalle — ja linssikartalla
+     * kuori palaa pallolle. Tasokartalla (?lauta=kartta) kumpikaan ehto
+     * ei täyty ja valinta jää kuten ennen. Ei kehää: valitseLinssi(null)
+     * nollaa valinnan ennen kuin sen oma tahdistus kutsuu tätä uudestaan.
      */
-    if (this.linssikartta?.linssi && tunnus && this.linssiValittu === tunnus) this.valitseLinssi(null);
+    const linssinSulje = this.pallolautaPaalla() || Boolean(this.linssikartta?.linssi);
+    if (linssinSulje && tunnus && this.linssiValittu === tunnus) this.valitseLinssi(null);
     return true;
   }
 
@@ -16735,7 +16737,14 @@ export class UI {
    */
   async tahdistaAikajana(tunnus) {
     const tuki = await this.lataaLinssit();
-    const linssi = tunnus ? tuki?.moottori.linssi : null;
+    /*
+     * LINSSI HAETAAN TUNNUKSELLA, EI KERROSMOOTTORISTA (aalto 2A).
+     * Pallolaudalla `pallolle`-linssi ei kulje kerrosmoottorin kautta
+     * lainkaan (sytytaLinssi sammuttaa moottorin ja piirtää pallolle),
+     * joten moottorin `linssi` on silloin null — ja keksintölinssi jäisi
+     * käynnistymättä juuri sillä laudalla, jolle se on käännetty.
+     */
+    const linssi = tunnus ? tuki?.kaikki.find((l) => l.tunnus === tunnus) ?? null : null;
     if (linssi?.aikajana) {
       if (this.aikajanaTunnus !== tunnus) await this.kaynnistaAikajana(tunnus);
       this.aikajanaValitsimesta = true;
