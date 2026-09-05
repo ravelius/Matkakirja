@@ -4273,6 +4273,16 @@ function kohteenIhmekuva(kohde) {
     osoite: ihme.osoite,
     selite: ihme.selite ?? '',
     lahde: ihme.lahde ?? '',
+    /*
+     * FAKTALÄHTEEN OSOITE kulkee kuvan mukana samalla nimellä kuin
+     * muissa havainnekuvissa (js/packs/historian-hetket.js kuvat).
+     * Yksikään lähderivin piirtäjä ei vielä tee siitä linkkiä — rivi
+     * on tekstiä (js/tekijakortti.js taytaLahderivi) — mutta kenttä on
+     * data siinä missä lähderivikin, ja se seuraa kuvaa kaikkiin
+     * ikkunoihin, joten linkin lisääminen on myöhemmin yksi kohta
+     * eikä kuudentoista datalohkon kierros.
+     */
+    url: ihme.url ?? '',
     nauha: KOHDE_IHMENAUHA,
     /*
      * IHMEKUVAN LIPPU (omistajan lisäys 1.9.2026). Kadonneen ihmeen

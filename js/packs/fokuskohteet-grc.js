@@ -139,7 +139,24 @@
  *     selite: '...',           // kertoo KOHTEESTA, ei kuvasta
  *     lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
  *          + 'nykymaailmassa',
+ *     url: 'https://...',      // valinnainen: lähderivin faktalähde
  *   }
+ *
+ * LOISTOAIKA-V2 (kuvaputken erä, omistaja hyväksynyt 5.9.2026).
+ * Kuudentoista ihmeen kuva vaihtui kuvaan, jossa kohde on OMANA
+ * AIKANAAN eikä siinä ole nykyajan elementtejä. Kentät muuttuvat
+ * kolmella tavalla, ja kumpikin sukupolvi on laillinen rinnakkain:
+ *
+ *   1. `osoite` on valmis ämpäriosoite (…/kohtaamiset/ihmeet/
+ *      ihme-<tunnus>-loistoaika-v2.jpg). Kuva syntyi suoraan ämpäriin
+ *      eikä sillä ole repokopiota; js/media.js assetOsoite päästää
+ *      valmiin osoitteen läpi sellaisenaan, joten piirtäjät eivät
+ *      muutu. Ämpärikuvaa ei myöskään esiladata sw.js:ssä.
+ *   2. `selite` on kuvaputken sanatarkka kuvateksti kuvatusta
+ *      hetkestä. Se ei enää kerro, mitä paikalla on NYT — sen sanoo
+ *      lähderivin merkintä "omana aikanaan" ja kohteen oma teksti.
+ *   3. `lahde` päättyy faktalähteeseen, ja `url` on saman lähteen
+ *      osoite (talon tapa: js/packs/historian-hetket.js kuvat).
  *
  * `kadonnut: true` — kohdetta ei ole enää olemassa: kartalla merkki on
  * TÄHTI (voittaa kohteen oman `symboli`-kentän) ja ihmekuva on kortin
@@ -1117,23 +1134,23 @@ export const FOKUSKOHTEET_GRC = [
      * temppelille, ja laakson pohjalla näkyy nykyinen Delfoin kylä
      * tienpätkineen. Sama näkymä kahdessa ajassa on juuri se, mitä
      * Raamattu ihmeeltä pyytää.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-delfoi.webp',
+      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-delfoi-loistoaika-v2.jpg',
       kadonnut: false,
-      selite: 'Delfoi ei ollut kaupunki vaan pyhäkkö: Parnassoksen '
-        + 'rinteelle terassoitu alue, jonne tultiin kysymään Apollonin '
-        + 'neuvoa. Kaupunkivaltioiden lähettiläät uhrasivat vuohen ja '
-        + 'odottivat vuoroaan, ja Pythia-papitar vastasi kysymyksiin '
-        + 'temppelin sisällä; kiitokseksi kaupungit '
-        + 'pystyttivät pyhän tien varrelle omat aarreaittansa ja '
-        + 'lahjapatsaansa — lahja oli usein kymmenys sotasaaliista. '
-        + 'Sulla ryösti paikan 86 eaa. ja Nero 66 jaa., ja Konstantinus '
-        + 'Suuri siirsi vuonna 324 Delfoin käärmepatsaan uuteen '
-        + 'pääkaupunkiinsa, missä se seisoo yhä. Rinteellä on nyt '
-        + 'raunioalue ja laakson pohjalla nykyinen Delfoin kylä.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      selite: 'Kuvituksen nuori lähettiläs toistaa mielessään kotikaupunkinsa '
+        + 'kysymystä, sillä Pythian vastausta ei saa pyytää uudelleen vain '
+        + 'siksi, ettei siitä pidä. Pyhää tietä reunustavat aarreaitat, '
+        + 'pronssipatsaat ja sotasaaliista annetut lahjat muistuttavat häntä '
+        + 'siitä, kuinka moni valtio on tullut samaan rinteeseen epävarmana '
+        + 'tulevaisuudestaan.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: Hellenic Ministry of Culture — Delphi, '
+        + 'tarkistettu 5.9.2026.',
+      url: 'https://odysseus.culture.gr/h/3/eh352.jsp?obj_id=2507',
     },
   },
   /*
@@ -2050,25 +2067,23 @@ export const FOKUSKOHTEET_GRC = [
      * MATKAKIRJAN IHME (yhä olemassa) — säännöt tämän tiedoston
      * lohkossa "MATKAKIRJAN IHME". `kadonnut: false`, joten "Koe ihme"
      * -nappi tulee yllä olevan valokuvan alle.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-olympieion.webp',
+      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-olympieion-loistoaika-v2.jpg',
       kadonnut: false,
-      selite: 'Zeus Olympioksen temppeli oli antiikin Kreikan suurin: '
-        + '104 korinttilaista pylvästä, kukin seitsemäntoista metriä '
-        + 'korkea, marmoripihan ympäröimänä Akropoliin kaakkoispuolella. '
-        + 'Sisällä seisoi kullasta ja norsunluusta tehty Zeuksen patsas, '
-        + 'jota Pausanias piti aikansa suurimpiin kuuluvana. Hadrianus '
-        + 'vihki temppelin vuonna 131, ja kreikkalaiset kaupungit '
-        + 'pystyttivät pihalle hänelle kiitospatsaita: pyhäköstä tuli '
-        + 'hänen perustamansa kaupunkien liiton keskus. Herulit '
-        + 'ryöstivät temppelin vuonna 267, maanjäristys kaatoi sen '
-        + '400-luvulla ja loput louhittiin keskiajan Ateenan '
-        + 'rakennuskiveksi. Pystyssä on nyt viisitoista pylvästä, ja '
-        + 'kuudestoista makaa siinä, mihin se kaatui myrskyssä vuonna '
-        + '1852.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      selite: 'Kuvituksen isä nostaa tyttärensä kivelle, jotta tämä voisi '
+        + 'laskea pylväitä — tehtävä käy mahdottomaksi jo kauan ennen sataa. '
+        + 'Lapselle metsä näyttää jatkuvan loputtomiin; aikuisille 104 '
+        + 'korinttilaista pylvästä todistavat, että vuosisatoja kesken ollut '
+        + 'temppeli on viimein valmis ja että keisari Hadrianus haluaa tulla '
+        + 'muistetuksi samassa pyhäkössä Zeuksen kanssa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: Hellenic Ministry of Culture — Olympieion, '
+        + 'tarkistettu 5.9.2026.',
+      url: 'https://odysseus.culture.gr/h/3/eh351.jsp?obj_id=2488',
     },
   },
 ];

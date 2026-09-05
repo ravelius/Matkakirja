@@ -95,7 +95,10 @@ export const FOKUSKOHTEET_AFG = [
       + 'alkaen, ja patsaiden ympärillä on satoja luolia, joiden seiniä '
       + 'koristavat 500–700-luvuilla maalatut kuvat. Tšingis-kaanin '
       + 'joukot valtasivat laakson 1221 mutta jättivät patsaat '
-      + 'koskematta.',
+      + 'koskematta. Taleban räjäytti molemmat patsaat maaliskuussa 2001; '
+      + 'kallio, tyhjät syvennykset ja maalatut luolat ovat yhä '
+      + 'paikallaan, ja laakso on vuodesta 2003 ollut Unescon '
+      + 'maailmanperintökohde.',
     lahde: 'en-Wikipedia "Buddhas of Bamiyan", johdanto sekä osiot '
       + '"History" ja "Artworks" (tarkistettu 27.8.2026).',
     /*
@@ -107,23 +110,22 @@ export const FOKUSKOHTEET_AFG = [
      * kallio syvennyksineen on. Muuten kuva joko väittäisi patsaiden
      * olevan paikallaan tai jättäisi pelaajan luulemaan, ettei
      * Bamiyaniin voi enää mennä.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-bamiyan.webp',
+      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-bamiyan-loistoaika-v2.jpg',
       kadonnut: true,
-      selite: 'Bamiyanin kaksi kalliobuddhaa olivat maailman '
-        + 'suurimmat seisovat buddhapatsaat: 55 ja 38 metriä korkeat, '
-        + 'veistetty 500- ja 600-luvuilla laakson pohjoisseinämään '
-        + 'Silkkitien varrelle. Kiinalainen pyhiinvaeltaja Xuanzang laski '
-        + 'laaksossa vuonna 630 toistakymmentä luostaria ja yli tuhat '
-        + 'munkkia, jotka asuivat kallioon hakatuissa luolissa; patsaat '
-        + 'olivat silloin kullattuja ja koristeltuja, ja niitä ympäröivät '
-        + 'kirkkaanväriset taivaskohtaukset. Taleban tuhosi patsaat '
-        + 'maaliskuussa 2001. Kallio, tyhjät syvennykset ja maalatut '
-        + 'luolat ovat yhä paikallaan, ja laakso on vuodesta 2003 ollut '
-        + 'Unescon maailmanperintökohde.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      selite: 'Silkkitien matkalainen saapuu laaksoon päiviä kestäneen '
+        + 'vuoristotaipaleen jälkeen ja näkee kallioon maalatut jättiläiset '
+        + 'ensimmäistä kertaa. Luolissa elävät munkit, kauppakaravaanit ja '
+        + 'pyhiinvaeltajat tekevät paikasta enemmän kuin kaksi patsasta: se '
+        + 'on levähdyspaikka, jossa kielet, tavarat ja uskonnot kohtaavat.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: UNESCO World Heritage Centre — Bamiyan Valley, '
+        + 'tarkistettu 5.9.2026.',
+      url: 'https://whc.unesco.org/en/list/208/',
     },
   },
 ];

@@ -224,24 +224,23 @@ export const FOKUSKOHTEET_GBR = [
      * Tuileries se osuu siihen ONNEKKAASTI: Sydenhamin lasipalatsi
      * seisoi 1854–1936, joten isoisä olisi vuonna 1873 voinut kävellä
      * sen sisään. Selite sanoo sen ääneen.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-crystal-palace.webp',
+      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-crystal-palace-loistoaika-v2.jpg',
       kadonnut: true,
-      selite: 'Crystal Palace oli aikansa suurin lasirakennus: vuoden '
-        + '1851 maailmannäyttelyn halli, joka koottiin näyttelyn '
-        + 'jälkeen uudelleen Sydenham Hillin laelle Etelä-Lontooseen. '
-        + 'Siellä siitä tuli pysyvä ihmeiden näyttämö: saleihin oli '
-        + 'rakennettu jäljennöksiä muinaisen Egyptin, Assyrian ja '
-        + 'Alhambran arkkitehtuurista, ja Händel-juhlilla lauloi '
-        + 'parhaimmillaan tuhansien laulajien kuoro. '
-        + 'Talo seisoi kesäkuusta 1854 aina 30. marraskuuta 1936 '
-        + 'asti, jolloin tulipalo tuhosi sen — isoisä ehti siis nähdä '
-        + 'sen matkallaan 1873. Mäellä on nyt Crystal Palace Park, '
-        + 'jonka pengerrykset ja vuoden 1854 dinosauruspatsaat ovat '
-        + 'edelleen paikallaan.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      selite: 'Kuvituksen perheen nuorin näkee mäen laelta rakennuksen, joka '
+        + 'näyttää olevan tehty lähes kokonaan valosta. Vanhemmille päivä '
+        + 'Crystal Palacessa maksaa aikaa ja rahaa, mutta sisällä odottavat '
+        + 'Egypti, Assyria, Alhambra ja kokonainen maailmannäyttely samojen '
+        + 'lasiseinien alla — juuri sellainen ihme, jonka isoisäkin olisi '
+        + 'vuonna 1873 voinut kokea.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: Victoria and Albert Museum — Philip Henry '
+        + 'Delamotte and Crystal Palace, tarkistettu 5.9.2026.',
+      url: 'https://www.vam.ac.uk/info/collection-selection-boxes-photography-processes-and-techniques',
     },
   },
   {
