@@ -524,3 +524,61 @@ nyt pallo.
   vaiheeseen 5b mittauksen taakse: 20+ testiä lukee ui.js:ää tekstinä,
   ja moduulit ovat SW-välimuistissa — hyöty on parsinta-aika, joka on
   mitattava laitteella ennen remonttia.
+
+## 10. Kaikki pallolle — vanha kartta suljetaan (5.9.2026)
+
+**Omistajan linjaus (Raamattu KAIKKI PALLOLLE, VANHA KARTTA SULJETAAN):**
+*"Käännä kaikki pallolle, niin voidaan sulkea vanha kartta kokonaan"* /
+*"Käytä agenttia parvia"*. Kumoaa luvun 2 kytkimen ja luvun 5
+linssikartan: tasokartta ei jää linssikartaksi eikä palautusoptioksi.
+
+**Inventaario (5.9.2026):** vanhaan karttaan piirtävät enää
+topografia (1 rasterikuva), vesistöt (sama rasteri + 38 järveä + 253
+jokiviivaa), keksinnöt/aikajana (valot + maskitummennus + kamera),
+radio (kaupunkinapit), vertailu ja maatiedot (maapolygonit + nimet)
+sekä etusivun pienoiskartta. Lehtien kohdekartat ovat omia SVG-
+piirroksia (js/packs/maakartat.js) eivätkä riipu Kartta-luokasta.
+Poistettavaa kartan mukana: js/kartta.js, js/linssit/kerros.js,
+js/pallolauta/linssikartta.js, js/laattapyramidi.js, js/mapart.js,
+js/karttanimet.js, `?lauta=kartta`, LAUTA-kytkin, pyramidilaatat.
+
+### 10.1 Sopimus: linssi pallolla
+
+Jokainen linssi saa `pallolle(lauta, tila)`, joka piirtää linssin
+pallon pinnalle ja palauttaa kahvan `{ pura() }`. `tila` on sama kuin
+`piirra(ryhma, tila)`:lla (packId, map, askel …). Pallolaudalla
+`ui.sytytaLinssi` kutsuu `pallolle`-funktiota; linssikarttaa ei enää
+avata, kun linssillä on `pallolle`. Kun kaikilla on, linssikartta
+poistetaan.
+
+Piirto tapahtuu **vain** `lauta.linssit`-apurin (js/pallolauta/linssit.js)
+kautta — linssi ei koske Globe.gl-instanssiin suoraan:
+
+| kutsu | Globe.gl | datum |
+|---|---|---|
+| `kalvo(osa, { kuva, peittavyys })` | oma pallokuori (THREE.Mesh, säde × 1.002, MeshBasicMaterial map + transparent) | tasavälinen (equirectangular) kuva; rasteri (topografia, vesistöjen pohja) |
+| `polut(osa, lista)` | `pathsData` osarekisterin kautta (reitit.js `aseta(osa, lista)` kuten merkit.js) | `{ avain, pisteet: [[lat, lng]…], vari, paksuus, katko }` |
+| `polygonit(osa, lista)` | `polygonsData` (UUSI kerros; PALLOLAUDAN_KERROKSET saa sen) | `{ avain, geometry: GeoJSON Polygon/MultiPolygon, vari, reuna, korkeus, napautus(d) }` |
+| `merkit(osa, lista)` | `merkit.aseta(osa, lista)` (htmlElementsData) | `{ avain, laji: 'linssi', lat, lng, elementti(d), asettele?(el, d) }` |
+| `kalvoRuudulle(osa, { reika })` | CSS-kalvo kotelon päälle, reikä ruutupisteessä (`lauta.ruudulla`) | aikajanan tummennus; ei SVG-maskia |
+| `pura(osa)` | kaikki osan kerrokset pois siirtymällä | — |
+
+Koordinaatit: laudan (x, y) → `lauta.asteet(kohta)` → `{ lat, lon }`;
+GeoJSON laudalle ja pallolle: js/geo.js (`pallolle`, `laudanProjektio`).
+Elementtikatto, rasterointi ja `class`/`filter`-kiellot (linssit.md 1.3,
+1.4, 1.7) eivät koske palloa; kerrosten määrää vartioi
+tests/pallolauta.test.mjs.
+
+### 10.2 Aallot (Opus-agenttiparvi, Fable koordinoi)
+
+| aalto | osa | tiedostot | koko |
+|---|---|---|---|
+| 1 | linssimoottori `lauta.linssit` + topografia (kalvo) + sytytaLinssi-kytkentä | js/pallolauta/linssit.js (uusi), lauta.js, reitit.js, js/linssit/topografia.js, js/ui.js, sw.js, tests | M |
+| 1 | vesistöt: pohja (kalvo), joet (polut), järvet (polygonit) | js/linssit/vesistot.js, packs-muunnos lat/lng | M |
+| 1 | vertailu + maatiedot: maapolygonit ja nimet, napautus | js/vertailu.js, js/geo.js | L |
+| 1 | etusivu: etusivupallo oletukseksi, pienoiskartta pois | js/etusivupallo.js, js/kartta.js, css, index.html | M |
+| 2 | keksinnöt/aikajana: valot merkkeinä, tummennus kalvona, kamera pallolle | js/aikajana.js, js/linssit/keksinnot.js | L |
+| 2 | radio: kaupunkinapit merkkeinä | js/linssit/radio.js, js/ui.js | M |
+| 3 | poisto: kartta.js, kerros.js, linssikartta.js, laattapyramidi.js, mapart.js, karttanimet.js, LAUTA-kytkin, turvatilan varapolku, testit, sw.js, css, dokumentit | — | L |
+
+Toteutusmerkinnät kirjataan tämän luvun loppuun aalloittain.
