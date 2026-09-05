@@ -987,3 +987,77 @@ funktioilla (`ladoRuutunimet`, `karttanimienKaupungit`,
 js/pallolauta/{nimet,nostot}.js), ja se on tarkoituksellista: ladonnan
 sääntö on YKSI molemmille laudoille. Tiedostosta poistuu vain se osa,
 joka piirtää tasokartan svg:hen.
+
+**Etusivupallo koko sivulle (5.9.2026 ilta).** Omistaja sanatarkasti
+klo 21.30: *"pallo saisi pyöriä koko etusivun alalla. isoisän kuva
+saisi olla isompi ja vaihtua aina samaan paikkaan"* — ja klo 21.45:
+*"animaatio pitää mennä koko maapallon ympäri niin että se voi loopata.
+eli pysähtyy lontooseen ja punainen viiva ottaa kiinni lopuksi"*.
+Kolme muutosta js/etusivupallo.js:ään, css/styles.css:ään ja
+tools/tee-etusivupallo.mjs:ään; uusi videoversio on
+`ETUSIVUPALLO_VERSIO = '2026-09-05c'` (työnkulku tee-etusivupallo on
+ajettava, ennen sitä etusivu on varapolullaan pelkkää pergamenttia).
+
+1. **Kerros koko paneelin taakse.** Kerros syntyy nyt `.intro`-paneelin
+   ensimmäiseksi lapseksi eikä `.intro-kartta`-ylälohkoon, ja video
+   rajataan `object-fit: cover` (ennen `contain`, jolloin työpöydällä
+   pallo oli kapea neliö keskellä ja alalohko tyhjää pergamenttia).
+   Video ja SVG saavat SAMAN muunnoksen yhdestä paikasta:
+   `SOVITUS_TAPA = 'cover'`, `SVG_SOVITUS.cover = 'xMidYMid slice'` ja
+   puhtaat funktiot `kerroksenSovitus` + `videostaRuudulle`. Kahva
+   tarjoaa `koneRuudulla(t)`:n samasta laskennasta. Vartiot:
+   tests/etusivupallo.test.mjs (sovitus = SVG:n slice-kaava pikselilleen,
+   kone kuvassa 390×844 / 768×1024 / 1400×900 / 2000×1300, CSS ja
+   moduuli sopivat rajauksesta) ja savuke E1e/E1f/E10a/E10b (selaimen
+   laskema koneen ruutupiste vs. moduulin oma, alle 2 px).
+   Luettavuus: sumuverho kevennettiin 0,44 → 0,38 ja avaustekstin sekä
+   julisteotsikon TAAKSE tuli paikallinen pergamenttiharso
+   (`::before`-liukuväri, ei suodattimia — iOS-sääntö). Harso on
+   pseudo eikä elementin tausta juuri siksi, ettei se saa kasvattaa
+   laatikoita: padding veisi isoisän kortilta sen kaistan.
+2. **Isoisän kuva kiinteään paikkaan ja isommaksi.** Esteväistö
+   (`valitseKuvapaikka`, `sijoitaKuva`, kutistussarja) POISTUI, ja
+   paikan antaa CSS: puhelimella ja tabletilla julisteotsikon ja
+   avaustekstin väliin oikeaan laitaan (`top: 37,25 %`,
+   `width: clamp(110px, 28vw, 176px)`), työpöydällä (≥ 900 px)
+   paneelin oikeaan alanurkkaan (`clamp(170px, 18vw, 260px)`).
+   Kuvateksti on yhdellä rivillä ja kallistus loiva (−3°), koska
+   puhelimen vapaa kaista on mitattuna vain ~95 px. Kortteja on KAKSI
+   päällekkäin: vaihto on aito ristihäivytys. Varmistuksena (ei
+   väistönä) `varmistaPaikka` siirtää korttia pystysuunnassa
+   (`--etusivupallo-kuva-siirto`), jos kiinteä paikka jollain
+   kirjasinkoolla osuisi otsikkoon tai tekstiin — sama luku molemmille
+   korteille, joten paikka ei vaihdu kuvien mukana. Mitattu Chromiumilla
+   kolmessa koossa: ei leikkausta avaustekstiin, otsikkoon, nappeihin
+   eikä äänet/aloitus-riviin.
+3. **Kierros on 360° ja looppaa saumatta.** `ETUSIVUN_REITTI` on nyt
+   Foggin kierros Lontoo → Pariisi → Kairo (Suez) → Mumbai (Bombay) →
+   Kolkata → Singapore → Hongkong → Tokio (Jokohama) → San Francisco →
+   New York → Lontoo. `reitinPisteet` muuttaa paluun nollaeron täydeksi
+   kierrokseksi, joten pituusasteiden kierto on tasan 360,000°.
+   `koneenTila` on JAKSOLLINEN (kelaa sauman yli ja lisää 360° per
+   kierros), jolloin myös kameran silotus on jaksollinen ja kehys
+   hetkellä KESTO on sama kuin hetkellä 0. Kierroksen lopussa on
+   `LOPPU_PITO_S = 2,6 s` mittainen jakso ilman matkaa: KONE PYSÄHTYY
+   LONTOOSEEN, punainen viiva sulkee ympyrän (kärki koneen ja jäljen
+   alkupisteen kohdalla), ja vasta pidon viimeinen `HAIVYTYS_S = 1,1 s`
+   häivyttää SVG:n pois ennen loopin alkua. Video ei enää häivy —
+   työkalusta poistui `window.haivyta`. Kesto on 49,6 s
+   (`JAKSON_POHJA_S = 1,0`, `JAKSON_ASTE_S = 0,115`), eli 744 kehystä
+   15 fps:llä; kehykset jaetaan tasan kierrokselle
+   (`t = i × KESTO / KEHYKSIA`) ja ffmpeg saa murtolukuisen taajuuden
+   (`KEHYKSIA / KESTO`), jotta videon kesto on tasan kierros. Työkaluun
+   tuli `--sauma`-koe, joka polttaa vain kehykset t = 0 ja t = KESTO ja
+   vertaa ne tavu tavulta; kontissa ajettuna 5.9.2026: **kameran
+   lon-ero 360°:sta 0,0 ja kehykset identtiset (pikseliero 0)**.
+   Työkalu kaatuu heti, jos reitti ei kierrä 360°, ja esilämmitys
+   nostettiin 12 → 24 näytteeseen (kierros käy nyt koko maapallon
+   ympäri, joten laattoja tarvitaan kaksin verroin).
+
+AVOIN: työpöydällä video suurennetaan cover-sovituksessa 1,75-kertaiseksi
+(2000 px leveällä 2,5-kertaiseksi), joten sumennettu 800 px:n kuva on
+pehmeä. Jos omistaja haluaa terävämmän, `tools/tee-etusivupallo.mjs`
+ajetaan `--kuva 1100 --lava 1240` -arvoilla (tiedostot kasvavat noin
+kaksinkertaisiksi). Erittäin leveillä näytöillä (kuvasuhde yli ~2 : 1)
+cover rajaa pystysuunnassa niin paljon, että koneen reitin pohjoisin
+kohta voisi jäädä ulos; mitatut koot 390×844 … 2000×1300 ovat kunnossa.

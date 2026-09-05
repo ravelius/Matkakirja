@@ -8,12 +8,20 @@ import { readFileSync } from 'node:fs';
  * pyörii hitaasti lontoosta kohti aasiaa… ja siinä lentokone voisi
  * lentää eri kaupunkien välillä… ja aina kun kone laskeutuu, tulee uusi
  * isoisän aikalaiskuva jonnekin kartan ulkopuolelle pienellä, niin että
- * ei jää etusivun tekstin päälle."*).
+ * ei jää etusivun tekstin päälle."* — klo 21.30: *"pallo saisi pyöriä
+ * koko etusivun alalla. isoisän kuva saisi olla isompi ja vaihtua aina
+ * samaan paikkaan."* — klo 21.45: *"animaatio pitää mennä koko
+ * maapallon ympäri niin että se voi loopata. eli pysähtyy lontooseen ja
+ * punainen viiva ottaa kiinni lopuksi."*).
  *
- * Vartioi neljä asiaa, joita ei näe silmällä: (1) projektio — koneen
- * ruutupiste vastaa sitä kameraa, jolla video poltettiin; (2) reitti ja
- * kierroksen kesto; (3) lippu on oletuksena POIS ja varapolku jättää
- * etusivun ennalleen; (4) kuvan paikka ei leikkaa avaustekstiä.
+ * Vartioi kuusi asiaa, joita ei näe silmällä: (1) projektio — koneen
+ * ruutupiste vastaa sitä kameraa, jolla video poltettiin; (2) reitti on
+ * täysi 360° kierros ja kamera on jaksollinen, joten video looppaa
+ * saumatta; (3) kone pysähtyy Lontooseen ja viiva sulkee ympyrän;
+ * (4) cover-sovitus antaa videolle ja SVG:lle saman muunnoksen, ja kone
+ * osuu pallolle kaikissa ruutukoissa; (5) lippu on poiskytkin ja
+ * varapolku jättää etusivun ennalleen; (6) isoisän kuva on kiinteässä
+ * paikassa ja selvästi isompi.
  */
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
@@ -29,11 +37,12 @@ globalThis.location = { search: '' };
 
 const {
   ETUSIVUN_KAMERA, ETUSIVUN_KUVAKIERTO, ETUSIVUN_REITTI, ETUSIVUPALLO_AVAIN,
-  ETUSIVUPALLO_TIEDOSTOT, ETUSIVUPALLO_VERSIO, HAIVYTYS_S,
+  ETUSIVUPALLO_TIEDOSTOT, ETUSIVUPALLO_VERSIO, HAIVYTYS_S, KIERROKSEN_ASTEET,
+  KUVAN_VAIHTO_MS, LOPPU_PITO_S, SOVITUS_TAPA, SVG_SOVITUS,
   asetaEtusivupallo, etusivupalloOletus, etusivupalloPaalla, jaljenPisteet,
-  kameranNakyma, koneenTila,
+  kameranNakyma, kerroksenSovitus, koneenTila,
   kaarietaisyys, liikeVahennetty, lueLuettelo, pallonPiste, reitinPisteet, saapumisenKuva,
-  saapumisia, suurympyra, teeReitti, valitseKuvapaikka,
+  saapumisia, suurympyra, teeReitti, videostaRuudulle,
 } = await import('../js/etusivupallo.js');
 const { packById } = await import('../js/pack.js');
 // Laudan valinta muistetaan moduulissa (ui-apurit): oletus seuraa lautaa,
@@ -44,6 +53,13 @@ const pack = packById('maailmankartta');
 const pisteet = reitinPisteet(pack);
 const reitti = teeReitti(pisteet);
 const MITAT = { leveys: 800, korkeus: 800, lava: 900, fov: 50 };
+/** Ruutukoot, joissa asettelu on mitattu selaimessa (savuke ja kaappaukset). */
+const RUUTUKOOT = [
+  { nimi: 'puhelin', leveys: 390, korkeus: 844 },
+  { nimi: 'tabletti', leveys: 768, korkeus: 1024 },
+  { nimi: 'työpöytä', leveys: 1400, korkeus: 900 },
+  { nimi: 'iso työpöytä', leveys: 2000, korkeus: 1300 },
+];
 
 /* ==================== LIPPU JA VARAPOLKU ========================== */
 
@@ -91,7 +107,7 @@ test('lippu on poiskytkin: URL voittaa muistin ja oletus poistaa avaimen', () =>
 test('luettelo hylätään ilman verkkoa, väärällä versiolla ja vajaana', async () => {
   const kelpo = {
     versio: ETUSIVUPALLO_VERSIO,
-    kesto: 41.2,
+    kesto: reitti.kesto,
     mitat: MITAT,
     reitti: pisteet.map((p) => ({ id: p.id, lat: p.lat, lon: p.lon })),
   };
@@ -118,37 +134,71 @@ test('reduced motion tunnistetaan ja jättää videon pois', () => {
     'reduced motionissa piirretään yksi pysäytyskuva eikä käynnistetä rAF-silmukkaa');
 });
 
-/* ==================== REITTI ====================================== */
+/* ==================== REITTI ON TÄYSI KIERROS ====================== */
 
-test('reitti kulkee Lontoosta itään Aasiaan pelin omilla koordinaateilla', () => {
+/*
+ * OMISTAJA 5.9.2026 ilta: *"animaatio pitää mennä koko maapallon ympäri
+ * niin että se voi loopata. eli pysähtyy lontooseen ja punainen viiva
+ * ottaa kiinni lopuksi."* Reitti on Foggin kierros ja päättyy sinne,
+ * mistä alkoi — pituusasteina tasan 360° itään.
+ */
+test('reitti on Foggin kierros Lontoosta itään takaisin Lontooseen', () => {
   assert.equal(pisteet.length, ETUSIVUN_REITTI.length,
     'jokainen reitin kaupunki löytyy maailmankartasta');
   assert.equal(pisteet[0].id, 'lontoo');
-  assert.equal(pisteet[pisteet.length - 1].id, 'tokio');
+  assert.equal(pisteet[pisteet.length - 1].id, 'lontoo', 'kierros palaa lähtöpaikkaan');
   for (let i = 1; i < pisteet.length; i++) {
     assert.ok(pisteet[i].lon > pisteet[i - 1].lon,
       `${pisteet[i].id}: reitin on edettävä itään (pituusasteet jatkuvina)`);
   }
+  const kierto = pisteet[pisteet.length - 1].lon - pisteet[0].lon;
+  assert.ok(Math.abs(kierto - KIERROKSEN_ASTEET) < 1e-9,
+    `kierto ${kierto.toFixed(6)}° ei ole tasan 360° — video ei looppaisi saumatta`);
   // Lontoo ja Tokio oikeilla paikoillaan ±1,5° (lauta → asteet).
   assert.ok(Math.abs(pisteet[0].lat - 51.5) < 1.5 && Math.abs(pisteet[0].lon - (-0.1)) < 1.5);
-  const tokio = pisteet[pisteet.length - 1];
+  const tokio = pisteet.find((p) => p.id === 'tokio');
   assert.ok(Math.abs(tokio.lat - 35.7) < 1.5 && Math.abs(tokio.lon - 139.7) < 1.5);
+  // Tyynenmeren yli ja Atlantin takaisin: kierros käy Amerikassa.
+  for (const id of ['sanfrancisco', 'newyork']) {
+    assert.ok(pisteet.some((p) => p.id === id), `kierrokselta puuttuu ${id}`);
+  }
 });
 
-test('kierros kestää noin 40 s eikä kone pysähdy kaupunkiin', () => {
-  assert.ok(reitti.kesto > 30 && reitti.kesto < 55,
-    `kierroksen kesto ${reitti.kesto.toFixed(1)} s ei ole 30–55 s`);
-  assert.equal(reitti.jaksot.length, pisteet.length - 1);
-  for (const j of reitti.jaksot) {
-    assert.ok(j.kesto >= 1.2, 'jokaisella jaksolla on vähintään pohjakesto');
+test('kierros kestää 40–60 s ja päättyy Lontoon pysähdykseen', () => {
+  assert.ok(reitti.kesto > 40 && reitti.kesto < 60,
+    `kierroksen kesto ${reitti.kesto.toFixed(1)} s ei ole 40–60 s`);
+  assert.equal(reitti.jaksot.length, pisteet.length,
+    'jaksoja on yksi enemmän kuin välejä: viimeinen on Lontoon pysähdys');
+  const pito = reitti.jaksot[reitti.jaksot.length - 1];
+  assert.equal(pito.pito, true);
+  assert.equal(pito.matka, 0, 'pysähdyksellä ei ole matkaa');
+  assert.equal(pito.kesto, LOPPU_PITO_S);
+  assert.ok(LOPPU_PITO_S > HAIVYTYS_S,
+    'pysähdyksen on kestettävä häivytystä kauemmin, jotta suljettu ympyrä ehtii näkyä');
+  for (const j of reitti.jaksot.slice(0, -1)) {
+    assert.ok(j.kesto >= 1, 'jokaisella lentojaksolla on vähintään pohjakesto');
     // Kesto seuraa matkaa: pitkä jakso ei ole yhtä nopea kuin lyhyt.
-    assert.ok(Math.abs(j.kesto - (1.2 + j.matka * 0.2)) < 1e-9);
+    assert.ok(Math.abs(j.kesto - (1.0 + j.matka * 0.115)) < 1e-9);
   }
   // Ei taukoja: jaksot ovat peräkkäin ilman rakoa.
   for (let i = 1; i < reitti.jaksot.length; i++) {
     assert.ok(Math.abs(reitti.jaksot[i].alku
       - (reitti.jaksot[i - 1].alku + reitti.jaksot[i - 1].kesto)) < 1e-9);
   }
+});
+
+test('kamera on JAKSOLLINEN: viimeinen kehys on sama kuin ensimmäinen', () => {
+  const alku = kameranNakyma(reitti, 0);
+  const loppu = kameranNakyma(reitti, reitti.kesto);
+  assert.ok(Math.abs((loppu.lon - alku.lon) - KIERROKSEN_ASTEET) < 1e-9,
+    `kamera kiertyi ${(loppu.lon - alku.lon).toFixed(6)}° eikä 360° — video hyppäisi saumassa`);
+  assert.ok(Math.abs(loppu.lat - alku.lat) < 1e-9, 'kameran kallistus ei saa hypätä saumassa');
+  assert.equal(loppu.korkeus, alku.korkeus);
+  // Sauman yli kelaaminen: silotusikkuna kurkistaa molempiin suuntiin.
+  const ennen = koneenTila(reitti, -1);
+  const jalkeen = koneenTila(reitti, reitti.kesto - 1);
+  assert.ok(Math.abs((jalkeen.lon - ennen.lon) - KIERROKSEN_ASTEET) < 1e-9,
+    'koneenTila jatkuu kierros kerrallaan myös kierroksen ulkopuolella');
 });
 
 test('isoympyrä kulkee päätepisteiden kautta ja pituusaste pysyy jatkuvana', () => {
@@ -220,33 +270,125 @@ test('kone pysyy kuvassa ja pallo pyörii tasaisesti itään koko kierroksen', (
     `kone karkasi kuvan reunalle hetkellä ${t.toFixed(1)} s `
       + `(${p.x.toFixed(0)}, ${p.y.toFixed(0)})`);
   }
-  // Kamera kiertää Lontoosta Tokioon: koko matka noin 140°.
+  // Kamera kiertää koko maapallon ympäri.
   const alku = kameranNakyma(reitti, 0).lon;
   const loppu = kameranNakyma(reitti, reitti.kesto).lon;
-  assert.ok(loppu - alku > 100, `pallo pyöri vain ${(loppu - alku).toFixed(0)}° — pitäisi olla yli 100°`);
+  assert.ok(loppu - alku > 350, `pallo pyöri vain ${(loppu - alku).toFixed(0)}° — pitäisi olla 360°`);
 });
 
-test('punainen viiva pitenee eikä kutistu', () => {
+/* ==================== COVER-SOVITUS =============================== */
+
+/*
+ * KOKO ETUSIVUN ALA (omistaja 5.9.2026 klo 21.30). Video ja SVG saavat
+ * SAMAN muunnoksen: CSS object-fit: cover ≡ SVG preserveAspectRatio
+ * "xMidYMid slice". Jos nämä erkanevat, kone lentäisi videon pallon
+ * vierestä — juuri sitä tämä osio vartioi.
+ */
+test('cover-sovitus vastaa SVG:n xMidYMid slice -muunnosta pikselilleen', () => {
+  assert.equal(SOVITUS_TAPA, 'cover');
+  assert.equal(SVG_SOVITUS.cover, 'xMidYMid slice');
+  assert.equal(SVG_SOVITUS.contain, 'xMidYMid meet');
+  for (const koko of RUUTUKOOT) {
+    const kotelo = { leveys: koko.leveys, korkeus: koko.korkeus };
+    const s = kerroksenSovitus(MITAT, kotelo);
+    /*
+     * SVG:n oma laskukaava (SVG 1.1 luku 7.8, slice): skaala on
+     * SUUREMPI suhteista, ja ylimenevä puoli keskitetään — sama
+     * määritelmä kuin CSS:n object-fit: cover 50 % 50 %.
+     */
+    const skaala = Math.max(kotelo.leveys / MITAT.leveys, kotelo.korkeus / MITAT.korkeus);
+    const tx = (kotelo.leveys - MITAT.leveys * skaala) / 2;
+    const ty = (kotelo.korkeus - MITAT.korkeus * skaala) / 2;
+    assert.ok(Math.abs(s.skaala - skaala) < 1e-12, `${koko.nimi}: skaala`);
+    assert.ok(Math.abs(s.siirtoX - tx) < 1e-12, `${koko.nimi}: vaakasiirto`);
+    assert.ok(Math.abs(s.siirtoY - ty) < 1e-12, `${koko.nimi}: pystysiirto`);
+    // Cover TÄYTTÄÄ alan: kumpikaan siirtymä ei jätä paperia näkyviin.
+    assert.ok(s.siirtoX <= 1e-12 && s.siirtoY <= 1e-12,
+      `${koko.nimi}: cover jätti tyhjää reunaa (${s.siirtoX}, ${s.siirtoY})`);
+  }
+  // contain on sama kaava toisin päin — vanha rajaus on yhä saatavilla.
+  const contain = kerroksenSovitus(MITAT, { leveys: 1400, korkeus: 900 }, 'contain');
+  assert.ok(contain.skaala < kerroksenSovitus(MITAT, { leveys: 1400, korkeus: 900 }).skaala);
+  // Rappeutuneet mitat eivät kaada laskentaa.
+  assert.ok(Number.isFinite(kerroksenSovitus({}, {}).skaala));
+});
+
+test('kone osuu videon pallolle myös cover-rajauksessa kaikissa ruutukoissa', () => {
+  for (const koko of RUUTUKOOT) {
+    const sovitus = kerroksenSovitus(MITAT, { leveys: koko.leveys, korkeus: koko.korkeus });
+    for (let t = 0; t <= reitti.kesto; t += 0.5) {
+      const nakyma = kameranNakyma(reitti, t);
+      const r = videostaRuudulle(pallonPiste(koneenTila(reitti, t), nakyma, MITAT), sovitus);
+      assert.equal(r.nakyy, true);
+      assert.ok(r.x > 0 && r.x < koko.leveys && r.y > 0 && r.y < koko.korkeus,
+        `${koko.nimi}: kone rajautui ulos hetkellä ${t.toFixed(1)} s `
+        + `(${r.x.toFixed(0)}, ${r.y.toFixed(0)})`);
+    }
+    // Alussa kone on Lontoossa, ja Lontoon on oltava näkyvissä.
+    const alku = videostaRuudulle(
+      pallonPiste(koneenTila(reitti, 0), kameranNakyma(reitti, 0), MITAT), sovitus,
+    );
+    assert.ok(alku.x > koko.leveys * 0.05 && alku.x < koko.leveys * 0.95,
+      `${koko.nimi}: Lontoo ei ole näkyvissä kierroksen alussa`);
+  }
+});
+
+test('css ja moduuli sopivat samasta rajauksesta', () => {
+  const css = lue('../css/styles.css');
+  const pallo = css.match(/\.etusivupallo-video,\n\.etusivupallo-juliste \{[\s\S]*?\n\}/)[0];
+  assert.match(pallo, /object-fit: cover;/,
+    'video täyttää koko etusivun alan (omistaja: "pallo saisi pyöriä koko etusivun alalla")');
+  assert.doesNotMatch(pallo, /object-fit: contain/);
+  const lahde = lue('../js/etusivupallo.js');
+  assert.match(lahde, /preserveAspectRatio: SVG_SOVITUS\[SOVITUS_TAPA\]/,
+    'SVG lukee rajauksen samasta vakiosta kuin CSS-kommentti lupaa');
+  // Kerros on koko paneelin (.intro) lapsi eikä enää ylälohkon.
+  assert.match(lahde, /const kotelo = ui\.introEl \?\?/,
+    'kerros syntyy koko avauspaneeliin, ei .intro-kartta-lohkoon');
+  assert.doesNotMatch(lahde, /esteet: \(\) => \[\]|esteet = \(\) =>|esteet\(paneeli\)/,
+    'esteväistön asetusta ei enää ole: kuvan paikka on kiinteä');
+  assert.doesNotMatch(lue('../js/ui.js'), /esteet:/,
+    'js/ui.js ei enää kerää avaustekstin laatikoita kerrokselle');
+});
+
+/* ==================== VIIVA JA SEN SULKEUTUMINEN =================== */
+
+test('punainen viiva pitenee, sulkee ympyrän Lontoossa ja häipyy vasta sen jälkeen', () => {
   let edellinen = 0;
-  for (let t = 0; t <= reitti.kesto; t += 0.5) {
+  for (let t = 0; t <= reitti.kesto - 0.01; t += 0.5) {
     const n = jaljenPisteet(reitti, t).length;
     assert.ok(n >= edellinen, `jälki lyheni hetkellä ${t.toFixed(1)} s`);
     edellinen = n;
   }
   assert.ok(jaljenPisteet(reitti, 0).length <= 2, 'lähdössä jälkeä ei vielä ole');
-  const kaikki = jaljenPisteet(reitti, reitti.kesto);
-  assert.ok(kaikki.length > 100, 'valmis jälki on tiheä näytteistys (yli 100 pistettä)');
-  const viimeinen = kaikki[kaikki.length - 1];
-  const kone = koneenTila(reitti, reitti.kesto);
-  assert.ok(kaarietaisyys(viimeinen, kone) < 0.05, 'jäljen kärki on koneen kohdalla');
+  const pitoAlkaa = reitti.kesto - LOPPU_PITO_S;
+  const kaikki = jaljenPisteet(reitti, pitoAlkaa);
+  assert.ok(kaikki.length > 150, 'valmis jälki on tiheä näytteistys (yli 150 pistettä)');
+  // VIIVA OTTAA KIINNI: kärki on koneen kohdalla JA lähtöpisteessä.
+  const kone = koneenTila(reitti, pitoAlkaa);
+  const karki = kaikki[kaikki.length - 1];
+  assert.ok(kaarietaisyys(karki, kone) < 0.05, 'jäljen kärki on koneen kohdalla');
+  assert.ok(kaarietaisyys(karki, kaikki[0]) < 0.05,
+    'ympyrä sulkeutuu: jäljen kärki on samassa paikassa kuin sen alku');
+  // Pysähdyksen aikana jälki ei enää kasva eikä kone liiku.
+  const pidonLopussa = jaljenPisteet(reitti, reitti.kesto - 0.01);
+  assert.equal(pidonLopussa.length, kaikki.length, 'pysähdys ei piirrä lisää jälkeä');
+  const paikallaan = koneenTila(reitti, reitti.kesto - 0.01);
+  assert.ok(kaarietaisyys(paikallaan, kone) < 1e-6, 'kone pysähtyy Lontooseen');
+  // Häivytys osuu pidon loppuun: suljettu ympyrä ehtii näkyä ensin.
+  const haivytys = (t) => Math.max(0, Math.min(1, t / HAIVYTYS_S, (reitti.kesto - t) / HAIVYTYS_S));
+  assert.equal(haivytys(pitoAlkaa), 1, 'ympyrä on täysin näkyvissä, kun kone laskeutuu');
+  assert.ok(haivytys(reitti.kesto - 0.001) < 0.01, 'viiva on häipynyt ennen loopin alkua');
 });
 
 /* ==================== ISOISÄN KUVAT ================================ */
 
 test('jokainen laskeutuminen tuo uuden aikalaiskuvan kuvatekstin kanssa', () => {
   assert.equal(saapumisia(reitti, 0), 0);
-  assert.equal(saapumisia(reitti, reitti.kesto), reitti.jaksot.length,
-    'kaikki kahdeksan laskeutumista näkyvät kierroksen aikana');
+  assert.equal(saapumisia(reitti, reitti.kesto), pisteet.length - 1,
+    'kaikki kymmenen laskeutumista näkyvät kierroksen aikana');
+  assert.equal(saapumisia(reitti, reitti.kesto), saapumisia(reitti, reitti.kesto - LOPPU_PITO_S),
+    'Lontoon pysähdys ei ole yksitoista laskeutuminen');
   const eka = saapumisenKuva(1);
   const toka = saapumisenKuva(2);
   assert.ok(eka && toka);
@@ -257,37 +399,48 @@ test('jokainen laskeutuminen tuo uuden aikalaiskuvan kuvatekstin kanssa', () => 
   assert.equal(saapumisenKuva(0), null, 'lähtökaupunki ei tuo kuvaa');
 });
 
-test('kuva menee kartan ulkopuolelle eikä avaustekstin päälle', () => {
-  /*
-   * Puhelimen mitat mitattuna savukkeesta (iPhone 390×844, avausnäkymä
-   * pallolohkoineen): julisteotsikko täyttää lohkon keskiosan ja
-   * avaustekstin palsta alalohkon — vapaaksi jää kaista niiden välissä.
-   */
-  const kotelo = { leveys: 390, korkeus: 798, toivottuY: 208 };
-  const koko = { leveys: 96, korkeus: 136 };
-  const esteet = [
-    { x: 34, y: 35, leveys: 322, korkeus: 255 }, // julisteotsikko
-    { x: 23, y: 385, leveys: 344, korkeus: 359 }, // avaustekstin palsta
-  ];
-  const eka = valitseKuvapaikka(kotelo, koko, esteet, null);
-  assert.equal(eka.leikkaus, 0, 'kuva ei saa leikata avaustekstin laatikkoa');
-  assert.ok(eka.leveys <= koko.leveys, 'kuva kutistuu tarvittaessa mahtuakseen kaistalle');
-  assert.ok(eka.x >= 0 && eka.y >= 0
-    && eka.x + eka.leveys <= kotelo.leveys && eka.y + eka.korkeus <= kotelo.korkeus,
-  'kuva pysyy näkymän sisällä');
-  assert.ok(eka.y + eka.korkeus <= 385 && eka.y >= 290,
-    `kuva asettuu pallon ja avaustekstin väliin (y ${eka.y}…${eka.y + eka.korkeus})`);
-  // Väljässä näkymässä kuvaa ei kutisteta lainkaan.
-  const valja = valitseKuvapaikka({ leveys: 1200, korkeus: 800, toivottuY: 400 },
-    koko, esteet, null);
-  assert.equal(valja.leveys, koko.leveys);
-  // Seuraava kuva vaihtaa puolta, kun molemmat laidat ovat yhtä vapaita.
-  const toka = valitseKuvapaikka(kotelo, koko, esteet, eka.paikka);
-  assert.notEqual(toka.paikka, eka.paikka);
-  // Jos toinen laita on tukossa, valitaan vapaa laita puolen vaihdosta huolimatta.
-  const tukossa = [...esteet, { x: 0, y: 0, leveys: 200, korkeus: 798 }];
-  const pakotettu = valitseKuvapaikka(kotelo, koko, tukossa, 'oikea');
-  assert.equal(pakotettu.paikka, 'oikea');
+/*
+ * KUVA ON ISOMPI JA AINA SAMASSA PAIKASSA (omistaja 5.9.2026 klo 21.30:
+ * *"isoisän kuva saisi olla isompi ja vaihtua aina samaan paikkaan"*).
+ * Paikan antaa yksin CSS, joten vartio on CSS:ssä ja moduulin DOM-
+ * rakenteessa: kaksi korttia päällekkäin ristihäivytystä varten.
+ */
+test('isoisän kuva on kiinteässä paikassa ja selvästi isompi kuin ennen', () => {
+  const css = lue('../css/styles.css');
+  const sääntö = css.match(/\.etusivupallo-kuva \{[\s\S]*?\n\}/)[0];
+  assert.match(sääntö, /position: absolute;/);
+  assert.match(sääntö, /top: 37\.25%;/, 'puhelimella ja tabletilla kiinteä kohta pystysuunnassa');
+  assert.match(sääntö, /right: /, 'kiinteä laita');
+  const leveys = sääntö.match(/width: clamp\((\d+)px, (\d+)vw, (\d+)px\);/);
+  assert.ok(leveys, 'koko annetaan clampilla eikä JS:llä');
+  assert.ok(Number(leveys[1]) >= 108,
+    `puhelimen kortti ${leveys[1]}px ei ole isompi kuin entinen (mitattu 90px + 2-rivinen lappu)`);
+  // Työpöydällä oma kiinteä nurkka ja selvästi isompi kortti.
+  const poyta = css.match(/@media \(min-width: 900px\) \{\n {2}\/\*[\s\S]*?\n {2}\.etusivupallo-kuva \{[\s\S]*?\n {2}\}\n\}/);
+  assert.ok(poyta, 'työpöydälle on oma media query');
+  assert.match(poyta[0], /bottom: /, 'työpöydällä kortti on paneelin alanurkassa');
+  assert.match(poyta[0], /width: clamp\(170px, 18vw, 260px\);/);
+  // Kuvateksti yhdelle riville: kortin korkeus on ennakoitava.
+  assert.match(css, /\.etusivupallo-kuva figcaption \{[\s\S]*?white-space: nowrap;/);
+  // Kallistus jää (omistaja: "kevyt kallistus saa jäädä").
+  assert.match(sääntö, /rotate\(-3deg\)/, 'kevyt kallistus jää (omistaja: "kevyt kallistus saa jäädä")');
+  // Varmistus siirtää korttia pystysuunnassa vain jos kiinteä paikka osuisi
+  // tekstiin — sama luku molemmille korteille, ei kuvakohtainen haku.
+  assert.match(sääntö, /var\(--etusivupallo-kuva-siirto, 0px\)/);
+  const lahde = lue('../js/etusivupallo.js');
+  assert.match(lahde, /const kortit = \[0, 1\]\.map\(/,
+    'kortteja on kaksi päällekkäin, jotta vaihto on ristihäivytys');
+  assert.match(lahde, /tuleva\.kortti\.classList\.add\('nakyy'\);\n\s*vaistyva\.kortti\.classList\.remove\('nakyy'\);/,
+    'tuleva kirkastuu samalla kun väistyvä häipyy');
+  assert.doesNotMatch(lahde, /valitseKuvapaikka|sijoitaKuva/,
+    'esteväistö ja kutistus on poistettu — paikka ja koko ovat kiinteät');
+  assert.match(lahde, /const varmistaPaikka = \(\) => \{/,
+    'kiinteän paikan varmistus on olemassa (ei kuvakohtaista hakua)');
+  assert.match(lahde, /win\.setTimeout\(varmistaPaikka, KUVAN_VAIHTO_MS \+ 320\);/,
+    'varmistus mitataan vasta kun ristihäivytys on ohi');
+  assert.ok(KUVAN_VAIHTO_MS > 0 && KUVAN_VAIHTO_MS < 1200);
+  assert.match(css, new RegExp(`transition: opacity ${KUVAN_VAIHTO_MS}ms`),
+    'CSS:n häivytys ja moduulin vakio ovat samat');
 });
 
 /* ==================== KYTKENTÄ ===================================== */
@@ -361,15 +514,32 @@ test('pallolaudalla tasokarttaa ei alusteta etusivua varten', () => {
     'vanha polku herättää tasokartan lepotilasta');
 });
 
-test('ämpärin polut ja tiedostonimet ovat samat työkalussa ja pelissä', () => {
+test('ämpärin polut, saumavartija ja tiedostonimet ovat samat työkalussa ja pelissä', () => {
   const tyokalu = lue('../tools/tee-etusivupallo.mjs');
   assert.match(tyokalu, /ETUSIVUPALLO_VERSIO/, 'työkalu lukee version moduulista');
   assert.match(tyokalu, /kameranNakyma/, 'kamera lasketaan samasta funktiosta kuin pelissä');
+  // Saumaton looppi: kierto tarkistetaan ennen kuin satoja kehyksiä poltetaan.
+  assert.match(tyokalu, /Math\.abs\(KIERTO - KIERROKSEN_ASTEET\) > 1e-6/,
+    'työkalu kieltäytyy, jos reitti ei kierrä tasan 360°');
+  assert.match(tyokalu, /const KESTO = reitti\.kesto;/,
+    'videon kesto on kierroksen kesto — ei kehysmäärä jaettuna fps:llä');
+  assert.match(tyokalu, /const TAAJUUS = KEHYKSIA \/ KESTO;/);
+  assert.match(tyokalu, /'-framerate', TAAJUUS\.toFixed\(6\)/,
+    'ffmpeg saa murtolukuisen taajuuden, jotta videon kesto on tasan kierros');
+  assert.doesNotMatch(tyokalu, /window\.haivyta\(/,
+    'videoon ei enää polteta sauman häivytystä — looppi on saumaton');
+  assert.match(tyokalu, /const SAUMA = lippu\('sauma'\);/, '--sauma-koe on olemassa');
+  assert.match(tyokalu, /saumakehykset eroavat tavutasolla/,
+    'saumakoe kaatuu, jos ensimmäinen ja viimeinen kehys eroavat');
   assert.equal(ETUSIVUPALLO_TIEDOSTOT.juliste, 'juliste.jpg');
   const wf = lue('../.github/workflows/tee-etusivupallo.yml');
   for (const nimi of Object.values(ETUSIVUPALLO_TIEDOSTOT)) {
     assert.ok(wf.includes(nimi), `workflow ei vie tiedostoa ${nimi}`);
   }
   assert.match(wf, /etusivu\.json/, 'luettelo on vietävä, muuten kerros ei rakennu');
+  // Versio luetaan js:stä: työkalu kirjoittaa avain.txt:n, jota workflow lukee.
+  assert.match(wf, /avain="\$\(cat etusivupallo-ulos\/avain\.txt\)"/,
+    'workflow lukee ämpärin polun (ja siis version) työkalun tulosteesta');
+  assert.match(tyokalu, /writeFileSync\(join\(ULOS, 'avain\.txt'\), AVAIN\)/);
   assert.ok(HAIVYTYS_S > 0 && HAIVYTYS_S < 3);
 });

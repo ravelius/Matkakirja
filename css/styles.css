@@ -5856,14 +5856,20 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * zoomattu pallo joka pyörii hitaasti lontoosta kohti aasiaa, mutta on
  * jo renderöity blurrattuna, jotta efekti ei vie etusivulla tehoja."*
  *
- * Kerros asuu avauksen YLÄLOHKOSSA (.intro-kartta) julisteotsikon
- * takana: video on jo sumennettu poltossa, joten tässä ei ole yhtään
- * suodatinta (iOS-sääntö) eikä yhtään jatkuvaa CSS-animaatiota —
+ * KERROS ON KOKO AVAUSPANEELIN KOKOINEN (omistaja 5.9.2026 klo 21.30:
+ * *"pallo saisi pyöriä koko etusivun alalla"*). Se on .intro-paneelin
+ * ENSIMMÄINEN lapsi, siis sumuverhon (.intro-verho) ja molempien
+ * lohkojen takana; aiemmin kerros asui pelkässä ylälohkossa
+ * (.intro-kartta), jolloin työpöydällä alalohko jäi tyhjäksi
+ * pergamentiksi. Video on jo sumennettu poltossa, joten tässä ei ole
+ * yhtään suodatinta (iOS-sääntö) eikä yhtään jatkuvaa CSS-animaatiota —
  * kone ja viiva liikkuvat js/etusivupallo.js:n laskemina attribuutteina.
  *
- * VIDEO JA SVG RAJAUTUVAT SAMOIN: object-fit: contain ≡ SVG:n
- * preserveAspectRatio="xMidYMid meet", joten koneen ruutupiste osuu
- * videon pikseliin ilman omaa sovitusmatematiikkaa.
+ * VIDEO JA SVG RAJAUTUVAT SAMOIN: object-fit: cover ≡ SVG:n
+ * preserveAspectRatio="xMidYMid slice" (js/etusivupallo.js
+ * SOVITUS_TAPA ja SVG_SOVITUS antavat molemmille saman muunnoksen),
+ * joten koneen ruutupiste osuu videon pikseliin myös silloin, kun
+ * paneeli on paljon leveämpi tai korkeampi kuin neliömäinen video.
  */
 .etusivupallo {
   position: absolute;
@@ -5871,8 +5877,9 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   overflow: hidden;
   background-color: var(--paper);
   opacity: 0;
-  /* Ilmestyminen on ainoa peittävyysanimaatio; sauman häivytyksen tekee
-     videoon poltettu käyrä (js/etusivupallo.js HAIVYTYS_S). */
+  /* Ilmestyminen on ainoa peittävyysanimaatio; kierroksen sauman
+     häivytys koskee vain viivaa ja konetta (js/etusivupallo.js
+     HAIVYTYS_S) — video looppaa saumattomasti, koska kierros on 360°. */
   transition: opacity 900ms ease;
   pointer-events: none;
 }
@@ -5886,7 +5893,9 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  /* Muutos vaatii saman muutoksen js/etusivupallo.js:n SOVITUS_TAPAan:
+     SVG rajautuu sen mukaan (tests/etusivupallo.test.mjs vartioi). */
+  object-fit: cover;
 }
 
 .etusivupallo-reitti {
@@ -5919,25 +5928,66 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 .etusivupallo-kone { transition: opacity 260ms ease; }
 
 /*
- * ISOISÄN AIKALAISKUVA KARTAN ULKOPUOLELLE (omistaja: *"jonnekin kartan
- * ulkopuolelle pienellä, niin että ei jää etusivun tekstin päälle"*).
+ * ISOISÄN AIKALAISKUVA — ISOMPI JA AINA SAMASSA PAIKASSA (omistaja
+ * 5.9.2026 klo 21.30: *"isoisän kuva saisi olla isompi ja vaihtua aina
+ * samaan paikkaan"*). Aiemmin kortti etsi vapaan kaistan esteitä
+ * väistäen ja kutistui mahtuakseen; nyt paikka on kiinteä ja koko
+ * annetaan tässä. js/etusivupallo.js ei enää sijoita korttia lainkaan.
  *
- * Kortti on KOKO avausnäkymän (.intro) lapsi eikä pallolohkon: vapaa
- * kaista on puhelimella pallon alalaidan ja avaustekstin arkin välissä,
- * ja lohkon overflow leikkaisi kortin siitä poikki. Paikan ja koon
- * valitsee js/etusivupallo.js (valitseKuvapaikka + sijoitaKuva) niin,
- * ettei kortti leikkaa avaustekstiä; tässä on vain ulkoasu.
+ * Kortti on KOKO avausnäkymän (.intro) lapsi eikä pallokerroksen, jotta
+ * kerroksen overflow ei leikkaisi sitä. KORTTEJA ON KAKSI päällekkäin
+ * samassa paikassa: vaihto on aito ristihäivytys (väistyvä häipyy
+ * samalla kun tuleva kirkastuu), ei välähdys tyhjään.
+ *
+ * PAIKKA ON MITATTU (Chromium 5.9.2026, avausnäkymä sekä portin takana
+ * että avaustekstin kanssa):
+ *
+ *   puhelin 390×844  julisteotsikko päättyy 37 %:iin paneelista ja
+ *   ja tabletti      avaustekstin palsta alkaa 49 %:sta → kortti
+ *   768×1024         asettuu tuohon kaistaan oikeaan laitaan
+ *                    (top 37,25 %). Kaista on PUHELIMELLA VAIN ~95 px
+ *                    korkea, ja siksi kortti on siellä 110 px eikä
+ *                    enempää: kuvateksti mahtuu yhdelle riville ja
+ *                    kallistus on loiva (−3°), jotta koko kortti
+ *                    kuvatekstiä myöten pysyy kaistassa.
+ *   työpöytä ≥900px  avausteksti on kapea palsta keskellä, joten
+ *                    paneelin OIKEA ALANURKKA on kokonaan vapaa
+ *                    (myös "Laita äänet päälle" -rivi ja napit ovat
+ *                    keskellä) → kortti nurkkaan ja selvästi isompana.
+ *
+ * VARMISTUS: js/etusivupallo.js siirtää korttia pystysuunnassa
+ * (--etusivupallo-kuva-siirto), JOS kiinteä paikka jollain
+ * kirjasinkoolla sattuisi leikkaamaan otsikkoa tai avaustekstiä. Siirto
+ * lasketaan kerran asettelua kohti ja on sama molemmille korteille —
+ * paikka ei siis vaihdu kuvien mukana.
  */
 .etusivupallo-kuva {
   position: absolute;
+  /* Puhelin ja tabletti: julisteotsikon ja avaustekstin väliin oikealle. */
+  top: 37.25%;
+  right: 0.9rem;
+  width: clamp(110px, 28vw, 176px);
   margin: 0;
   padding: 0;
   opacity: 0;
-  transform: translateY(14px) rotate(-5deg);
+  transform: translateY(calc(14px + var(--etusivupallo-kuva-siirto, 0px))) rotate(-3deg);
   transition: opacity 620ms var(--liike-pehmea), transform 620ms var(--liike-pehmea);
 }
 
-.etusivupallo-kuva.nakyy { opacity: 1; transform: translateY(0) rotate(-5deg); }
+@media (min-width: 900px) {
+  /* Työpöytä: paneelin oikea alanurkka, selvästi isompi kortti. */
+  .etusivupallo-kuva {
+    top: auto;
+    bottom: 2.2rem;
+    right: 2.2rem;
+    width: clamp(170px, 18vw, 260px);
+  }
+}
+
+.etusivupallo-kuva.nakyy {
+  opacity: 1;
+  transform: translateY(var(--etusivupallo-kuva-siirto, 0px)) rotate(-3deg);
+}
 
 .etusivupallo-kuva img {
   display: block;
@@ -5946,12 +5996,20 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
+/*
+ * Kuvateksti YHDELLE RIVILLE: kortin korkeus on silloin ennakoitava
+ * (kuva + yksi rivi), ja juuri se mahtuu puhelimen kapeaan kaistaan.
+ * Teksti on lyhyt jo lähteessä ("Isoisä, Bombay, 1873",
+ * js/isoisan-valokuvat.js), ja keskitettynä se saa valua kortin yli
+ * muutaman pikselin ilman että mikään leikkautuu.
+ */
 .etusivupallo-kuva figcaption {
   display: block;
-  margin-top: 0.3rem;
+  margin-top: 0.22rem;
   font-family: var(--font-type);
-  font-size: 0.58rem;
+  font-size: 0.55rem;
   letter-spacing: 0.06em;
+  white-space: nowrap;
   color: #3a2a16;
   text-shadow: 0 0 4px rgba(255, 246, 224, 0.9), 0 0 1px rgba(255, 246, 224, 0.9);
   text-align: center;
@@ -5965,7 +6023,50 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 .intro.intro-pallolla .intro-verho {
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  background: rgba(239, 220, 180, 0.44);
+  background: rgba(239, 220, 180, 0.38);
+}
+
+/*
+ * PERGAMENTTIHARSO VAIN TEKSTIN KOHDALLE (5.9.2026 ilta). Kun pallo
+ * täyttää koko paneelin, avausteksti ei enää lepää tyhjällä
+ * pergamentilla vaan pallon pinnalla — meren sini vei mustepunaisen
+ * tekstin kontrastin. Harso on PAIKALLINEN liukuväri palstan ja
+ * julisteotsikon takana, ei koko kerroksen päällä: pallo jää näkyviin
+ * kaikkialle muualle. EI suodattimia (iOS-sääntö).
+ *
+ * HARSO ON OMA KERROKSENSA (::before) EIKÄ ELEMENTIN TAUSTA, koska
+ * taustan reunan pehmentäminen vaatisi paddingia — ja padding
+ * kasvattaisi otsikko- ja tekstilohkoa niin, että isoisän kortin kaista
+ * niiden välissä katoaisi puhelimella (mitattu 5.9.2026). Pseudo
+ * levittyy laatikon ulkopuolelle muuttamatta asettelua. `z-index: 0`
+ * tekee palstasta oman pinon, jotta −1 jää palstan sisään eikä valu
+ * pallokerroksen taakse (.intro on z-index: 3 ja siis oma pinonsa).
+ */
+.intro.intro-pallolla .intro-palsta,
+.intro.intro-pallolla .intro-juliste { z-index: 0; }
+
+.intro.intro-pallolla .intro-palsta::before,
+.intro.intro-pallolla .intro-juliste::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.intro.intro-pallolla .intro-palsta::before {
+  inset: -1.2em -1.6em;
+  background: radial-gradient(ellipse 74% 68% at 50% 50%,
+    rgba(243, 228, 196, 0.94) 0%,
+    rgba(243, 228, 196, 0.9) 44%,
+    rgba(243, 228, 196, 0) 78%);
+}
+
+.intro.intro-pallolla .intro-juliste::before {
+  inset: -0.5em -1.4em;
+  background: radial-gradient(ellipse 72% 66% at 50% 50%,
+    rgba(243, 228, 196, 0.84) 0%,
+    rgba(243, 228, 196, 0.74) 46%,
+    rgba(243, 228, 196, 0) 78%);
 }
 
 @media (prefers-reduced-motion: reduce) {
