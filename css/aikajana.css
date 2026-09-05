@@ -722,12 +722,6 @@
   letter-spacing: 0.02em;
   text-wrap: balance;
 }
-.aikajana-ilmiokuvateksti-rivi {
-  font-family: var(--font-type);
-  font-size: clamp(0.62rem, 1.5vw, 0.8rem);
-  letter-spacing: 0.06em;
-  color: #d9ccb4;
-}
 .aikajana-ilmio-teksti { padding: 0.5rem 0.7rem 0.65rem; }
 /*
  * HENKILÖRIVI: keksijän kasvot nimen vieressä. Muotokuva on pieni
@@ -943,29 +937,6 @@
  * nauhan ulkopuolelle.
  */
 .aikajana-korttiteksti { padding: 0.3rem 0.4rem 0.4rem; }
-.aikajana-kortti-vuosi {
-  font-family: var(--font-type);
-  font-size: 0.78rem;
-  line-height: 1.1;
-  letter-spacing: 0.06em;
-  color: #e2c37a;
-}
-.aikajana-kortti-otsikko {
-  font-size: 0.8rem;
-  font-weight: 700;
-  line-height: 1.15;
-  margin-top: 0.1rem;
-  /* Pitkä yhdyssana ("Kuumailmapallo") katkeaa tavuviivalla eikä
-   * kolmella pisteellä (5.9.2026); koko nimi on kuvan alareunassa. */
-  overflow-wrap: anywhere;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  overflow: hidden;
-}
 .aikajana-kortti-henkilo {
   font-size: 0.7rem;
   line-height: 1.2;
@@ -985,8 +956,6 @@
  * kortti on `contain: layout paint`, joten uudelleensommittelu ei
  * karkaa kortin ulkopuolelle.
  */
-.aikajana-kortti-otsikko { transition: font-size var(--aikajana-kesto) var(--aikajana-kaari); }
-.aikajana-kortti.nykyinen .aikajana-kortti-otsikko { font-size: 0.86rem; }
 
 /* Kaaren lopussa nauha kaventaa nykyisen kortin erottelun. */
 .aikajana.lopussa .aikajana-kortti.nykyinen { box-shadow: var(--aikajana-varjo); }

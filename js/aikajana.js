@@ -1303,12 +1303,13 @@ class Aikajana {
       kortti.type = 'button';
       kortti.dataset.i = String(i);
       kortti.appendChild(muotokuvaKehys(t, 400, 'aikajana-muotokuva'));
+      /*
+       * KORTIN ALLA VAIN NIMI (omistaja 5.9.2026 ilta, sanatarkasti:
+       * "henkilön muotokuvan alla pelkkä henkilön nimi"): vuosi ja
+       * keksinnön nimi luetaan havainnekuvan alta, kortti on kasvot.
+       */
       const teksti = solmu('div', 'aikajana-korttiteksti');
-      teksti.append(
-        solmu('div', 'aikajana-kortti-vuosi', String(t.vuosi)),
-        solmu('div', 'aikajana-kortti-otsikko', t.otsikko),
-        solmu('div', 'aikajana-kortti-henkilo', t.henkilo ?? paikka(t)),
-      );
+      teksti.append(solmu('div', 'aikajana-kortti-henkilo', t.henkilo ?? paikka(t)));
       kortti.appendChild(teksti);
       kortti.setAttribute('aria-label', `${t.vuosi}: ${t.otsikko}${t.henkilo ? `, ${t.henkilo}` : ''}`);
       kortti.addEventListener('click', () => this.napautaKorttia(i));
@@ -2538,15 +2539,14 @@ class Aikajana {
        * noin 100 px leveä, eikä "Kuumailmapallo" tai
        * "Montgolfier-veljekset" mahdu siihen. Koko nimi ladotaan siksi
        * havainnekuvan alareunaan valokeilan häipyvälle vyöhykkeelle:
-       * vuosi ja otsikko isolla, keksijä ja paikka pienellä. Kortti
-       * pitää lyhennetyn nimensä (tavutus, ks. css). Teksti on kuvan
-       * sisar eikä lapsi, jotta se ei maskaudu kuvan mukana.
+       * vuosi ja otsikko isolla. Keksijän nimi on kortissa ja paikka
+       * kellorivillä (omistaja 5.9.2026 ilta, sanatarkasti:
+       * "havainnekuvan alla tulee lukea pelkkä keksinnön nimi ja
+       * vuosiluku"). Teksti on kuvan sisar eikä lapsi, jotta se ei
+       * maskaudu kuvan mukana.
        */
       const nimi = solmu('div', 'aikajana-ilmiokuvateksti');
-      nimi.append(
-        solmu('span', 'aikajana-ilmiokuvateksti-otsikko', `${t.vuosi} · ${t.otsikko}`),
-        solmu('span', 'aikajana-ilmiokuvateksti-rivi', [t.henkilo, paikka(t)].filter(Boolean).join(' · ')),
-      );
+      nimi.append(solmu('span', 'aikajana-ilmiokuvateksti-otsikko', `${t.vuosi} · ${t.otsikko}`));
       sivu.appendChild(nimi);
     } else {
       const teksti = solmu('div', 'aikajana-ilmio-teksti');

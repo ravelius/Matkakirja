@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
   KEHITTAJAN_VOIMA_ASKEL, KEHITTAJAN_VOIMA_MAX, KEHITTAJAN_VOIMA_MIN,
-  asetaKehittajanKerroin, kehittajanKerroin, kehittajanKerroinTeksti,
+  KEHITTAJAN_VOIMA_OLETUS, asetaKehittajanKerroin, kehittajanKerroin, kehittajanKerroinTeksti,
   kuunteleKehittajanKerrointa, saadaKehittajanKerrointa,
 } from '../js/kehittajan-voimat.js';
 
@@ -11,6 +11,11 @@ const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 
 test('kerroin on oletuksena 1 ja pysyy rajoissa', () => {
   assert.equal(kehittajanKerroin('tausta'), 1);
+  // Musiikki soi oletuksena ×2,0 (omistaja 5.9.2026: "taustamusiikki saa
+  // olla x2.0 arvossa oletuksena"); tavallinen pelaaja kuulee tämän.
+  assert.deepEqual(KEHITTAJAN_VOIMA_OLETUS, { tausta: 1, musiikki: 2 });
+  assert.equal(kehittajanKerroin('musiikki'), 2);
+  assert.equal(kehittajanKerroinTeksti('musiikki'), '×2,0');
   assert.equal(kehittajanKerroin('olematon'), 1);
   assert.equal(asetaKehittajanKerroin('tausta', 99), KEHITTAJAN_VOIMA_MAX);
   assert.equal(asetaKehittajanKerroin('tausta', 0), KEHITTAJAN_VOIMA_MIN);

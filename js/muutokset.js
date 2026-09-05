@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1596, teksti: 'Isoisan kuvapino, keksintojen tekstit, musiikki x2' },
   { v: 1595, teksti: 'Lyria-raidat peliin, ElevenLabsin musiikki pois' },
   { v: 1594, teksti: 'Etusivupallo koko sivulle, 360 kierros, kuva kiintea' },
   { v: 1593, teksti: 'Kaaret: Lontoo Leila, Dubrovnik Mara, Odessa Iryna' },

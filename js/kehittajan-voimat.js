@@ -24,6 +24,15 @@ export const KEHITTAJAN_VOIMA_MIN = 0.25;
 export const KEHITTAJAN_VOIMA_MAX = 3;
 export const KEHITTAJAN_VOIMA_ASKEL = 0.1;
 export const KEHITTAJAN_VOIMA_AVAIN = 'matkakirja-dev-voima-';
+/*
+ * LAJIN OLETUSKERROIN. Omistaja kuunteli Lyria-raidat pelissä ja
+ * linjasi (5.9.2026 ilta, sanatarkasti: "taustamusiikki saa olla x2.0
+ * arvossa oletuksena"): musiikin kerroin on 2,0 ilman säätöä, tausta
+ * 1,0. Oletus on se arvo, jolla tavallinen pelaaja kuulee pelin;
+ * tallennus kirjoitetaan vain, kun kerroin poikkeaa oletuksesta.
+ */
+export const KEHITTAJAN_VOIMA_OLETUS = /** @type {const} */ ({ tausta: 1, musiikki: 2 });
+const oletus = (laji) => KEHITTAJAN_VOIMA_OLETUS[laji] ?? 1;
 
 const kertoimet = new Map();
 const kuuntelijat = new Map();
@@ -37,13 +46,13 @@ function rajaaKerroin(arvo) {
 function lueTallennettu(laji) {
   try {
     const t = localStorage.getItem(KEHITTAJAN_VOIMA_AVAIN + laji);
-    return t == null ? 1 : rajaaKerroin(t);
+    return t == null ? oletus(laji) : rajaaKerroin(t);
   } catch {
-    return 1;
+    return oletus(laji);
   }
 }
 
-/** Lajin kerroin (1,0 = pelin oma taso). Tuntematon laji → 1. */
+/** Lajin kerroin (oletus = pelin oma taso, ks. KEHITTAJAN_VOIMA_OLETUS). Tuntematon laji → 1. */
 export function kehittajanKerroin(laji) {
   if (!KEHITTAJAN_VOIMA_LAJIT.includes(laji)) return 1;
   if (!kertoimet.has(laji)) kertoimet.set(laji, lueTallennettu(laji));
@@ -56,7 +65,7 @@ export function asetaKehittajanKerroin(laji, arvo) {
   const uusi = rajaaKerroin(arvo);
   kertoimet.set(laji, uusi);
   try {
-    if (uusi === 1) localStorage.removeItem(KEHITTAJAN_VOIMA_AVAIN + laji);
+    if (uusi === oletus(laji)) localStorage.removeItem(KEHITTAJAN_VOIMA_AVAIN + laji);
     else localStorage.setItem(KEHITTAJAN_VOIMA_AVAIN + laji, String(uusi));
   } catch {
     /* yksityinen selaus: kerroin elää istunnon */
