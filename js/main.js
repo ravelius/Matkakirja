@@ -123,7 +123,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1594';
+const APP_VERSION = '2026-08-09.1595';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1632,8 +1632,8 @@ function paivitaKehittajaValikko() {
   merkitseSiirtymamusiikki();
   if (siirtymaMusiikkiNappi) {
     siirtymaMusiikkiNappi.title = 'Pelin omat musiikkiraidat: löytyykö raita ämpäristä '
-      + '(aanet/siirtyma-jalan.mp3, -laiva, -lento sekä linssin oma '
-      + 'aanet/linssi-keksinnot.mp3). ✓ = löytyi, – = ei ole vielä, '
+      + '(aanet/siirtyma-jalan-lyria.mp3, -laiva, -lento sekä linssin oma '
+      + 'aanet/linssi-keksinnot-lyria.mp3). ✓ = löytyi, – = ei ole vielä, '
       + '? = ei kysytty. Napauta kysyäksesi uudelleen. Puuttuva raita ei riko mitään: '
       + 'siirtymä tai linssi on silloin vain hiljainen';
   }

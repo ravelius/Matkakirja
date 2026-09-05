@@ -69,13 +69,13 @@ on:
         options: ['kaikki', 'jalan', 'laiva', 'lento', 'keksinnot']
       moottori:
         description: >-
-          Musiikkimoottori: eleven = ElevenLabs Music (pelin raidat),
-          lyria = Google Lyria 3.5 (vertailuraidat päätteellä -lyria,
-          eivät korvaa pelin raitoja).
+          Musiikkimoottori: lyria = Google Lyria 3.5 (pelin raidat,
+          pääte -lyria; omistajan valinta 5.9.2026), eleven = ElevenLabs
+          Music (vertailuraidat paljaalla nimellä, eivät soi pelissä).
         required: false
         type: choice
-        default: 'eleven'
-        options: ['eleven', 'lyria']
+        default: 'lyria'
+        options: ['lyria', 'eleven']
 
 permissions:
   contents: read
@@ -145,13 +145,13 @@ jobs:
       # maksullista kutsua on tehty. Tulostaa myös promptit sellaisina
       # kuin ne APIin lähtevät.
       - name: Kuiva ajo (ffmpeg-ketju ja promptit)
-        run: node tools/generoi-siirtymamusiikki.mjs --laji ${{ inputs.laji }} --moottori ${{ inputs.moottori || 'eleven' }} --kuiva
+        run: node tools/generoi-siirtymamusiikki.mjs --laji ${{ inputs.laji }} --moottori ${{ inputs.moottori || 'lyria' }} --kuiva
 
       - name: Generoi, leikkaa looppi ja vie ämpäriin
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-        run: node tools/generoi-siirtymamusiikki.mjs --laji ${{ inputs.laji }} --moottori ${{ inputs.moottori || 'eleven' }}
+        run: node tools/generoi-siirtymamusiikki.mjs --laji ${{ inputs.laji }} --moottori ${{ inputs.moottori || 'lyria' }}
 
       # Vartija sille, mitä tämä ajo lupaa: repoon ei jää mitään.
       # Työkalu kirjoittaa media/-kansioon, joka on .gitignoressa —

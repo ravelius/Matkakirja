@@ -1562,7 +1562,7 @@ export const LINSSI = {
      * Kaaren oma musiikki (omistajan tilaus 2.9.2026 ilta: *"Generoi
      * linssille oma musiikki"*). Nimi on musiikkimoduulin laji
      * (js/siirtymamusiikki.js RAIDAT.keksinnot → ämpärin
-     * aanet/linssi-keksinnot.mp3); moottori soittaa sen koko ajon
+     * aanet/linssi-keksinnot-lyria.mp3); moottori soittaa sen koko ajon
      * ajan. Ilman tätä kenttää ajo olisi hiljainen.
      */
     musiikki: 'keksinnot',

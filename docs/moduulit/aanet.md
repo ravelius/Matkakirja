@@ -8,8 +8,9 @@ otsikkokommenteissa.
 
 ## Siirtymämusiikki (omistaja 2.9.2026)
 
-Kolme raitaa, yksi per kulkumuoto: `siirtyma-jalan.mp3`,
-`siirtyma-laiva.mp3`, `siirtyma-lento.mp3`.
+Kolme raitaa, yksi per kulkumuoto: `siirtyma-jalan-lyria.mp3`,
+`siirtyma-laiva-lyria.mp3`, `siirtyma-lento-lyria.mp3` (pääte on
+moottorin nimi, ks. Generointi).
 
 | ominaisuus | vaatimus |
 |---|---|
@@ -33,7 +34,7 @@ raidan sietäminen ovat samat — mutta mitat ovat toiset.
 
 | ominaisuus | vaatimus |
 |---|---|
-| tiedosto | `linssi-keksinnot.mp3` (laji `keksinnot`) |
+| tiedosto | `linssi-keksinnot-lyria.mp3` (laji `keksinnot`) |
 | kesto | 45–60 s; linssi kestää minuutteja (25 pysäkkiä), joten lyhyt kierto alkaisi kuulua silmukaksi |
 | looppi | saumaton äänitteessä itsessään, kuten siirtymäraidoilla |
 | taso ja formaatti | −33 LUFS; mp3, mono, 128 kbps, 44,1 kHz |
@@ -128,9 +129,13 @@ soittaa syntetisoidun kuvion vain, jos oikea raita puuttuu.
 
 ## Generointi
 
-Raidat generoidaan ElevenLabs Music -APIlla (omistajan päätös
-2.9.2026; varalla Google Lyria) työkalulla
-`tools/generoi-siirtymamusiikki.mjs`. Promptit ovat työkalussa
+Raidat generoidaan Google Lyria 3.5:llä (omistaja kuunteli ElevenLabs
+Musicin ja Lyrian raidat rinnakkain ja valitsi Lyrian 5.9.2026:
+"ota lyra musiikit käyttöön peliin ja poista vanha"; ElevenLabs jää
+vertailumoottoriksi `--moottori eleven`) työkalulla
+`tools/generoi-siirtymamusiikki.mjs`. Lyrian raidat viedään päätteellä
+`-lyria`, ja peli soittaa ne; ElevenLabsin paljasnimiset raidat eivät
+soi pelissä. Promptit ovat työkalussa
 vakioina, yhteinen tyylilause kaikille lajeille.
 
 ```

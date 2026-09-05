@@ -138,10 +138,10 @@ test('lajitaulukossa ovat siirtymien kolme raitaa ja linssin oma', async () => {
 
 test('jokainen laji hakee oman tiedostonsa ämpärin aanet-kansiosta', async () => {
   const odotetut = {
-    jalan: 'aanet/siirtyma-jalan.mp3',
-    laiva: 'aanet/siirtyma-laiva.mp3',
-    lento: 'aanet/siirtyma-lento.mp3',
-    keksinnot: 'aanet/linssi-keksinnot.mp3',
+    jalan: 'aanet/siirtyma-jalan-lyria.mp3',
+    laiva: 'aanet/siirtyma-laiva-lyria.mp3',
+    lento: 'aanet/siirtyma-lento-lyria.mp3',
+    keksinnot: 'aanet/linssi-keksinnot-lyria.mp3',
   };
   for (const laji of MUSIIKKILAJIT) {
     await pystyta();
@@ -257,11 +257,11 @@ test('himmennys ilman soivaa raitaa on turvallinen', async () => {
 test('puuttuva linssiraita kokeillaan kahdesta polusta ja jää sitten hiljaiseksi', async () => {
   await pystyta();
   const audio = await soita('keksinnot', 100);
-  assert.ok(audio.src.includes('aanet/linssi-keksinnot.mp3'));
+  assert.ok(audio.src.includes('aanet/linssi-keksinnot-lyria.mp3'));
 
   audio.laukaiseVirhe();
   await mikrotehtavat();
-  assert.ok(audio.src.includes('linssi-keksinnot.mp3') && !audio.src.includes('aanet/'),
+  assert.ok(audio.src.includes('linssi-keksinnot-lyria.mp3') && !audio.src.includes('aanet/'),
     `toinen polku (audio/) pitäisi kokeilla — oli ${audio.src}`);
 
   audio.laukaiseVirhe();
