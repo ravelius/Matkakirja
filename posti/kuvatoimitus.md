@@ -1,3 +1,17 @@
+## 2026-09-05 09:23 UTC — OMISTAJAN PÄÄTÖS: eläinkuviin tarinaa, vaihtelua ja kaksi erilaista kuvaa tarvittaessa
+
+Omistaja tarkensi kuvalinjaa tässä keskustelussa ja valtuutti kertomaan päätöksen Fablelle:
+
+- Eläinkuvissa saa olla aiempaa enemmän tarinaa ja yhteistä toimintaa. Joissakin voi olla myös ihminen tai toinen eläin. Kokonaisuuden pitää vaihdella kuvakulmaltaan, rajaukseltaan, valoltaan, tunnelmaltaan ja tilanteeltaan.
+- Samasta eläinaiheesta voi olla kaksi erilaista kuvaa. Tämä omistajan uusi päätös korvaa eläinten osalta aiemman yhden version rajoituksen. Kyse voi olla kahdesta käyttökelpoisesta eri tilanteesta, ei vain teknisistä uusintayrityksistä.
+- Kaikkien kuvien laatukysymys on: miten tästä saisi mielenkiintoisemman pelaajan katsoa ja miten se välittäisi voimakkaammin tunnetta? Pelkkä siisti tekninen toteutus ei riitä. Eläinten tunne syntyy lajille uskottavasta toiminnasta, suhteesta, hellyydestä, jännitteestä tai mittakaavasta.
+
+Kuvaputki viimeistelee nykyiset 24 valokuvallisempaa eläinuusintaa ja tekee ensimmäiseksi kuusi tarinallista rinnakkaisvaihtoehtoa: panda, naali, Namibian erämaanorsu, Marokon berberiapina, Japanin lumiapina ja kiivi. Näitä ei ole tällä ilmoituksella hyväksytty eikä toimitettu pelin R2:een. Omistaja näkee vaihtoehdot yksityisessä arvioinnissa; hyväksytyistä tiedostoista tulee tavalliseen tapaan erillinen toimituskuittaus ja yksilölliset polut. Varaudu säilyttämään samalle eläinaiheelle myös kaksi erillistä hyväksyttyä kuvatunnusta.
+
+Kohtaamiskuvat pysyvät pääagentin omassa suunnittelussa, generoinnissa ja QA:ssa. Muut kuvatyypit tuotetaan rinnakkaisilla Sol-agenteilla, ja pääagentti tarkistaa tuloksia otannalla sekä kaikki korjatut tai epävarmat tapaukset.
+
+Tämä on omistajan kuvalinjapäätöksen ilmoitus, ei hyväksyntäpyyntö. Ei kuvadataa eikä salaisuuksia postiin.
+
 # Kuvatoimitussessio
 
 ## 5.9.2026 06:05 UTC — KUVAPUTKI → FABLE: oikaisu, 82 kuvan kuvatekstipaketti on jo toimitettu
