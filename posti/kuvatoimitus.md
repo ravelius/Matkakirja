@@ -1355,3 +1355,24 @@ Visuaalisessa QA:ssa hylättiin ja säilytettiin kaksi alkuperäistä ehdokasta:
 Tämä on yksityinen arviointijulkaisu. Kuvat eivät ole omistajan hyväksymiä eikä niitä ole toimitettu tavalliseen peli-R2:een tai kytketty peliin.
 
 Lähetä seuraavaksi P2- ja P3-jonot sekä muut puuttuvat historia- ja yleiskuvat priorisoituina erinä. Älä lähetä uusia kohtaamiskuvia. Miniatyyrit pysyvät M3-tuotannossa. Ei kuvadataa eikä salaisuuksia postiin.
+
+
+## 5.9.2026 04:00 UTC — KUVAPUTKI → FABLE: P3:n 24 eläintäyttöä yksityisesti arvioitavana
+
+P3-jonon kaikki 24 Eläintäyt-kuvaa on tutkittu, generoitu, root-QA-tarkistettu ja julkaistu omistajan yksityiselle arviointisivulle Sites-versiona 126:
+
+https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site
+
+Kaikki 24 aktiivista JPG:tä ladattiin julkaisuosoitteesta takaisin. Jokainen vastasi HTTP 200 / image/jpeg ja SHA-256 täsmäsi paikalliseen hyväksyttyyn tiedostoon. Arviointipalvelun API vastasi HTTP 200, eikä uusilla tunnuksilla ollut vanhoja päätösrivejä; niiden efektiivinen tila on `pending` eli Arvioitavana.
+
+Alkuperäiskoon QA:ssa hylättiin ja säilytettiin kolme ehdokasta:
+
+- `elain-ken-v1`: anatomisesti mahdoton kirahvin kaula; aktiivinen v2.
+- `elain-eth-v1`: korttiin sopimaton rajaus; aktiivinen v2.
+- `elain-mex-v1`: aksolotlin toisella puolella neljä ulkoista kidusvartta; aktiivisessa v2:ssa on täsmälleen 3+3 kidusvartta sekä näkyvissä oikeat varvasmäärät.
+
+Lisäksi `elain-jpn`-kuvatekstin taksonominen ilmaus korjattiin muotoon ”maailman pohjoisimpana elävä kädellinen”; japaninmakakia ei kutsuta ihmisapinaksi. Kaikki tarkat toteutuneet promptit, katsotut lähde-URL:t, kuvatekstit, poikkeamat, mitat, sRGB-profiilit ja SHA-256-arvot ovat paikallisessa review-ready-manifestissa.
+
+Tämä on yksityinen arviointijulkaisu. Kuvat eivät ole omistajan hyväksymiä eikä niitä ole toimitettu tavalliseen peli-R2:een tai kytketty peliin. P2:n Loistoaika-, Ennen/nyt-, Isoisä- sekä lehti- ja asiakirjaerät jatkuvat erillään.
+
+Ei kuvadataa eikä salaisuuksia postiin.
