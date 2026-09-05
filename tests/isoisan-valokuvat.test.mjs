@@ -61,3 +61,55 @@ test('lennolla kortin alle piirretään kuvateksti ja etusivulla kuvaa ei enää
   assert.match(css, /\.lento-valokuva \.lento-valokuvateksti \{/);
   assert.doesNotMatch(css, /^\.intro-valokuva \{/m);
 });
+
+/*
+ * KORTTI HÄIPYY JOKA REUNASTAAN JA ON ISOMPI (omistaja 5.9.2026 klo
+ * 00.35, sanatarkasti: *"isoisän kuva pitää häivyttää joka reunastaan
+ * läpinäkyväksi ja tehdä vähän isommaksi"*).
+ *
+ * Kumpikin on pelkkää tyyliä, eikä kumpikaan näkyisi virheenä jos se
+ * katoaisi — kortti vain saisi takaisin terävän suorakaiteen reunansa.
+ */
+test('lennon valokuvakortti: häivytys kaikilta reunoilta ja noin neljänneksen isompi koko', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  const kortti = css.match(/\.lento-valokuva \{[^}]*\}/)[0];
+  const kuva = css.match(/\.lento-valokuva img \{[^}]*\}/)[0];
+
+  // KOKO on yksi nimetty muuttuja, ja se kasvoi noin 25 % (280 → 350 px
+  // työpöydällä, 200 → 250 px puhelimessa).
+  assert.match(kortti, /--lento-valokuvan-leveys: min\(37\.5vw, 350px\);/);
+  assert.match(kortti, /width: var\(--lento-valokuvan-leveys\);/);
+  const puhelin = css.match(/@media \(max-width: 599px\) \{\s*\/\*[\s\S]*?\*\/\s*\.lento-valokuva \{[^}]*\}/)[0];
+  assert.match(puhelin, /--lento-valokuvan-leveys: min\(55vw, 250px\);/);
+  for (const [uusi, vanha] of [[350, 280], [250, 200]]) {
+    assert.ok(Math.abs(uusi / vanha - 1.25) < 0.01, `${vanha} → ${uusi} ei ole noin +25 %`);
+  }
+
+  // HÄIVYTYS on maski (ei suodatin, iOS-sääntö) ja se osuu KAIKKIIN
+  // neljään reunaan: vaaka- ja pystyliuku leikkauksena.
+  assert.doesNotMatch(kuva, /filter:/, 'kortti käyttää suodatinta');
+  for (const etuliite of ['-webkit-mask-image', 'mask-image']) {
+    const maski = kuva.match(new RegExp(`\\n {2}${etuliite}:[^;]*;`))[0];
+    assert.match(maski, /linear-gradient\(to right, transparent 0, #000 var\(--lento-valokuvan-haivytys-x\)/);
+    assert.match(maski, /linear-gradient\(to bottom, transparent 0, #000 var\(--lento-valokuvan-haivytys-y\)/);
+    assert.match(maski, /calc\(100% - var\(--lento-valokuvan-haivytys-x\)\), transparent 100%\)/);
+    assert.match(maski, /calc\(100% - var\(--lento-valokuvan-haivytys-y\)\), transparent 100%\)/);
+  }
+  // Leikkaus molemmilla kirjoitusasuilla — unioni jättäisi kovat reunat.
+  assert.match(kuva, /-webkit-mask-composite: source-in;/);
+  assert.match(kuva, /mask-composite: intersect;/);
+  // Varjo piirtyisi elementin laatikon mukaan eli juuri sinä terävänä
+  // suorakaiteena, jonka häivytys poistaa.
+  assert.doesNotMatch(kuva, /box-shadow/, 'kortin varjo palauttaisi terävän reunan');
+  // Häivytysvyöt ovat oikeasti olemassa ja tuntuvia.
+  for (const nimi of ['x', 'y']) {
+    const osuus = Number(kortti.match(new RegExp(`--lento-valokuvan-haivytys-${nimi}: (\\d+)%`))[1]);
+    assert.ok(osuus >= 10 && osuus <= 25, `häivytys ${nimi} ${osuus} % ei ole 10–25 %`);
+  }
+  // Kuvateksti jää häivytyksen ULKOPUOLELLE: se on kortin oma span
+  // kuvan alla, ei kuvan sisällä (js/ui.js aloituslentoSisalla).
+  const lappu = css.match(/\.lento-valokuva \.lento-valokuvateksti \{[^}]*\}/)[0];
+  assert.doesNotMatch(lappu, /mask-image/, 'kuvateksti häipyisi kuvan mukana');
+  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  assert.match(ui, /valokuvaNappi\.appendChild\(html\('span', 'lento-valokuvateksti', lappu\)\)/);
+});

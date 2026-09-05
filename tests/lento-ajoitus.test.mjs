@@ -312,6 +312,29 @@ test('lentokohtauksen koristeet ovat transformia ja peittävyyttä', () => {
   assert.doesNotMatch(CSS, /\.lento-leima\b/, 'saapumisleiman tyylit ovat palanneet');
 });
 
+/*
+ * KARTTA NÄKYY LENNOLLA ILMAN SUMENNUSTA (omistaja 5.9.2026 klo 00.35:
+ * *"lentokonekohtauksessa kartta voi näkyä ilman sumennusta"*).
+ *
+ * Kalvo oli PALLOLAUDAN oma (.pallolauta-harso) ja se on poistettu;
+ * tasokartan lentokerros pitää omansa. Tämä vartio katsoo kohtauksen
+ * yhteistä osaa js/ui.js:ssä: lentokalvo on läpinäkyvä eikä yksikään
+ * sen päälle nostettu kerros — vinjetti, valokuvakortti, ohitusnuoli —
+ * saa tuoda sumennusta takaisin.
+ */
+test('lentokohtaus ei sumenna karttaa', () => {
+  const kalvo = CSS.match(/\.flight-overlay\.kartalla \{[^}]*\}/)[0];
+  assert.match(kalvo, /backdrop-filter: none;/, 'lentokalvo sumentaa taustan');
+  assert.match(kalvo, /background: none;/);
+  // Pallolaudan harso on poistettu kokonaan (js/pallolauta/lauta.js).
+  assert.doesNotMatch(CSS, /^\.pallolauta-harso[\s.,{]/m, 'pallon lentoharso on palannut');
+  // Kortti, vinjetti ja nuoli ovat peittävyyttä ja maskia, eivät suodatinta.
+  for (const valitsin of ['.lento-valokuva \{', '.lento-valokuva img \{', '.flight-eteen \{']) {
+    const saanto = CSS.match(new RegExp(`${valitsin}[^}]*\\}`))[0];
+    assert.doesNotMatch(saanto, /filter:/, `${valitsin} käyttää suodatinta`);
+  }
+});
+
 test('laivareitit merellä ovat laudan omia merireittejä', () => {
   /*
    * Omistajan pelitestipalaute v1119 (leiman tilalle): *"piirrä

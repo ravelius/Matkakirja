@@ -457,9 +457,9 @@ export async function avaaPallolauta(ui) {
    * (js/kartta.js aloituslennonNiukkuus; omistaja 3.9.2026 sanatarkasti:
    * *"lennon aikana kartalla näkyy Lontoo pisteenä + Lontoo-teksti ja
    * Ateena pisteenä + Ateena-teksti. Ei muita pisteitä eikä nimiä."*).
-   * Pallolla sama sääntö tehdään pallon omilla kerroksilla: harso on
-   * kotelon päälle laskeutuva kalvo (ks. HARSO ON CSS-KALVO alla),
-   * nimikatto on kaksi ja pisteitä on vain nimien alla. Peli — nappula,
+   * Pallolla sama sääntö tehdään pallon omilla kerroksilla: nimikatto
+   * on kaksi ja pisteitä on vain nimien alla — HARSOA EI OLE (ks.
+   * KARTTA NÄKYY TERÄVÄNÄ alla). Peli — nappula,
    * kohteet, nostot, eläintäyt — jää kokonaan pois, koska peli on jo
    * siirtänyt matkaajan perille (actionPickStart) eikä määränpää saa
    * paljastua ennen konetta.
@@ -471,7 +471,6 @@ export async function avaaPallolauta(ui) {
    * ui.lentoKaari tekee siitä elävän katkojäljen kuten doFlyssä.
    */
   let lento = null; // { nimet: Set, valinta } avauslennon ajan
-  let harso = null;
 
   const aloitaLentotila = ({ lahto, kohde }) => {
     if (!lahto || !kohde) return false;
@@ -490,40 +489,47 @@ export async function avaaPallolauta(ui) {
       },
     };
     /*
-     * HARSO ON CSS-KALVO EIKÄ TOINEN PALLO (karttapallo.md luku 4 antoi
-     * kaksi vaihtoehtoa: puoliläpinäkyvä pallo säteellä 1,001 tai kalvo
-     * kotelon päälle). Kalvo valittiin, koska se ei lisää yhtään
-     * three.js-objektia eikä Globe.gl-kerrosta — PALLOLAUDAN_KERROKSET
-     * pysyy ennallaan — ja koska sen häivytys on pelkkää peittävyyttä
-     * kompositorissa: iOS:n WKWebView ei saa toista WebGL-kontekstia
-     * eikä uutta suodatinta, ja väri on täsmälleen tasokartan harson
-     * (css .fokus-sumu-harso), joten lauta näyttää lennolla samalta
-     * kummallakin laudalla.
+     * ══════════════════════════════════════════════════════════════
+     * KARTTA NÄKYY TERÄVÄNÄ LENNON AIKANA (omistaja 5.9.2026 klo 00.35)
+     * ══════════════════════════════════════════════════════════════
+     *
+     * Sanatarkasti: *"lentokonekohtauksessa kartta voi näkyä ilman
+     * sumennusta."*
+     *
+     * TÄSSÄ OLI KALVO. Vaihe 5b laski kotelon päälle pergamentin
+     * värisen harson (css .pallolauta-harso, peittävyys 0,62), joka
+     * jäljitteli tasokartan lentoharsoa (js/kartta.js
+     * aloituslennonNiukkuus). Pallolla se peitti juuri sen, mitä
+     * avauksessa on tarkoitus katsoa — laattakartan maapallon — ja
+     * omistaja pyysi sen pois. Harso on poistettu kokonaan (elementti,
+     * luokka ja css), joten lennon aikana pallolla ei ole yhtäkään
+     * kalvoa eikä suodatinta.
+     *
+     * NIUKKUUS EI KATOA HARSON MUKANA: kaksi nimeä, ei muita pisteitä
+     * eikä pelitilaa (nappula, kohteet, nostot) — se on lennon oma
+     * sääntö ja tulee tästä samasta lentotilasta. Vanha kartta
+     * (?lauta=kartta) pitää oman harsonsa: se on kartan lentokerroksen
+     * omaa eikä tämän laudan asia.
+     *
+     * TARKAT LAATAT PIDETÄÄN PÄÄLLÄ LENNON AJAN (js/pallolauta/avaus.js
+     * pakotaPallonLaatu): terävä kartta on nyt näkyvissä, joten se ei
+     * saa olla liikelaadullaan röpeliäinen juuri silloin kun sitä
+     * katsotaan.
+     *
+     * Merkit (nimet, kone) pelin muiden kerrosten päälle pinontatasolla.
      */
-    if (!harso) {
-      harso = document.createElement('div');
-      harso.className = 'pallolauta-harso';
-      harso.setAttribute('aria-hidden', 'true');
-      kuori.appendChild(harso);
-      // Peittävyys nousee siirtymällä: yksi kehys ilman luokkaa riittää.
-      void harso.getBoundingClientRect();
-    }
-    harso.classList.add('esilla');
-    // Merkit (nimet, kone) harson päälle pinontatasolla, kuten
-    // tasokartalla lennon oma kerros on harson päällä.
     kuori.classList.add('pallolauta-lennossa');
     merkkiAvain = null;
     paivita();
     return true;
   };
 
-  /** Kohtaus väistyy: kone ja harso häipyvät saapumiskortin alla. */
+  /** Kohtaus väistyy: kone häipyy saapumiskortin alla. */
   const lennonPoistuma = () => { kuori.classList.add('pallolauta-lento-poistuu'); };
 
-  /** Lentotila pois: harso, kaari ja niukkuus katoavat, peli palaa. */
+  /** Lentotila pois: kaari ja niukkuus katoavat, peli palaa. */
   const paataLentotila = () => {
     kuori.classList.remove('pallolauta-lento-poistuu', 'pallolauta-lennossa');
-    harso?.classList.remove('esilla');
     if (!lento) return false;
     lento = null;
     merkkiAvain = null;
@@ -1037,7 +1043,7 @@ export async function avaaPallolauta(ui) {
     }),
     /**
      * Avauslennon kohtaus (ui.aloituslennonKohtaus →
-     * js/pallolauta/avaus.js): rajaus, harso, kaari ja kone. Lennon
+     * js/pallolauta/avaus.js): rajaus, kaari ja kone. Lennon
      * koreografia — repliikki, kertoja, ohitus, saapumiskortti — on
      * js/ui.js:ssä yhtenä kappaleena kummallekin laudalle.
      */
@@ -1082,8 +1088,6 @@ export async function avaaPallolauta(ui) {
       lehtivahti?.disconnect();
       document.removeEventListener('visibilitychange', tahdistaLepo);
       kamera.pysaytaKameraAjo();
-      harso?.remove();
-      harso = null;
       eleet.pura();
       merkit.pura();
       noppaTakaisin();
