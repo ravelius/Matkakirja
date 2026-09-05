@@ -3342,8 +3342,10 @@ export const RAAMATTU = {
           + 'ei riita; elainten tunne syntyy lajille uskottavasta '
           + 'toiminnasta, suhteesta, hellyydesta, jannitteesta tai '
           + 'mittakaavasta. SEURAUS PELIIN: elaintakyn tietue saa 1-2 '
-          + 'kuvatunnusta; nayttotapa (pari vai vuorottelu) paatetaan '
-          + 'kortilla omistajan kanssa ennen ensimmaisia kaksoiskuvia.',
+          + 'kuvatunnusta; NAYTTOTAPA (omistajan kortin vastaus 5.9.2026): '
+          + 'KARUSELLI - kuva vaihtuu pyyhkaisylla kortilla kuten lehden '
+          + 'alarivin karuselli, pisteet kertovat maaran, kummallakin '
+          + 'kuvalla oma kuvateksti.',
         'FABLEMAX VAIN TARPEESEEN, OPUS HETI KUN VOI (omistaja 5.9.2026 '
           + 'paivalla, sanatarkasti: "Kayta fablemaxia vain niin paljon kuin '
           + 'on oikeasti tarpeen ja vaihda sitten heti opus agentille kun '
