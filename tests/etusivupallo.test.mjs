@@ -404,15 +404,16 @@ test('jokainen laskeutuminen tuo pinoon kuvan paikan ja vuoden kuvatekstillä', 
   assert.equal(saapumisenKuva(1 + ETUSIVUN_KUVAKIERTO.length).avain, eka.avain, 'kierto');
   assert.equal(saapumisenKuva(0), null, 'lähtökaupunki ei tuo kuvaa');
   /*
-   * KUVATEKSTI ON PAIKKA + VUOSI, EI HENKILÖKUVAUS (Raamattu: ISOISA
-   * JAA ARVOITUKSEKSI, omistaja 5.9.2026 klo 22.55): pinon kuvissa
-   * isoisä ei hahmotu, joten lappu ei nimeä häntä.
+   * KUVATEKSTI ON KUVAPUTKEN SANASTA SANAAN (omistajan pysyvä sääntö),
+   * muotoa "Isoisä, Aden, 1873" tai "Isoisän ottama kuva, Benares,
+   * 1873": paikka + vuosi, ei koskaan ulkonäön kuvausta (Raamattu:
+   * ISOISA JAA ARVOITUKSEKSI, omistaja 5.9.2026 klo 22.55).
    */
   for (const kuva of ETUSIVUN_ISOISAKUVAT) {
-    assert.match(kuva.kuvateksti, /^[^,]+, 1873$/,
-      `kuvateksti "${kuva.kuvateksti}" ei ole muotoa paikka, 1873`);
-    assert.doesNotMatch(kuva.kuvateksti, /isoisä/i,
-      'pinon lappu ei nimeä isoisää (ISOISA JAA ARVOITUKSEKSI)');
+    assert.match(kuva.kuvateksti, /^(Isoisä, |Isoisän ottama kuva, )?.+, 1873$/,
+      `kuvateksti "${kuva.kuvateksti}" ei ole muotoa [Isoisä, ]paikka, 1873`);
+    assert.doesNotMatch(kuva.kuvateksti, /kasvo|parta|silm|hattu|pitkä|lyhyt/i,
+      'lappu ei kuvaile isoisän ulkonäköä (ISOISA JAA ARVOITUKSEKSI)');
     assert.ok(kuva.osoite.startsWith('https://'), 'osoite muodostetaan pakan juuresta');
     assert.ok(kuva.tunnus && 'kaupunki' in kuva, 'pakka on datavetoinen: tunnus ja kaupunki');
   }
@@ -503,7 +504,7 @@ test('kuvat pinoutuvat haaleina ja sumeina tekstin alle', () => {
   );
   assert.ok(poyta, 'työpöydälle on oma media query');
   assert.match(poyta[0], /right: /, 'työpöydällä pino on paneelin oikeassa alaneljänneksessä');
-  assert.match(poyta[0], /width: clamp\(200px, 34vw, 420px\);/);
+  assert.match(poyta[0], /width: clamp\(300px, 46vw, 600px\);/);
 
   /* HAALEA JA SUMEA: arvot tulevat pakasta muuttujina, oletus varana. */
   const kuva = css.match(/\.etusivupallo-kuva img \{[\s\S]*?\n\}/)[0];

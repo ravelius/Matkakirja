@@ -5964,9 +5964,11 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   transform: translateX(-50%);
   /* Selvästi isompi kuin ennen (puhelimella 110px): kortti saa jäädä
      tekstin alle, joten koko ei ole enää tekstin kaistasta kiinni.
+     Omistaja 5.9.2026 ilta: "isoisän kuvan koko voi olla isompi kun se
+     menee tekstin alle blurrattuna" — mitat nostettiin vielä kerran.
      Puhelimella pino on niin alhaalla kuin mahtuu, koska avaustekstin
      pergamenttiharso (.intro-palsta::before) vaalentaa kaiken allaan. */
-  width: clamp(160px, 46vw, 250px);
+  width: clamp(220px, 62vw, 340px);
   pointer-events: none;
 }
 
@@ -5978,7 +5980,7 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
     right: 5%;
     bottom: 7%;
     transform: none;
-    width: clamp(200px, 34vw, 420px);
+    width: clamp(300px, 46vw, 600px);
   }
 }
 
