@@ -105,7 +105,7 @@ for (const ruutu of RUUDUT) {
     virheet.push(String(e));
   });
 
-  await sivu.goto(`${osoite}index.html`, { waitUntil: 'load' });
+  await sivu.goto(`${osoite}index.html?lauta=kartta`, { waitUntil: 'load' });
   await sivu.waitForTimeout(2500);
   await sivu.evaluate(() => {
     [...document.querySelectorAll('button')]

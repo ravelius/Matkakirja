@@ -39,7 +39,7 @@ const kaynnista = async (viewport) => {
   // Pöllöpalvelin katkaistaan: saapuminen esihakee lukijaäänen
   // ensimmäisen palan, eikä savuke saa kuluttaa generointikiintiötä.
   await sivu.route('**samireivinen.workers.dev/**', (route) => route.abort());
-  await sivu.goto(`http://localhost:${palvelin.address().port}/`, { waitUntil: 'load' });
+  await sivu.goto(`http://localhost:${palvelin.address().port}/?lauta=kartta`, { waitUntil: 'load' });
   await sivu.waitForTimeout(1800);
   // Peli käyntiin: muodot ja maalehdet latautuvat vasta pelin alettua.
   await sivu.evaluate(() => {

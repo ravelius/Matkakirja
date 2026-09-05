@@ -61,7 +61,7 @@ const palvelin = http.createServer((req, res) => {
   res.end(readFileSync(polku));
 });
 await new Promise((ok) => palvelin.listen(0, ok));
-const osoite = `http://localhost:${palvelin.address().port}/`;
+const osoite = `http://localhost:${palvelin.address().port}/?lauta=kartta`;
 
 let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => { kaikki += 1; if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`); };

@@ -62,7 +62,7 @@ await sivu.route('**samireivinen.workers.dev/**', async (route) => {
   });
 });
 
-await sivu.goto(`http://localhost:${palvelin.address().port}/`, { waitUntil: 'load' });
+await sivu.goto(`http://localhost:${palvelin.address().port}/?lauta=kartta`, { waitUntil: 'load' });
 await sivu.waitForTimeout(1500);
 
 /*

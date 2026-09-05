@@ -324,7 +324,7 @@ if (AMPARI_TOIMII) {
   }));
   vaadi('varapolku: ilman kirjastoa peli putoaa tasokartalle tälle istunnolle',
     heraa && tila.lepotila === false && !tila.pallolauta && !tila.kuori, JSON.stringify(tila));
-  vaadi('varapolku: laitteen valinta palaa kartaksi (avain poistuu) ja pelaaja saa yhden rivin',
+  vaadi('varapolku: laitteen valintaa ei kirjoiteta (avain pysyy poissa) ja pelaaja saa yhden rivin',
     tila.avain === null && tila.ilmoitus, JSON.stringify(tila));
   if (pyynnot.virheet.length) tieto('sivun virheet', pyynnot.virheet.slice(0, 5).join(' | '));
   await ctx.close();

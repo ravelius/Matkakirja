@@ -30,7 +30,7 @@ import {
   pisteMonikulmiossa, polloNimilappu, polunPituus,
   cachedImage, cachedSummary, fokusmoodiPaalla,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, unohdaKehittajaKytkimet,
-  asetaLautaValinta, lautaValinta,
+  lautaValinta,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
 import { onAarre } from './tokens.js';
@@ -4043,7 +4043,7 @@ export class UI {
    *
    * VARAPOLKU: jos Globe.gl ei lataudu (ei verkkoa, yhden tiedoston
    * versio, WebGL puuttuu), kartta herää tälle istunnolle ja laitteen
-   * valinta palautetaan tasokartaksi (pallolautaVarapolku).
+   * valinta ei muutu (pallolautaVarapolku, vain tälle istunnolle).
    */
 
   /** Halutaanko pallolauta juuri nyt: valinta, lauta ja pelin vaihe. */
@@ -4129,8 +4129,14 @@ export class UI {
    * palloa ilman verkkoa (tehtävänanto 5.9.2026). Yksi rivi pelaajalle.
    */
   pallolautaVarapolku() {
+    /*
+     * VAIN TÄLLE ISTUNNOLLE (karttapallo.md luku 2: varapolku ei kirjoita
+     * valintaa). Pallo on oletuslauta 5.9.2026 alkaen; jos yksi
+     * verkoton käynnistys tallentaisi kartan laitteelle, pallo ei enää
+     * palaisi koskaan. pallolautaEpaonnistui riittää: seuraava
+     * käynnistys yrittää palloa uudestaan.
+     */
     this.pallolautaEpaonnistui = true;
-    asetaLautaValinta('kartta');
     this.pallolauta?.pura();
     this.pallolauta = null;
     if (this.kartta.lepotila) this.kartta.heraa();
@@ -16389,7 +16395,16 @@ export class UI {
    */
   nakyvatLinssit(tuki) {
     const omat = tuki.omistus.omistetut(this.game, this.game.player);
+    /*
+     * PALLOLAUDALLA PALLO EI OLE LINSSI (karttapallo.md vaihe 6: "pallo-
+     * linssi pois laukusta", kun pallo on lauta — omistaja 5.9.2026: "Ota
+     * vanha kartta jo heti kokonaan pois ja korvaa pallolla"). Laukun
+     * karttapallo avaisi valikkopallon pallon päälle. Tasokartalla
+     * (?lauta=kartta) linssi jää valikoimaan ennalleen.
+     */
+    const pallolauta = lautaValinta() === 'pallo';
     return tuki.kaikki.filter((linssi) => omat.has(linssi.tunnus)
+      && !(pallolauta && linssi.tunnus === 'pallo')
       && tuki.kerros.kelpaaLaudalle(linssi, this.game.pack.id)
       && !this.linssiPois.has(linssi.tunnus));
   }
