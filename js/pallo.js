@@ -25,6 +25,17 @@
  * kaupungin napautus sulkee pallon ja ajaa kameran kaupunkiin
  * (js/kartta.js ajaKamera) — ei laudan vaihtoa. Pallo avataan
  * matkalaukun Karttapallo-linssistä (js/ui.js → ui.avaaPallo).
+ *
+ * ── SAMA RUNKO PALLOLAUDALLE (omistaja 5.9.2026) ───────────────────
+ *
+ * *"Voisiko pallon vaihtaa pelin kartaksi suoraan?"* — Raamattu,
+ * KARTTAPALLO ON PELILAUTA. Pallon runko (rakennaPallo: pinta laatoista
+ * tai z4-varatekstuurista) ja eleet (asennaPallonEleet: nipistys ei ole
+ * napautus, sormessa pysyvä kierto, liuku) ovat jaettuja: tämä tiedosto
+ * pitää valikkopallon kuoren (Sulje, tumma pohja, sukellus), ja
+ * js/pallolauta/lauta.js rakentaa samasta rungosta pelin laudan
+ * karttaruutuun. Kytkin ja suunnitelma: js/ui-apurit.js lautaValinta,
+ * docs/moduulit/karttapallo.md.
  */
 
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
@@ -104,75 +115,16 @@ export function lataaPallokirjasto(doc = document) {
   return kirjastoLupaus;
 }
 
-/** Sulkee pallon, jos se on auki. */
-export function suljePallo(ui) {
-  const kuori = ui.pallo;
-  if (!kuori) return false;
-  ui.pallo = null;
-  ui.pallonInstanssi = null;
-  kuori.classList.remove('esilla');
-  document.body.classList.remove('pallo-auki');
-  ui.pallonKuuntelija?.();
-  ui.pallonKuuntelija = null;
-  setTimeout(() => kuori.remove(), 420);
-  return true;
-}
-
 /**
- * Avaa pallon koko kartta-alueen päälle. Palauttaa true, kun pallo on
- * ruudulla (kirjasto ja pinnoite ladataan taustalla; latausvirhe
- * näytetään kuoressa eikä kaada peliä).
+ * Pallon runko: Globe.gl-instanssi koteloon, pinta laattamoottorilla
+ * (luettelo ämpärissä) tai z4-tekstuurilla varana. Jaettu valikkopallon
+ * (avaaPallo) ja pallolaudan (js/pallolauta/lauta.js) kesken — pinta ja
+ * sen varapolku ovat yhdet.
  */
-export async function avaaPallo(ui) {
-  if (ui.dead || ui.pallo) return false;
-  const kuori = document.createElement('div');
-  kuori.className = 'pallo-kuori';
-  kuori.setAttribute('role', 'dialog');
-  kuori.setAttribute('aria-modal', 'true');
-  kuori.setAttribute('aria-label', 'Karttapallo');
-  /*
-   * EI OTSIKKORIVIÄ (omistaja 4.9.2026 ilta: "Ota se karttapallo pois
-   * otsikkoriviltä, kun se menee matkakirjan logon kanssa päällekkäin.
-   * Sitä ei tarvita ollenkaan"). Kuori alkaa pelin ylärivin alta, joten
-   * logo ja ylärivin napit jäävät näkyviin; pallon päällä kelluu vain
-   * Sulje-nappi oikeassa yläkulmassa.
-   */
-  kuori.innerHTML = `
-    <button type="button" class="pallo-sulje" aria-label="Sulje" title="Sulje">✕</button>
-    <div class="pallo-kotelo"></div>
-    <p class="pallo-tila">Ladataan palloa…</p>`;
-  const ylarivi = document.querySelector('.topbar');
-  if (ylarivi) kuori.style.top = `${Math.round(ylarivi.getBoundingClientRect().bottom)}px`;
-  document.body.appendChild(kuori);
-  ui.pallo = kuori;
-  document.body.classList.add('pallo-auki');
-  void kuori.getBoundingClientRect();
-  kuori.classList.add('esilla');
-  const sulje = () => suljePallo(ui);
-  kuori.querySelector('.pallo-sulje').addEventListener('click', sulje);
-  const nappain = (e) => { if (e.key === 'Escape') { e.stopPropagation(); sulje(); } };
-  document.addEventListener('keydown', nappain, true);
-  ui.pallonKuuntelija = () => document.removeEventListener('keydown', nappain, true);
-
-  const tila = kuori.querySelector('.pallo-tila');
-  let Globe;
-  try {
-    Globe = await lataaPallokirjasto();
-  } catch {
-    tila.textContent = 'Karttapallo ei latautunut — tarkista verkkoyhteys ja yritä uudelleen.';
-    return true;
-  }
-  if (ui.pallo !== kuori) return false;
-  const kotelo = kuori.querySelector('.pallo-kotelo');
-  const pack = ui.game.pack;
-  const kaupungit = pallonKaupungit(pack);
-  const pos = ui.game.player?.pos;
-  const oma = pos?.type === 'city' ? kaupungit.find((k) => k.id === pos.city) : null;
-  // Laatat, jos luettelo on ämpärissä; muuten z4-tekstuuri varana.
-  const laatat = await laatatSaatavilla();
-  if (ui.pallo !== kuori) return false;
+export function rakennaPallo(Globe, kotelo, laatat) {
   // Pelkkä pinnoite: ei pisteitä, nimiä, kaaria eikä renkaita (omistaja
-  // 4.9.2026: "älä lisää mitään sen päälle").
+  // 4.9.2026: "älä lisää mitään sen päälle"). Pelilaudalla PELIN merkit
+  // lisätään lauta.js:ssä (Raamattu 5.9.2026: kartta laatoissa, peli päällä).
   const pallo = Globe()(kotelo)
     .width(kotelo.clientWidth).height(kotelo.clientHeight)
     .backgroundColor('rgba(0,0,0,0)')
@@ -182,22 +134,18 @@ export async function avaaPallo(ui) {
   } else {
     pallo.globeImageUrl(PALLO_TEKSTUURI);
   }
-  pallo
-    .onGlobeClick(({ lat, lng }) => {
-      // Nipistys ei ole napautus (ks. sormiseuranta alla).
-      if (sormet.nipistys) return;
-      const kohta = sukelluskohta(lat, lng);
-      if (!kohta) return;
-      sulje();
-      ui.kartta?.ajaKamera?.({ x: kohta.x, y: kohta.y, leveys: PALLO_SUKELLUSLEVEYS }, { kesto: 1400 });
-    });
-  // Instanssi talteen mittausta ja savukkeita varten (suljettaessa pois).
-  ui.pallonInstanssi = pallo;
-  const koti = oma ?? kaupungit.find((k) => k.id === 'lontoo') ?? kaupungit[0];
-  if (koti) pallo.pointOfView({ lat: koti.lat, lng: koti.lon, altitude: 1.9 }, 0);
+  return pallo;
+}
+
+/**
+ * Pallon eleet: sormiseuranta (nipistys ei ole napautus), sormessa
+ * pysyvä kierto ja irrotuksen jälkeinen liuku. Jaettu valikkopallon ja
+ * pallolaudan kesken. Palauttaa sormien tilan (napautuksen hylkäys) ja
+ * purkajan (liuku seis). Ensimmäinen sormi pysäyttää mahdollisen
+ * itsepyörinnän (valikkopallo).
+ */
+export function asennaPallonEleet(pallo, kotelo, ui) {
   const ohjaimet = pallo.controls();
-  ohjaimet.autoRotate = true;
-  ohjaimet.autoRotateSpeed = 0.35;
   /*
    * NIPISTYS EI OLE NAPAUTUS (omistajan bugiraportti 4.9.2026 ilta,
    * uusi iPhone: "Pallo häviää näkyvistä heti, kun koitan zoomata, eli
@@ -314,8 +262,98 @@ export async function avaaPallo(ui) {
   };
   kotelo.addEventListener('pointerup', paasta);
   kotelo.addEventListener('pointercancel', paasta);
-  const vanhaKuuntelija = ui.pallonKuuntelija;
-  ui.pallonKuuntelija = () => { pysaytaLiuku(); vanhaKuuntelija?.(); };
+  return { sormet, pura: pysaytaLiuku };
+}
+
+/** Sulkee pallon, jos se on auki. */
+export function suljePallo(ui) {
+  const kuori = ui.pallo;
+  if (!kuori) return false;
+  ui.pallo = null;
+  ui.pallonInstanssi = null;
+  kuori.classList.remove('esilla');
+  document.body.classList.remove('pallo-auki');
+  ui.pallonKuuntelija?.();
+  ui.pallonKuuntelija = null;
+  setTimeout(() => kuori.remove(), 420);
+  return true;
+}
+
+/**
+ * Avaa pallon koko kartta-alueen päälle. Palauttaa true, kun pallo on
+ * ruudulla (kirjasto ja pinnoite ladataan taustalla; latausvirhe
+ * näytetään kuoressa eikä kaada peliä).
+ */
+export async function avaaPallo(ui) {
+  if (ui.dead || ui.pallo) return false;
+  const kuori = document.createElement('div');
+  kuori.className = 'pallo-kuori';
+  kuori.setAttribute('role', 'dialog');
+  kuori.setAttribute('aria-modal', 'true');
+  kuori.setAttribute('aria-label', 'Karttapallo');
+  /*
+   * EI OTSIKKORIVIÄ (omistaja 4.9.2026 ilta: "Ota se karttapallo pois
+   * otsikkoriviltä, kun se menee matkakirjan logon kanssa päällekkäin.
+   * Sitä ei tarvita ollenkaan"). Kuori alkaa pelin ylärivin alta, joten
+   * logo ja ylärivin napit jäävät näkyviin; pallon päällä kelluu vain
+   * Sulje-nappi oikeassa yläkulmassa.
+   */
+  kuori.innerHTML = `
+    <button type="button" class="pallo-sulje" aria-label="Sulje" title="Sulje">✕</button>
+    <div class="pallo-kotelo"></div>
+    <p class="pallo-tila">Ladataan palloa…</p>`;
+  const ylarivi = document.querySelector('.topbar');
+  if (ylarivi) kuori.style.top = `${Math.round(ylarivi.getBoundingClientRect().bottom)}px`;
+  document.body.appendChild(kuori);
+  ui.pallo = kuori;
+  document.body.classList.add('pallo-auki');
+  void kuori.getBoundingClientRect();
+  kuori.classList.add('esilla');
+  const sulje = () => suljePallo(ui);
+  kuori.querySelector('.pallo-sulje').addEventListener('click', sulje);
+  const nappain = (e) => { if (e.key === 'Escape') { e.stopPropagation(); sulje(); } };
+  document.addEventListener('keydown', nappain, true);
+  ui.pallonKuuntelija = () => document.removeEventListener('keydown', nappain, true);
+
+  const tila = kuori.querySelector('.pallo-tila');
+  let Globe;
+  try {
+    Globe = await lataaPallokirjasto();
+  } catch {
+    tila.textContent = 'Karttapallo ei latautunut — tarkista verkkoyhteys ja yritä uudelleen.';
+    return true;
+  }
+  if (ui.pallo !== kuori) return false;
+  const kotelo = kuori.querySelector('.pallo-kotelo');
+  const pack = ui.game.pack;
+  const kaupungit = pallonKaupungit(pack);
+  const pos = ui.game.player?.pos;
+  const oma = pos?.type === 'city' ? kaupungit.find((k) => k.id === pos.city) : null;
+  // Laatat, jos luettelo on ämpärissä; muuten z4-tekstuuri varana.
+  const laatat = await laatatSaatavilla();
+  if (ui.pallo !== kuori) return false;
+  const pallo = rakennaPallo(Globe, kotelo, laatat);
+  const eleet = asennaPallonEleet(pallo, kotelo, ui);
+  const { sormet } = eleet;
+  const eleKuuntelija = ui.pallonKuuntelija;
+  ui.pallonKuuntelija = () => { eleet.pura(); eleKuuntelija?.(); };
+  pallo
+    .onGlobeClick(({ lat, lng }) => {
+      // Nipistys ei ole napautus (ks. sormiseuranta, asennaPallonEleet).
+      if (sormet.nipistys) return;
+      const kohta = sukelluskohta(lat, lng);
+      if (!kohta) return;
+      sulje();
+      ui.kartta?.ajaKamera?.({ x: kohta.x, y: kohta.y, leveys: PALLO_SUKELLUSLEVEYS }, { kesto: 1400 });
+    });
+  // Instanssi talteen mittausta ja savukkeita varten (suljettaessa pois).
+  ui.pallonInstanssi = pallo;
+  const koti = oma ?? kaupungit.find((k) => k.id === 'lontoo') ?? kaupungit[0];
+  if (koti) pallo.pointOfView({ lat: koti.lat, lng: koti.lon, altitude: 1.9 }, 0);
+  // Valikkopallo pyörii itsekseen, kunnes sormi laskeutuu (asennaPallonEleet).
+  const ohjaimet = pallo.controls();
+  ohjaimet.autoRotate = true;
+  ohjaimet.autoRotateSpeed = 0.35;
   const mitoita = () => pallo.width(kotelo.clientWidth).height(kotelo.clientHeight);
   window.addEventListener('resize', mitoita);
   const vanha = ui.pallonKuuntelija;

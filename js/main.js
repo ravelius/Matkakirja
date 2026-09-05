@@ -5,8 +5,8 @@ import { kehittajanKerroinTeksti, saadaKehittajanKerrointa } from './kehittajan-
 import { Game } from './game.js';
 import { UI } from './ui.js';
 import {
-  asetaKehittajaMaailma, asetaKehittajaTila,
-  kehittajaMaailmaPaalla, kehittajaTilaPaalla,
+  asetaKehittajaMaailma, asetaKehittajaTila, asetaLautaValinta,
+  kehittajaMaailmaPaalla, kehittajaTilaPaalla, lautaValinta,
 } from './ui-apurit.js';
 // Laitemittarin muistettu kytkin (hammasratasvalikko = ?mittari=1/0).
 import { asetaMittari, mittariPaalla } from './karttamittari.js';
@@ -117,7 +117,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1552';
+const APP_VERSION = '2026-08-09.1553';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -964,7 +964,15 @@ function avaaKatselu(pack) {
 let katseluPack = null;
 try {
   const lauta = new URLSearchParams(location.search).get('lauta');
-  katseluPack = lauta ? packById(lauta) ?? null : null;
+  /*
+   * SAMA PARAMETRI VALITSEE MYÖS PELILAUDAN (js/ui-apurit.js
+   * lautaValinta): ?lauta=pallo|kartta on karttapallon kytkin, ei
+   * katselulauta. packById palauttaa tuntemattomalle tunnukselle
+   * oletuspaketin, joten ilman tätä ehtoa pallon kytkin olisi avannut
+   * katselutilan maailmankartalle.
+   */
+  const laudanValinta = lauta === 'pallo' || lauta === 'kartta';
+  katseluPack = lauta && !laudanValinta ? packById(lauta) ?? null : null;
 } catch {
   katseluPack = null;
 }
@@ -1300,6 +1308,16 @@ const kehittajaVihje = document.getElementById('kehittaja-valikko-vihje');
 const maailmaNappi = document.getElementById('kehittaja-maailma-btn');
 const mittariNappi = document.getElementById('kehittaja-mittari-btn');
 /*
+ * PALLOLAUTA (omistaja 5.9.2026: *"Voisiko pallon vaihtaa pelin kartaksi
+ * suoraan?"* — Raamattu KARTTAPALLO ON PELILAUTA). Vipu on palautusoptio
+ * ja kokeilukytkin: se tallentaa laudan valinnan laitteelle
+ * (js/ui-apurit.js asetaLautaValinta) ja LATAA SIVUN UUDESTAAN, koska
+ * lauta valitaan käynnistyksessä ennen ensimmäistäkään piirtoa — juuri
+ * siksi tasokartta ei ehdi alustua pallon alle (karttapallo.md luku 3).
+ * URL-parametri ?lauta= voittaa vivun, joten uudelleenlataus riisuu sen.
+ */
+const pallolautaNappi = document.getElementById('kehittaja-pallolauta-btn');
+/*
  * KEHITTÄJÄN VOIMAKKUUSSÄÄTIMET (omistaja 3.9.2026): taustaääni ja
  * taustamusiikki, +/- askelittain pelin nykyiseen tasoon nähden.
  * Kerroin ja tallennus ovat js/kehittajan-voimat.js:ssä; ambienssi ja
@@ -1386,6 +1404,16 @@ function paivitaKehittajaValikko() {
     polloGenerointiNappi.title = 'Generoi pöllön kysymysehdotukset heti tälle näkymälle '
       + '(myös uudelleen jo generoidulle)';
   }
+  const pallolauta = lautaValinta() === 'pallo';
+  merkitseKytkin(pallolautaNappi, pallolauta);
+  if (pallolautaNappi) {
+    pallolautaNappi.title = pallolauta
+      ? 'Pallolauta on PÄÄLLÄ: karttapallo on pelin lauta ja tasokartta herää '
+        + 'vain siirron ja linssin ajaksi — kytke pois palataksesi tasokartalle '
+        + '(sivu ladataan uudestaan; sama kuin ?lauta=kartta)'
+      : 'Pallolauta on pois: pelin lauta on tasokartta — kytke päälle pelataksesi '
+        + 'karttapallolla (sivu ladataan uudestaan; sama kuin ?lauta=pallo)';
+  }
   merkitseSiirtymamusiikki();
   if (siirtymaMusiikkiNappi) {
     siirtymaMusiikkiNappi.title = 'Pelin omat musiikkiraidat: löytyykö raita ämpäristä '
@@ -1458,6 +1486,17 @@ mittariNappi?.addEventListener('click', () => {
   if (!halutaan) naytaKehittajaVihje('Mittari pois.');
   else if (kaynnissa) naytaKehittajaVihje('Mittari kartan yläkulmassa.');
   else naytaKehittajaVihje('Mittari kytketty: näkyy kartalla — lataa sivu uudelleen.');
+});
+
+pallolautaNappi?.addEventListener('click', () => {
+  const halutaan = lautaValinta() !== 'pallo';
+  asetaLautaValinta(halutaan ? 'pallo' : 'kartta');
+  paivitaKehittajaValikko();
+  naytaKehittajaVihje(halutaan ? 'Pallolauta päälle — ladataan sivu…' : 'Tasokartta — ladataan sivu…');
+  // Osoitteen ?lauta= voittaisi vivun: riisutaan se ennen latausta.
+  const osoite = new URL(location.href);
+  osoite.searchParams.delete('lauta');
+  setTimeout(() => { location.href = osoite.href; }, 350);
 });
 
 siirtymaMusiikkiNappi?.addEventListener('click', () => {

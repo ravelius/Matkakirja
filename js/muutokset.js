@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1553, teksti: 'Pallolauta vaihe 1: kytkin ?lauta=pallo, lepotila' },
   { v: 1552, teksti: 'Pallolaatat: navat merta ja jaata, ei harmaata hattua' },
   { v: 1551, teksti: 'Karttapallo: taso 8 kayttoon' },
   { v: 1550, teksti: 'Karttapallo pelilaudaksi: suunnitelma ja linjaus' },
