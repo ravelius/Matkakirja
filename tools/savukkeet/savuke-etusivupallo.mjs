@@ -51,6 +51,11 @@
  *   E8  Ei verkkoa (etusivu.json ei vastaa): kerrosta ei synny eikä
  *       karttaa herätetä — etusivu on pelkkää paperia julisteotsikon
  *       kanssa.
+ *   E11 AVAUKSEN AJOITUS (omistaja 5.9.2026 ilta): juliste on ruudulla
+ *       jo ennen videon latautumista (hidas verkko), ja napautuksen
+ *       jälkeen vaiheet tulevat järjestyksessä — pallo ja otsikko heti,
+ *       "osa II" reilun sekunnin päästä feidaten, kirjoituskone vasta
+ *       häivytyksen jälkeen. Samalla otetaan kaappaukset 1400×900.
  *   E9  LÄHTÖKAUPUNGIN VALINTA PALLOLLA (aalto 3A): "Valitse
  *       aloituskaupunki" avaa pallolaudan valintatilaan — tasokartta
  *       PYSYY lepotilassa ja svg#board tyhjänä, valittavat kaupungit
@@ -216,9 +221,10 @@ const ampariValimuisti = new Map();
  */
 async function avaaSivu({
   lippu = true, aineisto = true, reducedMotion = 'no-preference', video = koevideo,
+  ikkuna = { width: 390, height: 844 }, videoViive = 0,
 } = {}) {
   const ctx = await selain.newContext({
-    viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, reducedMotion,
+    viewport: ikkuna, deviceScaleFactor: 2, reducedMotion,
     serviceWorkers: 'block',
   });
   /*
@@ -245,6 +251,17 @@ async function avaaSivu({
         return;
       }
       if (url.endsWith(ETUSIVUPALLO_TIEDOSTOT.webm) && video) {
+        /*
+         * VIDEO SAA TULLA MYÖHÄSSÄ (E11a): juuri siinä ikkunassa
+         * etusivu oli ennen tyhjä pergamentti, joten hidas verkko on
+         * ainoa tapa mitata, että juliste on jo ruudulla.
+         */
+        if (videoViive) {
+          setTimeout(() => route.fulfill({
+            status: 200, contentType: 'video/webm', body: video,
+          }).catch(() => {}), videoViive);
+          return;
+        }
         route.fulfill({ status: 200, contentType: 'video/webm', body: video });
         return;
       }
@@ -345,6 +362,24 @@ const LUE_TILA = () => {
     tekstiLaatikko: laatikko(document.getElementById('intro-text')),
     otsikkoLaatikko: laatikko(document.querySelector('.intro-juliste')),
     aika: document.querySelector('.etusivupallo-video')?.currentTime ?? null,
+    /*
+     * AVAUKSEN KOLME VAIHETTA (omistaja 5.9.2026 ilta): juliste näkyy
+     * heti, video vaihtuu sen tilalle, "osa II" feidaa sisään ja vasta
+     * sitten alkaa kirjoituskone.
+     */
+    julisteenPeitto: Number(getComputedStyle(
+      document.querySelector('.etusivupallo-juliste') ?? document.body,
+    ).opacity),
+    videonPeitto: document.querySelector('.etusivupallo-video')
+      ? Number(getComputedStyle(document.querySelector('.etusivupallo-video')).opacity) : null,
+    videonTila: document.querySelector('.etusivupallo-video')?.readyState ?? null,
+    kerrosNakyy: Boolean(juuri?.classList.contains('nakyy')),
+    osanPeitto: Number(getComputedStyle(
+      document.querySelector('.juliste-osa') ?? document.body,
+    ).opacity),
+    nimiNakyy: (document.querySelector('.juliste-nimi')?.textContent ?? '').trim(),
+    paikkarivi: (document.getElementById('intro-paikka')?.textContent ?? '').length,
+    runko: (document.getElementById('intro-runko')?.textContent ?? '').length,
     /*
      * TASOKARTTA POIS TIELTÄ (aalto 1D): pallolaudalla avausnäkymän
      * pienoiskarttaa ei alusteta lainkaan — svg#board jää tyhjäksi ja
@@ -735,6 +770,97 @@ if (koevideo) {
   vaadi('E9d kohdemerkin napautus käynnistää pelin ilman tasokarttaa',
     alkoi && jalkeen.lepotila === true && jalkeen.laudanOsia === 0,
     `vaihe ${jalkeen.vaihe}, lepotila ${jalkeen.lepotila}, laudan osia ${jalkeen.laudanOsia}`);
+  await ctx.close();
+}
+
+/* ========== E11: AVAUKSEN AJOITUS (omistaja 5.9.2026 ilta) ========== */
+
+/*
+ * Omistaja sanatarkasti: *"tuon etusivun voisi animoida niin että pallo
+ * lähtee heti pyörimään ja näytöllä näkyy otsikko, mutta "Osa II.."
+ * tulee vasta noin reilun sekunnin päästä feidaten. sitten alkaa
+ * kirjoituskone ja luenta"*.
+ *
+ *   E11a Juliste on ruudulla ENNEN kuin video on latautunut (hidas
+ *        verkko): kerroksella on nakyy-luokka, juliste peittävä ja
+ *        video vielä läpinäkyvä ja lataamatta.
+ *   E11b Vaiheet järjestyksessä: 0,3 s otsikko ilman "osa II" ja ilman
+ *        kirjoituskonetta → 2,0 s "osa II" näkyvissä → 4,0 s
+ *        kirjoituskone käynnissä. Samalla otetaan kaappaukset.
+ */
+
+if (koevideo) {
+  const { ctx, sivu } = await avaaSivu({ lippu: true, videoViive: 2500 });
+  /*
+   * Odotetaan JULISTETTA, ei videota: juliste tulee näkyviin heti kun
+   * kuva on purettu, ja juuri silloin videon on vielä oltava lataamatta
+   * — se on tämän vartion koko sisältö.
+   */
+  const julisteNakyy = await sivu.waitForFunction(() => {
+    const el = document.querySelector('.etusivupallo-juliste');
+    return Boolean(el) && Number(getComputedStyle(el).opacity) > 0.9;
+  }, null, { timeout: 30000 }).then(() => true).catch(() => false);
+  const heti = await sivu.evaluate(LUE_TILA);
+  vaadi('E11a juliste näkyy jo ennen videon latautumista',
+    julisteNakyy && heti.kerrosNakyy && heti.julisteenPeitto > 0.9
+    && heti.videonTila !== null && heti.videonTila < 2 && heti.videonPeitto === 0,
+    `kerros ${heti.kerrosNakyy}, juliste ${heti.julisteenPeitto}, `
+    + `video ${heti.videonPeitto} (readyState ${heti.videonTila})`);
+  await ctx.close();
+}
+
+if (koevideo) {
+  const { ctx, sivu } = await avaaSivu({ lippu: true, ikkuna: { width: 1400, height: 900 } });
+  await sivu.waitForFunction(() => Boolean(document.querySelector('.etusivupallo')),
+    null, { timeout: 30000 }).catch(() => {});
+  /*
+   * Video käyntiin ja häivytys loppuun ENNEN kellon nollaa: mitataan
+   * avausta eikä latausta. Oikealla pelaajalla nappiin menee joka
+   * tapauksessa sekunteja, joten pallo pyörii jo napautushetkellä.
+   */
+  await sivu.waitForFunction(() => {
+    const v = document.querySelector('.etusivupallo-video');
+    return v && v.currentTime > 0 && Number(getComputedStyle(v).opacity) > 0.99;
+  }, null, { timeout: 25000 }).catch(() => {});
+  const alkuhetki = await sivu.evaluate(() => {
+    [...document.querySelectorAll('button')]
+      .find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
+    return performance.now();
+  });
+  const otokset = new Map();
+  for (const ms of [300, 1000, 2000, 4000]) {
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.waitForFunction(
+      ([t0, kohta]) => performance.now() - t0 >= kohta, [alkuhetki, ms], { timeout: 30000 },
+    ).catch(() => {});
+    // eslint-disable-next-line no-await-in-loop
+    otokset.set(ms, await sivu.evaluate(LUE_TILA));
+    if (KUVAKANSIO) {
+      // eslint-disable-next-line no-await-in-loop
+      await sivu.screenshot({
+        path: join(KUVAKANSIO, `etusivupallo-avaus-${ms}ms.png`), scale: 'css',
+      });
+    }
+  }
+  const a = otokset.get(300);
+  const b = otokset.get(1000);
+  const c = otokset.get(2000);
+  const d = otokset.get(4000);
+  vaadi('E11b pallo ja otsikko ovat ruudulla heti (0,3 s)',
+    a.kerrosNakyy && a.videonPeitto === 1 && a.aika > 0 && a.nimiNakyy.length > 0,
+    `kerros ${a.kerrosNakyy}, video ${a.videonPeitto}, aika ${a.aika}, otsikko "${a.nimiNakyy}"`);
+  vaadi('E11c "osa II" on vielä piilossa eikä kirjoituskone ole alkanut (0,3 s)',
+    a.osanPeitto < 0.1 && a.paikkarivi === 0 && a.runko === 0,
+    `osa ${a.osanPeitto}, paikkarivi ${a.paikkarivi} merkkiä, runko ${a.runko}`);
+  vaadi('E11d "osa II" feidaa sisään reilun sekunnin päästä (0,3 s → 1,0 s → 2,0 s)',
+    b.osanPeitto > a.osanPeitto - 0.001 && c.osanPeitto > 0.9,
+    `peittävyydet ${a.osanPeitto} → ${b.osanPeitto} → ${c.osanPeitto}`);
+  vaadi('E11e kirjoituskone alkaa vasta häivytyksen jälkeen (2,0 s → 4,0 s)',
+    c.paikkarivi === 0 && d.paikkarivi > 0,
+    `paikkarivi 2,0 s: ${c.paikkarivi} merkkiä, 4,0 s: ${d.paikkarivi} merkkiä`);
+  tieto('avauksen vaiheet', [...otokset].map(([ms, t]) => `${ms}ms osa ${t.osanPeitto.toFixed(2)} `
+    + `rivi ${t.paikkarivi}`).join(' | '));
+  if (KUVAKANSIO) tieto('kaappaukset', `${KUVAKANSIO}/etusivupallo-avaus-*.png`);
   await ctx.close();
 }
 

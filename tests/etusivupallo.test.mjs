@@ -40,7 +40,8 @@ globalThis.location = { search: '' };
 
 const {
   ETUSIVUN_KAMERA, ETUSIVUN_KUVAKIERTO, ETUSIVUN_REITTI, ETUSIVUPALLO_AVAIN,
-  ETUSIVUPALLO_TIEDOSTOT, ETUSIVUPALLO_VERSIO, HAIVYTYS_S, KIERROKSEN_ASTEET,
+  ETUSIVUPALLO_TIEDOSTOT, ETUSIVUPALLO_VERSIO, HAIVYTYS_S, KERROKSEN_ILMESTYS_MS,
+  KIERROKSEN_ASTEET,
   LOPPU_PITO_S, PINON_HAIVYTYS_MS, PINON_KATTO, PINON_KULMA, PINON_LASKU_MS,
   PINON_SIIRTO, SOVITUS_TAPA, SVG_SOVITUS,
   asetaEtusivupallo, etusivupalloOletus, etusivupalloPaalla, jaljenPisteet,
@@ -136,7 +137,7 @@ test('reduced motion tunnistetaan ja jättää videon pois', () => {
   assert.equal(liikeVahennetty({ matchMedia: () => ({ matches: false }) }), false);
   assert.equal(liikeVahennetty({}), false, 'ilman matchMediaa ei kaaduta');
   const lahde = lue('../js/etusivupallo.js');
-  assert.match(lahde, /vahennettyLiike \? juliste : video/,
+  assert.match(lahde, /if \(!vahennettyLiike\) juuri\.appendChild\(video\);/,
     'reduced motionissa DOMiin ei saa syntyä videota lainkaan');
   assert.match(lahde, /if \(vahennettyLiike\) \{[\s\S]*?piirraHetki\(luettelo\.julisteAika/,
     'reduced motionissa piirretään yksi pysäytyskuva eikä käynnistetä rAF-silmukkaa');
@@ -642,4 +643,51 @@ test('ämpärin polut, saumavartija ja tiedostonimet ovat samat työkalussa ja p
     'workflow lukee ämpärin polun (ja siis version) työkalun tulosteesta');
   assert.match(tyokalu, /writeFileSync\(join\(ULOS, 'avain\.txt'\), AVAIN\)/);
   assert.ok(HAIVYTYS_S > 0 && HAIVYTYS_S < 3);
+});
+
+
+/* ============ JULISTE NÄKYY HETI, VIDEO VAIHTUU SEN TILALLE ======== */
+
+/*
+ * OMISTAJA 5.9.2026 ilta, sanatarkasti: *"tuon etusivun voisi animoida
+ * niin että pallo lähtee heti pyörimään"*. Ennen koko kerros odotti
+ * videon loadeddata-tapahtumaa `nakyy`-luokan takana — ja koska
+ * peittävyys nollattiin JUURELTA, myös videon oma poster oli piilossa:
+ * etusivu oli ensimmäiset sekunnit tyhjä pergamentti. Vartiot pitävät
+ * huolen, ettei odotus palaa hiljaa takaisin.
+ */
+test('juliste on ruudulla ennen videon latautumista', () => {
+  const lahde = lue('../js/etusivupallo.js');
+  const avaa = lahde.match(/export async function avaaEtusivupallo\([\s\S]*$/)[0];
+  // Juliste on aina DOMissa (myös liikkeen kanssa) ja videon ALLA.
+  assert.match(avaa, /juuri\.appendChild\(juliste\);\n {2}if \(!vahennettyLiike\) juuri\.appendChild\(video\);/,
+    'juliste ei ole oma kerroksensa videon alla');
+  assert.match(avaa, /juliste\.addEventListener\('load', naytaJuliste/,
+    'juliste ei tule näkyviin kuvan latatuttua');
+  // `nakyy` lisätään DOMiin liitettäessä, ENNEN videon odotusta.
+  const ennenOdotusta = avaa.split('const valmis = await new Promise')[0];
+  assert.match(ennenOdotusta, /kotelo\.insertBefore\(juuri, kotelo\.firstChild\);[\s\S]*?juuri\.classList\.add\('nakyy'\);/,
+    'kerros odottaa yhä videota ennen kuin se näkyy (poster jää piiloon)');
+  assert.match(ennenOdotusta, /avaus\?\.classList\.add\('intro-pallolla'\);/,
+    'sumuverhon kevennys jäisi odottamaan videota');
+  // Video häivytetään julisteen päälle vasta kun se soi.
+  assert.match(avaa, /await video\.play\(\)[\s\S]{0,220}?video\.classList\.add\('nakyy'\);/,
+    'video ei vaihdu julisteen tilalle pehmeästi');
+  // Kone ja viiva eivät saa seistä julisteen päällä ennen ensimmäistä
+  // piirtoa (muunnos puuttuu → kone olisi nurkassa).
+  assert.match(avaa, /svg\.style\.opacity = '0';/,
+    'SVG-kerros näkyisi ennen ensimmäistä piirtoa');
+  // Latausvirhe häivyttää kerroksen pois eikä napsauta sitä.
+  assert.match(avaa, /juuri\.classList\.remove\('nakyy'\);[\s\S]{0,220}?setTimeout\(\(\) => juuri\.remove\(\), KERROKSEN_ILMESTYS_MS/,
+    'lataamatta jäänyt video poistaisi näkyvän kerroksen välähtäen');
+});
+
+test('css häivyttää julisteen ja videon samalla luvulla kuin moduuli', () => {
+  const css = lue('../css/styles.css');
+  const lohko = css.match(/\.etusivupallo-juliste,\n\.etusivupallo-video \{[\s\S]*?\n\}/)[0];
+  assert.match(lohko, /opacity: 0;/, 'kerrokset eivät ala läpinäkyvinä');
+  assert.match(lohko, new RegExp(`transition: opacity ${KERROKSEN_ILMESTYS_MS}ms`),
+    'css:n häivytys ei ole sama luku kuin KERROKSEN_ILMESTYS_MS');
+  assert.match(css, /\.etusivupallo-juliste\.nakyy,\n\.etusivupallo-video\.nakyy \{ opacity: 1; \}/,
+    'nakyy-luokka ei tuo kerrosta esiin');
 });

@@ -73,6 +73,20 @@
  * joten koneen ruutupiste osuu videon pallolle myös silloin, kun
  * kerros on paljon leveämpi tai korkeampi kuin neliömäinen video.
  *
+ * ── JULISTE NÄKYY HETI, VIDEO VAIHTUU SEN TILALLE ──────────────────
+ *
+ * OMISTAJA 5.9.2026 ilta, sanatarkasti: *"tuon etusivun voisi animoida
+ * niin että pallo lähtee heti pyörimään"*. Kerros odotti ennen videon
+ * `loadeddata`-tapahtumaa ennen kuin se sai `nakyy`-luokan, ja koska
+ * peittävyys nollattiin JUURELTA, myös videon oma poster jäi piiloon:
+ * etusivu oli ensimmäiset sekunnit tyhjä pergamentti.
+ *
+ * Nyt juliste on OMA KERROKSENSA videon alla, kerros saa `nakyy`-luokan
+ * heti DOMiin liitettäessä, ja video häivytetään julisteen päälle vasta
+ * kun se on valmis (KERROKSEN_ILMESTYS_MS, sama luku kuin css:ssä).
+ * SVG (viiva ja kone) on aluksi läpinäkyvä, jotta julisteen päällä ei
+ * seiso konetta ennen kuin video pyörii — piirto sytyttää sen itse.
+ *
  * ── VARAPOLUT ──────────────────────────────────────────────────────
  *
  *   pallolauta     → PÄÄLLÄ ilman lippua (aalto 1D, omistaja 5.9.2026:
@@ -546,6 +560,14 @@ export function pinonAsento(nro) {
 }
 
 /* ==================== KERROS ETUSIVULLE =========================== */
+/**
+ * Kerroksen ja julisteen ilmestyminen (ms) — sama luku kuin css
+ * .etusivupallo-siirtymässä. Kerros näkyy heti (juliste), ja jos video
+ * ei latautunut, sama luku häivyttää kerroksen pois ennen poistoa:
+ * pergamentti ei välähdä paikalleen (Raamattu: KAIKKI LIIKE ANIMOIDAAN
+ * PEHMEASTI).
+ */
+export const KERROKSEN_ILMESTYS_MS = 900;
 
 /** Koneen piirros — sama runko kuin aloituslennolla (js/ui.js). */
 const KONEEN_POLKU = 'M14,0 L-6,0 M-10,0 L-14,0 M2,0 L-8,-9 L-4,-9 L6,0 L-4,9 L-8,9 z '
@@ -640,18 +662,45 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
   juliste.alt = '';
   juliste.src = `${ETUSIVUPALLO_JUURI}${ETUSIVUPALLO_TIEDOSTOT.juliste}`;
 
-  juuri.appendChild(vahennettyLiike ? juliste : video);
+  /*
+   * JULISTE POHJALLE JA NÄKYVIIN HETI, video sen päälle. Reduced
+   * motionissa videota ei synny DOMiin lainkaan (yksi pysäytyskuva).
+   */
+  juuri.appendChild(juliste);
+  if (!vahennettyLiike) juuri.appendChild(video);
+  const naytaJuliste = () => juliste.classList.add('nakyy');
+  if (juliste.complete) naytaJuliste();
+  else juliste.addEventListener('load', naytaJuliste, { once: true });
 
   const svg = svgEl('svg', {
     class: 'etusivupallo-reitti',
     viewBox: `0 0 ${mitat.leveys} ${mitat.korkeus}`,
     preserveAspectRatio: SVG_SOVITUS[SOVITUS_TAPA],
   }, juuri);
+  /*
+   * VIIVA JA KONE ODOTTAVAT PIIRTOA. Juliste näkyy heti, mutta SVG:hen
+   * ei ole vielä laskettu mitään — ilman tätä kone seisoisi kerroksen
+   * vasemmassa ylänurkassa (muunnos puuttuu) julisteen päällä. Piirto
+   * asettaa peittävyyden itse joka kehyksellä (kierroksen sauma).
+   */
+  svg.style.opacity = '0';
   const viiva = svgEl('path', { class: 'etusivupallo-viiva', d: '' }, svg);
   const kone = svgEl('g', { class: 'etusivupallo-kone' }, svg);
   svgEl('path', { class: 'etusivupallo-koneen-runko', d: KONEEN_POLKU }, kone);
 
   kotelo.insertBefore(juuri, kotelo.firstChild);
+  /*
+   * KERROS NÄKYVIIN HETI — EI ODOTETA VIDEOTA (omistaja 5.9.2026 ilta:
+   * *"pallo lähtee heti pyörimään"*). Aiemmin `nakyy` lisättiin vasta
+   * `loadeddata`-tapahtuman jälkeen, ja koska peittävyys on JUURELLA,
+   * se piilotti myös julisteen. Nyt juliste on ruudulla heti ja video
+   * häivytetään sen päälle, kun se on valmis.
+   */
+  const avaus = kotelo.closest?.('.intro') ?? null;
+  juuri.classList.add('nakyy');
+  // Sumuverho kevenee pallon päällä (css .intro-pallolla): video on jo
+  // sumennettu, eikä backdrop-filteriä kannata maksaa joka kehyksellä.
+  avaus?.classList.add('intro-pallolla');
 
   /*
    * ISOISÄN KUVAT PINOKSI TEKSTIN ALLE (omistaja 5.9.2026 klo 22.45:
@@ -667,7 +716,7 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
    * (.etusivupallo-pino): puhelimella keskellä alaosaa, työpöydällä
    * paneelin oikeassa alaneljänneksessä. Sama paikka joka loopilla.
    */
-  const paneeli = kotelo.closest?.('.intro') ?? kotelo;
+  const paneeli = avaus ?? kotelo;
   const pino = document.createElement('div');
   pino.className = 'etusivupallo-pino';
   pino.setAttribute('aria-hidden', 'true');
@@ -857,20 +906,22 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
       try { video.load(); } catch { paata(false); }
     });
     if (!valmis || purettu || !juuri.isConnected) {
-      // Video ei latautunut → etusivu jää vanhaan karttaan.
+      /*
+       * Video ei latautunut → etusivu jää vanhaan karttaan. Juliste on
+       * tässä vaiheessa voinut jo tulla näkyviin, joten kerros
+       * HÄIVYTETÄÄN pois eikä napsauteta: pergamentti ei välähdä.
+       */
       tyhjennaPino();
-      juuri.remove();
+      juuri.classList.remove('nakyy');
+      avaus?.classList.remove('intro-pallolla');
+      win.setTimeout(() => juuri.remove(), KERROKSEN_ILMESTYS_MS + 80);
       return null;
     }
     try { await video.play(); } catch { /* selain kieltäytyi: kuva jää paikalleen */ }
+    // Video julisteen päälle pehmeästi (css .etusivupallo-video.nakyy).
+    video.classList.add('nakyy');
     kehys = win.requestAnimationFrame(askel);
   }
-
-  juuri.classList.add('nakyy');
-  // Sumuverho kevenee pallon päällä (css .intro-pallolla): video on jo
-  // sumennettu, eikä backdrop-filteriä kannata maksaa joka kehyksellä.
-  const avaus = kotelo.closest?.('.intro') ?? null;
-  avaus?.classList.add('intro-pallolla');
 
   return {
     juuri,

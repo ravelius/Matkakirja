@@ -5783,6 +5783,27 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 }
 
 /*
+ * OSA II FEIDAA SISÄÄN VASTA HETKEN PÄÄSTÄ (omistajan tilaus 5.9.2026
+ * ilta, sanatarkasti: *"näytöllä näkyy otsikko, mutta "Osa II.." tulee
+ * vasta noin reilun sekunnin päästä feidaten. sitten alkaa
+ * kirjoituskone ja luenta"*).
+ *
+ * Rivi piilotetaan PELKÄLLÄ PEITTÄVYYDELLÄ eikä displaylla: sen tila
+ * julisteessa säilyy, joten mikään ei hyppää sen ilmestyessä. Viive ja
+ * häivytyksen kesto ovat js/ui.js:n vakioita (OSAN_VIIVE_MS ja
+ * OSAN_HAIVYTYS_MS); jälkimmäinen tulee tänne muuttujana
+ * (--osan-haivytys), jotta luku on olemassa vain yhdessä paikassa.
+ */
+.juliste-osa { transition: opacity var(--osan-haivytys, 900ms) ease-out; }
+.intro-juliste.osa-piilossa .juliste-osa { opacity: 0; transition: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  /* Kaikki näkyy heti ilman viiveitä (Raamattu, sääntö 4). */
+  .juliste-osa { transition: none; }
+  .intro-juliste.osa-piilossa .juliste-osa { opacity: 1; }
+}
+
+/*
  * Hiusviivakoriste: kaksi eripaksuista viivaa ja keskellä pelin oma
  * merkki ◈. Viiva on kahtena kappaleena merkin molemmin puolin, koska
  * yhtenäisen viivan katkaisu vaatisi merkin taakse umpinaisen laatan —
@@ -5994,6 +6015,23 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
      SVG rajautuu sen mukaan (tests/etusivupallo.test.mjs vartioi). */
   object-fit: cover;
 }
+
+/*
+ * JULISTE NÄKYY HETI, VIDEO VAIHTUU SEN TILALLE PEHMEÄSTI (omistaja
+ * 5.9.2026 ilta: *"pallo lähtee heti pyörimään"*). Kumpikin kerros on
+ * aluksi läpinäkyvä ja saa `nakyy`-luokan omalla hetkellään: juliste
+ * kun kuva on purettu, video kun se on ladattu ja soi. Näin etusivu ei
+ * ole sekuntiakaan tyhjä pergamentti eikä video napsahda paikalleen
+ * (js/etusivupallo.js KERROKSEN_ILMESTYS_MS on sama luku).
+ */
+.etusivupallo-juliste,
+.etusivupallo-video {
+  opacity: 0;
+  transition: opacity 900ms ease;
+}
+
+.etusivupallo-juliste.nakyy,
+.etusivupallo-video.nakyy { opacity: 1; }
 
 .etusivupallo-reitti {
   position: absolute;
