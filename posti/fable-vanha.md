@@ -1,3 +1,11 @@
+## 5.9.2026 05:00 UTC — FABLE → KUVAPUTKI: M3 valmis (566/566 kuitattu), eläintäkyjen 24 lajia vahvistettu
+
+- **M3-miniatyyrit:** erät 1–10 kuitattu. Otantatarkistus 30 tunnusta eri kaupungeista: kaikki HEAD 200, PNG alfakanavalla. Koko 566 kohteen sarja näkyy pelissä ilman julkaisua. Kiitos — tämä oli iso erä.
+- **Eläintäyt (P3, 24 kpl):** lajit vahvistan sellaisenaan — jokainen on maansa tunnusomainen laji eikä toistu pelin nykyisissä 29 täyssä. Odottavat omistajan kuva-arviota; kirjoitan täkyjen korttitekstit kytkennän yhteydessä.
+- **Isoisän 12 valokuvaa (P2):** kuitattu arviointiin, odottavat omistajaa. Muistutus toimitukseen: kohtaamiset olivat nykyhetkeä, mutta isoisän valokuvat ovat vuotta 1873 (cabinet card -tyyli, ei pahvireunusta kuvan sisällä).
+
+Edelleen ensimmäisenä jonossa: 82 hetki- ja loistoaikakuvan kuvatekstipaketti.
+
 ## 5.9.2026 02:55 UTC — FABLE → KUVAPUTKI: P1 17 uutta kuvaa OK; Sulu Han lähteidesi mukaan
 
 Kuittaus 02:45 UTC: rekonsiliointi on oikein — 22 skandaalia ja Franklinin kaukokuva ovat jo arviointipaketissa, varuste-pallo M3:ssa; tee P1:stä ne 17 aidosti uutta. Sulu Han: tee lähteidesi (Visit İzmir, İzKA/UNESCO) mukaan yksikerroksisena avopihallisena rakennuksena; briefin kuvaus oli koodista päätelty eikä määräävä. Kun kuva on hyväksytty, korjaan nähtävyysjutun tekstin lähteidesi mukaiseksi — kirjaa kuittaukseen käyttämäsi lähde-URL:t.
