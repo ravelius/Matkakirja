@@ -23392,6 +23392,80 @@ body.linssikartta-auki .linssikartta-palaa { display: inline-block; }
   .pallolauta-kohde { transition: none; }
 }
 
+/* ============ PALLOLAUTA, VAIHE 5b: AVAUSLENNON HARSO ============ */
+/*
+ * NIUKKUUSHARSO PALLOLLA (Raamattu, ALOITUSLENTO UUSIKSI;
+ * docs/moduulit/karttapallo.md luku 4 rivi "Aloituslento Lontoosta").
+ *
+ * Tasokartalla lennon harso on koko laudan kokoinen suorakaide lennon
+ * omassa kerroksessa (js/kartta.js aloituslennonNiukkuus, css
+ * .fokus-sumu-harso). Pallolla sama tehdään KALVONA KOTELON PÄÄLLE.
+ *
+ * MIKSI KALVO EIKÄ TOINEN PALLO. Suunnitelma tarjosi kaksi tapaa:
+ * puoliläpinäkyvä pallo säteellä 1,001 (oma three.js-objekti) tai kalvo
+ * kotelon päälle. Kalvo valittiin, koska se ei lisää yhtään
+ * Globe.gl-kerrosta eikä three.js-objektia — PALLOLAUDAN_KERROKSET
+ * pysyy ennallaan eikä WKWebView saa yhtään lisätyötä WebGL-puolelle —
+ * ja koska sen sisään- ja ulostulo on pelkkää peittävyyttä
+ * kompositorissa. Ei suodattimia (iOS-sääntö).
+ *
+ * VÄRI ON PERGAMENTTIA, EI VARJOA — täsmälleen sama sävy kuin
+ * tasokartan harsolla (.fokus-sumu-harso), koska kartta on paperia
+ * kummallakin laudalla ja lennon pitää näyttää samalta.
+ */
+.pallolauta-harso {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: rgba(238, 225, 196, 0.62);
+  opacity: 0;
+  transition: opacity 420ms ease;
+}
+.pallolauta-harso.esilla { opacity: 1; }
+/*
+ * MERKIT HARSON PÄÄLLÄ, KUTEN KARTALLA. Tasokartalla lennon oma kerros
+ * — reitti, päätepisteet ja kaksi nimeä — piirtyy harson PÄÄLLE ja on
+ * siksi terävä (js/kartta.js aloituslennonNiukkuus). Pallolla harso on
+ * kalvo kotelon päällä, joten CSS2D-merkit ja kone nostetaan sen yli
+ * pinontatasolla. Kotelo ei ole oma pinontakontekstinsa (position:
+ * relative ilman z-indexiä), joten merkin oma z-index riittää — ja
+ * sääntö on voimassa vain lennon ajan, jottei muu peli muuta pinoaan.
+ * Kaari on pallon pinnassa (WebGL) eikä sitä voi nostaa kalvon yli;
+ * se lukeutuu harson läpi omalla täydellä sävyllään
+ * (js/pallolauta/reitit.js REITIN_VARIT.avauslento).
+ */
+.pallo-kuori.pallolauta.pallolauta-lennossa .pallolauta-nimi,
+.pallo-kuori.pallolauta.pallolauta-lennossa .pallolauta-kone { z-index: 3; }
+/*
+ * LENNON KAKSI NIMEÄ LUETAAN HARSON LÄPI. Kirjaston oma CSS2D-kerros
+ * on pinontakonteksti, joten nimen elementtiä ei saa harson yli
+ * pinontatasolla (kone on pelin omaa DOMia ja nousee, nimi ei). Sama
+ * lopputulos saadaan typografialla: lennon ajan nimet saavat saman
+ * asun kuin tasokartan lentonimet (.aloituslento-nimi) — täysi muste ja
+ * pergamenttihalo, jotka lukeutuvat harson läpi. Halon leveys on
+ * ruutuvakio, koska pallon nimi on ruutuvakio (js/pallolauta/nimet.js).
+ */
+.pallo-kuori.pallolauta.pallolauta-lennossa .pallolauta-nimi text {
+  fill: rgba(52, 36, 22, 0.98);
+  paint-order: stroke;
+  stroke: rgba(240, 228, 200, 0.9);
+  stroke-width: 4.2;
+  stroke-linejoin: round;
+}
+/*
+ * Kohtaus väistyy saapumiskortin alla: kone ja harso häipyvät samassa
+ * tahdissa kuin tasokartan lentokerros (.lento-poistuu, 280 ms).
+ */
+.pallo-kuori.pallolauta.pallolauta-lento-poistuu .pallolauta-harso,
+.pallo-kuori.pallolauta.pallolauta-lento-poistuu .pallolauta-kone {
+  opacity: 0;
+  transition: opacity 280ms ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pallolauta-harso { transition: none; }
+}
+
 /* ==================================================================   ILMEPAKETTI (js/ilme.js; omistaja 5.9.2026, kartoituksen TOP 6 kohta 6)
    -------------------------------------------------------------------------
    Vivus piirtää reitin musteviivana, Rough.js piirtää pienen koristeen

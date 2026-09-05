@@ -116,14 +116,23 @@ export function luoNimet({
    * Latoo näkyvät nimet. `varaukset` ovat muun musteen laatikot
    * (elävät nostot), `pinot` pelimerkkien laatikot (nappula, kohteet),
    * kumpikin kotelon pikseleinä; `katto` on tämän ladonnan nimibudjetti.
+   *
+   * `vain` rajaa ehdokkaat annettuihin kaupunkeihin. Sitä käyttää
+   * AVAUSLENTO (js/pallolauta/avaus.js): omistaja 3.9.2026 sanatarkasti
+   * *"muiden kaupunkien kuin lontoon ja kohdekaupungin nimiä ei
+   * tarvita"* — sama sääntö kuin tasokartan lentotilassa
+   * (js/karttanimet.js), vain eri kerroksessa.
    */
-  const lado = ({ varaukset = [], pinot = [], katto = NIMIEN_KATTO } = {}) => {
+  const lado = ({
+    varaukset = [], pinot = [], katto = NIMIEN_KATTO, vain = null,
+  } = {}) => {
     const w = kotelo.clientWidth;
     const h = kotelo.clientHeight;
     if (!(w > 0) || !(h > 0) || ui.dead) return tulos;
     const oma = ui.game.cityOf?.()?.id ?? null;
     const ehdokkaat = [];
     for (const k of aineisto()) {
+      if (vain && !vain.has(k.c.id)) continue;
       const p = ruudulla(k.lat, k.lng, NIMEN_REUNAVARA_PX);
       if (!p) continue;
       ehdokkaat.push({

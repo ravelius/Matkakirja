@@ -77,9 +77,10 @@ import {
   NOSTOJEN_KATTO, VALON_KORKEUS, VALON_SADE, luoNostot,
 } from './nostot.js';
 import {
-  HELMEN_VARI, REITTIHELMEN_KORKEUS, REITTIHELMEN_SADE, luoReitit,
+  HELMEN_VARI, REITIN_VARIT, REITTIHELMEN_KORKEUS, REITTIHELMEN_SADE, luoReitit,
 } from './reitit.js';
 import { luoNappulanKuljettaja } from './siirto.js';
+import { luoAloituslennonKohtaus } from './avaus.js';
 
 /**
  * Sallitut Globe.gl-kerrokset pallolaudalla (vaihe 3): pisteet
@@ -234,12 +235,98 @@ export async function avaaPallolauta(ui) {
     ui, merkit, asteet: pallonAsteet, ruudulla, onPoltettu: pallonNostoOnPoltettu,
   });
 
+  /* ---- avauslennon tila (vaihe 5b) --------------------------------- */
+  /*
+   * NIUKKA PALLO AVAUSLENNON AJAKSI (Raamattu, ALOITUSLENTO UUSIKSI;
+   * docs/moduulit/karttapallo.md luku 4, rivi "Aloituslento Lontoosta").
+   *
+   * Tasokartalla lennon niukkuus on kaksi asiaa: tasainen harso koko
+   * laudan päälle ja kaksi ainoaa nimeä, Lontoo ja kohdekaupunki
+   * (js/kartta.js aloituslennonNiukkuus; omistaja 3.9.2026 sanatarkasti:
+   * *"lennon aikana kartalla näkyy Lontoo pisteenä + Lontoo-teksti ja
+   * Ateena pisteenä + Ateena-teksti. Ei muita pisteitä eikä nimiä."*).
+   * Pallolla sama sääntö tehdään pallon omilla kerroksilla: harso on
+   * kotelon päälle laskeutuva kalvo (ks. HARSO ON CSS-KALVO alla),
+   * nimikatto on kaksi ja pisteitä on vain nimien alla. Peli — nappula,
+   * kohteet, nostot, eläintäyt — jää kokonaan pois, koska peli on jo
+   * siirtänyt matkaajan perille (actionPickStart) eikä määränpää saa
+   * paljastua ennen konetta.
+   *
+   * KAAREN PIIRTÄÄ SAMA SÄÄNTÖ KUIN MUUTKIN LENNOT. Reittikerros ottaa
+   * valintansa ui.matkareittienValinnasta, mutta avauksessa peli on
+   * vaiheessa 'action' eikä valinta anna mitään; lentotila antaa siksi
+   * kerrokselle valmiin valinnan (yksi kaari, ei naapurireittejä), ja
+   * ui.lentoKaari tekee siitä elävän katkojäljen kuten doFlyssä.
+   */
+  let lento = null; // { nimet: Set, valinta } avauslennon ajan
+  let harso = null;
+
+  const aloitaLentotila = ({ lahto, kohde }) => {
+    if (!lahto || !kohde) return false;
+    lento = {
+      nimet: new Set([lahto.id, kohde.id]),
+      valinta: {
+        reittiTunnukset: [],
+        lennot: [kohde.id],
+        lentoLahto: lahto.id,
+        avain: `aloituslento:${lahto.id}>${kohde.id}`,
+        kaarenVari: REITIN_VARIT.avauslento,
+      },
+    };
+    /*
+     * HARSO ON CSS-KALVO EIKÄ TOINEN PALLO (karttapallo.md luku 4 antoi
+     * kaksi vaihtoehtoa: puoliläpinäkyvä pallo säteellä 1,001 tai kalvo
+     * kotelon päälle). Kalvo valittiin, koska se ei lisää yhtään
+     * three.js-objektia eikä Globe.gl-kerrosta — PALLOLAUDAN_KERROKSET
+     * pysyy ennallaan — ja koska sen häivytys on pelkkää peittävyyttä
+     * kompositorissa: iOS:n WKWebView ei saa toista WebGL-kontekstia
+     * eikä uutta suodatinta, ja väri on täsmälleen tasokartan harson
+     * (css .fokus-sumu-harso), joten lauta näyttää lennolla samalta
+     * kummallakin laudalla.
+     */
+    if (!harso) {
+      harso = document.createElement('div');
+      harso.className = 'pallolauta-harso';
+      harso.setAttribute('aria-hidden', 'true');
+      kuori.appendChild(harso);
+      // Peittävyys nousee siirtymällä: yksi kehys ilman luokkaa riittää.
+      void harso.getBoundingClientRect();
+    }
+    harso.classList.add('esilla');
+    // Merkit (nimet, kone) harson päälle pinontatasolla, kuten
+    // tasokartalla lennon oma kerros on harson päällä.
+    kuori.classList.add('pallolauta-lennossa');
+    merkkiAvain = null;
+    paivita();
+    return true;
+  };
+
+  /** Kohtaus väistyy: kone ja harso häipyvät saapumiskortin alla. */
+  const lennonPoistuma = () => { kuori.classList.add('pallolauta-lento-poistuu'); };
+
+  /** Lentotila pois: harso, kaari ja niukkuus katoavat, peli palaa. */
+  const paataLentotila = () => {
+    kuori.classList.remove('pallolauta-lento-poistuu', 'pallolauta-lennossa');
+    harso?.classList.remove('esilla');
+    if (!lento) return false;
+    lento = null;
+    merkkiAvain = null;
+    paivita();
+    return true;
+  };
+
   /** Laudan kaupunki (x, y, id, name) pallon kaupungista. */
   const laudanKaupunki = (k) => ui.game.board?.cityById?.get(k.id) ?? null;
-  /** Näkyykö kaupungin piste: nimetty, oma tai kehittäjän maailmanäkymä. */
-  const pisteNakyy = (k) => nimet.nimetty(k.id)
-    || ui.game.cityOf?.()?.id === k.id
-    || Boolean(ui.maailmanakyma?.());
+  /**
+   * Näkyykö kaupungin piste: nimetty, oma tai kehittäjän maailmanäkymä.
+   * Avauslennolla vain reitin kaksi päätä (PISTE VAIN NIMEN KANSSA
+   * pitää silloinkin: nimet ovat samat kaksi).
+   */
+  const pisteNakyy = (k) => (lento
+    ? lento.nimet.has(k.id)
+    : nimet.nimetty(k.id)
+      || ui.game.cityOf?.()?.id === k.id
+      || Boolean(ui.maailmanakyma?.()));
 
   /**
    * NAPAUTUS KAUPUNKIIN — sama teko kuin tasokartalla: nykyinen kaupunki
@@ -417,10 +504,20 @@ export async function avaaPallolauta(ui) {
     const keskipiste = { x: kotelo.clientWidth / 2, y: kotelo.clientHeight / 2 };
     const pelia = merkit.maara('peli');
     const nostoTulos = nostot.paivita({
-      nakyva, keskipiste, katto: Math.min(NOSTOJEN_KATTO, Math.max(0, HTML_MERKKIEN_KATTO - pelia)),
+      nakyva,
+      keskipiste,
+      // Avauslennolla ei yhtään nostoa: lento on kartan niukin hetki.
+      katto: lento ? 0 : Math.min(NOSTOJEN_KATTO, Math.max(0, HTML_MERKKIEN_KATTO - pelia)),
     });
-    const katto = Math.min(NIMIEN_KATTO, Math.max(0, HTML_MERKKIEN_KATTO - pelia - nostoTulos.maara));
-    const nimiTulos = nimet.lado({ varaukset: nostoTulos.laatikot, pinot: merkit.laatikot('peli'), katto });
+    const katto = lento
+      ? lento.nimet.size
+      : Math.min(NIMIEN_KATTO, Math.max(0, HTML_MERKKIEN_KATTO - pelia - nostoTulos.maara));
+    const nimiTulos = nimet.lado({
+      varaukset: nostoTulos.laatikot,
+      pinot: merkit.laatikot('peli'),
+      katto,
+      vain: lento?.nimet ?? null,
+    });
     paivitaPisteet();
     if (ui.fokuskohdeAuki?.ankkuri) asemoiFokuskohde(ui);
     return { nostot: nostoTulos, nimet: nimiTulos };
@@ -475,13 +572,15 @@ export async function avaaPallolauta(ui) {
     const kohta = pos && game.board ? pixelOf(game.board, pos) : null;
     // Pelaajan id on 0, joten totuusarvo ei kelpaa: null tarkoittaa lepoa.
     const liikkuu = ui.movingPlayerId != null;
-    const kohteet = kohdevalinta();
-    const valinta = ui.matkareittienValinta();
+    // Avauslennolla lauta on niukka: ei kohteita, ei nappulaa, ja
+    // reittikerros saa lennon oman valinnan (yksi kaari).
+    const kohteet = lento ? [] : kohdevalinta();
+    const valinta = lento ? lento.valinta : ui.matkareittienValinta();
     const posAvain = pos ? posKey(pos) : '';
     const avain = [
       [...kaydyt].sort().join(','), posAvain, liikkuu ? 'liikkuu' : '',
       kohteet.map((k) => k.key).join(','), valinta.avain, ui.lentoKaari?.b ?? '',
-      game.phase, ui.maailmanakyma?.() ? 'maailma' : '',
+      game.phase, ui.maailmanakyma?.() ? 'maailma' : '', lento ? 'lento' : '',
     ].join('|');
     if (avain === merkkiAvain) return;
     merkkiAvain = avain;
@@ -496,7 +595,7 @@ export async function avaaPallolauta(ui) {
       for (const k of kaupungit) k.kayty = kaydyt.has(k.id);
     }
     helmet = reitit.paivita(valinta);
-    merkit.paivita({ nappula: liikkuu ? null : kohta, kohteet });
+    merkit.paivita({ nappula: liikkuu || lento ? null : kohta, kohteet });
     paivitaPisteet();
     pyydaLadonta();
     /*
@@ -505,8 +604,13 @@ export async function avaaPallolauta(ui) {
      * osu tähän — kamera jää sinne minne saatto sen vei (omistaja
      * 1.9.2026). Jos paikka vaihtui ILMAN siirtoa (kehittäjäsiirto,
      * tallenteen lataus kesken pelin), kamera sukeltaa perään.
+     *
+     * AVAUSLENNOLLA EI KOSKAAN: peli siirtää matkaajan perille jo
+     * lennon alussa (actionPickStart), joten tämä veisi kameran
+     * kohdekaupunkiin ennen kuin kone on lähtenyt Lontoosta. Lennon
+     * kamera on lennon omassa kohtauksessa (js/pallolauta/avaus.js).
      */
-    if (!liikkuu && pos) {
+    if (!liikkuu && !lento && pos) {
       if (nappulanPaikka !== null && nappulanPaikka !== posAvain) {
         void kamera.kotiin({ kesto: PALLOKAMERAN_AJO_MS });
       }
@@ -577,6 +681,20 @@ export async function avaaPallolauta(ui) {
     nappulanKuljettaja: (player, valinnat) => luoNappulanKuljettaja({
       ui, lauta, player, ...valinnat,
     }),
+    /**
+     * Avauslennon kohtaus (ui.aloituslennonKohtaus →
+     * js/pallolauta/avaus.js): rajaus, harso, kaari ja kone. Lennon
+     * koreografia — repliikki, kertoja, ohitus, saapumiskortti — on
+     * js/ui.js:ssä yhtenä kappaleena kummallekin laudalle.
+     */
+    aloituslennonKohtaus: (tiedot) => luoAloituslennonKohtaus({ ui, lauta, ...tiedot }),
+    /** Lennon niukkuus laudalla (js/pallolauta/avaus.js kutsuu). */
+    lento: {
+      aloita: aloitaLentotila,
+      poistuma: lennonPoistuma,
+      paata: paataLentotila,
+      paalla: () => Boolean(lento),
+    },
     napautaKaupunki: (id) => napautaKaupunki(kaupunkiId.get(id)),
     napautaKohde: (key) => napautaKohde(merkit.kohteet().find((k) => k.key === key)),
     napautaNosto: (id) => napautaNosto(nostot.osumat().find((o) => o.id === id)),
@@ -594,6 +712,8 @@ export async function avaaPallolauta(ui) {
       lehtivahti?.disconnect();
       document.removeEventListener('visibilitychange', tahdistaLepo);
       kamera.pysaytaKameraAjo();
+      harso?.remove();
+      harso = null;
       eleet.pura();
       merkit.pura();
       noppaTakaisin();

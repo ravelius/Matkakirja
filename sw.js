@@ -136,6 +136,7 @@ const SHELL = [
   // dynaamisesti kuten pallo.js, mutta kuuluu SHELLiin offline-käyttöä
   // varten. Ei niputeta yhden tiedoston versioon (tests/sw.test.mjs).
   './js/pallolauta/lauta.js',
+  './js/pallolauta/avaus.js',
   './js/pallolauta/kamera.js',
   './js/pallolauta/merkit.js',
   './js/pallolauta/nimet.js',

@@ -372,6 +372,40 @@ tarvittu: PALLOLAUDAN_KERROKSET on ennallaan. Portit:
 tests/pallonimet.test.mjs, tools/tarkista-pallomerkit.mjs,
 savuke-pallolauta vartiot 12–15.
 
+**Vaiheen 5b toteutusmerkinnät (PR "Pallolauta 5b: aloituslento
+pallolla"):** (1) Avauslennon KOREOGRAFIA pysyy yhtenä kappaleena
+js/ui.js:ssä (aloituslentoSisalla) — arkki, kamera-ajo, kertoja,
+kabiiniääni, repliikki, isoisän valokuva, ohitus, saapumiskortti ja
+kuplat — ja vain kohtauksen fyysinen puoli delegoidaan laudalle
+`ui.aloituslennonKohtaus`-sopimuksella (rajaus, valmistele, odotaKartta,
+rakenna, lenna, poistuma, pura), täsmälleen samalla mallilla kuin siirron
+`nappulanKuljettaja`. Tasokartan toteutus on ui.js:n
+tasokartanLentokohtaus + piirraLentokohtaus (entinen koodi sellaisenaan),
+pallon js/pallolauta/avaus.js. (2) Kone on VAIHEEN 2 KULJETTAJA
+(`ui.nappulanKuljettaja(player, { lento: true })`) ja kaari vaiheen 2
+arcsData — uutta Globe.gl-kerrosta ei tarvittu, PALLOLAUDAN_KERROKSET on
+ennallaan. Ohitus tarvitsi kuljettajalle yhden lisän: `paata()` vie
+kesken olevan rAF-hypyn loppuun samalla tavalla kuin `finish()` vie
+selaimen animaation. (3) Rajaus on kaupunkiparin laatikko samalla
+kaavalla ja marginaalilla kuin pallon omalla lennolla (siirto.js
+`lennonRajaus`, vietynä), joten kuljettajan oma kamera-ajo jää
+nolla-ajoksi eikä kamera nytkähdä koneen lähtiessä; perillä `laske()`
+sukeltaa kohdekaupunkiin saapumiskortin alla (savuke mittaa ±5 %).
+(4) NIUKKUUSHARSO ON CSS-KALVO kotelon päällä eikä toinen pallo säteellä
+1,001: ei uutta three.js-objektia eikä toista WebGL-kontekstia iOS:lle,
+häivytys on pelkkää peittävyyttä, väri sama kuin tasokartan harsolla.
+Kaari jää kalvon alle (WebGL), joten avauslennon kaari saa oman täyden
+sinooperinsa (REITIN_VARIT.avauslento) ja lennon kaksi nimeä
+pergamenttihalon, jotta ne lukeutuvat harson läpi kuten kartalla.
+(5) Tasokartta ei herää lainkaan: `kartta.nuku()` ajetaan doPickStartissa
+ENNEN actionPickStartia (arkin takana), joten svg#board on tyhjä ja
+pyramidipyyntöjä on 0 koko avauksesta perille. (6) Arkin takainen
+"kartta on valmis" -odotus on laudan mitta: kartalla odotaPyramidi,
+pallolla tekstuurien määrän vakiintuminen (kohtaus.odotaKartta), sama
+katto ja sama ohitus. Portit: tests/pallolauta.test.mjs (vaihe 5b),
+savuke-avauslento `--lauta pallo` (P1–P7) ja `?lauta=kartta` (L1–L4)
+ennallaan.
+
 Yhteensä **13 sessiota** (vaiheet 1–6; 5b mahdollinen +1). Vaihe 1 on
 "uuden jutun ensimmäinen kierros" (roolitus.md): Fable/Fablemax tekee
 sen itse ja hioo omistajan kanssa; vasta vaiheet 2–3 voi jakaa

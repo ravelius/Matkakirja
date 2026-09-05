@@ -3731,12 +3731,31 @@ export class UI {
 
   /** Halutaanko pallolauta juuri nyt: valinta, lauta ja pelin vaihe. */
   pallolautaHalutaan() {
-    if (this.pallolautaEpaonnistui || this.katselu || this.dead) return false;
-    if (lautaValinta() !== 'pallo') return false;
+    if (!this.aloituslentoPallolla()) return false;
     // Pallo tuntee vain maailmankartan projektion (js/pallo.js PALLO_LAUTA).
     if (this.game.pack?.id !== 'maailmankartta') return false;
-    // Avausnäkymä ja aloituslento ovat tasokartalla vaiheeseen 5 asti.
-    return this.game.phase !== 'pickstart' && !this.aloituslentoKesken;
+    /*
+     * AVAUSLENTO ON NYT PALLOLLA (vaihe 5b). Tässä oli toinenkin ehto:
+     * pallo odotti, että tasokartalla lennetty avaus päättyy. Nyt pallo
+     * ottaa laudan heti kun lähtökaupunki on valittu (peli siirtyy pois
+     * pickstart-vaiheesta), ja lento lennetään pallolla — kaari, kone,
+     * harso ja kamera ovat pallon omia (js/pallolauta/avaus.js).
+     * Aloitussivu (pickstart) on yhä oma näkymänsä, eikä sitä piirretä
+     * pallolle: sen pallo on toinen erä (etusivun esirenderöity pallo).
+     */
+    return this.game.phase !== 'pickstart';
+  }
+
+  /**
+   * Onko lauta karttapallo tässä istunnossa — pelin vaiheesta
+   * riippumatta? Avauslento tarvitsee tämän ENNEN actionPickStartia
+   * (doPickStart panee tasokartan nukkumaan arkin takana), eikä
+   * pallolautaHalutaan voi vastata siihen: pelin lauta on silloin vielä
+   * aloitusnäytön oma (js/packs/maailma.js) ja vaihe 'pickstart'.
+   */
+  aloituslentoPallolla() {
+    if (this.pallolautaEpaonnistui || this.katselu || this.dead) return false;
+    return lautaValinta() === 'pallo';
   }
 
   /** Onko pallo ruudulla pelin lautana (kartta nukkuu, pallo näkyy)? */
@@ -11224,6 +11243,21 @@ export class UI {
       // silta napautuksesta tähän on kuljettu (ks. aloitaLennonAmbienssi).
       this.lennonAmbienssi = false;
       if (kartalento) this.aloituslentoKesken = true;
+      /*
+       * TASOKARTTA NUKKUMAAN JO TÄSSÄ, KUN LAUTA ON PALLO (vaihe 5b).
+       *
+       * actionPickStart vaihtaa laudan aloitusnäytöstä maailmankartalle,
+       * ja doActionin oma render piirtäisi sen: 1 650 SVG-elementtiä ja
+       * laattapyramidin koko ruudullinen — kaikki pergamenttiarkin
+       * takana, kaikki turhaan, koska lento lennetään pallolla.
+       * Omistajan ehto *"vanha kartta pysyy pois tieltä"* tarkoittaa
+       * juuri tätä hetkeä: nukutus ennen vaihdosta, jolloin svg#board
+       * jää tyhjäksi eikä pyramidiin lähde yhtäkään pyyntöä koko
+       * avauksen aikana. Pallo avataan lennon omassa kohdassa
+       * (aloituslento), ja jos kirjasto ei lataudu, varapolku herättää
+       * kartan takaisin (pallolautaVarapolku).
+       */
+      if (kartalento && this.aloituslentoPallolla()) this.kartta.nuku();
       this.doAction(() => game.actionPickStart(city.id, portti ? 0 : null));
       // Uusi avaus, uusi lupa lukea: lippu nollataan ennen kumpaakin
       // lentotapaa (ks. lueLennonRepliikki).
@@ -18696,213 +18730,41 @@ export class UI {
   }
 
   /**
-   * Aloituslento kartalla. Palauttaa true, jos lento oikeasti lennettiin
-   * — false tarkoittaa, että kutsujan on lennettävä vanha kalvolento.
+   * LENTOKOHTAUKSEN KULJETTAJA — LAUDAN OMA OSA AVAUSLENNOSTA
+   * (pallolauta vaihe 5b, docs/moduulit/karttapallo.md luku 7).
+   *
+   * Sama jako kuin siirrossa (nappulanKuljettaja): avauksen koreografia
+   * — arkki, kamera-ajo, kertoja, kabiiniääni, repliikki, ohitus,
+   * saapumiskortti ja kuplat — on YHDESSÄ paikassa
+   * (aloituslentoSisalla) kummallekin laudalle, ja vain kohtauksen
+   * fyysinen puoli delegoidaan laudalle: tasokartalla lentokerroksen
+   * SVG (harso, reitti, kone, katkojälki), pallolla kaari, kone ja
+   * harso pallon päällä (js/pallolauta/avaus.js).
+   *
+   * Kohtauksen sopimus: `rajaus` on { bbox, marginaali } laudan
+   * yksiköissä (null = tällä laudalla ei voi lentää → vanha kalvo);
+   * `valmistele()` panee laudan lennon tilaan ennen kamera-ajoa;
+   * `rakenna()` luo kohtauksen kameran asetuttua ja jättää koneen
+   * kiitoradalle; `lenna(kesto)` päästää koneen matkaan ja palauttaa
+   * { animaatiot, perilla }, jossa animaatioilla on `finish()`
+   * ohitusta varten; `poistuma()` häivyttää kohtauksen ja `pura()`
+   * poistaa sen (idempotentti — myös poikkeuksen jälkeen).
    */
-  async aloituslento(cityId, line) {
-    /*
-     * LAUTA VAIHTUU ENNEN LENTOA. Aloitusnäyttö on oma pieni lautansa
-     * (js/packs/maailma.js), ja lähtöpisteen valinta vie sen portista
-     * varsinaiselle maailmankartalle. Lento piirretään sille laudalle,
-     * joten kartta on rakennettava ensin: muuten kone lentäisi laudalla,
-     * joka katoaa alta ensimmäisessä piirrossa. render() tekee vaihdon
-     * (drawBoardFor) — se on sama kutsu, joka muutenkin tulisi
-     * doActionin perässä, tässä vain heti eikä vasta lokin jälkeen.
-     */
-    this.render();
-    const kerros = this.flightLayer;
-    const lahto = this.game.board.cityById.get(ALOITUSLENNON_LAHTO);
-    const kohde = this.game.board.cityById.get(cityId);
-    const maat = this.game.pack?.map?.cityCountry;
-    const lahtoIso = maat?.[ALOITUSLENNON_LAHTO];
-    const kohdeIso = maat?.[cityId];
-    // Ilman maatietoa rajausta ei voi laskea — silloin vanha kalvo on
-    // parempi kuin puolikas uusi (sama varovaisuus kuin sumuverholla).
-    if (!kerros || !lahto || !kohde || !lahtoIso || !kohdeIso) return false;
-    const bbox = this.aloituslennonRajaus(lahto, kohde, [lahtoIso, kohdeIso]);
-    if (!bbox) return false;
-    try {
-      await this.isoAnimaatio(() => this.aloituslentoSisalla({
-        kerros, lahto, kohde, bbox, line,
-      }));
-    } finally {
-      /*
-       * Lippu alas myös silloin, kun lento katkeaa poikkeukseen. Se
-       * pidättelee kamera-ajoja ja annosteluvirtaa, joten pystyyn
-       * jäädessään se lamauttaisi koko loppupelin — ja vika näkyisi
-       * jossain aivan muualla kuin lennossa.
-       */
-      this.aloituslentoKesken = false;
-      /*
-       * Sama varmistus nimikerroksen lentovaitiololle: poikkeukseen
-       * katkennut lento ei saa jättää karttaa nimettömäksi lopuksi
-       * ajaksi. Tavallisella polulla lippu on jo laskettu
-       * saapumissekvenssissä ja tämä on nollatyötä.
-       */
-      this.paataKarttanimienLentotila();
+  aloituslennonKohtaus({ lahto, kohde }) {
+    if (this.pallolautaPaalla()) {
+      return this.pallolauta.aloituslennonKohtaus({ lahto, kohde });
     }
-    return true;
+    return this.tasokartanLentokohtaus({ kerros: this.flightLayer, lahto, kohde });
   }
 
   /**
-   * Laskee nimikerroksen lentovaitiolon ja pyytää uuden ladonnan.
-   *
-   * Kaksi riviä yhdessä paikassa, koska ne KUULUVAT yhteen: pelkkä
-   * lipun lasku jättäisi kerroksen tyhjäksi siihen asti kunnes jokin
-   * muu sattuisi muuttamaan näkymää (rakennusavain on lennon
-   * tyhjennyksestä eikä siis muutu itsestään).
+   * Piirtää tasokartan lentokohtauksen lentokerrokseen: laivareitit,
+   * lähtömerkki, piirtyvä reitti, kone vanavesineen ja koneen liikkeen
+   * ruutusarjat. Yksi lohko, koska kaikki osat lukevat saman
+   * mittakaavan ja saman kaaren — kutsuja on tasokartanLentokohtaus.
    */
-  paataKarttanimienLentotila() {
-    if (!asetaKarttanimienLentotila(false)) return;
-    this.karttanimiAvain = null;
-    paivitaKarttanimet(this);
-  }
-
-  /**
-   * Avauslennon repliikin luenta — KERRAN JA VAIN KERRAN.
-   *
-   * Kaksi kutsujaa, yksi ääni: karttalento kutsuu tämän kohtauksesta
-   * (aloituslentoSisalla, kartta valmiina juuri ennen feidiä) ja vanha
-   * kalvolento doPickStartin ajastimesta. Lippu takaa, ettei sama
-   * äänite lähde kahdesti — playDiaryVoice aloittaa aina
-   * stopDiaryVoicella, joten toinen käynnistys katkaisisi ensimmäisen
-   * kesken lauseen.
-   *
-   * Vain pitkä kertoja lukee lentorepliikin (sama sääntö kuin
-   * avaustekstillä, js/luenta.js playIntroVoice).
-   */
-  lueLennonRepliikki() {
-    clearTimeout(this.lentoPuheAjastin);
-    if (this.lennonLuentaAlkoi || this.dead || this.reducedMotion) return;
-    this.lennonLuentaAlkoi = true;
-    if (kertojaTila() !== 'pitka') return;
-    playDiaryVoice(this, 'assets/audio/puhe-lento-alku.mp3');
-  }
-
-  /** Lennon varsinainen piirto; kääre yllä hiljentää kartan animaatiot. */
-  async aloituslentoSisalla({ kerros, lahto, kohde, bbox, line }) {
-    kerros.textContent = '';
-    /*
-     * KARTTALENTO OMISTAA KERTOJAN HETKEN. doPickStartin ajastin on
-     * vanhan kalvolennon polku; tässä se perutaan heti, ettei luenta
-     * pääse alkamaan pergamenttiarkin takana silloin kun laattojen
-     * odotus (odotaPyramidi) kestää ajastinta pidempään.
-     */
-    clearTimeout(this.lentoPuheAjastin);
-    /*
-     * kartalento kertoo CSS:lle ja rasteroinnille, että lento on kartan
-     * PÄÄLLÄ eikä kalvon takana: pelitila (nappula, kohderenkaat,
-     * laatat) piiloon lennon ajaksi, mutta kartan kuva täyteen
-     * tarkkuuteen (ks. taydennaTaide).
-     */
-    document.body.classList.add('flight-active', 'kartalento');
-    /*
-     * NIMIKERROS VAIKENEE KOKO LENNON AJAKSI (omistaja 3.9.2026:
-     * *"muiden kaupunkien kuin lontoon ja kohdekaupungin nimiä ei
-     * tarvita"*). Lippu ennen kamera-ajoa, jotta yksikään ladonta ei
-     * ehdi kirjoittaa Eurooppaa täyteen nimiä sillä välin — kerros
-     * tyhjennetään tässä ja pysyy tyhjänä, koska lipun päällä ollessa
-     * jokainen piirtokutsu tyhjentää sen (js/karttanimet.js lentotila).
-     * Lontoo ja kohdekaupunki tulevat lennon omasta kerroksesta
-     * (js/kartta.js aloituslennonNiukkuus).
-     */
-    asetaKarttanimienLentotila(true);
-    this.karttanimiAvain = null;
-    paivitaKarttanimet(this);
-    /*
-     * Fokusmoodin niukkuus voimaan ENNEN kamera-ajoa: sumuverho
-     * rakennetaan tässä, jotta ajo alkaa jo valmiiksi niukalta kartalta
-     * eikä maailma himmene kesken liikkeen.
-     *
-     * MAAKOHTAISTA POHJAA EI PIIRRETÄ LENNON AIKANA (omistajan pelitesti
-     * 25.8.2026, ks. js/fokuskartta.js). Lentonäkymä on niukka vanha
-     * kartta punaisella viivalla; lehti, sen verhonreikä, laatan alle
-     * keskitetyt nimilaput ja kohtaamispiste tulevat vasta perillä.
-     */
-    this.paivitaFokusKerros();
-
-    // --- 1) Kamera-ajo: lähtömaa ja kohdemaa samaan kuvaan -----------
-    /*
-     * pakota, koska lento omistaa kameran (ks. kartta.ajaKamera):
-     * this.aloituslentoKesken torjuu muut ajot lennon ajaksi, ja tämä on
-     * se yksi ajo, joka saa mennä läpi.
-     */
-    /*
-     * PERGAMENTTIARKIN TAKANA KAMERA EI AJA VAAN ASETTUU (omistajan
-     * tilaus 25.8.2026). Ajo alkaisi uuden laudan oletusnäkymästä eli
-     * koko maailmankartasta, ja juuri se on se tyhjä maailmankartta,
-     * joka ennen välähti — arkin takana ajolla ei olisi katsojaa,
-     * vain hinta. kesto 0 vie näkymän rajaukseen kerralla.
-     *
-     * Ilman arkkia (esim. jos verho on jo ehditty poistaa) ajo menee
-     * kuten ennenkin.
-     */
-    await this.kartta.ajaKamera(
-      { bbox, marginaali: ALOITUSLENNON_MARGINAALI },
-      { kesto: this.aloitusverho ? 0 : ALOITUSLENNON_AJO_MS, pakota: true },
-    );
-    if (this.dead) return;
-    /*
-     * ARKIN TAKANA ODOTETAAN VAIN KARKEA KOKO LAUDAN KUVA.
-     *
-     * Pohjataso (rasteroiTaide → rasteroiPohja) on koko laudan
-     * bittikartta, ja se on avauksen ratkaiseva hetki kahdesta syystä.
-     * Se on ensimmäinen kuva, joka näyttää kartalta ilman vektoreita —
-     * ja ennen kaikkea se PÄÄSTÄÄ VEKTORIT POIS (poistaVektorit).
-     * Niin kauan kuin laudan 7000 vektorielementtiä ovat elävässä
-     * puussa, jokainen lähikuvan kehys maksaa Chromiumissa mitatusti
-     * 1,6 sekuntia: kone nytkähtelisi, kirjoituskone naputtaisi sanan
-     * puolentoista sekunnin välein eikä ajastin osuisi mihinkään.
-     *
-     * ODOTUS ON LYHYT JA MITATTU KELLOSTA. Vanha versio odotti koko
-     * ruutusarjan valmistumista silmukalla, joka laski ajastimen
-     * laukeamisia — ja koska juuri ne olivat jumissa, sen luvattu
-     * kolmen sekunnin katto venyi kuudeksitoista. Tässä katto luetaan
-     * performance.now():sta, joten se pitää riippumatta siitä, mitä
-     * pääsäie tekee. Kattoon osuessaan lento lähtee joka tapauksessa.
-     *
-     * TARKAT RUUDUT EIVÄT KUULU TÄHÄN (omistajan tilaus 25.8.2026:
-     * *"karkea kuva SAA tarkentua koneen lennon alla; älä odota täyttä
-     * rasterointia verhon takana"*). Ne piirretään perillä — tai
-     * jäävät piirtämättä, jos kohdemaan lehti peittää laudan.
-     */
-    /*
-     * ODOTUS PÄTEE MYÖS NYT, KUN LAUTA ON ATLAKSEN ALLA (25.8.2026,
-     * ilta). Pohjataso rakennetaan yhä kerran, koska juuri se päästää
-     * vektorit pois — ja piilotettukin vektorikerros maksaa Chromiumissa
-     * (ks. rasteroiTaide). Odotus on siis edelleen se hetki, jonka
-     * jälkeen kone lentää kevyen puun päällä.
-     */
-    const pohjanTakaraja = performance.now() + ALOITUSLENNON_POHJA_ODOTUS_MS;
-    while (!this.dead && !this.taidePohja && this.pohjaTulossa
-      && performance.now() < pohjanTakaraja) {
-      // eslint-disable-next-line no-await-in-loop
-      await this.wait(60);
-    }
-    if (this.dead) return;
-    /*
-     * KARTTA TARKENTUU KONEEN LENNON ALLA — EI ARKIN TAKANA.
-     *
-     * Tässä oli odotus, joka piti pergamenttiarkkia ruudulla siihen
-     * asti kunnes koko ruutusarja oli rasteroitu (30 x 100 ms).
-     * Ylärajan piti olla kolme sekuntia, mutta se ei pitänyt: silmukan
-     * odotukset ovat ajastimia, ja rasterointi jumittaa pääsäikeen
-     * satojen millisekuntien erissä, joten yksi kierros venyi
-     * mitatusti puoleentoista sekuntiin. Klikkauksesta koneen lähtöön
-     * kului Chromiumissa 24 sekuntia, ja siitä 16 tämän silmukan
-     * takana — pergamentti ruudulla, ei mitään tapahtumassa.
-     *
-     * Omistajan tilaus 25.8.2026: *"kartta tulisi nopeasti feidaten
-     * ilman odottelua ja sen jälkeen tulisi ääni ja lentokone alkaisi
-     * liikkua"* — ja *"karkea kuva saa tarkentua koneen lennon alla"*.
-     * Arkki väistyy siis heti kun kamera on rajauksessa ja kone on
-     * kiitoradalla (ks. piilotaAloitusverho alempana), ja ruutusarja
-     * jatkuu lennon alla. Kartta ei ole silloin tyhjä: laudan vektorit
-     * ovat paikallaan täydessä tarkkuudessaan ja pohjataso niiden
-     * alla — tarkentuu vain se, mikä on jo oikein.
-     */
-
-    // --- 2) Reitti ja kone laudan koordinaateissa --------------------
+  piirraLentokohtaus({ kerros, lahto, kohde }) {
+    // --- Reitti ja kone laudan koordinaateissa -----------------------
     /*
      * Mittakaava luetaan kerran: kamera on nyt paikallaan koko lennon
      * ajan, joten viivan paksuus ja koneen koko voidaan muuntaa ruudun
@@ -19007,6 +18869,328 @@ export class UI {
         kulma: (Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180) / Math.PI,
       };
     };
+    // --- Ruutusarjat: lento on selaimen oma animaatio ----------------
+    const RUUTUJA = 120;
+    const koneRuudut = [];
+    const reittiRuudut = [];
+    for (let i = 0; i <= RUUTUJA; i++) {
+      const t = i / RUUTUJA;
+      // Pehmeä kiihdytys ja jarrutus, jottei kone nykäise liikkeelle.
+      const e = t < 0.5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2;
+      const p = kohta(e);
+      koneRuudut.push({
+        offset: t,
+        transform: `translate(${p.x.toFixed(2)}px, ${p.y.toFixed(2)}px) rotate(${p.kulma.toFixed(2)}deg)`,
+      });
+      // Tuore vetäisy kulkee koneen perässä: kuvion ainoa viiva alkaa
+      // aina kärjen verran ennen konetta ja päättyy koneeseen.
+      reittiRuudut.push({ offset: t, strokeDashoffset: karki - kokoPituus * e });
+    }
+    kone.style.transform = koneRuudut[0].transform;
+    return {
+      kone, keinu, reitti, kohta, koneRuudut, reittiRuudut, kokoPituus, skaala,
+    };
+  }
+
+  /**
+   * Tasokartan lentokohtaus: sama koodi kuin ennen vaihetta 5b,
+   * sopimuksen muodossa. Palauttaa null (tai rajauksen null), jos
+   * lentokerros tai maatieto puuttuu — silloin kutsuja lentää vanhan
+   * kalvon, kuten ennenkin.
+   */
+  tasokartanLentokohtaus({ kerros, lahto, kohde }) {
+    const maat = this.game.pack?.map?.cityCountry;
+    const lahtoIso = maat?.[lahto?.id];
+    const kohdeIso = maat?.[kohde?.id];
+    // Ilman maatietoa rajausta ei voi laskea — silloin vanha kalvo on
+    // parempi kuin puolikas uusi (sama varovaisuus kuin sumuverholla).
+    if (!kerros || !lahto || !kohde || !lahtoIso || !kohdeIso) return null;
+    const bbox = this.aloituslennonRajaus(lahto, kohde, [lahtoIso, kohdeIso]);
+    if (!bbox) return null;
+    // Kohtauksen osat syntyvät vasta rakenna()-kutsussa: mittakaava on
+    // luettava kameran asetuttua (ks. alla).
+    let kone = null;
+    let keinu = null;
+    let reitti = null;
+    let kohta = null;
+    let koneRuudut = [];
+    let reittiRuudut = [];
+    let kokoPituus = 0;
+    let skaala = 1;
+    return {
+      rajaus: { bbox, marginaali: ALOITUSLENNON_MARGINAALI },
+      valmistele: () => {
+        kerros.textContent = '';
+        /*
+         * NIMIKERROS VAIKENEE KOKO LENNON AJAKSI (omistaja 3.9.2026:
+         * *"muiden kaupunkien kuin lontoon ja kohdekaupungin nimiä ei
+         * tarvita"*). Lippu ennen kamera-ajoa, jotta yksikään ladonta ei
+         * ehdi kirjoittaa Eurooppaa täyteen nimiä sillä välin — kerros
+         * tyhjennetään tässä ja pysyy tyhjänä, koska lipun päällä ollessa
+         * jokainen piirtokutsu tyhjentää sen (js/karttanimet.js lentotila).
+         * Lontoo ja kohdekaupunki tulevat lennon omasta kerroksesta
+         * (js/kartta.js aloituslennonNiukkuus).
+         */
+        asetaKarttanimienLentotila(true);
+        this.karttanimiAvain = null;
+        paivitaKarttanimet(this);
+        /*
+         * Fokusmoodin niukkuus voimaan ENNEN kamera-ajoa: sumuverho
+         * rakennetaan tässä, jotta ajo alkaa jo valmiiksi niukalta kartalta
+         * eikä maailma himmene kesken liikkeen.
+         *
+         * MAAKOHTAISTA POHJAA EI PIIRRETÄ LENNON AIKANA (omistajan pelitesti
+         * 25.8.2026, ks. js/fokuskartta.js). Lentonäkymä on niukka vanha
+         * kartta punaisella viivalla; lehti, sen verhonreikä, laatan alle
+         * keskitetyt nimilaput ja kohtaamispiste tulevat vasta perillä.
+         */
+        this.paivitaFokusKerros();
+      },
+      rakenna: () => {
+        const osat = this.piirraLentokohtaus({ kerros, lahto, kohde });
+        ({
+          kone, keinu, reitti, kohta, koneRuudut, reittiRuudut, kokoPituus, skaala,
+        } = osat);
+      },
+      lenna: (lennonKesto) => {
+        const animaatiot = [];
+        const koneAnim = kone.animate(koneRuudut, {
+          duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
+        });
+        const reittiAnim = reitti.animate(reittiRuudut, {
+          duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
+        });
+        animaatiot.push(koneAnim, reittiAnim);
+        // Katkojälki ja koneen huojunta samaan tahtiin: ne ovat kohtauksen
+        // koristeita, mutta ohituksen on vietävä nekin loppuun, ettei
+        // ruudulle jää puolikasta reittimerkintää.
+        animaatiot.push(...this.lennonKatkojalki({
+          kerros, kohta, kokoPituus, mitta: 1 / skaala, kesto: lennonKesto, viive: 180,
+        }));
+        animaatiot.push(this.lennonHuojunta(keinu, {
+          mitta: 1 / skaala, kesto: lennonKesto, viive: 180,
+        }));
+        return {
+          animaatiot,
+          perilla: Promise.all([koneAnim.finished, reittiAnim.finished]),
+        };
+      },
+      poistuma: () => kerros.classList.add('lento-poistuu'),
+      pura: () => {
+        kerros.textContent = '';
+        kerros.classList.remove('lento-poistuu');
+      },
+    };
+  }
+
+  /**
+   * Aloituslento. Palauttaa true, jos lento oikeasti lennettiin
+   * — false tarkoittaa, että kutsujan on lennettävä vanha kalvolento.
+   */
+  async aloituslento(cityId, line) {
+    /*
+     * LAUTA VAIHTUU ENNEN LENTOA. Aloitusnäyttö on oma pieni lautansa
+     * (js/packs/maailma.js), ja lähtöpisteen valinta vie sen portista
+     * varsinaiselle maailmankartalle. Lento piirretään sille laudalle,
+     * joten kartta on rakennettava ensin: muuten kone lentäisi laudalla,
+     * joka katoaa alta ensimmäisessä piirrossa. render() tekee vaihdon
+     * (drawBoardFor) — se on sama kutsu, joka muutenkin tulisi
+     * doActionin perässä, tässä vain heti eikä vasta lokin jälkeen.
+     *
+     * PALLOLAUDALLA LAUTA ON KARTTAPALLO (vaihe 5b), eikä sitä piirretä
+     * vaan avataan: kirjasto ladataan tässä, arkin takana, ja lento
+     * lennetään pallolla. Tasokartta nukkuu jo (doPickStart), joten
+     * render ei piirrä sitä eikä pyramidiin lähde pyyntöjä. Jos pallo ei
+     * avaudu, varapolku herättää kartan ja lento lennetään kartalla.
+     */
+    if (this.pallolautaHalutaan() && !this.pallolauta) await this.avaaPallolauta();
+    if (this.dead) return false;
+    this.render();
+    const lahto = this.game.board.cityById.get(ALOITUSLENNON_LAHTO);
+    const kohde = this.game.board.cityById.get(cityId);
+    if (!lahto || !kohde) return false;
+    const kohtaus = this.aloituslennonKohtaus({ lahto, kohde });
+    if (!kohtaus?.rajaus) return false;
+    try {
+      await this.isoAnimaatio(() => this.aloituslentoSisalla({
+        kohtaus, kohde, rajaus: kohtaus.rajaus, line,
+      }));
+    } finally {
+      /*
+       * Kohtaus pois myös silloin, kun lento katkeaa poikkeukseen:
+       * pallolla se laskee koneen ja päättää lennon niukkuuden, joten
+       * ilman tätä lauta jäisi harson alle ilman nappulaa.
+       */
+      kohtaus.pura();
+      /*
+       * Lippu alas myös silloin, kun lento katkeaa poikkeukseen. Se
+       * pidättelee kamera-ajoja ja annosteluvirtaa, joten pystyyn
+       * jäädessään se lamauttaisi koko loppupelin — ja vika näkyisi
+       * jossain aivan muualla kuin lennossa.
+       */
+      this.aloituslentoKesken = false;
+      /*
+       * Sama varmistus nimikerroksen lentovaitiololle: poikkeukseen
+       * katkennut lento ei saa jättää karttaa nimettömäksi lopuksi
+       * ajaksi. Tavallisella polulla lippu on jo laskettu
+       * saapumissekvenssissä ja tämä on nollatyötä.
+       */
+      this.paataKarttanimienLentotila();
+    }
+    return true;
+  }
+
+  /**
+   * Laskee nimikerroksen lentovaitiolon ja pyytää uuden ladonnan.
+   *
+   * Kaksi riviä yhdessä paikassa, koska ne KUULUVAT yhteen: pelkkä
+   * lipun lasku jättäisi kerroksen tyhjäksi siihen asti kunnes jokin
+   * muu sattuisi muuttamaan näkymää (rakennusavain on lennon
+   * tyhjennyksestä eikä siis muutu itsestään).
+   */
+  paataKarttanimienLentotila() {
+    if (!asetaKarttanimienLentotila(false)) return;
+    this.karttanimiAvain = null;
+    paivitaKarttanimet(this);
+  }
+
+  /**
+   * Avauslennon repliikin luenta — KERRAN JA VAIN KERRAN.
+   *
+   * Kaksi kutsujaa, yksi ääni: karttalento kutsuu tämän kohtauksesta
+   * (aloituslentoSisalla, kartta valmiina juuri ennen feidiä) ja vanha
+   * kalvolento doPickStartin ajastimesta. Lippu takaa, ettei sama
+   * äänite lähde kahdesti — playDiaryVoice aloittaa aina
+   * stopDiaryVoicella, joten toinen käynnistys katkaisisi ensimmäisen
+   * kesken lauseen.
+   *
+   * Vain pitkä kertoja lukee lentorepliikin (sama sääntö kuin
+   * avaustekstillä, js/luenta.js playIntroVoice).
+   */
+  lueLennonRepliikki() {
+    clearTimeout(this.lentoPuheAjastin);
+    if (this.lennonLuentaAlkoi || this.dead || this.reducedMotion) return;
+    this.lennonLuentaAlkoi = true;
+    if (kertojaTila() !== 'pitka') return;
+    playDiaryVoice(this, 'assets/audio/puhe-lento-alku.mp3');
+  }
+
+  /** Lennon varsinainen piirto; kääre yllä hiljentää kartan animaatiot. */
+  async aloituslentoSisalla({ kohtaus, kohde, rajaus, line }) {
+    /*
+     * KARTTALENTO OMISTAA KERTOJAN HETKEN. doPickStartin ajastin on
+     * vanhan kalvolennon polku; tässä se perutaan heti, ettei luenta
+     * pääse alkamaan pergamenttiarkin takana silloin kun laattojen
+     * odotus (odotaPyramidi) kestää ajastinta pidempään.
+     */
+    clearTimeout(this.lentoPuheAjastin);
+    /*
+     * kartalento kertoo CSS:lle ja rasteroinnille, että lento on kartan
+     * PÄÄLLÄ eikä kalvon takana: pelitila (nappula, kohderenkaat,
+     * laatat) piiloon lennon ajaksi, mutta kartan kuva täyteen
+     * tarkkuuteen (ks. taydennaTaide).
+     */
+    document.body.classList.add('flight-active', 'kartalento');
+    /*
+     * LAUTA LENNON TILAAN ENNEN KAMERA-AJOA (kohtaus.valmistele): niukka
+     * kartta, kaksi nimeä, tyhjä lentokerros — tasokartalla nimikerroksen
+     * lentotila ja fokusmoodin sumuverho, pallolla harso ja lennon kaari.
+     * Ennen ajoa, jotta kuva on jo valmiiksi niukka eikä maailma himmene
+     * kesken liikkeen — ja jottei yksikään ladonta ehdi kirjoittaa
+     * Eurooppaa täyteen nimiä sillä välin.
+     */
+    kohtaus.valmistele();
+
+    // --- 1) Kamera-ajo: lähtömaa ja kohdemaa samaan kuvaan -----------
+    /*
+     * pakota, koska lento omistaa kameran (ks. kartta.ajaKamera):
+     * this.aloituslentoKesken torjuu muut ajot lennon ajaksi, ja tämä on
+     * se yksi ajo, joka saa mennä läpi.
+     */
+    /*
+     * PERGAMENTTIARKIN TAKANA KAMERA EI AJA VAAN ASETTUU (omistajan
+     * tilaus 25.8.2026). Ajo alkaisi uuden laudan oletusnäkymästä eli
+     * koko maailmankartasta, ja juuri se on se tyhjä maailmankartta,
+     * joka ennen välähti — arkin takana ajolla ei olisi katsojaa,
+     * vain hinta. kesto 0 vie näkymän rajaukseen kerralla.
+     *
+     * Ilman arkkia (esim. jos verho on jo ehditty poistaa) ajo menee
+     * kuten ennenkin.
+     */
+    await this.kamera().ajaKamera(
+      rajaus,
+      { kesto: this.aloitusverho ? 0 : ALOITUSLENNON_AJO_MS, pakota: true },
+    );
+    if (this.dead) return;
+    /*
+     * ARKIN TAKANA ODOTETAAN VAIN KARKEA KOKO LAUDAN KUVA.
+     *
+     * Pohjataso (rasteroiTaide → rasteroiPohja) on koko laudan
+     * bittikartta, ja se on avauksen ratkaiseva hetki kahdesta syystä.
+     * Se on ensimmäinen kuva, joka näyttää kartalta ilman vektoreita —
+     * ja ennen kaikkea se PÄÄSTÄÄ VEKTORIT POIS (poistaVektorit).
+     * Niin kauan kuin laudan 7000 vektorielementtiä ovat elävässä
+     * puussa, jokainen lähikuvan kehys maksaa Chromiumissa mitatusti
+     * 1,6 sekuntia: kone nytkähtelisi, kirjoituskone naputtaisi sanan
+     * puolentoista sekunnin välein eikä ajastin osuisi mihinkään.
+     *
+     * ODOTUS ON LYHYT JA MITATTU KELLOSTA. Vanha versio odotti koko
+     * ruutusarjan valmistumista silmukalla, joka laski ajastimen
+     * laukeamisia — ja koska juuri ne olivat jumissa, sen luvattu
+     * kolmen sekunnin katto venyi kuudeksitoista. Tässä katto luetaan
+     * performance.now():sta, joten se pitää riippumatta siitä, mitä
+     * pääsäie tekee. Kattoon osuessaan lento lähtee joka tapauksessa.
+     *
+     * TARKAT RUUDUT EIVÄT KUULU TÄHÄN (omistajan tilaus 25.8.2026:
+     * *"karkea kuva SAA tarkentua koneen lennon alla; älä odota täyttä
+     * rasterointia verhon takana"*). Ne piirretään perillä — tai
+     * jäävät piirtämättä, jos kohdemaan lehti peittää laudan.
+     */
+    /*
+     * ODOTUS PÄTEE MYÖS NYT, KUN LAUTA ON ATLAKSEN ALLA (25.8.2026,
+     * ilta). Pohjataso rakennetaan yhä kerran, koska juuri se päästää
+     * vektorit pois — ja piilotettukin vektorikerros maksaa Chromiumissa
+     * (ks. rasteroiTaide). Odotus on siis edelleen se hetki, jonka
+     * jälkeen kone lentää kevyen puun päällä.
+     */
+    const pohjanTakaraja = performance.now() + ALOITUSLENNON_POHJA_ODOTUS_MS;
+    while (!this.dead && !this.taidePohja && this.pohjaTulossa
+      && performance.now() < pohjanTakaraja) {
+      // eslint-disable-next-line no-await-in-loop
+      await this.wait(60);
+    }
+    if (this.dead) return;
+    /*
+     * KARTTA TARKENTUU KONEEN LENNON ALLA — EI ARKIN TAKANA.
+     *
+     * Tässä oli odotus, joka piti pergamenttiarkkia ruudulla siihen
+     * asti kunnes koko ruutusarja oli rasteroitu (30 x 100 ms).
+     * Ylärajan piti olla kolme sekuntia, mutta se ei pitänyt: silmukan
+     * odotukset ovat ajastimia, ja rasterointi jumittaa pääsäikeen
+     * satojen millisekuntien erissä, joten yksi kierros venyi
+     * mitatusti puoleentoista sekuntiin. Klikkauksesta koneen lähtöön
+     * kului Chromiumissa 24 sekuntia, ja siitä 16 tämän silmukan
+     * takana — pergamentti ruudulla, ei mitään tapahtumassa.
+     *
+     * Omistajan tilaus 25.8.2026: *"kartta tulisi nopeasti feidaten
+     * ilman odottelua ja sen jälkeen tulisi ääni ja lentokone alkaisi
+     * liikkua"* — ja *"karkea kuva saa tarkentua koneen lennon alla"*.
+     * Arkki väistyy siis heti kun kamera on rajauksessa ja kone on
+     * kiitoradalla (ks. piilotaAloitusverho alempana), ja ruutusarja
+     * jatkuu lennon alla. Kartta ei ole silloin tyhjä: laudan vektorit
+     * ovat paikallaan täydessä tarkkuudessaan ja pohjataso niiden
+     * alla — tarkentuu vain se, mikä on jo oikein.
+     */
+
+    // --- 2) Reitti ja kone: laudan oma kohtaus -----------------------
+    /*
+     * Kamera on nyt paikallaan, ja vasta siitä kuvasta kohtaus voidaan
+     * rakentaa: tasokartalla reitin paksuus ja koneen koko luetaan
+     * mittakaavasta (kohtaus lukee sen kerran), pallolla nimet ladotaan
+     * tähän näkymään ja kone nostetaan Lontoon ylle. Kumpikin lauta
+     * jättää koneen kiitoradalle — lento alkaa vasta arkin väistyttyä.
+     */
+    kohtaus.rakenna();
 
     // --- 3) Repliikki, ohitus ja kohtauksen kerrokset -----------------
     /*
@@ -19120,24 +19304,6 @@ export class UI {
     const nuolenAjastin = setTimeout(() => nuoli.classList.add('nakyy'), LENNON_NUOLI_MS);
     nuoli.addEventListener('click', ohitaLento);
 
-    // --- 4) Lento selaimen omina animaatioina ------------------------
-    const RUUTUJA = 120;
-    const koneRuudut = [];
-    const reittiRuudut = [];
-    for (let i = 0; i <= RUUTUJA; i++) {
-      const t = i / RUUTUJA;
-      // Pehmeä kiihdytys ja jarrutus, jottei kone nykäise liikkeelle.
-      const e = t < 0.5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2;
-      const p = kohta(e);
-      koneRuudut.push({
-        offset: t,
-        transform: `translate(${p.x.toFixed(2)}px, ${p.y.toFixed(2)}px) rotate(${p.kulma.toFixed(2)}deg)`,
-      });
-      // Tuore vetäisy kulkee koneen perässä: kuvion ainoa viiva alkaa
-      // aina kärjen verran ennen konetta ja päättyy koneeseen.
-      reittiRuudut.push({ offset: t, strokeDashoffset: karki - kokoPituus * e });
-    }
-    kone.style.transform = koneRuudut[0].transform;
     /*
      * ══════════════════════════════════════════════════════════════
      * KARTTA VALMIIKSI ENNEN FEIDIÄ (omistajan tilaus 3.9.2026)
@@ -19169,10 +19335,24 @@ export class UI {
      * välittömästi"* (26.8.2026). Kartta saa täydentyä loppuun
      * taustalla; ohittanut pelaaja ei jää sitä odottamaan.
      */
-    await odotaPyramidi(this, {
-      katto: ALOITUSLENNON_LAATTA_ODOTUS_MS,
-      keskeytys: () => ohitettu,
-    });
+    /*
+     * ODOTUS ON LAUDAN MITTA. Tasokartalla se on laattapyramidin oma
+     * (odotaPyramidi tuntee kesken olevat laatat); pallolla pyramidia ei
+     * ole eikä se koskaan valmistuisi, joten pallon kohtaus tuo oman
+     * odotuksensa (kohtaus.odotaKartta, js/pallolauta/avaus.js). Sama
+     * katto ja sama ohitus kummallakin.
+     */
+    if (kohtaus.odotaKartta) {
+      await kohtaus.odotaKartta({
+        katto: ALOITUSLENNON_LAATTA_ODOTUS_MS,
+        keskeytys: () => ohitettu,
+      });
+    } else {
+      await odotaPyramidi(this, {
+        katto: ALOITUSLENNON_LAATTA_ODOTUS_MS,
+        keskeytys: () => ohitettu,
+      });
+    }
     if (this.dead) return;
     /*
      * ══════════════════════════════════════════════════════════════
@@ -19244,23 +19424,15 @@ export class UI {
      */
     if (!ohitettu) {
       await new Promise((valmis) => requestAnimationFrame(() => requestAnimationFrame(valmis)));
-      const koneAnim = kone.animate(koneRuudut, {
-        duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
-      });
-      const reittiAnim = reitti.animate(reittiRuudut, {
-        duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
-      });
-      lentoAnimaatiot.push(koneAnim, reittiAnim);
-      // Katkojälki ja koneen huojunta samaan tahtiin: ne ovat kohtauksen
-      // koristeita, mutta ohituksen on vietävä nekin loppuun, ettei
-      // ruudulle jää puolikasta reittimerkintää.
-      lentoAnimaatiot.push(...this.lennonKatkojalki({
-        kerros, kohta, kokoPituus, mitta: 1 / skaala, kesto: lennonKesto, viive: 180,
-      }));
-      lentoAnimaatiot.push(this.lennonHuojunta(keinu, {
-        mitta: 1 / skaala, kesto: lennonKesto, viive: 180,
-      }));
-      await Promise.all([koneAnim.finished, reittiAnim.finished]).catch(() => {
+      /*
+       * KONE MATKAAN LAUDAN OMALLA TAVALLA, OHITUS SAMALLA SANALLA.
+       * Tasokartalla lento on selaimen omia animaatioita (kone, viiva,
+       * katkojälki, huojunta), pallolla rAF-silmukka kaaren päällä —
+       * kummankin kahva on `finish()`, jonka ohitaLento kutsuu.
+       */
+      const lento = kohtaus.lenna(lennonKesto);
+      lentoAnimaatiot.push(...lento.animaatiot);
+      await lento.perilla.catch(() => {
         /* peruttu animaatio (esim. uusi peli) ei kaada lentoa */
       });
     }
@@ -19310,11 +19482,16 @@ export class UI {
     this.paataKarttanimienLentotila();
     overlay.classList.add('flight-leaving');
     this.poistaLennonPilvet(pilvet);
-    kerros.classList.add('lento-poistuu');
+    kohtaus.poistuma();
     await this.wait(280);
     overlay.remove();
-    kerros.textContent = '';
-    kerros.classList.remove('lento-poistuu');
+    /*
+     * KOHTAUS PURETAAN ARKIN ALLA. Tasokartalla se on lentokerroksen
+     * tyhjennys, pallolla koneen lasku, kaaren ja harson poisto sekä
+     * kameran sukellus kohdekaupunkiin — sama hetki, sama peitto, ja
+     * kartta paljastuu perillä valmiissa näkymässään.
+     */
+    kohtaus.pura();
     this.hideFlightLine();
     // Välikortti kirjoittuu ja häipyy arkilla; kartta rakennetaan
     // vasta sen jälkeen, arkin takana.
