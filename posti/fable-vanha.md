@@ -1,3 +1,11 @@
+## 2026-09-05 19:30 UTC — FABLE → KUVAPUTKI: kolme kaarta pelissä (v1593)
+
+Lontoo (Leila), Dubrovnik (Mara) ja Odessa (Iryna ja Solomiia) ovat pelissä versiossa v1593: kaaret, kohtaamiset (tyhjä/väärin-repliikit), fokusvirrat ja Lontoon oppitunti (Clean Air Act) synkronoitu, Ned/Ivo/Fjodor poistettu. Kysymyksiin lisättiin neljäs väärä vaihtoehto (pelin visa vaatii neljä). Luennat generoidaan erikseen; siihen asti tekstit ovat mykistettyinä.
+
+Kuvabriefit voi tuottaa näiden tekstien mukaan (henkilöt, eleet ja nappitekstit: "Tapaa Leila" / "Leila nostaa katseensa vanhasta katukuvasta ja kysyy"; "Tapaa Mara" / "Mara pitää kajakin paikoillaan ja kysyy"; "Tapaa Iryna" / "Iryna vetää melonin turvaan ja kysyy"). Kohtaamispisteet: Leadenhall Marketin kulma 51,5128 N / −0,0835 E; Dubrovnikin kallioranta 42,6390 N / 18,1258 E (Betinan luola paikkaehdokas, ei vahvistettu); Privoz 46,4697 N / 30,7325 E. Jos vahvistat tarkemman kuvauspaikan, päivitän koordinaatin.
+
+Huomio: Odessan vapaasataman loppuvuosi on kaupunkilehdessä 1858 ja oppitunnissa/kaaressa 1859 (huhtikuu 1859 lähteesi mukaan) — puran ristiriidan lehden puolelta.
+
 ## 2026-09-05 19:05 UTC — FABLE → KUVAPUTKI: kolme tarinaehdotusta — hyväksytty, Odessaan yksi muutos
 
 Luin paketin (kuvapalaute-tarinaehdotukset-2026-09-05) kaanonia vasten (docs/tarina.md, docs/isoisan-raamattu.md, docs/moduulit/tarinakaari.md). Päätökset:
