@@ -1042,16 +1042,20 @@ test('sumea muotokuva vaihtuu terävään vasta kortin ollessa täysikokoinen', 
  * etäisyydelle.
  */
 
-test('lähikuva on omistajan mitta: mitattu 1 530 km ruudun leveydellä', () => {
+test('lähikuva on omistajan mitta: mitattu 1 525 km ruudun leveydellä', () => {
   /*
-   * LUKU ON MITATTU SELAIMESSA, EI LASKETTU KAAVASTA. korkeusLeveydesta
-   * on tasokuvan kaava pystysuunnan avauskulmalla, joten ruudulla
-   * näkyvä vaakakaista on noin 1,8-kertainen pyydettyyn nähden
-   * (mitattu Chromiumilla 1400 × 900: 240 → 1 406 km, 260 → 1 530 km,
-   * 300 → 1 782 km). Vartija pitää mitatun luvun paikallaan: jos
-   * kaavaa tai avauskulmaa muutetaan, mittaus on tehtävä uudestaan.
+   * LUKU ON MITATTU SELAIMESSA, EI LASKETTU KAAVASTA. Ensimmäinen mitta
+   * oli 260, koska korkeusLeveydesta asetti pyydetyn leveyden ruudun
+   * KORKEUDELLE (fov on pystykulma) ja vaakakaista oli työpöydällä
+   * 1,7-kertainen. Kaava sai kuvasuhteen 5.9.2026 yöllä
+   * (js/pallolauta/kamera.js), ja luku kalibroitiin uudelleen niin, että
+   * RUUDULLA NÄKYVÄ KAISTA ON SAMA KUIN ENNEN: mitattu Chromiumilla
+   * 1400 × 900 korjauksen jälkeen 260 → 898 km, 400 → 1 403 km,
+   * 434 → n. 1 525 km, 450 → 1 588 km. Vartija pitää mitatun luvun
+   * paikallaan: jos kaavaa tai avauskulmaa muutetaan, mittaus on tehtävä
+   * uudestaan.
    */
-  assert.equal(AIKAJANAN_LAHIKUVA_LEVEYS, 260);
+  assert.equal(AIKAJANAN_LAHIKUVA_LEVEYS, 434);
   // Ei koskaan laattojen tarkkuusrajan alle (js/pallolauta/kamera.js
   // PALLOLAUDAN_SIIRTOLEVEYS = 120 on lähin sallittu näkymä).
   assert.ok(AIKAJANAN_LAHIKUVA_LEVEYS > PALLOLAUDAN_SIIRTOLEVEYS, 'lähikuva menee laattojen tarkkuuden alle');
@@ -1059,7 +1063,7 @@ test('lähikuva on omistajan mitta: mitattu 1 530 km ruudun leveydellä', () => 
   assert.ok(AIKAJANAN_LAHIKUVA_LEVEYS < 1200, 'lähikuva ei ole lähikuva');
   // Pyydetty kaista asteina — sama luku kuin toteutusmerkinnässä.
   const asteet = (AIKAJANAN_LAHIKUVA_LEVEYS / 12000) * 360;
-  assert.ok(Math.abs(asteet - 7.8) < 0.1, `pyydetty kaista ${asteet}°`);
+  assert.ok(Math.abs(asteet - 13) < 0.2, `pyydetty kaista ${asteet}°`);
 });
 
 test('kameran ennakko on 40 % pysäkin kestosta ja jälkijättö sen päälle', () => {

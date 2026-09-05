@@ -345,21 +345,25 @@ export const PALLON_REIAN_LIUKU_MS = 700;
  * ruudun leveydellä; Pariisin valopallo oli halkaisijaltaan noin
  * 160 px.
  *
- * LUKU ON MITATTU EIKÄ LASKETTU. `korkeusLeveydesta` (js/pallolauta/
- * kamera.js) on tasokuvan kaava PYSTYSUUNNAN avauskulmalla, joten
- * ruudulla oikeasti näkyvä vaakakaista on selvästi pyydettyä
- * leveämpää — perspektiivi ja pallon kaarevuus vievät laidat kauas.
- * Mitattu Chromiumilla 1400 × 900 (kotelo 1379 × 821, kamera Volta/
- * Pavian yllä; ruudun laitojen pisteet käännettiin asteiksi ja niiden
- * väli isoympyränä): 120 → 686 km, 200 → 1 162 km, 240 → 1 406 km,
- * **260 → n. 1 530 km**, 300 → 1 782 km, 450 → 2 775 km. Omistajan
- * mitta osuu siis lukuun 260 (altitude 0,146).
+ * LUKU ON MITATTU EIKÄ LASKETTU. Ensimmäinen mittaus (5.9.2026 ilta)
+ * antoi luvun 260, koska `korkeusLeveydesta` (js/pallolauta/kamera.js)
+ * asetti pyydetyn leveyden ruudun KORKEUDELLE — fov on pystykulma —
+ * jolloin vaakakaista oli työpöydällä 1,7-kertainen pyydettyyn nähden.
+ * Kaava sai kuvasuhteen 5.9.2026 yöllä (aloitusnäkymän zoom), ja luku
+ * kalibroitiin uudelleen NIIN, ETTÄ RUUDULLA NÄKYY SAMA KAISTA KUIN
+ * ENNEN. Mitattu Chromiumilla samalla tavalla kuin ennenkin (kamera
+ * Pavian yllä, ruudun laitojen pisteet asteiksi ja väli isoympyränä),
+ * kaavan korjauksen jälkeen: 260 → 898 km, 400 → 1 403 km,
+ * **434 → n. 1 525 km**, 450 → 1 588 km (1400 × 900).
  *
- * MITTAKAAVA RIIPPUU IKKUNAN KOOSTA: korkeus on vakio, joten kilometriä
- * pikseliä kohti on vakio (≈ 1,1 km/px) ja kapeampi ikkuna näyttää
- * kapeamman kaistan. Luku on VAKIO eikä kaaren rajaus: sama lähikuva
- * pätee jokaisella pysäkillä, ja kamera vain siirtyy lampusta toiseen.
- * (Vertailuksi: saapumisnäkymä on 240 yksikköä ja siirtonäkymä 120,
+ * MITTAKAAVA ON NYT SAMA JOKA RUUDULLA: pyydetty leveys tarkoittaa
+ * lautayksiköitä ruudun LEVEYDELLÄ, joten 434 antaa saman ~1 500 km:n
+ * kaistan sekä työpöydällä että puhelimella (mitattu 390 × 844:
+ * 1 451 km luvulla 430). Ennen korjausta puhelin näytti samalla luvulla
+ * vain noin 430 km — se oli dokumentin AVOIN-kohta, ja se ratkesi tässä.
+ * Luku on VAKIO eikä kaaren rajaus: sama lähikuva pätee jokaisella
+ * pysäkillä, ja kamera vain siirtyy lampusta toiseen. (Vertailuksi:
+ * saapumisnäkymä on 240 yksikköä ja siirtonäkymä 120,
  * js/pallolauta/kamera.js.) Tasokartalla ajo sovittaa yhä koko kaaren
  * ruutuun — lähikuva on pallon oma, koska vain siellä laatat riittävät.
  *
@@ -371,8 +375,8 @@ export const PALLON_REIAN_LIUKU_MS = 700;
  * (aikaSeuraavaan) — kello ei kulje vakionopeudella, joten "kaksi
  * sekuntia ennen" ei ole sama kuin "kahden sekunnin matka jäljellä".
  */
-/** Lähikuvan leveys lautayksikköinä pallolla (mitattu 1 530 km / 1400 px). */
-export const AIKAJANAN_LAHIKUVA_LEVEYS = 260;
+/** Lähikuvan leveys lautayksikköinä pallolla (mitattu 1 525 km ruudun leveydellä). */
+export const AIKAJANAN_LAHIKUVA_LEVEYS = 434;
 /** Osuus pysäkin kestosta, jonka kamera lähtee liikkeelle etuajassa. */
 export const AIKAJANAN_KAMERAN_ENNAKKO_OSUUS = 0.4;
 /** Ennakko millisekunteina: liike alkaa, kun syttymiseen on tämä aika. */

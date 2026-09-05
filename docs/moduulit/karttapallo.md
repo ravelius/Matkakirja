@@ -1542,3 +1542,146 @@ kohdalla). Kaappaukset Chromiumilla 1400 × 900, 2000 × 1300 ja
 AVOIN: kuvat jäivät pois etusivulta, mutta pakka on olemassa ja
 maksettu — sille on löydettävä uusi paikka (albumi tai lentokohtaus),
 tai 27 vedosta jää käyttämättä.
+**Aloitusnäkymä lähemmäs, hidas pyörintä ja Livian viive — sekä
+kameran kuvasuhdekorjaus (5.9.2026 klo 00.30).** Omistaja katsoi
+lähtökaupungin valintaa työpöytäselaimella (2000 × 1300) ja pyysi
+kolme asiaa, sanatarkasti:
+
+> *"kartan zoom taso heti aloituksessa lähemmäksi. ks. 2 kuva.
+> karttapallo saisi pyöriä hitaast täydessä terävyydessä. pulun
+> kommentit noin 1,5 sek myöhemmin"*
+
+1. **KAMERAN KAAVA SAI KUVASUHTEEN — juurisyy zoomiin.** `PALLO_FOV`
+   (50°) on Globe.gl:n PYSTYSUUNNAN avauskulma, mutta
+   `korkeusLeveydesta` muutti pyydetyn LEVEYDEN korkeudeksi ilman
+   kuvasuhdetta: sama pyyntö näytti työpöydällä (1379 × 826)
+   1,67-kertaisen ja puhelimella (374 × 777) 0,48-kertaisen kaistan
+   pyydettyyn nähden, ja `kameranKohde`n bbox-haara laski
+   korkeusehdon (`bbox.h · vara · W/H`) siis täsmälleen väärinpäin.
+   Korjaus: `korkeusLeveydesta`, `leveysKorkeudesta` ja `lahinKorkeus`
+   saivat `kuvasuhde`-parametrin (oletus 1 = neliöruutu, jolloin
+   yksikkötestit ja apufunktiot säilyivät ennallaan), ja
+   `luoPallokamera` antaa aina kotelon oman suhteen — kutsuttaessa,
+   koska ruutu kääntyy. Nyt `leveys` tarkoittaa lautayksiköitä RUUDUN
+   LEVEYDELLÄ jokaisella laitteella, ja bbox mahtuu molempiin suuntiin.
+   *Mitattu Chromiumilla (swiftshader, r2.dev Noden fetchillä; ruudun
+   laitojen pisteet `toGlobeCoords`illa asteiksi ja väli isoympyränä,
+   sama tapa kuin aikajanan lähikuvassa):* sama pyyntö (260 yksikköä)
+   antoi ennen 1 530 km (1400 × 900) ja 430 km (390 × 844), nyt
+   898 km ja 872 km — eli kaikki laitteet näyttävät saman kaistan.
+   - **Aikajanan lähikuva kalibroitiin uudelleen samaksi kuvaksi:**
+     `AIKAJANAN_LAHIKUVA_LEVEYS` **260 → 434**, mitattu 1400 × 900:
+     260 → 898 km, 400 → 1 403 km, **434 → n. 1 525 km**, 450 →
+     1 588 km. Omistajan mitta (*"Irlannista Tanskaan ≈ 1 500 km"*)
+     pysyy siis pikselilleen entisenä työpöydällä — ja puhelin näyttää
+     nyt saman 1 450 km:n kaistan entisen 430 km:n sijaan, eli luvun 5c
+     AVOIN-kohta ratkesi tässä.
+   - **Avauslento:** `AVAUSLENNON_RAJAUKSEN_MARGINAALI` jätettiin
+     ennalleen (0,2) TIETOISESTI, ja mitattu rajaus muuttui:
+     1400 × 900 8 990 → **5 390 km**, 390 × 844 1 870 → **3 890 km**.
+     Syy: vanha luku oli sama kaava väärinpäin, eikä sitä voi palauttaa
+     molemmille laitteille yhtä aikaa — työpöydällä kuva oli
+     kaksinkertaisesti kaukana siitä, mitä omistaja pyysi (*"näkymä
+     saisi olla zoomautunut hieman lähemmäs"*, 5.9. klo 23.10), ja
+     puhelimella laatikko EI mahtunut leveyssuunnassa (siksi Ateena jäi
+     11 px kotelon ulkopuolelle ja rajausta piti siirtää lännemmäs).
+     Nyt kone ja molemmat päät ovat kuvassa kummallakin (mitattu
+     1400 × 900: Lontoo x 487, Ateena x 1 069 / 1 379; 390 × 844:
+     x 122 ja x 312 / 374). Jos omistaja haluaa vanhan kaukaisemman
+     kuvan takaisin, se on yksi luku (0,2 → 0,67 antaa entisen
+     työpöytärajauksen).
+   - **Saapumis- ja siirtonäkymä (240 ja 120 yksikköä) jätettiin
+     ennalleen**, koska niiden omat kommentit puhuvat asteista
+     (*"~7°"*, *"~3,6°"*) — ja vasta nyt ne pitävät paikkansa.
+     Mitattu vaikutus: saapuminen työpöydällä 1 345 → 840 km (lähemmäs,
+     omistajan toivomaan suuntaan) ja puhelimella 370 → 840 km
+     (kauemmas, mutta terävämpi: laatat eivät ole enää 1,9× venytettyjä
+     vaan alle 1×). Sama koskee tavallisen lennon rajausta
+     (`LENNON_RAJAUKSEN_MARGINAALI` 0,35). Jos jokin näistä halutaan
+     toisin, kukin on yksi rivi.
+2. **ALOITUKSEN RAJAUS.** `ALOITUSVALINNAN_MARGINAALI` **0,8 → 0,12**
+   (js/pallolauta/lauta.js). Vanha luku oli reilu juuri siksi, että
+   kaava veti kuvan kauas; korjatulla kaavalla valinta on nyt lennon
+   rajausta (0,35) TIUKEMPI. Kuplavara muuttui samalla osuudesta
+   PIKSELEIKSI (`ALOITUSVALINNAN_KUPLAVARA_PX` = 190 ja
+   `ALOITUSVALINNAN_KUPLALEVEYS_PX` = 336, ennen 0,34 ruudun
+   korkeudesta): Livian kuplapino on tekstiä, ja se mitattiin
+   336 × 129 px:ksi 2000 × 1300:ssa mutta 336 × 180 px:ksi
+   390 × 844:ssä — osuutena vara söi työpöydällä juuri sen zoomin, jota
+   omistaja pyysi. Siirto on VINO, koska kuplat ovat NURKASSA: sisältö
+   nousee ja siirtyy vasemmalle puolella kuplakaistasta, kumpaankin
+   suuntaan enintään neljänneksen laatikon ja reunan välistä
+   (`Math.min(kuplavara, (näkyvä − laatikko) / 4)`). Ensimmäinen mitta
+   ilman vaakasiirtoa jätti Ateenan nimen 1400 × 900:ssa kuplapinon
+   reunan alle (mitattu: merkki x 1 029, kuplat x ≥ 1 047); vaakasiirto
+   (90 yksikköä ≈ 107 px) vie sen selvästi sivuun, ja puhelimella siirto
+   on itsestään ~0, koska siellä laatikon leveys sitoo rajauksen.
+   *Mitattu ruudun leveys (km) valintanäkymässä ennen → jälkeen:*
+   2000 × 1300 **13 143 → 4 375**, 1400 × 900 **13 512 → 4 592**,
+   390 × 844 **3 453 → 3 419**. Puhelin ei siis muuttunut (siellä
+   laatikon leveys sitoo), työpöytä lähentyi kolminkertaisesti:
+   Irlanti on ylävasemmalla, Pohjois-Afrikan rannikko alalaidassa ja
+   Lontoo–Ateena-pari täyttää ruudun kuten omistajan kuvassa 2.
+3. **PALLO PYÖRII HITAASTI TÄYDESSÄ TERÄVYYDESSÄ.**
+   `ALOITUKSEN_PYORINTA_AST_S` = **0,4 °/s** itään (täysi kierros
+   15 min) ja `ALOITUKSEN_PYSAYTYS_MS` = 900. Pyörintä on OMA
+   rAF-silmukkansa eikä kamera-ajo: ajo on matka pisteestä toiseen,
+   tämä on tasainen liuku, joka lukee ja kirjoittaa `pointOfView`n
+   kehys kerrallaan SEINÄKELLOSTA (dt katkaistaan 100 ms:iin, jottei
+   taustavälilehdestä palaava ruutu hypäytä palloa). Koska nykyinen
+   kohta luetaan joka kehyksellä, pelaajan oma veto ja nipistys jäävät
+   voimaan. Kolme pysäytintä: sormi tai rulla koteloon → PEHMEÄ
+   hidastus (`pyorinnanPehmennys`, sama smootherstep kuin avauslennon
+   pyörinnässä, ei nykäisyä); toinen kamera-ajo omistaa kuvan → seis
+   samassa kehyksessä; vaihe vaihtuu tai lauta menee piiloon → seis ja
+   pakotus pois. Terävä tila on pakotettuna koko valinnan ajan
+   (`pakotaPallonLaatu(true)` jo ennen kamera-ajoa, `false` kun
+   kaupunki on valittu, lauta piilotetaan tai puretaan) — sama vipu
+   kuin aikajana-ajossa (v1603), joten laattataso ei putoa liikkeessä.
+   Reduced motion: ei pyörintää. Merkit ja nimet ovat kirjaston
+   CSS2D-pisteitä ja seuraavat pintaa itsestään, ja osuma lasketaan
+   napautuksen hetkellä ruudulta (R-malli), joten pyörivä pallo on yhtä
+   napautettava kuin paikallaan oleva. *Mitattu Chromiumilla
+   1400 × 900:* pyörii true, `pallonLaatuPakotettu()` true, lng
+   12,29 → 13,09; sormen jälkeen lng juoksi vielä 0,16° ja pysähtyi
+   (Δ 0,000° seuraavan 3 s aikana); kaupungin valinnan jälkeen pyörii
+   false ja laatupakotus false. (Kontin ohjelmistorasteroijalla kehysväli
+   on 200–300 ms, joten mitattu kulmanopeus on ~0,2 °/s; oikealla
+   laitteella kello antaa täyden 0,4 °/s.)
+4. **LIVIAN KUPLAT 1,5 s MYÖHEMMIN.** `LIVIAN_AVAUKSEN_VIIVE_MS` =
+   1 500 (js/livia.js) lisätään entisen `AVAUKSEN_VIIVE`n (900 ms)
+   päälle VAIN ensimmäisen kuplan eteen: kuplien keskinäinen rytmi
+   (`KUPLIEN_VALI` 280 ms, lukuaika) on ennallaan. Reduced motionissa
+   ei lisäviivettä — odotus on osa liikkeen koreografiaa, ja
+   liikkeetön ruutu vain seisoisi tyhjänä pidempään.
+5. **KAKSI NIMEÄ ATEENAN KOHDALLA — SELVITETTY JA KORJATTU.**
+   Omistajan kuvassa 1 luki päällekkäin harmaa kapiteeli "ATEENA" ja
+   tumma lihavoitu "Ateena". Molemmat olivat pysyviä: edellinen on
+   pallon KARTTANIMIKERROS (js/pallolauta/nimet.js; lähtövalinnassa
+   `vain` = Lontoo + valittavat), jälkimmäinen valittavan kaupungin
+   KOHDEMERKIN oma lappu (js/pallolauta/merkit.js `kohdeElementti`,
+   `.target-nimi` — sama kuin tasokartan kohderenkaassa). Merkin nimi
+   voittaa: se on kehotus toimia, se on lähempänä silmää ja se on sama
+   molemmilla laudoilla. Ladonta rajataan siksi uudella `aloitusNimet()`
+   -joukolla (näkyvät miinus valittavat) — käytännössä Lontooseen — ja
+   PISTE VAIN NIMEN KANSSA -sääntö pysyy ennallaan (`pisteNakyy` lukee
+   yhä koko näkyvää joukkoa, koska kohdemerkki on nimi).
+
+Vartijat: tests/aloitus-pallolla.test.mjs (rajauksen luvut, pyörinnän
+kolme pysäytintä, laatupakotus ja sen vapautus kolmesta paikasta,
+yksi nimi valittavalle, Livian viive), tests/pallolauta.test.mjs
+(kuvasuhde kaavassa ja kameran kaikissa kolmessa suunnassa),
+tests/pallonimet.test.mjs, tests/aikajana.test.mjs ja
+tests/aikajanamerkit.test.mjs (uusi mitattu lähikuva) sekä
+savuke-etusivupallo E9b/E9e/E9f. Ajettu: `node --test tests/*.test.mjs`
+1715 ok / 0 fail, tarkista-kaksoisavaimet, tarkista-niputus,
+tarkista-savukkeet, tarkista-nimiolimitys (0 nimiö nimiön päällä),
+savuke-etusivupallo 37/39, savuke-pallolauta (vartiot 1–6 ja 12–15
+läpi) ja savuke-avauslento `--lauta pallo` (P1–P5, P7 läpi). Kolme
+FAILia ovat VANHOJA ja tulevat samoina origin/mainissa (todennettu
+stashaamalla tämä erä pois 5.9.2026): savuke-etusivupallo E4b ja E4e
+(isoisän kortin kuvateksti ja haaleus), savuke-pallolauta vartio 7
+(linssikartta, vanhentunut jo aallossa 1C) ja savuke-avauslento P6
+(kaupunkilehti ei ehdi auki kontin hitaudessa; pallolaattapyyntöjä
+mainissa 1 870, tässä erässä 1 765 — lähikuva ei siis lisännyt
+laattakuormaa).

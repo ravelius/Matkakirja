@@ -549,9 +549,10 @@ test('pallolla ajo alkaa ensimmäisen lampun yltä lähikuvassa, ei kaaren rajau
   assert.equal(ajo.kohde.leveys, AIKAJANAN_LAHIKUVA_LEVEYS, 'lähikuvan leveys ei ole vakio');
   assert.equal(ajo.kohde.lat, eka.lat);
   assert.equal(ajo.kohde.lng, eka.lon);
-  // Mitta on mitattu selaimessa (1400 × 900 → 1 530 km); tässä
-  // varmistetaan vain, ettei ajo palaa kaaren yleisnäkymään.
-  assert.equal(AIKAJANAN_LAHIKUVA_LEVEYS, 260, 'lähikuvan mitta vaihtui — mittaa selaimessa uudestaan');
+  // Mitta on mitattu selaimessa (1400 × 900 → 1 525 km, kuvasuhteen
+  // korjauksen jälkeen); tässä varmistetaan vain, ettei ajo palaa
+  // kaaren yleisnäkymään.
+  assert.equal(AIKAJANAN_LAHIKUVA_LEVEYS, 434, 'lähikuvan mitta vaihtui — mittaa selaimessa uudestaan');
   pysaytaAikajana(ui);
 });
 

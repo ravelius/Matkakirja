@@ -123,9 +123,12 @@ test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän
   assert.equal(NIMIEN_KATTO, 40);
   assert.equal(NOSTOJEN_KATTO, 40);
   assert.match(lauta, /Math\.min\(NIMIEN_KATTO, Math\.max\(0, HTML_MERKKIEN_KATTO - pelia - nostoTulos\.maara\)\)/);
-  // Avauslento rajaa ehdokkaat kahteen nimeen ja lähtövalinta Lontooseen
-  // ja valittaviin (nimet.js `vain`, aalto 3A).
-  assert.match(lauta, /const vain = lento\?\.nimet \?\? aloitusNakyvat\(\);/);
+  // Avauslento rajaa ehdokkaat kahteen nimeen ja lähtövalinta LONTOOSEEN
+  // (nimet.js `vain`, aalto 3A). Valittavan kaupungin nimi tulee sen
+  // omasta kohdemerkistä, joten karttanimi jää siltä pois — muuten
+  // ruudulla oli kaksi nimeä päällekkäin (omistajan kaappaus 5.9.2026).
+  assert.match(lauta, /const vain = lento\?\.nimet \?\? aloitusNimet\(\);/);
+  assert.match(lauta, /const aloitusNimet = \(\) => \{/);
   assert.match(lauta, /^ {6}vain,$/m);
   assert.match(lue('../js/pallolauta/nimet.js'), /if \(vain && !vain\.has\(k\.c\.id\)\) continue;/);
   // Kortti ankkuroidaan ruutupisteestä ja seuraa merkkiään levossa.

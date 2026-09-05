@@ -114,6 +114,40 @@ test('näkyvä leveys ↔ korkeus: suunnitelman kaava, katot ja käänteisyys', 
   assert.ok(leveysKorkeudesta(100) <= 12000);
 });
 
+/*
+ * KUVASUHDE ON OSA KAAVAA (korjattu 5.9.2026 yöllä; omistaja: *"kartan
+ * zoom taso heti aloituksessa lähemmäksi"*). Globe.gl:n fov on
+ * PYSTYSUUNNAN avauskulma, joten ilman kuvasuhdetta pyydetty leveys
+ * asettui ruudun KORKEUDELLE: sama pyyntö näytti työpöydällä 1,67-
+ * kertaisen ja puhelimella 0,48-kertaisen kaistan, ja bbox-rajaus laski
+ * korkeusehdon väärinpäin. Oletus 1 (neliöruutu) pitää vanhat kutsut
+ * ennallaan; laudan kamera antaa kotelon oman suhteen.
+ */
+test('kuvasuhde: pyydetty leveys on ruudun LEVEYS, ei korkeus', () => {
+  // Leveä ruutu tarvitsee matalamman kameran kuin neliö samalle
+  // leveydelle — kaksinkertainen kuvasuhde puolittaa korkeuden.
+  const neliö = korkeusLeveydesta(1000, { min: 0 });
+  const leveä = korkeusLeveydesta(1000, { min: 0, kuvasuhde: 2 });
+  const kapea = korkeusLeveydesta(1000, { min: 0, kuvasuhde: 0.5 });
+  assert.ok(Math.abs(leveä - neliö / 2) < neliö * 0.001, `${leveä} vs ${neliö / 2}`);
+  assert.ok(Math.abs(kapea - neliö * 2) < neliö * 0.002, `${kapea} vs ${neliö * 2}`);
+  // Käänteinen on käänteinen samalla kuvasuhteella.
+  for (const kuvasuhde of [0.46, 1, 1.67]) {
+    const takaisin = leveysKorkeudesta(korkeusLeveydesta(900, { min: 0, kuvasuhde }), { kuvasuhde });
+    assert.ok(Math.abs(takaisin - 900) < 0.9, `${kuvasuhde}: ${takaisin}`);
+  }
+  // Kamera lukee suhteen kotelosta joka kutsulla (kääntyvä ruutu) ja
+  // vie sen kaikkiin kolmeen suuntaan: leveys → korkeus, korkeus →
+  // leveys ja laattojen tarkkuusraja.
+  const kamera = lue('../js/pallolauta/kamera.js');
+  assert.match(kamera, /const kuvasuhde = \(\) => ruudunLeveys\(\) \/ ruudunKorkeus\(\);/);
+  assert.match(kamera, /taso: laattataso, leveysPx: ruudunLeveys\(\), dpr, laudanLeveys, kuvasuhde: kuvasuhde\(\),/);
+  assert.match(kamera, /const korkeus = \(leveysYks\) => korkeusLeveydesta\(leveysYks, \{\n\s*laudanLeveys, kuvasuhde: kuvasuhde\(\), min: korkeusMin\(\),\n\s*\}\);/);
+  assert.match(kamera, /const leveys = \(korkeusArvo\) => leveysKorkeudesta\(korkeusArvo, \{ laudanLeveys, kuvasuhde: kuvasuhde\(\) \}\);/);
+  // Bbox mahtuu molempiin suuntiin: korkeusehto muutetaan leveydeksi.
+  assert.match(kamera, /leveys = Math\.max\(bbox\.w \* vara, \(bbox\.h \* vara \* ruudunLeveys\(\)\) \/ ruudunKorkeus\(\)\);/);
+});
+
 test('pallolla vain pelin merkit: sallitut kerrokset lueteltu, kartan kerrokset kiellettyjä', () => {
   // Vaihe 2: pisteet (kaupungit, askelhelmet), html-merkit (nappula,
   // kohteet), polut (naapurireitit) ja kaaret (lennot) — täsmälleen nämä.
