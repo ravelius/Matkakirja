@@ -47,6 +47,32 @@ tools/build-standalone.mjs MODULES: js/siirtokoreografia.js ennen
 js/ui.js:ää; sw.js SHELL: js/siirtokoreografia.js ja
 js/pallolauta/{merkit,reitit,siirto}.js.
 
+## 2b. Pallolaudan moduulit (js/pallolauta/, vaiheet 1–3; tarkistettu 5.9.2026)
+
+Vaiheen 6 tarkistus: kansiossa on SEITSEMÄN moduulia, ja jokainen
+tuodaan dynaamisesti laudan avauksesta (js/ui.js `avaaPallolauta` →
+`import('./pallolauta/lauta.js')`) — ei yhtään staattista tuontia
+ui.js:stä, joten yhden tiedoston versio ja verkoton käynnistys putoavat
+varapolkuun (karttapallo.md luku 6). Vaiheen 4 `linssikartta.js` EI ole
+vielä olemassa; kun se tulee, se lisätään tähän tauluun, sw.js:n
+SHELLiin ja tests/pallolauta.test.mjs:n nimilistaan samassa PR:ssä.
+
+| moduuli | mitä tuo (js/) | kuka tuo sen |
+|---|---|---|
+| pallolauta/lauta.js | fokuskohteet, fokusmitat, pallo, rules, ui-apurit + sisaret kamera/merkit/nimet/nostot/reitit/siirto | js/ui.js (dynaaminen), tests/pallolauta.test.mjs |
+| pallolauta/kamera.js | fokusmitat, kartta, rules, siirtokoreografia | lauta.js, tests/pallolauta.test.mjs |
+| pallolauta/merkit.js | (ei js-tuonteja) | lauta.js, siirto.js |
+| pallolauta/nimet.js | karttanimet | lauta.js, tests/pallonimet.test.mjs (NIMIEN_KATTO) |
+| pallolauta/nostot.js | elaintaky, fokuskohteet, fokusnosto-symbolit, fokuspiste, fokusvirta, karttanimet, karttavalot, nostoladonta, packs/fokus-grc, pallo | lauta.js |
+| pallolauta/reitit.js | rules | lauta.js |
+| pallolauta/siirto.js | rules, siirtokoreografia | lauta.js |
+
+Tekstinä näitä lukevat tests/pallolauta.test.mjs, tests/pallo.test.mjs
+(sallitut kerrokset), tests/pallonimet.test.mjs ja
+tools/tarkista-pallomerkit.mjs; sw.js SHELL listaa kaikki seitsemän
+(tests/sw.test.mjs valvoo). tools/build-standalone.mjs EI listaa yhtään
+js/pallolauta-tiedostoa — tarkoituksella.
+
 ## 3. Muut kytkökset
 
 - sw.js SHELL listaa js/ui.js:n ja jokaisen tulevan uuden
