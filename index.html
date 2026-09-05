@@ -234,6 +234,16 @@
               <span class="kehittaja-kytkin-nimi">tehosteketjut</span>
               <span class="kehittaja-kytkin-tila">kuuntele</span>
             </button>
+            <!-- KOHTAAMISET (omistajan tilaus 5.9.2026): kaikki
+                 aarrekohtaamiset maanosittain listana, ja jokainen
+                 avattavissa hiekkalaatikossa — pelitila ei muutu
+                 (js/kohtaamistesti.js). -->
+            <button id="kehittaja-kohtaamiset-btn" class="ghost kehittaja-kytkin"
+                    type="button">
+              <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 10.5a2.6 2.6 0 1 0 0-5.2 2.6 2.6 0 0 0 0 5.2z"/><path d="M3.8 18.5c0-2.9 2.3-5.2 5.2-5.2s5.2 2.3 5.2 5.2z"/><path d="M15.5 6.5h4.7M15.5 9.5h4.7M15.5 12.5h3"/></svg></span>
+              <span class="kehittaja-kytkin-nimi">kohtaamiset</span>
+              <span class="kehittaja-kytkin-tila">lista</span>
+            </button>
             <!-- Siirtymämusiikin mittari, aikajanalinssin kytkin ja
                  varamusiikki poistettiin rattaasta 4.9.2026 (omistaja:
                  "kehittäjätilan rattaasta voi ottaa tuon linssin,
@@ -1021,6 +1031,35 @@
       <button id="kehittaja-peru" class="ghost" type="button">Sulje</button>
       <button id="kehittaja-ok" class="primary" type="button">Kytke päälle</button>
     </div>
+   </div>
+  </dialog>
+
+  <!--
+    KOHTAAMISLISTA (omistajan tilaus 5.9.2026 sanatarkasti: "Tarvitaan
+    joku kehittäjätila missä pääsen testaamaan kaikki aarre kohtaamiset
+    ja niiden tehtävä pelit listasta valitsemalla. Lajittele listat
+    maanosien mukaan.").
+
+    OMA DIALOGI EIKÄ KEHITTÄJÄN LIITELEHTI: liite asuu
+    #arrival-dialogissa, jonka js/ui.js:n render sulkee heti kun
+    pelivaihe ei ole 'offer' — ja juuri sen testi vaihtaa. Tämä lehti
+    jää auki testin ajaksi, ja pelin oma tehtäväkortti (#quiz-dialog)
+    avautuu sen päälle. Sisällön rakentaa js/kohtaamistesti.js.
+  -->
+  <dialog id="kohtaamistesti-dialog" class="dialog kohtaamistesti-dialog"
+          aria-labelledby="kohtaamistesti-otsikko">
+   <div class="dialog-card kohtaamistesti-kortti" tabindex="-1" autofocus>
+    <div class="kohtaamistesti-ylarivi">
+      <h2 id="kohtaamistesti-otsikko">Kohtaamiset</h2>
+      <button id="kohtaamistesti-sulje" class="ghost kohtaamistesti-sulje"
+              type="button" aria-label="Sulje">Sulje</button>
+    </div>
+    <p id="kohtaamistesti-selite" class="kohtaamistesti-selite"></p>
+    <div class="kohtaamistesti-tyokalut">
+      <button id="kohtaamistesti-suodatin" class="ghost kohtaamistesti-vipu"
+              type="button" aria-pressed="false">Vain puuttuvat</button>
+    </div>
+    <div id="kohtaamistesti-sisalto" class="kohtaamistesti-sisalto"></div>
    </div>
   </dialog>
 

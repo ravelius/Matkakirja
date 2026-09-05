@@ -23495,3 +23495,119 @@ svg.rough-annotation { pointer-events: none; }
   .pallolauta-merkki { transition: none; animation: none; }
   .pallolauta-nimi-siirto { transition: none; }
 }
+
+/* ==========================================================================
+   KEHITTÄJÄN KOHTAAMISLISTA (js/kohtaamistesti.js, omistajan tilaus
+   5.9.2026: "Tarvitaan joku kehittäjätila missä pääsen testaamaan kaikki
+   aarre kohtaamiset ja niiden tehtävä pelit listasta valitsemalla.
+   Lajittele listat maanosien mukaan.").
+
+   Lehti on kehittäjän työkalu, joten se pysyy pelin paperissa mutta
+   tiiviinä: rivi kertoo kaupungin, henkilön, aiheen ja merkit yhdellä
+   silmäyksellä. Kaikki liike animoidaan — dialogin avaus 250 ms.
+   ========================================================================== */
+.kohtaamistesti-kortti {
+  width: min(680px, 94vw);
+  animation: kohtaamistesti-auki 250ms ease-out;
+}
+@keyframes kohtaamistesti-auki {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+.kohtaamistesti-ylarivi {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+.kohtaamistesti-ylarivi h2 { margin-bottom: 0.2rem; }
+.kohtaamistesti-selite {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+.kohtaamistesti-tyokalut { margin-bottom: 0.6rem; }
+.kohtaamistesti-vipu[aria-pressed="true"] {
+  color: var(--accent);
+  border-color: currentColor;
+}
+.kohtaamistesti-sisalto { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.kt-ryhma { display: flex; flex-direction: column; }
+.kt-ryhma-otsikko {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.4rem 0.2rem;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid rgba(70, 51, 31, 0.35);
+  font-family: var(--font-type);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+.kt-ryhma-otsikko[aria-expanded="true"] .kt-ryhma-nimi { color: var(--accent); }
+.kt-ryhma-luku { font-size: 0.75rem; opacity: 0.7; }
+.kt-rivit { display: flex; flex-direction: column; gap: 0.3rem; padding: 0.35rem 0 0.6rem; }
+.kt-rivit.kt-avautuu { animation: kohtaamistesti-auki 250ms ease-out; }
+
+.kt-rivi {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(70, 51, 31, 0.25);
+  border-radius: var(--sketch-radius, 6px);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: background 160ms ease-out, transform 160ms ease-out;
+}
+.kt-rivi:hover, .kt-rivi:focus-visible {
+  background: rgba(255, 255, 255, 0.34);
+  transform: translateX(2px);
+}
+.kt-rivi-yla { display: flex; align-items: baseline; gap: 0.45rem; }
+.kt-kaupunki { font-family: var(--font-type); letter-spacing: 0.04em; }
+.kt-henkilo { font-size: 0.8rem; opacity: 0.75; }
+.kt-aihe { font-size: 0.82rem; opacity: 0.85; }
+.kt-merkit { display: flex; flex-wrap: wrap; gap: 0.25rem; margin-top: 0.2rem; }
+.kt-merkki {
+  padding: 0.05rem 0.36rem;
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.kt-merkki.on { border-color: rgba(60, 110, 60, 0.6); }
+.kt-merkki.ei { border-color: rgba(150, 60, 40, 0.6); opacity: 0.85; }
+.kt-merkki.kt-laji { background: rgba(70, 51, 31, 0.12); }
+.kt-tyhja { margin: 0.2rem 0.2rem 0; font-size: 0.82rem; opacity: 0.7; }
+
+.kt-kohde { display: flex; flex-direction: column; gap: 0.45rem; animation: kohtaamistesti-auki 250ms ease-out; }
+.kt-osa-nimi {
+  margin: 0.3rem 0 0;
+  font-family: var(--font-type);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.kt-teksti { margin: 0; line-height: 1.5; }
+.kt-huomio { margin: 0; font-size: 0.8rem; opacity: 0.8; }
+.kt-napit { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.3rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .kohtaamistesti-kortti,
+  .kt-kohde,
+  .kt-rivit.kt-avautuu { animation: none; }
+  .kt-rivi { transition: none; }
+}

@@ -1639,6 +1639,18 @@ document.getElementById('kehittaja-tehosteketjut-btn')?.addEventListener('click'
   });
 });
 
+/*
+ * KOHTAAMISLISTA (omistajan tilaus 5.9.2026): kaikki aarrekohtaamiset
+ * maanosittain, ja rivin napautus avaa kohtaamisen hiekkalaatikossa —
+ * pelitila ei muutu (js/kohtaamistesti.js). Valikko suljetaan, koska
+ * lehti täyttää ruudun; muut rattaan rivit ovat säätimiä ja jäävät auki.
+ */
+document.getElementById('kehittaja-kohtaamiset-btn')?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  suljeKehittajaValikko();
+  window.matkakirja?.ui?.avaaKohtaamistesti();
+});
+
 paivitaKehittajaValikko();
 
 document.getElementById('raamattu-lehti-btn')?.addEventListener('click', () => {
