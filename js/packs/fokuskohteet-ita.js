@@ -266,6 +266,8 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'capri',
     nimi: 'Capri ja Sininen luola',
+    // Puhujan akustiikka kortilla (js/tehosteketju.js): meriluolan kaiku.
+    akustiikka: 'luola',
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Capri',

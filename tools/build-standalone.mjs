@@ -403,6 +403,14 @@ const MODULES = [
   'js/aani-tausta.js',
   'js/sound.js',
   /*
+   * Tehosteketjut (js/tehosteketju.js) SOUNDIN JÄLKEEN JA ENNEN PUHETTA:
+   * se tuo sfx:n (kehittäjän kuuntelunappi) ja puhe.js tuo sen
+   * staattisesti (puhujan akustiikka). Yhden tiedoston versiossa
+   * kirjasto jää lataamatta — moduuli tunnistaa version manifest-
+   * linkin puutteesta ja palauttaa virhehaaran (ääni kulkee suoraan).
+   */
+  'js/tehosteketju.js',
+  /*
    * Lukijaääni (js/puhe.js) ENNEN ambience-streamia: sanelun kova
    * tauko (taukoaSanelunAjaksi) pysäyttää 21.8.2026 alkaen myös
    * lukijaäänen piirin, joten ambience-stream tuo puhe.js:n

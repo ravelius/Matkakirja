@@ -157,6 +157,7 @@ import {
 } from './nostoladonta.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
+import { asetaAkustiikka } from './tehosteketju.js';
 import { taytaLahderivi } from './tekijakortti.js';
 
 /*
@@ -3991,6 +3992,7 @@ export function suljeFokuskohde(ui) {
   const auki = ui?.fokuskohdeAuki;
   if (!auki) return;
   ui.fokuskohdeAuki = null;
+  asetaAkustiikka(null);
   auki.merkki?.classList.remove('auki');
   auki.popup?.remove();
   if (auki.purku) auki.purku();
@@ -5552,6 +5554,10 @@ export function avaaFokuskohde(ui, kohde) {
    */
   ui.fokuskohdeAuki = { id: kohde.id, kohde, popup, merkki, purku: null };
   ui.fokuskohdeAuki.purku = kuunteleKohdetta(ui, popup);
+  // Puhujan akustiikka kortin ajaksi (js/tehosteketju.js): luolan kortilla
+  // Livian ja kertojan ääni saa luolan kaiun; sulkeminen nollaa (ks.
+  // suljeFokuskohde). Kohteen `akustiikka`-kenttä on pakkidataa.
+  asetaAkustiikka(kohde.akustiikka ?? null);
   asetaKohteenPaikka(ui);
   // Mitta uudelleen, kun asettelu ja tyyli ovat valmiit: ensimmäinen
   // mitta voi osua hetkeen, jolloin tyylitiedosto on vasta matkalla.

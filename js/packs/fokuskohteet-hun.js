@@ -587,6 +587,8 @@ export const FOKUSKOHTEET_HUN = [
   {
     id: 'aggtelek',
     nimi: 'Aggtelekin luolat',
+    // Puhujan akustiikka kortilla (js/tehosteketju.js): luolan kaiku.
+    akustiikka: 'luola',
     tyyppi: 'muu',
     symboli: 'luonto',
     nappi: 'Luola, jossa pidetään konsertteja',

@@ -2,6 +2,7 @@
 
 import { MUUTOKSET } from './muutokset.js';
 import { kehittajanKerroinTeksti, saadaKehittajanKerrointa } from './kehittajan-voimat.js';
+import { KUUNTELUN_ASKEL_S, TEHOSTEKETJUT, kuunteleTehosteketjut } from './tehosteketju.js';
 import { Game } from './game.js';
 import { UI } from './ui.js';
 import {
@@ -1558,6 +1559,24 @@ polloGenerointiNappi?.addEventListener('click', () => {
     'ei-palvelinta': 'Pöllöpalvelinta ei ole kytketty.',
     kesken: 'Edellinen vastaus on kesken.',
   }[tulos] ?? 'Generointi ei lähtenyt.');
+});
+
+/*
+ * TEHOSTEKETJUJEN KUUNTELU (omistajan päätös 5.9.2026, Tuna 1.1.3):
+ * testiääni ensin suoraan ja sitten jokaisen ketjun läpi, jotta ketjut
+ * voi kuunnella iPhonella ratasvalikosta. Kirjasto latautuu laiskasti
+ * ämpäristä; ilman sitä soi vain suora ääni ja vihje kertoo syyn.
+ */
+document.getElementById('kehittaja-tehosteketjut-btn')?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  naytaKehittajaVihje('Ladataan tehosteketjuja…');
+  kuunteleTehosteketjut().then((tulos) => {
+    naytaKehittajaVihje({
+      ok: `Suora → ${TEHOSTEKETJUT.join(' → ')} (${String(KUUNTELUN_ASKEL_S).replace('.', ',')} s välein)`,
+      'aanet-pois': 'Pelin äänet ovat pois — kytke ne päälle asetuksista.',
+      'ei-kirjastoa': 'Tuna ei latautunut (offline tai yhden tiedoston versio): vain suora ääni.',
+    }[tulos] ?? 'Kuuntelu ei lähtenyt.');
+  });
 });
 
 paivitaKehittajaValikko();

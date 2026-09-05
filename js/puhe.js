@@ -35,6 +35,7 @@
 
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
+import { akustiikka, tehosteketju } from './tehosteketju.js';
 
 /** Persoonat, jotka worker tuntee. Muu arvo lukee kertojan äänellä. */
 export const PUHE_PERSOONAT = ['kertoja', 'merkinnat', 'pollo'];
@@ -843,6 +844,36 @@ export function luoPuheSoitin({
   let kello = null;
   let aikataulutus = null;
 
+  /*
+   * PUHUJAN AKUSTIIKKA (omistajan päätös 5.9.2026, Tuna: *"Livian ääni
+   * luolassa saa luolan kaiun"*). Kohdekortti asettaa tilan
+   * (js/tehosteketju.js asetaAkustiikka), ja jokainen pala kysyy sen
+   * aikataulutuksessa: kun luolan kortti on auki, palat kulkevat
+   * luolaketjun läpi vahvistimeen; kun kortti sulkeutuu, seuraavat palat
+   * menevät suoraan ja vanha ketju liukuu kuivaksi 200 ms:ssa (pura).
+   * Ilman kirjastoa tehosteketju palauttaa null ja ääni kulkee suoraan
+   * kuten ennen — tämä ei muuta luentaa millään laitteella, jolla
+   * kirjasto ei lataudu.
+   */
+  let ketju = null;
+  const puraKetju = () => {
+    ketju?.pura();
+    ketju = null;
+  };
+  const paate = () => {
+    const suora = vahvistin ?? piiri.destination;
+    const nimi = akustiikka();
+    if (!nimi) {
+      puraKetju();
+      return suora;
+    }
+    if (!ketju || ketju.nimi !== nimi) {
+      puraKetju();
+      ketju = tehosteketju(piiri, nimi, suora);
+    }
+    return ketju ? ketju.input : suora;
+  };
+
   const ilmoita = () => {
     if (!onTila || tila.peruttu) return;
     const pala = palat[tila.soiva]
@@ -905,6 +936,7 @@ export function luoPuheSoitin({
     tila.peruttu = true;
     clearInterval(kello);
     kello = null;
+    puraKetju();
     onLoppu?.();
   };
 
@@ -939,6 +971,7 @@ export function luoPuheSoitin({
           clearInterval(kello);
           kello = null;
           pysaytaLahteet();
+          puraKetju();
           onVirhe?.(vaihe);
           return;
         }
@@ -953,7 +986,7 @@ export function luoPuheSoitin({
         verho.gain.setValueAtTime(1, Math.max(alkuAika + HAIVYTYS, alkuAika + kesto - HAIVYTYS));
         verho.gain.linearRampToValueAtTime(0, alkuAika + kesto);
         lahde.connect(verho);
-        verho.connect(vahvistin ?? piiri.destination);
+        verho.connect(paate());
         lahde.start(alkuAika, pala.alku, kesto);
         lahde.onended = () => {
           lahteet.delete(lahde);
@@ -1072,6 +1105,7 @@ export function luoPuheSoitin({
       clearInterval(kello);
       kello = null;
       pysaytaLahteet();
+      puraKetju();
     },
     tauko() {
       if (tila.peruttu || tila.tauolla) return;
