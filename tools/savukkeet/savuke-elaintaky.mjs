@@ -278,9 +278,14 @@ vaadi('kortin ylärivi on kohdemallin yhteinen (Eläimet)',
   avattu?.ylarivi === 'Eläimet', avattu?.ylarivi);
 // v1464: eläinkuvat luetaan ämpäristä (R2_ASSETIT.elaimet), joten kelpaa
 // joko repon polku tai ämpärin kohtaamiset/elaimet/-polku — mutta vain
-// pelin oma nimeäminen elain-<maa>.jpg, ei Commons-lähdettä.
+// pelin oma nimeäminen elain-<maa>.jpg, ei Commons-lähdettä. Kuvaputken
+// 5.9.2026 toimitus asuu samassa ämpärissä polussa kohtaamiset/
+// kuvajono/ ja kantaa oman tunnuksensa (elain-bih-tornjakpentu-vlasic-v2)
+// — sekin on pelin oma kuva, joten se kelpaa tässä.
 vaadi('kortissa on pelin oma eläinkuva (repo tai ämpäri) ja se latautui',
-  /(^assets\/elaimet\/|\/kohtaamiset\/elaimet\/)elain-[a-z]{3}\.jpg$/.test(avattu?.kuva ?? '')
+  (/(^assets\/elaimet\/|\/kohtaamiset\/elaimet\/)elain-[a-z]{3}\.jpg$/
+    .test(avattu?.kuva ?? '')
+    || /\/kohtaamiset\/kuvajono\/elain-[a-z0-9-]+\.jpg$/.test(avattu?.kuva ?? ''))
   && avattu?.kuvaLatautui && !avattu?.kuvaPiilossa,
   `${avattu?.kuva} latautui=${avattu?.kuvaLatautui}`);
 // LÄHDERIVI (v1353, omistaja 30.8.2026: "Kilpikonnilta puuttuu

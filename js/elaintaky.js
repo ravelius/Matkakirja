@@ -949,7 +949,7 @@ function elaintakyPiirraKaruselli(ui, kohde, kuvat, vakioselite) {
  * kortin yksinkin, kuten täkynostolla.
  */
 function elaintakyPiirraKuva(ui, kohde, taky, maa) {
-  const selite = `${taky.elain.charAt(0).toUpperCase()}${taky.elain.slice(1)}, ${maa}`;
+  const vakioselite = `${taky.elain.charAt(0).toUpperCase()}${taky.elain.slice(1)}, ${maa}`;
   /*
    * KAKSI KUVAA SAMASTA AIHEESTA MENEE KARUSELLIIN (omistajan päätös
    * 5.9.2026, ks. lohko yllä). Tietue kertoo kuvansa yhdellä tavalla
@@ -957,7 +957,25 @@ function elaintakyPiirraKuva(ui, kohde, taky, maa) {
    * latoutuu tästä eteenpäin täsmälleen kuten ennen.
    */
   const kuvat = elaintakynKuvat(taky);
-  if (kuvat.length > 1) { elaintakyPiirraKaruselli(ui, kohde, kuvat, selite); return; }
+  if (kuvat.length > 1) { elaintakyPiirraKaruselli(ui, kohde, kuvat, vakioselite); return; }
+  /*
+   * YKSIKIN KUVA LUETAAN NORMALISOIJASTA (5.9.2026, kuvaputken toimitus
+   * posti/animals-approved-32-20260905). Tässä luettiin ennen suoraan
+   * `taky.kuva` ja `taky.kuvaLahde`, jolloin YHDEN kuvan `kuvat`-lista
+   * olisi jäänyt kortilla piiloon: kuva ei olisi latautunut lainkaan ja
+   * kuvateksti olisi kadonnut, vaikka karuselli näytti kahden kuvan
+   * listan oikein. Vanha tietue kulkee saman normalisoijan läpi
+   * muuttumattomana (tiedosto = taky.kuva, lahde = taky.kuvaLahde,
+   * kuvateksti tyhjä → vakioselite), joten yksikään entinen kortti ei
+   * muutu tavuakaan.
+   *
+   * KUVATON TIETUE EI SAA KEHYSTÄ. Tyhjä lista on kelvollinen vastaus
+   * (js/packs/elaintakyt.js elaintakynKuvat), ja teksti kantaa kortin
+   * yksinkin — sama sääntö kuin rikkinäisellä kuvalla.
+   */
+  const [kuva] = kuvat;
+  if (!kuva) return;
+  const selite = kuva.kuvateksti || vakioselite;
   const kehys = html('figure', 'fokusnosto-kuva elaintaky-kuva');
   const nappi = html('button', 'fokusnosto-kuvanappi');
   nappi.type = 'button';
@@ -969,9 +987,10 @@ function elaintakyPiirraKuva(ui, kohde, taky, maa) {
   img.loading = 'lazy';
   img.draggable = false;
   img.addEventListener('error', () => { kehys.hidden = true; }, { once: true });
-  // Repon polku tai ämpäriosoite sen mukaan, onko laji jo siirretty
-  // (js/media.js R2_ASSETIT) — kutsupaikka ei muutu siirrosta.
-  const elainkuva = assetOsoite('elaimet', taky.kuva);
+  // Repon polku, ämpäritunnus tai kuvajonon valmis osoite sen mukaan,
+  // mitä tietue kantaa (js/media.js assetOsoite, R2_ASSETIT) —
+  // kutsupaikka ei muutu siirrosta eikä toimitustavasta.
+  const elainkuva = assetOsoite('elaimet', kuva.url || kuva.tiedosto);
   img.src = elainkuva;
   nappi.appendChild(img);
   /*
@@ -1007,11 +1026,15 @@ function elaintakyPiirraKuva(ui, kohde, taky, maa) {
    * artikkeli, ja se ladotaan omalle rivilleen ylempänä — vakiorivi ei
    * koskaan toteutunut: kuvan alla luki Wikipedia-artikkeli kuvan
    * lähteenä, vaikka kuva on pelin oma. Rivi valehteli ja havainnekuvan
-   * selite jäi syntymättä. Nyt kuvan oma kenttä on `kuvaLahde`, ja
-   * ilman sitä rivi kertoo totuuden: kuva on Matkakirjan havainnekuva.
+   * selite jäi syntymättä. Nyt kuvan oma lähde luetaan normalisoijasta
+   * (vanhassa tietueessa se on `kuvaLahde`, kuvaputken toimituksessa
+   * `kuvat`-listan alkion oma `lahde`), ja ilman sitä rivi kertoo
+   * totuuden: kuva on Matkakirjan havainnekuva. Sama lauseke kuin
+   * karusellissa — kaksi kuvaa ja yksi kuva eivät saa ajautua eri
+   * tulkintoihin.
    */
   teksti.appendChild(taytaLahderivi(html('span', 'fokusnosto-kuvalahde'),
-    taky.kuvaLahde ?? 'Matkakirjan havainnekuva', taky));
+    kuva.lahde || 'Matkakirjan havainnekuva', kuva));
   kehys.appendChild(teksti);
   kohde.appendChild(kehys);
 }

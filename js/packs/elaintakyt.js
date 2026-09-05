@@ -118,7 +118,37 @@
  * "Eläin, Maa" -selitteen), `lahde` KUVAN lähde — ei tietueen
  * `lahde`, joka on kortin TEKSTIN lähde — ja `url` valmis kuvaosoite
  * silloin, kun kuva ei tule pelin omasta kansiosta eikä ämpäristä.
+ *
+ * ── KUVAJONON TOIMITUS ON VALMIS OSOITE, EI ÄMPÄRITUNNUS ───────────
+ *
+ * Kuvaputken 5.9.2026 toimitus (posti/animals-approved-32-20260905)
+ * asuu ämpärissä polussa `kohtaamiset/kuvajono/` eikä eläinkuvien
+ * omassa kansiossa, joten pelkkä tunnus ei löytäisi sitä
+ * (js/media.js assetOsoite kokoaa tunnuksesta osoitteen
+ * `…/elaimet/<tunnus>.jpg`). Näiden kuvien osoite kirjoitetaan siksi
+ * kokonaisena `url`-kenttään samasta juuresta kuin skandaalien
+ * havainnekuvat (js/packs/skandaalit.js SKANDAALI_KUVAJUURI), eikä
+ * repoon tule tavuakaan kuvadataa.
+ *
+ * KUVAN LÄHDEOSOITE ON `lahdeUrl`, koska `url` on tässä taulussa jo
+ * varattu kuvan osoitteelle. Muissa tauluissa kuvaolion `osoite` on
+ * kuva ja `url` sen lähde (js/packs/skandaalit.js, js/packs/
+ * historian-hetket.js); nimet eivät saa vaihtaa merkitystä kesken
+ * tiedoston, joten kuvaputken lähdeosoite saa oman kenttänsä. Kortti
+ * ei vielä lado sitä linkiksi — kenttä on toimituksen tieto tallessa
+ * siellä, missä kuvakin.
  */
+
+/**
+ * Kuvajonon ämpärijuuri: kuvaputken toimittamat eläinkuvat.
+ *
+ * Sama ämpäri kuin js/media.js:n peilillä ja js/kohtaamiskuvat-data.js:n
+ * kohtaamiskuvilla — omistajan linjaus "kaikki aina ämpäriin eikä
+ * repoon". Yhden tiedoston versio ketjuttaa moduulit samaan
+ * näkyvyysalueeseen (tools/tarkista-niputus.mjs), joten nimi alkaa
+ * ELAINTAKY-etuliitteellä.
+ */
+const ELAINTAKY_KUVAJUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/';
 
 /** Maatunnus → eläintäky. Avaimet ovat laudan countryShapes-tunnuksia. */
 export const ELAINTAKYT = {
@@ -376,26 +406,33 @@ export const ELAINTAKYT = {
     teksti: 'Tornjak eli bosnia-hertsegovinalainen paimenkoira on saanut nimensä sanasta tor, lammastarha, ja Dinaaristen vuorten paimenet ovat pitäneet sitä laumojensa luona vuosisatoja — vanhin kirjallinen maininta on 1000-luvulta. Se ei aja lampaita vaan vartioi niitä: paimenten sanonnan mukaan yksi tornjak vastaa kahta sutta ja kaksi ajaa karhunkin tiehensä. Tyyni ja näennäisen välinpitämätön koira muuttuu tarvittaessa valppaaksi vartijaksi, ja paksun turkkinsa turvin se makaa ulkona lumisenakin yönä. Paimentolaisuuden loputtua rotu harvinaistui niin pahoin, että 1970-luvun alussa kynologit etsivät vuorilta vanhoja kuvauksia vastaavat koirat ja rakensivat rodun uudelleen niiden varaan; puhdas jalostus alkoi 1978. Pennun yhdeksän ensimmäistä kuukautta ratkaisevat, sillä silloin opittu kantaa läpi koiran elämän.',
     lahde: 'en-Wikipedia "Tornjak", osiot "History", "Name", "Characteristics", '
       + '"Activities" ja "Care". Tarkistettu 2.9.2026.',
-    kuva: 'assets/elaimet/elain-bih.jpg',
     /*
-     * KUVAPUTKEN KUVATEKSTI (toimitus 4.9.2026 12:05 UTC) sanasta
-     * sanaan. Eläintäyn kortti latoo kuvan selitteen itse ("Tornjak,
-     * Bosnia ja Hertsegovina", js/elaintaky.js elaintakyPiirraKuva),
-     * eikä täyllä ole selitekenttää — teksti säilytetään siksi tässä
-     * sellaisenaan, jotta se on tallessa, jos kenttä joskus tulee:
+     * TORNJAKINPENNUN v2 (kuvaputken toimitus 5.9.2026,
+     * posti/animals-approved-32-20260905, tunnus
+     * elain-bih-tornjakpentu-vlasic-v2). Uusinta korvaa 4.9. toimitetun
+     * v1:n, joka vietiin aikanaan repoon (assets/elaimet/elain-bih.jpg)
+     * — toimituksen `replacesImageIds` nimeää sen, joten tässä ei ole
+     * kahta versiota samasta kuvasta vaan uusin.
      *
-     *   "Nuori tornjak harjoittelee tehtävää, jossa sen suvun koirat
-     *   ovat vartioineet Balkanin karjaa vuosisatoja. Tänään suurin
-     *   saavutus on kuitenkin paimenen kadonnut sininen kinnas, jonka
-     *   pentu palauttaa liian ylpeänä luovuttaakseen sen heti."
-     *
-     * Lähde on kuvan oma eikä kortin tekstin (`lahde` yllä on
-     * en-Wikipedia): kuvan lähderivi ladotaan kentästä `kuvaLahde`.
-     * Lajifaktojen lähde kokonaisuudessaan:
-     * https://www.fci.be/nomenclature/Standards/355g02-en.pdf
+     * Kuvateksti ja lähderivi ovat toimituksesta SANASTA SANAAN
+     * (omistajan sääntö). Kuvateksti oli 4.9. tallessa vain
+     * kommenttina, koska täyllä ei silloin ollut selitekenttää; nyt
+     * kortti latoo sen `kuvateksti`-kentästä (omistajan päätös
+     * 5.9.2026, ks. lohko "KAKSI KUVAA SAMASTA AIHEESTA").
      */
-    kuvaLahde: 'Kuvaputken generoitu valokuva. Lajifaktat: FCI Standard No. 355 '
-      + '— Tornjak.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-bih-tornjakpentu-vlasic-v2.jpg`,
+        kuvateksti: 'Nuori tornjak harjoittelee tehtävää, jossa sen suvun koirat '
+          + 'ovat vartioineet Balkanin karjaa vuosisatoja. Tänään suurin saavutus '
+          + 'on kuitenkin paimenen kadonnut sininen kinnas, jonka pentu palauttaa '
+          + 'liian ylpeänä luovuttaakseen sen heti.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: '
+          + 'FCI Standard No. 355 — Tornjak; Bosnia and Herzegovina Food Safety '
+          + 'Agency — Vlašić pastures',
+        lahdeUrl: 'https://www.fci.be/nomenclature/Standards/355g02-en.pdf',
+      },
+    ],
     /*
      * Piste on keskisen Bosnian vuorilaitumilla Vlašićin länsipuolella
      * eikä Vlašićin huipulla: huipun kohdalta (lon 17,65) Sarajevoon
@@ -432,7 +469,25 @@ export const ELAINTAKYT = {
     lahde: 'en-Wikipedia "Angora goat", osio "History", en-Wikipedia "Mohair", '
       + 'osiot "Production" ja "History", ja en-Wikipedia "Ankara". '
       + 'Tarkistettu 2.9.2026.',
-    kuva: 'assets/elaimet/elain-tur.jpg',
+    /*
+     * ANKARAVUOHEN KILI (kuvaputken toimitus 5.9.2026,
+     * posti/animals-approved-32-20260905, tunnus
+     * elain-tur-ankaravuohenkili-anatolia). Sama kuva kuin repossa
+     * ollut assets/elaimet/elain-tur.jpg, mutta nyt toimitettuna ja
+     * tarkistettuna ämpäristä omalla kuvatekstillään ja lähderivillään
+     * — molemmat toimituksesta sanasta sanaan. Toimituksella ei ole
+     * lähdeosoitetta (`url` on paketissa tyhjä), joten `lahdeUrl` jää
+     * pois eikä sitä keksitä.
+     */
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI}elain-tur-ankaravuohenkili-anatolia.jpg`,
+        kuvateksti: 'Nuori valkea ankaravuohi seisoo Keski-Anatolian kuivalla '
+          + 'ylängöllä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: '
+          + 'kuvatoimituksen aiemmin tarkistettu E1-kuva.',
+      },
+    ],
     /*
      * Piste on Ankaran kaakkoispuolella Anatolian aroylängöllä, ei
      * kaupungin kyljessä: lon 33,3 / lat 39,6 jäisi 19,8 yksikön
