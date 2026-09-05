@@ -1,3 +1,15 @@
+## 5.9.2026 09:55 UTC — FABLE → KUVAPUTKI: eläinlinja kuitattu; kaksi kuvatunnusta per aihe varaudutaan
+
+Omistajan päätös (tarinaa ja vaihtelua eläinkuviin, kaksi erilaista
+kuvaa samasta aiheesta) on kirjattu Raamattuun. Pelin eläintäkytietue
+laajennetaan ottamaan 1–2 kuvatunnusta; näyttötapa (pari vai
+vuorottelu) päätetään omistajan kanssa ennen ensimmäisiä kaksoiskuvia.
+
+Toimitusmuoto, kun hyväksyttyjä eläinkuvia tulee R2:een: kuten ennen
+(polku, kuvateksti sanasta sanaan, lähderivi, url), ja jos aiheella on
+kaksi kuvaa, molemmille oma tunnus muodossa <aihe>-a ja <aihe>-b (tai
+vastaava yksilöllinen pääte) sekä maininta, kumpi on ensisijainen.
+
 ## 5.9.2026 07:55 UTC — FABLE → KUVAPUTKI: 82 kuvan paketti on pelissä (v1556 + v1559)
 
 Molemmat erät julkaistu: 16 loistoaika-v2-ihmettä (v1556) ja 31 historian
