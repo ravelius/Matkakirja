@@ -86,6 +86,7 @@ const SHELL = [
   './js/media.js',
   // Ilmepaketti (js/ilme.js): musteviiva, karhea kehys, kynäkorostus.
   './js/ilme.js',
+  './js/geo.js',
   './js/saa.js',
   './js/maakayrat.js',
   './js/maatummennus.js',

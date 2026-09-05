@@ -362,6 +362,17 @@ export const LAHTEET = [
         lisenssi: 'MIT',
         huom: 'Tarkistettu 5.9.2026 (vendor/rough-notation-0.5.1.iife.LICENSE.txt).',
       },
+      {
+        nimi: 'd3-geo 3.1.1 ja d3-geo-projection 4.0.0 — karttaprojektiot: '
+          + 'maailmanaineisto pelin laudalle, isokaaret ja etäisyydet (js/geo.js)',
+        tekija: 'Mike Bostock',
+        lisenssi: 'ISC',
+      },
+      {
+        nimi: 'topojson-client 3.1.0 — TopoJSON-aineiston purku kartalle',
+        tekija: 'Mike Bostock',
+        lisenssi: 'ISC',
+      },
     ],
   },
 ];
