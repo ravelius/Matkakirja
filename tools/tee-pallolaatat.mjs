@@ -2,7 +2,13 @@
  * KARTTAPALLON LAATAT — juliste Millerista Web Mercator -laatoiksi.
  *
  *   node tools/tee-pallolaatat.mjs [--kuiva] [--min 0] [--max 7] [--nostot]
- *        [--ulos pallolaatat-ulos] [--alue lon0,lat0,lon1,lat1]
+ *        [--ulos pallolaatat-ulos] [--alue lon0,lat0,lon1,lat1] [--tunniste b]
+ *
+ * --tunniste liittää ämpärin kansion nimeen loppuliitteen (esim.
+ * 2026-09-03a-nostot-b): laatat ovat selaimessa vuoden välimuistissa,
+ * joten samaan polkuun ei koskaan kirjoiteta eri sisältöä — muuttunut
+ * piirto (5.9.2026: napalakki) saa uuden kansion ja js/pallo.js:n
+ * PALLO_LAATTAKANSIO vaihdetaan siihen.
  *
  * OMISTAJAN TILAUS 4.9.2026 ilta ("Jos se tukee niin tee se suoraan
  * peliin ilman demoa"): pallo (js/pallo.js, Globe.gl 2.46) käyttää
@@ -74,19 +80,45 @@ export const LAATU = 80;
 /*
  * JULISTEEN ULKOPUOLI ILMAN "HARMAATA HATTUA" (omistaja 5.9.2026: "Lisää
  * 4 tasolle navat ... Tai joku muu toteutus että päästään siitä harmaasta
- * hatusta eroon"). Aiemmin julisteen ulkopuoli (yli 84° N, alle 66° S)
- * täytettiin paperinsävyllä, joka erottui pallolla vaaleana lakkina.
- * Nyt täyte jatkaa julisteen MERISÄVYÄ (mitattu julisteesta), ja vasta
- * napajää (yli 84° N, alle 70° S) vaalenee hieman jääksi — Pohjoinen
- * jäämeri on merta ja Etelämanner jäätä, joten pallo ei näytä saumaa.
+ * hatusta eroon"; sama päivä klo 15 kuvakaappaus Huippuvuorilta: "Miksi
+ * hattu näkyy?"). Kartta päättyy julisteessa noin 79,6° N:ään ja
+ * ~62° S:ään; sen ulkopuoli täytetään.
+ *
+ * MISTÄ HATTU TULI (mitattu laatasta 4/8/0, 5.9.2026): (1) merisävy
+ * mitattiin arkin vasemman alanurkan laatasta pikselistä (8, 8), joka
+ * on arkin MARGINAALIA, ei merta — täyte oli paperinsävyä ja erottui
+ * merestä vaaleana lakkina; (2) 84° N:n yläpuoli vaalennettiin vielä
+ * "jääksi", vaikka Pohjoinen jäämeri on julisteessa merta; (3) kartan
+ * reunassa on julisteen oma reunavarjo (~0,8° leveä, meri tummuu
+ * 202→189), joka jäi pallolle tummaksi renkaaksi täytteen rajalle.
+ *
+ * NYT: merisävy mitataan kartan SISÄLTÄ avomereltä (MERI_MITTAUS,
+ * eteläinen Tyynimeri) 5 × 5 pikselin keskiarvona; pohjoisessa täyte on
+ * pelkkää merta napaan asti; etelässä meri liukuu jääksi (JAA_RAJA.etela
+ * → JAA_LIUKU astetta etelämmäs) ilman terävää rajaa; ja kartan reunan
+ * REUNAN_NOSTO asteen kaista nostetaan merisävyyn niiltä pikseleiltä,
+ * jotka ovat merenkaltaisia (vähän kylläisyyttä, tummempia kuin meri
+ * enintään reunavarjon verran) — maa ja rantaviivat säilyvät.
  * Napalakki 85°:n yläpuolella (Mercatorin raja) piirtyy kirjastossa
- * ylimmän laattarivin reunasävyllä venytettynä, joten se saa jääsävyn
- * automaattisesti näistä laatoista — mitattu 5.9.2026 (globeMaterial-
- * väri ei vaikuta lakkiin).
+ * ylimmän laattarivin reunasävyllä venytettynä, joten se saa merisävyn
+ * näistä laatoista (globeMaterial-väri ei vaikuta lakkiin, mitattu).
  */
 export const MERI_SAVY = [208, 201, 183];
 export const JAA_SAVY = [220, 214, 198];
-export const JAA_RAJA = { pohjoinen: 84, etela: -70 };
+/** Jäätä vain etelässä (Etelämanner); pohjoisessa null = merta napaan asti. */
+export const JAA_RAJA = { pohjoinen: null, etela: -70 };
+/** Meri liukuu jääksi tämän verran asteita JAA_RAJA:n takana. */
+export const JAA_LIUKU = 4;
+/** Kartan reunakaista (astetta), jolta reunavarjo nostetaan merisävyyn. */
+export const REUNAN_NOSTO = 1.2;
+/**
+ * Avomeren pituusasteet, joilta merisävy mitataan kummankin reunan
+ * sisäpuolelta (REUNAN_NOSTO + 0,6° kartan reunasta): pohjoisessa
+ * Grönlanninmeri (0° E), etelässä eteläinen Tyynimeri (130° W).
+ * Julisteen meri on eri sävyinen eri kohdissa (varjostus), joten
+ * täyte otetaan siitä merestä, johon se liittyy.
+ */
+export const MERI_MITTAUS = { pohjoinen: { lon: 0 }, etela: { lon: -130 }, sisaan: REUNAN_NOSTO + 0.6 };
 const MERI_VARA = MERI_SAVY;
 const RAD = Math.PI / 180;
 /** Lähdelaattoja välimuistissa kerrallaan (512 × 512 × 4 t ≈ 1 Mt kukin). */
@@ -99,7 +131,41 @@ const VALIMUISTI = 160;
  * ovat selaimessa vuoden välimuistissa: sama polku eri sisällöllä
  * näyttäisi vanhaa.
  */
-export const laattojenKansio = (versio, nostot = false) => `julisteet/pallo/laatat/${versio}${nostot ? '-nostot' : ''}/`;
+export const laattojenKansio = (versio, nostot = false, tunniste = '') => `julisteet/pallo/laatat/${versio}${nostot ? '-nostot' : ''}${tunniste ? `-${tunniste}` : ''}/`;
+
+/**
+ * Täytesävy leveysasteella lat kartan ulkopuolella: merta, paitsi
+ * etelässä JAA_RAJA.etela:n takana liukuen jääksi (JAA_LIUKU astetta).
+ * Pohjoisessa JAA_RAJA.pohjoinen = null → merta napaan asti.
+ */
+export function tayteRivilla(lat, meri = MERI_SAVY) {
+  let w = 0;
+  if (JAA_RAJA.etela != null && lat < JAA_RAJA.etela) w = Math.min(1, (JAA_RAJA.etela - lat) / JAA_LIUKU);
+  if (JAA_RAJA.pohjoinen != null && lat > JAA_RAJA.pohjoinen) w = Math.min(1, (lat - JAA_RAJA.pohjoinen) / JAA_LIUKU);
+  if (w <= 0) return meri;
+  const t = w * w * (3 - 2 * w); // smoothstep
+  return meri.map((m, i) => Math.round(m * (1 - t) + JAA_SAVY[i] * t));
+}
+
+/**
+ * Reunavarjon nosto: kartan reunakaistassa (osuus 0..1 reunaa kohti)
+ * merenkaltainen pikseli (vähän kylläisyyttä; meren ja reunavarjon
+ * välissä, ei rantaviivan tummuinen) sekoitetaan merisävyyn. Muuttaa
+ * puskuria paikallaan; palauttaa true, jos pikseliä nostettiin.
+ */
+export function nostaReuna(ulos, o, meri, osuus) {
+  if (osuus <= 0) return false;
+  const r = ulos[o]; const g = ulos[o + 1]; const b = ulos[o + 2];
+  const lum = (r + g + b) / 3;
+  const meriLum = (meri[0] + meri[1] + meri[2]) / 3;
+  const kyllainen = Math.abs(r - g) > 18 || Math.abs(g - b) > 34;
+  if (kyllainen || lum < meriLum - 45 || lum > meriLum + 22) return false;
+  const t = Math.min(1, osuus) ** 0.7;
+  ulos[o] = Math.round(r * (1 - t) + meri[0] * t);
+  ulos[o + 1] = Math.round(g * (1 - t) + meri[1] * t);
+  ulos[o + 2] = Math.round(b * (1 - t) + meri[2] * t);
+  return true;
+}
 
 /** Mercator-tason Z lähdetaso pyramidissa. */
 export const lahdetaso = (Z) => Math.max(0, Z - 1);
@@ -196,7 +262,6 @@ function teeLukija(luettelo, sharp, { nostot = false } = {}) {
         tilasto.noudettu += 1;
         const { data, info } = await sharp(pohja).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
         const kuva = { data, w: info.width, h: info.height };
-        if (!meri && tx === 0 && ty === taso.riveja - 1) meri = [data[(8 * info.width + 8) * 4], data[(8 * info.width + 8) * 4 + 1], data[(8 * info.width + 8) * 4 + 2]];
         const kerrokset = [];
         if (viivaversio) kerrokset.push(`${viivaversio}/viivat/z${z}/${tx}/${ty}.webp`);
         if (nostoversio && nostotasot.has(z)) kerrokset.push(`${nostoversio}/nostot/z${z}/${tx}/${ty}.webp`);
@@ -247,11 +312,41 @@ function teeLukija(luettelo, sharp, { nostot = false } = {}) {
     const x = ((Math.floor(px) % W) + W) % W;
     const y = Math.min(taso.korkeus - 1, Math.max(0, Math.floor(py)));
     const k = muisti.get(`${z}/${Math.floor(x / L)}/${Math.floor(y / L)}`);
-    if (!k) { const m = meri ?? MERI_VARA; ulos[o] = m[0]; ulos[o + 1] = m[1]; ulos[o + 2] = m[2]; return; }
+    if (!k) { const m = meri?.pohjoinen ?? MERI_VARA; ulos[o] = m[0]; ulos[o + 1] = m[1]; ulos[o + 2] = m[2]; return; }
     const i = ((y % L) * k.w + (x % L)) * 4;
     ulos[o] = k.data[i]; ulos[o + 1] = k.data[i + 1]; ulos[o + 2] = k.data[i + 2];
   }
-  return { varmista, pikseli, tilasto, meri: () => meri ?? MERI_SAVY };
+  /**
+   * Merisävyt kartan sisältä kummankin reunan avomereltä (MERI_MITTAUS)
+   * 5 × 5 pikselin keskiarvona karkealta lähdetasolta; mitataan kerran.
+   * Puute → MERI_SAVY. Palauttaa { pohjoinen, etela }.
+   */
+  async function mittaaMeri() {
+    if (meri) return meri;
+    const vali = julisteenLeveysvali(luettelo);
+    const taso = luettelo.tasot.find((t) => t.z === 2) ?? luettelo.tasot[0];
+    const mittaa = async (lon, lat) => {
+      const a = arkinPikseli(luettelo, taso, lon, lat);
+      const k = a && await laatta(taso.z, Math.floor(a.px / L), Math.floor(a.py / L));
+      if (!k) return MERI_VARA;
+      const summa = [0, 0, 0]; let n = 0;
+      for (let dy = -2; dy <= 2; dy += 1) {
+        for (let dx = -2; dx <= 2; dx += 1) {
+          const x = (Math.floor(a.px) % L) + dx; const y = (Math.floor(a.py) % L) + dy;
+          if (x < 0 || y < 0 || x >= k.w || y >= k.h) continue;
+          const i = (y * k.w + x) * 4;
+          summa[0] += k.data[i]; summa[1] += k.data[i + 1]; summa[2] += k.data[i + 2]; n += 1;
+        }
+      }
+      return n ? summa.map((v) => Math.round(v / n)) : MERI_VARA;
+    };
+    meri = {
+      pohjoinen: await mittaa(MERI_MITTAUS.pohjoinen.lon, vali.pohjoinen - MERI_MITTAUS.sisaan),
+      etela: await mittaa(MERI_MITTAUS.etela.lon, vali.etela + MERI_MITTAUS.sisaan),
+    };
+    return meri;
+  }
+  return { varmista, pikseli, tilasto, mittaaMeri };
 }
 
 /**
@@ -268,14 +363,17 @@ export function julisteenLeveysvali(luettelo) {
   /*
    * VAIN KARTTA, EI ARKIN KALUSTEITA (löydös 5.9.2026 etusivun pallosta:
    * julisteen kartussi "MATKAKIRJA" ja kehys näkyivät pallolla
-   * Jäämerellä). Rajaus kattaa arkin marginaalit kartan ylä- ja
-   * alapuolella (kehys, kartussi, painajanrivi), jotka kuuluvat
-   * tasokartalle mutta eivät pallon pinnalle. Pohjoisessa kartta
-   * päättyy projektion pohjoisreunaan (76°); etelässä arkin alakehys
-   * (kehys.ala px) vähennetään rajauksen alareunasta. Sen ulkopuoli
-   * täytetään merellä ja jäällä (laskeLaatta).
+   * Jäämerellä). Rajaus (rajaus.y … rajaus.y + rajaus.h) on kartan
+   * pinta; arkin marginaalit sen ylä- ja alapuolella (kartussi, kehys,
+   * painajanrivi) kuuluvat tasokartalle mutta eivät pallon pinnalle.
+   * Pohjoisessa kartta ulottuu rajauksen yläreunaan (≈ 84° N: Huippu-
+   * vuoret, Frans Joosefin maa ja Jäämeri ovat kartalla — 5.9.2026
+   * iltapäivän virhe leikkasi kartan projektion vertailuleveyteen 76°
+   * ja olisi hävittänyt ne); etelässä arkin alakehys (kehys.ala px)
+   * vähennetään rajauksen alareunasta. Ulkopuoli täytetään merellä ja
+   * jäällä (laskeLaatta, tayteRivilla).
    */
-  const pohjoinen = Math.min(kaannos(rajaus.y), p.pohjoinen);
+  const pohjoinen = kaannos(rajaus.y);
   const alakehys = Number(luettelo.kehys?.ala) || 0;
   const etela = kaannos(rajaus.y + rajaus.h - alakehys);
   return { pohjoinen, etela };
@@ -299,9 +397,13 @@ export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
     let px1 = a1.px; if (px1 < a0.px) px1 += taso.leveys; // sauman yli
     await lukija.varmista(z, a0.px, px1, Math.min(a0.py, a1.py), Math.max(a0.py, a1.py));
   }
+  const meret = await lukija.mittaaMeri();
   for (let r = 0; r < LAATTA; r += 1) {
     const lat = rivinLeveysaste(Z, Y, r);
-    const tayte = (lat > JAA_RAJA.pohjoinen || lat < JAA_RAJA.etela) ? JAA_SAVY : (lukija.meri?.() ?? MERI_SAVY);
+    const meri = lat >= 0 ? meret.pohjoinen : meret.etela;
+    const tayte = tayteRivilla(lat, meri);
+    // Reunakaista: 1 kartan reunassa, 0 REUNAN_NOSTO asteen päässä siitä.
+    const reuna = Math.max(0, 1 - Math.min(vali.pohjoinen - lat, lat - vali.etela) / REUNAN_NOSTO);
     for (let s = 0; s < LAATTA; s += 1) {
       const lon = ((X + (s + 0.5) / LAATTA) / n) * 360 - 180;
       const o = (r * LAATTA + s) * 3;
@@ -309,6 +411,7 @@ export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
       if (!a) { ulos[o] = tayte[0]; ulos[o + 1] = tayte[1]; ulos[o + 2] = tayte[2]; continue; }
       // Lähin pikseli riittää: lähdetaso on aina tiheämpi kuin kohde.
       lukija.pikseli(z, a.px, a.py, ulos, o);
+      if (reuna > 0) nostaReuna(ulos, o, meri, reuna);
     }
   }
   return ulos;
@@ -358,9 +461,11 @@ async function paa() {
   const ulos = lippu('--ulos') ?? 'pallolaatat-ulos';
   const alue = lippu('--alue')?.split(',').map(Number) ?? null;
   const nostot = argv.includes('--nostot');
+  const tunniste = lippu('--tunniste') ?? '';
+  if (!/^[a-z0-9]*$/.test(tunniste)) throw new Error(`--tunniste: vain a–z ja 0–9 (${tunniste})`);
 
   const luettelo = await noudaJson(LUETTELO);
-  const kansio = laattojenKansio(luettelo.versio, nostot);
+  const kansio = laattojenKansio(luettelo.versio, nostot, tunniste);
   let yhteensa = 0;
   for (let Z = min; Z <= max; Z += 1) yhteensa += tasonLaatat(Z, alue).length;
   console.log(`pyramidi ${luettelo.versio}, viivat ${luettelo.viivataso?.versio ?? '-'}, `
@@ -391,6 +496,7 @@ async function paa() {
     versio: luettelo.versio,
     viivat: luettelo.viivataso?.versio ?? null,
     nostot: nostot ? (luettelo.nostotaso?.versio ?? null) : null,
+    ...(tunniste ? { tunniste } : {}),
     tasot: { min, max },
     laatta: LAATTA,
     muoto: 'jpg',

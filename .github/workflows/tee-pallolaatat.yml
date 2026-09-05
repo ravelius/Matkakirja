@@ -32,6 +32,10 @@ on:
         default: 'ei'
         type: choice
         options: ['ei', 'kylla']
+      tunniste:
+        description: 'Kansion loppuliite (a–z, 0–9), esim. b → <versio>-nostot-b; uusi liite aina, kun piirto muuttuu (laatat ovat vuoden välimuistissa)'
+        required: false
+        default: ''
       kirjasto:
         description: 'Globe.gl-versio, joka viedään vendor/-polkuun (tyhjä = ei viedä)'
         required: false
@@ -49,7 +53,7 @@ permissions:
 # Eri alueet saavat ajaa rinnakkain (taso 8 jaetaan puoliskoihin tai
 # neljänneksiin, koska yksi ajo ei ehdi 65 536 laattaa ajan puitteissa).
 concurrency:
-  group: tee-pallolaatat-${{ inputs.alue || 'kaikki' }}-${{ inputs.nostot || 'ei' }}
+  group: tee-pallolaatat-${{ inputs.alue || 'kaikki' }}-${{ inputs.nostot || 'ei' }}-${{ inputs.tunniste || '' }}
   cancel-in-progress: false
 
 jobs:
@@ -87,7 +91,7 @@ jobs:
           fi
 
       - name: Kuiva ajo (luettelo ja laattamäärä)
-        run: node tools/tee-pallolaatat.mjs --kuiva --min "${{ inputs.min }}" --max "${{ inputs.max }}" ${{ inputs.alue != '' && format('--alue {0}', inputs.alue) || '' }} ${{ inputs.nostot == 'kylla' && '--nostot' || '' }}
+        run: node tools/tee-pallolaatat.mjs --kuiva --min "${{ inputs.min }}" --max "${{ inputs.max }}" ${{ inputs.alue != '' && format('--alue {0}', inputs.alue) || '' }} ${{ inputs.nostot == 'kylla' && '--nostot' || '' }} ${{ inputs.tunniste != '' && format('--tunniste {0}', inputs.tunniste) || '' }}
 
       - name: Vie Globe.gl ämpäriin
         if: inputs.kirjasto != ''
@@ -107,7 +111,7 @@ jobs:
         run: |
           set -euo pipefail
           npm install --no-save --no-fund --no-audit sharp
-          node tools/tee-pallolaatat.mjs --min "${{ inputs.min }}" --max "${{ inputs.max }}" --ulos pallolaatat-ulos ${{ inputs.alue != '' && format('--alue {0}', inputs.alue) || '' }} ${{ inputs.nostot == 'kylla' && '--nostot' || '' }}
+          node tools/tee-pallolaatat.mjs --min "${{ inputs.min }}" --max "${{ inputs.max }}" --ulos pallolaatat-ulos ${{ inputs.alue != '' && format('--alue {0}', inputs.alue) || '' }} ${{ inputs.nostot == 'kylla' && '--nostot' || '' }} ${{ inputs.tunniste != '' && format('--tunniste {0}', inputs.tunniste) || '' }}
           echo "Laattoja: $(find pallolaatat-ulos -name '*.jpg' | wc -l), koko: $(du -sh pallolaatat-ulos | cut -f1)"
 
       - name: Vie laatat ämpäriin
