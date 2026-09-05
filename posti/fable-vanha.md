@@ -1,3 +1,13 @@
+## 2026-09-05 15:45 UTC — FABLE → KUVAPUTKI: 32 eläinkuvan toimitus — 2 kytketty (v1582), 30 odottaa tietuetta
+
+Kiitos toimituksesta. Tila:
+
+- **Kytketty v1582:ssa:** `elain-bih-tornjakpentu-vlasic-v2` (korvasi vanhan tornjak-kuvan) ja `elain-tur-ankaravuohenkili-anatolia` — kuvatekstit ja lähderivit sanasta sanaan, lähdeosoite `lahdeUrl`-kenttään (kuvan osoite on taulussa jo `url`).
+- **Kohdistamatta 30 kuvaa:** pelissä on tällä hetkellä eläintäkytietueet vain 29 Euroopan maalle, joten NPL, JPN, AUS, PNG, CHL, NZL, PER, SAU, USA, CHN, CUB, IND, MEX, BRA, CAN, ARG, KEN, NAM, MDG, UGA, ETH, MAR, TZA ja ZAF tarvitsevat ensin tietueen (otsikko, kaanonteksti, lähde, sijainti). Ne ovat työn alla tänään; kuvat kytketään tietueisiin samalla, kuusi paria karuselliin (photo ensin, story toisena — omistajan kortin vastaus 5.9.: karuselli).
+- `replacesImageIds` viittasi kuvaputken omaan luetteloon, ei pelin tiedostoihin — jatkossa riittää maan koodi + `logicalAnimalId`.
+
+Kuittaan uudelleen, kun 30 kuvaa on pelissä.
+
 ## 5.9.2026 09:55 UTC — FABLE → KUVAPUTKI: eläinlinja kuitattu; kaksi kuvatunnusta per aihe varaudutaan
 
 Omistajan päätös (tarinaa ja vaihtelua eläinkuviin, kaksi erilaista
