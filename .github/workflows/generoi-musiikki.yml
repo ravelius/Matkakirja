@@ -1,7 +1,14 @@
 # Generoi pelin musiikkipaletti suoraan secretistä — avainta ei
 # liikutella chatissa eikä koneelta toiselle (omistajan linjaus
-# 28.8.2026, Raamattu → "Äänet ja luennat": ELEVEN-AVAIN ON
-# GITHUB-SECRETISSA). Sama malli kuin generoi-luennat.yml.
+# 28.8.2026, Raamattu → "Äänet ja luennat": AVAIN ON GITHUB-SECRETISSA).
+# Sama malli kuin generoi-luennat.yml ja generoi-siirtymamusiikki.yml.
+#
+# MOOTTORI ON LYRIA (omistajan linjaus 5.9.2026 illalla, sanatarkasti:
+# *"kaikki musiikki lyrialla"*). Lyrian raidat saavat päätteen `-lyria`,
+# ElevenLabsin (`moottori: eleven`) paljaan nimen — näin molemmat voi
+# generoida ja kuunnella rinnakkain ilman että toinen ylikirjoittaa
+# toisen. Avain on Lyrialla GOOGLE_API_KEY ja ElevenLabsilla
+# ELEVEN_API_KEY, kuten siirtymämusiikin työnkulussa.
 #
 # Ajo on KÄSIAJETTAVA (workflow_dispatch): musiikki maksaa rahaa ja
 # raidat ovat pysyviä — automaattinen ajo joka pushista polttaisi
@@ -13,31 +20,47 @@
 #   aarre     assets/audio/musa-aarre.mp3     tavallisen aarteen aihe
 #   paaaarre  assets/audio/musa-paaaarre.mp3  sama aihe pääaarteelle
 #
+# (Lyrialla samat nimet päätteellä -lyria, esim. musa-pohja-lyria.mp3.)
+#
 # AARRE JA PAAAARRE OVAT PARI. Ne ovat sama sävelaihe kahdessa asussa,
 # ja jos toinen generoidaan uusiksi, kannattaa generoida molemmat —
 # muuten musiikillinen sukulaisuus katoaa (ks. tools/generoi-musiikki.mjs).
 #
 # MITÄ AJO TEKISI, ILMAN APIA:
-#   ELEVEN_KUIVA=1 node tools/generoi-musiikki.mjs kaikki
+#   node tools/generoi-musiikki.mjs kaikki --kuiva
 # — tulostaa jokaisen raidan kohdetiedoston, keston ja koko promptin.
 # Avainta ei tarvita. Kannattaa ajaa, kun promptia on muutettu.
 #
 # TUOTOS EI MENE SUORAAN MAINIIN. Ajo committoi uudet mp3:t omalle
 # haaralleen (claude/musiikki-<ajonumero>) ja jättää ne PR:ää varten:
 # musiikki KUUNNELLAAN ennen julkaisua (looppiraidoilta sauma,
-# aarreraidoilta se että aihe on kuultavasti sama). Kun PR mergetään,
-# vie-aanet.yml vie tiedostot R2:een automaattisesti — musiikkia ei
-# esiladata service workerissa, joten mp3 ei kasvata asennusta.
+# aarreraidoilta se että aihe on kuultavasti sama).
+#
+# MIKSI REPON KAUTTA EIKÄ SUORAAN ÄMPÄRIIN (ero
+# generoi-siirtymamusiikki.yml:ään, joka ei committoi mitään): PELIN
+# POLKU RATKAISEE. Paletin neljä soittokohtaa pyytävät polkua
+# `assets/audio/musa-*.mp3`, jonka js/media.js `aaniUrl` kääntää ämpärin
+# `audio/`-kansioksi — sinne .github/workflows/vie-aanet.yml vie
+# tiedostot, kun PR on mergetty. Siirtymäraidat taas kokeilevat ensin
+# ämpärin `aanet/`-kansiota, joten niille suora vienti on lyhin tie.
+# Kansio `aanet/` olisi paletille umpikuja: yksikään paletin soittokohta
+# ei kysy sitä. Musiikkia ei esiladata service workerissa, joten mp3 ei
+# kasvata asennusta.
+#
+# KUN RAIDAT OVAT ÄMPÄRISSÄ (HTTP 200 osoitteesta
+# <ämpäri>/audio/musa-pohja-lyria.mp3 ja kolme muuta), käännä pelin
+# kytkin: js/media.js `MUSIIKIN_PAATE = ''` → `'-lyria'`. Se on yksi
+# rivi ja koskee kaikkia neljää polkua sekä työhuoneen kuuntelulehteä.
 #
 # JOS MUSIIKKIRAJAPINTA EI OLE AUKI TÄLLÄ AVAIMELLA, ajo kaatuu
 # työkalun tulostamaan HTTP-virheeseen (401/403) eikä committoi mitään.
 # Pelikytkennät ovat silloinkin jo paikallaan ja hiljenevät siististi:
 # puuttuva mp3 ei riko yhtään äänipolkua.
 #
-# Salaisuus on tämän repon Actions-asetuksissa: ELEVEN_API_KEY.
-# Avain ei koskaan tulostu lokiin (työkalu ei tulosta sitä, eikä tämä
-# ajo echoa sitä) — GitHub peittää secretit lokista joka tapauksessa,
-# mutta siihen ei nojata.
+# Salaisuudet ovat tämän repon Actions-asetuksissa: GOOGLE_API_KEY
+# (Lyria) ja ELEVEN_API_KEY (vertailu). Avain ei koskaan tulostu lokiin
+# (työkalu ei tulosta sitä, eikä tämä ajo echoa sitä) — GitHub peittää
+# secretit lokista joka tapauksessa, mutta siihen ei nojata.
 
 name: Generoi musiikki
 
@@ -50,6 +73,16 @@ on:
           "kaikki" koko paletille.
         required: true
         default: 'kaikki'
+      moottori:
+        description: >-
+          Musiikkimoottori: lyria = Google Lyria 3.5 (pelin raidat,
+          pääte -lyria; omistajan linjaus 5.9.2026 "kaikki musiikki
+          lyrialla"), eleven = ElevenLabs Music (vertailuraidat
+          paljaalla nimellä).
+        required: false
+        type: choice
+        default: 'lyria'
+        options: ['lyria', 'eleven']
 
 permissions:
   contents: write
@@ -69,29 +102,31 @@ jobs:
         with:
           node-version: 22
 
+      # Puuttuva salaisuus tulisi muuten vastaan vasta 401:nä — ja vasta
+      # sen jälkeen, kun ensimmäinen kutsu on jo maksettu. Arvoa ei
+      # tulosteta, vain onko se asetettu.
       - name: Tarkista että avain on tallessa
         env:
-          AVAIN: ${{ secrets.ELEVEN_API_KEY }}
+          AVAIN: ${{ inputs.moottori == 'eleven' && secrets.ELEVEN_API_KEY || secrets.GOOGLE_API_KEY }}
         run: |
           set -euo pipefail
           if [ -z "$AVAIN" ]; then
-            echo "::error::ELEVEN_API_KEY-salaisuutta ei löydy tästä reposta."
+            echo "::error::${{ inputs.moottori == 'eleven' && 'ELEVEN_API_KEY' || 'GOOGLE_API_KEY' }}-salaisuutta ei löydy tästä reposta."
             echo "Lisää se: Settings > Secrets and variables > Actions."
             exit 1
           fi
           echo "Avain löytyy."
 
-      # Kuiva ajo ensin: väärä raita-avain paljastuu ennen kuin
-      # yhtäkään maksullista kutsua on tehty.
+      # Kuiva ajo ensin: väärä raita-avain ja väärä moottori paljastuvat
+      # ennen kuin yhtäkään maksullista kutsua on tehty.
       - name: Kuiva ajo (mitä generoitaisiin)
-        env:
-          ELEVEN_KUIVA: '1'
-        run: node tools/generoi-musiikki.mjs ${{ inputs.raidat }}
+        run: node tools/generoi-musiikki.mjs ${{ inputs.raidat }} --moottori ${{ inputs.moottori || 'lyria' }} --kuiva
 
       - name: Generoi musiikki
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
-        run: node tools/generoi-musiikki.mjs ${{ inputs.raidat }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: node tools/generoi-musiikki.mjs ${{ inputs.raidat }} --moottori ${{ inputs.moottori || 'lyria' }}
 
       - name: Committoi tuotos omalle haaralleen
         run: |
@@ -105,6 +140,8 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           haara="claude/musiikki-${{ github.run_number }}"
           git checkout -b "$haara"
-          git commit -m "Musiikki: ${{ inputs.raidat }}"
+          git commit -m "Musiikki (${{ inputs.moottori || 'lyria' }}): ${{ inputs.raidat }}"
           git push -u origin "$haara"
           echo "Valmis. Haara: $haara — kuuntele raidat ja tee PR."
+          echo "Kun PR on mainissa ja vie-aanet.yml on vienyt raidat ämpärin audio/-kansioon,"
+          echo "käännä js/media.js MUSIIKIN_PAATE = '-lyria'."

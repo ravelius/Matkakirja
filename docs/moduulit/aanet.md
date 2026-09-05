@@ -122,6 +122,11 @@ inputit `laji` ja `maara`, samat salaisuudet kuin musiikkiajolla).
    `.github/workflows/vie-aanet.yml` vie sen ämpärin `audio/`-kansioon.
    Peli osaa molemmat polut.
 
+Järjestys koskee **siirtymä- ja linssiraitoja**: juuri niille peli
+kokeilee ensin `aanet/`-polkua. Musiikkipaletti kulkee aina kohdan 2
+kautta, koska sen soittokohdat pyytävät `assets/audio/`-polkua eivätkä
+kysy `aanet/`-kansiota lainkaan (ks. Generointi → Musiikkipaletti).
+
 Puuttuva raita ei aiheuta virhettä: soitto lähtee optimistina ja 404
 merkitsee lajin hiljaiseksi. Kehittäjävalikon rivi "siirtymämusiikki"
 kertoo, mitkä raidat löytyvät; kytkin "varamusiikki" (oletus pois)
@@ -129,13 +134,22 @@ soittaa syntetisoidun kuvion vain, jos oikea raita puuttuu.
 
 ## Generointi
 
-Raidat generoidaan Google Lyria 3.5:llä (omistaja kuunteli ElevenLabs
-Musicin ja Lyrian raidat rinnakkain ja valitsi Lyrian 5.9.2026:
-"ota lyra musiikit käyttöön peliin ja poista vanha"; ElevenLabs jää
-vertailumoottoriksi `--moottori eleven`) työkalulla
-`tools/generoi-siirtymamusiikki.mjs`. Lyrian raidat viedään päätteellä
-`-lyria`, ja peli soittaa ne; ElevenLabsin paljasnimiset raidat eivät
-soi pelissä. Promptit ovat työkalussa
+**KAIKKI MUSIIKKI LYRIALLA (omistajan linjaus 5.9.2026 illalla,
+sanatarkasti: *"kaikki musiikki lyrialla"*).** Aiemmin samana päivänä
+omistaja kuunteli ElevenLabs Musicin ja Lyria 3.5:n siirtymäraidat
+rinnakkain ja valitsi Lyrian (*"ota lyra musiikit käyttöön peliin ja
+poista vanha"*); iltalinjaus laajensi saman koko musiikkiin, myös
+musiikkipalettiin. Molemmat työkalut ottavat siis
+`--moottori lyria|eleven`, **oletus `lyria`**, ja jakavat saman
+Lyria-haun moduulista `tools/lyria.mjs` (osoite, malli `lyria-3.5`,
+kehotteen muoto, `-lyria`-pääte, avaimen luku `GOOGLE_API_KEY`).
+ElevenLabs jää vertailumoottoriksi: sen raidat kirjoitetaan paljaalla
+nimellä eivätkä ne soi pelissä.
+
+### Siirtymä- ja linssiraidat
+
+Työkalu `tools/generoi-siirtymamusiikki.mjs`. Lyrian raidat viedään päätteellä
+`-lyria`, ja peli soittaa ne. Promptit ovat työkalussa
 vakioina, yhteinen tyylilause kaikille lajeille.
 
 ```
@@ -181,6 +195,79 @@ API-avain vain ympäristömuuttujana, ei koskaan repoon eikä lokiin.
 Koneellinen tarkistus ei kuule saumaa: raidat **kuunnellaan** ajon
 jälkeen, ja loopin on kierrettävä ilman naksahdusta.
 Leikkauslaskennan vartija on `tests/siirtymaraidat.test.mjs`.
+
+### Musiikkipaletti
+
+Neljä raitaa, jotka soivat muualla kuin siirtymissä:
+
+| avain | tiedosto (Lyria) | mitä | looppi |
+|---|---|---|---|
+| `pohja` | `musa-pohja-lyria.mp3` | pohjavire ambienssin alla, 80 s | kyllä |
+| `visa` | `musa-visa-2-lyria.mp3` | tietovisan tikittävä uteliaisuus, 45 s | kyllä |
+| `aarre` | `musa-aarre-lyria.mp3` | tavallisen aarteen lämmin aihe, 10 s | ei |
+| `paaaarre` | `musa-paaaarre-lyria.mp3` | sama aihe juhlavampana, 13 s | ei |
+
+Aarre ja pääaarre ovat **pari**: sama sävelaihe kahdessa asussa. Jos
+toinen generoidaan uusiksi, generoi molemmat — muuten sukulaisuus
+katoaa. ElevenLabsilla samat nimet ilman `-lyria`-päätettä.
+
+```
+node tools/generoi-musiikki.mjs kaikki
+node tools/generoi-musiikki.mjs pohja visa --kuiva
+node tools/generoi-musiikki.mjs aarre paaaarre --moottori eleven
+```
+
+| lippu | merkitys |
+|---|---|
+| (paljas argumentti) | raitojen avaimet välilyönnein tai `kaikki` |
+| `--moottori lyria\|eleven` | oletus `lyria` |
+| `--kuiva` | ei API-kutsua: tulostaa kohdetiedostot, kestot ja promptit (myös `ELEVEN_KUIVA=1`) |
+
+**Looppia EI leikata.** Siirtymäraidat ommellaan ffmpegillä
+saumattomiksi; paletti ei kulje sen koneiston läpi, vaan mallin tuotos
+menee levylle sellaisenaan. Syy on kolmiosainen: kaksi neljästä
+raidasta ei ole looppi lainkaan (aarreaiheilla on alku ja loppu), kaksi
+looppiraitaa soivat pelin hiljaisimmalla tasolla ja pyytävät sauman jo
+promptissa, ja kelvottoman paletin raidan päättää kuuntelija PR:ssä
+eikä mittari. Jos sauma joskus naksahtaa, oikea korjaus on ajaa raita
+saman leikkurin läpi — ei rakentaa toista.
+
+**Vienti kulkee repon kautta, ei suoraan ämpäriin.** Raita
+kirjoitetaan `assets/audio/`-kansioon, ajo committoi sen haaralle
+`claude/musiikki-<ajonumero>`, ja kun PR on mainissa,
+`.github/workflows/vie-aanet.yml` vie tiedoston ämpärin
+`audio/`-kansioon. Juuri sitä polkua peli hakee: `js/media.js`
+`aaniUrl` kääntää `assets/audio/x.mp3` → `<ämpäri>/audio/x.mp3`.
+Ämpärin `aanet/`-kansio olisi paletille umpikuja — yksikään paletin
+soittokohta ei kysy sitä (toisin kuin siirtymäraidat, jotka kokeilevat
+ensin `aanet/`).
+
+Ajo: `.github/workflows/generoi-musiikki.yml` (workflow_dispatch,
+inputit `raidat` ja `moottori`). Salaisuus on `GOOGLE_API_KEY`
+(Lyria) tai `ELEVEN_API_KEY` (vertailu); avain vain
+ympäristömuuttujana, ei koskaan repoon eikä lokiin. Vartija:
+`tests/musiikkipaletti.test.mjs`.
+
+### Pelin kytkin: `MUSIIKIN_PAATE`
+
+Paletin neljä soittokohtaa — pohjavire (`js/ambience-stream.js`),
+visamusiikki (`js/aani-ehdokkaat.js`) ja kaksi aarreaihetta
+(`js/ui.js`) — sekä työhuoneen kuuntelulehti
+(`js/tyohuone-musiikki.js`) rakentavat polkunsa apurilla `musaPolku`
+(`js/media.js`). Apuri liittää tunnukseen vakion `MUSIIKIN_PAATE`,
+joka on **`''`**, kunnes Lyrian raidat ovat ämpärissä.
+
+> **Kun työnkulku `Generoi musiikki` on ajettu moottorilla `lyria`,
+> PR on mergetty ja `HEAD` vastaa 200:lla osoitteisiin
+> `<ämpäri>/audio/musa-pohja-lyria.mp3`, `…/musa-visa-2-lyria.mp3`,
+> `…/musa-aarre-lyria.mp3` ja `…/musa-paaaarre-lyria.mp3`, käännä
+> `js/media.js`: `MUSIIKIN_PAATE = '-lyria'`.** Se on yksi rivi ja
+> kääntää kaikki neljä polkua sekä kuuntelulehden kerralla; paluu
+> vanhaan on saman rivin vaihto takaisin.
+
+Ennen kytkimen kääntämistä vanhat ElevenLabs-raidat soivat. Näin
+paletti ei ehdi olla hetkeäkään hiljainen: puuttuva mp3 ei riko
+äänipolkua, mutta hiljainen peli näyttää rikkinäiseltä.
 
 ## Kehittäjän voimakkuussäätimet (omistaja 3.9.2026)
 

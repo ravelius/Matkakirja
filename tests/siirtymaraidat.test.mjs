@@ -28,9 +28,10 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import {
-  GENEROITAVA_MS, LAJIT, hiljaisuusVirheet, kestoRajat, lahdeMs, looppiLeikkaus,
+  GENEROITAVA_MS, LAJIT, MOOTTORIT, hiljaisuusVirheet, kestoRajat, lahdeMs, looppiLeikkaus,
   looppiSuodatin, raidanTiedosto, tulkitseArgumentit, tulkitseEbur128, tulkitseLoudnorm, valitseLajit,
 } from '../tools/generoi-siirtymamusiikki.mjs';
+import * as lyria from '../tools/lyria.mjs';
 
 const TYOKALU = readFileSync(
   new URL('../tools/generoi-siirtymamusiikki.mjs', import.meta.url), 'utf8',
@@ -155,6 +156,25 @@ test('"kaikki" on vain siirtymäryhmä — linssiraita pyydetään nimeltä', ()
   for (const nimi of valitseLajit('kaikki')) assert.equal(LAJIT[nimi].ryhma, 'siirtyma');
   assert.equal(LAJIT.keksinnot.ryhma, 'linssi');
   assert.ok(!valitseLajit('kaikki').includes('keksinnot'));
+});
+
+test('Lyria-haku tulee yhteisestä moduulista eikä kopiona', () => {
+  /*
+   * Omistajan linjaus 5.9.2026 illalla: *"kaikki musiikki lyrialla"* —
+   * myös musiikkipaletti (tools/generoi-musiikki.mjs). Kaksi kopiota
+   * Gemini API:n vastausrakenteen etsinnästä olisi kaksi paikkaa,
+   * jotka pitäisi muistaa korjata yhdessä, joten haku asuu
+   * moduulissa tools/lyria.mjs ja molemmat työkalut tuovat sen.
+   * Identiteettivertailu: kopio olisi eri funktio, vaikka koodi olisi
+   * merkki merkiltä sama.
+   */
+  assert.equal(raidanTiedosto, lyria.raidanTiedosto);
+  assert.deepEqual(MOOTTORIT, lyria.MOOTTORIT);
+  assert.match(TYOKALU, /from '\.\/lyria\.mjs'/);
+  assert.doesNotMatch(TYOKALU, /generativelanguage\.googleapis\.com/,
+    'Lyrian osoite on kopioitu takaisin työkaluun — se kuuluu tools/lyria.mjs:ään');
+  assert.doesNotMatch(TYOKALU, /async function haeLyriasta/,
+    'työkalulla on taas oma kopio Lyria-hausta');
 });
 
 test('--kuiva ja --ei-vientia luetaan lipuiksi', () => {

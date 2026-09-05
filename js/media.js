@@ -113,6 +113,43 @@ export function aaniUrl(polku) {
 }
 
 /*
+ * MUSIIKKIPALETIN MOOTTORIPÄÄTE — YKSI KYTKIN NELJÄLLE POLULLE
+ *
+ * Omistajan linjaus 5.9.2026 illalla, sanatarkasti: *"kaikki musiikki
+ * lyrialla"*. Siirtymä- ja linssiraidat vaihtuivat Lyria 3.5:een jo
+ * aiemmin samana päivänä; paletti (pohjavire, visamusiikki, kaksi
+ * aarreaihetta) generoidaan Lyrialla omalla päätteellä `-lyria`, jottei
+ * vanhoja ElevenLabs-raitoja ylikirjoiteta ennen kuin uudet on kuultu
+ * (tools/generoi-musiikki.mjs, tools/lyria.mjs `raidanTiedosto`).
+ *
+ * NELJÄ SOITTOKOHTAA, YKSI VAKIO. Pohjavire (js/ambience-stream.js),
+ * visamusiikki (js/aani-ehdokkaat.js), kaksi aarreaihetta (js/ui.js) ja
+ * työhuoneen kuuntelulehti (js/tyohuone-musiikki.js) rakentavat polkunsa
+ * kaikki `musaPolku`-apurilla. Vaihto on siis yhden merkkijonon vaihto
+ * eikä neljän tiedoston etsintä — ja paluu vanhaan yhtä helppo.
+ *
+ * KÄÄNNÄ NÄIN: kun .github/workflows/generoi-musiikki.yml on ajettu
+ * moottorilla `lyria` ja raidat vastaavat ämpäristä (HTTP 200
+ * osoitteista `<ämpäri>audio/musa-pohja-lyria.mp3`,
+ * `…/musa-visa-2-lyria.mp3`, `…/musa-aarre-lyria.mp3` ja
+ * `…/musa-paaaarre-lyria.mp3` — työnkulun PR mergetään ensin, koska
+ * vie-aanet.yml vie ne vasta silloin), vaihda arvoksi '-lyria'.
+ * Ennen sitä arvo on '' ja vanhat raidat soivat: puuttuva tiedosto
+ * hiljentäisi paletin, ja hiljainen peli näyttää rikkinäiseltä.
+ */
+export const MUSIIKIN_PAATE = '';
+
+/**
+ * Musiikkipaletin raidan polku repossa: `musaPolku('musa-pohja')` →
+ * `assets/audio/musa-pohja.mp3` (tai `-lyria`, ks. MUSIIKIN_PAATE).
+ * Soitto-osoite lasketaan tästä `aaniUrl`/`aaniOsoite`-funktiolla,
+ * eli ämpärin `audio/`-kansiosta.
+ */
+export function musaPolku(nimi) {
+  return `assets/audio/${nimi}${MUSIIKIN_PAATE}.mp3`;
+}
+
+/*
  * UUSIKSI ÄÄNITETYT tiedostot. Ämpäri ja välimuistit (selaimen HTTP,
  * r2.dev-reuna, sw:n äänikori) pitävät ääntä osoitteen perusteella
  * jopa 30 vrk, joten SAMALLA NIMELLÄ korvattu äänite jäisi pelaajilla

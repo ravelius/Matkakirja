@@ -56,15 +56,20 @@
  * MISTÄ RAIDAT TULEVAT
  * ------------------------------------------------------------------
  *
- * Siirtyma- ja linssiraidat ovat Google Lyria 3.5:n (omistajan valinta
- * 5.9.2026, paate -lyria), muu musiikki ElevenLabs Music -APIlla
- * (tools/generoi-siirtymamusiikki.mjs ja tools/generoi-musiikki.mjs),
- * tehosteet tools/generoi-tehosteet.mjs; ajot tehdään Actionsissa.
+ * KAIKKI MUSIIKKI ON GOOGLE LYRIA 3.5:N (omistajan linjaus 5.9.2026,
+ * sanatarkasti: *"kaikki musiikki lyrialla"*; paate -lyria). Siirtyma-
+ * ja linssiraidat tekee tools/generoi-siirtymamusiikki.mjs, paletin
+ * tools/generoi-musiikki.mjs — molemmat samalla haulla (tools/lyria.mjs)
+ * ja kummassakin ElevenLabs jaa vertailumoottoriksi (--moottori eleven,
+ * paljas nimi, ei soi pelissa). Tehosteet tools/generoi-tehosteet.mjs;
+ * ajot tehdaan Actionsissa. Paletin rivit seuraavat js/media.js:n
+ * MUSIIKIN_PAATE-kytkinta, joten lehti ei voi kuunnella eri tiedostoa
+ * kuin peli soittaa.
  * Tämä moduuli ei tunne avaimia eikä generoi mitään — se vain
  * soittaa sen, mikä ämpärissä on.
  */
 import { html } from './ui-apurit.js';
-import { AANI_JUURI, aaniUrl } from './media.js';
+import { AANI_JUURI, aaniUrl, musaPolku } from './media.js';
 import { MUSIIKKILAJIT } from './siirtymamusiikki.js';
 import { sfx } from './sound.js';
 import { hiljennaAmbienssi, palautaAmbienssi } from './ambience-stream.js';
@@ -116,33 +121,39 @@ const LAJIEN_TIEDOT = {
  * MUSIIKKIPALETTI
  * ------------------------------------------------------------------
  *
- * Neljä raitaa, jotka menevät ElevenLabsista repoon sellaisenaan
+ * Neljä raitaa, jotka menevät moottorilta repoon sellaisenaan
  * (tools/generoi-musiikki.mjs) ja ämpäriin vie-aanet.yml:n mukana.
  * Soitto-osoite lasketaan aina aaniUrl:llä, joka valitsee ämpärin tai
  * repon polun peilin tilan mukaan (js/media.js).
  *
- * Visan raita on musa-visa-2.mp3 eikä musa-visa: vanhaa visamusiikkia
+ * TIEDOSTONIMI TULEE KYTKIMESTÄ. Rivit antavat vain raidan tunnuksen
+ * (`musa-pohja`), ja js/media.js `musaPolku` liittää siihen
+ * moottoripäätteen (MUSIIKIN_PAATE, '' tai '-lyria'). Näin lehti
+ * kuuntelee tasan niitä tiedostoja, jotka pelikin soittaa — omistajan
+ * linjaus 5.9.2026: *"kaikki musiikki lyrialla"*.
+ *
+ * Visan raita on musa-visa-2 eikä musa-visa: vanhaa visamusiikkia
  * ei korvattu vaan sen rinnalle tehtiin uusi (tools/generoi-musiikki.mjs).
  */
 const PALETTI = [
   {
     id: 'pohja',
-    tiedosto: 'musa-pohja.mp3',
+    tunnus: 'musa-pohja',
     kaytto: 'Pohjavire, joka soi äänimaiseman alla kaikkialla pelissä (−19 dB ambienssiin).',
   },
   {
     id: 'visa',
-    tiedosto: 'musa-visa-2.mp3',
+    tunnus: 'musa-visa-2',
     kaytto: 'Kysymyskortin tikittävä uteliaisuus; looppi visan ajan.',
   },
   {
     id: 'aarre',
-    tiedosto: 'musa-aarre.mp3',
+    tunnus: 'musa-aarre',
     kaytto: 'Tavallisen aarteen lämmin aihe paljastuskortin päällä.',
   },
   {
     id: 'paaaarre',
-    tiedosto: 'musa-paaaarre.mp3',
+    tunnus: 'musa-paaaarre',
     kaytto: 'Sama sävelaihe koko kamarikokoonpanolla pääaarteen paljastuksessa.',
   },
 ];
@@ -232,7 +243,7 @@ export const MUSIIKKISIVUN_RAIDAT = [
     // Paletin raidat ovat repon omia: ämpäriosoite on aaniUrl:n
     // audio/-polku, joka lasketaan vasta soitettaessa.
     ampari: null,
-    oma: `assets/audio/${raita.tiedosto}`,
+    oma: musaPolku(raita.tunnus),
   })),
   ...Array.from({ length: KOHAHDUKSIA }, (_, i) => ({
     id: `kohahdus-${i + 1}`,

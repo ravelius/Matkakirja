@@ -10,6 +10,9 @@
 // tarkoittaa, että ilman valintaa soi syntetisoitu ambienssi.
 
 import { PACKS } from './pack.js';
+// Musiikkipaletin polku tulee yhdestä paikasta (js/media.js
+// MUSIIKIN_PAATE), jotta moottorin vaihto on yhden kytkimen vaihto.
+import { musaPolku } from './media.js';
 
 const AVAIN = 'matkakirja-aanivalinnat';
 
@@ -211,9 +214,9 @@ export const EHDOKKAAT = {
      * tools/mittaa-aanet.mjs). Jos se kuulostaa liian hiljaiselta tai
      * kovalta, kerroin lisätään tähän muodossa #voima=1.2.
      */
-    oletus: 'assets/audio/musa-visa-2.mp3',
+    oletus: musaPolku('musa-visa-2'),
     ehdokkaat: [
-      { url: 'assets/audio/musa-visa-2.mp3', nimi: 'Tikittävä uteliaisuus — ElevenLabs-luuppi' },
+      { url: musaPolku('musa-visa-2'), nimi: 'Tikittävä uteliaisuus — pelin oma visaluuppi' },
       { url: 'https://cdn.freesound.org/previews/176/176134_334810-lq.mp3#voima=0.32', nimi: '6_drums_luangprabang.WAV — LukeIRL, CC BY' },
       { url: 'https://cdn.freesound.org/previews/713/713120_14632469-lq.mp3#voima=0.27', nimi: 'Arabialainen huilu — DYEKHO, CC0' },
       { url: 'https://cdn.freesound.org/previews/466/466570_197130-lq.mp3#voima=0.46', nimi: 'Kalimba-luuppi — CarlosCarty, CC BY' },
