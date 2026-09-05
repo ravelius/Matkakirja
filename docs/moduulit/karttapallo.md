@@ -1685,3 +1685,100 @@ stashaamalla tämä erä pois 5.9.2026): savuke-etusivupallo E4b ja E4e
 (kaupunkilehti ei ehdi auki kontin hitaudessa; pallolaattapyyntöjä
 mainissa 1 870, tässä erässä 1 765 — lähikuva ei siis lisännyt
 laattakuormaa).
+**Elävä liekkivalo, häipyvä havainnekuva ja vasen vuosipalkki (5.9.2026
+klo 00.45–00.50).** Omistaja työpöytäkaappauksesta, sanatarkasti:
+*"havainnekuvan pitää häipyä kun kartan animaatio alkaa. samoin
+valopallo tuli nyt jotenkin liikuen paikoilleen. saisiko valopallosta
+epäsäännöllisemmän ja elävämmän muotoisen ja niin että se sykkisi kuin
+tulen liekki? … valon syttyminenkin voisi olla animoitu niin että se
+hetken hehkuu pienempänä ja sitten laajenee. keskiosa saisi olla
+kirkkaampi ja sitten häipyä pidemmällä matkalla ja pehmeämmin, mutta
+logaritmisesti (tai ainakin melkein) aivan kuin oikea valo. valot
+voisivat myös olla hieman erilaisia keskenään varioiden kirkkautta,
+kokoa, värilämpötilaa ja muotoa. havainnekuvan teksti saisi olla vähän
+pienempi ja ehkä hieman tummempi. pitäisikö vuosiluvun jälkeen olla
+tähtisymboli? joku mikä sopisi tyylillisesti"* — ja klo 00.50:
+*"vuosipalkin voisi yläreinassa siirtää vasempaan laitaan mutta ei ihan
+kiinni."*
+
+- **LIUKUMISEN JUURISYY EI OLLUT LAMPPU VAAN TUMMENNUKSEN REIKÄ.**
+  Mitattu Chromiumilla 1400 × 900 (lamppujen ruutupaikat ja kalvon
+  liukuvärin keskipiste 150 näytettä): jokainen uusi lamppu ILMESTYI
+  täsmälleen ruudun keskelle (700, 478) eikä liikkunut omin voimin —
+  kirjaston html-kerros (globe.gl 2.46.2) tweenaa vain OLEMASSA olevan
+  merkin siirtymän, ja uusi saa paikkansa kerralla
+  (`!t.__currentTargetD ? applyPosition : tween`). Liikkuva valo oli
+  `siirraReika`n 700 ms:n rAF-liuku: kalvon kirkas aukko lipui edellisen
+  lampun kohdalta uuden kohdalle (mitattu (1007, 462) → (689, 410))
+  juuri kun uusi valo syttyi, ja tummalla pallolla se lukee valopallona,
+  joka tulee liikkuen paikoilleen. Nyt reikä siirtyy KERRALLA
+  (`PALLON_REIAN_LIUKU_MS = 0`), ja liike on lampun omassa
+  syttymisessä. Kameran oma jälkijättö (`AIKAJANAN_KAMERAN_JALKIJATTO_MS`
+  750 ms) on ennallaan: se on omistajan aiempi tilaus 5.9. illalta.
+- **VALO ON CANVAS-KERROS: js/aikajana-valo.js (uusi).** SVG-ympyröillä
+  ei voi tehdä kolmea pyydettyä asiaa (epäsäännöllinen reuna, liekin
+  syke, likimain käänteinen neliö), koska `radialGradient` interpoloi
+  pysäkkiensä välit lineaarisesti ja muoto on aina ympyrä. Moottori
+  pyytää moduulilta kolme asiaa — `lamppu(n)`, `tila(n, palaa,
+  nykyinen)`, `pura()` — ja lamppu on div, jonka sisällä on canvas.
+  Profiili on **I(r) = 1 / (1 + (r/r0)²)**, r0 = 0,20 × säde,
+  normalisoituna niin että laidalla arvo on tasan 0 (ei reunaviivaa):
+  kirkas ydin, pitkä pehmeä häntä, ja etäisyyden kaksinkertaistuminen
+  neljännestää intensiteetin (mitattu testissä 1,13× ihanteesta).
+  Profiili maalataan KERRAN valoa kohti offscreen-canvasiin 28
+  gradienttipysäkillä; kehyksessä tehdään kolme `drawImage`-vetoa
+  (häntä, epäsäännöllisen maskin läpi piirretty runko, kirkas ydin).
+  Vakiot: säde 49 px (= entinen kajo, MERKIN_SADE × KAJON_SUHDE),
+  ruutu 128 px, syttymä 300 ms hehku (koko 0,30, kirkkaus 1,35) +
+  900 ms laajeneminen ease-outilla, syke 0,8–1,6 Hz (säde ±7 %,
+  kirkkaus ±9 %, eri vaiheessa) ja muoto 2–4 kulmaharmonista + oma
+  value-noise. Variaatio siemennetään tapahtuman numerosta: kirkkaus
+  ±15 %, koko ±20 %, värilämpötila lämpimästä oranssista (n. 1 800 K)
+  vaaleaan kellertävään (n. 2 700 K), harmoniat. EI KIRJASTOA:
+  arpoja, kohina ja profiili ovat kymmenen riviä omaa koodia.
+- **Suorituskyky mitattu** Chromiumilla (swiftshader, 1400 × 900,
+  kerroksen oma `piirra` 120 kehyksen keskiarvona): **1 palava lamppu
+  0,03–0,05 ms, kaikki 25 palavaa 0,6–1,0 ms kehystä kohti** eli 2–3 %
+  30 fps:n budjetista ohjelmistorasteroijalla. Piirto on kuristettu
+  33 ms:iin (`VALON_PIIRTOVALI_MS`), sammunutta ei piirretä ja
+  kehyskatto on 25. Reduced motion: silmukkaa ei käynnistetä lainkaan,
+  valo on staattinen täysi profiili ja jälki himmenee ilman liukua.
+- **VAIN PALLOLAUTA.** Tasokartan (`?lauta=kartta`) lamput ovat kartan
+  omassa svg:ssä laudan koordinaatistossa ja skaalautuvat zoomin mukana
+  (`paivitaMittakaava`), joten yhteistä kerrosta ei ole; vanha kartta
+  suljetaan aallossa 3B, joten liekki on pallon oma ja kartan lamput
+  jäävät ennalleen. Ilman canvas-tukea (esim. testien tynkäselain)
+  `lamppu()` palauttaa null ja pallolle piirtyy entinen neljän ympyrän
+  SVG-lamppu — linssi ei jää pimeäksi.
+- **Havainnekuva häipyy kameran mukana.** `tarkistaKameraEnnakko`
+  kutsuu `haivytaPaneeli()`n samassa lauseessa, jossa ennakoiva ajo
+  lähtee (n. 1 840 ms ennen syttymistä): paneeli saa luokan `haipyy`
+  (opacity → 0, 600 ms ease, `PANEELIN_ENNAKKOHAIVYTYS_MS`), ja uusi
+  kuva nousee vasta syttymisen ristihäivytyksessä, joka poistaa luokan.
+  Tauko ja Alusta poistavat luokan, jottei paneeli jää näkymättömäksi
+  odottamaan syttymistä, jota ei tule. Mitattu selaimessa: 1 → 0,93
+  (67 ms) → 0,48 (201 ms) → 0,09 (406 ms) → 0 (666 ms).
+- **Havainnekuvan teksti** on 0,85 × entinen (`clamp(0,81rem, 2,04vw,
+  1,15rem)`, mitattu 1400 px:llä 21,6 → 18,4 px) ja sävy pergamentin
+  tummaa kultaa `#d7bd88` entisen lähes valkoisen `#f1e3c2` sijaan.
+  Erotin vuosiluvun jälkeen on PELIN OMA MERKKI ◈ — sama kuin etusivun
+  julisteen hiusviivakoristeessa (index.html `.juliste-viiva`) ja
+  unohdetun aarteen tunnuksena — pisteen `·` tilalla, kultaisena,
+  0,6em ja hieman kohotettuna. Merkki on yhtenä vakiona
+  (`AIKAJANAN_EROTIN`, js/aikajana.js), joten se vaihtuu yhdeltä
+  riviltä; ruudunlukija ohittaa sen (`aria-hidden`).
+- **Vuosipalkki vasempaan laitaan** (`.aikajana-ylarivi`): marginaali on
+  oma muuttujansa `--aikajana-ylarivi-marginaali` (1,25rem), pystysija
+  ennallaan (0,6rem). Mitattu 1400 × 900: palkin vasen laita 20 px
+  linssin reunasta. Puhelimella (`max-width: 640px`, mitattu 390 × 844)
+  palkki on 255 px leveä 374 px:n ruudulla eli lähes ruudun levyinen,
+  joten se jää KESKELLE kuten ennen (vara 59 px molemmin puolin).
+- Vartijat: tests/aikajana-valo.test.mjs (uusi, 19 väitettä: profiilin
+  monotonisuus ja käänteinen neliö, syttymisen vaiheet, sykkeen ja
+  muodon rajat, deterministinen siemenvariaatio, reduced motion,
+  kehysbudjetti, EI SIJAINNIN SIIRTYMÄÄ missään päässä, paneelin
+  häivytys, teksti ja erotin, vuosipalkin laita) sekä päivitetyt
+  tests/aikajana.test.mjs-vartiot. Kaappaukset 1400 × 900 Chromiumilla:
+  syttymisen alku (150 ms, pieni kirkas piste), täysi valo, kuusi eri
+  valoa rinnakkain (koko, kirkkaus ja värilämpötila vaihtelevat) ja
+  havainnekuva häivytyksen keskellä.

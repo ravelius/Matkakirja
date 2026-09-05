@@ -837,7 +837,7 @@ test('havainnekuvapaneelin ristihäivytyksessä on liikettä ja korkeus liukuu',
   // Ristihäivytys ajetaan linssin omalla kaarella, ei selaimen ease-oletuksella.
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio-sivu \{[\s\S]*?opacity var\(--aikajana-kesto\) var\(--aikajana-kaari\),\s*transform var\(--aikajana-kesto\) var\(--aikajana-kaari\);/);
   // Korkeus liukuu, mutta raahaus ei saa liukua perässä.
-  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio \{ transition: height var\(--aikajana-kesto\) var\(--aikajana-kaari\), width 180ms var\(--aikajana-kaari\); \}/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio \{\s*transition:\s*height var\(--aikajana-kesto\) var\(--aikajana-kaari\),\s*width 180ms var\(--aikajana-kaari\),/);
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio\.raahataan, \.aikajana-ilmio\.nipistetaan \{ transition: none; \}/);
 });
 
@@ -1208,7 +1208,8 @@ test('yläpalkki on vuosinumeroiden korkuinen: kosketuskorkeus purettu, napit ke
   const ylarivi = AIKAJANA_CSS.match(/\.aikajana-ylarivi \{[\s\S]*?\n\}/)[0];
   const pysty = ylarivi.match(/padding: ([\d.]+)rem/);
   assert.ok(pysty && Number(pysty[1]) <= 0.16, `ylärivin pystypehmuste ${pysty?.[1]}rem on liian iso`);
-  assert.match(AIKAJANA_CSS, /\.aikajana-ylarivi \{ gap: [\d.]+rem; padding: 0\.15rem/);
+  // Kapean ruudun sääntö on nyt monirivinen (palkki keskitetään takaisin).
+  assert.match(AIKAJANA_CSS, /\.aikajana-ylarivi \{\s*gap: [\d.]+rem;\s*padding: 0\.15rem/);
   // Kaksi otsikkoriviä eivät saa nostaa palkkia kellon yli.
   assert.match(AIKAJANA_CSS, /\.aikajana-otsikko \{[\s\S]*?line-height: 1\.1;/);
   assert.match(AIKAJANA_CSS, /\.aikajana-paikka \{[\s\S]*?line-height: 1\.15;/);

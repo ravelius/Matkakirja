@@ -138,6 +138,9 @@ const SHELL = [
   './js/packs/liput-paikalliset.js',
   './js/packs/lippu-tekijat.js',
   './js/aikajana.js',
+  // Aikajanan elävä liekkivalo (canvas-kerros, 5.9.2026): vain
+  // js/aikajana.js tuo tämän, joten se seuraa samaa polkua.
+  './js/aikajana-valo.js',
   './js/linssipuhe.js',
   './js/tiedeliite.js',
   './js/lyhty.js',

@@ -140,6 +140,10 @@ import { esilataaKuvat } from './ui-apurit.js';
 // Terävä tila pakotettuna ajon ajaksi (ks. pakotaLaatu). Moduuli on
 // kevyt: se tuo vain fokusmitat ja ui-apurit, ei Globe.gl:ää.
 import { pakotaPallonLaatu } from './pallo.js';
+// Elävä liekkivalo pallolaudan lampuksi (omistaja 5.9.2026 klo 00.45).
+// Koko piirto asuu omassa moduulissaan; tämä tiedosto vain pyytää
+// lampun, kertoo sen tilan ja purkaa kerroksen.
+import { luoLiekkivalot } from './aikajana-valo.js';
 import { avaaTiedeliite, suljeTiedeliite } from './tiedeliite.js';
 import { sytytaLyhdyt } from './lyhty.js';
 import { rajausTyyli } from './isoisan-valokuvat.js';
@@ -328,8 +332,13 @@ export const PALLON_REIAN_SADE_PX = MERKIN_SADE * REIAN_SUHDE;
  */
 export const PALLON_TUMMENNUS = 'rgba(10, 7, 5, 0.86)';
 export const PALLON_TUMMENNUS_KESKI = 'rgba(10, 7, 5, 0.35)';
-/** Reiän liuku lampusta toiseen (ms); reduced motion hyppää suoraan. */
-export const PALLON_REIAN_LIUKU_MS = 700;
+/**
+ * REIKÄ EI LIU'U (omistaja 5.9.2026 klo 00.45; ks. siirraReika).
+ * Liuku oli 700 ms, ja juuri se näkyi valopallona, joka tuli liikkuen
+ * paikoilleen. Luku jää nollaksi muistiin siitä, että paikanvaihto on
+ * TARKOITUKSELLA hetkellinen: liike on lampun omassa syttymisessä.
+ */
+export const PALLON_REIAN_LIUKU_MS = 0;
 
 /*
  * ── LÄHIKUVA JA ENNAKOIVA KAMERA PALLOLLA ─────────────────────────
@@ -531,6 +540,22 @@ const PANEELIN_DEKOODAUSKATTO_MS = 250;
  * vasta tämän jälkeen, jottei kumpikaan katkaise liukua kesken.
  */
 const PANEELIN_HAIVYTYS_MS = 700;
+/*
+ * ── HAVAINNEKUVA HÄIPYY, KUN KAMERA LÄHTEE ────────────────────────
+ *
+ * Omistaja 5.9.2026 klo 00.45, sanatarkasti: *"havainnekuvan pitää
+ * häipyä kun kartan animaatio alkaa."* Kamera lähtee kohti seuraavaa
+ * lamppua ennakoiden (AIKAJANAN_KAMERAN_ENNAKKO_MS ≈ 1 840 ms ennen
+ * syttymistä), ja siihen asti paneelissa on EDELLISEN pysäkin kuva:
+ * pallo liikkui kuvan alla, ja kuva jäi seisomaan väärän vuoden
+ * kohdalle. Nyt paneeli häipyy samalla hetkellä kun ajo alkaa, ja
+ * uusi kuva nousee vasta syttymisen ristihäivytyksessä (vaihdaPaneeli).
+ *
+ * HÄIVYTYS ON PANEELIN OMA LUOKKA eikä sivun, koska sivu vaihtuu juuri
+ * syttymishetkellä: luokka `haipyy` poistetaan uuden sivun myötä
+ * yhdestä paikasta, eikä kesken jäänyt häivytys voi jäädä päälle.
+ */
+export const PANEELIN_ENNAKKOHAIVYTYS_MS = 600;
 /** Raahaus alkaa vasta tämän liikkeen jälkeen; sitä lyhyempi on napautus. */
 export const PANEELIN_RAAHAUSKYNNYS = 6;
 /**
@@ -1010,6 +1035,18 @@ function vaihdaKorttikuva(kuva, osoite) {
 /** Soikioita perusmuodon päällä (yksi pohja + nämä). */
 export const VALOKEILAN_LOHKOT = 6;
 
+/*
+ * VUOSILUVUN JA OTSIKON EROTIN havainnekuvan alla (omistaja 5.9.2026
+ * klo 00.45: *"pitäisikö vuosiluvun jälkeen olla tähtisymboli? joku
+ * mikä sopisi tyylillisesti"*). Piste `·` on typografian oletus eikä
+ * pelin oma; koriste on PELIN OMA MERKKI ◈ — sama, joka on etusivun
+ * julisteen hiusviivakoristeessa (index.html .juliste-viiva) ja
+ * unohdetun aarteen tunnuksena (js/tokens.js star). Merkki on tässä
+ * yhtenä vakiona, jotta se on vaihdettavissa yhdeltä riviltä;
+ * kultainen sävy ja pieni koko tulevat css:stä (.aikajana-erotin).
+ */
+export const AIKAJANAN_EROTIN = '◈';
+
 /** Siemenluvusta toistettava arpoja (mulberry32). */
 function valokeilanArpoja(siemen) {
   let a = (Math.imul(Math.floor(Math.abs(siemen)) + 1, 2654435761) + 1013904223) >>> 0;
@@ -1439,6 +1476,8 @@ class Aikajana {
     this.pallolla = Boolean(this.lauta);
     /** Ruutukalvon kahva pallolla ({ pura, paivita }) ja reiän liuku. */
     this.kalvo = null;
+    /** Liekkivalojen kerros pallolla (js/aikajana-valo.js). */
+    this.liekit = null;
     this.reianLiuku = 0;
     this.reianMerkki = 0;
     this.reianPaikka = null;
@@ -1699,12 +1738,19 @@ class Aikajana {
     const linssit = this.lauta.linssit;
     // Liukuvärit (lamppu ja kajo) ovat css:n `url(#…)`-viittauksia,
     // eikä pallolla ole kartan svg:tä, jossa ne asuisivat: linssi tuo
-    // omat määrityksensä mukanaan piilotetussa svg:ssä.
+    // omat määrityksensä mukanaan piilotetussa svg:ssä. Tarvitaan yhä
+    // varapolulle (SVG-lamppu ilman canvasia).
     this.maaritykset = this.pallonMaaritykset();
+    /*
+     * ELÄVÄ LIEKKIVALO (js/aikajana-valo.js, omistaja 5.9.2026 klo
+     * 00.45). Kerros on ajon oma ja puretaan sen mukana; ilman canvasia
+     * `lamppu()` palauttaa null ja lamppu piirretään entisin ympyröin.
+     */
+    this.liekit = luoLiekkivalot({ reducedMotion: this.reducedMotion });
     this.valot = this.tapahtumat.map((t, i) => {
       if (t.paalu || !Number.isFinite(t.lat) || !Number.isFinite(t.lon)) return null;
       const valo = {
-        g: this.pallonLamppu(t), reika: null, x: t.x, y: t.y, lat: t.lat, lng: t.lon,
+        g: this.pallonLamppu(t, i), reika: null, i, x: t.x, y: t.y, lat: t.lat, lng: t.lon,
       };
       valo.datum = {
         avain: `${PALLON_OSA}:${i}`,
@@ -1752,13 +1798,32 @@ class Aikajana {
     return svg;
   }
 
-  /** Yksi lamppu pallon pinnalle: div, jossa kartan neljä ympyrää. */
-  pallonLamppu(t) {
+  /**
+   * Yksi lamppu pallon pinnalle.
+   *
+   * ENSISIJAISESTI ELÄVÄ LIEKKI (js/aikajana-valo.js): canvas, jonka
+   * moduuli piirtää — epäsäännöllinen muoto, liekin syke, syttymisen
+   * kaksi vaihetta ja likimain käänteisen neliön profiili. Elementti
+   * ITSE EI LIIKU: kirjasto asettaa sen pallon pinnan pisteeseen, eikä
+   * tässä ole yhtään sijainnin siirtymää (omistaja 5.9.2026 klo 00.45:
+   * *"valopallo tuli nyt jotenkin liikuen paikoilleen"*).
+   *
+   * VARAPOLKU ilman canvasia: entiset neljä ympyrää samoilla luokilla
+   * ja mitoilla, jolloin css hoitaa asun kuten ennenkin.
+   */
+  pallonLamppu(t, i = 0) {
     const laita = MERKIN_SADE * KAJON_SUHDE;
     const kehys = solmu('div', 'aikajana-valo aikajana-valo-pallolla');
     kehys.setAttribute('role', 'button');
     kehys.setAttribute('aria-label', `${t.vuosi}: ${t.otsikko}`);
     kehys.title = `${t.vuosi}: ${t.otsikko}${t.henkilo ? `, ${t.henkilo}` : ''}`;
+    const liekki = this.liekit?.lamppu?.(i);
+    if (liekki) {
+      liekki.className = 'aikajana-valo-liekki';
+      liekki.setAttribute('aria-hidden', 'true');
+      kehys.appendChild(liekki);
+      return kehys;
+    }
     const svg = el('svg', {
       viewBox: `${-laita} ${-laita} ${2 * laita} ${2 * laita}`,
       width: 2 * laita,
@@ -1775,45 +1840,40 @@ class Aikajana {
   }
 
   /**
-   * REIKÄ SEURAA NYKYISTÄ LAMPPUA. Tasokartan maskissa on reikä
-   * jokaiselle palavalle lampulle; CSS-kalvolla reikiä on yksi, joten
-   * se liukuu lampusta toiseen (KAIKKI LIIKE ANIMOIDAAN). `valo === null`
-   * palauttaa tasaisen tummennuksen (Alusta).
+   * REIKÄ ON SIELLÄ, MISSÄ LAMPPU — EI LIUKUA (omistaja 5.9.2026 klo
+   * 00.45, sanatarkasti: *"samoin valopallo tuli nyt jotenkin liikuen
+   * paikoilleen"*).
+   *
+   * === LIUKUMISEN JUURISYY (mitattu Chromiumilla 1400 x 900) ===
+   *
+   * Lampun ELEMENTTI ei liikkunut: se on kirjaston CSS2D-merkki, ja
+   * mittauksessa jokainen uusi lamppu ilmestyi täsmälleen ruudun
+   * keskelle (700, 478) eikä siirtynyt syttymisen jälkeen omin voimin.
+   * Liikkuva valo oli TUMMENNUKSEN REIKÄ: kalvon kirkas aukko
+   * (radial-gradient ruutupisteessä) liukui edellisen lampun kohdalta
+   * uuden kohdalle 700 ms:n rAF-liu'ulla — tummalla pallolla se lukee
+   * VALOPALLONA, joka lipuu paikoilleen juuri kun uusi valo syttyy.
+   * Mitattu jakso: reikä (1007, 462) → (689, 410) samalla kun uusi
+   * lamppu oli jo palanut kaksi kehystä keskellä ruutua.
+   *
+   * Nyt reikä siirtyy KERRALLA uuden lampun kohdalle syttymishetkellä.
+   * Siirtymä ei jää kovaksi leikkaukseksi, koska juuri samalla
+   * hetkellä alkaa lampun oma syttymisanimaatio (js/aikajana-valo.js:
+   * pieni kirkas hehku, joka laajenee 1,2 sekunnissa) — liike on
+   * valossa itsessään, ei sen paikassa.
+   *
+   * `valo === null` palauttaa tasaisen tummennuksen (Alusta).
    */
   siirraReika(valo) {
     if (!this.pallolla || !this.kalvo?.paivita) return;
+    // Vanha liuku (jos jokin versio ehti käynnistää sellaisen) pois:
+    // merkki nousee, jolloin kesken oleva kehys palaa heti.
     cancelAnimationFrame(this.reianLiuku);
-    /*
-     * MERKKI EIKÄ PELKKÄ PERUUTUS: kesken oleva liuku on peruttava
-     * varmasti myös silloin, kun cancelAnimationFrame ei ehdi (Alusta
-     * pyyhkii reiän samalla kehyksellä, jolla edellinen liuku vielä
-     * odottaa vuoroaan) — sama kuvio kuin paneelin korkeuslukossa.
-     */
-    const merkki = (this.reianMerkki ?? 0) + 1;
-    this.reianMerkki = merkki;
+    this.reianLiuku = 0;
+    this.reianMerkki = (this.reianMerkki ?? 0) + 1;
     const maali = valo ? { lat: valo.lat, lng: valo.lng, sade: PALLON_REIAN_SADE_PX } : null;
-    const alku = this.reianPaikka;
     this.reianPaikka = maali;
-    if (!maali || !alku || this.reducedMotion) { this.kalvo.paivita(maali); return; }
-    // Lyhin matka pituuspiirillä: kaari ei saa kiertää palloa väärin päin.
-    const dLng = ((maali.lng - alku.lng + 540) % 360) - 180;
-    // Aika luetaan KEHYKSEN omasta leimasta (ensimmäinen kehys on
-    // nolla): rAF:n kello ei ole kaikkialla sama kuin performance.now.
-    let t0 = null;
-    const askel = (nyt) => {
-      if (merkki !== this.reianMerkki) return;
-      if (t0 === null) t0 = nyt;
-      const t = Math.max(0, Math.min(1, (nyt - t0) / PALLON_REIAN_LIUKU_MS));
-      // Pehmeä lähtö ja pysähdys (sama tuntuma kuin kameran ajoilla).
-      const p = t < 0.5 ? 2 * t * t : 1 - ((-2 * t + 2) ** 2) / 2;
-      this.kalvo?.paivita?.({
-        lat: alku.lat + (maali.lat - alku.lat) * p,
-        lng: alku.lng + dLng * p,
-        sade: PALLON_REIAN_SADE_PX,
-      });
-      if (t < 1) this.reianLiuku = requestAnimationFrame(askel);
-    };
-    this.reianLiuku = requestAnimationFrame(askel);
+    this.kalvo.paivita(maali);
   }
 
   /**
@@ -1826,6 +1886,9 @@ class Aikajana {
     if (!valo) return;
     valo.g.classList.toggle('palaa', palaa);
     valo.g.classList.toggle('nykyinen', nykyinen);
+    // Liekkikerros piirtää saman tilan canvasiin (js/aikajana-valo.js);
+    // luokat jäävät, koska moottori lukee niistä lampun tilan.
+    this.liekit?.tila(valo.i, palaa, nykyinen);
     valo.reika?.classList.toggle('reika-palaa', palaa);
     valo.reika?.classList.toggle('reika-nykyinen', nykyinen);
     // Pallolla reikiä on yksi ja se on nykyisen lampun kohdalla.
@@ -1995,7 +2058,24 @@ class Aikajana {
     const eta = aikaSeuraavaan(this.tila, this.tapahtumat, tahti, AIKAJANAN_KAMERAN_ENNAKKO_MS + AIKAJANA_ALIASKEL_MS);
     if (!Number.isFinite(eta)) return;
     this.kameraKohde = kohde;
+    // Havainnekuva häipyy SAMALLA hetkellä kuin kamera lähtee
+    // (omistaja 5.9.2026 klo 00.45; ks. PANEELIN_ENNAKKOHAIVYTYS_MS).
+    this.haivytaPaneeli();
     this.ajaPysakille(kohde, Math.max(AIKAJANAN_KAMERAN_POHJA_MS, eta + AIKAJANAN_KAMERAN_JALKIJATTO_MS));
+  }
+
+  /**
+   * HAVAINNEKUVA POIS KAMERAN LÄHTIESSÄ. Luokka häivyttää koko
+   * paneelin (kuva ja sen alla oleva "vuosi ◈ otsikko") pehmeästi
+   * nollaan; uusi sivu poistaa luokan syttymishetkellä (vaihdaPaneeli),
+   * jolloin ristihäivytys nostaa kuvan takaisin.
+   *
+   * Reduced motionissa kamera ei aja ennakoiden, joten tätä ei siellä
+   * kutsuta lainkaan.
+   */
+  haivytaPaneeli() {
+    if (!this.paneeli || this.paneeli.hidden || this.reducedMotion) return;
+    this.paneeli.classList.add('haipyy');
   }
 
   /**
@@ -2297,6 +2377,9 @@ class Aikajana {
     // Pysäytetty kello ei ole matkalla mihinkään: karuselli palaa.
     this.peruEnnakko();
     this.saadaMusiikki();
+    // Eikä havainnekuva jää häivytettynä odottamaan syttymistä, joka
+    // ei tauolla tule (ks. haivytaPaneeli).
+    this.paneeli?.classList.remove('haipyy');
     cancelAnimationFrame(this.raf);
     this.raf = 0;
     this.taukoNappi.textContent = this.loppu ? 'Loppu' : 'Jatka';
@@ -2316,6 +2399,7 @@ class Aikajana {
     // Pallolla tummennus palaa tasaiseksi: yksikään lamppu ei ole nykyinen.
     this.siirraReika(null);
     this.paneeli.hidden = true;
+    this.paneeli.classList.remove('haipyy');
     this.paneeli.replaceChildren();
     // Korkeuslukko pois: tyhjä paneeli ei saa jäädä vanhaan mittaansa.
     this.paneelinKorkeusMerkki = (this.paneelinKorkeusMerkki ?? 0) + 1;
@@ -2942,7 +3026,26 @@ class Aikajana {
        * maskaudu kuvan mukana.
        */
       const nimi = solmu('div', 'aikajana-ilmiokuvateksti');
-      nimi.append(solmu('span', 'aikajana-ilmiokuvateksti-otsikko', `${t.vuosi} · ${t.otsikko}`));
+      /*
+       * VUOSI ◈ OTSIKKO (omistaja 5.9.2026 klo 00.45: teksti *"vähän
+       * pienempi ja ehkä hieman tummempi"*, ja erottimeksi tyyliin
+       * sopiva merkki). Erotin on oma elementtinsä, jotta se saa oman
+       * kokonsa ja kultaisen sävynsä ilman että vuosi ja otsikko
+       * muuttuvat; merkki tulee vakiosta AIKAJANAN_EROTIN.
+       */
+      const otsikko = solmu('span', 'aikajana-ilmiokuvateksti-otsikko');
+      const erotin = solmu('span', 'aikajana-erotin', AIKAJANAN_EROTIN);
+      // Koriste ei ole tekstiä: ruudunlukija lukee "1769 Höyrykone".
+      erotin.setAttribute('aria-hidden', 'true');
+      // Kolme elementtiä eikä tekstisolmuja: väli tulee css:n
+      // marginaalista (.aikajana-erotin), jolloin sitä voi säätää
+      // vaihtamatta merkkiä.
+      otsikko.append(
+        solmu('span', 'aikajana-ilmiokuvateksti-vuosi', String(t.vuosi)),
+        erotin,
+        solmu('span', 'aikajana-ilmiokuvateksti-nimi', String(t.otsikko ?? '')),
+      );
+      nimi.append(otsikko);
       sivu.appendChild(nimi);
     } else {
       const teksti = solmu('div', 'aikajana-ilmio-teksti');
@@ -2967,6 +3070,9 @@ class Aikajana {
     // korkeusliu'un lähtöarvo (css .aikajana-ilmio transition: height).
     const vanhaKorkeus = this.paneeli.hidden ? 0 : (this.paneeli.getBoundingClientRect?.().height ?? 0);
     this.paneeli.hidden = false;
+    // Ennakkohäivytys päättyy tähän: uusi sivu tulee esiin täyteen
+    // paneeliin (ks. haivytaPaneeli).
+    this.paneeli.classList.remove('haipyy');
     this.paneeli.appendChild(sivu);
     /*
      * KUVA DEKOODATAAN ENNEN RISTIHÄIVYTYSTÄ (omistaja 3.9.2026:
@@ -3404,6 +3510,9 @@ class Aikajana {
       cancelAnimationFrame(this.reianLiuku);
       this.reianPaikka = null;
       this.kalvo = null;
+      // Liekkien kehyssilmukka seis ennen kerrosten purkua.
+      this.liekit?.pura();
+      this.liekit = null;
       this.lauta?.linssit?.pura(PALLON_OSA);
     }
     // Tummennus liukuu pois ja poistuu vasta sen jälkeen; määritykset
