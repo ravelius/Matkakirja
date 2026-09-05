@@ -16,7 +16,8 @@ test('Livian paljastus sisältää tervetuloa-toivotuksen, tehtävän ja kultais
   assert.match(eka, /Minä tuuraan\./);
   assert.match(toka, /ratkaise tehtävä Ateenassa/);
   assert.match(toka, /kultaista merkkiä/);
-  assert.match(toka, /Aloitetaan\.$/);
+  assert.match(toka, /kultaista merkkiä kartalla\.$/);
+  assert.doesNotMatch(toka, /mustetahraa|Aloitetaan/);
 });
 
 test('ilman maata sähke jää lyhyeksi ja ohje yleiseksi', () => {

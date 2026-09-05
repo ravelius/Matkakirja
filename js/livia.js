@@ -237,6 +237,8 @@ export function peruLivianAvaus() {
  * funktio, joka saa maan ja paikan (js/ui-apurit.js maahanMuoto ja
  * paikassaMuoto). Ilman niitä (tuntematon maa) sähke jää lyhyeksi ja
  * ohje yleiseksi. Muilla saapumisilla ohjekuplat tulevat kuten ennen.
+ * Omistaja 5.9.2026 klo 00.55: loppu "Loput on mustetahraa. Aloitetaan."
+ * jätetään pois — kupla päättyy ohjeeseen.
  */
 export function livianPaljastus({ maahan = '', paikassa = '' } = {}) {
   const tervetuloa = maahan ? ` Siinä lukee: "Tervetuloa ${maahan}."` : '';
@@ -247,8 +249,7 @@ export function livianPaljastus({ maahan = '', paikassa = '' } = {}) {
       + 'Minä tuuraan.',
     'Ei hätää. Olen kantanut sen sähkeet vuosia ja lukenut joka ikisen. '
       + `Melkein joka ikisen. Tämän loppu kuuluu: ${tehtava} ennen kuin `
-      + 'lähdet aarteelle — napauta kaupungin kultaista merkkiä kartalla. '
-      + 'Loput on mustetahraa. Aloitetaan.',
+      + 'lähdet aarteelle — napauta kaupungin kultaista merkkiä kartalla.',
   ];
 }
 
