@@ -74,7 +74,7 @@ export const PALLO_LAATTAVERSIO = '2026-09-03a';
  * 84° N:ään asti (tools/tee-pallolaatat.mjs --tunniste b). Muuttunut
  * piirto saa aina uuden kansion, koska laatat ovat vuoden välimuistissa.
  */
-export const PALLO_LAATTATUNNISTE = 'b';
+export const PALLO_LAATTATUNNISTE = 'c';
 export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}-nostot-${PALLO_LAATTATUNNISTE}`;
 export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`;
 /** Syvin taso, jonka peli käyttää — luettelo (laatat.json) voi rajata matalammaksi. */

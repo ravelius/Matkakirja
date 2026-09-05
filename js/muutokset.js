@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1610, teksti: 'Pallolaatat kansio c: etelan reuna tasoitettu' },
   { v: 1609, teksti: 'Avauslento: terava kartta, suora lahto, haivytetty kuva' },
   { v: 1608, teksti: 'Kaupunkiraidat: Ateenaan oma kappale' },
   { v: 1607, teksti: 'Raamattu: illan linjaukset; kaariluennat tyonkulkuun' },

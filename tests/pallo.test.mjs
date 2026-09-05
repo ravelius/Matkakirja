@@ -117,8 +117,8 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   // Kirjasto on laattamoottorin tuova 2.46 tai uudempi.
   const versio = PALLO_KIRJASTO.match(/globe\.gl-(\d+)\.(\d+)\.\d+\.min\.js$/);
   assert.ok(versio && (Number(versio[1]) > 2 || Number(versio[2]) >= 46), PALLO_KIRJASTO);
-  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-nostot-b`, 'nimet ja kohteet laatoissa, navat merta ilman hattua (5.9.2026 klo 15)');
-  assert.equal(PALLO_LAATAT, `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/${laattojenKansio(PALLO_LAATTAVERSIO, true, 'b')}`);
+  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-nostot-c`, 'kansio c: etelan reunasavyt tasoitettu (v1583-v1589), valmis 6.9.2026 klo 00.40');
+  assert.equal(PALLO_LAATAT, `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/${laattojenKansio(PALLO_LAATTAVERSIO, true, 'c')}`);
   assert.equal(pallonLaatta(3, 5, 4), `${PALLO_LAATAT}4/3/5.jpg`);
   assert.equal(PALLO_LAATTATASO_MAX, 8, 'taso 8 kaytossa 5.9.2026');
   // Luettelon puute tai virhe → varatekstuuri, ei kaatumista.
@@ -126,8 +126,8 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 7 } }), 7, 'varakansio ei kanna tasoa 8: vanha napalakki sekoittuisi (5.9.2026 klo 17.30)');
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 6 } }), 6);
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 8 } }), 8, 'luettelon 8 riittaa, kun sarja b kantaa sen');
-  assert.match(pallonLaatta(3, 5, 8), /laatat\/2026-09-03a-nostot-b\/8\/3\/5\.jpg$/, 'taso 8 samasta kansiosta (varakansio pois 5.9.2026 klo 17.30)');
-  assert.match(pallonLaatta(3, 5, 7), /laatat\/2026-09-03a-nostot-b\/7\/3\/5\.jpg$/, 'tasot 0-7 nostosarjasta b');
+  assert.match(pallonLaatta(3, 5, 8), /laatat\/2026-09-03a-nostot-c\/8\/3\/5\.jpg$/, 'taso 8 samasta kansiosta (varakansio pois 5.9.2026 klo 17.30)');
+  assert.match(pallonLaatta(3, 5, 7), /laatat\/2026-09-03a-nostot-c\/7\/3\/5\.jpg$/, 'tasot 0-7 nostosarjasta c');
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 9 } }), PALLO_LAATTATASO_MAX);
   assert.equal(laattatasoMax(null), PALLO_LAATTATASO_MAX);
   const pallo = lue('../js/pallo.js');
