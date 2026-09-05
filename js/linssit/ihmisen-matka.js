@@ -45,6 +45,14 @@
  * tässä yhtenä puhtaana funktiona (ihmisenMatkanPysakit) — moottori ei
  * tiedä kummastakaan kaaresta mitään.
  *
+ * LÖYTÖKUVIA EI VIELÄ OLE ämpärissä (tarkistettu 6.9.2026: kansio
+ * `esine/` vastaa 404), ja kortissa luki siksi pysäkin nimikirjaimet
+ * — "EI", "SY". Siksi kortin kuvatieto kantaa mukanaan VARAKUVAN
+ * (`vara`), joka on saman pysäkin havainnekuva: moottori kokeilee
+ * ensin löytökuvaa ja putoaa varakuvaan vasta, kun pyyntö kaatuu
+ * (js/aikajana.js VARAKUVA). Kun kuvaputki tuo löydöt, tämä tiedosto
+ * ei muutu — ensimmäinen pyyntö vain alkaa vastata 200.
+ *
  * ── AINEISTO LUETAAN NIMIAVARUUTENA ───────────────────────────────
  *
  * `import * as data` eikä nimettyinä tuonteina: aineistotiedostoa
@@ -113,10 +121,12 @@ function laatikoksi(arvo, otsikko) {
 export function ihmisenMatkanPysakit(tapahtumat = AINEISTO) {
   return (tapahtumat ?? []).map((t) => {
     const kohta = projisoiLaudalle(LAUTA, t.lon, t.lat);
+    // Kortin kuva: löytö, ja sen varana pysäkin oma havainnekuva.
+    const kortti = t.esine ? { ...t.esine, vara: t.kuva?.osoite ?? null } : (t.kuva ?? null);
     return {
       ...t,
       ilmio: t.kuva ?? null,
-      kuva: t.esine ?? null,
+      kuva: kortti,
       x: kohta?.x ?? t.x,
       y: kohta?.y ?? t.y,
     };
@@ -188,6 +198,22 @@ export const LINSSI = {
      * cover-rajausta ennen maskia.
      */
     kuvasovitus: 'contain',
+    /*
+     * EI PIENIÄ KUVAVERSIOITA (Fablen arvio 6.9.2026). Keksintökaaren
+     * kuvista on ämpärissä 640 px WebP -versiot kansiossa `pieni/`
+     * (tools/tee-pienet-kuvat.mjs), ja moottori hakee ne ensin. Tämän
+     * kaaren kuvista niitä ei ole: jokainen pyyntö oli 404 ja kuva
+     * tuli vasta toisella kierroksella. Lippu ohittaa koko portaikon.
+     * POISTA TÄMÄ RIVI, kun pienet versiot on viety ämpäriin.
+     */
+    pienetKuvat: false,
+    /*
+     * Loppusanat luetaan ääneen (js/linssipuhe.js LOPUN_RUNKO →
+     * .../puhe/loppu.mp3). Keksintökaarella lippua ei ole, joten sen
+     * loppusanat ovat yhä hiljaiset eikä työkalu tarjoa niille
+     * maksullista kutsua.
+     */
+    loppupuhe: true,
     lahikuva: IHMISEN_MATKAN_LAHIKUVA,
     hyppykamera: true,
     reitti: true,

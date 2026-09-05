@@ -74,6 +74,12 @@ export const LINSSILUENTA_JUURI = `${KEKSINTO_KUVAJUURI}/puhe`;
  */
 export const LUENNAN_VIIVE_MS = 350;
 
+/** Ensimmäinen kirjain isoksi ("noin 300 000…" → "Noin 300 000…"). */
+function isollaAlkuun(teksti) {
+  const t = String(teksti ?? '').trim();
+  return t ? t[0].toUpperCase() + t.slice(1) : t;
+}
+
 /** Tunnus tekstistä: pienaakkoset, tarkkeet pois, väliviivat väleistä. */
 function tunnukseksi(teksti) {
   return String(teksti ?? '')
@@ -134,6 +140,15 @@ export function luennanRunko(t) {
 /** Avausjakson esittelyn runko: kaarella on niitä yksi. */
 export const ESITTELYN_RUNKO = 'esittely';
 
+/**
+ * Loppusanojen runko. Loppusanat ovat kaikilla kaarilla, mutta LUENTA
+ * vain niillä, jotka pyytävät sen (`aikajana.loppupuhe: true`):
+ * keksintökaaren loppusanoja ei ole äänitetty, eikä työkalu saa
+ * tarjota niille maksullista kutsua eikä peli hakea tiedostoa, jota ei
+ * ole. Ihmisen matka pyytää (Fablen arvio 6.9.2026).
+ */
+export const LOPUN_RUNKO = 'loppu';
+
 /** Välinäytöksen runko, esim. `valinaytos-1873`. Null ilman välinäytöstä. */
 export function valinaytoksenRunko(t) {
   if (!t?.valinaytos?.kertoja || !Number.isFinite(t?.vuosi)) return null;
@@ -164,11 +179,17 @@ export function kaarenPuheet(kaari) {
       });
     }
   }
+  const loppu = String(kaari?.loppusanat?.teksti ?? '').trim();
+  if (kaari?.loppupuhe && loppu) {
+    puheet.push({
+      avain: 'loppu', runko: LOPUN_RUNKO, nimi: `${LOPUN_RUNKO}.mp3`, teksti: loppu,
+    });
+  }
   return puheet;
 }
 
 /** Kaaren puheiden valitsimet komentorivillä (--pysakit esittely). */
-export const KAAREN_AVAIMET = ['esittely', 'valinaytos'];
+export const KAAREN_AVAIMET = ['esittely', 'valinaytos', 'loppu'];
 
 /** Pysäkin luennan tiedostonimi ämpärissä. */
 export function luennanTiedosto(t) {
@@ -189,9 +210,25 @@ export function luennanOsoite(t, juuri = LINSSILUENTA_JUURI) {
   return nimi ? `${juuri}/${nimi}` : null;
 }
 
-/** Luennan osat siinä järjestyksessä kuin ne luetaan. */
+/**
+ * Luennan osat siinä järjestyksessä kuin ne luetaan.
+ *
+ * KAKSI KAARTA, KAKSI RIVIÄ (Fablen ohje 6.9.2026). Keksinnöillä rivi
+ * on "vuosi. keksijä. keksintö."; "vuotta sitten" -kaarella ei ole
+ * vuosilukua eikä henkilöä, ja pysäkin tunnistaa AIKA JA PAIKKA:
+ * "Noin 300 000 vuotta sitten. Kasvot, jotka tunnistaisi — Jebel
+ * Irhoud, Marokko." Yksi lyhyt lause, ei kahta — luenta soi kortin
+ * vaihtuessa, ja pidempi teksti jäisi seuraavan pysäkin alle.
+ */
 function luennanOsat(t) {
   if (!t) return [];
+  if (t.ajoitus && t.paikka) {
+    const paikka = [t.paikka, t.maa].filter(Boolean).join(', ');
+    const otsikko = [t.otsikko, paikka].filter(Boolean).join(' — ');
+    return [isollaAlkuun(t.ajoitus), otsikko]
+      .map((osa) => String(osa ?? '').trim().replace(/[.\s]+$/, ''))
+      .filter(Boolean);
+  }
   // Merkkipaalulla ei ole keksijää — `henkilo` on siinä tapahtuman
   // kuvaus ('Isoisä lähtee matkaan'), ei nimi, eikä sitä lueta.
   const osat = t.paalu
@@ -223,15 +260,13 @@ export const LUENNAN_TAUKO = '<break time="0.4s" />';
  */
 const YKSIKOT = ['', 'yksi', 'kaksi', 'kolme', 'neljä', 'viisi', 'kuusi', 'seitsemän', 'kahdeksan', 'yhdeksän'];
 
-/** 1000–2999 suomeksi yhteen kirjoitettuna: 1769 → tuhatseitsemänsataakuusikymmentäyhdeksän. */
-export function vuosiSanoina(vuosi) {
-  const v = Number(vuosi);
-  if (!Number.isInteger(v) || v < 1000 || v > 2999) return String(vuosi);
-  const tuhannet = Math.floor(v / 1000);
-  const sadat = Math.floor((v % 1000) / 100);
-  const kymmenet = Math.floor((v % 100) / 10);
-  const ykkoset = v % 10;
-  let sanat = tuhannet === 1 ? 'tuhat' : `${YKSIKOT[tuhannet]}tuhatta`;
+/** 1–999 suomeksi yhteen kirjoitettuna (satojen ja kymmenten osa). */
+function alleTuhat(n) {
+  if (!n) return '';
+  let sanat = '';
+  const sadat = Math.floor(n / 100);
+  const kymmenet = Math.floor((n % 100) / 10);
+  const ykkoset = n % 10;
   if (sadat) sanat += sadat === 1 ? 'sata' : `${YKSIKOT[sadat]}sataa`;
   if (kymmenet === 1) sanat += ykkoset ? `${YKSIKOT[ykkoset]}toista` : 'kymmenen';
   else {
@@ -241,9 +276,50 @@ export function vuosiSanoina(vuosi) {
   return sanat;
 }
 
+/**
+ * 0–999 999 suomeksi yhteen kirjoitettuna: 300 000 →
+ * kolmesataatuhatta, 14 500 → neljätoistatuhattaviisisataa.
+ *
+ * "VUOTTA SITTEN" -KAAREN LUVUT OVAT SUURIA (Fablen ohje 6.9.2026:
+ * *"ota oppia ensimmäisestä linssistä"*). Sama syy kuin
+ * vuosiSanoinalla: numeroina annettu luku jää mallin arvattavaksi, ja
+ * "300 000" luetaan helposti nollina. Sanoina se ei voi mennä väärin.
+ */
+export function lukuSanoina(luku) {
+  const n = Number(luku);
+  if (!Number.isInteger(n) || n < 0 || n > 999999) return String(luku);
+  if (n === 0) return 'nolla';
+  const tuhannet = Math.floor(n / 1000);
+  let sanat = '';
+  if (tuhannet === 1) sanat = 'tuhat';
+  else if (tuhannet) sanat = `${alleTuhat(tuhannet)}tuhatta`;
+  return sanat + alleTuhat(n % 1000);
+}
+
+/** 1000–2999 suomeksi yhteen kirjoitettuna: 1769 → tuhatseitsemänsataakuusikymmentäyhdeksän. */
+export function vuosiSanoina(vuosi) {
+  const v = Number(vuosi);
+  if (!Number.isInteger(v) || v < 1000 || v > 2999) return String(vuosi);
+  return lukuSanoina(v);
+}
+
 /** Vaihtaa tekstin nelinumeroiset vuosiluvut sanoiksi (välit ja ajatusviivat säilyvät). */
 export function puheeksi(teksti) {
   return String(teksti ?? '').replace(/\b(1\d{3}|2\d{3})\b/g, (m) => vuosiSanoina(m));
+}
+
+/**
+ * AJOITUS PUHEEKSI: myös välilyönnein ryhmitellyt suuret luvut.
+ * "noin 300 000 vuotta sitten" → "noin kolmesataatuhatta vuotta
+ * sitten", "noin 1250–1300 jaa." → vuosiluvut sanoina. Ryhmitys
+ * puretaan ennen muunnosta, muu teksti (ajatusviivat, "vuotta
+ * sitten") jää sellaisenaan.
+ */
+export function ajanSanat(teksti) {
+  return String(teksti ?? '').replace(/\d{1,3}(?:[\s\u00a0]\d{3})+|\d+/g, (m) => {
+    const luku = Number(m.replace(/[\s\u00a0]/g, ''));
+    return Number.isInteger(luku) && luku <= 999999 ? lukuSanoina(luku) : m;
+  });
 }
 
 /**
@@ -254,8 +330,10 @@ export function puheeksi(teksti) {
 export function luennanPuhe(t) {
   const osat = luennanOsat(t);
   if (!osat.length) return null;
-  // Vuosi sanoina, muu sellaisenaan (ks. vuosiSanoina).
-  const puhuttavat = osat.map((osa, k) => (k === 0 ? vuosiSanoina(osa) : osa));
+  // Aika sanoina, muu sellaisenaan: vuosiluku (keksinnöt) tai koko
+  // ajoitusteksti suurine lukuineen ("vuotta sitten" -kaari).
+  const aikaSanoiksi = t?.ajoitus && t?.paikka ? ajanSanat : vuosiSanoina;
+  const puhuttavat = osat.map((osa, k) => (k === 0 ? aikaSanoiksi(osa) : osa));
   return `${puhuttavat.join(`. ${LUENNAN_TAUKO} `)}.`;
 }
 

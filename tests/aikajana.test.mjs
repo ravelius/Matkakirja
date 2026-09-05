@@ -391,12 +391,19 @@ test('pieni osoite on sama kuin pienennystyökalun kirjoittama avain', () => {
 test('moottori näyttää pienen version ja esilataa koko kaaren pienenä', () => {
   // Ilmiöpaneeli (640) ja kortin muotokuva (400) mahtuvat kattoon.
   assert.equal(PIENEN_KATTO, 640);
-  assert.match(MOOTTORI, /if \(kuvatieto\.osoite\) asetaAmpariKuva\(kuva, kuvatieto\.osoite, leveys\);/);
-  // Varareitti kerran, ei silmukkaa.
-  assert.match(MOOTTORI, /function asetaAmpariKuva[\s\S]{0,1200}addEventListener\('error', \(\) => \{ kuva\.src = osoite; \}, \{ once: true \}\)/);
+  assert.match(MOOTTORI, /asetaAmpariKuva\(kuva, kuvatieto\.osoite, leveys, \{ pienet, vara: kuvatieto\.vara \?\? null \}\);/);
+  // Varareitti kerran, ei silmukkaa: karuselli → pieni → alkuperäinen.
+  assert.match(MOOTTORI, /const alkuperaiseen = \(\) => \{ otaVarakuva\(kuva, vara\); kuva\.src = osoite; \};/);
+  assert.match(MOOTTORI, /function asetaAmpariKuva[\s\S]{0,1200}addEventListener\('error', alkuperaiseen, \{ once: true \}\)/);
+  // Kortin viimeinen varareitti (6.9.2026): kaaren oma havainnekuva,
+  // kerran ja vain kerran, ja rajaus keskeltä (css .varakuva).
+  assert.match(MOOTTORI, /function otaVarakuva\(kuva, vara\) \{[\s\S]{0,400}kuva\.classList\.add\('varakuva'\);[\s\S]{0,120}\{ once: true \}\);/);
   // Esilataus: koko kaari pienenä heti käynnistyksessä, ei kolmen ikkunaa.
   assert.ok(MOOTTORI.match(/\n  kaynnista\(\) \{[\s\S]*?\n  \}/)[0].includes('this.esilataaPienet();'), 'käynnistys ei esilataa');
-  assert.match(MOOTTORI, /esilataaPienet\(\) \{[\s\S]{0,400}for \(const t of this\.tapahtumat\)[\s\S]{0,300}pieniOsoite\(kuva\.osoite\)/);
+  assert.match(MOOTTORI, /esilataaPienet\(\) \{[\s\S]{0,900}for \(const t of this\.tapahtumat\)[\s\S]{0,300}pieniOsoite\(kuva\.osoite\)/);
+  // Kaari ilman pieniä versioita ei esilataa mitään (6.9.2026): se
+  // olisi joko pelkkiä 404:iä tai megatavujen ryntäys alkuperäisiä.
+  assert.match(MOOTTORI, /esilataaPienet\(\) \{[\s\S]{0,900}if \(!this\.pienetKuvat\) return;/);
   // Kolmen pysäkin IKKUNA on korvattu koko kaarella: esilataaPienet ei
   // saa palata pysäkkikohtaiseksi. (Sen rinnalla ajava dekoodausjono
   // valmistaSeuraavat on eri asia — se ei rajaa mitään pois, ks. alla.)
@@ -502,7 +509,7 @@ test('rullauksen kesto on Raamatun animaatiosäännön rajoissa', () => {
 test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa sekunnissa', () => {
   assert.ok(AIKAJANA_NAKSU_VALI_MS >= 125, `${AIKAJANA_NAKSU_VALI_MS} ms sallisi yli 8 naksua sekunnissa`);
   // Kytkentä: avaus ja alustus ovat `heti`, pysäytetty kello hiljainen.
-  assert.match(MOOTTORI, /naytaVuosi\(vuosi, heti = false\) \{[\s\S]{0,1400}if \(elava && this\.kaynnissa\) this\.naksahda\(\);/);
+  assert.match(MOOTTORI, /naytaVuosi\(vuosi, heti = false\) \{[\s\S]{0,2600}if \(elava && this\.kaynnissa\) this\.naksahda\(\);/);
   // Kohahdus kuuluu keksinnölle, ei vuodenvaihteelle (omistaja 3.9.2026).
   assert.match(MOOTTORI, /sytyta\(i\) \{[\s\S]{0,700}this\.keksinnonAani\(t\);/);
   assert.match(MOOTTORI, /keksinnonAani\(t\) \{\n    if \(t\?\.paalu\) return;\n    sfx\.play\('keksinto'\);/);
@@ -511,7 +518,7 @@ test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa se
   // prefers-reduced-motion vaihtaa merkin ilman liikettä; pysäytetty kello liukuu.
   // (Askel ja suunta ovat "vuotta sitten" -asteikon jatke (5.9.2026): keksinnöillä
   // ne ovat 1 ja 1, eli entinen kello — ks. tests/ihmisen-matka.test.mjs.)
-  assert.match(MOOTTORI, /asetaMatkamittari\(this\.rullat, arvo, \{\n\s*heti: heti \|\| this\.reducedMotion, liuku: !this\.kaynnissa, askel, suunta,\n\s*\}\)/);
+  assert.match(MOOTTORI, /asetaMatkamittari\(this\.rullat, arvo, \{[\s\S]{0,700}heti: heti \|\| this\.reducedMotion,[\s\S]{0,700}askel,\n\s*suunta,/);
   // Käyvä kello antaa mittarille murto-osavuoden joka kehyksellä.
   assert.match(MOOTTORI, /this\.tila = tila;\n\s*this\.naytaVuosi\(tila\.vuosi\);/);
   // Lamput ovat napautettavia (omistaja 3.9.2026) ja paneeli raahattava.
@@ -737,9 +744,9 @@ test('jokaisella keksijäpysäkillä on henkilojuttu, luonnekuva ja aito kuva', 
 
 test('moottori piirtää kortin ja henkilörivin generoidusta muotokuvasta', () => {
   assert.match(MOOTTORI, /const muotokuvat = \(t\) => \[t\.kuva, t\.kuvaToinen\]\.filter\(onKuva\);/);
-  assert.match(MOOTTORI, /kortti\.appendChild\(muotokuvaKehys\(t, 400, 'aikajana-muotokuva'\)\);/,
+  assert.match(MOOTTORI, /kortti\.appendChild\(muotokuvaKehys\(t, 400, 'aikajana-muotokuva', this\.pienetKuvat\)\);/,
     'kortti ottaa muotokuvan kaksoispysäkit kestävän kehyksen kautta');
-  assert.match(MOOTTORI, /muotokuvaKehys\(t, 200, 'aikajana-ilmio-kasvot'\)/,
+  assert.match(MOOTTORI, /muotokuvaKehys\(t, 200, 'aikajana-ilmio-kasvot', this\.pienetKuvat\)/,
     'ilmiöpaneelin henkilörivillä on kasvot');
   assert.ok(!/kuvaTaiLaatta\(t\.kuva,/.test(MOOTTORI), 'aito kuva ei enää piirry kortille');
   assert.match(MOOTTORI, /this\.esilataaPienet\(\);/, 'koko kaari esiladataan pienenä');
@@ -1142,8 +1149,8 @@ test('havainnekuvat esiladataan kahdelle seuraavalle pysäkille ja paneeli käyt
 
   const valmista = metodi('valmistaSeuraavat');
   assert.match(valmista, /for \(let n = 1; n <= PANEELIN_ESILATAUS_PYSAKKEJA; n \+= 1\)/);
-  assert.match(valmista, /paneelikuvanOsoite\(t\.ilmio, 640\)/);
-  assert.match(valmista, /paneelikuvanOsoite\(t\.kuva, 400\)/);
+  assert.match(valmista, /paneelikuvanOsoite\(t\.ilmio, 640, this\.pienetKuvat\)/);
+  assert.match(valmista, /paneelikuvanOsoite\(t\.kuva, 400, this\.pienetKuvat\)/);
   // Jono siirtyy pysäkin vaihtuessa ja käynnistyksessä.
   assert.ok(metodi('kaynnista').includes('this.valmistaSeuraavat(-1);'));
   assert.ok(metodi('sytyta').includes('this.valmistaSeuraavat(i);'));
@@ -1153,10 +1160,10 @@ test('havainnekuvat esiladataan kahdelle seuraavalle pysäkille ja paneeli käyt
   assert.match(MOOTTORI, /while \(kuvat\.size >= katto\) kuvat\.delete\(kuvat\.keys\(\)\.next\(\)\.value\);/);
   assert.ok(KUVAVARASTON_KATTO >= 6, 'katto ei mahduta kahta pysäkkiä');
   // Paneeli ottaa valmiin olion eikä lataa uudestaan eikä odota dekoodausta.
-  assert.match(MOOTTORI, /const esiladattu = varasto\?\.ota\?\.\(paneelikuvanOsoite\(kuvatieto, leveys\)\) \?\? null;/);
+  assert.match(MOOTTORI, /const esiladattu = varasto\?\.ota\?\.\(paneelikuvanOsoite\(kuvatieto, leveys, pienet\)\) \?\? null;/);
   assert.match(MOOTTORI, /const kuva = esiladattu \?\? document\.createElement\('img'\);/);
   assert.match(MOOTTORI, /const valmis = kuva && !esiladattu && typeof kuva\.decode === 'function'/);
-  assert.match(metodi('vaihdaPaneeli'), /kuvaTaiLaatta\(t\.ilmio, t\.otsikko, 640, 'aikajana-ilmiokuva', this\.paneelikuvat\)/);
+  assert.match(metodi('vaihdaPaneeli'), /kuvaTaiLaatta\(\n\s*t\.ilmio, t\.otsikko, 640, 'aikajana-ilmiokuva', this\.paneelikuvat, this\.pienetKuvat,\n\s*\)/);
   // Purku tyhjentää varaston: valmiit oliot eivät jää elämään.
   assert.ok(PURA.includes('this.paneelikuvat.tyhjenna();'));
 });

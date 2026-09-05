@@ -552,6 +552,16 @@
  */
 .vuosi-erotin { display: inline-block; width: 0.3em; }
 .vuosi-numero.tyhja, .vuosi-erotin.tyhja { visibility: hidden; }
+/*
+ * KELLO TEKSTINÄ kaaren loppupäässä (js/aikajana.js VIIMEISET
+ * PYSÄKIT): "750 v. sitten" on huonompi luku kuin "n. 1250 jaa.".
+ * Rullat ja yksikkö väistyvät, teksti ottaa saman rivin — kellon
+ * korkeus ei saa muuttua, tai koko ylärivi nytkähtäisi.
+ */
+.aikajana-kello.tekstina .vuosi-numero,
+.aikajana-kello.tekstina .vuosi-erotin,
+.aikajana-kello.tekstina .aikajana-kelloyksikko { display: none; }
+.aikajana-kelloteksti { line-height: 1.1em; white-space: nowrap; }
 .aikajana-kelloyksikko {
   align-self: flex-end;
   margin-left: 0.3em;
@@ -1005,6 +1015,15 @@
   overflow: hidden;
 }
 .aikajana-muotokuva img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+/*
+ * KORTIN VARAKUVA (js/aikajana.js VARAKUVA, Fablen arvio 6.9.2026):
+ * kun kaaren löytökuvaa ei vielä ole ämpärissä, kortissa on pysäkin
+ * HAVAINNEKUVA. Se on vaakakuva (1536 × 1024), jossa kuvaputken
+ * turva-alue on keskimmäiset 60 % — siksi rajaus keskeltä eikä
+ * ylälaidasta niin kuin muotokuvissa, joissa rajaus etsii kasvot.
+ */
+.aikajana-muotokuva img.varakuva,
+.aikajana-kuvakehys img.varakuva { object-position: center center; }
 
 /*
  * KAKSOISPYSÄKKI: kaksi keksijää vierekkäin (Montgolfier, Cooke ja

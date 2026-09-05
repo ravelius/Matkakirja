@@ -9,14 +9,21 @@
  *   node tools/generoi-linssiluennat.mjs --pysakit 1769,1783
  *   node tools/generoi-linssiluennat.mjs --pysakit esittely,valinaytos
  *   node tools/generoi-linssiluennat.mjs            (koko kaari)
+ *   node tools/generoi-linssiluennat.mjs --linssi ihmisen-matka --kuiva
  *
  *   --kuiva          tulostaa tekstit ja kohteet, ei kutsu APIa
+ *   --linssi <tunnus>  mikä aikajanakaari luetaan (oletus `keksinnot`;
+ *                    ks. LINSSIT alempana). Kaari kertoo itse sekä
+ *                    luettavan tekstin että ämpärin kansion.
  *   --pysakit 1769,1783   vain nämä vuodet (tyhjä = kaikki). HUOM:
  *                    kaaressa on KOLME vuoden 1895 pysäkkiä (Marconi,
  *                    Röntgen, Lumière), ja vuosi valitsee ne kaikki.
- *                    Sama lippu ottaa KAAREN OMAT PUHEET avaimina:
- *                    `esittely` (avausjakson selite) ja `valinaytos`
- *                    (merkkipaalujen pidemmät kertojatekstit).
+ *                    "Vuotta sitten" -kaarella pysäkki valitaan
+ *                    TUNNUKSELLA (`--pysakit jebel-irhoud`), koska
+ *                    vuosilukuja ei ole. Sama lippu ottaa KAAREN OMAT
+ *                    PUHEET avaimina: `esittely` (avausjakson selite),
+ *                    `valinaytos` (merkkipaalun kertojateksti) ja
+ *                    `loppu` (loppusanat, jos kaari pyytää ne).
  *   --pakota         generoi vaikka tiedosto on jo ämpärissä
  *   --ei-vientia     generoi ja viimeistele, mutta jätä levylle
  *
@@ -33,6 +40,14 @@
  * funktiolla — samalla, jota peli käyttää. Pisteiden kohdalle tulee
  * break-tagi, jottei vuosiluku, nimi ja keksintö sula yhdeksi pötköksi
  * (eleven_v3 tukee <break time="0.4s" />).
+ *
+ * KAKSI KAARTA, SAMA KONE (Fablen ohje 6.9.2026). "Vuotta sitten"
+ * -kaarella (Ihmisen matka) ei ole vuosilukua eikä keksijää, joten
+ * sama funktio ladotaan aika- ja paikkatiedosta: "Noin 300 000 vuotta
+ * sitten. Kasvot, jotka tunnistaisi — Jebel Irhoud, Marokko." Yksi
+ * lyhyt lause pysäkkiä kohti — luenta soi kortin vaihtuessa, ja
+ * pidempi teksti jäisi seuraavan pysäkin alle. Kaaren omat puheet
+ * (esittely, loppusanat) luetaan sen sijaan LYHENTÄMÄTTÄ.
  *
  * ------------------------------------------------------------------
  * TIEDOSTONIMI ON KYTKENTÄ
@@ -79,11 +94,15 @@
  *
  * Valmiit mp3:t EIVÄT mene repoon. Ne kirjoitetaan media/-puolelle
  * (.gitignoressa, tarkistetaan ennen ensimmäistäkään maksullista
- * kutsua) ja viedään ämpärin aikajana/keksinnot/puhe/-kansioon samalla
- * aws s3 cp -komennolla ja samoilla neljällä salaisuudella kuin
- * tools/generoi-tehosteet.mjs ja vie-aanet.yml. Peli hakee tasan sen
- * polun (js/linssipuhe.js LINSSILUENTA_JUURI), joten luennat ovat
- * pelissä heti ajon jälkeen ilman julkaisua.
+ * kutsua) ja viedään ämpäriin samalla aws s3 cp -komennolla ja
+ * samoilla neljällä salaisuudella kuin tools/generoi-tehosteet.mjs ja
+ * vie-aanet.yml. TÄMÄ TYÖKALU VIE ITSE — ajo ei committoi mitään.
+ *
+ * KANSIO TULEE KAARESTA eikä tästä tiedostosta: keksinnöillä
+ * aikajana/keksinnot/puhe/ (js/linssipuhe.js LINSSILUENTA_JUURI),
+ * Ihmisen matkalla aikajana/ihmisen-matka/puhe/ (linssin
+ * `aikajana.luentajuuri`). Peli hakee tasan saman polun, joten
+ * luennat ovat pelissä heti ajon jälkeen ilman julkaisua.
  *
  * JO OLEMASSA OLEVAA EI GENEROIDA UUDELLEEN: ennen kutsua tehdään HEAD
  * julkiseen osoitteeseen, ja 200 ohittaa pysäkin. --pakota kirjoittaa
@@ -104,7 +123,6 @@ import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { LINSSI } from '../js/linssit/keksinnot.js';
 import {
   KAAREN_AVAIMET, kaarenPuheet, luennanPuhe, luennanRunko, luennanTeksti, luennanTiedosto, puheeksi,
 } from '../js/linssipuhe.js';
@@ -148,10 +166,41 @@ const STABILITY = 0.5;
  */
 const LOPPUTAUKO = ' <break time="1.0s" />';
 
-// ── kansiot ────────────────────────────────────────────────────────
+// ── kaaret ─────────────────────────────────────────────────────────
+
+/**
+ * MITKÄ KAARET OVAT AJETTAVISSA. Moduuli ladataan vasta valinnan
+ * jälkeen (dynaaminen import), jotta väärä tunnus kaatuu selvään
+ * virheeseen eikä puuttuvaan vientiin — ja jotta toisen kaaren
+ * keskeneräinen aineisto ei estä tämän ajamista.
+ */
+export const LINSSIT = {
+  keksinnot: '../js/linssit/keksinnot.js',
+  'ihmisen-matka': '../js/linssit/ihmisen-matka.js',
+};
+
+/** Oletuskaari: keksinnöt, eli työkalun entinen ainoa käytös. */
+export const OLETUSLINSSI = 'keksinnot';
 
 /** Ämpärin kansio = pelin hakupolku (js/linssipuhe.js LINSSILUENTA_JUURI). */
-const AMPARIN_KANSIO = 'aikajana/keksinnot/puhe';
+const KEKSINTOJEN_KANSIO = 'aikajana/keksinnot/puhe';
+
+/**
+ * Kaaren luentakansio ämpärissä. Kaari kertoo sen itse
+ * (`aikajana.luentajuuri` on koko osoite ämpärin juuresta lähtien),
+ * ja tässä siitä leikataan julkinen juuri pois — sama merkkijono, jota
+ * peli hakee. Ilman kenttää keksintöjen kansio, kuten ennen.
+ */
+export function ampariKansio(kaari) {
+  const juuri = kaari?.luentajuuri;
+  if (typeof juuri !== 'string' || !juuri) return KEKSINTOJEN_KANSIO;
+  const julkinen = julkinenJuuri();
+  const polku = juuri.startsWith(julkinen) ? juuri.slice(julkinen.length) : juuri;
+  return polku.replace(/^\/+|\/+$/g, '');
+}
+
+// ── kansiot ────────────────────────────────────────────────────────
+
 const KOHDE_KANSIO = 'media/linssiluennat';
 /** Mallin raaka tuotos talteen: uuden leikkauksen voi tehdä ilmaiseksi. */
 const RAAKA_KANSIO = 'media/linssiluennat-raaka';
@@ -182,11 +231,22 @@ const KAAREN_KESTO_MAX_S = 50.0;
 /** Komentoriviliput. Palauttaa `{ virhe }`, jos syöte ei kelpaa. */
 export function tulkitseArgumentit(argumentit) {
   const liput = {
-    pysakit: [], kuiva: false, pakota: false, vienti: true,
+    linssi: OLETUSLINSSI, pysakit: [], kuiva: false, pakota: false, vienti: true,
   };
   for (let i = 0; i < argumentit.length; i += 1) {
     const arg = argumentit[i];
-    if (arg === '--pysakit') {
+    if (arg === '--linssi') {
+      const nimi = argumentit[i + 1];
+      if (!nimi || String(nimi).startsWith('--')) return { ...liput, virhe: '--linssi ilman tunnusta' };
+      if (!LINSSIT[nimi]) {
+        return {
+          ...liput,
+          virhe: `tuntematon linssi: ${nimi} (${Object.keys(LINSSIT).join(', ')})`,
+        };
+      }
+      liput.linssi = nimi;
+      i += 1;
+    } else if (arg === '--pysakit') {
       /*
        * PILKKU TAI VÄLILYÖNTI, KUMPI TAHANSA. Sama sietokyky kuin
        * generoi-luennat.mjs:n kaupunkilistalla (ajo 33277398508,
@@ -209,17 +269,17 @@ export function tulkitseArgumentit(argumentit) {
         }
         /*
          * KAAREN OMAT PUHEET OVAT SAMASSA LIPUSSA: `esittely` on
-         * avausjakson selite ja `valinaytos` merkkipaalujen pidemmät
-         * kertojatekstit (js/linssipuhe.js kaarenPuheet). Vuosi ei
-         * kelpaisi valitsimeksi kummallekaan — esittely ei ole yhdessä
-         * vuodessa, ja välinäytös jakaa vuotensa pysäkin kanssa.
+         * avausjakson selite, `valinaytos` merkkipaalujen pidemmät
+         * kertojatekstit ja `loppu` loppusanat (js/linssipuhe.js
+         * kaarenPuheet). Vuosi ei kelpaisi valitsimeksi millekään —
+         * esittely ei ole yhdessä vuodessa, ja välinäytös jakaa
+         * vuotensa pysäkin kanssa.
+         *
+         * MUU MERKKIJONO ON PYSÄKIN TUNNUS ("vuotta sitten" -kaari,
+         * jolla ei ole vuosilukuja). Kirjoitusvirhe ei mene ohi: se
+         * kaatuu heti valitsePysakit-tarkistukseen "näitä ei ole
+         * kaaressa" eikä maksa yhtäkään kutsua.
          */
-        if (!KAAREN_AVAIMET.includes(valinta)) {
-          return {
-            ...liput,
-            virhe: `pysäkki ei ole vuosiluku eikä ${KAAREN_AVAIMET.join('/')}: ${valinta}`,
-          };
-        }
         liput.pysakit.push(valinta);
       }
     } else if (arg === '--kuiva') {
@@ -253,12 +313,15 @@ export function valitsePysakit(kaari, valinta = []) {
   const kaikki = !valinta.length;
   const tyot = [];
   for (const t of kaari?.tapahtumat ?? []) {
-    if (!kaikki && !vuodet.includes(t.vuosi)) continue;
+    // Pysäkin valitsin on vuosiluku tai tunnus (ks. tulkitseArgumentit).
+    const valittu = kaikki || vuodet.includes(t.vuosi)
+      || (t.tunnus && avaimet.includes(t.tunnus));
+    if (!valittu) continue;
     const nimi = luennanTiedosto(t);
     if (!nimi) continue;
     tyot.push({
-      vuosi: t.vuosi,
-      avain: String(t.vuosi),
+      vuosi: t.vuosi ?? null,
+      avain: t.tunnus ?? String(t.vuosi),
       runko: luennanRunko(t),
       nimi,
       teksti: luennanTeksti(t),
@@ -333,13 +396,13 @@ function vaadiGitignore(polku) {
 }
 
 /** Luennan julkinen osoite ämpärissä. */
-function julkinenOsoite(nimi) {
-  return `${julkinenJuuri()}${AMPARIN_KANSIO}/${nimi}`;
+function julkinenOsoite(nimi, kansio) {
+  return `${julkinenJuuri()}${kansio}/${nimi}`;
 }
 
 /** HEAD julkiseen osoitteeseen: onko luenta jo ämpärissä. */
-function ampariHead(nimi) {
-  const url = julkinenOsoite(nimi);
+function ampariHead(nimi, kansio) {
+  const url = julkinenOsoite(nimi, kansio);
   if (!onOlemassa('curl')) return { url, koodi: null };
   const { loki } = aja('curl', ['-sS', '-I', '--max-time', '30', url], { salliVirhe: true });
   return { url, koodi: loki.match(/HTTP\/[\d.]+ (\d{3})/)?.[1] ?? null };
@@ -436,7 +499,7 @@ function tarkista(kohde, kestoMax = KESTO_MAX_S) {
 }
 
 /** Vie valmis luenta ämpäriin (sama komento kuin vie-aanet.yml). */
-function vieAmpariin(kohde, nimi) {
+function vieAmpariin(kohde, nimi, kansio) {
   const tili = process.env.R2_ACCOUNT_ID;
   const ampari = process.env.R2_BUCKET;
   const avain = process.env.AWS_ACCESS_KEY_ID ?? process.env.R2_ACCESS_KEY_ID;
@@ -449,7 +512,7 @@ function vieAmpariin(kohde, nimi) {
   if (!onOlemassa('aws')) throw new Error('aws-cli puuttuu — vienti tarvitsee sen.');
 
   aja('aws', [
-    's3', 'cp', kohde, `s3://${ampari}/${AMPARIN_KANSIO}/${nimi}`,
+    's3', 'cp', kohde, `s3://${ampari}/${kansio}/${nimi}`,
     '--endpoint-url', `https://${tili}.r2.cloudflarestorage.com`,
     '--no-progress',
     '--content-type', 'audio/mpeg',
@@ -464,14 +527,24 @@ async function main() {
   if (liput.virhe) {
     console.error(`${liput.virhe}.`);
     console.error('Käyttö: node tools/generoi-linssiluennat.mjs '
+      + `[--linssi ${Object.keys(LINSSIT).join('|')}] `
       + '[--pysakit 1769,1783] [--kuiva] [--pakota] [--ei-vientia]');
     process.exit(1);
   }
 
-  const { tyot, tuntemattomat } = valitsePysakit(LINSSI.aikajana, liput.pysakit);
+  // Kaari ladataan vasta nyt: väärä tunnus on jo kaatunut ylempänä.
+  const moduuli = await import(LINSSIT[liput.linssi]);
+  const kaari = moduuli.LINSSI?.aikajana;
+  if (!kaari) {
+    console.error(`Linssillä ${liput.linssi} ei ole aikajanakaarta.`);
+    process.exit(1);
+  }
+  const kansio = ampariKansio(kaari);
+
+  const { tyot, tuntemattomat } = valitsePysakit(kaari, liput.pysakit);
   if (tuntemattomat.length) {
     console.error(`Näitä ei ole kaaressa: ${tuntemattomat.join(', ')} `
-      + '— tarkista js/linssit/keksinnot.js. Ei generoida mitään.');
+      + `— tarkista ${LINSSIT[liput.linssi].replace('../', '')}. Ei generoida mitään.`);
     process.exit(1);
   }
   if (!tyot.length) {
@@ -488,9 +561,9 @@ async function main() {
    */
   if (liput.kuiva) {
     console.log(`KUIVA AJO (--kuiva) — APIa ei kutsuta, ämpäriin ei viedä. `
-      + `${tyot.length} luentaa, ääni Viisas Kertoja, malli ${MALLI}.`);
+      + `Linssi ${liput.linssi}, ${tyot.length} luentaa, ääni Viisas Kertoja, malli ${MALLI}.`);
     for (const tyo of tyot) {
-      console.log(`${AMPARIN_KANSIO}/${tyo.nimi}  ·  "${tyo.teksti}"`);
+      console.log(`${kansio}/${tyo.nimi}  ·  "${tyo.teksti}"`);
       // Mallille lähtevä muoto, jos se eroaa (vuodet sanoina, tauot).
       if (tyo.puhe && tyo.puhe !== tyo.teksti) console.log(`    mallille: "${tyo.puhe}"`);
     }
@@ -528,11 +601,11 @@ async function main() {
   let virheita = 0;
   try {
     for (const tyo of tyot) {
-      console.log(`\n── ${AMPARIN_KANSIO}/${tyo.nimi}`);
+      console.log(`\n── ${kansio}/${tyo.nimi}`);
       console.log(`   "${tyo.teksti}"`);
 
       if (!liput.pakota) {
-        const { url, koodi } = ampariHead(tyo.nimi);
+        const { url, koodi } = ampariHead(tyo.nimi, kansio);
         if (koodi === '200') {
           console.log(`   on jo ämpärissä (${url}) — ohitetaan. --pakota kirjoittaa yli.`);
           ohitettuja += 1;
@@ -565,7 +638,7 @@ async function main() {
     }
 
     if (liput.vienti) {
-      for (const nimi of valmiit) vieAmpariin(join(kohdekansio, nimi), nimi);
+      for (const nimi of valmiit) vieAmpariin(join(kohdekansio, nimi), nimi, kansio);
     }
   } finally {
     rmSync(tyokansio, { recursive: true, force: true });
@@ -579,7 +652,7 @@ async function main() {
     console.log(`Viety ämpäriin: ${valmiit.length}`
       + `${ohitettuja ? `, ohitettu jo olemassa olevia: ${ohitettuja}` : ''}.`);
     for (const nimi of valmiit) {
-      const { url, koodi } = ampariHead(nimi);
+      const { url, koodi } = ampariHead(nimi, kansio);
       const kunnossa = koodi === '200';
       if (!kunnossa) virheita += 1;
       console.log(`  ${url} → HTTP ${koodi ?? '?'}${kunnossa ? '' : '  ← EI VASTAA'}`);
