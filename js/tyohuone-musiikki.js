@@ -70,6 +70,7 @@
  */
 import { html } from './ui-apurit.js';
 import { AANI_JUURI, aaniUrl, musaPolku } from './media.js';
+import { KAUPUNKIRAIDAT, kaupunkiraidanTunnus } from './kaupunkimusiikki.js';
 import { MUSIIKKILAJIT } from './siirtymamusiikki.js';
 import { sfx } from './sound.js';
 import { hiljennaAmbienssi, palautaAmbienssi } from './ambience-stream.js';
@@ -160,6 +161,29 @@ const PALETTI = [
 
 /*
  * ------------------------------------------------------------------
+ * KAUPUNKIRAIDAT
+ * ------------------------------------------------------------------
+ *
+ * Omistajan tilaus 5.9.2026 klo 00.35: *"ateenaan saavuttaessa voisi
+ * vaihtua kappale. generoi sinne oma musiikki."* Kaupungin oma kappale
+ * korvaa pohjavireen siksi aikaa, kun pelaaja on kaupungissa
+ * (js/ambience-stream.js kaynnistaPohjaMusiikki). Rivit luetaan pelin
+ * omasta taulukosta (js/kaupunkimusiikki.js KAUPUNKIRAIDAT), joten uusi
+ * kaupunki ilmestyy tähän lehteen ilman että tätä tiedostoa muokataan —
+ * ja tunnus tulee samasta nimisäännöstä kuin pelillä.
+ *
+ * Puuttuva raita on tässä lehdessä normaali tila ("puuttuu"): taulukko
+ * on mainissa ennen kuin mp3 on generoitu.
+ */
+const KAUPUNGIT = Object.entries(KAUPUNKIRAIDAT).map(([id, raita]) => ({
+  id: `kaupunki-${id}`,
+  nimi: id,
+  tunnus: kaupunkiraidanTunnus(id),
+  kaytto: `${raita.kuvaus} Soi pohjavireen tilalla, kun pelaaja on kaupungissa.`,
+}));
+
+/*
+ * ------------------------------------------------------------------
  * TEHOSTEET
  * ------------------------------------------------------------------
  *
@@ -202,6 +226,7 @@ const OSASTOT = {
   siirtyma: 'Siirtymämusiikki',
   linssi: 'Linssit',
   paletti: 'Musiikkipaletti',
+  kaupunki: 'Kaupunkiraidat',
   tehoste: 'Tehosteet',
 };
 
@@ -242,6 +267,16 @@ export const MUSIIKKISIVUN_RAIDAT = [
     kaytto: raita.kaytto,
     // Paletin raidat ovat repon omia: ämpäriosoite on aaniUrl:n
     // audio/-polku, joka lasketaan vasta soitettaessa.
+    ampari: null,
+    oma: musaPolku(raita.tunnus),
+  })),
+  ...KAUPUNGIT.map((raita) => ({
+    id: raita.id,
+    nimi: raita.nimi,
+    osasto: 'kaupunki',
+    kaytto: raita.kaytto,
+    // Sama polku kuin paletilla: repon assets/audio, josta aaniUrl
+    // tekee ämpärin audio/-osoitteen soitettaessa.
     ampari: null,
     oma: musaPolku(raita.tunnus),
   })),
@@ -608,7 +643,7 @@ export function musiikkiSivut() {
       id: 'musiikki-paletti',
       nimi: 'Paletti',
       yksipalsta: true,
-      rakenna: (kohde, ui) => piirraSivu(kohde, ui, ['paletti']),
+      rakenna: (kohde, ui) => piirraSivu(kohde, ui, ['paletti', 'kaupunki']),
     },
     {
       id: 'musiikki-tehosteet',

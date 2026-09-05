@@ -29,7 +29,9 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import * as lyria from '../tools/lyria.mjs';
-import { RAIDAT, tulkitseArgumentit, valitseRaidat } from '../tools/generoi-musiikki.mjs';
+import {
+  KAUPUNKIEN_RAIDAT, PALETIN_RAIDAT, RAIDAT, tulkitseArgumentit, valitseRaidat,
+} from '../tools/generoi-musiikki.mjs';
 import { raidanTiedosto as raidanTiedostoSiirtyma } from '../tools/generoi-siirtymamusiikki.mjs';
 import { MUSIIKIN_PAATE, musaPolku } from '../js/media.js';
 
@@ -55,7 +57,15 @@ test('raitojen nimet ovat paljaita argumentteja lippujen seassa', () => {
   assert.equal(liput.virhe, undefined);
   assert.deepEqual(liput.raidat, ['pohja', 'visa']);
   assert.equal(liput.kuiva, true);
+  /*
+   * `kaikki` on PALETTI eikä koko taulukko: kaupunkiraidat (5.9.2026)
+   * ovat oma ryhmänsä, jottei valmista kaupunkiraitaa generoida
+   * vahingossa uudestaan paletin mukana — jokainen kutsu maksaa.
+   */
   assert.deepEqual(valitseRaidat(['kaikki']), ['pohja', 'visa', 'aarre', 'paaaarre']);
+  assert.deepEqual(valitseRaidat(['kaupungit']), KAUPUNKIEN_RAIDAT);
+  assert.ok(!valitseRaidat(['kaikki']).includes('ateena'),
+    'kaupunkiraita lipsahti paletin "kaikki"-valintaan');
   assert.equal(valitseRaidat([]), null);
 });
 
@@ -99,7 +109,7 @@ test('Lyria-raidat saavat -lyria-päätteen, ElevenLabs paljaan nimen', () => {
       raita.tiedosto.replace(/\.mp3$/, '-lyria.mp3'));
   }
   assert.deepEqual(
-    Object.values(RAIDAT).map((r) => lyria.raidanTiedosto(r, 'lyria')),
+    PALETIN_RAIDAT.map((id) => lyria.raidanTiedosto(RAIDAT[id], 'lyria')),
     ['musa-pohja-lyria.mp3', 'musa-visa-2-lyria.mp3',
       'musa-aarre-lyria.mp3', 'musa-paaaarre-lyria.mp3'],
   );
@@ -118,9 +128,9 @@ test('kehotteessa pyydetään sauma vain looppiraidoilta', () => {
 /* ── 3. raidat ja promptit ───────────────────────────────────────── */
 
 test('paletin neljä raitaa, kestot ja looppisuus ovat ennallaan', () => {
-  assert.deepEqual(Object.keys(RAIDAT), ['pohja', 'visa', 'aarre', 'paaaarre']);
+  assert.deepEqual(PALETIN_RAIDAT, ['pohja', 'visa', 'aarre', 'paaaarre']);
   const mitat = Object.fromEntries(
-    Object.entries(RAIDAT).map(([id, r]) => [id, [r.kesto, r.looppi]]),
+    PALETIN_RAIDAT.map((id) => [id, [RAIDAT[id].kesto, RAIDAT[id].looppi]]),
   );
   assert.deepEqual(mitat, {
     pohja: [80000, true],

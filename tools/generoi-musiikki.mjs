@@ -31,6 +31,15 @@
  * laajennusta. Jos toinen generoidaan uusiksi, KUMPIKIN kannattaa
  * generoida uusiksi, muuten sukulaisuus katoaa.
  *
+ * KAUPUNKIRAIDAT OVAT VIIDES LAJI, EIVÄT VIIDES PALETTIRAITA
+ * (omistaja 5.9.2026 klo 00.35: *"ateenaan saavuttaessa voisi vaihtua
+ * kappale. generoi sinne oma musiikki."*). Kaupungin oma kappale
+ * (musa-kaupunki-<id>.mp3) korvaa pohjavireen niin kauan kuin pelaaja
+ * on siinä kaupungissa. Ne generoidaan nimeltä tai ryhmänä
+ * `kaupungit`; `kaikki` on yhä paletin neljä raitaa, jottei valmista
+ * kaupunkiraitaa generoida vahingossa uudestaan. Peli: KAUPUNKIRAIDAT
+ * js/kaupunkimusiikki.js, soitto js/ambience-stream.js.
+ *
  * MIKSI musa-visa-2 EIKÄ musa-visa: vanhaa visamusiikkia ei
  * ylikirjoiteta. Pelin viittaus vaihdetaan (js/aani-ehdokkaat.js,
  * 'musiikki:tietovisa' → oletus), ja vanha valinta jää ehdokaslistaan.
@@ -227,12 +236,70 @@ export const RAIDAT = {
       + 'with no silent lead-in and ends on a full sustained chord. '
       + `${TYYLI}`,
   },
+  /*
+   * ----------------------------------------------------------------
+   * KAUPUNKIRAIDAT (omistajan tilaus 5.9.2026 klo 00.35, sanatarkasti:
+   * *"ateenaan saavuttaessa voisi vaihtua kappale. generoi sinne oma
+   * musiikki."*)
+   * ----------------------------------------------------------------
+   *
+   * Kaupunkiraita EI ole viides palettiraita vaan oma lajinsa
+   * (`laji: 'kaupunki'`), ja ero on rahassa: `kaikki` tarkoittaa yhä
+   * paletin neljää raitaa, ja kaupunkiraidat pyydetään nimeltä tai
+   * ryhmänä `kaupungit`. Sama varovaisuus kuin linssiraidalla
+   * siirtymätyökalussa — valmista raitaa ei generoida vahingossa
+   * uudestaan, ja jokainen kutsu maksaa.
+   *
+   * TIEDOSTONIMI ON KYTKENTÄ PELIIN. Se lasketaan kaupungin id:stä
+   * samalla säännöllä kuin pelissä (js/kaupunkimusiikki.js
+   * `kaupunkiraidanTunnus`): 'ateena' → musa-kaupunki-ateena.mp3, ja
+   * Lyrian pääte tulee perään samasta paikasta kuin muillakin
+   * (tools/lyria.mjs `raidanTiedosto`). Pelin soittokohta on
+   * js/ambience-stream.js:n pohjavire, joka vaihtaa raitaa saavuttaessa
+   * — vartijana tests/kaupunkimusiikki.test.mjs.
+   *
+   * Prompti on omistajan tilaus Fablen sanoin. Kesto 75 s on paletin
+   * pohjavireen (80 s) mitta: raita soi niin kauan kuin pelaaja viipyy
+   * kaupungissa, joten lyhyt kierto alkaisi kuulua silmukaksi.
+   */
+  ateena: {
+    laji: 'kaupunki',
+    kaupunki: 'ateena',
+    tiedosto: 'musa-kaupunki-ateena.mp3',
+    kesto: 75000,
+    looppi: true,
+    kuvaus: 'Ateenan oma kappale pohjavireen tilalla',
+    prompt: 'Arriving in Athens in the afternoon: a light, bright and warm '
+      + 'instrumental. A bouzouki and a guitar play sparingly over a slow '
+      + 'rhythm, the Mediterranean evening coming on. No singing, no tourist '
+      + 'clichés; it plays UNDER the ambient soundscape of the city and must '
+      + 'never pull attention from it. Seamless loop: begin and end on the '
+      + 'same quiet sustained chord so the track can repeat without a seam. '
+      + `${TYYLI}`,
+  },
 };
 
-/** Raitalista argumenteista; 'kaikki' avaa koko paletin. */
+/** Onko raita kaupungin oma kappale vai paletin raita? */
+const onKaupunki = (raita) => raita?.laji === 'kaupunki';
+
+/** Paletin neljä raitaa — `kaikki` tarkoittaa näitä. */
+export const PALETIN_RAIDAT = Object.keys(RAIDAT).filter((id) => !onKaupunki(RAIDAT[id]));
+
+/** Kaupunkiraidat — `kaupungit` tarkoittaa näitä. */
+export const KAUPUNKIEN_RAIDAT = Object.keys(RAIDAT).filter((id) => onKaupunki(RAIDAT[id]));
+
+/**
+ * Raitalista argumenteista.
+ *
+ * `kaikki` on PALETTI eikä koko taulukko: kaupunkiraidat ovat oma
+ * ryhmänsä (`kaupungit`), jottei valmista kaupunkiraitaa generoida
+ * vahingossa uudestaan paletin mukana. Sama sääntö kuin
+ * siirtymätyökalussa, jossa `kaikki` ei sisällä linssiraitaa.
+ */
 export function valitseRaidat(argumentit) {
   if (!argumentit.length) return null;
-  if (argumentit.length === 1 && argumentit[0] === 'kaikki') return Object.keys(RAIDAT);
+  if (argumentit.length === 1 && argumentit[0] === 'kaikki') return [...PALETIN_RAIDAT];
+  if (argumentit.length === 1 && argumentit[0] === 'kaupungit') return [...KAUPUNKIEN_RAIDAT];
   return argumentit;
 }
 
@@ -303,13 +370,15 @@ async function main() {
   if (liput.virhe) {
     console.error(`${liput.virhe}.`);
     console.error('Käyttö: node tools/generoi-musiikki.mjs '
-      + `${Object.keys(RAIDAT).join('|')}|kaikki [--moottori ${MOOTTORIT.join('|')}] [--kuiva]`);
+      + `${Object.keys(RAIDAT).join('|')}|kaikki|kaupungit `
+      + `[--moottori ${MOOTTORIT.join('|')}] [--kuiva]`);
     process.exit(1);
   }
   const pyydetyt = valitseRaidat(liput.raidat);
   if (!pyydetyt) {
     console.error('Anna raidat: node tools/generoi-musiikki.mjs pohja visa aarre paaaarre');
-    console.error(`Koko paletti: node tools/generoi-musiikki.mjs kaikki (${Object.keys(RAIDAT).join(', ')})`);
+    console.error(`Koko paletti: node tools/generoi-musiikki.mjs kaikki (${PALETIN_RAIDAT.join(', ')})`);
+    console.error(`Kaupunkiraidat: node tools/generoi-musiikki.mjs kaupungit (${KAUPUNKIEN_RAIDAT.join(', ')})`);
     process.exit(1);
   }
 

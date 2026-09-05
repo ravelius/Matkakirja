@@ -22,6 +22,19 @@
 #
 # (Lyrialla samat nimet päätteellä -lyria, esim. musa-pohja-lyria.mp3.)
 #
+# KAUPUNKIRAIDAT OVAT OMA RYHMÄNSÄ (omistaja 5.9.2026 klo 00.35:
+# *"ateenaan saavuttaessa voisi vaihtua kappale. generoi sinne oma
+# musiikki."*). Kaupungin oma kappale korvaa pohjavireen niin kauan kuin
+# pelaaja on siinä kaupungissa:
+#
+#   ateena    assets/audio/musa-kaupunki-ateena.mp3   Ateenan oma kappale
+#
+# Ne EIVÄT sisälly valintaan "kaikki" — raidat-inputiin kirjoitetaan
+# joko kaupungin nimi (ateena) tai ryhmä "kaupungit". Syy on sama kuin
+# siirtymämusiikin linssiraidalla: valmista raitaa ei generoida
+# vahingossa uudestaan, ja jokainen kutsu maksaa. Pelin puoli on
+# js/kaupunkimusiikki.js (taulukko) ja js/ambience-stream.js (soitto).
+#
 # AARRE JA PAAAARRE OVAT PARI. Ne ovat sama sävelaihe kahdessa asussa,
 # ja jos toinen generoidaan uusiksi, kannattaa generoida molemmat —
 # muuten musiikillinen sukulaisuus katoaa (ks. tools/generoi-musiikki.mjs).
@@ -70,7 +83,9 @@ on:
       raidat:
         description: >-
           Raitojen avaimet välilyönnein (pohja visa aarre paaaarre) tai
-          "kaikki" koko paletille.
+          "kaikki" koko paletille. Kaupunkiraidat pyydetään nimeltä
+          ("ateena") tai ryhmänä "kaupungit" — ne EIVÄT sisälly
+          "kaikkiin".
         required: true
         default: 'kaikki'
       moottori:
