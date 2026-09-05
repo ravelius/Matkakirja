@@ -409,6 +409,28 @@ export const laattakynnykset = (kerroin = 1) => Array.from({ length: 30 }, (_, t
  * 0,0263 · H / korkeus ⇔ 8k/2^t ≤ korkeus, kun k = H/304. Vähintään 1
  * (ei koskaan karkeampi kuin kirjasto).
  */
+/*
+ * NAPAKERROIN (omistaja 5.9.2026 klo 21.25, Huippuvuoret työpöydällä:
+ * *"ihmeen hitaasti lataa tuolla ylhäällä teräviä laattoja"*).
+ * Laattamoottori valitsee tason pelkästä korkeudesta, mutta Mercator-
+ * laatta kattaa leveysasteella φ vain cos φ -osan päiväntasaajan
+ * laatan leveydestä: 80° N:ssä yhden tason laatoissa on kuusinkertainen
+ * pikselitiheys pallon pintaa kohti, ja sama näkymä tarvitsee
+ * satoja laattoja (mitattu: napanäkymä tasolla 6 haki 834 laattaa).
+ * Kynnykset kerrotaan kameran leveysasteen kosinilla, jolloin navan
+ * lähellä valitaan karkeampi taso, jonka terävyys ruudulla on sama —
+ * ja laattoja haetaan murto-osa. Alaraja pitää tason järkevänä aivan
+ * navan vieressä (napakannet peittävät 83,7°:n yläpuolen).
+ */
+export const NAPAKERROIN_MIN = 0.16;
+/** Kameran leveysasteesta kerroin laattakynnyksiin (1 päiväntasaajalla). */
+export function napakerroin(lat) {
+  if (!Number.isFinite(lat)) return 1;
+  return Math.max(NAPAKERROIN_MIN, Math.cos((lat * Math.PI) / 180));
+}
+/** Leveysasteen muutos, joka päivittää kynnykset liikkeessä (astetta). */
+export const NAPAKERROIN_ASKEL = 4;
+
 export function lepokerroin(korkeusPx, teravyys = LAATU_TERAVYYS) {
   return Math.max(1, (teravyys * korkeusPx) / 304);
 }
@@ -462,10 +484,13 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
   let lepoAjastin = 0;
   const ajastimet = new Set();
 
+  let kynnysLat = 0;
+  const kameranLat = () => { const p = pallo.pointOfView?.(); return Number.isFinite(p?.lat) ? p.lat : 0; };
   const asetaTila = (lepoon) => {
     lepo = lepoon;
     if (aina) lepoon = true;
-    const kerroin = lepoon ? lepokerroin(kotelo.clientHeight * dpr) : 1;
+    kynnysLat = kameranLat();
+    const kerroin = (lepoon ? lepokerroin(kotelo.clientHeight * dpr) : 1) * napakerroin(kynnysLat);
     moottori.thresholds = laattakynnykset(kerroin);
     const suhde = Math.min(dpr, lepoon ? LAATU_PIKSELISUHDE_LEPO : LAATU_PIKSELISUHDE_LIIKE);
     if (renderer && renderer.getPixelRatio?.() !== suhde) renderer.setPixelRatio(suhde);
@@ -507,6 +532,8 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
         if (!edellinen || !lepoAjastin) liikeAlku = nyt;
         edellinen = paikka.clone();
         if (lepo && nyt - liikeAlku >= LAATU_LIIKEVIIVE_MS) asetaTila(false);
+        // Napakerroin seuraa kameran leveysastetta myös liikkeessä.
+        else if (Math.abs(kameranLat() - kynnysLat) >= NAPAKERROIN_ASKEL) asetaTila(lepo);
         ikkuna.clearTimeout(lepoAjastin);
         lepoAjastin = ikkuna.setTimeout(lepoon, LAATU_LEPOVIIVE_MS);
       }

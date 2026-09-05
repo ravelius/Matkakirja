@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1592, teksti: 'Pallo: napakerroin - navalla karkeampi taso, sama teravyys' },
   { v: 1591, teksti: 'Pallo: tyopoydan rulla panoroi, cmd zoomaa' },
   { v: 1590, teksti: 'Pallo: kokeiluvipu tarkkuus liikkeessa' },
   { v: 1589, teksti: 'Pallolaatat: reunatyo vain reunalaatoille' },
