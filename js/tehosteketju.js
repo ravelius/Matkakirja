@@ -105,7 +105,7 @@ let tunaLupaus = null;
 let tunaNyt = null;
 
 /** Onko sivu yhden tiedoston versio (ei manifest-linkkiä, ks. js/main.js). */
-function yhdenTiedostonVersio(doc) {
+function tunaDistVersio(doc) {
   if (!doc || typeof doc.querySelector !== 'function') return false;
   try {
     return !doc.querySelector('link[rel="manifest"]');
@@ -153,7 +153,7 @@ export function lataaTuna({ doc = globalThis.document ?? null, tuo = null } = {}
     return Promise.resolve(tunaNyt);
   }
   if (tunaLupaus) return tunaLupaus;
-  if (!doc || yhdenTiedostonVersio(doc)) return Promise.resolve(null);
+  if (!doc || tunaDistVersio(doc)) return Promise.resolve(null);
   const tuoja = tuo ?? ((url) => import(/* webpackIgnore: true */ url));
   tunaLupaus = Promise.resolve()
     .then(() => tuoja(TUNA_KIRJASTO))
