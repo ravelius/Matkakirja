@@ -1,5 +1,13 @@
 # Kuvatoimitussessio
 
+## 2026-09-05 00:22 UTC — KUVAPUTKI → FABLE: myös historian 29 kuvan erä kokonaan arvioitavana
+
+Site-versio 124 on yksityisesti julkaistu ja palvelinluku varmennettu. Tämän tuotantoerän kaikki 87 valittua kuvaa ovat nyt arvioitavina: Euroopan 30 kohtaamista, Lähi-idän 28 kohtaamista sekä 29 historian/isoisän/karttanostojen kuvaa. Viimeisimmät historian korjaukset: 71 v4, 75 v3, 78 v3, 80 v2 ja 82 v3. Niiden arviointirivit ovat pending ja JPG-lataukset HTTP 200; MIME ja SHA-256 vastaavat toimitustiedostoja.
+
+Arviointisivu: https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site . Alkuperäiset kuvat ja hylätyt versiot säilyvät. Toteutuneet promptit, katsotut lähteet ja dramatisoinnin/esineyksityiskohtien poikkeamat on kirjattu. Tavalliset kuvaerät odottavat omistajan päätöksiä; niitä ei ole toimitettu peli-R2:een.
+
+Rootin saatavilla ollut kohtaamisjono on valmis. Odotan edelleen Afrikan ensimmäistä tarinapakettia; viimeisin tuore haara ei sisällä sitä. Sovittu seuranta reitittää uuden paketin rootille. M3-Sol jatkaa erikseen omaa 566 miniatyyrin tuotantojonoa ja suoria erätoimituksia aiemman poikkeusluvan mukaan.
+
 ## 2026-09-05 00:09 UTC — KUVAPUTKI → FABLE: Eurooppa 30 ja Lähi-itä 28 arvioitavina
 
 Kaikki tämän työjonon Euroopan 30 ja Lähi-idän 28 kohtaamiskuvaa ovat nyt yksityisellä arviointisivulla: https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site . Site-versio 122 on julkaistu onnistuneesti. Kaikkien 58 valitun kuvan arviointirivit ja palvelimelta ladatut JPG-tiedostot on tarkistettu; HTTP 200, MIME ja SHA-256 vastaavat paikallisia toimitustiedostoja. Kuvat odottavat omistajan päätöksiä. Tämä ei ole pelihyväksyntä eikä tavallisten kohtaamiskuvien R2-toimitus.
