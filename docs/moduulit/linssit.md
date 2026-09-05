@@ -1266,3 +1266,53 @@ rasterilinsseille: uusi kuva, ei uutta aineistoa.
 **Vartijat.** `tests/pallolinssit.test.mjs` (rajapinta, osarekisterit,
 topografian `pallolle`, ui:n portti) ja `tests/pallolauta.test.mjs`
 (sallitut Globe.gl-kerrokset).
+
+## Laukussa napautus selittää, "aktivoi" kytkee (5.9.2026)
+
+Omistajan tilaus sanatarkasti (5.9.2026 ilta):
+
+> *"muuta: kun linssi klikataan matkalaukussa niin silloin päivittyy
+> vasta selite teksti ja tekstin loppuun tulee "aktivoi", mitä
+> klikkaamalla linssi menee päälle ja matkalaukku sulkeutuu"*
+
+Varusteruudukon napautus oli siihen asti sama asia kuin linssin
+kytkeminen (`nappi.addEventListener('click', () => valitseLinssi(...))`).
+Nyt se on **kaksivaiheinen**, ja luku 5.1:n kuvaus valitsimesta pätee
+muuten ennallaan:
+
+1. **Ruudun napautus ei kytke mitään.** `ui.esikatseleLinssi(tunnus)`
+   kirjaa napautetun linssin kenttään `ui.linssiEsikatselu` ja piirtää
+   selitelohkon (`.linssi-tiedot`) uudelleen. Kenttä on tarkoituksella
+   `undefined`, kun mitään ei ole napautettu — `null` on kelvollinen
+   arvo ("Ei linssiä"), joten tyhjä tila ei voi olla null. Laukun avaus
+   (`openPassport`) ja kytketty linssi (`valitseLinssi`) nollaavat sen.
+2. **Selite kertoo napautetusta linssistä** — nimi ja `lyhyt` — ja sen
+   perässä samassa kappaleessa on `button.linssi-aktivoi`, jossa lukee
+   **aktivoi**. Päällä olevan linssin kohdalla sana on **sammuta** ja se
+   kytkee linssin pois (`valitseLinssi(null)`). "Ei linssiä" -ruutu
+   toimii kuten linssit: otsikko "Paljain silmin", sama selite kuin
+   ennen ja "aktivoi". Nappi on oikea `<button>` (näppäimistö ja
+   ruudunlukija) ja sillä on aria-label "Aktivoi linssi *nimi*" /
+   "Sammuta linssi *nimi*"; ulkoasu on pergamentin tekstilinkki
+   (`.dialog .linssi-aktivoi` voittaa `.dialog button`-napin asun).
+3. **"aktivoi" kytkee ja sulkee laukun.** `ui.aktivoiLinssi(tunnus)`
+   kutsuu `valitseLinssi`ä ja sen jälkeen `suljeLaukku()`:n, joka on
+   ainoa paikka, josta laukku suljetaan koodista (`pallo`-linssi käyttää
+   samaa metodia).
+
+**Kaksi korostusta, kaksi eri asiaa.** `.paalla` on messinkirengas
+kartalla olevan linssin ympärillä; uusi `.esikatselu` on kevyempi
+rengas juuri napautetun ruudun ympärillä. Ne voivat olla eri ruuduissa
+yhtä aikaa — juuri se on tilauksen ydin. Selitteen vaihto häivytetään
+sisään (`.linssi-tiedot.vaihtui`, `@keyframes linssiSelitteenVaihto`;
+reduced motion nollaa animaation), eikä ruudukossa ole hyppäystä.
+
+Kytkennän jälkeinen käytös on ennallaan: pallolaudalla `pallolle`-linssi
+piirtyy pallon pinnalle ja kääntämätön herättää linssikartan, ja vanha
+kartta (`?lauta=kartta`) toimii kuten ennen. Molemmat laudat käyttävät
+tätä samaa ruudukkoa.
+
+**Vartija.** `tests/matkalaukun-linssit.test.mjs`: ruudun napautus ei
+kutsu `valitseLinssi`ä eikä sulje laukkua, selitteen perään tulee
+"aktivoi", ja "aktivoi" kutsuu `valitseLinssi`ä ja sulkee laukun
+("sammuta" kytkee pois).
