@@ -696,6 +696,12 @@ export function tilanne() {
 
 /** Kertoo kutsujalle, että jokin muuttui. Virhe kuuntelijassa ei kaada radiota. */
 function kerroMuutos() {
+  /*
+   * Pallolaudalla soivan aseman nappi päivittyy vain tästä: tasokartalla
+   * ui.drawTargets piirtää napit uudelleen, pallolla merkkilista
+   * asetetaan uudelleen samoilla avaimilla (tahdistaPallonNapit).
+   */
+  tahdistaPallonNapit();
   try {
     tila?.onMuutos?.(tilanne());
   } catch (syy) {
@@ -1514,8 +1520,17 @@ export function paalle({
   if (Number.isFinite(alkuAani)) aanenvoimakkuus = Math.min(1, Math.max(0, alkuAani));
 
   const nimet = new Map();
+  /*
+   * Kaupungin paikka LAUDAN yksiköissä. Pallolauta kääntää ne asteiksi
+   * itse (lauta.asteet), joten radio ei tallenna kahta koordinaatistoa
+   * eikä tiedä pallosta muuta kuin että lauta osaa kääntää — sama
+   * yksikkö kelpaa myös kamera-ajolle (js/pallolauta/kamera.js).
+   */
+  const paikat = new Map();
   for (const kaupunki of kaupungit) {
-    if (kaupunki?.id) nimet.set(kaupunki.id, kaupunki.name ?? null);
+    if (!kaupunki?.id) continue;
+    nimet.set(kaupunki.id, kaupunki.name ?? null);
+    paikat.set(kaupunki.id, { x: kaupunki.x, y: kaupunki.y });
   }
 
   const kanavalliset = kanavakaupungit(map, kaupungit);
@@ -1616,6 +1631,7 @@ export function paalle({
   tila = {
     map,
     nimet,
+    paikat,
     soitin,
     naytto,
     onMuutos,
@@ -1704,6 +1720,10 @@ export function pois() {
   // mittarilla ei ole lähetystä luettavanaan.
   const vanha = tila;
   tila = null;
+  // Pallolaudan napit pois samassa hetkessä kuin laite: tila === null
+  // purkaa merkkiosan (tahdistaPallonNapit). Tasokartalla saman tekee
+  // ui.drawTargets, joka piirtää kohteet radiottomina.
+  tahdistaPallonNapit();
   try {
     vanha.naytto.pysayta();
     vanha.soitin.poista();
@@ -1847,6 +1867,270 @@ export function piirraKaupunkinapit(ryhma, kaupungit = [], { kiertoKohdat = null
   return piirretty;
 }
 
+/* ------------------------------------------------- maailmanradio pallolla */
+
+/*
+ * RADIO PALLOLAUDALLA (docs/moduulit/karttapallo.md luku 10, aalto 2B).
+ *
+ * Omistajan linjaus 5.9.2026 (Raamattu, KAIKKI PALLOLLE, VANHA KARTTA
+ * SULJETAAN, sanatarkasti): *"Käännä kaikki pallolle, niin voidaan
+ * sulkea vanha kartta kokonaan"*. Radio on kartan TILA eikä kerros,
+ * joten pallolla muuttuu tasan yksi asia: kaupunkien play-napit.
+ * Soitin (radiosoitin.js), pistenäyttö (pistenaytto.js), viritysäänet
+ * (viritin.js) ja kanava-aineisto (js/packs/radiot.js) eivät tiedä
+ * laudasta mitään eivätkä muutu rivilläkään.
+ *
+ * NAPIT OVAT CSS2D-MERKKEJÄ, EIVÄT SVG:tä KARTALLA. Ne pyydetään laudan
+ * linssiapurilta (js/pallolauta/linssit.js `merkit`), joka on sopimuksen
+ * 10.1 mukaan ainoa tie pallon pinnalle: radio ei koske
+ * Globe.gl-instanssiin. Datumin avain on kaupungin tunnus, joten soivan
+ * aseman vaihtuessa sama lista asetetaan uudelleen samoilla avaimilla —
+ * kirjasto siirtää olemassa olevat elementit eikä luo niitä uudestaan,
+ * ja vain ulkoasu päivittyy (`asettele`).
+ *
+ * KOKO ON RUUTUVAKIO (karttapallo.md luku 6): CSS2D-elementti ei
+ * skaalaudu pallon mukana, joten laudan yksiköt (NAPIN_RENGAS 21) eivät
+ * käänny tänne. Suhteet ovat samat kuin kartalla, mitat pikseleinä.
+ *
+ * NAPAUTUS KULKEE ELEMENTIN KAUTTA eikä pallon osumatestin (poikkeus
+ * karttapallo.md:n riskiin 3). Pelin merkit tekevät päinvastoin, koska
+ * niiden napautus päätyy pelin tilaan ja kaksi reittiä olisi tuplakutsu;
+ * radion nappi ei koske peliin lainkaan, ja se on ainoa, joka tietää
+ * mikä kaupunki sen alla on. Radiotilassa pallon oma napautus ei tee
+ * mitään (js/pallolauta/lauta.js napautaKaupunki, napautaKohde) — sama
+ * sääntö kuin tasokartalla, jossa radiotilassa ei ole yhtään muuta
+ * kohdetta: *"kaikki muu toiminto häviää"* (omistaja 4.8.2026).
+ */
+
+/** Linssiapurin osan nimi: kaikki radion merkit puretaan tällä yhdellä. */
+const PALLON_OSA = 'radio';
+/**
+ * Napin mitat RUUTUPIKSELEINÄ. Osuma-ala on elementin laatikko (44 px)
+ * eli sama kosketuskoko kuin pallon omalla osumatestillä
+ * (js/pallolauta/lauta.js NAPAUTUKSEN_SADE_PX 44).
+ */
+const PALLON_NAPPI = Object.freeze({
+  laatikko: 44, rengas: 13, hehku: 21, ulkokeha: 17, kolmio: 4.6,
+});
+/**
+ * Kuinka syvällä ruudun reunasta soivan aseman on oltava, ennen kuin
+ * kamera jätetään rauhaan (px). Nauhalta voi valita aseman pallon
+ * TOISELTA PUOLEN — kartalla koko lauta oli kerralla näkyvissä, pallolla
+ * ei — ja silloin kamera ajaa perään, jottei nappi jää näkymättömiin.
+ */
+const PALLON_KAMERAN_REUNUS_PX = 56;
+
+/** Pallolauta, jolle napit piirretään; null kun radio ei ole pallolla. */
+let pallolla = null;
+/** Viimeksi työnnetty merkkilista { tila, cityId } — turha työ pois. */
+let pallonAsu = null;
+/** Kaupunki, jonka takia kamera on viimeksi ajanut (ei ajeta kahdesti). */
+let pallonKameraKaupunki = null;
+
+/**
+ * Napin sisus: samat kolme ulkoasua kuin kartalla (ks.
+ * piirraKaupunkinapit), ruutupikseleinä ja ilman kiertokopioita —
+ * pallolla ei ole saumaa, joten kiertoKohtia ei ole eikä tarvita.
+ */
+function piirraPallonNapinSisus(svg, d) {
+  const m = PALLON_NAPPI;
+  svg.textContent = '';
+  if (d.soi) {
+    // Punainen hehku alle renkaiden, kuten kartalla.
+    el('circle', {
+      cx: 0, cy: 0, r: m.hehku, fill: PUNAINEN, opacity: 0.16,
+    }, svg);
+  }
+  el('circle', {
+    cx: 0,
+    cy: 0,
+    r: m.rengas,
+    fill: 'none',
+    stroke: d.soi ? PUNAINEN : MUSTE,
+    'stroke-width': d.soi ? 2.4 : 1.4,
+    opacity: d.onKanava ? 0.85 : 0.34,
+    ...(d.onKanava ? {} : { 'stroke-dasharray': '2 3.5' }),
+  }, svg);
+  if (d.soi) {
+    // Ulkokehä kertoo soivan kaupungin myös kaukaa katsottuna.
+    el('circle', {
+      cx: 0, cy: 0, r: m.ulkokeha, fill: 'none', stroke: PUNAINEN, 'stroke-width': 1.2, opacity: 0.62,
+    }, svg);
+  }
+  if (d.onKanava) {
+    // Kolmio on optisesti keskitetty: massa vasemmalla, kärki yli.
+    const k = m.kolmio;
+    el('path', {
+      d: `M ${-k * 0.55} ${-k} L ${k} 0 L ${-k * 0.55} ${k} Z`,
+      fill: d.soi ? PUNAINEN : MUSTE,
+      opacity: d.soi ? 1 : 0.72,
+    }, svg);
+  }
+}
+
+/**
+ * Napin kuori: div (osuma-ala ja napautus) ja sen sisällä svg (piirros).
+ * Luodaan kerran kaupunkia kohti; ulkoasun päivittää `asettele`.
+ */
+function pallonNappiElementti(d) {
+  const m = PALLON_NAPPI;
+  const juuri = document.createElement('div');
+  juuri.className = 'pallolauta-radionappi';
+  juuri.setAttribute('role', 'button');
+  el('svg', {
+    viewBox: `${-m.laatikko / 2} ${-m.laatikko / 2} ${m.laatikko} ${m.laatikko}`,
+    width: m.laatikko,
+    height: m.laatikko,
+    'aria-hidden': 'true',
+  }, juuri);
+  juuri.addEventListener('click', (tapahtuma) => {
+    /*
+     * Pallon kotelo kuuntelee napautuksia (kelluvan kortin sulku,
+     * js/pallolauta/lauta.js korttivahti) — nappi on nappi eikä
+     * napautus pintaan, sama sääntö kuin kartalla.
+     */
+    tapahtuma.stopPropagation();
+    soitaKaupunki(d.avain);
+  });
+  return juuri;
+}
+
+/**
+ * Napin ulkoasu ja ruudunlukijan teksti. Kutsutaan sekä elementin
+ * synnyttyä että aina kun sama datum saa uudet arvot (merkit.js aseta),
+ * joten piirto tehdään vain kun asu oikeasti vaihtui.
+ */
+function paivitaPallonNappi(juuri, d) {
+  /*
+   * Napit eivät ole näppäimistöfokusoitavia — sama päätös kuin kartalla
+   * (piirraKaupunkinapit): sata nappia olisi sata sarkainpysähdystä.
+   * aria-label kertoo aseman ruudunlukijalle.
+   */
+  juuri.setAttribute('aria-label', d.kanava
+    ? `${d.nimi} — ${d.kanava.asema}`
+    : `${d.nimi} — ei asemaa`);
+  const asu = `${d.onKanava ? 'kanava' : 'tyhja'}|${d.soi ? 'soi' : 'vaiti'}`;
+  if (juuri.dataset.asu === asu) return;
+  juuri.dataset.asu = asu;
+  const svg = juuri.querySelector('svg');
+  if (svg) piirraPallonNapinSisus(svg, d);
+}
+
+/**
+ * Napit merkkilistana pallolle. Karsinta on sama kuin kartalla (yksi
+ * kaupunki per maa, ks. radionKaupungit): tila.naytettavat on laskettu
+ * kerran paalle():ssa, ja kartan ja nauhan on näytettävä samat
+ * kaupungit.
+ */
+function pallonNapit() {
+  const asteet = pallolla?.lauta?.asteet;
+  if (!tila || typeof asteet !== 'function') return [];
+  const lista = [];
+  for (const [id, paikka] of tila.paikat) {
+    if (!tila.naytettavat.has(id)) continue;
+    const asteina = asteet(paikka);
+    if (!asteina) continue;
+    const onKanava = tila.kanavalliset.has(id);
+    lista.push({
+      avain: id,
+      lat: asteina.lat,
+      lng: asteina.lon,
+      nimi: tila.nimet.get(id) ?? id,
+      onKanava,
+      kanava: onKanava ? kanavaKaupungille(id) : null,
+      soi: soiva?.cityId === id,
+      elementti: pallonNappiElementti,
+      asettele: paivitaPallonNappi,
+    });
+  }
+  return lista;
+}
+
+/**
+ * KAMERA SOIVAN ASEMAN YLLE, JOS SITÄ EI NÄE. Napautettu nappi on jo
+ * ruudulla eikä kamera liiku sen takia; nauhalta valittu asema voi olla
+ * pallon toisella puolella, ja silloin ajetaan sinne laudan omalla
+ * kamera-ajolla (js/pallolauta/kamera.js) laudan yksiköissä.
+ */
+function ajaPallonKamera() {
+  const lauta = pallolla?.lauta;
+  const id = soiva?.cityId ?? null;
+  if (!lauta || id === pallonKameraKaupunki) return;
+  pallonKameraKaupunki = id;
+  const paikka = id ? tila?.paikat?.get(id) : null;
+  if (!paikka) return;
+  const asteina = lauta.asteet?.(paikka);
+  if (!asteina) return;
+  // Negatiivinen vara vaatii pisteen olevan reunuksen verran SISÄLLÄ.
+  if (lauta.ruudulla?.(asteina.lat, asteina.lon, -PALLON_KAMERAN_REUNUS_PX)) return;
+  const kamera = lauta.kamera;
+  if (typeof kamera?.ajaKamera !== 'function') return;
+  void kamera.ajaKamera(
+    { x: paikka.x, y: paikka.y, leveys: kamera.kameranTila?.()?.leveys },
+    {},
+  );
+}
+
+/**
+ * Napit pallolle — tai pois, kun radiotila on suljettu. Kutsutaan
+ * jokaisesta muutoksesta (kerroMuutos) ja radiotilan purkautuessa.
+ */
+function tahdistaPallonNapit() {
+  const linssit = pallolla?.lauta?.linssit;
+  if (!linssit) return;
+  /*
+   * Lauta voi olla purettu tämän alta (uusi peli, WebGL-kontekstin
+   * menetys → ui.pallolautaVarapolku). Radion sammutus ei saa kaatua
+   * siihen: laite ja äänet ovat tärkeämpiä kuin viimeinen merkkilista.
+   */
+  try {
+    if (!tila) {
+      if (pallonAsu) linssit.pura(PALLON_OSA);
+      pallonAsu = null;
+      pallonKameraKaupunki = null;
+      return;
+    }
+    const cityId = soiva?.cityId ?? null;
+    if (pallonAsu?.tila === tila && pallonAsu.cityId === cityId) return;
+    pallonAsu = { tila, cityId };
+    linssit.merkit(PALLON_OSA, pallonNapit());
+    ajaPallonKamera();
+  } catch (syy) {
+    console.warn('Radion kaupunkinappien tahdistus pallolle epäonnistui.', syy);
+  }
+}
+
+/**
+ * LINSSI PALLOLAUDALLA (sopimus karttapallo.md 10.1): piirtää linssin
+ * pallon pinnalle ja palauttaa kahvan `{ pura() }`.
+ *
+ * Kahva on kevyt, koska radiotila itse kytketään yhä js/ui.js:n
+ * tahdistaRadiossa (paalle/pois) — se on kartasta riippumatonta ääntä ja
+ * laitetta. Tässä sovitaan vain siitä, MILLE laudalle napit piirretään;
+ * itse napit tulevat siinä hetkessä, jona radiotila avautuu, ja
+ * päivittyvät kanavan vaihtuessa (kerroMuutos).
+ *
+ * Sytytysjärjestys on ui:n: `pallolle` ensin, `paalle` heti perään.
+ * Uudelleensytytys (uusi peli, laudan uudelleenrakennus) tulee tänne
+ * radiotila jo päällä, joten lista työnnetään myös tästä.
+ */
+export function pallolle(lauta) {
+  const linssit = lauta?.linssit;
+  if (!linssit) return { pura() {} };
+  pallolla = { lauta };
+  pallonAsu = null;
+  pallonKameraKaupunki = null;
+  tahdistaPallonNapit();
+  return {
+    pura() {
+      if (pallolla?.lauta === lauta) pallolla = null;
+      pallonAsu = null;
+      pallonKameraKaupunki = null;
+      linssit.pura(PALLON_OSA);
+    },
+  };
+}
+
 /*
  * LINSSISOPIMUKSEN OSUUS.
  *
@@ -1886,9 +2170,17 @@ export const LINSSI = {
   },
 
   /*
+   * PALLOLAUTA (karttapallo.md luku 10.1, aalto 2B): kaupunkien napit
+   * pallon pinnalle laudan linssiapurin kautta. Kahva on kevyt, koska
+   * radiotila kytketään yhä js/ui.js:n tahdistaRadiossa — ks. pallolle().
+   */
+  pallolle,
+
+  /*
    * Moottori kutsuu tätä, kun pelaaja vaihtaa toiseen linssiin tai
    * sammuttaa linssit. Silloin radiotilasta poistutaan kokonaan — myös
-   * kesken soiton, ks. pois().
+   * kesken soiton, ks. pois(). Pallon napit lähtevät samalla:
+   * pois() → tahdistaPallonNapit() purkaa merkkiosan.
    */
   vapauta() {
     pois();
