@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
-import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTAKANSIO, laattatasoMax, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS, laattakynnykset, lepokerroin, LAATU_TERAVYYS, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE } from '../js/pallo.js';
+import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTAKANSIO, laattatasoMax, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS, laattakynnykset, lepokerroin, LAATU_TERAVYYS, NAPAKANNEN_LEVEYS, NAPAKANNEN_HAIVEPEITTO, NAPAKANSI_POHJOINEN, NAPAKANSI_ETELA, asennaNapakannet, kolmiulotteinen, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE } from '../js/pallo.js';
 import { laatanReunat, rivinLeveysaste, julisteenLeveysvali, tasonLaatat, lahdetaso, laattojenKansio, LAATTA, tayteRivilla, nostaReuna, JAA_RAJA, JAA_SAVY, MERI_SAVY } from '../tools/tee-pallolaatat.mjs';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
 import { LINSSI as PALLOLINSSI } from '../js/linssit/pallo.js';
@@ -178,6 +178,91 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   const pallo2 = lue('../js/pallo.js');
   assert.match(pallo2, /const VAUHTI_KITKA = 0\.0028;/);
   assert.match(pallo2, /requestAnimationFrame\(\(\) => liu\(/);
+});
+
+/*
+ * NAPAKANNET (omistaja 5.9.2026 klo 15 Suomen aikaa, kuvakaappaus
+ * Huippuvuorilta: "Miksi hattu näkyy?"). Kaksi ohutta pallokalottia
+ * peittää sen, mitä laatoista ei voi poistaa: Globe.gl:n venytetyn
+ * napalakin ja laattaverkkojen rivisauman. Kannen leveysaste ja
+ * materiaaliluokka mitattiin selaimessa (js/pallo.js kertoo mittaukset).
+ */
+test('napakannet peittävät sauman laattojen omalla sävyllä eivätkä koske Huippuvuoriin', () => {
+  // Kansi alkaa mitatun renkaan (83,7–84,25°) alapuolelta mutta jättää
+  // Grönlannin pohjoiskärjen, Frans Joosefin maan ja Huippuvuoret näkyviin.
+  assert.ok(NAPAKANNEN_LEVEYS <= 83.7, `kansi ei peitä rengasta: ${NAPAKANNEN_LEVEYS}`);
+  assert.ok(NAPAKANNEN_LEVEYS > 82, `kansi söisi karttaa: ${NAPAKANNEN_LEVEYS}`);
+  assert.ok(NAPAKANNEN_LEVEYS > 81.9, 'Frans Joosefin maa (81,9° N) jää kannen alta näkyviin');
+  // Sävyt ovat laattatyökalun täytesävyt: pohjoinen merta, etelä jäätä.
+  const hex = (rgb) => `#${rgb.map((v) => v.toString(16).padStart(2, '0')).join('')}`;
+  assert.equal(NAPAKANSI_ETELA, hex(JAA_SAVY), 'etelän kansi on JAA_SAVY');
+  const pohjoinen = [201, 194, 175]; // tools/tee-pallolaatat.mjs mittaama Jäämeri
+  assert.equal(NAPAKANSI_POHJOINEN, hex(pohjoinen));
+  assert.ok(pohjoinen.every((v, i) => Math.abs(v - MERI_SAVY[i]) <= 10), 'pohjoinen kansi on merisävyä');
+  // Kannet asennetaan laattamoottorihaarasta, ja niitä on kaksi.
+  const pallo = lue('../js/pallo.js');
+  assert.match(pallo, /globeTileEngineMaxLevel\(laattatasoMax\(laatat\)\);\n\s*asennaLaatunosto\(pallo, kotelo\);\n\s*asennaNapakannet\(pallo\);/);
+  assert.match(pallo, /kansi\(false, NAPAKANSI_POHJOINEN/);
+  assert.match(pallo, /kansi\(true, NAPAKANSI_ETELA/);
+  assert.match(pallo, /new LaattaMateriaali\(\{ color: savy \}\)/, 'materiaali laatoilta: valaisematon kansi näkyisi tummana kiekkona');
+});
+
+test('napakannet: geometria pohjoisnavasta, purkaja siivoaa, ilman laattaverkkoa ei kantta', () => {
+  // Kirjaston luokkien sijaiset: kolmiulotteinen() lukee ne elävistä objekteista.
+  class Muoto {
+    constructor(radius, w, h, phiStart, phiLength, thetaStart, thetaLength) {
+      this.parameters = { radius, thetaStart, thetaLength };
+      this.purettu = false;
+    }
+    dispose() { this.purettu = true; }
+  }
+  class Valaistu { constructor(o) { Object.assign(this, o); this.type = 'MeshLambertMaterial'; } dispose() {} }
+  class Valaisematon { constructor(o) { Object.assign(this, o); this.type = 'MeshBasicMaterial'; } dispose() {} }
+  class Verkko { constructor(geometry, material) { this.geometry = geometry; this.material = material; this.userData = {}; } }
+  const teePallo = (valaistuLoytyy) => {
+    const juuri = {
+      children: [],
+      add(o) { this.children.push(o); },
+      remove(o) { this.children = this.children.filter((x) => x !== o); },
+    };
+    const lapset = [new Verkko(new Muoto(99, 8, 8, 0, 6.28, 0, Math.PI), new Valaisematon({ color: '#fff' }))];
+    if (valaistuLoytyy) lapset.push(new Verkko(new Muoto(100, 8, 8, 0, 6.28, 1.5, 1.1), new Valaistu({ color: '#fff' })));
+    const moottori = { thresholds: [], updatePov() {}, children: lapset, parent: juuri };
+    return { juuri, pallo: { scene: () => ({ traverse: (f) => f(moottori) }), getGlobeRadius: () => 100 } };
+  };
+  const { juuri, pallo } = teePallo(true);
+  const kolmi = kolmiulotteinen(pallo);
+  assert.equal(kolmi.LaattaMateriaali, Valaistu, 'laattojen materiaali (valaistu)');
+  assert.equal(kolmi.PerusMateriaali, Valaisematon);
+  assert.ok(kolmi.laatatValmiit);
+  const pura = asennaNapakannet(pallo);
+  assert.equal(juuri.children.length, 4, 'kaksi kantta, kummallakin peittävä ja häivyttyvä');
+  assert.ok(juuri.children.every((k) => k.userData.napakansi && k.material instanceof Valaistu));
+  const aste = Math.PI / 180;
+  const [pohja, pohjaHaive, etela, etelaHaive] = juuri.children;
+  assert.equal(pohja.geometry.parameters.thetaStart, 0, 'pohjoinen kansi alkaa navasta (+Y)');
+  assert.ok(Math.abs(pohja.geometry.parameters.thetaLength - (90 - NAPAKANNEN_LEVEYS) * aste) < 1e-9);
+  assert.ok(Math.abs(etela.geometry.parameters.thetaStart - (Math.PI - (90 - NAPAKANNEN_LEVEYS) * aste)) < 1e-9, 'etelä on toisessa päässä');
+  assert.equal(etela.geometry.parameters.thetaLength, pohja.geometry.parameters.thetaLength);
+  assert.equal(pohja.material.color, NAPAKANSI_POHJOINEN);
+  assert.equal(etela.material.color, NAPAKANSI_ETELA);
+  for (const haive of [pohjaHaive, etelaHaive]) {
+    assert.equal(haive.material.opacity, NAPAKANNEN_HAIVEPEITTO);
+    assert.equal(haive.material.transparent, true);
+    assert.ok(haive.geometry.parameters.thetaLength > pohja.geometry.parameters.thetaLength, 'häive on leveämpi');
+    assert.ok(haive.geometry.parameters.radius > pohja.geometry.parameters.radius, 'häive on peittävän päällä');
+  }
+  assert.ok(pohja.geometry.parameters.radius > 100 && pohja.geometry.parameters.radius < 100.5, 'kansi laattojen yläpuolella');
+  pura();
+  assert.equal(juuri.children.length, 0, 'purkaja poistaa kannet');
+  assert.equal(pohja.geometry.purettu, true);
+  // Ilman laattaverkkoa kantta ei tehdä: valaisematon materiaali näkyisi tummana kiekkona.
+  const vain = teePallo(false);
+  assert.equal(kolmiulotteinen(vain.pallo).laatatValmiit, false);
+  const ajastimet = [];
+  asennaNapakannet(vain.pallo, { setTimeout: (f) => ajastimet.push(f) });
+  assert.equal(vain.juuri.children.length, 0);
+  assert.equal(ajastimet.length, 1, 'yritetään uudestaan, kunnes laatat saapuvat');
 });
 
 test('pinnoitteen pikselihaku: juliste kattaa 76° N – Etelämanner, navat jäävät ulkopuolelle', () => {
