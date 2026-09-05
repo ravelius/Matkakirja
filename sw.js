@@ -129,6 +129,8 @@ const SHELL = [
   './js/pallolauta/lauta.js',
   './js/pallolauta/kamera.js',
   './js/pallolauta/merkit.js',
+  './js/pallolauta/nimet.js',
+  './js/pallolauta/nostot.js',
   './js/pallolauta/reitit.js',
   './js/pallolauta/siirto.js',
   './css/aikajana.css',

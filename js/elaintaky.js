@@ -152,7 +152,7 @@ const ELAINTAKY_VALO_KOKO = 0.6;
  * ruudun. Tiukempi raja (60°) piilotti merkit myös Euroopan laudan
  * omassa yleiskuvassa, mikä on väärin — se lauta ON Euroopan kartta.
  */
-const ELAINTAKY_NAKYY_ASTETTA = 90;
+export const ELAINTAKY_NAKYY_ASTETTA = 90;
 
 /** Tyylitiedoston tunnus — SAMA kuin täkynostolla (ks. lataaTyyli). */
 const ELAINTAKY_TYYLIN_TUNNUS = 'fokusnosto-tyyli';

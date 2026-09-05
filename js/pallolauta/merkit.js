@@ -30,6 +30,10 @@
  * ELEMENTIT PYSYVÄT: datumit ovat pysyviä olioita avaimittain, jotta
  * Globe.gl siirtää olemassa olevaa elementtiä (htmlTransitionDuration,
  * KAIKKI LIIKE ANIMOIDAAN) eikä luo sitä uudestaan joka piirrossa.
+ *
+ * VAIHE 3: sama kerros kantaa myös kaupunkien nimet
+ * (js/pallolauta/nimet.js) ja elävät nostot, eläintäyt ja
+ * kohtaamispisteen (js/pallolauta/nostot.js) — ks. luoMerkit alla.
  */
 
 /** Kohdemerkin halkaisija ruudulla (px) — js/ui.js FOKUS_KOHDE_PX. */
@@ -118,58 +122,177 @@ export function kohdeElementti(kohde) {
 }
 
 /**
- * Merkkikerros pallolle. `asteet(kohta)` kääntää laudan (x, y) asteiksi
- * ({ lat, lon }). Palauttaa `paivita({ nappula, kohteet })` ja luettelot
+ * Merkkikerros pallolle — YKSI htmlElementsData-KERROS, MONTA OSAA
+ * (vaihe 3). Globe.gl:llä on yksi html-kerros, joten nappula ja
+ * kohteet (osa `peli`), kaupunkien nimet (osa `nimet`,
+ * js/pallolauta/nimet.js) ja elävät nostot, eläintäyt ja
+ * kohtaamispiste (osa `nostot`, js/pallolauta/nostot.js) kootaan tässä
+ * samaan listaan. Jokainen osa asettaa oman listansa (`aseta`), ja
+ * rekisteri pitää datumit pysyvinä avaimittain, jotta kirjasto siirtää
+ * olemassa olevaa elementtiä eikä luo sitä uudestaan.
+ *
+ * ILMESTYMINEN JA POISTUMINEN ANIMOIDAAN (Raamattu, KAIKKI LIIKE
+ * ANIMOIDAAN): uusi elementti häivytetään sisään CSS-animaatiolla
+ * (.pallolauta-merkki), ja poistuva jää listaan siirtymän ajaksi
+ * luokalla .pallolauta-poistuu (häivytys ulos) ennen kuin se puretaan.
+ * Pallon takana oleva merkki saa luokan .pallolauta-takana — sama
+ * häivytys, ei inline-opacity, jotta kolme tilaa eivät kirjoita
+ * saman ominaisuuden yli. Reduced motion: siirtymä 0 → purku heti.
+ *
+ * `asteet(kohta)` kääntää laudan (x, y) asteiksi ({ lat, lon }).
+ * Palauttaa `paivita({ nappula, kohteet })` (osa `peli`), `aseta(osa,
+ * lista)`, `maara(osa)`, `laatikot(osa)` ja kohteiden luettelon
  * osumatestiä varten.
  */
-export function luoMerkit({ pallo, ui, siirtyma, asteet }) {
-  let data = new Map(); // avain → pysyvä datum
+export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null }) {
+  const data = new Map(); // avain → pysyvä datum
+  const osat = new Map(); // osan nimi → datumit
+  const poistuvat = new Map(); // avain → ajastin
   let kohteet = [];
+
+  /** Elementti datumin lajin mukaan; osat antavat oman tehtaansa. */
+  const elementti = (d) => {
+    let el;
+    if (d.laji === 'nappula') el = nappulaElementti(ui);
+    else if (d.laji === 'kohde') el = kohdeElementti(d);
+    else el = d.elementti(d);
+    el.classList.add('pallolauta-merkki');
+    d.el = el;
+    d.asettele?.(el, d);
+    return el;
+  };
 
   pallo
     .htmlElementsData([])
     .htmlLat('lat').htmlLng('lng')
     .htmlAltitude(MERKIN_KORKEUS)
-    .htmlElement((d) => (d.laji === 'nappula' ? nappulaElementti(ui) : kohdeElementti(d)))
+    .htmlElement(elementti)
     .htmlTransitionDuration(siirtyma);
   // Merkit pallon takana piiloon (CSS2D ei itse leikkaa horisonttiin).
-  pallo.htmlElementVisibilityModifier?.((el, nakyy) => { el.style.opacity = nakyy ? '1' : '0'; });
+  pallo.htmlElementVisibilityModifier?.((el, nakyy) => {
+    el.classList.toggle('pallolauta-takana', !nakyy);
+  });
+
+  /** Koko lista kirjastolle: osat järjestyksessä + poistuvat. */
+  const tyonna = () => {
+    const lista = [];
+    for (const osa of osat.values()) lista.push(...osa);
+    for (const d of data.values()) if (d.poistuu && !lista.includes(d)) lista.push(d);
+    pallo.htmlElementsData(lista);
+  };
+
+  const poista = (d) => {
+    if (!(siirtyma > 0) || !d.el) { data.delete(d.avain); return; }
+    d.poistuu = true;
+    d.el.classList.add('pallolauta-poistuu');
+    poistuvat.set(d.avain, setTimeout(() => {
+      poistuvat.delete(d.avain);
+      if (!d.poistuu) return;
+      data.delete(d.avain);
+      tyonna();
+    }, siirtyma));
+  };
 
   /**
-   * Merkit pelitilasta. `nappula` on laudan kohta { x, y } tai null
-   * (nappula liikkeessä tai ei laudalla); `kohteet` on lista
-   * { key, x, y, city }. Sama datum säilyy, kun avain säilyy.
+   * Osan datumit. `uudet` on lista { avain, laji, lat, lng, ... };
+   * `haivyta` (oletus tosi) häivyttää poistuvat siirtymän ajan;
+   * osan `nimet` ja `nostot` datumeilla on lisäksi `elementti(d)` ja
+   * mahdollinen `asettele(el, d)` (sisäasettelu, kun sama datum saa
+   * uudet mitat). Sama datum säilyy, kun avain säilyy.
+   */
+  const aseta = (osa, uudet, { haivyta = true } = {}) => {
+    const ennen = osat.get(osa) ?? [];
+    const lista = [];
+    for (const tiedot of uudet) {
+      let d = data.get(tiedot.avain);
+      if (d) {
+        Object.assign(d, tiedot);
+        if (d.poistuu) {
+          d.poistuu = false;
+          clearTimeout(poistuvat.get(d.avain));
+          poistuvat.delete(d.avain);
+          d.el?.classList.remove('pallolauta-poistuu');
+        }
+        if (d.el) d.asettele?.(d.el, d);
+      } else {
+        d = { ...tiedot };
+        data.set(d.avain, d);
+      }
+      lista.push(d);
+    }
+    const jaa = new Set(lista.map((d) => d.avain));
+    for (const d of ennen) {
+      if (jaa.has(d.avain) || d.poistuu) continue;
+      if (haivyta) poista(d); else data.delete(d.avain);
+    }
+    osat.set(osa, lista);
+    if (osa === 'peli') kohteet = lista.filter((d) => d.laji === 'kohde');
+    tyonna();
+  };
+
+  /**
+   * Pelin merkit (osa `peli`). `nappula` on laudan kohta { x, y } tai
+   * null (nappula liikkeessä tai ei laudalla); `kohteet` on lista
+   * { key, x, y, city }.
    */
   const paivita = ({ nappula = null, kohteet: uudet = [] }) => {
-    const seuraava = new Map();
     const lista = [];
-    const ota = (avain, tiedot) => {
-      let d = data.get(avain);
-      if (d) Object.assign(d, tiedot);
-      else d = { avain, ...tiedot };
-      seuraava.set(avain, d);
-      lista.push(d);
-    };
     // Kohteet ennen nappulaa: nappula piirtyy päällimmäiseksi.
     for (const k of uudet) {
       const a = asteet(k);
       if (!a) continue;
-      ota(`kohde:${k.key}`, {
-        laji: 'kohde', key: k.key, city: k.city ?? null, x: k.x, y: k.y, lat: a.lat, lng: a.lon,
+      lista.push({
+        avain: `kohde:${k.key}`, laji: 'kohde', key: k.key, city: k.city ?? null, x: k.x, y: k.y, lat: a.lat, lng: a.lon,
       });
     }
     if (nappula) {
       const a = asteet(nappula);
-      if (a) ota('nappula', { laji: 'nappula', x: nappula.x, y: nappula.y, lat: a.lat, lng: a.lon });
+      if (a) {
+        lista.push({
+          avain: 'nappula', laji: 'nappula', x: nappula.x, y: nappula.y, lat: a.lat, lng: a.lon,
+        });
+      }
     }
-    data = seuraava;
-    kohteet = lista.filter((d) => d.laji === 'kohde');
-    pallo.htmlElementsData(lista);
+    /*
+     * PELIN MERKIT EIVÄT HÄIVY ULOS: paikallaan oleva nappula vaihtuu
+     * liikkuvaan (js/pallolauta/siirto.js) samassa pisteessä, ja
+     * häivytys olisi haamu sen alla; kohteet katoavat valinnan
+     * hetkellä kuten kartalla. Nimet ja nostot häivytetään.
+     */
+    aseta('peli', lista, { haivyta: false });
+  };
+
+  /**
+   * Osan elementtien laatikot kotelon pikseleinä (nimiladonnan
+   * varaukset ja väistökehä, js/karttanimet.js ladoRuutunimet). Vain
+   * ruudulla olevat, poistuvat ja pallon takana olevat eivät varaa.
+   */
+  const laatikot = (osa) => {
+    const ulos = [];
+    const koti = kotelo?.getBoundingClientRect?.();
+    if (!koti) return ulos;
+    for (const d of osat.get(osa) ?? []) {
+      const el = d.el;
+      if (!el?.isConnected || d.poistuu || el.classList.contains('pallolauta-takana')) continue;
+      const r = (el.querySelector('svg') ?? el).getBoundingClientRect();
+      if (!(r.width > 0)) continue;
+      ulos.push({
+        x0: r.left - koti.left, y0: r.top - koti.top, x1: r.right - koti.left, y1: r.bottom - koti.top,
+      });
+    }
+    return ulos;
   };
 
   return {
     paivita,
+    aseta,
+    laatikot,
+    maara: (osa) => (osat.get(osa) ?? []).length,
     /** Näkyvät kohteet osumatestiä varten ({ key, lat, lng, city }). */
     kohteet: () => kohteet,
+    pura: () => {
+      for (const t of poistuvat.values()) clearTimeout(t);
+      poistuvat.clear();
+    },
   };
 }

@@ -763,6 +763,29 @@ function nykyisenMaanKohteet(ui) {
  * kerää omat kohteensa, kuten omistajan kysymys edellytti (*"joillain
  * kaupungeilla"*, ei "sillä kaupungilla, jossa pelaaja seisoo").
  */
+/**
+ * MAAN KOHTEET KORTIN AVAAMISTA VARTEN (pallolauta vaihe 3): tunnus →
+ * kohde, jossa lisäkohteilla (täkynosto, syvennys, skandaali, hetki) on
+ * `avaa`-kahva — sama joukko, jonka nykyisenMaanKohteet antaa
+ * tasokartalle, mutta ILMAN lehden ikkunan rajausta, koska pallolla
+ * ladonta (maanKohdemerkit) tekee rajauksen itse. Karttapallo
+ * (js/pallolauta/nostot.js) yhdistää tämän tyngän merkkeihin: tynkä
+ * tuntee paikan, tämä tuntee kortin.
+ */
+export function maanKohdetiedot(ui, iso) {
+  const tiedot = new Map();
+  for (const kohde of (iso && KOHDE_MAAT[iso]) || []) tiedot.set(kohde.id, kohde);
+  for (const hae of KOHDE_LISALAHTEET) {
+    for (const rivi of hae(ui) ?? []) if (rivi?.kohde?.id) tiedot.set(rivi.kohde.id, rivi.kohde);
+  }
+  return tiedot;
+}
+
+/** Nykyinen maa (pallolauta lukee saman päättelyn kuin kohdekerros). */
+export function kohteidenNykyinenIso(ui) {
+  return nykyinenIso(ui);
+}
+
 function maanKaupungit(ui, iso) {
   const taulu = ui?.game?.pack?.map?.cityCountry;
   if (!iso || !taulu) return [];
@@ -3305,12 +3328,28 @@ function poltettuTynka(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
  *   nimio: ?{x0,y0,x1,y1} }] LAUDAN yksiköissä, kiertämättöminä
  */
 export function maanPoltetutMerkit(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
+  return maanKohdemerkit(pack, iso, pohja, onPoltettu).filter((m) => m.poltettu);
+}
+
+/**
+ * MAAN KAIKKI KOHDEMERKIT LADOTTUINA — poltetut JA elävät (pallolauta
+ * vaihe 3). Karttapallo (js/pallolauta/nostot.js) ei rakenna
+ * SVG-kerrosta, mutta tarvitsee saman ladonnan kuin laatta ja
+ * tasokartta: kasauksen (nippu), erottelun ja nimiöväistön päätökset
+ * (kylki, näkyykö nimiö). Sama tynkä, sama passi, sama tulos —
+ * `poltettu` kertoo, onko merkki laatoissa (R-osuma) vai elävä (H).
+ * `symboli`, `laji`, `nimi`, `puoli` ja `nimioNakyy` ovat piirron
+ * syöte; `symboli` ja `nimio` laatikot laudan yksiköissä.
+ *
+ * @returns {Array} [{ id, nimi, kohde, poltettu, symboli, laji, puoli,
+ *   nimioNakyy, pakotettu, x, y, sade, symboli, nimio }]
+ */
+export function maanKohdemerkit(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
   const tynka = poltettuTynka(pack, iso, pohja, onPoltettu);
   if (!tynka) return [];
   const ulos = [];
   const sade = KOHDE_SYMBOLI_R * tynka.__s;
   tynka.fokuskohdeRyhmat.forEach((r, i) => {
-    if (!r.poltettu) return;
     const x = r.nippu?.x ?? r.x + (r.sx ?? 0);
     const y = r.nippu?.y ?? r.y + (r.sy ?? 0);
     const kehys = tynka.fokuskohdeNimioPaatokset?.kehykset?.get(i);
@@ -3318,6 +3357,11 @@ export function maanPoltetutMerkit(pack, iso, pohja, onPoltettu = nostoOnPoltett
       id: r.id,
       nimi: r.nimi ?? null,
       kohde: tynka.fokuskohdeTiedot.get(r.id) ?? null,
+      poltettu: Boolean(r.poltettu),
+      // Symbolin KATEGORIA (`symboli` on alla laatikko — vanha sopimus).
+      kategoria: r.symboli ?? null,
+      laji: r.laji ?? null,
+      nimioNakyy: r.nimioNakyy !== false && Boolean(r.nimi),
       /*
        * TINKIMINEN MUKAAN (2.9.2026, ks. SYMBOLI EI JÄÄ ILMAN NIMEÄ):
        * tingitty nimiö on ladonnassa, mutta LAATASSA se on vasta
@@ -3844,7 +3888,7 @@ export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
  * zoomatessa ne erkanevat. Kummankin osuma pidetään mieluummin
  * täysikokoisena kuin kutistetaan sormelle liian pieneksi.
  */
-const LEHDEN_VAHIN_OSUUS = 0.5;
+export const LEHDEN_VAHIN_OSUUS = 0.5;
 
 /*
  * ...JA VASTA KUN ON SAAVUTTU (omistajan pelitestipalaute 28.8.2026,
@@ -4047,6 +4091,20 @@ if (typeof document !== 'undefined') {
 
 function ankkurinLaatikko(auki, pane) {
   if (auki.merkki?.isConnected) return auki.merkki.getBoundingClientRect();
+  /*
+   * ANKKURI RUUTUPISTEESTÄ (pallolauta vaihe 3, karttapallo.md luku 4.2:
+   * *"kortit (avaaFokuskohde) ankkuri ruutupisteestä"*). Pallolla
+   * merkillä ei ole SVG-solmua, jonka laatikon voisi mitata; kutsuja
+   * antaa merkin ruutupisteen (clientX/Y) tai funktion, joka laskee sen
+   * uudestaan joka asemoinnilla — kortti seuraa merkkiään, kun pallo
+   * pysähtyy (js/pallolauta/lauta.js asemoiFokuskohde).
+   */
+  const ankkuri = typeof auki.ankkuri === 'function' ? auki.ankkuri() : auki.ankkuri;
+  if (Number.isFinite(ankkuri?.x) && Number.isFinite(ankkuri?.y)) {
+    return {
+      left: ankkuri.x, right: ankkuri.x, top: ankkuri.y, bottom: ankkuri.y, width: 0, height: 0,
+    };
+  }
   const p = viimeisinOsoitin
     && viimeisinOsoitin.x >= pane.left && viimeisinOsoitin.x <= pane.right
     && viimeisinOsoitin.y >= pane.top && viimeisinOsoitin.y <= pane.bottom
@@ -4109,6 +4167,16 @@ function asetaKohteenPaikka(ui) {
   ylin = Math.max(ylaraja, ylin);
   auki.popup.style.left = `${Math.round(vasen - pane.left)}px`;
   auki.popup.style.top = `${Math.round(ylin - pane.top)}px`;
+}
+
+/**
+ * Auki olevan kortin paikka uudelleen ulkoa kutsuttuna — pallolauta
+ * (js/pallolauta/lauta.js) kutsuu tätä, kun kamera pysähtyy ja merkin
+ * ruutupiste (ankkuri) on muuttunut. Kartalla saman tekee
+ * paivitaFokuskohteet.
+ */
+export function asemoiFokuskohde(ui) {
+  asetaKohteenPaikka(ui);
 }
 
 /**
@@ -5467,7 +5535,7 @@ function piirraKohteenSisus(ui, sailio, kohde) {
  * `avaaFokuskohde`-funktion luettavana.
  */
 
-export function avaaFokuskohde(ui, kohde) {
+export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
   if (typeof document === 'undefined' || !kohde) return null;
   /*
    * LINSSIN PORTTI (omistaja 4.9.2026: *"pitää kaikki muu blokata …
@@ -5550,7 +5618,10 @@ export function avaaFokuskohde(ui, kohde) {
    * (js/pollo.js lueNakyma) lukee tästä auki olevan kortin nimen,
    * tyypin ja tekstin, jotta chat vastaa siitä, mitä ruudulla näkyy.
    */
-  ui.fokuskohdeAuki = { id: kohde.id, kohde, popup, merkki, purku: null };
+  // `ankkuri` on pallolaudan ruutupiste (ks. ankkurinLaatikko); kartalla null.
+  ui.fokuskohdeAuki = {
+    id: kohde.id, kohde, popup, merkki, ankkuri, purku: null,
+  };
   ui.fokuskohdeAuki.purku = kuunteleKohdetta(ui, popup);
   asetaKohteenPaikka(ui);
   // Mitta uudelleen, kun asettelu ja tyyli ovat valmiit: ensimmäinen

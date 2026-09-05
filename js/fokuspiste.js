@@ -117,6 +117,34 @@ function lataaPisteTyyli() {
   document.head.appendChild(linkki);
 }
 
+/**
+ * PISTEEN NAPAUTUS — yksi avaaja kartalle ja pallolle
+ * (js/pallolauta/nostot.js). Kesken animaation (nopan pyörähdys,
+ * siirtymä) kartta ottaa yhä napautuksia vastaan — sama kiireen esto
+ * kuin kaupungin laatalla. Sama selkeä avausääni kuin kohdepopupeilla,
+ * ja ENNEN kortin rakentamista (v1119, kohta 17).
+ */
+export function avaaFokuspiste(ui, city) {
+  if (ui.busy) return false;
+  sfx.play('popup');
+  return avaaFokusKohtaaminen(ui, city);
+}
+
+/**
+ * PISTEEN KUVIO ILMAN OSUMA-ALUETTA — karttapallon H-elementti
+ * (js/pallolauta/nostot.js) piirtää saman tuikkivan merkin samoilla
+ * luokilla (css/fokusvirta.css fokuspiste-tuike) omaan pieneen
+ * svg:hen; osuma on siellä pallon oma (R-malli). Tyyli ladataan
+ * samalla, jotta merkki ei jää ilman tuikettaan.
+ */
+export function fokuspisteKuvio(g) {
+  lataaPisteTyyli();
+  el('circle', { class: 'fokuspiste-hehku', r: PISTE_HEHKU_R }, g);
+  el('circle', { class: 'fokuspiste-keha', r: PISTE_KEHA_R }, g);
+  el('circle', { class: 'fokuspiste-ydin', r: PISTE_YDIN_R }, g);
+  return g;
+}
+
 /** Kerros SVG:n juureen kerran; palauttaa null ilman karttaa. */
 function varmistaPistekerros(ui) {
   if (!ui.svg) return null;
@@ -146,13 +174,7 @@ function piirraPiste(ui, ryhma, city, nimi, teko = 'tapaa paikallinen') {
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();
-    // Kesken animaation (nopan pyörähdys, siirtymä) kartta ottaa yhä
-    // napautuksia vastaan — sama kiireen esto kuin kaupungin laatalla.
-    if (ui.busy) return;
-    // Sama selkeä avausääni kuin kohdepopupeilla, ja ENNEN kortin
-    // rakentamista (v1119, kohta 17).
-    sfx.play('popup');
-    avaaFokusKohtaaminen(ui, city);
+    avaaFokuspiste(ui, city);
   };
   g.addEventListener('click', avaa);
   g.addEventListener('keydown', (tapahtuma) => {
