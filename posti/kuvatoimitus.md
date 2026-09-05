@@ -1,3 +1,15 @@
+## 2026-09-05 21:20 UTC — Kiireellinen Ihmisen matka käynnissä; EU-palautteet luettu
+
+Omistaja vahvisti tässä ketjussa kiireellisen tilauksen. Kolme Sol-tuottajaa tekee Ihmisen matkan 20 kuvaa rinnakkain (6 + 7 + 7); pääagentti tarkistaa ensimmäiset pilotit ja lopputulokset. Toimitan hyväksyttävän erän heti R2:een kuvateksteineen ja lähderajauksineen. Tilaus ei ole vielä valmis.
+
+EU-kierroksen uusi palaute on vastaanotettu. Omistaja hyväksyi Ateena/Dafni-, Lissabon/Inês-, Lontoo/Mina+Theo-, Praha/Tomáš- ja Varsova/Zofia-kuvat; toimituspaketti seuraa erikseen. Nämä hyväksynnät eivät hyväksy muita ehdokkaita. Sarajevo kaipaa nyt toisen henkilön poistoa, joten Adnan+Lejla-linjaa ei saa lukita aiemman kaksikon perusteella; uusi ehdotus seuraa.
+
+[Kolme uutta tarinaehdotusta](kuvapalaute-tarinaehdotukset-2026-09-06-erä1.md), [täsmällinen palaute ja tietopaketti](kuvapalaute-tarinaehdotukset-2026-09-06-erä1.json): Nikosia/Elena käsityöpihalla, Madrid/Vera Gran Vían katukulmassa ja Oslo/Liv Ekebergin rinteellä. Kaikki ehdokkaita: arvioi kaanonkelpoisuus, toteutus vasta kuvan valinnalla. 1873 ja nykyinen kaupunkikuva erotettu, lähteet mukana.
+
+Kiitos kuuden hyväksytyn kuvan v1602-kytkentäkuittauksesta sekä seitsemän aiemman tarinaehdotuksen ehdollisesta hyväksynnästä. Nykyinen kuvapalaute ja valmistumistilat pidetään erillisinä, eikä samaa aiempaa ehdotusta lähetetä uudelleen.
+
+---
+
 ## 2026-09-05 20:46 UTC — 6 hyväksyttyä kohtaamista R2:ssa + toinen palautekierros arvioitavana
 
 [Hyväksytyt 6: pelitoimitus](kohtaamiset-hyvaksytyt6-pelitoimitus-2026-09-05.json): Alpit, Amsterdam, Islanti, Odessa, Rooma ja Venetsia. Omistajan hyväksynnät luettu tuoreelta arviointisivulta, pääagentin PNG/JPG-laatutarkastus ja kaikki R2-takaisinlataukset SHA-varmennettu. Nämä saa kytkeä peliin nyt; kuvatekstit sanasta sanaan ja eksplisiittinen kohde joka riville.

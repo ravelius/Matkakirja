@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-05T21:20:56.593971+00:00",
+  "sourceMainSha": "8c814af92973a609ddd81f8d464e90f2f6060d0d",
+  "sourceMailboxSha": "e49906c6da5bc1ac33c4f3d99fe5e86ec6896503",
+  "instruction": "Kolme uutta ehdotusta. Fable arvioi kaanonkelpoisuuden nyt; henkilöt ja kuvat lukitaan vasta omistajan valinnan jälkeen. Kaikki nimet ja kohtaukset uusia luovia ehdotuksia, paikkafaktat lähteistetty. Ei muutoksia isoisäkuvien toimitukseen.",
+  "cases": [
+    {
+      "feedbackId": "nikosia-andreas-kupari-r20260905-redo-c1:a6a9cafc66e477d96c0aa515024907d6a52aade88f69202d5907915f8c82bd60",
+      "sourceImageId": "nikosia-andreas-kupari-r20260905-redo-c1",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+      "sourceUpdatedAt": "2026-09-05T17:41:26.167Z",
+      "requestIds": [
+        "e5639c00-fb38-4637-9ad6-7b3436719508"
+      ],
+      "canonicalCityId": "nikosia",
+      "proposal": {
+        "person": "Elena, 34-vuotias silkkipainaja. Fiktiivinen henkilö Chrysaliniotissan käsityökeskuksen pihapiirissä, ei väite oikeasta siellä työskentelevästä ihmisestä.",
+        "scene": "Elena on nostamassa painoseulaa. Tuulenpuuska sieppaa koearkin, jonka hän nappaa kyynärpäätään vasten. Aarrekysymys pysäyttää hänet suoraan katsekontaktiin: epäuskoisen tarkka katse ja juuri alkamassa oleva nauru. Syaania ja okraa kankaissa, lehtien läpi osuva aurinko, vanhan pihan todellinen mittakaava. Andreas ja kuparipaja vaihtuvat kokonaan.",
+        "frame": "Vuoden 1873 merkintään ehdotus: Horatio kävelee muurien ulkopuolella ja piirtää niiden muotoa; tuuli kääntää sivun niin, että piirros jatkuu vahingossa toiselle puolelle. Nykyhetkessä Elena tunnistaa painotyön kautta peilikuvaksi luetun osan. Vihjeen kaksi puoliskoa osoittavat julkisen reitin suuntaan. Nykyinen käsityökeskus ei ole vuoden 1873 tapahtumapaikka eikä Elena tunne Horation sukua.",
+        "encounter": "\"Aarretta? Minä yritän saada tämän arkin pysymään kaupungissa.\" Elena vilkaisee kirjansivua uudelleen. \"Hetkinen. Sinä luet sen nurjalta puolelta.\" Hän tarjoaa omaa hahmotustaitoaan, ei suvun vartioimaa esinettä.",
+        "question": {
+          "q": "Kuinka monta bastionia muodostaa Nikosian venetsialaisten muurien kehän?",
+          "options": [
+            "Yksitoista",
+            "Kahdeksan",
+            "Kaksitoista",
+            "Kuusitoista",
+            "Kuusi"
+          ],
+          "correct": 0,
+          "teachingPlacement": "Muurien suunnitelma ja lukumäärä lehden/oppitunnin tekstiin. Älä kerro lukumäärää ennen visaa kohtaamisrepliikissä tai kuvan tekstissä."
+        },
+        "outcomes": {
+          "found": "Kirjan piirrosten oikea suunta vie kaupungin tavalliseen kätköön; ei onttoon antiikkiharkkoon, työpajan varastoon tai muurin irrotettavaan osaan. Rasian reunassa on sama peilikuvaksi luettu viiva.",
+          "empty": "Elena toteaa suunnan olevan oikea, mutta paikassa on vain paperin painauma. Ei löytölupausta.",
+          "wrong": "Elena pyytää tarkistamaan muurin muodon ja kääntämään sivun vielä kerran; ei oven tai esineen maagista avaamista."
+        },
+        "canonImpact": "Nykyinen mainin työhuonedraft: Andreas, kupariharkon peritty vartiointi ja esineen luovutus. Poista tämä henkilöketju. Kohde nikosia/lauta middleeast, nykyinen luennat:false säilyy; tämä ehdotus ei aktivoi kaarta maailmankartalle.",
+        "sources": [
+          {
+            "url": "https://www.visitcyprus.com/discover-cyprus/culture/sites-and-monuments/chrysaliniotissa-crafts-centre/",
+            "supports": "Kahdeksan työpajaa yhteisen pihan ympärillä; perinteisten käsitöiden nykykäyttö. Silkkipainaja ja tapahtuma ovat fiktiota."
+          },
+          {
+            "url": "https://www.visitcyprus.com/discover-cyprus/culture/sites-and-monuments/the-medieval-walls-of-lefkosia-nicosia/",
+            "supports": "Venetsialaisten 1500-luvulla rakentamassa muurikehässä on yksitoista bastionia."
+          }
+        ],
+        "researchBeforeImage": "Tarkista pihan rakenne paikkakuvista ennen generointia; henkilön ammattia ei markkinoida todellisena yrityksenä."
+      },
+      "status": "proposal-only-image-not-generated",
+      "userApproved": false
+    },
+    {
+      "feedbackId": "madrid-pilar-round2-r20260905-v1:68323c32c1cc56b11bd056c634f909904d381291faa5f59b16c6bf25abe5cd72",
+      "sourceImageId": "madrid-pilar-round2-r20260905-v1",
+      "originalFeedback": "madrin on niin hieno kaupunki, että keksi jokin toinen paikka missä upea kaupunki tulee esille. saa olla nuori ja persoonallinen nainen muotivaatteissa värikkäiden ja kullankeltaisten rakennusten keskellä huuli pyöreänä katsoen pelaajaa, ihmisiä vilistää taustalla. kesä ja aurinko, paljon värejä",
+      "sourceUpdatedAt": "2026-09-05T21:05:46.084Z",
+      "requestIds": [
+        "afb4c240-7551-4356-9784-f3b8a13aef17"
+      ],
+      "canonicalCityId": "madrid",
+      "proposal": {
+        "person": "Vera, 24-vuotias puvustaja matkalla sovitukseen. Lyhyet tummat kiharat, persoonalliset suuret korvakorut, koboltinsininen kesäinen takki ja terrakotanväriset leveät housut; käyttäjän toivoma nuori persoonallinen nainen muotivaatteissa.",
+        "scene": "Alcalán ja Gran Vían kulman leveä jalkakäytävä, Metrópolisin kaareva julkisivu ja kupoli tunnistettavina oikeassa katselusuunnassa. Kullankeltainen lämmin aurinko rakennusten oikeilla materiaaleilla, värikkäät asut ja ohikulkijoiden liike. Vera pysähtyy kesken askeleen huuli pyöreänä, katse suoraan pelaajaan, pieni nauru hämmästyksen alla. Ei kellokoneistoa.",
+        "frame": "Horatio ei kulje vuonna 1873 nykyisellä Gran Víalla: katu rakennettiin vasta myöhemmin. Säilytä saapumisen Puerta del Solin outo lyönti vanhana havaintona, mutta uusi välivihje on kirjassa oleva sivukujien piirros. Vera vertaa muotoja kuin puvun kaavoja ja huomaa pelaajan etsivän nykyiseltä kadulta väylää, jota kartan tekohetkellä ei ollut. Kehyksen hyöty on vanhan kartan ja nykykaupungin ero.",
+        "encounter": "\"Sinä etsit aarretta keskeltä minun työmatkaani?\" Vera jää katsomaan kirjaa, huulet yhä auki. \"Tuo mutka ei ole väärin piirretty. Sinun katuasi ei silloin vielä ollut.\" Ei sukuyhteyttä eikä perittyä torniviestiä.",
+        "question": {
+          "q": "Mitä Gran Vían rakentaminen muutti Madridin keskustassa?",
+          "options": [
+            "Kapeiden kujien verkkoon avattiin leveä valtaväylä",
+            "Manzanares-joki ohjattiin uudelle uomalle",
+            "Kuninkaallinen palatsi purettiin teatterien tieltä",
+            "Koko vanhakaupunki katettiin yhtenäisellä lasikatolla",
+            "Keskustan ympärille rakennettiin uusi kaupunginmuuri"
+          ],
+          "correct": 0,
+          "teachingPlacement": "Päivitä Puerta del Solin kilometri nolla -oppitunnin kohtaamisyhteys Gran Vían kaupunkimuutoksen osioon. Vastaus lehden tekstistä, ei pelkästä kirjasta."
+        },
+        "outcomes": {
+          "found": "Kadonneen kujan suunta ja jäljelle jäänyt vanha katulinja ohjaavat julkiseen kaupunkikätköön; rasia ei ole Veran vaatelaukussa tai kellotornin koneistossa.",
+          "empty": "Vera huomaa paikan olevan oikea mutta rasian puuttuvan: joku on ehtinyt ensin.",
+          "wrong": "Vera pyytää etsimään lehden kartasta vanhan ja uuden katuverkon eron."
+        },
+        "canonImpact": "Pilar/Rosa poistuvat nykyhetken kaaresta, fokustekstistä, kohtausnapista ja kätkötulosrepliikeistä vasta uuden kuvan valinnalla. Kohtaamispiste kellotornista kadulle; Fable tarkistaa koordinaatit ja nykyisen löytörepliikin tarkemman paikan. Horation 1873 tekstiin ei Metrópolis-rakennusta eikä nykyistä Gran Víaa.",
+        "sources": [
+          {
+            "url": "https://www.esmadrid.com/informacion-turistica/la-gran-via",
+            "supports": "Gran Vían rakentaminen 1910–1931, vanhan kujaverkon korvaaminen, alku Alcalán liittymästä."
+          },
+          {
+            "url": "https://www.esmadrid.com/en/madrid-open-air-museum",
+            "supports": "Metrópolis sijaitsee Alcalán ja Gran Vían liittymässä; todellinen julkisivu toimii paikkareferenssinä."
+          }
+        ],
+        "researchBeforeImage": "Käytä oikeita saman katukulman paikkakuvia ja kamera-asemaa. Kullankeltaisuus valosta, ei valkoisen rakennuksen vääräksi maalaamisesta."
+      },
+      "status": "proposal-only-image-not-generated",
+      "userApproved": false
+    },
+    {
+      "feedbackId": "oslo-oskar-round2-r20260905-v1:3014142c025d421771974257b1545a3332f623a01f25c2774ea2e724e74c50a1",
+      "sourceImageId": "oslo-oskar-round2-r20260905-v1",
+      "originalFeedback": "etsi paljon lisää refe kuvia ja vaihda henkilö ja paikka",
+      "sourceUpdatedAt": "2026-09-05T21:07:52.326Z",
+      "requestIds": [
+        "04972c70-e10e-41cd-959d-5d295b1b4260"
+      ],
+      "canonicalCityId": "oslo",
+      "proposal": {
+        "person": "Liv, 38-vuotias kaupunkivalokuvaaja. Leveäpisamaiset kasvot, lyhyt harmaantuva tumma tukka, oranssi ulkotakki. Kamera roikkuu alas laskettuna, silmät eivät peity.",
+        "scene": "Ekebergin rinteellä todelliseen Oslo-panoraamaan avautuva puistopolku. Liv on juuri vetänyt kuvaamansa pienen koiran kameran hihnasta irti; aarrekysymys saa hänet kääntymään puoliksi epäuskoisena, puoliksi huvittuneena suoraan pelaajaan. Oslon vuono, Bjørvika ja kaupungin syvyys näkyvät oikeassa suunnassa. Paikkakuvista riippuu mitkä rakennukset mahtuvat samaan näkymään. Koira valinnainen; pääasia uusi ihminen ja oikea Oslo ympärillä.",
+        "frame": "Vanha kuva kumotaan: ei Oskaria eikä Haldenin peltoa. Vuoden 1873 kummun, juuston ja solmun merkintä voi jäädä muistoksi matkan aiemmasta pysähdyksestä. Sen jälkeiseen reunapiirrokseen tarvitaan Horation rannan siluetti: Liv erottaa pysyvät rinteet muuttuneesta rantaviivasta. Horatio ei näe vuonna 1873 oopperaa, Barcodea tai nykyistä veistospuistoa. Nykyhetken näkymä auttaa löytämään seuraavan julkisen reitin vihjeen.",
+        "encounter": "\"Aarretta? Minä etsin valoa.\" Liv vilkaisee kirjansivua ja laskee kameran vielä alemmas. \"Sinä vertaat taloja. Katso niiden taakse — rinne ei ole muuttanut pois.\" Hän arvioi vierasta, ei tunnista sukua.",
+        "question": {
+          "q": "Mihin Oslon oopperatalon kalteva katto on suunniteltu esitysten lisäksi?",
+          "options": [
+            "Kaikkien käytettäväksi kävely- ja kohtaamispaikaksi",
+            "Vain henkilökunnan suljetuksi huoltopihaksi",
+            "Talviseksi mäkihyppyradaksi",
+            "Laivojen lastausta palvelevaksi tavaraluiskaksi",
+            "Pääsymaksulliseksi ulkoilmakatsomoksi joka päivä"
+          ],
+          "correct": 0,
+          "teachingPlacement": "Uusi Bjørvikan arkkitehtuuriin sidottu oppitunti korvaa kohtaamisen Gjellestad-kysymyksen. Viikinkilaivojen muu lehtisisältö voi jäädä."
+        },
+        "outcomes": {
+          "found": "Vuonon/rinteen suunta auttaa löytämään julkisen polun lähellä olevan tavallisen kaupunkikätkön. Ei kaiveta kumpua, kosketa taideteokseen eikä väitetä rasiasta tulevan kaivettua muinaisesinettä.",
+          "empty": "Liv vahvistaa katselusuunnan mutta ei lupaa että rasia olisi tallella.",
+          "wrong": "Liv kehottaa lukemaan kaupungin julkisista tiloista ja kokeilemaan uutta katselukulmaa."
+        },
+        "canonImpact": "Kaupunki ja cityId ovat oslo. Halden oli vanhan kuvan kohtaamispiste, ei kaupungin uusi tunnus. Poista Oskar, pelto, koiran hanska ja Gjellestad-visa tästä kohtaamisesta vasta valinnalla; päivitä fokuspiste ja löydön kehys. Ekebergiä ei nimetä varmuudella täsmälliseksi Huudon syntypisteeksi.",
+        "sources": [
+          {
+            "url": "https://www.visitoslo.com/contentassets/745397bd1ae445e69f840a4ebae65cdb/osloguide-eng-web.pdf/",
+            "supports": "Ekebergparken rinteillä avautuu näkymiä oopperaan, Bjørvikaan, kaupunkiin ja vuonolle."
+          },
+          {
+            "url": "https://www.snohetta.com/projects/norwegian-national-opera-and-ballet",
+            "supports": "Arkkitehdin kuvaus kattotasanteesta julkisena tilana; talo avautui 2008."
+          },
+          {
+            "url": "https://ekebergparken.com/en/artworks/the-scream",
+            "supports": "Puiston oma lähde pitää Huudon tarkan tapahtumapaikan epävarmana."
+          }
+        ],
+        "researchBeforeImage": "Käyttäjä pyysi paljon lisää referenssejä: tuotantovaatimus vähintään 4–6 todellista ympäristökuvaa eri etäisyyksiltä sekä saman näkymän maantieteen vertailu ennen generointia. Tämän tarinaehdotuksen lähdesivut eivät vielä tarkoita valmista kuvareferenssipakettia."
+      },
+      "status": "proposal-only-image-not-generated",
+      "userApproved": false
+    }
+  ]
+}
