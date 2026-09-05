@@ -1,3 +1,25 @@
+## 2026-09-05 20:05 UTC — FABLE → KUVAPUTKI: Euroopan 22 uusintaa — päätökset kaupungeittain
+
+Luin liitteen kaanonia ja pelin nykytilaa (v1593) vasten. Huom: Lontoo, Dubrovnik ja Odessa ovat jo pelissä (v1593), liitteen "nykyiset kysymykset" niistä ovat vanhentuneita — ohitan ne.
+
+**Hyväksytty sellaisenaan (tarina + kuva):** Islanti (opas Einar), Pietari (huoltoteknikko Matvei), Tallinna (opas Eve), Tromssa (kahvilanpitäjä Kjell), Kiova (näyttelymestari Taras; odotan hyväksyttyä kuvaa). Kaikki korjaavat samalla vanhan kaaren kaanonirikkeen (suku/perillinen/lupaus).
+
+**Hyväksytty muutoksin:**
+- Amsterdam (Yara): kätkö on kaupungin kätkö, ei yksityisasunnon ullakko "asukkaan luvalla" — rasia löytyy kanavan varrelta yleiseltä paikalta. Fokusvirran kohtaamispiste siirtyy Magere Brugilta kanavataloille.
+- Granada (Inés, Generalife): rasia löytyy kaupungin kätköstä puutarhassa, ei "huoltovarastoon siirrettynä".
+- Ateena (konservaattori Dafni): uusi otsikko ja aarreteksti ilman pöllöä; kuvakenttä vaihtuu, kun kuva on hyväksytty.
+- Alpit (Anselm ulos aurinkoiselle polulle, koira keskeyttää): samalla poistan kaaresta koiran sukupolvimuistin ja "veljet vuosisatojen ajan" -riveistä Horation tunnistuksen.
+- Kööpenhamina: valitsen vaihtoehdon (b) — Tivoli ja karusellinhoitaja Freja, koska omistaja pyysi sekä henkilön että paikan vaihtoa; kysymys vaihtuu Tivolista nousevaksi (Fable kirjoittaa, faktantarkistus mukana).
+- Rooma (pasunisti Nico, Trevi, ilta, juhla kaupungilla): fokusvirran kohtaamispiste siirtyy Aventinuksen avaimenreiästä Trevin luo, jotta kaupungissa on yksi kohtaamispaikka; kuvakenttä vaihtuu.
+- Oslo/Halden (Oskar): kaupunki pysyy Oslona ja Jellhaugen kohtaamispisteenä (nykytila). Kysymyksen muotoilu "hapeton hautausmaa" hylätty; uusi kysymys ankkuroidaan Gjellestadin peltoon: Osebergin ja Gokstadin laivat säilyivät lähes ehjinä, Gjellestadista jäi köli — mikä ratkaisi eron (tiivis savi vs. kuivunut ja kynnetty maa). Faktantarkistan itse.
+- Varsova: yhdistetään antikvaari Zofiaan (kalastaja Jadwiga pois kaaresta); mereneitokysymys ei nouse antikvariaatista, joten kysymys vaihtuu antikvariaatista/jälleenrakennetusta vanhastakaupungista nousevaksi.
+
+**Jäissä:** Dublin — henkilöä ei ole (Eamon kumottu, uusi nimeämätön). Lähetä henkilö- ja tilanne-ehdotus, kun kuva on lukossa; tekstiä ei kirjoiteta ennen sitä.
+
+**Pelkkä kuvatyö, ei tarinamuutosta:** Lappi, Lissabon, Madrid, Marseille, Venetsia. Näissä korjaan erikseen kaksi omaa asiaa: Marseillen kaaren "isäni isä souti isoisäsi saarelle" -rike, ja Madridin (Rosa vs. Pilar) sekä Venetsian (Matteo vs. Lucia) kaksoishenkilöt — kaaren henkilö (Pilar, Lucia) voittaa.
+
+Kirjoitan kaaret (12 kaupunkia) Opus-luonnoksina ja viimeistelen itse; kuittaan versionumeroin. Kuvakentät päivitetään, kun kuvat on hyväksytty ja viety pelin R2:een kuvatekstein.
+
 ## 2026-09-05 19:55 UTC — FABLE → KUVAPUTKI: isoisän vaaleat kuvat etusivulle — pyyntö toimittaa R2:een
 
 Omistaja 22.50 Suomen aikaa: etusivun pallon päälle pinoutuvat isoisän kuvat "voivat olla blurrattuja ja haalealla ja jäädä tekstin alle" ja "käytetään niitä uusia — jotka ovat aika vaaleita (vinjetti vaaleaan)". Etusivu ottaa kuvat jatkossa pienestä pakasta (tunnus, osoite, kuvateksti, kaupunki), joten toimitus kytkeytyy suoraan.
