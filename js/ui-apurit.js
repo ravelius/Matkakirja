@@ -1782,3 +1782,45 @@ export async function cachedImage(title) {
   }
   return wikiImageCache.get(title);
 }
+
+/*
+ * TARKKUUS MYÖS LIIKKEESSÄ — kokeiluvipu (omistaja 5.9.2026 klo 21,
+ * sanatarkasti: "kokeile pyörisikö vieritys sillä korkeammalla
+ * tarkkuudella joka kytkeytyy nyt päälle vasta kun liike loppuu").
+ * Pallon laatunosto (js/pallo.js asennaLaatunosto) pudottaa liikkeessä
+ * laattatason ja pikselisuhteen; tällä vivulla levon asetukset jäävät
+ * päälle koko ajan, jotta omistaja voi mitata puhelimella, pysyykö
+ * vieritys sulavana. URL › muisti › oletus (pois). Sama kaava kuin
+ * etusivupallolla yllä.
+ */
+export const LAATU_AINA_AVAIN = 'matkakirja-pallo-laatu-aina';
+
+export function laatuAinaOsoitteesta(win = globalThis) {
+  try {
+    const arvo = new URLSearchParams(win.location?.search ?? '').get('laatu');
+    if (arvo === null) return null;
+    return arvo === 'aina' || arvo === '1';
+  } catch {
+    return null;
+  }
+}
+
+/** Onko levon tarkkuus päällä myös liikkeessä? (URL › muisti › pois) */
+export function laatuAinaPaalla(win = globalThis) {
+  const osoitteesta = laatuAinaOsoitteesta(win);
+  if (osoitteesta !== null) return osoitteesta;
+  try {
+    return win.localStorage?.getItem(LAATU_AINA_AVAIN) === '1';
+  } catch {
+    return false;
+  }
+}
+
+export function asetaLaatuAina(paalla, win = globalThis) {
+  try {
+    if (paalla) win.localStorage?.setItem(LAATU_AINA_AVAIN, '1');
+    else win.localStorage?.removeItem(LAATU_AINA_AVAIN);
+  } catch {
+    /* yksityinen tila */
+  }
+}

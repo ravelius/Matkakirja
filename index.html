@@ -215,6 +215,18 @@
               <span class="kehittaja-kytkin-nimi">etusivupallo</span>
               <span class="kehittaja-kytkin-tila">pois</span>
             </button>
+            <!-- Tarkkuus myös liikkeessä (kokeiluvipu, omistaja 5.9.2026:
+                 "kokeile pyörisikö vieritys sillä korkeammalla tarkkuudella
+                 joka kytkeytyy nyt päälle vasta kun liike loppuu"): pallon
+                 laatunosto pitää levon laattatason ja pikselisuhteen
+                 päällä myös vierityksessä (js/ui-apurit.js laatuAinaPaalla,
+                 sama kuin ?laatu=aina). Vaatii sivun latauksen. -->
+            <button id="kehittaja-laatu-aina-kytkin" class="ghost kehittaja-kytkin"
+                    type="button" aria-pressed="false">
+              <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M12 5v14M5 12h14"/><path d="M7.5 7.5l9 9M16.5 7.5l-9 9"/></svg></span>
+              <span class="kehittaja-kytkin-nimi">tarkkuus liikkeessä</span>
+              <span class="kehittaja-kytkin-tila">pois</span>
+            </button>
             <!-- Karttapallon turvatila (pallolauta vaihe 5c,
                  docs/moduulit/karttapallo.md luku 6): kaksi kaatumista
                  peräkkäin sulkee pallon tältä laitteelta. Tämä nappi

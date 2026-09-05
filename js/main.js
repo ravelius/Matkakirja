@@ -8,6 +8,7 @@ import { UI } from './ui.js';
 import {
   asetaKehittajaMaailma, asetaKehittajaTila, asetaLautaValinta,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, lautaValinta,
+  laatuAinaPaalla, asetaLaatuAina,
   nollaaPallonKaatumiset, pallonKaatumiset, palloTurvatilassa,
 } from './ui-apurit.js';
 // Laitemittarin muistettu kytkin (hammasratasvalikko = ?mittari=1/0).
@@ -122,7 +123,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1589';
+const APP_VERSION = '2026-08-09.1590';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1449,6 +1450,8 @@ const lataaEtusivupalloApurit = () => (etusivupalloHaku ??= import('./etusivupal
  * vipu", joka nollaa laskurin ja antaa pallolle uuden yrityksen.
  */
 const palloTurvatilaNappi = document.getElementById('kehittaja-pallo-turvatila-btn');
+/* Tarkkuus myös liikkeessä — kokeiluvipu (js/ui-apurit.js laatuAinaPaalla). */
+const laatuAinaNappi = document.getElementById('kehittaja-laatu-aina-kytkin');
 /*
  * ILMEPAKETTI (omistaja 5.9.2026, kartoituksen TOP 6 kohta 6): musteviiva,
  * karhea kehys ja kynäkorostus. Kytkin kääntää kolme lippua kerralla
@@ -1587,6 +1590,17 @@ function paivitaKehittajaValikko() {
       : 'Etusivun pallo on pois: avaussivulla on vanha pienoiskartta — kytke '
         + 'päälle nähdäksesi esirenderöidyn pallon, koneen ja isoisän '
         + 'aikalaiskuvat (oletus pallolaudalla; sama kuin ?etusivupallo=1)';
+  }
+  const laatuAina = laatuAinaPaalla();
+  merkitseKytkin(laatuAinaNappi, laatuAina);
+  if (laatuAinaNappi) {
+    laatuAinaNappi.title = laatuAina
+      ? 'Tarkkuus liikkeessä on PÄÄLLÄ (kokeilu): pallo pitää levon laattatason ja '
+        + 'pikselisuhteen myös vierityksessä — kytke pois, jos vieritys nykii '
+        + '(sivu ladataan uudestaan; sama kuin ?laatu=aina)'
+      : 'Tarkkuus liikkeessä on pois (oletus): liikkeessä pallo piirtää karkeammin '
+        + 'ja tarkentuu levossa — kytke päälle kokeillaksesi täyttä tarkkuutta '
+        + 'myös vierityksessä (sivu ladataan uudestaan)';
   }
   /*
    * KARTTAPALLON TURVATILA (pallolauta vaihe 5c): laskuri kertoo, montako
@@ -1731,6 +1745,16 @@ etusivupalloNappi?.addEventListener('click', () => {
       ? 'Etusivun pallo päälle: näkyy avaussivulla (uusi peli tai sivun lataus).'
       : 'Etusivun pallo pois: vanha etusivun pienoiskartta.');
   });
+});
+
+laatuAinaNappi?.addEventListener('click', () => {
+  const halutaan = !laatuAinaPaalla();
+  asetaLaatuAina(halutaan);
+  paivitaKehittajaValikko();
+  naytaKehittajaVihje(halutaan ? 'Tarkkuus liikkeessä päälle — ladataan sivu…' : 'Tarkkuus liikkeessä pois — ladataan sivu…');
+  const osoite = new URL(location.href);
+  osoite.searchParams.delete('laatu');
+  setTimeout(() => { location.href = osoite.href; }, 350);
 });
 
 palloTurvatilaNappi?.addEventListener('click', () => {

@@ -451,3 +451,22 @@ test('hover-raycast pois kosketuslaitteilla, napautus säilyy', () => {
   assert.match(lauta, /pallo\.enablePointerInteraction\?\.\(true\);/);
   assert.ok(OSOITTIMEN_JALKIVIIVE_MS >= 200 && OSOITTIMEN_JALKIVIIVE_MS <= 800);
 });
+
+test('tarkkuus liikkeessä -kokeiluvipu (omistaja 5.9.2026: "kokeile pyörisikö vieritys sillä korkeammalla tarkkuudella")', async () => {
+  const { laatuAinaPaalla, asetaLaatuAina, LAATU_AINA_AVAIN } = await import('../js/ui-apurit.js');
+  const muisti = new Map();
+  const win = { location: { search: '' }, localStorage: { getItem: (k) => muisti.get(k) ?? null, setItem: (k, v) => muisti.set(k, v), removeItem: (k) => muisti.delete(k) } };
+  assert.equal(laatuAinaPaalla(win), false, 'oletus pois');
+  asetaLaatuAina(true, win);
+  assert.equal(muisti.get(LAATU_AINA_AVAIN), '1');
+  assert.equal(laatuAinaPaalla(win), true);
+  asetaLaatuAina(false, win);
+  assert.equal(muisti.has(LAATU_AINA_AVAIN), false, 'pois poistaa avaimen');
+  assert.equal(laatuAinaPaalla({ ...win, location: { search: '?laatu=aina' } }), true, 'URL voittaa');
+  assert.equal(laatuAinaPaalla({ ...win, location: { search: '?laatu=0' } }), false);
+  const pallo = lue('../js/pallo.js');
+  assert.match(pallo, /const aina = laatuAinaPaalla\(ikkuna\)/);
+  assert.match(pallo, /if \(aina\) lepoon = true;/);
+  const html = lue('../index.html');
+  assert.match(html, /kehittaja-laatu-aina-kytkin/);
+});
