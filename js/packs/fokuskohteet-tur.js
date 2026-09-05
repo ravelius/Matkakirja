@@ -216,22 +216,22 @@ export const FOKUSKOHTEET_TUR = [
      * samannimisessä lohkossa. `kadonnut: false`: Efesos itse on yhä
      * käveltävissä ja kohteella on oma valokuva, joten kartalla säilyy
      * historian pylväs ja valokuvan alle tulee "Koe ihme" -nappi.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-artemiin-temppeli.webp',
+      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-artemiin-temppeli-loistoaika-v2.jpg',
       kadonnut: false,
-      selite: 'Artemiin temppelissä oli yli sata seitsemäntoistametristä '
-        + 'marmoripylvästä, ja se oli antiikin kuuluisin '
-        + 'pyhiinvaelluskohde: väkeä tuli koko Välimeren piiristä, ja '
-        + 'kaupungin hopeasepät elivät jumalattaren pienoismallien '
-        + 'myynnistä. Temppeli oli myös Vähän-Aasian pankki — kaupungit, '
-        + 'kuninkaat ja yksityiset säilyttivät siellä rahansa ja '
-        + 'sopimuksensa — ja turvapaikka, josta pakolaista ei saanut '
-        + 'hakea. Viimeinen temppeli tuhoutui vuonna 401 '
-        + 'jaa.; paikalla on nyt soistuneella kentällä vain kivijalka ja '
-        + 'yksi kokoon kasattu pylväs.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      selite: 'Pyhiinvaeltaja on ehkä säästänyt matkarahoja vuosia tuodakseen '
+        + 'Artemiille pienen uhrilahjan. Temppelin portailla hänen '
+        + 'vieressään kulkevat käsityöläiset, papit ja kauppiaat: pyhäkkö '
+        + 'oli samalla Efesoksen uskonnollinen sydän, vaurauden näyttämö ja '
+        + 'turvalliseksi koettu rahansäilytyspaikka.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: UNESCO World Heritage Centre — Ephesus, '
+        + 'tarkistettu 5.9.2026.',
+      url: 'https://whc.unesco.org/en/list/1018/',
     },
   },
   {
@@ -1202,20 +1202,22 @@ export const FOKUSKOHTEET_TUR = [
       + 'tietolaatikko sekä osiot "Destruction of the tomb" ja '
       + '"Discovery and excavation" (tarkistettu 26.8.2026).',
     /* MATKAKIRJAN IHME (kadonnut) — säännöt fokuskohteet-grc.js:ssä.
-       Kohteen ainoa kuva: haudasta on jäljellä vain perustukset. */
+       Kohteen ainoa kuva: haudasta on jäljellä vain perustukset.
+       Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+       omana aikanaan, ei nykyajan elementtejä. */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-halikarnassoksen-mausoleumi.webp',
+      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-halikarnassoksen-mausoleumi-loistoaika-v2.jpg',
       kadonnut: true,
-      selite: 'Mausoloksen noin 45-metrinen hauta valmistui 351 eaa. Se '
-        + 'ei ollut temppeli vaan muistomerkki: leski Artemisia hautasi '
-        + 'miehensä komein juhlin, joissa kilpailtiin ja uhrattiin suuri '
-        + 'määrä eläimiä, ja lopuksi portaat haudan sisään suljettiin '
-        + 'kivillä ja soralla. Rakennusta ihailtiin niin, että sen '
-        + 'nimestä tuli sana '
-        + 'mausoleumi. Maanjäristykset kaatoivat sen keskiajalla ja kivet '
-        + 'muurattiin Bodrumin linnaan, joka vartioi lahden suuta yhä.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      selite: 'Nuori kivenveistäjä on työstänyt hautamuistomerkin reliefejä '
+        + 'ehkä vuosia, mutta huipulle nostettua nelivaljakkoa hän katsoo '
+        + 'nyt ensi kertaa valmiina. Hallitsijoille rakennus lupaa '
+        + 'kuolemattomuutta; tekijälle se merkitsee pölyä keuhkoissa, '
+        + 'kipeitä käsiä ja omaa jälkeä monumentissa, jonka nimeä käytetään '
+        + 'vielä vuosituhansien päästä kaikista mausoleumeista.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: British Museum — Mausoleum of Halikarnassos, '
+        + 'tarkistettu 5.9.2026.',
+      url: 'https://www.britishmuseum.org/collection/galleries/mausoleum-halikarnassos',
     },
   },
   {
@@ -1282,20 +1284,23 @@ export const FOKUSKOHTEET_TUR = [
      * todennäköisesti vielä paljon kaivamatta, ja etelänpään sphendonen
      * perustus on näkyvissä. Selite sanoo "aukio ja kolme monumenttia",
      * ei "ei mitään jäljellä".
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-hippodromi.webp',
+      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-hippodromi-loistoaika-v2.jpg',
       kadonnut: true,
-      selite: 'Hippodromi oli Konstantinopolin sydän tuhat vuotta: '
-        + 'satatuhatta katsojaa mahtui katsomaan vaunukilpailuja radan '
-        + 'ympärille, ja keskiselänteellä seisoi monumenttirivi '
-        + 'kaikkialta valtakunnasta. Katsomot on louhittu pois, mutta '
-        + 'paikan päälle ei koskaan rakennettu: siellä on nyt '
-        + 'Sultanahmetin aukio, jonka keskellä seisovat yhä Thutmosis '
-        + 'kolmannen obeliski, Delfoin käärmepatsas ja muurattu '
-        + 'obeliski — samassa rivissä kuin radan aikaan.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      selite: 'Vedenmyyjäksi palkattu poika ehtii tuskin nostaa tarjotintaan, '
+        + 'kun valjakko ajautuu pölyssä kohti matalaa suojamuuria. Hän '
+        + 'tuntee sinisten ja vihreiden kannattajien huudon kehossaan ennen '
+        + 'kuin erottaa sanat — täällä kilpa-ajot ovat viihdettä, '
+        + 'toimeentuloa ja politiikkaa, mutta hänen maailmansa kutistuu '
+        + 'hetkeksi kavioihin, pyöriin ja siihen, osuuko vaunu.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: Istanbul Tarihi — Byzantine Constantinople '
+        + 'research portal, tarkistettu 5.9.2026.',
+      url: 'https://istanbultarihi.ist/',
     },
   },
   {
@@ -1386,27 +1391,23 @@ export const FOKUSKOHTEET_TUR = [
      * MATKAKIRJAN IHME (yhä olemassa) — säännöt js/packs/
      * fokuskohteet-grc.js:n samannimisessä lohkossa. `kadonnut: false`,
      * joten "Koe ihme" -nappi tulee valokuvan alle.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-theodosiuksen-muurit.webp',
+      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-theodosiuksen-muurit-loistoaika-v2.jpg',
       kadonnut: false,
-      selite: 'Theodosiuksen muurit olivat myöhäisantiikin mahtavin '
-        + 'linnoitus: 5,7 kilometriä kolminkertaista puolustusta '
-        + 'mereltä merelle, 96 tornia päämuurissa ja niiden edessä '
-        + 'matalampi ulkomuuri ja yli kahdenkymmenen metrin levyinen '
-        + 'vallihauta. Ne pitivät kaupungin tuhat vuotta, ja kaupunki '
-        + 'piti niistä huolta: kun maanjäristys kaatoi vuonna 447 puoli '
-        + 'sataa tornia juuri kun hunnit lähestyivät, työhön pantiin '
-        + 'kilpa-ajoradan kannattajajoukot. Siniset ja vihreät korjasivat '
-        + 'kumpikin oman osuutensa, ja muuri oli pystyssä kahdessa '
-        + 'kuukaudessa. Muuririvi '
-        + 'kulkee yhä halki Istanbulin, ja sen vieressä on nyt '
-        + 'puistokaista ja moottoritie; 1980-luvun korjauksia on '
-        + 'moitittu, sillä vuoden 1999 maanjäristyksessä juuri '
-        + 'korjatut osat sortuivat ja alkuperäinen muuraus jäi '
-        + 'pystyyn.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      selite: 'Sinisten ja vihreiden kilpa-ajokannattajat rakentavat nyt samaa '
+        + 'puolustuslinjaa — mutta eivät suostu lopettamaan kilpailuaan. '
+        + 'Kuvituksen muurarinoppilas pelkää pudottavansa raskaan tiilen '
+        + 'enemmän kuin kaukana lähestyviä hunneja; vanhemman miehen käsi '
+        + 'olkapäällä muistuttaa, että sortuneiden tornien on noustava ennen '
+        + 'kuin vihollinen ehtii kaupungille.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: UNESCO World Heritage Centre — Historic Areas '
+        + 'of Istanbul, tarkistettu 5.9.2026.',
+      url: 'https://whc.unesco.org/en/list/356/',
     },
   },
   {
@@ -1481,24 +1482,23 @@ export const FOKUSKOHTEET_TUR = [
      * Myöskään friisien palauttamiskeskustelua ei kerrota: se on
      * politiikkaa eikä kohteen historiaa, ja Perustuslain
      * ikäsopivuuskohta pitää tekstin kohteessa.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-pergamonin-alttari.webp',
+      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-pergamonin-alttari-loistoaika-v2.jpg',
       kadonnut: true,
-      selite: 'Pergamonin suuri alttari oli hellenistisen taiteen '
-        + 'huipentuma: 35 metriä leveä marmorirakennelma akropoliin '
-        + 'terassilla, jalustassa satojen hahmojen taistelufriisi ja '
-        + 'edessä kaksikymmentä metriä leveä portaikko, jota myöten '
-        + 'kulkue nousi pylväiden ympäröimälle uhripihalle. Siellä '
-        + 'poltettiin uhrit Zeukselle. Rakennelmaa '
-        + 'ei ole enää paikallaan. Isoisän matkan aikaan vuonna 1873 '
-        + 'bergamalaiset yhä louhivat rinteestä kiveä ja polttivat '
-        + 'marmoria kalkiksi; Carl Humannin kaivaukset alkoivat viisi '
-        + 'vuotta myöhemmin, ja friisit vietiin sopimuksella Berliiniin, '
-        + 'missä ne ovat yhä Pergamonmuseumissa. Terassilla on nyt '
-        + 'perustus ja muutama muurinpätkä.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      selite: 'Nuori kuvanveistäjä tuntee jättiläisen kasvoissa jokaisen '
+        + 'taltaniskun, mutta hänen sisarensa näkee hahmon nyt ensi kertaa '
+        + 'lähes elävänä. Yli sadan jumalan ja jättiläisen taistelu kiertää '
+        + 'alttaria 120 metrin matkan: hallitsijasuvulle se julistaa voittoa '
+        + 'ja jumalallista järjestystä, tekijöille se on vuosien pölyinen '
+        + 'työ, johon oma nimi ei ehkä koskaan päädy.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: Staatliche Museen zu Berlin — Great Altar of '
+        + 'Pergamon, tarkistettu 5.9.2026.',
+      url: 'https://search.smb.museum/object/obj-829881',
     },
   },
 ];

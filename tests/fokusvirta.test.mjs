@@ -742,6 +742,8 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
   const { fileURLToPath } = await import('node:url');
   const juuri = join(dirname(fileURLToPath(import.meta.url)), '..');
   const sw = readFileSync(join(juuri, 'sw.js'), 'utf8');
+  // Ämpärin juuri luetaan pelistä eikä toisteta tässä (js/media.js).
+  const { PEILI_JUURI } = await import('../js/media.js');
 
   const paketit = Object.entries({
     GRC: (await import('../js/packs/fokuskohteet-grc.js')).FOKUSKOHTEET_GRC,
@@ -774,9 +776,23 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
       ihmeita += 1;
       const tunnus = `${maa}/${kohde.id}`;
       const { osoite, selite, lahde, kadonnut } = kohde.ihme;
-      assert.ok(osoite?.startsWith('assets/kartat/ihmeet/ihme-'),
-        `${tunnus}: ihmekuvan polku on assets/kartat/ihmeet/ihme-*`);
-      assert.ok(existsSync(join(juuri, osoite)), `${tunnus}: ${osoite} puuttuu levyltä`);
+      /*
+       * KAKSI LAILLISTA OSOITEMUOTOA (loistoaika-v2-erä 5.9.2026).
+       * Vanhat ihmekuvat ovat repon polkuja
+       * (assets/kartat/ihmeet/ihme-*), ja kuvaputken uudet loistoaika-
+       * kuvat syntyivät suoraan ämpäriin — niillä ei ole repokopiota
+       * eikä varareittiä, ja js/media.js assetOsoite päästää valmiin
+       * osoitteen läpi sellaisenaan. Repon polku tarkistetaan levyltä
+       * ja sw.js:n esilatauslistasta; ämpäriosoitteella kumpaakaan ei
+       * ole tarkistettavana, joten siitä tarkistetaan muoto: sama
+       * ämpäri (js/media.js PEILI_JUURI) ja sama ihme-etuliite.
+       */
+      const amparissa = osoite?.startsWith(`${PEILI_JUURI}kohtaamiset/ihmeet/ihme-`);
+      if (!amparissa) {
+        assert.ok(osoite?.startsWith('assets/kartat/ihmeet/ihme-'),
+          `${tunnus}: ihmekuvan polku on assets/kartat/ihmeet/ihme-* tai ämpäriosoite`);
+        assert.ok(existsSync(join(juuri, osoite)), `${tunnus}: ${osoite} puuttuu levyltä`);
+      }
       assert.equal(typeof kadonnut, 'boolean',
         `${tunnus}: esitystapa (kadonnut) on kerrottava kumpaankin suuntaan`);
       assert.ok(selite?.length > 60, `${tunnus}: ihmekuvan selite puuttuu tai on liian lyhyt`);
@@ -786,7 +802,11 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
         `${tunnus}: ihmekuvan selite kertoo kohteesta, ei kuvasta`);
       assert.ok(/^Matkakirjan havainnekuva:/.test(lahde ?? ''),
         `${tunnus}: lähderivin on merkittävä kuva havainnekuvaksi`);
-      assert.ok(sw.includes(`'./${osoite}'`), `${tunnus}: ${osoite} puuttuu sw.js:n listasta`);
+      // Esilatauslista koskee vain repon omia tiedostoja: ämpärikuvaa
+      // sw.js ei asennuksessa hae (ks. osoitemuodot yllä).
+      if (!amparissa) {
+        assert.ok(sw.includes(`'./${osoite}'`), `${tunnus}: ${osoite} puuttuu sw.js:n listasta`);
+      }
 
       /*
        * YKSI REKONSTRUKTIO KOHDETTA KOHTI (omistajan tilaus 27.8.2026
@@ -866,6 +886,23 @@ test('kadonnut ihme saa kartalle tähden, olemassa oleva pitää oman merkkinsä
   const { NOSTOSYM_LUOKAT, NOSTOSYM_TYYPIT } = await import('../js/fokusnosto-symbolit.js');
   assert.ok(NOSTOSYM_TYYPIT.has('ihme'), 'tähti on symbolikirjastossa');
   assert.ok(NOSTOSYM_LUOKAT.ihme, 'tähdellä on kortin ylärivin luokkanimi');
+  /*
+   * LOISTOAIKA-V2 (kuvaputken erä, omistaja hyväksynyt 5.9.2026).
+   * Ensimmäisen erän ihmekuva näytti kohteen "loistoaikansa asussa
+   * NYKYMAAILMASSA", ja siksi sen kuvatekstin piti kertoa myös, mitä
+   * paikalla on nyt. Uusi erä on päinvastainen: kuva on kohde OMANA
+   * AIKANAAN ilman nykyajan elementtejä, ja kuvateksti on sanatarkka
+   * kuvaputken teksti kyseisestä hetkestä. Nykypäivä ei siis enää
+   * mahdu näiden kohteiden kuvatekstiin, ja sen kertoo lähderivin
+   * merkintä "omana aikanaan" — jota ilman kuva väittäisi nykyaikaa.
+   *
+   * Alla olevat nykypäivä-vartiot koskevat siksi vain ensimmäisen erän
+   * kuvatekstejä. V2-kuvalta vaaditaan sen sijaan tarkistettu
+   * faktalähde lähderivillä ("Faktat: …"), joka on se, mihin kuvan
+   * väite omasta ajastaan perustuu. Vartio ei katoa kummaltakaan,
+   * mutta se kysyy kummaltakin oikeaa asiaa.
+   */
+  const loistoaikaV2 = (ihme) => /omana aikanaan/.test(ihme?.lahde ?? '');
   const kolossi = FOKUSKOHTEET_GRC.find((k) => k.id === 'rodoksen-kolossi');
   const knossos = FOKUSKOHTEET_GRC.find((k) => k.id === 'knossos');
   assert.equal(kolossi.ihme.kadonnut, true, 'kolossia ei ole enää olemassa');
@@ -925,8 +962,10 @@ test('kadonnut ihme saa kartalle tähden, olemassa oleva pitää oman merkkinsä
   const pyramidi = FOKUSKOHTEET_EGY.find((k) => k.id === 'gizan-suuri-pyramidi');
   assert.equal(buddhat.ihme.kadonnut, true, 'Bamiyanin patsaat tuhottiin 2001');
   assert.equal(buddhat.kuva, undefined, 'tuhotuista patsaista ei ole valokuvaa');
-  assert.ok(/syvennykse/i.test(buddhat.ihme.selite),
-    'Bamiyanin selite kertoo kallion ja syvennysten olevan yhä paikallaan');
+  assert.ok(loistoaikaV2(buddhat.ihme)
+    ? /Faktat:/.test(buddhat.ihme.lahde)
+    : /syvennykse/i.test(buddhat.ihme.selite),
+  'Bamiyanin kuvateksti kertoo, mistä ajasta kuva on ja mihin se perustuu');
   assert.equal(khazneh.ihme.kadonnut, false, 'Al-Khazneh on kalliossa tallella');
   assert.ok(khazneh.kuva?.tiedosto, 'Al-Khaznesta on valokuva nykytilasta');
   assert.equal(zimbabwe.ihme.kadonnut, false, 'Suuren Zimbabwen muurit ovat pystyssä');
@@ -977,12 +1016,16 @@ test('kadonnut ihme saa kartalle tähden, olemassa oleva pitää oman merkkinsä
       `${siirretty.id}: kohde ei ole enää paikallaan`);
     assert.equal(siirretty.kuva, undefined,
       `${siirretty.id}: siirretystä kohteesta ei ole paikan päällä valokuvaa`);
-    assert.ok(/Berliini/.test(siirretty.ihme.selite),
-      `${siirretty.id}: selitteen on kerrottava, että kohde on Berliinissä`);
+    assert.ok(loistoaikaV2(siirretty.ihme)
+      ? /Faktat:/.test(siirretty.ihme.lahde)
+      : /Berliini/.test(siirretty.ihme.selite),
+    `${siirretty.id}: kuvatekstin on kerrottava, mihin kuva perustuu tai missä kohde on`);
   }
   assert.equal(satama.ihme.kadonnut, true, 'sotasataman rakennelmat ovat poissa');
-  assert.ok(/allas/i.test(satama.ihme.selite),
-    'Karthagon selite kertoo altaan olevan yhä maastossa');
+  assert.ok(loistoaikaV2(satama.ihme)
+    ? /Faktat:/.test(satama.ihme.lahde)
+    : /allas/i.test(satama.ihme.selite),
+  'Karthagon kuvateksti kertoo, mistä ajasta kuva on ja mihin se perustuu');
   assert.equal(colosseum.ihme.kadonnut, false, 'Colosseum on pystyssä');
   assert.ok(colosseum.kuva?.tiedosto, 'Colosseumista on valokuva nykytilasta');
   assert.equal(muurit.ihme.kadonnut, false, 'Theodosiuksen muurit ovat pystyssä');
