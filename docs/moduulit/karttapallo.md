@@ -562,6 +562,11 @@ nyt pallo.
 *"Käännä kaikki pallolle, niin voidaan sulkea vanha kartta kokonaan"* /
 *"Käytä agenttia parvia"*. Kumoaa luvun 2 kytkimen ja luvun 5
 linssikartan: tasokartta ei jää linssikartaksi eikä palautusoptioksi.
+**Täsmennys 5.9.2026 ilta:** *"Pidetään vanha kartta vielä vivun
+takana, sitä voi tarvita joissain linsseissä koska siinä helpompi
+näyttää isoja alueita kerralla"* — js/kartta.js ei poistu; se pysyy
+`?lauta=kartta`-vivun takana ja linssipintana isoille alueille, eikä
+se alustu pallolaudalla.
 
 **Inventaario (5.9.2026):** vanhaan karttaan piirtävät enää
 topografia (1 rasterikuva), vesistöt (sama rasteri + 38 järveä + 253
@@ -610,7 +615,7 @@ tests/pallolauta.test.mjs.
 | 1 | etusivu: etusivupallo oletukseksi, pienoiskartta pois | js/etusivupallo.js, js/kartta.js, css, index.html | M |
 | 2 | keksinnöt/aikajana: valot merkkeinä, tummennus kalvona, kamera pallolle | js/aikajana.js, js/linssit/keksinnot.js | L |
 | 2 | radio: kaupunkinapit merkkeinä | js/linssit/radio.js, js/ui.js | M |
-| 3 | poisto: kartta.js, kerros.js, linssikartta.js, laattapyramidi.js, mapart.js, karttanimet.js, LAUTA-kytkin, turvatilan varapolku, testit, sw.js, css, dokumentit | — | L |
+| 3 | ~~poisto~~ → KUMOTTU 5.9.2026 ilta (Raamattu VANHA KARTTA JAA VIVUN TAAKSE): 3A lähtökaupungin valinta pallolle; vanha kartta jää vivun taakse linssipinnaksi isoille alueille, ei alustu pallolaudalla | js/ui.js, js/pallolauta/avaus.js | M |
 
 Toteutusmerkinnät kirjataan tämän luvun loppuun aalloittain.
 
