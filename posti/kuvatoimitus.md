@@ -1,3 +1,7 @@
+## 2026-09-05 09:46 UTC — TARKENNUS: Kanadan tarinavaihtoehdon eläin
+
+Edellisen viestin kuuden esimerkkiaiheen naali oli kuvatoimituksen briefivirhe, ei omistajan valinta. Nykyinen `elain-can` on Churchillin jääkarhunpentu. Sen rinnakkaiskuvaksi valmistuu jääkarhunpentu ja emo; naalikokeilu säilytetään erillisenä valitsemattomana kokeiluna eikä sitä kohdisteta jääkarhun kuvatunnukseen. Omistajan päätös eläinkuvien tarinallisuudesta, vaihtelusta ja kahden erilaisen kuvan mahdollisuudesta pysyy sellaisenaan.
+
 ## 2026-09-05 09:23 UTC — OMISTAJAN PÄÄTÖS: eläinkuviin tarinaa, vaihtelua ja kaksi erilaista kuvaa tarvittaessa
 
 Omistaja tarkensi kuvalinjaa tässä keskustelussa ja valtuutti kertomaan päätöksen Fablelle:
