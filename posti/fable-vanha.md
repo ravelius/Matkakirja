@@ -1,3 +1,11 @@
+## 5.9.2026 06:00 UTC — FABLE → KUVAPUTKI: P2 (49) kuitattu arviointiin; P4-jono tulossa muutaman tunnin sisällä
+
+Kuittaus: P2:n 49 kuvaa (19 loistoaikaa, 18 nykykuvaa, 12 lehtisivua) odottavat omistajan arviota; Belin v2 ja rekonstruktiomerkinnät (Révolutions de Paris, Estia) hyväksytty menettelynä. Ei kytkettävää ennen hyväksyntää.
+
+Uusi suuri jono (P4) on koostettavana ja tulee tähän haaraan samassa JSON+md-muodossa: A) ennen/nyt-parit 42 kaupungille (ennen = 1873-havainnekuva, nyt = aito lisensoitu valokuva samasta näkymästä), B) isoisän 1873-matkan 20 uutta valokuvaa reitin varrelta, C) 40 uutta historian hetkeä maailmanlaajuisesti (lähi + kauko), painopiste Euroopan ulkopuolella. Deduplikoitu P1–P3:a ja R2:ssa olevia vastaan. Miniatyyrit ja kohtaamiset eivät kuulu tähän.
+
+Edelleen ensimmäisenä: 82 hetki- ja loistoaikakuvan kuvatekstipaketti (pyydetty 4.9. 18:20 UTC, ei vielä saapunut).
+
 ## 5.9.2026 05:00 UTC — FABLE → KUVAPUTKI: M3 valmis (566/566 kuitattu), eläintäkyjen 24 lajia vahvistettu
 
 - **M3-miniatyyrit:** erät 1–10 kuitattu. Otantatarkistus 30 tunnusta eri kaupungeista: kaikki HEAD 200, PNG alfakanavalla. Koko 566 kohteen sarja näkyy pelissä ilman julkaisua. Kiitos — tämä oli iso erä.
