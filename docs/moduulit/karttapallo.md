@@ -163,12 +163,11 @@ fokusmitat ja Kartta.ajaKamera ovat no-op lepotilassa (yksi portti
 metodin alussa, ei hajautettuja ehtoja). Ohitettava osuus Ateenassa on
 mitatusti ~1 650 SVG-elementtiä, koko pyramidiliikenne ja ~7 Mt keosta
 (89 → 82 mitattuna ilman laattoja; laattojen kanssa enemmän).
-**Mitä EI ohiteta vaiheessa 1:** moduulien lataus (1,9 Mt JS, SW-
-välimuistissa) — staattisten tuontien muuttaminen laiskoiksi on oma
-erä (vaihe 5b), jonka hyöty mitataan käynnistysajasta OIKEALLA
-laitteella ennen kuin sitä tehdään; 20+ testiä lukee ui.js:ää
-tekstinä (docs/raportit/moduulijako-tuojakartoitus.md), joten
-tuontien siirto on remonttityötä, ei sivuvaikutus.
+**Mitä ei ohitettu vaiheessa 1 — TEHTY 5.9.2026 (erä 5b):** moduulien
+lataus. Staattiset tuonnit purettiin latausportin taakse
+(js/kartta-lataus.js), ja pallolaudan käynnistys keveni mitatusti
+0,90 Mt lähdekoodia. Luvut, malli ja rajaus ovat luvussa 10.3
+("Moduulien laiskoitus").
 
 **Linssikartta luodaan tarvittaessa:** linssin valinta → `Kartta`
 herää lepotilasta (drawBoardFor + kamera pallon näkymään), kuori
@@ -1284,3 +1283,89 @@ tarkka, sama kuin karusellin ennakolla. Toinen avoin: lähikuva on
 kiinteä korkeus, joten kapealla puhelinruudulla näkyvä kaista on
 noin 430 km — omistajan pyyntö koski työpöytää, ja jos puhelin
 tarvitsee oman lukunsa, se on yksi rivi lisää.
+**Moduulien laiskoitus (erä 5b, 5.9.2026 ilta).** Omistaja: *"laita
+laiskoitus työn alle"*. Vaihe 1 pani tasokartan LEPOTILAAN (luku 3): se
+ei piirrä pallolaudalla mitään. Lataus jäi silti maksettavaksi — js/ui.js
+toi js/kartta.js:n ja sen aineistopakat staattisesti, joten ne haettiin
+ja jäsennettiin joka käynnistyksessä. Nyt ne tulevat yhdestä portista.
+
+*Mittaus ennen (Chromium, /opt/pw-browsers/chromium, 390 × 844, dpr 2,
+palvelin repon juuresta, ämpäri Noden kautta, service worker estetty;
+laskettu page.on('response'):n .js-vastausten tavut).* Ui.js:n
+staattisista tuonneista PALLOLAUDALLA turhia olivat vain nämä — muut
+karttamoduulit ovat yhteisiä ja jäivät staattisiksi:
+
+| moduuli | tavua | miksi laiska (kuka muu tuo) |
+| --- | --- | --- |
+| js/kartta.js | 223 875 | vain ui.js; `sovitaAjonKesto` siirtyi js/siirtokoreografia.js:ään, koska js/pallolauta/kamera.js tarvitsee sen ilman karttaa |
+| js/packs/maasto-tekstit.js | 318 456 | vain ui.js (avaaMaastonimi) |
+| js/packs/maasto-tekstit-malli.js | 21 474 | vain ui.js (avaaMaastonimi) |
+| js/packs/maailmankartta-varjostus.js | 100 563 | vain ui.js (drawMaasto) |
+| js/packs/maailmankartta-syvyys.js | 266 439 | TUONTI POISTETTU: MERISYVYYS on ollut pois käytöstä, pakkaa ei lueta mistään |
+
+YHTEISIÄ (jäivät staattisiksi, koska pallo tarvitsee ne): mapart,
+laattapyramidi, karttanimet + maailmankartta-nimet (js/pallolauta/nimet.js),
+karttavalot ja karttaselite (selite toimii pallolla), fokuskohteet,
+fokusmitat, elaintaky, fokuspiste, nostoladonta, maatummennus,
+karttamittari (js/main.js tuo), packs/maailmankartta.
+
+*Mittaus jälkeen.* Käynnistyksessä ladattu JS pallolaudalla (tallenne
+Ateenassa): **23 672 553 → 22 771 078 tavua (−901 475 B, −0,86 Mt;
+moduuleja 335 → 331)**. Avausnäkymässä (ei tallennetta) −902 397 B.
+Tasokartalla (`?lauta=kartta`) −253 060 B, koska merisyvyyspakka putosi
+sieltäkin; muu kuorma on sama, se vain tulee mountissa portin kautta.
+Herätys (linssikartta pallon päälle) lataa 649 kt kerran ja muistaa sen.
+Mittakaava: koko käynnistyksen JS on 22,6 Mt, josta sisältöpakat vievät
+valtaosan (kulttuuri-kategoriat 4,3 Mt, nähtävyysjutut 2,1 Mt,
+maa-kategoriat 1,6 Mt) — tasokartan osuus oli 4 %, ja seuraava mitattava
+erä on sisältö, ei kartta.
+
+*Malli: SIJAISOLIO, ei `await` jokaisen herätyksen edellä.* `ui.kartta`
+on aina olio, ja sitä kutsutaan pallolaudalla SYNKRONISESTI kymmenistä
+kohdista — mitattu selaimessa lepotilassa: `kiertava` 133 kutsua,
+`fitViewBox`, `asennaPanorointi`, `nuku` ja `boardBounds` jo
+avausnäkymässä, `dieRestingSpot` jokaisessa nopanheitossa. Yhtäkään ei
+voi muuttaa odottavaksi, joten portti on olio: js/kartta-lataus.js
+`NukkuvaKartta`, jonka `js/ui.js varmistaKartta` vaihtaa oikeaan
+`Kartta`-olioon ensimmäisessä herätyksessä. Kaksi totuutta ei synny,
+koska `Kartta extends NukkuvaKartta`: nukkuvan kartan pienet metodit
+(boardBounds, kiertava, dieRestingSpot, maatiedotHalutaan, mapToPane,
+kuori, laudanKorkeus …) ovat samaa koodia kummallakin, ja raskaat ovat
+kantaluokassa nukkuvina tynkinä, jotka hereillä oleva kartta korvaa.
+
+*Herätyspolut:* (a) `?lauta=kartta` ja katselutila — mount kutsuu
+`heraaTasokartta`, joka lataa moduulin ja piirtää laudan (ero entiseen on
+yksi mikrotehtävä, verkottomana SW-välimuistin haku); (b) linssikartta
+pallon päälle — js/pallolauta/linssikartta.js `avaa` jatkaa latauksen
+jälkeen samasta portista; (c) pallon varapolku ja `?etusivupallo=0` —
+sijaisen `heraa()` palauttaa epätoden ja ohjaa `heraaTasokartta`an, joten
+vanhat kutsupaikat toimivat sellaisenaan. Epäonnistunut lataus jää
+sijaiseen eikä kierrä (yksi ehto `heraaTasokartta`ssa).
+
+*Offline ja yhden tiedoston versio:* moduulit pysyvät sw.js:n SHELLissä
+(dynaaminen tuonti hakee ne korista ilman verkkoa) ja
+tools/build-standalone.mjs:n MODULES-listalla, jossa js/kartta-lataus.js
+ja js/siirtokoreografia.js ovat ennen js/kartta.js:ää (kantaluokka ja
+riippuvuus ennen perijäänsä — nipussa on yksi näkyvyysalue). Nipussa
+dynaaminen tuonti kaatuisi (linssit.md 2.1), joten portti lukee moduulit
+samasta näkyvyysalueesta try/catchilla; savuke-dist ja suora tarkistus:
+peli käynnistyy, lauta piirtyy (188 elementtiä), ei virheitä.
+tools/tarkista-niputus.mjs sai `DYNAAMISESTI_TUODUT`-poikkeuslistan
+(vain dynaamisesti tuodut, jotka silti niputetaan) ja vartioi, että
+dynaaminen tuonti oikeasti on olemassa.
+
+*Portit:* tests/kartta-lataus.test.mjs (uusi: ei staattisia tuonteja
+mistään js/-moduulista, sijaisen rajapinta kattaa jokaisen ui.js:n
+`this.kartta.X`-kutsun, tyngät ovat tynkiä, SHELL ja niputus) ja
+tools/savukkeet/savuke-kartan-laiskoitus.mjs (uusi, 10 vartiota:
+moduuleja ei haeta pallolaudalla, sijaisen luvut, herätys linssikartalla,
+Sulje, varapolku, `?lauta=kartta`). Ajettu vihreinä: `node --test
+tests/*.test.mjs` (1660 ok), tarkista-niputus, tarkista-savukkeet,
+tarkista-kaksoisavaimet, savuke-lautakytkin (10/10), savuke-etusivupallo
+(32/32), savuke-kartta-tila (20/20), savuke-dist.
+
+HUOM savuke-pallolauta vartio 7 (linssikartta) on VANHENTUNUT jo ennen
+tätä erää: aalto 1C teki maatiedot-linssistä pallolinssin, joten
+linssikarttaa ei enää avata siitä — sama FAIL tulee origin/mainissa
+(todennettu 5.9.2026). Laiskoitus ei siihen koske; savuke odottaa
+päivitystä aallon 1C mukaiseksi.

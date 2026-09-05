@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1603';
+const CACHE = 'matkakirja-2026-08-09.1604';
 const SHELL = [
   './',
   './index.html',
@@ -17,6 +17,14 @@ const SHELL = [
   './js/main.js',
   './js/ui.js',
   './js/siirtokoreografia.js',
+  /*
+   * Tasokartta ja sen aineistopakat tulevat dynaamisena tuontina
+   * (js/kartta-lataus.js, laiskoituserä 5b 5.9.2026) — ne PYSYVÄT
+   * SHELLissä, koska laiskoitus siirtää latauksen ajankohtaa eikä
+   * poista sitä: ilman verkkoa linssikartan avaus tai ?lauta=kartta
+   * hakee moduulin tästä korista.
+   */
+  './js/kartta-lataus.js',
   './js/kartta.js',
   './js/karttamittari.js',
   './js/fokusmitat.js',

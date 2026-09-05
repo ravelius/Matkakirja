@@ -277,12 +277,24 @@ import {
 } from './mapart.js';
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
 import { vuorikuvat } from './packs/vuori-valokuvat.js';
-import { MAASTO_TEKSTIT } from './packs/maasto-tekstit.js';
-import { MAASTO_TEKSTIT_MALLI } from './packs/maasto-tekstit-malli.js';
-import { MERISYVYYS } from './packs/maailmankartta-syvyys.js';
-import { MAASTON_VARJOSTUS } from './packs/maailmankartta-varjostus.js';
-// Remontin M7a: laudan kamera ja koordinaatit (malli B).
-import { Kartta } from './kartta.js';
+/*
+ * TASOKARTTA LADATAAN VASTA KUN SE TARVITAAN (laiskoituserä 5b,
+ * omistaja 5.9.2026 ilta: *"laita laiskoitus työn alle"*).
+ *
+ * Remontin M7a laudan kamera (js/kartta.js, malli B) ja ne
+ * aineistopakat, joita VAIN tasokartta lukee (maasto-tekstit ja sen
+ * malli avaaMaastonimessä, maailmankartta-varjostus drawMaastossa)
+ * tulivat tähän asti staattisina tuonteina: 0,89 Mt lähdekoodia haettiin
+ * ja jäsennettiin joka käynnistyksessä, myös pallolaudalla, jossa
+ * tasokartta on lepotilassa eikä piirrä mitään. Nyt ne tulevat yhdestä
+ * portista (js/kartta-lataus.js lataaTasokartta), ja ui.kartta on siihen
+ * asti nukkuva sijaisolio — ks. sen tiedoston alun kommentti mallista.
+ *
+ * js/packs/maailmankartta-syvyys.js (MERISYVYYS, 260 kt) putosi kokonaan:
+ * kerros on ollut pois käytöstä (ks. drawBoard), joten tuonti oli
+ * pelkkää käynnistyksen painoa.
+ */
+import { NukkuvaKartta, lataaTasokartta, tasokartanOsat } from './kartta-lataus.js';
 // Fokuslehden klikattavat karttakohteet ja niiden pop-up (js/fokuskohteet.js).
 import {
   matkakirjanIhme, nollaaFokuskohteet, paivitaFokuskohteet, piirraIhmenappi,
@@ -2017,8 +2029,16 @@ const TURN_WIDTH = 560; // pidettävä samana kuin .turn-card css:ssä
 export class UI {
   constructor(game, { onNewGame, onChange }) {
     this.game = game;
-    // Remontin M7a: kamera ja koordinaatit asuvat Kartta-oliossa.
-    this.kartta = new Kartta(this);
+    /*
+     * Remontin M7a: kamera ja koordinaatit asuvat Kartta-oliossa.
+     *
+     * PELI SYNTYY NUKKUVALLA SIJAISELLA (laiskoituserä 5b): oikea
+     * Kartta-olio vaatii js/kartta.js:n, jota ei ladata pallolaudalla
+     * lainkaan. Sijainen osaa nukkuvan kartan rajapinnan (js/kartta-
+     * lataus.js NukkuvaKartta), ja varmistaKartta vaihtaa sen oikeaan
+     * olioon ensimmäisessä herätyksessä.
+     */
+    this.kartta = new NukkuvaKartta(this);
     this.onNewGame = onNewGame;
     this.onChange = onChange;
     this.botTimer = null;
@@ -2962,8 +2982,14 @@ export class UI {
      * pallovideo (js/etusivupallo.js). Ilman tätä svg#board sai 188
      * elementtiä ja laattapyramidi heräisi pelkkää etusivua varten.
      */
+    /*
+     * MODUULI VASTA TÄSSÄ (laiskoituserä 5b): pallohaara ei lataa
+     * tasokarttaa lainkaan, karttahaara herättää sen heti kun
+     * js/kartta.js on paikallaan (heraaTasokartta) — piirto on yhden
+     * mikrotehtävän, verkottomana SW-välimuistin haun, päässä entisestä.
+     */
     if (this.pallolautaHalutaan() || this.etusivunPalloKaytossa()) this.kartta.lepotila = true;
-    else this.drawBoardFor(this.game.pack);
+    else void this.heraaTasokartta();
     /*
      * NOPPA KARTAN SIIRTOKUOREEN, EI KARTTARUUTUUN (#98). Kuori on se
      * elementti, johon panoroinnin ja nipistyksen muunnos kirjoitetaan
@@ -3867,6 +3893,61 @@ export class UI {
     return Boolean(this.pallolauta && this.kartta.lepotila);
   }
 
+  /*
+   * ============ TASOKARTAN LAISKA LATAUS (erä 5b) ===================
+   *
+   * Omistaja 5.9.2026 ilta: *"laita laiskoitus työn alle"*. js/kartta.js
+   * ja sen omat aineistopakat ladataan vasta kun kartta oikeasti
+   * tarvitaan; siihen asti ui.kartta on nukkuva sijaisolio
+   * (js/kartta-lataus.js). Kaksi kutsujaa: tämä pari ja sijaisen oma
+   * heraa(), joka ohjaa tänne.
+   */
+
+  /**
+   * Oikea Kartta-olio paikalleen sijaisen tilalle. Palauttaa ui.kartan.
+   *
+   * Ensimmäinen kutsu lataa moduulin (SW-välimuistista ilman verkkoa),
+   * loput ovat yksi vertailu. Olio syntyy NUKKUVANA: herätys on kutsujan
+   * asia, jotta lataus ei piirrä lautaa kenenkään selän takana.
+   */
+  async varmistaKartta() {
+    if (!this.kartta.sijainen) return this.kartta;
+    let osat = null;
+    try {
+      osat = await lataaTasokartta();
+    } catch (syy) {
+      // Ilman moduulia peli jää pallolle (tai tyhjälle laudalle
+      // ?lauta=kartta-tilassa) — sama tilanne kuin ennen laiskoitusta,
+      // jos js/kartta.js ei latautunut ui.js:n mukana.
+      console.warn('Tasokarttaa ei saatu ladattua.', syy);
+      return this.kartta;
+    }
+    // Kilpa-ajo: toinen kutsuja ehti vaihtaa olion, tai peli purettiin.
+    if (this.dead || !this.kartta.sijainen) return this.kartta;
+    this.kartta = new osat.Kartta(this);
+    /*
+     * Karttaruudun eleet asennetaan vasta tässä: mount kutsui
+     * asennaPanorointia sijaiselle, jolle se on tynkä. Kutsu on
+     * kertaluontoinen kuten mountissa — olio vaihtuu vain kerran.
+     */
+    this.kartta.asennaPanorointi();
+    return this.kartta;
+  }
+
+  /**
+   * Tasokartta hereille laiskan latauksen läpi: moduuli ensin, sitten
+   * sama heraa() + piirto kuin ennen. Palauttaa true, jos kartta heräsi.
+   */
+  async heraaTasokartta() {
+    await this.varmistaKartta();
+    // Lataus epäonnistui: sijainen jää paikalleen eikä herätystä yritetä
+    // uudelleen tästä (muuten sijaisen heraa() kiertäisi ikuisesti).
+    if (this.dead || this.kartta.sijainen) return false;
+    if (!this.kartta.heraa()) return false;
+    this.render();
+    return true;
+  }
+
   /**
    * KAMERAN DELEGAATTI: hereillä oleva lauta omistaa kameran. Rajapinta
    * on sama kummallakin (ajaKamera, kameranTila, kameraAjossa,
@@ -3968,7 +4049,7 @@ export class UI {
      */
     if (this.game.phase === 'pickstart' && this.aloitusvalintaPallolla) {
       this.aloitusvalintaPallolla = false;
-      this.aloitaTasokartalta();
+      void this.aloitaTasokartalta();
     }
     const box = this.buildToast({ kind: 'info', text: 'Karttapallo ei latautunut — pelataan kartalla.' });
     setTimeout(() => this.removeToast(box), TOAST_MS.default * 3);
@@ -5639,8 +5720,15 @@ export class UI {
      */
     const laji = ['vuoret', 'joet', 'jarvet']
       .find((l) => MAAILMANKARTAN_NIMET[l]?.includes(kohde));
+    /*
+     * Tekstit tulevat tasokartan latausportista (js/kartta-lataus.js):
+     * tänne pääsee vain maastonimikerroksesta, joka on olemassa vasta
+     * hereillä olevalla kartalla — silloin pakat ovat aina ladatut.
+     */
+    const kartanOsat = tasokartanOsat();
     const teksti = laji
-      ? (MAASTO_TEKSTIT[laji]?.[kohde.avain] ?? MAASTO_TEKSTIT_MALLI[laji]?.[kohde.avain])
+      ? (kartanOsat?.MAASTO_TEKSTIT?.[laji]?.[kohde.avain]
+        ?? kartanOsat?.MAASTO_TEKSTIT_MALLI?.[laji]?.[kohde.avain])
       : null;
     /*
      * Vuorikohteilla on oma kuratoitu karuselli (VUORIKUVAT). Se
@@ -6228,7 +6316,7 @@ export class UI {
       drawMaasto(
         taide,
         pack.map,
-        pack.id === 'maailmankartta' ? MAASTON_VARJOSTUS : null,
+        pack.id === 'maailmankartta' ? (tasokartanOsat()?.MAASTON_VARJOSTUS ?? null) : null,
         pack.id === 'maailmankartta' ? MAAILMANKARTAN_NIMET : null,
       );
     }
@@ -15315,7 +15403,7 @@ export class UI {
      * tietä (poistuu aallossa 3B).
      */
     if (this.aloituslentoPallolla()) { this.aloitaPallolta(); return; }
-    this.aloitaTasokartalta();
+    void this.aloitaTasokartalta();
   }
 
   /**
@@ -15346,7 +15434,11 @@ export class UI {
    * pallon varapolku: jos Globe.gl ei lataudu kesken valinnan,
    * pallolautaVarapolku antaa valinnan kartalle.
    */
-  aloitaTasokartalta() {
+  async aloitaTasokartalta() {
+    // Moduuli ensin (laiskoituserä 5b): lähikuva ajetaan heti herätyksen
+    // perään, joten sijaisen tynkä ei kelpaa tässä.
+    await this.varmistaKartta();
+    if (this.dead) return;
     if (this.kartta.lepotila && !this.pallolauta) {
       this.kartta.heraa();
       this.render();

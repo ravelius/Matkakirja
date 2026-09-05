@@ -329,7 +329,9 @@ test('kamera-ajo lähtee kesken olevan ajon nykyisestä kehyksestä, ei sen mä�
 });
 
 test('ennakkozoomi ja kohdesovitus sovittavat kestonsa liikkeen mukaan', async () => {
-  const { sovitaAjonKesto, SOVITETUN_AJON_PISIN_MS } = await import('../js/kartta.js');
+  // Kaava asuu koreografiassa 5.9.2026 alkaen (laiskoituserä 5b): sekä
+  // tasokartta että pallon kamera lukevat sen sieltä.
+  const { sovitaAjonKesto, SOVITETUN_AJON_PISIN_MS } = await import('../js/siirtokoreografia.js');
   // Pieni ele: pyydetty kesto sellaisenaan.
   assert.equal(sovitaAjonKesto(760, 0, 0), 760);
   // Kaksinkertainen zoomi: puolet lisää.

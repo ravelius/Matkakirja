@@ -610,7 +610,9 @@ test('pallolaudalla tasokarttaa ei alusteta etusivua varten', () => {
     'Valitse aloituskaupunki ei saa herättää tasokarttaa pallolaudalla');
   assert.match(nappi, /if \(this\.aloituslentoPallolla\(\)\) \{ this\.aloitaPallolta\(\); return; \}/,
     'pallolaudalla valinta avautuu pallolle');
-  const vanhaPolku = ui.match(/ {2}aloitaTasokartalta\(\) \{[\s\S]*?\n {2}\}\n/)[0];
+  // Laiskoituserä 5b: vanha polku on asynkroninen, koska tasokartan
+  // moduuli ladataan vasta napautuksesta (js/kartta-lataus.js).
+  const vanhaPolku = ui.match(/ {2}async aloitaTasokartalta\(\) \{[\s\S]*?\n {2}\}\n/)[0];
   assert.match(vanhaPolku, /if \(this\.kartta\.lepotila && !this\.pallolauta\) \{\n\s*this\.kartta\.heraa\(\);/,
     'vanha polku herättää tasokartan lepotilasta');
 });

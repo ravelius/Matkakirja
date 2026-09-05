@@ -36,7 +36,10 @@ test('aloitaKartalta ei herätä karttaa pallolaudalla', () => {
   assert.match(nappi, /if \(this\.aloituslentoPallolla\(\)\) \{ this\.aloitaPallolta\(\); return; \}/);
   assert.match(nappi, /this\.aloitaTasokartalta\(\);/);
   // Vanha kulku säilyy ?lauta=kartta-tilassa ja pallon varapolussa (3B poistaa).
-  const vanha = ui.match(/ {2}aloitaTasokartalta\(\) \{[\s\S]*?\n {2}\}\n/)[0];
+  // Vanha polku on 5.9.2026 alkaen asynkroninen: tasokartan moduuli
+  // ladataan vasta tässä (laiskoituserä 5b, js/kartta-lataus.js).
+  const vanha = ui.match(/ {2}async aloitaTasokartalta\(\) \{[\s\S]*?\n {2}\}\n/)[0];
+  assert.match(vanha, /await this\.varmistaKartta\(\);/);
   assert.match(vanha, /this\.kartta\.heraa\(\);/);
   assert.match(vanha, /this\.kartta\.zoomaaAloituskartta\(/);
 });
@@ -76,7 +79,7 @@ test('etusivun pallovideo puretaan samassa piirrossa kuin valinta alkaa', () => 
 test('pallon varapolku antaa lähtövalinnan takaisin kartalle', () => {
   const varapolku = ui.match(/ {2}pallolautaVarapolku\(\) \{[\s\S]*?\n {2}\}\n/)[0];
   assert.match(varapolku, /this\.pallolautaEpaonnistui = true;/);
-  assert.match(varapolku, /if \(this\.game\.phase === 'pickstart' && this\.aloitusvalintaPallolla\) \{\n\s*this\.aloitusvalintaPallolla = false;\n\s*this\.aloitaTasokartalta\(\);/);
+  assert.match(varapolku, /if \(this\.game\.phase === 'pickstart' && this\.aloitusvalintaPallolla\) \{\n\s*this\.aloitusvalintaPallolla = false;\n\s*void this\.aloitaTasokartalta\(\);/);
 });
 
 /* ================================================================== *
