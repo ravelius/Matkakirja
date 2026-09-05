@@ -25,9 +25,9 @@
  * pyramidin taso z on 675·2^z px / 360°, joten lähteeksi riittää
  * z = Z − 1 (Z0 → z0). Tasolle 7 lähde on siis z6.
  *
- * JULISTEEN ULKOPUOLI (yli 76° N, Etelämanner) täytetään paperin
- * sävyllä ja puuttuva lähdelaatta (umpimeri, 404) merisävyllä — samoin
- * kuin tekstuurityökalussa. Kaikki laatat kirjoitetaan (myös meri ja
+ * JULISTEEN ULKOPUOLI (yli 84° N, alle 66° S) täytetään merisävyllä ja
+ * napajää jääsävyllä (ks. MERI_SAVY, JAA_SAVY); puuttuva lähdelaatta
+ * (umpimeri, 404) merisävyllä. Kaikki laatat kirjoitetaan (myös meri ja
  * paperi), jotta pelin ei tarvitse tietää, mitkä laatat ovat olemassa:
  * kirjaston laattamoottori ei osaa varalaattaa.
  *
@@ -58,9 +58,23 @@ const LUETTELO = `${JULKINEN_JUURI}julisteet/pyramidi/pyramidi.json`;
 /** Laatan koko pikseleinä (slippy map -vakio). */
 export const LAATTA = 256;
 export const LAATU = 80;
-/** Napojen paperinsävy (sama kuin tekstuurissa). */
-const PAPERI = { pohjoinen: [210, 197, 164], etela: [205, 192, 160] };
-const MERI_VARA = [237, 223, 198];
+/*
+ * JULISTEEN ULKOPUOLI ILMAN "HARMAATA HATTUA" (omistaja 5.9.2026: "Lisää
+ * 4 tasolle navat ... Tai joku muu toteutus että päästään siitä harmaasta
+ * hatusta eroon"). Aiemmin julisteen ulkopuoli (yli 84° N, alle 66° S)
+ * täytettiin paperinsävyllä, joka erottui pallolla vaaleana lakkina.
+ * Nyt täyte jatkaa julisteen MERISÄVYÄ (mitattu julisteesta), ja vasta
+ * napajää (yli 84° N, alle 70° S) vaalenee hieman jääksi — Pohjoinen
+ * jäämeri on merta ja Etelämanner jäätä, joten pallo ei näytä saumaa.
+ * Napalakki 85°:n yläpuolella (Mercatorin raja) piirtyy kirjastossa
+ * ylimmän laattarivin reunasävyllä venytettynä, joten se saa jääsävyn
+ * automaattisesti näistä laatoista — mitattu 5.9.2026 (globeMaterial-
+ * väri ei vaikuta lakkiin).
+ */
+export const MERI_SAVY = [208, 201, 183];
+export const JAA_SAVY = [220, 214, 198];
+export const JAA_RAJA = { pohjoinen: 84, etela: -70 };
+const MERI_VARA = MERI_SAVY;
 const RAD = Math.PI / 180;
 /** Lähdelaattoja välimuistissa kerrallaan (512 × 512 × 4 t ≈ 1 Mt kukin). */
 const VALIMUISTI = 160;
@@ -224,7 +238,7 @@ function teeLukija(luettelo, sharp, { nostot = false } = {}) {
     const i = ((y % L) * k.w + (x % L)) * 4;
     ulos[o] = k.data[i]; ulos[o + 1] = k.data[i + 1]; ulos[o + 2] = k.data[i + 2];
   }
-  return { varmista, pikseli, tilasto };
+  return { varmista, pikseli, tilasto, meri: () => meri ?? MERI_SAVY };
 }
 
 /**
@@ -261,12 +275,12 @@ export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
   }
   for (let r = 0; r < LAATTA; r += 1) {
     const lat = rivinLeveysaste(Z, Y, r);
-    const paperi = lat > 0 ? PAPERI.pohjoinen : PAPERI.etela;
+    const tayte = (lat > JAA_RAJA.pohjoinen || lat < JAA_RAJA.etela) ? JAA_SAVY : (lukija.meri?.() ?? MERI_SAVY);
     for (let s = 0; s < LAATTA; s += 1) {
       const lon = ((X + (s + 0.5) / LAATTA) / n) * 360 - 180;
       const o = (r * LAATTA + s) * 3;
       const a = arkinPikseli(luettelo, taso, lon, lat);
-      if (!a) { ulos[o] = paperi[0]; ulos[o + 1] = paperi[1]; ulos[o + 2] = paperi[2]; continue; }
+      if (!a) { ulos[o] = tayte[0]; ulos[o + 1] = tayte[1]; ulos[o + 2] = tayte[2]; continue; }
       // Lähin pikseli riittää: lähdetaso on aina tiheämpi kuin kohde.
       lukija.pikseli(z, a.px, a.py, ulos, o);
     }
