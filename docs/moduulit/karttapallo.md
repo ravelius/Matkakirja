@@ -372,6 +372,39 @@ tarvittu: PALLOLAUDAN_KERROKSET on ennallaan. Portit:
 tests/pallonimet.test.mjs, tools/tarkista-pallomerkit.mjs,
 savuke-pallolauta vartiot 12–15.
 
+**Vaiheen 4 toteutusmerkinnät (Fablemax 5.9.2026, PR "Pallolauta vaihe
+4: linssikartta"):** (1) Kuori asuu js/pallolauta/linssikartta.js:ssä
+(luoLinssikartta); ui.avaaLinssikartta / ui.suljeLinssikartta delegoivat
+sinne, ja moduuli ladataan pallolaudan mukana (ei MODULES-listalle, SHELL
+kyllä). (2) Kamera molempiin suuntiin: avatessa pallon kameranTila
+(x, y, leveys) → Kartta.ajaKamera kesto 0; suljettaessa Kartta.kameranTila
+(x, y, skaala) → leveys = ruudun leveys / skaala → pallon ajaKamera kesto 0
+häivytyksen alla (kartanNakymaPallolle). Mitattu ±5 % (savuke-pallolauta
+vartio 7, tests/linssikartta.test.mjs). (3) Siirtymät: pallon kuori saa
+luokan `linssin-alla` (opacity 0, 250 ms) ja piilotetaan vasta häivytyksen
+jälkeen; suljettaessa pallo näytetään läpinäkyvänä, kamera asetetaan ja
+häivytys sisään, kartta puretaan (nuku → puraLauta) vasta kun pallo
+peittää sen. Tila (ui.linssikartta, body.linssikartta-auki, Kartta hereillä)
+vaihtuu aina heti; reduced motion → 0 ms samassa vuorossa. (4) Linssi
+blokkaa muun: yksi portti ui.linssikarttaEstaa() (vaihdaLiuku, avaaTutkinta,
+Matkusta ja Tutki harmaina); tasokartalla kenttä on aina null.
+(5) Aikajanan oma ✕/Esc ja radion OFF päättävät linssin pallolaudalla
+(ui.pysaytaAikajana → valitseLinssi(null)), jotta kuori ei jää tyhjänä
+karttana ruudulle; kehys on piilossa radiotilassa ja aikajanalla (niillä
+on oma sulkemisensa). (6) Muistettu linssivalinta ei jää laukkuun
+"valituksi" ilman kuorta: pallolaudalla käynnistyksessä valinta unohdetaan
+(paivitaLinssit lepotilassa) — kuori avautuu vain laukun valinnasta.
+(7) Löydetty ja korjattu vaiheen 1 aukko: tasokartan merkkiketju
+(taydennaTaide → paivitaMaastonimet, paivitaFokusPohja) piirsi
+fokuskohteet ja eläintäyt takaisin tyhjään svg:hen pallon alle, kun
+kartan kamera-ajo (aikajanan paluuajo, aloituslento) valmistui purun
+jälkeen — mitattu 1 263 elementtiä; nyt kolme metodia palaavat
+lepotilassa heti (sama yhden portin sääntö kuin js/kartta.js).
+(8) Vaiheen 1 väliaikainen "Palaa pallolle" poistui; Sulje on samassa
+kulmassa, selitenapin vasemmalla puolella. Portit: tests/linssikartta.test.mjs,
+savuke-pallolauta vartio 7, savuke-aikajana ja savuke-kartta-tila
+`--lauta pallo`.
+
 Yhteensä **13 sessiota** (vaiheet 1–6; 5b mahdollinen +1). Vaihe 1 on
 "uuden jutun ensimmäinen kierros" (roolitus.md): Fable/Fablemax tekee
 sen itse ja hioo omistajan kanssa; vasta vaiheet 2–3 voi jakaa

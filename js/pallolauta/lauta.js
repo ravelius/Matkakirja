@@ -15,7 +15,7 @@
  * paikalla — ilman tummaa pohjaa ja ilman Sulje-nappia, koska lauta ei
  * ole ikkuna, joka suljetaan. Tasokartta nukkuu sen alla tyhjänä
  * (js/kartta.js lepotila) ja herää linssikartaksi vain linssin ajaksi
- * (js/ui.js avaaLinssikartta).
+ * (js/pallolauta/linssikartta.js, ui.avaaLinssikartta delegoi sinne).
  *
  * KARTTA LAATOISSA, PELI PÄÄLLÄ (Raamattu 5.9.2026, täsmennys "ei mitään
  * pinnoitteen päälle"): reittiverkko, rajat ja maasto ovat laatoissa,
@@ -79,6 +79,7 @@ import {
 import {
   HELMEN_VARI, REITTIHELMEN_KORKEUS, REITTIHELMEN_SADE, luoReitit,
 } from './reitit.js';
+import { luoLinssikartta } from './linssikartta.js';
 import { luoNappulanKuljettaja } from './siirto.js';
 
 /**
@@ -544,18 +545,6 @@ export async function avaaPallolauta(ui) {
   const kokovahti = new ResizeObserver(mitoita);
   kokovahti.observe(kotelo);
 
-  /*
-   * "PALAA PALLOLLE" linssikartan kulmaan: tasokartta herää linssin
-   * ajaksi, ja tästä pääsee takaisin. Kesken siirtoanimaation nappi ei
-   * tee mitään (ui.suljeLinssikartta kieltäytyy).
-   */
-  const palaa = document.createElement('button');
-  palaa.type = 'button';
-  palaa.className = 'linssikartta-palaa';
-  palaa.textContent = 'Palaa pallolle';
-  palaa.addEventListener('click', () => ui.suljeLinssikartta());
-  ui.mapPane.appendChild(palaa);
-
   const lauta = {
     kuori,
     kotelo,
@@ -599,10 +588,17 @@ export async function avaaPallolauta(ui) {
       noppaTakaisin();
       pallo._destructor?.();
       kuori.remove();
-      palaa.remove();
+      lauta.linssikartta?.pura();
       if (ui.pallonInstanssi === pallo) ui.pallonInstanssi = null;
     },
   };
+  /*
+   * LINSSIKARTTA (vaihe 4, js/pallolauta/linssikartta.js): tasokartta
+   * herää pallon päälle linssin ajaksi ja palaa tähän kuoreen, kun
+   * linssi suljetaan. ui.avaaLinssikartta / ui.suljeLinssikartta
+   * delegoivat tänne; kuori tuntee pallon kameran ja tämän kuoren.
+   */
+  lauta.linssikartta = luoLinssikartta({ ui, lauta });
   // Instanssi talteen mittausta ja savukkeita varten (sama kenttä kuin
   // valikkopallolla).
   ui.pallonInstanssi = pallo;
