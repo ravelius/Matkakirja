@@ -248,7 +248,16 @@ test('kortti tekee karusellin vain useammasta kuvasta', () => {
   // Yhden kuvan polku on entinen: sama kehys, sama nappi, sama
   // vakiolähderivi (tests/havainnekuva.test.mjs vartioi jälkimmäistä).
   assert.match(KORTTI, /const kehys = html\('figure', 'fokusnosto-kuva elaintaky-kuva'\)/);
-  assert.match(KORTTI, /taky\.kuvaLahde \?\? 'Matkakirjan havainnekuva'/);
+  /*
+   * YKSIKIN KUVA TULEE NORMALISOIJASTA (5.9.2026): kortti luki ennen
+   * suoraan `taky.kuva` ja `taky.kuvaLahde`, jolloin yhden kuvan
+   * `kuvat`-lista olisi jäänyt näkymättä — kuvaputken toimitus antaa
+   * yhdelle kuvalle valmiin osoitteen ja oman kuvatekstin. Vanha tietue
+   * kulkee saman normalisoijan läpi muuttumattomana, joten vakiorivi on
+   * yhä sama; lauseke on nyt sama kuin karusellilla.
+   */
+  assert.match(KORTTI, /const elainkuva = assetOsoite\('elaimet', kuva\.url \|\| kuva\.tiedosto\)/);
+  assert.match(KORTTI, /kuva\.lahde \|\| 'Matkakirjan havainnekuva', kuva\)\);/);
   // Kuvateksti ja lähderivi ovat kuvan omat ja vaihtuvat sen mukana.
   assert.match(KORTTI, /selite\.textContent = selitteet\[kohdalla\]/);
   assert.match(KORTTI, /taytaLahderivi\(lahde, kuva\.lahde \|\| 'Matkakirjan havainnekuva', kuva\)/);

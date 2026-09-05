@@ -211,5 +211,9 @@ test('eläintäyn kuvarivi ei käytä tekstin lähdettä kuvan lähteenä', () =
     'kuvarivi lukisi taky.lahden (kortin TEKSTIN lähde, en-Wikipedia), '
     + 'jolloin pelin oma kuva näyttäisi Wikipedian kuvalta eikä selitettä '
     + 'syntyisi koskaan');
-  assert.match(lahde, /taky\.kuvaLahde \?\? 'Matkakirjan havainnekuva'/);
+  // Kuvan oma lähde tulee normalisoijasta (js/packs/elaintakyt.js
+  // elaintakynKuvat): vanhassa tietueessa se on `kuvaLahde`, kuvaputken
+  // toimituksessa `kuvat`-listan alkion oma `lahde`. Sama lauseke
+  // molemmilla poluilla, yhdellä kuvalla ja karusellilla.
+  assert.match(lahde, /kuva\.lahde \|\| 'Matkakirjan havainnekuva'/);
 });
