@@ -622,3 +622,19 @@ taulukko on toteutettu tiedostossa `js/pallolauta/linssit.js`
   Chromiumilla: kalvo syttyy, osuu maantieteellisesti kohdalleen,
   linssikarttaa ei avata, "Ei linssiä" purkaa kalvon ja uudelleensytytys
   toimii.
+
+**Aalto 1B — vesistöt pallolle (js/linssit/vesistot.js).** Linssi sai
+`pallolle(lauta)`, joka kutsuu `lauta.linssit`-apuria neljästi: kalvo
+(reliefi tasavälisenä, `TOPOGRAFIA_PALLOKUVA` =
+`assets/linssit/topografia-pallo.webp`, peittävyys 0,72), polygonit (38
+järveä GeoJSON-renkaina, korkeus 0,003), polut (84 pengertä + 169 uomaa
+= 253, paksuus asteina 0,14/0,10 ja 0,06/0,04/0,025 tärkeysluokittain)
+ja merkit (20 tärkeimmän joen nimet, `.pallolauta-vesinimi`; kytkin
+`VESINIMET_PALLOLLA`, ohitetaan jos merkit-osaa ei ole). Muunnos on
+puhtaana funktiona `vesistotPallolle({ maasto, nimet }, asteet)` — ei
+selainta, ei Globe.gl:ää — ja se ajetaan kerran, tulos muistiin.
+Pehmennystä ei ole (pathResolution riittää); yli 2° välit tihennetään
+isoympyrällä ja kiertävän laudan sauma katkaisee polun. Vartiointi:
+tests/vesistot-pallolla.test.mjs. AVOIN: pathStroke on asteita, joten
+uoma ohenee maailmankuvassa alle pikselin — jos apuri joskus asettaa
+listat uudelleen kameran pysähtyessä, paksuudet on kerrottava korkeudella.

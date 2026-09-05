@@ -107,3 +107,17 @@ export const TOPOGRAFIA_KUVA = {
     osoite: 'https://coastwatch.pfeg.noaa.gov/erddap/griddap/etopo360',
   },
 };
+
+/*
+ * SAMA RELIEFI PALLOLLE — TASAVÄLISENÄ (karttapallo.md luku 10.1).
+ *
+ * Yllä oleva kuva on projisoitu LAUDAN Milleriin, ja pallon pinta
+ * odottaa tasaväliä (equirectangular): Millerin kuva pallolle kierrettynä
+ * venyttäisi navat ja siirtäisi päiväntasaajan. Pallokuva on siis oma
+ * tiedostonsa samasta korkeusruudukosta ja samalla varjostuksella.
+ *
+ * Polku on tässä eikä TOPOGRAFIA_KUVA-oliossa, koska se ei ole laudan
+ * kuvan ominaisuus vaan sen pallosisar: kaksi linssiä (topografia ja
+ * vesistöt) pyytää samaa kalvoa, ja molemmat lukevat sen tästä nimestä.
+ */
+export const TOPOGRAFIA_PALLOKUVA = 'assets/linssit/topografia-pallo.webp';

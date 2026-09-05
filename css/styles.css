@@ -23770,6 +23770,25 @@ svg.rough-annotation { pointer-events: none; }
 /* Nimen muste ja kirjasin tulevat .karttanimi-luokasta (tasokartan sama
    sääntö); svg:n sisällä teksti asettuu keskilinjaan kuten kartalla. */
 .pallolauta-nimi text { dominant-baseline: middle; }
+/*
+ * VESISTÖLINSSIN JOKINIMET PALLOLLA (js/linssit/vesistot.js pallolle).
+ *
+ * Tasokartalla nimet tulevat maastonimikerroksesta (.maastonimi-joki);
+ * pallolla kerrosta ei ole, joten linssi tuo omat merkkinsä. Asu on sama
+ * kuin kartalla — kaunokirjoitus kursiivina, meren muste — ja koko on
+ * ruutuvakio kuten kaikilla pallon merkeillä (karttapallo.md luku 6).
+ */
+.pallolauta-vesinimi {
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-family: var(--font-kauno);
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: rgba(20, 44, 68, 0.98);
+  text-shadow: 0 0 3px rgba(247, 241, 226, 0.85);
+}
 /* Lunastettu eläintäky haalistuu kuten kartalla (js/elaintaky.js). */
 .pallolauta-nosto.lunastettu { opacity: 0.55; }
 .pallolauta-nosto.lunastettu.pallolauta-takana,

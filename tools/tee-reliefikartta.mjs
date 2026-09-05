@@ -86,6 +86,9 @@ if (!process.env.NODE_USE_ENV_PROXY && (process.env.HTTPS_PROXY || process.env.h
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const VALIMUISTI = join(tmpdir(), 'matkakirja-reliefikartta');
 const SUHTEELLINEN = 'assets/linssit/topografia.webp';
+// Pallon kalvo on sama reliefi tasavälisenä; tekee sen tools/tee-pallokalvo.mjs
+// (aalto 1A). Polku kirjoitetaan pakettiin täältä, jotta nimi on yksi.
+const PALLON_SUHTEELLINEN = 'assets/linssit/topografia-pallo.webp';
 const KOHDE = join(JUURI, SUHTEELLINEN);
 const PAKETTI = join(JUURI, 'js', 'packs', 'linssi-topografia-kuva.js');
 
@@ -678,6 +681,15 @@ export const TOPOGRAFIA_KUVA = {
     osoite: ${jono(LAHTEET.osoite)},
   },
 };
+
+/*
+ * SAMA RELIEFI PALLOLLE — TASAVÄLISENÄ (karttapallo.md luku 10.1).
+ *
+ * Laudan kuva on Millerissä, pallon pinta odottaa tasaväliä; pallokuva on
+ * siis oma tiedostonsa samasta ruudukosta ja samasta varjostuksesta.
+ * Polku kirjoitetaan tässä, jotta se ei katoa kun paketti tehdään uusiksi.
+ */
+export const TOPOGRAFIA_PALLOKUVA = ${jono(PALLON_SUHTEELLINEN)};
 `;
 
 writeFileSync(PAKETTI, paketti);

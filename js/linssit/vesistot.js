@@ -59,9 +59,48 @@
  * kytketään päälle tästä linssistä (js/ui.js paivitaMaastonimet), ja
  * sen sävyt hoitaa css/styles.css `body.linssi-vesistot`: kaupunkien
  * nimet ja pallot haalistuvat, jokien nimet tummuvat.
+ *
+ * PALLOLLA NIMET OVAT TÄSSÄ. Pallolaudalla ei ole maastonimikerrosta —
+ * ei ole zoomia, jonka mukana nimi ladottaisiin uudelleen, vaan kamera ja
+ * CSS2D-merkit (js/pallolauta/merkit.js). Siksi tärkeimpien jokien nimet
+ * tulevat pallolla linssin omasta merkkiosastaan, katto 20 (ks.
+ * VESINIMIEN_KATTO): koko on ruutuvakio niin kuin kaikilla pallon
+ * merkeillä, eikä jäätymistä yhteen kokoon tapahdu, koska ruutuvakio ON
+ * pallon oma mitta.
+ *
+ * --- sama linssi pallolla (karttapallo.md luku 10.1) ---
+ *
+ * Omistajan linjaus 5.9.2026: *"Käännä kaikki pallolle, niin voidaan
+ * sulkea vanha kartta kokonaan"*. Tämä linssi piirtyy pallolle kolmena
+ * kerroksena `lauta.linssit`-apurin kautta: reliefi tasavälisenä kalvona
+ * (TOPOGRAFIA_PALLOKUVA), järvet polygoneina ja joet polkuina. Linssi ei
+ * koske Globe.gl-instanssiin itse.
+ *
+ * KAKSI ASIAA MUUTTUU LAUDALTA PALLOLLE.
+ *
+ * 1. VIIVANLEVEYS ON ASTEITA, EI PIKSELEITÄ. Yllä perusteltu
+ *    `non-scaling-stroke` on SVG:n keino; pallolla viivan paksuus on
+ *    Globe.gl:n pathStroke eli kulma-aste, ja se kasvaa zoomatessa kuten
+ *    kaikki muukin pallon pinnalla. Mitta on otettu matkareitistä
+ *    (js/pallolauta/reitit.js MATKAREITIN_PAKSUUS_AST = 0,05), jotta
+ *    pääjoki lukeutuu reittiä vahvempana ja sivujoki sitä hennompana —
+ *    sama kolmiportainen järjestys kuin laudalla, sen omissa yksiköissä.
+ * 2. PEHMENNYSTÄ EI TARVITA. Laudalla polut pehmennetään
+ *    (smoothOpenPath); pallolla Globe.gl pilkkoo polun itse
+ *    (pathResolution), ja mitattuna aineiston pisteväli on enimmillään
+ *    3,5° — pitkät välit tihennetään isoympyrän pisteillä
+ *    (TIHENNYS_AST), jotta uoma seuraa palloa eikä oikaise sen läpi.
+ *
+ * KIERTÄVÄN LAUDAN SAUMA. Lauta jatkuu reunan yli itseensä, joten
+ * asteiksi käännettynä piste voi hypätä +180°:sta -180°:een. Polku
+ * katkaistaan siitä kohdasta omaksi polukseen (katkaiseSauma); muuten
+ * uoma vetäisi viivan koko maapallon ympäri väärää kautta. Nykyisessä
+ * aineistossa hyppyjä ei ole (mitattu), mutta sauma on laudan ominaisuus
+ * eikä aineiston, joten katkaisu on koodissa eikä datassa.
  */
 
 import { el, kasinPiirretty, smoothOpenPath, smoothClosedPath } from '../mapart.js';
+import { isoympyranPiste, kulmaAsteina } from '../pallolauta/reitit.js';
 import { lataaReliefi, piirraReliefi } from './topografia.js';
 
 /*
@@ -143,9 +182,263 @@ const LEVEYS = {
 };
 const JARVEN_REUNA = 1.4;
 
+/* ------------------------------------------------------- pallon mitat */
+
+/*
+ * UOMAN JA PENKEREEN PAKSUUS ASTEINA (Globe.gl pathStroke).
+ *
+ * Mittatikku on matkareitti: js/pallolauta/reitit.js
+ * MATKAREITIN_PAKSUUS_AST = 0,05 on se viiva, jonka pelaaja tuntee
+ * pallolta entuudestaan. Pääjoki on sitä hitusen vahvempi (0,06), koska
+ * se on tässä linssissä pääasia; keskisuuri jää alle (0,04) ja sivujoki
+ * puoleen (0,025). Suhde 2,4 : 1,6 : 1 on sama kuin laudan pikseleillä
+ * (3,0 : 2,0 : 1,3), joten kolmiportainen järjestys säilyy sellaisenaan.
+ *
+ * PENGER ON SAMASSA SUHTEESSA KUIN LAUDALLA (7/3 ja 5/2), ei kiinteä
+ * lisäys: asteissa lisäys olisi eri levyinen eri zoomilla, kun laudalla
+ * se oli ruudun pikseleitä. Luokka 3 jää ilman pengertä samasta syystä
+ * kuin laudalla — penger söisi luokkien eron.
+ *
+ * AVOIN KYSYMYS MOOTTORILLE (aalto 1A / Fable): aste on kiinteä pallon
+ * pinnalla, joten koko maailma ruudulla (korkeus 2,5, ~2 px asteessa)
+ * ohentaa uoman alle pikselin, kun saapumisnäkymässä (~55 px asteessa)
+ * se on kolme pikseliä. Sama pätee matkareittiin, joka piirretään vain
+ * lähellä. Jos `lauta.linssit` joskus asettaa listat uudelleen kameran
+ * pysähtyessä (kuten nimiladonta, LAATU_LEPOVIIVE_MS), nämä luvut
+ * kannattaa kertoa kameran korkeudella — silloin uoma olisi taas
+ * merkintä eikä mitta, niin kuin laudalla.
+ */
+export const PALLON_UOMA_AST = { 1: 0.06, 2: 0.04, 3: 0.025 };
+export const PALLON_PENGER_AST = { 1: 0.14, 2: 0.1 };
+
+/*
+ * KORKEUDET PALLON PINNASTA. Kalvo (reliefi) on omana kuorenaan
+ * 0,002:ssa, järvi juuri sen päällä ja uoma järven päällä — sama
+ * järjestys kuin laudalla, jossa joki piirretään järven jälkeen, jotta
+ * uoma jatkuu rantaan asti.
+ */
+export const JARVEN_KORKEUS = 0.003;
+export const UOMAN_KORKEUS = 0.004;
+
+/*
+ * Pisin sallittu väli kahden pisteen välillä asteina. Aineiston suurin
+ * mitattu väli on 3,5°, ja niitä on 19 kappaletta; ne tihennetään
+ * isoympyrän pisteillä, jotta uoma kulkee pallon pintaa eikä oikaise
+ * jänteenä sen läpi.
+ */
+export const TIHENNYS_AST = 2;
+
+/*
+ * JOKIEN NIMET PALLOLLA — kytkin ja katto.
+ *
+ * Nimet ovat CSS2D-elementtejä, joiden paikan kirjasto laskee joka kehys
+ * (karttapallo.md luku 6 ja riski 3), joten niitä on oltava vähän: vain
+ * tärkeysluokat 1–2 ja niistäkin 20 pisintä. Kytkin on olemassa siksi,
+ * että merkit-osa on aallon 1A moottorin varassa — jos sitä ei ole,
+ * linssi piirtyy silti täydellisenä ilman nimiä.
+ */
+export const VESINIMET_PALLOLLA = true;
+export const VESINIMIEN_KATTO = 20;
+
 let maasto = null;
 let nimet = null;
 let kuvatiedot = null;
+let pallokuva = null;
+let pallomuisti = null;
+
+/* -------------------------------------------- laudalta pallolle (puhdas) */
+
+/**
+ * Laudan pisteet asteiksi: [[x, y]…] → [[lat, lng]…].
+ *
+ * `asteet` on laudan oma asteistus (js/fokusmitat.js laudaltaAsteiksi,
+ * pallolaudalla js/pallolauta/lauta.js pallonAsteet). Se palauttaa
+ * `{ lat, lon }` tai null; null-pisteet jätetään pois, koska yksi
+ * projisoimaton piste ei saa hävittää koko uomaa.
+ */
+function pisteetAsteina(pisteet, asteet) {
+  const ulos = [];
+  for (const p of pisteet ?? []) {
+    const x = Array.isArray(p) ? p[0] : p?.x;
+    const y = Array.isArray(p) ? p[1] : p?.y;
+    const a = Number.isFinite(x) && Number.isFinite(y) ? asteet({ x, y }) : null;
+    if (a && Number.isFinite(a.lat) && Number.isFinite(a.lon)) ulos.push([a.lat, a.lon]);
+  }
+  return ulos;
+}
+
+/**
+ * KIERTÄVÄN LAUDAN SAUMA: polku paloiksi siitä, missä pituusaste hyppää
+ * yli 180°. Palauttaa listan polkuja; alle kahden pisteen palat jäävät
+ * pois, koska yhdestä pisteestä ei tule viivaa.
+ */
+export function katkaiseSauma(pisteet) {
+  const palat = [];
+  let pala = [];
+  for (const p of pisteet ?? []) {
+    const edellinen = pala[pala.length - 1];
+    if (edellinen && Math.abs(p[1] - edellinen[1]) > 180) {
+      if (pala.length >= 2) palat.push(pala);
+      pala = [];
+    }
+    pala.push(p);
+  }
+  if (pala.length >= 2) palat.push(pala);
+  return palat;
+}
+
+/**
+ * PITKÄT VÄLIT TIHENNETÄÄN ISOYMPYRÄLLÄ. Kahden kaukana toisistaan
+ * olevan pisteen väliin lisätään pallon pintaa seuraavat välipisteet
+ * (js/pallolauta/reitit.js isoympyranPiste — sama kaava kuin
+ * lentokaarella), jotta uoma ei oikaise pallon läpi.
+ */
+export function tihennaKaarella(pisteet, raja = TIHENNYS_AST) {
+  if (!(pisteet?.length >= 2)) return pisteet ?? [];
+  const ulos = [pisteet[0]];
+  for (let i = 1; i < pisteet.length; i += 1) {
+    const a = { lat: pisteet[i - 1][0], lng: pisteet[i - 1][1] };
+    const b = { lat: pisteet[i][0], lng: pisteet[i][1] };
+    const kulma = kulmaAsteina(a, b);
+    // Pyöristysvara: acos antaa tasan rajan mittaisesta välistä 2,0000001.
+    const osia = Math.ceil(kulma / raja - 1e-9);
+    for (let k = 1; k < osia; k += 1) {
+      const v = isoympyranPiste(a, b, k / osia);
+      ulos.push([v.lat, v.lng]);
+    }
+    ulos.push(pisteet[i]);
+  }
+  return ulos;
+}
+
+/**
+ * VESISTÖ PALLOLLE — koko muunnos yhtenä puhtaana funktiona.
+ *
+ * `aineisto` on `{ maasto, nimet }` (js/packs/maailmankartta-maasto.js ja
+ * js/packs/maailmankartta-nimet.js) ja `asteet({ x, y })` laudan
+ * asteistus. Funktio ei koske selaimeen eikä Globe.gl:ään, joten se on
+ * ajettavissa ja mitattavissa Nodessa (tests/vesistot-pallolla.test.mjs).
+ *
+ * Palauttaa kolme valmista datumlistaa:
+ *
+ *   polut      — penkereet ensin, uomat päälle. Järjestys on sama syy
+ *                kuin laudan kahdella ryhmällä: jos pari piirrettäisiin
+ *                joki kerrallaan, seuraavan joen tumma penger leikkaisi
+ *                edellisen kirkkaan uoman poikki joka yhtymäkohdassa.
+ *   polygonit  — järvet GeoJSON-renkaina ([lng, lat], rengas suljettu).
+ *   nimet      — tärkeimpien jokien nimet ja ankkurit; elementin tekee
+ *                `pallolle`, jotta tämä funktio pysyy DOM-vapaana.
+ */
+export function vesistotPallolle(aineisto, asteet) {
+  const maastoData = aineisto?.maasto ?? null;
+  const nimiData = aineisto?.nimet ?? null;
+  const polygonit = [];
+  const penkat = [];
+  const uomat = [];
+  const vesinimet = [];
+  if (!maastoData || typeof asteet !== 'function') {
+    return { polut: [], polygonit, nimet: vesinimet };
+  }
+
+  /*
+   * JÄRVET. Rengas suljetaan (GeoJSON vaatii ensimmäisen ja viimeisen
+   * pisteen samaksi), ja sauman ylittävä rengas jätetään pois: renkaalla
+   * ei ole päätä, josta sen voisi katkaista kahdeksi. Nykyisessä
+   * aineistossa sellaisia ei ole — tools/tee-maasto.mjs pitää sauman
+   * ylittävät muodot yhtenäisinä laudan omassa kierrossa.
+   */
+  maastoData.jarvet?.forEach((jarvi, i) => {
+    const rengas = pisteetAsteina(jarvi.rengas ?? jarvi, asteet);
+    if (rengas.length < 4) return;
+    if (katkaiseSauma(rengas).length !== 1) return;
+    const koordinaatit = rengas.map(([lat, lng]) => [lng, lat]);
+    const eka = koordinaatit[0];
+    const vika = koordinaatit[koordinaatit.length - 1];
+    if (eka[0] !== vika[0] || eka[1] !== vika[1]) koordinaatit.push([eka[0], eka[1]]);
+    polygonit.push({
+      avain: `jarvi:${i}`,
+      nimi: jarvi.nimi ?? '',
+      geometry: { type: 'Polygon', coordinates: [koordinaatit] },
+      vari: JARVEN_VESI,
+      reuna: PENGER,
+      korkeus: JARVEN_KORKEUS,
+    });
+  });
+
+  /*
+   * JOET. Tärkeysluokka luetaan nimipaketista samalla avaimella kuin
+   * laudalla (joen nimi), ja luokka päättää sekä sävyn että paksuuden.
+   */
+  const jokiTarkeys = new Map((nimiData?.joet ?? []).map((j) => [j.avain, j.tarkeys]));
+  maastoData.joet?.forEach((joki, i) => {
+    const asteina = pisteetAsteina(joki.pisteet ?? joki, asteet);
+    if (asteina.length < 2) return;
+    const luokka = jokiTarkeys.get(joki.nimi) ?? 3;
+    const palat = katkaiseSauma(asteina);
+    palat.forEach((pala, k) => {
+      const pisteet = tihennaKaarella(pala);
+      const tunnus = palat.length > 1 ? `${i}/${k}` : `${i}`;
+      const penger = PALLON_PENGER_AST[luokka];
+      if (penger) {
+        penkat.push({
+          avain: `penger:${tunnus}`,
+          nimi: joki.nimi ?? '',
+          pisteet,
+          vari: PENGER,
+          paksuus: penger,
+          korkeus: UOMAN_KORKEUS,
+          katko: 0,
+        });
+      }
+      uomat.push({
+        avain: `uoma:${tunnus}`,
+        nimi: joki.nimi ?? '',
+        tarkeys: luokka,
+        pisteet,
+        vari: UOMA[luokka] ?? UOMA[3],
+        paksuus: PALLON_UOMA_AST[luokka] ?? PALLON_UOMA_AST[3],
+        korkeus: UOMAN_KORKEUS,
+        katko: 0,
+      });
+    });
+  });
+
+  /*
+   * NIMET. Ankkuri on uoman KIINTEÄ keskikohta samasta syystä kuin
+   * laudalla (js/mapart.js drawMaastonimet): "Joen nimi hyppii uusiin
+   * paikkoihin kun karttaa katsoo eri paikassa" — nimi kuuluu paikkaan,
+   * ei katseeseen. Ehdokkaat ovat luokat 1–2 pituusjärjestyksessä, ja
+   * katto leikkaa lopun.
+   */
+  const ehdokkaat = (nimiData?.joet ?? [])
+    .filter((j) => (j.tarkeys ?? 3) <= 2 && (j.pisteet?.length ?? 0) >= 2)
+    .sort((a, b) => (a.tarkeys - b.tarkeys) || ((b.pituus ?? 0) - (a.pituus ?? 0)));
+  for (const joki of ehdokkaat) {
+    if (vesinimet.length >= VESINIMIEN_KATTO) break;
+    const keski = joki.pisteet[Math.floor(joki.pisteet.length / 2)];
+    const a = asteet({ x: keski[0], y: keski[1] });
+    if (!a) continue;
+    vesinimet.push({
+      avain: `vesinimi:${joki.avain}`,
+      laji: 'linssi',
+      teksti: joki.nimi ?? joki.avain,
+      tarkeys: joki.tarkeys ?? 2,
+      lat: a.lat,
+      lng: a.lon,
+    });
+  }
+
+  return { polut: [...penkat, ...uomat], polygonit, nimet: vesinimet };
+}
+
+/** Joen nimen elementti pallolla: yksi span, tyyli css:ssä. */
+function vesinimenElementti(d) {
+  const el = document.createElement('span');
+  el.className = 'pallolauta-vesinimi';
+  el.textContent = d.teksti;
+  el.setAttribute('aria-hidden', 'true');
+  return el;
+}
 
 export const LINSSI = {
   tunnus: 'vesistot',
@@ -213,6 +506,15 @@ export const LINSSI = {
       kuvatiedot = await lataaReliefi();
     } catch {
       kuvatiedot = null;
+    }
+    /*
+     * Pallon kalvo on sama reliefi TASAVÄLISENÄ (js/packs/
+     * linssi-topografia-kuva.js TOPOGRAFIA_PALLOKUVA). Paketti on
+     * lataaReliefi:n jäljiltä jo selaimen muistissa, joten tämä on
+     * kirjanpitoa eikä latausta.
+     */
+    if (!pallokuva) {
+      ({ TOPOGRAFIA_PALLOKUVA: pallokuva } = await import('../packs/linssi-topografia-kuva.js'));
     }
   },
 
@@ -324,6 +626,54 @@ export const LINSSI = {
       }, uomat);
     }
     return true;
+  },
+
+  /**
+   * SAMA LINSSI PALLOLLA (karttapallo.md luku 10.1).
+   *
+   * Kolme kutsua `lauta.linssit`-apurille — kalvo, järvet, joet — ja
+   * neljäs, jos merkit-osa on käytettävissä (jokien nimet). Linssi ei
+   * koske Globe.gl:ään itse, joten kerrosten kirjanpito ja purku ovat
+   * yhdessä paikassa (js/pallolauta/linssit.js).
+   *
+   * MUUNNOS TEHDÄÄN KERRAN. Laudan (x, y) → asteet on 253 polun ja 38
+   * renkaan verran laskentaa, ja se on sama joka kerta: pallolauta on
+   * yksi ja sen projektio vakio (js/packs/fokus-grc.js
+   * FOKUS_LAUTAPROJEKTIOT.maailmankartta). Tulos jää muistiin, jotta
+   * linssin sytyttäminen uudestaan on kerroslistojen asettamista.
+   */
+  pallolle(lauta) {
+    const linssit = lauta?.linssit;
+    if (!linssit) return { pura() {} };
+    if (!pallomuisti && maasto) {
+      pallomuisti = vesistotPallolle({ maasto, nimet }, lauta.asteet);
+    }
+    const aineisto = pallomuisti ?? { polut: [], polygonit: [], nimet: [] };
+
+    /*
+     * POHJA ENSIN, sitten järvet, sitten joet — sama järjestys kuin
+     * laudalla. Kalvo on pallon oma kuori reliefikuvalla; jos kuva
+     * puuttuu, kalvo jää pois eikä linssi kaadu: joet ja järvet ovat sen
+     * sisältö, pohja on sen tausta.
+     */
+    if (pallokuva) linssit.kalvo('vesistot', { kuva: pallokuva, peittavyys: PEITTAVYYS });
+    linssit.polygonit('vesistot', aineisto.polygonit);
+    linssit.polut('vesistot', aineisto.polut);
+
+    const nimiOsa = VESINIMET_PALLOLLA && typeof linssit.merkit === 'function'
+      && aineisto.nimet.length > 0;
+    if (nimiOsa) {
+      linssit.merkit('vesistot-nimet', aineisto.nimet.map((d) => ({
+        ...d, elementti: vesinimenElementti,
+      })));
+    }
+
+    return {
+      pura() {
+        linssit.pura('vesistot');
+        if (nimiOsa) linssit.pura('vesistot-nimet');
+      },
+    };
   },
 
   selite() {
