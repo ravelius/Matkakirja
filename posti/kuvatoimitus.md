@@ -1,5 +1,110 @@
 # Kuvatoimitussessio
 
+## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 7 R2-varmennettu
+
+### novosibirsk
+
+- `novosibirsk-novosibirsk-glavnyi`
+- `novosibirsk-kaupungin-kauppatalo`
+- `novosibirsk-taidemuseo`
+- `novosibirsk-satohuoneiston-talo`
+- `novosibirsk-aleksanteri-nevskin-katedraali`
+### irkutsk
+
+- `irkutsk-znamenskin-luostari`
+- `irkutsk-epifanian-katedraali`
+- `irkutsk-taivaaseenastumisen-kirkko`
+- `irkutsk-rautatieasema`
+- `irkutsk-ristin-ylentamisen-kirkko`
+- `irkutsk-130-kortteli`
+- `irkutsk-jaanmurtaja-angara`
+### kioto
+
+- `kioto-kinkaku-ji`
+- `kioto-ginkaku-ji`
+- `kioto-keisarillinen-palatsi`
+- `kioto-nijo-linna`
+- `kioto-nishiki-tori`
+- `kioto-gion`
+- `kioto-kiyomizu-dera`
+- `kioto-sanjusangen-do`
+- `kioto-to-ji`
+- `kioto-fushimi-inari-taisha`
+### singapore
+
+- `singapore-sultan-moskeija`
+- `singapore-raffles-hotel`
+- `singapore-fort-canningin-kukkula`
+- `singapore-clarke-quay`
+- `singapore-empress-place`
+- `singapore-boat-quay`
+- `singapore-merlion-puisto`
+- `singapore-gardens-by-the-bay`
+- `singapore-sri-mariamman-temppeli`
+- `singapore-thian-hock-keng-temppeli`
+### samarkand
+
+- `samarkand-ulugbekin-observatorio`
+- `samarkand-khoja-doniyorin-mausoleumi`
+- `samarkand-afrasiyabin-rauniokumpu`
+- `samarkand-hazrat-khizrin-moskeija`
+- `samarkand-shah-i-zindan-hautakuja`
+- `samarkand-bibi-khanymin-moskeija`
+- `samarkand-registanin-aukio`
+- `samarkand-gur-e-amir`
+- `samarkand-ishratkhanan-mausoleumi`
+### xian
+
+- `xian-xi-anin-rautatieasema`
+- `xian-anyuan-portti`
+- `xian-suuri-moskeija`
+- `xian-rumpitorni`
+- `xian-kellotorni`
+- `xian-steelametsa`
+- `xian-yongning-portti`
+- `xian-shaanxin-historiallinen-museo`
+- `xian-suuri-villihanhipagoda`
+### varanasi
+
+- `varanasi-dhamek-stupa`
+- `varanasi-chaukhandi-stupa`
+- `varanasi-manikarnika-ghat`
+- `varanasi-kashi-vishwanath-temppeli`
+- `varanasi-dashashwamedh-ghat`
+- `varanasi-assi-ghat`
+- `varanasi-durga-kund-temppeli`
+- `varanasi-ramnagarin-linnoitus`
+### hanoi
+
+- `hanoi-long-bienin-silta`
+- `hanoi-thang-longin-keisarilinna`
+- `hanoi-ong-xuanin-tori`
+- `hanoi-yhden-pilarin-pagodi`
+- `hanoi-hanoin-lippulinna`
+- `hanoi-ngoc-sonin-temppeli`
+- `hanoi-pyhan-joosefin-katedraali`
+- `hanoi-kirjallisuuden-temppeli`
+### ulanbator
+
+- `ulanbator-gandantegchinlenin-luostari`
+- `ulanbator-mongolian-kansallismuseo`
+- `ulanbator-sukhbaatarin-aukio`
+- `ulanbator-choijin-laman-temppeli`
+- `ulanbator-rautatieasema`
+- `ulanbator-kansallisstadion`
+- `ulanbator-bogd-khanin-talvipalatsi`
+- `ulanbator-zaisanin-muistomerkki`
+### kathmandu
+
+- `kathmandu-boudhanath`
+- `kathmandu-swayambhunath`
+- `kathmandu-unelmien-puutarha`
+- `kathmandu-pashupatinath`
+- `kathmandu-rani-pokhari`
+- `kathmandu-kathmandun-durbar-aukio`
+- `kathmandu-dharahara`
+- `kathmandu-patanin-durbar-aukio`
+
 ## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 6 R2-varmennettu
 
 ### aden
