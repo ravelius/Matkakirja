@@ -386,3 +386,31 @@ export function hypynVaihe(t) {
 export function hypynHuippu(matka) {
   return Math.min(HYPYN_KORKEUS_MAX, Math.max(HYPYN_KORKEUS_MIN, matka * HYPYN_KAARI));
 }
+
+/*
+ * AJON KESTO LIIKKEEN MUKAAN (omistaja 3.9.2026: *"tarkista kaikki
+ * vaiheet jotta menisi pehmeästi ja sulavasti kaikki automaattiset
+ * karttaliikkeet ennen kuin pelaajan nappula lähtee liikkeelle
+ * (panoroinnit ja zoomaukset)"*).
+ *
+ * Kiinteä kesto on oikea silloin, kun liike on pieni: pienestä
+ * kohdesovituksesta tai puolen zoomin ennakosta 700 ms on rauhallinen
+ * ele. Sama 700 ms kaksinkertaiselle zoomille JA ruudullisen
+ * panoroinnille on syöksy — juuri se "liian pikaisesti", jonka omistaja
+ * näki ensimmäisellä heitolla maan yleiskuvasta. Kesto kasvaa siksi
+ * liikkeen määrän mukaan: yksi oktaavi zoomia (kerroin 2) lisää
+ * puolet, ruudun leveyden panorointi lisää saman verran, ja katto
+ * pitää pisimmätkin ajot kohtauksen mittaisina (SOVITETUN_AJON_PISIN_MS).
+ * Lyhyempi kuin pyydetty ei koskaan tule.
+ *
+ * @param {number} kesto pyydetty pohja (ms)
+ * @param {number} suhde |ln(loppuskaala / alkuskaala)|
+ * @param {number} matkaRuutuina panorointi ruudun leveyksinä
+ */
+export const SOVITETUN_AJON_PISIN_MS = 1800;
+export function sovitaAjonKesto(kesto, suhde, matkaRuutuina) {
+  const oktaavit = Math.abs(suhde) / Math.LN2;
+  const kerroin = 1 + 0.5 * oktaavit + 0.5 * Math.max(0, matkaRuutuina);
+  // Katto rajaa vain LISÄN: pyydettyä pitempi ajo (esim. saapuminen) pysyy omanaan.
+  return Math.round(Math.max(kesto, Math.min(SOVITETUN_AJON_PISIN_MS, kesto * kerroin)));
+}

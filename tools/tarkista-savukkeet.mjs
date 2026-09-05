@@ -97,7 +97,14 @@ function lueKartta() {
   for (const tiedosto of readdirSync(join(root, 'js'))) {
     if (!/^kartta.*\.js$/.test(tiedosto)) continue;
     const puhdas = tyhjaaEiKoodi(read(join('js', tiedosto)));
-    const alku = puhdas.indexOf('export class Kartta');
+    /*
+     * KAKSI LUOKKAA, YKSI RAJAPINTA (laiskoituserä 5b, 5.9.2026):
+     * nukkuvan kartan metodit (boardBounds, kiertava, dieRestingSpot,
+     * maatiedotHalutaan …) asuvat js/kartta-lataus.js:n NukkuvaKartta-
+     * luokassa, jonka Kartta perii. Savukkeen ui.kartta on kumpi
+     * tahansa, joten molemmat luetaan.
+     */
+    const alku = puhdas.search(/export class (?:Nukkuva)?Kartta\b/);
     if (alku >= 0) {
       const runko = puhdas.slice(alku);
       const re = new RegExp(`^  (?:static\\s+|async\\s+|get\\s+|set\\s+)*(${NIMI})\\s*\\(`, 'gm');

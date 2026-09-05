@@ -177,6 +177,14 @@ const NIPUTTAMATTOMAT = new Set([
   // työhuone) eivät ole niputuksessa.
   'js/packs/viritysaanet.js',
   'js/packs/paivan-kuvat.js',
+  /*
+   * Merisyvyysvyöhykkeet: EI YHTÄÄN TUOJAA (5.9.2026, laiskoituserä 5b).
+   * Kerros on ollut pois käytöstä (js/ui.js drawBoard kertoo mittaukset),
+   * mutta js/ui.js toi pakan yhä staattisesti — 260 kt jokaisessa
+   * käynnistyksessä. Tuonti poistettiin; tiedosto jää repoon ja SHELLiin
+   * siltä varalta, että vyöhykkeet vielä palaavat.
+   */
+  'js/packs/maailmankartta-syvyys.js',
 ]);
 
 test('yhden tiedoston versio niputtaa kaikki karttapaketit', () => {

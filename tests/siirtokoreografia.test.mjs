@@ -102,7 +102,10 @@ test('ui.js ja pallon kamera tuovat koreografian moduulista; ui.js ei julista lu
   const kamera = lue('../js/pallolauta/kamera.js');
   const moduuli = lue('../js/siirtokoreografia.js');
   assert.match(ui, /from '\.\/siirtokoreografia\.js';/);
-  assert.match(kamera, /import \{ siirtoajonPehmennys \} from '\.\.\/siirtokoreografia\.js';/);
+  // sovitaAjonKesto muutti js/kartta.js:stä koreografiaan 5.9.2026
+  // (laiskoituserä 5b): yksi tuonti tasokartasta olisi vetänyt koko
+  // js/kartta.js:n muistiin heti pallolaudan avautuessa.
+  assert.match(kamera, /import \{ siirtoajonPehmennys, sovitaAjonKesto \} from '\.\.\/siirtokoreografia\.js';/);
   assert.ok(!kamera.includes("from '../ui.js'"), 'kamera.js tuo yhä ui.js:ää — kehäriippuvuus');
   assert.ok(!moduuli.includes('import '), 'siirtokoreografia.js on lehtimoduuli: ei tuonteja');
   for (const nimi of ['STEP_MS', 'HYPYN_TAUKO_MS', 'NAPPULAN_LAHDON_VIIVE_MS', 'SAATON_RAMPPI',

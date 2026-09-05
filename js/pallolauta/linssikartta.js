@@ -138,6 +138,21 @@ export function luoLinssikartta({ ui, lauta, doc = (typeof document === 'undefin
    */
   const avaa = (tiedot = {}) => {
     if (ui.dead || ui.linssikartta || !lauta) return false;
+    /*
+     * TASOKARTAN MODUULI LADATAAN VASTA TÄSSÄ (laiskoituserä 5b,
+     * js/kartta-lataus.js): pallolaudalla js/kartta.js ei ole muistissa
+     * ennen ensimmäistä linssikarttaa. Sijaisolio ei voi herätä
+     * synkronisesti, ja koko avaus (heraa + kamera + kehys) riippuu
+     * hereillä olevasta kartasta — siksi avaus jatkuu latauksen jälkeen
+     * samasta portista eikä puolikkaana. Toinen kutsu menee suoraan
+     * läpi, koska portti muistaa lupauksensa.
+     */
+    if (ui.kartta.sijainen) {
+      void ui.varmistaKartta().then(() => {
+        if (!ui.dead && !ui.linssikartta && !ui.kartta.sijainen) avaa(tiedot);
+      });
+      return true;
+    }
     const nakyma = lauta.kamera.kameranTila();
     ui.linssikartta = {
       lahto: ui.game.cityOf?.()?.id ?? null, linssi: false, ...tiedot, nakyma,

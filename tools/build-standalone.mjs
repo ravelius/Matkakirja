@@ -381,7 +381,18 @@ const MODULES = [
   'js/packs/maailmankartta.js',
   'js/packs/maailmankartta-nimet.js',
   'js/packs/vuori-valokuvat.js',
-  'js/packs/maailmankartta-syvyys.js',
+  /*
+   * Tasokartan omat aineistopakat. Nämä tuodaan 5.9.2026 alkaen VAIN
+   * dynaamisesti (js/kartta-lataus.js, laiskoituserä 5b), mutta ne
+   * pysyvät nipussa: yhden tiedoston versiossa dynaaminen tuonti kaatuu
+   * ja portti lukee moduulit samasta näkyvyysalueesta. Poikkeus on
+   * kirjattu tools/tarkista-niputus.mjs:n DYNAAMISESTI_TUODUT-listaan.
+   *
+   * js/packs/maailmankartta-syvyys.js EI ole enää mukana: MERISYVYYS on
+   * pois käytöstä, tuonti poistettiin ui.js:stä, eikä tuojatonta
+   * moduulia saa listata (NS-törmäyksen oppi alempana). Perustelu
+   * tests/sw.test.mjs:n NIPUTTAMATTOMAT-listalla.
+   */
   'js/packs/maasto-tekstit-malli.js',
   'js/packs/maasto-tekstit.js',
   'js/packs/maailmankartta-varjostus.js',
@@ -610,8 +621,25 @@ const MODULES = [
    */
   'js/packs/fokus-grc.js',
   'js/laattapyramidi.js',
-  // M7a: laudan kamera ennen ui:ta (ui tuo Kartan; kartta tuo äänet ja
-  // luennan, jotka ovat yllä).
+  /*
+   * Siirron koreografian luvut ja käyrät (pallolauta vaihe 2). Nousi
+   * tähän 5.9.2026: sovitaAjonKesto muutti kartta.js:stä tänne, joten
+   * riippuvuus on oltava ennen tuojaansa. Ei tuo itse mitään.
+   */
+  'js/siirtokoreografia.js',
+  /*
+   * Tasokartan latausportti ja lepotilan sijaisolio ennen karttaa:
+   * js/kartta.js perii NukkuvaKartta-luokan (laiskoituserä 5b), ja
+   * niputettu koodi on yhtä näkyvyysaluetta — kantaluokan on oltava
+   * julistettu ennen perijäänsä. Tuo laattapyramidin, joka on yllä.
+   */
+  'js/kartta-lataus.js',
+  /*
+   * M7a: laudan kamera ennen ui:ta (kartta tuo äänet ja luennan, jotka
+   * ovat yllä). Tuonti on 5.9.2026 alkaen DYNAAMINEN (kartta-lataus),
+   * mutta nipussa kartta tarvitaan: se on yhden tiedoston version ainoa
+   * lauta. Ks. tools/tarkista-niputus.mjs DYNAAMISESTI_TUODUT.
+   */
   'js/kartta.js',
   // Laitemittari ennen ui:ta (ui tuo sen). Ei tuo itse mitään.
   'js/karttamittari.js',
@@ -737,9 +765,6 @@ const MODULES = [
    * epäonnistuu ja efekti jää pois hiljaa.
    */
   'js/maatummennus.js',
-  // Siirron koreografian luvut ja käyrät (pallolauta vaihe 2): ui.js
-  // tuo staattisesti, joten riippuvuus ennen tuojaansa.
-  'js/siirtokoreografia.js',
   /*
    * Kehittäjän kohtaamislista (5.9.2026) ennen ui.js:ää: ui tuo sen
    * staattisesti. Omat riippuvuudet — game, pack, tarinakaari,

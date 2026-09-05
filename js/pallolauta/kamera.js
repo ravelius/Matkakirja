@@ -50,8 +50,13 @@
 
 import { laudaltaAsteiksi, projisoiLaudalle } from '../fokusmitat.js';
 import { pixelOf } from '../rules.js';
-import { siirtoajonPehmennys } from '../siirtokoreografia.js';
-import { sovitaAjonKesto } from '../kartta.js';
+/*
+ * Ajon kesto ja pehmennys samasta koreografiasta kuin tasokartalla.
+ * sovitaAjonKesto MUUTTI OSOITETTA 5.9.2026 (laiskoituserä 5b): se asui
+ * js/kartta.js:ssä, ja tämä yksi tuonti olisi vetänyt koko tasokartan
+ * (219 kt) muistiin heti pallolaudan avautuessa.
+ */
+import { siirtoajonPehmennys, sovitaAjonKesto } from '../siirtokoreografia.js';
 
 /** Globe.gl:n kameran oletusavauskulma (astetta, pystysuunta). */
 export const PALLO_FOV = 50;

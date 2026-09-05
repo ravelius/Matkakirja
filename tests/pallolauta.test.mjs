@@ -152,9 +152,18 @@ test('pallolla vain pelin merkit: sallitut kerrokset lueteltu, kartan kerrokset 
 test('tasokartta pois tieltä yhdestä portista; kamera kulkee delegaatin kautta', () => {
   const ui = lue('../js/ui.js');
   const kartta = lue('../js/kartta.js');
-  // Lepotila ja sen portit (karttapallo.md luku 3).
+  /*
+   * Lepotila ja sen portit (karttapallo.md luku 3). Lepotilan rakennin,
+   * nuku ja sijaisolio muuttivat 5.9.2026 js/kartta-lataus.js:ään
+   * (laiskoituserä 5b): tasokartan moduulia ei enää ladata pallolaudalla
+   * lainkaan, joten nukkuvan kartan rajapinta on omassa moduulissaan ja
+   * Kartta perii sen. Portit itse ovat entisellään.
+   */
+  const lataus = lue('../js/kartta-lataus.js');
+  assert.match(lataus, /^  nuku\(\) \{/m);
+  assert.match(lataus, /this\.lepotila = true;/, 'sijainen syntyy nukkuvana');
+  assert.match(kartta, /export class Kartta extends NukkuvaKartta \{/);
   assert.match(kartta, /this\.lepotila = false;/);
-  assert.match(kartta, /^  nuku\(\) \{/m);
   assert.match(kartta, /^  heraa\(\) \{/m);
   for (const metodi of ['fitViewBox', 'ajastaMannerZoom', 'tarkistaFokusZoom']) {
     const runko = kartta.slice(kartta.indexOf(`\n  ${metodi}() {`));
@@ -167,7 +176,10 @@ test('tasokartta pois tieltä yhdestä portista; kamera kulkee delegaatin kautta
   assert.match(ui, /if \(this\.kartta\.lepotila\) \{\n      this\.paivitaPallolauta\(\);\n    \} else \{\n/);
   // Aalto 1D: myös avausnäkymä on pallolla, joten lepotila alkaa jo
   // lähtövalinnassa (etusivunPalloKaytossa) eikä vasta pelin laudasta.
-  assert.match(ui, /if \(this\.pallolautaHalutaan\(\) \|\| this\.etusivunPalloKaytossa\(\)\) this\.kartta\.lepotila = true;\n    else this\.drawBoardFor\(this\.game\.pack\);/);
+  // Erä 5b: karttahaara kulkee latausportin kautta (heraaTasokartta →
+  // varmistaKartta → kartta.heraa → drawBoardFor), pallohaara ei lataa
+  // eikä piirrä mitään.
+  assert.match(ui, /if \(this\.pallolautaHalutaan\(\) \|\| this\.etusivunPalloKaytossa\(\)\) this\.kartta\.lepotila = true;\n    else void this\.heraaTasokartta\(\);/);
   // Delegaatti ja sen käyttö: kartta-oliota ei enää haeta suoraan ajoihin.
   assert.match(ui, /^  kamera\(\) \{\n    return this\.pallolautaPaalla\(\) \? this\.pallolauta\.kamera : this\.kartta;/m);
   assert.ok(!ui.includes('const kartta = this.kartta;'), 'ajot kulkevat this.kamera():n kautta');
@@ -255,7 +267,7 @@ test('vaihe 2: siirto haarautuu laudan mukaan kuljettajalle, koreografia pysyy y
   // Kehäriippuvuus poistui: pallolauta ei tuo ui.js:ää; koreografian
   // luvut tulevat kummallekin laudalle samasta moduulista.
   assert.ok(!pallolauta.includes("from '../ui.js'"), 'js/pallolauta tuo ui.js:ää');
-  assert.match(lue('../js/pallolauta/kamera.js'), /import \{ siirtoajonPehmennys \} from '\.\.\/siirtokoreografia\.js';/);
+  assert.match(lue('../js/pallolauta/kamera.js'), /import \{ siirtoajonPehmennys, sovitaAjonKesto \} from '\.\.\/siirtokoreografia\.js';/);
   assert.match(ui, /from '\.\/siirtokoreografia\.js';/);
   // Kohteet napautettavissa: lähin kohde 44 px → doMove; R-malli, ei elementin click.
   const lauta = lue('../js/pallolauta/lauta.js');
