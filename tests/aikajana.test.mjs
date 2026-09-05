@@ -921,7 +921,7 @@ test('kartan avaajat eivät avaa mitään linssin aikana', () => {
 
 test('Livian paljastus odottaa linssin yli eikä 90 sekunnin katto laukea sen takia', () => {
   // Paljastussarja ei katkea vaan kysyy uudelleen linssin sulkeuduttua.
-  assert.match(LIVIA_LAHDE, /if \(linssiEstaa\(\)\) \{\s*\n\s*paljastusAjastin = setTimeout\(\s*\n\s*\(\) => paljastusRepliikki\(ui, cityId, i, jalkeen\), PALJASTUKSEN_LINSSIVALI,/);
+  assert.match(LIVIA_LAHDE, /if \(linssiEstaa\(\)\) \{\s*\n\s*paljastusAjastin = setTimeout\(\s*\n\s*\(\) => paljastusRepliikki\(ui, cityId, i, jalkeen, repliikit\), PALJASTUKSEN_LINSSIVALI,/);
   // Maadoituskommentin katto pysähtyy linssin ajaksi (muuten kommentti
   // tulisi paljastuksen päälle heti linssin sulkeuduttua).
   assert.match(VIRTA_LAHDE, /const linssissa = linssiEstaa\(\);\s*\n\s*if \(!linssissa && \(!livianPaljastusKesken\(ui\) \|\| jaljella <= 0\)\) \{ jatka\(\); return; \}/);
