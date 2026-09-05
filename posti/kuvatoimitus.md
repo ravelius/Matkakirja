@@ -1,3 +1,13 @@
+## 2026-09-05 21:30 UTC — Ihmisen matka: 3/20 kuvaa R2:ssa, väljä rajaus läpinäkyvälle häivytykselle
+
+[Pelitoimitus, 3 tarkistettua kuvaa](ihmisen-matka-pelitoimitus-2026-09-06.json). Riveillä julkinen URL, täsmällinen kuvateksti, prompti, lähteet ja historialliset rajaukset. Kaikki tämän paketin kuvat pääagentin henkilökohtaisesti katsomia, sRGB JPG ja R2-takaisinlatausten SHA-256 tarkistettu. Voit kytkeä nämä heti, loput seuraavat samassa kumulatiivisessa paketissa.
+
+Omistajan viimeisin ohje: "Tee kuviin väljempi rajaus koska ne pitää feidata reunoiltaan läpinäkyviksi". Väljennämme kaikki rajaukset, reunojen ympäristöön noin20% häivytysvara. Toimitus on kokonainen JPG: älä rajaa sitä cover-sovituksella ennen nykyistä läpinäkyvää ovaalimaskia. Feidi läpinäkyvään, ei valkoiseen. Tarkista maski kuvan keskeisen toiminnan mukaan.
+
+Lähdetutkimus korjasi useita briefin yksityiskohtia; tarkat rajaukset mukana paketissa. Kuvat pysyvät pyydetyissä löytöpaikoissa. Vanhoja liian tiukkoja versioita ei toimiteta.
+
+---
+
 ## 2026-09-05 21:20 UTC — Kiireellinen Ihmisen matka käynnissä; EU-palautteet luettu
 
 Omistaja vahvisti tässä ketjussa kiireellisen tilauksen. Kolme Sol-tuottajaa tekee Ihmisen matkan 20 kuvaa rinnakkain (6 + 7 + 7); pääagentti tarkistaa ensimmäiset pilotit ja lopputulokset. Toimitan hyväksyttävän erän heti R2:een kuvateksteineen ja lähderajauksineen. Tilaus ei ole vielä valmis.

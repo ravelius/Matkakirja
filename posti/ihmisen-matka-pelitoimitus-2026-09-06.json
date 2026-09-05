@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-09-05T21:30:14.172050+00:00",
+  "status": "partial-root-approved-r2-delivered",
+  "expectedTotal": 20,
+  "deliveredCount": 3,
+  "remainingIds": [
+    "blombos",
+    "skhul-qafzeh",
+    "al-wusta",
+    "lida-ajer",
+    "denisova",
+    "madjedbebe",
+    "lake-mungo",
+    "niah",
+    "bacho-kiro",
+    "chauvet",
+    "yana",
+    "tianyuan",
+    "beringia",
+    "white-sands",
+    "monte-verde",
+    "lapita",
+    "aotearoa"
+  ],
+  "ownerInstruction": "Tee kuviin väljempi rajaus koska ne pitää feidata reunoiltaan läpinäkyviksi",
+  "displayInstruction": "Kuvat on generoitu väljemmiksi: noin20% ympäristövaraa joka reunalla, tärkeä toiminta keskialueella. Toimitus on täysi 1536×1024 sRGB JPG ilman valkoista vinjettiä ja ilman valmista alphaa. Käytä pelin läpinäkyvää pehmeää reunamaskia. Säilytä koko kuva (contain), älä crop/cover-rajaa ennen maskia. Nykyinen ovaalimaski saa häivyttää ympäristöä, ei ihmisten päätä tai olennaista toimintaa; tarkista kunkin kuvan maski pelissä.",
+  "historicalInstruction": "Kaikki kuvat ovat tutkimukseen tukeutuvia havainnekuvia, eivät todistettuja täsmällisiä tapahtumia. Lähderajaukset ovat riveittäin. Älä nimeä kaikkia ensimmäisiksi/vanhimmiksi: Omo on vähimmäisikä, Al Wustan ajoitus noin95–86ka (tilauscaption noin85ka), Blombos75ka ei100ka sekoitusastiaa, Denisovan saapumisryhmä hypoteettinen, Madjedbeben ranta ei näy, Yana ei mammutinluumajaa, Beringia jäätön, Lapitan venetyyppi epävarma. Tarkista vastaavat väitteet aikajanatekstistä.",
+  "rows": [
+    {
+      "id": "jebel-irhoud",
+      "key": "aikajana/ihmisen-matka/jebel-irhoud.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/jebel-irhoud.jpg",
+      "caption": "Jebel Irhoud, noin 300 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "1c9b4b5a6a7ed0e29d8458dcfd58c362a62cba8704a304e878070470b4a95604",
+      "bytes": 701932,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Create a 3:2 horizontal, camera-believable archaeological reconstruction photograph of Jebel Irhoud in Morocco about 300,000 years ago. View from just inside a shallow limestone rock shelter, looking across a rugged hill basin in northwestern Morocco. In the middle distance, three early Homo sapiens adults sit and kneel with their backs or deeply shadowed profiles to the camera, skillfully striking and preparing Levallois stone points beside a small controlled hearth. They are fully human, capable, upright modern humans with simple practical hide wraps, never stereotyped cavemen. Keep every face tiny and naturally unidentifiable through distance, angle and shade. A thin plume of hearth smoke rises into bright dry air. Far beyond them, a few tiny gazelles cross broken scrubland. Near the workers show only raw stone, flint cores, sharp flakes, hammerstones, ash, charred bone fragments and limestone ground.\n\nCRITICAL ARCHAEOLOGICAL CONSTRAINT: there are absolutely no containers of any kind. No bowls, pots, cups, baskets, vessels, plates, jars, pottery, ceramics, carved dishes, mortar, architecture, furniture, metal, rope, woven textile or domestic objects. Every rounded object on the ground must clearly be an unworked natural rock or a chipped flint core. The hearth is only a small patch of embers and ash between plain stones.\n\nVisual language: restrained historical documentary photography, natural camera optics, moderate depth of field, fine subtle film grain, slightly softened microcontrast while retaining clear large-scale light and shadow. Muted warm earth, limestone grey, dusty olive and subdued sepia colors, with believable sunlight and atmosphere. Compose a wide environmental scene where people occupy less than one fifth of the frame and the place dominates. The mood is observant and unsentimental, like a carefully staged museum-quality field reconstruction captured on a real camera.\n\nDo not add borders, paper edges, frames, cards, captions, labels, maps, text, logos, watermarks, artificial vignette, blank margins, paintings, illustration strokes, glossy 3D rendering, hyper-detailed AI texture, cinematic fantasy styling, heroic posing, frontal portrait faces, modern tools, modern clothing, agriculture, buildings, dinosaurs, mammoths, Neanderthal caricatures, excessive smoke, or orange monochrome color grading.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1038/nature22336",
+          "title": "New fossils from Jebel Irhoud, Morocco and the pan-African origin of Homo sapiens",
+          "supports": "Early Homo sapiens interpretation and fossil context."
+        },
+        {
+          "url": "https://doi.org/10.1038/nature22335",
+          "title": "The age of the hominin fossils from Jebel Irhoud, Morocco, and the origins of the Middle Stone Age",
+          "supports": "315 ± 34 ka dating, fire-heated flints and associated Middle Stone Age assemblage."
+        },
+        {
+          "url": "https://www.eva.mpg.de/de/press/news/2017/2017-06-07-the-first-of-our-kind/",
+          "title": "The first of our kind",
+          "supports": "Gazelle remains, Levallois points, imported flint and excavation context."
+        }
+      ],
+      "historicalCaveats": [
+        "Use one of the earliest known Homo sapiens sites rather than an unqualified permanent oldest claim.",
+        "Vegetation, season, hide clothing and the exact simultaneous activity are illustrative reconstruction choices.",
+        "Gazelle remains and fire use support the scene elements but not their simultaneity."
+      ],
+      "safeArea": {
+        "outerEnvironmentMarginPercent": 20,
+        "contentBoundsPercent": {
+          "left": 33,
+          "top": 52,
+          "right": 72,
+          "bottom": 75
+        },
+        "verdict": "PASS"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "omo-kibish",
+      "key": "aikajana/ihmisen-matka/omo-kibish.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/omo-kibish.jpg",
+      "caption": "Omo Kibish, noin 230 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "b33731747d0dab6a3e67fca20cda653a0076b6736041440fbdac22e7cde99d48",
+      "bytes": 599070,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Create a 3:2 horizontal, camera-believable archaeological reconstruction photograph of the lower Omo Valley in southwestern Ethiopia about 230,000 years ago. Use a broad, low viewpoint near a quiet river margin during late afternoon. The water curves across the foreground, with damp silt, reeds and animal tracks; beyond it are open edaphic grassland, scattered acacias and denser riparian woodland in a moister-than-modern wet-phase landscape. Four early Homo sapiens adults occupy a small area in the middle distance. Two sit with backs to camera, scraping and straightening plain wooden shafts with stone flakes; one stands testing a shaft's balance; another gathers dry branches. Their skilled coordinated work is the subject, but the river valley remains dominant. Faces are tiny, turned away or naturally shadowed and unidentifiable. Fully human, capable, upright people in restrained practical hide wraps, never caveman caricatures.\n\nMake the shaft work explicitly an illustrative reconstruction rather than an archaeological display: show only wood, unhafted stone flakes, hide and natural fibers, with no metal, pottery or complex invented equipment. No spear is thrown and no hunt is staged. Use warm low sunlight reflecting from water, long natural shadows and a cooler hazy distance.\n\nVisual language: restrained historical documentary photography, natural camera optics, moderate depth of field, fine subtle film grain, softly resolved microdetail with strong believable large-scale light and shadow. Muted earth, river green, dusty olive and subdued sepia colors. Unsensational museum-quality field reconstruction captured on a real camera. People occupy less than one quarter of the frame.\n\nNo border, paper edge, frame, card, caption, text, logo, watermark, vignette, blank margin, painting, illustration strokes, glossy 3D render, hyper-detailed AI texture, fantasy styling, heroic pose, frontal portrait face, modern object, pottery, metal, agriculture, building, boat, dinosaur, mammoth or orange monochrome grading.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1038/s41586-021-04275-8",
+          "title": "Age of the oldest known Homo sapiens from eastern Africa",
+          "supports": "Omo I minimum age of 233 ± 22 ka and Member I context."
+        },
+        {
+          "url": "https://doi.org/10.1016/j.jhevol.2008.05.015",
+          "title": "The large-mammal fauna from the Kibish Formation",
+          "supports": "Wet-phase deltaic and littoral environment with edaphic grassland and woodland."
+        }
+      ],
+      "historicalCaveats": [
+        "233 ± 22 ka is a minimum age rather than an exact fossil age.",
+        "Wooden-shaft preparation is an illustrative activity not directly documented by the cited Omo I context papers."
+      ],
+      "safeArea": {
+        "outerEnvironmentMarginPercent": 20,
+        "contentBoundsPercent": {
+          "left": 43,
+          "top": 35,
+          "right": 78,
+          "bottom": 58
+        },
+        "verdict": "PASS"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "pinnacle-point",
+      "key": "aikajana/ihmisen-matka/pinnacle-point.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/pinnacle-point.jpg",
+      "caption": "Pinnacle Point, noin 160 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "2d998c9ad1e94d6889fcb6b2d5a0643b6f1e85c16c4f2deddc447686c00d98ff",
+      "bytes": 688715,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Create a 3:2 horizontal, camera-believable archaeological reconstruction photograph of the southern Cape coast near present-day Pinnacle Point, South Africa, about 160,000 years ago. Do not show the modern cliff caves or force the modern shoreline into the scene. Instead depict a plausible exposed rocky palaeoshore during a cool glacial interval: a wide low-tide rock platform, tidal pools, wind-bent coastal vegetation and a cold grey-green sea under broken light. From a slightly elevated oblique viewpoint, five early Homo sapiens people are spread naturally across the middle distance collecting edible shellfish. One pries shellfish from wet rock with a simple stone, two search separate pools, one carries a small hide sling with gathered shells, and one watches an incoming wave. Their actions are readable but faces are tiny, turned away, partly hidden by posture and natural shadow. They are capable modern humans in practical hide wraps, never caricatured cavemen.\n\nShow accurate wet rock, mussels or limpets attached to stone, shallow reflective pools and modest surf. Keep the group sparse and the cold coastal environment dominant. No baskets, pots, pottery, boats, fishing nets or architecture. This is direct food gathering on the period shoreline in the wider Pinnacle Point region; the cave remains outside the frame.\n\nVisual language: restrained historical documentary photography with natural 50mm-like optics, fine subtle film grain, soft microcontrast, crisp broad tonal structure, real atmospheric distance and restrained color. Muted kelp brown, slate, sand, skin and subdued sepia tones, with a shaft of pale sunlight crossing part of the shore. Museum-quality reconstruction photographed on a real camera, never epic fantasy.\n\nNo border, paper edge, frame, card, caption, text, logo, watermark, vignette, blank margin, painting, illustration strokes, glossy 3D render, hyper-detailed AI texture, heroic posing, frontal portrait faces, modern clothing, modern object, metal, ceramic, agriculture, building, dinosaur, mammoth or orange monochrome grading.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1038/nature06204",
+          "title": "Early human use of marine resources and pigment in South Africa during the Middle Pleistocene",
+          "supports": "Marine-resource use around 164 ± 12 ka and glacial climatic context."
+        },
+        {
+          "url": "https://doi.org/10.1371/journal.pone.0174051",
+          "title": "Lithic technological responses to Late Pleistocene glacial cycling at Pinnacle Point Site 5-6, South Africa",
+          "supports": "Large shoreline shifts across the broad continental shelf and the need to avoid the modern shoreline assumption."
+        }
+      ],
+      "historicalCaveats": [
+        "Describe this as among the earliest known systematic marine-resource use, not the absolute first use of the sea as food.",
+        "The pictured palaeoshore is a regional reconstruction; the cave is deliberately outside the frame because the period shoreline shifted substantially."
+      ],
+      "safeArea": {
+        "outerEnvironmentMarginPercent": 20,
+        "contentBoundsPercent": {
+          "left": 28,
+          "top": 22,
+          "right": 78,
+          "bottom": 62
+        },
+        "verdict": "PASS"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    }
+  ]
+}
