@@ -23349,7 +23349,8 @@ svg.rough-annotation { pointer-events: none; }
   .matkareitit[data-musteviiva] > .matkareitti,
   .matkareitit[data-musteviiva] > .matkareitti-piste,
   .matkareitit > .ilme-muste { transition: none; }
-=======
+}
+
 /* ============ PALLOLAUTA, VAIHE 3: NIMET JA NOSTOT PALLOLLA ============ */
 /*
  * Kaupunkien nimet, elävät nostot, eläintäyt ja kohtaamispiste ovat
