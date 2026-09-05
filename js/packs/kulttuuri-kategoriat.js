@@ -17858,7 +17858,7 @@ export const KULTTUURI_KATEGORIAT = {
           taitto: 'opas',
           teksti: 'Vapaasatama neljänkymmenen vuoden ajan — ja '
             + 'ruutukaava, jonka piirsi ranskalainen insinööri.',
-          nosto: 'Odessa oli vapaasatama vuosina 1819–1858, ja se '
+          nosto: 'Odessa oli vapaasatama vuosina 1819–1859, ja se '
             + 'muutti koko kaupungin.',
           jaksot: [
             {
@@ -17901,7 +17901,7 @@ export const KULTTUURI_KATEGORIAT = {
               otsikko: 'Neljäkymmentä vuotta vapaasatamana',
               teksti: 'Herttua Armand de Richelieu toimi kaupungin '
                 + 'kuvernöörinä 1803–1814 ja muotoili sen ratkaisevasti. '
-                + 'Odessa oli vapaasatama vuosina 1819–1858, ja '
+                + 'Odessa oli vapaasatama vuosina 1819–1859, ja '
                 + 'tullittomuus veti kauppaa ja väkeä: 1800-luvun '
                 + 'kuluessa siitä kasvoi keisarikunnan neljänneksi '
                 + 'suurin kaupunki. Samalla vuosisadan puolivälissä '

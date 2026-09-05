@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1594, teksti: 'Etusivupallo koko sivulle, 360 kierros, kuva kiintea' },
   { v: 1593, teksti: 'Kaaret: Lontoo Leila, Dubrovnik Mara, Odessa Iryna' },
   { v: 1592, teksti: 'Pallo: napakerroin - navalla karkeampi taso, sama teravyys' },
   { v: 1591, teksti: 'Pallo: tyopoydan rulla panoroi, cmd zoomaa' },
