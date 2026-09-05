@@ -892,6 +892,20 @@ export async function avaaPallolauta(ui) {
   // Instanssi talteen mittausta ja savukkeita varten (sama kenttä kuin
   // valikkopallolla).
   ui.pallonInstanssi = pallo;
+  /*
+   * MATKAKIRJA VASEMPAAN YLÄNURKKAAN MYÖS PALLOLLA (omistajan iPhone-
+   * havainto 5.9.2026: *"Matkakirja on väärässä paikassa"*). Nurkan
+   * asettaa tasokartalla Kartta.placeFactCard (omistaja 5.8.2026:
+   * "Matkakirja saisi olla aina kartan yläreunassa"), mutta se ajetaan
+   * vain fitViewBoxista, joka ei koskaan aja nukkuvalla kartalla —
+   * pallolaudalla kortti jäi HTML:n oletusnurkkaan alas Kreetan ja
+   * pöllön päälle. Sama päätös tehdään tässä, ja linssin selite väistää
+   * sitä kuten kartalla.
+   */
+  if (ui.factCard) {
+    ui.factCard.dataset.corner = 'tl';
+    ui.sijoitaLinssiSelite?.();
+  }
   omaLauta = lauta;
   paivita();
   tila.textContent = '';

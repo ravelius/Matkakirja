@@ -403,3 +403,9 @@ test('vaihe 5b: kone on vaiheen 2 kuljettaja, kaari vaiheen 2 kaari', () => {
   // Kamera ei sukella nappulan perään lennon aikana (peli on jo perillä).
   assert.match(lauta, /if \(!liikkuu && !lento && pos\) \{/);
 });
+
+test('matkakirja on vasemmassa ylänurkassa myös pallolla (omistaja 5.9.2026)', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /ui\.factCard\.dataset\.corner = 'tl';/);
+  assert.match(lue('../index.html'), /class="card fact-card" data-corner="tl"/, 'HTML:n oletusnurkka on sama kuin kartan päätös');
+});
