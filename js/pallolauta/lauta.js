@@ -482,7 +482,11 @@ export async function avaaPallolauta(ui) {
         lennot: [kohde.id],
         lentoLahto: lahto.id,
         avain: `aloituslento:${lahto.id}>${kohde.id}`,
-        kaarenVari: REITIN_VARIT.avauslento,
+        // Hento suunnitteluviiva paksun jäljen alle (omistaja 5.9.2026
+        // klo 23.10): kaari kertoo minne kone on menossa, ja
+        // js/pallolauta/avaus.js piirtää sen päälle sen, missä kone on
+        // jo käynyt.
+        kaarenVari: REITIN_VARIT.avauslennonSuunnitelma,
       },
     };
     /*

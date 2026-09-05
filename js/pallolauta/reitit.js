@@ -64,6 +64,23 @@ export const REITIN_VARIT = {
    * se lukeutuu harson läpi samanlaisena.
    */
   avauslento: 'rgba(194, 69, 47, 0.95)',
+  /*
+   * AVAUSLENNON SUUNNITTELUVIIVA. Kun kone piirtää lennon aikana paksun
+   * punaisen viivan (avauslennonJalki alla, omistaja 5.9.2026 klo
+   * 23.10), katkoviivakaari ei enää saa kilpailla sen kanssa: se jää
+   * hennoksi suunnitteluviivaksi paksun viivan alle, samaan tapaan kuin
+   * tasokartalla reitti näkyy ohuena ennen kuin kone on kulkenut sen.
+   */
+  avauslennonSuunnitelma: 'rgba(194, 69, 47, 0.3)',
+  /*
+   * PAKSU PUNAINEN VIIVA KUTEN ETUSIVULLA (omistaja 5.9.2026 klo 23.10,
+   * sanatarkasti: *"lentokone saisi tehdä saman paksun viivan kuin
+   * etusivulla"*). Sama sinooperi kuin css .etusivupallo-viiva
+   * (#c2452f, peittävyys 0,92) — etusivun pallo ja pelin pallo
+   * piirtävät saman jäljen, vaikka toinen on esirenderöity video ja
+   * toinen elävä lauta.
+   */
+  avauslennonJalki: 'rgba(194, 69, 47, 0.92)',
 };
 export const HELMEN_VARI = 'rgba(250, 243, 226, 0.9)';
 
@@ -98,6 +115,21 @@ export function lentokaarenKorkeus(kulmaAst) {
 }
 
 /**
+ * Piste lentokaarella osuudella e: { lat, lng, korkeus }.
+ *
+ * YKSI KAAVA KONEELLE JA JÄLJELLE. Kone (js/pallolauta/siirto.js
+ * piirraKone) ja avauslennon paksu viiva (js/pallolauta/avaus.js) ovat
+ * saman lennon kaksi puolta: jos korkeusparaabeli olisi kahdessa
+ * paikassa, viiva irtoaisi koneen alta heti kun toista säädettäisiin.
+ * `pohja` on kerroksen oma nostatus pinnasta (koneella MERKIN_KORKEUS,
+ * viivalla REITIN_KORKEUS).
+ */
+export function lentokaarenKohta(kaari, e, pohja = 0) {
+  const p = isoympyranPiste(kaari.alku, kaari.loppu, e);
+  return { lat: p.lat, lng: p.lng, korkeus: kaari.korkeus * 4 * e * (1 - e) + pohja };
+}
+
+/**
  * Reittikerros pallolle. `asteet(kohta)` kääntää laudan (x, y) asteiksi
  * ({ lat, lon }); `ui` antaa laudan ja lentoKaaren.
  */
@@ -120,13 +152,28 @@ export function luoReitit({ pallo, ui, siirtyma, asteet }) {
     .pathsData([])
     .pathPoints('pisteet')
     .pathPointLat((p) => p[0]).pathPointLng((p) => p[1])
-    .pathPointAlt(REITIN_KORKEUS)
+    /*
+     * KORKEUS PISTEESTÄ, KUN SE ON ANNETTU. Pelin reitit ja linssien
+     * viivat ovat pallon pinnassa (REITIN_KORKEUS), mutta avauslennon
+     * jälki nousee koneen mukana kaarelle, joten kolmas luku
+     * ([lat, lng, korkeus]) saa voittaa. Kahden luvun pisteet toimivat
+     * ennallaan.
+     */
+    .pathPointAlt((p) => (p.length > 2 ? p[2] : REITIN_KORKEUS))
     .pathColor((d) => d.vari)
     // Paksuus ja katko datumista: pelin reitit saavat oletuksensa
     // (MATKAREITIN_PAKSUUS_AST, katko laskettuna), linssin viiva omansa.
     // Ilman katkoa viiva on yhtenäinen (jakso 1, väli 0).
     .pathStroke((d) => d.paksuus ?? MATKAREITIN_PAKSUUS_AST)
-    .pathDashLength((d) => d.katko ?? 1).pathDashGap((d) => d.katko ?? 0)
+    /*
+     * KATKO KAHDESTA LUVUSTA, KUN NIITÄ ON KAKSI. Pelin reitit ja
+     * linssien viivat antavat yhden `katko`n (viiva ja väli yhtä
+     * pitkiä); avauslennon jälki antaa ne erikseen (`viiva` = kuljettu
+     * osuus, `vali` = loput), jolloin viiva kasvaa koneen perässä ilman
+     * että geometriaa rakennetaan uudestaan joka kehys.
+     */
+    .pathDashLength((d) => d.viiva ?? d.katko ?? 1)
+    .pathDashGap((d) => d.vali ?? d.katko ?? 0)
     .pathTransitionDuration(siirtyma)
     .pathResolution(2);
   pallo
@@ -256,9 +303,64 @@ export function luoReitit({ pallo, ui, siirtyma, asteet }) {
     tyonna();
   }
 
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * AVAUSLENNON JÄLKI — PAKSU PUNAINEN VIIVA KONEEN PERÄSSÄ
+   * ══════════════════════════════════════════════════════════════
+   *
+   * Omistaja 5.9.2026 klo 23.10: *"lentokone saisi tehdä saman paksun
+   * viivan kuin etusivulla."* Jälki on tavallinen viivakerroksen osa
+   * (`aseta('avauslento', …)`), joten se ei voi pyyhkiä pelin
+   * naapurireittejä eikä linssien viivoja — sama sääntö kuin kaikilla
+   * muillakin osilla.
+   *
+   * GEOMETRIA KERRAN, KASVU KATKOVIIVALLA. `pisteet` on KOKO kaari heti
+   * ensimmäisellä kutsulla, ja `osuus` (0…1) kertoo, kuinka pitkälle
+   * kone on ehtinyt: viiva piirretään katkona, jonka viivaosa on
+   * `osuus` ja väli 1 (Globe.gl normittaa katkon viivan pituudella,
+   * dashScale = 1/pituus, joten juuri alkupää `osuus` piirtyy).
+   *
+   * MIKSI NÄIN EIKÄ PISTELISTAA KASVATTAMALLA (mitattu Chromiumilla
+   * 5.9.2026): kasvava pistelista näkyi ruudulla vain lennon
+   * ENSIMMÄISENÄ pätkänä Lontoon vieressä. Globe.gl rakentaa Line2:n
+   * geometrian `interpolK`-tweenin kautta, ja joka kehyksen kirjoitus
+   * jätti geometrian ensimmäisen kirjoituksen mittaiseksi. Katkoviivan
+   * luvut sen sijaan kirjoitetaan materiaaliin joka päivityksellä
+   * ennen tuota tweeniä, joten ne menevät perille varmasti.
+   *
+   * SIIRTYMÄ POIS JÄLJEN AJAKSI: kerroksen datumit siirtyvät
+   * pathTransitionDurationin verran (KAIKKI LIIKE ANIMOIDAAN), eikä
+   * kasvava viiva saa laahata koneen perässä siirtymän mitan. Siirtymä
+   * palautuu, kun jälki poistetaan — ja juuri siksi poisto myös HÄIPYY
+   * PEHMEÄSTI eikä katoa välähdyksellä.
+   */
+  let jalkiDatum = null;
+
+  const jalki = (pisteet, { paksuus = MATKAREITIN_PAKSUUS_AST, osuus = 1 } = {}) => {
+    if (!pisteet?.length) {
+      if (!jalkiDatum) return;
+      jalkiDatum = null;
+      pallo.pathTransitionDuration(siirtyma);
+      aseta('avauslento', []);
+      return;
+    }
+    if (!jalkiDatum) {
+      jalkiDatum = { avain: 'avauslennon-jalki', pisteet, vari: REITIN_VARIT.avauslennonJalki };
+      pallo.pathTransitionDuration(0);
+    }
+    jalkiDatum.pisteet = pisteet;
+    jalkiDatum.paksuus = paksuus;
+    jalkiDatum.viiva = Math.max(0, Math.min(1, osuus));
+    // Väli on aina koko viiva: jakso on viiva + 1 ≥ 1, joten kuljetun
+    // osuuden jälkeen ei piirry mitään.
+    jalkiDatum.vali = 1;
+    aseta('avauslento', [jalkiDatum]);
+  };
+
   return {
     paivita,
     aseta,
+    jalki,
     helmet: () => helmet,
     /** Lentokaaren geometria koneelle: { alku, loppu, kulma, korkeus }. */
     lentokaari: (a, b) => {
