@@ -93,6 +93,8 @@ import {
   pullaOstosnappi, pullanNimi,
 } from './fokustehtavat.js';
 import { asetaKuva, julisteUrl } from './media.js';
+// Ilmepaketti (omistaja 5.9.2026): kynän korostus pöllön vinkkiin ja sähkeen kysymysriviin.
+import { korostaSana, korostaSisalto } from './ilme.js';
 import { el } from './mapart.js';
 import { valokuvaUrl, valokuvaVara, valokuvaSuurennos } from './packs/africa-valokuvat.js';
 // Vihjelinkin osiotunniste ja sen näyttönimi (ks. piirraVihjelinkki).
@@ -2513,7 +2515,7 @@ function sahkeLiuska(rivi) {
  * @returns {() => void} `ohita`: täyttää sähkeen heti.
  */
 function kirjoitaSahke(laatikko, liuskat, rivit, {
-  merkkiMs, kattoMs, valiMs, aanet = true,
+  merkkiMs, kattoMs, valiMs, aanet = true, valmis,
 } = {}) {
   const aikataulu = sahkeKirjoitusAikataulu(rivit, { merkkiMs, kattoMs, valiMs });
   const kentat = [...liuskat.children];
@@ -2545,6 +2547,7 @@ function kirjoitaSahke(laatikko, liuskat, rivit, {
     });
     liuskat.style.minHeight = '';
     laatikko.classList.remove('kirjoittaa');
+    valmis?.();
   };
 
   /* Naksu enintään joka toisesta merkistä JA enintään 20 kertaa
@@ -2603,16 +2606,26 @@ function piirraSahke(kohde, teksti, luokka = '', leima = '', asetukset = {}) {
   laatikko.appendChild(liuskat);
   kohde.appendChild(laatikko);
   /*
+   * KYSYMYSRIVIN KYNÄALLEVIIVAUS (ilmepaketti, omistaja 5.9.2026): kynä
+   * vetää viivan kysymyksen alle vasta, kun rivi on kirjoitettu loppuun
+   * — ennen sitä rivi on kesken eikä alleviivattavaa ole. Ilman
+   * kirjastoa CSS-korostus jää voimaan (js/ilme.js korosta).
+   */
+  const korostaKysymys = () => korostaSisalto(laatikko.querySelector('.fokusvirta-sahkekysymys'),
+    { tyyppi: 'underline', kesto: 500, tayte: [0, 1] });
+  /*
    * ANIMAATIO ON VALINNAINEN JA KERTALUONTOINEN. Kutsuja päättää
    * (`animoi`), ja liikettä vähentävä järjestelmäasetus kumoaa päätöksen
    * — silloin rivit ovat valmiina kuten ennenkin.
    */
   if (asetukset.animoi && rivit.length && !liikeRajoitettu()) {
-    const ohita = kirjoitaSahke(laatikko, liuskat, rivit, asetukset);
+    const ohita = kirjoitaSahke(laatikko, liuskat, rivit, { ...asetukset, valmis: korostaKysymys });
     kohde.addEventListener('pointerdown', (tapahtuma) => {
       if (!tapahtuma.target?.closest?.('.fokusvirta-sahke, button')) return;
       ohita();
     }, true);
+  } else {
+    korostaKysymys();
   }
   return laatikko;
 }
@@ -3070,6 +3083,8 @@ const LEHTIVINKKI_TEKSTI = 'Etsi minitehtävä lehdestä ja ratkaise se, '
   + 'niin saat vinkin aarteen paikasta kartalla.';
 /* Kupla tulee vasta hengähdyksen jälkeen (omistaja 26.8.2026). */
 const LEHTIVINKKI_VIIVE_MS = 1400;
+/* Vinkin avainsana: kynä ympyröi sen (ilmepaketti, omistaja 5.9.2026). */
+const LEHTIVINKIN_SANA = 'minitehtävä';
 
 /** Vinkki näkyy kerran per saapuminen; avain on sama kuin virralla. */
 function vinkkiAvain(ui, city) {
@@ -3156,6 +3171,9 @@ export function fokusvirtaLehtivinkki(ui, city) {
     // myöhästynyt kupla ilman kärkeä jää silloin näyttämättä.
     if (!ui.dead && polloNappi()) {
       naytaPolloKupla(ui, LEHTIVINKKI_TEKSTI, { ruksi: true });
+      // Avainsana kynällä ympyröitynä (js/ilme.js); ilman kirjastoa pelkkä lause.
+      korostaSana(ui.fokusvirtaKortti?.querySelector('.fokusvirta-vinkkiteksti'),
+        LEHTIVINKIN_SANA, { tyyppi: 'circle', kesto: 700, tayte: [2, 4] });
     }
   }, LEHTIVINKKI_VIIVE_MS);
   return true;

@@ -248,6 +248,22 @@ test('peilikuvalla on cors-noudon jälkeen varareitti ilman corsia', () => {
 });
 
 /*
+ * VALMIIT KIRJASTOT VÄLIMUISTIIN (Raamattu, VALMIIT KIRJASTOT: STPAGEFLIP
+ * ENSIN, sääntö 1–2). Ämpärin vendor/-polun tiedostot (Globe.gl, Tuna,
+ * ilmepaketin Vivus, Rough.js ja rough-notation) ovat versionumeroituja
+ * ja muuttumattomia, joten niillä on oma pysyvä korinsa: versionvaihto
+ * ei saa tyhjentää sitä. Ilman tätä peli menettäisi ilmeensä (ja
+ * pallon) heti kun verkko katkeaa. Yksityiskohdat vartioidaan alempana
+ * ("ämpärin vendor/-kirjastot säilyvät omassa korissaan").
+ */
+test('vendor-kirjastot: kaikki ladatut kirjastot kulkevat samasta haarasta', () => {
+  for (const tiedosto of ['js/pallo.js', 'js/tehosteketju.js', 'js/ilme.js']) {
+    const src = readFileSync(new URL(`../${tiedosto}`, import.meta.url), 'utf8');
+    assert.match(src, /vendor\//, `${tiedosto}: kirjasto ei tule vendor/-polusta`);
+  }
+});
+
+/*
  * Yhdistämismerkkejä ei saa päätyä julkaistuun koodiin.
  *
  * Tänään kävi juuri niin: neljään tiedostoon jäi purkamaton ristiriita

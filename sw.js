@@ -84,6 +84,8 @@ const SHELL = [
   './js/lahteet.js',
   './js/wiki.js',
   './js/media.js',
+  // Ilmepaketti (js/ilme.js): musteviiva, karhea kehys, kynäkorostus.
+  './js/ilme.js',
   './js/saa.js',
   './js/maakayrat.js',
   './js/maatummennus.js',
@@ -1390,13 +1392,14 @@ const AANICACHE = 'matkakirja-aanet-v1';
 /*
  * Valmiiden kirjastojen kori (Raamattu 5.9.2026 "VALMIIT KIRJASTOT":
  * kirjasto tulee ämpärin vendor/-polusta, ei reposta). Globe.gl
- * (js/pallo.js) ja Tuna (js/tehosteketju.js) haetaan laiskasti, kun
- * niitä ensi kerran tarvitaan, ja säilyvät sen jälkeen offline. Oma
- * kori, jota versionvaihto ei tyhjennä: tiedostonimessä on versio
- * (globe.gl-2.46.2, tuna-1.1.3), joten sama osoite on aina sama sisältö
- * (ämpäri lähettää Cache-Control: immutable), eikä pelin versio muuta
- * sitä. Uusi kirjastoversio on uusi osoite, ja vanha jää koriin
- * harmittomana, kunnes selain siivoaa kiintiötä.
+ * (js/pallo.js), Tuna (js/tehosteketju.js), ilmepaketti Vivus +
+ * Rough.js + rough-notation (js/ilme.js) ja seuraavat haetaan
+ * laiskasti, kun niitä ensi kerran tarvitaan, ja säilyvät sen jälkeen
+ * offline. Oma kori, jota versionvaihto ei tyhjennä: tiedostonimessä on
+ * versio (globe.gl-2.46.2, tuna-1.1.3), joten sama osoite on aina sama
+ * sisältö (ämpäri lähettää Cache-Control: immutable), eikä pelin
+ * versio muuta sitä. Uusi kirjastoversio on uusi osoite, ja vanha jää
+ * koriin harmittomana, kunnes selain siivoaa kiintiötä.
  */
 const VENDORCACHE = 'matkakirja-vendor-v1';
 

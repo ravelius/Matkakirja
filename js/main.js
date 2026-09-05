@@ -11,6 +11,8 @@ import {
 } from './ui-apurit.js';
 // Laitemittarin muistettu kytkin (hammasratasvalikko = ?mittari=1/0).
 import { asetaMittari, mittariPaalla } from './karttamittari.js';
+// Ilmepaketti (omistaja 5.9.2026): kehittäjäkytkin ja kirjastojen esilataus.
+import { asetaIlmePaketti, esilataaIlme, ilmePakettiPaalla } from './ilme.js';
 import { sfx } from './sound.js';
 import { packById } from './pack.js';
 import {
@@ -1319,6 +1321,24 @@ const mittariNappi = document.getElementById('kehittaja-mittari-btn');
  */
 const pallolautaNappi = document.getElementById('kehittaja-pallolauta-btn');
 /*
+ * ILMEPAKETTI (omistaja 5.9.2026, kartoituksen TOP 6 kohta 6): musteviiva,
+ * karhea kehys ja kynäkorostus. Kytkin kääntää kolme lippua kerralla
+ * (js/ilme.js asetaIlmePaketti) eikä vaadi sivulatausta: liput luetaan
+ * jokaisessa piirrossa, joten seuraava reitti, kortti ja selite
+ * noudattavat uutta tilaa. Kirjastot esiladataan joutilaana, jotta jo
+ * ensimmäinen reitti piirtyy ilmeen kanssa — mutta vasta sivun
+ * load-tapahtuman JÄLKEEN: skriptitagi ennen sitä siirtäisi loadia
+ * (ja palvelutyöntekijän rekisteröintiä) niin kauan kuin ämpäri
+ * vastaa hitaasti tai ei lainkaan.
+ */
+const ilmeNappi = document.getElementById('kehittaja-ilme-btn');
+const esilataaIlmeJoutilaana = () => {
+  const joutilaana = globalThis.requestIdleCallback ?? ((f) => setTimeout(f, 2500));
+  joutilaana(() => { esilataaIlme().catch(() => {}); });
+};
+if (document.readyState === 'complete') esilataaIlmeJoutilaana();
+else window.addEventListener('load', esilataaIlmeJoutilaana, { once: true });
+/*
  * KEHITTÄJÄN VOIMAKKUUSSÄÄTIMET (omistaja 3.9.2026): taustaääni ja
  * taustamusiikki, +/- askelittain pelin nykyiseen tasoon nähden.
  * Kerroin ja tallennus ovat js/kehittajan-voimat.js:ssä; ambienssi ja
@@ -1415,6 +1435,16 @@ function paivitaKehittajaValikko() {
       : 'Pallolauta on pois: pelin lauta on tasokartta — kytke päälle pelataksesi '
         + 'karttapallolla (sivu ladataan uudestaan; sama kuin ?lauta=pallo)';
   }
+  const ilme = ilmePakettiPaalla();
+  merkitseKytkin(ilmeNappi, ilme);
+  if (ilmeNappi) {
+    ilmeNappi.title = ilme
+      ? 'Ilmepaketti on PÄÄLLÄ: reitti piirtyy musteviivana, selitteellä on käsin '
+        + 'piirretty kehys ja pöllön korostus on kynällä — kytke pois nähdäksesi '
+        + 'entisen ilmeen (liput matkakirja-ilme-musteviiva/-karhea/-korostus)'
+      : 'Ilmepaketti on pois: peli näyttää entiseltä — kytke päälle, niin '
+        + 'seuraava reitti, kortti ja selite saavat ilmeen (ei sivulatausta)';
+  }
   merkitseSiirtymamusiikki();
   if (siirtymaMusiikkiNappi) {
     siirtymaMusiikkiNappi.title = 'Pelin omat musiikkiraidat: löytyykö raita ämpäristä '
@@ -1498,6 +1528,15 @@ pallolautaNappi?.addEventListener('click', () => {
   const osoite = new URL(location.href);
   osoite.searchParams.delete('lauta');
   setTimeout(() => { location.href = osoite.href; }, 350);
+});
+
+ilmeNappi?.addEventListener('click', () => {
+  const halutaan = !ilmePakettiPaalla();
+  asetaIlmePaketti(halutaan);
+  paivitaKehittajaValikko();
+  naytaKehittajaVihje(halutaan
+    ? 'Ilmepaketti päälle: näkyy seuraavassa reitissä, kortissa ja selitteessä.'
+    : 'Ilmepaketti pois: uudet piirrot ilman musteviivaa, kehystä ja kynää.');
 });
 
 siirtymaMusiikkiNappi?.addEventListener('click', () => {

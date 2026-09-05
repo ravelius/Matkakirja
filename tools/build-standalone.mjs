@@ -18,6 +18,9 @@ const MODULES = [
   'js/tokens.js',
   'js/wiki.js',
   'js/media.js',
+  // Ilmepaketti tuo vain median (peilin juuri); ui, fokusvirta,
+  // karttaselite ja main tuovat sen.
+  'js/ilme.js',
   'js/saa.js',
   'js/packs/maailma-questions.js',
   'js/packs/maailma.js',

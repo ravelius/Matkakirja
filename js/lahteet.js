@@ -332,6 +332,38 @@ export const LAHTEET = [
       },
     ],
   },
+  /*
+   * VALMIIT KIRJASTOT (Raamattu, VALMIIT KIRJASTOT: STPAGEFLIP ENSIN,
+   * sääntö 3: lisenssiteksti ämpäriin kirjaston rinnalle ja maininta
+   * lähdesivulle — pilari 5). Kirjastot ladataan pelin ämpärin
+   * vendor/-polusta, ja MIT-lisenssin teksti on siellä tiedostossa
+   * <kirjasto>.LICENSE.txt. Yksi rivi per kirjasto, jotta rinnakkaiset
+   * lisäykset yhdistyvät riveittäin.
+   */
+  {
+    otsikko: 'Avoimen lähdekoodin kirjastot',
+    johdanto: 'Pelin ämpärin vendor/-polusta ladattavat kirjastot ja niiden lisenssit.',
+    rivit: [
+      {
+        nimi: 'Vivus 0.4.6 — musteviiva piirtyy (SVG-polkujen piirtoanimaatio)',
+        tekija: 'maxwellito',
+        lisenssi: 'MIT',
+        huom: 'Tarkistettu 5.9.2026 (vendor/vivus-0.4.6.min.LICENSE.txt).',
+      },
+      {
+        nimi: 'Rough.js 4.6.6 — käsin piirretyn näköiset kehykset ja viivat',
+        tekija: 'Preet Shihn',
+        lisenssi: 'MIT',
+        huom: 'Tarkistettu 5.9.2026 (vendor/rough-4.6.6.LICENSE.txt).',
+      },
+      {
+        nimi: 'rough-notation 0.5.1 — kynän alleviivaus ja ympyröinti tekstiin',
+        tekija: 'Preet Shihn',
+        lisenssi: 'MIT',
+        huom: 'Tarkistettu 5.9.2026 (vendor/rough-notation-0.5.1.iife.LICENSE.txt).',
+      },
+    ],
+  },
 ];
 
 /** Rivien yhteismäärä — otsikkoon, jottei sitä tarvitse laskea käsin. */

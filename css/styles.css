@@ -23293,3 +23293,61 @@ body.linssikartta-auki .linssikartta-palaa { display: inline-block; }
 @media (prefers-reduced-motion: reduce) {
   .pallolauta-kohde { transition: none; }
 }
+
+/* =========================================================================
+   ILMEPAKETTI (js/ilme.js; omistaja 5.9.2026, kartoituksen TOP 6 kohta 6)
+   -------------------------------------------------------------------------
+   Vivus piirtää reitin musteviivana, Rough.js piirtää pienen koristeen
+   kehyksen käsin piirretyn näköisenä, rough-notation vetää kynällä
+   alleviivauksen tai ympyrän. Nämä säännöt astuvat voimaan VAIN, kun
+   kirjasto on ladattu ja js/ilme.js on merkinnyt elementin — ilman
+   kirjastoa yksikään valitsin ei osu ja peli näyttää entiseltä.
+   ------------------------------------------------------------------------- */
+
+/*
+ * Musteviivan aikana pelin omat reittipolut ja askelpisteet odottavat
+ * näkymättöminä ja kynä piirtää kopioon (g.ilme-muste). Kun kynä on
+ * perillä, alkuperäiset häivytetään esiin ja kopio pois — yksi
+ * kertaluonteinen 260 ms:n ristihäivytys, sama laji kuin card-in, ei
+ * jatkuva animaatio kartalla. Lapsivalitsin (>) jättää kopion rauhaan.
+ */
+.matkareitit[data-musteviiva] > .matkareitti,
+.matkareitit[data-musteviiva] > .matkareitti-piste { transition: opacity 260ms ease-out; }
+.matkareitit[data-musteviiva='piirtyy'] > .matkareitti,
+.matkareitit[data-musteviiva='piirtyy'] > .matkareitti-piste { opacity: 0; }
+.matkareitit > .ilme-muste { transition: opacity 260ms ease-out; }
+.matkareitit > .ilme-muste.ilme-muste-pois { opacity: 0; }
+
+/*
+ * Karhea kehys asuu isäntänsä ensimmäisenä lapsena nollakorkuisena
+ * svg:nä, joka piirtää reunaviivan ulos omasta laatikostaan (overflow
+ * visible, ei viewBoxia = ei skaalausta). Sticky pitää sen paikallaan
+ * myös silloin, kun isäntä vierittää sisältöään. Isännän oma reunaviiva
+ * väistyy, mutta sen leveys jää, jottei sisältö liikahda.
+ */
+svg.ilme-karhea {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  flex: none;
+  width: 100%;
+  /* Ei nolla: Chromium jättää tyhjäkokoisen svg-juuren kokonaan
+     piirtämättä. Yksi pikseli, jonka negatiivinen marginaali syö. */
+  height: 1px;
+  margin-bottom: -1px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.ilme-karhea-kehys { border-color: transparent; }
+
+/* rough-notationin piirros ei saa napata napautuksia eikä viedä tilaa. */
+svg.rough-annotation { pointer-events: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .matkareitit[data-musteviiva] > .matkareitti,
+  .matkareitit[data-musteviiva] > .matkareitti-piste,
+  .matkareitit > .ilme-muste { transition: none; }
+}
