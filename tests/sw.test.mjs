@@ -334,3 +334,52 @@ test('ämpärin vendor/-kirjastot säilyvät omassa korissaan versionvaihdon yli
   const activate = sw.slice(sw.indexOf("addEventListener('activate'"));
   assert.match(activate, /k !== VENDORCACHE/, 'activate-siivous tyhjentäisi vendor-korin');
 });
+
+/*
+ * PALLON LAATAT OFFLINE (pallolauta vaihe 5c, docs/moduulit/karttapallo.md
+ * luku 6: *"SW-välimuisti vendorille ja laatoille"*). Karttapallo on pelin
+ * lauta, ja ilman laattakoria lentokoneessa avattu peli näyttäisi tyhjän
+ * pallon. Testi lukee sw.js:ää tekstinä (palvelutyöntekijää ei voi ajaa
+ * Nodessa, ks. peilikuvatesti); ajonaikaisen käytöksen mittaa
+ * tools/savukkeet/savuke-pallolaatat-offline.mjs.
+ */
+test('pallon laatat: oma pysyvä kori, katto, esilataus ja vanhan kansion siivous', () => {
+  const kori = sw.match(/const LAATTACACHE = '([^']+)'/)?.[1];
+  assert.ok(kori && /^matkakirja-pallolaatat-v\d+$/.test(kori), 'LAATTACACHE puuttuu sw.js:stä');
+  // Kori ei tyhjene versionvaihdossa — laatta ei vanhene pelin mukana.
+  const activate = sw.slice(sw.indexOf("addEventListener('activate'"), sw.indexOf("addEventListener('fetch'"));
+  assert.match(activate, /k !== LAATTACACHE/, 'activate-siivous tyhjentäisi laattakorin');
+  assert.match(activate, /siivoaVanhatLaatat\(\)/, 'vanhan laattakansion siivous puuttuu activatesta');
+  // Laattahaara on välimuisti ensin, luettelo verkko ensin.
+  assert.match(sw, /const LAATTAPOLKU = '\/julisteet\/pallo\/laatat\/'/);
+  assert.match(sw, /PALLOLAATTA\(osoite\)/, 'fetch ei tunne laattapolkua');
+  const haara = sw.indexOf('async function laattaPeilista');
+  assert.ok(haara > 0, 'laattaPeilista puuttuu');
+  const lohko = sw.slice(haara, haara + 900);
+  assert.ok(lohko.indexOf('kori.match(pyynto.url)') < lohko.indexOf("mode: 'cors'"),
+    'laatta on haettava korista ennen verkkoa (immutable, versio kansiossa)');
+  const luettelo = sw.slice(sw.indexOf('function laattaluettelo'), sw.indexOf('async function esilataaLaatat'));
+  assert.match(luettelo, /event\.waitUntil\(paivitys\)/,
+    'laatat.json: korin kappale heti ja päivitys taustalla — pallo ei saa odottaa verkkoa');
+  assert.match(luettelo, /const paivitys = fetch\(url, \{ mode: 'cors' \}\)/);
+  // Katto ja siivous ilman IndexedDB:tä: keys() antaa kirjoitusjärjestyksen.
+  const katto = Number(sw.match(/const LAATTAKATTO = (\d+)/)?.[1]);
+  assert.ok(katto >= 500 && katto <= 5000, `laattakatto ${katto} ei ole järkevä (≈ 30 Mt)`);
+  assert.match(sw, /async function siivoaLaatat\(kori\)/);
+  assert.match(sw, /const avaimet = await kori\.keys\(\);/);
+  assert.match(sw, /avaimet\.length <= LAATTAKATTO/, 'katto ei rajaa mitään');
+  assert.match(sw, /arvio \+ LAATTASIIVOUS < LAATTAKATTO && laattojaMittauksesta < LAATTASIIVOUS/,
+    'korin todellinen koko on mitattava erän välein — arvio voi olla vanha');
+  // Esilataus: sivu lähettää osoitteet, työntekijä hakee ne taustalla.
+  assert.match(sw, /addEventListener\('message'/, 'esilatausviestiä ei kuunnella');
+  assert.match(sw, /viesti\.tyyppi !== 'esilataa-pallolaatat'/);
+  assert.match(sw, /async function esilataaLaatat\(osoitteet, portti\)/);
+  // Laattakansio on sama kuin pelissä (kaksoiskappale, ks. sw.js).
+  const swKansio = sw.match(/const LAATTAKANSIO = '([^']+)'/)?.[1];
+  const pallo = readFileSync(join(JUURI, 'js/pallo.js'), 'utf8');
+  const versio = pallo.match(/PALLO_LAATTAVERSIO = '([^']+)'/)?.[1];
+  const kansio = pallo.match(/PALLO_LAATTAKANSIO = `\$\{PALLO_LAATTAVERSIO\}-(\w+)`/)?.[1];
+  assert.equal(swKansio, `${versio}-${kansio}`,
+    'sw.js:n LAATTAKANSIO ja js/pallo.js:n PALLO_LAATTAKANSIO ovat eri kansiot — '
+    + 'activate siivoaisi juuri käytössä olevat laatat');
+});

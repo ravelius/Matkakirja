@@ -57,8 +57,22 @@ import { sovitaAjonKesto } from '../kartta.js';
 export const PALLO_FOV = 50;
 /** Kaukaisin korkeus: koko pallo ruudulla. */
 export const PALLO_KORKEUS_MAX = 2.5;
-/** Lähin korkeus: Z8-laatat enintään 2× venytettyinä (ks. yllä). */
+/**
+ * Lähin korkeus OLETUKSENA: Z8-laatat enintään 2× venytettyinä 390 css-
+ * pikselin ruudulla dpr 2:lla (≈ 2,1° ≈ 70 lautayksikköä). Laudan oma
+ * kamera EI käytä tätä vaan laskee rajan laitteesta ja laattaluettelon
+ * syvimmästä tasosta (lahinKorkeus alempana); tämä on kaavan vara, kun
+ * kutsuja ei kerro laitetta (testit, apufunktiot).
+ */
 export const PALLO_KORKEUS_MIN = 0.04;
+/** Laatan sivu pikseleinä (sw.js:n ja tee-pallolaatat.mjs:n LAATTA). */
+export const LAATAN_PIKSELIT = 256;
+/**
+ * Sallittu venytys: montako laitepikseliä yhtä laatan pikseliä kohden
+ * kamera saa lähimmillään näyttää. 2 = laatan pikseli kahtena
+ * (karttapallo.md luku 6: *"lähin korkeus rajataan 2× venytykseen"*).
+ */
+export const PALLON_SALLITTU_VENYTYS = 2;
 /** Maailmankartan laudan leveys lautayksikköinä (360°). */
 export const PALLOLAUDAN_LEVEYS = 12000;
 /** Pallon oma lauta: ainoa, jolla on maantieteellinen projektio. */
@@ -91,14 +105,60 @@ function tasokuvanKerroin(fov) {
 }
 
 /** Näkyvä leveys (lautayksikköä) → Globe.gl:n altitude. */
-export function korkeusLeveydesta(leveysYks, { fov = PALLO_FOV, laudanLeveys = PALLOLAUDAN_LEVEYS } = {}) {
+export function korkeusLeveydesta(leveysYks, {
+  fov = PALLO_FOV, laudanLeveys = PALLOLAUDAN_LEVEYS, min = PALLO_KORKEUS_MIN,
+} = {}) {
   if (!(leveysYks > 0)) return PALLO_KORKEUS_MAX;
   const asteet = asteetLeveydesta(leveysYks, laudanLeveys);
   const taso = asteet / tasokuvanKerroin(fov);
   // Pallon geometria: kaari mahtuu näkyviin vasta, kun horisontti on
   // sen takana. Yli 180° kaari ei mahdu koskaan → katto.
   const kaari = asteet < 180 ? 1 / Math.cos((asteet / 2) * (Math.PI / 180)) - 1 : Infinity;
-  return Math.min(PALLO_KORKEUS_MAX, Math.max(PALLO_KORKEUS_MIN, Math.max(taso, kaari)));
+  return Math.min(PALLO_KORKEUS_MAX, Math.max(min, Math.max(taso, kaari)));
+}
+
+/*
+ * ── LÄHIN KORKEUS TULEE LAATTOJEN TARKKUUDESTA ────────────────────
+ * (pallolauta vaihe 5c; karttapallo.md luku 6: *"Z8 (182 px/aste) ja
+ * lähin korkeus rajataan 2× venytykseen → 2,1° ≈ 70 yksikköä"*)
+ *
+ * Laatta antaa tasolla t 256 · 2^t / 360 pikseliä astetta kohden. Ruutu
+ * näyttää W laitepikseliä (css-leveys × dpr) sen verran asteita kuin
+ * kamera rajaa, eli venytys = (W / asteet) / tarkkuus. Kun venytys ei
+ * saa ylittää kahta, lähin näkyvä leveys on asteet ≥ W / (2 · tarkkuus).
+ * Syvempi taso sallii lähemmäs: Z8 on tasan kaksi kertaa tarkempi kuin
+ * Z7, joten Z8:n puuttuminen (laatat.json sanoo max 7) tuplaa rajan.
+ *
+ * KATTO KATOLLE: RAJA EI KOSKAAN ESTÄ PELIN OMAA LÄHINTÄ NÄKYMÄÄ. Iso
+ * ruutu (iPad 834 px × dpr 2) tarvitsisi Z7:llä 9° eli 305 lautayksikköä
+ * — enemmän kuin saapumisnäkymä (240), jolloin ennakkozoomi ei zoomaisi
+ * mihinkään ja SIIRRON KOREOGRAFIA menettäisi lähikuvansa (mitattu
+ * savuke-siirtokoreografialla 5.9.2026: iPadilla 50 → 50). Siksi raja ei
+ * mene koskaan PALLOLAUDAN_SIIRTOLEVEYTTÄ karkeammaksi: isolla ruudulla
+ * ja matalalla laattatasolla kuva on mieluummin venytetty kuin peli
+ * jumissa — ja venytys on silti pienempi kuin ennen tätä vaihetta, kun
+ * lähin korkeus oli kiinteä 0,04. Puhelimilla (390 px) Z8:n raja on 71
+ * yksikköä eli katto ei tee mitään.
+ */
+/** Laattatason tarkkuus pikseleinä astetta kohden (Z8 = 182). */
+export function laatanTarkkuus(taso, laatanPikselit = LAATAN_PIKSELIT) {
+  return (laatanPikselit * 2 ** taso) / 360;
+}
+
+/** Lähin sallittu näkyvä leveys (lautayksikköä) laattatarkkuudesta. */
+export function lahinLeveys({
+  taso, leveysPx, dpr = 1, venytys = PALLON_SALLITTU_VENYTYS,
+  laudanLeveys = PALLOLAUDAN_LEVEYS, katto = PALLOLAUDAN_SIIRTOLEVEYS,
+}) {
+  const laitepikselit = Math.max(1, leveysPx) * Math.max(1, dpr);
+  const asteet = laitepikselit / (Math.max(0.1, venytys) * laatanTarkkuus(taso));
+  return Math.min(katto, (asteet / 360) * laudanLeveys);
+}
+
+/** Lähin sallittu korkeus (altitude) laattatarkkuudesta. */
+export function lahinKorkeus(valinnat) {
+  const { fov = PALLO_FOV, laudanLeveys = PALLOLAUDAN_LEVEYS } = valinnat;
+  return korkeusLeveydesta(lahinLeveys(valinnat), { fov, laudanLeveys, min: 0 });
 }
 
 /** Globe.gl:n altitude → näkyvä leveys lautayksikköinä (käänteinen). */
@@ -126,11 +186,23 @@ function lyhinLng(alusta, kohteeseen) {
  */
 export function luoPallokamera({
   pallo, kotelo, ui, lauta = PALLOLAUDAN_LAUTA, laudanLeveys = PALLOLAUDAN_LEVEYS, heraa = null,
+  laattataso = 7, dpr = globalThis.devicePixelRatio || 1,
 }) {
   let ajo = null; // { kehys, valmis, nyt } kesken olevalle ajolle
 
   const ruudunLeveys = () => kotelo?.clientWidth || 1;
   const ruudunKorkeus = () => kotelo?.clientHeight || 1;
+
+  /*
+   * LÄHIN KORKEUS LAATTATARKKUUDESTA (vaihe 5c). Lasketaan kutsuttaessa
+   * eikä kerran: kotelon leveys vaihtuu kääntyvällä ruudulla, ja
+   * laattaluettelon syvin taso vaihtuu, kun uusi taso ajetaan ämpäriin.
+   */
+  const korkeusMin = () => lahinKorkeus({
+    taso: laattataso, leveysPx: ruudunLeveys(), dpr, laudanLeveys,
+  });
+  /** Näkyvä leveys → korkeus laitteen tarkkuusrajalla. */
+  const korkeus = (leveysYks) => korkeusLeveydesta(leveysYks, { laudanLeveys, min: korkeusMin() });
 
   const pysaytaKameraAjo = () => {
     if (!ajo) return false;
@@ -192,7 +264,10 @@ export function luoPallokamera({
       lat = asteet.lat;
       lng = asteet.lon;
     }
-    const altitude = kohde.korkeus ?? (leveys > 0 ? korkeusLeveydesta(leveys) : nyt.altitude);
+    const pyydetty = kohde.korkeus ?? (leveys > 0 ? korkeus(leveys) : nyt.altitude);
+    // Kamera ei mene laattojen tarkkuuden alle, ei myöskään suoraan
+    // korkeutena annetulla kohteella.
+    const altitude = Math.min(PALLO_KORKEUS_MAX, Math.max(korkeusMin(), pyydetty));
     return { lat: Math.max(-89.5, Math.min(89.5, lat)), lng, altitude };
   };
 
@@ -294,6 +369,10 @@ export function luoPallokamera({
     ajaKamera,
     kameranTila,
     nakyvaAlue,
+    /** Lähin sallittu korkeus juuri nyt (OrbitControlsin minDistance). */
+    korkeusMin,
+    /** Lähin sallittu näkyvä leveys lautayksikköinä (savukkeet, vartijat). */
+    lahinLeveys: () => leveysKorkeudesta(korkeusMin()),
     kameraAjossa: () => Boolean(ajo),
     pysaytaKameraAjo,
     siirtoZoomiKerroin,

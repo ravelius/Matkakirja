@@ -213,6 +213,17 @@
               <span class="kehittaja-kytkin-nimi">etusivupallo</span>
               <span class="kehittaja-kytkin-tila">pois</span>
             </button>
+            <!-- Karttapallon turvatila (pallolauta vaihe 5c,
+                 docs/moduulit/karttapallo.md luku 6): kaksi kaatumista
+                 peräkkäin sulkee pallon tältä laitteelta. Tämä nappi
+                 nollaa laskurin ja lataa sivun, jotta pallo saa uuden
+                 yrityksen (js/ui-apurit.js nollaaPallonKaatumiset). -->
+            <button id="kehittaja-pallo-turvatila-btn" class="ghost kehittaja-kytkin"
+                    type="button" aria-pressed="false">
+              <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 5 6.2v5.4c0 4 2.8 7.3 7 8.9 4.2-1.6 7-4.9 7-8.9V6.2z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span>
+              <span class="kehittaja-kytkin-nimi">pallon turvatila</span>
+              <span class="kehittaja-kytkin-tila">pois</span>
+            </button>
             <!-- Ilmepaketti (omistaja 5.9.2026): musteviiva, karhea kehys ja
                  kynäkorostus (js/ilme.js). Kytkin kääntää kaikki kolme lippua
                  laitteen muistiin; ilman kirjastoja peli näyttää entiseltä. -->
