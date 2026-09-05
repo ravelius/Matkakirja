@@ -60,22 +60,44 @@ export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/te
  * luetteloa (laatat.json) ei saada, pallo piirtyy kuten ennen.
  */
 export const PALLO_LAATTAVERSIO = '2026-09-03a';
-export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAVERSIO}/`;
+/*
+ * NOSTOTASOLLINEN KANSIO (omistaja 5.9.2026: "lisää palloon myös se
+ * toinen kerros missä nimet ja kohteet yms." ja "päästään siitä
+ * harmaasta hatusta eroon"): laatat on poltettu uudestaan nimien ja
+ * karttanostojen kanssa (tools/tee-pallolaatat.mjs --nostot) ja navat
+ * täytetty merellä ja jäällä. Kansio on <versio>-nostot; vanha kansio
+ * jää ämpäriin varalle.
+ */
+export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}-nostot`;
+export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`;
+/** Syvin taso, jonka peli käyttää — luettelo (laatat.json) voi rajata matalammaksi. */
 export const PALLO_LAATTATASO_MAX = 8;
 /** Laatan osoite laattamoottorille (slippy map -koordinaatit). */
 export const pallonLaatta = (x, y, l) => `${PALLO_LAATAT}${l}/${x}/${y}.jpg`;
 
 let laatatLupaus = null;
-/** Onko laattaluettelo ämpärissä? Tulos muistetaan; virhe = ei laattoja. */
+/**
+ * Laattaluettelo ämpäristä: { tasot: { min, max } } tai null, jos
+ * luetteloa ei saada (silloin pallo piirtyy yhdestä tekstuurista).
+ * Tulos muistetaan. Luettelon tasot.max rajaa syvimmän tason: kansion
+ * syvin taso poltetaan puoliskoittain, ja luettelo päivitetään vasta,
+ * kun molemmat puoliskot ovat ämpärissä — pallo ei siis pyydä
+ * laattoja, joita ei vielä ole.
+ */
 export function laatatSaatavilla(haku = globalThis.fetch) {
   if (!laatatLupaus) {
     laatatLupaus = Promise.resolve()
       .then(() => haku(`${PALLO_LAATAT}laatat.json`, { cache: 'force-cache' }))
       .then((v) => (v.ok ? v.json() : null))
-      .then((j) => Boolean(j && j.tasot && j.tasot.max >= 0))
-      .catch(() => false);
+      .then((j) => (j && j.tasot && j.tasot.max >= 0 ? { tasot: j.tasot } : null))
+      .catch(() => null);
   }
   return laatatLupaus;
+}
+/** Syvin käytettävä taso: pelin katto tai luettelon katto, kumpi on matalampi. */
+export function laattatasoMax(laatat) {
+  const luettelo = Number(laatat?.tasot?.max);
+  return Number.isFinite(luettelo) ? Math.min(PALLO_LAATTATASO_MAX, luettelo) : PALLO_LAATTATASO_MAX;
 }
 /** Sukelluksen näkyvä leveys laudan yksikköinä (maan kokoinen ikkuna). */
 export const PALLO_SUKELLUSLEVEYS = 620;
@@ -130,7 +152,7 @@ export function rakennaPallo(Globe, kotelo, laatat) {
     .backgroundColor('rgba(0,0,0,0)')
     .showAtmosphere(true).atmosphereColor('#d9a13b').atmosphereAltitude(0.18);
   if (laatat && pallo.globeTileEngineUrl) {
-    pallo.globeTileEngineUrl(pallonLaatta).globeTileEngineMaxLevel(PALLO_LAATTATASO_MAX);
+    pallo.globeTileEngineUrl(pallonLaatta).globeTileEngineMaxLevel(laattatasoMax(laatat));
     asennaLaatunosto(pallo, kotelo);
   } else {
     pallo.globeImageUrl(PALLO_TEKSTUURI);
