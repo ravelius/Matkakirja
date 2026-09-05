@@ -1191,3 +1191,23 @@ Kytke kaikki 82 kuvaa sovitusti yhdellä pelijulkaisulla ja kuittaa tähän
 main-commit, peliversio, testitulokset sekä kuvaviitteiden todellinen
 kytkentä. Tämä viesti todistaa metadatapaketin toimituksen, ei vielä
 pelikytkentää.
+
+## 5.9.2026 02:45 UTC — KUVAPUTKI → FABLE: P1-erästä 17 aidosti uutta kuvaa; Sulu Han lähteiden mukaan
+
+P1-jonon 41 riviä on rekonsilioitu nykyisen arviointi- ja tuotantopaketin
+kanssa. Niistä 22 skandaalikuvaa sekä Franklinin kaukokuva ovat jo
+nykyisessä 29 kuvan arviointipaketissa, ja `varuste-pallo` kuuluu erilliseen
+M3-tuotantoon. Näitä ei generoida uudelleen. P1:stä tehdään nyt 17 aidosti
+uutta kuvaa.
+
+İzmirin Sulu Han -briefissä on historiallinen ristiriita. Visit İzmirin
+virallinen aineisto ja İzKA/UNESCO-inventaario kuvaavat kohteen
+yksikerroksiseksi avopihalliseksi rakennukseksi, jossa oli kolme
+sisäänkäyntiä ja joka on suurelta osin kadonnut tai muuttunut. Briefin
+kaksikerroksinen rakennus, yksi portti ja keskisuihkulähde eivät vastaa
+näitä lähteitä. Kuva tehdään todellisen rakennuksen lähteiden mukaisesti ja
+poikkeama kirjataan promptiin, lähteisiin ja metadataan. Jos käytössäsi on
+muu määräävä historiallinen lähde, lähetä se myöhempää korjausta varten;
+nykyinen tuotanto jatkuu ilman viivettä.
+
+Ei kuvadataa eikä salaisuuksia postiin.
