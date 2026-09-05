@@ -398,6 +398,21 @@ class Kaantoteatteri {
     if (this.kaanto && this.kirja.getState() === 'read') this.kaantoPaattyi();
   }
 
+  /**
+   * KOKO SIVU KÄÄNTYY, EI NURKKA (omistaja 5.9.2026: *"Sivun vaihto
+   * animaatio pitäisi lähteä keskeltä sivua eikä tarttua jompaan kumpaan
+   * ylä tai alareunaan, koska on silloin vaikea kääntää"*). Kirjaston
+   * taite on aina nurkan kääntö: sormen korkeus valitsee ylä- tai
+   * alanurkan ja taite kulkee vinosti sen kautta. Siksi sormen
+   * korkeutta EI syötetä kirjastolle: kirjastolle annetaan sormen
+   * vaakapaikka ja sivun alareuna (h − 2), jolloin taite on pystysuora
+   * ja sivu kääntyy selkämyksen ympäri tasaisena arkkina — sama liike
+   * kuin napista (kaanna). Sormen pystyliike ei siis muuta mitään.
+   */
+  taiteenY() {
+    return this.koko.h - 2;
+  }
+
   /** Sormi tarttuu sivuun: suunnan vyöhyke varmistetaan ennen taitetta. */
   tartu(clientX, clientY) {
     const { w } = this.koko;
@@ -406,10 +421,10 @@ class Kaantoteatteri {
     // teatteri kääntää aina eteenpäin, joten lähtö siirretään oikealle
     // vyöhykkeelle ja sama siirtymä pidetään koko vedon ajan.
     this.siirto = Math.max(0, w * 0.45 - p.x);
-    const alku = { x: p.x + this.siirto, y: p.y };
+    const alku = { x: p.x + this.siirto, y: this.taiteenY() };
     this.kaanto.sormessa = true;
     this.kaanto.alku = { x: clientX, y: clientY, aika: Date.now() };
-    this.kaanto.kulma = p.y >= this.koko.h / 2 ? 'ala' : 'yla';
+    this.kaanto.kulma = 'ala';
     this.kirja.startUserTouch(alku);
     this.kaanto.viimeisin = alku;
   }
@@ -417,7 +432,7 @@ class Kaantoteatteri {
   vedä(clientX, clientY) {
     if (!this.kaanto?.sormessa) return;
     const p = this.piste(clientX, clientY);
-    const kohta = { x: p.x + this.siirto, y: p.y };
+    const kohta = { x: p.x + this.siirto, y: this.taiteenY() };
     this.kaanto.viimeisin = kohta;
     this.kirja.userMove(kohta, true);
   }
@@ -432,7 +447,7 @@ class Kaantoteatteri {
     k.sormessa = false;
     const { w, h } = this.koko;
     const p = this.piste(clientX, clientY);
-    const kohta = { x: p.x + this.siirto, y: p.y };
+    const kohta = { x: p.x + this.siirto, y: this.taiteenY() };
     const dx = Math.abs(clientX - k.alku.x);
     const nopea = dx >= SIVUNKAANTO_PYYHKAISY.matka && Date.now() - k.alku.aika <= SIVUNKAANTO_PYYHKAISY.aikaMs;
     const matka = Math.abs(p.x - this.piste(k.alku.x, k.alku.y).x);

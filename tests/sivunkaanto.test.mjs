@@ -184,3 +184,12 @@ test('lähdesivu ja README mainitsevat kirjaston lisensseineen (pilari 5)', asyn
   // Ämpärin tiedostonimi seuraa versiovakiota, ja SHELL kantaa teatterin.
   assert.match(lue('../sw.js'), /'\.\/js\/sivunkaanto\.js'/);
 });
+
+test('sivu kääntyy tasaisena arkkina, ei nurkasta (omistaja 5.9.2026)', () => {
+  const lahde = readFileSync(new URL('../js/sivunkaanto.js', import.meta.url), 'utf8');
+  // Sormen korkeutta ei syötetä kirjastolle: taite on aina alareunassa → pystysuora.
+  assert.match(lahde, /taiteenY\(\) \{\n\s+return this\.koko\.h - 2;/);
+  const veto = lahde.slice(lahde.indexOf('  tartu(clientX, clientY) {'), lahde.indexOf('  /** rAF-ajuri'));
+  assert.doesNotMatch(veto, /y: p\.y/, 'sormen pystypaikka ei saa ohjata taitetta');
+  assert.match(veto, /this\.kaanto\.kulma = 'ala';/);
+});
