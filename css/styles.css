@@ -11781,6 +11781,11 @@ button.lukija-nappi.lukee,
  * värinen huntu, jonka läpi painojälki kuultaa vaimeana ja
  * peilikuvana kuin ohuen lehtipaperin takaa. Peilatussa teatterissa
  * peilaukset kumoavat toisensa, joten siellä sisus jää suoraksi.
+ *
+ * HUNNUN TIIVIYS 0,88 → 0,95 (omistaja 5.9.2026 klo 19.50, sanatarkasti:
+ * "Voi kuultaa mutta kääntöpuolella on liian iso kontrasti tumman ja
+ * vaalean välillä jolloin paperi näyttää kiiltävältä"): kuultava
+ * painojälki jää, mutta tumman ja vaalean ero painuu paperin sävyyn.
  */
 .sivunkaanto-huntu {
   position: absolute;
@@ -11789,7 +11794,7 @@ button.lukija-nappi.lukee,
   background-color: var(--arkki-paperi, #f5f0e2);
   background-image: var(--paper-noise);
   background-blend-mode: multiply;
-  opacity: 0.88;
+  opacity: 0.95;
   pointer-events: none;
   z-index: 2;
 }
