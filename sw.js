@@ -44,6 +44,8 @@ const SHELL = [
   './js/tekijakortti.js',
   './js/luenta.js',
   './js/visa.js',
+  // Kehittäjän kohtaamislista (5.9.2026): ui.js tuo sen staattisesti.
+  './js/kohtaamistesti.js',
   './js/fokusvirta.js',
   './js/fokusniput.js',
   './js/fokuskohteet.js',

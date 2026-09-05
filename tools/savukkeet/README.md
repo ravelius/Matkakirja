@@ -36,6 +36,7 @@ kirjoita `import ... from '../../node_modules/...'`.
 | savuke-lehden-mitta | Arkin leveys (jumiutunut viewportti, resize) |
 | savuke-paivityspopup | Versionumeron päivitysnappi |
 | savuke-kehittajalehti | Kehittäjän liitteet: Raamattu, Tilannelehti ja Tilastot-lehden vetolaatikkotaulu |
+| savuke-kohtaamistesti | Kehittäjän kohtaamislista (ratasvalikon Kohtaamiset): mannerryhmät MANNER_NIMET-järjestyksessä, ryhmä auki/kiinni, rivi avaa kohtaamisen pelin omalla kortilla kuvineen, tehtäväpeli aarteeseen asti — ja HIEKKALAATIKKO: tallenne, raha, päivät, löydöt ja tietäjäpisteet eivät muutu. Oletuslauta ja `?lauta=kartta`. Vaatii ämpärin (`NODE_USE_ENV_PROXY=1`) kohtaamiskuvaa varten |
 | savuke-lippuikkuna | Lippuikkunan pikselit (ison lipun terävyys, tarkennettu vaakuna kortin sisällä) |
 | savuke-fokusvirta | Fokusmoodin annosteluvirta Ateenassa: lehtilukko, kortti kartan päällä, vaiheet matkakirja → kupla → oppitunti → kohtaaminen ja luovutus laattamekaniikalle. Valintakupla vaiheineen on PURETTU (Raamattu, SYVENNYSTARINAT KARTALLE): savuke vaatii, että kuplan Jatka vie suoraan oppituntiin eikä Pulu kysy täkyjä. Syvennystarinoiden merkkireitin kattaa savuke-selitevalikko |
 | savuke-dist | Yhden tiedoston versio käynnistyy (aja build ensin) |
