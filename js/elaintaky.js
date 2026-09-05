@@ -12,7 +12,7 @@
  *   FOKUSVIRRAN TÄKY (js/fokusvirta.js) on yhden kaupungin
  *   annostelukulun vaihe. Se vaatii fokusvirtarivin
  *   (js/packs/fokusvirrat.js), minivisan ja 50 punnan palkkion.
- *   Eläintäkyjä on 29 MAASSA, joista useimmilla ei ole fokuskaupunkia
+ *   Eläintäkyjä on 53 MAASSA, joista useimmilla ei ole fokuskaupunkia
  *   lainkaan.
  *
  *   TÄKYNOSTO (js/fokusnosto.js) on maan pooli, jonka pisteet
@@ -57,7 +57,7 @@
  * ── MERKKI EI TÄYTÄ YLEISKUVAA ─────────────────────────────────────
  *
  * Maailmankartan yleiskuvassa Eurooppa on peukalonkynnen kokoinen, ja
- * 29 merkkiä siinä olisi merkkien ryteikkö eikä kartta. Merkit näkyvät
+ * 53 merkkiä siinä olisi merkkien ryteikkö eikä kartta. Merkit näkyvät
  * siksi vasta, kun näkymä on kaventunut ELAINTAKY_NAKYY_ASTETTA
  * pituusasteeseen — käytännössä siihen, että maanosa täyttää ruudun.
  * Raja on ASTEINA eikä lautayksikköinä, koska maailmankartta on 12 000
@@ -467,8 +467,8 @@ function elaintakyAsetaMittakaava(ui, suhde) {
    * HINTA ON RAJATTU SIIHEN, MISSÄ SE ON PAKKO MAKSAA: koko silmukka
    * ajetaan vain lehdettömällä varapolulla, joka on yhä ruutumitassa
    * (js/kartta.js vastaskaalaaMerkit palaa heti vakioskaalassa). Kerros
-   * on kolmesta rekisteröidystä ylivoimaisesti isoin — 29 maata kertaa
-   * kaksi kiertokohtaa on 58 ryhmää, kun vihreitä pisteitä on yksi —
+   * on kolmesta rekisteröidystä ylivoimaisesti isoin — 53 maata kertaa
+   * kaksi kiertokohtaa on 106 ryhmää, kun vihreitä pisteitä on yksi —
    * joten juuri tästä v1277 mittasi hukan pois fokusnäkymässä.
    */
   /*
@@ -941,9 +941,9 @@ function elaintakyPiirraKaruselli(ui, kohde, kuvat, vakioselite) {
 }
 
 /**
- * Kortin kuva. Kuva haetaan VASTA TÄSSÄ eli kortin avautuessa: 29
- * eläinkuvaa on 3,3 megatavua, eikä niitä ole palvelutyöntekijän
- * esilatauksessa (sw.js) juuri siksi.
+ * Kortin kuva. Kuva haetaan VASTA TÄSSÄ eli kortin avautuessa:
+ * eläinkuvia on kymmeniä megatavun kokoluokassa, eikä niitä ole
+ * palvelutyöntekijän esilatauksessa (sw.js) juuri siksi.
  *
  * Rikkinäinen tai lataamaton kuva piilottaa kehyksensä — teksti kantaa
  * kortin yksinkin, kuten täkynostolla.
