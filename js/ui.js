@@ -1462,6 +1462,28 @@ const PALUU_KESTO_MS = 8000;
 const TYPE_MS = 50;
 const INTRO_TYPE_MS = 190;
 /*
+ * AVAUKSEN KOLME VAIHETTA (omistajan tilaus 5.9.2026 ilta, sanatarkasti:
+ * *"tuon etusivun voisi animoida niin että pallo lähtee heti pyörimään
+ * ja näytöllä näkyy otsikko, mutta "Osa II.." tulee vasta noin reilun
+ * sekunnin päästä feidaten. sitten alkaa kirjoituskone ja luenta"*).
+ *
+ *   1. pallo pyörii ja julisteotsikko (MATKAKIRJA, MAAILMAN YMPÄRI…)
+ *      on ruudulla heti — pallon oma juliste näkyy jo ennen videota
+ *      (js/etusivupallo.js),
+ *   2. OSAN_VIIVE_MS:n päästä alaotsikko "osa II · unohdettu aarre"
+ *      feidaa sisään OSAN_HAIVYTYS_MS:n ajan (css .juliste-osa,
+ *      --osan-haivytys),
+ *   3. vasta häivytyksen jälkeen alkaa kirjoituskone ja sen perässä
+ *      kertojan luenta — pari säilyttää keskinäisen järjestyksensä
+ *      (paikkarivi naputetaan ensin, luenta alkaa rungon kanssa),
+ *      koko pari vain siirtyy myöhemmäksi.
+ *
+ * Vähennetyllä liikkeellä (prefers-reduced-motion) kaikki on ruudulla
+ * heti eikä yhtään viivettä oteta (Raamattu, sääntö 4).
+ */
+const OSAN_VIIVE_MS = 1300;
+const OSAN_HAIVYTYS_MS = 900;
+/*
  * KIRJOITTAJAN RYTMI. Sanaväli huojuu, ja välimerkin jälkeen pidetään
  * tauko: revennyt katkelma jättää lukijan pisimmäksi aikaa tyhjän
  * päälle, piste hengähdyksen ajaksi ja pilkku hetkeksi.
@@ -2874,6 +2896,12 @@ export class UI {
     this.revealShownFor = null;
     this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     /*
+     * Avausotsikon kaksivaiheinen ajastin (OSAN_VIIVE_MS →
+     * OSAN_HAIVYTYS_MS): kenttä, jotta piirto, portti ja destroy voivat
+     * perua ketjun (peruAvausosa).
+     */
+    this.osanAjastin = null;
+    /*
      * Pöllön vihjekuplan ajastin (paivitaValintavihje). Viive on
      * kentässä eikä suoraan vakiona, jotta savukkeen ei tarvitse odottaa
      * viittätoista sekuntia todistaakseen ketjun toimivaksi.
@@ -4176,6 +4204,9 @@ export class UI {
     document.body.classList.remove('radio-tila');
     for (const kalvo of document.querySelectorAll('.flight-overlay')) kalvo.remove();
     this.suljeAloitusportti();
+    // Avausotsikon feidausajastin: kuollut instanssi ei saa naputtaa
+    // avaustekstiä uuden pelin päälle (peruAvausosa nollaa ketjun).
+    this.peruAvausosa();
     clearTimeout(this.botTimer);
     // Kesken katkennut matka jättäisi automaattiheiton ajastimen
     // pyörimään uuden pelin päälle.
@@ -15105,6 +15136,7 @@ export class UI {
     if (!nakyy) {
       this.introShown = false;
       this.introRunko.textContent = '';
+      this.peruAvausosa();
       if (this.introValinta) this.introValinta.hidden = true;
       stopIntroVoice(this);
       this.suljeAloitusportti();
@@ -15115,10 +15147,21 @@ export class UI {
     // joten lukuääni, kirjoituskone ja ambienssi käynnistyvät kaikki
     // samasta Aloita seikkailu -painalluksesta. Tausta on himmeänä takana.
     if (!this.aloitettu) {
+      /*
+       * ALAOTSIKKO ON PIILOSSA JO PORTIN TAKANA: se feidaa sisään vasta
+       * avauksen toisessa vaiheessa (naytaAvausosa). Jos rivi
+       * piilotettaisiin vasta napautuksesta, se välähtäisi ensin pois
+       * ja tulisi sitten takaisin — portin läpi otsikko näkyy
+       * sumennettuna (css .start-gate), joten piilotus kuuluu tänne.
+       */
+      this.piilotaAvausosa();
       this.showAloitusportti();
       return;
     }
     this.introShown = true;
+    // Pelin resetistä palattaessa portti ohitetaan: alaotsikko piiloon
+    // tässä samassa piirrossa, ennen kuin mitään ehtii näkyä.
+    this.piilotaAvausosa();
     /*
      * Avauslennon esilämmitys alkaa samasta hetkestä kuin kertomus:
      * pelaaja kuuntelee, peli rakentaa kohdelaudan taustalla
@@ -15170,13 +15213,76 @@ export class UI {
       // joten koon voi sovittaa heti — mikään ei liiku kirjoituksen alla.
       this.fitIntro();
     };
-    if (this.introPaikka) {
-      this.typeText(this.introPaikka, `${this.introPaikkarivi()}:`, 'intro',
-        aloitaRunko, INTRO_TYPE_MS);
-      this.fitIntro();
-    } else {
-      aloitaRunko();
+    /*
+     * KIRJOITUSKONE JA LUENTA ALKAVAT VASTA OSA II:N JÄLKEEN (omistaja
+     * 5.9.2026 ilta). Pari säilyttää keskinäisen ajoituksensa —
+     * paikkarivi naputetaan ensin, ja sen valmistuttua kertoja aloittaa
+     * rungon kanssa — mutta koko pari odottaa alaotsikon häivytyksen
+     * loppuun (naytaAvausosa).
+     */
+    const aloitaKertomus = () => {
+      if (this.dead || this.game.phase !== 'pickstart') return;
+      if (this.introPaikka) {
+        this.typeText(this.introPaikka, `${this.introPaikkarivi()}:`, 'intro',
+          aloitaRunko, INTRO_TYPE_MS);
+        this.fitIntro();
+      } else {
+        aloitaRunko();
+      }
+    };
+    this.naytaAvausosa(aloitaKertomus);
+  }
+
+  /**
+   * AVAUKSEN ALAOTSIKKO PIILOON (omistajan tilaus 5.9.2026 ilta): "osa
+   * II · unohdettu aarre" odottaa vuoroaan pelkkä peittävyys nollattuna,
+   * joten julisteen mitat ja rivijako pysyvät ennallaan eikä mikään
+   * hyppää sen ilmestyessä.
+   *
+   * Häivytyksen kesto viedään css:ään muuttujana, jotta luku on
+   * olemassa vain tässä tiedostossa (OSAN_HAIVYTYS_MS).
+   */
+  piilotaAvausosa() {
+    this.peruAvausosa();
+    if (!this.introOtsikko || this.reducedMotion) return;
+    this.introOtsikko.style.setProperty('--osan-haivytys', `${OSAN_HAIVYTYS_MS}ms`);
+    this.introOtsikko.classList.add('osa-piilossa');
+  }
+
+  /** Avausotsikon ajastin pois ja alaotsikko takaisin näkyviin. */
+  peruAvausosa() {
+    if (this.osanAjastin) clearTimeout(this.osanAjastin);
+    this.osanAjastin = null;
+    this.introOtsikko?.classList.remove('osa-piilossa');
+  }
+
+  /**
+   * Feidaa alaotsikon sisään OSAN_VIIVE_MS:n päästä ja kutsuu
+   * `valmis`-kuittausta vasta häivytyksen (OSAN_HAIVYTYS_MS) jälkeen:
+   * kirjoituskone ja luenta alkavat siitä.
+   *
+   * Vähennetyllä liikkeellä ei oteta yhtään viivettä — kaikki on heti
+   * ruudulla (Raamattu, sääntö 4). Sama polku kelpaa myös silloin, kun
+   * otsikkoa ei jostain syystä ole olemassa: kertomus ei saa jäädä
+   * puuttuvan koristeen taakse.
+   */
+  naytaAvausosa(valmis) {
+    if (!this.introOtsikko || this.reducedMotion) {
+      this.peruAvausosa();
+      valmis();
+      return;
     }
+    this.osanAjastin = setTimeout(() => {
+      this.osanAjastin = null;
+      if (this.dead || this.game.phase !== 'pickstart') return;
+      // Luokan poisto käynnistää css-siirtymän (opacity 0 → 1).
+      this.introOtsikko.classList.remove('osa-piilossa');
+      this.osanAjastin = setTimeout(() => {
+        this.osanAjastin = null;
+        if (this.dead || this.game.phase !== 'pickstart') return;
+        valmis();
+      }, OSAN_HAIVYTYS_MS);
+    }, OSAN_VIIVE_MS);
   }
 
   /**

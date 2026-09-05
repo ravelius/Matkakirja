@@ -1,4 +1,4 @@
-// Avauslennon ajoitus ja kirjoituskoneen ääni.
+// Etusivun avauksen ja avauslennon ajoitus sekä kirjoituskoneen ääni.
 //
 // Omistajan palaute 12.8.2026: kertojan luennan pitää alkaa aavistuksen
 // aiemmin ja ruututekstin aavistuksen myöhemmin — ääni edellä, teksti
@@ -356,4 +356,76 @@ test('pöllön kuplat odottavat matkapäiväkirjan luennan loppumista', () => {
   // Toinen kupla sai pidemmän tauon: 1,6 s → ~2,5 s.
   assert.ok(luku('SAAPUMISEN_KUPLA_VALI_MS') >= 2300,
     `toisen kuplan tauko ${luku('SAAPUMISEN_KUPLA_VALI_MS')} ms on yhä lyhyt`);
+});
+
+
+/* ==================== ETUSIVUN AVAUKSEN JÄRJESTYS ================== */
+
+/*
+ * OMISTAJAN TILAUS 5.9.2026 ilta, sanatarkasti: *"tuon etusivun voisi
+ * animoida niin että pallo lähtee heti pyörimään ja näytöllä näkyy
+ * otsikko, mutta "Osa II.." tulee vasta noin reilun sekunnin päästä
+ * feidaten. sitten alkaa kirjoituskone ja luenta"*.
+ *
+ * Järjestys ei näkyisi virheenä jos se katoaisi — etusivu vain
+ * aukeaisi taas kaikki kerralla — joten luvut ja ketju vartioidaan
+ * lähdekoodista niin kuin muutkin ajoitukset.
+ */
+
+test('Osa II feidaa sisään reilun sekunnin päästä, vakioina', () => {
+  const viive = luku('OSAN_VIIVE_MS');
+  const haivytys = luku('OSAN_HAIVYTYS_MS');
+  assert.ok(viive >= 1200 && viive <= 1500,
+    `alaotsikon viive ${viive} ms ei ole omistajan "reilu sekunti" (1,2-1,5 s)`);
+  assert.ok(haivytys >= 700 && haivytys <= 1100,
+    `häivytys ${haivytys} ms ei ole noin 900 ms`);
+  // Häivytyksen kesto kulkee css:ään muuttujana: yksi luku, kaksi paikkaa.
+  assert.match(UI, /--osan-haivytys', `\$\{OSAN_HAIVYTYS_MS\}ms`\)/,
+    'häivytyksen kesto ei kulje css:ään OSAN_HAIVYTYS_MS:stä');
+  assert.match(CSS, /\.juliste-osa \{ transition: opacity var\(--osan-haivytys[^)]*\) ease-out; \}/,
+    'css ei feidaa alaotsikkoa ease-outilla moduulin muuttujalla');
+  assert.match(CSS, /\.intro-juliste\.osa-piilossa \.juliste-osa \{ opacity: 0;/,
+    'alaotsikon piilotus (pelkkä peittävyys) puuttuu css:stä');
+  // Piilotus on peittävyyttä eikä displayta: mikään ei saa hypätä.
+  assert.doesNotMatch(CSS, /\.intro-juliste\.osa-piilossa \.juliste-osa \{[^}]*display: none/,
+    'alaotsikon piilotus siirtäisi julisteen rivejä');
+});
+
+test('kirjoituskone ja luenta alkavat vasta Osa II:n häivytyksen jälkeen', () => {
+  const nayta = UI.match(/ {2}naytaAvausosa\(valmis\) \{[\s\S]*?\n {2}\}/)[0];
+  // Kaksi ajastinta peräkkäin: viive → luokka pois → häivytys → valmis.
+  assert.match(nayta, /setTimeout\([\s\S]*?classList\.remove\('osa-piilossa'\)[\s\S]*?setTimeout\([\s\S]*?valmis\(\);[\s\S]*?\}, OSAN_HAIVYTYS_MS\)[\s\S]*?\}, OSAN_VIIVE_MS\)/,
+    'alaotsikon ketju ei ole viive → häivytys → kertomus');
+  const render = UI.match(/ {2}renderIntro\(\) \{[\s\S]*?\n {2}\}\n/)[0];
+  assert.match(render, /this\.naytaAvausosa\(aloitaKertomus\);/,
+    'kertomus ei odota alaotsikkoa');
+  // Paikkarivi ja runko säilyttävät keskinäisen järjestyksensä: rivi
+  // naputetaan ensin ja luenta alkaa vasta rungon kanssa.
+  assert.match(render, /const aloitaKertomus = \(\) => \{[\s\S]*?this\.typeText\(this\.introPaikka[\s\S]*?aloitaRunko, INTRO_TYPE_MS\)/,
+    'paikkarivin kirjoituskone ei ole enää kertomuksen ensimmäinen askel');
+  assert.match(render, /const aloitaRunko = \(\) => \{[\s\S]*?playIntroVoice\(this\);[\s\S]*?this\.typeText\(this\.introRunko, INTRO_TEXT/,
+    'luenta ei ala enää rungon kirjoituksen kanssa');
+});
+
+test('vähennetty liike näyttää avauksen heti ilman viiveitä', () => {
+  const nayta = UI.match(/ {2}naytaAvausosa\(valmis\) \{[\s\S]*?\n {2}\}/)[0];
+  assert.match(nayta, /if \(!this\.introOtsikko \|\| this\.reducedMotion\) \{[\s\S]*?valmis\(\);\n {6}return;/,
+    'reduced motionissa kirjoituskone jäisi odottamaan ajastinta');
+  const piilota = UI.match(/ {2}piilotaAvausosa\(\) \{[\s\S]*?\n {2}\}/)[0];
+  assert.match(piilota, /if \(!this\.introOtsikko \|\| this\.reducedMotion\) return;/,
+    'reduced motionissa alaotsikko piilotettaisiin turhaan');
+  assert.match(CSS, /@media \(prefers-reduced-motion: reduce\) \{\n[^}]*\.juliste-osa \{ transition: none; \}\n[^}]*\.intro-juliste\.osa-piilossa \.juliste-osa \{ opacity: 1; \}/,
+    'css ei näytä alaotsikkoa heti vähennetyllä liikkeellä');
+});
+
+test('avausanimaatio ei toistu joka piirrossa', () => {
+  const render = UI.match(/ {2}renderIntro\(\) \{[\s\S]*?\n {2}\}\n/)[0];
+  // Sama kertalippu kuin kirjoituskoneella: uudelleen renderöinti
+  // (kieli, koko) palaa tästä ennen ajastimien asettamista.
+  assert.match(render, /if \(this\.introShown\) return;[\s\S]*?this\.naytaAvausosa\(/,
+    'introShown-kertalippu ei enää suojaa avausanimaatiota');
+  assert.match(render, /this\.introShown = false;[\s\S]{0,120}this\.peruAvausosa\(\);/,
+    'etusivulta poistuttaessa alaotsikon ajastinta ei peruta');
+  assert.match(UI, / {2}peruAvausosa\(\) \{[\s\S]*?clearTimeout\(this\.osanAjastin\)/,
+    'ajastimen peruutus puuttuu');
 });
