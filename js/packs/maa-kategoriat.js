@@ -1712,6 +1712,155 @@ export const MAA_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `newton-prisma-1666`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-newton-prisma-1666',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Newton 1666',
+      johdanto: 'Lincolnshiren maalaistalossa nuori mies pimensi huoneen ja '
+        + 'päästi luukun reiästä sisään yhden säteen — ja päätteli, että '
+        + 'valkoinen valo on värien seos eikä lasi värjää mitään.',
+      tehtava: {
+        kysymys: 'Mitä Newtonin toinen prisma osoitti?',
+        vaihtoehdot: [
+          'Että lasi lisää valoon uusia värejä',
+          'Että värit ovat silmän harhaa',
+          'Että kerran erotettu väri ei enää hajoa uusiksi väreiksi',
+          'Että auringonvalo on vihreää',
+        ],
+        oikea: 2,
+        fakta: 'Newton julkaisi valo-opin tuloksensa kirjana vasta 1704 teoksessa '
+          + 'Opticks — lähes neljäkymmentä vuotta kokeiden jälkeen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Woolsthorpe 1666 — valo, joka kantaa värit mukanaan',
+          aika: '1666',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-newton-prisma-1666-lahi-photo-v4.jpg',
+          teksti: 'Mistä värit tulevat — lasista vai valosta? Kysymys on tuttu '
+            + 'jokaiselle, joka on nähnyt auringon prisman läpi, ja vastaus on '
+            + 'ollut vuosisatoja sama: lasi värjää valon. '
+            + 'Kaksikymmentäkolmevuotias Isaac Newton ei usko sitä. Hän istuu '
+            + 'äitinsä talossa Woolsthorpessa, koska rutto sulki Cambridgen '
+            + 'yliopiston kesällä 1665, ja hänellä on aikaa, hiljaisuutta ja '
+            + 'kaksi prismaa. Ensimmäinen taittaa ikkunaluukun reiästä tulevan '
+            + 'säteen seinälle värinauhaksi, joka on pitkulainen eikä pyöreä, '
+            + 'vaikka reikä on pyöreä. Toinen prisma näyttää ratkaisevan: '
+            + 'punainen jää punaiseksi, sininen siniseksi. Värit eivät siis synny '
+            + 'lasissa, vaan valkoinen valo on niiden seos, jonka prisma vain '
+            + 'hajottaa. Samojen ruttovuosien aikana hän kehittää '
+            + 'differentiaalilaskennan alkeet ja miettii, miksi omena putoaa ja '
+            + 'kuu ei. Näitä kahta vuotta on kutsuttu tieteen historian '
+            + 'tuottoisimmiksi. Kirjaksi asti työ ehtii vasta 1704, teoksessa '
+            + 'Opticks — Newton ei pitänyt kiirettä eikä riitelystä.',
+          selite: 'Newton peittää ikkunan lähes kokonaan ja päästää sisään vain '
+            + 'yhden valonsäteen, jotta pieni prisma saa vastata. Seinälle venyvä '
+            + 'värijono osoittaa, etteivät värit synny lasissa: valkoinen valo '
+            + 'kantaa ne jo mukanaan.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: National Trust — Woolsthorpe '
+            + 'Manor, tarkistettu 5.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Woolsthorpe 1666 — valo, joka kantaa värit mukanaan',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-newton-prisma-1666-kauko-photo-v4.jpg',
+              selite: 'Rutto on sulkenut Cambridgen, ja 23-vuotias Newton on '
+                + 'palannut lapsuudenkotiinsa vailla professoreita tai '
+                + 'laboratoriota. Pimennetty huone, ikkunaluukun reikä ja prisma '
+                + 'riittävät kokeeseen, joka pakottaa ajattelemaan valon '
+                + 'uudelleen.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: National Trust — '
+                + 'Woolsthorpe Manor, tarkistettu 5.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `jenner-rokotus-1796`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-jenner-rokotus-1796',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Jenner 1796',
+      johdanto: 'Gloucestershiren maalaislääkäri otti toukokuussa 1796 lypsäjän '
+        + 'kädestä lehmärokkoa ja hieroi sen puutarhurinsa kahdeksanvuotiaan '
+        + 'pojan käsivarteen — ja rokotus sai nimensä lehmästä.',
+      tehtava: {
+        kysymys: 'Mitä Jenner teki James Phippsille 1. heinäkuuta 1796?',
+        vaihtoehdot: [
+          'Antoi toisen lehmärokkoannoksen',
+          'Lähetti hänet Lontooseen tutkittavaksi',
+          'Rokotti hänen sisaruksensa',
+          'Altisti hänet tahallaan oikealle isorokolle',
+        ],
+        oikea: 3,
+        fakta: 'Tautia ei tullut. Isorokko julistettiin hävitetyksi 1980 — '
+          + 'ainoana ihmisen tautina.',
+      },
+      nostot: [
+        {
+          otsikko: 'Berkeley 1796 — lypsäjän rakkula ja puutarhurin poika',
+          aika: '14.5.1796',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-jenner-rokotus-1796-lahi-photo-v4.jpg',
+          teksti: 'Kahdeksanvuotiaan pojan silmät kiertävät huonetta, kun '
+            + 'lansetti lähestyy. James Phipps on Edward Jennerin puutarhurin '
+            + 'poika, ja hänelle ei ole selitetty enempää kuin että lääkäri tekee '
+            + 'pienen naarmun. Berkeleyn kylässä Gloucestershiressä on 14. '
+            + 'toukokuuta 1796. Naarmuun Jenner hieroo nestettä, jonka hän on '
+            + 'ottanut lypsäjä Sarah Nelmesin käden rakkuloista; Sarah sai '
+            + 'lehmärokon Blossom-nimisestä lehmästä. Maalaislääkäri on kuullut '
+            + 'vuosia lypsäjien uskomuksen: lehmärokon sairastanut ei saa '
+            + 'isorokkoa, tautia, joka tappaa suuren osan sairastuneista ja '
+            + 'arpeuttaa loput. Poika saa kuumetta ja on muutaman päivän levoton, '
+            + 'sitten hän tervehtyy. Heinäkuun ensimmäisenä päivänä Jenner tekee '
+            + 'vaarallisen osan: hän istuttaa Jamesiin oikeaa isorokkoa. Tautia '
+            + 'ei tule. Jenner nimeää menetelmän lehmän mukaan — vacca, rokotus — '
+            + 'ja julkaisee sen 1798. Lähes kaksi vuosisataa myöhemmin, vuonna '
+            + '1980, Maailman terveysjärjestö julistaa isorokon hävitetyksi; se '
+            + 'on ainoa ihmisen tauti, jolle on käynyt niin.',
+          selite: 'Kahdeksanvuotias James Phipps yrittää pitää käsivartensa '
+            + 'liikkumatta, kun Jenner tekee siihen pienen naarmun. Poika ei voi '
+            + 'antaa nykyisen kaltaista tietoon perustuvaa suostumusta; '
+            + 'heinäkuussa häntä odottaa vielä tarkoituksellinen '
+            + 'isorokkoaltistus, jolla lääkäri koettelee vaarallista ajatustaan.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Dr Jenner\'s House — Phipps '
+            + 'Cottage, tarkistettu 5.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Berkeley 1796 — lypsäjän rakkula ja puutarhurin poika',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-jenner-rokotus-1796-kauko-photo-v4.jpg',
+              selite: 'Puutarhuri Christopher Phipps seisoo poikansa takana, ja '
+                + 'Sarah Nelmesin kädestä saatu lehmänrokkoaine odottaa pöydällä. '
+                + 'Toukokuun 1796 hiljainen huone on samalla lääketieteellinen '
+                + 'läpimurto ja muistutus siitä, kuinka usein historian edistys '
+                + 'on nojannut niihin, joilla oli vähiten valtaa kieltäytyä.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Dr Jenner\'s House — '
+                + 'Phipps Cottage, tarkistettu 5.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
     {
       id: 'menovinkit',
       nimi: 'Menovinkit',
@@ -2726,6 +2875,95 @@ export const MAA_KATEGORIAT = {
         },
       ],
     },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `suezin-kanava-avajaiset-1869`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-suezin-kanava-avajaiset-1869',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Suez 1869',
+      johdanto: 'Välimeren hiekkasärkälle vuonna 1859 perustettu työmaakaupunki '
+        + 'näki kymmenen vuotta myöhemmin keisarinnan jahdin kääntyvän kanavaan, '
+        + 'jonka egyptiläiset talonpojat olivat kaivaneet alkuvuodet pakkotyönä.',
+      tehtava: {
+        kysymys: 'Miksi Britannia, joka vastusti kanavaa, osti Egyptin '
+          + 'kanavaosakkeet 1875?',
+        vaihtoehdot: [
+          'Ranska pakotti sen kauppasopimuksella',
+          'Osakkeet olivat arvottomia ja halpoja',
+          'Kanava lyhensi Intian-reittiä tuhansia kilometrejä',
+          'Kediivi lahjoitti ne kuningatar Victorialle',
+        ],
+        oikea: 2,
+        fakta: 'Matka Arabianmereltä Lontooseen lyheni lähes 9 000 kilometriä; '
+          + 'Britannia miehitti Egyptin 1882.',
+      },
+      nostot: [
+        {
+          otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
+          aika: '17.11.1869',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-lahi-photo-v4.jpg',
+          teksti: 'Keulan edessä ei ole enää mitään paitsi kaivettua vettä. '
+            + 'Keisarillinen huvijahti L\'Aigle kääntyy Port Saidista kanavaan 17. '
+            + 'marraskuuta 1869 ensimmäisenä, ja sen perässä jonoon asettuu '
+            + 'kymmeniä laivoja: Itävallan keisari Frans Joosef, Preussin '
+            + 'kruununprinssi, ruhtinaita ja lähettiläitä. Kannella seisoo '
+            + 'keisarinna Eugénie, jonka serkku Ferdinand de Lesseps on ajanut '
+            + 'hanketta viisitoista vuotta. Kaupunki, josta lähdetään, on itse '
+            + 'kanavan lapsi: Port Said perustettiin hiekkasärkälle huhtikuussa '
+            + '1859, kun kaivaminen alkoi. Kymmenen vuoden työ tehtiin aluksi '
+            + 'Egyptin talonpoikien pakkotyönä, corvéena, kunnes se kiellettiin '
+            + '1864 ja tilalle tuotiin ruoppaajia ja kauhakoneita. Työntekijöitä '
+            + 'oli yhteensä yli miljoona; kuolleiden määrästä kiistellään yhä. '
+            + 'Kanava lyhentää matkan Arabianmereltä Lontooseen lähes 9 000 '
+            + 'kilometriä, ja juuri siksi Britannia, joka vastusti sitä loppuun '
+            + 'asti, ostaa Egyptin osakkeet 1875 ja miehittää maan 1882. Rannalla '
+            + 'juhlavieraat näkevät lippuja ja savua; egyptiläisten kaivajien '
+            + 'vuosikymmen ei mahdu ohjelmaan.',
+          selite: 'Nuoren egyptiläisen köysimiehen tehtävä on arkinen: pitää '
+            + 'L’Aiglen kiinnitysköysi poissa vedestä, vaikka kannella seisoo '
+            + 'Ranskan keisarinna Eugénie. Hänen ympärillään Port Said on '
+            + 'muuttunut hetkeksi näyttämöksi, jolla tuhannet vieraat juhlivat '
+            + 'väylää, jonka kaivamiseen tavalliset kädet olivat käyttäneet '
+            + 'kymmenen vuotta.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Suez Canal Authority — Canal '
+            + 'history, tarkistettu 5.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-kauko-photo-v4.jpg',
+              selite: 'L’Aigle kääntyy kanavaan ensimmäisenä, ja sen takana '
+                + 'odottaa 77 alusta. Hiekkarannalla lapsi laskee lippuja ja '
+                + 'savupiippuja sormillaan; hänelle maailman merireittien muutos '
+                + 'on tämä aamu, jolloin hiljainen ranta muuttuu kahden meren '
+                + 'väyläksi.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Suez Canal Authority — '
+                + 'Canal history, tarkistettu 5.9.2026.',
+            },
+            {
+              otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-lehti-photo-v4.jpg',
+              selite: 'Kuvittaja William Simpson lähetti Port Saidista '
+                + 'kenttämuistiinpanot “kaikkien kansojen väkijoukosta”, ja '
+                + 'Lontoossa ne muutettiin viikkoja myöhemmin puukaiverrukseksi. '
+                + 'Lukija näki kuninkaalliset ja liput; tavallisten kaivajien '
+                + 'kymmenen vuotta tiivistyivät yhteen juhlasivuun.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Suez Canal Authority — '
+                + 'Canal history, tarkistettu 5.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
     {
       id: 'menovinkit',
       nimi: 'Menovinkit',
@@ -3340,6 +3578,82 @@ export const MAA_KATEGORIAT = {
         fakta: 'Kahtia katkaistusta supplìsta mozzarella venyy pitkäksi '
           + 'langaksi, joka muistutti roomalaisia vanhan puhelimen johdosta.',
       },
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `vesuvius-pompeji-79`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-vesuvius-pompeji-79',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Pompeji 79',
+      johdanto: 'Napolinlahden kaupungissa satoi vuonna 79 ensin kevyttä '
+        + 'hohkakiveä, ja se oli viimeinen tilaisuus lähteä — kuumat tuhkavyöryt '
+        + 'tulivat yöllä, ja Plinius kirjoitti pilvestä, joka näytti pinjapuulta.',
+      tehtava: {
+        kysymys: 'Miksi Vesuviuksen purkauksen päivämäärästä kiistellään?',
+        vaihtoehdot: [
+          'Pliniuksen kirjeet on kadotettu',
+          'Löydöt — syksyn hedelmät ja lämpimät vaatteet — sopivat huonosti elokuuhun',
+          'Roomalaisilla ei ollut kalenteria',
+          'Purkauksia oli samana vuonna kaksi',
+        ],
+        oikea: 1,
+        fakta: 'Perinteinen päivä on 24. elokuuta, mutta moni tutkija pitää '
+          + 'lokakuuta todennäköisempänä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Pompeji 79 — ropina katolla',
+          aika: '79 jaa.',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-vesuvius-pompeji-79-lahi-photo-v4.jpg',
+          teksti: 'Ropina katolla kuulostaa ensin rakeilta. Sitten kadulle putoaa '
+            + 'kevyitä, vaaleita kiviä, joita voi pitää kädessä — hohkakiveä — ja '
+            + 'niitä sataa tunti tunnilta tiheämmin. Pompejin torilla on '
+            + 'iltapäivä vuonna 79, ja vuoren päällä seisoo pilvi, jota nuorempi '
+            + 'Plinius kuvaa myöhemmin kirjeessään Tacitukselle pinjapuuksi: '
+            + 'pitkä runko ja levenevä latva. Hän katselee sitä lahden toiselta '
+            + 'puolelta Misenumista, 29 kilometrin päästä, ja hänen enonsa '
+            + 'Plinius vanhempi, laivaston komentaja, lähtee laivalla pelastamaan '
+            + 'ihmisiä ja kuolee Stabiaen rannalla. Pompejissa kukaan ei kirjoita '
+            + 'mitään. Ensimmäisen päivän valkoinen hohkakivi kasaa katoille '
+            + 'lähes kolmen metrin kerroksen, ja katot romahtavat; se on '
+            + 'viimeinen tilaisuus lähteä. Yöllä tai aamulla pilvi romahtaa, ja '
+            + 'kuumat kaasu- ja tuhkavyöryt tulevat rinnettä alas kaupunkiin '
+            + 'tappaen kaikki, jotka jäivät. Tuhkasta on löydetty yli 1 500 '
+            + 'ihmisen jäännökset Pompejista ja Herculaneumista. Perinteinen '
+            + 'päivä on 24. elokuuta, mutta löydöt — syksyn hedelmät, lämmin '
+            + 'vaatetus — puhuvat lokakuun puolesta.',
+          selite: 'Kuvituksen nimetön torikauppias yrittää vielä pelastaa vaa’an '
+            + 'ja rahalippaan, kun hänen tyttärensä kuuntelee hohkakivien alkavaa '
+            + 'ropinaa katoksella. He eivät tiedä, onko viisaampaa suojautua vai '
+            + 'lähteä — juuri tämä epävarmuus jätti osan pompejilaisista '
+            + 'koteihin, joiden katoille kertyi lopulta metreittäin lapilleja.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Archaeological Park of '
+            + 'Pompeii — date of the eruption, tarkistettu 5.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Pompeji 79 — ropina katolla',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-vesuvius-pompeji-79-kauko-photo-v4.jpg',
+              selite: 'Plinius vertasi Vesuviuksen päälle kohoavaa pilveä '
+                + 'pinjapuuhun: kapea runko levisi korkealla oksistoksi. '
+                + 'Forumilla vertaus ei vielä auta ketään. Yksi perhe kokoaa '
+                + 'läheisiään, toinen lukitsee puotinsa ja kolmas jää katsomaan, '
+                + 'koska vuori oli ollut hiljaa sukupolvien ajan.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Archaeological Park of '
+                + 'Pompeii — date of the eruption, tarkistettu 5.9.2026.',
+            },
+          ],
+        },
+      ],
     },
     {
       id: 'menovinkit',
@@ -5720,7 +6034,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Würzburg 1895 — käsi, joka ei saa liikkua',
           aika: '22.12.1895',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-lahi-photo-v3.jpg',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-lahi-photo-v4.jpg',
           teksti: 'Käsi ei saa liikkua. Anna Bertha Röntgen pitää sitä paikallaan '
             + 'minuutti toisensa jälkeen tietämättä, näkyykö levylle mitään. Kun '
             + 'kuva kehittyy, siinä ovat hänen sormiensa luut ja vihkisormuksen '
@@ -5738,25 +6052,178 @@ export const MAA_KATEGORIAT = {
             + 'luodinsirpaleita, ja vuonna 1901 Röntgen sai ensimmäisen fysiikan '
             + 'Nobelin. Keksinnölleen hän ei ottanut patenttia: hän katsoi sen '
             + 'kuuluvan kaikille.',
-          selite: 'Anna Bertha Röntgen pitää kättään liikkumatta pitkän '
-            + 'valotuksen ajan tietämättä, näkyykö levylle mitään. Kun luiden ja '
-            + 'vihkisormuksen tumma hahmo ilmestyy, aviopari katsoo ensimmäistä '
-            + 'kertaa elävän ihmisen sisään ilman veistä.',
-          lahde: 'Matkakirjan havainnekuva. Faktat ja alkuperäisen käsikuvan '
-            + 'referenssi: NobelPrize.org, Wilhelm Conrad Röntgenin elämäkerta ja '
-            + 'kuvagalleria; tarkistettu 3.9.2026.',
+          selite: 'Anna Bertha Röntgen pitää vasenta kättään liikkumatta '
+            + 'valokuvalevyllä, vaikka pöydän takana rätisevän laitteen '
+            + 'vaikutusta ei voi nähdä eikä tuntea. Arjessa tutut sormukset '
+            + 'jäävät kuvaan intiimeiksi merkeiksi: uusi säteily erottaa metallin '
+            + 'ja luut elävän käden sisältä.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Deutsches Röntgen-Museum — '
+            + 'UNESCO dossier, tarkistettu 5.9.2026.',
           galleria: [
             {
               otsikko: 'Würzburg 1895 — käsi, joka ei saa liikkua',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-kauko-photo-v3.jpg',
-              selite: 'Röntgen kertoo kokeistaan viikkoihin tuskin kenellekään ja '
-                + 'syökin usein laboratoriossa, kunnes tulos kestää hänen oman '
-                + 'epäilynsä. Vasta sitten hän pyytää Anna Berthaa valotukseen, '
-                + 'josta tulee sekä lääketieteellisen kuvantamisen alku että '
-                + 'pelottavan henkilökohtainen perhekuva.',
-              lahde: 'Matkakirjan havainnekuva. Faktat ja alkuperäisen käsikuvan '
-                + 'referenssi: NobelPrize.org, Wilhelm Conrad Röntgenin '
-                + 'elämäkerta ja kuvagalleria; tarkistettu 3.9.2026.',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-kauko-photo-v4.jpg',
+              selite: 'Röntgen on pitänyt löytönsä lähes kokonaan omana tietonaan '
+                + 'ennen kuin pyytää vaimonsa pimeään laboratorioon. Anna Bertha '
+                + 'ei voi tietää näkymättömän säteilyn riskejä; hänen osakseen '
+                + 'jää luottaa mieheensä ja odottaa, kun perheenjäsenestä tulee '
+                + 'uudenlaisen ihmiskuvan ensimmäinen kohde.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Deutsches Röntgen-Museum '
+                + '— UNESCO dossier, tarkistettu 5.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `gutenberg-paino-1454`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-gutenberg-paino-1454',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Gutenberg 1454',
+      johdanto: 'Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla '
+        + 'kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu '
+        + 'Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.',
+      tehtava: {
+        kysymys: 'Montako kappaletta Gutenbergin Raamattua arvioidaan painetun?',
+        vaihtoehdot: [
+          'Noin kaksikymmentä',
+          'Noin 180',
+          'Noin tuhat',
+          'Noin kymmenentuhatta',
+        ],
+        oikea: 1,
+        fakta: 'Neljännes painoksesta tehtiin pergamentille; kappaleita on '
+          + 'säilynyt 49, niistä 21 täydellisinä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Mainz 1454 — sivu syntyy metallista',
+          aika: '1454',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-gutenberg-paino-1454-lahi-photo-v4.jpg',
+          teksti: 'Sormenpäät ovat mustat ja pysyvät sellaisina. Latoja poimii '
+            + 'kirjasimen kerrallaan lokerikosta ja asettaa sen riville nurinpäin '
+            + 'ja peilikuvana; sivu on valmis vasta, kun rivejä on '
+            + 'neljäkymmentäkaksi ja jokainen niistä yhtä leveä. Mainzin '
+            + 'Humbrechthofissa painetaan latinankielistä Raamattua, ja työtä on '
+            + 'tehty vuodesta 1452. Johannes Gutenberg on lainannut siihen '
+            + 'rahanlainaaja Johann Fustilta kahdesti 800 guldenia, ja hänen '
+            + 'pajassaan on jo painettu kirkolle tuhansia anekirjeitä. Kostutettu '
+            + 'paperi painetaan viinipuristimesta muokatussa ruuviprässissä, ja '
+            + 'yhden sivun latomiseen kuluu ehkä puoli päivää. Maaliskuussa 1455 '
+            + 'tuleva paavi Pius II kirjoittaa nähneensä Frankfurtissa valmiita '
+            + 'arkkeja ja ostajien jo varanneen kappaleensa. Painos on noin 180 '
+            + 'kappaletta, neljännes pergamentille. Gutenberg ei ehdi nauttia '
+            + 'siitä: Fust haastaa hänet oikeuteen 1455 ja saa pajan haltuunsa, '
+            + 'ja ensimmäisen kirjan, jossa painajan nimi ja vuosi on merkitty, '
+            + 'julkaisevat Fust ja Peter Schöffer 1457. Keksijä kuolee 1468 '
+            + 'arkkipiispan eläkkeellä.',
+          selite: 'Latoja-apulainen nostaa yhden käänteisen kirjaimen kerrallaan '
+            + 'ja tietää, että virhe voi pakottaa avaamaan koko ladelman. Hänen '
+            + 'sormiinsa jäävä muste on osa uutta käsityötä, jossa Raamatun sivu '
+            + 'syntyy metallista — mutta värilliset alkukirjaimet lisätään yhä '
+            + 'myöhemmin käsin.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Gutenberg-Museum Mainz — '
+            + 'Gutenberg Bibles, tarkistettu 5.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Mainz 1454 — sivu syntyy metallista',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-gutenberg-paino-1454-kauko-photo-v4.jpg',
+              selite: 'Gutenbergin Raamattu ei synny yhdestä nerokkaasta '
+                + 'painalluksesta: kostea paperi, mustepallot, ruuviprässi ja '
+                + 'kuivuvat arkit kulkevat monen työntekijän käsien kautta '
+                + 'vuosien ajan. Noin 180 kappaleen painos on valtava lupaus '
+                + 'siitä, että sama teksti voidaan valmistaa yhä uudelleen.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Gutenberg-Museum Mainz — '
+                + 'Gutenberg Bibles, tarkistettu 5.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `luther-wittenberg-1517`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-luther-wittenberg-1517',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Luther 1517',
+      johdanto: 'Elben rannan yliopistokaupungista lähti lokakuussa 1517 '
+        + 'kohtelias kirje arkkipiispalle, ja sen liitteenä olleet 95 '
+        + 'latinankielistä väitettä levisivät painettuina nopeammin kuin kukaan '
+        + 'osasi odottaa.',
+      tehtava: {
+        kysymys: 'Mikä ratkaisi teesien nopean leviämisen?',
+        vaihtoehdot: [
+          'Linnankirkon oveen naulaaminen',
+          'Arkkipiispan julkinen vastaus',
+          'Keisarin kiertokirje',
+          'Painokoneet Baselissa, Leipzigissä ja Nürnbergissä',
+        ],
+        oikea: 3,
+        fakta: 'Naulaamisesta kertoi vasta Melanchthon myöhemmin; Luther itse '
+          + 'sanoi edenneensä virkatietä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Wittenberg 1517 — kuka tämän oikein lukee?',
+          aika: '31.10.1517',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-luther-wittenberg-1517-lahi-photo-v4.jpg',
+          teksti: 'Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin '
+            + 'yliopiston teologian professori, taittaa 31. lokakuuta 1517 '
+            + 'kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 '
+            + 'väitettä — teesiä — anekaupasta. Johann Tetzel myy '
+            + 'lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa '
+            + 'ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset '
+            + 'palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. '
+            + 'Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön '
+            + 'saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, '
+            + 'oppineiden väittelyä varten. Se, naulasiko Luther ne samana '
+            + 'päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi '
+            + 'kertomus, ja Luther itse sanoi aina edenneensä virkatietä. '
+            + 'Ratkaisevaa on painokone: teesit painetaan Baselissa, Leipzigissä '
+            + 'ja Nürnbergissä vielä samana vuonna, ja saksannos kiertää käsin '
+            + 'kopioituna. Albrecht lähettää ne Roomaan. Vuonna 1521 paavi '
+            + 'julistaa Lutherin pannaan, ja samana keväänä hän seisoo Wormsin '
+            + 'valtiopäivillä keisarin edessä kieltäytyen perumasta. Kysymykseen '
+            + 'vastaa lopulta koko Eurooppa.',
+          selite: 'Luther sinetöi teesinsä arkkipiispa Albrechtille, ja nuori '
+            + 'yliopiston lähetti odottaa oven luona. Kumpikaan ei vielä kanna '
+            + '“uskonpuhdistajan” roolia: pöydällä on professorin kutsu '
+            + 'väittelyyn ja käytävällä mies, jonka tehtävä on vain saada kirje '
+            + 'perille.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Luther.de — the posting of '
+            + 'the theses, tarkistettu 5.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Wittenberg 1517 — kuka tämän oikein lukee?',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-luther-wittenberg-1517-kauko-photo-v4.jpg',
+              selite: 'Linnankirkon ovi toimi yliopiston ilmoitustauluna, joten '
+                + 'avustajan kiinnittämä väittelykutsu ei välttämättä pysäytä '
+                + 'montaa ohikulkijaa. Emme tiedä varmasti, kiinnitettiinkö juuri '
+                + 'nämä teesit oveen 31. lokakuuta — niiden nopean leviämisen '
+                + 'ratkaisi joka tapauksessa kirjapaino, ei vasaran ääni.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Luther.de — the posting '
+                + 'of the theses, tarkistettu 5.9.2026.',
             },
           ],
         },
@@ -8930,7 +9397,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Bern 1905 — patenttipino ja valonsäde',
           aika: '1905',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-lahi-photo-v3.jpg',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-lahi-photo-v4.jpg',
           teksti: 'Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen '
             + 'uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. '
             + 'Bernin patenttiviraston kolmannen luokan tekninen asiantuntija '
@@ -8948,25 +9415,24 @@ export const MAA_KATEGORIAT = {
             + 'ihmevuodeksi, annus mirabilisiksi. Virastossa se ei näy mitenkään: '
             + 'Einstein arvioi hakemuksia vielä vuosia, ja yliopiston virkaan hän '
             + 'pääsee vasta 1909.',
-          selite: 'Patenttiviraston kolmannen luokan tekninen asiantuntija Albert '
-            + 'Einstein joutuu siirtämään fysiikan muistiinpanot syrjään aina '
-            + 'uuden hakemuksen saapuessa. Iltaisin hän palaa kysymykseen, miltä '
-            + 'valo näyttäisi, jos sitä voisi ajaa kiinni.',
-          lahde: 'Matkakirjan havainnekuva. Faktat ja työhuonereferenssi: Albert '
-            + 'Einstein Archives / einstein-website.de, *Patent Office*; '
-            + 'tarkistettu 3.9.2026.',
+          selite: 'Michele Besso kuuntelee, kun työtoveri yrittää purkaa valoa ja '
+            + 'samanaikaisuutta koskevan pulman arkiseksi ajatuskokeeksi. '
+            + 'Patenttivirasto maksaa Einsteinin vuokran; Besso on yksi '
+            + 'harvoista, joiden kanssa 26-vuotias tekninen asiantuntija voi '
+            + 'ajatella ääneen ennen kuin vuoden 1905 paperit lähtevät maailmalle.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Einstein Haus Bern — Einstein '
+            + 'and Bern, tarkistettu 5.9.2026.',
           galleria: [
             {
               otsikko: 'Bern 1905 — patenttipino ja valonsäde',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-kauko-photo-v3.jpg',
-              selite: 'Kotona odottavat Mileva-vaimo, pieni Hans Albert ja niukka '
-                + 'palkka; toimistossa odottaa pino patentteja. Tämän arkisen '
-                + 'paineen keskellä 26-vuotias Einstein kirjoittaa neljä '
-                + 'tutkimusta, mutta läheinen ystävä Michele Besso on niitä '
-                + 'harvoja, joiden kanssa hän voi ajatella ääneen.',
-              lahde: 'Matkakirjan havainnekuva. Faktat ja työhuonereferenssi: '
-                + 'Albert Einstein Archives / einstein-website.de, *Patent '
-                + 'Office*; tarkistettu 3.9.2026.',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-kauko-photo-v4.jpg',
+              selite: 'Viraston hakemukset on käsiteltävä ennen kuin oma fysiikka '
+                + 'saa tilaa, ja kotona odottavat Mileva sekä vuoden ikäinen Hans '
+                + 'Albert. Einstein ei näytä toimiston nerolta vaan yhdeltä '
+                + 'kiireiseltä virkailijalta — juuri siksi pöydän alle jäävä '
+                + 'pieni muistiinpanoliuska tuntuu niin epätodennäköiseltä.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: Einstein Haus Bern — '
+                + 'Einstein and Bern, tarkistettu 5.9.2026.',
             },
           ],
         },
@@ -25435,6 +25901,144 @@ export const MAA_KATEGORIAT = {
               lahde: 'Matkakirjan havainnekuva. Faktat ja alkuperäisen valokuvan '
                 + 'referenssi: U.S. National Park Service, Wright Brothers '
                 + 'National Memorial, *The First Flight*; tarkistettu 3.9.2026.',
+            },
+          ],
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `franklin-leija-1752`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-franklin-leija-1752',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Franklin 1752',
+      johdanto: 'Philadelphian pellolla nousi kesäkuussa 1752 silkkileija '
+        + 'ukkospilven alle, ja narun päässä roikkuva avain kertoi, että salama '
+        + 'on samaa sähköä kuin laboratorion kipinä.',
+      tehtava: {
+        kysymys: 'Kuka kirjoitti tarkimman kuvauksen Franklinin leijakokeesta?',
+        vaihtoehdot: [
+          'Franklin itse Pennsylvania Gazetteen',
+          'William Franklin muistelmissaan',
+          'Thomas-François Dalibard Pariisissa',
+          'Joseph Priestley vuonna 1767',
+        ],
+        oikea: 3,
+        fakta: 'Franklinin oma lehtikirjoitus lokakuulta 1752 ei kerro päivää '
+          + 'eikä paikkaa; Priestley sai tiedot Franklinilta Lontoossa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Philadelphia 1752 — kipinä avaimesta rystyseen',
+          aika: 'kesäkuu 1752',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-franklin-leija-1752-lahi-photo-v4.jpg',
+          teksti: 'Pilvi tulee Philadelphian yli kesäkuussa 1752, ja kaksi miestä '
+            + 'odottaa sitä pellolla vajan suojassa. Benjamin Franklin on 46, ja '
+            + 'hänen poikansa William hieman yli kaksikymmentä. Silkkileija '
+            + 'nousee, sen kärjessä on teräväkärkinen lanka, ja hamppunaru kastuu '
+            + 'sateessa. Naru johtaa varauksen alas; kuivan silkkinauhan ja '
+            + 'avaimen kohdalla se pysähtyy. Franklin ei kerro leijakokeesta itse '
+            + 'kuin lyhyesti Pennsylvania Gazette -lehdessä 19. lokakuuta 1752, '
+            + 'ilman päivää tai paikkaa, ja tarkin kuvaus on Joseph Priestleyn '
+            + 'vuonna 1767 kirjoittama. Sen mukaan naru alkoi pörhistää '
+            + 'säikeitään, ja rystysestä avaimeen hyppäsi kipinä — ei salama, '
+            + 'joka olisi tappanut. Ranskassa Thomas-François Dalibard oli jo '
+            + 'toukokuussa kerännyt ukkosen sähköä Franklinin ohjeiden mukaan '
+            + 'rautatangolla; Pietarissa Georg Wilhelm Richmann kuoli seuraavana '
+            + 'vuonna yrittäessään samaa. Kokeesta kasvoi ukkosenjohdatin ja '
+            + 'siitä Franklinin maine Euroopassa — sama maine, jolla hän '
+            + 'myöhemmin neuvotteli Ranskan Amerikan siirtokuntien liittolaiseksi.',
+          selite: 'Franklin ei odota salaman osuvan leijaan; hän odottaa märkää '
+            + 'narua pitkin kulkevan varauksen kokoontuvan avaimeen. William '
+            + 'näkee pienen kipinän isän rystysellä — juuri tarpeeksi '
+            + 'osoittamaan, että ukkospilven sähkö on samaa lajia kuin '
+            + 'laboratoriossa.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: Smithsonian National Postal '
+            + 'Museum — Benjamin Franklin\'s kite experiment, tarkistettu 5.9.2026.',
+        },
+      ],
+    },
+    /*
+     * HISTORIAN HETKI — GENEROITU SIVU, ÄLÄ MUOKKAA KÄSIN.
+     *
+     * Lähde: js/packs/historian-hetket.js `edison-lamppu-1879`.
+     * Generaattori: tools/paivita-hetkisivut.mjs. Käsin tehty muutos
+     * katoaa seuraavalla ajolla — korjaa pakkaan ja aja työkalu.
+     *
+     * Kuva on Matkakirjan oma havainnekuva R2-ämpärissä eikä
+     * Commonsissa, joten se kulkee `osoite`-kenttänä (js/ui.js
+     * varustaNostonKuva).
+     */
+    {
+      id: 'hetki-edison-lamppu-1879',
+      nimi: 'Historian hetki',
+      otsikko: 'Historian hetki: Edison 1879',
+      johdanto: 'New Jerseyn maalaislaboratoriossa hiilletty ompelulanka hehkui '
+        + 'lokakuussa 1879 kolmetoista ja puoli tuntia — ja sen ympärille '
+        + 'rakennettiin kokonainen sähköjärjestelmä.',
+      tehtava: {
+        kysymys: 'Mikä hehkulanka kesti Edisonin kokeissa yli 1 200 tuntia?',
+        vaihtoehdot: [
+          'Hiilletty japanilainen bambu',
+          'Hiilletty puuvillalanka',
+          'Platinalanka',
+          'Hamppukuitu',
+        ],
+        oikea: 0,
+        fakta: 'Bambulanka löytyi vasta 1880; englantilainen Joseph Swan oli '
+          + 'tehnyt oman hehkulamppunsa jo ennen Edisonia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Menlo Park 1879 — kolmetoista ja puoli tuntia valoa',
+          aika: '22.10.1879',
+          leveys: 'taysi',
+          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-edison-lamppu-1879-lahi-photo-v4.jpg',
+          teksti: 'Kello on jo pitkällä yössä, ja lasikuvun sisällä hehkuu '
+            + 'ompelulangan pätkä. Menlo Parkin laboratoriossa New Jerseyssä on '
+            + '22. lokakuuta 1879. Thomas Edison, 32, on kokeillut hehkulangaksi '
+            + 'platinaa, pahvia ja monenlaista kasvikuitua, ja ne kaikki palavat '
+            + 'hetkessä poikki. Nyt hiilletty puuvillalanka hehkuu hapettomassa '
+            + 'lasissa tunnin, toisen, ja Charles Batchelor kirjaa jokaisen '
+            + 'tunnin vihkoon. Lamppu sammuu vasta kolmentoista ja puolen tunnin '
+            + 'jälkeen. Hehkulamppu ei ole Edisonin keksintö — englantilainen '
+            + 'Joseph Swan on tehnyt omansa — mutta Edisonin lamppu on '
+            + 'ensimmäinen, jossa lanka, korkea tyhjiö ja suuri vastus toimivat '
+            + 'yhdessä ja jonka ympärille voi rakentaa koko sähköjärjestelmän. '
+            + 'Patenttihakemus jätetään 4. marraskuuta. Talven mittaan '
+            + 'laboratorion ympärille vedetään johtoja ja lamppuja, ja '
+            + 'helmikuuhun 1880 mennessä katsojia saapuu junalla katsomaan '
+            + 'valojen kylää. Vasta seuraavana vuonna löytyy lanka, joka kestää '
+            + 'yli 1 200 tuntia: hiilletty japanilainen bambu. Patentissa on '
+            + 'Edisonin nimi, mutta yön valvoi kokonainen työryhmä.',
+          selite: 'Charles Batchelor merkitsee vihkoon uuden tunnin, ja Edison '
+            + 'uskaltaa viimein nojata lähemmäs haurasta lasia. Hiilletty '
+            + 'ompelulanka palaa lopulta 13,5 tuntia — tarpeeksi kauan, että '
+            + 'työryhmä voi uskoa löytäneensä muutakin kuin uuden lyhyen '
+            + 'välähdyksen.',
+          lahde: 'Matkakirjan havainnekuva. Faktat: U.S. National Park Service — '
+            + 'Edison biography, tarkistettu 5.9.2026.',
+          galleria: [
+            {
+              otsikko: 'Menlo Park 1879 — kolmetoista ja puoli tuntia valoa',
+              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-edison-lamppu-1879-kauko-photo-v4.jpg',
+              selite: 'Menlo Parkin valo syntyy monen käsissä: Ludwig Boehm '
+                + 'puhaltaa lasin, John Kruesi tekee läpiviennit ja Batchelor '
+                + 'käsittelee hiuksenohutta hiililankaa. Edison johtaa koetta, '
+                + 'mutta yön valvoneelle työryhmälle onnistuminen on yhteinen, '
+                + 'uupunut helpotus.',
+              lahde: 'Matkakirjan havainnekuva. Faktat: U.S. National Park '
+                + 'Service — Edison biography, tarkistettu 5.9.2026.',
             },
           ],
         },

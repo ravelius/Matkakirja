@@ -3861,6 +3861,21 @@ export const KAUPUNKIKARTAT = {
         nosto: ['syvennys-istanbul-kaarmepylvas', 'hippodromi'], nimiPuoli: 'vasen',
         siirto: { x: -18, y: -19 },
       },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Hagia Sofia, johon 29.5.1453 aamu päättyi; Theodosiuksen muuri on kartan
+      // rajauksen länsipuolella.
+      {
+        nimi: 'Konstantinopoli 1453', lat: 41.0085, lon: 28.98,
+        nosto: 'hetki-konstantinopoli-1453',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
     ],
   },
   lissabon: {
@@ -4321,6 +4336,20 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Nurmen kohu', lat: 60.1875, lon: 24.9272,
         nosto: 'skandaali-nurmen-amatoorikohu',
       },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Ruotsalainen teatteri; sama piste kuin syvennys Finlandia, nimiö oikealle.
+      {
+        nimi: 'Suomi herää 1899', lat: 60.16722, lon: 24.94333,
+        nosto: 'hetki-sibelius-finlandia-1899',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
     ],
   },
   ateena: {
@@ -4449,6 +4478,21 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Niken temppeli', lat: 37.9717, lon: 23.7258,
         nosto: 'syvennys-ateena-nike', nimiPuoli: 'vasen',
         siirto: { x: -19, y: -18 },
+      },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // sama piste kuin Kallimarmaro ja Maratonhuijaus (siirto vasemmalle): nimiö
+      // oikealle.
+      {
+        nimi: 'Louis 1896', lat: 37.9683, lon: 23.7411,
+        nosto: 'hetki-olympia-ateena-1896',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
     ],
   },
@@ -4756,6 +4800,48 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Bastilji', lat: 48.85333, lon: 2.36917,
         nosto: 'bastilji',
       },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // ESPCI:n piha, rue Lhomond 42 — Curieiden vaja.
+      {
+        nimi: 'Curie 1898', lat: 48.842, lon: 2.3476,
+        nosto: 'hetki-marie-curie-hangaari-1898', nimiPuoli: 'oikea',
+      },
+      // Arsenaali: Lavoisierin koti ja laboratorio 1775–1792.
+      {
+        nimi: 'Lavoisier 1780', lat: 48.8503, lon: 2.3635,
+        nosto: 'hetki-lavoisier-laboratorio-1780',
+      },
+      // École normale supérieure, rue d'Ulm.
+      {
+        nimi: 'Pasteur 1862', lat: 48.8419, lon: 2.3444,
+        nosto: 'hetki-pasteur-pullot-1862', nimiPuoli: 'vasen',
+      },
+      // sama piste kuin Eiffel-torni ja Torni romuraudaksi: nimiö alas oikealle.
+      {
+        nimi: 'Torni 1888', lat: 48.85822, lon: 2.2945,
+        nosto: 'hetki-eiffel-torni-1888',
+        nimiPuoli: 'oikea', siirto: { x: 6, y: 25 },
+      },
+      // sama piste kuin kohde Bastilji: nimiö oikealle.
+      {
+        nimi: 'Bastilji 1789', lat: 48.85333, lon: 2.36917,
+        nosto: 'hetki-ranskan-vallankumous-bastilji-1789',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      // Grand Café, 14 boulevard des Capucines; Impressionistit on 100 m päässä,
+      // nimiö oikealle.
+      {
+        nimi: 'Lumière 1895', lat: 48.8703, lon: 2.3294,
+        nosto: 'hetki-lumiere-elokuva-1895',
+        nimiPuoli: 'oikea', siirto: { x: 24, y: 10 },
+      },
     ],
   },
   budapest: {
@@ -5008,6 +5094,26 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Saliera', lat: 48.2036, lon: 16.3619,
         nosto: 'skandaali-salieran-varkaus',
       },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Kärntnertor-teatterin paikka Valtionoopperan takana, nimiö oikealle.
+      {
+        nimi: 'Yhdeksäs 1824', lat: 48.2033, lon: 16.3708,
+        nosto: 'hetki-beethoven-yhdeksas-1824',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      // vanha Burgtheater Michaelerplatzilla Hofburgin vieressä, nimiö vasemmalle.
+      {
+        nimi: 'Figaro 1786', lat: 48.2078, lon: 16.3665,
+        nosto: 'hetki-mozart-wien-1786',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
     ],
   },
   kairo: {
@@ -5256,6 +5362,40 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Vanha London Bridge', lat: 51.50806, lon: -0.08778,
         nosto: 'vanha-london-bridge',
       },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Royal Institution, Albemarle Street.
+      {
+        nimi: 'Faraday 1831', lat: 51.5098, lon: -0.1425,
+        nosto: 'hetki-faraday-luento-1831',
+      },
+      // St Mary's, Praed Street — kartan länsireunassa, nimiö oikealle.
+      {
+        nimi: 'Fleming 1928', lat: 51.5174, lon: -0.172,
+        nosto: 'hetki-fleming-malja-1928', nimiPuoli: 'oikea',
+      },
+      // Rotherhithen kuilu (Brunel Museum).
+      {
+        nimi: 'Tunneli 1827', lat: 51.5031, lon: -0.0544,
+        nosto: 'hetki-brunel-thames-tunnel-1827',
+      },
+      // Pudding Lane; Vanha London Bridge ja Etelämeren kupla vieressä, nimiö
+      // oikealle.
+      {
+        nimi: 'Palo 1666', lat: 51.5102, lon: -0.0853,
+        nosto: 'hetki-lontoon-palo-1666', nimiPuoli: 'oikea',
+      },
+      // alkuperäisen Globen tontti Southwarkissa.
+      {
+        nimi: 'Globe 1599', lat: 51.5067, lon: -0.0947,
+        nosto: 'hetki-shakespeare-globe-1599',
+      },
     ],
   },
   berliini: {
@@ -5370,6 +5510,19 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Hobrechtin putket', lat: 52.5219, lon: 13.4132,
         nosto: 'syvennys-berliini-viemarit',
+      },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Bernauer Straße, muurin muistomerkki.
+      {
+        nimi: 'Muuri 1961', lat: 52.5375, lon: 13.3933,
+        nosto: 'hetki-berliinin-muuri-1961',
       },
     ],
   },
@@ -5725,6 +5878,21 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Banca Romana', lat: 41.9009, lon: 12.4785,
         nosto: 'skandaali-banca-romana-1893',
+      },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Sikstuksen kappeli; Pietarinkirkko ja Vatikaanin palatsi ovat 150 m päässä,
+      // nimiö vasemmalle.
+      {
+        nimi: 'Sikstus 1510', lat: 41.9029, lon: 12.4545,
+        nosto: 'hetki-michelangelo-sikstus-1510',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
     ],
   },
@@ -6397,6 +6565,25 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Fabergé-museo', lat: 59.9349, lon: 30.3435,
         nosto: 'syvennys-pietari-faberge',
+      },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Jänissaaren länsipää; Pietari-Paavalin linnoituksen piste on saman saaren
+      // keskellä.
+      {
+        nimi: 'Jänissaari 1703', lat: 59.9515, lon: 30.312,
+        nosto: 'hetki-pietari-perustus-1703', nimiPuoli: 'vasen',
+      },
+      // Pietarin yliopisto, Vasilinsaari.
+      {
+        nimi: 'Mendelejev 1869', lat: 59.942, lon: 30.299,
+        nosto: 'hetki-mendelejev-kortit-1869',
       },
     ],
   },
@@ -10272,6 +10459,19 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Washington Squaren riemukaari', lat: 40.73124, lon: -73.9971 },
       { nimi: 'New Yorkin kaupungintalo', lat: 40.7127, lon: -74.0059 },
       { nimi: 'Trinity Church', lat: 40.70806, lon: -74.01222 },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Brooklyn Bridge, Manhattanin puoleinen torni.
+      {
+        nimi: 'Brooklyn 1883', lat: 40.7061, lon: -73.9969,
+        nosto: 'hetki-brooklyn-bridge-1883',
+      },
     ],
   },
   /*
