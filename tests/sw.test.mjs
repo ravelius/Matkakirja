@@ -214,6 +214,29 @@ test('välimuistin nimi seuraa sovelluksen versiota', () => {
 });
 
 /*
+ * VALMIIT KIRJASTOT SÄILYVÄT OMASSA, PYSYVÄSSÄ KORISSAAN (Raamattu
+ * 5.9.2026, VALMIIT KIRJASTOT: STPAGEFLIP ENSIN): vendor/-polku
+ * ämpärissä on versionimetty, joten kori ei saa tyhjentyä
+ * versionvaihdossa (activate-siivous ohittaa sen), ja noudon on
+ * oltava cors-tilassa varareitteineen kuten kuvilla — muuten
+ * <script>-tagin opaakki vastaus ei kelpaa koriin eikä kirjasto
+ * toimi lentokoneessa. Testi lukee lähdekoodia (ks. peilikuvatesti).
+ */
+test('vendor-kirjastoilla on pysyvä kori, jota versionvaihto ei tyhjennä', () => {
+  const kori = sw.match(/const VENDORCACHE = '([^']+)'/)?.[1];
+  assert.ok(kori && kori.startsWith('matkakirja-vendor-'), 'VENDORCACHE puuttuu sw.js:stä');
+  const siivous = sw.slice(sw.indexOf("addEventListener('activate'"), sw.indexOf("addEventListener('fetch'"));
+  assert.match(siivous, /k !== VENDORCACHE/, 'activate-siivous tyhjentäisi vendor-korin');
+  const haara = sw.indexOf("osoite.pathname.startsWith('/vendor/')");
+  assert.ok(haara > 0, 'sw.js ei tunne vendor/-polkua');
+  const lohko = sw.slice(haara, haara + 900);
+  assert.match(lohko, /caches\.open\(VENDORCACHE\)/);
+  const corsRivi = lohko.indexOf("mode: 'cors'");
+  const varaRivi = lohko.indexOf('fetch(event.request)');
+  assert.ok(corsRivi > 0 && varaRivi > corsRivi, 'vendor-noudossa on oltava cors-nouto ja sen jälkeen tavallinen varareitti');
+});
+
+/*
  * PEILIKUVAN NOUDOSSA ON OLTAVA VARAREITTI ILMAN CORSIA.
  *
  * Historia: R2:n julkinen pub-*.r2.dev-osoite ei aluksi lähettänyt

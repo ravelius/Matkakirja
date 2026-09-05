@@ -11518,6 +11518,104 @@ button.lukija-nappi.lukee,
   .wiki-kategoria.sivu-oikealta { animation: none; }
 }
 
+/*
+ * ── KÄÄNTÖTEATTERI (js/sivunkaanto.js, omistaja 5.9.2026 "Tee 2.
+ * Ensin"; Raamattu VALMIIT KIRJASTOT: STPAGEFLIP ENSIN) ──────────────
+ *
+ * Käännöksen ajaksi kortin päälle nostetaan kerros, jossa StPageFlip
+ * kääntää kahta kortin kloonia. Kerros on dialogin lapsi kortin
+ * JÄLKEEN (kloonien id:t eivät saa voittaa oikeaa korttia hauissa) ja
+ * inert: kosketukset menevät sen läpi oikeaan korttiin, jonka oma
+ * ele syöttää sormen paikan kirjastolle.
+ *
+ * Kirjaston oma tyyli (skriptin injektoima <style>) antaa
+ * .stf__parentille position: relative ja transform: translateZ(0) —
+ * valitsimet tässä ovat kaksiluokkaisia, jotta ne voittavat sen.
+ * Kääre ei saa kirjastolta mittoja (sen CSS:ssä lukee .sft__wrapper),
+ * joten kääre ja lohko täyttävät teatterin tässä.
+ */
+.dialog .sivunkaanto-teatteri {
+  position: absolute;
+  display: block;
+  z-index: 20;
+  overflow: hidden;
+  pointer-events: none;
+  transform: none;
+}
+
+.dialog .sivunkaanto-teatteri[hidden] { display: none; }
+
+/* Taaksepäin = peilattu eteenpäin: sisältö peilataan takaisin. */
+.dialog .sivunkaanto-teatteri.peilattu { transform: scaleX(-1); }
+.dialog .sivunkaanto-teatteri.peilattu .sivunkaanto-sisus { transform: scaleX(-1); }
+
+.dialog .sivunkaanto-teatteri .sivunkaanto-lohko,
+.dialog .sivunkaanto-teatteri .stf__wrapper,
+.dialog .sivunkaanto-teatteri .stf__block {
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  max-width: none;
+}
+
+/*
+ * Sivu: kirjasto kirjoittaa sijainnin, mitat, leikkauksen ja kierron
+ * inline-tyyleinä (cssText) — tässä vain se, mitä se ei kirjoita:
+ * paperin väri taitteen alle ja sisällön kääre.
+ */
+.sivunkaanto-sivu {
+  overflow: hidden;
+  background-color: var(--arkki-paperi, #f5f0e2);
+  backface-visibility: hidden;
+}
+
+.sivunkaanto-sisus {
+  position: absolute;
+  inset: 0;
+  /* Oma pinoamiskonteksti aina — myös silloin kun peilaus kumoutuu
+   * (transform: none): kortin oma z-index ei saa nousta hunnun yli. */
+  isolation: isolate;
+}
+
+/* Klooni täyttää sivun eikä toista kortin ilmestymisliikettä. */
+.sivunkaanto-sivu .dialog-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  margin: 0 !important;
+  animation: none !important;
+  overflow-y: hidden;
+}
+
+/*
+ * PAPERIN KÄÄNTÖPUOLI: kirjaston taite on sivun kopio, jonka se
+ * kiertää ja leikkaa — sellaisenaan taitteessa lukisi sama teksti
+ * oikein päin. Kopio saa luokan sivunkaanto-kaanto (js/sivunkaanto.js
+ * vahdiKopioita): sisältö peilataan ja päälle lasketaan paperin
+ * värinen huntu, jonka läpi painojälki kuultaa vaimeana ja
+ * peilikuvana kuin ohuen lehtipaperin takaa. Peilatussa teatterissa
+ * peilaukset kumoavat toisensa, joten siellä sisus jää suoraksi.
+ */
+.sivunkaanto-huntu {
+  position: absolute;
+  inset: 0;
+  display: none;
+  background-color: var(--arkki-paperi, #f5f0e2);
+  background-image: var(--paper-noise);
+  background-blend-mode: multiply;
+  opacity: 0.88;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.sivunkaanto-kaanto .sivunkaanto-huntu { display: block; }
+.sivunkaanto-kaanto .sivunkaanto-sisus { transform: scaleX(-1); }
+.dialog .sivunkaanto-teatteri.peilattu .sivunkaanto-kaanto .sivunkaanto-sisus { transform: none; }
+
 
 /*
  * ============================================================

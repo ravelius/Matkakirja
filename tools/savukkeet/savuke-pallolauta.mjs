@@ -120,8 +120,12 @@ const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromiu
 
 /** Uusi sivu: tallenne paikallaan, ämpäri reititetty (tai katkaistu). */
 async function avaaSivu({ lauta, ampari = true, reducedMotion = 'no-preference' }) {
+  // Palvelutyöntekijä estetään: sw.js säilöö vendor/-kirjastot omaan
+  // koriinsa (VENDORCACHE, 5.9.2026), ja workerin fetch ohittaa
+  // Playwrightin page.routen — Globe.gl:n reititys ei muuten näkisi
+  // pyyntöä (sama syy kuin savuke-siirtokoreografiassa).
   const ctx = await selain.newContext({
-    viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, reducedMotion,
+    viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, reducedMotion, serviceWorkers: 'block',
   });
   await ctx.addInitScript((data) => {
     try {

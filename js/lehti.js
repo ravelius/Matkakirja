@@ -51,6 +51,9 @@ import {
 import { ARTIKKELIT, KULTTUURIT } from './sisaltotaulut.js';
 import { kayttoluvanNimi } from './kuvavinkki.js';
 import { sfx } from './sound.js';
+import {
+  aloitaSivunVeto, kaannaSivu, lataaSivunkaanto, sivunkaantoMahdollinen,
+} from './sivunkaanto.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import { musiikkiSivut } from './tyohuone-musiikki.js';
 import { RAAMATTU } from './tyohuone-raamattu.js';
@@ -417,12 +420,55 @@ export function tutkiEkaSivu(ui) {
  * otsikosta.
  */
 export function naytaTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) {
+  /*
+   * SIVU KÄÄNTYY KUIN KIRJA (omistaja 5.9.2026 "Tee 2. Ensin", Raamattu
+   * VALMIIT KIRJASTOT: STPAGEFLIP ENSIN). Kääntöteatteri (js/sivunkaanto.js)
+   * ottaa käännön, kun kirjasto on ladattu ja liike sallittu: se
+   * kloonaa lähtevän sivun, piirtää kohdesivun tähän samaan korttiin
+   * (piirraTutkiSivu — lukija, otsikkorivi ja puskuri kuten ennen) ja
+   * animoi käännöksen kloonien välillä. Ilman kirjastoa (offline,
+   * dist, reduced motion, lippu pois) sivu liukuu kuten ennenkin.
+   * Suunta luetaan sivunumeroista, ei kutsujan arvauksesta:
+   * sisällysvalikko antaa aina +1, mutta hyppy taaksepäin on käännös
+   * taaksepäin. Avaukset (heti) eivät animoidu — ne käynnistävät vain
+   * kirjaston laiskan latauksen seuraavaa käännöstä varten.
+   */
+  if (sivunkaantoMahdollinen()) void lataaSivunkaanto();
+  if (!heti && suunta) {
+    const nykyinen = ui.lehtitila.tutkiSivu ?? tutkiEkaSivu(ui);
+    const kohde = rajaaTutkiSivu(ui, indeksi);
+    const kortti = ui.arrivalDialog?.querySelector('.dialog-card');
+    const vieritys = kortti?.scrollTop ?? 0;
+    if (kohde !== nykyinen && kortti && kaannaSivu({
+      dialogi: ui.arrivalDialog,
+      kortti,
+      suunta: Math.sign(kohde - nykyinen) || suunta,
+      piirra: () => piirraTutkiSivu(ui, kohde, { heti: true }),
+      peru: () => {
+        piirraTutkiSivu(ui, nykyinen, { heti: true });
+        kortti.scrollTop = vieritys;
+      },
+    })) return;
+  }
+  piirraTutkiSivu(ui, indeksi, { heti, suunta });
+}
+
+/** Sivunumero lehden rajoihin: ensimmäinen selattava … viimeinen. */
+export function rajaaTutkiSivu(ui, indeksi) {
+  return Math.min(Math.max(indeksi, tutkiEkaSivu(ui)), tutkiSivuja(ui) - 1);
+}
+
+/**
+ * Sivun piirto oikeaan korttiin. Kaikki, mikä ennen oli naytaTutkiSivu:
+ * kääre yllä päättää vain, animoidaanko käännös teatterissa.
+ */
+export function piirraTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) {
   // Arkki oikeaan leveyteen ENNEN sivun rakentamista: sivun sisällä
   // on kortin leveydestä mitoitettavia piirroksia (kohdekartta,
   // maakäyrät, tilastopalkit), ja niiden on nähtävä lopullinen mitta.
   ui.mitoitaArkki();
   const sivuja = tutkiSivuja(ui);
-  const i = Math.min(Math.max(indeksi, tutkiEkaSivu(ui)), sivuja - 1);
+  const i = rajaaTutkiSivu(ui, indeksi);
   ui.lehtitila.tutkiSivu = i;
   const etusivu = i === 0;
   if (ui.arrivalPalstat) ui.arrivalPalstat.hidden = !etusivu;
@@ -1815,29 +1861,89 @@ export function kytkeTutkiSelaus(ui, kortti) {
   if (ui.lehtitila.tutkiSelausKytketty) return;
   ui.lehtitila.tutkiSelausKytketty = true;
   let alku = null;
+  /*
+   * Pyyhkäisyn päättävä napsautus ei saa painaa nappia eikä avata
+   * kuvaa sillä sivulla, jolle juuri siirryttiin. Tulppa on
+   * kertakäyttöinen JA lyhytikäinen: kosketusveto ei tuota clickiä
+   * lainkaan (vain hiiren raahaus tuottaa), ja ilman määräaikaa tulppa
+   * jäisi odottamaan ja söisi seuraavan oikean napautuksen — napin,
+   * jota pelaaja painaa sivun luettuaan.
+   */
+  const tulppaaNapsautus = () => {
+    const tulppa = (napsautus) => {
+      napsautus.preventDefault();
+      napsautus.stopPropagation();
+    };
+    kortti.addEventListener('click', tulppa, { capture: true, once: true });
+    setTimeout(() => kortti.removeEventListener('click', tulppa, { capture: true }), 350);
+  };
+  /*
+   * SORMI KÄÄNTÄÄ SIVUA (js/sivunkaanto.js aloitaSivunVeto): kun liike
+   * on vaakasuuntainen ja ylittää 12 px, sivun kulma tarttuu sormeen ja
+   * seuraa sitä; irrotus vie sivun yli tai palauttaa sen. Kohdesivu
+   * piirretään korttiin jo tarttuessa (sama piirto kuin napista), ja
+   * peruuntunut veto piirtää lähtösivun takaisin vierityskohtineen.
+   * Ilman teatteria (kirjasto puuttuu, reduced motion, lippu pois)
+   * pyyhkäisy toimii kuten ennen: 60 px vaakaa pointerupissa.
+   */
+  const aloitaVeto = (e) => {
+    const dx = e.clientX - alku.x;
+    const suunta = dx < 0 ? 1 : -1;
+    const nykyinen = ui.lehtitila.tutkiSivu ?? tutkiEkaSivu(ui);
+    const kohde = nykyinen + suunta;
+    if (kohde < tutkiEkaSivu(ui) || kohde >= tutkiSivuja(ui)) return null;
+    const vieritys = kortti.scrollTop;
+    const veto = aloitaSivunVeto({
+      dialogi: ui.arrivalDialog,
+      kortti,
+      suunta,
+      piirra: () => piirraTutkiSivu(ui, kohde, { heti: true }),
+      peru: () => {
+        piirraTutkiSivu(ui, nykyinen, { heti: true });
+        kortti.scrollTop = vieritys;
+      },
+      clientX: e.clientX,
+      clientY: e.clientY,
+    });
+    if (!veto) return null;
+    sfx.play('paper');
+    try { kortti.setPointerCapture(e.pointerId); } catch { /* ei kaappausta */ }
+    return veto;
+  };
   kortti.addEventListener('pointerdown', (e) => {
     if (e.pointerType === 'mouse' && e.button !== 0) { alku = null; return; }
-    alku = { x: e.clientX, y: e.clientY, pysty: false };
+    // Tekstikentässä vaakaliike on valintaa, ei sivunkääntöä.
+    if (e.target.closest?.('input, textarea, select')) { alku = null; return; }
+    alku = { x: e.clientX, y: e.clientY, pysty: false, veto: null, vanha: false };
   });
   kortti.addEventListener('pointermove', (e) => {
     if (!alku || alku.pysty) return;
-    if (Math.abs(e.clientY - alku.y) > Math.abs(e.clientX - alku.x)) alku.pysty = true;
+    if (alku.veto) { alku.veto.vedä(e.clientX, e.clientY); return; }
+    const dx = Math.abs(e.clientX - alku.x);
+    const dy = Math.abs(e.clientY - alku.y);
+    if (dy > dx) { alku.pysty = true; return; }
+    if (alku.vanha || dx < 12) return;
+    alku.veto = aloitaVeto(e);
+    if (!alku.veto) alku.vanha = true;
   });
-  kortti.addEventListener('pointercancel', () => { alku = null; });
+  kortti.addEventListener('pointercancel', () => {
+    alku?.veto?.peru();
+    alku = null;
+  });
   kortti.addEventListener('pointerup', (e) => {
     const a = alku;
     alku = null;
     if (!a || a.pysty) return;
+    if (a.veto) {
+      a.veto.irrota(e.clientX, e.clientY);
+      tulppaaNapsautus();
+      return;
+    }
     const dx = e.clientX - a.x;
     const dy = e.clientY - a.y;
     if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 2) return;
     if (!vaihdaTutkiSivu(ui, dx < 0 ? 1 : -1)) return;
-    // Pyyhkäisyn päättävä napsautus ei saa painaa nappia eikä avata
-    // kuvaa sillä sivulla, jolle juuri siirryttiin.
-    kortti.addEventListener('click', (napsautus) => {
-      napsautus.preventDefault();
-      napsautus.stopPropagation();
-    }, { capture: true, once: true });
+    tulppaaNapsautus();
   });
   ui.arrivalDialog.addEventListener('keydown', (e) => {
     if (!ui.arrivalDialog.open || tutkiSivuja(ui) < 2) return;

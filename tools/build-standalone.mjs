@@ -558,6 +558,14 @@ const MODULES = [
   'js/fokustehtavat.js',
   // M5c: maalehden koneisto ennen lehteä (lehti tuo sen piirtäjät).
   'js/maalehti.js',
+  /*
+   * Kääntöteatteri ennen lehteä (lehti tuo sen staattisesti). Itse
+   * kirjasto (page-flip) EI tule mukaan: yhden tiedoston versio jää
+   * ilman valmiita kirjastoja kuten ilman linssejä (Raamattu 5.9.2026),
+   * ja moduuli tunnistaa dist-version manifestin puutteesta —
+   * kääntöä ei edes yritetä ladata, lehti käyttää vanhaa liukua.
+   */
+  'js/sivunkaanto.js',
   // M5a: lehden sivukoneisto (tuo nähtävyydet ja lukijan).
   'js/lehti.js',
   /*

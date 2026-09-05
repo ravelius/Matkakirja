@@ -297,6 +297,28 @@ export const LAHTEET = [
     ],
   },
   {
+    otsikko: 'Ohjelmakirjastot',
+    johdanto: 'Valmiit kirjastot, jotka peli lataa ämpärin vendor/-polusta '
+      + 'tarvittaessa (Raamattu 5.9.2026: VALMIIT KIRJASTOT). Lisenssiteksti '
+      + 'kulkee kirjaston rinnalla samassa kansiossa.',
+    rivit: [
+      {
+        nimi: 'StPageFlip 2.0.7 (page-flip) — lehden sivunkääntö',
+        tekija: 'Nodlik (Oleg Litovski), github.com/Nodlik/StPageFlip',
+        lisenssi: 'MIT',
+        huom: 'Tarkistettu 5.9.2026 paketin LICENSE-tiedostosta (npm page-flip 2.0.7). '
+          + 'Ämpärissä vendor/page-flip-2.0.7.browser.js ja .LICENSE.txt.',
+      },
+      {
+        nimi: 'Globe.gl 2.46.2 (three.js mukana) — karttapallo ja pallolauta',
+        tekija: 'Vasco Asturiano (vasturiano), github.com/vasturiano/globe.gl',
+        lisenssi: 'MIT',
+        huom: 'Tarkistettu 5.9.2026 (npm globe.gl 2.46.2, LICENSE). Ämpärissä '
+          + 'vendor/globe.gl-2.46.2.min.js.',
+      },
+    ],
+  },
+  {
     otsikko: 'Tekstit',
     johdanto: 'Tietovisat, tiivistelmät, artikkelit ja aikalaislainaukset.',
     rivit: [

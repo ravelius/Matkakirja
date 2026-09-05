@@ -27,6 +27,7 @@ import { stopDiaryVoice, stopIntroVoice } from './luenta.js';
 import { asennaPollo, polloGeneroiEhdotukset } from './pollo.js';
 // Sähkejärjestelmä: retkikunta, sähkeet ja kaveriapu (js/sahke.js).
 import { kytkeSahke, nollaaSahke } from './sahke.js';
+import { asetaSivunkaanto, sivunkaantoPaalla } from './sivunkaanto.js';
 // Lukijaäänen säädin (kehittäjätila): asetukset ja näytekuuntelu.
 import {
   asetaPuheenNopeus, asetaPuheenVoima, luePuheAsetukset, puheenNopeus,
@@ -1307,6 +1308,8 @@ const kehittajaValikko = document.getElementById('kehittaja-valikko');
 const kehittajaVihje = document.getElementById('kehittaja-valikko-vihje');
 const maailmaNappi = document.getElementById('kehittaja-maailma-btn');
 const mittariNappi = document.getElementById('kehittaja-mittari-btn');
+// Sivunkääntö (StPageFlip): paluuoptio vanhaan sivupinoon, ks. index.html.
+const sivunkaantoNappi = document.getElementById('kehittaja-sivunkaanto-btn');
 /*
  * PALLOLAUTA (omistaja 5.9.2026: *"Voisiko pallon vaihtaa pelin kartaksi
  * suoraan?"* — Raamattu KARTTAPALLO ON PELILAUTA). Vipu on palautusoptio
@@ -1404,6 +1407,15 @@ function paivitaKehittajaValikko() {
     polloGenerointiNappi.title = 'Generoi pöllön kysymysehdotukset heti tälle näkymälle '
       + '(myös uudelleen jo generoidulle)';
   }
+  const sivunkaanto = sivunkaantoPaalla();
+  merkitseKytkin(sivunkaantoNappi, sivunkaanto);
+  if (sivunkaantoNappi) {
+    sivunkaantoNappi.title = sivunkaanto
+      ? 'Sivunkääntö on PÄÄLLÄ: lehti kääntyy kuin kirja (StPageFlip ämpäristä) '
+        + '— kytke pois palataksesi vanhaan liukuun'
+      : 'Sivunkääntö on pois: lehden sivut liukuvat kuten ennen — kytke päälle '
+        + 'saadaksesi kirjamaisen käännön';
+  }
   const pallolauta = lautaValinta() === 'pallo';
   merkitseKytkin(pallolautaNappi, pallolauta);
   if (pallolautaNappi) {
@@ -1486,6 +1498,15 @@ mittariNappi?.addEventListener('click', () => {
   if (!halutaan) naytaKehittajaVihje('Mittari pois.');
   else if (kaynnissa) naytaKehittajaVihje('Mittari kartan yläkulmassa.');
   else naytaKehittajaVihje('Mittari kytketty: näkyy kartalla — lataa sivu uudelleen.');
+});
+
+sivunkaantoNappi?.addEventListener('click', () => {
+  const halutaan = !sivunkaantoPaalla();
+  asetaSivunkaanto(halutaan);
+  paivitaKehittajaValikko();
+  // Vaikuttaa seuraavaan käännökseen heti: kirjasto ladataan lehden
+  // avautuessa, lippu luetaan joka käännöksellä (js/sivunkaanto.js).
+  naytaKehittajaVihje(halutaan ? 'Sivunkääntö päällä: lehti kääntyy kuin kirja.' : 'Sivunkääntö pois: vanha liuku.');
 });
 
 pallolautaNappi?.addEventListener('click', () => {

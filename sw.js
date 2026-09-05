@@ -34,6 +34,9 @@ const SHELL = [
   './js/kohtaamiskuvat.js',
   './js/opas.js',
   './js/lehti.js',
+  // Sivunkääntö (5.9.2026): teatteri kuuluu SHELLiin; itse kirjasto
+  // (page-flip) tulee ämpärin vendor/-polusta ja säilyy VENDORCACHEssa.
+  './js/sivunkaanto.js',
   './js/ehdotukset.js',
   './js/kuvavinkki.js',
   './js/havainnekuva.js',
@@ -1383,6 +1386,17 @@ const OMA_VALOKUVA = (osoite) => osoite.pathname.includes('/assets/valokuvat/');
  * kuullut luennat kaikilla pelaajilla turhaan.
  */
 const AANICACHE = 'matkakirja-aanet-v1';
+/*
+ * VALMIIT KIRJASTOT ÄMPÄRIN vendor/-POLUSTA (Raamattu 5.9.2026,
+ * VALMIIT KIRJASTOT: STPAGEFLIP ENSIN): page-flip ja Globe.gl ladataan
+ * <script>-tagilla vasta tarvittaessa (js/sivunkaanto.js, js/pallo.js).
+ * Tiedostonimi kantaa versionumeron, joten sisältö ei koskaan muutu
+ * saman nimen alla — kori on pysyvä eikä tyhjene versionvaihdossa, ja
+ * kerran ladattu kirjasto toimii lentokoneessa. Skriptin oma pyyntö on
+ * no-cors (opaakki vastaus ei kelpaa koriin), joten nouto tehdään
+ * cors-tilassa kuten kuvilla, ja tavallinen fetch jää varareitiksi.
+ */
+const VENDORCACHE = 'matkakirja-vendor-v1';
 
 /**
  * Osittaisvastaus (206) välimuistista noudetusta kokonaisesta äänestä.
@@ -1469,7 +1483,7 @@ self.addEventListener('activate', (event) => {
     caches
       .keys()
       .then((keys) => Promise.all(
-        keys.filter((k) => k !== CACHE && k !== KUVACACHE && k !== AANICACHE
+        keys.filter((k) => k !== CACHE && k !== KUVACACHE && k !== AANICACHE && k !== VENDORCACHE
           // Lukijaäänen pysyvät säilöt (js/puhe.js) eivät ole tämän
           // workerin omia — siivous ei saa tuhota niitä versionvaihdossa.
           && !k.startsWith('matkakirja-puhe-')).map((k) => caches.delete(k))))
@@ -1579,6 +1593,23 @@ self.addEventListener('fetch', (event) => {
      */
     if (osoite.hostname.endsWith('.r2.dev') && /^\/(?:audio|aanet)\//.test(osoite.pathname)) {
       event.respondWith(aaniPeilista(event.request));
+      return;
+    }
+    // Valmiit kirjastot (vendor/): välimuisti ensin, talletus
+    // ensimmäisellä latauksella (ks. VENDORCACHE).
+    if (osoite.hostname.endsWith('.r2.dev') && osoite.pathname.startsWith('/vendor/')) {
+      event.respondWith(
+        caches.open(VENDORCACHE).then(async (kori) => {
+          const osuma = await kori.match(event.request.url);
+          if (osuma) return osuma;
+          const vastaus = await fetch(event.request.url, { mode: 'cors' }).catch(() => null);
+          if (vastaus && vastaus.ok) {
+            kori.put(event.request.url, vastaus.clone());
+            return vastaus;
+          }
+          return fetch(event.request).catch(() => vastaus ?? Response.error());
+        }),
+      );
       return;
     }
     return;
