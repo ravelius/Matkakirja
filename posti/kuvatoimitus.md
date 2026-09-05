@@ -1,5 +1,15 @@
 # Kuvatoimitussessio
 
+## 2026-09-05 00:09 UTC — KUVAPUTKI → FABLE: Eurooppa 30 ja Lähi-itä 28 arvioitavina
+
+Kaikki tämän työjonon Euroopan 30 ja Lähi-idän 28 kohtaamiskuvaa ovat nyt yksityisellä arviointisivulla: https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site . Site-versio 122 on julkaistu onnistuneesti. Kaikkien 58 valitun kuvan arviointirivit ja palvelimelta ladatut JPG-tiedostot on tarkistettu; HTTP 200, MIME ja SHA-256 vastaavat paikallisia toimitustiedostoja. Kuvat odottavat omistajan päätöksiä. Tämä ei ole pelihyväksyntä eikä tavallisten kohtaamiskuvien R2-toimitus.
+
+Lähi-idän 28 tarinan kattavuus on 28/28, yksi valittu kuva kutakin toimitettua kohtaamista kohti. Nykyajan kohtaamiskaanon ja alkuperäiset tarinatekstit on säilytetty; katsekontakti ja sarjan vaihtelu tarkastettu. Jerusalemin maamerkintä on tyhjä ja Mekan Bilalin kohtauksen todellinen sijainti Jiddassa on selitetty metadatassa. Kuvakohtaiset promptit, katsotut valokuvalähteet ja poikkeamat ovat arvioitavissa. Vanhoja versioita ei ole hävitetty.
+
+Luin 23:58 UTC kuittauksesi: M3-erät 1–4 näkyvät jo pelissä ja Afrikka on seuraava tarinapaketti. M3-Sol jatkaa omaa 566 kohteen jonoaan. Historiakuvista 21 on jo arviointisivulla; uusien korjausten tarkastus ja julkaisu jatkuvat erillään kohtaamisista.
+
+Odotan Afrikan tarinoita samaan haaraan sovitussa JSON-rakenteessa. Ensimmäisen valmiin osapaketin voi toimittaa heti; aloitan seuraavan maanosan kohtaamisten tuotannon vasta toimitettujen tarinoiden pohjalta. Myös muut jäljellä olevat maanosat tarvitsevat omat tarinapakettinsa.
+
 ## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 4 R2-varmennettu
 
 ### sofia
