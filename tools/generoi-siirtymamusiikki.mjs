@@ -47,12 +47,15 @@
  * hiljaisuustarkistus, vienti ämpäriin) paikka ei ole palettityökalun
  * sisällä if-haarana vaan omassa tiedostossaan.
  *
- * API-KUTSU ON SAMA kuin tools/generoi-musiikki.mjs:ssä — sama
- * osoite, sama malli, sama muoto, sama force_instrumental, sama
- * xi-api-key-otsake. Jos rajapinta muuttuu, molemmat on korjattava;
- * kutsu on tarkoituksella kopioitu eikä tuotu, koska palettityökalu
- * suorittaa pääohjelmansa moduulitasolla eikä sitä voi tuoda tänne
- * kutsumatta sitä samalla.
+ * LYRIAN KUTSU ON YHTEINEN tools/generoi-musiikki.mjs:n kanssa:
+ * molemmat tuovat sen moduulista tools/lyria.mjs (osoite, malli,
+ * kehotteen muoto, `-lyria`-pääte, avaimen luku). Aiemmin ElevenLabsin
+ * kutsu oli kopioitu molempiin, koska palettityökalu suoritti
+ * pääohjelmansa moduulitasolla eikä sitä voinut tuoda kutsumatta sitä
+ * samalla; se este poistui, kun palettityökalu sai oman `main()`:insa
+ * (omistajan linjaus 5.9.2026: *"kaikki musiikki lyrialla"*).
+ * ElevenLabsin kutsu on yhä paikallinen — se on vertailumoottori, ja
+ * sen runko eroaa lajikohtaisissa kentissä.
  *
  * ------------------------------------------------------------------
  * MITEN SAUMA TEHDÄÄN
@@ -116,7 +119,8 @@
  * aws s3 cp -komento ja samat neljä salaisuutta kuin
  * .github/workflows/vie-aanet.yml:ssä ja peilaa.yml:ssä.
  *
- * API-avain luetaan vain ympäristöstä (ELEVEN_API_KEY) eikä sitä
+ * API-avain luetaan vain ympäristöstä (GOOGLE_API_KEY Lyrialle,
+ * ELEVEN_API_KEY vertailumoottorille) eikä sitä
  * tulosteta koskaan. HUOM konttiympäristössä: Noden fetch ei käytä
  * ympäristön proxyä ilman NODE_USE_ENV_PROXY=1 (sama pätkä kuin
  * tools/mittaa-aanet.mjs:ssä).
@@ -129,6 +133,10 @@ import {
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+import {
+  LYRIA_MALLI, MOOTTORIT, avaimenNimi, haeLyriasta, moottorinAvain, raidanTiedosto,
+} from './lyria.mjs';
 
 const TAMA = fileURLToPath(import.meta.url);
 const JUURI = resolve(dirname(TAMA), '..');
@@ -164,13 +172,15 @@ const MUOTO = 'mp3_44100_128';
  * vanha"), joten peli soittaa -lyria-nimiset raidat ja Lyria on
  * työkalun oletusmoottori. ElevenLabs jää vertailumoottoriksi
  * (--moottori eleven, paljas nimi, ei soi pelissä).
+ *
+ * LYRIAN HAKU ON YHTEINEN MOLEMMILLE MUSIIKKITYÖKALUILLE
+ * (tools/lyria.mjs), koska omistajan linjaus 5.9.2026 illalla on
+ * *"kaikki musiikki lyrialla"* — myös musiikkipaletti. Vastaus on JSON,
+ * jonka sisältä äänilohko etsitään; sitä etsintää ei ole syytä pitää
+ * kahtena kopiona. Nimet viedään täältä eteenpäin, jotta kutsujat ja
+ * testit näkevät ne tutusta paikasta.
  */
-const LYRIA_OSOITE = 'https://generativelanguage.googleapis.com/v1beta/interactions';
-const LYRIA_MALLI = 'lyria-3.5';
-export const MOOTTORIT = ['eleven', 'lyria'];
-/** Raidan tiedostonimi moottorin mukaan: lyria saa oman päätteen. */
-export const raidanTiedosto = (raita, moottori) => (moottori === 'lyria'
-  ? raita.tiedosto.replace(/\.mp3$/, '-lyria.mp3') : raita.tiedosto);
+export { MOOTTORIT, raidanTiedosto };
 
 /*
  * Mallilta tilataan reilusti pidempi pätkä kuin looppi: leikkaus
@@ -578,42 +588,6 @@ async function haeApista(raita, avain, kohde) {
   return data.length;
 }
 
-/**
- * Lyria 3.5 Gemini API:n kautta. Vastaus on JSON, jonka steps[].content[]
- * sisältää audio-lohkon base64-datana (mp3 oletuksena). Raita pyydetään
- * instrumentaalina ja lyhyenä; loopin leikkaus ja tason normalisointi
- * ovat samat kuin ElevenLabsilla.
- */
-async function haeLyriasta(raita, avain, kohde) {
-  const sekunnit = Math.round(lahdeMs(raita) / 1000);
-  const vastaus = await fetch(LYRIA_OSOITE, {
-    method: 'POST',
-    headers: { 'x-goog-api-key': avain, 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      model: LYRIA_MALLI,
-      input: `${raita.prompt} Instrumental only, absolutely no vocals or singing. `
-        + `A short cue of about ${sekunnit} seconds that could loop seamlessly.`,
-    }),
-    signal: AbortSignal.timeout(300000),
-  });
-  if (!vastaus.ok) {
-    throw new Error(`Lyria HTTP ${vastaus.status}: ${(await vastaus.text()).slice(0, 400)}`);
-  }
-  const json = await vastaus.json();
-  const lohkot = [];
-  const kerää = (x) => {
-    if (!x || typeof x !== 'object') return;
-    if (Array.isArray(x)) { x.forEach(kerää); return; }
-    if (x.type === 'audio' && typeof x.data === 'string') lohkot.push(x);
-    for (const v of Object.values(x)) if (v && typeof v === 'object') kerää(v);
-  };
-  kerää(json);
-  if (!lohkot.length) throw new Error(`Lyria: vastauksessa ei audio-lohkoa (${JSON.stringify(json).slice(0, 300)})`);
-  const data = Buffer.from(lohkot[0].data, 'base64');
-  writeFileSync(kohde, data);
-  return data.length;
-}
-
 /** Leikkaa looppi, normalisoi taso ja kirjoita mp3. */
 function leikkaaLooppi(lahde, kohde, raita, tyokansio) {
   const lahteenKesto = kestoSekunteina(lahde);
@@ -745,11 +719,9 @@ async function main() {
     }
   }
 
-  const avain = liput.moottori === 'lyria'
-    ? (process.env.GOOGLE_API_KEY ?? process.env.GEMINI_API_KEY)
-    : (process.env.ELEVEN_API_KEY ?? process.env.ELEVENLABS_API_KEY);
+  const avain = moottorinAvain(liput.moottori);
   if (!liput.kuiva && !avain) {
-    console.error(`${liput.moottori === 'lyria' ? 'GOOGLE_API_KEY' : 'ELEVEN_API_KEY'} puuttuu ympäristöstä — musiikkia ei voi generoida.`);
+    console.error(`${avaimenNimi(liput.moottori)} puuttuu ympäristöstä — musiikkia ei voi generoida.`);
     console.error('Kuivan ajon saa ilman avainta: --laji kaikki --kuiva');
     process.exit(1);
   }
@@ -789,7 +761,9 @@ async function main() {
       } else {
         // eslint-disable-next-line no-await-in-loop
         const tavut = liput.moottori === 'lyria'
-          ? await haeLyriasta(raita, avain, lahde)
+          // Siirtymä- ja linssiraidat ovat kaikki looppeja, joten sauma
+          // pyydetään myös Lyrialta — leikkaus vain varmistaa sen.
+          ? await haeLyriasta({ prompt: raita.prompt, kestoMs: lahdeMs(raita) }, avain, lahde)
           : await haeApista(raita, avain, lahde);
         console.log(`   API: ${(tavut / 1024).toFixed(0)} kt → ${lahde}`);
       }

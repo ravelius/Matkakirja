@@ -53,7 +53,7 @@ globalThis.Audio = class TynkaAudio {
   pause() {}
 };
 
-const { AANI_JUURI } = await import('../js/media.js');
+const { AANI_JUURI, MUSIIKIN_PAATE, musaPolku } = await import('../js/media.js');
 const { MUSIIKKILAJIT } = await import('../js/siirtymamusiikki.js');
 const {
   MUSIIKKISIVUN_RAIDAT, SFX_NIMET, TUNTEMATTOMAT_LAJIT, musiikkiSivut, raidanOsoitteet,
@@ -85,14 +85,25 @@ test('musiikkipaletin neljä raitaa ovat luettelossa', () => {
 });
 
 test('paletin tiedostot ovat pelin käyttämät musa-nimet', () => {
+  /*
+   * MOOTTORIPÄÄTE TULEE KYTKIMESTÄ (js/media.js MUSIIKIN_PAATE, ''
+   * tai '-lyria'; omistajan linjaus 5.9.2026 *"kaikki musiikki
+   * lyrialla"*). Lehti ei saa kuunnella eri tiedostoa kuin peli
+   * soittaa, joten odotus lasketaan samasta apurista kuin pelinkin
+   * polut — kovakoodattu nimi tekisi tästä testistä sen, joka estää
+   * kytkimen kääntämisen.
+   */
   const nimet = MUSIIKKISIVUN_RAIDAT
     .filter((r) => r.osasto === 'paletti').map((r) => r.oma);
   assert.deepEqual(nimet, [
-    'assets/audio/musa-pohja.mp3',
-    'assets/audio/musa-visa-2.mp3',
-    'assets/audio/musa-aarre.mp3',
-    'assets/audio/musa-paaaarre.mp3',
+    musaPolku('musa-pohja'),
+    musaPolku('musa-visa-2'),
+    musaPolku('musa-aarre'),
+    musaPolku('musa-paaaarre'),
   ]);
+  for (const nimi of nimet) {
+    assert.ok(nimi.endsWith(`${MUSIIKIN_PAATE}.mp3`), `${nimi}: moottoripääte ohitettu`);
+  }
 });
 
 /* ── 3. polut ────────────────────────────────────────────────────── */

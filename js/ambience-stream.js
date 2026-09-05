@@ -14,7 +14,7 @@ import {
 } from './aani-ehdokkaat.js';
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import {
-  aaniOsoite, omaAaniPolku, onPeilista, peiliPetti,
+  aaniOsoite, musaPolku, omaAaniPolku, onPeilista, peiliPetti,
 } from './media.js';
 // Lukijaäänen piiri kuuluu samaan sanelun kovaan taukoon kuin
 // tehosteet ja maisema (ks. taukoaSanelunAjaksi).
@@ -1004,7 +1004,7 @@ export function startQuizMusic(lauta) {
  * taustaäänten kytkin pois (js/main.js kaannaTausta) ja radiotila
  * (js/linssit/radio.js paalle), jossa radio on ainoa ääni.
  */
-const POHJA_MUSIIKKI = 'assets/audio/musa-pohja.mp3';
+const POHJA_MUSIIKKI = musaPolku('musa-pohja');
 /*
  * Taso ≈ −19 dB suhteessa ambienssiin. Maiseman efektiivinen taso on
  * VOIMA (0,14) kertaa äänitteen oma mitattu kerroin, joka on

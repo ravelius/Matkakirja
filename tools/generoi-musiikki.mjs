@@ -1,7 +1,13 @@
 /*
- * Pelin oma MUSIIKKIPALETTI ElevenLabsin musiikkirajapinnalla
- * (omistajan tilaus 29.8.2026: "generoi ääniä ja musiikkeja ja laita
- * suoraan peliin").
+ * Pelin oma MUSIIKKIPALETTI (omistajan tilaus 29.8.2026: "generoi ääniä
+ * ja musiikkeja ja laita suoraan peliin").
+ *
+ * MOOTTORI ON LYRIA 3.5 (omistajan linjaus 5.9.2026 illalla,
+ * sanatarkasti: *"kaikki musiikki lyrialla"*). Siirtymä- ja
+ * linssiraidat siirtyivät Lyriaan jo aiemmin samana päivänä ("ota lyra
+ * musiikit käyttöön peliin ja poista vanha"); tämä työkalu tekee saman
+ * paletille. ElevenLabs Music jää vertailumoottoriksi
+ * (`--moottori eleven`), jotta raidat voi kuunnella rinnakkain.
  *
  * NELJÄ RAITAA, KAKSI PARIA. Paletti ei ole neljä irrallista kappaletta
  * vaan kaksi paria, ja juuri se tekee siitä paletin:
@@ -11,6 +17,12 @@
  *   musa-visa-2.mp3    kysymyksen tikittävä uteliaisuus (looppi).
  *   musa-aarre.mp3     tavallisen aarteen lämmin aihe (ei looppi).
  *   musa-paaaarre.mp3  SAMA AIHE juhlavampana pääaarteelle (ei looppi).
+ *
+ * Lyrian raidat saavat päätteen `-lyria` (musa-pohja-lyria.mp3 jne.),
+ * ElevenLabsin paljaan nimen — sama sääntö kuin siirtymäraidoilla, ja
+ * samasta paikasta (tools/lyria.mjs `raidanTiedosto`). Näin molemmat
+ * moottorit voi generoida ylikirjoittamatta toisiaan, ja pelin puoli
+ * kääntyy yhdellä kytkimellä (js/media.js MUSIIKIN_PAATE).
  *
  * Kahdella viimeisellä on sama sävelaihe kahdessa asussa: kun pelaaja
  * lopulta löytää Aarnin luettelon pääaarteen, hän on kuullut aiheen jo
@@ -25,34 +37,97 @@
  * Paluu on siis yhden rivin vaihto eikä tiedoston palautus — sama
  * periaate kuin js/sound.js:n SALLITUT_TEHOSTEET-historiassa.
  *
- * RAJAPINTA (haettu dokumentaatiosta 29.8.2026):
- *   POST https://api.elevenlabs.io/v1/music
- *   otsakkeet: xi-api-key, Content-Type: application/json
- *   runko: { prompt, music_length_ms (3000…600000), model_id,
- *            output_format, force_instrumental }
- *   vastaus: mp3-tavut sellaisenaan (ei JSONia) — sama muoto kuin
- *   /v1/text-to-dialogue palauttaa luennoille.
- * Yksityiskohtaisempi /v1/music/detailed palauttaa JSONin
- * sävellyssuunnitelmineen; sitä ei tarvita, koska raidat ovat lyhyitä
- * ja yhdellä promptilla kuvattavia.
+ * ------------------------------------------------------------------
+ * EI LOOPIN LEIKKAUSTA — JA MIKSI EI
+ * ------------------------------------------------------------------
  *
- * Käyttö:  ELEVEN_API_KEY=... node tools/generoi-musiikki.mjs pohja visa
- *          ELEVEN_API_KEY=... node tools/generoi-musiikki.mjs kaikki
+ * Siirtymäraidat leikataan ffmpegillä saumattomaksi silmukaksi
+ * (tools/generoi-siirtymamusiikki.mjs "MITEN SAUMA TEHDÄÄN"). Paletti
+ * EI kulje sen koneiston läpi, vaan mallin tuotos menee levylle
+ * sellaisenaan — kuten ennenkin, ja tarkoituksella:
+ *
+ *   - Kaksi neljästä raidasta ei ole looppi lainkaan. Aarreaiheilla on
+ *     alku ja loppu, ja ne soivat kerran paljastuskortin päällä.
+ *   - Kaksi looppiraitaa soivat pelin hiljaisimmalla tasolla
+ *     (pohjavire −19 dB ambienssiin, visamusiikki kortin alla). Sauma
+ *     pyydetään promptissa ("begin and end on the same quiet sustained
+ *     chord"), ja se on kelvannut kuuntelussa.
+ *   - Leikkuri kaataisi kelvottoman raidan, ja tässä ketjussa kelvoton
+ *     raita on kuuntelijan päätös eikä mittarin: paletti kuunnellaan
+ *     PR:ssä ennen julkaisua.
+ *
+ * Jos looppisauma joskus kuuluu naksahduksena, oikea korjaus on ajaa
+ * raita saman leikkurin läpi — ei rakentaa tänne toista.
+ *
+ * ------------------------------------------------------------------
+ * VIENTI: REPON KAUTTA, EI SUORAAN ÄMPÄRIIN
+ * ------------------------------------------------------------------
+ *
+ * Paletin raita kirjoitetaan `assets/audio/`-kansioon. Sieltä
+ * .github/workflows/vie-aanet.yml vie sen ämpärin `audio/`-kansioon —
+ * ja juuri sitä polkua peli hakee (js/media.js `aaniUrl`:
+ * assets/audio/x.mp3 → <ämpäri>/audio/x.mp3). Siirtymäraidat menevät
+ * ämpärin `aanet/`-kansioon, koska peli kokeilee niille ensin sitä
+ * polkua; paletille aanet/ olisi umpikuja, koska yksikään paletin
+ * soittokohta ei kysy sitä.
+ *
+ * Ero on siis pelin polussa eikä maun asia. Sivutuotteena paletti
+ * KUUNNELLAAN ennen julkaisua: työnkulku jättää mp3:t omalle
+ * haaralleen PR:ää varten.
+ *
+ * RAJAPINNAT
+ *   Lyria (oletus):  tools/lyria.mjs — Gemini API, malli lyria-3.5,
+ *                    avain GOOGLE_API_KEY.
+ *   ElevenLabs:      POST https://api.elevenlabs.io/v1/music
+ *                    otsakkeet: xi-api-key, Content-Type: application/json
+ *                    runko: { prompt, music_length_ms (3000…600000),
+ *                             model_id, output_format, force_instrumental }
+ *                    vastaus: mp3-tavut sellaisenaan (ei JSONia).
+ *                    Avain ELEVEN_API_KEY.
+ *
+ * Käyttö:  GOOGLE_API_KEY=... node tools/generoi-musiikki.mjs pohja visa
+ *          GOOGLE_API_KEY=... node tools/generoi-musiikki.mjs kaikki
+ *          ELEVEN_API_KEY=... node tools/generoi-musiikki.mjs kaikki --moottori eleven
  * Kuiva testiajo ilman avainta ja ilman API-kutsuja (mitä ajo tekisi):
+ *          node tools/generoi-musiikki.mjs kaikki --kuiva
  *          ELEVEN_KUIVA=1 node tools/generoi-musiikki.mjs kaikki
- * Avain on repon Actions-secretissä (Raamattu → "Äänet ja luennat");
- * sitä ei tallenneta minnekään, ei edes lokiin.
+ * Avaimet ovat repon Actions-secreteissä (Raamattu → "Äänet ja
+ * luennat"); niitä ei tallenneta minnekään, ei edes lokiin.
  *
  * HUOM konttiympäristössä: Noden fetch ei käytä ympäristön proxyä
- * ilman lippua — aja NODE_USE_ENV_PROXY=1, tai "Host not in
- * allowlist" -virhe tulee omasta putkesta vaikka verkko on auki.
+ * ilman lippua — tämä työkalu käynnistää itsensä uudelleen
+ * NODE_USE_ENV_PROXY=1:llä, muuten "Host not in allowlist" -virhe
+ * tulisi omasta putkesta vaikka verkko on auki.
  */
 
+import { spawnSync } from 'node:child_process';
 import { writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+import {
+  LYRIA_MALLI, MOOTTORIT, avaimenNimi, haeLyriasta, moottorinAvain, raidanTiedosto,
+} from './lyria.mjs';
+
+export { MOOTTORIT, raidanTiedosto };
+
+const TAMA = fileURLToPath(import.meta.url);
+const JUURI = resolve(dirname(TAMA), '..');
+
+/*
+ * Sama vartija kuin generoi-siirtymamusiikki.mjs:ssä ja
+ * mittaa-aanet.mjs:ssä: ilman lippua Noden fetch ei lue HTTPS_PROXYa.
+ * Ohitetaan testiajossa (tiedosto tuodaan moduulina) — vain suoraan
+ * ajettu prosessi käynnistetään uudelleen.
+ */
+if (process.argv[1] === TAMA && !process.env.NODE_USE_ENV_PROXY
+  && (process.env.HTTPS_PROXY || process.env.https_proxy)) {
+  const ajo = spawnSync(process.execPath, [TAMA, ...process.argv.slice(2)], {
+    stdio: 'inherit',
+    env: { ...process.env, NODE_USE_ENV_PROXY: '1', NODE_NO_WARNINGS: '1' },
+  });
+  process.exit(ajo.status ?? 1);
+}
 
 const OSOITE = 'https://api.elevenlabs.io/v1/music';
 const MALLI = 'music_v2';
@@ -61,6 +136,7 @@ const MALLI = 'music_v2';
  * oletus olisi mp3_48000_192, mutta paletti soi pelissä ambienssin alla
  * ja väistöjen läpi — 128 kbps riittää siihen kuuluvasti, ja tiedostot
  * pysyvät kevyinä, koska ne haetaan ämpäristä joka avauksella.
+ * Koskee vain ElevenLabsia: Lyria ei ota muotoa parametrina.
  */
 const MUOTO = 'mp3_44100_128';
 
@@ -82,12 +158,19 @@ const TYYLI = 'Style: 1873 travel-diary adventure. Warm chamber orchestra: '
 /*
  * RAIDAT. Tiedostonimi on kytkentä samalla tavalla kuin luennoissa:
  * peli hakee juuri tämän nimen (js/ambience-stream.js POHJA_MUSIIKKI,
- * js/aani-ehdokkaat.js 'musiikki:tietovisa', js/ui.js AARRE_MUSIIKKI),
- * joten nimeäminen on tässä yhdessä paikassa eikä kutsujan muistin
- * varassa.
+ * js/aani-ehdokkaat.js 'musiikki:tietovisa', js/ui.js AARRE_MUSIIKKI —
+ * kaikki neljä js/media.js:n `musaPolku`-apurin kautta), joten
+ * nimeäminen on tässä yhdessä paikassa eikä kutsujan muistin varassa.
  *
- * `looppi: true` ei mene APIin — se on muistutus kuuntelijalle siitä,
- * mitä raidalta pitää tarkistaa ennen julkaisua (sauma).
+ * `looppi: true` on kaksi asiaa yhdessä: muistutus kuuntelijalle siitä,
+ * mitä raidalta pitää tarkistaa ennen julkaisua (sauma), ja Lyrian
+ * kehotteen valinta — looppiraidalta pyydetään saumaa, aarreaiheelta
+ * ei (ks. tools/lyria.mjs `lyriaKehote`).
+ *
+ * Kuvaukset ja promptit ovat sanatarkasti samat kuin ElevenLabsin
+ * aikana: moottorin vaihto ei ole tilaisuus muuttaa sitä, mitä
+ * raidoilta on tilattu. Lyrian oma muoto (instrumentaali, kesto,
+ * looppi) lisätään kehotteeseen tools/lyria.mjs:ssä.
  */
 export const RAIDAT = {
   pohja: {
@@ -153,47 +236,39 @@ export function valitseRaidat(argumentit) {
   return argumentit;
 }
 
-const pyydetyt = valitseRaidat(process.argv.slice(2));
-if (!pyydetyt) {
-  console.error('Anna raidat: node tools/generoi-musiikki.mjs pohja visa aarre paaaarre');
-  console.error(`Koko paletti: node tools/generoi-musiikki.mjs kaikki (${Object.keys(RAIDAT).join(', ')})`);
-  process.exit(1);
-}
-
-/*
- * KUIVA AJO (ELEVEN_KUIVA=1): tulostaa mitä generoitaisiin eikä kutsu
- * APIa. Sama tarkoitus kuin luennoissa: raidan avain, kohdetiedosto,
- * kesto ja prompti näkee vain ajamalla, ja väärä avain huomattaisiin
- * muuten vasta siitä, ettei tiedostoa synny. Avainta ei tarvita.
+/**
+ * Komentoriviliput. Raitojen nimet ovat paljaita argumentteja, koska
+ * niin niitä on aina annettu (`… kaikki`, `… pohja visa`); liput ovat
+ * `--`-alkuisia, kuten siirtymätyökalussa.
+ *
+ * `moottori` on OLETUKSENA lyria (omistaja 5.9.2026: "kaikki musiikki
+ * lyrialla"). `kuiva` luetaan tässä vain lipusta; ympäristömuuttuja
+ * ELEVEN_KUIVA=1 tekee saman, ja se yhdistetään vasta pääohjelmassa,
+ * jotta tämä funktio pysyy puhtaana ja testattavana.
  */
-const kuiva = process.env.ELEVEN_KUIVA === '1';
-
-const avain = process.env.ELEVEN_API_KEY ?? process.env.ELEVENLABS_API_KEY;
-if (!avain && !kuiva) {
-  console.error('ELEVEN_API_KEY puuttuu ympäristöstä — musiikkia ei voi generoida.');
-  console.error('Kuivan testiajon saa ilman avainta: ELEVEN_KUIVA=1 node tools/generoi-musiikki.mjs kaikki');
-  process.exit(1);
+export function tulkitseArgumentit(argumentit) {
+  const liput = { raidat: [], moottori: 'lyria', kuiva: false };
+  for (let i = 0; i < argumentit.length; i += 1) {
+    const arg = argumentit[i];
+    if (arg === '--moottori') {
+      liput.moottori = argumentit[i + 1] ?? null;
+      i += 1;
+      if (!MOOTTORIT.includes(liput.moottori)) {
+        return { ...liput, virhe: `--moottori: ${MOOTTORIT.join('|')}` };
+      }
+    } else if (arg === '--kuiva') {
+      liput.kuiva = true;
+    } else if (arg.startsWith('--')) {
+      return { ...liput, virhe: `tuntematon argumentti: ${arg}` };
+    } else {
+      liput.raidat.push(arg);
+    }
+  }
+  return liput;
 }
 
-if (kuiva) console.log('KUIVA AJO (ELEVEN_KUIVA=1) — APIa ei kutsuta, tiedostoja ei kirjoiteta.');
-
-let virheita = 0;
-for (const nimi of pyydetyt) {
-  const raita = RAIDAT[nimi];
-  if (!raita) {
-    console.error(`${nimi}: tuntematon raita — tunnetut: ${Object.keys(RAIDAT).join(', ')}.`);
-    virheita += 1;
-    continue;
-  }
-  const polku = `assets/audio/${raita.tiedosto}`;
-  if (kuiva) {
-    console.log(`${nimi}: ${polku} — ${(raita.kesto / 1000).toFixed(0)} s`
-      + `${raita.looppi ? ', saumaton looppi' : ''} (${raita.kuvaus})`);
-    console.log(`  malli ${MALLI}, muoto ${MUOTO}, force_instrumental`);
-    console.log(`  prompti: ${raita.prompt}`);
-    continue;
-  }
-  console.log(`${nimi}: generoidaan ${polku} (${(raita.kesto / 1000).toFixed(0)} s)…`);
+/** Yksi maksullinen kutsu ElevenLabsille (vertailumoottori). */
+async function haeElevenLabsista(raita, avain, kohde) {
   const vastaus = await fetch(OSOITE, {
     method: 'POST',
     headers: { 'xi-api-key': avain, 'Content-Type': 'application/json' },
@@ -216,21 +291,90 @@ for (const nimi of pyydetyt) {
      * silloin paletin generointi jää odottamaan käyttöoikeutta —
      * pelikytkennät ovat jo paikallaan ja hiljenevät siististi.
      */
-    console.error(`${nimi}: HTTP ${vastaus.status}: ${(await vastaus.text()).slice(0, 400)}`);
-    process.exit(1);
+    throw new Error(`HTTP ${vastaus.status}: ${(await vastaus.text()).slice(0, 400)}`);
   }
-  const kohde = resolve(JUURI, polku);
   const data = Buffer.from(await vastaus.arrayBuffer());
   writeFileSync(kohde, data);
-  console.log(`${nimi}: ${(data.length / 1024).toFixed(0)} kt → ${kohde}`);
+  return data.length;
 }
 
-if (kuiva) {
-  console.log(virheita
-    ? `Kuiva ajo valmis — ${virheita} tuntematonta raitaa.`
-    : 'Kuiva ajo valmis — kaikille pyydetyille raidoille löytyi prompti ja kohdetiedosto.');
-  process.exit(virheita ? 1 : 0);
+async function main() {
+  const liput = tulkitseArgumentit(process.argv.slice(2));
+  if (liput.virhe) {
+    console.error(`${liput.virhe}.`);
+    console.error('Käyttö: node tools/generoi-musiikki.mjs '
+      + `${Object.keys(RAIDAT).join('|')}|kaikki [--moottori ${MOOTTORIT.join('|')}] [--kuiva]`);
+    process.exit(1);
+  }
+  const pyydetyt = valitseRaidat(liput.raidat);
+  if (!pyydetyt) {
+    console.error('Anna raidat: node tools/generoi-musiikki.mjs pohja visa aarre paaaarre');
+    console.error(`Koko paletti: node tools/generoi-musiikki.mjs kaikki (${Object.keys(RAIDAT).join(', ')})`);
+    process.exit(1);
+  }
+
+  /*
+   * KUIVA AJO: tulostaa mitä generoitaisiin eikä kutsu APIa. Sama
+   * tarkoitus kuin luennoissa: raidan avain, kohdetiedosto, kesto ja
+   * prompti näkee vain ajamalla, ja väärä avain huomattaisiin muuten
+   * vasta siitä, ettei tiedostoa synny. Avainta ei tarvita.
+   *
+   * ELEVEN_KUIVA=1 kelpaa yhä: työnkulku on käyttänyt sitä siitä asti
+   * kun moottoreita oli yksi.
+   */
+  const kuiva = liput.kuiva || process.env.ELEVEN_KUIVA === '1';
+
+  const avain = moottorinAvain(liput.moottori);
+  if (!avain && !kuiva) {
+    console.error(`${avaimenNimi(liput.moottori)} puuttuu ympäristöstä — musiikkia ei voi generoida.`);
+    console.error('Kuivan testiajon saa ilman avainta: node tools/generoi-musiikki.mjs kaikki --kuiva');
+    process.exit(1);
+  }
+
+  if (kuiva) console.log('KUIVA AJO — APIa ei kutsuta, tiedostoja ei kirjoiteta.');
+  console.log(liput.moottori === 'lyria'
+    ? `Moottori: Lyria 3.5 (${LYRIA_MALLI}), raidat päätteellä -lyria — pelin moottori.`
+    : `Moottori: ElevenLabs Music (${MALLI}, ${MUOTO}), paljaat nimet — vertailu, ei soi pelissä.`);
+
+  let virheita = 0;
+  for (const nimi of pyydetyt) {
+    const raita = RAIDAT[nimi];
+    if (!raita) {
+      console.error(`${nimi}: tuntematon raita — tunnetut: ${Object.keys(RAIDAT).join(', ')}.`);
+      virheita += 1;
+      continue;
+    }
+    const polku = `assets/audio/${raidanTiedosto(raita, liput.moottori)}`;
+    if (kuiva) {
+      console.log(`${nimi}: ${polku} — ${(raita.kesto / 1000).toFixed(0)} s`
+        + `${raita.looppi ? ', saumaton looppi' : ''} (${raita.kuvaus})`);
+      console.log(`  prompti: ${raita.prompt}`);
+      continue;
+    }
+    console.log(`${nimi}: generoidaan ${polku} (${(raita.kesto / 1000).toFixed(0)} s)…`);
+    const kohde = resolve(JUURI, polku);
+    // eslint-disable-next-line no-await-in-loop
+    const tavut = liput.moottori === 'lyria'
+      ? await haeLyriasta(
+        { prompt: raita.prompt, kestoMs: raita.kesto, looppi: raita.looppi }, avain, kohde,
+      )
+      : await haeElevenLabsista(raita, avain, kohde);
+    console.log(`${nimi}: ${(tavut / 1024).toFixed(0)} kt → ${kohde}`);
+  }
+
+  if (kuiva) {
+    console.log(virheita
+      ? `Kuiva ajo valmis — ${virheita} tuntematonta raitaa.`
+      : 'Kuiva ajo valmis — kaikille pyydetyille raidoille löytyi prompti ja kohdetiedosto.');
+    process.exit(virheita ? 1 : 0);
+  }
+  if (virheita) process.exit(1);
+  console.log('Valmis. Muista: tiedostot repoon ja KUUNTELE ne ennen julkaisua —');
+  console.log('looppiraidoilta sauma, aarreraidoilta se että aihe on kuultavasti sama.');
+  if (liput.moottori === 'lyria') {
+    console.log('Kun raidat ovat ämpärissä (vie-aanet.yml → audio/musa-*-lyria.mp3),');
+    console.log("käännä js/media.js MUSIIKIN_PAATE = '-lyria'.");
+  }
 }
-if (virheita) process.exit(1);
-console.log('Valmis. Muista: tiedostot repoon ja KUUNTELE ne ennen julkaisua —');
-console.log('looppiraidoilta sauma, aarreraidoilta se että aihe on kuultavasti sama.');
+
+if (process.argv[1] === TAMA) await main();

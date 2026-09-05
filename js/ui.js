@@ -106,7 +106,7 @@ import {
   lippuUrl, lippuVara, valokuvaSuurennos, valokuvaUrl, valokuvaVara,
 } from './packs/africa-valokuvat.js';
 import {
-  asetaKuva, assetOsoite, julisteUrl, peiliPetti, peilinLaji,
+  asetaKuva, assetOsoite, julisteUrl, musaPolku, peiliPetti, peilinLaji,
   aaniOsoite, aaniUrl, onPeilista,
 } from './media.js';
 import { KULTTUURI_PALKKIO } from './packs/africa-kulttuuri.js';
@@ -906,8 +906,8 @@ const REVEAL_HUUDAHDUS_RIVI = false;
  * ämpäristä — puuttuva tiedosto on hiljainen eikä riko paljastusta.
  */
 const AARRE_MUSIIKKI = {
-  tavallinen: 'assets/audio/musa-aarre.mp3',
-  paa: 'assets/audio/musa-paaaarre.mp3',
+  tavallinen: musaPolku('musa-aarre'),
+  paa: musaPolku('musa-paaaarre'),
 };
 /*
  * Aihe soi paljastuskortin päällä eikä taustalla, joten sen taso on
