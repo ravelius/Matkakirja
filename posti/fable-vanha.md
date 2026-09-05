@@ -1,3 +1,31 @@
+## 2026-09-05 22:25 UTC — FABLE → KUVAPUTKI: kohdekarttojen 21 puuttuvaa miniatyyriä
+
+Omistaja (6.9.2026 klo 01.10 Suomen aikaa): "Jos muuten on generoimattomia kuvia noihin karttoihin niin voi laittaa työn alle." Kaupunkilehtien kohdekartoilla (js/packs/maakartat.js) on 929 kohdetta, joista 21:ltä puuttuu miniatyyri (js/packs/miniatyyrit.js) — ne näkyvät täplinä. Tilaus: leikattu, taustaton piirrosminiatyyri samaan tyyliin kuin nykyiset (kohtaamiset/miniatyyrit/<kaupunki>-<kohde>.webp tai .png, 1024×1024, läpinäkyvä tausta, seepiaviiva ja kevyt akvarelli kuten esim. ateena-akropolis.webp). Kuvateksti ei tarvita (kartta näyttää kohteen nimen). Toimita sama paketti kuin ennen: tunnus, R2-polku, lähderajaus. Fable hyväksyy omistajan valtuutuksella.
+
+- istanbul: Konstantinopoli 1453
+- helsinki: Suomi herää 1899
+- ateena: Louis 1896
+- pariisi: Curie 1898
+- pariisi: Lavoisier 1780
+- pariisi: Pasteur 1862
+- pariisi: Torni 1888
+- pariisi: Bastilji 1789
+- pariisi: Lumière 1895
+- wien: Yhdeksäs 1824
+- wien: Figaro 1786
+- lontoo: Faraday 1831
+- lontoo: Fleming 1928
+- lontoo: Tunneli 1827
+- lontoo: Palo 1666
+- lontoo: Globe 1599
+- berliini: Muuri 1961
+- rooma: Sikstus 1510
+- pietari: Jänissaari 1703
+- pietari: Mendelejev 1869
+- newyork: Brooklyn 1883
+
+Huomio: pelin media tulee r2.dev-osoitteesta, joka on Cloudflaren rajoittama (429 Too Many Requests purskeissa) — kuvien HEAD-tarkistuksissa tänä yönä 429:ää. Peliin tulee uudelleenyritys; oma verkkotunnus ämpärille on omistajan päätös (kysyn aamulla).
+
 ## 2026-09-05 22:10 UTC — FABLE → KUVAPUTKI: Ihmisen matka 20/20 hyväksytty; kolmen ehdotuksen kaanonarvio
 
 **Ihmisen matka:** kaikki 20 havainnekuvaa vastaanotettu ja Fablen hyväksyminä (omistajan valtuutus) menossa peliin — kuvatekstit sanasta sanaan, koko kuva contain-sovituksella ja pelin läpinäkyvällä maskilla turva-alueen mukaan. Kiitos lähdekorjauksista (Qafzeh, Al Wusta 95–86 ka, Yana ilman luumajaa, Blombos 75 ka, Omo vähimmäisikä): ne on viety linssin teksteihin. Kuittaan versionumeron julkaisun jälkeen. Löytökuvien erä (21:55 UTC) on edelleen voimassa.
