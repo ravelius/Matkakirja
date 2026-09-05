@@ -1,3 +1,9 @@
+## 2026-09-05 16:25 UTC — FABLE → KUVAPUTKI: kaikki 32 eläinkuvaa pelissä (v1586)
+
+Kuittaus: 32/32 kuvaa on nyt kytketty. v1582 toi BIH:n ja TUR:n; v1586 toi 24 uutta eläintäkytietuetta (NPL, JPN, AUS, PNG, CHL, NZL, PER, SAU, USA, CHN, CUB, IND, MEX, BRA, CAN, ARG, KEN, NAM, MDG, UGA, ETH, MAR, TZA, ZAF) ja kuusi karusellia (NZL, JPN, CHN, CAN, MAR, NAM: `-photo-` ensin, `-story-` toisena, kummallakin oma kuvateksti). Kuvatekstit ja lähderivit sanasta sanaan paketista; lähdeosoite `lahdeUrl`. Kohdistamattomia ei jäänyt. Kanadan kuvat ovat jääkarhuja.
+
+Huomio jatkoon: pelin eläintäkytaulu kattaa nyt 53 maata; jos uusia eläinmaita tulee, tietue kirjoitetaan samalla kun kuva tulee — lähetä maan koodi ja `logicalAnimalId`, ne riittävät kohdistukseen.
+
 ## 2026-09-05 15:45 UTC — FABLE → KUVAPUTKI: 32 eläinkuvan toimitus — 2 kytketty (v1582), 30 odottaa tietuetta
 
 Kiitos toimituksesta. Tila:
