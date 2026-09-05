@@ -23311,15 +23311,56 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   z-index: auto;
   background: transparent;
   /* Ruudun oma pohja on tummaa nahkaa (.map-pane); pallo kelluu siinä. */
+  /* Linssikartan häivytys (vaihe 4): pallo häipyy heränneen kartan
+     päältä ja häivyttyy takaisin sen päälle 250 ms:ssa. */
+  transition: opacity 250ms ease;
 }
 .pallo-kuori.pallolauta[hidden] { display: none; }
-/* Linssikartan kulma: takaisin pallolle ilman siirtoa (vaihe 1). */
-.linssikartta-palaa {
+/* Linssin alla pallo on läpinäkyvä eikä ota kosketuksia. */
+.pallo-kuori.pallolauta.linssin-alla { opacity: 0; pointer-events: none; }
+/*
+ * LINSSIKARTAN KEHYS (js/pallolauta/linssikartta.js, vaihe 4): ohut
+ * kehys tasokartan päällä linssin ajaksi — otsikkorivi vasemmalla
+ * (maalehti-napin oikealla puolella) ja Sulje samassa kulmassa, jossa
+ * vaiheen 1 "Palaa pallolle" oli. Kehys ei ota kosketuksia; vain nappi.
+ * Radiotilassa ja aikajanalla kehys on piilossa: niillä on oma
+ * sulkemisensa (radion OFF, aikajanan ✕), ja kumpikin päättää linssin.
+ */
+.linssikartta-kehys {
   position: absolute;
-  right: 0.8rem;
-  top: 0.7rem;
+  inset: 0;
   z-index: 3;
-  display: none;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+.linssikartta-kehys.esilla { opacity: 1; }
+.linssikartta-otsikko {
+  position: absolute;
+  left: 3rem;
+  top: 0.7rem;
+  /* Vasemmalla maalehti-nappi (0,5 + 2,15 rem), oikealla Sulje (~4 rem)
+     ja selitenappi (2,15 + 0,5 rem): selite katkaistaan, ei rivitetä. */
+  max-width: calc(100% - 11.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(217, 161, 59, 0.55);
+  background: rgba(36, 26, 18, 0.82);
+  color: #f3e4bf;
+  font-family: var(--font-ui, system-ui, sans-serif);
+}
+.linssikartta-nimi { font-size: 0.82rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.linssikartta-selite { font-size: 0.7rem; color: #d9c8a0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.linssikartta-sulje {
+  position: absolute;
+  /* Selitenapin (js/karttaselite.js, oikea yläkulma) vasemmalla puolella
+     — vaiheen 1 "Palaa pallolle" jäi sen alle (kaappaus 5.9.2026). */
+  right: 3.3rem;
+  top: 0.7rem;
+  pointer-events: auto;
   min-height: 0;
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
@@ -23330,8 +23371,11 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   font-size: 0.8rem;
   cursor: pointer;
 }
-body.linssikartta-auki .linssikartta-palaa { display: inline-block; }
-.linssikartta-palaa:hover, .linssikartta-palaa:focus-visible { background: rgba(217, 161, 59, 0.3); }
+.linssikartta-sulje:hover, .linssikartta-sulje:focus-visible { background: rgba(217, 161, 59, 0.3); }
+body.radio-tila .linssikartta-kehys, body.aikajana-paalla .linssikartta-kehys { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .pallo-kuori.pallolauta, .linssikartta-kehys { transition: none; }
+}
 /*
  * Nappula pallolla (htmlElementsData): CSS2D-elementti kaupungin
  * kohdalla, jalka pisteessä. Ei ota napautuksia — kaupungin piste

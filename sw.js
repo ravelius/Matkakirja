@@ -137,6 +137,7 @@ const SHELL = [
   // varten. Ei niputeta yhden tiedoston versioon (tests/sw.test.mjs).
   './js/pallolauta/lauta.js',
   './js/pallolauta/kamera.js',
+  './js/pallolauta/linssikartta.js',
   './js/pallolauta/merkit.js',
   './js/pallolauta/nimet.js',
   './js/pallolauta/nostot.js',

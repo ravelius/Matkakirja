@@ -2810,9 +2810,10 @@ export class UI {
      * PALLOLAUTA (omistaja 5.9.2026, Raamattu KARTTAPALLO ON PELILAUTA).
      * `pallolauta` on js/pallolauta/lauta.js:n olio, kun karttapallo on
      * pelin lauta; tasokartta on silloin lepotilassa (js/kartta.js) ja
-     * herää vain LINSSIKARTAKSI (`linssikartta`: siirron tai linssin
-     * ajaksi, avaaLinssikartta/suljeLinssikartta). Vaiheesta 2 alkaen
-     * siirrot tehdään pallolla; linssikartta on vain linsseille.
+     * herää vain LINSSIKARTAKSI (`linssikartta`: linssin ajaksi,
+     * avaaLinssikartta/suljeLinssikartta → js/pallolauta/linssikartta.js).
+     * Vaiheesta 2 alkaen siirrot tehdään pallolla; linssikartta on vain
+     * linsseille, ja sen ajaksi Liiku ja lehdet ovat kiinni (vaihe 4).
      */
     this.pallolauta = null;
     this.pallolautaAvautuu = false;
@@ -3850,40 +3851,36 @@ export class UI {
 
   /**
    * LINSSIKARTTA: tasokartta herää pallon päälle LINSSIN AJAKSI
-   * (valitseLinssi). Kevyin mahdollinen kuori — pallo piiloon, kartta
-   * hereille, kamera pallon näkymään — jotta linssit toimivat
-   * täsmälleen kuten tasokartalla; vaihe 4 hioo kuoren. Siirrot eivät
-   * enää kulje tästä (vaihe 2: ne ovat pallolla). `lahto` jää
-   * tarkistaLinssikartalle: ilman linssiä avattu kuori sulkeutuu, kun
-   * ollaan perillä toisessa kaupungissa.
+   * (valitseLinssi). Kuori asuu js/pallolauta/linssikartta.js:ssä
+   * (vaihe 4): Kartta herää pallon näkymään, kehys (linssin nimi,
+   * Sulje) päälle, pallo häipyy; Sulje palauttaa pallon kartan
+   * viimeiseen näkymään ja purkaa kartan. Linssit toimivat kuoressa
+   * täsmälleen kuten tasokartalla. Siirrot eivät kulje tästä (vaihe 2:
+   * ne ovat pallolla), ja kuoren ajaksi Liiku ja lehdet ovat kiinni
+   * (linssikarttaEstaa). `lahto` jää tarkistaLinssikartalle: ilman
+   * linssiä avattu kuori sulkeutuu, kun ollaan perillä toisessa
+   * kaupungissa.
    */
   avaaLinssikartta(tiedot = {}) {
     if (!this.pallolauta || this.linssikartta) return false;
-    const nakyma = this.pallolauta.kamera.kameranTila();
-    this.linssikartta = { lahto: this.game.cityOf?.()?.id ?? null, ...tiedot };
-    document.body.classList.add('linssikartta-auki');
-    this.pallolauta.piilota();
-    this.kartta.heraa();
-    // Kamera jatkaa siitä, mihin pallo jäi (heti, ilman ajoa).
-    if (nakyma) void this.kartta.ajaKamera({ x: nakyma.x, y: nakyma.y, leveys: nakyma.leveys }, { kesto: 0 });
-    this.render();
-    return true;
+    return Boolean(this.pallolauta.linssikartta?.avaa(tiedot));
   }
 
-  /** Linssikartta kiinni: kartta nukkumaan, pallo takaisin kaupunkiin. */
+  /** Linssikartta kiinni: pallo takaisin kartan näkymään, kartta nukkumaan. */
   suljeLinssikartta() {
     if (!this.pallolauta || !this.linssikartta) return false;
-    // Kesken siirtoanimaation ei vaihdeta lautaa; reitin välipisteestä
-    // palataan pallolle kuten kaupungista (vaihe 2: matka on pallolla).
-    if (this.busy || this.movingPlayerId != null) return false;
-    this.linssikartta = null;
-    document.body.classList.remove('linssikartta-auki');
-    this.suljeLiuku();
-    this.kartta.nuku();
-    this.pallolauta.nayta();
-    this.pallolauta.kamera.kotiin({ kesto: 1400 });
-    this.render();
-    return true;
+    return Boolean(this.pallolauta.linssikartta?.sulje());
+  }
+
+  /**
+   * LINSSI BLOKKAA MUUN (omistaja 4.9.2026, sanatarkasti: *"pitää kaikki
+   * muu blokata varmuuden vuoksi kun linssi alkaa"*): linssikartan
+   * kuoressa Matkusta-nappi, Liiku ja lehtien avaajat (kaupungin
+   * napautus, Tutki) eivät toimi; sulkeminen palauttaa. Yksi portti,
+   * yksi kenttä — tasokartalla (?lauta=kartta) kenttä on aina null.
+   */
+  linssikarttaEstaa() {
+    return Boolean(this.linssikartta);
   }
 
   /** Perillä? Linssikartta sulkeutuu, kun siirto päättyi uuteen kaupunkiin. */
@@ -4634,6 +4631,16 @@ export class UI {
   taydennaTaide({ heti = false } = {}) {
     if (this.dead) return;
     /*
+     * NUKKUVA KARTTA EI TÄYDENNÄ (pallolauta vaihe 4, sama portti kuin
+     * js/kartta.js:ssä). Linssikartan sulku puretaan kesken kartan
+     * kamera-ajon (aikajanan paluuajo, kohdesovitus), ja ajon
+     * viimeinen kehys tulisi tänne vasta purun jälkeen — merkkiketju
+     * piirtäisi fokuskohteet ja eläintäyt takaisin tyhjään svg:hen
+     * (mitattu 5.9.2026: 1 263 elementtiä pallon alla). Yksi portti
+     * metodin alussa, ei hajautettuja ehtoja.
+     */
+    if (this.kartta.lepotila) return;
+    /*
      * Maastonimet päivitetään SAMASSA KOHDASSA kuin kartan kuva.
      *
      * Molemmat riippuvat täsmälleen samasta asiasta — siitä mikä osa
@@ -5225,6 +5232,10 @@ export class UI {
   }
 
   paivitaMaastonimet(tiedettyNakyva = null) {
+    // Nukkuva kartta ei lado merkkejä (ks. taydennaTaide: sama portti).
+    // Pallolaudalla selitteen laskurit tulevat pallolta (render →
+    // paivitaKarttaselite, ui.karttavaloLaskuri), ei tästä ketjusta.
+    if (this.kartta.lepotila) return;
     /*
      * NÄKYMÄ KERRAN, KAIKILLE (ks. taydennaTaide: "NÄKYMÄ MITATAAN
      * KERRAN"). Ilman kutsujan mittausta luetaan tässä yhden kerran ja
@@ -8937,6 +8948,10 @@ export class UI {
    *   kaikkialta — ks. paivitaFokusPallot.
    */
   paivitaFokusPohja(bbox, rajaus = null) {
+    // Nukkuva kartta ei piirrä fokuskerroksia (ks. taydennaTaide: sama
+    // portti) — fokuskohteet, kohtaamispiste ja eläintäyt syntyisivät
+    // muuten tyhjään svg:hen pallon alle.
+    if (this.kartta.lepotila) return;
     const ennen = this.fokusPohjaBbox ?? null;
     const uusi = bbox && bbox.w > 0 && bbox.h > 0 ? bbox : null;
     const sama = (!ennen && !uusi)
@@ -10391,6 +10406,8 @@ export class UI {
       stayBtn.classList.remove('tutki-syke');
       this.avaaTutkinta(city);
     });
+    // Linssikartan kuoressa lehdet ovat kiinni (linssikarttaEstaa).
+    if (this.linssikarttaEstaa()) stayBtn.disabled = true;
     return stayBtn;
   }
 
@@ -10405,6 +10422,8 @@ export class UI {
    */
   avaaTutkinta(city = this.game.cityOf()) {
     if (!city) return;
+    // Linssikartan kuoressa lehdet eivät aukea (linssikarttaEstaa).
+    if (this.linssikarttaEstaa()) return;
     sfx.play('paper');
     this.lehtitila.tutkiSyke = null;
     // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
@@ -10533,7 +10552,9 @@ export class UI {
      * aina kolme nappia (jalan, laiva, lento), joten pelkkä lukumäärä ei
      * riitä: liuku on tyhjä myös silloin, kun kaikki kolme ovat estettyjä.
      */
-    monitoimi.disabled = matkanapit.length === 0 || matkanapit.every((n) => n.disabled);
+    monitoimi.disabled = matkanapit.length === 0 || matkanapit.every((n) => n.disabled)
+      // Linssikartan kuoressa Matkusta on harmaana (linssikarttaEstaa).
+      || this.linssikarttaEstaa();
     monitoimi.setAttribute('aria-expanded', String(Boolean(this.liukuAuki)));
     monitoimi.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -10662,6 +10683,8 @@ export class UI {
 
   /** Monitoiminapin napautus: liuku auki tai kiinni. */
   vaihdaLiuku() {
+    // Linssikartan kuoressa ei matkusteta (linssikarttaEstaa).
+    if (this.linssikarttaEstaa()) return;
     this.liukuAuki = !this.liukuAuki;
     // Liuku peittää pöllön napin, joten avautuessaan se sulkee chatin.
     if (this.liukuAuki) polloSulje();
@@ -16173,9 +16196,22 @@ export class UI {
     // Omistamaton tai tuntematon tallennettu valinta ohitetaan hiljaa
     // (suunnitelman luku 5.3): tallennus voi olla toiselta pelikerralta.
     const haluttu = nakyvat.some((l) => l.tunnus === this.linssiValittu) ? this.linssiValittu : null;
-    // Nukkuvalla kartalla ei ole kerrosta, johon sytyttää: linssi jää
-    // valituksi ja syttyy, kun kartta herää linssikartaksi (js/kartta.js).
-    if (this.kartta.lepotila) return;
+    /*
+     * Nukkuvalla kartalla ei ole kerrosta, johon sytyttää. Muistettu
+     * valinta (esim. edellisen istunnon radio) ei saa jäädä laukkuun
+     * "valituksi" ilman kuorta: pallolaudalla linssi on aina kuoren
+     * kanssa (vaihe 4), ja kuori avautuu vain laukun valinnasta —
+     * ei itsestään käynnistyksessä (linssi blokkaa muun). Valinta
+     * unohdetaan; tasokartalla (?lauta=kartta) tänne ei tulla.
+     */
+    if (this.kartta.lepotila) {
+      if (haluttu && !this.linssikartta) {
+        this.linssiValittu = null;
+        tallennaLinssi(null);
+        this.paivitaLinssiTiedot();
+      }
+      return;
+    }
     /*
      * Lauta piirretään uudelleen monesta syystä (uusi peli, laudan
      * vaihto, kehittäjätilan esikatselu), ja silloin kerros on uusi ja
@@ -16408,10 +16444,20 @@ export class UI {
   /** Purkaa päällä olevan aikajanan; ilman aikajanaa ei tee mitään. */
   pysaytaAikajana() {
     if (!this.aikajana) return false;
+    const tunnus = this.aikajanaTunnus;
     this.aikajana.pura();
     this.aikajana = null;
     this.aikajanaTunnus = null;
     document.dispatchEvent(new CustomEvent('aikajana-tila', { detail: { paalla: false } }));
+    /*
+     * LINSSIKARTALLA AIKAJANAN SULJE ON LINSSIN SULJE (vaihe 4): pallo-
+     * laudalla aikajanan oma ✕ ja Esc päättävät linssin, jotta kuori
+     * palaa pallolle eikä jää tyhjänä karttana ruudulle. Tasokartalla
+     * (?lauta=kartta) linssikartta on aina null ja valinta jää kuten
+     * ennen. Ei kehää: valitseLinssi(null) nollaa valinnan ennen kuin
+     * sen oma tahdistus kutsuu tätä uudestaan.
+     */
+    if (this.linssikartta?.linssi && tunnus && this.linssiValittu === tunnus) this.valitseLinssi(null);
     return true;
   }
 
@@ -16452,6 +16498,8 @@ export class UI {
 
   /** Valittu rivi korostetaan ja sen kuvaus kirjoitetaan rivien alle. */
   paivitaLinssiTiedot() {
+    // Linssikartan otsikkorivi seuraa valintaa (js/pallolauta/linssikartta.js).
+    this.pallolauta?.linssikartta?.paivita();
     if (!this.linssiValikko) return;
     for (const nappi of this.linssiValikko.querySelectorAll('.linssi-liuskat button')) {
       const paalla = (nappi.dataset.linssi || null) === this.linssiValittu;
