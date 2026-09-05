@@ -15,7 +15,9 @@ import { kytkeKarttaZoom } from './karttazoom.js';
 import { galleriaNappi } from './kuvagalleria.js';
 import { liitaLukija, pysaytaLukija } from './lukija.js';
 import { el } from './mapart.js';
-import { asetaKuva, assetOsoite, julisteUrl } from './media.js';
+import {
+  asetaKuva, assetOsoite, julisteUrl, lataaKuvaSitkeasti,
+} from './media.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { HENKILOLINKIT, HENKILOT } from './packs/henkilot.js';
 import {
@@ -414,12 +416,21 @@ export function piirraKaupunkiKartta(ui, kohde) {
        * .maakartta-piste.kohde-numero) ja piilottaa samalla kyltin,
        * joka näkyy vain piirroksella — kohde on siis kartalla ja
        * napautettavissa aivan kuten ennen piirroksia.
+       *
+       * TÄPLÄ VASTA KUN KAIKKI YRITYKSET OVAT MENNEET (6.9.2026).
+       * Omistajan kuvakaappaus Ateenan kohdekartasta näytti viisi
+       * täplää kahdestatoista, vaikka kaikki miniatyyrit ovat
+       * ämpärissä: r2.dev vastasi 429:llä koko purskeeseen (ks.
+       * js/media.js lohko "sitkeä lataus"). Lataus kulkee nyt
+       * jonon ja uusinnan läpi, ja vasta neljäs epäonnistunut yritys
+       * pudottaa merkin täpläksi.
        */
-      pikku.addEventListener('error', () => {
-        pikku.remove();
-        piste.classList.remove('kohde-piirros');
-      }, { once: true });
-      pikku.src = miniatyyri;
+      void lataaKuvaSitkeasti(pikku, miniatyyri, {
+        onVirhe: () => {
+          pikku.remove();
+          piste.classList.remove('kohde-piirros');
+        },
+      });
       piste.appendChild(pikku);
       // Numero kylttiin (omistajan tilaus 15.8.2026: "Nimikyltissä
       // saisi olla numero näkyvissä") — kytkee kyltin selitelistaan.
@@ -1796,8 +1807,9 @@ export function avaaNahtavyys(ui, kohde, numero, {
       // Puuttuva piirros (ämpärissä ei vielä ole tunnuksen kuvaa) ei saa
       // jättää kappaleen sisään rikkinäistä kuvaa: kappale taittuu
       // silloin ennalleen, kuten kohteella jolla piirrosta ei ole.
-      kuva.addEventListener('error', () => kuva.remove(), { once: true });
-      kuva.src = piirros;
+      // Sama sitkeä lataus kuin kartalla: 429-purske ei saa poistaa
+      // piirrosta, joka on ämpärissä (js/media.js).
+      void lataaKuvaSitkeasti(kuva, piirros, { onVirhe: () => kuva.remove() });
       kpl.insertBefore(kuva, kpl.firstChild);
     }
     // Kelluva kuva ennen kappaletta, jotta teksti kiertää sen.

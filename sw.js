@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1614';
+const CACHE = 'matkakirja-2026-08-09.1615';
 const SHELL = [
   './',
   './index.html',
@@ -1781,6 +1781,18 @@ self.addEventListener('fetch', (event) => {
     // verkkotunnus. Ehto on silti tiukka, koska destination === 'image'
     // rajaa jo valmiiksi vain kuviin.
     //
+    // KOHTAAMISET/ MUKAAN 6.9.2026 (omistajan bugiraportti klo 01.09:
+    // "Kartalla pisteitä jotka eivät toimi"). Pelin omat generoidut
+    // kuvat — kohdekartan miniatyyrit, eläinlähikuvat, aarrekuvat ja
+    // havainnekuvat — siirtyivät ämpäriin 2.9.2026 polkuun
+    // `kohtaamiset/<laji>/` (js/media.js assetOsoite), mutta jäivät
+    // tämän ehdon ulkopuolelle: yksikään niistä ei mennyt koriin, ja
+    // jokainen kohdekartan avaus oli siis uusi 12 kuvan purske
+    // r2.dev-osoitteeseen, joka rajoittaa pyyntötahtia (429). Nyt ne
+    // ovat samassa korissa kuin wikikuvat: kerran nähty piirros ei
+    // lähde verkkoon enää lainkaan, joten purske syntyy korkeintaan
+    // kerran per laite.
+    //
     // Äänet ovat oma haaransa heti kuvien jälkeen: ne tarvitsevat
     // Range-käsittelyn (ks. aaniPalanen), jota kuvat eivät tarvitse.
     const kuvalahde = event.request.destination === 'image'
@@ -1788,7 +1800,7 @@ self.addEventListener('fetch', (event) => {
         || (osoite.hostname === 'commons.wikimedia.org'
           && osoite.pathname.startsWith('/wiki/Special:FilePath/'))
         || (osoite.hostname.endsWith('.r2.dev')
-          && /^\/(kuvat|liput)\//.test(osoite.pathname)));
+          && /^\/(kuvat|liput|kohtaamiset)\//.test(osoite.pathname)));
     if (kuvalahde) {
       /*
        * CORS-nouto vain sinne, mistä sen tiedetään onnistuvan.
@@ -1844,11 +1856,28 @@ self.addEventListener('fetch', (event) => {
             return vastaus;
           }
           /*
-           * CORS ei onnistunut. Kuvan oma no-cors-pyyntö menee silti
-           * läpi — vastaus on opaakki eikä kelpaa koriin, mutta kuva
-           * näkyy. Tämä on sama reitti kuin ennen tätä muutosta.
+           * VAIN ONNISTUNUT VASTAUS MENEE KORIIN. Ei-ok (429, 5xx, 404)
+           * ei tallennu — muuten purskerajoituksen hetkellä koko
+           * kohdekartta jäisi kiinni siihen, että kori palauttaisi
+           * ikuisesti 429:n.
+           *
+           * PALVELIMEN VASTAUS PALAUTUU SELLAISENAAN (6.9.2026). Ennen
+           * tätä ei-ok vastaus johti TOISEEN noutoon (no-cors), eli
+           * juuri 429-purskeen aikana pyyntömäärä kaksinkertaistui —
+           * sama status olisi tullut toisellakin kerralla. Toinen nouto
+           * on nyt vain siltä varalta, ettei CORS-pyyntö saanut
+           * vastausta lainkaan: sellainen tarkoittaa, ettei ämpärin
+           * CORS-sääntö osu tähän alkuperään (peli avattu muualta), ja
+           * silloin kuvan oma no-cors-pyyntö menee yhä läpi. Opaakkia
+           * vastausta ei säilötä.
+           *
+           * Kuvan 429 näkyy kutsujalle `error`-tapahtumana, ja
+           * js/media.js lataaKuvaSitkeasti uusii sen kasvavalla
+           * odotuksella — kori ei siis peitä rajoitusta, vaan estää
+           * vain sen tallentumisen.
            */
-          return fetch(event.request).catch(() => vastaus ?? Response.error());
+          if (vastaus) return vastaus;
+          return fetch(event.request).catch(() => Response.error());
         }),
       );
       return;

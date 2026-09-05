@@ -204,6 +204,53 @@ Vartijat: `tests/sivunkaanto.test.mjs`, `tools/savukkeet/savuke-sivunkaanto.mjs`
 - Kuvat päätyvät R2-peiliin itsestään: push mainiin käynnistää
   `.github/workflows/peilaa.yml`:n, joka peilaa uudet viittaukset.
 
+### Kuvien sietokyky: r2.dev rajoittaa pyyntöjä (429), 6.9.2026
+
+**Omistajan bugiraportti 6.9.2026 klo 01.09** (iPhone, Ateenan
+kaupunkilehden kohdekartta): *"Kartalla pisteitä jotka eivät toimi"* —
+viisi kohdetta kahdestatoista näkyi pelkkänä täplänä piirroksen sijaan.
+
+**Juurisyy mitattiin, ei arvattu.** Kaikki 12 miniatyyriä ovat
+ämpärissä ja kunnossa. HEAD-kysely niihin samaan aikaan vastasi
+**429 Too Many Requests** jokaiselle: peli hakee mediansa julkisesta
+`pub-….r2.dev`-osoitteesta, joka on **Cloudflaren oma rajoitettu
+kehitysosoite** — sen pyyntötahti on rajattu, eikä raja ole pelin
+puolella säädettävissä.
+
+**PYSYVÄ KORJAUS ON OMISTAJAN TOIMENPIDE:** ämpärille kytketään oma
+verkkotunnus (Cloudflare → R2 → ämpäri → Settings → Public access →
+Connect custom domain). Omalla verkkotunnuksella r2.dev-rajoitusta ei
+ole lainkaan, ja alla kuvattu sietokyky jää turvaverkoksi. Osoite
+vaihdetaan silloin yhdestä paikasta: `js/media.js` `R2_JUURI`.
+
+**Mitä pelin puolella tehtiin (v-numero mainissa, 6.9.2026):**
+
+| Paikka | Muutos |
+| --- | --- |
+| `js/media.js` `lataaKuvaSitkeasti` | Kuvan `error` → sama osoite uudestaan. 4 yritystä, odotus 800 ms → ×2, hajonta [1, 2). Vasta viimeinen virhe kutsuu `onVirhe`-haaraa. |
+| `js/media.js` `haeSitkeasti` | Fetch-polku lukee statuksen: uusii vain 429:n ja 5xx:n, kunnioittaa `Retry-After`-otsaketta (katto 10 s), palauttaa 404:n heti. |
+| `js/media.js` jono | `KUVAJONON_LEVEYS = 4`: kohdekartan 10–25 miniatyyriä eivät lähde yhtenä purskeena. `VUORON_KATTO_MS = 15000` estää jonon jumittumisen. |
+| `js/media.js` `asetaKuva` | Peili ja varareitti kulkevat kumpikin sitkeän latauksen läpi; vanha `?yritys=2`-lisäparametri poistui (se ohitti sw:n välimuistin, jonka avain on polku). |
+| `js/nahtavyydet.js` | Kohdekartan miniatyyri ja jutun piirros: täplä vasta kaikkien yritysten jälkeen. Merkki säilyy nimettynä ja napautettavana. |
+| `js/ui-apurit.js` `esilataaKuvat` | Uusinta mukaan, jonon ohi (taustatyö ei saa viedä vuoroja näkyviltä kuvilta). |
+| `js/aikajana.js` kuvavarasto | Uusinta mukaan, jonon ohi; dekoodaus vasta onnistuneesta latauksesta. |
+| `js/etusivupallo.js` | Juliste sitkeästi; video saa yhden uuden `load()`:n ennen kuin kerros puretaan. |
+| `sw.js` | `kohtaamiset/`-polku kuvakoriin (kerran nähty piirros ei lähde verkkoon enää). Ei-ok vastaus palautuu sellaisenaan eikä laukaise toista noutoa — 429-purskeessa pyyntömäärä ei enää kaksinkertaistu. |
+| `index.html` + `js/main.js` | Kehittäjävalikon **media**-rivi: onnistuneet ✓ / uusinnat ↻ / lopullisesti epäonnistuneet ✗ tässä istunnossa. Napautus päivittää lukemat. |
+
+**Osoite ei muutu uusinnassa.** Cache-busting rikkoisi palvelutyöntekijän
+välimuistin, jonka avain on polku; sama `src` riittää, koska rikkinäisen
+kuvan tila ei ole "completely available" (HTML: update the image data).
+Todennettu Chromiumissa (Playwright, `page.route` → 429 kahdesti, sitten
+kuva): tasan kolme pyyntöä per osoite ja kaikki 12 piirrosta ilmestyivät.
+
+**Rinnakkaisuus muualla — ei muutettu, kirjattu vain:** laattapyramidin
+nouto `js/laattapyramidi.js` `NOUTO_RINNAKKAIN = 4`, palvelutyöntekijän
+laattaesilataus `sw.js` `LAATTAESILATAUKSEN_LEVEYS = 6`.
+
+**Vartijat:** `tests/mediauusinta.test.mjs`, `tests/media.test.mjs`,
+`tests/nahtavyydet.test.mjs`, `tests/sw.test.mjs`.
+
 ### Flickr täydentävänä lähteenä
 
 *(Työkalu: `tools/hae-flickr.mjs` + `.github/workflows/hae-flickr.yml`.)*

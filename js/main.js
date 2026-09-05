@@ -33,6 +33,8 @@ import { asennaPollo, polloGeneroiEhdotukset } from './pollo.js';
 // Sähkejärjestelmä: retkikunta, sähkeet ja kaveriapu (js/sahke.js).
 import { kytkeSahke, nollaaSahke } from './sahke.js';
 import { asetaSivunkaanto, sivunkaantoPaalla } from './sivunkaanto.js';
+// Mediamittari (kehittäjävalikon media-rivi): kuvien lataustilasto.
+import { mediaLukemat } from './media.js';
 // Lukijaäänen säädin (kehittäjätila): asetukset ja näytekuuntelu.
 import {
   asetaPuheenNopeus, asetaPuheenVoima, luePuheAsetukset, puheenNopeus,
@@ -123,7 +125,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1614';
+const APP_VERSION = '2026-08-09.1615';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1409,6 +1411,15 @@ const kehittajaValikko = document.getElementById('kehittaja-valikko');
 const kehittajaVihje = document.getElementById('kehittaja-valikko-vihje');
 const maailmaNappi = document.getElementById('kehittaja-maailma-btn');
 const mittariNappi = document.getElementById('kehittaja-mittari-btn');
+/*
+ * MEDIAMITTARI (omistajan bugiraportti 6.9.2026 klo 01.09: *"Kartalla
+ * pisteitä jotka eivät toimi"*). Rivi ei ole kytkin vaan lukema:
+ * onnistuneet / uudelleenyritetyt / lopullisesti epäonnistuneet kuvat
+ * tässä istunnossa (js/media.js mediaLukemat). Kun r2.dev rajoittaa
+ * pyyntöjä (429), keskimmäinen luku kasvaa — ja jos oikeanpuolimmainen
+ * kasvaa, kuvia jäi oikeasti saamatta.
+ */
+const mediaNappi = document.getElementById('kehittaja-media-btn');
 // Sivunkääntö (StPageFlip): paluuoptio vanhaan sivupinoon, ks. index.html.
 const sivunkaantoNappi = document.getElementById('kehittaja-sivunkaanto-btn');
 /*
@@ -1532,8 +1543,20 @@ function merkitseKytkin(nappi, paalla) {
   if (tila) tila.textContent = paalla ? 'päällä' : 'pois';
 }
 
+/** Mediamittarin rivin teksti: onnistui / uusinta / epäonnistui. */
+function paivitaMediarivi() {
+  if (!mediaNappi) return;
+  const { onnistui, uusinta, epaonnistui } = mediaLukemat();
+  const tila = mediaNappi.querySelector('.kehittaja-kytkin-tila');
+  if (tila) tila.textContent = `${onnistui} ✓ · ${uusinta} ↻ · ${epaonnistui} ✗`;
+  mediaNappi.title = `Kuvat tässä istunnossa: ${onnistui} latautui, ${uusinta} vaati `
+    + `uusinnan, ${epaonnistui} jäi saamatta. Uusinnat kertovat ämpärin (r2.dev) `
+    + 'purskerajoituksesta — napauta päivittääksesi lukemat.';
+}
+
 function paivitaKehittajaValikko() {
   if (kehittajaValikkoKotelo) kehittajaValikkoKotelo.hidden = !kehittajaTilaPaalla();
+  paivitaMediarivi();
   const maailma = kehittajaMaailmaPaalla();
   merkitseKytkin(maailmaNappi, maailma);
   if (maailmaNappi) {
@@ -1864,6 +1887,15 @@ document.getElementById('kehittaja-tehosteketjut-btn')?.addEventListener('click'
  * pelitila ei muutu (js/kohtaamistesti.js). Valikko suljetaan, koska
  * lehti täyttää ruudun; muut rattaan rivit ovat säätimiä ja jäävät auki.
  */
+mediaNappi?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  paivitaMediarivi();
+  const { onnistui, uusinta, epaonnistui } = mediaLukemat();
+  naytaKehittajaVihje(epaonnistui > 0
+    ? `${epaonnistui} kuvaa jäi saamatta (${uusinta} uusintaa) — ämpäri rajoittaa tai kuva puuttuu.`
+    : `${onnistui} kuvaa ladattu, ${uusinta} uusinnalla. Ei menetettyjä kuvia.`);
+});
+
 document.getElementById('kehittaja-kohtaamiset-btn')?.addEventListener('click', (e) => {
   e.stopPropagation();
   suljeKehittajaValikko();

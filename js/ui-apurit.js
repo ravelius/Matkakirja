@@ -8,7 +8,7 @@
 
 import { HUUDAHDUKSET } from './aani-ehdokkaat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
-import { asetaKuva, assetOsoite } from './media.js';
+import { asetaKuva, assetOsoite, lataaKuvaSitkeasti } from './media.js';
 import { tokenIconSvg } from './mapart.js';
 import { AARRETYYPIT } from './tokens.js';
 import { fetchImage, fetchSummary } from './wiki.js';
@@ -153,10 +153,23 @@ export function esilataaKuvat(osoitteet) {
     const kuva = new Image();
     kuva.decoding = 'async';
     esilataukset.add(kuva);
-    const valmis = () => esilataukset.delete(kuva);
-    kuva.addEventListener('load', valmis, { once: true });
-    kuva.addEventListener('error', valmis, { once: true });
-    kuva.src = osoite;
+    /*
+     * SITKEÄSTI, MUTTA JONON OHI (6.9.2026, r2.dev 429). Ämpäri vastaa
+     * purskeeseen 429:llä, ja ennen tätä yksikin virhe jätti kuvan
+     * lataamatta kokonaan — karuselli odotti sitä sitten verkolta
+     * juuri sillä hetkellä, kun pelaaja selasi kuvaan. Uusinta hoitaa
+     * sen (js/media.js lataaKuvaSitkeasti).
+     *
+     * JONOA EI KÄYTETÄ TÄSSÄ. Esilataus on nimenomaan taustatyö, joka
+     * saa mennä selaimen omaan tahtiin. Jos se veisi jonon vuorot,
+     * kohdekartan miniatyyrit ja kohtaamiskuvat — ne, joita pelaaja
+     * juuri katsoo — jäisivät odottamaan kymmenien taustakuvien
+     * taakse. Jono on siksi varattu ruudulla näkyville kuville.
+     *
+     * Kirjanpito on ennallaan: yksi ketju per osoite per istunto.
+     */
+    void lataaKuvaSitkeasti(kuva, osoite, { jonota: false })
+      .then(() => esilataukset.delete(kuva));
   }
 }
 

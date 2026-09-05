@@ -273,13 +273,72 @@ test('vendor-kirjastoilla on pysyvä kori, jota versionvaihto ei tyhjennä', () 
 test('peilikuvalla on cors-noudon jälkeen varareitti ilman corsia', () => {
   const kohta = sw.indexOf('r2.dev');
   assert.ok(kohta > 0, 'sw.js ei enää tunne peiliä — onko ehto poistettu?');
-  const lohko = sw.slice(kohta, kohta + 3200);
+  // Ikkuna on reilu: haaran yläpuolella on pitkä selityslohko, ja
+  // varareitti (fetch(event.request)) on vasta ok-ehdon jälkeen.
+  const lohko = sw.slice(kohta, kohta + 6000);
   const rivit = lohko.split('\n').filter((r) => !/^\s*(\*|\/\/|\/\*)/.test(r));
   const corsRivi = rivit.findIndex((r) => /mode:\s*'cors'/.test(r));
   const varaRivi = rivit.findIndex((r) => /fetch\(event\.request\)/.test(r));
   assert.ok(corsRivi >= 0, 'cors-nouto on ainoa tapa saada kuva koriin');
   assert.ok(varaRivi > corsRivi,
     'cors-noudon jälkeen on oltava tavallinen fetch(event.request) varareittinä');
+});
+
+/*
+ * 429 EI SAA JÄÄDÄ VÄLIMUISTIIN (omistajan bugiraportti 6.9.2026 klo
+ * 01.09: *"Kartalla pisteitä jotka eivät toimi"*).
+ *
+ * Ämpärin julkinen r2.dev-osoite on Cloudflaren rajoitettu
+ * kehitysosoite: kohdekartan 12 miniatyyriä yhtenä purskeena sai
+ * vastaukseksi 429 Too Many Requests. Jos sellainen vastaus päätyisi
+ * koriin, kohdekartta jäisi rikki pysyvästi — kori palauttaisi 429:n
+ * silloinkin, kun ämpäri on jo pitkään vastannut normaalisti.
+ *
+ * Sääntö on koko tiedoston laajuinen: JOKAINEN korin kirjoitus on
+ * vastauksen `ok`-ehdon sisällä (2xx). Testi lukee jokaisen put-rivin
+ * ympäriltä lähimmän ehdon.
+ */
+test('vain onnistunut vastaus menee välimuistiin (429 ja 5xx eivät)', () => {
+  const rivit = sw.split('\n');
+  const putRivit = rivit
+    .map((rivi, i) => ({ rivi, i }))
+    .filter(({ rivi }) => /\.put\(/.test(rivi) && !/^\s*(\*|\/\/)/.test(rivi));
+  assert.ok(putRivit.length >= 5, 'korin kirjoituksia pitäisi olla useita');
+  for (const { rivi, i } of putRivit) {
+    const ymparilla = rivit.slice(Math.max(0, i - 6), i + 1).join('\n');
+    assert.match(ymparilla, /\.ok\b|status === 200/,
+      `sw.js rivi ${i + 1} kirjoittaa koriin ilman ok-ehtoa: ${rivi.trim()}`);
+  }
+});
+
+/*
+ * MEDIA ON CACHE-FIRST. Kerran nähty kuva palautetaan aina korista
+ * ennen verkkoa — se on ainoa asia, joka pitää kohdekartan ehjänä
+ * silloinkin, kun ämpäri rajoittaa pyyntöjä juuri sillä hetkellä.
+ */
+test('media palvellaan välimuistista ensin', () => {
+  for (const tunniste of ['KUVACACHE', 'LAATTACACHE', 'AANICACHE', 'VENDORCACHE']) {
+    const kohta = sw.indexOf(`caches.open(${tunniste})`);
+    assert.ok(kohta > 0, `${tunniste}: koria ei avata missään`);
+    const lohko = sw.slice(kohta, kohta + 900);
+    const matchKohta = lohko.search(/(kuvat|kori|osuma)[\s\S]{0,40}\.match\(/);
+    const fetchKohta = lohko.search(/await fetch\(|fetch\(url|fetch\(pyynto/);
+    assert.ok(matchKohta >= 0, `${tunniste}: korista ei haeta osumaa`);
+    assert.ok(fetchKohta < 0 || matchKohta < fetchKohta,
+      `${tunniste}: verkko ennen koria — media on cache-first`);
+  }
+});
+
+/*
+ * Pelin omat generoidut kuvat (kohdekartan miniatyyrit, eläinlähikuvat,
+ * aarrekuvat, havainnekuvat) siirtyivät ämpäriin 2.9.2026 polkuun
+ * `kohtaamiset/` (js/media.js assetOsoite). Ne jäivät ensin
+ * palvelutyöntekijän kuvahaaran ulkopuolelle, joten yksikään niistä ei
+ * mennyt koriin ja jokainen kohdekartan avaus oli uusi purske.
+ */
+test('ämpärin kohtaamiset/-kuvat kuuluvat kuvakoriin', () => {
+  assert.match(sw, /\/\^\\\/\(kuvat\|liput\|kohtaamiset\)\\\/\//,
+    'sw.js:n r2.dev-kuvaehto ei tunne kohtaamiset/-polkua');
 });
 
 /*

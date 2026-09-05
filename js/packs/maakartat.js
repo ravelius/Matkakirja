@@ -6846,12 +6846,25 @@ export const KAUPUNKIKARTAT = {
    * kohdekartoilla.
    *
    * `wiki` on VAIN NIILLÄ, JOILLA ARTIKKELI ON OIKEASTI OLEMASSA
-   * (tarkistettu fi.wikipedian rajapinnasta 29.8.2026). Erityisesti
-   * Plaza de España EI saa wiki-kenttää: fi.wikipedian samanniminen
-   * sivu on täsmennyssivu, joka luettelee Madridin, Barcelonan ja
-   * Palman aukiot — linkki veisi lukijan väärään kaupunkiin. Samasta
-   * syystä ilman linkkiä ovat Maestranza ja Trianan silta, joista ei
-   * ole fi-artikkelia lainkaan.
+   * (tarkistettu fi.wikipedian rajapinnasta 29.8.2026).
+   *
+   * KOLME VIIMEISTÄ SAIVAT ENGLANNINKIELISEN OTSIKON (6.9.2026).
+   * Maestranza, Trianan silta ja Plaza de España jäivät 29.8. ilman
+   * wiki-kenttää, koska fi-artikkelia ei ole ja fi:n samanniminen
+   * "Plaza de España" on täsmennyssivu (Madrid, Barcelona, Palma).
+   * Ilman juttua ja ilman wikiä merkki ei kuitenkaan ole napautettava
+   * (js/nahtavyydet.js: `avattava = Boolean(k.teksti || k.wiki)`), ja
+   * nämä kolme olivat koko kartastossa ainoat sellaiset — vastoin
+   * sääntöä, että jokainen kartan näkyvä merkki on nimetty ja
+   * napautettava.
+   *
+   * Otsikko saa siis olla englanninkielinen: js/wiki.js fetchSummary
+   * kokeilee fi:n ensin ja siirtyy englantiin, kun fi vastaa 404:llä
+   * tai täsmennyssivulla (parseSummary hylkää `disambiguation`-tyypin).
+   * Kaikki kolme tarkistettiin rajapinnasta 6.9.2026: fi 404, en
+   * `standard` ja tiivistelmä 290–361 merkkiä eli yli MIN_EXTRACTin.
+   * Täsmennyssivu ei voi tulla väliin, koska otsikkoa
+   * "Plaza de España, Seville" ei ole fi:ssä lainkaan.
    *
    * TRIANAN SILTA ON VEDESSÄ, JA SE ON OIKEIN.
    * tools/tarkista-karttapisteet.mjs merkitsee sen vesipisteeksi, mutta
@@ -6883,9 +6896,9 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Katedraali ja Giralda', lat: 37.3862, lon: -5.9924, wiki: 'Sevillan katedraali' },
       { nimi: 'Alcázar', lat: 37.385, lon: -5.9924, wiki: 'Sevillan Alcázar' },
       { nimi: 'Torre del Oro', lat: 37.3824, lon: -5.9965, wiki: 'Torre del Oro' },
-      { nimi: 'Maestranzan areena', lat: 37.386, lon: -5.9983 },
-      { nimi: 'Trianan silta', lat: 37.3862, lon: -6.0023 },
-      { nimi: 'Plaza de España', lat: 37.3769, lon: -5.9869 },
+      { nimi: 'Maestranzan areena', lat: 37.386, lon: -5.9983, wiki: 'Maestranza (Seville)' },
+      { nimi: 'Trianan silta', lat: 37.3862, lon: -6.0023, wiki: 'Puente de Isabel II' },
+      { nimi: 'Plaza de España', lat: 37.3769, lon: -5.9869, wiki: 'Plaza de España, Seville' },
       /*
        * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
        * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
