@@ -103,7 +103,9 @@ test('ruutuladonta: nimet eivät limity keskenään eivätkä varausten tai pino
 
 test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän maailmanäkymä näyttää kaikki', () => {
   const lauta = lue('../js/pallolauta/lauta.js');
-  assert.match(lauta, /const pisteNakyy = \(k\) => nimet\.nimetty\(k\.id\)\n\s+\|\| ui\.game\.cityOf\?\.\(\)\?\.id === k\.id\n\s+\|\| Boolean\(ui\.maailmanakyma\?\.\(\)\);/);
+  // Avauslennolla (vaihe 5b) pisteet ovat reitin kaksi päätä; muuten
+  // sääntö on ennallaan: nimetty, oma kaupunki tai maailmanäkymä.
+  assert.match(lauta, /const pisteNakyy = \(k\) => \(lento\n\s+\? lento\.nimet\.has\(k\.id\)\n\s+: nimet\.nimetty\(k\.id\)\n\s+\|\| ui\.game\.cityOf\?\.\(\)\?\.id === k\.id\n\s+\|\| Boolean\(ui\.maailmanakyma\?\.\(\)\)\);/);
   assert.match(lauta, /const nakyvat = kaupungit\.filter\(pisteNakyy\);/);
   assert.match(lauta, /pallo\.pointsData\(\[\.\.\.valot, \.\.\.nakyvat, \.\.\.helmet\]\);/);
   // Napautus kilpailee vain näkyvistä merkeistä (fokusniput sääntö 9).
@@ -118,6 +120,9 @@ test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän
   assert.equal(NIMIEN_KATTO, 40);
   assert.equal(NOSTOJEN_KATTO, 40);
   assert.match(lauta, /Math\.min\(NIMIEN_KATTO, Math\.max\(0, HTML_MERKKIEN_KATTO - pelia - nostoTulos\.maara\)\)/);
+  // Avauslento rajaa ehdokkaat kahteen nimeen (nimet.js `vain`).
+  assert.match(lauta, /vain: lento\?\.nimet \?\? null,/);
+  assert.match(lue('../js/pallolauta/nimet.js'), /if \(vain && !vain\.has\(k\.c\.id\)\) continue;/);
   // Kortti ankkuroidaan ruutupisteestä ja seuraa merkkiään levossa.
   assert.match(lauta, /osuma\.avaa\(ankkuri\(osuma\.lat, osuma\.lng\)\);/);
   assert.match(lauta, /if \(ui\.fokuskohdeAuki\?\.ankkuri\) asemoiFokuskohde\(ui\);/);

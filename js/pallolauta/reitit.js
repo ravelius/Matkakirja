@@ -55,6 +55,15 @@ export const REITIN_VARIT = {
   maa: 'rgba(74, 58, 36, 0.42)',
   meri: 'rgba(61, 85, 112, 0.42)',
   lento: 'rgba(150, 54, 40, 0.6)',
+  /*
+   * AVAUSLENTO LUETAAN HARSON LÄPI. Lennon niukkuusharso on kalvo
+   * kotelon päällä (js/pallolauta/lauta.js), ja kaari on sen ALLA
+   * pallon pinnassa — WebGL-kerrosta ei voi nostaa CSS-kalvon yli.
+   * Tasokartalla reitti piirtyy harson päälle terävänä sinooperina
+   * (.flight-trail), joten pallon kaari saa saman sävyn täytenä, jotta
+   * se lukeutuu harson läpi samanlaisena.
+   */
+  avauslento: 'rgba(194, 69, 47, 0.95)',
 };
 export const HELMEN_VARI = 'rgba(250, 243, 226, 0.9)';
 
@@ -112,7 +121,7 @@ export function luoReitit({ pallo, ui, siirtyma, asteet }) {
     .arcsData([])
     .arcStartLat('startLat').arcStartLng('startLng')
     .arcEndLat('endLat').arcEndLng('endLng')
-    .arcColor(() => REITIN_VARIT.lento)
+    .arcColor((d) => d.vari ?? REITIN_VARIT.lento)
     .arcAltitude((d) => d.korkeus)
     .arcStroke(LENTOKAAREN_PAKSUUS_AST)
     .arcDashLength((d) => d.katko * 0.6).arcDashGap((d) => d.katko * 0.4)
@@ -187,7 +196,7 @@ export function luoReitit({ pallo, ui, siirtyma, asteet }) {
    * askelhelmet, jotka lauta.js liittää pistekerrokseen.
    */
   const paivita = ({
-    reittiTunnukset = [], lennot = [], lentoLahto = null, avain = '',
+    reittiTunnukset = [], lennot = [], lentoLahto = null, avain = '', kaarenVari = null,
   }) => {
     const elava = ui.lentoKaari?.b ?? null;
     const tunniste = `${avain}|${elava ?? ''}`;
@@ -211,7 +220,7 @@ export function luoReitit({ pallo, ui, siirtyma, asteet }) {
       const kohde = board.cityById.get(kohdeId);
       if (!kohde) continue;
       const d = kaari(lahto, kohde, elava === kohdeId && ui.lentoKaari?.a === lahto.id);
-      if (d) kaaret.push(d);
+      if (d) { d.vari = kaarenVari; kaaret.push(d); }
     }
     pallo.pathsData(polut);
     pallo.arcsData(kaaret);

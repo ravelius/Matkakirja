@@ -223,7 +223,7 @@ test('vaihe 2: siirto haarautuu laudan mukaan kuljettajalle, koreografia pysyy y
   for (const [koukku, maara] of Object.entries(koukut)) {
     assert.equal(siirto.split(koukku).length - 1, maara, `${koukku} ei ole siirrossa ${maara} kertaa`);
   }
-  const pallolauta = ['lauta', 'kamera', 'merkit', 'nimet', 'nostot', 'reitit', 'siirto'].map((n) => lue(`../js/pallolauta/${n}.js`)).join('\n');
+  const pallolauta = ['lauta', 'avaus', 'kamera', 'merkit', 'nimet', 'nostot', 'reitit', 'siirto'].map((n) => lue(`../js/pallolauta/${n}.js`)).join('\n');
   for (const koukku of ['aloitaSiirronMusiikki', 'lopetaSiirronMusiikki', 'aloitaJalkamatkanAani', 'sfx.play(', 'ennakoiSiirtoZoomi', 'aloitaSaattavaKamera']) {
     assert.ok(!pallolauta.includes(koukku), `pallolauta kutsuu ${koukku} itse — ui.js:n kutsut kahdentuisivat`);
   }
@@ -244,7 +244,7 @@ test('vaihe 2: siirto haarautuu laudan mukaan kuljettajalle, koreografia pysyy y
   assert.match(ui, /^  matkareittienValinta\(\) \{/m);
   assert.match(ui, /if \(this\.kartta\.lepotila\) \{ this\.pallolauta\?\.paivita\(\); return; \}/);
   assert.match(lue('../js/pallolauta/reitit.js'), /pointAlong\(reitti\.poly, i \/ askelia\)/, 'helmet eivät ole samalla kaavalla kuin pixelOf');
-  assert.match(lue('../js/pallolauta/lauta.js'), /const valinta = ui\.matkareittienValinta\(\);/);
+  assert.match(lue('../js/pallolauta/lauta.js'), /const valinta = lento \? lento\.valinta : ui\.matkareittienValinta\(\);/);
   // Kehäriippuvuus poistui: pallolauta ei tuo ui.js:ää; koreografian
   // luvut tulevat kummallekin laudalle samasta moduulista.
   assert.ok(!pallolauta.includes("from '../ui.js'"), 'js/pallolauta tuo ui.js:ää');
@@ -318,4 +318,88 @@ test('vaihe 6: valinta on laitteen asetus — sama avain molemmilla kytkimillä,
   varasto.delete('matkakirja-pallo-kaatumiset');
   asetaLautaValinta('pallo');
   unohdaKehittajaKytkimet();
+});
+
+/*
+ * VAIHE 5b: ALOITUSLENTO PALLOLLA (karttapallo.md luku 4 rivi
+ * "Aloituslento Lontoosta", luku 7 vaihe 5).
+ *
+ * Uusi peli pallolaudalla lentää Lontoosta aloituskaupunkiin PALLOLLA:
+ * kaari ja kone ovat vaiheen 2 lennon omat, niukkuusharso on pallon oma
+ * kalvo, ja avauksen koreografia — arkki, kertoja, kabiiniääni,
+ * repliikki, ohitus, saapumiskortti — pysyy YHDESSÄ paikassa
+ * (aloituslentoSisalla) kummallekin laudalle. Nämä vartiot ovat
+ * lähdekoodista, koska kahdennus ei näkyisi virheenä: peli vain
+ * lukisi repliikin kahdesti tai lentäisi kaksi konetta.
+ */
+test('vaihe 5b: aloituslento pallolla — pallo ottaa laudan ja kohtaus delegoidaan', () => {
+  const ui = lue('../js/ui.js');
+  // 1. Pallolauta ei enää odota aloituslennon loppumista; ainoa vaihe-
+  //    ehto on aloitusnäyttö (pickstart).
+  const halutaan = ui.match(/^ {2}pallolautaHalutaan\(\) \{[\s\S]*?\n {2}\}/m)[0];
+  assert.doesNotMatch(halutaan, /aloituslentoKesken/,
+    'pallolauta odottaa yhä aloituslennon loppumista');
+  assert.match(halutaan, /return this\.game\.phase !== 'pickstart';/);
+  // 2. Tasokartta nukkuu ENNEN actionPickStartia, jottei maailmankartta
+  //    ehdi piirtyä eikä pyramidi pyytää yhtään laattaa arkin takana.
+  assert.match(ui, /if \(kartalento && this\.aloituslentoPallolla\(\)\) this\.kartta\.nuku\(\);/);
+  assert.match(ui, /^ {2}aloituslentoPallolla\(\) \{[\s\S]*?return lautaValinta\(\) === 'pallo';/m);
+  // 3. Kohtaus delegoidaan laudalle samalla mallilla kuin kuljettaja.
+  assert.match(ui, /^ {2}aloituslennonKohtaus\(\{ lahto, kohde \}\) \{\n {4}if \(this\.pallolautaPaalla\(\)\) \{\n {6}return this\.pallolauta\.aloituslennonKohtaus\(\{ lahto, kohde \}\);\n {4}\}\n {4}return this\.tasokartanLentokohtaus\(/m);
+  // 4. Koreografia ei kahdennu: lennon tekstit, äänet, kertoja, ohitus
+  //    ja saapumiskortti ovat yhä VAIN aloituslentoSisalla-metodissa.
+  const lento = ui.match(/async aloituslentoSisalla\([\s\S]*?\n {2}\}\n/)[0];
+  for (const koukku of ['this.lueLennonRepliikki();', 'this.showFlightLine(line, alaosa)',
+    'this.syncAmbience();', 'this.naytaSaapumiskortti(kohde)', 'this.saapumisenKuplat(kohde)']) {
+    assert.ok(lento.includes(koukku), `${koukku} ei ole avauslennon koreografiassa`);
+  }
+  const avaus = lue('../js/pallolauta/avaus.js');
+  for (const koukku of ['lueLennonRepliikki', 'showFlightLine', 'naytaSaapumiskortti',
+    'saapumisenKuplat', 'aloitusverho', 'syncAmbience']) {
+    assert.ok(!avaus.includes(koukku), `pallon kohtaus tekee itse ${koukku} — koreografia kahdentuisi`);
+  }
+  // 5. Kohtauksen sopimus: rajaus, valmistele, rakenna, lenna, poistuma, pura.
+  for (const kutsu of ['kohtaus.valmistele();', 'kohtaus.rakenna();',
+    'kohtaus.lenna(lennonKesto)', 'kohtaus.poistuma();', 'kohtaus.pura();']) {
+    assert.ok(lento.includes(kutsu), `aloituslentoSisalla ei kutsu ${kutsu}`);
+  }
+  for (const nimi of ['rajaus:', 'valmistele()', 'rakenna()', 'lenna(kesto)', 'poistuma()', 'pura()']) {
+    assert.ok(avaus.includes(nimi), `pallon kohtaus ei täytä sopimusta: ${nimi}`);
+  }
+  // 6. Kamera-ajo kulkee laudan delegaatin kautta (ui.kamera()).
+  assert.match(lento, /await this\.kamera\(\)\.ajaKamera\(\n {6}rajaus,/);
+});
+
+test('vaihe 5b: kone on vaiheen 2 kuljettaja, kaari vaiheen 2 kaari', () => {
+  const avaus = lue('../js/pallolauta/avaus.js');
+  const siirto = lue('../js/pallolauta/siirto.js');
+  // Kuljettaja pyydetään samalla sopimuksella kuin siirrossa.
+  assert.match(avaus, /kuljettaja = ui\.nappulanKuljettaja\(ui\.game\.player, \{ lento: true \}\);/);
+  for (const kutsu of ['kuljettaja.nosta();', 'kuljettaja.aseta(lahtoPos);',
+    'kuljettaja.hyppaa(lahtoPos, kohdePos, kesto)', 'kuljettaja?.laske();']) {
+    assert.ok(avaus.includes(kutsu), `avauslento ei kutsu kuljettajalta ${kutsu}`);
+  }
+  // Ohitus vie rAF-lennon loppuun samalla sanalla kuin selaimen animaation.
+  assert.match(avaus, /animaatiot: \[\{ finish: \(\) => kuljettaja\?\.paata\?\.\(\) \}\]/);
+  assert.match(siirto, /^ {4}paata: \(\) => \{/m);
+  // Rajaus on TÄSMÄLLEEN sama laatikko kuin kuljettajan omalla ajolla,
+  // jottei kamera nytkähdä koneen lähtiessä (nolla-ajo).
+  assert.match(siirto, /^export function lennonRajaus\(board, a, b\) \{/m);
+  assert.match(avaus, /bbox: lennonRajaus\(board, lahtoPos, kohdePos\),\n\s+marginaali: LENNON_RAJAUKSEN_MARGINAALI,/);
+  assert.match(siirto, /\{ bbox: lennonRajaus\(board, a, b\), marginaali: LENNON_RAJAUKSEN_MARGINAALI \}/);
+  // Kaari on reittikerroksen arcsData, ei uusi kerros.
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.deepEqual(PALLOLAUDAN_KERROKSET, ['pointsData', 'htmlElementsData', 'pathsData', 'arcsData'],
+    'avauslento ei saa tarvita uutta Globe.gl-kerrosta');
+  assert.match(avaus, /ui\.lentoKaari = \{ a: lahto\.id, b: kohde\.id \};/);
+  // Niukkuus: ei nappulaa, ei kohteita, ei nostoja, kaksi nimeä, harso.
+  assert.match(lauta, /merkit\.paivita\(\{ nappula: liikkuu \|\| lento \? null : kohta, kohteet \}\);/);
+  assert.match(lauta, /const kohteet = lento \? \[\] : kohdevalinta\(\);/);
+  assert.match(lauta, /katto: lento \? 0 : Math\.min\(NOSTOJEN_KATTO/);
+  assert.match(lauta, /harso\.className = 'pallolauta-harso';/);
+  // Harso on CSS-kalvo eikä toista WebGL-kontekstia (karttapallo.md luku 4).
+  assert.ok(!lauta.includes('objectsData'), 'harso lisäisi three.js-objektin');
+  assert.match(lue('../css/styles.css'), /\.pallolauta-harso \{\n {2}position: absolute;/);
+  // Kamera ei sukella nappulan perään lennon aikana (peli on jo perillä).
+  assert.match(lauta, /if \(!liikkuu && !lento && pos\) \{/);
 });
