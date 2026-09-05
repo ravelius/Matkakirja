@@ -1,5 +1,115 @@
 # Kuvatoimitussessio
 
+## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 9 R2-varmennettu
+
+### kolkata
+- `kolkata-howrah-silta`
+- `kolkata-howrahin-rautatieasema`
+- `kolkata-marble-palace`
+- `kolkata-nakhodan-moskeija`
+- `kolkata-college-street`
+- `kolkata-writers-building`
+- `kolkata-st-john-sin-kirkko`
+- `kolkata-shaheed-minar`
+- `kolkata-intian-museo`
+- `kolkata-victoria-memorial`
+
+### kabul
+- `kabul-timur-shahin-mausoleumi`
+- `kabul-shah-do-shamshiran-moskeija`
+- `kabul-ka-faroshin-lintutori`
+- `kabul-bala-hissar`
+- `kabul-baburin-puutarhat`
+- `kabul-kabulin-vanha-kaupunginmuuri`
+- `kabul-chihil-sutunin-palatsi`
+- `kabul-darul-amanin-palatsi`
+
+### chennai
+- `chennai-madrasin-ylin-oikeus`
+- `chennai-chennai-centralin-asema`
+- `chennai-ripon-building`
+- `chennai-fort-st-george`
+- `chennai-chennai-egmoren-asema`
+- `chennai-government-museum`
+- `chennai-chepaukin-palatsi`
+- `chennai-marina-beach`
+- `chennai-kapaleeshwararin-temppeli`
+- `chennai-san-thomen-basilika`
+
+### mumbai
+- `mumbai-crawford-market`
+- `mumbai-marine-drive`
+- `mumbai-chhatrapati-shivaji-maharaj-terminus`
+- `mumbai-st-thomasin-katedraali`
+- `mumbai-town-hall`
+- `mumbai-bombayn-korkein-oikeus`
+- `mumbai-rajabain-kellotorni`
+- `mumbai-david-sassoonin-kirjasto`
+- `mumbai-prince-of-walesin-museo`
+- `mumbai-gateway-of-india`
+
+### colombo
+- `colombo-colombon-satama`
+- `colombo-wolvendaalin-kirkko`
+- `colombo-punainen-moskeija`
+- `colombo-fortin-kellotorni`
+- `colombo-fortin-rautatieasema`
+- `colombo-beira-jarvi`
+- `colombo-galle-face-hotel`
+- `colombo-gangaramayan-temppeli`
+- `colombo-colombon-kansallismuseo`
+
+### karachi
+- `karachi-empress-market`
+- `karachi-karachin-kaupungintalo`
+- `karachi-denso-hall`
+- `karachi-pyhan-kolminaisuuden-katedraali`
+- `karachi-wazir-mansion`
+- `karachi-merewetherin-kellotorni`
+- `karachi-karachi-cityn-rautatieasema`
+- `karachi-frere-hall`
+- `karachi-satamahallinnon-talo`
+- `karachi-mohatta-palace`
+
+### newyork
+- `newyork-times-square`
+
+### auckland
+- `auckland-ferry-building`
+- `auckland-victoria-park-market`
+- `auckland-albert-park`
+- `auckland-aucklandin-kaupungintalo`
+- `auckland-karangahape-road`
+- `auckland-symonds-streetin-hautausmaa`
+- `auckland-ewelme-cottage`
+- `auckland-highwic`
+- `auckland-eden-park`
+- `auckland-maungawhau`
+
+### sanfrancisco
+- `sanfrancisco-ghirardelli-square`
+- `sanfrancisco-coit-tower`
+- `sanfrancisco-ferry-building`
+- `sanfrancisco-transamerica-pyramid`
+- `sanfrancisco-haas-lilienthalin-talo`
+- `sanfrancisco-old-st-mary-s-katedraali`
+- `sanfrancisco-grace-cathedral`
+- `sanfrancisco-palace-hotel`
+- `sanfrancisco-union-square`
+- `sanfrancisco-san-franciscon-kaupungintalo`
+
+### buenosaires
+- `buenosaires-pilarin-basilika`
+- `buenosaires-plaza-san-martin`
+- `buenosaires-palacio-de-aguas-corrientes`
+- `buenosaires-museo-mitre`
+- `buenosaires-buenos-airesin-katedraali`
+- `buenosaires-cafe-tortoni`
+- `buenosaires-palacio-barolo`
+- `buenosaires-kongressipalatsi`
+- `buenosaires-manzana-de-las-luces`
+- `buenosaires-santo-domingon-luostari`
+
 ## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 8 R2-varmennettu
 
 ### astana
