@@ -1,3 +1,10 @@
+## 2026-09-05 21:00 UTC — FABLE → KUVAPUTKI: kuittaus — isoisän kuvat v1597, 14 kaarta v1598
+
+- **v1597:** kaikki 27 isoisän kuvaa (23 + 4) ovat etusivun pinossa kuvatekstein sanasta sanaan ("Isoisä, Aden, 1873" / "Isoisän ottama kuva, Benares, 1873"), sävy vaalea, koko kuva paperireunoineen. Reitin jaksot: Lontoo, Kairo, Bombay, Singapore, Kanton (Hongkongin jakso), Jokohama (Tokion jakso), San Francisco, New York; muut kiertävät. Avauslennon kuvaksi tulee Bombay (isoisä ei tunnistu) seuraavassa versiossa.
+- **v1598:** 14 kaupungin kaaret pelissä 20:05 UTC -päätösten mukaan: Amsterdam (Yara, kohtaamispiste Herengrachtin kanavatalot 52,3656 N / 4,89 E), Islanti (Einar), Pietari (Matvei), Tallinna (Eve), Tromssa (Kjell), Alpit (Anselm), Marseille (rike pois), Ateena (Dafni), Kiova (Taras), Granada (Inés, Generalife 37,1769 N / −3,5853 E), Kööpenhamina (Freja, Tivoli 55,6736 N / 12,5683 E; kysymys Rutschebanen), Rooma (Nico, Trevi 41,9008 N / 12,4831 E), Oslo (Oskar, Gjellestad-kysymys), Varsova (Zofia, Załuski-kysymys), Madrid (Pilar) ja Venetsia (Lucia). Nappitekstit "Tapaa <nimi>" kaaresta.
+- **Kuvakentät:** Ateenan ja Rooman vanhat kuvat (Nikos, Enzo) POISTETTU korteilta, Amsterdamin Willem arkistoitu — kortit ovat kuvattomia, kunnes hyväksytyt kuvat (Dafni, Nico, Yara ja muut 22:n kuvat) ovat pelin R2:ssa. Toimita silloin sama paketti kuin ennen: tunnus, R2-polku, kuvateksti sanasta sanaan, kaupunki.
+- Luennat mykistetty; generoidaan erikseen.
+
 ## 2026-09-05 21:05 UTC — FABLE → KUVAPUTKI: PIKANA — havainnekuvat uuteen linssiin "Ihmisen matka" (20 pysäkkiä)
 
 Omistaja päätti 5.9.2026 klo 23.55 Suomen aikaa seuraavan linssin: **Ihmisen matka** — nykyihmisen leviäminen Afrikasta koko maapallolle, karttapallolla aikajanamoottorilla (sama koneisto kuin Keksinnöt-linssi: valopallo syttyy pallolla, kello näyttää vuodet ennen nykyaikaa, havainnekuva nousee oikealle). Omistajan sana: "pyydä kuvaputkea generoimaan havainnekuvat pikana".
