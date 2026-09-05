@@ -56,7 +56,8 @@
  * MISTÄ RAIDAT TULEVAT
  * ------------------------------------------------------------------
  *
- * Kaikki musiikki generoidaan ElevenLabs Music -APIlla
+ * Siirtyma- ja linssiraidat ovat Google Lyria 3.5:n (omistajan valinta
+ * 5.9.2026, paate -lyria), muu musiikki ElevenLabs Music -APIlla
  * (tools/generoi-siirtymamusiikki.mjs ja tools/generoi-musiikki.mjs),
  * tehosteet tools/generoi-tehosteet.mjs; ajot tehdään Actionsissa.
  * Tämä moduuli ei tunne avaimia eikä generoi mitään — se vain
@@ -90,22 +91,22 @@ export const HILJENNYKSEN_SYY = 'musiikkisivu';
 const LAJIEN_TIEDOT = {
   jalan: {
     osasto: 'siirtyma',
-    tiedosto: 'siirtyma-jalan.mp3',
+    tiedosto: 'siirtyma-jalan-lyria.mp3',
     kaytto: 'Soi kävelysiirtymän ajan, kun nappula kulkee kartalla.',
   },
   laiva: {
     osasto: 'siirtyma',
-    tiedosto: 'siirtyma-laiva.mp3',
+    tiedosto: 'siirtyma-laiva-lyria.mp3',
     kaytto: 'Soi laivasiirtymän ajan; aallokon huojunta, hitaampi kuin jalan.',
   },
   lento: {
     osasto: 'siirtyma',
-    tiedosto: 'siirtyma-lento.mp3',
+    tiedosto: 'siirtyma-lento-lyria.mp3',
     kaytto: 'Soi lentokohtauksessa matkustamoäänitteen ALLA, siksi matalimmalla tasolla.',
   },
   keksinnot: {
     osasto: 'linssi',
-    tiedosto: 'linssi-keksinnot.mp3',
+    tiedosto: 'linssi-keksinnot-lyria.mp3',
     kaytto: 'Soi aikajanalinssin koko ajon ajan; pitkä looppi, koska ajo kestää minuutteja.',
   },
 };

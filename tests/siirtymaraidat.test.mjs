@@ -29,7 +29,7 @@ import { readFileSync } from 'node:fs';
 
 import {
   GENEROITAVA_MS, LAJIT, hiljaisuusVirheet, kestoRajat, lahdeMs, looppiLeikkaus,
-  looppiSuodatin, tulkitseArgumentit, tulkitseEbur128, tulkitseLoudnorm, valitseLajit,
+  looppiSuodatin, raidanTiedosto, tulkitseArgumentit, tulkitseEbur128, tulkitseLoudnorm, valitseLajit,
 } from '../tools/generoi-siirtymamusiikki.mjs';
 
 const TYOKALU = readFileSync(
@@ -160,9 +160,10 @@ test('"kaikki" on vain siirtymäryhmä — linssiraita pyydetään nimeltä', ()
 test('--kuiva ja --ei-vientia luetaan lipuiksi', () => {
   const liput = tulkitseArgumentit(['--laji', 'kaikki', '--kuiva', '--ei-vientia']);
   assert.equal(liput.virhe, undefined);
-  assert.deepEqual(liput, { laji: 'kaikki', kuiva: true, vienti: false, moottori: 'eleven' });
+  assert.deepEqual(liput, { laji: 'kaikki', kuiva: true, vienti: false, moottori: 'lyria' });
   assert.equal(tulkitseArgumentit(['--laji', 'jalan']).vienti, true);
-  // Lyria-moottori (4.9.2026): oma pääte, ettei pelin raita korvaudu.
+  // Lyria on pelin moottori (omistaja 5.9.2026); eleven jää vertailuun.
+  assert.equal(tulkitseArgumentit(['--laji', 'jalan', '--moottori', 'eleven']).moottori, 'eleven');
   assert.equal(tulkitseArgumentit(['--laji', 'jalan', '--moottori', 'lyria']).moottori, 'lyria');
   assert.match(tulkitseArgumentit(['--laji', 'jalan', '--moottori', 'suno']).virhe, /--moottori/);
 });
@@ -170,9 +171,11 @@ test('--kuiva ja --ei-vientia luetaan lipuiksi', () => {
 /* --- 5. kytkentä peliin ja vaatimuksiin ---------------------------- */
 
 test('työkalu kirjoittaa tasan ne tiedostot, jotka peli hakee', () => {
-  const pelinNimet = [...PELI.matchAll(/aanet\/((?:siirtyma|linssi)-[a-z]+\.mp3)/g)].map((m) => m[1]);
+  // Peli soittaa Lyrian raidat (pääte -lyria, omistaja 5.9.2026): työkalun
+  // oletusmoottori kirjoittaa tasan ne nimet.
+  const pelinNimet = [...PELI.matchAll(/aanet\/((?:siirtyma|linssi)-[a-z]+-lyria\.mp3)/g)].map((m) => m[1]);
   assert.equal(pelinNimet.length, 4, 'peli hakee neljä raitaa ämpärin aanet/-kansiosta');
-  const tyokalunNimet = Object.values(LAJIT).map((r) => r.tiedosto);
+  const tyokalunNimet = Object.values(LAJIT).map((r) => raidanTiedosto(r, tulkitseArgumentit(['--laji', 'kaikki']).moottori));
   assert.deepEqual([...tyokalunNimet].sort(), [...pelinNimet].sort());
   // Siirtymälajit ovat työkalun siirtymäryhmä, samassa järjestyksessä.
   const lajit = PELI.match(/export const SIIRTYMALAJIT = \[([^\]]+)\]/)[1]

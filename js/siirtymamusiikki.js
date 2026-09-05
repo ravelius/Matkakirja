@@ -114,8 +114,13 @@
  *                           koska kello ja filminauha liikkuvat sen
  *                           päällä. Looppi 45–60 s, koska ajo kestää
  *                           minuutteja.
- *   NIMET          siirtyma-jalan.mp3, siirtyma-laiva.mp3,
- *                  siirtyma-lento.mp3, linssi-keksinnot.mp3.
+ *   NIMET          siirtyma-jalan-lyria.mp3, siirtyma-laiva-lyria.mp3,
+ *                  siirtyma-lento-lyria.mp3, linssi-keksinnot-lyria.mp3.
+ *                  Paate -lyria on moottorin nimi: omistaja kuunteli
+ *                  ElevenLabsin ja Lyria 3.5:n raidat rinnakkain ja
+ *                  valitsi Lyrian (5.9.2026 ilta, "ota lyra musiikit
+ *                  kayttoon peliin ja poista vanha"); ElevenLabsin
+ *                  raidat eivat ole enaa pelissa.
  *   VIENTI         Generoitu raita menee `assets/audio/`-kansioon,
  *                  jolloin .github/workflows/vie-aanet.yml vie sen
  *                  ämpärin `audio/`-kansioon automaattisesti pushissa.
@@ -163,20 +168,20 @@ import { lisaaVaistaja } from './ambience-stream.js';
 const RAIDAT = {
   jalan: {
     ryhma: 'siirtyma',
-    ampari: `${AANI_JUURI}aanet/siirtyma-jalan.mp3`,
-    oma: 'assets/audio/siirtyma-jalan.mp3',
+    ampari: `${AANI_JUURI}aanet/siirtyma-jalan-lyria.mp3`,
+    oma: 'assets/audio/siirtyma-jalan-lyria.mp3',
     voima: 0.11,
   },
   laiva: {
     ryhma: 'siirtyma',
-    ampari: `${AANI_JUURI}aanet/siirtyma-laiva.mp3`,
-    oma: 'assets/audio/siirtyma-laiva.mp3',
+    ampari: `${AANI_JUURI}aanet/siirtyma-laiva-lyria.mp3`,
+    oma: 'assets/audio/siirtyma-laiva-lyria.mp3',
     voima: 0.11,
   },
   lento: {
     ryhma: 'siirtyma',
-    ampari: `${AANI_JUURI}aanet/siirtyma-lento.mp3`,
-    oma: 'assets/audio/siirtyma-lento.mp3',
+    ampari: `${AANI_JUURI}aanet/siirtyma-lento-lyria.mp3`,
+    oma: 'assets/audio/siirtyma-lento-lyria.mp3',
     voima: 0.06,
   },
   /*
@@ -187,8 +192,8 @@ const RAIDAT = {
    */
   keksinnot: {
     ryhma: 'linssi',
-    ampari: `${AANI_JUURI}aanet/linssi-keksinnot.mp3`,
-    oma: 'assets/audio/linssi-keksinnot.mp3',
+    ampari: `${AANI_JUURI}aanet/linssi-keksinnot-lyria.mp3`,
+    oma: 'assets/audio/linssi-keksinnot-lyria.mp3',
     voima: 0.11,
     nousuMs: 600,
     laskuMs: 800,

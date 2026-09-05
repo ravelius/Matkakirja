@@ -259,9 +259,10 @@ const MUSA = readFileSync(new URL('../js/siirtymamusiikki.js', import.meta.url),
 
 test('kolme raitaa omilla poluillaan ämpärin aanet-kansiossa', () => {
   for (const laji of ['jalan', 'laiva', 'lento']) {
-    assert.match(MUSA, new RegExp(`aanet/siirtyma-${laji}\\.mp3`),
+    // Pääte -lyria: pelin raidat ovat Lyria 3.5:n (omistaja 5.9.2026).
+    assert.match(MUSA, new RegExp(`aanet/siirtyma-${laji}-lyria\\.mp3`),
       `raidan ${laji} ämpäripolku puuttuu`);
-    assert.match(MUSA, new RegExp(`assets/audio/siirtyma-${laji}\\.mp3`),
+    assert.match(MUSA, new RegExp(`assets/audio/siirtyma-${laji}-lyria\\.mp3`),
       `raidan ${laji} varapolku (vie-aanet.yml) puuttuu`);
   }
 });

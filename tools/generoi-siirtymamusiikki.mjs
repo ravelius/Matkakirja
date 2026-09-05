@@ -159,8 +159,11 @@ const MUOTO = 'mp3_44100_128';
  * "Tätä voisi kokeilla kun pallo saatu valmiiksi" / "Tee se lyyria nyt kun
  * odottelet"). Gemini API:n Interactions-rajapinta, malli lyria-3.5,
  * avain GOOGLE_API_KEY. Lyria-raidat viedään OMALLA NIMELLÄ (pääte
- * -lyria ennen .mp3), jotta ElevenLabsin raita jää peliin ja omistaja
- * voi kuunnella molemmat rinnakkain; voittaja vaihdetaan erikseen.
+ * -lyria ennen .mp3); omistaja kuunteli molemmat rinnakkain ja valitsi
+ * Lyrian (5.9.2026 ilta: "ota lyra musiikit käyttöön peliin ja poista
+ * vanha"), joten peli soittaa -lyria-nimiset raidat ja Lyria on
+ * työkalun oletusmoottori. ElevenLabs jää vertailumoottoriksi
+ * (--moottori eleven, paljas nimi, ei soi pelissä).
  */
 const LYRIA_OSOITE = 'https://generativelanguage.googleapis.com/v1beta/interactions';
 const LYRIA_MALLI = 'lyria-3.5';
@@ -352,7 +355,7 @@ export const LAJIT = {
 
 /** Komentoriviliput. Palauttaa `{ virhe }`, jos syöte ei kelpaa. */
 export function tulkitseArgumentit(argumentit) {
-  const liput = { laji: null, kuiva: false, vienti: true, moottori: 'eleven' };
+  const liput = { laji: null, kuiva: false, vienti: true, moottori: 'lyria' };
   for (let i = 0; i < argumentit.length; i += 1) {
     const arg = argumentit[i];
     if (arg === '--laji') {

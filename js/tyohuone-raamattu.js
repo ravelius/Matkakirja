@@ -3343,6 +3343,18 @@ export const RAAMATTU = {
           + 'tekstin alle", "pinoutua hieman sikin sokin toistensa paalle"). '
           + 'Isoisa nakyy pelissa sen kautta, MISSA han kavi ja miten '
           + 'nopeasti - ei siina, milta han naytti.',
+        'LYRIA PELIIN, ELEVENLABSIN MUSIIKKI POIS (omistaja 5.9.2026 ilta, '
+          + 'sanatarkasti: "ota lyra musiikit kayttoon peliin ja poista '
+          + 'vanha"): omistaja kuunteli siirtymaraidat (jalan, laiva, lento) '
+          + 'ja Keksinnot-linssin raidan molemmilla moottoreilla rinnakkain '
+          + 'ja valitsi Google Lyria 3.5:n. Peli soittaa -lyria-paatteiset '
+          + 'raidat (js/siirtymamusiikki.js), Lyria on musiikkityokalun ja '
+          + 'tyonkulun oletusmoottori, ElevenLabs Music jaa vain '
+          + 'vertailuun. Vanhat ElevenLabsin raidat poistetaan ampaarista '
+          + '(aanet/siirtyma-*.mp3, aanet/linssi-keksinnot.mp3) - se vaatii '
+          + 'omistajan R2-tunnukset. Tama sulkee jonon idean LYRIA 3.5 '
+          + 'MUSIIKKIIN: voittaja on Lyria. Musiikkipaletti (pohja, visa, '
+          + 'aarre) on yha ElevenLabsin, kunnes omistaja paattaa siitakin.',
         'KELLONAJAT SUOMEN AIKAA (omistaja 5.9.2026 iltapaiva, sanatarkasti: '
           + '"Anna kellonajat suomen aikaa aina"): kaikki kellonajat '
           + 'omistajalle - chatissa, korteissa, raporteissa ja '
