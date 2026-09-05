@@ -12,7 +12,9 @@ import { readFileSync } from 'node:fs';
  * koko etusivun alalla. isoisän kuva saisi olla isompi ja vaihtua aina
  * samaan paikkaan."* — klo 21.45: *"animaatio pitää mennä koko
  * maapallon ympäri niin että se voi loopata. eli pysähtyy lontooseen ja
- * punainen viiva ottaa kiinni lopuksi."*).
+ * punainen viiva ottaa kiinni lopuksi."* — klo 22.45: *"isoisän kuvat
+ * voivat olla blurrattuja ja haalealla ja jäädä tekstin alle"* ja *"ne
+ * voisivat pinoutua hieman sikin sokin toistensa päälle."*).
  *
  * Vartioi kuusi asiaa, joita ei näe silmällä: (1) projektio — koneen
  * ruutupiste vastaa sitä kameraa, jolla video poltettiin; (2) reitti on
@@ -20,8 +22,9 @@ import { readFileSync } from 'node:fs';
  * saumatta; (3) kone pysähtyy Lontooseen ja viiva sulkee ympyrän;
  * (4) cover-sovitus antaa videolle ja SVG:lle saman muunnoksen, ja kone
  * osuu pallolle kaikissa ruutukoissa; (5) lippu on poiskytkin ja
- * varapolku jättää etusivun ennalleen; (6) isoisän kuva on kiinteässä
- * paikassa ja selvästi isompi.
+ * varapolku jättää etusivun ennalleen; (6) isoisän kuvat pinoutuvat
+ * sikin sokin haaleina TEKSTIN ALLE ja pinossa on enintään viisi
+ * korttia.
  */
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
@@ -38,12 +41,17 @@ globalThis.location = { search: '' };
 const {
   ETUSIVUN_KAMERA, ETUSIVUN_KUVAKIERTO, ETUSIVUN_REITTI, ETUSIVUPALLO_AVAIN,
   ETUSIVUPALLO_TIEDOSTOT, ETUSIVUPALLO_VERSIO, HAIVYTYS_S, KIERROKSEN_ASTEET,
-  KUVAN_VAIHTO_MS, LOPPU_PITO_S, SOVITUS_TAPA, SVG_SOVITUS,
+  LOPPU_PITO_S, PINON_HAIVYTYS_MS, PINON_KATTO, PINON_KULMA, PINON_LASKU_MS,
+  PINON_SIIRTO, SOVITUS_TAPA, SVG_SOVITUS,
   asetaEtusivupallo, etusivupalloOletus, etusivupalloPaalla, jaljenPisteet,
   kameranNakyma, kerroksenSovitus, koneenTila,
-  kaarietaisyys, liikeVahennetty, lueLuettelo, pallonPiste, reitinPisteet, saapumisenKuva,
+  kaarietaisyys, liikeVahennetty, lueLuettelo, pallonPiste, pinonAsento, reitinPisteet,
+  saapumisenKaupunki, saapumisenKuva,
   saapumisia, suurympyra, teeReitti, videostaRuudulle,
 } = await import('../js/etusivupallo.js');
+const {
+  ETUSIVUN_ISOISAKUVAT, ISOISAKUVAN_SAVYT, isoisakuvanSavy,
+} = await import('../js/packs/etusivun-isoisakuvat.js');
 const { packById } = await import('../js/pack.js');
 // Laudan valinta muistetaan moduulissa (ui-apurit): oletus seuraa lautaa,
 // joten testin on unohdettava muisti aina kun ?lauta vaihtuu.
@@ -383,7 +391,7 @@ test('punainen viiva pitenee, sulkee ympyrän Lontoossa ja häipyy vasta sen jä
 
 /* ==================== ISOISÄN KUVAT ================================ */
 
-test('jokainen laskeutuminen tuo uuden aikalaiskuvan kuvatekstin kanssa', () => {
+test('jokainen laskeutuminen tuo pinoon kuvan paikan ja vuoden kuvatekstillä', () => {
   assert.equal(saapumisia(reitti, 0), 0);
   assert.equal(saapumisia(reitti, reitti.kesto), pisteet.length - 1,
     'kaikki kymmenen laskeutumista näkyvät kierroksen aikana');
@@ -394,53 +402,144 @@ test('jokainen laskeutuminen tuo uuden aikalaiskuvan kuvatekstin kanssa', () => 
   assert.ok(eka && toka);
   assert.notEqual(eka.avain, toka.avain, 'peräkkäiset laskeutumiset eivät toista samaa kuvaa');
   assert.equal(saapumisenKuva(1 + ETUSIVUN_KUVAKIERTO.length).avain, eka.avain, 'kierto');
-  assert.match(eka.kuva.kuvateksti, /^Isoisä, .+, 1873$/,
-    'kuvateksti on sanasta sanaan js/isoisan-valokuvat.js:n lappu');
   assert.equal(saapumisenKuva(0), null, 'lähtökaupunki ei tuo kuvaa');
+  /*
+   * KUVATEKSTI ON PAIKKA + VUOSI, EI HENKILÖKUVAUS (Raamattu: ISOISA
+   * JAA ARVOITUKSEKSI, omistaja 5.9.2026 klo 22.55): pinon kuvissa
+   * isoisä ei hahmotu, joten lappu ei nimeä häntä.
+   */
+  for (const kuva of ETUSIVUN_ISOISAKUVAT) {
+    assert.match(kuva.kuvateksti, /^[^,]+, 1873$/,
+      `kuvateksti "${kuva.kuvateksti}" ei ole muotoa paikka, 1873`);
+    assert.doesNotMatch(kuva.kuvateksti, /isoisä/i,
+      'pinon lappu ei nimeä isoisää (ISOISA JAA ARVOITUKSEKSI)');
+    assert.ok(kuva.osoite.startsWith('https://'), 'osoite muodostetaan pakan juuresta');
+    assert.ok(kuva.tunnus && 'kaupunki' in kuva, 'pakka on datavetoinen: tunnus ja kaupunki');
+  }
+  // Kaupungin oma kuva voittaa kierron: Bombay-kuva on Mumbain jaksolla.
+  const mumbai = ETUSIVUN_REITTI.indexOf('mumbai');
+  assert.equal(saapumisenKaupunki(reitti, mumbai), 'mumbai');
+  assert.equal(saapumisenKuva(mumbai, 'mumbai').kuva.kaupunki, 'mumbai',
+    'kaupungille merkitty kuva tulee juuri sen laskeutumisella');
 });
 
 /*
- * KUVA ON ISOMPI JA AINA SAMASSA PAIKASSA (omistaja 5.9.2026 klo 21.30:
- * *"isoisän kuva saisi olla isompi ja vaihtua aina samaan paikkaan"*).
- * Paikan antaa yksin CSS, joten vartio on CSS:ssä ja moduulin DOM-
- * rakenteessa: kaksi korttia päällekkäin ristihäivytystä varten.
+ * SÄVY ON KUVAKOHTAINEN (omistaja 5.9.2026 klo 22.50: kuvaputken uudet
+ * kuvat ovat *"aika vaaleita (vinjetti vaaleaan)"*), jotta vaaleat eivät
+ * haalistu näkymättömiin tummien vedosten asetuksilla.
  */
-test('isoisän kuva on kiinteässä paikassa ja selvästi isompi kuin ennen', () => {
+test('haaleus ja sumennus tulevat pakasta ja vaalea kuva jää selvemmäksi', () => {
+  assert.ok(ISOISAKUVAN_SAVYT.vaalea.haalea > ISOISAKUVAN_SAVYT.tumma.haalea,
+    'vaalea vinjettikuva ei saa haalistua yhtä paljon kuin tumma vedos');
+  assert.ok(ISOISAKUVAN_SAVYT.tumma.haalea >= 0.45 && ISOISAKUVAN_SAVYT.tumma.haalea <= 0.6,
+    'tumma vedos on omistajan haarukassa (haalea, muttei näkymätön)');
+  assert.ok(ISOISAKUVAN_SAVYT.tumma.sumennus > 0 && ISOISAKUVAN_SAVYT.vaalea.sumennus > 0,
+    'sumennus on molemmilla sävyillä päällä');
+  const oma = isoisakuvanSavy({ savy: 'vaalea', haalea: 0.7, sumennus: 2 });
+  assert.deepEqual(oma, { haalea: 0.7, sumennus: 2 }, 'kuvakohtainen arvo voittaa sävyn');
+  assert.deepEqual(isoisakuvanSavy(null), ISOISAKUVAN_SAVYT.tumma, 'oletus ei kaadu');
+});
+
+/*
+ * PINO SIKIN SOKIN TEKSTIN ALLE (omistaja 5.9.2026 klo 22.45:
+ * *"isoisän kuvat voivat olla blurrattuja ja haalealla ja jäädä tekstin
+ * alle"*, *"ne voisivat pinoutua hieman sikin sokin toistensa
+ * päälle"*). Vartioidaan neljä asiaa: pinon katto, deterministinen
+ * asento, kerrosjärjestys (teksti > kuvat > video) ja se, ettei
+ * esteväistöä ole enää missään.
+ */
+test('pinon asento on siemenellinen ja pysyy annetuissa rajoissa', () => {
+  for (let nro = 1; nro <= 30; nro++) {
+    const a = pinonAsento(nro);
+    assert.deepEqual(a, pinonAsento(nro), `laskeutuminen ${nro} ei ole deterministinen`);
+    assert.ok(Math.abs(a.dx) <= PINON_SIIRTO && Math.abs(a.dy) <= PINON_SIIRTO,
+      `siirto ${a.dx}/${a.dy} ylittää ±${PINON_SIIRTO} %`);
+    assert.ok(Math.abs(a.kulma) <= PINON_KULMA, `kallistus ${a.kulma} ylittää ±${PINON_KULMA}°`);
+  }
+  // Sikin sokin: peräkkäiset kortit eivät laskeudu samaan asentoon.
+  const asennot = new Set();
+  for (let nro = 1; nro <= PINON_KATTO; nro++) {
+    const a = pinonAsento(nro);
+    asennot.add(`${a.dx},${a.dy},${a.kulma}`);
+    if (nro > 1) {
+      const e = pinonAsento(nro - 1);
+      assert.ok(Math.hypot(a.dx - e.dx, a.dy - e.dy) > 0.5 || Math.abs(a.kulma - e.kulma) > 1,
+        `laskeutumiset ${nro - 1} ja ${nro} ovat käytännössä samassa asennossa`);
+    }
+  }
+  assert.equal(asennot.size, PINON_KATTO, 'jokainen pinon kortti on omassa asennossaan');
+  assert.ok(PINON_KATTO === 5 && PINON_LASKU_MS >= 600 && PINON_LASKU_MS <= 800,
+    'katto on viisi korttia ja laskeutuminen 600–800 ms');
+  assert.ok(PINON_HAIVYTYS_MS > 0);
+});
+
+test('kuvat pinoutuvat haaleina ja sumeina tekstin alle', () => {
   const css = lue('../css/styles.css');
-  const sääntö = css.match(/\.etusivupallo-kuva \{[\s\S]*?\n\}/)[0];
-  assert.match(sääntö, /position: absolute;/);
-  assert.match(sääntö, /top: 37\.25%;/, 'puhelimella ja tabletilla kiinteä kohta pystysuunnassa');
-  assert.match(sääntö, /right: /, 'kiinteä laita');
-  const leveys = sääntö.match(/width: clamp\((\d+)px, (\d+)vw, (\d+)px\);/);
-  assert.ok(leveys, 'koko annetaan clampilla eikä JS:llä');
-  assert.ok(Number(leveys[1]) >= 108,
-    `puhelimen kortti ${leveys[1]}px ei ole isompi kuin entinen (mitattu 90px + 2-rivinen lappu)`);
-  // Työpöydällä oma kiinteä nurkka ja selvästi isompi kortti.
-  const poyta = css.match(/@media \(min-width: 900px\) \{\n {2}\/\*[\s\S]*?\n {2}\.etusivupallo-kuva \{[\s\S]*?\n {2}\}\n\}/);
-  assert.ok(poyta, 'työpöydälle on oma media query');
-  assert.match(poyta[0], /bottom: /, 'työpöydällä kortti on paneelin alanurkassa');
-  assert.match(poyta[0], /width: clamp\(170px, 18vw, 260px\);/);
-  // Kuvateksti yhdelle riville: kortin korkeus on ennakoitava.
-  assert.match(css, /\.etusivupallo-kuva figcaption \{[\s\S]*?white-space: nowrap;/);
-  // Kallistus jää (omistaja: "kevyt kallistus saa jäädä").
-  assert.match(sääntö, /rotate\(-3deg\)/, 'kevyt kallistus jää (omistaja: "kevyt kallistus saa jäädä")');
-  // Varmistus siirtää korttia pystysuunnassa vain jos kiinteä paikka osuisi
-  // tekstiin — sama luku molemmille korteille, ei kuvakohtainen haku.
-  assert.match(sääntö, /var\(--etusivupallo-kuva-siirto, 0px\)/);
   const lahde = lue('../js/etusivupallo.js');
-  assert.match(lahde, /const kortit = \[0, 1\]\.map\(/,
-    'kortteja on kaksi päällekkäin, jotta vaihto on ristihäivytys');
-  assert.match(lahde, /tuleva\.kortti\.classList\.add\('nakyy'\);\n\s*vaistyva\.kortti\.classList\.remove\('nakyy'\);/,
-    'tuleva kirkastuu samalla kun väistyvä häipyy');
-  assert.doesNotMatch(lahde, /valitseKuvapaikka|sijoitaKuva/,
-    'esteväistö ja kutistus on poistettu — paikka ja koko ovat kiinteät');
-  assert.match(lahde, /const varmistaPaikka = \(\) => \{/,
-    'kiinteän paikan varmistus on olemassa (ei kuvakohtaista hakua)');
-  assert.match(lahde, /win\.setTimeout\(varmistaPaikka, KUVAN_VAIHTO_MS \+ 320\);/,
-    'varmistus mitataan vasta kun ristihäivytys on ohi');
-  assert.ok(KUVAN_VAIHTO_MS > 0 && KUVAN_VAIHTO_MS < 1200);
-  assert.match(css, new RegExp(`transition: opacity ${KUVAN_VAIHTO_MS}ms`),
-    'CSS:n häivytys ja moduulin vakio ovat samat');
+
+  /* KERROSJÄRJESTYS: teksti > kuvat > verho > video. */
+  const pino = css.match(/\.etusivupallo-pino \{[\s\S]*?\n\}/)[0];
+  const pallo = css.match(/\.etusivupallo \{[\s\S]*?\n\}/)[0];
+  const zLuku = (osa) => Number(osa.match(/z-index: (-?\d+);/)[1]);
+  const zPino = zLuku(pino);
+  const zPallo = zLuku(pallo);
+  const zTeksti = zLuku(css.match(
+    /\.intro\.intro-pallolla \.intro-kartta,\n\.intro\.intro-pallolla \.intro-arkki \{[^}]*\}/,
+  )[0]);
+  const zVerho = zLuku(css.match(/\.intro\.intro-pallolla \.intro-verho \{[\s\S]*?\n\}/)[0]);
+  assert.ok(zTeksti > zPino && zPino > zVerho && zVerho > zPallo,
+    `kerrosjärjestyksen on oltava teksti (${zTeksti}) > kuvat (${zPino}) > verho (${zVerho}) `
+    + `> video (${zPallo})`);
+
+  /* PAIKKA JA KOKO: kiinteä alue, selvästi isompi kuin ennen. */
+  assert.match(pino, /position: absolute;/);
+  assert.match(pino, /bottom: /, 'pino on paneelin alaosassa');
+  const leveys = pino.match(/width: clamp\((\d+)px, (\d+)vw, (\d+)px\);/);
+  assert.ok(leveys, 'koko annetaan clampilla eikä JS:llä');
+  assert.ok(Number(leveys[1]) >= 150,
+    `puhelimen kortti ${leveys[1]}px ei ole isompi kuin entinen (110px)`);
+  const poyta = css.match(
+    /@media \(min-width: 900px\) \{\n {2}\/\*[\s\S]*?\n {2}\.etusivupallo-pino \{[\s\S]*?\n {2}\}\n\}/,
+  );
+  assert.ok(poyta, 'työpöydälle on oma media query');
+  assert.match(poyta[0], /right: /, 'työpöydällä pino on paneelin oikeassa alaneljänneksessä');
+  assert.match(poyta[0], /width: clamp\(200px, 34vw, 420px\);/);
+
+  /* HAALEA JA SUMEA: arvot tulevat pakasta muuttujina, oletus varana. */
+  const kuva = css.match(/\.etusivupallo-kuva img \{[\s\S]*?\n\}/)[0];
+  assert.match(kuva, /opacity: calc\(var\(--kuvan-haalea, 0\.55\) \+ var\(--pino-harsokorjaus, 0\)\);/,
+    'haaleus tulee pakasta, harsokorjaus pienten ruutujen tekstiharsolle');
+  assert.match(kuva, /filter: blur\(var\(--kuvan-sumennus, 1\.5px\)\);/,
+    'sumennus on <img>-elementillä (iOS-sääntö koskee SVG-kerrosta)');
+  assert.match(css, /iOS-SÄÄNNÖN POIKKEUS/, 'poikkeus on perusteltava kommentissa');
+  assert.match(lahde, /--kuvan-haalea:\$\{savy\.haalea\}/);
+  assert.match(lahde, /--kuvan-sumennus:\$\{savy\.sumennus\}px/);
+
+  /* KUVATEKSTI VAIN PÄÄLLIMMÄISELLE (luettavuus). */
+  assert.match(css, /\.etusivupallo-kuva figcaption \{[\s\S]*?white-space: nowrap;/);
+  assert.match(css, /\.etusivupallo-kuva\.uusin\.laskeutunut figcaption \{ opacity: 1; \}/,
+    'lappu näkyy vain päällimmäisellä kortilla');
+
+  /* PINO: katto, siemenellinen asento, pehmeä laskeutuminen. */
+  assert.match(lahde, /while \(pinossa\.length > PINON_KATTO\) \{/,
+    'pinon katto leikkaa alimman kortin pois');
+  assert.match(lahde, /alin\.classList\.add\('haipyy'\);/, 'alin häivytetään pehmeästi');
+  assert.match(lahde, /const asento = pinonAsento\(nro\);/,
+    'asento on siemenellinen eikä Math.random');
+  assert.doesNotMatch(lahde, /Math\.random/, 'satunnaisuus on siemenellistä (testit vakaita)');
+  assert.match(css, new RegExp(`transition: opacity ${PINON_LASKU_MS}ms`),
+    'CSS:n laskeutuminen ja moduulin vakio ovat samat');
+
+  /* EI ESTEVÄISTÖÄ EIKÄ PYSTYSIIRTOA: kuvat saavat jäädä tekstin alle. */
+  assert.doesNotMatch(lahde, /varmistaPaikka|valitseKuvapaikka|sijoitaKuva/,
+    'esteväistö ja pystysiirto poistuivat kokonaan');
+  assert.doesNotMatch(css, /--etusivupallo-kuva-siirto/, 'pystysiirron muuttujaa ei enää ole');
+  assert.doesNotMatch(lahde, /addEventListener\?\.\('resize'/,
+    'asettelun kuuntelija poistui esteväistön mukana');
+
+  /* PINO SÄILYY LOOPIN YLI (perustelu kommentissa). */
+  assert.match(lahde, /KIERROS ALKOI ALUSTA — PINO JÄÄ/,
+    'loopin vaihteessa pinoa ei tyhjennetä, katto hoitaa');
 });
 
 /* ==================== KYTKENTÄ ===================================== */

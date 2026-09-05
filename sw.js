@@ -153,6 +153,9 @@ const SHELL = [
   // offline-käyttöä varten. Ei niputeta yhden tiedoston versioon
   // (tests/sw.test.mjs) — dist jää vanhaan etusivun karttaan.
   './js/etusivupallo.js',
+  // Etusivun pinon kuvat (pakka, 5.9.2026 klo 22.50): vain
+  // etusivupallo.js tuo tämän, joten se seuraa samaa polkua.
+  './js/packs/etusivun-isoisakuvat.js',
   './js/tehosteet.js',
   './js/kehittajan-voimat.js',
   './js/isoisan-valokuvat.js',

@@ -169,6 +169,10 @@ const NIPUTTAMATTOMAT = new Set([
   'js/packs/maasto-nimet-vedet.js',
   'js/packs/maasto-nimet-vuoret.js',
   'js/packs/maasto-vedet.js',
+  // Etusivun pinon kuvat: ainoa tuoja on js/etusivupallo.js, joka
+  // ladataan dynaamisesti eikä ole niputuksessa (etusivun pallo jää
+  // yhden tiedoston versiosta pois kuten linssit ja valokuvat).
+  'js/packs/etusivun-isoisakuvat.js',
   // Radiosoittimen ja päivän kuvien aineistot: tuojat (viritin.js,
   // työhuone) eivät ole niputuksessa.
   'js/packs/viritysaanet.js',
