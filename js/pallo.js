@@ -65,10 +65,15 @@ export const PALLO_LAATTAVERSIO = '2026-09-03a';
  * toinen kerros missä nimet ja kohteet yms." ja "päästään siitä
  * harmaasta hatusta eroon"): laatat on poltettu uudestaan nimien ja
  * karttanostojen kanssa (tools/tee-pallolaatat.mjs --nostot) ja navat
- * täytetty merellä ja jäällä. Kansio on <versio>-nostot; vanha kansio
- * jää ämpäriin varalle.
+ * täytetty merellä ja jäällä. Kansio on <versio>-nostot-<tunniste>;
+ * vanhat kansiot jäävät ämpäriin varalle. TUNNISTE b (5.9.2026 klo
+ * 15 Suomen aikaa, omistaja Huippuvuorilta: "Miksi hattu näkyy?"):
+ * napa merta napaan asti ilman vaaleaa lakkia ja reunarengasta, kartta
+ * 84° N:ään asti (tools/tee-pallolaatat.mjs --tunniste b). Muuttunut
+ * piirto saa aina uuden kansion, koska laatat ovat vuoden välimuistissa.
  */
-export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}-nostot`;
+export const PALLO_LAATTATUNNISTE = 'b';
+export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}-nostot-${PALLO_LAATTATUNNISTE}`;
 export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`;
 /** Syvin taso, jonka peli käyttää — luettelo (laatat.json) voi rajata matalammaksi. */
 export const PALLO_LAATTATASO_MAX = 8;
