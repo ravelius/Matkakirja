@@ -19,6 +19,10 @@ import {
 // Lukijaäänen piiri kuuluu samaan sanelun kovaan taukoon kuin
 // tehosteet ja maisema (ks. taukoaSanelunAjaksi).
 import { jatkaPuhePiiri, taukoaPuhePiiri } from './puhe.js';
+// Kaupungin oma kappale pohjavireen tilalla (omistaja 5.9.2026:
+// "ateenaan saavuttaessa voisi vaihtua kappale"). Taulukko ja
+// nimisääntö ovat siellä, soitin täällä — ks. POHJAVIRE alla.
+import { kaupunginMusiikki } from './kaupunkimusiikki.js';
 
 // Arvottu ääni pysyy samana koko käynnin ajan: syncAmbience kutsuu
 // playPlaceAmbiencea jokaisella piirrolla, eikä ääni saa vaihtua tai
@@ -462,8 +466,14 @@ export function playPlaceAmbience(cityId, fallbackType, lauta, cityCountry = nul
    * syntetisoitua tyyppiä. Käynnistys on tässä, koska tämä on se yksi
    * kohta, josta koko peli pyytää taustaääntä — kytkimen sammuttamana
    * se ei lähde soimaan eikä jää soimaan.
+   *
+   * Paikan tunnus menee mukana, koska osalla kaupungeista on OMA
+   * KAPPALE pohjavireen tilalla (omistaja 5.9.2026:
+   * *"ateenaan saavuttaessa voisi vaihtua kappale"*). Vaihto tapahtuu
+   * juuri tässä: saapuminen antaa kaupungin id:n, ja matkan aikana
+   * (jalkamatka, merimatka, lentomatka, null) pohjavire palaa.
    */
-  if (sfx.enabled) kaynnistaPohjaMusiikki();
+  if (sfx.enabled) kaynnistaPohjaMusiikki(cityId);
   else stopPohjaMusiikki();
   // Kaupungin oma äänitys ensin, maisematyypin maanosakohtainen
   // arvontakori varalle. Tyhjä kori tarkoittaa syntetisoitua ambienssia.
@@ -1003,6 +1013,23 @@ export function startQuizMusic(lauta) {
  * josta maisemakin — ja sammutus samoista paikoista kuin maiseman:
  * taustaäänten kytkin pois (js/main.js kaannaTausta) ja radiotila
  * (js/linssit/radio.js paalle), jossa radio on ainoa ääni.
+ *
+ * ── KAUPUNKIRAITA POHJAVIREEN TILALLA (omistaja 5.9.2026 klo 00.35) ──
+ *
+ * *"ateenaan saavuttaessa voisi vaihtua kappale. generoi sinne oma
+ * musiikki."* Kaupungit, joilla on oma kappale, ovat taulukossa
+ * js/kaupunkimusiikki.js. Kun playPlaceAmbience saa sellaisen
+ * cityId:n, TÄMÄ SAMA SOITIN vaihtaa raitaa: vanha häivytetään pois ja
+ * uusi sisään VAIHTO_MS:ssä ristikkäin. Kun kaupungista lähdetään
+ * (cityId on 'jalkamatka', 'merimatka', null…), pohjavire palaa samaa
+ * tietä. Kaupunkiraita ei siis ole uusi kerros vaan pohjavireen
+ * paikallinen sijainen: sama paikka sekoituksessa, sama väistö, sama
+ * kehittäjäkerroin, sama puuttuvan raidan sietäminen.
+ *
+ * PUUTTUVA KAUPUNKIRAITA EI HILJENNÄ PELIÄ: jos kaupungin mp3 ei
+ * vastaa (404 — normaali tila siinä välissä, kun taulukko on mainissa
+ * ja raita vasta generoidaan), polku merkitään puuttuvaksi ja
+ * pohjavire käynnistetään uudelleen sen tilalle.
  */
 const POHJA_MUSIIKKI = musaPolku('musa-pohja');
 /*
@@ -1023,34 +1050,102 @@ const POHJA_VOIMA = 0.019;
 // Pohjavire nousee hitaammin kuin maisema: se ei ole vaihdos vaan tila,
 // joka on ollut siellä koko ajan.
 const POHJA_NOUSU_MS = 4000;
+/*
+ * RAIDAN VAIHDON RISTIHÄIVYTYS (kaupunkiraita). Sama mitta kumpaankin
+ * suuntaan: pohjavire → kaupungin kappale saavuttaessa ja takaisin
+ * lähdettäessä. 1,5 s on selvästi nopeampi kuin pohjavireen oma nousu
+ * (4 s), koska tämä ON vaihdos — pelaajan kuuluu huomata, että kappale
+ * vaihtui — mutta tarpeeksi pitkä, ettei sauma kuulu leikkaukselta.
+ */
+const VAIHTO_MS = 1500;
 
 let pohja = null;
+/*
+ * Soivan raidan polku (POHJA_MUSIIKKI tai kaupungin raita). Tästä
+ * tiedetään, tarvitseeko mitään vaihtaa, kun playPlaceAmbience kutsuu
+ * samaa käynnistystä joka renderöinnillä.
+ */
+let pohjaPolku = null;
 /*
  * Puuttuva raita hiljenee LOPULLISESTI (ei joka renderöinnillä uutta
  * yritystä). Kytkentä on mainissa ennen kuin mp3 on generoitu — juuri
  * se on tarkoituskin, sama etukäteisnimeäminen kuin luentojen
- * `aanite`-kentässä — ja ilman tätä lippua peli rakentaisi uuden
+ * `aanite`-kentässä — ja ilman tätä joukkoa peli rakentaisi uuden
  * epäonnistuvan soittimen jokaisesta paikanvaihdosta.
  *
- * VAIN LATAUSVIRHE nostaa lipun. play():n hylkäys on eri asia: se on
- * yleensä selaimen eleen odotus, ja siitä on määrä toipua seuraavasta
- * renderöinnistä täsmälleen kuten maisemankin.
+ * JOUKKO EIKÄ LIPPU, koska raitoja on nyt useita: puuttuva
+ * kaupunkiraita ei saa merkitä pohjavirettä puuttuvaksi eikä
+ * päinvastoin.
+ *
+ * VAIN LATAUSVIRHE merkitsee polun puuttuvaksi. play():n hylkäys on eri
+ * asia: se on yleensä selaimen eleen odotus, ja siitä on määrä toipua
+ * seuraavasta renderöinnistä täsmälleen kuten maisemankin.
  */
-let pohjaPuuttuu = false;
+const puuttuvatMusiikit = new Set();
 
-/** Käynnistää pohjavireen, jos taustaäänet ovat päällä eikä se jo soi. */
-export function kaynnistaPohjaMusiikki() {
-  if (!sfx.enabled || pohja || pohjaPuuttuu) return;
-  const audio = new Audio(aaniOsoite(POHJA_MUSIIKKI));
+/**
+ * Mikä raita tässä paikassa kuuluu soida: kaupungin oma kappale, jos
+ * sellainen on olemassa ja vastaa, muuten pohjavire. Null tarkoittaa,
+ * ettei kumpaakaan ole — silloin peli on tämän raidan osalta hiljainen.
+ */
+function pohjanPolku(cityId) {
+  const kaupungin = kaupunginMusiikki(cityId);
+  if (kaupungin && !puuttuvatMusiikit.has(kaupungin)) return kaupungin;
+  return puuttuvatMusiikit.has(POHJA_MUSIIKKI) ? null : POHJA_MUSIIKKI;
+}
+
+/**
+ * Pohjavireen (tai kaupunkiraidan) tavoitetaso juuri nyt.
+ *
+ * Kehittäjän säädin on 'musiikki' eikä 'tausta': raita on pelin omaa
+ * musiikkia siinä missä siirtymä- ja linssiraidat
+ * (js/siirtymamusiikki.js raidanTaso). Tavallisella pelaajalla kerroin
+ * on aina 1,0.
+ */
+const pohjaMusiikinTaso = (kerroin = voimassaVaisto()) => POHJA_VOIMA * kerroin
+  * kehittajanKerroin('musiikki');
+
+// Kehittäjän säädin (js/kehittajan-voimat.js): soiva raita seuraa heti.
+kuunteleKehittajanKerrointa('musiikki', () => {
+  if (pohja) haivyta(pohja, pohjaMusiikinTaso(), undefined, 200);
+});
+
+/**
+ * Käynnistää pohjavireen tai paikan oman kappaleen, jos taustaäänet
+ * ovat päällä. Turvallinen kutsua joka renderöinnillä: sama raita
+ * jatkaa soimistaan, ja vain raidan VAIHTO tekee ristihäivytyksen.
+ *
+ * @param {?string} cityId paikan tunnus (js/kaupunkimusiikki.js
+ *   KAUPUNKIRAIDAT) — tuntematon tai puuttuva tarkoittaa pohjavirettä.
+ */
+export function kaynnistaPohjaMusiikki(cityId = null) {
+  if (!sfx.enabled) return;
+  const polku = pohjanPolku(cityId);
+  if (!polku || (pohja && pohjaPolku === polku)) return;
+  /*
+   * Väistyvä puoli lähtee nollaan omalla häivytyksellään ja vapautuu
+   * itsestään. Sitä ei jäädä odottamaan eikä siihen enää kosketa
+   * (myöskään väistössä, ks. ajaVaisto): uusi raita nousee sen läpi.
+   */
+  const vaistyva = pohja;
+  pohja = null;
+  pohjaPolku = null;
+  if (vaistyva) haivyta(vaistyva, 0, () => vapautaSoitin(vaistyva), VAIHTO_MS);
+
+  const audio = new Audio(aaniOsoite(polku));
   // Raita on generoitu saumattomaksi silmukaksi, joten selaimen oma
   // loop riittää — maiseman ristihäivytystä (vahdiSilmukka) ei tarvita.
   audio.loop = true;
   audio.preload = 'auto';
   audio.volume = 0;
   pohja = audio;
+  pohjaPolku = polku;
   let varareittiKokeiltu = false;
   const luovuta = () => {
-    if (pohja === audio) pohja = null;
+    if (pohja === audio) {
+      pohja = null;
+      pohjaPolku = null;
+    }
     vapautaSoitin(audio);
   };
   const soi = () => audio.play().then(() => {
@@ -1058,25 +1153,38 @@ export function kaynnistaPohjaMusiikki() {
       audio.pause();
       return;
     }
-    haivyta(audio, POHJA_VOIMA * voimassaVaisto(), undefined, POHJA_NOUSU_MS);
+    // Vaihdos nousee vaihdon mitalla, ensimmäinen käynnistys
+    // pohjavireen omalla hitaalla nousulla.
+    haivyta(audio, pohjaMusiikinTaso(), undefined, vaistyva ? VAIHTO_MS : POHJA_NOUSU_MS);
   }).catch(() => {
     // Ele puuttui tai laite kieltäytyi: seuraava renderöinti yrittää
-    // uudestaan (lippua ei nosteta).
+    // uudestaan (polkua ei merkitä puuttuvaksi).
     luovuta();
   });
   const petti = () => {
     // Ämpäri ensin, repon polku perään — ja jos kumpikaan ei vastaa,
-    // peli on hiljainen tämän raidan osalta. Katkaisijaa (peiliPetti)
-    // ei kutsuta: puuttuva oma äänite ei ole peilin vika, ks.
-    // startQuizMusicin sama perustelu.
+    // raita merkitään puuttuvaksi. Katkaisijaa (peiliPetti) ei kutsuta:
+    // puuttuva oma äänite ei ole peilin vika, ks. startQuizMusicin sama
+    // perustelu.
     if (varareittiKokeiltu || !onPeilista(audio.getAttribute('src'))) {
-      pohjaPuuttuu = true;
+      puuttuvatMusiikit.add(polku);
       luovuta();
+      /*
+       * Puuttunut KAUPUNKIRAITA ei jätä peliä hiljaiseksi: pohjavire
+       * ottaa sen paikan heti. Rekursio päättyy tähän, koska pohjavire
+       * ei enää voi valita kaupunkiraitaa.
+       *
+       * `!pohja` on ehtona siksi, että virhe voi tulla vasta kun peli
+       * on jo ehtinyt vaihtaa raitaa (myöhästynyt 404 väistyneeltä
+       * soittimelta) — silloin soiva raita on jo oikea eikä sitä saa
+       * korvata tämän vanhentuneen paikan pohjavireellä.
+       */
+      if (polku !== POHJA_MUSIIKKI && !pohja) kaynnistaPohjaMusiikki(cityId);
       return;
     }
     varareittiKokeiltu = true;
     if (pohja !== audio) return;
-    audio.src = POHJA_MUSIIKKI;
+    audio.src = polku;
     audio.load();
     soi();
   };
@@ -1088,14 +1196,21 @@ export function kaynnistaPohjaMusiikki() {
 export function stopPohjaMusiikki() {
   const vanha = pohja;
   pohja = null;
+  pohjaPolku = null;
   if (!vanha) return;
   haivyta(vanha, 0, () => vapautaSoitin(vanha));
 }
 
-/** Vain testejä varten: unohtaa puuttuvan raidan lipun. */
+/** Vain testejä varten: unohtaa puuttuvat raidat ja soivan soittimen. */
 export function nollaaPohjaMusiikki() {
-  pohjaPuuttuu = false;
+  puuttuvatMusiikit.clear();
   pohja = null;
+  pohjaPolku = null;
+}
+
+/** Vain testejä varten: minkä raidan polku juuri nyt soi (tai null). */
+export function soivaPohjaMusiikki() {
+  return pohja ? pohjaPolku : null;
 }
 
 /**
@@ -1456,9 +1571,10 @@ function ajaVaisto(kesto = HAIVYTYS_MS) {
    * nousisi suhteessa esiin vaikka sen oma lukema ei muutu.
    * Palautuksen (kerroin === 1) on oltava mukana toisin kuin
    * visamusiikilla, joka sammuu kysymyksen mukana — pohjavire jää
-   * soimaan ja jäisi muuten pysyvästi väistöön.
+   * soimaan ja jäisi muuten pysyvästi väistöön. Kaupungin oma kappale
+   * soi samassa soittimessa, joten se väistyy täsmälleen samoin.
    */
-  if (pohja) haivyta(pohja, POHJA_VOIMA * kerroin, undefined, kesto);
+  if (pohja) haivyta(pohja, pohjaMusiikinTaso(kerroin), undefined, kesto);
   if (!nykyinen) return;
   nykyinen.vaimennus = kerroin;
   const kohde = taso(nykyinen);

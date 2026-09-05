@@ -114,6 +114,80 @@ lineaarisella vahvistuksella −30 LUFSiin. Tiedostot kirjoitetaan
 Ajo: `.github/workflows/generoi-tehosteet.yml` (workflow_dispatch,
 inputit `laji` ja `maara`, samat salaisuudet kuin musiikkiajolla).
 
+## Kaupunkiraidat (omistaja 5.9.2026)
+
+Omistajan tilaus klo 00.35, sanatarkasti: *"ateenaan saavuttaessa voisi
+vaihtua kappale. generoi sinne oma musiikki."*
+
+Kaupunkiraita ei ole uusi kerros vaan **pohjavireen paikallinen
+sijainen**: kun pelaaja saapuu kaupunkiin, jolla on oma kappale,
+pohjavire (`musa-pohja`) ristihäivytetään kaupungin raitaan, ja kun
+kaupungista lähdetään, se palaa samaa tietä. Raita soi siis samassa
+kohdassa sekoitusta kuin pohjavire — ambienssiäänten alla, samalla
+väistöllä (pöllö, kertoja, lukija) ja samalla kehittäjäkertoimella
+(`musiikki`).
+
+| ominaisuus | vaatimus |
+|---|---|
+| tiedosto | `musa-kaupunki-<kaupungin id>.mp3` (Lyrialla `-lyria`-päätteellä), esim. `musa-kaupunki-ateena-lyria.mp3` |
+| kesto | 60–90 s (Ateena 75 s); pelaaja viipyy kaupungissa minuutteja, ja lyhyt kierto alkaisi kuulua silmukaksi |
+| looppi | saumaton äänitteessä itsessään, kuten pohjavireellä — sauma pyydetään promptissa, sitä ei leikata ffmpegillä (ks. Musiikkipaletti) |
+| taso ja formaatti | sama kuin paletilla; peli soittaa raidan pohjavireen tasolla (POHJA_VOIMA) |
+| luonne | kaupungin oma, mutta **pohjaäänimaiseman ALLA** — ei saa viedä huomiota kertojalta eikä maisemalta |
+
+Ateenan prompti (Fablen sanoin omistajan tilauksesta): *"Ateenaan
+saapuminen iltapäivällä: kevyt, valoisa ja lämmin instrumentaali,
+bouzouki ja kitara hillitysti, hidas rytmi, Välimeren ilta, ei laulua,
+ei turistikliseitä, soi pohjaäänimaiseman ALLA."*
+
+**Mekanismi pelissä.** Taulukko ja nimisääntö ovat
+`js/kaupunkimusiikki.js`:ssä (`KAUPUNKIRAIDAT`, `kaupunginMusiikki`,
+`kaupunkiraidanTunnus`), soitin `js/ambience-stream.js`:n
+pohjavirekoneistossa. `playPlaceAmbience` antaa paikan tunnuksen
+`kaynnistaPohjaMusiikki(cityId)`:lle: jos kaupungilla on oma raita, se
+otetaan soivan tilalle 1,5 sekunnin ristihäivytyksellä, ja matkan aikana
+(`jalkamatka`, `merimatka`, `lentomatka`, `null`) sama koneisto palaa
+pohjavireeseen. Polku lasketaan `musaPolku`-apurilla, joten
+`MUSIIKIN_PAATE`-kytkin koskee kaupunkiraitoja siinä missä palettiakin.
+
+**Puuttuva raita ei riko mitään.** Jos kaupungin mp3 ei vastaa (404 —
+normaali tila siinä välissä, kun taulukko on mainissa ja raita vasta
+generoidaan), polku merkitään puuttuvaksi tälle istunnolle ja pohjavire
+käynnistetään sen tilalle. Peli ei siis ole hetkeäkään hiljainen.
+
+**Miten uusi kaupunki lisätään** (Fablen työ; molemmat taulut, muuten
+`tests/kaupunkimusiikki.test.mjs` kaatuu):
+
+1. `js/kaupunkimusiikki.js` → `KAUPUNKIRAIDAT`: avaimeksi laudan
+   kaupungin id (`js/packs/europe.js` `id: 'ateena'`) ja lyhyt kuvaus.
+2. `tools/generoi-musiikki.mjs` → `RAIDAT`: sama avain, `laji:
+   'kaupunki'`, `kaupunki: '<id>'`, `tiedosto:
+   'musa-kaupunki-<id>.mp3'`, kesto, `looppi: true` ja prompti.
+3. Aja työnkulku ja kuuntele raita PR:ssä ennen mergeä.
+
+**Työnkulun ajo.** `.github/workflows/generoi-musiikki.yml`
+(workflow_dispatch), `raidat`-inputiin kaupungin nimi tai ryhmä:
+
+```
+raidat: ateena       # yksi kaupunki
+raidat: kaupungit    # kaikki kaupunkiraidat
+```
+
+Kaupunkiraidat **eivät** sisälly valintaan `kaikki` (= paletin neljä
+raitaa) — sama varovaisuus kuin linssiraidalla siirtymätyökalussa:
+valmista raitaa ei generoida vahingossa uudestaan, ja jokainen kutsu
+maksaa. Paikallinen kuiva ajo ilman avainta:
+
+```
+node tools/generoi-musiikki.mjs kaupungit --kuiva
+node tools/generoi-musiikki.mjs ateena --moottori lyria
+```
+
+Vienti kulkee kuten paletilla: ajo committoi mp3:n haaralle
+`claude/musiikki-<ajonumero>`, ja mergen jälkeen `vie-aanet.yml` vie sen
+ämpärin `audio/`-kansioon. Työhuoneen Musiikki-lehden **Kaupunkiraidat**-
+osasto (Paletti-sivu) kertoo, onko raita jo ämpärissä, ja soittaa sen.
+
 ## Vienti
 
 1. Ensisijainen: raita ämpärin `aanet/`-kansioon (ei mediaa repoon,
@@ -217,6 +291,10 @@ node tools/generoi-musiikki.mjs pohja visa --kuiva
 node tools/generoi-musiikki.mjs aarre paaaarre --moottori eleven
 ```
 
+Sama työkalu tekee myös **kaupunkiraidat** (oma osionsa alla): `kaikki`
+on paletin neljä raitaa, kaupungit pyydetään nimeltä tai ryhmänä
+`kaupungit`.
+
 | lippu | merkitys |
 |---|---|
 | (paljas argumentti) | raitojen avaimet välilyönnein tai `kaikki` |
@@ -280,9 +358,12 @@ oletus 1,0 = pelin nykyinen taso, askel 0,1, rajat 0,25–3,0, tallennus
 localStorageen (`matkakirja-dev-voima-<laji>`). Hammasratasvalikon
 (`#kehittaja-valikko`) kaksi riviä näyttävät arvon (`×1,0`) ja
 säätävät sitä miinus- ja plusnapeilla. Kerroin kerrotaan päälle
-ambienssin tasoon (`js/ambience-stream.js taso`) ja siirtymä- ja
-linssiraitojen tasoon (`js/siirtymamusiikki.js raidanTaso`); molemmat
-kuuntelevat muutosta ja liu'uttavat soivan äänen uuteen tasoon 200 ms:ssa.
+ambienssin tasoon (`js/ambience-stream.js taso`), siirtymä- ja
+linssiraitojen tasoon (`js/siirtymamusiikki.js raidanTaso`) sekä
+pohjavireen ja kaupunkiraitojen tasoon (`js/ambience-stream.js
+pohjaMusiikinTaso`, 5.9.2026: kaupunkiraidat soivat samassa soittimessa);
+kaikki kuuntelevat muutosta ja liu'uttavat soivan äänen uuteen tasoon
+200 ms:ssa.
 Tavallisella pelaajalla kerroin on aina 1,0.
 
 ## Sarajevon äänimaisema (omistaja 3.9.2026)
