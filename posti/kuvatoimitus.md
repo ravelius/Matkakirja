@@ -1,5 +1,87 @@
 # Kuvatoimitussessio
 
+## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 5 R2-varmennettu
+
+### firenze
+
+- `firenze-poggin-terassi`
+- `firenze-porcellino`
+### dubrovnik
+
+- `dubrovnik-mincetan-torni`
+- `dubrovnik-pilen-portti`
+- `dubrovnik-sponzan-palatsi`
+- `dubrovnik-vanhasatama`
+- `dubrovnik-lovrijenacin-linnake`
+- `dubrovnik-dubrovnikin-katedraali`
+### vilna
+
+- `vilna-kirjankantajat`
+- `vilna-salattu-avioliitto`
+- `vilna-boratynka`
+### tromssa
+
+- `tromssa-polaarimuseo`
+- `tromssa-tromssan-silta`
+- `tromssa-tromssan-tuomiokirkko`
+- `tromssa-jaamerenkatedraali`
+- `tromssa-polaria`
+- `tromssa-fjellheisenin-koysirata`
+### jerusalem
+
+- `jerusalem-damaskoksen-portti`
+- `jerusalem-pyhan-haudan-kirkko`
+- `jerusalem-kalliomoskeija`
+- `jerusalem-lantinen-muuri`
+- `jerusalem-jaffan-portti`
+- `jerusalem-al-aqsa-moskeija`
+### petra
+
+- `petra-ad-deir`
+- `petra-bysanttilainen-kirkko`
+- `petra-kuninkaanhaudat`
+- `petra-qasr-al-bint`
+- `petra-suuri-temppeli`
+- `petra-teatteri`
+- `petra-siq`
+- `petra-al-khazneh`
+- `petra-uhripaikka`
+### persepolis
+
+- `persepolis-kaikkien-kansojen-portti`
+- `persepolis-artakserkses-iii-n-hauta`
+- `persepolis-sadan-pylvaan-sali`
+- `persepolis-apadana`
+- `persepolis-kolmen-oven-sali`
+- `persepolis-aarrekammio`
+- `persepolis-tachara`
+- `persepolis-hadishin-palatsi`
+### medina
+
+- `medina-qiblatayn-moskeija`
+- `medina-seitseman-moskeijaa`
+- `medina-profeetan-moskeija`
+- `medina-al-baqin-hautausmaa`
+- `medina-al-ghamama-moskeija`
+- `medina-hidzaz-radan-asema`
+- `medina-quba-moskeija`
+### mekka
+
+- `mekka-jabal-al-nour`
+- `mekka-jannat-al-mu-alla`
+- `mekka-jinnien-moskeija`
+- `mekka-mekan-kirjasto`
+- `mekka-suuri-moskeija`
+- `mekka-kellotorni`
+### sana
+
+- `sana-al-bakiriyyan-moskeija`
+- `sana-suolatori`
+- `sana-talhan-moskeija`
+- `sana-suuri-moskeija`
+- `sana-al-mahdin-moskeija`
+- `sana-bab-al-yaman`
+
 ## 2026-09-05 00:22 UTC — KUVAPUTKI → FABLE: myös historian 29 kuvan erä kokonaan arvioitavana
 
 Site-versio 124 on yksityisesti julkaistu ja palvelinluku varmennettu. Tämän tuotantoerän kaikki 87 valittua kuvaa ovat nyt arvioitavina: Euroopan 30 kohtaamista, Lähi-idän 28 kohtaamista sekä 29 historian/isoisän/karttanostojen kuvaa. Viimeisimmät historian korjaukset: 71 v4, 75 v3, 78 v3, 80 v2 ja 82 v3. Niiden arviointirivit ovat pending ja JPG-lataukset HTTP 200; MIME ja SHA-256 vastaavat toimitustiedostoja.
