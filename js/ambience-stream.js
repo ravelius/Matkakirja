@@ -20,9 +20,19 @@ import {
 // tehosteet ja maisema (ks. taukoaSanelunAjaksi).
 import { jatkaPuhePiiri, taukoaPuhePiiri } from './puhe.js';
 // Kaupungin oma kappale pohjavireen tilalla (omistaja 5.9.2026:
-// "ateenaan saavuttaessa voisi vaihtua kappale"). Taulukko ja
-// nimisääntö ovat siellä, soitin täällä — ks. POHJAVIRE alla.
-import { kaupunginMusiikki } from './kaupunkimusiikki.js';
+// "ateenaan saavuttaessa voisi vaihtua kappale"). Taulukot ja
+// nimisäännöt ovat js/kaupunkimusiikki.js:ssä, soitin täällä.
+//
+// POHJARAIDAN VALITSIN (js/musiikkivalitsin.js) päättää, mikä raita
+// tähän yhteen paikkaan sekoituksessa kuuluu: etusivu, kaupunki, alue,
+// lehti, matkalaukku vai pohjavire. Se antaa KETJUN parhaasta alkaen,
+// ja tämä soitin ottaa siitä ensimmäisen, jota ei ole todettu
+// puuttuvaksi (omistaja 5.9.2026 yö: "generoi musiikkeja kaikkiin
+// kohtiin peliä").
+import {
+  POHJARAITA, asetaMusiikkipaikka, asetaMusiikkitila, kuunteleMusiikkitilaa,
+  musiikinMaa, musiikinPaikka, valitseMusiikki,
+} from './musiikkivalitsin.js';
 
 // Arvottu ääni pysyy samana koko käynnin ajan: syncAmbience kutsuu
 // playPlaceAmbiencea jokaisella piirrolla, eikä ääni saa vaihtua tai
@@ -472,8 +482,14 @@ export function playPlaceAmbience(cityId, fallbackType, lauta, cityCountry = nul
    * *"ateenaan saavuttaessa voisi vaihtua kappale"*). Vaihto tapahtuu
    * juuri tässä: saapuminen antaa kaupungin id:n, ja matkan aikana
    * (jalkamatka, merimatka, lentomatka, null) pohjavire palaa.
+   *
+   * MAA MENEE MYÖS MUKANA (5.9.2026 yö): kaupungeilla, joilla ei ole
+   * omaa kappaletta, soi ALUEEN raita, ja alue johdetaan pakan
+   * cityCountry-taulusta — samasta, jolla maisemankin maakori
+   * arvotaan (maaKori yllä). Näin uusi kaupunki saa musiikkinsa ilman
+   * uutta taulukkoriviä.
    */
-  if (sfx.enabled) kaynnistaPohjaMusiikki(cityId);
+  if (sfx.enabled) kaynnistaPohjaMusiikki(cityId, cityCountry?.[cityId] ?? null);
   else stopPohjaMusiikki();
   // Kaupungin oma äänitys ensin, maisematyypin maanosakohtainen
   // arvontakori varalle. Tyhjä kori tarkoittaa syntetisoitua ambienssia.
@@ -1031,7 +1047,7 @@ export function startQuizMusic(lauta) {
  * ja raita vasta generoidaan), polku merkitään puuttuvaksi ja
  * pohjavire käynnistetään uudelleen sen tilalle.
  */
-const POHJA_MUSIIKKI = musaPolku('musa-pohja');
+const POHJA_MUSIIKKI = musaPolku(POHJARAITA);
 /*
  * Taso ≈ −19 dB suhteessa ambienssiin. Maiseman efektiivinen taso on
  * VOIMA (0,14) kertaa äänitteen oma mitattu kerroin, joka on
@@ -1084,14 +1100,15 @@ let pohjaPolku = null;
 const puuttuvatMusiikit = new Set();
 
 /**
- * Mikä raita tässä paikassa kuuluu soida: kaupungin oma kappale, jos
- * sellainen on olemassa ja vastaa, muuten pohjavire. Null tarkoittaa,
- * ettei kumpaakaan ole — silloin peli on tämän raidan osalta hiljainen.
+ * Mikä raita tässä tilanteessa kuuluu soida. Ketju tulee valitsimelta
+ * (js/musiikkivalitsin.js) — lehti ja matkalaukku ennen paikkaa,
+ * kaupungin oma kappale ennen alueen raitaa, pohjavire viimeisenä — ja
+ * tämä ottaa siitä ensimmäisen, jota ei ole todettu puuttuvaksi.
+ * Null tarkoittaa, ettei yhtäkään ole: silloin peli on tämän raidan
+ * osalta hiljainen eikä yritä uudestaan joka renderöinnillä.
  */
-function pohjanPolku(cityId) {
-  const kaupungin = kaupunginMusiikki(cityId);
-  if (kaupungin && !puuttuvatMusiikit.has(kaupungin)) return kaupungin;
-  return puuttuvatMusiikit.has(POHJA_MUSIIKKI) ? null : POHJA_MUSIIKKI;
+function pohjanPolku(cityId, maa) {
+  return valitseMusiikki(puuttuvatMusiikit, cityId, maa);
 }
 
 /**
@@ -1110,17 +1127,39 @@ kuunteleKehittajanKerrointa('musiikki', () => {
   if (pohja) haivyta(pohja, pohjaMusiikinTaso(), undefined, 200);
 });
 
-/**
- * Käynnistää pohjavireen tai paikan oman kappaleen, jos taustaäänet
- * ovat päällä. Turvallinen kutsua joka renderöinnillä: sama raita
- * jatkaa soimistaan, ja vain raidan VAIHTO tekee ristihäivytyksen.
+/*
+ * NÄKYMÄ VAIHTUI (lehti auki, matkalaukku kiinni): valitsin herättää
+ * saman käynnistyksen kuin paikanvaihto, ja se tekee ristihäivytyksen
+ * jos raita todella vaihtuu. Paikkaa ei anneta — valitsin muistaa sen
+ * itse, joten tilan vaihtuminen ei voi hukata kaupunkia.
  *
- * @param {?string} cityId paikan tunnus (js/kaupunkimusiikki.js
- *   KAUPUNKIRAIDAT) — tuntematon tai puuttuva tarkoittaa pohjavirettä.
+ * Kytkin on sfx.enabled kuten muuallakin: taustaäänten ollessa pois
+ * lehden avaaminen ei saa aloittaa musiikkia.
  */
-export function kaynnistaPohjaMusiikki(cityId = null) {
+kuunteleMusiikkitilaa(() => {
+  if (sfx.enabled) kaynnistaPohjaMusiikki();
+});
+
+/**
+ * Käynnistää sen raidan, jonka valitsin tähän tilanteeseen antaa, jos
+ * taustaäänet ovat päällä. Turvallinen kutsua joka renderöinnillä:
+ * sama raita jatkaa soimistaan, ja vain raidan VAIHTO tekee
+ * ristihäivytyksen.
+ *
+ * Ilman argumentteja käynnistys tarkoittaa "sama paikka kuin äsken":
+ * juuri niin tilan vaihtuminen (lehti auki, matkalaukku kiinni) sen
+ * kutsuu, eikä paikkaa tarvitse muistaa kahdessa paikassa.
+ *
+ * @param {?string} cityId paikan tunnus (laudan kaupunki tai
+ *   virtuaalipaikka kuten 'etusivu') — tuntematon tarkoittaa
+ *   pohjavirettä, ellei jokin tila ole päällä.
+ * @param {?string} maa kaupungin ISO-3-maakoodi, josta alueen raita
+ *   johdetaan (js/kaupunkimusiikki.js ALUEEN_MAAT).
+ */
+export function kaynnistaPohjaMusiikki(cityId = musiikinPaikka(), maa = musiikinMaa()) {
+  asetaMusiikkipaikka(cityId, maa);
   if (!sfx.enabled) return;
-  const polku = pohjanPolku(cityId);
+  const polku = pohjanPolku(cityId, maa);
   if (!polku || (pohja && pohjaPolku === polku)) return;
   /*
    * Väistyvä puoli lähtee nollaan omalla häivytyksellään ja vapautuu
@@ -1170,16 +1209,20 @@ export function kaynnistaPohjaMusiikki(cityId = null) {
       puuttuvatMusiikit.add(polku);
       luovuta();
       /*
-       * Puuttunut KAUPUNKIRAITA ei jätä peliä hiljaiseksi: pohjavire
-       * ottaa sen paikan heti. Rekursio päättyy tähän, koska pohjavire
-       * ei enää voi valita kaupunkiraitaa.
+       * Puuttunut raita ei jätä peliä hiljaiseksi: KETJUN SEURAAVA
+       * TASO ottaa sen paikan heti (lehti → kaupunki → alue →
+       * pohjavire). Rekursio päättyy, koska jokainen kierros merkitsee
+       * yhden polun puuttuvaksi ja ketju lyhenee — viimeisen jälkeen
+       * pohjanPolku palauttaa nullin eikä uutta soitinta synny.
        *
        * `!pohja` on ehtona siksi, että virhe voi tulla vasta kun peli
        * on jo ehtinyt vaihtaa raitaa (myöhästynyt 404 väistyneeltä
        * soittimelta) — silloin soiva raita on jo oikea eikä sitä saa
-       * korvata tämän vanhentuneen paikan pohjavireellä.
+       * korvata tämän vanhentuneen paikan varamiehellä. Samasta syystä
+       * uusi yritys tehdään ILMAN paikkaa: valitsin muistaa, missä
+       * PELI on nyt, eikä myöhästynyt virhe saa palauttaa vanhaa.
        */
-      if (polku !== POHJA_MUSIIKKI && !pohja) kaynnistaPohjaMusiikki(cityId);
+      if (polku !== POHJA_MUSIIKKI && !pohja) kaynnistaPohjaMusiikki();
       return;
     }
     varareittiKokeiltu = true;
@@ -1306,19 +1349,32 @@ const VAISTO_HILJENNYS = 0.45;
 const HILJENNYS_LIUKU_MS = 400;
 const hiljennykset = new Set();
 
+/*
+ * SYY ON MYÖS MUSIIKIN TILA (5.9.2026 yö). Lukunäkymällä on nyt oma
+ * raitansa (lehti), ja se avautuu ja sulkeutuu täsmälleen samoista
+ * kohdista kuin tämä hiljennys: kolme avausta (js/lehti.js kaksi,
+ * js/ui.js openArrival) ja yksi sulkeminen (dialogin close-kuuntelija,
+ * joka laukeaa myös Escistä ja taustanapautuksesta). Uusi koukku
+ * niihin olisi ollut neljäs ja viides paikka muistaa sama asia, joten
+ * tila luetaan syystä. Valitsin sivuuttaa syyt, joille ei ole raitaa
+ * (pöllö, linssi, aarremusiikki, musiikkisivu).
+ */
 export function hiljennaAmbienssi(syy) {
   if (hiljennykset.has(syy)) return;
   hiljennykset.add(syy);
+  asetaMusiikkitila(syy, true);
   ajaVaisto(HILJENNYS_LIUKU_MS);
 }
 
 export function palautaAmbienssi(syy) {
   if (!hiljennykset.delete(syy)) return;
+  asetaMusiikkitila(syy, false);
   ajaVaisto(HILJENNYS_LIUKU_MS);
 }
 
 /** Vain testejä varten: unohtaa kaikki hiljennyssyyt. */
 export function nollaaHiljennykset() {
+  for (const syy of hiljennykset) asetaMusiikkitila(syy, false);
   hiljennykset.clear();
 }
 

@@ -207,6 +207,14 @@ import {
   hiljennaAmbienssi, palautaAmbienssi,
 } from './ambience-stream.js';
 /*
+ * Pohjaraidan valitsin (omistaja 5.9.2026 yö: "generoi musiikkeja
+ * kaikkiin kohtiin peliä"). UI kertoo vain, mikä näkymä on auki —
+ * raidan valinta ja ristihäivytys ovat js/musiikkivalitsin.js:ssä ja
+ * js/ambience-stream.js:ssä. Lehti kulkee ambienssin hiljennyssyystä,
+ * joten täältä kerrotaan vain matkalaukku.
+ */
+import { asetaMusiikkitila } from './musiikkivalitsin.js';
+/*
  * Siirtymän oma musiikki (omistajan tilaus 2.9.2026). Oma moduulinsa,
  * koska se ei ole paikan ääni vaan matkan: ks. js/siirtymamusiikki.js.
  */
@@ -2155,6 +2163,10 @@ export class UI {
       // seuraavan avauksen mukana ilman että kukaan sitä pyysi.
       this.suljeJulisteGalleria();
       document.body.classList.remove('laukku-auki');
+      // Laukun raita pois samasta kuuntelijasta kuin muukin siivous:
+      // laukun voi sulkea Escistä ja taustanapautuksesta, ja close
+      // laukeaa niistä kaikista.
+      asetaMusiikkitila('matkalaukku', false);
     });
 
     this.turnCard = document.getElementById('actions').closest('.turn-card');
@@ -16100,6 +16112,10 @@ export class UI {
     this.renderJulisteet();
     void this.paivitaLinssit();
     if (!this.passportDialog.open) this.passportDialog.showModal();
+    // Laukulla on oma hiljainen raitansa (nahka ja messinki); se
+    // väistyy paikan musiikin tieltä, kun laukku suljetaan. Ambienssia
+    // laukku EI hiljennä — se ei ole lukunäkymä.
+    asetaMusiikkitila('matkalaukku', true);
     // Kapealla ruudulla alanappirivi väistyy laukun alta, jotta
     // linssin vaikutus karttaan näkyy (css: body.laukku-auki).
     document.body.classList.add('laukku-auki');

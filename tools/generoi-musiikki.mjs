@@ -40,6 +40,29 @@
  * kaupunkiraitaa generoida vahingossa uudestaan. Peli: KAUPUNKIRAIDAT
  * js/kaupunkimusiikki.js, soitto js/ambience-stream.js.
  *
+ * ALUERAIDAT JA TILARAIDAT (omistajan tilaus 5.9.2026 yöllä,
+ * sanatarkasti: *"generoi musiikkeja kaikkiin kohtiin peliä, ne tuovat
+ * paljon lisää tunnelmaa."*). Kaupunkiraidan rinnalle tuli kaksi lajia
+ * lisää, ja kaikki kolme soivat samassa paikassa sekoituksessa —
+ * pohjavireen sijaisina:
+ *
+ *   laji 'alue'  musa-kaupunki-<alue>.mp3   kaupungille, jolla ei ole
+ *                                           omaa kappaletta (Välimeri,
+ *                                           Pohjola, Keski-Eurooppa,
+ *                                           Balkan, Itä-Eurooppa,
+ *                                           Britteinsaaret)
+ *   laji 'tila'  musa-lehti.mp3             lehden lukurauha
+ *                musa-matkalaukku.mp3       laukku auki
+ *                musa-etusivu.mp3           etusivu ja pallon selailu
+ *
+ * Ryhmät: `kaikki` = paletin neljä, `kaupungit` = kaupungit JA alueet,
+ * `alueet` = pelkät alueraidat, `tilat` = kolme tilaraitaa. Kaikki
+ * pyydetään erikseen samasta syystä kuin ennenkin: jokainen kutsu
+ * maksaa, eikä valmista raitaa generoida vahingossa uudestaan. Peli:
+ * js/musiikkivalitsin.js (ketju kaupunki → alue → pohja ja tilat sen
+ * päällä), js/kaupunkimusiikki.js (taulut), js/ambience-stream.js
+ * (soitin).
+ *
  * MIKSI musa-visa-2 EIKÄ musa-visa: vanhaa visamusiikkia ei
  * ylikirjoiteta. Pelin viittaus vaihdetaan (js/aani-ehdokkaat.js,
  * 'musiikki:tietovisa' → oletus), ja vanha valinta jää ehdokaslistaan.
@@ -277,16 +300,212 @@ export const RAIDAT = {
       + 'same quiet sustained chord so the track can repeat without a seam. '
       + `${TYYLI}`,
   },
+  /*
+   * ----------------------------------------------------------------
+   * ALUERAIDAT (omistaja 5.9.2026 yö: *"generoi musiikkeja kaikkiin
+   * kohtiin peliä, ne tuovat paljon lisää tunnelmaa."*)
+   * ----------------------------------------------------------------
+   *
+   * Euroopan laudalla on 44 kaupunkia. Oma kappale tehdään niistä
+   * niille, jotka omistaja nimeää (Ateena ensimmäisenä); MUUT SAAVAT
+   * ALUEENSA RAIDAN, ja alue johdetaan pelin omasta maatiedosta
+   * (js/kaupunkimusiikki.js ALUEEN_MAAT). Kuusi raitaa kattaa koko
+   * laudan, ja uusi kaupunki saa musiikkinsa ilman uutta kutsua.
+   *
+   * Avain on alueen tunnus ja tiedostonimi sama kuin kaupungeilla
+   * (musa-kaupunki-<tunnus>.mp3), koska pelille ne ovat sama asia:
+   * pohjavireen paikallinen sijainen. Kesto on kaupunkiraidan mitta
+   * (75 s) — pelaaja viipyy alueella kymmeniä minuutteja, joten lyhyt
+   * kierto alkaisi kuulua silmukaksi.
+   *
+   * PAIKALLINEN SOITINVÄRI HILLITYSTI, EI KANSALLISPUKUA. Raita soi
+   * kaupungin äänimaiseman ALLA eikä saa esittää maata: yksi tai kaksi
+   * soitinta riittää kertomaan, missä ollaan.
+   */
+  britteinsaaret: {
+    laji: 'alue',
+    alue: 'britteinsaaret',
+    tiedosto: 'musa-kaupunki-britteinsaaret.mp3',
+    kesto: 75000,
+    looppi: true,
+    kuvaus: 'Britteinsaarten alueraita (Lontoo, Edinburgh, Dublin)',
+    prompt: 'Travelling through the British Isles in 1873: a quiet instrumental '
+      + 'with a single unhurried fiddle line and a small harp answering it, '
+      + 'mist and drizzle over wet stone streets, lamps just lit. Restrained '
+      + 'and a little melancholy, never a jig or a reel, no marching rhythm, '
+      + 'no bagpipes, no folk-postcard clichés; it plays UNDER the ambient '
+      + 'soundscape of the city and must never pull attention from it. '
+      + 'Seamless loop: begin and end on the same quiet sustained chord so the '
+      + 'track can repeat without a seam. '
+      + `${TYYLI}`,
+  },
+  pohjola: {
+    laji: 'alue',
+    alue: 'pohjola',
+    tiedosto: 'musa-kaupunki-pohjola.mp3',
+    kesto: 75000,
+    looppi: true,
+    kuvaus: 'Pohjolan alueraita (Tukholma, Oslo, Helsinki, Rovaniemi, Islanti)',
+    prompt: 'The northern lands in 1873: slow, spacious and clear, a plucked '
+      + 'kantele-like zither and long low strings, pale night light over water '
+      + 'and forest, cold air and great distance. Calm and unsentimental, no '
+      + 'drama, no heroic horns, no Nordic-saga clichés; it plays UNDER the '
+      + 'ambient soundscape of the place and must never pull attention from it. '
+      + 'Seamless loop: begin and end on the same quiet sustained chord so the '
+      + 'track can repeat without a seam. '
+      + `${TYYLI}`,
+  },
+  'keski-eurooppa': {
+    laji: 'alue',
+    alue: 'keski-eurooppa',
+    tiedosto: 'musa-kaupunki-keski-eurooppa.mp3',
+    kesto: 75000,
+    looppi: true,
+    kuvaus: 'Keski-Euroopan alueraita (Pariisi, Wien, Berliini, Praha, Budapest)',
+    prompt: 'Central Europe in 1873: the polite colour of a small chamber '
+      + 'ensemble heard from three streets away, piano and soft strings, a '
+      + 'gentle triple lilt that never becomes a waltz to dance to. Elegant, '
+      + 'unhurried, faintly formal, no oompah band, no operetta clichés; it '
+      + 'plays UNDER the ambient soundscape of the city and must never pull '
+      + 'attention from it. Seamless loop: begin and end on the same quiet '
+      + 'sustained chord so the track can repeat without a seam. '
+      + `${TYYLI}`,
+  },
+  valimeri: {
+    laji: 'alue',
+    alue: 'valimeri',
+    tiedosto: 'musa-kaupunki-valimeri.mp3',
+    kesto: 75000,
+    looppi: true,
+    kuvaus: 'Välimeren alueraita (Rooma, Madrid, Lissabon, Marseille, Kreeta)',
+    prompt: 'The Mediterranean coast in the late afternoon: a warm nylon-string '
+      + 'guitar and a mandolin playing sparingly over a slow, easy pulse, sun '
+      + 'on old plaster, salt in the air. Light and unhurried, no flamenco '
+      + 'flourishes, no tarantella, no tourist clichés; it plays UNDER the '
+      + 'ambient soundscape of the city and must never pull attention from it. '
+      + 'Seamless loop: begin and end on the same quiet sustained chord so the '
+      + 'track can repeat without a seam. '
+      + `${TYYLI}`,
+  },
+  balkan: {
+    laji: 'alue',
+    alue: 'balkan',
+    tiedosto: 'musa-kaupunki-balkan.mp3',
+    kesto: 75000,
+    looppi: true,
+    kuvaus: 'Balkanin alueraita (Sarajevo, Sofia, Bukarest, Dubrovnik, Istanbul)',
+    prompt: 'The Balkans in 1873, where mountain roads meet the bazaar: a '
+      + 'breathy end-blown flute holds a long line while a plucked tambura '
+      + 'answers it sparsely, warm stone, evening. Modal and calm, in simple '
+      + 'even time, no fast asymmetric dance rhythms, no brass band, no '
+      + 'clichés; it plays UNDER the ambient soundscape of the city and must '
+      + 'never pull attention from it. Seamless loop: begin and end on the same '
+      + 'quiet sustained chord so the track can repeat without a seam. '
+      + `${TYYLI}`,
+  },
+  'ita-eurooppa': {
+    laji: 'alue',
+    alue: 'ita-eurooppa',
+    tiedosto: 'musa-kaupunki-ita-eurooppa.mp3',
+    kesto: 75000,
+    looppi: true,
+    kuvaus: 'Itä-Euroopan alueraita (Moskova, Pietari, Kiova, Riika, Vilna)',
+    prompt: 'The eastern plains in 1873: low sustained strings and a distant '
+      + 'hammered dulcimer figure, wide flat land under a grey sky, church '
+      + 'bells far away but never struck here. Broad, patient and a little '
+      + 'solemn, no balalaika trembling, no dance, no clichés; it plays UNDER '
+      + 'the ambient soundscape of the city and must never pull attention from '
+      + 'it. Seamless loop: begin and end on the same quiet sustained chord so '
+      + 'the track can repeat without a seam. '
+      + `${TYYLI}`,
+  },
+  /*
+   * ----------------------------------------------------------------
+   * TILARAIDAT — näkymä, joka vie musiikin mukanaan
+   * ----------------------------------------------------------------
+   *
+   * Sama tilaus, sama koneisto: kun lehti tai matkalaukku avataan, sen
+   * oma raita ottaa pohjavireen (tai kaupungin kappaleen) paikan
+   * ristihäivytyksellä ja palauttaa sen sulkeutuessaan. Etusivu on
+   * paikka eikä näkymä (game.phase === 'pickstart'), mutta soittaa
+   * samalla tavalla. Taulut: js/musiikkivalitsin.js TILARAIDAT ja
+   * PAIKKARAIDAT.
+   *
+   * NÄMÄ OVAT PELIN HILJAISIMPIA RAITOJA. Lehden ja laukun päällä
+   * pelaaja lukee, ja etusivulla kertoja aloittaa heti — musiikin
+   * tehtävä on antaa huoneelle sävy, ei kertoa tarinaa.
+   */
+  lehti: {
+    laji: 'tila',
+    tila: 'lehti',
+    tiedosto: 'musa-lehti.mp3',
+    kesto: 90000,
+    looppi: true,
+    kuvaus: 'Lehden lukurauha (kaupunki- ja maalehti auki)',
+    prompt: 'Reading a newspaper alone in a quiet library: paper, lamplight and '
+      + 'a slow afternoon. A small harmonium breathes long soft chords while a '
+      + 'guitar is plucked very sparingly above it, almost no melody and no '
+      + 'development at all. Extremely quiet and still, nothing that asks to be '
+      + 'followed, no percussion; it plays UNDER a reading voice and must never '
+      + 'pull attention from the page. Seamless loop: begin and end on the same '
+      + 'quiet sustained chord so the track can repeat without a seam. '
+      + `${TYYLI}`,
+  },
+  matkalaukku: {
+    laji: 'tila',
+    tila: 'matkalaukku',
+    tiedosto: 'musa-matkalaukku.mp3',
+    kesto: 45000,
+    looppi: true,
+    kuvaus: 'Matkalaukku auki (tavarat, Aarnin luettelo, varusteet)',
+    prompt: 'An old leather travelling case opened on a bed: brass catches, '
+      + 'worn straps, small treasures laid out one by one. A few soft piano '
+      + 'notes and a single warm sustained string chord, with one faint music '
+      + 'box tone far back. Very quiet, small and private, no melody to speak '
+      + 'of, no build, no percussion; it plays UNDER the room and must never '
+      + 'pull attention. Seamless loop: begin and end on the same quiet '
+      + 'sustained chord so the track can repeat without a seam. '
+      + `${TYYLI}`,
+  },
+  etusivu: {
+    laji: 'tila',
+    tila: 'etusivu',
+    tiedosto: 'musa-etusivu.mp3',
+    kesto: 90000,
+    looppi: true,
+    kuvaus: 'Etusivu, avausteksti ja lähtökaupungin valinta pallolla',
+    prompt: 'Before the journey begins: an open map on a desk, a finger moving '
+      + 'from city to city, nothing decided yet. Wide and waiting — long quiet '
+      + 'strings, a few slow piano notes and one distant music box tone — with '
+      + 'a sense of a door about to open but no departure yet. Patient, never '
+      + 'triumphant, no fanfare, no rising build, no percussion; it plays UNDER '
+      + 'the sound of the departure hall and the narrator. Seamless loop: begin '
+      + 'and end on the same quiet sustained chord so the track can repeat '
+      + 'without a seam. '
+      + `${TYYLI}`,
+  },
 };
 
 /** Onko raita kaupungin oma kappale vai paletin raita? */
 const onKaupunki = (raita) => raita?.laji === 'kaupunki';
 
-/** Paletin neljä raitaa — `kaikki` tarkoittaa näitä. */
-export const PALETIN_RAIDAT = Object.keys(RAIDAT).filter((id) => !onKaupunki(RAIDAT[id]));
+/** Onko raita alueen raita (kaupungin oman kappaleen varamies)? */
+const onAlue = (raita) => raita?.laji === 'alue';
 
-/** Kaupunkiraidat — `kaupungit` tarkoittaa näitä. */
+/** Onko raita näkymän tai virtuaalipaikan oma raita? */
+const onTila = (raita) => raita?.laji === 'tila';
+
+/** Paletin neljä raitaa — `kaikki` tarkoittaa näitä. */
+export const PALETIN_RAIDAT = Object.keys(RAIDAT).filter((id) => !RAIDAT[id].laji);
+
+/** Kaupunkien omat kappaleet. */
 export const KAUPUNKIEN_RAIDAT = Object.keys(RAIDAT).filter((id) => onKaupunki(RAIDAT[id]));
+
+/** Alueraidat — `alueet` tarkoittaa näitä. */
+export const ALUEIDEN_RAIDAT = Object.keys(RAIDAT).filter((id) => onAlue(RAIDAT[id]));
+
+/** Tilaraidat (lehti, matkalaukku, etusivu) — `tilat` tarkoittaa näitä. */
+export const TILOJEN_RAIDAT = Object.keys(RAIDAT).filter((id) => onTila(RAIDAT[id]));
 
 /**
  * Raitalista argumenteista.
@@ -296,10 +515,21 @@ export const KAUPUNKIEN_RAIDAT = Object.keys(RAIDAT).filter((id) => onKaupunki(R
  * vahingossa uudestaan paletin mukana. Sama sääntö kuin
  * siirtymätyökalussa, jossa `kaikki` ei sisällä linssiraitaa.
  */
+export const RYHMAT = {
+  kaikki: () => [...PALETIN_RAIDAT],
+  // `kaupungit` on kaupunkien omat kappaleet JA alueraidat: molemmat
+  // soivat samassa paikassa sekoituksessa, ja pelin kannalta ne ovat
+  // sama asia (pohjavireen sijainen).
+  kaupungit: () => [...KAUPUNKIEN_RAIDAT, ...ALUEIDEN_RAIDAT],
+  alueet: () => [...ALUEIDEN_RAIDAT],
+  tilat: () => [...TILOJEN_RAIDAT],
+};
+
 export function valitseRaidat(argumentit) {
   if (!argumentit.length) return null;
-  if (argumentit.length === 1 && argumentit[0] === 'kaikki') return [...PALETIN_RAIDAT];
-  if (argumentit.length === 1 && argumentit[0] === 'kaupungit') return [...KAUPUNKIEN_RAIDAT];
+  if (argumentit.length === 1 && Object.hasOwn(RYHMAT, argumentit[0])) {
+    return RYHMAT[argumentit[0]]();
+  }
   return argumentit;
 }
 
@@ -370,7 +600,7 @@ async function main() {
   if (liput.virhe) {
     console.error(`${liput.virhe}.`);
     console.error('Käyttö: node tools/generoi-musiikki.mjs '
-      + `${Object.keys(RAIDAT).join('|')}|kaikki|kaupungit `
+      + `${Object.keys(RAIDAT).join('|')}|${Object.keys(RYHMAT).join('|')} `
       + `[--moottori ${MOOTTORIT.join('|')}] [--kuiva]`);
     process.exit(1);
   }
@@ -378,7 +608,9 @@ async function main() {
   if (!pyydetyt) {
     console.error('Anna raidat: node tools/generoi-musiikki.mjs pohja visa aarre paaaarre');
     console.error(`Koko paletti: node tools/generoi-musiikki.mjs kaikki (${PALETIN_RAIDAT.join(', ')})`);
-    console.error(`Kaupunkiraidat: node tools/generoi-musiikki.mjs kaupungit (${KAUPUNKIEN_RAIDAT.join(', ')})`);
+    console.error('Kaupunkiraidat: node tools/generoi-musiikki.mjs kaupungit '
+      + `(${[...KAUPUNKIEN_RAIDAT, ...ALUEIDEN_RAIDAT].join(', ')})`);
+    console.error(`Tilaraidat: node tools/generoi-musiikki.mjs tilat (${TILOJEN_RAIDAT.join(', ')})`);
     process.exit(1);
   }
 

@@ -35,6 +35,27 @@
 # vahingossa uudestaan, ja jokainen kutsu maksaa. Pelin puoli on
 # js/kaupunkimusiikki.js (taulukko) ja js/ambience-stream.js (soitto).
 #
+# ALUERAIDAT JA NÄKYMIEN RAIDAT (omistaja 5.9.2026 yö: *"generoi
+# musiikkeja kaikkiin kohtiin peliä, ne tuovat paljon lisää
+# tunnelmaa."*). Kaupunki, jolla ei ole omaa kappaletta, saa ALUEENSA
+# raidan, ja näkymillä on omansa. Kaikki soivat samassa paikassa
+# sekoituksessa — pohjavireen sijaisina, ristihäivytyksellä:
+#
+#   ryhmä "alueet"  musa-kaupunki-britteinsaaret.mp3
+#                   musa-kaupunki-pohjola.mp3
+#                   musa-kaupunki-keski-eurooppa.mp3
+#                   musa-kaupunki-valimeri.mp3
+#                   musa-kaupunki-balkan.mp3
+#                   musa-kaupunki-ita-eurooppa.mp3
+#   ryhmä "tilat"   musa-lehti.mp3         lehti auki
+#                   musa-matkalaukku.mp3   matkalaukku auki
+#                   musa-etusivu.mp3       etusivu ja pallon selailu
+#
+# Ryhmä "kaupungit" tarkoittaa kaupunkien omia kappaleita JA alueita;
+# "alueet" ja "tilat" pyytävät vain oman joukkonsa. Valitsin on
+# js/musiikkivalitsin.js (ketju kaupunki → alue → pohjavire ja tilat
+# sen päällä).
+#
 # AARRE JA PAAAARRE OVAT PARI. Ne ovat sama sävelaihe kahdessa asussa,
 # ja jos toinen generoidaan uusiksi, kannattaa generoida molemmat —
 # muuten musiikillinen sukulaisuus katoaa (ks. tools/generoi-musiikki.mjs).
@@ -83,9 +104,10 @@ on:
       raidat:
         description: >-
           Raitojen avaimet välilyönnein (pohja visa aarre paaaarre) tai
-          "kaikki" koko paletille. Kaupunkiraidat pyydetään nimeltä
-          ("ateena") tai ryhmänä "kaupungit" — ne EIVÄT sisälly
-          "kaikkiin".
+          "kaikki" koko paletille. Kaupunki- ja alueraidat pyydetään
+          nimeltä ("ateena", "valimeri") tai ryhmänä "kaupungit" /
+          "alueet", näkymien raidat ryhmänä "tilat" (lehti matkalaukku
+          etusivu) — ne EIVÄT sisälly "kaikkiin".
         required: true
         default: 'kaikki'
       moottori:
