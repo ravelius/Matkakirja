@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-05T22:44:12.743851+00:00",
+  "status": "proposal-prepared-not-sent",
+  "feedbackId": "sarajevo-adnan-lejla-round2-r20260905-v1:7febe3b8e261c6997bf7453a47683591adab39aafff9e9b8731080cbfc8c80be",
+  "originalFeedback": {
+    "imageId": "sarajevo-adnan-lejla-round2-r20260905-v1",
+    "requestIds": [
+      "313f7c54-10ba-4c0a-9f8b-aae53aec6fc9"
+    ],
+    "sourceUpdatedAt": "2026-09-05T21:09:17.143Z",
+    "originalFeedback": "muuta asetelmaa ja poista toinen henkilö",
+    "feedbackSha256": "7febe3b8e261c6997bf7453a47683591adab39aafff9e9b8731080cbfc8c80be"
+  },
+  "canonicalCityId": "sarajevo",
+  "country": "Bosnia ja Hertsegovina",
+  "canonRead": {
+    "mainSha": "3793afdcc5fdcdb34ec98668f99a5ff2da18c626",
+    "version": 1612,
+    "mailboxSha": "3655c22b6bceb7eb7e413bc10a532886be5cd079"
+  },
+  "sameCityReviews": [
+    {
+      "imageId": "sarajevo-amina-kuparipaja",
+      "status": "poistettu_v2",
+      "workflowStatus": "archived",
+      "suggestion": "Amina on opastamassa tyttären pojalleen kuparisepän vasaran käyttöä kun nuori poika yhtäkkiä huomaa pelaajan ja osoittaa ilahtuen hämmästyneenä tulijaa mummolleen",
+      "regenerationPrompt": "Use case: photorealistic-natural\nAsset type: square Matkakirja encounter portrait\nPrimary request: A completely new authentic present-day editorial photograph of Amina, an approximately 52-year-old Bosnian woman coppersmith, actively hammering a copper vessel in her small working shop on Kazandžiluk street in Sarajevo's Baščaršija.\nScene/backdrop: A believable contemporary Baščaršija coppersmith workshop opening to the narrow cobbled old-market alley; warm shelves hold hand-hammered copper trays and džezva coffee pots, and the stone-and-timber alley is recognisable but softly blurred. No shop signs or writing anywhere.\nSubject: Amina has a distinct naturally aging Bosnian face, warm olive-fair Balkan skin, direct brown eyes, visible pores and fine lines, strong nose, dark hair streaked with silver and pulled back practically, no beauty retouching. She wears an unbranded dark indigo work shirt and a worn brown canvas apron.\nAction and body mechanics: a real interrupted work movement, no wider than waist-up. Her torso is angled forward over a small steel anvil and her shoulders are dynamically offset. Her left hand naturally steadies a hammered copper bowl on the anvil with fingers safely clear. Her right hand grips the wooden handle of a small coppersmith's hammer and is visibly frozen halfway through a downward strike: the entire hammer head must be clearly suspended in open air 15 to 20 centimetres above the copper, with an unmistakable gap of daylight between hammer and vessel; it is neither touching nor resting. Her wrist, elbow and shoulder show real downward movement and controlled force. At that exact instant she turns her face and both eyes straight into the camera with a calm, assessing expression. Tool grip, hands, fingers, elbows, spine and weight must be anatomically convincing and obey gravity.\nStyle/medium: photorealistic present-day documentary/editorial photography, candid and unstaged, truthful textures, subtle natural film grain.\nComposition/framing: square 1:1, medium close environmental portrait no wider than waist-up, eye-level 50 mm documentary perspective. Keep both complete working hands, the full hammer head, the visible air gap, copper vessel and anvil inside the frame. Her eyes are tack-sharp and the most important focal point; shallow depth of field, recognisable Baščaršija context.\nLighting/mood: warm reflected copper light mixed with soft daylight from the alley; intimate, grounded, alert.\nColor palette: warm copper, aged wood, indigo and neutral stone, natural skin.\nMaterials/textures: realistic skin, worn canvas, hand-hammered copper, scratched steel and wood, old paving stone.\nConstraints: entirely new generation with no input images; exactly one main person; direct eye contact into lens; hammer visibly mid-air with a clear 15–20 cm gap above copper; natural working posture and balance; anatomically correct hands and tool grip; authentic present-day Bosnia; square composition; no visible words, letters, numbers, labels, badges, insignia, logos, trademarks, watermark, border or frame.\nAvoid: hammer touching or resting on copper, poised studio portrait, fake souvenir pose, folklore costume, headscarf stereotype, extra people, extra limbs, malformed or fused fingers, floating tool unrelated to her grip, looking away, glamorized face, orange-teal grading, excessive HDR, AI-smoothed skin.",
+      "rewriteText": false,
+      "archived": true,
+      "updatedAt": "2026-09-04T22:35:35.121Z"
+    },
+    {
+      "imageId": "sarajevo-emir-kuparipaja-v1",
+      "status": "poistettu_v2",
+      "workflowStatus": "archived",
+      "suggestion": "poika ovella  sekä kissa ovat liikaa, ota pois",
+      "regenerationPrompt": "Use case: photorealistic-natural. Asset: square 1:1 contemporary encounter photo for a travel game. Generate an entirely new image from scratch, not an edit of any existing image.\nPresent-day Sarajevo in the open doorway of a small authentic Kazandžiluk copper workshop at golden hour. Emir is a 27-year-old Bosnian man with a broad heavyset body, warm olive skin, a round face, shoulder-length straight black hair tied in a single low braid, a narrow old-fashioned moustache but no beard, one dark eye and one hazel eye, and an expressive nose. Modern individual street-workwear: cropped teal chore jacket over a burgundy T-shirt, wide black carpenter trousers and battered leather apron, no logos. He has lifted a newly hammered copper plate in long tongs while a chasing hammer pauses in his other hand; one tiny harmless spark catches the apron as a stranger enters. Emir swivels directly to camera with proud alarm, dry humor and a challenge. Two sharply different young apprentices crowd the warm workshop behind him—one hijabi woman in cobalt overalls, one lanky blond man in mustard—and a tabby cat leaps from a low copper shelf. Outside, sunlit Baščaršija pedestrians and pigeons form moving layers. Dynamic 35 mm close environmental group photo, rich real copper reflections, sunbeam and cool alley fill, full head, tools and coherent hands visible, eyes tack sharp, true skin and metal. No coffee preparation, text, logos, folklore costume, painting, illustration, CGI, repeated older bearded craftsman face, plastic skin or malformed anatomy.",
+      "rewriteText": false,
+      "archived": true,
+      "updatedAt": "2026-09-04T22:12:12.658Z"
+    },
+    {
+      "imageId": "sarajevo-amina-kuparipaja-v2",
+      "status": "poistettu_v2",
+      "workflowStatus": "archived",
+      "suggestion": "",
+      "regenerationPrompt": "",
+      "rewriteText": false,
+      "archived": true,
+      "updatedAt": "2026-09-04T20:19:37.926Z"
+    },
+    {
+      "imageId": "sarajevo-emir-r20260905-v3",
+      "status": "poistettu_v2",
+      "workflowStatus": "archived",
+      "suggestion": "",
+      "regenerationPrompt": "",
+      "rewriteText": false,
+      "archived": true,
+      "updatedAt": "2026-09-05T06:54:10.104Z"
+    },
+    {
+      "imageId": "sarajevo-amina-kuparipaja-r20260905-night-v3",
+      "status": "poistettu_v2",
+      "workflowStatus": "archived",
+      "suggestion": "",
+      "regenerationPrompt": "",
+      "rewriteText": false,
+      "archived": true,
+      "updatedAt": "2026-09-05T06:54:56.277Z"
+    },
+    {
+      "imageId": "sarajevo-emir-r20260905-redo-ab-a",
+      "status": "poistettu_v2",
+      "workflowStatus": "archived",
+      "suggestion": "vaihda henkilöt ja aurinko mukaan, läikikkäästi siivilöityvä valo",
+      "regenerationPrompt": "Use case: photorealistic-natural. Generate ONE entirely new present-day square 1536 x 1536 camera photograph of a Matkakirja encounter. The camera is the arriving traveler, who has just unexpectedly asked a Sarajevo coppersmith about a treasure in an old family travel book.\n\nThe small Kazandziluk workshop follows an inspected real Sarajevo photograph: pale plaster, narrow dark wooden shelves crowded with hammered copper coffee pots and trays, scarred low bench, steel forming stake. Authentic ordinary working room, no forge or sparks. A dark doorway edge opens a sliver of old-market street. Warm copper fills the upper background, its circular shapes making an expressive setting rather than a generic blurred wall.\n\nEmir is a fictional 27-year-old Bosnian man, heavyset, youthful broad olive-skinned face, prominent nose, dark expressive eyes, long black hair tied into a low braid, narrow moustache without beard. Real pores, uneven teeth, perspiration and stray hairs. Rolled teal overshirt, wine-red T-shirt, worn brown leather apron. He was correcting his eleven-year-old apprentice's unusually lopsided shallow copper bowl at the bench. The boy is just beside him on the left, short tousled hair, mustard sweatshirt and plain canvas apron. He holds the bowl securely in both hands, tilting its uneven but physically plausible wavy rim toward his master, delighted by their interrupted lesson. No humiliation or danger.\n\nAs the traveler's treasure question interrupts, Emir rocks his torso slightly backward but turns his full face straight toward us. BOTH EYES meet the CAMERA LENS precisely. His right hand rests the head of his short wooden-handled planishing hammer on the bench; his left hand stays on his thigh. The boy looks up at Emir in growing conspiratorial delight, responding to his master's reaction rather than posing for the traveler. Two people only, their differing reactions and the absurdly uneven copper bowl tell one clear story.\n\nEXPRESSION: Strong surprise mixed with incredulous amusement. Both eyes widen, both eyebrows rise unevenly, upper eyelids lift, forehead creases form, cheeks begin to lift, mouth opens halfway into an interrupted laugh, one mouth corner pulls farther outward. Keep both pupils looking at the lens and the eyes open; do not turn it into a broad posed smile or terrified scream.\n\nIntimate waist-up 40mm documentary framing at Emir's eye level, his face large in the upper-right third, boy upper-left, bowl in lower-center. Clear triangle of two faces and the bowl. Both complete heads with breathing room; both boy's supporting hands and Emir's hammer hand entirely inside the square. Slightly oblique bodies, unposed weight and physically coherent grips. Face and hands sharp, shelves gently softer but recognizable.\n\nStrong natural side daylight from the open workshop doorway lights Emir's cheek, the boy and the bright thin copper rim; cool sky fill retains detail in the shaded eye. Deep textured workshop shadows, luminous copper highlights, rich neutral skin. Restrained exposure and saturation. Really sharp photographic optics and tangible wood, copper, cotton, skin, no artificial atmospheric haze, no painting/illustration/CGI/plastic beauty retouch. No readable text, logos, border, watermark, literal treasure, answer clues, extra people or decorative animals.",
+      "rewriteText": false,
+      "archived": true,
+      "updatedAt": "2026-09-05T20:45:17.940Z"
+    },
+    {
+      "imageId": "sarajevo-emir-r20260905-v5",
+      "status": "jatkoon_v2",
+      "workflowStatus": "accepted",
+      "suggestion": "",
+      "regenerationPrompt": "",
+      "rewriteText": false,
+      "archived": false,
+      "updatedAt": "2026-09-05T17:07:38.030Z"
+    },
+    {
+      "imageId": "sarajevo-adnan-lejla-round2-r20260905-v1",
+      "status": "uusiksi_v2",
+      "workflowStatus": "regenerate",
+      "suggestion": "muuta asetelmaa ja poista toinen henkilö",
+      "regenerationPrompt": "Use case: photorealistic-natural. Create ONE wholly NEW square 1536 x 1536 contemporary documentary photograph for the Matkakirja game. All pixels newly generated, no local edit. Camera is the arriving traveler who has just asked about a treasure. Principal person's BOTH eyes make direct unmistakable contact INTO THE LENS. Authentic emotionally arresting human reaction. Complete head and all hair within frame with comfortable upper margin, realistic hands and supported objects. Genuine camera photograph with lifelike skin, restrained optical rendering and meaningful dimensional light. No illustration, CGI, artificial bokeh texture, HDR halos, logos, readable text, treasure revealed, watermark, vintage treatment, vignette or border.  Single REAL Sarajevo copper workshop reference is used for physical narrow working room, worn pale green plaster, shelves of hammered copper trays and pots, honest bench scale and hand tools only. Do NOT copy actual photographed man. Entirely NEW fictional pair: Adnan68 stocky elderly Bosnian copper master, bald crown and short pure-white beard, broad oval deep-lined face, small ROUND clear reading glasses, dark blue work shirt with sleeves rolled and dark brown worn leather apron. Apprentice Lejla22 lean young Bosnian woman with short VIOLET pixie cut, olive work shirt, mustard apron, no previous Emir and no boy. At the bench, Lejla on left holds one slightly lopsided hammered copper bowl by two distinct safe rim points at waist height angled toward the light. Master Adnan at right leans forward beside her, has just stopped examining rim; his one hand is raised open near the bowl as if about to correct its angle, other palm rests naturally on tabletop beside a resting wooden mallet. He suddenly looks DIRECT into traveler-camera with BOTH EYES clearly visible through unobtrusive glasses, eyebrows lift while mouth hangs half-open in astonished near-stern disbelief breaking into amusement. Apprentice glances toward his face with genuine barely-contained delight. Whole heads, all hair, upper bodies and hands within frame. STRONG BEAUTIFUL DAPPLED SUN filters through irregular vines outside high street doorway: distinct broad patches on master's cheek, apprentice forearm, leather and polished copper bowls on shelves; deep coherent warm shadows with enough soft cool daylight for eyes. Copper has luminous reddish-orange hammered glints and dark reflective depth, not uniformly matte orange. Dense but organized room layers, no random decorative junk, no generic forge fire. Camera45mm waist-to-head medium-close, vivid dynamic human interaction but believable candid documentary moment.",
+      "rewriteText": false,
+      "archived": false,
+      "updatedAt": "2026-09-05T21:09:17.143Z"
+    }
+  ],
+  "preserveApprovedImageId": "sarajevo-emir-r20260905-v5",
+  "interpretation": "Pidetään päähenkilö Adnan ja poistetaan oppilas Lejla. Käyttäjä ei nimennyt poistettavaa henkilöä: tämä on ehdotus, ei hänen vahvistamansa hahmovalinta.",
+  "character": "Adnan, noin 68-vuotias fiktiivinen kuparimestari. Sama hahmo kuin edellisessä ehdokkaassa; ei oikean yrityksen omistajan henkilöhistoriaa, sukunimeä tai näköisyyttä.",
+  "scene": "Adnan istuu yksin matalan työpenkin ääressä vinosti kohti verstaasta avautuvaa kujaa. Hän sovittaa kuparipannun pitkää kahvaa paikalleen; pannu lepää penkillä ja vasara on laskettu käden viereen. Matkaajan aarrekysymys keskeyttää työn. Adnan kääntyy suoraan kameraan: hämmästys kiristää kulmat, mutta suupielessä alkaa epäuskoinen hymy. Vino aurinko suodattuu oviaukon lehdistön läpi kasvoille ja kupariesineisiin. Selvästi uusi asetelma, ei oppilaan pitelemää kulhoa, ei toista ihmistä tai eläintä.",
+  "composition": "Kamera työpenkin toisella puolella hieman aiempaa kauempana. Kasvot ja molemmat silmät näkyvät, katse kameraan ehdoton. Kokonainen pää, kädet ja pitkä pannunkahva jäävät väljästi kuvan sisään; noin 20 prosenttia ympäristövaraa reunoilla pelin häivytykselle. Aito verstas ja kuparin valo, ei valmista valkoista vinjettiä tähän nykyhetken kohtaamiskuvaan. Kokonaan uusi generointi; vanhat versiot säilyvät.",
+  "place": {
+    "encounter": "Kazandžilukin kujan fiktiivinen kupariverstas",
+    "treasure": "Saman kujan julkinen kaupunkikätkö",
+    "decisionSource": "Fable 2026-09-05 21:10 UTC",
+    "coordinates": null,
+    "coordinateOwner": "Fable tarkistaa kujan pisteen ja laudan siirtymäkorjauksen; vanhan sillan koordinaattia ei kopioida."
+  },
+  "frame": {
+    "preserve1873FocusText": "Laskin sillalta neljän uskon äänet: kirkonkellot idästä ja lännestä, minareetin kutsun, sapatin hiljaisuuden — ja joen, joka ei kuulu kenellekään. Majatalon isäntä sanoi, ettei kaupungissa tarvitse valita, minkä kellon mukaan herää.",
+    "newFictionalBridge": "Nykyhetken kohtauksessa matkaaja näyttää saman sivun reunaan luonnosteltua pitkää kahvipannua ja pientä kujanäkymää. Hän on pitänyt pannunkahvaa reittiä osoittavana viivana. Adnan tunnistaa esineen työnsä perusteella ja erottaa astian luonnoksen varsinaisesta kujapiirroksesta. Oven ja kujan mutkan keskinäinen sijainti auttaa kohdistamaan piirroksen nykyiseen Kazandžilukiin.",
+    "boundary": "Marginaaliluonnoksen tarkennus on uutta fiktiota Fablen hyväksyttäväksi. Vuoden 1873 saapumistekstiä tai äänitettä ei tarvitse kirjoittaa uudelleen. Adnan ei muista Horatiota, tunne tämän sukua tai vartioi hänelle säästettyä kuppia. Lejlan erehdys siirtyy matkaajan omaksi väärintulkinnaksi; oppilaan repliikit poistuvat."
+  },
+  "copyDraft": {
+    "title": "Sarajevo — kahva väärään suuntaan",
+    "character": "Kuparimestari Adnan sovittaa pannuihin kahvoja Kazandžilukin verstaassa. Kuparin jälkiä hän lukee varmemmin kuin käsialaa.",
+    "button": "Tapaa Adnan",
+    "encounter": "Adnan laskee vasaran. ”Aarretta? Minä odotin kysymystä hinnasta.” Hän katsoo sinua, sitten kirjaa; suupieli värähtää. ”Tuo pitkä viiva kuuluu astiaan. Aloitetaan siitä, mitä täällä tehdään.”",
+    "quizIntro": "Adnan viittaa hyllyn astioihin ja kysyy.",
+    "found": "Adnan tunnisti kujapiirroksen mutkan. Sen kupeessa, julkisella kulkureitillä, oli kaupungin kätkö. Rasian alta löytyi pieni taitettu paperi: sama pannunkahva oli piirretty siihenkin väärään suuntaan.",
+    "empty": "Kujan mutka täsmäsi piirrokseen, mutta kätkö oli tyhjä. Adnan vilkaisi kirjaa. ”Suunta löytyi. Sisältö on toinen asia.”",
+    "wrong": "Adnan kallistaa päätään. ”Katso, mitä kahvin kanssa tuodaan pöytään. Sen jälkeen tuo viiva näyttää toiselta.”",
+    "resultRule": "Löytöteksti näytetään vain pelin todellisella löytötuloksella. Tyhjä ei lupaa aarretta, väärä vastaus ei avaa kätköä. Paperi on tarinan koukku, ei uusi inventaarioesine tai pääaarteen paljastus."
+  },
+  "question": {
+    "action": "Säilytä nykyinen kysymys ja sen neljä vaihtoehtoa.",
+    "text": "Sarajevon kuparisepät takovat astiaa, joka kuuluu kaupungin kahvipöytään. Mikä se on?",
+    "options": [
+      "Pitkävartinen pannu, jossa kahvi keitetään vaahtoavaksi",
+      "Kaksipohjainen kannu, joka pitää juoman lämpimänä iltaan",
+      "Hunajakattila, jonka kansi soi kuin pieni kello",
+      "Vesikannu, joka viilentää juoman kuparin kautta"
+    ],
+    "correctIndex": 0,
+    "teaching": "Säilytä fokusvirran Kazandžiluk-oppitunnin džezva ja kahvi ennen visaa. Vastaus ei riipu kuvassa näkyvästä yksityiskohdasta tai kuvitteellisesta marginaalivihjeestä."
+  },
+  "sources": [
+    {
+      "url": "https://bascarsija.ba/kazandzije/kazandzijska-radnja-ferhatovic-s-z-r",
+      "title": "Baščaršijan käsityöläisluettelo: kupariverstaan oma esittely",
+      "verified": "Kazandžilukilla tehdään käsin kuparisia kahvisettejä ja džezva-pannuja. Käytetty vain paikan ja esinetyypin tukena; ei henkilöhahmon lähteenä."
+    },
+    {
+      "url": "https://innovative-sustainable-economy.interreg-euro-med.eu/wp-content/uploads/sites/2/practicalinformation_sarajevo.pdf",
+      "title": "CENER 21 / Interreg Euro-MED, Sarajevo-opas, s. 14",
+      "verified": "Bosnialainen kahvi ja pieni kuparinen džezva kuuluvat samaan tarjoiluperinteeseen. Ei tue fiktiivistä kätköä tai sukutarinaa."
+    }
+  ],
+  "fableChangesAfterImageSelection": [
+    "js/tyohuone-kehitys-data.js: Sarajevon henkilö, otsikko, kohtaaminen ja tuloskohtainen aarre. Emir ja perityt kaksi kuppia poistuvat vain Adnanin kuvan valinnalla.",
+    "js/packs/fokusvirta-sarajevo.js: henkilö, nappi, kohtaamisteksti ja kohtaamispiste Kazandžilukiin; Latinska ćuprija säilyy erillisenä nähtävyytenä ja vuoden 1873 tekstissä.",
+    "Lejlan opetushetki, harjoituskulho ja oppilaan väärinlukema valmistusmerkki eivät kuulu yhden henkilön versioon.",
+    "Synkronoi mahdolliset rinnakkaiset kysymys- ja tulosrepliikit sekä kuvateksti ja mykistä vanha ristiriitainen luenta. Ei erillistä uutta kaupunkitietuetta."
+  ],
+  "imageWorkComplete": false,
+  "imageApproved": false,
+  "gameImplementationVerified": false,
+  "productionOwner": "root-encounter-production"
+}
