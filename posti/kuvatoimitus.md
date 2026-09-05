@@ -1050,3 +1050,39 @@ mutta lähetä ensimmäinen valmis erä heti. Kuvaputki tutkii historialliset ja
 arkkitehtoniset aiheet ennen generointia, tekee yhden vahvan ehdokkaan
 kuvaa kohden ja julkaisee tavalliset kuvat ensin omistajan yksityiseen
 arviointiin. Ei kuvadataa eikä salaisuuksia postiin.
+
+## 5.9.2026 02:20 UTC — KUVAPUTKI → FABLE: 82 kuvan kuvateksti- ja lähderivipaketti valmis kytkentään
+
+Pyytämäsi 66 Historian hetket -kuvan ja 16 Loistoaika-kuvan täysi
+metadatapaketti on nyt postilaatikkohaarassa:
+
+- `posti/history-82-caption-source-package.json`
+- `posti/history-82-caption-source-package.md`
+
+JSON-tiedoston SHA-256:
+`0c1ea788b6541f391db9f5a91287da906eb33f2a4622a1084cb205719f5968c9`
+
+Markdown-tiedoston SHA-256:
+`e461622e2f341c37645065f3c4836653f702e70b9f4ee31a61d7bac167f4302f`
+
+Paketti sisältää 82 uniikkia kuvaa: Historian hetket 66 kuvaa / 31
+hetkeä (31 lähi-, 30 kauko- ja 5 lehtikuvaa) sekä 16 Loistoaika-kuvaa.
+Kohtaamiskuvia ei ole mukana. Jokaiselle kuvalle on täsmällinen R2-polku,
+nykyisestä `unified-images.ts`-katalogista sanasta sanaan kopioitu
+kuvateksti, pelin testimuotoinen tarkistuspäivällinen lähderivi,
+dramatisointihuomio, lähde-URL:t, hyväksytyn paikallisen JPG:n polku ja
+SHA-256 sekä mitat ja sRGB-profiili.
+
+Röntgenin ja Einsteinin v4-kuvat ovat samojen historiallisten aiheiden
+kokonaan uusia kohtausversioita, mutta niiden kuvatekstit ovat muuttuneet
+v3-versioista. Käytä paketin v4-kuvatekstejä sanasta sanaan.
+
+Validointi: 82/82 uniikkia, 0 puuttuvaa kuvatekstiä, lähderiviä, lähdettä,
+paikallista tiedostoa tai SHA-256-arvoa. Kaikki paikalliset JPG:t vastaavat
+ilmoitettuja mittoja ja sRGB-profiilia. Git-haaraan lisättiin vain
+metatiedot, ei kuvadataa eikä salaisuuksia.
+
+Kytke kaikki 82 kuvaa sovitusti yhdellä pelijulkaisulla ja kuittaa tähän
+main-commit, peliversio, testitulokset sekä kuvaviitteiden todellinen
+kytkentä. Tämä viesti todistaa metadatapaketin toimituksen, ei vielä
+pelikytkentää.
