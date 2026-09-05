@@ -135,11 +135,13 @@ import { ajastaEhdotusKupla, ehdotusOsio, proHakuRasti, proOsio } from './ehdotu
 import { kuvavinkkiOsio } from './kuvavinkki.js';
 /*
  * Livian omat kuplat (js/livia.js): avausesittely aloitusvalinnassa
- * lähtee kartasta (zoomaaAloituskartta), mutta sen peruminen ja
- * mannerivihjeen tilannelaukaisin kuuluvat pelin kulkuun.
+ * lähtee siitä laudasta, jolta lähtökaupunki valitaan — tasokartalta
+ * zoomaaAloituskartta, pallolta aloitaPallolta (aalto 3A) — ja sen
+ * peruminen ja mannerivihjeen tilannelaukaisin kuuluvat pelin kulkuun.
  */
 import {
-  naytaLivianPaljastus, nollaaLivianVihjeet, paivitaMannerivihje, peruLivianAvaus,
+  naytaLivianAvaus, naytaLivianPaljastus, nollaaLivianVihjeet, paivitaMannerivihje,
+  peruLivianAvaus,
 } from './livia.js';
 // Viiden symbolin reaktionappi sisällön kylkeen (js/reaktiot.js).
 // ui.js tarvitsee tästä kuvasuurennoksen napin ja litteiden
@@ -2891,6 +2893,16 @@ export class UI {
     this.viewBoxSize = { vw: 1000, vh: 1000 };
     // Aloituskartan lähikuva ja sen vaakapanorointi (puhelin).
     this.aloitusZoom = false;
+    /*
+     * LÄHTÖVALINTA PALLOLLA (aalto 3A). OMA LIPPU EIKÄ `aloitusZoom`:
+     * jälkimmäinen on TASOKARTAN lähikuvatila, jonka js/kartta.js
+     * nollaa aina kun kartta nukahtaa tai lauta vaihtuu
+     * (nollaaAloitusZoom) — ja juuri se tapahtuu, kun pallo avataan
+     * hereillä olleen kartan päälle (`?etusivupallo=0`). Silloin
+     * valintatila olisi kadonnut samassa piirrossa kuin se syntyi
+     * (mitattu Chromiumilla 5.9.2026).
+     */
+    this.aloitusvalintaPallolla = false;
     this.panX = null;
     this.panVara = 0;
   }
@@ -3763,18 +3775,27 @@ export class UI {
      */
     if (palloTurvatilassa()) { this.ilmoitaPallonTurvatila(); return false; }
     if (!this.aloituslentoPallolla()) return false;
-    // Pallo tuntee vain maailmankartan projektion (js/pallo.js PALLO_LAUTA).
-    if (this.game.pack?.id !== 'maailmankartta') return false;
     /*
-     * AVAUSLENTO ON NYT PALLOLLA (vaihe 5b). Tässä oli toinenkin ehto:
-     * pallo odotti, että tasokartalla lennetty avaus päättyy. Nyt pallo
-     * ottaa laudan heti kun lähtökaupunki on valittu (peli siirtyy pois
-     * pickstart-vaiheesta), ja lento lennetään pallolla — kaari, kone,
-     * harso ja kamera ovat pallon omia (js/pallolauta/avaus.js).
-     * Aloitussivu (pickstart) on yhä oma näkymänsä, eikä sitä piirretä
-     * pallolle: sen pallo on toinen erä (etusivun esirenderöity pallo).
+     * LÄHTÖKAUPUNKI VALITAAN PALLOLTA (aalto 3A, omistaja 5.9.2026:
+     * *"Käännä kaikki pallolle, niin voidaan sulkea vanha kartta
+     * kokonaan."*). Aloitusnäytöllä pelin lauta on vielä sen oma
+     * (js/packs/maailma.js) eikä maailmankartta, joten pakkaehto ei
+     * kelpaa portiksi: valintanäkymän pallo piirtyy maailmankartan
+     * kaupungeista (js/pallolauta/lauta.js `pack`), samalta laudalta
+     * jolle peli astuu heti valinnan jälkeen.
+     *
+     * PALLO AVATAAN VASTA NAPISTA. Avausnäkymässä ylälohkossa on kevyt
+     * esirenderöity pallovideo (js/etusivupallo.js), ja WebGL-lauta
+     * maksetaan vasta kun pelaaja painaa "Valitse aloituskaupunki"
+     * (aloitaPallolta nostaa `aloitusvalintaPallolla`-lipun).
+     *
+     * AVAUSLENTO ON PALLOLLA (vaihe 5b): pallo pitää laudan valinnan
+     * yli, ja lento lennetään pallolla — kaari, kone, harso ja kamera
+     * ovat pallon omia (js/pallolauta/avaus.js).
      */
-    return this.game.phase !== 'pickstart';
+    if (this.game.phase === 'pickstart') return this.aloitusvalintaPallolla;
+    // Pallo tuntee vain maailmankartan projektion (js/pallo.js PALLO_LAUTA).
+    return this.game.pack?.id === 'maailmankartta';
   }
 
   /**
@@ -3867,7 +3888,15 @@ export class UI {
     // välipisteen, matka jatkuu pallolla kummastakin (vaihe 2).
     this.kartta.nuku();
     lauta.nayta();
-    lauta.kamera.kotiin();
+    /*
+     * LÄHTÖVALINNAN NÄKYMÄ (aalto 3A): matkaajalla ei ole vielä paikkaa,
+     * joten `kotiin` ei tietäisi mistä aloittaa. Kamera ajetaan Lontoon
+     * ja valittavien kaupunkien laatikkoon — samaan rajaukseen, jossa
+     * avauslento sitten lennetään (js/pallolauta/avaus.js), joten
+     * pergamenttiarkin takana kamera ei enää liiku.
+     */
+    if (this.game.phase === 'pickstart') lauta.aloitusnakyma();
+    else lauta.kamera.kotiin();
     this.render();
     return true;
   }
@@ -3892,6 +3921,18 @@ export class UI {
     this.pallolauta = null;
     if (this.kartta.lepotila) this.kartta.heraa();
     this.render();
+    /*
+     * LÄHTÖVALINTA OLI PALLOLLA (aalto 3A): pallo kaatui kesken
+     * valinnan, joten kartta ottaa sen takaisin omalla lähikuvallaan —
+     * muuten valinta jäisi yleiskuvaan ilman kohdepisteitä. Lippu on
+     * nollattava ensin, koska aloitusvalintaAuki portittaa koko polun.
+     * `pallolautaEpaonnistui` on jo tosi, joten aloitaKartalta ei enää
+     * palaa pallolle.
+     */
+    if (this.game.phase === 'pickstart' && this.aloitusvalintaPallolla) {
+      this.aloitusvalintaPallolla = false;
+      this.aloitaTasokartalta();
+    }
     const box = this.buildToast({ kind: 'info', text: 'Karttapallo ei latautunut — pelataan kartalla.' });
     setTimeout(() => this.removeToast(box), TOAST_MS.default * 3);
   }
@@ -14996,7 +15037,7 @@ export class UI {
     // Uusi peli tuo tekstin takaisin täyteen näkyvyyteen häivytyksestä —
     // mutta lähikuvassa teksti on väistynyt tarkoituksella, joten sitä ei
     // palauteta joka renderöinnillä.
-    if (nakyy && !this.aloitusZoom) this.introEl.classList.remove('intro-fade', 'intro-pois');
+    if (nakyy && !this.aloitusvalintaAuki()) this.introEl.classList.remove('intro-fade', 'intro-pois');
     /*
      * KOKO AVAUSKAPPALE ODOTTAA NAPPIA (omistajan tilaus 12.8.2026).
      *
@@ -15025,7 +15066,7 @@ export class UI {
      * karttaan, pallolaudalla pelkäksi pergamentiksi (karttaa ei
      * herätetä — etusivunPalloKaytossa).
      */
-    if (nakyy && etusivupalloPaalla()) {
+    if (nakyy && !this.aloitusvalintaPallolla && etusivupalloPaalla()) {
       void import('./etusivupallo.js')
         .then((m) => m.paivitaEtusivupallo(this, nakyy))
         .catch(() => {
@@ -15130,18 +15171,19 @@ export class UI {
   }
 
   /**
-   * Mistä aloitan? -napin polku kartalle (omistajan tilaus 25.8.2026,
+   * Mistä aloitan? -napin polku laudalle (omistajan tilaus 25.8.2026,
    * nappi 26.8.2026).
    *
    * Naksahdus, avauspalsta häipyy (teksti, sumuverho ja kansikuva
-   * samalla kertaa, koska ne ovat saman elementin lapsia), ja kartta
-   * zoomautuu koko ruudulle Lontoon kohdalle — sama lähikuva, joka
-   * ennen aukesi puhelimella kartan napautuksesta
-   * (kartta.zoomaaAloituskartta). Kohdepisteet piirtyvät vasta siinä
-   * lähikuvassa, joten Ateenan voi valita vasta täältä.
+   * samalla kertaa, koska ne ovat saman elementin lapsia), ja lauta
+   * ottaa koko ruudun valintanäkymään: pallolla kamera ajaa Lontoon ja
+   * valittavien ylle (aloitaPallolta, aalto 3A), tasokartalla lähikuva
+   * zoomautuu Lontoon kohdalle (aloitaTasokartalta →
+   * kartta.zoomaaAloituskartta). Kohdemerkit ilmestyvät vasta siinä
+   * näkymässä, joten Ateenan voi valita vasta täältä.
    */
   aloitaKartalta() {
-    if (this.aloitusZoom || this.game.phase !== 'pickstart') return;
+    if (this.aloitusvalintaAuki() || this.game.phase !== 'pickstart') return;
     // Naksahdus: sama puinen naksu kuin nappulan kolauksessa
     // (efekti-naksu.mp3). Kevyt eikä juhlava — matka ei ole vielä
     // alkanut, kartta vain avautuu.
@@ -15150,19 +15192,97 @@ export class UI {
     // pehmenevän tekstin alla eikä ruutu välähdä tyhjäksi väliltä.
     this.introEl.classList.add('intro-fade');
     /*
-     * LÄHTÖKAUPUNKI VALITAAN YHÄ TASOKARTALTA (aalto 1D). Etusivun pallo
-     * pitää kartan lepotilassa koko avausnäkymän ajan, mutta tämä nappi
-     * avaa saman lähikuvan kuin ennenkin — kartta herätetään vasta
-     * TÄSSÄ, jolloin alustus (svg#board, kohdepisteet) maksetaan
-     * napautuksesta eikä etusivun avauksesta. Kun lähtövalintakin
-     * siirtyy pallolle, tämä herätys poistuu (karttapallo.md luku 10).
+     * LÄHTÖKAUPUNKI VALITAAN PALLOLTA (aalto 3A, karttapallo.md luku
+     * 10.3). Aalto 1D jätti tähän tasokartan herätyksen — se oli
+     * pallolaudan VIIMEINEN pelitoiminto, joka vielä herätti
+     * js/kartta.js:n. Nyt valintanäkymä on pallon oma, eikä kartta
+     * herää pallolaudalla lainkaan; `?lauta=kartta` kulkee yhä vanhaa
+     * tietä (poistuu aallossa 3B).
      */
+    if (this.aloituslentoPallolla()) { this.aloitaPallolta(); return; }
+    this.aloitaTasokartalta();
+  }
+
+  /**
+   * LÄHTÖVALINTA PALLOLLA (aalto 3A): avausteksti väistyy ja pallolauta
+   * ottaa ruudun valintatilassa.
+   *
+   * Lippu on laudan OMA (`aloitusvalintaPallolla`) eikä tasokartan
+   * lähikuva: js/kartta.js nollaa `aloitusZoom`in aina kun kartta
+   * nukahtaa, ja juuri niin käy kun pallo avataan hereillä olleen
+   * kartan päälle. Lippu nostetaan ENNEN piirtoa, koska kolme asiaa
+   * lukee sen samassa renderissä: `pallolautaHalutaan` (avaa pallon),
+   * `renderIntro` (purkaa etusivun pallovideon) ja
+   * `aloitusvalinnanKohteet` (piirtää kohdemerkit pallolle).
+   *
+   * Kamera ajetaan valintanäkymään pallon avautuessa (avaaPallolauta →
+   * lauta.aloitusnakyma), ja Livia lennähtää mukaan täsmälleen kuten
+   * tasokartan lähikuvassa (js/kartta.js zoomaaAloituskartta).
+   */
+  aloitaPallolta() {
+    this.aloitusvalintaPallolla = true;
+    this.render();
+    naytaLivianAvaus(this);
+  }
+
+  /**
+   * Vanha polku (`?lauta=kartta`): kartta herää lepotilasta ja zoomaa
+   * Lontoon lähikuvaan, josta kohdepisteet valitaan. Tämä on myös
+   * pallon varapolku: jos Globe.gl ei lataudu kesken valinnan,
+   * pallolautaVarapolku antaa valinnan kartalle.
+   */
+  aloitaTasokartalta() {
     if (this.kartta.lepotila && !this.pallolauta) {
       this.kartta.heraa();
       this.render();
     }
     const lontoo = this.game.board.cityById.get(ALOITUSLENNON_LAHTO);
     this.kartta.zoomaaAloituskartta(lontoo ? { x: lontoo.x, y: lontoo.y } : null);
+  }
+
+  /**
+   * ONKO LÄHTÖKAUPUNGIN VALINTA AUKI eli onko avausteksti väistynyt?
+   * Tasokartalla se on lähikuva (`aloitusZoom`, js/kartta.js
+   * zoomaaAloituskartta), pallolla laudan valintatila
+   * (`aloitusvalintaPallolla`, aalto 3A). Sama kysymys, kaksi lautaa —
+   * yksi vastaus, jotta avausteksti, etusivun pallo ja kohdemerkit
+   * lukevat kaikki samaa totuutta.
+   */
+  aloitusvalintaAuki() {
+    return Boolean(this.aloitusZoom || this.aloitusvalintaPallolla);
+  }
+
+  /**
+   * LÄHTÖVALINNAN KOHTEET PALLOLLE (aalto 3A). Sama joukko ja sama
+   * portti kuin tasokartan kohderenkailla (drawTargets, haara
+   * `game.phase === 'pickstart'`): valittavia ovat ETUSIVUN_KOHTEET, ja
+   * ne ilmestyvät vasta napin jälkeen (`aloitusvalintaPallolla`) —
+   * avausnäkymässä laudan päällä on avauspalsta, eikä valintaa tehdä
+   * sen takaa.
+   *
+   * Kaupungit ovat PELIN laudan (js/packs/maailma.js) olioita, koska
+   * doPickStart lukee niistä portin (`links`); pallon oma paikka niille
+   * tulee maailmankartan koordinaateista (js/pallolauta/lauta.js).
+   *
+   * @returns {object[]} valittavat kaupungit, tyhjä jos valinta ei ole auki
+   */
+  aloitusvalinnanKohteet() {
+    if (this.game.phase !== 'pickstart' || this.katselu || !this.aloitusvalintaPallolla) return [];
+    const board = this.game.board;
+    return [...ETUSIVUN_KOHTEET].map((id) => board?.cityById?.get(id)).filter(Boolean);
+  }
+
+  /**
+   * Lähtövalinnassa NÄKYVÄT kaupungit (Lontoo ja valittavat) tai null,
+   * kun valintaa ei ole käynnissä. Sama joukko, jolla tasokartta
+   * piilottaa muut aloituskartalta (paivitaAloituskaupungit,
+   * ETUSIVUN_NAKYVAT); pallolla se rajaa nimet ja pisteet
+   * (js/pallolauta/lauta.js), jotta valintanäkymä on yhtä niukka
+   * kummallakin laudalla.
+   */
+  aloitusvalinnanNakyvat() {
+    if (this.game.phase !== 'pickstart' || this.katselu) return null;
+    return ETUSIVUN_NAKYVAT;
   }
 
   /** Aloita seikkailu -portti: keskellä ruutua, kartta himmeänä takana. */

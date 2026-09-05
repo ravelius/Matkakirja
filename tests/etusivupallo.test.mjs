@@ -346,11 +346,19 @@ test('pallolaudalla tasokarttaa ei alusteta etusivua varten', () => {
     'mount panee kartan lepotilaan jo ennen ensimmäistä piirtoa');
   assert.match(ui, /this\.etusivunPalloKaytossa\(\) && this\.game\.phase === 'pickstart'/,
     'render ei herätä karttaa lähtövalinnassa (paivitaPallolauta)');
-  // Lähtökaupunki valitaan yhä tasokartalta: nappi herättää kartan, jotta
-  // kohdepisteet (drawTargets) ovat olemassa, kun lähikuva avautuu.
+  /*
+   * AALTO 3A: lähtökaupunki valitaan pallolta. Nappi ei enää herätä
+   * karttaa pallolaudalla — herätys jäi vain vanhalle polulle
+   * (?lauta=kartta ja pallon varapolku, aloitaTasokartalta).
+   */
   const nappi = ui.match(/ {2}aloitaKartalta\(\) \{[\s\S]*?\n {2}\}\n/)[0];
-  assert.match(nappi, /if \(this\.kartta\.lepotila && !this\.pallolauta\) \{\n\s*this\.kartta\.heraa\(\);/,
-    'Valitse aloituskaupunki herättää tasokartan lepotilasta');
+  assert.doesNotMatch(nappi, /this\.kartta\.heraa\(\)/,
+    'Valitse aloituskaupunki ei saa herättää tasokarttaa pallolaudalla');
+  assert.match(nappi, /if \(this\.aloituslentoPallolla\(\)\) \{ this\.aloitaPallolta\(\); return; \}/,
+    'pallolaudalla valinta avautuu pallolle');
+  const vanhaPolku = ui.match(/ {2}aloitaTasokartalta\(\) \{[\s\S]*?\n {2}\}\n/)[0];
+  assert.match(vanhaPolku, /if \(this\.kartta\.lepotila && !this\.pallolauta\) \{\n\s*this\.kartta\.heraa\(\);/,
+    'vanha polku herättää tasokartan lepotilasta');
 });
 
 test('ämpärin polut ja tiedostonimet ovat samat työkalussa ja pelissä', () => {

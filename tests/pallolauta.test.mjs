@@ -346,7 +346,11 @@ test('vaihe 5b: aloituslento pallolla — pallo ottaa laudan ja kohtaus delegoid
   const halutaan = ui.match(/^ {2}pallolautaHalutaan\(\) \{[\s\S]*?\n {2}\}/m)[0];
   assert.doesNotMatch(halutaan, /aloituslentoKesken/,
     'pallolauta odottaa yhä aloituslennon loppumista');
-  assert.match(halutaan, /return this\.game\.phase !== 'pickstart';/);
+  // Aalto 3A: lähtövalinta on pallolla, joten pickstart ei enää sulje
+  // palloa pois — se odottaa napin nostamaa aloitusZoom-lippua, ja
+  // muissa vaiheissa portti on laudan pakka.
+  assert.match(halutaan, /if \(this\.game\.phase === 'pickstart'\) return this\.aloitusvalintaPallolla;/);
+  assert.match(halutaan, /return this\.game\.pack\?\.id === 'maailmankartta';/);
   // 2. Tasokartta nukkuu ENNEN actionPickStartia, jottei maailmankartta
   //    ehdi piirtyä eikä pyramidi pyytää yhtään laattaa arkin takana.
   assert.match(ui, /if \(kartalento && this\.aloituslentoPallolla\(\)\) this\.kartta\.nuku\(\);/);
