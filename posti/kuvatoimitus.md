@@ -1,5 +1,104 @@
 # Kuvatoimitussessio
 
+## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 6 R2-varmennettu
+
+### aden
+
+- `aden-steamer-point`
+- `aden-kansallismuseo`
+- `aden-craterin-tori`
+- `aden-tawilan-altaat`
+### salalah
+
+- `salalah-sultan-qaboosin-moskeija`
+- `salalah-al-husnin-palatsi`
+- `salalah-al-haffan-basaari`
+- `salalah-nabi-umranin-hauta`
+- `salalah-burj-an-nahda`
+- `salalah-al-baleedin-puisto`
+- `salalah-suitsukemuseo`
+### mosul
+
+- `mosul-kuyunjikin-kumpu`
+- `mosul-bash-tapian-linna`
+- `mosul-qara-saray`
+- `mosul-nabi-yunusin-kumpu`
+- `mosul-al-masfin-moskeija`
+- `mosul-al-nabi-jirjisin-moskeija`
+- `mosul-al-nurin-moskeija`
+### bangkok
+
+- `bangkok-sanam-luang`
+- `bangkok-wat-saket-ja-kultainen-vuori`
+- `bangkok-sao-ching-cha`
+- `bangkok-wat-phra-kaew`
+- `bangkok-suurpalatsi`
+- `bangkok-wat-pho`
+- `bangkok-wat-arun`
+- `bangkok-yaowarat`
+- `bangkok-hua-lamphong`
+### peking
+
+- `peking-vanha-kesapalatsi`
+- `peking-kesapalatsi`
+- `peking-yonghe-temppeli`
+- `peking-nanluoguxiang`
+- `peking-rumpu-ja-kellotorni`
+- `peking-jingshanin-puisto`
+- `peking-kielletty-kaupunki`
+- `peking-tiananmen`
+- `peking-zhengyangmen`
+- `peking-taivaan-temppeli`
+### jakutsk
+
+- `jakutsk-saha-teatteri`
+- `jakutsk-jaroslavskin-museo`
+- `jakutsk-spasskin-luostari`
+- `jakutsk-nikolskin-kirkko`
+- `jakutsk-pushkinin-draamateatteri`
+- `jakutsk-kansallinen-taidemuseo`
+- `jakutsk-vanhakaupunki`
+- `jakutsk-ooppera-ja-balettiteatteri`
+### magadan
+
+- `magadan-kaupungin-sauna`
+- `magadan-severovostokzoloton-talo`
+- `magadan-leninin-valtakatu-18`
+- `magadan-kinoteatteri-gornjak`
+- `magadan-nagajevanlahti`
+- `magadan-urheilupalatsi`
+- `magadan-pushkinin-kirjasto`
+### delhi
+
+- `delhi-delhi-junction`
+- `delhi-delhin-kaupungintalo`
+- `delhi-fatehpuri-moskeija`
+- `delhi-chandni-chowk`
+- `delhi-punainen-linnoitus`
+- `delhi-gurdwara-sis-ganj-sahib`
+- `delhi-jama-masjid`
+- `delhi-humayunin-mausoleumi`
+### vladivostok
+
+- `vladivostok-pokrovskin-puisto`
+- `vladivostok-linnoitusmuseo`
+- `vladivostok-kotkanpesan-kukkula`
+- `vladivostok-funikulaari`
+- `vladivostok-arsenjevin-museo`
+- `vladivostok-gum-tavaratalo`
+- `vladivostok-sukellusvene-s-56`
+- `vladivostok-rautatieasema`
+- `vladivostok-kultaisen-sarven-silta`
+### jekaterinburg
+
+- `jekaterinburg-vanha-rautatieasema`
+- `jekaterinburg-kharitonovin-kartano`
+- `jekaterinburg-uralin-valtionyliopisto`
+- `jekaterinburg-historiallinen-aukio`
+- `jekaterinburg-kuvataidemuseo`
+- `jekaterinburg-suuri-zlatoust`
+- `jekaterinburg-kolminaisuuden-katedraali`
+
 ## 2026-09-05 — KUVAPUTKI → FABLE: M3-miniatyyrit, erä 5 R2-varmennettu
 
 ### firenze
