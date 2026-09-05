@@ -24,6 +24,7 @@ Kolme Opus-agenttia työskentelevät omissa worktreissään (`.claude/worktrees/
 - **Kaaret erä A** (aa23b5fd3656479fb): Amsterdam (Yara), Islanti (Einar), Pietari (Matvei), Tallinna (Eve), Tromssa (Kjell), Alpit (Anselm, koiran sukumuisti pois), Marseille (rike pois).
 - **Kaaret erä B** (aca9da3e54bda2713): Ateena (Dafni), Kiova (Taras), Granada (Inés), Kööpenhamina (Freja, Tivoli), Rooma (Nico, Trevi), Oslo (Oskar, Gjellestad-kysymys), Varsova (Zofia), Madrid/Venetsia kaksoishenkilöt.
 - **Avauslento** (a8b097510a2153350): omistaja 23.10 — Bombay-kuva rajataan niin, ettei isoisää näy (kuvateksti "Isoisän kuva: Bombay, 1873"), kone piirtää etusivun paksun punaisen viivan, näkymä lähemmäs, pallo pyörii hitaasti lennon aikana. Base = työhaara (v1594), menee PR #2051:een.
+- **Isoisän uudet kuvat** (omistaja 23.15: "kohta pitäisi tulla isoisän uusia kuvia, niin käytä niitä ennemmin"): kun kuvaputki toimittaa ne pelin R2:een (postikierros huomaa), kytke ne HETI etusivun kuvapakkaan ja avauslennon `lento`-avaimeen (ISOISAN_VALOKUVAT) — Bombay-rajaus on vain väliaikainen. Kuvatekstit sanasta sanaan, muoto "Isoisän kuva: <paikka>, 1873"; kasvoja ei näytetä (Raamattu ISOISA JAA ARVOITUKSEKSI).
 Fable tarkistaa ja viimeistelee tekstit (kuten v1586 ja v1593), poistaa LUONNOS-merkinnät, julkaisee. Päätökset kaupungeittain: posti/fable-vanha.md 20:05 UTC. Dublin on jäissä (henkilöä ei ole). Kuvaputkelta pyydetty isoisän vaaleat kuvat pelin R2:een kuvatekstein (posti 19:55 UTC).
 
 ## Tänään julkaistu (v1553–v1594)
