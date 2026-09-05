@@ -15,8 +15,9 @@
  *   2. Laattapyramidiin ei lähde yhtään pyyntöä (julisteet/pyramidi).
  *   3. Kuori on karttaruudussa laudan tasolla: ei Sulje-nappia, ei
  *      kiinteää sijaintia, näkyvissä.
- *   4. Pallolla ovat pelin merkit: 261 kaupunkipistettä ja nappula
- *      nykyisessä kaupungissa — ei nimiä, kaaria eikä polkuja.
+ *   4. Pallolla ovat pelin merkit: nappula nykyisessä kaupungissa ja
+ *      kaupunkipisteet VAIN nimettyjen kaupunkien kohdalla (vaihe 3,
+ *      PISTE VAIN NIMEN KANSSA) — ei kaaria eikä polkuja levossa.
  *   5. Kaupungin napautus avaa kaupunkilehden (omistaja 2.9.2026:
  *      *"Kohdekaupunki avaa aina kaupunkilehden"*).
  *   6. Kamera osuu kaupunkiin ±5 %: ajon jälkeen Sofia on kotelon
@@ -25,6 +26,20 @@
  *      kerrokset), kuori piiloon; paluu tyhjentää svg:n ja näyttää pallon.
  *   Mittarit (raportti): tekstuurit lepotilassa (suunnitelman katto
  *      120), joutilas kehysaika p95, DOM-solmut.
+ *
+ *   VAIHE 3, MERKIT PALLOLLA (omistajan kortin vastaus 5.9.2026: nimet
+ *   *"ELAVINA tekstielementteina laattojen paalla"*):
+ *  12. Nimet Ateenassa ja koko pallolla: elävät H-elementit (≤ 40),
+ *      laatikot eivät limity keskenään eivätkä elävien nostojen kanssa,
+ *      jokaisella nimellä on piste ja pisteitä on vain nimetyillä (+ oma
+ *      kaupunki); CSS2D-elementtejä ≤ 60; ilmestyminen animoitu.
+ *  13. Nostot Ateenassa: Kreikan lehden merkit H-elementteinä (≤ 40),
+ *      jokainen nimetty ja osumatestissä (napautettava); noston
+ *      napautus avaa kortin merkin ruutupisteestä; kortin ollessa auki
+ *      napautus vain sulkee. Poltetut (laatoissa) saavat R-osuman —
+ *      raportoidaan, montako (pallon laatoissa ei vielä nostotasoa).
+ *  14. Karttaselite toimii pallolla: kappalemäärät > 0, väripallo
+ *      sytyttää valot pistekerrokseen (laji valo) ja OFF sammuttaa.
  *
  *   VAIHE 2, SIIRROT PALLOLLA (sama sivu):
  *   8. Liiku EI avaa linssikarttaa: pallo jää laudaksi, svg#board tyhjä;
@@ -173,9 +188,15 @@ if (AMPARI_TOIMII) {
       const kotelo = kuori?.querySelector('.pallo-kotelo');
       const pos = getComputedStyle(kuori).position;
       const svgLapsia = document.querySelectorAll('#board *').length;
+      // Ladonta levossa on jo ajettu (4 s); ajetaan vielä kerran, jotta
+      // mittaus ei riipu lepoajastimen hetkestä.
+      ui.pallolauta.ladoHeti();
       const pisteet = pallo?.pointsData?.() ?? [];
       const htmlt = pallo?.htmlElementsData?.() ?? [];
       const oma = ui.game.cityOf();
+      const nappulat = htmlt.filter((d) => d.laji === 'nappula');
+      const nimetyt = new Set([...ui.pallolauta.nimet.nimetyt(), oma?.id]);
+      const kaupunkipisteet = pisteet.filter((p) => !p.laji);
       return {
         svgLapsia,
         lepotila: ui.kartta.lepotila,
@@ -183,10 +204,12 @@ if (AMPARI_TOIMII) {
         kuoriNakyy: Boolean(kuori) && !kuori.hidden && getComputedStyle(kuori).display !== 'none',
         pos,
         sulje: Boolean(kuori?.querySelector('.pallo-sulje')),
-        pisteita: pisteet.length,
+        pisteita: kaupunkipisteet.length,
+        nimettyja: nimetyt.size,
+        pisteVainNimella: kaupunkipisteet.every((p) => nimetyt.has(p.id)) && kaupunkipisteet.length === nimetyt.size,
         kaydyt: pisteet.filter((p) => p.kayty).length,
-        nappuloita: htmlt.length,
-        nappulaOmassa: htmlt.length === 1 && oma && Math.abs(htmlt[0].lat - ui.pallolauta.kaupunki(oma.id).lat) < 1e-9,
+        nappuloita: nappulat.length,
+        nappulaOmassa: nappulat.length === 1 && oma && Math.abs(nappulat[0].lat - ui.pallolauta.kaupunki(oma.id).lat) < 1e-9,
         tekstuurit: pallo?.renderer?.()?.info?.memory?.textures ?? null,
         dom: document.querySelectorAll('*').length,
         kotelo: kotelo ? { w: kotelo.clientWidth, h: kotelo.clientHeight } : null,
@@ -199,9 +222,9 @@ if (AMPARI_TOIMII) {
     vaadi('3. kuori on karttaruudussa laudan tasolla, ilman Sulje-nappia',
       tila.kuoriRuudussa && tila.kuoriNakyy && tila.pos === 'absolute' && !tila.sulje,
       JSON.stringify({ ruudussa: tila.kuoriRuudussa, nakyy: tila.kuoriNakyy, pos: tila.pos, sulje: tila.sulje }));
-    vaadi('4. pallolla 261 kaupunkipistettä ja nappula nykyisessä kaupungissa',
-      tila.pisteita === 261 && tila.nappuloita === 1 && tila.nappulaOmassa,
-      JSON.stringify({ pisteita: tila.pisteita, nappuloita: tila.nappuloita, omassa: tila.nappulaOmassa }));
+    vaadi('4. pallolla nappula nykyisessä kaupungissa ja piste vain nimetyillä kaupungeilla (+ oma)',
+      tila.pisteita >= 1 && tila.pisteVainNimella && tila.nappuloita === 1 && tila.nappulaOmassa,
+      JSON.stringify({ pisteita: tila.pisteita, nimettyja: tila.nimettyja, vainNimella: tila.pisteVainNimella, nappuloita: tila.nappuloita, omassa: tila.nappulaOmassa }));
     tieto('käydyiksi merkittyjä pisteitä', tila.kaydyt);
     tieto('pallolaattapyyntöjä', pyynnot.pallolaatat);
     tieto('tekstuureja (katto 120)', tila.tekstuurit);
@@ -221,6 +244,197 @@ if (AMPARI_TOIMII) {
       requestAnimationFrame(askel);
     }));
     tieto('joutilas kehys mediaani / p95 (ms)', `${kehys.mediaani.toFixed(1)} / ${kehys.p95.toFixed(1)}`);
+
+    /* ================= VAIHE 3: MERKIT PALLOLLA ================= */
+
+    /** Nimet ja nostot ruudulta: laatikot, limitykset, pisteet, DOM. */
+    const MITTAA_MERKIT = async () => sivu.evaluate(() => {
+      const { ui } = window.matkakirja;
+      const pallo = ui.pallonInstanssi;
+      const kotelo = ui.pallolauta.kotelo.getBoundingClientRect();
+      const laatikko = (el) => {
+        const r = el.getBoundingClientRect();
+        return { x0: r.left, y0: r.top, x1: r.right, y1: r.bottom, w: r.width };
+      };
+      // Limitys sallii 0,5 px:n kosketuksen (rasterin pyöristys).
+      const leikkaa = (a, b) => a.x0 < b.x1 - 0.5 && a.x1 > b.x0 + 0.5 && a.y0 < b.y1 - 0.5 && a.y1 > b.y0 + 0.5;
+      const nakyy = (el) => !el.classList.contains('pallolauta-takana') && !el.classList.contains('pallolauta-poistuu');
+      const nimet = [...document.querySelectorAll('.pallolauta-nimi')].filter(nakyy).map((el) => ({
+        id: el.dataset.kaupunki, r: laatikko(el.querySelector('text')),
+      })).filter((n) => n.r.w > 0);
+      const nostot = [...document.querySelectorAll('.pallolauta-nosto')].filter(nakyy).map((el) => ({
+        id: el.dataset.nosto, nimio: el.dataset.nimio, aria: el.getAttribute('aria-label'), r: laatikko(el.querySelector('svg')),
+      }));
+      const limitykset = [];
+      for (let i = 0; i < nimet.length; i += 1) {
+        for (let j = i + 1; j < nimet.length; j += 1) if (leikkaa(nimet[i].r, nimet[j].r)) limitykset.push(`${nimet[i].id}+${nimet[j].id}`);
+        for (const n of nostot) if (n.r.w > 0 && leikkaa(nimet[i].r, n.r)) limitykset.push(`${nimet[i].id}+${n.id}`);
+      }
+      const pisteet = pallo.pointsData().filter((p) => !p.laji).map((p) => p.id);
+      const oma = ui.game.cityOf()?.id;
+      const htmlt = pallo.htmlElementsData();
+      const osumat = ui.pallolauta.nostot.osumat();
+      return {
+        nimia: nimet.length,
+        nimetDatumeja: htmlt.filter((d) => d.laji === 'nimi').length,
+        nimillaPiste: nimet.every((n) => pisteet.includes(n.id)),
+        pisteita: pisteet.length,
+        pisteVainNimella: pisteet.every((id) => id === oma || nimet.some((n) => n.id === id)),
+        limitykset,
+        nostoja: nostot.length,
+        nostotNimetty: nostot.filter((n) => n.nimio || (n.aria && n.aria.length)).length,
+        nostotOsumissa: nostot.filter((n) => osumat.some((o) => o.id === n.id)).length,
+        nimiottomat: nostot.filter((n) => !n.nimio).map((n) => n.id),
+        poltettuja: osumat.filter((o) => o.poltettu).length,
+        elaimia: htmlt.filter((d) => d.perhe === 'elain').length,
+        pisteMerkkeja: htmlt.filter((d) => d.laji === 'piste').length,
+        htmlYhteensa: htmlt.length,
+        dom: document.querySelectorAll('*').length,
+        tekstuurit: pallo.renderer?.()?.info?.memory?.textures ?? null,
+        leveys: ui.pallolauta.kamera.kameranTila()?.leveys,
+        ilmesty: getComputedStyle(document.querySelector('.pallolauta-nimi') ?? document.body).animationName,
+        kotelo: { w: kotelo.width, h: kotelo.height },
+      };
+    });
+
+    /* 12. Nimet Ateenassa. */
+    const ateenaMerkit = await MITTAA_MERKIT();
+    vaadi('12. nimet Ateenassa: eläviä H-nimiä ≥ 1 ja ≤ 40, DOM = datumit, jokaisella nimellä piste ja piste vain nimetyillä',
+      ateenaMerkit.nimia >= 1 && ateenaMerkit.nimia <= 40 && ateenaMerkit.nimia === ateenaMerkit.nimetDatumeja
+        && ateenaMerkit.nimillaPiste && ateenaMerkit.pisteVainNimella,
+      JSON.stringify(ateenaMerkit));
+    vaadi('    nimet eivät limity keskenään eivätkä elävien nostojen kanssa; ilmestyminen animoitu',
+      ateenaMerkit.limitykset.length === 0 && ateenaMerkit.ilmesty === 'pallolauta-ilmesty',
+      JSON.stringify({ limitykset: ateenaMerkit.limitykset, ilmesty: ateenaMerkit.ilmesty }));
+    tieto('Ateena: nimiä / nostoja / eläimiä / kohtaamispisteitä / html yhteensä',
+      `${ateenaMerkit.nimia} / ${ateenaMerkit.nostoja} / ${ateenaMerkit.elaimia} / ${ateenaMerkit.pisteMerkkeja} / ${ateenaMerkit.htmlYhteensa}`);
+
+    /* 13. Nostot Ateenassa: Kreikan lehti, jokainen nimetty ja napautettava. */
+    vaadi('13. nostot Ateenassa: Kreikan lehden elävät nostot H-merkkeinä (1–40), jokainen nimetty ja osumatestissä; html ≤ 60',
+      ateenaMerkit.nostoja >= 1 && ateenaMerkit.nostoja <= 40 && ateenaMerkit.nostotNimetty === ateenaMerkit.nostoja
+        && ateenaMerkit.nostotOsumissa === ateenaMerkit.nostoja && ateenaMerkit.htmlYhteensa <= 60,
+      JSON.stringify({ nostoja: ateenaMerkit.nostoja, nimetty: ateenaMerkit.nostotNimetty, osumissa: ateenaMerkit.nostotOsumissa, html: ateenaMerkit.htmlYhteensa }));
+    tieto('nostot ilman nimiötä (kaupunkikohde tai nimiöväistön tinkimä)', ateenaMerkit.nimiottomat.join(', ') || '–');
+    tieto('poltettuja (R-osuma) Ateenan näkymässä', ateenaMerkit.poltettuja);
+    if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, 'pallolauta-merkit-ateena.png') });
+    const napautus = await sivu.evaluate(async () => {
+      const { ui } = window.matkakirja;
+      const osuma = ui.pallolauta.nostot.osumat().find((o) => o.perhe === 'nosto' && !o.poltettu);
+      if (!osuma) return { virhe: 'ei elävää nostoa' };
+      const tulos = ui.pallolauta.napautaNosto(osuma.id);
+      await new Promise((r) => setTimeout(r, 500));
+      const kortti = document.querySelector('.fokuskohde-popup, .skandaali-kerros, .hetki-kerros, .fokusnosto-kerros, .syvennys-kerros');
+      const pane = ui.mapPane.getBoundingClientRect();
+      const kr = kortti?.getBoundingClientRect();
+      // Ankkuri: kortti on merkin ruutupisteen vieressä (≤ 260 px) ja ruudulla.
+      const p = ui.pallolauta.ruudulla(osuma.lat, osuma.lng);
+      const kotelo = ui.pallolauta.kotelo.getBoundingClientRect();
+      const ankkuriX = kotelo.left + (p?.x ?? 0);
+      const ankkuriY = kotelo.top + (p?.y ?? 0);
+      const etaisyys = kr ? Math.min(Math.abs(kr.left - ankkuriX), Math.abs(kr.right - ankkuriX)) : null;
+      const ruudulla = kr ? kr.left >= pane.left - 1 && kr.right <= pane.right + 1 : false;
+      // Sulkeva napautus ei avaa uutta: pointerdown koteloon + napautus toiseen nostoon.
+      ui.pallolauta.kotelo.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, clientX: 10, clientY: 10 }));
+      ui.pallolauta.kotelo.dispatchEvent(new PointerEvent('pointerup', { bubbles: true, clientX: 10, clientY: 10 }));
+      const toinen = ui.pallolauta.nostot.osumat().find((o) => o.perhe === 'nosto' && o.id !== osuma.id);
+      const auki1 = Boolean(document.querySelector('.fokuskohde-popup'));
+      const pallo = ui.pallonInstanssi;
+      // Kortti sulkeutui pointerdownissa; pallon oma click tulee perässä.
+      if (toinen) pallo.onGlobeClick()({ lat: toinen.lat, lng: toinen.lng });
+      await new Promise((r) => setTimeout(r, 300));
+      const auki2 = Boolean(document.querySelector('.fokuskohde-popup, .skandaali-kerros, .hetki-kerros, .fokusnosto-kerros, .syvennys-kerros'));
+      return {
+        id: osuma.id, tulos, kortti: kortti?.className ?? null, etaisyys, ruudulla, auki1, auki2, toinen: toinen?.id ?? null,
+      };
+    });
+    vaadi('    noston napautus avaa kortin merkin ruutupisteen viereen, ruudun sisään',
+      !napautus.virhe && napautus.tulos && napautus.kortti && napautus.ruudulla
+        && (napautus.etaisyys === null || napautus.etaisyys <= 260),
+      JSON.stringify(napautus));
+    vaadi('    sulkeva napautus ei avaa mitään uutta (omistaja 31.8.2026)',
+      !napautus.virhe && !napautus.auki2, JSON.stringify(napautus));
+    await sivu.evaluate(() => { for (const e of document.querySelectorAll('.fokuskohde-popup, .skandaali-kerros, .hetki-kerros, .fokusnosto-kerros, .syvennys-kerros')) e.remove(); });
+
+    /* 14. Karttaselite ja aihevalot pallolla. */
+    const selite = await sivu.evaluate(async () => {
+      const { ui } = window.matkakirja;
+      const pallo = ui.pallonInstanssi;
+      ui.karttaselite.avaa();
+      await new Promise((r) => setTimeout(r, 100));
+      const luvut = [...document.querySelectorAll('.karttaselite-rivi')].map((r) => [r.dataset.aihe, r.querySelector('.karttaselite-luku').textContent]);
+      const rivi = [...document.querySelectorAll('.karttaselite-rivi')].find((r) => /\d/.test(r.querySelector('.karttaselite-luku').textContent));
+      if (!rivi) return { luvut, virhe: 'ei riviä, jolla on kappaleita' };
+      rivi.click();
+      await new Promise((r) => setTimeout(r, 200));
+      const aihe = rivi.dataset.aihe;
+      const valojaPaalla = pallo.pointsData().filter((p) => p.laji === 'valo').length;
+      const luokka = document.body.classList.contains(`valot-${aihe}`);
+      document.querySelector('.karttaselite-kaikki').click(); // OFF
+      await new Promise((r) => setTimeout(r, 200));
+      const valojaPois = pallo.pointsData().filter((p) => p.laji === 'valo').length;
+      ui.karttaselite.sulje();
+      return {
+        luvut, aihe, valojaPaalla, luokka, valojaPois, odotettu: Number(rivi.querySelector('.karttaselite-luku').textContent),
+      };
+    });
+    vaadi('14. karttaselite pallolla: kappalemäärät > 0, väripallo sytyttää valot pistekerrokseen, OFF sammuttaa',
+      !selite.virhe && selite.luokka && selite.valojaPaalla === selite.odotettu && selite.valojaPaalla > 0 && selite.valojaPois === 0,
+      JSON.stringify(selite));
+
+    /* 12b. Koko pallo: nimet ≤ 40 eivätkä limity. */
+    const kokoPallo = await sivu.evaluate(async () => {
+      const { ui } = window.matkakirja;
+      const ateena = ui.game.board.cityById.get('ateena');
+      await ui.pallolauta.kamera.ajaKamera({ x: ateena.x, y: ateena.y, leveys: 12000 }, { kesto: 0 });
+      await new Promise((r) => setTimeout(r, 400));
+      ui.pallolauta.ladoHeti();
+      await new Promise((r) => setTimeout(r, 400));
+      return ui.pallolauta.nimet.tulos();
+    });
+    await sivu.waitForTimeout(300);
+    const kokoMerkit = await MITTAA_MERKIT();
+    vaadi('12b. koko pallo: nimiä 10–40 (ehdokkaita > 40), ei limityksiä, piste vain nimetyillä, html ≤ 60',
+      kokoMerkit.nimia >= 10 && kokoMerkit.nimia <= 40 && kokoPallo.ehdokkaita > 40 && kokoMerkit.limitykset.length === 0
+        && kokoMerkit.pisteVainNimella && kokoMerkit.nimillaPiste && kokoMerkit.htmlYhteensa <= 60,
+      JSON.stringify({ nimia: kokoMerkit.nimia, ehdokkaita: kokoPallo.ehdokkaita, pudotettu: kokoPallo.pudotettu, limitykset: kokoMerkit.limitykset, html: kokoMerkit.htmlYhteensa, pisteita: kokoMerkit.pisteita }));
+    tieto('koko pallo: nimiä / ehdokkaita / pudotettu / nostoja / DOM / tekstuurit',
+      `${kokoMerkit.nimia} / ${kokoPallo.ehdokkaita} / ${kokoPallo.pudotettu} / ${kokoMerkit.nostoja} / ${kokoMerkit.dom} / ${kokoMerkit.tekstuurit}`);
+    if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, 'pallolauta-merkit-pallo.png') });
+    /* 15. Kehittäjän maailmanäkymä: kaikki kaupungit pisteinä ja napautettavia. */
+    const maailma = await sivu.evaluate(async () => {
+      const { ui } = window.matkakirja;
+      const pallo = ui.pallonInstanssi;
+      const { asetaKehittajaMaailma } = await import('./js/ui-apurit.js');
+      asetaKehittajaMaailma(true);
+      ui.kehittajaMaailma = true;
+      ui.render();
+      ui.pallolauta.ladoHeti();
+      await new Promise((r) => setTimeout(r, 400));
+      const kaikki = pallo.pointsData().filter((p) => !p.laji).length;
+      // Napautus kaukaiseen kaupunkiin osuu pisteeseen (R-osuma näkyvistä).
+      const tokio = ui.pallolauta.kaupunki('tokio') ?? ui.pallolauta.kaupunki('lontoo');
+      let siirto = null;
+      ui.doKehittajaSiirto = (city) => { siirto = city.id; };
+      pallo.onGlobeClick()({ lat: tokio.lat, lng: tokio.lon });
+      asetaKehittajaMaailma(false);
+      ui.kehittajaMaailma = false;
+      ui.render();
+      ui.pallolauta.ladoHeti();
+      await new Promise((r) => setTimeout(r, 400));
+      return { kaikki, siirto, jalkeen: pallo.pointsData().filter((p) => !p.laji).length, kaupunki: tokio.id };
+    });
+    vaadi('15. kehittäjän maailmanäkymä pallolla: kaikki 261 kaupunkia pisteinä ja napautettavia (kehittäjäsiirto), pois kytkettynä vain nimetyt',
+      maailma.kaikki === 261 && maailma.siirto === maailma.kaupunki && maailma.jalkeen < 261,
+      JSON.stringify(maailma));
+    // Kehittäjäsiirto palautetaan aitoon toteutukseen uudelleenlatauksella
+    // seuraavissa vartioissa ei tarvita sitä; kamera takaisin Ateenaan.
+    await sivu.evaluate(async () => {
+      const { ui } = window.matkakirja;
+      delete ui.doKehittajaSiirto;
+      await ui.pallolauta.kamera.kotiin({ kesto: 0 });
+      ui.pallolauta.ladoHeti();
+    });
+    await sivu.waitForTimeout(500);
 
     /* 5. Napautus nykyiseen kaupunkiin avaa lehden. */
     const lehti = await sivu.evaluate(async () => {

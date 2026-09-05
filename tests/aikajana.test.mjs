@@ -898,7 +898,7 @@ test('kartan avaajat eivät avaa mitään linssin aikana', () => {
   assert.match(readFileSync(new URL('../js/ui-apurit.js', import.meta.url), 'utf8'),
     /export function linssiEstaa\(doc[\s\S]{0,200}contains\('aikajana-paalla'\)/);
   // Kohdekortti ja kohdemerkin napautus (myös kaupungin laatta merkin alta).
-  assert.match(KOHTEET_LAHDE, /export function avaaFokuskohde\(ui, kohde\) \{[\s\S]{0,600}if \(linssiEstaa\(\)\) return false;/);
+  assert.match(KOHTEET_LAHDE, /export function avaaFokuskohde\(ui, kohde, \{ ankkuri = null \} = \{\}\) \{[\s\S]{0,600}if \(linssiEstaa\(\)\) return false;/);
   assert.match(KOHTEET_LAHDE, /const avaa = \(tapahtuma\) => \{[\s\S]{0,300}if \(linssiEstaa\(\)\) return;/);
   // Eläintäky: kerros kysyy tätä ensin, ja tosi tarkoittaa "jo hoidettu".
   assert.match(KOHTEET_LAHDE, /export function elainmerkinNapautusLuovutettu\(ui, tapahtuma, g\) \{[\s\S]{0,600}if \(linssiEstaa\(\)\) return true;/);

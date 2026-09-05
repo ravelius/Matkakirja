@@ -23294,8 +23294,7 @@ body.linssikartta-auki .linssikartta-palaa { display: inline-block; }
   .pallolauta-kohde { transition: none; }
 }
 
-/* =========================================================================
-   ILMEPAKETTI (js/ilme.js; omistaja 5.9.2026, kartoituksen TOP 6 kohta 6)
+/* ==================================================================   ILMEPAKETTI (js/ilme.js; omistaja 5.9.2026, kartoituksen TOP 6 kohta 6)
    -------------------------------------------------------------------------
    Vivus piirtää reitin musteviivana, Rough.js piirtää pienen koristeen
    kehyksen käsin piirretyn näköisenä, rough-notation vetää kynällä
@@ -23350,4 +23349,51 @@ svg.rough-annotation { pointer-events: none; }
   .matkareitit[data-musteviiva] > .matkareitti,
   .matkareitit[data-musteviiva] > .matkareitti-piste,
   .matkareitit > .ilme-muste { transition: none; }
+}
+
+/* ============ PALLOLAUTA, VAIHE 3: NIMET JA NOSTOT PALLOLLA ============ */
+/*
+ * Kaupunkien nimet, elävät nostot, eläintäyt ja kohtaamispiste ovat
+ * CSS2D-elementtejä (js/pallolauta/{merkit,nimet,nostot}.js). Omistajan
+ * kortin vastaus 5.9.2026: nimet *"ELAVINA tekstielementteina laattojen
+ * paalla (kuten Google Earth)"*. Elementit eivät ota napautuksia —
+ * osuma on pallon oma (lähin merkki 44 px, js/pallolauta/lauta.js).
+ *
+ * KAIKKI LIIKE ANIMOIDAAN (Raamattu): sisääntulo pehmeällä
+ * häivytyksellä (pallolauta-ilmesty), poistuminen häivytyksellä
+ * (.pallolauta-poistuu), pallon taakse kiertyvä merkki häivyttää
+ * (.pallolauta-takana) ja nimen siirtymä pisteestä uuteen paikkaan
+ * liukuu (.pallolauta-nimi-siirto). Reduced motion: ei siirtymiä.
+ */
+.pallolauta-merkki {
+  pointer-events: none;
+  transition: opacity 250ms ease-in-out;
+  animation: pallolauta-ilmesty 250ms ease-out;
+}
+.pallolauta-merkki.pallolauta-takana,
+.pallolauta-merkki.pallolauta-poistuu { opacity: 0; }
+@keyframes pallolauta-ilmesty {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.pallolauta-nimi,
+.pallolauta-nosto,
+.pallolauta-piste {
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+.pallolauta-nimi svg,
+.pallolauta-nosto svg,
+.pallolauta-piste svg { display: block; overflow: visible; }
+.pallolauta-nimi-siirto { transition: transform 250ms ease-in-out; }
+/* Nimen muste ja kirjasin tulevat .karttanimi-luokasta (tasokartan sama
+   sääntö); svg:n sisällä teksti asettuu keskilinjaan kuten kartalla. */
+.pallolauta-nimi text { dominant-baseline: middle; }
+/* Lunastettu eläintäky haalistuu kuten kartalla (js/elaintaky.js). */
+.pallolauta-nosto.lunastettu { opacity: 0.55; }
+.pallolauta-nosto.lunastettu.pallolauta-takana,
+.pallolauta-nosto.lunastettu.pallolauta-poistuu { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .pallolauta-merkki { transition: none; animation: none; }
+  .pallolauta-nimi-siirto { transition: none; }
 }

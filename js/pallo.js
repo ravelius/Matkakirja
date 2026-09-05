@@ -76,6 +76,8 @@ export const PALLO_LAATTATASO_MAX = 8;
 export const pallonLaatta = (x, y, l) => `${PALLO_LAATAT}${l}/${x}/${y}.jpg`;
 
 let laatatLupaus = null;
+/** Pallon laattaluettelo (laatat.json), kun se on saatu; muuten null. */
+let laattaluettelo = null;
 /**
  * Laattaluettelo ämpäristä: { tasot: { min, max } } tai null, jos
  * luetteloa ei saada (silloin pallo piirtyy yhdestä tekstuurista).
@@ -89,7 +91,11 @@ export function laatatSaatavilla(haku = globalThis.fetch) {
     laatatLupaus = Promise.resolve()
       .then(() => haku(`${PALLO_LAATAT}laatat.json`, { cache: 'force-cache' }))
       .then((v) => (v.ok ? v.json() : null))
-      .then((j) => (j && j.tasot && j.tasot.max >= 0 ? { tasot: j.tasot } : null))
+      .then((j) => {
+        const kelpaa = Boolean(j && j.tasot && j.tasot.max >= 0);
+        laattaluettelo = kelpaa ? j : null;
+        return kelpaa ? { tasot: j.tasot } : null;
+      })
       .catch(() => null);
   }
   return laatatLupaus;
@@ -98,6 +104,43 @@ export function laatatSaatavilla(haku = globalThis.fetch) {
 export function laattatasoMax(laatat) {
   const luettelo = Number(laatat?.tasot?.max);
   return Number.isFinite(luettelo) ? Math.min(PALLO_LAATTATASO_MAX, luettelo) : PALLO_LAATTATASO_MAX;
+}
+
+/** Saatu laattaluettelo (testit ja pallolauta) tai null. */
+export function pallonLaattaluettelo() {
+  return laattaluettelo;
+}
+
+/*
+ * MITKÄ NOSTOT OVAT PALLON LAATOISSA (pallolauta vaihe 3, karttapallo.md
+ * luku 4.2: *"laattaversion vaihto nostotason mukana (luettelotiiviste:
+ * mitkä nostot poltettu)"*). Pallon laatat ovat oma sarjansa, joka
+ * poltetaan pyramidin nostotasosta (tools/tee-pallolaatat.mjs --nostot)
+ * mahdollisesti eri hetkellä kuin pyramidi itse — joten pallo EI saa
+ * lukea pyramidi.jsonin tiivisteitä (js/laattapyramidi.js
+ * nostoOnPoltettu) vaan oman luettelonsa `nostotaso.nostot`-kenttää,
+ * jonka työkalu kopioi sinne. Ilman kenttää (pelkkä pohjasarja) mikään
+ * nosto ei ole laatoissa, ja pallo piirtää kaikki elävinä.
+ *
+ * VERTAILU ON TUNNUKSELLA, JA TIIVISTEELLÄ KUN SE ON. Tasokartan
+ * tiiviste sisältää merkin lopullisen paikan nipun ja erottelun
+ * jälkeen (js/fokuskohteet.js kohteenNostotiiviste), ja se on saman
+ * ladonnan tulos, jolla laatta poltettiin — pallolla sama ladonta
+ * ajetaan tyngästä (maanKohdemerkit), joten tiiviste on annettavissa;
+ * pelkkä tunnus riittää päätökseen "laatoissa vai ei".
+ */
+export function pallonNostoOnPoltettu(tunnus, tiiviste = null) {
+  const nostot = laattaluettelo?.nostotaso?.nostot;
+  if (!nostot || !tunnus) return false;
+  const poltettu = nostot[tunnus];
+  if (!poltettu) return false;
+  return tiiviste ? poltettu === tiiviste : true;
+}
+
+/** Onko pallon laatoissa lainkaan nostotasoa? */
+export function pallonLaatoissaOnNostoja() {
+  return Boolean(laattaluettelo?.nostotaso?.nostot
+    && Object.keys(laattaluettelo.nostotaso.nostot).length);
 }
 /** Sukelluksen näkyvä leveys laudan yksikköinä (maan kokoinen ikkuna). */
 export const PALLO_SUKELLUSLEVEYS = 620;

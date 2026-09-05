@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1562, teksti: 'Pallolauta vaihe 3: nimet ja nostot pallolla' },
   { v: 1561, teksti: 'Tuna-tehosteketjut, ilmepaketti ja geo-apuri' },
   { v: 1560, teksti: 'Karttapallo: nimet ja kohteet laatoissa, navat ilman hattua' },
   { v: 1559, teksti: 'Historian hetket: 29 uutta ja kaksi v4-paivitysta' },

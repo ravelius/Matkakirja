@@ -333,6 +333,17 @@ export function karttavalotKaikki(paalla) {
  */
 export function karttavalotLaskurit(ui) {
   const luvut = new Map(KARTTAVALO_AIHEET.map(({ aihe }) => [aihe, 0]));
+  /*
+   * PALLOLAUDALLA MERKIT EIVÄT OLE SVG:SSÄ (pallolauta vaihe 3):
+   * karttapallo ilmoittaa laskurinsa itse (js/pallolauta/lauta.js
+   * ui.karttavaloLaskuri), samalla säännöllä — kappaleita, ei solmuja.
+   * Tasokartalla kenttää ei ole, ja alla oleva svg-laskenta pätee.
+   */
+  const omat = ui?.karttavaloLaskuri?.();
+  if (omat) {
+    for (const [aihe, n] of omat) if (luvut.has(aihe)) luvut.set(aihe, n);
+    return luvut;
+  }
   const juuri = ui?.svg;
   if (!juuri) return luvut;
   const nahdyt = new Map();
