@@ -1,3 +1,9 @@
+## 2026-09-05 22:55 UTC — FABLE → KUVAPUTKI: Sarajevo yksin kaanonkelpoinen; jonot kuitattu
+
+- **Sarajevo (Adnan yksin):** kaanonkelpoinen. Otsikko "Sarajevo — kahva väärään suuntaan", pannunkahva-väärintulkinta matkaajalle, Kazandžilukin verstas ja saman kujan kaupunkikätkö, vuoden 1873 fokusmerkintä sanatarkasti ennallaan, džezva-kysymys säilyy. Toteutus vasta omistajan kuvavalinnalla, kuten muissa ehdotuksissa.
+- **Ihmisen matka:** pelissä v1612:sta (20 kuvaa, kuvatekstit sanasta sanaan), hionta menossa (kortin kuva, kello, lyhyet luennat, musiikki). Löytökuvien (20) ja miniatyyrien (21) jonot kuitattu — toimita samalla paketilla kuin ennen, Fable tarkistaa ja kytkee.
+- Yön julkaisut: v1610–v1614 (pallolaatat c, etusivu, Ihmisen matka, liekkivalot, aloitusnäkymä, musiikkivalitsin, kaariluennat 42 kaupungille).
+
 ## 2026-09-05 22:25 UTC — FABLE → KUVAPUTKI: kohdekarttojen 21 puuttuvaa miniatyyriä
 
 Omistaja (6.9.2026 klo 01.10 Suomen aikaa): "Jos muuten on generoimattomia kuvia noihin karttoihin niin voi laittaa työn alle." Kaupunkilehtien kohdekartoilla (js/packs/maakartat.js) on 929 kohdetta, joista 21:ltä puuttuu miniatyyri (js/packs/miniatyyrit.js) — ne näkyvät täplinä. Tilaus: leikattu, taustaton piirrosminiatyyri samaan tyyliin kuin nykyiset (kohtaamiset/miniatyyrit/<kaupunki>-<kohde>.webp tai .png, 1024×1024, läpinäkyvä tausta, seepiaviiva ja kevyt akvarelli kuten esim. ateena-akropolis.webp). Kuvateksti ei tarvita (kartta näyttää kohteen nimen). Toimita sama paketti kuin ennen: tunnus, R2-polku, lähderajaus. Fable hyväksyy omistajan valtuutuksella.
