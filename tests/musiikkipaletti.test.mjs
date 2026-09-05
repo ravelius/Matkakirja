@@ -30,7 +30,8 @@ import { readFileSync } from 'node:fs';
 
 import * as lyria from '../tools/lyria.mjs';
 import {
-  KAUPUNKIEN_RAIDAT, PALETIN_RAIDAT, RAIDAT, tulkitseArgumentit, valitseRaidat,
+  ALUEIDEN_RAIDAT, KAUPUNKIEN_RAIDAT, PALETIN_RAIDAT, RAIDAT, TILOJEN_RAIDAT,
+  tulkitseArgumentit, valitseRaidat,
 } from '../tools/generoi-musiikki.mjs';
 import { raidanTiedosto as raidanTiedostoSiirtyma } from '../tools/generoi-siirtymamusiikki.mjs';
 import { MUSIIKIN_PAATE, musaPolku } from '../js/media.js';
@@ -63,9 +64,19 @@ test('raitojen nimet ovat paljaita argumentteja lippujen seassa', () => {
    * vahingossa uudestaan paletin mukana — jokainen kutsu maksaa.
    */
   assert.deepEqual(valitseRaidat(['kaikki']), ['pohja', 'visa', 'aarre', 'paaaarre']);
-  assert.deepEqual(valitseRaidat(['kaupungit']), KAUPUNKIEN_RAIDAT);
-  assert.ok(!valitseRaidat(['kaikki']).includes('ateena'),
-    'kaupunkiraita lipsahti paletin "kaikki"-valintaan');
+  /*
+   * `kaupungit` on kaupunkien omat kappaleet JA alueraidat (5.9.2026
+   * yö): ne soivat samassa paikassa sekoituksessa, ja pelin kannalta
+   * ne ovat sama asia — pohjavireen sijainen. Alueet erikseen saa
+   * ryhmällä `alueet`, näkymien raidat ryhmällä `tilat`.
+   */
+  assert.deepEqual(valitseRaidat(['kaupungit']), [...KAUPUNKIEN_RAIDAT, ...ALUEIDEN_RAIDAT]);
+  assert.deepEqual(valitseRaidat(['alueet']), ALUEIDEN_RAIDAT);
+  assert.deepEqual(valitseRaidat(['tilat']), TILOJEN_RAIDAT);
+  for (const nimi of [...KAUPUNKIEN_RAIDAT, ...ALUEIDEN_RAIDAT, ...TILOJEN_RAIDAT]) {
+    assert.ok(!valitseRaidat(['kaikki']).includes(nimi),
+      `${nimi} lipsahti paletin "kaikki"-valintaan`);
+  }
   assert.equal(valitseRaidat([]), null);
 });
 
@@ -181,7 +192,14 @@ test('kytkin kattaa paletin tiedostonimet työkalussa', () => {
 
 test('kaikki neljä soittokohtaa ja kuuntelulehti käyttävät kytkintä', () => {
   const kohdat = [
-    ['js/ambience-stream.js', ["musaPolku('musa-pohja')"]],
+    /*
+     * Pohjavireen tunnus muutti js/musiikkivalitsin.js:ään (5.9.2026
+     * yö): soitin hakee sen sieltä vakiona (musaPolku(POHJARAITA)),
+     * koska valitsin panee sen ketjun viimeiseksi tasoksi. Kytkin on
+     * yhä sama — polku syntyy musaPolulla kummassakin päässä.
+     */
+    ['js/musiikkivalitsin.js', ["POHJARAITA = 'musa-pohja'", 'musaPolku(POHJARAITA)']],
+    ['js/ambience-stream.js', ['musaPolku(POHJARAITA)']],
     ['js/aani-ehdokkaat.js', ["musaPolku('musa-visa-2')"]],
     ['js/ui.js', ["musaPolku('musa-aarre')", "musaPolku('musa-paaaarre')"]],
     ['js/tyohuone-musiikki.js', ['musaPolku(raita.tunnus)']],
@@ -202,7 +220,8 @@ test('yksikään pelin moduuli ei kirjoita paletin polkua käsin', () => {
    * saavat mainita nimet, joten seula koskee vain merkkijonoliteraaleja.
    */
   const moduulit = ['js/ambience-stream.js', 'js/aani-ehdokkaat.js', 'js/ui.js',
-    'js/tyohuone-musiikki.js', 'js/media.js'];
+    'js/tyohuone-musiikki.js', 'js/media.js', 'js/musiikkivalitsin.js',
+    'js/kaupunkimusiikki.js'];
   for (const tiedosto of moduulit) {
     const rivit = lue(`../${tiedosto}`).split('\n')
       .filter((r) => /'[^']*assets\/audio\/musa-[^']*'/.test(r));

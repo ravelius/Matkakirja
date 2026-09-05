@@ -434,6 +434,11 @@ const MODULES = [
   'js/kehittajan-voimat.js',
   'js/isoisan-valokuvat.js',
   'js/kaupunkimusiikki.js',
+  /*
+   * Pohjaraidan valitsin ennen ambience-streamia: soitin tuo sen
+   * staattisesti (ketju, tilat ja kuuntelija ovat siellä).
+   */
+  'js/musiikkivalitsin.js',
   'js/ambience-stream.js',
   /*
    * Siirtymämusiikki AMBIENCE-STREAMIN JÄLKEEN: se rekisteröi

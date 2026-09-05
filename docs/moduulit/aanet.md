@@ -170,8 +170,12 @@ käynnistetään sen tilalle. Peli ei siis ole hetkeäkään hiljainen.
 
 ```
 raidat: ateena       # yksi kaupunki
-raidat: kaupungit    # kaikki kaupunkiraidat
+raidat: kaupungit    # kaupunkien omat kappaleet JA alueraidat
 ```
+
+**Kaupungit, joilla ei ole omaa kappaletta, saavat ALUEENSA raidan**
+(5.9.2026 yö) — ks. *Pohjaraidan valitsin* alla. Oma kappale on siis
+poikkeus, alue on sääntö, eikä uutta kaupunkia tarvitse lisätä minnekään.
 
 Kaupunkiraidat **eivät** sisälly valintaan `kaikki` (= paletin neljä
 raitaa) — sama varovaisuus kuin linssiraidalla siirtymätyökalussa:
@@ -187,6 +191,124 @@ Vienti kulkee kuten paletilla: ajo committoi mp3:n haaralle
 `claude/musiikki-<ajonumero>`, ja mergen jälkeen `vie-aanet.yml` vie sen
 ämpärin `audio/`-kansioon. Työhuoneen Musiikki-lehden **Kaupunkiraidat**-
 osasto (Paletti-sivu) kertoo, onko raita jo ämpärissä, ja soittaa sen.
+
+## Musiikki kohtauksittain — inventaario (5.9.2026 yö)
+
+Omistajan tilaus, sanatarkasti: *"generoi musiikkeja kaikkiin kohtiin
+peliä, ne tuovat paljon lisää tunnelmaa."* Ennen työtä käytiin läpi
+jokainen kohtaus ja kirjattiin, mitä siinä nyt soi. Taulukko on
+inventaario, ei suunnitelma: *lisätty*-sarake kertoo, mitä tässä
+erässä tehtiin.
+
+| kohtaus | soi jo (koneisto ja raita) | lisätty |
+|---|---|---|
+| etusivun portti ja avausteksti | pohjavire `musa-pohja` (`playPlaceAmbience('etusivu')` → pohjavirekoneisto) + lentoaseman ambienssi | **`musa-etusivu`** — etusivun oma raita pohjavireen tilalla |
+| pallon vapaa selailu, lähtökaupungin valinta | sama kuin yllä: `game.phase === 'pickstart'` on yksi vaihe | **ei omaa raitaa** — sama `musa-etusivu`; pelaaja ei vaihda näkymää, ja raidan vaihto kesken saman vaiheen kuulostaisi virheeltä (päätös kirjattu js/musiikkivalitsin.js:ään) |
+| kaupunkiin saapuminen | Ateenassa `musa-kaupunki-ateena`, muualla pohjavire | **alueraidat** kaikille Euroopan laudan kaupungeille: `musa-kaupunki-<alue>` (6 kpl) |
+| matka (jalan, laiva, lento) | siirtymäraidat `siirtyma-jalan/laiva/lento` (js/siirtymamusiikki.js) + pohjavire alla | — |
+| linssi (Keksinnöt) | `linssi-keksinnot` koko ajon ajan; muu ääni hiljennetään (`hiljennaAmbienssi('linssi')`) | — |
+| linssin välinäytös (merkkipaalu) | linssin oma raita jatkuu laatikon yli | **ei omaa raitaa** — oma raita kilpailisi linssiraidan kanssa juuri siinä hetkessä, jota varten linssiraita on; ks. avoin kysymys alla |
+| lehti (kaupunki- ja maalehti, kehittäjän liite) | ambienssi madaltuu (`hiljennaAmbienssi('lehti')`), musiikkina paikan raita | **`musa-lehti`** — lehden oma raita paikan raidan tilalla |
+| matkalaukku | ei mitään omaa; paikan raita jatkuu | **`musa-matkalaukku`** |
+| kohtaaminen ja tietovisa | `musa-visa-2` (js/visa.js `startQuizMusic`, js/aani-ehdokkaat.js) | — (soi jo) |
+| kaksintaistelu rosvon kanssa | sama `musa-visa-2` | — |
+| fokusvirran oppitunti ja pöllön kupla | kartan päällä: paikan raita jatkuu, pöllö väistää sen alla | — (kohtaus tapahtuu kaupungissa, jossa soi kaupungin tai alueen raita) |
+| aarteen paljastus | `musa-aarre` (js/ui.js `soitaAarreMusiikki`) | — |
+| pääaarre ja pelin loppu | `musa-paaaarre` samasta soittimesta; pelin päätyttyä pohjavire | — (soi jo) |
+| työhuoneen Musiikki-lehti | kuunneltava raita, ambienssi hiljennetty (`musiikkisivu`) | uudet raidat listautuvat lehteen itsestään |
+
+## Pohjaraidan valitsin (5.9.2026 yö)
+
+Pelissä on **yksi musiikin paikka sekoituksessa**: ambienssiäänten alla,
+saman väistön (pöllö, kertoja, lukija) ja saman kehittäjäkertoimen
+(`musiikki`) takana. Siihen paikkaan on nyt monta ehdokasta, ja
+`js/musiikkivalitsin.js` päättää kuka voittaa. Soitin on yhä
+`js/ambience-stream.js`:n pohjavirekoneisto — sama, joka soitti
+pohjavireen ja Ateenan kappaleen.
+
+**Ketju parhaasta alkaen:**
+
+```
+tila (lehti → matkalaukku) → paikan raita (etusivu)
+→ kaupungin oma kappale → kaupungin alueen raita → pohjavire
+```
+
+Soitin ottaa ketjusta ensimmäisen, jota ei ole todettu puuttuvaksi.
+Puuttuva raita (404) on **normaali tila** — kytkentä on mainissa ennen
+kuin mp3 on generoitu — ja silloin seuraava taso ottaa paikan
+automaattisesti. Peli ei ole hetkeäkään hiljainen. Vaihto on aina
+1,5 sekunnin ristihäivytys (`VAIHTO_MS`), samaan ja takaisin.
+
+| raita | kesto | milloin |
+|---|---|---|
+| `musa-lehti` | 90 s | lehti auki (kaupunki-, maa- ja kehittäjän lehti) |
+| `musa-matkalaukku` | 45 s | matkalaukku auki |
+| `musa-etusivu` | 90 s | etusivu, avausteksti, pallon selailu, lähtökaupungin valinta |
+| `musa-kaupunki-<id>` | 60–90 s | kaupungin oma kappale (Ateena) |
+| `musa-kaupunki-<alue>` | 75 s | alueen raita: `britteinsaaret`, `pohjola`, `keski-eurooppa`, `valimeri`, `balkan`, `ita-eurooppa` |
+| `musa-pohja` | 80 s | kaikkialla muualla |
+
+**Mistä tila tulee.** Kaksi lähdettä, kumpikin jo olemassa olevaa
+reittiä pitkin:
+
+1. **Paikka** tulee `playPlaceAmbience`sta — samasta kohdasta, josta
+   koko peli pyytää taustaääntä. Mukana menee kaupungin maa (pakan
+   `map.cityCountry`), josta alue johdetaan: `js/kaupunkimusiikki.js`
+   `ALUEEN_MAAT` (ISO-3 → alue) ja `KAUPUNGIN_ALUE` (poikkeukset,
+   esim. Marseille = Välimeri). **Uusi kaupunki tunnettuun maahan saa
+   raitansa ilman koodimuutosta.**
+2. **Tilat** ovat päällekkäisiä syitä joukossa, kuten ambienssin
+   hiljennykset. Lehti tulee suoraan hiljennyssyystä `'lehti'`, jota
+   lehden kolme avauskohtaa ja yksi sulkukohta jo kutsuvat — uutta
+   koukkua ei tarvittu. Matkalaukku ei hiljennä ambienssia, joten se
+   kertoo tilansa suoraan (`js/ui.js` `openPassport` ja dialogin
+   `close`-kuuntelija).
+
+**Autoplay.** Etusivun raita ei ala ennen käyttäjän ensimmäistä
+kosketusta: selaimen `play()`-hylkäys ei merkitse raitaa puuttuvaksi,
+vaan seuraava renderöinti yrittää uudelleen — käytännössä *Aloita
+seikkailu* -napista, josta muutkin äänet lähtevät.
+
+**Miten uusi raita lisätään.** Sama kahden taulun sääntö kuin
+kaupunkiraidoilla (`tests/musiikkivalitsin.test.mjs` kaatuu, jos taulut
+eroavat):
+
+1. Peliin: `js/musiikkivalitsin.js` `TILARAIDAT`/`PAIKKARAIDAT` tai
+   `js/kaupunkimusiikki.js` `ALUERAIDAT` — tunnus ja lyhyt kuvaus.
+2. Työkaluun: `tools/generoi-musiikki.mjs` `RAIDAT` — sama avain,
+   `laji: 'alue'|'tila'`, `tiedosto`, kesto, `looppi: true` ja prompti.
+3. Aja työnkulku ja **kuuntele raita PR:ssä** ennen mergeä.
+
+**Työnkulun ajo** (`.github/workflows/generoi-musiikki.yml`,
+workflow_dispatch, `raidat`-input):
+
+```
+raidat: kaikki       # paletin neljä raitaa (ennallaan)
+raidat: kaupungit    # kaupunkien omat kappaleet JA alueraidat
+raidat: alueet       # vain kuusi alueraitaa
+raidat: tilat        # lehti, matkalaukku, etusivu
+raidat: valimeri     # yksi raita nimeltä
+```
+
+Paikallinen kuiva ajo ilman avainta:
+
+```
+node tools/generoi-musiikki.mjs alueet --kuiva
+node tools/generoi-musiikki.mjs tilat --kuiva
+```
+
+Vienti kulkee kuten paletilla: ajo committoi mp3:t haaralle
+`claude/musiikki-<ajonumero>`, ja mergen jälkeen `vie-aanet.yml` vie ne
+ämpärin `audio/`-kansioon. Työhuoneen Musiikki-lehden osastot
+**Alueraidat** ja **Näkymien raidat** (Paletti-sivu) lukevat rivit
+pelin omista tauluista, joten uusi raita näkyy siellä ilman muutoksia.
+
+**Avoin kysymys.** Linssin välinäytös (merkkipaalun laatikko,
+`js/aikajana.js`) jäi ilman omaa raitaa: siinä hetkessä soi linssin oma
+raita, ja kaikki muu ääni on tarkoituksella hiljennetty
+(`hiljennaAmbienssi('linssi')`). Oma välinäytösraita vaatisi päätöksen
+siitä, väistyykö linssiraita sen alta — se on omistajan päätös, ei
+koneiston.
 
 ## Vienti
 

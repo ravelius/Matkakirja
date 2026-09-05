@@ -70,7 +70,13 @@
  */
 import { html } from './ui-apurit.js';
 import { AANI_JUURI, aaniUrl, musaPolku } from './media.js';
-import { KAUPUNKIRAIDAT, kaupunkiraidanTunnus } from './kaupunkimusiikki.js';
+import {
+  ALUERAIDAT, KAUPUNKIRAIDAT, kaupunkiraidanTunnus,
+} from './kaupunkimusiikki.js';
+// Tilaraidat (lehti, matkalaukku, etusivu) tulevat valitsimelta samalla
+// periaatteella kuin kaupunkirivit: lehti lukee pelin omat taulut, joten
+// uusi raita ilmestyy tänne ilman että tätä tiedostoa muokataan.
+import { PAIKKARAIDAT, TILARAIDAT } from './musiikkivalitsin.js';
 import { MUSIIKKILAJIT } from './siirtymamusiikki.js';
 import { sfx } from './sound.js';
 import { hiljennaAmbienssi, palautaAmbienssi } from './ambience-stream.js';
@@ -189,6 +195,41 @@ const KAUPUNGIT = Object.entries(KAUPUNKIRAIDAT).map(([id, raita]) => ({
 
 /*
  * ------------------------------------------------------------------
+ * ALUERAIDAT JA TILARAIDAT
+ * ------------------------------------------------------------------
+ *
+ * Omistajan tilaus 5.9.2026 yöllä: *"generoi musiikkeja kaikkiin
+ * kohtiin peliä, ne tuovat paljon lisää tunnelmaa."* Alueraita soi
+ * kaupungissa, jolla ei ole omaa kappaletta (js/kaupunkimusiikki.js
+ * ALUERAIDAT), ja tilaraita silloin kun näkymä on auki
+ * (js/musiikkivalitsin.js TILARAIDAT ja PAIKKARAIDAT). Molemmat
+ * luetaan pelin omista tauluista, joten uusi raita näkyy tässä
+ * lehdessä heti — kuten kaupunkiraidat.
+ */
+const ALUERIVIT = Object.entries(ALUERAIDAT).map(([id, raita]) => ({
+  id: `alue-${id}`,
+  nimi: id,
+  tunnus: kaupunkiraidanTunnus(id),
+  kaytto: `${raita.kuvaus} Soi pohjavireen tilalla, kun kaupungilla ei ole omaa kappaletta.`,
+}));
+
+const TILAT = [
+  ...Object.entries(TILARAIDAT).map(([id, raita]) => ({
+    id: `tila-${id}`,
+    nimi: id,
+    tunnus: raita.tunnus,
+    kaytto: `${raita.kuvaus} Soi näkymän ollessa auki, muun musiikin tilalla.`,
+  })),
+  ...Object.entries(PAIKKARAIDAT).map(([id, raita]) => ({
+    id: `tila-${id}`,
+    nimi: id,
+    tunnus: raita.tunnus,
+    kaytto: `${raita.kuvaus} Soi ennen kuin peli alkaa, pohjavireen tilalla.`,
+  })),
+];
+
+/*
+ * ------------------------------------------------------------------
  * TEHOSTEET
  * ------------------------------------------------------------------
  *
@@ -232,6 +273,8 @@ const OSASTOT = {
   linssi: 'Linssit',
   paletti: 'Musiikkipaletti',
   kaupunki: 'Kaupunkiraidat',
+  alue: 'Alueraidat',
+  tila: 'Näkymien raidat',
   tehoste: 'Tehosteet',
 };
 
@@ -282,6 +325,22 @@ export const MUSIIKKISIVUN_RAIDAT = [
     kaytto: raita.kaytto,
     // Sama polku kuin paletilla: repon assets/audio, josta aaniUrl
     // tekee ämpärin audio/-osoitteen soitettaessa.
+    ampari: null,
+    oma: musaPolku(raita.tunnus),
+  })),
+  ...ALUERIVIT.map((raita) => ({
+    id: raita.id,
+    nimi: raita.nimi,
+    osasto: 'alue',
+    kaytto: raita.kaytto,
+    ampari: null,
+    oma: musaPolku(raita.tunnus),
+  })),
+  ...TILAT.map((raita) => ({
+    id: raita.id,
+    nimi: raita.nimi,
+    osasto: 'tila',
+    kaytto: raita.kaytto,
     ampari: null,
     oma: musaPolku(raita.tunnus),
   })),
@@ -648,7 +707,7 @@ export function musiikkiSivut() {
       id: 'musiikki-paletti',
       nimi: 'Paletti',
       yksipalsta: true,
-      rakenna: (kohde, ui) => piirraSivu(kohde, ui, ['paletti', 'kaupunki']),
+      rakenna: (kohde, ui) => piirraSivu(kohde, ui, ['paletti', 'kaupunki', 'alue', 'tila']),
     },
     {
       id: 'musiikki-tehosteet',
