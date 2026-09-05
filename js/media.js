@@ -137,7 +137,7 @@ export function aaniUrl(polku) {
  * Ennen sitä arvo on '' ja vanhat raidat soivat: puuttuva tiedosto
  * hiljentäisi paletin, ja hiljainen peli näyttää rikkinäiseltä.
  */
-export const MUSIIKIN_PAATE = '';
+export const MUSIIKIN_PAATE = '-lyria';
 
 /**
  * Musiikkipaletin raidan polku repossa: `musaPolku('musa-pohja')` →
