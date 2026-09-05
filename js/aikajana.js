@@ -153,7 +153,7 @@ import { sfx } from './sound.js';
 import { hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream } from './ambience-stream.js';
 import { stopDiaryVoice } from './luenta.js';
 import {
-  ESITTELYN_RUNKO, pysaytaLinssiluenta, soitaLinssiluenta, valinaytoksenRunko,
+  ESITTELYN_RUNKO, LOPUN_RUNKO, pysaytaLinssiluenta, soitaLinssiluenta, valinaytoksenRunko,
 } from './linssipuhe.js';
 import { pysaytaLukija } from './lukija.js';
 import { esilataaKuvat } from './ui-apurit.js';
@@ -1039,14 +1039,49 @@ export function sumeaOsoite(osoite) {
   return karuselliOsoite(osoite, 'sumea');
 }
 
+/*
+ * ── VARAKUVA: KORTTIIN HAVAINNEKUVA, KUN LÖYTÖÄ EI OLE ────────────
+ *
+ * Fablen arvio 6.9.2026: Ihmisen matka -kaaren löytökuvat (kallo,
+ * kalastuskoukku) eivät ole vielä ämpärissä, ja kortissa oli siksi
+ * nimikirjainlaatta ("EI", "SY"). Laatta on ruma eikä kerro mitään,
+ * joten kortti putoaa pysäkin HAVAINNEKUVAAN — samaan kuvaan, jonka
+ * oikean laidan paneeli näyttää.
+ *
+ * PUTOAMINEN ON KUVAELEMENTIN OMA `error`, ei erillinen HEAD-kysely:
+ * selain hakee osoitteen kerran joka tapauksessa, ja 404 tulee
+ * takaisin muutamassa millisekunnissa. Erillinen HEAD tuplaisi
+ * pyynnöt ja tarvitsisi oman välimuistinsa. Kun kuvaputki tuo
+ * löytökuvat, mikään ei muutu: ensimmäinen pyyntö vastaa 200 eikä
+ * varareitille mennä.
+ */
+
+/** Viimeinen varareitti: kaaren oma havainnekuva kortissa. */
+function otaVarakuva(kuva, vara) {
+  if (!vara) return;
+  kuva.addEventListener('error', () => {
+    if (kuva.getAttribute('src') === vara) return;
+    // Rajaus keskeltä (css .varakuva): vaakakuvan turva-alue on keskellä.
+    kuva.classList.add('varakuva');
+    kuva.src = vara;
+  }, { once: true });
+}
+
 /**
  * Ämpärikuva elementtiin: pieni versio ensin, alkuperäinen VARANA
  * KERRAN. Kertaluontoinen kuuntelija (`once`) on tässä olennainen:
  * jos varakin kaatuu, uutta yritystä ei tule eikä synny silmukkaa.
+ *
+ * `pienet: false` on kaaren valinta (aikajana.pienetKuvat): kaarella,
+ * jonka kuvista ei ole pieniä versioita ämpärissä, koko portaikko
+ * olisi pelkkiä 404:iä. `vara` on ketjun viimeinen askel (ks.
+ * VARAKUVA).
  */
-function asetaAmpariKuva(kuva, osoite, leveys) {
-  const pieni = leveys <= PIENEN_KATTO ? pieniOsoite(osoite) : osoite;
-  const karuselli = leveys <= KARUSELLIN_KATTO ? karuselliOsoite(osoite) : pieni;
+function asetaAmpariKuva(kuva, osoite, leveys, { pienet = true, vara = null } = {}) {
+  const pieni = pienet && leveys <= PIENEN_KATTO ? pieniOsoite(osoite) : osoite;
+  const karuselli = pienet && leveys <= KARUSELLIN_KATTO ? karuselliOsoite(osoite) : pieni;
+  // Alkuperäinen on ketjun viimeinen ämpärikuva; sen jälkeen varakuva.
+  const alkuperaiseen = () => { otaVarakuva(kuva, vara); kuva.src = osoite; };
   /*
    * Kortin kuva kantaa molemmat karuselliversiot: asettele vaihtaa
    * terävän ja sumean välillä pysäkin mukaan (ei CSS-suodatinta).
@@ -1064,11 +1099,14 @@ function asetaAmpariKuva(kuva, osoite, leveys) {
         delete kuva.dataset.sumea;
         kuva.src = kuva.dataset.vara;
         delete kuva.dataset.vara;
-        kuva.addEventListener('error', () => { kuva.src = osoite; }, { once: true });
+        kuva.addEventListener('error', alkuperaiseen, { once: true });
         return;
       }
-      kuva.src = osoite;
+      alkuperaiseen();
     }, { once: true });
+  } else {
+    // Ei pieniä versioita: yksi pyyntö, ja sen jälkeen suoraan varakuva.
+    otaVarakuva(kuva, vara);
   }
   kuva.src = karuselli;
 }
@@ -1201,12 +1239,13 @@ export function valokeilanMaski(siemen = 0, lohkoja = VALOKEILAN_LOHKOT) {
  *
  * @param {object} kuvatieto
  * @param {number} leveys pyydetty leveys (kuvaTaiLaatan `leveys`)
+ * @param {boolean} [pienet] onko kaaren kuvista pieniä versioita
  * @returns {string|null} osoite tai null (Commons-tiedosto tai ei kuvaa)
  */
-export function paneelikuvanOsoite(kuvatieto, leveys) {
+export function paneelikuvanOsoite(kuvatieto, leveys, pienet = true) {
   const osoite = kuvatieto?.osoite;
   if (!osoite) return null;
-  if (kuvatieto.ulkoinen) return osoite;
+  if (kuvatieto.ulkoinen || !pienet) return osoite;
   if (leveys <= KARUSELLIN_KATTO) return karuselliOsoite(osoite);
   return leveys <= PIENEN_KATTO ? pieniOsoite(osoite) : osoite;
 }
@@ -1274,8 +1313,15 @@ function luoKuvavarasto(katto = KUVAVARASTON_KATTO) {
   };
 }
 
-/** Kuva pergamentille; ilman lähdettä nimikirjainlaatta. */
-function kuvaTaiLaatta(kuvatieto, nimi, leveys, luokka, varasto = null) {
+/**
+ * Kuva pergamentille; ilman lähdettä nimikirjainlaatta.
+ *
+ * `pienet` on kaaren valinta (aikajana.pienetKuvat) ja kulkee sekä
+ * varastohakuun että kuvaelementtiin, jotta esilataus ja paneeli
+ * pyytävät varmasti samaa tiedostoa. Kuvatiedon `vara` on kortin
+ * varakuva (ks. VARAKUVA).
+ */
+function kuvaTaiLaatta(kuvatieto, nimi, leveys, luokka, varasto = null, pienet = true) {
   const kehys = solmu('div', `aikajana-kuvakehys ${luokka}`);
   if (onKuva(kuvatieto)) {
     /*
@@ -1284,7 +1330,7 @@ function kuvaTaiLaatta(kuvatieto, nimi, leveys, luokka, varasto = null) {
      * kuva on jo ladattu JA dekoodattu, joten se liitetään suoraan
      * paneeliin — uutta pyyntöä ei lähde eikä dekoodausta odoteta.
      */
-    const esiladattu = varasto?.ota?.(paneelikuvanOsoite(kuvatieto, leveys)) ?? null;
+    const esiladattu = varasto?.ota?.(paneelikuvanOsoite(kuvatieto, leveys, pienet)) ?? null;
     const kuva = esiladattu ?? document.createElement('img');
     if (esiladattu) kuva.dataset.esiladattu = '1';
     kuva.alt = kuvatieto.selite ?? nimi ?? '';
@@ -1303,8 +1349,9 @@ function kuvaTaiLaatta(kuvatieto, nimi, leveys, luokka, varasto = null) {
     } else if (kuvatieto.ulkoinen && kuvatieto.osoite) {
       // Kuva oman kansion ulkopuolelta (isoisän valokuva): ei pieni-versiota, ei varareittiä.
       kuva.src = kuvatieto.osoite;
-    } else if (kuvatieto.osoite) asetaAmpariKuva(kuva, kuvatieto.osoite, leveys);
-    else asetaKuva(kuva, valokuvaUrl(kuvatieto.tiedosto, leveys), valokuvaVara(kuvatieto.tiedosto, leveys));
+    } else if (kuvatieto.osoite) {
+      asetaAmpariKuva(kuva, kuvatieto.osoite, leveys, { pienet, vara: kuvatieto.vara ?? null });
+    } else asetaKuva(kuva, valokuvaUrl(kuvatieto.tiedosto, leveys), valokuvaVara(kuvatieto.tiedosto, leveys));
     // Cabinet cardin valkoinen reunus pois (js/isoisan-valokuvat.js rajausTyyli, css .isoisa-rajattu).
     const rajaus = rajausTyyli(kuvatieto);
     if (rajaus) { kuva.style.cssText += rajaus; kuva.classList.add('isoisa-rajattu'); }
@@ -1341,17 +1388,20 @@ export function jaaVirkkeiksi(teksti) {
  * yhtäkään kuvaa palataan nimikirjainlaattaan, joka on merkkipaalun
  * ainoa esitys.
  */
-function muotokuvaKehys(t, leveys, luokka) {
+function muotokuvaKehys(t, leveys, luokka, pienet = true) {
   const kuvat = muotokuvat(t);
-  if (kuvat.length < 2) return kuvaTaiLaatta(kuvat[0] ?? null, t.henkilo ?? t.otsikko, leveys, luokka);
+  if (kuvat.length < 2) {
+    return kuvaTaiLaatta(kuvat[0] ?? null, t.henkilo ?? t.otsikko, leveys, luokka, null, pienet);
+  }
   const kehys = solmu('div', `aikajana-kuvakehys ${luokka} kaksi`);
   for (const kuvatieto of kuvat) {
     const kuva = document.createElement('img');
     kuva.alt = kuvatieto.selite ?? t.henkilo ?? '';
     kuva.decoding = 'async';
     kuva.loading = 'eager';
-    if (kuvatieto.osoite) asetaAmpariKuva(kuva, kuvatieto.osoite, leveys);
-    else asetaKuva(kuva, valokuvaUrl(kuvatieto.tiedosto, leveys), valokuvaVara(kuvatieto.tiedosto, leveys));
+    if (kuvatieto.osoite) {
+      asetaAmpariKuva(kuva, kuvatieto.osoite, leveys, { pienet, vara: kuvatieto.vara ?? null });
+    } else asetaKuva(kuva, valokuvaUrl(kuvatieto.tiedosto, leveys), valokuvaVara(kuvatieto.tiedosto, leveys));
     kehys.appendChild(kuva);
   }
   return kehys;
@@ -1515,16 +1565,97 @@ export const ASTEIKON_VALI = 10;
 /** Numeroita kellossa oletusasteikolla (nelinumeroinen vuosiluku). */
 export const KELLON_NUMEROT = 4;
 
-/**
- * Kellon pyöristys lukeman suuruuden mukaan: 100 000 → tuhat vuotta,
- * 10 000 → sata, 1 000 → kymmenen, sitä pienemmät yhden vuoden tarkkuudella.
+/*
+ * ── KELLON ASKEL ON PYSÄKKIVÄLIN OMA (Fablen arvio 6.9.2026) ───────
+ *
+ * Ensimmäisessä toteutuksessa askel tuli lukeman suuruudesta (100 000
+ * → tuhat vuotta, 10 000 → sata). Se näytti kartalla tältä: yksi
+ * pysäkkiväli kestää noin 2,6 sekuntia, ja ensimmäisellä välillä
+ * (300 000 → 233 000) kello ehti vaihtua 67 kertaa — kuusinumeroinen
+ * luku pyöri harmaana sotkuna, ja koska matkamittari kuljettaa
+ * VAIHTUVAA numeroa murto-osan verran, näkyvissä oli lisäksi
+ * puolittaisia numeroita.
+ *
+ * Askel lasketaan siksi VÄLISTÄ eikä lukemasta: jokainen väli saa
+ * suurimman tikkaan (KELLON_ASKELEET), jolla kello vaihtuu välin
+ * aikana noin KELLON_MUUTOKSIA_VALILLA kertaa. Silloin vaihtoja on
+ * kaikilla väleillä kahdesta neljään sekunnissa riippumatta siitä,
+ * onko väli 67 000 vai 500 vuotta — ja koska jokainen tikas on sadan
+ * monikerta, kahta viimeistä nollaa (isoissa askelissa kolmea) ei
+ * pyöritetä lainkaan.
  */
-export function kellonAskel(lukema) {
+
+/**
+ * Askeltikkaat. Sadan monikertoja: viimeiset nollat seisovat aina.
+ * Väliarvot 200, 2 000 ja 20 000 ovat mukana siksi, että pelkillä
+ * kymmenpotensseilla lähin tikas heittäisi viisinkertaisesti.
+ */
+export const KELLON_ASKELEET = [100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000];
+
+/** Montako kertaa kello saa vaihtua yhden pysäkkivälin aikana. */
+export const KELLON_MUUTOKSIA_VALILLA = 6;
+
+/**
+ * Yhden pysäkkivälin askel: suurin tikas, joka mahtuu väliin
+ * KELLON_MUUTOKSIA_VALILLA kertaa. Lyhyilläkin väleillä (40 500 →
+ * 40 000) jää pienin tikas, jotta kello liikkuu edes vähän.
+ */
+export function valinAskel(alku, loppu, muutoksia = KELLON_MUUTOKSIA_VALILLA) {
+  const tavoite = Math.abs(alku - loppu) / Math.max(1, muutoksia);
+  let askel = KELLON_ASKELEET[0];
+  for (const tikas of KELLON_ASKELEET) if (tikas <= tavoite) askel = tikas;
+  return askel;
+}
+
+/**
+ * Kellon pyöristys lukeman kohdalla. `arvot` on pysäkkien
+ * vuosiaSitten-lista laskevassa järjestyksessä; askel on sen välin
+ * askel, jolla lukema on. Ilman listaa (tai sen ulkopuolella)
+ * palautetaan lähimmän välin askel, jottei funktio koskaan palauta
+ * nollaa.
+ */
+export function kellonAskel(lukema, arvot = []) {
+  const luvut = (arvot ?? []).filter((v) => Number.isFinite(v));
+  if (luvut.length < 2) return KELLON_ASKELEET[0];
   const a = Math.abs(lukema);
-  if (a >= 100000) return 1000;
-  if (a >= 10000) return 100;
-  if (a >= 1000) return 10;
-  return 1;
+  for (let i = 0; i < luvut.length - 1; i += 1) {
+    // Väli on [alku, loppu] laskevassa järjestyksessä; yläpää mukaan.
+    if (a <= luvut[i] && a >= luvut[i + 1]) return valinAskel(luvut[i], luvut[i + 1]);
+  }
+  return a > luvut[0]
+    ? valinAskel(luvut[0], luvut[1])
+    : valinAskel(luvut.at(-2), luvut.at(-1));
+}
+
+/*
+ * ── VIIMEISET PYSÄKIT OVAT VUOSILUKUJA (Fablen arvio 6.9.2026) ─────
+ *
+ * Kaaren loppupää on niin lähellä nykyaikaa, että "750 v. sitten" on
+ * huonompi luku kuin "n. 1250 jaa." — ja aineisto sanoo saman:
+ * viimeisen pysäkin `ajoitus` on "noin 1250–1300 jaa.". Kun lukema
+ * alittaa KELLON_JAA_RAJAN, kello vaihtaa rullista TEKSTIIN ja näyttää
+ * vuosiluvun. Nykyhetki on pyöreä 2000 (sama kuin aineiston
+ * "vuotta sitten" -luvuissa: 750 → 1250 jaa.), ja luku pyöristetään
+ * viiteenkymmeneen vuoteen, jotta kello päätyy tasan siihen lukuun,
+ * jonka viimeinen pysäkki sanoo.
+ */
+
+/** Tämän alle mentäessä kello näyttää vuosiluvun tekstinä. */
+export const KELLON_JAA_RAJA = 1900;
+/** "Vuotta sitten" -lukujen nykyhetki (aineiston oma pyöristys). */
+export const KELLON_NYKYHETKI = 2000;
+/** Vuosiluvun pyöristys tekstitilassa. */
+export const KELLON_VUOSI_TARKKUUS = 50;
+
+/**
+ * Kellon lukema vuosilukutekstinä, tai null jos ollaan yhä syvässä
+ * ajassa. Puhdas funktio (tests/ihmisen-matka.test.mjs).
+ */
+export function kellonVuositeksti(lukema, raja = KELLON_JAA_RAJA) {
+  if (!(Number.isFinite(lukema) && lukema < raja)) return null;
+  const vuosi = Math.round((KELLON_NYKYHETKI - lukema) / KELLON_VUOSI_TARKKUUS)
+    * KELLON_VUOSI_TARKKUUS;
+  return vuosi > 0 ? `n. ${vuosi} jaa.` : `n. ${Math.abs(vuosi) || 0} eKr.`;
 }
 
 /**
@@ -1564,10 +1695,13 @@ export function luoAsteikko(kaari) {
       suunta: 1,
       yksikko: '',
       ryhmitys: false,
+      // Keksintökello on matkamittari: ykkösrulla kulkee murto-osan.
+      murtoOsa: true,
       alku: kaari?.alku ?? 0,
       loppu: kaari?.loppu ?? 0,
       lukema: (paikka) => paikka,
       askel: () => 1,
+      teksti: () => null,
     };
   }
   const arvot = [...tapahtumat]
@@ -1584,6 +1718,13 @@ export function luoAsteikko(kaari) {
     yksikko: kaari.yksikko ?? 'v. sitten',
     ryhmitys: true,
     /*
+     * EI MURTO-OSAA (Fablen arvio 6.9.2026): syvässä ajassa kello
+     * etenee askelin, ja jokainen askel on oma pieni rullauksensa.
+     * Murto-osa näyttäisi tässä vain puolittaisia numeroita, koska
+     * vaihtoja on välillä useita sekunnissa.
+     */
+    murtoOsa: false,
+    /*
      * Lähtö on puoli väliä ennen ensimmäistä pysäkkiä: kello ehtii
      * näkyä lukuna ennen kuin ensimmäinen valo syttyy, kuten
      * keksinnöissä kaari alkaa neljä vuotta ennen Wattia.
@@ -1591,7 +1732,10 @@ export function luoAsteikko(kaari) {
     alku: -ASTEIKON_VALI / 2,
     loppu: Math.max(0, arvot.length - 1) * ASTEIKON_VALI,
     lukema: (paikka) => vuosiaSittenLukema(paikka, arvot),
-    askel: kellonAskel,
+    // Askel tulee siitä pysäkkivälistä, jolla lukema on (ks. KELLON ASKEL).
+    askel: (lukema) => kellonAskel(lukema, arvot),
+    // Loppupäässä kello vaihtaa vuosilukuun (ks. VIIMEISET PYSÄKIT).
+    teksti: (lukema) => kellonVuositeksti(lukema),
   };
 }
 
@@ -1682,20 +1826,27 @@ function asetaRivi(rivi, y, siirtyma) {
  * laskevaksi (uusi numero tulee alhaalta, seuraava luku on pienempi).
  * Oletukset 1 ja 1 ovat entinen kello.
  *
+ * MURTO-OSA ON ASTEIKON VALINTA (Fablen arvio 6.9.2026):
+ * `murtoOsa: false` panee rullat seisomaan askelten välissä, jolloin
+ * numero vaihtuu kerralla eikä ruudulla näy puolittaisia numeroita.
+ * Syvässä ajassa vaihtoja on useita sekunnissa, ja silloin jatkuva
+ * kuljetus on pelkkää sotkua; keksintökellon oletus (true) on entinen.
+ *
  * @param {Array<{vanha:object, uusi:object, merkki:?string}>} rullat
  * @param {number} vuosi vuosiluku murto-osineen (1769.4)
- * @param {{liuku?:boolean, heti?:boolean, askel?:number, suunta?:number}} [asetukset]
+ * @param {{liuku?:boolean, heti?:boolean, askel?:number, suunta?:number,
+ *   murtoOsa?:boolean}} [asetukset]
  * @returns {Array} rullat, joiden numero vaihtui
  */
 export function asetaMatkamittari(rullat, vuosi, {
-  liuku = false, heti = false, askel = 1, suunta = 1,
+  liuku = false, heti = false, askel = 1, suunta = 1, murtoOsa = true,
 } = {}) {
   const arvo = Math.max(0, Number.isFinite(vuosi) ? vuosi : 0);
   const alas = suunta < 0;
   const yksikot = arvo / askel;
   const kokonainen = alas ? Math.ceil(yksikot) : Math.floor(yksikot);
   const teksti = String(kokonainen * askel).padStart(rullat.length, '0');
-  const osuus = heti ? 0 : Math.abs(yksikot - kokonainen);
+  const osuus = heti || !murtoOsa ? 0 : Math.abs(yksikot - kokonainen);
   const siirtyma = liuku && !heti ? `transform ${VUOSI_RULLAUS_MS}ms ${VUOSI_RULLAUS_KAARI}` : 'none';
   // Askeleen alapuoliset rullat ovat pyöristyksen nollia: ne eivät
   // liiku eivätkä vie murto-osaa ylöspäin (ks. kellonAskel).
@@ -1774,6 +1925,14 @@ class Aikajana {
      * tiedosto on hiljainen, ei virhe.
      */
     this.luentajuuri = kaari.luentajuuri ?? undefined;
+    /*
+     * ONKO KAAREN KUVISTA PIENIÄ VERSIOITA ämpärissä (Fablen arvio
+     * 6.9.2026). Keksinnöillä on (tools/tee-pienet-kuvat.mjs), Ihmisen
+     * matkalla ei vielä — ja ilman tätä lippua jokainen kuva haettiin
+     * ensin kansiosta `pieni/`, joka vastasi 404. Kun työkalu joskus
+     * ajetaan myös tälle kaarelle, lippu poistetaan datasta.
+     */
+    this.pienetKuvat = kaari.pienetKuvat !== false;
     /** Reittiviivan pätkät (kaari, jolla `reitti: true`). */
     this.reittiOsat = null;
     this.tila = { vuosi: this.alku, i: -1, viive: 0 };
@@ -1939,7 +2098,7 @@ class Aikajana {
       const kortti = solmu('button', `aikajana-kortti${t.paalu ? ' paalu' : ''}`);
       kortti.type = 'button';
       kortti.dataset.i = String(i);
-      kortti.appendChild(muotokuvaKehys(t, 400, 'aikajana-muotokuva'));
+      kortti.appendChild(muotokuvaKehys(t, 400, 'aikajana-muotokuva', this.pienetKuvat));
       /*
        * KORTIN ALLA VAIN NIMI (omistaja 5.9.2026 ilta, sanatarkasti:
        * "henkilön muotokuvan alla pelkkä henkilön nimi"): vuosi ja
@@ -2994,6 +3153,15 @@ class Aikajana {
         vuosi: this.loppu,
         ajoitus: loppu.ajoitus ?? this.jakso,
       });
+      /*
+       * LOPPUSANAT ÄÄNEEN (Fablen ohje 6.9.2026), jos kaari on ne
+       * äänittänyt (`loppupuhe`, js/linssipuhe.js LOPUN_RUNKO).
+       * Keksintökaarella lippua ei ole, joten sen loppu on hiljainen
+       * kuten ennenkin — eikä peli hae tiedostoa, jota ei ole.
+       */
+      if (this.kaari.loppupuhe) {
+        soitaLinssiluenta(this.ui, null, { runko: LOPUN_RUNKO, juuri: this.luentajuuri });
+      }
     }
     this.paikkarivi.textContent = `${this.jakso} · ${this.valot.filter(Boolean).length} valoa`;
     sfx.play('paper');
@@ -3014,22 +3182,70 @@ class Aikajana {
     const arvo = Math.max(0, this.asteikko.lukema(paikka));
     const askel = this.asteikko.askel(arvo);
     const suunta = this.asteikko.suunta;
-    const teksti = String(kellonNaytto(arvo, askel, suunta)).padStart(this.rullat.length, '0');
+    /*
+     * KAAREN LOPPUPÄÄ ON VUOSILUKU (ks. VIIMEISET PYSÄKIT): rullat
+     * väistyvät ja kello näyttää tekstin "n. 1250 jaa.". Muissa
+     * kohdissa ja koko keksintökaaressa teksti on null eikä mikään
+     * muutu.
+     */
+    const vuositeksti = this.asteikko.teksti?.(arvo) ?? null;
+    const teksti = vuositeksti
+      ?? String(kellonNaytto(arvo, askel, suunta)).padStart(this.rullat.length, '0');
     // ELÄVÄ VAIHDOS = kello liikkui itse kokonaisen askeleen. Rakentaminen
     // ja Alusta asettavat luvun `heti`-lipulla ilman rullausta, eikä
     // ensimmäinen asetus (ei edellistä lukemaa) ole vaihdos lainkaan.
     const vaihtui = teksti !== this.kelloTeksti;
     const elava = vaihtui && !heti && this.kelloTeksti !== undefined;
     this.kelloTeksti = teksti;
-    asetaMatkamittari(this.rullat, arvo, {
-      heti: heti || this.reducedMotion, liuku: !this.kaynnissa, askel, suunta,
-    });
-    if (vaihtui) this.kellonSelite(teksti);
+    this.naytaKellonTeksti(vuositeksti);
+    if (vuositeksti === null) {
+      asetaMatkamittari(this.rullat, arvo, {
+        heti: heti || this.reducedMotion,
+        /*
+         * Askelittain etenevä kello rullaa JOKA VAIHDOKSESSA: ilman
+         * murto-osaa numero vain välähtäisi tilalle. Käyvä
+         * keksintökello kuljettaa murto-osaa eikä käytä siirtymää.
+         */
+        liuku: !this.kaynnissa || !this.asteikko.murtoOsa,
+        askel,
+        suunta,
+        murtoOsa: this.asteikko.murtoOsa !== false,
+      });
+      if (vaihtui) this.kellonSelite(teksti);
+    }
     // Ääni vain elävästä vaihdosta: avaus ja alustus ovat `heti`,
     // ja pysäytetty kello on hiljainen (kortista toiseen kelaus myös).
     // Vuosiluvun vaihdos NAKSAHTAA; kohahdus kuuluu keksinnölle
     // (sytyta, omistajan päätös 3.9.2026).
     if (elava && this.kaynnissa) this.naksahda();
+  }
+
+  /**
+   * KELLO TEKSTINÄ (ks. VIIMEISET PYSÄKIT). Rullat ja yksikkö
+   * väistyvät luokalla `tekstina`, ja tilalle tulee yksi span, jossa
+   * lukee vuosiluku. Solmu syntyy vasta kun sitä tarvitaan ja katoaa
+   * heti kun kello palaa syvään aikaan (Alusta, uusi kaari), joten
+   * keksintökellossa sitä ei ole koskaan.
+   */
+  naytaKellonTeksti(vuositeksti) {
+    if (!this.kello) return;
+    if (!vuositeksti) {
+      if (this.kellonTekstisolmu) {
+        this.kellonTekstisolmu.remove();
+        this.kellonTekstisolmu = null;
+        this.kello.classList.remove('tekstina');
+      }
+      return;
+    }
+    if (!this.kellonTekstisolmu) {
+      this.kellonTekstisolmu = solmu('span', 'aikajana-kelloteksti');
+      this.kello.appendChild(this.kellonTekstisolmu);
+      this.kello.classList.add('tekstina');
+    }
+    if (this.kellonTekstisolmu.textContent !== vuositeksti) {
+      this.kellonTekstisolmu.textContent = vuositeksti;
+      this.kello.setAttribute('aria-label', vuositeksti);
+    }
   }
 
   /**
@@ -3104,6 +3320,15 @@ class Aikajana {
    * yksi pyyntö per osoite per istunto.
    */
   esilataaPienet() {
+    /*
+     * VAIN JOS PIENET VERSIOT OVAT OLEMASSA (Fablen arvio 6.9.2026).
+     * Koko kaaren esilataus on kannattava juuri siksi, että tiedostot
+     * ovat pieniä (640 px WebP, alle 90 kt). Kaarella, jonka kuvista
+     * ei ole pieniä versioita, tämä olisi joko kaksikymmentä 404:ää
+     * tai kymmenen megatavun ryntäys alkuperäisiä — kummankin sijaan
+     * riittää valmistaSeuraavat, joka hakee kaksi pysäkkiä edellä.
+     */
+    if (!this.pienetKuvat) return;
     const osoitteet = [];
     for (const t of this.tapahtumat) {
       for (const kuva of [t.kuva, t.kuvaToinen, t.ilmio, t.ilmioLisa]) {
@@ -3138,9 +3363,9 @@ class Aikajana {
       if (!t) return;
       // Havainnekuva paneelin omalla leveydellä (640) ja muotokuvat
       // karusellin mitassa (400) — samat osoitteet kuin ruudulla.
-      this.paneelikuvat.esilataa(paneelikuvanOsoite(t.ilmio, 640));
-      this.paneelikuvat.esilataa(paneelikuvanOsoite(t.kuva, 400));
-      this.paneelikuvat.esilataa(paneelikuvanOsoite(t.kuvaToinen, 400));
+      this.paneelikuvat.esilataa(paneelikuvanOsoite(t.ilmio, 640, this.pienetKuvat));
+      this.paneelikuvat.esilataa(paneelikuvanOsoite(t.kuva, 400, this.pienetKuvat));
+      this.paneelikuvat.esilataa(paneelikuvanOsoite(t.kuvaToinen, 400, this.pienetKuvat));
     }
   }
 
@@ -3428,7 +3653,9 @@ class Aikajana {
      */
     this.lopetaKuvakierto();
     if (onKuva(t.ilmio)) {
-      const kehys = kuvaTaiLaatta(t.ilmio, t.otsikko, 640, 'aikajana-ilmiokuva', this.paneelikuvat);
+      const kehys = kuvaTaiLaatta(
+        t.ilmio, t.otsikko, 640, 'aikajana-ilmiokuva', this.paneelikuvat, this.pienetKuvat,
+      );
       /*
        * KOKO KUVA NÄKYVIIN, EI RAJAUSTA (kuvatoimituksen näyttöohje
        * 5.9.2026: *"koko kuva näkyviin (contain), EI cover-rajausta
@@ -3513,7 +3740,9 @@ class Aikajana {
     } else {
       const teksti = solmu('div', 'aikajana-ilmio-teksti');
       const henkilorivi = solmu('div', 'aikajana-ilmio-henkilo');
-      if (muotokuvat(t).length) henkilorivi.appendChild(muotokuvaKehys(t, 200, 'aikajana-ilmio-kasvot'));
+      if (muotokuvat(t).length) {
+        henkilorivi.appendChild(muotokuvaKehys(t, 200, 'aikajana-ilmio-kasvot', this.pienetKuvat));
+      }
       henkilorivi.appendChild(solmu('span', 'aikajana-ilmio-nimi', t.henkilo ?? ''));
       teksti.append(
         henkilorivi,

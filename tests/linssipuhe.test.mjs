@@ -33,6 +33,7 @@ import { KEKSINNOT, LINSSI } from '../js/linssit/keksinnot.js';
 import {
   ESITTELYN_RUNKO,
   KAAREN_AVAIMET,
+  LOPUN_RUNKO,
   LINSSILUENTA_JUURI,
   LUENNAN_TAUKO,
   kaarenPuheet,
@@ -45,7 +46,9 @@ import {
   luennanTiedosto,
   valinaytoksenRunko,
 } from '../js/linssipuhe.js';
-import { tulkitseArgumentit, valitsePysakit } from '../tools/generoi-linssiluennat.mjs';
+import {
+  LINSSIT, OLETUSLINSSI, ampariKansio, tulkitseArgumentit, valitsePysakit,
+} from '../tools/generoi-linssiluennat.mjs';
 
 const JUURI = fileURLToPath(new URL('..', import.meta.url));
 const AIKAJANA = readFileSync(new URL('../js/aikajana.js', import.meta.url), 'utf8');
@@ -196,8 +199,20 @@ test('vuosilista sietää pilkun ja välilyönnin, ja ottaa kaaren avaimet', () 
   // Työnkulku antaa välilyönnillisen listan shellin hajottamana.
   assert.deepEqual(tulkitseArgumentit(['--pysakit', '1769', '1783']).pysakit, [1769, 1783]);
   assert.equal(tulkitseArgumentit(['--pysakit', '1769', '--kuiva']).kuiva, true);
-  assert.ok(tulkitseArgumentit(['--pysakit', 'watt']).virhe);
+  /*
+   * MUU MERKKIJONO ON PYSÄKIN TUNNUS (6.9.2026, --linssi): "vuotta
+   * sitten" -kaarella ei ole vuosilukuja, joten pysäkki valitaan
+   * tunnuksella. Kirjoitusvirhe ei silti mene läpi — se kaatuu
+   * valitsePysakit-tarkistukseen ennen ensimmäistäkään kutsua.
+   */
+  assert.deepEqual(tulkitseArgumentit(['--pysakit', 'jebel-irhoud']).pysakit, ['jebel-irhoud']);
+  assert.ok(valitsePysakit(LINSSI.aikajana, ['watt']).tuntemattomat.includes('watt'));
   assert.ok(tulkitseArgumentit(['--roska']).virhe);
+  // Kaaren valinta: oletus keksinnöt, tuntematon tunnus kaatuu.
+  assert.equal(tulkitseArgumentit([]).linssi, OLETUSLINSSI);
+  assert.equal(tulkitseArgumentit(['--linssi', 'ihmisen-matka']).linssi, 'ihmisen-matka');
+  assert.ok(tulkitseArgumentit(['--linssi', 'hupsis']).virhe);
+  assert.ok(tulkitseArgumentit(['--linssi']).virhe);
   assert.equal(tulkitseArgumentit(['--pakota']).pakota, true);
   // Kaaren omat puheet kulkevat samassa lipussa avaimina.
   assert.deepEqual(tulkitseArgumentit(['--pysakit', 'esittely,valinaytos']).pysakit,
@@ -221,7 +236,18 @@ test('runkosääntö tuottaa esittelyn ja välinäytöksen', () => {
   assert.deepEqual(puheet.map((p) => p.avain), ['esittely', 'valinaytos']);
   assert.deepEqual(puheet.map((p) => p.nimi), ['esittely.mp3', 'valinaytos-1873.mp3']);
   assert.equal(ESITTELYN_RUNKO, 'esittely');
-  assert.deepEqual(KAAREN_AVAIMET, ['esittely', 'valinaytos']);
+  assert.deepEqual(KAAREN_AVAIMET, ['esittely', 'valinaytos', 'loppu']);
+  /*
+   * LOPPUSANAT VAIN LIPULLA (6.9.2026): keksintökaaren loppusanoja ei
+   * ole äänitetty, eikä työkalu saa tarjota niille maksullista kutsua
+   * — kaari saa luennan vasta kun se pyytää sitä (`loppupuhe`).
+   */
+  assert.ok(!LINSSI.aikajana.loppupuhe, 'keksintökaari ei pyydä loppuluentaa');
+  assert.deepEqual(
+    kaarenPuheet({ loppupuhe: true, loppusanat: { teksti: 'Loppu.' } }),
+    [{ avain: 'loppu', runko: LOPUN_RUNKO, nimi: 'loppu.mp3', teksti: 'Loppu.' }],
+  );
+  assert.deepEqual(kaarenPuheet({ loppusanat: { teksti: 'Loppu.' } }), []);
   // Tekstit tulevat datasta eivätkä koodista.
   assert.equal(puheet[0].teksti, LINSSI.aikajana.esittely.teksti);
   const paalu = KEKSINNOT.find((t) => t.paalu);

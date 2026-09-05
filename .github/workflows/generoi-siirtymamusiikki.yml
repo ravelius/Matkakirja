@@ -18,6 +18,14 @@
 #              aikakausi: hillitty kellokoneisto ja tasainen pulssi,
 #              50 s looppi (linssi kestää minuutteja, 25 pysäkkiä)
 #
+# Omistajan tilaus 5.9.2026: toinen aikajanalinssi (Ihmisen matka) sai
+# oman raitansa, ja se pyydetään samalla lipulla:
+#
+#   ihmisen-matka  aanet/linssi-ihmisen-matka.mp3  syvä ja hidas:
+#              rumpu kuin sydämen syke ja kaukainen ihmisääni ilman
+#              sanoja, ei melodiaa, 45–60 s looppi (LAJIT-taulun
+#              prompt, tools/generoi-siirtymamusiikki.mjs)
+#
 # VALINTA "kaikki" EI SISÄLLÄ LINSSIRAITAA. Se tekee tasan kolme
 # siirtymäraitaa, kuten ennenkin; linssiraita pyydetään nimeltä. Näin
 # jo valmiita raitoja ei generoida vahingossa uudestaan — jokainen
@@ -61,12 +69,13 @@ on:
       laji:
         description: >-
           Mikä raita generoidaan. "kaikki" tekee kolme siirtymäraitaa
-          eli kolme maksullista kutsua — se EI sisällä linssiraitaa
-          "keksinnot", joka pyydetään erikseen nimeltä.
+          eli kolme maksullista kutsua — se EI sisällä linssiraitoja
+          "keksinnot" ja "ihmisen-matka", jotka pyydetään erikseen
+          nimeltä.
         required: true
         type: choice
         default: 'kaikki'
-        options: ['kaikki', 'jalan', 'laiva', 'lento', 'keksinnot']
+        options: ['kaikki', 'jalan', 'laiva', 'lento', 'keksinnot', 'ihmisen-matka']
       moottori:
         description: >-
           Musiikkimoottori: lyria = Google Lyria 3.5 (pelin raidat,

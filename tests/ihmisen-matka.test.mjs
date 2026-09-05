@@ -28,14 +28,21 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import {
-  ASTEIKON_VALI, KELLON_NUMEROT, luoAsteikko, jarjestaTapahtumat, kellonAskel, kellonNaytto,
+  ASTEIKON_VALI, KELLON_NUMEROT, KELLON_ASKELEET, luoAsteikko, jarjestaTapahtumat,
+  kellonAskel, kellonNaytto, kellonVuositeksti, valinAskel,
   vuosiaSittenLukema, asetaMatkamittari, reitinPisteet, REITIN_PAKSUUS_PX, REITIN_TIHENNYS_AST,
   pysakinLahikuva, AIKAJANAN_HYPYN_KERROIN, AIKAJANAN_HYPYN_KATTO, AIKAJANAN_LAHIKUVA_LEVEYS,
-  LAUTAYKSIKKOA_ASTEELLA, AIKAJANA_VIIVE_MS,
+  LAUTAYKSIKKOA_ASTEELLA, AIKAJANA_VIIVE_MS, paneelikuvanOsoite,
 } from '../js/aikajana.js';
 import {
   LINSSI, PYSAKIT, IHMISEN_MATKAN_LAHIKUVA, ihmisenMatkanPysakit,
 } from '../js/linssit/ihmisen-matka.js';
+import { IHMISEN_MATKA_KUVAJUURI } from '../js/linssit/ihmisen-matka-data.js';
+import { LINSSI as KEKSINTOLINSSI } from '../js/linssit/keksinnot.js';
+import {
+  kaarenPuheet, luennanOsoite, luennanPuhe, luennanTeksti, luennanTiedosto,
+} from '../js/linssipuhe.js';
+import { LINSSIT as LUENTAKAARET, ampariKansio, valitsePysakit } from '../tools/generoi-linssiluennat.mjs';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
 import { tarkistaLinssi } from '../js/linssit/kerros.js';
 import { MUSIIKKILAJIT } from '../js/siirtymamusiikki.js';
@@ -46,6 +53,12 @@ import { kulmaAsteina } from '../js/pallolauta/reitit.js';
 const MOOTTORI = readFileSync(new URL('../js/aikajana.js', import.meta.url), 'utf8');
 const CSS = readFileSync(new URL('../css/aikajana.css', import.meta.url), 'utf8');
 const SW = readFileSync(new URL('../sw.js', import.meta.url), 'utf8');
+const LUENTATYONKULKU = readFileSync(
+  new URL('../.github/workflows/generoi-linssiluennat.yml', import.meta.url), 'utf8',
+);
+const MUSIIKKITYONKULKU = readFileSync(
+  new URL('../.github/workflows/generoi-siirtymamusiikki.yml', import.meta.url), 'utf8',
+);
 
 /** Yhden metodin lohko moottorista (sama apuri kuin tests/aikajana.test.mjs). */
 function metodi(nimi) {
@@ -194,16 +207,59 @@ test('lukema interpoloidaan logaritmisesti pysäkkien välillä', () => {
   assert.equal(vuosiaSittenLukema(0, []), 0);
 });
 
-test('kello pyöristää suuret luvut eikä pyöri sotkuna', () => {
-  assert.equal(kellonAskel(300000), 1000);
-  assert.equal(kellonAskel(45000), 100);
-  assert.equal(kellonAskel(3000), 10);
-  assert.equal(kellonAskel(776), 1);
+/*
+ * ASKEL TULEE PYSÄKKIVÄLISTÄ (Fablen arvio 6.9.2026). Ensimmäinen
+ * toteutus otti askeleen lukeman suuruudesta, ja ensimmäisellä välillä
+ * (300 000 → 233 000, noin 2,6 s) kello ehti vaihtua 67 kertaa: luku
+ * pyöri harmaana sotkuna. Nyt jokainen väli saa oman askeleensa, ja
+ * vaihtoja on kaikilla väleillä muutama sekunnissa.
+ */
+test('kellon askel tulee pysäkkivälistä eikä lukeman suuruudesta', () => {
+  // Yksi väli: suurin tikas, joka mahtuu väliin kuudesti.
+  assert.equal(valinAskel(300000, 233000), 10000);
+  assert.equal(valinAskel(45000, 42000), 500);
+  assert.equal(valinAskel(40500, 40000), 100, 'lyhyinkin väli liikuttaa kelloa');
+  assert.equal(valinAskel(2850, 750), 200);
+  // Jokainen tikas on sadan monikerta: kaksi viimeistä nollaa seisovat.
+  for (const tikas of KELLON_ASKELEET) assert.equal(tikas % 100, 0, `${tikas}`);
+
+  // Oikea aineisto: vaihtoja on välillä 5–15, ei 67 eikä yhtä.
+  const arvot = LINSSI.aikajana.tapahtumat.map((t) => t.vuosiaSitten);
+  for (let i = 0; i < arvot.length - 1; i += 1) {
+    const askel = kellonAskel((arvot[i] + arvot[i + 1]) / 2, arvot);
+    const muutoksia = (arvot[i] - arvot[i + 1]) / askel;
+    assert.ok(muutoksia >= 4 && muutoksia <= 15,
+      `väli ${arvot[i]}→${arvot[i + 1]}: ${muutoksia.toFixed(1)} vaihtoa`);
+  }
+  // Ilman arvoja (tai niiden ulkopuolella) palautuu aina jokin askel.
+  assert.equal(kellonAskel(300000), 100);
+  assert.equal(kellonAskel(999999, arvot), valinAskel(arvot[0], arvot[1]));
+
   // Laskeva kello pyöristää YLÖS: näkyvä luku on se, josta ollaan
   // matkalla seuraavaan.
   assert.equal(kellonNaytto(245678.9, 1000, -1), 246000);
   assert.equal(kellonNaytto(245678.9, 1000, 1), 245000);
   assert.equal(kellonNaytto(1769.4, 1, 1), 1769, 'keksintökello ennallaan');
+});
+
+test('kaaren loppupäässä kello näyttää vuosiluvun tekstinä', () => {
+  // Viimeinen pysäkki on 750 vuotta sitten = n. 1250 jaa., tasan se
+  // luku, jonka aineiston `ajoitus` sanoo.
+  assert.equal(kellonVuositeksti(750), 'n. 1250 jaa.');
+  assert.equal(kellonVuositeksti(1900), null, 'rajalla ollaan yhä syvässä ajassa');
+  assert.equal(kellonVuositeksti(1899), 'n. 100 jaa.');
+  assert.equal(kellonVuositeksti(300000), null);
+  assert.match(LINSSI.aikajana.tapahtumat.at(-1).ajoitus, /1250/);
+  // Asteikko tarjoaa tekstin; keksintökaarella sitä ei ole koskaan.
+  assert.equal(luoAsteikko(KOEKAARI).teksti(750), 'n. 1250 jaa.');
+  assert.equal(luoAsteikko({ tapahtumat: [] }).teksti(750), null);
+  // Moottori vaihtaa rullat tekstiin ja takaisin yhdessä paikassa.
+  const nayta = metodi('naytaVuosi');
+  assert.match(nayta, /const vuositeksti = this\.asteikko\.teksti\?\.\(arvo\) \?\? null;/);
+  assert.match(nayta, /this\.naytaKellonTeksti\(vuositeksti\);/);
+  assert.match(nayta, /if \(vuositeksti === null\) \{/, 'rullia ei kosketa tekstitilassa');
+  assert.match(metodi('naytaKellonTeksti'), /classList\.add\('tekstina'\)/);
+  assert.match(CSS, /\.aikajana-kello\.tekstina \.vuosi-numero/);
 });
 
 /** Rullat tynkänä (sama muoto kuin tests/aikajana.test.mjs). */
@@ -386,4 +442,88 @@ test('linssi ja sen aineisto ovat service workerin SHELL-listalla', () => {
   // Ilman näitä linssi toimisi verkossa ja katoaisi offline.
   assert.ok(SW.includes("'./js/linssit/ihmisen-matka.js'"));
   assert.ok(SW.includes("'./js/linssit/ihmisen-matka-data.js'"));
+});
+
+
+/* ══════════════════════════════════════════════════════════════════
+ * 7. KORTIN KUVA, PIENET VERSIOT JA LUENNAT (Fablen arvio 6.9.2026)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Kolme vikaa, jotka näkyivät vasta pelissä ja jotka rikkoutuvat
+ * hiljaa uudelleen:
+ *
+ *   1. Kortissa luki pysäkin nimikirjaimet ("EI", "SY"), koska
+ *      löytökuvia ei ole vielä ämpärissä. Nyt kortti putoaa pysäkin
+ *      havainnekuvaan.
+ *   2. Jokainen kuva haettiin ensin kansiosta `pieni/`, jota tälle
+ *      kaarelle ei ole — pelkkiä 404:iä.
+ *   3. Luennat: yksi lyhyt lause pysäkkiä kohti, tiedostonimi pysäkin
+ *      tunnus, ja työkalu osaa nyt kaksi kaarta.
+ */
+
+test('kortin kuva putoaa löydöstä havainnekuvaan', () => {
+  for (const t of PYSAKIT) {
+    assert.ok(t.kuva?.osoite.includes('/esine/'), `${t.tunnus}: kortissa ei ole löytökuvaa`);
+    assert.equal(t.kuva.vara, t.ilmio.osoite, `${t.tunnus}: varakuva ei ole havainnekuva`);
+  }
+  // Muunnos on datan puolella; moottori vain käyttää kenttää.
+  assert.match(MOOTTORI, /vara: kuvatieto\.vara \?\? null/);
+  // Rajaus keskeltä: vaakakuvan turva-alue on keskimmäiset 60 %.
+  assert.match(CSS, /img\.varakuva \{ object-position: center center; \}/);
+});
+
+test('kaari kertoo, ettei sen kuvista ole pieniä versioita', () => {
+  assert.equal(LINSSI.aikajana.pienetKuvat, false);
+  assert.notEqual(KEKSINTOLINSSI.aikajana.pienetKuvat, false, 'keksinnöillä pienet versiot ovat');
+  assert.match(MOOTTORI, /this\.pienetKuvat = kaari\.pienetKuvat !== false;/);
+  // Lippu kulkee samana esilataukseen ja kuvaelementtiin, tai
+  // esilataus hakisi eri tiedoston kuin paneeli.
+  assert.equal(paneelikuvanOsoite({ osoite: 'https://x.test/a/b.jpg' }, 640, false),
+    'https://x.test/a/b.jpg');
+  assert.equal(paneelikuvanOsoite({ osoite: 'https://x.test/a/b.jpg' }, 640, true),
+    'https://x.test/a/pieni/b.webp');
+});
+
+test('luenta on yksi lyhyt lause ja tiedosto on pysäkin tunnus', () => {
+  const kaari = LINSSI.aikajana;
+  for (const t of kaari.tapahtumat) {
+    assert.equal(luennanTiedosto(t), `${t.tunnus}.mp3`, `${t.tunnus}: väärä tiedostonimi`);
+    const teksti = luennanTeksti(t);
+    // Aika, otsikko ja paikka — ja vain yksi lause kutakin.
+    assert.ok(teksti.includes(t.otsikko), `${t.tunnus}: otsikko puuttuu`);
+    assert.ok(teksti.includes(t.paikka), `${t.tunnus}: paikka puuttuu`);
+    assert.ok(teksti.length <= 130, `${t.tunnus}: luenta on ${teksti.length} merkkiä`);
+    // Mallille suuret luvut sanoina (js/linssipuhe.js lukuSanoina).
+    assert.ok(!/\d/.test(luennanPuhe(t).replace(/<break[^>]*>/g, '')),
+      `${t.tunnus}: mallille jäi numeroita`);
+  }
+  assert.equal(luennanTeksti(kaari.tapahtumat[0]),
+    'Noin 300 000 vuotta sitten. Kasvot, jotka tunnistaisi — Jebel Irhoud, Marokko.');
+  // Peli hakee luennat kaaren omasta kansiosta.
+  assert.equal(kaari.luentajuuri, `${IHMISEN_MATKA_KUVAJUURI}/puhe`);
+  assert.equal(luennanOsoite(kaari.tapahtumat[0], kaari.luentajuuri),
+    `${IHMISEN_MATKA_KUVAJUURI}/puhe/jebel-irhoud.mp3`);
+  // Esittely ja loppusanat lyhentämättä, omilla nimillään.
+  const puheet = kaarenPuheet(kaari);
+  assert.deepEqual(puheet.map((x) => x.nimi), ['esittely.mp3', 'loppu.mp3']);
+  assert.equal(puheet[0].teksti, kaari.esittely.teksti);
+  assert.equal(puheet[1].teksti, kaari.loppusanat.teksti);
+  // Loppusanat myös luetaan: ilman tätä tiedosto jäisi soimatta.
+  assert.equal(kaari.loppupuhe, true);
+  assert.match(metodi('lopeta'), /runko: LOPUN_RUNKO, juuri: this\.luentajuuri/);
+});
+
+test('työkalu ja työnkulut osaavat molemmat kaaret', () => {
+  // Työkalu: --linssi valitsee kaaren, ja kansio tulee kaaresta.
+  assert.deepEqual(Object.keys(LUENTAKAARET), ['keksinnot', 'ihmisen-matka']);
+  assert.equal(ampariKansio(LINSSI.aikajana), 'aikajana/ihmisen-matka/puhe');
+  assert.equal(ampariKansio(KEKSINTOLINSSI.aikajana), 'aikajana/keksinnot/puhe');
+  assert.equal(ampariKansio({}), 'aikajana/keksinnot/puhe', 'oletus on entinen kansio');
+  const { tyot } = valitsePysakit(LINSSI.aikajana);
+  assert.equal(tyot.length, LINSSI.aikajana.tapahtumat.length + 2);
+
+  // Työnkulut: kumpikin ajo tarjoaa tämän kaaren valintana.
+  assert.match(LUENTATYONKULKU, /options: \['keksinnot', 'ihmisen-matka'\]/);
+  assert.match(LUENTATYONKULKU, /--linssi "\$LINSSI"/);
+  assert.match(MUSIIKKITYONKULKU, /'keksinnot', 'ihmisen-matka'\]/);
 });

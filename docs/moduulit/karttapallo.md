@@ -1865,3 +1865,85 @@ rivin tarkkuudella ennallaan (tests/aikajana*.test.mjs).
   valtameren ylityksessä (altitude 0,13 → 2,02). AINEISTO ON TYNKÄ:
   js/linssit/ihmisen-matka-data.js sisältää kolme pysäkkiä, ja
   sisältöagentti korvaa sen 20 pysäkillä samaa rajapintaa vasten.
+
+
+**Ihmisen matka — Fablen arvio ja hionta (6.9.2026, v1612:n jälkeen).**
+Linssi ajettiin läpi pallolla Chromiumilla 1400 × 900 (swiftshader,
+20 pysäkin oikea aineisto) ja katsottiin kuusi hetkeä: avaus, pysäkki 1,
+pysäkki 8 (Sahulin merimatka), 16 → 17 (White Sands → Beringia),
+pysäkki 20 ja loppu.
+
+*Mikä toimii.* Reittiviiva kasvaa pysäkki pysäkiltä ja on pallolla
+selvästi luettava; kamera nousee merimatkoilla niin, että lähtöranta ja
+viiva ovat kuvassa (altitude 0,13 → 0,84 Sahulissa, 1,20 Siperia →
+White Sands → Beringia -hypyissä) ja lopussa perääntyy koko kaareen
+(2,50), jolloin kaikki kaksikymmentä valoa palavat yhtä aikaa.
+Hyppykertoimeen 2,2 ja kattoon 3600 ei ollut aihetta koskea: katto
+osuu juuri niihin kolmeen hyppyyn, joissa sitä tarvitaan, eikä yksikään
+väli jäänyt liian ahtaaksi. Havainnekuvat tulevat ajoissa (paneelin
+esilataus kaksi pysäkkiä edellä) ja kuvateksti sanoo saman ajoituksen
+kuin kellorivi.
+
+*Kolme vikaa, jotka korjattiin.*
+
+- **Kortissa oli nimikirjainlaatta** ("EI", "SY"), koska löytökuvia
+  (`esine/`) ei ole vielä ämpärissä — ruma ja tyhjä. Nyt kortin
+  kuvatieto kantaa VARAKUVAN (`vara`, js/linssit/ihmisen-matka.js), ja
+  moottori putoaa siihen kuvaelementin omalla `error`-tapahtumalla
+  (js/aikajana.js `otaVarakuva`): kortissa on pysäkin havainnekuva
+  3:4-kehyksessä, rajattuna KESKELTÄ (`css .varakuva`
+  `object-position: center center`), koska kuvaputken turva-alue on
+  keskimmäiset 60 % — muotokuvien `center top` leikkaisi maiseman
+  taivaaksi. Erillistä HEAD-kyselyä ei tehdä: selain hakee osoitteen
+  kerran joka tapauksessa, ja kun kuvaputki tuo löydöt, ensimmäinen
+  pyyntö vain alkaa vastata 200 eikä koodi muutu.
+- **Kello pyöri harmaana sotkuna.** Askel tuli lukeman suuruudesta
+  (100 000 → tuhat vuotta), ja koska pysäkkiväli kestää noin 2,6 s,
+  ensimmäisellä välillä (300 000 → 233 000) kello vaihtui 67 kertaa —
+  ja matkamittarin murto-osa näytti lisäksi puolittaisia numeroita. Nyt
+  askel lasketaan VÄLISTÄ (`valinAskel`, tikkaat 100 … 50 000, tavoite
+  noin kuusi vaihtoa välissä), jokainen tikas on sadan monikerta (kaksi
+  viimeistä nollaa seisovat aina, isoissa askelissa kolme) ja
+  "vuotta sitten" -asteikko ei kuljeta murto-osaa lainkaan
+  (`murtoOsa: false`): kello ETENEE ASKELIN, ja jokainen askel on oma
+  pieni rullauksensa. Mitattu vaihtotahti on nyt 2–4 kertaa sekunnissa
+  kaikilla väleillä (vartija tests/ihmisen-matka.test.mjs laskee sen
+  oikeasta aineistosta). Loppupäässä kello vaihtaa VUOSILUKUUN
+  (`kellonVuositeksti`, alle 1 900 v. sitten): viimeisellä pysäkillä
+  lukee "n. 1250 jaa." — tasan se, mitä aineiston `ajoitus` sanoo, eikä
+  "750 v. sitten". Keksintökello on ennallaan (`murtoOsa: true`,
+  askel 1, ei tekstiä).
+- **Turhat 404:t.** Paneeli haki jokaisen kuvan ensin kansiosta
+  `pieni/`, jota tälle kaarelle ei ole tehty (tools/tee-pienet-kuvat.mjs
+  osaa vain `aikajana/keksinnot/`). Kaari kertoo nyt itse
+  `pienetKuvat: false`, jolloin moottori ohittaa koko portaikon eikä
+  esilataa koko kaarta (esilataus on kannattava vain pieninä
+  tiedostoina; alkuperäisinä se olisi kymmenen megatavun ryntäys).
+  Ajossa jää tasan yksi 404 pysäkkiä kohti — löytökuvan koetus.
+
+*Luennat ja musiikki.* `tools/generoi-linssiluennat.mjs` sai
+`--linssi <keksinnot|ihmisen-matka>`: kaari valitaan lipulla, kansio
+luetaan kaaren omasta `luentajuuri`-kentästä (`ampariKansio`) ja
+pysäkki valitaan tunnuksella, koska vuosilukuja ei ole. Pysäkin luenta
+on YKSI LYHYT LAUSE — "Noin 300 000 vuotta sitten. Kasvot, jotka
+tunnistaisi — Jebel Irhoud, Marokko." — ja suuret luvut menevät
+mallille sanoina (`lukuSanoina`, sama oppi kuin keksintökaaren
+vuosiluvuilla). Esittely ja loppusanat luetaan lyhentämättä
+(`esittely.mp3`, `loppu.mp3`); loppusanojen luenta on kaaren valinta
+(`loppupuhe: true`), joten keksintökaaren loppu on yhä hiljainen eikä
+ajo tarjoa sille maksullista kutsua. Työnkulut: `generoi-linssiluennat`
+sai syötteen `linssi` (oletus keksinnot — entinen käytös) ja
+`generoi-siirtymamusiikki` valinnan `ihmisen-matka` (prompti oli jo
+v1612:ssa: syvä ja hidas, rumpu kuin sydämen syke, sanaton kaukainen
+ihmisääni, ei melodiaa, 45–60 s looppi). Kumpaakaan ei ole vielä
+ajettu: `aanet/linssi-ihmisen-matka-lyria.mp3` ja
+`aikajana/ihmisen-matka/puhe/` vastaavat 404, eli kaari on toistaiseksi
+hiljainen — puuttuva tiedosto ei riko ajoa.
+
+*Avoinna.* (1) Löytökuvat (`esine/`) puuttuvat, joten kortissa ja
+paneelissa on sama kuva; kuvaputken erä poistaa toiston itsestään.
+(2) Pieniä versioita ei ole: kortit lataavat alkuperäiset 1536 × 1024
+-kuvat, mikä on kaaren mitassa noin kymmenen megatavua. Kun
+tools/tee-pienet-kuvat.mjs yleistetään toiselle kansiolle, riittää
+poistaa `pienetKuvat: false` — kortit kevenevät alle sadasosaan.
+(3) Luennat ja musiikki odottavat ajoa.

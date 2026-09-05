@@ -1,4 +1,14 @@
-# Generoi keksintölinssin luennat ja vie ne ämpäriin.
+# Generoi aikajanalinssin luennat ja vie ne ämpäriin.
+#
+# KAKSI KAARTA (6.9.2026): syöte `linssi` valitsee, kumman kaaren
+# luennat generoidaan. Oletus on `keksinnot` eli ajon entinen käytös.
+#   keksinnot      28 kohdetta → aikajana/keksinnot/puhe/
+#   ihmisen-matka  22 kohdetta → aikajana/ihmisen-matka/puhe/
+#                  (20 pysäkkiä + esittely.mp3 + loppu.mp3). Pysäkin
+#                  luenta on YKSI LYHYT LAUSE: "Noin 300 000 vuotta
+#                  sitten. Kasvot, jotka tunnistaisi — Jebel Irhoud,
+#                  Marokko." Tiedostonimi on pysäkin tunnus, ja se
+#                  tulee datasta samalla funktiolla kuin pelissä.
 #
 # Omistajan tilaus 4.9.2026, sanatarkasti: *"Generoi selostajan
 # äänellä jokaiseen kohtaan vuosiluku, keksijän nimi ja keksintö, eli
@@ -65,12 +75,24 @@ name: Generoi linssiluennat
 on:
   workflow_dispatch:
     inputs:
+      linssi:
+        description: >-
+          Minkä aikajanakaaren luennat generoidaan. "keksinnot" on
+          entinen käytös (aikajana/keksinnot/puhe/), "ihmisen-matka"
+          vie kansioon aikajana/ihmisen-matka/puhe/.
+        required: true
+        type: choice
+        default: 'keksinnot'
+        options: ['keksinnot', 'ihmisen-matka']
       pysakit:
         description: >-
           Vuodet pilkuin TAI välilyönnein (esim. "1769,1783" tai
-          "1769 1783"), tai kaaren omat puheet avaimina "esittely" ja
-          "valinaytos". Tyhjä = koko kaari, 28 kohdetta. HUOM: vuosi
-          1895 valitsee kaikki kolme sen vuoden pysäkkiä.
+          "1769 1783"), tai kaaren omat puheet avaimina "esittely",
+          "valinaytos" ja "loppu". Tyhjä = koko kaari (keksinnöt 28,
+          ihmisen matka 22 kohdetta). HUOM: vuosi 1895 valitsee kaikki
+          kolme sen vuoden pysäkkiä. Ihmisen matkassa pysäkki
+          valitaan TUNNUKSELLA (esim. "jebel-irhoud"), koska
+          vuosilukuja ei ole.
         required: false
         default: ''
       kuiva:
@@ -93,10 +115,11 @@ on:
 permissions:
   contents: read
 
-# Yksi ajo kerrallaan: kaksi rinnakkaista kirjoittaisi ämpärin samoihin
-# avaimiin. Oma ryhmänsä — tämä koskee kansiota aikajana/keksinnot/puhe/.
+# Yksi ajo kerrallaan KAARTA KOHTI: kaksi rinnakkaista ajoa samalle
+# kaarelle kirjoittaisi ämpärin samoihin avaimiin, mutta kaksi eri
+# kaarta eivät osu toistensa kansioihin.
 concurrency:
-  group: generoi-linssiluennat
+  group: generoi-linssiluennat-${{ inputs.linssi }}
   cancel-in-progress: false
 
 jobs:
@@ -165,12 +188,13 @@ jobs:
       - name: Kuiva ajo (tekstit ja kohdetiedostot)
         env:
           PYSAKIT: ${{ inputs.pysakit }}
+          LINSSI: ${{ inputs.linssi }}
         run: |
           set -euo pipefail
           if [ -n "$PYSAKIT" ]; then
-            node tools/generoi-linssiluennat.mjs --kuiva --pysakit $PYSAKIT
+            node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" --kuiva --pysakit $PYSAKIT
           else
-            node tools/generoi-linssiluennat.mjs --kuiva
+            node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" --kuiva
           fi
 
       - name: Generoi luennat ja vie ämpäriin
@@ -179,20 +203,21 @@ jobs:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
           PYSAKIT: ${{ inputs.pysakit }}
           PAKOTA: ${{ inputs.pakota }}
+          LINSSI: ${{ inputs.linssi }}
         run: |
           set -euo pipefail
           if [ -n "$PYSAKIT" ]; then
             if [ "$PAKOTA" = "kyllä" ]; then
-              node tools/generoi-linssiluennat.mjs --pakota --pysakit $PYSAKIT
+              node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" --pakota --pysakit $PYSAKIT
             else
-              node tools/generoi-linssiluennat.mjs --pysakit $PYSAKIT
+              node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" --pysakit $PYSAKIT
             fi
           else
             if [ "$PAKOTA" = "kyllä" ]; then
               echo "pakota vaatii pysakit-listan — koko kaarta ei uusita vahingossa." >&2
               exit 1
             fi
-            node tools/generoi-linssiluennat.mjs
+            node tools/generoi-linssiluennat.mjs --linssi "$LINSSI"
           fi
 
       # Vartija sille, mitä tämä ajo lupaa: repoon ei jää mitään.
