@@ -1,13 +1,26 @@
 /*
  * ISOISÄN VALOKUVAT 1873 (omistajan tilaus 3.9.2026, Raamattu: ISOISAN
- * VALOKUVAT). Kuvaputken generoimat albumiinivedokset — sama mies
- * kaikissa: noin 35–40-vuotias brittiläinen herrasmiesmatkailija,
- * vilpitön hymy. Kaanon isoisän ulkonäöstä on docs/tarina.md:ssä
- * ("Hahmo"). Kuvat ovat pelin R2-mediämpärissä (kuvaputki varmensi
- * 3.9.2026 19:42 UTC), ja niihin viitataan valmiina osoitteina.
+ * VALOKUVAT). Kuvaputken generoimat albumiinivedokset. Kuvat ovat pelin
+ * R2-mediämpärissä (kuvaputki varmensi 3.9.2026 19:42 UTC), ja niihin
+ * viitataan valmiina osoitteina.
+ *
+ * ── ISOISÄ JÄÄ ARVOITUKSEKSI (Raamattu, omistaja 5.9.2026 ilta) ────
+ *
+ * Sanatarkasti: *"isoisän on hyvä jäädä vähän arvoitukseksi, miltä hän
+ * näytti jotta jokainen pelaaja voi itse muodostaa näkemyksensä
+ * mielikuvituksessa. hän vain kävi mielenkiintoisissa paikoissa ja aika
+ * vauhdilla."* Pelin kuvat ovat siis joko hänen itse ottamiaan näkymiä
+ * tai kuvia, joissa hän ei hahmotu täysin — eikä kuvateksti kuvaile
+ * hänen ulkonäköään. Kuvateksti on siksi muotoa "Isoisän kuva:
+ * <paikka>, 1873".
+ *
+ * Kuvaputki toimittaa uudet, tälle säännölle tehdyt kuvat lähiaikoina;
+ * ne KORVAAVAT nämä (omistaja 5.9.2026 klo 23.15: *"kohta pitäisi tulla
+ * isoisän uusia kuvia, niin käytä niitä ennemmin"*). Vaihto tapahtuu
+ * yhden taulun rivin sisällä, ks. `lento` alempana.
  *
  * Kytkentä: ensimmäisessä lentokohtauksessa (js/ui.js
- * aloituslentoSisalla) Bombay-kuva "löytyy matkakirjan välistä" kartan
+ * aloituslentoSisalla) `lento`-kuva "löytyy matkakirjan välistä" kartan
  * päälle kuvatekstinsä kanssa; napautus suurentaa. Aloitussivun
  * Kanton-kuva oli mukana v1509–v1510, omistaja jätti sen pois 3.9.2026
  * ("jätetään isoisän kuva pois etusivulta"); tiedot säilyvät tässä.
@@ -45,6 +58,36 @@ export const ISOISAN_VALOKUVAT = {
     lahde: 'Kuvaputken generoitu valokuva',
     kuvateksti: 'Isoisä, Bombay, 1873',
   },
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * AVAUSLENNON KUVA — YKSI VAIHDETTAVA PAIKKA
+   * ══════════════════════════════════════════════════════════════
+   *
+   * Omistaja 5.9.2026 klo 23.10 (työpöytäkaappaus avauslennosta):
+   * *"tähän pitää vaihtaa uusi kuva jossa isoisää ei tunnista."*
+   * Sama ilta klo 23.15: *"kohta pitäisi tulla isoisän uusia kuvia,
+   * niin käytä niitä ennemmin."*
+   *
+   * Lento lukee VAIN tätä avainta (js/ui.js aloituslentoSisalla), joten
+   * kuvaputken seuraava kuva vaihdetaan tähän yhdellä rivillä —
+   * `osoite`, `kuvateksti`, `selite` ja `lahde`, ei muita
+   * koodimuutoksia. `rajaus` on VALINNAINEN eikä tässä kuvassa ole
+   * sitä: vaalea vinjetti ja paperin reunat ovat jo kuvassa, eikä
+   * pahvireunusta ole leikattavaksi.
+   *
+   * Kuva on kuvaputken toimitus 5.9.2026 illalla
+   * (isoisa-bombay-aged-r20260905-v1): isoisä astuu veneeseen selin
+   * kameraan Bombayn satamassa — hän on kuvassa, mutta ei hahmotu
+   * (Raamattu: ISOISA JAA ARVOITUKSEKSI).
+   */
+  lento: {
+    osoite: `${ISOISAN_KUVAJUURI}isoisa-bombay-aged-r20260905-v1.jpg`,
+    selite: 'Bombayn satama 1873: isoisä astuu veneeseen selin kameraan, '
+      + 'taustalla höyrylaivoja ja rantakatu. Valokuva löytyi matkakirjan '
+      + 'välistä.',
+    lahde: 'Kuvaputken generoitu valokuva',
+    kuvateksti: 'Isoisä, Bombay, 1873',
+  },
 };
 
 /**
@@ -60,7 +103,9 @@ export const LENNON_VALOKUVAN_VIIVE_MS = 2600;
 
 /**
  * Rajaus CSS-muuttujina (css .isoisa-rajattu): clip-path leikkaa kortin
- * reunoihin ja skaala täyttää elementin leikatulla kortilla.
+ * reunoihin ja skaala täyttää elementin leikatulla kortilla. Rajaus on
+ * valinnainen — uusissa kuvaputken kuvissa ei ole pahvireunusta, jolloin
+ * tyyliä ei tarvita lainkaan.
  */
 export function rajausTyyli(kuva) {
   const r = kuva?.rajaus;

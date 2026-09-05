@@ -941,6 +941,74 @@ säilyy `?lauta=kartta`-tilassa ja pallon varapolkuna.
   1 kone, harso, repliikki). Vanha kulku `?lauta=kartta` ennallaan
   (svg#board 206 elementtiä, 1 kohderengas).
 
+**Avauslento: paksu viiva, zoom, pyörintä, kuva ilman isoisää (5.9.2026
+ilta).** Omistaja työpöytäkaappauksesta klo 23.10, sanatarkasti: *"tähän
+pitää vaihtaa uusi kuva jossa isoisää ei tunnista. lentokone saisi tehdä
+saman paksun viivan kuin etusivulla. näkymä saisi olla zoomautunut
+hieman lähemmäs. pallo voisi pyöriä hitaasti lennon aikana."*
+
+- **Paksu punainen viiva.** `js/pallolauta/avaus.js` antaa
+  viivakerroksen osaan `avauslento` KOKO kaaren kerralla
+  (`reitit.js jalki(pisteet, { paksuus, osuus })`) ja kasvattaa lennon
+  aikana vain `osuus`-lukua: viiva piirtyy KATKOVIIVANA, jonka viivaosa
+  on kuljettu osuus ja väli 1. **Miksi näin:** joka kehyksen pistelistan
+  kirjoitus jätti viivan ruudulla lennon ensimmäisen pätkän mittaiseksi
+  Lontoon viereen (mitattu Chromiumilla) — Globe.gl rakentaa Line2:n
+  geometrian `interpolK`-tweenin kautta, mutta katkoviivan luvut
+  kirjoitetaan materiaaliin joka päivityksellä. Väri on
+  `REITIN_VARIT.avauslennonJalki` = `rgba(194, 69, 47, 0.92)` eli
+  täsmälleen css `.etusivupallo-viiva` (#c2452f), ja paksuus on sama
+  luku 11 kuin sen `stroke-width`. **MITATTU: `pathStroke` on tässä
+  Globe.gl-versiossa RUUTUPIKSELEITÄ, EI ASTEITA** — viiva on Line2,
+  jonka LineMaterialissa `worldUnits` on epätosi ja `resolution` kotelon
+  koko css-pikseleinä (374 × 777), ja varjostin laskee
+  `offset *= linewidth; offset /= resolution.y`. Ensimmäinen toteutus
+  laski paksuuden asteina (0,89) moduulien kommenttien mukaan, ja viiva
+  jäi alle pikselin levyiseksi eli näkymättömiin. **AVOIN:** samat
+  "asteina"-kommentit ovat myös `MATKAREITIN_PAKSUUS_AST` (0,05),
+  `LENTOKAAREN_PAKSUUS_AST` ja linssien uomapaksuuksissa; ne piirtyvät
+  siis paljon ohuempina kuin oli tarkoitus (kaaret ovat putkia ja
+  käyttäytyvät eri tavalla). Korjaus on oma työnsä. Jälki kulkee
+  koneen kaarella eikä pinnalla — kone ja jälki lukevat saman kaavan
+  (`reitit.js lentokaarenKohta`) ja saman kellon (`hypynVaihe`), joten
+  viivan kärki on tasan koneen alla. Kerros sai per-piste-korkeuden
+  (`pathPointAlt` kolmiluvusta `[lat, lng, korkeus]`). Katkoviivakaari
+  jää hennoksi suunnitteluviivaksi jäljen alle
+  (`REITIN_VARIT.avauslennonSuunnitelma`, peittävyys 0,3). Jälki jää
+  näkyviin lennon jälkeen ja katoaa vasta `pura()`:ssa saapumiskortin
+  alla; poisto palauttaa kerroksen siirtymän, joten se häipyy pehmeästi.
+- **Zoom.** Avauslennolla on oma marginaali
+  (`AVAUSLENNON_RAJAUKSEN_MARGINAALI` 0,2) tavallisen lennon 0,35:n
+  sijaan: Lontoo → Ateena 44,3° → 36,5° (1400 × 900) ja 40,6° → 33,4°
+  (390 × 844).
+- **Hidas pyörintä.** `AVAUSLENNON_PYORINTA_AST` (5°) koko lennon
+  mitalla, `pyorinnanPehmennys`-liu'ulla (pehmeät päät, lähes tasainen
+  väli). Rajauslaatikkoa siirretään lähtöön puoli pyörintää lännemmäs,
+  jolloin kamera SEURAA konetta ja KONE on kuvassa lennon molemmissa
+  päissä. Mitattu Chromiumilla: työpöydällä (kotelo 1379 × 826) varaa
+  reunaan 183 px joka suuntaan; puhelimella (374 × 777) kone on kuvassa
+  sekä lähdössä (x 115) että perillä (x 356) — parannus, sillä ennen
+  tätä Ateena jäi 11 px kotelon oikean reunan ULKOPUOLELLE koko lennon
+  ajan. Reitin toinen pää saa valua kuvasta lennon kuluessa. Ajo on
+  laudan oma `ajaKamera`, joten ele keskeyttää sen; reduced motionissa
+  ei pyöritä eikä siirretä laatikkoa. Kuljettajan oma
+  `LENNON_KAMERA_MS`-ajo korvautuu tällä samassa kehyksessä.
+- **Kuva, jossa isoisää ei tunnista.** Lento lukee vain
+  `ISOISAN_VALOKUVAT.lento`-avainta (js/isoisan-valokuvat.js), joka on
+  YKSI VAIHDETTAVA PAIKKA: kuvaputken uusi kuva vaihdetaan siihen
+  yhdellä rivillä (omistaja klo 23.15: *"kohta pitäisi tulla isoisän
+  uusia kuvia, niin käytä niitä ennemmin"*), ja `rajaus` on
+  VALINNAINEN. Kuva on kuvaputken 5.9.2026 illalla toimittama
+  `isoisa-bombay-aged-r20260905-v1`: isoisä astuu veneeseen selin
+  kameraan Bombayn satamassa — hän on kuvassa mutta ei hahmotu
+  (Raamattu: ISOISA JAA ARVOITUKSEKSI). Kuva näytetään KOKONAAN
+  paperireunoineen, ilman rajausta: vaalea vinjetti on jo kuvassa eikä
+  pahvireunusta ole. Kuvateksti on omistajan sanoin *"Isoisä, Bombay,
+  1873"* — paikka ja vuosi, ei ulkonäköä.
+- Vartijat: tests/pallolauta.test.mjs (neljä uutta) ja päivitetty
+  tests/isoisan-valokuvat.test.mjs. Selaimessa varmistettu Chromiumilla
+  (swiftshader, r2.dev Noden fetchillä) 1400 × 900 ja 390 × 844.
+
 **Mitä js/kartta.js:stä pallolauta vielä ajaa (mitattu aallon 3B
 työlistaksi).** Kartta-olion metodit käärittiin selaimessa laskuriin ja
 peli pelattiin läpi avausnäkymästä ensimmäiseen nopanheittoon asti

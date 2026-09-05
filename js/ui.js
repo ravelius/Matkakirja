@@ -19914,25 +19914,30 @@ export class UI {
      * ISOISÄN VALOKUVA MATKAKIRJAN VÄLISTÄ (omistaja 3.9.2026; js/
      * isoisan-valokuvat.js). Kuva nousee kartan päälle repliikin alettua
      * ja pysyy lennon loppuun; napautus suurentaa eikä ohita lentoa.
+     *
+     * KUVA ON TAULUN AVAIN `lento`, EI PAIKKAKUNTA (omistaja 5.9.2026
+     * klo 23.10: *"tähän pitää vaihtaa uusi kuva jossa isoisää ei
+     * tunnista"*). Kuvaputken uusi kuva vaihdetaan yhdellä rivillä
+     * js/isoisan-valokuvat.js:ssä, eikä tähän kohtaan tarvitse koskea.
      */
     const valokuvaNappi = html('button', 'lento-valokuva');
     valokuvaNappi.type = 'button';
-    valokuvaNappi.setAttribute('aria-label', `${ISOISAN_VALOKUVAT.bombay.selite} — avaa suurena`);
+    valokuvaNappi.setAttribute('aria-label', `${ISOISAN_VALOKUVAT.lento.selite} — avaa suurena`);
     const valokuva = document.createElement('img');
-    valokuva.src = ISOISAN_VALOKUVAT.bombay.osoite;
-    valokuva.alt = ISOISAN_VALOKUVAT.bombay.selite;
+    valokuva.src = ISOISAN_VALOKUVAT.lento.osoite;
+    valokuva.alt = ISOISAN_VALOKUVAT.lento.selite;
     valokuva.decoding = 'async';
     valokuva.draggable = false;
     valokuva.className = 'isoisa-rajattu';
-    valokuva.style.cssText = rajausTyyli(ISOISAN_VALOKUVAT.bombay);
+    valokuva.style.cssText = rajausTyyli(ISOISAN_VALOKUVAT.lento);
     valokuvaNappi.appendChild(valokuva);
     // Pieni lappu kortin alla, samassa kallistuksessa (omistaja 3.9.2026).
-    const lappu = valokuvanKuvateksti(ISOISAN_VALOKUVAT.bombay);
+    const lappu = valokuvanKuvateksti(ISOISAN_VALOKUVAT.lento);
     if (lappu) valokuvaNappi.appendChild(html('span', 'lento-valokuvateksti', lappu));
     valokuvaNappi.addEventListener('pointerdown', (e) => e.stopPropagation());
     valokuvaNappi.addEventListener('click', (e) => {
       e.stopPropagation();
-      avaaKohdeSuurennos(this, ISOISAN_VALOKUVAT.bombay, () => valokuvaNappi, 'lentoValokuva');
+      avaaKohdeSuurennos(this, ISOISAN_VALOKUVAT.lento, () => valokuvaNappi, 'lentoValokuva');
     });
     overlay.appendChild(valokuvaNappi);
     const valokuvanAjastin = setTimeout(() => valokuvaNappi.classList.add('nakyy'), LENNON_VALOKUVAN_VIIVE_MS);

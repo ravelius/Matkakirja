@@ -46,7 +46,7 @@ import { pixelOf, pointAlong } from '../rules.js';
 import { hypynHuippu, hypynVaihe } from '../siirtokoreografia.js';
 import { PALLOKAMERAN_AJO_MS } from './kamera.js';
 import { nappulaElementti, MERKIN_KORKEUS } from './merkit.js';
-import { isoympyranPiste } from './reitit.js';
+import { lentokaarenKohta } from './reitit.js';
 
 /** Liikkuvan nappulan svg:n mitat (nappulaElementti): jalka alareunassa. */
 const NAPPULAN_LEVEYS_PX = 32;
@@ -193,11 +193,11 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false }) {
     if (hyppy) {
       const t = Math.min(1, (hetki - hyppy.alku) / hyppy.kesto);
       const { e } = hypynVaihe(t);
-      const { kaari } = hyppy;
-      const kohta = isoympyranPiste(kaari.alku, kaari.loppu, e);
-      // Kone kaaren korkeudella: sama paraabeli kuin kaaren muodolla.
-      const korkeus = kaari.korkeus * 4 * e * (1 - e) + MERKIN_KORKEUS;
-      piste = pallo.getScreenCoords(kohta.lat, kohta.lng, korkeus);
+      // Kone kaaren korkeudella: sama paraabeli kuin kaaren muodolla —
+      // ja sama kaava kuin avauslennon paksulla viivalla, joka piirtyy
+      // koneen perään (reitit.js lentokaarenKohta).
+      const kohta = lentokaarenKohta(hyppy.kaari, e, MERKIN_KORKEUS);
+      piste = pallo.getScreenCoords(kohta.lat, kohta.lng, kohta.korkeus);
       if (t >= 1) {
         ankkuri = hyppy.b;
         const { valmis } = hyppy;

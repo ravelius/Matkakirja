@@ -33,22 +33,100 @@
  * (`{ lento: true }`), jolloin sama sopimus palvelee molempia lentoja
  * eikä koneen kuljetusta ole kahdessa paikassa.
  *
+ * ── KOLME OMISTAJAN TILAUSTA 5.9.2026 KLO 23.10 ───────────────────
+ *
+ * Työpöytäkaappauksesta avauslennolta (Lontoo → Ateena), sanatarkasti:
+ * *"lentokone saisi tehdä saman paksun viivan kuin etusivulla. näkymä
+ * saisi olla zoomautunut hieman lähemmäs. pallo voisi pyöriä hitaasti
+ * lennon aikana."* Kolme lukua alempana vastaa kutakin:
+ *
+ *   AVAUSLENNON_VIIVAN_PX      paksu punainen viiva koneen perässä
+ *   AVAUSLENNON_RAJAUKSEN_MARGINAALI   tiukempi rajaus kuin muilla lennoilla
+ *   AVAUSLENNON_PYORINTA_AST   pallon hidas kierto lennon aikana
+ *
+ * Kolme tilausta kytkeytyvät toisiinsa: mitä tiukempi rajaus, sitä
+ * vähemmän pyörinnälle jää varaa ennen kuin Lontoo tai Ateena valuu
+ * ulos kuvasta. Näkymä lähtee siksi puoli pyörintää lännempää ja päätyy
+ * puoli pyörintää idemmäs: kamera SEURAA konetta, ja kone on kuvassa
+ * lennon molemmissa päissä. Reitin toinen pää saa valua kuvasta lennon
+ * kuluessa — jälki on jälki. Mitattu Chromiumilla 1400 × 900 ja
+ * 390 × 844 (luvut alempana kunkin vakion kohdalla).
+ *
  * ── KAMERA ON JO RAJAUKSESSA, KUN KONE LÄHTEE ─────────────────────
  *
  * Tasokartalla lennon kamera ASETTUU pergamenttiarkin takana eikä aja
  * (omistajan tilaus 25.8.2026), ja lennon ajan kuva on paikallaan.
  * Pallolla tehdään sama: ui.js ajaa kameran tämän kohtauksen antamaan
- * rajaukseen kestolla 0 arkin takana. Rajaus on lähtö- ja
- * kohdekaupungin laatikko täsmälleen samalla kaavalla ja marginaalilla
- * kuin pallon omalla lennolla (siirto.js lennonRajaus,
- * LENNON_RAJAUKSEN_MARGINAALI), joten kuljettajan oma kamera-ajo osuu
- * samaan kohteeseen ja jää nolla-ajoksi — kamera ei nytkähdä koneen
- * lähtiessä. Perillä kuljettajan `laske()` sukeltaa kohdekaupunkiin
+ * rajaukseen kestolla 0 arkin takana. Rajaus on lähtö- ja kohdekaupungin
+ * laatikko samalla kaavalla kuin pallon omalla lennolla (siirto.js
+ * lennonRajaus) — mutta AVAUKSELLA ON OMA MARGINAALINSA ja oma
+ * lähtökeskipisteensä (5.9.2026, kolme tilausta alla). Kuljettajan oma
+ * kamera-ajo (siirto.js hyppaa, LENNON_KAMERA_MS) osuisi siksi eri
+ * kohteeseen — mutta se ei ehdi maalata kertaakaan: `lenna` käynnistää
+ * heti perään pyörinnän ajon, ja ajaKamera pysäyttää edellisen ajon
+ * samassa kehyksessä. Kamera ei siis nytkähdä koneen lähtiessä.
+ * Perillä kuljettajan `laske()` sukeltaa kohdekaupunkiin
  * saapumisnäkymään; se tapahtuu saapumiskortin alla, joten kartta
  * "feidautuu sisään suoraan oikeassa zoomitilassa" kuten kartalla.
  */
 
-import { LENNON_RAJAUKSEN_MARGINAALI, lennonRajaus } from './siirto.js';
+import { hypynVaihe } from '../siirtokoreografia.js';
+import { PALLOLAUDAN_LEVEYS } from './kamera.js';
+import { REITIN_KORKEUS, lentokaarenKohta } from './reitit.js';
+import { lennonRajaus } from './siirto.js';
+
+/**
+ * AVAUSLENNON RAJAUS ON TIUKEMPI KUIN MUIDEN LENTOJEN (omistaja
+ * 5.9.2026: *"näkymä saisi olla zoomautunut hieman lähemmäs"*).
+ * Tavallinen lento käyttää LENNON_RAJAUKSEN_MARGINAALIa (0,35), joka
+ * jättää kaupunkien ympärille reilusti ilmaa; avauksessa pallo saa
+ * täyttää enemmän ruutua, koska kuvassa on vain kaksi kaupunkia ja
+ * yksi kaari. Mitattuna Lontoo → Ateena: 44,3° → 36,5° (1400 × 900) ja
+ * 40,6° → 33,4° (390 × 844), eli noin viidennes lähempänä.
+ */
+export const AVAUSLENNON_RAJAUKSEN_MARGINAALI = 0.2;
+/**
+ * PALLO PYÖRII HITAASTI LENNON AIKANA (omistaja 5.9.2026). Kamera
+ * liukuu tämän verran itään koko lennon mitalla — puolet ennen ja
+ * puolet jälkeen bbox:n keskikohdan, jolloin liike SEURAA konetta eikä
+ * vain siirrä kuvaa. Lennon kesto on 4,8–20 s, joten kulmanopeus on
+ * enintään noin asteen sekunnissa: liike näkyy, mutta se ei kiirehdi.
+ * Reduced motion: ei pyörintää lainkaan.
+ */
+export const AVAUSLENNON_PYORINTA_AST = 5;
+/**
+ * PAKSU PUNAINEN VIIVA KUTEN ETUSIVULLA (omistaja 5.9.2026: *"lentokone
+ * saisi tehdä saman paksun viivan kuin etusivulla"*). Etusivun viiva on
+ * css .etusivupallo-viiva, stroke-width 11 — ja tämä on sama luku.
+ *
+ * PATHSTROKE ON RUUTUPIKSELEITÄ, EI ASTEITA. Mitattu Chromiumilla
+ * 5.9.2026: Globe.gl 2.46 rakentaa viivan Line2:na, jonka
+ * LineMaterialissa `worldUnits` on epätosi ja `resolution` on kotelon
+ * KOKO CSS-pikseleinä (mitattu 374 × 777) — varjostin laskee
+ * `offset *= linewidth; offset /= resolution.y`, eli luku on
+ * css-pikseleitä ruudulla. Ensimmäinen toteutus laski paksuuden
+ * asteina (0,89) tämän moduulin kommenttien mukaan, ja viiva jäi alle
+ * pikselin levyiseksi eli näkymättömiin. AVOIN: samat "asteina"-
+ * kommentit ovat myös reitit.js:n ja linssien paksuusvakioissa
+ * (MATKAREITIN_PAKSUUS_AST 0,05 jne.) — ne ovat siis paljon ohuempia
+ * kuin oli tarkoitus, mutta niiden korjaus on oma työnsä eikä kuulu
+ * tähän tilaukseen.
+ */
+export const AVAUSLENNON_VIIVAN_PX = 11;
+/** Jäljen pisteitä koko kaarella; kasvava jälki saa niistä osuutensa. */
+export const AVAUSLENNON_JALJEN_PISTEET = 64;
+/** Lautayksiköitä yhdessä pituusasteessa pallolaudalla. */
+const YKSIKKOA_ASTEESSA = PALLOLAUDAN_LEVEYS / 360;
+
+/**
+ * Pyörinnän pehmennys: liikkeelle ja pysähdykseen pehmeästi, välissä
+ * lähes tasainen. Ei siirtoajon trapetsia — se on tehty lyhyille
+ * kamera-ajoille, ei koko lennon mittaiselle liu'ulle.
+ */
+export function pyorinnanPehmennys(t) {
+  const x = Math.max(0, Math.min(1, t));
+  return x * x * (3 - 2 * x);
+}
 
 /**
  * Avauslennon kohtaus pallolle. `lahto` ja `kohde` ovat laudan
@@ -61,12 +139,50 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
   const kohdePos = { type: 'city', city: kohde.id };
   let kuljettaja = null;
   let purettu = false;
+  let jalkiKehys = 0;
+
+  /*
+   * NÄKYMÄ LÄHTEE PUOLI PYÖRINTÄÄ LÄNNEMPÄÄ. Rajauslaatikkoa siirretään
+   * länteen puolella pyörinnästä, jolloin kamera on lennon alussa
+   * Lontoon puolella ja lopussa Ateenan puolella: liike SEURAA konetta,
+   * ja kone on kuvassa lennon molemmissa päissä. Laatikon LEVEYS ei
+   * muutu, joten zoomi on tasan se, minkä marginaali antaa.
+   *
+   * KAPEALLA RUUDULLA TÄMÄ ON PARANNUS. Mitattu Chromiumilla 5.9.2026
+   * (kotelo 374 × 777): ennen tätä Ateena jäi 11 px kotelon oikean
+   * reunan ULKOPUOLELLE koko lennon ajan, eli kone laskeutui ruudun
+   * ulkopuolelle; nyt kone on kuvassa sekä lähdössä (x 115) että
+   * perillä (x 356). Reitin toinen pää saa valua kuvasta lennon
+   * kuluessa — jälki on jälki. Työpöydällä (1379 × 826) varaa on
+   * reunaan 183 px joka suuntaan.
+   */
+  const bbox = lennonRajaus(board, lahtoPos, kohdePos);
+  const pyorinta = ui.reducedMotion ? 0 : AVAUSLENNON_PYORINTA_AST;
+  const rajaus = {
+    bbox: { ...bbox, x: bbox.x - (pyorinta / 2) * YKSIKKOA_ASTEESSA },
+    marginaali: AVAUSLENNON_RAJAUKSEN_MARGINAALI,
+  };
+
+  /** Kaaren geometria koneelle ja jäljelle (sama olio molemmille). */
+  const lentokaari = () => lauta.reitit.lentokaari(lahto, kohde);
+
+  /**
+   * Koko kaari pisteinä [lat, lng, korkeus]. Lista tehdään KERRAN ja
+   * annetaan viivakerrokselle sellaisenaan; kasvu hoidetaan katkoviivan
+   * osuudella (reitit.js jalki), koska geometrian uudelleenkirjoitus
+   * joka kehys jätti viivan Lontoon viereen (mitattu 5.9.2026).
+   */
+  const kaarenPisteet = (kaari) => {
+    const pisteet = [];
+    for (let i = 0; i <= AVAUSLENNON_JALJEN_PISTEET; i += 1) {
+      const k = lentokaarenKohta(kaari, i / AVAUSLENNON_JALJEN_PISTEET, REITIN_KORKEUS);
+      pisteet.push([k.lat, k.lng, k.korkeus]);
+    }
+    return pisteet;
+  };
 
   return {
-    rajaus: {
-      bbox: lennonRajaus(board, lahtoPos, kohdePos),
-      marginaali: LENNON_RAJAUKSEN_MARGINAALI,
-    },
+    rajaus,
 
     valmistele() {
       /*
@@ -135,14 +251,84 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
 
     lenna(kesto) {
       if (!kuljettaja) return { animaatiot: [], perilla: Promise.resolve() };
+      const kaari = lentokaari();
+      const paksuus = AVAUSLENNON_VIIVAN_PX;
+      const nyt = lauta.kamera.kameranTila();
+      const alkuhetki = performance.now();
       const perilla = kuljettaja.hyppaa(lahtoPos, kohdePos, kesto);
+
+      /*
+       * ══════════════════════════════════════════════════════════════
+       * PALLO PYÖRII HITAASTI LENNON AIKANA (omistaja 5.9.2026)
+       * ══════════════════════════════════════════════════════════════
+       *
+       * Ajo lähtee VASTA kuljettajan oman ajon jälkeen ja korvaa sen.
+       * Kuljettaja ajaa kameran lennon rajaukseen (siirto.js hyppaa,
+       * LENNON_KAMERA_MS) — avauksessa kamera on jo siellä, joten se ajo
+       * ei liikuttaisi mitään, ja tämä pidempi liuku ottaa sen paikan
+       * samassa kehyksessä (ajaKamera pysäyttää edellisen ajon eikä
+       * kumpikaan ehdi maalata). Ele koteloon pysäyttää pyörinnän kuten
+       * minkä tahansa kamera-ajon.
+       */
+      if (!ui.reducedMotion && nyt) {
+        void lauta.kamera.ajaKamera(
+          { lat: nyt.lat, lng: nyt.lng + AVAUSLENNON_PYORINTA_AST, korkeus: nyt.korkeus },
+          { kesto, pehmennys: pyorinnanPehmennys },
+        );
+      }
+
+      /*
+       * ══════════════════════════════════════════════════════════════
+       * PAKSU PUNAINEN VIIVA KONEEN PERÄSSÄ (omistaja 5.9.2026)
+       * ══════════════════════════════════════════════════════════════
+       *
+       * Sanatarkasti: *"lentokone saisi tehdä saman paksun viivan kuin
+       * etusivulla."* Jälki kasvaa samasta kellosta kuin kone
+       * (hypynVaihe) ja samalla kaarella (reitit.js lentokaarenKohta),
+       * joten viivan kärki on koneen alla koko lennon. Reduced motion:
+       * kone ei lennä lainkaan, joten jälki piirretään kerralla
+       * valmiiksi.
+       *
+       * (Osuus on kaaren PARAMETRI ja katko mitataan viivan PITUUDESTA;
+       * kaaren korkeusnyppylä tekee näiden väliin muutaman prosentin
+       * eron lennon puolivälissä. Silmä ei erota sitä, koska kone on
+       * viivan kärjen kokoinen.)
+       */
+      const pisteet = kaari ? kaarenPisteet(kaari) : null;
+      const piirraJalki = (e) => lauta.reitit.jalki(pisteet, { paksuus, osuus: e });
+      const paataJalki = () => {
+        cancelAnimationFrame(jalkiKehys);
+        jalkiKehys = 0;
+        if (kaari) piirraJalki(1);
+      };
+      if (kaari && ui.reducedMotion) {
+        piirraJalki(1);
+      } else if (kaari) {
+        const askel = (hetki) => {
+          if (purettu || ui.dead) return;
+          const t = Math.min(1, (hetki - alkuhetki) / Math.max(1, kesto));
+          piirraJalki(hypynVaihe(t).e);
+          jalkiKehys = t < 1 ? requestAnimationFrame(askel) : 0;
+        };
+        jalkiKehys = requestAnimationFrame(askel);
+      }
+
       /*
        * OHITUS PUHUU SAMAA KIELTÄ MOLEMMILLA LAUDOILLA. js/ui.js:n
        * `ohitaLento` vie lennon animaatiot loppuun kutsulla `finish()`;
        * pallolla lento on rAF-silmukka, ja sen loppuun vienti on
-       * kuljettajan `paata()`.
+       * kuljettajan `paata()` — ja jäljen sama loppuun vienti, ettei
+       * viiva jäisi kasvamaan jo perillä olevan koneen perään.
        */
-      return { animaatiot: [{ finish: () => kuljettaja?.paata?.() }], perilla };
+      return {
+        animaatiot: [{
+          finish: () => {
+            paataJalki();
+            kuljettaja?.paata?.();
+          },
+        }],
+        perilla,
+      };
     },
 
     poistuma() { lauta.lento.poistuma(); },
@@ -150,6 +336,16 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
     pura() {
       if (purettu) return;
       purettu = true;
+      /*
+       * VIIVA JÄÄ NÄKYVIIN LENNON PÄÄTYTTYÄ ja katoaa vasta tässä, kun
+       * saapumiskortti on jo ruudulla ja lauta palaa pelitilaan.
+       * Poistuminen on kerroksen oma siirtymä (reitit.js jalki palauttaa
+       * pathTransitionDurationin), joten viiva häipyy pehmeästi eikä
+       * välähdä pois.
+       */
+      cancelAnimationFrame(jalkiKehys);
+      jalkiKehys = 0;
+      lauta.reitit.jalki(null);
       // Kone pois ja kamera sukeltaa kohdekaupunkiin (siirto.js laske).
       kuljettaja?.laske();
       kuljettaja = null;

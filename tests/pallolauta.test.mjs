@@ -374,9 +374,12 @@ test('vaihe 5b: aloituslento pallolla — pallo ottaa laudan ja kohtaus delegoid
     'kohtaus.lenna(lennonKesto)', 'kohtaus.poistuma();', 'kohtaus.pura();']) {
     assert.ok(lento.includes(kutsu), `aloituslentoSisalla ei kutsu ${kutsu}`);
   }
-  for (const nimi of ['rajaus:', 'valmistele()', 'rakenna()', 'lenna(kesto)', 'poistuma()', 'pura()']) {
+  for (const nimi of ['valmistele()', 'rakenna()', 'lenna(kesto)', 'poistuma()', 'pura()']) {
     assert.ok(avaus.includes(nimi), `pallon kohtaus ei täytä sopimusta: ${nimi}`);
   }
+  // Rajaus on kentta (lyhennysmuoto kelpaa: se lasketaan nyt etukateen,
+  // koska avauslennolla on oma marginaali ja pyorinnan siirto).
+  assert.match(avaus, /^ {4}rajaus(,|:)$/m, 'pallon kohtaus ei täytä sopimusta: rajaus');
   // 6. Kamera-ajo kulkee laudan delegaatin kautta (ui.kamera()).
   assert.match(lento, /await this\.kamera\(\)\.ajaKamera\(\n {6}rajaus,/);
 });
@@ -390,13 +393,16 @@ test('vaihe 5b: kone on vaiheen 2 kuljettaja, kaari vaiheen 2 kaari', () => {
     'kuljettaja.hyppaa(lahtoPos, kohdePos, kesto)', 'kuljettaja?.laske();']) {
     assert.ok(avaus.includes(kutsu), `avauslento ei kutsu kuljettajalta ${kutsu}`);
   }
-  // Ohitus vie rAF-lennon loppuun samalla sanalla kuin selaimen animaation.
-  assert.match(avaus, /animaatiot: \[\{ finish: \(\) => kuljettaja\?\.paata\?\.\(\) \}\]/);
+  // Ohitus vie rAF-lennon loppuun samalla sanalla kuin selaimen animaation
+  // — ja päättää samalla kasvavan jäljen (5.9.2026).
+  assert.match(avaus, /finish: \(\) => \{\n\s+paataJalki\(\);\n\s+kuljettaja\?\.paata\?\.\(\);/);
   assert.match(siirto, /^ {4}paata: \(\) => \{/m);
-  // Rajaus on TÄSMÄLLEEN sama laatikko kuin kuljettajan omalla ajolla,
-  // jottei kamera nytkähdä koneen lähtiessä (nolla-ajo).
+  // Rajaus on sama laatikko kuin kuljettajan omalla ajolla, mutta
+  // avauksessa TIUKEMPI marginaali ja puoli pyörintää lännemmäs
+  // (omistaja 5.9.2026: zoom lähemmäs + hidas pyörintä).
   assert.match(siirto, /^export function lennonRajaus\(board, a, b\) \{/m);
-  assert.match(avaus, /bbox: lennonRajaus\(board, lahtoPos, kohdePos\),\n\s+marginaali: LENNON_RAJAUKSEN_MARGINAALI,/);
+  assert.match(avaus, /const bbox = lennonRajaus\(board, lahtoPos, kohdePos\);/);
+  assert.match(avaus, /marginaali: AVAUSLENNON_RAJAUKSEN_MARGINAALI,/);
   assert.match(siirto, /\{ bbox: lennonRajaus\(board, a, b\), marginaali: LENNON_RAJAUKSEN_MARGINAALI \}/);
   // Kaari on reittikerroksen arcsData, ei uusi kerros.
   const lauta = lue('../js/pallolauta/lauta.js');
@@ -429,4 +435,154 @@ test('päiväkirja on laatikossa ja kutistuu vedosta myös pallolla (omistaja 5.
   const css = lue('../css/styles.css');
   assert.match(css, /body\.pallolauta-paalla \.fact-card::before \{/);
   assert.match(css, /body\.pallolauta-paalla \.fact-card\.pieni::before \{ opacity: 0; \}/);
+});
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * AVAUSLENNON KOLME TILAUSTA (omistaja 5.9.2026 klo 23.10)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Työpöytäkaappauksesta avauslennolta (Lontoo → Ateena), sanatarkasti:
+ * *"lentokone saisi tehdä saman paksun viivan kuin etusivulla. näkymä
+ * saisi olla zoomautunut hieman lähemmäs. pallo voisi pyöriä hitaasti
+ * lennon aikana."*
+ */
+const avausModuuli = await import('../js/pallolauta/avaus.js');
+const {
+  AVAUSLENNON_RAJAUKSEN_MARGINAALI, AVAUSLENNON_PYORINTA_AST,
+  AVAUSLENNON_VIIVAN_PX, pyorinnanPehmennys,
+} = avausModuuli;
+const siirtoModuuli = await import('../js/pallolauta/siirto.js');
+const reittiModuuli = await import('../js/pallolauta/reitit.js');
+
+/** Kameran näkyvä leveys lautayksikköinä (kamera.js kameranKohde). */
+const nakyvaLeveys = (bbox, marginaali, ruutuW, ruutuH) => {
+  const vara = 1 + 2 * marginaali;
+  return Math.max(bbox.w * vara, (bbox.h * vara * ruutuW) / ruutuH);
+};
+const RUUDUT = [{ nimi: 'työpöytä', w: 1400, h: 900 }, { nimi: 'puhelin', w: 390, h: 844 }];
+
+test('avauslento: zoom lähemmäs, mutta Lontoo ja Ateena pysyvät kuvassa koko pyörinnän ajan', () => {
+  const peli = new Game({
+    players: [{ name: 'Fogg', color: '#c9a227', start: 'lontoo' }],
+    pack: packById('maailmankartta'),
+    seed: 7,
+  });
+  const { board } = peli;
+  const bbox = siirtoModuuli.lennonRajaus(
+    board, { type: 'city', city: 'lontoo' }, { type: 'city', city: 'ateena' },
+  );
+  assert.ok(
+    AVAUSLENNON_RAJAUKSEN_MARGINAALI < siirtoModuuli.LENNON_RAJAUKSEN_MARGINAALI,
+    'avauslennon rajaus on tiukempi kuin tavallisen lennon',
+  );
+  const asteina = (yks) => kamera.asteetLeveydesta(yks);
+  const bboxAst = asteina(bbox.w);
+  assert.ok(Math.abs(bboxAst - 23.86) < 0.2, `Lontoo → Ateena ${bboxAst.toFixed(2)}°`);
+  for (const { nimi, w, h } of RUUDUT) {
+    const ennen = asteina(nakyvaLeveys(bbox, siirtoModuuli.LENNON_RAJAUKSEN_MARGINAALI, w, h));
+    const nyt = asteina(nakyvaLeveys(bbox, AVAUSLENNON_RAJAUKSEN_MARGINAALI, w, h));
+    assert.ok(nyt < ennen * 0.92, `${nimi}: zoom ei kiristynyt (${ennen.toFixed(1)}° → ${nyt.toFixed(1)}°)`);
+    assert.ok(nyt > ennen * 0.7, `${nimi}: zoom kiristyi liikaa (${ennen.toFixed(1)}° → ${nyt.toFixed(1)}°)`);
+    /*
+     * PYÖRINTÄ EI SAA VIEDÄ KONETTA KUVASTA. Kone on lennon alussa
+     * Lontoossa ja lopussa Ateenassa, ja koska näkymä lähtee puoli
+     * pyörintää lännempää ja päätyy puoli pyörintää idemmäs, kummankin
+     * pään etäisyys näkymän keskeltä on `bbox/2 + pyörintä/2` — sen on
+     * mahduttava puoleen näkymästä.
+     *
+     * Ruutupikselit mitataan selaimessa (perspektiivi ei ole tasokuva):
+     * Chromium 5.9.2026, kotelo 1379 × 826 varaa 183 px, kotelo
+     * 374 × 777 kone kuvassa lennon molemmissa päissä (Lontoo x = 115,
+     * Ateena x = 356) — kapealla ruudulla parannus, sillä ennen tätä
+     * Ateena jäi 11 px kotelon oikean reunan ULKOPUOLELLE koko lennon.
+     */
+    const puolikas = bboxAst / 2 + AVAUSLENNON_PYORINTA_AST / 2;
+    assert.ok(
+      puolikas < nyt / 2,
+      `${nimi}: kone jää kuvan ulkopuolelle (${puolikas.toFixed(2)}° > ${(nyt / 2).toFixed(2)}°)`,
+    );
+  }
+});
+
+test('avauslento: pallo pyörii hitaasti ja pehmeästi, ei lainkaan reduced motionissa', () => {
+  const avaus = lue('../js/pallolauta/avaus.js');
+  assert.ok(AVAUSLENNON_PYORINTA_AST >= 3 && AVAUSLENNON_PYORINTA_AST <= 10,
+    `pyörintä ${AVAUSLENNON_PYORINTA_AST}° ei ole hidas mutta näkyvä`);
+  // Pehmennys: nollasta ykköseen, kasvava, pehmeät päät.
+  assert.equal(pyorinnanPehmennys(0), 0);
+  assert.equal(pyorinnanPehmennys(1), 1);
+  let edellinen = -1;
+  for (let t = 0; t <= 1.0001; t += 0.05) {
+    const arvo = pyorinnanPehmennys(t);
+    assert.ok(arvo > edellinen, `pehmennys ei kasva kohdassa ${t.toFixed(2)}`);
+    edellinen = arvo;
+  }
+  assert.ok(pyorinnanPehmennys(0.05) < 0.05, 'liikkeellelähtö on pehmeä');
+  assert.ok(pyorinnanPehmennys(0.95) > 0.95, 'pysähdys on pehmeä');
+  // Reduced motion: ei pyörintää eikä lännemmäs siirrettyä rajausta.
+  assert.match(avaus, /const pyorinta = ui\.reducedMotion \? 0 : AVAUSLENNON_PYORINTA_AST;/);
+  assert.match(avaus, /if \(!ui\.reducedMotion && nyt\) \{/);
+  // Ajo on kameran oma (ele keskeyttää sen kuten minkä tahansa ajon).
+  assert.match(avaus, /lauta\.kamera\.ajaKamera\(\n\s+\{ lat: nyt\.lat, lng: nyt\.lng \+ AVAUSLENNON_PYORINTA_AST/);
+});
+
+test('avauslento: kone piirtää etusivun paksun punaisen viivan, ei uutta kerrosta', () => {
+  const avaus = lue('../js/pallolauta/avaus.js');
+  const reitit = lue('../js/pallolauta/reitit.js');
+  const css = lue('../css/styles.css');
+  // Sama sinooperi kuin etusivun viivalla (css .etusivupallo-viiva).
+  assert.match(css, /\.etusivupallo-viiva \{[\s\S]*?stroke: #c2452f;/);
+  assert.equal(reittiModuuli.REITIN_VARIT.avauslennonJalki, 'rgba(194, 69, 47, 0.92)');
+  // Katkoviivakaari jää hennoksi suunnitteluviivaksi viivan alle.
+  assert.match(lue('../js/pallolauta/lauta.js'), /kaarenVari: REITIN_VARIT\.avauslennonSuunnitelma,/);
+  assert.match(reittiModuuli.REITIN_VARIT.avauslennonSuunnitelma, /rgba\(194, 69, 47, 0\.3\)/);
+  /*
+   * PAKSUUS ON SAMA LUKU KUIN ETUSIVULLA. Globe.gl:n pathStroke on tässä
+   * versiossa RUUTUPIKSELEITÄ (Line2, worldUnits epätosi) eikä asteita —
+   * mitattu Chromiumilla 5.9.2026, ks. avaus.js. Siksi luku on sama 11
+   * kuin css .etusivupallo-viivan stroke-width, eikä sitä muunneta.
+   */
+  assert.equal(AVAUSLENNON_VIIVAN_PX, 11, 'sama paksuus kuin etusivun viivalla');
+  assert.match(css, /\.etusivupallo-viiva \{[\s\S]*?stroke-width: 11;/);
+  assert.match(avaus, /const paksuus = AVAUSLENNON_VIIVAN_PX;/);
+  // Viiva on viivakerroksen OSA (osarekisteri) eikä uusi Globe.gl-kerros.
+  assert.match(reitit, /^ {4}aseta\('avauslento', \[jalkiDatum\]\);$/m);
+  assert.ok(!/objectsData|tubesData/.test(reitit), 'jälki ei saa tuoda uutta kerrosta');
+  // Kasvava jälki kirjoitetaan ilman siirtymää, ja siirtymä palautuu poistossa.
+  assert.match(reitit, /pallo\.pathTransitionDuration\(0\);/);
+  assert.match(reitit, /pallo\.pathTransitionDuration\(siirtyma\);/);
+  /*
+   * GEOMETRIA KERRAN, KASVU KATKOVIIVALLA (mitattu Chromiumilla
+   * 5.9.2026): joka kehyksen pistelistan kirjoitus jätti viivan lennon
+   * ensimmäisen pätkän mittaiseksi Lontoon viereen, koska Globe.gl
+   * rakentaa Line2:n geometrian interpolK-tweenin kautta. Katkoviivan
+   * luvut menevät materiaaliin joka päivityksellä.
+   */
+  assert.match(reitit, /\.pathDashLength\(\(d\) => d\.viiva \?\? d\.katko \?\? 1\)/);
+  assert.match(reitit, /\.pathDashGap\(\(d\) => d\.vali \?\? d\.katko \?\? 0\)/);
+  assert.match(reitit, /jalkiDatum\.viiva = Math\.max\(0, Math\.min\(1, osuus\)\);/);
+  assert.match(avaus, /lauta\.reitit\.jalki\(pisteet, \{ paksuus, osuus: e \}\)/);
+  // Jälki jää näkyviin lennon jälkeen ja katoaa vasta purussa.
+  assert.match(avaus, /^\s+lauta\.reitit\.jalki\(null\);$/m);
+});
+
+test('avauslento: viiva kulkee tasan koneen alla — yksi kaava, yksi kello', () => {
+  const avaus = lue('../js/pallolauta/avaus.js');
+  const siirto = lue('../js/pallolauta/siirto.js');
+  // Kone ja jälki lukevat saman kaaripisteen (reitit.js lentokaarenKohta).
+  assert.match(siirto, /lentokaarenKohta\(hyppy\.kaari, e, MERKIN_KORKEUS\)/);
+  assert.match(avaus, /lentokaarenKohta\(kaari, i \/ AVAUSLENNON_JALJEN_PISTEET, REITIN_KORKEUS\)/);
+  assert.ok(!/isoympyranPiste/.test(siirto), 'koneen paikka lasketaan vain yhdessä paikassa');
+  // Sama pehmennys ja sama kello kuin koneella (hypynVaihe).
+  assert.match(avaus, /piirraJalki\(hypynVaihe\(t\)\.e\);/);
+  // Kaaripiste: korkeusparaabeli ja kolmiluku [lat, lng, korkeus].
+  const kaari = { alku: { lat: 51.5, lng: -0.1 }, loppu: { lat: 38, lng: 23.7 }, korkeus: 0.0667 };
+  const puolivali = reittiModuuli.lentokaarenKohta(kaari, 0.5, 0.002);
+  assert.ok(Math.abs(puolivali.korkeus - (0.0667 + 0.002)) < 1e-9, 'huippu on puolivälissä');
+  assert.ok(Math.abs(reittiModuuli.lentokaarenKohta(kaari, 0, 0.002).korkeus - 0.002) < 1e-9);
+  assert.ok(Math.abs(reittiModuuli.lentokaarenKohta(kaari, 1, 0.002).korkeus - 0.002) < 1e-9);
+  // Viivakerros lukee korkeuden pisteestä, kun se on annettu.
+  assert.match(lue('../js/pallolauta/reitit.js'),
+    /\.pathPointAlt\(\(p\) => \(p\.length > 2 \? p\[2\] : REITIN_KORKEUS\)\)/);
 });
