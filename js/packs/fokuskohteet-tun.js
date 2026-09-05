@@ -106,23 +106,23 @@ export const FOKUSKOHTEET_TUN = [
      * todella olla kyse — varmistus tuli vasta 1970-luvun kaivauksissa.
      * Se on kohteen tekstissä eikä selitteessä, jotta selite pysyy
      * kysymyksessä "mitä täällä oli ja mitä täällä on nyt".
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-karthagon-satama.webp',
+      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-karthagon-satama-loistoaika-v2.jpg',
       kadonnut: true,
-      selite: 'Karthagon pyöreä sotasatama oli antiikin merkillisimpiä '
-        + 'rakennelmia: kaivettu allas, jonka kehällä ja keskisaarella '
-        + 'oli vajat 220 sotalaivalle, pylväikkö vajojen edessä ja '
-        + 'amiraalin paviljonki saaren huipulla. Se oli myös piilo: '
-        + 'amiraali näki paviljongistaan merelle, mutta kauppasatama '
-        + 'peitti altaan ulkopuolisilta, eikä vieras päässyt laskemaan '
-        + 'sotalaivojen määrää. Rooma tuhosi kaupungin '
-        + 'vuonna 146 eaa., ja vajat, pylväät ja paviljonki ovat poissa. '
-        + 'Allas itse on yhä maastossa: Karthagon esikaupungin talojen '
-        + 'keskellä on noin kahdeksan hehtaarin pyöreä lampi ja sen '
-        + 'keskellä saari, jolla on nyt pieni museo.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      selite: 'Laivanrakentaja antaa oppipojalleen mittanuoran ja pyytää '
+        + 'tarkistamaan uuden kaaren ennen kuin puu kiinnitetään. Pojan '
+        + 'katse karkaa silti vesille laskettavaan sotalaivaan: suljetun '
+        + 'kehäsataman lähes kahdensadan aluksen voima syntyy samanlaisista '
+        + 'pienistä mitoista, käsimerkeistä ja käsityövirheistä, joista '
+        + 'yksikin voi myöhemmin ratkaista miehistön paluun.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: UNESCO World Heritage Centre — Archaeological '
+        + 'Site of Carthage, tarkistettu 5.9.2026.',
+      url: 'https://whc.unesco.org/en/list/37/',
     },
   },
 ];

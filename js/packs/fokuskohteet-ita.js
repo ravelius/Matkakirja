@@ -824,27 +824,23 @@ export const FOKUSKOHTEET_ITA = [
      * MATKAKIRJAN IHME (yhä olemassa) — säännöt js/packs/
      * fokuskohteet-grc.js:n samannimisessä lohkossa. `kadonnut: false`,
      * joten "Koe ihme" -nappi tulee yllä olevan valokuvan alle.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-colosseum.webp',
+      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-colosseum-loistoaika-v2.jpg',
       kadonnut: false,
-      selite: 'Colosseumin ulkokehä oli valmiina yhtenäinen '
-        + 'nelikerroksinen muuri, jonka kaarissa seisoi patsaita ja '
-        + 'jonka yli merimiehet vetivät purjekangaskatoksen varjoksi. '
-        + 'Sisään mahtui noin 50 000 katsojaa, jotka pääsivät ilmaiseksi '
-        + 'mutta säädyn mukaan: pääsymerkki ohjasi senaattorit alimmille '
-        + 'riveille ja naiset ylimmille. Aamupäivä kului '
-        + 'eläintaisteluissa, iltapäivä gladiaattoreissa. '
-        + 'Vieressä kohosi Neron '
-        + 'kullattu pronssikolossi, jonka mukaan rakennus lopulta sai '
-        + 'nimensä. Kolossista on viimeinen varma maininta 300-luvulta '
-        + 'eikä sen jäljistä ole muuta kuin jalustan perustus; '
-        + 'eteläinen ulkomuuri kaatui vuoden 1349 maanjäristyksessä ja '
-        + 'sisus louhittiin '
-        + 'kiveksi ja kalkiksi. Pohjoinen ulkomuuri seisoo silti yhä, '
-        + 'ja rakennus on maailman suurin pystyssä oleva amfiteatteri.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      selite: 'Katsoja puristaa sisäänpääsymerkkiään ja etsii holvikäytävästä '
+        + 'omaa numeroitua reittiään: paikka areenalla määräytyy '
+        + 'yhteiskunnallisen aseman mukaan. Purjemiehistö kiristää valtavaa '
+        + 'aurinkosuojaa yläpuolella, ja kojujen myyjät tietävät, että '
+        + 'kymmenettuhannet janoiset ihmiset tekevät näytöspäivästä myös '
+        + 'heidän työpäivänsä.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: Parco archeologico del Colosseo — official '
+        + 'collections, tarkistettu 5.9.2026.',
+      url: 'https://colosseo.it/en/marvels/',
     },
   },
 ];

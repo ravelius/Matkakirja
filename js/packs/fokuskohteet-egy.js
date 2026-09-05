@@ -118,21 +118,22 @@ export const FOKUSKOHTEET_EGY = [
      * samannimisessä lohkossa. Majakkaa ei ole, joten `kadonnut: true`:
      * kartalla tähti ja kortissa tämä kuva ensimmäisenä — ja ainoana,
      * sillä kadonneesta majakasta ei ole valokuvaa.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-faros.webp',
+      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-faros-loistoaika-v2.jpg',
       kadonnut: true,
-      selite: 'Faroksen majakka seisoi sataman suulla runsaat tuhat '
-        + 'vuotta ja opasti viljalaivat Aleksandrian satamaan: sen tuli '
-        + 'näkyi merelle noin 47 kilometrin päähän. Keskiaikaisten '
-        + 'arabimatkaajien kuvausten mukaan polttoaine vedettiin ylös '
-        + 'tornin sisällä kiertävää ramppia, joka oli kyllin leveä '
-        + 'kahdelle kuormajuhdalle rinnakkain. '
-        + 'Saaren kärjessä on nyt Qaitbayn linnoitus, joka muurattiin '
-        + 'vuonna 1480 majakan omista kivistä — loput lohkareet makaavat '
-        + 'sataman pohjassa.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      selite: 'Viljalaivan kansipoika näkee Faroksen ensimmäistä kertaa ja '
+        + 'kuulee vanhemman merimiehen osoittavan turvallisen väylän. '
+        + 'Majakan tuli ei ole heille vain ihme, vaan lupaus siitä, että '
+        + 'pitkä merimatka päättyy satamaan; rannalla kuormajuhdat alkavat '
+        + 'jo kuljettaa uutta polttoainetta tornin leveää ramppia kohti.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: UNESCO World Heritage Centre — Cordouan '
+        + 'Lighthouse nomination and Pharos tradition, tarkistettu 5.9.2026.',
+      url: 'https://whc.unesco.org/en/list/1625/',
     },
   },
   {
@@ -256,23 +257,23 @@ export const FOKUSKOHTEET_EGY = [
      * MATKAKIRJAN IHME (yhä olemassa) — säännöt js/packs/
      * fokuskohteet-grc.js:n samannimisessä lohkossa. `kadonnut: false`,
      * joten "Koe ihme" -nappi tulee yllä olevan valokuvan alle.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-gizan-pyramidi.webp',
+      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-gizan-pyramidi-loistoaika-v2.jpg',
       kadonnut: false,
-      selite: 'Kheopsin pyramidin ulkopinta oli valmiina sileä ja '
-        + 'valkoinen: Turasta tuotua hiottua kalkkikiveä, joka nousi '
-        + '146,6 metriin ja hohti aavikolla kuin peili. Se oli hauta: '
-        + 'faaraon ruumis tuotiin jokea pitkin laaksotemppeliin ja '
-        + 'kannettiin katettua, lähes kilometrin mittaista pengertietä '
-        + 'ylös, ja pyramidin kupeeseen rakennetussa temppelissä papit '
-        + 'toivat kuolleelle kuninkaalle ruoka- ja juomauhreja vielä '
-        + 'satoja vuosia hautajaisten jälkeen. Kuori louhittiin '
-        + 'myöhempien vuosisatojen aikana rakennusaineeksi, ja jäljelle '
-        + 'jäi 138,5 metriä korkea porrastettu sisus, joka seisoo '
-        + 'Gizan tasangolla nyky-Kairon laidalla.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      selite: 'Kuvituksen kivenhioja tunnustelee sauman sileyttä samalla kun '
+        + 'lapsi tuo hänelle vettä. Näkymä palauttaa jättimäisen luvun '
+        + 'ihmisen kokoiseksi: 2,3 miljoonaa lohkaretta on tarkoittanut '
+        + 'lukemattomia työvuoroja, aterioita, loukkaantumisia ja '
+        + 'ammattitaitoisia käsiä — ja työn valmistuessa kaksi myöhempää '
+        + 'suurpyramidia eivät vielä olleet olemassa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: Harvard University — Digital Giza, tarkistettu '
+        + '5.9.2026.',
+      url: 'https://giza.fas.harvard.edu/faq/',
     },
   },
   {
