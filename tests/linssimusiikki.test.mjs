@@ -135,9 +135,10 @@ test('lajitaulukossa ovat siirtymien kolme raitaa ja linssin oma', async () => {
   await pystyta();
   assert.deepEqual(SIIRTYMALAJIT, ['jalan', 'laiva', 'lento'],
     'siirtymälajit eivät saa muuttua linssiraidan lisäämisestä');
-  assert.deepEqual(MUSIIKKILAJIT, ['jalan', 'laiva', 'lento', 'keksinnot']);
+  // Toinen aikajanalinssi (ihmisen matka) sai oman raitansa 5.9.2026.
+  assert.deepEqual(MUSIIKKILAJIT, ['jalan', 'laiva', 'lento', 'keksinnot', 'ihmisen-matka']);
   // Kehittäjävalikon rivi näyttää kaikki lajit, ei vain siirtymiä.
-  assert.equal(siirtymamusiikinRivi(), 'jalan ?  laiva ?  lento ?  keksinnot ?');
+  assert.equal(siirtymamusiikinRivi(), 'jalan ?  laiva ?  lento ?  keksinnot ?  ihmisen-matka ?');
 });
 
 test('jokainen laji hakee oman tiedostonsa ämpärin aanet-kansiosta', async () => {
@@ -146,6 +147,7 @@ test('jokainen laji hakee oman tiedostonsa ämpärin aanet-kansiosta', async () 
     laiva: 'aanet/siirtyma-laiva-lyria.mp3',
     lento: 'aanet/siirtyma-lento-lyria.mp3',
     keksinnot: 'aanet/linssi-keksinnot-lyria.mp3',
+    'ihmisen-matka': 'aanet/linssi-ihmisen-matka-lyria.mp3',
   };
   for (const laji of MUSIIKKILAJIT) {
     await pystyta();
@@ -169,6 +171,7 @@ test('linssiraita nousee voimaan 0,11 kuten laiva, lento jää matalammaksi', as
   assert.equal(voimat.laiva, 0.11);
   assert.equal(voimat.lento, 0.06);
   assert.equal(voimat.keksinnot, 0.11);
+  assert.equal(voimat['ihmisen-matka'], 0.11);
 });
 
 test('linssiraita feidaa sisään 600 ms, siirtymä entiseen tapaan 300 ms', async () => {

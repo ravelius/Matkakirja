@@ -36,6 +36,7 @@
  */
 export const LINSSIT = [
   // { tunnus: 'historia',     manner: 'middleeast',    tuo: () => import('./historia.js') },
+  { tunnus: 'ihmisen-matka', manner: null,           tuo: () => import('./ihmisen-matka.js') },
   // { tunnus: 'ilmasto',      manner: 'oceania',       tuo: () => import('./ilmasto.js') },
   // { tunnus: 'kielet',       manner: 'europe',        tuo: () => import('./kielet.js') },
   { tunnus: 'keksinnot',    manner: null,            tuo: () => import('./keksinnot.js') },

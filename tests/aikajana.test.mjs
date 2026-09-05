@@ -509,7 +509,9 @@ test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa se
   assert.ok(!/vuosiAani/.test(MOOTTORI), 'vuosiAani on korvattu');
   assert.match(MOOTTORI, /naksahda\(\) \{[\s\S]{0,300}AIKAJANA_NAKSU_VALI_MS[\s\S]{0,200}sfx\.play\('vuosi'\);/);
   // prefers-reduced-motion vaihtaa merkin ilman liikettä; pysäytetty kello liukuu.
-  assert.match(MOOTTORI, /asetaMatkamittari\(this\.rullat, arvo, \{ heti: heti \|\| this\.reducedMotion, liuku: !this\.kaynnissa \}\)/);
+  // (Askel ja suunta ovat "vuotta sitten" -asteikon jatke (5.9.2026): keksinnöillä
+  // ne ovat 1 ja 1, eli entinen kello — ks. tests/ihmisen-matka.test.mjs.)
+  assert.match(MOOTTORI, /asetaMatkamittari\(this\.rullat, arvo, \{\n\s*heti: heti \|\| this\.reducedMotion, liuku: !this\.kaynnissa, askel, suunta,\n\s*\}\)/);
   // Käyvä kello antaa mittarille murto-osavuoden joka kehyksellä.
   assert.match(MOOTTORI, /this\.tila = tila;\n\s*this\.naytaVuosi\(tila\.vuosi\);/);
   // Lamput ovat napautettavia (omistaja 3.9.2026) ja paneeli raahattava.
@@ -1100,7 +1102,11 @@ test('kameran pehmennys lähtee ja pysähtyy nollanopeudella', () => {
 
 test('kamera seuraa pysäkkejä vain pallolla ja ajo alkaa lähikuvasta', () => {
   assert.match(metodi('ajaPysakille'), /if \(!this\.pallolla \|\| !t \|\| !kamera\?\.ajaKamera\) return Promise\.resolve\(false\);/);
-  assert.match(metodi('ajaPysakille'), /leveys: AIKAJANAN_LAHIKUVA_LEVEYS,/);
+  // Leveys tulee kaaren omasta mitasta (5.9.2026): ilman `lahikuva`-kenttää
+  // se on AIKAJANAN_LAHIKUVA_LEVEYS, eli keksinnöillä entinen vakio.
+  assert.match(metodi('ajaPysakille'), /leveys: this\.pysakinLeveys\(i\),/);
+  assert.match(metodi('pysakinLeveys'), /return this\.lahikuva;/);
+  assert.match(MOOTTORI, /this\.lahikuva = kaari\.lahikuva \?\? AIKAJANAN_LAHIKUVA_LEVEYS;/);
   assert.match(metodi('ajaPysakille'), /pehmennys: aikajananKameranPehmennys/);
   assert.match(metodi('sovitaAlkuun'), /if \(this\.pallolla\) \{[\s\S]{0,300}return this\.ajaPysakille\(i, kesto\);/);
   assert.match(metodi('sovitaAlkuun'), /return this\.sovitaKaareen\(kesto\);/);
@@ -1351,7 +1357,7 @@ test('avausjakso vaientaa selostajan ja omii näppäimistön', () => {
 test('1873 pysäyttää kellon ja avaa laatikon vain elävässä ajossa', () => {
   const sytyta = metodi('sytyta');
   // Syttyminen on ainoa ovi: pysäytetty kelaus (siirry) ei avaa mitään.
-  assert.match(sytyta, /if \(!this\.avaaValinaytos\(t\)\) \{\s*\n\s*soitaLinssiluenta\(this\.ui, t\);\s*\n\s*this\.luennanAlku = performance\.now\(\);/);
+  assert.match(sytyta, /if \(!this\.avaaValinaytos\(t\)\) \{\s*\n\s*soitaLinssiluenta\(this\.ui, t, \{ juuri: this\.luentajuuri \}\);\s*\n\s*this\.luennanAlku = performance\.now\(\);/);
   const siirry = metodi('siirry');
   assert.ok(!siirry.includes('alinaytos'), 'siirry ei saa koskea välinäytökseen');
 
@@ -1403,7 +1409,7 @@ test('Jatka-nappi vie kuplat, laatikon ja käynnistää kellon', () => {
 test('kertoja lukee ensin, pulu kommentoi vasta sen jälkeen', () => {
   const puhe = metodi('aloitaValinaytoksenPuhe');
   // Oma runko: valinaytos-<vuosi>, ei pysäkin kolmen sanan riviä.
-  assert.match(puhe, /soitaLinssiluenta\(this\.ui, t, \{ runko: valinaytoksenRunko\(t\) \}\)/);
+  assert.match(puhe, /soitaLinssiluenta\(this\.ui, t, \{ runko: valinaytoksenRunko\(t\), juuri: this\.luentajuuri \}\)/);
   // Kuplat luennan päätyttyä; puuttuva tai kytkimetön luenta viiveellä.
   assert.match(puhe, /luenta\.addEventListener\('ended', kuplat, \{ once: true \}\);/);
   assert.match(puhe, /luenta\.addEventListener\('error', viiveella, \{ once: true \}\);/);
@@ -1413,7 +1419,7 @@ test('kertoja lukee ensin, pulu kommentoi vasta sen jälkeen', () => {
   // Sulkeutunut laatikko ei enää päästä kuplaa ruudulle.
   assert.match(puhe, /if \(!this\.valinaytos\?\.isConnected\) return;/);
   // Esittely luetaan laatikon auetessa, ja Käynnistä katkaisee sen.
-  assert.match(metodi('avaaAvausjakso'), /soitaLinssiluenta\(this\.ui, null, \{ runko: ESITTELYN_RUNKO \}\)/);
+  assert.match(metodi('avaaAvausjakso'), /soitaLinssiluenta\(this\.ui, null, \{ runko: ESITTELYN_RUNKO, juuri: this\.luentajuuri \}\)/);
   assert.match(metodi('aloitaAjo'), /pysaytaLinssiluenta\(this\.ui\);/);
 });
 

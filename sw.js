@@ -172,6 +172,8 @@ const SHELL = [
   './js/isoisan-valokuvat.js',
   './js/linssit/kerros.js',
   './js/linssit/keksinnot.js',
+  './js/linssit/ihmisen-matka.js',
+  './js/linssit/ihmisen-matka-data.js',
   './js/linssit/rekisteri.js',
   './js/linssit/omistus.js',
   './js/linssit/pallo.js',

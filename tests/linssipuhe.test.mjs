@@ -277,7 +277,9 @@ test('luenta lähtee elävästä syttymisestä', () => {
   assert.match(AIKAJANA,
     /import \{[^}]*soitaLinssiluenta[^}]*\} from '\.\/linssipuhe\.js';/,
     'js/aikajana.js ei tuo linssipuhe-moduulia');
-  assert.match(AIKAJANA, /sytyta\(i\) \{[\s\S]*?soitaLinssiluenta\(this\.ui, t\);[\s\S]*?\n  \}/,
+  // `juuri` on kaaren oma luentakansio (5.9.2026): ilman sitä toisen
+  // aikajanalinssin ajo soittaisi keksintöjen luennat.
+  assert.match(AIKAJANA, /sytyta\(i\) \{[\s\S]*?soitaLinssiluenta\(this\.ui, t, \{ juuri: this\.luentajuuri \}\);[\s\S]*?\n  \}/,
     'soitaLinssiluenta puuttuu sytyta(i):stä — linssi olisi hiljainen');
 });
 

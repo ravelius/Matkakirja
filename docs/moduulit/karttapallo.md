@@ -1782,3 +1782,86 @@ kiinni."*
   syttymisen alku (150 ms, pieni kirkas piste), täysi valo, kuusi eri
   valoa rinnakkain (koko, kirkkaus ja värilämpötila vaihtelevat) ja
   havainnekuva häivytyksen keskellä.
+**Aalto 2C — ihmisen matka -linssi: kello ilman vuosilukuja, reittiviiva
+ja hyppykamera (5.9.2026).** Omistajan päätös 5.9.2026: toinen
+aikajanalinssi on nykyihmisen leviäminen Afrikasta koko maapallolle, 20
+pysäkkiä 300 000 vuotta sitten → n. 1300 jaa.
+(`js/linssit/ihmisen-matka.js` + `ihmisen-matka-data.js`). Kaari on
+ensimmäinen, joka ei mahdu keksintölinssin oletuksiin, ja moottori
+(js/aikajana.js) yleistettiin kolmesta kohdasta. JOKAINEN YLEISTYS ON
+KAAREN VALINTA: ilman kenttää käytös on entinen, ja keksintölinssi on
+rivin tarkkuudella ennallaan (tests/aikajana*.test.mjs).
+
+- **Kello ilman vuosilukuja** (`asteikko: 'vuosiaSitten'`). 300 000
+  vuotta keksintöjen tahdilla (1 vuosi = 260 ms) olisi 22 tuntia, joten
+  kellon paikka EI ole vuosiluku vaan pysäkkien koordinaatisto: jokainen
+  väli on `ASTEIKON_VALI` = 10 yksikköä, eli sama reaaliaika kuin
+  keksinnöissä keskimääräisellä välillä (~2,6 s + pysäkin 4,6 s tauko).
+  Näytettävä LUKEMA interpoloidaan välillä LOGARITMISESTI
+  (`vuosiaSittenLukema`, geometrinen keskiarvo): 300 000 → 3 000
+  puolivälissä on 30 000, ei 151 500. Kello pyöristää suuruuden mukaan
+  (`kellonAskel`: 1000 / 100 / 10 / 1), koska pyöristämätön viimeinen
+  rulla pyörisi kymmeniä tuhansia numeroita sekunnissa; rullia on kuusi,
+  niiden välissä on tuhaterotin ja perässä yksikkö ("v. sitten").
+  Etunollat jäävät paikoilleen näkymättöminä (`.vuosi-numero.tyhja`),
+  jotta numeroiden paikat eivät hypi. `asetaMatkamittari` sai kaksi
+  valinnaista lukua — `askel` ja `suunta` — ja `suunta: -1` kääntää
+  mittarin laskevaksi (uusi numero tulee ylhäältä, seuraava luku on
+  pienempi). Pysäkillä näytettävä teksti tulee DATASTA
+  (`ajoitus`: "300 000 vuotta sitten", "n. 1250 jaa."), ja moottorissa
+  on sitä varten yksi apuri (`ajoitus(t) = t.ajoitus ?? t.vuosi`), jota
+  kortti, lamppu, kellorivi, havainnekuvan teksti ja Tiedeliite lukevat.
+- **Reittiviiva** (`reitti: true`). Valot eivät ole erillisiä paikkoja
+  vaan yksi matka: `lauta.linssit.polut(PALLON_OSA, …)` piirtää
+  pysäkkien väliin isoympyrää seuraavan viivan (`reitinPisteet`, yli 2°
+  välit tihennetään), ja lista kasvaa sitä mukaa kuin valot syttyvät
+  (`paivitaReitti(i)`; selailu taaksepäin lyhentää sen, Alusta vie sen
+  pois, kaaren loppu näyttää koko matkan). Viiva on VALOJEN KANSSA
+  SAMASSA OSASSA, joten `pura('aikajana')` vie kummatkin. **Paksuus on
+  3 RUUTUPIKSELIÄ eikä asteita** — sama mitattu havainto kuin
+  avauslennon jäljellä (luku 10.3 yllä): asteina laskettu viiva jää alle
+  pikselin eli näkymättömiin.
+- **Väljempi lähikuva ja hyppykamera** (`lahikuva: 520`,
+  `hyppykamera: true`). Keksinnöissä naapuripysäkit ovat saman maanosan
+  sisällä; tässä ne ovat eri mantereilla, joten perusmitta on
+  kaksinkertainen (2 × 260). Valtameren ylityksessä (Beringia, Sahul,
+  Lapita, Aotearoa) kameran leveys lasketaan EDELLISEN pysäkin
+  etäisyydestä isoympyränä (`pysakinLeveys` → `pysakinLahikuva`, kerroin
+  2,2, katto 3600 yksikköä), jolloin lähtöranta ja reittiviiva ovat yhä
+  kuvassa. Dataan ei tarvitse merkitä, mikä väli on merimatka. Kameran
+  ennakko, jälkijättö ja pehmennys ovat entiset (v1603).
+- **Kuvat.** Kortilla on LÖYTÖ (`esine`: kallo, kivityökalu,
+  kalastuskoukku) eikä muotokuvaa — 300 000 vuoden takaa ei ole kasvoja
+  — ja havainnekuva (`kuva`) on oikean laidan paneelissa kuten ennen.
+  Muunnos moottorin kentiksi on linssin oma puhdas funktio
+  (`ihmisenMatkanPysakit`), joten moottori ei tunne kumpaakaan kaarta.
+  Kuvaputken kuvat ovat 1536 × 1024 ja niissä on noin 20 %
+  ympäristövaraa reunamaskia varten, joten kaari pyytää
+  `kuvasovitus: 'contain'` (cover-rajaus leikkaisi varan pois ennen
+  maskia). Havainnekuvan alla on iso rivi = otsikko ja pieni rivi =
+  kuvaputken oma `kuvateksti` ("Omo Kibish, noin 300 000 vuotta
+  sitten"), joka sisältää jo ajoituksen; ilman kuvatekstiä muoto on
+  entinen "ajoitus · otsikko".
+- **Ääni.** Oma musiikkilaji `ihmisen-matka` (js/siirtymamusiikki.js
+  RAIDAT, ryhmä `linssi`, voima 0,11 kuten keksinnöillä; prompti
+  tools/generoi-siirtymamusiikki.mjs LAJIT: syvä ja hidas, rumpu kuin
+  sydämen syke ja sanaton kaukainen ihmisääni, 50 s looppi). Raita
+  generoidaan erikseen — puuttuva tiedosto on hiljainen eikä riko ajoa.
+  Kaari sai myös oman LUENTAKANSIONSA (`luentajuuri`,
+  js/linssipuhe.js `soitaLinssiluenta({ juuri })`); ilman sitä ajo olisi
+  soittanut keksintökaaren luennat.
+- **Vartijat:** tests/ihmisen-matka.test.mjs (uusi: linssisopimus,
+  asteikko, logaritminen interpolointi, laskeva mittari, reittiviiva,
+  kamerarajat, kortin ja havainnekuvan tekstit, musiikkilaji, SHELL) ja
+  päivitetyt tests/aikajana.test.mjs, tests/linssipuhe.test.mjs,
+  tests/linssimusiikki.test.mjs, tests/siirtymaraidat.test.mjs,
+  tests/musiikkilehti.test.mjs. Ajettu: `node --test tests/*.test.mjs`
+  1729 ok / 0 fail, tarkista-kaksoisavaimet, -niputus, -savukkeet,
+  -nimiolimitys, build-standalone. Selaimessa varmistettu Chromiumilla
+  1400 × 900 (swiftshader): avausjakso ja Käynnistä, kello "286 000 v.
+  sitten" rullaa, kellorivi "300 000 vuotta sitten · Omo Kibish",
+  havainnekuva contain-sovituksella ja kuvateksti sen alla, lamppu
+  syttyy, reittiviiva kasvaa (0 → 1 pätkää) ja kamera nousee
+  valtameren ylityksessä (altitude 0,13 → 2,02). AINEISTO ON TYNKÄ:
+  js/linssit/ihmisen-matka-data.js sisältää kolme pysäkkiä, ja
+  sisältöagentti korvaa sen 20 pysäkillä samaa rajapintaa vasten.

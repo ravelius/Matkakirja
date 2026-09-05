@@ -30,6 +30,22 @@ on pilotti. Jokainen uusi linssi käyttää samaa moottoria:
 | kuvat | kuvaputki, fotorealistinen, JPG | sama; historian hetket -tyyppiset lähi + kauko kun kohtaus sen sallii |
 | ovi peliin | kehittäjävalikko (pelillinen ovi auki) | päätetään pilotin kanssa |
 
+### Toinen linssi: Ihmisen matka (C7, 5.9.2026)
+
+Omistajan päätös 5.9.2026: nykyihmisen leviäminen Afrikasta koko
+maapallolle, 20 pysäkkiä 300 000 vuotta sitten → n. 1300 jaa.
+(js/linssit/ihmisen-matka.js + ihmisen-matka-data.js). Se on ensimmäinen
+kaari, joka EI kulje vuosiluvuissa, ja siitä syntyi moottoriin kolme
+yleistystä — kaikki kaaren valintoja, joten keksintölinssi on ennallaan:
+
+| pilotissa | ihmisen matkassa |
+|---|---|
+| kello juoksee vuosiluvuissa (1769 → 1928) | `asteikko: 'vuosiaSitten'`: pysäkkivälit ovat kellossa yhtä pitkiä ja lukema interpoloidaan logaritmisesti — "300 000 v. sitten" → "n. 1250 jaa." |
+| valo syttyy kaupunkiin ja jää palamaan | sama, ja valojen väliin piirtyy isoympyrää seuraava reittiviiva (`reitti: true`): kaari on yksi matka |
+| lähikuva 260 lautayksikköä | `lahikuva: 520` ja `hyppykamera: true` — valtameren ylityksessä kamera nousee niin kauas, että lähtöranta näkyy |
+| kortilla keksijän muotokuva | kortilla LÖYTÖ (`esine`): kallo, kivityökalu, kalastuskoukku — 300 000 vuoden takaa ei ole kasvoja |
+| havainnekuvan alla "vuosi · keksintö" | havainnekuvan alla otsikko ja sen alla kuvaputken oma kuvateksti, joka sisältää jo ajoituksen |
+
 Tilat: **valmis** · **rakenteilla** · **seuraava** (päätetty, odottaa pilotin hiontaa) · **idea**.
 
 Ryhmät A–G ovat aiheittain (painopiste Euroopassa, missä pelin laudat nyt ovat), ryhmät H–L maanosittain (omistaja 2.9.2026: "lisäksi voisi eritellä muiden maanosien jutut").
@@ -72,6 +88,7 @@ esitetä profeettoja kasvoista tunnistettavina; paikka, ihmiset ja hetki.
 | C4 | Höyrylaivat ja kanavat | maailma | 1807–1914 | Clermont · Great Eastern · Suez 1869 · Kielin kanava · Panama 1914 · Titanic | idea |
 | C5 | Maapallon ympäri 80 päivässä | maailma | 1872 | Foggin reitti Lontoo–Suez–Bombay–Kalkutta–Hongkong–Yokohama–San Francisco–New York–Lontoo (isoisän matka 1873 rinnalla) | seuraava (pelin oma tarina) |
 | C6 | Ilmailun synty | Eurooppa–USA | 1783–1927 | Montgolfier Annonay · Lilienthal Berliini · Wrightit Kitty Hawk · Blériot kanaali 1909 · Lindbergh 1927 | idea |
+| C7 | Ihmisen matka | maailma | 300 000 vuotta sitten – n. 1300 jaa. | Omo Kibish · Jebel Irhoud · Beringia · Sahul · Lapita · Aotearoa 1250 | rakenteilla (omistajan päätös 5.9.2026; moottori 5.9.2026, aineisto työn alla) |
 
 ## D. Kaupungit, valtakunnat, aatteet
 

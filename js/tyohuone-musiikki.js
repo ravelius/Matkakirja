@@ -115,6 +115,11 @@ const LAJIEN_TIEDOT = {
     tiedosto: 'linssi-keksinnot-lyria.mp3',
     kaytto: 'Soi aikajanalinssin koko ajon ajan; pitkä looppi, koska ajo kestää minuutteja.',
   },
+  'ihmisen-matka': {
+    osasto: 'linssi',
+    tiedosto: 'linssi-ihmisen-matka-lyria.mp3',
+    kaytto: 'Soi ihmisen matka -linssin ajon ajan: syvä ja hidas, sydämen syke ja sanaton ihmisääni.',
+  },
 };
 
 /*
