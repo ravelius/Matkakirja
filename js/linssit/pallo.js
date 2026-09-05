@@ -43,7 +43,7 @@ export const LINSSI = {
   laudat: ['maailmankartta'],
 
   lahde: {
-    aineisto: 'Matkakirjan oma juliste (laattapyramidi 2026-09-03a) käännettynä tasaväliseksi pinnoitteeksi; Globe.gl 2.35.0 (three.js)',
+    aineisto: 'Matkakirjan oma juliste (laattapyramidi 2026-09-03a) käännettynä tasaväliseksi pinnoitteeksi; Globe.gl 2.46.2 (three.js)',
     lisenssi: 'Peli oma aineisto; Globe.gl MIT',
     osoite: 'https://github.com/vasturiano/globe.gl',
     haettu: '2026-09-04',
