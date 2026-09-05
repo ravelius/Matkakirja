@@ -281,3 +281,17 @@ test('yhdistämismerkkejä ei ole jäänyt tiedostoihin', () => {
   assert.deepEqual(loydot, [],
     'näihin tiedostoihin on jäänyt purkamaton yhdistämisristiriita');
 });
+
+/*
+ * Valmiit kirjastot (Raamattu 5.9.2026 "VALMIIT KIRJASTOT"): ämpärin
+ * vendor/-polku on välimuisti ensin -haara omassa korissaan, jota
+ * versionvaihto ei tyhjennä — Globe.gl ja Tuna toimivat offline, kun ne
+ * on kerran nähty. Testi lukee sw.js:ää tekstinä, kuten SHELL-testit.
+ */
+test('ämpärin vendor/-kirjastot säilyvät omassa korissaan versionvaihdon yli', () => {
+  assert.match(sw, /const VENDORCACHE = 'matkakirja-vendor-v\d+'/, 'VENDORCACHE puuttuu');
+  assert.match(sw, /osoite\.pathname\.startsWith\('\/vendor\/'\)/, 'vendor/-haara puuttuu fetch-käsittelijästä');
+  assert.match(sw, /caches\.open\(VENDORCACHE\)/, 'vendor/-haara ei käytä omaa koriaan');
+  const activate = sw.slice(sw.indexOf("addEventListener('activate'"));
+  assert.match(activate, /k !== VENDORCACHE/, 'activate-siivous tyhjentäisi vendor-korin');
+});

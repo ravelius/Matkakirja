@@ -513,6 +513,8 @@ export const FOKUSKOHTEET_BIH = [
   {
     id: 'vjetrenica',
     nimi: 'Vjetrenican luola',
+    // Puhujan akustiikka kortilla (js/tehosteketju.js): luolan kaiku.
+    akustiikka: 'luola',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
     tyyppi: 'muu',

@@ -294,6 +294,12 @@ export const LAHTEET = [
         tekija: 'Pelin omaa aineistoa (js/sound.js)',
         lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',
       },
+      {
+        nimi: 'Tuna 1.1.3 — Web Audio -efektiketjut (megafoni, radio, puhelin, '
+          + 'luola, ulkoilma; js/tehosteketju.js)',
+        tekija: 'DinahMoe AB & Oskar Eriksson, github.com/Theodeus/tuna',
+        lisenssi: 'MIT — lisenssiteksti kirjaston rinnalla (vendor/tuna-1.1.3.LICENSE.txt)',
+      },
     ],
   },
   {

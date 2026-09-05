@@ -277,3 +277,25 @@ ensimmäistäkään maksullista kutsua) ja vie tiedostot `aws s3 cp`
 (workflow_dispatch, syötteet `pysakit` ja `kuiva`), salaisuudet
 `ELEVEN_API_KEY` + neljä R2-salaisuutta. Vartija:
 `tests/linssipuhe.test.mjs`.
+
+## Tehosteketjut: Tuna (omistaja 5.9.2026)
+
+Omistajan päätös kirjastokartoituksen
+(docs/raportit/valmiit-palikat-2026-09-04.md) TOP 6:sta, sanatarkasti
+*"Tee 2. Ensin"* → *"Sitten 5. Sitten 6. Ja 3."*: kohta 5 on Tuna 1.1.3
+(MIT). `js/tehosteketju.js` lataa kirjaston laiskasti ämpärin
+`vendor/tuna-1.1.3.js`-polusta (virhehaara: ääni kulkee suoraan) ja
+rakentaa nimetyt ketjut `megafoni`, `radio`, `puhelin`, `luola` ja
+`ulkoilma` (`tehosteketju(ctx, nimi, pääte)` → `{ input, output,
+pura() }`, ristihäivytys 200 ms kumpaankin suuntaan). Kytkentä:
+kohdekortti asettaa puhujan akustiikan (`asetaAkustiikka`; pakkien
+`akustiikka: 'luola'` viidellä kohteella: Vjetrenica, Aggtelek, Turda,
+Capri, Kappadokia) ja lukijaääni (`js/puhe.js luoPuheSoitin`) kysyy sen
+palaa aikatauluttaessaan — Livian vastaus ja kertojan luenta kuuluvat
+luolasta, kun luolan kortti on auki. Radion suora lähetys EI kulje
+ketjun läpi (se ei kulje Web Audion läpi lainkaan, ks.
+js/linssit/radio.js), eikä megafonille ole vielä kutsupaikkaa
+(siirtomaalinssi). Kuuntelu: hammasratasvalikon *tehosteketjut*-nappi
+soittaa testiäänen suoraan ja jokaisen ketjun läpi. Kirjasto säilyy
+offline `sw.js`:n `VENDORCACHE`-korissa. Vartijat:
+`tests/tehosteketju.test.mjs`, `tools/savukkeet/savuke-tehosteketju.mjs`.
