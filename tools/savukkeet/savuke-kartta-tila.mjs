@@ -30,10 +30,36 @@
  *  6. Nipistys seuraa sormia 1:1 kumpaakin reittiä (kosketus ja
  *     WebKitin gesturestart/gesturechange/gestureend), eikä yhtäkään
  *     eleen tapahtumaa harvenneta pois esikatselusta.
+ *
+ * Aja:  node tools/savukkeet/savuke-kartta-tila.mjs                  (?lauta=kartta)
+ *       NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-kartta-tila.mjs --lauta pallo
+ *
+ * PALLOLAUTA (vaihe 4, docs/moduulit/karttapallo.md luku 7 rivi 4):
+ * `--lauta pallo` lataa tallenteen (Fogg Ateenassa) karttapallolle,
+ * valitsee laukusta maatiedot-linssin, jolloin tasokartta herää
+ * LINSSIKARTAKSI pallon päälle, ja ajaa samat geometriavartiot
+ * kuoressa — kartan tila ei saa jäädä vanhaksi silloinkaan. Lopuksi
+ * Sulje palauttaa pallon (svg#board tyhjä, kartta lepotilassa).
  */
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
+
+import { Game } from '../../js/game.js';
+import { packById } from '../../js/pack.js';
+
+const LAUTA = (() => { const i = process.argv.indexOf('--lauta'); return i > 0 && process.argv[i + 1] === 'pallo' ? 'pallo' : 'kartta'; })();
+const PALLOLLA = LAUTA === 'pallo';
+/* Ämpäri Noden kautta (CLAUDE.md: NODE_USE_ENV_PROXY=1) — vain pallolaudalla. */
+const AMPARI_VALIMUISTI = new Map();
+async function ampariHaku(url) {
+  if (AMPARI_VALIMUISTI.has(url)) return AMPARI_VALIMUISTI.get(url);
+  const lupaus = fetch(url).then(async (v) => (v.ok
+    ? { status: 200, body: Buffer.from(await v.arrayBuffer()), tyyppi: v.headers.get('content-type') }
+    : null)).catch(() => null);
+  AMPARI_VALIMUISTI.set(url, lupaus);
+  return lupaus;
+}
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
@@ -41,7 +67,7 @@ const paketti = await import('playwright')
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
-const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp' };
+const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.geojson': 'application/json' };
 const palvelin = http.createServer((req, res) => {
   const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
@@ -49,7 +75,7 @@ const palvelin = http.createServer((req, res) => {
   res.end(readFileSync(polku));
 });
 await new Promise((ok) => palvelin.listen(0, ok));
-const osoite = `http://localhost:${palvelin.address().port}/?lauta=kartta`;
+const osoite = `http://localhost:${palvelin.address().port}/?lauta=${LAUTA}`;
 
 let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => { kaikki += 1; if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`); };
@@ -59,26 +85,63 @@ const ctx = await selain.newContext({
   viewport: { width: 834, height: 1112 }, hasTouch: true, isMobile: true,
   deviceScaleFactor: 2, serviceWorkers: 'block',
 });
+if (PALLOLLA) {
+  /* Tallenne: Fogg Ateenassa, aarre löydetty — sama kuin savuke-pallolaudassa. */
+  const peli = new Game({
+    players: [{ name: 'Fogg', color: '#c9a227', start: 'ateena' }],
+    pack: packById('maailmankartta'),
+    seed: 5,
+  });
+  peli.phase = 'action';
+  peli.tokens.delete('ateena');
+  await ctx.addInitScript((data) => {
+    try {
+      localStorage.setItem('matkakirja-save-v1', data);
+      localStorage.removeItem('matkakirja-lauta');
+    } catch { /* yksityinen tila */ }
+  }, JSON.stringify(peli.toJSON()));
+}
 const sivu = await ctx.newPage();
 // Luentapalvelin katkaistaan: savuke ei saa kuluttaa generointikiintiötä.
 await sivu.route('**samireivinen.workers.dev/**', (route) => route.abort());
+if (PALLOLLA) {
+  await sivu.route(/wikimedia\.org/, (route) => route.abort());
+  await sivu.route(/r2\.dev\//, async (route) => {
+    const vastaus = await ampariHaku(route.request().url());
+    if (!vastaus) { route.abort(); return; }
+    route.fulfill({ status: 200, contentType: vastaus.tyyppi ?? 'application/octet-stream', body: vastaus.body });
+  });
+}
 await sivu.goto(osoite, { waitUntil: 'load' });
 await sivu.waitForTimeout(2000);
 
-// Peli käyntiin ja kartta lähikuvaan (mannerZoom) kuten pelissä.
-await sivu.evaluate(() => {
-  [...document.querySelectorAll('button')]
-    .find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
-});
-await sivu.waitForTimeout(1200);
-await sivu.evaluate(() => {
-  const g = window.matkakirja.game;
-  if (g.phase === 'pickstart') {
-    g.actionPickStart(g.pack.cities.find((c) => c.links?.length).id, 0);
-    window.matkakirja.ui.render();
-  }
-});
-await sivu.waitForTimeout(2000);
+if (PALLOLLA) {
+  // Tallenne on jo pelissä: pallo avautuu, linssi herättää kartan kuoreen.
+  const pallo = await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 45000 })
+    .then(() => true).catch(() => false);
+  vaadi('pallolauta avautuu (?lauta=pallo, ämpäri Noden kautta)', pallo, 'ui.pallolauta ei syntynyt 45 s:ssa');
+  await sivu.evaluate(() => window.matkakirja.ui.valitseLinssi('maatiedot'));
+  const kuori = await sivu.waitForFunction(() => document.querySelectorAll('#board *').length > 100
+    && window.matkakirja.ui.kartta.lepotila === false && Boolean(window.matkakirja.ui.linssikartta?.linssi), null, { timeout: 20000 })
+    .then(() => true).catch(() => false);
+  vaadi('linssikartta on kuoressa pallon päällä (maatiedot-linssi laukusta)', kuori);
+  await sivu.waitForTimeout(1500);
+} else {
+  // Peli käyntiin ja kartta lähikuvaan (mannerZoom) kuten pelissä.
+  await sivu.evaluate(() => {
+    [...document.querySelectorAll('button')]
+      .find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
+  });
+  await sivu.waitForTimeout(1200);
+  await sivu.evaluate(() => {
+    const g = window.matkakirja.game;
+    if (g.phase === 'pickstart') {
+      g.actionPickStart(g.pack.cities.find((c) => c.links?.length).id, 0);
+      window.matkakirja.ui.render();
+    }
+  });
+  await sivu.waitForTimeout(2000);
+}
 await sivu.evaluate(() => { window.matkakirja.ui.kartta.zoomaaPainikkeella(1); });
 await sivu.waitForTimeout(2000);
 
@@ -514,6 +577,36 @@ vaadi('6c WebKitin gesture-nipistys (scale 1→2) kaksinkertaistaa mittakaavan',
 vaadi('6d jokainen gesturechange näkyy esikatselussa',
   eleKirjoituksia >= ASKELIA,
   `${eleKirjoituksia} kirjoitusta / ${ASKELIA} tapahtumaa`);
+
+if (PALLOLLA) {
+  // --- 7. Sulje palauttaa pallon: kuori pois, svg#board tyhjä -------------
+  const paluu = await sivu.evaluate(async () => {
+    const ui = window.matkakirja.ui;
+    ui.valitseLinssi(null);
+  const odotaHaivytys = async () => {
+    const alku = Date.now();
+    for (let i = 0; i < 160; i += 1) {
+      const k = document.querySelector('.pallo-kuori.pallolauta');
+      if (k && !k.hidden && getComputedStyle(k).opacity === '1' && window.matkakirja.ui.kartta.lepotila) break;
+      await new Promise((r) => setTimeout(r, 50));
+    }
+    return Date.now() - alku;
+  };
+    const haivytysMs = await odotaHaivytys();
+    const kuori = document.querySelector('.pallo-kuori.pallolauta');
+    return {
+      haivytysMs,
+      linssikartta: Boolean(ui.linssikartta),
+      svgLapsia: document.querySelectorAll('#board *').length,
+      lepotila: ui.kartta.lepotila,
+      kuoriNakyy: Boolean(kuori) && !kuori.hidden,
+      kehys: Boolean(document.querySelector('.linssikartta-kehys')),
+    };
+  });
+  vaadi('7 Sulje palauttaa pallon: kuori kiinni, svg#board tyhjä, kartta lepotilassa',
+    !paluu.linssikartta && paluu.svgLapsia === 0 && paluu.lepotila === true && paluu.kuoriNakyy && !paluu.kehys,
+    JSON.stringify(paluu));
+}
 
 await selain.close();
 palvelin.close();

@@ -1,7 +1,17 @@
 /*
  * SELAINSAVUKE: AIKAJANALINSSI (keksinnöt Euroopassa).
  *
- *   node tools/savukkeet/savuke-aikajana.mjs
+ *   node tools/savukkeet/savuke-aikajana.mjs                 (?lauta=kartta)
+ *   NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-aikajana.mjs --lauta pallo
+ *
+ * PALLOLAUTA (vaihe 4, docs/moduulit/karttapallo.md luku 7 rivi 4):
+ * `--lauta pallo` avaa pelin karttapallolla (Globe.gl ämpäristä Noden
+ * fetchin kautta kuten savuke-pallolauta), valitsee linssin LAUKUSTA
+ * (ui.valitseLinssi('keksinnot')) — jolloin tasokartta herää
+ * linssikartaksi pallon päälle — ja ajaa samat väitteet kuoressa:
+ * kello, karuselli ja ilmiöpaneeli asuvat karttaruudussa. Lopuksi
+ * aikajanan Sulje päättää linssin ja pallo palaa (svg#board tyhjä,
+ * kartta lepotilassa, pallo näkyvissä).
  *
  * Yksikkötestit näkevät tahdin ja datan (tests/aikajana.test.mjs),
  * mutta eivät sitä, nouseeko kello ruudulle, syttyykö valo SVG:hen ja
@@ -10,6 +20,9 @@
  * millisekunnin, jotta koko kaari ehtii minuutissa.
  *
  * VÄITTEET:
+ *   0. Avausjakso (omistaja 4.9.2026: musta, otsikko, Käynnistä) on
+ *      pystyssä; Käynnistä-nappi aloittaa ajon. Ilman painallusta kello
+ *      ei kulje — savuke painaa sen kuten pelaaja.
  *   1. Kehittäjävalikon nappi käynnistää aikajanan: kello, nauha ja
  *      valokerros ovat DOMissa, body.aikajana-paalla, ja ajo tietää
  *      oman musiikkilajinsa (aanet/linssi-keksinnot.mp3 ei ole
@@ -35,6 +48,18 @@ import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
+const LAUTA = (() => { const i = process.argv.indexOf('--lauta'); return i > 0 && process.argv[i + 1] === 'pallo' ? 'pallo' : 'kartta'; })();
+const PALLOLLA = LAUTA === 'pallo';
+/* Ämpäri Noden kautta (CLAUDE.md: NODE_USE_ENV_PROXY=1) — vain pallolaudalla. */
+const AMPARI_VALIMUISTI = new Map();
+async function ampariHaku(url) {
+  if (AMPARI_VALIMUISTI.has(url)) return AMPARI_VALIMUISTI.get(url);
+  const lupaus = fetch(url).then(async (v) => (v.ok
+    ? { status: 200, body: Buffer.from(await v.arrayBuffer()), tyyppi: v.headers.get('content-type') }
+    : null)).catch(() => null);
+  AMPARI_VALIMUISTI.set(url, lupaus);
+  return lupaus;
+}
 const ULOS = process.env.KAAPPAUKSET ?? '/tmp/matkakirja-kaappaukset';
 mkdirSync(ULOS, { recursive: true });
 const MIME = {
@@ -48,12 +73,16 @@ const palvelin = createServer((req, res) => {
   const polku = join(JUURI, suhteellinen);
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   let sisalto = readFileSync(polku);
-  // Nopeutettu tahti: vuosi 6 ms, viive 700 ms, paalu 60 ms.
+  // Nopeutettu tahti: vuosi 6 ms, viive 700 ms, paalu 60 ms. Luennan
+  // katto 300 ms: kertojan ääni ei lataudu savukkeessa (ulkoiset
+  // osoitteet katkaistu), ja kello pidättäisi muuten jokaista pysäkkiä
+  // LUENNAN_PISIN_MS (14 s) — kaari ei ehtisi minuutissa.
   if (suhteellinen === 'js/aikajana.js') {
     sisalto = String(sisalto)
       .replace('export const AIKAJANA_VUOSI_MS = 260;', 'export const AIKAJANA_VUOSI_MS = 6;')
       .replace('export const AIKAJANA_VIIVE_MS = 4600;', 'export const AIKAJANA_VIIVE_MS = 700;')
-      .replace('export const AIKAJANA_PAALU_MS = 3200;', 'export const AIKAJANA_PAALU_MS = 60;');
+      .replace('export const AIKAJANA_PAALU_MS = 3200;', 'export const AIKAJANA_PAALU_MS = 60;')
+      .replace('export const LUENNAN_PISIN_MS = 14000;', 'export const LUENNAN_PISIN_MS = 300;');
   }
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
   res.end(sisalto);
@@ -66,6 +95,14 @@ const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '
 const ctx = await selain.newContext({ viewport: { width: 1280, height: 800 }, serviceWorkers: 'block' });
 const sivu = await ctx.newPage();
 await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
+if (PALLOLLA) {
+  // Jälkimmäinen reitti voittaa: Globe.gl, laattaluettelo ja laatat ämpäristä.
+  await sivu.route(/r2\.dev\//, async (route) => {
+    const vastaus = await ampariHaku(route.request().url());
+    if (!vastaus) { route.abort(); return; }
+    route.fulfill({ status: 200, contentType: vastaus.tyyppi ?? 'application/octet-stream', body: vastaus.body });
+  });
+}
 const virheet = [];
 sivu.on('pageerror', (e) => virheet.push(String(e)));
 
@@ -75,7 +112,7 @@ const vaadi = (nimi, ok, lisa = '') => {
   console.log(`${ok ? 'OK  ' : 'FAIL'}  ${nimi}${lisa ? ` — ${lisa}` : ''}`);
 };
 
-await sivu.goto('http://127.0.0.1:8741/index.html', { waitUntil: 'load' });
+await sivu.goto(`http://127.0.0.1:8741/index.html?lauta=${LAUTA}`, { waitUntil: 'load' });
 await sivu.waitForTimeout(2500);
 await sivu.evaluate(() => {
   [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
@@ -90,15 +127,37 @@ await sivu.evaluate(() => {
   ui.render();
 });
 await sivu.waitForTimeout(1200);
+if (PALLOLLA) {
+  const pallo = await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 45000 })
+    .then(() => true).catch(() => false);
+  vaadi('pallolauta avautuu (?lauta=pallo, ämpäri Noden kautta)', pallo, 'ui.pallolauta ei syntynyt 45 s:ssa');
+  await sivu.waitForTimeout(1500);
+}
 
-/* 1. Käynnistys kehittäjänapista */
-const kaynnistys = await sivu.evaluate(async () => {
+/* 1. Käynnistys: kartalla kehittäjänapista, pallolla laukun linssinä (kuori) */
+const kaynnistys = await sivu.evaluate(async (pallolla) => {
   const { ui } = window.matkakirja;
   ui.busy = false;
-  const lahti = await ui.kaynnistaAikajana('keksinnot');
+  let lahti = false;
+  if (pallolla) {
+    // Laukun tie vaatii omistuksen: ilman sitä valitsimen tahdistus
+    // (paivitaLinssit) sammuttaisi omistamattoman linssin heti.
+    if (!ui.game.player.linssit.includes('keksinnot')) ui.game.player.linssit.push('keksinnot');
+    ui.valitseLinssi('keksinnot');
+    for (let i = 0; i < 400; i += 1) {
+      if (ui.aikajana) { lahti = true; break; }
+      await new Promise((r) => setTimeout(r, 25));
+    }
+  } else {
+    lahti = await ui.kaynnistaAikajana('keksinnot');
+  }
   await new Promise((r) => setTimeout(r, 300));
+  const kuori = document.querySelector('.pallo-kuori.pallolauta');
   return {
     lahti,
+    kuoressa: Boolean(ui.linssikartta?.linssi) && document.body.classList.contains('linssikartta-auki')
+      && ui.kartta.lepotila === false && Boolean(kuori?.hidden || kuori?.classList.contains('linssin-alla'))
+      && ui.mapPane.contains(document.querySelector('.aikajana')),
     kello: Boolean(document.querySelector('.aikajana-kello')),
     nauha: document.querySelectorAll('.aikajana-kortti').length,
     valoja: document.querySelectorAll('.aikajana-valo').length,
@@ -106,11 +165,26 @@ const kaynnistys = await sivu.evaluate(async () => {
     lauta: ui.game.pack.id,
     musiikki: ui.aikajana?.musiikkiLaji ?? null,
   };
-});
+}, PALLOLLA);
 vaadi('aikajana käynnistyy: kello, nauha, valokerros ja oma musiikkilaji',
   kaynnistys.lahti && kaynnistys.kello && kaynnistys.nauha === 26 && kaynnistys.valoja === 25
     && kaynnistys.luokka && kaynnistys.musiikki === 'keksinnot',
   JSON.stringify(kaynnistys));
+if (PALLOLLA) {
+  vaadi('pallolaudalla aikajana asuu linssikartan kuoressa: kartta hereillä, pallo piilossa, kello karttaruudussa',
+    kaynnistys.kuoressa, JSON.stringify(kaynnistys));
+}
+
+/* 0. Avausjakso: Käynnistä aloittaa ajon (omistaja 4.9.2026). */
+const avaus = await sivu.evaluate(async () => {
+  const { ui } = window.matkakirja;
+  const kesken = Boolean(ui.aikajana?.avausKesken);
+  const nappi = document.querySelector('.aikajana-avaus-nappi');
+  nappi?.click();
+  await new Promise((r) => setTimeout(r, 400));
+  return { kesken, nappi: Boolean(nappi), jatkuu: ui.aikajana?.avausKesken === false };
+});
+vaadi('avausjakso: Käynnistä-nappi on ruudulla ja aloittaa ajon', avaus.kesken && avaus.nappi && avaus.jatkuu, JSON.stringify(avaus));
 
 /* 3. Ensimmäinen tapahtuma */
 const eka = await sivu.evaluate(async () => {
@@ -209,15 +283,24 @@ const tauko = await sivu.evaluate(async () => {
 });
 vaadi('kellon napautus pysäyttää ja jatkaa', tauko.a && !tauko.b && tauko.luokka && tauko.c, JSON.stringify(tauko));
 
-/* 5. Kaaren loppu */
+/* 5. Kaaren loppu — merkkipaalun välinäytös (omistaja 4.9.2026) jatketaan
+   kuten pelaaja painaisi Jatka, ja se kirjataan raporttiin. */
 const loppu = await sivu.evaluate(async () => {
   const { ui } = window.matkakirja;
-  for (let i = 0; i < 400; i += 1) {
+  const valinaytokset = [];
+  // 30 s: kaari kestää nopeutetulla tahdilla ~15–25 s (pallolaudalla
+  // kontin ohjelmisto-WebGL hidastaa kehyksiä).
+  for (let i = 0; i < 600; i += 1) {
     if (ui.aikajana?.loppu) break;
+    if (ui.aikajana?.valinaytos) {
+      valinaytokset.push(ui.aikajana.tila.i);
+      ui.aikajana.jatkaValinaytoksesta();
+    }
     await new Promise((r) => setTimeout(r, 50));
   }
   await new Promise((r) => setTimeout(r, 300));
   return {
+    valinaytokset,
     loppu: ui.aikajana.loppu,
     palaa: document.querySelectorAll('.aikajana-valo.palaa').length,
     lopussa: document.querySelector('.aikajana').classList.contains('lopussa'),
@@ -274,6 +357,40 @@ const sulku = await sivu.evaluate(async () => {
   };
 });
 vaadi('sulje purkaa kellon, valot ja body-luokan', sulku.kello === 0 && sulku.valot === 0 && !sulku.luokka && !sulku.aikajana, JSON.stringify(sulku));
+if (PALLOLLA) {
+  /* 8. Pallolaudalla aikajanan Sulje päättää linssin: kuori kiinni, pallo palaa.
+     Häivytyksen loppua odotetaan (kontin ohjelmisto-WebGL piirtää pallon
+     kehyksen ~100 ms:ssa, joten kiinteä odotus ei riitä). */
+  const paluu = await sivu.evaluate(async () => {
+    const { ui } = window.matkakirja;
+  const odotaHaivytys = async () => {
+    const alku = Date.now();
+    for (let i = 0; i < 160; i += 1) {
+      const k = document.querySelector('.pallo-kuori.pallolauta');
+      if (k && !k.hidden && getComputedStyle(k).opacity === '1' && window.matkakirja.ui.kartta.lepotila) break;
+      await new Promise((r) => setTimeout(r, 50));
+    }
+    return Date.now() - alku;
+  };
+    const haivytysMs = await odotaHaivytys();
+    const kuori = document.querySelector('.pallo-kuori.pallolauta');
+    return {
+      haivytysMs,
+      linssi: ui.linssiValittu,
+      linssikartta: Boolean(ui.linssikartta),
+      luokka: document.body.classList.contains('linssikartta-auki'),
+      svgLapsia: document.querySelectorAll('#board *').length,
+      lepotila: ui.kartta.lepotila,
+      kuoriNakyy: Boolean(kuori) && !kuori.hidden && getComputedStyle(kuori).opacity === '1',
+      kuori: kuori ? { hidden: kuori.hidden, opacity: getComputedStyle(kuori).opacity, luokat: kuori.className } : null,
+      kehys: Boolean(document.querySelector('.linssikartta-kehys')),
+    };
+  });
+  vaadi('pallolaudalla aikajanan Sulje päättää linssin: valinta null, svg#board tyhjä, kartta lepotilassa, pallo näkyvissä',
+    paluu.linssi === null && !paluu.linssikartta && !paluu.luokka && paluu.svgLapsia === 0
+      && paluu.lepotila === true && paluu.kuoriNakyy && !paluu.kehys,
+    JSON.stringify(paluu));
+}
 
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.join(' | ').slice(0, 300));
 
