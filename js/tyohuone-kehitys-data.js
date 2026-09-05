@@ -599,42 +599,79 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'amsterdam',
-      mykistetyt: ['saapuminen'],
-      otsikko: 'Amsterdam — arkku väärässä kerroksessa',
-      saapuminen: 'Kanavan varrella talot nojaavat kuin kuuntelisivat vettä; '
-        + 'mittasin yhden nojauksen: kaksi jalkaa katonrajassa. Yhden '
-        + 'talon päädyssä riippui nostokoukku, ja koukussa köysi '
-        + 'keskellä yötä — vaikka muuttopäivä ei ollut. Köyden päässä '
-        + 'laskeutui arkku, joka pysähtyi täsmälleen minun ikkunani '
-        + 'kohdalle. Arkussa ei ollut lukkoa, vain lappu: väärä '
+      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      otsikko: 'Amsterdam — väärä kerros',
+      /*
+       * LUONNOS 5.9.2026, Fable tarkistaa.
+       *
+       * KOKO KAARI UUSIKSI (kuvaputken tarinaehdotus 5.9.2026, Fablen
+       * päätös samana iltana klo 20:05 UTC: *"Amsterdam (Yara): kätkö on
+       * kaupungin kätkö, ei yksityisasunnon ullakko 'asukkaan luvalla' —
+       * rasia löytyy kanavan varrelta yleiseltä paikalta. Fokusvirran
+       * kohtaamispiste siirtyy Magere Brugilta kanavataloille."*).
+       *
+       * SILTAVAHTI WILLEM POISTUU KOKONAAN: hänen kirjansa merkitsi
+       * isoisän veneen ja suku avasi siltaa sukupolvien ajan — molemmat
+       * ovat kaanonrikkeitä (kukaan ei tunnista Horatiota eikä odota
+       * perillistä, docs/isoisan-raamattu.md). Tilalla on muuttotyöläinen
+       * Yara, joka tunnistaa piirroksen kulman omasta työstään.
+       *
+       * KUVAPUTKEN EHDOTUKSEN ULLAKKOLAATIKKO EI TOTEUDU: Fablen päätös
+       * siirsi kätkön yleiselle paikalle kanavan varteen, joten rasia on
+       * laiturin pollarin alla eikä kenenkään asunnossa.
+       *
+       * SPOILERIKURI (tarinakaari.md, sääntö 6): henkilo-kenttä ja
+       * kohtaaminen näkyvät ENNEN visaa, joten kumpikaan ei kerro, miksi
+       * koukku on olemassa — Yara mittaa kaappeja ja vilkaisee ylös, ja
+       * portaiden kapeus jää vastausriville ja fokusvirran oppitunnille
+       * (js/packs/fokusvirta-amsterdam.js, "Miksi tavara kulkee
+       * ikkunasta").
+       *
+       * VAIHTOEHTOJEN PITUUDET tasattu: oikea ei ole enää pisin
+       * (tarinakaari.md, kysymyssääntö 2) — pisin on kauppiaan vaaka.
+       *
+       * BEAT: ajaton arvoitus. Erässä on kaksi tuoretta jälkeä (Pietari,
+       * Alpit), joten Amsterdam, Islanti, Tallinna ja Tromssa vievät
+       * paletin muihin päätyyppeihin.
+       *
+       * FAKTAT: nostopuu (hijsbalk), kapeat jyrkät portaat ja
+       * julkisivuleveyden mukaan peritty vero — kaikki pelin omasta
+       * tarkistetusta aineistosta, js/packs/fokusvirta-amsterdam.js:n
+       * oppitunti ja js/packs/kulttuuri-kategoriat.js, amsterdam/kaupunki.
+       */
+      saapuminen: 'Mittasin yhden talon nojauksen ja sain kaksi jalkaa: se '
+        + 'kallistuu kadulle tahallaan, jottei nostettava tavara kolhisi '
+        + 'julkisivua. Yöllä päädyn koukussa riippui köysi ilman kuormaa. '
+        + 'Aamulla samassa köydessä laskeutui arkku, joka pysähtyi ikkunani '
+        + 'kohdalle ja kääntyi hitaasti ympäri. Kyljessä oli lappu: väärä '
         + 'kerros.',
-      henkilo: 'Siltavahti Willem vetää kammella auki saman kääntösillan, '
-        + 'jota hänen sukunsa on avannut purjeille sukupolvien ajan.',
-      kohtaaminen: 'Sillalla Willem lukitsee kammen ja kääntyy. "Kirjaan on '
-        + 'merkitty jokainen vene, jolle suku on avannut sillan — '
-        + 'isoisäsi vene kulki läpi kahdesti, mutta palasi vain kerran. '
-        + 'Vastaa hänen kysymykseensä, niin luet loput itse."',
+      henkilo: 'Muuttotyöntekijä Yara johtaa kanavatalojen muuttoja ja '
+        + 'mittaa jokaisen kaapin ennen kuin siihen koskee.',
+      kohtaaminen: 'Kanavatalon edessä muuttotyöntekijä Yara kiertää köyden '
+        + 'kämmenensä ympäri. "Aarretta? Meillä olisi tuossa yksi hyvin '
+        + 'painava nojatuoli." Hän vilkaisee päätyyn, sitten kirjaasi. '
+        + '"Tuo piirros on tämä kulma. Kerro, mitä varten koukku siellä on."',
       kysymys: {
-        q: 'Amsterdamin vanhojen talojen päädyssä on melkein aina koukku '
-          + 'katonrajassa. Mitä varten?',
+        q: 'Yara vilkaisee talon päätyyn: koukku katonrajassa on melkein '
+          + 'joka vanhassa kanavatalossa. Mitä varten se on?',
         vaihtoehdot: [
-          'Huonekalut nostetaan sisään ikkunoista, koska portaat ovat '
-            + 'liian kapeat',
-          'Siihen ripustettiin lyhty, joka valaisi kanavan koko pimeän '
-            + 'ajan',
-          'Laivojen köydet kiinnitettiin siihen, kun tulva nosti veden '
-            + 'kaduille asti',
-          'Kauppiaan vaaka ripustettiin siihen, jotta koko katu näki '
-            + 'rehellisen punnituksen',
+          'Kauppiaan vaaka riippui siinä koko kadun nähtävänä, jottei '
+            + 'punnituksesta tulisi riitaa',
+          'Huonekalut nostetaan ikkunasta, koska portaat ovat kapeat',
+          'Lyhty ripustettiin siihen valaisemaan kanavan reunaa',
+          'Tulvan aikaan siihen kiinnitettiin veneiden köydet',
         ],
-        oikea: 0,
-        fakta: 'Kapeat talot verotettiin leveyden mukaan, joten portaista '
-          + 'tehtiin jyrkkiä ja ahtaita — sohvat ja kaapit hilataan yhä '
-          + 'koukun ja köyden varassa sisään ikkunoista.',
+        oikea: 1,
+        fakta: 'Kiinteistövero perittiin julkisivun leveydestä, joten talot '
+          + 'tehtiin kapeiksi ja portaista tuli jyrkkiä kuin tikkaat. '
+          + 'Päädystä ulos työntyvää palkkia sanotaan nostopuuksi, '
+          + 'hijsbalk, ja sen koukun varassa sohvat ja kaapit hilataan yhä '
+          + 'sisään ikkunasta. Talot rakennettiin siksi hieman etunojaan.',
       },
-      aarre: 'Kätkö odotti sillan kammiossa, öljykankaaseen käärittynä. '
-        + 'Willem osoitti kirjan viimeistä riviä: "Joku on avauttanut '
-        + 'sillan isoisäsi veneen nimellä — viime keväänä."',
+      aarre: 'Kätkö oli kanavan reunassa, pollarin alla olevassa '
+        + 'syvennyksessä. Yara hymähti rasian painolle: "Kevyempi kuin '
+        + 'nojatuoli." Pohjaan on piirretty saman talon pääty — koukku '
+        + 'väärällä puolella.',
     },
     {
       id: 'dublin',
@@ -791,8 +828,38 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'marseille',
-      mykistetyt: ['saapuminen', 'aarre'],
+      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Marseille — saari josta palataan tarinoissa',
+      /*
+       * LUONNOS 5.9.2026, Fable tarkistaa.
+       *
+       * VAIN KAANONIRIKE KORJATTU — HENKILÖ, KYSYMYS JA PAIKKA PYSYVÄT
+       * (kuvaputken toimitus 5.9.2026 luokitteli Marseillen pelkäksi
+       * kuvatyöksi; Fablen päätös klo 20:05 UTC: *"Näissä korjaan
+       * erikseen kaksi omaa asiaa: Marseillen kaaren 'isäni isä souti
+       * isoisäsi saarelle' -rike…"*).
+       *
+       * RIKE: vanha kohtaaminen sanoi *"Isäni isä souti isoisäsi saarelle
+       * ja odotti häntä kaksi vuorokautta"* ja aarre jatkoi samaa
+       * muistoa. Se tunnistaa Horation ja tekee Baptisten suvusta hänen
+       * tarinansa todistajan. Uudessa versiossa Baptiste ei tiedä
+       * Horatiosta mitään: hän vie väkeä kalliolle päivittäin ja pitää
+       * koko aarrepuhetta laiturin tavallisena hulluutena.
+       *
+       * SAAPUMINEN JÄÄ ENNALLEEN: siinä ei ole riketta. Horatio maksaa
+       * pyydetyn hinnan soutajalle — se on tavallinen työn maksu, ei
+       * ostettu järjestely (vrt. isoisan-raamattu.md, varallisuussääntö).
+       *
+       * BEAT SÄILYY: toinen esine jossain muualla. Aarre ei enää vertaa
+       * rasiaa suvun muistamaan arkkuun vaan rasian omaan sisätilaan,
+       * jossa on paikka kahdelle esineelle ja vain toinen niistä.
+       *
+       * SPOILERIKURI: kohtaaminen ei nimeä kirjaa eikä vankia, jotta
+       * visan neljä vaihtoehtoa pysyvät auki.
+       *
+       * ÄÄNIPROFIILI säilyy epäuskoisena, kuten fokusvirran kortti
+       * (js/packs/fokusvirta-marseille.js) kuvaa.
+       */
       saapuminen: 'Saari nousi merestä kuin kivinen laiva, ja soutaja '
         + 'kieltäytyi viemästä: saarelta palataan vain tarinoissa. '
         + 'Maksoin pyydetyn tinkimättä, mikä teki hänet vain '
@@ -802,10 +869,11 @@ export const KAARI_PAKETIT = {
         + 'hitaammin kuin tullessa.',
       henkilo: 'Soutaja Baptiste kuljettaa kalastajia satamasta ja tuntee '
         + 'Ifin saaren virtaukset paremmin kuin kukaan.',
-      kohtaaminen: 'Airojen välissä Baptiste lepuuttaa käsiään. "Isäni isä souti '
-        + 'isoisäsi saarelle ja odotti häntä kaksi vuorokautta. '
-        + 'Paluumatkalla veneessä oli yksi arkku enemmän. Vastaa kirjan '
-        + 'kysymykseen, niin soudan sinut samaa reittiä."',
+      kohtaaminen: 'Laiturissa soutaja Baptiste pitää venettä paikoillaan '
+        + 'yhdellä kädellä. "Aarretta? Sinä ja puolet laiturista." Hän '
+        + 'nyökkää ulapalle. "Tuolle kalliolle viedään joka päivä väkeä, '
+        + 'eikä kukaan tule kiven takia. Sano, mikä kirja heidät sinne '
+        + 'lähettää."',
       kysymys: {
         q: 'Ifin linnoitussaari Marseillen edustalla tunnetaan '
           + 'kaikkialla yhden kirjan ansiosta. Minkä?',
@@ -821,10 +889,10 @@ export const KAARI_PAKETIT = {
           + 'Tarina teki vankilasaaresta kuuluisan — moni etsii yhä '
           + 'Dantèsin selliä.',
       },
-      aarre: 'Nuolen alta, laskuveden paljastamasta kolosta, nousi '
-        + 'arkku. Baptiste katsoi merelle: "Tämä on kevyempi kuin se, '
-        + 'jonka isäni isä souti maihin — jossain on toinen arkku ja '
-        + 'se, joka jakoi lastin kahtia."',
+      aarre: 'Nuolen alta, laskuveden paljastamasta kolosta, nousi rasia. '
+        + 'Baptiste kohotti sen ja katsoi merelle: "Liian kevyt tuon '
+        + 'kokoiseksi." Sisällä on tila kahdelle esineelle, ja vain toinen '
+        + 'niistä on tallella.',
     },
     {
       id: 'varsova',
@@ -902,7 +970,47 @@ export const KAARI_PAKETIT = {
     {
       id: 'alpit',
       mykistetyt: ['kohtaaminen', 'aarre'],
-      otsikko: 'Alpit — koira joka muisti hajun',
+      otsikko: 'Alpit — laukku jota kukaan ei kaivannut',
+      /*
+       * LUONNOS 5.9.2026, Fable tarkistaa.
+       *
+       * ANSELM SÄILYY, KOHTAAMINEN VAIHTUU (kuvaputken tarinaehdotus
+       * 5.9.2026, Fablen päätös klo 20:05 UTC: *"Alpit (Anselm ulos
+       * aurinkoiselle polulle, koira keskeyttää): samalla poistan
+       * kaaresta koiran sukupolvimuistin ja 'veljet vuosisatojen ajan'
+       * -riveistä Horation tunnistuksen."*).
+       *
+       * KAKSI RIKETTÄ POIS. (1) Vanha kohtaaminen sanoi koiran polveutuvan
+       * siitä, joka kaivoi *"isoisäsi laukun"* lumesta — se on Horation
+       * tunnistus ja sukupolvien yli kannettu muisti yhdessä lauseessa.
+       * (2) Vanha henkilo-kenttä jatkoi ketjun *"kuten veljet ennen häntä
+       * vuosisatojen ajan"*, eli vuosisataisen ylläpidetyn perinteen,
+       * jonka Euroopan kiintiö (1/lauta) käyttää Prahan kynttilään.
+       * Molemmat poistuvat; Anselm ulkoiluttaa koiria tänään, ei jatka
+       * kenenkään tehtävää.
+       *
+       * SAAPUMINEN JÄÄ SANATARKASTI ENNALLEEN: se on hyväksytty teksti
+       * (mykistetyt-listalla ovat vain kohtaaminen ja aarre), eikä siinä
+       * ole riketta — Horatio löytää vieraan laukun, jota kukaan ei ole
+       * ilmoittanut kadonneeksi. Barometrin kaiverrus on kaaren
+       * motiivilanka, jonka budjetti (4: Praha, Venetsia, Alpit, Moskova)
+       * pysyy ennallaan.
+       *
+       * KOHTAAMISPAIKKA ULOS: kuvaputken toteutunut hetki on aurinkoinen
+       * vuoripolku ja koira, joka työntää kuononsa Anselmin poskeen
+       * kesken vastauksen. Hospitsin ovi ja koiran kauluksesta pitäminen
+       * jäävät pois.
+       *
+       * BEAT: tuore jälki (röykkiön kivet on ladottu tänä kesänä) —
+       * kuvaputki ja Fable pyysivät säilyttämään röykkiön löytöketjun.
+       * Erässä tuoreita on kaksi (tämä ja Pietari), eivätkä ne ole
+       * naapureita.
+       *
+       * FAKTAT: Suuren Sankt Bernhardin solan hospitsin koirat etsivät
+       * lumeen hautautuneita hajun perusteella; Barry pelasti tarinan
+       * mukaan yli neljäkymmentä ihmistä 1800-luvun alussa. Konjakkitynnyri
+       * on myöhempi kuvitelma eikä sitä mainita.
+       */
       saapuminen: 'Solassa lumi ulottui heinäkuussa polviin, ja luostarin '
         + 'koirat juoksivat edellä varmoin askelin. Yksi niistä '
         + 'pysähtyi kinoksen ääreen eikä suostunut jatkamaan. Kinoksen '
@@ -910,30 +1018,33 @@ export const KAARI_PAKETIT = {
         + 'kaiverrettu barometrin kuva. Munkit sanoivat, ettei kukaan '
         + 'ollut ilmoittanut kadottaneensa mitään. Ei sinä vuonna, eikä '
         + 'sitä ennen.',
-      henkilo: 'Luostarinveli Anselm kasvattaa suurikokoisia koiriaan '
-        + 'vuoristosolan hospitsissa, kuten veljet ennen häntä '
-        + 'vuosisatojen ajan.',
-      kohtaaminen: 'Hospitsin ovella veli Anselm pitelee koiraa kauluksesta. '
-        + '"Tämä koira polveutuu siitä, joka kaivoi isoisäsi laukun '
-        + 'lumesta. Suku muistaa, meillä sanotaan. Vastaa kirjan '
-        + 'kysymykseen, niin päästän sen etsimään."',
+      henkilo: 'Luostarinveli Anselm ulkoiluttaa hospitsin isoja koiria '
+        + 'solan poluilla ja tuntee jokaisen niistä nimeltä.',
+      kohtaaminen: 'Aurinkoisella polulla luostarinveli Anselm aloittaa '
+        + 'vastaustaan, kun koira työntää kuononsa hänen poskeensa. Hän '
+        + 'nauraa ja tarttuu kaulapantaan. "Se tekee noin, kun joku puhuu '
+        + 'liian kauan. Kerro sinä ensin, mistä nämä koirat maailmalla '
+        + 'tunnetaan."',
       kysymys: {
-        q: 'Alppien solissa pelastustyötä tekivät kuuluisat '
-          + 'bernhardilaiskoirat. Mistä ne tunnetaan?',
+        q: 'Anselm taluttaa hospitsin koiria solan polulla. Mistä työstä '
+          + 'juuri nämä koirat tunnetaan maailmalla?',
         vaihtoehdot: [
-          'Ne etsivät lumeen eksyneitä ja hautautuneita kulkijoita',
-          'Ne vetivät postirekiä solan yli pahimmissa myrskyissä',
-          'Ne vartioivat luostarin kellareita ja aarrekammiota',
-          'Ne paimensivat luostarin vuohia kesän jyrkänteillä',
+          'Ne vetivät postirekeä solan yli pahimmissa myrskyissä',
+          'Ne etsivät lumeen hautautuneita kulkijoita',
+          'Ne vartioivat hospitsin kellareita',
+          'Ne paimensivat vuohia kesän jyrkänteillä',
         ],
-        oikea: 0,
-        fakta: 'Pyhän Bernhardin solan munkit kasvattivat koiria, jotka '
-          + 'löysivät lumivyöryyn hautautuneet hajun perusteella. '
-          + 'Kuuluisin, Barry, pelasti tarinan mukaan yli neljäkymmentä '
-          + 'ihmistä.',
+        oikea: 1,
+        fakta: 'Suuren Sankt Bernhardin solan hospitsin munkit kasvattivat '
+          + 'koiria, jotka löysivät lumeen hautautuneet hajun perusteella '
+          + 'ja lämmittivät heitä, kunnes apua tuli. Kuuluisin, Barry, '
+          + 'pelasti tarinan mukaan yli neljäkymmentä ihmistä 1800-luvun '
+          + 'alussa.',
       },
-      aarre: 'Koira kaivoi kätkön röykkiöstä. "Se ei kaivanut hajun '
-        + 'takia", Anselm sanoi, "kivet on ladottu tänä kesänä."',
+      aarre: 'Koira kaivoi kätkön polun viereisestä kiviröykkiöstä ja '
+        + 'istuutui odottamaan kiitosta. "Se ei kaivanut hajun takia", '
+        + 'Anselm sanoi, "vaan koska kivet on ladottu tänä kesänä. Enkä '
+        + 'minä ole ladonnut niitä."',
     },
     {
       id: 'sisilia',
@@ -1356,41 +1467,82 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'pietari',
-      mykistetyt: ['saapuminen', 'aarre'],
-      otsikko: 'Pietari — silta joka odotti laivaa',
-      saapuminen: 'Kello löi kaksitoista, taivas hehkui yhä, ja sillat '
-        + 'nousivat — minä väärällä rannalla, sillä valoon ei täällä '
-        + 'voi luottaa. Vietin yön rantakivellä ja kirjasin ohi '
-        + 'lipuvat laivat; vieressäni mies nosti hattuaan jokaiselle '
-        + 'mutta piti kirjaa yhdestä. Kun sillat laskettiin, mies oli '
-        + 'poissa. Kirja jäi kaiteelle avoinna sivulta, jolla luki: '
-        + 'odotamme vielä.',
-      henkilo: 'Sillanhoitaja Dmitri nostaa joen sillan joka yö ja laskee '
-        + 'sen aamuksi, kuten hänen sukunsa on tehnyt siltojen alusta '
-        + 'asti.',
-      kohtaaminen: 'Koneiston äärellä Dmitri pitelee vipua. "Kirjaan merkitään '
-        + 'laiva, joka ei ole vielä palannut — isoisäsi pyysi sukuani '
-        + 'pitämään sivun auki. Vastaa hänen kysymykseensä, niin '
-        + 'käännämme sivua yhdessä."',
+      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      otsikko: 'Pietari — yö väärällä rannalla',
+      /*
+       * LUONNOS 5.9.2026, Fable tarkistaa.
+       *
+       * KOKO KAARI UUSIKSI (kuvaputken tarinaehdotus 5.9.2026, Fablen
+       * päätös klo 20:05 UTC: *"Hyväksytty sellaisenaan … Pietari
+       * (huoltoteknikko Matvei) … Kaikki korjaavat samalla vanhan kaaren
+       * kaanonirikkeen (suku/perillinen/lupaus)."*).
+       *
+       * SILLANHOITAJA DMITRI POISTUU: hänen repliikkinsä sanoi *"isoisäsi
+       * pyysi sukuani pitämään sivun auki"*, eli Horatio jätti suvulle
+       * vuosisataisen tehtävän. Se on kaksinkertainen rike — tunnistus ja
+       * Horation pieni pyyntö, jonka Euroopan kiintiö (2/lauta: Pietari
+       * ja Edinburgh) oli jo täynnä. Kiintiöstä vapautuu tässä yksi
+       * paikka; sitä ei käytetä tässä erässä.
+       *
+       * MATVEI EI PERI MITÄÄN. Hän on huoltoteknikko, joka tarkastaa
+       * teräsrakenteen ennen yönostoa, ei sukunsa jatkaja. Kuvaputken
+       * rajaus toteutettu: ei suurta käsikampea eikä sillan avaamista
+       * käsin, ei periytyvää sillanhoitoa, ei alkuperäiseksi väitettyä
+       * vipua eikä lukitun kynän mysteeriä.
+       *
+       * KOMMELLUS (tarinakaari.md: vähintään yksi per erä) on tässä:
+       * Horatio jää väärälle rannalle ja maksaa sen kokonaisella yöllä
+       * rantakivellä. Siitä seuraa myös mittaus, joka pohjustaa visan.
+       *
+       * BEAT: tuore jälki, ja se on erän ainoa mysteerisäikeen koukku
+       * Alppien röykkiön ohella (kiintiö: säiekoukku enintään joka
+       * toisessa kaupungissa). Vaha on kevään jälki — kevätkulkija on
+       * kaanonissa tahallinen lanka, ei kasauma.
+       *
+       * SPOILERIKURI: saapuminen mittaa maan pehmeyden mutta ei nimeä
+       * paaluja eikä suota; vastausrivi ei esiinny missään ennen visaa
+       * näkyvässä kentässä.
+       *
+       * VAIHTOEHTOJEN PITUUDET tasattu: oikea ei ole pisin.
+       *
+       * FAKTAT: Pietari perustettiin 1703 Nevan suiston soisille
+       * saarille, rakennukset paalujen varaan ja katuja korotettiin
+       * tulvia vastaan. Sama aineisto kuin fokusvirran oppitunnissa
+       * (js/packs/fokusvirta-pietari.js) ja kaupunkilehden nostossa
+       * "Kaupunki rakennettiin suolle".
+       */
+      saapuminen: 'Sillat nousivat keskiyöllä, ja minä jäin väärälle '
+        + 'rannalle. Valoon ei tässä kaupungissa voi luottaa: se ei suostu '
+        + 'hämärtymään eikä siis varoita mistään. Vietin yön rantakivellä '
+        + 'ja kirjasin ohi lipuvat laivat, kaksikymmentäyksi kappaletta. '
+        + 'Aamulla painoin keppini rantapenkereeseen, ja se upposi '
+        + 'kahdeksan tuumaa. Sen luvun pidin omana tietonani.',
+      henkilo: 'Huoltoteknikko Matvei tarkastaa nostosillan teräsrakenteet '
+        + 'ennen jokaista yönostoa.',
+      kohtaaminen: 'Sillan alla huoltoteknikko Matvei kääntää työvalon pois '
+        + 'silmistäsi. "Tänne ei kävellä. Mistä tuo kirja on?" Hän katsoo '
+        + 'piirrosta pitkään ja lyhentää sävyään. "Minä huollan sitä, mikä '
+        + 'liikkuu. Kerro sinä, minkä varaan tämä kaikki on pantu."',
       kysymys: {
-        q: 'Sillat nousevat öisin, sillä joki on kaupungin valtakatu. '
-          + 'Millaiselle maalle rakentajat tämän kaupungin pystyttivät?',
+        q: 'Matvei huoltaa siltaa, joka väistyy öisin joen tieltä. '
+          + 'Millaiselle maalle koko kaupunki alun perin pystytettiin?',
         vaihtoehdot: [
-          'Nevan suiston soille, tammipaalujen varaan',
-          'Graniittiharjulle, joka lohkottiin tasaiseksi',
-          'Vanhan merenpohjan hiekalle, joka nousi kuivaksi',
+          'Graniittiharjulle, joka louhittiin tasaiseksi ennen '
+            + 'rakentamista',
+          'Nevan suiston soille, maahan lyötyjen paalujen varaan',
+          'Merestä nousseelle hiekkasärkälle, joka kuivui itsestään',
           'Jäätikön jättämälle kivikentälle',
         ],
-        oikea: 0,
-        fakta: 'Pietari Suuri rakennutti pääkaupunkinsa Nevan suiston soille '
-          + 'ja saarille: talot seisovat tammipaalujen varassa ja katuja '
-          + 'korotettiin tulvia vastaan. Siksi joki on kaupungin '
-          + 'valtakatu — ja siksi sillat aukeavat öisin laivoille.',
+        oikea: 1,
+        fakta: 'Pietari Suuri perusti kaupunkinsa 1703 Nevan suiston soisille '
+          + 'saarille: rakennukset pystytettiin maahan lyötyjen paalujen '
+          + 'varaan ja katuja korotettiin tulvia vastaan. Siksi joki on '
+          + 'kaupungin valtakatu — ja siksi sillat aukeavat öisin '
+          + 'laivoille.',
       },
-      aarre: 'Sillan koneistokammiossa, vivun alla, odotti öljykankainen '
-        + 'kätkö. Dmitri avasi odotetun laivan sivun: "Joku on '
-        + 'merkinnyt sen palanneeksi viime kesänä — kynällä, jota '
-        + 'säilytän lukkojen takana."',
+      aarre: 'Kätkö oli rantamuurin kiinnitysrenkaan alla, öljykankaaseen '
+        + 'käärittynä. Matvei valaisi kangasta: "Tämä on vahattu uudelleen, '
+        + 'ja vaha on tältä keväältä. Minulla on tänne ainoa avain."',
     },
     {
       id: 'helsinki',
@@ -1428,43 +1580,83 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'tallinna',
-      mykistetyt: ['saapuminen', 'aarre'],
-      otsikko: 'Tallinna — vahti joka käänsi selkänsä tuulelle',
-      saapuminen: 'Ostin päänsärkyyni jauheen apteekista, joka on palvellut '
-        + 'torillaan neljäsataa vuotta; kaupan päälle sain '
-        + 'martsipania, joka keksittiin täällä lääkkeeksi. Makealta '
-        + 'lääkkeeltä se maistuikin. Tornissa peltinen vahti kääntyi '
-        + 'tuulen mukana, kuten neljättäsataa vuotta. Kirjasin '
-        + 'vihkooni: vahti on nähnyt torin joka sään; minä olin yhden '
-        + 'iltapäivän vieras.',
-      henkilo: 'Tornimestari Kristjan rasvaa Vana Toomasin laakerit ja '
-        + 'nousee torniin joka myrskyn jälkeen katsomaan, että vahti '
-        + 'kääntyy yhä.',
-      kohtaaminen: 'Tornin portaissa Kristjan kantaa öljykannua. "Vana Toomas on '
-        + 'kääntynyt tuuleen kolmesataa vuotta — mutta kerran se '
-        + 'osoitti vastatuuleen kokonaisen päivän, ja se päivä on '
-        + 'kirjattu. Isoisäsi päivä. Vastaa hänen kysymykseensä, niin '
-        + 'näytän kirjauksen."',
+      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      otsikko: 'Tallinna — makea lääke',
+      /*
+       * LUONNOS 5.9.2026, Fable tarkistaa.
+       *
+       * KOKO KAARI UUSIKSI (kuvaputken tarinaehdotus 5.9.2026, Fablen
+       * päätös klo 20:05 UTC: *"Hyväksytty sellaisenaan … Tallinna (opas
+       * Eve) … Kaikki korjaavat samalla vanhan kaaren kaanonirikkeen
+       * (suku/perillinen/lupaus)."*).
+       *
+       * TORNIMESTARI KRISTJAN POISTUU: hänen repliikkinsä nimesi
+       * vastatuulen päivän *"isoisäsi päiväksi"* — kaupungin kirjanpito
+       * siis muisti Horation. Tilalla on nykyhetken opas Eve, joka ei
+       * tiedä Horatiosta mitään ja lukee vanhaa havaintokirjaa
+       * opastusaineistona.
+       *
+       * KUVAPUTKEN RAJAUS TOTEUTETTU: oppaan ei väitetä rasvaavan viirin
+       * laakereita, eikä löytö tule sääviirin purkamisesta. Kätkö on
+       * portaikon tasanteen seinäsyvennyksessä, jonne yleinen opastus
+       * pysähtyy muutenkin.
+       *
+       * BEAT: **VANHA JÄLKI** — joku merkitsi kolon kaksitoista vuotta
+       * ennen Horation kirjaa. Kaanoni (isoisan-raamattu.md) sanoo vanhan
+       * jäljen puuttuvan Euroopasta kokonaan ja olevan tuoreen paras
+       * vastapari; tämä erä tuo sen ensimmäisen kerran laudalle.
+       *
+       * AISTIKIERTO: maku (marsipaani) — erän ainoa makuhavainto.
+       *
+       * SAAPUMISEN FAKTAT pelin omasta tarkistetusta aineistosta
+       * (js/packs/kulttuuri-kategoriat.js, tallinna/kaupunki, nosto
+       * "Poltettuja siilejä ja marsipaania lääkkeeksi"): apteekki on
+       * toiminut samassa talossa ainakin vuodesta 1422, ja sen vuoden
+       * 1695 hinnastossa marsipaania myytiin sydänsuruun ja muistin
+       * parantamiseen. Merkintä EI väitä marsipaania Tallinnassa
+       * keksityksi — se on apteekkarin oma puhe, ja Horatio kirjaa sen
+       * kuulemanaan. Kaupungin kirjoitusasu on pelin muun aineiston
+       * mukaan "marsipaani".
+       *
+       * VAIHTOEHTOJEN PITUUDET tasattu: oikea ei ole pisin.
+       *
+       * FAKTAT VISASSA: Vana Toomas on kääntynyt raatihuoneen tornissa
+       * vuodesta 1530; kevätjuhlan jousiammunta puisesta papukaijasta on
+       * tarun oma yksityiskohta ja se kerrotaan taruna.
+       */
+      saapuminen: 'Ostin päänsärkyyni jauheen apteekista, joka on seissyt '
+        + 'samalla torilla yli neljäsataa vuotta. Kaupan päälle sain palan '
+        + 'marsipaania: se on täällä lääke, sanoi apteekkari — sydänsuruun '
+        + 'ja muistin parantamiseen. Se on paras lääke, jonka olen '
+        + 'apteekista saanut. Päänsärky hellitti vasta illalla, mutta '
+        + 'annan kunnian marsipaanille.',
+      henkilo: 'Opas Eve nousee raatihuoneen tornin portaat useita kertoja '
+        + 'päivässä ja laskee jokaisen ryhmän myös alas.',
+      kohtaaminen: 'Tornin kierreportaissa opas Eve tarttuu köysikaiteeseen '
+        + 'ja väistää sinut ohitseen. "Kysy tuo uudestaan, kun saat '
+        + 'hengityksen takaisin." Hän katsoo silmälasiensa yli ja alkaa '
+        + 'nauraa. "Torni on täynnä yhtä tarua. Kerro sinä, minkä '
+        + 'kilpailun Toomas voitti."',
       kysymys: {
-        q: 'Tarun mukaan nuori Toomas voitti kilpailun, mutta palkinto '
-          + 'jäi saamatta. Minkä kilpailun?',
+        q: 'Eve kertoo tornin tarun: köyhä poika Toomas voitti kilpailun '
+          + 'mutta jäi ilman palkintoa. Minkä kilpailun?',
         vaihtoehdot: [
-          'Kevätjuhlan jousiammunnan — puisen papukaijan tangosta',
-          'Laivojen suuren kilpapurjehduksen Suomenlahden myrskyssä',
-          'Raatihuoneen suuren shakkiturnauksen',
-          'Painin, jossa kaatui itse raatimieskin',
+          'Raatihuoneen shakkiturnauksen, jonka raatimiehet järjestivät',
+          'Kevätjuhlan jousiammunnan puisesta papukaijasta',
+          'Suuren kilpapurjehduksen Suomenlahden yli',
+          'Painin, jossa kaatui raatimieskin',
         ],
-        oikea: 0,
+        oikea: 1,
         fakta: 'Keväisin ammuttiin jousella puista papukaijaa tangon '
-          + 'nokasta, ja köyhä poika Toomas osui ensimmäisenä — mutta '
-          + 'palkinto kuului säätyläisille. Hänestä tehtiin lopulta '
-          + 'suurempi: kaupungin ikuinen vartija raatihuoneen torniin, '
-          + 'vuodesta 1530.',
+          + 'nokasta. Tarun mukaan köyhä poika Toomas osui ensimmäisenä, '
+          + 'mutta palkinto kuului säätyläisille. Hänestä tehtiin lopulta '
+          + 'jotain suurempaa: kaupungin vartija raatihuoneen torniin, '
+          + 'jossa Vana Toomas on kääntynyt vuodesta 1530.',
       },
-      aarre: 'Kirjauksen sivujen väliin oli taitettu kätkö. Kristjan '
-        + 'piti sivua valoa vasten: "Vastatuulen päivä on merkitty '
-        + 'kahdesti, ja jälkimmäinen on viime syksyltä — silloin minä '
-        + 'olin tornissa, eikä viiri kääntynyt itsestään."',
+      aarre: 'Kätkö oli tasanteen seinäsyvennyksessä irtokiven takana. Eve '
+        + 'piti kahta vanhaa kirjausta rinnakkain valoa vasten: "Tämä kolo '
+        + 'on merkitty jo ennen kirjaasi. Kaksitoista vuotta ennen." '
+        + 'Nimeä ei ole kummassakaan.',
     },
     {
       id: 'riika',
@@ -1691,78 +1883,150 @@ export const KAARI_PAKETIT = {
     {
       id: 'tromssa',
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
-      otsikko: 'Tromssa — lyhty joka paloi yöttömässä yössä',
+      otsikko: 'Tromssa — yö jota ei tullut',
+      /*
+       * LUONNOS 5.9.2026, Fable tarkistaa.
+       *
+       * KOKO KAARI UUSIKSI (kuvaputken tarinaehdotus 5.9.2026, Fablen
+       * päätös klo 20:05 UTC: *"Hyväksytty sellaisenaan … Tromssa
+       * (kahvilanpitäjä Kjell) … Kaikki korjaavat samalla vanhan kaaren
+       * kaanonirikkeen (suku/perillinen/lupaus)."*).
+       *
+       * SATAMAVAHTI INGRID POISTUU: hänen repliikkinsä oli kaaren
+       * raskain rike — isoisoisä sytytti lyhdyn sinä yönä, jona *"isoisäsi
+       * laiva lähti"*, ja *"suku sytyttää sen yhä"*. Siinä on kolme asiaa
+       * kerralla: Horation tunnistus, perillisen odotus ja vuosisatainen
+       * ylläpidetty perinne, jonka kiintiö (1/lauta, Prahan kynttilä) oli
+       * jo käytetty. Kaikki kolme poistuvat.
+       *
+       * KUVAPUTKEN RAJAUS TOTEUTETTU: viikoittainen öljylyhty ja luvaton
+       * laivan koneistoon meno ovat poissa. Kjell tuntee vanhat
+       * laivakuvat omana harrastuksenaan, ei vartiointilupauksesta, ja
+       * kätkö on laiturin kivijalassa yleisellä paikalla.
+       *
+       * BEAT: hiljainen loppu, jossa jää auki yksi asia (sama käsiala
+       * kahdessa eri musteessa). Erän lämpö- ja hengähdysannos on tässä
+       * (tarinakaari.md: vähintään yksi kumpaakin per erä).
+       *
+       * ÄÄNIPROFIILI: puhelias. Kjell puhuu ensin lokista ja vasta sitten
+       * kysyy kysymyksensä.
+       *
+       * VAIHTOEHTOJEN PITUUDET: oikea on lyhyiden joukossa, pisin on
+       * väärä.
+       *
+       * FAKTAT: Tromssan 1800-luvun lempinimi "Pohjolan Pariisi";
+       * jäämerenpyynti ja kauppa toivat kaupunkiin rahaa ja seuraelämää.
+       * Sama aineisto kuin kaupungin omassa lehtinostossa.
+       */
       saapuminen: 'Aurinko ei laskenut. Se vieri taivaanrannan yli kuin '
-        + 'kultakolikko, joka ei putoa; mittasin, kuinka alas se '
-        + 'suostuu: kämmenen leveyden merestä. Satama eli keskellä '
-        + 'yötä; kukaan ei toivottanut hyvää yötä, koska yötä ei '
-        + 'tullut. Vain yksi vene lepäsi liikkumatta, mastossa palava '
-        + 'lyhty. Se ei pala pimeän takia, sanoi satamavahti. Se palaa '
-        + 'merkiksi.',
-      henkilo: 'Satamavahti Ingrid pitää keskiyön auringon aikaan kirjaa '
-        + 'saapuvista laivoista, koska yö ei sitä tee.',
-      kohtaaminen: 'Laiturin päässä Ingrid sulkee lokikirjansa. "Isoisoisäni '
-        + 'sytytti tuon lyhdyn yönä, jona isoisäsi laiva lähti '
-        + 'yöttömään yöhön, ja suku sytyttää sen yhä: sammutetaan, kun '
-        + 'tieto tulee. Vastaa, niin lasken lyhdyn alas ja sammutamme '
-        + 'sen yhdessä."',
+        + 'kolikko, joka ei putoa, ja minä mittasin, kuinka alas se '
+        + 'suostuu: kämmenen leveyden merestä. Satama teki työtä kello '
+        + 'kahdelta yöllä. Kukaan ei toivottanut hyvää yötä, koska yötä ei '
+        + 'ollut, ja minä jäin laiturille seisomaan kuin olisin unohtanut '
+        + 'jotakin.',
+      henkilo: 'Kahvilanpitäjä Kjell myy kahvia sataman kärrystä yötä '
+        + 'päivää ja kerää vanhoja laivapostikortteja.',
+      kohtaaminen: 'Laiturin päässä kahvilanpitäjä Kjell läimäyttää kämmenen '
+        + 'tiskiin ja hätistää lokin. "Jos etsit aarretta, aloita tuosta '
+        + 'varkaasta." Hän kaataa sinulle kahvia kysymättä. "Tällä '
+        + 'kaupungilla oli 1800-luvulla lempinimi, jota etelässä ei '
+        + 'uskottu. Sano se."',
       kysymys: {
-        q: 'Tromssa sai 1800-luvulla lempinimen, joka hämmästytti etelän '
-          + 'vieraita. Minkä?',
+        q: 'Kjell sanoo, ettei etelässä uskottu Tromssan 1800-luvun '
+          + 'lempinimeä. Mikä se oli?',
         vaihtoehdot: [
           'Pohjolan Pariisi',
-          'Jäämeren portti',
-          'Valaiden satama',
+          'Valaanpyytäjien pääkaupunki',
           'Kaamoksen kaupunki',
+          'Jäämeren portti',
         ],
         oikea: 0,
-        fakta: 'Tromssaa sanottiin Pohjolan Pariisiksi: pieni arktinen '
-          + 'satama yllätti vieraat muodillaan, kahviloillaan ja '
-          + 'vilkkaudellaan. Jäämeren pyynti ja kauppa toivat maailman '
-          + 'tänne — ja keskiyön aurinko piti sataman hereillä kellon '
-          + 'ympäri.',
+        fakta: 'Tromssaa alettiin 1800-luvulla kutsua Pohjolan Pariisiksi: '
+          + 'pieni arktinen satama yllätti etelän vieraat kahviloillaan, '
+          + 'muodillaan ja seuraelämällään. Jäämeren pyynti ja kauppa '
+          + 'toivat tänne rahaa ja maailman — ja keskiyön aurinko piti '
+          + 'sataman hereillä kellon ympäri.',
       },
-      aarre: 'Lyhdyn öljysäiliön alla, kannen luukussa, odotti kätkö. '
-        + 'Ingrid sammutti liekin: "Öljyn olen lisännyt minä joka '
-        + 'viikko, mutta sydänlanka on vaihdettu uuteen — eikä '
-        + 'vaihtaja ollut minä."',
+      aarre: 'Kätkö oli laiturin kivijalassa, kiinnitysrenkaan alla. Kjell '
+        + 'asetti keräilemänsä postikortin rasian viereen: "Sama käsiala. '
+        + 'Eri muste." Kello oli kaksi yöllä ja täysin valoisaa, enkä '
+        + 'osannut lähteä.',
     },
     {
       id: 'islanti',
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
-      otsikko: 'Islanti — lähde joka nimesi kaikki muut',
-      saapuminen: 'Maa hengitti höyryä. Kellotin lähteen: se kokosi voimansa '
-        + 'ja syöksi kiehuvan patsaan niin korkealle, että niskani '
-        + 'naksahti — ja vaikeni taas. Merkitsin väliaikoja vihkooni, '
-        + 'kunnes oppaani naurahti: lähde ei lue kelloa, herra. '
-        + 'Reunakivessä oli kalkin alta kaiverrus: nuoli ja sana, jota '
-        + 'en ymmärtänyt. Opas ymmärsi. Hän vaikeni loppumatkan.',
-      henkilo: 'Tilallinen Björk asuu lähdelaakson talossa, jonka suku on '
-        + 'opastanut matkalaisia kuumille lähteille kuusi polvea.',
-      kohtaaminen: 'Tuvan ovella Björk ojentaa peiton harteilleni. '
-        + '"Kaiverruksen sana on sukuni murretta, ja vaiennut opas oli '
-        + 'isoisoisäni. Sana tarkoittaa: odota purkausta. Vastaa, niin '
-        + 'odotamme purkauksen yhdessä — ja kun lähde vaikenee, '
-        + 'nostamme nuolen kiven."',
+      otsikko: 'Islanti — kello jota lähde ei lue',
+      /*
+       * LUONNOS 5.9.2026, Fable tarkistaa.
+       *
+       * KOKO KAARI UUSIKSI (kuvaputken tarinaehdotus 5.9.2026, Fablen
+       * päätös klo 20:05 UTC: *"Hyväksytty sellaisenaan … Islanti (opas
+       * Einar) … Kaikki korjaavat samalla vanhan kaaren kaanonirikkeen
+       * (suku/perillinen/lupaus)."*).
+       *
+       * TILALLINEN BJÖRK POISTUU: hänen repliikkinsä sanoi vaienneen
+       * oppaan olleen *"isoisoisäni"*, eli kohtaaminen tunnisti Horation
+       * ja teki suvusta hänen tarinansa jatkajan. Tilalla on nykyhetken
+       * opas Einar, joka ei tunne Horatiota lainkaan ja lukee kirjaa
+       * pelkkänä vanhana karttana.
+       *
+       * KUVAPUTKEN RAJAUS TOTEUTETTU: kuumaan lähteeseen ei kosketa.
+       * Kiven alta kaivaminen, purkauksen ajoittaminen ja kalkin
+       * raaputtaminen ovat poissa; kätkö on reitin lähtöpisteessä
+       * turvallisella puolella, kuten ehdotus vaati. Vuonna 2024
+       * uudistettua ritiläreittiä ei siirretä vuoteen 1873 — Horatio
+       * kulkee omassa maastossaan ja Einar nykyisellä polulla.
+       *
+       * ERÄN ITSEIRONIA-ANNOS (tarinakaari.md, kiintiö 1/erä) on tässä:
+       * Horatio kellottaa lähdettä kuin junaa ja kirjaa itse, että se on
+       * sivun ainoa kohta, jossa hän oli väärässä.
+       *
+       * BEAT: ajaton arvoitus. Kevään raaputusjälki (tuore) poistui,
+       * koska erässä on jo kaksi tuoretta jälkeä (Pietari, Alpit).
+       *
+       * KYSYMYS pidettiin (Fablen ja kuvaputken linjaus), mutta se
+       * ankkuroitiin Einarin omaan lauseeseen, jotta se nousee
+       * kohtauksesta eikä roiku irrallaan. Oikea vastaus on lyhin
+       * vaihtoehto — pisin on väärä (tarinakaari.md, kysymyssääntö 2).
+       *
+       * FAKTAT: Geysir islannin verbistä geysa, "syöstä"; Geysir itse on
+       * ollut pitkiä aikoja hiljaa ja naapuri Strokkur purkautuu
+       * muutaman minuutin välein. Tarkistettu 5.9.2026.
+       */
+      saapuminen: 'Maa hengitti höyryä, ja minä kellotin lähteen kuin junan: '
+        + 'kolme minuuttia, sitten yksitoista, sitten ei mitään. Merkitsin '
+        + 'väliajat vihkooni kahteen sarakkeeseen, kunnes oppaani '
+        + 'naurahti — lähde ei lue kelloa, herra. Piirsin polut karttaan '
+        + 'niin tarkasti kuin taisin. Sarakkeet ovat sivun ainoa kohta, '
+        + 'jossa olin täysin väärässä.',
+      henkilo: 'Opas Einar vie ryhmiä Haukadalurin höyryävällä reitillä ja '
+        + 'oikaisee väärät käsitykset ystävällisesti mutta heti.',
+      kohtaaminen: 'Ritiläpolun laidalla opas Einar vetää tuulen kääntämän '
+        + 'hupun takaisin paikalleen. "Tällä säällä sinä etsit aarretta?" '
+        + 'Hän kääntää kirjasi kartan tuulelta suojaan ja katsoo sitä '
+        + 'toisen kerran. "Tämä laakso antoi yhden sanan joka kielelle. '
+        + 'Sano se sana."',
       kysymys: {
-        q: 'Islannin kuuluisin kuuma lähde on antanut nimen kaikille '
-          + 'maailman purkautuville lähteille. Mikä sana siitä tuli?',
+        q: 'Einar sanoo laakson antaneen yhden sanan joka kielelle. Mikä '
+          + 'sana Haukadalurin kuumasta lähteestä levisi maailmalle?',
         vaihtoehdot: [
           'Geysir',
-          'Vulkaani',
           'Kraatteri',
-          'Laguuni',
+          'Fumaroli',
+          'Vulkaani',
         ],
         oikea: 0,
-        fakta: 'Haukadalurin laakson Geysir — islannin sanasta geysa, '
-          + 'syöksyä — purkautui kymmenien metrien korkeuteen. Kaikki '
-          + 'maailman purkautuvat kuumat lähteet ovat sen mukaan '
-          + 'geysirejä.',
+        fakta: 'Nimi tulee islannin verbistä geysa, syöstä. Haukadalurin '
+          + 'Geysir purkautui parhaimmillaan kymmenien metrien korkeuteen, '
+          + 'ja siitä tuli kaikkien maailman purkautuvien kuumien lähteiden '
+          + 'yleisnimi. Geysir itse on ollut pitkiä aikoja hiljaa — '
+          + 'naapuri Strokkur hoitaa nykyään näytöksen muutaman minuutin '
+          + 'välein.',
       },
-      aarre: 'Purkauksen jälkeen nuolen osoittama kivi oli hetken kuiva, '
-        + 'ja sen alta löytyi kätkö. Björk katseli kalkkikerrosta: '
-        + '"Kaiverruksen pitäisi olla kokonaan kalkin alla — joku on '
-        + 'raaputtanut sen esiin tänä keväänä."',
+      aarre: 'Kätkö oli reitin lähtöpisteessä, vanhan opastaulun jalustan '
+        + 'alla. Einar vertasi karttaa maastoon kauan: "Polku on siirretty '
+        + 'kolmesti." Merkki osuu silti — enkä keksi, mistä sen olisi '
+        + 'voinut tietää.',
     },
     {
       id: 'aden',

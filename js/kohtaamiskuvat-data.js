@@ -141,13 +141,24 @@ export const kohtaamiskuvat = [
     hetki: 'Liike katkeaa sillan keskelle, mutta toinen jalka ja molemmat kädet pitävät pyörän vakaana.',
     vihje: 'Kanava, silta ja arkinen pyöräliikenne sijoittavat kohtaamisen Amsterdamiin paljastamatta vastausta.',
   },
+  /*
+   * ARKISTOON 5.9.2026 (LUONNOS, Fable tarkistaa): Amsterdamin kaaren
+   * henkilö vaihtui siltavahti Willemistä muuttotyöntekijä Yaraan
+   * (js/tyohuone-kehitys-data.js, KAARI_PAKETIT 'amsterdam'), joten tämä
+   * kuva näyttäisi pelissä eri ihmisen kuin se, joka kysymyksen esittää.
+   * Rivi jää galleriaan vertailukappaleeksi mutta poistuu pelistä
+   * (KOHTAAMISKUVAT_KOHTEELLE ottaa vain tilan 'tarkistettu').
+   * Amsterdam on siihen asti kuvaton kortti — Yaran kuva kytketään, kun
+   * omistaja on hyväksynyt sen ja kuvaputki on vienyt sen R2:een
+   * kuvatekstein.
+   */
   {
     id: 'amsterdam-koysityontekija',
     kaupunki: 'Amsterdam',
     maa: 'Alankomaat',
     hahmo: 'Willem',
     tiedosto: 'kasvo-amsterdam-koysityontekija.jpg',
-    tila: 'tarkistettu',
+    tila: 'arkisto',
     alt: 'Willem keskeyttää köysityönsä Amsterdamin kanavan sinisessä iltavalossa.',
     kuvateksti: 'Nuori köysityöntekijä pitää työvälineitään kanavan sinisessä illassa. Työ keskeytyy juuri sen verran, että Willem ehtii kohdata pelaajan katseen.',
     hetki: 'Köysi jää kireäksi käsien väliin ja työasento säilyy, vaikka katse kääntyy suoraan tulijaan.',
