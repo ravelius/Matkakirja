@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1604, teksti: 'Tasokartan moduulit laiskoiksi (-0,9 Mt kaynnistys)' },
   { v: 1603, teksti: 'Keksinnot pallolla: lahikuva, ennakoiva kamera, esilataus' },
   { v: 1602, teksti: 'Kuusi hyvaksyttya kohtaamiskuvaa korteille' },
   { v: 1601, teksti: 'Avauslento pallolla; paletti Lyrialle' },
