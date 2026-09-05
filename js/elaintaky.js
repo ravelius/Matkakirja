@@ -92,7 +92,7 @@ import {
   NOSTOLADONTA_S, nostoladontaKattoPorras, nostoladontaTiiviste,
 } from './nostoladonta.js';
 import { elaintakyKarttarivit, elaintakyNimioKylki } from './elaintaky-rivit.js';
-import { ELAINTAKYT } from './packs/elaintakyt.js';
+import { ELAINTAKYT, elaintakynKuvat } from './packs/elaintakyt.js';
 import { assetOsoite } from './media.js';
 import { sfx } from './sound.js';
 
@@ -679,6 +679,267 @@ export function avaaElaintaky(ui, iso) {
   sfx.play('popup');
 }
 
+/* ==================== KORTIN KUVAKARUSELLI ==================== */
+
+/*
+ * KAKSI KUVAA SAMASTA AIHEESTA (omistajan päätös 5.9.2026).
+ *
+ * Raamatun osio "ELAINKUVIIN TARINAA, KAKSI KUVAA SAMASTA AIHEESTA",
+ * omistajan päätös sanatarkasti: *"samasta eläinaiheesta voi olla
+ * kaksi erilaista hyväksyttyä kuvaa, ja kortilla ne näytetään
+ * KARUSELLINA (kuva vaihtuu pyyhkäisyllä kuten lehden alarivin
+ * karuselli, pisteet kertovat määrän, kummallakin kuvalla oma
+ * kuvateksti)"*.
+ *
+ * YKSI KUVA EI OLE KARUSELLI. Yhden kuvan tietue latoutuu tavu
+ * tavulta kuten ennen (elaintakyPiirraKuva alempana) — ei raitaa, ei
+ * pisteitä, ei uutta kuuntelijaa. Karuselli syntyy vasta, kun
+ * tietueessa on toinen kuva (js/packs/elaintakyt.js elaintakynKuvat).
+ *
+ * MALLI ON LEHDEN ALARIVIN KARUSELLI, EI UUSI KEKSINTÖ. Rakenne,
+ * eleet ja mitat ovat samat kuin Tiedeliitteen havainnekuvien
+ * karusellilla (js/tiedeliite.js piirraIlmiokaruselli,
+ * css/aikajana.css): ikkuna, jonka sisällä raita liukuu, ruutu per
+ * kuva, pisteet alla ja sormen alla liikkuva raita.
+ *
+ * MIKSI KOODI ON TÄSSÄ EIKÄ TUOTU SIELTÄ: js/tiedeliite.js kuuluu
+ * aikajanan perheeseen, joka ladataan VAIN dynaamisesti (js/ui.js
+ * `await import('./aikajana.js')`) eikä ole yhden tiedoston version
+ * niputuslistalla (tools/build-standalone.mjs MODULES). Staattinen
+ * tuonti sieltä olisi niputuksen järjestysvirhe (tools/tarkista-
+ * niputus.mjs sääntö 3) ja jättäisi karusellin standalone-versiossa
+ * ilman funktioitaan. Yhteistä on siksi MALLI ja MITAT, ja tämän
+ * kerroksen oma pysäytys- ja pyyhkäisysääntö on kirjoitettu puhtaiksi
+ * funktioiksi, jotka testi mittaa (tests/elaintakyt.test.mjs).
+ */
+
+/** Pyyhkäisyn kynnys pikseleinä — sama luku kuin lehden karusellilla. */
+export const ELAINTAKY_KARUSELLIN_KYNNYS = 30;
+
+/**
+ * Askel karusellissa: raita on yhtenäinen nauha, joten se PYSÄHTYY
+ * PÄIHIN eikä kierrä ympäri (päästä päähän hyppy liu'uttaisi koko
+ * matkan takaisin).
+ */
+export function elaintakynKarusellinKohta(kohdalla, suunta, maara) {
+  if (!(maara >= 1)) return 0;
+  return Math.min(maara - 1, Math.max(0, Math.trunc(kohdalla) + suunta));
+}
+
+/**
+ * Pyyhkäisyn suunta: vasemmalle veto (dx < 0) vie seuraavaan kuvaan,
+ * oikealle edelliseen. Kynnystä lyhyempi liike ei siirrä (0).
+ */
+export function elaintakynKarusellinPyyhkaisy(dx, kynnys = ELAINTAKY_KARUSELLIN_KYNNYS) {
+  if (!Number.isFinite(dx) || Math.abs(dx) < kynnys) return 0;
+  return dx < 0 ? 1 : -1;
+}
+
+/**
+ * KAHDEN KUVAN KARUSELLI KORTTIIN.
+ *
+ * Selaus kahdella tavalla: pyyhkäisy sormella tai hiirellä (raita
+ * seuraa liikettä ja napsahtaa kynnyksen ylitettyään) ja pisteet
+ * kuvan alla. Nuolinäppäimet selaavat, kun kohdistus on karusellissa.
+ * Kuvateksti ja lähderivi vaihtuvat kuvan mukana, koska kummallakin
+ * kuvalla on omansa (omistajan päätös yllä).
+ *
+ * LIIKE ON PEHMEÄ (Raamattu: KAIKKI LIIKE ANIMOIDAAN PEHMEASTI):
+ * raidan liuku ja kuvatekstin esiintulo kestävät 250 ms nopeutuen ja
+ * hidastuen, ja `prefers-reduced-motion` vaihtaa kuvan suoraan ilman
+ * siirtymää (css/fokusnosto.css osio 6).
+ *
+ * SUURENNOS NÄYTTÄÄ NYKYISEN KUVAN. Napautus ruutuun avaa saman
+ * suurennoksen kuin yhden kuvan kortissa (js/fokuskohteet.js
+ * avaaKohdeSuurennos, ui-avain elaintakyZoom) — paitsi jos sormi
+ * oikeasti liikkui, jolloin kyse oli pyyhkäisystä eikä napautuksesta.
+ *
+ * RIKKINÄINEN KUVA jättää oman ruutunsa tyhjäksi paperiksi, ja vasta
+ * kun KAIKKI kuvat pettävät, kehys katoaa — sama sääntö kuin yhdellä
+ * kuvalla: teksti kantaa kortin yksinkin.
+ */
+function elaintakyPiirraKaruselli(ui, kohde, kuvat, vakioselite) {
+  const kehys = html('figure', 'fokusnosto-kuva elaintaky-kuva elaintaky-karuselli');
+  kehys.dataset.maara = String(kuvat.length);
+  const ikkuna = html('div', 'elaintaky-karuselli-ikkuna');
+  const raita = html('div', 'elaintaky-karuselli-raita');
+  ikkuna.appendChild(raita);
+  kehys.appendChild(ikkuna);
+
+  let kohdalla = 0;
+  let estaNapautus = false;
+  let virheita = 0;
+  const osoitteet = kuvat.map((kuva) => assetOsoite('elaimet', kuva.url || kuva.tiedosto));
+  const selitteet = kuvat.map((kuva) => kuva.kuvateksti || vakioselite);
+
+  const ruudut = selitteet.map((teksti, j) => {
+    const nappi = html('button', 'fokusnosto-kuvanappi elaintaky-karuselli-ruutu');
+    nappi.type = 'button';
+    nappi.setAttribute('aria-label', `${teksti} — avaa suurena`);
+    const img = document.createElement('img');
+    img.alt = teksti;
+    img.decoding = 'async';
+    img.draggable = false;
+    /*
+     * EI `loading = 'lazy'`: molemmat kuvat ovat samassa raidassa ja
+     * pyyhkäisy on välitön ele — toinen kuva ei saa alkaa latautua
+     * vasta siinä vaiheessa, kun sormi on jo vienyt sen esiin. Kortin
+     * kuvat haetaan yhä vasta kortin avautuessa (ks. elaintakyPiirraKuva).
+     */
+    img.src = osoitteet[j];
+    img.addEventListener('error', () => {
+      img.hidden = true;
+      virheita += 1;
+      if (virheita === kuvat.length) kehys.hidden = true;
+    }, { once: true });
+    nappi.appendChild(img);
+    nappi.addEventListener('click', (tapahtuma) => {
+      tapahtuma.stopPropagation();
+      if (estaNapautus) { estaNapautus = false; return; }
+      avaaKohdeSuurennos(
+        ui,
+        { osoite: osoitteet[kohdalla], selite: selitteet[kohdalla] },
+        () => ruudut[kohdalla],
+        'elaintakyZoom',
+      );
+    });
+    raita.appendChild(nappi);
+    return nappi;
+  });
+
+  /*
+   * KUVATEKSTI JA LÄHDERIVI OVAT SAMAT LUOKAT KUIN YHDELLÄ KUVALLA
+   * (.fokusnosto-kuvateksti, -kuvaselite, -kuvalahde): karuselli on
+   * sama kortti samalla pergamentilla, vain kuvia on kaksi.
+   */
+  const teksti = html('figcaption', 'fokusnosto-kuvateksti elaintaky-karuselli-teksti');
+  const selite = html('span', 'fokusnosto-kuvaselite');
+  const lahde = html('span', 'fokusnosto-kuvalahde');
+  teksti.append(selite, lahde);
+
+  const pisteet = html('div', 'elaintaky-karuselli-pisteet');
+  const pistenapit = selitteet.map((teksti, j) => {
+    const piste = html('button', 'elaintaky-karuselli-piste');
+    piste.type = 'button';
+    // Ruudunlukija saa kuvan järjestysluvun JA sen kuvatekstin: pelkkä
+    // "kuva 2/2" ei kerro, mihin piste vie.
+    piste.setAttribute('aria-label', `Kuva ${j + 1}/${selitteet.length}: ${teksti}`);
+    piste.addEventListener('click', (tapahtuma) => {
+      tapahtuma.stopPropagation();
+      siirry(j);
+    });
+    pisteet.appendChild(piste);
+    return piste;
+  });
+  kehys.append(teksti, pisteet);
+
+  /** Raidan paikka: nykyinen kuva ja mahdollinen sormen veto päälle. */
+  const asetaRaita = (dx = 0) => {
+    const siirto = dx ? ` + ${Math.round(dx)}px` : '';
+    raita.style.transform = `translate3d(calc(${-100 * kohdalla}%${siirto}), 0, 0)`;
+  };
+
+  /** Kuvateksti, lähderivi, pisteet ja kohdistus nykyisen kuvan mukaan. */
+  const nayta = () => {
+    const kuva = kuvat[kohdalla];
+    selite.textContent = selitteet[kohdalla];
+    /*
+     * LÄHDERIVI KULKEE taytaLahderivin LÄPI, jotta "Matkakirjan
+     * havainnekuva" saa painettavan selitteensä (js/havainnekuva.js)
+     * kummallakin kuvalla. Ilman omaa lähdettä rivi kertoo totuuden:
+     * eläinkuvat ovat pelin omia generoituja kuvia — sama vakiorivi
+     * kuin yhden kuvan kortissa.
+     */
+    taytaLahderivi(lahde, kuva.lahde || 'Matkakirjan havainnekuva', kuva);
+    // Uusi kuvateksti tulee esiin pehmeästi: luokka irrotetaan ja
+    // kiinnitetään uudestaan, jotta CSS-animaatio alkaa alusta.
+    teksti.classList.remove('vaihtui');
+    void teksti.offsetWidth;
+    teksti.classList.add('vaihtui');
+    ruudut.forEach((nappi, j) => {
+      // Vain näkyvä kuva on sarkaimella tavoitettava.
+      nappi.tabIndex = j === kohdalla ? 0 : -1;
+      nappi.setAttribute('aria-hidden', j === kohdalla ? 'false' : 'true');
+    });
+    pistenapit.forEach((piste, j) => {
+      piste.classList.toggle('nykyinen', j === kohdalla);
+      if (j === kohdalla) piste.setAttribute('aria-current', 'true');
+      else piste.removeAttribute('aria-current');
+    });
+    asetaRaita();
+  };
+
+  function siirry(j) {
+    const uusi = Math.min(kuvat.length - 1, Math.max(0, j));
+    if (uusi === kohdalla) { asetaRaita(); return; }
+    kohdalla = uusi;
+    sfx.play('paper');
+    nayta();
+  }
+
+  /*
+   * PYYHKÄISY KOSKETUKSELLA JA HIIRELLÄ: raita seuraa osoitinta ja
+   * napsahtaa kynnyksen ylityttyä seuraavaan kuvaan. Pystysuora liike
+   * jätetään kortin vieritykselle (.elaintaky-kortti on `touch-action:
+   * pan-y`), joten suunta ratkaistaan ensimmäisistä pikseleistä eikä
+   * vaakaraahaus ala vahingossa kesken vierityksen.
+   */
+  let raahaus = null;
+  ikkuna.addEventListener('pointerdown', (tapahtuma) => {
+    if (tapahtuma.pointerType === 'mouse' && tapahtuma.button !== 0) return;
+    /*
+     * NAPAUTUKSEN ESTO NOLLATAAN ELEEN ALUSSA eikä vasta seuraavassa
+     * clickissä — talon oma oppi kuvasarjoista (js/ui.js
+     * kaariNostoGalleria): kosketusnäytöllä pyyhkäisy ei tuota clickiä
+     * lainkaan, joten click-puolen nollaus jättäisi lipun päälle ja
+     * nielaisisi pyyhkäisyä SEURAAVAN napautuksen. Jokainen ele
+     * päättää itse, oliko se veto vai napautus.
+     */
+    estaNapautus = false;
+    raahaus = {
+      id: tapahtuma.pointerId, x: tapahtuma.clientX, y: tapahtuma.clientY,
+      dx: 0, vaaka: false,
+    };
+  });
+  ikkuna.addEventListener('pointermove', (tapahtuma) => {
+    if (!raahaus || tapahtuma.pointerId !== raahaus.id) return;
+    const dx = tapahtuma.clientX - raahaus.x;
+    const dy = tapahtuma.clientY - raahaus.y;
+    if (!raahaus.vaaka) {
+      if (Math.abs(dx) < 6 && Math.abs(dy) < 6) return;
+      if (Math.abs(dx) <= Math.abs(dy)) { raahaus = null; return; }
+      raahaus.vaaka = true;
+      raita.classList.add('raahataan');
+      ikkuna.setPointerCapture?.(tapahtuma.pointerId);
+    }
+    raahaus.dx = dx;
+    asetaRaita(dx);
+  });
+  const lopetaRaahaus = (tapahtuma) => {
+    if (!raahaus || (tapahtuma && tapahtuma.pointerId !== raahaus.id)) return;
+    const { dx, vaaka } = raahaus;
+    raahaus = null;
+    raita.classList.remove('raahataan');
+    // Sormi liikkui: napautus oli pyyhkäisyn loppu eikä kuvan avaus.
+    if (Math.abs(dx) > 6) estaNapautus = true;
+    const suunta = vaaka ? elaintakynKarusellinPyyhkaisy(dx) : 0;
+    if (suunta) siirry(elaintakynKarusellinKohta(kohdalla, suunta, kuvat.length));
+    else asetaRaita();
+  };
+  ikkuna.addEventListener('pointerup', lopetaRaahaus);
+  ikkuna.addEventListener('pointercancel', lopetaRaahaus);
+
+  kehys.addEventListener('keydown', (tapahtuma) => {
+    if (tapahtuma.key !== 'ArrowLeft' && tapahtuma.key !== 'ArrowRight') return;
+    tapahtuma.stopPropagation();
+    siirry(elaintakynKarusellinKohta(kohdalla, tapahtuma.key === 'ArrowRight' ? 1 : -1,
+      kuvat.length));
+  });
+
+  nayta();
+  kohde.appendChild(kehys);
+}
+
 /**
  * Kortin kuva. Kuva haetaan VASTA TÄSSÄ eli kortin avautuessa: 29
  * eläinkuvaa on 3,3 megatavua, eikä niitä ole palvelutyöntekijän
@@ -688,12 +949,20 @@ export function avaaElaintaky(ui, iso) {
  * kortin yksinkin, kuten täkynostolla.
  */
 function elaintakyPiirraKuva(ui, kohde, taky, maa) {
+  const selite = `${taky.elain.charAt(0).toUpperCase()}${taky.elain.slice(1)}, ${maa}`;
+  /*
+   * KAKSI KUVAA SAMASTA AIHEESTA MENEE KARUSELLIIN (omistajan päätös
+   * 5.9.2026, ks. lohko yllä). Tietue kertoo kuvansa yhdellä tavalla
+   * (js/packs/elaintakyt.js elaintakynKuvat), ja yhden kuvan tietue
+   * latoutuu tästä eteenpäin täsmälleen kuten ennen.
+   */
+  const kuvat = elaintakynKuvat(taky);
+  if (kuvat.length > 1) { elaintakyPiirraKaruselli(ui, kohde, kuvat, selite); return; }
   const kehys = html('figure', 'fokusnosto-kuva elaintaky-kuva');
   const nappi = html('button', 'fokusnosto-kuvanappi');
   nappi.type = 'button';
   nappi.title = 'Katso kuva suurempana';
   const img = document.createElement('img');
-  const selite = `${taky.elain.charAt(0).toUpperCase()}${taky.elain.slice(1)}, ${maa}`;
   nappi.setAttribute('aria-label', `${selite} — avaa suurena`);
   img.alt = selite;
   img.decoding = 'async';
