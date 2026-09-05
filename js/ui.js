@@ -19327,8 +19327,16 @@ export class UI {
          * saa syödä hetkeä eikä hetki ohjetta. Muilla saapumisilla
          * kutsu palaa saman tien epätotena (js/livia.js).
          */
+        /*
+         * OHJEET OVAT PALJASTUKSEN SISÄLLÄ (omistaja 5.9.2026 ilta):
+         * Livia lukee tervetuloa-toivotuksen ja tehtäväohjeen pöllön
+         * sähkeestä (js/livia.js livianPaljastus), joten ohjekuplia ei
+         * näytetä sen perään. Jos paljastus ei ala (jo nähty tai
+         * paneeli auki), ohjekuplat tulevat kuten ennen.
+         */
         if (naytaLivianPaljastus(this, {
-          jalkeen: () => this.saapumisenOhjekuplat(tervetuloa),
+          maahan: maa ? maahanMuoto(maa) : '',
+          paikassa: paikka ?? '',
         })) return;
         this.saapumisenOhjekuplat(tervetuloa);
       }, viive);

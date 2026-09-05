@@ -57,7 +57,7 @@ export const LIVIAN_AVAUS = [
    * OPASLUPAUS (omistaja 29.8.2026): avaus lupaa pöllön oppaaksi ja
    * Livian pelkäksi viestinviejäksi. Lupaus on dramaturgian toinen
    * puoli — perillä selviää, että Livia joutuukin tuuraamaan
-   * (LIVIAN_PALJASTUS). Älä muuta kumpaakaan erikseen.
+   * (livianPaljastus). Älä muuta kumpaakaan erikseen.
    */
   'Perillä sinua odottaa Viisas Pöllö — se näistä hommista tietää. Minä '
     + 'olen vain viestinviejä.',
@@ -226,12 +226,34 @@ export function peruLivianAvaus() {
  * VAIN ENSIMMÄISELLÄ SAAPUMISELLA KOSKAAN: laitelippu, ja sen lisäksi
  * istunnon oma lippu siltä varalta, ettei muistiin voi kirjoittaa.
  */
-export const LIVIAN_PALJASTUS = [
-  'Kaak. Sähke. ...Pöllö on juuttunut matkoilleen. Hetkenä minä hyvänsä '
-    + 'se ehtii, mutta juuri nyt — no. Minä tuuraan.',
-  'Ei hätää. Minä olen kantanut sen sähkeet vuosia ja lukenut joka '
-    + 'ikisen. Melkein joka ikisen. Aloitetaan.',
-];
+/*
+ * OHJEET PULUN SUUHUN (omistaja 5.9.2026 ilta, sanatarkasti: *"sen
+ * tervetuloa kreikkaan ja ratkaise tehtävä ohjeet voi ottaa pois ja
+ * kirjoittaa hauskemmin pulun noihin kahteen kommenttiin sisään"*):
+ * ensimmäisellä saapumisella pöllön kaksi ohjekuplaa ("Tervetuloa
+ * Kreikkaan. Sinun on ratkaistava tehtävä Ateenassa…" ja "Klikkaa
+ * kaupungin kultaista merkkiä kartalla.") eivät tule enää erikseen —
+ * Livia lukee ne pöllön sähkeestä omalla tavallaan. Siksi paljastus on
+ * funktio, joka saa maan ja paikan (js/ui-apurit.js maahanMuoto ja
+ * paikassaMuoto). Ilman niitä (tuntematon maa) sähke jää lyhyeksi ja
+ * ohje yleiseksi. Muilla saapumisilla ohjekuplat tulevat kuten ennen.
+ */
+export function livianPaljastus({ maahan = '', paikassa = '' } = {}) {
+  const tervetuloa = maahan ? ` Siinä lukee: "Tervetuloa ${maahan}."` : '';
+  const tehtava = paikassa ? `ratkaise tehtävä ${paikassa}` : 'ratkaise kaupungin tehtävä';
+  return [
+    `Kaak. Sähke pöllöltä.${tervetuloa} Ja sitten: pöllö on juuttunut `
+      + 'matkoilleen. Hetkenä minä hyvänsä se ehtii, mutta juuri nyt — no. '
+      + 'Minä tuuraan.',
+    'Ei hätää. Olen kantanut sen sähkeet vuosia ja lukenut joka ikisen. '
+      + `Melkein joka ikisen. Tämän loppu kuuluu: ${tehtava} ennen kuin `
+      + 'lähdet aarteelle — napauta kaupungin kultaista merkkiä kartalla. '
+      + 'Loput on mustetahraa. Aloitetaan.',
+  ];
+}
+
+/** Paljastus ilman paikkaa (vanha muoto; testit ja varapolku). */
+export const LIVIAN_PALJASTUS = livianPaljastus();
 
 /**
  * Lippu laitteen muistissa: tuurauspaljastus on nähty.
@@ -306,7 +328,7 @@ export function livianPaljastusKesken(ui) {
  *   jälkeen — saapumisen omat ohjekuplat.
  * @returns {boolean} alkoiko sarja (epätosi = kutsuja jatkaa itse).
  */
-export function naytaLivianPaljastus(ui, { jalkeen = null } = {}) {
+export function naytaLivianPaljastus(ui, { jalkeen = null, maahan = '', paikassa = '' } = {}) {
   if (!livianPaljastusOdottaa(ui) || paljastusAnnettu) return false;
   const city = ui.game?.cityOf?.() ?? null;
   if (!city) return false;
@@ -318,12 +340,12 @@ export function naytaLivianPaljastus(ui, { jalkeen = null } = {}) {
   } catch {
     /* yksityinen selaus: istunnon lippu kantaa loppumatkan */
   }
-  paljastusRepliikki(ui, city.id, 0, jalkeen);
+  paljastusRepliikki(ui, city.id, 0, jalkeen, livianPaljastus({ maahan, paikassa }));
   return true;
 }
 
 /** Yksi paljastuksen repliikki; napautus tai ajastin vie seuraavaan. */
-function paljastusRepliikki(ui, cityId, i, jalkeen) {
+function paljastusRepliikki(ui, cityId, i, jalkeen, repliikit = LIVIAN_PALJASTUS) {
   clearTimeout(paljastusAjastin);
   paljastusAjastin = null;
   if (ui.dead) { paljastusKesken = false; return; }
@@ -341,17 +363,17 @@ function paljastusRepliikki(ui, cityId, i, jalkeen) {
    */
   if (linssiEstaa()) {
     paljastusAjastin = setTimeout(
-      () => paljastusRepliikki(ui, cityId, i, jalkeen), PALJASTUKSEN_LINSSIVALI,
+      () => paljastusRepliikki(ui, cityId, i, jalkeen, repliikit), PALJASTUKSEN_LINSSIVALI,
     );
     return;
   }
-  const teksti = LIVIAN_PALJASTUS[i];
+  const teksti = repliikit[i];
   if (!teksti) {
     paljastusKesken = false;
     jalkeen?.();
     return;
   }
-  const seuraava = () => paljastusRepliikki(ui, cityId, i + 1, jalkeen);
+  const seuraava = () => paljastusRepliikki(ui, cityId, i + 1, jalkeen, repliikit);
   if (!polloSaapumiskupla(teksti, { kuittaus: seuraava })) {
     // Kupla ei mahtunut ruudulle (paneeli auki): ohjekuplat hoitavat
     // saapumisen, eikä sarjaa jäädä odottamaan.
