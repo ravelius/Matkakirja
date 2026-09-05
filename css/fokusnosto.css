@@ -595,6 +595,162 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
    punnat tule kahdesti. */
 .elaintaky-palkkio-vanha { color: rgba(33, 29, 24, 0.58); }
 
+/* ---------------------------------------------------------------------------
+   KAKSI KUVAA SAMASTA AIHEESTA = KARUSELLI (omistajan päätös 5.9.2026)
+   ---------------------------------------------------------------------------
+   Raamatun osio "ELAINKUVIIN TARINAA, KAKSI KUVAA SAMASTA AIHEESTA",
+   sanatarkasti: *"samasta eläinaiheesta voi olla kaksi erilaista
+   hyväksyttyä kuvaa, ja kortilla ne näytetään KARUSELLINA (kuva
+   vaihtuu pyyhkäisyllä kuten lehden alarivin karuselli, pisteet
+   kertovat määrän, kummallakin kuvalla oma kuvateksti)"*.
+
+   MITAT JA ILME OVAT LEHDEN ALARIVIN KARUSELLIN (css/aikajana.css
+   .tiedeliite-karuselli-*): ikkuna, jonka sisällä raita liukuu, ruutu
+   per kuva ja pisteet alla. Säännöt ovat tässä tiedostossa eivätkä
+   siellä, koska eläinkortti lataa vain fokusnosto.css:n — aikajanan
+   tyylit tulevat sivulle vasta linssin mukana (js/elaintaky.js
+   elaintakyLataaTyyli).
+
+   IKKUNA ON KUVIEN OMASSA MITTASUHTEESSA (3:2, tools/elaintakykuvat.mjs
+   960 x 640) ja enintään yhtä korkea kuin yhden kuvan kortissa
+   (.fokusnosto-kuva img max-height 42vh), joten yksi ja kaksi kuvaa
+   ovat kortilla saman kokoisia. Kuva on `contain`illa kokonaan
+   näkyvissä (omistaja 1.9.2026: "Kuva pitää näkyä kokonaan"), joten
+   muunkin muotoinen kakkoskuva latoutuu leikkaamatta.
+
+   YKSI KUVA EI SAA NÄISTÄ SÄÄNNÖISTÄ MITÄÄN: kaikki valitsimet ovat
+   .elaintaky-karuselli-alkuisia, ja karuselli syntyy vain useammasta
+   kuvasta (js/elaintaky.js elaintakyPiirraKuva).
+   --------------------------------------------------------------------- */
+
+.elaintaky-karuselli {
+  position: relative;
+  /* Kehys on kuvan levyinen (ks. .fokusnosto-kuva): ikkuna on tässä se
+     mitta, joka ratkaisee, ja kuvateksti asettuu sen reunoihin. */
+  width: min(100%, calc(42vh * 3 / 2));
+}
+
+.elaintaky-karuselli-ikkuna {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  /* Vaakapyyhkäisy karusellille, pystyvieritys yhä kortille. */
+  touch-action: pan-y;
+  border-radius: 6px;
+  border: 1px solid rgba(122, 85, 20, 0.3);
+  background: rgba(122, 85, 20, 0.1);
+}
+
+.elaintaky-karuselli-raita {
+  display: flex;
+  height: 100%;
+  /* Liuku nopeutuen ja hidastuen (Raamattu: kaikki liike animoidaan
+     pehmeästi); 250 ms on omistajan mitta tälle kortille. */
+  transition: transform 250ms cubic-bezier(0.33, 0.02, 0.2, 1);
+  will-change: transform;
+}
+
+/* Sormen alla raita seuraa liikettä ilman siirtymää. */
+.elaintaky-karuselli-raita.raahataan { transition: none; }
+
+.elaintaky-karuselli-ruutu {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  /* Yleissääntö `button { min-height: … }` venyttäisi ruudun raidan
+     yli; ruudun mitta on ikkunan mitta. */
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+/*
+ * KEHYS ON IKKUNALLA, EI KUVALLA: perussääntö .fokusnosto-kuva img
+ * antaa jokaiselle kortin kuvalle oman reunuksen ja 42vh-katon, mutta
+ * karusellissa reunus kuuluu ikkunaan — muuten raidalla olisi kaksi
+ * kehystä ja kuva jäisi ikkunaansa lyhyemmäksi.
+ */
+.elaintaky-karuselli-ruutu img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.elaintaky-karuselli-ruutu img[hidden] { display: none; }
+.elaintaky-karuselli-ruutu:focus-visible { outline: 2px solid #9c6b17; outline-offset: -3px; }
+
+/* Kuvateksti ja lähderivi vaihtuvat kuvan mukana ja tulevat esiin
+   pehmeästi samassa 250 ms:ssä kuin raita liukuu. */
+.elaintaky-karuselli-teksti.vaihtui { animation: elaintaky-kuvateksti-esiin 250ms ease-out; }
+
+@keyframes elaintaky-kuvateksti-esiin {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* PISTEET: kuvien määrä ja paikka yhdellä silmäyksellä (omistajan
+   päätös: "pisteet kertovat määrän"). */
+.elaintaky-karuselli-pisteet {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0.25rem 0 0;
+}
+
+/* Piste itse on pieni, mutta nappi on sormen kokoinen (22 px): väri ja
+   reuna piirtyvät ::before-ympyrään, ei nappiin — muuten yleissääntö
+   `button { min-height: 42px }` venyttäisi pisteen soikioksi. */
+.elaintaky-karuselli-piste {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.elaintaky-karuselli-piste::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1px solid rgba(122, 85, 20, 0.6);
+  border-radius: 50%;
+  background: transparent;
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.elaintaky-karuselli-piste:hover::before { background: rgba(122, 85, 20, 0.3); }
+
+.elaintaky-karuselli-piste.nykyinen::before {
+  background: #b8891f;
+  transform: scale(1.15);
+}
+
+/* Hiljainen liike: kuva vaihtuu suoraan, ilman liukua ja häivytystä. */
+@media (prefers-reduced-motion: reduce) {
+  .elaintaky-karuselli-raita { transition: none; }
+  .elaintaky-karuselli-piste::before { transition: none; }
+  .elaintaky-karuselli-teksti.vaihtui { animation: none; }
+}
+
+
 /* ===========================================================================
    7. SYVENNYSTARINA JA SKANDAALI — kartan tarinakortit (js/syvennys.js,
       js/skandaalit.js)

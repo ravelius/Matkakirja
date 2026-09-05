@@ -25,6 +25,12 @@
  *   4. YLEISKUVA ON TYHJÄ. Maailmankartan yleiskuvassa kerros on
  *      piilossa (29 merkkiä peukalonkynnen kokoisessa Euroopassa olisi
  *      ryteikkö) ja lähennettäessä merkit palaavat.
+ *   5. KAKSI KUVAA SAMASTA AIHEESTA ON KARUSELLI (omistajan päätös
+ *      5.9.2026): kuvia on kaksi, pisteet kertovat määrän, pyyhkäisy
+ *      vaihtaa kuvan kumpaankin suuntaan, kuvateksti ja lähderivi
+ *      vaihtuvat kuvan mukana, kynnyksen alle jäävä veto ei vaihda
+ *      mitään ja suurennos näyttää NYKYISEN kuvan. Yhden kuvan kortti
+ *      (osio 2) ei saa karusellia lainkaan.
  *
  * Peli istutetaan kaupunkiin pelitallenteen kautta, kuten muissakin
  * savukkeissa: lentoa ei voi odottaa.
@@ -86,10 +92,13 @@ function tallenneKaupunkiin(lauta, id) {
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 
 /** Yksi sivu valmiiksi ladattuna annettuun kaupunkiin. */
-async function avaaSivu(lauta, kaupunki) {
+async function avaaSivu(lauta, kaupunki, { liike = false } = {}) {
   const ctx = await selain.newContext({
     viewport: { width: 1100, height: 900 },
-    reducedMotion: 'reduce',
+    // Karusellin osio ajetaan liike päällä: 250 ms:n liuku on osa
+    // väitettä. Muut osiot mittaavat paikkoja, joille animaatio on
+    // pelkkää odotusta.
+    reducedMotion: liike ? 'no-preference' : 'reduce',
   });
   await ctx.addInitScript((data) => {
     try {
@@ -167,6 +176,7 @@ const kortti = (sivu) => sivu.evaluate(() => {
     kuvaPiilossa: Boolean(k.querySelector('.elaintaky-kuva')?.hidden),
     palkkio: k.querySelector('.elaintaky-palkkio')?.textContent ?? '',
     vanha: Boolean(k.querySelector('.elaintaky-palkkio-vanha')),
+    karusellia: Boolean(k.querySelector('.elaintaky-karuselli')),
   };
 });
 
@@ -278,6 +288,10 @@ vaadi('kortissa on pelin oma eläinkuva (repo tai ämpäri) ja se latautui',
 // kertoo sen samalla sanamuodolla kuin muutkin pelin omat kuvat.
 vaadi('kortin kuvalla on näkyvä lähderivi',
   (avattu?.lahde ?? '').length > 5, avattu?.lahde);
+// YKSI KUVA EI OLE KARUSELLI (omistajan päätös 5.9.2026): karuselli
+// syntyy vasta toisesta kuvasta, ja yhden kuvan kortti on entinen.
+vaadi('yhden kuvan kortissa ei ole karusellia',
+  avattu?.karusellia === false, JSON.stringify(avattu?.karusellia));
 
 await eu.screenshot({ path: join(KAAPPAUKSET, 'elaintaky-kortti.png') });
 
@@ -341,6 +355,177 @@ vaadi('lähennettäessä merkit palaavat kartalle',
   `piilossa=${lahikuva.piilossa}, ${lahikuva.rivit.length} merkkiä`);
 await maailma.screenshot({ path: join(KAAPPAUKSET, 'elaintaky-kartta.png') });
 await maailma.context().close();
+
+
+/* --- 5: kaksi kuvaa samasta aiheesta on karuselli --- */
+
+/*
+ * OMISTAJAN PÄÄTÖS 5.9.2026 (Raamattu, "ELAINKUVIIN TARINAA, KAKSI
+ * KUVAA SAMASTA AIHEESTA"), sanatarkasti: *"samasta eläinaiheesta voi
+ * olla kaksi erilaista hyväksyttyä kuvaa, ja kortilla ne näytetään
+ * KARUSELLINA (kuva vaihtuu pyyhkäisyllä kuten lehden alarivin
+ * karuselli, pisteet kertovat määrän, kummallakin kuvalla oma
+ * kuvateksti)"*.
+ *
+ * TESTIDATA ELÄÄ VAIN TÄSSÄ SAVUKKEESSA. Kuvaputki ei ole vielä
+ * toimittanut yhtään paria, joten toinen kuva tehdään selaimessa
+ * samasta repon kuvasta: sivun oma moduuli haetaan dynaamisella
+ * tuonnilla (sama moduuli-instanssi kuin pelillä) ja sen tietueeseen
+ * kirjoitetaan `kuvat`-lista. Repon data ei muutu tavuakaan.
+ *
+ * KORTTI AVATAAN avaaElaintaky-funktiolla eikä merkkiä napauttamalla:
+ * se on täsmälleen sama sisäänkäynti, jota kartan merkki (osio 2) ja
+ * pallolaudan eläintäky (js/pallolauta/nostot.js) käyttävät, ja
+ * mittaus kohdistuu näin varmasti siihen maahan, jolle testikuvat
+ * pantiin.
+ *
+ * LIIKE ON PÄÄLLÄ tässä osiossa (muut osiot ajavat reduced motionilla):
+ * karusellin liuku on 250 ms, ja väite "kuva vaihtuu pyyhkäisyllä" on
+ * tosi vasta kun siirtymä on ehtinyt loppuun.
+ */
+const KARUSELLIN_MAA = 'FIN';
+const kaksikuvainen = await avaaSivu('maailmankartta', 'helsinki', { liike: true });
+/*
+ * OIKEAT ELÄINKUVAT RUUDULLE TÄSSÄ OSIOSSA. Eläinkuvat luetaan
+ * ämpäristä (js/media.js R2_ASSETIT.elaimet), jonne kontti ei pääse,
+ * ja avaaSivun yleinen reititys korvaisi ne yhden pikselin kuvalla.
+ * Karusellin kaappaus on omistajalle näyte kortista, joten ämpärin
+ * osoite tarjoillaan repon omasta tiedostosta — sama kuva, oikea
+ * mittasuhde (960 x 640).
+ */
+await kaksikuvainen.route(/\/kohtaamiset\/elaimet\/elain-[a-z]{3}\.jpg/, (route, pyynto) => {
+  const nimi = pyynto.url().match(/elain-[a-z]{3}\.jpg/)[0];
+  route.fulfill({
+    status: 200,
+    contentType: 'image/jpeg',
+    body: readFileSync(join(JUURI, 'assets/elaimet', nimi)),
+  });
+});
+await kaksikuvainen.evaluate(async (iso) => {
+  const { ELAINTAKYT } = await import('/js/packs/elaintakyt.js');
+  ELAINTAKYT[iso].kuvat = [
+    {
+      tiedosto: ELAINTAKYT[iso].kuva,
+      kuvateksti: 'Ensimmäinen testikuva',
+      lahde: 'Matkakirjan havainnekuva',
+    },
+    {
+      tiedosto: ELAINTAKYT[iso].kuva,
+      kuvateksti: 'Toinen testikuva',
+      lahde: 'Matkakirjan havainnekuva',
+    },
+  ];
+}, KARUSELLIN_MAA);
+await kaksikuvainen.evaluate(async (iso) => {
+  const { avaaElaintaky } = await import('/js/elaintaky.js');
+  avaaElaintaky(window.matkakirja.ui, iso);
+}, KARUSELLIN_MAA);
+await kaksikuvainen.waitForTimeout(700);
+
+/** Karusellin tila kortissa: ruudut, pisteet, kuvateksti ja raidan paikka. */
+const karuselli = (sivu) => sivu.evaluate(() => {
+  const kehys = document.querySelector('.elaintaky-karuselli');
+  if (!kehys) return null;
+  const ikkuna = kehys.querySelector('.elaintaky-karuselli-ikkuna');
+  const r = ikkuna?.getBoundingClientRect();
+  const pisteet = [...kehys.querySelectorAll('.elaintaky-karuselli-piste')];
+  const ruudut = [...kehys.querySelectorAll('.elaintaky-karuselli-ruutu')];
+  return {
+    maara: kehys.dataset.maara ?? '',
+    ruutuja: ruudut.length,
+    kuvia: ruudut.filter((n) => n.querySelector('img')?.naturalWidth > 0).length,
+    pisteita: pisteet.length,
+    nykyinen: pisteet.findIndex((p) => p.classList.contains('nykyinen')),
+    selite: kehys.querySelector('.fokusnosto-kuvaselite')?.textContent ?? '',
+    lahde: kehys.querySelector('.fokusnosto-kuvalahde')?.textContent ?? '',
+    // Raidan siirto prosentteina: 0 = ensimmäinen kuva, -100 = toinen.
+    siirto: (() => {
+      const raita = kehys.querySelector('.elaintaky-karuselli-raita');
+      const m = getComputedStyle(raita).transform;
+      if (!m || m === 'none') return 0;
+      const x = Number(m.slice(m.indexOf('(') + 1, -1).split(',')[4]);
+      return r?.width ? Math.round((x / r.width) * 100) : 0;
+    })(),
+    keski: r ? { x: r.left + r.width / 2, y: r.top + r.height / 2 } : null,
+    leveys: r?.width ?? 0,
+  };
+});
+
+const eka = await karuselli(kaksikuvainen);
+vaadi('kaksi kuvaa avaa karusellin, ei kahta kuvaa allekkain',
+  eka?.ruutuja === 2 && eka?.maara === '2', JSON.stringify(eka));
+vaadi('pisteet kertovat kuvien määrän ja ensimmäinen on nykyinen',
+  eka?.pisteita === 2 && eka?.nykyinen === 0, JSON.stringify(eka));
+vaadi('ensimmäisen kuvan oma kuvateksti ja lähderivi ovat näkyvissä',
+  eka?.selite === 'Ensimmäinen testikuva' && (eka?.lahde ?? '').includes('havainnekuva'),
+  `${eka?.selite} · ${eka?.lahde}`);
+vaadi('molemmat kuvat latautuivat raitaan',
+  eka?.kuvia === 2, `${eka?.kuvia}/2 kuvaa`);
+
+await kaksikuvainen.screenshot({ path: join(KAAPPAUKSET, 'elaintaky-karuselli-1.png') });
+
+/** Vaakapyyhkäisy karusellin ikkunan yli (hiiri = sama osoitinele kuin sormi). */
+async function pyyhkaise(sivu, keski, matka) {
+  await sivu.mouse.move(Math.round(keski.x), Math.round(keski.y));
+  await sivu.mouse.down();
+  for (const osa of [0.2, 0.5, 0.8, 1]) {
+    await sivu.mouse.move(Math.round(keski.x + matka * osa), Math.round(keski.y));
+  }
+  await sivu.mouse.up();
+  // Liuku on 250 ms; odotetaan sen yli ennen mittausta.
+  await sivu.waitForTimeout(600);
+}
+
+await pyyhkaise(kaksikuvainen, eka.keski, -Math.round(eka.leveys * 0.4));
+const toka = await karuselli(kaksikuvainen);
+vaadi('pyyhkäisy vasemmalle vaihtaa toiseen kuvaan',
+  toka?.nykyinen === 1 && toka?.siirto === -100, JSON.stringify(toka));
+vaadi('kuvateksti ja lähderivi vaihtuvat kuvan mukana',
+  toka?.selite === 'Toinen testikuva' && (toka?.lahde ?? '').includes('havainnekuva'),
+  `${toka?.selite} · ${toka?.lahde}`);
+
+await kaksikuvainen.screenshot({ path: join(KAAPPAUKSET, 'elaintaky-karuselli-2.png') });
+
+await pyyhkaise(kaksikuvainen, toka.keski, Math.round(toka.leveys * 0.4));
+const takaisin = await karuselli(kaksikuvainen);
+vaadi('pyyhkäisy oikealle palaa ensimmäiseen kuvaan',
+  takaisin?.nykyinen === 0 && takaisin?.siirto === 0
+  && takaisin?.selite === 'Ensimmäinen testikuva', JSON.stringify(takaisin));
+
+// Lyhyt veto ei ole pyyhkäisy (kynnys 30 px): kuva jää paikalleen.
+await pyyhkaise(kaksikuvainen, takaisin.keski, -12);
+const kynnyksenAlla = await karuselli(kaksikuvainen);
+vaadi('kynnyksen alle jäävä veto ei vaihda kuvaa',
+  kynnyksenAlla?.nykyinen === 0 && kynnyksenAlla?.siirto === 0,
+  JSON.stringify(kynnyksenAlla));
+
+// Piste on toinen tie samaan: napautus vie suoraan kuvaan.
+await kaksikuvainen.evaluate(() => {
+  document.querySelectorAll('.elaintaky-karuselli-piste')[1]?.click();
+});
+await kaksikuvainen.waitForTimeout(600);
+const pisteesta = await karuselli(kaksikuvainen);
+vaadi('pisteen napautus vie samaan kuvaan kuin pyyhkäisy',
+  pisteesta?.nykyinen === 1 && pisteesta?.selite === 'Toinen testikuva',
+  JSON.stringify(pisteesta));
+
+// Suurennos näyttää NYKYISEN kuvan eikä aina ensimmäistä. Napautus on
+// oikea hiiren napautus eikä ohjelmallinen click: pyyhkäisyn ja
+// napautuksen ero ratkeaa osoitineleessä (js/elaintaky.js estaNapautus).
+await kaksikuvainen.mouse.click(
+  Math.round(pisteesta.keski.x), Math.round(pisteesta.keski.y),
+);
+await kaksikuvainen.waitForTimeout(700);
+const suurennos = await kaksikuvainen.evaluate(() => {
+  const kuva = document.querySelector('.fokuskohde-zoom .fokuskohde-zoomkuva');
+  const selite = document.querySelector('.fokuskohde-zoomselite')?.textContent ?? '';
+  return { auki: Boolean(kuva), src: kuva?.getAttribute('src') ?? '', selite };
+});
+vaadi('kortin kuvan napautus avaa suurennoksen nykyisestä kuvasta',
+  suurennos.auki && /elain-fin\.jpg/.test(suurennos.src)
+  && suurennos.selite === 'Toinen testikuva', JSON.stringify(suurennos));
+
+await kaksikuvainen.context().close();
 
 await selain.close();
 palvelin.close();
