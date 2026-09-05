@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1614, teksti: 'Kaariluennat 42 kaupungille, mykistys pois' },
   { v: 1613, teksti: 'Pohjaraidan valitsin: musiikkia kaikkiin kohtiin' },
   { v: 1612, teksti: 'Ihmisen matka -linssi; liekkivalot; aloitus lahemmas' },
   { v: 1611, teksti: 'Etusivu: otsikko paikallaan, Osa II 2,3 s, kuvat pois' },

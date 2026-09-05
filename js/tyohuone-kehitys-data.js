@@ -31,7 +31,7 @@ export const KAARI_PAKETIT = {
   kohteet: [
     {
       id: 'praha',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Praha — kynttilä tyhjässä talossa',
       saapuminen: 'Kultaisen kujan talot ovat niin pieniä, että löin pääni '
         + 'kamanaan kahdesti; kolmannella kumarsin ennen kuin ovi '
@@ -98,7 +98,7 @@ export const KAARI_PAKETIT = {
     {
       id: 'istanbul',
       kuva: 'assets/kohtaamiset/kohtaaminen-istanbul.jpg',
-      mykistetyt: ['saapuminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Istanbul — upotettu palatsi',
       saapuminen: 'Laskin viisikymmentäkaksi porrasta pimeään, ja kaupungin äänet '
         + 'sammuivat yksi kerrallaan. Alhaalla avautui pylväsmetsä '
@@ -135,7 +135,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'wien',
-      mykistetyt: ['saapuminen'],
+      mykistetyt: [],
       otsikko: 'Wien — luiden holvit kirkon alla',
       saapuminen: 'Maailmannäyttelyn rotunda kohosi Praterissa suurempana '
         + 'kuin yksikään mittaamani kupoli, ja sen alla koneet '
@@ -199,7 +199,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'venetsia',
-      mykistetyt: ['saapuminen'],
+      mykistetyt: [],
       otsikko: 'Venetsia — naamio sillan kaiteella',
       saapuminen: 'Vesi nousi yöllä kaduille, ja aamulla torilla '
         + 'käveltiin lankkuja pitkin kuin laivan kannella — kaupunki '
@@ -234,7 +234,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'budapest',
-      mykistetyt: ['saapuminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Budapest — hengittävä labyrintti',
       saapuminen: 'Saavuin kaupunkiin, jota ei viime vuonna ollut: Buda, Pest '
         + 'ja Óbuda päättivät tänä vuonna olla yhtä. Kirjasin nimen '
@@ -298,7 +298,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'lontoo',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Lontoo — valo löytää kadun',
       /*
        * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
@@ -368,7 +368,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'pariisi',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Pariisi — kirja joka odotti rannalla',
       saapuminen: 'Seinen rannalla tein sen, mitä suvussamme ei osata: '
         + 'tingin. Bukinisti kuunteli tarjoustani, nosti hintaa ja '
@@ -406,7 +406,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'berliini',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Berliini — kaukoputki joka katsoi tyhjää',
       saapuminen: 'Tähtitornin kupoli oli raollaan, vaikka yö oli pilvinen, '
         + 'ja kaukoputki osoitti kohtaan, jossa paljas silmä ei '
@@ -456,7 +456,7 @@ export const KAARI_PAKETIT = {
        * kuin repliikissä. Rivi palaa muodossa
        * kuva: 'assets/kohtaamiset/kohtaaminen-rooma.jpg' tai R2-polkuna.
        */
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Rooma — sävelmä sivukadulta',
       /*
        * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
@@ -522,7 +522,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'madrid',
-      mykistetyt: ['saapuminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Madrid — kolmastoista lyönti',
       saapuminen: 'Puerta del Solin kello löi keskiyön, ja laskin lyönnit '
         + 'vanhasta tottumuksesta. Niitä oli kolmetoista. Päätin '
@@ -577,7 +577,7 @@ export const KAARI_PAKETIT = {
       otsikko: 'Ateena — kaksi mittaa samasta kivestä',
       // Omistajan palaute 11.8.2026: lyhennetty ja pöllön ele sekä
       // päiväkirjakehys kirkastettu; kohtaamisen lupaus konkreettinen.
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       /*
        * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
        *
@@ -644,7 +644,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'lissabon',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Lissabon — laatta jota ei poltettu loppuun',
       saapuminen: 'Belémin vartija vannoi, ettei torni ole siirtynyt '
         + 'keskelle jokea — joki siirtyi. Kirjasin väitteen '
@@ -682,7 +682,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'amsterdam',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Amsterdam — väärä kerros',
       /*
        * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
@@ -758,7 +758,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'dublin',
-      mykistetyt: ['aarre'],
+      mykistetyt: [],
       otsikko: 'Dublin — lantti joka odotti maksajaansa',
       saapuminen: 'Ylitin joen sillalla, josta perittiin puolen pennin maksu. '
         + 'Maksoin sen ilolla: jalkasillalla ei kohtaa hevosia. '
@@ -801,7 +801,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'edinburgh',
-      mykistetyt: ['saapuminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Edinburgh — sekunnin ero',
       saapuminen: 'Linnan tykki jyrähti täsmälleen yhdeltä, ja kellot '
         + 'vastasivat. Kirkkomaalla pieni koira vartioi hautaa; istuin '
@@ -837,7 +837,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'barcelona',
-      mykistetyt: ['saapuminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Barcelona — lohikäärme ja tuore ruusu',
       saapuminen: 'Kävelin goottilaiskorttelin kujia, kunnes taivas oli enää '
         + 'viiva. Portin yllä lohikäärmeen kivipää työntyi seinästä, '
@@ -875,7 +875,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'granada',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Granada — kouru jota ei ole kartassa',
       /*
        * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
@@ -938,7 +938,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'marseille',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Marseille — saari josta palataan tarinoissa',
       /*
        * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
@@ -1006,7 +1006,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'varsova',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Varsova — eränumero varastokirjassa',
       /*
        * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
@@ -1108,7 +1108,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'krakova',
-      mykistetyt: ['saapuminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Krakova — sävel joka katkeaa kesken',
       saapuminen: 'Tornista nousi torvensoitto ja katkesi kesken sävelen, '
         + 'kuin veitsellä leikaten. Jäin laskemaan: katkos toistui '
@@ -1143,7 +1143,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'alpit',
-      mykistetyt: ['kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Alpit — laukku jota kukaan ei kaivannut',
       /*
        * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
@@ -1222,7 +1222,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'sisilia',
-      mykistetyt: ['saapuminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Sisilia — nukke jonka tarinaa ei esitetty',
       saapuminen: 'Rannan mustia paasia kalastajat sanovat kykloopin '
         + 'heittämiksi; kirjasin karttaan: heittäjä tuntematon. Yhden '
@@ -1262,7 +1262,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'kreeta',
-      mykistetyt: ['aarre'],
+      mykistetyt: [],
       otsikko: 'Kreeta — lanka joka jatkuu pimeään',
       saapuminen: 'Vuoren rinteessä luola haarautui käytäviksi, ja opas '
         + 'kieltäytyi jatkamasta ilman lankaa. Sidoimme kerän suulle ja '
@@ -1297,7 +1297,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'dubrovnik',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Dubrovnik — ranta näkyy vain mereltä',
       /*
        * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
@@ -1368,7 +1368,7 @@ export const KAARI_PAKETIT = {
     {
       id: 'sarajevo',
       kuva: 'assets/kohtaamiset/kohtaaminen-sarajevo.jpg',
-      mykistetyt: ['saapuminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Sarajevo — kaivo joka kutsuu takaisin',
       /*
        * QA-korjaus 9.8.2026 (Sonnet 1): torilla EI ollut kaivoa 1873 —
@@ -1411,7 +1411,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'sofia',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       kuva: 'assets/kohtaamiset/kohtaaminen-sofia.jpg',
       otsikko: 'Sofia — lähde joka kirjattiin sata vuotta',
       saapuminen: 'Lähde kumpusi kuumana kivialtaaseen keskellä kaupunkia, '
@@ -1451,7 +1451,7 @@ export const KAARI_PAKETIT = {
     {
       id: 'bukarest',
       kuva: 'assets/kohtaamiset/kohtaaminen-bukarest.jpg',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Bukarest — paimenen kirkonkello',
       saapuminen: 'Kirkonkello löi yhden, kun astuin portista, ja soittaja '
         + 'vannoi, ettei köydessä ollut kättä. Kirjasin lyönnin '
@@ -1488,7 +1488,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'kiova',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Kiova — merkki portin holvissa',
       saapuminen: 'Istuin piirtämään porttia kirjaani; pieni tyttö katsoi '
         + 'olkani yli ja pudisti päätään: kupoli oli väärän muotoinen. '
@@ -1558,7 +1558,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'odessa',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Odessa — kuitti väärältä puolelta',
       /*
        * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
@@ -1637,7 +1637,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'moskova',
-      mykistetyt: ['aarre'],
+      mykistetyt: [],
       otsikko: 'Moskova — kello joka ei koskaan soinut',
       saapuminen: 'Kellotornin juurella seisoi kello, joka on liian suuri '
         + 'soimaan: sen kyljestä lohjenneen palan aukosta kävelin '
@@ -1672,7 +1672,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'pietari',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Pietari — yö väärällä rannalla',
       /*
        * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
@@ -1751,7 +1751,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'helsinki',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Helsinki — maa joka nousee merestä',
       saapuminen: 'Kuninkaanportin rappusilla poika onki ilman koukkua; '
         + 'siimassa riippui pelkkä paino. Mitä pyydät, kysyin. Pohjaa, '
@@ -1785,7 +1785,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'tallinna',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Tallinna — makea lääke',
       /*
        * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
@@ -1865,7 +1865,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'riika',
-      mykistetyt: ['saapuminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Riika — kukko joka näki tuulen',
       saapuminen: 'Nostin hattuani kirkontornille, ja tuuli vei sen — '
         + 'satamassa sanottiin, että kukko otti maksun. Yhden kukon '
@@ -1902,7 +1902,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'vilna',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Vilna — susi joka ulvoi sadan äänellä',
       saapuminen: 'Tornin kivijalassa, sammaleen alla, istui pieni rautainen '
         + 'susi — ja sen selkä oli lämmin, vaikka ilta oli kylmä. '
@@ -1942,7 +1942,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'tukholma',
-      mykistetyt: ['aarre'],
+      mykistetyt: [],
       otsikko: 'Tukholma — luukku talossa jossa ei ole ovea',
       saapuminen: 'Vanhassakaupungissa kuja kapeni niin, että hartiat hipoivat '
         + 'seiniä, ja portaat laskeutuivat sen pohjalle kuin kaivoon. '
@@ -1978,7 +1978,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'oslo',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Oslo — laiva mullan alla',
       /*
        * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
@@ -2075,7 +2075,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'kobenhavn',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Kööpenhamina — valot palavat kahdesti',
       /*
        * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
@@ -2158,7 +2158,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'lappi',
-      mykistetyt: ['kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Lappi — tuli joka juoksi taivaalla',
       saapuminen: 'Taivas syttyi. Vihreä liekki juoksi taivaanrannasta toiseen '
         + 'ja kaartui pääni ylle kuin joki, joka olisi noussut '
@@ -2193,7 +2193,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'tromssa',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Tromssa — yö jota ei tullut',
       /*
        * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
@@ -2265,7 +2265,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'islanti',
-      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      mykistetyt: [],
       otsikko: 'Islanti — kello jota lähde ei lue',
       /*
        * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
