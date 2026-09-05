@@ -27,7 +27,7 @@
  *              niiden väliin piirtyy isoympyrää seuraava reittiviiva
  *              sitä mukaa kuin valot syttyvät.
  *   lahikuva ja hyppykamera
- *              Kaksinkertainen lähikuva keksintöihin nähden (520 vs.
+ *              Kaksinkertainen lähikuva keksintöihin nähden (868 vs.
  *              260 lautayksikköä), koska välit ovat mannerten
  *              mittaisia; ja valtameren ylityksessä (Beringia, Sahul,
  *              Lapita, Aotearoa) kamera nousee automaattisesti niin
@@ -64,7 +64,7 @@ const PALLON_OSA = 'aikajana';
 const LAUTA = 'maailmankartta';
 
 /**
- * Lähikuva on KAKSINKERTAINEN keksintöihin nähden (2 × 260 = 520
+ * Lähikuva on KAKSINKERTAINEN keksintöihin nähden (2 × 434 = 868
  * lautayksikköä, mitattuna noin 3 000 km ruudun leveydellä): siellä
  * naapuripysäkit ovat saman maanosan sisällä, tässä eri mantereilla.
  *
@@ -74,7 +74,7 @@ const LAUTA = 'maailmankartta';
  * aikajanamoottorin mukanaan. Suhde vartioidaan testissä
  * (tests/ihmisen-matka.test.mjs).
  */
-export const IHMISEN_MATKAN_LAHIKUVA = 520;
+export const IHMISEN_MATKAN_LAHIKUVA = 868;
 
 /** Koko maapallo laudan yksiköissä — kamera sovitetaan tähän lopussa. */
 const MAAILMA = {

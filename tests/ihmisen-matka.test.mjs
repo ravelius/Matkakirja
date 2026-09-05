@@ -273,8 +273,11 @@ test('kortin alla paikka, havainnekuvan alla ajoitus ja otsikko', () => {
   assert.match(rakenna, /aria-label', `\$\{ajoitus\(t\)\}: \$\{t\.otsikko\}/);
   // Havainnekuvan alla ajoitus · otsikko — tai kuvaputken kuvateksti.
   const paneeli = metodi('vaihdaPaneeli');
-  assert.match(paneeli, /kuvateksti \? t\.otsikko : `\$\{ajoitus\(t\)\} · \$\{t\.otsikko\}`/);
-  assert.match(paneeli, /aikajana-ilmiokuvateksti-kuvateksti', kuvateksti/);
+  // Yhdistetty liekkierän kanssa (6.9.2026): otsikkorivi on vuosi ◈ nimi
+  // (AIKAJANAN_EROTIN) ja kuvatekstillinen pysäkki näyttää vain nimen +
+  // kuvatekstin sen alla.
+  assert.match(paneeli, /'aikajana-ilmiokuvateksti-vuosi', String\(ajoitus\(t\)\)/);
+  assert.match(paneeli, /if \(kuvateksti\) \{[\s\S]{0,300}aikajana-ilmiokuvateksti-kuvateksti', kuvateksti/);
   assert.match(paneeli, /if \(this\.kaari\.kuvasovitus === 'contain'\) kehys\.classList\.add\('kokonaan'\);/);
   assert.match(CSS, /\.aikajana-ilmiokuva\.kokonaan img \{ object-fit: contain; \}/);
   // Kellorivi: ajoitus · paikka.
@@ -330,7 +333,7 @@ test('viiva piirtyy laudan linssiapurille pikselipaksuisena ja kasvaa valojen mu
 
 test('lähikuva on kaksinkertainen keksintöihin nähden', () => {
   assert.equal(IHMISEN_MATKAN_LAHIKUVA, 2 * AIKAJANAN_LAHIKUVA_LEVEYS);
-  assert.equal(IHMISEN_MATKAN_LAHIKUVA, 520);
+  assert.equal(IHMISEN_MATKAN_LAHIKUVA, 868, 'kaavan korjaus (6.9.2026): keksinnot 434');
 });
 
 test('pitkä hyppy nostaa kameran, lyhyt jättää sen lähikuvaan', () => {

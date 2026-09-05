@@ -57,7 +57,7 @@ test('moottori valitsee laudan kerran ja piirtää pallolla vain linssiapurilla'
   // Merkki on ruutuvakio: vastaskaalaus ei aja pallolla.
   assert.match(MOOTTORI, /paivitaMittakaava\(suhde = 1\) \{\n[^}]*if \(this\.pallolla\) return;/);
   // Purku vie laudan kerrokset.
-  assert.match(MOOTTORI, /if \(this\.pallolla\) \{\n\s*cancelAnimationFrame\(this\.reianLiuku\);[\s\S]{0,200}this\.lauta\?\.linssit\?\.pura\(PALLON_OSA\);/);
+  assert.match(MOOTTORI, /if \(this\.pallolla\) \{\n\s*cancelAnimationFrame\(this\.reianLiuku\);[\s\S]{0,400}this\.lauta\?\.linssit\?\.pura\(PALLON_OSA\);/);
 });
 
 test('kamera on hereillä olevan laudan oma, eikä fokuslukkoa käännetä pallolla', () => {
