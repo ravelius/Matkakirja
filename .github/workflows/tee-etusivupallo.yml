@@ -1,0 +1,146 @@
+name: Tee etusivun pallo
+
+# ETUSIVUN ESIRENDERÖITY PALLO ÄMPÄRIIN (omistaja 5.9.2026: "etusivun
+# kartan voi pitää aluksi vielä vanhassa mutta sitten kun ehditään tehdä
+# uusi, niin siihen kannattaa varmaan renderöidä oma spesifi zoomattu
+# pallo joka pyörii hitaasti lontoosta kohti aasiaa, mutta on jo
+# renderöity blurrattuna"). Ajo polttaa Globe.gl:llä ja pelin omilla
+# pallolaatoilla sumennetun kuvasarjan, pakkaa sen kahdeksi videoksi
+# (VP9/WebM ja H.264/MP4) sekä yhdeksi pysäytyskuvaksi, ja vie ne
+# ämpäriin polkuun julisteet/etusivu/<versio>/ luettelon (etusivu.json)
+# kanssa. Peli osoittaa versioon js/etusivupallo.js:n
+# ETUSIVUPALLO_VERSIO-vakiolla — jos vaihdat versiota, vaihda molemmat.
+#
+# Repoon ei viedä kuvia eikä videoita (CLAUDE.md).
+# Sama neljän salaisuuden R2-kaava kuin tee-pallotekstuuri.yml:ssä.
+
+on:
+  workflow_dispatch:
+    inputs:
+      fps:
+        description: 'Kuvataajuus (15 = sulava ja pieni; 12 pienentää, 24 kasvattaa)'
+        required: false
+        type: string
+        default: '15'
+      lava:
+        description: 'Renderöidyn kankaan sivu pikseleinä (kuva rajataan tämän keskeltä)'
+        required: false
+        type: string
+        default: '900'
+      kuva:
+        description: 'Valmiin videon sivu pikseleinä (800 = puhelimelle riittävä)'
+        required: false
+        type: string
+        default: '800'
+      sumennus:
+        description: 'Sumennus pikseleinä (6 = omistajan "blurrattuna"; 0 = terävä)'
+        required: false
+        type: string
+        default: '6'
+      taso:
+        description: 'Pallolaattojen taso (5 = 1024 px päiväntasaajalla; 6 tarkempi ja hitaampi)'
+        required: false
+        type: string
+        default: '5'
+      kuiva:
+        description: 'Kuiva ajo: laske reitti ja luettelo, älä renderöi äläkä vie'
+        required: true
+        type: choice
+        default: 'ei'
+        options: ['ei', 'kylla']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tee-etusivupallo
+  cancel-in-progress: false
+
+jobs:
+  tee:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Tarkista että salaisuudet ovat tallessa
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "${R2_ACCOUNT_ID:-}" ]         || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ]     || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "${R2_BUCKET:-}" ]             || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            exit 1
+          fi
+
+      - name: Kuiva ajo (reitti, kesto ja kohdeavain)
+        run: node tools/tee-etusivupallo.mjs --kuiva --fps "${{ inputs.fps }}"
+
+      - name: Asenna Chromium ja varmista ffmpeg
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          npm install --no-save --no-fund --no-audit playwright
+          npx playwright install --with-deps chromium
+          ffmpeg -version >/dev/null 2>&1 || {
+            sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg; }
+          ffmpeg -hide_banner -encoders | grep -E 'libvpx-vp9|libx264' || {
+            echo "::error::ffmpegistä puuttuu libvpx-vp9 tai libx264"; exit 1; }
+
+      - name: Polta kuvasarja ja pakkaa videot
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          node tools/tee-etusivupallo.mjs \
+            --fps "${{ inputs.fps }}" --lava "${{ inputs.lava }}" \
+            --kuva "${{ inputs.kuva }}" --sumennus "${{ inputs.sumennus }}" \
+            --taso "${{ inputs.taso }}" --ulos etusivupallo-ulos
+
+      - name: Vie ämpäriin
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          avain="$(cat etusivupallo-ulos/avain.txt)"
+          paate="https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
+          vie() {
+            aws s3 cp "etusivupallo-ulos/$1" "s3://${R2_BUCKET}/${avain}$1" \
+              --endpoint-url "$paate" --no-progress --content-type "$2" \
+              --cache-control "$3"
+            echo "Viety: ${avain}$1"
+          }
+          # Videot ja juliste ovat muuttumattomia versionsa sisällä;
+          # luettelo on lyhytikäinen, jotta korjattu ajo näkyy pelissä.
+          vie pallo.webm      video/webm  'public, max-age=31536000, immutable'
+          vie pallo.mp4       video/mp4   'public, max-age=31536000, immutable'
+          vie juliste.jpg     image/jpeg  'public, max-age=31536000, immutable'
+          vie etusivu.json    application/json 'public, max-age=300'
+
+      - name: Yhteenveto
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          {
+            echo '### Etusivun pallo'
+            echo ''
+            ls -l etusivupallo-ulos/pallo.webm etusivupallo-ulos/pallo.mp4 \
+              etusivupallo-ulos/juliste.jpg | awk '{print "- " $9 ": " int($5/1024) " kt"}'
+            echo ''
+            echo 'Kokeile: pelin kehittäjävalikon vipu "etusivupallo" tai ?etusivupallo=1'
+          } >> "$GITHUB_STEP_SUMMARY"

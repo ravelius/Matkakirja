@@ -121,7 +121,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1566';
+const APP_VERSION = '2026-08-09.1567';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -603,6 +603,99 @@ for (const tiedot of AANIKYTKIMET) {
 document.addEventListener(AANITILA_TAPAHTUMA, () => naytaKertoja());
 naytaKertoja();
 
+// --- pelilauta ---------------------------------------------------------------
+
+/*
+ * PELAAJAN LAUTAKYTKIN (omistaja 5.9.2026, sanatarkasti: *"pelissä
+ * periaatteessa voisi olla lopulta kytkin, millä pelaaja voisi valita
+ * haluaako pelata pallonäkymässä vai sillä meidän vanhalla kartalla
+ * sitten kun ollaan saatu pallo toimimaan."*). Suunnitelman vaihe 6,
+ * docs/moduulit/karttapallo.md luku 7.
+ *
+ * MIKSI PÄÄVALIKKOON EIKÄ KEHITTÄJÄTILAAN. Laudan valinta on nyt
+ * pelaajan asetus siinä missä äänetkin: pysyvä laitevalinta, joka ei
+ * kuulu peliin vaan sen ympärykseen. Se on siksi äänikytkinten alla
+ * samalla riviasulla — kehittäjän ratasvalikon vipu
+ * (#kehittaja-pallolauta-btn) jää paikalleen kokeilukytkimeksi, ja koska
+ * kumpikin lukee ja kirjoittaa saman avaimen (matkakirja-lauta,
+ * js/ui-apurit.js), ne näyttävät aina saman tilan.
+ *
+ * SAMA KAAVA KUIN VIVULLA: asetaLautaValinta tallentaa valinnan
+ * laitteelle ja SIVU LADATAAN UUDESTAAN, koska lauta valitaan
+ * käynnistyksessä ennen ensimmäistäkään piirtoa (karttapallo.md luku 3).
+ * Osoitteen ?lauta= voittaisi valinnan, joten se riisutaan latauksesta.
+ *
+ * VALINTA EI KOSKE TALLENNUKSEEN: pelitila on sama kummallakin laudalla
+ * (js/game.js ei tiedä laudasta mitään), joten sama peli jatkuu siitä
+ * mihin se jäi — lauta vain vaihtuu alta.
+ */
+const LAUTAKYTKIMET = [
+  {
+    avain: 'pallo',
+    nimi: 'Karttapallo',
+    seloste: 'Peli pyörii karttapallolla (oletus)',
+    ikoni: '<circle cx="12" cy="12" r="7.6"/><path d="M4.4 12h15.2"/><path d="M12 4.4c2.6 2.1 3.9 4.7 3.9 7.6s-1.3 5.5-3.9 7.6c-2.6-2.1-3.9-4.7-3.9-7.6s1.3-5.5 3.9-7.6z"/>',
+  },
+  {
+    avain: 'kartta',
+    nimi: 'Vanha kartta',
+    seloste: 'Peli pyörii vanhalla tasokartalla',
+    ikoni: '<path d="M4 6.6 9.3 4.9v12.6L4 19.1z"/><path d="m9.3 4.9 5.4 1.7v12.6l-5.4-1.7z"/><path d="m14.7 6.6 5.3-1.7v12.6l-5.3 1.7z"/>',
+  },
+];
+
+const lautaValikko = document.getElementById('lauta-valikko');
+const lautaVihje = document.getElementById('lauta-vihje');
+
+/** Lyhyt rivi valikossa (sama tapa kuin ratasvalikon vihjerivillä). */
+const naytaLautaVihje = (teksti) => {
+  if (!lautaVihje) return;
+  lautaVihje.textContent = teksti;
+  lautaVihje.hidden = !teksti;
+};
+
+const naytaLauta = () => {
+  if (!lautaValikko) return;
+  const nyt = lautaValinta();
+  for (const rivi of lautaValikko.querySelectorAll('button')) {
+    const valittu = rivi.dataset.lauta === nyt;
+    rivi.classList.toggle('valittu', valittu);
+    rivi.setAttribute('aria-checked', valittu ? 'true' : 'false');
+    const tila = rivi.querySelector('.aanikytkin-tila');
+    if (tila) tila.textContent = valittu ? 'valittu' : 'vaihda';
+  }
+};
+
+/** Laudan vaihto: valinta laitteelle, ilmoitus ja sivun uudelleenlataus. */
+const vaihdaLauta = (lauta) => {
+  if (lautaValinta() === lauta) return;
+  asetaLautaValinta(lauta);
+  naytaLauta();
+  naytaLautaVihje('Vaihdetaan lautaa…');
+  // Osoitteen ?lauta= voittaisi valinnan: riisutaan se ennen latausta.
+  const osoite = new URL(location.href);
+  osoite.searchParams.delete('lauta');
+  setTimeout(() => { location.href = osoite.href; }, 350);
+};
+
+for (const tiedot of LAUTAKYTKIMET) {
+  if (!lautaValikko) break;
+  const rivi = document.createElement('button');
+  rivi.type = 'button';
+  rivi.className = 'aanikytkin';
+  rivi.dataset.lauta = tiedot.avain;
+  // role="radio": kaksi vaihtoehtoa, joista tasan yksi on voimassa.
+  rivi.setAttribute('role', 'radio');
+  rivi.title = tiedot.seloste;
+  rivi.setAttribute('aria-label', `${tiedot.nimi} — ${tiedot.seloste}`);
+  rivi.innerHTML = `<span class="viiva-ikoni">${svg(tiedot.ikoni)}</span>`
+    + `<span class="aanikytkin-nimi">${tiedot.nimi}</span>`
+    + '<span class="aanikytkin-tila"></span>';
+  rivi.addEventListener('click', () => vaihdaLauta(tiedot.avain));
+  lautaValikko.appendChild(rivi);
+}
+naytaLauta();
+
 // --- päävalikko --------------------------------------------------------------
 //
 // Hampurilainen on takaisin (omistajan toive 4.8.2026). Säännöt ja uusi
@@ -645,6 +738,9 @@ menuBtn.addEventListener('click', () => {
 paavalikko.addEventListener('click', (event) => {
   const nappi = event.target.closest('button');
   if (!nappi) return;
+  // Lautarivi (.lauta-kotelo on myös .kertoja-kotelo) on säädin kuten
+  // äänet: se ei vie pois valikosta, ja "Vaihdetaan lautaa…" jää
+  // näkyviin latauksen ajaksi.
   if (nappi.closest('.kertoja-kotelo')) return;
   suljeValikko();
 });
@@ -1316,13 +1412,34 @@ const sivunkaantoNappi = document.getElementById('kehittaja-sivunkaanto-btn');
 /*
  * PALLOLAUTA (omistaja 5.9.2026: *"Voisiko pallon vaihtaa pelin kartaksi
  * suoraan?"* — Raamattu KARTTAPALLO ON PELILAUTA). Vipu on palautusoptio
- * ja kokeilukytkin: se tallentaa laudan valinnan laitteelle
+ * ja kokeilukytkin — PELAAJAN oma valinta on päävalikon Pelilauta-rivi
+ * (vaihe 6 yllä), ja koska molemmat käyttävät samaa avainta, ne
+ * näyttävät saman tilan: se tallentaa laudan valinnan laitteelle
  * (js/ui-apurit.js asetaLautaValinta) ja LATAA SIVUN UUDESTAAN, koska
  * lauta valitaan käynnistyksessä ennen ensimmäistäkään piirtoa — juuri
  * siksi tasokartta ei ehdi alustua pallon alle (karttapallo.md luku 3).
  * URL-parametri ?lauta= voittaa vivun, joten uudelleenlataus riisuu sen.
  */
 const pallolautaNappi = document.getElementById('kehittaja-pallolauta-btn');
+/*
+ * ETUSIVUN ESIRENDERÖITY PALLO (omistaja 5.9.2026, pallolauta vaihe 5a).
+ * Oma lohkonsa: vipu kääntää yhden lipun (js/etusivupallo.js) ja etusivu
+ * rakentuu uudestaan seuraavassa piirrossa — sivulatausta ei tarvita,
+ * koska kerros syntyy ja purkautuu renderIntron koukusta. OLETUS POIS,
+ * kunnes omistaja on nähnyt sen; sama valinta ?etusivupallo=1.
+ */
+const etusivupalloNappi = document.getElementById('kehittaja-etusivupallo-kytkin');
+/*
+ * Moduuli haetaan DYNAAMISESTI eikä tuoda staattisesti: js/etusivupallo.js
+ * ei ole yhden tiedoston version nipussa (dist jää vanhaan etusivuun),
+ * ja staattinen tuonti jättäisi sinne määrittelemättömän nimen. Haku
+ * käynnistyy vasta kun kehittäjävalikko avataan.
+ */
+let etusivupalloApurit = null;
+let etusivupalloHaku = null;
+const lataaEtusivupalloApurit = () => (etusivupalloHaku ??= import('./etusivupallo.js')
+  .then((m) => { etusivupalloApurit = m; return m; })
+  .catch(() => null));
 /*
  * ILMEPAKETTI (omistaja 5.9.2026, kartoituksen TOP 6 kohta 6): musteviiva,
  * karhea kehys ja kynäkorostus. Kytkin kääntää kolme lippua kerralla
@@ -1447,6 +1564,20 @@ function paivitaKehittajaValikko() {
       : 'Pallolauta on pois: pelin lauta on tasokartta — kytke päälle pelataksesi '
         + 'karttapallolla (sivu ladataan uudestaan; sama kuin ?lauta=pallo)';
   }
+  if (etusivupalloNappi && !etusivupalloApurit && kehittajaTilaPaalla()) {
+    void lataaEtusivupalloApurit().then(() => paivitaKehittajaValikko());
+  }
+  const etusivupallo = Boolean(etusivupalloApurit?.etusivupalloPaalla());
+  merkitseKytkin(etusivupalloNappi, etusivupallo);
+  if (etusivupalloNappi) {
+    etusivupalloNappi.title = etusivupallo
+      ? 'Etusivun pallo on PÄÄLLÄ: avaussivun kartan tilalla esirenderöity '
+        + 'sumennettu pallo, jonka päällä lentokone piirtää punaista viivaa '
+        + 'Lontoosta Aasiaan — kytke pois palataksesi vanhaan etusivun karttaan'
+      : 'Etusivun pallo on pois (oletus): avaussivulla on vanha pienoiskartta '
+        + '— kytke päälle nähdäksesi esirenderöidyn pallon, koneen ja isoisän '
+        + 'aikalaiskuvat (sama kuin ?etusivupallo=1)';
+  }
   const ilme = ilmePakettiPaalla();
   merkitseKytkin(ilmeNappi, ilme);
   if (ilmeNappi) {
@@ -1549,6 +1680,24 @@ pallolautaNappi?.addEventListener('click', () => {
   const osoite = new URL(location.href);
   osoite.searchParams.delete('lauta');
   setTimeout(() => { location.href = osoite.href; }, 350);
+});
+
+etusivupalloNappi?.addEventListener('click', () => {
+  void lataaEtusivupalloApurit().then((moduuli) => {
+    if (!moduuli) {
+      naytaKehittajaVihje('Etusivun palloa ei ole tässä versiossa (yhden tiedoston peli).');
+      return;
+    }
+    const halutaan = !moduuli.etusivupalloPaalla();
+    moduuli.asetaEtusivupallo(halutaan);
+    paivitaKehittajaValikko();
+    // Etusivu rakentuu koukusta (js/ui.js renderIntro): pyydetään piirto,
+    // niin kerros syntyy tai purkautuu heti ilman sivulatausta.
+    ui?.renderIntro?.();
+    naytaKehittajaVihje(halutaan
+      ? 'Etusivun pallo päälle: näkyy avaussivulla (uusi peli tai sivun lataus).'
+      : 'Etusivun pallo pois: vanha etusivun kartta.');
+  });
 });
 
 ilmeNappi?.addEventListener('click', () => {

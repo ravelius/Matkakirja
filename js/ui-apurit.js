@@ -1506,9 +1506,10 @@ export function asetaKehittajaMaailma(paalla) {
  *
  * YKSI VALINTA, KOLME LÄHDETTÄ, YKSI VAKIO (docs/moduulit/karttapallo.md
  * luku 2): URL-parametri `?lauta=pallo|kartta` voittaa aina (savukkeet,
- * omistajan kokeilu), sitten laitteen muistettu valinta (kehittäjän
- * ratasvalikon vipu), ja viimeisenä LAUTA_OLETUS. Palautus tuotantoon
- * on tämän yhden vakion vaihto — ei muita koodimuutoksia.
+ * omistajan kokeilu), sitten laitteen muistettu valinta (PELAAJAN
+ * asetusrivi päävalikon Pelilauta-osiossa tai kehittäjän ratasvalikon
+ * vipu — sama avain, sama kaava), ja viimeisenä LAUTA_OLETUS. Palautus
+ * tuotantoon on tämän yhden vakion vaihto — ei muita koodimuutoksia.
  *
  * URL-PARAMETRI `lauta` ON JAETTU KATSELUTILAN KANSSA (js/main.js:
  * `?lauta=<laudan id>` avaa laudan katseluun). Arvot 'pallo' ja
@@ -1526,10 +1527,25 @@ export function asetaKehittajaMaailma(paalla) {
  * peli ei toimi."*). Suunnitelman vaihe 6 (laitetesti ensin) ohitettiin
  * omistajan päätöksellä: pallo on lauta heti, ja vaiheet 2–5 valmistuvat
  * sen päälle. Vanha kartta jää linssikartaksi ja palautusoptioksi:
- * `?lauta=kartta` tai ratasvalikon vipu palauttaa sen tälle laitteelle.
+ * `?lauta=kartta`, päävalikon Pelilauta-rivi (pelaajan kytkin, vaihe 6:
+ * omistaja 5.9.2026 *"pelissä periaatteessa voisi olla lopulta kytkin,
+ * millä pelaaja voisi valita haluaako pelata pallonäkymässä vai sillä
+ * meidän vanhalla kartalla sitten kun ollaan saatu pallo toimimaan."*)
+ * tai ratasvalikon vipu palauttaa sen tälle laitteelle.
  */
 export const LAUTA_OLETUS = 'pallo';
 const LAUTA_AVAIN = 'matkakirja-lauta';
+/*
+ * PALLON TURVATILAN LASKURI (vaihe 6): pallolaudan turvatila laskee
+ * peräkkäiset kaatumiset ja pudottaa pelin tasokartalle, kun niitä on
+ * kaksi. Kun PELAAJA valitsee pallon itse (asetusrivi tai ratasvalikon
+ * vipu), laskuri nollataan: valinta on uusi yritys, eikä vanha
+ * kaatumispari saa kääntää sitä heti takaisin kartaksi. Avaimen
+ * kirjoittaa turvatila (js/pallo.js, js/ui.js pallolautaVarapolku,
+ * erillinen erä 5.9.2026) — jos se saa toisen nimen, lisää nimi tähän
+ * luetteloon, niin nollaus seuraa mukana.
+ */
+const PALLON_KAATUMISAVAIMET = ['matkakirja-pallo-kaatumiset'];
 const LAUDAT = new Set(['pallo', 'kartta']);
 
 /** Laudan valinta: 'pallo' tai 'kartta'. */
@@ -1564,6 +1580,8 @@ export function asetaLautaValinta(lauta) {
   try {
     if (LAUDAT.has(lauta) && lauta !== LAUTA_OLETUS) localStorage.setItem(LAUTA_AVAIN, lauta);
     else localStorage.removeItem(LAUTA_AVAIN);
+    // Pallo valittuna: turvatilan kaatumislaskuri alkaa alusta (ks. yllä).
+    if (lauta === 'pallo') for (const avain of PALLON_KAATUMISAVAIMET) localStorage.removeItem(avain);
   } catch {
     /* yksityinen selaus: valinta jää vain tälle istunnolle */
   }

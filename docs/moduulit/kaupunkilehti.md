@@ -8,6 +8,13 @@ Data: js/packs/kulttuuri-kategoriat.js, saatiedot.js,
 uutislahteet.js, kohtaamiset.js · Koodi: js/ui.js (lehtikoneisto),
 js/saa.js, js/uutiset.js · Työkalu: tools/kirjoita-kategoriat.mjs.)*
 
+*(PELILAUTA EI KUULU LEHTEEN, 5.9.2026: kaupunkilehti aukeaa samalla
+kutsulla (`openArrival`) kummalta laudalta tahansa — karttapallon
+kaupunkipisteestä (pelin lauta, docs/moduulit/karttapallo.md) tai vanhan
+tasokartan kaupungista (linssikartta ja pelaajan palautusoptio,
+päävalikon Pelilauta-rivi). Lehti on DOM-pinta laudan päällä eikä tiedä
+laudasta mitään, joten tämän ohjeen reseptit ovat samat kummallakin.)*
+
 ## Tutki on paikallislehti
 
 *(Omistajan visio 5.8.2026, v270; linjaus Raamatussa: Kaupungit.)*

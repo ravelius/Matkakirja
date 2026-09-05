@@ -258,3 +258,64 @@ test('vaihe 2: siirto haarautuu laudan mukaan kuljettajalle, koreografia pysyy y
   // Kamera seuraa teleporttia, ei siirtoa: kuljettaja kirjaa paikkansa perillä.
   assert.match(lue('../js/pallolauta/siirto.js'), /lauta\.merkitseNappulanPaikka\(perilla\)/);
 });
+
+/*
+ * VAIHE 6: PELAAJAN LAUTAKYTKIN (omistaja 5.9.2026, sanatarkasti:
+ * *"pelissä periaatteessa voisi olla lopulta kytkin, millä pelaaja voisi
+ * valita haluaako pelata pallonäkymässä vai sillä meidän vanhalla
+ * kartalla sitten kun ollaan saatu pallo toimimaan."* — karttapallo.md
+ * luku 0 kohta 4 ja luku 7 rivi 6). Vartioi, että valinta on PELAAJAN
+ * asetusvalikossa (ei kehittäjätilassa), käyttää samaa avainta ja samaa
+ * kaavaa kuin ratasvalikon vipu, ja että oletus on pallo.
+ */
+test('vaihe 6: pelaajan asetusrivi on päävalikossa, samalla avaimella ja samalla kaavalla', () => {
+  const html = lue('../index.html');
+  const main = lue('../js/main.js');
+  // Rivi on PELAAJAN valikossa (#paavalikko), ei kehittäjävalikossa.
+  const paavalikko = html.slice(html.indexOf('id="paavalikko"'), html.indexOf('id="kehittaja-kotelo"'));
+  assert.ok(paavalikko.includes('id="lauta-valikko"'), 'lauta-valikko puuttuu päävalikosta');
+  assert.ok(paavalikko.includes('id="lauta-vihje"'), 'vaihdon vihjerivi puuttuu');
+  assert.match(paavalikko, /<p class="valikko-otsikko">Pelilauta<\/p>/);
+  // Asu tulee ääniasetusten riveistä: sama valikko, sama typografia.
+  assert.match(paavalikko, /class="kertoja-valikko lauta-valikko"/);
+  const kehittaja = html.slice(html.indexOf('id="kehittaja-valikko"'), html.indexOf('id="paavalikko"'));
+  assert.ok(!kehittaja.includes('lauta-valikko'), 'pelaajan rivi ei kuulu kehittäjävalikkoon');
+  assert.ok(html.includes('id="kehittaja-pallolauta-btn"'), 'kehittäjävipu jää paikalleen');
+  // Kaksi vaihtoehtoa, pallo ensin (oletus).
+  const rivit = [...main.matchAll(/avain: '(pallo|kartta)',\n\s+nimi: '([^']+)'/g)].map((m) => [m[1], m[2]]);
+  assert.deepEqual(rivit, [['pallo', 'Karttapallo'], ['kartta', 'Vanha kartta']]);
+  // Sama avain ja sama kaava kuin vivulla: asetaLautaValinta + ?lauta= pois
+  // + sivun lataus. Rivi ei kirjoita omaa avainta eikä koske tallenteeseen.
+  const kytkin = main.slice(main.indexOf('const LAUTAKYTKIMET'), main.indexOf('// --- päävalikko'));
+  assert.match(kytkin, /asetaLautaValinta\(lauta\);/);
+  assert.match(kytkin, /osoite\.searchParams\.delete\('lauta'\);/);
+  assert.match(kytkin, /location\.href = osoite\.href;/);
+  assert.match(kytkin, /Vaihdetaan lautaa…/);
+  assert.ok(!/localStorage|matkakirja-save/.test(kytkin), 'rivi ei kirjoita varastoa itse eikä koske tallennukseen');
+  assert.equal((main.match(/asetaLautaValinta\(/g) ?? []).length, 2, 'valinnan kirjoittaa vain asetusrivi ja vipu');
+});
+
+test('vaihe 6: valinta on laitteen asetus — sama avain molemmilla kytkimillä, oletus poistaa avaimen', () => {
+  unohdaKehittajaKytkimet();
+  // Pelaajan rivi ja ratasvalikon vipu kirjoittavat saman avaimen.
+  asetaLautaValinta('kartta');
+  assert.equal(varasto.get('matkakirja-lauta'), 'kartta');
+  unohdaKehittajaKytkimet();
+  assert.equal(lautaValinta(), 'kartta');
+  // Paluu palloon (oletus) poistaa avaimen — eikä jätä laitetta puolitilaan.
+  asetaLautaValinta('pallo');
+  assert.equal(varasto.has('matkakirja-lauta'), false);
+  unohdaKehittajaKytkimet();
+  assert.equal(lautaValinta(), LAUTA_OLETUS);
+  // Turvatilan kaatumislaskuri nollautuu, kun pallo valitaan itse.
+  varasto.set('matkakirja-pallo-kaatumiset', '2');
+  asetaLautaValinta('pallo');
+  assert.equal(varasto.has('matkakirja-pallo-kaatumiset'), false, 'pallon valinta nollaa turvatilalaskurin');
+  // Kartalle vaihtaessa laskuriin ei kosketa (turvatila on pallon asia).
+  varasto.set('matkakirja-pallo-kaatumiset', '2');
+  asetaLautaValinta('kartta');
+  assert.equal(varasto.get('matkakirja-pallo-kaatumiset'), '2');
+  varasto.delete('matkakirja-pallo-kaatumiset');
+  asetaLautaValinta('pallo');
+  unohdaKehittajaKytkimet();
+});
