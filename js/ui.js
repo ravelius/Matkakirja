@@ -14904,6 +14904,18 @@ export class UI {
     // Sumuverho syttyy samalla kuin teksti: portin takana kartta on
     // terävä, ja portilla on oma tummennuksensa.
     this.introEl.classList.toggle('intro-aloitettu', Boolean(nakyy && this.aloitettu));
+    /*
+     * ETUSIVUN ESIRENDERÖITY PALLO (pallolauta vaihe 5a, omistaja
+     * 5.9.2026). Yksi koukku: moduuli lukee lipun (oletus POIS),
+     * hakee videon ämpäristä ja purkaa itsensä. Dynaaminen tuonti
+     * kaatuu yhden tiedoston versiossa kuten linsseillä ja
+     * pallolaudalla, ja ilman verkkoa kerros ei synny — kummassakin
+     * tapauksessa etusivu jää vanhaan karttaan.
+     */
+    if (nakyy || this.etusivupallo) {
+      void import('./etusivupallo.js')
+        .then((m) => m.paivitaEtusivupallo(this, nakyy)).catch(() => {});
+    }
     if (!nakyy) {
       this.introShown = false;
       this.introRunko.textContent = '';

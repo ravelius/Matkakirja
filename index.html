@@ -200,6 +200,19 @@
               <span class="kehittaja-kytkin-nimi">pallolauta</span>
               <span class="kehittaja-kytkin-tila">pois</span>
             </button>
+            <!-- Etusivun esirenderöity pallo (omistaja 5.9.2026: "etusivun
+                 kartan voi pitää aluksi vielä vanhassa mutta sitten kun
+                 ehditään tehdä uusi, niin siihen kannattaa varmaan
+                 renderöidä oma spesifi zoomattu pallo joka pyörii hitaasti
+                 lontoosta kohti aasiaa"). Oletus POIS, kunnes omistaja on
+                 nähnyt sen; vipu tallentaa valinnan laitteelle
+                 (js/etusivupallo.js) ja sama valinta ?etusivupallo=1. -->
+            <button id="kehittaja-etusivupallo-kytkin" class="ghost kehittaja-kytkin"
+                    type="button" aria-pressed="false">
+              <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10" cy="13" r="6.5"/><path d="M3.6 13h12.8"/><path d="M10 6.5c-2.4 1.8-2.4 11.2 0 13M10 6.5c2.4 1.8 2.4 11.2 0 13"/><path d="M14.5 7.5 21 4l-2.4 6z"/></svg></span>
+              <span class="kehittaja-kytkin-nimi">etusivupallo</span>
+              <span class="kehittaja-kytkin-tila">pois</span>
+            </button>
             <!-- Ilmepaketti (omistaja 5.9.2026): musteviiva, karhea kehys ja
                  kynäkorostus (js/ilme.js). Kytkin kääntää kaikki kolme lippua
                  laitteen muistiin; ilman kirjastoja peli näyttää entiseltä. -->

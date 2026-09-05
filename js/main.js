@@ -121,7 +121,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1566';
+const APP_VERSION = '2026-08-09.1567';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1422,6 +1422,25 @@ const sivunkaantoNappi = document.getElementById('kehittaja-sivunkaanto-btn');
  */
 const pallolautaNappi = document.getElementById('kehittaja-pallolauta-btn');
 /*
+ * ETUSIVUN ESIRENDERÖITY PALLO (omistaja 5.9.2026, pallolauta vaihe 5a).
+ * Oma lohkonsa: vipu kääntää yhden lipun (js/etusivupallo.js) ja etusivu
+ * rakentuu uudestaan seuraavassa piirrossa — sivulatausta ei tarvita,
+ * koska kerros syntyy ja purkautuu renderIntron koukusta. OLETUS POIS,
+ * kunnes omistaja on nähnyt sen; sama valinta ?etusivupallo=1.
+ */
+const etusivupalloNappi = document.getElementById('kehittaja-etusivupallo-kytkin');
+/*
+ * Moduuli haetaan DYNAAMISESTI eikä tuoda staattisesti: js/etusivupallo.js
+ * ei ole yhden tiedoston version nipussa (dist jää vanhaan etusivuun),
+ * ja staattinen tuonti jättäisi sinne määrittelemättömän nimen. Haku
+ * käynnistyy vasta kun kehittäjävalikko avataan.
+ */
+let etusivupalloApurit = null;
+let etusivupalloHaku = null;
+const lataaEtusivupalloApurit = () => (etusivupalloHaku ??= import('./etusivupallo.js')
+  .then((m) => { etusivupalloApurit = m; return m; })
+  .catch(() => null));
+/*
  * ILMEPAKETTI (omistaja 5.9.2026, kartoituksen TOP 6 kohta 6): musteviiva,
  * karhea kehys ja kynäkorostus. Kytkin kääntää kolme lippua kerralla
  * (js/ilme.js asetaIlmePaketti) eikä vaadi sivulatausta: liput luetaan
@@ -1545,6 +1564,20 @@ function paivitaKehittajaValikko() {
       : 'Pallolauta on pois: pelin lauta on tasokartta — kytke päälle pelataksesi '
         + 'karttapallolla (sivu ladataan uudestaan; sama kuin ?lauta=pallo)';
   }
+  if (etusivupalloNappi && !etusivupalloApurit && kehittajaTilaPaalla()) {
+    void lataaEtusivupalloApurit().then(() => paivitaKehittajaValikko());
+  }
+  const etusivupallo = Boolean(etusivupalloApurit?.etusivupalloPaalla());
+  merkitseKytkin(etusivupalloNappi, etusivupallo);
+  if (etusivupalloNappi) {
+    etusivupalloNappi.title = etusivupallo
+      ? 'Etusivun pallo on PÄÄLLÄ: avaussivun kartan tilalla esirenderöity '
+        + 'sumennettu pallo, jonka päällä lentokone piirtää punaista viivaa '
+        + 'Lontoosta Aasiaan — kytke pois palataksesi vanhaan etusivun karttaan'
+      : 'Etusivun pallo on pois (oletus): avaussivulla on vanha pienoiskartta '
+        + '— kytke päälle nähdäksesi esirenderöidyn pallon, koneen ja isoisän '
+        + 'aikalaiskuvat (sama kuin ?etusivupallo=1)';
+  }
   const ilme = ilmePakettiPaalla();
   merkitseKytkin(ilmeNappi, ilme);
   if (ilmeNappi) {
@@ -1647,6 +1680,24 @@ pallolautaNappi?.addEventListener('click', () => {
   const osoite = new URL(location.href);
   osoite.searchParams.delete('lauta');
   setTimeout(() => { location.href = osoite.href; }, 350);
+});
+
+etusivupalloNappi?.addEventListener('click', () => {
+  void lataaEtusivupalloApurit().then((moduuli) => {
+    if (!moduuli) {
+      naytaKehittajaVihje('Etusivun palloa ei ole tässä versiossa (yhden tiedoston peli).');
+      return;
+    }
+    const halutaan = !moduuli.etusivupalloPaalla();
+    moduuli.asetaEtusivupallo(halutaan);
+    paivitaKehittajaValikko();
+    // Etusivu rakentuu koukusta (js/ui.js renderIntro): pyydetään piirto,
+    // niin kerros syntyy tai purkautuu heti ilman sivulatausta.
+    ui?.renderIntro?.();
+    naytaKehittajaVihje(halutaan
+      ? 'Etusivun pallo päälle: näkyy avaussivulla (uusi peli tai sivun lataus).'
+      : 'Etusivun pallo pois: vanha etusivun kartta.');
+  });
 });
 
 ilmeNappi?.addEventListener('click', () => {
