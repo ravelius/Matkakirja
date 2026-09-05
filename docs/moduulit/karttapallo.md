@@ -236,6 +236,37 @@ häivytyksellä); ei suodattimia SVG-osissa (iOS-sääntö pysyy, koska
 **H**-elementit ovat SVG:tä DOMissa); merkkien koko on karttavakio
 asteina pisteillä ja ruutuvakio nimillä — sama jako kuin tasokartalla.
 
+### 4.3 Napakannet (5.9.2026)
+
+Omistaja 5.9.2026 klo 15 Suomen aikaa, kuvakaappaus Huippuvuorilta:
+*"Miksi hattu näkyy?"* Napaa katsottaessa pallolla oli vaalea lakki ja
+sen reunalla katkoviivamainen tumma rengas. Kumpikaan ei ole laattojen
+sisältöä (sarjan b laatat mitattiin puhtaiksi), vaan Globe.gl 2.46:n
+omaa geometriaa: Mercatorin rajan (85,05°) yläpuolelle kirjasto
+venyttää tason 0 laatan koko pallon kokoisena, valaisemattomana
+pallopintana, ja laattaverkkojen ylimpien rivien sauma näkyy tummana
+renkaana. Renkaan leveysaste MITATTIIN (väriraidat 83–85,5° ja
+säteittäinen kirkkausprofiili kuvasta): se on 83,7–84,25°, ei 85°:ssä.
+
+Korjaus on js/pallo.js `asennaNapakannet`, joka kutsutaan
+laattamoottorihaarasta: kaksi ohutta pallokalottia (NAPAKANNEN_LEVEYS
+83,7° ⇒ pohjoinen ≥ 83,7°, etelä ≤ −83,7°) laattojen omalla
+täytesävyllä — pohjoinen merta (#c9c2af), etelä jäätä (#dcd6c6, =
+JAA_SAVY) — kummassakin peittävä kalotti ja 0,4° leveämpi 0,4-peittoinen
+reuna. Kansi ei ole kartan KERROS (luku 4.1:n kielto pysyy): se peittää
+vain sen, mitä kirjasto piirtää kartan ulkopuolelle, eikä ota kosketusta
+vastaan (`raycast` tyhjäksi), joten pelin merkit toimivat päällä
+ennallaan. Kannet lisätään laattamoottorin ISÄN alle, koska moottori
+purkaa omat lapsensa tason vaihtuessa.
+
+THREE:n konstruktorit (Mesh, SphereGeometry, materiaalit) saadaan
+vientinä `kolmiulotteinen(pallo)`, joka lukee ne elävistä
+laattaverkoista — Globe.gl:n UMD-paketti ei vie THREE:a globaaliin.
+Materiaaliluokka otetaan LAATOILTA: valaisematon kansi (MeshBasic)
+samalla sävyllä piirtyi mitatusti tummana kiekkona, koska kirjaston
+valot (ambient + suoraan pohjoisnavan päältä tuleva directional)
+kirkastavat laatat navalla n. 1,4-kertaisiksi.
+
 ## 5. Sukellus, palaaminen, koordinaatit ja kamera
 
 **Yksi totuus:** laudan (x, y). `laudaltaAsteiksi('maailmankartta',

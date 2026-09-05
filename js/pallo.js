@@ -340,6 +340,7 @@ export function rakennaPallo(Globe, kotelo, laatat) {
   if (laatat && pallo.globeTileEngineUrl) {
     pallo.globeTileEngineUrl(pallonLaatta).globeTileEngineMaxLevel(laattatasoMax(laatat));
     asennaLaatunosto(pallo, kotelo);
+    asennaNapakannet(pallo);
   } else {
     pallo.globeImageUrl(PALLO_TEKSTUURI);
   }
@@ -511,6 +512,163 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     ikkuna.clearTimeout(lepoAjastin);
     for (const t of ajastimet) ikkuna.clearTimeout(t);
     moottori.updatePov = alkuperainen;
+  };
+}
+
+/*
+ * ======== NAPAKANNET: KIRJASTON SAUMA JA LAKKI PIILOON =============
+ *
+ * OMISTAJA 5.9.2026 klo 15 Suomen aikaa, kuvakaappaus Huippuvuorilta:
+ * *"Miksi hattu näkyy?"* — napaa katsottaessa pallolla oli vaalea lakki
+ * ja sen reunalla katkoviivamainen tumma rengas.
+ *
+ * SYY EI OLE LAATTOJEN SISÄLLÖSSÄ. Sarjan b laatat mitattiin puhtaiksi
+ * 5.9. klo 17.30 (84–85° on tasaista merisävyä 201,194,175, ei tummia
+ * pikseleitä). Kumpikin vaiva on kirjaston geometriaa. Lakki: Web
+ * Mercator loppuu 85,05°:een, ja sen yläpuolelle Globe.gl venyttää tason
+ * 0 laatan koko pallon kokoisena pallopintana (säde 99, thetaLength π)
+ * VALAISEMATTOMALLA materiaalilla, kun laattaverkot ovat säteellä 100 ja
+ * valaistuja — siitä lakin oma kirkkaus. Rengas: laattaverkkojen
+ * ylimpien rivien sauma (mitattu leveysaste alla). Laattojen uudelleen
+ * polttaminen ei auta kumpaankaan, eikä pallon oma väri (globeMaterial,
+ * mitattu 5.9.) — kansi on ainoa keino.
+ *
+ * KANSI PÄÄLLE. Sauman päälle asetetaan kaksi ohutta pallokalottia,
+ * pohjoinen ja etelä, laattojen omalla sävyllä: pohjoisessa Jäämeren
+ * merisävy ja etelässä napajään sävy (samat, jotka
+ * tools/tee-pallolaatat.mjs polttaa laattoihin, MERI_SAVY/JAA_SAVY).
+ *
+ * RENKAAN LEVEYSASTE MITATTIIN, EI ARVATTU (5.9.2026 illalla). Napa-
+ * näkymään piirrettiin väriraidat 83,0–85,5°:lle ja kuvan säteittäinen
+ * kirkkausprofiili laskettiin pikseleistä: tumma rengas on 83,7–84,25°
+ * (kirkkaus putoaa 206 → 184), ei 85°:ssä. Se on siis laattaverkkojen
+ * ylimpien rivien SAUMA — Mercatorin laattarivien rajat osuvat lähelle
+ * 84,01° ja 83,75° — ja se näkyy juuri siellä siksi, että kartta loppuu
+ * 84° N:ään ja sen yläpuolinen täyte on tasaista merta: seassa ei ole
+ * mitään, mikä peittäisi sauman. Kansi alkaa siksi 83,7°:sta, joka on
+ * renkaan alapuolella mutta yhä Grönlannin pohjoiskärjen (83,67°),
+ * Huippuvuorten (80,8°) ja Frans Joosefin maan (81,9°) yläpuolella.
+ * Mercatorin oma raja 85,05° jää saman kannen alle.
+ *
+ * MATERIAALI TULEE LAATOILTA, EI VALITA ITSE (mitattu 5.9.2026 illalla,
+ * kaksi kaappausta samasta näkymästä). Kirjaston valot ovat
+ * AmbientLight 0,8 × π ja DirectionalLight suoraan pohjoisnavan päältä,
+ * joten laatat ovat navalla n. 1,4-kertaisia omaan sävyynsä nähden.
+ * Valaisematon kansi (MeshBasicMaterial) samalla sävyllä piirtyi siksi
+ * selvänä TUMMANA kiekkona — uutena hattuna. Kun kansi tehdään sillä
+ * materiaaliluokalla, jota laattaverkot itse käyttävät, se saa saman
+ * valaistuksen ja häviää mereen kokonaan. Luokka luetaan siksi elävästä
+ * laattaverkosta (kolmiulotteinen).
+ */
+/** Leveysaste, jonka navan puolella kansi peittää pinnan (mitattu). */
+export const NAPAKANNEN_LEVEYS = 83.7;
+/** Ulomman, puoliläpinäkyvän kannen lisäleveys asteina (pehmeä reuna). */
+export const NAPAKANNEN_HAIVE = 0.4;
+/** Ulomman kannen peitto (0–1): reuna häivyttyy laattoihin. */
+export const NAPAKANNEN_HAIVEPEITTO = 0.4;
+/** Kansi laattojen yläpuolelle: säde × tämä (ei z-taistelua). */
+export const NAPAKANNEN_KOROTUS = 1.0015;
+/** Pohjoinen kansi = Jäämeren merisävy laatoissa (MERI 201,194,175). */
+export const NAPAKANSI_POHJOINEN = '#c9c2af';
+/** Etelän kansi = napajään sävy laatoissa (JAA_SAVY 220,214,198). */
+export const NAPAKANSI_ETELA = '#dcd6c6';
+
+/**
+ * THREE:n konstruktorit elävästä pallosta. Globe.gl 2.46:n UMD-paketti
+ * ei vie THREE:a mihinkään globaaliin (se käyttää `window.THREE`ä vain,
+ * JOS sivu on ladannut sen ensin), joten luokat luetaan niistä
+ * objekteista, jotka kirjasto on itse tehnyt: laattamoottorin lapsista
+ * löytyvät sekä laattaverkko (valaistu materiaali) että Mercatorin
+ * ulkopuolen pohjapallo (valaisematon). Palauttaa null, jos moottoria
+ * tai sen verkkoja ei vielä ole — kutsuja saa yrittää uudestaan.
+ * Vienti on tarkoitettu myös pallolaudan omille kolmiulotteisille
+ * osille (js/pallolauta/).
+ */
+export function kolmiulotteinen(pallo) {
+  const moottori = laattamoottori(pallo);
+  const lapset = moottori?.children ?? [];
+  const verkko = lapset.find((o) => o.geometry && o.material?.type === 'MeshLambertMaterial');
+  const pohja = lapset.find((o) => o.geometry && o.material?.type === 'MeshBasicMaterial');
+  const malli = verkko ?? pohja;
+  if (!malli) return null;
+  return {
+    Mesh: malli.constructor,
+    SphereGeometry: malli.geometry.constructor,
+    /** Laattojen materiaali: sama valaistus kuin laatoilla. */
+    LaattaMateriaali: (verkko ?? pohja).material.constructor,
+    /** Valaisematon materiaali (kalvot, harsot). */
+    PerusMateriaali: (pohja ?? verkko).material.constructor,
+    /** Onko laattaverkko jo olemassa (valaistu materiaali käytettävissä). */
+    laatatValmiit: Boolean(verkko),
+    /**
+     * Ryhmä, johon pallon omat osat lisätään: laattamoottorin ISÄ.
+     * Moottori purkaa ja rakentaa omat lapsensa tason vaihtuessa, joten
+     * sen sisään ei jätetä mitään; isä on pallon ryhmä, jolla on sama
+     * koordinaatisto (napa +Y) ja sama muunnos kuin laatoilla.
+     */
+    juuri: moottori.parent ?? pallo.scene(),
+    moottori,
+  };
+}
+
+/**
+ * Asentaa napakannet laattamoottorin päälle. Palauttaa purkajan. Kuten
+ * laatunosto: kirjasto kokoaa scenensä vasta ensimmäisillä kehyksillä,
+ * joten yritetään pienin välein, kunnes laattaverkko löytyy (tai
+ * luovutetaan 10 s:n jälkeen — silloin pallo piirtyy kuten ennen).
+ */
+export function asennaNapakannet(pallo, ikkuna = globalThis) {
+  let purkaja = () => {};
+  let yritys = 0;
+  const yrita = () => {
+    const kolmi = kolmiulotteinen(pallo);
+    // Vaaditaan laattaverkko: pelkän pohjapallon materiaali on
+    // valaisematon, ja kansi näkyisi tummana kiekkona (ks. yllä).
+    if (kolmi?.laatatValmiit) { purkaja = lisaaNapakannet(kolmi, pallo.getGlobeRadius()); return; }
+    if (++yritys < 100) ikkuna.setTimeout(yrita, 100);
+  };
+  yrita();
+  return () => purkaja();
+}
+
+/** Kaksi kantta × (peittävä + häivyttyvä reuna) pallon ryhmään. */
+function lisaaNapakannet(kolmi, sade) {
+  const { Mesh, SphereGeometry, LaattaMateriaali, juuri } = kolmi;
+  const asteina = (a) => (a * Math.PI) / 180;
+  const tehdyt = [];
+  const kansi = (etela, savy, haive) => {
+    const pituus = asteina(90 - NAPAKANNEN_LEVEYS + (haive ? NAPAKANNEN_HAIVE : 0));
+    // Kalotin theta lasketaan pohjoisnavasta (+Y): etelä on toisessa päässä.
+    const alku = etela ? Math.PI - pituus : 0;
+    const korotus = NAPAKANNEN_KOROTUS + (haive ? 0.0005 : 0);
+    const muoto = new SphereGeometry(sade * korotus, 64, 8, 0, Math.PI * 2, alku, pituus);
+    const materiaali = new LaattaMateriaali({ color: savy });
+    if (haive) {
+      // Sama sävy kuin peittävässä kannessa, joten kaksinkertainen
+      // piirto ei muuta väriä — vain uloin 0,4° liukuu laattoihin.
+      materiaali.transparent = true;
+      materiaali.opacity = NAPAKANNEN_HAIVEPEITTO;
+      materiaali.depthWrite = false;
+    }
+    const verkko = new Mesh(muoto, materiaali);
+    verkko.userData.napakansi = true;
+    // Kansi ei ota kosketusta vastaan: pelin merkit ja onGlobeClick
+    // toimivat kuten ennen (kirjasto säteenjäljittää pallon lapsia).
+    verkko.raycast = () => {};
+    juuri.add(verkko);
+    tehdyt.push(verkko);
+  };
+  kansi(false, NAPAKANSI_POHJOINEN, false);
+  kansi(false, NAPAKANSI_POHJOINEN, true);
+  kansi(true, NAPAKANSI_ETELA, false);
+  kansi(true, NAPAKANSI_ETELA, true);
+  return () => {
+    for (const verkko of tehdyt) {
+      juuri.remove(verkko);
+      verkko.geometry?.dispose?.();
+      verkko.material?.dispose?.();
+    }
+    tehdyt.length = 0;
   };
 }
 
