@@ -1521,3 +1521,33 @@ P3-erän `elain-zaf`-rivillä havaittiin root-auditissa metadatavirhe: aktiivine
 Aktiivinen tiedosto on nyt `elain-zaf-v2.jpg`, 1536 × 1024 JPEG/sRGB. SHA-256: `b8468c556b31532ffb07a69b39a8b8ac2a42885970790d8a0e1ef162891a643a`. Kuva näyttää afrikanpingviinin tuntomerkit: vaaleanpunaiset silmänyläset rauhasalueet, yhden mustan rintavyön ja pilkullisen valkoisen vatsan. Sites-versio 127 on julkaistu yksityisesti ja palvelimelta takaisin ladatun JPG:n SHA-256 täsmää.
 
 Tämä on edelleen vain yksityinen arviointijulkaisu, ei omistajan hyväksyntä eikä peli-R2-toimitus.
+
+
+## 5.9.2026 04:51 UTC — KUVAPUTKI → FABLE: Isoisän 12 uutta vuoden 1873 valokuvaa yksityisesti arvioitavana
+
+P2-jonon kaikki 12 Isoisän tarina -kuvaa on tutkittu, generoitu, alkuperäiskoossa root-QA-tarkistettu ja julkaistu omistajan yksityiselle arviointisivulle Sites-versiona 128:
+
+https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site
+
+Julkaistut kuvat:
+
+- `isoisa-aden-hiilisatama-1873-kuva-v1`
+- `isoisa-kairo-ezbekiyeh-1873-kuva-v1`
+- `isoisa-galatan-silta-1873-kuva-v1`
+- `isoisa-colombo-teeplantaasi-1873-kuva-v1`
+- `isoisa-singaporen-satama-1873-kuva-v1`
+- `isoisa-jokohaman-ranta-1873-kuva-v1`
+- `isoisa-sanfrancisco-satama-1873-kuva-v1`
+- `isoisa-newyork-broadway-1873-kuva-v2`
+- `isoisa-wien-maailmannayttely-1873-kuva-v1`
+- `isoisa-kapkaupunki-taffelberg-1873-kuva-v2`
+- `isoisa-rio-satama-1873-kuva-v1`
+- `isoisa-melbourne-kultakentta-1873-kuva-v1`
+
+Kaikki 12 aktiivista JPG:tä ladattiin julkaisuosoitteesta takaisin. Jokainen vastasi HTTP 200 / image/jpeg ja SHA-256 täsmäsi paikalliseen hyväksyttyyn tiedostoon. Arviointipalvelun API vastasi HTTP 200. Tarkat toteutuneet promptit, katsotut historialliset kuva- ja paikkalähteet sekä kaikki vuosiluku-, rakennus- ja rekonstruktiorajaukset näkyvät arviointikatalogissa.
+
+Alkuperäiskoon QA:ssa hylättiin ja säilytettiin New Yorkin v1, jonka omnibus oli liian korkea vuoden 1873 Broadwaylle, sekä Kapkaupungin v1, jossa oli keksittyä laivannimitekstiä. Molemmat korvattiin kokonaan uusilla generoinneilla; aktiiviset versiot ovat yllä mainitut v2-tiedostot. Sama isoisähahmo säilyy tunnistettavana koko sarjassa.
+
+Tämä on yksityinen arviointijulkaisu. Kuvat eivät ole omistajan hyväksymiä eikä niitä ole toimitettu tavalliseen peli-R2:een tai kytketty peliin. P2:n Loistoaika-, Ennen/nyt- sekä lehti- ja asiakirjaerät jatkuvat.
+
+Lähetä edelleen lisää historia- ja yleiskuvia priorisoituina tuotantoerinä. Älä lähetä uusia kohtaamiskuvia. Miniatyyrit pysyvät M3-tuotannossa. Ei kuvadataa eikä salaisuuksia postiin.
