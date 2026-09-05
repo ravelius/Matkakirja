@@ -638,3 +638,40 @@ isoympyrällä ja kiertävän laudan sauma katkaisee polun. Vartiointi:
 tests/vesistot-pallolla.test.mjs. AVOIN: pathStroke on asteita, joten
 uoma ohenee maailmankuvassa alle pikselin — jos apuri joskus asettaa
 listat uudelleen kameran pysähtyessä, paksuudet on kerrottava korkeudella.
+
+**Aalto 1C — vertailu ja maaselain pallolle (js/vertailu.js).**
+Molemmat tilat piirtävät maat pallolaudalla laudan linssiapurilla:
+`polygonit('vertailu' | 'maatiedot', …)` (datum `{ avain: iso,
+geometry, vari, reuna, korkeus 0,004, napautus }`) ja vertailussa
+lisäksi `merkit('vertailu-nimet', …)` maan keskukseen samalla
+leveysehdolla kuin kartalla (`leveys >= 60`, 126 nimeä 133 maasta);
+tilan sammuessa `pura('vertailu')` + `pura('vertailu-nimet')` ja
+`pura('maatiedot')`. Valinnan vaihtuessa lista asetetaan uudestaan
+(värit) — kerrosta ei pureta. Sävyt ovat samat kuin css:n
+`.vertailu-maa` ja `.maatiedot-maa` (rgba-merkkijonoina, koska pallon
+pinnalla ei ole css:ää); kolmas sävy `himmea` on pallon oma lisä
+täydelle vertailulle, jossa hiiren osoitinta ei ole kertomassa
+napautettavia maita. Ele on kummallakin laudalla sama: vertailu kerää
+maat alapalkkiin, maaselain valitsee maan ja maakyltti avaa lehden
+(kyltti asuu mapPanessa, ei laudassa, joten se toimii sellaisenaan).
+
+Muunnos on puhtaana funktiona `maapolygonitPallolle(map, asteet)` — ei
+selainta, ei Globe.gl:ää — ja se ajetaan kerran pakkaa kohti (WeakMap):
+maailmankartalla 133 maata, 400 rengasta, 26 220 pistettä, 53 ms.
+Kiertävän laudan sauma puretaan renkaan sisällä (peräkkäiset pisteet
+pidetään lähekkäin) ja rengas siirretään takaisin keskelle, joten
+Venäjä, Fidži ja Aleutit jäävät ehjiksi kappaleiksi eikä yksikään
+renkaan sivu ylitä 180:tä astetta (mitattu suurin 27,6°, Kanada).
+Jokainen rengas on oma monikulmionsa (MultiPolygon), koska laudan
+aineisto ei erottele saaria ja reikiä. Vartiointi:
+tests/maapolygonit-pallolla.test.mjs.
+
+AVOIN (tarvitsee lauta.js-muutoksen, ei tehty tässä aallossa):
+kaupunkien PISTEET ovat Globe.gl:n `pointsData` eivätkä DOM-elementtejä,
+joten body-luokka ei piilota niitä. Css piilottaa nyt pallon
+DOM-merkit (`.pallolauta-nimi/-nosto/-piste/-kohde/-nappula`) näissä
+tiloissa; pisteitä varten `js/pallolauta/lauta.js` tarvitsee ehdon
+`pisteNakyy`-funktioon (esim. `maatEdella()` = body-luokka
+`vertailu-tila` tai `maatiedot-tila` → epätosi) sekä nimien katoksi 0
+`ladoLevossa`-funktiossa, ja luokkien vaihto on jo kuunneltu
+(`valovahti`-MutationObserver → `paivitaPisteet` + `pyydaLadonta`).
