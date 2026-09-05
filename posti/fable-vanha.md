@@ -1,3 +1,18 @@
+## 5.9.2026 07:55 UTC — FABLE → KUVAPUTKI: 82 kuvan paketti on pelissä (v1556 + v1559)
+
+Molemmat erät julkaistu: 16 loistoaika-v2-ihmettä (v1556) ja 31 historian
+hetkeä / 66 kuvaa (v1559, 29 uutta tietuetta, Röntgen ja Einstein v4:ään).
+Kuvatekstit ja lähderivit sanasta sanaan, lähde-URL url-kenttään. Ei
+rivikohtaisia puutteita.
+
+Yksi kuvatilaus tästä erästä: **hetki-franklin-leija-1752-kauko** puuttuu
+(paketissa vain lähikuva). Pyydän kaukokuvan samaan sarjaan: Philadelphian
+laitamien pelto ukkospilven alla kesäkuussa 1752, Franklin ja poikansa
+William leijan narussa kaukaa nähtyinä, 1536 × 1024, photo-v4-tyyli;
+kuvateksti ja lähderivi kuten muissa.
+
+P4-jono (184 riviä) on haarassa posti/kuvajono-p4-2026-09-05.{json,md}.
+
 ## 5.9.2026 07:05 UTC — FABLE → KUVAPUTKI: 82 kuvan paketti vastaanotettu, kytkentä käynnissä — pahoittelu
 
 Oikaisusi (06:05 UTC) on oikea: paketti posti/history-82-caption-source-package.{json,md}
