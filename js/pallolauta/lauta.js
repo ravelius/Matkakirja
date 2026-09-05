@@ -235,6 +235,30 @@ export async function avaaPallolauta(ui) {
     || Boolean(ui.arrivalDialog?.open);
   const tahdistaLepo = () => { if (lepoTarpeen()) lepaa(); else heraa(); };
   kotelo.addEventListener('pointerdown', heraa);
+  /*
+   * PÄIVÄKIRJA LAATIKOSSA JA RIVIKSI VEDOSTA (omistaja 5.9.2026:
+   * *"Päiväkirja pitäisi olla laatikossa ja rullautua ylös kuten
+   * ennen"*). Tasokartalla kortin paperilaatikko tulee body.manner-zoom-
+   * luokasta ja kutistuminen yhdelle riville kartan vedosta
+   * (js/kartta.js asennaPanorointi) — kumpikaan ei aja nukkuvalla
+   * kartalla. Pallolauta merkitsee bodyn (css: sama paperi) ja kutistaa
+   * kortin, kun sormi lähtee liikkeelle pallolla; kortin oma napautus
+   * avaa sen takaisin kuten ennen.
+   */
+  const doc = kuori.ownerDocument;
+  doc.body.classList.add('pallolauta-paalla');
+  let vetoAlku = null;
+  kotelo.addEventListener('pointerdown', (e) => { vetoAlku = { x: e.clientX, y: e.clientY }; });
+  kotelo.addEventListener('pointermove', (e) => {
+    if (!vetoAlku) return;
+    if (Math.abs(e.clientX - vetoAlku.x) > 6 || Math.abs(e.clientY - vetoAlku.y) > 6) {
+      vetoAlku = null;
+      ui.asetaPaivakirjanKoko?.(true);
+    }
+  });
+  const vetoLoppu = () => { vetoAlku = null; };
+  kotelo.addEventListener('pointerup', vetoLoppu);
+  kotelo.addEventListener('pointercancel', vetoLoppu);
   document.addEventListener('visibilitychange', tahdistaLepo);
   // Lehden avaus ja sulku: dialogin open-attribuutti vaihtuu.
   const lehtivahti = ui.arrivalDialog ? new MutationObserver(tahdistaLepo) : null;
@@ -853,6 +877,7 @@ export async function avaaPallolauta(ui) {
     nayta: () => { kuori.hidden = false; mitoita(); noppaKuoreen(); tahdistaLepo(); },
     piilota: () => { kuori.hidden = true; noppaTakaisin(); tahdistaLepo(); },
     pura: () => {
+      doc.body.classList.remove('pallolauta-paalla');
       clearTimeout(lepoAjastin);
       clearTimeout(esilatausAjastin);
       clearTimeout(vakausAjastin);

@@ -115,7 +115,10 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   assert.equal(PALLO_LAATTATASO_MAX, 8, 'taso 8 kaytossa 5.9.2026');
   // Luettelon puute tai virhe → varatekstuuri, ei kaatumista.
   assert.equal(await laatatSaatavilla(async () => ({ ok: false })), null);
-  assert.equal(laattatasoMax({ tasot: { min: 0, max: 7 } }), 7, 'luettelo rajaa syvimman tason');
+  assert.equal(laattatasoMax({ tasot: { min: 0, max: 7 } }), 8, 'varakansio kantaa tason 8, vaikka luettelo sanoo 7 (5.9.2026)');
+  assert.equal(laattatasoMax({ tasot: { min: 0, max: 6 } }), 8);
+  assert.match(pallonLaatta(3, 5, 8), /laatat\/2026-09-03a\/8\/3\/5\.jpg$/, 'taso 8 varakansiosta');
+  assert.match(pallonLaatta(3, 5, 7), /laatat\/2026-09-03a-nostot\/7\/3\/5\.jpg$/, 'tasot 0-7 nostosarjasta');
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 9 } }), PALLO_LAATTATASO_MAX);
   assert.equal(laattatasoMax(null), PALLO_LAATTATASO_MAX);
   const pallo = lue('../js/pallo.js');

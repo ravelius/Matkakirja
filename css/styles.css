@@ -1285,7 +1285,8 @@ body.manner-zoom .kartta-kuori {
  * laatikkoa vaan reunoiltaan häivähtävä pergamenttivalo, joka nostaa
  * kirjaimet esiin ilman että kartta katoaa.
  */
-body.manner-zoom .fact-card { isolation: isolate; }
+body.manner-zoom .fact-card,
+body.pallolauta-paalla .fact-card { isolation: isolate; }
 
 /*
  * Toimintonappien alta vaalennus on poistettu (omistajan toive): se
@@ -1298,7 +1299,9 @@ body.manner-zoom .fact-card { isolation: isolate; }
  * Päiväkirjakortti pitää omansa: siinä on pitkä leipäteksti, joka ei
  * mahtuisi luettavaksi pelkän varjon turvin.
  */
-body.manner-zoom .fact-card::before {
+/* Sama paperi pallolaudalla (body.pallolauta-paalla, js/pallolauta/lauta.js). */
+body.manner-zoom .fact-card::before,
+body.pallolauta-paalla .fact-card::before {
   content: '';
   position: absolute;
   /* Reilu ylitys joka suuntaan, jotta häivytys ehtii sulaa karttaan
@@ -8581,8 +8584,10 @@ body[data-mode] .fact-card.pieni > *:not(#fact-voice):not(.fact-place-lyhyt) {
  * varaan kuin kartan omat paikannimet, ja juuri se varjo on tehty
  * pitämään yksittäisen nimen luettavana kartan päällä.
  */
-body.manner-zoom .fact-card::before { transition: opacity 200ms ease; }
-body.manner-zoom .fact-card.pieni::before { opacity: 0; }
+body.manner-zoom .fact-card::before,
+body.pallolauta-paalla .fact-card::before { transition: opacity 200ms ease; }
+body.manner-zoom .fact-card.pieni::before,
+body.pallolauta-paalla .fact-card.pieni::before { opacity: 0; }
 
 /*
  * Muut osat häipyvät ennen kuin reuna ehtii leikata ne: kaiutinnappi ja
