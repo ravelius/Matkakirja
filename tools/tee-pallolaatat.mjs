@@ -112,6 +112,17 @@ export const JAA_LIUKU = 4;
 /** Kartan reunakaista (astetta), jolta reunavarjo nostetaan merisävyyn. */
 export const REUNAN_NOSTO = 1.2;
 /**
+ * Täytteen sävy mitataan SARAKKEITTAIN kartan reunasta tämän verran
+ * sisältä (astetta), 5 × 5 pikselin keskiarvona (5.9.2026 klo 18.45:
+ * julisteen meri on eri sävyinen eri pituusasteilla — yksi mitattu
+ * sävy jätti Uuden-Seelannin eteläpuolelle näkyvän portaan). Jos
+ * reunapikseli ei ole merenkaltainen (maa, rantaviiva), sarake saa
+ * puolipallon yleissävyn.
+ */
+export const REUNAN_MITTAUS = 0.6;
+/** Sarakesävyjen liukuvan keskiarvon puolileveys (sarakkeita). */
+export const SAVYN_TASOITUS = 12;
+/**
  * Avomeren pituusasteet, joilta merisävy mitataan kummankin reunan
  * sisäpuolelta (REUNAN_NOSTO + 0,6° kartan reunasta): pohjoisessa
  * Grönlanninmeri (0° E), etelässä eteläinen Tyynimeri (130° W).
@@ -153,13 +164,19 @@ export function tayteRivilla(lat, meri = MERI_SAVY) {
  * välissä, ei rantaviivan tummuinen) sekoitetaan merisävyyn. Muuttaa
  * puskuria paikallaan; palauttaa true, jos pikseliä nostettiin.
  */
-export function nostaReuna(ulos, o, meri, osuus) {
-  if (osuus <= 0) return false;
-  const r = ulos[o]; const g = ulos[o + 1]; const b = ulos[o + 2];
+/** Onko pikseli merenkaltainen (vähän kylläisyyttä, meren tummuusluokkaa)? */
+export function merenkaltainen(rgb, meri) {
+  const [r, g, b] = rgb;
   const lum = (r + g + b) / 3;
   const meriLum = (meri[0] + meri[1] + meri[2]) / 3;
   const kyllainen = Math.abs(r - g) > 18 || Math.abs(g - b) > 34;
-  if (kyllainen || lum < meriLum - 45 || lum > meriLum + 22) return false;
+  return !(kyllainen || lum < meriLum - 45 || lum > meriLum + 22);
+}
+
+export function nostaReuna(ulos, o, meri, osuus) {
+  if (osuus <= 0) return false;
+  const r = ulos[o]; const g = ulos[o + 1]; const b = ulos[o + 2];
+  if (!merenkaltainen([r, g, b], meri)) return false;
   const t = Math.min(1, osuus) ** 0.7;
   ulos[o] = Math.round(r * (1 - t) + meri[0] * t);
   ulos[o + 1] = Math.round(g * (1 - t) + meri[1] * t);
@@ -398,20 +415,94 @@ export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
     await lukija.varmista(z, a0.px, px1, Math.min(a0.py, a1.py), Math.max(a0.py, a1.py));
   }
   const meret = await lukija.mittaaMeri();
+  // Reunarivien lähdelaatat tämän laatan pituusasteille (sarakesävyt).
+  const reunaLat = { pohjoinen: vali.pohjoinen - REUNAN_MITTAUS, etela: vali.etela + REUNAN_MITTAUS };
+  for (const lat of [reunaLat.pohjoinen, reunaLat.etela]) {
+    const b0 = arkinPikseli(luettelo, taso, reunat.lansi + 1e-9, lat);
+    const b1 = arkinPikseli(luettelo, taso, reunat.ita - 1e-9, lat);
+    if (!b0 || !b1) continue;
+    let px1 = b1.px; if (px1 < b0.px) px1 += taso.leveys;
+    await lukija.varmista(z, b0.px, px1, Math.min(b0.py, b1.py) - 2, Math.max(b0.py, b1.py) + 2); // eslint-disable-line no-await-in-loop
+  }
+  /*
+   * Sarakesävyt: kummankin reunan tint jokaiselle sarakkeelle 5 × 5
+   * keskiarvona, sitten liukuva keskiarvo sarakkeiden yli (SAVYN_TASOITUS),
+   * ettei paperin rae jää pystyraidoiksi täytteeseen. Merenkaltaisuus
+   * arvioidaan pikselistä itsestään (vähän kylläisyyttä, meren
+   * tummuusalue), ei puolipallon yleissävyyn verraten: julisteen meri on
+   * reunan lähellä paikoin selvästi vaaleampi kuin keskimäärin.
+   */
+  const sarakesavyt = { pohjoinen: null, etela: null };
+  const reunanSavy = (s, puoli) => {
+    if (!sarakesavyt[puoli]) {
+      const raaka = [];
+      for (let c = 0; c < LAATTA; c += 1) {
+        const lon = ((X + (c + 0.5) / LAATTA) / n) * 360 - 180;
+        const a = arkinPikseli(luettelo, taso, lon, reunaLat[puoli]);
+        let savy = null;
+        if (a) {
+          const summa = [0, 0, 0]; const rgb = [0, 0, 0]; let k = 0;
+          for (let dy = -2; dy <= 2; dy += 1) {
+            for (let dx = -2; dx <= 2; dx += 1) {
+              lukija.pikseli(z, a.px + dx, a.py + dy, rgb, 0);
+              summa[0] += rgb[0]; summa[1] += rgb[1]; summa[2] += rgb[2]; k += 1;
+            }
+          }
+          const keski = summa.map((v) => Math.round(v / k));
+          const lum = (keski[0] + keski[1] + keski[2]) / 3;
+          const kyllainen = Math.abs(keski[0] - keski[1]) > 18 || Math.abs(keski[1] - keski[2]) > 34;
+          if (!kyllainen && lum >= 150 && lum <= 235) savy = keski;
+        }
+        raaka.push(savy);
+      }
+      // Aukot (maa, rantaviiva) lähimmästä merisarakkeesta, muuten yleissävy.
+      const tayt = raaka.map((v, i) => {
+        if (v) return v;
+        for (let d = 1; d < LAATTA; d += 1) {
+          if (raaka[i - d]) return raaka[i - d];
+          if (raaka[i + d]) return raaka[i + d];
+        }
+        return meret[puoli];
+      });
+      const tasoitettu = tayt.map((_, i) => {
+        const summa = [0, 0, 0]; let k = 0;
+        for (let d = -SAVYN_TASOITUS; d <= SAVYN_TASOITUS; d += 1) {
+          const v = tayt[Math.min(LAATTA - 1, Math.max(0, i + d))];
+          summa[0] += v[0]; summa[1] += v[1]; summa[2] += v[2]; k += 1;
+        }
+        return summa.map((v) => Math.round(v / k));
+      });
+      sarakesavyt[puoli] = tasoitettu;
+    }
+    return sarakesavyt[puoli][s];
+  };
   for (let r = 0; r < LAATTA; r += 1) {
     const lat = rivinLeveysaste(Z, Y, r);
-    const meri = lat >= 0 ? meret.pohjoinen : meret.etela;
-    const tayte = tayteRivilla(lat, meri);
+    const puoli = lat >= 0 ? 'pohjoinen' : 'etela';
     // Reunakaista: 1 kartan reunassa, 0 REUNAN_NOSTO asteen päässä siitä.
     const reuna = Math.max(0, 1 - Math.min(vali.pohjoinen - lat, lat - vali.etela) / REUNAN_NOSTO);
+    /*
+     * KARTAN ULKOPUOLI ON AINA TÄYTETTÄ (löydös 5.9.2026 klo 18.30,
+     * omistajan kuvakaappaus etelänavalta: katkoviivarengas 61,5° S).
+     * arkinPikseli vastaa koko rajaukselle, myös arkin alakehykselle
+     * (kehysviiva, painajanrivi), joka on julisteenLeveysvali:n
+     * ulkopuolella. Lähdelaatat noudetaan vain välille, joten kehys
+     * piirtyi vain sieltä, missä sen lähdelaatta sattui olemaan
+     * välimuistissa — katkoviiva. Nyt raja on väli, ei rajaus.
+     */
+    const kartalla = lat < vali.pohjoinen && lat > vali.etela;
     for (let s = 0; s < LAATTA; s += 1) {
       const lon = ((X + (s + 0.5) / LAATTA) / n) * 360 - 180;
       const o = (r * LAATTA + s) * 3;
-      const a = arkinPikseli(luettelo, taso, lon, lat);
-      if (!a) { ulos[o] = tayte[0]; ulos[o + 1] = tayte[1]; ulos[o + 2] = tayte[2]; continue; }
+      const a = kartalla ? arkinPikseli(luettelo, taso, lon, lat) : null;
+      if (!a) {
+        const tayte = tayteRivilla(lat, reunanSavy(s, puoli));
+        ulos[o] = tayte[0]; ulos[o + 1] = tayte[1]; ulos[o + 2] = tayte[2];
+        continue;
+      }
       // Lähin pikseli riittää: lähdetaso on aina tiheämpi kuin kohde.
       lukija.pikseli(z, a.px, a.py, ulos, o);
-      if (reuna > 0) nostaReuna(ulos, o, meri, reuna);
+      if (reuna > 0) nostaReuna(ulos, o, reunanSavy(s, puoli), reuna);
     }
   }
   return ulos;
