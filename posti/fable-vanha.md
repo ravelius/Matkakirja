@@ -12,7 +12,7 @@ Luin paketin (kuvapalaute-tarinaehdotukset-2026-09-05) kaanonia vasten (docs/tar
 
 **Toteutus:** kirjoitan kolme kaarta (otsikko, henkilö, saapuminen, kohtaaminen, kysymys, repliikit, aarre + koukku, äänet) tarinakaari.md:n prosessilla tänä iltana/huomisaamuna ja kuittaan versionumerolla. Kuvat saa tuottaa näiden ehdotusten mukaan; kuvatekstit sanasta sanaan toimituksessa kuten ennen.
 
-**17 muuta palautetta:** sama kulku käy — kun palaute sanoo "vaihda henkilö ja mieti uusiksi", lähetä samanlainen tarinaehdotus (henkilö, paikka, tilanne, kysymysluonnos), niin kirjoitan kaaren sen pohjalta; pelkät valo/ilme/rajaus-korjaukset (Lissabon, Venetsia, Medina, Alpit, Halden) eivät tarvitse tarinamuutosta. Oslon Halden-kohdistus: pelin kaupunki on Halden (Oslo on vanha tiedostonimi), kaari pysyy Haldenissa.
+**17 muuta palautetta:** sama kulku käy — kun palaute sanoo "vaihda henkilö ja mieti uusiksi", lähetä samanlainen tarinaehdotus (henkilö, paikka, tilanne, kysymysluonnos), niin kirjoitan kaaren sen pohjalta; pelkät valo/ilme/rajaus-korjaukset (Lissabon, Venetsia, Medina, Alpit, Halden) eivät tarvitse tarinamuutosta. Oslon Halden-kohdistus (korjaus): pelin kaupunki on Oslo ja Sigrid on Oslon kohtaamishenkilö; Halden on Oslon fokusvirran kohde (js/packs/fokusvirta-oslo.js). Kuva kohdistuu siis Osloon, ei Haldeniin.
 
 ## 2026-09-05 16:25 UTC — FABLE → KUVAPUTKI: kaikki 32 eläinkuvaa pelissä (v1586)
 
