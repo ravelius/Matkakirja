@@ -71,7 +71,7 @@ const NIKE_VISA = {
  * MIKSI EI DEMOKRATIA-KYSYMYSTÄ. Oppitunti pohjustaa laattakysymyksen
  * (EUROPE_QUESTIONS.ateena: "Mikä hallintomuoto sai alkunsa antiikin
  * Ateenasta?"), ja jos lehden tehtävä kysyisi saman, aarrekysymys
- * olisi ratkaistu ennen kuin Nikosta on tavattu. Visasääntö pätee yhä:
+ * olisi ratkaistu ennen kuin Dafni on tavattu. Visasääntö pätee yhä:
  * vastaus löytyy tekstistä, mutta kysymyksen sanamuoto ei toistu siinä
  * sellaisenaan.
  */
@@ -359,20 +359,27 @@ export const FOKUSVIRTA_ATEENA = {
 
   /*
    * ---------- 6. Kohtaaminen ----------
-   * Fablen päätös 3: Nikos HYVÄKSYTTY. Esittely on tämän kortin oma
-   * sisältö; VARSINAINEN KYSYMYS on ennallaan laattamekaniikassa
-   * (game.actionQuiz), eikä tämä paketti kosketa sitä.
+   * Esittely on tämän kortin oma sisältö; VARSINAINEN KYSYMYS on
+   * ennallaan laattamekaniikassa (game.actionQuiz), eikä tämä paketti
+   * kosketa sitä.
+   *
+   * LUONNOS 5.9.2026, Fable tarkistaa. HENKILÖ VAIHTUI: vartija Nikos
+   * → marmorikonservaattori Dafni (js/tyohuone-kehitys-data.js
+   * KAARI_PAKETIT, 'ateena'). Perustelu on kaaren omassa
+   * kommenttilohkossa; tämä kortti seuraa perässä, jottei kaupungissa
+   * ole kahta eri kohtaamishenkilöä. Kortti ei kertaa Dafnin omaa
+   * repliikkiä eikä paljasta laattakysymyksen vastausta.
    */
   kohtaaminen: {
-    hahmo: 'Vartija Nikos',
-    nappi: 'Tapaa Nikos',
+    hahmo: 'Marmorikonservaattori Dafni',
+    nappi: 'Tapaa Dafni',
     /*
      * VARMISTUSKYSYMYS (omistajan pelitestipalaute v1119). Lause on
      * datassa eikä koodissa, koska suomen genetiivi ei taivu
      * koneellisesti jokaisesta nimestä — ilman omaa lausetta kortti
      * käyttää pronominia (js/fokusvirta.js varmistusLause).
      */
-    varmistus: 'Haluatko varmasti tavata Nikoksen juuri nyt?',
+    varmistus: 'Haluatko varmasti tavata Dafnin juuri nyt?',
     /*
      * VIHJELINKIN OSIO (omistajan pelitestipalaute v1119, kohta 13:
      * rivi kertoo *"MISTÄ PÄIN LEHTEÄ pulman ratkaisu löytyy,
@@ -380,22 +387,22 @@ export const FOKUSVIRTA_ATEENA = {
      *
      * Tunnus on kaupunkilehden osion id (js/packs/kulttuuri-
      * kategoriat.js): Ateenan lehdessä on kaksi osiota, 'kaupunki'
-     * ("Ateena") ja 'arki' ("Arki ja tavat"). Nikoksen kysymys koskee
+     * ("Ateena") ja 'arki' ("Arki ja tavat"). Dafnin kysymys koskee
      * Athenen lahjaa, ja lähin tuki sille on Ateena-osiossa —
      * artikkeli "Palkintona oksa puusta" kertoo, minkä puun oksa on
      * kaupungin oma palkinto. Vastausta se ei anna, vaan nyökkää
      * siihen suuntaan.
      */
     vihjeOsio: 'kaupunki',
-    teksti: 'Vartija Nikos on kiertänyt Akropoliin ja Agoran kujia jo '
-      + 'kaksikymmentä vuotta, ja hän on nähnyt tarpeeksi ulkomaalaisia, '
-      + 'jotka haaveilevat löytävänsä oman Priamoksensa jo ensimmäisellä '
-      + 'kaivauksella. Hän ei naura vieraalleen vasten kasvoja, mutta '
-      + 'hänen katseessaan on huvittunut kärsivällisyys, kun nuori '
-      + 'matkustaja jo vilkuilee seuraavaa kiveä kääntääkseen. Ennen kuin '
-      + 'Nikos suostuu kertomaan mitään todella hyödyllistä, hän haluaa '
-      + 'varmistaa, että vieras on oikeasti katsonut ympärilleen — ei vain '
-      + 'etsinyt kultaa.',
+    teksti: 'Dafni on kymmenen vuotta paikannut Akropoliin marmoria: '
+      + 'täydentänyt murtuneita reunoja, mitannut, kirjannut ja pannut '
+      + 'kiven takaisin sinne mistä se lähti. Työpäivä loppuu, kun valo '
+      + 'loppuu, eikä hän jää ylitöihin kenenkään vuoksi. Vieraita hän '
+      + 'on nähnyt kaikki lajit, ja useimmat kysyvät kullasta tai '
+      + 'linnusta. Vanha luonnos on eri asia: siinä on mittamerkintä, '
+      + 'ja mittamerkinnän hän tunnistaa työkseen. Ennen kuin hän avaa '
+      + 'sen kanssa mitään, hän haluaa tietää, tietääkö tulija edes '
+      + 'sen, kenen mukaan kaupunki on nimetty ja miksi.',
   },
 
   /*
@@ -410,9 +417,9 @@ export const FOKUSVIRTA_ATEENA = {
    * KOHTAAMISPAIKKA: AKROPOLIS, ei kaupungin laatta.
    *
    * Raamattu (KEVYT KULKU -KOKEILU): *"Kohtaamisen paikan voi sitoa
-   * muuhunkin kuin kaupunkipisteeseen (kehyskertomus)."* Vartija Nikos
-   * on kiertänyt Akropoliin ja Agoran kujia kaksikymmentä vuotta, joten
-   * hänet tavataan siellä missä hän työskentelee.
+   * muuhunkin kuin kaupunkipisteeseen (kehyskertomus)."* Konservaattori
+   * Dafnin työmaa on Akropoliilla, joten hänet tavataan siellä missä hän
+   * työskentelee — piste ei siis muutu henkilön vaihtuessa.
    *
    * 23,72573 E / 37,97154 N — en-Wikipedia "Acropolis of Athens".
    * Muunnos on sama kaava ja samat vakiot kuin fokuskohteilla

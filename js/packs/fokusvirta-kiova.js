@@ -661,61 +661,59 @@ export const FOKUSVIRTA_KIOVA = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * FABLE KATSELMOI: kohtaamisluonnos
-   *
-   * HAHMO JA KYSYMYS OVAT KAANONIA, ESITTELYTEKSTI ON LUONNOS. Kiovalla
-   * on tarinakaaren paketti (js/tyohuone-kehitys-data.js KAARI_PAKETIT,
-   * id 'kiova'), joka antaa sekä hahmon — portinvartija Oksana, joka
-   * pitää Kultaisen portin avaimia ja tuntee holvin jokaisen
-   * kaiverruksen sormenpäillään — että kysymyksen, jonka game.actionQuiz
-   * esittää laatalla (js/game.js kaariTarina). Kumpaakaan ei kosketa
-   * täällä. Alla oleva `teksti` on VAIN kortin esittely, ja se on
-   * ehdotus: se on kirjoitettu niin, ettei se kertaa Oksanan omaa
-   * repliikkiä eikä paljasta vastausta.
+   * LUONNOS 5.9.2026, Fable tarkistaa. HENKILÖ VAIHTUI: portinvartija
+   * Oksana → näyttelymestari Taras (js/tyohuone-kehitys-data.js
+   * KAARI_PAKETIT, id 'kiova'). Syy on kaaren omassa
+   * kommenttilohkossa: Oksanan repliikki odotti suoraan sanoen
+   * perillistä (*"tekijän suku palaa lukemaan ne"*), ja se on
+   * kiellettyjen odotusten kirkkain tapaus. Kaaren paketti antaa
+   * hahmon JA kysymyksen, jonka game.actionQuiz esittää laatalla
+   * (js/game.js kaariTarina); kumpaakaan ei kosketa täällä. Alla oleva
+   * `teksti` on VAIN kortin esittely, kirjoitettu niin, ettei se
+   * kertaa Taraksen omaa repliikkiä eikä paljasta vastausta.
    *
    * KUVAA EI OLE (omistajan linjaus): kohtaamiskortissa on hahmo,
    * nappi, varmistus, vihjeOsio ja teksti.
    *
    * MITÄ LUONNOS YRITTÄÄ (docs/moduulit/tarinakaari.md, luvut 3 ja 5):
-   *   - ÄÄNIPROFIILI on HÄMMÄSTYY ITSEKIN. Vilnan Rasa ja Sevillan
-   *     Amparo ovat epäuskoisia, joten tälle erälle tarvitaan toinen
-   *     ääni: Oksana uskoo sukunsa tarinan täysin, mutta ei ole
-   *     koskaan tiennyt, kuka viivat veisti — ja myöntää sen ääneen.
+   *   - ÄÄNIPROFIILI on HÄMMÄSTYY ITSEKIN, kuten ennenkin: Taras
+   *     tietää näyttelystä kaiken eikä silti tiedä, mistä piirroksen
+   *     viiva on peräisin — ja myöntää sen ääneen.
    *   - VARALLISUUSSÄÄNTÖ: isoisä ei maksa mitään, ei tilaa mitään eikä
-   *     käske ketään. Suvun syy pitää huolta holvista on suvun oma:
-   *     avaimet ovat kulkeneet perheessä, ja kaiverrusten pyyhkiminen
-   *     on osa työtä, jota kukaan ei ole käskenyt tekemään.
-   *   - LUPAUS, JONKA AARRETEKSTIN ON LUNASTETTAVA: Oksana painaa
-   *     vieraan käden kaiverrukselle, ja se luetaan sormilla.
-   *   - EI SPOILERIA: kortti ei mainitse porttia, sen tehtävää eikä
-   *     ikää — vain holvin, kiven ja avaimet.
+   *     käske ketään, eikä kukaan odota ketään. Taras kiinnostuu
+   *     työkseen: väärä viiva näyttelyssä on hänen ongelmansa.
+   *   - EI SPOILERIA: kortti ei mainitse portin tehtävää eikä ikää —
+   *     vain holvin, jäännökset, pienoismallin ja kansiot.
+   *   - MODERNI JA MUINAINEN PIDETÄÄN ERILLÄÄN: vuoden 1982
+   *     suojapaviljonki ja viime kuussa valmistunut pienoismalli eivät
+   *     ole muinaisia eikä niitä väitetä sellaisiksi.
    */
   kohtaaminen: {
-    hahmo: 'Portinvartija Oksana',
-    nappi: 'Tapaa portinvartija',
-    varmistus: 'Haluatko varmasti tavata Oksanan juuri nyt?',
+    hahmo: 'Näyttelymestari Taras',
+    nappi: 'Tapaa näyttelymestari',
+    varmistus: 'Haluatko varmasti tavata Taraksen juuri nyt?',
     /*
      * VIHJELINKIN OSIO (omistajan pelitestipalaute v1119, kohta 13):
      * rivi kertoo, MISTÄ PÄIN LEHTEÄ ratkaisu löytyy, vastausta
      * paljastamatta, ja avaa lehden siihen osioon. Tunnus on
      * kaupunkilehden osion id (js/packs/kulttuuri-kategoriat.js, kiova):
-     * 'kaupunki' tai 'musiikki'. Oksanan kysymys koskee holvia ja
+     * 'kaupunki' tai 'musiikki'. Taraksen kysymys koskee holvia ja
      * muureja, ja lähin tuki on kaupunkisivulla, jonka kansikuvan selite
      * kertoo, mitä porttitornista on aitoa ja mitä ei.
      */
     vihjeOsio: 'kaupunki',
-    teksti: 'Oksanalla on avaimet, ja avaimet ovat vanhempia kuin lukot, '
-      + 'joihin ne sopivat: perheessä on hoidettu tätä holvia niin '
-      + 'kauan, ettei kukaan enää muista, kuka aloitti. Työhön kuuluu '
-      + 'pyyhkiä pöly kaiverruksista, ja sen hän tekee kämmenellä eikä '
-      + 'harjalla, koska harja ei tunne mitään. Vieraita hän on '
-      + 'opastanut satoja, ja useimmat kysyvät samaa: kuka nämä viivat '
-      + 'on veistänyt. Oksana sanoo suoraan, ettei tiedä, ja että se '
-      + 'harmittaa häntä enemmän kuin hän kehtaa myöntää — hän on '
-      + 'lukenut ne tuhat kertaa sormillaan eikä ole päässyt riviäkään '
-      + 'pidemmälle. Kiveen hän ei kuitenkaan päästä ketään koskemaan '
-      + 'ennen kuin tulija osoittaa tietävänsä, mitä varten se '
-      + 'aikoinaan pystytettiin.',
+    teksti: 'Taras rakentaa museoon uutta näyttelyä vanhojen jäännösten '
+      + 'ympärille: suojarakennus on vuodelta 1982, pienoismalli '
+      + 'valmistui viime kuussa, ja kummankin kohdalla hän osaa sanoa, '
+      + 'mikä on aitoa ja mikä selitystä. Dokumentointikansiot hän '
+      + 'tuntee ulkoa, koska väärä viiva seinätekstissä on hänen '
+      + 'ongelmansa eikä kenenkään muun. Vieraita hän on opastanut '
+      + 'satoja, ja useimmat kysyvät kullasta. Vanha piirros on eri '
+      + 'asia: siinä on viiva, jota hän ei tunnista, ja se harmittaa '
+      + 'häntä enemmän kuin hän kehtaa myöntää. Kansioita hän ei '
+      + 'kuitenkaan avaa kenellekään ennen kuin tulija osoittaa '
+      + 'tietävänsä, mitä varten koko rakennelma aikoinaan '
+      + 'pystytettiin.',
   },
 
   /*
@@ -724,7 +722,7 @@ export const FOKUSVIRTA_KIOVA = {
    */
 
   /*
-   * KOHTAAMISPAIKKA: KULTAINEN PORTTI, jonka holvissa Oksana seisoo.
+   * KOHTAAMISPAIKKA: KULTAINEN PORTTI, jonka museossa Taras työskentelee.
    *
    * 50,44888889 N / 30,51333333 E — en-Wikipedia "Golden Gate, Kyiv",
    * prop=coordinates (haettu 30.8.2026). Muunnos on sama kaava ja samat

@@ -521,33 +521,40 @@ export const FOKUSVIRTA_ROOMA = {
    * laattakysymyksen — EI vaihdeta."*
    *
    * TARKISTETTU 25.8.2026: js/packs/kohtaamiset.js:ssä EI ole Rooman
-   * riviä (tiedostossa on kuusi kaupunkia: Lontoo, Kairo, Tukholma,
-   * Madrid, Venetsia, Berliini). Rooman hahmo on silti olemassa ja
-   * pelissä käytössä: tarinakaaren paketti js/tyohuone-kehitys-data.js
-   * (KAARI_PAKETIT, id 'rooma') antaa hahmon JA sen kysymyksen, jonka
-   * game.actionQuiz esittää laatalla (js/game.js kaariTarina). Hahmo on
-   * siis Suihkulähteenhoitaja Enzo, eikä tämä paketti kosketa
-   * kysymystä millään tavalla — sama suhde kuin Ateenan Nikoksella ja
-   * Sofian Nadialla.
+   * riviä. Rooman hahmo on silti olemassa ja pelissä käytössä:
+   * tarinakaaren paketti js/tyohuone-kehitys-data.js (KAARI_PAKETIT,
+   * id 'rooma') antaa hahmon JA sen kysymyksen, jonka game.actionQuiz
+   * esittää laatalla (js/game.js kaariTarina); tämä paketti ei kosketa
+   * kysymystä millään tavalla.
    *
-   * KOHTAAMISKUVAA EI OLE. Ateenalla ja Sofialla on generoitu kuva
-   * (assets/kohtaamiset/kohtaaminen-*.jpg); Roomalle sellaista ei ole
-   * kansiossa, eikä tänne kirjoiteta polkua, jota ei ole.
+   * LUONNOS 5.9.2026, Fable tarkistaa. HENKILÖ VAIHTUI:
+   * suihkulähteenhoitaja Enzo → pasunisti Nico (kuvaputken
+   * tarinaehdotus 5.9.2026, Fablen päätös samana iltana klo 20:05 UTC:
+   * *"Rooma (pasunisti Nico, Trevi, ilta, juhla kaupungilla)"*). Isältä
+   * ja isoisältä peritty kolikonnosto ja huoltoluukun avaaminen ovat
+   * poissa; kukaan ei tunne Horatiota eikä odota ketään.
+   *
+   * KOHTAAMISKUVA on kaaren paketissa (assets/kohtaamiset/
+   * kohtaaminen-rooma.jpg) ja esittää yhä Enzoa — se vaihtuu, kun
+   * kuvaputken uusi kuva on hyväksytty. Tähän pakettiin ei kirjoiteta
+   * omaa kuvapolkua.
    *
    * Esittely on tämän kortin omaa tekstiä ja kirjoitettu niin, ettei se
-   * kertaa Enzon omaa repliikkiä eikä paljasta vastausta.
+   * kertaa Nicon omaa repliikkiä eikä paljasta vastausta.
    */
   kohtaaminen: {
-    hahmo: 'Suihkulähteenhoitaja Enzo',
-    nappi: 'Tapaa Enzo',
-    teksti: 'Enzo nostaa Trevin kolikot talteen joka viikko, kuten '
-      + 'hänen isänsä ja isoisänsä nostivat ennen häntä. Hansikas '
-      + 'kädessä hän tunnistaa kolikon maan ja vuoden pelkästä reunasta, '
-      + 'ja hän on nähnyt altaan pohjalta kaiken, mitä ihminen voi '
-      + 'pudottaa. Matkustajaa hän ei kiirehdi. Ennen kuin hän avaa '
-      + 'huoltoluukun, hän haluaa tietää, ymmärtääkö vieras miksi '
-      + 'kolikko ylipäänsä heitetään: tavan tuntee jokainen tulija, '
-      + 'mutta harva osaa sanoa, mitä se lupaa.',
+    hahmo: 'Pasunisti Nico',
+    nappi: 'Tapaa Nico',
+    teksti: 'Nico soittaa iltakeikkoja siellä, missä kaupungissa '
+      + 'sattuu olemaan juhla: aukioilla, sivukaduilla, kerran '
+      + 'hautajaisissakin väärän osoitteen takia. Nuotteja hän ei kanna '
+      + 'mukanaan, koska ohjelmisto on päässä ja koska pasuunan kanssa '
+      + 'on muutenkin tarpeeksi kannettavaa. Vanhat katusävelmät hän '
+      + 'tunnistaa parista tahdista, ja siitä hän on hiljaisesti ylpeä. '
+      + 'Turistien kysymyksiin hän vastaa kohteliaasti ja lyhyesti — '
+      + 'tauko on kymmenen minuuttia. Vieraan kirjaa hän katsoo vasta '
+      + 'sitten, kun tämä osaa sanoa, mitä altaaseen heitetty kolikko '
+      + 'oikeastaan lupaa.',
   },
 
   /*
@@ -557,14 +564,20 @@ export const FOKUSVIRTA_ROOMA = {
    */
 
   /*
-   * KOHTAAMISPAIKKA: AVENTINUKSEN AVAIMENREIKÄ, ei kaupungin laatta.
-   * Kaanon, kohta 4, määrää paikan.
+   * KOHTAAMISPAIKKA: TREVIN SUIHKULÄHDE (5.9.2026; ennen Aventinuksen
+   * avaimenreikä), ei kaupungin laatta.
    *
-   * 12,4775 E / 41,8836 N — en-Wikipedia "Villa del Priorato di Malta"
-   * (takyt-rooma.md, täky 12). Kaanon antoi luvut muistinvaraisesti
-   * hitusen toisin (41,8827 N / 12,4783 E) ja käski rakentajan
-   * tarkistaa: raportin tarkistetut luvut ovat nämä, ja ero on laudalla
-   * alle kymmenesosayksikkö — kumpi tahansa piirtyisi samaan pisteeseen.
+   * SIIRRON SYY on Fablen päätös 5.9.2026 klo 20:05 UTC: *"Rooma
+   * (pasunisti Nico, Trevi, ilta, juhla kaupungilla): fokusvirran
+   * kohtaamispiste siirtyy Aventinuksen avaimenreiästä Trevin luo,
+   * jotta kaupungissa on yksi kohtaamispaikka."* Kaaren kohtaaminen on
+   * Trevin laidalla, joten kartan pisteen on osoitettava sinne.
+   * Avaimenreikä ei katoa pelistä: se on yhä kaupungin oma
+   * syvennystarina ja karttamerkki (js/packs/syvennyspaikat.js, rooma/
+   * avaimenreika, sama koordinaatti 41,8836 / 12,4775).
+   *
+   * 12,48305556 E / 41,90083333 N — en-Wikipedia "Trevi Fountain",
+   * prop=coordinates (haettu 5.9.2026).
    *
    * Muunnos on sama kaava ja samat vakiot kuin fokuskohteilla
    * (js/packs/fokuskohteet-ita.js): maailmankartalla Millerin lieriö
@@ -573,27 +586,29 @@ export const FOKUSVIRTA_ROOMA = {
    * ja y = (72 − lat) × 26,3.
    *
    * LASKU:
-   *   maailmankartta  x = ((12,4775 − (−175)) mod 360) × (12000/360)
-   *                     = 187,4775 × 33,3333… = 6249,3
-   *                   y = (millerY(41,8836) − millerY(76)) × 12000/2π
-   *                     = 1728,2
-   *   europe          x = (12,4775 + 11) × 19,2 = 450,8
-   *                   y = (72 − 41,8836) × 26,3 = 792,1
+   *   maailmankartta  x = ((12,48305556 − (−175)) mod 360) × (12000/360)
+   *                     = 187,48305556 × 33,3333… = 6249,4
+   *                   y = (millerY(76) − millerY(41,90083333)) × 12000/2π
+   *                     = 1727,5
+   *   europe          x = (12,48305556 + 11) × 19,2 = 450,9
+   *                   y = (72 − 41,90083333) × 26,3 = 791,6
    *
    * TARKISTUS ROOMAN LAATTAA VASTEN: laatta on maailmankartalla
    * 6249,7 / 1728,1 (js/packs/maailmankartta.js) ja Euroopan laudalla
-   * 451 / 792 (js/packs/europe.js). Avaimenreikä on laudalla siis
-   * alle puolen yksikön päässä laatasta — juuri niin kuin pitääkin,
-   * sillä Aventinus on keskustan kukkuloita runsaan parin kilometrin
-   * päässä kaupungin keskipisteestä, ja laudan yksikkö on
-   * maailmankartalla noin kolme kilometriä. Piste piirtyy laatan
-   * viereen eikä naapurimaahan.
+   * 451 / 792 (js/packs/europe.js). Trevi on laudalla siis alle puolen
+   * yksikön päässä laatasta — juuri niin kuin pitääkin, sillä lähde on
+   * keskustassa runsaan kilometrin päässä kaupungin keskipisteestä, ja
+   * laudan yksikkö on maailmankartalla noin kolme kilometriä.
+   * Piirtopuoli siirtää merkin laatan viereen itse (js/fokuspiste.js
+   * PISTE_ERO_MIN = 14), kuten se teki avaimenreiällekin. Vanha piste
+   * oli 6249,3 / 1728,2 ja 450,8 / 792,1 — siirtymä on laudalla alle
+   * yhden yksikön, joten kartan yleisilme ei muutu.
    */
   kohtaamispiste: {
-    nimi: 'Aventinuksen avaimenreikä',
+    nimi: 'Trevin suihkulähde',
     laudat: {
-      maailmankartta: { x: 6249.3, y: 1728.2 },
-      europe: { x: 450.8, y: 792.1 },
+      maailmankartta: { x: 6249.4, y: 1727.5 },
+      europe: { x: 450.9, y: 791.6 },
     },
   },
 

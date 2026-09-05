@@ -451,16 +451,17 @@ export const FOKUSVIRTA_MADRID = {
    * id 'madrid'): kellomestari Pilar hoitaa Puerta del Solin kelloa, ja
    * game.actionQuiz esittää hänen kysymyksensä laatalla (js/game.js
    * kaariTarina). Tämä kortti EI kosketa kysymystä eikä kertaa Pilarin
-   * omaa repliikkiä — sama suhde kuin Ateenan Nikoksella ja Sofian
-   * Nadialla.
+   * omaa repliikkiä — sama suhde kuin Sofian Nadialla.
    *
-   * MADRIDIN VANHA KOHTAAMINEN JÄÄ ENNALLEEN. js/packs/kohtaamiset.js
-   * antaa Madridille kirpputorikauppias Rosan, ja se rivi on pelin
-   * vanhan polun kohtaaminen (js/visa.js: KOHTAAMISET näytetään, kun
-   * kysymys ei ole kaarikysymys). Hahmoa ei ole poistettu eikä
-   * muutettu: fokusmoodin kohtaaminen on kaaren oma hahmo, koska juuri
-   * hän esittää aarrekysymyksen, ja kaksi hahmoa samaan kysymykseen
-   * olisi kaksi lupausta samasta ovesta.
+   * LUONNOS 5.9.2026, Fable tarkistaa. KAKSOISHENKILÖ PURETTU:
+   * js/packs/kohtaamiset.js antoi
+   * Madridille aiemmin kirpputorikauppias Rosan, eli kaupungissa oli
+   * kaksi eri kohtaamishenkilöä. Fablen päätös 5.9.2026 klo 20:05 UTC
+   * ratkaisi asian kaaren hyväksi: *"kaaren henkilö (Pilar, Lucia)
+   * voittaa"*. Rosa on poistettu, ja kohtaamiset.js:n madrid-rivi
+   * puhuu nyt samasta Pilarista — sen tervehdys on kaupungin
+   * myöhempien tavallisten visojen avaus ja sen repliikit ne, jotka
+   * js/visa.js näyttää kätkötuloksen mukaan.
    */
   kohtaaminen: {
     hahmo: 'Kellomestari Pilar',

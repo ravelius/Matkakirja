@@ -443,22 +443,62 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'rooma',
+      /*
+       * KUVA JÄÄ TOISTAISEKSI ENNALLEEN, VAIKKA HENKILÖ VAIHTUI.
+       * Tiedosto assets/kohtaamiset/kohtaaminen-rooma.jpg esittää
+       * suihkulähteenhoitaja Enzoa (docs/kuvatuotanto-kohtaamiset.md).
+       * Fablen päätös 5.9.2026 klo 20:05 UTC: *"Rooma (pasunisti Nico,
+       * Trevi, ilta, juhla kaupungilla) … kuvakenttä vaihtuu"* — rivi
+       * päivitetään heti, kun kuvaputken uusi kuva
+       * (rooma-nico-feedback-r20260905-v1) on hyväksytty ja viety
+       * R2:een. Siihen asti kortilla on vanha kuva.
+       */
       kuva: 'assets/kohtaamiset/kohtaaminen-rooma.jpg',
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
-      otsikko: 'Rooma — kolikko joka palasi altaaseen',
+      otsikko: 'Rooma — sävelmä sivukadulta',
+      /*
+       * LUONNOS 5.9.2026, Fable tarkistaa.
+       *
+       * KOKO KAARI UUSIKSI (kuvaputken tarinaehdotus 5.9.2026, Fablen
+       * päätös samana iltana klo 20:05 UTC: *"Rooma (pasunisti Nico,
+       * Trevi, ilta, juhla kaupungilla): fokusvirran kohtaamispiste
+       * siirtyy Aventinuksen avaimenreiästä Trevin luo, jotta
+       * kaupungissa on yksi kohtaamispaikka"*).
+       * Suihkulähteenhoitaja Enzo, periytyvä kolikonnosto ja
+       * huoltoluukun avaaminen ovat poissa; tilalla on iltakeikan
+       * tauolla oleva pasunisti, joka ei tunne Horatiota eikä odota
+       * ketään.
+       *
+       * SAAPUMINEN KIRJOITETTU UUSIKSI mutta samoista raaka-aineista:
+       * tyhjennetty allas ja rouvan opetus oikeasta heittotavasta ovat
+       * kaaren omaa vanhaa aineistoa (tarinakaari.md luku 4: vanhasta
+       * säilytetään raaka-aineet, lauseet kirjoitetaan uudestaan).
+       * Uutta on sivukadun sävelmä, jonka Horatio kirjaa nuoteiksi —
+       * se on nyt ainoa silta 1873:n ja nykyhetken välillä, ja Nico
+       * tunnistaa sen omasta ohjelmistostaan eikä sukutarinasta.
+       * HUOM: Rooma on fokusvirtakaupunki, joten kaaren `saapuminen`
+       * ei päädy ruudulle (js/packs/tarinakaari.js) — teksti pidetään
+       * silti kaanonin mukaisena, koska kohtaaminen nojaa siihen.
+       *
+       * KYSYMYS SÄILYY ENNALLAAN (Fablen päätös: *"Säilytä Trevin
+       * kolikonheiton taru → palaat vielä Roomaan"*). Kohtaaminen
+       * johdattaa siihen kysymällä, mitä kolikko lupaa, eikä vastausta
+       * lue missään ennen visaa näkyvässä kentässä (tarinakaari.md,
+       * sääntö 6).
+       */
       saapuminen: 'Trevin allas oli tyhjennetty, ja pohjalta nousi kolikoiden '
-        + 'sade — rahat annetaan köyhille. Yksi kolikko oli muita '
-        + 'vanhempi, ja sen reunaan oli viilattu tähtäinristi. Heitin '
-        + 'sen takaisin väärin. Vieressä seissyt rouva näytti oikean '
-        + 'tavan — oikealla kädellä vasemman olan yli — niin '
-        + 'arvokkaasti, että heitin toisenkin. Kirjasin: köyhät saivat '
-        + 'kaksi ropoa, minä opetuksen.',
-      henkilo: 'Suihkulähteenhoitaja Enzo nostaa Trevin kolikot talteen joka '
-        + 'viikko, kuten hänen isänsä ja isoisänsä nostivat.',
-      kohtaaminen: 'Enzo kääntelee vanhaa kolikkoa hansikkaassa kädessään. '
-        + '"Tämä nousee altaasta yhä uudelleen, vaikka panen sen '
-        + 'talteen. Isäni sanoi: älä kysy keneltä, kysy miksi. Vastaa '
-        + 'tavan kysymykseen, niin kolikko on sinun."',
+        + 'sade. Heitin omani takaisin väärin päin; vieressä seissyt '
+        + 'rouva näytti oikean tavan niin arvokkaasti, että heitin '
+        + 'toisenkin. Sivukadulta kuului samaan aikaan sävelmä, jota en '
+        + 'tuntenut. Kirjasin sen nuoteiksi niin hyvin kuin osasin — ja '
+        + 'rouvan opetuksen sanatarkkaan.',
+      henkilo: 'Pasunisti Nico soittaa iltakeikkoja kaupungin juhlissa ja '
+        + 'tuntee Rooman katusävelmät nuoteitta.',
+      kohtaaminen: 'Trevin laidalla, juhlavalojen alla, pasunisti Nico laskee '
+        + 'soittimen lantiolleen. "Aarretta? Luulin että pyydät '
+        + 'encorea." Hän vilkaisee kirjan nuottiriviä ja hymyilee. "Tuo '
+        + 'on meidän. Vastaa ensin: mitä altaaseen heitetty kolikko '
+        + 'lupaa?"',
       kysymys: {
         q: 'Mitä tarun mukaan tapahtuu, kun heittää kolikon Trevin '
           + 'suihkulähteeseen olkapään yli?',
@@ -473,10 +513,10 @@ export const KAARI_PAKETIT = {
           + 'oikeasti talteen ja lahjoitetaan hyväntekeväisyyteen — niitä '
           + 'kertyy noin miljoona euroa vuodessa.',
       },
-      aarre: 'Enzo painoi kolikon kämmeneeni ja avasi huoltoluukun: sen '
-        + 'takana odotti kätkö. Portilla sata puhelinta kuvasi '
-        + 'lähdettä — yksikään ei kuvannut miestä, joka tietää sen '
-        + 'salaisuuden.',
+      aarre: 'Nico luki nuottirivin loppuun ja osoitti numeroa tahdin alla: '
+        + 'se oli säilytyslokeron numero kadun päässä. Rasia oli siellä. '
+        + '"Sävelmän toinen puoli on jonkun toisen vihossa." Kukaan '
+        + 'orkesterissa ei muista kenen.',
     },
     {
       id: 'madrid',
@@ -519,11 +559,50 @@ export const KAARI_PAKETIT = {
       id: 'ateena',
       // Kohtaamiskuva (Opus 3:n pilotti 10.8.2026): näkyy kohtaamis-
       // kortilla tekstin oikealla puolella.
+      /*
+       * KUVA JÄÄ TOISTAISEKSI ENNALLEEN, VAIKKA HENKILÖ VAIHTUI.
+       * Tiedosto assets/kohtaamiset/kohtaaminen-ateena.jpg esittää
+       * marmorinveistäjä Nikosta (docs/kuvatuotanto-kohtaamiset.md).
+       * Fablen päätös 5.9.2026 klo 20:05 UTC: *"Ateena (konservaattori
+       * Dafni): uusi otsikko ja aarreteksti ilman pöllöä; kuvakenttä
+       * vaihtuu, kun kuva on hyväksytty."* Rivi päivitetään heti, kun
+       * kuvaputken uusi kuva (ateena-dafni-…, pöllötön versio) on
+       * hyväksytty ja viety R2:een. Siihen asti kortilla on vanha kuva
+       * ja väärä henkilö — tämä on tiedostettu välitila, ei unohdus.
+       */
       kuva: 'assets/kohtaamiset/kohtaaminen-ateena.jpg',
-      otsikko: 'Ateena — pöllö joka vartioi rahaa',
+      otsikko: 'Ateena — kaksi mittaa samasta kivestä',
       // Omistajan palaute 11.8.2026: lyhennetty ja pöllön ele sekä
       // päiväkirjakehys kirkastettu; kohtaamisen lupaus konkreettinen.
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      /*
+       * LUONNOS 5.9.2026, Fable tarkistaa.
+       *
+       * HENKILÖ VAIHTUI, SAAPUMINEN EI. Fablen päätös 5.9.2026 klo
+       * 20:05 UTC rajaa muutoksen tarkasti: *"uusi otsikko ja
+       * aarreteksti ilman pöllöä"* — eli marmorinveistäjä Nikos
+       * korvataan konservaattori Dafnilla ja pöllö poistuu otsikosta ja
+       * aarteesta. SAAPUMINEN ON SÄILYTETTY SANASTA SANAAN: se on
+       * docs/moduulit/tarinakaari.md:n oma malliesimerkki (luku 5,
+       * "Ateenan korjaus": avaus on vitsi, hahmon piirre tekee työtä ja
+       * tappio linnulle on erän itseironia-annos), eikä sitä ole syytä
+       * kirjoittaa uusiksi. Ateena on lisäksi fokusvirtakaupunki, jossa
+       * matkakirjakortin omistaa fokusvirran oma merkintä
+       * (js/packs/tarinakaari.js), joten saapuminen ei edes päädy
+       * ruudulle.
+       *
+       * MIKÄ POISTUI: Nikoksen isoisoisä, joka löysi samanlaisen rahan
+       * ja pani sen takaisin, sekä väite *"Kirjasi omistaja tiesi
+       * rahasta"* — kukaan nykyihminen ei tunnista Horatiota. Poistui
+       * myös pylvään onkalon avaaminen: kätkö ei ole muinaisessa
+       * rakenteessa vaan työmaapolun kulmakivessä.
+       *
+       * KYSYMYS SÄILYY ENNALLAAN (Fablen päätös ja kuvaputken ehdotus:
+       * *"Säilytä nykyinen Athenen oliivipuuta koskeva kysymys, oikea
+       * vastaus ja oppitunti"*). Dafni johdattaa siihen rahan linnusta,
+       * jota turistit kysyvät — vastausriviä ei lue missään ennen
+       * visaa näkyvässä kentässä (tarinakaari.md, sääntö 6).
+       */
       saapuminen: 'Pöllö istui kaatuneella pylväällä ja katsoi minua '
         + 'liikahtamatta, kuin vaatisi selitystä myöhästymisestäni. '
         + 'Kirjasin vihkooni tuijotuksemme keston: seitsemän '
@@ -531,13 +610,13 @@ export const KAARI_PAKETIT = {
         + 'astui syrjään: jalan alla oli hopearaha, vanhempi kuin '
         + 'mikään mittaamani. Se ei vartioinut rahaa minulta — se '
         + 'näytti, mistä aloittaa.',
-      henkilo: 'Marmorinveistäjä Nikos korjaa Akropoliin pylväitä ja tuntee '
-        + 'jokaisen kiven — ja rahan, jota siellä vartioidaan.',
-      kohtaaminen: 'Nikos laskee talttansa nähdessään rahan. "Isoisoisäni löysi '
-        + 'samanlaisen ja pani sen takaisin — hän sanoi, että pöllö '
-        + 'laskee ne. Kirjasi omistaja tiesi rahasta. Vastaa hänen '
-        + 'kysymykseensä, niin nostan rahan ja näytän, mitä sen alla '
-        + 'on."',
+      henkilo: 'Marmorikonservaattori Dafni sulkee työpäivän Akropoliin '
+        + 'työmaalla ja tunnistaa vanhat mittamerkinnät.',
+      kohtaaminen: 'Työmaaportilla marmorikonservaattori Dafni siirtää '
+        + 'laatikon lonkalleen. "Mistä sait tuon luonnoksen? Kulman minä '
+        + 'tunnen — sama mitta on meidän arkistossamme, eri käsialalla. '
+        + 'Turisti kysyy aina rahan linnusta. Sinä saat vastata '
+        + 'vaikeampaan."',
       kysymys: {
         q: 'Kaupunki on nimetty jumalattaren mukaan. Millä lahjalla '
           + 'Athene tarun mukaan voitti kaupungin itselleen?',
@@ -555,9 +634,10 @@ export const KAARI_PAKETIT = {
           + 'kaupungille, ja hopearahoihin lyötiin jumalattaren viisas '
           + 'lintu.',
       },
-      aarre: 'Nikos nosti rahan: sen alla, pylvään onkalossa, odotti '
-        + 'kätkö. Hän katsoi rinteeseen: "Pöllö palaa pylväälle joka '
-        + 'ilta — meillä sanotaan, että se vartioi vielä jotakin."',
+      aarre: 'Dafni osoitti mistä mitata: työmaapolun kulmakivi oli ontto, '
+        + 'ja onkalossa odotti rasia. "Sama viiva on meidän '
+        + 'arkistokopiossamme." Kopio on isoisän kirjaa vanhempi. Kumpi '
+        + 'siis piirsi ensin?',
     },
     {
       id: 'lissabon',
@@ -792,8 +872,34 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'granada',
-      mykistetyt: ['saapuminen', 'aarre'],
-      otsikko: 'Granada — vesi joka näyttää tien',
+      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      otsikko: 'Granada — kouru jota ei ole kartassa',
+      /*
+       * LUONNOS 5.9.2026, Fable tarkistaa.
+       *
+       * HENKILÖ JA LÖYTÖPAIKKA VAIHTUIVAT (kuvaputken tarinaehdotus
+       * 5.9.2026, Fablen päätös samana iltana klo 20:05 UTC: *"Granada
+       * (Inés, Generalife): rasia löytyy kaupungin kätköstä
+       * puutarhassa, ei 'huoltovarastoon siirrettynä'."*).
+       * Vesimestari Yusuf, sukupolvien yli kulkeneet avaimet ja veden
+       * ohjaaminen näyttämään tie ovat poissa; tilalla on Generalifen
+       * puutarhuri, joka vertaa kirjan piirrosta työnsä
+       * kastelusuunnitelmiin. Kukaan ei tunne Horatiota eikä odota
+       * perillistä, eikä kukaan opeta ketään kuuntelemaan vettä.
+       *
+       * SAAPUMINEN SÄILYY: se on 1873:n oma havainto (jääkylmä vesi,
+       * kaksitoista allasta, vanhan puutarhurin lause veden solinasta
+       * talon kellona) eikä sisällä yhtään kaanonirikettä — ja se
+       * pohjustaa nyt entistä paremmin sitä, että kaupungin
+       * kohtaamishenkilö on puutarhuri. Mykistys lisätty
+       * kohtaamiselle, koska kohtaamisteksti vaihtui.
+       *
+       * KYSYMYS SÄILYY ENNALLAAN (Fablen päätös ja kuvaputken ehdotus:
+       * *"Nykyinen Alhambran nimen punaista tarkoittava vastaus
+       * säilyy"*). Inés osoittaa piirroksen vanhaa nimeä ennen
+       * kysymystä, jottei puutarhatyö muutu historian tentiksi ilman
+       * johdantoa.
+       */
       saapuminen: 'Join Alhambrassa jääkylmää vettä keskellä Andalusian '
         + 'kesää: se laskee vuorilta, joilla lumi ei sula, ja '
         + 'seitsemänsataa vuotta vanhat kourut kantavat sen joka '
@@ -801,12 +907,13 @@ export const KAARI_PAKETIT = {
         + 'puutarhuri sanoi, että veden solina on talon kello — joka '
         + 'huoneessa aika kulkee veden äänellä. Kirjoitin sen muistiin '
         + 'sanasta sanaan.',
-      henkilo: 'Vesimestari Yusuf avaa ja sulkee Alhambran vanhat vesikourut '
-        + 'samoilla avaimilla kuin sukunsa vuosisatojen ajan.',
-      kohtaaminen: 'Kourun äärellä Yusuf kuuntelee veden ääntä kuin kelloa. '
-        + '"Vesi kertoo, jos joku liikkuu palatsissa — isoisäsi '
-        + 'opetteli kuuntelemaan sitä sukuni kanssa. Vastaa hänen '
-        + 'kysymykseensä, niin ohjaan veden näyttämään tien."',
+      henkilo: 'Puutarhuri Inés hoitaa Generalifen puutarhoja ja tuntee '
+        + 'kastelureitit paremmin kuin niiden piirustukset.',
+      kohtaaminen: 'Generalifen puutarhassa puutarhuri Inés heittää '
+        + 'leikkuuoksat kärryyn ja pyyhkii kämmenen housuunsa. '
+        + '"Aarretta? Me löysimme aamulla tukkeutuneen kourun." Sitten '
+        + 'hän näkee piirroksen vanhan nimen. "Sano ensin, mitä tämä '
+        + 'nimi tarkoittaa."',
       kysymys: {
         q: 'Punertava linnoitus Alhambra kohoaa Granadan yllä. Mitä sen '
           + 'nimi tarkoittaa?',
@@ -821,10 +928,10 @@ export const KAARI_PAKETIT = {
           + 'muurit hehkuvat punertavina. Sisällä vesi virtaa yhä '
           + 'kanavissa, jotka rakennettiin seitsemänsataa vuotta sitten.',
       },
-      aarre: 'Kourujen risteyksessä veden alla odotti kivinen rasia. '
-        + 'Yusuf punnitsi sitä kädessään: "Vesi olisi kuluttanut '
-        + 'särmät sileiksi sadassa vuodessa — tämä on laskettu veteen '
-        + 'hiljattain."',
+      aarre: 'Inés seurasi kourun vartta muurin kylkeen asti: kiviuran '
+        + 'alla, kuivassa kolossa, oli rasia. "Tässä ei kastella enää '
+        + 'mitään." Reitti on isoisän piirroksessa, mutta ei '
+        + 'yhdessäkään puutarhan nykyisessä suunnitelmassa.',
     },
     {
       id: 'marseille',
@@ -896,41 +1003,105 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'varsova',
-      mykistetyt: ['saapuminen', 'aarre'],
-      otsikko: 'Varsova — verkko joka painoi',
-      saapuminen: 'Kalastajat vetivät verkkonsa tyhjinä, mutta viimeinen '
-        + 'painoi — ja kun tartuin auttamaan, pohja veti takaisin. '
-        + 'Silmukoissa ei ollut kalaa vaan vaakuna: kilpi ja miekka, '
-        + 'virran vihreäksi syömä, kaupungin merkki. Vanhin risti '
-        + 'kätensä: tämä on nostettu kerran ennenkin, ja silloin joki '
-        + 'otti sen takaisin. Yöllä kirjasin hänen sanansa ja '
-        + 'kuuntelin, nousiko vesi.',
-      henkilo: 'Kalastaja Jadwiga paikkaa verkkoja Veikselin rannalla ja '
-        + 'laulaa työlauluja, joita ei osaa enää kukaan muu.',
-      kohtaaminen: 'Jadwiga solmii verkon silmää katsettaan nostamatta. '
-        + '"Suvussani sanotaan: mereneito lupasi puolustaa kaupunkia, '
-        + 'koska kalastaja päästi hänet vapaaksi. Isoisäsi kirjoitti '
-        + 'lupauksen muistiin. Vastaa hänen kysymykseensä, niin kerron '
-        + 'minne."',
+      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      otsikko: 'Varsova — eränumero varastokirjassa',
+      /*
+       * LUONNOS 5.9.2026, Fable tarkistaa.
+       *
+       * KAKSOISHENKILÖ PURETTU, KOKO KAARI UUSIKSI (kuvaputken
+       * havainto 5.9.2026 ja Fablen päätös samana iltana klo 20:05
+       * UTC: *"Varsova: yhdistetään antikvaari Zofiaan (kalastaja
+       * Jadwiga pois kaaresta); mereneitokysymys ei nouse
+       * antikvariaatista, joten kysymys vaihtuu antikvariaatista/
+       * jälleenrakennetusta vanhastakaupungista nousevaksi."*)
+       *
+       * Kaupungilla oli kaksi eri kohtaamishenkilöä: kaaressa kalastaja
+       * Jadwiga ja fokusvirrassa (js/packs/fokusvirta-varsova.js)
+       * antikvaari Zofia. Kaaren henkilö ei enää voita, koska omistajan
+       * hyväksymä kuva on Zofiasta — nyt molemmat pinnat puhuvat
+       * samasta ihmisestä. Verkonpainot, rantakiven kätkö ja suvun
+       * mereneitolupaus ovat poissa.
+       *
+       * MIKSI MERENEITOKYSYMYS VAIHTUI. Kysymys nousee kohtauksesta
+       * (tarinakaari.md, luku 6, sääntö 1). Kirjapuodissa ei ole
+       * paikallistarinoiden kuvakirjaa käsillä — jos se tuotaisiin
+       * kohtaukseen vain kysymyksen vuoksi, se olisi juuri se
+       * "tunnelmaesine ilman merkitystä", jonka luku 4 käskee leikata.
+       * Vanha mereneitoaineisto elää yhä pelissä Varsovan lehdessä ja
+       * europe-questions.js:n täkyriveillä.
+       *
+       * MIKSI EI JÄLLEENRAKENNUSTA. Se oli ensimmäinen luonnos, mutta
+       * kaupungilla on jo laattakysymys *"Mitä Varsovan
+       * vanhallekaupungille tehtiin toisen maailmansodan jälkeen?"*
+       * (js/packs/europe-questions.js, varsova) ja fokusvirran
+       * Bellotto-syvennys kertoo saman työn maalausten puolelta.
+       * Kolmas kerta samasta aiheesta samassa kaupungissa on juuri se
+       * toisto, jonka tarinakaari.md:n luku 5 kieltää.
+       *
+       * KYSYMYS TULEE SIIS SIITÄ TALOSTA, JONKA KULMALLA PUOTI ON.
+       * Fokusvirran oppitunti ("Kirjasto, joka lähti kärryillä itään")
+       * kertoo Załuskien kirjastosta, ja fokusvirran kohtaamispiste on
+       * juuri se talo. Antikvaari, lainatut kirjat ja palauttamatta
+       * jääneet niteet ovat saman ammatin jatkumo 1700-luvulta tähän
+       * päivään — kysymys nousee siis sekä paikasta että hahmon
+       * ammatista.
+       *
+       * FAKTAT (en-Wikipedia "Załuski Library", tarkistettu 5.9.2026):
+       * kirjaston perustivat 1747 piispaveljekset Józef Andrzej ja
+       * Andrzej Stanisław Załuski; se oli Puolan ensimmäinen julkinen
+       * kirjasto; lainaaminen lopetettiin varkauksien takia, ja
+       * *"in 1752 pope Benedict XIV issued a papal bull that threatened
+       * to excommunicate individuals taking the books from this
+       * library; even that did not eliminate the problem completely"*.
+       * Sama tieto on jo pelissä fokusvirran oppitunnissa, joka on
+       * tämän kysymyksen tuki.
+       *
+       * VASTAUSRIVI EI ESIINNY ENNEN VISAA: kohtaaminen puhuu
+       * eränumerosta ja talon iästä, ei bullasta. Oppitunti opettaa
+       * asian omin sanoin, joten tarkkaavainen lukija palkitaan ja
+       * lähimuisti ei riitä (tarinakaari.md, sääntö 6).
+       *
+       * VAIHTOEHDOT: oikea (44 merkkiä) ei ole pisin — pisin on väärä
+       * (54). Yksikään väärä ei ole puolitosi: paavi ei rahoittanut
+       * kirjastoa, ei säädellyt sen aukioloa eikä lahjoittanut siihen
+       * niteitä.
+       */
+      saapuminen: 'Ostin torin laidan puodista kartan, joka oli väärä: kaksi '
+        + 'katua oli piirretty ristiin, ja myyjä myönsi sen heti. Rahaa '
+        + 'hän ei ottanut takaisin, vaan merkitsi virheen kartan reunaan '
+        + 'ja kirjoitti viereen eränumeron. Sanoi, että joku korjaa sen '
+        + 'joskus. Kirjasin numeron omaan kirjaani enkä osaa selittää '
+        + 'miksi.',
+      henkilo: 'Antikvaari Zofia pitää puotia vanhan kirjastotalon kulmalla '
+        + 'ja löytää mitä tahansa, kunhan saa eränumeron.',
+      kohtaaminen: 'Hyllyjen välissä antikvaari Zofia vetää raskaan '
+        + 'varastokirjan esiin ja painaa sen tiskille. "Sanoitko tuon '
+        + 'numeron aivan varmasti oikein?" Kissa nukkuu hyllykolossa. '
+        + '"Tästä talosta on aikoinaan hävinnyt kirjoja. Vastaa yksi '
+        + 'kysymys, niin katson numeron."',
       kysymys: {
-        q: 'Varsovan mereneidolla on tarun mukaan sisar, joka ui toiseen '
-          + 'kaupunkiin. Minne?',
+        q: 'Samassa talossa toimi 1700-luvulla kirjasto, josta lainattuja '
+          + 'kirjoja ei tuotu takaisin. Millä paavi yritti vuonna 1752 '
+          + 'auttaa asiaa?',
         vaihtoehdot: [
-          'Kööpenhaminaan',
-          'Venetsian kanaaleihin',
-          'Pietariin',
-          'Tukholman saaristoon',
+          'Uhkasi kirkonkirouksella kirjan ulos kantavaa',
+          'Määräsi kaupungin maksamaan kadonneiden kirjojen hinnan',
+          'Kielsi kirjaston aukiolon sunnuntaisin',
+          'Lahjoitti kokoelmaan kaksisataa nidettä',
         ],
         oikea: 0,
-        fakta: 'Kansantarun mukaan kaksi merenneitosisarta lähti Itämerelle: '
-          + 'toinen jäi Kööpenhaminan salmeen, toinen ui Veikseliä ylös '
-          + 'Varsovaan asti ja lupasi puolustaa kalastajien kaupunkia. '
-          + 'Vaakunassa hän kantaa yhä miekkaa ja kilpeä.',
+        fakta: 'Piispaveljekset Józef Andrzej ja Andrzej Stanisław Załuski '
+          + 'avasivat 1747 Puolan ensimmäisen julkisen kirjaston: ovet '
+          + 'olivat auki tiistaisin ja torstaisin aamuseitsemästä '
+          + 'iltaseitsemään, ja kävijältä pyydettiin hiljaisuutta ja '
+          + 'rukousta. Kotiinlainaus jouduttiin lopettamaan, ja paavi '
+          + 'Benedictus XIV vahvisti kiellon bullalla vuonna 1752. '
+          + 'Sekään ei aivan riittänyt.',
       },
-      aarre: 'Kätkö oli upotettu rantakiven alle verkonpainojen sekaan. '
-        + 'Jadwiga laski sen käteeni: "Painot ovat sukuni valamia — '
-        + 'paitsi yksi, ja sen valoi joku, joka halusi kätkön '
-        + 'löytyvän juuri nyt."',
+      aarre: 'Eränumero osui varastokirjassa riville, jota Zofia ei osannut '
+        + 'selittää: kirjakäärö, otettu vastaan mutta ei koskaan myyty. '
+        + 'Käärön sisässä oli rasia. Vastaanottajan nimikirjaimia on '
+        + 'kaksi, eivätkä ne ole isoisän.',
     },
     {
       id: 'krakova',
@@ -1323,13 +1494,44 @@ export const KAARI_PAKETIT = {
         + 'merkin, jota kukaan ei osaa lukea: kolme aaltoviivaa. '
         + 'Tunnistin ne heti — samalla merkillä isoisäni sulki '
         + 'kirjeensä.',
-      henkilo: 'Portinvartija Oksana pitää Kultaisen portin avaimia ja '
-        + 'tuntee holvin jokaisen kaiverruksen sormenpäillään.',
-      kohtaaminen: 'Holvin varjossa Oksana laskee kätensä kaiverrukselle. '
-        + '"Suvussani näitä viivoja sanotaan matkamiehen merkiksi, ja '
-        + 'meille on opetettu, että tekijän suku palaa lukemaan ne. '
-        + 'Vastaa, niin painan kätesi viivoille — ne luetaan '
-        + 'sormilla."',
+      /*
+       * LUONNOS 5.9.2026, Fable tarkistaa.
+       *
+       * HENKILÖ VAIHTUI JA KAANONIRIKE POISTUI (kuvaputken
+       * tarinaehdotus 5.9.2026, Fablen päätös samana iltana klo 20:05
+       * UTC: *"Hyväksytty sellaisenaan … Kiova (näyttelymestari Taras)
+       * … Kaikki korjaavat samalla vanhan kaaren kaanonirikkeen
+       * (suku/perillinen/lupaus)."*). Portinvartija Oksana odotti
+       * suoraan sanoen perillistä: *"meille on opetettu, että tekijän
+       * suku palaa lukemaan ne."* Se on kolmesta kielletystä
+       * odotuksesta kirkkain (docs/isoisan-raamattu.md), ja se
+       * poistuu kokonaan. Tilalla on museon näyttelymestari, jolle
+       * piirroksen viiva on ammatillinen uteliaisuus eikä perintö.
+       *
+       * OTSIKKO SÄILYY (tehtävänannon rajaus): merkki portin holvissa
+       * on yhä se, mistä kaari kertoo. SAAPUMINEN SÄILYY: se on
+       * 1873:n oma havainto (tyttö korjaa kupolin muodon, vartija
+       * näyttää kolme aaltoviivaa, Horatio tunnistaa oman isoisänsä
+       * sinetin) eikä siinä ole nykyihmisen lupausta.
+       *
+       * MIKÄ VIELÄ POISTUI: kiven irrottaminen, tuore taltanjälki ja
+       * väite ettei kiviseppiä ole käynyt vuosiin. Kätkö ei ole
+       * muinaisessa muurissa vaan holvin viereisessä kivilaatikossa,
+       * ja piirroksen viiva löytyy museon dokumentointikansiosta.
+       * Vuoden 1982 suojapaviljonki ja pienoismalli pidetään erillään
+       * vanhoista jäännöksistä: kumpikaan ei ole aarre-esine eikä
+       * kumpaakaan väitetä 1873:n maisemaan.
+       *
+       * KYSYMYS SÄILYY ENNALLAAN (Fablen päätös: *"Säilytä Kultaisen
+       * portin tehtävä → kaupungin juhlava pääportti"*).
+       */
+      henkilo: 'Näyttelymestari Taras rakentaa Kultaisen portin museoon uutta '
+        + 'näyttelyä ja tuntee dokumentointikansiot ulkoa.',
+      kohtaaminen: 'Museon käytävällä näyttelymestari Taras kannattelee '
+        + 'portin pienoismallia lantiollaan. "Tämänkö alle? Tämä '
+        + 'valmistui viime kuussa." Sitten hän katsoo piirroksen viivaa. '
+        + '"Tuo ei ole mallista. Vastaa ensin, mihin portti alun perin '
+        + 'tehtiin."',
       kysymys: {
         q: 'Kiovan Kultainen portti rakennettiin lähes tuhat vuotta '
           + 'sitten. Mikä sen tehtävä oli?',
@@ -1346,10 +1548,10 @@ export const KAARI_PAKETIT = {
           + 'nousi kirkko, jonka kullatut kupolit hehkuivat kauas — siitä '
           + 'nimi.',
       },
-      aarre: 'Sormieni alla kivi liikahti: viivojen takana oli ontelo, '
-        + 'ja ontelossa odotti kätkö. Oksana pyyhkäisi pölyn: '
-        + '"Viivoja on kolme, mutta neljäs on aloitettu — taltanjälki '
-        + 'on tuore, eikä kiviseppiä ole käynyt vuosiin."',
+      aarre: 'Taras avasi dokumentointikansion: vanhassa arkkikopiossa oli '
+        + 'sama viiva, ja reunamerkintä osoitti holvin viereiseen '
+        + 'kivilaatikkoon. Rasia oli siellä. Kopion reunassa ei ole '
+        + 'nimeä — vain kolme aaltoviivaa.',
     },
     {
       id: 'odessa',
@@ -1773,77 +1975,183 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'oslo',
-      mykistetyt: ['saapuminen', 'aarre'],
+      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
       otsikko: 'Oslo — laiva mullan alla',
+      /*
+       * LUONNOS 5.9.2026, Fable tarkistaa.
+       *
+       * HENKILÖ VAIHTUI JA KAKSI KAANONIRIKETTÄ POISTUI (kuvaputken
+       * tarinaehdotus 5.9.2026, Fablen päätös samana iltana klo 20:05
+       * UTC: *"Oslo/Halden (Oskar): kaupunki pysyy Oslona ja
+       * Jellhaugen kohtaamispisteenä (nykytila)."*). Talonpoika
+       * Sigridin kaaressa oli molemmat kielletyt kuviot kerralla:
+       * kumpu oli ollut *"hänen sukunsa vartiossa satoja vuosia"* ja
+       * *"isoisäsi leiriytyi tähän kolmeksi yöksi ja lupasi, ettei
+       * kaiva — sillä ehdolla suku näytti hänelle jotain."* Kumpikin
+       * on poissa: Oskar tekee peltotöitä, tuntee maastonmuodot ja
+       * suostuu kävelemään rajapyykille siksi, että piirros on
+       * kiinnostava.
+       *
+       * KAUPUNKI PYSYY OSLONA. cityId on `oslo`, ja Halden on Oslon
+       * fokusvirran kohtaamispiste (js/packs/fokusvirta-oslo.js,
+       * Jellhaugen). Kaari ei nimeä pitäjää, joten kumpaakaan ei
+       * tarvitse muuttaa.
+       *
+       * SAAPUMINEN SÄILYY: talonpojan kertoma taru, ruskea juusto
+       * (laudan ainoa makuhavainto, tarinakaari.md luku 3) ja pihlajan
+       * oksaan ilmestynyt tuore solmu ovat 1873:n omia havaintoja
+       * eivätkä lupauksia. Aarreteksti nostaa solmun uudelleen, mutta
+       * nyt kukaan ei omista sitä.
+       *
+       * KYSYMYS ON UUSI (Fablen päätös: *"Kysymyksen muotoilu 'hapeton
+       * hautausmaa' hylätty; uusi kysymys ankkuroidaan Gjellestadin
+       * peltoon."*). Vanha kysymys väitti, että kummuista nostetut
+       * laivat ovat säilyneet lähes ehjinä — Gjellestadin laiva ei
+       * ole, ja juuri se ero on nyt kysymys.
+       *
+       * FAKTAT (tarkistettu 5.9.2026):
+       *   - en-Wikipedia "Gjellestad ship": *"Due to extensive fungus
+       *     damage to the hull caused by field drainage, drought and
+       *     exposure to the air, archaeologists called for an immediate
+       *     dig to save the ship"*; *"lies 50 centimetres below the
+       *     topsoil due to years of plowing"*; *"only parts of the keel
+       *     have survived"*, ja säilyneistä nauloista tehdään
+       *     3D-rekonstruktio.
+       *   - Osebergin säilyminen: puutavara ja esineet säilyivät
+       *     sinisaven ja kumpua muodostavan turvekerroksen välissä
+       *     (World Archaeology, "Gustafson at Oseberg" — Gustafsonin
+       *     kaivauskertomukseen perustuva selostus).
+       *   - Gokstadin kumpu: Cambridgen Antiquity-lehden tutkimus
+       *     ("Constructing and deconstructing the Gokstad mound")
+       *     osoittaa, että hauta kaivettiin märkään siniseen
+       *     savimaahan, mikä loi hapettomat olot; sciencenorway.no
+       *     referoi saman.
+       * Kaivausvuodet: Gokstad 1880, Oseberg 1904–1905, Gjellestad
+       *     2020–2022 (en-Wikipedia, samat artikkelit).
+       *
+       * VAIHTOEHDOT: oikea (46 merkkiä) ei ole pisin — pisin on
+       * mäntyväite (55). Yksikään väärä ei ole puolitosi: laivat ovat
+       * tammea, Gjellestadin laivaa ei poltettu eikä kummun päällä ole
+       * tietä.
+       */
       saapuminen: 'Talonpoika löi talikon maahan: tämän kummun alla nukkuu '
         + 'laiva, airoineen, ja siinä päällikkö, jonka matka jatkuu '
         + 'yhä. Illalliseksi sain juustoa, ruskeaa kuin laivaterva ja '
         + 'makeaa kuin siirappi; kirjasin sen ilmiönä ja pyysin '
         + 'lisää. Aamulla kummun laella, ainoan pihlajan oksassa, '
         + 'riippui purjelangasta punottu solmu. Tuore.',
-      henkilo: 'Talonpoika Sigrid viljelee peltoa, jonka laidalla laivakumpu '
-        + 'on ollut hänen sukunsa vartiossa satoja vuosia.',
-      kohtaaminen: 'Kummun juurella Sigrid nojaa talikkoonsa. "Isoisäsi '
-        + 'leiriytyi tähän kolmeksi yöksi ja lupasi, ettei kaiva — '
-        + 'sillä ehdolla suku näytti hänelle jotain. Vastaa hänen '
-        + 'kysymykseensä, niin näytän saman sinulle."',
+      henkilo: 'Maanviljelijä Oskar ajaa heinää Gjellestadin pelloilta ja '
+        + 'tuntee maastonmuodot, joita kartta ei näytä.',
+      kohtaaminen: 'Pellon laidalla maanviljelijä Oskar pudottaa heinäpaalin '
+        + 'kärryyn ja pyyhkii otsaansa. "Aarretta? Tuossa pellossa on jo '
+        + 'yksi." Koira vie hänen hanskansa. Sitten hän katsoo piirrosta '
+        + 'uudestaan, vakavana. "Vastaa yksi kysymys, niin kävellään '
+        + 'rajapyykille."',
       kysymys: {
-        q: 'Kummuista nostetut viikinkilaivat ovat säilyneet lähes '
-          + 'ehjinä. Mikä ne säilytti?',
+        q: 'Osebergin ja Gokstadin laivat makasivat tiiviissä sinisavessa '
+          + 'ja nousivat kummuistaan lähes ehjinä. Gjellestadin laivasta '
+          + 'oli jäljellä enää köli. Miksi?',
         vaihtoehdot: [
-          'Tiivis savimulta, joka sulki ilman pois puun ympäriltä',
-          'Terva, jolla laivat siveltiin ennen hautaamista',
-          'Pohjolan ikirouta, joka piti kummun jäässä',
-          'Suolavesi, joka kyllästi tammilankut kiven koviksi '
-            + 'vuosisadoiksi',
+          'Peltoa oli kuivatettu ja kynnetty vuosikymmeniä',
+          'Laiva oli rakennettu männystä eikä tammesta kuten toiset',
+          'Laiva oli poltettu ennen hautaamista',
+          'Kummun päälle oli rakennettu kivinen tie',
         ],
         oikea: 0,
-        fakta: 'Sinisavi ja tiivis multa sulkivat hapen pois, ja tammilaivat '
-          + 'säilyivät kummuissa vuosisatoja lähes ehjinä kaarineen. '
-          + 'Vainajan uskottiin purjehtivan laivallaan tuonpuoleiseen — '
-          + 'siksi mukana oli varusteet pitkälle matkalle.',
+        fakta: 'Osebergissa ja Gokstadissa puu makasi vettyneen sinisaven ja '
+          + 'turvekerroksen välissä: happi ei päässyt sinne, eivätkä '
+          + 'lahottajat siksi eläneet. Gjellestadissa kumpu oli aikaa '
+          + 'sitten tasoitettu ja pelto ojitettu, ja laiva makasi puoli '
+          + 'metriä kyntökerroksen alla. Sieni söi puun — nauloista ja '
+          + 'kölistä riitti silti aineistoa mallinnukseen.',
       },
-      aarre: 'Pihlajan juurten välissä, kivien alla, odotti kätkö — ei '
-        + 'kummussa vaan sen vieressä. Sigrid osoitti oksan solmua: '
-        + '"Sukuni sitoo merkkisolmun kerran vuodessa, mutta tämän '
-        + 'vuoden solmu oli valmiina, kun keväällä tulin."',
+      aarre: 'Rajapyykin juuressa, kiviröykkiön alla, odotti rasia — '
+        + 'kumpuun koskematta. Pihlaja seisoo yhä pellon laidassa, ja '
+        + 'oksassa on purjelangasta punottu solmu. Oskar katsoi sitä '
+        + 'pitkään. "Minä en ole sitonut tuota."',
     },
     {
       id: 'kobenhavn',
       mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
-      otsikko: 'Kööpenhamina — satu jota ei kerrottu loppuun',
-      saapuminen: 'Laiturilla merimies kertoi lapsille rumasta '
-        + 'ankanpoikasesta — sanasta sanaan kuin kirjoittaja itse. '
-        + 'Sadun loputtua hän ojensi paperin herralta numerosta '
-        + 'kahdeksantoista. Paperilla luki: kaikki tarinat ovat tosia '
-        + 'sille, joka etsii loppuun asti. Kirjoitin vastaukseni alle; '
-        + 'hän lupasi viedä sen, kunhan herra palaa kävelyltään. Ne '
-        + 'kuulemma kestävät.',
-      henkilo: 'Sadunkertoja Karen kertoo satuja Nyhavnin laiturilla samalta '
-        + 'puiselta arkulta, jolta hänen isoisänsä ne kertoi.',
-      kohtaaminen: 'Karen taputtaa arkkua vierestään. "Isoisäni sai arkun '
-        + 'sadunkirjoittajalta, ja sinun isoisäsi kuunteli tässä. '
-        + 'Arkussa on satu, jota ei ole koskaan kerrottu loppuun. '
-        + 'Vastaa, niin avaan arkun ja luemme niin pitkälle kuin satua '
-        + 'riittää."',
+      otsikko: 'Kööpenhamina — valot palavat kahdesti',
+      /*
+       * LUONNOS 5.9.2026, Fable tarkistaa.
+       *
+       * HENKILÖ, PAIKKA JA KYSYMYS VAIHTUIVAT (omistajan palaute
+       * kuvaan: *"Vaihda henkilö ja paikka"*; Fablen päätös 5.9.2026
+       * klo 20:05 UTC: *"Kööpenhamina: valitsen vaihtoehdon (b) —
+       * Tivoli ja karusellinhoitaja Freja, koska omistaja pyysi sekä
+       * henkilön että paikan vaihtoa; kysymys vaihtuu Tivolista
+       * nousevaksi."*). Sadunkertoja Karen, Nyhavnin laituri, suvun
+       * peritty arkku ja katkeava käsikirjoitus ovat poissa. Kukaan ei
+       * ole saanut mitään sadunkirjoittajalta eikä kukaan muista
+       * Horatiota.
+       *
+       * SAAPUMINEN ON KIRJOITETTU UUSIKSI, koska koko kaupungin
+       * kohtaamispaikka siirtyi Nyhavnista Tivoliin (fokusvirran
+       * kohtaamispiste siirretään samalla). Tivoli avattiin 15.8.1843,
+       * joten se on isoisän matkavuonna 30 vuotta vanha — nykyistä
+       * laitetta ei siirretä 1873:n maisemaan, vaan merkintä puhuu
+       * lyhdyistä, järvestä ja soittokunnasta. Erän itseironia-annos on
+       * tässä: kartanpiirtäjä mittaa väärin, koska jalat noudattavat
+       * valssia.
+       *
+       * KYSYMYS EI OLE HORATION JÄTTÄMÄ eikä se toista lehden omia
+       * tehtäviä. Kööpenhaminan lehden AARTEEN AVAUS kysyy Nyhavnin
+       * kaivamisen syytä ja fokusvirran Tivoli-syvennys sitä, millä
+       * perusteella puisto sai luvan (js/packs/fokusvirta-kobenhavn.js)
+       * — kumpikaan ei kysy vuoristoradasta. Andersen-kysymys jäi pois,
+       * koska se ei nouse Tivolin iltavuorosta; Andersenin aineisto
+       * elää yhä lehden Sadut-sivulla.
+       *
+       * FAKTAT (tarkistettu 5.9.2026): en-Wikipedia "Tivoli Gardens"
+       * (avattu 15.8.1843; maailman toiseksi vanhin yhä toimiva
+       * huvipuisto, vanhempi on Dyrehavsbakken samassa maassa; järvi on
+       * vanhan vallihaudan jäänne) ja en-Wikipedia "Rutschebanen
+       * (Tivoli Gardens)" (valmistui 1914; *"one of the world's oldest
+       * wooden roller coasters that is still operating today"*;
+       * *"An operator controls the ride by braking so that it does not
+       * gain too much speed during descent"* — jarrumies matkustaa
+       * junan mukana). Ei väitetä, että jarrumies olisi ollut junassa
+       * jo isoisän aikaan: rata on 41 vuotta merkintää nuorempi.
+       *
+       * VAIHTOEHDOT: oikea (30 merkkiä) on lyhin, pisin on väärä (46).
+       */
+      saapuminen: 'Puiston lyhdyt paloivat kahdesti: kerran ilmassa, kerran '
+        + 'järvessä, ja laskin ne molemmat ennen kuin tajusin virheen. '
+        + 'Sytyttäjät kiersivät vastapäivään. Mittasin järven leveyden '
+        + 'askelin ja sain väärän luvun sekin: soittokunta soitti '
+        + 'kolmijakoista, ja jalkani noudattivat tahtia eivätkä minua. '
+        + 'Kirjasin luvut silti.',
+      henkilo: 'Karusellinhoitaja Freja sulkee Tivolin musiikkikarusellin joka '
+        + 'ilta ja tuntee puiston laitteet ikäjärjestyksessä.',
+      kohtaaminen: 'Musiikkikarusellin luona karusellinhoitaja Freja kääntää '
+        + 'avainta lukkoon. "Nyt se on kiinni. Aarreko?" Hän nyökkää '
+        + 'puiston toiselle laidalle, jossa puinen vuoristorata kolisee '
+        + 'vielä. "Tuossa junassa matkustaa yksi ihminen liikaa. Sano '
+        + 'miksi."',
       kysymys: {
-        q: 'Nyhavnin kanavan varrella asui satujen mestari H. C. '
-          + 'Andersen. Mikä näistä on hänen satunsa?',
+        q: 'Freja osoittaa puiston vanhaa puista vuoristorataa: sen '
+          + 'jokaisessa junassa matkustaa yksi ylimääräinen ihminen. '
+          + 'Mitä hän tekee?',
         vaihtoehdot: [
-          'Pieni merenneito',
-          'Punahilkka',
-          'Tuhkimo',
-          'Hannu ja Kerttu',
+          'Laskee matkustajat ennen jokaista mäkeä',
+          'Soittaa kelloa, jotta puisto kuulee junan',
+          'Jarruttaa junaa käsin laskuissa',
+          'Tarkastaa liput kesken matkan',
         ],
-        oikea: 0,
-        fakta: 'Andersen kirjoitti Kööpenhaminassa muun muassa Pienen '
-          + 'merenneidon, Ruman ankanpoikasen ja Keisarin uudet vaatteet. '
-          + 'Hän asui vuosikymmenet Nyhavnin taloissa 18, 20 ja 67.',
+        oikea: 2,
+        fakta: 'Rutschebanen valmistui 1914 ja on yksi maailman vanhimmista '
+          + 'yhä ajossa olevista puisista vuoristoradoista. Jarrumies '
+          + 'matkustaa junan mukana ja hidastaa sitä laskuissa käsin. '
+          + 'Tivoli itse avattiin 15. elokuuta 1843, ja vanhempi yhä '
+          + 'toimiva huvipuisto on vain yksi: Dyrehavsbakken samassa '
+          + 'maassa.',
       },
-      aarre: 'Arkun kaksoispohjasta löytyi kätkö ja käsikirjoitus, joka '
-        + 'katkeaa riville "aarre ei ollut arkussa vaan siinä, joka '
-        + 'arkkua…" Viimeinen sana on revitty irti — ja reunat ovat '
-        + 'tuoreet.',
+      aarre: 'Freja avasi karusellin alla olevan varastoluukun: käytöstä '
+        + 'poistettujen kulissien takaa löytyi rasia. "Nämä on '
+        + 'numeroitu. Tuo ei ole." Numeroimattomassa kulississa on järvi '
+        + 'ja lyhdyt — yhtä monta kuin isoisän kirjassa.',
     },
     {
       id: 'lappi',

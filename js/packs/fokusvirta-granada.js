@@ -90,7 +90,7 @@
  * lue, mitä nimi tarkoittaa. Tarkkaavainen lukija päättelee maasta
  * värin ja väristä nimen; hätäinen arvaa. Juuri se on tarinakaaren
  * luvun 6 kohdan 6 tarkoittama raja. Kaaren omaa repliikkiä
- * (vesimestari Yusuf ja kourut) ei kerrata tässä paketissa.
+ * (puutarhuri Inés ja tukkeutunut kouru) ei kerrata tässä paketissa.
  *
  * KAANONPAPERIN SPOILERIKIELTOLISTA sitoo myös näitä tekstejä, ja se on
  * käyty läpi kenttä kentältä. Tapas-tavan syntyä EI selitetä missään —
@@ -816,53 +816,43 @@ export const FOKUSVIRTA_GRANADA = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * FABLE KATSELMOI: kohtaamisluonnos
-   *
-   * HAHMO ON KAANONIA, TEKSTI EI. Vesimestari Yusuf on tarinakaaren
-   * paketissa (js/tyohuone-kehitys-data.js KAARI_PAKETIT, 'granada'):
-   * hän avaa ja sulkee palatsin vanhat vesikourut samoilla avaimilla
-   * kuin sukunsa vuosisatojen ajan. Alla oleva kortti on ESITTELY
-   * samasta ihmisestä eikä uusi hahmo — mutta lauseet ovat tämän paketin
-   * omia, ja siksi lohko on merkitty katselmoitavaksi. Kaaren repliikkiä
-   * (veden ääni kertoo, jos joku liikkuu palatsissa) EI kerrata eikä
-   * kiistetä tässä: sama tarina kerrotaan kerran, ja se on kaaren.
+   * LUONNOS 5.9.2026, Fable tarkistaa. HENKILÖ VAIHTUI: vesimestari
+   * Yusuf → puutarhuri Inés (js/tyohuone-kehitys-data.js
+   * KAARI_PAKETIT, 'granada'; kuvaputken tarinaehdotus 5.9.2026,
+   * Fablen päätös samana iltana klo 20:05 UTC). Perustelu on kaaren
+   * omassa kommenttilohkossa: vuosisatojen yli periytyneet avaimet ja
+   * isoisän kanssa opeteltu veden kuuntelu eivät kestä kaanonia.
+   * Alla oleva kortti on ESITTELY samasta ihmisestä kuin kaari, mutta
+   * lauseet ovat tämän paketin omia. Kaaren repliikkiä (tukkeutunut
+   * kouru, piirroksen vanha nimi) EI kerrata tässä: sama tarina
+   * kerrotaan kerran, ja se on kaaren.
    *
    * VARSINAINEN KYSYMYS on ennallaan kaaren paketissa (Alhambran nimen
    * merkitys), eikä tämä paketti kosketa sitä.
    *
-   * KAAVA (aallon 4C tilaus, sama kuin 4B:ssä): suvun jatkumo + epäusko
-   * + portinvartijakysymys.
-   *   - JATKUMO: sama työ, sama järjestys, samat avaimet monessa
-   *     polvessa.
-   *   - EPÄUSKO: Yusuf pitää suvun omaa selitystä työn merkityksestä
-   *     satuna. HUOM: epäusko kohdistuu tarkoituksella siihen, mitä
-   *     tämä kortti itse esittelee (ajatus veden järjestyksestä talon
-   *     muistina), EI kaaren repliikkiin — muuten kortti kiistäisi
-   *     kaanonin.
+   * KAAVA: ammatin jatkumo + epäusko + portinvartijakysymys.
+   *   - JATKUMO EI OLE SUVUN VAAN TYÖN: samat rinteet, sama
+   *     kastelukierto, samat suunnitelmat vuodesta toiseen. Kukaan ei
+   *     ole perinyt tehtävää eikä luvannut mitään kenellekään.
+   *   - EPÄUSKO: Inés pitää puheita palatsin "muistista" satuna.
+   *     Epäusko kohdistuu tarkoituksella siihen, mitä tämä kortti itse
+   *     esittelee, EI kaaren repliikkiin.
    *   - PORTINVARTIJAKYSYMYS: hän haluaa tietää, tietääkö tulija,
    *     mistä koko kukkula on saanut nimensä. Muotoilu on
    *     tarkoituksella sellainen, ettei se karsi yhtäkään kaaren
-   *     neljästä vaihtoehdosta: kaikki neljä ovat mahdollisia
-   *     vastauksia juuri tuohon kysymykseen.
+   *     neljästä vaihtoehdosta.
    *
    * VARALLISUUSSÄÄNTÖ tarkistettu virke virkkeeltä: isoisä ei maksa
-   * mitään, ei tilaa mitään eikä käske ketään. Suvun syy jatkaa on
-   * suvun oma ja käytännöllinen — kourut kastelevat yhä, ja jos kukaan
-   * ei tunne järjestystä, se loppuu häneen.
-   *
-   * ODOTUKSEN SYY ON UUSI TÄLLÄ LAUDALLA. Sevillan Amparo ja Firenzen
-   * Ginevra jatkavat kumpikin siksi, että "kesken jätetty sarja on
-   * pahempi kuin turha sarja" (tarinakaari luku 3: sama syy enintään
-   * kahdesti / lauta). Se kiintiö on täynnä, joten Yusufin syy on eri:
-   * työ on yhä välttämätöntä, ja tieto katoaa hänen mukanaan.
+   * mitään, ei tilaa mitään eikä käske ketään, eikä kukaan odota
+   * ketään. Inés tekee työtään, koska rinne kastellaan joka aamu.
    *
    * KUVAA EI OLE (omistajan linjaus): kohtaamiskortissa on vain hahmo,
    * nappi, varmistus, vihjeOsio ja teksti.
    */
   kohtaaminen: {
-    hahmo: 'Vesimestari Yusuf',
-    nappi: 'Tapaa vesimestari',
-    varmistus: 'Haluatko varmasti tavata Yusufin juuri nyt?',
+    hahmo: 'Puutarhuri Inés',
+    nappi: 'Tapaa puutarhuri',
+    varmistus: 'Haluatko varmasti tavata Inésin juuri nyt?',
     /*
      * VIHJELINKIN OSIO (omistajan pelitestipalaute v1119, kohta 13):
      * rivi kertoo, MISTÄ PÄIN LEHTEÄ ratkaisu löytyy, vastausta
@@ -873,15 +863,14 @@ export const FOKUSVIRTA_GRANADA = {
      * ensimmäinen nosto käsittelee palatsia kokonaisuutena.
      */
     vihjeOsio: 'kaupunki',
-    teksti: 'Yusuf kiertää kourut aamuisin samassa järjestyksessä kuin '
-      + 'hänen isoisänsä kiersi, ja avaimet ovat samat: yksi on kulunut '
-      + 'niin sileäksi, ettei sen urista erota enää mitään. Suvussa on '
-      + 'aina sanottu, että järjestys on talon muisti ja että sen '
-      + 'rikkominen sekoittaisi koko kukkulan. Yusuf sanoo suoraan '
-      + 'pitävänsä sitä puhetta satuna. Kierroksen hän tekee silti joka '
-      + 'aamu, koska vesi kastelee yhä rinteen puutarhat ja koska hän '
-      + 'on viimeinen, joka tuntee järjestyksen ulkoa: jos hän '
-      + 'lopettaa, se ei jää kirjoihin vaan häneen. Vieraita hän on '
+    teksti: 'Inés kiertää puutarhat aamuisin samassa järjestyksessä kuin '
+      + 'edellisenäkin aamuna: leikkaa, haravoi, avaa tukkeutuneet '
+      + 'kourut ja merkitsee suunnitelmaan sen, mikä ei toiminut. '
+      + 'Oppaat sanovat vieraille, että vesi on palatsin muisti; Inés '
+      + 'sanoo suoraan pitävänsä sitä puhetta satuna. Kierroksen hän '
+      + 'tekee silti, koska rinne kastellaan joka aamu ja koska hän '
+      + 'tuntee reitit paremmin kuin niiden piirustukset — osa kouruista '
+      + 'ei ole yhdessäkään nykyisessä suunnitelmassa. Vieraita hän on '
       + 'nähnyt satoja, ja melkein jokainen kysyy ensin kullasta. Ennen '
       + 'kuin hän vie ketään kourujen luo, hän haluaa tietää, tietääkö '
       + 'tulija edes sen, mistä koko linnoitus on saanut nimensä.',
@@ -893,24 +882,34 @@ export const FOKUSVIRTA_GRANADA = {
    */
 
   /*
-   * KOHTAAMISPAIKKA: ALHAMBRA.
+   * KOHTAAMISPAIKKA: GENERALIFEN PUUTARHA (5.9.2026; ennen Alhambra).
    *
-   * 37,17634 N / −3,58821 E — es-Wikipedia "Alhambra",
-   * prop=coordinates (haettu 30.8.2026). Piste on itse linnoitus, koska
-   * kaaren vesimestari työskentelee sen kouruilla; erillistä
-   * koordinaattia kouruille tai Leijonapihalle ei Wikipediassa ole.
-   * Muunnos on sama kaava ja samat vakiot kuin fokuskohteilla:
-   * maailmankartalla Millerin lieriö LEVEYS 12000 / LON0 −175 /
-   * POHJOINEN 76 (tools/fokuskartta/piirto.js laudanProjektio),
-   * Euroopan laudalla x = (lon + 11) × 19,2 ja y = (72 − lat) × 26,3.
+   * Kaaren kohtaaminen tapahtuu Generalifessa, jonka puutarhoja Inés
+   * hoitaa, joten piste siirtyy linnoituksesta sen kesäpalatsin
+   * puutarhaan. Ero on pieni — Generalife on Alhambran kyljessä, ja
+   * laudalla siirtymä on kymmenesosayksikköjä — mutta piste ei saa
+   * osoittaa muuta paikkaa kuin se, jossa henkilö tavataan.
+   *
+   * 37,17694444 N / −3,58527778 E — en-Wikipedia "Generalife",
+   * prop=coordinates (haettu 5.9.2026). Muunnos on sama kaava ja samat
+   * vakiot kuin fokuskohteilla: maailmankartalla Millerin lieriö LEVEYS
+   * 12000 / LON0 −175 / POHJOINEN 76 (tools/fokuskartta/piirto.js
+   * laudanProjektio), Euroopan laudalla x = (lon + 11) × 19,2 ja
+   * y = (72 − lat) × 26,3.
    *
    * LASKU:
-   *   maailmankartta  x = ((−3,58821 − (−175)) mod 360) × (12000/360)
-   *                     = 171,41179 × 33,3333… = 5713,7
-   *                   y = (millerY(76) − millerY(37,17634)) × 12000/2π
-   *                     = 1912,6
-   *   europe          x = (−3,58821 + 11) × 19,2 = 142,3
-   *                   y = (72 − 37,17634) × 26,3 = 915,9
+   *   maailmankartta  x = ((−3,58527778 − (−175)) mod 360) × (12000/360)
+   *                     = 171,41472 × 33,3333… = 5713,8
+   *                   y = (millerY(76) − millerY(37,17694444)) × 12000/2π
+   *                     = 1912,5
+   *   europe          x = (−3,58527778 + 11) × 19,2 = 142,4
+   *                   y = (72 − 37,17694444) × 26,3 = 915,8
+   *
+   * VANHA ALHAMBRA-PISTE VERTAILUKSI (37,17634 N / −3,58821 E,
+   * es-Wikipedia): maailmankartta 5713,7 / 1912,6 ja europe 142,3 /
+   * 915,9 — eli ero on alle kymmenesosayksikkö kummallakin laudalla,
+   * ja alla oleva laattatarkistus pätee sellaisenaan myös uuteen
+   * pisteeseen.
    *
    * TARKISTUS LAATTOJA VASTEN — EIKÄ POIKKEAMAA OLE. Granadan laatta on
    * maailmankartalla 5713,2 / 1912,8 (js/packs/maailmankartta.js) ja
@@ -923,10 +922,10 @@ export const FOKUSVIRTA_GRANADA = {
    * siitä, että vika oli niiden laatoissa eikä kaavassa.
    */
   kohtaamispiste: {
-    nimi: 'Alhambra',
+    nimi: 'Generalifen puutarha',
     laudat: {
-      maailmankartta: { x: 5713.7, y: 1912.6 },
-      europe: { x: 142.3, y: 915.9 },
+      maailmankartta: { x: 5713.8, y: 1912.5 },
+      europe: { x: 142.4, y: 915.8 },
     },
   },
 

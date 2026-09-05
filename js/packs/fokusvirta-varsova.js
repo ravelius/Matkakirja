@@ -831,14 +831,14 @@ export const FOKUSVIRTA_VARSOVA = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * FABLE KATSELMOI: kohtaamisluonnos
-   *
-   * Varsovalla ei ole riviä js/packs/kohtaamiset.js:ssä eikä
-   * KAARI_PAKETIT-listassa (js/tyohuone-kehitys-data.js), joten tälle
-   * kaupungille kirjoitettiin oma hahmo: alla oleva Antikvaari Zofia
-   * on EHDOTUS, ei kaanonia. Kortti on esittely; VARSINAINEN KYSYMYS on
-   * ennallaan laattamekaniikassa (game.actionQuiz lukee js/packs/
-   * europe-questions.js, varsova), eikä tämä paketti kosketa sitä.
+   * LUONNOS 5.9.2026, Fable tarkistaa. KAKSOISHENKILÖ PURETTU.
+   * Zofia on nyt myös KAAREN henkilö: js/tyohuone-kehitys-data.js
+   * KAARI_PAKETIT, id 'varsova' kertoo hänestä ja antaa kysymyksen,
+   * jonka game.actionQuiz esittää laatalla (js/game.js kaariTarina).
+   * Kaupungilla on siis yksi kohtaamishenkilö kahden sijasta, ja tämä
+   * kortti on hänen esittelynsä — ei uusi hahmo eikä irrallinen
+   * ehdotus. Kortti ei kertaa kaaren repliikkiä eikä paljasta
+   * vastausta.
    *
    * *** NIMEN HISTORIA — LUE ENNEN KUIN VAIHDAT SEN. ***
    *
@@ -848,22 +848,22 @@ export const FOKUSVIRTA_VARSOVA = {
    *      toinen puolalaiskaupunki nimesi kohtaamishahmokseen
    *      Szopkanrakentaja Halinan (js/packs/fokusvirta-krakova.js).
    *      Paketit kirjoitettiin rinnakkain, eivätkä ne nähneet toisiaan.
-   *   2. JADWIGA törmäsi Varsovaan itseensä. Yllä oleva perustelu oli
-   *      osin väärä: kaupunki EI OLE KAARI_PAKETIT-listassa
-   *      (js/tyohuone-kehitys-data.js), mutta sillä ON elävä
+   *   2. JADWIGA törmäsi Varsovaan itseensä. Kaupungilla oli elävä
    *      tarinakaari js/packs/tarinakaari.js:n TARINAKAARI-taulussa
    *      (`varsova`), jonka lukevat js/game.js, js/ui.js, js/visa.js ja
-   *      js/fokusvirta.js — ja sen hahmo on **Kalastaja Jadwiga**.
+   *      js/fokusvirta.js — ja sen hahmo oli **Kalastaja Jadwiga**.
    *      Saman kaupungin sisäinen toisto osuu pelaajaan vielä
    *      lähempää kuin kahden kaupungin välinen.
    *   3. ZOFIA (Fablen valinta 30.8.2026) on tarkistettu molempia
-   *      vasten: nimi ei esiinny js/packs/-hakemistossa eikä
-   *      tarinakaaressa kertaakaan.
+   *      vasten: nimi ei esiinny js/packs/-hakemistossa muualla eikä
+   *      toisessa kaaren kohteessa kertaakaan. Fablen päätös 5.9.2026
+   *      klo 20:05 UTC ratkaisi ristiriidan lopullisesti Zofian
+   *      hyväksi: *"Varsova: yhdistetään antikvaari Zofiaan (kalastaja
+   *      Jadwiga pois kaaresta)."* Kalastajaa ei ole enää missään.
    *
    * JOS NIMI VAIHDETAAN VIELÄ, tarkista uusi nimi SEKÄ js/packs/:n
-   * kohtaamishahmoja ETTÄ TARINAKAARI-taulua vasten — pelkkä
-   * KAARI_PAKETIT ei riitä, kuten kohta 2 osoittaa. Vaihto on yhden
-   * lohkon työ (hahmo, varmistus, teksti ja tämän lohkon kommentit).
+   * kohtaamishahmoja ETTÄ TARINAKAARI-taulua vasten, ja muista, että
+   * nimi on nyt KAHDESSA tiedostossa: tässä ja KAARI_PAKETIT-listassa.
    *
    * KUVAA EI OLE (omistajan linjaus): kohtaamiskortissa on vain hahmo,
    * nappi, varmistus, vihjeOsio ja teksti.
@@ -891,7 +891,11 @@ export const FOKUSVIRTA_VARSOVA = {
    * siltä lehdeltä, jossa on vieras käsiala.
    *
    * EI SPOILERIA: kortti ei mainitse Chopinia, sydäntä, jälleen-
-   * rakennusta, Skłodowska-Curieta, pierogeja eikä merenneitoa.
+   * rakennusta, Skłodowska-Curieta, pierogeja eikä merenneitoa. Se ei
+   * myöskään mainitse paavin bullaa, joka on kaaren uuden
+   * laattakysymyksen vastaus — kortin oma etulehden numerosarake on
+   * eri tarina kuin kirjaston lainaushistoria, vaikka molemmat
+   * kertovat kirjanpidosta.
    */
   kohtaaminen: {
     hahmo: 'Antikvaari Zofia',

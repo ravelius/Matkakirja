@@ -61,10 +61,13 @@
  * "Voileipä syödään haarukalla" tekstiä (js/packs/kulttuuri-kategoriat.js).
  * Uusia faktaväitteitä ei ole kummassakaan.
  *
- * MIKSI EI SATUKYSYMYSTÄ: kaupungin laattakysymys kysyy, mikä saduista on
- * Andersenin (js/tyohuone-kehitys-data.js KAARI_PAKETIT, kobenhavn). Jos
- * lehden aarteen avaava tehtävä kysyisi samasta, kysymys olisi ratkaistu
- * ennen kuin Karen on tavattu.
+ * MIKSI EI SATUKYSYMYSTÄ EIKÄ TIVOLIN LUPAKYSYMYSTÄ: kaupungin
+ * laattakysymys kysyy 5.9.2026 alkaen Tivolin puisen vuoristoradan
+ * jarrumiehestä (js/tyohuone-kehitys-data.js KAARI_PAKETIT, kobenhavn).
+ * Jos lehden aarteen avaava tehtävä kysyisi samasta, kysymys olisi
+ * ratkaistu ennen kuin Freja on tavattu. Sama koskee tämän tiedoston
+ * omaa Tivoli-syvennystä, joka kysyy puiston luvan perustelua — kaksi
+ * eri Tivoli-kysymystä, ei sama kahdesti.
  */
 const NYHAVN_VISA = {
   kysymys: 'Miksi Nyhavnin kanava kaivettiin 1670-luvulla keskelle '
@@ -404,9 +407,28 @@ export const FOKUSVIRTA_KOBENHAVN = {
   /*
    * ---------- 4. Oppitunti ----------
    * Pohjustaa kohtaamisen laattakysymyksen (js/tyohuone-kehitys-data.js
-   * KAARI_PAKETIT, kobenhavn): mikä saduista on Andersenin. Visasääntö
-   * täyttyy — vastaus on tekstissä, mutta kysymyksen sanamuoto ei toistu
-   * siinä sellaisenaan.
+   * KAARI_PAKETIT, kobenhavn). Visasääntö täyttyy — vastaus on
+   * tekstissä, mutta kysymyksen sanamuoto ei toistu siinä sellaisenaan.
+   *
+   * VIIMEINEN KAPPALE LISÄTTY 5.9.2026 (LUONNOS, Fable tarkistaa).
+   * Laattakysymys vaihtui Andersenin sadusta Tivolin puisen
+   * vuoristoradan jarrumieheen, joten oppitunnin oli opetettava uusi
+   * vastaus — sama ratkaisu kuin Lontoossa v1593 (*"oppituntiin lisätty
+   * lain oma kappale, joka opettaa vastauksen toistamatta
+   * vastausriviä"*). Andersen-osuus säilyy sanasta sanaan: se on
+   * kaupungin oma tarina eikä enää törmää mihinkään kysymykseen.
+   * Silta kappaleiden välillä on oppitunnin oma avauslause valoista.
+   *
+   * LISÄKAPPALEEN FAKTAT (tarkistettu 5.9.2026): en-Wikipedia "Tivoli
+   * Gardens" (*"The park is best known for its wooden roller coaster,
+   * Rutschebanen … built in 1914"*, *"one of the world's oldest wooden
+   * roller coasters that is still operating today"*, avattu 15.8.1843)
+   * ja en-Wikipedia "Rutschebanen (Tivoli Gardens)" (*"An operator
+   * controls the ride by braking so that it does not gain too much
+   * speed during descent"* — jarrumies matkustaa junan mukana).
+   * Vastausriviä ("jarruttaa junaa käsin laskuissa") ei kirjoiteta
+   * sellaisenaan: teksti kertoo työntekijästä ja vivusta, ja lukija
+   * päättelee lopun itse.
    *
    * FAKTAT: js/packs/kulttuuri-kategoriat.js, kobenhavn/sadut, nostot
    * "Poika tuli kaupunkiin yksin" ja "Satamakatu, jonka varrella satuja
@@ -451,7 +473,15 @@ export const FOKUSVIRTA_KOBENHAVN = {
       + 'talossa yhteensä toistakymmentä vuotta, ja numerossa 20 hän '
       + 'kirjoitti ensimmäiset satunsa. Isoisäsi käynnin aikaan hän oli yhä '
       + 'elossa ja kaupungin tunnetuin ihminen; hän kuoli kaksi vuotta '
-      + 'myöhemmin.',
+      + 'myöhemmin. Ne illan valot taas syttyivät ensimmäisen kerran '
+      + 'elokuussa 1843, kun kaupunkiin avattiin huvipuisto: isoisäsi '
+      + 'käydessä Tivoli oli kolmenkymmenen vuoden ikäinen. Puiston '
+      + 'tunnetuin laite on kuitenkin matkakirjaa nuorempi. Puinen '
+      + 'vuoristorata Rutschebanen valmistui vuonna 1914 ja on yhä '
+      + 'ajossa, yksi maailman vanhimmista. Se ei kulje itsestään: '
+      + 'jokaisen junan mukana matkustaa työntekijä, joka pitää vauhdin '
+      + 'kurissa omalla vivullaan, ettei vaunu tulisi mäkeä liian '
+      + 'kovaa. Matkustajat luulevat häntä usein oppaaksi.',
     /*
      * Kuva on pelin omasta aineistosta (sama tiedosto kobenhavn/sadut).
      * Commons 29.8.2026: public domain, Thora Hallager, kuvattu 1869 —
@@ -469,62 +499,79 @@ export const FOKUSVIRTA_KOBENHAVN = {
 
   /*
    * ---------- 5. Kohtaaminen ----------
-   * Hahmo, kohtaamiskuva ja kysymys ovat tarinakaaren paketissa
-   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'kobenhavn'):
-   * sadunkertoja Karen kertoo satuja Nyhavnin laiturilla samalta
-   * puiselta arkulta, jolta hänen isoisänsä ne kertoi. Tämä kortti ei
-   * kertaa Karenin repliikkiä eikä paljasta vastausta.
+   * Hahmo ja kysymys ovat tarinakaaren paketissa
+   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'kobenhavn'). Tämä
+   * kortti ei kertaa henkilön omaa repliikkiä eikä paljasta vastausta.
    *
-   * KÖÖPENHAMINAN VANHA KOHTAAMINEN JÄÄ ENNALLEEN (js/packs/
-   * kohtaamiset.js): sama Karen kahdella pinnalla, ei kahta lupausta
-   * samasta ovesta.
+   * LUONNOS 5.9.2026, Fable tarkistaa. HENKILÖ JA PAIKKA VAIHTUIVAT:
+   * sadunkertoja Karen Nyhavnin laiturilla → karusellinhoitaja Freja
+   * Tivolissa (omistajan kuvapalaute *"Vaihda henkilö ja paikka"*,
+   * Fablen päätös 5.9.2026 klo 20:05 UTC). Suvussa periytynyt arkku ja
+   * sadunkirjoittajan lahja ovat poissa. Myös kohtaamispiste siirtyy
+   * (ks. alla).
+   *
+   * VIHJEOSIO SÄILYY: 'sadut' on Kööpenhaminan lehden osio, joka
+   * käsittelee sekä Andersenin että Tivolin (nostot "Huvipuisto
+   * avattiin vuonna 1843" ja "Lupa huvipuistolle annettiin viideksi
+   * vuodeksi kerrallaan", js/packs/kulttuuri-kategoriat.js). Rivi
+   * osoittaa siis yhä oikeaan suuntaan, ja varsinainen vastaus
+   * opetetaan tämän paketin oppitunnin viimeisessä kappaleessa.
    */
   kohtaaminen: {
-    hahmo: 'Sadunkertoja Karen',
-    nappi: 'Tapaa sadunkertoja',
-    teksti: 'Karen kertoo satuja laiturilla samalta puiselta arkulta, '
-      + 'jolta hänen isoisänsä ne kertoi. Hän ei lue kirjasta eikä katso '
-      + 'muistiinpanoja: sadut ovat menneet suvussa suusta suuhun niin '
-      + 'kauan, että hän tietää missä kohtaa kuulijat vetävät henkeä. '
-      + 'Arkun hän avaa harvoin. Ennen kuin hän tekee sen, hän haluaa '
-      + 'tietää, tunnistaako vieras sen, mikä täällä kirjoitettiin.',
+    hahmo: 'Karusellinhoitaja Freja',
+    nappi: 'Tapaa karusellinhoitaja',
+    teksti: 'Freja sulkee musiikkikarusellin joka ilta viimeisenä ja '
+      + 'peittelee hevoset itse, koska maali ei kestä yökosteutta. '
+      + 'Puiston laitteet hän osaa ikäjärjestyksessä ja korjaa niistä '
+      + 'kolme neljäsosaa omin käsin; loput ovat niin vanhoja, että '
+      + 'niihin tulee mies kaupungin toiselta puolen. Kesäiltoina hän on '
+      + 'kuullut kaikki kysymykset, ja aarteesta kysytään harvemmin kuin '
+      + 'luulisi. Vasta suljetun portin jälkeen hänellä on aikaa katsoa '
+      + 'kenenkään kirjaa — ja silloinkin hän kysyy ensin jotain, minkä '
+      + 'jokainen puistossa työskentelevä tietää.',
     vihjeOsio: 'sadut',
   },
 
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * KOHTAAMISPAIKKA: NYHAVNIN LAITURI. Kaaren teksti asettaa Karenin
-   * juuri sinne, ja pelin oma Kööpenhamina-aineisto osoittaa saman
-   * paikan (js/packs/kulttuuri-kategoriat.js, kobenhavn/sadut,
-   * "Satamakatu, jonka varrella satuja kirjoitettiin").
+   * KOHTAAMISPAIKKA: TIVOLI (5.9.2026; ennen Nyhavnin laituri).
    *
-   * 55,67990556 N / 12,59028889 E — da-Wikipedia "Nyhavn",
-   * prop=coordinates (haettu 29.8.2026). Muunnos on sama kaava ja samat
+   * Kaaren kohtaaminen siirtyi Nyhavnista Tivoliin, joten piste
+   * siirtyy mukana — kaupungissa on yksi kohtaamispaikka, ja sen on
+   * oltava se, jossa henkilö tavataan. Pelin oma Kööpenhamina-aineisto
+   * tukee uutta paikkaa (js/packs/kulttuuri-kategoriat.js,
+   * kobenhavn/sadut, nostot "Huvipuisto avattiin vuonna 1843" ja "Lupa
+   * huvipuistolle annettiin viideksi vuodeksi kerrallaan").
+   *
+   * 55,67361111 N / 12,56833333 E — en-Wikipedia "Tivoli Gardens",
+   * prop=coordinates (haettu 5.9.2026). Muunnos on sama kaava ja samat
    * vakiot kuin fokuskohteilla: maailmankartalla Millerin lieriö
    * LEVEYS 12000 / LON0 −175 / POHJOINEN 76 (tools/fokuskartta/piirto.js
    * laudanProjektio), Euroopan laudalla x = (lon + 11) × 19,2 ja
    * y = (72 − lat) × 26,3.
    *
    * LASKU:
-   *   maailmankartta  x = ((12,59028889 − (−175)) mod 360) × (12000/360)
-   *                     = 187,59028889 × 33,3333… = 6253,0
-   *                   y = (millerY(76) − millerY(55,67990556)) × 12000/2π
-   *                     = 1134,1
-   *   europe          x = (12,59028889 + 11) × 19,2 = 452,9
-   *                   y = (72 − 55,67990556) × 26,3 = 429,2
+   *   maailmankartta  x = ((12,56833333 − (−175)) mod 360) × (12000/360)
+   *                     = 187,56833333 × 33,3333… = 6252,3
+   *                   y = (millerY(76) − millerY(55,67361111)) × 12000/2π
+   *                     = 1134,4
+   *   europe          x = (12,56833333 + 11) × 19,2 = 452,5
+   *                   y = (72 − 55,67361111) × 26,3 = 429,4
    *
    * TARKISTUS LAATTAA VASTEN: Kööpenhaminan laatta on Euroopan laudalla
    * 452 / 429 ja maailmankartalla 6251,4 / 1133,7, eli piste osuu
-   * käytännössä laatan päälle — niin pitääkin, Nyhavn on keskustassa.
-   * Piirtopuoli siirtää pisteen koilliseen (js/fokuspiste.js
-   * PISTE_ERO_MIN), jottei se peitä laattaa.
+   * käytännössä laatan päälle — niin pitääkin, Tivoli on rautatieaseman
+   * vieressä keskustassa. Piirtopuoli siirtää pisteen sivuun
+   * (js/fokuspiste.js PISTE_ERO_MIN), jottei se peitä laattaa. Vanha
+   * Nyhavnin piste oli 6253,0 / 1134,1 ja 452,9 / 429,2 — siirtymä on
+   * laudalla alle puoli yksikköä, kuten kilometrin matkalta pitääkin.
    */
   kohtaamispiste: {
-    nimi: 'Nyhavnin laituri',
+    nimi: 'Tivoli',
     laudat: {
-      maailmankartta: { x: 6253.0, y: 1134.1 },
-      europe: { x: 452.9, y: 429.2 },
+      maailmankartta: { x: 6252.3, y: 1134.4 },
+      europe: { x: 452.5, y: 429.4 },
     },
   },
 

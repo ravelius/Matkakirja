@@ -925,9 +925,11 @@ export const SYVENNYSPAIKAT = {
      * Villa del Priorato di Malta, Piazza dei Cavalieri di Malta,
      * Aventinus.
      * Lähde: en-Wikipedia "Villa del Priorato di Malta" -koordinaatit
-     *   (41,88361/12,4775); käytännössä sama piste kuin pakin oma
-     *   kohtaamiskoordinaatti (41,8827/12,4783, fokusvirta-rooma.js
-     *   r. 552)
+     *   (41,88361/12,4775). HUOM 5.9.2026: tämä oli aiemmin myös Rooman
+     *   fokusvirran kohtaamiskoordinaatti, mutta kohtaamispiste
+     *   siirtyi Trevin suihkulähteelle (js/packs/fokusvirta-rooma.js).
+     *   Avaimenreikä jää siis kartalle omana syvennystarinanaan, eikä
+     *   kaksi merkkiä enää osu päällekkäin.
      */
     avaimenreika: {
       lat: 41.8836, lon: 12.4775, symboli: 'historia', nimio: 'Avaimenreikä',
