@@ -18,6 +18,11 @@ import {
   PALLON_SALLITTU_VENYTYS, PALLOLAUDAN_SAAPUMISLEVEYS, PALLOLAUDAN_SIIRTOLEVEYS, PALLO_KORKEUS_MIN,
   korkeusLeveydesta, laatanTarkkuus, lahinKorkeus, lahinLeveys,
 } from '../js/pallolauta/kamera.js';
+// Työpöytäselaimen rulla: kaksi sormea panoroi, cmd zoomaa (omistaja 5.9.2026).
+import {
+  PANOROINNIN_HERKKYYS, PANOROINNIN_KOHTISUORA_RAJA, PANOROINNIN_LEVEYSRAJA, RULLAN_LIUKU_MS,
+  RULLAN_RIVI_PX, RULLAN_SIVU_PX, RULLAN_SUORA_RAJA, rullanAskel,
+} from '../js/pallo.js';
 import { OSOITTIMEN_JALKIVIIVE_MS } from '../js/pallolauta/lauta.js';
 import {
   PALLON_TURVATILAN_RAJA, PALLON_TURVATILAN_UNOHDUS_MS, nollaaPallonKaatumiset, palloKaatui,
@@ -469,4 +474,93 @@ test('tarkkuus liikkeessä -kokeiluvipu (omistaja 5.9.2026: "kokeile pyörisikö
   assert.match(pallo, /if \(aina\) lepoon = true;/);
   const html = lue('../index.html');
   assert.match(html, /kehittaja-laatu-aina-kytkin/);
+});
+
+/*
+ * TYÖPÖYTÄSELAIMEN RULLA (omistaja 5.9.2026 klo 21: *"saisiko macin
+ * työpöytäselaimella panoroinnin jos käyttää kahta sormea ja zoomaus
+ * olisi cmd pohjassa kahdella sormella (nipistys eleen voi ottaa pois
+ * pöytäkoneelta)"*). Trackpadin kahden sormen pyyhkäisy on selaimessa
+ * wheel-virta, jonka OrbitControls tulkitsi zoomiksi.
+ */
+test('rullan askel: korkeus skaalaa, suunta seuraa vieritystä, deltaMode riveiksi', () => {
+  // Pyyhkäisy alaspäin vie etelään, oikealle vie itään.
+  const alas = rullanAskel(0, 100, 0.05, { leveysPx: 1000 });
+  assert.ok(alas.dLat < 0 && alas.dLng === 0, JSON.stringify(alas));
+  const sivu = rullanAskel(100, 0, 0.05, { leveysPx: 1000 });
+  assert.ok(sivu.dLng > 0 && sivu.dLat === 0, JSON.stringify(sivu));
+  // Askel on ruudun pikseli asteina: näkyvä leveys = korkeus · 2 · tan(fov/2).
+  const nakyva = 0.05 * 2 * Math.tan((50 / 2) * (Math.PI / 180)) * (180 / Math.PI);
+  assert.ok(Math.abs(-alas.dLat - (100 * nakyva) / 1000) < 1e-12, `${alas.dLat}`);
+  assert.equal(PANOROINNIN_HERKKYYS, 1, 'oletustahti on 1:1 — pinta seuraa pyyhkäisyä');
+  // ASKEL PIENENEE KORKEUDEN PIENETESSÄ: matalalla sama pyyhkäisy siirtää
+  // vähemmän asteita, jolloin lähikuvassa liike ei karkaa käsistä.
+  const matala = rullanAskel(0, 100, 0.02, { leveysPx: 1000 });
+  const korkea = rullanAskel(0, 100, 2.5, { leveysPx: 1000 });
+  assert.ok(Math.abs(matala.dLat) < Math.abs(alas.dLat), 'matalalla pienempi askel');
+  assert.ok(Math.abs(korkea.dLat) > Math.abs(alas.dLat), 'kaukaa suurempi askel');
+  assert.ok(Math.abs(Math.abs(korkea.dLat / matala.dLat) - 2.5 / 0.02) < 1e-9, 'suoraan verrannollinen korkeuteen');
+  // Iso kotelo = pienempi askel pikseliä kohden (sama osuus ruudusta).
+  const leveaRuutu = rullanAskel(0, 100, 0.05, { leveysPx: 2000 });
+  assert.ok(Math.abs(leveaRuutu.dLat * 2 - alas.dLat) < 1e-12);
+  // deltaMode 1 (rivi) ja 2 (sivu) skaalataan pikseleiksi.
+  const rivi = rullanAskel(0, 1, 0.05, { deltaMode: 1, leveysPx: 1000 });
+  assert.ok(Math.abs(rivi.dLat - rullanAskel(0, RULLAN_RIVI_PX, 0.05, { leveysPx: 1000 }).dLat) < 1e-12);
+  const sivuAskel = rullanAskel(0, 1, 0.05, { deltaMode: 2, leveysPx: 1000 });
+  assert.ok(Math.abs(sivuAskel.dLat - rullanAskel(0, RULLAN_SIVU_PX, 0.05, { leveysPx: 1000 }).dLat) < 1e-12);
+  // Pituuspiirit kapenevat navoilla: 1/cos φ, katkaistuna 75°:seen.
+  const tasaaja = rullanAskel(100, 0, 0.05, { leveysPx: 1000, lat: 0 });
+  const kuusikymmenta = rullanAskel(100, 0, 0.05, { leveysPx: 1000, lat: 60 });
+  assert.ok(Math.abs(kuusikymmenta.dLng / tasaaja.dLng - 2) < 1e-9, 'lat 60 → kaksinkertainen');
+  const napa = rullanAskel(100, 0, 0.05, { leveysPx: 1000, lat: 89 });
+  const raja = rullanAskel(100, 0, 0.05, { leveysPx: 1000, lat: PANOROINNIN_KOHTISUORA_RAJA });
+  assert.ok(Math.abs(napa.dLng - raja.dLng) < 1e-12, 'kerroin katkeaa 75°:seen eikä karkaa navalla');
+  // Nolla on nolla, eikä korkeus 0 räjäytä kaavaa.
+  assert.equal(rullanAskel(0, 0, 0.05).dLng, 0);
+  assert.ok(Number.isFinite(rullanAskel(10, 10, 0).dLat));
+});
+
+test('rulla: kaappausvaiheessa, cmd/ctrl zoomaa, muuten panorointi ja pehmeä liuku', () => {
+  const lahde = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
+  const ele = lahde.slice(lahde.indexOf('export function asennaPallonEleet'));
+  const kasittelija = ele.slice(ele.indexOf("kotelo.addEventListener('wheel'"));
+  assert.ok(kasittelija, 'wheel-käsittelijä puuttuu pallon eleistä');
+  // KAAPPAUSVAIHE: OrbitControlsin kuuntelija on kankaalla eli kotelon
+  // lapsessa, joten kotelon kaappaus ehtii ensin. passive: false, muuten
+  // preventDefault ei tehoa.
+  assert.match(kasittelija, /\{ capture: true, passive: false \}/);
+  // Cmd (mac) tai ctrl (Windows, nipistys) → kirjasto zoomaa kuten ennen.
+  assert.match(kasittelija, /if \(e\.metaKey \|\| e\.ctrlKey\) return;/);
+  const zoomKohta = kasittelija.indexOf('e.metaKey');
+  const estoKohta = kasittelija.indexOf('e.preventDefault()');
+  assert.ok(zoomKohta >= 0 && estoKohta > zoomKohta, 'zoom päästetään läpi ennen estoa');
+  // Muuten: selaimen oma vieritys/zoom pois ja kirjasto ohitetaan.
+  assert.match(kasittelija, /e\.preventDefault\(\);\s*\n\s*e\.stopPropagation\(\);/);
+  assert.match(kasittelija, /rullanAskel\(e\.deltaX, e\.deltaY, pov\.altitude/);
+  // Panorointi kiertää kameraa, ei muuta korkeutta.
+  assert.match(ele, /altitude: pov\.altitude/);
+  // Yksittäinen rullapykälä animoidaan (Raamattu: kaikki liike pehmeästi).
+  assert.match(kasittelija, /rulla\.aikaa = RULLAN_LIUKU_MS/);
+  assert.match(kasittelija, /requestAnimationFrame\(rullanLiuku\)/);
+  assert.ok(RULLAN_LIUKU_MS > 0 && RULLAN_LIUKU_MS <= 200, `liuku on lyhyt: ${RULLAN_LIUKU_MS}`);
+  assert.match(kasittelija, /ui\.reducedMotion \|\| \(e\.deltaMode === 0/, 'reduced motion = hyppy');
+  assert.ok(RULLAN_SUORA_RAJA > 0, 'trackpadin virta menee suoraan');
+  // Napakannet alkavat 83,7°:sta: rulla ei kiipeä kannen sisään.
+  assert.ok(PANOROINNIN_LEVEYSRAJA > NAPAKANNEN_LEVEYS && PANOROINNIN_LEVEYSRAJA <= 89);
+  assert.match(ele, /-PANOROINNIN_LEVEYSRAJA, Math\.min\(PANOROINNIN_LEVEYSRAJA/);
+  // Kosketuslaitteet ennallaan: sormet kulkevat pointer-tapahtumina.
+  for (const nimi of ['pointerdown', 'pointermove', 'pointerup', 'pointercancel']) {
+    assert.ok(ele.includes(`addEventListener('${nimi}'`), `${nimi} katosi sormieleistä`);
+  }
+  // Kamera-ajon keskeytys kuuntelee wheeliä samassa vaiheessa, muuten
+  // stopPropagation veisi tapahtuman siltä (kuplinta ei enää tule).
+  assert.match(
+    lue('../js/pallolauta/kamera.js'),
+    /addEventListener\('wheel', \(\) => pysaytaKameraAjo\(\), \{ passive: true, capture: true \}\)/,
+  );
+  // Nukkuva render-silmukka herää myös rullasta.
+  assert.match(
+    lue('../js/pallolauta/lauta.js'),
+    /addEventListener\('wheel', heraa, \{ passive: true, capture: true \}\)/,
+  );
 });

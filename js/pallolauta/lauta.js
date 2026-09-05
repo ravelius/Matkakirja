@@ -250,6 +250,11 @@ export async function avaaPallolauta(ui) {
     || Boolean(ui.arrivalDialog?.open);
   const tahdistaLepo = () => { if (lepoTarpeen()) lepaa(); else heraa(); };
   kotelo.addEventListener('pointerdown', heraa);
+  // Rulla herättää samoin: työpöydällä panorointi ja zoom tulevat
+  // wheelinä (js/pallo.js asennaPallonEleet), eikä nukkuva silmukka
+  // piirtäisi liikettä. Kaappausvaihe, koska panorointi katkaisee
+  // wheelin kuplinnan kotelossa.
+  kotelo.addEventListener('wheel', heraa, { passive: true, capture: true });
   /*
    * PÄIVÄKIRJA LAATIKOSSA JA RIVIKSI VEDOSTA (omistaja 5.9.2026:
    * *"Päiväkirja pitäisi olla laatikossa ja rullautua ylös kuten

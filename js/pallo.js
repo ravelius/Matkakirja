@@ -31,7 +31,8 @@
  * *"Voisiko pallon vaihtaa pelin kartaksi suoraan?"* — Raamattu,
  * KARTTAPALLO ON PELILAUTA. Pallon runko (rakennaPallo: pinta laatoista
  * tai z4-varatekstuurista) ja eleet (asennaPallonEleet: nipistys ei ole
- * napautus, sormessa pysyvä kierto, liuku) ovat jaettuja: tämä tiedosto
+ * napautus, sormessa pysyvä kierto, liuku, työpöydän rulla) ovat
+ * jaettuja: tämä tiedosto
  * pitää valikkopallon kuoren (Sulje, tumma pohja, sukellus), ja
  * js/pallolauta/lauta.js rakentaa samasta rungosta pelin laudan
  * karttaruutuun. Kytkin ja suunnitelma: js/ui-apurit.js lautaValinta,
@@ -681,11 +682,92 @@ function lisaaNapakannet(kolmi, sade) {
   };
 }
 
+/*
+ * ======== TYÖPÖYTÄSELAIN: KAKSI SORMEA PANOROI, CMD ZOOMAA =========
+ *
+ * OMISTAJA 5.9.2026 klo 21: *"saisiko macin työpöytäselaimella
+ * panoroinnin jos käyttää kahta sormea ja zoomaus olisi cmd pohjassa
+ * kahdella sormella (nipistys eleen voi ottaa pois pöytäkoneelta)"*.
+ *
+ * Trackpadin kahden sormen pyyhkäisy ei ole selaimessa ele vaan
+ * wheel-tapahtumien virta (deltaX, deltaY), ja OrbitControls tulkitsee
+ * jokaisen wheelin zoomiksi — pallo siis loittoni, kun omistaja yritti
+ * panoroida. Kotelo ottaa wheelin kiinni KAAPPAUSVAIHEESSA ennen
+ * kirjastoa ja jakaa sen kahtia:
+ *
+ *   wheel ilman näppäintä          → PANOROINTI (kierto asteina)
+ *   wheel + cmd (metaKey)          → zoom, kirjasto hoitaa kuten ennen
+ *   wheel + ctrl                   → zoom (Windowsin tapa; ctrl-wheel on
+ *                                    myös se, minkä trackpadin nipistys
+ *                                    lähettää, joten nipistys jää zoomiksi
+ *                                    ilman omaa nipistyskoodia)
+ *
+ * MIKSI CMD ON ZOOM: selain varaa itselleen ctrl+wheelin (sivun
+ * zoomaus) ja macOS lähettää nipistyksen samana ctrl+wheelinä, joten
+ * ctrl on jo "suurenna". Cmd on macin oma muokkausnäppäin ja vapaana;
+ * omistajan pyytämä cmd-zoom istuu siis samaan kaavaan kuin selaimen
+ * oma. Kosketuslaitteet eivät näe tästä mitään: sormieleet kulkevat
+ * pointer-tapahtumina (sormiseuranta, tartunta, liuku) ja tämä
+ * käsittelijä lukee vain wheeliä.
+ */
+/** Osoitinlaitteen panoroinnin tahti: 1 = pinta seuraa pyyhkäisyä 1:1. */
+export const PANOROINNIN_HERKKYYS = 1;
+/** Yksittäisen rullapykälän liuku (ms) — hyppy ei ole liikettä. */
+export const RULLAN_LIUKU_MS = 120;
+/** Tätä isompi pikseliaskel animoidaan (trackpadin virta menee suoraan). */
+export const RULLAN_SUORA_RAJA = 40;
+/** deltaMode 1 (rivi) pikseleinä ja deltaMode 2 (sivu) pikseleinä. */
+export const RULLAN_RIVI_PX = 16;
+export const RULLAN_SIVU_PX = 400;
+/** Vertailuruutu, kun kutsuja ei kerro kotelon leveyttä (testit). */
+export const RULLAN_VERTAILULEVEYS = 1000;
+/** Globe.gl:n kameran oletusavauskulma (vrt. pallolauta/kamera.js PALLO_FOV). */
+export const PALLON_FOV = 50;
+/**
+ * Panoroinnin leveysraja: napakannet alkavat 83,7°:sta
+ * (NAPAKANNEN_LEVEYS), joten rullalla ei kiivetä kannen sisään. Sormen
+ * oma kierto pitää kirjaston ±89,5°:n rajan (toGlobeCoords vastaa
+ * sielläkin), tämä koskee vain rullaa.
+ */
+export const PANOROINNIN_LEVEYSRAJA = 85;
+/**
+ * Pituuspiirit kapenevat navoilla: sama pyyhkäisy pikseleinä on
+ * napojen lähellä enemmän asteita (1/cos φ). Kerroin katkaistaan
+ * 75°:seen, ettei askel karkaa äärettömäksi navalla.
+ */
+export const PANOROINNIN_KOHTISUORA_RAJA = 75;
+
+/**
+ * Rullan askel asteina: paljonko kameran keskipiste siirtyy, kun
+ * osoitinlaite antaa (deltaX, deltaY) korkeudella `korkeus`.
+ *
+ * Askel skaalautuu korkeuden mukaan samalla kaavalla kuin pallolaudan
+ * kamera (js/pallolauta/kamera.js korkeusLeveydesta): näkyvä leveys
+ * asteina ≈ korkeus · 2 · tan(fov/2) · 180/π, ja yksi ruudun pikseli on
+ * se jaettuna kotelon leveydellä. Matalalla askel on siis pieni ja
+ * kaukaa katsottaessa suuri — pinta seuraa pyyhkäisyä samaa tahtia
+ * riippumatta siitä, kuinka lähellä kamera on.
+ *
+ * Suunta: pyyhkäisy vie näkymää kuten sivun vieritys (deltaY > 0 =
+ * etelään, deltaX > 0 = itään).
+ */
+export function rullanAskel(deltaX, deltaY, korkeus, {
+  deltaMode = 0, leveysPx = RULLAN_VERTAILULEVEYS, lat = 0,
+  fov = PALLON_FOV, herkkyys = PANOROINNIN_HERKKYYS,
+} = {}) {
+  const pikselia = deltaMode === 1 ? RULLAN_RIVI_PX : (deltaMode === 2 ? RULLAN_SIVU_PX : 1);
+  const nakyva = Math.max(1e-4, korkeus) * 2 * Math.tan((fov / 2) * (Math.PI / 180)) * (180 / Math.PI);
+  const k = (herkkyys * pikselia * nakyva) / Math.max(1, leveysPx);
+  const kavennus = 1 / Math.cos((Math.min(PANOROINNIN_KOHTISUORA_RAJA, Math.abs(lat)) * Math.PI) / 180);
+  return { dLat: -deltaY * k, dLng: deltaX * k * kavennus };
+}
+
 /**
  * Pallon eleet: sormiseuranta (nipistys ei ole napautus), sormessa
- * pysyvä kierto ja irrotuksen jälkeinen liuku. Jaettu valikkopallon ja
+ * pysyvä kierto, irrotuksen jälkeinen liuku ja työpöytäselaimen rulla
+ * (kaksi sormea panoroi, cmd zoomaa). Jaettu valikkopallon ja
  * pallolaudan kesken. Palauttaa sormien tilan (napautuksen hylkäys) ja
- * purkajan (liuku seis). Ensimmäinen sormi pysäyttää mahdollisen
+ * purkajan (liu'ut seis). Ensimmäinen sormi pysäyttää mahdollisen
  * itsepyörinnän (valikkopallo).
  */
 export function asennaPallonEleet(pallo, kotelo, ui) {
@@ -806,7 +888,69 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   };
   kotelo.addEventListener('pointerup', paasta);
   kotelo.addEventListener('pointercancel', paasta);
-  return { sormet, pura: pysaytaLiuku };
+  /*
+   * KAKSI SORMEA PANOROI, CMD ZOOMAA (omistaja 5.9.2026 klo 21; kaava ja
+   * perustelu: rullanAskel yllä). Käsittelijä on KAAPPAUSVAIHEESSA:
+   * OrbitControlsin oma wheel-kuuntelija istuu kankaalla eli kotelon
+   * lapsessa, joten kotelon kaappaus ehtii ensin ja stopPropagation pitää
+   * kirjaston erossa panoroinnista. Zoom (cmd tai ctrl) päästetään läpi
+   * koskemattomana: kirjasto zoomaa kuten ennen, ja pallolaudan
+   * minDistance/maxDistance rajaavat sen edelleen (js/pallolauta/lauta.js
+   * tahdistaZoomirajat).
+   */
+  const rulla = { lat: 0, lng: 0, aikaa: 0, raf: 0, edellinen: 0 };
+  ui.pallonRulla = rulla; // mittausta varten (savukkeet)
+  const pysaytaRulla = () => { if (rulla.raf) cancelAnimationFrame(rulla.raf); rulla.raf = 0; };
+  const siirraPalloa = (dLat, dLng) => {
+    const pov = pallo.pointOfView();
+    pallo.pointOfView({
+      lat: Math.max(-PANOROINNIN_LEVEYSRAJA, Math.min(PANOROINNIN_LEVEYSRAJA, pov.lat + dLat)),
+      lng: pov.lng + dLng,
+      altitude: pov.altitude,
+    }, 0);
+  };
+  const rullanLiuku = (nyt) => {
+    const dt = Math.max(1, Math.min(50, nyt - rulla.edellinen));
+    rulla.edellinen = nyt;
+    const osa = rulla.aikaa > dt ? dt / rulla.aikaa : 1;
+    const dLat = rulla.lat * osa;
+    const dLng = rulla.lng * osa;
+    rulla.lat -= dLat; rulla.lng -= dLng; rulla.aikaa -= dt;
+    siirraPalloa(dLat, dLng);
+    rulla.raf = rulla.aikaa > 0 && (rulla.lat || rulla.lng) ? requestAnimationFrame(rullanLiuku) : 0;
+  };
+  kotelo.addEventListener('wheel', (e) => {
+    // Cmd (mac) tai ctrl (Windows ja trackpadin nipistys) = zoom.
+    if (e.metaKey || e.ctrlKey) return;
+    e.preventDefault();
+    e.stopPropagation();
+    ohjaimet.autoRotate = false;
+    pysaytaLiuku(); vauhti.lat = 0; vauhti.lng = 0;
+    const pov = pallo.pointOfView();
+    const askel = rullanAskel(e.deltaX, e.deltaY, pov.altitude, {
+      deltaMode: e.deltaMode, leveysPx: kotelo.clientWidth, lat: pov.lat, fov: kamera.fov,
+    });
+    /*
+     * Trackpadin pyyhkäisy tulee tiheänä virtana (ja oma momentum
+     * perässä) — se ajetaan sellaisenaan. Hiiren rullan yksi pykälä on
+     * hyppy: deltaMode 1/2 tai iso pikseliaskel liu'utetaan
+     * RULLAN_LIUKU_MS:n yli (Raamattu: KAIKKI LIIKE ANIMOIDAAN PEHMEÄSTI).
+     */
+    const suoraan = ui.reducedMotion || (e.deltaMode === 0
+      && Math.abs(e.deltaX) <= RULLAN_SUORA_RAJA && Math.abs(e.deltaY) <= RULLAN_SUORA_RAJA);
+    if (suoraan) {
+      pysaytaRulla();
+      rulla.lat = 0; rulla.lng = 0; rulla.aikaa = 0;
+      siirraPalloa(askel.dLat, askel.dLng);
+      return;
+    }
+    rulla.lat += askel.dLat; rulla.lng += askel.dLng; rulla.aikaa = RULLAN_LIUKU_MS;
+    if (!rulla.raf) {
+      rulla.edellinen = performance.now();
+      rulla.raf = requestAnimationFrame(rullanLiuku);
+    }
+  }, { capture: true, passive: false });
+  return { sormet, pura: () => { pysaytaLiuku(); pysaytaRulla(); } };
 }
 
 /** Sulkee pallon, jos se on auki. */
