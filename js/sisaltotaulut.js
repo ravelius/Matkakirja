@@ -491,9 +491,19 @@ export const HAVAINTOLUENNAT = new Set([
  * Ilman tätä nappia vastaavaa vahtia soitettaisiin hiljaisuutta
  * kaupungeissa, joiden luentaa ei ole vielä tehty.
  */
-export const KOHTAAMISLUENNAT = new Set([
-  'lontoo',
-]);
+/*
+ * LUONNOS 5.9.2026, Fable tarkistaa.
+ *
+ * LONTOO POISTETTU TILAPÄISESTI. Kaupungin kohtaaminen kirjoitettiin
+ * uusiksi (js/packs/kohtaamiset.js: jokietsijä Ned → muotialan
+ * opiskelija Leila), joten R2:ssa olevat
+ * puhe-kohtaaminen-lontoo-{tervehdys,loyto}.mp3 puhuvat vanhoilla
+ * sanoilla. Sama sääntö kuin kaaren mykistetyt-listalla: muuttunut
+ * teksti ei saa soida vanhalla äänellä. Rivi 'lontoo' palautetaan
+ * tähän, kun tools/generoi-kohtaamiset.mjs on ajettu uusilla
+ * teksteillä ja tiedostot on kuunneltu.
+ */
+export const KOHTAAMISLUENNAT = new Set([]);
 
 // Lautojen tunnusluvut karttaselitteeseen: pinta-ala ja väkiluku isoin
 // pyöristyksin (omistajan toive — vähäeleinen, vain numerot ja symboli).

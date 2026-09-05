@@ -97,8 +97,22 @@
  *   K3  laatta: mikä tekee merestä epätavallisen → *lähes hapeton syvyys*
  *   K4  laatta: mitä satamasta viedään → *viljaa*
  *   K5  laatta: mitä vietetään 1. huhtikuuta → *Humorina*
- *   K6  kaari: montako askelmaa portaikossa → *vajaat kaksisataa*
+ *   K6  kaari: mitä vapaasataman tullietu tarkoitti → *tuontitavaran
+ *       sai vastaanottaa ja varastoida tullitta*
  *   K7  kulttuurivisa: miten käytävät syntyivät → *oma louhos alla*
+ *
+ * K6 VAIHTUI 5.9.2026 (LUONNOS, Fable tarkistaa). Vanha K6 kysyi
+ * portaikon askelmien määrää; kaari kirjoitettiin uusiksi (torimyyjä
+ * Iryna, vapaasataman kuitti), ja uusi kysymys saa vastauksensa TÄMÄN
+ * PAKETIN OPPITUNNISTA — se on tarkoitus, ei vuoto: Raamatun
+ * fokusmoodilinjaus haluaa laattakysymyksen kytkeytyvän merkintään ja
+ * oppituntiin, ja tarinakaari.md sääntö 6 kieltää vain sanatarkan
+ * vastausrivin toistumisen. Oppitunnin sanamuoto ("tavaran sai purkaa,
+ * varastoida, pakata uudelleen ja jalostaa maksamatta tullia") ei ole
+ * vastausrivi. VANHA RAJOITUS EI PALAA: askelmien luvut ja portaikon
+ * optinen temppu voisivat nyt periaatteessa esiintyä tässä paketissa,
+ * mutta tässä luonnoksessa niitä EI ole lisätty mihinkään — muutos on
+ * poisto, ei avaus.
  *
  * MITÄ TÄSTÄ SEURAA, KOHTA KOHDALTA:
  *
@@ -107,12 +121,14 @@
  *     hapetonta syvyyttä ja antiikin hylkyjä (K3): niistä ei ole tässä
  *     paketissa riviäkään, vaikka aihe olisi hyvä täky — se on varattu.
  *   - PORTAIDEN ASKELMIA EI LASKETA EIKÄ NIIDEN OPTISTA TEMPPUA
- *     SELITETÄ (K6). Portaikkotäky kertoo nimistä, kivestä ja
- *     elokuvasta; luvut 200 ja 192 sekä "alhaalta vain askelmat,
- *     ylhäältä vain tasanteet" jäävät kaarikysymyksen palkinnoksi.
- *     TÄMÄ RATKAISI MYÖS PÖLLÖN KUVAN: kaupunkilehden portaikkohero
- *     olisi ollut luonteva valinta, mutta sen selite sanoo molemmat
- *     asiat ääneen, joten heroksi valittiin Vorontsovin kolonnadi.
+ *     SELITETÄ. Portaikkotäky kertoo nimistä, kivestä ja elokuvasta;
+ *     luvut 200 ja 192 sekä "alhaalta vain askelmat, ylhäältä vain
+ *     tasanteet" jäävät pois. TÄMÄ RATKAISI MYÖS PÖLLÖN KUVAN:
+ *     kaupunkilehden portaikkohero olisi ollut luonteva valinta, mutta
+ *     sen selite sanoo molemmat asiat ääneen, joten heroksi valittiin
+ *     Vorontsovin kolonnadi. (LUONNOS 5.9.2026: rajoitus ei enää seuraa
+ *     K6:sta vaan K2:sta ja siitä, että ratkaisu on jo tehty — kuvaa ja
+ *     täkyä ei kirjoiteta uusiksi kysymyksen vaihtumisen takia.)
  *   - KATAKOMBEISTA EI OLE TÄKYÄ (K7), vaikka aihe on kaupungin
  *     kuuluisin: kulttuurivisa kysyy juuri sen, ja js/fokustehtavat.js
  *     pukee sen sivun 1 AARTEEN AVAUS -laatikoksi.
@@ -866,72 +882,57 @@ export const FOKUSVIRTA_ODESSA = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * FABLE KATSELMOI: kohtaamisluonnos
+   * LUONNOS 5.9.2026, Fable tarkistaa.
    *
-   * TÄMÄ TEKSTI ON EHDOTUS EIKÄ KAANONIA. Hahmo, laattakysymys ja
-   * kohtaamisen oma repliikki ovat tarinakaaren paketissa
-   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, 'odessa'):
-   * lyhdynsytyttäjä Fjodor sytyttää portaikon lyhdyt joka ilta alhaalta
-   * ylös ja sammuttaa ne aamulla ylhäältä alas. Luonnos käyttää samaa
-   * hahmoa, koska kaupungilla on jo hänet — uusi nimi tekisi kaupunkiin
-   * kaksi eri vartijaa.
+   * HAHMO VAIHDETTU: lyhdynsytyttäjä Fjodor → torimyyjä Iryna
+   * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 19:05 UTC:
+   * *"Fjodor, lyhtylupaus ja 192 askelman visa poistuvat"*). Hahmo,
+   * laattakysymys ja kohtaamisen oma repliikki ovat tarinakaaren
+   * paketissa (js/tyohuone-kehitys-data.js KAARI_PAKETIT, 'odessa').
+   * Aikuinen tytär Solomiia on kuvan ja kaaren toinen ihminen; tämä
+   * kortti ei kertaa kummankaan repliikkiä.
    *
-   * MITÄ LUONNOS EI TEE: se ei kertaa Fjodorin repliikkiä, ei mainitse
-   * merimiessolmua eikä sytyttämättä jätettyä lyhtyä, koska ne ovat
-   * kaaren oma juoni ja aarteen palkinto (kätkö on juuri sen lyhdyn
-   * jalustassa). Se ei myöskään laske askelmia eikä selitä portaiden
-   * optista temppua: ne ovat laattakysymyksen vastaus ja faktarivi
-   * (ks. SPOILERIT, K6).
+   * MITÄ TÄMÄ KORTTI EI TEE: se ei mainitse kuittia, sen nurjaa puolta,
+   * kirjan takakannen taskua eikä vaakahuonetta — ne ovat kaaren oma
+   * juoni ja aarteen palkinto. Se ei myöskään selitä vapaasataman
+   * tullietua: se on nyt laattakysymyksen vastaus (SPOILERIT, K6), ja
+   * sen opettaminen kuuluu oppitunnille.
    *
-   * MITÄ LUONNOS YRITTÄÄ (docs/moduulit/tarinakaari.md, luku 3 ja 5):
-   *   - SUVUN JATKUMO ilman ostettua järjestelyä. Fjodor kiertää samaa
-   *     reittiä kuin isänsä ja tämän isä, ja syy jatkaa on suvun oma:
-   *     kierros on hänen työnsä, ei kenenkään toivomus, eikä siitä ole
-   *     koskaan maksettu ylimääräistä.
-   *   - ÄÄNIPROFIILI ON PUHELIAS. Aallon vartijoista Marseillen
-   *     Baptiste on epäuskoinen ja Odessan Fjodor on se, joka puhuu
-   *     liikaa ja mielellään — hän tuntee lyhtynsä äänestä ja kertoo
-   *     sen kysymättä.
-   *   - VARALLISUUSSÄÄNTÖ tarkistettu virke virkkeeltä: isoisä ei maksa
-   *     mitään, ei tilaa mitään eikä käske ketään.
-   *   - PORTINVARTIJAKYSYMYS johtaa kaaren omaan laattakysymykseen
-   *     paljastamatta sitä: Fjodor haluaa tietää, onko tulija laskenut
-   *     askelmat vai vain katsonut niitä. Lupaus on käsin kosketeltava
-   *     teko — hän raapaisee tulen — ja se lunastuu aarteessa.
+   * ÄÄNIPROFIILI: Iryna on se, joka HÄMMÄSTYY ITSEKIN. Fjodor oli
+   * puhelias kertoja; Iryna on ammattilainen, joka ei usko tarinaa
+   * mutta uskoo paperia — ja yllättyy siitä, mitä paperissa lukee.
    *
-   * KUVAA EI OLE (aallon 4C rajaus). Kortti rakennetaan ilman kuvaa
-   * aivan kuten Marseillessa, Sevillassa ja Amsterdamissa.
+   * VARALLISUUSSÄÄNTÖ tarkistettu virke virkkeeltä: isoisä ei maksa
+   * mitään, ei tilaa mitään eikä käske ketään. Irynan syy auttaa on
+   * hänen oma ammattiylpeytensä.
    */
   kohtaaminen: {
-    hahmo: 'Lyhdynsytyttäjä Fjodor',
-    nappi: 'Tapaa lyhdynsytyttäjä',
+    hahmo: 'Torimyyjä Iryna',
+    nappi: 'Tapaa Iryna',
     /*
      * VARMISTUSKYSYMYS (omistajan pelitestipalaute v1119): lause on
      * datassa, koska suomen genetiivi ei taivu koneellisesti jokaisesta
      * nimestä.
      */
-    varmistus: 'Haluatko varmasti tavata Fjodorin juuri nyt?',
+    varmistus: 'Haluatko varmasti tavata Irynan juuri nyt?',
     /*
      * VIHJELINKIN OSIO on kaupunkilehden osion id (js/packs/
      * kulttuuri-kategoriat.js): Odessan lehdessä on kaksi osiota,
-     * 'kaupunki' ("Odessa") ja 'arki' ("Arki ja tavat"). Fjodorin
-     * kysymys koskee portaikkoa, ja sen tuki on kaupunkisivun puolella —
-     * lehden kansi ja kaupunkisivu ovat ne, joissa portaikko esiintyy.
-     * Rivi kertoo suunnan, ei vastausta.
+     * 'kaupunki' ("Odessa") ja 'arki' ("Arki ja tavat"). Irynan kysymys
+     * koskee vapaasatamaa, ja sen tuki on kaupunkisivun puolella —
+     * "Matkailijan Odessa" -artikkelin jakso "Neljäkymmentä vuotta
+     * vapaasatamana" on siellä. Rivi kertoo suunnan, ei vastausta.
      */
     vihjeOsio: 'kaupunki',
-    teksti: 'Fjodor kiertää portaikon lyhdyt joka ilta alhaalta ylös ja '
-      + 'sammuttaa ne aamulla ylhäältä alas, samaa reittiä kuin hänen '
-      + 'isänsä ja tämän isä ennen häntä. Hän puhuu paljon ja mielellään: '
-      + 'jokaisella lyhdyllä on hänen mukaansa oma äänensä, ja hän '
-      + 'väittää erottavansa ne toisistaan pimeässä pelkästä kolahduksesta. '
-      + 'Kierrosta ei ole kukaan tilannut suvulta eikä siitä ole koskaan '
-      + 'maksettu ylimääräistä — se vain jatkuu, koska Fjodor pitää sitä '
-      + 'työnään ja koska joku nousee portaat aina myöhään. Vieraita hän '
-      + 'kestää hyvin. Sen sijaan hän ei pidä siitä, että portaikosta '
-      + 'puhutaan kuin se olisi elokuvan lavaste. Ennen kuin hän raapaisee '
-      + 'tulen, hän haluaa kuulla, onko tulija laskenut askelmat vai vain '
-      + 'katsonut niitä.',
+    teksti: 'Iryna punnitsee samoilla vaaoilla kuin hänen äitinsä ja '
+      + 'tuntee tavaran painon kädestä ennen kuin osoitin pysähtyy. '
+      + 'Tarinoita hän kuulee torilla joka päivä eikä usko niistä '
+      + 'yhtäkään, mutta vanhaa paperia hän käsittelee huolella: '
+      + 'kaupankäynnin merkinnät ovat hänen ammattinsa, ja hän lukee '
+      + 'niitä mielellään ääneen. Tytär Solomiia laskee laatikot ja '
+      + 'nauraa äitinsä puheelle. Ennen kuin Iryna lukee vieraan '
+      + 'paperin loppuun, hän haluaa tietää, ymmärtääkö tulija, '
+      + 'millaisessa satamassa se on kirjoitettu.',
   },
 
   /*
@@ -941,44 +942,47 @@ export const FOKUSVIRTA_ODESSA = {
    */
 
   /*
-   * KOHTAAMISPAIKKA: PORTAIKON PUOLIVÄLIN TASANNE. Fjodor on
-   * lyhdynsytyttäjä, ja tarinakaaren paketti sijoittaa hänet
-   * nimenomaan tasanteelle ("Tasanteella Fjodor nojaa
-   * lyhtytankoonsa"; "Puolivälin tasanteella lyhtypylvääseen oli
-   * sidottu köydenpätkä").
+   * LUONNOS 5.9.2026, Fable tarkistaa.
    *
-   * 46,48917 N / 30,74333 E — en-Wikipedia "Potemkin Stairs",
-   * prop=coordinates (haettu 30.8.2026). Muunnos on sama kaava ja samat
+   * KOHTAAMISPAIKKA VAIHDETTU: PORTAIKON PUOLIVÄLIN TASANNE → PRIVOZIN
+   * TORI. Vanha piste kuului lyhdynsytyttäjä Fjodorille, jonka koko
+   * kertomus poistui; uusi kaari sijoittaa Irynan ja Solomiian torin
+   * katoksen alle, ja kätkö löytyy torin vanhan vaakahuoneen kohdalta.
+   * Vaakahuone on kaaren fiktiota, joten pistettä EI ole ankkuroitu
+   * siihen vaan itse toriin. Privoz on kuvaputken ehdotuksessa
+   * paikkaehdokas; myyntiympäristö ja nykyinen pääsy varmistetaan
+   * kuvausvaiheessa.
+   *
+   * 46,46972222 N / 30,7325 E — uk-Wikipedia "Привоз (Одеса)",
+   * prop=coordinates (haettu 5.9.2026). Muunnos on sama kaava ja samat
    * vakiot kuin fokuskohteilla: maailmankartalla Millerin lieriö
    * LEVEYS 12000 / LON0 −175 / POHJOINEN 76 (tools/fokuskartta/piirto.js
    * laudanProjektio), Euroopan laudalla x = (lon + 11) × 19,2 ja
    * y = (72 − lat) × 26,3.
    *
-   * LASKU (ajettu tools/fokuskartta/piirto.js:n omalla kaavalla):
-   *   maailmankartta  x = ((30,74333 − (−175)) mod 360) × (12000/360)
-   *                     = 205,74333 × 33,3333… = 6858,1
-   *                   y = (millerY(46,48917) − millerY(76)) × 12000/2π
-   *                     = 1539,9
-   *   europe          x = (30,74333 + 11) × 19,2 = 801,5
-   *                   y = (72 − 46,48917) × 26,3 = 670,9
+   * LASKU (ajettu laudanProjektion omalla kaavalla; sama ajo toisti
+   * vanhan portaikkopisteen lukemat 6858,1 / 1539,9 ja 801,5 / 670,9,
+   * eli kaava on varmasti sama kuin tässä tiedostossa ennenkin):
+   *   maailmankartta  x = ((30,7325 − (−175)) mod 360) × (12000/360)
+   *                     = 205,7325 × 33,3333… = 6857,8
+   *                   y = (millerY(76) − millerY(46,46972222)) × 12000/2π
+   *                     = 1540,8
+   *   europe          x = (30,7325 + 11) × 19,2 = 801,3
+   *                   y = (72 − 46,46972222) × 26,3 = 671,4
    *
    * TARKISTUS ODESSAN LAATTAA VASTEN. Laatta on Euroopan laudalla
    * 800 / 669 (js/packs/europe.js) ja maailmankartalla 6855,6 / 1536,9
-   * (js/packs/maailmankartta.js). Portaikko on kaupungin laatan
-   * vieressä molemmilla laudoilla — Euroopan laudalla noin 2,4 ja
-   * maailmankartalla noin 3,9 yksikön päässä — eli selvästi
-   * js/fokuspiste.js:n PISTE_ERO_MIN -rajan (14) sisällä, ja piirtopuoli
-   * siirtää merkin itse koilliseen laatan vierestä. Sama tilanne kuin
-   * Tukholmassa ja Marseillessa, ja se on oikein: portaikko ON
-   * kaupungin keskusta, eikä pistettä ole vedetty kauemmas vain siksi,
-   * että se erottuisi. Kumpaakaan lukua ei ole vedetty laatan mukaan:
-   * piste on laskettu maastoa vasten kuten muissakin paketeissa.
+   * (js/packs/maailmankartta.js). Tori on laatan vieressä molemmilla
+   * laudoilla — Euroopan laudalla noin 2,7 ja maailmankartalla noin 4,4
+   * yksikön päässä — eli selvästi js/fokuspiste.js:n PISTE_ERO_MIN
+   * -rajan (14) sisällä, ja piirtopuoli siirtää merkin itse laatan
+   * vierestä. Lukuja ei ole vedetty laatan mukaan.
    */
   kohtaamispiste: {
-    nimi: 'Portaikon puolivälin tasanne',
+    nimi: 'Privozin tori',
     laudat: {
-      maailmankartta: { x: 6858.1, y: 1539.9 },
-      europe: { x: 801.5, y: 670.9 },
+      maailmankartta: { x: 6857.8, y: 1540.8 },
+      europe: { x: 801.3, y: 671.4 },
     },
   },
 
