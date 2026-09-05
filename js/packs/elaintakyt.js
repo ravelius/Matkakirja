@@ -63,6 +63,61 @@
  * repoon työkalulla tools/elaintakykuvat.mjs (960 px, laatu 0,82) eikä
  * niitä ladata palvelutyöntekijän esilataukseen: 29 kuvaa paisuttaisi
  * asennuksen, ja kortin kuva haetaan vasta kun kortti avataan.
+ *
+ * ── KAKSI KUVAA SAMASTA AIHEESTA (omistajan päätös 5.9.2026) ───────
+ *
+ * Raamatun osio "ELAINKUVIIN TARINAA, KAKSI KUVAA SAMASTA AIHEESTA",
+ * omistajan päätös sanatarkasti: *"samasta eläinaiheesta voi olla
+ * kaksi erilaista hyväksyttyä kuvaa, ja kortilla ne näytetään
+ * KARUSELLINA (kuva vaihtuu pyyhkäisyllä kuten lehden alarivin
+ * karuselli, pisteet kertovat määrän, kummallakin kuvalla oma
+ * kuvateksti)"*.
+ *
+ * Tietue kantaa siksi joko YHDEN kuvan entisillä kentillä (`kuva`,
+ * `kuvaLahde`) tai KUVALISTAN `kuvat`-kentässä. Molemmat luetaan
+ * yhdestä funktiosta (elaintakynKuvat alempana), joten kortti,
+ * savukkeet ja testit näkevät tietueen aina samassa muodossa eikä
+ * yksikään vanha tietue muutu tavuakaan.
+ *
+ * KUVAPUTKEN TOIMITUSMUOTO ON KAKSI TUNNUSTA: <aihe>-a ja <aihe>-b
+ * (tai muu yksilöllinen pääte). Tunnus ilman kauttaviivaa tarkoittaa
+ * aina ämpäriä (js/media.js assetOsoite: `kohtaamiset/elaimet/<tunnus>
+ * .jpg`), joten toinen kuva ei tarvitse repoon tiedostoa eikä riviä
+ * mihinkään muualle kuin tähän tauluun. Kun kuvaputki on toimittanut
+ * parin, tietue kirjoitetaan näin — ESIMERKKI, EI OIKEAA DATAA (kuvia
+ * ei vielä ole):
+ *
+ *     FIN: {
+ *       elain: 'saimaannorppa',
+ *       otsikko: 'Järven oma hylje',
+ *       teksti: '…',
+ *       lahde: 'en-Wikipedia "Saimaa ringed seal". Tarkistettu 1.9.2026.',
+ *       kuvat: [
+ *         {
+ *           tiedosto: 'elain-fin-a',
+ *           kuvateksti: 'Norppa lepäilee kevätjäällä Saimaalla.',
+ *           lahde: 'Matkakirjan havainnekuva',
+ *         },
+ *         {
+ *           tiedosto: 'elain-fin-b',
+ *           kuvateksti: 'Poikanen kolopesän suulla.',
+ *           lahde: 'Matkakirjan havainnekuva',
+ *         },
+ *       ],
+ *       lon: 28.4,
+ *       lat: 61.4,
+ *     },
+ *
+ * ENSIMMÄINEN ON ENSISIJAINEN: se on kortin avautuessa näkyvä kuva ja
+ * se, jonka kuvateksti luetaan ensin. Kuvia on yksi tai kaksi
+ * (tests/elaintakyt.test.mjs vartioi rajan) — kolmas ei ole kortin
+ * mitta vaan galleria, ja se olisi eri päätös.
+ *
+ * KENTÄT: `tiedosto` on ämpäritunnus tai repon polku, `kuvateksti`
+ * tämän kuvan oma selite (ilman sitä kortti latoo entisen
+ * "Eläin, Maa" -selitteen), `lahde` KUVAN lähde — ei tietueen
+ * `lahde`, joka on kortin TEKSTIN lähde — ja `url` valmis kuvaosoite
+ * silloin, kun kuva ei tule pelin omasta kansiosta eikä ämpäristä.
  */
 
 /** Maatunnus → eläintäky. Avaimet ovat laudan countryShapes-tunnuksia. */
@@ -399,3 +454,47 @@ export const ELAINTAKYT = {
 
 /** Maatunnukset siinä järjestyksessä kuin ne on kirjoitettu. */
 export const ELAINTAKY_MAAT = Object.keys(ELAINTAKYT);
+
+/**
+ * TIETUEEN KUVAT YHDESSÄ MUODOSSA — yksi funktio, kaksi kirjoitustapaa.
+ *
+ * Kortti (js/elaintaky.js), savukkeet ja testit lukevat kuvat vain
+ * tästä, jotta uusi `kuvat`-lista ja vanhat `kuva`/`kuvaLahde`-kentät
+ * eivät voi ajautua eri tulkintoihin. Palautuu aina taulukko, jonka
+ * ENSIMMÄINEN alkio on ensisijainen kuva.
+ *
+ * KUVAN LÄHDE ON ERI KENTTÄ KUIN TEKSTIN. Vanhassa tietueessa
+ * `lahde` on kortin TEKSTIN lähde (en-Wikipedian artikkeli) ja
+ * `kuvaLahde` kuvan oma — ne eivät saa sekoittua, koska pelin oma
+ * havainnekuva näyttäisi silloin Wikipedian kuvalta (korjaus
+ * 2.9.2026, js/elaintaky.js). Uudessa `kuvat`-listassa alkion oma
+ * `lahde` on jo kuvan lähde, koska tekstillä on oma kenttänsä
+ * tietueen juuressa.
+ *
+ * TYHJÄ TULOS ON KELVOLLINEN VASTAUS: kuvaton tietue on kortissa
+ * sallittu tila (teksti kantaa kortin yksinkin), joten funktio ei
+ * keksi puuttuvaa tiedostoa.
+ *
+ * @param {object} taky yksi ELAINTAKYT-tietue
+ * @returns {{tiedosto: string, kuvateksti: string, lahde: string,
+ *   url: string}[]} kuvat ensisijainen ensin
+ */
+export function elaintakynKuvat(taky) {
+  if (!taky) return [];
+  const rivit = Array.isArray(taky.kuvat) && taky.kuvat.length
+    ? taky.kuvat
+    // Vanha tietue on yhden kuvan lista: kentät ovat juuressa.
+    : [{ tiedosto: taky.kuva, kuvateksti: taky.kuvateksti, lahde: taky.kuvaLahde }];
+  return rivit
+    .filter(Boolean)
+    .map((kuva) => ({
+      tiedosto: kuva.tiedosto ?? '',
+      // `selite` kelpaa myös: se on valokuvatietueiden kenttä
+      // (js/packs/europe-valokuvat.js), eikä kahta nimeä samalle
+      // asialle kannata kaataa kuvaputken päälle.
+      kuvateksti: kuva.kuvateksti ?? kuva.selite ?? '',
+      lahde: kuva.lahde ?? '',
+      url: kuva.url ?? '',
+    }))
+    .filter((kuva) => kuva.tiedosto || kuva.url);
+}
