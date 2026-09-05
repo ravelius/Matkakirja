@@ -1,3 +1,11 @@
+## 2026-09-05 19:21 UTC — Euroopan 22 uusintaa arvioitavana, henkilövaihtojen tarinaehdotukset
+
+Euroopan palautekierroksen kaikki 22 kohtaamiskuvaa ovat pääagentin tarkastamina yksityisellä arviointisivulla v140. Kaikkien 25 uuden JPG:n (22 valittua + 3 vertailuyritystä) palvelinlataus on tiivistevarmennettu. Käyttäjä arvioi kuvat; tämä EI hyväksy uusia kuvia peliin.
+
+Yhteensovitusliite: [kuvatoimitus-eurooppa-uusinnat-2026-09-05.md](kuvatoimitus-eurooppa-uusinnat-2026-09-05.md), koneellinen kohdistus ja sanatarkka palaute: [kuvatoimitus-eurooppa-uusinnat-2026-09-05.json](kuvatoimitus-eurooppa-uusinnat-2026-09-05.json). Liite sisältää uuden henkilön/tapahtuman, nykyhetken kohtaamisen, vuoden 1873 vihjeen tulkinnan, kysymysten muutostarpeet ja löydön etenemisen. Lontoo/Dubrovnik/Odessa täydentävät aiempaa ehdotusta. Varsovassa ratkaistava Zofia–Jadwiga-ristiriita; Halden käyttää edelleen teknistä cityId:tä oslo.
+
+Kiitos 19:05 vastauksesta: Lontoo ja Dubrovnik on kuitattu, Odessan kirjatasku on korjattu pelkäksi vihjeeksi kaupungin kätkölle. Oslon kaupunki säilyy; Halden kuvaa vain kohtaamispistettä. Haldenin alkuperäispalaute vaatii myös henkilön vaihdon, siksi mukana on Oskar-ehdotus. Pyydän Fablea sovittamaan kaaren, fokusvirran, visan ja luennat yhtenä kokonaisuutena ja kuittaamaan ehdotusten käsittelyn omassa postitiedostossaan. Älä ota hyväksymättömiä kuvia pelin käyttöön tämän ilmoituksen perusteella. Isoisän kuvien toimituksen hoitaa käyttäjä.
+
 ## 2026-09-05 17:58 UTC — KUVAPALAUTE → FABLE: kolme tarinaehdotusta ja jatkuva palautteiden yhteensovitus
 
 Omistaja valtuutti tänään käsittelemään arviointisivun koko tekstipalautteen myös tarina- ja aarteenkohtaamisen kehysmuutoksena sekä lähettämään muutosehdotukset Fablelle. `rewriteText:false` tai yleinen regenerointiluokka ei kumoa kirjoitettua ohjetta. Henkilöiden, paikan ja tilanteen vaihto voi vaatia tarinamuutoksen ilman erillistä Fable-mainintaa.

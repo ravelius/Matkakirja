@@ -1,0 +1,1297 @@
+{
+  "createdAt": "2026-09-05 19:21 UTC",
+  "mainCommitChecked": "640493132e5863a87d0ecb906bbd78b687036b20",
+  "sourceVerification": {
+    "auditMainCommit": "7c659d984ccaf0b1664281d9df0169ecc33160e6",
+    "changedSinceAudit": [
+      "js/main.js",
+      "js/muutokset.js",
+      "js/pallo.js",
+      "js/pallolauta/kamera.js",
+      "js/pallolauta/lauta.js",
+      "sw.js",
+      "tests/pallo.test.mjs"
+    ],
+    "kaariAndRelevantFocusFilesUnchanged": true,
+    "runtimeAdapter": {
+      "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/tarinakaari.js",
+      "gitPath": "js/packs/tarinakaari.js",
+      "lines": [
+        6,
+        14,
+        27,
+        60
+      ]
+    }
+  },
+  "reviewSiteVersion": 140,
+  "status": "22 images awaiting user review; story proposals for alignment, not game approval",
+  "comparisonOnlyRejectedIds": [
+    "amsterdam-yara-feedback-r20260905-v1",
+    "islanti-einar-feedback-r20260905-v1",
+    "kiova-taras-feedback-r20260905-v1"
+  ],
+  "rows": [
+    {
+      "cityId": "alpit",
+      "city": "Suuri Sankt Bernhard",
+      "imageId": "alpit-anselm-feedback-r20260905-v1",
+      "replacesImageId": "alpit-anselm-r20260905-redo-v2",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/alpit-anselm-feedback-r20260905-v1.jpg",
+      "imageSha256": "ff3dc73f80309189c851fe74ad63ed0124bdd8db4d54575a52492b3055162c01",
+      "character": "Anselm — hospitsiveli",
+      "caption": "Anselm pysähtyy aurinkoisella vuoripolulla. Bernhardinkoira painaa kuononsa hänen poskeensa juuri kun matkaaja kysyy aarteesta.",
+      "imageSourceNote": "Avoin kesäinen vuoristoluonto, vanhan miehen häkeltynyt katse ja koiran painava läheisyys. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Fondation Barry — Great Saint Bernard Pass",
+          "url": "https://www.fondation-barry.ch/en/experiences/great-saint-bernard-pass-85/"
+        },
+        {
+          "label": "Cédric Widmer — kesäinen sola, katsottu paikkareferenssi",
+          "url": "https://www.fondation-barry.ch/files/c-Cedric-Widmer_col_1304-129.jpg"
+        }
+      ],
+      "userApproved": true,
+      "currentUserReview": {
+        "imageId": "alpit-anselm-feedback-r20260905-v1",
+        "status": "jatkoon_v2",
+        "workflowStatus": "accepted",
+        "suggestion": "",
+        "regenerationPrompt": "",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-05T19:08:26.052Z"
+      },
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Tämä voisi olla enemmän luonnossa otettu kuva. Ja auringon paisteessa.",
+      "feedbackUpdatedAt": "2026-09-05T17:21:38.960Z",
+      "requestIds": [
+        "57b10846-9cd0-42e0-96e1-828bd06ff6bb"
+      ],
+      "proposal": {
+        "change": "Anselm säilyy. Kohtaaminen siirtyy aurinkoiseen luontoon ja koiran kuono keskeyttää hänen vastauksensa.",
+        "frame": "Päivitä vain saapuminen ulkona tapahtuvaan koirien ulkoilutukseen hospitsin lähistöllä. Säilytä henkilön nykyinen rooli ja kirjan vihjeen ydin.",
+        "encounter": "Koira työntää kuonon Anselmin poskelle juuri aarrekysymyksen hetkellä. Hämmästys ja nauru; sama Anselm kääntää katseensa matkaajaan.",
+        "quizAction": "Säilytä nykyinen bernhardilaiskoirien pelastustyötä koskeva kysymys ja vastaus.",
+        "treasure": "Säilytä nykyinen röykkiöön liittyvä löytöketju, jos se pysyy paikan ja luvallisen toiminnan kannalta johdonmukaisena. Kuvamuutos ei vaadi uutta perhetaustaa tai palkintomekaniikkaa."
+      },
+      "currentCanonQuestion": "Alppien solissa pelastustyötä tekivät kuuluisat bernhardilaiskoirat. Mistä ne tunnetaan?",
+      "currentCanonCorrectAnswer": "Ne etsivät lumeen eksyneitä ja hautautuneita kulkijoita",
+      "currentCanonTreasure": "Koira kaivoi kätkön röykkiöstä. \"Se ei kaivanut hajun takia\", Anselm sanoi, \"kivet on ladottu tänä kesänä.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 896,
+          "questionLine": 914,
+          "answerOptionsLine": 916,
+          "treasureLine": 928,
+          "selector": "KAARI_PAKETIT.kohteet[id=alpit]"
+        },
+        "focus": null
+      }
+    },
+    {
+      "cityId": "amsterdam",
+      "city": "Amsterdam",
+      "imageId": "amsterdam-yara-feedback-r20260905-v2",
+      "replacesImageId": "amsterdam-willem-strength-r20260905-v1",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/amsterdam-yara-feedback-r20260905-v2.jpg",
+      "imageSha256": "423832758d869afdc42c13bbce5c9c4cf784dfd94b43c22794200d12c2b3e910",
+      "character": "Yara — muuttoryhmän vetäjä",
+      "caption": "Yara on keskeyttänyt kanavatalon muuton vastatakseen matkaajalle. Yläikkunasta kurkistava työpari odottaa lupaa jatkaa, kun aarrekysymys muuttaa tilanteen suunnan.",
+      "imageSourceNote": "Uusi henkilö ja toiminta, joka liittyy suoraan kanavatalojen nostokoukkuihin. Talojen mittasuhteet perustuvat paikkakuvaan; muutto ja henkilöt ovat fiktiivisiä. Kokonaan uusi generointi; paikkareferenssi ei ole kuva pelin fiktiivisestä henkilöstä.",
+      "webReferenceUrls": [
+        {
+          "label": "I amsterdam — Bridges of Amsterdam, Torensluis",
+          "url": "https://www.iamsterdam.com/en/see-and-do/attractions-and-sights/bridges-of-amsterdam"
+        }
+      ],
+      "userApproved": true,
+      "currentUserReview": {
+        "imageId": "amsterdam-yara-feedback-r20260905-v2",
+        "status": "jatkoon_v2",
+        "workflowStatus": "accepted",
+        "suggestion": "",
+        "regenerationPrompt": "",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-05T19:08:45.966Z"
+      },
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+      "feedbackUpdatedAt": "2026-09-05T17:36:44.183Z",
+      "requestIds": [
+        "b8dfecae-2a0e-4041-9692-90e11a9feb3f"
+      ],
+      "proposal": {
+        "change": "Willem vaihtuu 35-vuotiaaseen muuttotyöntekijä Yaraan. Köysi ja taitettu suojahuopa, nojatuoli maassa, työpari yläikkunassa.",
+        "frame": "Kirjan piirros esittää kanavatalon nostokoukkua ja toimitusmerkintää. Yara tunnistaa nykyisen talon mittasuhteet oman työnsä kautta; hän ei tunne Horatiota eikä odota perillistä.",
+        "encounter": "Yara keskeyttää muuton valmistelun ja puntaroi tulijaa: Aarretta? Meillä olisi yksi todella painava nojatuoli. Piirroksen koukku saa hänet vilkaisemaan yläkertaan.",
+        "quizAction": "Säilytä nykyinen koukkujen käyttötarkoitus → huonekalujen nosto ikkunoista kapeiden portaiden vuoksi. Tämä osuu nyt suoraan kuvan toimintaan.",
+        "treasure": "Vanha toimitusmerkintä osoittaa fiktiivisen talon ullakolla säilytettyyn irtaimeen laatikkoon, johon mennään asukkaan luvalla. Sen pohjassa oleva paketti on pelin tulokseen sidottu löytö. Poista siltakampi, sillan kammio ja veneen nimellä avautuneen sillan vanha ketju."
+      },
+      "currentCanonQuestion": "Amsterdamin vanhojen talojen päädyssä on melkein aina koukku katonrajassa. Mitä varten?",
+      "currentCanonCorrectAnswer": "Huonekalut nostetaan sisään ikkunoista, koska portaat ovat liian kapeat",
+      "currentCanonTreasure": "Kätkö odotti sillan kammiossa, öljykankaaseen käärittynä. Willem osoitti kirjan viimeistä riviä: \"Joku on avauttanut sillan isoisäsi veneen nimellä — viime keväänä.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 594,
+          "questionLine": 611,
+          "answerOptionsLine": 613,
+          "treasureLine": 628,
+          "selector": "KAARI_PAKETIT.kohteet[id=amsterdam]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-amsterdam.js",
+          "gitPath": "js/packs/fokusvirta-amsterdam.js",
+          "exportName": "FOKUSVIRTA_AMSTERDAM",
+          "encounterLine": 655,
+          "treasureLine": 1153
+        }
+      }
+    },
+    {
+      "cityId": "ateena",
+      "city": "Ateena",
+      "imageId": "ateena-dafni-feedback-r20260905-v1",
+      "replacesImageId": "ateena-nikos-r20260905-redo-v1",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/ateena-dafni-feedback-r20260905-v1.jpg",
+      "imageSha256": "8413fc467c5744ab1f648a09a521021cf3433d473d298c0b16ba09ead27ddddc",
+      "character": "Dafni — marmorikonservaattori",
+      "caption": "Dafni sulkee työpäivää Parthenonin luona ja arvioi matkaajaa vakavana. Taempana pieni minervanpöllö on asettunut kiven reunaan.",
+      "imageSourceNote": "Uusi henkilö ja hämärtyvä ilta tutussa marmoriympäristössä. Pöllö on fiktiivinen, Ateenan kaupunkiluontoon mahdollinen sivuhavainto; se ei ole kesytetty eläin tai yliluonnollinen merkki. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "YSMA — Parthenonin oikea restaurointiympäristö",
+          "url": "https://www.ysma.gr/en/monuments/parthenon/ongoing-interventions/"
+        },
+        {
+          "label": "Hellenic Ornithological Society — Ateenan kallioiden ja rakennusten pöllöt",
+          "url": "https://files.ornithologiki.gr/newsletter/1/"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": {
+        "imageId": "ateena-dafni-feedback-r20260905-v1",
+        "status": "uusiksi_v2",
+        "workflowStatus": "regenerate",
+        "suggestion": "Tee ilman pöllöä",
+        "regenerationPrompt": "Make ONE entirely NEW square 1536x1536 photograph, genuinely photorealistic contemporary Athens, not a painted ancient reconstruction. Use the supplied actual YSMA restoration photograph to keep Parthenon columns, incomplete entablature and marble blocks honest. Near a secured conservation work area at the Parthenon at the end of the working day, blue-hour dusk with the last narrow amber sunset grazing marble. NEW fictional principal person, Dafni, a Greek female marble conservator about 34 with a strong long face, olive skin, dark curly hair cut just below the jaw and partly tucked behind ears. Practical deep burgundy work sweatshirt, grey canvas work trousers; clear safety glasses resting correctly on her head, hands resting on the edge of a wooden equipment case she was closing. The unseen traveler has abruptly asked her about an old treasure. Her body is angled away but her head turns squarely towards us; BOTH EYES look directly into the CAMERA LENS. Striking stillness and concentrated intensity: a slight skeptical furrow, one eyebrow lifted, lips lightly pressed with a nearly hidden amused corner. Assessing whether the stranger is serious, not smiling for a portrait and not theatrical horror. A small REALISTIC little owl Athene noctua sits on a distant freestanding stone block to one side in the mid-background, well away from the person, naturally small (about 8 percent of frame height), brown mottled plumage and no ear tufts. It is a quiet secondary discovery. Keep existing temple unaltered, no owl on her arm. Last warm low sunlight touches her cheek and eyes while cool evening ambient lights the shadow side; pale columns recede into blue twilight, beautifully controlled luminous tones, no fake haze or floodlit yellow filter. A slightly low 50mm medium portrait from waist upward, face large and both eyes razor-clear, whole hair and hands inside image, temple columns create strong vertical rhythm with the owl off-axis. Natural f/5.6 depth keeps owl identifiable; skin and stone resolve as a true photograph, no gritty oversharpening, no creamy bokeh circles. No other person, text, watermark, fantasy props, treasure, border or vignette.",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-05T19:09:22.106Z"
+      },
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Ympäristö on hyvä, muuta vuorokauden aikaa ja henkilöä. Kuvassa voisi olla myös pöllö, mikä se on Atenassa mahdollista. Siis jossain vähä taustalla.",
+      "feedbackUpdatedAt": "2026-09-05T17:13:55.293Z",
+      "requestIds": [
+        "b468396e-fe82-413e-ab4a-eec3d732cbd1"
+      ],
+      "proposal": {
+        "change": "Nikos vaihtuu Dafniin, 34-vuotiaaseen marmorikonservaattoriin. Työpäivän loppu Akropoliilla, laatikko kädessä ja pieni pöllö taaempana.",
+        "frame": "Horatio kirjoittaa oliivipuun ja vanhan työmaan luonnoksesta. Nykyinen Dafni ei tunne häntä; piirroksen mittamerkintä muistuttaa hänelle arkistoon talletettua tutkimuskuvaa.",
+        "encounter": "Pelaaja pysäyttää lähtevän Dafnin. Hän arvioi vierasta vakavasti: Mistä sait tämän luonnoksen? Odota — tuon kulman minä tunnen.",
+        "quizAction": "Säilytä nykyinen Athenen oliivipuuta koskeva kysymys, oikea vastaus ja oppitunti. Pöllö on kuvan luonteva sivuhavainto, ei aarteen yliluonnollinen vartija.",
+        "treasure": "Dafni vertaa luonnosta luvallisesti luettavaan tutkimuskopioon. Sen säilytyskuoresta löytyy kirjan merkintää vastaava vanha viesti ja pelin tuloksen mukainen löytö. Korvaa pylvään onkalon avaaminen ja marmorinveistäjä/vartija-Nikos kaikissa rinnakkaisissa poluissa.",
+        "latestFeedbackOverridesImage": "UUSI palaute 19:09 UTC: Tee ilman pöllöä. Dafni-ehdotuksen taustapöllö poistetaan seuraavasta kuvasta ja tekstin kuvasidonnaisista maininnoista."
+      },
+      "currentCanonQuestion": "Kaupunki on nimetty jumalattaren mukaan. Millä lahjalla Athene tarun mukaan voitti kaupungin itselleen?",
+      "currentCanonCorrectAnswer": "Oliivipuulla, jonka hän kasvatti Akropoliin kalliolle",
+      "currentCanonTreasure": "Nikos nosti rahan: sen alla, pylvään onkalossa, odotti kätkö. Hän katsoi rinteeseen: \"Pöllö palaa pylväälle joka ilta — meillä sanotaan, että se vartioi vielä jotakin.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 512,
+          "questionLine": 535,
+          "answerOptionsLine": 537,
+          "treasureLine": 551,
+          "selector": "KAARI_PAKETIT.kohteet[id=ateena]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-ateena.js",
+          "gitPath": "js/packs/fokusvirta-ateena.js",
+          "exportName": "FOKUSVIRTA_ATEENA",
+          "encounterLine": 366,
+          "treasureLine": 463
+        }
+      }
+    },
+    {
+      "cityId": "dublin",
+      "city": "Dublin",
+      "imageId": "dublin-eamon-feedback-r20260905-v1",
+      "replacesImageId": "dublin-molly-strength-r20260905-v1",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/dublin-eamon-feedback-r20260905-v1.jpg",
+      "imageSha256": "fb2b678a4cb72efe75330dc9e9d59b56a8dc286bd1ba0b36ad45e5c4110a82ac",
+      "character": "Eamon — jokiristeilyn lipunmyyjä",
+      "caption": "Eamon katsoo matkaajaa lipputiskin lasin läpi. Tavallinen lippuostos muuttuu oudoksi keskusteluksi aarteesta, ja hänen kuiva ilmeensä alkaa murtua.",
+      "imageSourceNote": "Käyttäjän toivoma uusi henkilö ja lasi pelaajan sekä virkailijan välissä. Jokiristeilyn toimisto on fiktiivinen; Ha’penny Bridgellä ei esitetä perittävän nykyistä siltamaksua. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Dublin City Film Office — Ha'penny Bridge",
+          "url": "https://dublincityfilmoffice.ie/filming-location/hapenny-bridge/"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": {
+        "imageId": "dublin-eamon-feedback-r20260905-v1",
+        "status": "uusiksi_v2",
+        "workflowStatus": "regenerate",
+        "suggestion": "Silmälasipäinen nuori nainen hauskan hämmästyneenä silmät lautasen kokoisina ja suu jähmettyneenä hämmentyneeseen hymyyn",
+        "regenerationPrompt": "Create ONE wholly NEW square 1536x1536 contemporary documentary PHOTOGRAPH for Matkakirja. The camera is an arriving traveler asking about a treasure. The principal person must respond with BOTH eyes looking DIRECTLY INTO THE LENS, a powerful spontaneous mixed expression, never a stock-photo welcome. Authentic photographic skin and materials, restrained natural optical rendering, no artificial bokeh, HDR, sharpening halos, CGI, illustration, text, logo, watermark, vintage finish, vignette or border. Include entire head and hair with some room. Anatomically credible hands and ordinary believable actions. Main task-specific requirement: a real transparent GLASS partition is definitely BETWEEN the viewer and a NEW ticket clerk, face beautifully visible THROUGH GLASS. Present-day fictional river sightseeing ticket office near the Liffey, not a real named business, not a toll booth charging to cross Ha'penny Bridge. Use real photo ONLY for Dublin riverside's red-brick streets and the white iron arched bridge in a small incidental reflection at one EDGE of glass; it must never cover either eye. Tight almost symmetrical square composition through metal-framed ticket window, subtle fingerprints, light fine scratches and real faint reflections establish the glass plane. Small horizontal ticket/pass-through slot at the bottom near the counter, a round modest black intercom off to one side, glass stretches over face uninterrupted. NEW fictional Eamon 59, stocky Irish male clerk with bushy gray eyebrows, short auburn-gray hair, a trimmed salt-gray moustache, pale lined face, pale blue short-sleeve shirt and loosely knotted burgundy tie. He leans forward slightly from behind his desk, one hand keeps a blank ticket strip at desk level, other thumb has paused above the button of a small ordinary receipt printer. He peers DIRECTLY INTO LENS with both eyes under raised eyebrows, lips pursed in dry incredulous near amusement, a deeply arresting 'that is an unusual ticket request' reaction. He is wary and funny simultaneously, not an angry cashier, not smiling for an official portrait. A young adult coworker behind him glances sideways from a shelf, secondary and partly shadowed. Interesting contrast: warm worn oak desk edge and soft green inside wall, cool clear daylight on glass. Single slant of reflected sunlight from outside illuminates his cheek, eyes and shirt collar but does not wash out the whole window; dark office beyond gives face luminous presence. 60mm intimate chest-up photograph, whole head, no all-over reflection haze, only subtle ordinary camera glass reflections, no distorted doubled faces or legible labels.",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-05T19:11:16.641Z"
+      },
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Vaihda henkilö ja tee Kohtaus lippu tiskille missä lasi pelaajan ja virkailijan välillä.",
+      "feedbackUpdatedAt": "2026-09-05T17:34:45.441Z",
+      "requestIds": [
+        "4ce46b66-bac6-459e-8c85-92f99cffdffe"
+      ],
+      "proposal": {
+        "change": "Molly vaihtuu 59-vuotiaaseen jokiristeilyn lipunmyyjä Eamoniin. Fiktiivinen nykyinen lipputiski lasin takana Ha'penny Bridgen lähellä.",
+        "frame": "Horation puolen pennin merkintä kuuluu sillan historiaan. Nykyinen Eamon myy risteilylippuja eikä peri kävelysillasta tullia. Vanha jokireittikartta muodostaa linkin nykyiseen työntekijään.",
+        "encounter": "Matkaaja puhuu lasin läpi. Eamon nostaa katseensa hitaasti: Yksi jokiristeily vai yksi aarre? Vieressä nuorempi työntekijä pidättelee naurua.",
+        "quizAction": "Säilytä sillan edeltäjät → lauttamiehet. Kysymys nousee Horation vanhan maksumerkinnän ja nykyisen lipun erosta.",
+        "treasure": "Eamon huomaa kartan vanhan lauttapisteen vastaavan yrityksen säilyttämää paikallishistorian laatikkoa. Sen vanhan lipun taakse taitettu kuori antaa seuraavan löydön. Poista nykyinen puolen pennin silta­tulli, sukukukkaro ja tulevaisuudessa lyödyn lantin väite.",
+        "latestFeedbackOverridesImage": "UUSI palaute 19:11 UTC vaatii silmälasipäisen nuoren naisen Eamonin tilalle, hauska hämmästys, suuret silmät ja hämmentynyt hymy. Lipputiski ja lasi säilyvät. Eamon-ehdotusta EI toteuteta sellaisenaan. Henkilön uusi nimi ja lopullinen dialogi sovitetaan seuraavan kuvan kanssa."
+      },
+      "currentCanonQuestion": "Dublinin rautainen kävelysilta korvasi aikanaan jotakin. Minkä?",
+      "currentCanonCorrectAnswer": "Lauttamiehet, jotka soutivat väkeä joen yli",
+      "currentCanonTreasure": "Lantin alta, kukkaron saumasta, löytyi taitettu kätkö. Molly käänsi lanttia valossa: \"Tämä on lyöty vuonna, jota ei vielä ollut, kun isoisoisäni sai kukkaron.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 633,
+          "questionLine": 656,
+          "answerOptionsLine": 658,
+          "treasureLine": 671,
+          "selector": "KAARI_PAKETIT.kohteet[id=dublin]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-dublin.js",
+          "gitPath": "js/packs/fokusvirta-dublin.js",
+          "exportName": "FOKUSVIRTA_DUBLIN",
+          "encounterLine": 664,
+          "treasureLine": 1147
+        }
+      }
+    },
+    {
+      "cityId": "dubrovnik",
+      "city": "Dubrovnik",
+      "imageId": "dubrovnik-mara-feedback-r20260905-v1",
+      "replacesImageId": "dubrovnik-ivo-r20260905-redo-v1",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/dubrovnik-mara-feedback-r20260905-v1.jpg",
+      "imageSha256": "10d0b73e827cd7ba41f7fbf09478444594c6bd09abda6ee9815cefe946304ed4",
+      "character": "Mara — merimelontaopas",
+      "caption": "Mara vakauttaa kajakkia Betinan kalliosuojan rannassa. Matkaajan aarrekysymys saa hänet kääntymään tuiman epäuskoisesti, mutta suupielessä alkaa jo hymy.",
+      "imageSourceNote": "Uusi tarinaehdotus: vanhan rantapiirroksen suunta selviää mereltä. Mara ja toinen aikuinen ovat fiktiivisiä; Fablelle lähetetty ehdotus odottaa yhteensovitusta. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Betinan kalliosuoja — paikallisen veneoperaattorin katsottu geometriakuva",
+          "url": "https://boatingdubrovnik.com/elafiti-islands-gallery/"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": {
+        "imageId": "dubrovnik-mara-feedback-r20260905-v1",
+        "status": "uusiksi_v2",
+        "workflowStatus": "regenerate",
+        "suggestion": "Hyvä kohtaus tee vielä muutama versio tästä",
+        "regenerationPrompt": "ONE entirely NEW photorealistic documentary encounter, square 1536 x 1536, contemporary Dubrovnik. Use the supplied real Betina photograph for actual cliff/shelter geometry ONLY: a broad shallow open limestone shelter and little pebbly beach, NOT a long tunnel cave or cathedral; greenery above, turquoise water, rock buttress. Change from aerial reference to human eye-level close to shore. Foreground Mara, fictional Croatian sea-kayak guide about 40, muscular weathered arms, dark hair with a silver lock in a low untidy bun, dark teal quick-dry T-shirt and a simple red buoyancy vest without writing. Waist-up close environmental portrait, body turned diagonally and both hands solidly steadying the yellow-orange bow of a landed kayak in shallow water. Camera is the arriving traveler's eyes slightly above seated kayak height. She has just heard an absurdly unexpected question about a hidden treasure. Her head turns to look DIRECTLY INTO THE CAMERA LENS, both eyes clear and unwavering. A striking transition between stern concentration, disbelief and tightly suppressed amusement: one brow rises, lower eyelids engaged, lips barely part and only one corner begins to lift. Absolutely not cheerful stock-photo posing. Another fictional adult guide behind her on the beach is half-turned to watch her reaction with a small laugh, smaller and secondary. The huge pale rock wall rises behind and beside the two people; water reflects cool mobile light onto shade under her chin, low slanting late-afternoon sun grazes one side of her face and warm reddish kayak. Beautiful understated real light, deep shelter shadows, inviting but real water, layered depth. Natural 35mm perspective f/5.6, principal face prominent and exquisitely real; important hands coherent, no extra fingers. Full head with breathing room, clear kayak support and shoreline. No old town wall invented inside cave, no treasure shown, no period costume, no signs, typography, fake fog, vignette or border. Keep the sense we interrupted a physical job in a spectacular actual place.",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-05T19:11:56.451Z"
+      },
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Keksi joku mielenkiintoisempi paikka. Tämä on joku kauppi ja vaida ihmiset ja koko tarina.\n\nAnnaa Pavlelle ohjeet tarvittaessa. Keksitään ylilainen kehystarina tukemaan uutta paikkaa.",
+      "feedbackUpdatedAt": "2026-09-05T17:15:41.607Z",
+      "requestIds": [
+        "797735de-a24c-4ee8-8f00-03e866dfa922"
+      ],
+      "proposal": {
+        "change": "Ivo vaihtuu Mara-nimiseen noin 40-vuotiaaseen merimelontaoppaaseen. Kuva on Betinan avoimen rantakalliosuojan edustalta.",
+        "frame": "Jo toimitettu ranta näkyy mereltä -ehdotus säilyy. Paikkareferenssit on nyt tarkastettu: avoin kalliosuoja ja veden pinta, ei suljettu luolalabyrintti. Kirjan vanha rantaprofiili tarvitsee mereltä katsovan tulkinnan.",
+        "encounter": "Mara vakauttaa kajakin ja tutkii matkaajaa kuivasti: Pidä ensin kirja kuivana. Hän auttaa kääntämään luonnoksen oikein päin.",
+        "quizAction": "Jo toimitettu täsmällinen Libertas = vapaus -kysymys säilyy; kirjan reunaan kopioitu sana perustelee sen.",
+        "treasure": "Aiemman ehdotuksen rasia sovitulla fiktiivisellä rantautumiskohdalla. Poista muurivartio, yhdeksässadas askel, saranoitu muurikivi ja lämmin lyhty.",
+        "fableAcknowledged": "Fable hyväksyi 19:05 UTC ehdotuksen. Käyttäjä pyytää samasta kohtauksesta lisää kuvaversioita."
+      },
+      "currentCanonQuestion": "Dubrovnik oli vuosisatoja pieni vapaa tasavalta suurten valtojen välissä. Mikä sana sen lipussa luki?",
+      "currentCanonCorrectAnswer": "Libertas — vapaus",
+      "currentCanonTreasure": "Yhdeksässadas askel osui kiveen, joka kääntyi saranoillaan: onkalossa odotti kätkö ja lyhty, jonka lasi oli yhä lämmin. \"Kehällä ei öisin kulje kukaan muu kuin minä — ei ainakaan pitänyt kulkea\", Ivo sanoi.",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 1007,
+          "questionLine": 1024,
+          "answerOptionsLine": 1026,
+          "treasureLine": 1037,
+          "selector": "KAARI_PAKETIT.kohteet[id=dubrovnik]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-dubrovnik.js",
+          "gitPath": "js/packs/fokusvirta-dubrovnik.js",
+          "exportName": "FOKUSVIRTA_DUBROVNIK",
+          "encounterLine": 508,
+          "treasureLine": 699
+        }
+      }
+    },
+    {
+      "cityId": "granada",
+      "city": "Granada",
+      "imageId": "granada-ines-feedback-r20260905-v1",
+      "replacesImageId": "granada-yusuf-r20260905-redo-v1",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/granada-ines-feedback-r20260905-v1.jpg",
+      "imageSha256": "a5ecc053924f8cd01b640a33fa2925ca92d8411c73b89aacfd09dde54887a3f1",
+      "character": "Inés — Generalifen puutarhuri",
+      "caption": "Inés nostaa aamun leikkausoksia kärryyn, kun vieraan kysymys aarteesta pysäyttää hänet. Nuorempi työtoveri yrittää pitää valtavan oksakimpun koossa.",
+      "imageSourceNote": "Uudet henkilöt ja uusi tilanne Generalifen puutarhassa. Fiktiivisen puutarhurin vesireittien tuntemus voi yhdistää kohtaamisen vanhaan matkakirjaan; tekstin yhteensovitus Fablelle. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Generalife — Patio de la Acequian katsottu paikkakuva ja puutarha",
+          "url": "https://www.alhambra-patronato.es/edificios-lugares/patio-de-la-acequia"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": {
+        "imageId": "granada-ines-feedback-r20260905-v1",
+        "status": "uusiksi_v2",
+        "workflowStatus": "regenerate",
+        "suggestion": "",
+        "regenerationPrompt": "Create ONE completely NEW contemporary documentary photograph for Matkakirja, square 1536 x 1536. Use the actual Generalife Patio de la Acequia photo ONLY for truthful canal-garden architecture, low clipped planting, modest white arcade and long water axis. A lively human scene on the garden's side path at golden EARLY MORNING before visitors. Foreground fictional Ines, a Spanish woman gardener of 58, sturdy build, short wavy silver bob, remarkable strong brows and lined sun-browned face, practical faded denim shirt rolled sleeves and dark olive work trousers. She has just lifted a loose bundle of freshly pruned long leafy branches from a small garden cart, supported in her left arm; her right hand still holds the cart handle. A younger adult male coworker, clearly secondary, attempts to keep the far end of the overly wide bundle from spreading, amused at their awkward load. The unseen traveler suddenly asks Ines about a treasure. She stops mid-step and fixes BOTH EYES straight on the CAMERA LENS with powerful startled disbelief hovering on a laugh: one eyebrow raised, eyes widened but natural, a sudden inhalation through parted lips and a wrinkled cheek. Face fully visible, branches NEVER across eyes. A leaf has caught on her shirt, giving restrained physical humor. The coworker looks at Ines, not camera. The fountain axis and morning architecture recede diagonally behind them; low sun passes through arcade openings, lights her face in a clear warm patch and picks out a handful of leaves. Deep cool clean shadows, light atmospheric distance without visible rays. 35mm medium-close environmental composition, all heads with room above, correct hands and branches, no historic costumes, no kneeling plumber or youth from old versions. Real human skin, fine soft lens falloff f/5.6, truthful photographic foliage without busy artificial bokeh. Not a symmetrical postcard. No text, logos, treasure chest, vignette or border.",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-05T19:12:22.181Z"
+      },
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Keksit tähän kokonaan vielä uudet ihmiset ja tilanne.",
+      "feedbackUpdatedAt": "2026-09-05T17:14:39.745Z",
+      "requestIds": [
+        "41529360-f9da-4b87-b8cb-cd0601a8542f"
+      ],
+      "proposal": {
+        "change": "Yusuf vaihtuu 58-vuotiaaseen puutarhuri Inésiin ja nuoreen työpariin. Generalifen kärryjen siirto keskeytyy.",
+        "frame": "Horation vesireittipiirros kuvaa vanhaa puutarhaa. Nykyiset huoltoreitit poikkeavat siitä, ja Inés osaa verrata reittejä työssään käyttämiinsä suunnitelmiin. Ei samaa sukua tai vuosisatoja käytettyjä avaimia.",
+        "encounter": "Inés pysähtyy oksakuorman kanssa: Aarretta? Me löysimme aamulla vain tukkeutuneen kourun. Työpari kiinnostuu piirroksen vanhasta nimestä.",
+        "quizAction": "Nykyinen Alhambran nimen punaista tarkoittava vastaus säilyy. Inés osoittaa kirjan nimeä ennen kysymystä; puutarhatyö ei muutu historian tentiksi ilman johdantoa.",
+        "treasure": "Puutarhurit ovat siirtäneet huollossa löytyneen irrallisen rasian tavalliseen huoltovarastoon. Kirjan piirros antaa syyn tarkistaa juuri sen. Säilytä vastikään siirretyn esineen mysteeri, mutta poista vuosisatainen avainperintö ja pelaajan muinaisen vesikourun avaaminen."
+      },
+      "currentCanonQuestion": "Punertava linnoitus Alhambra kohoaa Granadan yllä. Mitä sen nimi tarkoittaa?",
+      "currentCanonCorrectAnswer": "Punaista — arabiaksi al-hamra",
+      "currentCanonTreasure": "Kourujen risteyksessä veden alla odotti kivinen rasia. Yusuf punnitsi sitä kädessään: \"Vesi olisi kuluttanut särmät sileiksi sadassa vuodessa — tämä on laskettu veteen hiljattain.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 750,
+          "questionLine": 767,
+          "answerOptionsLine": 769,
+          "treasureLine": 780,
+          "selector": "KAARI_PAKETIT.kohteet[id=granada]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-granada.js",
+          "gitPath": "js/packs/fokusvirta-granada.js",
+          "exportName": "FOKUSVIRTA_GRANADA",
+          "encounterLine": 862,
+          "treasureLine": 971
+        }
+      }
+    },
+    {
+      "cityId": "islanti",
+      "city": "Haukadalur",
+      "imageId": "islanti-einar-feedback-r20260905-v2",
+      "replacesImageId": "islanti-bjork-r20260905-redo-v2",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/islanti-einar-feedback-r20260905-v2.jpg",
+      "imageSha256": "ff7a7da7293a5e001251ae664d87514bbe7347c077302cba71fa3c9db790c9d7",
+      "character": "Einar — geotermisen alueen opas",
+      "caption": "Tuuli kääntää Einarin sadetakin hupun väärinpäin juuri, kun hän kuulee matkaajan aarrekysymyksen. Hän jää katsomaan tulijaa huvittuneen epäuskoisena.",
+      "imageSourceNote": "Uusi henkilö Geysirin alueen kävelyreitillä Haukadalurissa. Vuonna 2024 kuvatun reitin metalliritilä ja höyryävä alava maasto ovat paikkareferenssi; kuvassa ei väitetä näkyvän Strokkurin purkausaukkoa. Kokonaan uusi generointi; paikkareferenssi ei ole kuva pelin fiktiivisestä henkilöstä.",
+      "webReferenceUrls": [
+        {
+          "label": "Visit South Iceland — Scenic walking path by Geysir",
+          "url": "https://www.south.is/en/travel-info/newsblog/scenic-walking-path-by-geysir"
+        }
+      ],
+      "userApproved": true,
+      "currentUserReview": {
+        "imageId": "islanti-einar-feedback-r20260905-v2",
+        "status": "jatkoon_v2",
+        "workflowStatus": "accepted",
+        "suggestion": "",
+        "regenerationPrompt": "",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-05T19:12:31.643Z"
+      },
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+      "feedbackUpdatedAt": "2026-09-05T17:31:33.742Z",
+      "requestIds": [
+        "94769ee3-a7bd-43f2-b584-46d7b4f8419d"
+      ],
+      "proposal": {
+        "change": "Björk vaihtuu 38-vuotiaaseen paikallisopas Einariin. Tuulinen Haukadalur, kartta ja nykyinen Geysirin alueen metalliritiläreitti.",
+        "frame": "Horation vanhassa kartassa lähteet ja polut eroavat nykyisistä. Einar osaa vertailla kartan muotoa nykyiseen kulkureittiin. Nykyistä vuonna 2024 uudistettua reittiä ei siirretä 1873 maisemaan.",
+        "encounter": "Einar painaa tuulen repimää huppua alas ja katsoo epäuskoisesti: Tällä säällä etsit aarretta? Kartan vanha paikannimi saa hänet katsomaan toisen kerran.",
+        "quizAction": "Säilytä kuumien purkautuvien lähteiden nimen alkuperä → Geysir. Kuva ei esitä Strokkurin purkausreunaa; älä kirjoita siihen kuvan kanssa ristiriitaista purkauksen hetkellä tehtävää toimintoa.",
+        "treasure": "Einar osoittaa kartan maamerkin polkuverkoston turvalliselta puolelta. Kirjan mitta johdattaa tavallisen vanhan opaslaatikon erilliseen suojalokeroon fiktiivisessä lähtöpisteessä. Poista kuuman lähteen kiven alta kaivaminen, purkauksen ajoittaminen ja kalkin raaputtaminen."
+      },
+      "currentCanonQuestion": "Islannin kuuluisin kuuma lähde on antanut nimen kaikille maailman purkautuville lähteille. Mikä sana siitä tuli?",
+      "currentCanonCorrectAnswer": "Geysir",
+      "currentCanonTreasure": "Purkauksen jälkeen nuolen osoittama kivi oli hetken kuiva, ja sen alta löytyi kätkö. Björk katseli kalkkikerrosta: \"Kaiverruksen pitäisi olla kokonaan kalkin alla — joku on raaputtanut sen esiin tänä keväänä.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 1648,
+          "questionLine": 1665,
+          "answerOptionsLine": 1667,
+          "treasureLine": 1679,
+          "selector": "KAARI_PAKETIT.kohteet[id=islanti]"
+        },
+        "focus": null
+      }
+    },
+    {
+      "cityId": "kiova",
+      "city": "Kiova",
+      "imageId": "kiova-taras-feedback-r20260905-v2",
+      "replacesImageId": "kiova-oksana-kultainen-portti-r20260905-redo-a02",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/kiova-taras-feedback-r20260905-v2.jpg",
+      "imageSha256": "6c8c8c299b54ec509aca78a66223a3b679a99b872eb33c26d03c22dce69d64ff",
+      "character": "Taras — museon näyttelymestari",
+      "caption": "Taras kantaa näyttelyyn tarkoitettua portin pienoismallia, kun matkaaja pysäyttää hänet aarrekysymyksellä. Kollega näkee tilanteen huvittavan puolen jo ennen häntä.",
+      "imageSourceNote": "Uusi henkilö Kultaisen portin museossa. Moderni suojarakennus, vanhan muurauksen jäännökset ja museon kulkureitti säilyvät erillään. Pienoismalli on fiktiivinen näyttelyesine. Kaikki henkilöt ja kohtaaminen ovat fiktiota; kyse on kokonaan uudesta generoinnista.",
+      "webReferenceUrls": [
+        {
+          "label": "Golden Gate museum interior — reference photograph",
+          "url": "https://torange.biz/golden-gate-kyiv-kiev-inside-building-41658"
+        },
+        {
+          "label": "National Conservation Area — Golden Gate museum",
+          "url": "https://sofiia-kyivska.ua/museum/2/"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": {
+        "imageId": "kiova-taras-feedback-r20260905-v2",
+        "status": "uusiksi_v2",
+        "workflowStatus": "regenerate",
+        "suggestion": "Tee pari versiota lisää",
+        "regenerationPrompt": "Create ONE wholly NEW square 1536x1536 contemporary documentary PHOTOGRAPH for Matkakirja. The camera is an arriving traveler asking about a treasure. The principal person must respond with BOTH eyes looking DIRECTLY INTO THE LENS, a powerful spontaneous mixed expression, never a stock-photo welcome. Authentic photographic skin and materials, restrained natural optical rendering, no artificial bokeh, HDR, sharpening halos, CGI, illustration, text, logo, watermark, vintage finish, vignette or border. Include entire head and hair with some room. Anatomically credible hands and ordinary believable actions. Create a substantially MORE CANDID and dramatically lit new Kyiv encounter than the first attached GENERATED attempt. First image is only Taras character continuity: sturdy Ukrainian man46, dark short hair, gray-edged thick moustache, dusty-blue work shirt. Second is REAL GoldenGate museum reference: rough surviving ancient masonry INSIDE later red-brick vaulted protective pavilion, wooden visitor stairs. The 1982 protective building and ancient fragments are distinct; keep authentic vaults and stone. CAMERA MOVES close to one side of a doorway, a dark foreground edge on far left. We catch Taras mid step, slightly off balance from an ordinary abrupt stop but holding a 55cm display-model carrier board safely at waist height with both hands below board. The light plywood model of a gate sits firmly on board, not a recovered artifact. An older female coworker in a plum T-shirt farther behind and to the right, SUPPORTS the other end. She looks DOWN at the board and calls to him with amused exasperation to keep moving, absolutely NOT posing or smiling directly at lens. A little tissue packing paper hangs over one board edge, not flying. The visitor's treasure question has caused Taras to jerk his HEAD only toward lens while torso and board remain angled walking across frame: both eyes locked intensely directly into camera, brows suddenly knitted and lifted, mouth caught in a crooked half-open skeptical 'wait, WHAT?' reaction, expressive creases and a slightly raised chin. Stunned disbelief halfway into a short laugh, not uniform wide-eyed happy face. Entire head and shoulders, eyes large and dominant at close 40mm distance, board occupies lower quarter rather than being presented center as a product. LIGHT IS CRITICAL: low late-afternoon sun from a narrow doorway at camera LEFT strikes a crisp irregular diagonal across his eye, cheek, moustache and forearm. Opposite cheek falls into genuinely deep but readable neutral cool shadow. The museum BACKGROUND is about two stops DARKER than face; only a few small patches of raking sun on rough masonry reveal texture. No even front softbox, no flat gray all-over window light, no orange color grade. Feel like a quick brilliant reportage capture as two people are caught mid real task. No carved clue, spurious secret tunnel, theatrical costume or miniature giant castle.",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-05T19:12:56.658Z"
+      },
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+      "feedbackUpdatedAt": "2026-09-05T17:29:57.599Z",
+      "requestIds": [
+        "a70266fe-98b2-42c0-8d5a-93135bc31959"
+      ],
+      "proposal": {
+        "change": "Oksana vaihtuu 46-vuotiaaseen näyttelyrakentaja Tarasiin ja vanhempaan naispuoliseen työpariin. He siirtävät Kultaisen portin modernia pienoismallia.",
+        "frame": "Nykyinen kuva on vuoden 1982 suojapaviljongin sisällä vanhojen jäännösten äärellä. Horation kirjassa on vanhojen jäännösten piirros, ei nykyinen paviljonki tai sama pienoismalli.",
+        "encounter": "Taras pysähtyy kantamansa mallin kanssa: Tämänkö alle? Tämä valmistui viime kuussa. Hän huomaa pian, että pelaaja osoittaa vanhan piirroksen viivaa eikä mallin pohjaa.",
+        "quizAction": "Säilytä Kultaisen portin tehtävä → kaupungin juhlava pääportti. Erota alkuperäinen portti, säilyneet jäännökset ja moderni suoja selitteissä.",
+        "treasure": "Piirroksen viiva löytyy dokumentointikansion vanhasta arkkikopiosta. Taras auttaa paikantamaan siihen liitetyn erillisen kuoren. Poista kiven irrottaminen, uusi talttajälki ja väite ettei paikalla ole ollut kiviseppiä vuosiin. Pienoismalli ei ole muinainen aarre-esine."
+      },
+      "currentCanonQuestion": "Kiovan Kultainen portti rakennettiin lähes tuhat vuotta sitten. Mikä sen tehtävä oli?",
+      "currentCanonCorrectAnswer": "Se oli muurien juhlava pääportti kaupunkiin",
+      "currentCanonTreasure": "Sormieni alla kivi liikahti: viivojen takana oli ontelo, ja ontelossa odotti kätkö. Oksana pyyhkäisi pölyn: \"Viivoja on kolme, mutta neljäs on aloitettu — taltanjälki on tuore, eikä kiviseppiä ole käynyt vuosiin.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 1164,
+          "questionLine": 1182,
+          "answerOptionsLine": 1184,
+          "treasureLine": 1197,
+          "selector": "KAARI_PAKETIT.kohteet[id=kiova]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-kiova.js",
+          "gitPath": "js/packs/fokusvirta-kiova.js",
+          "exportName": "FOKUSVIRTA_KIOVA",
+          "encounterLine": 693,
+          "treasureLine": 1181
+        }
+      }
+    },
+    {
+      "cityId": "kobenhavn",
+      "city": "Kööpenhamina",
+      "imageId": "kobenhavn-freja-feedback-r20260905-v1",
+      "replacesImageId": "kobenhavn-karen-r20260905-redo-v2",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/kobenhavn-freja-feedback-r20260905-v1.jpg",
+      "imageSha256": "ebea639399fa95ca186ffe439a2f0d3139e69c9dabce7b3765338793f95ea8f4",
+      "character": "Freja — karusellinhoitaja",
+      "caption": "Freja on sulkemassa Tivolin musiikkikarusellia. Matkaajan kysymys saa hänen määrätietoisen ilmeensä horjumaan epäuskoisen hymyn suuntaan.",
+      "imageSourceNote": "Uusi henkilö ja paikka: iltakohtaaminen Tivolin Musikkarrusellenin luona. Karusellin koristeet ja kaksikerroksisuus perustuvat Tivolin omiin lähteisiin; Freja ja tilanne ovat fiktiota. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Tivoli — The Music Carousel",
+          "url": "https://www.tivoli.dk/en/rides/the-music-carousel"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": null,
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Vaihda henkilö ja paikka",
+      "feedbackUpdatedAt": "2026-09-05T17:26:04.038Z",
+      "requestIds": [
+        "b6d0729d-7b38-47e8-97a8-0e1dcfe3d447"
+      ],
+      "proposal": {
+        "change": "Karen ja Nyhavnin arkku vaihtuvat 31-vuotiaaseen karusellinhoitaja Frejaan Tivolissa. Musikkarrusellenin kaksikerroksinen hevoskaruselli on oikea nykyinen laite.",
+        "frame": "Horatio kuvaa kaupungin satuja ja vanhaa puistokäyntiä. Nykyistä karusellia ei väitetä samaksi vuoden 1873 laitteeksi. Freja tunnistaa kirjan kuvan nykyisessä puistoarkiston näyttelykopiossa näkemästään aiheesta.",
+        "encounter": "Freja lukitsee iltavuoron päätteeksi karusellia: Nyt se on kiinni. Aarreko? Näytä uudestaan tuo kuva. Maalattu hevonen katsoo sivusta, työpari peittelee laitetta.",
+        "quizAction": "Säilytä H. C. Andersenin satu → Pieni merenneito. Nyhavn säilyy kysymyksen kirjailijataustana, mutta nykyisen tapaamisen paikka on Tivoli. Johdata visaan kirjan satuviittauksesta.",
+        "treasure": "Arkistokopion luettelotieto johdattaa käytöstä poistettuun tavalliseen kulissilaatikkoon, jonka sisältä löytyy kirjan merkintää vastaava kuori. Poista Karenin suku, laiturin istuinarkku ja samaan kaksoispohjaan sidottu paljastus."
+      },
+      "currentCanonQuestion": "Nyhavnin kanavan varrella asui satujen mestari H. C. Andersen. Mikä näistä on hänen satunsa?",
+      "currentCanonCorrectAnswer": "Pieni merenneito",
+      "currentCanonTreasure": "Arkun kaksoispohjasta löytyi kätkö ja käsikirjoitus, joka katkeaa riville \"aarre ei ollut arkussa vaan siinä, joka arkkua…\" Viimeinen sana on revitty irti — ja reunat ovat tuoreet.",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 1537,
+          "questionLine": 1555,
+          "answerOptionsLine": 1557,
+          "treasureLine": 1568,
+          "selector": "KAARI_PAKETIT.kohteet[id=kobenhavn]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-kobenhavn.js",
+          "gitPath": "js/packs/fokusvirta-kobenhavn.js",
+          "exportName": "FOKUSVIRTA_KOBENHAVN",
+          "encounterLine": 482,
+          "treasureLine": 669
+        }
+      }
+    },
+    {
+      "cityId": "lappi",
+      "city": "Rovaniemi",
+      "imageId": "lappi-aslak-feedback-r20260905-v1",
+      "replacesImageId": "lappi-aslak-r20260905-redo-v1",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/lappi-aslak-feedback-r20260905-v1.jpg",
+      "imageSha256": "3176bb9e9349640a35b79c2ea5b3afc23276db4f55b4e36a308aec5221c2f528",
+      "character": "Aslak — poronhoitaja",
+      "caption": "Aslak ojentaa kuksan matkaajalle ja jää odottamaan selitystä tämän aarrekysymykselle. Nuotion valo paljastaa tutkivan katseen; tokka liikkuu hiljaa metsän reunassa.",
+      "imageSourceNote": "Sama poronhoitaja ja talvinen nuotiokohtaaminen, nyt lähempää ja vakavammin. Porot ja talvimetsä pohjaavat Rovaniemen paikkakuvaan; vanhan kuvan henkilöllisyys toimii erillisenä jatkuvuusreferenssinä. Uusintapyyntö oli ilman sanallista lisäohjetta; tämä ei ole käyttäjän uusi tarinapäätös.",
+      "webReferenceUrls": [
+        {
+          "label": "Visit Rovaniemi — Visit the reindeer herd",
+          "url": "https://www.visitrovaniemi.fi/activity-product/visit-the-reindeer-herd/"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": null,
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "",
+      "feedbackUpdatedAt": "2026-09-05T17:24:16.438Z",
+      "requestIds": [],
+      "proposal": {
+        "change": "Aslak ja talvinen nuotiokohtaaminen säilyvät; lähempi vakava katse ja ojennettu kuksa.",
+        "frame": "Ei uutta sanallista käyttäjäpalautetta eikä tarpeellista kaanonmuutosta.",
+        "encounter": "Aslak tutkii kysyjää hiljaa nuotiolla.",
+        "quizAction": "Säilytä revontulten hiukkasia ja ilmakehän kaasuja koskeva kysymys ja vastaus.",
+        "treasure": "Säilytä nykyinen lumeen ja jälkiin liittyvä ketju."
+      },
+      "currentCanonQuestion": "Mikä revontulet tieteen mukaan sytyttää?",
+      "currentCanonCorrectAnswer": "Auringon hiukkaset, jotka törmäävät ilmakehän kaasuihin",
+      "currentCanonTreasure": "Jälkien päässä kinos kätki tuohikääreen. Aslak osoitti hankea: \"Toiset jäljet alkavat tästä — eilen.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 1574,
+          "questionLine": 1592,
+          "answerOptionsLine": 1593,
+          "treasureLine": 1605,
+          "selector": "KAARI_PAKETIT.kohteet[id=lappi]"
+        },
+        "focus": null
+      }
+    },
+    {
+      "cityId": "lissabon",
+      "city": "Lissabon",
+      "imageId": "lissabon-ines-feedback-r20260905-v1",
+      "replacesImageId": "lissabon-ines-strength-r20260905-v1",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/lissabon-ines-feedback-r20260905-v1.jpg",
+      "imageSha256": "aa44a533d0c666055da54cbcd8882d1888daaf920001703c0334bb062800cae0",
+      "character": "Inês — laattamestari",
+      "caption": "Inês pysähtyy pyyhkimään savea käsistään, kun matkaajan aarrekysymys saa hänet katsomaan tulijaa epäuskoisen huvittuneena.",
+      "imageSourceNote": "Inês on pajan ainoa henkilö. Hyllyjen tumma syvyys ja sinivalkoinen laattapaneeli kehystävät kasvoja. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Sant’Anna — katsottu sinivalkoinen laattapaneeli",
+          "url": "https://www.santanna.com.pt/"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": null,
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Mies taustalla liikaa",
+      "feedbackUpdatedAt": "2026-09-05T17:32:58.323Z",
+      "requestIds": [
+        "9b775512-90b0-4278-816b-71157df859b2"
+      ],
+      "proposal": {
+        "change": "Inês ja laattapaja säilyvät, ylimääräinen taustamies poistuu.",
+        "frame": "Ei tarinamuutosta tämän palautteen perusteella.",
+        "encounter": "Inês kohtaa matkaajan yksin työn keskeytyessä.",
+        "quizAction": "Säilytä azulejo-sanan arabialaista alkuperää koskeva kysymys ja vastaus.",
+        "treasure": "Säilytä nykyinen laattoihin liittyvä ketju."
+      },
+      "currentCanonQuestion": "Sana azulejo ei tule sinisestä väristä, vaikka siltä kuulostaa. Mistä se tulee?",
+      "currentCanonCorrectAnswer": "Arabian sanasta: kiillotettu kivi",
+      "currentCanonTreasure": "Laatta halkesi uunissa kahtia, ja sauman sisältä putosi kätkö. Inês tutki puolikkaita kauan: \"Kuvio jatkuu laatalla, jota minun uunissani ei ole koskaan poltettu — jossain on toinen uuni.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 556,
+          "questionLine": 574,
+          "answerOptionsLine": 576,
+          "treasureLine": 588,
+          "selector": "KAARI_PAKETIT.kohteet[id=lissabon]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-lissabon.js",
+          "gitPath": "js/packs/fokusvirta-lissabon.js",
+          "exportName": "FOKUSVIRTA_LISSABON",
+          "encounterLine": 641,
+          "treasureLine": 1131
+        }
+      }
+    },
+    {
+      "cityId": "lontoo",
+      "city": "Lontoo",
+      "imageId": "lontoo-leila-feedback-r20260905-v1",
+      "replacesImageId": "lontoo-ned-r20260905-redo-c-v1",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/lontoo-leila-feedback-r20260905-v1.jpg",
+      "imageSha256": "abc1c4b3e9cd75f1e8c82ab14c8f8062ed3013056e12c9b4762d3d7aa57dc5b2",
+      "character": "Leila — muotialan opiskelija",
+      "caption": "Leila pysähtyy ihmisvirran keskellä Leadenhall Streetillä. Lasijulkisivusta heijastunut aurinko osuu hänen kasvoilleen, kun hän kuulee matkaajan kysymyksen.",
+      "imageSourceNote": "Nuori kaupunkilainen nykyisessä Lontoon keskustassa. Pitkä valotusaika pehmentää ohikulkijoiden liikkeen, mutta Leilan pysähtynyt katse on tarkka. Tarinaehdotus on lähetetty Fablelle. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "RSHP — Leadenhall Building, katsotut suunnittelijan omat paikkakuvat",
+          "url": "https://rshp.com/projects/office/the-leadenhall-building/"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": null,
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Kokonaan uusi versio, niin, että ollaan aivan Lontoon ydinkeskustassa. Olisi hauska nähdä henkilö, nuori henkilö, muotivaatteet päällään ihmisvilinässä, yhtäkkiä pysäytettynä aurinkoisella kelillä, niin, että katu on varjossa, mutta kaupungin lasitaloista on heijastunut. Valon säteitä kasvoille, liike epäterävyyttä hieman pidemmällä valotusajalla kulkevissa ihmisissä.\n\nTähän täytyy siis vaihtaa myös kysymys tarina keksis sinäsen ja lähetä ehdotus fablelle siitä.",
+      "feedbackUpdatedAt": "2026-09-05T17:12:06.818Z",
+      "requestIds": [
+        "bee8f5f2-5505-4e7c-84e6-057704b17768"
+      ],
+      "proposal": {
+        "change": "Ned vaihtuu Leilaan, 24-vuotiaaseen muotialan opiskelijaan. Kohtaaminen tapahtuu Leadenhallin ja St Helen's Squaren nykyisessä Cityssä.",
+        "frame": "Aiempi 5.9. Lontoo — valo löytää kadun -ehdotus säilyy. Kuvan paikka on nyt tutkittu RSHP:n ja paikkakuvien perusteella; nykyisiä lasitaloja ei siirretä Horation vuoteen 1873. Vanhan piirroksen tunnistettava yksityiskohta täsmennetään vanhaan katulinjaan, ei nykyiseen pilvenpiirtäjään.",
+        "encounter": "Leila pysähtyy kesken kävelyn: Aarretta? Minä etsin kuvauspaikkaa. Mutta tuo katukulma näyttää tutulta. Tunnistus perustuu nykyiseen kuvaharrastukseen, ei perittyyn salaisuuteen.",
+        "quizAction": "Käytä jo toimitettua nykyhetken Clean Air Act 1956 -kysymystä ja sitä opettavaa oppituntia. Älä jätä vanhaa Nedin savusumukysymystä uuden dialogin rinnalle vahingossa.",
+        "treasure": "Jo toimitetun ehdotuksen fiktiivinen rasia löytyy katukulman oikeasta katselusuunnasta. Kätköä ei kiinnitetä oikeaan suojeltuun rakenteeseen; poista Ned, joen lieju ja taskukellon vanha löytöketju kaikista rinnakkaisista teksteistä.",
+        "fableAcknowledged": "Fable hyväksyi 19:05 UTC ehdotuksen, toteutusta luvattu myöhemmin. Tämä ei todista peliin tehtyä muutosta."
+      },
+      "currentCanonQuestion": "Isoisä kirjoitti, että Lontoossa sumu syö äänet. Mistä se sumu oikeasti syntyi?",
+      "currentCanonCorrectAnswer": "Kivihiilen savusta ja joen kosteudesta",
+      "currentCanonTreasure": "Ned avasi kellon ja antoi sen: sisällä oli isoisän käsialalla pelkkä kellonaika, sama johon viisarit pysähtyivät. \"Joki ei pysäyttänyt tätä kelloa — joku pysäytti sen tahallaan, ja liejussa oli tuoreet jäljet.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 300,
+          "questionLine": 342,
+          "answerOptionsLine": 344,
+          "treasureLine": 357,
+          "selector": "KAARI_PAKETIT.kohteet[id=lontoo]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-lontoo.js",
+          "gitPath": "js/packs/fokusvirta-lontoo.js",
+          "exportName": "FOKUSVIRTA_LONTOO",
+          "encounterLine": 492,
+          "treasureLine": 700
+        }
+      }
+    },
+    {
+      "cityId": "madrid",
+      "city": "Madrid",
+      "imageId": "madrid-pilar-feedback-r20260905-v1",
+      "replacesImageId": "madrid-pilar-strength-r20260905-v1",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/madrid-pilar-feedback-r20260905-v1.jpg",
+      "imageSha256": "709412e12cd98b6a4c1a620d193d3f7bcb4ac782d2c73f808af757560549475f",
+      "character": "Pilar — kellomestari",
+      "caption": "Pilar nostaa katseensa kellokoneiston ääreltä. Matkaajan odottamaton kysymys saa hänet kohottamaan kämmenensä: ensin hän haluaa kuulla, mistä tämä on saanut tietonsa.",
+      "imageSourceNote": "Sama kellomestari Puerta del Solin kellohuoneessa. Kasvot säilyvät jatkuvuusreferenssistä, koneiston rakenne ja huone aidosta dokumentaarisesta kuvasta. Uusintapyyntö oli ilman sanallista lisäohjetta; tämä ei ole käyttäjän uusi tarinapäätös.",
+      "webReferenceUrls": [
+        {
+          "label": "Libertad Digital — Puerta del Sol clock interior reportage",
+          "url": "https://www.libertaddigital.com/cultura/historia/2019-12-18/interior-funcionamiento-reloj-puerta-del-sol-6532530/"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": null,
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "",
+      "feedbackUpdatedAt": "2026-09-05T17:41:11.000Z",
+      "requestIds": [],
+      "proposal": {
+        "change": "Pilar ja kellohuone säilyvät. Voimakkaampi hämmästys sekä rajattu työvalo.",
+        "frame": "Ei uutta sanallista käyttäjäpalautetta eikä tarpeellista kaanonmuutosta.",
+        "encounter": "Pilar pysäyttää tulijan käden eleellä kellohuoneessa.",
+        "quizAction": "Säilytä Puerta del Solin Espanjan maanteiden nollapiste.",
+        "treasure": "Säilytä nykyinen kellohuoneen tarinaketju; kuva ei ole koneiston tekninen dokumentti."
+      },
+      "currentCanonQuestion": "Saman aukion kiveyksessä, jolla kello lyö, on laatta, josta jotakin mitataan. Mitä?",
+      "currentCanonCorrectAnswer": "Maanteiden kilometrit — Espanjan nollapiste",
+      "currentCanonTreasure": "Kolmastoista lyönti oli viesti: se osoitti koneiston huoltotilaan, jossa kätkö odotti. Pilar sammutti valon: \"Lyönti lisättiin koneistoon kauan ennen minua — mutta joku kävi virittämässä sen uudelleen tänä keväänä.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 475,
+          "questionLine": 492,
+          "answerOptionsLine": 494,
+          "treasureLine": 506,
+          "selector": "KAARI_PAKETIT.kohteet[id=madrid]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-madrid.js",
+          "gitPath": "js/packs/fokusvirta-madrid.js",
+          "exportName": "FOKUSVIRTA_MADRID",
+          "encounterLine": 465,
+          "treasureLine": 827
+        }
+      }
+    },
+    {
+      "cityId": "marseille",
+      "city": "Marseille",
+      "imageId": "marseille-baptiste-feedback-r20260905-v1",
+      "replacesImageId": "marseille-baptiste-r20260905-redo-v1",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/marseille-baptiste-feedback-r20260905-v1.jpg",
+      "imageSha256": "b0ec63dde5c1300f81b04208deb7fa548bf759d99a65e66aac9040a4b4d24e0d",
+      "character": "Baptiste — soutaja",
+      "caption": "Baptiste pitää venettä laiturissa, kun matkaaja kysyy Ifin saaren aarteesta. Hänen rempseä vastauksensa pysähtyy kesken: puhuuko tulija todella vakavissaan?",
+      "imageSourceNote": "Sama soutaja Marseillen Vieux-Portissa. Veneen runkomuoto perustuu aidon barquetten valokuvaan; aarrekeskustelu ja henkilö ovat fiktiota. Uusintapyyntö oli ilman sanallista lisäohjetta; tämä ei ole käyttäjän uusi tarinapäätös.",
+      "webReferenceUrls": [
+        {
+          "label": "Arnaud 25 — Barquette marseillaise 011, 2019, CC BY-SA 4.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Barquette_marseillaise_011.jpg"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": null,
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "",
+      "feedbackUpdatedAt": "2026-09-05T17:20:05.292Z",
+      "requestIds": [],
+      "proposal": {
+        "change": "Baptiste säilyy, nyt veneessä pelaajan ollessa laiturilla. Vanhempi työpari käsittelee köyttä taustalla.",
+        "frame": "Ei uutta sanallista käyttäjäpalautetta. Nykyinen satamakehys sopii kuvaan.",
+        "encounter": "Aarrekysymys keskeyttää veneen kiinnityksen.",
+        "quizAction": "Säilytä Ifin saari → Monte-Criston kreivi.",
+        "treasure": "Säilytä nykyinen merellinen löytöketju."
+      },
+      "currentCanonQuestion": "Ifin linnoitussaari Marseillen edustalla tunnetaan kaikkialla yhden kirjan ansiosta. Minkä?",
+      "currentCanonCorrectAnswer": "Monte-Criston kreivin",
+      "currentCanonTreasure": "Nuolen alta, laskuveden paljastamasta kolosta, nousi arkku. Baptiste katsoi merelle: \"Tämä on kevyempi kuin se, jonka isäni isä souti maihin — jossain on toinen arkku ja se, joka jakoi lastin kahtia.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 786,
+          "questionLine": 803,
+          "answerOptionsLine": 805,
+          "treasureLine": 817,
+          "selector": "KAARI_PAKETIT.kohteet[id=marseille]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-marseille.js",
+          "gitPath": "js/packs/fokusvirta-marseille.js",
+          "exportName": "FOKUSVIRTA_MARSEILLE",
+          "encounterLine": 773,
+          "treasureLine": 896
+        }
+      }
+    },
+    {
+      "cityId": "odessa",
+      "city": "Odessa",
+      "imageId": "odessa-iryna-feedback-r20260905-v1",
+      "replacesImageId": "odessa-fjodor-lyhty-r20260905-redo-a02",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/odessa-iryna-feedback-r20260905-v1.jpg",
+      "imageSha256": "1cde5310f6209c6612b75c4f5fbfff5cc08a7a46e12f5c5b7347ae6b446cad33",
+      "character": "Iryna — torimyyjä",
+      "caption": "Iryna nappaa vierivän melonin käsivartensa alle juuri kun matkaaja kysyy aarteesta. Solomiia yrittää nostaa laatikkoa paikoilleen ja purskahtaa nauruun.",
+      "imageSourceNote": "Pryvozin myyntitiskien inspiroima fiktiivinen hedelmäkoju. Vanhan kuitin tulkintaan liittyvä uusi tarinaehdotus on lähetetty Fablelle. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Kuldinboxru — Pryvozin aito myyntirivi 2010, tilarakenteen vertailu",
+          "url": "https://commons.wikimedia.org/wiki/File:OdessaPrivoz.JPG"
+        },
+        {
+          "label": "Odesan kaupungin Pryvoz-esittely",
+          "url": "https://odesa365.omr.gov.ua/en/locations/rinok-privoz"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": null,
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Keksi joku parempi aihe ja muuta henkilöt kokonaan. Laita Fablelle viestiä muutoksesta, et mikäli tarinaa pitää muokata.",
+      "feedbackUpdatedAt": "2026-09-05T17:17:05.111Z",
+      "requestIds": [
+        "8d4d23cb-8ed5-456e-bea9-47ebec1bb1ec"
+      ],
+      "proposal": {
+        "change": "Fjodor vaihtuu hedelmämyyjä Irynaan ja tämän aikuiseen tyttäreen Solomiiaan. Pryvozin kuvapohjainen myyntihalli, fiktiivinen hedelmäkoju.",
+        "frame": "Fable on hyväksynyt henkilöt, torin, kuitin ja vapaasatamakysymyksen. Kuitti on ennen 1859 päättynyttä vapaasatamakautta; vuonna 1873 etu ei ollut voimassa. Kuva käyttää oikeaa hallia materiaalireferenssinä, ei dokumentoi todellista yritystä. Kirjan taskusta löytyy vain vihje kaupungissa sijaitsevaan kätköön.",
+        "encounter": "Iryna puristaa melonin turvaan, tytär nauraa matkaajan ajoitukselle. Ammatillinen uteliaisuus saa myyjän tutkimaan kuitin nurjaa puolta.",
+        "quizAction": "Jo toimitettu tuontitavaran tulliton vastaanotto ja varastointi vapaasatama-alueella. Korvaa portaiden askelmääräkysymys ja Fjodor-repliikit.",
+        "treasure": "Fable hyväksyi 19:05 UTC henkilöt ja visan yhdellä kaanonkorjauksella: takakannen taskussa on vain kuitin puuttuva puolisko tai vaakamerkki. Se osoittaa torin fiktiivisen vanhan vaakahuoneen kohdalle, josta kaupungin kätkö löytyy. Kätkö ei sijaitse pelaajan kirjassa. Repliikki: Kannoit vihjettä mukanasi. Minä vain katsoin nurjalle puolelle. Tyhjä ja väärä tulos saavat omat repliikkinsä."
+      },
+      "currentCanonQuestion": "Montako askelmaa Odessan jättiläisportaikossa on?",
+      "currentCanonCorrectAnswer": "Vajaat kaksisataa",
+      "currentCanonTreasure": "Sytyttämättömän lyhdyn jalustassa oli luukku, ja luukun takana kätkö. Fjodor raapaisi tulen: \"Lasi on puhdas — joku on pessyt lyhdyn, jota ei ole sytytetty sataan vuoteen.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 1203,
+          "questionLine": 1220,
+          "answerOptionsLine": 1221,
+          "treasureLine": 1234,
+          "selector": "KAARI_PAKETIT.kohteet[id=odessa]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-odessa.js",
+          "gitPath": "js/packs/fokusvirta-odessa.js",
+          "exportName": "FOKUSVIRTA_ODESSA",
+          "encounterLine": 905,
+          "treasureLine": 1041
+        }
+      }
+    },
+    {
+      "cityId": "oslo",
+      "city": "Halden",
+      "imageId": "oslo-oskar-feedback-r20260905-v1",
+      "replacesImageId": "oslo-sigrid-r20260905-redo-v3",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/oslo-oskar-feedback-r20260905-v1.jpg",
+      "imageSha256": "9b245e031e99264101af5ad9ea90110071c8d6abd3e087d6151db1014168f2bc",
+      "character": "Oskar — Gjellestadin tilallinen",
+      "caption": "Oskar on juuri nostanut heinäpaalin pellon laidan kärryyn. Aarrekysymys pysäyttää hänet, mutta koira jatkaa varastamansa työhanskan kanssa matkaa.",
+      "imageSourceNote": "Uusi henkilö ja aurinkoinen kohtaus Gjellestadissa Haldenin lähellä. Paikkatieto säilyy Haldenina, vaikka pelin vanha tekninen avain on oslo. Laivalöytöä ei kuvata maan päällä olevana veneenä. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "NIKU — Jellhaugen / Gjellestad reference",
+          "url": "https://www.niku.no/wp-content/uploads/2018/10/Georadar_Jellhaugen_med-struktur-i-bildet-1240x710.jpg"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": null,
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi . Auringon valo mukaan",
+      "feedbackUpdatedAt": "2026-09-05T17:32:20.915Z",
+      "requestIds": [
+        "94c244d1-3381-4d96-a845-301d774a9fd7"
+      ],
+      "proposal": {
+        "change": "Sigrid vaihtuu 32-vuotiaaseen maanviljelijä Oskariin. Näkyvä paikkakunta on Haldenin Gjellestad; tekninen cityId pysyy oslo.",
+        "frame": "Horation matkamerkintä sijoitetaan jo nykyisen fokuspaketin tavoin Haldenin seudulle. Oskar ei vartioi esi-isien lupausta vaan työskentelee pellolla ja tuntee paikalliset maamerkit.",
+        "encounter": "Oskar pysähtyy heinien kanssa ja koira nappaa hanskan. Hän katsoo pelaajaa: Aarretta? Sillä taitaa jo olla yksi. Vanha piirros tekee kysymyksestä seuraavassa hetkessä vakavan.",
+        "quizAction": "Säilytä puun säilymisen hapettomuutta ja tiivistä maata koskeva tietosisältö, mutta täsmennä kysymyksen alku niin ettei Gjellestadin laivaa väitetä lähes ehjänä nostetuksi. Ehdotettu kysymys: Miksi hapeton hautausmaa voi säilyttää puuta pitkään? Oikea sisältö: hapen puute hidastaa puuta hajottavaa toimintaa; Fable faktantarkistaa lopullisen oppitunnin.",
+        "treasure": "Piirroksen rajapyykki viittaa pellon ulkopuoliseen tavalliseen säilytyspaikkaan. Oskar auttaa vertaamaan maaston muotoja; kumpuun ei kaiveta. Kuvassa näkyy matala Jellhaugenin konteksti, ei esillä oleva viikinkilaiva. Käytä Halden-nimeä vain tämän kohtaamispisteen paikkateksteissä. Säilytä Oslo kaupunkina, cityId:nä sekä kaupunkilehden ja muiden kaupunkivisojen nimenä; nykyinen fokus erottaa Oslon kaupungin ja Haldenin Jellhaugen-kohtaamispisteen."
+      },
+      "currentCanonQuestion": "Kummuista nostetut viikinkilaivat ovat säilyneet lähes ehjinä. Mikä ne säilytti?",
+      "currentCanonCorrectAnswer": "Tiivis savimulta, joka sulki ilman pois puun ympäriltä",
+      "currentCanonTreasure": "Pihlajan juurten välissä, kivien alla, odotti kätkö — ei kummussa vaan sen vieressä. Sigrid osoitti oksan solmua: \"Sukuni sitoo merkkisolmun kerran vuodessa, mutta tämän vuoden solmu oli valmiina, kun keväällä tulin.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 1500,
+          "questionLine": 1516,
+          "answerOptionsLine": 1518,
+          "treasureLine": 1531,
+          "selector": "KAARI_PAKETIT.kohteet[id=oslo]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-oslo.js",
+          "gitPath": "js/packs/fokusvirta-oslo.js",
+          "exportName": "FOKUSVIRTA_OSLO",
+          "encounterLine": 801,
+          "treasureLine": 907
+        }
+      }
+    },
+    {
+      "cityId": "pietari",
+      "city": "Pietari",
+      "imageId": "pietari-matvei-feedback-r20260905-v1",
+      "replacesImageId": "pietari-dmitri-palatsisilta-r20260905-redo-a01",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/pietari-matvei-feedback-r20260905-v1.jpg",
+      "imageSha256": "8af72e3baf2d8896f22f954d6bc9135e985684da32f2af78e19436020f5e462e",
+      "character": "Matvei — sillan huoltoteknikko",
+      "caption": "Matvei keskeyttää sillan iltatarkastuksen kuultuaan aarrekysymyksen. Hän nostaa katseensa työvalon takaa, ja epäluuloon sekoittuu pieni huvittuneisuuden juonne.",
+      "imageSourceNote": "Uusi fiktiivinen huoltoteknikko Palatsisillan teräsrakenteiden luona. Rakenteet pohjaavat sillan ylläpitäjän kuviin; käsikampea ei esitetä nykyisen nostosillan ohjaimena. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Mostotrest — Palace Bridge",
+          "url": "https://mostotrest-spb.ru/bridges/dvorczovyj"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": null,
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+      "feedbackUpdatedAt": "2026-09-05T17:29:15.137Z",
+      "requestIds": [
+        "05d19870-f154-4b16-a7d7-1fba6fb1fe7b"
+      ],
+      "proposal": {
+        "change": "Dmitri vaihtuu 28-vuotiaaseen huoltoinsinööri Matveihin. Hän tarkastaa Palatsisillan teräsrakennetta lampulla.",
+        "frame": "Kirjan 1873 merkintä koskee Nevan ylitystä ja vanhaa laivareittiä. Nykyistä Palatsisiltaa ei kuvata jo silloin olemassa olevaksi samaksi koneistoksi. Matvei vertaa piirrosta sillan historiaa koskevaan aineistoon.",
+        "encounter": "Pelaaja kohtaa Matvein sovitulla huoltokäynnillä. Matvei keskeyttää tarkastuksen ja kysyy tuimasti, mistä vanha laivan nimi on saatu. Ei suurta käsikampea tai koko sillan käsin avaamista.",
+        "quizAction": "Säilytä nykyinen Nevan suiston perustamisolosuhteita koskeva kysymys ja oikea vaihtoehto. Matvei johtaa aiheen perustuksiin; oppitunnin tekniset yleistykset tarkistetaan ennen uutta luentaa.",
+        "treasure": "Nykyisessä huoltoarkistossa säilytetty vanha reittikirjan kopio sisältää eri aikoina tehdyt merkinnät. Kirjan tunniste kohdistaa siihen liitetyn erillisen öljykangaspaketin. Poista periytyvä sillanhoito, alkuperäiseksi väitetty vipu ja lukitun kynän mysteeri."
+      },
+      "currentCanonQuestion": "Sillat nousevat öisin, sillä joki on kaupungin valtakatu. Millaiselle maalle rakentajat tämän kaupungin pystyttivät?",
+      "currentCanonCorrectAnswer": "Nevan suiston soille, tammipaalujen varaan",
+      "currentCanonTreasure": "Sillan koneistokammiossa, vivun alla, odotti öljykankainen kätkö. Dmitri avasi odotetun laivan sivun: \"Joku on merkinnyt sen palanneeksi viime kesänä — kynällä, jota säilytän lukkojen takana.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 1275,
+          "questionLine": 1293,
+          "answerOptionsLine": 1295,
+          "treasureLine": 1307,
+          "selector": "KAARI_PAKETIT.kohteet[id=pietari]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-pietari.js",
+          "gitPath": "js/packs/fokusvirta-pietari.js",
+          "exportName": "FOKUSVIRTA_PIETARI",
+          "encounterLine": 757,
+          "treasureLine": 1250
+        }
+      }
+    },
+    {
+      "cityId": "rooma",
+      "city": "Rooma",
+      "imageId": "rooma-nico-feedback-r20260905-v1",
+      "replacesImageId": "rooma-enzo-trevi-r20260905-redo-a01",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/rooma-nico-feedback-r20260905-v1.jpg",
+      "imageSha256": "936300475e952cc5efaff72eae3085480a124c222bdae12aec66734f24907da1",
+      "character": "Nico — pasunisti",
+      "caption": "Nico on juuri lopettanut kappaleen Trevin lähistöllä. Matkaajan aarrekysymys pysäyttää hänet kesken naurun, kun muu soittajaryhmä jatkaa iltajuhlaa taustalla.",
+      "imageSourceNote": "Uusi henkilö ja fiktiivinen katujuhla iltavalaistuksessa. Trevin veistosten ja altaan mittasuhteet pohjaavat kaupungin paikkakuvaan; aarretarinan roolimuutos sovitetaan Fablelle. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Roma Capitale — Trevi maintenance, coin collection and basin drainage; real sculptural layout",
+          "url": "https://www.comune.roma.it/web/it/notizia/fontana-di-trevi-conclusa-manutenzione-straordinaria.page",
+          "inspected": "Official text read2026-09-05, including collection/drainage paragraph and Oceanus with two horse/Triton groups."
+        },
+        {
+          "label": "Roma Capitale actual Trevi photograph",
+          "url": "https://www.comune.roma.it/web-resources/cms/images/fontanatrevirestauro202401_d0.jpeg",
+          "localPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounters-redo-2026-09-05-v2/a/references/rooma-trevi-official.jpg",
+          "inspected": "Actually viewed660x440; rocky basin, facade niche, Oceanus and flanking sea-horse groups."
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": null,
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi Voisi olla ilta ja rajattu valo. Menossa joku juhla kaupungilla samaan aikaan",
+      "feedbackUpdatedAt": "2026-09-05T17:31:09.590Z",
+      "requestIds": [
+        "0fe42af2-7310-4db1-aa7f-99a89311b3ad"
+      ],
+      "proposal": {
+        "change": "Enzo vaihtuu 43-vuotiaaseen pasunisti Nicoon. Trevi näkyy taustalla pienenä iltakohtauksessa, jossa on fiktiivinen kaupunkijuhla.",
+        "frame": "Horatio kirjaa kolikon heiton ja sivukadulta kuuluvan sävelmän. Nico tunnistaa nuottikatkelman oman ohjelmistonsa vertailun kautta. Juhla ei ole väite todellisesta nimetystä tapahtumasta tai esiintymisluvasta.",
+        "encounter": "Matkaaja pysäyttää Nicon juuri soittotauolla. Kesken naurun tuleva aarrekysymys saa hänet tuijottamaan: Aarretta? Minä luulin että pyytäisit encorea.",
+        "quizAction": "Säilytä Trevin kolikonheiton taru → palaat vielä Roomaan. Nico liittää kysymyksen kirjan paluumerkintään ja suihkulähteen äärellä näkyvään tapaan.",
+        "treasure": "Nuottikatkelman jatko osoittaa kirjan vanhan tavaratalletuksen tunnisteeseen. Nico auttaa lukemaan rytmiin merkityn numeron, joka johdattaa erilliseen fiktiiviseen säilytysrasiaan. Poista kolikoiden nostaminen lähteestä, hoitaja Enzon suku ja huoltoluukun avaaminen."
+      },
+      "currentCanonQuestion": "Mitä tarun mukaan tapahtuu, kun heittää kolikon Trevin suihkulähteeseen olkapään yli?",
+      "currentCanonCorrectAnswer": "Palaat vielä Roomaan",
+      "currentCanonTreasure": "Enzo painoi kolikon kämmeneeni ja avasi huoltoluukun: sen takana odotti kätkö. Portilla sata puhelinta kuvasi lähdettä — yksikään ei kuvannut miestä, joka tietää sen salaisuuden.",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 438,
+          "questionLine": 456,
+          "answerOptionsLine": 458,
+          "treasureLine": 469,
+          "selector": "KAARI_PAKETIT.kohteet[id=rooma]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-rooma.js",
+          "gitPath": "js/packs/fokusvirta-rooma.js",
+          "exportName": "FOKUSVIRTA_ROOMA",
+          "encounterLine": 540,
+          "treasureLine": 791
+        }
+      }
+    },
+    {
+      "cityId": "tallinna",
+      "city": "Tallinna",
+      "imageId": "tallinna-eve-feedback-r20260905-v1",
+      "replacesImageId": "tallinna-kristjan-r20260905-redo-v1",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/tallinna-eve-feedback-r20260905-v1.jpg",
+      "imageSha256": "7baf5c40fb5429541f7cd6165f4f964ca19d38c2dbc0b0affb3b7bcbb32b186a",
+      "character": "Eve — tornin opas",
+      "caption": "Eve pysähtyy raatihuoneen kapeassa portaikossa päästääkseen matkaajan ohi. Aarrekysymys saa hänet kääntymään takaisin, epäuskoisen huvittuneena.",
+      "imageSourceNote": "Uusi fiktiivinen tornin opas. Tallinnan raatihuoneen kivinen kierreportaikko ja köysikaide perustuvat paikkakuvaan; vanhaa puuportaikkoa ei toisteta. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Tallinn Town Hall — tower",
+          "url": "https://raekoda.tallinn.ee/en/the-building/the-tower/"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": null,
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+      "feedbackUpdatedAt": "2026-09-05T17:31:47.021Z",
+      "requestIds": [
+        "98b52664-afc0-4551-a52c-a413ac57c6b6"
+      ],
+      "proposal": {
+        "change": "Kristjan vaihtuu 57-vuotiaaseen torniopas Eveen. Kiviset kierreportaat, köysikaide ja takaa kurkistava vierailija.",
+        "frame": "Horation merkintä kuvaa tornista tehtyä sää- ja suuntahavaintoa. Eve tuntee tornin opastusaineiston ja osaa sijoittaa vanhan piirroksen oikeaan portaikon tasanteeseen.",
+        "encounter": "Matkaajan yllättävä kysymys katkaisee nousun. Eve katsoo silmälasiensa yli tiukasti, suupielissä nauru: Voisitko kysyä sen uudestaan kun olet saanut hengityksen takaisin?",
+        "quizAction": "Säilytä Vana Toomasin jousiammuntakilpailun taru ja oikea vastaus. Johdata aiheeseen tornin oppaan kertomasta tarinasta.",
+        "treasure": "Eve näyttää vanhan havaintokirjan kopion, jonka kahden merkinnän ero antaa oikean säilytyslaatikon tunnisteen. Poista nykyisen oppaan väittäminen viirin laakereita rasvaavaksi tornimestariksi. Löytö tulee erillisestä luvallisesti avattavasta laatikosta, ei sääviirin purkamisesta."
+      },
+      "currentCanonQuestion": "Tarun mukaan nuori Toomas voitti kilpailun, mutta palkinto jäi saamatta. Minkä kilpailun?",
+      "currentCanonCorrectAnswer": "Kevätjuhlan jousiammunnan — puisen papukaijan tangosta",
+      "currentCanonTreasure": "Kirjauksen sivujen väliin oli taitettu kätkö. Kristjan piti sivua valoa vasten: \"Vastatuulen päivä on merkitty kahdesti, ja jälkimmäinen on viime syksyltä — silloin minä olin tornissa, eikä viiri kääntynyt itsestään.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 1347,
+          "questionLine": 1366,
+          "answerOptionsLine": 1368,
+          "treasureLine": 1381,
+          "selector": "KAARI_PAKETIT.kohteet[id=tallinna]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-tallinna.js",
+          "gitPath": "js/packs/fokusvirta-tallinna.js",
+          "exportName": "FOKUSVIRTA_TALLINNA",
+          "encounterLine": 453,
+          "treasureLine": 645
+        }
+      }
+    },
+    {
+      "cityId": "tromssa",
+      "city": "Tromssa",
+      "imageId": "tromssa-kjell-feedback-r20260905-v1",
+      "replacesImageId": "tromssa-ingrid-satamavahti-r20260905-redo-a01",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/tromssa-kjell-feedback-r20260905-v1.jpg",
+      "imageSha256": "ebc6b2d31e7cd873f7e2eea5a5f010b0a5312a2c79df7721456d2ad9a948957a",
+      "character": "Kjell — satamakahvilan pitäjä",
+      "caption": "Kjell on sulkemassa kahvikärryään yöttömän yön valossa. Hän katsoo matkaajaa epäuskoisesti, samalla kun lokki kurkottaa kohti tiskille jäänyttä paperipussia.",
+      "imageSourceNote": "Sataman kesäyö, kahvilanpitäjän voimakas reaktio ja lokin oma pieni suunnitelma. Uusi henkilö ja tapahtuma vaativat tarinatekstin yhteensovituksen. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Arctic Norway / Northern Norway tourism — midnight sun in Tromsø",
+          "url": "https://arcticnorway.com/discover/midnight-sun/midnight-sun-in-tromso/",
+          "inspected": "Official text read2026-09-05; confirms summer midnight sun and variable shadows between buildings."
+        },
+        {
+          "label": "Northern Norway tourism harbor photo; Knut Hansvold attribution on source article",
+          "url": "https://nordnorge.com/content/uploads/2020/01/IMG_1676-2-1024x768.jpg",
+          "localPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/encounters-redo-2026-09-05-v2/a/references/tromssa-harbour.jpg",
+          "inspected": "Actually viewed1024x768 reference: red timber warehouse, slate roof, timber quay, mixed city hillside."
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": null,
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Vaihda henkilö ja mieti uusiksi",
+      "feedbackUpdatedAt": "2026-09-05T17:28:42.315Z",
+      "requestIds": [
+        "7dbde346-3b4a-4be9-b229-894dde61afa5"
+      ],
+      "proposal": {
+        "change": "Ingrid vaihtuu 62-vuotiaaseen kahvikärryä pitävään Kjelliin. Satamassa paistaa keskiyön aurinko ja lokki varastaa paperipussia.",
+        "frame": "Horation satamamerkintä mainitsee laivan ja Pohjolan Pariisin. Kjell tuntee nykyisen laiturin ja vanhat laivavalokuvat oman harrastuksensa kautta, ei vartiointilupauksesta.",
+        "encounter": "Kjell vilkaisee kysyjää samalla kun lokki nappaa pussin: Jos etsit aarretta, aloita tuosta varkaasta. Puolihymy vaihtuu tarkaksi katseeksi, kun hän näkee laivan nimen.",
+        "quizAction": "Säilytä nykyinen Pohjolan Pariisi -kysymys ja vastaus. Vanha lempinimi löytyy kirjan satamamerkinnästä ja johdattaa keskustelun.",
+        "treasure": "Kjell näyttää keräilemänsä vanhan laivapostikortin, jonka taustamerkintä vastaa kirjan piirrosta. Se ohjaa tavalliseen fiktiiviseen satamavaraston säilytyslokeroon luvallisen käynnin yhteydessä. Poista Ingridin viikoittainen öljylyhty ja luvaton laivan koneistoon meno."
+      },
+      "currentCanonQuestion": "Tromssa sai 1800-luvulla lempinimen, joka hämmästytti etelän vieraita. Minkä?",
+      "currentCanonCorrectAnswer": "Pohjolan Pariisi",
+      "currentCanonTreasure": "Lyhdyn öljysäiliön alla, kannen luukussa, odotti kätkö. Ingrid sammutti liekin: \"Öljyn olen lisännyt minä joka viikko, mutta sydänlanka on vaihdettu uuteen — eikä vaihtaja ollut minä.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 1609,
+          "questionLine": 1627,
+          "answerOptionsLine": 1629,
+          "treasureLine": 1642,
+          "selector": "KAARI_PAKETIT.kohteet[id=tromssa]"
+        },
+        "focus": null
+      }
+    },
+    {
+      "cityId": "varsova",
+      "city": "Varsova",
+      "imageId": "varsova-zofia-feedback-r20260905-v1",
+      "replacesImageId": "varsova-jadwiga-verkko-r20260905-redo-a01",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/varsova-zofia-feedback-r20260905-v1.jpg",
+      "imageSha256": "21fa5fac837c2b1356904bc19f8639f09e5f56e027b71584f67f4e446035307f",
+      "character": "Zofia — antikvaari",
+      "caption": "Zofia vetää suuren varastokirjan hyllystä ja pysähtyy kuullessaan, mitä matkaaja etsii. Hänen katseensa on terävä, mutta suu paljastaa orastavan hymyn.",
+      "imageSourceNote": "Uusi kuva Varsovan nykyisen fokuspaketin antikvaari Zofiasta. Kirjapuoti on fiktiivinen, eikä kuvaa sidota todelliseen liikkeeseen. Vanhemman Jadwiga-kalastajatarinan ristiriita välitetään Fablelle. Uusintapyyntö oli ilman sanallista lisäohjetta; tämä ei ole käyttäjän uusi tarinapäätös.",
+      "webReferenceUrls": [],
+      "userApproved": false,
+      "currentUserReview": null,
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "",
+      "feedbackUpdatedAt": "2026-09-05T17:16:19.342Z",
+      "requestIds": [],
+      "proposal": {
+        "change": "Uusi kuva käyttää aktiivisen fokuspaketin antikvaari Zofiaa. KAARI sisältää vielä kalastaja Jadwigan ja edellinen kuva jokiekologin. Tämä on ristiriidan sovitusehdotus, ei käyttäjän sanatarkka uuden henkilön päätös.",
+        "frame": "Horation vanha kirjakauppamerkintä johdattaa nykyiseen fiktiiviseen antikvariaattiin. Zofia löytää varastokirjan kautta aiheen ammatillisen kiinnostuksen perusteella, ei periytyvänä lupauksena.",
+        "encounter": "Zofia vetää raskaan varastokirjan hyllystä ja katsoo tulijaa terävästi: Sanoitko tuon nimen aivan varmasti oikein? Kissa nukkuu hyllykolossa ja asiakas kurkistaa kauempaa.",
+        "quizAction": "Nykyinen KAARI-kysymys on edelleen mereneidon sisar → Kööpenhamina. Jos säilytät sen, liitä kysymys Zofian avaaman paikallistarinoiden kirjan kuvitukseen. Sovita fokuspaketin mahdollinen toinen visa samaksi kokonaisuudeksi.",
+        "treasure": "Varastokirjan vanha eränumero johdattaa kerran vastaanotettuun kirjakääröön, jonka väliin on talletettu kuori. Käytä fokuspaketin kirjakauppalinjaa; poista kalastajan verkonpainot ja rantakiven kätkö samasta kaupunkikaaresta."
+      },
+      "currentCanonQuestion": "Varsovan mereneidolla on tarun mukaan sisar, joka ui toiseen kaupunkiin. Minne?",
+      "currentCanonCorrectAnswer": "Kööpenhaminaan",
+      "currentCanonTreasure": "Kätkö oli upotettu rantakiven alle verkonpainojen sekaan. Jadwiga laski sen käteeni: \"Painot ovat sukuni valamia — paitsi yksi, ja sen valoi joku, joka halusi kätkön löytyvän juuri nyt.\"",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 823,
+          "questionLine": 841,
+          "answerOptionsLine": 843,
+          "treasureLine": 855,
+          "selector": "KAARI_PAKETIT.kohteet[id=varsova]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-varsova.js",
+          "gitPath": "js/packs/fokusvirta-varsova.js",
+          "exportName": "FOKUSVIRTA_VARSOVA",
+          "encounterLine": 896,
+          "treasureLine": 1027
+        }
+      }
+    },
+    {
+      "cityId": "venetsia",
+      "city": "Venetsia",
+      "imageId": "venetsia-lucia-feedback-r20260905-v1",
+      "replacesImageId": "venetsia-lucia-strength-r20260905-v1",
+      "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site/europe-feedback-20260905/venetsia-lucia-feedback-r20260905-v1.jpg",
+      "imageSha256": "0c072b08500f9b4c998b44090c1ca0eca9e5ceb3f38d502a08c00e88ea1340da",
+      "character": "Lucia — naamiontekijä",
+      "caption": "Lucia kääntyy kesken naamioiden järjestämisen. Ikkunasta siivilöityvä aurinko osuu hänen häkeltyneeseen katseeseensa.",
+      "imageSourceNote": "Matkaajan yllättävä kysymys keskeyttää työn. Aurinko valaisee kasvot ja käsivarren; kissa jatkaa uniaan. Kaikki henkilöt ja kohtaamistilanteet ovat fiktiota. Paikkareferenssit eivät osoita kohtaamisen tapahtuneen.",
+      "webReferenceUrls": [
+        {
+          "label": "Ca' Macana — katsottu käsityöläisen työkuva",
+          "url": "https://www.camacana.com/en-UK/rediscovering-traditional-venetian-masks.php"
+        },
+        {
+          "label": "Ca' Macana — katsottu valkoinen ruttolääkärinaamio ja cartapesta-materiaali",
+          "url": "https://www.camacana.com/en-UK/plague-doctor-classic.php"
+        }
+      ],
+      "userApproved": false,
+      "currentUserReview": null,
+      "imageState": "root-inspected-private-review-published",
+      "originalFeedback": "Tuo auringon valo kasvoille jonkun ikkunan kautta siivilöityneenä. Muuten hyvä",
+      "feedbackUpdatedAt": "2026-09-05T17:36:20.745Z",
+      "requestIds": [
+        "6e40e42d-4552-495a-ae7b-bd34308c1e19"
+      ],
+      "proposal": {
+        "change": "Lucia, naamio, paja ja tarina säilyvät. Kasvoille tulee ikkunan siivilöimä valo.",
+        "frame": "Ei tarinamuutosta tämän palautteen perusteella.",
+        "encounter": "Sama naamiontekijä keskeyttää työn, katse matkaajaan.",
+        "quizAction": "Säilytä nykyinen ruttolääkärinnaamion yrttinokkaa koskeva kysymys ja vastaus.",
+        "treasure": "Säilytä nykyinen tilauskirja ja palautetun naamion ketju."
+      },
+      "currentCanonQuestion": "Miksi ruttolääkärin naamiossa on pitkä linnunnokka?",
+      "currentCanonCorrectAnswer": "Nokkaan pantiin yrttejä, joiden uskottiin suojaavan taudilta",
+      "currentCanonTreasure": "Lucia sulki tilauskirjan: \"Joku palautti toisen naamion viime keväänä — jätti vain lapun, jossa oli ilmanpaineen lukema.\" Barometrilukema, aivan kuin isoisän kirjassa.",
+      "currentFocusTreasure": null,
+      "canonPaths": {
+        "kaari": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/tyohuone-kehitys-data.js",
+          "gitPath": "js/tyohuone-kehitys-data.js",
+          "entryLine": 201,
+          "questionLine": 218,
+          "answerOptionsLine": 219,
+          "treasureLine": 231,
+          "selector": "KAARI_PAKETIT.kohteet[id=venetsia]"
+        },
+        "focus": {
+          "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/game-mailbox/js/packs/fokusvirta-venetsia.js",
+          "gitPath": "js/packs/fokusvirta-venetsia.js",
+          "exportName": "FOKUSVIRTA_VENETSIA",
+          "encounterLine": 747,
+          "treasureLine": 862
+        }
+      }
+    }
+  ]
+}
