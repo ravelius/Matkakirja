@@ -1,31 +1,13 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-05T21:30:14.172050+00:00",
-  "status": "partial-root-approved-r2-delivered",
+  "updatedAt": "2026-09-05T21:43:35.367113+00:00",
+  "status": "complete-root-approved-r2-delivered",
   "expectedTotal": 20,
-  "deliveredCount": 3,
-  "remainingIds": [
-    "blombos",
-    "skhul-qafzeh",
-    "al-wusta",
-    "lida-ajer",
-    "denisova",
-    "madjedbebe",
-    "lake-mungo",
-    "niah",
-    "bacho-kiro",
-    "chauvet",
-    "yana",
-    "tianyuan",
-    "beringia",
-    "white-sands",
-    "monte-verde",
-    "lapita",
-    "aotearoa"
-  ],
+  "deliveredCount": 20,
+  "remainingIds": [],
   "ownerInstruction": "Tee kuviin väljempi rajaus koska ne pitää feidata reunoiltaan läpinäkyviksi",
-  "displayInstruction": "Kuvat on generoitu väljemmiksi: noin20% ympäristövaraa joka reunalla, tärkeä toiminta keskialueella. Toimitus on täysi 1536×1024 sRGB JPG ilman valkoista vinjettiä ja ilman valmista alphaa. Käytä pelin läpinäkyvää pehmeää reunamaskia. Säilytä koko kuva (contain), älä crop/cover-rajaa ennen maskia. Nykyinen ovaalimaski saa häivyttää ympäristöä, ei ihmisten päätä tai olennaista toimintaa; tarkista kunkin kuvan maski pelissä.",
-  "historicalInstruction": "Kaikki kuvat ovat tutkimukseen tukeutuvia havainnekuvia, eivät todistettuja täsmällisiä tapahtumia. Lähderajaukset ovat riveittäin. Älä nimeä kaikkia ensimmäisiksi/vanhimmiksi: Omo on vähimmäisikä, Al Wustan ajoitus noin95–86ka (tilauscaption noin85ka), Blombos75ka ei100ka sekoitusastiaa, Denisovan saapumisryhmä hypoteettinen, Madjedbeben ranta ei näy, Yana ei mammutinluumajaa, Beringia jäätön, Lapitan venetyyppi epävarma. Tarkista vastaavat väitteet aikajanatekstistä.",
+  "displayInstruction": "Kuvat on generoitu väljemmiksi: noin 20 % ympäristövaraa joka reunalla, tärkeä toiminta keskialueella. Toimitus on täysi 1536×1024 sRGB JPG ilman valkoista vinjettiä ja ilman valmista alphaa. Käytä pelin läpinäkyvää pehmeää reunamaskia. Säilytä koko kuva (contain), älä crop/cover-rajaa ennen maskia. Nykyinen ovaalimaski saa häivyttää ympäristöä, ei ihmisten päätä tai olennaista toimintaa; tarkista kunkin kuvan maski pelissä.",
+  "historicalInstruction": "Kaikki kuvat ovat tutkimukseen tukeutuvia havainnekuvia, eivät todistettuja täsmällisiä tapahtumia. Lähderajaukset ovat riveittäin. Älä nimeä kaikkia ensimmäisiksi/vanhimmiksi: Omo on vähimmäisikä, Al Wustan ajoitus noin 95–86 ka (tilauscaption noin 85 ka), Blombos75ka ei100ka sekoitusastiaa, Denisovan saapumisryhmä hypoteettinen, Madjedbeben ranta ei näy, Yana ei mammutinluumajaa, Beringia jäätön, Lapitan venetyyppi epävarma. Tarkista vastaavat väitteet aikajanatekstistä.",
   "rows": [
     {
       "id": "jebel-irhoud",
@@ -157,6 +139,677 @@
           "bottom": 62
         },
         "verdict": "PASS"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "blombos",
+      "key": "aikajana/ihmisen-matka/blombos.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/blombos.jpg",
+      "caption": "Blombos, noin 75 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "aab2205c84fa80380cbcc330bd3962483de922d444c4a95f09edcef087db87d6",
+      "bytes": 743924,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Create a 3:2 horizontal, camera-believable archaeological reconstruction photograph inside Blombos Cave on the southern Cape coast of South Africa about 75,000 years ago. Use a genuinely wide environmental view with the camera 40 percent farther back than an activity portrait. Reserve the outer 20 percent on every edge for uninterrupted cave floor, limestone, entrance shadow and natural environment; both complete people, all hands and every meaningful artifact stay inside the central 60 percent safe area. The two people together occupy no more than the central third of the image width and less than 35 percent of image height.\n\nTwo skilled early Homo sapiens adults sit diagonally away from camera, heads bowed so faces remain tiny, shadowed and unidentifiable. One holds only THREE separate tiny perforated Nassarius kraussianus marine snail shells and threads one onto a very short natural fiber. Each is an irregular, visibly spiral snail shell smaller than a fingernail, in muted natural cream and brown. There is no completed necklace. The other holds in one palm a single palm-sized irregular rough-edged natural red ochre fragment, only 7 to 9 centimeters long and clearly smaller than the palm, and scratches a compact crosshatched engraving into one small flat facet with a sharp stone point. The only other objects are two tiny loose shells and several ordinary stone flakes on cave sediment.\n\nCRITICAL: no round pearl beads, no uniform bead chain, no long necklace, no bracelets, no arm bands, no earrings, no body jewelry, no pre-existing ornament on either person. No large red surface, red floor patch, tile, plaque, tablet, board, hide painting, pigment mat, dish, shell bowl, abalone container, liquid pigment workshop, pottery, vessel or basket. The only red object is the small irregular ochre stone held in one hand.\n\nFully human capable craftworkers in simple undecorated hide wraps, never caricatures. Realistic hands and plausible cave materials. Restrained historical documentary photography, natural camera optics, subtle film grain, softly resolved microdetail, strong broad light and shadow, muted ochre red, limestone grey, hide brown and subdued sepia. Museum-quality reconstruction captured on a real camera.\n\nNo border, paper edge, frame, card, caption, text, logo, watermark, artificial vignette, blank margin, alpha effect, painting, illustration strokes, glossy 3D render, fantasy styling, frontal portrait face, modern object, metal, architecture, agriculture, dinosaur or mammoth.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1016/j.jhevol.2004.09.002",
+          "title": "Nassarius kraussianus shell beads from Blombos Cave",
+          "supports": "Perforated, strung and worn shell beads from M1/M2, mostly the approximately 75 ka M1 phase."
+        },
+        {
+          "url": "https://doi.org/10.1126/science.1067575",
+          "title": "Emergence of Modern Human Behavior: Middle Stone Age Engravings from South Africa",
+          "supports": "Geometrically engraved ochre from the Blombos Middle Stone Age sequence."
+        }
+      ],
+      "historicalCaveats": [
+        "The approximately 100 ka ochre-processing toolkit with shell container is deliberately omitted because it is older than this 75 ka scene.",
+        "The simultaneous bead-threading and ochre engraving is an illustrative combination of finds, not a directly observed single event.",
+        "Describe the finds as early evidence of personal ornamentation and symbolic practice rather than the absolute first adornment."
+      ],
+      "safeArea": {
+        "outerEnvironmentMarginPercent": 20,
+        "contentBoundsPercent": {
+          "left": 39,
+          "top": 52,
+          "right": 63,
+          "bottom": 75
+        },
+        "verdict": "PASS"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "skhul-qafzeh",
+      "key": "aikajana/ihmisen-matka/skhul-qafzeh.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/skhul-qafzeh.jpg",
+      "caption": "Qafzeh, noin 100 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "d1daed3fde3d9c37fe45ebc686a8bc7f060fe3188a54856b5a666f53f168a45d",
+      "bytes": 554612,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Create a 3:2 horizontal, camera-believable archaeological reconstruction photograph at Qafzeh Cave in Lower Galilee about 100,000 years ago. Use a wide, quiet view from 30 percent farther back than a normal group scene. Reserve the outer 20 percent on every edge for continuous natural limestone shelter, ordinary rocky earth, scrub and softly lit landscape that can later be faded. Keep every person and meaningful gesture fully inside the central 60 percent safe area.\n\nAt the center of the rock shelter, four early Homo sapiens people stand or sit in a subdued silent group beside a small area of recently disturbed ordinary cave sediment. One adult rests a hand on another person's shoulder; two sit with backs to camera; one standing figure looks down. The disturbed ground is subtle, irregular and almost level with its surroundings: slightly looser earth, a faint shallow depression and a few naturally scattered stones, with no constructed outline. Do not show a corpse, skeleton, exposed remains, antler offering or theatrical ritual. Convey possible mourning and social care only through quiet posture and spacing. All faces are small, turned away or naturally lost in shadow and unidentifiable. Fully human, capable modern people in practical hide wraps, never caveman caricatures. Beyond the shelter opening, show Mediterranean woodland-scrub on a limestone slope in gentle overcast light.\n\nCRITICAL ARCHAEOLOGICAL CONSTRAINT: absolutely no stone ring, stone circle, cairn, mound, grave slab, headstone, rectangular border, lined pit, altar, monument, arranged white stones, ritual architecture or symbolic ground pattern. Any visible stones are sparse, randomly sized natural limestone fragments continuous with the surrounding cave floor. The exact ceremony is unknown; this is a restrained illustrative social moment.\n\nVisual language: restrained historical documentary photography, natural 50mm-like optics, subtle film grain, softened microcontrast with clear broad tonal separation, muted limestone, dusty green, hide brown and subdued sepia. Unsensational museum-quality reconstruction captured on a real camera.\n\nNo border, paper edge, frame, card, caption, text, logo, watermark, artificial vignette, blank margin, alpha effect, painting, illustration strokes, glossy 3D render, fantasy ritual, heroic pose, frontal portrait face, modern object, pottery, metal, building, agriculture, dinosaur or mammoth.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.4000/paleo.4848",
+          "title": "The Paleolithic Burials at Qafzeh Cave, Israel",
+          "supports": "Intentional burial context, Qafzeh 11 body position, associated deer element and dating ranges."
+        },
+        {
+          "url": "https://doi.org/10.1371/journal.pone.0102822",
+          "title": "Earliest Cranio-Encephalic Trauma from the Levantine Middle Palaeolithic",
+          "supports": "Qafzeh 11 age at death, healed trauma, social care and distinctive funerary treatment."
+        }
+      ],
+      "historicalCaveats": [
+        "The depicted place is Qafzeh, while the unchanged Fable ID groups Skhul and Qafzeh.",
+        "The closed grave marker and witnesses are an illustrative reconstruction; no human remains or antler offering are shown.",
+        "Describe this as an early Homo sapiens dispersal into the Levant rather than the first trip out of Africa."
+      ],
+      "safeArea": {
+        "outerEnvironmentMarginPercent": 20,
+        "contentBoundsPercent": {
+          "left": 40,
+          "top": 31,
+          "right": 66,
+          "bottom": 79
+        },
+        "verdict": "PASS"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "al-wusta",
+      "key": "aikajana/ihmisen-matka/al-wusta.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/al-wusta.jpg",
+      "caption": "Al Wusta, noin 85 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "0f6ce8ff177da68a0d2f273d9ab2994a4aca2b48168cd4e009ec4679fef849d5",
+      "bytes": 600478,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Create a 3:2 horizontal, camera-believable archaeological reconstruction photograph at the Al Wusta palaeolake in the Nefud region of northern Arabia about 85,000 years ago, during a humid Green Arabia interval. Use an expansive high viewpoint from 30 percent farther back than a normal group scene. Reserve the outer 20 percent on every edge for uninterrupted grass, shallow water, sky and natural landscape that can later be faded. Place every person and significant animal fully inside the central 60 percent safe area.\n\nThe wide freshwater lake and semi-arid grassland dominate. In the center middle distance, a small group of five early Homo sapiens walks along the firm lake margin: two carry plain wooden shafts, one bends to inspect tracks in wet sediment, and two follow with hide bundles. All are fully human and capable, shown from behind or in tiny shadowed profile with no identifiable faces. Farther beyond them but still inside the safe area, two antelope drink near reeds and one partly submerged hippopotamus is visible in shallow water. Keep animals sparse and naturally separated, never a staged mixed herd. Show scattered acacia-like trees, grass, damp shore and dunes softened by the humid episode; no lush tropical jungle.\n\nVisual language: restrained historical documentary photography, natural telephoto-like landscape compression, subtle film grain, softly resolved microdetail, strong believable broad light and shadow, muted grass green, wet earth, pale sand and subdued sepia. Early morning haze, calm observational mood, museum-quality reconstruction captured on a real camera.\n\nNo border, paper edge, frame, card, caption, text, logo, watermark, artificial vignette, blank margin, alpha effect, painting, illustration strokes, glossy 3D render, fantasy oasis, heroic pose, frontal portrait face, modern object, pottery, metal, camel, domesticated animal, building, agriculture, boat, dinosaur or mammoth.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1038/s41559-018-0518-2",
+          "title": "Homo sapiens in Arabia by 85,000 years ago",
+          "supports": "Human presence before 85 ka, approximately 95–86 ka site model, palaeolake, humid semi-arid grassland and primarily African fauna."
+        },
+        {
+          "url": "https://doi.org/10.1038/s41586-021-03863-y",
+          "title": "Multiple hominin dispersals into Southwest Asia over the past 400,000 years",
+          "supports": "Repeated humid-phase palaeolake occupations in the Nefud and regional hydroclimate context."
+        }
+      ],
+      "historicalCaveats": [
+        "The requested approximately 85 ka caption is retained, while the primary site model is approximately 95–86 ka.",
+        "The visible people, two antelopes and one hippopotamus are a sparse illustrative tableau; their simultaneous presence is not directly documented."
+      ],
+      "safeArea": {
+        "outerEnvironmentMarginPercent": 20,
+        "contentBoundsPercent": {
+          "left": 40,
+          "top": 35,
+          "right": 61,
+          "bottom": 64
+        },
+        "verdict": "PASS"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "lida-ajer",
+      "key": "aikajana/ihmisen-matka/lida-ajer.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/lida-ajer.jpg",
+      "caption": "Lida Ajer, noin 70 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "9edf4cefc867035ef5edb0af64395534adc37755b3db58c6f8973543f79e8b85",
+      "bytes": 905136,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja game timeline illustration, 3:2 landscape with edge-fade safe area\nPrimary request: Lida Ajer closed-canopy rainforest and damp limestone cave about 70,000 years ago; three small back-facing Homo sapiens quietly gathering and observing at the threshold. The activity is illustrative.\nComposition/framing: Camera 30% farther back than a normal establishing shot. All three complete figures, including feet and head, and all meaningful action stay inside the central 60% of frame. Surround them on every side with at least 20% uninterrupted natural cave/forest environment for a later transparent edge fade. No important subject, limb, tool, bright highlight or cave opening edge in the outer 20% margins.\nStyle: sharp camera-like documentary photorealism, muted greens and limestone browns, subtle sepia, fine film grain, natural diffuse humid light.\nConstraints: full natural background to every image edge; no generated vignette, transparency, white fade, paper border or dark frame. No coast, boat, fire, orangutan, camp claim, recognizable face, text or watermark. Upright capable modern humans, non-specific organic wraps.\nAvoid: caveman caricature, painterly or CGI surface, theatrical light, edge-crowded figures.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1038/nature23452",
+          "title": "An early modern human presence in Sumatra 73,000–63,000 years ago",
+          "supports": "Anatomically modern human teeth, associated 73–63 ka chronology, and rainforest context at Lida Ajer."
+        },
+        {
+          "url": "https://doi.org/10.1098/rstb.2020.0494",
+          "title": "Speleological and environmental history of Lida Ajer cave, western Sumatra",
+          "supports": "MIS 4 cave deposits and stable-isotope evidence for a largely closed-canopy tropical forest; records provenance and behavioural uncertainty."
+        }
+      ],
+      "historicalCaveats": [
+        "The exact position of the human teeth within the cave system and the precise environment exploited by the humans remain uncertain.",
+        "The human activity is illustrative; coastal travel, a residential camp, fire, and an orangutan encounter are not shown as established facts."
+      ],
+      "safeArea": {
+        "outerMarginPercent": 20,
+        "subjectZone": "central 60%",
+        "cameraChange": "approximately 30% farther",
+        "verdict": "pass"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "denisova",
+      "key": "aikajana/ihmisen-matka/denisova.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/denisova.jpg",
+      "caption": "Denisovan luola, noin 50 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "d7689e38cc890569fd86d4eb7a5a9777be13d646d2dfb40e3229bf04e1c3dc8c",
+      "bytes": 826085,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja game timeline illustration, 3:2 landscape with edge-fade safe area\nPrimary request: Hypothetical small Homo sapiens group moving through the broad cold Altai river valley near Denisova Cave about 50,000 years ago. One visible group only; no documented meeting claim.\nScene: late-autumn larch and birch, light snow patches, river, limestone slope and small cave entrance.\nComposition/framing: Camera 30% farther away, wide elevated view. Four complete tiny travellers and the cave entrance all lie within the central 60–65% of frame, with no figure below the lower 22% line. Preserve at least 20% calm natural landscape on every edge for later fading. No key subject or strongest highlight in outer margins.\nStyle: sharp restrained documentary photorealism, cool dawn, muted sepia, natural optics.\nConstraints: full natural landscape to all edges; no vignette, white fade, transparency, border or paper. No other hominins, encounter, readable faces, ornaments, text or watermark.\nAvoid: fantasy mountains, spectacle, caveman caricature, edge crowding.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1038/s41586-021-03675-0",
+          "title": "Pleistocene sediment DNA reveals hominin and faunal turnovers at Denisova Cave",
+          "supports": "Repeated archaic occupation and modern-human mtDNA in Initial Upper Palaeolithic sediment at least 45 ka; associations remain debated."
+        }
+      ],
+      "historicalCaveats": [
+        "The arriving Homo sapiens group is hypothetical and no face-to-face encounter is shown.",
+        "The precise exterior appearance of the cave mouth, surrounding geography, and the depicted moment are illustrative rather than reconstructed from a matched site photograph; no archaeological assemblage is assigned to a species."
+      ],
+      "safeArea": {
+        "outerMarginPercent": 20,
+        "subjectZone": "central 60-65%",
+        "cameraChange": "approximately 30% farther",
+        "verdict": "pass"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "madjedbebe",
+      "key": "aikajana/ihmisen-matka/madjedbebe.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/madjedbebe.jpg",
+      "caption": "Madjedbebe, noin 65 000–50 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "5992832711aa5d6d811da5f3f0831fc3a04daba5286b0807538ae9f6fc70ea19",
+      "bytes": 792566,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja timeline image, landscape with strict edge-fade safe area\nPrimary request: Evidence-based ochre grinding at Madjedbebe rock shelter 65,000–50,000 years ago.\nScene: broad sandstone shelter floor and seasonally dry woodland beyond.\nSubject/action: One complete seated Homo sapiens figure shown small, in dark side-back silhouette, head bowed and face entirely hidden, grinding red ochre on a flat stone with natural hands. A separate edge-ground stone tool nearby. No second person.\nComposition: Camera far back, medium-wide environmental view. The complete seated figure, hands, slab, ochre and tool occupy the central 35–40% only. At least 25% calm natural sandstone, rock wall, shadow or woodland surrounds every edge. Nothing human is cropped. Outer margins contain no focal object or bright hotspot.\nStyle: sharp archaeological documentary photograph, restrained sepia sandstone colors, subtle red ochre accent, natural optics and side light.\nConstraints: opaque natural background to all edges, no vignette/fade/alpha/border. No readable face, coast, boat, rock painting, text or watermark.\nAvoid: close-up hands, cropped limbs, visible facial detail, extra fingers, ceremonial invention, edge crowding, painterly appearance.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1038/nature22968",
+          "title": "Human occupation of northern Australia by 65,000 years ago",
+          "supports": "Early occupation and ground ochre, grinding stones and stone technologies."
+        },
+        {
+          "url": "https://doi.org/10.1038/s41598-022-15174-x",
+          "title": "65,000-years of continuous grinding stone use at Madjedbebe, Northern Australia",
+          "supports": "Phase 2 environmental reconstruction and shoreline about 300 km away."
+        }
+      ],
+      "historicalCaveats": [
+        "Activity is an illustrative reconstruction from the artefact assemblage.",
+        "No coast, watercraft or contemporaneous rock-painting claim is shown."
+      ],
+      "safeArea": {
+        "outerMarginPercent": 25,
+        "subjectZone": "central 35-40%",
+        "cameraChange": "far environmental view",
+        "verdict": "pass"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "lake-mungo",
+      "key": "aikajana/ihmisen-matka/lake-mungo.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/lake-mungo.jpg",
+      "caption": "Lake Mungo, noin 42 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "809e52de3ac32019358599f26d64668efff85865a7751fab5600b2ee209579ed",
+      "bytes": 674712,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja timeline image, landscape with edge-fade safe area\nPrimary request: Respectful plausible Lake Mungo landscape about 42,000 years ago, when the lake held water, evoking the evidence for early cremation without inventing a visible funeral ceremony or exposing remains.\nScene: broad freshwater lake margin, pale curving lunette dunes, low scrub, wind moving across shallow water at dusk.\nSubject/action: Two complete small back-facing figures at a modest controlled bed of glowing ash on the shore, one kneeling at a respectful distance and one standing. No body, bones or burial pit visible; the moment is illustrative, quiet ash tending rather than a claimed ritual sequence.\nComposition: Very wide environmental view, camera 30% farther away. Figures and ash fit in central 30–35%; dune curve and water lead through centre. Outer 22% on every edge is calm natural water, sky, sand or scrub free of people and focal objects.\nStyle: sharp camera-real documentary reconstruction, muted mauve-grey dusk and pale ochre, restrained sepia, natural wind and fine grain.\nConstraints: opaque natural background to edges; no vignette/fade/alpha/border. No exposed remains, identifiable faces, ceremonial costume, text or watermark.\nAvoid: desert-only dry lake, bonfire spectacle, modern funeral gestures, melodrama, edge crowding, painterly CGI.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1038/nature01383",
+          "title": "New ages for human occupation and climatic change at Lake Mungo, Australia",
+          "supports": "Lake Mungo chronology, first recorded cremation and ritual ochre burial."
+        },
+        {
+          "url": "https://whc.unesco.org/en/list/167/",
+          "title": "Willandra Lakes Region",
+          "supports": "Official landscape and cultural context."
+        }
+      ],
+      "historicalCaveats": [
+        "The ash-tending moment is illustrative; no exact funeral sequence or exposed human remains are reconstructed."
+      ],
+      "safeArea": {
+        "outerMarginPercent": 22,
+        "subjectZone": "central 30-35%",
+        "cameraChange": "approximately 30% farther",
+        "verdict": "pass"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "niah",
+      "key": "aikajana/ihmisen-matka/niah.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/niah.jpg",
+      "caption": "Niahin luola, noin 40 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "a009d3ed7f0de7671768459d27cbeeb241402b24b257de54fd8ed3e1093c6f48",
+      "bytes": 908179,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja timeline image, landscape with strict edge-fade safe area\nPrimary request: The immense Niah Great Cave West Mouth and lowland Bornean rainforest about 40,000 years ago.\nScene/action: From deep inside, three tiny complete back-facing people carrying firewood and plant bundles cross the middle distance toward a small subdued hearth; humid rainforest beyond the monumental limestone opening.\nComposition: Ultra-wide view from 35% farther back. Place all people between 42–58% image width and 48–68% image height; every foot must remain above the 72% height line. Hearth also central. Reserve the complete outer 25% on all four sides for only natural limestone shadow, floor, high cavern void or forest. No focal highlight or person in those margins.\nStyle: sharp restrained documentary photorealism, huge natural scale, muted humid green and limestone sepia, faint smoke in angled light.\nConstraints: full opaque natural background at every edge; no vignette/fade/alpha/border. No readable faces, prey animal, paintings, coffins, text or watermark.\nAvoid: people in bottom quarter, foreground figures, cathedral/fantasy architecture, giant fire, painterly surface.\n",
+      "sources": [
+        {
+          "url": "https://museum.sarawak.gov.my/web/attachment/show/?docid=cDlvSXRyMDYwN3poeTNKT0pjTjhFQT09OjqFvc9Gol0BUoHcMPI-_b-g",
+          "title": "The Niah Caves Project: Preliminary Report",
+          "supports": "West Mouth archaeology and late-Pleistocene occupation around 40 ka."
+        },
+        {
+          "url": "https://whc.unesco.org/document/199049",
+          "title": "Niah National Park Caves Complex nomination documentation",
+          "supports": "Limestone cave and lowland dipterocarp forest context."
+        }
+      ],
+      "historicalCaveats": [
+        "Firewood and plant-bundle carrying are illustrative; no specific prey species is asserted."
+      ],
+      "safeArea": {
+        "outerMarginPercent": 25,
+        "subjectZone": "central 40%",
+        "cameraChange": "approximately 35% farther",
+        "verdict": "pass"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "bacho-kiro",
+      "key": "aikajana/ihmisen-matka/bacho-kiro.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/bacho-kiro.jpg",
+      "caption": "Bacho Kiro, noin 45 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "602814400a0b47fda9235704368818a7ba7f17d4b80e330692a6030d0065a4fe",
+      "bytes": 872281,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja timeline image, landscape with strict edge-fade safe area\nPrimary request: Bacho Kiro Cave before 45,000 years ago; subtle supported cave-bear tooth ornament manufacture.\nScene/action: Ultra-wide limestone cave chamber. In the middle distance, one complete small person sits cross-legged behind a low irregular limestone block, working a tiny grooved tooth and plain fibre directly on bare rock; a few stone blades lie flat on that rock. A second complete tiny back-facing person stands farther away and slightly lower on the cave approach.\nComposition: Camera far back. All people, all limbs, work rock and objects restricted to x 38–62% and y 42–68%. Nothing human extends below 70% height. Entire outer 25% on four sides is empty natural cave wall, shadow, floor or soft autumn foliage.\nStyle: sharp documentary photorealism, muted limestone and soft autumn amber, simple smooth non-specific organic wraps, no shaggy fur.\nConstraints: absolutely no bowls, cups, dishes, vessels, pottery, baskets, containers, round concave stones or arranged food. No readable faces, bear, large ornament, text/watermark, vignette/fade/alpha/border.\nAvoid: foreground person, legs toward camera, fur coat, caveman styling, edge crowding, museum tableau.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1038/s41586-020-2259-z",
+          "title": "Initial Upper Palaeolithic Homo sapiens from Bacho Kiro Cave, Bulgaria",
+          "supports": "Homo sapiens before 45 ka, Initial Upper Palaeolithic technology, and pendants made mostly from cave-bear teeth."
+        },
+        {
+          "url": "https://doi.org/10.1038/s41559-020-1136-3",
+          "title": "A 14C chronology for the Middle to Upper Palaeolithic transition at Bacho Kiro Cave",
+          "supports": "IUP occupation chronology about 46.9–43.7 ka cal BP."
+        }
+      ],
+      "historicalCaveats": [
+        "Pendant threading and the depicted cave work moment are illustrative; the supported object type is not evidence of this exact action."
+      ],
+      "safeArea": {
+        "outerMarginPercent": 25,
+        "subjectZone": "central 35-40%",
+        "cameraChange": "far ultra-wide view",
+        "verdict": "pass"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "chauvet",
+      "key": "aikajana/ihmisen-matka/chauvet.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/chauvet.jpg",
+      "caption": "Chauvet’n luola, noin 36 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "752224ead50743ae67a68a44908ca66690cc6aaefd6a45dbf3e735c287a881a3",
+      "bytes": 723360,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja timeline image, landscape with strict edge-fade safe area\nInput images: Image 1 is an official French Ministry of Culture photograph detail of Chauvet's Horses Panel; Image 2 is an official photograph detail of the fighting rhinoceroses. Use them only to ground authentic animal anatomy, soft charcoal tonal modelling, wall integration, confident variable strokes, and layered/superimposed marks. Do not copy the square crops or claim an exact facsimile.\nPrimary request: A camera-real reconstruction deep in Chauvet Cave about 36,000 years ago, with one small back-facing artist working on an authentically sophisticated charcoal panel inspired by the referenced horses and rhinoceroses.\nPanel qualities: refined proportional horse muzzles and rhinoceros horn/head anatomy; soft charcoal rubbed into grey-black modelling; strong and faint variable lines; partial erasure/redrawing; overlapping profiles integrated with pale uneven limestone. No clean modern contour icons, cartoons or uniformly outlined animals.\nComposition: camera 35% farther back. Artist, small natural-stone ember light and complete decorated section all inside central 50%. Outer 25% is unmarked natural limestone and cave darkness on every edge. Artist fully visible, feet above 72% image height, face hidden.\nLighting/style: sharp low-light documentary photograph, restrained warm ember glow, realistic limestone and charcoal, subtle sepia.\nConstraints: no bowls, lamps, pottery or containers on floor; ember rests between irregular natural stones. No exact-facsimile claim, handprints, modern equipment, text/watermark, vignette/fade/alpha/border.\nAvoid: simple outline illustration, generic rhinoceros symbol, Lascaux colors, clean white wall, edge crowding, painterly CGI.\n",
+      "sources": [
+        {
+          "url": "https://archeologie.culture.gouv.fr/chauvet/en/panel-horses",
+          "title": "Panel of the Horses",
+          "supports": "Official imagery and description of the black figures, aligned horse muzzles and superimposed execution phases; used as a visual reference."
+        },
+        {
+          "url": "https://archeologie.culture.gouv.fr/chauvet/en/rhinoceros-panel",
+          "title": "Rhinoceros Panel",
+          "supports": "Official description of superimposed rhinoceroses and mixed charcoal/engraving technique; official rhinoceros detail used as a visual reference."
+        },
+        {
+          "url": "https://archeologie.culture.gouv.fr/chauvet/en/datings",
+          "title": "Datings",
+          "supports": "Early human visitation and calibrated chronology around 37–35 ka for black drawings."
+        },
+        {
+          "url": "https://archeologie.culture.gouv.fr/chauvet/en/glossary/first-radiocarbon-datings-chauvet",
+          "title": "First radiocarbon datings",
+          "supports": "Directly dated charcoal rhinoceroses associated with the Panel of the Horses."
+        }
+      ],
+      "historicalCaveats": [
+        "The panel is a source-grounded reconstruction informed by official photographs of the Horses Panel and fighting rhinoceroses, but is not an exact facsimile.",
+        "The artist and stone-contained ember are illustrative and do not imply that all motifs were produced in one session."
+      ],
+      "safeArea": {
+        "outerMarginPercent": 25,
+        "subjectZone": "central 50%",
+        "cameraChange": "approximately 35% farther",
+        "verdict": "pass"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "yana",
+      "key": "aikajana/ihmisen-matka/yana.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/yana.jpg",
+      "caption": "Yana, noin 32 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "57d78ac14bac1b363325189fe584e0dfa01df11cee7aff7dfc225d761c663916",
+      "bytes": 650280,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja timeline, 3:2 landscape\nPrimary request: Same high-quality Yana RHS Arctic river-terrace reconstruction about 32,000 years ago, framed 35 percent farther away. Two people shape a slender ivory or rhinoceros-horn foreshaft and secure a very modest hide windbreak. The complete windbreak, complete people, hide work mat, tools and embers must all fit inside x=22–78% and y=22–78%, surrounded by open frozen river terrace and sky.\nStyle/medium: Sharp documentary photorealism, blue twilight and restrained sepia warmth, realistic materials.\nComposition/framing: Wide environmental view with at least 20 percent quiet tundra/river/sky margin at every edge for later fade.\nConstraints: no mammoth-bone dwelling, no large bones, faces hidden, no text/border/vignette/alpha.\nAvoid: any pole near frame edge, cropped tools, elaborate tent, igloo, fantasy, painting, CGI.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1126/science.1085219",
+          "title": "The Yana RHS Site: Humans in the Arctic Before the Last Glacial Maximum",
+          "supports": "High-Arctic location, age, foreshafts, tools and flakes."
+        },
+        {
+          "url": "https://doi.org/10.1016/j.quascirev.2017.04.004",
+          "title": "Revising the archaeological record of the Upper Pleistocene Arctic Siberia",
+          "supports": "No sophisticated dwelling features and no large mammoth bones at Yana habitation locales."
+        }
+      ],
+      "historicalCaveats": [
+        "The brief's mammoth-bone-supported dwelling was removed because it conflicts with the site evidence.",
+        "The small hide windbreak and exact activity arrangement are conservative reconstruction."
+      ],
+      "safeArea": {
+        "ellipse": "x30-70,y30-70",
+        "verdict": "pass"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "tianyuan",
+      "key": "aikajana/ihmisen-matka/tianyuan.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/tianyuan.jpg",
+      "caption": "Tianyuan, noin 40 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "f97e54152b27e955045a3ab16c797a93391d0aaa2b1bccecb79d3f5f7a51c344",
+      "bytes": 862539,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja timeline, 3:2 landscape\nPrimary request: Same high-quality Tianyuan Cave late-autumn limestone woodland ascent about 40,000 years ago, but camera 35 percent farther away. Three small modern humans climb a winding path toward a modest cave; one carries reeds and wrapped freshwater fish. Every complete figure including feet, the cave and the carried bundle must fit within x=25–75% and y=22–76%, surrounded by quiet woodland and limestone.\nStyle/medium: Sharp camera-like photorealism, muted sepia earth colors, subtle film grain.\nComposition/framing: High oblique environmental view with 20 percent noncritical branches, rock and valley at every edge for later fade.\nConstraints: illustrative group, faces hidden, no cultural costume, text, border, vignette or alpha.\nAvoid: feet near bottom edge, cave near top edge, cropped figures, temple, fantasy, painting, CGI.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1016/j.cub.2017.09.030",
+          "title": "40,000-Year-Old Individual from Asia Provides Insight into Early Population Structure in Eurasia",
+          "supports": "About 40 ka age and Tianyuan Cave context near Zhoukoudian."
+        },
+        {
+          "url": "https://doi.org/10.1073/pnas.0904826106",
+          "title": "Stable isotope dietary analysis of the Tianyuan 1 early modern human",
+          "supports": "Substantial freshwater-food contribution."
+        }
+      ],
+      "historicalCaveats": [
+        "Only one excavated human individual is directly evidenced; the traveling group is illustrative.",
+        "Clothing, staffs and the ascent are conservative reconstruction."
+      ],
+      "safeArea": {
+        "ellipse": "x30-72,y28-74",
+        "verdict": "pass"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "beringia",
+      "key": "aikajana/ihmisen-matka/beringia.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/beringia.jpg",
+      "caption": "Beringia, noin 20 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "09ac9276a0628357fb3c504f297b16aec61b0a24db7cf2a922891312e2ee2928",
+      "bytes": 744848,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja timeline, 3:2 landscape with elliptical fade-safe composition\nPrimary request: Exposed central Beringia about 20,000 years ago: a vast unglaciated lowland of mesic shrub tundra, sedges and braided streams. A small family crosses shallow water carrying hide bundles; distant woolly mammoths graze.\nMandatory composition: distant panoramic viewpoint. Place the complete human group and stream-crossing action within x=35–55%, y=40–65%; mammoths within x=58–70%, y=40–55%. The entire meaningful scene must lie in the central ellipse x=28–72%, y=28–72%. Outer 22% on all sides contains only noncritical tundra, stream, mountains and sky for fading.\nStyle: sharp documentary photorealism, pale windy light, restrained sepia/cold gray-green palette.\nConstraints: Beringia visibly ice-free; only limited distant mountain snow, no ice walls; upright modern humans, hidden faces; no text/border/vignette/alpha.\nAvoid: group near left edge, glacier corridor, deep snowfield, fantasy, painting, CGI.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1038/382060a0",
+          "title": "Life and times of the Bering land bridge",
+          "supports": "Mesic shrub tundra across central and northern land bridge at LGM."
+        },
+        {
+          "url": "https://doi.org/10.1016/S0033-5894(03)00058-9",
+          "title": "Chronology supports limited LGM glaciation and no Beringian ice sheet",
+          "supports": "Restricted western Beringian glaciation and no Beringian ice sheet."
+        }
+      ],
+      "historicalCaveats": [
+        "The family crossing is illustrative; the landscape is shown unglaciated rather than between ice walls."
+      ],
+      "safeArea": {
+        "ellipse": "x28-72,y28-72",
+        "verdict": "pass"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "white-sands",
+      "key": "aikajana/ihmisen-matka/white-sands.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/white-sands.jpg",
+      "caption": "White Sands, noin 23 000–21 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "12b704c8b0e3a1b9237fc503891a8868260dedddbf9155e93f53d6ba30c000f2",
+      "bytes": 602199,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja timeline, 3:2 landscape\nPrimary request: Same White Sands Lake Otero wetland scene about 23,000–21,000 years ago, but framed much wider. An adult and child seen from behind cross pale wet gypsum mud, leaving a clear natural human footprint trail. Keep both whole people inside y=25–55% and x=35–60%; keep the clearest trail within y=45–78%. Surround it with broad empty mud, shallow water, marsh grass and distant basin mountains.\nStyle/medium: Sharp camera-like documentary photorealism, restrained sepia/cool palette, subtle film grain.\nComposition/framing: Camera 35 percent farther away; 20 percent quiet environmental margin on every edge for later fade; no important footprint or person near outer edges. A very distant ground sloth may be a tiny indistinct regional-fauna silhouette, separate from the trail.\nConstraints: anatomically credible footprints, two modern humans, faces hidden; no modern dunes, text, border, vignette or alpha effect.\nAvoid: cropped trail, subject near top, giant foreground print touching bottom, hunt, painting, CGI, caveman caricature.\n",
+      "sources": [
+        {
+          "url": "https://www.science.org/doi/10.1126/science.abg7586",
+          "title": "Evidence of humans in North America during the Last Glacial Maximum",
+          "supports": "Multiple human-footprint horizons and seed radiocarbon chronology around 23–21 ka."
+        },
+        {
+          "url": "https://www.science.org/doi/10.1126/science.adh5007",
+          "title": "Independent age estimates resolve the controversy of ancient human footprints at White Sands",
+          "supports": "Independent pollen and luminescence support the early footprint chronology."
+        },
+        {
+          "url": "https://www.nps.gov/whsa/learn/nature/fossilized-footprints.htm",
+          "title": "Fossilized Footprints — White Sands National Park",
+          "supports": "Lake Otero wetland/grassland setting and regional human and megafaunal track record."
+        }
+      ],
+      "historicalCaveats": [
+        "The distant ground sloth is an illustrative regional-fauna association, not a claim that it belongs to the same single dated footprint event.",
+        "Clothing and the pairing of travelers are conservative reconstruction."
+      ],
+      "safeArea": {
+        "ellipse": "x30-70,y25-80",
+        "verdict": "pass",
+        "notes": "Root approved central trail; outer continuation may fade."
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "monte-verde",
+      "key": "aikajana/ihmisen-matka/monte-verde.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/monte-verde.jpg",
+      "caption": "Monte Verde, noin 14 500 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "97b1c5e301425177a08fc120a6434c5e8be28f2f372a9ffe0b5320409f673a4a",
+      "bytes": 684899,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja timeline, 3:2 landscape, elliptical fade-safe\nPrimary request: Monte Verde II rainy southern Chile about 14,500 years ago. A documented long low internally segmented tent-like structure of staked foundation timbers, branch ribs, reed cordage and partial hide cover. Two tiny people work at hide and clay-lined brazier; modest plants and seaweed.\nMandatory composition: extreme long shot from elevated opposite creek bank. The ENTIRE structure must occupy only x=32–68% and y=40–58%, no more than 36 percent of image width. Both complete people and all activity inside x=40–60%, y=45–65%. Outer 28% on every side is only noncritical creek, wet peat, forest and mist for fade. Make the shelter clearly long with repeated bays but small within landscape.\nStyle: sharp archaeological photorealism, fine rain, muted sepia-green, realistic wet materials.\nConstraints: not cone or tipi; no text, border, vignette, alpha, mastodon display.\nAvoid: structure wider than central third, structure touching edge, close camera, fantasy, painting, CGI.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.15184/aqy.2023.32",
+          "title": "Monte Verde II: an assessment of new radiocarbon dates and their sedimentological context",
+          "supports": "Approximately 18 m internally segmented tent-like frame, reed cordage, hide evidence and braziers."
+        },
+        {
+          "url": "https://doi.org/10.1371/journal.pone.0004003",
+          "title": "Monte Verde: Seaweed, Food, Medicine, and the Peopling of South America",
+          "supports": "Marine seaweed remains and coastal resource connections."
+        }
+      ],
+      "historicalCaveats": [
+        "The scene reconstructs the documented long segmented frame; exact standing appearance remains interpretive."
+      ],
+      "safeArea": {
+        "ellipse": "x29-69,y30-70",
+        "verdict": "pass",
+        "notes": "Root approved complete structure and fade margin."
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "lapita",
+      "key": "aikajana/ihmisen-matka/lapita.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/lapita.jpg",
+      "caption": "Lapita, Tonga ja Samoa, noin 3 000 vuotta sitten",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "939e3df8f2fdf1c9bbd80712eb51a442df18c03812acabe0bd3c74ed3dad699e",
+      "bytes": 673252,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja timeline, 3:2 landscape with elliptical fade-safe composition\nPrimary request: Lapita shore settlement in Tonga about 3,000 years ago. Two small people prepare dentate-stamped pottery, taro-like planting material and one small pig for a voyage. One very distant modest canoe appears on lagoon, hull and rig indistinct.\nMandatory composition: view from a high distant viewpoint. Put complete people, all pottery, plants and pig in a compact cluster entirely within x=35–65%, y=38–68%. The canoe lies within x=58–68%, y=40–52%. Leave outer 25% on every edge as only quiet lagoon, sky, beach and vegetation for later fade. No pot, crop, body, shelter or canoe near any image edge.\nStyle: sharp camera-like documentary photorealism, restrained warm sepia tropical palette, realistic clay/fiber/water.\nConstraints: dentate decoration visible; no claim of double hull or exact sail; faces hidden; no text/border/vignette/alpha.\nAvoid: foreground objects at bottom, shelter touching left/top, close camera, detailed ship, modern costume, fantasy, painting, CGI.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1073/pnas.1612426113",
+          "title": "Using seafaring simulations and shortest-hop trajectories to model the prehistoric colonization of Remote Oceania",
+          "supports": "Modeled maritime dispersal routes without establishing a surviving vessel form."
+        },
+        {
+          "url": "https://doi.org/10.1002/arco.5087",
+          "title": "Reconsideration of sea level and landscape for first Lapita settlement at Nukuleka, Kingdom of Tonga",
+          "supports": "Tongan Lapita shore-settlement landscape."
+        }
+      ],
+      "historicalCaveats": [
+        "No Lapita vessel survives; canoe is distant and structurally indistinct.",
+        "Pig and transported crops are restrained colonization inferences; dentate pottery is diagnostic."
+      ],
+      "safeArea": {
+        "ellipse": "x28-72,y28-72",
+        "verdict": "pass"
+      },
+      "rootPersonallyApproved": true,
+      "r2PublicReadbackVerified": true,
+      "gameIntegratedVerified": false
+    },
+    {
+      "id": "aotearoa",
+      "key": "aikajana/ihmisen-matka/aotearoa.jpg",
+      "publicUrl": "https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka/aotearoa.jpg",
+      "caption": "Aotearoa, noin 1250–1300 jaa.",
+      "sourceLabel": "Matkakirjan havainnekuva",
+      "sha256": "5298f817b0fcdea895a292999f2bd18df2a5f0ffe3b6bf9a6eb2d58e6ec701e8",
+      "bytes": 475233,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "prompt": "Use case: historical-scene\nAsset type: Matkakirja timeline landscape with center-safe elliptical fade\nCreate a sharp photorealistic misty dawn on an Aotearoa New Zealand shore around 1250–1300 CE. Three complete Polynesian travelers walk through shallow water near the CENTER of the image toward native forest, carrying bundles, backs to camera. A moa stands at the forest edge just RIGHT of the travelers.\nCRITICAL CANOE PLACEMENT: place one complete small distant voyaging canoe DIRECTLY BEHIND THE TRAVELERS in the background water, slightly left of image center. The canoe must be around 40 percent from the left edge, never at the far left. It should visually align behind the left traveler and remain clearly visible. Exact hull and rig indistinct.\nKeep travelers, canoe and moa together in the central half of the image. Surround them on every side with broad noncritical mist, water, empty shore, forest and sky for later edge fading. Camera moderately distant, people readable but with no identifiable faces.\nRestrained sepia-green palette, camera-like optics, real water and native vegetation, no European sail, no ceremonial staging, no moa hunt, no text, border, vignette, transparency, painting or CGI.\n",
+      "sources": [
+        {
+          "url": "https://doi.org/10.1073/pnas.1015876108",
+          "title": "High-precision radiocarbon dating shows recent and rapid initial human colonization of East Polynesia",
+          "supports": "Late and rapid East Polynesian colonization chronology including New Zealand."
+        },
+        {
+          "url": "https://openresearch-repository.anu.edu.au/items/38161448-1006-47dc-8282-02ff808a6fad",
+          "title": "Dating the first New Zealanders: the chronology of Wairau Bar",
+          "supports": "Late-13th-century occupation based on moa eggshell and shell dates."
+        }
+      ],
+      "historicalCaveats": [
+        "Exact canoe form is reconstructed and deliberately distant.",
+        "Moa is shown as natural fauna presence, not a documented arrival encounter."
+      ],
+      "safeArea": {
+        "ellipse": "x30-70,y28-72",
+        "verdict": "pass",
+        "notes": "Root approved canoe, travelers and moa inside fade-safe area."
       },
       "rootPersonallyApproved": true,
       "r2PublicReadbackVerified": true,

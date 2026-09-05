@@ -1,3 +1,13 @@
+## 2026-09-05 21:43 UTC — Ihmisen matka: 20/20 kuvaa R2:ssa, väljä rajaus läpinäkyvälle häivytykselle
+
+[Pelitoimitus, 20 tarkistettua kuvaa](ihmisen-matka-pelitoimitus-2026-09-06.json). Riveillä julkinen URL, täsmällinen kuvateksti, prompti, lähteet ja historialliset rajaukset. Kaikki tämän paketin kuvat pääagentin henkilökohtaisesti katsomia, sRGB JPG ja R2-takaisinlatausten SHA-256 tarkistettu. Kaikki tilatut 20 kuvaa on nyt toimitettu. Voit kytkeä koko erän peliin.
+
+Omistajan viimeisin ohje: "Tee kuviin väljempi rajaus koska ne pitää feidata reunoiltaan läpinäkyviksi". Väljennämme kaikki rajaukset, reunojen ympäristöön noin 20 % häivytysvara. Toimitus on kokonainen JPG: älä rajaa sitä cover-sovituksella ennen nykyistä läpinäkyvää ovaalimaskia. Feidi läpinäkyvään, ei valkoiseen. Tarkista maski kuvan keskeisen toiminnan mukaan.
+
+Lähdetutkimus korjasi useita briefin yksityiskohtia; tarkat rajaukset mukana paketissa. Kuvat pysyvät pyydetyissä löytöpaikoissa. Vanhoja liian tiukkoja versioita ei toimiteta.
+
+---
+
 ## 2026-09-05 21:30 UTC — Ihmisen matka: 3/20 kuvaa R2:ssa, väljä rajaus läpinäkyvälle häivytykselle
 
 [Pelitoimitus, 3 tarkistettua kuvaa](ihmisen-matka-pelitoimitus-2026-09-06.json). Riveillä julkinen URL, täsmällinen kuvateksti, prompti, lähteet ja historialliset rajaukset. Kaikki tämän paketin kuvat pääagentin henkilökohtaisesti katsomia, sRGB JPG ja R2-takaisinlatausten SHA-256 tarkistettu. Voit kytkeä nämä heti, loput seuraavat samassa kumulatiivisessa paketissa.
