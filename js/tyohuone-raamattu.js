@@ -5232,6 +5232,16 @@ export const RAAMATTU = {
           + 'laattakerros pyramidin laatoista Globe.gl:n sisalla) ja '
           + 'Opus-parven erat E0-E5 tehtavanantoineen (Fablemax 6.9.2026; '
           + 'SUUNNITELMA, toteutus Opus-parvella).',
+        'docs/moduulit/pallon-vektoriviivat.md — pallon vektoriviivat: '
+          + 'rantaviivat ja maiden rajat laattojen paalle tasan pikselin '
+          + 'levyisina (Line2 Globe.gl:n omasta nipusta, sama Natural Earth '
+          + '10m -geometria kuin poltetulla viivalla, viisi '
+          + 'yksinkertaistustasoa 10 asteen soluina amparissa): mittaukset '
+          + '(leveys levossa, liikkeessa ja zoomissa, syvyysjarjestys, '
+          + 'horisontti, kehyshinta), hylatyt tavat (pathsData, SVG, oma '
+          + 'nauha) ja Opus-parven erat V0-V4 tehtavanantoineen (Fablemax '
+          + '6.9.2026; SUUNNITELMA, toteutus Opus-parvella laattakerroksen '
+          + 'E1:n rinnalla).',
         'docs/moduulit/karttanostot-kattavuus.md — karttanostojen kattavuus '
           + 'maittain (kohteet, maastokohteet, eläintäyt, skandaalit, hetket) '
           + 'ja tavoite per maa; täytetään koneellisesti erissä.',
