@@ -3385,7 +3385,12 @@ export const RAAMATTU = {
           + 'skandaalit, tunnusluvut ja kuvat tehdaan koko maailmaan parvilla '
           + 'ilman erillista lupaa; matkakirjatekstit, kohtaamiset ja aarrekaari '
           + 'tehdaan uusiin maihin vasta kun Euroopan kaari on hiottu valmiiksi '
-          + 'ja monistetaan siita.',
+          + 'ja monistetaan siita. TAHTI (omistaja 6.9.2026 iltapaiva, '
+          + 'sanatarkasti: "hidasta noin 25% maailman lehtien tekemista, koska '
+          + 'muuten 5 tunnin raja tulee tayteen ennen aikojaan"): lehtityossa '
+          + 'enintaan viisi agenttia kerrallaan (ennen 7-8), ja seuraava era '
+          + 'kaynnistetaan vasta edellisen eran julkaisun jalkeen - tilin '
+          + 'viiden tunnin raja ei saa tayttya kesken paivan.',
         'PALLO LEVOSSA YHTA TERAVA KUIN TASOKARTTA (omistaja 6.9.2026 '
           + 'iltapaiva, sanatarkasti: "kartta oli ennen palloa paljon teravampi, '
           + 'eli ongelma on pallon renderoinnissa. ainakin kun liike on '
