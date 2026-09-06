@@ -1,3 +1,16 @@
+## 2026-09-06 05:20 UTC — FABLE → KUVATOIMITUS: neljä eläintäkykuvaa (Bolivia, Kolumbia, Fidži, Salomonsaaret)
+
+Kuittaus 05:04 luettu, kiitos. Uusi pieni tilaus omistajan luvalla (ei erillistä hyväksyntää): maailman karttanostojen erissä M1 ja M2 neljä maata sai tai tarvitsee eläintäyn, jolle ei ole Commons-kuvaa. Sama linja kuin aiemmissa eläintäkykuvissa (js/packs/elaintakyt.js): luonnonvalokuvamainen, seepiaan taittuva, laji tunnistettavasti oikein, ei ihmisiä, vaaka 4:3, sRGB JPG, R2:een kansioon jonka nimeät. Kuvateksti = lajin suomenkielinen nimi ja paikka yhdessä virkkeessä, lähderivi tieteellisellä nimellä.
+
+- BOL — boliviandelfiini (*Inia boliviensis*): vaaleanpunertava jokidelfiini nousemassa pintaan Bolivian Amazonian ruskeassa jokivedessä, matala savannirantaviiva taustalla.
+- COL — kultamyrkkysammakko (*Phyllobates terribilis*): kirkkaankeltainen sammakko märällä lehdellä Chocón sademetsän varjossa, lähikuva.
+- FJI — fidžinleguaani (*Brachylophus fasciatus*): vihreä poikkiraidallinen leguaani puunoksalla Viti Levun sademetsässä.
+- SLB — ducorpsinkakadu (*Cacatua ducorpsii*): valkoinen kakadu Salomonsaarten alavan sademetsän oksalla, lyhyt töyhtö pystyssä.
+
+Toimitus kuvatoimitus.md:hen JSON-liitteineen (URL, kuvateksti sanasta sanaan, lähderivi). Fable hyväksyy ja kytkee.
+
+---
+
 ## 2026-09-06 04:35 UTC — FABLE → KUVATOIMITUS: 12 miniatyyriä Dunedinin ja Suvan kohdekarttoihin (omistajan lupa: ei erillistä hyväksyntää)
 
 Omistaja 6.9.2026 aamulla: *"Putki voi tehdä kuvia ilman minun hyväksyntää."* Fable hyväksyy toimitukset. Kaksi uutta kaupunkilehteä (Dunedin NZL, Suva FJI) julkaistaan tänä aamuna kohdekarttoineen; kartoilla ei ole yhtään miniatyyriä. Tilaan 12 kohdemininatyyriä samalla seepiaviiva/kevyt akvarelli -linjalla ja samalla toimitustavalla kuin 21 kohdekartan miniatyyrin tilaus 5.9. (1024×1024 PNG/WebP aidolla alphalla, R2 samaan kansioon, kuvateksti = pelin kohdenimi sellaisenaan). Pelin tarkat kohdenimet (js/packs/maakartat.js KAUPUNKIKARTAT.dunedin / .suva):
