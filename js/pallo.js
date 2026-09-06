@@ -58,7 +58,7 @@ import {
   LEPOKERROS_NAYTTEITA, LEPOKERROS_SYVYYSSIIRTO, THREE_CLAMP, THREE_LINEAR,
   THREE_LINEAR_MIPMAP_LINEAR, lepokerroksenAlue, lepokerroksenKerrokset, lepokerroksenLaattakatto,
   lepokerroksenSilmat, lepokerroksenSuunnitelma, lepokerroksenTasoRiittaa, lepokerroksenVerkko,
-  luoLaattakerros, luoLepokerroksenAjoitus,
+  luoLaattakerros, luoLepokerroksenAjoitus, pinnanPiste,
 } from './pallolaatat.js';
 
 export {
@@ -81,7 +81,7 @@ export {
   LEPOKERROS_TERAVYYS, LEPOKERROS_TIHEYSOSUUS, LEPOKERROS_VARA_AST, lepokerroksenAlue,
   lepokerroksenKerrokset, lepokerroksenLaatat, lepokerroksenLaattakatto, lepokerroksenSilmat,
   lepokerroksenSuunnitelma, lepokerroksenTaso, lepokerroksenTasoRiittaa, lepokerroksenUV,
-  lepokerroksenVerkko, luoLepokerroksenAjoitus, pallonPiste,
+  lepokerroksenVerkko, luoLepokerroksenAjoitus, pallonPiste, pinnanPiste,
 } from './pallolaatat.js';
 
 const R2 = 'https://media.matkakirja.app/';
@@ -637,6 +637,106 @@ export function lepokerroin(korkeusPx, teravyys = LAATU_TERAVYYS) {
   return Math.max(1, (teravyys * korkeusPx) / 304);
 }
 
+/*
+ * ======== YKSI KEHYS, YKSI MITTA ===================================
+ *
+ * VIKA v1649 (omistaja 6.9.2026 ilta, iPad-sovellus): *"Kartta alkoi
+ * täristämään. Eli panoroidessa tuli vähän kuin kaksi karttaa hieman
+ * limittäin"* — ja lisähavainto: limitys EI näy levossa, ja tärinä
+ * loppuu heti kun sormi irtoaa.
+ *
+ * Pallolla on nyt KAKSI kerrosta laattamoottorin päällä: laattakerros
+ * (js/pallolaatat.js) ja vektoriviivat (js/pallovektorit.js). Ennen
+ * tätä kumpikin luki kameran ja ruudun koon OMASTA lähteestään ja OMAAN
+ * aikaansa: laattakerros kirjaston updatePov-koukusta (eli
+ * pointermoven sisältä, kolme kertaa jokaista sormen liikettä kohti) ja
+ * vektorikerros ohjainten `change`-tapahtumasta 60 ms:n ajastimella —
+ * ja kumpikin mittasi ruudun kotelon CSS-laatikosta, ei siitä, mitä
+ * piirtopuskuriin oikeasti piirretään. Kaksi eri kehyksen mittaa
+ * tarkoittaa kahta eri näkyvää aluetta, ja raahauksen aikana ne ovat
+ * aina eri tahdissa.
+ *
+ * TÄSTÄ ETEENPÄIN MITTA TULEE PIIRROSTA. `scene.onBeforeRender` ajetaan
+ * kerran per renderöity kehys sillä kameralla, jolla kuva piirretään
+ * (three.js WebGLRenderer.render). Molemmat kerrokset ilmoittautuvat
+ * siihen ja saavat SAMAN olion: sama kamera, sama pov, sama ruudun koko
+ * (renderer.getSize — se, mitä todella piirretään), sama pikselisuhde.
+ * Kumpikaan ei enää päivitä geometriaansa tapahtumakäsittelijässä.
+ */
+/** Pallon kehyskoukut: pallo → { kuuntelijat, kehys, scene, alkuperainen }. */
+const kehyskoukut = new WeakMap();
+
+/**
+ * Kehysmitat yhdestä lähteestä yhdellä hetkellä. Ruudun koko luetaan
+ * RENDERÖIJÄLTÄ (getSize = piirretty koko css-pikseleinä); kotelo on
+ * vara, kun renderöijää ei ole (yksikkötestit).
+ *
+ * @returns {{aika, kamera, pov, W, H, suhde, kuvasuhde, fov, sade}}
+ */
+export function pallonKehysmitat(pallo, kotelo = null, kamera = null, ikkuna = globalThis) {
+  const kam = kamera ?? pallo?.camera?.() ?? null;
+  const renderer = pallo?.renderer?.() ?? null;
+  let W = 0;
+  let H = 0;
+  if (typeof renderer?.getSize === 'function') {
+    // three:n getSize kirjoittaa kohteeseen set(leveys, korkeus) —
+    // ankkakirjoitettu kohde säästää Vector2:n haun kirjastosta.
+    try { renderer.getSize({ set(a, b) { W = a; H = b; } }); } catch { /* vara alla */ }
+  }
+  if (!(W > 0 && H > 0)) {
+    W = kotelo?.clientWidth ?? 0;
+    H = kotelo?.clientHeight ?? 0;
+  }
+  return {
+    aika: ikkuna.performance?.now?.() ?? Date.now(),
+    kamera: kam,
+    pov: pallo?.pointOfView?.() ?? null,
+    W,
+    H,
+    suhde: renderer?.getPixelRatio?.() ?? (ikkuna.devicePixelRatio || 1),
+    kuvasuhde: Number.isFinite(kam?.aspect) && kam.aspect > 0 ? kam.aspect : (H > 0 ? W / H : 0),
+    fov: Number.isFinite(kam?.fov) ? kam.fov : PALLON_FOV,
+    sade: pallo?.getGlobeRadius?.() ?? 100,
+  };
+}
+
+/**
+ * Ilmoittaa kuuntelijan pallon kehyskoukkuun. Kuuntelija saa
+ * pallonKehysmitat-olion (+ juokseva `kehys`) kerran per renderöity
+ * kehys. Palauttaa purkajan; viimeinen purkaja palauttaa scenen oman
+ * koukun. Yksi kaatuva kuuntelija ei kaada piirtoa.
+ */
+export function kytkePallonKehys(pallo, kotelo, kuuntelija, ikkuna = globalThis) {
+  const scene = pallo?.scene?.();
+  if (!scene || typeof kuuntelija !== 'function') return () => {};
+  let solmu = kehyskoukut.get(pallo);
+  if (!solmu) {
+    const alkuperainen = scene.onBeforeRender;
+    solmu = { kuuntelijat: new Set(), kehys: 0, scene, alkuperainen };
+    scene.onBeforeRender = function pallonKehyskoukku(renderer, kohde, kamera, ...loput) {
+      if (typeof alkuperainen === 'function') alkuperainen.call(this, renderer, kohde, kamera, ...loput);
+      const nyt = kehyskoukut.get(pallo);
+      if (!nyt?.kuuntelijat.size) return;
+      nyt.kehys += 1;
+      const mitat = pallonKehysmitat(pallo, kotelo, kamera, ikkuna);
+      mitat.kehys = nyt.kehys;
+      for (const k of [...nyt.kuuntelijat]) {
+        try { k(mitat); } catch { /* yksi kerros ei kaada piirtoa */ }
+      }
+    };
+    kehyskoukut.set(pallo, solmu);
+  }
+  solmu.kuuntelijat.add(kuuntelija);
+  return () => {
+    const nyt = kehyskoukut.get(pallo);
+    if (!nyt) return;
+    nyt.kuuntelijat.delete(kuuntelija);
+    if (nyt.kuuntelijat.size) return;
+    nyt.scene.onBeforeRender = nyt.alkuperainen;
+    kehyskoukut.delete(pallo);
+  };
+}
+
 /** Globe.gl:n laattamoottori pallon scenestä (Group, jolla thresholds). */
 function laattamoottori(pallo) {
   let moottori = null;
@@ -741,6 +841,17 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     lauta: PALLO_LAUTA, naparaja: NAPAKANNEN_LEVEYS,
   }) : null;
   if (kerros) lepokerrokset.set(pallo, kerros);
+  /*
+   * KERROS PÄIVITTYY PIIRTOKOUKUSSA, EI TAPAHTUMAKÄSITTELIJÄSSÄ (vika
+   * v1649, ks. YKSI KEHYS, YKSI MITTA yllä). Ennen tätä päivitys ajettiin
+   * updatePovista eli pointermoven sisältä; nyt se saa saman kameran ja
+   * saman ruudun koon kuin vektorikerros, siltä kehykseltä, joka
+   * piirretään. Harvennus (LAATTAKERROS_PAIVITYSVALI_LIIKE_MS) on
+   * ennallaan kerroksen sisällä.
+   */
+  const kehyspurku = kerros
+    ? kytkePallonKehys(pallo, kotelo, (kehys) => { kerros.paivita(kehys, true); }, ikkuna)
+    : () => {};
   const lepokerros = kerros ? null : luoLepokerros({
     pallo, kotelo, ikkuna, renderer, laattataso: () => moottori.level,
   });
@@ -810,7 +921,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     // (LEPOKERROS_LEPOVIIVE_MS ja sormivahti, ks. luoLepokerroksenAjoitus).
     // Laattakerros ei odota lepoa: se päivittyy myös liikkeessä, ja tämä
     // on vain harventamaton päivitys pysähdyksen jälkeen.
-    if (kerros) kerros.paivita(kamera, false);
+    if (kerros) kerros.paivita(pallonKehysmitat(pallo, kotelo, kamera, ikkuna), false);
     else lepokerros.levossa();
     for (const viive of [0, 800, 2500]) {
       const t = ikkuna.setTimeout(() => { ajastimet.delete(t); if (lepo) teroita(); }, viive);
@@ -852,9 +963,9 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
         lepoAjastin = ikkuna.setTimeout(lepoon, LAATU_LEPOVIIVE_MS);
       }
     }
-    // Laattakerros päivittyy JOKAISELLA kutsulla; se harventaa itse
-    // (enintään 10 kertaa sekunnissa liikkeessä).
-    if (kerros && kam) kerros.paivita(kam, true);
+    // Laattakerros EI päivity täältä: se ilmoittautuu piirtokoukkuun
+    // (kytkePallonKehys), jotta se ja vektorikerros lukevat saman
+    // kameran samasta kehyksestä — updatePov tulee pointermoven sisältä.
     return alkuperainen.call(this, kam);
   };
   asetaTila(false);
@@ -885,6 +996,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
   if (kamera) lepoAjastin = ikkuna.setTimeout(lepoon, LAATU_LEPOVIIVE_MS);
   return () => {
     laatuKuuntelijat.delete(pakotus);
+    kehyspurku();
     ikkuna.clearTimeout(lepoAjastin);
     for (const t of ajastimet) ikkuna.clearTimeout(t);
     lepokerros?.pura();
@@ -1594,9 +1706,28 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   ohjaimet.addEventListener('change', tahdistaVeto);
   ohjaimet.enableRotate = false;
   let tartunta = null; // pinnan piste sormen alla painalluksessa
+  /*
+   * TARTUNTAPISTE LASKETAAN, EI SÄTEENJÄLJITETÄ (vika v1649, mitattu
+   * 6.9.2026). Kirjaston `toGlobeCoords` osuu kirjaston omaan palloon,
+   * joka on 72 × 36 -jaettu monitahokas (globeCurvatureResolution 5°):
+   * jänne painuu pinnan alle, ja osuma eroaa oikeasta pinnasta
+   * mediaanilla 1,4 ja enimmillään 3,2 LAITEPIKSELIÄ (puhelin 390 × 844
+   * dpr 3, Ateena korkeus 0,35, 124 px/aste, 196 näytettä ruudulta).
+   * Tämä silmukka syöttää eron suoraan kameraan joka pointermovessa,
+   * joten kartta liikkuu sormen alla eri tavalla ruudun eri kohdissa —
+   * ja koska irrotuksen jälkeinen liuku ei lue pintaa lainkaan, oire
+   * loppuu täsmälleen sormen irrotessa. Ennen v1647:ää liikkeen kuva
+   * oli karkea ja pikselisuhde 2, joten virhe hukkui sumuun; v1647:n
+   * laattakerros pitää kuvan terävänä myös liikkeessä, ja sama virhe on
+   * nyt kolme terävää pikseliä.
+   *
+   * pinnanPiste (js/pallolaatat.js) on tarkka säde–pallo-leikkaus, sama
+   * jota vektorikerros käyttää — yksi pinnanlukija koko pallolle.
+   */
   const sormenKohta = (e) => {
     const r = kotelo.getBoundingClientRect();
-    return pallo.toGlobeCoords(e.clientX - r.left, e.clientY - r.top);
+    return pinnanPiste(pallo.camera(), e.clientX - r.left, e.clientY - r.top,
+      kotelo.clientWidth, kotelo.clientHeight, pallo.getGlobeRadius());
   };
   kotelo.addEventListener('pointerdown', (e) => {
     tartunta = sormet.alhaalla === 1 ? sormenKohta(e) : null;

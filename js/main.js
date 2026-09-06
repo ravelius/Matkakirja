@@ -9,6 +9,7 @@ import {
   asetaKehittajaMaailma, asetaKehittajaTila, asetaLautaValinta,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, lautaValinta,
   laatuAinaPaalla, asetaLaatuAina,
+  asetaLaattakerros, laattakerrosPaalla, asetaPallovektorit, pallovektoritValittu,
   nollaaPallonKaatumiset, pallonKaatumiset, palloTurvatilassa,
 } from './ui-apurit.js';
 // Laitemittarin muistettu kytkin (hammasratasvalikko = ?mittari=1/0).
@@ -125,7 +126,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1652';
+const APP_VERSION = '2026-08-09.1653';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1464,6 +1465,17 @@ const palloTurvatilaNappi = document.getElementById('kehittaja-pallo-turvatila-b
 /* Tarkkuus myös liikkeessä — kokeiluvipu (js/ui-apurit.js laatuAinaPaalla). */
 const laatuAinaNappi = document.getElementById('kehittaja-laatu-aina-kytkin');
 /*
+ * PALLON KAKSI KERROSTA — vianrajaus ilman osoiteriviä (vika v1649,
+ * omistaja 6.9.2026: *"kartta alkoi täristämään"*, oire vain iOS-kuoressa).
+ * Kuoressa ei voi kirjoittaa ?laattakerros=0 tai ?vektorit=0, joten
+ * kytkimet ovat täällä ja valinta jää laitteen muistiin
+ * (js/ui-apurit.js). Oletukset (molemmat päällä) tulevat kerroksilta
+ * itseltään; tässä nipussa ne ovat tosia, koska pallon moduulit
+ * ladataan laiskasti eikä niiden vakioita voi tuoda.
+ */
+const laattakerrosNappi = document.getElementById('kehittaja-laattakerros-kytkin');
+const pallovektoritNappi = document.getElementById('kehittaja-pallovektorit-kytkin');
+/*
  * ILMEPAKETTI (omistaja 5.9.2026, kartoituksen TOP 6 kohta 6): musteviiva,
  * karhea kehys ja kynäkorostus. Kytkin kääntää kolme lippua kerralla
  * (js/ilme.js asetaIlmePaketti) eikä vaadi sivulatausta: liput luetaan
@@ -1625,6 +1637,29 @@ function paivitaKehittajaValikko() {
         + 'ja tarkentuu levossa — kytke päälle kokeillaksesi täyttä tarkkuutta '
         + 'myös vierityksessä (sivu ladataan uudestaan)';
   }
+  const laattakerros = laattakerrosPaalla(globalThis, true);
+  merkitseKytkin(laattakerrosNappi, laattakerros);
+  if (laattakerrosNappi) {
+    laattakerrosNappi.title = laattakerros
+      ? 'Pallon laattakerros on PÄÄLLÄ (oletus): pallon pinta piirretään pyramidin '
+        + 'laatoista laatta kerrallaan, jolloin liikkeessä on sama tarkkuus kuin '
+        + 'levossa — kytke pois palataksesi kirjaston omaan laattamoottoriin '
+        + '(sivu ladataan uudestaan; sama kuin ?laattakerros=0)'
+      : 'Pallon laattakerros on POIS: pinta tulee kirjaston laattamoottorista ja '
+        + 'tarkentuu vasta levossa — kytke päälle palataksesi oletukseen '
+        + '(sivu ladataan uudestaan)';
+  }
+  const pallovektorit = pallovektoritValittu(globalThis, true);
+  merkitseKytkin(pallovektoritNappi, pallovektorit);
+  if (pallovektoritNappi) {
+    pallovektoritNappi.title = pallovektorit
+      ? 'Pallon vektoriviivat ovat PÄÄLLÄ (oletus): rantaviiva ja maiden rajat '
+        + 'piirtyvät laattojen päälle tasan pikselin levyisinä — kytke pois, jos '
+        + 'haluat nähdä pelkät poltetut laatat (sivu ladataan uudestaan; sama '
+        + 'kuin ?vektorit=0)'
+      : 'Pallon vektoriviivat ovat POIS: ranta ja rajat tulevat vain laattojen '
+        + 'musteesta — kytke päälle palataksesi oletukseen (sivu ladataan uudestaan)';
+  }
   /*
    * KARTTAPALLON TURVATILA (pallolauta vaihe 5c): laskuri kertoo, montako
    * kertaa pallo on kaatunut peräkkäin tällä laitteella; kahden jälkeen
@@ -1777,6 +1812,27 @@ laatuAinaNappi?.addEventListener('click', () => {
   naytaKehittajaVihje(halutaan ? 'Tarkkuus liikkeessä päälle — ladataan sivu…' : 'Tarkkuus liikkeessä pois — ladataan sivu…');
   const osoite = new URL(location.href);
   osoite.searchParams.delete('laatu');
+  setTimeout(() => { location.href = osoite.href; }, 350);
+});
+
+laattakerrosNappi?.addEventListener('click', () => {
+  const halutaan = !laattakerrosPaalla(globalThis, true);
+  asetaLaattakerros(halutaan);
+  paivitaKehittajaValikko();
+  naytaKehittajaVihje(halutaan ? 'Laattakerros päälle — ladataan sivu…' : 'Laattakerros pois — ladataan sivu…');
+  // URL-parametri pois, muuten se jäisi voittamaan muistetun valinnan.
+  const osoite = new URL(location.href);
+  osoite.searchParams.delete('laattakerros');
+  setTimeout(() => { location.href = osoite.href; }, 350);
+});
+
+pallovektoritNappi?.addEventListener('click', () => {
+  const halutaan = !pallovektoritValittu(globalThis, true);
+  asetaPallovektorit(halutaan);
+  paivitaKehittajaValikko();
+  naytaKehittajaVihje(halutaan ? 'Vektoriviivat päälle — ladataan sivu…' : 'Vektoriviivat pois — ladataan sivu…');
+  const osoite = new URL(location.href);
+  osoite.searchParams.delete('vektorit');
   setTimeout(() => { location.href = osoite.href; }, 350);
 });
 

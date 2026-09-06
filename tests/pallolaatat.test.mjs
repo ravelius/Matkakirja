@@ -299,9 +299,18 @@ test('kytkentä: pohja naulataan tasoon 5 vain kerroksen ollessa päällä', () 
     'pikselisuhde kerran asennuksessa');
   // Lepokerrosta ei luoda kerroksen kanssa (vanha polku vain ?laattakerros=0).
   assert.match(pallo, /const lepokerros = kerros \? null : luoLepokerros\(\{/);
-  // Kerros päivittyy jokaisella updatePov-kutsulla ja levon ajastimesta.
-  assert.match(pallo, /if \(kerros && kam\) kerros\.paivita\(kam, true\);\n\s*return alkuperainen\.call\(this, kam\);/);
-  assert.match(pallo, /if \(kerros\) kerros\.paivita\(kamera, false\);\n\s*else lepokerros\.levossa\(\);/);
+  /*
+   * VIKA v1649 (omistaja: *"panoroidessa tuli vähän kuin kaksi karttaa
+   * hieman limittäin"*, oire vain raahauksen aikana): kerros EI enää
+   * päivity updatePov-koukusta, joka ajetaan pointermoven sisältä, vaan
+   * piirtokoukusta — samalla kameralla ja samasta kehyksestä kuin
+   * vektorikerros. Levon ajastin päivittää sen harventamattomasti samoilla
+   * kehysmitoilla.
+   */
+  assert.ok(!/kerros\.paivita\(kam, true\)/.test(pallo), 'kerros ei saa päivittyä updatePovista');
+  assert.match(pallo, /const kehyspurku = kerros\n\s*\? kytkePallonKehys\(pallo, kotelo, \(kehys\) => \{ kerros\.paivita\(kehys, true\); \}, ikkuna\)\n\s*: \(\) => \{\};/);
+  assert.match(pallo, /if \(kerros\) kerros\.paivita\(pallonKehysmitat\(pallo, kotelo, kamera, ikkuna\), false\);\n\s*else lepokerros\.levossa\(\);/);
+  assert.match(pallo, /laatuKuuntelijat\.delete\(pakotus\);\n\s*kehyspurku\(\);/, 'koukku puretaan');
   // Kahva on sama accessorille ja savukkeille; purku purkaa kerroksen.
   assert.match(pallo, /if \(kerros\) lepokerrokset\.set\(pallo, kerros\);/);
   assert.match(pallo, /if \(kerros\) \{ kerros\.pura\(\); lepokerrokset\.delete\(pallo\); \}/);
@@ -333,4 +342,111 @@ test('kerros: laatan materiaali, verkko ja osoitteet ovat suunnitelman mukaiset'
   // Moduuli ei tuo js/pallo.js:ää: kirjaston luokat tulevat parametreina.
   assert.ok(!/from '\.\/pallo\.js'/.test(laatat), 'tuonti pallo.js:stä tekisi kehän');
   assert.match(laatat, /kolmiulotteinen, pallonSarja = \(\) => null, lauta = 'maailmankartta', naparaja = 90,/);
+});
+
+/*
+ * ======== VIKA v1649: KAKSI KARTTAA LIMITTÄIN RAAHATESSA ===========
+ *
+ * Omistaja 6.9.2026 ilta (iPad-sovellus, sanatarkasti): *"Kartta alkoi
+ * täristämään. Eli panoroidessa tuli vähän kuin kaksi karttaa hieman
+ * limittäin. Välillä kartta saattaa myös heittää ihan eri paikkaan
+ * mutta harvemmin"* — ja lisähavainto: limitys ei näy levossa, ja
+ * tärinä loppuu heti kun sormi irtoaa.
+ *
+ * Kaksi juurisyytä, molemmat mitattu 6.9.2026 Playwrightilla
+ * (puhelin 390 × 844 dpr 3, Ateena korkeus 0,35, 124 px/aste):
+ *
+ *  1. SORMEN TARTUNTAPISTE tuli kirjaston `toGlobeCoords`ista, joka
+ *     säteenjäljittää kirjaston omaan palloon — 72 × 36 -jaettuun
+ *     monitahokkaaseen (globeCurvatureResolution 5°). Jänne painuu
+ *     pinnan alle, ja osuma eroaa oikeasta pinnasta mediaanilla 1,41 ja
+ *     enimmillään 3,23 LAITEPIKSELIÄ (196 näytettä ruudulta). Sormiveto
+ *     syöttää eron suoraan kameraan joka pointermovessa, ja liu'ussa
+ *     (irrotuksen jälkeen) pintaa ei lueta lainkaan — siksi oire loppuu
+ *     täsmälleen sormen irrotessa. Korjaus: sama tarkka
+ *     säde–pallo-leikkaus (pinnanPiste) kuin vektorikerroksella.
+ *
+ *  2. KAKSI KERROSTA LUKI KAMERAN ERI LÄHTEESTÄ JA ERI HETKENÄ:
+ *     laattakerros kirjaston updatePov-koukusta (= pointermoven
+ *     sisältä) ja vektorikerros ohjainten change-tapahtumasta oman
+ *     60 ms:n ajastimensa kautta; kumpikin mittasi ruudun kotelon
+ *     CSS-laatikosta eikä siitä, mitä piirtopuskuriin piirretään.
+ *     Korjaus: molemmat ilmoittautuvat samaan piirtokoukkuun
+ *     (kytkePallonKehys), joka antaa saman kehysmitta-olion.
+ */
+
+test('vika v1649: sormen tartuntapiste lasketaan, ei säteenjäljitetä', () => {
+  const pallo = lue('../js/pallo.js');
+  const laatat = lue('../js/pallolaatat.js');
+  // Yksi pinnanlukija koko pallolle: pinnanPiste asuu pallolaatat.js:ssä.
+  assert.match(laatat, /export function pinnanPiste\(kamera, x, y, W, H, R\) \{/);
+  assert.match(pallo, /lepokerroksenVerkko, luoLepokerroksenAjoitus, pallonPiste, pinnanPiste,/);
+  // Sormiveto lukee pinnan siitä, ei kirjaston säteenjäljityksestä.
+  assert.match(pallo, /const sormenKohta = \(e\) => \{\n\s*const r = kotelo\.getBoundingClientRect\(\);\n\s*return pinnanPiste\(pallo\.camera\(\), e\.clientX - r\.left, e\.clientY - r\.top,\n\s*kotelo\.clientWidth, kotelo\.clientHeight, pallo\.getGlobeRadius\(\)\);\n\s*\};/);
+  assert.ok(!/return pallo\.toGlobeCoords\(e\.clientX/.test(pallo),
+    'tartuntapiste ei saa tulla säteenjäljityksestä (jänne painuu 1,4–3,2 px)');
+  // Vektorikerros ei enää pidä omaa kappalettaan samasta kaavasta.
+  const vektorit = lue('../js/pallovektorit.js');
+  assert.ok(!/export function pinnanPiste\(/.test(vektorit), 'kaksi kappaletta samaa leikkausta');
+  assert.match(vektorit, /export \{ pinnanPiste \};/, 'vienti jatkuu vanhassa osoitteessa');
+});
+
+test('vika v1649: molemmat kerrokset lukevat koon ja pov:n samasta kehyksestä', () => {
+  const pallo = lue('../js/pallo.js');
+  const laatat = lue('../js/pallolaatat.js');
+  const vektorit = lue('../js/pallovektorit.js');
+  // Koukku on scene.onBeforeRender: kerran per piirretty kehys, sillä
+  // kameralla, jolla kuva piirretään.
+  assert.match(pallo, /scene\.onBeforeRender = function pallonKehyskoukku\(renderer, kohde, kamera, \.\.\.loput\)/);
+  assert.match(pallo, /export function kytkePallonKehys\(pallo, kotelo, kuuntelija, ikkuna = globalThis\)/);
+  // Ruudun koko RENDERÖIJÄLTÄ (piirretty koko), kotelo vain varana.
+  assert.match(pallo, /renderer\.getSize\(\{ set\(a, b\) \{ W = a; H = b; \} \}\)/);
+  // Kumpikin kerros ilmoittautuu koukkuun eikä kuuntele tapahtumia.
+  assert.match(vektorit, /kehyspurku = kytkePallonKehys\(pallo, kotelo, kehyksessa, ikkuna\);/);
+  assert.ok(!/addEventListener\?\.\('change', pyyda\)/.test(vektorit), 'vektorit eivät kuuntele ohjaimia');
+  assert.ok(!/function pyyda\(\)/.test(vektorit), 'oma ajastin poistui');
+  // Kerrokset käyttävät kehysmittoja eivätkä mittaa koteloa itse.
+  assert.match(laatat, /const mitat = kehysmitat\(kehys\);\n\s*const W = mitat\.W;\n\s*const H = mitat\.H;/);
+  assert.match(vektorit, /const kamera = kehysmitat\?\.kamera \?\? pallo\.camera\?\.\(\);\n\s*const \{ W, H \} = ruutu\(\);/);
+});
+
+test('vika v1649: kehysmitat ovat yksi olio ja samat molemmille kuuntelijoille', async () => {
+  const { kytkePallonKehys, pallonKehysmitat } = await import('../js/pallo.js');
+  // Kirjaston korvike: scene, kamera ja renderöijä sen verran kuin koukku lukee.
+  const kamera = { aspect: 0.5, fov: 50, position: { x: 0, y: 0, z: 135 } };
+  const scene = {};
+  const pallo = {
+    scene: () => scene,
+    camera: () => kamera,
+    renderer: () => ({ getSize: (t) => t.set(374, 771), getPixelRatio: () => 3 }),
+    pointOfView: () => ({ lat: 38, lng: 23.7, altitude: 0.35 }),
+    getGlobeRadius: () => 100,
+  };
+  const kotelo = { clientWidth: 999, clientHeight: 999 };
+  const saadut = [[], []];
+  const purku0 = kytkePallonKehys(pallo, kotelo, (k) => saadut[0].push(k), globalThis);
+  const purku1 = kytkePallonKehys(pallo, kotelo, (k) => saadut[1].push(k), globalThis);
+  scene.onBeforeRender({}, scene, kamera, null);
+  assert.equal(saadut[0].length, 1);
+  assert.equal(saadut[1].length, 1);
+  assert.equal(saadut[0][0], saadut[1][0], 'sama olio molemmille — sama kehys, sama mitta');
+  assert.equal(saadut[0][0].W, 374, 'koko renderöijältä, ei kotelon 999:stä');
+  assert.equal(saadut[0][0].H, 771);
+  assert.equal(saadut[0][0].suhde, 3);
+  assert.equal(saadut[0][0].kamera, kamera, 'kamera on se, jolla piirretään');
+  assert.equal(saadut[0][0].pov.lat, 38);
+  assert.equal(saadut[0][0].kehys, 1);
+  scene.onBeforeRender({}, scene, kamera, null);
+  assert.equal(saadut[0][1].kehys, 2, 'kehyslaskuri juoksee');
+  // Purku palauttaa scenen oman koukun vasta viimeisen kuuntelijan jälkeen.
+  purku0();
+  scene.onBeforeRender({}, scene, kamera, null);
+  assert.equal(saadut[0].length, 2, 'purettu kuuntelija ei enää saa kehyksiä');
+  assert.equal(saadut[1].length, 3);
+  purku1();
+  assert.equal(scene.onBeforeRender, undefined, 'viimeinen purku palauttaa scenen ennalleen');
+  // Ilman renderöijää mitat tulevat kotelosta (yksikkötestit, savukkeet).
+  const ilman = pallonKehysmitat({ ...pallo, renderer: () => null }, kotelo, kamera, globalThis);
+  assert.equal(ilman.W, 999);
+  assert.equal(ilman.kuvasuhde, 0.5, 'kuvasuhde kameralta');
 });

@@ -251,3 +251,57 @@ test('V1: moduuli ei tuo ui-apureita eikä laattakerroksen moduulia suoraan', ()
   // Kerros on palvelutyöntekijän kuoressa (offline).
   assert.match(lue('../sw.js'), /'\.\/js\/pallovektorit\.js'/);
 });
+
+/*
+ * KEHITTÄJÄN KYTKIMET RATASVALIKOSSA (vika v1649). Omistaja katsoo peliä
+ * iOS-kuoressa (ios/), jossa ei ole osoiteriviä: ilman muistettua
+ * valintaa kumpaakaan pallon kerrosta ei voi sammuttaa siellä, missä
+ * vika näkyy. Kytkimet ovat ratasvalikossa ja tallettavat valinnan
+ * laitteelle; osoite voittaa muistin kuten muissakin kehittäjän vivuissa.
+ */
+test('kytkimet: laattakerros ja vektorit myös muistista, ratasvalikosta', async () => {
+  const {
+    LAATTAKERROS_AVAIN, PALLOVEKTORIT_AVAIN: AVAIN_UI, asetaLaattakerros, asetaPallovektorit,
+    laattakerrosPaalla, pallovektoritValittu,
+  } = await import('../js/ui-apurit.js');
+  const { PALLOVEKTORIT_AVAIN } = await import('../js/pallovektorit.js');
+  // Avain on kaksoiskappale (ratasvalikko ei voi tuoda laiskaa moduulia).
+  assert.equal(AVAIN_UI, PALLOVEKTORIT_AVAIN, 'ui-apurit ja pallovektorit samasta avaimesta');
+  const muisti = new Map();
+  const win = {
+    location: { search: '' },
+    localStorage: {
+      getItem: (k) => (muisti.has(k) ? muisti.get(k) : null),
+      setItem: (k, v) => muisti.set(k, v),
+      removeItem: (k) => muisti.delete(k),
+    },
+  };
+  // Oletus tulee kutsujalta, kunnes valinta on tehty.
+  assert.equal(laattakerrosPaalla(win, true), true);
+  assert.equal(pallovektoritValittu(win, true), true);
+  asetaLaattakerros(false, win);
+  asetaPallovektorit(false, win);
+  assert.equal(muisti.get(LAATTAKERROS_AVAIN), '0');
+  assert.equal(muisti.get(PALLOVEKTORIT_AVAIN), '0');
+  assert.equal(laattakerrosPaalla(win, true), false, 'muistettu pois voittaa oletuksen');
+  assert.equal(pallovektoritValittu(win, true), false);
+  // Laiskan moduulin oma lukija lukee saman muistipaikan samalla tavalla.
+  assert.equal(pallovektoritPaalla(win), false);
+  // Osoite voittaa muistin.
+  assert.equal(laattakerrosPaalla({ ...win, location: { search: '?laattakerros=1' } }, true), true);
+  assert.equal(pallovektoritValittu({ ...win, location: { search: '?vektorit=1' } }, true), true);
+  assert.equal(pallovektoritPaalla({ ...win, location: { search: '?vektorit=1' } }), true);
+  asetaLaattakerros(true, win);
+  asetaPallovektorit(true, win);
+  assert.equal(laattakerrosPaalla(win, false), true, 'muistettu päällä voittaa oletuksen');
+  assert.equal(pallovektoritValittu(win, false), true);
+  // Napit ovat ratasvalikossa ja kytketty; valinta ei jää osoitteen alle.
+  const html = lue('../index.html');
+  assert.match(html, /id="kehittaja-laattakerros-kytkin"/);
+  assert.match(html, /id="kehittaja-pallovektorit-kytkin"/);
+  const main = lue('../js/main.js');
+  assert.match(main, /asetaLaattakerros\(halutaan\);/);
+  assert.match(main, /asetaPallovektorit\(halutaan\);/);
+  assert.match(main, /osoite\.searchParams\.delete\('laattakerros'\);/);
+  assert.match(main, /osoite\.searchParams\.delete\('vektorit'\);/);
+});

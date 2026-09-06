@@ -268,7 +268,7 @@ test('kytkennät: sama lepo kokoaa, liike piilottaa heti, osoitteet tasokartan m
    * kytkennät ovat ennallaan.
    */
   assert.match(pallo, /const lepokerros = kerros \? null : luoLepokerros\(\{\n\s*pallo, kotelo, ikkuna, renderer, laattataso: \(\) => moottori\.level,\n\s*\}\);/);
-  assert.match(pallo, /alkuperainen\.call\(moottori, kamera\);\n(?:\s*\/\/[^\n]*\n)*\s*if \(kerros\) kerros\.paivita\(kamera, false\);\n\s*else lepokerros\.levossa\(\);/,
+  assert.match(pallo, /alkuperainen\.call\(moottori, kamera\);\n(?:\s*\/\/[^\n]*\n)*\s*if \(kerros\) kerros\.paivita\(pallonKehysmitat\(pallo, kotelo, kamera, ikkuna\), false\);\n\s*else lepokerros\.levossa\(\);/,
     'laatutason lepo ajoittaa lepokerroksen (levossa), ei kokoa suoraan');
   assert.ok(!/void lepokerros\.kokoa\(\)/.test(pallo), 'kokoaminen ei lähde laatutason 260 ms:n levosta suoraan');
   const liike = pallo.match(/edellinen\.distanceToSquared\(paikka\) > 1e-10\) \{[\s\S]*?lepokerros\?\.piilota\(\);[\s\S]*?if \(lepo && nyt - liikeAlku >= LAATU_LIIKEVIIVE_MS\)/);

@@ -65,8 +65,17 @@
  * samat mittaluvut, jotta kaksi kerrosta ei voi eriytyä.
  */
 import {
-  LEPOKERROS_MITTAMATKA_PX, LEPOKERROS_NAYTTEITA, kolmiulotteinen, lepokerroksenAlue, pallonPiste,
+  LEPOKERROS_MITTAMATKA_PX, LEPOKERROS_NAYTTEITA, kolmiulotteinen, kytkePallonKehys,
+  lepokerroksenAlue, pallonPiste, pinnanPiste,
 } from './pallo.js';
+
+/*
+ * pinnanPiste MUUTTI js/pallolaatat.js:ään (vika v1649): sormiveto
+ * tarvitsee saman säde–pallo-leikkauksen eikä js/pallo.js voi tuoda
+ * tätä moduulia (kehä). Vienti jatkuu tästä, joten kutsujat ja testit
+ * näkevät sen edelleen samassa osoitteessa.
+ */
+export { pinnanPiste };
 
 /** Pelin ämpäri (sama osoite kuin js/pallo.js:ssä). */
 const R2 = 'https://media.matkakirja.app/';
@@ -120,8 +129,6 @@ export const RAJA_KATKO_YKS = [0.011, 0.022];
 export const PALLOVEKTORIT_OLETUS = true;
 /** Kytkimen muistipaikka (kehittäjän vipu, savukkeet). */
 export const PALLOVEKTORIT_AVAIN = 'matkakirja-pallovektorit';
-
-const RAD = Math.PI / 180;
 
 /**
  * Onko vektorikerros päällä: `?vektorit=0|1` voittaa muistetun valinnan,
@@ -272,33 +279,6 @@ export function vektorijanat(viivat, sade) {
 }
 
 /**
- * Ruudun piste pallon pinnalle OMALLA säde–pallo-leikkauksella.
- * Kirjaston toGlobeCoords säteenjäljittää KOKO scenen (sadat
- * laattaverkot) — 49 näytettä maksoi mitatusti 585 ms — ja tämä on
- * mikrosekunteja: pallo on origossa säteellä R, joten leikkaus on
- * toisen asteen yhtälö. Palauttaa { lat, lng } tai null, jos säde menee
- * pallon ohi (ruudun kulma taivaalla).
- */
-export function pinnanPiste(kamera, x, y, W, H, R) {
-  const o = kamera?.position;
-  if (!o || !(W > 0) || !(H > 0) || !(R > 0)) return null;
-  const V3 = o.constructor;
-  const piste = new V3((2 * x) / W - 1, 1 - (2 * y) / H, 0.5).unproject(kamera);
-  const d = piste.sub(o).normalize();
-  const b = o.dot(d);
-  const c = o.dot(o) - R * R;
-  const disc = b * b - c;
-  if (disc < 0) return null;
-  const t = -b - Math.sqrt(disc);
-  if (t < 0) return null;
-  const q = o.clone().add(d.multiplyScalar(t));
-  return {
-    lat: Math.asin(Math.max(-1, Math.min(1, q.y / R))) / RAD,
-    lng: Math.atan2(q.x, q.z) / RAD,
-  };
-}
-
-/**
  * Line2-luokat elävästä pallosta. Globe.gl 2.46 rakentaa jokaisen
  * pathsData-viivan Line2:na, joten yksi olio scenessä antaa koko
  * konstruktoriketjun — uutta kirjastoa ei ladata eikä vendor-vientiä
@@ -342,18 +322,32 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
   let luokat = null;
   let kolmi = null;
   let materiaalit = null;
-  let ohjaimet = null;
   let purettu = false;
   let nakyvat = new Set();
   let kello = 0;
-  let jarru = 0;
+  /*
+   * Viimeisimmät kehysmitat piirtokoukusta (js/pallo.js
+   * kytkePallonKehys): kamera, pov, ruudun koko ja pikselisuhde SAMASTA
+   * kehyksestä kuin laattakerroksella. Null ennen ensimmäistä piirtoa ja
+   * yksikkötesteissä — silloin luetaan kuten ennen.
+   */
+  let kehysmitat = null;
+  let kehyspurku = () => {};
+  let viimeAjo = -Infinity;
+  let viimeTunnus = '';
 
   const renderer = pallo.renderer?.();
   const nyt = () => ikkuna.performance?.now?.() ?? Date.now();
   const odota = (ms) => new Promise((ok) => { ikkuna.setTimeout(ok, ms); });
   const reduced = () => Boolean(ikkuna.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
   const sade = () => pallo.getGlobeRadius() * (1 + VEKTORIT_KORKEUS);
-  const pikselisuhde = () => renderer?.getPixelRatio?.() ?? (ikkuna.devicePixelRatio || 1);
+  const pikselisuhde = () => kehysmitat?.suhde
+    ?? renderer?.getPixelRatio?.() ?? (ikkuna.devicePixelRatio || 1);
+  /** Ruudun koko: piirretty koko kehyskoukusta, kotelo varana. */
+  const ruutu = () => ({
+    W: kehysmitat?.W || kotelo.clientWidth,
+    H: kehysmitat?.H || kotelo.clientHeight,
+  });
   const cssLeveys = (laji) => (laji === 'rajat' ? VEKTORIT_RAJA_LEVEYS_LAITEPX : VEKTORIT_LEVEYS_LAITEPX)
     / pikselisuhde();
 
@@ -394,9 +388,17 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     if (purettu) return false;
     if (!luettelo?.lodit?.length || !luettelo.lajit) return luovuta('vektoriluetteloa ei saatu');
     materiaalit = teeMateriaalit();
-    ohjaimet = pallo.controls?.();
-    ohjaimet?.addEventListener?.('change', pyyda);
-    ikkuna.addEventListener?.('resize', pyyda);
+    /*
+     * PÄIVITYS PIIRTOKOUKUSSA, EI TAPAHTUMASSA (vika v1649). Ennen tätä
+     * kerros heräsi ohjainten `change`-tapahtumasta — eli pointermoven
+     * sisältä — ja luki ruudun koon kotelon CSS-laatikosta 60 ms:n
+     * ajastimella. Laattakerros luki omansa updatePovista. Kaksi eri
+     * lähdettä ja kaksi eri hetkeä tarkoittavat raahauksen aikana kahta
+     * eri näkyvää aluetta. Nyt molemmat saavat saman olion samasta
+     * kehyksestä (js/pallo.js kytkePallonKehys); jarru ja kaikki V3:n
+     * vakiot ovat ennallaan.
+     */
+    kehyspurku = kytkePallonKehys(pallo, kotelo, kehyksessa, ikkuna);
     mittarit.tila = 'nakyy';
     await paivita();
     return true;
@@ -432,8 +434,7 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
   /** Ruutumitat materiaaleihin: leveys laitepikseleinä, resoluutio css-pikseleinä. */
   function tahdista() {
     if (!materiaalit) return;
-    const W = kotelo.clientWidth;
-    const H = kotelo.clientHeight;
+    const { W, H } = ruutu();
     mittarit.linewidthCss = cssLeveys('rannikko');
     mittarit.pikselisuhde = pikselisuhde();
     for (const [laji, m] of Object.entries(materiaalit)) {
@@ -575,10 +576,9 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
 
   /** Näkyvä alue ja ruudun tiheys — sama mitta kuin lepokerroksella. */
   function nakyvaAlue() {
-    const kamera = pallo.camera?.();
-    const W = kotelo.clientWidth;
-    const H = kotelo.clientHeight;
-    const R = pallo.getGlobeRadius?.();
+    const kamera = kehysmitat?.kamera ?? pallo.camera?.();
+    const { W, H } = ruutu();
+    const R = kehysmitat?.sade ?? pallo.getGlobeRadius?.();
     if (!kamera || !(W > 0) || !(H > 0) || !(R > 0)) return { alue: null, tarve: 0 };
     const N = LEPOKERROS_NAYTTEITA;
     const naytteet = [];
@@ -587,7 +587,7 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
         naytteet.push(pinnanPiste(kamera, (W * i) / (N - 1), (H * j) / (N - 1), W, H, R));
       }
     }
-    const pov = pallo.pointOfView?.() ?? { lng: 0 };
+    const pov = kehysmitat?.pov ?? pallo.pointOfView?.() ?? { lng: 0 };
     const alue = lepokerroksenAlue(naytteet, pov.lng ?? 0, { vara: VEKTORIT_VARA_AST });
     const keski = pinnanPiste(kamera, W / 2, H / 2, W, H, R);
     const alas = pinnanPiste(kamera, W / 2, H / 2 + LEPOKERROS_MITTAMATKA_PX, W, H, R);
@@ -596,10 +596,27 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     return { alue, tarve };
   }
 
-  /** Jarru: kameran 'change' tulee joka kehyksellä, päivitys 60 ms:n välein. */
-  function pyyda() {
-    if (jarru || purettu) return;
-    jarru = ikkuna.setTimeout(() => { jarru = 0; void paivita(); }, VEKTORIT_JARRU_MS);
+  /** Kehyksen tunnus: kamera ja ruudun mitat. Sama tunnus = ei tarvetta. */
+  const kehysTunnus = (k) => (k?.pov
+    ? `${k.pov.lat.toFixed(5)},${k.pov.lng.toFixed(5)},${(k.pov.altitude ?? 0).toFixed(6)},${k.W},${k.H},${k.suhde}`
+    : '');
+
+  /*
+   * Piirtokoukun kuuntelija. Jarru on ennallaan (VEKTORIT_JARRU_MS):
+   * kerros päivittyy enintään kerran siinä ajassa ja vain, kun kamera
+   * tai ruudun koko on muuttunut. Kehysmitat talletetaan JOKA kehyksellä,
+   * jotta materiaalien ruutumitat ja näkyvä alue tulevat aina siitä
+   * kehyksestä, jonka kanssa laattakerros laski omansa.
+   */
+  function kehyksessa(kehys) {
+    if (purettu) return;
+    kehysmitat = kehys;
+    if (kehys.aika - viimeAjo < VEKTORIT_JARRU_MS) return;
+    const tunnus = kehysTunnus(kehys);
+    if (tunnus === viimeTunnus) return;
+    viimeAjo = kehys.aika;
+    viimeTunnus = tunnus;
+    void paivita();
   }
 
   async function paivita() {
@@ -650,10 +667,9 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     mittarit: () => ({ ...mittarit, pyydetyt: [...pyydetyt] }),
     pura() {
       purettu = true;
-      ikkuna.clearTimeout?.(jarru);
-      jarru = 0;
-      ohjaimet?.removeEventListener?.('change', pyyda);
-      ikkuna.removeEventListener?.('resize', pyyda);
+      kehyspurku();
+      kehyspurku = () => {};
+      kehysmitat = null;
       for (const s of solut.values()) vapauta(s);
       solut.clear();
       nakyvat = new Set();

@@ -114,6 +114,52 @@ export function pallonPiste(lat, lng, sade = 100) {
 }
 
 /**
+ * Ruudun piste pallon pinnalle OMALLA säde–pallo-leikkauksella.
+ *
+ * TÄMÄ ON PALLON AINOA PINNANLUKIJA (vika v1649, mitattu 6.9.2026).
+ * Kirjaston `toGlobeCoords` säteenjäljittää scenen, ja osuma tulee
+ * kirjaston omasta pallosta, joka on 72 × 36 -jaettu monitahokas
+ * (globeCurvatureResolution 5°): jänne painuu pinnan alle, ja
+ * osumapiste eroaa oikeasta jopa 3,2 laitepikseliä (mediaani 1,4;
+ * puhelin 390 × 844 dpr 3, Ateena korkeus 0,35, 124 px/aste). Sormiveto
+ * (js/pallo.js asennaPallonEleet) syöttää tuon eron suoraan kameraan
+ * JOKA pointermovessa, joten kartta ei pysy sormen alla — ja koska
+ * liu'ussa (irrotuksen jälkeen) sitä ei lueta lainkaan, oire loppuu
+ * täsmälleen silloin kun sormi irtoaa. Sama leikkaus kaikille:
+ * vektorikerros ja laattakerros lukevat pinnan tästä.
+ *
+ * Pallo on origokeskinen säteellä R, joten leikkaus on toisen asteen
+ * yhtälö — mikrosekunteja, kun säteenjäljitys maksoi mitatusti 585 ms
+ * 49 näytteeltä. Palauttaa { lat, lng } tai null, jos säde menee pallon
+ * ohi (ruudun kulma taivaalla).
+ *
+ * @param {object} kamera kirjaston kamera (unproject ja position)
+ * @param {number} x ruudun x css-pikseleinä kotelon vasemmasta reunasta
+ * @param {number} y ruudun y css-pikseleinä kotelon yläreunasta
+ * @param {number} W kotelon leveys css-pikseleinä
+ * @param {number} H kotelon korkeus css-pikseleinä
+ * @param {number} R pallon säde (getGlobeRadius)
+ */
+export function pinnanPiste(kamera, x, y, W, H, R) {
+  const o = kamera?.position;
+  if (!o || !(W > 0) || !(H > 0) || !(R > 0)) return null;
+  const V3 = o.constructor;
+  const piste = new V3((2 * x) / W - 1, 1 - (2 * y) / H, 0.5).unproject(kamera);
+  const d = piste.sub(o).normalize();
+  const b = o.dot(d);
+  const c = o.dot(o) - R * R;
+  const disc = b * b - c;
+  if (disc < 0) return null;
+  const t = -b - Math.sqrt(disc);
+  if (t < 0) return null;
+  const q = o.clone().add(d.multiplyScalar(t));
+  return {
+    lat: Math.asin(Math.max(-1, Math.min(1, q.y / R))) / RAD,
+    lng: Math.atan2(q.x, q.z) / RAD,
+  };
+}
+
+/**
  * Näkyvä alue näytteistä. Pituuspiirit AUKIKIERRETÄÄN keskipituuspiirin
  * ympärille (−180…180 siitä), jotta sauman yli katsova ruutu ei saa
  * koko maailman levyistä laatikkoa. Palauttaa { lat0, lat1, lon0, lon1 }
@@ -1022,7 +1068,31 @@ export function luoLaattakerros({
       .then(() => { if (!purettu) suorita(); });
   };
 
-  function suorita() {
+  /*
+   * KEHYSMITAT YHDESTÄ LÄHTEESTÄ (vika v1649). Kerros ei enää mittaa
+   * ruutua ja kameraa itse tapahtumakäsittelijän sisällä, vaan saa ne
+   * renderöintikoukusta (js/pallo.js kytkePallonKehys): täsmälleen
+   * samat luvut, samasta kehyksestä, kuin vektorikerros — ja ruudun
+   * koko siitä, mitä REALLY piirretään (renderer.getSize), ei kotelon
+   * CSS-laatikosta, joka voi olla kuoressa eri kokoinen. Ilman koukkua
+   * (yksikkötestit, savukkeet, lepoon()) mitataan kuten ennen.
+   */
+  const kehysmitat = (kehys) => {
+    if (kehys?.pov) return kehys;
+    const kam = pallo.camera?.() ?? null;
+    return {
+      pov: pallo.pointOfView?.() ?? null,
+      kamera: kam,
+      W: kotelo.clientWidth,
+      H: kotelo.clientHeight,
+      suhde: renderer?.getPixelRatio?.() ?? (ikkuna.devicePixelRatio || 1),
+      kuvasuhde: Number.isFinite(kam?.aspect) && kam.aspect > 0 ? kam.aspect : 0,
+      fov: Number.isFinite(kam?.fov) ? kam.fov : 50,
+      sade: pallo.getGlobeRadius(),
+    };
+  };
+
+  function suorita(kehys) {
     if (purettu) return false;
     const luokat = kolmi();
     if (!luokat?.laatatValmiit || !luokat.Texture || !luokat.BufferGeometry || !luokat.BufferAttribute) {
@@ -1033,16 +1103,16 @@ export function luoLaattakerros({
     if (!pyramidi) return luovuta('pyramidin luetteloa ei saatu');
     kerrokset = lepokerroksenKerrokset(pallonSarja(), pyramidi);
     if (!kerrokset) return luovuta('pallon sarja ja pyramidi eri versiota');
-    const W = kotelo.clientWidth;
-    const H = kotelo.clientHeight;
+    const mitat = kehysmitat(kehys);
+    const W = mitat.W;
+    const H = mitat.H;
     if (!(W > 0 && H > 0)) return luovuta('kotelo piilossa');
-    const pov = pallo.pointOfView?.();
+    const pov = mitat.pov;
     if (!pov || !Number.isFinite(pov.altitude)) return luovuta('ei kameraa');
-    const kam = pallo.camera?.();
     const linssi = {
-      fov: Number.isFinite(kam?.fov) ? kam.fov : 50,
-      kuvasuhde: Number.isFinite(kam?.aspect) && kam.aspect > 0 ? kam.aspect : W / H,
-      sade: pallo.getGlobeRadius(),
+      fov: Number.isFinite(mitat.fov) ? mitat.fov : 50,
+      kuvasuhde: mitat.kuvasuhde > 0 ? mitat.kuvasuhde : W / H,
+      sade: mitat.sade ?? pallo.getGlobeRadius(),
     };
     const osuma = (x, y) => laattakerroksenOsuma(pov, (2 * x) / W - 1, 1 - (2 * y) / H, linssi);
     const keski = osuma(W / 2, H / 2);
@@ -1067,7 +1137,7 @@ export function luoLaattakerros({
       LAATTAKERROS_VARA_OSUUS * Math.max(raaka.lat1 - raaka.lat0, raaka.lon1 - raaka.lon0));
     const alue = lepokerroksenAlue(naytteet, pov.lng, { latMin, latMax, vara }) ?? raaka;
     // Ruudun tarve: laitepikseleitä astetta kohti keskellä (fov on pystykulma).
-    const suhde = renderer?.getPixelRatio?.() ?? (ikkuna.devicePixelRatio || 1);
+    const suhde = mitat.suhde;
     const tarvePxAste = (LEPOKERROS_MITTAMATKA_PX * suhde) / Math.abs(keski.lat - alas.lat);
     let valittu = laattakerroksenTaso(pyramidi.tasot, tarvePxAste, taso);
     let kartta = null;
@@ -1178,12 +1248,17 @@ export function luoLaattakerros({
     return true;
   }
 
-  const paivita = (pov, liikkeessa = false) => {
+  /*
+   * `kehys` on renderöintikoukun kehysmitat (js/pallo.js
+   * kytkePallonKehys) tai null/vanha pov-argumentti: silloin mitat
+   * luetaan kuten ennen. Kutsuja EI enää ole tapahtumakäsittelijä.
+   */
+  const paivita = (kehys, liikkeessa = false) => {
     if (purettu) return false;
-    const nyt = aika();
+    const nyt = kehys?.aika ?? aika();
     if (liikkeessa && nyt - viimePaivitys < LAATTAKERROS_PAIVITYSVALI_LIIKE_MS) return false;
     viimePaivitys = nyt;
-    return suorita();
+    return suorita(kehys);
   };
 
   return {

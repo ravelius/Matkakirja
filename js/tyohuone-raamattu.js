@@ -3632,7 +3632,11 @@ export const RAAMATTU = {
           + 'selvasti haaleammaksi (teksti pysyy luettavana pallon paalla), ja '
           + 'etusivun pallo skaalataan peittamaan koko ruutu joka kuvasuhteella '
           + '(iPad pysty, puhelin, tyopoyta) niin ettei pallon reuna tai '
-          + 'horisontti nay missaan.',
+          + 'horisontti nay missaan. PALAUTE 2 (omistaja 6.9.2026 ilta, v1651, '
+          + 'iPad pystyssa, sanatarkasti: "Alaosan vaalean raja pitaa '
+          + 'feidautuu pidemmalla matkalla"): avaustekstin harson ylareuna '
+          + 'erottuu yha rajana - liu\'un on oltava selvasti pidempi, niin '
+          + 'ettei vaalean alueen alkua nae.',
         'IHMISEN MATKA ON VARIVIRTOJA, EI PISTEITA (omistaja 6.9.2026 '
           + 'keskipaiva, sanatarkasti: "linssi toimii periaatetasolla vaarin. '
           + 'Siina pitaisi nakya hitaasti kartalla lisaantyva varillinen alue '
