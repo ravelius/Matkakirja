@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1631, teksti: 'Pulun tehosteet, tunnusluvut, nostot Afrikka 2' },
   { v: 1630, teksti: 'Reittikuvat pallolle, terava lepolaatu, nostot M9' },
   { v: 1629, teksti: 'Etusivun avaus salamana; maalehdet CHL COL CUB' },
   { v: 1628, teksti: 'iOS-kuori matkakirja.app; nostot Lahi-ita M6' },

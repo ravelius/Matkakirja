@@ -183,7 +183,7 @@ Edellä oleva 2.9.2026 taulukko on jätetty koskematta tarkoituksella:
 rinnakkaiset erät päivittävät sitä, ja Euroopan luvut näkyvät tässä
 osiossa tuoreina.
 
-**Tilanne yhdellä silmäyksellä (erien M1–M5 ja M8 jälkeen, 6.9.2026 aamupäivä).** 112 maasta **55 on tavoitteessa** ja 57 vajaita. Eurooppa on täynnä; maailman erät M1 (Etelä-Amerikka), M2 (Oseania), M3 (Aasia), M4 (Pohjois-Amerikka), M5 (Afrikka) ja M8 (Aasia 2) toivat yhteensä noin 360 uutta karttamerkkiä. Tarkoitukselliset vajeet: Fidži, Salomonsaaret, Hongkong ja Singapore (lehden ikkuna tai kaupunkisäde). Erä M6 (Lähi-itä) on työn alla.
+**Tilanne yhdellä silmäyksellä (erien M1–M6, M8, M9 ja M11 jälkeen, 6.9.2026 keskipäivä).** 112 maasta **67 on tavoitteessa** ja 45 vajaita. Tarkoitukselliset vajeet: Fidži, Salomonsaaret, Hongkong, Singapore, Qatar, Kuwait ja Kypros (lehden ikkuna tai kaupunkisäde). Erä M10 (Aasia 3) on työn alla; jäljellä Afrikan ja Aasian loput maat.
 
 ### Eurooppa (29 maata)
 
@@ -223,18 +223,18 @@ osiossa tuoreina.
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Kypros (CYP) | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | kohteita −8, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
-| Oman (OMN) | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | kohteita −8, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
-| Qatar (QAT) | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | kohteita −8, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
-| Arabiemiirikunnat (ARE) | 1 | 2 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −7, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
-| Kuwait (KWT) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Saudi-Arabia (SAU) | 1 | 2 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −7, maastoa −1, skandaaleja −2 |
 | Jemen (YEM) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Iran (IRN) | 1 | 3 | 0 | 0 | 0 | 0 | 3 | 1 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
-| Jordania (JOR) | 1 | 3 | 0 | 0 | 0 | 0 | 3 | 1 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
 | Syyria (SYR) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
-| Irak (IRQ) | 3 | 3 | 0 | 0 | 0 | 0 | 5 | 1 | kohteita −5, eläintäky puuttuu, skandaaleja −2 |
-| Egypti (EGY) | 4 | 3 | 0 | 0 | 3 | 0 | 9 | 1 | kohteita −4, eläintäky puuttuu, skandaaleja −2 |
+| Qatar (QAT) | 5 | 3 | 0 | 2 | 0 | 0 | 10 | 0 | kohteita −3, eläintäky puuttuu |
+| Kuwait (KWT) | 5 | 4 | 1 | 2 | 0 | 0 | 11 | 0 | kohteita −3 |
+| Kypros (CYP) | 7 | 3 | 1 | 2 | 0 | 0 | 12 | 0 | kohteita −1 |
+| Iran (IRN) | 8 | 3 | 1 | 2 | 0 | 0 | 12 | 1 | täysi |
+| Irak (IRQ) | 8 | 3 | 1 | 2 | 0 | 0 | 12 | 1 | täysi |
+| Jordania (JOR) | 8 | 3 | 1 | 2 | 0 | 0 | 12 | 1 | täysi |
+| Oman (OMN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Saudi-Arabia (SAU) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Arabiemiirikunnat (ARE) | 9 | 3 | 1 | 2 | 0 | 0 | 14 | 0 | täysi |
+| Egypti (EGY) | 8 | 3 | 1 | 2 | 3 | 0 | 15 | 1 | täysi |
 
 ### Aasia (19 maata)
 
@@ -265,11 +265,8 @@ osiossa tuoreina.
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | Saint Helena (SHN) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
-| Etiopia (ETH) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
 | Ghana (GHA) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Kenia (KEN) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
 | Liberia (LBR) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Marokko (MAR) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
 | Madagaskar (MDG) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
 | Mali (MLI) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
 | Mosambik (MOZ) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
@@ -278,8 +275,6 @@ osiossa tuoreina.
 | Senegal (SEN) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
 | Sierra Leone (SLE) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
 | Tšad (TCD) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Tansania (TZA) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
-| Uganda (UGA) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
 | Libya (LBY) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
 | Nigeria (NGA) | 0 | 4 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
 | Somalia (SOM) | 0 | 4 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
@@ -290,7 +285,12 @@ osiossa tuoreina.
 | Kamerun (CMR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Kongo (COD) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Algeria (DZA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Etiopia (ETH) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Kenia (KEN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Marokko (MAR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Etelä-Sudan (SDS) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Tansania (TZA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Uganda (UGA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 
 ### Pohjois-Amerikka (7 maata)
 
@@ -332,7 +332,7 @@ osiossa tuoreina.
 | Papua-Uusi-Guinea (PNG) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Itä-Timor (TLS) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 
-Maita 112, tavoitteessa 55, vajaita 57.
+Maita 112, tavoitteessa 67, vajaita 45.
 
 ## Maailman erät (ehdotus)
 
@@ -353,7 +353,7 @@ tiedostoon.
 | M3 (tehty 6.9.) | Aasia | Hongkong (HKG) 0, Indonesia (IDN) 0, Intia (IND) 0, Sri Lanka (LKA) 0, Myanmar (MMR) 0 |
 | M4 (tehty 6.9.) | Pohjois-Amerikka | Kanada (CAN) 0, Kuuba (CUB) 0, Grönlanti (GRL) 0, Guatemala (GTM) 0, Nicaragua (NIC) 0 |
 | M5 (tehty 6.9.) | Afrikka | Saint Helena (SHN) 0, Etelä-Sudan (SDS) 2, Angola (AGO) 3, Kamerun (CMR) 3, Kongo (COD) 3 |
-| M6 | Lähi-itä | Kypros (CYP) 2, Oman (OMN) 2, Qatar (QAT) 2, Arabiemiirikunnat (ARE) 3, Kuwait (KWT) 3 |
+| M6 (tehty 6.9.) | Lähi-itä | Kypros (CYP) 2, Oman (OMN) 2, Qatar (QAT) 2, Arabiemiirikunnat (ARE) 3, Kuwait (KWT) 3 |
 | M7 (tehty erinä 2–4) | Eurooppa | Tanska (DNK) 11, Ruotsi (SWE) 11, Itävalta (AUT) 12, Irlanti (IRL) 12, Liettua (LTU) 12 |
 
 Erä M7 on sama kuin Euroopan "erä 2 (ehdotus)" yllä — sama viisikko,
