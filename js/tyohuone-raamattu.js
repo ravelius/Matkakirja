@@ -3758,7 +3758,15 @@ export const RAAMATTU = {
           + 'syvatyohon": oletus on Opus, fablemax on poikkeus, joka '
           + 'perustellaan. Pallon vaiheet 5-6 ja kohtaamislista ovat jo '
           + 'Opuksella; vaiheen 4 (linssikartta) fablemax-era viedaan '
-          + 'loppuun, uusia fablemax-eria pallolle ei aloiteta.',
+          + 'loppuun, uusia fablemax-eria pallolle ei aloiteta. TOISTO '
+          + '(omistaja 6.9.2026 ilta, sanatarkasti: "Kayta fablemaksia vain '
+          + 'sen verran, kun on tarpeen, ja siirra sen jalkeen '
+          + 'opusagenteille."): fablemax tekee vain sen osan, joka vaatii '
+          + 'sita - juurisyyn, rungon tai speksin - ja luovuttaa loput '
+          + 'Opus-agenteille tasmallisena tehtavanantona (tiedostot, malli, '
+          + 'mita ei tehda); Fable jakaa tyon nain jo tehtavaa antaessaan. '
+          + 'Sovellettu heti: Ihmisen matka -linssin fablemax tekee vain '
+          + 'laskennan ja virtojen rungon, hionta siirtyy Opukselle.',
         'KOHTAAMISTEN TESTITILA JA EUROOPPA ENSIN (omistaja 5.9.2026 '
           + 'paivalla, sanatarkasti: "Tarvitaan joku kehittajatila missa '
           + 'paasen testaamaan kaikki aarre kohtaamiset ja niiden tehtava '
