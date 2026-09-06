@@ -1075,16 +1075,18 @@ test('lähikuva on omistajan mitta: mitattu 1 525 km ruudun leveydellä', () => 
   assert.ok(Math.abs(asteet - 13) < 0.2, `pyydetty kaista ${asteet}°`);
 });
 
-test('kameran ennakko on 40 % pysäkin kestosta ja jälkijättö sen päälle', () => {
+test('kameran ennakko on 40 % pysäkin kestosta ja ajo päättyy ennen syttymistä', () => {
   assert.equal(AIKAJANAN_KAMERAN_ENNAKKO_OSUUS, 0.4);
   assert.equal(AIKAJANAN_KAMERAN_ENNAKKO_MS, Math.round(AIKAJANA_VIIVE_MS * 0.4));
-  // Omistaja: liike loppuu "vasta vähän sen jälkeen" — 600–900 ms.
-  assert.ok(AIKAJANAN_KAMERAN_JALKIJATTO_MS >= 600 && AIKAJANAN_KAMERAN_JALKIJATTO_MS <= 900);
+  // Omistaja 6.9.2026: "Kamera pysähtyy ennen syttymistä" — jälkijättö
+  // negatiivinen, 200–400 ms ennen valoa.
+  assert.ok(AIKAJANAN_KAMERAN_JALKIJATTO_MS <= -200 && AIKAJANAN_KAMERAN_JALKIJATTO_MS >= -400);
   assert.ok(AIKAJANAN_KAMERAN_POHJA_MS >= 600, 'lyhinkin ajo ei saa olla hyppäys');
-  // Ajo kestää aina syttymisen yli, oli syttyminen miten lähellä tahansa.
-  for (const eta of [50, 400, 1200, AIKAJANAN_KAMERAN_ENNAKKO_MS]) {
+  // Tavallisella ennakolla ajo päättyy ennen syttymistä; vain hyvin
+  // lähellä syttyvä valo (alle pohjakeston) saa ajon jatkumaan sen yli.
+  for (const eta of [1200, AIKAJANAN_KAMERAN_ENNAKKO_MS]) {
     const kesto = Math.max(AIKAJANAN_KAMERAN_POHJA_MS, eta + AIKAJANAN_KAMERAN_JALKIJATTO_MS);
-    assert.ok(kesto > eta, `eta ${eta} ms: ajo ehtisi loppuun ennen syttymistä`);
+    assert.ok(kesto < eta, `eta ${eta} ms: ajon pitäisi päättyä ennen syttymistä`);
   }
 });
 

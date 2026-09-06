@@ -414,7 +414,14 @@ export const AIKAJANAN_KAMERAN_ENNAKKO_OSUUS = 0.4;
 /** Ennakko millisekunteina: liike alkaa, kun syttymiseen on tämä aika. */
 export const AIKAJANAN_KAMERAN_ENNAKKO_MS = Math.round(AIKAJANA_VIIVE_MS * AIKAJANAN_KAMERAN_ENNAKKO_OSUUS);
 /** Ajo päättyy vasta tämän verran syttymisen jälkeen (omistaja: "vähän sen jälkeen"). */
-export const AIKAJANAN_KAMERAN_JALKIJATTO_MS = 750;
+/*
+ * KAMERA PYSÄHTYY ENNEN SYTTYMISTÄ (omistajan kysymyskortin vastaus
+ * 6.9.2026 aamu: "Kamera pysähtyy ennen syttymistä"): jälkijättö on
+ * negatiivinen — ajo päättyy 300 ms ennen valon syttymistä, jolloin
+ * uusi valo syttyy paikallaan olevalle kartalle. Aiempi 750 ms
+ * (5.9.2026 ilta) liikutti juuri syttynyttä valoa vielä hetken.
+ */
+export const AIKAJANAN_KAMERAN_JALKIJATTO_MS = -300;
 /** Lyhinkin ajo kestää tämän: hyppy olisi pahempi kuin myöhästyminen. */
 export const AIKAJANAN_KAMERAN_POHJA_MS = 900;
 
