@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1649, teksti: 'Pallo: rantaviivat ja rajat vektoreina laattojen paalle' },
   { v: 1648, teksti: 'Rantaviiva omalle tasolleen, pohja ilman rantaviivaa' },
   { v: 1647, teksti: 'Pallo: laattakerros, liike ja zoom taydella tarkkuudella' },
   { v: 1646, teksti: 'Laattamoottorin valmistelu: E0, mittari, vektoriputki' },
