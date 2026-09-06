@@ -1521,6 +1521,67 @@ export const ELAINTAKYT = {
     lon: 46.7,
     lat: 29.2,
   },
+  /* ==================================================================
+   * MAAILMAN ERÄ M9, LÄHI-ITÄ 2 (6.9.2026). Omistaja 6.9.2026: *"Jatka
+   * kartta nostojen tekoa koko maailmaan."* Neljä uutta eläintäkyä
+   * (IRN, JOR, IRQ, EGY); Saudi-Arabialla oli jo arabianoryksi.
+   * Kuvattomia: `kuva`-kentässä on kuvaputken ämpäritunnus ilman
+   * kansiota, ja kun kuva valmistuu, se ilmestyy kortille ilman
+   * koodimuutosta. Jokainen piste on maan rajojen sisällä, maalla ja
+   * vähintään 35 lautayksikön päässä jokaisesta kaupunkimerkistä
+   * (tests/elaintakyt.test.mjs); etäisyys on kirjattu pisteen viereen.
+   * Egyptin fennekki olisi toistanut Algerian eläintäyn ja Jordanian
+   * nubiantorvikauris olisi Egyptissä toistunut, joten Egyptiin
+   * valittiin egyptinmangusti.
+   * ================================================================ */
+  IRN: {
+    elain: 'persianonageri',
+    otsikko: 'Aavikon villiaasi, jota persiaksi sanotaan seepraksi',
+    teksti: 'Persianonageri on Iranissa elävä aasianvillaasin alalaji, ja se on luokiteltu äärimmäisen uhanalaiseksi: villinä niitä on enintään noin kuusisataa. Eläin on 2–2,5 metriä pitkä ja 200–260 kiloa painava, ja sen turkki on hiekanpunainen, selässä ruskea juova ja sen molemmin puolin ohuet valkoiset raidat, jotka sulautuvat takaruumiin valkoiseen läiskään. Persiaksi laji tunnetaan nimellä gur, joka tarkoittaa seepraa, ja sana onageri tulee kreikan villiaasia tarkoittavasta sanasta onagros. Aasianvillaasi oli aikoinaan yleinen Lähi-idästä Kiinaan, mutta 1800-luvulta lähtien kanta on romahtanut muutamaan tuhanteen. Persianonageri viihtyy vuoristoaroilla, puoliaavikoilla ja aavikkotasangoilla, ja sen suurin kanta elää Khar Turanin kansallispuistossa. Suurimmat uhat ovat salametsästys lihan ja nahan takia, kilpailu karjan kanssa sekä kuivuus.',
+    lahde: 'en-Wikipedia "Persian onager", johdanto sekä osiot "Description", "Taxonomy and '
+      + 'history", "Habitat and distribution" ja "Threats". Tarkistettu 6.9.2026.',
+    kuva: 'elain-irn',
+    // Piste on Khar Turanin aroylängöllä, 140,8 lautayksikköä
+    // Teheranista (vähimmäisetäisyys 35).
+    lon: 55.6,
+    lat: 35.3,
+  },
+  JOR: {
+    elain: 'nubiantorvikauris',
+    otsikko: 'Aavikon vuohi, joka opittiin tuntemaan Ylä-Egyptistä',
+    teksti: 'Nubiantorvikauris on aavikoilla elävä vuohilaji, jota tavataan Pohjois- ja Koillis-Afrikan sekä Lähi-idän vuoristoseuduilla. Sitä pidettiin pitkään alppikauriin alalajina, mutta nykyään se luetaan omaksi lajikseen; Frédéric Cuvier kuvasi sen tieteelle 1825 nimellä "Ylä-Egyptin villivuohi". Se on torvikauriista pienin, säkäkorkeus 65–75 senttimetriä, ja koiraat ovat selvästi naaraita suurempia: koiras painaa 52–75 ja naaras 25–33 kiloa. Villikanta on arviolta 4 500 aikuista yksilöä, ja laji on luokiteltu vaarantuneeksi. Jordaniassa se oli lähellä hävitä kokonaan, mutta maa on palauttanut kannan tarhakasvatuksella ja istutuksilla: yksilöitä on 480–600, ja vahvimmat kannat elävät Danan, Wadi Mujibin ja Wadi Rumin suojelualueilla. Suurin uhka on metsästys. Kauris on ollut Lähi-idän taiteen aihe tuhansia vuosia — kalliopiirroksissa sitä ajavat koirat ja jousimiehet.',
+    lahde: 'en-Wikipedia "Nubian ibex", johdanto sekä osiot "Classification", "Description", '
+      + '"Distribution", "Conservation and population status by country" ja "Cultural significance". Tarkistettu 6.9.2026.',
+    kuva: 'elain-jor',
+    // Piste on Mujibin ylängöllä Kuolleenmeren itäpuolella, 40,5
+    // lautayksikköä Petrasta (vähimmäisetäisyys 35).
+    lon: 35.75,
+    lat: 30.85,
+  },
+  IRQ: {
+    elain: 'basranruokokerttunen',
+    otsikko: 'Kerttunen, joka menetti kotisuonsa',
+    teksti: 'Basranruokokerttunen on kerttusiin kuuluva pikkulintu, joka pesii lähes yksinomaan Tigriin ja Eufratin jokijärjestelmässä: Lounais-Iranissa, Itä- ja Etelä-Irakissa sekä Kuwaitissa, ja viime aikoina se on levittäytynyt myös Israelin kosteikoille. Se pesii laajoissa papyrus- ja ruovikoissa ja viihtyy matalan makean tai murtoveden äärellä tiheässä ruovikossa. Lajin erottaa helposti sekoittuvasta rastaskerttusesta pienemmästä koosta, valkoisemmasta alapuolesta ja kapeammasta, pidemmästä ja terävämmästä nokasta; ääni on karhea chaar, syvempi kuin rytikerttusen. Lintu on muuttaja ja talvehtii Itä-Afrikassa, Euroopassa se on hyvin harvinainen harhailija. Kun Mesopotamian suot kuivattiin 1980- ja 1990-luvuilla ja lajin oma elinympäristö tuhoutui lähes kokonaan, siitä tuli erittäin uhanalainen.',
+    lahde: 'en-Wikipedia "Basra reed warbler", johdanto ja seuraavat kappaleet. Tarkistettu '
+      + '6.9.2026.',
+    kuva: 'elain-irq',
+    // Piste on Mesopotamian soilla Eufratin ja Tigriin välissä, 71,6
+    // lautayksikköä Kuwaitista (vähimmäisetäisyys 35).
+    lon: 47.0,
+    lat: 31.0,
+  },
+  EGY: {
+    elain: 'egyptinmangusti',
+    otsikko: 'Käärmeensyöjä, jolle omistettiin patsaita',
+    teksti: 'Egyptinmangusti on mangustilaji, jota elää Afrikan ruohostoilla ja pensaikoissa sekä Välimeren ympärillä Pohjois-Afrikassa, Lähi-idässä ja Iberian niemimaalla. Karkea turkki on harmaasta punaruskeaan ja pilkullinen ruskeasta ja keltaisesta, kuono on terävä ja korvat pienet; solakka ruumis on 48–60 senttimetriä ja mustakärkinen häntä 33–54, paino 1,7–4 kiloa. Hampaita on 35–40, ja lihaa leikkaavat petohampaat ovat pitkälle kehittyneet. Laji ei elä aavikolla vaan soilla ja kosteikoilla purojen, jokien ja järvien lähellä sekä rannikoilla. Se hyökkää myrkkykäärmeiden kimppuun ja kestää muun muassa aavikkokobran ja sarvikyyn myrkkyä. Muinaisessa Egyptissä eläin tunnettiin hyvin: Saqqarasta Anubiksen katakombeista on kaivettu neljä muumioitua egyptinmangustia, Beni Hasanin hautamaalauksessa mangusti kulkee talutushihnassa, ja jumalatar Mafdet, joka suojeli ihmisiä käärmeen ja skorpionin myrkyltä, yhdistettiin siihen.',
+    lahde: 'en-Wikipedia "Egyptian mongoose", johdanto sekä osiot "Characteristics", '
+      + '"Distribution and habitat", "Behaviour and ecology" ja "In culture". Tarkistettu 6.9.2026.',
+    kuva: 'elain-egy',
+    // Piste on Niilin suistossa, 44,1 lautayksikköä Kairosta
+    // (vähimmäisetäisyys 35).
+    lon: 31.3,
+    lat: 31.2,
+  },
 };
 
 /** Maatunnukset siinä järjestyksessä kuin ne on kirjoitettu. */

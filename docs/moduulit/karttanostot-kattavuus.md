@@ -883,6 +883,30 @@ pohjoiskärki, ja sekin vain 31,8 yksikön päässä. Sama tilanne kuin
 Hongkongissa erässä M3. Ehdokas odottaa valmiina: arabianoryksi, jota
 Al Reemin biosfäärialue suojelee.
 
+## Erä M9 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Lähi-idän toinen erä: **SAU, IRN, JOR, IRQ ja EGY**. Kaikilla viidellä
+oli jo kolme (Saudi-Arabialla kaksi) maastokohdetta, ja neljällä oli
+yksittäisiä kuratoituja kohteita fokuspakissaan, mutta yhdelläkään ei
+ollut skandaaleja eikä — Saudi-Arabiaa lukuun ottamatta — eläintäkyä.
+Erä kirjoitti kullekin maalle puuttuvat kohteet, Saudi-Arabialle lisäksi
+puuttuneen maastokohteen (Farasansaaret) sekä neljä eläintäkyä ja
+kymmenen skandaalia — yhteensä **42 uutta karttamerkkiä**. Erä on
+kuvaton kuten K2-erät 1–4 ja maailman erät M1–M5 ja M8, ja jokainen
+väite on en-Wikipedian raakatekstin katteessa lähderivillä, joka nimeää
+artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+`node tools/laske-karttanostot.mjs` sanoo erän jälkeen kaikista
+viidestä *täysi*; taulukot ajaa Fable.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Saudi-Arabia (SAU) | Hegra, Al-Ahsan keidas, Jubbahin kalliotaide, Al-Ukhdud, Rijal Almaa, Qaryat al-Faw, Vanha Jedda | Farasansaaret (uusi; oli jo: Jabal Sawda, Rub al-Khali, Punainenmeri) | (oli jo: arabianoryksi) | Wallinin valeasu, Tayman kivi |
+| Iran (IRN) | Pasargadai, Bamin linnoitus, Yazd, Shushtar, Soltaniyeh, Takht-e Soleyman, Gonbad-e Qabus | (oli jo: Damavand, Kaspianmeri, Karun) | persianonageri | Tupakkakapina, Susan kaivausmonopoli |
+| Jordania (JOR) | Jerash, Umm Qais, Umm el-Jimal, Madaba, Kerakin linna, Wadi Rum, Ayla | (oli jo: Jabal Umm ad Dami, Kuollutmeri, Jordan) | nubiantorvikauris | Meshan steela, Azraqin kosteikko |
+| Irak (IRQ) | Ur, Uruk, Samarran moskeija, Erbilin sitadelli, Hatra | (oli jo: Cheekha Dar, Tigris, Shatt al-Arab) | basranruokokerttunen | Bagdadin patteri, Rassamin oikeusjuttu |
+| Egypti (EGY) | Abu Simbel, Abydos, Philae, Wadi al-Hitan | (oli jo: Siinainvuori, Punainenmeri, Niili) | egyptinmangusti | Denderan horoskooppi, Suezin osakekauppa |
+
 **Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
 mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin, ja
 jokaisen kohteen lähin on kirjattu sen koordinaattirivin viereen. Koko
@@ -935,3 +959,48 @@ päivitettiin (eläintäkyjä 61 → 65, skandaaleja 123 → 133 ja maita
 `elain-omn`, `elain-are`, `elain-kwt`), joka osoittaa ämpäriin: kun
 kuvaputki tekee kuvan, se ilmestyy kortille ilman koodimuutosta, ja
 siihen asti kortti on kuvaton.
+erän lähin merkki on Bagdadin patteri 11,2 lautayksikön päässä
+Bagdadista, seuraavat Pasargadai 13,9 yksikköä Persepoliksesta ja
+Denderan horoskooppi 15,7 yksikköä Luxorista; raja
+`KAUPUNGIN_KOHDALLA_SADE` on 7. `node tools/tarkista-nostopaikat.mjs`
+antaa kaikille 42:lle rivin *pääkartta*, ja
+`node tools/tarkista-nimiolimitys.mjs` sanoo yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Kaupunkisääntö karsi eniten juuri tässä erässä.** Lähi-idän
+pelikaupungit istuvat suoraan kuuluisimpien kohteiden päällä, joten
+pois jäivät Persepolis (oma pelikaupunkinsa), Naqsh-e Rostam,
+Diriyahin At-Turaif (5 yksikköä Riadista), Saqqara ja Dahshur (6–9
+yksikköä Kairosta), Pyhän Katariinan luostari (käytännössä
+Siinai-laatan päällä), Niniven Kuyunjik ja Deir el-Bahari (Luxorin
+päällä). Nimiölimitys karsi lisäksi Al-Ulan vanhankaupungin (Hegran
+vieressä), Ajlounin linnan (5,4 yksikköä Jerashista) ja Qusayr Amran
+(8,3 yksikköä Azraqista). Kaksi kohdepaikkaa annettiin skandaalille:
+Tayman keidas ja Nimrud kantavat nyt kortin "Tayman kivi" ja "Rassamin
+oikeusjuttu", koska kaksi nimiötä samassa pisteessä olisi limitys.
+
+**Herkkien aiheiden linjaus pidettiin** (`docs/aasia-tyoaineisto/
+spec-asia.md`, SITOVA, sekä M3:n Myanmar-linja). Yksikään kortti ei
+koske nykypolitiikkaan eikä käynnissä olevaan konfliktiin: Irakin
+kohteet ovat muinaishistoriaa, ja Hatran vaurioista 2015 kerrotaan
+yhdellä toteavalla virkkeellä lähteen sanamuodossa (veistoksia
+tuhottiin, muurit ja tornit ovat yhä pystyssä). Nimrudia ei kirjoitettu
+kohteeksi lainkaan. Kymmenestä skandaalista kahdeksan on vuosilta
+1820–1902, ja kaksi 1900-luvun tapausta ovat Bagdadin patterin
+tiedehuhu (1936–1938) ja Azraqin kosteikon kuivuminen (1960–1992),
+joista jälkimmäinen on vesitalouden ympäristötapaus.
+
+**Eläintäkyjen paikat on mitattu koneellisesti.** Jokainen piste on maan
+rajojen sisällä, maalla ja vähintään 35 lautayksikön päässä jokaisesta
+kaupunkimerkistä (`tests/elaintakyt.test.mjs`): Iranin onageri 140,8
+yksikköä Teheranista, Irakin ruokokerttunen 71,6 Kuwaitista, Egyptin
+mangusti 44,1 Kairosta ja Jordanian kauris 40,5 Petrasta. Jordania oli
+erän tiukin tapaus — koko maa on niin kapea, että vain Mujibin ylänkö
+Kuolleenmeren itäpuolella ylitti rajan. Egyptin eläimeksi ei voitu
+ottaa fennekkiä (Algerian täky) eikä nubiantorvikaurista (Jordanian
+täky), joten valinta on egyptinmangusti, joka on samalla muinaisen
+Egyptin muumioitu ja jumalatar Mafdetiin liitetty eläin.
+
+**Kuvat puuttuvat kaikilta neljältä eläintäyltä.** `kuva`-kentässä on
+kuvaputken ämpäritunnus ilman kansiota (`elain-irn`, `elain-jor`,
+`elain-irq`, `elain-egy`): kun kuvaputki toimittaa kuvan, se ilmestyy
+kortille ilman koodimuutosta, ja siihen asti kortti on kuvaton.
