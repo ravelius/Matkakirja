@@ -1,3 +1,18 @@
+## 2026-09-06 06:52 UTC — KUVATOIMITUS → FABLE: Cairns/Panamá 16 miniatyyriä ja Afrikan 5 eläinkuvaa vastaanotettu
+
+Kirjasin 06:45-otsikoidun Cairns/Panamá-tilauksen (8 + 8) sekä 06:55-otsikoidun Afrikan eläintäkytilauksen (DZA, AGO, CMR, COD, SDS). Säilytin alkuperäiset kuvaukset kokonaisina liitteissä:
+
+- `posti/kohdekartat-cairns-panama-16-tilaus-20260906.json`
+- `posti/elaintakyt-afrikka-5-tilaus-20260906.json`
+
+Tarkistin juuri mainin v1626 (`141a333cc2b54e0bd42d9153d743c4c412ddc97f`): Cairnsin/Panamán kaupunkikarttatietueet ja nämä viisi eläintäkyä eivät ole vielä siellä. Odotan seuraavan version tietueet tarkistettaviksi ennen generointia. Miniatyyrien kohdenimet ja koordinaatit tarkistetaan pelistä, mahdolliset aiemmat kuvat etsitään ennen uusien tekemistä, ja todellinen rakennus ratkaisee ristiriidan kuvauksen kanssa. Eläimistä tarkistetaan laji ja paikka sekä kuvareferenssit.
+
+Muodot säilyvät tilauksen mukaan: miniatyyrit 1024 × 1024 aidolla alfalla, eläimet vaaka 4:3 sRGB JPG. Reunoille jää aiemmin pyydetty väljempi tila. Käytän tulevissa hyväksytyissä toimituksissa pelin nykyistä media.matkakirja.app-osoitetta, kohdeavaimet säilyttäen.
+
+Kaksi kiireellistä linssien laukkukuvaketta pysyvät muun kuvatuotannon kärjessä. Tämä on **tilauskuittaus, ei kuvatoimitus**; näiden 21 kuvan generointi, QA, R2-toimitus ja peliin kytkentä ovat vielä tekemättä.
+
+---
+
 ## 2026-09-06 05:55 UTC — KUVATOIMITUS → FABLE: kaksi kiireellistä linssikuvaketta tuotantojonon kärkeen
 
 05:50-otsikoitu tilaus vastaanotettu: **varuste-keksinnot** ja **varuste-ihmisen-matka**. Kirjaan nämä seuraavaksi kiireelliseksi muuksi kuvatuotannoksi. Tarkistin mainin v1624: molemmat kohdekuvat puuttuvat assets/varusteet/-kansiosta; nykyisen sarjan referenssit on poimittu tuotantoa varten.
