@@ -1,0 +1,108 @@
+# R2-ämpärin oma verkkotunnus Cloudflaren rajapinnalla.
+#
+# Tausta (6.9.2026): pelin media (kuvat, äänet, pallolaatat) tulee
+# R2:sta julkisen r2.dev-osoitteen kautta, ja Cloudflare rajoittaa sitä
+# (429-purskeet, kaupunkikarttojen pisteet eivät latautuneet). Pysyvä
+# korjaus on ämpärin oma verkkotunnus, jota ei rajoiteta. Omistaja 6.9.:
+# "Minusta se api on jo siellä. Kokeile" — token CLOUDFLARE_API_TOKEN
+# on repossa; tämä ajo kokeilee sillä.
+#
+#   toiminto: listaa  — tokenin oikeudet, tilin vyöhykkeet (domainit) ja
+#                       ämpärin nykyiset verkkotunnukset. Ei muuta mitään.
+#   toiminto: lisaa   — liittää `verkkotunnus`-syötteen ämpäriin
+#                       (vyöhyke haetaan nimen loppuosasta).
+#   toiminto: poista  — irrottaa verkkotunnuksen ämpäristä.
+#
+# Salaisuuksia ei tulosteta; vyöhykkeen tunnus ja domainin nimi eivät
+# ole salaisuuksia.
+name: R2-ämpärin verkkotunnus
+
+on:
+  workflow_dispatch:
+    inputs:
+      toiminto:
+        description: 'listaa | lisaa | poista'
+        required: true
+        default: 'listaa'
+        type: choice
+        options: [listaa, lisaa, poista]
+      verkkotunnus:
+        description: 'Verkkotunnus (esim. media.example.fi), vain lisaa/poista'
+        required: false
+        default: ''
+
+jobs:
+  verkkotunnus:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CF_ACCOUNT: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      TOIMINTO: ${{ github.event.inputs.toiminto }}
+      VERKKOTUNNUS: ${{ github.event.inputs.verkkotunnus }}
+    steps:
+      - name: Tarkista salaisuudet
+        run: |
+          set -euo pipefail
+          for n in CF_TOKEN CF_ACCOUNT R2_BUCKET; do
+            if [ -z "${!n:-}" ]; then echo "::error::$n puuttuu"; exit 1; fi
+          done
+          echo "ämpäri: $R2_BUCKET"
+
+      - name: Tokenin oikeudet
+        run: |
+          set -euo pipefail
+          curl -sS -H "Authorization: Bearer $CF_TOKEN" \
+            https://api.cloudflare.com/client/v4/user/tokens/verify \
+            | python3 -c 'import sys,json;d=json.load(sys.stdin);print("token:",d.get("result",{}).get("status"),"| virheet:",d.get("errors"))'
+
+      - name: Vyöhykkeet (tilin domainit)
+        run: |
+          set -euo pipefail
+          curl -sS -H "Authorization: Bearer $CF_TOKEN" \
+            "https://api.cloudflare.com/client/v4/zones?per_page=50" \
+            | python3 -c '
+          import sys,json
+          d=json.load(sys.stdin)
+          if not d.get("success"): print("vyöhykkeitä ei saatu:", d.get("errors")); sys.exit(0)
+          for z in d["result"]:
+              print("vyöhyke:", z["name"], z["id"], z.get("status"), "| plan:", (z.get("plan") or {}).get("name"))
+          print("vyöhykkeitä:", len(d["result"]))'
+
+      - name: Ämpärin nykyiset verkkotunnukset
+        run: |
+          set -euo pipefail
+          B="https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT/r2/buckets/$R2_BUCKET"
+          echo "--- custom"
+          curl -sS -H "Authorization: Bearer $CF_TOKEN" "$B/domains/custom" | python3 -c 'import sys,json;d=json.load(sys.stdin);print(json.dumps(d.get("result") if d.get("success") else d.get("errors"),indent=1,ensure_ascii=False))'
+          echo "--- managed (r2.dev)"
+          curl -sS -H "Authorization: Bearer $CF_TOKEN" "$B/domains/managed" | python3 -c 'import sys,json;d=json.load(sys.stdin);print(json.dumps(d.get("result") if d.get("success") else d.get("errors"),indent=1,ensure_ascii=False))'
+
+      - name: Lisää verkkotunnus
+        if: env.TOIMINTO == 'lisaa'
+        run: |
+          set -euo pipefail
+          [ -n "$VERKKOTUNNUS" ] || { echo "::error::verkkotunnus puuttuu"; exit 1; }
+          ZONE=$(curl -sS -H "Authorization: Bearer $CF_TOKEN" "https://api.cloudflare.com/client/v4/zones?per_page=50" \
+            | python3 -c '
+          import sys,json,os
+          d=json.load(sys.stdin); v=os.environ["VERKKOTUNNUS"]
+          osumat=[z for z in d.get("result",[]) if v==z["name"] or v.endswith("."+z["name"])]
+          osumat.sort(key=lambda z:-len(z["name"]))
+          print(osumat[0]["id"] if osumat else "")')
+          [ -n "$ZONE" ] || { echo "::error::verkkotunnukselle $VERKKOTUNNUS ei löydy vyöhykettä tililtä"; exit 1; }
+          echo "vyöhyke: $ZONE"
+          curl -sS -X POST -H "Authorization: Bearer $CF_TOKEN" -H "Content-Type: application/json" \
+            "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT/r2/buckets/$R2_BUCKET/domains/custom" \
+            --data "{\"domain\":\"$VERKKOTUNNUS\",\"zoneId\":\"$ZONE\",\"enabled\":true,\"minTLS\":\"1.2\"}" \
+            | python3 -c 'import sys,json;d=json.load(sys.stdin);print(json.dumps(d,indent=1,ensure_ascii=False))'
+
+      - name: Poista verkkotunnus
+        if: env.TOIMINTO == 'poista'
+        run: |
+          set -euo pipefail
+          [ -n "$VERKKOTUNNUS" ] || { echo "::error::verkkotunnus puuttuu"; exit 1; }
+          curl -sS -X DELETE -H "Authorization: Bearer $CF_TOKEN" \
+            "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT/r2/buckets/$R2_BUCKET/domains/custom/$VERKKOTUNNUS" \
+            | python3 -c 'import sys,json;d=json.load(sys.stdin);print(json.dumps(d,indent=1,ensure_ascii=False))'
