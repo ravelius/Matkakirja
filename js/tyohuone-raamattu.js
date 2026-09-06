@@ -3591,7 +3591,14 @@ export const RAAMATTU = {
           + 'viimeksi nakyneille laatoille, ei purkua liikkeen aikana) - '
           + 'korjataan mitattuna; ja pallon lahin zoom sallitaan syvemmalle '
           + 'kuin z8:n taso vaatisi, koska rantaviiva ja rajat ovat '
-          + 'vektoreina teravia - maasto saa pehmeta.',
+          + 'vektoreina teravia - maasto saa pehmeta. VIKA v1649:SSA (omistaja '
+          + '6.9.2026 ilta, iPad, sanatarkasti: "Kartta alkoi taristamaan. Eli '
+          + 'panoroidessa tuli vahan kuin kaksi karttaa hieman limittain. '
+          + 'Valilla kartta saattaa myos heittaa ihan eri paikkaan mutta '
+          + 'harvemmin"): panoroinnissa kaksi karttaa limittain (kahden '
+          + 'kerroksen sijainti eri kehyksesta tai eri kamerasta) ja harvinainen '
+          + 'kameran hyppy - korjataan juurisyysta mitattuna; kunnes korjattu, '
+          + 'vika rajataan kytkimilla ?vektorit=0 ja ?laattakerros=0.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
