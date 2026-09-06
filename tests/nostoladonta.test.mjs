@@ -347,17 +347,26 @@ test('elävä nimiö on poltetun kokoinen joka syvyydellä', () => {
 /*
  * SYVIN TIHEYS ON KOPIO, JA SIKSI SE ON VAHDITTU. Luku asuu
  * laattageneraattorissa (tools/generoi-laattapyramidi.mjs TIHEYS ja
- * TASOJA; omistajan lukitsema mitta 30.8.2026, Raamattu PYRAMIDIN
+ * SYVIN_VIITE; omistajan lukitsema mitta 30.8.2026, Raamattu PYRAMIDIN
  * LUKITUT MITAT), eikä js/ saa tuoda tools/-moduulia — yhden tiedoston
  * versio ketjuttaa vain js/:n. Vahti on siksi sama kuin
  * tests/viivataso.test.mjs:n SYVIN_TIHEYS-vahti: luetaan generaattorin
  * lähdeteksti ja vaaditaan sama luku.
+ *
+ * VAHDITTAVA PARI ON TIHEYS JA SE TASO, JOLLA SE PÄTEE. Tasojen määrä
+ * on nykyään komentoriviargumentti (`--tasoja`, oletus 8), jotta z8
+ * voidaan polttaa pyramidin jatkeeksi ilman että yksikään olemassa
+ * oleva taso siirtyy (docs/moduulit/laattapyramidi.md luku 10d).
+ * Siksi vahti lukee SYVIN_VIITE:n — sen tason, jonka tiheys on TIHEYS —
+ * eikä tasojen lukumäärää: juuri se pari on tämän moduulin kopio.
  */
 test('syvin tiheys on sama luku kuin laattageneraattorilla', () => {
   const GEN = readFileSync(new URL('../tools/generoi-laattapyramidi.mjs', import.meta.url), 'utf8');
   assert.match(GEN, /^const TIHEYS = 7\.2;$/m,
     'generaattorin TIHEYS muuttui: js/nostoladonta.js NOSTOLADONTA_SYVIN_TIHEYS on nyt väärin');
-  assert.match(GEN, /^const TASOJA = 8;$/m,
-    'pyramidin tasomäärä muuttui: syvin taso ei ole enää z7');
+  assert.match(GEN, /^const SYVIN_VIITE = 7;$/m,
+    'viitetaso muuttui: 7,2 px/yksikkö ei ole enää z7:n tiheys');
+  assert.match(GEN, /valitsin\('tasoja', 8\)/,
+    'tasojen oletusmäärä muuttui: tuotannon pyramidi ei ole enää z0–z7');
   assert.equal(NOSTOLADONTA_SYVIN_TIHEYS, 7.2);
 });

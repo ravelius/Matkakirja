@@ -143,8 +143,56 @@ const LAUTA = {
 const ARKIN_LEVEYSPIIRIT = { pohjoinen: 84, etela: -66 };
 /** Syvimmän tason tiheys, px / lautayksikkö. */
 const TIHEYS = 7.2;
-/** Tasojen määrä (kerroin 2). Syvin taso on TASOJA − 1. */
-const TASOJA = 8;
+
+/* --------------------------------------------- argumentit (luetaan ensin) */
+
+/*
+ * Valitsimet luetaan ENNEN tasovakioita, koska tasojen määrä on
+ * komentoriviargumentti (--tasoja, ks. alla). Käyttöohje ja loput
+ * asetukset ovat entisellä paikallaan alempana.
+ */
+const argv = process.argv.slice(2);
+const kohdekansio = argv[0];
+const valitsin = (nimi, oletus) => {
+  const i = argv.indexOf(`--${nimi}`);
+  return i >= 0 && argv[i + 1] ? argv[i + 1] : oletus;
+};
+const lippu = (nimi) => argv.includes(`--${nimi}`);
+
+/*
+ * TASOJEN MÄÄRÄ (kerroin 2). Syvin taso on TASOJA − 1.
+ *
+ * OLETUS ON 8 (z0–z7) — se on tuotannon pyramidi, ja oletusarvolla tämä
+ * työkalu käyttäytyy tavulleen kuten ennen tätä valitsinta.
+ *
+ * `--tasoja 9` LISÄÄ SYVEMMÄN TASON z8 (480 px/aste), ei uutta karkeaa
+ * tasoa: TASO0 on naulattu viitteeseen SYVIN_VIITE eikä johdeta
+ * TASOJA:sta, joten z0…z7 pysyvät täsmälleen entisinä ja z8 on niiden
+ * jatke. Raamattu ("PALLO LEVOSSA YHTA TERAVA KUIN TASOKARTTA"): pallon
+ * lepokerros ottaa syvemmän tason käyttöön ilman koodimuutosta, kun se
+ * on luettelossa ja ämpärissä.
+ *
+ * TASOJA vaikuttaa kolmeen asiaan eikä mihinkään muuhun: oletustasoihin
+ * (`--tasot`), luettelon tasoluetteloon ja siihen, MINKÄ TASON
+ * SARAKKEINA `--sarakkeet` tulkitaan (kaista on aina syvimmän tason
+ * sarakkeita). Siksi z8-shardin on ajettava `--tasoja 9`: ilman sitä
+ * kaista skaalattaisiin puolikkaalla jaolla ja kaistan viimeinen
+ * z8-sarake jäisi jokaisesta shardista piirtämättä.
+ */
+const TASOJA = Number(valitsin('tasoja', 8));
+if (!Number.isInteger(TASOJA) || TASOJA < 1 || TASOJA > 10) {
+  console.error(`--tasoja ${TASOJA}: kokonaisluku 1…10 (tuotanto 8; 9 lisää z8:n).`);
+  process.exit(1);
+}
+/*
+ * SYVIMMÄN TASON VIITE: se taso, jonka tiheys on TIHEYS. Tämä on
+ * naulattu 7:ään eikä johdeta TASOJA:sta, jotta tasojen määrän
+ * kasvattaminen EI siirrä yhtään olemassa olevaa tasoa. (Ennen tätä
+ * TASO0 = 86 400 / 2^(TASOJA−1); silloin `--tasoja 9` olisi puolittanut
+ * jokaisen tason ja lisännyt uuden KARKEAN tason — juuri päinvastoin
+ * kuin on tarkoitus.)
+ */
+const SYVIN_VIITE = 7;
 
 /*
  * ATLASKEHYS (Raamattu "LAATTAPYRAMIDI JA KARTAN PATINA", omistajan
@@ -230,25 +278,19 @@ const MERET = [
 const KALUSTEIDEN_YLARAJA = 0.5;
 
 /*
- * TASON 0 LEVEYS johdetaan syvimmästä: 86 400 / 2^7 = 675 px.
- * Tasot ovat siis 675, 1350, 2700, 5400, 10 800, 21 600, 43 200, 86 400.
+ * TASON 0 LEVEYS johdetaan viitetasosta: 86 400 / 2^7 = 675 px.
+ * Tasot ovat siis 675, 1350, 2700, 5400, 10 800, 21 600, 43 200, 86 400
+ * ja `--tasoja 9`:llä niiden jatkeena 172 800.
  */
-const TASO0 = (12000 * TIHEYS) / 2 ** (TASOJA - 1);
+const TASO0 = (12000 * TIHEYS) / 2 ** SYVIN_VIITE;
 
 /* ------------------------------------------------------------ argumentit */
-
-const argv = process.argv.slice(2);
-const kohdekansio = argv[0];
-const valitsin = (nimi, oletus) => {
-  const i = argv.indexOf(`--${nimi}`);
-  return i >= 0 && argv[i + 1] ? argv[i + 1] : oletus;
-};
-const lippu = (nimi) => argv.includes(`--${nimi}`);
 
 if (!kohdekansio || kohdekansio.startsWith('--')) {
   console.error('Käyttö: node tools/generoi-laattapyramidi.mjs <kohdekansio> '
     + '[--data <kansio>] [--tasot 0-4] [--alue lon0,lat0,lon1,lat1] '
     + '[--laatta 512] [--laatu 0.9] [--muoto webp] [--kuiva] '
+    + '[--tasoja 8|9] '
     + '[--kaariminuutit 1|3] [--korkeuspalat <kansio>] [--vain-palat [tiedosto]] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
     + '[--nostotaso --nostoversio <v>] [--viivataso --viivaversio <v> [--eipiirit]] '
@@ -313,8 +355,15 @@ if (KAARIMINUUTIT !== 1 && KAARIMINUUTIT !== 3) {
 }
 /** Kaukotasojen kiinteä tarkkuus. */
 const KARKEA_KAARIMINUUTIT = 3;
-/** Alin taso, joka saa tarkan ruudukon: syvin taso. */
-const TARKKA_ALIN = TASOJA - 1;
+/*
+ * Alin taso, joka saa tarkan ruudukon: z7 ja sitä syvemmät.
+ *
+ * Raja on NAULATTU TASOON eikä sidottu tasojen määrään: `--tasoja 9`
+ * lisää z8:n, ja jos raja seuraisi syvintä tasoa, z7 tippuisi samalla
+ * kolmeen kaariminuuttiin — sen pohjalaatat muuttuisivat huomaamatta
+ * karkeammiksi kuin tuotannossa nyt olevat.
+ */
+const TARKKA_ALIN = SYVIN_VIITE;
 /** Tason korkeusruudukon tarkkuus kaariminuutteina. */
 const kaariminuutitTasolle = (z) => (z >= TARKKA_ALIN ? KAARIMINUUTIT : KARKEA_KAARIMINUUTIT);
 /*
