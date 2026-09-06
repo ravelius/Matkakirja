@@ -29219,7 +29219,10 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kahdeksan viulua ja iso basso',
           aika: '2011',
-          tiedosto: 'Guitarron.jpg',
+          // Kuvaton (Fable 6.9.2026): ainoa ≥1200 px:n guitarrón-kuva
+          // (Guitarron.jpg) on esiintyvien muusikoiden lähikuva
+          // tunnistettavin kasvoin — sama hylkäysperuste kuin muualla
+          // lehtityössä. Soitinkuva haetaan myöhemmin.
           teksti: 'Mariachi kehittyi Länsi-Meksikon maaseudulla ainakin '
               + '1700-luvulta lähtien, ja sen keskuksena pidetään Coculan '
               + 'kaupunkia Jaliscossa. Kokoonpanossa voi olla kahdeksan '
@@ -29232,7 +29235,6 @@ export const MAA_KATEGORIAT = {
           selite: 'Mariachi-yhtyeen rytmin pitävät korkeaääninen vihuela ja '
             + 'pyöreäselkäinen bassokitara guitarrón, eikä yhtyeellä ole '
             + 'varsinaista solistia vaan kaikki laulavat vuorotellen.',
-          lahde: 'Cow Bite, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Mariachi',
         },
         {
