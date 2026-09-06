@@ -75,6 +75,7 @@ const SHELL = [
   './js/maalehti.js',
   './js/lukija.js',
   './js/pollo.js',
+  './js/pulu-paikka.js',
   './js/liviapuhe.js',
   './js/livia.js',
   './js/puhe.js',

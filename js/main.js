@@ -61,11 +61,18 @@ import { kytkeFokusnosto } from './fokusnosto.js';
 import { kytkeSyvennys } from './syvennys.js';
 import { kytkeSkandaalit } from './skandaalit.js';
 import { kytkeHistorianHetket } from './historian-hetket.js';
+/*
+ * Pulun paikkanäyttö (js/pulu-paikka.js, omistajan tilaus 6.9.2026):
+ * kytkentä on tässä samasta syystä kuin yllä — paikannus tarvitsee
+ * kartan ja kohdekerroksen, eikä pöllö saa tuoda niitä perässään.
+ */
+import { kytkePulunPaikannus } from './pulu-paikka.js';
 
 kytkeFokusnosto();
 kytkeSyvennys();
 kytkeSkandaalit();
 kytkeHistorianHetket();
+kytkePulunPaikannus();
 
 const PLAYER_COLOR = '#d94f3d';
 /*

@@ -834,6 +834,13 @@ const MODULES = [
   'js/ui.js',
 
   'js/muutokset.js',
+  /*
+   * Pulun paikkanäyttö (js/pulu-paikka.js) VIIMEISENÄ ennen mainia: se
+   * tuo pöllön, kartan kohdekerroksen, laudan projektion ja
+   * kohdekartat — kaikki jo yllä — ja main.js kytkee sen
+   * (kytkePulunPaikannus).
+   */
+  'js/pulu-paikka.js',
   'js/main.js',
 ];
 
