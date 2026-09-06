@@ -157,7 +157,11 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 9 } }), PALLO_LAATTATASO_MAX);
   assert.equal(laattatasoMax(null), PALLO_LAATTATASO_MAX);
   const pallo = lue('../js/pallo.js');
-  assert.match(pallo, /globeTileEngineUrl\(pallonLaatta\)\.globeTileEngineMaxLevel\(laattatasoMax\(laatat\)\)/);
+  // Laattamoottorin katto on luettelon syvin taso; laattakerroksen kanssa
+  // (erä E1) kirjaston moottori jää karkeaksi pohjaksi (POHJAN_TASO_MAX).
+  assert.match(pallo, /globeTileEngineUrl\(pallonLaatta\)\.globeTileEngineMaxLevel\(/);
+  assert.match(pallo, /const syvin = laattatasoMax\(laatat\);/);
+  assert.match(pallo, /Math\.min\(syvin, POHJAN_TASO_MAX\) : syvin,/);
   assert.match(pallo, /pallo\.globeImageUrl\(PALLO_TEKSTUURI\)/);
   // Laattatyökalu: slippy map -geometria ja lähdetasot.
   assert.equal(LAATTA, 256);
@@ -232,7 +236,7 @@ test('napakannet peittävät sauman laattojen omalla sävyllä eivätkä koske H
   assert.ok(pohjoinen.every((v, i) => Math.abs(v - MERI_SAVY[i]) <= 10), 'pohjoinen kansi on merisävyä');
   // Kannet asennetaan laattamoottorihaarasta, ja niitä on kaksi.
   const pallo = lue('../js/pallo.js');
-  assert.match(pallo, /globeTileEngineMaxLevel\(laattatasoMax\(laatat\)\);\n\s*asennaLaatunosto\(pallo, kotelo\);\n\s*asennaNapakannet\(pallo\);/);
+  assert.match(pallo, /globeTileEngineMaxLevel\([\s\S]{0,200}?\);\n\s*asennaLaatunosto\(pallo, kotelo\);\n\s*asennaNapakannet\(pallo\);/);
   assert.match(pallo, /kansi\(false, NAPAKANSI_POHJOINEN/);
   assert.match(pallo, /kansi\(true, NAPAKANSI_ETELA/);
   assert.match(pallo, /new LaattaMateriaali\(\{ color: savy \}\)/, 'materiaali laatoilta: valaisematon kansi näkyisi tummana kiekkona');
@@ -373,7 +377,7 @@ test('laatu palaa levossa: kynnykset ruudun pikseleistä, liike kevyt (omistaja 
   assert.equal(LAATU_PIKSELISUHDE_LEPO, 3, 'levossa iPhonen koko dpr');
   // Laatunosto kytketään vain laatoitettuun palloon; purkaja palauttaa.
   const lahde = readFileSync(new URL('../js/pallo.js', import.meta.url), 'utf8');
-  assert.match(lahde, /globeTileEngineMaxLevel\(laattatasoMax\(laatat\)\);\n\s+asennaLaatunosto\(pallo, kotelo\);/);
+  assert.match(lahde, /globeTileEngineMaxLevel\([\s\S]{0,200}?\);\n\s+asennaLaatunosto\(pallo, kotelo\);/);
   assert.match(lahde, /moottori\.updatePov = alkuperainen;/);
   assert.match(lahde, /map\.anisotropy = maxAniso/);
 });

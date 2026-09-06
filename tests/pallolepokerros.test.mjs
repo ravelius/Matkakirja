@@ -254,13 +254,18 @@ test('kerros täsmälleen pinnan säteellä: ei suurennosta, syvyyssiirto riitt�
 
 test('kytkennät: sama lepo kokoaa, liike piilottaa heti, osoitteet tasokartan moduulista', () => {
   const pallo = lue('../js/pallo.js');
-  assert.match(pallo, /const lepokerros = luoLepokerros\(\{\n\s*pallo, kotelo, ikkuna, renderer, laattataso: \(\) => moottori\.level,\n\s*\}\);/);
-  assert.match(pallo, /alkuperainen\.call\(moottori, kamera\);\n(?:\s*\/\/[^\n]*\n)*\s*lepokerros\.levossa\(\);/,
+  /*
+   * Erä E1: lepokerros on vanha polku (?laattakerros=0), joten se
+   * luodaan vain silloin kun laattakerrosta ei ole. Ehdon takana
+   * kytkennät ovat ennallaan.
+   */
+  assert.match(pallo, /const lepokerros = kerros \? null : luoLepokerros\(\{\n\s*pallo, kotelo, ikkuna, renderer, laattataso: \(\) => moottori\.level,\n\s*\}\);/);
+  assert.match(pallo, /alkuperainen\.call\(moottori, kamera\);\n(?:\s*\/\/[^\n]*\n)*\s*if \(kerros\) kerros\.paivita\(kamera, false\);\n\s*else lepokerros\.levossa\(\);/,
     'laatutason lepo ajoittaa lepokerroksen (levossa), ei kokoa suoraan');
   assert.ok(!/void lepokerros\.kokoa\(\)/.test(pallo), 'kokoaminen ei lähde laatutason 260 ms:n levosta suoraan');
-  const liike = pallo.match(/edellinen\.distanceToSquared\(paikka\) > 1e-10\) \{[\s\S]*?lepokerros\.piilota\(\);[\s\S]*?if \(lepo && nyt - liikeAlku >= LAATU_LIIKEVIIVE_MS\)/);
+  const liike = pallo.match(/edellinen\.distanceToSquared\(paikka\) > 1e-10\) \{[\s\S]*?lepokerros\?\.piilota\(\);[\s\S]*?if \(lepo && nyt - liikeAlku >= LAATU_LIIKEVIIVE_MS\)/);
   assert.ok(liike, 'piilotus tapahtuu heti liikkeestä, ennen LAATU_LIIKEVIIVE_MS-viivettä');
-  assert.match(pallo, /lepokerros\.pura\(\);\n\s*moottori\.updatePov = alkuperainen;/);
+  assert.match(pallo, /lepokerros\?\.pura\(\);\n\s*if \(kerros\) \{ kerros\.pura\(\); lepokerrokset\.delete\(pallo\); \}\n\s*moottori\.updatePov = alkuperainen;/);
   // Osoitteet ja luettelo VAIN tasokartan moduulista — ei omaa kaavaa.
   assert.match(pallo, /import \{\n\s*haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,\n\} from '\.\/laattapyramidi\.js';/);
   assert.ok(!/julisteet\/pyramidi/.test(pallo), 'pallo.js ei rakenna pyramidin polkua itse');
@@ -385,8 +390,15 @@ test('E0: laattakerroksen apurit ovat js/pallolaatat.js:ssä, pallo.js vie ne ed
     assert.match(laatat, new RegExp(`const ${nimi} =`), `${nimi} puuttuu js/pallolaatat.js:stä`);
     assert.ok(!new RegExp(`const ${nimi} =`).test(pallo), `${nimi} määritellään yhä js/pallo.js:ssä`);
   }
-  // Jälleenvienti pitää rajapinnan ennallaan, eikä uusi moduuli tuo mitään
-  // (tuonti js/pallo.js:ään tekisi kehän, jossa vakiot jäisivät alustamatta).
+  /*
+   * Jälleenvienti pitää rajapinnan ennallaan. Moduuli ei tuo js/pallo.js:ää
+   * — se tekisi kehän, jossa vakiot jäisivät alustamatta. Erässä E1 moduuli
+   * sai laattakerroksen ja sen mukana tuonnit laattapyramidista ja
+   * projektiosta (kumpikaan ei tuo palloa, joten kehää ei synny);
+   * kirjaston luokat ja pallon laattaluettelo tulevat yhä parametreina.
+   */
   assert.match(pallo, /export \{[\s\S]*?\} from '\.\/pallolaatat\.js';/);
-  assert.ok(!/^import /m.test(laatat), 'js/pallolaatat.js ei saa tuoda mitään');
+  assert.ok(!/from '\.\/pallo\.js'/.test(laatat), 'js/pallolaatat.js ei saa tuoda js/pallo.js:ää');
+  const tuonnit = [...laatat.matchAll(/^import [\s\S]*?from '([^']+)';$/gm)].map((m) => m[1]);
+  assert.deepEqual(tuonnit.sort(), ['./fokusmitat.js', './laattapyramidi.js']);
 });

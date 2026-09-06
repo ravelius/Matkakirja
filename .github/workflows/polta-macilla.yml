@@ -1,0 +1,96 @@
+# Laattapoltto omistajan Mac Studiolla (self-hosted runner).
+#
+# Raamattu, POLTOT AINA MACILLA ja MAC GITHUBIN AJOKONEENA (omistaja
+# 6.9.2026 ilta): pitkät ajot (yli vartin) tehdään Macilla, joka on
+# rekisteröity repon self-hosted-runneriksi taustapalveluna. Fable
+# käynnistää tämän työnkulun workflow_dispatchilla; Mac ajaa
+# tools/polta-paikallisesti.sh:n samoilla argumenteilla kuin omistaja
+# ajaisi sen terminaalista. Avaimet tulevat GitHubin secreteistä (samat
+# kuin generoi-pyramidi.yml:ssä), eivät Macin ympäristöstä.
+#
+# TURVA (repo on julkinen): tämä työnkulku laukeaa VAIN käsin, ja job
+# ajetaan vain, jos käynnistäjä on repon omistaja. Repon Actions-
+# asetuksissa on lisäksi "Require approval for all outside
+# collaborators", jottei ulkopuolinen PR pääse self-hosted-koneelle.
+# Työnkulkuun ei koskaan lisätä pull_request- tai push-laukaisua.
+#
+# Mac-runnerilla pitää olla: node 22 polussa (Homebrew node@22),
+# awscli, Playwright-Chromium (skripti asentaa puuttuvan). Työkansio
+# on runnerin _work-hakemistossa; pyramidi-poltto/ jää sinne ajojen
+# välille (valmiit shardit ohitetaan), --siivoa poistaa laatat viennin
+# jälkeen.
+name: Polta Macilla
+
+on:
+  workflow_dispatch:
+    inputs:
+      sarjat:
+        description: 'z8 (olemassa oleviin versioihin) | kaikki (uusi versio z0–z8) | z0-z7'
+        required: true
+        default: 'z8'
+      versio:
+        description: 'Pohjan versio polussa (tyhjä = ämpärin luettelosta; uusi sarja tarvitsee uuden, esim. 2026-09-07a)'
+        required: false
+        default: ''
+      lisaargumentit:
+        description: 'Muut polta-paikallisesti.sh:n valitsimet sellaisenaan, esim. "--ilman-rantaviivaa --rantaversio 2026-09-07a --viivaversio 2026-09-07a --nostoversio 2026-09-07a --pallo --pallotunniste d --siivoa"'
+        required: false
+        default: ''
+      koe:
+        description: 'Vain koeajo (yksi z8-kaista + aika-arvio, ei vientiä)'
+        required: false
+        default: 'ei'
+
+concurrency:
+  group: polta-macilla
+  cancel-in-progress: false
+
+jobs:
+  poltto:
+    # Vain omistaja saa ajaa self-hosted-koneella (repo on julkinen).
+    if: github.event_name == 'workflow_dispatch' && github.actor == github.repository_owner
+    runs-on: [self-hosted, macOS]
+    timeout-minutes: 720
+    env:
+      AMPARI: ${{ secrets.R2_BUCKET }}
+      PAATE: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      NODE_USE_ENV_PROXY: '1'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tarkista salaisuudet ja työkalut
+        run: |
+          set -euo pipefail
+          for v in AMPARI AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY; do
+            [ -n "${!v:-}" ] || { echo "::error::$v puuttuu secreteistä"; exit 1; }
+          done
+          [ -n "${{ secrets.R2_ACCOUNT_ID }}" ] || { echo "::error::R2_ACCOUNT_ID puuttuu"; exit 1; }
+          export PATH="/opt/homebrew/opt/node@22/bin:/opt/homebrew/bin:$PATH"
+          node -v; aws --version
+          echo "PATH=$PATH" >> "$GITHUB_ENV"
+
+      - name: Koeajo
+        if: ${{ inputs.koe == 'kylla' }}
+        run: tools/polta-paikallisesti.sh --koe ${{ inputs.lisaargumentit }}
+
+      - name: Poltto ja vienti
+        if: ${{ inputs.koe != 'kylla' }}
+        run: |
+          set -euo pipefail
+          VERSIO=""
+          [ -n "${{ inputs.versio }}" ] && VERSIO="--versio ${{ inputs.versio }}"
+          tools/polta-paikallisesti.sh --sarjat "${{ inputs.sarjat }}" $VERSIO ${{ inputs.lisaargumentit }}
+
+      - name: Lokit talteen
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poltto-lokit-${{ github.run_id }}
+          path: pyramidi-poltto/lokit/
+          if-no-files-found: ignore
+          retention-days: 14

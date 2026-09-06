@@ -1866,3 +1866,35 @@ export function asetaLaatuAina(paalla, win = globalThis) {
     /* yksityinen tila */
   }
 }
+
+/*
+ * LAATTAKERROS JA SEN PERÄÄNTYMISTIE (erä E1, suunnitelma
+ * docs/moduulit/pallon-liike-taydella-tarkkuudella.md luku 4.4). Pallon
+ * pinta piirretään pyramidin laatoista laatta kerrallaan
+ * (js/pallolaatat.js luoLaattakerros), jolloin liikkeessä on sama
+ * tarkkuus kuin levossa. `?laattakerros=0` sammuttaa kerroksen ja
+ * palauttaa vanhan koneen (liike/lepo-laatutilat ja lepokerros)
+ * täsmälleen sellaisena kuin se oli v1645:ssä — perääntymistie, kunnes
+ * omistaja on hyväksynyt kerroksen puhelimellaan.
+ *
+ * Oletus tulee KUTSUJALTA (js/pallo.js LAATTAKERROS_OLETUS), koska tämä
+ * moduuli on yhden tiedoston nipussa eikä js/pallolaatat.js ole
+ * (tools/build-standalone.mjs: pallo ja sen apurit ladataan laiskasti).
+ * Muistiin tätä ei talleteta — kyseessä on kehittäjän kytkin, ei
+ * pelaajan asetus.
+ */
+export function laattakerrosOsoitteesta(win = globalThis) {
+  try {
+    const arvo = new URLSearchParams(win.location?.search ?? '').get('laattakerros');
+    if (arvo === null) return null;
+    return !(arvo === '0' || arvo === 'ei' || arvo === 'pois');
+  } catch {
+    return null;
+  }
+}
+
+/** Onko pallon laattakerros päällä? (URL › oletus) */
+export function laattakerrosPaalla(win = globalThis, oletus = true) {
+  const osoitteesta = laattakerrosOsoitteesta(win);
+  return osoitteesta === null ? Boolean(oletus) : osoitteesta;
+}
