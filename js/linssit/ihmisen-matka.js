@@ -22,10 +22,17 @@
  *              logaritmisesti, joten "300 000 v. sitten" → "3 000 v.
  *              sitten" etenee tasaisen tuntuisesti. Näytettävä teksti
  *              tulee pysäkin `ajoitus`-kentästä.
- *   reitti: true
- *              Valot eivät ole erillisiä paikkoja vaan YKSI MATKA:
- *              niiden väliin piirtyy isoympyrää seuraava reittiviiva
- *              sitä mukaa kuin valot syttyvät.
+ *   virrat, tummennus: false, reitti: false
+ *              IHMISEN MATKA ON VARIVIRTOJA, EI PISTEITA (omistaja
+ *              6.9.2026): pallolla maa värjäytyy laajenevina
+ *              värialueina (js/aikajana-virrat.js, aineisto
+ *              js/linssit/ihmisen-matka-virrat.js), kartta ei ole
+ *              tumma, ja kamera seuraa aktiivisimman virran rintamaa.
+ *              Reittiviiva on POIS tästä linssistä (päätös 6):
+ *              isoympyrä Beringiasta Chileen kulkisi meren yli
+ *              värivirran vierestä. Keksinnöissä viiva säilyy.
+ *              Tasokartalla (vanha lauta) virtoja ei piirretä —
+ *              siellä ajo on entinen valolinssi ilman viivaa.
  *   lahikuva ja hyppykamera
  *              Pysäkillä tiukka lähikuva (560 lautayksikköä, 1,3 ×
  *              keksintöjen mitta) ja valtameren ylityksessä (Beringia,
@@ -65,6 +72,10 @@
 
 import { projisoiLaudalle } from '../fokusmitat.js';
 import * as data from './ihmisen-matka-data.js';
+import {
+  IHMISEN_MATKA_VIRRAT, IHMISEN_MATKA_RETKI, IHMISEN_MATKA_VANHA, VIRRAN_PEITTO,
+} from './ihmisen-matka-virrat.js';
+import { MAAMASKI } from './ihmisen-matka-maamaski.js';
 
 /** Linssiosan nimi laudan linssiapurissa (sama kuin js/aikajana.js PALLON_OSA). */
 const PALLON_OSA = 'aikajana';
@@ -226,7 +237,21 @@ export const LINSSI = {
     loppupuhe: true,
     lahikuva: IHMISEN_MATKAN_LAHIKUVA,
     hyppykamera: true,
-    reitti: true,
+    reitti: false,
+    /*
+     * VÄRIVIRRAT PALLOLLE (docs/moduulit/ihmisen-matka-virrat.md luku 11):
+     * viisi virtaa, sammuva retkiläikkä, vanhan väestön alue ja
+     * maamaski. Kartta ei ole tumma. Moottori antaa tämän sellaisenaan
+     * js/aikajana-virrat.js:lle eikä tiedä sisällöstä mitään.
+     */
+    tummennus: false,
+    virrat: {
+      virrat: IHMISEN_MATKA_VIRRAT,
+      retki: IHMISEN_MATKA_RETKI,
+      vanha: IHMISEN_MATKA_VANHA,
+      peitto: VIRRAN_PEITTO,
+      maamaski: MAAMASKI,
+    },
     // Reittiviivan projektio tasokartalla: sama lauta kuin pysäkkien
     // x/y:llä (ihmisenMatkanPysakit), jotta viiva osuu lamppuihin.
     lauta: LAUTA,

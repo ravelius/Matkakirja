@@ -575,3 +575,120 @@ mahdollinen sammumisaika.
 
 Seuraava askel: fablemax toteuttaa prototyypin näiden päätösten
 mukaan; omistaja arvioi kuvakaappaukset ennen hiontaa.
+
+## 12. Prototyyppi toteutettu (fablemax 6.9.2026 ilta) — vaiheet 1–2
+
+Tiedostot: `tools/tee-maamaski.mjs` (maski pelin laudasta, 5,5 kt
+base64, 62 016 maaruutua, 104 komponenttia; Tšuktšien kärki puuttuu,
+koska lauta katkeaa 175°W:ssä — Beringian portti lukee Siperian kentän
+176°W:stä), `js/linssit/ihmisen-matka-maamaski.js`,
+`js/aikajana-virrat-laskenta.js` (puhdas laskenta: Dijkstra, portit,
+ylitykset, nauhat, tila, väri, painopiste; generaattori virta
+kerrallaan), `js/linssit/ihmisen-matka-virrat.js` (viisi virtaa +
+retki + vanha väestö), `js/aikajana-virrat.js` (kangas 720 × 360 →
+pallon kalvo, kamera, kehykset, nuoli), `tests/aikajana-virrat.test.mjs`
+(15 testiä). Moottoriin viisi koukkua (luku 5.5), kalvo hyväksyy
+canvasin ja antaa `paivita()`, kaari `reitti: false`, `tummennus:
+false`, `virrat`.
+
+**Poikkeamat luvuista 2–6 ja miksi:**
+
+- Amerikkojen sävy liukuu KELLON mukaan 17 → 11 ka koko alueella, ei
+  saapumisajan mukaan ruuduittain: saapumisajan mukainen liuku jätti
+  rannikon turkoosiksi ja sisämaan vihreäksi pysyvästi, mikä ei ollut
+  "eriytyvä populaatio" vaan rannikkokartta.
+- Porttien ruutukohtainen aikahajonta on nolla: kokeessa se kynnysti
+  kohinakentän neliölaikuiksi (Tiibet 40 ka). Rosoreuna riittää; jään
+  reunat (Laurentide, Keskilänsi, Kordillera) ja Tiibet saivat 3–3,5°
+  reunan, koska 1,5° näkyi vielä suorakulmaisina lovina.
+- Retki (Skhul, Al Wusta) on oma kenttä, joka häipyy 78 → 70 ka;
+  päävirran Levantin portti on 72 ka (uusi lähtö), Bab-el-Mandeb
+  78–55 ka, Aasian rannikko 76 ka → Lida Ajer 68,8 ka (kuva 70).
+- Puhelimen pystyruudulla kameran leveys skaalataan kuvasuhteella,
+  muuten kamera menisi kattoon (2,5).
+- Kehykset syntyvät myös selattaessa (siirry), ei vain kellosta.
+
+**Mitattu:** laskenta Node 450–800 ms, Chromium (kontti) 1,2–2,4 s
+avausjakson aikana setTimeout-paloissa; kankaan maalaus 3–70 ms
+kontin Chromiumissa (ruudut 62 871), 12 Hz. Mallin saapumisajat:
+Levantti 72 ka, Australia 62 ka, Eurooppa 45–41 ka, Yana 34 ka, Alaska
+16,7 ka, White Sands 15,1 ka, Monte Verde 14,1 ka, Tonga 2,8 ka,
+Aotearoa 0,73 ka. Kuvakaappaukset ja avoimet kysymykset: fablemaxin
+raportti 6.9.2026.
+
+**Hiontaan (luku 9 vaihe 3):** avausteksti ja loppusanat virroille
+(TODO datassa), maskin Malakan itäpuolinen ylimäärä, Tiibetin ja
+jään porttien muoto (polygonit?), laskenta Workeriin, tasokartta.
+→ Tehty luvussa 13 (paitsi tasokartta).
+
+## 13. Hiontakierros (fablemax 6.9.2026 ilta) — omistajan "hio ensin, julkaise sitten"
+
+Omistaja katsoi prototyypin kuvakaappaukset ja antoi seitsemän
+korjausta; kaikki tehtiin samaan committiin. Mitä muuttui ja miksi:
+
+1. **Pinonta (puhelin, loppu).** Kirjaston CSS2D-kerros antaa
+   jokaiselle merkille oman z-indexin (mitattu 29), ja koska pallon
+   kuori ei ollut pinontayhteys, lamput ja kuvakehykset kilpailivat
+   suoraan linssin juuren (z 7) kanssa ja piirtyivät loppusanojen ja
+   korttien päälle. `body.aikajana-paalla .pallo-kuori.pallolauta {
+   isolation: isolate }` (css/aikajana.css) tekee kuoresta oman
+   pinontayhteyden: merkit järjestyvät keskenään pallon sisällä ja koko
+   pallo jää linssin elementtien alle. Nuoli siirtyi samasta syystä
+   linssin juuresta pallon koteloon.
+2. **Ruutureunat.** Kolme syytä, kolme korjausta:
+   - *Rintama ja rannikko:* kalvo piirretään 1440 × 720 (PIIRTOKERROIN
+     2) ja jokainen pikseli saa saapumisajan, peiton ja virran neljän
+     lähimmän ruudun bilineaarisena sekoituksena
+     (`tarkennaKentat`); kerrokset yhdistetään päällekkäin
+     peittävyyden mukaan. Rannikolla paino on lisäksi ruudun
+     MAAPEITTO (kohta 3).
+   - *Porttien laatikot (Tiibet, jään reunat):* portin ulkopuolelle
+     tuli LUISU (`portinLuisu`, `laatikonSyvyys`): kaistalla rajan
+     ulkopuolella avautuminen viivästyy neliöllisesti rajaa kohti,
+     joten kenttä on jatkuva rajan yli ja rintama hiipuu ylängön tai
+     jään juurelle sen sijaan että pysähtyisi porrasreunaan. Tiibet
+     3° / 30 000 v, jään reunat 2° / 5 000 v, Fennoskandia 2,5° /
+     30 000 v; oletus 1,5° ja 75 % avautumisajasta. Laurentiden
+     länsireuna siirtyi −120 → −116 (kaista ja rosoreuna ulottuivat
+     muuten rannikolle: Vancouver 15,7 → 14,8 ka, White Sands 15,2 →
+     13,5 ka — mitattu ja korjattu; Kordillera jatkuu samaan rajaan).
+     Arktinen Siperia on yksi laatikko antimeridiaanin yli, jottei
+     kahden laatikon sauma 180°:ssa näy reunana.
+   - *Vanha väestö:* harmaan alueen reuna on pehmeä 2° kaistalla
+     (`laatikkoPehmea`), ei binäärinen.
+   Polygoneja ei tarvittu (päätös 13: vain jos reuna häiritsee — luisu
+   riitti).
+3. **Maski.** `peitot`: maapeitto 0…9 per ruutu (osumia yhdeksästä
+   alinäytteestä) piirtoa varten; kulku käyttää yhä binääristä maskia
+   kynnyksellä 2/9, jotta kannakset pysyvät. Malakan itäpuolen
+   "ylimääräinen maa" oli täytenä piirrettyjä reunaruutuja, joissa
+   maata on viidennes — nyt ne piirtyvät viidenneksen peitolla (5 818
+   osittaista rannikkoruutua, peitto 23,9 kt base64). Laudan sauma
+   175°W: Tšuktšien kärki (Dežnjovinniemi) lisätään käsin polygonina
+   (LISAYKSET, 48 ruutua); Beringinsalmi on 66°N:llä 1,5° leveä
+   (oli 7°), tarkistuspisteet Dežnjov, Provideniya, Tšuktšimeri.
+4. **Tekstit** virroille (Fable, päätös 14): esittely, avausteksti ja
+   loppusanat js/linssit/ihmisen-matka-data.js; TODO pois.
+5. **Suorituskyky.** Laskenta ja tarkennus ajetaan Web Workerissa
+   (js/aikajana-virrat-tyo.js, moduulityösäie sivun juuresta; sw.js
+   SHELL). Varapolku: jos Worker ei käynnisty (yhden tiedoston versio,
+   file://), sama laskenta pääsäikeessä paloissa kuten ennen.
+   Käynnistä-nappi odottaa laskennan valmistumista (`odotaVirtoja`:
+   disabled + aria-busy, painallus toistetaan itse) — Afrikka ei näy
+   hetkeäkään värittömänä. Esilaskettu taulu hylättiin: 62 000 ruudun
+   ajat olisivat > 150 kt ja vanhenisivat jokaisesta datan muutoksesta.
+6. **Savuke** savuke-aikajana.mjs: reitti kuuntelee myös
+   media.matkakirja.app:ia CORS-otsakkeella (sama kaava kuin
+   savuke-avauslento.mjs); kolme vanhentunutta odotusta korjattu
+   (kortin vuosi, menneiden korttien sumeus, paneelin henkilörivi →
+   kuvatekstin otsikko).
+7. **Kellon liike-epäterävyys** (omistajan lisätilaus): ks. js/aikajana.js
+   RULLIEN LIIKE-EPÄTERÄVYYS — nopeus × valotusaika (1/48 s) numeron
+   korkeuksina rullan painoarvolla, kuusi text-shadow-otosta
+   pystysuunnassa, tasoitus 0,35/kehys, reduced motion nollaa.
+
+Mitat: laskenta Node 265–500 ms + tarkennus 150–300 ms (Workerissa);
+kalvon maalaus 1440 × 720 kontin Chromiumissa ks. fablemaxin raportti
+6.9.2026 ilta; päivitysväli venyy hitaalla laitteella
+(PAIVITYSVALIN_KERROIN × maalauksen kesto).
+

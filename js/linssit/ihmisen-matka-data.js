@@ -114,23 +114,33 @@ export const IHMISEN_MATKA_KUVAJUURI = 'https://media.matkakirja.app/aikajana/ih
 /** Matkalaukun selite: mitä linssi on. */
 export const IHMISEN_MATKA_ESITTELY = 'Ihmisen matka Afrikasta koko maapallolle: '
   + 'kaksikymmentä paikkaa, joista on löytynyt luu, jälki tai helmi. Kello juoksee '
-  + 'kolmestasadastatuhannesta vuodesta tähän päivään, ja kartalle syttyy valo aina, '
-  + 'kun jossakin oli joku ensimmäistä kertaa.';
+  + 'kolmestasadastatuhannesta vuodesta tähän päivään, ja kartta värjäytyy sitä mukaa '
+  + 'kuin ihminen levisi — maata pitkin, ranta rannalta.';
 
+/*
+ * Avausteksti ja loppusanat on kirjoitettu VÄRIVIRROILLE (Fable 6.9.2026,
+ * omistajan päätös 14): pallolla linssi näyttää leviämisen laajenevina
+ * värialueina (js/aikajana-virrat.js), ja tekstit nimeävät värit ja
+ * vanhan väestön harmaan niin kuin ne kartalla näkyvät.
+ */
 /** Kaaren alkusanat (avausjakso ennen käynnistystä). */
 export const IHMISEN_MATKA_ALOITUS = 'Tulet seuraavaksi näkemään, miten yksi laji '
   + 'levisi yhdestä maanosasta kaikkiin. Kukaan ei suunnitellut matkaa: jokainen '
   + 'sukupolvi siirtyi vain vähän kauemmas kuin edellinen, ja tuhat sukupolvea '
-  + 'myöhemmin oltiin toisella puolella maapalloa. Valo syttyy aina, kun jostakin '
+  + 'myöhemmin oltiin toisella puolella maapalloa. Väri leviää kartalla samaa vauhtia '
+  + 'kuin ihminen — meripihka Afrikasta Aasiaan ja Australiaan, sininen Eurooppaan, '
+  + 'sinivihreä Siperiaan ja siitä turkoosina Amerikkoihin, ruusu saarelta saarelle '
+  + 'Tyynellämerellä. Harmaa on vanha väestö, neandertalilaiset ja denisovalaiset, '
+  + 'joka väistyy tulijoiden tieltä. Kuva poksahtaa kartalle aina, kun jostakin '
   + 'löytyy jälki siitä, että täällä oli joku ennen muita.';
 
-/** Loppusanat, kun kaikki kaksikymmentä valoa palavat. */
-export const IHMISEN_MATKA_LOPPU = 'Kaikki kaksikymmentä valoa palavat nyt, ja '
-  + 'niiden ketju kiertää maapallon Marokon kukkulalta Tyynenmeren yli Uuteen-Seelantiin. '
-  + 'Matkaan meni kolmesataatuhatta vuotta eikä yksikään kulkija tiennyt olevansa '
-  + 'matkalla — jokainen vain siirsi leirinsä seuraavan rannan taakse. Ihminen oli '
-  + 'siis kiertänyt maapallon kerran jo kauan ennen kuin kukaan keksi laskea päiviä; '
-  + 'Fogg teki saman uudelleen, kello kädessä.';
+/** Loppusanat, kun koko maailma on värissä. */
+export const IHMISEN_MATKA_LOPPU = 'Koko maailma on nyt värissä, Marokon kukkulalta '
+  + 'Tyynenmeren yli Uuteen-Seelantiin, ja kaksikymmentä kuvaa merkitsee paikat, joista '
+  + 'löytö on kertonut matkasta. Matkaan meni kolmesataatuhatta vuotta eikä yksikään '
+  + 'kulkija tiennyt olevansa matkalla — jokainen vain siirsi leirinsä seuraavan rannan '
+  + 'taakse. Ihminen oli siis kiertänyt maapallon kerran jo kauan ennen kuin kukaan '
+  + 'keksi laskea päiviä; Fogg teki saman uudelleen, kello kädessä.';
 
 export const IHMISEN_MATKA = [
   {

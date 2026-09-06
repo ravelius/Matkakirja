@@ -165,6 +165,12 @@ import { pakotaPallonLaatu } from './pallo.js';
 // Koko piirto asuu omassa moduulissaan; tämä tiedosto vain pyytää
 // lampun, kertoo sen tilan ja purkaa kerroksen.
 import { luoLiekkivalot } from './aikajana-valo.js';
+/*
+ * Ihmisen matka värivirtoina (js/aikajana-virrat.js): kaari, jolla on
+ * `virrat`, saa pallolla värikentän, seuraavan kameran ja kuvakehykset
+ * (Raamattu 6.9.2026: IHMISEN MATKA ON VARIVIRTOJA, EI PISTEITA).
+ */
+import { luoVirrat } from './aikajana-virrat.js';
 // Isoympyrä reittiviivalle: sama kaava kuin lentokaarella ja uomilla
 // (js/linssit/vesistot.js tuo saman parin) — ei omaa kopiota.
 import { isoympyranPiste, kulmaAsteina } from './pallolauta/reitit.js';
@@ -2039,6 +2045,93 @@ export function asetaMatkamittari(rullat, vuosi, {
   return muuttuneet;
 }
 
+/*
+ * ── RULLIEN LIIKE-EPÄTERÄVYYS (omistaja 6.9.2026 ilta) ─────────────
+ *
+ * Sanatarkasti: *"vuosilukumittariin kannattaisi jotenkin tehdä feikki
+ * nopeusanimaatio 2-3 ensimmäiselle pyörivälle numeronäytölle, niin
+ * että numerot eivät piirry terävinä vaan kuin elokuvakamerassa
+ * numerot blurrautuvat yhteen nopean liikkeen ja luonnollisen
+ * valotusajan huomioon ottaen."*
+ *
+ * MALLI: kamera valottaa kehyksen VALOTUSAJAN (RULLAN_VALOTUS_S), ja
+ * rulla liikkuu sinä aikana `nopeus × valotus` numeron korkeutta.
+ * Rullan nopeus on lukeman muutosnopeus jaettuna rullan painoarvolla
+ * (ykköset: koko muutos, kympit kymmenesosa, sadat sadasosa) — sama
+ * keskimääräinen liike, jonka mekaaninen mittari tekee, vaikka ylemmät
+ * rullat nykivät siirron kohdalla. Syvässä ajassa (110 vuotta
+ * kehyksessä) ykköset, kympit ja sadat sulautuvat kokonaan ja tuhannet
+ * saavat kevyen sumun; keksintökellossa (vuosi 260 ms:ssa) ykkösrulla
+ * jää juuri terävän rajalle — kello on hidas, ja sen kuuluukin näkyä.
+ *
+ * PIIRTO ILMAN SUODATINTA: css/aikajana.css latoo rullan merkin päälle
+ * kuusi puoliläpinäkyvää kopiota (text-shadow) tasavälein ±sumun
+ * matkalle pystysuunnassa — valotusajan otokset — ja himmentää itse
+ * merkkiä vastaavasti. Pelkkä pystysuunta, koska liike on pystysuora;
+ * CSS blur() sumentaisi myös vaakaan ja laskettaisiin joka kehykselle
+ * koko kellolle (sama syy, josta korttien blur poistettiin).
+ *
+ * TASOITUS: voimakkuus seuraa kohdetta eksponentiaalisesti
+ * (RULLAN_SUMUN_TASOITUS kehyksessä) — siirron alkaessa ja loppuessa
+ * kympit sumenevat ja tarkentuvat pehmeästi, eivät välähdä. Alle
+ * RULLAN_SUMUN_KYNNYS jäävä sumu on nolla (terävä). Reduced motion:
+ * ei sumua (naytaVuosi nollaa).
+ */
+
+/** Valotusaika sekunteina (elokuvakamera 180° sulkimella 24 fps ≈ 1/48 s). */
+export const RULLAN_VALOTUS_S = 1 / 48;
+/** Suurin sumu numeron korkeuksina: tätä pidemmällä numerot ovat jo yhtä juovaa. */
+export const RULLAN_SUMU_MAX = 0.7;
+/** Sumu, jota pienempi piirretään terävänä (ei turhaa varjoladontaa). */
+export const RULLAN_SUMUN_KYNNYS = 0.04;
+/** Tasoitus kehyksessä (0–1): uusi kohde painaa tämän verran. */
+export const RULLAN_SUMUN_TASOITUS = 0.35;
+
+/**
+ * Rullan sumun kohde numeron korkeuksina: lukeman muutosnopeudesta
+ * (yksikköä sekunnissa) rullan painoarvolla (1, 10, 100, …).
+ */
+export function rullanSumu(nopeus, painoarvo = 1) {
+  if (!(painoarvo > 0) || !Number.isFinite(nopeus)) return 0;
+  const matka = (Math.abs(nopeus) / painoarvo) * RULLAN_VALOTUS_S;
+  return Math.min(RULLAN_SUMU_MAX, matka);
+}
+
+/** Sumun tasoitus: edellisestä kohti kohdetta; kynnyksen alle jäävä on 0. */
+export function tasoitaSumu(edellinen, kohde, tasoitus = RULLAN_SUMUN_TASOITUS) {
+  const arvo = edellinen + (kohde - edellinen) * tasoitus;
+  return arvo < RULLAN_SUMUN_KYNNYS ? 0 : arvo;
+}
+
+/**
+ * Sumut rullille DOM:iin: kehys-elementin `--sumu` (numeron korkeuksina)
+ * ja `--sumu-osuus` (0–1) sekä luokka .vauhdissa. Rullat ovat vasemmalta
+ * oikealle, oikeanpuoleisin on ykköset. `nopeus` on lukeman muutos
+ * sekunnissa; `nollaa` pyyhkii kaiken (pysäytys, reduced motion).
+ */
+export function sumennaRullat(rullat, nopeus, { nollaa = false } = {}) {
+  const n = rullat.length;
+  for (let k = 0; k < n; k += 1) {
+    const rulla = rullat[k];
+    const painoarvo = 10 ** (n - 1 - k);
+    const kohde = nollaa ? 0 : rullanSumu(nopeus, painoarvo);
+    const sumu = nollaa ? 0 : tasoitaSumu(rulla.sumu ?? 0, kohde);
+    if (sumu === (rulla.sumu ?? 0)) { rulla.sumu = sumu; continue; }
+    rulla.sumu = sumu;
+    const kehys = rulla.kehys;
+    if (!kehys?.style) continue;
+    if (sumu > 0) {
+      kehys.style.setProperty('--sumu', sumu.toFixed(3));
+      kehys.style.setProperty('--sumu-osuus', Math.min(1, sumu / RULLAN_SUMU_MAX).toFixed(3));
+      kehys.classList.add('vauhdissa');
+    } else {
+      kehys.style.removeProperty('--sumu');
+      kehys.style.removeProperty('--sumu-osuus');
+      kehys.classList.remove('vauhdissa');
+    }
+  }
+}
+
 /* ==================== MOOTTORI ==================== */
 
 class Aikajana {
@@ -2101,6 +2194,8 @@ class Aikajana {
     this.kalvo = null;
     /** Liekkivalojen kerros pallolla (js/aikajana-valo.js). */
     this.liekit = null;
+    /** Värivirrat pallolla (js/aikajana-virrat.js), kun kaari pyytää `virrat`. */
+    this.virrat = null;
     this.reianLiuku = 0;
     this.reianMerkki = 0;
     this.reianPaikka = null;
@@ -2414,12 +2509,25 @@ class Aikajana {
      * lamput hehkuvat tummennuksen päällä kuten tasokartalla — pallon
      * pinta, kaupunkipisteet ja reitit jäävät sen alle.
      */
-    this.kalvo = linssit.kalvoRuudulle(PALLON_OSA, {
-      reika: null,
-      vari: PALLON_TUMMENNUS,
-      keski: PALLON_TUMMENNUS_KESKI,
-      alle: true,
-    });
+    if (this.kaari.tummennus !== false) {
+      this.kalvo = linssit.kalvoRuudulle(PALLON_OSA, {
+        reika: null,
+        vari: PALLON_TUMMENNUS,
+        keski: PALLON_TUMMENNUS_KESKI,
+        alle: true,
+      });
+    }
+    /*
+     * VÄRIVIRRAT (kaari, jolla `virrat`; Ihmisen matka): kartta ei ole
+     * tumma (`tummennus: false`), värikenttä on pallon kalvo samassa
+     * osassa kuin lamput, ja kamera siirtyy virtamoduulin käsiin
+     * ensimmäisen pysäkin sytyttyä (ajaPysakille).
+     */
+    if (this.kaari.virrat) {
+      this.virrat = luoVirrat({
+        ajo: this, lauta: this.lauta, kaari: this.kaari, osa: PALLON_OSA,
+      });
+    }
     // Reittiviiva samaan osaan: purku vie valot, kalvon ja viivan.
     this.rakennaReitti();
     const vinjetti = this.vinjetti;
@@ -2782,6 +2890,9 @@ class Aikajana {
    * @returns {Promise<boolean>}
    */
   ajaPysakille(i, kesto) {
+    // Värivirrat ohjaavat kameraa (rintaman seuraaminen); alkunäkymä ja
+    // lopun peräytyminen jäävät moottorille (js/aikajana-virrat.js).
+    if (this.virrat?.ohjaaKameraa()) return Promise.resolve(false);
     this.pysaytaValiajo();
     const t = this.tapahtumat[i];
     if (!t) return Promise.resolve(false);
@@ -3183,6 +3294,30 @@ class Aikajana {
   }
 
   /**
+   * KÄYNNISTÄ ODOTTAA VÄRIVIRTOJEN LASKENNAN (hionta 6.9.2026). Kentät
+   * lasketaan työsäikeessä linssin auetessa (js/aikajana-virrat.js), ja
+   * tavallisesti ne ovat valmiit ennen kuin pelaaja ehtii lukea
+   * esittelyn. Nopealla napautuksella (tai reduced motion, jossa
+   * laatikko tulee heti) laskenta voi olla kesken, ja silloin kello
+   * lähtisi värittömälle pallolle: Afrikka näkyisi hetken tyhjänä.
+   * Nappi jää odottamaan (disabled, aria-busy) ja painallus toistetaan
+   * itse, kun lupaus täyttyy. Palauttaa tosi, jos odotus alkoi.
+   */
+  odotaVirtoja() {
+    const virrat = this.virrat;
+    if (!virrat || virrat.tila().valmis || this.virtojaOdotetaan) return false;
+    this.virtojaOdotetaan = true;
+    const nappi = this.avausNappi;
+    if (nappi) { nappi.disabled = true; nappi.setAttribute('aria-busy', 'true'); }
+    virrat.valmis.then(() => {
+      this.virtojaOdotetaan = false;
+      if (nappi) { nappi.disabled = false; nappi.removeAttribute('aria-busy'); }
+      if (this.avausKesken && this.virrat === virrat) this.aloitaAjo();
+    });
+    return true;
+  }
+
+  /**
    * Linssin juuri esiin MUSTAN ALLA. Ennen 6.9.2026 tämä oli sumea
    * vaihe, jossa peite oheni ja kartta näkyi himmeänä laatikon takana;
    * omistaja näki siitä iPhonella *"haaleasti jotain"* eikä halunnut
@@ -3211,6 +3346,7 @@ class Aikajana {
    */
   aloitaAjo() {
     if (!this.avausKesken) return;
+    if (this.odotaVirtoja()) return;
     this.avausKesken = false;
     this.tyhjennaAvauksenAjastimet();
     this.merkitseAvausRuutuun(false);
@@ -3281,6 +3417,9 @@ class Aikajana {
     // Pysäytetty kello ei ole matkalla mihinkään: karuselli palaa.
     this.peruEnnakko();
     this.saadaMusiikki();
+    // Pysäytetty mittari on terävä heti (ks. RULLIEN LIIKE-EPÄTERÄVYYS).
+    sumennaRullat(this.rullat, 0, { nollaa: true });
+    this.kellonEdellinen = null;
     // Eikä havainnekuva jää häivytettynä odottamaan syttymistä, joka
     // ei tauolla tule (ks. haivytaPaneeli).
     this.paneeli?.classList.remove('haipyy');
@@ -3294,6 +3433,8 @@ class Aikajana {
     this.pysayta();
     // Hengähdystauko alkaa alusta sekin: laatikko pois ja muisti nolliin.
     this.suljeValinaytos({ heti: true });
+    // Värivirrat: kehykset piiloon, kello alkaa alusta.
+    this.virrat?.siirry(-1);
     this.valinaytosNahty = false;
     pysaytaLinssiluenta(this.ui);
     this.paattaEnnakko();
@@ -3360,6 +3501,8 @@ class Aikajana {
     if (!this.kaynnissa) return;
     const dt = Math.min(200, nyt - this.viime);
     this.viime = nyt;
+    // Kellon oma kehysväli rullien sumulle (ks. sumennaKello).
+    this.kellonDt = dt;
     // Reduced motion: nopeutettu ja LINEAARINEN — pehmeät kiihdytykset
     // ovat juuri sitä liikettä, jota tässä tilassa vältetään.
     const tahti = this.reducedMotion ? { vuosiMs: 40, lineaarinen: true } : {};
@@ -3563,11 +3706,33 @@ class Aikajana {
       });
       if (vaihtui) this.kellonSelite(teksti);
     }
+    this.sumennaKello(arvo, heti);
     // Ääni vain elävästä vaihdosta: avaus ja alustus ovat `heti`,
     // ja pysäytetty kello on hiljainen (kortista toiseen kelaus myös).
     // Vuosiluvun vaihdos NAKSAHTAA; kohahdus kuuluu keksinnölle
     // (sytyta, omistajan päätös 3.9.2026).
     if (elava && this.kaynnissa) this.naksahda();
+  }
+
+  /**
+   * Rullien liike-epäterävyys lukeman muutosnopeudesta (ks. RULLIEN
+   * LIIKE-EPÄTERÄVYYS). Nopeus on lukeman muutos jaettuna KELLON OMALLA
+   * kehysvälillä (kehys: dt, katto 200 ms) eikä seinäkellolla: hitaalla
+   * laitteella tai taustalta palattaessa kello etenee vain katon
+   * verran, ja seinäkello aliarvioisi vauhdin. Käymätön kello, `heti`
+   * ja reduced motion pyyhkivät sumun, jotta pysäytetty mittari on
+   * aina terävä.
+   */
+  sumennaKello(arvo, heti = false) {
+    const edellinen = this.kellonEdellinen;
+    this.kellonEdellinen = { arvo };
+    if (!this.kaynnissa || heti || this.reducedMotion || !edellinen) {
+      sumennaRullat(this.rullat, 0, { nollaa: true });
+      return;
+    }
+    const dt = (this.kellonDt ?? 0) / 1000;
+    if (!(dt > 0)) { sumennaRullat(this.rullat, 0, { nollaa: true }); return; }
+    sumennaRullat(this.rullat, (arvo - edellinen.arvo) / dt);
   }
 
   /**
@@ -3731,6 +3896,8 @@ class Aikajana {
     } else {
       sfx.play('paper');
     }
+    // Värivirrat: pysäkin kuva poksahtaa lampun viereen (päätös 4).
+    this.virrat?.sytyta(i, t, valo?.g ?? null);
     this.keksinnonAani(t);
     this.paivitaReitti(i);
     this.paikkarivi.textContent = [ajoitus(t), paikka(t)].filter(Boolean).join(' · ');
@@ -4444,6 +4611,8 @@ class Aikajana {
     this.naytaVuosi(t.vuosi);
     this.valot.forEach((valo, k) => { if (valo) this.asetaValonTila(valo, k <= i, k === i); });
     this.paivitaReitti(i);
+    // Värivirrat: kehykset pysäkkiin asti, kamera hetkeksi pelaajalle.
+    this.virrat?.siirry(i);
     if (this.valot[i]) this.valokerros?.appendChild(this.valot[i].g);
     this.paikkarivi.textContent = [ajoitus(t), paikka(t)].filter(Boolean).join(' · ');
     this.vaihdaPaneeli(t);
@@ -4554,6 +4723,9 @@ class Aikajana {
       cancelAnimationFrame(this.reianLiuku);
       this.reianPaikka = null;
       this.kalvo = null;
+      // Virtojen silmukka ja kehykset pois ennen osan purkua.
+      this.virrat?.pura();
+      this.virrat = null;
       // Liekkien kehyssilmukka seis ennen kerrosten purkua.
       this.liekit?.pura();
       this.liekit = null;
