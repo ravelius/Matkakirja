@@ -674,6 +674,33 @@
 }
 
 /*
+ * LIIKE-EPÄTERÄVYYS (omistaja 6.9.2026 ilta; js/aikajana.js RULLIEN
+ * LIIKE-EPÄTERÄVYYS): nopeasti pyörivä rulla saa luokan .vauhdissa ja
+ * muuttujat --sumu (numeron korkeuksina) ja --sumu-osuus (0–1).
+ * Merkin päälle ladotaan kuusi puoliläpinäkyvää kopiota tasavälein
+ * ±sumun matkalle PYSTYSUUNNASSA — valotusajan otokset — ja merkki
+ * itse himmenee, jotta juova ei hehku. Ei filter: blur(): se
+ * sumentaisi vaakaankin ja laskettaisiin joka kehykselle. Kopioiden
+ * väri on merkin oma (currentColor), joten tauon kultainen kello
+ * sumenee kultaisena. Reduced motion: ei sumua (js nollaa; css
+ * varmistaa).
+ */
+.vuosi-numero { --sumu: 0; --sumu-osuus: 0; }
+.vuosi-numero.vauhdissa .vuosi-merkki {
+  opacity: calc(1 - var(--sumu-osuus) * 0.5);
+  text-shadow:
+    0 calc(var(--sumu) * -0.33em) 0.03em color-mix(in srgb, currentColor calc(45% * var(--sumu-osuus)), transparent),
+    0 calc(var(--sumu) * 0.33em) 0.03em color-mix(in srgb, currentColor calc(45% * var(--sumu-osuus)), transparent),
+    0 calc(var(--sumu) * -0.66em) 0.04em color-mix(in srgb, currentColor calc(32% * var(--sumu-osuus)), transparent),
+    0 calc(var(--sumu) * 0.66em) 0.04em color-mix(in srgb, currentColor calc(32% * var(--sumu-osuus)), transparent),
+    0 calc(var(--sumu) * -1em) 0.05em color-mix(in srgb, currentColor calc(20% * var(--sumu-osuus)), transparent),
+    0 calc(var(--sumu) * 1em) 0.05em color-mix(in srgb, currentColor calc(20% * var(--sumu-osuus)), transparent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .vuosi-numero.vauhdissa .vuosi-merkki { opacity: 1; text-shadow: none; }
+}
+
+/*
  * ── "VUOTTA SITTEN" -ASTEIKON KELLO (5.9.2026, ihmisen matka) ──────
  *
  * Kuusi rullaa, tuhaterotin kolmen välein ja yksikkö perässä:
@@ -1412,6 +1439,8 @@
   .aikajana { --aikajana-kesto: 0.01s; }
   /* Rullaus vaihtaa merkin ilman liikettä (rullaaVuosi: heti). */
   .vuosi-merkki, .aikajana-valo-sisus, .aikajana-tummennus-pinta, .aikajana-reika, .aikajana-valo-kajo, .aikajana-vinjetti { transition: none; }
+  /* Värivirtojen kuvakehys poksahtaa ilman liikettä (js/aikajana-virrat.js). */
+  .aikajana-virta-kuva { transition: none; }
   /* Avausjakso ja välinäytös: laatikko ja peite vaihtavat tilaa ilman liukua. */
   .aikajana, .aikajana-avaus-peite, .aikajana-avaus-kehys, .aikajana-avaus-nappi,
   .aikajana-valinaytos-teksti { transition: none; }
@@ -1925,6 +1954,56 @@
      `alle`), joten valo hehkuu jo valmiiksi tummennuksen päällä. */
 }
 
+/* ===========================================================================
+   IHMISEN MATKA VÄRIVIRTOINA (js/aikajana-virrat.js; Raamattu 6.9.2026)
+   Pysäkin kuva poksahtaa lampun viereen pieneksi paperikehykseksi ja
+   kutistuu puoleen mittaansa seuraavan syttyessä (päätös 4). Kehys on
+   lampun elementin lapsi, joten kirjasto kuljettaa sen pallon mukana;
+   liike on pelkkää transformia ja peittävyyttä (ei suodattimia).
+   =========================================================================== */
+.aikajana-virta-kuva {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 72px;
+  height: 50px;
+  padding: 3px;
+  box-sizing: border-box;
+  background: #f4ecd8;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(20, 12, 4, 0.45), 0 0 0 1px rgba(90, 60, 20, 0.35);
+  transform-origin: 50% 100%;
+  transform: translate(-50%, calc(-100% - 20px)) scale(0);
+  opacity: 0;
+  transition: transform 0.36s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.24s ease;
+  pointer-events: none;
+}
+.aikajana-virta-kuva img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1px;
+}
+.aikajana-virta-kuva.esilla { transform: translate(-50%, calc(-100% - 20px)) scale(1); opacity: 1; }
+.aikajana-virta-kuva.esilla.pieni { transform: translate(-50%, calc(-100% - 14px)) scale(0.5); opacity: 0.92; }
+
+/* Nuoli ruudun reunaan, kun nykyinen pysäkki on kuvan ulkopuolella. */
+.aikajana-virta-nuoli {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  margin: -9px 0 0 -9px;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 18px solid #ffd066;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+  pointer-events: none;
+  z-index: 3;
+}
+
 /*
  * PELIN OMAT MERKIT VÄISTYVÄT LINSSIN AJAKSI. Tasokartalla kartan
  * tummennus (0,86) on kaupunkien nimien ja nappulan PÄÄLLÄ — ne jäävät
@@ -1935,6 +2014,21 @@
  * vertailu- ja maatiedot-tiloissa (css/styles.css). Kaupunkien PISTEET
  * ovat pallon pintaa (WebGL) ja jäävät kalvon alle itsestään.
  */
+/*
+ * PALLON MERKIT JÄÄVÄT LINSSIN ELEMENTTIEN ALLE (hionta 6.9.2026,
+ * omistajan puhelinkaappaus: loppusanojen paneelin päälle piirtyivät
+ * lamput ja kuvakehykset). Kirjaston CSS2D-kerros antaa jokaiselle
+ * merkille oman z-indexin syvyysjärjestyksen mukaan (mitattu 29), ja
+ * koska pallon kuori ei ole pinontayhteys, luvut kilpailevat
+ * karttaruudussa suoraan linssin juuren (z-index 7) kanssa ja voittavat.
+ * `isolation: isolate` tekee kuoresta oman pinontayhteyden: merkit
+ * järjestyvät edelleen keskenään pallon sisällä, mutta koko pallo
+ * lamppuineen ja kehyksineen jää kellon, korttien, paneelin ja
+ * avausjakson alle. Rajattu linssin ajaksi — pelin muihin tiloihin ei
+ * kosketa.
+ */
+body.aikajana-paalla .pallo-kuori.pallolauta { isolation: isolate; }
+
 body.aikajana-paalla .pallolauta-nimi,
 body.aikajana-paalla .pallolauta-nosto,
 body.aikajana-paalla .pallolauta-piste,

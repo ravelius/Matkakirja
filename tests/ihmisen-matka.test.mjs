@@ -104,7 +104,9 @@ test('linssi täyttää linssisopimuksen ja on rekisterissä', () => {
 test('kaari pyytää moottorilta juuri ne kolme yleistystä', () => {
   const k = LINSSI.aikajana;
   assert.equal(k.asteikko, 'vuosiaSitten');
-  assert.equal(k.reitti, true);
+  // Reittiviiva on POIS tästä linssistä (omistajan päätös 6, 6.9.2026):
+  // pallolla leviäminen näytetään värivirtoina (tests/aikajana-virrat.test.mjs).
+  assert.equal(k.reitti, false);
   assert.equal(k.hyppykamera, true);
   assert.equal(k.lahikuva, IHMISEN_MATKAN_LAHIKUVA);
   assert.equal(k.musiikki, 'ihmisen-matka');

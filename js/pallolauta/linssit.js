@@ -250,15 +250,23 @@ export function luoLinssit({
    *
    * Kuva ladataan tästä eikä linssistä: linssi kertoo vain osoitteen ja
    * peittävyyden. Kahvan `pura()` häivyttää kuoren ulos ja vapauttaa
-   * tekstuurin — geometria on pinnan omaa eikä sitä saa vapauttaa.
+   * tekstuurin — geometria on pinnan omaa eikä sitä saa vapauteta.
+   *
+   * KUVA SAA OLLA MYÖS CANVAS-ELEMENTTI (Ihmisen matka -virrat,
+   * js/aikajana-virrat.js): silloin mitään ei ladata, kangas menee
+   * tekstuuriksi sellaisenaan ja kahvan `paivita()` nostaa muuttuneen
+   * kankaan näytönohjaimelle (`needsUpdate`) ja herättää laudan. Yksi
+   * 720 × 360 -tekstuuri kymmenen kertaa sekunnissa on laattojen
+   * rinnalla pieni (suunnitelman luku 7.2).
    */
   const kalvo = (nimi, { kuva, peittavyys = 0.72 } = {}) => {
     const o = osa(nimi);
     puraKalvo(o);
     const tila = { peruttu: false, mesh: null, materiaali: null, tekstuuri: null };
     o.kalvo = tila;
+    const onKangas = Boolean(kuva) && typeof kuva === 'object' && typeof kuva.getContext === 'function';
     void (async () => {
-      const kuvaOlio = await lataaKuva(kuva);
+      const kuvaOlio = onKangas ? kuva : await lataaKuva(kuva);
       if (tila.peruttu || !kuvaOlio) {
         if (!kuvaOlio) console.warn(`Linssikalvon kuvaa ei saatu: ${kuva}`);
         return;
@@ -289,7 +297,15 @@ export function luoLinssit({
       if (tila.peruttu) { puraKalvo(o); return; }
       tila.peru = haivyta(materiaali, peittavyys);
     })();
-    return { pura: () => pura(nimi) };
+    return {
+      pura: () => pura(nimi),
+      /** Kankaan sisältö muuttui: tekstuuri uudelleen näytönohjaimelle. */
+      paivita: () => {
+        if (!tila.tekstuuri || tila.peruttu) return;
+        tila.tekstuuri.needsUpdate = true;
+        lauta?.heraa?.();
+      },
+    };
   };
 
   /** Kalvo pois: häivytys ulos, sitten mesh, materiaali ja tekstuuri. */

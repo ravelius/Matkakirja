@@ -14,6 +14,7 @@ import { readFileSync } from 'node:fs';
 
 import {
   aikajanaAskel, asetaMatkamittari, rajaaPaneelinSiirto, PANEELIN_RAAHAUSKYNNYS,
+  rullanSumu, tasoitaSumu, sumennaRullat, RULLAN_VALOTUS_S, RULLAN_SUMU_MAX, RULLAN_SUMUN_KYNNYS,
   rajaaPaneelinKoko, PANEELIN_KOKO_MIN, PANEELIN_KOKO_MAX,
   AIKAJANA_TAUON_OSUUS, VUOSI_RULLAUS_MS, AIKAJANA_NAKSU_VALI_MS,
   AIKAJANA_VIIVE_MS, AIKAJANA_PAALU_MS, AIKAJANA_TAUKO_HIMMENNYS, AIKAJANA_VUOSI_MS,
@@ -1651,4 +1652,70 @@ test('kameralaatikko jatkuu pystynäytöllä ylös ja vaakanäytöllä vasemmall
   assert.match(AIKAJANA_CSS, /@media \(min-width: 701px\) and \(orientation: portrait\) \{\n  \.aikajana-ilmio \{ right: 3\.5%; --aikajana-paneeli-leveys: 66%; \}/);
   assert.match(AIKAJANA_CSS, /\.aikajana-ilmio \{ top: 3\.6rem; right: 0; --aikajana-paneeli-leveys: 100%;/);
   assert.match(MOOTTORI, /PANEELIN_MUISTIAVAIN = 'matkakirja-linssi-paneeli-v2'/);
+});
+
+/*
+ * RULLIEN LIIKE-EPÄTERÄVYYS (omistaja 6.9.2026 ilta: numerot sumenevat
+ * kuin elokuvakamerassa nopean liikkeen ja valotusajan mukaan).
+ */
+test('rullan sumu: hidas terävä, nopea sumea, ylemmät rullat kymmenesosalla, katto ja kynnys', () => {
+  // Keksintökello: vuosi 260 ms:ssa ≈ 3,85 yksikköä/s → ykköset alle kynnyksen ≈ terävä.
+  const keksinto = rullanSumu(3.85, 1);
+  assert.ok(keksinto < 0.1, `keksintökellon ykköset ${keksinto}`);
+  assert.equal(tasoitaSumu(0, rullanSumu(3.85, 10)), 0, 'kympit terävät');
+  // Syvä aika: 6 600 vuotta sekunnissa → ykköset, kympit ja sadat katossa, tuhannet kevyesti.
+  assert.equal(rullanSumu(6600, 1), RULLAN_SUMU_MAX);
+  assert.equal(rullanSumu(6600, 10), RULLAN_SUMU_MAX);
+  assert.ok(rullanSumu(6600, 100) > 0.5, `sadat ${rullanSumu(6600, 100)}`);
+  const tuhannet = rullanSumu(6600, 1000);
+  assert.ok(Math.abs(tuhannet - 6.6 * RULLAN_VALOTUS_S) < 1e-9, `tuhannet valotusajan matka ${tuhannet}`);
+  assert.equal(rullanSumu(6600, 100000), 0.0066 * RULLAN_VALOTUS_S * 10, 'satatuhannet käytännössä terävät');
+  // Suunta ei vaikuta (laskeva kello), nolla ja epäluku ovat teräviä.
+  assert.equal(rullanSumu(-6600, 1), rullanSumu(6600, 1));
+  assert.equal(rullanSumu(0, 1), 0);
+  assert.equal(rullanSumu(NaN, 1), 0);
+  // Tasoitus: kohti kohdetta askel kerrallaan, kynnyksen alle jäävä on tasan 0.
+  const askel = tasoitaSumu(0, RULLAN_SUMU_MAX);
+  assert.ok(askel > 0 && askel < RULLAN_SUMU_MAX, 'ei hyppää kerralla kohteeseen');
+  assert.ok(tasoitaSumu(askel, RULLAN_SUMU_MAX) > askel, 'lähestyy');
+  assert.equal(tasoitaSumu(RULLAN_SUMUN_KYNNYS * 1.5, 0, 0.5), 0, 'laskiessa kynnyksen alle → 0');
+  assert.ok(RULLAN_VALOTUS_S > 1 / 100 && RULLAN_VALOTUS_S < 1 / 24, 'valotusaika elokuvakameran luokkaa');
+});
+
+test('sumennaRullat kirjoittaa muuttujat ja luokan vain liikkuville rullille; nollaus pyyhkii', () => {
+  const kehys = () => {
+    const tyyli = new Map();
+    return {
+      style: { setProperty: (k, v) => tyyli.set(k, v), removeProperty: (k) => tyyli.delete(k) },
+      classList: { luokat: new Set(), add(l) { this.luokat.add(l); }, remove(l) { this.luokat.delete(l); } },
+      tyyli,
+    };
+  };
+  const rullat = Array.from({ length: 6 }, () => ({ vanha: {}, uusi: {}, merkki: null, kehys: kehys() }));
+  // Muutama kehys samalla nopeudella: tasoitus nostaa sumun kohti kohdetta.
+  for (let k = 0; k < 12; k += 1) sumennaRullat(rullat, 6600);
+  const ykkoset = rullat[5];
+  const tuhannet = rullat[2];
+  const satatuhannet = rullat[0];
+  assert.ok(ykkoset.kehys.classList.luokat.has('vauhdissa'), 'ykköset sumeat');
+  assert.ok(Number(ykkoset.kehys.tyyli.get('--sumu')) > 0.6, `ykkösten sumu ${ykkoset.kehys.tyyli.get('--sumu')}`);
+  assert.ok(Number(ykkoset.kehys.tyyli.get('--sumu-osuus')) > 0.99, `osuus ${ykkoset.kehys.tyyli.get('--sumu-osuus')}`);
+  assert.ok(tuhannet.kehys.classList.luokat.has('vauhdissa') && Number(tuhannet.kehys.tyyli.get('--sumu')) < 0.3, 'tuhannet kevyesti');
+  assert.ok(!satatuhannet.kehys.classList.luokat.has('vauhdissa'), 'satatuhannet terävät');
+  assert.ok(!satatuhannet.kehys.tyyli.has('--sumu'));
+  // Nollaus: kaikki pois kerralla (pysäytys, reduced motion).
+  sumennaRullat(rullat, 6600, { nollaa: true });
+  for (const r of rullat) {
+    assert.equal(r.sumu, 0);
+    assert.ok(!r.kehys.classList.luokat.has('vauhdissa'));
+    assert.ok(!r.kehys.tyyli.has('--sumu'));
+  }
+  // Moottori kytkee: naytaVuosi sumentaa, pysayta nollaa, css ei käytä filter: blur -suodatinta.
+  assert.match(MOOTTORI, /this\.sumennaKello\(arvo, heti\);/);
+  assert.match(MOOTTORI, /pysayta\(\) \{[\s\S]{0,500}sumennaRullat\(this\.rullat, 0, \{ nollaa: true \}\);/);
+  assert.match(MOOTTORI, /if \(!this\.kaynnissa \|\| heti \|\| this\.reducedMotion \|\| !edellinen\) \{/);
+  const lohko = AIKAJANA_CSS.match(/\.vuosi-numero\.vauhdissa \.vuosi-merkki \{[\s\S]*?\n\}/)[0];
+  assert.match(lohko, /text-shadow:/);
+  assert.ok(!/filter/.test(lohko), 'sumu ilman suodatinta');
+  assert.match(AIKAJANA_CSS, /@media \(prefers-reduced-motion: reduce\) \{\n\s*\.vuosi-numero\.vauhdissa \.vuosi-merkki \{ opacity: 1; text-shadow: none; \}/);
 });
