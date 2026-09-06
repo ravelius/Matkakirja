@@ -104,6 +104,11 @@ const SALLITUT = [
   // Kamerunin uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
   // samalla isäntänimellä, ilman www-etuliitettä.
   'https://datacameroon.com/',
+  // Saint Helenan uutislähde (maalehti 6.9.2026): saaren hallinnon oma
+  // syöte, koska molemmat viikkolehdet jäivät pois (ks.
+  // js/packs/uutislahteet.js). Syöte ja artikkelisivut ovat samalla
+  // isäntänimellä, ja www-alkuinen muoto on pakollinen.
+  'https://www.sainthelena.gov.sh/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

@@ -1090,9 +1090,27 @@ export const OMAT_ARTIKKELIT = {
       + 'loppuu ja valaat alkavat.',
   },
   'Saint Helena': {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // SHN) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'St. Helena on yksinäinen kalliosaari keskellä eteläistä '
       + 'Atlanttia — purjelaivojen huoltopysäkki, Napoleonin vankila '
-      + 'ja maailman vanhimman kilpikonnan koti.',
+      + 'ja maailman vanhimman kilpikonnan koti. Saari on 16 kilometriä '
+      + 'pitkä ja 8 leveä, se kohoaa merestä lähes 1 900 kilometrin '
+      + 'päässä Angolan rannikosta, ja vuoden 2021 laskennassa siellä '
+      + 'asui 4 439 ihmistä. Portugalilaiset löysivät asumattoman '
+      + 'saaren 1502, ja Itä-Intian kauppakomppania asutti sen 1659 — '
+      + 'siitä lasketaan saaren olevan Britannian toiseksi vanhin '
+      + 'siirtomaa. Neljänsadan vuoden ajan koko elämä pyöri sen '
+      + 'ympärillä, että purjelaivat tarvitsivat matkallaan Aasiaan '
+      + 'vettä ja ruokaa; kun Suezin kanava avattiin 1869, laivat '
+      + 'katosivat pohjoiseen ja saari köyhtyi. Eristys teki '
+      + 'luonnosta ainutlaatuisen: yli viisisataa kotoperäistä lajia '
+      + 'on kolmasosa kaikista Britannian merentakaisten alueiden '
+      + 'kotoperäisistä lajeista, ja saaren kansallislintu tikkuri '
+      + 'elää vain täällä. Lentoasema avattiin 2016 ja ensimmäinen '
+      + 'reittilento laskeutui lokakuussa 2017; sitä ennen ainoa '
+      + 'yhteys oli viiden vuorokauden laivamatka Kapkaupungista.',
     artikkeli: 'St. Helena nousee merestä lähes kahden tuhannen '
       + 'kilometrin päässä Afrikan rannikosta. Portugalilaiset '
       + 'löysivät asumattoman saaren 1502, ja siitä kasvoi '

@@ -656,4 +656,31 @@ export const UUTISLAHTEET = {
     kieli: 'fr',
     syote: 'https://datacameroon.com/feed/',
   },
+  /*
+   * SAINT HELENAN (SHN) LÄHDE ON SAAREN HALLINNON OMA UUTISSYÖTE, EI
+   * LEHTITALO (Opus 6.9.2026), ja syy on kirjattava: saarella asuu
+   * 4 439 ihmistä ja molemmat viikkolehdet ovat käytännössä
+   * saavuttamattomissa.
+   *
+   * Testattu 6.9.2026: syötteessä kymmenen juttua, tuorein samalta
+   * viikolta, ja artikkelisivun ainoasta <article>-lohkosta jäsentyy
+   * viisi yli 60 merkin kappaletta sekä og:image (saaren vaakuna).
+   * Jutut ovat tiedotteita — säävaroituksia, tiepätkien sulkuja,
+   * kuvernöörin virkaanastujaisia — eli juuri sitä, mistä pienen
+   * saaren uutiset koostuvat.
+   *
+   * Testattu ja hylätty: The Sentinel / South Atlantic Media Services
+   * (www.sams.sh/feed/) — syöte aukeaa, mutta sen tuorein juttu on
+   * lokakuulta 2024 ja sisältö on radiokanavan omaa tiedotusta;
+   * varsinainen viikkolehti julkaistaan vain PDF-latauksena. The St
+   * Helena Independent (www.independent.sh/feed/) vastaa 500:lla
+   * ("Database Error"). Saint Helena Island Info
+   * (sainthelenaisland.info) on staattinen hakemistosivusto, jolla ei
+   * ole syötettä lainkaan.
+   */
+  SHN: {
+    nimi: 'St Helena Government',
+    kieli: 'en',
+    syote: 'https://www.sainthelena.gov.sh/feed/',
+  },
 };

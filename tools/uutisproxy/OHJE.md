@@ -59,6 +59,16 @@
 > js/packs/uutislahteet.js:n CMR-kommentissa. Julkaisu Git-
 > integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Saint Helena):** sallittuihin lisättiin
+> www.sainthelena.gov.sh (maalehti SHN, testattu 6.9.2026: syötteessä
+> kymmenen juttua, artikkelisivun ainoasta `<article>`-lohkosta jäsentyy
+> viisi yli 60 merkin kappaletta ja `og:image` löytyy). Lähde on saaren
+> hallinnon oma uutissyöte eikä lehtitalo: The Sentinelin syöte
+> (www.sams.sh/feed/) on jäänyt päivittämättä lokakuusta 2024 ja The St
+> Helena Independent (www.independent.sh) vastaa tietokantavirheellä.
+> Perustelut ovat js/packs/uutislahteet.js:n SHN-kommentissa. Julkaisu
+> Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

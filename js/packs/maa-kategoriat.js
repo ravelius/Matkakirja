@@ -42767,4 +42767,416 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * SAINT HELENA (SHN) — Afrikan laudan saarilehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-sainthelena.md;
+   * kaikki luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA: maastokohteet-shn.js kattaa jo High
+   * Knoll Fortin, Plantation Housen kilpikonnineen, lentoaseman,
+   * Diana's Peakin ja Sandy Bayn, ja skandaalit.js Longwood Housen
+   * (Napoleonin karkotus) sekä Deadwoodin buurivankileirin, Suezin
+   * kanavan aiheuttaman romahduksen ja pellavateollisuuden. Maalehti EI
+   * toista niitä: historiassa ei ole Napoleonia eikä buurivankeja,
+   * luonnossa ei Diana's Peakia eikä Jonathan-kilpikonnaa. Jaakobin
+   * tikkaat jätettiin karttanostoista pois nimiölimityksen takia, joten
+   * ne kerrotaan tässä urheilusivulla.
+   *
+   * HERKÄT AIHEET: orjuus ja vapautettujen afrikkalaisten depot
+   * kerrotaan asiallisesti ja ilman koristelua (Perustuslaki 4);
+   * nykypolitiikka (2021 ministerijärjestelmä, kansalaisuuskiistat) on
+   * jätetty kokonaan pois.
+   *
+   * KUVAT: 17 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin. KOLME
+   * NOSTOA JÄI KUVATTOMAKSI: tungi-viina (Commonsissa ei ole saaren
+   * viikunakaktuksesta yhtään kelvollista kuvaa), plo ja kalapihvit
+   * (ei kuvia saaren ruoasta) sekä Governor's Cup (James Bayn
+   * purjehduskuvat ovat joko liian pieniä tai tiff-muotoisia).
+   * HYLÄTYT: "St Helena Coffee shop" (kahvilan pöydissä tunnistettavia
+   * ihmisiä), "A Royal Navy two-decker off St Helena RMG BHC1093"
+   * (.tiff, jota selain ei näytä).
+   */
+  SHN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Saint Helena on 16 kilometriä pitkä kalliosaari keskellä Atlanttia, ja sen '
+          + 'historia seuraa purjelaivojen reittiä: kun laivat tulivat, saari eli.',
+      nostot: [
+        {
+          otsikko: 'Mies, joka jäi saarelle omasta tahdostaan',
+          aika: '1515–1545',
+          tiedosto: 'AMH-6658-KB Map of the island of St Helena.jpg',
+          teksti: 'Portugalilainen aatelismies Fernão Lopes lähti 1510 Afonso de '
+              + 'Albuquerquen mukana Goan valloitukseen ja jäi sinne varuskuntaan. Kun '
+              + 'Albuquerque palasi lähes kahden vuoden kuluttua, osa miehistä oli '
+              + 'siirtynyt vastapuolelle, ja Lopes silvottiin rangaistukseksi julkisella '
+              + 'torilla. Hän purjehti 1515 kohti Portugalia kuninkaan armahdus taskussaan, '
+              + 'mutta kun laiva pysähtyi Saint Helenalle vettä ja ruokaa hakemaan, hän jäi '
+              + 'saarelle. Seuraava laiva tuli lähes vuoden kuluttua: miehistö löysi luolan '
+              + 'ja olkivuoteen ja jätti korppuja, juustoa ja kirjeen, jossa pyydettiin '
+              + 'ettei hän piiloutuisi. Lopes eli saarella yli kolmekymmentä vuotta.',
+          selite: 'Cornelis Claeszin kuparipiirros 1500-luvun lopulta: saari keskellä, '
+            + 'ympärillä ankkuroivat laivat ja yläreunassa näkymät lännestä ja '
+            + 'pohjoisesta.',
+          lahde: 'Cornelis Claesz, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Löytöpäivä, josta ei päästy yksimielisyyteen',
+          aika: '1502–1503',
+          tiedosto: 'Cloud vortices off Saint Helena Island, south Atlantic Ocean (8227038697).jpg',
+          teksti: 'Perinteen mukaan João da Novan neljä laivaa näkivät saaren 21. toukokuuta '
+              + '1502 ja nimesivät sen keisari Constantinuksen äidin mukaan. Vuonna 2022 '
+              + 'julkaistu tutkimus muistuttaa, että ainoa alkuperäislähde ovat '
+              + 'portugalilaiset kronikat, jotka kirjoitettiin vähintään viisikymmentä '
+              + 'vuotta myöhemmin. Marraskuussa 1502 valmistunut Cantinon planisfääri '
+              + 'näyttää Ascensionin muttei Saint Helenaa, ja kun Estêvão da Gaman laivat '
+              + 'nousivat maihin 30. heinäkuuta 1503, kirjuri piti saarta tuntemattomana. '
+              + 'Toinen tutkimus pitää 3. toukokuuta uskottavampana päivänä; 21. toukokuuta '
+              + 'esiintyy ensi kerran vasta vuonna 1596.',
+          selite: 'Passaatituulet kiertävät saaren pyörteinä, jotka näkyvät pilvikatossa '
+            + 'avaruuteen asti. Samat tuulet toivat purjelaivat Atlantin yli — ja veivät '
+            + 'ne ohi, jos saarta ei osattu odottaa.',
+          lahde: 'NASA Goddard Space Flight Center, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Britannian toiseksi vanhin siirtomaa',
+          aika: '1657–1673',
+          tiedosto: 'George Tobin - a view of James Town made aboard the East India Company ship ‘Sulivan’ - 10670.jpg',
+          teksti: 'Oliver Cromwell antoi Itä-Intian kauppakomppanialle 1657 luvan hallita '
+              + 'saarta, ja kapteeni John Dutton saapui 1659 ensimmäisenä kuvernöörinä. '
+              + 'Linnake valmistui kuukaudessa, ja sen viereen nousi kaupunki, joka sai '
+              + 'kuninkuuden palauduttua nimen Jamestown Yorkin herttuan mukaan. '
+              + 'Uudisasukkaille luvattiin oma palsta sadastakolmestakymmenestä, mutta '
+              + 'väkeä ei saatu: vuonna 1670 saarella asui 66 ihmistä, heistä 18 orjaa. '
+              + 'Jouluna 1672 hollantilaiset valtasivat saaren, mutta kuvernööri pakeni '
+              + 'Brasiliaan, vuokrasi nopean laivan ja löysi komppanian laivaston, joka '
+              + 'otti saaren takaisin toukokuussa 1673 ilman ihmishenkien menetystä.',
+          selite: 'George Tobin maalasi Jamestownin Itä-Intian kauppakomppanian laivan '
+            + 'kannelta: kaupunki mahtuu ainoaan laaksoon, jossa on rantaa, ja kalliot '
+            + 'nousevat suoraan sen molemmin puolin.',
+          lahde: 'George Tobin, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Ranta, jolle vapautetut nousivat',
+          aika: '1840–1874',
+          tiedosto: 'Beach at Ruperts Bay.jpg',
+          teksti: 'Vuonna 1840 Britannia sijoitti saarelle laivastoaseman, jonka tehtävä oli '
+              + 'katkaista Atlantin orjakauppa, ja Jamestowniin perustettiin oikeusistuin '
+              + 'orjalaivojen miehistöjen tuomitsemista varten. Takavarikoiduilta laivoilta '
+              + 'tuotiin Rupert\'sin lahden rantaan vuosina 1840–1849 kaikkiaan 15 076 '
+              + 'vapautettua ihmistä, ja heistä yli viisituhatta oli kuollut matkalla tai '
+              + 'kuoli saarella. Vastaanottoaseman läpi kulki ennen sen sulkemista '
+              + '1870-luvulla yli kaksikymmentätuhatta ihmistä, joista noin viisisataa jäi '
+              + 'saarelle asumaan. Kun lentokentän tietä rakennettiin 2008, laaksosta '
+              + 'löytyi yli 9 000 vainajan jäännökset; ne haudattiin uudelleen 2022.',
+          selite: 'Rupert\'sin lahden hiekkaranta nykyään. Laituri ja putkisto ovat '
+            + 'lentokenttätyömaan perua, ja saman laakson rinteestä löytyivät vapautettujen '
+            + 'afrikkalaisten haudat.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Saarella on yli viisisataa kotoperäistä lajia — kolmasosa kaikista '
+          + 'Britannian merentakaisten alueiden kotoperäisistä lajeista — ja osa niistä '
+          + 'ehti kadota ennen kuin ne opittiin tuntemaan.',
+      nostot: [
+        {
+          otsikko: 'Lintu, joka pääsi lippuun ja kolikkoon',
+          tiedosto: 'Saint Helena plover, locally known as the wirebird.jpg',
+          teksti: 'Tikkuri eli wirebird on viidentoista sentin kahlaaja, jota ei tavata '
+              + 'missään muualla. Se on saaren kansallislintu: kuva on vaakunassa ja '
+              + 'lipussa sekä ennen vuotta 1998 lyödyissä viiden pennin kolikoissa. '
+              + 'Ensimmäinen maininta linnusta on vuodelta 1638. Toisin kuin useimmat '
+              + 'saaren lajit, tikkuri on hyötynyt metsien katoamisesta, koska se elää '
+              + 'avoimella maalla. Kanta on silti heilunut rajusti: 1980-luvun lopulla '
+              + 'laskettiin noin 450 lintua, vuosina 2005–2006 enää 200–220, ja laji '
+              + 'luokiteltiin erittäin uhanalaiseksi. Vuonna 2021 aikuisia oli taas noin '
+              + '545. Uhkina ovat kissat, rotat ja maastoajoneuvot.',
+          selite: 'Tikkurin nimi tulee ohuista jaloista. Se ruokailee avoimella maalla ja '
+            + 'pesii kuoppaan, joten pesät ovat alttiita villiintyneille kissoille ja '
+            + 'renkaille.',
+          lahde: 'Adrien37, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Maailman suurin pihtihäntä',
+          aika: '1798–2014',
+          tiedosto: 'Labidura herculeana restoration.jpg',
+          teksti: 'Saint Helenan jättipihtihäntä oli kiiltävän musta, punajalkainen ja '
+              + 'pihdit mukaan lukien 84 millimetriä pitkä — suurin tunnettu lajitovereistaan. '
+              + 'Se eli syvissä koloissa saaren kuivilla tasangoilla ja tuli ulos vain öisin '
+              + 'sateen jälkeen. Fabricius nimesi lajin 1798, mutta 1904 se alennettiin '
+              + 'tavallisen rantapihtihännän alalajiksi ja unohtui tieteeltä. Kaksi '
+              + 'lintututkijaa löysi 1962 valtavat kuivat pihdit luita etsiessään, ja 1965 '
+              + 'löytyi vielä eläviä yksilöitä lohkareiden alta. Viimeinen havainto on '
+              + 'vuodelta 1967, ja etsinnät 1988, 1993, 2003, 2005 ja 2023 jäivät '
+              + 'tuloksettomiksi.',
+          selite: 'Piirretty ennallistus: naaras ja koiras vierekkäin. Elävästä eläimestä ei '
+            + 'ole valokuvaa, ja vasta 2023 saaren oma museo sai näytteen Keski-Afrikan '
+            + 'kuninkaallisesta museosta.',
+          lahde: 'Apokryltaros, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Puu, jonka luultiin kuolleen sata vuotta sitten',
+          tiedosto: 'Trochetiopsis ebenus or dwarf ebony on Saint Helena Island.jpg',
+          teksti: 'Saint Helenan eebenpuun uskottiin hävinneen jo 1800-luvulla, kunnes se '
+              + 'löydettiin uudelleen vuonna 1981. Luonnonvaraisia yksilöitä on jäljellä '
+              + 'kaksi, ja ne kasvavat kalliolla. Nimestään huolimatta laji ei ole sukua '
+              + 'kaupan eebenpuulle vaan malvakasveille. Vanhoja juuria huuhtoutuu yhä '
+              + 'esiin eroosiorinteistä, ja saarelaiset käyttävät niitä upotustöissä. '
+              + 'Pistokkaista puuta on saatu lisätyksi, ja moni saaren puutarha kasvattaa '
+              + 'nyt omaa pensastaan. Yhtä onnekas ei ollut Saint Helenan oliivi: sen '
+              + 'viimeinen luonnonvarainen yksilö kuoli 1994 ja viimeinen viljelty '
+              + 'joulukuussa 2003.',
+          selite: 'Eebenpuun kukka on valkoinen ja kartiomainen. Laji kasvaa nykyään '
+            + 'enimmäkseen taimitarhoissa ja puutarhoissa; luonnossa siitä on jäljellä '
+            + 'kaksi yksilöä.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Suuri metsä istutetaan takaisin',
+          tiedosto: 'Millennium Forest 2 (40349835074).jpg',
+          teksti: 'Saaren yli kulki ennen laaja metsä, Great Wood, joka ulottui Deadwoodin '
+              + 'tasangolta Prosperous Bayn tasangolle. Puut kaadettiin polttopuuksi, '
+              + 'viinanpolttoon ja nahan parkitsemiseen, ja vuohet söivät taimet: vuonna '
+              + '1710 raportoitiin, ettei metsästä ollut jäljellä yhtään pystyssä olevaa '
+              + 'puuta. Rotat ja vuohet olivat siihen mennessä lisääntyneet vitsauksen '
+              + 'mitoin, ja vuonna 1731 säädettiin asetus vuohikannan vähentämiseksi. '
+              + 'Vuodesta 2000 saaren koillisosaan on istutettu Millennium Forestia, jonka '
+              + 'tarkoitus on kasvattaa Great Wood takaisin kotoperäisistä lajeista.',
+          selite: 'Millennium Forestin nuoret puut punaisella tasangolla. Istutus alkoi '
+            + 'vuonna 2000 sinne, missä saaren suuri metsä kasvoi ennen raivausta.',
+          lahde: 'Luke McKernan, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Eteläisen tähtitaivaan ensimmäinen luettelo tehtiin tällä saarella — ja '
+          + 'samalla saarella opittiin ensimmäisen kerran, mitä ihminen tekee metsälle.',
+      nostot: [
+        {
+          otsikko: 'Opinnot kesken, laiva etelään',
+          aika: '1676–1679',
+          tiedosto: 'Edmund Halley.jpg',
+          teksti: 'Edmond Halley jätti Oxfordin kesken vuonna 1676 ja purjehti Saint '
+              + 'Helenalle kartoittamaan tähtiä, joita Euroopasta ei näy; kuningas Kaarle II '
+              + 'tuki retkeä. Saarelle pystytettiin observatorio, jossa oli 7,3 metriä pitkä '
+              + 'ilmateleskooppi ja kaukoputkitähtäimin varustettu sekstantti. Vuoden aikana '
+              + 'syntyi ensimmäinen kaukoputkella tehty eteläisen taivaan luettelo: 341 '
+              + 'tähteä. Samalla Halley näki Merkuriuksen kulkevan Auringon editse ja tajusi, '
+              + 'että Venuksen vastaavasta ylikulusta voisi laskea Maan etäisyyden '
+              + 'Auringosta. Oxford ei aikonut myöntää luvatta lähteneelle tutkintoa, mutta '
+              + 'kuninkaan kirje ratkaisi asian joulukuussa 1678.',
+          selite: 'Thomas Murrayn muotokuva Edmond Halleystä. Saarella tehty tähtiluettelo '
+            + 'nosti hänet Royal Societyn jäseneksi 22-vuotiaana.',
+          lahde: 'Thomas Murray, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Pilvi vei mittauksen, matka tuotti menetelmän',
+          aika: '1761–1765',
+          tiedosto: 'Nevil Maskelyne. Stipple engraving by E. Scriven after van d Wellcome V0003892.jpg',
+          teksti: 'Royal Society lähetti 1760 pappi Nevil Maskelynen ja matemaatikko Robert '
+              + 'Waddingtonin Saint Helenalle havaitsemaan Venuksen ylikulkua — juuri sitä '
+              + 'mittausta, jota Halley oli samalta saarelta käsin ehdottanut. Havaintopäivä '
+              + 'oli pilvinen, eikä ylikulusta saatu mitään. Maskelyne käytti kuitenkin '
+              + 'pitkän merimatkan kuuetäisyysmenetelmän koetteluun: Kuun paikasta voi '
+              + 'laskea pituusasteen ilman tarkkaa kelloa. Hän julkaisi menetelmän '
+              + 'taulukoineen 1763 ja esitti, että kuuetäisyydet laskettaisiin valmiiksi '
+              + 'joka vuodelle. Ehdotuksesta syntyi Nautical Almanac, ja sen mukana '
+              + 'Greenwichistä tuli merenkulun nollameridiaani.',
+          selite: 'Nevil Maskelyne kaiverruksessa. Saaren pilvet veivät häneltä ylikulun, '
+            + 'mutta matkalla koeteltu kuuetäisyysmenetelmä ratkaisi merenkulun vanhimman '
+            + 'ongelman.',
+          lahde: 'Edward Scriven, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Kuusi päivää, joista tuli teoria',
+          aika: '1836',
+          tiedosto: '277z Close up of Lot and Lot\'s wife, Landscape Photograph taken 1982 -) 1985. St Helena Island, South Atlantic Ocean.jpg',
+          teksti: 'Charles Darwin vietti saarella kuusi päivää heinäkuussa 1836 Beaglen '
+              + 'paluumatkalla, ja hänen havaintonsa ovat ensimmäiset tutkimukset saaren '
+              + 'geologiasta. Niiden pohjalta hän muotoili välivaiheen hypoteesin, jonka '
+              + 'mukaan tulivuoret kohoavat hitaasti, vähän kerrallaan ja jaksoittain — ei '
+              + 'yhtenä mullistuksena. Ajatus julkaistiin 1844 kirjassa tulivuorisaarten '
+              + 'geologiasta. Saari itse on kuuman pisteen työtä: basalttilaavaa alkoi '
+              + 'purkautua noin 145 miljoonaa vuotta sitten, ja viimeiset purkaukset olivat '
+              + 'noin seitsemän miljoonaa vuotta sitten. Lot ja Lot\'s Wife ovat '
+              + 'fonoliittitäytteitä, jotka kestivät eroosiota ympäristöään paremmin.',
+          selite: 'Lot kohoaa yksinäisenä pylväänä eroosion syömässä maisemassa: pehmeä '
+            + 'kiviaines on kulunut pois ja kova täyte jäänyt pystyyn.',
+          lahde: 'Peter Neaum, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Saari, jolla ympäristöajattelu sai alkunsa',
+          aika: '1775–1833',
+          tiedosto: 'PPN663958296 Ioh. Reinhold Forster und Geoerg Forster.jpg',
+          teksti: 'Kun Johann Reinhold ja Georg Forster nousivat maihin Cookin '
+              + 'Resolutionilta vuonna 1775, he odottivat näkevänsä, miten luonto muokkaa '
+              + 'ihmistä. He näkivät päinvastaista: kasvillisuuden hakkuu oli tuonut tulvat '
+              + 'ja kilpikonnakanta oli tapettu lähes olemattomiin. Saari oli riittävän '
+              + 'pieni ja riittävän eristynyt, jotta ihmisen jälki näkyi kerralla '
+              + 'kokonaan, ja siitä seurasi yksi maailman ensimmäisistä metsänsuojelulaeista. '
+              + 'Vuosien 1791 ja 1833 välillä saarella kokeiltiin järjestelmällisesti '
+              + 'suojelua, metsittämistä ja jopa sateen lisäämistä keinotekoisesti — '
+              + 'kokeita, joista ympäristöajattelun juuret johdetaan.',
+          selite: 'Isä ja poika Forster kenttätyössä. Kaiverrus on tehty J. F. Rigaud\'n '
+            + 'maalauksen mukaan ja näyttää heidät piirtämässä lintua Cookin toisen '
+            + 'maailmanympärimatkan varrella.',
+          lahde: 'Daniel Beyel, Wikimedia Commons (public domain)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Saarella kasvaa yksi maailman kalleimmista kahveista, viina tislataan '
+          + 'kaktuksen hedelmästä ja tonnikala nostetaan merestä yksi kerrallaan.',
+      nostot: [
+        {
+          otsikko: 'Kahvi, joka tuli Mokasta 1733',
+          aika: '1733–1994',
+          tiedosto: 'Gate of Saint Helena coffee farm at Rosemary Plain.jpg',
+          teksti: 'Vuonna 1733 komppanian laiva The Houghton toi Jemenin Mokan satamasta '
+              + 'Green Tipped Bourbon -kahvin siemeniä, jotka istutettiin eri puolille '
+              + 'saarta. Kasvit menestyivät, vaikka niitä ei juuri hoidettu. Lontoolainen '
+              + 'kahvikauppahuone Wm Burnie & Co kuvasi 1839 saaren kahvia laadultaan ja '
+              + 'maultaan ylivertaiseksi, ja 1845 sitä myytiin Lontoossa pennyllä naulalta '
+              + '— maailman kalleimpana ja harvinaisimpana. Vuonna 1851 Bamboo Hedge '
+              + 'Estaten sato voitti pääpalkinnon Lontoon maailmannäyttelyssä. Kaupallinen '
+              + 'viljely herätettiin uudelleen henkiin 1994, ja pensaat polveutuvat yhä '
+              + 'samasta 1733 tuodusta erästä.',
+          selite: 'Kahvitilan portti Rosemary Plainilla; portin takana kasvavat kahvipensaat '
+            + 'riveissä. Saaren kahvi myydään yhtenä maailman kalleimmista.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Viina, joka tislataan kaktuksen hedelmästä',
+          teksti: 'Tungi on saarelaisten nimi viikunakaktukselle, jonka norsunluukauppiaat '
+              + 'toivat Itä-Afrikasta 1850-luvulla. Kasvi villiintyi kuiville '
+              + 'rannikkorinteille ja on sittemmin päätynyt osaksi saaren omaa ruokapöytää. '
+              + 'Lajikkeita on kolme: keltainen "English", iso punainen "Madeira" ja pieni '
+              + 'kova "spiny red". Vain kaksi ensimmäistä kelpaavat tislaukseen, sillä '
+              + 'pienen hedelmän mehupitoisuus on liian matala, vaikka sen satokausi kestää '
+              + 'lähes kahdeksan kuukautta. Tungi-viina tislataan Alarm Forestissa '
+              + 'tislaamossa, jota kutsutaan maailman syrjäisimmäksi; samasta tislaamosta '
+              + 'tulee myös kahvilikööriä, giniä ja rommia.',
+        },
+        {
+          otsikko: 'Yksi vapa, yksi siima, yksi kala kerrallaan',
+          tiedosto: 'Sugar Loaf viewed from Jamestown harbour.jpg',
+          teksti: 'Saaren kalastus on pientä ja saalis enimmäkseen tonnikalaa, mutta '
+              + 'pyyntitapa on tarkkaan valittu: kalat nostetaan yksi kerrallaan vavalla ja '
+              + 'siimalla. Tunnuslause kuuluu englanniksi "one pole, one line, one fish at a '
+              + 'time", ja se on samalla myyntivaltti — osa saaren tonnikalasta on päätynyt '
+              + 'Kapkaupungin ravintoloiden listoille. Toinen vientituote tulee '
+              + 'mehiläisiltä: koska saarella ei ole niiden loisia eikä tauteja, tarhaajat '
+              + 'keräävät maailman puhtaimpiin kuuluvaa hunajaa. Molempia yritetään '
+              + 'kasvattaa saaren kymmenvuotisessa kehityssuunnitelmassa.',
+          selite: 'Pieni kalastusvene ankkurissa Jamestownin edustalla; taustalla kohoaa '
+            + 'Sugar Loaf. Saaren ainoa laituri on Rupert\'sin lahdessa.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Plo, kalapihvit ja se, mitä laivat toivat',
+          teksti: 'Saint Helenan keittiö on matkalaisten keittiö: useimmat paikalliset '
+              + 'reseptit ovat maailmalta tuotujen ruokien muunnelmia, jotka ovat jääneet '
+              + 'saarelle asumaan. Perusruokia ovat kalapihvit, jotka sidotaan kananmunalla '
+              + 'ja maustetaan chilillä, sekä plo — paikallinen nimi pilaville, curryiselle '
+              + 'riisiruoalle, joka muistuttaa intialaista pulaoa mutta on rakenteeltaan '
+              + 'lähempänä risottoa. Toimittaja Julia Buckley kirjoitti 2017, että saaren '
+              + 'ruoka on lontoolaisen mittapuun mukaan melko retroa, koska uutta keittiötä '
+              + 'ei täällä harrasteta.',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä satamasta Saint Helenan kahvin siemenet tuotiin vuonna 1733?',
+        vaihtoehdot: [
+          'Brasilian Santosista',
+          'Jamaikan Kingstonista',
+          'Jemenin Mokasta',
+          'Javan Bataviasta',
+        ],
+        oikea: 2,
+        fakta: 'Green Tipped Bourbon -kahvin siemenet tulivat Mokasta komppanian laivalla '
+            + 'The Houghton, ja saaren nykyiset pensaat polveutuvat samasta erästä.',
+      },
+    },
+    {
+      id: 'urheilu',
+      nimi: 'Urheilu',
+      johdanto: 'Ensimmäinen kirjattu urheilutapahtuma oli hevoskilpailu vuonna 1818, ja '
+          + 'siitä lähtien kilpailemisen suurin este on ollut matka: lähimmälle mantereelle '
+          + 'on lähes kaksituhatta kilometriä.',
+      nostot: [
+        {
+          otsikko: '699 porrasta ylös, kello käy',
+          aika: '1829–1871',
+          tiedosto: 'Jacob\'s Ladder viewed from the bottom Jamestown Saint Helena.jpg',
+          teksti: 'Saint Helena Railway Company rakensi 1829 Jamestownin ja Ladder Hillin '
+              + 'linnakkeen välille 282 metriä pitkän vinoradan, jonka suunnitteli '
+              + 'paikallinen insinööri J. W. Hoar. Kaksi vaunua kulki rautalevytetyillä '
+              + 'kuusipuisilla kiskoilla, ja niiden välissä oli seitsemänsadan askelman '
+              + 'porras jalankulkijoille; nousukulma vaihteli 39 ja 41 asteen välillä. '
+              + 'Vetovoiman antoi kolme aasia, jotka pyörittivät ylhäällä vintturia. '
+              + 'Termiitit söivät ratapölkyt, ja koneisto purettiin 1871. Tietyö peitti '
+              + 'myöhemmin yhden askelman, joten portaita on 699. Ne juostaan vuosittain '
+              + 'aikaa vastaan, ja ennätys on 4 minuuttia 40,75 sekuntia.',
+          selite: 'Jaakobin tikkaat nousevat Jamestownin talojen välistä suoraan ylös '
+            + 'Ladder Hillille. Kiskot ja vaunut ovat poissa, porras jäi.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Krikettijoukkue, joka matkusti viisi vuorokautta merellä',
+          aika: '2012',
+          tiedosto: 'Cricket on Francis Plain 1 (40370954224).jpg',
+          teksti: 'Saaren krikettiliitto liittyi kansainväliseen kattojärjestöön vuonna '
+              + '2001, ja ensimmäinen turnaus pelattiin huhtikuussa 2012 Etelä-Afrikassa. '
+              + 'Sinne oli matkaa viisi vuorokautta merellä postilaiva RMS St Helenalla, '
+              + 'koska lentokenttää ei vielä ollut, ja joukkue keräsi matkarahat itse: '
+              + '24 000 puntaa. Debyytti onnistui — voitot Malista, Gambiasta, Kamerunista '
+              + 'ja Marokosta sekä viides sija kahdeksasta. Karsinnoissa 2018 kaatuivat '
+              + 'Eswatini, Malawi ja Lesotho, ja vuoden 2019 alusta kaikista otteluista '
+              + 'tuli virallisia maaotteluita. Vuonna 2022 lentoyhtiö antoi joukkueelle '
+              + 'ilmaiset liput karsintoihin.',
+          selite: 'Krikettiottelu Francis Plainilla ylängön juurella; pilvi lepää '
+            + 'harjanteen päällä kuten useimpina päivinä.',
+          lahde: 'Luke McKernan, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Purjehduskilpailu, jonka maali on keskellä valtamerta',
+          teksti: 'Governor\'s Cup purjehditaan Kapkaupungista Saint Helenalle joka toinen '
+              + 'vuosi joulu- ja tammikuussa. Reitti kulkee eteläisen Atlantin poikki, ja '
+              + 'maalissa odottaa saari, jolla ei ole luonnonsatamaa: veneet jäävät '
+              + 'ankkuriin James Baylle ja väki nousee maihin pikkuveneillä. Purjehtijoita '
+              + 'käy saarella noin kuusisataa vuodessa. Ennen lentoaseman avaamista muut '
+              + 'tulivat postilaivalla, joka kulki Kapkaupungista viidessä vuorokaudessa ja '
+              + 'poikkesi saarella noin kolmekymmentä kertaa vuodessa; matkustajat ja rahti '
+              + 'siirrettiin maihin samalla tavalla veneillä.',
+        },
+        {
+          otsikko: 'Ensimmäinen, joka ui saaren ympäri',
+          aika: '2026',
+          tiedosto: 'ISS019E014918 Saint Helena Island.jpg',
+          teksti: 'Helmikuussa 2026 kroatialainen kaukouimari Dina Levačić ui ensimmäisenä '
+              + 'ihmisenä Saint Helenan ympäri: 48 kilometriä 17 tunnissa ja 13 '
+              + 'minuutissa. Saarelaisten oma tie kansainvälisiin kisoihin on ollut yhtä '
+              + 'mutkainen. Kansainyhteisön kisoihin osallistuttiin ensimmäisen kerran '
+              + '1982, sitten tuli kuudentoista vuoden tauko, ja paluu tapahtui 1998; sen '
+              + 'jälkeen saari on ollut mukana joka kerta. Mitalia ei ole tullut, ja syyksi '
+              + 'mainitaan saaren syrjäisyys ja liikenneyhteyksien puute. Saari kuuluu myös '
+              + 'saarten omaan kisajärjestöön.',
+          selite: 'Saint Helena avaruudesta: 16 kertaa 8 kilometrin kalliosaari keskellä '
+            + 'eteläistä Atlanttia, lähes 1 900 kilometriä Afrikan rannikosta.',
+          lahde: 'NASA Johnson Space Center / Julian Herzog, Wikimedia Commons (public domain)',
+        },
+      ],
+    },
+  ],
 };
