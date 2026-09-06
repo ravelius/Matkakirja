@@ -13289,4 +13289,390 @@ export const SKANDAALIT = {
       },
     },
   ],
+
+  /* ================================================================
+   * ERÄ M18 (6.9.2026). Omistaja: *"Jatka kartta nostojen tekoa koko
+   * maailmaan."* Neljä maata, kaksi skandaalia kummallekin: PRY, URY,
+   * VEN ja VUT. Kaikki pisteet on tarkistettu maan fokuslehden
+   * rajausta vasten ja mitattu irti pelikaupungeista
+   * (KAUPUNGIN_KOHDALLA_SADE 7); perustelut ja mitat ovat maiden
+   * maastokohdepakeissa (js/packs/maastokohteet-pry.js ja sisarpakit).
+   * Erä on kuvaton.
+   * ================================================================ */
+  PRY: [
+    /*
+     * Humaitán linnoitus Paraguayjoen mutkassa Ñeembucússa.
+     * Lähde: en.wikipedia.org: Siege of Humaitá
+     */
+    {
+      id: 'humaitan-piiritys',
+      otsikko: 'Humaitá 1868 — Etelä-Amerikan Gibraltar',
+      nimio: 'Humaitá 1868',
+      vuosi: '1868',
+      paikka: 'Humaitán linnoitus, Ñeembucú',
+      lat: -27.07, lon: -58.5,
+      kortti: 'Liittoutuneiden laivat eivät päässeet joen ohi kahteen vuoteen. Kun '
+        + 'linnoitus vihdoin murtui heinäkuussa 1868, puolustajat eivät antautuneet vaan '
+        + 'katosivat suolle — ja voittajia moitittiin siitä, että kaikki oli kestänyt '
+        + 'näin kauan.',
+      teksti: 'Humaitán piiritys oli sotatoimi, jossa Kolmen liiton joukot — Brasilia, '
+        + 'Argentiina ja Uruguay — kiersivät, piirittivät ja valtasivat Humaitán '
+        + 'linnoituksen, paraguaylaisen tukikohdan, jota kutsuttiin Etelä-Amerikan '
+        + 'Gibraltariksi. Linnoitus kaatui 26. heinäkuuta 1868, ja tapahtumaa voi pitää '
+        + 'koko sodan avainhetkenä.\n\n'
+        + 'Liittoutuneita arvosteltiin ankarasti siitä, kuinka kauan valtaus kesti, ja '
+        + 'linnoituksen vahvuutta vähäteltiin. Kyse oli kuitenkin ammattiarmeijaa '
+        + 'edeltävistä joukoista, jotka sotivat kaukana kotoa vastassaan tottumaton '
+        + 'puolustustapa: tykistö oli kaivautunut valmiisiin asemiin ja ampui '
+        + 'sadetta jalkaväkeä vastaan.\n\n'
+        + 'Maasto oli Etelä-Paraguayn kosteikkoa, kartoittamatonta ja suurimmaksi osaksi '
+        + 'kulkukelvotonta. Se antoi paraguaylaisille suuren edun, vaikka heidän '
+        + 'huoltonsa oli surkea ja rohkeutensa esimerkillinen.\n\n'
+        + 'Liittoutuneet olivat ensin yrittäneet ottaa linnoituksen suoralla hyökkäyksellä '
+        + 'Paraguayjoelta ja kärsineet tuhoisan tappion, joka sekoitti ja lannisti joukot. '
+        + 'Taistelukunnon palauttaminen jäi uudelle ylipäällikölle, Caxiasin markiisille, '
+        + 'joka ei poliittisista syistä voinut ottaa riskiä uudesta katastrofista.',
+      lahde: 'en-Wikipedia "Siege of Humaitá", johdanto-osa ja osio "Context and '
+        + 'importance". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä Humaitán puolustajille tapahtui, kun linnoitus kaatui?',
+        vaihtoehdot: [
+          'He antautuivat liittoutuneille',
+          'He pakenivat, ja suurin osa taisteli myöhemmin uudelleen',
+          'He räjäyttivät linnoituksen ja itsensä',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Nueva Germania, San Pedron maakunta.
+     * Lähde: en.wikipedia.org: Nueva Germania
+     */
+    {
+      id: 'nueva-germania',
+      otsikko: 'Nueva Germania 1887 — mallikylä, joka ei toiminut',
+      nimio: 'Nueva Germania',
+      vuosi: '1887',
+      paikka: 'Nueva Germania, San Pedro',
+      lat: -23.9, lon: -56.7,
+      kortti: 'Kaksi saksalaista lähti 1887 Paraguayn metsiin perustamaan mallikylää, '
+        + 'jonka piti todistaa oman kansan paremmuus. Kolmea vuotta myöhemmin perustaja '
+        + 'oli kuollut ja asukkaat ottivat kylän omiin nimiinsä.',
+      teksti: 'Nueva Germania on San Pedron maakunnan piirikunta Paraguayssa. Bernhard '
+        + 'Förster ja Elisabeth Förster-Nietzsche perustivat sen 23. elokuuta 1887 '
+        + 'saksalaiseksi siirtokunnaksi, jonka piti olla uuden maailman mallikylä ja '
+        + 'osoittaa saksalaisen kulttuurin ja yhteiskunnan ylivertaisuus. Hankkeen '
+        + 'taustalla olivat antisemitistiset ja rotuopilliset aatteet.\n\n'
+        + 'Elisabeth Förster-Nietzsche oli filosofi Friedrich Nietzschen sisar. '
+        + 'Siirtolaiset olivat pääosin vähävaraisia perheitä Saksin alueelta: liikkeelle '
+        + 'lähti viisi perhettä, myöhemmin neljätoista. Kylä perustettiin Aguaray '
+        + 'Guazú -joen rannalle noin 250 kilometrin päähän Asunciónista.\n\n'
+        + 'Hanke kaatui heti alkuunsa. Förster surmasi itsensä 1889, ja hänen '
+        + 'kuolemansa ja Förster-Nietzschen Saksaan-paluun jälkeen asukkaat ottivat '
+        + 'kylän hallinnan omiin käsiinsä ja sanoutuivat irti perustajiensa aatteista.\n\n'
+        + 'Rasistisen ja antisemitistisen historiansa vuoksi kylä esitetään usein '
+        + 'sensaatiohakuisesti, minkä nykyiset asukkaat torjuvat. Piirikunta on noin 297 '
+        + 'kilometrin päässä Asunciónista, ja sen halki virtaavat Aguaray Guazú ja '
+        + 'Aguaray mí sekä Tutytín ja Empaladon purot.',
+      lahde: 'en-Wikipedia "Nueva Germania", johdanto-osa sekä osiot "Geography" ja '
+        + '"History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Nueva Germanian perustajien hanke päättyi?',
+        vaihtoehdot: [
+          'Kylä hylättiin kokonaan',
+          'Paraguayn hallitus karkotti siirtolaiset',
+          'Perustaja surmasi itsensä ja asukkaat ottivat kylän omiin käsiinsä',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  URY: [
+    /*
+     * Río de la Platan suu Punta del Esten kaakkoispuolella.
+     * Lähde: en.wikipedia.org: Battle of the River Plate
+     */
+    {
+      id: 'graf-spee-1939',
+      otsikko: 'Graf Spee 1939 — 72 tuntia puolueettomassa satamassa',
+      nimio: 'Graf Spee 1939',
+      vuosi: '1939',
+      paikka: 'Río de la Platan suu, Uruguayn edustalla',
+      lat: -35.35, lon: -54.6,
+      kortti: 'Saksalainen risteilijä oli upottanut kauppalaivoja kuukausia, kun kolme '
+        + 'alusta löysi sen Río de la Platan suulta. Taistelun jälkeen se pakeni '
+        + 'puolueettoman maan satamaan eikä lähtenyt sieltä enää koskaan taistelemaan.',
+      teksti: 'Río de la Platan taistelu käytiin Etelä-Atlantilla 13. joulukuuta 1939, ja '
+        + 'se oli Britannian laivaston ensimmäinen meritaistelu toisessa maailmansodassa. '
+        + 'Saksan laivaston raskas risteilijä Admiral Graf Spee, komentajanaan kapteeni '
+        + 'Hans Langsdorff, kohtasi kommodori Henry Harwoodin osaston: kevyet risteilijät '
+        + 'HMS Ajax ja HMNZS Achilles sekä raskaan risteilijän HMS Exeter.\n\n'
+        + 'Graf Spee oli purjehtinut Etelä-Atlantille elokuussa 1939 jo ennen sodan alkua '
+        + 'ja aloittanut kauppasodan saatuaan siihen luvan 26. syyskuuta. Britit kokosivat '
+        + 'useita etsintäosastoja, ja Harwoodin osasto havaitsi aluksen Río de la Platan '
+        + 'suulla Argentiinan ja Uruguayn rannikoiden edustalla.\n\n'
+        + 'Taistelussa Exeter vaurioitui pahoin ja joutui vetäytymään Falklandin suuntaan, '
+        + 'ja Ajax ja Achilles saivat kohtalaisia vaurioita. Graf Speen vauriot eivät '
+        + 'olleet laajoja, mutta ne olivat ratkaisevia, sillä aluksen '
+        + 'polttoainejärjestelmä oli rikki.\n\n'
+        + 'Ajax ja Achilles varjostivat alusta, kunnes se ajoi puolueettoman Uruguayn '
+        + 'pääkaupungin Montevideon satamaan kiireellisiin korjauksiin. Langsdorffille '
+        + 'kerrottiin, ettei satamassaoloa voitaisi jatkaa yli 72 tuntia. Uskoen '
+        + 'ilmeisesti, että britit olivat koonneet ylivoimaisen laivueen odottamaan, hän '
+        + 'käski upottaa aluksen 17. joulukuuta ja riisti itseltään hengen kaksi päivää '
+        + 'myöhemmin.',
+      lahde: 'en-Wikipedia "Battle of the River Plate", johdanto-osa ja osio '
+        + '"Background". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Admiral Graf Speen matka päättyi?',
+        vaihtoehdot: [
+          'Miehistö upotti aluksen itse Montevideon edustalla',
+          'Britit upottivat sen taistelussa',
+          'Se pääsi pakenemaan Saksaan',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Fray Bentos, Río Negron maakunta (Anglon tehdasalue).
+     * Lähde: en.wikipedia.org: Liebig's Extract of Meat Company; Fray Bentos
+     */
+    {
+      id: 'anglon-lihauute',
+      otsikko: 'Fray Bentos 1863 — lihauute, joka syntyi vuotien jätteestä',
+      nimio: 'Anglo 1863',
+      vuosi: '1863–1979',
+      paikka: 'Fray Bentos, Río Negro',
+      lat: -33.1333, lon: -58.3,
+      kortti: 'Kemisti keksi tavan tiivistää naudanliha ruskeaksi tahnaksi, mutta '
+        + 'Euroopassa liha oli siihen liian kallista. Ratkaisu löytyi Uruguayn '
+        + 'jokirannasta, jossa karja teurastettiin siihen asti pelkkien vuotien vuoksi.',
+      teksti: 'Justus von Liebig kehitti 1847 väkevöidyn naudanlihauutteen, jonka piti olla '
+        + 'halpa ja ravitseva lihan korvike niille, joilla ei ollut varaa lihaan. '
+        + 'Menetelmässä rasva poistettiin, liha hienonnettiin ja keitettiin vedessä, ja '
+        + 'liemi haihdutettiin miedolla lämmöllä 80-prosenttiseksi tahnaksi. Liebig '
+        + 'julkaisi menetelmänsä 1847 ja halusi sen mahdollisimman monen ulottuville.\n\n'
+        + 'Euroopassa liha oli kuitenkin liian kallista raaka-aineeksi. Saksalainen '
+        + 'rautatieinsinööri George Christian Giebert luki 1862 Liebigin kirjeitä ja '
+        + 'ehdotti hänelle tehdasta Etelä-Amerikkaan: siellä karja teurastettiin ennen '
+        + 'säilyke- ja pakastusaikaa pelkkien vuotien takia, ja uutetta uskottiin '
+        + 'saatavan kolmasosalla eurooppalaisesta hinnasta.\n\n'
+        + 'Liebigin suostumuksella ja karjatilallisten rahoituksella Giebert perusti '
+        + 'Societé de Fray Bentos Giebert & Cie:n ja rakensi koelaitoksen Villa '
+        + 'Independenciaan, joka sai myöhemmin nimen Fray Bentos. Vuoden 1864 loppuun '
+        + 'mennessä uutetta oli viety 50 000 naulaa, arvoltaan 12 000 puntaa, ja Liebig '
+        + 'Extract of Meat Company perustettiin Lontoossa 4. joulukuuta 1865.\n\n'
+        + 'Tehdas toimi 117 vuotta ja suljettiin 1979. Alueelle avattiin museo '
+        + 'maaliskuussa 2005, ja 5. heinäkuuta 2015 tehdaskortteli Barrio Anglo '
+        + 'liitettiin maailmanperintöluetteloon nimellä Fray Bentosin kulttuuri- ja '
+        + 'teollisuusmaisema.',
+      lahde: 'en-Wikipedia "Liebig\'s Extract of Meat Company", osio "Early development", '
+        + 'ja "Fray Bentos", osio "History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi lihauutetta ryhdyttiin valmistamaan juuri Uruguayssa?',
+        vaihtoehdot: [
+          'Siellä oli Euroopan halvin polttoaine',
+          'Siellä karja teurastettiin siihen asti pelkkien vuotien takia',
+          'Siellä kasvoi uutteeseen tarvittava mauste',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  VEN: [
+    /*
+     * San Carlosin linnake Maracaibon lahden suulla.
+     * Lähde: en.wikipedia.org: Venezuelan crisis of 1902–1903
+     */
+    {
+      id: 'venezuelan-saarto',
+      otsikko: 'Saarto 1902 — kolme suurvaltaa perimässä velkoja',
+      nimio: 'Saarto 1902',
+      vuosi: '1902–1903',
+      paikka: 'San Carlosin linnake, Maracaibon lahden suu',
+      lat: 10.987, lon: -71.601,
+      kortti: 'Kolme suurvaltaa lähetti sotalaivat perimään velkoja, ja pieni maa menetti '
+        + 'laivastonsa muutamassa päivässä. Presidentti ei silti taipunut, ja '
+        + 'Yhdysvallat katsoi vierestä.',
+      teksti: 'Venezuelan kriisi 1902–1903 oli Britannian, Saksan ja Italian Venezuelaa '
+        + 'vastaan asettama merisaarto joulukuusta 1902 helmikuuhun 1903. Syynä oli, että '
+        + 'presidentti Cipriano Castro kieltäytyi maksamasta ulkomaisia velkoja ja '
+        + 'korvauksia vahingoista, joita eurooppalaiset olivat kärsineet maan '
+        + 'sisällissodissa.\n\n'
+        + 'Castro oletti, että Yhdysvallat estäisi Monroen opin nojalla eurooppalaisen '
+        + 'sotilaallisen väliintulon. Presidentti Theodore Roosevelt ja ulkoministeriö '
+        + 'tulkitsivat oppia kuitenkin niin, että se koski alueen valtaamista eikä '
+        + 'väliintuloa sinänsä. Kun suurvallat lupasivat etukäteen, ettei aluevaltauksia '
+        + 'tule, Yhdysvallat pysyi virallisesti puolueettomana.\n\n'
+        + 'Venezuelan pieni laivasto lamautettiin nopeasti. Britit pommittivat '
+        + '13. joulukuuta Puerto Cabellon linnakkeita Saksan SMS Vinetan avustamana, ja '
+        + 'Italian tehtäväksi tuli Vela de Coron sataman saarto; myös Alankomaiden, '
+        + 'Belgian ja Espanjan sota-aluksia liittyi saartoon.\n\n'
+        + 'Tammikuussa 1903 saksalainen SMS Panther yritti päästä Maracaibon lahdelle ja '
+        + 'vaihtoi 17. tammikuuta laukauksia San Carlosin linnakkeen kanssa, mutta '
+        + 'vetäytyi puolen tunnin jälkeen, koska matalikot estivät sitä pääsemästä '
+        + 'tarpeeksi lähelle. Venezuelalaiset pitivät tätä voittona, ja saksalainen '
+        + 'komentaja lähetti raskaammin aseistetun Vinetan näyttämään esimerkkiä: '
+        + '21. tammikuuta se pommitti linnakkeen tuleen ja tuhosi sen, ja viereisessä '
+        + 'kaupungissa kuoli 25 siviiliä.',
+      lahde: 'en-Wikipedia "Venezuelan crisis of 1902–1903", johdanto-osa sekä osiot '
+        + '"Blockade" ja "Escalation". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Yhdysvallat ei estänyt eurooppalaisten saartoa?',
+        vaihtoehdot: [
+          'Se oli itse mukana saartamassa',
+          'Se ei saanut tietoa saarrosta ajoissa',
+          'Se tulkitsi Monroen opin koskevan vain alueen valtaamista',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Cubaguan saari Margaritan eteläpuolella.
+     * Lähde: en.wikipedia.org: Nueva Cádiz
+     */
+    {
+      id: 'nueva-cadiz',
+      otsikko: 'Nueva Cádiz — kaupunki, joka eli helmistä ja kuoli niiden mukana',
+      nimio: 'Nueva Cádiz',
+      vuosi: '1500–1541',
+      paikka: 'Cubaguan saari, Venezuelan rannikon edustalla',
+      lat: 10.8239, lon: -64.1667,
+      kortti: 'Etelä-Amerikan mantereen ensimmäinen espanjalaiskaupunki nousi pienelle '
+        + 'saarelle, jolla ei ollut juuri mitään. Se kannatti silti, koska pohjassa oli '
+        + 'helmiä — ja katosi, kun helmisimpukat loppuivat.',
+      teksti: 'Nueva Cádiz on arkeologinen kohde ja entinen satamakaupunki Cubaguan saarella '
+        + 'Venezuelan rannikon edustalla. Paikka perustettiin 1500 kausiluonteiseksi '
+        + 'asuinpaikaksi, ja 1515 siitä tuli ympärivuotinen kaupunki; se oli Amerikan '
+        + 'ensimmäisiä eurooppalaisia asutuksia.\n\n'
+        + 'Jo 1502 saarelle rakennettiin rancheríoita, joissa asuttiin kolmesta neljään '
+        + 'kuukautta vuodessa kauppakauden ajan. Saari kiinnosti runsaiden '
+        + 'helmisimpukkamatalikkojensa vuoksi. Asutus muuttui pysyväksi, ja vuoteen 1520 '
+        + 'mennessä — suuren alkuperäiskansojen kapinan jälkeen — vakinaisia asukkaita oli '
+        + 'yli 300.\n\n'
+        + 'Kaarle V:n antamalla kuninkaallisella määräyksellä 12. syyskuuta 1528 paikasta '
+        + 'tehtiin kaupunki nimeltä Nueva Cádiz, ja siitä tuli Etelä-Amerikan ensimmäinen '
+        + 'espanjalainen kaupunki. Vuonna 1530 siellä asui 223 eurooppalaista ja 700 '
+        + 'alkuperäisasukasta, ja huipussaan noin 1535 asukkaita oli yli 1 500.\n\n'
+        + 'Helmisimpukkamatalikot ehtyivät kuitenkin yhä pahemmin, ja espanjalaiset '
+        + 'joutuivat rajoittamaan tuotantoa. Kun Guajiran niemimaalta löytyi uusia '
+        + 'matalikkoja, kaupunki taantui nopeasti: 1539 saarella oli enää alle 50 ihmistä, '
+        + 'ja hirmumyrsky tuhosi jäljellä olleet rakennukset 1541. Osin veden alle jääneet '
+        + 'rauniot julistettiin Venezuelan kansallismonumentiksi 1979.',
+      lahde: 'en-Wikipedia "Nueva Cádiz", johdanto-osa ja osio "History". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Nueva Cádiz hylättiin?',
+        vaihtoehdot: [
+          'Helmisimpukkamatalikot ehtyivät',
+          'Kaupunki paloi maan tasalle',
+          'Kaupunki siirrettiin mantereelle',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  VUT: [
+    /*
+     * Espiritu Santon sataman väylä Luganvillen edustalla.
+     * Lähde: en.wikipedia.org: SS President Coolidge
+     */
+    {
+      id: 'coolidgen-uppoaminen',
+      otsikko: 'Coolidge 1942 — laiva, joka ajoi omalle miinakentälle',
+      nimio: 'Coolidge 1942',
+      vuosi: '1942',
+      paikka: 'Espiritu Santon sataman väylä',
+      lat: -15.524, lon: 167.235,
+      kortti: 'Purjehdusohjeista oli vahingossa jäänyt pois tieto siitä, missä omat miinat '
+        + 'olivat. Kapteeni valitsi leveimmän väylän, ja kaksi räjähdystä myöhemmin '
+        + 'tuhannet miehet kävelivät rantaan ilman tavaroitaan.',
+      teksti: 'SS President Coolidge oli 1931 valmistunut yhdysvaltalainen valtamerilaiva, '
+        + 'joka muutettiin kiireesti joukkojenkuljetusalukseksi alkuvuonna 1942: '
+        + 'siviilivarusteet purettiin tai suojattiin ja majoitus järjestettiin 5 000 '
+        + 'sotilaalle. Se lähti 6. lokakuuta San Franciscosta kohti Uutta-Kaledoniaa ja '
+        + 'Uusia Hebridejä mukanaan 172. jalkaväkirykmentti ja satamanpuolustusyksikkö, '
+        + 'jonka tehtävä oli suojata Espiritu Santon lentokenttää.\n\n'
+        + 'Saarelle oli rakennettu suuri tukikohta ja satama, jota suojasivat miinakentät. '
+        + 'Tieto turvallisesta sisääntuloreitistä oli vahingossa jäänyt pois aluksen '
+        + 'purjehdusohjeista, ja 26. lokakuuta 1942 kapteeni Henry Nelson pyrki satamaan '
+        + 'leveintä ja ilmeisintä väylää japanilaisia sukellusveneitä peläten. Alus osui '
+        + 'miinaan konehuoneen kohdalla ja hetkeä myöhemmin toiseen miinaan perän '
+        + 'lähellä.\n\n'
+        + 'Nelson ajoi aluksen matalikolle ja käski jättää sen. Koska uppoamiseen ei '
+        + 'uskottu, sotilaita kehotettiin jättämään tavaransa: pelastustöiden piti alkaa '
+        + 'seuraavina päivinä. Puolentoista tunnin aikana 5 340 miestä pääsi maihin ilman '
+        + 'paniikkia, mutta koralliriutta esti rantautumisen, ja alus kallistui, upposi '
+        + 'perä edellä ja liukui väylän pohjaan.\n\n'
+        + 'Uhreja oli kaksi: konehuoneessa työskennellyt Robert Reid sekä kapteeni Elwood '
+        + 'Joseph Euart, joka oli jo päässyt turvaan mutta palasi hakemaan sairastuvalle '
+        + 'jääneitä miehiä, pelasti heidät eikä päässyt itse ulos. Nouméassa joulukuussa '
+        + '1942 kokoontunut sotilaskomissio vapautti Nelsonin syytteistä, ja tutkinnassa '
+        + 'kävi ilmi, ettei kauppalaivaston aluksille annettu kaikkea saatavilla ollutta '
+        + 'taktista tietoa — etenkään miinojen sijaintia.',
+      lahde: 'en-Wikipedia "SS President Coolidge", johdanto-osa sekä osiot "Troopship", '
+        + '"Sinking" ja "Inquiries". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi President Coolidge upposi?',
+        vaihtoehdot: [
+          'Japanilainen sukellusvene torpedoi sen',
+          'Se ajoi omien miinojen päälle, koska miinatiedot puuttuivat ohjeista',
+          'Se paloi konehuoneen tulipalossa',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Erromangon saari, Tafean maakunta.
+     * Lähde: en.wikipedia.org: Erromango
+     */
+    {
+      id: 'erromangon-santelipuu',
+      otsikko: 'Erromango — santelipuu, taudit ja työvoimakauppa',
+      nimio: 'Erromango',
+      vuosi: '1825–1906',
+      paikka: 'Erromangon saari, Tafea',
+      lat: -18.8139, lon: 169.1228,
+      kortti: 'Kiinassa arvostettu tuoksupuu toi saarelle laivan toisensa jälkeen, ja '
+        + 'mukana tuli tauteja, joihin saarelaisilla ei ollut vastustuskykyä. Kun puu '
+        + 'loppui, alkoi toinen kauppa.',
+      teksti: 'Kauppias ja seikkailija Peter Dillon sai 1825 tietää Erromangon suurista '
+        + 'santelipuuvarannoista; puuta arvostettiin Kiinassa tuoksuöljyn ja veistotyön '
+        + 'vuoksi. Tieto levisi, ja saarelle tuli muitakin hyödyntäjiä, mistä seurasi '
+        + 'yhteenottoja saarelaisten ja kauppiaiden välillä.\n\n'
+        + 'Vuonna 1830 Havaijin kuningas Kamehameha III lähetti kaksi laivaa ja 479 '
+        + 'havaijilaista ottamaan saaren ja sen santelipuun haltuunsa. Toinen aluksista '
+        + 'räjähti vahingossa ankkurissa, kun ruutivarasto syttyi, ja mukana kuoli '
+        + 'retkikunnan johtaja Boki. Erromangolaiset vastustivat tulijoita voimalla, ja '
+        + 'tuotu tautiepidemia tappoi suurimman osan tongalaisista ja havaijilaisista '
+        + 'työntekijöistä sekä monta saarelaista; Havaijille pääsi palaamaan vain 20 '
+        + 'miestä.\n\n'
+        + 'Saaren väkiluku ennen eurooppalaiskontaktia arvioidaan 5 000:ksi, joidenkin '
+        + 'arvioiden mukaan jopa 20 000:ksi. Tuodut taudit tekivät tuhoa: isorokkoon '
+        + 'kuoli 1853 kuusikymmentä prosenttia erromangolaisista, ja 1861 seurasi '
+        + 'tuhkarokkoepidemia. Lähetyssaarnaajat syyttivät epidemioista '
+        + 'santelipuukauppiaita, ja saarelaiset kostivat surmaamalla lähetyssaarnaajia; '
+        + 'kaikkiaan heitä kuoli saarella kuusi.\n\n'
+        + 'Santelipuu oli loppuun käytetty 1865. Vuosina 1863–1906 noin 40 000 ihmistä '
+        + 'silloisilta Uusilta Hebrideiltä vietiin laivoilla pakkotyöhön Queenslandin '
+        + 'puuvilla- ja sokeriruokoviljelmille ja 10 000 lisää Uuden-Kaledonian '
+        + 'nikkelikaivoksiin sekä Fidžin, Samoan ja Havaijin viljelmille. Osa houkuteltiin '
+        + 'mukaan petoksella, osa pakotettiin, osa lähti vapaaehtoisesti. '
+        + 'Erromangolaisten tarkkaa määrää ei tiedetä, mutta 25 vuotta sen jälkeen kun '
+        + 'kauppa päättyi 1906, saaren väkiluku oli enää 381.',
+      lahde: 'en-Wikipedia "Erromango", osiot "The sandalwood trade", "Introduced diseases '
+        + 'and depopulation" ja "The labour trade and blackbirding". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka moni ihminen vietiin Uusilta Hebrideiltä pakkotyöhön '
+          + 'Queenslandiin vuosina 1863–1906?',
+        vaihtoehdot: [
+          'Noin 40 000',
+          'Noin 400',
+          'Noin 4 000',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
 };

@@ -136,6 +136,7 @@ import { MAASTOKOHTEET_PHL } from './maastokohteet-phl.js';
 import { MAASTOKOHTEET_PNG } from './maastokohteet-png.js';
 import { MAASTOKOHTEET_POL } from './maastokohteet-pol.js';
 import { MAASTOKOHTEET_PRT } from './maastokohteet-prt.js';
+import { MAASTOKOHTEET_PRY } from './maastokohteet-pry.js';
 import { MAASTOKOHTEET_QAT } from './maastokohteet-qat.js';
 import { MAASTOKOHTEET_ROU } from './maastokohteet-rou.js';
 import { MAASTOKOHTEET_RUS } from './maastokohteet-rus.js';
@@ -160,13 +161,17 @@ import { MAASTOKOHTEET_TZA } from './maastokohteet-tza.js';
 import { MAASTOKOHTEET_UGA } from './maastokohteet-uga.js';
 import { MAASTOKOHTEET_UKR } from './maastokohteet-ukr.js';
 import { MAASTOKOHTEET_USA } from './maastokohteet-usa.js';
+import { MAASTOKOHTEET_URY } from './maastokohteet-ury.js';
 import { MAASTOKOHTEET_UZB } from './maastokohteet-uzb.js';
+import { MAASTOKOHTEET_VEN } from './maastokohteet-ven.js';
 import { MAASTOKOHTEET_VNM } from './maastokohteet-vnm.js';
+import { MAASTOKOHTEET_VUT } from './maastokohteet-vut.js';
 import { MAASTOKOHTEET_YEM } from './maastokohteet-yem.js';
 import { MAASTOKOHTEET_ZAF } from './maastokohteet-zaf.js';
 import { MAASTOKOHTEET_ZWE } from './maastokohteet-zwe.js';
 
 /** Maan ISO-tunnus → maan maastokohteet. 102 maata. */
+/** Maan ISO-tunnus → maan maastokohteet. 101 maata. */
 export const MAASTOKOHTEET = {
   AFG: MAASTOKOHTEET_AFG,
   AGO: MAASTOKOHTEET_AGO,
@@ -242,6 +247,7 @@ export const MAASTOKOHTEET = {
   PNG: MAASTOKOHTEET_PNG,
   POL: MAASTOKOHTEET_POL,
   PRT: MAASTOKOHTEET_PRT,
+  PRY: MAASTOKOHTEET_PRY,
   QAT: MAASTOKOHTEET_QAT,
   ROU: MAASTOKOHTEET_ROU,
   RUS: MAASTOKOHTEET_RUS,
@@ -266,8 +272,11 @@ export const MAASTOKOHTEET = {
   UGA: MAASTOKOHTEET_UGA,
   UKR: MAASTOKOHTEET_UKR,
   USA: MAASTOKOHTEET_USA,
+  URY: MAASTOKOHTEET_URY,
   UZB: MAASTOKOHTEET_UZB,
+  VEN: MAASTOKOHTEET_VEN,
   VNM: MAASTOKOHTEET_VNM,
+  VUT: MAASTOKOHTEET_VUT,
   YEM: MAASTOKOHTEET_YEM,
   ZAF: MAASTOKOHTEET_ZAF,
   ZWE: MAASTOKOHTEET_ZWE,

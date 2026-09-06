@@ -1427,6 +1427,43 @@ skandaaleja 183 → 193 ja skandaalimaita 79 → 84).
 | Libya (LBY) | Sabratha, Kyrene, Ptolemais, Ghadames, Tadrart Acacus, Garama, Ubarin hiekkameri (oli jo: Leptis Magna) | (oli jo: Bikku Bitti, Välimeri, Iso-Syrtti) | saharangaselli | Tobruk 1911, Soluch 1931 |
 | Nigeria (NGA) | Sukur, Osun-Osogbo, Zuma Rock, Igbo-Ukwu, Yankari, Kainji, Nok, Badagry | (oli jo: Chappal Waddi, Guineanlahti, Nigerjoki, Benue) | drilli | Beninin retkikunta 1897, Jaja of Opobo 1887 |
 | Somalia (SOM) | Laas Geel, Dhambalin, Amud, Zeila, Bosaso, Hobyo, Hamar Weyne, Barawa | (oli jo: Shimbiris, Adeninlahti, Intian valtameri, Jubba) | beira | Berberan sopimukset 1884–1886, Illigin sopimus 1905 |
+## Erä M18 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Erä
+M18 on **PRY, URY, VEN ja VUT** — kolme eteläamerikkalaista maata ja
+yksi Oseanian saarivaltio, joilla kaikilla oli ennen erää **nolla
+karttamerkkiä, nolla eläintäkyä ja nolla skandaalia**. Erä toi 32
+kohdetta, 12 maastokohdetta, 3 eläintäkyä ja 8 skandaalia eli **55
+uutta karttanostoa**. Kaikki neljä maata olivat ilman omaa
+`js/packs/maastokohteet-<iso>.js`-tiedostoa, joten erä loi neljä uutta
+pakkia ja rekisteröi ne `js/packs/maastokohteet.js`-hakemistoon (97 →
+101 maata), `sw.js`:n SHELL-listaan ja
+`tools/build-standalone.mjs`:n MODULES-listaan. Eläintäyt ovat
+`js/packs/elaintakyt.js`:n lopussa ja skandaalit
+`js/packs/skandaalit.js`:n lopussa; kummankin testin lukumäärä
+päivitettiin (eläintäkyjä 81 → 84, skandaaleja 183 → 191 ja maita
+79 → 83). Erä on kuvaton kuten K2-erät 1–4 ja maailman erät M1–M11, ja
+jokainen väite on en-Wikipedian raakatekstin katteessa lähderivillä,
+joka nimeää artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Paraguay (PRY) | Trinidad ja Jesús, San Cosme y Damián, Cerro Corá, Ybycuí, Filadelfia, Yaguarón, Concepción, Guairán putoukset | Cerro Tres Kandú (vuori), Apa (joki), Tebicuary (joki) | chacopekari | Humaitá 1868, Nueva Germania 1887 |
+| Uruguay (URY) | Colonia del Sacramento, Punta del Este, Cabo Polonio, Salto Granden pato, Santa Teresan linnoitus, Quebrada de los Cuervos, Tacuarembó, Rivera | Cerro Catedral (vuori), Merínin laguuni (järvi), Atlantti (meri) | kapybara | Graf Spee 1939, Anglo 1863–1979 |
+| Venezuela (VEN) | Salto Ángel, Coro, Ciudad Bolívar, Guácharon luola, Méridan köysirata, Colonia Tovar, Morrocoy, Ciudad Guayana | Roraima (vuori), Maracaibojärvi (järvi), Los Roques (saari) | jättimuurahaiskarhu | Saarto 1902–1903, Nueva Cádiz 1500–1541 |
+| Vanuatu (VUT) | Nagol, Ambrym, Malakula, Gaua, Torresin saaret, Ambae, Epi, Futuna | Yasur (vuori), Tabwemasana (vuori), Korallimeri (meri) | **puuttuu** | Coolidge 1942, Erromango 1825–1906 |
+
+**Yksi vaje, ja sen syy on laudan maamuoto.** Vanuatun eläintäkyä ei voi
+kirjoittaa lainkaan. `tests/elaintakyt.test.mjs` vaatii pisteeltä
+samanaikaisesti kolme asiaa: se on maalla (`js/mapart.js` isOnLand),
+maan monikulmion sisällä ja vähintään 35 lautayksikön päässä jokaisesta
+kaupunkimerkistä. Koko saariketju käytiin läpi 0,05 asteen ruudukolla
+(lon 165,5…170,5, lat −21…−13): lauta tuntee Vanuatusta maaksi vain
+Efaten pohjoisosan Port Vilan ympärillä, ja siellä kauimmainen
+kelvollinen piste on 7,2 lautayksikön päässä laatasta. Ehdot täyttävää
+pistettä ei siis ole olemassa, eikä vartiota kierretty. Sama vaje on
+ennestään Fidžillä ja Salomonsaarilla (erä M2). Kuvaputkelle tilattava
+laji olisi kookoskrapu (*Birgus latro*).
 
 **Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
 mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin, ja
@@ -1651,3 +1688,57 @@ päällä; guanosodan merkki on siksi Callaon satamassa.
 `elain-pan`), joka osoittaa ämpäriin: kun kuvaputki tekee kuvan, se
 ilmestyy kortille ilman koodimuutosta, ja siihen asti kortti on
 kuvaton.
+erän lähin merkki on Venezuelan Colonia Tovar 14,6 lautayksikön päässä
+Caracasista ja toiseksi lähin Paraguayn Yaguarón 15,2 yksikön päässä
+Asunciónista; raja `KAUPUNGIN_KOHDALLA_SADE` on 7. Tähän sääntöön kaatui
+erän painavin poisjäänyt kohde: Vanuatun **Chief Roi Mata's Domain** on
+maan ainoa maailmanperintökohde, mutta sen piste on 4,3 lautayksikön
+päässä Port Vila -laatasta, joten se kuuluisi kaupungin kohdekartalle
+eikä pääkartalle. `node tools/tarkista-nostopaikat.mjs` antaa kaikille
+55 nostolle rivin *pääkartta*, `node tools/tarkista-nimiolimitys.mjs`
+sanoo yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0" ja `savuke-maastokohteet.mjs` menee
+läpi 8/8.
+
+**Sääntö N3 valitsi maaston kolmessa maassa neljästä.** Paraguayn kolme
+luontevinta jokea ovat kaikki poissa: Paraná, Rio Negro ja Uruguayjoki
+ovat jo laudan omia jokinimiä (`js/packs/maailmankartta-nimet.js`), ja
+Pilcomayon artikkelikoordinaatti on joen suu 2,5 lautayksikön päässä
+Asunciónista — maaston kiintiö täyttyi siksi huipulla ja kahdella
+sisäjoella. Uruguaylta putosivat samasta syystä Uruguayjoki, Rio Negro
+ja Río de la Plata (viimeinen on Argentiinan pakissa), joten maasto on
+huippu, laguuni ja Atlantti. Venezuelalta putosi Orinoco, joten maasto
+on tepui, järvi ja saaristo. Myös yksi kohteen nimi vaihtui: Kuuballa on
+jo *Trinidad* (`js/packs/maastokohteet-cub.js`), joten Paraguayn
+jesuiittalähetysten merkki on **Trinidad ja Jesús**.
+
+**Merkkien päällekkäisyys karsi kuusi muuten hyvää ehdokasta.**
+Venezuelan **Catatumbon salamat** osuisivat 16,6 lautayksikön päähän
+Maracaibojärvestä (ilmiö kerrotaan järven kortissa) ja **Margaritan
+saari** kuuden yksikön päähän Cubaguan skandaalista; Paraguayn
+**Encarnación** on kuusi yksikköä Trinidadista ja **Ypacaraíjärvi** 9,7
+yksikköä Asunciónista; Vanuatun **Champagne Beach** ja **Million Dollar
+Point** olisivat tulleet Coolidgen skandaalin päälle ja **Espiritu
+Santo** Tabwemasanan päälle. Vanuatun kohdalla tämä on rakenteellista:
+saariketju on lehden ikkunassa vain 184 lautayksikköä leveä, joten
+kahdeksan kohdetta ja kolme maastokohdetta oli se määrä, joka mahtui
+ilman nimiölimitystä.
+
+**Kaksi pistettä on asetettu käsin, ja molemmat on perusteltu koodissa.**
+Uruguayn Atlantilla ja Vanuatun Korallimerellä ei ole maakohtaista
+koordinaattia (artikkelien omat keskipisteet ovat −25 / 0 ja 158 / −18),
+joten piste on maan oman rannikon edustalla — sama ratkaisu kuin
+Namibialla ja Portugalilla (`js/packs/maastokohteet-nam.js`). Merínin
+laguunin artikkelikoordinaatti osuu laguunin Brasilian puoleiseen
+osaan, joten merkki on siirretty Uruguayn puoleiselle rannalle.
+
+**Herkät aiheet on kirjoitettu lähteen katteessa ja ilman
+nykypolitiikkaa.** Kolmen liiton sodasta kerrotaan Humaitán piirityksen
+kortissa artikkelin omalla tarkkuudella, Nueva Germanian rotuoppinen
+tausta ja hankkeen romahdus sanotaan suoraan artikkelin sanoin, ja
+Erromangon kortti kertoo santelipuukaupan, tuotujen tautien ja
+työvoimakaupan (blackbirding) luvut niin kuin artikkeli ne esittää:
+40 000 vietyä Queenslandiin 1863–1906 ja saaren väkiluku 381 vuonna
+1931. Venezuelan velkasaarto 1902–1903 kerrotaan tapahtumina eikä
+nykypäivän kautta, eikä yhdenkään kortin aihe ole käynnissä oleva
+selkkaus (M3:n Myanmar-linja). Guayana Esequiban rajakiista jätettiin
+kokonaan pois samasta syystä.

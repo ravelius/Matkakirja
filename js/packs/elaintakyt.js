@@ -2039,6 +2039,56 @@ export const ELAINTAKYT = {
     lon: -80.9,
     lat: 8.6,
   },
+
+  /* ================================================================
+   * ERÄ M18 (6.9.2026): PRY, URY, VEN. Kolme eteläamerikkalaista maata,
+   * joilla ei ollut eläintäkyä lainkaan. Kuvattomia: `kuva`-kentässä on
+   * kuvaputken ämpäritunnus ilman kansiota, ja kortti latoo tekstin
+   * ilman kuvakehystä kunnes kuva valmistuu. Paikat on mitattu
+   * koneellisesti — jokainen piste on maalla, maan monikulmion sisällä
+   * ja yli 35 lautayksikön päässä jokaisesta kaupunkimerkistä
+   * (tests/elaintakyt.test.mjs). Vanuatu jäi ilman eläintäkyä, koska
+   * yhtään ehdot täyttävää pistettä ei ole olemassa; perustelu on
+   * js/packs/maastokohteet-vut.js:n otsikkokommentissa.
+   * ============================================================== */
+  PRY: {
+    elain: 'chacopekari',
+    otsikko: 'Sika, joka löydettiin ensin fossiilina',
+    teksti: 'Chacopekari eli taguá on Paraguayn, Bolivian ja Argentiinan Gran Chacon pekari ja sukunsa Catagonus ainoa elävä laji. Se kuvattiin tieteelle 1930 pelkkien fossiilien perusteella ja sitä pidettiin sukupuuttoon kuolleena, kunnes elävä eläin löytyi 1971 Argentiinan Saltasta — paikallisille laji oli koko ajan tuttu. Chacopekari on kolmesta yleisesti hyväksytystä pekarilajista suurin, ja se eroaa sukulaisistaan pidemmillä korvilla, kuonolla ja hännällä sekä kolmannella takavarpaalla; suun ympärillä on valkoisia karvoja ja hartioilla valkoista turkkia. Kuiva ja pölyinen Chaco on muovannut sen: sivuontelot ovat poikkeuksellisen kehittyneet ja jalat pienet, jotta piikkipensaikossa on helpompi liikkua. Ravinto on kaktuksia, joita eläin pyörittää maassa sitkeällä kuonollaan piikit pois tai nyppii piikit hampaillaan ja sylkee ne ulos; munuaiset hajottavat kaktusten hapot ja kaksiosainen maha sulattaa karkean kasviaineksen. Lauma on enintään parikymmenpäinen, ja uhattuna se asettuu riviin puolustusmuuriksi. Kanta on noin 3 000 yksilöä ja laji on uhanalainen.',
+    lahde: 'en-Wikipedia "Chacoan peccary", johdanto sekä osiot "History", '
+      + '"Habitat", "Physical characteristics", "Behavior", "Food habits" ja '
+      + '"Conservation status". Tarkistettu 6.9.2026.',
+    kuva: 'elain-pry',
+    // Piste on Gran Chacon pensasaavikolla Luoteis-Paraguayssa, 129,6
+    // lautayksikköä lähimmästä kaupunkimerkistä (vähimmäisetäisyys 35).
+    lon: -61.6,
+    lat: -21.2,
+  },
+  URY: {
+    elain: 'kapybara',
+    otsikko: 'Maailman suurin jyrsijä käy vedessä viilentymässä',
+    teksti: 'Kapybara on maailman suurin elävä jyrsijä, ja sitä tavataan kaikissa Etelä-Amerikan maissa Chileä lukuun ottamatta. Se on puoliksi vedessä elävä kasvinsyöjä, joka asuu savanneilla ja tiheissä metsissä makean veden äärellä ja syö pääasiassa heinää ja vesikasveja. Aikuinen on 106–134 senttimetriä pitkä, säkäkorkeus on 50–62 senttimetriä ja paino tavallisesti 35–66 kilogrammaa; suurin punnittu villi uros oli uruguaylainen, 73,5 kilogrammaa. Nimi tulee tupin sanasta ka’apiûara, joka tarkoittaa suunnilleen ohutlehtien syöjää. Kapybara on erinomainen uimari ja pystyy pidättämään hengitystään veden alla jopa viisi minuuttia: aamun se lepää kuivalla maalla, kuuman iltapäivän vedessä viilentymässä ja laiduntaa myöhään illalla ja yöllä. Laumassa on yleensä 10–20 yksilöä, kuivana kautena vesipaikoille voi kerääntyä 50–100. Etuhampaat kasvavat jatkuvasti, koska heinä kuluttaa niitä, ja eläin syö omat ulosteensa saadakseen suolistobakteerit selluloosan pilkkomiseen.',
+    lahde: 'en-Wikipedia "Capybara", johdanto sekä osiot "Etymology", '
+      + '"Description", "Activities", "Diet and predation" ja '
+      + '"Social organization". Tarkistettu 6.9.2026.',
+    kuva: 'elain-ury',
+    // Piste on Keski-Uruguayn jokilaaksoissa, 87,2 lautayksikköä
+    // Montevideosta (vähimmäisetäisyys 35).
+    lon: -55.5,
+    lat: -32.5,
+  },
+  VEN: {
+    elain: 'jättimuurahaiskarhu',
+    otsikko: 'Kieli, joka käy ulkona kolmesti sekunnissa',
+    teksti: 'Jättimuurahaiskarhu on Keski- ja Etelä-Amerikan hyönteissyöjänisäkäs ja neljästä elävästä muurahaiskarhulajista suurin. Toisin kuin sukulaisensa ja laiskiaiset se elää lähes kokonaan maassa. Kokonaispituus on 182–217 senttimetriä, urokset painavat 33–50 ja naaraat 27–47 kilogrammaa. Pää on 30 senttimetriä pitkä ja lieriömäinen kuono vie siitä suurimman osan; näkö on heikko, mutta hajuaisti on noin neljäkymmentä kertaa ihmisen hajuaistia tarkempi. Hampaita ei ole lainkaan, ja noin 60 senttimetrin kieli on kiinnitetty omalla lihaksellaan suoraan rintalastaan; ojennettuna se ulottuu 45 senttimetriä ja liikkuu edestakaisin noin 160 kertaa minuutissa eli lähes kolmesti sekunnissa. Eläin etsii saaliinsa hajun perusteella, repii pesän auki etukynsillään ja kerää muurahaiset ja termiitit tahmealle kielelleen: se käy päivässä jopa kahdessasadassa pesässä, kussakin enintään minuutin, ja syö noin 35 000 hyönteistä. Emo kantaa poikastaan selässään vieroitukseen asti. Kansainvälinen luonnonsuojeluliitto luokittelee lajin vaarantuneeksi.',
+    lahde: 'en-Wikipedia "Giant anteater", johdanto sekä osiot "Description" '
+      + 'ja "Diet". Tarkistettu 6.9.2026.',
+    kuva: 'elain-ven',
+    // Piste on Apuren llanoilla Länsi-Venezuelassa, 105,2 lautayksikköä
+    // Caracasista (vähimmäisetäisyys 35).
+    lon: -68.5,
+    lat: 7.5,
+  },
 };
 
 
