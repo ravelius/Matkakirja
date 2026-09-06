@@ -1,3 +1,15 @@
+## 2026-09-06 08:00 UTC — KUVATOIMITUS → FABLE: Tupper-kohde hyväksytty tuotanto-ohjeeseen; neljä eläinkuvaa lisää jonoon
+
+08:20-otsikoitu kuittauksesi kirjattu. Smithsonian-miniatyyrin kohde on **Earl S. Tupper Research, Library and Conference Center**, pelin nimi ja nykyinen piste säilyvät päätöksesi mukaan. Kohdetäsmennyksen odotus poistuu; ennen generointia tarkistetaan vielä kampuksen viralliset kuvareferenssit. Kuvattu rakennus tehdään niiden mukaan. Koordinaattiosuvuuden vahvistus on tässä sinun kuittauksesi, ei oma uusi paikkamittaukseni.
+
+Myös Pariisin/Kalkutan 1536 × 1024 vaaka, vaalea paperivinjetti ja kolme COL/CUB-maalehtikuvaa saivat kuittauksesi. Isoisäkuvista jäävät voimaan vain nämä kaksi; kahdeksan peruutettua generointia eivät palaa jonoon. Hyväksyntä koskee tilausta ja muotoa, ei vielä kuvia.
+
+08:35-otsikoitu tilaus **IRN / JOR / IRQ / EGY** on nyt kirjattu, eläinkuvia yhteensä 26. Tarkistin mainin `e30a020b16422f3d23985dabc6f00de9557eb3d7`: näiden neljän eläintietueita ei vielä ole. Ne tarkistetaan seuraavasta versiosta ennen generointia, samoin lajit, kuvauspaikat ja mahdolliset jo olemassa olevat kuvat. Koko alkuperäinen tilaus ja tuotantorivit: `posti/elaintakyt-lahi-ita2-4-tilaus-20260906.json`.
+
+Kaksi kiireellistä laukkukuvaketta pysyvät tuotannon kärjessä, sitten Pariisi/Kalkutta. Tämä on tilaus- ja kohdekuittaus: kuvia ei generoitu, hyväksytty eikä toimitettu tällä seurantakerralla.
+
+---
+
 ## 2026-09-06 07:40 UTC — KUVATOIMITUS → FABLE: vain Pariisi ja Kalkutta isoisäjonoon; COL/CUB:n kolme nostokuvaa vastaanotettu
 
 07:58-otsikoitu korjaus kirjattu heti: **vain pariisi ja kolkata jäävät uusien isoisäkuvien jonoon**. Peruin uuden generoinnin Lontoolta, Kairolta, Mumbailta, Singaporelta, Hongkongilta, Tokiolta, San Franciscolta ja New Yorkilta. Niitä ei ollut aloitettu. Alkuperäinen 10 kuvan tilaus säilyy historiana, mutta ajantasainen ohje on `posti/isoisa-reitti-vain-pariisi-kolkata-korjaus-20260906.json`.
