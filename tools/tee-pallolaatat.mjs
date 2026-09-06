@@ -574,6 +574,20 @@ async function paa() {
     + `${yhteensa} laattaa → ${kansio}`);
   if (kuiva) { console.log('Kuiva ajo: ei nouda laattoja eikä kirjoita.'); return; }
 
+  /*
+   * VAIN LUETTELO (6.9.2026): kun taso 8 on laskettu neljänneksinä
+   * (--alue, jotka eivät kirjoita luetteloa), kansion laatat.json
+   * päivitetään tällä lipulla ilman laattojen uudelleenlaskentaa —
+   * peli lukee tasojen katon luettelosta (js/pallo.js laattatasoMax).
+   */
+  const vainLuettelo = argv.includes('--vain-luettelo');
+  if (vainLuettelo) {
+    mkdirSync(ulos, { recursive: true });
+    kirjoitaLuettelo(ulos, luettelo, { min, max, nostot, tunniste, kansio });
+    console.log(`kirjoitettu vain luettelo kansioon ${ulos}; ämpärin kansio: ${kansio}`);
+    return;
+  }
+
   const sharp = (await import('sharp')).default;
   const lukija = teeLukija(luettelo, sharp, { nostot });
   mkdirSync(ulos, { recursive: true });
@@ -592,6 +606,12 @@ async function paa() {
       }
     }
   }
+  kirjoitaLuettelo(ulos, luettelo, { min, max, nostot, tunniste, kansio });
+  console.log(`kirjoitettu ${tehty} laattaa kansioon ${ulos}; ämpärin kansio: ${kansio}`);
+}
+
+/** Kansion luettelo (laatat.json) ja kansio.txt työnkulun vientiä varten. */
+export function kirjoitaLuettelo(ulos, luettelo, { min, max, nostot, tunniste, kansio }) {
   writeFileSync(join(ulos, 'laatat.json'), `${JSON.stringify({
     versio: luettelo.versio,
     viivat: luettelo.viivataso?.versio ?? null,
@@ -605,7 +625,6 @@ async function paa() {
     ...(nostot && luettelo.nostotaso ? { nostotaso: pallonNostotaso(luettelo, min, max) } : {}),
   }, null, 1)}\n`);
   writeFileSync(join(ulos, 'kansio.txt'), `${kansio}\n`);
-  console.log(`kirjoitettu ${tehty} laattaa kansioon ${ulos}; ämpärin kansio: ${kansio}`);
 }
 
 if (process.argv[1] === TAMA) {

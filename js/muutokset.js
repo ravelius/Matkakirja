@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1619, teksti: 'Laattatyokalu: vain luettelo -ajo tason 8 kayttoonottoon' },
   { v: 1618, teksti: 'Venetsian luenta, mykistys pois; yovuoron raportti' },
   { v: 1617, teksti: 'Pallon viivat pikseleiksi, savukkeet pallolle, Venetsia' },
   { v: 1616, teksti: 'Ihmisen matka: varakuva, kellon askel, luennat tyonkulkuun' },
