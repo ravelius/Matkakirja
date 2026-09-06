@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1631';
+const CACHE = 'matkakirja-2026-08-09.1632';
 const SHELL = [
   './',
   './index.html',
@@ -75,6 +75,7 @@ const SHELL = [
   './js/maalehti.js',
   './js/lukija.js',
   './js/pollo.js',
+  './js/liviapuhe.js',
   './js/livia.js',
   './js/puhe.js',
   // Tehosteketjut (Tuna, 5.9.2026): moduuli kuuluu kuoreen, kirjasto

@@ -9781,4 +9781,551 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /*
+   * ══ ERÄ M10, AASIA 3 6.9.2026 ═══════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M10 (JPN, KOR, TWN, KAZ, MNG) tuo kaksi skandaalia kuhunkin
+   * viiteen maahan — kymmenen uutta. Kaikki ovat kuvattomia kuten erän
+   * muutkin nostot, ja jokaisen lähderivi nimeää en-Wikipedian
+   * artikkelin ja osan sekä tarkistuspäivän.
+   *
+   * PAIKAT ON MITATTU. Yksikään uusi merkki ei ole pelikaupungin
+   * kohdalla (KAUPUNGIN_KOHDALLA_SADE 7 lautayksikköä,
+   * js/fokuskohteet.js): lähin on Namamugi 19,7 yksikön päässä
+   * Tokio-laatasta ja kaukaisin Aralin kaupunki 336,3 yksikön päässä
+   * Samarkandista. Nimiölimitystä ei ole yhtään
+   * (tools/tarkista-nimiolimitys.mjs).
+   *
+   * HERKKIEN AIHEIDEN LINJAUS ON SITOVA (docs/aasia-tyoaineisto/
+   * spec-asia.md). Taiwanin korteissa ei ole salmikysymystä eikä
+   * nykypolitiikkaa: aiheet ovat vuoden 1867 haaksirikko ja saaren oma
+   * ydinjätekiista. Japanin kortit ovat ympäristö- ja
+   * diplomatiahistoriaa, eivät sotahistoriaa. Kazakstanin ydinkoealue
+   * ja Araljärvi kerrotaan lähteen katteessa ilman uhrilukujen
+   * korostusta, ja Mongolian 1930-luvun vainoista kerrotaan
+   * artikkelin omalla tarkkuudella.
+   */
+  JPN: [
+    /*
+     * Namamugin kylä Tōkaidō-tien varrella (nykyinen Jokohama).
+     * Lähde: en.wikipedia.org: Namamugi Incident
+     */
+    {
+      id: 'namamugi',
+      otsikko: 'Ratsastaja, joka ei väistänyt ruhtinaan saattuetta',
+      nimio: 'Namamugi',
+      vuosi: '1862',
+      paikka: 'Namamugin kylä, Tōkaidō-tie',
+      lat: 35.491389, lon: 139.663611,
+      kortti: 'Neljä brittiä ratsasti temppeliretkelle valtatietä, jota '
+        + 'virkamiehet olivat kieltäneet käyttämästä sinä päivänä. Vastaan '
+        + 'tuli ruhtinaan saattue. Kauppias Charles Lennox Richardson ei '
+        + 'väistänyt tarpeeksi, ja hänet surmattiin tien poskeen — vuotta '
+        + 'myöhemmin sen laskun maksoi kokonainen kaupunki.',
+      teksti: 'Namamugin tapaus eli Richardsonin juttu oli poliittinen kriisi, '
+        + 'joka syntyi Tokugawa-shogunaatin Japanissa 14. syyskuuta 1862. '
+        + 'Brittikauppias Charles Lennox Richardson sai surmansa Satsuman '
+        + 'ruhtinaskunnan sijaishallitsijan Shimazu Hisamitsun aseistetun '
+        + 'saattueen käsissä Namamugin kylän kohdalla lähellä Kawasakia.'
+        + '\n\nSeurue oli lähtenyt Jokohaman sopimussatamasta iltapäivällä: '
+        + 'Shanghaissa asuva Richardson, kaksi Jokohaman kauppiasta ja '
+        + 'toisen källy olivat matkalla Kawasaki Daishin temppelille, '
+        + 'vaikka virkamiehet olivat varoittaneet heitä kulkemasta '
+        + 'Tōkaidō-tietä sinä päivänä, koska ruhtinaan saattue oli tulossa. '
+        + 'Richardson oli juuri ilmoittanut jäävänsä eläkkeelle ja teki '
+        + 'retkeä ennen paluutaan Englantiin.'
+        + '\n\nSurma nostatti eurooppalaisissa kiivaan vastalauseiden '
+        + 'myrskyn: heidän mukaansa se loukkasi ulkomaalaisten '
+        + 'eksterritoriaalioikeutta Japanissa. Japanilaiset puolestaan '
+        + 'katsoivat, että Richardson oli osoittanut Shimazua kohtaan '
+        + 'epäkunnioitusta ja että surma oli kiri-sute gomen -säännön '
+        + 'mukaan oikeutettu.'
+        + '\n\nBritannia vaati korvauksia. Kun Satsuma ei vastannut, seurasi '
+        + 'elokuussa 1863 Kagoshiman pommitus eli Britannian ja Satsuman '
+        + 'sota.',
+      lahde: 'en-Wikipedia "Namamugi Incident", johdanto-osa ja osio '
+        + '"Course of events". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mihin Richardsonin surma johti vuotta myöhemmin?',
+        vaihtoehdot: [
+          'Japanin rajojen sulkemiseen',
+          'Kagoshiman pommitukseen',
+          'Shogunaatin kaatumiseen',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Minamatan kaupunki Kumamoton prefektuurissa (Chisson tehdas).
+     * Lähde: en.wikipedia.org: Minamata disease; Minamata, Kumamoto
+     */
+    {
+      id: 'minamatan-tauti',
+      otsikko: 'Tanssiva kissa, joka varoitti ennen ihmisiä',
+      nimio: 'Minamata',
+      vuosi: '1932–1968',
+      paikka: 'Minamatan lahti, Kumamoto',
+      lat: 32.216667, lon: 130.4,
+      kortti: 'Lahden kalastajakylässä kissat alkoivat horjua ja pyöriä '
+        + 'ympyrää. Ilmiölle annettiin nimi tanssiva kissakuume. Vasta '
+        + 'myöhemmin ymmärrettiin, että sama myrkky oli jo ihmisissä — ja '
+        + 'että sitä oli laskettu lahteen tehtaan jätevedessä jo '
+        + 'vuosikymmeniä.',
+      teksti: 'Minamatan tauti on vaikean elohopeamyrkytyksen aiheuttama '
+        + 'hermostosairaus. Oireita ovat liikkeiden hallinnan menetys, '
+        + 'käsien ja jalkojen puutuminen, lihasheikkous, näkökentän '
+        + 'kaventuminen sekä kuulon ja puheen vauriot; pahimmillaan '
+        + 'seuraa halvaus ja kuolema viikoissa. Sairaus todettiin '
+        + 'ensimmäisen kerran Minamatan kaupungissa Kumamoton '
+        + 'prefektuurissa vuonna 1956.'
+        + '\n\nSyy oli metyylielohopea, jota Chisso-yhtiön kemiantehdas '
+        + 'laski jätevedessään lahteen vuodesta 1932 vuoteen 1968. Myrkky '
+        + 'kertyi ja väkevöityi Minamatan lahden ja Shiranuin meren '
+        + 'simpukoissa ja kaloissa, ja kun paikalliset söivät niitä, he '
+        + 'saivat myrkytyksen. Ihmisiä ja eläimiä kuoli 36 vuoden ajan, '
+        + 'eivätkä Chisso ja Kumamoton prefektuurin hallinto tehneet juuri '
+        + 'mitään estääkseen sitä. Kissoilla oireet olivat niin rajut, '
+        + 'että ilmiötä alettiin kutsua tanssivaksi kissakuumeeksi.'
+        + '\n\nChisso oli avannut tehtaansa Minamataan 1908 ja kasvanut '
+        + 'Japanin kehittyneimmäksi kemiantehtaaksi. Se oli myös koko '
+        + 'kaupungin elinehto: parhaimmillaan yli puolet kaupungin '
+        + 'verotuloista tuli yhtiöltä ja sen työntekijöiltä. Kalastukselle '
+        + 'tehdas oli aiheuttanut vahinkoa jo aiemmin, ja yhtiö oli '
+        + 'sopinut korvauksista kalastusosuuskunnan kanssa 1926 ja 1943.'
+        + '\n\nMaaliskuuhun 2001 mennessä 2 265 ihmistä oli virallisesti '
+        + 'todettu Minamatan tautiin sairastuneeksi ja yli 10 000 oli '
+        + 'saanut Chissolta rahallisen korvauksen. Vuoteen 2004 mennessä '
+        + 'yhtiö oli maksanut korvauksia 86 miljoonaa dollaria, ja samana '
+        + 'vuonna se määrättiin puhdistamaan saastuttamansa alue. Toinen '
+        + 'taudinpurkaus todettiin Niigatan prefektuurissa 1965.',
+      lahde: 'en-Wikipedia "Minamata disease", johdanto-osa ja osio '
+        + '"1908–1955", sekä "Minamata, Kumamoto", johdanto-osa. '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä aine aiheutti Minamatan taudin?',
+        vaihtoehdot: [
+          'Lyijy',
+          'Metyylielohopea',
+          'Kadmium',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  KOR: [
+    /*
+     * Ganghwan saari Han-joen suulla (Oegyujanggakin kirjasto).
+     * Lähde: en.wikipedia.org: Uigwe; Ganghwa Island
+     */
+    {
+      id: 'oegyujanggak',
+      otsikko: 'Kuninkaan kirjat, jotka palasivat 145 vuoden jälkeen',
+      nimio: 'Oegyujanggak',
+      vuosi: '1866',
+      paikka: 'Ganghwan saari, Han-joen suu',
+      lat: 37.71, lon: 126.44,
+      kortti: 'Saarelle oli rakennettu kuninkaan kirjaston sivupiste, jossa '
+        + 'säilytettiin hallitsijan omia juhlamenokirjoja. Kun retkikunta '
+        + 'ei päässyt puhumaan viranomaisten kanssa, se hyökkäsi saarelle '
+        + 'ja otti kirjat mukaansa. Ne löytyivät Pariisista vasta '
+        + 'vuonna 1975.',
+      teksti: 'Uigwe on nimitys noin 3 895 kirjan kokoelmalle, johon on '
+        + 'kirjattu yksityiskohtaisesti Korean Joseon-dynastian '
+        + 'kuninkaalliset rituaalit ja seremoniat: virkaanasettajaiset, '
+        + 'kruunajaiset, häät, juhla-ateriat, muotokuvien maalaaminen, '
+        + 'hautajaiset ja esi-isien palvonta. Unesco liitti kokoelman '
+        + 'Maailman muisti -rekisteriin 2007.'
+        + '\n\nVuonna 1782 Ganghwan saarelle vanhaan kuninkaanpalatsiin '
+        + 'rakennettiin Gyujanggakin sivukirjasto, Oegyujanggak, koska '
+        + 'Soulin Changdeokgungin pääkirjasto oli täynnä. Sinne siirrettiin '
+        + 'suurin osa kuninkaan omista katselukappaleista, jotka erottuivat '
+        + 'silkkikansistaan ja hienoimmasta paperistaan.'
+        + '\n\nVuonna 1866, sen jälkeen kun Koreassa oli teloitettu joukko '
+        + 'ranskalaisia katolisia lähetyssaarnaajia, ranskalainen '
+        + 'retkikunta saapui Kiinasta vaatimaan selitystä. Kun se ei saanut '
+        + 'yhteyttä viranomaisiin, joukot hyökkäsivät Ganghwan saarelle ja '
+        + 'ottivat kuninkaalliset kirjat sekä suuren määrän hopeaesineitä '
+        + 'ja muuta kuninkaallista omaisuutta. Kirjat päätyivät Ranskan '
+        + 'kansalliskirjastoon Pariisiin, ja ne unohtuivat sinne, kunnes '
+        + 'korealainen tutkija Park Byeongseon löysi ne 1975.'
+        + '\n\nPalautusta pyydettiin virallisesti 1992. Presidentti François '
+        + 'Mitterrand palautti yhden niteen 1993, ja lopullinen ratkaisu '
+        + 'syntyi vasta 2010 Soulin G20-kokouksessa: kirjat palaisivat '
+        + 'viideksi vuodeksi kerrallaan uusittavalla lainalla. Huhti–'
+        + 'kesäkuussa 2011 Koreaan palautettiin neljässä erässä 297 nidettä, '
+        + 'joissa oli 191 eri uigwea. Ne ovat nyt Korean kansallismuseossa.',
+      lahde: 'en-Wikipedia "Uigwe", johdanto-osa sekä osiot "Content" ja '
+        + '"Repatriation", ja "Ganghwa Island", johdanto-osa. '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä kadonneet uigwe-kirjat löytyivät vuonna 1975?',
+        vaihtoehdot: [
+          'Ranskan kansalliskirjastosta',
+          'Tokion yliopistosta',
+          'Ganghwan saaren kellarista',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Geomundon saariryhmä Jejun salmessa (Port Hamilton).
+     * Lähde: en.wikipedia.org: Port Hamilton incident; Geomundo
+     */
+    {
+      id: 'port-hamilton',
+      otsikko: 'Saari, jonka laivasto otti kysymättä',
+      nimio: 'Port Hamilton',
+      vuosi: '1885–1887',
+      paikka: 'Geomundon saaret, Jejun salmi',
+      lat: 34.026389, lon: 127.3125,
+      kortti: 'Kolme pientä saarta muodostaa luonnonsataman Korean '
+        + 'eteläpuolella. Britannian laivasto miehitti sen huhtikuussa '
+        + '1885 varmuuden vuoksi — huhu Venäjän hiilivarastosta riitti. '
+        + 'Kaksi vuotta myöhemmin laivat lähtivät yhtä äkkiä kuin olivat '
+        + 'tulleetkin.',
+      teksti: 'Geomundon eli Port Hamiltonin tapaus oli Britannian '
+        + 'kuninkaallisen laivaston sotilaallinen miehitys Geomundon '
+        + 'saarilla 15. huhtikuuta 1885 – 27. helmikuuta 1887. Saaret ovat '
+        + 'pieni ryhmä Jejun salmessa Korean niemimaan eteläpuolella: kolme '
+        + 'pääsaarta, joista kaksi suurempaa muodostaa sataman ja '
+        + 'keskimmäisellä, Tähtitornisaarella, oli brittien tukikohta.'
+        + '\n\nSir Edward Belcher oli kartoittanut sataman 1845 HMS '
+        + 'Samarangilla ja nimennyt sen amiraliteetin silloisen sihteerin, '
+        + 'kapteeni W. A. B. Hamiltonin mukaan. Sen strateginen merkitys '
+        + 'huomattiin muuallakin: venäläinen vara-amiraali Jevfimi Putjatin '
+        + 'kävi saarilla useaan otteeseen ja sai 1857 asukkailta luvan '
+        + 'perustaa sinne hiilivaraston.'
+        + '\n\nVenäjä aikoi käyttää saarta hiilivarastona, ja Britannian '
+        + 'hallitus hälyttyi huhuista, joiden mukaan Venäjän ja Korean '
+        + 'välillä olisi salainen sopimus — vaikka huhut ehtivät hallituksen '
+        + 'käsiin vasta miehityspäätöksen jälkeen. Satama otettiin, jotta '
+        + 'Britannialla olisi Kiinan ulkopuolinen tukikohta Kaukoidässä, jos '
+        + 'sota Venäjän kanssa syttyisi. Julkisuudessa hallitus selitti '
+        + 'estävänsä Venäjää valtaamasta saaria.'
+        + '\n\nVenäjä uhkasi vastaukseksi miehittää osia Koreasta. Kun se '
+        + 'lopulta vakuutti, ettei valtaa Koreasta mitään, britit vetäytyivät. '
+        + 'Saarten ottamista oli ehdotettu jo heinäkuussa 1875, mutta '
+        + 'ulkoministeri lordi Derby oli hylännyt ajatuksen huonona '
+        + 'ennakkotapauksena.',
+      lahde: 'en-Wikipedia "Port Hamilton incident", koko artikkeli, ja '
+        + '"Geomundo", johdanto-osa sekä osio "History". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi britit lopulta vetäytyivät saarilta?',
+        vaihtoehdot: [
+          'Korea maksoi heille korvauksen',
+          'Venäjä vakuutti, ettei valtaa Koreasta mitään',
+          'Satama osoittautui liian matalaksi',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  TWN: [
+    /*
+     * Eluanbin niemi, Taiwanin eteläisin kärki (haaksirikon seutu).
+     * Lähde: en.wikipedia.org: Rover incident; Cape Eluanbi
+     */
+    {
+      id: 'rover-haaksirikko',
+      otsikko: 'Haaksirikko, joka päättyi suulliseen sopimukseen',
+      nimio: 'Rover',
+      vuosi: '1867',
+      paikka: 'Eluanbin niemi, Hengchun',
+      lat: 21.902222, lon: 120.852778,
+      kortti: 'Amerikkalainen purjelaiva ajoi riutalle Taiwanin eteläkärjessä. '
+        + 'Rannalle päässeet surmattiin, ja sotalaivat lähetettiin '
+        + 'kostoretkelle — mutta ratkaisu syntyi vasta, kun konsuli marssi '
+        + 'sisämaahan ja istui alas päällikön kanssa.',
+      teksti: 'Roverin tapaus sattui 12. maaliskuuta 1867, kun '
+        + 'amerikkalainen kauppalaiva Rover haaksirikkoutui Taiwanin '
+        + 'rannikolla matkalla Shantoun ja Niuzhuangin välillä. Laiva osui '
+        + 'Qixingyanin korallikariin lähellä Eluanbin niemeä ja ajautui '
+        + 'nykyisen Hengchunin seudulle. Neljätoista amerikkalaista '
+        + 'merimiestä, heidän joukossaan kapteeni Joseph Hunt ja hänen '
+        + 'vaimonsa, surmattiin: paiwan-kansan kulaljuc-heimo kosti näin '
+        + 'sen, että ulkomaalaiset olivat aiemmin tappaneet heimon jäseniä.'
+        + '\n\nYhdysvaltain Amoyn-konsuli Charles William Le Gendre matkusti '
+        + 'Fuzhouhun painostamaan Fujianin ja Zhejiangin varakuninkaita '
+        + 'puuttumaan asiaan. Rankaisuretki epäonnistui: kesäkuussa 1867 '
+        + '181 upseeria, merimiestä ja merijalkaväen sotilasta nousi '
+        + 'maihin, mutta helteessä miehiä kaatui auringonpistoksiin, '
+        + 'vastapuoli ampui viidakon suojasta ja retkikunta joutui '
+        + 'perääntymään laivoille.'
+        + '\n\nLe Gendre palasi saarelle syyskuussa 1867 ja marssi '
+        + 'kiinalaisten joukkojen kanssa syvälle alkuperäiskansojen '
+        + 'alueelle. William A. Pickeringin ja James Hornin avulla hän '
+        + 'neuvotteli suullisen sopimuksen Tokitokin kanssa, joka oli '
+        + 'seudun kahdeksantoista paiwan-heimon päällikkö.'
+        + '\n\nTokitok selitti, että kauan sitten valkoiset miehet olivat '
+        + 'lähes hävittäneet kulaljuc-heimon ja että kostonhalu oli '
+        + 'periytynyt sukupolvelta toiselle. Sopimuksessa vuorten '
+        + 'alkuperäisasukkaat lupasivat, etteivät enää surmaa haaksirikkoon '
+        + 'joutuneita vaan huolehtivat heistä ja luovuttavat heidät '
+        + 'kiinalaisille Langqiaossa.',
+      lahde: 'en-Wikipedia "Rover incident", johdanto-osa sekä osiot '
+        + '"Shipwreck", "American reaction" ja "Second visit", ja '
+        + '"Cape Eluanbi", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kenen kanssa Le Gendre lopulta neuvotteli sopimuksen?',
+        vaihtoehdot: [
+          'Qing-dynastian keisarin',
+          'Paiwan-päällikkö Tokitokin',
+          'Hollannin kuvernöörin',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Lanyun saari Taitungin edustalla (ydinjätevarasto). Artikkelissa
+     * ei ole koordinaattipropia, joten merkki on asetettu saaren
+     * kohdalle 22,05 N / 121,53 E.
+     * Lähde: en.wikipedia.org: Orchid Island
+     */
+    {
+      id: 'lanyun-ydinjate',
+      otsikko: 'Varasto, jota ei kerrottu saaren asukkaille',
+      nimio: 'Lanyu',
+      vuosi: '1982',
+      paikka: 'Lanyun saari, Taitung',
+      lat: 22.05, lon: 121.53,
+      kortti: 'Tulivuorisaarella asuu tao-kansa, jonka perinteet ovat '
+        + 'säilyneet parhaiten koko Taiwanissa. Vuonna 1982 saarelle '
+        + 'rakennettiin ydinjätevarasto kysymättä asukkailta. Tynnyreitä on '
+        + 'nyt satatuhatta.',
+      teksti: 'Lanyu eli Orkideasaari on 45 neliökilometrin tulivuorisaari '
+        + 'Taiwanin kaakkoispuolella. Sen alkuperäisasukkaat, tao-kansa, '
+        + 'kutsuvat saarta nimellä Pongso no Tao, ihmisten saari. Saari '
+        + 'oli pitkään omillaan ja kävi kauppaa Filippiinien '
+        + 'Batanes-saarten kanssa.'
+        + '\n\nJapanin vallan aikana saari julistettiin '
+        + 'kansatieteelliseksi tutkimusalueeksi, jonne ulkopuolisilla ei '
+        + 'ollut asiaa, ja rajoitukset jäivät voimaan vielä sen jälkeenkin. '
+        + 'Juuri siksi tao-kansan perinteet ovat säilyneet parhaiten '
+        + 'kaikista Taiwanin alkuperäiskansoista, vaikka asutus- ja '
+        + 'matkailukielto purettiin 1967.'
+        + '\n\nVuonna 1982 saarelle rakennettiin ydinjätevarasto '
+        + 'neuvottelematta etukäteen saaren asukkaiden kanssa. Varastoon '
+        + 'tuodaan jätettä Taiwanin kolmesta ydinvoimalasta, joita hoitaa '
+        + 'valtion sähköyhtiö Taipower, ja saarelle on kertynyt noin '
+        + '100 000 tynnyriä ydinjätettä.'
+        + '\n\nTaot ovat vastustaneet varastoa ja 1990-luvun alusta lähtien '
+        + 'osoittaneet mieltään päästäkseen eroon ydinjätteen '
+        + '"pahoista hengistä". Suuria mielenosoituksia oli 2002 ja 2012, '
+        + 'ja niissä vaadittiin Taipoweria viemään jäte pois saarelta.',
+      lahde: 'en-Wikipedia "Orchid Island", johdanto-osa sekä osiot '
+        + '"Imperial Japan" ja "Republic of China". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä saarelle rakennettiin 1982 kysymättä asukkailta?',
+        vaihtoehdot: [
+          'Sotilaslentokenttä',
+          'Ydinjätevarasto',
+          'Kalanjalostamo',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  KAZ: [
+    /*
+     * Semipalatinskin koealue Irtyšin eteläpuolella (Polygon).
+     * Lähde: en.wikipedia.org: Semipalatinsk Test Site
+     */
+    {
+      id: 'semipalatinskin-koealue',
+      otsikko: 'Aro, jota sanottiin asumattomaksi',
+      nimio: 'Polygon',
+      vuosi: '1949–1991',
+      paikka: 'Semipalatinskin koealue, Abain alue',
+      lat: 50.383333, lon: 77.783333,
+      kortti: 'Kartalla se oli tyhjä 18 000 neliökilometrin laikku. Sen '
+        + 'valinnut ministeri sanoi aroa asumattomaksi, vaikka se ei ollut '
+        + 'sitä. Neljänkymmenen vuoden aikana siellä tehtiin neljäsosa '
+        + 'kaikista maailman ydinkokeista.',
+      teksti: 'Semipalatinskin koealue eli Polygon oli Neuvostoliiton '
+        + 'tärkein ydinasekoepaikka. Se sijaitsee Abain alueella '
+        + 'Kazakstanissa Irtyš-joen laakson eteläpuolella; tutkimusrakennukset '
+        + 'olivat noin 150 kilometriä Semipalatinskin — nykyisen Semeyn — '
+        + 'kaupungista länteen, ja itse kokeet tehtiin niistä vielä '
+        + 'lännemmäksi ja etelämmäksi.'
+        + '\n\nPaikan valitsi 1947 Lavrenti Beria, Neuvostoliiton '
+        + 'atomipommihankkeen poliittinen johtaja, joka väitti 18 000 '
+        + 'neliökilometrin aroa asumattomaksi. Koelaitokset rakennettiin '
+        + 'vankileirien työvoimalla.'
+        + '\n\nVuosina 1949–1989 Neuvostoliitto teki alueella 456 ydinkoetta '
+        + 'piittaamatta juuri lainkaan niiden vaikutuksesta paikallisiin '
+        + 'ihmisiin tai ympäristöön. Siellä räjäytettiin sekä ensimmäinen '
+        + 'neuvostoliittolainen atomipommi että ensimmäinen ilmassa testattu '
+        + 'vetypommi, ja neljänkymmenen vuoden aikana alueella tehtiin '
+        + 'neljäsosa kaikista maailman ydinkokeista.'
+        + '\n\nSäteilyaltistuksen koko laajuus pidettiin vuosikausia '
+        + 'salassa, ja se on tullut ilmi vasta koealueen sulkemisen jälkeen. '
+        + 'Kazakstanilaisten asiantuntijoiden arvion mukaan 1,5 miljoonaa '
+        + 'ihmistä altistui laskeumalle vuosien varrella. Koealue suljettiin '
+        + '29. elokuuta 1991, ja siitä on sittemmin tullut maailman '
+        + 'tutkituin ydinkoealue — ja ainoa, joka on ympäri vuoden avoinna '
+        + 'yleisölle.',
+      lahde: 'en-Wikipedia "Semipalatinsk Test Site", johdanto-osa ja osio '
+        + '"History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka suuri osa maailman ydinkokeista tehtiin Polygonilla?',
+        vaihtoehdot: [
+          'Neljäsosa',
+          'Puolet',
+          'Yksi kymmenesosa',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Aralin (Aralskin) kaupunki, entinen kalasatama järven pohjoisrannalla.
+     * Lähde: en.wikipedia.org: Aral Sea; Aral, Kazakhstan
+     */
+    {
+      id: 'aralin-kalasatama',
+      otsikko: 'Kalasatama, jonka edestä meri lähti',
+      nimio: 'Aralin satama',
+      vuosi: '1960–2007',
+      paikka: 'Aralin kaupunki, Kyzylorda',
+      lat: 46.783333, lon: 61.666667,
+      kortti: 'Kaupunki oli kalasatama järven rannalla ja toimitti kalaa koko '
+        + 'seudulle. Sitten järveen laskevat joet käännettiin '
+        + 'puuvillapelloille. Ranta perääntyi kymmeniä kilometrejä, ja '
+        + 'satamaan jäivät vain laivojen rungot.',
+      teksti: 'Araljärvi oli suolainen, laskujoeton järvi Kazakstanin ja '
+        + 'Uzbekistanin välissä. Nimi tarkoittaa mongoli- ja turkkilaiskielillä '
+        + 'suunnilleen saarten merta: järvessä oli aikoinaan yli 1 100 saarta. '
+        + 'Se oli maailman kolmanneksi suurin järvi, pinta-alaltaan 68 000 '
+        + 'neliökilometriä.'
+        + '\n\nJärvi alkoi kutistua 1960-luvulla, kun sitä ruokkivat joet '
+        + 'käännettiin neuvostoliittolaisiin kastelujärjestelmiin. Vuoteen '
+        + '2007 mennessä siitä oli jäljellä kymmenesosa alkuperäisestä, ja se '
+        + 'oli jakautunut neljäksi erilliseksi järveksi. Vuonna 2009 '
+        + 'kaakkoinen järvi oli kadonnut, ja NASAn satelliittikuvat '
+        + 'paljastivat elokuussa 2014, että itäinen allas oli kuivunut '
+        + 'kokonaan ensimmäistä kertaa uudella ajalla. Sitä kutsutaan nyt '
+        + 'Aralkumin autiomaaksi.'
+        + '\n\nAral eli Aralsk oli kalasatama järven pohjoisrannalla ja '
+        + 'seudun tärkein kalantoimittaja. Alueen kalastuselinkeino tuhoutui, '
+        + 'mukanaan tulivat työttömyys ja köyhyys, ja seutu on pahoin '
+        + 'saastunut, mistä on seurannut vakavia terveysongelmia. YK:n '
+        + 'pääsihteeri Ban Ki-moon kutsui järven kuivumista vuonna 2011 '
+        + '"yhdeksi maapallon pahimmista ympäristökatastrofeista".'
+        + '\n\nPohjoisosaa on yritetty pelastaa. Kokaralin pato valmistui '
+        + '2005, ja vuoteen 2008 mennessä vedenpinta oli noussut '
+        + 'kaksitoista metriä vuoden 2003 tasosta. Vuoteen 2013 mennessä '
+        + 'suolapitoisuus oli laskenut ja kalaa oli taas niin paljon, että '
+        + 'kalastus kannatti.',
+      lahde: 'en-Wikipedia "Aral Sea", johdanto-osa, ja "Aral, Kazakhstan", '
+        + 'johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä sai Araljärven kutistumaan 1960-luvulta alkaen?',
+        vaihtoehdot: [
+          'Maanjäristys muutti pohjaa',
+          'Järveen laskevat joet käännettiin kasteluun',
+          'Ilmasto muuttui yhtäkkiä kuivaksi',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  MNG: [
+    /*
+     * Ongiin luostarin rauniot Ongi-joen varrella, Dundgovi.
+     * Lähde: en.wikipedia.org: Ongi Monastery
+     */
+    {
+      id: 'ongiin-luostari',
+      otsikko: 'Kaksi luostaria joen kahden puolen, molemmat maan tasalle',
+      nimio: 'Ongi',
+      vuosi: '1939',
+      paikka: 'Ongi-joki, Saikhan-Ovoo',
+      lat: 45.339808, lon: 104.004278,
+      kortti: 'Joen molemmilla rannoilla oli luostari: yhteensä 28 temppeliä, '
+        + 'neljä buddhalaista yliopistoa ja tuhat munkkia. Vuonna 1939 '
+        + 'molemmat hävitettiin perustuksia myöten. Ensimmäinen uusi '
+        + 'temppeli vihittiin vasta 2004.',
+      teksti: 'Ongiin luostari on yhteisnimi kahden luostarin raunioille, '
+        + 'jotka ovat vastakkain Ongi-joen rannoilla Saikhan-Ovoon '
+        + 'piirissä Dundgovin aimakissa Etelä-Keski-Mongoliassa. '
+        + 'Barlimin luostari on pohjoisrannalla ja Khutagtin luostari '
+        + 'etelärannalla.'
+        + '\n\nVanhempaan eteläiseen kokonaisuuteen kuului hallintorakennuksia '
+        + 'ja yksitoista temppeliä. Pohjoinen kokonaisuus rakennettiin '
+        + '1700-luvulla, ja siinä oli seitsemäntoista temppeliä, niiden '
+        + 'joukossa yksi koko Mongolian suurimmista. Alueella toimi myös '
+        + 'neljä buddhalaista yliopistoa. Luostari perustettiin 1660, ja '
+        + 'suurimmillaan siellä asui yli tuhat munkkia.'
+        + '\n\nMolemmat kokonaisuudet tuhottiin täysin vuonna 1939 '
+        + 'uskonnonvastaisissa vainoissa, joita johti Mongolian '
+        + 'kommunistisen puolueen johtaja Khorloogiin Tšoibalsan. Yli 200 '
+        + 'munkkia surmattiin, ja monet eloon jääneet vangittiin tai '
+        + 'pakotettiin luopumaan munkkiudesta ja määrättiin armeijaan.'
+        + '\n\nJoen varrella ja ympäröivillä kukkuloilla on yhä paljon '
+        + 'raunioita ja korkea stupa. 1990-luvulla päätettiin rakentaa '
+        + 'luostari uudelleen: ensimmäinen temppeli vihittiin 2004, ja sen '
+        + 'edessä olevassa gerissä on pieni museo. Yhteen kunnostettuun '
+        + 'stupaan on kiinnitetty muistolaatta munkkien nimillä.',
+      lahde: 'en-Wikipedia "Ongi Monastery", johdanto-osa. '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Milloin Ongiin luostari tuhottiin?',
+        vaihtoehdot: [
+          'Vuonna 1860',
+          'Vuonna 1939',
+          'Vuonna 1990',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Nemegtin muodostuma Gobissa (Tarbosaurus-fossiilien alue).
+     * Lähde: en.wikipedia.org: Tarbosaurus; Nemegt Formation
+     */
+    {
+      id: 'tarbosaurus-huutokauppa',
+      otsikko: 'Dinosaurus, joka pysäytettiin huutokauppakamarissa',
+      nimio: 'Tarbosaurus',
+      vuosi: '2012–2013',
+      paikka: 'Nemegtin muodostuma, Gobi',
+      lat: 43.5, lon: 101,
+      kortti: 'New Yorkin huutokauppaluettelossa oli miljoonan dollarin '
+        + 'dinosauruksenluuranko. Sen laji tunnetaan vain Gobista, ja '
+        + 'Mongolian laki sanoo, että sieltä löytyvä fossiili kuuluu '
+        + 'Mongoliaan. Presidentti puuttui asiaan päivää ennen vasaraniskua.',
+      teksti: 'Tarbosaurus oli suuri petodinosaurus, jonka fossiileja '
+        + 'löytyy vain Mongolian ja Kiinan Gobista. Molemmat maat '
+        + 'kieltävät niiden viennin, mutta yksityiskeräilijät ovat silti '
+        + 'ryöstäneet luita alueelta.'
+        + '\n\nMiljoonan dollarin salakuljetuskauppa paljastui, kun '
+        + 'Heritage Auctions -huutokauppakamarin luettelo New Yorkin '
+        + '20. toukokuuta 2012 pidettävää tilaisuutta varten herätti '
+        + 'epäilyksiä. Mongolian lain mukaan Gobista löytyvän fossiilin '
+        + 'kuuluu jäädä mongolialaiseen laitokseen, eikä ollut juuri '
+        + 'epäilystä siitä, etteikö luettelon Tarbosaurus bataar olisi '
+        + 'varastettu.'
+        + '\n\nMongolian presidentti ja lukuisat paleontologit vastustivat '
+        + 'kauppaa, ja viime hetken tutkimus vahvisti, että kyseessä oli '
+        + 'laji, jota löytyy vain Gobin autiomaasta ja joka kuului siis '
+        + 'oikeutetusti Mongolialle.'
+        + '\n\nOikeudenkäynnissä salakuljettaja Eric Prokopi tunnusti '
+        + 'syyllisyytensä, ja dinosaurus palautettiin Mongoliaan 2013, '
+        + 'missä sitä pidettiin esillä Ulan Batorin Sühbaatarin aukiolla. '
+        + 'Prokopi oli myynyt luurangon yhdessä englantilaisen '
+        + 'fossiilikauppiaan Christopher Mooren kanssa. Tapaus johti '
+        + 'kymmenien mongolialaisten dinosaurusten palauttamiseen.',
+      lahde: 'en-Wikipedia "Tarbosaurus", osio "Poached specimens", ja '
+        + '"Nemegt Formation", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä huutokaupattavalle luurangolle lopulta tapahtui?',
+        vaihtoehdot: [
+          'Se myytiin yksityiskeräilijälle',
+          'Se palautettiin Mongoliaan',
+          'Se todettiin väärennökseksi',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
 };

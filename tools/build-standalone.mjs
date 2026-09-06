@@ -579,6 +579,13 @@ const MODULES = [
   'js/pollo-haku.js',
   'js/pollo.js',
   /*
+   * Livian ääni ennen Livian kuplia: js/livia.js soittaa repliikin
+   * äänen kuplan ilmestyessä (omistaja 6.9.2026). Moduuli tuo vain
+   * median juuren, puheen voimakkuuden ja luennan puhujakirjanpidon —
+   * kaikki listalla aiemmin.
+   */
+  'js/liviapuhe.js',
+  /*
    * Livian omat kuplat heti pöllön jälkeen: moduuli tuo pöllöstä
    * kuplan näyttäjät, ja sen tuovat kartta (avausesittely) ja ui
    * (mannerivihje) — molemmat ovat listalla myöhempänä.

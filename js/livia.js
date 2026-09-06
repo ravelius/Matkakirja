@@ -33,6 +33,7 @@
  * ajoituksen ja portit.
  */
 
+import { soitaLivianAani, pysaytaLivianAani } from './liviapuhe.js';
 import { polloAvauskupla, polloKuplatPois, polloSaapumiskupla } from './pollo.js';
 import { sfx } from './sound.js';
 import { linssiEstaa } from './ui-apurit.js';
@@ -122,20 +123,19 @@ export function soitaLivianTehoste(laji) {
  */
 export const LIVIAN_AVAUS = [
   'Hei, odotas kaveri. Sinähän olet ihan hiessä.',
-  'Minä olen Livia. Ja tiedän sinusta enemmän kuin arvaat — pöllö luki '
-    + 'isoisäsi kirjan, ja minä kannoin ne sähkeet.',
-  'Valitse rauhassa mistä aloitat — vaikka se maanosa, joka kutkuttaa '
-    + 'eniten. Pallon ympäri sinä kierrät joka tapauksessa.',
-  'Ai niin, ja anteeksi valikoima: pöllö on ehtinyt tarkistaa vasta yhden '
-    + 'reitin. Ateenasta se alkaa. Loput aukeavat kyllä.',
+  // LYHENNETTY 6.9.2026 (omistaja: repliikit "mahdollisimman lyhyita",
+  // puhe ~14 merkkiä/s, katto ~85 merkkiä): sama sisältö, vähemmän sanoja.
+  'Minä olen Livia. Pöllö luki isoisäsi kirjan, ja minä kannoin ne sähkeet.',
+  'Valitse rauhassa mistä aloitat — vaikka se maanosa, joka kutkuttaa eniten.',
+  'Ai niin, ja anteeksi valikoima: pöllö on tarkistanut vasta yhden reitin. '
+    + 'Ateenasta se alkaa.',
   /*
    * OPASLUPAUS (omistaja 29.8.2026): avaus lupaa pöllön oppaaksi ja
    * Livian pelkäksi viestinviejäksi. Lupaus on dramaturgian toinen
    * puoli — perillä selviää, että Livia joutuukin tuuraamaan
    * (livianPaljastus). Älä muuta kumpaakaan erikseen.
    */
-  'Perillä sinua odottaa Viisas Pöllö — se näistä hommista tietää. Minä '
-    + 'olen vain viestinviejä.',
+  'Perillä sinua odottaa Viisas Pöllö. Minä olen vain viestinviejä.',
 ];
 
 /**
@@ -166,15 +166,20 @@ export const LIVIAN_AVAUKSEN_VIIVE_MS = 1500;
 const KUPLIEN_VALI = 280;
 
 /** Lukuaika merkkiä kohden ja sen rajat. */
-const LUKUAIKA_PER_MERKKI = 58;
-const LUKUAIKA_VAHINTAAN = 2800;
-const LUKUAIKA_ENINTAAN = 8200;
+// 6.9.2026: kupla ei saa sulkeutua ennen kuin pulun puhe on ohi. Puhe
+// kulkee noin 14 merkkiä sekunnissa (tools/generoi-pulu.mjs), joten
+// kuplan aika on 78 ms/merkki (≈ 13 merkkiä/s) + hengähdys; ennen 58.
+const LUKUAIKA_PER_MERKKI = 78;
+const LUKUAIKA_VAHINTAAN = 3200;
+const LUKUAIKA_ENINTAAN = 9500;
 
 /** Sarjan tila: yksi kerrallaan, ja ajastin peruttavissa. */
 let avausKesken = false;
 let avausAjastin = null;
 /** Näkyikö sarjasta yhtään kuplaa — vain silloin Livialla on mistä lähteä. */
 let avausNakyi = false;
+/** Se käyttöliittymä, jossa sarja soi — äänen pysäytys tarvitsee sen. */
+let avauksenUi = null;
 
 /** Onko avausesittely jo nähty tällä laitteella? */
 export function livianAvausNahty() {
@@ -220,6 +225,7 @@ export function naytaLivianAvaus(ui) {
   if (ui.game?.phase !== 'pickstart') return false;
   if (avausKesken || livianAvausNahty()) return false;
   avausKesken = true;
+  avauksenUi = ui;
   clearTimeout(avausAjastin);
   const viive = AVAUKSEN_VIIVE + (ui.reducedMotion ? 0 : LIVIAN_AVAUKSEN_VIIVE_MS);
   avausAjastin = setTimeout(() => naytaRepliikki(ui, 0), viive);
@@ -248,6 +254,13 @@ function naytaRepliikki(ui, i) {
     lopetaAvaus();
     return;
   }
+  /*
+   * ÄÄNI SEURAA KUPLAA (omistaja 6.9.2026): repliikki soitetaan Livian
+   * omalla äänellä silloin kun kupla oikeasti näkyi — ensimmäinen saa
+   * kaikuversion, jossa pulu huutaa viestiään jo kaukaa
+   * (js/liviapuhe.js). Puuttuva äänite on hiljainen, kupla ennallaan.
+   */
+  soitaLivianAani(ui, 'avaus', i);
   // Lippu vasta kun sarja oikeasti näkyi (sama sopimus kuin pöllön
   // kutsukuplalla, js/ehdotukset.js ajastaEhdotusKupla).
   if (i === 0) merkitseNahdyksi();
@@ -276,14 +289,23 @@ function seuraavaRepliikki(ui, i) {
   avausAjastin = null;
   if (!avausKesken) return;
   if (i >= LIVIAN_AVAUS.length) {
-    lopetaAvaus();
+    // Sarja päättyi itsestään: viimeinen repliikki saa puhua loppuun.
+    lopetaAvaus({ vaienna: false });
     return;
   }
   avausAjastin = setTimeout(() => naytaRepliikki(ui, i), KUPLIEN_VALI);
 }
 
-/** Sarja päättyy: ajastin pois ja kuplat pois (ks. seuraavaRepliikki). */
-function lopetaAvaus() {
+/**
+ * Sarja päättyy: ajastin pois ja kuplat pois (ks. seuraavaRepliikki).
+ *
+ * VIIMEINEN REPLIIKKI SAA PUHUA LOPPUUN. Kun sarja päättyy itsestään,
+ * ääntä ei vaienneta: kuplat väistyvät, mutta Livian viimeinen lause
+ * kuullaan kokonaan (`vaienna: false`). Keskeytys — pelaajan valinta,
+ * kuolleeksi mennyt näkymä tai kupla joka ei mahtunut ruudulle —
+ * vaientaa äänen kuplien mukana.
+ */
+function lopetaAvaus({ vaienna = true } = {}) {
   clearTimeout(avausAjastin);
   avausAjastin = null;
   avausKesken = false;
@@ -291,6 +313,8 @@ function lopetaAvaus() {
   // koskaan aloitettu, ei saa lennättää tyhjää ruutua.
   if (avausNakyi) soitaLivianTehoste('lahtee');
   avausNakyi = false;
+  if (vaienna) pysaytaLivianAani(avauksenUi);
+  avauksenUi = null;
   polloKuplatPois();
 }
 
@@ -344,12 +368,12 @@ export function livianPaljastus({ maahan = '', paikassa = '' } = {}) {
   const tervetuloa = maahan ? ` Siinä lukee: "Tervetuloa ${maahan}."` : '';
   const tehtava = paikassa ? `ratkaise tehtävä ${paikassa}` : 'ratkaise kaupungin tehtävä';
   return [
+    // LYHENNETTY 6.9.2026 (omistaja: "mahdollisimman lyhyita").
     `Kaak. Sähke pöllöltä.${tervetuloa} Ja sitten: pöllö on juuttunut `
-      + 'matkoilleen. Hetkenä minä hyvänsä se ehtii, mutta juuri nyt — no. '
-      + 'Minä tuuraan.',
-    'Ei hätää. Olen kantanut sen sähkeet vuosia ja lukenut joka ikisen. '
-      + `Melkein joka ikisen. Tämän loppu kuuluu: ${tehtava} ennen kuin `
-      + 'lähdet aarteelle — napauta kaupungin kultaista merkkiä kartalla.',
+      + 'matkoilleen. Minä tuuraan.',
+    'Ei hätää. Olen lukenut sen sähkeet vuosia. Melkein joka ikisen. '
+      + `Tämän loppu kuuluu: ${tehtava} — napauta kaupungin kultaista `
+      + 'merkkiä kartalla.',
   ];
 }
 
@@ -441,18 +465,29 @@ export function naytaLivianPaljastus(ui, { jalkeen = null, maahan = '', paikassa
   } catch {
     /* yksityinen selaus: istunnon lippu kantaa loppumatkan */
   }
-  paljastusRepliikki(ui, city.id, 0, jalkeen, livianPaljastus({ maahan, paikassa }));
+  paljastusRepliikki(ui, city.id, 0, jalkeen, livianPaljastus({ maahan, paikassa }),
+    { maahan, paikassa });
   return true;
 }
 
-/** Yksi paljastuksen repliikki; napautus tai ajastin vie seuraavaan. */
-function paljastusRepliikki(ui, cityId, i, jalkeen, repliikit = LIVIAN_PALJASTUS) {
+/**
+ * Yksi paljastuksen repliikki; napautus tai ajastin vie seuraavaan.
+ *
+ * `variantti` on se maa ja paikka, joista teksti ladottiin: äänite on
+ * olemassa vain äänitetylle variantille (js/liviapuhe.js
+ * LIVIAN_AANITETTY_PALJASTUS), muualla kupla puhuu ilman ääntä.
+ */
+function paljastusRepliikki(ui, cityId, i, jalkeen, repliikit = LIVIAN_PALJASTUS, variantti = {}) {
   clearTimeout(paljastusAjastin);
   paljastusAjastin = null;
   if (ui.dead) { paljastusKesken = false; return; }
   // Pelaaja on voinut lähteä kaupungista kesken sarjan: puheenvuoro
   // kuuluu vain siihen saapumiseen, jossa se alkoi.
-  if (ui.game?.cityOf?.()?.id !== cityId) { paljastusKesken = false; return; }
+  if (ui.game?.cityOf?.()?.id !== cityId) {
+    paljastusKesken = false;
+    pysaytaLivianAani(ui);
+    return;
+  }
   /*
    * LINSSI ON PÄÄLLÄ: SARJA ODOTTAA, EI PÄÄTY (omistajan tilaus
    * 4.9.2026). Kupla ei tule linssin päälle (js/pollo.js
@@ -464,27 +499,37 @@ function paljastusRepliikki(ui, cityId, i, jalkeen, repliikit = LIVIAN_PALJASTUS
    */
   if (linssiEstaa()) {
     paljastusAjastin = setTimeout(
-      () => paljastusRepliikki(ui, cityId, i, jalkeen, repliikit), PALJASTUKSEN_LINSSIVALI,
+      () => paljastusRepliikki(ui, cityId, i, jalkeen, repliikit, variantti),
+      PALJASTUKSEN_LINSSIVALI,
     );
     return;
   }
   const teksti = repliikit[i];
   if (!teksti) {
+    // Sarja päättyi itsestään: viimeinen repliikki saa puhua loppuun
+    // (sama sopimus kuin avauksessa, ks. lopetaAvaus).
     paljastusKesken = false;
     jalkeen?.();
     return;
   }
-  const seuraava = () => paljastusRepliikki(ui, cityId, i + 1, jalkeen, repliikit);
+  const seuraava = () => paljastusRepliikki(ui, cityId, i + 1, jalkeen, repliikit, variantti);
   if (!polloSaapumiskupla(teksti, { kuittaus: seuraava })) {
     // Kupla ei mahtunut ruudulle (paneeli auki): ohjekuplat hoitavat
     // saapumisen, eikä sarjaa jäädä odottamaan.
     paljastusKesken = false;
+    pysaytaLivianAani(ui);
     jalkeen?.();
     return;
   }
   // *"Melkein joka ikisen"* on omistajan nimeämä sekoilukohta: Livia
   // myöntää, ettei ole sittenkään lukenut aivan kaikkia sähkeitä.
   if (onLivianSekoilua(teksti)) soitaLivianTehoste('sekoilee');
+  /*
+   * ÄÄNI SEURAA KUPLAA (omistaja 6.9.2026): ensimmäinen repliikki on
+   * saapuminen ja saa kaikuversion — pulu huutaa sähkettä jo ennen
+   * kuin on perillä (js/liviapuhe.js).
+   */
+  soitaLivianAani(ui, 'paljastus', i, variantti);
   paljastusAjastin = setTimeout(seuraava, lukuaika(teksti));
 }
 
@@ -494,8 +539,7 @@ function paljastusRepliikki(ui, cityId, i, jalkeen, repliikit = LIVIAN_PALJASTUS
 
 /** Mannerivihjeen repliikki — KAANONIA (päätoimittaja 29.8.2026). */
 export const MANNERIVIHJE = 'Kuule — jos tämä maa alkaa tuntua pitkältä, '
-  + 'kerää rahaa lentoon. Isosta kaupungista pääsee vaikka toiselle '
-  + 'mantereelle. Maailma ei lopu kesken.';
+  + 'kerää rahaa lentoon. Isosta kaupungista pääsee toiselle mantereelle.';
 
 /**
  * Rahaportti (omistaja 29.8.2026: "rahaa vähintään mannerylityksen
@@ -592,6 +636,8 @@ export function paivitaMannerivihje(ui) {
   // Kupla voi jäädä tulematta (paneeli auki, nappi piilossa): silloin
   // lippuja ei kuluteta, vaan tilanne kokeillaan uudelleen.
   if (!polloSaapumiskupla(MANNERIVIHJE)) return false;
+  // Vihje on Livian puhetta kuten muutkin kuplat (js/liviapuhe.js).
+  soitaLivianAani(ui, 'mannerivihje', 0);
   mannerivihjeenMaat.add(maa);
   mannerivihjeAnnettu = true;
   return true;
@@ -606,11 +652,13 @@ export function paivitaMannerivihje(ui) {
  * ja tuurauspaljastus kerran koskaan — uusi peli ei ole uusi laite
  * eikä uusi tarina.
  */
-export function nollaaLivianVihjeet() {
+export function nollaaLivianVihjeet(ui = null) {
   peruLivianAvaus();
   clearTimeout(paljastusAjastin);
   paljastusAjastin = null;
   paljastusKesken = false;
+  // Edellisen pelin repliikki ei jää soimaan uuden kartan päälle.
+  pysaytaLivianAani(ui, { haivyta: false });
   // Uusi peli aloittaa myös kuplapinon tyhjänä: edellisen pelin
   // puheenvuorot eivät jää uuden kartan päälle (js/pollo.js).
   polloKuplatPois();

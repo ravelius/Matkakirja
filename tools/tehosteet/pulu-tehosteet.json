@@ -15,7 +15,10 @@
       ],
       "kestoMin": 0.8,
       "kestoMax": 2.5,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": [
+        "Creative Commons 0",
+        "Attribution"
+      ]
     },
     {
       "tunnus": "siivet-laskeutuminen",
@@ -28,7 +31,10 @@
       ],
       "kestoMin": 0.5,
       "kestoMax": 2.5,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": [
+        "Creative Commons 0",
+        "Attribution"
+      ]
     },
     {
       "tunnus": "tomahdys-laskeutuminen",
@@ -41,7 +47,10 @@
       ],
       "kestoMin": 0.2,
       "kestoMax": 1.4,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": [
+        "Creative Commons 0",
+        "Attribution"
+      ]
     },
     {
       "tunnus": "doing-vieteri",
@@ -54,7 +63,10 @@
       ],
       "kestoMin": 0.3,
       "kestoMax": 2.0,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": [
+        "Creative Commons 0",
+        "Attribution"
+      ]
     },
     {
       "tunnus": "sekoilu-2",
@@ -67,7 +79,10 @@
       ],
       "kestoMin": 0.4,
       "kestoMax": 2.5,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": [
+        "Creative Commons 0",
+        "Attribution"
+      ]
     },
     {
       "tunnus": "ovi-auki",
@@ -80,7 +95,10 @@
       ],
       "kestoMin": 0.5,
       "kestoMax": 3.0,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": [
+        "Creative Commons 0",
+        "Attribution"
+      ]
     },
     {
       "tunnus": "ovi-lamahdys",
@@ -93,7 +111,10 @@
       ],
       "kestoMin": 0.4,
       "kestoMax": 2.5,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": [
+        "Creative Commons 0",
+        "Attribution"
+      ]
     },
     {
       "tunnus": "viuhahdus-tulo",
@@ -106,7 +127,10 @@
       ],
       "kestoMin": 0.3,
       "kestoMax": 2.0,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": [
+        "Creative Commons 0",
+        "Attribution"
+      ]
     },
     {
       "tunnus": "viuhahdus-lahto",
@@ -119,20 +143,28 @@
       ],
       "kestoMin": 0.3,
       "kestoMax": 2.0,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": [
+        "Creative Commons 0",
+        "Attribution"
+      ]
     },
     {
       "tunnus": "kujerrus",
       "peliavain": "pulu.kujerrus",
       "kuvaus": "Lyhyt kurkkuääni: pulun kujerrus",
       "hakusanat": [
-        "pigeon coo short",
-        "dove cooing close",
-        "pigeon cooing single"
+        "pigeon coo",
+        "dove coo",
+        "pigeon cooing",
+        "wood pigeon",
+        "rock dove"
       ],
       "kestoMin": 0.5,
       "kestoMax": 3.0,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": [
+        "Creative Commons 0",
+        "Attribution"
+      ]
     },
     {
       "tunnus": "paperin-kahina",
@@ -145,7 +177,10 @@
       ],
       "kestoMin": 0.4,
       "kestoMax": 2.5,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": [
+        "Creative Commons 0",
+        "Attribution"
+      ]
     },
     {
       "tunnus": "kellon-kilahdus",
@@ -158,7 +193,10 @@
       ],
       "kestoMin": 0.5,
       "kestoMax": 3.0,
-      "lisenssit": ["Creative Commons 0", "Attribution"]
+      "lisenssit": [
+        "Creative Commons 0",
+        "Attribution"
+      ]
     }
   ]
 }
