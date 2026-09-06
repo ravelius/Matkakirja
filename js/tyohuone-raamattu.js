@@ -3468,7 +3468,7 @@ export const RAAMATTU = {
           + 'laattavalinnan rajaus nakyvaan alueeseen) ja omistaja valitsee '
           + 'mittausten perusteella. LISAYS (omistaja 6.9.2026 ilta, '
           + 'sanatarkasti: "Google Earthissa myos sisaanpain zoomaus nayttaa '
-          + 'portaattomalta. Sen voisin myos samalla tutkia, miten sen saisi '
+          + 'portaattomalta. Sen voisit myos samalla tutkia, miten sen saisi '
           + 'toteutettua. Tama on pelin ehka yksi keskeisimmista '
           + 'tekniikoista, niin kaytetaan siihen nyt kaikki resurssit, etta '
           + 'saadaan toimimaan."): samaan tyohon kuuluu portaaton zoomaus '
