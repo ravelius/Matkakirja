@@ -39826,4 +39826,1053 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * PORTO ALEGRE (Opus 6.9.2026). Kohteet ovat kohdekartan kahdeksan
+   * pistettä (maakartat.js: KAUPUNKIKARTAT.portoalegre), ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 6.9.2026 (artikkelit
+   * "Town Hall of Porto Alegre", "Rio Grande do Sul Museum of Art",
+   * "Nosso Senhor dos Passos Chapel", "Santa Casa de Misericordia
+   * Hospital", "São Pedro Theatre", "Federal University of Rio Grande
+   * do Sul", "Minor Basilica of Our Lady of Sorrows", "Otávio Rocha
+   * Viaduct" ja "Joaquim Felizardo Museum of Porto Alegre").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Mercado Público, Grenal ja Beira-Rio, Usina do Gasômetro,
+   * Iberê Camargon säätiö, atsoorilaisparit ja kaupungin
+   * perustaminen, Farroupilha-kapina, charque, siirtolaisaallot,
+   * Mauán muuri, Redençãon kirpputori, Guaíban nimikiista,
+   * alkuperäiskansat ja vuoden 2024 tulva. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME JUTTUA KOSKETTAA VUOTTA 1873 SUORAAN, ja se on valinnan
+   * peruste eikä sattuma: Theatro São Pedro oli isoisän matkan aikaan
+   * viisitoista vuotta vanha, Dores-kirkon monumentaaliportaat
+   * valmistuivat juuri 1873, ja Passosin kappelin korjaustyöt alkoivat
+   * samana vuonna.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi, tekijä ja koko extmetadatasta) ja katsottu silmin 900
+   * px esikatseluna. Yksikään tiedosto ei ole sama kuin
+   * kaupunkilehden portoalegre-lohkossa. HYLÄTTY: "Kanso margs.jpg"
+   * (voimakas värivirhe), "Theatro São Pedro 2018 1.jpg" ja "Theatro
+   * São Pedro, 2015-01-24.JPG" (yleisön kasvot etualalla),
+   * "Centenario UFRGS.jpg" (vesileima kuvan alalaidassa), "Capela
+   * Nosso Senhor dos Passos.jpg" (messu käynnissä, ihmisiä),
+   * "Viaduto Otávio Rocha.jpg" (graffiti peittää veistosryhmän),
+   * "Famed Porto Alegre.jpg" (pelkkä kylttilähikuva) ja "Museu de
+   * Porto Alegre Joaquim Felizardo.jpg" (muraali, ei museota).
+   *
+   * JOAQUIM FELIZARDON MUSEO JÄI KUVATTOMAKSI. Solar Lopo Gonçalvesin
+   * ainoa kunnollinen julkisivukuva Commonsissa on 900 px leveä eli
+   * alle pelin rajan, ja kaksi muuta kuvaa ovat kyltti ja muraali.
+   * Kuvaton juttu on parempi kuin huono kuva; kohde on kirjattu
+   * kuvaputken tilauslistaan.
+   */
+  portoalegre: {
+    'Vanha kaupungintalo': {
+      aika: '1898–1901',
+      teksti: 'Porto Alegren kaupunginjohto toimi 1800-luvun lopulla '
+          + 'vuokratiloissa siellä täällä vanhassa keskustassa. Kun '
+          + 'José Montaury valittiin 1897 intendantiksi, hän lupasi '
+          + 'rakentaa kaupungille oman talon. Rahat kerättiin '
+          + 'myymällä kaupungin kiinteistöjä ja täyttämällä maata '
+          + 'Doca do Carvãossa. Ensimmäinen suunnitelma oli insinööri '
+          + 'Oscar Bittencourtin, mutta se kaadettiin poliittisista '
+          + 'syistä, ja uusi tilattiin venetsialaiselta insinööriltä '
+          + 'Giovanni Colfoscolta.'
+        + '\n\n'
+        + 'Peruskivi laskettiin 5. huhtikuuta 1898, työ alkoi saman '
+          + 'vuoden 28. syyskuuta ja talo valmistui huhtikuussa 1901. '
+          + 'Toukokuun 15. päivästä alkaen siihen muuttivat '
+          + 'kaupunginvaltuusto, sihteeristö, kirjanpito, rahasto ja '
+          + 'verotus sekä julkinen arkisto, ajoneuvotarkastus, '
+          + 'yleinen avustustoimi ja kaupungin ensimmäinen '
+          + 'poliisiasema vankiselleineen. Työ maksoi lopulta 500 '
+          + 'miljoonaa réistä, ja suurin osa rakennusaineista tuli '
+          + 'Porto Alegresta itsestään.'
+        + '\n\n'
+        + 'Talo on kaupungin ensimmäinen selvästi positivistinen '
+          + 'rakennus, ja sen H-kirjaimen muotoinen pohjakaava jätti '
+          + 'jäljen koko aikakauden viralliseen arkkitehtuuriin. '
+          + 'Julkisivun veistokset on tarkoitettu luettaviksi: '
+          + 'oikeanpuoleisessa ryhmässä keskellä on Vapaus, oikealla '
+          + 'Historia, Perikleen rintakuva merkitsee Demokratiaa ja '
+          + 'vasemmalla on Tiede; toisessa ryhmässä ovat Maatalous, '
+          + 'Kauppa ja Teollisuus, ja erillään vielä Oikeus ja '
+          + 'Tasavalta. Alakerran doorilainen pylväsjärjestys '
+          + 'tarkoittaa Valtaa ja ylhäällä oleva korinttilainen '
+          + 'Sopusointua ja Oikeutta. Kaupunginhallinto muutti pois '
+          + 'vuonna 2022, ja talo luovutettiin kulttuuritoimelle '
+          + 'muutettavaksi Porto Alegren taidemuseoksi.',
+      kuvat: [
+        {
+          tiedosto: 'Paço dos Açorianos Porto Alegre - 1.jpg',
+          selite: 'Julkisivun edessä on Talavera de la Reinan suihkulähde, '
+            + 'jonka Espanjan siirtokunta lahjoitti Farroupilha-kapinan '
+            + 'satavuotispäiväksi; portaiden sivuilla makaa marmorileijonia.',
+          lahde: 'Hedestad, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rio Grande do Sulin taidemuseo': {
+      aika: '1954',
+      teksti: 'Osavaltion taidemuseo MARGS perustettiin asetuksella '
+          + 'vuonna 1954 — ilman taloa ja ilman yhtäkään teosta. '
+          + 'Kulttuuriasioista vastannut José Mariano de Freitas Beck '
+          + 'pyysi työhön São Paulossa syntyneen taidemaalarin Ado '
+          + 'Malagolin, joka oli juuri saapunut kaupunkiin '
+          + 'opettamaan taideinstituuttiin. Malagoli kokosi ensin '
+          + 'osavaltion virastoihin hajaantuneet maalaukset yhteen ja '
+          + 'osti sitten lisää São Paulosta ja paikallisilta '
+          + 'taiteilijoilta.'
+        + '\n\n'
+        + 'Museo avattiin yleisölle 1955, ja sen ensimmäinen '
+          + 'näyttelytila oli Theatro São Pedron lämpiö. Esillä oli '
+          + 'noin 120 teosta. 1960-luvulla kokoelma muutti '
+          + 'huoneistoon Salgado Filho -kadulle ja 1978 nykyiseen '
+          + 'taloonsa. Osavaltion rahoitus loppui, kun Malagoli erosi '
+          + '1959, joten kokoelma kasvoi sen jälkeen lähes '
+          + 'yksinomaan lahjoituksilla — ensin yli tuhanteen ja '
+          + 'nykyään yli 2 600 teokseen.'
+        + '\n\n'
+        + 'Talo itse on kansallinen suojelukohde ja yksi kaupungin '
+          + 'huomattavimmista historiallisista rakennuksista. Sen '
+          + 'suunnittelijaksi mainitaan yleensä saksalaissyntyinen '
+          + 'Theodor Wiederspahn, mutta taiteilija ja historioitsija '
+          + 'Fernando Corona katsoi tekijäksi Germano Gundlachin. '
+          + '1990-luvun perusteellinen korjaus teki talosta '
+          + 'kansainvälisiin näyttelyihin kelpaavan: sen jälkeen '
+          + 'täällä on nähty Musée d’Orsayn kudonnaisia, Uffizin '
+          + 'maalauksia ja Petit Palais’n koriste-esineitä.',
+      kuvat: [
+        {
+          tiedosto: 'Margsentrada.jpg',
+          selite: 'Museon eklektinen sisäänkäynti: pylväät, kaarilistat ja '
+            + 'oven yllä naisenkasvoinen mascaron.',
+          lahde: 'Filipeschaves, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nosso Senhor dos Passosin kappeli': {
+      aika: '1819–1825',
+      teksti: 'Santa Casa de Misericórdia, kaupungin vanha '
+          + 'laupeudensairaala, perustettiin 1803, mutta oma kirkko '
+          + 'sen sisälle syntyi hitaasti. Veljeskunnan päätöskirjan '
+          + 'ensimmäinen merkintä 24. tammikuuta 1814 kertoo '
+          + 'Senhor dos Passos -pyhäinkuvasta ja tarpeesta saada '
+          + 'sairaalaan kappeli, jossa säilytettäisiin ehtoollista '
+          + 'sairaita varten. Lupa tuli saman vuoden heinäkuussa '
+          + 'kapteenikunnan kuvernööriltä Diogo de Souzalta, mutta '
+          + 'työ ei silti alkanut: uusi anomus tehtiin 1818, ja vasta '
+          + '1819 rakennettiin. Vuonna 1825 vihittiin runko ja alttari '
+          + 'ja pyhäinkuva siirrettiin paikalleen seurakuntakirkosta.'
+        + '\n\n'
+        + 'Ensimmäinen kappeli purettiin 1858 uuden tieltä. Vuosina '
+          + '1866–1868 mestari João do Couto e Silva teki uuden '
+          + 'pääalttarin ja puuveistokoristelun; samaan aikaan '
+          + 'ostettiin Bahiasta kuvat Ristiinnaulitusta, Yksinäisyyden '
+          + 'Neitsyestä ja Maria Magdaleenasta. Ostajana oli kauppias '
+          + 'Lopo Gonçalves Bastos, jonka kesähuvila on nykyään '
+          + 'kaupungin historiallinen museo.'
+        + '\n\n'
+        + 'Vuosina 1873–1881 kappelia kunnostettiin perusteellisesti: '
+          + 'kuori uusittiin, alttarit koristeltiin, lattia laskettiin, '
+          + 'ovet vaihdettiin, kaksi lehteriä rakennettiin, urkuparvi '
+          + 'suojattiin rautakaiteella ja hankittiin kolmen kellon '
+          + 'soittokello ja urut. Julkisivu sai nykyisen '
+          + 'uusgoottilaisen asunsa vasta vuosien 1909–1910 '
+          + 'uudelleenrakennuksessa. 1940-luvulla katutyöt veivät '
+          + 'portaat, sisäänkäynti siirrettiin talon sivulle ja vanhan '
+          + 'oven paikalle tuli Judith Fortesin lasimaalaus.',
+      kuvat: [
+        {
+          tiedosto: 'Capela Senhor dos Passos3.jpg',
+          selite: 'Kuorin päädyssä on kappelin nimikkokuva Senhor dos '
+            + 'Passos; etualan rautakaide suojaa urkuparvea.',
+          lahde: 'Ricardo André Frantz, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Theatro São Pedro': {
+      aika: '1858',
+      teksti: 'Theatro São Pedro on Porto Alegren vanhin teatteri. Se '
+          + 'perustettiin 1858 — viisitoista vuotta ennen isoisän '
+          + 'matkaa — ja siitä tuli nopeasti paitsi taiteen myös '
+          + 'seuraelämän ja politiikan keskus. Vuonna 1955 sen '
+          + 'lämpiössä avattiin osavaltion taidemuseo, jolla ei '
+          + 'silloin ollut omaa taloa.'
+        + '\n\n'
+        + '1970-luvulla talo oli niin huonossa kunnossa, että '
+          + 'perusteellinen korjaus oli pakko tehdä. Osavaltio valitsi '
+          + 'työn johtoon Eva Sopherin, joka oli vetänyt kaupungissa '
+          + 'lukuisia taidehankkeita PROARTE-järjestössä. Korjaus '
+          + 'kesti yhdeksän vuotta, ja teatteri avattiin uudelleen '
+          + '1984. Siitä tuli Sopherin elämäntyö: hän johti taloa '
+          + '41 vuotta, kuolemaansa asti.'
+        + '\n\n'
+        + 'Vuonna 1991 Sopherin asemaa yritettiin haastaa. Silloin '
+          + 'hänen kannattajansa — muiden muassa ohjaaja ja '
+          + 'näyttelijä Bete Coelho — kokoontuivat pitämään toisiaan '
+          + 'kädestä teatterin ympäri kiertävässä ketjussa. Sopher '
+          + 'kuoli 2018 94-vuotiaana, ja osavaltion kuvernööri José '
+          + 'Ivo Sartori julisti kolmen päivän suruajan. Hänen '
+          + 'aloittamansa laajennus oli budjetoitu 20 miljoonaan '
+          + 'realiin, mutta arvio nousi viiteenkymmeneen; vuoteen '
+          + '2018 mennessä valmiina olivat pysäköintihalli, '
+          + 'toimistot, ravintola ja musiikkisali.',
+      kuvat: [
+        {
+          tiedosto: 'Theatro São Pedro - 30.jpg',
+          selite: 'Räystäslistan alla lukee THEATRO SÃO PEDRO; alakerran '
+            + 'kaariholvien takana on lämpiö, jossa osavaltion taidemuseo '
+            + 'aloitti 1955.',
+          lahde: 'Ajmcbarreto, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rio Grande do Sulin liittovaltionyliopisto': {
+      aika: '1895',
+      teksti: 'Rio Grande do Sulin korkeakoulutus alkoi vuonna 1895 '
+          + 'perustetusta farmasian ja kemian koulusta. Vuotta '
+          + 'myöhemmin sen rinnalle tuli insinöörikoulu, ja vuosisadan '
+          + 'lopulla lääketieteellinen ja oikeustieteellinen — '
+          + 'jälkimmäinen oli osavaltion ensimmäinen humanistinen '
+          + 'korkeakoulu. Marraskuussa 1934 nämä koottiin Porto '
+          + 'Alegren yliopistoksi.'
+        + '\n\n'
+        + 'Vuonna 1947 nimi muuttui Rio Grande do Sulin yliopistoksi, '
+          + 'ja siihen liitettiin Pelotasin oikeus- ja hammaslääketiede '
+          + 'sekä Santa Marian farmasia — molemmat irtautuivat '
+          + 'myöhemmin omiksi yliopistoikseen. Joulukuussa 1950 koko '
+          + 'laitos siirtyi liittovaltiolle, ja siitä tuli UFRGS. '
+          + 'Nykyään opiskelijoita on runsaat 31 000 perustutkinnossa '
+          + 'ja 12 000 jatkotutkinnossa, opettajia yli 2 600, '
+          + 'rakennuksia yli 300 ja kirjastoja 33. Vuosina 2012–2019 '
+          + 'yliopisto valittiin Brasilian parhaaksi '
+          + 'liittovaltionyliopistoksi.'
+        + '\n\n'
+        + 'Talolla on myös poliittinen historiansa. Vuosina 1964–1969, '
+          + 'sotilasdiktatuurin pahimpina vuosina, yliopistosta '
+          + 'poistettiin 33 professoria ja joukko opiskelijoita. '
+          + 'Kolme Brasilian presidenttiä — Getúlio Vargas, João '
+          + 'Goulart ja Dilma Rousseff — on opiskellut täällä, samoin '
+          + 'suuri osa osavaltion pienempien yliopistojen historian, '
+          + 'filosofian ja yhteiskuntatieteiden opettajista.',
+      kuvat: [
+        {
+          tiedosto: 'AntigaEngenhariaUFRGS.JPG',
+          selite: 'Vanha insinöörikoulu keskustan kampuksella; julkisivun '
+            + 'päädyssä lukee roomalaisin numeroin MDCCCC.',
+          lahde: 'Eugenio Hansen, OFS, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dores-kirkko': {
+      aika: '1807–1904',
+      teksti: 'Dores-kirkko on Porto Alegren vanhin pystyssä oleva '
+          + 'katolinen kirkko, ja se rakennettiin lähes sadassa '
+          + 'vuodessa. Veljeskunta päätti kirkosta 1. toukokuuta '
+          + '1806, peruskivi laskettiin 1807 ja kuningattaren lupa '
+          + 'saatiin 1809. Kuorin seinät sortuivat 1810. Vuonna 1813 '
+          + 'kappeli vihittiin, mutta työ pysähtyi taas '
+          + 'Farroupilha-kapinan ajaksi, ja vuoteen 1846 asti '
+          + 'rakennus oli käytännössä pelkkä kuori, jonka eteen oli '
+          + 'pystytetty vaja kirkkosaliksi. Vasta kun Caxiasin kreivi '
+          + 'lahjoitti neljä contoa réistä, sivuseinien perustukset '
+          + 'päästiin tekemään.'
+        + '\n\n'
+        + 'Seinät nousivat 1857, ja João do Couto e Silva teki katon, '
+          + 'holvin ja julkisivun. Kirkko vihittiin 10. toukokuuta '
+          + '1868. Edessä oleva monumentaaliportaikko valmistui '
+          + 'vasta 1873: siihen asti kirkkoon mentiin takakautta '
+          + 'Riachuelo-kadulta. Portugalista oli tuotu 1871 seitsemän '
+          + 'kärsimystien kuvaa, jotka ovat yhä paikallaan.'
+        + '\n\n'
+        + 'Julkisivua ja torneja ei ollut vielä 1800-luvun lopullakaan. '
+          + 'Vanha siirtomaabarokkinen suunnitelma hylättiin, ja '
+          + 'arkkitehti Júlio Weise piirsi eklektisen julkisivun; '
+          + 'läntinen torni vihittiin 1900, toinen seuraavana vuonna '
+          + 'ja koko työ valmistui 1904. Perimätiedon mukaan viivytys '
+          + 'johtui orjan kirouksesta: hänet oli hirtetty syyttä '
+          + 'Neitsyen kuvalta varastetusta kaulakorusta. Historioitsija '
+          + 'Sérgio da Costa Franco pitää tarinaa vääränä ja sanoo '
+          + 'tuomion koskeneen murhaa. Kirkko suojeltiin 1938, ja '
+          + 'paavi Franciscus nimitti sen 2022 basilikaksi — '
+          + 'ensimmäisenä Porto Alegressa.',
+      kuvat: [
+        {
+          tiedosto: 'Igreja Nossa Senhora das Dores - Porto Alegre - RS - Brasil.jpg',
+          selite: 'Portaikko kirkon edessä valmistui 1873; sitä ennen sisään '
+            + 'mentiin talon takaa. Tornit ovat vuosilta 1900 ja 1901.',
+          lahde: 'Jorge Juno Goi Bengochea, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Otávio Rochan viadukti': {
+      aika: '1928–1932',
+      teksti: 'Porto Alegren keskustan itä-, etelä- ja keskiosa olivat '
+          + 'pitkään erillään toisistaan, koska niiden välissä oli '
+          + 'kukkula, jota sanottiin nimellä morrinho. Kaupungin '
+          + 'ensimmäinen yleiskaava esitti 1914 kadun, joka yhdistäisi '
+          + 'ne, mutta työ hyväksyttiin vasta 1926, kun intendantti '
+          + 'Otávio Rocha ja osavaltion johtaja Borges de Medeiros '
+          + 'päättivät avata nykyisen Borges de Medeiros -kadun. '
+          + 'Katua varten maata piti laskea, ja se katkaisi Duque de '
+          + 'Caxias -kadun — sen jatkaminen vaati sillan.'
+        + '\n\n'
+        + 'Insinöörien Manoel Barbosa Assumpção Itaquin ja Duilio '
+          + 'Bernardin suunnitelma hyväksyttiin 1927, pakkolunastukset '
+          + 'alkoivat seuraavana vuonna, urakan voitti Dyckerhoff & '
+          + 'Widmann ja työ valmistui 1932. Rakenne on '
+          + 'kolmiaukkoinen teräsbetonisilta. Keskellä on kaksi '
+          + 'poikittaista porttikäytävää ja niissä isot syvennykset, '
+          + 'joihin Alfred Adloff teki veistosryhmät. Kummallakin '
+          + 'puolella nousee leveä porrasyhteys sillan tasolle, ja '
+          + 'porrasholvien alle rakennettiin pieniä myymälöitä.'
+        + '\n\n'
+        + 'Jalkakäytävät on päällystetty sementtimosaiikilla ja seinät '
+          + 'graniittijauhorappauksella, joka jäljittelee luonnonkiveä. '
+          + 'Silta suojeltiin 31. lokakuuta 1988 ja kunnostettiin '
+          + 'kokonaan vuosina 2000–2001, jolloin kaikki 36 myymälää '
+          + 'uusittiin. Vuonna 2008 sillan päällinen kulkuväylä sai '
+          + 'nimen Passeio das Quatro Estações, neljän vuodenajan '
+          + 'kävelytie, ja kukin neljästä portaikosta nimettiin yhden '
+          + 'vuodenajan mukaan.',
+      kuvat: [
+        {
+          tiedosto: 'Viaduto Otávio Rocha 2021 7.jpg',
+          selite: 'Yksi neljästä portaikosta, jotka nousevat kadun tasolta '
+            + 'sillalle; jalkakäytävän sementtimosaiikki kuuluu '
+            + '1930-luvun alkuperäiseen työhön.',
+          lahde: 'Hedestad, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Joaquim Felizardon museo': {
+      aika: '1845–1853',
+      teksti: 'Kaupungin historiallinen museo asuu Lopo Gonçalvesin '
+          + 'kartanossa, joka rakennettiin vuosina 1845–1853 '
+          + 'maatilalle Cidade Baixan kaupunginosaan. Se oli kauppias '
+          + 'ja kahdesti kaupunginvaltuutettuna toiminut Lopo '
+          + 'Gonçalves Bastosin perheen kesähuvila — 1800-luvulla '
+          + 'Cidade Baixa oli vielä kaupungin rajojen ulkopuolella ja '
+          + 'laskettiin maaseuduksi. Lopo kuoli 1872 ja hänen '
+          + 'vaimonsa 1876, minkä jälkeen talosta tuli tyttären Maria '
+          + 'Luisan ja hänen miehensä vakituinen koti. Maria Luisa '
+          + 'laajensi taloa: sisäpiha, torni ja purettu vanha huone '
+          + 'ovat hänen jäljiltään.'
+        + '\n\n'
+        + 'Talon korkeaa kivijalkaa pidettiin pitkään orjien asuintilana. '
+          + 'Nykyään sitä ei enää uskota: kivijalka nosti talon '
+          + 'tulvan yläpuolelle, ja alue tulvi säännöllisesti. Orjat '
+          + 'asuivat todennäköisesti itse talossa, mikä oli heille '
+          + 'ankarampi järjestely kuin erillinen senzala, koska se '
+          + 'lisäsi isäntien valvontaa. Lopo omisti vain neljätoista '
+          + 'orjaa, ja tutkijoiden mukaan se on liian vähän erillisen '
+          + 'orjatuvan perustelemiseksi.'
+        + '\n\n'
+        + 'Talo ehti olla kynttilätehtailijan koti ja lopulta vuokrakasarmi, '
+          + 'ennen kuin 1970-luvun suojeluliike sai sen museoksi: '
+          + 'historioitsija Moacyr Floresin johtama toimikunta '
+          + 'perustettiin 1978, talo suojeltiin 1979 ja se '
+          + 'entisöitiin 1980–1982. Vuonna 1993 museo nimettiin '
+          + 'Joaquim Felizardon mukaan — historioitsijan, joka '
+          + 'perusti kaupungin kulttuuritoimen ja jota vainottiin '
+          + 'sotilasdiktatuurin aikana. Museossa on Sioma Breitmanin '
+          + 'valokuvakirjasto, noin 9 000 digitoitua kuvaa runsaan '
+          + 'vuosisadan ajalta, ja yli 180 000 esineen '
+          + 'arkeologinen kokoelma.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * ASUNCIÓN (Opus 6.9.2026). Kohteet ovat kohdekartan seitsemän
+   * pistettä (maakartat.js: KAUPUNKIKARTAT.asuncion), ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 6.9.2026 (artikkelit
+   * "Museo Memoria de la Ciudad", "Estadio Tomás Beggan Correa",
+   * "Ricardo Brugada", "Municipal Theatre Ignacio A. Pane",
+   * "Asunción Cathedral", "Archdiocese of Asunción", "Ateneo
+   * Paraguayo", "Museo Nacional de Bellas Artes de Asunción" ja
+   * "Estadio Defensores del Chaco").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Cabildo ja kaupungin perustaminen, vuoden 1871 raitiovaunu,
+   * guaranin kieli, Casa de la Independencia, kolmoisliiton sota ja
+   * miehitys, Palacio de los López, Panteón, tereré, ñandutí,
+   * Costanera ja Asunciónin lahti. Yksikään kartan seitsemästä
+   * kohteesta ei ole niiden aihe. Lähimpänä on kaupunginteatteri:
+   * lehden raitiovaununosto on kuvattu vanhan rautatieaseman
+   * vieressä, mutta teatterin juttu kertoo vuoden 1843
+   * kongressitalosta ja vuoden 1889 uudisrakennuksesta, joita lehti
+   * ei käsittele.
+   *
+   * KOHTEITA ON SEITSEMÄN EIKÄ KAHDEKSAA, ja syy on lähdetilanne:
+   * ks. maakartat.js:n asuncion-lohko.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi, tekijä ja koko extmetadatasta) ja katsottu silmin 900
+   * px esikatseluna. Yksikään tiedosto ei ole sama kuin
+   * kaupunkilehden asuncion-lohkossa. HYLÄTTY: "Árbol de lapacho en
+   * medio de las graderías del estadio Tomás Beggan Correa…"
+   * (katsomo täynnä tunnistettavia kasvoja — vahinko, sillä kuva on
+   * hieno) ja "Ateneo Paraguayo.JPG" (autot ja mainoskyltit
+   * hallitsevat kuvaa, etualalla henkilö).
+   */
+  asuncion: {
+    'Museo Memoria de la Ciudad': {
+      aika: '1991',
+      teksti: 'Kaupungin muistin museo asuu Casa Violassa, yhdessä '
+          + 'Manzana de la Riveran yhdeksästä rakennuksesta. Kortteli '
+          + 'on aivan hallituspalatsin edessä, ja 1980-luvun lopulla '
+          + 'se oli purku-uhan alla: tilalle oli suunniteltu puisto. '
+          + 'Vuoden 1989 vallanvaihdon jälkeen joukko '
+          + 'arkkitehtiopiskelijoita aloitti kampanjan nimellä '
+          + '"Salvemos la Manzana frente al palacio" — pelastetaan '
+          + 'palatsin edessä oleva kortteli.'
+        + '\n\n'
+        + 'Amerikan löytämisen 500-vuotispäivää varten perustettiin '
+          + 'ympäri Iberoamerikkaa toimikuntia, ja Paraguayn '
+          + 'toimikunta arkkitehti Juan Cristaldon johdolla otti Casa '
+          + 'Violan hankkeen listalleen. Sen esitteli Espanjan '
+          + 'kehitysyhteistyövirastolle kirjailija Augusto Roa '
+          + 'Bastos. Kaupunki osti korttelin pormestari José Luis '
+          + 'Alderin kaudella, entisöinti alkoi 1991 ja talot '
+          + 'avattiin kaupungin kulttuurikeskuksena. Ensimmäinen '
+          + 'johtaja oli arkkitehti Carlos Colombino.'
+        + '\n\n'
+        + 'Kokoelma kertoo kaupungin tarinaa esineinä. Siellä on '
+          + 'guaranien hautauurna, betoninen leijona, jollaisia '
+          + 'käytettiin Asunciónin arkkitehtuurin koristeena, ja '
+          + 'Kansallisen klubin veistetty puuovi vuodelta 1860, jonka '
+          + 'talon suunnitteli arkkitehti Alejandro Ravizza. '
+          + 'Kartoista huomattavin on Amsterdamissa 1694 painettu '
+          + 'värikartta Paraguaysta ja Río de la Platan '
+          + 'provinssista; asiakirjoista Doña Isabel Venegasin '
+          + 'testamentti vuodelta 1578.',
+      kuvat: [
+        {
+          tiedosto: 'Manzana de la Ribera 1.jpg',
+          selite: 'Manzana de la Riveran tiilikattoiset talot etualalla ja '
+            + 'niiden takana hallituspalatsi ja Paraguayjoki — juuri tämä '
+            + 'näkymä oli tarkoitus purkaa puistoksi.',
+          lahde: 'Cmasi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chacaritan stadion': {
+      aika: '1966',
+      teksti: 'Ricardo Brugadan kaupunginosaa sanotaan yleisesti La '
+          + 'Chacaritaksi. Se on hökkelikaupunginosa ja yksi maan '
+          + 'köyhimmistä paikoista, ja siinä asuu noin 20 000 '
+          + 'ihmistä — kuitenkin aivan keskustassa, hallituspalatsin, '
+          + 'parlamentin, katedraalin ja Costaneran naapurissa, '
+          + 'Paraguayjoen rannassa. Muusikko Maneco Galeano teki '
+          + 'kaupunginosasta guarania-laulun "Soy de la Chacarita".'
+        + '\n\n'
+        + 'Korttelien keskellä on jalkapallokenttä. Stadion on '
+          + 'Resistencia-seuran koti, siihen mahtuu 3 500 katsojaa, '
+          + 'ja se on nimetty seuran entisen puheenjohtajan Tomás '
+          + 'Beggan Correan mukaan: hänen kaudellaan seura voitti '
+          + '1966 ensimmäisen virallisen mestaruutensa. Chacaritassa '
+          + 'pelaavat myös Oriental, San Felipe ja 3 de Febrero, '
+          + 'kaikki Paraguayn sarjaportaiden alapäässä.'
+        + '\n\n'
+        + 'Joen läheisyys näkyy myös toisin päin. Vuoden 2015 lopun '
+          + 'tulvassa Paraguayjoki nousi kentälle asti ja vaurioitti '
+          + 'stadionin rakennuksia pahoin. Vuoden päästä, joulukuussa '
+          + '2016 seuran 99-vuotisjuhlissa, julkistettiin hanke '
+          + 'katsomon laajentamisesta noin 6 500 paikkaan.',
+      kuvat: [
+        {
+          tiedosto: 'Vista del Barrio Ricardo Brugada (La Chacarita) desde el Estadio Tomás Beggan Correa, Resistencia SC, Asunción, Paraguay.jpg',
+          selite: 'Näkymä stadionin katsomosta La Chacaritan kattojen yli; '
+            + 'taustalla häämöttävät keskustan tornitalot.',
+          lahde: 'Chipachyryry, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kaupunginteatteri': {
+      aika: '1855',
+      teksti: 'Paikalla oli ensin kongressitalo. Se rakennettiin 1843 '
+          + 'konsulien Carlos Antonio Lópezin ja Mariano Roque '
+          + 'Alonson aikana, vihittiin 1844 ja siinä kokoontui maan '
+          + 'ensimmäinen kansalliskongressi. Vuonna 1855 López, nyt '
+          + 'tasavallan presidentti, pyysi espanjalaista toimittajaa '
+          + 'ja näytelmäkirjailijaa Ildefonso Antonio Bermejoa '
+          + 'avaamaan vanhaan kongressitaloon teatterin. Se vihittiin '
+          + '4. marraskuuta 1855, ja juuri tuo talo oli pystyssä, kun '
+          + 'isoisä matkusti.'
+        + '\n\n'
+        + 'Vuonna 1886 katalonialainen liikemies Baudillo Alió sai '
+          + 'tontin ja luvan purkaa vanhan talon. Uusi '
+          + '"kansallisteatteri" valmistui 1889 ja vihittiin '
+          + '21. heinäkuuta orkesterilla ja espanjalaisella '
+          + 'Estudiantina Fígaro -yhtyeellä, joka soitti Verdiä, '
+          + 'Schubertia ja Flotowia. Vuoden 1894 korjauksessa saliin '
+          + 'tehtiin aitiot ja pihoille puutarhat. Kaupunki otti '
+          + 'talon omistukseensa 1939, ja 1949 se sai nykyisen '
+          + 'nimensä Ignacio A. Panen mukaan.'
+        + '\n\n'
+        + 'Talo suljettiin 1995, koska se oli rapistunut ja osia '
+          + 'siitä oli sortunut. Entisöinti tehtiin Espanjan '
+          + 'kehitysyhteistyöviraston ja Asunciónin '
+          + 'koulu-työpajan kanssa; suunnittelukilpailun voittivat '
+          + 'Corvalán ja Capelletti. Työ alkoi 28. syyskuuta 2004 ja '
+          + 'valmistui joulukuussa 2005. Hevosenkengän muotoiseen '
+          + 'saliin mahtuu 700 katsojaa: 490 permannolle ja loput '
+          + 'seitsemäänkymmeneen aitioon kolmessa kerroksessa, '
+          + 'kolme kussakin. Katto sai vanhan muotonsa mutta '
+          + 'puurakenteen tilalle tuli metalli.',
+      kuvat: [
+        {
+          tiedosto: 'Teatro Municipal Asuncion.jpg',
+          selite: 'Vuoden 1889 talo kadunkulmassa; parvekekatos ja '
+            + 'kaari-ikkunat ovat entisöinnin jäljiltä.',
+          lahde: 'Carlosbenitez26, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Asunciónin katedraali': {
+      aika: '1845',
+      teksti: 'Asunciónin katedraali on Paraguayn tärkein katolinen '
+          + 'kirkko, ja se seisoo vanhan keskustan Catedral-'
+          + 'kaupunginosassa. Hiippakunta on vanhempi kuin mikään '
+          + 'talo sen päällä: paavi Paavali III perusti Paraguayn '
+          + 'hiippakunnan 1. heinäkuuta 1547, ja se oli Río de la '
+          + 'Platan ensimmäinen. Ensimmäinen piispa oli fransiskaani '
+          + 'Juan de los Barrios, joka hoiti virkaa 1547–1552.'
+        + '\n\n'
+        + 'Nykyinen kirkkorakennus on presidentti Carlos Antonio '
+          + 'Lópezin ajalta ja vihittiin 1845 — isoisän matkan aikaan '
+          + 'se oli siis alle kolmekymmentä vuotta vanha. Kirkko on '
+          + 'omistettu taivaaseen otetulle Neitsyt Marialle, joka on '
+          + 'pääkaupungin suojelija ja jonka mukaan koko kaupunki on '
+          + 'nimetty. Pääalttari on päällystetty hopealla.'
+        + '\n\n'
+        + 'Paavi Pius XI korotti hiippakunnan arkkihiippakunnaksi '
+          + '1. toukokuuta 1929, ja katedraali on siitä lähtien ollut '
+          + 'arkkipiispanistuin. Latinaksi arkkihiippakunta on '
+          + 'Archidioecesis Sanctissimae Assumptionis, ja se on '
+          + 'Paraguayn ainoa metropoliittainen istuin — kaikki maan '
+          + 'muut hiippakunnat ovat sen alaisia.',
+      kuvat: [
+        {
+          tiedosto: 'Catedral Metropolitana de Asunción, Paraguay.jpg',
+          selite: 'Kaksi tornia, matala päätykolmio ja kolme kaariholvia '
+            + 'sisäänkäynnin edessä; oikeanpuoleisessa tornissa on kello.',
+          lahde: 'Chipachyryry, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ateneo Paraguayo': {
+      aika: '1883',
+      teksti: 'Ateneo Paraguayo on Paraguayn vanhin taide- ja '
+          + 'kulttuurilaitos ja yksi Latinalaisen Amerikan '
+          + 'vanhimmista. Se perustettiin 28. heinäkuuta 1883 '
+          + 'Bernardino Caballeron hallituskaudella, kolmetoista '
+          + 'vuotta kolmoisliiton sodan päättymisen jälkeen. '
+          + 'Perustamisasiakirjan kirjoitti käsin Cecilio Báez, ja '
+          + 'sen allekirjoitti viisitoista miestä, muiden muassa '
+          + 'Ramón Zubizarreta, Guillermo Stewart, Benjamín Aceval ja '
+          + 'Adolfo P. Carranza.'
+        + '\n\n'
+        + 'Ensimmäinen Ateneo hajosi 1889 jäsentensä poliittisiin '
+          + 'erimielisyyksiin — mutta samana vuonna sen saleissa '
+          + 'perustettiin Asunciónin kansallinen yliopisto. Heinäkuussa '
+          + '1895 toiminta aloitettiin uudelleen Paraguayn '
+          + 'instituuttina, jonka esikuva oli ranskalainen Institut de '
+          + 'France. Instituutissa oli musiikin, piirustuksen, '
+          + 'maalauksen ja voimistelun osastot sekä huomattava '
+          + 'kirjasto, ja siitä tuli maan tärkein kulttuurilaitos '
+          + 'vuosisadan vaihteessa. Sen luokkahuoneiden kautta '
+          + 'kulkivat muun muassa kitaransoittaja Agustín Pío Barrios '
+          + 'Mangoré ja säveltäjä José Asunción Flores.'
+        + '\n\n'
+        + 'Vuonna 1913 ulkomailla opiskelleet nuoret perustivat '
+          + 'saksalaisen mallin mukaan Paraguayn gymnasiumin. Chacon '
+          + 'sodan keskellä 1933 gymnasium ja instituutti '
+          + 'yhdistettiin, ja yhdistynyt laitos otti takaisin vanhan '
+          + 'nimen Ateneo Paraguayo. Nykyään se on ennen kaikkea '
+          + 'musiikkipedagogiikan koulutuspaikka, ja sen yhteydessä '
+          + 'toimii vuonna 2018 perustettu Juan Max Boettnerin '
+          + 'musiikintutkimuskeskus.',
+      kuvat: [
+        {
+          tiedosto: 'Acta Fundación Original del Ateneo Paraguayo.jpg',
+          selite: 'Vuoden 1883 perustamisasiakirja nimikirjoituksineen; '
+            + 'tekstin kirjoitti käsin Cecilio Báez.',
+          lahde: '26242026ht, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen taidemuseo': {
+      aika: '1909',
+      teksti: 'Paraguayn kansallinen taidemuseo syntyi yhden miehen '
+          + 'kokoelmasta. Juan Silvano Godoi (1850–1926) oli '
+          + 'varakkaan poliittisen suvun jäsen, ja maan levottomat '
+          + 'olot pakottivat hänet toistuvasti maanpakoon. Matkoillaan '
+          + 'hän osti taidetta: kokoelmassa on töitä Courbet’lta, '
+          + 'Murillolta ja Tintorettolta, ja painopiste on '
+          + '1800-luvun lopun maalauksessa. Godoista tuli Paraguayn '
+          + 'ensimmäinen museoiden ja arkistojen pääjohtaja.'
+        + '\n\n'
+        + 'Valtio toivoi 1900-luvun alussa, että kaikki hänen '
+          + 'teoksensa koottaisiin yhteen laitokseen. Museo Godoy '
+          + 'perustettiin 1909 ja Godoi johti sitä kuolemaansa asti; '
+          + 'vuonna 1939 valtio vahvisti sen kansalliseksi '
+          + 'taidemuseoksi. Nykyään esillä on yli 650 teosta — '
+          + 'maalauksia, veistoksia, keramiikkaa, grafiikkaa ja '
+          + 'valokuvia — sekä perustajansa kolikoita ja huonekaluja. '
+          + 'Samassa talossa on kansallisarkisto, maan suurin '
+          + 'historiallinen asiakirjakokoelma.'
+        + '\n\n'
+        + 'Kokoelma kertoo myös siitä, miten paraguaylainen taide '
+          + 'katkesi ja alkoi uudestaan. Jesuiittojen karkotuksen ja '
+          + 'fransiskaanien vetäytymisen jälkeen tuotanto pysähtyi '
+          + 'lähes kokonaan, ja se lähti liikkeelle vasta 1800-luvulla '
+          + 'maalareista Saturio Ríos ja Aurelio García. Kolmoisliiton '
+          + 'sota 1864–1870 haittasi taidetta mutta synnytti '
+          + 'pilapiirroksen: rintamalla toimitetut ja painetut lehdet '
+          + 'El Cabichuí ja El Centinela tekivät kuvansa '
+          + 'etsaustekniikalla. Museon huomattavimpiin sarjoihin '
+          + 'kuuluu Miguel Acevedon 57 piirustusta, jotka pilkkaavat '
+          + 'belle époquen aikaa ja sen henkilöitä.',
+      kuvat: [
+        {
+          tiedosto: 'Museo de Bellas Artes 115713.jpg',
+          selite: 'Museon pylväskäytävä; talossa toimii myös Paraguayn '
+            + 'kansallisarkisto.',
+          lahde: 'Cmasi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Defensores del Chacon stadion': {
+      aika: '1916–1917',
+      teksti: 'Paraguayn kansallisstadion rakennettiin Sajonian '
+          + 'kaupunginosaan. Työ alkoi helmikuussa 1916, ja marraskuussa '
+          + '1917 avattiin Stadium de Sajonia. Ensimmäisessä ottelussa '
+          + 'kohtasivat Olimpia ja Libertad, ja Libertad voitti 1–0. '
+          + 'Vuonna 1919 maajoukkue pelasi kentällä ensimmäisen '
+          + 'ottelunsa, ja Faustino Casado teki Paraguayn ensimmäisen '
+          + 'maalin stadionilla. Kun Uruguay voitti 1924 olympiakullan, '
+          + 'jalkapalloliitto nimesi stadionin hetkeksi Uruguayksi '
+          + 'naapurin kunniaksi.'
+        + '\n\n'
+        + 'Chacon sodassa stadion oli sijaintinsa vuoksi '
+          + 'ammusvarasto ja joukkojen kokoontumispaikka. Sodan '
+          + 'jälkeen se sai nykyisen nimensä Chacon puolustajien '
+          + 'mukaan. Vuoden 1953 Copa Américan voittorahoilla '
+          + 'rakennettiin betonikatsomo ja kenttä käännettiin '
+          + 'pohjois–eteläsuuntaiseksi. Vuonna 1960 täällä pelattiin '
+          + 'ensimmäinen Copa Libertadoresin finaali, Olimpia vastaan '
+          + 'Peñarol, ja 1967 sytytettiin valot maaottelussa '
+          + 'Argentiinaa vastaan.'
+        + '\n\n'
+        + 'Katsojaennätys on vuodelta 1983: Olimpian ja Cerro '
+          + 'Porteñon superclásicoa katsoi 49 095 ihmistä. Siitä '
+          + 'lähtien luku on vain laskenut, koska seisomapaikkoja on '
+          + 'korvattu istuimilla — alun yli 50 000:sta 42 354:ään ja '
+          + 'vuoden 2015 korjauksen jälkeen 36 000:een. Stadion ei '
+          + 'kuulu millekään seuralle vaan jalkapalloliitolle, ja '
+          + 'arkisin se on ilmaiseksi auki kenelle tahansa.',
+      kuvat: [
+        {
+          tiedosto: 'Estadio Defensores del Chaco en 2019.jpg',
+          selite: 'Katsomot ovat nykyään istuimia; kenttä käännettiin '
+            + 'pohjois–eteläsuuntaiseksi 1950-luvulla.',
+          lahde: 'Hazaña17, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * MONTREAL (Opus 6.9.2026). Kohteet ovat kohdekartan kahdeksan
+   * pistettä (maakartat.js: KAUPUNKIKARTAT.montreal), ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 6.9.2026 (artikkelit
+   * "Saint-Louis Square", "Château Ramezay", "Chinatown, Montreal",
+   * "Saint-Sulpice Seminary (Montreal)", "St. Patrick's Basilica,
+   * Montreal", "Pointe-à-Callière Museum", "Habitat 67" ja "Montreal
+   * Museum of Fine Arts").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Notre-Damen basilika, Victoria-silta, sisämaan satama,
+   * Beaver Club, Vanhan Montrealin kävelykierros, Mont Royal,
+   * kaksikielisyys, Ville-Marien perustaminen, vallanvaihto 1760,
+   * Olmstedin puisto ja kaupungintalo. Yksikään kartan kahdeksasta
+   * kohteesta ei ole niiden aihe. Saint-Sulpicen seminaari on
+   * lähimpänä — se seisoo basilikan seinänaapurina — mutta lehti
+   * kertoo basilikasta ja tämä juttu 1680-luvun seminaarista ja sen
+   * vuoden 1701 kellosta.
+   *
+   * NELJÄ JUTTUA SIVUAA VUOTTA 1873, ja se on valintaperuste: Saint-
+   * Louis’n aukio oli isoisän matkan aikaan kolmen vuoden päässä
+   * (1876), ensimmäiset kiinalaiset siirtolaiset saapuivat Montrealiin
+   * maaliskuussa 1877, Pointe-à-Callièren paikalla oli vuodesta 1871
+   * kaupungin toinen tullitalo, ja taidemuseon yhdistys oli
+   * kolmetoistavuotias mutta yhä ilman omaa taloa.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi, tekijä ja koko extmetadatasta) ja katsottu silmin 900
+   * px esikatseluna. Yksikään tiedosto ei ole sama kuin
+   * kaupunkilehden montreal-lohkossa. HYLÄTTY: "Vieux seminaire de
+   * Saint-Sulpice 01.jpg" (koko julkisivu telineiden peitossa),
+   * "Basilique Saint-Patrick Montreal 59.JPG" (puut peittävät
+   * kirkon), "Musée Pointe-à-Callière, Vieux-Montréal.jpg"
+   * (näyttelybanderolli ja piknikillä olevien kasvot), "Carré St.
+   * Louis.jpg" (tunnistettavia kasvoja keskellä kuvaa) ja "Le musée
+   * des Beaux-Arts de Montréal (4039949170).jpg" (uuden siiven
+   * porraskäytävä, ei kerro museosta mitään).
+   */
+  montreal: {
+    'Saint-Louis’n aukio': {
+      aika: '1876',
+      teksti: 'Aukion paikalla oli ennen kaupungin vedenottamo. Se oli '
+          + 'käytössä vuoteen 1852, jolloin suuri tulipalo poltti '
+          + 'Montrealin, ja allas korvattiin McTavishin altaalla. '
+          + 'Vanhan altaan tontille '
+          + 'tehtiin puisto vuonna 1876 — kolme vuotta isoisän matkan '
+          + 'jälkeen — ja se nimettiin kahden liikemiehen, veljesten '
+          + 'Emmanuel ja Jean-Baptiste Saint-Louis’n mukaan.'
+        + '\n\n'
+        + 'Aukion keskellä on valurautainen suihkulähde, kaksi '
+          + 'allasta päällekkäin. Sen teki Jordan L. Mottin '
+          + 'valimo, ja se on kaupungin varhaisimpia julkisia '
+          + 'suihkulähteitä. Tällaisia lähteitä ei suunniteltu vaan '
+          + 'tilattiin: osat valittiin J. L. Mott Iron Worksin '
+          + 'kuvastosta ja koottiin kunkin tilaajan omaksi '
+          + 'yhdistelmäksi. Yhdysvaltalainen Project for Public '
+          + 'Spaces on sanonut aukiota lähimmäksi eurooppalaista '
+          + 'korttelitoria, mitä Atlantin tältä puolelta löytyy.'
+        + '\n\n'
+        + 'Puistoa reunustavat viktoriaaniset rivitalot, ja aukiosta '
+          + 'tuli runoilijoiden paikka. Runoilija Octave Crémazien '
+          + 'rintakuva paljastettiin 24. kesäkuuta 1906; sen teki '
+          + 'Louis-Philippe Hébert, ja se pystytettiin lähelle Émile '
+          + 'Nelliganin kotia, joka on aukion laidalla. Nelligan itse '
+          + 'sai oman rintakuvansa 99 vuotta myöhemmin, 7. kesäkuuta '
+          + '2005, ja sen teki Roseline Granet.',
+      kuvat: [
+        {
+          tiedosto: 'Victorian Houses - Carré St. Louis.jpg',
+          selite: 'Aukiota reunustavat viktoriaaniset rivitalot parvekkeineen '
+            + 'ja torneineen.',
+          lahde: 'Rick Goldman, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Château Ramezay': {
+      aika: '1705',
+      teksti: 'Château Ramezay rakennettiin vuonna 1705 Montrealin '
+          + 'silloisen kuvernöörin Claude de Ramezayn asunnoksi. Se '
+          + 'on Québecin ensimmäinen rakennus, joka julistettiin '
+          + 'historialliseksi monumentiksi, ja maakunnan vanhin '
+          + 'yksityinen historiallinen museo. Ramezayn jälkeläiset '
+          + 'myivät talon turkiskauppaa käyneelle Compagnie des '
+          + 'Indes -yhtiölle.'
+        + '\n\n'
+        + 'Vuodesta 1775 talo oli Yhdysvaltain mannermaisen armeijan '
+          + 'päämaja Kanadassa, kun armeija oli vallannut Montrealin. '
+          + 'Benjamin Franklin yöpyi siinä 1776 yrittäessään värvätä '
+          + 'kanadalaisia amerikkalaisten puolelle '
+          + 'vapaussotaan. Valloituksen jälkeen ja vuoteen 1849 asti '
+          + 'talo oli taas kuvernöörin asunto, tällä kertaa '
+          + 'brittiläisen, ja sitä sanottiin virallisesti '
+          + 'nimellä Government House. Vuonna 1878 siinä aloitti '
+          + 'Montrealin yliopiston ensimmäinen lääketieteellinen '
+          + 'tiedekunta.'
+        + '\n\n'
+        + 'Montrealin numismaattis-antikvaarinen seura osti talon ja '
+          + 'muutti sen 1894 historialliseksi museoksi ja '
+          + 'muotokuvagalleriaksi; muutostyöt suunnitteli Andrew '
+          + 'Taylor 1895. Kokoelmassa on nykyään arviolta 30 000 '
+          + 'esinettä: käsikirjoituksia, painotuotteita, kolikoita, '
+          + 'kansatieteellisiä esineitä, taidetta ja huonekaluja. '
+          + 'Vuosina 1997–2002 talo entisöitiin sisältä ja ulkoa, ja '
+          + 'sen taakse tehtiin kuvernöörin puutarha, joka avattiin '
+          + '2000 ja palkittiin kolme vuotta myöhemmin Kanadan '
+          + 'maisema-arkkitehtien kansallisella kunniapalkinnolla.',
+      kuvat: [
+        {
+          tiedosto: 'Chateau Ramezay 09.jpg',
+          selite: 'Kivitalo ja sen pyöreä torni kaupungintaloa vastapäätä; '
+            + 'muurin takana on vuonna 2000 avattu kuvernöörin puutarha.',
+          lahde: 'Jeangagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kiinalaiskaupunki: {
+      aika: '1890-luku',
+      teksti: 'Montrealin kiinalaiskaupunki on De la Gauchetière '
+          + '-kadun ympärillä, ja ennen kiinalaisia siellä asuivat '
+          + 'juutalaiset: vuosina 1890–1920 alueelle asettui tuhansia '
+          + 'jiddišinkielisiä siirtolaisia osana Saint Laurent '
+          + '-bulevardin ympärille syntynyttä juutalaiskorttelia. '
+          + 'Ensimmäiset kiinalaiset siirtolaiset saapuivat '
+          + 'Montrealiin maaliskuussa 1877 — neljä vuotta isoisän '
+          + 'matkan jälkeen.'
+        + '\n\n'
+        + 'Kiinalaiskaupunki muodostui 1890-luvulla, ja se rakentui '
+          + 'sukuryhmien varaan: Chan, Hom eli Tam, Lee ja Wong. '
+          + 'Moni tulija oli kotoisin Taishanista ja seurasi Leungin '
+          + 'sukua; he olivat töissä rautateillä, ja alue oli '
+          + 'sijainniltaan sopiva. Ensimmäisiä asukkaita oli Jos '
+          + 'Song Long, joka avasi pesulan Craig-kadulle, nykyiselle '
+          + 'Saint Antoine -kadulle. Useimmat puhuivat toisania, '
+          + 'kantoninkielen sisarkieltä, ja moni piti nimenomaan '
+          + 'pesulaa: oma yritys oli tapa kiertää se palkkasyrjintä, '
+          + 'jota he olivat kohdanneet Brittiläisessä Kolumbiassa.'
+        + '\n\n'
+        + 'Pesula tarvitsi asiakkaansa kävelymatkan päästä, joten '
+          + 'niitä syntyi ympäri kaupunkia — ja kiinalaiskaupungista '
+          + 'tuli ennen kaikkea kaupallinen kortteli. Vuonna 1902 '
+          + 'alue sai virallisesti nimen Chinatown, ja sillä '
+          + 'tarkoitettiin De la Gauchetière -kadun korttelinpätkää '
+          + 'Chennevillen ja Clarkin katujen välissä. Tontit olivat '
+          + 'pieniä ja vuokrat kohtuullisia, ja Saint Laurent '
+          + '-bulevardin läheisyys toi liikkeisiin myös muita kuin '
+          + 'kiinalaisia asiakkaita.',
+      kuvat: [
+        {
+          tiedosto: 'Quartier chinois de Montreal 009.JPG',
+          selite: 'De la Gauchetière -katu on korttelin matkalta '
+            + 'kävelykatuna; kylttien kiinalaiset kirjoitusmerkit ovat '
+            + 'ranskan ja englannin rinnalla.',
+          lahde: 'Jeangagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Saint-Sulpicen seminaari': {
+      aika: '1684–1687',
+      teksti: 'Saint-Sulpicen vanha seminaari on Montrealin toiseksi '
+          + 'vanhin rakennus. Sulpisiaanien pappisveljeskunta '
+          + 'perustettiin kaupunkiin 1657, ja se on omistanut talon '
+          + 'yhtäjaksoisesti siitä lähtien, kun rakentaminen alkoi '
+          + '1684 veljeskunnan johtajan François Dollier de Cassonin '
+          + 'toimesta. Talo valmistui 1687; myöhemmät lisäykset, '
+          + 'kello mukaan lukien, olivat valmiina 1713. Se on '
+          + 'U-kirjaimen muotoinen ja tyyliltään palatsimainen, ja '
+          + 'se seisoo Notre-Damen basilikan vieressä Place '
+          + 'd’Armes’n laidalla.'
+        + '\n\n'
+        + 'Julkisivun kello asennettiin 1701. Sen taulu tehtiin '
+          + 'Pariisissa, kaiverruksen teki Paul Labrosse ja '
+          + 'kultauksen Notre-Damen sisarkunnan sisaret. Kello on '
+          + 'lajissaan yksi Pohjois-Amerikan vanhimmista.'
+        + '\n\n'
+        + 'Seminaarin tehtävänä oli kouluttaa maallikkopappeja ja '
+          + 'tehdä lähetystyötä Uuden Ranskan alkuperäiskansojen '
+          + 'keskuudessa. Munkkiperinteen mukaan sulpisiaanit '
+          + 'perustivat talon viereen 1600-luvulla puutarhan, jossa '
+          + 'kasvatettiin hedelmiä ja vihanneksia; sen käytävät ja '
+          + 'nurmikot noudattavat ranskalaista renessanssiperinnettä '
+          + 'ja keskellä on patsas. Puutarha on lajinsa vanhimpia '
+          + 'Pohjois-Amerikassa. Seminaarin oppilaisiin kuului James '
+          + 'Augustine Healy, ensimmäinen tunnettu '
+          + 'afroamerikkalainen katolinen pappi.',
+      kuvat: [
+        {
+          tiedosto: 'Vieux séminaire de Saint-Sulpice.JPG',
+          selite: 'Vuonna 1701 asennettu kello katonharjalla; taulu '
+            + 'valmistettiin Pariisissa.',
+          lahde: 'Colocho, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Patrickin basilika': {
+      aika: '1843–1847',
+      teksti: 'Montrealin irlantilaiset kuuluivat aluksi samoihin '
+          + 'seurakuntiin kuin ranskankieliset katolilaiset. Kun '
+          + 'irlantilaisten määrä kasvoi vuoden 1817 tienoilta '
+          + 'alkaen, heidät siirrettiin 1825 fransiskaanien '
+          + 'kirkkoon, mutta vuonna 1841 heitä oli jo 6 500 eikä '
+          + 'kirkko riittänyt. Tontti ostettiin, ja työ alkoi '
+          + 'syyskuussa 1843 silloisen kaupungin laidalla, rinteessä, '
+          + 'josta näkyi seurakuntalaisten koteihin Point St. '
+          + 'Charlesissa, Goose Villagessa ja Griffintownissa. '
+          + 'Peruskiviä laskettiin seitsemän. Ensimmäinen messu '
+          + 'pidettiin Pyhän Patrickin päivänä 17. maaliskuuta 1847, '
+          + 'ja kirkosta tuli Montrealin vanhin englanninkielinen '
+          + 'katolinen kirkko.'
+        + '\n\n'
+        + 'Uusgoottilaisen kirkon suunnittelivat P. L. Morin ja isä '
+          + 'Felix Martin. Se on 71 metriä pitkä ja 32 leveä, ja '
+          + 'torni nousee 69 metriin. Sisällä ranskalainen lilja ja '
+          + 'irlantilainen apila esiintyvät samoissa koristeaiheissa. '
+          + 'Kahdenkymmenenviiden metrin pylväät on veistetty '
+          + 'kaikki samasta valkotammesta ja maalattu näyttämään '
+          + 'marmorilta. Kirkossa on kolme alttaria, neljä '
+          + 'ruusuikkunaa newyorkilaisen Alex S. Locken mukaan ja '
+          + '150 pyhimysten öljymaalausta. Kuorin yllä riippuu '
+          + '1896 asennettu lamppu, joka painaa 815 kiloa ja on '
+          + 'lajissaan ainoa Pohjois-Amerikassa; sen jalustan kuusi '
+          + 'enkeliä ovat kahden metrin korkuisia.'
+        + '\n\n'
+        + 'Kirkossa on kymmenen kelloa, joita sanotaan nimellä '
+          + 'St Patrick’s Chimes. Vanhin niistä, Charlotte, valettiin '
+          + '1774 ja se oli aiemmin edellisessä Notre-Damen kirkossa. '
+          + 'Penkki numero 240 oli Thomas D’Arcy McGeen paikka; hän '
+          + 'oli Kanadan konfederaation perustajiin kuulunut '
+          + 'valtiomies, joka murhattiin Ottawassa 1868. Kirkon '
+          + 'perällä on laatta runoilija Émile Nelliganin kasteesta '
+          + 'jouluna 1879. Paavi Johannes Paavali II korotti kirkon '
+          + 'basilikaksi 9. joulukuuta 1988.',
+      kuvat: [
+        {
+          tiedosto: 'Basilique Saint Patrick Montreal 05.jpg',
+          selite: 'Kirkon 69 metriä korkea torni ja vihertynyt kuparihuippu; '
+            + 'takana nousevat keskustan tornitalot.',
+          lahde: 'Jeangagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pointe-à-Callièren museo': {
+      aika: '1992',
+      teksti: 'Pointe-à-Callière on arkeologian ja historian museo '
+          + 'Vanhassa Montrealissa. Se avattiin 1992 kaupungin '
+          + '350-vuotisjuhlan yhteydessä, ja se on rakennettu sen '
+          + 'niemenkärjen päälle, johon Paul de Chomedey de '
+          + 'Maisonneuve, Jeanne Mance ja muut ranskalaiset '
+          + 'uudisasukkaat nousivat maihin 1642. Paikka on kuulunut '
+          + 'Montrealin syntysijan kansalliseen muistomerkkiin '
+          + 'vuodesta 1924.'
+        + '\n\n'
+        + 'Museo rakennettiin paalujen varaan, jotta maan alla olevat '
+          + 'löydöt säilyisivät koskemattomina, ja osa rakennustöiden '
+          + 'aikana esiin tulleista raunioista jätettiin paikalleen '
+          + 'osaksi näyttelyä. Kokonaisuuteen kuuluu kolme '
+          + 'arkeologista kaivausaluetta, Ville-Marien linnakkeen '
+          + 'kenttäkoulu, kaupungin ensimmäinen katolinen hautausmaa, '
+          + 'Williamin kokoojaviemäri, Place Royalen krypta, vanha '
+          + 'tullitalo vuodelta 1836 ja merenkulkijain talo. '
+          + 'Esineitä on yli miljoona.'
+        + '\n\n'
+        + 'Museon pääsisäänkäynnin, L’Éperon-rakennuksen, paikalla '
+          + 'seisoi ennen Royal Insurance Building, joka toimi '
+          + 'kaupungin toisena tullitalona vuosina 1871–1917 — se oli '
+          + 'siis parivuotias, kun isoisä kulki ohi. Alkuperäisenä '
+          + 'ajatuksena oli avata yleisölle viemäri sekä Pyhän Annan '
+          + 'markkinahallin rauniot; hallissa istui Kanadan '
+          + 'yhdistyneen provinssin parlamentti vuosina 1844–1849. '
+          + 'Myöhemmät kaivaukset toivat esiin myös Ville-Marien '
+          + 'linnakkeen ja kuvernööri Louis-Hector de Callièren talon '
+          + 'jäännökset. Museossa käy vuosittain yli 350 000 '
+          + 'vierasta.',
+      kuvat: [
+        {
+          tiedosto: 'Pointe-à-Callière Museum 2023j.jpg',
+          selite: 'Kryptassa muuri on jätetty seisomaan siihen, mistä se '
+            + 'kaivettiin esiin; museo on rakennettu paalujen varaan sen '
+            + 'ylle.',
+          lahde: 'Antony-22, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Habitat 67': {
+      aika: '1967',
+      teksti: 'Habitat 67 alkoi opinnäytetyönä. Moshe Safdie teki sen '
+          + 'McGillin yliopiston arkkitehtiosaston lopputyönään; työ '
+          + 'huomattiin, mutta se ei voittanut Pilkington-palkintoa, '
+          + 'ja Safdie on pitänyt sitä varhaisena merkkinä siitä, '
+          + 'kuinka kiistanalainen ajatus oli. Kun hänen entinen '
+          + 'ohjaajansa Sandy van Ginkel pyysi häntä laatimaan '
+          + 'vuoden 1967 maailmannäyttelyn yleissuunnitelmaa, Safdie '
+          + 'ehdotti opinnäytettään yhdeksi paviljongiksi. Ottawassa '
+          + 'suunnitelman hyväksyivät ministeri Mitchell Sharp ja '
+          + 'pääministeri Lester B. Pearson.'
+        + '\n\n'
+        + 'Alkuperäinen suunnitelma oli 1 200 asuntoa ja 45 miljoonaa '
+          + 'dollaria. Rahoitusta löytyi vain murto-osaan: '
+          + 'toteutunut osa maksoi noin 22,4 miljoonaa. Talo koostuu '
+          + '354 samanlaisesta esivalmistetusta betonilaatikosta '
+          + '(11,7 × 5,3 × 3 metriä), jotka on ladottu kolmeksi '
+          + 'pyramidiksi enimmillään kahdentoista kerroksen '
+          + 'korkeuteen. Laatikoista on koottu 146 asuntoa, kukin '
+          + 'yhdestä kahdeksaan yksikköä. Jokaisella asunnolla on '
+          + 'oma istutettu kattoterassi, joka lepää alemman kerroksen '
+          + 'katolla. Rakennesuunnittelija oli virolais-'
+          + 'amerikkalainen August Komendant, jännebetonin '
+          + 'uranuurtaja.'
+        + '\n\n'
+        + 'Tarkoitus oli yhdistää esikaupungin edut — puutarha, '
+          + 'raitis ilma, oma rauha — kerrostalon tiiviyteen ja '
+          + 'hintaan. Halvaksi asumiseksi hanke ei kuitenkaan '
+          + 'muuttunut: kysyntä nosti asuntojen hinnat yli sen, mitä '
+          + 'oli ajateltu, ja korkea yksikköhinta esti jatko-osien '
+          + 'rakentamisen. Talon omistavat nykyään asukkaat, jotka '
+          + 'ostivat sen valtion asuntoyhtiöltä 1985. Safdien '
+          + 'toimiston mukaan ensimmäiset pienoismallit rakennettiin '
+          + 'legopalikoista.',
+      kuvat: [
+        {
+          tiedosto: 'Habitat 67, northeast view.jpg',
+          selite: 'Betonilaatikot on ladottu niin, että alemman asunnon '
+            + 'katosta tulee ylemmän puutarhaterassi.',
+          lahde: 'Thomas Ledl, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Montrealin taidemuseo': {
+      aika: '1860',
+      teksti: 'Montrealin taidemuseo on Kanadan vanhin taidemuseo ja '
+          + 'näyttelypinta-alaltaan maan suurin. Se perustettiin '
+          + 'huhtikuussa 1860, kun anglikaanipiispa Francis Fulford '
+          + 'käynnisti Montrealin taideyhdistyksen "edistämään '
+          + 'kaupunkilaisten taiteentuntemusta". Yhdistyksellä ei '
+          + 'ollut taloa eikä siis paikkaa säilyttää hankintoja, '
+          + 'joten se ei voinut ostaa teoksia eikä ottaa vastaan '
+          + 'kokoelmia. Parikymmentä vuotta se piti näyttelynsä '
+          + 'milloin missäkin — myös vuonna 1873.'
+        + '\n\n'
+        + 'Ratkaisu tuli 1877 liikemies Benaiah Gibbiltä. Hän '
+          + 'lahjoitti kokoelmansa ytimen, 72 maalausta ja neljä '
+          + 'pronssia, sekä tontin Phillips Squaren koillisnurkasta '
+          + 'ja 8 000 dollaria sillä ehdolla, että museo rakennetaan '
+          + 'kolmessa vuodessa. Kenraalikuvernööri John Douglas '
+          + 'Sutherland Campbell vihki talon 26. toukokuuta 1879. Se oli Kanadan '
+          + 'ensimmäinen rakennus, joka tehtiin varta vasten '
+          + 'taidekokoelmaa varten. Gibbin lahja sai muutkin '
+          + 'liikkeelle, ja lahjoituksia alkoi tulla.'
+        + '\n\n'
+        + 'Talo kävi ahtaaksi, ja yhdistys muutti Golden Square '
+          + 'Mileen, jossa kaupungin rahamaailma asui. Uusi tontti '
+          + 'oli Sherbrooke-kadun varrella, hylätyn Holton Housen '
+          + 'paikalla. Kolmen kutsutun toimiston kilpailun voittivat '
+          + 'veljekset Edward ja William Sutherland Maxwell, joiden '
+          + 'ehdotus oli beaux-arts-perinteen mukainen: hillitty ja '
+          + 'majesteettinen. Työ alkoi kesällä 1910 ja valmistui '
+          + 'syksyllä 1912; vanha Phillips Squaren talo purettiin '
+          + 'samana vuonna. Museo on nykyään viisi paviljonkia ja '
+          + 'noin 44 000 teosta.',
+      kuvat: [
+        {
+          tiedosto: 'Musee Beaux Arts Montréal.JPG',
+          selite: 'Maxwellin veljesten marmorijulkisivu Sherbrooke-kadun '
+            + 'varrella valmistui 1912.',
+          lahde: 'Stéphane Batigne, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

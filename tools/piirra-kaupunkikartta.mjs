@@ -3478,6 +3478,126 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 8.9680, etela: 8.9280, lansi: -79.5720, ita: -79.5280 },
     meri: true,
   },
+  portoalegre: {
+    /*
+     * PORTO ALEGREN CENTRO HISTÓRICO GUAÍBAN RANNALLA (6.9.2026).
+     * Ruutu on koeajon jälkeen 3,0 × 3,0 kilometriä: vanha ruutukaava
+     * mahtuu siihen kokonaan, ja lännessä näkyy Guaíban vesi, joka on
+     * kaupungin määräävä piirre.
+     *
+     * ENSIMMÄINEN RAJAUS OLI 1,6 × 1,2 KM JA SE HYLÄTTIIN. Kaikki
+     * kahdeksan kohdetta mahtuivat siihen, mutta kuvassa ei ollut
+     * vettä lainkaan eikä yhtään puistoa — pelkkää korttelia
+     * reunasta reunaan. Nykyinen rajaus tuo länsireunaan Guaíban ja
+     * itäreunaan Redenção-puiston, eli kartta kertoo saman kuin
+     * lehden "Alueen rakenne": kaupunki on kapealla kaistalla
+     * rannan ja puiston välissä.
+     *
+     * PRAÇA DA MATRIZIN KOLMIKOSTA MAHTUU VAIN YKSI. Tuomiokirkko,
+     * Palácio Piratini ja Theatro São Pedro ovat 86–178 metrin
+     * päässä toisistaan (Petran, Mekan ja Karachin oppi), ja
+     * kartalle otettiin niistä Theatro São Pedro, koska se on ainoa
+     * kolmesta, joka oli olemassa isoisän matkan aikaan (1858).
+     * Aukio itse on lehden oman noston kuva-aihe.
+     *
+     * MOINHOS DE VENTON PUISTO JÄI ULKOPUOLELLE. Se on 2,9
+     * kilometriä itäkoilliseen ruudun keskeltä, ja sen mukaan
+     * ottaminen olisi venyttänyt kuvan 4,2 kilometriin leveäksi ja
+     * jättänyt keskiosaan kilometrin verran esikaupunkia ilman
+     * yhtään kohdetta. Sama koskee Beira-Rion ja Grêmion stadioneita
+     * (3,6 ja 7,5 km) — ja Beira-Rio on sitä paitsi lehden oman
+     * noston aihe.
+     *
+     * meri: true. Guaíba on OSM:ssä rantaviivaa eikä
+     * vesimonikulmiota, joten ilman lippua kuvan länsireuna olisi
+     * paperin värinen.
+     */
+    rajat: { pohjoinen: -30.0195, etela: -30.0465, lansi: -51.2405, ita: -51.2095 },
+    meri: true,
+  },
+  asuncion: {
+    /*
+     * ASUNCIÓNIN VANHA KESKUSTA JA LAHDEN RANTA (6.9.2026). Ruutu on
+     * 5,0 × 3,2 kilometriä eli Panamán kokoluokkaa. Se ulottuu
+     * lännessä Defensores del Chacon stadionille, idässä
+     * kansalliselle taidemuseolle ja pohjoisessa Paraguayjoen
+     * rantaan.
+     *
+     * TIIVIIMPI RUUTU EI RIITTÄNYT, ja syy on lähdetilanteessa.
+     * Asunciónin ytimestä löytyy en-Wikipediasta kilometrin säteellä
+     * kaikkiaan seitsemäntoista koordinaatillista kohdetta, mutta
+     * neljä niistä (Cabildo, Casa de la Independencia, Palacio de los
+     * López ja Panteón) on kaupunkilehden omien nostojen aihe —
+     * kartta ei toista lehden nostoja — ja kaksi (Universidad
+     * Católica ja Colegio Nacional) on 70 ja 163 metrin päässä
+     * katedraalista, eli numeroympyrät menisivät päällekkäin.
+     * Jäljelle jäi ytimestä neljä kohdetta, ja loput kolme haettiin
+     * kauempaa: Chacaritan stadion 1,0 kilometriä itään, kansallinen
+     * taidemuseo 1,8 kilometriä kaakkoon ja Defensores del Chacon
+     * stadion 2,2 kilometriä lounaaseen.
+     *
+     * KOHTEITA ON SEITSEMÄN EIKÄ KAHDEKSAA. Kansalliskirjasto,
+     * kongressitalo ja Encarnaciónin kirkko olivat listalla mutta
+     * putosivat lähteen takia: kirjaston artikkeli on yhden
+     * virkkeen tynkä, kongressin artikkeli käsittelee
+     * lainsäätäjää eikä rakennusta, ja Encarnaciónilla on
+     * en-Wikipediassa vain kaupunginosan tynkä, jonka koordinaatti
+     * on pyöristetty kokonaisiin minuutteihin. Lähteetön juttu ei
+     * ole juttu, ja seitsemän kohdetta on siksi lähdetilanne eikä
+     * valinta (Suvan malli).
+     *
+     * KASVITIETEELLINEN PUUTARHA JA MUSEO DEL BARRO JÄIVÄT POIS. Ne
+     * ovat 8 ja 6 kilometriä koilliseen ja itään; niiden mukaan
+     * ottaminen vaatisi lähes kymmenen kilometrin ruudun, jonka
+     * keskiosassa ei olisi yhtään kohdetta.
+     *
+     * meri: true. Asunciónin lahti ja Paraguayjoki ovat OSM:ssä
+     * rantaviivaa, ja ilman lippua kuvan pohjoisreuna olisi paperia.
+     */
+    rajat: { pohjoinen: -25.2710, etela: -25.3000, lansi: -57.6650, ita: -57.6150 },
+    meri: true,
+  },
+  montreal: {
+    /*
+     * VANHA MONTREAL JA KESKUSTA SAINT-LAURENTIN RANNALLA
+     * (6.9.2026). Ruutu on 3,5 × 3,1 kilometriä: idässä Vanhan
+     * sataman laiturit ja Habitat 67, lännessä taidemuseon kortteli,
+     * pohjoisessa Plateaun eteläkulma ja etelässä Lachine-kanavan
+     * suu.
+     *
+     * KOLME ISOA MONTREALIA JÄI TIETOISESTI ULKOPUOLELLE.
+     * Saint-Josephin oratorio on 5,3 kilometriä länteen, Olympiapuisto
+     * 6,1 kilometriä koilliseen ja Jean-Talonin kauppahalli 4,5
+     * kilometriä pohjoiseen. Kaikkien mahduttaminen samaan ruutuun
+     * vaatisi yli kahdentoista kilometrin rajauksen, eli New Yorkin
+     * ruudun kertaalleen ja vähän päälle — ja sen keskiosa olisi
+     * enimmäkseen asuinkortteleita ilman kohteita. Ne kuuluvat
+     * lehden ja matkaoppaan puolelle.
+     *
+     * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Notre-Damen basilika,
+     * Place Jacques-Cartier, Bonsecours-halli, Victoria-silta,
+     * Mont Royal, vanha satama, McGill, Place Ville Marie,
+     * Jean-Drapeaun saaret ja kaupungintalo ovat kaupunkilehden
+     * nostojen ja matkaoppaan kuvien aiheita, joten yksikään niistä
+     * ei ole kartan kohde, vaikka kaikki mahtuisivat ruutuun.
+     * Saint-Sulpicen seminaari seisoo basilikan vieressä, mutta se on
+     * eri rakennus ja eri tarina: 1687 valmistunut talo on kaupungin
+     * toiseksi vanhin rakennus, ja lehti kertoo basilikasta.
+     *
+     * EI meri: true, JA SE ON KOKEILTU 6.9.2026. Lippu piirrettiin
+     * kertaalleen mukaan, ja kuva oli pikselilleen sama: Saint
+     * Lawrence, Vanhan sataman altaat ja Lachine-kanava ovat OSM:ssä
+     * vesimonikulmioita eikä rantaviivaa, joten merentäytölle ei ole
+     * mitään täytettävää. Lippu jätettiin siksi pois turhana.
+     *
+     * ALAOIKEAN VESIKIILAN SUORA REUNA on OSM:n oma
+     * vesimonikulmion raja Saint Lawrencen ja sataman edustan
+     * välissä, ei piirtovirhe: sama kiila tulee näkyviin myös
+     * lipun kanssa ja ilman. Kartan kohteista yksikään ei osu sen
+     * päälle (tarkista-karttapisteet.mjs, 6.9.2026).
+     */
+    rajat: { pohjoinen: 45.5205, etela: 45.4930, lansi: -73.5850, ita: -73.5390 },
+  },
   sanfrancisco: {
     /*
      * Niemen koillisnurkka: Aquatic Parkin rannasta Civic Centeriin ja
