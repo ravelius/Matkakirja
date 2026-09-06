@@ -192,7 +192,20 @@ export function lepokerroksenKerrokset(pallonLuettelo, pyramidi) {
   const nostot = pallonLuettelo.nostot ?? null;
   if (viivat && viivat !== (pyramidi.viivataso?.versio ?? null)) return null;
   if (nostot && nostot !== (pyramidi.nostotaso?.versio ?? null)) return null;
-  return { pohja: true, viiva: Boolean(viivat), nosto: Boolean(nostot) };
+  /*
+   * RANTATASO (V4, omistaja 6.9.2026 ilta: pohja ilman rantaviivaa,
+   * rantaviiva omalla läpinäkyvällä tasollaan). Pallon sarja kertoo
+   * laatat.json:in `ranta`-kentässä, poltettiinko sen laatat rannan
+   * kanssa (versio) vai ilman (null, kun vektoriviivat piirtävät
+   * rannan). Kerros seuraa sarjaa DATA-OHJATUSTI: rannan kanssa
+   * poltettu sarja → ranta-taso piirretään ja sen version on
+   * täsmättävä pyramidiin; rannaton sarja → ranta-taso ohitetaan.
+   * Vanha sarja ilman kenttää: pyramidin vanha pohja sisältää rannan,
+   * ranta-tasoa ei ole → ranta false, käytös ennallaan.
+   */
+  const ranta = pallonLuettelo.ranta ?? null;
+  if (ranta && ranta !== (pyramidi.rantataso?.versio ?? null)) return null;
+  return { pohja: true, ranta: Boolean(ranta), viiva: Boolean(viivat), nosto: Boolean(nostot) };
 }
 
 /**
@@ -867,7 +880,7 @@ export function luoLaattakerros({
     });
     if (!kartta) { t.tila = 'virhe'; return; }
     const kerrostasot = (pyramidinKerrostasot(t.z) ?? [])
-      .filter((k) => (k.nosto ? kerrokset.nosto : (k.viiva ? kerrokset.viiva : true)));
+      .filter((k) => (k.nosto ? kerrokset.nosto : (k.viiva ? kerrokset.viiva : (k.ranta ? kerrokset.ranta : true))));
     if (!kerrostasot.length) { t.tila = 'virhe'; return; }
     const katkaisin = ikkuna.AbortController ? new ikkuna.AbortController() : null;
     t.katkaisin = katkaisin;
