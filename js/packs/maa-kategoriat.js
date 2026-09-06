@@ -44829,4 +44829,398 @@ export const MAA_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * KAZAKSTAN (KAZ) — Aasian laudan maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-kazakstan.md;
+   * kaikki luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KAUPUNKILEHDEN JA KARTTANOSTOJEN KANSSA: Astanalla on oma
+   * lehti (kulttuuri-kategoriat.js), joka kertoo Bajterekistä, Khan
+   * Shatyrista, maailman toiseksi kylmimmästä pääkaupungista ja
+   * Esil-joesta. Kartalla ovat maastokohteet-kaz.js:n Khan Tengri,
+   * Araljärvi, Irtyš, Yasawin mausoleumi, Tamgaly, Baikonur, Charynin
+   * kanjoni, Altyn-Emel, Issykin kurgaani, Aisha Bibi ja Saryarka sekä
+   * elaintakyt.js:n saiga ja skandaalit.js:n Semipalatinskin koealue ja
+   * Aralin kalasatama. Maalehti EI toista yhtäkään niistä — siksi
+   * luonto-osiossa ei ole Saryarkan lintukosteikkoja eikä saigaa,
+   * historiassa ei silkkitien monumentteja eikä ydinkoealuetta, ja
+   * Almatyn omenametsä kerrotaan lajin (Malus sieversii) kautta.
+   *
+   * HERKÄT AIHEET: Kazakstan-linjaus on sama kuin Astanan lehdessä —
+   * ei nykypolitiikkaa eikä presidenttikulttia. Neuvostoaika näkyy
+   * tässä lohkossa vain kansansoitinorkesterien perustamisena
+   * 1930-luvulla; ydinkokeet ovat skandaalikortilla.
+   *
+   * KUVAT: 13 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin.
+   * SEITSEMÄN NOSTOA JÄI KUVATTOMAKSI (kuvaputkelle): Botai (tarjolla
+   * oli vain englanninkielisin tekstein varustettu rakennepiirros),
+   * kazakinkaanikunta (ei muuta kuin anakronistisia 1800-luvun
+   * maalauksia), kobyz (molemmat kelvolliset kuvat ovat
+   * museovitriinistä heijastuksineen ja näyttelykyltteineen),
+   * Kurmangazy (hänen museonsa julkisivussa on vuoden 2020
+   * juhlabanneri), aitys (Commonsissa ei ole yhtään aitys-kuvaa),
+   * Kyz-Zhibek (vain oopperakuvia, joissa on tunnistettavat kasvot) ja
+   * al-Farabi (vain hänen mukaansa nimetyn yliopiston kampusnäkymä,
+   * josta ei näe monumenttia).
+   */
+  KAZ: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kazakstanin historia kulkee hevosen selässä: aro kesytti hevosen '
+          + 'tuhansia vuosia ennen muita, ja sen jälkeen aron valtakunnat syntyivät ja '
+          + 'hajosivat sen mukaan, kuka pystyi liikkumaan nopeimmin.',
+      nostot: [
+        {
+          otsikko: 'Kylä, jossa hevonen sai ensimmäiset kuolaimensa',
+          aika: '3700–3100 eaa.',
+          teksti: 'Pohjois-Kazakstanissa Imanburlyq-joen rannalla asuttiin kuoppataloissa, '
+              + 'joiden pohjia on kaivettu esiin yli sataviisikymmentä. Kylän ympäriltä '
+              + 'löytyi aitauksia sekä hevosenluuta ja -lantaa niin suunnattomat määrät, '
+              + 'ettei metsästys enää selittänyt niitä. Vuonna 2009 luissa havaittiin '
+              + 'jalostuksen merkkejä ja hampaissa kolmenlaista kulumaa, jollaista syntyy '
+              + 'vain kuolaimista: hevonen oli valjastettu jo noin 3500 eaa., lähes tuhat '
+              + 'vuotta aiemmin kuin oli luultu. Osalla eläimistä oli myös '
+              + 'leopardikuvioisen turkin geeni, jonka kaksi kopiota sokeuttavat '
+              + 'hämärässä — villinä sellainen hevonen ei olisi selvinnyt.',
+        },
+        {
+          otsikko: 'Karavaani, joka maksoi kaupungin',
+          aika: '1218–1405',
+          tiedosto: 'Otrar aerial view-Aug-2018.jpg',
+          teksti: 'Otrar oli silkkitien kaupunki Syr Darjan varrella, ja vuonna 1218 '
+              + 'sinne saapui noin 450 miehen kauppasaattue, jonka mukana oli '
+              + 'Tšingis-kaanin lähettiläs. Käskynhaltija Inalchuq syytti heitä '
+              + 'vakoilusta ja teloitti koko joukon. Tšingis lähetti kolme lähettilästä '
+              + 'vaatimaan rangaistusta; sulttaani mestautti heistä yhden ja ajatti '
+              + 'kahdelta muulta parran. Piiritys kesti viisi kuukautta vuonna 1219. '
+              + 'Kaupunki nousi vielä kerran, ja helmikuussa 1405 Timur kuoli sen '
+              + 'palatsissa vilustuttuaan joukkojaan kootessaan. 1700-luvun lopulla '
+              + 'Otrarissa asui enää neljäkymmentä perhettä.',
+          selite: 'Otrarin kaivauskenttä ilmasta: keskellä kohoaa noin 18 metriä korkea '
+            + 'viisikulmainen linnoituskumpu, ja sen ympärillä erottuvat kaupungin '
+            + 'muurit ja korttelit.',
+          lahde: 'Mikhail Gurulev, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Sana, joka tarkoitti karkuria ennen kansaa',
+          aika: '1465–1520',
+          teksti: 'Kaksi ruhtinasta, Kerei ja Janibek, kieltäytyivät tunnustamasta '
+              + 'Abu al-Khayr -kaanin valtaa ja siirtyivät heimoineen Moghulistaniin. '
+              + 'Siellä he elivät tavalla, jota sanottiin qazaqliqiksi: valtaistuinkilvassa '
+              + 'hävinnyt vetäytyi rajaseudulle ja eli metsästyksellä ja ryöstöretkillä. '
+              + 'Noin 1470 joukko palasi arolle, ja yhteiskunnallisesta haukkumanimestä '
+              + 'tuli kansan oma nimi. Perustamisvuodesta kiistellään yhä: kazakstanilainen '
+              + 'perinne sanoo 1465, venäläinen laskee vuodesta 1470. Kasym-kaanin aikana '
+              + '1511 alkaen valtakunnassa oli miljoona asukasta.',
+        },
+        {
+          otsikko: 'Katto, joka peritään isältä pojalle',
+          tiedosto: 'Казахский шанарак.jpg',
+          teksti: 'Kazakiksi jurtta on kiiz üi, huopatalo. Se nousee pystyyn puolessa '
+              + 'tunnissa tai kolmessa ja sen sisään mahtuu asumaan viidestä '
+              + 'viiteentoista ihmistä. Huopa tulee oman lauman villasta, mutta puu on '
+              + 'ostettava kaukaa laaksoista, koska arolla ei kasva puuta. Katon kruunua '
+              + 'sanotaan šanyrakiksi, ja se on jurtan ainoa osa, jota ei uusita: seinät '
+              + 'ja ruoteet korjataan, mutta kruunu siirtyy isältä pojalle. Suvun ikää '
+              + 'saatettiin arvioida siitä, kuinka paksulti savu oli sen tummentanut. '
+              + 'Tyylitelty šanyrak on Kazakstanin vaakunan keskellä.',
+          selite: 'Šanyrak alhaalta nähtynä: ristikkäiset kaaret pitävät kruunun '
+            + 'muodossaan, ja sen reunoihin sidotut ruoteet laskeutuvat säteittäin '
+            + 'seinien päälle.',
+          lahde: 'Alexandr Frolov, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kazakstanin vuorilta ovat kotoisin sekä maailman omenat että '
+          + 'puutarhojen tulppaanit, ja niiden juurella on järvi, jonka pohjalla kasvaa '
+          + 'metsä.',
+      nostot: [
+        {
+          otsikko: 'Omena, josta kaikki muut omenat polveutuvat',
+          tiedosto: 'Malus sieversii Tarbagatai.jpg',
+          teksti: 'Vuonna 2010 valmistunut genomianalyysi ratkaisi vanhan kysymyksen: '
+              + 'tarhaomenan kanta-isä on Malus sieversii, villiomena, joka kasvaa '
+              + 'Ilin laaksossa ja Tienšanin rinteillä. Puu kasvaa viidestä '
+              + 'kahteentoista metriin, ja sen hedelmä yltää seitsemään senttimetriin — '
+              + 'suurempi kuin millään muulla villillä omenalajilla. Erot näkyvät myös '
+              + 'syksyllä: villipuista 62 prosenttia värjää lehtensä punaisiksi, '
+              + 'tarhaomenoista vain 2,8 prosenttia. Laji levisi maailmalle silkkitietä '
+              + 'pitkin, ja Almatyn nimi tulee sanasta alma, omena.',
+          selite: 'Villiomena Tarbagatain vuorilta. Yhdysvaltain maatalouden '
+            + 'tutkimusvirasto keräsi Kazakstanista siemeniä geenivarastoon, koska '
+            + 'villikannassa on tauti- ja kuivuudenkestävyyttä, jota jalostetuista '
+            + 'lajikkeista ei löydy.',
+          lahde: 'Agricultural Research Service (USDA), Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Tulppaanit tulivat vuorilta, eivät Hollannista',
+          aika: '1873',
+          tiedosto: 'Wildtulpe.jpg',
+          teksti: 'Tulppaanisukuun kuuluu noin 75 lajia, ja niiden monimuotoisuuden '
+              + 'keskus on Pamir-Alain ja Tienšanin vuoristossa — siis siellä, missä '
+              + 'Kazakstan, Kirgisia ja Kiina kohtaavat. Yhden lajin kuvasi tieteelle '
+              + 'vuonna 1873 Eduard von Regel Turkestanista tuodusta aineistosta ja '
+              + 'nimesi sen Venäjän puutarhaseuran puheenjohtajan mukaan Tulipa '
+              + 'greigiiksi. Se kasvaa parikymmentä senttimetriä, kukka aukeaa kymmenen '
+              + 'sentin levyiseksi ja lehdissä on purppuranruskeat raidat. Osmanien '
+              + 'hovi vei tulppaanin Eurooppaan, jossa siitä tuli 1630-luvulla '
+              + 'sijoituskohde.',
+          selite: 'Villitulppaani kukkii Aksu-Zhabaglyn suojelualueella läntisellä '
+            + 'Tienšanilla. Puutarhatulppaanien esivanhemmat kasvavat yhä näillä '
+            + 'rinteillä.',
+          lahde: 'Ein Dresdner, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Metsä, joka jäi järven alle',
+          aika: '1911',
+          tiedosto: 'Kaindy lake.jpg',
+          teksti: 'Vuonna 1911 Kebinin maanjäristys laukaisi kalkkikivivyöryn, joka '
+              + 'patosi vuoristorotkon Kolsain järvien seudulla runsaat sata kilometriä '
+              + 'Almatysta itään. Vesi nousi ja hukutti kuusimetsän. Järvi on 400 metriä '
+              + 'pitkä ja lähes 30 metriä syvä, ja sen pinnasta työntyy yhä esiin '
+              + 'Schrenkinkuusten runkoja: kylmä vesi säilöö puun, ja pinnan yläpuolelta '
+              + 'oksat ja kaarna ovat kuluneet pois. Valkoisiksi kuivuneina rungot '
+              + 'näyttävät uponneen laivueen mastoilta. Kalkki värjää veden sinivihreäksi, '
+              + 'ja talvella järvellä sukelletaan jään alle.',
+          selite: 'Kaindy-järvi kahdentuhannen metrin korkeudessa. Vedenpinnan '
+            + 'yläpuolella olevat rungot ovat kuivuneet valkoisiksi, alapuolella niissä '
+            + 'on yhä oksat tallella.',
+          lahde: 'Katariyakartikey, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kanjoni, jonka yli pääsee vain kävelysiltaa',
+          tiedosto: 'Aksu river canyon (Aksu-Zhabagly Nature Reserve, Kazakhstan).png',
+          teksti: 'Aksu-Zhabagly läntisellä Tienšanilla on Keski-Aasian vanhin '
+              + 'luonnonsuojelualue. Se kattaa runsaat 1 300 neliökilometriä ja nousee '
+              + '1 100 metristä 4 236 metriin, ja sen halki kulkee Aksun kanjoni, joka '
+              + 'on viisisataa metriä syvä: yli pääsee vain kapeaa jalankulkusiltaa '
+              + 'myöten alueen eteläpäässä. Putkilokasveja on laskettu 1 312 lajia, '
+              + 'joista 44 on Kazakstanin punaisessa kirjassa — mukana villiomena, '
+              + 'villiviiniköynnös ja useita villitulppaaneja. Lumileopardi on alueen '
+              + 'kuuluisin asukas, mutta sen näkee harvoin.',
+          selite: 'Aksun kanjoni. Joki laskee kohti Syr Darjaa, ja rinteillä vaihtuvat '
+            + 'katajametsä, vuoristoniitty ja paljas kivikko.',
+          lahde: 'A. F. Kovshar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Aron keittiö on lauman keittiö: liha keitetään, maito hapatetaan ja '
+          + 'taikina paistetaan rasvassa — ja jokaisella ruoalla on oma järjestyksensä, '
+          + 'jota noudatetaan yhä.',
+      nostot: [
+        {
+          otsikko: 'Vati, jolta jokainen saa oman palansa',
+          tiedosto: 'Бешбармак - казахское национальное блюдо.jpg',
+          teksti: 'Bešbarmak tarkoittaa viittä sormea, koska se syödään käsin. Ruoka on '
+              + 'keitettyä lihaa, ohuita nuudeleita ja sipulilientä, ja se tuodaan '
+              + 'yhdelle isolle vadille koko seurueelle. Ennen sitä juodaan shorpo-lientä '
+              + 'kese-kupeista ja jälkeen ak-serke, jossa liemeen on sekoitettu kumissia. '
+              + 'Jos vieraan kunniaksi on teurastettu lammas, palat jaetaan iän ja aseman '
+              + 'mukaan: kunniavieras saa pään ja leikkaa siitä paloja muille, vanhin '
+              + 'mies reisiluun, arvostetuimmat naiset häntäluun ja lapset selkärangan. '
+              + 'Miniälle jäävät pienimmät luut.',
+          selite: 'Bešbarmakin nuudelit kaulitaan ohuiksi ja keitetään samassa liemessä '
+            + 'kuin liha; päälle tulee sipulia ja perunaa.',
+          lahde: 'NataAllice, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maito, joka hapatettiin satulassa',
+          tiedosto: 'Shubat vs Kumis.jpg',
+          teksti: 'Kumis on hapatettua tamman maitoa. Siinä on enemmän sokeria kuin '
+              + 'lehmänmaidossa, joten käyminen tuottaa alkoholia 0,7–2,5 prosenttia. '
+              + 'Lypsy vaatii taitoa: lypsäjä on toinen polvi maassa ja ämpäri toisen '
+              + 'polven päällä, ja varsa pidetään koko ajan tamman kyljessä, koska muuten '
+              + 'maito ei tule. Kausi kestää kesäkuun puolivälistä lokakuun alkuun, ja '
+              + 'tamma antaa 1 000–1 200 litraa, josta puolet jää varsalle. Hapatusastia '
+              + 'jätettiin jurtan katolle ja käänneltiin — tai sidottiin satulaan, jolloin '
+              + 'päivän ratsastus hoiti sekoittamisen.',
+          selite: 'Kaksi hapanmaitoa vierekkäin: vasemmalla kamelinmaidosta tehty šubat, '
+            + 'oikealla tamman maidosta tehty kumis.',
+          lahde: 'Upyernoz, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kahdeksansataa kiloa taikinaa yhdessä päivässä',
+          aika: '2014',
+          tiedosto: 'Бауырсаки на Наурыз.jpg',
+          teksti: 'Bauyrsak on uppopaistettua taikinaa, joka leikataan kolmioiksi tai '
+              + 'pyöritellään palloiksi. Taikinaan tulee jauhoja, hiivaa, maitoa, '
+              + 'kananmunia, voita, suolaa ja sokeria, ja valmiit palat kastetaan teehen '
+              + 'tai syödään hillon ja hunajan kanssa. Almatyssa paistettiin 7. syyskuuta '
+              + '2014 yhtenä päivänä 856 kilogrammaa bauyrsakia, mikä kirjattiin '
+              + 'Guinnessin ennätykseksi. Tempaus tehtiin äitienpäivän juhlassa '
+              + 'kokkikilpailun muodossa: seitsemän joukkuetta, ja vastakkain olivat '
+              + 'anoppien ja miniöiden joukkueet.',
+          selite: 'Bauyrsakeja tarjolla Nauryzin kevätjuhlassa. Palat paistetaan '
+            + 'kuumassa rasvassa, jolloin ne pullistuvat sisältä onteloiksi.',
+          lahde: 'Igor Ulitin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Juoma, joka ei kestä matkaa',
+          tiedosto: 'Shubat.jpg',
+          teksti: 'Šubat on hapatettua kamelinmaitoa, ja Kazakstanissa se on kesän '
+              + 'perusruokaa. Maito hapatetaan nahkasäkissä tai saviruukussa lisäämällä '
+              + 'joukkoon edellisen erän hapanta maitoa, ja kolmen tai neljän vuorokauden '
+              + 'ajan sekaan sekoitetaan uutta maitoa niin, että valmiissa juomassa on '
+              + 'vanhaa kolmasosasta viidesosaan. Pinnalle nouseva kerma kuoritaan ja '
+              + 'syödään erikseen. Kamelinmaito ei happane alle kymmenen asteen lämmössä '
+              + 'kolmeen vuorokauteen, mutta kolmessakymmenessä asteessa se happanee '
+              + 'kahdeksassa tunnissa — lehmänmaito kolmessa.',
+          selite: 'Kulhollinen šubatia. Juomaa on vaikea viedä maasta: se pilaantuu '
+            + 'nopeasti eikä valmistus onnistu ilman omia kamelilaumoja.',
+          lahde: 'Upyernoz, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä eläimen maidosta šubat hapatetaan?',
+        vaihtoehdot: [
+          'Vuohen',
+          'Tamman',
+          'Lehmän',
+          'Kamelin',
+        ],
+        oikea: 3,
+        fakta: 'Kamelinmaito happanee hitaammin kuin lehmänmaito, joten astiaan '
+            + 'lisätään uutta maitoa useana päivänä peräkkäin.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Kazakkimusiikin ydin on küy: muutaman minuutin soolokappale, jolla on '
+          + 'tarina — ja soittajan odotetaan kertovan se ääneen ennen kuin hän koskee '
+          + 'kieliin.',
+      nostot: [
+        {
+          otsikko: 'Kaksi kieltä ja tarina, joka kerrotaan ensin',
+          tiedosto: 'Kazakh Dombra2.png',
+          teksti: 'Dombra on kaksikielinen pitkäkaulainen luuttu ja Kazakstanin '
+              + 'kansallissoitin. Kaikukoppa veistetään männystä, kuusesta tai '
+              + 'aprikoosipuusta, ja nauhat sidottiin ennen jänteestä, nyt siimasta. '
+              + 'Lännessä soitetaan tökpe-tekniikalla, jossa molemmat kielet soivat yhtä '
+              + 'aikaa nopeina alas-ylös-vetoina; idässä ja keskimaassa käytetään '
+              + 'šertpeä, jossa kielet näppäillään erikseen sormenpäillä. Lauluun riittää '
+              + 'kahdeksan nauhaa, küy-ohjelmistoon tarvitaan jopa 24. Unesco otti küyn '
+              + 'luetteloonsa 2014, ja heinäkuun ensimmäinen sunnuntai on dombrapäivä.',
+          selite: 'Kazakkidombra edestä ja sivulta. Kaikukoppa on päärynän muotoinen ja '
+            + 'kannen alla kulkee vain kaksi kieltä.',
+          lahde: 'Mizu basyo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Soitin, jolla karkotettiin kuolema',
+          teksti: 'Kobyz on jousisoitin, jossa on kaksi hevosenjouhista kieltä ja '
+              + 'vuohennahkainen kaikukoppa. Se ei ollut kenen tahansa soitin: sitä '
+              + 'pitivät hallussaan šamaanit ja baksyt, ja tarinoiden mukaan sen ääni '
+              + 'karkotti pahat henget, taudin ja kuoleman. Ohjelmistossa jäljitellään '
+              + 'tarkoituksella linnunääniä ja hevosen kavioiden kopsetta. 1930-luvulla, '
+              + 'kun neuvostotasavaltaan perustettiin kansansoitinorkestereita, kobyziin '
+              + 'pantiin neljä metallikieltä, ja samalla soittimella alettiin esittää '
+              + 'myös viulukirjallisuutta. Karakalpakkien eepikot säestävät sillä yhä '
+              + 'kertomuslauluja karhealla kurkkuäänellä.',
+        },
+        {
+          otsikko: 'Kahleet auki ja muita vankilasta saatuja sävelmiä',
+          aika: '1823–1896',
+          teksti: 'Kurmangazy Sagyrbaiuly syntyi Bukein ordassa köyhään perheeseen: isä '
+              + 'oli työmies vailla taipumusta taiteisiin, äiti tunnettiin rohkeudestaan '
+              + 'ja esiintymisestään juhlissa. Poika oppi küyt kiertävältä soittajalta ja '
+              + 'sävelsi ensimmäisensä nuorena kapinan aikaan. Loppuelämä kului '
+              + 'vankiloissa ja pakomatkoilla: vangittu 1857, karannut saman vuoden '
+              + 'marraskuussa, vangittu uudelleen 1864, karannut Astrahanissa 1870. '
+              + 'Vankeus jäi kappaleiden nimiin — Kisen Ashkan on kahleet auki ja '
+              + 'Turmeden Kashkan paennut vankilasta. Vanhoilla päivillään hän opetti '
+              + 'oppilaita, joista tunnetuin oli Dina Nurpeisova.',
+        },
+        {
+          otsikko: 'Kilpalaulanta, jossa vastaus pitää keksiä heti',
+          teksti: 'Aitys on kahden akynin eli laulajarunoilijan kilpa. He istuvat '
+              + 'vierekkäin, näppäilevät vuorotellen dombraansa ja vastaavat toisilleen '
+              + 'riimitetyin säkein. Osa säkeistä on etukäteen mietittyjä, mutta yleisö '
+              + 'palkitsee sen, joka osaa vastata sukkelasti, historiaa tuntien ja '
+              + 'yllättäen. Aiheet tulevat yhteisön elämästä: perheestä, kosiskelusta, '
+              + 'riidoista ja päivän tapahtumista. Kilpoja alettiin kirjata muistiin '
+              + 'vasta 1800-luvulla, ja ensimmäisiä talteen saatuja ovat Birzhanin ja '
+              + 'Saran sekä Ulbiken ja Kuderin laulukiistat. Unescon luetteloon aitys '
+              + 'pääsi vuonna 2015.',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Kazakkirunous kulki tuhat vuotta suullisesti, ja kun se pantiin '
+          + 'paperille, samat kirjoittajat käänsivät kazakiksi myös muun maailman '
+          + 'kirjallisuutta.',
+      nostot: [
+        {
+          otsikko: 'Sanojen kirja ja pojan lempinimi',
+          aika: '1845–1904',
+          tiedosto: 'Abay book at Almaty Central State Museum of Kazakhstan.jpg',
+          teksti: 'Abai Qunanbaiuly sai syntyessään nimen Ibrahim. Madrasan opettaja '
+              + 'antoi hänelle lempinimen Abai, varovainen, ja se jäi käyttöön koko '
+              + 'loppuelämäksi. Isä lähetti pojan venäläiseen kouluun Semipalatinskiin, '
+              + 'missä hän luki Lermontovia ja Puškinia sekä Šahnamea. Ennen häntä '
+              + 'kazakkirunous oli lähes yksinomaan suullista. Abai käänsi ensimmäisenä '
+              + 'kazakiksi muun muassa Goethea, Byronia, Krylovin faabeleita ja Puškinin '
+              + 'Jevgeni Oneginin. Hänen pääteoksensa Qara sözder eli Sanojen kirja '
+              + 'kehottaa maanmiehiä opiskelemaan ja hankkimaan lukutaidon.',
+          selite: 'Abain profiili kultakoristeisen kirjan kannessa Kazakstanin '
+            + 'keskusmuseossa Almatyssa. Runoilija kuvataan tavallisesti dombra '
+            + 'kädessään.',
+          lahde: 'Nurken, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaksikymmentä vuotta yhden naapurin elämäkerrassa',
+          aika: '1897–1961',
+          tiedosto: 'ALADomAuezova.JPG',
+          teksti: 'Mukhtar Auezovin isoisä Auez opetti pojanpojalleen lukemisen ja '
+              + 'kirjoittamisen sekä arabialaisin että kyrillisin kirjaimin ja kertoi '
+              + 'hänelle kansantarinoita. Suvun naapuri ja ystävä oli runoilija Abai. '
+              + 'Auezovin esikoisnäytelmä Enlik-Kebek vuodelta 1917 kertoo kahdesta '
+              + 'nuoresta rakastavaisesta ja muistuttaa Romeota ja Juliaa. Näytelmiä '
+              + 'kertyi yli kaksikymmentä, ja hän käänsi kazakiksi Gogolin Reviisorin '
+              + 'sekä Shakespearen Othellon ja Kuinka äkäpussi kesytetään. Elämäntyö on '
+              + 'romaanieepos Abain tie, jota hän kirjoitti kaksikymmentä viimeistä '
+              + 'vuottaan.',
+          selite: 'Auezovin kotitalo Almatyssa on nykyään museo. Kirjailija haudattiin '
+            + 'samaan kaupunkiin kuoltuaan leikkauksessa Moskovassa.',
+          lahde: 'Ds02006, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Eepos, josta tunnetaan kuusitoista toisintoa',
+          aika: '1894',
+          teksti: 'Kyz-Zhibek on runoeepos, jonka tapahtumat sijoittuvat 1500-luvulle, '
+              + 'aikaan jolloin kazakinkaanikunta oli vasta muodostumassa aron heimoista. '
+              + 'Soturi Tölegen ja kaunis Žibek rakastuvat, mutta kilpakosija Bekežan '
+              + 'murhaa Tölegenin, ja Žibek surmaa itsensä kuultuaan siitä. Kertomus '
+              + 'kulki suullisesti sukupolvelta toiselle ja kirjattiin muistiin vasta '
+              + '1800-luvulla; ensimmäisen painetun laitoksen toimitti etnografi '
+              + 'Jüsipbek Šaihislamuly Kazanissa 1894. Toisintoja tunnetaan kuusitoista. '
+              + 'Eepoksesta tehtiin ooppera 1934 ja elokuva 1970.',
+        },
+        {
+          otsikko: 'Toinen opettaja, jonka syntymäkaupungista kiistellään',
+          aika: 'n. 870–950',
+          teksti: 'Al-Farabi oli filosofi ja musiikinteoreetikko, jota myöhemmät '
+              + 'kirjoittajat kutsuivat toiseksi opettajaksi — ensimmäinen oli '
+              + 'Aristoteles. Suurimman osan tutkijanelämästään hän vietti Bagdadissa '
+              + 'syyrialaiskristittyjen oppineiden parissa. Syntymäpaikkaa ei tiedetä: '
+              + 'persian sana farab tarkoittaa joen vedellä kasteltua seutua, ja sen '
+              + 'nimisiä paikkoja on useita — yksi niistä on Otrar Syr Darjan varrella nykyisessä '
+              + 'toinen Turkmenistanissa ja kolmas Afganistanissa. Elämäkerrat '
+              + 'kirjoitettiin vasta kauan hänen kuolemansa jälkeen kuulopuheiden '
+              + 'varassa. Musiikin suurkirjassaan hän kuvasi kaksikielisen luutun, '
+              + 'jollainen dombra on.',
+        },
+      ],
+    },
+  ],
 };

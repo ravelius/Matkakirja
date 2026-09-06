@@ -779,4 +779,32 @@ export const UUTISLAHTEET = {
     kieli: 'en',
     syote: 'https://sierraloaded.sl/feed/',
   },
+  /*
+   * NUR.KZ on Kazakstanin luetuimpia uutissivustoja, ja sillä on oma
+   * kazakinkielinen laitos osoitteessa kaz.nur.kz — siksi taulussa on
+   * se eikä venäjänkielinen www.nur.kz, jonka syöte toimii yhtä hyvin.
+   * Testattu 6.9.2026: syötteessä viisikymmentä juttua, ja
+   * artikkelisivun <article>-lohkosta jäsentyy kymmenen yli 60 merkin
+   * kappaletta sekä og:image; toinen artikkelisivu tarkistettiin
+   * erikseen. MyMemory kääntää kieliparin kk|fi.
+   *
+   * Testattu ja hylätty: Egemen Qazaqstan (egemen.kz/rss, viisikymmentä
+   * juttua) ja Kazinformin kazakinkielinen syöte
+   * (kaz.inform.kz/rss/kz.xml, kaksisataa juttua) — molempien syöte
+   * aukeaa, mutta artikkelisivulla ei ole <article>-elementtiä eikä
+   * [itemprop="articleBody"]-merkintää, joten popupiin jäisi vain
+   * syötteen parin lauseen kuvaus; sama vika on Jas Qazaqilla
+   * (jasqazaq.kz/feed/) ja Ordalla (orda.kz/feed/). Tengrinewsin,
+   * Zakon.kz:n, Liter.kz:n, Kazpravdan, Aikynin, Ulysmedian,
+   * Turkystanin, Qazaquni.kz:n, 24.kz:n, Baq.kz:n, Abai.kz:n ja
+   * El.kz:n RSS-osoitteet vastaavat 404:llä tai ohjaavat etusivulle,
+   * ja Informburo antaa 403:n. Sputnik Kazakstan jätettiin pois
+   * lähdeperiaatteen takia (valtiollinen media, sama linjaus kuin
+   * Vesti FM:n poistossa, ks. js/packs/radiot.js).
+   */
+  KAZ: {
+    nimi: 'NUR.KZ',
+    kieli: 'kk',
+    syote: 'https://kaz.nur.kz/rss/all.rss',
+  },
 };

@@ -115,6 +115,17 @@
 > 404, 302 ja 403); perustelut ovat js/packs/uutislahteet.js:n
 > SLE-kommentissa. Julkaisu tapahtuu integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Kazakstan):** sallittuihin lisättiin
+> kaz.nur.kz (maalehti KAZ, testattu 6.9.2026: syötteessä
+> viisikymmentä juttua, ja artikkelisivun `<article>`-lohkosta jäsentyy
+> kymmenen yli 60 merkin kappaletta sekä `og:image`). Alitunnus on
+> kirjoitettava täsmälleen oikein: kazakinkielinen laitos on
+> `kaz.nur.kz`, venäjänkielinen `www.nur.kz`, eivätkä ne ole workerille
+> sama isäntänimi. Egemen Qazaqstanin ja Kazinformin syötteet aukeavat,
+> mutta niiden artikkelisivuilta puuttuu `<article>`; perustelut
+> hylkäyksille ovat js/packs/uutislahteet.js:n KAZ-kommentissa.
+> Julkaisu Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

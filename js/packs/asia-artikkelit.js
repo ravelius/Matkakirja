@@ -3465,4 +3465,59 @@ export const ASIA_ARTIKKELIT = {
       + 'muut suojelualueet kattavat lähes viidenneksen maan '
       + 'pinta-alasta.',
   },
+  // KAZAKSTAN (6.9.2026) on tiedoston ensimmäinen MAAN merkintä: avain
+  // on maailmankartan countryShapes.KAZ.wiki eli "Kazakstan", ja
+  // js/lehti.js lukee maalehden etusivulle tästä pelkän intro-kentän.
+  // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+  // KAZ) nojaa tähän introon yksin, sama malli kuin Kenialla
+  // (africa-artikkelit.js). Teksti-kenttä on mukana, koska
+  // tests/vanha-maailma.test.mjs vaatii talon mitan — kolme kappaletta
+  // ja 600–1100 merkkiä — jokaiselta tämän tiedoston merkinnältä.
+  // Kazakstan-linjaus on sama kuin Astanan lehdessä (ks.
+  // kulttuuri-kategoriat.js:n astana-lohkon kommentti): ei
+  // nykypolitiikkaa eikä presidenttikulttia, joten valtiomuoto ja
+  // johtajat jäävät pois ja 1900-luku kerrotaan hallinnollisina
+  // käänteinä. Väitteet on tarkistettu 6.9.2026 en-Wikipedian
+  // artikkelin "Kazakhstan" johdannosta ja maalehden faktapohjasta
+  // docs/mantereet-tyoaineisto/faktapohja-kazakstan.md.
+  Kazakstan: {
+    intro: 'Kazakstan on maailman yhdeksänneksi suurin valtio ja suurin '
+      + 'niistä, joilla ei ole yhteyttä valtamerelle. Asukkaita on '
+      + '**20,6 miljoonaa** eli alle kahdeksan neliökilometriä kohti, '
+      + 'mikä on maailman alhaisimpia väentiheyksiä. Lähes puolet maasta '
+      + 'on kumpuilevaa ylänköä ja tasankoa ja kolmannes alankoa; vuoret '
+      + 'kohoavat vasta etelä- ja itärajalla, ja lännessä on '
+      + 'Kaspianmeren rannikko.'
+      + '\n\n'
+      + 'Aro kesytti hevosen: Pohjois-Kazakstanin **Botai**-kylässä '
+      + 'hevosia pidettiin aitauksissa ja ohjattiin kuolaimilla jo noin '
+      + '3500 eaa. Antiikin aikaan alueella liikkuivat iranilaiset '
+      + 'paimentolaiskansat sakat, massageetit ja skyytit, 500-luvulta '
+      + 'alkaen turkkilaiskansat, ja 1200-luvulla se joutui '
+      + 'mongolivaltakunnalle.'
+      + '\n\n'
+      + 'Kultaisen ordan hajottua syntyi 1400-luvulla '
+      + '**kazakinkaanikunta**, joka 1700-luvulla jakautui kolmeen '
+      + 'žuziin; ne siirtyivät vähitellen Venäjän keisarikunnan '
+      + 'alaisuuteen, ja 1936 alueesta tuli Neuvostoliiton '
+      + 'liittotasavalta. Itsenäisyys tuli 1991 viimeisenä '
+      + 'neuvostotasavalloista, ja pääkaupunki siirtyi Almatysta '
+      + 'Astanaan 1997.',
+    teksti: 'Kazakstan on maailman yhdeksänneksi suurin valtio ja suurin '
+      + 'niistä, joilla ei ole yhteyttä valtamerelle. Melkein puolet '
+      + 'maasta on kumpuilevaa ylänköä ja tasankoa ja kolmannes '
+      + 'alankoa; vuoret nousevat vasta etelä- ja itärajalla, ja '
+      + 'lännessä on Kaspianmeren rannikko.'
+      + '\n\n'
+      + 'Aluetta ovat asuttaneet paimentolaiskansat esihistoriasta '
+      + 'asti: ensin iranilaiset sakat, massageetit ja skyytit, '
+      + '500-luvulta alkaen turkkilaiskansat. Mongolivalta 1200-luvulla '
+      + 'ja Kultaisen ordan hajoaminen johtivat kazakinkaanikunnan '
+      + 'syntyyn 1400-luvulla.'
+      + '\n\n'
+      + 'Asukkaita on 20,6 miljoonaa, ja väentiheys on maailman '
+      + 'alhaisimpia. Maa tuottaa noin 60 prosenttia Keski-Aasian '
+      + 'bruttokansantuotteesta, pääosin öljystä ja kaasusta, ja se on '
+      + 'maailman suurimpia raudan ja hopean tuottajia.',
+  },
 };

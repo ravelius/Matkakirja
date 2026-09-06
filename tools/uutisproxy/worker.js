@@ -123,6 +123,11 @@ const SALLITUT = [
   // Sierra Leonen uutislähde (maalehti 6.9.2026): syöte ja
   // artikkelisivut samalla isäntänimellä, ilman www-etuliitettä.
   'https://sierraloaded.sl/',
+  // Kazakstanin uutislähde (maalehti 6.9.2026): NUR.KZ:n
+  // kazakinkielinen laitos, syöte ja artikkelisivut samalla
+  // isäntänimellä. Osoitteessa on kaz-alkuinen alitunnus, koska
+  // venäjänkielinen www.nur.kz on eri isäntänimi.
+  'https://kaz.nur.kz/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei
