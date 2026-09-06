@@ -6246,7 +6246,12 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   width: 100%;
   height: 100%;
   /* Muutos vaatii saman muutoksen js/etusivupallo.js:n SOVITUS_TAPAan:
-     SVG rajautuu sen mukaan (tests/etusivupallo.test.mjs vartioi). */
+     SVG rajautuu sen mukaan (tests/etusivupallo.test.mjs vartioi).
+     NÄMÄ OVAT LÄHTÖARVOJA: js/etusivupallo.js (asetaKehykset) kirjoittaa
+     laatikon pikselilleen, koska pallon kiekon on jatkuttava ruudun
+     reunojen YLI (KIEKON_YLITYS) eikä pelkkä cover osaa venyttää
+     kotelon ulkopuolelle. Laatikko on videon kuvasuhteessa, joten
+     cover ei silloin rajaa mitään. */
   object-fit: cover;
 }
 
@@ -6267,6 +6272,8 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 .etusivupallo-juliste.nakyy,
 .etusivupallo-video.nakyy { opacity: 1; }
 
+/* Laatikko tulee JS:stä samasta sovituksesta kuin videolle
+   (js/etusivupallo.js asetaKehykset); nämä ovat lähtöarvot. */
 .etusivupallo-reitti {
   position: absolute;
   inset: 0;
@@ -6276,7 +6283,9 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 }
 
 /* Paksu punainen viiva (omistaja sanatarkasti). Leveys on videon
-   pikseleitä, joten se kutistuu kerroksen mukana. */
+   pikseleitä, joten se kutistuu kerroksen mukana. JS jakaa sen
+   pallon zoomikertoimella (asetaKehykset), jotta viiva pysyy
+   ruudulla entisen levyisenä, vaikka pallo on isompi. */
 .etusivupallo-viiva {
   fill: none;
   stroke: #c2452f;
@@ -6472,8 +6481,8 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * vaaleassa taustassa"*). "Käytännössä nolla" ei riittänyt: meren
  * sinen päällä 0,03:n pergamenttihuntu erottuu vaakasuorana viivana
  * laatan reunassa. Liuku päättyy nyt pysäkkiin 0 kohdassa häivytys
- * + 45 % (palstalla 85 %, julisteella 79 % säteestä), ja laatan
- * reuna on 89 %:n kohdalla — reunalla peittävyys on tasan nolla.
+ * + 45 % (palstalla 89 %, julisteella 85 % säteestä), ja laatan
+ * reuna on 89,3 %:n kohdalla — reunalla peittävyys on tasan nolla.
  * Menetetty ala korvataan hieman isommalla laatalla (inset).
  *
  * Ala on em-mittainen ja siis tekstin kokoinen: kun fitIntro kutistaa
@@ -6505,11 +6514,32 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * klo 00.25). Peitto 0,94 → 0,62 ja laatta liki kaksinkertainen
  * (-1,2em/-1,6em → -2,6em/-5em), joten teksti lepää yhä pergamentilla
  * mutta pallo näkyy sen läpi eikä harsosta erotu reunaa.
+ *
+ * VIELÄ HAALEAMPI (omistaja 6.9.2026 ilta, iPad pystyssä, sanatarkasti:
+ * *"Alaosan tekstin vaalea pohja on liian voimakas"*). Peitto 0,62 →
+ * 0,46, eli pallo kuultaa tekstin takaa selvästi läpi. Pelkkä
+ * peiton lasku ei olisi riittänyt, koska HUONOIN kohta ei ole harson
+ * keskellä vaan tekstirivien PÄISSÄ: soikio ehti kuolla nollaan jo
+ * ennen leveimpien rivien reunoja, ja siellä teksti lepäsi suoraan
+ * pallon päällä. Siksi laatta kasvaa (-2,9em/-5,5em → -4,6em/-8em) ja
+ * tasainen lava ulottuu 44 %:iin säteestä: sama harso levitetään
+ * laajemmalle ja ohuemmalle.
+ *
+ * MITATTU (Chromium 6.9.2026, oikea ämpärivideo, koko kierros,
+ * WCAG-kontrasti tekstin ja taustan välillä pallon tummimmalla
+ * kohdalla; scratchpad-mittaus neljällä ruudulla):
+ *   ennen  1024×1366 5,38 · 390×844 3,76 · 1440×900 5,88 · 2000×1160 5,38
+ *   nyt    1024×1366 5,77 · 390×844 4,57 · 1440×900 6,06 · 2000×1160 5,78
+ * eli haaleampi harso on samalla LUETTAVAMPI kuin ennen — puhelimen
+ * huonoin kohta nousi rajan 4,5 yli.
+ *
+ * SUORA RAJA EI PALAA: liuku päättyy nollaan 44 % + 45 % = 89 %:n
+ * kohdalla ja laatan reuna on 89,3 %:ssa (tests/etusivupallo.test.mjs).
  */
 .intro.intro-pallolla .intro-palsta::before {
-  inset: -2.9em -5.5em;
-  --harson-peitto: 0.62;
-  --harson-haivytys: 40%;
+  inset: -4.6em -8em;
+  --harson-peitto: 0.46;
+  --harson-haivytys: 44%;
 }
 
 /*
@@ -6519,10 +6549,22 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * -0,5em/-1,4em → -1,8em/-3,6em ja lava loppuu jo 36 %:n kohdalla,
  * joten liuku kestää lähes kaksi kolmasosaa säteestä.
  */
+/*
+ * SAMA HAALENNUS OTSIKOLLE (omistaja 6.9.2026 ilta). Peitto 0,8 →
+ * 0,6 ja laatta leveämmäksi (-2em/-4em → -2,2em/-5,6em), jotta
+ * leveimpien otsikkorivien päät eivät jää soikion ulkopuolelle.
+ * Pystysuunnassa laatta kasvaa vain vähän: työpöydällä otsikko on
+ * lähellä paneelin ylälaitaa, ja isompi laatta työntäisi harsoa
+ * paneelin reunan yli (mitattu reunapeitto 0,06 — käytännössä nolla).
+ * Otsikon luettavuus mitattiin ensin: tumman otsikon huonoin kontrasti
+ * nousi 3,77 → 4,56 (1440×900) ja 4,33 → 4,79 (2000×1160).
+ * Häivytys alkaa 40 %:sta, joten liuku sammuu nollaan 85 %:ssa eikä
+ * laatan reunalle (89,3 %) jää mitään.
+ */
 .intro.intro-pallolla .intro-juliste::before {
-  inset: -2em -4em;
-  --harson-peitto: 0.8;
-  --harson-haivytys: 34%;
+  inset: -2.2em -5.6em;
+  --harson-peitto: 0.6;
+  --harson-haivytys: 40%;
 }
 
 /*

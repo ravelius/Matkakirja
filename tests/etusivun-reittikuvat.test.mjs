@@ -242,8 +242,15 @@ test('kuva on pieni, ankkuroitu kaupunkiin ja koneen alla', () => {
   // ANKKURI: paikka lasketaan joka kehyksellä samalla projektiolla kuin kone.
   assert.match(kerros, /videostaRuudulle\(pallonPiste\(r, nakyma, mitat\), sov\)/,
     'kuvan paikka ei tule pallon projektiosta — se ei seuraisi kaupunkia');
-  assert.match(kerros, /piirraReittikuvat\(t, nakyma\);/,
-    'kuvia ei piirretä samassa kehyksessä kameran kanssa');
+  /*
+   * SAMA KEHYS JA SAMA SOVITUS. Kerros ei enää laske sovitusta uudelleen
+   * kuville: piirraHetki laskee sen kerran (pallonSovitus, joka vie
+   * kiekon ruudun reunojen yli) ja antaa saman olion sekä koneelle,
+   * viivalle että kuville — muuten kuva voisi ajautua eri kohtaan
+   * palloa kuin kaupunkinsa.
+   */
+  assert.match(kerros, /piirraReittikuvat\(t, nakyma, sov\);/,
+    'kuvia ei piirretä samassa kehyksessä ja samalla sovituksella kuin kamera');
   // KONE JÄÄ PÄÄLLE: kuvakerros liitetään ennen SVG:tä.
   assert.ok(kerros.indexOf("juuri.appendChild(kuvakerros)") < kerros.indexOf("class: 'etusivupallo-reitti'"),
     'kuvakerros on SVG:n päällä — kuva peittäisi koneen ja viivan');

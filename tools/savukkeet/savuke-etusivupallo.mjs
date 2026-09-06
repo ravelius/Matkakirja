@@ -30,10 +30,13 @@
  *       etusivulta"*): koko kierroksen ajan avausnäkymässä ei ole
  *       yhtään kuvakorttia eikä pinokerrosta, ja avauspaneelin ainoa
  *       lisäkerros on pallo itse.
- *   E10 COVER-SOVITUS: koneen ruutupiste, jonka SELAIN laski SVG:n
- *       xMidYMid slice -rajauksella, on sama kuin moduulin oma
- *       kerroksenSovitus + videostaRuudulle antaa — ja piste osuu
- *       videon pallolle (etäisyys keskeltä alle pallon säteen).
+ *   E10 SOVITUS: koneen ruutupiste, jonka SELAIN laski, on sama kuin
+ *       moduulin oma pallonSovitus + videostaRuudulle antaa — ja piste
+ *       osuu videon pallolle (etäisyys keskeltä alle pallon säteen).
+ *       Lisäksi PALLO JATKUU RUUDUN REUNOJEN YLI (omistaja 6.9.2026
+ *       ilta: *"Taustan maapallo saisi täyttää kokoruudun niin että
+ *       pallon rajat eivät näy"*): kiekko peittää kerroksen kauimman
+ *       nurkan KIEKON_YLITYS-varalla, eikä pelkkä cover riittäisi.
  *   E1d Tasokarttaa EI alusteta etusivua varten (aalto 1D): kartta on
  *       lepotilassa ja svg#board tyhjä koko avausnäkymän ajan.
  *   E5  Lippu pois → ENTINEN ETUSIVU: .intro-kartassa on vain
@@ -94,8 +97,8 @@ if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: tr
 
 const {
   ETUSIVUPALLO_VERSIO, ETUSIVUN_KAMERA, ETUSIVUPALLO_TIEDOSTOT,
-  SVG_SOVITUS, SOVITUS_TAPA,
-  kerroksenSovitus, reitinPisteet, teeReitti, videostaRuudulle,
+  SVG_SOVITUS, SOVITUS_TAPA, KIEKON_YLITYS,
+  kiekonSade, koneenYlin, pallonSovitus, reitinPisteet, teeReitti, videostaRuudulle,
 } = await import(`${JUURI}js/etusivupallo.js`);
 const { packById } = await import(`${JUURI}js/pack.js`);
 
@@ -532,9 +535,9 @@ if (koevideo) {
      * eroavat, kone lentäisi videon pallon vierestä.
      */
     const muunnos = /translate\(([-\d.]+) ([-\d.]+)\)/.exec(toinen.koneenMuunnos ?? '');
-    const sovitus = kerroksenSovitus(luettelo.mitat, {
+    const sovitus = pallonSovitus(luettelo.mitat, {
       leveys: toinen.pallonLaatikko.w, korkeus: toinen.pallonLaatikko.h,
-    });
+    }, ETUSIVUN_KAMERA, { ylin: koneenYlin(reitti, ETUSIVUN_KAMERA, luettelo.mitat) });
     const oma = muunnos
       ? videostaRuudulle({ x: Number(muunnos[1]), y: Number(muunnos[2]) }, sovitus) : null;
     const selaimen = toinen.koneenLaatikko ? {
@@ -552,11 +555,26 @@ if (koevideo) {
     const D = 1 + ETUSIVUN_KAMERA.korkeus;
     const f = (luettelo.mitat.lava / 2) / Math.tan((ETUSIVUN_KAMERA.fov * Math.PI) / 360);
     const sade = (f * Math.sqrt(1 - 1 / D ** 2)) / (D - 1 / D);
+    vaadi('E10c moduulin kiekonSade on sama luku kuin savukkeen oma kaava',
+      Math.abs(kiekonSade(ETUSIVUN_KAMERA, luettelo.mitat) - sade) < 1e-6,
+      `moduuli ${kiekonSade(ETUSIVUN_KAMERA, luettelo.mitat).toFixed(2)} vs. ${sade.toFixed(2)}`);
     const etaisyys = muunnos
       ? Math.hypot(Number(muunnos[1]) - luettelo.mitat.leveys / 2,
         Number(muunnos[2]) - luettelo.mitat.korkeus / 2) : Infinity;
     vaadi('E10b kone on videon pallon pinnalla myös cover-rajauksessa', etaisyys < sade,
       `etäisyys keskeltä ${etaisyys.toFixed(0)} px, pallon säde ${sade.toFixed(0)} px`);
+    /*
+     * E10d PALLO YLI RUUDUN REUNOJEN (omistaja 6.9.2026 ilta: *"Taustan
+     * maapallo saisi täyttää kokoruudun niin että pallon rajat eivät
+     * näy"*). Kiekon on peitettävä kerroksen KAUIMPIN NURKKA ylitysvaralla
+     * — pelkkä cover jättäisi nurkat pallon ulkopuolelle.
+     */
+    const nurkka = Math.hypot(toinen.pallonLaatikko.w / 2,
+      toinen.pallonLaatikko.h / 2 + sovitus.lasku);
+    vaadi('E10d kiekko peittää kerroksen nurkat ylitysvaralla',
+      sade * sovitus.skaala >= nurkka * KIEKON_YLITYS - 1,
+      `kiekon säde ${(sade * sovitus.skaala).toFixed(0)} px, nurkka ${nurkka.toFixed(0)} px, `
+      + `ylitys ${sovitus.ylitys.toFixed(3)} (vaadittu ${KIEKON_YLITYS})`);
     tieto('sumuverho kevennetty (.intro-pallolla)', kuvaton.pallollaLuokka);
     const kehysaika = await mittaaKehysaika(sivu);
     tieto('kehysaika etusivulla, pallo PÄÄLLÄ',

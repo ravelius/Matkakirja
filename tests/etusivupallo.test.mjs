@@ -41,11 +41,11 @@ globalThis.location = { search: '' };
 const {
   ETUSIVUN_KAMERA, ETUSIVUN_KUVAKIERTO, ETUSIVUN_REITTI, ETUSIVUPALLO_AVAIN,
   ETUSIVUPALLO_TIEDOSTOT, ETUSIVUPALLO_VERSIO, HAIVYTYS_S, KERROKSEN_ILMESTYS_MS,
-  KIERROKSEN_ASTEET,
+  KIEKON_YLITYS, KIERROKSEN_ASTEET,
   LOPPU_PITO_S, SOVITUS_TAPA, SVG_SOVITUS,
   asetaEtusivupallo, etusivupalloOletus, etusivupalloPaalla, jaljenPisteet,
-  kameranNakyma, kerroksenSovitus, koneenTila,
-  kaarietaisyys, liikeVahennetty, lueLuettelo, pallonPiste, reitinPisteet,
+  kameranNakyma, kerroksenSovitus, kiekonSade, koneenTila, koneenYlin,
+  kaarietaisyys, liikeVahennetty, lueLuettelo, pallonPiste, pallonSovitus, reitinPisteet,
   saapumisenKaupunki, saapumisenKuva,
   saapumisia, suurympyra, teeReitti, videostaRuudulle,
 } = await import('../js/etusivupallo.js');
@@ -321,9 +321,77 @@ test('cover-sovitus vastaa SVG:n xMidYMid slice -muunnosta pikselilleen', () => 
   assert.ok(Number.isFinite(kerroksenSovitus({}, {}).skaala));
 });
 
-test('kone osuu videon pallolle myös cover-rajauksessa kaikissa ruutukoissa', () => {
+/*
+ * PALLO JATKUU RUUDUN REUNOJEN YLI (omistaja 6.9.2026 ilta: *"Taustan
+ * maapallo saisi täyttää kokoruudun niin että pallon rajat eivät
+ * näy"*, tarkennus *"Ruutu ei käy edes näytön ulkopuolella"*).
+ *
+ * MIKSI TÄMÄ EI OLE SAMA ASIA KUIN COVER. Cover venyttää videon sivun
+ * ruudun pitemmän sivun mittaiseksi, mutta pallon KIEKKO on vain 1,03 ×
+ * videon sivu — ja ruudun nurkkaan on matkaa puoli LÄVISTÄJÄÄ.
+ * Pystyruudulla (1024 × 1366) kiekko jäi 1406 pikseliin, kun lävistäjä
+ * on 1707: juuri siksi omistaja näki pallon reunan iPadillaan. Skaala
+ * mitataan siis lävistäjää vasten.
+ */
+test('pallon kiekko peittää lävistäjän ylitse joka ruutukoossa', () => {
+  assert.ok(KIEKON_YLITYS >= 1.15, `ylitys ${KIEKON_YLITYS} ei vie reunaa ruudun ulkopuolelle`);
+  /*
+   * Kiekon säde videon pikseleinä: reunapiste on se, jossa katsesuora
+   * sivuaa palloa (cos θ = 1/D), ja sen projektio f · sin θ / (D − cos θ).
+   * Sama luku kuin savukkeen E10b laskee omalla kaavallaan.
+   */
+  const D = 1 + ETUSIVUN_KAMERA.korkeus;
+  const f = (MITAT.lava / 2) / Math.tan((MITAT.fov * Math.PI) / 360);
+  const odotus = (f * Math.sqrt(1 - 1 / D ** 2)) / (D - 1 / D);
+  assert.ok(Math.abs(kiekonSade(ETUSIVUN_KAMERA, MITAT) - odotus) < 1e-9, 'kiekon säde');
+  // Kiekko on isompi kuin videon sivu, mutta ei paljon: nurkat ovat paperia.
+  assert.ok(odotus * 2 > MITAT.leveys && odotus * 2 < MITAT.leveys * 1.1);
+
+  const ylin = koneenYlin(reitti, ETUSIVUN_KAMERA, MITAT);
   for (const koko of RUUTUKOOT) {
-    const sovitus = kerroksenSovitus(MITAT, { leveys: koko.leveys, korkeus: koko.korkeus });
+    const kotelo = { leveys: koko.leveys, korkeus: koko.korkeus };
+    const cover = kerroksenSovitus(MITAT, kotelo);
+    const s = pallonSovitus(MITAT, kotelo, ETUSIVUN_KAMERA, { ylin });
+    const lavistaja = Math.hypot(koko.leveys, koko.korkeus);
+    const sade = kiekonSade(ETUSIVUN_KAMERA, MITAT) * s.skaala;
+    /*
+     * KAIKKI NELJÄ NURKKAA KIEKON SISÄÄN, ylitysvaralla. Kiekon
+     * keskipiste on näkymän keskellä + `lasku`, joten nurkkaetäisyys
+     * mitataan siitä eikä näkymän keskeltä.
+     */
+    for (const [nx, ny] of [[0, 0], [koko.leveys, 0], [0, koko.korkeus],
+      [koko.leveys, koko.korkeus]]) {
+      const etaisyys = Math.hypot(nx - koko.leveys / 2, ny - (koko.korkeus / 2 + s.lasku));
+      assert.ok(sade >= etaisyys * KIEKON_YLITYS - 1e-6,
+        `${koko.nimi}: kiekon säde ${sade.toFixed(0)} px ei peitä nurkkaa `
+        + `${etaisyys.toFixed(0)} px × ${KIEKON_YLITYS}`);
+    }
+    // Cover on alaraja: video ei saa jättää paperia näkyviin.
+    assert.ok(s.skaala >= cover.skaala && s.siirtoX <= 1e-9,
+      `${koko.nimi}: sovitus jätti tyhjää reunaa`);
+    assert.ok(s.siirtoY <= 1e-9, `${koko.nimi}: lasku söi videon yläreunan`);
+    // Pelkkä cover EI riittäisi — juuri tämä on omistajan havainto.
+    assert.ok(2 * kiekonSade(ETUSIVUN_KAMERA, MITAT) * cover.skaala < lavistaja,
+      `${koko.nimi}: cover riittäisi jo — testi mittaa väärää asiaa`);
+    // `lisays` on se kerroin, jolla viiva ja kone kutistetaan takaisin.
+    assert.ok(Math.abs(s.lisays - s.skaala / cover.skaala) < 1e-12);
+    assert.ok(s.lisays > 1 && s.lisays < 1.6, `${koko.nimi}: lisäys ${s.lisays}`);
+    assert.ok(Math.abs(s.ylitys - sade / Math.hypot(koko.leveys / 2,
+      koko.korkeus / 2 + s.lasku)) < 1e-9);
+    // Matala vaakaruutu tarvitsee laskun, pystyruutu ei.
+    assert.equal(s.lasku > 0, koko.korkeus < koko.leveys * 0.75, `${koko.nimi}: lasku`);
+  }
+  // Rappeutuneet mitat eivät kaada laskentaa eivätkä anna Infinityä.
+  assert.ok(Number.isFinite(pallonSovitus({}, {}).skaala));
+  assert.equal(kiekonSade(ETUSIVUN_KAMERA, {}), 0);
+  assert.equal(koneenYlin({ kesto: 0 }, ETUSIVUN_KAMERA, MITAT), 0);
+});
+
+test('kone osuu videon pallolle myös cover-rajauksessa kaikissa ruutukoissa', () => {
+  const ylin = koneenYlin(reitti, ETUSIVUN_KAMERA, MITAT);
+  for (const koko of RUUTUKOOT) {
+    const sovitus = pallonSovitus(MITAT, { leveys: koko.leveys, korkeus: koko.korkeus },
+      ETUSIVUN_KAMERA, { ylin });
     for (let t = 0; t <= reitti.kesto; t += 0.5) {
       const nakyma = kameranNakyma(reitti, t);
       const r = videostaRuudulle(pallonPiste(koneenTila(reitti, t), nakyma, MITAT), sovitus);
@@ -332,10 +400,16 @@ test('kone osuu videon pallolle myös cover-rajauksessa kaikissa ruutukoissa', (
         `${koko.nimi}: kone rajautui ulos hetkellä ${t.toFixed(1)} s `
         + `(${r.x.toFixed(0)}, ${r.y.toFixed(0)})`);
     }
-    // Alussa kone on Lontoossa, ja Lontoon on oltava näkyvissä.
+    /*
+     * Alussa kone on Lontoossa, ja Lontoon on oltava näkyvissä. Juuri
+     * tämä hetki pakotti kiekon `laskun`: zoomattuna Lontoo (51,5° N)
+     * nousi matalalla vaakaruudulla ruudun yläpuolelle.
+     */
     const alku = videostaRuudulle(
       pallonPiste(koneenTila(reitti, 0), kameranNakyma(reitti, 0), MITAT), sovitus,
     );
+    assert.ok(alku.y > 0 && alku.y < koko.korkeus,
+      `${koko.nimi}: Lontoo jäi ruudun ulkopuolelle pystysuunnassa (${alku.y.toFixed(0)})`);
     assert.ok(alku.x > koko.leveys * 0.05 && alku.x < koko.leveys * 0.95,
       `${koko.nimi}: Lontoo ei ole näkyvissä kierroksen alussa`);
   }
@@ -350,6 +424,19 @@ test('css ja moduuli sopivat samasta rajauksesta', () => {
   const lahde = lue('../js/etusivupallo.js');
   assert.match(lahde, /preserveAspectRatio: SVG_SOVITUS\[SOVITUS_TAPA\]/,
     'SVG lukee rajauksen samasta vakiosta kuin CSS-kommentti lupaa');
+  /*
+   * KEHYS TULEE JS:STÄ. `object-fit: cover` osaa vain täyttää kotelon,
+   * mutta kiekon on jatkuttava kotelon ULKOPUOLELLE — video, juliste ja
+   * SVG saavat siksi pallonSovituksen laskeman laatikon pikselilleen.
+   */
+  assert.match(lahde, /const sovitusNyt = \(\) => pallonSovitus\(/,
+    'kerros käyttää pallonSovitusta, ei pelkkää coveria');
+  assert.match(lahde, /for \(const el of \[juliste, video, svg\]\) \{/,
+    'video, juliste ja SVG saavat saman laatikon');
+  assert.match(lahde, /viiva\.style\.strokeWidth = \(VIIVAN_LEVEYS \/ lisaysNyt\)/,
+    'punainen viiva kutistetaan zoomin verran, jotta se pysyy entisen levyisenä');
+  assert.match(lahde, /scale\(\$\{\(KONEEN_SKAALA \/ lisaysNyt\)/,
+    'kone kutistetaan zoomin verran');
   // Kerros on koko paneelin (.intro) lapsi eikä enää ylälohkon.
   assert.match(lahde, /const kotelo = ui\.introEl \?\?/,
     'kerros syntyy koko avauspaneeliin, ei .intro-kartta-lohkoon');
@@ -596,6 +683,26 @@ test('harsojen liuku sammuu ennen laatan reunaa eikä jätä suoraa rajaa', () =
   /* JULISTEEN HARSO: pohjalaatta isompi kuin ennen (0,5em × 1,4em). */
   assert.ok(juliste.pysty > 0.5 && juliste.vaaka > 1.4,
     `julisteen pohjalaatta (${juliste.pysty}em × ${juliste.vaaka}em) ei ole entistä isompi`);
+
+  /*
+   * HARSO ON HAALEA JA LEVEÄ (omistaja 6.9.2026 ilta, iPad pystyssä,
+   * sanatarkasti: *"Alaosan tekstin vaalea pohja on liian voimakas"*).
+   * Pallon on kuullettava tekstin takaa läpi, joten harson teho on
+   * KATOLLINEN — ja koska teho laskettiin, sama harso on levitettävä
+   * laajemmalle: muuten leveimpien tekstirivien PÄÄT jäävät soikion
+   * ulkopuolelle suoraan pallon päälle. Mitattu Chromiumilla oikealla
+   * ämpärivideolla koko kierroksen ajalta: tekstin huonoin
+   * WCAG-kontrasti nousi 3,76 → 4,57 (390 × 844) ja 5,38 → 5,77
+   * (1024 × 1366) samalla kun teho laski.
+   */
+  assert.ok(palsta.peitto <= 0.5,
+    `konekirjoituksen harson teho ${palsta.peitto} on liian voimakas (katto 0,5)`);
+  assert.ok(juliste.peitto <= 0.62,
+    `julisteotsikon harson teho ${juliste.peitto} on liian voimakas (katto 0,62)`);
+  assert.ok(palsta.vaaka >= 7.5 && palsta.pysty >= 4.4,
+    `konekirjoituksen harson ala (${palsta.pysty}em × ${palsta.vaaka}em) ei kata rivien päitä`);
+  assert.ok(juliste.vaaka >= 5.4,
+    `julisteotsikon harso (${juliste.vaaka}em) ei kata leveimmän rivin päitä`);
 });
 
 /* ==================== KYTKENTÄ ===================================== */
