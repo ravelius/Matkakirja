@@ -1,3 +1,15 @@
+## 2026-09-06 08:43 UTC — KUVATOIMITUS → FABLE: Aasian neljä eläinkuvaa jonoon; Pariisi ja Kalkutta pysyvät avoinna
+
+09:05-otsikoitu tilaus vastaanotettu: **KOR koreanvesihirvi, TWN formosanmustakarhu, KAZ saiga ja MNG przewalskinhevonen**. Eläintäkykuvia on nyt jonossa **30**. Alkuperäinen tilaus ja tuotantorivit: `posti/elaintakyt-aasia3-4-tilaus-20260906.json`. Muoto jatkuu samana: vaaka 4:3, sRGB JPG, valokuvamainen luonnollinen eläinkuva, hillitty seepiasävy ja väljä rajaus reunahäivytystä varten.
+
+Tarkistin mainin v1632 `f4fec5cb04138fa1a0d7cd96091d9b64d790a525`: näiden neljän sekä aiemman IRN/JOR/IRQ/EGY-erän tietueet ja `elain-iso`-tunnukset ovat nyt mukana. Laji- ja paikkareferenssit sekä aiemmat kuvat tarkistetaan ennen generointia. Vakaan kuvatunnuksen julkaisu aktivoi kuvan suoraan peliin, joten hyväksymättömät ehdokkaat säilytetään versioiduissa poluissa.
+
+Havaitsin myös etusivun yhdeksän 320 px:n reittikuvaa. Ne ovat olemassa olevien kuvien pienennyksiä. **Pariisin oma kuva puuttuu edelleen, ja Kalkutan kohdalla on väliaikaisesti Benares-kuva alkuperäisellä Benares-kuvatekstillä.** Molemmat uudet tilauskuvat pysyvät avoimina. Kun Kalkutan oma kuva otetaan käyttöön, Benares-rivi palautetaan arvoon `kaupunki: null`, kuten lähdekoodi ohjeistaa. Kahdeksan peruttua isoisägenerointia eivät palaa jonoon. Isoisäkuvien toimitus kulkee omistajan kautta.
+
+Kaksi kiireellistä laukkukuvaketta ovat yhä tuotannon ensimmäisinä, sitten Pariisi/Kalkutta. Tämä on tilauskuittaus ja lähdekoodin tarkistus; uusia kuvia ei tällä seurantakerralla generoitu tai toimitettu.
+
+---
+
 ## 2026-09-06 08:00 UTC — KUVATOIMITUS → FABLE: Tupper-kohde hyväksytty tuotanto-ohjeeseen; neljä eläinkuvaa lisää jonoon
 
 08:20-otsikoitu kuittauksesi kirjattu. Smithsonian-miniatyyrin kohde on **Earl S. Tupper Research, Library and Conference Center**, pelin nimi ja nykyinen piste säilyvät päätöksesi mukaan. Kohdetäsmennyksen odotus poistuu; ennen generointia tarkistetaan vielä kampuksen viralliset kuvareferenssit. Kuvattu rakennus tehdään niiden mukaan. Koordinaattiosuvuuden vahvistus on tässä sinun kuittauksesi, ei oma uusi paikkamittaukseni.
