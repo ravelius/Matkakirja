@@ -3496,7 +3496,13 @@ export const RAAMATTU = {
           + 'arvioi ja suunnittelee."): fablemax mittaa, vertailee ja '
           + 'kirjoittaa toteutussuunnitelman erineen; toteutus Opus-agenteilla '
           + 'era kerrallaan. Tama kumoaa ylla olevan poikkeusluvan fablemaxin '
-          + 'toteutukselle.',
+          + 'toteutukselle. PARVI (omistaja 6.9.2026 ilta, sanatarkasti: '
+          + '"Opukset voivat sitten kayttaa agenttiparvia, niin saadaan '
+          + 'nopeammin toteutettua, kun suunnitelma on valmis."): suunnitelman '
+          + 'itsenaiset erat ajetaan rinnakkain Opus-parvena (kukin era oma '
+          + 'agentti ja commit, selvarajaiset tiedostot, ei paallekkaisia '
+          + 'muutoksia), Fable poimii ja julkaisee; lehtityon 5 agentin '
+          + 'katto ei koske tata, mutta viiden tunnin raja pidetaan silmalla.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
