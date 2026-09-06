@@ -231,10 +231,10 @@ const SAHKE_SOFIA = {
    * PULLA VINKIKSI). Vinkki kertoo MISTÄ vastaus löytyy — se ei sano
    * kohteen nimeä eikä vuosilukua, joten ostajakin kaivaa itse.
    */
-  vinkki: 'No. Kuuntele nyt. Se kulta ei ole Sofiassa vaan meren '
-    + 'rannalla. Katso Mustanmeren puolelta se kaupunki, jonka kohde puhuu '
-    + 'maailman vanhimmasta kullasta. Vuosiluku lukee samassa kortissa, '
-    + 'sillon seitkytluvulla.',
+  vinkki: 'Kuuntele nyt. Se kulta ei ole Sofiassa vaan meren rannalla. '
+    + 'Katso Mustanmeren puolelta kaupunki, jonka kohde puhuu maailman '
+    + 'vanhimmasta kullasta. Vuosiluku lukee samassa kortissa, sillon '
+    + 'seitkytluvulla.',
 
   /*
    * PUOLIKAS PULLA = SUORA LINKKI (omistaja 3.9.2026). Livia ei kerro
@@ -370,7 +370,7 @@ export const FOKUSVIRTA_SOFIA = {
       + 'Sitten minä katsoin vuosilukua: helmikuu 1873, siitä on yli '
       + 'sataviisikymmentä vuotta, ja kuolemantuomioita jaettiin silloin '
       + 'melkein joka maassa. Ei se juttua pienennä. Mut kyllä sen kestää '
-      + 'lukea, kun muistaa miten kaukana se on.',
+      + 'lukea.',
     teksti: 'Hirttopaikalla seisoo nyt kolmentoista metrin '
       + 'graniittipatsas, ja sitä hautaa etsitään vieläkin. Etsintöjä on '
       + 'jatkunut sataviisikymmentä vuotta — se kynttilä ikkunalla oli '

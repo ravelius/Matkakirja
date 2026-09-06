@@ -279,7 +279,7 @@ tekstissä, ja lukijaääni lausuu sen paremmin. Malli: "Kääk. No johan oli \
 hurja juttu — luin sen kahdesti. Sitten minä katsoin vuosilukua: helmikuu \
 1873, siitä on yli sataviisikymmentä vuotta, ja kuolemantuomioita jaettiin \
 silloin melkein joka maassa. Ei se juttua pienennä. Mut kyllä sen kestää \
-lukea, kun muistaa miten kaukana se on."
+lukea."
 2. PRONOMINIT KOKONAISINA: minä ja sinä, EI mä eikä sä. Pröystäilevä \
 kirjekyyhky sanoo minä, vaikka puhuisi muuten miten rennosti.
 3. KEVYET TÄYTESANAT SÄÄSTELLEN: no, niin, kato, hei — yksi kerrallaan, ei \
