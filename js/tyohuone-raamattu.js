@@ -3397,6 +3397,15 @@ export const RAAMATTU = {
           + 'koordinaateissa), haipyy pehmeasti paalle kun kamera pysahtyy ja '
           + 'pois kun liike alkaa. Varakeino: pallon Z9 laskettuna litte\'asta '
           + 'z8:sta.',
+        'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
+          + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
+          + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
+          + 'pergamenttiharson liuku paattyy tasan nollaan ennen laatan reunaa '
+          + '(css --harson-haivytys + 45 %), ei "kaytannossa nollaan" - meren '
+          + 'sinen paalla kolmen sadasosan huntu erottui viivana; reittikuvien '
+          + 'maskiaukon vyo on S-kayra (js/etusivupallo.js julisteenMaski), ei '
+          + 'suora liuku. Testi laskee reunan peittavyyden pysakeista ja vaatii '
+          + 'nollan (tests/etusivupallo.test.mjs).',
         'IHMISEN MATKA ON VARIVIRTOJA, EI PISTEITA (omistaja 6.9.2026 '
           + 'keskipaiva, sanatarkasti: "linssi toimii periaatetasolla vaarin. '
           + 'Siina pitaisi nakya hitaasti kartalla lisaantyva varillinen alue '

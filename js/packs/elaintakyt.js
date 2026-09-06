@@ -1833,10 +1833,11 @@ export const ELAINTAKYT = {
   },
   SLE: {
     elain: 'länsiafrikansimpanssi',
-    otsikko: 'Simpanssi, joka veistää keihään',
-    teksti: 'Länsiafrikansimpanssi on äärimmäisen uhanalainen simpanssin alalaji, jota elää Norsunluurannikolla, Guineassa, Liberiassa, Malissa, Senegalissa, Ghanassa, Sierra Leonessa ja Guinea-Bissaussa; Beninistä, Burkina Fasosta ja Togosta se on hävinnyt. Suurimmat kannat ovat nykyään Guineassa, Sierra Leonessa ja Liberiassa, vaikka laji ulottui aikoinaan Etelä-Senegalista aina Niger-joelle asti. Se on simpanssin alalajeista geneettisesti eriytynein, ja käytös poikkeaa muista niin paljon, että sitä on ehdotettu omaksi lajikseen. Vain nämä simpanssit veistävät puisia keihäitä muiden kädellisten metsästämiseen, käyttävät luolia asuntoinaan, jakavat kasviravintoa keskenään ja liikkuvat myös öisin; kuumalla ne menevät veteen viilentymään ja leikkimään. Naaraat ovat seurallisia ja tukevat toisiaan riidoissa koiraiden kanssa, joten arvojärjestys on tasaisempi kuin Itä-Afrikan simpansseilla — naaraat myös metsästävät ja kulkevat mukana reviiripartioilla.',
+    otsikko: 'Länsiafrikansimpanssin oma kulttuuri',
+    teksti: 'Länsiafrikansimpanssi on äärimmäisen uhanalainen simpanssin alalaji, jota elää Norsunluurannikolla, Guineassa, Liberiassa, Malissa, Senegalissa, Ghanassa, Sierra Leonessa ja Guinea-Bissaussa; Beninistä, Burkina Fasosta ja Togosta se on hävinnyt. Suurimmat kannat ovat nykyään Guineassa, Sierra Leonessa ja Liberiassa, vaikka laji ulottui aikoinaan Etelä-Senegalista aina Niger-joelle asti. Se on simpanssin alalajeista geneettisesti eriytynein, ja käytös poikkeaa muista niin paljon, että sitä on ehdotettu omaksi lajikseen. Senegalin Fongolissa tämän alalajin yhteisön on havaittu veistävän teräväkärkisiä keppejä ja metsästävän niillä galagoja — tapa on kuvattu juuri sieltä, ei koko alalajilta. Nämä simpanssit käyttävät myös luolia asuntoinaan, jakavat kasviravintoa keskenään ja liikkuvat myös öisin; kuumalla ne menevät veteen viilentymään ja leikkimään. Naaraat ovat seurallisia ja tukevat toisiaan riidoissa koiraiden kanssa, joten arvojärjestys on tasaisempi kuin Itä-Afrikan simpansseilla — naaraat myös metsästävät ja kulkevat mukana reviiripartioilla.',
     lahde: 'en-Wikipedia "Western chimpanzee", johdanto sekä osiot "Distribution and habitat" '
-      + 'ja "Unique behaviors". Tarkistettu 6.9.2026.',
+      + 'ja "Unique behaviors"; Pruetz & Bertolani 2007, Current Biology '
+      + '(Fongolin keihäsmetsästys). Tarkistettu 6.9.2026.',
     kuva: 'elain-sle',
     // Piste on Pohjois-Sierra Leonen metsäisillä kukkuloilla Konon ja
     // Tonkolilin välissä, 45,8 lautayksikköä Sierra Leone -laatasta
@@ -2026,10 +2027,12 @@ export const ELAINTAKYT = {
   PAN: {
     elain: 'panamankultasammakko',
     otsikko: 'Sammakko, joka viittoo',
-    teksti: 'Panamankultasammakko on Panamalle kotoperäinen konna, joka elää Länsi-Keski-Panaman pilvimetsien vuoripurojen varsilla Tabasarán vuoriston itärinteillä. Nimestään huolimatta se on todellinen konna. Se puhuu poikkeuksellisella tavalla: äänten lisäksi se viittoo etukäpälällään kilpailijoille ja mahdollisille kumppaneille, ja tämän semaforin uskotaan kehittyneen siksi, että kohisevien purojen äänessä huuto ei kanna. Kutsu on erikoinen myös siksi, ettei lajilla ole tärykalvoa lainkaan, mutta se silti vastaa lajitovereidensa ääntelyyn. Iho on myrkyllinen: siinä on muun muassa zetekitoksiini AB, joka salpaa hermosolujen natriumkanavia paljon tehokkaammin kuin sukulaisyhdisteensä saksitoksiini. Sammakko on Panaman kansallissymboli, se esiintyy arpalipuissa ja tarinoissa, ja kansallista kultasammakon päivää vietetään 14. elokuuta. Luonnosta laji on todennäköisesti hävinnyt vuodesta 2007 lähtien chytridi-sienitaudin takia, ja sitä kasvatetaan yli viidessäkymmenessä laitoksessa.',
+    teksti: 'Panamankultasammakko on Panamalle kotoperäinen konna, joka elää Länsi-Keski-Panaman pilvimetsien vuoripurojen varsilla Tabasarán vuoriston itärinteillä. Nimestään huolimatta se on todellinen konna. Se puhuu poikkeuksellisella tavalla: äänten lisäksi se viittoo etukäpälällään kilpailijoille ja mahdollisille kumppaneille, ja tämän semaforin uskotaan kehittyneen siksi, että kohisevien purojen äänessä huuto ei kanna. Kutsu on erikoinen myös siksi, ettei lajilla ole tärykalvoa lainkaan, mutta se silti vastaa lajitovereidensa ääntelyyn. Iho on myrkyllinen: siinä on muun muassa zetekitoksiini AB, joka salpaa hermosolujen natriumkanavia paljon tehokkaammin kuin sukulaisyhdisteensä saksitoksiini. Sammakko on Panaman kansallissymboli, se esiintyy arpalipuissa ja tarinoissa, ja kansallista kultasammakon päivää vietetään 14. elokuuta. Luonnonkannat romahtivat chytridi-sienitaudin takia, ja viimeiset luonnonhavainnot ennen palautuskokeiluja ovat vuodelta 2009. Lajia kasvatetaan yli viidessäkymmenessä laitoksessa, ja helmikuussa 2026 Smithsonianin sammakkohanke ilmoitti ensimmäisistä kokeellisista luontoonpalautuksista — vakiintuneesta luonnonkannasta ei vielä voi puhua.',
     lahde: 'en-Wikipedia "Panamanian golden frog", johdanto sekä osiot '
       + '"Description", "Toxicity", "Distribution", "Behavior", '
-      + '"Conservation" ja "In culture". Tarkistettu 6.9.2026.',
+      + '"Conservation" ja "In culture"; Smithsonian-tiedote 25.2.2026 '
+      + '"Golden frogs going back to nature" (palautuskokeilut, viimeiset '
+      + 'luonnonhavainnot 2009). Tarkistettu 6.9.2026.',
     kuva: 'elain-pan',
     // Piste on Tabasarán vuoriston pilvimetsässä Coclén ja Veraguasin
     // rajamailla, 44,8 lautayksikköä Panamásta (vähimmäisetäisyys 35).
