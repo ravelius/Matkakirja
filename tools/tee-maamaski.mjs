@@ -80,10 +80,19 @@ const SAARET = [
  * ESTOT: salmet, jotka ruudukko siltaisi. Gibraltar (Marokon väri
  * valuisi Iberiaan 250 ka) ja Bab-el-Mandeb (jotta ylitys tapahtuu
  * ikkunassa eikä 200 ka). Laatikko { lat: [etelä, pohjoinen], lon: [länsi, itä] }.
+ *
+ * KORJAUS 6.9.2026 (docs/moduulit/ihmisen-matka-vanat.md 2.1.3): esto
+ * ulottui vain 13,0°N:ään, ja laskennan 8-naapurusto ylitti meren
+ * DIAGONAALISTI ruudusta (12,75°N, 42,75°E) ruutuun (13,25°N,
+ * 43,25°E) — Jemenin Tihama värjäytyi 179 513 vuotta sitten, vaikka
+ * ylityksen ikkuna on 78–55 ka. Estolaatikon pohjoisreuna 13,0 → 13,5
+ * sulkee tuon yhden ruudun, ja ylitys tapahtuu ikkunassa (Tihama
+ * 77 500). Muut tarkistuspisteet pysyivät ennallaan vuoteen: Djibouti
+ * 184 274, Oman 75 511, Levantti 71 804, Alaska 16 700.
  */
 const ESTOT = [
   { nimi: 'Gibraltar', lat: [35.5, 36.5], lon: [-6.0, -5.0] },
-  { nimi: 'Bab-el-Mandeb', lat: [12.0, 13.0], lon: [43.0, 43.5] },
+  { nimi: 'Bab-el-Mandeb', lat: [12.0, 13.5], lon: [43.0, 43.5] },
 ];
 
 /*

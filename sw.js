@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1657';
+const CACHE = 'matkakirja-2026-08-09.1658';
 const SHELL = [
   './',
   './index.html',
@@ -189,6 +189,7 @@ const SHELL = [
   './js/linssit/ihmisen-matka-virrat.js',
   './js/linssit/ihmisen-matka-maamaski.js',
   './js/aikajana-virrat.js',
+  './js/aikajana-vanat.js',
   './js/aikajana-virrat-laskenta.js',
   // Laskenta Workerissa (hionta 6.9.2026): pääsäie ei jäädy avauksessa.
   './js/aikajana-virrat-tyo.js',

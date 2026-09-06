@@ -18,10 +18,12 @@
  *      (luku 6): painopiste 3D-vektoreiden summana, korkeus hajonnasta,
  *      eksponentiaalinen liuku joka kehyksellä. Pelaajan sormi tai
  *      rulla pallolla keskeyttää seuraamisen KESKEYTYS_MS:ksi.
- *   3. PYSÄKKIKUVAT: syttyvän pysäkin havainnekuva poksahtaa pienenä
- *      kehyksenä lampun viereen ja kutistuu seuraavan syttyessä
- *      (päätös 4). Ruudun ulkopuolella olevalle pysäkille reunaan tulee
- *      pieni nuoli — kamera ei lähde sen perään.
+ *   3. PYSÄKKIKUVAT: kuvapysäkin havainnekuva poksahtaa pienenä
+ *      kehyksenä lampun viereen ja kutistuu seuraavan syttyessä.
+ *      Kamera kehystää kärjen ja pysäkin yhdessä kuudeksi sekunniksi,
+ *      joten poksahdus näkyy aina ruudulla — reunan nuolta ei enää
+ *      tarvita eikä ole. Hiljainen pysäkki (V4:n `hiljainen`) saa
+ *      pienen pisteen: löytöpaikat ovat todisteita, eivät reitti.
  *
  * LASKENTA TYÖSÄIKEESSÄ (hionta 6.9.2026): saapumisajat ja kalvon
  * tarkennus lasketaan Web Workerissa (js/aikajana-virrat-tyo.js) heti
@@ -44,9 +46,10 @@
  */
 
 import {
-  puraMaamaski, puraPeitto, laskeKentatVaiheittain, tarkennaKentat, virranVari, rintamienPainopisteet,
-  rintamanLeveys, kameranLeveysAsteina, NOUSUN_MIN_V, NOUSUN_OSUUS, RUUDUKON_LEVEYS, RUUDUKON_KORKEUS,
+  puraMaamaski, puraPeitto, laskeKentatVaiheittain, tarkennaKentat, virranVari, johdaVanat,
+  rintamanLeveys, NOUSUN_MIN_V, NOUSUN_OSUUS, RUUDUKON_LEVEYS, RUUDUKON_KORKEUS, KM_ASTEELLA,
 } from './aikajana-virrat-laskenta.js';
+import { luoVanat, VANAN_ENNAKKO } from './aikajana-vanat.js';
 
 /** Kankaan päivitysväli (ms): ~12 Hz riittää silmälle. */
 export const VIRTOJEN_PAIVITYS_MS = 80;
@@ -56,21 +59,145 @@ export const VIRTOJEN_ASKEL_MS = 500;
 export const PAIVITYSVALIN_KERROIN = 3;
 /** Kameran painopisteen laskentaväli (ms). */
 export const KAMERAN_LASKENTA_MS = 250;
-/** Kameran liu'un aikavakiot (s): sijainti ja korkeus (luku 6). */
-export const KAMERAN_TAU_SIJAINTI = 1.5;
-export const KAMERAN_TAU_KORKEUS = 2.5;
+/*
+ * Kameran liu'un aikavakiot (s): sijainti ja korkeus. Pehmeämmät kuin
+ * kalvon aikaan (1,5 / 2,5), koska kohde on nyt vanan KÄRKI ja liikkuu
+ * itse (docs/moduulit/ihmisen-matka-vanat.md luku 3.2).
+ */
+export const KAMERAN_TAU_SIJAINTI = 2.5;
+export const KAMERAN_TAU_KORKEUS = 3.5;
+/*
+ * KORKEUSSÄÄNTÖ — KÄRKI KARKAA, KAMERA NOUSEE. Näkyvä leveys on
+ * W = clamp(W0 + kerroin × d, min, max), missä d on kameran nykyisen
+ * paikan ja kohteen kulmaetäisyys. Pyrähdyksessä (Arabia → Altai
+ * 2 000 vuodessa, Alaska → Chile 2 600 vuodessa) d kasvaa ennen kuin
+ * liuku ehtii perässä, joten kamera nousee eikä kärki karkaa kuvasta;
+ * odotuksessa (Bab-el-Mandeb 184 → 78 ka) d → 0 ja kamera laskeutuu
+ * hitaasti takaisin lähikuvaan. Mitattu kärjen kulku: luku 3.1.
+ */
+export const KAMERAN_LEVEYS_MIN_AST = 30;
+export const KAMERAN_LEVEYS_MAX_AST = 110;
+export const KAMERAN_ETAISYYSKERROIN = 2.2;
+/*
+ * KAMERA EI PANOROI TÄTÄ NOPEAMMIN (astetta sekunnissa). Amerikkojen
+ * rannikkopyrähdys siirtää kärkeä 9 000 km ruutusekunnissa (luku 3.1),
+ * ja pelkkä eksponentiaalinen liuku heittäisi kameraa 24°/s — se
+ * näyttäisi hypyltä. Katto on turvallinen, koska korkeussääntö kasvattaa
+ * leveyttä juuri silloin kun kamera jää jälkeen: kohde on kuvassa aina,
+ * kun W ≥ 2 d, ja W = 30 + 2,2 d täyttää sen kaikilla d.
+ */
+export const KAMERAN_SUURIN_SIIRTO_AST = 12;
+/** Kuvapysäkin kehystys: kärki ja pysäkki samaan kuvaan, vara asteina. */
+export const KUVAPYSAKIN_VARA_AST = 12;
+/** Kuvapysäkin kehystys kestää tämän syttymisestä (ms). */
+export const KUVAPYSAKIN_KEHYSTYS_MS = 6000;
+/**
+ * LOPPU: kamera perääntyy koko pallon näkymään. Keskipiste on
+ * omistajan avoin kysymys (suunnitelman 8.1); tässä on ehdotus, jonka
+ * omistaja vahvistaa kuvista — Aasia ja Australia keskellä, jolloin
+ * Aotearoa, Beringia ja Madagaskarin nauha näkyvät.
+ */
+export const LOPUN_KESKIPISTE = { lat: 0, lng: 100 };
+export const LOPUN_PERAYTYMINEN_MS = 8000;
+/** Koko laudan leveys (js/pallolauta/kamera.js PALLOLAUDAN_LEVEYS). */
+const LAUDAN_LEVEYS = 12000;
 /** Pelaajan ele keskeyttää seuraamisen tämän ajan (ms). */
 export const KESKEYTYS_MS = 8000;
 /** Kalvon pikseleitä per ruutu sivullaan (2 → 1440 × 720). */
 export const PIIRTOKERROIN = 2;
 /** Työsäikeen moduuli suhteessa sivun juureen (sw.js SHELL kantaa sen). */
 export const TYOSAIKEEN_POLKU = 'js/aikajana-virrat-tyo.js';
-/** Lautayksikköä astetta kohti (js/aikajana.js LAUTAYKSIKKOA_ASTEELLA). */
-const LAUTAYKSIKKOA_ASTEELLA = 12000 / 360;
-/** Virran painon tasoitus (0–1): uusi mittaus painaa tämän verran. */
-const PAINON_TASOITUS = 0.25;
 /** Kuvakehyksen leveys pikseleinä (css .aikajana-virta-kuva). */
 export const KUVAKEHYKSEN_LEVEYS = 72;
+
+/* ------------------------------------------------------------ kamera */
+
+/** Kahden pisteen kulmaetäisyys asteina (isoympyrä). */
+export function kulmaEtaisyys(a, b) {
+  if (!a || !b) return 0;
+  const RAD = Math.PI / 180;
+  const f1 = a.lat * RAD;
+  const f2 = b.lat * RAD;
+  const dl = ((b.lng ?? b.lon) - (a.lng ?? a.lon)) * RAD;
+  const kosini = Math.sin(f1) * Math.sin(f2) + Math.cos(f1) * Math.cos(f2) * Math.cos(dl);
+  return Math.acos(Math.max(-1, Math.min(1, kosini))) / RAD;
+}
+
+/** Kahden pisteen puoliväli pallolla (lyhintä kaarta pitkin). */
+function puolivali(a, b) {
+  let dLng = b.lng - a.lng;
+  while (dLng > 180) dLng -= 360;
+  while (dLng < -180) dLng += 360;
+  let lng = a.lng + dLng / 2;
+  while (lng > 180) lng -= 360;
+  while (lng < -180) lng += 360;
+  return { lat: (a.lat + b.lat) / 2, lng };
+}
+
+const helpotus = (t) => {
+  const x = Math.max(0, Math.min(1, t));
+  return x < 0.5 ? 2 * x * x : 1 - ((-2 * x + 2) ** 2) / 2;
+};
+
+/**
+ * KAMERAN KOHDE (docs/moduulit/ihmisen-matka-vanat.md luku 3.2).
+ * Puhdas funktio: sama sääntö pelissä ja testissä.
+ *
+ * @param karki      vanan kärki { lat, lng } (ennakko jo mukana)
+ * @param pov        kameran nykyinen paikka { lat, lng }
+ * @param kuvapysakki kehystettävä pysäkki { lat, lng } tai null
+ * @param lopunOsuus  0…1: peräytyminen koko pallon näkymään (1 = perillä)
+ * @param kuvasuhde   kotelon leveys / korkeus (pystyruudulla < 1)
+ * @returns { lat, lng, leveys } — leveys lautayksikköinä
+ */
+export function kameranKohde({
+  karki = null, pov = null, kuvapysakki = null, lopunOsuus = 0, kuvasuhde = 1,
+} = {}) {
+  const kavennus = Math.min(1, kuvasuhde || 1);
+  const lautayksikkoa = (asteet) => asteet * (LAUDAN_LEVEYS / 360) * kavennus;
+  /*
+   * LOPPU: kohde siirtyy lopun keskipisteeseen ja leveys kasvaa koko
+   * laudan mittaan pehmeästi (ease-in-out) — ruusunväriset nauhat
+   * piirtyvät Tyynellemerelle tässä näkymässä.
+   */
+  if (lopunOsuus > 0) {
+    const t = helpotus(lopunOsuus);
+    const alku = karki ?? pov ?? LOPUN_KESKIPISTE;
+    let dLng = LOPUN_KESKIPISTE.lng - alku.lng;
+    while (dLng > 180) dLng -= 360;
+    while (dLng < -180) dLng += 360;
+    let lng = alku.lng + dLng * t;
+    while (lng > 180) lng -= 360;
+    while (lng < -180) lng += 360;
+    const leveysAst = KAMERAN_LEVEYS_MAX_AST + (360 - KAMERAN_LEVEYS_MAX_AST) * t;
+    return {
+      lat: alku.lat + (LOPUN_KESKIPISTE.lat - alku.lat) * t,
+      lng,
+      leveys: Math.min(LAUDAN_LEVEYS, lautayksikkoa(leveysAst)),
+    };
+  }
+  if (!karki) return null;
+  /*
+   * KUVAPYSÄKIN KEHYSTYS: kärki ja pysäkki samaan kuvaan. Al Wusta on
+   * kärjestä 1 745 km (≈ 16°) ja Monte Verde 2 839 km — ilman tätä
+   * kuvakehys poksahtaisi ruudun ulkopuolella eikä nuolta enää ole.
+   */
+  if (kuvapysakki && Number.isFinite(kuvapysakki.lat)) {
+    const etaisyys = kulmaEtaisyys(karki, kuvapysakki);
+    const kohde = puolivali(karki, kuvapysakki);
+    const asteet = Math.max(
+      KAMERAN_LEVEYS_MIN_AST,
+      Math.min(KAMERAN_LEVEYS_MAX_AST, KAMERAN_ETAISYYSKERROIN * etaisyys + KUVAPYSAKIN_VARA_AST),
+    );
+    return { lat: kohde.lat, lng: kohde.lng, leveys: lautayksikkoa(asteet) };
+  }
+  const d = pov ? kulmaEtaisyys(pov, karki) : 0;
+  const asteet = Math.max(
+    KAMERAN_LEVEYS_MIN_AST,
+    Math.min(KAMERAN_LEVEYS_MAX_AST, KAMERAN_LEVEYS_MIN_AST + KAMERAN_ETAISYYSKERROIN * d),
+  );
+  return { lat: karki.lat, lng: karki.lng, leveys: lautayksikkoa(asteet) };
+}
 
 /**
  * Virrat pallolle. Palauttaa kahvan, jota moottori kutsuu:
@@ -83,6 +210,13 @@ export const KUVAKEHYKSEN_LEVEYS = 72;
 export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
   const aineisto = kaari.virrat;
   const reduced = Boolean(ajo.reducedMotion);
+  /*
+   * VANAT OVAT OLETUS (omistaja 6.9.2026, Raamattu "VIRRAT VANOINA").
+   * Kehyksittäin maalattava kalvo jää perääntymistieksi lipun
+   * `?virrat=kalvo` taakse, kunnes omistaja on hyväksynyt vanat.
+   */
+  const kalvotila = new URLSearchParams(globalThis.location?.search ?? '').get('virrat') === 'kalvo';
+  const vanatKaytossa = !kalvotila && Boolean(aineisto.vanat);
   const W = aineisto.maamaski?.leveys ?? RUUDUKON_LEVEYS;
   const H = aineisto.maamaski?.korkeus ?? RUUDUKON_KORKEUS;
   const kerroin = aineisto.piirtokerroin ?? PIIRTOKERROIN;
@@ -107,16 +241,22 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
     purettu: false,
     tyo: null,
     tyosaie: null,
-    // Kamera: seurattava virta, kohde ja liukuva näkymä.
-    painot: new Map(),
+    // Kamera: kohde (vanan kärki) ja liukuva näkymä.
     kohde: null,
     pov: null,
     keskeytettyAsti: 0,
-    // Kehykset pysäkeittäin ja nuoli.
+    // Kehykset ja hiljaisten pysäkkien pisteet.
     kehykset: new Map(),
+    pisteet: new Map(),
     nykyinen: -1,
-    nuoli: null,
     ajastin: 0,
+    // Vanat (js/aikajana-vanat.js) ja kerran maalatut kalvot.
+    vanat: null,
+    kalvot: [],
+    maalauksia: 0,
+    kuvapysakkiAsti: 0,
+    kuvapysakki: null,
+    lopunAlku: 0,
   };
   /*
    * Virtojen sävyt hetkellä nyt: [virta][vanha r,g,b, rintama r,g,b].
@@ -133,11 +273,34 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
   /** Lupaus: kentät laskettu ja kalvo maalattu ensimmäisen kerran. */
   const valmis = new Promise((ok) => { ilmoitaValmis = ok; });
 
-  const valmistele = (kentat, tarkka) => {
+  const valmistele = (kentat, tarkka, lisa = {}) => {
     if (tila.purettu) return;
     tila.kentat = kentat;
     tila.tarkka = tarkka;
     tila.viimeNyt = -1;
+    if (vanatKaytossa) {
+      // Vanat pallolle ja kaksi kerran maalattua kalvoa (vanha väestö,
+      // varhaiset retket); kellon mukana muuttuu vain peitto.
+      teeVanat(lisa.vanat ?? [], lisa.kotipesat ?? []);
+      maalaaKerran(lisa.vanha ?? kentat.vanha ?? null, lisa.retki ?? kentat.retki ?? null);
+      /*
+       * VALMIS VASTA KUN VANAT ON RAKENNETTU: moottorin Käynnistä
+       * odottaa tätä lupausta, eikä kello saa lähteä ennen kuin
+       * ensimmäinen vana on pallolla (vanamoduuli hakee Line2-luokat
+       * elävästä polusta, mikä kestää muutaman kehyksen).
+       */
+      const aloita = () => {
+        if (tila.purettu) return;
+        paivitaKalvojenPeitto(lukema());
+        tila.vanat?.paivita(lukema());
+        ilmoitaValmis?.();
+        ilmoitaValmis = null;
+      };
+      const odotus = tila.vanat?.valmis;
+      if (odotus?.then) odotus.then(aloita, aloita);
+      else aloita();
+      return;
+    }
     // Ensimmäinen maalaus heti, ettei Käynnistä paljasta väritöntä palloa.
     maalaa(lukema());
     ilmoitaValmis?.();
@@ -164,6 +327,13 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
       if (value?.kentat) {
         tila.ajastin = setTimeout(() => {
           if (tila.purettu) return;
+          if (vanatKaytossa) {
+            const { vanat, kotipesat } = johdaVanat(value.kentat, aineisto.vanat, {
+              maa, leveys: W, korkeus: H, pysakit: aineisto.pysakit ?? null,
+            });
+            valmistele(value.kentat, null, { vanat, kotipesat });
+            return;
+          }
           const tarkka = tarkennaKentat(value.kentat, { maa, peitto: peittoMaski, leveys: W, korkeus: H, kerroin });
           valmistele(value.kentat, tarkka);
         }, 0);
@@ -203,18 +373,26 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
     tyosaie.addEventListener('messageerror', () => varapolku('messageerror'));
     tyosaie.addEventListener('message', (viesti) => {
       if (ratkaistu || tila.purettu) return;
-      const { kentat, tarkka, virhe } = viesti.data ?? {};
-      if (virhe || !kentat || !tarkka) { varapolku(virhe ?? 'tyhjä vastaus'); return; }
+      const { kentat, tarkka, vanat, kotipesat, vanha, retki, virhe } = viesti.data ?? {};
+      const puuttuu = vanatKaytossa ? !vanat?.length : !tarkka;
+      if (virhe || !kentat || puuttuu) { varapolku(virhe ?? 'tyhjä vastaus'); return; }
       ratkaistu = true;
       tyosaie.terminate();
       tila.tyosaie = null;
-      valmistele(kentat, tarkka);
+      valmistele(kentat, tarkka, { vanat, kotipesat, vanha, retki });
     });
     tyosaie.postMessage({
       aineisto: {
-        virrat: aineisto.virrat, retki: aineisto.retki ?? null, vanha: aineisto.vanha ?? null, maamaski: aineisto.maamaski,
+        virrat: aineisto.virrat,
+        retki: aineisto.retki ?? null,
+        vanha: aineisto.vanha ?? null,
+        maamaski: aineisto.maamaski,
+        vanat: vanatKaytossa ? aineisto.vanat : null,
+        pysakit: aineisto.pysakit ?? null,
       },
       kerroin,
+      // Kalvon tarkennus on kallis (150–300 ms, 4 Mt) — vain perääntymistiellä.
+      kalvo: !vanatKaytossa,
     });
   };
 
@@ -234,6 +412,151 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
       retkiSavy.set(c.vanha, 0);
       retkiSavy.set(c.rintama, 3);
     }
+  };
+
+  /* ------------------------------------------- kalvot kerran maalattuina */
+
+  /*
+   * VANHA VÄESTÖ JA VARHAISET RETKET MAALATAAN KERRAN (suunnitelman
+   * 2.3–2.4). Ne eivät ole vanoja vaan alueita, jotka syttyvät ja
+   * sammuvat kokonaisuutena: harmaa väistyy 46 → 40 ka ja retken
+   * läikkä sammuu 78 → 70 ka. Kehyksittäin maalattava 1440 × 720
+   * -kangas (3–70 ms per kehys) jää siis kokonaan pois esityksestä —
+   * kellon mukana muuttuu vain materiaalin peitto.
+   */
+  const teeKalvo = (piirra, peittavyys) => {
+    const oma = document.createElement('canvas');
+    oma.width = W;
+    oma.height = H;
+    const oktx = oma.getContext('2d');
+    if (!oktx) return null;
+    const kuvadata = oktx.createImageData(W, H);
+    piirra(kuvadata.data);
+    oktx.putImageData(kuvadata, 0, 0);
+    tila.maalauksia += 1;
+    const nimi = `${osa}-${peittavyys.nimi}`;
+    const kahva = lauta.linssit?.kalvo?.(nimi, { kuva: oma, peittavyys: peittavyys.alku });
+    if (!kahva) return null;
+    const kerros = { nimi, kangas: oma, kahva, materiaali: null, peitto: peittavyys.alku };
+    tila.kalvot.push(kerros);
+    return kerros;
+  };
+
+  /**
+   * Kalvon materiaali näyttämöltä (kangas tunnistaa sen). Kalvo
+   * rakentuu asynkronisesti, joten haku toistetaan kunnes se löytyy;
+   * peitto kirjoitetaan suoraan materiaaliin eikä kangasta maalata
+   * uudelleen.
+   */
+  const kalvonMateriaali = (kerros) => {
+    if (kerros.materiaali) return kerros.materiaali;
+    let osuma = null;
+    lauta.pallo?.scene?.()?.traverse?.((o) => {
+      if (osuma || !o.isMesh) return;
+      const m = o.material;
+      if (m?.map?.image === kerros.kangas) osuma = m;
+    });
+    kerros.materiaali = osuma;
+    return osuma;
+  };
+
+  const maalaaKerran = (vanhaMaski, retkiKentta) => {
+    const vanhaAsetus = aineisto.vanha;
+    const retkiAsetus = aineisto.retki;
+    if (vanhaMaski && vanhaAsetus) {
+      const vari = vanhaAsetus.vari?.rgb ?? harmaa;
+      tila.vanhaKalvo = teeKalvo((data) => {
+        for (let i = 0; i < vanhaMaski.length; i += 1) {
+          const w = vanhaMaski[i];
+          if (!(w > 0)) continue;
+          const p = i * 4;
+          data[p] = vari[0];
+          data[p + 1] = vari[1];
+          data[p + 2] = vari[2];
+          data[p + 3] = Math.round(255 * Math.min(1, w));
+        }
+      }, { nimi: 'vanha', alku: 0 });
+    }
+    if (retkiKentta && retkiAsetus) {
+      const c = virranVari(retkiAsetus.vari, 0);
+      tila.retkiKalvo = teeKalvo((data) => {
+        for (let i = 0; i < retkiKentta.length; i += 1) {
+          if (!(retkiKentta[i] > 0)) continue;
+          const p = i * 4;
+          data[p] = c.vanha[0];
+          data[p + 1] = c.vanha[1];
+          data[p + 2] = c.vanha[2];
+          data[p + 3] = 255;
+        }
+      }, { nimi: 'retki', alku: 0 });
+    }
+  };
+
+  /** Vanhan väestön peitto kellon mukaan: näkyy 300–40 ka, häipyy 46 → 40 ka. */
+  const vanhanPeitto = (nyt) => {
+    const v = aineisto.vanha;
+    if (!v) return 0;
+    const [n0, n1] = v.nakyy ?? [300000, 40000];
+    if (!(nyt <= n0 && nyt > n1)) return 0;
+    const [h0, h1] = v.haipyy ?? [46000, 40000];
+    const haipy = nyt >= h0 ? 1 : Math.max(0, (nyt - h1) / (h0 - h1));
+    return (v.vari?.peitto ?? 0.34) * haipy;
+  };
+
+  /**
+   * Retken peitto: läikkä syttyy lähteidensä aikaan ja sammuu
+   * `sammuu`-välillä. Kerran maalattu kangas ei kasva, joten kasvu
+   * näytetään peiton nousuna (125 → 95 ka).
+   */
+  const retkenPeitto = (nyt) => {
+    const r = aineisto.retki;
+    if (!r) return 0;
+    const ajat = (r.lahteet ?? []).map((l) => l.aika).filter((a) => a > 0);
+    const alku = ajat.length ? Math.max(...ajat) : 125000;
+    const taysi = ajat.length ? Math.min(...ajat) : 95000;
+    const [s0, s1] = r.sammuu ?? [78000, 70000];
+    if (nyt > alku || nyt <= s1) return 0;
+    const nousu = nyt >= taysi ? Math.max(0, (alku - nyt) / Math.max(1, alku - taysi)) : 1;
+    const haipy = nyt >= s0 ? 1 : Math.max(0, (nyt - s1) / (s0 - s1));
+    return (r.peitto ?? 0.6) * Math.min(nousu, haipy);
+  };
+
+  const paivitaKalvojenPeitto = (nyt) => {
+    for (const kerros of tila.kalvot) {
+      const kohde = kerros.nimi.endsWith('vanha') ? vanhanPeitto(nyt) : retkenPeitto(nyt);
+      /*
+       * PEITTO KIRJOITETAAN JOKA PÄIVITYKSELLÄ, ei vain sen
+       * muuttuessa: kalvokerros ajaa oman sisääntulohäiveensä
+       * (linssit.js haivyta) asynkronisesti ja kirjoittaa opacityn
+       * yli. Yhden liukuluvun kirjoitus 12 Hz on ilmaista, ja näin
+       * häive ja kello eivät voi jäädä eri mielisiksi (vanhan väestön
+       * harmaa jäi muuten kokonaan näkymättömiin — mitattu selaimessa
+       * 6.9.2026).
+       */
+      const m = kalvonMateriaali(kerros);
+      if (!m) continue;
+      kerros.peitto = kohde;
+      if (Math.abs(m.opacity - kohde) < 0.001 && m.visible === kohde > 0.002) continue;
+      m.opacity = kohde;
+      m.transparent = true;
+      m.visible = kohde > 0.002;
+      lauta.heraa?.();
+    }
+  };
+
+  /* -------------------------------------------------------------- vanat */
+
+  const teeVanat = (vanat, kotipesat) => {
+    if (!vanat?.length || tila.vanat) return;
+    tila.vanat = luoVanat({
+      pallo: lauta.pallo,
+      kotelo,
+      reitit: lauta.reitit,
+      vanat,
+      kotipesat,
+      virrat: aineisto.virrat,
+      reduced,
+    });
   };
 
   /**
@@ -378,40 +701,37 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
 
   const kamera = () => ajo.kamera?.() ?? lauta.kamera ?? null;
 
-  /** Onko seuraaminen päällä juuri nyt (moottori kysyy ennen omaa ajoaan). */
+  /**
+   * Onko seuraaminen päällä juuri nyt (moottori kysyy ennen omaa
+   * ajoaan). VANOILLA MYÖS LOPUSSA: kamera perääntyy koko pallon
+   * näkymään omalla säännöllään, eikä moottorin `sovitaKaareen` saa
+   * ajaa sen päälle (js/aikajana.js lopeta).
+   */
   const ohjaaKameraa = () => !reduced && !tila.purettu && Boolean(tila.kentat)
-    && ajo.tila.i >= 0 && !ajo.loppu && performance.now() >= tila.keskeytettyAsti;
+    && ajo.tila.i >= 0 && (vanatKaytossa || !ajo.loppu) && performance.now() >= tila.keskeytettyAsti;
 
-  /** Uusi kohde painopisteistä: aktiivisin virta tasoitetulla painolla. */
+  const kuvasuhde = () => (kotelo?.clientWidth && kotelo?.clientHeight
+    ? kotelo.clientWidth / kotelo.clientHeight : 1);
+
+  /**
+   * Uusi kohde: SELKÄRANGAN KÄRKI (luku 3.2). Kamera on aina yhdellä
+   * polulla eikä hyppää — vain kohde lasketaan toisin kuin kalvon
+   * aikaan, jolloin sitä veti rintamien painopiste.
+   */
   const paivitaKohde = (nyt) => {
-    const pisteet = rintamienPainopisteet(tila.kentat, nyt, { leveys: W, korkeus: H });
-    const nahdyt = new Set();
-    for (const p of pisteet) {
-      nahdyt.add(p.virta);
-      const vanha = tila.painot.get(p.virta) ?? 0;
-      tila.painot.set(p.virta, vanha + (p.paino - vanha) * PAINON_TASOITUS);
-    }
-    for (const [v, paino] of tila.painot) {
-      if (!nahdyt.has(v)) tila.painot.set(v, paino * (1 - PAINON_TASOITUS));
-    }
-    let paras = null;
-    let parasPaino = 0;
-    for (const p of pisteet) {
-      const paino = tila.painot.get(p.virta) ?? 0;
-      if (paino > parasPaino) { parasPaino = paino; paras = p; }
-    }
-    if (!paras) return;
-    /*
-     * Näkyvä leveys on ruudun LEVEYS lautayksikköinä. Pystyruudulla
-     * (puhelin) sama mitta veisi kameran kattoon asti, joten leveys
-     * skaalataan kuvasuhteella: rintama mahtuu ruudun korkeuteen.
-     */
-    const kuvasuhde = kotelo?.clientWidth && kotelo?.clientHeight ? kotelo.clientWidth / kotelo.clientHeight : 1;
-    tila.kohde = {
-      lat: paras.lat,
-      lng: paras.lon,
-      leveys: kameranLeveysAsteina(paras.hajonta) * LAUTAYKSIKKOA_ASTEELLA * Math.min(1, kuvasuhde),
-    };
+    const karki = tila.vanat?.karki(nyt, { ennakko: VANAN_ENNAKKO }) ?? null;
+    // Loppu: kärki on perillä ja kello on ajanut kaaren läpi.
+    const lopunOsuus = tila.lopunAlku
+      ? Math.min(1, (performance.now() - tila.lopunAlku) / LOPUN_PERAYTYMINEN_MS)
+      : 0;
+    const kohde = kameranKohde({
+      karki,
+      pov: tila.pov,
+      kuvapysakki: performance.now() < tila.kuvapysakkiAsti ? tila.kuvapysakki : null,
+      lopunOsuus,
+      kuvasuhde: kuvasuhde(),
+    });
+    if (kohde) tila.kohde = kohde;
   };
 
   /** Kameran liuku kohdetta kohti: pov += (kohde − pov)·(1 − e^(−dt/τ)). */
@@ -424,11 +744,24 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
       if (!nyt) return;
       tila.pov = { lat: nyt.lat, lng: nyt.lng, leveys: alue?.w ?? tila.kohde.leveys };
     }
-    const s = 1 - Math.exp(-dt / KAMERAN_TAU_SIJAINTI);
     const h = 1 - Math.exp(-dt / KAMERAN_TAU_KORKEUS);
+    let s = 1 - Math.exp(-dt / KAMERAN_TAU_SIJAINTI);
     let dLng = tila.kohde.lng - tila.pov.lng;
     while (dLng > 180) dLng -= 360;
     while (dLng < -180) dLng += 360;
+    /*
+     * Panorointikatto: pyrähdyksessä kamera jää jälkeen ja leveys
+     * kasvaa. Katto mitataan siitä kaaresta, jonka askel TODELLA
+     * kulkee (lat/lng-liuku ei kulje isoympyrää pitkin), jotta raja
+     * pitää myös suurilla leveysasteilla.
+     */
+    const katto = KAMERAN_SUURIN_SIIRTO_AST * dt;
+    const askel = (osuus) => ({
+      lat: tila.pov.lat + (tila.kohde.lat - tila.pov.lat) * osuus,
+      lng: tila.pov.lng + dLng * osuus,
+    });
+    const kuljettu = kulmaEtaisyys(tila.pov, askel(s));
+    if (kuljettu > katto && kuljettu > 0) s *= katto / kuljettu;
     tila.pov.lat += (tila.kohde.lat - tila.pov.lat) * s;
     tila.pov.lng += dLng * s;
     while (tila.pov.lng > 180) tila.pov.lng -= 360;
@@ -475,7 +808,9 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
     // Selailussa (siirry) menneet pysäkit eivät ole syttyneet kellosta:
     // niiden kehykset tehdään tässä moottorin lampuista.
     for (let k = 0; k <= nykyinen; k += 1) {
-      if (!tila.kehykset.has(k)) teeKehys(k, ajo.tapahtumat[k], ajo.valot?.[k]?.g ?? null);
+      const t = ajo.tapahtumat[k];
+      if (t?.hiljainen) { teePiste(k, ajo.valot?.[k]?.g ?? null); continue; }
+      if (!tila.kehykset.has(k)) teeKehys(k, t, ajo.valot?.[k]?.g ?? null);
     }
     for (const [k, kehys] of tila.kehykset) {
       kehys.classList.toggle('pieni', k < nykyinen);
@@ -484,9 +819,37 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
     tila.nykyinen = nykyinen;
   };
 
+  /**
+   * HILJAISEN PYSÄKIN PISTE. Kuusi kuvapysäkkiä poksahtaa kehyksenä;
+   * loput neljätoista ovat todisteita, jotka merkitään pienenä
+   * pisteenä kellon ohittaessa ne — ja pisteet jäävät lopun koko
+   * pallon näkymään (suunnitelman luku 4). Lippu tulee linssiltä
+   * (V4); ilman sitä jokainen pysäkki poksahtaa kuten ennen.
+   */
+  const teePiste = (i, g) => {
+    if (!g || tila.pisteet.has(i)) return;
+    const piste = document.createElement('div');
+    piste.className = 'aikajana-virta-piste';
+    piste.setAttribute('aria-hidden', 'true');
+    g.appendChild(piste);
+    tila.pisteet.set(i, piste);
+    if (reduced) piste.classList.add('esilla');
+    else requestAnimationFrame(() => piste.classList.add('esilla'));
+  };
+
   const sytyta = (i, t, g) => {
+    if (t?.hiljainen) { teePiste(i, g); return; }
     teeKehys(i, t, g);
     asetteleKehykset(i);
+    /*
+     * KUVAPYSÄKIN KEHYSTYS: kärki ja pysäkki samaan kuvaan kuudeksi
+     * sekunniksi, jotta poksahdus näkyy aina ruudulla (nuolta ei enää
+     * ole). Al Wusta on kärjestä 1 745 km ja Monte Verde 2 839 km.
+     */
+    if (vanatKaytossa && Number.isFinite(t?.lat) && Number.isFinite(t?.lon)) {
+      tila.kuvapysakki = { lat: t.lat, lng: t.lon };
+      tila.kuvapysakkiAsti = performance.now() + KUVAPYSAKIN_KEHYSTYS_MS;
+    }
   };
 
   const siirry = (i) => {
@@ -495,51 +858,12 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
     asetteleKehykset(i);
   };
 
-  /* -------------------------------------------------------------- nuoli */
-
-  /*
-   * Nuoli asuu PALLON KOTELOSSA, ei linssin juuressa (hionta 6.9.2026):
-   * kotelo on linssin ajaksi oma pinontayhteytensä linssin elementtien
-   * alla (css/aikajana.css isolation), joten nuoli jää kellon, korttien
-   * ja paneelin alle kuten lamput ja kehykset. Paikka lasketaan kotelon
-   * mitoista, jotka ovat samat kuin ennen.
-   */
-  const nuoli = document.createElement('div');
-  nuoli.className = 'aikajana-virta-nuoli';
-  nuoli.hidden = true;
-  nuoli.setAttribute('aria-hidden', 'true');
-  (kotelo ?? ajo.juuri)?.appendChild(nuoli);
-  tila.nuoli = nuoli;
-
-  /** Nuoli reunaan, jos nykyinen pysäkki on ruudun ulkopuolella (edessä). */
-  const paivitaNuoli = () => {
-    const i = tila.nykyinen;
-    const t = i >= 0 ? ajo.tapahtumat[i] : null;
-    if (!t || !kotelo || !Number.isFinite(t.lat) || !Number.isFinite(t.lon)) { nuoli.hidden = true; return; }
-    const leveys = kotelo.clientWidth;
-    const korkeus = kotelo.clientHeight;
-    // Suuri vara: null vain pallon takana olevalle.
-    const p = lauta.ruudulla?.(t.lat, t.lon, 1e6) ?? null;
-    if (!p || (p.x >= 0 && p.y >= 0 && p.x <= leveys && p.y <= korkeus)) { nuoli.hidden = true; return; }
-    const cx = leveys / 2;
-    const cy = korkeus / 2;
-    const dx = p.x - cx;
-    const dy = p.y - cy;
-    const vara = 26;
-    const kerroinR = Math.min((cx - vara) / Math.abs(dx || 1e-6), (cy - vara) / Math.abs(dy || 1e-6));
-    const x = cx + dx * kerroinR;
-    const y = cy + dy * kerroinR;
-    const kulma = Math.atan2(dy, dx) * (180 / Math.PI);
-    nuoli.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px) rotate(${Math.round(kulma)}deg)`;
-    nuoli.hidden = false;
-  };
-
   /* ------------------------------------------------------------ silmukka */
 
   const silmukka = (nyt) => {
     if (tila.purettu || ajo.ui?.dead) return;
     tila.kehys = requestAnimationFrame(silmukka);
-    if (!tila.tarkka) return;
+    if (!(vanatKaytossa ? tila.kentat : tila.tarkka)) return;
     // Kehysväli sekunteina; katto sekunti, jottei paluu taustalta hyppää.
     const dt = Math.min(1, Math.max(0, (nyt - (tila.viimeKehys || nyt)) / 1000));
     tila.viimeKehys = nyt;
@@ -552,20 +876,28 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
     if (nyt - tila.viimePaivitys >= vali && (vuosia !== tila.viimeNyt)) {
       tila.viimePaivitys = nyt;
       tila.viimeNyt = vuosia;
-      const alku = performance.now();
-      maalaa(vuosia);
-      tila.maalausMs = performance.now() - alku;
+      if (vanatKaytossa) {
+        // Vanan kasvu ja kärkivärit; kalvoista muuttuu vain peitto.
+        tila.vanat?.paivita(vuosia);
+        paivitaKalvojenPeitto(vuosia);
+      } else {
+        const alku = performance.now();
+        maalaa(vuosia);
+        tila.maalausMs = performance.now() - alku;
+      }
     }
+    /*
+     * LOPUN PERÄYTYMINEN alkaa, kun kello on ajanut kaaren läpi
+     * (moottori on loppusanoissa): kohde siirtyy lopun keskipisteeseen
+     * ja leveys kasvaa koko laudan mittaan kahdeksassa sekunnissa.
+     */
+    if (vanatKaytossa && ajo.loppu && !tila.lopunAlku) tila.lopunAlku = nyt;
     if (ohjaaKameraa()) {
       if (nyt - tila.viimeKamera >= KAMERAN_LASKENTA_MS) {
         tila.viimeKamera = nyt;
         paivitaKohde(vuosia);
       }
       liuutaKamera(dt);
-    }
-    if (nyt - tila.viimeNuoli >= 100 || !tila.viimeNuoli) {
-      tila.viimeNuoli = nyt;
-      paivitaNuoli();
     }
   };
 
@@ -576,9 +908,15 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
     tila.tyosaie?.terminate();
     tila.tyosaie = null;
     if (kotelo) for (const laji of eleet) kotelo.removeEventListener(laji, keskeyta);
-    nuoli.remove();
+    tila.vanat?.pura();
+    tila.vanat = null;
+    // Kerran maalatut kalvot ovat omia osiaan: ne puretaan tässä.
+    for (const kerros of tila.kalvot) kerros.kahva?.pura?.();
+    tila.kalvot = [];
     for (const kehys of tila.kehykset.values()) kehys.remove();
     tila.kehykset.clear();
+    for (const piste of tila.pisteet.values()) piste.remove();
+    tila.pisteet.clear();
     // Kalvo on laudan osan kerros: moottorin `linssit.pura(PALLON_OSA)`
     // vie sen samalla kuin merkit — täältä sitä ei pureta, jottei osan
     // purku veisi lamppuja kesken siirtymän.
@@ -591,7 +929,6 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
   };
 
   laske();
-  tila.viimeNuoli = 0;
   tila.kehys = requestAnimationFrame(silmukka);
 
   return {
@@ -604,12 +941,19 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
     jatkaSeuranta: () => { tila.keskeytettyAsti = 0; tila.pov = null; },
     /** Mittareita savukkeille: onko kenttä laskettu, kangas ja kohde. */
     tila: () => ({
-      valmis: Boolean(tila.tarkka),
+      valmis: Boolean(vanatKaytossa ? tila.kentat : tila.tarkka),
       aktiivisia: tila.tarkka?.indeksi.length ?? 0,
       kalvo: Boolean(tila.kalvo),
       kohde: tila.kohde,
       kehyksia: tila.kehykset.size,
-      nuoli: !nuoli.hidden,
+      /** Vanamoduulin mittarit ja kerran maalatut kalvot (savuke). */
+      vanoja: tila.vanat?.tila().vanoja ?? 0,
+      karki: tila.vanat?.karki(tila.viimeNyt) ?? null,
+      kalvoja: tila.kalvot.length,
+      maalattuKerran: tila.maalauksia,
+      kameranLeveys: tila.pov?.leveys ?? null,
+      pisteita: tila.pisteet.size,
+      vanat: vanatKaytossa,
       /** Viimeisen kankaan maalauksen kesto (ms) — puhelimen mittari. */
       maalausMs: tila.maalausMs ?? null,
       /** Missä laskenta ajettiin: 'tyosaie' tai 'paasaie'. */

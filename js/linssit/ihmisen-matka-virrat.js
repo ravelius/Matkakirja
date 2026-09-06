@@ -225,6 +225,54 @@ export const IHMISEN_MATKA_VIRRAT = [
 ];
 
 /**
+ * VANAT (Raamattu "VIRRAT VANOINA", omistaja 6.9.2026;
+ * docs/moduulit/ihmisen-matka-vanat.md luku 2.2).
+ *
+ * Tässä on VAIN se, mitä ei voi johtaa mallista: päätepisteet, viivan
+ * paksuudet ja yksinkertaistuksen luvut. Itse geometrian antaa
+ * laskennan `johdaVanat` saapumisaikakentän edeltäjäketjusta, joten
+ * vana on aina mallin oma linja — kun nopeutta tai porttia säädetään,
+ * vana seuraa perässä.
+ *
+ * SELKÄRANKA on mallin oma pohjoinen reitti Omo → Bab-el-Mandeb →
+ * Arabia → Iran → Keski-Aasia → Altai → Siperia → Tšuktšit → Beringia
+ * → Alaska → Tyynenmeren rannikko → Monte Verde (30 800 km;
+ * en-Wikipedia "Early human migrations": "another migrating north to
+ * the steppes of Central Asia", "Paleo-Indians originated from Central
+ * Asia, crossing the Beringia land bridge", tarkistettu 6.9.2026).
+ * Etelän rannikkoreitti on Australian ja Itä-Aasian HAARA.
+ * Päätepisteet ovat pysäkkien löytöpaikkoja; löytöpaikat ovat
+ * todisteita, eivät reitti — otsikko on "todennäköinen pääreitti".
+ *
+ * Paksuus on css-pikseleinä: päävirta 4, haarat 2,5, myöhäiset 2.
+ */
+export const IHMISEN_MATKA_VANAT = {
+  selkaranka: { virta: 'amerikat', paate: { lat: -41.5047, lon: -73.2044 }, paksuus: 4 },
+  haarat: [
+    { tunnus: 'australia', virta: 'paavirta', paate: { lat: -33.75, lon: 143.0833 }, paksuus: 2.5 },
+    { tunnus: 'eurooppa', virta: 'eurooppa', paate: { lat: 38.7, lon: -9.1 }, paksuus: 2.5 },
+    { tunnus: 'ita-aasia', virta: 'paavirta', paate: { lat: 39.6797, lon: 115.9461 }, paksuus: 2.5 },
+    { tunnus: 'yana', virta: 'siperia', paate: { lat: 70.7236, lon: 135.4297 }, paksuus: 2.5 },
+    { tunnus: 'japani', virta: 'paavirta', paate: { lat: 36.0, lon: 138.5 }, paksuus: 2 },
+    { tunnus: 'fennoskandia', virta: 'eurooppa', paate: { lat: 68.0, lon: 27.0 }, paksuus: 2 },
+    { tunnus: 'white-sands', virta: 'amerikat', paate: { lat: 32.7792, lon: -106.1719 }, paksuus: 2 },
+    { tunnus: 'brasilia', virta: 'amerikat', paate: { lat: -19.6, lon: -43.9 }, paksuus: 2 },
+    { tunnus: 'gronlanti', virta: 'amerikat', paate: { lat: 69.5, lon: -53.0 }, paksuus: 2 },
+  ],
+  /** Tyynenmeren nauhat sellaisinaan (merivirta nauhana). */
+  nauhat: 'tyynimeri',
+  nauhanPaksuus: 2,
+  /** Afrikan kotipesät: laikku, ei linjaa (suunnitelman 2.1.2). Säde km. */
+  kotipesat: [
+    { tunnus: 'jebel-irhoud', sade: 350 },
+    { tunnus: 'omo-kibish', sade: 350 },
+    { tunnus: 'pinnacle-point', sade: 300 },
+  ],
+  /** Douglas–Peucker km, aikatihennyksen rajat, Chaikin-kierrokset, haaran katkaisu km. */
+  yksinkertaistus: { dpKm: 60, aikaV: 1500, aikaOsuus: 0.06, chaikin: 2, haaranEroKm: 100 },
+};
+
+/**
  * VARHAISET RETKET (päätös 12): Skhul/Qafzeh ja Al Wusta omana haaleana
  * läikkänä Levantissa ja Arabiassa, joka katoaa 70 ka mennessä. Sama
  * laskenta kuin virroilla; `sammuu` kertoo häipymisen alun ja lopun.

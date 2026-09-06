@@ -73,7 +73,7 @@
 import { projisoiLaudalle } from '../fokusmitat.js';
 import * as data from './ihmisen-matka-data.js';
 import {
-  IHMISEN_MATKA_VIRRAT, IHMISEN_MATKA_RETKI, IHMISEN_MATKA_VANHA, VIRRAN_PEITTO,
+  IHMISEN_MATKA_VIRRAT, IHMISEN_MATKA_RETKI, IHMISEN_MATKA_VANHA, IHMISEN_MATKA_VANAT, VIRRAN_PEITTO,
 } from './ihmisen-matka-virrat.js';
 import { MAAMASKI } from './ihmisen-matka-maamaski.js';
 
@@ -127,6 +127,29 @@ function laatikoksi(arvo, otsikko) {
 }
 
 /**
+ * KUUSI KUVAA ESITYKSESSÄ, NELJÄTOISTA GALLERIASSA (omistaja 6.9.2026
+ * ilta, sanatarkasti: *"lopuksi voitaisiin näyttää tai animaatioiden
+ * aikana muutama valokuva. Mutta sitten kun esitys ohi, pelaaja voisi
+ * itse katsella ne ohitettu kuvat läpi."*).
+ *
+ * Nämä kuusi ovat MATKAN KÄÄNTEITÄ eivätkä vain löytöpaikkoja
+ * (docs/moduulit/ihmisen-matka-vanat.md luku 4): alku Marokon
+ * kukkulalla, lähtö Afrikasta, Siperian haarautuminen Altailla, ylitys
+ * uuteen maanosaan, selkärangan pää Chilessä ja viimeinen suuri maa.
+ * Loput neljätoista ovat todisteita matkan varrelta: ne merkitään
+ * kartalle pienenä pisteenä kellon ohittaessa ne, ja pelaaja selaa ne
+ * lopuksi Tiedeliitteestä ("Katso löydöt").
+ *
+ * LISTA ASUU TÄSSÄ EIKÄ AINEISTOSSA: valinta on esityksen dramaturgiaa
+ * (kuinka monta kertaa kello pysähtyy), ei pysäkin ominaisuus, ja
+ * aineistotiedosto on tarinatekstien puolella. Moottori ei tunne
+ * listaa — se lukee vain lipun `hiljainen`.
+ */
+export const ESITYKSEN_KUVAT = [
+  'jebel-irhoud', 'al-wusta', 'denisova', 'beringia', 'monte-verde', 'aotearoa',
+];
+
+/**
  * PYSÄKIT MOOTTORIN MUOTOON. Puhdas funktio: sama kuvaus pelissä ja
  * testissä (tests/ihmisen-matka.test.mjs).
  *
@@ -134,6 +157,8 @@ function laatikoksi(arvo, otsikko) {
  *   `esine` → `kuva`   kortin kuva alarivin karusellissa
  *   `lat/lon` → `x/y`  laudan koordinaatit (pelin oma projektio;
  *                      moottorin karttahaara piirtää valot niihin)
+ *   `hiljainen`        pysäkki, joka ei pysäytä kelloa eikä saa korttia
+ *                      (ESITYKSEN_KUVAT yllä)
  *
  * Alkuperäiset kentät jäävät paikoilleen, joten data on yhä luettavissa
  * sellaisenaan — muunnos vain lisää moottorin odottamat nimet.
@@ -149,6 +174,7 @@ export function ihmisenMatkanPysakit(tapahtumat = AINEISTO) {
       kuva: kortti,
       x: kohta?.x ?? t.x,
       y: kohta?.y ?? t.y,
+      hiljainen: !ESITYKSEN_KUVAT.includes(t.tunnus),
     };
   });
 }
@@ -197,6 +223,14 @@ export const LINSSI = {
     asteikko: 'vuosiaSitten',
     yksikko: 'v. sitten',
     jakso: '300 000 vuotta sitten – n. 1300 jaa.',
+    /*
+     * LOPUN LASKURI: "20 löytöpaikkaa" eikä "20 valoa". Keksintökaarella
+     * kartalla palavat valot; tässä kaaressa pysäkit ovat LÖYTÖPAIKKOJA
+     * — todisteita, eivät reitti (Raamattu, VIRRAT VANOINA) — ja neljä
+     * viidesosaa niistä on hiljaisia pisteitä eikä lamppuja. Ilman
+     * kenttää moottori sanoo yhä "valoa" (keksinnöt ennallaan).
+     */
+    laskuri: 'löytöpaikkaa',
     /*
      * Kaaren oma musiikki (js/siirtymamusiikki.js RAIDAT['ihmisen-matka']
      * → ämpärin aanet/linssi-ihmisen-matka-lyria.mp3). Raita generoidaan
@@ -251,6 +285,10 @@ export const LINSSI = {
       vanha: IHMISEN_MATKA_VANHA,
       peitto: VIRRAN_PEITTO,
       maamaski: MAAMASKI,
+      // Vanat johdetaan kentästä (johdaVanat); kotipesät lukevat aikansa
+      // pysäkeiltä, joten työsäie saa niistä kevyen listan (ei kuvia).
+      vanat: IHMISEN_MATKA_VANAT,
+      pysakit: PYSAKIT.map(({ tunnus, lat, lon, vuosiaSitten }) => ({ tunnus, lat, lon, vuosiaSitten })),
     },
     // Reittiviivan projektio tasokartalla: sama lauta kuin pysäkkien
     // x/y:llä (ihmisenMatkanPysakit), jotta viiva osuu lamppuihin.

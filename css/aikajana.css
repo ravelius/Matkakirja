@@ -1044,6 +1044,61 @@
 /* Tumma asu: napin teksti ja reuna kultaa (omistaja 3.9.2026). */
 .aikajana-lue { color: #f1e6d0; border-color: rgba(217, 161, 59, 0.5); background: rgba(217, 161, 59, 0.18); }
 
+/* ==================== LOPPUSANOJEN NAPPIRIVI ====================
+ *
+ * "Katso löydöt" ja "Sulje" (omistaja 6.9.2026 ilta: *"kun esitys ohi,
+ * pelaaja voisi itse katsella ne ohitettu kuvat läpi"*). Rivi on
+ * arkkikirjaston nappikieltä (Raamattu, "Arkkikirjasto: pop-upien
+ * yhteinen kieli" — NAPPIEN KOLME ROOLIA): kullattu päänappi on
+ * etenevä valinta ja kehystetty paperinappi sivuvalinta, samat sävyt
+ * kuin kohtaamisen varmistuksessa (css/fokusvirta.css). Kumpikin on
+ * 44 px korkea kosketuskohde ja jakaa rivin tasan, jotta puhelimen
+ * kapealla paneelilla ei tarvitse osua kapeaan tekstiin.
+ *
+ * Rivi tulee vain kaarelle, jonka esitys ohitti löytöpaikkoja
+ * (js/aikajana.js lisaaLoppunapit) — keksintökaaren loppusanat ovat
+ * ennallaan.
+ */
+.aikajana-loppu-napit {
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+.aikajana-loppunappi {
+  flex: 1 1 0;
+  min-height: 44px;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid rgba(122, 85, 20, 0.45);
+  border-radius: 10px;
+  background: rgba(245, 240, 226, 0.9);
+  color: #211d18;
+  font-family: var(--font-type);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  text-align: center;
+  cursor: pointer;
+  /* Arkkikirjaston animaatiosääntö: pehmeä nopeutus ja hidastus. */
+  transition: background 220ms var(--aikajana-kaari), color 220ms var(--aikajana-kaari);
+}
+.aikajana-loppunappi:hover,
+.aikajana-loppunappi:focus-visible { background: rgba(122, 85, 20, 0.12); color: #16130f; }
+.aikajana-loppunappi.primary {
+  border-color: var(--accent-dark, #7a5514);
+  background: linear-gradient(180deg, #eab84e, #d09024);
+  color: #2c1e07;
+  font-weight: 700;
+}
+.aikajana-loppunappi.primary:hover,
+.aikajana-loppunappi.primary:focus-visible {
+  background: linear-gradient(180deg, #f3c661, #d9a13b);
+  color: #2c1e07;
+}
+@media (prefers-reduced-motion: reduce) {
+  .aikajana-loppunappi { transition: none; }
+}
+
 /* ==================== FILMINAUHA ON KARUSELLI ==================== */
 
 /*
@@ -1836,6 +1891,9 @@
 .tiedeliite-sisallysrivi:hover,
 .tiedeliite-sisallysrivi:focus-visible { background: rgba(122, 85, 20, 0.12); }
 .tiedeliite-sisallysrivi.nykyinen { font-weight: 700; }
+/* Esityksessä näytetty löytö: kullattu merkki rivin oikeassa laidassa
+   (Ihmisen matka vanoina, V4 — kuusi kuvaa esityksessä, loput galleriassa). */
+.tiedeliite-sisallysmerkki { margin-left: auto; flex: none; color: #9a7a2a; font-size: 0.8em; }
 .tiedeliite-sisallysvuosi {
   flex: none;
   min-width: 2.6rem;
@@ -1989,20 +2047,31 @@
 .aikajana-virta-kuva.esilla.pieni { transform: translate(-50%, calc(-100% - 14px)) scale(0.5); opacity: 0.92; }
 
 /* Nuoli ruudun reunaan, kun nykyinen pysäkki on kuvan ulkopuolella. */
-.aikajana-virta-nuoli {
+/*
+ * HILJAISEN PYSÄKIN PISTE (VIRRAT VANOINA, omistaja 6.9.2026):
+ * esityksessä poksahtaa kuusi kuvaa, ja loput neljätoista löytöpaikkaa
+ * merkitään pienenä pisteenä — todisteita, ei reittiä. Piste jää
+ * palamaan lopun koko pallon näkymään. Reunan nuoli (aikajana-virta-
+ * nuoli) POISTUI: kamera kehystää kuvapysäkin ja kärjen samaan kuvaan,
+ * joten poksahdus näkyy aina ruudulla.
+ */
+.aikajana-virta-piste {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 0;
-  margin: -9px 0 0 -9px;
-  border-top: 9px solid transparent;
-  border-bottom: 9px solid transparent;
-  border-left: 18px solid #ffd066;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+  left: 50%;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  border-radius: 50%;
+  background: #ffe6b0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 240ms ease-out;
   pointer-events: none;
-  z-index: 3;
+  z-index: 2;
 }
+
+.aikajana-virta-piste.esilla { opacity: 0.85; }
 
 /*
  * PELIN OMAT MERKIT VÄISTYVÄT LINSSIN AJAKSI. Tasokartalla kartan

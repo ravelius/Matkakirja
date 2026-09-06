@@ -14,16 +14,23 @@
  * file://-osoite, vanha selain), piirtäjä ajaa saman laskennan
  * pääsäikeessä — tulos on sama, vain säie eri.
  *
- * Viesti sisään:  { aineisto: { virrat, retki, vanha, maamaski }, kerroin }
- * Viesti ulos:    { kentat: { aika, virta }, tarkka } siirrettyinä puskureina
- *                 tai { virhe } jos laskenta kaatui.
+ * VANAT (omistaja 6.9.2026, Raamattu "VIRRAT VANOINA"): kenttien
+ * jälkeen työsäie johtaa samasta laskennasta vanat (johdaVanat) —
+ * pääreitin ja haarat edeltäjäketjusta — ja lähettää ne piirtäjälle
+ * tavallisina taulukkoina. Kalvon tarkennus (`tarkka`) on kallis
+ * (150–300 ms ja neljä megatavua), ja se lasketaan vain jos kutsuja
+ * pyytää sen `kalvo`-lipulla — perääntymistie `?virrat=kalvo`.
+ *
+ * Viesti sisään:  { aineisto: { virrat, retki, vanha, maamaski, vanat, pysakit }, kerroin, kalvo }
+ * Viesti ulos:    { kentat: { aika, virta }, vanat, kotipesat, vanha, retki, tarkka }
+ *                 siirrettyinä puskureina tai { virhe } jos laskenta kaatui.
  */
 import {
-  puraMaamaski, puraPeitto, laskeKentat, tarkennaKentat,
+  puraMaamaski, puraPeitto, laskeKentat, tarkennaKentat, johdaVanat,
 } from './aikajana-virrat-laskenta.js';
 
 self.onmessage = (viesti) => {
-  const { aineisto, kerroin = 2 } = viesti.data ?? {};
+  const { aineisto, kerroin = 2, kalvo = true } = viesti.data ?? {};
   try {
     const { maamaski } = aineisto;
     const leveys = maamaski.leveys;
@@ -34,12 +41,26 @@ self.onmessage = (viesti) => {
       { virrat: aineisto.virrat, retki: aineisto.retki ?? null, vanha: aineisto.vanha ?? null },
       { maa, leveys, korkeus },
     );
-    const tarkka = tarkennaKentat(kentat, { maa, peitto, leveys, korkeus, kerroin });
+    const { vanat, kotipesat } = aineisto.vanat
+      ? johdaVanat(kentat, aineisto.vanat, { maa, leveys, korkeus, pysakit: aineisto.pysakit ?? null })
+      : { vanat: null, kotipesat: null };
+    const tarkka = kalvo ? tarkennaKentat(kentat, { maa, peitto, leveys, korkeus, kerroin }) : null;
     const siirto = [kentat.aika.buffer, kentat.virta.buffer];
-    for (const arvo of Object.values(tarkka)) {
+    for (const arvo of Object.values(tarkka ?? {})) {
       if (ArrayBuffer.isView(arvo)) siirto.push(arvo.buffer);
     }
-    self.postMessage({ kentat: { aika: kentat.aika, virta: kentat.virta }, tarkka }, siirto);
+    /*
+     * Vanhan väestön maski ja varhaisten retkien kenttä menevät
+     * piirtäjälle sellaisinaan: ne maalataan kalvolle KERRAN, ja
+     * kellon mukana muuttuu vain materiaalin peitto.
+     */
+    const vanha = kentat.vanha ?? null;
+    const retki = kentat.retki ?? null;
+    if (vanha) siirto.push(vanha.buffer);
+    if (retki) siirto.push(retki.buffer);
+    self.postMessage({
+      kentat: { aika: kentat.aika, virta: kentat.virta }, vanat, kotipesat, vanha, retki, tarkka,
+    }, siirto);
   } catch (virhe) {
     self.postMessage({ virhe: String(virhe?.message ?? virhe) });
   }

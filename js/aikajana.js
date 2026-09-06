@@ -981,7 +981,14 @@ export function aikajanaAskel(tila, dt, tapahtumat, tahti = {}) {
   }
   if (vuosi < seuraava.vuosi) return { tila: { vuosi, i, viive: 0, alku }, syttyi: null, loppu: false };
   i += 1;
-  const uusiViive = seuraava.paalu ? paaluMs : viiveMs;
+  /*
+   * HILJAINEN PYSÄKKI EI PYSÄYTÄ KELLOA (omistaja 6.9.2026 ilta:
+   * esityksessä näytetään kuusi kuvaa, loput katsotaan jälkikäteen).
+   * Se on yhä pysäkki — kellon asteikko ja välien pituudet eivät
+   * muutu — mutta sen tauko on nolla, ja `syttyi` palautetaan kuten
+   * ennen, jotta kartta saa merkitä löytöpaikan pisteellä.
+   */
+  const uusiViive = seuraava.paalu ? paaluMs : (seuraava.hiljainen ? 0 : viiveMs);
   // Kello napsahtaa tapahtuman vuoteen. Saman vuoden ketjussa (tauolta
   // suoraan seuraavaan) hiipinyt osuus säilyy, ettei mittari peruuta.
   const kohta = tauolta ? Math.max(vuosi, seuraava.vuosi) : seuraava.vuosi;
@@ -1034,12 +1041,17 @@ export const KARUSELLIN_ENNAKKO_POHJA_MS = 400;
  * saapuminen jo ennakon päässä, eikä kaukaisen pysäkin tarkkaa
  * hetkeä tarvitse laskea joka kehyksellä.
  *
+ * HILJAINEN PYSÄKKI EI OLE MÄÄRÄNPÄÄ: se ei liikuta kortteja eikä
+ * kameraa, joten ennakko tähtää sen ohi seuraavaan näkyvään pysäkkiin.
+ * Kaarella, jolla hiljaisia ei ole (keksinnöt), käytös on entinen.
+ *
  * @param {{vuosi:number, i:number, viive:number}} tila kellon tila
- * @param {Array<{vuosi:number, paalu?:boolean}>} tapahtumat
+ * @param {Array<{vuosi:number, paalu?:boolean, hiljainen?:boolean}>} tapahtumat
  * @param {object} [tahti] sama tahti kuin aikajanaAskelilla
  * @param {number} [katto] enimmäisaika, joka jaksetaan laskea
- * @returns {number} millisekuntia syttymiseen; Infinity jos kaari
- *   loppuu ennen sitä tai syttyminen ei osu katon sisään
+ * @returns {number} millisekuntia seuraavaan NÄKYVÄÄN syttymiseen;
+ *   Infinity jos kaari loppuu ennen sitä tai syttyminen ei osu katon
+ *   sisään
  */
 export function aikaSeuraavaan(tila, tapahtumat, tahti = {}, katto = 120000) {
   if (!Array.isArray(tapahtumat) || !tapahtumat.length) return Infinity;
@@ -1049,7 +1061,7 @@ export function aikaSeuraavaan(tila, tapahtumat, tahti = {}, katto = 120000) {
     const askel = Math.min(AIKAJANA_ALIASKEL_MS, katto - kulunut);
     const tulos = aikajanaAskel(t, askel, tapahtumat, tahti);
     kulunut += askel;
-    if (tulos.syttyi !== null) return kulunut;
+    if (tulos.syttyi !== null && !tapahtumat[tulos.syttyi]?.hiljainen) return kulunut;
     if (tulos.loppu) return Infinity;
     t = tulos.tila;
   }
@@ -1659,6 +1671,37 @@ export function karusellinPaikat(i, nyt, leveysKortteina) {
   };
 }
 
+/**
+ * KORTTINUMERO JOKAISELLE PYSÄKILLE (hiljaiset pysäkit, 6.9.2026 ilta).
+ *
+ * Karusellissa on vain esityksen kortit — Ihmisen matkalla kuusi
+ * kahdestakymmenestä — mutta kello, lamput ja kamera kulkevat yhä
+ * kaikkien pysäkkien läpi. Kortin paikka (karusellinPaikat) tarvitsee
+ * siis KAKSI numeroa: pysäkin oman indeksin ja sen NÄKYVÄN
+ * järjestysnumeron nauhassa.
+ *
+ * Hiljainen pysäkki saa saman numeron kuin edellinen näkyvä: kun kello
+ * ohittaa löytöpaikan, nauha jää paikalleen eikä nykiä. Ennen
+ * ensimmäistä näkyvää pysäkkiä numero on −1 (tyhjä nauha), samoin
+ * avaimella −1, jolla moottori kysyy alkutilaa.
+ *
+ * Puhdas funktio, koska se rikkoutuu hiljaa: väärä numero siirtäisi
+ * karusellin yhden kortin sivuun eikä mikään kaatuisi
+ * (tests/aikajana.test.mjs).
+ *
+ * @param {Array<{hiljainen?:boolean}>} tapahtumat kaaren pysäkit
+ * @returns {Map<number, number>} pysäkin indeksi → kortin numero
+ */
+export function nakyvaJarjestys(tapahtumat = []) {
+  const kartta = new Map([[-1, -1]]);
+  let numero = -1;
+  (tapahtumat ?? []).forEach((t, i) => {
+    if (!t?.hiljainen) numero += 1;
+    kartta.set(i, numero);
+  });
+  return kartta;
+}
+
 /* ==================== KELLON ASTEIKKO ==================== */
 
 /*
@@ -2181,6 +2224,15 @@ class Aikajana {
     this.raf = 0;
     this.viime = 0;
     this.kortit = [];
+    /*
+     * KARUSELLI ON HARVEMPI KUIN KAARI (hiljaiset pysäkit, 6.9.2026).
+     * `nakyva` kertoo jokaiselle pysäkille sen korttinumeron ja
+     * `korttiPysakki` kääntää saman toisin päin, jotta asettele löytää
+     * kortin takaa oikean pysäkin. Kaarella ilman hiljaisia pysäkkejä
+     * numerot ovat samat kuin indeksit — keksinnöt eivät muutu.
+     */
+    this.nakyva = nakyvaJarjestys(this.tapahtumat);
+    this.korttiPysakki = [];
     this.valot = [];
     /*
      * LAUTA RATKAISTAAN KERRAN (aalto 2A). Pallolaudalla valot ja
@@ -2336,6 +2388,10 @@ class Aikajana {
     // 3. Filminauha
     this.nauha = solmu('div', 'aikajana-nauha');
     this.tapahtumat.forEach((t, i) => {
+      // Hiljainen pysäkki on kartalla piste, ei kortti nauhassa: se on
+      // todiste matkan varrelta, jonka pelaaja katsoo lopuksi
+      // Tiedeliitteestä ("Katso löydöt").
+      if (t.hiljainen) return;
       const kortti = solmu('button', `aikajana-kortti${t.paalu ? ' paalu' : ''}`);
       kortti.type = 'button';
       kortti.dataset.i = String(i);
@@ -2351,6 +2407,7 @@ class Aikajana {
       kortti.setAttribute('aria-label', `${ajoitus(t)}: ${t.otsikko}${t.henkilo ? `, ${t.henkilo}` : ''}`);
       kortti.addEventListener('click', () => this.napautaKorttia(i));
       this.nauha.appendChild(kortti);
+      this.korttiPysakki.push(i);
       this.kortit.push(kortti);
     });
 
@@ -3036,7 +3093,7 @@ class Aikajana {
   tarkistaKameraEnnakko(tahti) {
     if (this.reducedMotion) return;
     if (!this.pallolla && !this.reittiOsat) return;
-    const kohde = this.tila.i + 1;
+    const kohde = this.seuraavaNakyva(this.tila.i);
     if (this.kameraKohde === kohde || kohde >= this.tapahtumat.length) return;
     const eta = aikaSeuraavaan(this.tila, this.tapahtumat, tahti, AIKAJANAN_KAMERAN_ENNAKKO_MS + AIKAJANA_ALIASKEL_MS);
     if (!Number.isFinite(eta)) return;
@@ -3538,7 +3595,7 @@ class Aikajana {
    */
   tarkistaEnnakko(tahti) {
     if (this.reducedMotion) return;
-    const kohde = this.tila.i + 1;
+    const kohde = this.seuraavaNakyva(this.tila.i);
     if (this.ennakkoKohde === kohde || kohde >= this.tapahtumat.length) return;
     const eta = aikaSeuraavaan(this.tila, this.tapahtumat, tahti, KARUSELLIN_ENNAKKO_MS + AIKAJANA_ALIASKEL_MS);
     const kesto = ennakonKesto(eta);
@@ -3567,7 +3624,7 @@ class Aikajana {
    * ensin (lyhyt väli), vaihdon tekee asettele syttymishetkellä.
    */
   odotaTaysikokoista(kohde) {
-    const kortti = this.kortit[kohde];
+    const kortti = this.korttiPysakille(kohde);
     if (!kortti) return;
     this.lopetaTeravoitus();
     const teravoita = (e) => {
@@ -3586,7 +3643,7 @@ class Aikajana {
 
   teravoitaKortti(i) {
     this.lopetaTeravoitus();
-    const kortti = this.kortit[i];
+    const kortti = this.korttiPysakille(i);
     // Peruttu ennakko vei kortin takaisin tulevaksi: se pysyy sumeana.
     if (!kortti?.classList.contains('nykyinen')) return;
     for (const img of kortti.querySelectorAll('img[data-terava]')) vaihdaKorttikuva(img, img.dataset.terava);
@@ -3622,7 +3679,13 @@ class Aikajana {
      * niistä näkyisi yksi. Sama pehmeä ajo kuin muutkin, ja vain
      * pallolla: tasokartta on jo koko kaaren näkymässä.
      */
-    if (this.pallolla) {
+    /*
+     * VANOILLA KAMERA PERÄÄNTYY ITSE (VIRRAT VANOINA, 6.9.2026):
+     * virtamoduuli ajaa lopussa koko pallon näkymään omalla
+     * säännöllään, eikä kaaren sovitus saa ajaa sen päälle. Muilla
+     * kaarilla (keksinnöt) tämä on ennallaan.
+     */
+    if (this.pallolla && !this.virrat?.ohjaaKameraa()) {
       this.kameraKohde = null;
       this.sovitaKaareen();
     }
@@ -3649,9 +3712,60 @@ class Aikajana {
       if (this.kaari.loppupuhe) {
         soitaLinssiluenta(this.ui, null, { runko: LOPUN_RUNKO, juuri: this.luentajuuri });
       }
+      this.lisaaLoppunapit();
     }
-    this.paikkarivi.textContent = `${this.jakso} · ${this.valot.filter(Boolean).length} valoa`;
+    /*
+     * MITÄ KARTALLA ON LOPUKSI. Keksintökaarella palavat VALOT;
+     * Ihmisen matkalla pysäkit ovat LÖYTÖPAIKKOJA — todisteita, eivät
+     * reitti — ja neljä viidesosaa niistä on pieniä pisteitä eikä
+     * lamppuja. Sana tulee kaarelta (`laskuri`), jotta keksintöjen
+     * rivi säilyy kirjaimelleen entisenä.
+     */
+    this.paikkarivi.textContent = `${this.jakso} · ${this.valot.filter(Boolean).length} ${this.kaari.laskuri ?? 'valoa'}`;
     sfx.play('paper');
+  }
+
+  /**
+   * "KATSO LÖYDÖT" — GALLERIA LOPPUSANOISTA (omistaja 6.9.2026 ilta,
+   * sanatarkasti: *"kun esitys ohi, pelaaja voisi itse katsella ne
+   * ohitettu kuvat läpi"*).
+   *
+   * Nappirivi tulee vain kaarelle, jonka esitys ohitti löytöpaikkoja:
+   * keksinnöillä jokainen pysäkki nähtiin matkalla, eikä loppusanoihin
+   * ilmesty mitään uutta. Napit ovat arkkikirjaston kahta roolia
+   * (Raamattu, "Arkkikirjasto: pop-upien yhteinen kieli"): kullattu
+   * päänappi vie eteenpäin galleriaan, kehystetty paperinappi sulkee
+   * linssin. Galleria on Tiedeliite, joka on jo täsmälleen tämä —
+   * kortti kerrallaan selattava lehti, jonka sisällys merkitsee
+   * esityksessä nähdyt.
+   */
+  lisaaLoppunapit() {
+    if (!this.tapahtumat.some((t) => t.hiljainen)) return;
+    const sivu = this.paneeli?.lastElementChild;
+    if (!sivu) return;
+    const napit = solmu('div', 'aikajana-loppu-napit');
+    const katso = solmu('button', 'aikajana-loppunappi primary', 'Katso löydöt');
+    katso.type = 'button';
+    katso.addEventListener('click', () => this.avaaLoydot());
+    const sulje = solmu('button', 'aikajana-loppunappi', 'Sulje');
+    sulje.type = 'button';
+    sulje.addEventListener('click', () => this.ui.pysaytaAikajana?.());
+    napit.append(katso, sulje);
+    (sivu.querySelector('.aikajana-ilmio-teksti') ?? sivu).appendChild(napit);
+  }
+
+  /**
+   * Galleria auki ensimmäisestä pysäkistä. `kunVaihtuu` jää pois
+   * tarkoituksella: paneelissa ovat loppusanat eikä yksikään pysäkki,
+   * ja kellorivi kertoo koko kaaren löytöpaikkojen määrän — selailu ei
+   * saa kirjoittaa niiden päälle.
+   */
+  avaaLoydot() {
+    const auki = avaaTiedeliite(this.ui, this.tapahtumat, 0, {
+      lahdeVara: this.linssi.lahde?.aineisto ?? 'Wikipedia',
+      kunSuljetaan: () => this.palautaJutunJalkeen(),
+    });
+    if (auki) this.vaimennaJutunAjaksi();
   }
 
   /* ---------- näyttö ---------- */
@@ -3886,20 +4000,43 @@ class Aikajana {
 
   sytyta(i) {
     const t = this.tapahtumat[i];
-    for (const valo of this.valot) { if (valo) this.asetaValonTila(valo, valo.g.classList.contains('palaa'), false); }
+    /*
+     * HILJAINEN PYSÄKKI EI OTA NÄKYMÄÄ HALTUUNSA (omistaja 6.9.2026
+     * ilta; docs/moduulit/ihmisen-matka-vanat.md luku 4). Se merkitään
+     * kartalle pienenä pisteenä — todiste matkan varrelta — mutta iso
+     * liekki, kellon paikkarivi ja kameran katse jäävät siihen
+     * pysäkkiin, jonka kuva on ruudulla. Kaarella ilman hiljaisia
+     * pysäkkejä (keksinnöt) tämä haara ei koskaan aukea.
+     */
+    const hiljainen = Boolean(t?.hiljainen);
+    if (!hiljainen) {
+      for (const valo of this.valot) { if (valo) this.asetaValonTila(valo, valo.g.classList.contains('palaa'), false); }
+    }
     const valo = this.valot[i];
     if (valo) {
-      this.asetaValonTila(valo, true, true);
+      this.asetaValonTila(valo, true, !hiljainen);
       // Palava valo päällimmäiseksi, jottei myöhempi naapuri peitä sitä.
       // (Pallolla kerrosta ei ole: kirjasto pinoaa merkit itse.)
-      this.valokerros?.appendChild(valo.g);
-    } else {
+      if (!hiljainen) this.valokerros?.appendChild(valo.g);
+    } else if (!hiljainen) {
       sfx.play('paper');
     }
     // Värivirrat: pysäkin kuva poksahtaa lampun viereen (päätös 4).
+    // Hiljaisella pysäkillä virtamoduuli piirtää kehyksen sijaan pisteen
+    // (lippu kulkee tapahtuman mukana).
     this.virrat?.sytyta(i, t, valo?.g ?? null);
-    this.keksinnonAani(t);
     this.paivitaReitti(i);
+    /*
+     * TÄHÄN HILJAINEN PYSÄKKI PÄÄTTYY: ei ääntä, ei paikkariviä, ei
+     * paneelin vaihtoa, ei karusellin liikettä, ei kameran ajoa eikä
+     * luentaa. Ennakkoa EI päätetä — se on jo matkalla seuraavaan
+     * näkyvään pysäkkiin, ja sen katkaisu nykäisisi kortit takaisin.
+     */
+    if (hiljainen) {
+      this.valmistaSeuraavat(i);
+      return;
+    }
+    this.keksinnonAani(t);
     this.paikkarivi.textContent = [ajoitus(t), paikka(t)].filter(Boolean).join(' · ');
     this.vaihdaPaneeli(t);
     /*
@@ -4348,6 +4485,29 @@ class Aikajana {
     }));
   }
 
+  /** Kortin numero nauhassa; hiljaisella pysäkillä edellinen näkyvä. */
+  korttinumero(i) {
+    return this.nakyva.get(i) ?? -1;
+  }
+
+  /** Pysäkin oma kortti, tai null jos pysäkki on hiljainen. */
+  korttiPysakille(i) {
+    if (!this.tapahtumat[i] || this.tapahtumat[i].hiljainen) return null;
+    return this.kortit[this.korttinumero(i)] ?? null;
+  }
+
+  /**
+   * Seuraava pysäkki, joka pysäyttää kellon ja liikuttaa karusellin.
+   * Ennakot (kortit ja kamera) tähtäävät tähän, eivät väliin jääviin
+   * hiljaisiin löytöpaikkoihin. Kaaren pituus = "ei enää yhtään".
+   */
+  seuraavaNakyva(i) {
+    for (let k = i + 1; k < this.tapahtumat.length; k += 1) {
+      if (!this.tapahtumat[k].hiljainen) return k;
+    }
+    return this.tapahtumat.length;
+  }
+
   /**
    * NAUHAN LEVEYS KORTIN LEVEYKSINÄ. Kortin leveys on CSS-muuttuja
    * (`--aikajana-kortti-w`, clamp-arvo), joten se luetaan mitattuna
@@ -4382,12 +4542,12 @@ class Aikajana {
      * aloitaEnnakko. Ilman tätä eroa ikkunan koon muutos (koonMuutos)
      * nykäisisi karusellin takaisin kesken siirtymän.
      */
-    const nyt = this.ennakkoKohde ?? this.tila.i;
+    const nyt = this.korttinumero(this.ennakkoKohde ?? this.tila.i);
     const ennakossa = this.ennakkoKohde !== null;
     const leveys = this.nauhanLeveysKortteina();
-    this.kortit.forEach((kortti, i) => {
-      const { paikka: paikkaX, mitta, luokka, himmeys, sumennus, jarjestys } = karusellinPaikat(i, nyt, leveys);
-      kortti.className = `aikajana-kortti ${luokka}${this.tapahtumat[i].paalu ? ' paalu' : ''}`;
+    this.kortit.forEach((kortti, k) => {
+      const { paikka: paikkaX, mitta, luokka, himmeys, sumennus, jarjestys } = karusellinPaikat(k, nyt, leveys);
+      kortti.className = `aikajana-kortti ${luokka}${this.tapahtumat[this.korttiPysakki[k]].paalu ? ' paalu' : ''}`;
       kortti.style.setProperty('--paikka', paikkaX.toFixed(3));
       kortti.style.setProperty('--mitta', mitta.toFixed(2));
       kortti.style.setProperty('--himmeys', himmeys.toFixed(2));
@@ -4579,7 +4739,10 @@ class Aikajana {
   napautaKorttia(i) {
     const t = this.tapahtumat[i];
     if (!t) return;
-    if (i === this.tila.i) {
+    // "Nykyinen" on KORTTI eikä pysäkki: kello on voinut ohittaa
+    // hiljaisia löytöpaikkoja sen jälkeen, kun tämä kortti nousi
+    // keskelle nauhaa. Kaarella ilman hiljaisia vertailu on entinen.
+    if (this.korttinumero(i) === this.korttinumero(this.tila.i)) {
       this.pysayta();
       if (t.juttu) this.avaaJuttu(t);
       return;
