@@ -1,5 +1,18 @@
 # Uutisvälityksen käyttöönotto (omistajalle, n. 5 min)
 
+> **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
+> lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
+> (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,
+> artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy leipäteksti
+> ja `og:image` löytyy). Kaksi osoitetta on kirjoitettava täsmälleen
+> oikein, koska worker ei seuraa uudelleenohjauksia: Capital FM on
+> `.africa` (`.co.ke` vastaa 301:llä) ja Nile Postin syöteosoitteesta
+> puuttuu loppukauttaviiva. Nation-ryhmän lehdet (Daily Nation, Taifa
+> Leo, Daily Monitor, Mwananchi, The Citizen) ovat kaikissa kolmessa
+> maassa Cloudflaren botti-eston takana; perustelut hylkäyksille ovat
+> js/packs/uutislahteet.js:n maakohtaisissa kommenteissa. Julkaisu Git-
+> integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Papua-Uusi-Guinea, Salomonsaaret):**
 > sallittuihin lisättiin www.postcourier.com.pg ja
 > theislandsun.com.sb (maalehdet PNG/SLB, testattu 6.9.2026: syötteessä

@@ -55,6 +55,13 @@ const SALLITUT = [
   'https://www.montevideo.com.uy/',
   'https://www.abc.com.py/',
   'https://www.elnacional.com/',
+  // Kenian, Tansanian ja Ugandan uutislähteet (maalehdet 6.9.2026):
+  // syöte ja artikkelisivut samalla isäntänimellä. Capital FM:n osoite
+  // on .africa, koska .co.ke ohjaa 301:llä eikä worker seuraa
+  // uudelleenohjauksia.
+  'https://capitalfm.africa/',
+  'https://globalpublishers.co.tz/',
+  'https://nilepost.co.ug/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

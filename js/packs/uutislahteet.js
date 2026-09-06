@@ -289,4 +289,68 @@ export const UUTISLAHTEET = {
    * 60 merkin kappaletta). Fiji Sun, Fijivillage ja Fijilive eivät
    * tarjonneet toimivaa RSS-osoitetta (404, HTML-sivu tai 403).
    */
+  /*
+   * Capital FM on nairobilainen yksityinen uutis- ja radiokanava.
+   * Testattu 6.9.2026: syötteessä kymmenen juttua, ja artikkelisivun
+   * ensimmäisestä <article>-lohkosta jäsentyy neljästä viiteen yli 60
+   * merkin kappaletta sekä og:image.
+   *
+   * OSOITE ON .africa EIKÄ .co.ke TARKOITUKSELLA: capitalfm.co.ke
+   * vastaa 301:llä uuteen osoitteeseen, eikä worker seuraa
+   * uudelleenohjauksia.
+   *
+   * Testattu ja hylätty: Nation ja Taifa Leo (Cloudflaren botti-esto,
+   * 403), The Standard (syöte antaa kolmekymmentä juttua, mutta
+   * artikkelisivulla ei ole <article>-elementtiä eikä
+   * [itemprop="articleBody"]-merkintää), Tuko (artikkelisivulla on
+   * viisitoista <article>-lohkoa, joista ensimmäinen alkaa mainoksella
+   * eikä jutulla), Kenyans.co.ke (ensimmäisessä <article>-lohkossa ei
+   * yhtään yli 60 merkin kappaletta), The Star ja People Daily (404 ja
+   * 301). KBC läpäisi molemmat testit, mutta se on valtion
+   * yleisradioyhtiö, joten yksityinen Capital FM valittiin sen ohi.
+   */
+  KEN: {
+    nimi: 'Capital FM',
+    kieli: 'en',
+    syote: 'https://capitalfm.africa/news/feed/',
+  },
+  /*
+   * Global Publishers on dar es salaamilainen swahilinkielinen
+   * lehtitalo. Testattu 6.9.2026: syötteessä kymmenen juttua, ja
+   * artikkelisivun ainoasta <article>-lohkosta jäsentyy kahdeksasta
+   * kolmeenkymmeneen yli 60 merkin kappaletta sekä og:image.
+   *
+   * HUOMIO FABLELLE: talo julkaisee sekä uutis- että viihdelehtiä, ja
+   * syötteessä on molempia. Vaihtoehtoja ei juuri ollut: Mwananchi ja
+   * The Citizen (Nation-ryhmä) ovat Cloudflaren botti-eston takana,
+   * IPP Median ja Daily Newsin syötteet vastaavat 403:lla tai
+   * JavaScript-haasteella, Habari Leo samoin, Millard Ayo oli poissa
+   * käytöstä, ja The Chanzon sekä Jamhuri Median artikkelisivuilla ei
+   * ole <article>-elementtiä lainkaan.
+   */
+  TZA: {
+    nimi: 'Global Publishers',
+    kieli: 'sw',
+    syote: 'https://globalpublishers.co.tz/feed/',
+  },
+  /*
+   * Nile Post on kampalalainen uutissivusto. Testattu 6.9.2026:
+   * syötteessä kolmesataa juttua, ja artikkelisivun ainoasta
+   * <article>-lohkosta jäsentyy yli kymmenen yli 60 merkin kappaletta
+   * sekä og:image.
+   *
+   * OSOITTEESSA EI OLE LOPPUKAUTTAVIIVAA: nilepost.co.ug/feed/ vastaa
+   * 301:llä osoitteeseen ilman viivaa, eikä worker seuraa
+   * uudelleenohjauksia.
+   *
+   * Testattu ja hylätty: Daily Monitor (Cloudflaren botti-esto, 403),
+   * New Vision (/rss vastaa 404:llä), The Independent (palomuurin
+   * esto), The Observer (301 ilman toimivaa päätepistettä) ja
+   * ChimpReports (syöte vastaa 302:lla).
+   */
+  UGA: {
+    nimi: 'Nile Post',
+    kieli: 'en',
+    syote: 'https://nilepost.co.ug/feed',
+  },
 };

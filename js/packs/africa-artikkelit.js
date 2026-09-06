@@ -607,9 +607,21 @@ export const OMAT_ARTIKKELIT = {
       + 'kukkien peittämä Namaqualand keväisin.',
   },
   Tansania: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // TZA) nojaa tähän introon yksin, sama malli kuin Egyptillä.
     intro: 'Tansaniassa ovat Afrikan katto Kilimandžaro, Serengetin '
       + 'suuret laumat ja Sansibarin maustesaaret. Swahilin kieli '
-      + 'yhdistää yli sadan kansan maan.',
+      + 'yhdistää yli sadan kansan maan: se on koulun, kaupan ja '
+      + 'hallinnon kieli, ja sen aseman rakensi tietoisesti '
+      + 'ensimmäinen presidentti Julius Nyerere. Rannikko ja saaret '
+      + 'kuuluivat vuosisatoja Intian valtameren kauppaverkkoon, jonka '
+      + 'varrella syntyivät Kivikaupungin kaiverretut ovet ja Pemban '
+      + 'neilikkaviljelmät. Sisämaassa ovat Ngorongoron '
+      + 'romahduskattila, Olduvain rotko ja syvä Tanganjikajärvi. '
+      + 'Tanganjika itsenäistyi 1961 ja yhdistyi Sansibarin kanssa '
+      + '1964 Tansaniaksi. Ruoka vaihtuu rannikon maustetusta pilausta '
+      + 'sisämaan ugaliin ja grillattuun lihaan, ja kaupunkien '
+      + 'radioissa soi bongo flava.',
     artikkeli: 'Tansania sijaitsee Itä-Afrikassa Intian valtameren '
       + 'rannalla. Maan rajojen sisään mahtuvat Afrikan korkein vuori '
       + 'Kilimandžaro, mantereen suurin järvi Viktorianjärvi ja '
@@ -1326,9 +1338,22 @@ export const OMAT_ARTIKKELIT = {
       + 'toreilla myydään järven kuivattua kalaa ja dihé-leväkakkuja.',
   },
   Kenia: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // KEN) nojaa tähän introon yksin, sama malli kuin Egyptillä.
     intro: 'Kenia on safarien, ylänköjen ja juoksijoiden maa, jonka '
       + 'halki kulkee Suuri hautavajoama ja jonka rannikolla swahili '
-      + 'syntyi.',
+      + 'syntyi. Päiväntasaaja jakaa maan kahtia: pohjoisessa on '
+      + 'aavikkoa ja Turkana-järvi, etelässä teetarhoja ja '
+      + 'lumihuippuinen Mount Kenya. Rannikon kaupungit Mombasa ja '
+      + 'Malindi kävivät kauppaa valtameren yli jo kaksituhatta vuotta '
+      + 'sitten, ja niiden swahilikulttuuri syntyi afrikkalaisen ja '
+      + 'Intian valtameren maailman kohtaamisesta. Sisämaahan '
+      + 'päästiin kunnolla vasta 1900-luvun alussa, kun rautatie '
+      + 'kiskotettiin Mombasasta Viktorianjärvelle — matkan varrelle '
+      + 'nousi Nairobi. Itsenäisyys tuli 1963, ja maan tunnuslauseeksi '
+      + 'otettiin harambee, yhdessä vetäminen. Hautavajoaman '
+      + 'länsireunan ohuessa ilmassa on kasvanut sukupolvi toisensa '
+      + 'jälkeen maailman parhaita kestävyysjuoksijoita.',
     artikkeli: 'Kenia levittäytyy päiväntasaajan molemmin puolin '
       + 'Intian valtamereltä Viktorianjärvelle. Suuri hautavajoama '
       + 'halkoo ylänköä, ja sen laaksoissa ovat sekä flamingojärvet '
@@ -1521,8 +1546,21 @@ export const OMAT_ARTIKKELIT = {
       + 'yötaivas on niin pimeä, että Linnunrata valaisee polun.',
   },
   Uganda: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // UGA) nojaa tähän introon yksin, sama malli kuin Egyptillä.
     intro: 'Uganda on Afrikan helmi: Viktorianjärven, Niilin '
-      + 'lähteiden ja vuorigorillojen vehreä maa päiväntasaajalla.',
+      + 'lähteiden ja vuorigorillojen vehreä maa päiväntasaajalla. '
+      + 'Maa on ylänköä, jossa sataa kaksi kertaa vuodessa, joten '
+      + 'banaanitarha ja teepensas kasvavat samassa maisemassa. Ennen '
+      + 'nykyistä valtiota alueella oli kuningaskuntia — Buganda, '
+      + 'Bunyoro, Busoga ja Toro — ja koko maa sai nimensä niistä '
+      + 'suurimman swahilinkielisestä muodosta. Pääkaupunki Kampala '
+      + 'levittäytyy kukkuloille järven pohjoisrannalla, ja Jinjassa '
+      + 'Niili lähtee matkalleen kohti Välimerta. Ruokapöydässä ovat '
+      + 'höyryssä survottu matoke, maapähkinäkastike ja kadulta '
+      + 'ostettu rolex eli chapatiin kääritty munakas. Soittimet '
+      + 'tehdään siitä mitä kasvaa: kurpitsatorvista, kaarevasta '
+      + 'oksasta ja lehmännahasta.',
     artikkeli: 'Uganda lepää ylängöllä Viktorianjärven '
       + 'luoteisrannalla. Maa on vehreä kuin puutarha: kaksi '
       + 'sadekautta vuodessa, banaanitarhoja ja teepensaita — '
