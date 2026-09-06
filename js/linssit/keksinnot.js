@@ -102,7 +102,7 @@
  * kuvaputken lopulliset, ihminen edellä -linjan mukaiset, ja ne on
  * kopioitu kuittauksesta sanasta sanaan.
  */
-export const KEKSINTO_KUVAJUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/keksinnot';
+export const KEKSINTO_KUVAJUURI = 'https://media.matkakirja.app/aikajana/keksinnot';
 
 /** Euroopan alue laudalla — kamera sovitetaan tähän (js/aikajana.js). */
 const EUROOPPA = { x: 5560, y: 830, w: 1700, h: 1000 };
@@ -731,7 +731,7 @@ export const KEKSINNOT = [
     ilmio: {
       // Pohjukkeeton versio (omistaja hyväksyi 4.9.2026, kuvaputki R2 15:09 UTC):
       // pelkkä kuva, jotta paneelin häivytys näkyy oikein — ei rajausta.
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-kanton-1873-kuva-v1.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/isoisa/isoisa-kanton-1873-kuva-v1.jpg',
       ulkoinen: true,
       selite: 'Isoisä teehuoneen pöydässä Kantonissa 1873. Kulunut cabinet card '
         + 'isoisän matkalaukusta.',
@@ -750,7 +750,7 @@ export const KEKSINNOT = [
      */
     ilmioSarja: [
       {
-        osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/isoisa-lahto-1873-kulunut-v1.jpg',
+        osoite: 'https://media.matkakirja.app/kohtaamiset/isoisa/isoisa-lahto-1873-kulunut-v1.jpg',
         ulkoinen: true,
         // Kuvaputken kuvateksti sanasta sanaan (toimitus 4.9.2026 08:48 UTC).
         selite: 'Isoisä nousee Charing Crossilla maailmanympärimatkansa ensimmäiseen '

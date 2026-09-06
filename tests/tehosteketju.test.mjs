@@ -124,7 +124,7 @@ test('ketjujen nimet ovat ne viisi, jotka peli tarvitsee, ja akustiikat niiden o
 
 test('kirjaston osoite on ämpärin vendor/-polku eikä tuotantokoodissa ole CDN:ää', () => {
   assert.equal(TUNA_KIRJASTO, `${PEILI_JUURI}vendor/tuna-1.1.3.js`);
-  assert.match(TUNA_KIRJASTO, /^https:\/\/pub-[0-9a-f]+\.r2\.dev\/vendor\/tuna-1\.1\.3\.js$/);
+  assert.match(TUNA_KIRJASTO, /^https:\/\/(?:media\.matkakirja\.app|pub-[0-9a-f]+\.r2\.dev)\/vendor\/tuna-1\.1\.3\.js$/);
   for (const p of ['js/tehosteketju.js', 'js/puhe.js', 'js/fokuskohteet.js', 'js/main.js', 'sw.js']) {
     const src = lue(p);
     assert.doesNotMatch(src, /jsdelivr|cdnjs|unpkg|esm\.sh/i, `${p} viittaa CDN:ään`);

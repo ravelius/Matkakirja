@@ -31,7 +31,7 @@ function muistiTynka() {
 }
 
 test('kirjasto tulee pelin ämpäristä vendor/-polusta, ei reposta eikä CDN:stä', () => {
-  assert.match(SIVUNKAANTO_KIRJASTO, /^https:\/\/pub-[a-z0-9]+\.r2\.dev\/vendor\/page-flip-\d+\.\d+\.\d+\.browser\.js$/);
+  assert.match(SIVUNKAANTO_KIRJASTO, /^https:\/\/(?:media\.matkakirja\.app|pub-[a-z0-9]+\.r2\.dev)\/vendor\/page-flip-\d+\.\d+\.\d+\.browser\.js$/);
   assert.equal(SIVUNKAANTO_VERSIO, '2.0.7');
   assert.ok(SIVUNKAANTO_KIRJASTO.includes(`page-flip-${SIVUNKAANTO_VERSIO}`));
   // Tuotantokoodissa ei ole CDN-osoitetta (sääntö 1) — vain savuke

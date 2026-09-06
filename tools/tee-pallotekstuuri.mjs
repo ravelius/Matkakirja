@@ -39,7 +39,7 @@ if (process.argv[1] === TAMA && !process.env.NODE_USE_ENV_PROXY
   process.exit(ajo.status ?? 1);
 }
 
-export const JULKINEN_JUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/';
+export const JULKINEN_JUURI = 'https://media.matkakirja.app/';
 const LUETTELO = `${JULKINEN_JUURI}julisteet/pyramidi/pyramidi.json`;
 /**
  * Pinnoitteen mitat tasosta: 2:1, leveys 2048 × 2^(z−2) — z3 = 4096,

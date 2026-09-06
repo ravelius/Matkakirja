@@ -200,7 +200,7 @@ node tools/tee-korkeuspalat.mjs --ulos korkeus/1min
 Vienti ämpäriin: `.github/workflows/vie-korkeuspalat.yml`
 (workflow_dispatch; syötteet `lahde` = ncei|erddap, `koeajo`, `palat`).
 Julkinen juuri
-`https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/julisteet/korkeus/1min/`.
+`https://media.matkakirja.app/julisteet/korkeus/1min/`.
 
 ## Muoto
 

@@ -23,7 +23,7 @@
  * jo nimeä R2_JUURI samasta ämpäristä (tools/tarkista-niputus.mjs
  * kaataa törmäyksen).
  */
-export const KOHTAAMIS_R2_JUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset';
+export const KOHTAAMIS_R2_JUURI = 'https://media.matkakirja.app/kohtaamiset';
 
 export const kohtaamiskuvat = [
   {

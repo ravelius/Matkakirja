@@ -155,7 +155,7 @@
  * näkyvyysalueeseen (tools/tarkista-niputus.mjs), joten nimi alkaa
  * ELAINTAKY-etuliitteellä.
  */
-const ELAINTAKY_KUVAJUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/';
+const ELAINTAKY_KUVAJUURI = 'https://media.matkakirja.app/kohtaamiset/kuvajono/';
 
 /** Maatunnus → eläintäky. Avaimet ovat laudan countryShapes-tunnuksia. */
 export const ELAINTAKYT = {

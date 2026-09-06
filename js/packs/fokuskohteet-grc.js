@@ -1139,7 +1139,7 @@ export const FOKUSKOHTEET_GRC = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-delfoi-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-delfoi-loistoaika-v2.jpg',
       kadonnut: false,
       selite: 'Kuvituksen nuori lähettiläs toistaa mielessään kotikaupunkinsa '
         + 'kysymystä, sillä Pythian vastausta ei saa pyytää uudelleen vain '
@@ -2072,7 +2072,7 @@ export const FOKUSKOHTEET_GRC = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-olympieion-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-olympieion-loistoaika-v2.jpg',
       kadonnut: false,
       selite: 'Kuvituksen isä nostaa tyttärensä kivelle, jotta tämä voisi '
         + 'laskea pylväitä — tehtävä käy mahdottomaksi jo kauan ennen sataa. '

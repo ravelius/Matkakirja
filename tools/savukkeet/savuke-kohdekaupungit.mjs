@@ -112,7 +112,7 @@ const vaadi = (nimi, ehto, lisa = '') => {
  * OIKEAT nostolaatat, ja väite 3 mittaa sitä mustetta, jonka omistaja
  * ruudullaan näkee.
  */
-const AMPARI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/';
+const AMPARI = 'https://media.matkakirja.app/';
 const valimuisti = new Map();
 async function ampariHaku(url) {
   if (valimuisti.has(url)) return valimuisti.get(url);

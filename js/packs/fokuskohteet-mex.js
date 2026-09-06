@@ -110,7 +110,7 @@ export const FOKUSKOHTEET_MEX = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-templo-mayor-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-templo-mayor-loistoaika-v2.jpg',
       kadonnut: true,
       selite: 'Kuvituksen kukkakauppias pitää tytärtään hartioista, kun tämä '
         + 'näkee kaksoispyhäkön ensimmäisen kerran. Tavalliset '

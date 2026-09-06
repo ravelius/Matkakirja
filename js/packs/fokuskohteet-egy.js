@@ -123,7 +123,7 @@ export const FOKUSKOHTEET_EGY = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-faros-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-faros-loistoaika-v2.jpg',
       kadonnut: true,
       selite: 'Viljalaivan kansipoika näkee Faroksen ensimmäistä kertaa ja '
         + 'kuulee vanhemman merimiehen osoittavan turvallisen väylän. '
@@ -262,7 +262,7 @@ export const FOKUSKOHTEET_EGY = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-gizan-pyramidi-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-gizan-pyramidi-loistoaika-v2.jpg',
       kadonnut: false,
       selite: 'Kuvituksen kivenhioja tunnustelee sauman sileyttä samalla kun '
         + 'lapsi tuo hänelle vettä. Näkymä palauttaa jättimäisen luvun '

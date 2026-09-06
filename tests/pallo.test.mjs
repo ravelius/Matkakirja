@@ -98,9 +98,9 @@ test('pallon kaupungit tulevat laudalta ja napautus sukeltaa napautettuun kohtaa
 });
 
 test('kirjasto ja pinnoite tulevat pelin ämpäristä, ei reposta', () => {
-  assert.match(PALLO_KIRJASTO, /^https:\/\/pub-[a-z0-9]+\.r2\.dev\/vendor\/globe\.gl-\d+\.\d+\.\d+\.min\.js$/);
+  assert.match(PALLO_KIRJASTO, /^https:\/\/(?:media\.matkakirja\.app|pub-[a-z0-9]+\.r2\.dev)\/vendor\/globe\.gl-\d+\.\d+\.\d+\.min\.js$/);
   assert.equal(PALLO_TEKSTUURITASO, 4, 'z4 on ainoa pinnoite (omistaja 4.9.2026)');
-  assert.equal(PALLO_TEKSTUURI, `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/${pinnoitteenAvain(PALLO_TEKSTUURIVERSIO, 4)}`);
+  assert.equal(PALLO_TEKSTUURI, `https://media.matkakirja.app/${pinnoitteenAvain(PALLO_TEKSTUURIVERSIO, 4)}`);
   assert.match(PALLO_TEKSTUURI, /tekstuuri-z4\.jpg$/);
   assert.deepEqual(pinnoitteenMitat(4), { leveys: 8192, korkeus: 4096, laatu: 82 });
   assert.match(lue('../.github/workflows/tee-pallotekstuuri.yml'), /default: '4'/);
@@ -118,7 +118,7 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   const versio = PALLO_KIRJASTO.match(/globe\.gl-(\d+)\.(\d+)\.\d+\.min\.js$/);
   assert.ok(versio && (Number(versio[1]) > 2 || Number(versio[2]) >= 46), PALLO_KIRJASTO);
   assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-nostot-c`, 'kansio c: etelan reunasavyt tasoitettu (v1583-v1589), valmis 6.9.2026 klo 00.40');
-  assert.equal(PALLO_LAATAT, `https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/${laattojenKansio(PALLO_LAATTAVERSIO, true, 'c')}`);
+  assert.equal(PALLO_LAATAT, `https://media.matkakirja.app/${laattojenKansio(PALLO_LAATTAVERSIO, true, 'c')}`);
   assert.equal(pallonLaatta(3, 5, 4), `${PALLO_LAATAT}4/3/5.jpg`);
   assert.equal(PALLO_LAATTATASO_MAX, 8, 'taso 8 kaytossa 5.9.2026');
   // Luettelon puute tai virhe → varatekstuuri, ei kaatumista.

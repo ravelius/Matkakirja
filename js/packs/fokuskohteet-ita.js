@@ -831,7 +831,7 @@ export const FOKUSKOHTEET_ITA = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-colosseum-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-colosseum-loistoaika-v2.jpg',
       kadonnut: false,
       selite: 'Katsoja puristaa sisäänpääsymerkkiään ja etsii holvikäytävästä '
         + 'omaa numeroitua reittiään: paikka areenalla määräytyy '

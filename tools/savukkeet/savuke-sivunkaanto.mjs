@@ -73,7 +73,7 @@ const vaadi = (nimi, ehto, lisa = '') => {
 };
 const tieto = (nimi, arvo) => console.log(`INFO  ${nimi}: ${arvo}`);
 
-const AMPARI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/';
+const AMPARI = 'https://media.matkakirja.app/';
 const VENDOR = 'vendor/page-flip-2.0.7.browser.js';
 const valimuisti = new Map();
 async function ampariHaku(url) {

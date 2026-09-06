@@ -118,7 +118,7 @@
  * piilottaa kuvakehyksen eikä riko korttia (js/fokusnosto.js
  * asetaNostonKuva).
  */
-const SKANDAALI_KUVAJUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/';
+const SKANDAALI_KUVAJUURI = 'https://media.matkakirja.app/kohtaamiset/kuvajono/';
 
 export const SKANDAALIT = {
   AUT: [

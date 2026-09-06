@@ -115,7 +115,7 @@ export const FOKUSKOHTEET_AFG = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-bamiyan-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-bamiyan-loistoaika-v2.jpg',
       kadonnut: true,
       selite: 'Silkkitien matkalainen saapuu laaksoon päiviä kestäneen '
         + 'vuoristotaipaleen jälkeen ja näkee kallioon maalatut jättiläiset '

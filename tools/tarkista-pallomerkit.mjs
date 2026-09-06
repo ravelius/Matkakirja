@@ -81,7 +81,7 @@ const palvelin = http.createServer((req, res) => {
 await new Promise((ok) => palvelin.listen(0, ok));
 const osoite = `http://localhost:${palvelin.address().port}/`;
 
-const AMPARI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/';
+const AMPARI = 'https://media.matkakirja.app/';
 const valimuisti = new Map();
 async function ampariHaku(url) {
   if (valimuisti.has(url)) return valimuisti.get(url);

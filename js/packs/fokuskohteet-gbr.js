@@ -229,7 +229,7 @@ export const FOKUSKOHTEET_GBR = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-crystal-palace-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-crystal-palace-loistoaika-v2.jpg',
       kadonnut: true,
       selite: 'Kuvituksen perheen nuorin näkee mäen laelta rakennuksen, joka '
         + 'näyttää olevan tehty lähes kokonaan valosta. Vanhemmille päivä '

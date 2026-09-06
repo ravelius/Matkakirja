@@ -92,7 +92,7 @@ export const HILA_RIVEJA = 10801;
 export const HILAN_KIERROS = HILA_SARAKKEITA - 1;
 
 /** Palojen julkinen juuri R2:ssa. */
-export const PALOJEN_URL = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev'
+export const PALOJEN_URL = 'https://media.matkakirja.app'
   + '/julisteet/korkeus/1min/';
 
 /** Levyvälimuistin oletuspaikka; ei kuulu repoon. */
