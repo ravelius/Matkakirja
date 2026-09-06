@@ -6065,18 +6065,25 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 
 /*
  * Paikkarivi avaustekstin ensimmäisenä rivinä — kohtausmerkintä, ei
- * repliikki. Kertoja ei lue sitä (ks. index.html), joten se ei myöskään
- * näytä samalta kuin luettu teksti: pienempi, harvempi ja himmeämpi,
- * kuin käsikirjoituksen kohtausotsikko. Koko on em, jotta se seuraa
- * fitIntron säätämää kirjasinkokoa.
+ * repliikki. Kertoja ei lue sitä (ks. index.html), joten se erottuu
+ * luetusta tekstistä koolla ja lihavuudella. Koko on em, jotta se
+ * seuraa fitIntron säätämää kirjasinkokoa.
+ *
+ * SAMA MUSTE KUIN LEIPÄTEKSTISSÄ, PIENEMPI JA LIHAVOITU (omistaja
+ * 6.9.2026 klo 11.11, iPhone: *"Heathrow saisi olla samalla värillä
+ * kuin muut. Mutta vaikka vähän pienemmällä ja boldattuna?"*). Rivi oli
+ * ennen himmeämpi (--map-ink-soft + opacity 0.9) ja erottui puhelimen
+ * ruudulla huonosti pallon pinnan päältä. Harvennus on samalla
+ * kevennetty 0,14em → 0,06em: lihavoitu rivi leviäisi muuten yli
+ * palstan ja rivittyisi kahdelle riville kapealla ruudulla.
  */
 .intro-paikka {
   display: block;
   margin-bottom: 0.9em;
-  font-size: 0.86em;
-  letter-spacing: 0.14em;
-  color: var(--map-ink-soft);
-  opacity: 0.9;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--map-ink);
 }
 
 /*
@@ -6311,6 +6318,13 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * EI YHTÄÄN CSS-ANIMAATIOTA eikä suodatinta (iOS-sääntö): paikka ja
  * peittävyys tulevat piirrosta joka kehyksellä, ja häivytys on osa
  * samaa laskentaa (REITTIKUVAN_ILMESTYS_S / _HAIPYMINEN_S).
+ */
+/*
+ * Reittikuvien kerros. MASKI TULEE JS:STÄ (js/etusivupallo.js
+ * julisteenMaski): kerrokseen leikataan pehmeäreunainen soikea aukko
+ * julisteotsikon kohdalle, jottei kuva paista otsikon ja sen
+ * läpikuultavan pergamenttiharson läpi (omistaja 6.9.2026). Aukko on
+ * ruudun kokoinen luku, joten sitä ei voi kirjoittaa tähän.
  */
 .etusivupallo-kuvat {
   position: absolute;

@@ -15428,33 +15428,36 @@ export class UI {
     // Pelin resetistä palattaessa portti ohitetaan: juliste piiloon
     // tässä samassa piirrossa, ennen kuin mitään ehtii näkyä.
     this.piilotaAvausjuliste();
-    // Sama mittaus myös tätä kautta (portti ohitettu): koko on
-    // paikallaan ennen ensimmäistäkään kirjainta.
-    this.fitIntro();
     /*
-     * Avauslennon esilämmitys alkaa samasta hetkestä kuin kertomus:
-     * pelaaja kuuntelee, peli rakentaa kohdelaudan taustalla
-     * (ks. esilammitaAvaus).
-     */
-    this.esilammitaAvaus();
-    /*
-     * PAIKKARIVI NAPUTETAAN ENSIN (omistajan tilaus 25.8.2026: "Tätä ei
-     * tarvitse lukea, mutta konekirjoitus ääni pitää kuulua ensin tämän
-     * kohdalla, sitten vasta alkaa seuraavan kappaleen luenta").
-     * Kirjoituskone lyö kohtausmerkinnän, ja vasta sen valmistuttua
-     * kertoja aloittaa ja runko alkaa kirjoittua.
-     */
-    if (this.introPaikka) this.introPaikka.textContent = '';
-    /*
-     * Avausteksti kirjoittuu selvästi hitaammin kuin muut: se on matkan
-     * ensimmäinen hetki eikä pelitilanteen ilmoitus.
+     * KOKO ALALOHKO ON LOPULLISEN KOKOINEN ENNEN ENSIMMÄISTÄ KIRJAINTA
+     * (omistaja 6.9.2026 klo 11.11, iPhone: *"Konekirjoitusteksti
+     * hyppää kun tekstiä tulee"*).
      *
-     * Teksti varaa tilansa näkymättömällä varjotekstillä (typeTextin
-     * oma pending-span) jo ennen kirjoitusta, ja fitIntro mitataan
-     * vasta sen jälkeen — muuten palsta kasvaisi kirjoituksen alla ja
-     * kansikuva hyppisi sen perässä.
+     * JUURISYY: kumpikin kirjoituskohta oli TYHJÄ siihen asti, kunnes
+     * sen oma typeText alkoi — paikkarivi vasta AVAUS_KERTOMUS_MS:n
+     * kohdalla ja runko vasta rivin valmistuttua. typeText varaa
+     * tilansa näkymättömällä varjotekstillä (pending-span), mutta se
+     * varaus syntyy vasta kirjoituksen alkaessa, ja koska palsta on
+     * arkin keskellä (css .intro-arkki align-items: center), lohko
+     * kasvoi kahdessa askeleessa ja liukui ylöspäin kummallakin.
+     * Mitattu Chromiumilla ennen korjausta: palstan yläreuna 558 → 535
+     * → 439 px (390 × 844) ja 532 → 519 → 461 px (1280 × 800), ja
+     * VALITSE ALOITUSKAUPUNKI -nappi saman verran alaspäin.
+     *
+     * Korjaus varaa MOLEMPIEN kirjoituskohtien lopullisen tilan tässä,
+     * samassa piirrossa jossa alalohko ylipäätään ilmestyy: teksti on
+     * paikallaan koko mitassaan, näkymättömänä. Sen jälkeen mitään ei
+     * lisätä lohkoon — kirjoituskone vain paljastaa jo varattua tilaa,
+     * ja harso (::before) on lopullisen kokoinen ensimmäisestä
+     * kehyksestä. Vartija: tests/lento-ajoitus.test.mjs.
+     *
+     * PAIKKARIVIN TEKSTI TALTEEN TÄSSÄ: sama merkkijono kirjoitetaan
+     * myöhemmin, joten varaus ja kirjoitus eivät voi erota toisistaan
+     * (esim. kuukauden vaihtuessa keskellä avausta).
      */
-    this.introRunko.textContent = '';
+    this.introPaikkaTeksti = `${this.introPaikkarivi()}:`;
+    if (this.introPaikka) this.varaaKirjoitustila(this.introPaikka, this.introPaikkaTeksti);
+    this.varaaKirjoitustila(this.introRunko, INTRO_TEXT);
     /*
      * MISTÄ ALOITAN? -NAPPI ILMESTYY VASTA KIRJOITUKSEN JÄLKEEN
      * (omistajan tilaus 25.8.2026). Nappi on kuitenkin jo asettelussa
@@ -15470,6 +15473,19 @@ export class UI {
         this.introValinta.addEventListener('click', () => this.aloitaKartalta());
       }
     }
+    /*
+     * MITTAUS VASTA NYT, kun lohkossa on kaikki mitä siihen tulee:
+     * teksti varattuna ja nappi paikallaan. Näin fitIntro näkee saman
+     * korkeuden kuin kirjoituksen lopussa eikä kirjasinkoko muutu
+     * kesken avauksen (omistajan aiempi havainto 5.9.2026 klo 00.20).
+     */
+    this.fitIntro();
+    /*
+     * Avauslennon esilämmitys alkaa samasta hetkestä kuin kertomus:
+     * pelaaja kuuntelee, peli rakentaa kohdelaudan taustalla
+     * (ks. esilammitaAvaus).
+     */
+    this.esilammitaAvaus();
     const aloitaRunko = () => {
       if (this.dead || this.game.phase !== 'pickstart') return;
       // Luenta alkaa vasta nyt — paikkarivi oli pelkkää konekirjoitusta.
@@ -15478,23 +15494,26 @@ export class UI {
         // Nappi paljastuu pehmeästi vasta kun viimeinen kirjain on tullut.
         this.introValinta?.classList.remove('intro-valinta-piilossa');
       }, INTRO_TYPE_MS);
-      // Koko teksti on paikallaan (typeTextin varjoteksti varaa tilan),
-      // joten koon voi sovittaa heti — mikään ei liiku kirjoituksen alla.
-      this.fitIntro();
+      // EI fitIntroa täällä: tila on varattu jo renderIntrossa, ja
+      // mittaus juuri kirjoituskoneen alkaessa on se, mikä ennen sai
+      // asettelun hyppäämään.
     };
     /*
      * KIRJOITUSKONE JA LUENTA ALKAVAT VASTA ALAVIIVAN JÄLKEEN (omistaja
      * 6.9.2026 aamu). Pari säilyttää keskinäisen ajoituksensa —
-     * paikkarivi naputetaan ensin, ja sen valmistuttua kertoja aloittaa
-     * rungon kanssa — mutta koko pari odottaa julisteen valmiiksi
-     * (naytaAvausjuliste, AVAUS_KERTOMUS_MS).
+     * paikkarivi naputetaan ensin (omistajan tilaus 25.8.2026: *"Tätä
+     * ei tarvitse lukea, mutta konekirjoitus ääni pitää kuulua ensin
+     * tämän kohdalla, sitten vasta alkaa seuraavan kappaleen luenta"*),
+     * ja sen valmistuttua kertoja aloittaa rungon kanssa — mutta koko
+     * pari odottaa julisteen valmiiksi (naytaAvausjuliste,
+     * AVAUS_KERTOMUS_MS). Molempien tila on varattu jo renderIntrossa,
+     * joten tässä ei mitata eikä mikään liiku.
      */
     const aloitaKertomus = () => {
       if (this.dead || this.game.phase !== 'pickstart') return;
       if (this.introPaikka) {
-        this.typeText(this.introPaikka, `${this.introPaikkarivi()}:`, 'intro',
+        this.typeText(this.introPaikka, this.introPaikkaTeksti, 'intro',
           aloitaRunko, INTRO_TYPE_MS);
-        this.fitIntro();
       } else {
         aloitaRunko();
       }
@@ -18522,17 +18541,41 @@ export class UI {
   }
 
   /**
+   * VARAA KIRJOITUSKONEEN TILAN ENNAKKOON: sama näkymätön varjoteksti
+   * kuin typeTextin lähtötilassa (tyhjä `typed` + täysi `pending`),
+   * mutta ilman ajastimia. Elementti on siis heti lopullisen kokoinen,
+   * ja kirjoituskone vain paljastaa jo varattua tilaa.
+   *
+   * Tätä tarvitaan siellä, missä kirjoitus alkaa vasta sekuntien
+   * päästä mutta lohko on jo ruudulla: etusivun avauksessa paikkarivi
+   * ja runko odottavat julisteen valmistumista, ja ilman varausta
+   * keskitetty tekstipalsta kasvoi ja liukui kummankin alkaessa
+   * (omistaja 6.9.2026: *"Konekirjoitusteksti hyppää kun tekstiä
+   * tulee"*). Sama teksti annetaan myöhemmin typeTextille.
+   *
+   * Varjoteksti on `visibility: hidden` (css .pending), joten se ei näy
+   * eikä päädy ruudunlukijalle.
+   */
+  varaaKirjoitustila(target, text) {
+    if (!target) return;
+    target.textContent = '';
+    target.appendChild(html('span', 'typed'));
+    const tuleva = html('span', 'pending');
+    tuleva.textContent = String(text);
+    target.appendChild(tuleva);
+  }
+
+  /**
    * Kirjoituskone: teksti naksuu ruudulle sana kerrallaan kuin vanhalla
    * matkakirjoituskoneella. Sama paikka (slot) keskeyttää edellisen
    * kirjoituksen, jotta tekstit eivät sekoitu keskenään. Liikkeen
    * vähennystä toivovalle teksti ilmestyy kerralla.
-   */
-  /**
-   * Kirjoituskoneteksti. Koko teksti on alusta asti paikallaan, mutta
-   * kirjoittamaton osa on näkymätöntä: se varaa tilansa, joten rivitys ei
-   * muutu kesken kirjoituksen eikä jo luettu teksti hyppää paikaltaan.
-   * Aiemmin sanat lisättiin yksi kerrallaan, jolloin koko kappale latoutui
-   * uudelleen joka sanalla.
+   *
+   * Koko teksti on alusta asti paikallaan, mutta kirjoittamaton osa on
+   * näkymätöntä: se varaa tilansa, joten rivitys ei muutu kesken
+   * kirjoituksen eikä jo luettu teksti hyppää paikaltaan. Aiemmin sanat
+   * lisättiin yksi kerrallaan, jolloin koko kappale latoutui uudelleen
+   * joka sanalla.
    */
   typeText(target, text, slot = 'fact', done = null, speed = TYPE_MS) {
     this.typeTimers ??= {};

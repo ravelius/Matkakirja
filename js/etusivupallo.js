@@ -688,6 +688,74 @@ export function reittikuvanKoko(leveys, korkeus) {
   return REITTIKUVAN_KOKO_OSUUS * Math.max(0, Math.min(leveys, korkeus));
 }
 
+/*
+ * KUVA EI NÄY JULISTEOTSIKON KOHDALLA (omistaja 6.9.2026,
+ * iPhone-kuvakaappaus: reittikuva piirtyi "OSA II · UNOHDETTU AARRE"
+ * -rivin taakse ja näkyi sen läpi).
+ *
+ * PELKKÄ PINOJÄRJESTYS EI RIITÄ, vaikka juliste onkin kuvakerroksen
+ * päällä: otsikkorivien välistä ja kirjainten lomasta näkyy läpi, ja
+ * julisteen oma pergamenttiharso on tarkoituksella läpikuultava
+ * (css --harson-peitto 0,8 ja liuku nollaan) — kuva paistoi sen alta.
+ *
+ * KOKO KUVAN HÄIVYTTÄMINEN OLISI LIIKAA. Kuva on ankkuroitu
+ * kaupunkiin, ja kaupungit kulkevat juuri pallon keskeltä eli
+ * julisteen takaa: simulaatio koko kierroksesta (Chromiumin mitatuilla
+ * laatikoilla 1280 × 800 ja 390 × 844) antaa 69–74 % kuvien
+ * näkyvyysajasta julisteen laatikon sisään. Jos kuva sammutettaisiin
+ * kokonaan aina kun se osuu laatikkoon, kuvista jäisi näkyviin vain
+ * neljännes ja omistajan v1630 tilaus menisi käytännössä pois.
+ *
+ * SIKSI LEIKKAUS ON PAIKALLINEN: kuvakerros saa maskin, jossa
+ * julisteen kohdalla on pehmeäreunainen soikea aukko. Kuvan se osa,
+ * joka menisi otsikon päälle, ei piirry lainkaan; loppu kuvasta näkyy
+ * normaalisti ja liukuu aukkoon kuin vinjetti (kuvilla on jo oma
+ * pehmeä reunamaski, ks. css .etusivupallo-reittikuva). Maski on
+ * SOIKIO, koska otsikon kirjain- ja viivarivit muodostavat soikion:
+ * levein rivi on keskellä, kapeimmat ylä- ja alalaidassa.
+ */
+/*
+ * AUKON MITAT. Soikio piirretään julisteen laatikon puolikkaista:
+ *
+ *   JULISTEEN_MASKIAUKKO  umpinaisen aukon säde laatikon puolikkaana.
+ *                         1,0 olisi laatikkoon SISÄÄN piirretty soikio,
+ *                         joka jättäisi nurkat auki — ja juuri
+ *                         nurkkakaistalle osuvat hiusviivakoristeen
+ *                         (.juliste-viiva, 17em) päät ylä- ja
+ *                         alalaidassa. 1,3 vetää soikion niiden yli
+ *                         molemmilla mitatuilla ruuduilla.
+ *   JULISTEEN_MASKIVYO    häivytysvyö aukon ulkopuolella, osuutena
+ *                         aukon säteestä. Ilman vyötä kuva katkeaisi
+ *                         terävään reunaan.
+ */
+export const JULISTEEN_MASKIAUKKO = 1.3;
+export const JULISTEEN_MASKIVYO = 0.2;
+/** Julisteen laatikko mitataan joka N:s kehys — se ei liiku avauksen aikana. */
+export const JULISTEEN_MITTAUSVALI = 12;
+
+/**
+ * Kuvakerroksen maski: läpinäkyvä (= kuva pois) soikea aukko julisteen
+ * laatikon kohdalla, ja siitä ulospäin pehmeä liuku täyteen mustaan
+ * (= kuva näkyy). Laatikko on `{ vasen, yla, oikea, ala }` kerroksen
+ * pikseleissä; ilman julistetta maskia ei ole ('none').
+ */
+export function julisteenMaski(
+  juliste, aukko = JULISTEEN_MASKIAUKKO, vyo = JULISTEEN_MASKIVYO,
+) {
+  const leveys = juliste ? juliste.oikea - juliste.vasen : 0;
+  const korkeus = juliste ? juliste.ala - juliste.yla : 0;
+  if (!(leveys > 0) || !(korkeus > 0)) return 'none';
+  const kx = (juliste.vasen + juliste.oikea) / 2;
+  const ky = (juliste.yla + juliste.ala) / 2;
+  // Säde piirretään vyön kanssa; aukko loppuu siihen, mistä liuku alkaa.
+  const rx = (leveys / 2) * aukko * (1 + vyo);
+  const ry = (korkeus / 2) * aukko * (1 + vyo);
+  const raja = (100 / (1 + vyo)).toFixed(1);
+  return `radial-gradient(ellipse ${rx.toFixed(0)}px ${ry.toFixed(0)}px`
+    + ` at ${kx.toFixed(0)}px ${ky.toFixed(0)}px,`
+    + ` rgba(0, 0, 0, 0) ${raja}%, rgba(0, 0, 0, 1) 100%)`;
+}
+
 /* ==================== KERROS ETUSIVULLE =========================== */
 /**
  * Kerroksen ja julisteen ilmestyminen (ms) — sama luku kuin css
@@ -900,15 +968,50 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     sovitusNyt(),
   );
 
+  /*
+   * AUKKO JULISTEOTSIKON KOHDALLE. Otsikon laatikko mitataan
+   * harvakseen (JULISTEEN_MITTAUSVALI): se ei liiku avauksen aikana —
+   * koko on lyöty lukkoon jo portin takana (js/ui.js fitIntro) — ja
+   * getBoundingClientRect kesken piirron pakottaisi turhan
+   * uudelleenladonnan joka kehyksellä. Harva mittaus riittää myös
+   * ruudun kääntöön: maski seuraa perässä parissa sadassa
+   * millisekunnissa.
+   *
+   * Maski kirjoitetaan vain kun kuvio muuttuu, joten pyörivä pallo ei
+   * maksa siitä mitään.
+   */
+  let julistelaskuri = 0;
+  let kuvamaski = '';
+  const paivitaKuvamaski = () => {
+    if (julistelaskuri++ % JULISTEEN_MITTAUSVALI !== 0) return;
+    const el = avaus?.querySelector('.intro-juliste');
+    const k = juuri.getBoundingClientRect();
+    let laatikko = null;
+    if (el?.isConnected) {
+      const j = el.getBoundingClientRect();
+      laatikko = {
+        vasen: j.left - k.left, yla: j.top - k.top,
+        oikea: j.right - k.left, ala: j.bottom - k.top,
+      };
+    }
+    const maski = julisteenMaski(laatikko);
+    if (maski === kuvamaski) return;
+    kuvamaski = maski;
+    kuvakerros.style.webkitMaskImage = maski;
+    kuvakerros.style.maskImage = maski;
+  };
+
   /**
    * REITTIKUVAT KAUPUNKIENSA PÄÄLLE. Sama projektio kuin koneella ja
    * viivalla, joten kuva pysyy kaupungin kohdalla pallon pyöriessä.
    * Peittävyys tulee reittikuvanPeitosta (ilmestys, pito, häipyminen ja
    * pallon reuna); liike vähennettynä se on portaittainen, jolloin css
-   * häivyttää kuvan liikkumatta.
+   * häivyttää kuvan liikkumatta. Julisteotsikon kohdalla kuvasta ei
+   * piirry mitään (kerroksen maski, paivitaKuvamaski).
    */
   const piirraReittikuvat = (t, nakyma) => {
     if (!reittikuvat.length) return;
+    paivitaKuvamaski();
     const sov = sovitusNyt();
     const koko = reittikuvanKoko(juuri.clientWidth, juuri.clientHeight);
     for (const r of reittikuvat) {

@@ -38,6 +38,7 @@ const {
   REITTIKUVAN_KOKO_OSUUS, REITTIKUVAN_NOSTO, REITTIKUVAN_PITO_S,
   REITTIKUVAN_REUNAKULMA, REITTIKUVAN_REUNAVYO,
   REITTIKUVAN_KIRKASTUS,
+  JULISTEEN_MASKIAUKKO, JULISTEEN_MASKIVYO, JULISTEEN_MITTAUSVALI, julisteenMaski,
   kameranKulma, kameranNakyma, koneenTila, reitinKuvat, reitinPisteet,
   reittikuvanIka, reittikuvanKoko, reittikuvanOsoite, reittikuvanPeitto,
   saapumisenHetket, teeReitti,
@@ -297,6 +298,61 @@ test('kuva on pieni, ankkuroitu kaupunkiin ja koneen alla', () => {
   }
   assert.match(css, /\.etusivupallo-kuvat \{[\s\S]*?pointer-events: none;[\s\S]*?\n\}/,
     'kuvakerros ottaisi napautuksia pallolta');
+});
+
+/*
+ * KUVA EI NÄY JULISTEOTSIKON KOHDALLA (omistaja 6.9.2026,
+ * iPhone-kuvakaappaus: reittikuva piirtyi "OSA II · UNOHDETTU AARRE"
+ * -rivin taakse ja näkyi sen läpi). Kuvakerros saa maskin, jossa
+ * julisteen laatikon kohdalla on pehmeäreunainen soikea aukko.
+ *
+ * Vartioi kolme asiaa: aukko yltää laatikon yli sen tiukimmassa
+ * kohdassa (hiusviivakoristeen pää), reuna on pehmeä, ja ilman
+ * julistetta maskia ei ole.
+ */
+test('julisteotsikon kohdalla kuvakerroksessa on pehmeäreunainen aukko', () => {
+  // Mitatut laatikot: Chromium 1280 × 800 ja 390 × 844, kerroksen pikseleinä.
+  const LAATIKOT = [
+    { vasen: 349, yla: 41, oikea: 909, ala: 278 },
+    { vasen: 26, yla: 30, oikea: 347, ala: 285 },
+  ];
+  for (const laatikko of LAATIKOT) {
+    const maski = julisteenMaski(laatikko);
+    const luvut = maski.match(
+      /^radial-gradient\(ellipse (\d+)px (\d+)px at (\d+)px (\d+)px, rgba\(0, 0, 0, 0\) ([\d.]+)%, rgba\(0, 0, 0, 1\) 100%\)$/,
+    );
+    assert.ok(luvut, `maski ei ole odotettua muotoa: ${maski}`);
+    const [, rx, ry, kx, ky, raja] = luvut.map(Number);
+    assert.equal(kx, Math.round((laatikko.vasen + laatikko.oikea) / 2), 'aukko ei ole julisteen keskellä (x)');
+    assert.equal(ky, Math.round((laatikko.yla + laatikko.ala) / 2), 'aukko ei ole julisteen keskellä (y)');
+    // Umpinainen aukko = säde × raja; sen ulkopuolella on häivytysvyö.
+    const ax = rx * (raja / 100);
+    const ay = ry * (raja / 100);
+    const px = (laatikko.oikea - laatikko.vasen) / 2;
+    const py = (laatikko.ala - laatikko.yla) / 2;
+    assert.ok(ax > px && ay > py, 'aukko on laatikkoa pienempi — otsikon reunat jäisivät auki');
+    /*
+     * HIUSVIIVAN PÄÄ on julisteen tiukin kohta: koriste (.juliste-viiva,
+     * 17em) on laatikon ylä- ja alalaidassa ja yltää kapealla ruudulla
+     * lähes reunaan asti. Soikio ei peitä nurkkia, mutta tämän pisteen
+     * sen on peitettävä — muuten viivan pää paistaa kuvan läpi.
+     */
+    assert.ok(Math.hypot((0.9 * px) / ax, (0.92 * py) / ay) < 1,
+      'hiusviivan pää jää aukon ulkopuolelle — kuva paistaisi otsikkolohkon laidasta');
+    // Reuna on pehmeä: liu'ulle jää oma matkansa aukon ulkopuolelle.
+    assert.ok(raja > 60 && raja < 95, `häivytysvyö ${100 - raja} % on liian kapea tai leveä`);
+  }
+  assert.ok(JULISTEEN_MASKIAUKKO >= 1 && JULISTEEN_MASKIVYO > 0);
+  // Ilman julistetta (tai nollalaatikolla) kerros ei saa maskia.
+  assert.equal(julisteenMaski(null), 'none');
+  assert.equal(julisteenMaski({ vasen: 5, yla: 5, oikea: 5, ala: 9 }), 'none');
+  // Kerros lukee laatikon harvakseen eikä joka kehyksellä.
+  const kerros = lue('../js/etusivupallo.js');
+  assert.match(kerros, /julistelaskuri\+\+ % JULISTEEN_MITTAUSVALI !== 0\) return;/,
+    'julisteen laatikko mitataan joka kehyksellä — getBoundingClientRect pakottaisi uudelleenladonnan');
+  assert.match(kerros, /kuvakerros\.style\.webkitMaskImage = maski;[\s\S]{0,80}?kuvakerros\.style\.maskImage = maski;/,
+    'maskia ei aseteta molemmilla kirjoitusasuilla (vanha WebKit tarvitsee etuliitteen)');
+  assert.ok(JULISTEEN_MITTAUSVALI >= 4 && JULISTEEN_MITTAUSVALI <= 60);
 });
 
 test('pakka on SHELLissä muttei yhden tiedoston nipussa', () => {
