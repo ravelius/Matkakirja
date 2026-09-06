@@ -3386,6 +3386,11 @@ export const RAAMATTU = {
           + 'ilman erillista lupaa; matkakirjatekstit, kohtaamiset ja aarrekaari '
           + 'tehdaan uusiin maihin vasta kun Euroopan kaari on hiottu valmiiksi '
           + 'ja monistetaan siita.',
+        'LINSSIN SELITE LAUKUSSA ON YKSI RIVI (omistaja 6.9.2026 keskipaiva, '
+          + 'laukun kuvakaappauksesta, sanatarkasti: "Tassa on liikaa tekstia '
+          + 'linssista"): laukun varusteselite on yksi lause (Ihmisen matka: '
+          + '"Ihmisen matka Afrikasta koko maapallolle: kello juoksee, valot '
+          + 'syttyvat."); pidempi esittely kuuluu linssin omaan avauslaatikkoon.',
         'HITAAMPI ALOITUSPALLO, LENTO SEURAA KONETTA, MAAPALLO VAALEAMPI '
           + '(omistaja 6.9.2026 aamupaiva, sanatarkasti: "Kohdemaan valinnassa '
           + 'hitaampi pallon liike. Lentokone kohtauksessa paljon lahempi zoom '
