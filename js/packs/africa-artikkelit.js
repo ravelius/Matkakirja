@@ -1645,9 +1645,25 @@ export const OMAT_ARTIKKELIT = {
       + 'digitulevaisuutta.',
   },
   Zimbabwe: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // ZWE) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Zimbabwe on kivisten kuningaskuntien maa: Suur-Zimbabwen '
       + 'rauniot antoivat maalle nimen, ja Viktorian putoukset '
-      + 'jylisevät sen luoteisrajalla.',
+      + 'jylisevät sen luoteisrajalla. Sisämaavaltio makaa Sambesin ja '
+      + 'Limpopon välisellä ylängöllä, jonka halki kulkee Suuri juonne, '
+      + 'noin 550 kilometrin mittainen kallioselänne kultaa, '
+      + 'kromia ja platinaa. Kun Suuri Zimbabwe hiljeni, valta siirtyi '
+      + 'pohjoiseen Mutapan kuningaskunnalle, jonka hallitsijan '
+      + 'arvonimestä eurooppalaiset karttapiirtäjät tekivät koko maan '
+      + 'nimen: Monomotapa. Lounaaseen syntyi 1840-luvulla Mzilikazin '
+      + 'ndebelevaltio, ja 1890-luvulla alue joutui brittiläisen '
+      + 'siirtomaayhtiön käsiin; itsenäisyys tuli 1980, ja nimeksi '
+      + 'valittiin jo 1960 valittu Zimbabwe, shonan kivitalot. '
+      + 'Kulttuurin tunnusmerkit ovat mbira, esivanhempien henkiä '
+      + 'kutsuva kielisoitin, ja serpentiinistä veistetty '
+      + 'shona-kivenveisto, joka nousi 1950-luvulta lähtien '
+      + 'maailman museoihin.',
     artikkeli: 'Zimbabwe on sisämaavaltio Zambezin ja Limpopon '
       + 'välissä. Nimi tarkoittaa shonaksi kivitaloja: Suur-'
       + 'Zimbabwen rauniokaupunki, jonka muurit ladottiin ilman '

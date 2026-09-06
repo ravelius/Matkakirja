@@ -161,6 +161,11 @@ const SALLITUT = [
   // Angolan uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
   // samalla isäntänimellä, ilman www-etuliitettä.
   'https://correiokianda.info/',
+  // Zimbabwen uutislähde (maalehti ZWE, 6.9.2026): syöte ja
+  // artikkelisivut samalla isäntänimellä. Osoite on ilman www:tä,
+  // koska www.thenewshawks.com ohjaa 301:llä eikä worker seuraa
+  // uudelleenohjauksia.
+  'https://thenewshawks.com/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

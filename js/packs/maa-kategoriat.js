@@ -49086,4 +49086,439 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * ZIMBABWE (Opus 6.9.2026, Afrikan maalehtierä). Kartan omat nostot
+   * kertovat jo Suuresta Zimbabwesta (fokuskohteet-zwe.js),
+   * Nyanganista, Sambesista ja Victorian putouksista, Limpoposta,
+   * Matobosta, Mana Poolsista, Hwangesta, Chinhoyin luolista,
+   * Naletalesta, Birchenough Bridgestä ja Mutaresta
+   * (maastokohteet-zwe.js), mustasta sarvikuonosta (elaintakyt.js)
+   * sekä Ruddin myönnytyksestä ja Kariban altaasta (skandaalit.js).
+   * Lehti täydentää niitä eikä toista yhtäkään: siksi historiaosassa
+   * ei puhuta Suuresta Zimbabwesta eikä Lobengulan sopimuksesta,
+   * luonto puuttuu aiheena kokonaan (kartta kattaa sen) ja Kariban
+   * pato näkyy vain kalastusnostossa ruoan kautta. Zimbabwessa ei ole
+   * kaupunkilehteä (Viktorian putoukset on laudalla, mutta sillä ei
+   * ole KULTTUURI_KATEGORIAT-lohkoa), joten kaupunkitason
+   * päällekkäisyyttä ei ole.
+   *
+   * Nykypolitiikka on jätetty kokonaan pois (M3:n Myanmar-linja):
+   * uusin kerrottu poliittinen tapahtuma on itsenäistyminen 1980 ja
+   * paikannimien muutos 1982. Kirsty Coventryn hallitusura on
+   * tietoisesti jätetty mainitsematta samasta syystä; nostossa
+   * kerrotaan uimaurasta ja olympiakomitean puheenjohtajuudesta.
+   *
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026:
+   * "Mutapa Empire", "Mzilikazi", "First Chimurenga", "Nehanda
+   * Charwe Nyakasikana", "Zimbabwe", "Bob Marley", "Sculpture of
+   * Zimbabwe", "Tengenenge", "Mbira", "Stella Chiweshe", "Mbende
+   * Jerusarema dance", "Bhundu Boys", "Gonimbrasia belina",
+   * "Kapenta", "Vigna subterranea", "Field hockey at the 1980 Summer
+   * Olympics – Women's tournament", "Zimbabwe at the Olympics",
+   * "Zimbabwe national cricket team", "Peter Ndlovu" ja "Kirsty
+   * Coventry". Työaineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-zimbabwe.md.
+   */
+  ZWE: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Zimbabwen ylängöllä valtakunnan pääkaupunki vaihtoi paikkaa '
+          + 'vuosisadasta toiseen, ja maan nykyinen nimi valittiin vasta 1960 '
+          + 'kokouksessa, jossa ehdolla oli kaksi muutakin.',
+      nostot: [
+        {
+          otsikko: 'Valtakunta, joka jäi eurooppalaisiin karttoihin',
+          aika: '1450–1760',
+          tiedosto: 'Monomotapa Map.jpg',
+          teksti: 'Kun Suuri Zimbabwe hiljeni, karangat siirtyivät pohjoiselle '
+              + 'ylängölle. Perimätiedon mukaan norsunmetsästäjä Mutota löysi '
+              + 'Dandesta suolaa ja muurasi uuden valtakunnan pääkaupungiksi '
+              + 'kivitarhan. Hallitsijan arvonimi oli Mwene we Mutapa, '
+              + 'valloitetun maan herra; portugalilaiset kirjoittivat sen '
+              + 'muotoon Monomotapa, ja arvonimestä tuli eurooppalaisissa '
+              + 'kartoissa koko kuningaskunnan nimi. Kulta, norsunluu ja '
+              + 'machira-puuvillakangas kulkivat Sambesia pitkin '
+              + 'markkinapaikoille, joista tärkeintä sanottiin Mutapan '
+              + 'portiksi. Kuningas verotti kauppaa: joka kahdeskymmenes '
+              + 'kangaspakka jäi hänelle.',
+          selite: 'Willem Blaeun 1600-luvun kartassa sana MONOMOTAPA kulkee '
+            + 'suurin kirjaimin eteläisen Afrikan sisämaan poikki — '
+            + 'kuningaskunta tunnettiin Euroopassa hallitsijansa arvonimellä.',
+          lahde: 'Willem Blaeu, Wikimedia Commons (public domain)',
+          wiki: 'Mutapa Empire',
+        },
+        {
+          otsikko: 'Kuningas, joka lähti Shakan luota pohjoiseen',
+          aika: '1823–1868',
+          tiedosto: "Mzilikazi's Grave.jpg",
+          teksti: 'Mzilikazi kaMashobane syntyi noin 1790 khumalojen '
+              + 'päällikön poikana nykyisen KwaZulu-Natalin alueella ja '
+              + 'palveli Shakan luutnanttina, kunnes välit katkesivat. '
+              + 'Vuonna 1823 hän lähti mfecanen myllerryksessä pohjoiseen ja '
+              + 'liitti matkalla joukkoihinsa muiden kansojen väkeä. Kymmenen '
+              + 'vuotta hän hallitsi Transvaalia, kunnes voortrekkerit '
+              + 'työnsivät hänet 1838 Limpopon yli. Sopivaa maata etsittiin '
+              + 'Botswanasta ja pohjoisesta asti — tsetsekärpänen esti '
+              + 'asettumisen — ja 1840 kansa asettui lounaiseen Zimbabween, '
+              + 'josta tuli Matabelemaa. Siirtomaalähteissä kuningas on '
+              + 'Moselekatse, suuri tie.',
+          selite: 'Mzilikazin hauta on graniittikumpujen välissä lähellä '
+            + 'hänen viimeistä pääkaupunkiaan Mhlahlandlelaa.',
+          lahde: 'SpiderFitz, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mzilikazi',
+        },
+        {
+          otsikko: 'Meedio, jonka nimi palasi kahdeksankymmentä vuotta myöhemmin',
+          aika: '1896–1898',
+          teksti: 'Vuonna 1894 määrätty majavero, karjarutto, heinäsirkat ja '
+              + 'kuivuus purkautuivat kapinaksi Britannian Etelä-Afrikan '
+              + 'yhtiötä vastaan: Matabelemaassa maaliskuussa 1896, '
+              + 'Mashonamaassa kesäkuussa. Kapinan hengelliset johtajat '
+              + 'olivat henkimeedioita — Mlimo, Kaguvi ja Charwe '
+              + 'Nyakasikana, jonka kautta puhui mhondoro-henki Nehanda. '
+              + 'Kapina kukistui 1897, ja Nehanda ja Kaguvi teloitettiin '
+              + '1898. Nimi chimurenga, kamppailu, palasi 1960- ja '
+              + '1970-luvulla sekä sissisodan että kokonaisen '
+              + 'musiikkilajin nimeksi. Oikeudenkäyntiasiakirjat otettiin '
+              + 'Unescon Maailman muisti -rekisteriin 2015.',
+          wiki: 'Nehanda Charwe Nyakasikana',
+        },
+        {
+          otsikko: 'Nimi valittiin kokouksessa',
+          aika: '1960–1982',
+          teksti: 'Vuonna 1960 nationalistit kokoontuivat valitsemaan maalle '
+              + 'nimen siirtomaanimen Rhodesia tilalle. Ehdolla olivat '
+              + 'Matshobana ja Monomotapa, mutta Michael Maweman ehdotus '
+              + 'voitti: Zimbabwe, shonan dzimba dza mabwe eli kivitalot. '
+              + 'Ensimmäisenä nimeä käytti virallisesti Maweman puolue 1961, '
+              + 'ja 1962 se oli jo vakiintunut. Itsenäisyyttä juhlittiin '
+              + 'ensimmäisen kerran 18. huhtikuuta 1980, ja edellisen päivän '
+              + 'juhlaan oli kutsuttu esiintymään Bob Marley, joka oli '
+              + 'levyttänyt 1979 laulun Zimbabwe. Paikannimiä muutettiin '
+              + '1982 alkaen 42: Salisburysta tuli Harare ja Fort '
+              + 'Victoriasta Masvingo.',
+          wiki: 'Zimbabwe',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Zimbabwen tunnetuin taidemuoto on nuori: kivenveisto heräsi '
+          + 'nykymuotoonsa vasta 1950-luvulla, ja parissakymmenessä vuodessa '
+          + 'se oli New Yorkin ja Pariisin museoissa.',
+      nostot: [
+        {
+          otsikko: 'Galleria, joka lähti etsimään veistäjiä',
+          aika: '1954–1973',
+          tiedosto: 'National Gallery Zimbabwe.jpg',
+          teksti: 'Frank McEwen kutsuttiin 1954 neuvonantajaksi maan uuteen '
+              + 'kansallisgalleriaan, jota vasta rakennettiin pääkaupunkiin, '
+              + 'ja hän johti sitä avajaisista 1957 vuoteen 1973. Ensin hän '
+              + 'tapasi nuoren taiteilijan Thomas Mukarobgwan, josta tuli '
+              + 'hänen oppaansa paikalliseen elämään, ja sitten Joram Marigan '
+              + 'pehmeään kiveen veistämät varhaistyöt. Ne saivat McEwenin '
+              + 'kannustamaan veistäjiä aiheisiin, jotka nousivat heidän '
+              + 'omasta kulttuuristaan. Gallerian työpajakoulu keräsi '
+              + 'ympärilleen Joseph Ndandarikan, John Takawiran ja Kingsley '
+              + 'Sambon kaltaisia tekijöitä. McEwen karkotettiin maasta 1973.',
+          selite: 'Kansallisgallerian sisäänkäynnin edessä seisoo kivestä '
+            + 'veistettyjä teoksia; talo avattiin 1957, ja sen työpajakoulu '
+            + 'kokosi ensimmäisen veistäjäsukupolven.',
+          lahde: 'Awinda, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Sculpture of Zimbabwe',
+        },
+        {
+          otsikko: 'Tupakkatila, josta tuli veistäjäkylä',
+          aika: '1966–',
+          tiedosto: 'Tengenenge sculptures.jpg',
+          teksti: 'Tom Blomefieldin tupakkatila ja kromikaivos Guruvessa '
+              + 'kävivät kannattamattomiksi, kun Rhodesia joutui pakotteiden '
+              + 'kohteeksi 1965. Kuvanveistäjä Crispen Chakanyuka huomautti, '
+              + 'että tilan mailla on kovaa serpentiiniä — osa Suurta '
+              + 'juonnetta, joka kulkee lähes pohjois-eteläsuunnassa maan '
+              + 'halki. Blomefield '
+              + 'hankki louhintaoikeudet ja kutsui veistäjiä töihin. Paikan '
+              + 'nimi Tengenenge tarkoittaa korekoren murteella alun alkua. '
+              + 'Vuosien mittaan kylässä on asunut kolmisensataa taiteilijaa, '
+              + 'myös Angolasta, Malawista ja Mosambikista; parhaimmillaan '
+              + 'veistosten myynti elätti yli tuhat ihmistä.',
+          selite: 'Tengenengen veistokset seisovat ulkona puiden alla samalla '
+            + 'tilalla, jonka esiintymästä kivi on louhittu.',
+          lahde: 'IGTaylor, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tengenenge',
+        },
+        {
+          otsikko: 'Kivi, jolla on veistäjän mukaan oma tahtonsa',
+          tiedosto: 'COSV - Zimbabwe 2008 - Arte Shona (4).jpg',
+          teksti: 'Materiaali tulee Suurelta juonteelta, 550 kilometrin '
+              + 'mittaiselta kallioselänteeltä keskellä maata, ja sen '
+              + 'ympäristöstä: serpentiini, kova springstone, '
+              + 'vuolukivi, verdiitti ja lepidoliitti. Kivilaji ratkaisee, '
+              + 'kuinka paljon työstöä teos kestää. Veistäjät sanovat '
+              + 'tekevänsä työn yhdessä kiven kanssa: mikään luonnossa '
+              + 'syntynyt ei ole eloton, vaan kivellä on oma henkensä. '
+              + 'Aiheet ovat tavallisia ihmisen tunteita — suru, riemu, '
+              + 'huumori, hengellinen etsintä — ja toistuva kuva on ihmisen '
+              + 'muuttuminen eläimeksi. Kotimaan markkinoilla suosituimpia '
+              + 'ovat perhettä kuvaavat teokset.',
+          selite: 'Veistäjä jättää usein osan kivestä karheaksi ja kiillottaa '
+            + 'vain kasvot: sama kappale on yhtaikaa raakaa kiveä ja '
+            + 'muotokuva.',
+          lahde: 'COSV, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Rodinin museo täyttyi zimbabwelaisesta kivestä',
+          aika: '1968–1971',
+          tiedosto: 'Zimbabwe sculpture at Atlanta airport.JPG',
+          teksti: 'Pakotteiden vuodet pitivät maan taidetta poissa '
+              + 'maailmalta, mutta McEwen sai näyttelyt liikkeelle. New '
+              + 'Yorkin MoMA esitteli työpajakoulun 1968–69, ja 1971 Pariisin '
+              + 'Rodinin museossa nähtiin Sculpture Contemporaine des Shonas '
+              + "d'Afrique. Kriitikot ihmettelivät, miten kokonainen "
+              + 'taidesuuntaus oli syntynyt alueelle, jota oli pidetty '
+              + 'kuvataiteellisesti karuna. Itsenäisyyden jälkeen esiin '
+              + 'nousivat Dominic Benhura ja Tapfuma Gutsa; Benhuran veistos '
+              + 'seisoo Singaporen kasvitieteellisessä puutarhassa ja '
+              + 'McEwenin testamenttaama kokoelma British Museumissa.',
+          selite: 'Atlantan lentoasemalla on ollut vuodesta 2001 pysyvä '
+            + 'näyttely zimbabwelaista kivenveistoa matkustajien '
+            + 'kulkureitin varrella.',
+          lahde: 'Keizers, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä paikannimi Tengenenge tarkoittaa?',
+        vaihtoehdot: [
+          'Kiven koti',
+          'Alun alku',
+          'Tupakan laakso',
+          'Veistäjien kylä',
+        ],
+        oikea: 1,
+        fakta: 'Nimi on korekoren murretta ja osui kohdalleen: '
+            + 'kannattamattomalta tupakkatilalta lähti liikkeelle kokonainen '
+            + 'taidesuuntaus.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Zimbabwen soitin on mbira, jonka surina kutsuu esivanhemmat '
+          + 'paikalle — ja kun sen kuviot siirrettiin sähkökitaralle, syntyi '
+          + 'tanssimusiikkia, joka kiersi maailman.',
+      nostot: [
+        {
+          otsikko: 'Soitin, johon kiinnitetään pullonkorkkeja',
+          tiedosto: 'Mbira dzavadzimu in deze.jpg',
+          teksti: 'Mbira dzavadzimu tarkoittaa esivanhempien mbiraa, ja se on '
+              + 'Zimbabwen kansallissoitin. Kovapuiselle soittolaudalle eli '
+              + 'gwarivalle taotaan 22–28 metallikieltä kolmeen rekisteriin. '
+              + 'Lautaan kiinnitetään pullonkorkkeja tai simpukoita, jotka '
+              + 'surisevat soiton mukana; surina on olennainen osa ääntä, '
+              + 'koska sen uskotaan kutsuvan esivanhempien henget paikalle. '
+              + 'Esiintyessä soitin lasketaan dezeen, kurpitsasta tehtyyn '
+              + 'kaikukoppaan. Yön mittaisessa bira-seremoniassa kaksi '
+              + 'soittajaa lomittaa osansa: kushaura aloittaa, kutsinhira '
+              + 'vastaa. Unesco otti mbiran luetteloonsa 2020.',
+          selite: 'Deze on kurpitsasta tehty kaikukoppa; reunan simpukat ja '
+            + 'soittimen pullonkorkit tuottavat surinan, joka kuuluu mbiran '
+            + 'ääneen.',
+          lahde: 'Alex Weeks, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Mbira',
+        },
+        {
+          otsikko: 'Nainen, jolle kukaan ei halunnut opettaa',
+          aika: '1946–2023',
+          teksti: 'Stella Chiweshe syntyi 1946 Mhondorossa ja halusi oppia '
+              + 'mbiraa aikana, jolloin naisen ei ollut tapana soittaa sitä. '
+              + 'Opettajat kieltäytyivät toisensa jälkeen, kunnes isoisän '
+              + 'veli suostui; oppivuodet olivat 1966–1969. Ensilevytys '
+              + 'Kasahwa ilmestyi 1974. Vuonna 1981 Chiweshe liittyi '
+              + 'Zimbabwen kansantanssiryhmään ja kiersi sen mukana '
+              + 'ulkomailla, ja 1980-luvulla hän vahvisti mbiran sähköisesti '
+              + 'ja otti bändiinsä kitarat ja rummut. Hän näytteli Nehandaa '
+              + 'elokuvassa Ambuya Nehanda. Tytär Virginia Mukwesha soittaa '
+              + 'samaa soitinta.',
+          wiki: 'Stella Chiweshe',
+        },
+        {
+          otsikko: 'Hiiritanssi, joka sai raamatullisen nimen',
+          teksti: 'Zezuru-shonojen tanssi Murewan ja '
+              + 'Uzumba-Maramba-Pfungwen seudulla on nimeltään mbende, '
+              + 'nopeasti juokseva hiiri. Tanssijat lainaavat jyrsijän '
+              + 'vauhtia: miehet kyykistyvät ja potkaisevat maata kuin '
+              + 'kaivava myyrä, ja lantion liike on tanssin ydin. Juuri se '
+              + 'sai lähetyssaarnaajat paheksumaan tanssia, ja nimeksi '
+              + 'vaihdettiin Jerusarema, shonalainen väännös Jerusalemista; '
+              + 'kumpaakin nimeä käytetään yhä. Musiikin johdossa on yksi '
+              + 'rumpali. Mutumba-rumpu tehdään mutiti-puusta ja tahtia '
+              + 'lyödään kovapuisilla lautasilla, joita sanotaan maja.',
+          wiki: 'Mbende Jerusarema dance',
+        },
+        {
+          otsikko: 'Jit, joka sai levyjuontajan itkemään',
+          aika: '1982–1987',
+          teksti: 'Bhundu Boys rakensi soundinsa chimurengan sekä '
+              + 'amerikkalaisen rockin, diskon ja countryn sekoitukselle; '
+              + 'tyyliä alettiin kutsua jitiksi. Nimi tulee sanasta bhundu, '
+              + 'pensaikko, ja viittaa poikiin, jotka avustivat sissejä '
+              + '1970-luvun sodassa. Yhtye levytti ensimmäisen singlensä '
+              + 'Hararen Shed Studiosissa 1982 ja nousi neljällä ykkösellä '
+              + 'Zimbabwen kärkeen. Britanniassa sen löysivät radiojuontajat '
+              + 'John Peel ja Andy Kershaw — Peel liikuttui kyyneliin '
+              + 'ensimmäisellä keikalla — ja 1987 Madonna pyysi yhtyeen '
+              + 'lämmittelijäkseen Wembleylle.',
+          wiki: 'Bhundu Boys',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Aterian keskellä on maissi, mutta maku tulee reunoilta: '
+          + 'hapanmaidosta, kuivatusta järvikalasta ja toukista, jotka '
+          + 'poimitaan mopanepuista.',
+      nostot: [
+        {
+          otsikko: 'Sama jauho, kaksi ateriaa',
+          tiedosto: 'Sadza and Beans.jpg',
+          teksti: 'Maissijauhosta keitetään sadza, ndebeleksi isitshwala: '
+              + 'jauho ja vesi sekoitetaan, ja kun seos on kiehunut '
+              + 'muutaman minuutin, sekaan lisätään lisää jauhoa, kunnes '
+              + 'taikina on paksua. Se syödään lounaaksi ja päivälliseksi '
+              + 'kastikkeen, papujen, lehtivihannesten tai lihan kanssa, '
+              + 'usein myös hapanmaidon eli lacton kera. Samasta jauhosta '
+              + 'keitetään aamiaiseksi ohuempi bota, joka maustetaan '
+              + 'maapähkinävoilla, maidolla, voilla tai hillolla. '
+              + 'Siirtomaa-ajalta on jäänyt teetauko kello kymmenen ja '
+              + 'toinen kello neljä.',
+          selite: 'Sadza nostetaan lautaselle omana kimpaleenaan ja pata '
+            + 'sen viereen; tässä lisukkeena on papumuhennos.',
+          lahde: 'Gody Mago, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Toukka, joka kerätään ja myydään tonneittain',
+          tiedosto: 'Mopane Worm (Gonimbrasia belina) (53002541333).jpg',
+          teksti: 'Mopanetoukka on keisariperhosen toukka: shonaksi madora, '
+              + 'ndebeleksi macimbi. Sitä poimitaan käsin mopanepuista, ja '
+              + 'poimijat ovat tavallisesti naisia ja lapsia. Zimbabwessa '
+              + 'puuhun on voitu sitoa kaarnanpala merkiksi siitä, kenelle '
+              + 'sen toukat kuuluvat. Poimittu toukka puristetaan tyhjäksi, '
+              + 'keitetään suolan kanssa ja kuivataan auringossa tai '
+              + 'savustetaan. Kuivana se säilyy ja syödään joko sellaisenaan '
+              + 'tai sipulin ja tomaatin kanssa paistettuna. Kolme kiloa '
+              + 'mopanen lehtiä tuottaa kilon toukkia; naudanlihakilo vaatii '
+              + 'kymmenen kiloa rehua.',
+          selite: 'Toukan kylkiä kiertävät vaaleat juovat ja lyhyet piikit. '
+            + 'Aikuinen perhonen elää enää kolmesta neljään päivää.',
+          lahde: 'Bernard DUPONT, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Gonimbrasia belina',
+        },
+        {
+          otsikko: 'Kalastus alkaa lampun sytyttämisestä',
+          tiedosto: 'Kariba Dam Kapenta Deep Fried.JPG',
+          teksti: 'Kapenta eli matemba on pieni tanganjikansardiini, joka '
+              + 'istutettiin Kariban tekojärveen ja on siitä asti ollut yksi '
+              + 'maan tärkeimmistä ruoka-aineista. Kalastus käy yöllä '
+              + 'lautoilta: lamppu tai led-valo houkuttelee parven pinnan '
+              + 'alle, ja noin kuusimetrinen haavi nostetaan jopa '
+              + 'neljänkymmenen metrin syvyydestä. Saalis kuivataan '
+              + 'auringossa betonilaatalla tai verkolla, ja Sambesin laakson '
+              + 'kuumuudessa siihen menee vuorokausi. Kuivattu kapenta '
+              + 'paistetaan sipulin, tomaatin ja maapähkinäjauheen kanssa. '
+              + 'Kupillinen riittää perheelle.',
+          selite: 'Kariballa kapenta paistetaan rapeaksi ja tarjoillaan '
+            + 'sellaisenaan; kalat ovat kokonaisia ja noin kymmenen sentin '
+            + 'mittaisia.',
+          lahde: 'Zimrh, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kapenta',
+        },
+        {
+          otsikko: 'Ruoka, jonka pavut kypsyvät maan alla',
+          tiedosto: 'Bambara nut unearthed..JPG',
+          teksti: 'Mutakura on sekoitus, jossa on maapähkinöitä eli nzungua, '
+              + 'keitettyä ja auringossa kuivattua maissia, silmupapuja eli '
+              + 'nyembaa ja nyimoa. Nyimo on bambaranmaapähkinä, palkokasvi, '
+              + 'jonka kukan varsi kääntyy hedelmöityksen jälkeen alaspäin ja '
+              + 'työntyy maahan: palot kypsyvät mullan alla, ja sato '
+              + 'nostetaan varsista kiinni kuin peruna. Kasvi kestää '
+              + 'kuumuutta ja karua maata ja jättää maaperään typpeä '
+              + 'seuraavalle viljelylle. Afrikassa sitä viljelevät, myyvät ja '
+              + 'käsittelevät enimmäkseen naiset.',
+          selite: 'Bambaranmaapähkinän palot nostetaan maasta kiinni '
+            + 'varsissa — jokaisessa palossa on yksi tai kaksi siementä.',
+          lahde: 'Kkibumba, Wikimedia Commons (public domain)',
+          wiki: 'Vigna subterranea',
+        },
+      ],
+    },
+    {
+      id: 'urheilu',
+      nimi: 'Urheilu',
+      johdanto: 'Zimbabwen kahdeksasta olympiamitalista seitsemän on saman '
+          + 'uimarin, ja ainoan joukkuemitalin voitti joukkue, jota ei ollut '
+          + 'olemassa muutamaa viikkoa aikaisemmin.',
+      nostot: [
+        {
+          otsikko: 'Kutsu tuli, kun muut jäivät pois',
+          aika: '1980',
+          teksti: 'Moskovassa 1980 pelattiin ensimmäinen naisten '
+              + 'olympiaturnaus maahockeyssa. Viisi karsinnoista selvinnyttä '
+              + 'maata jätti turnauksen väliin boikotin takia, ja '
+              + 'järjestelytoimikunta joutui lähettämään kutsuja muualle; '
+              + 'Irlanti kieltäytyi. Vasta itsenäistynyt Zimbabwe otti kutsun '
+              + 'vastaan ja voitti koko turnauksen kuuden maan sarjassa '
+              + 'Tšekkoslovakian ja Neuvostoliiton edellä. Se oli maan '
+              + 'ensimmäinen kisa omalla nimellään ja on yhä sen ainoa '
+              + 'joukkuemitali: seitsemän muuta on uima-altaasta.',
+          wiki: "Field hockey at the 1980 Summer Olympics – Women's tournament",
+        },
+        {
+          otsikko: 'Ensimmäinen maaottelu, ensimmäinen yllätys',
+          aika: '1983',
+          teksti: 'Zimbabwe pelasi kriketissä ensimmäisen virallisen '
+              + 'yhden päivän maaottelunsa vasta vuoden 1983 maailmancupissa '
+              + '— ja voitti heti Australian. Kapteeni Duncan Fletcher teki '
+              + '69 juoksua jäämättä kertaakaan palamaan, ja kun Australia '
+              + 'oli lyöntivuorossa, hän poltti neljä vastustajaa 42 juoksun '
+              + 'hinnalla. Zimbabwe keräsi 239 juoksua, Australia jäi '
+              + '226:een. Turnauksen viisi muuta ottelua hävittiin. '
+              + 'Testiasema tuli heinäkuussa 1992, ja saman vuoden '
+              + 'lokakuussa Zimbabwe pelasi yhdeksäntenä testimaana '
+              + 'ensimmäisen testinsä Intiaa vastaan Hararessa.',
+          wiki: 'Zimbabwe national cricket team',
+        },
+        {
+          otsikko: 'Bulawayolainen, joka avasi Valioliigan oven',
+          aika: '1991–',
+          teksti: 'Peter Ndlovu syntyi 1973 Bulawayossa ja pelasi kotikaupungin '
+              + 'Highlandersissa, kunnes Coventry City osti hänet 1991. Kun '
+              + 'uusi Valioliiga aloitti 19. elokuuta 1992, Ndlovu oli sen '
+              + 'ensimmäinen afrikkalainen pelaaja. Coventryssä hänet '
+              + 'muistetaan nopeista karkumatkoista: syyskuussa 1992 hänen '
+              + 'maalinsa Norwichia vastaan valittiin kuukauden maaliksi, ja '
+              + '1995 hän teki Anfieldilla hattutempun ensimmäisenä '
+              + 'vieraspelaajana kolmeenkymmeneen vuoteen. Zimbabwen paidassa '
+              + 'hän on ainoa sadan maaottelun mies: 37 maalia.',
+          wiki: 'Peter Ndlovu',
+        },
+        {
+          otsikko: 'Seitsemän mitalia yhdeltä uimarilta',
+          aika: '2004–2008',
+          teksti: 'Kirsty Coventry syntyi Hararessa 1983 ja ui koulun jälkeen '
+              + 'Auburnin yliopistossa Alabamassa. Sydneyssä 2000 hän ylsi '
+              + 'ensimmäisenä zimbabwelaisena uimarina olympiavälieriin. '
+              + 'Ateenassa 2004 tuli kulta 200 metrin selkäuinnista sekä '
+              + 'hopea ja pronssi — maan ensimmäiset yksilömitalit koskaan — '
+              + 'ja Pekingissä 2008 kulta ja kolme hopeaa. Hän lopetti '
+              + 'viidensien kisojensa jälkeen 2016 eniten palkittuna '
+              + 'afrikkalaisena olympiaurheilijana, ja 2025 hänestä tuli '
+              + 'Kansainvälisen olympiakomitean ensimmäinen naispuheenjohtaja.',
+          wiki: 'Kirsty Coventry',
+        },
+      ],
+    },
+  ],
 };

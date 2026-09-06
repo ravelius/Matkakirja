@@ -234,6 +234,17 @@
 > `<article>`; perustelut ovat js/packs/uutislahteet.js:n
 > AGO-kommentissa. Julkaisu Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Zimbabwe):** sallittuihin lisättiin
+> thenewshawks.com (maalehti ZWE, testattu 6.9.2026: syötteessä
+> kymmenen juttua, artikkelisivun ainoasta `<article>`-lohkosta jäsentyy
+> leipäteksti ja `og:image` löytyy). Osoite on kirjoitettava ilman
+> www-etuliitettä, koska www.thenewshawks.com vastaa 301:llä eikä worker
+> seuraa uudelleenohjauksia. Zimpapersin ja valtion yhtiöiden lehdet
+> (Herald, Chronicle, shonankielinen Kwayedza, Sunday Mail, H-Metro,
+> ZBC News) ovat botti-eston takana; perustelut muille hylkäyksille ovat
+> js/packs/uutislahteet.js:n ZWE-kommentissa. Julkaisu Git-
+> integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

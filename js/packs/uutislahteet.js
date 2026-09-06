@@ -1033,4 +1033,32 @@ export const UUTISLAHTEET = {
     kieli: 'pt',
     syote: 'https://correiokianda.info/feed/',
   },
+  /*
+   * ZIMBABWE (Opus 6.9.2026). The NewsHawks on hararelainen
+   * tutkivaan journalismiin keskittyvä viikkolehti. Testattu
+   * 6.9.2026: syötteessä kymmenen juttua, ja artikkelisivun ainoasta
+   * <article>-lohkosta jäsentyy 16–27 yli 60 merkin kappaletta sekä
+   * og:image.
+   *
+   * OSOITE ON ILMAN WWW-ETULIITETTÄ TARKOITUKSELLA:
+   * www.thenewshawks.com vastaa 301:llä, eikä worker seuraa
+   * uudelleenohjauksia.
+   *
+   * Testattu ja hylätty: The Herald, Chronicle, Kwayedza (ainoa
+   * löytynyt shonankielinen syöte), Sunday Mail, H-Metro ja ZBC News
+   * (kaikki Zimpapersin ja valtion yhtiöiden botti-eston takana, 403
+   * tai 301 uuteen isäntänimeen); NewsDay ja Pindula News (syöte
+   * aukeaa, mutta artikkelisivulla ei ole <article>-elementtiä eikä
+   * [itemprop="articleBody"]-merkintää); CITE (sama vika);
+   * The Standard (syöte aukeaa, mutta sen artikkelilinkit osoittavat
+   * WordPressin staging-osoitteeseen eivätkä lehden omaan
+   * verkkotunnukseen); NewZimbabwe (vastaa 202:lla ja tyhjällä
+   * rungolla); Bulawayo24 (syöteosoite ohjaa 404-sivulle);
+   * ZimLive (403).
+   */
+  ZWE: {
+    nimi: 'The NewsHawks',
+    kieli: 'en',
+    syote: 'https://thenewshawks.com/feed/',
+  },
 };
