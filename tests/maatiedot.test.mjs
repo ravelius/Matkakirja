@@ -47,6 +47,7 @@ import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
  * Lista saa vain lyhentyä.
  */
 const VIELA_ILMAN_TUNNUSLUKUJA = new Set([
+  'NPL',
   'SHN',
   'LKA',
   'MMR',

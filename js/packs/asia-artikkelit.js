@@ -3416,4 +3416,53 @@ export const ASIA_ARTIKKELIT = {
       + 'rikkain lajisto: yli neljännes kukkakasveista kasvaa '
       + 'luonnonvaraisena vain täällä.',
   },
+  Nepal: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // NPL) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla. Lisätty maalehden mukana 6.9.2026; luvut en-Wikipedian
+    // artikkelista "Nepal", osiot "Geography" ja "Biodiversity".
+    //
+    // TEKSTI-KENTTÄ ON PAKOLLINEN tässä tiedostossa: tests/
+    // vanha-maailma.test.mjs vaatii jokaiselta ASIA_ARTIKKELIT-
+    // riviltä kolmen kappaleen ja 600–1100 merkin tekstin. Se on
+    // "Lue lisää" -paneelin artikkeli (js/ui.js lukee artikkeli ??
+    // teksti), eikä maalehti käytä sitä mihinkään.
+    intro: 'Nepal on sisämaavaltio Himalajan ja Intian tasangon '
+      + 'välissä, ja maailman kymmenestä korkeimmasta vuoresta '
+      + 'kahdeksan on sen alueella tai sen rajalla. Maa nousee '
+      + 'parissasadassa kilometrissä Terain tasangon 60 metristä '
+      + 'Everestin lähes 8 849 metriin, joten siihen mahtuu viisi '
+      + 'ilmastovyöhykettä ja lajisto, joka alkaa lämpimän tasangon '
+      + 'sarvikuonoista ja päättyy jäätiköiden reunalle. Keskellä on '
+      + 'Kathmandun laakso, newarien vanha kaupunkiliitto, jonka '
+      + 'kauppiaat hallitsivat Himalajan yli kulkenutta silkkitien '
+      + 'haaraa. Gorkhan kuningaskunta yhdisti maan 1700-luvulla, '
+      + 'eikä Nepal ollut koskaan siirtomaa — se jäi puskurivaltioksi '
+      + 'Kiinan ja Brittiläisen Intian väliin. Virallinen kieli on '
+      + 'nepali, mutta kieliä ja kansoja on kymmeniä: newarit '
+      + 'laaksossa, šerpat vuorilla, tharut Terailla sekä gurungit ja '
+      + 'magarit kukkuloilla. Ruoka, musiikki ja kirjallisuus '
+      + 'seuraavat samaa korkeuskäyrää — alhaalla riisi ja dal bhat, '
+      + 'ylhäällä tattari ja dhindo.',
+    teksti: 'Nepal on sisämaavaltio Himalajan ja Intian tasangon '
+      + 'välissä. Maa on noin 800 kilometriä pitkä ja 200 kilometriä '
+      + 'leveä, ja se jakautuu kolmeen vyöhykkeeseen: pohjoisessa on '
+      + 'Himal eli lumivuoret, keskellä Pahad eli kukkulat ja '
+      + 'etelässä Terai eli tasanko.'
+      + '\n\n'
+      + 'Vuoret syntyivät, kun Intian mannerlaatta työntyi Euraasian '
+      + 'alle. Liike jatkuu yhä noin viisi senttimetriä vuodessa, ja '
+      + 'siksi Nepal on maanjäristysaluetta. Maailman kymmenestä '
+      + 'korkeimmasta vuoresta kahdeksan on Nepalissa tai sen '
+      + 'rajalla, ja korkeusero Terain kuudestakymmenestä metristä '
+      + 'Everestin huipulle on lähes 8 800 metriä. Sama ero näkyy '
+      + 'kasvillisuudessa: alhaalla on trooppista salimetsää, '
+      + 'ylhäällä alppiruusupensaikkoa ja niittyä.'
+      + '\n\n'
+      + 'Gorkhan kuningaskunta yhdisti alueen 1700-luvulla, eikä '
+      + 'Nepal ollut koskaan siirtomaa — se jäi puskurivaltioksi '
+      + 'Kiinan ja Brittiläisen Intian väliin. Kansallispuistot ja '
+      + 'muut suojelualueet kattavat lähes viidenneksen maan '
+      + 'pinta-alasta.',
+  },
 };

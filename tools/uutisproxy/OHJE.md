@@ -80,6 +80,19 @@
 > COD-kommentissa. Julkaisu tapahtuu automaattisesti mainista, kuten
 > alempien merkintöjen kohdalla.
 >
+> **Päivitys 6.9.2026 (Nepal):** sallittuihin lisättiin
+> www.onlinekhabar.com (maalehti NPL, testattu 6.9.2026: syötteessä 55
+> juttua nepaliksi, ja artikkelisivun ainoasta `<article>`-lohkosta
+> jäsentyy 30–58 yli 60 merkin kappaletta sekä `og:image`).
+> Onlinekhabarin yksi ainoa `<article>` on syy valintaan: Nagarik News
+> ja Khabarhub läpäisevät testit, mutta niillä on viisi ja kaksi
+> lohkoa, joista ensimmäinen ei ole itse juttu. Kantipurin
+> `ekantipur.com/rss` palauttaa RSS:n sijaan HTML-sivun, ja Setopatin
+> sekä Ratopatin artikkelisivuilta puuttuu sekä `<article>` että
+> `[itemprop="articleBody"]`; perustelut ovat
+> js/packs/uutislahteet.js:n NPL-kommentissa. Julkaisu Git-
+> integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

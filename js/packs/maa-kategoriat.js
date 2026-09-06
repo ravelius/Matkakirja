@@ -43614,4 +43614,432 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * NEPAL (NPL) — Aasian laudan maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-nepal.md; kaikki
+   * luvut ja päivämäärät tarkistettu en-Wikipedian raakatekstistä
+   * 6.9.2026.
+   *
+   * AIHEVALINTA ON TÄYDENNYS, EI TOISTO. Kathmandun kaupunkilehdellä
+   * (js/packs/kulttuuri-kategoriat.js) on jo oma historia-osastonsa
+   * (laakso järvenä, Tiibetin-kauppa ja Araniko, Mallojen kolme
+   * kaupunkia, Gorkhan valloitus) ja kansisivunsa (Kasthamandap,
+   * suljettu kuningaskunta, newar-puunveisto, stupat). Karttanostot
+   * kattavat Lumbinin, Bhaktapurin, Gorkhan, Janakpurin, Muktinathin,
+   * Lo Manthangin, Nuwakotin, Bardiyan, Dhaulagirin, Koshin ja
+   * Rara-järven (js/packs/maastokohteet-npl.js), punapandan
+   * (js/packs/elaintakyt.js) sekä Khumjungin jetin päänahan ja Yrjö
+   * V:n vuoden 1911 metsästysretken (js/packs/skandaalit.js). Siksi
+   * maalehti EI ota historiaa lainkaan omaksi aiheekseen, vaan viisi
+   * aihetta ovat luonto, ruoka, musiikki, kirjallisuus ja urheilu —
+   * yhtäkään niistä ei ole missään noista tiedostoista.
+   *
+   * PÄÄLLEKKÄISYYDET, JOTKA ON TIETOISESTI SALLITTU: Dhaulagiri ja
+   * Annapurna mainitaan Kali Gandakin rotkon nostossa vain rotkon
+   * seininä (karttanosto kertoo vuoresta itsestään), ja Chitwan on
+   * kahdessa nostossa (sarvikuono, korppikotkaravintola) — sen 1911
+   * metsästysretki on skandaalikortilla eikä sitä toisteta tässä.
+   *
+   * HERKÄT AIHEET: nykypolitiikka on kokonaan ulkona. Rana-kausi
+   * mainitaan vain siltä osin kuin se selittää, miksi Devkota vaihtoi
+   * päähenkilönsä säädyn ja miksi Chittadhar Hridaya joutui
+   * vankilaan; maolaisvuosia, kuningasvallan loppua ja vuoden 2025
+   * mielenosoituksia ei mainita missään. Chitwanin kansallispuiston
+   * perustaminen kerrotaan myös tharu-kylien siirron osalta
+   * (Perustuslaki 4: ei kaunistella). Uskonto on kulttuuri-ilmiönä:
+   * shaligram on fossiili ja palvonnan esine, ei hartauskieltä.
+   *
+   * KUVAT: 15 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin.
+   * VIISI NOSTOA JÄI TIETOISESTI KUVATTOMAKSI, koska kelvollista
+   * kuvaa ei ollut: sarangi (ainoat nepalilaissoittimen kuvat ovat
+   * museovitriini tekstikyltteineen tai lähikuva tunnistettavista
+   * kasvoista), dohori (esiintyjien kasvot ja sponsorin puhelinnumero
+   * kyltissä) sekä Narayan Gopal, Laxmi Prasad Devkota ja Pasang Lhamu
+   * Sherpa (ei yhtään vapaata kuvaa). Bhanubhaktalla on maalaus eikä
+   * Ramayana-käsikirjoitus, koska käsikirjoituksen skannauksessa on
+   * väripalkki. Tenzing Norgayn patsas on Darjeelingissa Intian
+   * puolella, ja selite kertoo sen.
+   */
+  NPL: [
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Nepal nousee kahdessasadassa kilometrissä Terain 60 metristä '
+          + 'Everestin lähes 8 849 metriin. Väliin mahtuu viisi ilmastovyöhykettä ja '
+          + 'lajisto, joka alkaa sarvikuonosta ja päättyy jäätikön reunalle.',
+      nostot: [
+        {
+          otsikko: 'Kivet, joiden sisällä on meri',
+          tiedosto: 'Kali Gandaki gorge in Upper Mustang.jpg',
+          teksti: 'Kali Gandakin rotko kulkee kahden kahdeksantuhattisen välistä: '
+              + 'lännessä on Dhaulagiri, idässä Annapurna. Tukuchen alapuolella '
+              + 'jokiuoma on 2 520 metrissä eli 5 571 metriä Annapurna I:n huippua '
+              + 'alempana. Joki on vanhempi kuin vuoret — kun laattojen törmäys '
+              + 'nosti Himalajaa, vesi sahasi kohoavan kallion läpi. Uomasta '
+              + 'poimitaan shaligrameja, muinaisen Tethys-meren ammoniittifossiileja, '
+              + 'joita hindut pitävät yhtenä Vishnun viidestä elottomasta muodosta. '
+              + 'Palvontaan riittää tulsin lehti ja vesi, ei kultaa eikä pukuja, '
+              + 'joten kiven saattoi ottaa mukaan köyhäkin talo.',
+          selite: 'Ylä-Mustangissa Kali Gandakin uoma levenee kilometrien '
+            + 'levyiseksi sorakentäksi, ja rotkon seinissä näkyvät '
+            + 'merenpohjan kerrostumat raitoina.',
+          lahde: 'Carsten.nebel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Yhdeksänkymmentäviisi jäljellä',
+          aika: '1950–2015',
+          tiedosto: 'Greater one-horned rhinoceros at Chitwan.jpg',
+          teksti: 'Vuonna 1950 Chitwanin metsissä ja ruohostoissa eli noin 800 '
+              + 'panssarisarvikuonoa. Sitten malaria hävitettiin, ylängön viljelijät '
+              + 'muuttivat laaksoon, seitsemänkymmentä prosenttia viidakosta '
+              + 'raivattiin ja salametsästys riistäytyi: 1960-luvun lopulla '
+              + 'eläimiä oli 95. Hallitus kokosi Gaida Gasti -partion, 130 aseistettua '
+              + 'miestä ja vartioasemien verkon, ja alue julistettiin 1973 Nepalin '
+              + 'ensimmäiseksi kansallispuistoksi — rajojen sisään jääneet tharu-kylät '
+              + 'purettiin ja asukkaat siirrettiin pois. Vuonna 2015 puistossa '
+              + 'laskettiin 605 sarvikuonoa.',
+          selite: 'Emo ja vasa Chitwanin kansallispuistossa. Vuodesta 1986 '
+            + 'eläimiä on siirretty joka vuosi myös Bardiyaan ja '
+            + 'Shuklaphantaan, jottei yksi tauti veisi koko kantaa.',
+          lahde: 'Aditya Pal, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Lintu, jota etsittiin sata vuotta',
+          tiedosto: 'Spiny babbler the only endemic bird of Nepal.jpg',
+          teksti: 'Piikkitimali on ainoa lintulaji, joka elää vain Nepalissa. Brian '
+              + 'Houghton Hodgson kuvasi sen tieteelle 1800-luvun puolivälissä, ja '
+              + 'sen jälkeen sitä ei nähty — laji ehdittiin arvella sukupuuttoon '
+              + 'kuolleeksi. Amerikkalainen lintutieteilijä Sidney Dillon Ripley '
+              + 'löysi sen uudelleen 1940-luvun lopulla. Nepaliksi lintu on kande '
+              + 'bhyakur, piikikäs lintu. Se elää keskivyöhykkeen tiheissä '
+              + 'pensaikoissa, muun muassa Kathmandun laakson laidalla Godavarissa ja '
+              + 'Phulchokilla, ja piileksii kaiken muun aikaa paitsi pesimäkauden '
+              + 'alussa, jolloin koiraat nousevat oksalle laulamaan avoimesti.',
+          selite: 'Piikkitimali laulaa pensaan latvassa. Nimen piikit ovat '
+            + 'höyhenten vaaleat ruodit, jotka erottuvat rinnassa viiruina.',
+          lahde: 'Aditya Pal, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Korppikotkien ravintola',
+          aika: '1990-luku–',
+          tiedosto: 'White-rumped vulture in Chitwan National Park.jpg',
+          teksti: 'Bengalinkorppikotka oli ennen 1990-lukua Intian niemimaan '
+              + 'tavallisin korppikotka ja niin runsas, että sitä pidettiin '
+              + 'lentokoneiden riesana. Sitten kanta romahti 99 prosentilla. Syy löytyi '
+              + 'lääkekaapista: diklofenaakki, karjan tulehduskipulääke, tuhoaa '
+              + 'raadon syöneen linnun munuaiset. Nepal kielsi aineen '
+              + 'eläinlääkinnässä ja alkoi ylläpitää korppikotkaravintoloita — '
+              + 'ruokintapaikkoja, joihin kyläyhteisöt tuovat raatoja, joissa '
+              + 'lääkeainetta ei ole. Kanta on vakaantunut niiden ympärillä, mutta '
+              + 'lintu liikkuu satojen kilometrien alueella eikä pysy suoja-alueella.',
+          selite: 'Bengalinkorppikotka laskeutuu sateessa Jatayun '
+            + 'korppikotkaravintolaan Chitwanin kansallispuiston '
+            + 'suoja-alueella.',
+          lahde: 'Mildeep, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Nepalilainen ateria toistuu kahdesti päivässä, mutta korkeus '
+          + 'vaihtaa sen sisällön: alhaalla riisi, ylhäällä tattari ja hirssi — ja '
+          + 'kaikkialla hapatettua vihannesta talven varalle.',
+      nostot: [
+        {
+          otsikko: 'Sama lautanen kahdesti päivässä',
+          tiedosto: 'Nepali dal-bhat-tarkari.jpg',
+          teksti: 'Dal bhat on linssikeittoa ja riisiä, ja sen ympärille kootaan '
+              + 'tarkari eli kasviscurry, achar eli pikkelöity lisuke ja usein '
+              + 'rapea papad. Nepalilainen tuntomerkki on jimbu, himalajalaisen '
+              + 'sipulikasvin kuivattu lehti, joka kuullotetaan voisulassa ja '
+              + 'kaadetaan keitetyn dalin päälle. Vuoristossa ateria ei kuitenkaan '
+              + 'ollut tämä: riisi vaatii lämpöä, joten kukkuloilla syötiin dhindoa, '
+              + 'tattarista, hirssistä tai maissista kiehuvaan veteen vatkattua '
+              + 'puuroa. Dhindoa pidettiin pitkään riisiä huonompana ruokana, kunnes '
+              + 'se nousi kaupunkiravintoloiden listoille.',
+          selite: 'Yhdellä messinkilautasella on riisi, dal, saag eli '
+            + 'lehtivihannes, tarkari, jogurttia, papad ja hedelmäsalaattia — '
+            + 'ateria kootaan pikkukulhoista, ei annoksena.',
+          lahde: 'Subhashish Panigrahi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Nyytti, jonka reitistä kiistellään',
+          tiedosto: 'Momo Nepali cuisine.jpg',
+          teksti: 'Momon nimi tulee todennäköisesti kiinan sanasta momo, joka '
+              + 'tarkoittaa luoteismurteissa höyrytettyä vehnäsämpylää. Kumpaan '
+              + 'suuntaan resepti kulki, siitä kiistellään yhä. Yhden tarinan mukaan '
+              + 'nepalilainen prinsessa Bhrikuti vei sen 600-luvulla Tiibetiin; '
+              + 'yleisemmän käsityksen mukaan Tiibetissä kauppaa käyneet '
+              + 'newar-kauppiaat toivat sen Kathmandun laaksoon. Vanhimmat '
+              + 'tiibetiläiset nyytit tehtiin ohrajauhosta ja täytettiin naudalla tai '
+              + 'lampaalla. Nepalissa täyte on tavallisimmin puhvelia, ja liemessä '
+              + 'tarjottu jhol momo on oma lajinsa.',
+          selite: 'Nyytit höyrytetään ja tarjotaan achar-kastikkeessa. '
+            + 'Kasvistäytteet syntyivät vasta Intian tasangoilla, jossa '
+            + 'kasvissyöjiä oli paljon.',
+          lahde: 'Bajinra, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Herkku, jolla on oma täysikuu',
+          tiedosto: 'Yomari double.jpg',
+          teksti: 'Yomari on newarien talviherkku: tahmeasta riisijauhosta muotoiltu '
+              + 'kärkevä kotelo, jonka sisällä on chakua eli ruokosokerisiirappia tai '
+              + 'khuwaa, kokoon keitettyä maitoa. Kotelo höyrytetään ja syödään '
+              + 'Thinla-kuun täydenkuun päivänä juhlassa nimeltä Yomari Punhi, joka '
+              + 'päättää riisinkorjuun ja jossa palvotaan viljan jumalatarta '
+              + 'Annapurnaa. Nimi tarkoittaa nepal bhasaksi mieluista leipää. '
+              + 'Vanhemmissa asiakirjoissa ruoka kulkee muilla nimillä: Pashupatin '
+              + 'kivikirjoituksessa vuodelta 1440 se on irhamadhe. Juhlailtana lapset '
+              + 'kiertävät naapurustossa laulaen ja pyytävät yomareita.',
+          selite: 'Yomarin kärki väännetään käsin, ja täyte pannaan sisään '
+            + 'ennen höyrytystä. Lapsi saa syntymäpäivänään yomareista '
+            + 'punotun seppeleen, yhden kutakin ikävuotta kohti.',
+          lahde: 'Raunak Maskay, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Hunaja, joka huimaa',
+          tiedosto: 'Vhir Mauri (3).JPG',
+          teksti: 'Himalajan jättiläismehiläinen on maailman suurin mehiläinen: '
+              + 'aikuinen yksilö voi olla kolme senttiä pitkä. Se rakentaa yhden '
+              + 'avoimen kakun kalliojyrkänteen alle 1 200–4 000 metrin korkeuteen, '
+              + 'ja yhdessä pesässä voi olla 60 kiloa hunajaa. Keväällä, kun '
+              + 'alppiruusut kukkivat, satoon päätyy grajanotoksiinia, ja siitä tulee '
+              + 'huumaava punainen hunaja. Gurungit ovat keränneet sitä vuosisatoja: '
+              + 'kalliolle lasketaan köysitikkaat ja mehiläiset savustetaan alta. '
+              + 'Punaista hunajaa ei syödä kotona vaan myydään, ja se maksaa '
+              + 'moninkertaisesti tavallisen hinnan.',
+          selite: 'Rivi avoimia kakkuja jyrkänteen alla. Kerääjät nousevat '
+            + 'kalliolle kahdesti vuodessa, keväällä ja myöhään syksyllä.',
+          lahde: 'Sudan Shrestha, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä kasvin kukista Himalajan punainen hunaja saa huumaavan '
+            + 'aineensa?',
+        vaihtoehdot: [
+          'Alppiruusun',
+          'Tattarin',
+          'Kirsikkapuun',
+          'Bambun',
+        ],
+        oikea: 0,
+        fakta: 'Alppiruusujen medessä on grajanotoksiinia, joka päätyy keväällä '
+            + 'kerättyyn punaiseen hunajaan.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Nepalin kansanmusiikin selkäranka on kaksi soitinta — jousella '
+          + 'soitettava sarangi ja kaksipäinen madal — ja laulutapa, jossa kaksi '
+          + 'joukkuetta vastaa toisilleen säkeillä niin kauan kuin sanoja riittää.',
+      nostot: [
+        {
+          otsikko: 'Jousi, joka kantoi uutiset',
+          teksti: 'Nepalilainen sarangi veistetään yhdestä puunkappaleesta: kaula ja '
+              + 'kaksiosainen kaikukoppa, jonka alaosan päälle on pingotettu lampaan '
+              + 'tai vuohen nahka. Kieliä on neljä, ja ennen ne tehtiin '
+              + 'Dashain-juhlassa teurastettujen lampaiden suolista: suolet jätettiin '
+              + 'ruukkuun mätänemään, ja jäljelle jääneistä säikeistä punottiin kieli. '
+              + 'Nykyään kielinä on sulkapallon kieltä, nailonia ja terästä. Soitin '
+              + 'kuului gandharbien eli gainejen ammattikuntaan, joka kiersi kylästä '
+              + 'kylään laulamassa kuninkaista, sankareista ja siitä mitä matkalla oli '
+              + 'nähty — uutiset kulkivat ennen radiota sarangin mukana.',
+        },
+        {
+          otsikko: 'Rumpu, jolla on kaksi puolta',
+          tiedosto: 'Madal.jpg',
+          teksti: 'Madal on Nepalin kansallissoitin ja lähes kaiken kansanmusiikin '
+              + 'rytmipohja. Se on lieriö, jonka keskiosa pullistuu ja jonka '
+              + 'molemmissa päissä on kalvo — toinen suurempi, toinen pienempi, ja '
+              + 'niitä sanotaan mies- ja naispuoleksi. Runko veistetään kovasta puusta '
+              + 'kuten tiikistä tai salpuusta, kalvot ovat vuohen tai puhvelin nahkaa, '
+              + 'ja viritys tehdään nahkahihnoja kiristämällä. Soittaja istuu ja lyö '
+              + 'molempia päitä yhtä aikaa rumpu poikittain sylissään. Ranjit Gazmer '
+              + 'vei madalin Bollywoodiin, Rahul Dev Burmanin levytyksiin.',
+          selite: 'Madal roikkuu bambujen välissä Nepalin lipun edessä. '
+            + 'Kalvojen eri koko antaa saman soittimen molemmille päille '
+            + 'oman äänensä.',
+          lahde: 'Janak Bhatta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Laulukilpa, joka päättyy sanojen loppuessa',
+          teksti: 'Dohori tarkoittaa edestakaisin. Kaksi joukkuetta — tavallisesti '
+              + 'miehet ja naiset — istuu vastakkain, ja toinen laulaa kysymyksen, '
+              + 'johon toinen vastaa improvisoidulla säeparilla samaan tuttuun '
+              + 'kansansävelmään. Kilpailu jatkuu, kunnes toiselta loppuvat nokkelat '
+              + 'vastaukset; ennen dohorin kerrotaan venyneen seitsemän vuorokauden '
+              + 'mittaiseksi. Muunnelmia on kolme: miesten kesken bhale, naisten '
+              + 'kesken pothi ja sekaryhmissä rally. Riimi pakottaa poikkeamaan '
+              + 'aiheesta ruokiin, sananlaskuihin ja kasveihin, ja se tapa on '
+              + 'tarttunut myös nykyaikaisiin nepalilaisiin lauluihin.',
+        },
+        {
+          otsikko: 'Äänen keisari',
+          aika: '1939–1990',
+          teksti: 'Narayan Gopal Gurubacharya syntyi 1939 newar-perheeseen Kathmandun '
+              + 'Kilagaliin. Ystävä vei hänet heti päästötodistuksen jälkeen Radio '
+              + 'Nepalin äänikokeeseen, ja hän läpäisi sen ensi yrittämällä. Ura kesti '
+              + 'kaksikymmentäkahdeksan vuotta ja yli sataviisikymmentä levytettyä '
+              + 'laulua. Tunnetuimmat syntyivät 1960-luvun lopulla yhteistyössä '
+              + 'säveltäjä Gopal Yonzonin kanssa, juuri kun Beatlesin ja Bob Dylanin '
+              + 'ääni oli saapunut Nepaliin ja uutta omakielistä tyyliä etsittiin. '
+              + 'Häntä sanotaan yhä nimellä Swar Samrat, äänen keisari.',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Nepalin kirjallisuus ei ole yhtä kieltä. Nepali sai eeppisen '
+          + 'runoutensa 1800-luvulla, ja newarien nepal bhasa kirjoitti omansa osin '
+          + 'salaa, painettuna rajan takana ja kerran vankilassa.',
+      nostot: [
+        {
+          otsikko: 'Ruohonleikkaaja, joka pani runoilijan töihin',
+          aika: '1814–1868',
+          tiedosto: 'Bhanubhakta Acharya painting.jpg',
+          teksti: 'Bhanubhakta Acharya syntyi 1814 Tanahunin Chundi Ramghaan ja sai '
+              + 'sanskritin opetuksen isoisältään. Perimätiedon mukaan hän tapasi '
+              + 'ruohonleikkaajan, joka halusi jättää jälkeensä jotain, mistä hänet '
+              + 'muistettaisiin — siitä alkoi elämäntyö. Bhanubhakta käänsi Ramayanan '
+              + 'sanskritista nepaliksi ensimmäisenä ja säilytti laulettavan '
+              + 'poljennon niin, ettei tulos kuulosta runolta vaan laululta. Käännös '
+              + 'levisi ensin suullisena. Vankilaan jouduttuaan hän kirjoitti '
+              + 'pääministerille runomuotoisen anomuksen ja pääsi vapaaksi. Teokset '
+              + 'painettiin vasta 1887, lähes kaksikymmentä vuotta hänen kuolemansa '
+              + 'jälkeen.',
+          selite: 'Maalaus Bhanubhakta Acharyasta vuodelta 1950. Kädessä on '
+            + 'kirjoituskäärö: hänet muistetaan kääntäjänä, ja arvonimi '
+            + 'Adikavi tarkoittaa ensimmäistä runoilijaa.',
+          lahde: 'Jwala Sama, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Nepalin myydyin kirja',
+          aika: '1936',
+          teksti: 'Laxmi Prasad Devkota kuuli Kathmandun katukatoksissa vanhaa '
+              + 'newar-balladia Ji Waya La Lachhi Maduni, jossa kauppias lähtee '
+              + 'Tiibetiin ja palaa liian myöhään. Hän kirjoitti sen uudelleen '
+              + 'nepaliksi kansansävelmän jhyaure-mittaan, ja niin syntyi 1936 Muna '
+              + 'Madan, Nepalin myydyin kirja. Päähenkilön säädyn Devkota vaihtoi '
+              + 'kauppiaasta soturiksi, koska Rana-hallinto oli kieltänyt newarien '
+              + 'kaupan ja kielen. Sama kirjoittaja teki kolmessa kuukaudessa '
+              + 'Shakuntalan, ensimmäisen nepalinkielisen mahakavyan, ja käänsi '
+              + 'Hamletin nepaliksi.',
+        },
+        {
+          otsikko: 'Säkeet, jotka kulkivat ulos ruoan mukana',
+          aika: '1940–1946',
+          tiedosto: 'Chittadhar Hridaya museum.jpg',
+          teksti: 'Chittadhar Hridaya syntyi 1906 Kathmandussa Lhasan-kauppiaiden '
+              + 'sukuun. Hän jätti suvun liiketoimet ja ryhtyi kirjoittamaan nepal '
+              + 'bhasaksi, kieltä jota Rana-hallinto ei sallinut painaa. Kokoelma '
+              + 'julkaistiin 1933 rajan takana Kalimpongissa, mutta tulli takavarikoi '
+              + 'koko painoksen. Yhden runon allekirjoitus "äiditön lapsi" tulkittiin '
+              + 'hallinnon arvosteluksi, ja 1940 hänet tuomittiin kuudeksi vuodeksi '
+              + 'vankeuteen. Vankilassa hän kirjoitti pääteoksensa Sugata Saurabhan, '
+              + 'Buddhan elämän yhdeksäntoista laulussa; sisar Moti Laxmi Upasika '
+              + 'kuljetti paperinpalat ulos ruokaa tuodessaan.',
+          selite: 'Runoilijan huone on säilytetty ennallaan hänen kotitalossaan '
+            + 'Kathmandussa, joka avattiin museona 2013.',
+          lahde: 'Kamal Ratna Tuladhar, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Ensimmäinen nainen, joka sai Madan-palkinnon',
+          aika: '1937–1993',
+          tiedosto: 'Parijat Nepali writer.jpg',
+          teksti: 'Bishnu Kumari Waiba, kirjailijanimeltään Parijat, syntyi 1937 '
+              + 'Darjeelingissa ja muutti Kathmanduun 1954. Ensimmäinen runo '
+              + 'julkaistiin 1959, ja romaaneja tuli kymmenen. Niistä Shirishko Phool '
+              + 'toi hänelle 1965 Madan Puraskarin ensimmäisenä naisena; englanniksi '
+              + 'kirja tunnetaan nimellä The Blue Mimosa, ja se on luettavana '
+              + 'Marylandin yliopiston kirjallisuuskurssilla. Parijat halvaantui '
+              + '26-vuotiaana ja hänen sisarensa hoiti häntä suurimman osan elämästä. '
+              + 'Hän johti 1966 Ralfa-liikettä ja perusti vangeille suunnatun '
+              + 'avustustoiminnan.',
+          selite: 'Parijat kotinsa ikkunan ääressä. Hän jäi naimattomaksi ja '
+            + 'kirjoitti runoja, novelleja ja artikkeleita romaanien ohella.',
+          lahde: 'Nepal Picture Library, Wikimedia Commons (public domain)',
+        },
+      ],
+    },
+    {
+      id: 'urheilu',
+      nimi: 'Urheilu',
+      johdanto: 'Nepalin tunnetuin laji nousee pystysuoraan, ja työn tekevät '
+          + 'suurelta osin šerpat — mutta maan virallinen kansallislaji on vuodesta '
+          + '2017 ollut lentopallo.',
+      nostot: [
+        {
+          otsikko: 'Kaksi miestä huipulla, yksi kysymys',
+          aika: '1953–1955',
+          tiedosto: 'Statue Of Tenzing Norgay.jpg',
+          teksti: 'Tenzing Norgay oli ollut Everestillä kuudesti ennen vuotta 1953: '
+              + 'kolmesti brittien pohjoisilla retkillä 1930-luvulla ja 1952 '
+              + 'sveitsiläisten mukana, jolloin hän ja Raymond Lambert nousivat 8 595 '
+              + 'metriin. Toukokuun 29. päivänä 1953 hän ja Edmund Hillary seisoivat '
+              + 'huipulla ja viipyivät siellä vartin. Toimittajat kysyivät kaksi '
+              + 'vuotta samaa: kumpi astui ensin? Retkikunnan johtaja John Hunt '
+              + 'vastasi, että he nousivat yhdessä. Vasta omaelämäkerrassaan 1955 '
+              + 'Tenzing kertoi, että Hillary astui ensin — köyttä oli heidän '
+              + 'välillään pari metriä.',
+          selite: 'Tenzing Norgayn patsas seisoo Darjeelingissa Himalayan '
+            + 'Mountaineering Instituten edustalla. Hän johti laitoksen '
+            + 'kenttäkoulutusta sen perustamisesta 1954 alkaen.',
+          lahde: 'Syed Sajidul Islam, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Ensimmäinen nepalilainen nainen huipulla',
+          aika: '1993',
+          teksti: 'Pasang Lhamu Sherpa syntyi 1961 Solukhumbussa kiipeilyperheeseen ja '
+              + 'työskenteli vaellusoppaana. Everestiä hän yritti kolme kertaa — 1990, '
+              + '1991 ja 1992 — ja pääsi kerran Etelähuipulle asti ennen kuin tuuli '
+              + 'käänsi. Vuonna 1993 hän kokosi miehensä kanssa Nepalin naisten oman '
+              + 'retkikunnan ja nousi 22. huhtikuuta huipulle ensimmäisenä '
+              + 'nepalilaisena naisena. Laskeutumisella Sonam Tshering sairastui '
+              + 'vakavasti Etelähuipun lähellä; Pasang Lhamu jäi hänen luokseen, happi '
+              + 'loppui yön aikana eikä kumpikaan selvinnyt. Nepal nimesi hänen '
+              + 'mukaansa vuoren, tien ja vehnälajikkeen.',
+        },
+        {
+          otsikko: 'Kylä, jonka takaa ennätykset tulevat',
+          aika: '1953–2026',
+          tiedosto: 'Thame.JPG',
+          teksti: 'Thame on šerpakylä Solukhumbussa, viimeinen ympärivuotinen asutus '
+              + 'vanhalla Tiibetin-suolatiellä. Sieltä ovat kotoisin sekä Apa Sherpa, '
+              + 'joka nousi Everestille 21 kertaa, että Kami Rita Sherpa, joka teki '
+              + 'saman 32. kerran toukokuussa 2026 — enemmän kuin kukaan muu. Kami '
+              + 'Rita kasvoi yksihuoneisessa talossa, harkitsi munkiksi ryhtymistä ja '
+              + 'kantoi tavaraa perusleirille jo lapsena. Myös Tenzing Norgay vietti '
+              + 'lapsuutensa Thamessa. Ammatti on yhä vaarallinen: šerpojen osuus '
+              + 'Everestin kuolonuhreista on noin kolmannes.',
+          selite: 'Thame lumessa tammikuussa. Kylän luostari on Khumbun '
+            + 'vanhimpia, ja sen Mani Rimdu -juhla kokoaa laakson väen '
+            + 'kerran vuodessa.',
+          lahde: 'Moralist, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Keppi, tikku ja verkko',
+          aika: '2017',
+          tiedosto: 'Dandibiyo.JPG',
+          teksti: 'Dandi biyoa pelataan noin 60 senttimetrin kepillä ja 15 senttimetrin '
+              + 'puutikulla, jonka molemmat päät on teroitettu. Tikku asetetaan maahan '
+              + 'kaivetun kuopan yli, ja pelaaja singauttaa sen kepin vipuvarrella '
+              + 'ilmaan; muut yrittävät napata sen lennosta. Pisteet lasketaan '
+              + 'kertomalla osumien määrä sillä, montako kepinmittaa tikku lensi. Peli '
+              + 'oli maan tosiasiallinen kansallislaji, mutta pelaajia on yhä '
+              + 'vähemmän. Toukokuussa 2017 kansallislajiksi julistettiin lentopallo, '
+              + 'jota pelataan kaikissa 77 piirikunnassa ja jossa naisten sarja on '
+              + 'suositumpi kuin miesten.',
+          selite: 'Pelaaja singauttaa biyo-tikun ilmaan tantereella. Peliä '
+            + 'pelattiin eniten 1980- ja 1990-luvuilla, ennen kuin ostetut '
+            + 'lelut yleistyivät.',
+          lahde: 'Nirmal Dulal, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+  ],
 };

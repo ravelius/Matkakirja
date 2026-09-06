@@ -705,4 +705,31 @@ export const UUTISLAHTEET = {
     kieli: 'fr',
     syote: 'https://www.radiookapi.net/feed',
   },
+  /*
+   * Onlinekhabar on Nepalin luetuimpia verkkolehtiä ja julkaisee
+   * nepaliksi. Testattu 6.9.2026: syötteessä 55 juttua, ja
+   * artikkelisivulla on täsmälleen yksi <article>-lohko, josta
+   * jäsentyy 30–58 yli 60 merkin kappaletta sekä og:image.
+   *
+   * HUOMIO FABLELLE: pieni osa jutuista (osa urheilu- ja kuvajutuista)
+   * on eri pohjalla, jossa <article>-elementtiä ei ole lainkaan —
+   * yhdeksästä testatusta artikkelista kahdeksassa lohko oli. Niissä
+   * popup näyttää syötteen kuvauksen, eikä mikään mene rikki.
+   *
+   * Testattu ja hylätty: ekantipur.com/rss (Kantipur, maan suurin
+   * lehtitalo) palauttaa RSS:n sijaan HTML-sivun; Setopati (syöte
+   * viisi juttua) ja Ratopati (kolmekymmentä juttua) — molempien syöte
+   * aukeaa, mutta artikkelisivulla ei ole <article>-elementtiä eikä
+   * [itemprop="articleBody"]-merkintää; Nagarik News ja Khabarhub
+   * läpäisevät molemmat testit, mutta niiden artikkelisivulla on
+   * viisi ja kaksi <article>-lohkoa, joista ensimmäinen ei ole itse
+   * juttu — Onlinekhabarin yksi lohko on siksi turvallisin.
+   * Khabarhubin syöte on lisäksi ilman www:tä, eikä worker seuraa
+   * uudelleenohjauksia.
+   */
+  NPL: {
+    nimi: 'Onlinekhabar',
+    kieli: 'ne',
+    syote: 'https://www.onlinekhabar.com/feed',
+  },
 };

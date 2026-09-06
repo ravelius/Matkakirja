@@ -112,6 +112,9 @@ const SALLITUT = [
   // Kongon demokraattisen tasavallan uutislähde (maalehti COD,
   // 6.9.2026): syöte ja artikkelisivut samalla isäntänimellä.
   'https://www.radiookapi.net/',
+  // Nepalin uutislähde (maalehti 6.9.2026): Onlinekhabarin syöte ja
+  // artikkelisivut ovat samalla isäntänimellä (www).
+  'https://www.onlinekhabar.com/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei
