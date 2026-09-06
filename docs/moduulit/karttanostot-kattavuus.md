@@ -183,7 +183,7 @@ Edellä oleva 2.9.2026 taulukko on jätetty koskematta tarkoituksella:
 rinnakkaiset erät päivittävät sitä, ja Euroopan luvut näkyvät tässä
 osiossa tuoreina.
 
-**Tilanne yhdellä silmäyksellä (erien M1–M6, M8, M9 ja M11 jälkeen, 6.9.2026 keskipäivä).** 112 maasta **67 on tavoitteessa** ja 45 vajaita. Tarkoitukselliset vajeet: Fidži, Salomonsaaret, Hongkong, Singapore, Qatar, Kuwait ja Kypros (lehden ikkuna tai kaupunkisäde). Erä M10 (Aasia 3) on työn alla; jäljellä Afrikan ja Aasian loput maat.
+**Tilanne yhdellä silmäyksellä (erien M1–M18 jälkeen, 6.9.2026 iltapäivä).** 112 maasta **103 on tavoitteessa** ja 9 vajaita. Tarkoitukselliset vajeet: Fidži, Salomonsaaret, Vanuatu ja Saint Helena (laudan maa-alue tai outlines ei kata saarta, eläintäky ei mahdu vartioon), Hongkong, Singapore, Qatar, Kuwait ja Kypros (lehden ikkuna tai kaupunkisäde). Maailman nostoerät ovat tehdyt; jäljellä on vain tekniset poikkeukset.
 
 ### Eurooppa (29 maata)
 
@@ -223,8 +223,6 @@ osiossa tuoreina.
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Jemen (YEM) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Syyria (SYR) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
 | Qatar (QAT) | 5 | 3 | 0 | 2 | 0 | 0 | 10 | 0 | kohteita −3, eläintäky puuttuu |
 | Kuwait (KWT) | 5 | 4 | 1 | 2 | 0 | 0 | 11 | 0 | kohteita −3 |
 | Kypros (CYP) | 7 | 3 | 1 | 2 | 0 | 0 | 12 | 0 | kohteita −1 |
@@ -233,6 +231,8 @@ osiossa tuoreina.
 | Jordania (JOR) | 8 | 3 | 1 | 2 | 0 | 0 | 12 | 1 | täysi |
 | Oman (OMN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Saudi-Arabia (SAU) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Syyria (SYR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Jemen (YEM) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Arabiemiirikunnat (ARE) | 9 | 3 | 1 | 2 | 0 | 0 | 14 | 0 | täysi |
 | Egypti (EGY) | 8 | 3 | 1 | 2 | 3 | 0 | 15 | 1 | täysi |
 
@@ -240,99 +240,99 @@ osiossa tuoreina.
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Taiwan (TWN) | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | kohteita −8, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
-| Japani (JPN) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
-| Kazakstan (KAZ) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Etelä-Korea (KOR) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Mongolia (MNG) | 1 | 2 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −7, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
-| Pakistan (PAK) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Uzbekistan (UZB) | 1 | 2 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −7, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
-| Afganistan (AFG) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
-| Filippiinit (PHL) | 0 | 4 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Kiina (CHN) | 1 | 4 | 1 | 0 | 0 | 0 | 5 | 0 | kohteita −7, skandaaleja −2 |
 | Hongkong (HKG) | 4 | 2 | 0 | 2 | 0 | 0 | 8 | 0 | kohteita −4, maastoa −1, eläintäky puuttuu |
 | Singapore (SGP) | 5 | 1 | 0 | 2 | 0 | 0 | 8 | 0 | kohteita −3, maastoa −2, eläintäky puuttuu |
+| Afganistan (AFG) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Indonesia (IDN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Intia (IND) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Japani (JPN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Kazakstan (KAZ) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Etelä-Korea (KOR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Sri Lanka (LKA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Myanmar (MMR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Mongolia (MNG) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Nepal (NPL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Pakistan (PAK) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Thaimaa (THA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Taiwan (TWN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Uzbekistan (UZB) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Vietnam (VNM) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Kiina (CHN) | 8 | 4 | 1 | 2 | 0 | 0 | 14 | 0 | täysi |
+| Filippiinit (PHL) | 8 | 4 | 1 | 2 | 0 | 0 | 14 | 0 | täysi |
 
 ### Afrikka (27 maata)
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Saint Helena (SHN) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
-| Ghana (GHA) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Liberia (LBR) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Madagaskar (MDG) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
-| Mali (MLI) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Mosambik (MOZ) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Namibia (NAM) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
-| Sudan (SDN) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Senegal (SEN) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Sierra Leone (SLE) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Tšad (TCD) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Libya (LBY) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
-| Nigeria (NGA) | 0 | 4 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Somalia (SOM) | 0 | 4 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Tunisia (TUN) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
-| Etelä-Afrikka (ZAF) | 0 | 4 | 1 | 0 | 0 | 0 | 4 | 0 | kohteita −8, skandaaleja −2 |
-| Zimbabwe (ZWE) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
+| Saint Helena (SHN) | 3 | 2 | 0 | 2 | 0 | 0 | 7 | 0 | kohteita −5, maastoa −1, eläintäky puuttuu |
 | Angola (AGO) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Kamerun (CMR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Kongo (COD) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Algeria (DZA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Etiopia (ETH) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Ghana (GHA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Kenia (KEN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Liberia (LBR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Libya (LBY) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Marokko (MAR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Madagaskar (MDG) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Mali (MLI) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Mosambik (MOZ) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Namibia (NAM) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Sudan (SDN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Etelä-Sudan (SDS) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Senegal (SEN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Sierra Leone (SLE) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Tšad (TCD) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Tunisia (TUN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Tansania (TZA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Uganda (UGA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Zimbabwe (ZWE) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Nigeria (NGA) | 8 | 4 | 1 | 2 | 0 | 0 | 14 | 0 | täysi |
+| Somalia (SOM) | 8 | 4 | 1 | 2 | 0 | 0 | 14 | 0 | täysi |
+| Etelä-Afrikka (ZAF) | 8 | 4 | 1 | 2 | 0 | 0 | 14 | 0 | täysi |
 
 ### Pohjois-Amerikka (7 maata)
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Meksiko (MEX) | 1 | 0 | 1 | 0 | 0 | 0 | 1 | 0 | kohteita −7, maastoa −3, skandaaleja −2 |
-| Yhdysvallat (USA) | 0 | 0 | 1 | 0 | 4 | 0 | 3 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
 | Kanada (CAN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Kuuba (CUB) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Grönlanti (GRL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Guatemala (GTM) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Meksiko (MEX) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Nicaragua (NIC) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Yhdysvallat (USA) | 8 | 3 | 1 | 2 | 4 | 0 | 16 | 0 | täysi |
 
 ### Etelä-Amerikka (11 maata)
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Ecuador (ECU) | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
-| Panama (PAN) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
-| Paraguay (PRY) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
-| Uruguay (URY) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
-| Venezuela (VEN) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
-| Peru (PER) | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
 | Argentiina (ARG) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Bolivia (BOL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Brasilia (BRA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Chile (CHL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Kolumbia (COL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Ecuador (ECU) | 8 | 3 | 1 | 2 | 1 | 0 | 13 | 0 | täysi |
+| Panama (PAN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Paraguay (PRY) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Uruguay (URY) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Venezuela (VEN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Peru (PER) | 8 | 3 | 1 | 2 | 1 | 0 | 14 | 0 | täysi |
 
 ### Oseania (7 maata)
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Vanuatu (VUT) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
 | Fidži (FJI) | 5 | 3 | 0 | 2 | 0 | 0 | 10 | 0 | kohteita −3, eläintäky puuttuu |
 | Salomonsaaret (SLB) | 6 | 3 | 0 | 2 | 0 | 0 | 11 | 0 | kohteita −2, eläintäky puuttuu |
 | Australia (AUS) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Uusi-Seelanti (NZL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Papua-Uusi-Guinea (PNG) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Itä-Timor (TLS) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Vanuatu (VUT) | 8 | 3 | 0 | 2 | 0 | 0 | 13 | 0 | eläintäky puuttuu |
 
-Maita 112, tavoitteessa 67, vajaita 45.
+Maita 112, tavoitteessa 103, vajaita 9.
 
 ## Maailman erät (ehdotus)
 
