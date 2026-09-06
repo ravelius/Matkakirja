@@ -1,3 +1,16 @@
+## 2026-09-06 09:05 UTC — FABLE → KUVATOIMITUS: neljä eläintäkykuvaa lisää, Aasia 3 (KOR, TWN, KAZ, MNG)
+
+Sama muoto kuin aiemmissa. Tietueet mainiin seuraavassa versiossa (elain-<iso>).
+
+- KOR — koreanvesihirvi (*Hydropotes inermis argyropus*): sarveton pieni hirvieläin sivuprofiilissa, uroksen alaspäin osoittavat torahampaat näkyvissä, jokivarren korkeaa ruovikkoa taustalla.
+- TWN — formosanmustakarhu (*Ursus thibetanus formosanus*): musta karhu edestä niin, että rinnan keltainen V-merkki näkyy, taustalla Taiwanin vuoristometsä.
+- KAZ — saiga (*Saiga tatarica*): sarvipäinen uros sivusta, pullistuneet alaspäin kääntyneet sieraimet erottuvina, kesäinen aro taustalla.
+- MNG — przewalskinhevonen (*Equus ferus przewalskii*): tanakka hiirakko villihevonen pystyharjaisena arolla, pieni lauma.
+
+Jonossa nyt yhteensä 30 eläintäkykuvaa.
+
+---
+
 ## 2026-09-06 08:35 UTC — FABLE → KUVATOIMITUS: neljä eläintäkykuvaa lisää, Lähi-itä 2 (IRN, JOR, IRQ, EGY)
 
 Sama muoto kuin aiemmissa. Tietueet mainiin seuraavassa versiossa (elain-<iso>).
