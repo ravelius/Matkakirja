@@ -30,6 +30,21 @@
 // rapanuin ja aymaran tervehdyksille ei löytynyt en-Wiktionaryn
 // katetta, joten mukana ovat vain espanja ja mapudungun.
 //
+// Paraguay, Uruguay ja Venezuela lisättiin 6.9.2026 illalla samalla
+// menetelmällä ja samasta aineistosta. Niiden demokratiaselitykset
+// ovat artikkeleista "Politics of Paraguay", "Politics of Uruguay" ja
+// "Politics of Venezuela" ja tervehdykset artikkeleista "Languages of
+// Paraguay", "Languages of Venezuela" ja "Uruguay". Kaksi poikkeusta:
+// Uruguaylle jää vain yksi tervehdys, koska "Languages of Uruguay"
+// -artikkelia ei ole eikä rajaseudun portugalille löydy lähteestä
+// osuutta, ja Venezuelan keskitulo (3 840 $) on tasan sama kuin
+// Marokon, joten sija 125. olisi yhtä hyvin 124.
+//
+// Bolivia lisättiin 6.9.2026 illalla samalla menetelmällä ja samasta
+// aineistosta. Sen demokratiaselitys on artikkelista "Politics of
+// Bolivia" ja tervehdysten osuudet artikkelista "Bolivia" (vuosien
+// 2001 ja 2024 väestönlaskennat).
+//
 // Jokainen tervehdyksen lippu on tarkistettu Commonsista: puuttuva
 // tiedostonimi jättäisi kortin puolityhjäksi ilman virhettä.
 //
@@ -64,6 +79,38 @@ export const SOUTHAMERICA_MAATIEDOT = {
       { teksti: 'Buenos días', kieli: 'espanja', lippu: 'Flag of Argentina.svg', osuus: '99 %' },
       { teksti: 'Guten Tag', kieli: 'saksa (siirtolaisyhteisöt)', lippu: 'Flag of Germany.svg', osuus: '0,4 %' },
       { teksti: 'Mba\'éichapa', kieli: 'guarani', lippu: 'Flag of Paraguay.svg', osuus: '0,2 %' },
+    ],
+  },
+  BOL: {
+    vakiluku: '12 milj.',
+    vakilukuSija: '78./195',
+    pintaAla: '1,1 milj. km²',
+    pintaAlaSija: '27./195',
+    demokratia: {
+      arvo: '0,35',
+      sija: '87./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~BOL',
+      selitys: 'Bolivia on presidentin johtama tasavalta ja monipuoluejärjestelmä, '
+        + 'jossa lainsäädäntövalta kuuluu kaksikamariselle parlamentille ja '
+        + 'jossa sekä tuomiovalta että vaalihallinto ovat toimeenpano- ja '
+        + 'lainsäädäntövallasta riippumattomia. Nykyinen perustuslaki '
+        + 'hyväksyttiin kansanäänestyksellä 2009, ja se määrittelee maan '
+        + 'yhtenäiseksi ja maalliseksi valtioksi. Presidentti valitaan '
+        + 'viideksi vuodeksi suoralla kansanvaalilla: voittoon tarvitaan '
+        + 'ehdoton enemmistö tai 40 prosenttia äänistä ja kymmenen '
+        + 'prosenttiyksikön ero toiseksi tulleeseen, muuten järjestetään '
+        + 'toinen kierros. Vuoden 2014 vaalien jälkeen parlamentin paikoista '
+        + '53,1 prosenttia oli naisilla eli suurempi osuus kuin naisten osuus '
+        + 'väestöstä.',
+    },
+    keskitulo: {
+      arvo: '4 160 $/v',
+      sija: '119./190',
+    },
+    tervehdykset: [
+      { teksti: 'Buenos días', kieli: 'espanja', lippu: 'Flag of Bolivia.svg', osuus: '67 %' },
+      { teksti: 'Allin p\'unchay', kieli: 'ketšua', lippu: 'Wiphala.svg', osuus: '13 %' },
+      { teksti: 'Suma urukiya', kieli: 'aimara', lippu: 'Wiphala.svg', osuus: '7,3 %' },
     ],
   },
   BRA: {
@@ -230,6 +277,100 @@ export const SOUTHAMERICA_MAATIEDOT = {
       { teksti: 'Buenos días', kieli: 'espanja', lippu: 'Flag of Peru.svg', osuus: '94 %' },
       { teksti: 'Allin p\'unchay', kieli: 'ketšua', lippu: 'Wiphala.svg', osuus: '14 %' },
       { teksti: 'Suma urukiya', kieli: 'aimara', lippu: 'Flag of Bolivia.svg', osuus: '1,7 %' },
+    ],
+  },
+  PRY: {
+    vakiluku: '6,9 milj.',
+    vakilukuSija: '106./195',
+    pintaAla: '407 000 km²',
+    pintaAlaSija: '60./195',
+    demokratia: {
+      arvo: '0,38',
+      sija: '81./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~PRY',
+      selitys: 'Paraguayn historiaa ovat leimanneet sisällissodat, '
+        + 'vallankaappaukset ja yksinvalta. Alfredo Stroessner hallitsi '
+        + 'Colorado-puolueeseen nojaten vuosikymmeniä, kunnes hänet '
+        + 'syrjäytettiin 1989 ja demokratisoituminen alkoi. Sen jälkeen '
+        + 'kansalais- ja poliittiset vapaudet ovat laajentuneet ja vaaleja on '
+        + 'pidetty presidentin, kongressin ja kuntien tasolla, mutta '
+        + 'Colorado-puolueen ote valtiokoneistosta on pysynyt tiukkana ja '
+        + 'korruptio on laajaa. Presidentti valitaan yhdeksi '
+        + 'viisivuotiskaudeksi ilman uudelleenvalinnan mahdollisuutta, ja '
+        + 'kaksikamarisen kongressin molemmat kamarit valitaan suhteellisella '
+        + 'vaalitavalla. Presidentti Fernando Lugo erotettiin '
+        + 'virkasyytteellä, ja monet Latinalaisen Amerikan johtajat pitivät '
+        + 'menettelyä vallankaappauksena.',
+    },
+    keskitulo: {
+      arvo: '6 290 $/v',
+      sija: '97./190',
+    },
+    tervehdykset: [
+      { teksti: 'Buenos días', kieli: 'espanja', lippu: 'Flag of Paraguay.svg', osuus: '90 %' },
+      { teksti: 'Mba\'éichapa', kieli: 'guarani (toinen virallinen kieli)', lippu: 'Flag of Paraguay.svg', osuus: '77 %' },
+      { teksti: 'Bom dia', kieli: 'portugali (Brasilian rajaseutu)', lippu: 'Flag of Brazil.svg', osuus: '9 %' },
+    ],
+  },
+  URY: {
+    vakiluku: '3,4 milj.',
+    vakilukuSija: '131./195',
+    pintaAla: '176 000 km²',
+    pintaAlaSija: '89./195',
+    demokratia: {
+      arvo: '0,79',
+      sija: '13./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~URY',
+      selitys: 'Uruguay on presidentin johtama tasavalta, jossa lainsäädäntövalta '
+        + 'kuuluu kaksikamariselle yleiskokoukselle ja tuomioistuimet ovat '
+        + 'riippumattomia. Maata pidettiin pitkään Latinalaisen Amerikan '
+        + 'vakaimpana demokratiana, mutta vuosina 1973–1985 sitä hallitsi '
+        + 'sortava sotilasdiktatuuri, jonka jälkeen demokratia palautettiin. '
+        + 'Presidentti valitaan viideksi vuodeksi kansanvaalilla, ja '
+        + 'korkeimman oikeuden jäsenet nimittää yleiskokous kahden kolmasosan '
+        + 'enemmistöllä kymmeneksi vuodeksi. Perustuslaki antaa kansalaisille '
+        + 'myös suoran demokratian keinot: juuri säädetty laki voidaan kumota '
+        + 'kansanäänestyksellä ja perustuslakia muuttaa kansanaloitteella.',
+    },
+    keskitulo: {
+      arvo: '22 000 $/v',
+      sija: '45./190',
+    },
+    tervehdykset: [
+      { teksti: 'Buenos días', kieli: 'espanja', lippu: 'Flag of Uruguay.svg', osuus: '100 %' },
+    ],
+  },
+  VEN: {
+    vakiluku: '28 milj.',
+    vakilukuSija: '53./195',
+    pintaAla: '912 000 km²',
+    pintaAlaSija: '32./195',
+    demokratia: {
+      arvo: '0,04',
+      sija: '163./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~VEN',
+      selitys: 'Venezuela on nimellisesti liittovaltio ja presidentin johtama '
+        + 'tasavalta, mutta käytännössä autoritaarinen. Maa siirtyi '
+        + 'demokratiaan 1958, ja sitä pidettiin pitkään Latinalaisen Amerikan '
+        + 'poikkeuksellisen kestävänä ja vakaana demokratiana. Kun '
+        + 'sosialistinen Hugo Chávez voitti presidentinvaalit 1998, '
+        + 'demokratia alkoi vähitellen rapautua. Chávezin ja hänen '
+        + 'seuraajansa Nicolás Maduron aikana valta on keskittynyt '
+        + 'toimeenpanovallalle, vallanjaon vastapainot on murrettu, '
+        + 'riippumatonta mediaa on tukahdutettu ja oppositio on syrjäytetty '
+        + 'kongressista, tuomioistuimista, valvontaelimistä, valtion '
+        + 'öljy-yhtiöstä ja armeijasta. Oppositiopuolueita ja ehdokkaita on '
+        + 'toistuvasti kielletty asettumasta ehdolle, eivätkä vaalit ole '
+        + 'vapaita eivätkä rehellisiä.',
+    },
+    keskitulo: {
+      arvo: '3 840 $/v',
+      sija: '125./190',
+    },
+    tervehdykset: [
+      { teksti: 'Buenos días', kieli: 'espanja', lippu: 'Flag of Venezuela.svg', osuus: '97 %' },
+      { teksti: '你好', kieli: 'kiina (siirtolaisyhteisöt)', lippu: 'Flag of the People\'s Republic of China.svg', osuus: '1,4 %' },
+      { teksti: 'Bom dia', kieli: 'portugali (siirtolaisyhteisöt)', lippu: 'Flag of Portugal.svg', osuus: '0,9 %' },
     ],
   },
 };

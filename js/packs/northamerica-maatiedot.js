@@ -40,6 +40,15 @@
 // artikkeleista "Demographics of Cuba" ja "Haitian Creole", ja
 // sanamuodot en-Wiktionarysta.
 //
+// Guatemala, Nicaragua ja Panama lisättiin 6.9.2026 illalla samalla
+// menetelmällä ja samasta aineistosta. Demokratiaselitykset ovat
+// artikkeleista "Politics of Guatemala", "Politics of Nicaragua" ja
+// "Politics of Panama" ja tervehdykset artikkeleista "Languages of
+// Guatemala", "Guatemala", "Languages of Nicaragua" ja "Panama".
+// Guatemalan mayakielistä vain mamille löytyi en-Wiktionaryn kate ja
+// Nicaraguan miskitolle ei lainkaan, joten kummallekin maalle jäi
+// kaksi tervehdystä; arvattu sana olisi huonompi kuin puuttuva rivi.
+//
 // Jokainen tervehdyksen lippu on tarkistettu Commonsista: puuttuva
 // tiedostonimi jättäisi kortin puolityhjäksi ilman virhettä.
 //
@@ -113,6 +122,37 @@ export const NORTHAMERICA_MAATIEDOT = {
       { teksti: 'Good morning', kieli: 'englanti (koulujen pakollinen kieli)', lippu: 'Flag of the United Kingdom.svg', osuus: '30 %' },
     ],
   },
+  GTM: {
+    vakiluku: '18 milj.',
+    vakilukuSija: '69./195',
+    pintaAla: '109 000 km²',
+    pintaAlaSija: '106./195',
+    demokratia: {
+      arvo: '0,52',
+      sija: '56./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~GTM',
+      selitys: 'Guatemala on presidentin johtama tasavalta, ja vuoden 1985 '
+        + 'perustuslaki jakaa vallan toimeenpano-, lainsäädäntö- ja '
+        + 'tuomiovallan kesken. Kongressin 160 jäsentä valitaan neljäksi '
+        + 'vuodeksi osin maakuntavaalipiireistä ja osin valtakunnallisella '
+        + 'suhteellisella vaalitavalla. Perustuslakituomioistuimessa on viisi '
+        + 'tuomaria, ja heistä yhden valitsee kongressi, yhden korkein '
+        + 'oikeus, yhden presidentti, yhden San Carlosin yliopiston hallitus '
+        + 'ja yhden asianajajaliitto. Maan historiaa ovat leimanneet '
+        + 'sisällissota ja toistuvat vallankaappaukset, ja vuosien 1960–1996 '
+        + 'sisällissota vaikuttaa politiikkaan yhä. 1990-luvun lopulta '
+        + '2010-luvun puoliväliin demokratia vahvistui, mutta vuodesta 2017 '
+        + 'se on ollut rapautumassa.',
+    },
+    keskitulo: {
+      arvo: '5 780 $/v',
+      sija: '103./190',
+    },
+    tervehdykset: [
+      { teksti: 'Buenos días', kieli: 'espanja', lippu: 'Flag of Guatemala.svg', osuus: '93 %' },
+      { teksti: 'Qa\'lte', kieli: 'mam (mayakieli)', lippu: 'Flag of Guatemala.svg', osuus: '5,2 %' },
+    ],
+  },
   MEX: {
     vakiluku: '131 milj.',
     vakilukuSija: '11./195',
@@ -142,6 +182,69 @@ export const NORTHAMERICA_MAATIEDOT = {
       { teksti: 'Buenos días', kieli: 'espanja', lippu: 'Flag of Mexico.svg', osuus: '94 %' },
       { teksti: 'Niltze', kieli: 'nahuatl', lippu: 'Flag of Mexico.svg', osuus: '1,3 %' },
       { teksti: 'Good morning', kieli: 'englanti (vieras kieli)', lippu: 'Flag of the United States.svg', osuus: '5 %' },
+    ],
+  },
+  NIC: {
+    vakiluku: '6,9 milj.',
+    vakilukuSija: '107./195',
+    pintaAla: '130 000 km²',
+    pintaAlaSija: '97./195',
+    demokratia: {
+      arvo: '0,02',
+      sija: '168./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~NIC',
+      selitys: 'Nicaragua on nimellisesti presidentin johtama tasavalta, mutta '
+        + 'vuodesta 2025 sitä on johtanut Daniel Ortegan ja hänen puolisonsa '
+        + 'Rosario Murillon muodollinen yhteispresidenttiys. Vuoden 2025 '
+        + 'perustuslakiuudistukset asettivat lainsäädäntö-, tuomio- ja '
+        + 'vaalivallan sekä poliisin presidenttiyden koordinoitaviksi, ja '
+        + 'kansalliskokous on hyväksynyt uudistukset yksimielisesti. Maa '
+        + 'siirtyi vaalidemokratiaan 1990, mutta Ortegan palattua '
+        + 'presidentiksi 2007 valta on keskittynyt ja oppositiota on '
+        + 'tukahdutettu. Heinäkuussa 2026 Ortega ilmoitti, ettei vaaleja enää '
+        + 'järjestetä. Nicaraguaa pidetään yhtenä Latinalaisen Amerikan '
+        + 'vähiten demokraattisista maista, ja ihmisoikeusloukkaukset ovat '
+        + 'vakavia.',
+    },
+    keskitulo: {
+      arvo: '2 510 $/v',
+      sija: '140./190',
+    },
+    tervehdykset: [
+      { teksti: 'Buenos días', kieli: 'espanja', lippu: 'Flag of Nicaragua.svg', osuus: '90 %' },
+      { teksti: 'Good morning', kieli: 'englanti (Karibian rannikon kreoli)', lippu: 'Flag of the United Kingdom.svg', osuus: '9 %' },
+    ],
+  },
+  PAN: {
+    vakiluku: '4,5 milj.',
+    vakilukuSija: '126./195',
+    pintaAla: '75 300 km²',
+    pintaAlaSija: '118./195',
+    demokratia: {
+      arvo: '0,57',
+      sija: '48./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~PAN',
+      selitys: 'Panama on presidentin johtama tasavalta, jonka vallan kolmijako '
+        + 'perustuu vuoden 1972 perustuslakiin ja sen myöhempiin '
+        + 'uudistuksiin. Presidentti ja varapresidentti valitaan samalla '
+        + 'äänestyslipulla viideksi vuodeksi, eikä presidentti saa asettua '
+        + 'heti uudelleen ehdolle vaan aikaisintaan viiden vuoden kuluttua. '
+        + 'Yksikamarisessa kansalliskokouksessa on 71 jäsentä. Perustuslaki '
+        + 'tuntee kolme itsenäistä valvojaa: valtiontalouden '
+        + 'tarkastusviraston, vaalituomioistuimen ja yleisen '
+        + 'syyttäjälaitoksen. Äänestäminen on pakollista yli 18-vuotiaille, '
+        + 'mutta äänestämättä jättämisestä ei rangaista. Maa palasi '
+        + 'demokratiaan 1989 vuosikymmeniä kestäneen sotilasvallan jälkeen, '
+        + 'ja korruptiota pidetään yhä sen vaikeimpana ongelmana.',
+    },
+    keskitulo: {
+      arvo: '17 950 $/v',
+      sija: '54./190',
+    },
+    tervehdykset: [
+      { teksti: 'Buenos días', kieli: 'espanja', lippu: 'Flag of Panama.svg', osuus: '93 %' },
+      { teksti: 'Good morning', kieli: 'englanti', lippu: 'Flag of the United Kingdom.svg', osuus: '14 %' },
+      { teksti: 'Bonjour', kieli: 'ranska', lippu: 'Flag of France.svg', osuus: '4 %' },
     ],
   },
   USA: {

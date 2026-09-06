@@ -47,18 +47,12 @@ import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
  * Lista saa vain lyhentyä.
  */
 const VIELA_ILMAN_TUNNUSLUKUJA = new Set([
-  'GRL',
-  'BOL',
-  'SGP',
-  'NPL',
-  'SHN',
-  'LKA',
-  'MMR',
-  'URY', 'PRY', 'VEN', 'FJI', 'PNG', 'SLB', 'GTM', 'NIC', 'PAN',
-  // Hongkongilla ei ole MAATIEDOT-riviä (maalehti HKG, 6.9.2026):
-  // Maailmanpankin ja V-Demin sarjat on laskettu suvereenien
-  // valtioiden kesken, eikä erityishallintoalue ole niissä vertailukelpoinen.
-  'HKG',
+  // Grönlanti ja Saint Helena eivät ole Maailmanpankin suvereenien
+  // valtioiden aineistossa, Hongkong on rajattu sekä Maailmanpankin
+  // maalistalta että V-Demin 172 valtion joukosta (maalehdet 6.9.2026):
+  // sijaluvut eivät ole vertailukelpoisia, joten rivit odottavat
+  // päätöstä vertailujoukosta.
+  'GRL', 'SHN', 'HKG',
 ]);
 
 const SIJA = /^\d+\.\/\d+$/;
