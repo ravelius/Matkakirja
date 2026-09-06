@@ -745,3 +745,88 @@ vyöhykkeen pohjoispäähän (lon 9,9 / lat 3,4; etäisyys 36,5).
 kuvaputken ämpäritunnus ilman kansiota (`elain-dza`, `elain-ago`,
 `elain-cmr`, `elain-cod`, `elain-sds`): kun kuvaputki toimittaa kuvan, se
 ilmestyy kortille ilman koodimuutosta, ja siihen asti kortti on kuvaton.
+## Erä M8 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Aasian toinen erä: **NPL, THA, VNM, SGP, TLS**. Nepalilla oli ennen erää
+vain eläintäky, muilla neljällä ei yhtäkään karttamerkkiä. Erä on
+kuvaton kuten K2-erät 1–4 ja maailman erät M1–M4, ja jokainen väite on
+en-Wikipedian raakatekstin katteessa lähderivillä, joka nimeää
+artikkelin ja osan sekä tarkistuspäivän 6.9.2026. Taulukon luvut ajetaan
+`node tools/laske-karttanostot.mjs --md` -työkalulla erikseen.
+
+Kohteet ja maastokohteet asuvat maan omassa
+`js/packs/maastokohteet-<iso>.js`-tiedostossa (viisi uutta tiedostoa,
+rekisteröity `js/packs/maastokohteet.js`-hakemistoon, `sw.js`:n
+SHELL-listaan ja `tools/build-standalone.mjs`:n MODULES-listaan).
+Eläintäyt ovat `js/packs/elaintakyt.js`:n lopussa ja skandaalit
+`js/packs/skandaalit.js`:n lopussa; kummankin testin lukumäärä
+päivitettiin (eläintäkyjä 61 → 64, skandaaleja 123 → 133 ja maita
+49 → 54).
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Nepal (NPL) | Lumbini, Bhaktapur, Gorkha, Janakpur, Muktinath, Lo Manthang, Nuwakot, Bardiyan kansallispuisto | Dhaulagiri, Koshi, Rara-järvi | (oli jo) | Khumjungin jetin päänahka, Yrjö V:n metsästysretki |
+| Thaimaa (THA) | Ayutthaya, Sukhothai, Ban Chiang, Phanom Rung, Phimai, Khao Yai, Chiang Mai, Kuoleman rautatie | Doi Inthanon, Chao Phraya, Thaimaanlahti | kimalaislepakko | Phaulkonin nousu ja tuho, Sininen timantti |
+| Vietnam (VNM) | Hội An, Huế, Mỹ Sơn, Phong Nha, Điện Biên Phủ, Hồ-linnoitus, Hoa Lư, Po Nagar | Fansipan, Punainenjoki, Hạ Longin lahti | saola | Hanoin rottapalkkiot, Hội Anin hylky |
+| Singapore (SGP) | Kasvitieteellinen puutarha, Pulau Ubin, Kranji, Rafflesin majakka, Haw Par Villa | Bukit Timah | — | Barings, Pan-Electric |
+| Itä-Timor (TLS) | Cristo Rei, Maubara, Balibo, Lailin luola, Baucau, Baguia, Viqueque, Nino Konis Santana | Matebian, Ataúro, Timorinmeri | timorinpeippo | Lifaun pako, Manufahin kapina |
+
+Neljä maata viidestä on tavoitteessa (`node tools/laske-karttanostot.mjs`
+sanoo niistä "täysi"). Singapore ei ole, ja syy on mitattu.
+
+**Miksi Singapore jäi vajaaksi.** Koko maa mahtuu maailmankartalla noin
+10 × 10 lautayksikön ruutuun — vielä Hongkongiakin ahtaammin — ja yhden
+nostomerkin nimiölaatikko on leveämpi kuin koko maa. Kahdeksan merkkiä
+on maan yläraja aivan kuten Hongkongissa: viisi kohdetta, yksi
+maastokohde ja kaksi skandaalia, ja `tools/tarkista-nimiolimitys.mjs`
+antaa niistä nollan nimiö–nimiö-limitystä. Yhdeksäs toi ensimmäisen.
+Lisäksi Singaporen kaupunkilehden kohdekartta (`js/packs/maakartat.js`
+singapore, lat 1,276–1,308 ja lon 103,836–103,874) kattaa koko
+siirtomaa-ajan ytimen, ja sen ruutuun osuva nosto kuuluu kohdekartan
+pisteelle eikä pääkartalle (`tests/nostot-kartalla.test.mjs`). Sinne
+jäävät Fort Canningin kukkula, Raffles Hotel, Empress Place, Boat Quay
+ja Sri Mariamman -temppeli, jotka ovat jo kohdekartan pisteitä; samasta
+syystä molempien skandaalien merkit siirrettiin ruudun ulkopuolelle
+(Barings ruudun itäpuolelle, Pan-Electric Changiin saaren
+koilliskärkeen), ja syy on kirjattu kummankin kortin viereen. Eläintäkyä
+ei voitu tehdä lainkaan: merkin on oltava vähintään 35 lautayksikön
+päässä jokaisesta kaupunkimerkistä (`tests/elaintakyt.test.mjs`), ja
+jokainen piste Singaporen alueella on 12,6–21,6 yksikön päässä omasta
+laatastaan. Ehdokas odottaa valmiina: sarvinokkalintu (Anthracoceros
+albirostris), joka katosi Singaporesta 1800-luvulla ja palasi Pulau
+Ubinille 1990-luvulla.
+
+**Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
+mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin.
+Lähin uusi merkki on Vietnamin Hanoin rottapalkkiot 12,8 lautayksikön
+päässä Hanoi-laatasta ja toiseksi lähin Itä-Timorin Betano 12,9
+yksikön päässä Dilistä; raja `KAUPUNGIN_KOHDALLA_SADE` on 7. Pois
+jätettiin juuri tästä säännöstä Nepalin Kathmandun laakson kohteet
+(Kirtipur, Pharpingin voimalaitos, Changu Narayan, Kathmandun
+Durbar-aukio), Vietnamin Cổ Loan linnoitus (4,9 yksikköä Hanoista) sekä
+Itä-Timorin **Tatamailau** (5,1 yksikköä Dilistä), joka on maan korkein
+vuori — sen tilalle maastokohteeksi tuli Matebian. Kathmandun laaksoon
+mahtui lisäksi vain yksi nimiö, joten Bhaktapurin naapurit jäivät pois
+myös limityssyystä.
+
+**Nimisääntö N3 karsi neljä ehdokasta.** Kartalla on jo
+`js/packs/maailmankartta-nimet.js`:ssä nimiöt Himalaja, Ganges ja
+Mekong, ja Etelä-Kiinan meri on Kiinan oma nosto
+(`js/packs/maastokohteet-chn.js`). Siksi Nepalin vuoreksi valittiin
+Dhaulagiri ja joeksi Koshi, ja Vietnamin joeksi Punainenjoki ja mereksi
+Hạ Longin lahti. Saman säännön ja nimiölimityksen takia jäivät pois
+myös Annapurna, Kali Gandaki ja Sa Pa (yhdeksän kilometriä
+Fansipanista).
+
+**Herkkien kohteiden linjaukset pidettiin**
+(`docs/aasia-tyoaineisto/spec-asia.md`, SITOVA). Vietnamin sodista
+kirjoitettiin vain lähteen katteessa ja ilman nykypolitiikkaa: Điện
+Biên Phủ on ensimmäisen Indokiinan sodan ratkaisutaistelu 1954, ja Mỹ
+Sơnin kortti mainitsee pommitusvaurion samalla tarkkuudella kuin
+artikkeli. Itä-Timorin miehityksestä kerrotaan vain Balibon kortissa
+toteavasti, ja molemmat maan skandaalit ovat siirtomaakaudelta (1769 ja
+1911–1912). Nepalin sisällissodasta ei kirjoitettu lainkaan; maan
+skandaalit ovat vuosilta 1911 ja 1960. Thaimaan ja Singaporen
+skandaalit ovat talousrikoksia ja hovihistoriaa, kuten Hongkongissa
+erässä M3.

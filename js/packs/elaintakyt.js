@@ -1399,6 +1399,64 @@ export const ELAINTAKYT = {
     lon: 30.4,
     lat: 7.5,
   },
+  /*
+   * ── ERÄ M8, AASIA 2 6.9.2026 ───────────────────────────────────
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M8 (NPL, THA, VNM, SGP, TLS) toi kolme uutta eläintäkyä.
+   * Nepalilla oli täky jo ennestään, eikä siihen ole koskettu.
+   *
+   * SINGAPORE JÄI ILMAN TÄKYÄ, JA SYY ON MITATTU. Merkin on oltava
+   * vähintään 35 lautayksikön päässä jokaisesta kaupunkimerkistä
+   * (tests/elaintakyt.test.mjs VAHIN_ETAISYYS_KAUPUNKIIN), mutta
+   * jokainen piste Singaporen alueella on 12,6–21,6 yksikön päässä
+   * omasta laatastaan. Sama este kuin Hongkongilla erässä M3. Ehdokas
+   * odottaa valmiina: sarvinokkalintu (Anthracoceros albirostris),
+   * joka katosi Singaporesta 1800-luvulla ja palasi Pulau Ubinille
+   * 1990-luvulla.
+   *
+   * KUVA TULEE KUVAPUTKELTA. Erä on kuvaton, joten `kuva`-kenttään on
+   * kirjoitettu pelkkä ämpäritunnus (js/media.js assetOsoite:
+   * `kohtaamiset/elaimet/<tunnus>.jpg`).
+   */
+  THA: {
+    elain: 'kimalaislepakko',
+    otsikko: 'Maailman pienin nisäkäs asuu kalkkikiviluolassa',
+    teksti: 'Kittin sikanokkalepakko eli kimalaislepakko on ainoa elossa oleva laji heimossaan, ja se elää Länsi-Thaimaan ja Kaakkois-Myanmarin kalkkikiviluolissa jokien varsilla. Ruumis on 29–33 millimetriä pitkä ja paino noin kaksi grammaa: se on maailman pienin lepakko ja ruumiinpituudeltaan pienimpiä nisäkkäitä — kilpailija on etruskipäästäinen, joka voi olla kevyempi mutta on selvästi pidempi. Kuono on turvonnut ja sian kärsää muistuttava, siivet ovat suuret ja pitkäkärkiset, joten eläin osaa leijua paikallaan. Yhdessä luolassa on keskimäärin sata yksilöä, ja parvi lentää saalistamaan vain lyhyen ajan illalla ja aamunkoitteessa. Thaimaassa laji tunnetaan vain Kanchanaburin Sai Yokin piiristä.',
+    lahde: 'en-Wikipedia "Kitti\'s hog-nosed bat", johdanto sekä osiot "Description", '
+      + '"Taxonomy" ja "Range and habitat". Tarkistettu 6.9.2026.',
+    kuva: 'elain-tha',
+    // Piste on Sai Yokin kalkkikivialueella Khwae Noin latvoilla, 60,2
+    // lautayksikköä Bangkokista (vähimmäisetäisyys 35).
+    lon: 98.8,
+    lat: 14.4,
+  },
+  VNM: {
+    elain: 'saola',
+    otsikko: 'Aasian yksisarvinen, jota kukaan ei ole nähnyt vuoden 2013 jälkeen',
+    teksti: 'Saola on Annamin vuoriston sademetsissä Vietnamissa ja Laosissa elävä nautaeläin, joka kuvailtiin tieteelle vasta 1993, kun Vietnamin metsätalousministeriön ja WWF:n yhteinen retkikunta löysi jäänteitä Vũ Quangin kansallispuistosta. Nimi tulee Vietnamin tai-kielestä ja tarkoittaa rukin pylvään sarvea: molemmilla sukupuolilla on pari lähes yhdensuuntaisia, pitkiä sarvia. Turkki on suklaanruskea, kasvoissa, kurkussa ja kaulan sivuilla on valkoisia laikkuja ja selässä musta juova. Laosin hmongit kutsuvat sitä nimellä saht-supahp, kohtelias eläin, koska se liikkuu metsässä äänettömästi. Viimeisin havainto on liiketunnistimella varustetun kameran kuva Keski-Vietnamin metsästä vuodelta 2013, ja laji on äärimmäisen uhanalainen.',
+    lahde: 'en-Wikipedia "Saola", johdanto sekä osiot "Etymology" ja '
+      + '"Description". Tarkistettu 6.9.2026.',
+    kuva: 'elain-vnm',
+    // Piste on Vũ Quangin seudulla Annamin vuoristossa, 92,8
+    // lautayksikköä Hanoista (vähimmäisetäisyys 35).
+    lon: 105.4,
+    lat: 18.35,
+  },
+  TLS: {
+    elain: 'timorinpeippo',
+    otsikko: 'Riisivaras, jolla on hopeansininen nokka',
+    teksti: 'Timorinpeippo on noin neljäntoista senttimetrin pituinen pulska varpuslintu: tummanruskea, iso hopeansininen nokka, valkoinen poski, vaaleanpunaiset jalat ja kermanvalkoinen vatsa. Koiras ja naaras näyttävät samalta. Laji muistuttaa lähisukulaistaan riisipeippoa mutta on pienempi ja väritykseltään toisenlainen. Sitä tavataan vain Itä-Timorissa, Länsi-Timorissa sekä Semaun ja Roten saarilla, ja se viihtyy alavilla ruohostoilla ja laidunmailla, korkeintaan noin 700 metrin korkeudessa. Ravinto on riisiä ja siemeniä, ja Itä-Timorissa lintua pidetään merkittävänä riisintuholaisena — riisinviljelyn laajeneminen on todennäköisesti hyödyttänyt sitä. Elinympäristöjen katoaminen ja laiton pyynti häkkilinnuksi ovat tehneet lajista silmälläpidettävän.',
+    lahde: 'en-Wikipedia "Timor sparrow", johdanto sekä osiot "Description", '
+      + '"Distribution and habitat" ja "Relationships with humans". '
+      + 'Tarkistettu 6.9.2026.',
+    kuva: 'elain-tls',
+    // Piste on Itä-Timorin itäosan alavilla mailla, 47,4 lautayksikköä
+    // Dilistä (vähimmäisetäisyys 35). Matebianin nimiö oli lännempänä
+    // päällekkäin (tools/tarkista-nimiolimitys.mjs).
+    lon: 127.0,
+    lat: -8.55,
+  },
 };
 
 /** Maatunnukset siinä järjestyksessä kuin ne on kirjoitettu. */

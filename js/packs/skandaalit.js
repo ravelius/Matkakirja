@@ -7610,4 +7610,565 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /*
+   * ══ ERÄ M8, AASIA 2 6.9.2026 ════════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M8 (NPL, THA, VNM, SGP, TLS) tuo kaksi skandaalia kuhunkin
+   * viiteen maahan — kymmenen uutta. Kaikki ovat kuvattomia kuten erän
+   * muutkin nostot, ja jokaisen lähderivi nimeää en-Wikipedian
+   * artikkelin ja osan sekä tarkistuspäivän.
+   *
+   * PAIKAT ON MITATTU. Yksikään uusi merkki ei ole pelikaupungin
+   * kohdalla (KAUPUNGIN_KOHDALLA_SADE 7 lautayksikköä,
+   * js/fokuskohteet.js): lähin on Hanoin rottapalkkiot 12,8 yksikön
+   * päässä Hanoi-laatasta ja kaukaisin Hội Anin hylky 194,9 yksikön
+   * päässä Hanoista.
+   *
+   * KAKSI MERKKIÄ ON SIIRRETTY KOHDEKARTAN RUUDUN ULKOPUOLELLE, ja syy
+   * on sama kuin Hongkongin Carrianilla erässä M3: kohdekartan
+   * rajauksessa oleva skandaali kuuluu kohdekartan pisteelle eikä
+   * pääkartalle (tools/tarkista-nostopaikat.mjs). Singaporen
+   * kohdekartta (js/packs/maakartat.js singapore) rajautuu ruutuun lat
+   * 1,276–1,308 ja lon 103,836–103,874, ja sekä Barings Futuresin
+   * toimisto että pörssi osuvat sen sisään; merkit on siksi asetettu
+   * ruudun itäpuolelle ja saaren koilliskärkeen Changiin. Kummankin
+   * kortin `paikka`-rivi kertoo oikean osoitteen.
+   *
+   * HERKKIEN KOHTEIDEN LINJAUS ON SITOVA (docs/aasia-tyoaineisto/
+   * spec-asia.md). Nepalin sisällissodasta, Vietnamin sodasta ja
+   * Itä-Timorin miehityksestä ei kirjoiteta näissä korteissa
+   * lainkaan: Nepalin aiheet ovat 1911 ja 1960, Vietnamin 1902 ja
+   * 1990-luku, Itä-Timorin 1769 ja 1911–1912. Nykypolitiikkaa ei ole
+   * yhdelläkään kortilla.
+   */
+  NPL: [
+    /*
+     * Khumjung, Solukhumbu (luostari, jossa päänahkaa säilytetään).
+     * Lähde: en.wikipedia.org: Yeti; Khumjung
+     */
+    {
+      id: 'khumjungin-paanahka',
+      otsikko: 'Jetin päänahka, joka lensi Lontooseen',
+      nimio: 'Jetin päänahka',
+      vuosi: '1960–1961',
+      paikka: 'Khumjungin luostari, Solukhumbu',
+      lat: 27.816667, lon: 86.716667,
+      kortti: 'Everestin ensinousija palasi Himalajalle etsimään todisteita '
+        + 'lumimiehestä. Hän lainasi vuoristokylän luostarilta sen kalleimman '
+        + 'esineen, karvaisen päänahan, ja vei sen kylänvanhimman kanssa '
+        + 'Lontooseen tutkittavaksi. Vastaus tuli mikroskoopista eikä '
+        + 'vuorilta.',
+      teksti: 'Jeti on Himalajalla asuvaksi kerrottu suuri karvainen '
+        + 'ihmisenkaltainen olento, josta länsimaissa käytetään myös nimeä '
+        + 'inhottava lumimies. Vuonna 1953 Edmund Hillary ja Tenzing Norgay '
+        + 'kertoivat nähneensä Everestillä suuria jalanjälkiä, mutta Hillary '
+        + 'piti myöhemmin jetihavaintoja epäluotettavina.'
+        + '\n\nVuonna 1960 Hillary lähti Himalajalle Silver Hut -retkikunnan '
+        + 'kanssa nimenomaan keräämään ja tutkimaan aineellisia todisteita '
+        + 'jetistä. Khumjungin luostarissa säilytettiin esinettä, jota '
+        + 'pidettiin jetin päänahkana. Hillary lainasi sen ja matkusti sen '
+        + 'kanssa Lontooseen yhdessä kylänvanhimman Khumjo Chumbin kanssa.'
+        + '\n\nLontoossa nahasta leikattiin pieni näyte. Marca Burns tutki '
+        + 'ihon ja karvat yksityiskohtaisesti ja vertasi niitä vastaaviin '
+        + 'näytteisiin serausta, tiibetinsinikarhusta ja mustakarhusta. '
+        + 'Johtopäätös oli varovainen mutta selvä: näyte oli mitä '
+        + 'todennäköisimmin tehty eläimen nahasta, joka muistuttaa läheisesti '
+        + 'tutkittua seraunäytettä mutta ei ole täsmälleen sama — kenties '
+        + 'saman lajin paikallinen muoto tai lähisukulainen.'
+        + '\n\nPäänahka palautettiin Khumjungiin, jossa se on yhä. Myöhemmät '
+        + 'tutkimukset ovat toistaneet saman kuvion: 2008 BBC kertoi '
+        + 'Koillis-Intiasta kerätyistä karvoista, joita tutkittiin Oxford '
+        + 'Brookesin yliopistossa, ja lopulta niidenkin todettiin olevan '
+        + 'himalajangoralin karvoja.',
+      lahde: 'en-Wikipedia "Yeti", osio "History and sightings" (20th century), '
+        + 'ja "Khumjung", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä eläimestä Khumjungin päänahan todettiin olevan peräisin?',
+        vaihtoehdot: [
+          'Ruskeakarhusta',
+          'Serausta muistuttavasta eläimestä',
+          'Jakista',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Thorin ja Kasran leirit, Chitwanin Terai (metsästysretken alue).
+     * Lähde: en.wikipedia.org: 1911 hunt by George V in Nepal
+     */
+    {
+      id: 'yrjo-v-metsastysretki',
+      otsikko: 'Kymmenen päivää, 39 tiikeriä',
+      nimio: 'Yrjö V:n jahti',
+      vuosi: '1911',
+      paikka: 'Chitwanin Terai, Nepal',
+      lat: 27.5, lon: 84.333333,
+      kortti: 'Nepalin pääministeri keräsi kuukausien ajan 645 norsua ja '
+        + 'härkää ja sitoi ne viidakkoon houkuttimiksi. Vieraana oli '
+        + 'Britannian kuningas, jonka seurue oli kahdentoistatuhannen hengen '
+        + 'kokoinen. Kymmenessä päivässä kaadettiin enemmän riistaa kuin '
+        + 'useimmat museot omistavat.',
+      teksti: 'Britannian hallitsijoiden metsästysretket Nepaliin alkoivat '
+        + '1876, kun pääministeri Jung Bahadur Rana kutsui prinssi Albert '
+        + 'Edwardin retkelle, jolla kaadettiin kahdessa viikossa noin 23 '
+        + 'tiikeriä. Myöhemmin kutsuttuja olivat muun muassa arkkiherttua '
+        + 'Frans Ferdinand ja lordi Curzon.'
+        + '\n\nVuonna 1911 pääministeri Chandra Shumsher Jang Bahadur Rana '
+        + 'kutsui kuningas Yrjö V:n suurriistan metsästykseen Teraille. '
+        + 'Valmistelut kestivät kuukausia. Kuningas Prithvi Bir Bikram Shah '
+        + 'kuoli 11. joulukuuta, mutta valmisteluja ei keskeytetty. Tuhannet '
+        + 'ajomiehet ohjasivat riistaa kohti valmiita ampumapaikkoja.'
+        + '\n\nSeurue saapui Nepaliin 18. joulukuuta ja jäi kymmeneksi '
+        + 'päiväksi. Joka yö asetettiin syöttejä tiikerien houkuttelemiseksi. '
+        + 'Yhtenä päivänä norsurenkaan sisään jäi neljä tiikeriä kerralla, ja '
+        + 'kuningas ampui ne kaikki. Retken saldo oli 39 tiikeriä, 18 '
+        + 'sarvikuonoa, neljä karhua sekä useita piikkisikoja ja leopardeja. '
+        + 'Jouluaattona kuningas löi Chandra Shumsherin Kuninkaallisen '
+        + 'Victorian ritarikunnan ritariksi.'
+        + '\n\nJälkimaine on toisenlainen kuin aikalaisten. Sanjib Chaudhary '
+        + 'kuvasi retkeä 2018 mitä raaimmaksi ja kauheimmaksi '
+        + 'metsästysmatkaksi. Alue, jolla suurin osa jahdista käytiin, '
+        + 'muutettiin 1973 Nepalin ensimmäiseksi kansallispuistoksi.',
+      lahde: 'en-Wikipedia "1911 hunt by George V in Nepal", johdanto sekä '
+        + 'osiot "Planning", "The hunt" ja "Legacy". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä alueelle tehtiin myöhemmin, vuonna 1973?',
+        vaihtoehdot: [
+          'Siitä tuli Nepalin ensimmäinen kansallispuisto',
+          'Se raivattiin riisipelloiksi',
+          'Sinne rakennettiin lentokenttä',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  THA: [
+    /*
+     * Lopburi, kuningas Narain hovikaupunki (vallankaappauksen paikka).
+     * Lähde: en.wikipedia.org: Constantine Phaulkon
+     */
+    {
+      id: 'phaulkonin-nousu',
+      otsikko: 'Kreikkalainen, josta tuli Siamin pääministeri',
+      nimio: 'Phaulkon',
+      vuosi: '1647–1688',
+      paikka: 'Lopburi, Ayutthayan kuningaskunta',
+      lat: 14.7995, lon: 100.6534,
+      kortti: 'Kefalonialainen laivapoika päätyi Siamin hoviin ja nousi '
+        + 'kuninkaan lähimmäksi neuvonantajaksi. Hän hoiti valtakunnan '
+        + 'ulkosuhteet ja kaupan ja avasi ovet Ludvig XIV:n lähettiläille. '
+        + 'Kun kuningas sairastui, hovin kateus kääntyi häntä vastaan.',
+      teksti: 'Constantine Phaulkon syntyi 1647 kreikkalaisille vanhemmille '
+        + 'Kefalonian pohjoisosassa, joka oli silloin Venetsian hallussa. Hän '
+        + 'päätyi Siamiin ja nousi kuningas Narain suosioon: kertomusten '
+        + 'mukaan hän muun muassa tarkasti kruunun tilit ja osoitti, että '
+        + 'persialaiset kauppiaat olivat velkaa valtiolle eivätkä toisin '
+        + 'päin.'
+        + '\n\nPhaulkonista tuli Narain pääministeri ja hän sai siamilaisen '
+        + 'aatelisarvon Chao Phraya Wichayen. Hän ohjasi valtakunnan '
+        + 'ulkopolitiikkaa ja kauppaa ja rakensi läheiset suhteet Ranskan '
+        + 'hoviin. Vuonna 1682 hän vaihtoi anglikaanisuuden katolisuuteen ja '
+        + 'avioitui Maria Guyomar de Pinhan kanssa.'
+        + '\n\nLäheisyys kuninkaaseen synnytti kateutta. Kun Narai sairastui '
+        + 'parantumattomasti, levisi huhu, että Phaulkon aikoi käyttää '
+        + 'kruununperillistä sätkynukkena ja hallita itse. Se antoi Narain '
+        + 'kasvatusveljelle Phetrachalle perusteen vallankaappaukseen. '
+        + 'Lopburissa 31. maaliskuuta 1688 Phaulkon suunnitteli ranskalaisen '
+        + 'marsalkka Desfargesin kanssa juonen torjumista, mutta huhtikuussa '
+        + 'Desfarges jäi omaan linnakkeeseensa Bangkokiin.'
+        + '\n\nToukokuun 18. päivänä kuningas ja kruununperillinen '
+        + 'pidätettiin. Phaulkon kutsuttiin palatsiin, riisuttiin aseista ja '
+        + 'vangittiin. Kesäkuun 5. päivänä 1688 Phetracha julisti hänet '
+        + 'syylliseksi maanpetokseen, ja hänet teloitettiin Wat Sakin '
+        + 'seudulla. Ranskan ja Siamin läheinen kausi päättyi siihen.',
+      lahde: 'en-Wikipedia "Constantine Phaulkon", johdanto sekä osiot '
+        + '"Origins", "Rise to power" ja "Downfall and death". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä huhu antoi Phetrachalle perusteen vallankaappaukseen?',
+        vaihtoehdot: [
+          'Että Phaulkon oli varastanut valtion kassan',
+          'Että Phaulkon aikoi hallita kruununperillisen kautta itse',
+          'Että Phaulkon oli myynyt Ayutthayan kartat hollantilaisille',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Lampangin maakunta (varastetun lastin määränpää).
+     * Lähde: en.wikipedia.org: Blue Diamond Affair
+     */
+    {
+      id: 'sininen-timantti',
+      otsikko: 'Sininen timantti, joka ei koskaan palannut',
+      nimio: 'Sininen timantti',
+      vuosi: '1989–1990',
+      paikka: 'Lampangin maakunta, Thaimaa',
+      lat: 18.2888, lon: 99.4908,
+      kortti: 'Palvelija piilotti yhdeksänkymmentäyksi kiloa jalokiviä '
+        + 'pölynimurin pussiin ja lähetti ne kotiin pohjoiseen Thaimaahan. '
+        + 'Poliisi sai lastin takaisin ja lensi sen Riadiin. Siellä '
+        + 'huomattiin, että puolet kivistä oli väärennöksiä.',
+      teksti: 'Vuonna 1989 thaimaalainen työntekijä Kriangkrai Techamong '
+        + 'varasti prinssi Faisal bin Fahdin palatsista Riadista 91 kiloa '
+        + 'koruja ja jalokiviä. Hänellä oli pääsy prinssin makuuhuoneeseen, '
+        + 'ja hän piilotti saaliin palatsissa pölynimurin pussiin. Joukossa '
+        + 'oli 50 karaatin sininen timantti. Kivet lähetettiin hänen '
+        + 'kotiinsa Lampangin maakuntaan Thaimaahan.'
+        + '\n\nKivistä oli vaikea päästä eroon, ja Kriangkrai alkoi myydä '
+        + 'niitä pilkkahintaan. Bangkokilainen jalokivikauppias Santhi '
+        + 'Sithanakan kuuli kaupoista ja osti suurimman osan murto-osalla '
+        + 'niiden arvosta. Thaimaan poliisin tutkinta luutnanttikenraali '
+        + 'Chalor Kerdthesin johdolla johti pidätykseen ja korujen '
+        + 'takaisinsaantiin. Kriangkrai tuomittiin seitsemäksi vuodeksi ja '
+        + 'vapautui kolmen vuoden jälkeen.'
+        + '\n\nChalorin ryhmä lensi korut takaisin Saudi-Arabiaan. Siellä '
+        + 'havaittiin, että sininen timantti puuttui ja että noin puolet '
+        + 'palautetuista kivistä oli väärennöksiä. Bangkokissa levisi lehdissä '
+        + 'huhuja hyväntekeväisyysjuhlien valokuvista, joissa virkamiesten '
+        + 'vaimoilla näkyi palatsista varastettuja muistuttavia kaulakoruja.'
+        + '\n\nTapaus mutkistui vielä pahemmin. Saudiarabialainen liikemies '
+        + 'Mohammad al-Ruwaili katosi Bangkokissa 12. helmikuuta 1990, ja '
+        + 'kolme saudidiplomaattia oli surmattu kaupungissa kaksi viikkoa '
+        + 'aiemmin; murhat ovat yhä selvittämättä. Chalor tuomittiin '
+        + 'myöhemmin kuolemaan jalokivikauppiaan vaimon ja pojan murhien '
+        + 'tilaamisesta, ja tuomio muutettiin vankeudeksi.',
+      lahde: 'en-Wikipedia "Blue Diamond Affair", johdanto sekä osiot '
+        + '"Theft", "Recovery" ja "Investigation". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä Saudi-Arabiassa huomattiin, kun korut palautettiin?',
+        vaihtoehdot: [
+          'Kaikki kivet olivat tallella',
+          'Lasti oli kadonnut matkalla',
+          'Sininen timantti puuttui ja puolet kivistä oli väärennöksiä',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  VNM: [
+    /*
+     * Hanoin ympäryskylät, Tonkin (rottatarhat kaupungin ulkopuolella).
+     * Lähde: en.wikipedia.org: Great Hanoi Rat Massacre
+     *
+     * MERKKI ON KAUPUNGIN ULKOPUOLELLA EIKÄ VIEMÄREISSÄ, ja syy on
+     * karttatekninen: Hanoi on pelikaupunki, ja sen laatan ympärillä
+     * seitsemän lautayksikön säteellä oleva nosto ei tule pääkartalle
+     * (KAUPUNGIN_KOHDALLA_SADE, js/fokuskohteet.js). Merkki on siksi
+     * siellä, missä terveystarkastajat löysivät rottatarhat: Hanoin
+     * ulkopuolisella maaseudulla, 12,8 yksikköä laatasta itään.
+     */
+    {
+      id: 'hanoin-rottapalkkiot',
+      otsikko: 'Palkkio rotanhännästä ja hännättömät rotat',
+      nimio: 'Rottapalkkiot',
+      vuosi: '1902',
+      paikka: 'Hanoi ja sen ympäryskylät, Tonkin',
+      lat: 20.85, lon: 106.15,
+      kortti: 'Ranskan siirtomaahallinto halusi puhdistaa uuden viemäristönsä '
+        + 'rotista ja lupasi sentin jokaisesta tapetusta. Todisteeksi riitti '
+        + 'häntä. Pian kaupungilla juoksi terveitä rottia ilman häntää, ja '
+        + 'maaseudulle ilmestyi tarhoja.',
+      teksti: 'Vuonna 1902 Ranskan Indokiinan kenraalikuvernementti ryhtyi '
+        + 'hävittämään Hanoin rottakantaa. Kaupunkiin oli juuri rakennettu '
+        + 'viemäristö, ja maailmalla oli menossa ruttopandemia, jonka '
+        + 'levittäjiksi Alexandre Yersin oli muutamaa vuotta aiemmin '
+        + 'osoittanut jyrsijät.'
+        + '\n\nEnsin palkattiin ammattirotanpyytäjiä, jotka laskeutuivat '
+        + 'viemäreihin. Huhtikuun viimeisellä viikolla kaadettiin 7 985 '
+        + 'rottaa, toukokuun 30. päivänä 15 041 ja kesäkuun 21. päivänä '
+        + 'peräti 20 112 yhtenä päivänä. Kanta ei silti pienentynyt, ja '
+        + 'pyytäjät alkoivat lakkoilla vaatien parempaa palkkaa työstä, jota '
+        + 'tehtiin jätevedessä käärmeiden ja tuhatjalkaisten seassa.'
+        + '\n\nSeuraavaksi hallinto avasi jahdin kaikille ja lupasi sentin '
+        + 'palkkion rottaa kohti. Ruumiiden sijaan virastoon vietiin pelkkä '
+        + 'häntä. Aluksi häntiä tuli runsaasti, mutta pian kaupungilla nähtiin '
+        + 'terveitä rottia, joilta häntä oli katkaistu: pyytäjät päästivät '
+        + 'ne takaisin lisääntymään. Rottia myös salakuljetettiin kaupunkiin '
+        + 'muualta, ja terveystarkastajat löysivät maaseudulta tarhoja, joissa '
+        + 'rottia kasvatettiin pelkkien häntien takia.'
+        + '\n\nPalkkiojärjestelmä lakkautettiin. Rottia oli enemmän kuin '
+        + 'ennen, ja vuonna 1903 rutto tarttui 159 ihmiseen, joista 110 '
+        + 'kuoli. Tapaus tunnetaan nykyään kouluesimerkkinä nurinkurisesta '
+        + 'kannustimesta.',
+      lahde: 'en-Wikipedia "Great Hanoi Rat Massacre", johdanto sekä osiot '
+        + '"First attempts to control the rat population", "Hiring vigilantes '
+        + 'and the unintended consequences" ja "Aftermath". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi hallinto lopetti palkkiojärjestelmän?',
+        vaihtoehdot: [
+          'Rahat loppuivat kesken',
+          'Rottia oli lopulta enemmän kuin ennen',
+          'Viemärit tulvivat ja työ kävi mahdottomaksi',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Cù Lao Chàmin edusta, Hội Anin ulkopuolella (hylyn paikka).
+     * Lähde: en.wikipedia.org: Hội An wreck
+     */
+    {
+      id: 'hoi-anin-hylky',
+      otsikko: 'Kolmesataatuhatta ruukkua seitsemänkymmenen metrin syvyydessä',
+      nimio: 'Hội Anin hylky',
+      vuosi: '1990–2000',
+      paikka: 'Cù Lao Chàmin edusta, Quảng Nam',
+      lat: 16.04, lon: 108.6,
+      kortti: 'Kalastajat löysivät 1990-luvun alussa hylyn, jonka lasti oli '
+        + 'yksinomaan vietnamilaista keramiikkaa. Ennen kuin viranomaiset '
+        + 'ehtivät paikalle, hylkyä oli jo raahattu koukuilla vuosien ajan. '
+        + 'Pelastusoperaatiosta tuli Kaakkois-Aasian suurin.',
+      teksti: 'Hylky lepää Etelä-Kiinan merellä noin 22 meripeninkulmaa '
+        + 'Keski-Vietnamin rannikolta ja 70 metrin syvyydessä. Se kuljetti '
+        + '1400-luvun puolivälin ja lopun vietnamilaista keramiikkaa, joka '
+        + 'oli valmistettu Punaisenjoen suiston uuneissa, kuten Chu Dausissa. '
+        + 'Löytö oli poikkeuksellinen, koska ehjät kappaleet olivat harvinaisia '
+        + '— lähes koko tuotanto oli aikanaan viety maasta.'
+        + '\n\nKalastajat löysivät paikan 1990-luvun alussa. Vuosien ajan '
+        + 'kohdetta ryöstettiin järjestelmällisesti: menetelmänä oli raahata '
+        + 'koukkurivistöä verkkoineen hylyn yli, jotta esineet irtoaisivat ja '
+        + 'jäisivät verkkoihin. Esineitä ilmestyi markkinoille eri puolilla '
+        + 'maailmaa. Viranomaiset saivat vihiä vasta, kun Da Nangin '
+        + 'lentoasemalla pidätettiin kaksi kauppiasta, joiden matkalaukut '
+        + 'olivat täynnä hylyn keramiikkaa.'
+        + '\n\nKohde oli tavallista sukellussyvyyttä syvemmällä, mutta jotain '
+        + 'oli tehtävä nopeasti. Vuonna 1996 liikemies Ong Soo Hin ja Oxfordin '
+        + 'yliopiston arkeologi Mensun Bound aloittivat kaivauksen yhdessä '
+        + 'Vietnamin kansallismuseon kanssa. Työ kesti neljä vuotta ja maksoi '
+        + 'arviolta neljätoista miljoonaa dollaria; talteen saatiin yli '
+        + '250 000 ehjää esinettä.'
+        + '\n\nVietnamilainen asiantuntijaryhmä valitsi ainutlaatuiset '
+        + 'kappaleet kansalliskokoelmaan, ja kuusi museota pitää niistä '
+        + 'pysyvää näyttelyä. Loput yhdeksänkymmentä prosenttia myytiin '
+        + 'huutokaupalla San Franciscossa vuonna 2000.',
+      lahde: 'en-Wikipedia "Hội An wreck", johdanto ja osio "History". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten viranomaiset saivat tiedon hylyn ryöstelystä?',
+        vaihtoehdot: [
+          'Sukeltaja ilmoitti siitä poliisille',
+          'Kalastajat kertoivat siitä museolle',
+          'Lentoasemalla pidätettiin kauppiaat, joiden laukut olivat täynnä keramiikkaa',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  SGP: [
+    /*
+     * Barings Futures Singapore, Raffles Place (kaupankäynnin paikka).
+     * Lähde: en.wikipedia.org: Barings Bank
+     *
+     * MERKKI ON RUUDUN ITÄPUOLELLA, koska Singaporen kohdekartta
+     * (js/packs/maakartat.js singapore) rajautuu ruutuun lat
+     * 1,276–1,308 ja lon 103,836–103,874 ja Raffles Place osuu sen
+     * keskelle. Kohdekartan rajauksessa oleva skandaali kuuluu
+     * kohdekartan pisteelle eikä pääkartalle
+     * (tools/tarkista-nostopaikat.mjs), eikä tässä erässä lisätä
+     * kohdekartan pisteitä.
+     */
+    {
+      id: 'baringsin-romahdus',
+      otsikko: 'Kaksisataakolmekymmentäkolme vuotta ja yksi kauppias',
+      nimio: 'Barings',
+      vuosi: '1992–1995',
+      paikka: 'Barings Futures Singapore, Raffles Place',
+      lat: 1.29, lon: 103.885,
+      kortti: 'Britannian vanhin liikepankki antoi saman miehen käydä kauppaa '
+        + 'ja tarkistaa omat kauppansa. Kolmessa vuodessa hän oli hukannut '
+        + 'kaksi kertaa pankin kaupankäyntipääoman verran rahaa. Kobe järisi, '
+        + 'ja peli oli pelattu.',
+      teksti: 'Barings Bank perustettiin Lontoossa 1762, ja se oli Englannin '
+        + 'vanhimpia liikepankkeja. Sen kaatoi 1995 valtava '
+        + 'kaupankäyntitappio, jonka aiheutti Singaporen johdannaiskaupan '
+        + 'päällikkö Nick Leeson.'
+        + '\n\nLeesonin tehtävä oli arbitraasi: hyötyä Nikkei 225 '
+        + '-futuurisopimusten hintaerosta Osakan pörssin ja Singaporen SIMEXin '
+        + 'välillä ostamalla toisesta ja myymällä heti toisesta pienellä '
+        + 'katteella asiakkaan lukuun. Sen sijaan hän alkoi tammikuun 1992 '
+        + 'lopulla tehdä samoja kauppoja pankin omalla rahalla ja veikata '
+        + 'Japanin markkinoiden suuntaa.'
+        + '\n\nVirhe oli rakenteellinen. Leeson oli SIMEXin kaupankäynnin '
+        + 'johtaja mutta samalla myös yksikön selvitystoiminnan päällikkö eli '
+        + 'vastasi omien kauppojensa kirjanpidon oikeellisuudesta. Tehtävät '
+        + 'olisivat normaalisti kuuluneet eri ihmisille. Hän saattoi toimia '
+        + 'ilman Lontoon valvontaa, väärensi kaupankäyntitietoja '
+        + 'tietojärjestelmiin ja piilotti tappiot niin sanotulle '
+        + 'viisi-kahdeksan-tilille. Useat ihmiset olivat esittäneet huolensa, '
+        + 'mutta niitä ei kuunneltu.'
+        + '\n\nKoben maanjäristys järkytti Aasian markkinoita, ja Leeson '
+        + 'veikkasi Nikkein nopeaa toipumista. Sitä ei tullut. Kun tappiot '
+        + 'löytyivät 23. helmikuuta 1995, ne olivat 827 miljoonaa puntaa eli '
+        + 'kaksinkertaiset pankin kaupankäyntipääomaan nähden. Barings '
+        + 'julistettiin maksukyvyttömäksi 26. helmikuuta, ja Leeson tuomittiin '
+        + 'kuudeksi ja puoleksi vuodeksi vankeuteen Changissa.',
+      lahde: 'en-Wikipedia "Barings Bank", osiot "1992–1995", "Internal '
+        + 'control", "Kobe earthquake" ja "Discovery". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä valvonnassa oli rakenteellisesti pielessä?',
+        vaihtoehdot: [
+          'Sama mies kävi kauppaa ja vastasi omien kauppojensa selvityksestä',
+          'Pankilla ei ollut lainkaan tilintarkastajaa',
+          'Kaupat tehtiin puhelimitse ilman kirjauksia',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Pörssin ja yhtiön kotipaikka Singaporen ydinkeskustassa.
+     * Lähde: en.wikipedia.org: Pan-Electric Industries
+     *
+     * MERKKI ON SAAREN KOILLISKÄRJESSÄ CHANGISSA samasta syystä kuin
+     * Barings: kohdekartan rajauksessa oleva skandaali kuuluu
+     * kohdekartan pisteelle eikä pääkartalle. Lisäksi Singaporen
+     * karttatila on täynnä — ruudun lounaispuolella nimiö osui
+     * Kasvitieteellisen puutarhan, Haw Par Villan ja Bukit Timahin
+     * päälle (tools/tarkista-nimiolimitys.mjs), ja Changi oli ainoa
+     * kohta, jossa limityksiä on nolla.
+     */
+    {
+      id: 'pan-electric',
+      otsikko: 'Kolme päivää, jolloin pörssi oli kiinni',
+      nimio: 'Pan-Electric',
+      vuosi: '1985',
+      paikka: 'Singaporen pörssi, Singapore',
+      lat: 1.3898, lon: 103.9877,
+      kortti: 'Meripelastukseen erikoistuneella yhtiöllä oli 71 tytäryhtiötä '
+        + 'ja 230 miljoonan dollarin markkina-arvo. Joulukuussa 1985 sen '
+        + 'termiinisopimukset jäivät maksamatta, ja kaksi pörssiä suljettiin '
+        + 'kolmeksi päiväksi. Osakkeet olivat aamulla arvottomia.',
+      teksti: 'Pan-Electric Industries oli singaporelainen yhtiö, joka teki '
+        + 'meripelastustyötä ja jolla oli lisäksi hotelli- ja '
+        + 'kiinteistöomistuksia. Tytäryhtiöitä oli 71 ja markkina-arvo 230 '
+        + 'miljoonaa Singaporen dollaria.'
+        + '\n\nJoulukuussa 1985 yhtiö romahti valtavien selvittämättömien '
+        + 'termiinisopimusten takia. Romahdus pakotti sulkemaan sekä '
+        + 'Singaporen että Kuala Lumpurin pörssin kolmeksi päiväksi. Yhtiön '
+        + 'velat olivat kaatuessa 480 miljoonaa dollaria, ja 5 500 '
+        + 'osakkeenomistajan osakkeet todettiin yhdessä yössä arvottomiksi.'
+        + '\n\nJälkiselvittelyssä yhtiön keskeisiä henkilöitä — muun muassa '
+        + 'Peter Tham, Tan Kok Liang ja Tan Koon Swan — asetettiin syytteeseen '
+        + 'ja tuomittiin eripituisiin vankeusrangaistuksiin. Luottamus pörssiin '
+        + 'romahti, osakekurssit syöksyivät ja osa välitysliikkeistä ajautui '
+        + 'konkurssiin.'
+        + '\n\nMaaliskuussa 1986 säädettiin uudet arvopaperilait, joiden '
+        + 'tarkoituksena oli suojata välitysliikkeitä luottoriskeiltä. Vielä '
+        + 'vuonna 2000 tapaus oli Singaporen historian suurin yritysromahdus '
+        + 'ja ainoa kerta, jolloin pörssi jouduttiin sulkemaan yllättäen.',
+      lahde: 'en-Wikipedia "Pan-Electric Industries", johdanto-osa. '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä poikkeuksellista romahdus aiheutti pörssille?',
+        vaihtoehdot: [
+          'Pörssi siirtyi sähköiseen kaupankäyntiin',
+          'Kaksi pörssiä suljettiin kolmeksi päiväksi',
+          'Pörssi muutti uusiin tiloihin',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  TLS: [
+    /*
+     * Lifau, Oecusse (Portugalin ensimmäinen tukikohta Timorilla).
+     * Lähde: en.wikipedia.org: Topasses; Lifau
+     */
+    {
+      id: 'lifaun-pako',
+      otsikko: 'Kuvernööri, joka ajettiin ulos omasta siirtokunnastaan',
+      nimio: 'Lifaun pako',
+      vuosi: '1702–1769',
+      paikka: 'Lifau, Oecusse',
+      lat: -9.216667, lon: 124.3,
+      kortti: 'Timorin santelipuukaupan hallitsi sekaväestö, jota kutsuttiin '
+        + 'topasseiksi. Kun Lissabon lähetti Lifauhun oikean kuvernöörin, '
+        + 'topassit ajoivat hänet pois. Toisella kerralla portugalilaiset '
+        + 'siirsivät koko pääkaupungin toiseen päähän saarta.',
+      teksti: 'Topassit olivat kahden mahtisuvun, Da Costan ja Hornayn, '
+        + 'johtama väestöryhmä, joka asui Oecussessa ja Floresilla. Ryhmä '
+        + 'syntyi 1560-luvulta alkaen Solorin portugalilaisen '
+        + 'kauppa-asemasta, jota käytettiin ponnahduslautana Timorin '
+        + 'santelipuukauppaan. Kun hollantilainen kauppakomppania valtasi '
+        + 'Solorin 1613, yhteisö siirtyi Larantukaan Floresille ja 1650-luvun '
+        + 'lopulla osin Länsi-Timoriin.'
+        + '\n\nVuoteen 1663 mennessä topassit olivat etninen sekoitus '
+        + 'portugalilaisia, floresilaisia, timorilaisia, intialaisia ja '
+        + 'hollantilaisia karkureita. Sotataidollaan he hallitsivat suurta '
+        + 'osaa Timorista, ja heidän keskuksensa oli Lifau. He painostivat '
+        + 'timorilaisia ruhtinaita toimittamaan santelipuuta rannikolle ja '
+        + 'myivät sen Macaon kauppiaille tai hollantilaisille.'
+        + '\n\nYhteisöllä oli omat valitsemansa kapteenit, eikä se juuri '
+        + 'pitänyt yhteyttä Portugalin Intian varakuninkaaseen. Portugali '
+        + 'asetti Lifauhun hallintomiehen 1656 ja varsinaisen kuvernöörin '
+        + '1702. Topassit vastustivat sitä väkivalloin ja ajoivat kuvernööri '
+        + 'António Coelho Guerreiron pois 1705.'
+        + '\n\nHyökkäykset jatkuivat, ja 1769 portugalilaiset siirsivät '
+        + 'tukikohtansa Lifausta itään Diliin. Siitä tuli Itä-Timorin '
+        + 'pääkaupunki. Kahden portugalilaisryhmän välillä vallitsi ajoittain '
+        + 'sotatila aina vuoteen 1785 asti.',
+      lahde: 'en-Wikipedia "Topasses", osiot "Influence on the Timor region" '
+        + 'ja "Independent position within the colonial system", sekä "Lifau", '
+        + 'osio "History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä portugalilaiset tekivät topassien hyökkäysten jälkeen 1769?',
+        vaihtoehdot: [
+          'Siirsivät pääkaupungin Lifausta Diliin',
+          'Luopuivat koko Timorista',
+          'Palkkasivat hollantilaiset avuksi',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Manufahin rannikko Betanon kohdalla (kapinan sydänalue).
+     * Lähde: en.wikipedia.org: East Timorese rebellion of 1911–1912
+     */
+    {
+      id: 'manufahin-kapina',
+      otsikko: 'Päävero, pakkotyö ja kolmen vuoden kapina',
+      nimio: 'Manufahi',
+      vuosi: '1911–1912',
+      paikka: 'Manufahin rannikko, Betano',
+      lat: -9.164444, lon: 125.725,
+      kortti: 'Portugali halusi Timorilta rahaa ja käsipareja: pääveron ja '
+        + 'pakkotyön. Manufahin ruhtinas kokosi kuningaskuntien liiton ja '
+        + 'nousi kapinaan. Sen kukistamiseen tarvittiin joukkoja Mosambikista '
+        + 'ja tykkivene Macaosta.',
+      teksti: 'Vuosien 1911–1912 kapina, jota kutsutaan myös suureksi '
+        + 'kapinaksi tai Manufahin kapinaksi, syntyi vastauksena Portugalin '
+        + 'siirtomaahallinnon yrityksiin kerätä päävero ja panna toimeen '
+        + 'pakkotyövelvollisuus. Ne kuuluivat laajempaan hankkeeseen, jolla '
+        + 'pyrittiin edistämään vientikasvien viljelyä ja rakentamaan '
+        + 'nykyaikaista infrastruktuuria.'
+        + '\n\nKapinat olivat alkaneet jo aiemmin. Manufahin alkuperäisen '
+        + 'kuningaskunnan liurai eli päällikkö Dom Boaventura johti '
+        + 'ensimmäistä kapinaa 1894–1901 ja toista 1907–1908. Vuonna 1911 hän '
+        + 'kokosi paikallisten kuningaskuntien liiton viimeiseen ja '
+        + 'vakavimpaan nousuun.'
+        + '\n\nHelmikuussa 1912 erään kuningaskunnan kapinalliset tunkeutuivat '
+        + 'siirtokunnan pääkaupunkiin Diliin, ryöstivät hallintotalon ja '
+        + 'surmasivat matkallaan ihmisiä. Elokuussa portugalilaiset toivat '
+        + 'joukkoja Mosambikista ja tykkiveneen Macaosta kukistamaan kapinan.'
+        + '\n\nHinta oli raskas: 3 424 timorilaista kaatui ja 12 567 haavoittui, '
+        + 'portugalilaisten puolella kaatui 289 ja haavoittui 600. Vuoden 1912 '
+        + 'jälkeen Portugalin valta ulottui koko alueelle, perinnöllisiä '
+        + 'liuraita ei enää nimitetty ja vanhat kuningaskunnat lakkasivat. '
+        + 'Kapinaa pidetään ratkaisevana itätimorilaisen oman identiteetin '
+        + 'synnyssä.',
+      lahde: 'en-Wikipedia "East Timorese rebellion of 1911–1912", '
+        + 'johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä portugalilaiset toivat joukot kapinan kukistamiseen?',
+        vaihtoehdot: [
+          'Brasiliasta',
+          'Goasta',
+          'Mosambikista',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
 };
