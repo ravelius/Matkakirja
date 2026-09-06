@@ -3402,7 +3402,13 @@ export const RAAMATTU = {
           + 'paljon tokeneita jotka pitaisi kayttaa ennen aamua loppuun"): '
           + 'toisen tilin yosessio tekee lehtityota omalle haaralleen '
           + '(claude/lehdet-2026-09-06-yo) julkaisematta; paatoimittaja poimii '
-          + 'ja julkaisee aamulla. Prompti docs/raportit/lehtisessio-2026-09-06-yo.md.',
+          + 'ja julkaisee aamulla. Prompti docs/raportit/lehtisessio-2026-09-06-yo.md. '
+          + 'PROMPTIT AINA KOODINA (omistaja 6.9.2026 ilta, sanatarkasti: "Anna '
+          + 'promptit aina koodina. Tama pitaisi olla raamatussa"): kun Fable '
+          + 'antaa omistajalle promptin toiselle sessiolle, se annetaan aina '
+          + 'yhtena koodilohkona (kolme hipsua), jotta se kopioituu '
+          + 'sellaisenaan - ei lihavointeja, otsikoita tai listamuotoiluja '
+          + 'lohkon ulkopuolella.',
         'PALLO LEVOSSA YHTA TERAVA KUIN TASOKARTTA (omistaja 6.9.2026 '
           + 'iltapaiva, sanatarkasti: "kartta oli ennen palloa paljon teravampi, '
           + 'eli ongelma on pallon renderoinnissa. ainakin kun liike on '
