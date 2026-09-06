@@ -743,6 +743,43 @@ alkaa rajapisteellä KERRAN — kokeilu toisti pisteen, jolloin jokaiseen
 saumaan jäi nollamittainen jana (LineSegments2 piirtäisi sen pisteenä).
 Ero tavuissa on 0,4 %.
 
+**V2 tehty 6.9.2026** (`js/pallolauta/lauta.js`,
+`tools/kokeilut/pallon-vektorit/pallo.html`,
+`tools/savukkeet/mittaa-pallon-vektorit.mjs`): kerros on kytketty
+pelilautaan (luonti reittikerroksen jälkeen, kahva `lauta.vektorit()`,
+purku `pura()`:ssa ennen `pallo._destructor?.()`:ää; kytkin
+`?vektorit=0`), kokeilusivu sai tavan `?vektorit=peli`, joka ajaa PELIN
+OMAN moduulin ämpäriaineistolla — mittari mittaa siis tuotantokoodia
+eikä kokeilun toteutusta — ja mittarista tuli vartija (`--vartio`:
+luvun 5 rajat vakiossa `RAJAT`, OK/FAIL/OHI-rivit, poistumiskoodi 1
+yhdestäkin FAILista; `--vertailu=<tapa=ei -ajon raportti>` antaa
+panoroinnin vertailuluvun). `js/pallovektorit.js`:ää, `js/pallolaatat.js`:ää
+eikä `js/pallo.js`:ää ei muutettu.
+
+Vartio puhelimella (390 × 844 dpr 3, 4×) **18 OK, 2 FAIL** ja työpöydällä
+(1440 × 900 dpr 2) **17 OK, 3 FAIL**. Viiva on mediaaniltaan 2 px joka
+näkymässä ja joka hetkellä (poltettu 2–15 px tilan mukaan), koepisteessä
+0 magentaa, z-taistelu laattakerrosta vasten 1,017 ja horisonttivuoto
+0,08 %; mitatut luvut ja taulukko ovat docs/moduulit/karttapallo.md
+luvussa 10.3. FAIL-rivit ovat kaikki vakiokysymyksiä, jotka tämä
+suunnitelma jättää erälle V3, eikä yhtään rajaa löysätty: (1) leveys
+koko pallon näkymässä 3 / 7 px (raja 2 / 6) ja (2) kerroksen oma osuus
+piirtokutsuista koko pallolla puhelimella 49 (raja 4) ovat molemmat
+seurausta siitä, että `VEKTORIT_TERAVYYS_PX 0,5` valitsee puhelimen
+yleiskuvassa (tarve 18,9 px/aste) tason 2 eikä tasoa 1 — työpöydällä,
+jossa tarve on 13,4, taso 1 valikoituu ja sama mitta on **1**; tämä on
+luvun 4.4 ennakoima riski ja sen vastatoimi (`TERAVYYS_PX` yleiskuvassa
+1,0). (3) Työpöydällä `paivitaMs` 11,9 ms (raja 5) ja saapumisnäkymän
+pyynnöt 39 (raja 30, puhelimella 16) tulevat siitä, että 1440 × 900:n
+näkymä kattaa 39 kymmenen asteen solua kerralla; luvun 5 rajat on
+mitattu puhelimella.
+
+- Kuvat ja JSON-raportit (scratchpad, eivät repossa):
+  `scratchpad/v2/{puhelin,tyopoyta}/*.png` ja `*.json`, vertailuajot
+  `scratchpad/v2/perusta/` (`--tapa=ei`), montaasit
+  `scratchpad/v2/montaasi-puhelin-lepo-liike-zoom.png` ja
+  `montaasi-puhelin-zoom.png`.
+
 - `tools/savukkeet/mittaa-pallon-vektorit.mjs` — mittari (luku 2.0).
 - `tools/kokeilut/pallon-vektorit/pallo.html` — kokeilusivu pelin omalla
   pallolla; `vektorit.js` — neljä toteutustapaa; `tee-aineisto.mjs` —

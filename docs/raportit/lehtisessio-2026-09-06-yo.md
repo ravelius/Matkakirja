@@ -114,3 +114,19 @@ tiedossa), ja aina viimeiseksi "MISTÄ JATKETAAN" -kohta, jotta seuraava
 sessio tai päätoimittaja jatkaa katkotta. Kun tokenit loppuvat tai aamu
 koittaa, viimeinen teko on raportin päivitys ja push. Päätoimittaja
 poimii haaran mainiin ja julkaisee.
+
+## Lisäys 6.9.2026 klo 21.40 (omistaja: kuvatilaukset kuvaputkelta ja karttanostot)
+
+Omistaja: "voisiko toinen sessio pyytää kuvia kuvaputkelta, lehtiä voisi
+elävöittää. voisi antaa sille ohjeeksi myös tehdä karttanostoja."
+Yösessio saa siis postittaa kuvatilaukset itse ja ajaa karttanostoeriä
+lehtierien rinnalla. Lisäprompti (koodilohko) annettiin omistajalle
+kopioitavaksi yösessioon; sama teksti:
+
+```
+LISÄOHJE YÖSESSIOLLE (omistaja 6.9.2026 ilta): saat tilata kuvat kuvaputkelta ITSE ja tehdä karttanostoja lehtien rinnalla.
+
+KUVATILAUKSET KUVAPUTKELTA: haara claude/postilaatikko on sessioiden ilmoitustaulu (lue ensin sen posti/LUEMINUT.md ja malliksi posti/fable-vanha.md:n tilaukset sekä posti/kuvatoimitus.md:n vastaukset). Kirjoita VAIN omaan tiedostoosi posti/lehtitoimittaja-yo.md, uusin viesti tiedoston KÄRKEEN otsikolla "## <pvm klo UTC> — LEHTITOIMITTAJA → KUVATOIMITUS: <aihe>". Ennen kirjoitusta git fetch origin claude/postilaatikko ja työ sen kärjestä (git worktree add ../postilaatikko origin/claude/postilaatikko tai checkout); push origin HEAD:claude/postilaatikko; jos push hylätään, fetch + rebase + push uudestaan. Tilaa jokaisen poimitun erän jälkeen: (1) kuvattomat nostot riveinä "KOODI/kategoria "otsikko" — mitä kuvan pitää esittää" (aihe noston otsikosta ja tekstin alusta; ei ihmisiä lähikuvassa paitsi julkinen historiallinen henkilö julkisessa roolissa; muoto kuten muissa nostokuvissa: vaaka 4:3, sRGB JPG, väljä rajaus, todelliset referenssit); (2) kohdekarttojen miniatyyrit riveinä "Kaupunki: kohde (lat, lon) — mitä esittää" (1024 × 1024, aito alfa); (3) mainissa/haarallasi olevan commitin SHA, josta kuvaputki lukee tietueet. Kuvaputki vastaa posti/kuvatoimitus.md:hen ja vie kuvat ämpäriin; kun se ilmoittaa toimitetut kuva-avaimet, kytke ne lehtiin haarallasi (kuva-kenttä tietueeseen, kuvateksti sanasta sanaan kuvaputken antamana, lähdemerkintä), ÄLÄ generoi kuvia itse. Salaisuuksia, avaimia tai base64-kuvia ei koskaan postiin. Kirjaa raporttiin, mitä on tilattu ja mitä toimitettu. Päätoimittaja-Fable ei tilaa tänä yönä lehtikuvia, jotta tilaukset eivät mene ristiin — kaikki lehtien kuvatilaukset tulevat sinulta.
+
+KARTTANOSTOT LEHTIEN RINNALLA: tools/parvi/maailman-eran-ohje.md (8 kohdetta + 3 maastokohdetta + 1 eläintäky + 2 skandaalia per maa; node tools/laske-karttanostot.mjs kertoo vajeen). Aja karttanostoeriä rinnakkain lehtierien kanssa niin, että agentteja on yhteensä enintään 5 kerrallaan (esim. 3 lehteä + 2 nostomaata). Nostoerät koskevat tiedostoihin js/packs/maastokohteet-*.js, elaintakyt.js, skandaalit.js ja niiden testeihin — poimi ne poimi-era.sh:lla (liittää elaintakyt/skandaalit-lohkot loppuun) ja aja node tools/tarkista-nostopaikat.mjs, node tools/tarkista-karttapisteet.mjs ja node tools/tarkista-nimiolimitys.mjs jokaisen nostopoiminnan jälkeen. Nostoille tilataan kuvat samalla tavalla kuvaputkelta (kohdekuva 4:3; eläintäyt ovat omalla jonollaan, tilaa rivillä "ELÄIN KOODI: laji — käyttäytyminen, ympäristö"). Muut säännöt ja ÄLÄ KOSKE -lista pysyvät ennallaan.
+```

@@ -67,6 +67,7 @@ import {
   laatatSaatavilla, laattatasoMax, lataaPallokirjasto, pakotaPallonLaatu,
   pallonKaupungit, pallonLepokerros, pallonNostoOnPoltettu, rakennaPallo, webglTuettu,
 } from '../pallo.js';
+import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
 import { asemoiFokuskohde } from '../fokuskohteet.js';
 import { laudaltaAsteiksi } from '../fokusmitat.js';
 import { packById } from '../pack.js';
@@ -590,6 +591,15 @@ export async function avaaPallolauta(ui) {
     pallo, ui, siirtyma, asteet: pallonAsteet, kotelo,
   });
   const reitit = luoReitit({ pallo, ui, siirtyma, asteet: pallonAsteet });
+  /*
+   * VEKTORIVIIVAT LAATTOJEN PÄÄLLE (Raamattu "VEKTORIT SAMALLA",
+   * suunnitelma docs/moduulit/pallon-vektoriviivat.md luku 4):
+   * rantaviiva ja maiden rajat piirtyvät Line2-nauhoina tasan
+   * tavoiteleveytensä laitepikseleinä joka korkeudella — kerros lukee
+   * Line2-luokat reittikerroksen kautta, joten se on luotava vasta
+   * reittien jälkeen. `?vektorit=0` jättää kerroksen pois.
+   */
+  const vektorit = pallovektoritPaalla() ? luoPallovektorit({ pallo, kotelo, reitit }) : null;
   const nimet = luoNimet({
     ui, merkit, asteet: pallonAsteet, ruudulla, kotelo, pack,
   });
@@ -1326,6 +1336,12 @@ export async function avaaPallolauta(ui) {
      * kenttä, koska asennus odottaa kirjaston laattamoottoria.
      */
     lepokerros: () => pallonLepokerros(pallo),
+    /**
+     * Vektorikerroksen kahva (js/pallovektorit.js: mittarit, paivita)
+     * tai null, jos kerros on pois (`?vektorit=0`) — mittarit
+     * savukkeille ja vartijalle kuten lepokerros.
+     */
+    vektorit: () => vektorit,
     /** Siirron kuljettaja (ui.nappulanKuljettaja → js/pallolauta/siirto.js). */
     nappulanKuljettaja: (player, valinnat) => luoNappulanKuljettaja({
       ui, lauta, player, ...valinnat,
@@ -1388,6 +1404,7 @@ export async function avaaPallolauta(ui) {
       merkit.pura();
       noppaTakaisin();
       lauta.linssit?.pura();
+      vektorit?.pura();
       pallo._destructor?.();
       kuori.remove();
       lauta.linssikartta?.pura();
