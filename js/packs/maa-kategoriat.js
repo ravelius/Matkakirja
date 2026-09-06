@@ -46957,4 +46957,456 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MONGOLIA (MNG) — Aasian maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-mongolia.md; kaikki
+   * luvut ja päiväykset tarkistettu en-Wikipedian raakatekstistä
+   * 6.9.2026 artikkeli kerrallaan.
+   *
+   * TYÖNJAKO ULAN BATORIN LEHDEN JA KARTTANOSTOJEN KANSSA. Ulan
+   * Batorilla on oma kaupunkilehti (kulttuuri-kategoriat.js: kansi ja
+   * historia), joka kertoo kaupungin viisi nimeä, vaeltavan
+   * luostarikaupungin, teekaravaanit, talvipalatsin, jurtta-alueet,
+   * Naadamin kolme lajia ja maailman kylmimmän pääkaupungin.
+   * maastokohteet-mng.js kattaa Hüiten orgilin, Gobin, Orhonin,
+   * Amarbayasgalantin, Bayanzagin, Hustain nuruun, peurakivet,
+   * Tövhönin, Tsagaan aguin, Tšingisin patsaan ja Hövsgölin;
+   * elaintakyt.js przewalskinhevosen ja skandaalit.js Ongiin luostarin
+   * sekä Tarbosaurus-huutokaupan. MAALEHTI EI TOISTA NIITÄ — siksi
+   * täällä ei ole Naadamia, geriä, luonto-osastoa eikä yhtään
+   * luostaria omana juttunaan, ja Zanabazar kerrotaan veistäjänä eikä
+   * luostarien perustajana. Karakorum ja Erdene Zuu jäivät kartalta
+   * pois nimiölimityksen takia (maastokohteet-mng.js:n lohkokommentti),
+   * joten ne ovat vapaana lehdelle.
+   *
+   * HERKÄT AIHEET (M3:n Myanmar-linja, sama kuin Ulan Batorin
+   * lehdessä): ei nykypolitiikkaa. 1920- ja 1930-luvun uskonnolliset
+   * vainot mainitaan kahdessa kohdassa yhdellä lauseella ilman
+   * uhrilukuja ja ilman yksityiskohtia (tsam-nosto ja Danzanravjaan
+   * jäämistö), ja Natsagdorjin pidätys 1937 kerrotaan artikkelin omalla
+   * tarkkuudella ilman kehystystä. Valloitussotia ei kuvata: 1206-nosto
+   * kertoo hallinnon uudistuksesta, ei sotaretkistä.
+   *
+   * KUVAT: 16 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin.
+   * NELJÄ NOSTOA JÄI KUVATTOMAKSI (khöömei, urtiin duu, tsam ja
+   * Yadamsüren) — syy on kirjattu kunkin noston kommenttiin ja
+   * kuvatilaus raporttiin. HYLÄTYT: "Morin Khuur.JPG" ja "Mongolian
+   * Traditional Culture Morin Khuur" (museoleima kuvassa),
+   * "Kurs i mongolsk strupesang" (vesileima ja tunnistettavat kasvot),
+   * "Throat singing (2398693554)" ja "Mongolian Folklore 1"
+   * (tunnistettavat kasvot, eivät jutun aihe), "Secretary Kerry
+   * Accepts a Gift of Aaruul" (tunnistettava henkilö ei ole jutun
+   * aihe), "Karakorum Silver Tree" (1 082 px leveä).
+   *
+   * TUNNISTETTAVAT KASVOT: mukana on vain kuvia, joissa tunnistuva
+   * henkilö tai hahmo ON jutun aihe (Tšingis-kaanin muotokuva,
+   * Khutulunin painikuva, Danzanravjaan patsas, Natsagdorjin patsas,
+   * The Hu lavalla) — sama linja kuin Kenian lehdessä. Muissa kuvissa
+   * näkyvät vain kädet tai ihmiset ovat kaukana.
+   */
+  MNG: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Mongolian historia kirjoitettiin hevosen selästä: arojen heimoista '
+          + 'tuli yhdessä sukupolvessa maailman suurin yhtenäinen maavaltakunta, ja '
+          + 'sen posti kulki nopeammin kuin mikään muu ennen rautateitä.',
+      nostot: [
+        {
+          otsikko: 'Kokous Ononin latvoilla',
+          aika: '1206',
+          tiedosto: 'YuanEmperorAlbumGenghisPortrait (crop).jpg',
+          teksti: 'Voitettuaan viimeisenkin kilpailijansa Temüjin kutsui vuonna 1206 '
+              + 'arojen päämiehet suureen kokoukseen eli kurultaihin Onon-joen '
+              + 'latvoille ja otti nimen Tšingis-kaani. Nimen merkityksestä kiistellään '
+              + 'yhä: sen on arveltu tarkoittavan lujuutta tai — turkin sanasta tängiz, '
+              + 'meri — maailmanmeren hallitsijaa. Samassa kokouksessa hän purki '
+              + 'heimojärjestyksen. Jokainen 15–70-vuotias mies kirjattiin tuhannen '
+              + 'miehen yksikköön, joka jaettiin sadan ja kymmenen miehen ryhmiin, ja '
+              + 'voitettujen heimojen miehet hajautettiin eri yksiköihin. Päälliköiksi '
+              + 'nousi kahden sepän pojat, puuseppä ja kolme paimenta: sukuperä ei enää '
+              + 'ratkaissut, vaan uskollisuus.',
+          selite: 'Tšingis-kaanin tunnetuin muotokuva on sivu albumista, johon '
+            + 'koottiin Yuan-dynastian hallitsijoiden kuvat.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Posti, joka kulki kolmesataa kilometriä päivässä',
+          aika: '1200-luku',
+          tiedosto: 'Mongol passport from period of Kublai Khan, Yuan dynasty; Karakorum Museum, Mongolia (1).jpg',
+          teksti: 'Örtöö eli yam oli ketju asemia, joilla oli vaihtohevosia, ruokaa ja '
+              + 'yösija. Asemien väli oli 32–64 kilometriä, ja kun sanansaattaja saapui, '
+              + 'hän antoi viestin levänneelle miehelle ja jäi itse lepäämään: viesti ei '
+              + 'pysähtynyt, vaikka mies pysähtyi. Näin uutinen eteni 200–300 kilometriä '
+              + 'vuorokaudessa. Mongolien salaisen historian mukaan verkon perusti '
+              + 'Ögödei-kaani, joka liitti siihen valloitettujen Jin-alueiden vanhat '
+              + 'postiasemat. Sotareiteistä tuli kauppareittejä, ja viesti kulki '
+              + 'Koreasta Persiaan asti. Venäjän kielessä sana yam jäi elämään '
+              + 'postilaitoksen nimenä vuosisadoiksi.',
+          selite: 'Gerege eli paiza oli matkalupa: sen kantaja sai asemilta hevoset ja '
+            + 'ruoan. Tämä kappale on Karakorumin museossa.',
+          lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Hopeapuu, joka kaatoi juomat',
+          aika: '1235–1585',
+          tiedosto: 'Holy wall (48984667297).jpg',
+          teksti: 'Ögödei muurasi 1235 Orhonin laaksoon pääkaupungin Karakorumin ja '
+              + 'rakennutti sinne Kymmenentuhannen rauhan palatsin. Möngke-kaani teetti '
+              + 'pihalle pariisilaisella kultasepällä Guillaume Boucherilla hopeapuun, '
+              + 'jonka oksilla riippui hopeahedelmiä ja jonka runkoa kiersi neljä '
+              + 'kultakäärmettä. Kun kaani halusi juotavaa, latvan enkeli nosti torven '
+              + 'huulilleen ja käärmeiden suista valui juomaa hopea-altaaseen. '
+              + 'Flanderilainen munkki Vilhelm Rubrukilainen saapui kaupunkiin 1254 ja '
+              + 'laski siellä kaksitoista pakanatemppeliä, kaksi moskeijaa ja yhden '
+              + 'nestoriaanisen kirkon. Kaupunki jäi autioksi, ja 1585 sen kivistä '
+              + 'muurattiin Erdene Zuun luostari.',
+          selite: 'Erdene Zuun muuri rakennettiin 1585 Karakorumin raunioiden kivistä, '
+            + 'ja siihen oli tarkoitus tulla 108 stupaa rukousnauhan tapaan.',
+          lahde: 'Rob Oo, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Prinsessa, jota kukaan ei kaatanut',
+          aika: 'noin 1260–1306',
+          tiedosto: 'Qutulun daughter of Qaidu.jpeg',
+          teksti: 'Khutulun oli Keski-Aasiaa hallinneen Kaidun tytär, ja hänet '
+              + 'opetettiin lapsesta asti ampumaan, ratsastamaan ja painimaan. Sekä '
+              + 'Marco Polo että persialainen historioitsija Rashid al-Din kirjoittivat '
+              + 'hänestä. Osa kertomuksista sanoo, ettei hän mennyt naimisiin vaan '
+              + 'kaatoi jokaisen kosijansa painissa ja otti tältä hevosen; kuollessaan '
+              + 'hänellä kerrottiin olleen kymmenentuhatta hevosta. '
+              + 'Isä kysyi neuvoa häneltä useammin kuin pojiltaan ja yritti nimetä hänet '
+              + 'seuraajakseen 1301, mutta miespuoliset sukulaiset estivät sen. Vuonna '
+              + '1710 ranskalainen Pétis de la Croix teki hänestä arvoituksia kysyvän '
+              + 'Turandotin — ja siitä ketju johtaa Puccinin oopperaan.',
+          selite: 'Marco Polon kirjan 1400-luvun ranskalainen käsikirjoituskuva esittää '
+            + 'Khutulunin painimassa kosijaansa vastaan hovin katsellessa.',
+          lahde: 'Maître de la Mazarine, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Mongolian kirjallisuus lepää yhden 1200-luvun kirjan varassa ja '
+          + 'kirjaimistossa, jota kirjoitetaan ylhäältä alas ja jonka rivit etenevät '
+          + 'vasemmalta oikealle.',
+      nostot: [
+        {
+          otsikko: 'Kirja, joka säilyi kiinalaisiksi merkeiksi puettuna',
+          aika: '1228 →',
+          tiedosto: 'SecretHistoryMongols1947.jpg',
+          teksti: 'Mongolien salainen historia on vanhin säilynyt mongolinkielinen '
+              + 'kirjateos. Sen kirjoitti tuntematon tekijä Tšingis-kaanin kuoleman '
+              + 'jälkeen, ja loppusanojen mukaan työ valmistui Rotan vuonna Kerulen-joen '
+              + 'rannalla. Kirja alkaa taruna: siniharmaa susi ja vaalea naaraskauris '
+              + 'saivat ensimmäisen mongolin, ja yhdentoista sukupolven päästä leski '
+              + 'Alan Gua sai kolme poikaa hohtavasta miehestä, joka tuli sisään gerin '
+              + 'savuaukosta. Alkuperäistä käsikirjoitusta ei ole jäljellä. Teksti '
+              + 'säilyi, koska Ming-kauden tulkkikoulu kirjoitti sen ääntämisen '
+              + 'kiinalaisin merkein oppikirjaksi. Käännöksiä on yli neljälläkymmenellä '
+              + 'kielellä.',
+          selite: 'Tsendiin Damdinsürenin vuoden 1947 laitos siirsi Salaisen historian '
+            + 'nykymongoliaan, ja sitä pidetään uuden kirjallisuuden klassikkona.',
+          lahde: 'Tsendiin Damdinsüren, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kirjoitus, joka valuu ylhäältä alas',
+          aika: '1200-luku →',
+          tiedosto: '3Z3A3707.jpg',
+          teksti: 'Mongolian oma kirjaimisto tuli sotasaaliina: Tšingis-kaanin joukot '
+              + 'ottivat vangiksi uiguurikirjuri Tata-tongan, ja hän sovitti vanhan '
+              + 'uiguuriaakkoston mongolin kielelle. Sanat kirjoitetaan ylhäältä alas, '
+              + 'ja rivit etenevät vasemmalta oikealle. Syy on vanha: uiguurit olivat '
+              + 'kääntäneet sogdilaisen kirjaimiston yhdeksänkymmentä astetta '
+              + 'vastapäivään kiinalaisen tavan mukaan mutta jättäneet kirjainten '
+              + 'asennon ennalleen. Kirjoitusvälineenä oli ruokokynä 1700-luvulle asti, '
+              + 'sitten sivellin. Kyrilliset kirjaimet syrjäyttivät vanhan kirjaimiston '
+              + '1946, ja vuonna 2025 se palasi Mongolian toiseksi viralliseksi '
+              + 'kirjoitustavaksi.',
+          selite: 'Mongolian kalligrafia on perinteisen kirjaimiston käsinkirjoitustaito '
+            + 'ja oma taiteenlajinsa.',
+          lahde: 'J bayarmagnai, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Gobin runoilija ja hänen haudatut laatikkonsa',
+          aika: '1803–1856',
+          tiedosto: 'Gobi, jaskinie (06).jpg',
+          teksti: 'Danzanravjaa syntyi köyhään perheeseen Gobissa ja kiersi isänsä '
+              + 'kanssa kerjäämässä ja laulamassa, kunnes hänet otettiin luostariin ja '
+              + 'tunnistettiin jälleensyntyneeksi laamaksi. Hän kirjoitti yli '
+              + 'kolmesataa runoa ja sata laulua, maalasi ja opetti lääketiedettä. '
+              + 'Khamarin luostariinsa hän perusti 1832 kiertävän teatterin nimeltä '
+              + 'Kuun käki, 1840 kirjaston ja museon, jossa palkatut lukijat lukivat '
+              + 'kirjoja ääneen vierailijoille, sekä koulun, johon otettiin tytöt ja '
+              + 'pojat säätyyn katsomatta. Hänen jäämistönsä haudattiin vuoden 1921 '
+              + 'jälkeen vuorille, ja kartta säilyi suvussa. Vuonna 1991 kokoelman '
+              + 'hoitaja kaivoi esiin 24 laatikkoa; 22 on yhä maassa.',
+          selite: 'Danzanravjaan patsas luolassa Dornogovin aimakissa. Hän perusti '
+            + 'seudulle teatterin, kirjaston ja koulun.',
+          lahde: 'Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Nuori mies, joka käänsi Poen mongoliksi',
+          aika: '1906–1937',
+          tiedosto: 'Daschdordschiin Natsagdordsch 2.JPG',
+          teksti: 'Dashdorjiin Natsagdorj ehti olla yhdeksäntoista, kun hän jätti '
+              + 'valtion virkansa ja lähti opiskelemaan: ensin Leningradiin, sitten '
+              + 'Berliinin yliopiston lehtimieskouluun ja Leipzigiin. Palattuaan hän '
+              + 'käänsi mongoliksi Marco Polon matkakertomuksen, Pushkinin runoja, '
+              + 'Tšehovia ja Edgar Allan Poen novellin Kultakuoriainen. Tunnetuin runo '
+              + 'Minii nutag, Minun kotimaani, luettelee maan vuoret ja joet, ja ooppera '
+              + 'Kolme kohtalokasta kukkulaa on yhä ohjelmistossa. Hänet pidätettiin '
+              + 'perusteettomin syyttein helmikuussa 1937, ja hän kuoli saman vuoden '
+              + 'heinäkuussa kolmenkymmenen vuoden ikäisenä. Syyttömäksi hänet '
+              + 'julistettiin 1989.',
+          selite: 'Natsagdorjin patsas Ulan Batorissa. Häntä pidetään nykyaikaisen '
+            + 'mongolialaisen kirjallisuuden perustajana.',
+          lahde: 'Brücke-Osteuropa, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Mongolialainen keittiö on lihaa, maitoa ja rasvaa. Vihanneksia ja '
+          + 'mausteita on vähän, ja riisi ei ole perusruokaa niin kuin muualla '
+          + 'Aasiassa.',
+      nostot: [
+        {
+          otsikko: 'Nyytit, jotka jäädytetään pihalla',
+          tiedosto: 'Mongolian buuz.jpg',
+          teksti: 'Buuz on höyryssä kypsennetty nyytti, jonka sisällä on lampaan- tai '
+              + 'naudanlihaa kuminansiemenillä maustettuna. Taikinapussi suljetaan niin, '
+              + 'että päälle jää pieni aukko — muuten höyry repisi sen — ja jokainen '
+              + 'kokki taittelee poimut omalla tavallaan. Nyytti syödään käsin, ja '
+              + 'taikina pitää lihan liemen sisällään. Buuzeja tehdään satamäärin '
+              + 'viikkoja ennen Tsagaan Saria eli valkoista kuuta, uutta vuotta, ja ne '
+              + 'jätetään pihalle jäätymään. Uudenvuoden pöydässä niiden seurana on '
+              + 'suolattua maitoteetä, paistettua leipää ja Niislel-salaatti, '
+              + 'mongolialainen versio Olivier-salaatista.',
+          selite: 'Buuz höyrytetään ja syödään käsin; ylös jätetty pieni aukko estää '
+            + 'nyyttiä repeämästä kypsyessä.',
+          lahde: 'Mizu basyo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Ateria, joka kypsyy kuumilla kivillä',
+          tiedosto: 'Khorkhog.jpg',
+          teksti: 'Khorkhog tehdään näin: kymmenestä kahteenkymmeneen nyrkinkokoista '
+              + 'kiveä kuumennetaan nuotiossa, ja ne ladotaan astiaan luineen '
+              + 'paloitellun lampaanlihan kanssa. Astia on tavallisesti metallinen '
+              + 'maitokannu, ja tapa on nuori: aiemmin liha kypsennettiin boodogina eli '
+              + 'luuttomaksi nyljetyn vuohen tai murmelin vatsaontelossa, ja kannut '
+              + 'tulivat käyttöön vasta neuvostojoukkojen jäljiltä. Kokki kuuntelee ja '
+              + 'haistelee kannua ja päättää siitä, milloin ruoka on valmista; aikaa '
+              + 'menee puolitoista tuntia. Kivet jaetaan syöjille rasvasta mustuneina, '
+              + 'ja niitä heitellään kädestä toiseen — niillä sanotaan olevan hyvää '
+              + 'tekevä vaikutus.',
+          selite: 'Khorkhog tarjoillaan luineen ja syödään sormin; liemi syntyy lihasta '
+            + 'ja kuumien kivien höyrystä.',
+          lahde: 'Mizu Basyo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Juoma, jonka Herodotos kuvasi',
+          tiedosto: 'Homemade airag in Mongolia.jpg',
+          teksti: 'Airag on hapatettua tammanmaitoa. Lypsykausi kestää kesäkuun '
+              + 'puolivälistä lokakuun alkuun, ja tamma antaa kaudessa tuhannesta '
+              + 'tuhanteenkahteensataan litraa maitoa, josta noin puolet jätetään '
+              + 'varsalle. Lypsäjä on toinen polvi maassa ja ämpäri toisen polven '
+              + 'päällä; varsa päästetään aloittamaan maidon tulo ja vedetään sitten '
+              + 'sivuun mutta jätetään koskettamaan emäänsä. Maito hapatettiin ennen '
+              + 'hevosennahkaisessa säkissä, joka nostettiin gerin katolle tai sidottiin '
+              + 'satulaan päivän ratsastuksen ajaksi. Herodotos kuvasi skyyttien tekevän '
+              + 'samaa jo 400-luvulla eaa.',
+          selite: 'Airagissa on alkoholia 0,7–2,5 prosenttia. Nykyään se hapatetaan '
+            + 'usein puutynnyrissä tai muoviastiassa.',
+          lahde: 'Jpatokal, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Valkoinen ruoka talven varalle',
+          tiedosto: 'Tsai.JPG',
+          teksti: 'Maito keitetään ensin, jotta pinnalta saadaan öröm, paksu kerma. '
+              + 'Kuoritusta maidosta tehdään byaslag-juustoa, hieman hapatettua aartsia, '
+              + 'jogurttia, kefiriä ja shimiin arkhia, kevyttä maitoviinaa — sekä '
+              + 'aaruulia, kuivattuja rahkapaloja, jotka kovettuvat niin sitkeiksi että '
+              + 'kestävät talven yli. Kaikkea tätä sanotaan yhteisnimellä tsagaan idee, '
+              + 'valkoinen ruoka, ja se on uudenvuoden pöydän ydin. Päivän juoma on '
+              + 'süütei tsai, suolattu maitotee, jossa on voita ja usein paahdettua '
+              + 'viljaa. Kun teehen lisää riisiä, lihaa tai pieniä bansh-nyyttejä, siitä '
+              + 'tulee ateria.',
+          selite: 'Süütei tsai on suolattua maitoteetä, johon lisätään voita ja usein '
+            + 'paahdettua viljaa.',
+          lahde: 'takoradee, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Missä astiassa khorkhog nykyään useimmiten kypsennetään?',
+        vaihtoehdot: [
+          'Saviruukussa',
+          'Metallisessa maitokannussa',
+          'Puisessa ammeessa',
+          'Hevosennahkaisessa säkissä',
+        ],
+        oikea: 1,
+        fakta: 'Ennen liha kypsennettiin boodogina eläimen vatsaontelossa; maitokannut '
+            + 'tulivat käyttöön vasta myöhemmin.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Mongolialainen musiikki on tehty aroa varten: ääni kantaa kauas, '
+          + 'laulut ovat pitkiä ja jousisoittimen kaulassa on hevosen pää.',
+      nostot: [
+        {
+          otsikko: 'Viulu, jonka kielet ovat hevosen jouhia',
+          tiedosto: '0K8A1219.jpg',
+          teksti: 'Morin khuur on kaksikielinen jousisoitin, jonka kaikukoppa on '
+              + 'puolisuunnikkaan muotoinen ja jonka lavan yläpäähän on veistetty '
+              + 'hevosen pää. Kielet punottiin jouhista: paksumpaan, urospuoliseksi '
+              + 'kutsuttuun kieleen otettiin 130 jouhta oriin hännästä ja ohuempaan, '
+              + 'naaraspuoliseen 105 tamman hännästä. Jousta pidetään alakautta, ja '
+              + 'siksi soittaja voi kiristää jouhia sormillaan kesken vedon ja säätää '
+              + 'sävyä. Tarun mukaan paimen Namjil sai lentävän hevosen, jonka siivet '
+              + 'leikattiin kateudesta poikki; hevonen kuoli, ja paimen teki sen nahasta '
+              + 'ja jouhista soittimen surullisia laulujaan varten.',
+          selite: 'Morin khuuria pidetään Mongolian kansallissoittimena, ja Unesco on '
+            + 'ottanut sen aineettoman kulttuuriperinnön luetteloon.',
+          lahde: 'J bayarmagnai, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Yksi laulaja, kaksi säveltä',
+          // Kuvaton (Opus 6.9.2026): Commonsin >= 1200 px:n kurkkulaulukuvat
+          // ovat joko tunnistettavien yksityishenkilöiden lähikuvia tai
+          // vesileimattuja kurssikuvia. Kuva tilataan kuvaputkelta.
+          teksti: 'Khöömei on laulutapa, jossa laulaja pitää yllä yhtä perussäveltä ja '
+              + 'muokkaa samalla huulillaan, kielellään ja kurkullaan sen yläsäveliä '
+              + 'niin, että niistä syntyy oma melodiansa: kuulija erottaa kaksi ääntä '
+              + 'yhdestä ihmisestä. Tyylejä on useita. Khöömei itsessään on pehmein, '
+              + 'sygyt tarkoittaa viheltämistä ja kuulostaa huilulta, ja kargyraa on '
+              + 'syvä murina, jossa värähtelevät sekä äänihuulet että niiden yläpuoliset '
+              + 'valehuulet. Avoin maisema on osa lajia: laulajat hakeutuvat joen '
+              + 'rantaan tai vuoren rinteelle, jossa ääni kantaa. Sama laulutapa elää '
+              + 'Tuvassa, Mongoliassa, Sisä-Mongoliassa ja Altailla.',
+          selite: 'Kurkkulaulussa laulaja tuottaa perussävelen ja sen yläsävelistä '
+            + 'oman melodiansa yhtä aikaa.',
+        },
+        {
+          otsikko: 'Neljä minuuttia, kymmenen sanaa',
+          // Kuvaton (Opus 6.9.2026): Commonsin urtiin duu -kuvat ovat
+          // levynkansia ja seremoniakuvia, kaikki alle 1 200 px leveitä.
+          // Kuva tilataan kuvaputkelta.
+          teksti: 'Urtiin duu, pitkä laulu, ei ole pitkä vain kestoltaan: jokainen tavu '
+              + 'venytetään pitkäksi, ja neljän minuutin laulussa voi olla kymmenen '
+              + 'sanaa. Kuuluisin niistä, Vanhus ja lintu, kestää täysimittaisena '
+              + 'kolmisen tuntia, kun kaikki 32 säkeistöä lauletaan. Tärkein tyylikeino '
+              + 'on shuranhai, pitkä pidätetty sävel, jonka vokaalia väreillään syvästi. '
+              + 'Itä-Mongoliassa säestää morin khuur ja joskus limbe-huilu, lännessä '
+              + 'lauletaan usein ilman säestystä. Unesco julisti pitkän laulun '
+              + 'mestariteokseksi 2005. Sosialismin aikana lavalla sai laulaa vain '
+              + 'kolmesta viiteen minuuttia.',
+          selite: 'Pitkän laulun aiheena on usein hevonen, ja sen sanotaan kuvaavan '
+            + 'avaria vuorilaaksoja ja mongolialaista mielenlaatua.',
+        },
+        {
+          otsikko: 'Konservatorion oppilaista festivaalilavoille',
+          aika: '2016 →',
+          tiedosto: 'The Hu Hellfest 2023.jpg',
+          teksti: 'Neljä Mongolian valtion musiikki- ja tanssikonservatorion opiskelijaa '
+              + 'perusti 2016 yhtyeen, joka soittaa raskasta rockia morin khuurilla, '
+              + 'tovshuurilla ja kurkkulaululla. Tyylin nimeksi tuli hunnu rock '
+              + 'muinaisen Hünnü-valtakunnan mukaan, ja yhtyeen nimi The Hu tarkoittaa '
+              + 'mongoliksi ihmisiä — nimi valittiin, koska se ei rajaa ketään pois. '
+              + 'Kaksi YouTube-videota vuodelta 2018 riitti: Wolf Totem nousi '
+              + 'huhtikuussa 2019 Billboardin hard rock -listan ykköseksi, ensimmäisenä '
+              + 'mongolialaisena esityksenä. Debyyttilevyn nimi The Gereg on sama sana '
+              + 'kuin kaanien matkalupa.',
+          selite: 'The Hu Hellfest-festivaalilla 2023. Yhtyeen soittimia ovat morin '
+            + 'khuur ja tovshuur, ja laulutapa on kurkkulaulua.',
+          lahde: 'Hoolen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Mongolian kuvataide on alkanut kahdesti alusta: ensin 1600-luvulla '
+          + 'pronssiveistoksista ja sitten 1900-luvun alussa maalauksista, joissa '
+          + 'buddhalaisen taiteen väripinnat kertovat arjen tapahtumia.',
+      nostot: [
+        {
+          otsikko: 'Munkki, jota sanotaan Aasian Michelangeloksi',
+          aika: '1635–1723',
+          tiedosto: 'Standing Bodhisattva Maitreya, attributed to Zanabazar, Mongolia, 1650-1700 AD, gilt bronze, pigments - Arthur M. Sackler Museum, Harvard University - DSC01150.jpg',
+          teksti: 'Zanabazar julistettiin khalkha-mongolien hengelliseksi johtajaksi '
+              + 'nelivuotiaana, mutta hänet muistetaan ennen kaikkea kuvanveistäjänä. '
+              + 'Tiibetin-matkoillaan hän ihastui nepalilaiseen tyyliin, ja palattuaan '
+              + '1651 ja 1656 hän herätti Mongoliassa henkiin metallikuvien valamisen: '
+              + '1670- ja 1680-luvulla hänen pajansa teki oppilaineen satoja teoksia. '
+              + 'Kuuluisimmat — Valkoinen Tara, Vajradhara ja kaksikymmentäyksi Taraa — '
+              + 'syntyivät 1680-luvulla. Hahmoilla on korkea otsa, kaartuvat kulmakarvat '
+              + 'ja pienet täyteläiset huulet. Veistoksista tuli myös diplomatiaa: niitä '
+              + 'lähetettiin lahjoiksi vastapuolelle ja Kiinan keisarille.',
+          selite: 'Seisova Maitreya-bodhisattva, kullattua pronssia, ajoitettu vuosien '
+            + '1650 ja 1700 väliin ja liitetty Zanabazariin.',
+          lahde: 'Daderot, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Yksi päivä, joka mahtui yhdelle kankaalle',
+          aika: '1869–1939',
+          tiedosto: 'Marzan Sharav 001.jpg',
+          teksti: 'Balduugiin Sharav sai lisänimen Marzan, veitikka. Häntä pidetään '
+              + 'usein modernin maalaustavan tuojana Mongoliaan, mutta hänen tunnetuin '
+              + 'työnsä Yksi päivä Mongoliassa on tehty vanhalla zurag-tavalla: temperaa '
+              + 'puuvillakankaalle, kooltaan 138 × 177 senttimetriä. Kankaalla ei ole '
+              + 'yhtä keskipistettä vaan kymmeniä yhtä aikaa tapahtuvia kohtauksia, ja '
+              + 'katse saa vaeltaa niiden välillä kuin kartalla. Sarjaan kuuluvat myös '
+              + 'syksy sekä Bogd Khanin kesä- ja talvipalatsit. Sharav maalasi lisäksi '
+              + 'Bogd Khanin ja hänen puolisonsa Dondogdulamin muotokuvat.',
+          selite: 'Yksi päivä Mongoliassa: kesä. Temperaa puuvillakankaalle, '
+            + '138 × 177 senttimetriä.',
+          lahde: 'Marzan Sharav, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Naamiot, jotka pelastuivat maan alle',
+          aika: '1800-luku →',
+          // Kuvaton (Opus 6.9.2026): Commonsissa ei ole yhtään >= 1200 px:n
+          // kuvaa mongolialaisesta tsam-naamiosta tai -tanssista; osumat
+          // ovat 700 px:n leveyksiä tai valtiovierailukuvia. Kuva tilataan
+          // kuvaputkelta.
+          teksti: 'Tsam on naamiotanssi, joka tuli Mongoliaan tiibetiläisestä '
+              + 'cham-perinteestä vasta 1800-luvun alussa mutta levisi nopeasti: siitä '
+              + 'tuli oma juhlansa, ja siihen sekoittui vanhempaa shamanistista tanssia. '
+              + 'Tanssijat ovat munkkeja, naamiot esittävät suojelijajumalia, ja rytmin '
+              + 'pitää symbaaleja lyövä muusikko. Länsimaiset matkailijat kutsuivat '
+              + 'tanssia 1900-luvun alussa piruntanssiksi pelkkien pukujen perusteella. '
+              + 'Tsam kiellettiin 1924, ja moni naamio säilyi vain siksi, että se '
+              + 'haudattiin maahan, piilotettiin tai päätyi museoon. Uskonnonvapauden '
+              + 'palattua 1990-luvulla tanssi alkoi uudelleen.',
+          selite: 'Tsam-naamiot esittävät buddhalaisia suojelijajumalia, ja tanssin '
+            + 'esittävät luostarin munkit.',
+        },
+        {
+          otsikko: 'Vanha soittaja, joka teki tyylistä kansallisen',
+          aika: '1905–1987',
+          // Kuvaton (Opus 6.9.2026): Yadamsürenin teokset ovat yhä
+          // tekijänoikeuden alaisia eikä Commonsissa ole niistä kuvia.
+          // Kuva tilataan kuvaputkelta.
+          teksti: 'Ürjingiin Yadamsüren syntyi käsityöläisperheeseen: isoisä veisti '
+              + 'puuta ja isä maalasi jurttia. Kahdeksanvuotiaasta hän opiskeli setänsä '
+              + 'luona luostarissa puupiirrostekniikkaa, muutti 1930 Ulan Batoriin '
+              + 'kirjapainon latojaksi ja päätyi sieltä Moskovan Surikov-instituuttiin. '
+              + 'Öljyvärikauden jälkeen hän palasi 1950-luvulla litteisiin, kirkkaisiin '
+              + 'väripintoihin — samoihin, joita buddhalainen taide oli käyttänyt — ja '
+              + 'otti aiheikseen paimenten arjen. Tästä uustyylistä tuli mongol zurag. '
+              + 'Vuoden 1958 työ Vanha soittaja esittää morin khuuria pitelevää vanhusta '
+              + 'ja on yhä maan toistetuimpia maalauksia.',
+          selite: 'Vanha soittaja (1958) esittää morin khuuria pitelevää vanhaa miestä; '
+            + 'teos toi mongol zurag -tyylin koko maan tietoisuuteen.',
+        },
+      ],
+    },
+  ],
 };

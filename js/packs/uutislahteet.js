@@ -906,4 +906,32 @@ export const UUTISLAHTEET = {
     kieli: 'fr',
     syote: 'https://malijet.com/rss',
   },
+  /*
+   * Caak.mn on Mongolian luetuimpia sivustoja: mongolinkielinen
+   * yleisportaali, jossa on sekä uutisia että arjen ja hyvinvoinnin
+   * juttuja — sama sekamuoto kuin Tansanian Global Publishersissa.
+   * Testattu 6.9.2026: syötteessä viisikymmentä juttua, ja
+   * artikkelisivun [itemprop="articleBody"]-lohkosta jäsentyy viidestä
+   * kuuteen yli 60 merkin kappaletta sekä og:image (kolme artikkelia
+   * kokeiltiin). Osoitteessa on www, koska caak.mn vastaa 301:llä eikä
+   * worker seuraa uudelleenohjauksia.
+   *
+   * Testattu ja hylätty: Eguur.mn (eguur.mn/feed/) on oikea
+   * uutissivusto ja läpäisee molemmat testit, mutta sen syöte on
+   * 14 megatavua ja tuhansia juttuja — liikaa ladattavaksi joka kerta,
+   * kun lehti avataan, eivätkä kategoriasyötteet vastanneet lainkaan.
+   * iKon.mn (ikon.mn/rss) ja Sonin.mn (sonin.mn/rss) antavat kumpikin
+   * kolmekymmentä juttua, mutta artikkelisivuilla ei ole
+   * <article>-elementtiä eikä [itemprop="articleBody"]-merkintää.
+   * News.mn katkaisee yhteyden (connection reset), Montsame, Gogo.mn,
+   * Unuudur, Zindaa, Shuud, Ulsturch, Eagle, Time.mn, Peak, Isee,
+   * Itoim, Vip76, Bloomberg TV Mongolia, UB.life, Dnn, Medee,
+   * Ontslokh, Shuurhai ja Tsag.mn eivät tarjonneet toimivaa
+   * RSS-osoitetta lainkaan.
+   */
+  MNG: {
+    nimi: 'Caak.mn',
+    kieli: 'mn',
+    syote: 'https://www.caak.mn/rss',
+  },
 };

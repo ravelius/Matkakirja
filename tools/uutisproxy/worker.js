@@ -143,6 +143,10 @@ const SALLITUT = [
   // samalla isäntänimellä, ilman www:tä. Syöteosoite on /rss, koska
   // /feed vastaa 301:llä eikä worker seuraa uudelleenohjauksia.
   'https://malijet.com/',
+  // Mongolian uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä. www on pakollinen — caak.mn ilman sitä
+  // vastaa 301:llä eikä worker seuraa uudelleenohjauksia.
+  'https://www.caak.mn/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

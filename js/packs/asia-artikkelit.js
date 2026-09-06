@@ -3586,4 +3586,50 @@ export const ASIA_ARTIKKELIT = {
       + 'sahramia. Ateria katetaan lattialle levitetylle liinalle ja '
       + 'päättyy teehen.',
   },
+  Mongolia: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // MNG) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
+    intro: 'Mongolia on maailman harvimmin asuttu itsenäinen valtio: '
+      + '1,56 miljoonan neliökilometrin alueella asuu noin 3,5 '
+      + 'miljoonaa ihmistä, ja heistä lähes puolet pääkaupunki Ulan '
+      + 'Batorissa. Maa on kokonaan sisämaassa Venäjän ja Kiinan '
+      + 'välissä ja Kazakstanin jälkeen maailman toiseksi suurin '
+      + 'sisämaavaltio. Maisema vaihtuu pohjoisen ja lännen vuorista '
+      + 'aroksi ja etelässä Gobin karuksi laitumeksi. Aluetta '
+      + 'hallitsivat vuoron perään hunnit, turkkilaiskaanikunnat ja '
+      + 'uiguurit, kunnes Tšingis-kaani perusti 1206 mongolivaltakunnan '
+      + '— historian suurimman yhtenäisen maavaltakunnan — ja hänen '
+      + 'pojanpoikansa Kublai valloitti Kiinan. 1500-luvulla maahan '
+      + 'levisi tiibetinbuddhalaisuus, ja 1900-luvun alussa lähes '
+      + 'kolmasosa aikuisista miehistä oli munkkeja. Qing-dynastian '
+      + 'romahdettua 1911 Mongolia julistautui itsenäiseksi, ja 1990 '
+      + 'se siirtyi rauhanomaisesti monipuoluejärjestelmään. Noin '
+      + 'kolmasosa väestöstä elää yhä paimentolaisina tai '
+      + 'puolipaimentolaisina, ja hevonen on arkea eikä nostalgiaa.',
+    // teksti on pakollinen: tests/vanha-maailma.test.mjs vaatii
+    // jokaiselta ASIA_ARTIKKELIT-riviltä kolme kappaletta ja
+    // 600–1 100 merkkiä. Sama aineisto kuin introssa, tiiviimpänä.
+    teksti: 'Mongolia on sisämaavaltio Venäjän ja Kiinan välissä. '
+      + 'Pinta-alaa on 1,56 miljoonaa neliökilometriä ja asukkaita '
+      + '3,5 miljoonaa, joten se on maailman harvimmin asuttu '
+      + 'itsenäinen valtio. Pohjoisessa ja lännessä on vuoria, '
+      + 'keskellä aroa ja etelässä Gobi.'
+      + '\n\n'
+      + 'Aluetta hallitsivat vuoron perään hunnit, xianbeit, rouranit, '
+      + 'turkkilaiskaanikunnat ja uiguurit. Tšingis-kaani perusti '
+      + 'mongolivaltakunnan 1206, ja siitä tuli historian suurin '
+      + 'yhtenäinen maavaltakunta; hänen pojanpoikansa Kublai valloitti '
+      + 'Kiinan ja perusti Yuan-dynastian. Tiibetinbuddhalaisuus levisi '
+      + 'maahan 1500-luvulla, ja 1600-luvulla Qing-dynastia liitti '
+      + 'alueen itseensä.'
+      + '\n\n'
+      + 'Qingin romahdettua Mongolia julisti itsenäisyytensä 1911 ja '
+      + 'saavutti sen tosiasiallisesti 1921. Kansantasavalta '
+      + 'perustettiin 1924, ja vuoden 1990 rauhanomainen vallankumous '
+      + 'johti monipuoluejärjestelmään ja vuoden 1992 perustuslakiin. '
+      + 'Noin kolmasosa väestöstä elää yhä paimentolaisina tai '
+      + 'puolipaimentolaisina, ja lähes puolet asuu pääkaupungissa '
+      + 'Ulan Batorissa.',
+  },
 };

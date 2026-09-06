@@ -174,6 +174,19 @@
 > varalähteiksi, perustelut js/packs/uutislahteet.js:n MLI-kommentissa.
 > Julkaisu Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Mongolia):** sallittuihin lisättiin
+> www.caak.mn (maalehti MNG, testattu 6.9.2026: syötteessä
+> viisikymmentä juttua, ja kolmelta artikkelisivulta jäsentyi
+> `[itemprop="articleBody"]`-lohkosta viidestä kuuteen yli 60 merkin
+> kappaletta sekä `og:image`). Osoitteessa on oltava `www`, koska
+> caak.mn vastaa 301:llä eikä worker seuraa uudelleenohjauksia.
+> Caak.mn on mongolinkielinen yleisportaali, jossa on sekä uutisia
+> että arjen juttuja; varsinaiset uutissivustot kaatuivat testeihin
+> (Eguur.mn läpäisi molemmat mutta sen syöte on 14 megatavua, iKon.mn
+> ja Sonin.mn eivät tarjoa `<article>`-elementtiä, News.mn katkaisee
+> yhteyden). Perustelut ovat js/packs/uutislahteet.js:n
+> MNG-kommentissa. Julkaisu Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,
