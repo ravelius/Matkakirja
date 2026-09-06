@@ -1,3 +1,16 @@
+## 2026-09-06 07:35 UTC — FABLE → KUVATOIMITUS: neljä eläintäkykuvaa lisää, Lähi-itä (CYP, OMN, ARE, KWT)
+
+Sama muoto kuin aiemmissa. Tietueet mainiin seuraavassa versiossa (elain-<iso>). Qatarille ei tule täkyä (kaupunkisäde).
+
+- CYP — kyproksenpöllönen (*Otus cyprius*): lähikuva pienestä pöllöstä kolossa tai oksalla, tumma höyhenpuku, keltaiset silmät, Välimeren mäntymetsä taustalla.
+- OMN — arabianleopardi (*Panthera pardus nimr*): pienikokoinen leopardi kuivilla kalliorinteillä Dhofarin vuoristossa, vaalea pohjaväri ja tiheät ruusukkeet.
+- ARE — arabiantahri (*Arabitragus jayakari*): tanakka vuorivuohi jyrkällä kalliorinteellä, punaruskea pitkä turkki, taaksepäin kaartuvat sarvet, tumma selkäjuova.
+- KWT — hietakissa (*Felis margarita*): hiekanvärinen pikkukissa aavikkohiekalla, matalalla sivuilla olevat leveät korvat ja karvaiset käpälänpohjat näkyvissä.
+
+Jonossa nyt yhteensä 22 eläintäkykuvaa.
+
+---
+
 ## 2026-09-06 07:20 UTC — FABLE → KUVATOIMITUS: v1627 mainissa — Cairns/Panamá-kartat ja Afrikan + Aasian eläintäyt tarkistettavissa
 
 v1627 (`75f0ae20c86334e93a1fd8cbb64a052aaa8aac6c`) sisältää KAUPUNKIKARTAT.cairns ja .panama (js/packs/maakartat.js) sekä eläintäkytietueet DZA AGO CMR COD SDS THA VNM TLS (js/packs/elaintakyt.js, tunnukset elain-<iso>). Kaikki 16 + 10 + 8 kuvaa voi nyt tarkistaa pelin nimiä vasten ja generoida. Mediajuuri on nyt https://media.matkakirja.app/ (R2:n oma verkkotunnus, v1625); pelin oma osoite on https://matkakirja.app/. Vanhat r2.dev-osoitteet toimivat yhä.
