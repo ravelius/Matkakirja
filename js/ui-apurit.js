@@ -1880,9 +1880,16 @@ export function asetaLaatuAina(paalla, win = globalThis) {
  * Oletus tulee KUTSUJALTA (js/pallo.js LAATTAKERROS_OLETUS), koska tämä
  * moduuli on yhden tiedoston nipussa eikä js/pallolaatat.js ole
  * (tools/build-standalone.mjs: pallo ja sen apurit ladataan laiskasti).
- * Muistiin tätä ei talleteta — kyseessä on kehittäjän kytkin, ei
- * pelaajan asetus.
+ *
+ * VALINTA MUISTIIN 6.9.2026 (vika v1649). Omistaja katsoo peliä
+ * iOS-KUORESSA (ios/), jossa ei ole osoiteriviä: ilman muistipaikkaa
+ * kerroksia ei voi sammuttaa sovelluksessa lainkaan, eikä vikaa siis
+ * voi rajata siellä missä se näkyy. Kytkin on ratasvalikossa
+ * (index.html, js/main.js) ja tallettaa valinnan laitteelle; URL voittaa
+ * muistin kuten muissakin kehittäjän vivuissa.
  */
+export const LAATTAKERROS_AVAIN = 'matkakirja-laattakerros';
+
 export function laattakerrosOsoitteesta(win = globalThis) {
   try {
     const arvo = new URLSearchParams(win.location?.search ?? '').get('laattakerros');
@@ -1893,8 +1900,80 @@ export function laattakerrosOsoitteesta(win = globalThis) {
   }
 }
 
-/** Onko pallon laattakerros päällä? (URL › oletus) */
+/** Muistettu valinta: true, false tai null (ei valittu). */
+export function laattakerrosMuistissa(win = globalThis) {
+  try {
+    const arvo = win.localStorage?.getItem(LAATTAKERROS_AVAIN);
+    if (arvo === '0') return false;
+    if (arvo === '1') return true;
+  } catch {
+    /* yksityinen selaus */
+  }
+  return null;
+}
+
+/** Onko pallon laattakerros päällä? (URL › muisti › oletus) */
 export function laattakerrosPaalla(win = globalThis, oletus = true) {
   const osoitteesta = laattakerrosOsoitteesta(win);
-  return osoitteesta === null ? Boolean(oletus) : osoitteesta;
+  if (osoitteesta !== null) return osoitteesta;
+  const muistettu = laattakerrosMuistissa(win);
+  if (muistettu !== null) return muistettu;
+  return Boolean(oletus);
+}
+
+export function asetaLaattakerros(paalla, win = globalThis) {
+  try {
+    win.localStorage?.setItem(LAATTAKERROS_AVAIN, paalla ? '1' : '0');
+  } catch {
+    /* yksityinen tila */
+  }
+}
+
+/*
+ * PALLON VEKTORIVIIVAT — sama kehittäjän vipu (vika v1649). Lukija asuu
+ * js/pallovektorit.js:ssä (pallovektoritPaalla), joka on laiskasti
+ * ladattava moduuli; ratasvalikko on tässä nipussa eikä voi tuoda sitä,
+ * joten AVAIN on kaksoiskappale. tests/pallovektorit.test.mjs vartioi,
+ * että avaimet ovat samat.
+ */
+export const PALLOVEKTORIT_AVAIN = 'matkakirja-pallovektorit';
+
+export function pallovektoritOsoitteesta(win = globalThis) {
+  try {
+    const arvo = new URLSearchParams(win.location?.search ?? '').get('vektorit');
+    if (arvo === '0') return false;
+    if (arvo === '1') return true;
+  } catch {
+    /* ei osoitetta */
+  }
+  return null;
+}
+
+/** Muistettu valinta: true, false tai null (ei valittu). */
+export function pallovektoritMuistissa(win = globalThis) {
+  try {
+    const arvo = win.localStorage?.getItem(PALLOVEKTORIT_AVAIN);
+    if (arvo === '0') return false;
+    if (arvo === '1') return true;
+  } catch {
+    /* yksityinen selaus */
+  }
+  return null;
+}
+
+/** Onko vektorikerros päällä? (URL › muisti › oletus) — sama järjestys kuin lukijalla. */
+export function pallovektoritValittu(win = globalThis, oletus = true) {
+  const osoitteesta = pallovektoritOsoitteesta(win);
+  if (osoitteesta !== null) return osoitteesta;
+  const muistettu = pallovektoritMuistissa(win);
+  if (muistettu !== null) return muistettu;
+  return Boolean(oletus);
+}
+
+export function asetaPallovektorit(paalla, win = globalThis) {
+  try {
+    win.localStorage?.setItem(PALLOVEKTORIT_AVAIN, paalla ? '1' : '0');
+  } catch {
+    /* yksityinen tila */
+  }
 }
