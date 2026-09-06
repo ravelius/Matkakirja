@@ -1263,6 +1263,59 @@ export const ELAINTAKYT = {
     lon: -84.6,
     lat: 11.7,
   },
+  /*
+   * ── ERÄ M3, AASIA 6.9.2026 ─────────────────────────────────────
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M3 (HKG, IDN, IND, LKA, MMR) toi kolme uutta eläintäkyä.
+   * Intialla oli täky jo ennestään (tiikerinpentu), eikä siihen ole
+   * koskettu.
+   *
+   * HONGKONG JÄI ILMAN TÄKYÄ, JA SYY ON MITATTU. Merkin on oltava
+   * vähintään 35 lautayksikön päässä jokaisesta kaupunkimerkistä
+   * (tests/elaintakyt.test.mjs VAHIN_ETAISYYS_KAUPUNKIIN), mutta koko
+   * Hongkongin alue on 11–20 yksikön päässä omasta laatastaan. Yksikään
+   * piste maan rajojen sisällä ei siis kelpaa, joten täky jää siihen
+   * asti, kunnes Hongkongille tehdään oma kohdekartta. Ehdokas oli
+   * valmiina: Romerin puupuu (Liuixalus romeri), Hongkongin pienin
+   * sammakkoeläin, jonka Chek Lap Kokin populaatio siirrettiin talteen
+   * 1992 ennen lentoaseman rakentamista.
+   *
+   * KUVA TULEE KUVAPUTKELTA. Erä on kuvaton, joten `kuva`-kenttään on
+   * kirjoitettu pelkkä ämpäritunnus (js/media.js assetOsoite:
+   * `kohtaamiset/elaimet/<tunnus>.jpg`). Kun kuvaputki toimittaa
+   * kuvan, tiedostoa ei tarvitse lisätä repoon eikä tähän tauluun
+   * kirjoittaa riviäkään lisää.
+   */
+  IDN: {
+    elain: 'babirusa',
+    otsikko: 'Torahampaat oman kuononsa läpi',
+    teksti: 'Babirusat eli hirvisiat ovat sikojen heimoon kuuluva suku, jota tavataan vain Sulawesin, Togianin, Sulan ja Burun saarilla Indonesiassa. Uroksen ylemmät kulmahampaat kasvavat pystysuoraan leukaluun haarakkeesta, puhkaisevat kuonon ihon ja kaartuvat taaksepäin kohti otsaa — alahampaatkin kasvavat ylöspäin. Naaraalla kulmahampaat ovat kituliaat tai puuttuvat kokonaan. Vielä 2002 asti kaikkia pidettiin yhtenä lajina, mutta suku jaettiin silloin useaksi: burunbabirusa elää Burulla ja Sulalla, tunnetuin laji on pohjoissulawesinbabirusa. Kaikki lajit ovat kansainvälisen luonnonsuojeluliiton mukaan uhanalaisia.',
+    lahde: 'en-Wikipedia "Babirusa", johdanto ja osio "Description". Tarkistettu 6.9.2026.',
+    kuva: 'elain-idn',
+    lon: 120.2,
+    lat: -1.5,
+  },
+  LKA: {
+    elain: 'sri lankan leopardi',
+    otsikko: 'Saaren ainoa huippupeto',
+    teksti: 'Sri Lankan leopardi on saarella elävä leopardin alalaji, jonka kuvaili 1956 srilankalainen eläintieteilijä Paulus Edward Pieris Deraniyagala. Turkki on kellanruskea tai ruosteenkeltainen, ja täplät ovat tiheässä ruusukkeina. Koska leopardi on saaren huippupeto eikä sillä ole kilpailijaa, alalaji on kehittynyt kookkaaksi: yksitoista mitattua urosta painoi keskimäärin 56 kiloa ja suurin 77. Lajia tavataan kaikissa saaren elinympäristöissä aavikkovyöhykkeeltä sademetsään, ja keskiylängöllä se on kirjattu myös teeviljelmiltä, männiköistä ja kotipuutarhoista. Vuodesta 2020 se on ollut vaarantunut: aikuisia yksilöitä arvioidaan olevan alle 800.',
+    lahde: 'en-Wikipedia "Sri Lankan leopard", johdanto sekä osiot "Characteristics" '
+      + 'ja "Distribution and habitat". Tarkistettu 6.9.2026.',
+    kuva: 'elain-lka',
+    lon: 81.4,
+    lat: 6.4,
+  },
+  MMR: {
+    elain: 'surkkunenäapina',
+    otsikko: 'Apina, joka aivastaa sateessa',
+    teksti: 'Myanmarinsurkkunenäapina löydettiin vuonna 2010 Kachinin osavaltion koillisosasta Gaoligongin vuorilta, ja se kuvailtiin uudeksi lajiksi 2011 turkkinsa, partansa ja häntänsä perusteella. Lisujen kielellä sen nimi on mey nwoah ja law waw -kansan kielellä myuk na tok te; molemmat tarkoittavat apinaa, jonka kasvot ovat ylöspäin. Nykerönenän ympärillä on niin vähän lihaa, että sateen kerrotaan saavan eläimen aivastelemaan — seudun ihmisten mukaan se istuu sateella pää painuksissa kasvot polvien välissä. Löytöretkikuntaa johtivat sveitsiläinen kädellistutkija Thomas Geissmann ja Ngwe Lwin, ja laji on äärimmäisen uhanalainen.',
+    lahde: 'en-Wikipedia "Myanmar snub-nosed monkey", johdanto ja osio '
+      + '"Discovery and taxonomy". Tarkistettu 6.9.2026.',
+    kuva: 'elain-mmr',
+    lon: 97.8,
+    lat: 26.3,
+  },
 };
 
 /** Maatunnukset siinä järjestyksessä kuin ne on kirjoitettu. */

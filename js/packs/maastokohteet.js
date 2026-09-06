@@ -94,6 +94,9 @@ import { MAASTOKOHTEET_GBR } from './maastokohteet-gbr.js';
 import { MAASTOKOHTEET_GHA } from './maastokohteet-gha.js';
 import { MAASTOKOHTEET_GRL } from './maastokohteet-grl.js';
 import { MAASTOKOHTEET_GTM } from './maastokohteet-gtm.js';
+import { MAASTOKOHTEET_HKG } from './maastokohteet-hkg.js';
+import { MAASTOKOHTEET_IDN } from './maastokohteet-idn.js';
+import { MAASTOKOHTEET_IND } from './maastokohteet-ind.js';
 import { MAASTOKOHTEET_IRL } from './maastokohteet-irl.js';
 import { MAASTOKOHTEET_IRN } from './maastokohteet-irn.js';
 import { MAASTOKOHTEET_IRQ } from './maastokohteet-irq.js';
@@ -107,11 +110,13 @@ import { MAASTOKOHTEET_KOR } from './maastokohteet-kor.js';
 import { MAASTOKOHTEET_KWT } from './maastokohteet-kwt.js';
 import { MAASTOKOHTEET_LBR } from './maastokohteet-lbr.js';
 import { MAASTOKOHTEET_LBY } from './maastokohteet-lby.js';
+import { MAASTOKOHTEET_LKA } from './maastokohteet-lka.js';
 import { MAASTOKOHTEET_LTU } from './maastokohteet-ltu.js';
 import { MAASTOKOHTEET_LVA } from './maastokohteet-lva.js';
 import { MAASTOKOHTEET_MAR } from './maastokohteet-mar.js';
 import { MAASTOKOHTEET_MDG } from './maastokohteet-mdg.js';
 import { MAASTOKOHTEET_MLI } from './maastokohteet-mli.js';
+import { MAASTOKOHTEET_MMR } from './maastokohteet-mmr.js';
 import { MAASTOKOHTEET_MNG } from './maastokohteet-mng.js';
 import { MAASTOKOHTEET_MOZ } from './maastokohteet-moz.js';
 import { MAASTOKOHTEET_NAM } from './maastokohteet-nam.js';
@@ -184,6 +189,9 @@ export const MAASTOKOHTEET = {
   GHA: MAASTOKOHTEET_GHA,
   GRL: MAASTOKOHTEET_GRL,
   GTM: MAASTOKOHTEET_GTM,
+  HKG: MAASTOKOHTEET_HKG,
+  IDN: MAASTOKOHTEET_IDN,
+  IND: MAASTOKOHTEET_IND,
   IRL: MAASTOKOHTEET_IRL,
   IRN: MAASTOKOHTEET_IRN,
   IRQ: MAASTOKOHTEET_IRQ,
@@ -197,11 +205,13 @@ export const MAASTOKOHTEET = {
   KWT: MAASTOKOHTEET_KWT,
   LBR: MAASTOKOHTEET_LBR,
   LBY: MAASTOKOHTEET_LBY,
+  LKA: MAASTOKOHTEET_LKA,
   LTU: MAASTOKOHTEET_LTU,
   LVA: MAASTOKOHTEET_LVA,
   MAR: MAASTOKOHTEET_MAR,
   MDG: MAASTOKOHTEET_MDG,
   MLI: MAASTOKOHTEET_MLI,
+  MMR: MAASTOKOHTEET_MMR,
   MNG: MAASTOKOHTEET_MNG,
   MOZ: MAASTOKOHTEET_MOZ,
   NAM: MAASTOKOHTEET_NAM,

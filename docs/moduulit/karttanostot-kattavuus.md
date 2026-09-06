@@ -603,3 +603,83 @@ ole muutettu kummassakaan tapauksessa. Savuke menee läpi 8/8.
 `elain-gtm`, `elain-nic`), joka osoittaa ämpäriin: kun kuvaputki tekee
 kuvan, se ilmestyy kortille ilman koodimuutosta, ja siihen asti kortti on
 kuvaton.
+## Erä M3 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Maailman erien ensimmäinen Aasian erä: **HKG, IDN, IND, LKA, MMR** —
+viisi maata, joilla ei ollut yhtäkään karttamerkkiä. Erä on kuvaton
+kuten K2-erät 1–4, ja jokainen väite on en-Wikipedian raakatekstin
+katteessa lähderivillä, joka nimeää artikkelin ja osan sekä
+tarkistuspäivän 6.9.2026. Taulukon luvut ajetaan
+`node tools/laske-karttanostot.mjs --md` -työkalulla erikseen.
+
+Kohteet ja maastokohteet asuvat maan omassa
+`js/packs/maastokohteet-<iso>.js`-tiedostossa (viisi uutta tiedostoa,
+rekisteröity `js/packs/maastokohteet.js`-hakemistoon, `sw.js`:n
+SHELL-listaan ja `tools/build-standalone.mjs`:n MODULES-listaan).
+Eläintäyt ovat `js/packs/elaintakyt.js`:n lopussa ja skandaalit
+`js/packs/skandaalit.js`:n lopussa; kummankin testin lukumäärä
+päivitettiin (eläintäkyjä 53 → 56, skandaaleja 83 → 93 ja maita
+29 → 34).
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Hongkong (HKG) | Kowloonin muurikaupunki, Tai O, Tung Chungin linnake, Tai Fu Tai | Tai Mo Shan, Lantau | — | Godberin pako, Carrian |
+| Indonesia (IDN) | Borobudur, Prambanan, Trowulan, Sangiran, Sawahlunto, Tana Toraja, Bandasaaret, Besakih | Krakatau, Tobajärvi, Komodo | babirusa | Max Havelaar, Bre-X 1997 |
+| Intia (IND) | Taj Mahal, Ajanta, Ellora, Khajuraho, Hampi, Konarkin aurinkotemppeli, Jantar Mantar, Darjeelingin vuoristorata | Kangchenjunga, Chilikajärvi, Bengalinlahti | (oli jo: tiikerinpentu) | Natwarlal, Telgin leimat |
+| Sri Lanka (LKA) | Sigiriya, Anuradhapura, Polonnaruwa, Yapahuwa, Kandyn hammastemppeli, Gallen linnoitus, Nuwara Eliya, Yhdeksän kaaren silta | Sri Pada, Mahaweli, Palkinlahti | sri lankan leopardi | Matalen kapina, Golden Key |
+| Myanmar (MMR) | Bagan, Mrauk U, Beikthano, Kyaiktiyo, Pindayan luolat, Pyin Oo Lwin, Mawlamyine, Shwebo | Hkakabo Razi, Inlejärvi, Chindwin | surkkunenäapina | Dhammazedin kello, Kultainen kirje |
+
+Neljä maata viidestä on tavoitteessa (`node tools/laske-karttanostot.mjs`
+sanoo niistä "täysi"). Hongkong ei ole, ja syy on mitattu.
+
+**Miksi Hongkong jäi vajaaksi.** Koko alue mahtuu maailmankartalla noin
+11 × 9 lautayksikön ruutuun, ja yhden nostomerkin nimiölaatikko on
+leveämpi kuin koko maa. Kahdeksan kohdetta ja kolme maastokohdetta
+kirjoitettiin ensin; `tools/tarkista-nimiolimitys.mjs` löysi niistä
+seitsemän nimiö–nimiö-limitystä, eikä nimien lyhentäminen auttanut,
+koska laatikolla on vähimmäisleveys. Kahdeksan merkkiä on maan yläraja:
+kahdeksalla limityksiä on nolla ja yhdeksännellä yksi. Kahdeksan
+jaettiin neljään kohteeseen, kahteen maastokohteeseen ja kahteen
+skandaaliin. Lisäksi Hongkongin kaupunkilehden kohdekartta
+(`js/packs/maakartat.js` hongkong, lat 22,2665–22,3015 ja lon
+114,1385–114,1805) kattaa koko Victoria-sataman, ja sen ruutuun osuva
+nosto kuuluu kohdekartan pisteelle eikä pääkartalle
+(`tests/nostot-kartalla.test.mjs`). Hongkongin kohdekartan työlistalle
+jäävät siis valmiiksi kirjoitettuina Peak Tram (1888), Hongkongin
+observatorio (1883), Tsim Sha Tsuin kellotorni, Victorian satama ja
+Lei Cheng Ukin Han-hauta. Eläintäkyä ei voitu tehdä lainkaan: merkin on
+oltava vähintään 35 lautayksikön päässä jokaisesta kaupunkimerkistä
+(`tests/elaintakyt.test.mjs`), ja koko Hongkong on 11–20 yksikön päässä
+omasta laatastaan. Ehdokas odottaa valmiina: Romerin puupuu, jonka
+Chek Lap Kokin populaatio siirrettiin talteen 1992 ennen lentoaseman
+rakentamista.
+
+**Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
+mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin.
+Lähin uusi merkki on Hongkongin Tai Fu Tai 10,9 lautayksikön päässä
+Hongkong-laatasta ja toiseksi lähin Myanmarin Pyin Oo Lwin 11,6
+yksikön päässä Mandalaysta; raja `KAUPUNGIN_KOHDALLA_SADE` on 7 ja
+kaupunkikaton säde 8. Pois jätettiin juuri tästä säännöstä Elephantan
+luolat (Mumbain kohdalla), Shwedagon (Yangonin kohdalla), Inwa,
+Amarapura ja Mingun (Mandalayn kohdalla) sekä Matale ja Kurunegala
+(Colombo-laatta on saaren keskellä). Kahden skandaalin merkki
+siirrettiin kohdekartan ruudun ulkopuolelle samalle rannalle —
+Hongkongin Carrian ja Colombon Golden Key — ja syy on kirjattu
+kummankin kortin viereen `js/packs/skandaalit.js`:ssä.
+
+**Nimisääntö N3 karsi kaksi maastokohdetta.** Kartalla on jo
+`js/packs/maailmankartta-nimet.js`:ssä jokinimiöt Ganges ja Iravadi,
+joten Intian joeksi valittiin Bengalinlahti ja Myanmarin joeksi
+Chindwin (Iravadin suurin sivujoki). Samasta syystä pois jäivät myös
+Jamuna, Brahmaputra, Godavari, Krishna, Narmada, Indus, Sutlej,
+Himalaja, Länsi-Ghatit ja Salween.
+
+**Herkkien kohteiden linjaukset pidettiin**
+(`docs/aasia-tyoaineisto/spec-asia.md`, SITOVA). Hongkongista ei
+kirjoitettu 2010–2020-lukujen protesteja eikä turvallisuuslakia:
+molemmat skandaalit ovat 1970–80-luvun talous- ja virkarikoksia.
+Myanmarista ei kirjoitettu juntta- eikä konfliktisisältöä, minkä takia
+kaksi muuten ilmeistä ehdokasta jäi pois: Goteikin viadukti (artikkeli
+kertoo sen tuhoutuneen 2025 sisällissodassa) ja Mogokin
+rubiinikaivokset (artikkelin nykytilaosuus on sotaa).

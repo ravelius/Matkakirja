@@ -6564,4 +6564,545 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /*
+   * ══ ERÄ M3, AASIA 6.9.2026 ══════════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M3 (HKG, IDN, IND, LKA, MMR) tuo kaksi skandaalia kuhunkin
+   * viiteen maahan — kymmenen uutta, ja ensimmäiset Euroopan
+   * ulkopuolella Aasiassa. Kaikki ovat kuvattomia kuten erän muutkin
+   * nostot, ja jokaisen lähderivi nimeää en-Wikipedian artikkelin ja
+   * osan sekä tarkistuspäivän.
+   *
+   * PAIKAT ON MITATTU. Yksikään uusi merkki ei ole pelikaupungin
+   * kohdalla (KAUPUNGIN_KOHDALLA_SADE 7 lautayksikköä,
+   * js/fokuskohteet.js): lähin on Dambulla 12,9 yksikön päässä
+   * Colombo-laatasta ja kaukaisin Bre-X 195,9 yksikön päässä
+   * Borneosta.
+   *
+   * HERKKIEN KOHTEIDEN LINJAUS ON SITOVA (docs/aasia-tyoaineisto/
+   * spec-asia.md): Hongkongista ei kirjoiteta 2010–2020-lukujen
+   * protesteja eikä turvallisuuslakia, Myanmarista ei juntta- eikä
+   * konfliktisisältöä, ja siirtomaahistoria kerrotaan neutraalina.
+   * Molemmat Hongkongin skandaalit ovat 1970–80-luvun talous- ja
+   * virkarikoksia, ja molemmat Myanmarin aiheet ovat 1400–1700-luvun
+   * hovihistoriaa.
+   */
+  HKG: [
+    /*
+     * Kai Takin lentoasema, Kowloon (pakomatkan lähtöpaikka).
+     * Lähde: en.wikipedia.org: Peter Godber
+     */
+    {
+      id: 'godberin-pako',
+      otsikko: 'Godberin pako — ylikomisario ja lentokenttäpassi',
+      nimio: 'Godber',
+      vuosi: '1973–1975',
+      paikka: 'Kai Takin lentoasema, Kowloon',
+      lat: 22.33, lon: 114.195,
+      kortti: 'Poliisin oma korruption vastainen osasto käski ylikomisariota '
+        + 'selittämään, mistä neljä ja puoli miljoonaa oli tullut. Seuraavana '
+        + 'päivänä mies käveli virkakortillaan passintarkastuksen ohi ja nousi '
+        + 'Lontoon-koneeseen. Pako suututti kaupungin niin, että sen jäljiltä '
+        + 'perustettiin kokonaan uusi virasto.',
+      teksti: 'Peter Fitzroy Godber oli Hongkongin kuninkaallisen poliisin '
+        + 'ylikomisario ja Kowloonin apulaispiiripäällikkö. Häntä oli pidetty '
+        + 'rohkeana ja tehokkaana esimiehenä, ja hänet oli palkittu mitalein.'
+        + '\n\nKun eläkkeelle jääminen lähestyi 1973, poliisin korruption '
+        + 'vastainen osasto huomasi hänen tileillään Kanadassa, Australiassa, '
+        + 'Singaporessa, Yhdysvalloissa, Britanniassa ja Hongkongissa lähes 4,4 '
+        + 'miljoonaa Hongkongin dollaria — noin 865 000 Yhdysvaltain dollaria '
+        + 'silloisessa rahassa. Häntä pyydettiin selittämään varallisuutensa. '
+        + 'Kesäkuun 7. päivänä hän lähetti vaimonsa pois siirtokunnasta ja '
+        + 'seuraavana päivänä käytti siviili-ilmailuviraston kulkulupaansa, '
+        + 'ohitti maahanmuutto- ja passitarkastukset ja käveli Kai Takissa '
+        + 'suoraan Lontoon-koneeseen.'
+        + '\n\nPako raivostutti kaupungin. Se osoitti, ettei poliisin oma '
+        + 'sisäinen tutkinta ollut uskottava, ja mursi hallintoeliitin käsityksen '
+        + 'siitä, että eurooppalaiset virkamiehet olisivat lahjomattomia. Godber '
+        + 'pidätettiin Englannissa 29. huhtikuuta 1974 ja luovutettiin '
+        + 'Hongkongiin 7. tammikuuta 1975.'
+        + '\n\nOikeudenkäynti alkoi 17. helmikuuta ja kesti kuusi ja puoli '
+        + 'päivää. Godber tuomittiin lahjonnasta neljäksi vuodeksi vankeuteen ja '
+        + 'menettämään 25 000 dollaria; hänen mitalinsa peruutettiin 3. lokakuuta '
+        + '1975. Tapaus ja muut 1970-luvun korruptiojutut johtivat siihen, että '
+        + 'Hongkongiin perustettiin 1974 poliisista riippumaton '
+        + 'korruptiontorjuntavirasto ICAC.',
+      lahde: 'en-Wikipedia "Peter Godber", johdanto ja osio "Biography". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Godber pääsi ulos siirtokunnasta kesäkuussa 1973?',
+        vaihtoehdot: [
+          'Hän matkusti kalastusveneellä Macaoon',
+          'Hän ohitti passintarkastuksen siviili-ilmailuviraston kulkuluvallaan',
+          'Hän lensi väärällä passilla Singaporeen',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Gammon House, Central (yhtiön kuuluisin kauppa).
+     * Lähde: en.wikipedia.org: Carrian Group
+     *
+     * MERKKI ON SATAMAN ITÄPÄÄSSÄ EIKÄ CENTRALISSA, ja syy on
+     * karttatekninen. Hongkongin kaupunkilehden kohdekartta
+     * (js/packs/maakartat.js hongkong) rajautuu ruutuun lat
+     * 22,2665–22,3015 ja lon 114,1385–114,1805, ja Gammon House
+     * (Bank of America Tower) osuu keskelle sitä. Kohdekartan
+     * rajauksessa oleva skandaali kuuluu kohdekartan pisteelle eikä
+     * pääkartalle (tools/tarkista-nostopaikat.mjs, sääntö
+     * "nosto ilman kohdekartan pistettä"), eikä tässä erässä lisätä
+     * kohdekartan pisteitä. Merkki on siksi ruudun itäpuolella samalla
+     * Hongkong-saaren rannalla, noin kolme kilometriä Centralista
+     * itään; kortin `paikka`-rivi kertoo oikean osoitteen.
+     */
+    {
+      id: 'carrianin-romahdus',
+      otsikko: 'Carrian — talo, joka myytiin miljardilla voitolla',
+      nimio: 'Carrian',
+      vuosi: '1977–1983',
+      paikka: 'Gammon House, Central, Hongkong',
+      lat: 22.279, lon: 114.229,
+      kortti: 'Tuntematon yhtiö osti Centralista toimistotalon lähes miljardilla '
+        + 'ja ilmoitti kolme kuukautta myöhemmin myyvänsä sen 1,68 miljardilla. '
+        + 'Koko kaupunki halusi tietää, mistä rahat tulivat. Vastaus oli '
+        + 'yksinkertaisempi ja karumpi kuin huhut.',
+      teksti: 'Carrian Group perustettiin Hongkongissa 1977. Sen takana oli '
+        + 'George Tan Soon-gin, joka oli lähtenyt Singaporesta vuoden 1974 '
+        + 'konkurssin jälkeen. Vuonna 1979 Tan osti holdingyhtiön 700 miljoonalla '
+        + 'Hongkongin dollarilla ja teki siitä Carrian Investment Limitedin.'
+        + '\n\nTammikuussa 1980 konserni osti Centralista Gammon Housen 998 '
+        + 'miljoonalla — se oli siihenastisen Hongkongin kallein '
+        + 'kiinteistökauppa. Huhtikuussa se ilmoitti myyvänsä talon 1,68 '
+        + 'miljardilla. Tuotto oli niin huikea, että se hämmästytti koko '
+        + 'kiinteistö- ja rahoitusmarkkinan ja nosti yhtiön julkisuuteen. '
+        + 'Samana vuonna Carrian osti pörssiyhtiön ja käytti sitä varojen '
+        + 'keräämiseen.'
+        + '\n\nKonserni laajeni nopeasti Malesiaan, Thaimaahan, Singaporeen, '
+        + 'Filippiineille, Japaniin ja Yhdysvaltoihin. Pääoman alkuperästä '
+        + 'liikkui mitä mielikuvituksellisimpia huhuja: rahojen arveltiin '
+        + 'tulevan milloin Imelda Marcosilta, milloin Neuvostoliiton '
+        + 'valtionpankilta, milloin borneolaiselta metsäyhtiöltä.'
+        + '\n\nCarrian ajautui Bank Bumiputra Malaysia Berhadin ja sen '
+        + 'hongkongilaisen tytäryhtiön kanssa selvittämättömään vyyhtiin. '
+        + 'Kirjanpitopetossyytösten, pankin tilintarkastajan murhan ja yhtiön '
+        + 'neuvonantajan itsemurhan jälkeen konserni romahti 1983 Hongkongin '
+        + 'siihenastisesti suurimpaan konkurssiin. Ehtymättömältä näyttänyt '
+        + 'pääoma osoittautui pankkilainoiksi eikä miksikään muuksi.',
+      lahde: 'en-Wikipedia "Carrian Group", osiot "History" ja "Downfall". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä Carrianin ehtymättömältä näyttänyt pääoma lopulta tuli?',
+        vaihtoehdot: [
+          'Pankkilainoista',
+          'Malesian valtion sijoitusrahastosta',
+          'Kiinteistöjen todellisista myyntivoitoista',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  IDN: [
+    /*
+     * Rangkasbitung, Lebakin alue, Banten (Multatuli-museon kaupunki).
+     * Lähde: en.wikipedia.org: Max Havelaar; Multatuli; Rangkasbitung
+     */
+    {
+      id: 'max-havelaar',
+      otsikko: 'Max Havelaar — romaani, joka muutti siirtomaapolitiikan',
+      nimio: 'Max Havelaar',
+      vuosi: '1860',
+      paikka: 'Rangkasbitung, Lebakin alue, Jaava',
+      lat: -6.35556, lon: 106.25111,
+      kortti: 'Kirja alkaa kuin pilkka: "Olen kahvinvälittäjä ja asun '
+        + 'Lauriergrachtilla numerossa 37." Sen jälkeen se kertoo, mitä '
+        + 'kahvinvälittäjän kupin takana tapahtuu Jaavalla. Amsterdamissa '
+        + 'kirjoitettu romaani muutti sen, miten Alankomaat hallitsi Itä-Intiaa.',
+      teksti: 'Max Havelaar eli Alankomaiden kauppayhtiön kahvihuutokaupat on '
+        + 'vuoden 1860 romaani, jonka kirjoitti Multatuli — kirjailijanimi tulee '
+        + 'latinan sanoista multa tulī, olen kärsinyt paljon. Sen takana oli '
+        + 'Eduard Douwes Dekker, joka oli palvellut kaksi vuosikymmentä '
+        + 'siirtomaahallinnon viroissa Itä-Intiassa.'
+        + '\n\nRomaanin taustalla on cultuurstelsel eli viljelyjärjestelmä. '
+        + 'Siirtomaahallinto määräsi jaavalaiset viljelijät kasvattamaan '
+        + 'kiintiön kaupallisia kasveja, sokeria ja kahvia, riisin sijaan. '
+        + 'Samaan aikaan veronkantajille maksettiin palkkio kannetusta summasta. '
+        + 'Yhdistelmä johti vallan väärinkäyttöön etenkin Jaavalla ja '
+        + 'Sumatralla, ja seurauksena oli köyhyyttä ja nälänhätää. Siirtomaata '
+        + 'hallittiin hyvin pienellä määrällä sotilaita ja virkamiehiä: entiset '
+        + 'paikallishallitsijat säilyttivät valtansa ja käyttivät sitä.'
+        + '\n\nRomaanin päähenkilö Max Havelaar taistelee tätä turmeltunutta '
+        + 'järjestelmää vastaan. Kirja ei jäänyt kaunokirjallisuudeksi vaan '
+        + 'vaikutti ratkaisevasti siihen, miten Alankomaiden siirtomaapolitiikkaa '
+        + 'muotoiltiin ja muutettiin 1800-luvun lopulla ja 1900-luvun alussa.'
+        + '\n\nMultatulia pidetään yhtenä Alankomaiden suurimmista kirjailijoista. '
+        + 'Rangkasbitungiin, Lebakin alueen hallintokaupunkiin, avattiin 2018 '
+        + 'hänen mukaansa nimetty museo.',
+      lahde: 'en-Wikipedia "Max Havelaar", johdanto ja osio "Background", '
+        + 'en-Wikipedia "Multatuli", johdanto, sekä en-Wikipedia "Rangkasbitung". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä cultuurstelsel eli viljelyjärjestelmä vaati viljelijöiltä?',
+        vaihtoehdot: [
+          'Kiintiön kaupallisia kasveja, kuten kahvia ja sokeria, riisin sijaan',
+          'Määräosan sadosta luovutettavaksi kylän varastoon',
+          'Kolme kuukautta vuodessa työtä satamassa',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Busangin seutu, Itä-Kalimantan. Artikkeli paikantaa kaivoksen
+     * viidakkoon Busang-joen varrelle eikä anna tarkkaa koordinaattia,
+     * joten merkki on joen seudulla Itä-Kalimantanissa.
+     * Lähde: en.wikipedia.org: Bre-X
+     */
+    {
+      id: 'bre-x-busang',
+      otsikko: 'Bre-X — kaivos, jossa ei ollut kultaa',
+      nimio: 'Bre-X 1997',
+      vuosi: '1993–1997',
+      paikka: 'Busangin seutu, Itä-Kalimantan',
+      lat: 0.6, lon: 116.1,
+      kortti: 'Pennyosake nousi kahdessa vuodessa kuuden miljardin dollarin '
+        + 'yhtiöksi, koska Borneon viidakosta oli muka löytynyt maailman suurin '
+        + 'kultaesiintymä. Näytteisiin oli lisätty kultaa jälkikäteen. Noin '
+        + '40 000 sijoittajaa menetti kaiken.',
+      teksti: 'Bre-X Minerals Ltd. oli kanadalainen kaivosyhtiö, jonka David '
+        + 'Walsh perusti 1989. Yhtiö oli listattu Albertan pörssiin ja teki '
+        + 'tappiota vuodesta toiseen. Maaliskuussa 1993 se osti geologi John '
+        + 'Felderhofin neuvosta viidakkopalstan Busang-joen läheltä '
+        + 'Kalimantanista.'
+        + '\n\nEnsimmäiset kokeet eivät näyttäneet kultaa. Joulukuussa 1993, '
+        + 'päiviä ennen kuin lupa olisi rauennut, pääsgeologi Michael de Guzman '
+        + 'ilmoitti tietävänsä täsmälleen, mihin pitää porata. Lokakuussa 1995 '
+        + 'yhtiö kertoi merkittävästä kultalöydöstä, ja osakekurssi lähti '
+        + 'nousuun. Toukokuussa 1996 osake huipentui 286,50 Kanadan dollariin ja '
+        + 'yhtiön markkina-arvo ylitti kuusi miljardia.'
+        + '\n\nNäytteet oli suolattu: niihin oli lisätty kultaa jälkikäteen, eikä '
+        + 'kaivoksessa ollut juuri lainkaan kultaa. Yhtiö romahti toukokuussa '
+        + '1997, kun väärennös paljastui, ja arviolta 40 000 sijoittajaa menetti '
+        + 'sijoituksensa kokonaan.'
+        + '\n\nDe Guzmania pidetään yleisesti huijauksen suunnittelijana. Hänen '
+        + 'kuolemansa oli hyvin epäselvä, perustaja Walsh kuoli pian sen jälkeen, '
+        + 'eikä muiden johtajien tietoisuudesta löytynyt näyttöä — niinpä '
+        + 'ketään ei koskaan tuomittu rikoksesta.',
+      lahde: 'en-Wikipedia "Bre-X", johdanto ja osio "History". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä näytteiden "suolaaminen" tarkoitti Bre-X:n tapauksessa?',
+        vaihtoehdot: [
+          'Näytteet säilöttiin suolaliuokseen kuljetusta varten',
+          'Poranäytteisiin lisättiin kultaa jälkikäteen',
+          'Näytteet otettiin väärästä kohdasta kaivosta',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  IND: [
+    /*
+     * Bangran kylä, Siwanin piiri, Bihar (huijarin kotikylä).
+     * Lähde: en.wikipedia.org: Natwarlal
+     */
+    {
+      id: 'natwarlal',
+      otsikko: 'Natwarlal — mies, joka myi Taj Mahalin',
+      nimio: 'Natwarlal',
+      vuosi: '1912–2009',
+      paikka: 'Bangran kylä, Siwanin piiri, Bihar',
+      lat: 26.22, lon: 84.36,
+      kortti: 'Hän myi Taj Mahalin, Punaisen linnakkeen, presidentinlinnan ja '
+        + 'parlamenttitalon — useampaan kertaan. Nykyrahassa myydyt kohteet '
+        + 'olisivat noin 129 miljardin rupian arvoisia. Vankilasta hän pakeni '
+        + 'kerta toisensa jälkeen.',
+      teksti: 'Mithilesh Kumar Srivastava syntyi 1912 Bangran kylässä Siwanin '
+        + 'piirissä Biharissa. Isä oli asemapäällikkö, ja siitä poika oppi, '
+        + 'miten rautateiden rahtiliikenne toimi.'
+        + '\n\nLahjansa hän huomasi sattumalta. Naapuri lähetti hänet viemään '
+        + 'pankkishekkejä, ja poika tajusi osaavansa jäljitellä naapurin '
+        + 'nimikirjoituksen; hän nosti tämän tililtä tuhat rupiaa ennen kuin '
+        + 'teko huomattiin. Hän pakeni Kalkuttaan, kirjoittautui '
+        + 'kauppatieteiden opiskelijaksi ja toimi satunnaisena '
+        + 'osakevälittäjänä. Kauppatieteen tutkinto ja välittäjän työ opettivat '
+        + 'pankkisäännöt, ja yhdessä asiakirjojen väärentämisen kanssa siinä oli '
+        + 'kaikki, mitä huijaukset vaativat.'
+        + '\n\nEnsimmäisen kerran hänet pidätettiin 1937 yhdeksän raudan tonnin '
+        + 'varastamisesta. Kuuluisaksi hän tuli myymällä sellaista, mikä ei ollut '
+        + 'hänen: Taj Mahalin, Punaisen linnakkeen, Rashtrapati Bhavanin ja '
+        + 'Intian parlamenttitalon — jokaisen useaan kertaan.'
+        + '\n\nNatwarlal tunnetaan yhtä hyvin vankilapaoistaan kuin huijauksistaan, '
+        + 'ja hänen nimestään tuli Intiassa yleissana huijarille. Hän kuoli '
+        + '25. heinäkuuta 2009. Kotitalonsa kerrotaan tulleen brittien '
+        + 'purkamaksi, mutta tontti kuuluu yhä suvulle.',
+      lahde: 'en-Wikipedia "Natwarlal", johdanto sekä osiot "Early life" ja '
+        + '"Career". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Natwarlal huomasi kykynsä väärentää nimikirjoituksia?',
+        vaihtoehdot: [
+          'Hän harjoitteli sitä koulussa kaverien kanssa',
+          'Hän jäljitteli naapurin nimikirjoituksen pankkishekkiin',
+          'Hän oppi sen työskennellessään kirjanpitäjänä',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Khanapur, Belgaumin piiri, Karnataka (väärentäjän kotiseutu).
+     * Lähde: en.wikipedia.org: Abdul Karim Telgi
+     */
+    {
+      id: 'telgin-leimapaperit',
+      otsikko: 'Telgin leimapaperit — väärennös virastojen sisällä',
+      nimio: 'Telgin leimat',
+      vuosi: '1990-luku–2003',
+      paikka: 'Khanapur, Belgaumin piiri, Karnataka',
+      lat: 15.64, lon: 74.51,
+      kortti: 'Intiassa lähes jokainen sopimus kirjoitetaan valtion leimapaperille. '
+        + 'Yksi mies painatti niitä itse ja palkkasi kolmesataa myyntimiestä. '
+        + 'Ostajina olivat pankit, vakuutusyhtiöt ja pörssivälittäjät — ja '
+        + 'toiminta ei olisi onnistunut ilman viranomaisia.',
+      teksti: 'Abdul Karim Telgi syntyi 1961. Isä oli rautateiden työntekijä ja '
+        + 'kuoli pojan ollessa nuori, joten Abdul Karim maksoi koulunsa '
+        + 'Khanapurissa myymällä hedelmiä ja vihanneksia junissa. Hän valmistui '
+        + 'kauppatieteiden maisteriksi 1984 Belgaumissa ja muutti Saudi-Arabiaan.'
+        + '\n\nSeitsemän vuoden kuluttua hän palasi Intiaan ja aloitti '
+        + 'väärentäjänuransa passeista. Hän perusti työvoiman vientiin '
+        + 'erikoistuneen matkatoimiston ja teki asiakirjoja, joilla työntekijät '
+        + 'pääsivät lentokentän tarkastuksista läpi silloinkin, kun passissa oli '
+        + 'merkintöjä, jotka olisivat pysäyttäneet heidät.'
+        + '\n\nSitten hän siirtyi vaikeampaan: valtion leimapaperiin, jolle '
+        + 'Intiassa kirjoitetaan sopimukset ja asiakirjat. Telgi palkkasi '
+        + 'kolmesataa asiamiestä, jotka myivät väärennöksiä suurostajille — '
+        + 'pankeille, vakuutusyhtiöille ja pörssivälittäjille. Huijauksen kooksi '
+        + 'arvioitiin noin 200 miljardia rupiaa eli 2,1 miljardia dollaria.'
+        + '\n\nEniten hämmennystä herätti se, ettei tällainen olisi onnistunut '
+        + 'ilman viranomaisia: mukana oli lukuisia poliiseja ja muita '
+        + 'virkamiehiä. Yksi heistä oli apulaistutkija Nikhil Kothari, jonka '
+        + 'omaisuus paljastui hänen palkkaansa nähden käsittämättömäksi. Telgi '
+        + 'kuoli 2017.',
+      lahde: 'en-Wikipedia "Abdul Karim Telgi", johdanto sekä osiot "Early life" '
+        + 'ja "Counterfeiting charges". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mihin väärennettyjä leimapapereita ostettiin?',
+        vaihtoehdot: [
+          'Postimerkkien keräilijöille',
+          'Pankeille, vakuutusyhtiöille ja pörssivälittäjille',
+          'Ulkomaisille suurlähetystöille',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  LKA: [
+    /*
+     * Dambullan luostari, Matalen piiri (kapinallisten kruunajaispaikka).
+     * Lähde: en.wikipedia.org: Matale rebellion; George Byng, 7th Viscount
+     * Torrington
+     */
+    {
+      id: 'matalen-kapina',
+      otsikko: 'Koiravero ja Dambullan kruunajaiset',
+      nimio: 'Matalen kapina',
+      vuosi: '1848',
+      paikka: 'Dambullan luostari, Matalen piiri',
+      lat: 7.85667, lon: 80.64917,
+      kortti: 'Uusi kuvernööri poisti kahvin vientiveron ja paikkasi aukon '
+        + 'verottamalla aseita, koiria, kärryjä ja puoteja. Kandyn talonpojille '
+        + 'se oli sekä köyhdytys että loukkaus. Heinäkuun lopussa 1848 '
+        + 'Dambullan luostarissa kruunattiin uusi kuningas.',
+      teksti: 'Kandyn maakunnat olivat olleet brittihallinnossa 32 vuotta. '
+        + 'Vuoden 1840 kruununmaa-asetus antoi eurooppalaisten '
+        + 'plantaasinomistajien ottaa haltuunsa talonpoikien yhteismaat, joilla '
+        + 'ryhdyttiin kasvattamaan 1830-luvulla saarelle tuotua kahvia.'
+        + '\n\nBritanniassa alkanut lama iski Ceylonin kahviin ja kaneliin. '
+        + 'Siirtomaasihteeri James Emerson Tennent esitti Lontooseen, että '
+        + 'verotus siirrettäisiin välillisestä välittömään; kahvin vientivero '
+        + 'poistettiin ja kanelin veroa alennettiin. Aukko oli 40 000 puntaa, ja '
+        + 'sen paikkaamaan lähetettiin kuvernööriksi 35-vuotias lordi Torrington. '
+        + 'Heinäkuun 1. päivänä 1848 asetettiin lupamaksut aseille, koirille, '
+        + 'kärryille ja puodeille sekä pakkotyövelvollisuus plantaasiteillä, '
+        + 'ellei erillistä veroa maksanut.'
+        + '\n\nHeinäkuun 26. päivänä kapinan johtajat kokoontuivat Dambullan '
+        + 'vanhaan luostariin. Kello 11.30 Gongalegoda Banda kruunattiin '
+        + 'kuninkaaksi luostarin ylimunkin toimesta, ja Veera Puran Appusta '
+        + 'tuli pääministeri. Joukko marssi Matalen kautta ja tuhosi '
+        + 'verorekistereitä. Torrington julisti sotatilan Kandyyn 29. heinäkuuta '
+        + 'ja Kurunegalaan 31. heinäkuuta.'
+        + '\n\nGongalegoda Banda pidätettiin 21. syyskuuta ja tuomittiin '
+        + 'maanpetoksesta hirtettäväksi; tuomio muutettiin sadaksi raipaniskuksi '
+        + 'ja karkotukseksi Malakkaan. Torrington muistetaan juuri kapinan '
+        + 'kovakouraisesta tukahduttamisesta, ja kapinaa pidetään Sri Lankan '
+        + 'siirtymänä vanhasta aatelisjohtoisesta kapinasta kansanliikkeeseen.',
+      lahde: 'en-Wikipedia "Matale rebellion", osiot "Background", "Rebellion" ja '
+        + '"Legacy", sekä en-Wikipedia "George Byng, 7th Viscount Torrington", '
+        + 'osio "Career". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä vuoden 1848 uudet verot perittiin?',
+        vaihtoehdot: [
+          'Riisisadosta ja kalansaaliista',
+          'Aseista, koirista, kärryistä ja puodeista',
+          'Talon ikkunoista ja savupiipuista',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Colombo (yhtiön kotipaikka ja oikeudenkäyntipaikka).
+     * Lähde: en.wikipedia.org: Golden Key Credit Card Company
+     *
+     * MERKKI ON COLOMBON ITÄLAIDALLA, ja syy on sama kuin Hongkongin
+     * Carrian-kortissa: kaupunkilehden kohdekartta
+     * (js/packs/maakartat.js colombo) on kapea nauha lat 6,904–6,957 ja
+     * lon 79,834–79,8767, ja Fortin liikekeskusta osuu keskelle sitä.
+     * Kohdekartan rajauksessa oleva skandaali kuuluisi kohdekartan
+     * pisteelle eikä pääkartalle, eikä tässä erässä lisätä kohdekartan
+     * pisteitä (tools/tarkista-nostopaikat.mjs). Merkki on siksi
+     * nauhan itäpuolella, ja kortin `paikka`-rivi sanoo Colombo.
+     */
+    {
+      id: 'golden-key',
+      otsikko: 'Golden Key — luottokorttiyhtiön kadonneet talletukset',
+      nimio: 'Golden Key',
+      vuosi: '1999–2008',
+      paikka: 'Colombo',
+      lat: 6.906, lon: 79.89,
+      kortti: 'Yhtiö oli tuonut luottokortit Sri Lankaan ja rakentanut '
+        + 'kauppiasverkon, jota kaikki muutkin käyttivät. Yhdeksäntoistatuhatta '
+        + 'miljoonaa rupiaa yli yhdeksältätuhannelta tallettajalta katosi '
+        + 'yhdeksän vuoden aikana. Loppuvuodesta 2008 koko maan rahoitusala '
+        + 'jäätyi.',
+      teksti: 'Golden Key Credit Card Company perustettiin 3. kesäkuuta 1977, ja '
+        + 'se oli osa Ceylinco Consolidatedia — konsernia, jolla oli yli '
+        + 'kolmesataa tytäryhtiötä.'
+        + '\n\n1980-luvun alussa yhtiö oli luottokorttialan uranuurtaja Sri '
+        + 'Lankassa. Se rakensi maan ensimmäisen kauppiasverkon, jota kaikki '
+        + 'muutkin korttiyhtiöt sittemmin käyttivät. Vuonna 1987 se toi maan '
+        + 'ensimmäisen kotimaisen kultakortin, 1991 korottomat maksuerät ja 2003 '
+        + 'ensimmäisen kotimaisen platinakortin.'
+        + '\n\nVuonna 2008 paljastui, että hallituksen puheenjohtaja Lalith '
+        + 'Kotelawala ja johtokunta olivat kavaltaneet varoja vuodesta 1999 '
+        + 'lähtien. Summa oli 26,5 miljardia rupiaa eli noin 200 miljoonaa '
+        + 'dollaria, ja se oli peräisin 9 054 tallettajalta. Puheenjohtaja ja '
+        + 'johtajat asetettiin Colombon ylioikeudessa syytteeseen 91 kohdasta, '
+        + 'joihin kuului kavallus ja luottamusaseman väärinkäyttö.'
+        + '\n\nSeuraukset ulottuivat koko rahoitusalalle: vuoden 2008 viimeisinä '
+        + 'viikkoina maata koetteli ankara maksuvalmiuskriisi, ja tapaus johti '
+        + 'mittaviin sääntelyuudistuksiin ja alan valvonnan kiristämiseen.',
+      lahde: 'en-Wikipedia "Golden Key Credit Card Company", johdanto sekä osiot '
+        + '"History" ja "GKCCC scandal (2008)". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka monelta tallettajalta kavalletut varat olivat peräisin?',
+        vaihtoehdot: [
+          '9 054 tallettajalta',
+          '312 tallettajalta',
+          'Noin miljoonalta tallettajalta',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  MMR: [
+    /*
+     * Bago (Pegu), Hanthawaddyn kuningaskunta — kellon valupaikka.
+     * Lähde: en.wikipedia.org: Great Bell of Dhammazedi
+     */
+    {
+      id: 'dhammazedin-kello',
+      otsikko: 'Dhammazedin kello — maailman suurin kello joen pohjassa',
+      nimio: 'Dhammazedin kello',
+      vuosi: '1484–1608',
+      paikka: 'Bago (Pegu), Hanthawaddyn kuningaskunta',
+      lat: 17.33333, lon: 96.48333,
+      kortti: 'Kuninkaan tähtientutkija varoitti: hetki on väärä, kello ei tule '
+        + 'soimaan. Kello valettiin silti, ja sen ääni oli ruma. Satakaksikymmentä '
+        + 'vuotta myöhemmin portugalilainen palkkasoturi yritti viedä sen pois — '
+        + 'eikä kukaan ole nähnyt sitä sen jälkeen.',
+      teksti: 'Dhammazedin suuri kello valettiin 5. helmikuuta 1484 Hanthawaddy '
+        + 'Pegun kuninkaan Dhammazedin käskystä ja lahjoitettiin Shwedagonin '
+        + 'pagodille. Sitä pidetään suurimpana koskaan valettuna kellona. '
+        + 'Kuninkaan tähtientutkija oli kehottanut siirtämään valamista, koska '
+        + 'hetki osui epäsuotuisaan krokotiilin tähdistöön, ja ennusti ettei '
+        + 'kello soisi; valmiin kellon ääni oli kertomusten mukaan epämiellyttävä.'
+        + '\n\nAikalaistekstien mukaan metallia kului 180 000 vissiä eli 294 '
+        + 'tonnia, ja seoksessa oli kuparin ja tinan lisäksi hopeaa ja kultaa. '
+        + 'Vuonna 1583 italialainen jalokivikauppias Gasparo Balbi mittasi sen '
+        + 'seitsemäksi askeleeksi ja kolmeksi kämmenenleveydeksi ja kirjoitti '
+        + 'päiväkirjaansa, että kello oli täynnä kirjaimia, joita mikään kansa '
+        + 'ei osannut lukea.'
+        + '\n\nPortugalilainen palkkasoturi Filipe de Brito e Nicote saapui '
+        + 'Ala-Burmaan 1590-luvulla ja nousi Syriamin eli nykyisen Thanlyinin '
+        + 'kuvernööriksi. Vuonna 1608 hän vei kellon Shwedagonista, vieritytti '
+        + 'sen alas Singuttaran kukkulalta lautalle ja antoi norsujen hinata sen '
+        + 'Bago-joelle. Kello aiottiin sulattaa tykeiksi.'
+        + '\n\nLautta sidottiin de Briton lippulaivaan. Kuorma osoittautui liian '
+        + 'raskaaksi, ja Bago- ja Yangon-jokien yhtymäkohdassa nykyisen Monkey '
+        + 'Pointin edustalla lautta hajosi. Kello vajosi pohjaan ja veti '
+        + 'lippulaivan mukanaan. Sitä on etsitty siitä lähtien.',
+      lahde: 'en-Wikipedia "Great Bell of Dhammazedi", johdanto sekä osiot '
+        + '"Description" ja "Theft from Shwedagon Pagoda". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi kello ei koskaan päätynyt Syriamiin sulatettavaksi?',
+        vaihtoehdot: [
+          'Munkit piilottivat sen matkan varrella',
+          'Lautta hajosi jokien yhtymäkohdassa ja kello upposi',
+          'Kuningas lunasti sen takaisin rahalla',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Pathein (Bassein) — satama, jonka kirje tarjosi kauppapaikaksi.
+     * Lähde: en.wikipedia.org: The Golden Letter of King Alaungpaya
+     */
+    {
+      id: 'kultainen-kirje',
+      otsikko: 'Kultainen kirje, jota kukaan ei osannut lukea',
+      nimio: 'Kultainen kirje',
+      vuosi: '1756–2006',
+      paikka: 'Pathein (Bassein), Burma',
+      lat: 16.784167, lon: 94.733333,
+      kortti: 'Burman kuningas lähetti Yrjö II:lle kirjeen, joka oli kirjoitettu '
+        + 'kultalevylle ja reunustettu kahdellakymmenelläneljällä rubiinilla. '
+        + 'Lontoossa sitä pidettiin kuriositeettina eikä siihen vastattu. '
+        + 'Kirjastossa Hannoverissa se makasi väärän luettelomerkinnän alla 250 '
+        + 'vuotta.',
+      teksti: 'Toukokuun 7. päivänä 1756 kuningas Alaungpaya käski kanslian '
+        + 'laatia neljä kirjettä. Tärkein niistä oli kultainen ja osoitettu '
+        + 'Britannian kuninkaalle Yrjö II:lle. Siinä Alaungpaya tarjosi maiden '
+        + 'kauppasuhteen laajentamista: Itä-Intian kauppakomppania saisi '
+        + 'perustaa linnoitetun kauppapaikan Patheinin satamaan, sillä sen '
+        + 'silloinen tukikohta Negraisin saarella oli kaukana reiteiltä, vailla '
+        + 'infrastruktuuria ja epäterveellisessä ilmastossa.'
+        + '\n\nKirje on 54,7 senttiä pitkä ja 8,5 leveä, vain 0,2 millimetriä '
+        + 'paksu ja painaa rubiineineen sata grammaa. Kullan pitoisuus on '
+        + '95–99 prosenttia, ja kaksikymmentäneljä munanmuotoista rubiinia ovat '
+        + 'peräisin Mogokin seudun kaivoksesta. Kirje käärittiin punaiseen '
+        + 'paperiin ja pantiin koristeltuun norsunluusylinteriin, joka oli '
+        + 'tehty ontoksi kaiverretusta burmalaisen norsun syöksyhampaasta.'
+        + '\n\nKirje kulki Madrasin kautta ja saapui Lontooseen vasta maaliskuussa '
+        + '1758. Yrjö II eikä kauppakomppania ymmärtänyt sen sisältöä eikä '
+        + 'merkitystä, ja aloitetta pidettiin pikemmin kummallisuutena kuin '
+        + 'vakavana avauksena. Alaungpaya ei saanut vastausta eikä edes tietoa '
+        + 'siitä, että kirje oli perillä, ja piti sitä vakavana loukkauksena.'
+        + '\n\nYrjö II lähetti kirjeen kotikaupunkinsa Hannoverin kirjastoon, ja '
+        + 'salaneuvos Gerlach Adolph von Münchhausen kuvasi sen väärin: '
+        + 'sanskritinkieliseksi kirjelmäksi eräältä Coromandelin rannikon '
+        + 'ruhtinaalta. Väärän merkinnän alla se makasi lähes 250 vuotta, kunnes '
+        + 'se tunnistettiin 2006. Vuonna 2015 Unesco liitti kirjeen Maailman '
+        + 'muisti -rekisteriin Myanmarin, Saksan ja Britannian yhteisenä '
+        + 'perintönä.',
+      lahde: 'en-Wikipedia "The Golden Letter of King Alaungpaya", johdanto sekä '
+        + 'osiot "History", "Material" ja "Containers". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi kultainen kirje unohtui Hannoverin kirjastoon 250 vuodeksi?',
+        vaihtoehdot: [
+          'Se oli luetteloitu väärin sanskritinkieliseksi kirjelmäksi',
+          'Se katosi kirjaston tulipalossa ja löytyi vasta myöhemmin',
+          'Kirjasto piti sitä väärennöksenä',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
 };
