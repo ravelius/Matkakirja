@@ -4,14 +4,19 @@
  *   node tools/savukkeet/savuke-aikajana.mjs                 (?lauta=kartta)
  *   NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-aikajana.mjs --lauta pallo
  *
- * PALLOLAUTA (vaihe 4, docs/moduulit/karttapallo.md luku 7 rivi 4):
+ * PALLOLAUTA (aalto 2A, docs/moduulit/karttapallo.md luku 10.1):
  * `--lauta pallo` avaa pelin karttapallolla (Globe.gl ämpäristä Noden
- * fetchin kautta kuten savuke-pallolauta), valitsee linssin LAUKUSTA
- * (ui.valitseLinssi('keksinnot')) — jolloin tasokartta herää
- * linssikartaksi pallon päälle — ja ajaa samat väitteet kuoressa:
- * kello, karuselli ja ilmiöpaneeli asuvat karttaruudussa. Lopuksi
- * aikajanan Sulje päättää linssin ja pallo palaa (svg#board tyhjä,
- * kartta lepotilassa, pallo näkyvissä).
+ * fetchin kautta kuten savuke-pallolauta) ja valitsee linssin LAUKUSTA
+ * (ui.valitseLinssi('keksinnot')). AIKAJANA PIIRTYY NYT PALLON PINNALLE
+ * eikä linssikarttaan: valot ovat laudan linssiapurin merkkejä
+ * (`linssit.merkit('aikajana', …)` — js/aikajana.js PALLON_OSA),
+ * tummennus on ruutukalvo (`.pallolauta-kalvo`), ja kello, karuselli ja
+ * ilmiöpaneeli asuvat karttaruudussa pallon päällä. Tasokartta EI herää:
+ * svg#board pysyy tyhjänä ja ui.kartta.lepotila totena koko ajon.
+ * Lopuksi aikajanan Sulje purkaa pallolinssin (ui.pallolinssi null,
+ * aikajana-merkkejä 0, ruutukalvo poissa) ja pallo jää lautana näkyviin.
+ * Ennen aaltoa 2A tämä savuke odotti linssikartan kuorta; se vartio on
+ * korvattu näillä (5.9.2026).
  *
  * Yksikkötestit näkevät tahdin ja datan (tests/aikajana.test.mjs),
  * mutta eivät sitä, nouseeko kello ruudulle, syttyykö valo SVG:hen ja
@@ -28,7 +33,8 @@
  *      oman musiikkilajinsa (aanet/linssi-keksinnot.mp3 ei ole
  *      savukkeen ulottuvilla: ulkoiset osoitteet katkaistaan, ja
  *      puuttuva raita on normaali hiljainen tila).
- *   2. Kamera on Euroopassa (näkyvä alue sisältää Lontoon ja Pietarin).
+ *   2. Kamera: tasokartalla koko kaari (Lontoo ja Pietari näkyvissä),
+ *      pallolla ensimmäisen lampun lähikuva (js/aikajana.js sovitaAlkuun).
  *   3. Ensimmäinen tapahtuma syttyy: yksi valo palaa, nykyinen kortti
  *      on Watt, ilmiöpaneelissa Wattin nimi ja selite.
  *   3b. KARUSELLI keskivaiheilla kaarta (omistaja 3.9.2026): nauha
@@ -39,7 +45,8 @@
  *   4. Kellon napautus pysäyttää; toinen jatkaa.
  *   5. Kaaren lopussa kaikki valot palavat ja loppusanat näkyvät.
  *   6. Nykyisen kortin napautus avaa nähtävyysdialogin jutulla.
- *   7. Sulje purkaa kaiken: ei kelloa, ei valoja, ei body-luokkaa.
+ *   7. Sulje purkaa kaiken: ei kelloa, ei valoja, ei body-luokkaa
+ *      (pallolla purku on siirtymän mittainen, joten sitä odotetaan).
  *   8. Ei sivuvirheitä.
  */
 import { createServer } from 'node:http';
@@ -134,7 +141,7 @@ if (PALLOLLA) {
   await sivu.waitForTimeout(1500);
 }
 
-/* 1. Käynnistys: kartalla kehittäjänapista, pallolla laukun linssinä (kuori) */
+/* 1. Käynnistys: kartalla kehittäjänapista, pallolla laukun linssinä (pallon pinnalle) */
 const kaynnistys = await sivu.evaluate(async (pallolla) => {
   const { ui } = window.matkakirja;
   ui.busy = false;
@@ -153,11 +160,22 @@ const kaynnistys = await sivu.evaluate(async (pallolla) => {
   }
   await new Promise((r) => setTimeout(r, 300));
   const kuori = document.querySelector('.pallo-kuori.pallolauta');
+  const merkit = pallolla ? (ui.pallonInstanssi?.htmlElementsData?.() ?? []) : [];
   return {
     lahti,
-    kuoressa: Boolean(ui.linssikartta?.linssi) && document.body.classList.contains('linssikartta-auki')
-      && ui.kartta.lepotila === false && Boolean(kuori?.hidden || kuori?.classList.contains('linssin-alla'))
-      && ui.mapPane.contains(document.querySelector('.aikajana')),
+    /*
+     * PALLOLLA (aalto 2A): linssi on pallon oma, ei linssikartan kuori.
+     * Valot ovat merkkikerroksessa avaimella `aikajana:<i>`, tummennus
+     * on ruutukalvo, tasokartta nukkuu ja pallo pysyy näkyvissä.
+     */
+    pallolinssi: ui.pallolinssi?.tunnus ?? null,
+    linssikartta: Boolean(ui.linssikartta),
+    lepotila: ui.kartta.lepotila,
+    svgLapsia: document.querySelectorAll('#board *').length,
+    palloMerkkeja: merkit.filter((d) => String(d.avain ?? '').startsWith('aikajana:')).length,
+    ruutukalvo: document.querySelectorAll('.pallolauta-kalvo').length,
+    kuoriNakyy: Boolean(kuori) && !kuori.hidden && !kuori.classList.contains('linssin-alla'),
+    karttaruudussa: ui.mapPane.contains(document.querySelector('.aikajana')),
     kello: Boolean(document.querySelector('.aikajana-kello')),
     nauha: document.querySelectorAll('.aikajana-kortti').length,
     valoja: document.querySelectorAll('.aikajana-valo').length,
@@ -171,8 +189,12 @@ vaadi('aikajana käynnistyy: kello, nauha, valokerros ja oma musiikkilaji',
     && kaynnistys.luokka && kaynnistys.musiikki === 'keksinnot',
   JSON.stringify(kaynnistys));
 if (PALLOLLA) {
-  vaadi('pallolaudalla aikajana asuu linssikartan kuoressa: kartta hereillä, pallo piilossa, kello karttaruudussa',
-    kaynnistys.kuoressa, JSON.stringify(kaynnistys));
+  vaadi('pallolaudalla aikajana piirtyy pallolle: valot merkkeinä (25), ruutukalvo, kello karttaruudussa, linssikarttaa ei avata',
+    kaynnistys.pallolinssi === 'keksinnot' && !kaynnistys.linssikartta
+      && kaynnistys.lepotila === true && kaynnistys.svgLapsia === 0
+      && kaynnistys.palloMerkkeja === 25 && kaynnistys.ruutukalvo === 1
+      && kaynnistys.kuoriNakyy && kaynnistys.karttaruudussa,
+    JSON.stringify(kaynnistys));
 }
 
 /* 0. Avausjakso: Käynnistä aloittaa ajon (omistaja 4.9.2026). */
@@ -254,20 +276,67 @@ await sivu.screenshot({ path: join(ULOS, 'savuke-aikajana-karuselli.png') });
 await sivu.evaluate(() => window.matkakirja.ui.aikajana.alusta());
 await sivu.waitForTimeout(600);
 
-/* 2. Kamera Euroopassa (odotetaan kamera-ajo) */
+/* 2. Kamera Euroopassa (odotetaan kamera-ajo loppuun) */
 await sivu.waitForTimeout(1600);
-const kamera = await sivu.evaluate(() => {
+const kamera = await sivu.evaluate(async () => {
   const { ui, game } = window.matkakirja;
-  const alue = ui.nakyvaAlue();
-  const sisalla = (id) => {
-    const c = game.pack.cities.find((k) => k.id === id);
-    const w = ui.mapPane.clientWidth / alue.skaala;
-    const h = ui.mapPane.clientHeight / alue.skaala;
-    return c && c.x >= alue.x && c.x <= alue.x + w && c.y >= alue.y && c.y <= alue.y + h;
+  /*
+   * AJO ODOTETAAN LOPPUUN, EI KELLOSTA. Pallolaudalla kaaren kamera-ajo
+   * on laudan oma liuku (js/pallolauta/kamera.js) ja kontin ohjelmisto-
+   * WebGL piirtää sen hitaammin kuin tasokartta: kiinteä odotus mittasi
+   * kesken lentoa olevan näkymän, jolloin kaaren pohjoisin kaupunki oli
+   * vielä kuvan ulkopuolella. Näkymän annetaan pysähtyä (kaksi samaa
+   * lukemaa peräkkäin) ennen mittausta.
+   */
+  const lue = () => {
+    const a = ui.nakyvaAlue();
+    return { x: a.x, y: a.y, skaala: a.skaala };
   };
-  return { lontoo: sisalla('lontoo'), pietari: sisalla('pietari'), alue: { x: Math.round(alue.x), y: Math.round(alue.y), skaala: alue.skaala } };
+  let edellinen = lue();
+  let alue = edellinen;
+  for (let i = 0; i < 60; i += 1) {
+    await new Promise((r) => setTimeout(r, 150));
+    alue = lue();
+    const paikallaan = Math.abs(alue.x - edellinen.x) < 1 && Math.abs(alue.y - edellinen.y) < 1
+      && Math.abs(alue.skaala - edellinen.skaala) < 1e-4;
+    if (paikallaan && i > 0) break;
+    edellinen = alue;
+  }
+  const w = ui.mapPane.clientWidth / alue.skaala;
+  const h = ui.mapPane.clientHeight / alue.skaala;
+  const kuvassa = (x, y) => x >= alue.x && x <= alue.x + w && y >= alue.y && y <= alue.y + h;
+  const kaupunki = (id) => {
+    const c = game.pack.cities.find((k) => k.id === id);
+    return Boolean(c) && kuvassa(c.x, c.y);
+  };
+  // Pallolla ajo alkaa ENSIMMÄISEN lampun yltä lähikuvassa (omistaja
+  // 5.9.2026: *"zoomaa maapallo näin lähelle"*, js/aikajana.js
+  // sovitaAlkuun) — koko kaaren rajaus on tasokartan näkymä.
+  const eka = ui.aikajana?.tapahtumat?.find((t) => Number.isFinite(t.x) && Number.isFinite(t.y)) ?? null;
+  return {
+    lontoo: kaupunki('lontoo'),
+    pietari: kaupunki('pietari'),
+    ekaLamppuKuvassa: Boolean(eka) && kuvassa(eka.x, eka.y),
+    lahikuva: w < 900,
+    leveys: Math.round(w),
+    alue: { x: Math.round(alue.x), y: Math.round(alue.y), skaala: alue.skaala },
+  };
 });
-vaadi('kamera sovittaa Euroopan: Lontoo ja Pietari näkyvissä', kamera.lontoo && kamera.pietari, JSON.stringify(kamera));
+if (PALLOLLA) {
+  /*
+   * PALLON ALKUNÄKYMÄ ON LÄHIKUVA, EI KOKO KAARI. Vaatimus on siksi
+   * lähikuva; lampun tarkkaa paikkaa EI vaadita, koska pallon
+   * `nakyvaAlue()` on suorakulmainen arvio pallopinnan näkymästä ja
+   * ajo jättää karusellin tilan alareunaan. Mitattu luku raportoidaan,
+   * jotta poikkeama näkyy ilman että vartio väittää siitä liikaa.
+   */
+  vaadi('kamera on pallon omassa alkunäkymässä: lähikuva eikä koko kaaren rajaus',
+    kamera.lahikuva, JSON.stringify(kamera));
+  console.log(`INFO  ensimmäinen lamppu näkyvän alueen sisällä: ${kamera.ekaLamppuKuvassa}`
+    + ` (näkyvä leveys ${kamera.leveys} lautayksikköä)`);
+} else {
+  vaadi('kamera sovittaa Euroopan: Lontoo ja Pietari näkyvissä', kamera.lontoo && kamera.pietari, JSON.stringify(kamera));
+}
 
 /* 4. Kellon napautus pysäyttää ja jatkaa */
 const tauko = await sivu.evaluate(async () => {
@@ -348,7 +417,17 @@ const sulku = await sivu.evaluate(async () => {
   const { ui } = window.matkakirja;
   document.getElementById('nahtavyys-dialog')?.close?.();
   ui.pysaytaAikajana();
-  await new Promise((r) => setTimeout(r, 200));
+  /*
+   * PURKU ON SIIRTYMÄN MITTAINEN PALLOLLA. Tasokartalla valot ovat
+   * svg-kerroksessa ja katoavat samassa kutsussa; pallolla ne ovat
+   * laudan linssiapurin merkkejä (aalto 2A), joita kirjasto siirtää
+   * ulos pathTransitionDurationin verran. Odotetaan tyhjenemistä sen
+   * sijaan että mitattaisiin kiinteän 200 ms:n kohdalta.
+   */
+  for (let i = 0; i < 60; i += 1) {
+    if (!document.querySelectorAll('.aikajana-valo').length) break;
+    await new Promise((r) => setTimeout(r, 100));
+  }
   return {
     kello: document.querySelectorAll('.aikajana-kello').length,
     valot: document.querySelectorAll('.aikajana-valo').length,
@@ -358,25 +437,31 @@ const sulku = await sivu.evaluate(async () => {
 });
 vaadi('sulje purkaa kellon, valot ja body-luokan', sulku.kello === 0 && sulku.valot === 0 && !sulku.luokka && !sulku.aikajana, JSON.stringify(sulku));
 if (PALLOLLA) {
-  /* 8. Pallolaudalla aikajanan Sulje päättää linssin: kuori kiinni, pallo palaa.
-     Häivytyksen loppua odotetaan (kontin ohjelmisto-WebGL piirtää pallon
-     kehyksen ~100 ms:ssa, joten kiinteä odotus ei riitä). */
+  /* 8. Pallolaudalla aikajanan Sulje purkaa pallolinssin: merkit ja
+     ruutukalvo pois, pallo jää lautana näkyviin. Purku on siirtymän
+     mittainen (`pura` häivyttää kalvon), joten sitä odotetaan. */
   const paluu = await sivu.evaluate(async () => {
     const { ui } = window.matkakirja;
-  const odotaHaivytys = async () => {
-    const alku = Date.now();
-    for (let i = 0; i < 160; i += 1) {
-      const k = document.querySelector('.pallo-kuori.pallolauta');
-      if (k && !k.hidden && getComputedStyle(k).opacity === '1' && window.matkakirja.ui.kartta.lepotila) break;
-      await new Promise((r) => setTimeout(r, 50));
-    }
-    return Date.now() - alku;
-  };
-    const haivytysMs = await odotaHaivytys();
+    const merkit = () => (ui.pallonInstanssi?.htmlElementsData?.() ?? [])
+      .filter((d) => String(d.avain ?? '').startsWith('aikajana:')).length;
+    const odotaPurku = async () => {
+      const alku = Date.now();
+      for (let i = 0; i < 160; i += 1) {
+        const k = document.querySelector('.pallo-kuori.pallolauta');
+        if (k && !k.hidden && getComputedStyle(k).opacity === '1'
+          && merkit() === 0 && document.querySelectorAll('.pallolauta-kalvo').length === 0) break;
+        await new Promise((r) => setTimeout(r, 50));
+      }
+      return Date.now() - alku;
+    };
+    const purkuMs = await odotaPurku();
     const kuori = document.querySelector('.pallo-kuori.pallolauta');
     return {
-      haivytysMs,
+      purkuMs,
       linssi: ui.linssiValittu,
+      pallolinssi: ui.pallolinssi?.tunnus ?? null,
+      palloMerkkeja: merkit(),
+      ruutukalvo: document.querySelectorAll('.pallolauta-kalvo').length,
       linssikartta: Boolean(ui.linssikartta),
       luokka: document.body.classList.contains('linssikartta-auki'),
       svgLapsia: document.querySelectorAll('#board *').length,
@@ -386,8 +471,9 @@ if (PALLOLLA) {
       kehys: Boolean(document.querySelector('.linssikartta-kehys')),
     };
   });
-  vaadi('pallolaudalla aikajanan Sulje päättää linssin: valinta null, svg#board tyhjä, kartta lepotilassa, pallo näkyvissä',
-    paluu.linssi === null && !paluu.linssikartta && !paluu.luokka && paluu.svgLapsia === 0
+  vaadi('pallolaudalla aikajanan Sulje purkaa pallolinssin: valinta null, merkit ja ruutukalvo pois, svg#board tyhjä, pallo näkyvissä',
+    paluu.linssi === null && paluu.pallolinssi === null && paluu.palloMerkkeja === 0
+      && paluu.ruutukalvo === 0 && !paluu.linssikartta && !paluu.luokka && paluu.svgLapsia === 0
       && paluu.lepotila === true && paluu.kuoriNakyy && !paluu.kehys,
     JSON.stringify(paluu));
 }

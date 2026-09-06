@@ -29,8 +29,36 @@
 
 import { pointAlong } from '../rules.js';
 
-/** Reittiviivan paksuus asteina (Globe.gl pathStroke): ~2,7 px saapumisnäkymässä. */
-export const MATKAREITIN_PAKSUUS_AST = 0.05;
+/*
+ * ── PATHSTROKE ON RUUTUPIKSELEITÄ, EI ASTEITA ─────────────────────
+ *
+ * Mitattu Chromiumilla 5.9.2026 (docs/moduulit/karttapallo.md luku 10.3):
+ * Globe.gl 2.46 rakentaa viivan Line2:na, jonka LineMaterialissa
+ * `worldUnits` on epätosi ja `resolution` kotelon koko CSS-pikseleinä.
+ * Varjostin laskee `offset *= linewidth; offset /= resolution.y`, joten
+ * luku on CSS-pikseleitä ruudulla — ja koska resolution on CSS-mitta,
+ * se on sama luku myös dpr 2:lla (kalibrointi: paksuus 11 piirtyi
+ * työpöydällä 11 ja puhelimella 22 laitepikseliä = 11 css-pikseliä).
+ *
+ * Ensimmäiset pallototeutukset laskivat nämä asteina (0,05), ja viiva
+ * jäi alle pikselin levyiseksi eli näkymättömiin. Kaikki pallon POLKUJEN
+ * paksuudet ovat siksi `_PX`-nimisiä ruutupikseleitä — sama mitta kuin
+ * tasokartan `MATKAREITIN_VIIVA_PX` (js/ui.js), jossa `non-scaling-stroke`
+ * teki saman työn. KATKON jakso on yhä asteita: se muutetaan osuudeksi
+ * polun pituudesta, eli se on geometriaa eikä ruudun mitta.
+ */
+
+/** Reittiviivan paksuus RUUTUPIKSELEINÄ (tasokartalla 2 px). */
+export const MATKAREITIN_PAKSUUS_PX = 2.5;
+/**
+ * NAAPURIREITIN VARJO: vaalea uoma musteviivan alla, 0,75 px kummallakin
+ * puolella. Tasokartalla reitti kulki vaalealla pergamentilla; pallon
+ * pinnalla sama 42 % musta katoaa tummaan maastoon ja mereen, joten
+ * viivan alle jää sama pergamentin sävy kuin askelhelmissä. Varjo on
+ * viivaa hitusen alempana (REITIN_VARJON_KORKEUS), jotta kaksi
+ * päällekkäistä viivaa ei välky toistensa läpi.
+ */
+export const MATKAREITIN_VARJON_PAKSUUS_PX = 4;
 /** Katkoviivan jakso asteina (viiva + väli); tasokartalla 8 px. */
 export const MATKAREITIN_KATKO_AST = 0.16;
 /** Askelhelmen säde (Globe.gl pointRadius-yksikköä, vrt. KAUPUNKIPISTEEN_SADE 0,03). */
@@ -38,8 +66,17 @@ export const REITTIHELMEN_SADE = 0.014;
 /** Helmen korkeus: kaupunkipisteiden (0,003) alla, viivan (0,002) päällä. */
 export const REITTIHELMEN_KORKEUS = 0.0025;
 export const REITIN_KORKEUS = 0.002;
-/** Lentokaaren paksuus asteina ja katkojakso asteina. */
-export const LENTOKAAREN_PAKSUUS_AST = 0.06;
+export const REITIN_VARJON_KORKEUS = 0.0018;
+/**
+ * KAARI ON PUTKI, EI RUUTUVIIVA. `arcStroke` ei mene Line2:n läpi vaan
+ * kirjasto tekee siitä TubeGeometryn, jonka säde on `stroke / 2` pallon
+ * omissa yksiköissä (pallon säde 100). Luku ei siis ole asteita eikä
+ * ruutupikseleitä: 0,06 on noin 0,034° eli saapumisnäkymässä pari
+ * pikseliä, ja se ohenee zoomatessa ulos kuten kaikki pinnan geometria.
+ * Nimi on `_YKS`, jottei sitä sekoiteta polkujen `_PX`-lukuihin.
+ */
+export const LENTOKAAREN_PAKSUUS_YKS = 0.06;
+/** Lentokaaren katkojakso asteina (osuus lasketaan kaaren kulmasta). */
 export const LENTOKAAREN_KATKO_AST = 0.35;
 /**
  * Lentokaaren huippu pallon säteinä 180°:n lennolla; lyhyempi lento
@@ -55,6 +92,13 @@ export const REITIN_VARIT = {
   maa: 'rgba(74, 58, 36, 0.42)',
   meri: 'rgba(61, 85, 112, 0.42)',
   lento: 'rgba(150, 54, 40, 0.6)',
+  /*
+   * NAAPURIREITIN VARJO: sama pergamentti kuin askelhelmissä
+   * (HELMEN_VARI), mutta kolmannes peittävyydestä — varjo ei ole oma
+   * merkkinsä vaan pohja, jota vasten hento muste luetaan tummalta
+   * maastolta ja mereltä.
+   */
+  varjo: 'rgba(250, 243, 226, 0.3)',
   /*
    * AVAUSLENTO LUETAAN HARSON LÄPI. Lennon niukkuusharso on kalvo
    * kotelon päällä (js/pallolauta/lauta.js), ja kaari on sen ALLA
@@ -162,9 +206,9 @@ export function luoReitit({ pallo, ui, siirtyma, asteet }) {
     .pathPointAlt((p) => (p.length > 2 ? p[2] : REITIN_KORKEUS))
     .pathColor((d) => d.vari)
     // Paksuus ja katko datumista: pelin reitit saavat oletuksensa
-    // (MATKAREITIN_PAKSUUS_AST, katko laskettuna), linssin viiva omansa.
+    // (MATKAREITIN_PAKSUUS_PX, katko laskettuna), linssin viiva omansa.
     // Ilman katkoa viiva on yhtenäinen (jakso 1, väli 0).
-    .pathStroke((d) => d.paksuus ?? MATKAREITIN_PAKSUUS_AST)
+    .pathStroke((d) => d.paksuus ?? MATKAREITIN_PAKSUUS_PX)
     /*
      * KATKO KAHDESTA LUVUSTA, KUN NIITÄ ON KAKSI. Pelin reitit ja
      * linssien viivat antavat yhden `katko`n (viiva ja väli yhtä
@@ -182,7 +226,7 @@ export function luoReitit({ pallo, ui, siirtyma, asteet }) {
     .arcEndLat('endLat').arcEndLng('endLng')
     .arcColor((d) => d.vari ?? REITIN_VARIT.lento)
     .arcAltitude((d) => d.korkeus)
-    .arcStroke(LENTOKAAREN_PAKSUUS_AST)
+    .arcStroke(LENTOKAAREN_PAKSUUS_YKS)
     .arcDashLength((d) => d.katko * 0.6).arcDashGap((d) => d.katko * 0.4)
     .arcDashAnimateTime((d) => (d.elava ? LENTOKAAREN_ELO_MS : 0))
     .arcsTransitionDuration(siirtyma);
@@ -215,10 +259,24 @@ export function luoReitit({ pallo, ui, siirtyma, asteet }) {
       if (a) helmia.push({ laji: 'helmi', id: `${reitti.id}#${i}`, lat: a.lat, lon: a.lon });
     }
     const katko = pituusAst > 0 ? Math.min(0.5, (MATKAREITIN_KATKO_AST / 2) / pituusAst) : 0.5;
+    /*
+     * VARJO ON OMA DATUMINSA saman katkon ja saman polun päällä, mutta
+     * hitusen alempana: pisteille annetaan kolmas luku (korkeus), jonka
+     * pathPointAlt lukee. Sama polku kahdesti on halpaa — naapureita on
+     * kerrallaan kourallinen ja lista muistetaan reitin mukana.
+     */
+    const varjonPisteet = pisteet.map(([lat, lng]) => [lat, lng, REITIN_VARJON_KORKEUS]);
     m = {
       pisteet,
       pituusAst,
       helmet: helmia,
+      varjo: {
+        avain: `${reitti.id}#varjo`,
+        pisteet: varjonPisteet,
+        katko,
+        vari: REITIN_VARIT.varjo,
+        paksuus: MATKAREITIN_VARJON_PAKSUUS_PX,
+      },
       datum: {
         avain: reitti.id, pisteet, katko, vari: REITIN_VARIT[reitti.type === 'sea' ? 'meri' : 'maa'],
       },
@@ -269,7 +327,8 @@ export function luoReitit({ pallo, ui, siirtyma, asteet }) {
         const reitti = board.edgeById.get(eid);
         if (!reitti?.poly?.length) continue;
         const m = reitinMuisti(reitti);
-        polut.push(m.datum);
+        // Varjo ensin: se on musteviivan alla sekä listassa että pinnalla.
+        polut.push(m.varjo, m.datum);
         helmet.push(...m.helmet);
       }
     }
@@ -336,7 +395,7 @@ export function luoReitit({ pallo, ui, siirtyma, asteet }) {
    */
   let jalkiDatum = null;
 
-  const jalki = (pisteet, { paksuus = MATKAREITIN_PAKSUUS_AST, osuus = 1 } = {}) => {
+  const jalki = (pisteet, { paksuus = MATKAREITIN_PAKSUUS_PX, osuus = 1 } = {}) => {
     if (!pisteet?.length) {
       if (!jalkiDatum) return;
       jalkiDatum = null;

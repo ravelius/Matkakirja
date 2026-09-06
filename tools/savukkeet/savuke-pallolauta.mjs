@@ -1,6 +1,6 @@
 /*
  * Savuke: PALLOLAUTA, VAIHEET 1–4 — tasokartta pois tieltä, pallo pelin
- * lautana, siirrot ja merkit pallolla, linssikartta kuoressa (omistaja
+ * lautana, siirrot ja merkit pallolla, linssit pallon pinnalla (omistaja
  * 5.9.2026, Raamattu KARTTAPALLO ON PELILAUTA; docs/moduulit/karttapallo.md
  * luku 7).
  *
@@ -23,14 +23,14 @@
  *      *"Kohdekaupunki avaa aina kaupunkilehden"*).
  *   6. Kamera osuu kaupunkiin ±5 %: ajon jälkeen Sofia on kotelon
  *      keskellä ja näkyvä leveys on pyydetty (±5 %).
- *   7. VAIHE 4, LINSSIKARTTA: linssin valinta (maatiedot) avaa
- *      tasokartan kuoreen pallon päälle — svg#board saa kerrokset, pallo
- *      häipyy piiloon, kehys (linssin nimi, selite, Sulje) päällä; kartan
- *      kamera jatkaa pallon näkymästä ±5 %; kuoressa Liiku ja lehdet on
- *      estetty (Raamattu 4.9.2026: linssi blokkaa muun); Sulje päättää
- *      linssin, pallo palaa kartan viimeiseen näkymään ±5 %, svg#board
- *      tyhjenee, kartta nukkuu, kehys poistuu, pyramidipyyntöjä 0 kuoren
- *      jälkeen; Liiku ja lehdet toimivat taas.
+ *   7. AALTO 1C, LINSSI PALLON PINNALLE: linssin valinta (maatiedot)
+ *      piirtää maat PALLOLLE (linssit.polygonit → polygonsData) eikä
+ *      avaa linssikarttaa lainkaan (karttapallo.md luku 10.1);
+ *      tasokartta ei herää (svg#board tyhjä, kartta lepotilassa,
+ *      pyramidipyyntöjä 0), pallo pysyy näkyvissä eikä kamera liiku;
+ *      linssin sammutus purkaa polygonit ja maatiedot-tilan, ja Liiku
+ *      ja lehdet toimivat linssin jälkeen. Vanha kuorivartio
+ *      (linssikartta pallon päälle) oli aaltoa 1C edeltävä.
  *   Mittarit (raportti): tekstuurit lepotilassa (suunnitelman katto
  *      120), joutilas kehysaika p95, DOM-solmut.
  *
@@ -50,7 +50,8 @@
  *
  *   VAIHE 2, SIIRROT PALLOLLA (sama sivu):
  *   8. Liiku EI avaa linssikarttaa: pallo jää laudaksi, svg#board tyhjä;
- *      naapurireitit ilmestyvät pallolle (pathsData = Ateenan naapurit)
+ *      naapurireitit ilmestyvät pallolle (pathsData = 2 × naapurit:
+ *      musteviiva ja sen alla vaalea varjo)
  *      ja katoavat, kun liuku suljetaan.
  *   9. Nopanheitto pallolla: siirtovaihe, noppa on kuoressa pallon
  *      päällä, kohteet ovat H-merkkejä (htmlElementsData ja DOM =
@@ -491,127 +492,114 @@ if (AMPARI_TOIMII) {
     vaadi('   ajo on animoitu (kesto ≥ 400 ms)', kamera.kesto >= 400, `${kamera.kesto.toFixed(0)} ms`);
     if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, 'pallolauta-sofia.png') });
 
-    /* ================= VAIHE 4: LINSSIKARTTA ================= */
+    /* ================= AALTO 1C: LINSSI PALLON PINNALLE ================= */
 
-    /* 7. Linssin valinta → linssikartan kuori → Sulje → pallo (vaihe 4). */
+    /*
+     * 7. Linssin valinta piirtää linssin PALLOLLE eikä avaa
+     * linssikarttaa (karttapallo.md luku 10.1, aallot 1A–1C:
+     * ui.sytytaLinssi kutsuu linssin `pallolle`-funktiota, joka piirtää
+     * js/pallolauta/linssit.js:n apurilla). Maatiedot on maapolygoneja
+     * (js/vertailu.js piirraMaatPallolle → linssit.polygonit), joten
+     * mittari on polygonsData. Tasokartta ei saa herätä: svg#board
+     * pysyy tyhjänä, kartta lepotilassa ja pyramidiin ei lähde
+     * pyyntöjä. Vanha kuorivartio (linssikartta) oli aaltoa 1C
+     * edeltävä; se on korvattu tällä.
+     */
     const pyramidiEnnen = pyynnot.pyramidi;
-    const kuoriAuki = await sivu.evaluate(async () => {
+    const linssiPallolla = await sivu.evaluate(async () => {
       const { ui } = window.matkakirja;
       const ennen = ui.pallolauta.kamera.kameranTila();
+      if (!ui.game.player.linssit.includes('maatiedot')) ui.game.player.linssit.push('maatiedot');
       ui.valitseLinssi('maatiedot');
-      // Häivytys 250 ms + laudan piirto.
-      await new Promise((r) => setTimeout(r, 900));
+      // Aineiston lataus (maapolygonit) + kerroksen siirtymä.
+      for (let i = 0; i < 80; i += 1) {
+        if ((ui.pallonInstanssi?.polygonsData?.() ?? []).length) break;
+        await new Promise((r) => setTimeout(r, 100));
+      }
+      await new Promise((r) => setTimeout(r, 400));
       const kuori = document.querySelector('.pallo-kuori.pallolauta');
-      const kehys = document.querySelector('.linssikartta-kehys');
-      const kt = ui.kartta.kameranTila();
-      // Liiku ja lehdet kuoressa: Matkusta harmaana, vaihdaLiuku ei avaa,
-      // kaupungin napautus (avaaTutkinta) ei avaa lehteä.
-      ui.vaihdaLiuku();
-      const liukuAuki = ui.liukuAuki;
-      const monitoimi = document.querySelector('.monitoimi-nappi');
-      ui.avaaTutkinta(ui.game.cityOf());
-      await new Promise((r) => setTimeout(r, 200));
+      const pt = ui.pallolauta.kamera.kameranTila();
       return {
         ennen: { x: ennen.x, y: ennen.y, leveys: ennen.leveys },
-        kartta: kt ? { x: kt.x, y: kt.y, leveys: ui.mapPane.clientWidth / kt.skaala } : null,
+        nyt: pt ? { x: pt.x, y: pt.y, leveys: pt.leveys } : null,
         linssi: ui.linssiValittu,
-        linssikartta: Boolean(ui.linssikartta?.linssi),
-        svgLapsia: document.querySelectorAll('#board *').length,
-        kuoriPiilossa: Boolean(kuori?.hidden),
-        kuoriLinssinAlla: Boolean(kuori?.classList.contains('linssin-alla')),
+        pallolinssi: ui.pallolinssi?.tunnus ?? null,
+        polygoneja: ui.pallonInstanssi?.polygonsData?.().length ?? 0,
+        linssikartta: Boolean(ui.linssikartta),
+        kehys: Boolean(document.querySelector('.linssikartta-kehys')),
         luokka: document.body.classList.contains('linssikartta-auki'),
+        maatiedotTila: document.body.classList.contains('maatiedot-tila'),
+        linssiLuokka: document.body.classList.contains('linssi-maatiedot'),
+        svgLapsia: document.querySelectorAll('#board *').length,
         lepotila: ui.kartta.lepotila,
-        kehys: Boolean(kehys) && getComputedStyle(kehys).opacity === '1',
-        otsikko: kehys?.querySelector('.linssikartta-nimi')?.textContent ?? '',
-        selite: kehys?.querySelector('.linssikartta-selite')?.textContent ?? '',
-        sulje: Boolean(kehys?.querySelector('.linssikartta-sulje')),
-        maatiedot: document.body.classList.contains('maatiedot-tila') || ui.kartta.maatiedotHalutaan?.() === true,
-        liukuAuki,
-        monitoimiEstetty: monitoimi ? monitoimi.disabled : null,
-        lehti: Boolean(ui.arrivalDialog?.open),
+        kuoriNakyy: Boolean(kuori) && !kuori.hidden && !kuori.classList.contains('linssin-alla'),
         dom: document.querySelectorAll('*').length,
       };
     });
-    const k = kuoriAuki;
-    vaadi('7. linssin valinta avaa linssikartan kuoreen: tasokartta herää, pallo häipyy piiloon, kehys (otsikko + Sulje) päällä',
-      k.linssi === 'maatiedot' && k.linssikartta && k.svgLapsia > 100 && k.kuoriPiilossa && k.kuoriLinssinAlla
-        && k.luokka && k.lepotila === false && k.kehys && k.otsikko === 'Maiden tiedot' && k.selite.length > 10 && k.sulje,
-      JSON.stringify({ linssi: k.linssi, linssikartta: k.linssikartta, svg: k.svgLapsia, piilossa: k.kuoriPiilossa, kehys: k.kehys, otsikko: k.otsikko, sulje: k.sulje }));
-    const kartanLeveys = k.kartta?.leveys ?? 0;
-    vaadi('   kartan kamera jatkaa pallon näkymästä ±5 % (keskipiste ja näkyvä leveys)',
-      k.kartta && Math.abs(k.kartta.x - k.ennen.x) <= 0.05 * k.ennen.leveys
-        && Math.abs(k.kartta.y - k.ennen.y) <= 0.05 * k.ennen.leveys
-        && Math.abs(kartanLeveys - k.ennen.leveys) <= 0.05 * k.ennen.leveys,
-      `pallo ${JSON.stringify(k.ennen)} → kartta ${JSON.stringify(k.kartta)}`);
-    vaadi('   kuoressa Liiku ja lehdet on estetty: Matkusta harmaana, liuku ei aukea, kaupungin napautus ei avaa lehteä',
-      k.liukuAuki === false && k.monitoimiEstetty === true && k.lehti === false,
-      JSON.stringify({ liuku: k.liukuAuki, matkusta: k.monitoimiEstetty, lehti: k.lehti }));
-    tieto('pyramidipyyntöjä kuoren avauksesta', pyynnot.pyramidi - pyramidiEnnen);
-    tieto('DOM-solmuja kuoressa', k.dom);
-    if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, 'pallolauta-linssikartta.png') });
+    const k = linssiPallolla;
+    vaadi('7. linssi piirtyy pallon pinnalle: maatiedot polygoneina, linssikarttaa ei avata',
+      k.linssi === 'maatiedot' && k.pallolinssi === 'maatiedot' && k.polygoneja > 100
+        && !k.linssikartta && !k.kehys && !k.luokka && k.maatiedotTila && k.linssiLuokka,
+      JSON.stringify(k));
+    vaadi('   tasokartta ei herää linssistä: svg#board tyhjä, kartta lepotilassa, pallo näkyvissä',
+      k.svgLapsia === 0 && k.lepotila === true && k.kuoriNakyy,
+      JSON.stringify({ svg: k.svgLapsia, lepotila: k.lepotila, kuori: k.kuoriNakyy }));
+    vaadi('   pallon kamera pysyy paikallaan (linssi ei siirrä lautaa) ±5 %',
+      k.nyt && Math.abs(k.nyt.x - k.ennen.x) <= 0.05 * k.ennen.leveys
+        && Math.abs(k.nyt.y - k.ennen.y) <= 0.05 * k.ennen.leveys
+        && Math.abs(k.nyt.leveys - k.ennen.leveys) <= 0.05 * k.ennen.leveys,
+      `ennen ${JSON.stringify(k.ennen)} → nyt ${JSON.stringify(k.nyt)}`);
+    tieto('maapolygoneja pallolla', k.polygoneja);
+    tieto('pyramidipyyntöjä linssin avauksesta', pyynnot.pyramidi - pyramidiEnnen);
+    tieto('DOM-solmuja linssi päällä', k.dom);
+    if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, 'pallolauta-linssi-pallolla.png') });
 
-    const suljettu = await sivu.evaluate(async () => {
+    const linssiPois = await sivu.evaluate(async () => {
       const { ui } = window.matkakirja;
-      // Pelaaja panoroi linssikartalla: paluun on osuttava TÄHÄN näkymään.
-      await ui.kartta.ajaKamera({ x: 6000, y: 2500, leveys: 400 }, { kesto: 0 });
-      const kt = ui.kartta.kameranTila();
-      const kartta = { x: kt.x, y: kt.y, leveys: ui.mapPane.clientWidth / kt.skaala };
-      document.querySelector('.linssikartta-sulje').click();
-      const heti = {
-        linssi: ui.linssiValittu, linssikartta: Boolean(ui.linssikartta), luokka: document.body.classList.contains('linssikartta-auki'),
-      };
-      const odotaHaivytys = async () => {
-        const alku = Date.now();
-        for (let i = 0; i < 160; i += 1) {
-          const k = document.querySelector('.pallo-kuori.pallolauta');
-          if (k && !k.hidden && getComputedStyle(k).opacity === '1' && window.matkakirja.ui.kartta.lepotila) break;
-          await new Promise((r) => setTimeout(r, 50));
-        }
-        return Date.now() - alku;
-      };
-      const haivytysMs = await odotaHaivytys();
+      ui.valitseLinssi(null);
+      const alku = Date.now();
+      for (let i = 0; i < 80; i += 1) {
+        if (!(ui.pallonInstanssi?.polygonsData?.() ?? []).length) break;
+        await new Promise((r) => setTimeout(r, 50));
+      }
+      const purkuMs = Date.now() - alku;
       const kuori = document.querySelector('.pallo-kuori.pallolauta');
-      const pt = ui.pallolauta.kamera.kameranTila();
-      // Liiku toimii taas (avataan ja suljetaan, jottei vartio 8 peri tilaa).
+      // Liiku ja lehdet toimivat linssin jälkeen (avataan ja suljetaan,
+      // jottei vartio 8 peri tilaa).
       ui.vaihdaLiuku();
       const liukuAukeaa = ui.liukuAuki;
       ui.suljeLiuku();
-      const stayBtn = [...document.querySelectorAll('.actions button')].find((b) => /^tutki$/i.test(b.getAttribute('aria-label') ?? ''));
+      const tutki = [...document.querySelectorAll('.actions button')]
+        .find((b) => /^tutki$/i.test(b.getAttribute('aria-label') ?? ''));
       return {
-        heti,
-        haivytysMs,
-        kartta,
-        pallo: pt ? { x: pt.x, y: pt.y, leveys: pt.leveys } : null,
+        purkuMs,
+        linssi: ui.linssiValittu,
+        pallolinssi: ui.pallolinssi?.tunnus ?? null,
+        polygoneja: ui.pallonInstanssi?.polygonsData?.().length ?? 0,
+        maatiedotTila: document.body.classList.contains('maatiedot-tila'),
         svgLapsia: document.querySelectorAll('#board *').length,
-        kuoriNakyy: Boolean(kuori) && !kuori.hidden && getComputedStyle(kuori).opacity === '1',
         lepotila: ui.kartta.lepotila,
-        kehys: Boolean(document.querySelector('.linssikartta-kehys')),
-        maatiedot: document.body.classList.contains('maatiedot-tila'),
+        kuoriNakyy: Boolean(kuori) && !kuori.hidden && getComputedStyle(kuori).opacity === '1',
         liukuAukeaa,
-        tutkiEstetty: stayBtn ? stayBtn.disabled : null,
+        tutkiEstetty: tutki ? tutki.disabled : null,
         dom: document.querySelectorAll('*').length,
       };
     });
-    const s7 = suljettu;
-    vaadi('   Sulje päättää linssin heti (valinta null, kuori kiinni) ja häivytyksen jälkeen pallo on näkyvissä, svg#board tyhjä, kartta lepotilassa, kehys poissa',
-      s7.heti.linssi === null && !s7.heti.linssikartta && !s7.heti.luokka
-        && s7.svgLapsia === 0 && s7.kuoriNakyy && s7.lepotila === true && !s7.kehys && !s7.maatiedot,
-      JSON.stringify({ heti: s7.heti, svg: s7.svgLapsia, kuori: s7.kuoriNakyy, lepotila: s7.lepotila, kehys: s7.kehys }));
-    vaadi('   pallon kamera palaa kartan viimeiseen näkymään ±5 %',
-      s7.pallo && Math.abs(s7.pallo.x - s7.kartta.x) <= 0.05 * s7.kartta.leveys
-        && Math.abs(s7.pallo.y - s7.kartta.y) <= 0.05 * s7.kartta.leveys
-        && Math.abs(s7.pallo.leveys - s7.kartta.leveys) <= 0.05 * s7.kartta.leveys,
-      `kartta ${JSON.stringify(s7.kartta)} → pallo ${JSON.stringify(s7.pallo)}`);
-    vaadi('   sulkeminen palauttaa Liikun ja lehdet', s7.liukuAukeaa === true && s7.tutkiEstetty !== true,
+    const s7 = linssiPois;
+    vaadi('   linssin sammutus purkaa polygonit ja tilan; pallo jää lautana näkyviin',
+      s7.linssi === null && s7.pallolinssi === null && s7.polygoneja === 0 && !s7.maatiedotTila
+        && s7.svgLapsia === 0 && s7.lepotila === true && s7.kuoriNakyy,
+      JSON.stringify(s7));
+    vaadi('   Liiku ja lehdet toimivat linssin jälkeen', s7.liukuAukeaa === true && s7.tutkiEstetty !== true,
       JSON.stringify({ liuku: s7.liukuAukeaa, tutki: s7.tutkiEstetty }));
-    tieto('DOM-solmuja kuoren jälkeen', s7.dom);
-    tieto('häivytys sulkemisesta pallon täyteen näkyvyyteen (ms; 250 + kontin WebGL-kehys)', s7.haivytysMs);
-    // Pyramidi on hiljaa kuoren jälkeen: kesken olleet pyynnöt ehtivät
+    tieto('DOM-solmuja linssin jälkeen', s7.dom);
+    tieto('polygonien purku (ms)', s7.purkuMs);
+    // Pyramidi on hiljaa linssin jälkeen: kesken olleet pyynnöt ehtivät
     // perille 300 ms:ssa, sen jälkeen 1,5 s:ssa ei yhtään uutta.
     await sivu.waitForTimeout(300);
     const pyramidiSulun = pyynnot.pyramidi;
     await sivu.waitForTimeout(1500);
-    vaadi('   kuoren jälkeen pyramidipyyntöjä 0', pyynnot.pyramidi === pyramidiSulun, `${pyynnot.pyramidi - pyramidiSulun} uutta`);
+    vaadi('   linssin jälkeen pyramidipyyntöjä 0', pyynnot.pyramidi === pyramidiSulun, `${pyynnot.pyramidi - pyramidiSulun} uutta`);
 
     /* ================= VAIHE 2: SIIRROT PALLOLLA ================= */
 
@@ -640,8 +628,10 @@ if (AMPARI_TOIMII) {
     vaadi('8. Liiku ei avaa linssikarttaa: pallo jää laudaksi, svg#board tyhjä',
       liiku.liukuAuki && !liiku.linssikartta && liiku.kuoriNakyy && liiku.lepotila && liiku.svgLapsia === 0,
       JSON.stringify(liiku));
-    vaadi('   naapurireitit pallolla liu\'un ollessa auki (pathsData = Ateenan naapurit), pois suljettuna',
-      liiku.polkuja === liiku.naapureita && liiku.naapureita > 0 && liiku.polkujaSuljettuna === 0,
+    // Jokainen naapurireitti on kaksi polkua: vaalea varjo ja sen
+    // päällä musteviiva (js/pallolauta/reitit.js MATKAREITIN_VARJON_PAKSUUS_PX).
+    vaadi('   naapurireitit pallolla liu\'un ollessa auki (pathsData = 2 × Ateenan naapurit: viiva + varjo), pois suljettuna',
+      liiku.polkuja === liiku.naapureita * 2 && liiku.naapureita > 0 && liiku.polkujaSuljettuna === 0,
       JSON.stringify(liiku));
     tieto('askelhelmiä naapurireiteillä', liiku.helmia);
 

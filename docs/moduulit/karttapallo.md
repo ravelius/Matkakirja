@@ -1947,3 +1947,130 @@ paneelissa on sama kuva; kuvaputken erä poistaa toiston itsestään.
 tools/tee-pienet-kuvat.mjs yleistetään toiselle kansiolle, riittää
 poistaa `pienetKuvat: false` — kortit kevenevät alle sadasosaan.
 (3) Luennat ja musiikki odottavat ajoa.
+
+**Viivapaksuudet pallolla: asteista ruutupikseleiksi (6.9.2026).** Luvun
+10.3 avauslentomerkintä jätti auki, että `MATKAREITIN_PAKSUUS_AST` (0,05)
+ja linssien uomapaksuudet oli laskettu asteina, vaikka `pathStroke` on
+mitattuna ruutupikseleitä. Ne piirtyivät siis alle pikselin hiuksina.
+Tässä erässä ne on korjattu ja MITATTU.
+
+*Mittatikku: neljä tunnettua testiviivaa.* Laudan linssiapurille
+annettiin magentat polut paksuuksilla 1 / 2,5 / 4 / 11 ja kaappauksesta
+laskettiin viivan leveys laitepikseleinä (Chromium, swiftshader):
+
+| paksuus | 1400 × 900, dpr 1 | 390 × 844, dpr 2 |
+|---|---|---|
+| 1 | 1 px | 2 px |
+| 2,5 | 3 px | 5 px |
+| 4 | 4 px | 8 px |
+| 11 | 11 px | 22 px |
+
+**DPR EI VAIKUTA.** LineMaterialin `resolution` on kotelon koko
+CSS-pikseleinä (mitattu 1379 × 821 ja 374 × 775), ja piirtopuskuri on
+dpr-kertainen, joten laitepikseleitä tulee tasan dpr × luku eli
+CSS-pikseleinä sama viiva kummallakin. Kompensointia ei siis tarvita —
+puhelimen viiva EI ole puolta ohuempi.
+
+*Vakiot ennen → jälkeen (kaikki ruutupikseleitä).*
+
+| vakio | ennen | jälkeen |
+|---|---|---|
+| `reitit.js MATKAREITIN_PAKSUUS_AST` → `_PX` | 0,05° | 2,5 px |
+| `reitit.js MATKAREITIN_VARJON_PAKSUUS_PX` | — | 4 px (uusi) |
+| `vesistot.js PALLON_UOMA_AST` → `_PX` | 0,06 / 0,04 / 0,025° | 3,6 / 2,4 / 1,6 px |
+| `vesistot.js PALLON_PENGER_AST` → `_PX` | 0,14 / 0,1° | 7 / 5 px |
+| `avaus.js AVAUSLENNON_VIIVAN_PX` | 11 px | 11 px (ennallaan) |
+| `aikajana.js REITIN_PAKSUUS_PX` | 3 px | 3 px (ennallaan) |
+
+Uoma on laudan oma mitta (LEVEYS 3,0 / 2,0 / 1,3 px) kerrottuna 1,2:lla,
+koska pallon pohja on tummempi ja kirjavampi kuin pergamentti; penger on
+laudan luku sellaisenaan, sillä penger on REUNA ja reunan mitta on
+ruudulla sama molemmilla laudoilla. Zoomi ei enää ohenna mitään: aiempi
+avoin kysymys (aste on kiinteä pallon pinnalla) katosi korjauksen myötä.
+
+*Naapurireitin varjo.* Tasokartalla reitti kulki vaalealla pergamentilla;
+pallolla sama 42 %:n muste hukkuu tummaan maastoon ja mereen. Jokainen
+naapurireitti on nyt KAKSI polkua: 4 px:n vaalea varjo
+(`REITIN_VARIT.varjo`, sama pergamentti kuin askelhelmissä, peittävyys
+0,3) korkeudella 0,0018 ja sen päällä 2,5 px:n musteviiva korkeudella
+0,002 — sama katkoviiva molemmilla, joten katko lukeutuu yhtenä merkkinä.
+Eri korkeus on tarpeen: samalle syvyydelle jätettynä kaksi Line2:ta
+välkkyisi toistensa läpi kameran liikkuessa.
+
+*Kaari on putki, ei ruutuviiva.* `arcStroke` ei mene Line2:n läpi:
+kirjasto rakentaa siitä `TubeGeometry`n, jonka säde on `stroke / 2`
+pallon omissa yksiköissä (säde 100). Luku ei siis ole asteita eikä
+pikseleitä, joten `LENTOKAAREN_PAKSUUS_AST` on nimetty
+`LENTOKAAREN_PAKSUUS_YKS`:ksi eikä sen arvoa (0,06) ole muutettu.
+
+*Mitä EI ollut korjattavana.* Topografia piirtyy kalvona, vertailu ja
+maatiedot polygoneina — kummallakaan ei ole polkuja. Polygonin `reuna`
+menee `polygonStrokeColor`iin, joka on kirjastossa tavallinen
+`THREE.Line` ilman leveyttä (aina 1 px); sitä ei voi säätää eikä siinä
+ole `_AST`-vakiota.
+
+*Mitattu ennen/jälkeen (Ateena, näkyvä leveys 240).* Naapurireitit:
+ennen 3 polkua, `linewidth` 0,05 → magentaksi värjättynä ruudulla
+mediaani 1 px ja vain kourallinen osumarivejä eli käytännössä
+näkymätön. Jälkeen 6 polkua (3 varjoa 4 px + 3 viivaa 2,5 px) →
+mediaani 5 laitepikseliä työpöydällä ja 8 puhelimella (dpr 2), ja
+katkoviiva erottuu kaappauksesta silmällä. Vesistöt: `linewidth`-jakauma
+ennen 0,025 × 85 / 0,04 × 71 / 0,06 × 13 / 0,1 × 71 / 0,14 × 13, jälkeen
+1,6 × 85 / 2,4 × 71 / 3,6 × 13 / 5 × 71 / 7 × 13; joet lukeutuvat nyt
+koko pallolta (kaappaus Euroopasta ja Afrikasta). Vertailulinssi ei
+piirrä polkuja kummassakaan (133 polygonia). Sivuvirheitä ei tullut
+kummassakaan näkymässä.
+
+*Vartiot.* tests/pallolinssit.test.mjs vaatii, ettei pallon POLKUJEN
+paksuusvakioissa ole `_AST`-loppuisia nimiä ja että jokainen arvo on
+1,5–12 px; avauslennon 11 ja aikajanan 3 on naulattu erikseen.
+tests/vesistot-pallolla.test.mjs vaatii saman uomilta ja penkereiltä.
+
+*Avoin Fablelle.* Penger (7 px) on laudan luku, ja se lukeutuu
+maailmanlaajuisessa näkymässä puhelimella jykevänä: pääjoet ovat
+paksuja sinisiä nauhoja. Yhden luvun (`PALLON_PENGER_PX`) pudotus
+keventäisi sen, mutta se olisi taiteellinen päätös eikä yksikkökorjaus —
+jätetty omistajan katsottavaksi.
+
+**Savukkeet nykyiseen arkkitehtuuriin (6.9.2026).** Kaksi savuketta oli
+jäänyt aaltoja edeltävään maailmaan:
+
+- `savuke-pallolauta.mjs` vartio 7 odotti, että linssin valinta avaa
+  linssikartan kuoren pallon päälle. Aallossa 1C maatiedot on pallolinssi,
+  joten vartio mittaa nyt sen, mitä sopimus 10.1 lupaa: `polygonsData`
+  saa 133 maata, `ui.pallolinssi` on maatiedot, linssikarttaa EI avata,
+  svg#board pysyy tyhjänä ja kartta lepotilassa, pyramidipyyntöjä 0,
+  kamera ei liiku, ja sammutus purkaa polygonit ja `maatiedot-tila`n.
+  Vartio 8 laskee naapurireitit nyt kahtena polkuna reittiä kohti
+  (viiva + varjo). Ajossa 37/38 läpi; ainoa punainen on vartio 6
+  (kamera-ajo Sofiaan, dy 24 px > raja 18,7), joka kaatuu SAMOIN
+  mainissa ilman tämän erän muutoksia (mitattu erikseen: dy 34,8 px) —
+  se on kontin kotelo/piirtopuskuri-kokoero, ei tämän erän vika.
+- `savuke-aikajana.mjs --lauta pallo` odotti aaltoa 2A edeltävää kuorta.
+  Nyt se mittaa aikajanan pallolla: valot ovat linssiapurin merkkejä
+  (`aikajana:<i>`, 25 kpl), tummennus on ruutukalvo, kello ja paneeli
+  ovat karttaruudussa, linssikarttaa ei avata ja tasokartta nukkuu; Sulje
+  purkaa pallolinssin (merkkejä 0, kalvo pois, pallo näkyvissä). Kamera-
+  ja purkuvartioiden mittausikkuna odottaa nyt tapahtumaa (näkymä
+  paikallaan, valot tyhjentyneet) kiinteän odotuksen sijaan, koska kontin
+  ohjelmisto-WebGL piirtää pallon liu'ut tasokarttaa hitaammin.
+  Kameravartio on nyt laudan mukainen: tasokartalla koko kaari (Lontoo ja
+  Pietari kuvassa), pallolla LÄHIKUVA — pallon ajo alkaa ensimmäisen
+  lampun yltä (`sovitaAlkuun`, omistaja 5.9.2026), eikä koko kaaren
+  rajausta enää vaadita. Mitattu näkyvä leveys pallolla on 434
+  lautayksikköä (tasokartalla 2 371). HAVAINTO FABLELLE: ensimmäinen
+  lamppu (Glasgow, 5691, 1126) jäi mittauksessa pallon `nakyvaAlue()`:n
+  suorakulmion ULKOPUOLELLE noin 66 lautayksikköä yläreunan yli, vaikka
+  Lontoo oli kuvassa — joko ajo jättää lampun karusellin yläpuolelle
+  odotettua ylemmäs tai pallon suorakulmainen arvio näkymästä on
+  pystysuunnassa siirtynyt (sama kokoero kuin savuke-pallolaudan
+  vartiossa 6). Ei korjattu tässä erässä: se on aallon 2A kameran asia. Kolme vartiota (kortin vuosiluku,
+  menneiden korttien sumennus, Tiedeliitteen paneeli) kaatuu YHTÄ LAILLA
+  tasokartalla (`--lauta kartta`), eli ne ovat sisällön ja tyylin
+  ajautumista eivätkä pallon asia; ne on jätetty koskematta ja kirjattu
+  tähän.
+- `savuke-avauslento.mjs --lauta pallo` ajettiin samalla: 7/7 läpi, myös
+  P6 (lehti aukeaa napautuksesta perillä) ja P7 (kamera kohdekaupungissa
+  ±5 %). Mittausikkunaa EI siis levennetty — se odottaa jo tapahtumaa
+  (`waitForFunction`: kone näkyy, arkki väistyy, `kartalento` päättyy)
+  eikä kelloa, ja kontin nopeus riitti sellaisenaan.
