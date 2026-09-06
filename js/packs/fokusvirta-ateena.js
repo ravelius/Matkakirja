@@ -154,11 +154,15 @@ export const FOKUSVIRTA_ATEENA = {
      * kohtaloa — se on seuraavan kappaleen asia, ja järjestys on
      * tarkoituksellinen: myönnytys ensin, palkinto perässä.
      */
+    /*
+     * LYHENNETTY PUHETTA VARTEN (omistaja 6.9.2026: Ateenan ja Sofian
+     * repliikit lyhennetään ennen äänen generointia). Myönnytys ja
+     * vastahakoinen kunnioitus säilyvät, selittävä keskiosa tiivistyi.
+     */
     maadoitus: '"Molemmat puolet saattavat olla oikeassa yhtä aikaa." No, '
       + 'isoisälläsi oli tapana tehdä toriuutisesta elämänohje, ja yleensä '
-      + 'minä kutistan sellaisen takaisin sen torin kokoiseksi. Mut en tällä '
-      + 'kertaa. Hän osui, ja se harmittaa minua just sen verran kun '
-      + 'kohtuullista on.',
+      + 'minä kutistan sen torin kokoiseksi. Mut en tällä kertaa. Hän osui, '
+      + 'ja se harmittaa just sen verran kun kohtuullista on.',
     teksti: 'Isoisäsi ei koskaan saanut tietää, miten sen kullan kävi. '
       + 'Aitoa se oli — mut ei Priamoksen. Ja löytäjä rakensi palatsinsa '
       + 'tuonne kadun varteen; sen friisissä se kaivaa vieläkin. Katso '

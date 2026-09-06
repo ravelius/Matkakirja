@@ -179,9 +179,8 @@ const SAHKE_SOFIA = {
    * isoisä punnitsi lapiota ja lähti, pöllö osti lapion.
    */
   johdanto: 'No. Pöllö istuu kuopassa eikä kerro löytöään ennen '
-    + 'tunnussanaa. Vastaa kahteen aukkoon: kartan kohde Bulgarian '
-    + 'luettelosta ja vuosiluku. Molemmat lukevat kartan kohteissa, joita '
-    + 'olet napauttanut auki.',
+    + 'tunnussanaa. Vastaa kaksi aukkoa: kartan kohde Bulgarian '
+    + 'luettelosta ja vuosiluku. Molemmat lukevat kartan kohteissa.',
 
   hakemistoMaa: 'BGR',
 
@@ -232,11 +231,10 @@ const SAHKE_SOFIA = {
    * PULLA VINKIKSI). Vinkki kertoo MISTÄ vastaus löytyy — se ei sano
    * kohteen nimeä eikä vuosilukua, joten ostajakin kaivaa itse.
    */
-  vinkki: 'No. Kuuntele nyt. Se kulta ei ole Sofiassa, se on meren '
-    + 'rannalla. Katso kartalta Mustanmeren puolelta se kaupunki, jonka '
-    + 'kohde puhuu maailman vanhimmasta kullasta, ja vuosiluku lukee '
-    + 'samassa kortissa. Löytö on nuorempi kuin luulisi, sillon '
-    + 'seitkytluvulla.',
+  vinkki: 'No. Kuuntele nyt. Se kulta ei ole Sofiassa vaan meren '
+    + 'rannalla. Katso Mustanmeren puolelta se kaupunki, jonka kohde puhuu '
+    + 'maailman vanhimmasta kullasta. Vuosiluku lukee samassa kortissa, '
+    + 'sillon seitkytluvulla.',
 
   /*
    * PUOLIKAS PULLA = SUORA LINKKI (omistaja 3.9.2026). Livia ei kerro
@@ -250,21 +248,20 @@ const SAHKE_SOFIA = {
 
   vastaussahke: 'PÖLLÖLLE STOP\nTUNNUSSANA TÄSMÄÄ STOP\nLIVIA TULEE STOP',
   oikein: 'Se on se. Yli kolmetuhatta kultaesinettä yhdestä '
-    + 'hautausmaasta, ja ne olivat maassa ennen kuin kukaan oli keksinyt '
-    + 'kirjoittamista. Minä vien tämän pöllölle nyt heti. Älä sinä jää '
-    + 'tähän seisomaan, minä palaan kyllä.',
+    + 'hautausmaasta, maassa ennen kuin kukaan osasi kirjoittaa. Minä vien '
+    + 'tämän pöllölle nyt heti. Älä jää tähän seisomaan, minä palaan kyllä.',
   fakta: 'Varnan nekropoli löytyi 1974, ja siitä on kaivettu esiin yli '
     + '3 000 kultaesinettä. Löytö on ajoitettu vuosille 4600–4200 eaa., '
     + 'eli se on maailman vanhin tunnettu kulta-aarre.',
   lento: 'Anna Livian mennä',
 
   lahetetty: 'SÄHKE LÄHETETTY STOP\nODOTA VASTAUSTA STOP',
-  odotus: 'Livia on matkalla. Se palaa kun se palaa — ja sillä välin '
-    + 'sinä saat tehdä mitä huvittaa.',
+  odotus: 'Livia on matkalla. Se palaa kun se palaa — sillä välin sinä '
+    + 'saat tehdä mitä huvittaa.',
 
-  paluu: 'Perillä oltiin. Pöllö oli kuoppansa pohjalla mullassa ja '
-    + 'sanoi, että lapio oli hyvä sijoitus. Sitten se kertoi paikan. Se '
-    + 'on tässä, sinun jalkojesi alla — katso alas.',
+  paluu: 'Perillä oltiin. Pöllö oli kuopan pohjalla mullassa ja sanoi, '
+    + 'että lapio oli hyvä sijoitus. Sitten se kertoi paikan: se on tässä, '
+    + 'jalkojesi alla. Katso alas.',
 };
 
 export const FOKUSVIRTA_SOFIA = {
@@ -359,13 +356,19 @@ export const FOKUSVIRTA_SOFIA = {
      * puhekielisen lopun, joten kumpaankin suuntaan lipsuminen kaataa
      * savukkeen.
      */
+    /*
+     * LYHENNETTY PUHETTA VARTEN (omistaja 6.9.2026: Sofian repliikit
+     * lyhennetään ennen äänen generointia). Kolmesta faktasta jäi kaksi
+     * (vuosiluku ja etäisyys; kuolemantuomiot); Sofian pääkaupunkiasia
+     * on täkyissä. Savukkeen ja testin vartioimat kohdat säilyvät:
+     * "Kääk", "hurja juttu", 1873, "sataviisikymmentä vuotta" auki ja
+     * "Mut kyllä sen kestää lukea" lopussa.
+     */
     maadoitus: 'Kääk. No johan oli hurja juttu — luin sen kahdesti. '
       + 'Sitten minä katsoin vuosilukua: helmikuu 1873, siitä on yli '
-      + 'sataviisikymmentä vuotta. Laki oli silloin ihan eri, ja '
-      + 'kuolemantuomioita jaettiin melkein joka maassa. Sofiaakin '
-      + 'komennettiin toisesta pääkaupungista, ja omansa siitä tuli vasta '
-      + 'kuusi vuotta myöhemmin. Ei se juttua pienennä. Mut kyllä sen '
-      + 'kestää lukea, kun muistaa miten kaukana se on.',
+      + 'sataviisikymmentä vuotta, ja kuolemantuomioita jaettiin silloin '
+      + 'melkein joka maassa. Ei se juttua pienennä. Mut kyllä sen kestää '
+      + 'lukea, kun muistaa miten kaukana se on.',
     teksti: 'Hirttopaikalla seisoo nyt kolmentoista metrin '
       + 'graniittipatsas, ja sitä hautaa etsitään vieläkin. Etsintöjä on '
       + 'jatkunut sataviisikymmentä vuotta — se kynttilä ikkunalla oli '

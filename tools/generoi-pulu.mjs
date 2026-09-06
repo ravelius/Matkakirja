@@ -144,7 +144,8 @@ const PUHE_OSOITE = `${API}/v1/text-to-speech`;
  * v3:lle, jolla ei ole speed-säädintä).
  */
 const MALLI = 'eleven_multilingual_v2';
-export const PULU_AANI_OLETUS = process.env.PULU_AANI ?? '';
+/** "Dr. Von - Quirky, Mad Scientist" (omistajan valinta 6.9.2026, haettu --haku "Dr. Von"). */
+export const PULU_AANI_OLETUS = process.env.PULU_AANI ?? 'yjJ45q8TVCrtMhEKurxY';
 const TAGIT_KAYTOSSA = MALLI === 'eleven_v3';
 const STABILITY = 0.5;
 const SIMILARITY = 0.75;
