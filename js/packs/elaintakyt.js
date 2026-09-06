@@ -1582,6 +1582,78 @@ export const ELAINTAKYT = {
     lon: 31.3,
     lat: 31.2,
   },
+  /*
+   * ── ERÄ M10, AASIA 3 6.9.2026 ──────────────────────────────────
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M10 (JPN, KOR, TWN, KAZ, MNG) toi neljä uutta eläintäkyä.
+   * Japanilla oli täky jo ennestään, eikä siihen ole koskettu.
+   *
+   * PAIKAT ON MITATTU. Jokainen piste on oman maansa rajojen sisällä,
+   * maalla ja vähintään 35 lautayksikön päässä jokaisesta
+   * kaupunkimerkistä (tests/elaintakyt.test.mjs
+   * VAHIN_ETAISYYS_KAUPUNKIIN) sekä 30 yksikön päässä muista
+   * eläintäyistä. Tiukin tapaus on Taiwan: saaren Taipei-laatta on
+   * laudalla keskellä saarta, joten karhun piste oli haettava saaren
+   * eteläosasta (etäisyys 49,7).
+   *
+   * KUVA TULEE KUVAPUTKELTA. Erä on kuvaton, joten `kuva`-kentässä on
+   * pelkkä ämpäritunnus (js/media.js assetOsoite:
+   * `kohtaamiset/elaimet/<tunnus>.jpg`).
+   */
+  KOR: {
+    elain: 'korean vesihirvi',
+    otsikko: 'Hirvi ilman sarvia mutta torahampain',
+    teksti: 'Vesihirvi on pieni hirvieläin, jota tavataan vain Koreassa ja Kiinassa, ja korean vesihirvi on sen kahdesta alalajista toinen. Se on ainoa nykyinen hirvieläin, jolla on näkyvät torahampaat: kummallakaan sukupuolella ei ole sarvia, mutta uroksen alaspäin osoittavat kulmahampaat ovat sen ase reviiritappeluissa. Ruumis on 100–140 senttimetriä pitkä ja säkäkorkeus 61–81 senttimetriä, takajalat ovat etujalkoja pidemmät ja eläin juoksee jäniksen tavoin loikkien. Kesäturkki on keltaisenpunaruskea ja talviturkki harmaanruskea, alapuoli valkoinen. Suomalaisen korvaan nimi kuulostaa oudolta, mutta se on osuva: laji viihtyy jokivarsilla korkeiden ruokojen ja kaislojen suojassa, ui hyvin ja pääsee uimalla kaukaisillekin jokisaarille — vaikka sitä nähdään myös vuorilla, soilla, niityillä ja pelloilla. Koreassa lajia kutsutaan nimellä gorani, ja siellä se voi hyvin: kun korean tiikeri ja pantteri hävisivät, luontaiset saalistajat loppuivat, ja Etelä-Koreassa vesihirviä arvioidaan olevan 700 000.',
+    lahde: 'en-Wikipedia "Water deer", johdanto sekä osiot "Taxonomy", '
+      + '"Physical attributes", "Behaviour", "Habitat and distribution" ja '
+      + '"South Korea". Tarkistettu 6.9.2026.',
+    kuva: 'elain-kor',
+    // Piste on Etelä-Korean sisämaassa Taebaekin vuoriston länsipuolella,
+    // 49,1 lautayksikköä Soulista (vähimmäisetäisyys 35).
+    lon: 128.4,
+    lat: 37.2,
+  },
+  TWN: {
+    elain: 'formosanmustakarhu',
+    otsikko: 'Kuukarhu, jonka rinnassa on V',
+    teksti: 'Formosanmustakarhu on aasianmustakarhun alalaji, joka elää vain Taiwanissa. Se on saaren suurin maaeläin ja sen ainoa alkuperäinen karhu, ja britti Robert Swinhoe kuvaili sen tieteelle 1864. Karhu on tanakka, pää pyöreä, kaula lyhyt ja kuono pitkä — kuono muistuttaa koiran kuonoa, ja siitä tulee lisänimi koirakarhu. Rinnassa on selvä keltainen tai valkoinen merkki, joka on V-kirjaimen tai kuunsirpin muotoinen, ja siitä puolestaan lisänimi kuukarhu. Paino on 50–200 kilogrammaa. Ravinto on enimmäkseen lehtiä, silmuja, hedelmiä ja juuria, mutta myös hyönteisiä, pikkueläimiä ja raatoja: keväällä mehevää kasvillisuutta, kesällä pehmeitä hedelmiä ja syksyllä rasvaisia pähkinöitä ja tammenterhoja. Ennen karhuja oli kaikkialla Taiwanissa, mutta nyt ne ovat vetäytyneet vuoristoon tuhannen ja kolmen ja puolen kilometrin korkeuden välille. Metsästys ja elinympäristöjen häviäminen ovat vieneet kannan pieneksi: yksilöitä arvioidaan olevan 200–600, ja laji rauhoitettiin uhanalaisena 1989.',
+    lahde: 'en-Wikipedia "Formosan black bear", johdanto sekä osiot '
+      + '"Physical characteristics", "Diet", "Distribution" ja '
+      + '"Habitat and behavior". Tarkistettu 6.9.2026.',
+    kuva: 'elain-twn',
+    // Piste on Keski-Taiwanin vuoriston eteläosassa, 49,7 lautayksikköä
+    // Taipeista (vähimmäisetäisyys 35). Saaren pohjois- ja keskiosaan ei
+    // mahtunut: Taipei-laatta on laudalla keskellä saarta.
+    lon: 120.8,
+    lat: 22.6,
+  },
+  KAZ: {
+    elain: 'saiga',
+    otsikko: 'Aron antilooppi, jolla on kärsä',
+    teksti: 'Saiga on antilooppi, joka tunnetaan alaspäin suuntautuvasta parista pullistuneita sieraimia — kuononsa takia se näyttää siltä kuin sillä olisi lyhyt kärsä. Ruumis on 100–140 senttimetriä pitkä, säkäkorkeus 61–81 senttimetriä ja paino 26–69 kilogrammaa. Vain uroksilla on sarvet: paksut, hieman läpikuultavat ja vahanväriset, ja niissä on 12–20 selvää rengasta. Turkki vaihtaa väriä vuodenajan mukaan keltaisenpunaisesta talven harmaanruskeaan, ja talvella kaulaan kasvaa 12–15 senttimetrin harja. Saigat liikkuvat suurina laumoina puoliaavikoilla ja aroilla, syövät kymmeniä kasvilajeja — myös sellaisia, jotka ovat muille eläimille myrkyllisiä — ja vaeltavat pitkiä matkoja luonnonmullistuksia pakoon. Muinoin laji eli Karpaateilta Mongoliaan asti; nykyään valtaosa, noin 99 prosenttia maailman saigoista, elää Kazakstanissa. Kanta romahti 2000-luvun alussa jopa 95 prosenttia viidessätoista vuodessa, ja laji luokiteltiin äärimmäisen uhanalaiseksi; sen jälkeen se on toipunut, ja vuonna 2022 Kazakstanissa arvioitiin olevan 1,38 miljoonaa saigaa.',
+    lahde: 'en-Wikipedia "Saiga antelope", johdanto sekä osiot "Characteristics", '
+      + '"Ecology and behaviour", "Kazakh saiga" ja "Threats". '
+      + 'Tarkistettu 6.9.2026.',
+    kuva: 'elain-kaz',
+    // Piste on Betpak-Dalan arolla Keski-Kazakstanissa, 183,4
+    // lautayksikköä Astanasta (vähimmäisetäisyys 35).
+    lon: 70.5,
+    lat: 47.0,
+  },
+  MNG: {
+    elain: 'przewalskinhevonen',
+    otsikko: 'Tahi, joka palasi eläintarhoista arolle',
+    teksti: 'Przewalskinhevonen eli tahi on harvinainen ja uhanalainen villihevonen, joka on kotoisin Keski-Aasian aroilta ja nimetty venäläisen maantieteilijän ja tutkimusmatkailijan Nikolai Prževalskin mukaan. Se on kotihevosta pienempi ja tanakampi: säkäkorkeus 122–142 senttimetriä, pituus noin 2,1 metriä ja paino noin 300 kilogrammaa. Väri on hiirakko, harja seisoo pystyssä eikä kaadu sivulle, ja jaloissa on usein heikot raidat. Tahi ei ole kesyhevosen villiintynyt jälkeläinen: sillä on 33 kromosomiparia, kotihevosella 32, ja sukulinjat erkanivat toisistaan 160 000–38 000 vuotta sitten, kauan ennen hevosen kesyttämistä. Luonnosta laji hävisi kokonaan, ja 1990-luvulta lähtien se on palautettu Mongolian aroille eläintarhojen kannoista: Lontoon eläintieteellisen seuran ja mongolialaisten tutkijoiden yhteishankkeessa päästettiin 1992 luontoon 16 hevosta, ja palautusalueita ovat muun muassa Hustain nuruun kansallispuisto sekä Gobin laidalla oleva Suuren Gobin B-suojelualue.',
+    lahde: 'en-Wikipedia "Przewalski\'s horse", johdanto sekä osiot '
+      + '"Characteristics", "Genomics" ja "Reintroduction". '
+      + 'Tarkistettu 6.9.2026.',
+    kuva: 'elain-mng',
+    // Piste on Suuren Gobin B-suojelualueella Lounais-Mongoliassa, 448,1
+    // lautayksikköä Ulan Batorista (vähimmäisetäisyys 35).
+    lon: 93.6,
+    lat: 45.35,
+  },
 };
 
 /** Maatunnukset siinä järjestyksessä kuin ne on kirjoitettu. */

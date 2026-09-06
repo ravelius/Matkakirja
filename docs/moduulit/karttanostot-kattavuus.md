@@ -1076,3 +1076,81 @@ uhriluvut (Pattersonin 135, päiväkirjan 28–31 ja isotooppitutkimuksen
 Siirtomaahistorian pakkosiirrot mainitaan toteavasti siellä missä lähde
 ne mainitsee (Kidepon ik ja ketebo, Queen Elizabethin songora), eikä
 yhdenkään kortin aihe ole käynnissä oleva selkkaus.
+
+## Erä M10 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Aasian kolmas erä: **JPN, KOR, TWN, KAZ, MNG**. Kaikilla viidellä oli
+ennen erää maastokohteita mutta ei yhtäkään kohdetta (Mongolialla yksi,
+Gobi, tyyppi `muu`), ja Japania lukuun ottamatta ei eläintäkyä eikä
+skandaalia. Erä on kuvaton kuten K2-erät 1–4 ja maailman erät M1–M8, ja
+jokainen väite on en-Wikipedian raakatekstin katteessa lähderivillä,
+joka nimeää artikkelin ja osan sekä tarkistuspäivän 6.9.2026. Taulukon
+luvut ajetaan `node tools/laske-karttanostot.mjs --md` -työkalulla
+erikseen.
+
+Kohteet ja maastokohteet kirjoitettiin maiden omiin, jo olemassa
+oleviin `js/packs/maastokohteet-<iso>.js`-tiedostoihin, joten uusia
+rivejä `js/packs/maastokohteet.js`-hakemistoon, `sw.js`:n SHELL-listaan
+tai `tools/build-standalone.mjs`:n MODULES-listaan ei tarvittu.
+Eläintäyt ovat `js/packs/elaintakyt.js`:n lopussa ja skandaalit
+`js/packs/skandaalit.js`:n lopussa; kummankin testin lukumäärä
+päivitettiin (eläintäkyjä 69 → 73, skandaaleja 143 → 153 ja maita
+59 → 64).
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Japani (JPN) | Himejin linna, Nikkō Tōshō-gū, Shirakawa-gō, Hiroshiman rauhanmuistomerkki, Hōryū-ji, Iwamin hopeakaivos, Kumano Kodō, Dejima | (oli jo: Fuji, Japaninmeri, Shinanojoki) | (oli jo) | Namamugi 1862, Minamatan tauti |
+| Etelä-Korea (KOR) | Gyeongju, Haeinsa, Hwaseong, Hahoe, Gochangin dolmenit, Jeonjun hanokit, Baekjen alueet, Songgwangsa | (oli jo: Hallasan, Keltainenmeri, Nakdong) | korean vesihirvi | Oegyujanggak 1866, Port Hamilton 1885–1887 |
+| Taiwan (TWN) | Taroko, Santo Domingo, Jiufen, Lukang, Chaotian, Fort Zeelandia, Wushantou, Sanxiantai | Penghu (saari) | formosanmustakarhu | Roverin haaksirikko 1867, Lanyun ydinjätevarasto 1982 |
+| Kazakstan (KAZ) | Yasawin mausoleumi, Tamgaly, Baikonur, Charynin kanjoni, Altyn-Emel, Issykin kurgaani, Aisha Bibi, Saryarka | (oli jo: Khan Tengri, Araljärvi, Irtyš) | saiga | Semipalatinskin koealue, Aralin kalasatama |
+| Mongolia (MNG) | Amarbayasgalant, Bayanzag, Hustain nuruu, Peurakivet, Tövhön, Tsagaan agui, Tšingisin patsas (+ Gobi oli jo) | Hövsgöl (järvi) | przewalskinhevonen | Ongiin luostari 1939, Tarbosaurus-huutokauppa 2012 |
+
+Kaikki viisi maata ovat erän jälkeen tavoitteessa: `node
+tools/laske-karttanostot.mjs` sanoo niistä "täysi". Uusia karttamerkkejä
+tuli 51 (39 kohdetta, 2 maastokohdetta, 4 eläintäkyä, 10 skandaalia).
+
+**Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
+mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin.
+Lähin uusi merkki on Taiwanin Taroko 12,6 lautayksikön päässä
+Taipei-laatasta ja toiseksi lähin Korean Hwaseongin linnoitus 12,6
+yksikön päässä Soulista; raja `KAUPUNGIN_KOHDALLA_SADE` on 7. Kaksi
+ehdokasta kaatui juuri tähän: Korean **Namhansanseong** (7,6 yksikköä
+Soulista) ja Taiwanin **Sun Moon Lake** (6,0 yksikköä Taipeista).
+`node tools/tarkista-nimiolimitys.mjs` sanoo koko maailmasta yhä
+"NIMIÖ NIMIÖN PÄÄLLÄ: 0", ja `tools/tarkista-nostopaikat.mjs` antaa
+jokaiselle uudelle nostolle rivin *pääkartta*.
+
+**Nimiölimitys valitsi neljä kohdetta uudelleen.** Japanin
+Itsukushiman pyhäkkö on 6,6 yksikön päässä Hiroshiman
+rauhanmuistomerkistä, Taiwanin Alishan 5,4 yksikön päässä maan omasta
+Yu Shan -merkistä, Kazakstanin Otrar 18,0 yksikön päässä Turkistanin
+mausoleumista ja Korean Jejun Seongsan Ilchulbong 14,2 yksikön päässä
+Hallasanista. Painavin tapaus on Mongolian **Karakorum**: maan oma
+Orhon-merkki on Harhorinin kohdalla, ja Karakorumin nimiö osuisi 6,9
+yksikön päähän siitä — sekä muinainen pääkaupunki että Erdene Zuun
+luostari jäivät siksi pois, ja Orhonin laakson kohteista mukaan mahtui
+Tövhön (21,8 yksikköä joen merkistä).
+
+**Aasian linjaukset pidettiin** (`docs/aasia-tyoaineisto/spec-asia.md`,
+SITOVA). Taiwanin korteissa ei ole salmikysymystä eikä nykypolitiikkaa:
+painotus on 1600–1900-luvun Formosassa, kaupassa, kansoissa ja
+tekniikassa, ja **Kinmen jätettiin pois kokonaan**, koska sen artikkeli
+lepää nykyisen kiistan varassa. Japanin sotahistoriasta kirjoitettiin
+vain Hiroshiman rauhanmuistomerkin kortissa: se kertoo rakennuksen
+historian ja muistomerkin nykyisen tehtävän lähteen katteessa, ilman
+uhrilukujen korostusta. Japanin skandaalit ovat ympäristö- ja
+diplomatiahistoriaa (1862 ja 1932–1968), Korean 1800-luvun
+siirtomaadiplomatiaa (1866 ja 1885–1887) ja Mongolian 1930-luvun
+uskonnonvainot sekä fossiilien salakuljetus. Kazakstanin ydinkoealue ja
+Araljärven kuivuminen kerrotaan artikkelien omalla tarkkuudella.
+
+**Neljä eläintäkyä, kaikki kuvattomia.** `kuva`-kentässä on
+kuvaputken ämpäritunnus ilman kansiota (`elain-kor`, `elain-twn`,
+`elain-kaz`, `elain-mng`): kun kuvaputki toimittaa kuvan, se ilmestyy
+kortille ilman koodimuutosta. Paikat on mitattu koneellisesti — jokainen
+piste on maan rajojen sisällä, maalla ja vähintään 35 lautayksikön
+päässä jokaisesta kaupunkimerkistä (`tests/elaintakyt.test.mjs`).
+Tiukin oli Taiwan: Taipei-laatta on laudalla keskellä saarta, joten
+formosanmustakarhun piste oli haettava saaren eteläosan vuoristosta
+(etäisyys 49,7).

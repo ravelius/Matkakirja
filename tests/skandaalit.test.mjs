@@ -29,8 +29,8 @@ const KAIKKI = MAAT.flatMap((iso) => SKANDAALIT[iso].map((s) => ({ iso, ...s }))
  * kahdella skandaalilla kukin.
  */
 test('skandaaleja on 123 kappaletta 49 maassa, 2–3 per maa', () => {
-  assert.equal(MAAT.length, 74, 'maita on 74');
-  assert.equal(KAIKKI.length, 173, 'skandaaleja on 173');
+  assert.equal(MAAT.length, 79, 'maita on 79');
+  assert.equal(KAIKKI.length, 183, 'skandaaleja on 183');
   for (const iso of MAAT) {
     assert.match(iso, /^[A-Z]{3}$/, `${iso}: avain on kolmikirjaiminen maatunnus`);
     const n = SKANDAALIT[iso].length;
