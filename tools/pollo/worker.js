@@ -48,6 +48,8 @@ import {
   siivoaVapaaVastaus,
   tarkistaPuheRajat,
   tarkistaRajat,
+  tyhjanSyy,
+  tyhjanTeksti,
   vertaaSalaisuus,
 } from './rajat.js';
 
@@ -995,8 +997,15 @@ async function kutsuRajapintaa(env, {
   });
 }
 
-/** Yksi kutsu Anthropicin rajapintaan. Palauttaa pelkän tekstin. */
-async function kysyMallilta(env, { jarjestelma, viestit, maxTokens, lampotila = null }) {
+/**
+ * Yksi kutsu Anthropicin rajapintaan. Palauttaa tekstin JA lopetussyyn.
+ *
+ * Lopetussyy tarvitaan, koska tyhjä teksti ei kerro itsestään mitään:
+ * "refusal" on mallin oma päätös eikä siitä auta yrittää uudelleen,
+ * kun taas tuntematon tyhjä ansaitsee yhden uusinnan (ks. rajat.js
+ * tyhjanSyy).
+ */
+async function kysyMallitiedot(env, { jarjestelma, viestit, maxTokens, lampotila = null }) {
   const vastaus = await kutsuRajapintaa(env, {
     jarjestelma, viestit, maxTokens, lampotila,
   });
@@ -1012,16 +1021,52 @@ async function kysyMallilta(env, { jarjestelma, viestit, maxTokens, lampotila = 
     throw virhe;
   }
   const data = await vastaus.json();
-  /*
-   * Malli voi kieltäytyä (stop_reason "refusal"); silloin content on
-   * tyhjä. Käsitellään se tavallisena tyhjänä vastauksena — pöllö
-   * sanoo, ettei osaa auttaa tässä.
-   */
-  return (data?.content ?? [])
-    .filter((lohko) => lohko?.type === 'text')
-    .map((lohko) => lohko.text)
-    .join('\n')
-    .trim();
+  return {
+    teksti: (data?.content ?? [])
+      .filter((lohko) => lohko?.type === 'text')
+      .map((lohko) => lohko.text)
+      .join('\n')
+      .trim(),
+    stop: data?.stop_reason ?? null,
+  };
+}
+
+/** Kuten kysyMallitiedot, mutta kutsujalle riittää pelkkä teksti. */
+async function kysyMallilta(env, asetukset) {
+  return (await kysyMallitiedot(env, asetukset)).teksti;
+}
+
+/**
+ * TYHJÄN VASTAUKSEN PAIKKAUS — yksi uusinta, sitten totuus.
+ *
+ * Sama käsittely molemmilla poluilla (striimi ja kertavastaus), jotta
+ * pelaaja saa saman rehellisen tekstin riippumatta siitä, kumpaa
+ * reittiä vastaus tuli. Uusinta tehdään AINA kertavastauksena samalla
+ * kehotteella: jos virta katkesi kesken, sama virta katkeaisi
+ * todennäköisesti uudelleen.
+ *
+ * @param {object} kutsu sama { jarjestelma, viestit, maxTokens } kuin
+ *   alkuperäisessä kutsussa — kehote ei muutu.
+ * @returns {Promise<{vastaus: string, jatkot: string[], syy: string|null}>}
+ *   `syy` on null vain silloin, kun vastaus on aitoa mallin tekstiä.
+ */
+async function paikkaaTyhja(env, kutsu, havainto) {
+  let { syy, loki, uusinta } = tyhjanSyy(havainto);
+  // Lokiin vain syyluokka: ei pelaajan kysymystä, ei mallin tekstiä.
+  console.log(`pollo: tyhjä vastaus (${loki})`);
+  if (uusinta) {
+    try {
+      const toinen = await kysyMallitiedot(env, kutsu);
+      const { vastaus, jatkot } = poimiJatkot(toinen.teksti);
+      if (vastaus) return { vastaus, jatkot, syy: null };
+      // Uusintakin jäi tyhjäksi: syy luetaan siitä, se on tuoreempi.
+      ({ syy, loki } = tyhjanSyy({ stop: toinen.stop }));
+      console.log(`pollo: uusinta jäi tyhjäksi (${loki})`);
+    } catch (virhe) {
+      console.log(`pollo: uusinta epäonnistui (${virhe?.status ?? 'verkko'})`);
+    }
+  }
+  return { vastaus: tyhjanTeksti(syy), jatkot: [], syy };
 }
 
 /* ------------------------------------------------------------------ */
@@ -1057,7 +1102,18 @@ const SSE_OTSAKKEET = {
   'x-accel-buffering': 'no',
 };
 
-/** Yksi Anthropicin SSE-rivi tekstinpalaksi. Tuntemattomat ohitetaan. */
+/**
+ * Yksi Anthropicin SSE-rivi havainnoksi. Tuntemattomat ohitetaan.
+ *
+ * Teksti ei ole ainoa asia, joka virrasta pitää lukea (omistajan
+ * vikailmoitus 6.9.2026). Anthropic voi lähettää kesken virran
+ * `event: error` -tapahtuman (ylikuorma, kiintiö) ja päättää virran
+ * `message_delta`-tapahtumaan, jonka `stop_reason` kertoo miksi malli
+ * lopetti. Kumpikin ohitettiin ennen kokonaan, jolloin tyhjä vastaus
+ * näytti pelaajalle samalta kuin osaamattomuus.
+ *
+ * @returns {{teksti?: string, virhe?: string, stop?: string}|null}
+ */
 function striimiPala(rivi) {
   if (!rivi.startsWith('data:')) return null;
   const runko = rivi.slice(5).trim();
@@ -1065,7 +1121,15 @@ function striimiPala(rivi) {
   try {
     const tieto = JSON.parse(runko);
     if (tieto?.type === 'content_block_delta' && tieto?.delta?.type === 'text_delta') {
-      return tieto.delta.text ?? '';
+      return { teksti: tieto.delta.text ?? '' };
+    }
+    if (tieto?.type === 'error') {
+      // Virhetyyppi on rajapinnan oma luokitus (esim. "overloaded_error"),
+      // ei vapaata tekstiä — se saa mennä lokiin.
+      return { virhe: String(tieto?.error?.type ?? 'tuntematon') };
+    }
+    if (tieto?.type === 'message_delta' && tieto?.delta?.stop_reason) {
+      return { stop: String(tieto.delta.stop_reason) };
     }
   } catch {
     /* rikkinäinen rivi ohitetaan: virta jatkuu seuraavasta */
@@ -1103,6 +1167,9 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
     const suodatin = luoJatkoSuodatin();
     let raaka = '';
     let jono = '';
+    // Virran omat havainnot: virhetapahtuma ja mallin lopetussyy.
+    let virtaVirhe = null;
+    let stop = null;
     try {
       for (;;) {
         const { value, done } = await lukija.read();
@@ -1113,10 +1180,14 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
           const rivi = jono.slice(0, i).trim();
           jono = jono.slice(i + 1);
           const pala = striimiPala(rivi);
-          if (pala) {
-            raaka += pala;
-            const nakyva = suodatin.lisaa(pala);
+          if (pala?.teksti) {
+            raaka += pala.teksti;
+            const nakyva = suodatin.lisaa(pala.teksti);
             if (nakyva) await laheta('pala', { teksti: nakyva });
+          } else if (pala?.virhe) {
+            virtaVirhe = pala.virhe;
+          } else if (pala?.stop) {
+            stop = pala.stop;
           }
           i = jono.indexOf('\n');
         }
@@ -1125,10 +1196,24 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
       const { hanta } = suodatin.loppu();
       if (hanta) await laheta('pala', { teksti: hanta });
       const { vastaus, jatkot } = poimiJatkot(raaka);
-      await laheta('loppu', {
-        vastaus: vastaus || 'En osaa vastata tähän. Kysytkö jotain muuta?',
-        jatkot,
-      });
+      if (vastaus) {
+        await laheta('loppu', { vastaus, jatkot, syy: null });
+      } else {
+        /*
+         * Tyhjä vastaus striimin jälkeen: syy voi olla virran virhe,
+         * mallin kieltäytyminen tai pelkkä JATKOT-lohko (poiminta vei
+         * koko tekstin). Paikkaus yrittää kerran uudelleen ja kertoo
+         * sitten totuuden — pelaajalle ei valehdella osaamattomuutta.
+         * Loppu-tapahtuma korvaa asiakkaalla koko kuplan tekstin, joten
+         * uusinnan vastaus ei jää striimin palojen perään.
+         */
+        const paikattu = await paikkaaTyhja(
+          env,
+          { jarjestelma, viestit, maxTokens },
+          { virhe: virtaVirhe, stop },
+        );
+        await laheta('loppu', paikattu);
+      }
     } catch {
       // Katkennut virta: asiakas näyttää siihen asti tulleen tekstin ja
       // hienovaraisen virherivin. Mitään pyynnön sisältöä ei lokiteta.
@@ -1819,18 +1904,17 @@ export default {
         });
       }
 
-      const teksti = await kysyMallilta(env, {
-        jarjestelma: kehote,
-        viestit,
-        maxTokens: MAX_TOKENS,
-      });
+      const kutsu = { jarjestelma: kehote, viestit, maxTokens: MAX_TOKENS };
+      const kerralla = await kysyMallitiedot(env, kutsu);
       // Erotinrivi puretaan aina täällä: pelaajalle menee vastaus ja
       // erillinen lista, ei koskaan raakaa merkintää.
-      const { vastaus, jatkot } = poimiJatkot(teksti);
-      return vastaa({
-        vastaus: vastaus || 'En osaa vastata tähän. Kysytkö jotain muuta?',
-        jatkot,
-      }, kors);
+      const { vastaus, jatkot } = poimiJatkot(kerralla.teksti);
+      // Sama tyhjän käsittely kuin striimissä: yksi uusinta, sitten
+      // rehellinen teksti ja syyluokka asiakkaalle.
+      if (!vastaus) {
+        return vastaa(await paikkaaTyhja(env, kutsu, { stop: kerralla.stop }), kors);
+      }
+      return vastaa({ vastaus, jatkot, syy: null }, kors);
     } catch (virhe) {
       // Vain tilakoodi lokiin — ei avainta, ei pelaajan tekstiä.
       console.log(`pollo: kutsu epäonnistui (${virhe?.status ?? 'verkko'})`);

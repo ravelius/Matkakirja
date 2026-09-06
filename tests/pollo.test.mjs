@@ -51,6 +51,8 @@ import { FOKUSVIRTA_SOFIA } from '../js/packs/fokusvirta-sofia.js';
 
 import {
   KYSYMYKSEN_KATTO,
+  LIVIA_EI_TULLUT,
+  LIVIA_KIELTAYTYY,
   lueLista,
   lueLuku,
   luoJatkoSuodatin,
@@ -65,6 +67,8 @@ import {
   siivoaTeksti,
   siivoaVapaaVastaus,
   tarkistaRajat,
+  tyhjanSyy,
+  tyhjanTeksti,
   vertaaSalaisuus,
   SAHKE_VASTAUKSEN_KATTO,
   SAHKE_VASTAUKSET,
@@ -1931,4 +1935,254 @@ test('kuplan napautus päätetään pointerupissa liikerajalla; pino vieritetä�
   assert.match(lisays, /pino\.scrollTop = Math\.max\(0, pohja - pino\.clientHeight\);/);
   assert.ok(lisays.indexOf('pino.scrollTop = Math.max') < lisays.indexOf('const ero = ennen[i]'), 'vieritys ennen FLIP-mittausta');
   assert.doesNotMatch(lisays, /this\.vierita\(\)/, 'pehmeä vieritys ei saa kilpailla FLIP-liikkeen kanssa');
+});
+
+/* ---------------------------------------------------------------- */
+/* Tyhjä vastaus: syy kerrotaan, ei keksitä                          */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJAN VIKAILMOITUS 6.9.2026: Livia kertoi Spartasta pitkästi,
+ * mutta jatkokysymykseen "Kerro siitä" tuli pelkkä "En osaa vastata
+ * tähän. Kysytkö jotain muuta?". Malli EI sanonut niin — se oli
+ * workerin varateksti, joka näytettiin aina kun poiminnan jälkeen jäi
+ * tyhjä. Syyt (virran ylikuormavirhe, kieltäytyminen, pelkkä
+ * JATKOT-lohko) eivät eronneet toisistaan mitenkään.
+ *
+ * Nämä testit kiinnittävät kolme asiaa:
+ *   1. tekninen tyhjä yritetään KERRAN uudelleen kertavastauksena,
+ *   2. kieltäytymistä ei yritetä uudelleen (se kuluttaisi päivärajan),
+ *   3. pelaajalle ei koskaan valehdella osaamattomuutta, ja lokiin ei
+ *      päädy pelaajan eikä mallin tekstiä.
+ */
+
+const CHAT_KYSYMYS = 'Kerro siitä';
+
+function chatPyynto(runko) {
+  return new Request('https://pollo.testi/', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', origin: SAHKE_ORIGIN },
+    body: JSON.stringify({ tehtava: 'vastaus', kysymys: CHAT_KYSYMYS, ...runko }),
+  });
+}
+
+/** Anthropicin SSE-virta merkkijonoksi. */
+function sseVirta(tapahtumat) {
+  return tapahtumat
+    .map((t) => `event: ${t.laji}\ndata: ${JSON.stringify(t.data)}\n\n`)
+    .join('');
+}
+
+/** Workerin oma SSE takaisin tapahtumiksi. */
+function lueSse(teksti) {
+  return teksti.split('\n\n').filter(Boolean).map((lohko) => {
+    const laji = /^event: (.+)$/m.exec(lohko)?.[1] ?? '';
+    const data = /^data: (.+)$/m.exec(lohko)?.[1] ?? 'null';
+    return { laji, data: JSON.parse(data) };
+  });
+}
+
+/** Mallin kertavastaus JSONina (sama muoto kuin rajapinnalla). */
+function malliVastaus(teksti, stop = 'end_turn') {
+  return {
+    content: teksti ? [{ type: 'text', text: teksti }] : [],
+    stop_reason: stop,
+  };
+}
+
+/**
+ * Ajaa yhden chat-pyynnön workerin läpi rajapintakutsut tyngättyinä.
+ *
+ * @param {object} asetukset `virta` = SSE-tapahtumat striimipyynnölle,
+ *   `kerta` = mallin JSON kertavastaukselle — taulukkona peräkkäiset
+ *   kertavastaukset (ensimmäinen, sitten uusinta) — tai `kertaVirhe` =
+ *   tilakoodi, jolla kertavastaus kaatuu.
+ */
+async function ajaChat({ virta = null, kerta = null, kertaVirhe = 0, runko = {} } = {}) {
+  const alkuperainenFetch = globalThis.fetch;
+  const alkuperainenLoki = console.log;
+  const kutsut = [];
+  const lokit = [];
+  const kertavastaukset = Array.isArray(kerta) ? [...kerta] : [kerta ?? malliVastaus('')];
+  let kertaNro = 0;
+  globalThis.fetch = async (osoite, asetukset) => {
+    const pyydetty = JSON.parse(asetukset.body);
+    kutsut.push(pyydetty);
+    if (pyydetty.stream) {
+      return new Response(sseVirta(virta ?? []), {
+        status: 200, headers: { 'content-type': 'text/event-stream' },
+      });
+    }
+    if (kertaVirhe) return new Response('{}', { status: kertaVirhe });
+    const data = kertavastaukset[Math.min(kertaNro, kertavastaukset.length - 1)];
+    kertaNro += 1;
+    return new Response(JSON.stringify(data), {
+      status: 200, headers: { 'content-type': 'application/json' },
+    });
+  };
+  console.log = (...osat) => { lokit.push(osat.join(' ')); };
+  try {
+    const vastaus = await polloWorker.fetch(chatPyynto(runko), SAHKE_ENV, {});
+    const teksti = await vastaus.text();
+    const sse = /event-stream/.test(vastaus.headers.get('content-type') ?? '');
+    return {
+      tila: vastaus.status,
+      tapahtumat: sse ? lueSse(teksti) : [],
+      data: sse ? null : JSON.parse(teksti),
+      kutsut,
+      lokit,
+    };
+  } finally {
+    globalThis.fetch = alkuperainenFetch;
+    console.log = alkuperainenLoki;
+  }
+}
+
+/** Striimin loppu-tapahtuma. */
+const loppu = (ajo) => ajo.tapahtumat.find((t) => t.laji === 'loppu')?.data ?? null;
+
+test('tyhjän syyluokka ratkaisee, yritetäänkö uudelleen', () => {
+  assert.deepEqual(tyhjanSyy({ virhe: 'overloaded_error' }),
+    { syy: 'virta', loki: 'virta: overloaded_error', uusinta: true });
+  assert.deepEqual(tyhjanSyy({ stop: 'refusal' }),
+    { syy: 'kieltaytyi', loki: 'stop=refusal', uusinta: false });
+  assert.deepEqual(tyhjanSyy({ stop: 'max_tokens' }),
+    { syy: 'tyhja', loki: 'stop=max_tokens', uusinta: true });
+  assert.deepEqual(tyhjanSyy({}), { syy: 'tyhja', loki: 'stop=tuntematon', uusinta: true });
+
+  // Teksti kertoo totuuden kummassakin tapauksessa — "en osaa vastata"
+  // on valhe, jos syy on tekninen.
+  assert.equal(tyhjanTeksti('kieltaytyi'), LIVIA_KIELTAYTYY);
+  assert.equal(tyhjanTeksti('virta'), LIVIA_EI_TULLUT);
+  assert.equal(tyhjanTeksti('tyhja'), LIVIA_EI_TULLUT);
+  for (const teksti of [LIVIA_KIELTAYTYY, LIVIA_EI_TULLUT]) {
+    assert.ok(!/en osaa vastata/i.test(teksti), `varateksti valehtelee: ${teksti}`);
+  }
+});
+
+test('striimin virhetapahtuma johtaa yhteen uusintaan kertavastauksena', async () => {
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [
+      { laji: 'message_start', data: { type: 'message_start' } },
+      { laji: 'error', data: { type: 'error', error: { type: 'overloaded_error' } } },
+    ],
+    kerta: malliVastaus('Sparta oli Lakonian kaupunkivaltio.\nJATKOT:\nKuka oli Lykurgos?'),
+  });
+  assert.equal(ajo.kutsut.length, 2, 'uusintaa ei tehty tai niitä tehtiin useampi');
+  assert.equal(ajo.kutsut[0].stream, true);
+  assert.equal(ajo.kutsut[1].stream, undefined, 'uusinta pitää tehdä kertavastauksena');
+  // Sama kehote ja samat viestit: uusinta ei ole uusi kysymys.
+  assert.equal(ajo.kutsut[1].system, ajo.kutsut[0].system);
+  assert.deepEqual(ajo.kutsut[1].messages, ajo.kutsut[0].messages);
+
+  assert.deepEqual(loppu(ajo), {
+    vastaus: 'Sparta oli Lakonian kaupunkivaltio.',
+    jatkot: ['Kuka oli Lykurgos?'],
+    syy: null,
+  });
+});
+
+test('striimin kieltäytymistä ei yritetä uudelleen, ja se sanotaan suoraan', async () => {
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [
+      { laji: 'message_delta', data: { type: 'message_delta', delta: { stop_reason: 'refusal' } } },
+    ],
+  });
+  assert.equal(ajo.kutsut.length, 1, 'kieltäytyminen ei ansaitse uusintaa');
+  assert.deepEqual(loppu(ajo), { vastaus: LIVIA_KIELTAYTYY, jatkot: [], syy: 'kieltaytyi' });
+});
+
+test('pelkkä JATKOT-lohko on tyhjä vastaus ja johtaa uusintaan', async () => {
+  const palat = ['JATKOT:\n', 'Mikä oli Sparta?\n', 'Kuka oli Lykurgos?\n'].map((teksti) => ({
+    laji: 'content_block_delta',
+    data: { type: 'content_block_delta', delta: { type: 'text_delta', text: teksti } },
+  }));
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [...palat,
+      { laji: 'message_delta', data: { type: 'message_delta', delta: { stop_reason: 'end_turn' } } }],
+    kerta: malliVastaus('Sparta oli Lakonian kaupunkivaltio.'),
+  });
+  assert.equal(ajo.kutsut.length, 2, 'pelkkä JATKOT-lohko jäi uusimatta');
+  assert.equal(loppu(ajo).vastaus, 'Sparta oli Lakonian kaupunkivaltio.');
+  assert.equal(loppu(ajo).syy, null);
+  // Jatkosuodatin piti huolen siitä, ettei merkintä näkynyt ruudulla.
+  assert.equal(ajo.tapahtumat.filter((t) => t.laji === 'pala').length, 0);
+});
+
+test('kun uusintakin epäonnistuu, pelaajalle kerrotaan totuus', async () => {
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [{ laji: 'error', data: { type: 'error', error: { type: 'overloaded_error' } } }],
+    kertaVirhe: 529,
+  });
+  assert.equal(ajo.kutsut.length, 2);
+  assert.deepEqual(loppu(ajo), { vastaus: LIVIA_EI_TULLUT, jatkot: [], syy: 'virta' });
+  // Vanha valhe ei saa palata mistään.
+  assert.ok(!/En osaa vastata/i.test(JSON.stringify(loppu(ajo))));
+});
+
+test('kertavastauspolku käsittelee tyhjän samalla tavalla', async () => {
+  // Kieltäytyminen: yksi kutsu, rehellinen teksti.
+  const kielto = await ajaChat({ kerta: malliVastaus('', 'refusal') });
+  assert.equal(kielto.tila, 200);
+  assert.equal(kielto.kutsut.length, 1);
+  assert.deepEqual(kielto.data, { vastaus: LIVIA_KIELTAYTYY, jatkot: [], syy: 'kieltaytyi' });
+
+  // Tuntematon tyhjä: uusinta, ja sen teksti kelpaa vastaukseksi.
+  const onnistui = await ajaChat({
+    kerta: [malliVastaus(''), malliVastaus('Sparta oli Lakonian kaupunkivaltio.')],
+  });
+  assert.equal(onnistui.kutsut.length, 2, 'tyhjää kertavastausta ei yritetty uudelleen');
+  assert.deepEqual(onnistui.data, {
+    vastaus: 'Sparta oli Lakonian kaupunkivaltio.', jatkot: [], syy: null,
+  });
+
+  // Kaksi tyhjää peräkkäin: rehellinen teksti, ei osaamattomuutta.
+  const tyhja = await ajaChat({ kerta: malliVastaus('') });
+  assert.equal(tyhja.kutsut.length, 2);
+  assert.deepEqual(tyhja.data, { vastaus: LIVIA_EI_TULLUT, jatkot: [], syy: 'tyhja' });
+});
+
+test('tyhjästä lokitetaan vain syyluokka — ei pelaajan eikä mallin tekstiä', async () => {
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [{ laji: 'error', data: { type: 'error', error: { type: 'overloaded_error' } } }],
+    kerta: malliVastaus('Sparta oli Lakonian kaupunkivaltio.'),
+  });
+  assert.ok(ajo.lokit.length >= 1, 'tyhjä vastaus jäi kokonaan lokittamatta');
+  const loki = ajo.lokit.join(' | ');
+  assert.match(loki, /pollo: tyhjä vastaus \(virta: overloaded_error\)/);
+  assert.ok(!loki.includes(CHAT_KYSYMYS), `pelaajan teksti vuoti lokiin: ${loki}`);
+  assert.ok(!/Sparta/.test(loki), `mallin teksti vuoti lokiin: ${loki}`);
+});
+
+/*
+ * Pelin puoli luetaan lähdekoodista: kysy() elää DOMissa, striimissä ja
+ * puhesynteesissä, eikä sitä voi ajaa tässä pikku puumallissa. Nämä
+ * kaksi asiaa ovat silti niin helppo rikkoa vahingossa, että ne
+ * kiinnitetään koneellisesti.
+ */
+test('varateksti ei mene historiaan, ja tekninen tyhjä tarjoaa uusinnan', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  // Historiaan vain aito ja kokonainen vastaus: muuten mallille lähtisi
+  // seuraavan kysymyksen kontekstiksi workerin oma varateksti.
+  assert.match(lahde, /if \(!varateksti && !tulos\?\.katkesi\) \{\s*\n\s*this\.historia\.push/,
+    'historian ehto puuttuu — varateksti voi taas päätyä kontekstiksi');
+  assert.match(lahde, /if \(tekninen\) this\.naytaUusinta\(kysymys, jatko\)/,
+    'uusintanappia ei tarjota tekniselle epäonnistumiselle');
+  assert.match(lahde, /naytaUusinta\(kysymys, jatko = false\)/, 'naytaUusinta puuttuu');
+});
+
+test('vanha varateksti "En osaa vastata" ei ole enää missään', () => {
+  for (const tiedosto of ['../tools/pollo/worker.js', '../js/pollo.js']) {
+    const lahde = readFileSync(new URL(tiedosto, import.meta.url), 'utf8');
+    // Kommentit saavat kertoa vanhasta viasta; koodissa merkkijonoa ei
+    // enää ole (rivit, joilla on heittomerkein rajattu teksti).
+    const koodissa = lahde.split('\n')
+      .filter((rivi) => /'[^']*En osaa vastata/.test(rivi));
+    assert.deepEqual(koodissa, [], `varateksti elää yhä: ${tiedosto}`);
+  }
 });

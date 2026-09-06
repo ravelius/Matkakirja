@@ -91,6 +91,16 @@ const AINEISTON_KATTO = 1900;
 /** Montako viestiä keskustelusta lähetetään mukaan seuraavaan. */
 const HISTORIAN_KATTO = 6;
 
+/*
+ * TYHJÄ VASTAUS EI OLE OSAAMATTOMUUTTA (omistajan vikailmoitus
+ * 6.9.2026). Vanha varateksti "En osaa vastata tähän" valehteli, kun
+ * syy oli tekninen — eikä pelaaja voinut päättää, kannattaako yrittää
+ * uudelleen. Sama teksti asuu myös workerissa (tools/pollo/rajat.js
+ * LIVIA_EI_TULLUT); se on palvelimen koodia eikä sitä voi tuoda tänne,
+ * joten kaksoiskappale on tarkoituksellinen (kuten HISTORIAN_KATTO).
+ */
+const VASTAUS_EI_TULLUT = 'Vastaus jäi matkalle eikä tullut perille. Kokeile uudelleen.';
+
 /** Puheentunnistuksen kieli. */
 export const PUHE_KIELI = 'fi-FI';
 
@@ -3995,6 +4005,38 @@ class Pollo {
     this.paivitaTyhjaTila();
   }
 
+  /**
+   * UUSINTANAPPI TEKNISEN EPÄONNISTUMISEN ALLE (omistajan vikailmoitus
+   * 6.9.2026).
+   *
+   * Kun vastaus ei tullut perille — katkennut virta, ylikuorma, tyhjäksi
+   * jäänyt vastaus — pelaajan ei tarvitse kirjoittaa kysymystään
+   * uudelleen. Nappi lähettää saman kysymyksen samalla kehyslajilla
+   * (jatko-lippu kulkee mukana, ks. kehysLaji), jolloin vastauksen sävy
+   * pysyy sinä, mitä sen piti olla.
+   *
+   * Nappi on kertakäyttöinen ilman erillistä lukitusta: kysy() poistaa
+   * kaikki .pollo-jatkot-laatikot ennen uutta kysymystä, joten yksi
+   * napautus = yksi pyyntö = yksi askel käyttörajassa. Kieltäytymisen
+   * alle nappia ei tule: uusinta tuottaisi saman kiellon.
+   */
+  naytaUusinta(kysymys, jatko = false) {
+    const laatikko = polloElementti('div', 'pollo-jatkot');
+    const nappi = polloElementti('button', 'pollo-ehdotus pollo-jatko pollo-uusinta',
+      'Yritä uudelleen');
+    nappi.type = 'button';
+    nappi.addEventListener('click', () => this.kysy(kysymys, { jatko }));
+    laatikko.appendChild(nappi);
+    this.virta.appendChild(laatikko);
+    /*
+     * Sama sääntö kuin lisaaViestissä: ankkuroidun vastauksen aikana
+     * nappi kirjoittuu varattuun tyhjään eikä näkymä liiku, mutta
+     * virhepolussa (varaus purettu) se pitää kelata näkyviin.
+     */
+    if (this.tyhjaTila === null) this.virta.scrollTop = this.virta.scrollHeight;
+    else this.paivitaTyhjaTila();
+  }
+
   /** Osuvimmat katkelmat pelin omasta aineistosta. */
   haeAineisto(kysymys) {
     const indeksi = this.varmistaIndeksi();
@@ -4363,6 +4405,7 @@ class Pollo {
         vastaus: String(data?.vastaus ?? ''),
         jatkot: Array.isArray(data?.jatkot) ? data.jatkot : [],
         katkesi: false,
+        syy: data?.syy ?? null,
       };
     }
 
@@ -4411,11 +4454,20 @@ class Pollo {
         jatkot: Array.isArray(tulos.jatkot) ? tulos.jatkot : [],
         katkesi: false,
         lopullinen: true,
+        /*
+         * SYY kertoo, onko teksti mallin omaa vai workerin rehellinen
+         * varateksti (null = aito vastaus). Vanha worker ei lähetä
+         * kenttää lainkaan, ja silloin vastaus tulkitaan aidoksi kuten
+         * ennenkin.
+         */
+        syy: tulos.syy ?? null,
       };
     }
     // Virta loppui kesken: näytetään se, mitä ehti tulla — mutta ilman
     // linkkejä, koska merkinnöistä ei ole takeita.
-    return { vastaus: kertynyt, jatkot: [], katkesi: true, lopullinen: false };
+    return {
+      vastaus: kertynyt, jatkot: [], katkesi: true, lopullinen: false, syy: 'katkesi',
+    };
   }
 
   /* --- striimin äänet ---------------------------------------------- */
@@ -4757,13 +4809,31 @@ class Pollo {
           jatkot: Array.isArray(data?.jatkot) ? data.jatkot : [],
           katkesi: false,
           lopullinen: true,
+          syy: data?.syy ?? null,
         };
       }
       // Naputus loppuu ennen kelloa, ei sen kanssa päällekkäin.
       this.lopetaNaputus();
       const raaka = String(tulos?.vastaus ?? '').trim();
       // Katkennutkin virta näyttää sen, mitä ehti tulla.
-      const teksti = raaka || (tulos?.katkesi ? '' : 'En osaa vastata tähän.');
+      const teksti = raaka || (tulos?.katkesi ? '' : VASTAUS_EI_TULLUT);
+      /*
+       * VARATEKSTI vs. MALLIN OMA VASTAUS.
+       *
+       * Worker kertoo syyn (`syy`): null on aitoa mallin tekstiä, mikä
+       * tahansa muu on workerin varateksti (kieltäytyminen tai tekninen
+       * tyhjä). Tyhjä teksti ilman syytä — vanha worker — lasketaan
+       * samaksi. Varatekstiin ei liitetä vastauskuvaa eikä
+       * poimintanappeja: se ei ole vastaus, jota kannattaisi kuvittaa
+       * tai tallentaa lehteen.
+       *
+       * TEKNINEN on se osajoukko, jota kannattaa yrittää uudelleen:
+       * katkennut virta, ylikuorma tai tyhjäksi jäänyt vastaus.
+       * Kieltäytyminen ei ole — uusinta tuottaisi saman kiellon.
+       */
+      const varateksti = !raaka || tulos?.syy != null;
+      const tekninen = tulos?.katkesi === true
+        || (varateksti && tulos?.syy !== 'kieltaytyi');
       avaaKupla();
       /*
        * LOPULLINEN SISÄLTÖ RAKENNETAAN KERRALLA JA PAIKALLAAN.
@@ -4800,13 +4870,18 @@ class Pollo {
           // vastauksen alla on vain sitä koskevat ehdotukset.
           this.naytaJatkot(tulos?.jatkot);
         }
-        // Kuva vastauksen oikeaan yläkulmaan (omistajan tilaus
-        // 15.8.2026). Kumpikin kuva — paikallinen ja Wikipedian —
-        // ilmestyy vasta latauduttuaan eikä koske näkymän ankkuriin.
-        this.liitaVastausKuva(viesti, teksti, kysymys);
-        // Hyvä vastaus talteen juttuun (kehittäjä) tai ehdolle
-        // kuratointiin (pelaaja) — omistajan tilaus 23.8.2026.
-        this.liitaPoimintaNapit(viesti, kysymys, poistaKasiteMerkinnat(teksti));
+        // Tekninen epäonnistuminen: sama kysymys uudelleen yhdellä
+        // napautuksella (ks. naytaUusinta).
+        if (tekninen) this.naytaUusinta(kysymys, jatko);
+        if (!varateksti) {
+          // Kuva vastauksen oikeaan yläkulmaan (omistajan tilaus
+          // 15.8.2026). Kumpikin kuva — paikallinen ja Wikipedian —
+          // ilmestyy vasta latauduttuaan eikä koske näkymän ankkuriin.
+          this.liitaVastausKuva(viesti, teksti, kysymys);
+          // Hyvä vastaus talteen juttuun (kehittäjä) tai ehdolle
+          // kuratointiin (pelaaja) — omistajan tilaus 23.8.2026.
+          this.liitaPoimintaNapit(viesti, kysymys, poistaKasiteMerkinnat(teksti));
+        }
         /*
          * Näkymään ei kosketa: ankkuri asetettiin kysymyksen kohdalla.
          * Valmis vastaus, sen linkit ja jatkokysymykset kirjoittuvat
@@ -4829,9 +4904,24 @@ class Pollo {
        * vastaus entiseen tapaan.
        */
       if (!this.paataLuenta(kertyma)) this.lueVastaus(puhdas);
-      this.historia.push({ rooli: 'kayttaja', teksti: kysymys });
-      this.historia.push({ rooli: 'pollo', teksti: puhdas });
-      this.historia = this.historia.slice(-HISTORIAN_KATTO);
+      /*
+       * HISTORIAAN VAIN AITO VASTAUS (omistajan vikailmoitus 6.9.2026).
+       *
+       * Ennen tänne meni myös varateksti, jolloin mallille lähti
+       * seuraavan kysymyksen kontekstiksi Livian suuhun pantu "En osaa
+       * vastata tähän" — ja jatkokysymys "Kerro siitä" viittasi siihen
+       * eikä oikeaan vastaukseen. Epäonnistunut kierros jätetään siksi
+       * kokonaan pois, kysymys mukaan lukien: pelkkä kysymys ilman
+       * vastausta jättäisi historiaan kaksi peräkkäistä pelaajan
+       * vuoroa, eikä se ole sen parempi konteksti. Sama koskee
+       * katkennutta virtaa — muuten uusintanapin lähettämä sama kysymys
+       * seuraisi historiassa omaa puolikastaan.
+       */
+      if (!varateksti && !tulos?.katkesi) {
+        this.historia.push({ rooli: 'kayttaja', teksti: kysymys });
+        this.historia.push({ rooli: 'pollo', teksti: puhdas });
+        this.historia = this.historia.slice(-HISTORIAN_KATTO);
+      }
     } catch (virhe) {
       // Virhe katkaisee naputuksen ja kesken jääneen luennan heti eikä
       // soita kelloa.
@@ -4843,6 +4933,15 @@ class Pollo {
       this.nollaaTyhjaTila();
       this.lisaaViesti('pollo', virhe?.viesti
         ?? 'Livia ei saanut kysymyksestä kiinni. Yritä hetken päästä uudelleen.');
+      /*
+       * Uusintanappi myös tänne, mutta EI käyttörajaan: päivä- ja
+       * kuukausiraja eivät katoa uudelleen kysymällä, ja nappi vain
+       * houkuttelisi kuluttamaan pyyntöjä turhaan. Verkkovirhe ja
+       * palvelimen 502 sen sijaan menevät usein ohi heti.
+       */
+      if (virhe?.message !== 'paivaraja' && virhe?.message !== 'kuukausiraja') {
+        this.naytaUusinta(kysymys, jatko);
+      }
     } finally {
       // Vikaverkko: mikään polku ei saa jättää naputusta soimaan.
       this.lopetaNaputus();

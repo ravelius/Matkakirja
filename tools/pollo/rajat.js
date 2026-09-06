@@ -259,6 +259,51 @@ export function poimiJatkot(teksti, maara = 3) {
   };
 }
 
+/*
+ * TYHJÄ VASTAUS — SYY KERROTAAN, EI KEKSITÄ (omistajan vikailmoitus
+ * 6.9.2026: Livia kertoi Spartasta pitkästi, mutta jatkokysymykseen
+ * "Kerro siitä" tuli pelkkä "En osaa vastata tähän").
+ *
+ * Vanha varateksti valehteli: se väitti osaamattomuutta silloinkin, kun
+ * syy oli tekninen — virran kesken katkaissut ylikuormavirhe, mallin
+ * kieltäytyminen tai vastaus, josta jäi poiminnan jälkeen vain
+ * JATKOT-lohko. Malli ei siis sanonut "en osaa"; sen sanoi worker.
+ * Pelaaja ei voinut päätellä, kannattaako kysyä uudelleen.
+ *
+ * Siksi tyhjä vastaus luokitellaan ensin: verkko- ja ylikuormavirheet
+ * sekä muut tuntemattomat tyhjät ansaitsevat yhden uusintayrityksen,
+ * kieltäytyminen ei (uusinta tuottaisi saman kiellon ja kuluttaisi
+ * pelaajan päivärajaa). Vasta sen jälkeen näytetään teksti, joka kertoo
+ * totuuden. Lokiin menee VAIN syyluokka — ei pelaajan eikä mallin
+ * tekstiä.
+ */
+
+/** Kieltäytyminen: malli ei halunnut vastata. Uusinta ei auta. */
+export const LIVIA_KIELTAYTYY = 'Tästä en voi kertoa. Kysytkö jotain muuta?';
+
+/** Tekninen tyhjä: vastaus jäi matkalle. Uudelleen kysyminen kannattaa. */
+export const LIVIA_EI_TULLUT = 'Vastaus jäi matkalle eikä tullut perille. '
+  + 'Kokeile uudelleen.';
+
+/**
+ * Tyhjän vastauksen syyluokka.
+ *
+ * @param {{virhe?: string|null, stop?: string|null}} havainto
+ *   `virhe` = striimin oma virhetapahtuma (esim. "overloaded_error"),
+ *   `stop` = mallin stop_reason (esim. "refusal", "max_tokens").
+ * @returns {{syy: string, loki: string, uusinta: boolean}}
+ */
+export function tyhjanSyy({ virhe = null, stop = null } = {}) {
+  if (virhe) return { syy: 'virta', loki: `virta: ${virhe}`, uusinta: true };
+  if (stop === 'refusal') return { syy: 'kieltaytyi', loki: 'stop=refusal', uusinta: false };
+  return { syy: 'tyhja', loki: `stop=${stop || 'tuntematon'}`, uusinta: true };
+}
+
+/** Pelaajalle näytettävä teksti syyluokan mukaan. */
+export function tyhjanTeksti(syy) {
+  return syy === 'kieltaytyi' ? LIVIA_KIELTAYTYY : LIVIA_EI_TULLUT;
+}
+
 /**
  * STRIIMIN JATKOSUODATIN — JATKOT-lohko ei saa vilahtaa ruudulla.
  *
