@@ -10328,4 +10328,506 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /*
+   * ══ ERÄ M14, AASIA 4 6.9.2026 ═══════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M14 (AFG, PAK, UZB, PHL, CHN) tuo kaksi skandaalia kuhunkin
+   * viiteen maahan — kymmenen uutta. Kaikki ovat kuvattomia kuten
+   * erän muutkin nostot, ja jokaisen lähderivi nimeää en-Wikipedian
+   * artikkelin ja osan sekä tarkistuspäivän.
+   *
+   * PAIKAT ON MITATTU. Yksikään uusi merkki ei ole pelikaupungin
+   * kohdalla (KAUPUNGIN_KOHDALLA_SADE 7 lautayksikköä,
+   * js/fokuskohteet.js): lähin on Gandamak 29,0 yksikön päässä
+   * Kabul-laatasta ja toiseksi lähin Baguio 33,9 yksikön päässä
+   * Manilasta. Nimiölimitystä ei ole yhtään
+   * (tools/tarkista-nimiolimitys.mjs).
+   *
+   * AASIAN LINJAUS ON SITOVA (docs/aasia-tyoaineisto/spec-asia.md).
+   * Afganistanin, Pakistanin ja Kiinan kortit ovat historiaa eivätkä
+   * nykypolitiikkaa: 1842, 1849, 1842 ja 1928. Bamiyanin buddhien
+   * tuho jätettiin skandaaleista pois, koska sama aihe on jo maan
+   * fokuskohteena (js/packs/fokuskohteet-afg.js), ja Yuanmingyuan
+   * samasta syystä Kiinassa (js/packs/fokuskohteet-chn.js).
+   * Sotatapahtumat kerrotaan lähteen omalla tarkkuudella ilman
+   * uhrilukujen korostusta, ja Balangigan kortti kertoo kellojen
+   * matkan eikä sitä edeltäneitä tekoja yksityiskohtineen.
+   */
+  AFG: [
+    /*
+     * Gandamakin kylä Kabul–Jalalabad-tien varrella.
+     * Lähde: en.wikipedia.org: 1842 retreat from Kabul
+     */
+    {
+      id: 'gandamak-1842',
+      otsikko: 'Armeija, josta perille pääsi yksi',
+      nimio: 'Gandamak 1842',
+      vuosi: '1842',
+      paikka: 'Gandamak, Kabul–Jalalabadin tie',
+      lat: 34.2892, lon: 70.0383,
+      kortti: 'Tammikuussa 1842 yli 16 000 ihmistä lähti Kabulista kohti Jalalabadia '
+        + 'sopimuksella, joka lupasi heille vapaan kulun. Lupaus ei pitänyt. Talvitiellä '
+        + 'kolmen viikon matkasta tuli 1800-luvun Britannian pahin sotilaallinen tappio, '
+        + 'ja Jalalabadin porteille ratsasti lopulta yksi eurooppalainen.',
+      teksti: 'Ensimmäinen anglo-afgaanisota alkoi 1838, kun Itä-Intian kauppakomppania '
+        + 'pelkäsi Venäjän vaikutusvallan kasvua Afganistanissa. Kenraalikuvernööri lordi '
+        + 'Auckland päätti neuvonantajansa William Hay Macnaghtenin kehotuksesta tukea '
+        + 'Shuja Shah Durrania ja sivuutti Alexander Burnesin neuvon. Britit ja komppanian '
+        + 'joukot voittivat Dost Mohammad Barakzain ja miehittivät Kabulin 1839.'
+        + '\n\nAsema kävi kestämättömäksi, ja kapina Kabulissa pakotti kenraalimajuri '
+        + 'William Elphinstonen vetäytymään. Hän neuvotteli Dost Mohammadin pojan Wazir '
+        + 'Akbar Khanin kanssa sopimuksen, jonka mukaan armeija saisi kulkea turvallisesti '
+        + 'runsaan 140 kilometrin päähän Jalalabadin varuskuntaan.'
+        + '\n\nHeti kaupungista lähdön jälkeen kimppuun hyökättiin, ja kolonnaa ahdisteltiin '
+        + 'koko matkan lumisella tiellä. Kaikkiaan menetettiin 4 500 sotilasta ja noin 12 '
+        + '000 siviiliä: sotilaiden perheitä, työmiehiä, palvelijoita ja muuta '
+        + 'saattoväkeä. Viimeinen puolustus käytiin Gandamakin kylän liepeillä 13. '
+        + 'tammikuuta 1842.'
+        + '\n\nJalalabadiin pääsi eurooppalaisista vain apulaiskirurgi William Brydon ja '
+        + 'muutama intialainen sepoy. Yli sata brittivankia ja siviilipanttivankia '
+        + 'vapautettiin myöhemmin, ja noin 2 000 sepoyta palasi Intiaan seuraavan retken '
+        + 'jälkeen. The Economist kutsui vetäytymistä 2013 Britannian pahimmaksi '
+        + 'sotilaalliseksi katastrofiksi ennen Singaporen antautumista.',
+      lahde: 'en-Wikipedia "1842 retreat from Kabul", johdanto-osa ja osio "Background". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka moni eurooppalainen pääsi Jalalabadiin asti?',
+        vaihtoehdot: [
+          'Yksi',
+          'Noin sata',
+          'Puolet kolonnasta',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Tillya tepen kumpu Jowzjanissa lähellä Sheberghania.
+     * Lähde: en.wikipedia.org: Tillya tepe; National Museum of Afghanistan
+     */
+    {
+      id: 'baktrian-kulta',
+      otsikko: 'Kaksikymmentätuhatta korua, jotka katosivat',
+      nimio: 'Baktrian kulta',
+      vuosi: '1978–2003',
+      paikka: 'Tillya tepe, Jowzjan',
+      lat: 36.694444, lon: 65.789444,
+      kortti: 'Neuvostoliittolais-afganistanilainen retkikunta kaivoi 1978 kuudesta '
+        + 'hautakummusta yli 20 000 kulta- ja hopeaesinettä. Sitten aarre katosi. Vuosia '
+        + 'myöhemmin selvisi, ettei se ollut kadonnut vaan piilotettu — ja että museo, '
+        + 'josta sen olisi pitänyt löytyä, oli sillä välin ryöstetty lähes tyhjäksi.',
+      teksti: 'Tillya tepe eli kultainen kumpu on kaivauspaikka Pohjois-Afganistanin '
+        + 'Jowzjanin maakunnassa lähellä Sheberghania. Neuvostoarkeologi Viktor Sarianidin '
+        + 'johtama ryhmä kaivoi sen 1978, ja löytö tunnetaan nimellä Baktrian kulta.'
+        + '\n\nKuudesta hautakummusta, viisi naista ja yksi mies, löytyi noin 20 600 '
+        + 'esinettä: kaulakoruja puolijalokivineen, vöitä, medaljonkeja ja kruunu, tehtyinä '
+        + 'kullasta, hopeasta ja norsunluusta. Haudat ajoittuvat ensimmäisen vuosisadan '
+        + 'eaa. ja ensimmäisen vuosisadan jaa. vaihteeseen, ja niiden kolikot ovat '
+        + 'Tiberiuksen, Mithradates II:n ja jueh-tših-hallitsija Sapadbizesin ajalta. '
+        + 'Vainajat kuuluivat todennäköisesti jueh-tšeille eli varhaisille kušanoille.'
+        + '\n\nVuonna 1989 kulta siirrettiin Afganistanin keskuspankin maanalaiseen '
+        + 'holviin. Se osoittautui hyväksi ratkaisuksi: 1990-luvun alun levottomuuksissa '
+        + 'Kabulin kansallismuseo ryöstettiin useaan kertaan, ja esillä olleista 100 000 '
+        + 'esineestä katosi 70 prosenttia.'
+        + '\n\nKulta pysyi holvissa, ja se löydettiin uudelleen ja tuotiin julkisuuteen '
+        + 'vasta 2003. Arvokkaimmat esineet oli suljettu metallilaatikoihin ja viety '
+        + 'turvaan; ne kerättiin ja luetteloitiin 2004. Osa museon kadonneista esineistä on '
+        + 'löytynyt Kabulin holveista ja osa Sveitsistä.',
+      lahde: 'en-Wikipedia "Tillya tepe", johdanto-osa ja osio "Dates and context", sekä '
+        + '"National Museum of Afghanistan", osio "History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Missä Baktrian kulta oli 1990-luvun ryöstöjen aikana?',
+        vaihtoehdot: [
+          'Museon vitriineissä',
+          'Keskuspankin maanalaisessa holvissa',
+          'Viety maasta pois',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  PAK: [
+    /*
+     * Lahore, jossa vuoden 1849 sopimus allekirjoitettiin.
+     * Lähde: en.wikipedia.org: Koh-i-Noor
+     */
+    {
+      id: 'kohinoor-1849',
+      otsikko: 'Timantti, joka vaihtoi omistajaa yhdellä artiklalla',
+      nimio: 'Kohinoor 1849',
+      vuosi: '1849',
+      paikka: 'Lahore, Punjab',
+      lat: 31.582, lon: 74.3167,
+      kortti: 'Vuonna 1849 Punjab liitettiin Itä-Intian kauppakomppaniaan, ja '
+        + 'yksitoistavuotias maharadža Duleep Singh luovutti valtakuntansa kuuluisimman '
+        + 'jalokiven. Kivi lähti Lontooseen, jossa se ei tehnyt vaikutusta — ja se '
+        + 'hiottiin uudelleen. Neljä valtiota on sen jälkeen vaatinut sitä takaisin.',
+      teksti: 'Kohinoorin varhaishistoria on epävarma. Delhin sulttaani Alauddin Khalji '
+        + 'sai 1310 suuren timantin, ja 1700-luvun kronikoitsija Khafi Khan tunnisti sen '
+        + 'Kohinooriksi. Baburin poika Humayun sai timantin lahjaksi Gwaliorin hallitsijan '
+        + 'perheeltä, ja Baburnama kertoo arvioitsijoiden hinnanneen sen koko maailman '
+        + 'kahden ja puolen päivän ruoaksi. Historioitsija William Dalrymple huomauttaa, '
+        + 'ettei ole varmaa, oliko kyseessä sama kivi: suuria timantteja oli Intiassa '
+        + 'useita.'
+        + '\n\nToisen anglo-sikhisodan jälkeen kauppakomppania liitti Punjabin '
+        + 'itseensä 1849. Sikhivaltakunnan hallitsija oli tuolloin yksitoistavuotias '
+        + 'Duleep Singh, joka hallitsi komppanian liittolaisen Gulab Singhin varjossa. '
+        + 'Timantti luovutettiin kuningatar Viktorialle.'
+        + '\n\nLontoossa kivi asetettiin 1851 esille maailmannäyttelyyn, mutta sen vaisu '
+        + 'hionta ei tehnyt vaikutusta katsojiin. Prinssi Albert määräsi sen hiottavaksi '
+        + 'uudelleen soikeaksi briljantiksi Coster Diamondsilla. Sen jälkeen kiveä ovat '
+        + 'kantaneet vain kuningashuoneen naiset — sen sanotaan tuovan miehelle huonoa '
+        + 'onnea — ja se on siirtynyt kruunusta toiseen.'
+        + '\n\nTimantti on nyt esillä Lontoon Towerissa. Intian, Iranin, Pakistanin ja '
+        + 'Afganistanin hallitukset ovat kaikki vaatineet sitä omakseen Intian '
+        + 'itsenäistymisestä 1947 lähtien. Britannian hallitus katsoo kiven siirtyneen '
+        + 'laillisesti vuoden 1849 Lahoren sopimuksen ehdoilla ja on hylännyt vaatimukset.',
+      lahde: 'en-Wikipedia "Koh-i-Noor", johdanto-osa ja osio "History". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi timantti hiottiin Lontoossa uudelleen?',
+        vaihtoehdot: [
+          'Se oli haljennut matkalla',
+          'Se ei tehnyt vaikutusta näyttelyvieraisiin',
+          'Se oli liian suuri kruunuun',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Harappan kumpu Punjabissa Lahoren ja Multanin radan varrella.
+     * Lähde: en.wikipedia.org: Harappa
+     */
+    {
+      id: 'harappan-tiilet',
+      otsikko: 'Viisituhatta vuotta vanhat tiilet radan alle',
+      nimio: 'Harappan tiilet',
+      vuosi: '1857',
+      paikka: 'Harappa, Punjab',
+      lat: 30.628889, lon: 72.863889,
+      kortti: 'Lahoren ja Multanin rautatietä rakentavat insinöörit tarvitsivat sepeliä '
+        + 'ratapenkkaan. Lähellä oli kumpu, joka oli täynnä valmiiksi poltettuja tiiliä. '
+        + 'Niitä oli helppo hakea, ja niin ne murskattiin radan alle — vasta myöhemmin '
+        + 'selvisi, mitä kumpu oli ollut.',
+      teksti: 'Harappa oli Mohenjo-daron ohella Indus-laakson sivilisaation suurimpia '
+        + 'kaupunkeja. Kaupunki nousi noin 2600 eaa. Punjabin keskiosaan, ja sen '
+        + 'kypsyysvaiheessa 2600–1900 eaa. siellä uskotaan asuneen jopa 23 500 ihmistä 150 '
+        + 'hehtaarin alalla savitiilitaloissa — aikaansa nähden suuri kaupunki.'
+        + '\n\nVuonna 1857 Lahoren ja Multanin rautatietä rakentavat insinöörit ottivat '
+        + 'raunioista tiiliä ratasepeliksi. Vahinko oli suuri, ja se tehtiin ennen kuin '
+        + 'kukaan tiesi, minkä ikäisestä kaupungista oli kysymys: Indus-laakson '
+        + 'sivilisaatio tunnistettiin vasta 1920-luvun kaivauksissa Mohenjo-darossa ja '
+        + 'Harappassa.'
+        + '\n\nTuhosta huolimatta paikalta on saatu talteen runsaasti esineistöä. '
+        + 'Harappalaisessa kulttuurissa oli mahdollinen kirjoitusjärjestelmä, '
+        + 'kaupunkikeskuksia, viemäröintiä sekä monimuotoinen yhteiskunta- ja '
+        + 'talousjärjestelmä, ja sen varhaisimmat juuret ovat Mehrgarhin kaltaisissa '
+        + 'kulttuureissa noin 6000 eaa.'
+        + '\n\nNykyinen Harappan kylä on alle kilometrin päässä muinaisesta kaupungista, '
+        + 'ja siellä on yhä brittiajan rautatieasema. Paikka lisättiin 2004 Unescon '
+        + 'maailmanperintökohteiden aielistalle. Vuonna 2005 alueelle suunniteltu '
+        + 'huvipuistohanke keskeytettiin, kun rakentajat kaivoivat maasta esiin runsaasti '
+        + 'muinaisesineitä.',
+      lahde: 'en-Wikipedia "Harappa", johdanto-osa ja osio "History". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mihin Harappan tiilet käytettiin 1857?',
+        vaihtoehdot: [
+          'Uuden kaupungin muuriin',
+          'Rautatien ratasepeliksi',
+          'Museon rakentamiseen',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  UZB: [
+    /*
+     * Bukharan Arkin edusaukio.
+     * Lähde: en.wikipedia.org: Arthur Conolly; Charles Stoddart
+     */
+    {
+      id: 'bukhara-1842',
+      otsikko: 'Kaksi upseeria, jotka jäivät suureen peliin',
+      nimio: 'Bukhara 1842',
+      vuosi: '1838–1842',
+      paikka: 'Ark-linnoituksen aukio, Bukhara',
+      lat: 39.7756, lon: 64.4093,
+      kortti: 'Eversti Charles Stoddart lähetettiin Bukharaan neuvottelemaan '
+        + 'ystävyyssopimuksesta ja venäläisten orjien vapauttamisesta. Emiiri pidätytti '
+        + 'hänet. Kapteeni Arthur Conolly tuli pelastamaan häntä ja jäi itsekin vangiksi — '
+        + 'ja juuri Conolly oli keksinyt nimen sille, mihin molemmat olivat astuneet.',
+      teksti: 'Arthur Conolly (1807–1842) oli brittiläinen tiedustelu-upseeri, tutkimusmatkailija '
+        + 'ja kirjailija sekä Bengalin kevyen ratsuväen kapteeni Itä-Intian kauppakomppanian '
+        + 'palveluksessa. Hän teki lukuisia tiedusteluretkiä Keski-Aasiaan ja keksi '
+        + 'ilmauksen The Great Game, suuri peli, kuvaamaan Britannian ja Venäjän kamppailua '
+        + 'alueen herruudesta. Ilmaus esiintyy heinäkuussa 1840 kirjeessä, jonka hän '
+        + 'kirjoitti Kandaharin poliittiseksi agentiksi nimitetylle Henry Rawlinsonille.'
+        + '\n\nConolly matkusti usein valeasussa ja käytti nimeä Khan Ali, sanaleikkiä '
+        + 'omasta nimestään. Vuonna 1829 hän lähti Moskovasta Kaukasian kautta Keski-Aasiaan '
+        + 'ja saapui Heratiin syyskuussa 1830; matkakertomuksensa hän julkaisi 1834.'
+        + '\n\nEversti Charles Stoddart oli lähetetty Bukharaan taivuttelemaan emiiriä '
+        + 'vapauttamaan venäläiset orjat ja solmimaan ystävyyssopimus Britannian kanssa. '
+        + 'Emiiri Nasrullah Khan pidätytti hänet 1838. Marraskuussa 1841 Conolly saapui '
+        + 'kaupunkiin osana tehtäväänsä vapauttaa Stoddart, mutta epäonnistui.'
+        + '\n\nMolemmat teloitettiin vakoilusyytteellä 24. kesäkuuta 1842 Ark-linnoituksen '
+        + 'edustalla olevalla aukiolla. Pastori Joseph Wolff lähti selvittämään heidän '
+        + 'kohtaloaan, pääsi hädin tuskin hengissä pois ja julkaisi 1845 laajan '
+        + 'matkakertomuksen, joka teki miehistä tunnettuja Britanniassa vuosikausiksi.',
+      lahde: 'en-Wikipedia "Arthur Conolly", johdanto-osa ja osio "Biography", sekä '
+        + '"Charles Stoddart", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Minkä sanaparin Arthur Conolly keksi?',
+        vaihtoehdot: [
+          'The Great Game',
+          'The Silk Road',
+          'The Iron Curtain',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Vozroždenijan saari Aralinmerellä, nykyisin osa Aralkumia.
+     * Lähde: en.wikipedia.org: Vozrozhdeniya Island
+     */
+    {
+      id: 'vozrozdenija',
+      otsikko: 'Saari, joka lakkasi olemasta saari',
+      nimio: 'Vozroždenije',
+      vuosi: '1954–2002',
+      paikka: 'Vozroždenijan saari, Araljärvi',
+      lat: 45.15, lon: 59.3167,
+      kortti: 'Neuvostoliitto rakensi 1954 pienelle Aralinmeren saarelle koeaseman, jonka '
+        + 'nimi oli Aralsk-7. Saaren piti olla eristyksissä. Kun järvi kuivui, saari '
+        + 'kasvoi, liittyi mantereeseen ja lakkasi olemasta saari — ja sen jäljet jäivät '
+        + 'kaikkien ulottuville.',
+      teksti: 'Vozroždenije eli Uudestisyntyminen oli Araljärven saari, jonka alue jakautuu '
+        + 'nykyään Uzbekistanin ja Kazakstanin kesken. Se oli 1800-luvulla vain 200 '
+        + 'neliökilometriä. Venäläinen tutkimusretkikunta löysi saariryhmän 1848–1849 '
+        + 'kuunari Konstantinilla A. I. Butakovin johdolla, ja Nikolai I:n saari nimettiin '
+        + 'neuvostoaikana uudelleen Vozroždenijaksi.'
+        + '\n\nPunainen armeija etsi 1920-luvulla paikkaa biologisten aseiden tutkimus- ja '
+        + 'koekeskukselle. Ehdolla olivat muun muassa Solovetskin saaret ja Seligerjärven '
+        + 'Gorodomlja, mutta valinta osui Vozroždenijaan, ja koeasema Aralsk-7 rakennettiin '
+        + '1954 sinne ja naapurisaarelle Komsomolskille. Asiakirjojen mukaan asemalla '
+        + 'valmistettiin ja varastoitiin muun muassa pernaruttoitiöitä ja ruttobasilleja.'
+        + '\n\nSaaren kaupunki Kantubek oli Aralsk-7:n oma nimi kartalla; siellä asui noin '
+        + '1 500 ihmistä, ja sillä oli kerho, stadion, kouluja ja kauppoja sekä '
+        + 'Neuvostoliiton ainoa nelikiitoratainen lentokenttä, jonka radat leikkasivat '
+        + 'toisensa tähdeksi.'
+        + '\n\nMarraskuussa 1991 päätettiin lopettaa kokeet, ja huhtikuuhun 1992 mennessä '
+        + 'kaikki yksiköt oli evakuoitu; Kantubekista tuli aavekaupunki. Osaa säiliöistä '
+        + 'ei hävitetty asianmukaisesti, ja monet niistä alkoivat vuotaa. Vuonna 2002 '
+        + 'kymmenen pernaruttohautaa puhdistettiin Yhdysvaltain rahoittamassa ja '
+        + 'Uzbekistanin avustamassa hankkeessa. Järven kuivuessa saari kasvoi 2 300 '
+        + 'neliökilometriin, liittyi 2001 mantereeseen ja on nyt osa Aralkumin autiomaata.',
+      lahde: 'en-Wikipedia "Vozrozhdeniya Island", johdanto sekä osiot "Geography" ja '
+        + '"History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi saari lakkasi olemasta saari?',
+        vaihtoehdot: [
+          'Se räjäytettiin',
+          'Araljärvi kuivui ja saari liittyi mantereeseen',
+          'Se upposi',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  PHL: [
+    /*
+     * Balangigan kirkko Itä-Samarilla.
+     * Lähde: en.wikipedia.org: Balangiga bells
+     */
+    {
+      id: 'balangigan-kellot',
+      otsikko: 'Kolme kirkonkelloa, jotka olivat poissa 117 vuotta',
+      nimio: 'Balangiga',
+      vuosi: '1901–2018',
+      paikka: 'San Lorenzo de Martirin kirkko, Balangiga',
+      lat: 11.1092, lon: 125.3864,
+      kortti: 'Yhdysvaltain armeija vei 1901 Balangigan kirkosta kolme kelloa '
+        + 'sotasaaliina. Kaksi päätyi Wyomingiin ja yksi lopulta Etelä-Koreaan. '
+        + 'Filippiinit pyysi niitä takaisin 1950-luvun lopulta alkaen, ja vastaus tuli '
+        + 'vasta 2018.',
+      teksti: 'Balangigan kirkko vihittiin 1854 roomalaiselle marttyyrille San Lorenzolle. '
+        + 'Vanhin kello valettiin noin 1853, ja siinä on fransiskaanien vaakuna ja '
+        + 'kirjoitus "R. San Francisco Año El 1853"; suuaukon halkaisija on 79 senttimetriä '
+        + 'ja korkeus 76. Toinen kello valettiin 1889 kirkkoherra Agustín Delgadon '
+        + 'aloitteesta, ja kolmas ja pienin hankittiin ilmeisesti 1895.'
+        + '\n\nKellot vietiin Yhdysvaltoihin sotasaaliina Filippiinien–Yhdysvaltain sodan '
+        + 'aikana vuonna 1901. Kaupunki oli vallattu takaisin 29. syyskuuta, ja kun '
+        + '11. jalkaväkirykmentti lähti lokakuussa, se otti mukaansa palaneesta kirkosta '
+        + 'otetut kellot ja kirkon edustan tykin. Yksi kelloista oli soitettu merkiksi '
+        + 'hyökkäyksestä, ja pronssista olisi voinut valaa aseita.'
+        + '\n\nPieni merkkikello päätyi 9. jalkaväkirykmentin mukana Yhdysvaltoihin 1902 ja '
+        + 'sieltä lopulta 2. divisioonan museoon Camp Red Cloudiin Etelä-Koreaan. Kaksi '
+        + 'suurempaa kelloa vietiin 1904 Wyomingiin Fort D. A. Russellille, myöhemmälle '
+        + 'Francis E. Warrenin lentotukikohdalle.'
+        + '\n\nKatolinen kirkko, Filippiinien hallitus ja Balangigan asukkaat pyysivät '
+        + 'kelloja takaisin 1950-luvun lopulta lähtien, mutta yritykset kariutuivat '
+        + 'vuosikymmeniksi. Neuvottelut etenivät 2018, ja kellot palasivat Filippiineille '
+        + '11. joulukuuta 2018 — 117 vuoden jälkeen. Ne luovutettiin kotikirkkoonsa '
+        + '15. joulukuuta, ja seuraavana aamuna yhtä niistä soitettiin ensimmäistä kertaa '
+        + 'sitten vuoden 1901.',
+      lahde: 'en-Wikipedia "Balangiga bells", johdanto sekä osiot "History", "Removal to '
+        + 'the United States" ja "Return to Samar". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka kauan kellot olivat poissa Balangigasta?',
+        vaihtoehdot: [
+          '17 vuotta',
+          '117 vuotta',
+          '217 vuotta',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Baguio, jossa Rogelio Roxas kertoi tehneensä löytönsä.
+     * Lähde: en.wikipedia.org: Yamashita's gold
+     */
+    {
+      id: 'yamashitan-kulta',
+      otsikko: 'Aarre, jota kukaan ei ole löytänyt',
+      nimio: 'Yamashitan kulta',
+      vuosi: '1971–1996',
+      paikka: 'Baguio, Benguet',
+      lat: 16.4119, lon: 120.5933,
+      kortti: 'Tarina kertoo japanilaisten piilottaneen Kaakkois-Aasiasta ryöstetyn '
+        + 'saaliin Filippiinien luoliin ja tunneleihin. Aarteenetsijöitä on riittänyt yli '
+        + 'viisikymmentä vuotta, mutta asiantuntijat pitävät koko aarretta '
+        + 'todennäköisesti keksittynä. Yksi juttu eteni silti oikeuteen asti — ja tuotti '
+        + 'aikansa suurimman vahingonkorvaustuomion.',
+      teksti: 'Yamashitan kullaksi kutsutaan sotasaalista, jonka japanilaisten joukkojen '
+        + 'väitetään ryöstäneen ympäri Kaakkois-Aasiaa ja piilottaneen Filippiinien '
+        + 'luoliin, tunneleihin ja maanalaisiin tiloihin. Nimi tulee kenraali Tomoyuki '
+        + 'Yamashitasta, joka oli maan viimeinen japanilainen sotilaskuvernööri. '
+        + 'Aarteenetsijöitä ympäri maailmaa on riittänyt yli viisikymmentä vuotta, mutta '
+        + 'useimmat asiantuntijat pitävät aarteen olemassaoloa epätodennäköisenä.'
+        + '\n\nHistorioitsija Ambeth Ocampo on huomauttanut ihmettelevänsä, ettei viidessä '
+        + 'vuosikymmenessä ole karttojen, suullisten todistusten ja kehittyneiden '
+        + 'metallinilmaisimien avullakaan löytynyt mitään.'
+        + '\n\nMaaliskuussa 1988 filippiiniläinen aarteenetsijä Rogelio Roxas haastoi '
+        + 'Havaijin osavaltion tuomioistuimessa entisen presidentin Ferdinand Marcosin ja '
+        + 'tämän puolison Imeldan varkaudesta ja ihmisoikeusrikkomuksista. Roxasin mukaan '
+        + 'hän oli 1961 Baguiossa saanut japanilaisen sotilaan pojalta kartan, ja hänen '
+        + 'ryhmänsä oli 1971 avannut Baguion lähellä valtion mailla kammion, josta löytyi '
+        + 'pistimiä, samuraimiekkoja, radioita, luita — ja metrin korkuinen kullanvärinen '
+        + 'buddha sekä kultaharkoilla täytettyjä laatikoita.'
+        + '\n\nRoxas kertoi, että Marcos määräsi hänet pidätettäväksi ja takavarikoi '
+        + 'buddhan ja lopun kullan. Roxas kuoli oikeudenkäynnin aattona, mutta hänen '
+        + 'valaehtoinen kertomuksensa jäi todisteeksi. Vuonna 1996 hänen kuolinpesänsä ja '
+        + 'Golden Budha Corporation saivat siihenastisen historian suurimman '
+        + 'vahingonkorvaustuomion.',
+      lahde: 'en-Wikipedia "Yamashita\'s gold", johdanto sekä osiot "Treasure skeptics" ja '
+        + '"Rogelio Roxas lawsuit". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä asiantuntijat sanovat aarteesta?',
+        vaihtoehdot: [
+          'Sen olemassaolo on epätodennäköinen',
+          'Se on löydetty kokonaan',
+          'Se on Japanin hallussa',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  CHN: [
+    /*
+     * Nanjing, jossa sopimus allekirjoitettiin HMS Cornwallisin kannella.
+     * Lähde: en.wikipedia.org: Treaty of Nanking
+     */
+    {
+      id: 'nankingin-sopimus',
+      otsikko: 'Sopimus, joka kirjoitettiin sotalaivan kannella',
+      nimio: 'Nanking 1842',
+      vuosi: '1842',
+      paikka: 'Jangtse Nanjingin kohdalla',
+      lat: 32.060833, lon: 118.778889,
+      kortti: 'Britannian kauppatase Kiinan kanssa oli pahasti alijäämäinen, ja '
+        + 'salakuljetettu oopiumi tasoitti sen. Kun kiinalainen komissaari poltti '
+        + 'takavarikoidun oopiumin, seurasi sota. Rauha tehtiin 1842 laivan kannella '
+        + 'Nanjingin edustalla, ja se aloitti sarjan, jota Kiinassa on siitä asti sanottu '
+        + 'epätasa-arvoisiksi sopimuksiksi.',
+      teksti: '1700-luvun lopulla ja 1800-luvun alussa Britannian kauppa Kiinan kanssa oli '
+        + 'yhä pahemmin alijäämäistä: teetä ja posliinia tuotiin paljon, eikä vastaavaa '
+        + 'ollut tarjottavaa. Komppanian Intiassa kasvattamaa oopiumia huutokaupattiin '
+        + 'kauppiaille, jotka myivät sen salakuljetettavaksi Kiinaan, vaikka Kiinan laki '
+        + 'kielsi oopiumin tuonnin ja myynnin.'
+        + '\n\nKun Lin Zexu takavarikoi yksityisomistuksessa olleen oopiumin ja määräsi sen '
+        + 'poltettavaksi Humenissa, Britannia vaati ensin korvauksia ja julisti sitten '
+        + 'sodan. Ensimmäinen oopiumisota käytiin 1839–1842, ja ylivoimainen sotatekniikka '
+        + 'antoi Britannialle voiton.'
+        + '\n\nBrittiläisten sotalaivojen ollessa valmiina hyökkäämään Nanjingiin '
+        + 'neuvoteltiin HMS Cornwallisin kannella joen ankkuripaikalla. Sopimuksen '
+        + 'allekirjoittivat 29. elokuuta 1842 Henry Pottinger sekä Qing-hallinnon edustajat '
+        + 'Keying, Yilibu ja Niu Jian; artikloja oli kolmetoista. Daoguang-keisari '
+        + 'ratifioi sen 27. lokakuuta ja kuningatar Viktoria 28. joulukuuta.'
+        + '\n\nSopimus purki Kantonin kauppajärjestelmän ja Cohong-kauppiaiden monopolin, '
+        + 'avasi Kantonin rinnalle neljä uutta sopimussatamaa — Xiamenin, Fuzhoun, Ningbon '
+        + 'ja Shanghain — ja luovutti Hongkongin saaren Britannialle. Korvauksia kertyi '
+        + 'kaikkiaan 27 miljoonaa hopeadollaria: kuusi takavarikoidusta oopiumista, kuusi '
+        + 'Kantonin lunnaista, kolme kauppiaiden veloista ja kaksitoista sotakuluista.',
+      lahde: 'en-Wikipedia "Treaty of Nanking", johdanto sekä osiot "Background", "Foreign '
+        + 'trade" ja "Reparations and demobilisation". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Missä sopimus allekirjoitettiin?',
+        vaihtoehdot: [
+          'Keisarin palatsissa',
+          'Sotalaiva HMS Cornwallisin kannella',
+          'Kantonin tullissa',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Itäiset Qing-haudat Zunhuassa Hebeissä.
+     * Lähde: en.wikipedia.org: Looting of the Eastern Mausoleum
+     */
+    {
+      id: 'ita-qingin-haudat',
+      otsikko: 'Sotapäällikkö, joka räjäytti keisarien haudat',
+      nimio: 'Qing-haudat 1928',
+      vuosi: '1928',
+      paikka: 'Itäiset Qing-haudat, Zunhua',
+      lat: 40.185783, lon: 117.646923,
+      kortti: 'Kesäkuussa 1928 sotapäällikkö Sun Dianyingin joukot murtautuivat Kiinan '
+        + 'suurimpaan keisarilliseen hautakompleksiin. Rahaa ei ollut, palkat olivat '
+        + 'myöhässä, ja hautojen aarteista kerrottiin tarkkoja tietoja. Juttu paljastui, '
+        + 'kun yksi sotilaista meni myymään saalistaan pekingiläiseen antiikkiliikkeeseen.',
+      teksti: 'Itäiset Qing-haudat Zunhuassa Hebeissä ovat Kiinan suurin, täydellisin ja '
+        + 'parhaiten säilynyt keisarillinen hautakompleksi, 125 kilometriä Pekingistä '
+        + 'koilliseen. Sinne on haudattu viisi keisaria, 15 keisarinnaa, 136 hovinaista, '
+        + 'kolme prinssiä ja kaksi prinsessaa, ja alue kattaa 80 neliökilometriä.'
+        + '\n\nQing-valtakunnan hajottua 1912 uusi tasavalta ja hiljattain luopunut '
+        + 'keisariperhe sopivat hautojen suojelusta. Sopimusta oli yhä vaikeampi pitää: '
+        + 'rahoitus ja vartiointi kävivät epäsäännöllisiksi. Sun Dianying oli Fengtianin '
+        + 'armeijan komentaja, joka oli liittoutunut Chiang Kai-shekin kanssa 1926 '
+        + 'pohjoisella sotaretkellä ja joutui sen jälkeen aseistariisunnan kohteeksi; '
+        + 'hänen joukkojensa palkat, ruoka ja vesi myöhästyivät jatkuvasti, ja hän etsi '
+        + 'muuta rahoitusta.'
+        + '\n\nKesäkuun alussa 1928 hänen joukkonsa ryöstivät ja turmelivat useita '
+        + 'kompleksin päämausoleumeista, muun muassa Qianlong-keisarin ja '
+        + 'leskikeisarinna Cixin haudat. Tyhjennetyt kammiot muurattiin kivillä umpeen. '
+        + 'Rakennukset itsessään jäivät pystyyn.'
+        + '\n\nSamana päivänä eräs sotilas saapui pekingiläisen antiikkikauppiaan '
+        + 'liikkeeseen myymään huomiota herättävän arvokkaita esineitä. Sekä sotilas että '
+        + 'kauppias pidätettiin, ja kuulusteluissa paljastui koko operaatio ja sen '
+        + 'järjestäjä. Viimeinen keisari Puyi vaati sähkeillään ankaraa tutkintaa. Sun '
+        + 'Dianying lahjoi kuitenkin ne, jotka olisivat voineet rangaista häntä, eikä '
+        + 'ketään tuomittu.',
+      lahde: 'en-Wikipedia "Looting of the Eastern Mausoleum", johdanto sekä osiot '
+        + '"Background", "Aftermath" ja "Evasion", sekä "Eastern Qing tombs", johdanto-osa. '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten ryöstö paljastui?',
+        vaihtoehdot: [
+          'Sotilas yritti myydä saalista antiikkiliikkeessä',
+          'Vartija ilmiantoi joukot',
+          'Puyi näki sen omin silmin',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
 };

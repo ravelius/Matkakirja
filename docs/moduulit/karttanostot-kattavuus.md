@@ -1154,3 +1154,95 @@ päässä jokaisesta kaupunkimerkistä (`tests/elaintakyt.test.mjs`).
 Tiukin oli Taiwan: Taipei-laatta on laudalla keskellä saarta, joten
 formosanmustakarhun piste oli haettava saaren eteläosan vuoristosta
 (etäisyys 49,7).
+
+## Erä M14 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Aasian neljäs erä: **AFG, PAK, UZB, PHL ja CHN**. Kaikilla viidellä oli
+ennen erää maastokohteet (PHL:llä ja CHN:llä neljä, UZB:llä kaksi),
+mutta kohteita oli yhteensä kolme ja skandaaleja ei yhtään; eläintäky
+oli vain Kiinalla. Erästä tuli **38 kohdetta, 1 maastokohde, 4
+eläintäkyä ja 10 skandaalia** eli 53 uutta karttamerkkiä, ja
+`node tools/laske-karttanostot.mjs` sanoo erän jälkeen kaikista
+viidestä *täysi*; taulukot ajaa Fable.
+
+Kohteet asuvat maiden omissa `js/packs/maastokohteet-<iso>.js`
+-tiedostoissa (kaikilla viidellä oli tiedosto jo olemassa, joten uusia
+rekisteröintejä `maastokohteet.js`-hakemistoon, `sw.js`:ään tai
+`tools/build-standalone.mjs`:ään ei tarvittu). Eläintäyt ovat
+`js/packs/elaintakyt.js`:n ja skandaalit `js/packs/skandaalit.js`:n
+lopussa, ja kummankin testin lukumäärät päivitettiin (eläintäkyjä
+81 → 85, skandaaleja 183 → 193 ja maita 79 → 84). Erä on kuvaton kuten
+K2-erät 1–4 ja maailman erät M1–M11, ja jokainen väite on
+en-Wikipedian raakatekstin katteessa lähderivillä, joka nimeää
+artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Afganistan (AFG) | Band-e Amir, Jamin minareetti, Heratin linnoitus, Balkh, Mes Aynak, Ai-Khanoum, Ghazni (+ Bamiyanin buddhat oli jo) | (oli jo: Noshaq, Amudarja, Helmand) | lumileopardi | Gandamak 1842, Baktrian kulta 1978–2003 |
+| Pakistan (PAK) | Mohenjo-daro, Taxila, Makli, Rohtasin linnoitus, Takht-i-Bahi, Khewran kaivos, Deosai, Mehrgarh | (oli jo: K2, Arabianmeri, Indus) | markhor | Kohinoor 1849, Harappan tiilet 1857 |
+| Uzbekistan (UZB) | Itchan Kala, Shahrisabz, Moynaq, Nukusin museo, Kampir Tepe, Ayaz-Kala, Kokand (+ Araljärvi oli jo) | Aydarjärvi (järvi) | bukharanhirvi | Bukhara 1842 (Conolly ja Stoddart), Vozroždenije 1954–2002 |
+| Filippiinit (PHL) | Banaue, Vigan, Chocolate Hills, Tubbataha, Maanalainen joki, Callaon luola, Paoayn kirkko, Corregidor | (oli jo: Mount Apo, Mayon, Filippiinienmeri, Cagayan) | tarsieri | Balangigan kellot 1901–2018, Yamashitan kulta 1971–1996 |
+| Kiina (CHN) | Mutianyu, Terrakotta-armeija, Mogaon luolat, Zhangjiajie, Lijiang, Leshanin Buddha, Pingyao (+ Yuanmingyuan oli jo) | (oli jo: Taishan, Etelä-Kiinan meri, Jangtse, Keltainenjoki) | (oli jo) | Nankingin sopimus 1842, Qing-haudat 1928 |
+
+**Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
+mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin, ja
+jokaisen kohteen lähin on kirjattu sen koordinaattirivin viereen.
+Erän lähin merkki on **Mes Aynak 9,3 lautayksikön päässä Kabulista**
+ja toiseksi lähin **Terrakotta-armeija 12,9 yksikön päässä
+Xi'anista**; raja `KAUPUNGIN_KOHDALLA_SADE` on 7 ja kaupunkikaton
+säde 8. `node tools/tarkista-nostopaikat.mjs` antaa jokaiselle
+uudelle nostolle rivin *pääkartta*, ja
+`node tools/tarkista-nimiolimitys.mjs` sanoo koko maailmasta yhä
+"NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Kaksi kaupunkia siirrettiin kohdelistalta skandaalikortille**, koska
+sama nimiö olisi tullut kahdesti samaan pisteeseen. Pakistanin
+**Lahoren linnoitus** ja maan Kohinoor-skandaali osuisivat samaan
+kohtaan, joten Lahoren tarina kerrotaan skandaalikortissa ja
+kohdelistalle tuli tilalle Mehrgarh. Uzbekistanin **Bukhara** on sama
+tapaus: Poi Kalyan, Ark ja Chor-Bakr ovat 2–3 lautayksikön päässä
+toisistaan ja Conolly–Stoddart-skandaalista, joten kaupunki näkyy
+kartalla vain skandaalimerkkinä ja kohteeksi tuli Kokand. Samasta
+säännöstä kaatuivat myös Kiinan **Suzhoun puutarhat** (11,6 yksikköä
+Shanghaista, nimiö kaupungin nimen päällä) ja Filippiinien
+**Intramuros** (Manilan laatan kohdalla).
+
+**Aasian linjaukset ovat sitovia** (`docs/aasia-tyoaineisto/spec-asia.md`).
+Afganistanin, Pakistanin ja Kiinan kortit ovat historiaa eivätkä
+nykypolitiikkaa, ja M3:n Myanmar-linjan mukaisesti artikkeleita, joiden
+nykytila on sotaa, ei kirjoitettu: Afganistanin **Bagram** jätettiin
+kokonaan pois, koska sen artikkeli lepää lentotukikohdan ja sodan
+varassa, ja Mes Aynakin kortti kertoo kaivauspaikan oman historian ja
+sen, että kaivostoiminta uhkaa jäänteitä, ilman nykyhallinnon
+nimeämistä. Bamiyanin buddhien tuhoa ei kirjoitettu skandaaliksi,
+koska sama aihe on jo maan fokuskohteena
+(`js/packs/fokuskohteet-afg.js`); samasta syystä Kiinan skandaaleiksi
+valittiin Nankingin sopimus ja Qing-hautojen ryöstö eikä Yuanmingyuan,
+joka on jo `js/packs/fokuskohteet-chn.js`:ssä. Balangigan kortti kertoo
+kellojen matkan eikä sitä edeltäneitä tekoja yksityiskohtineen, eikä
+yhdenkään kortin aihe ole käynnissä oleva selkkaus.
+
+**Kaksi ehdokasta jäi pois lähdeaineiston takia.** Pakistanin
+**Khunjerabin solalla** ei ole en-Wikipedian artikkelissa lainkaan
+koordinaattia (`{{Coord|type:pass}}` ilman lukuja), ja kortista olisi
+tullut rajakortti; Deosai kirjoitettiin sen sijaan luontokohteena ja
+Pakistanin hallinnoiman Gilgit-Baltistanin nimi on kortissa lähteen
+omalla muotoilulla. Osalla kohteista koordinaatti ei ollut
+en-Wikipedian `coordinates`-propissa vaan artikkelin oman infolaatikon
+`{{coord}}`-mallissa (mm. Band-e Amir, Herat, Mes Aynak, Makli,
+Takht-i-Bahi, Khewra, Deosai, Itchan Kala, Shahrisabz, Nukus,
+Ayaz-Kala, Aydar, Mutianyu, Zhangjiajie, Lijiang), ja se on luettu
+sieltä; kumpi lähde kulloinkin, se lukee kohteen koordinaattirivillä.
+
+**Neljä eläintäkyä, kaikki kuvattomia.** `kuva`-kentässä on kuvaputken
+ämpäritunnus ilman kansiota (`elain-afg`, `elain-pak`, `elain-uzb`,
+`elain-phl`). Paikat on mitattu koneellisesti: jokainen piste on maan
+rajojen sisällä, maalla ja vähintään 35 lautayksikön päässä jokaisesta
+kaupunkimerkistä (`tests/elaintakyt.test.mjs`). Lumileopardi on
+Wakhanin käytävässä, jossa se on lähteen mukaan tallentunut
+riistakameroihin 16 paikassa; markhor Chitralin vuoristossa, jossa on
+lajin suurin kanta; bukharanhirvi Amudarjan tugai-vyöhykkeellä; ja
+tarsieri Etelä-Mindanaon Saranganissa. Filippiineillä Bohol olisi ollut
+lajin tunnetuin koti, mutta piste olisi osunut saman erän Chocolate
+Hills -merkin päälle.

@@ -1654,7 +1654,76 @@ export const ELAINTAKYT = {
     lon: 93.6,
     lat: 45.35,
   },
+  /*
+   * ══ ERÄ M14, AASIA 4 6.9.2026 ══════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M14 (AFG, PAK, UZB, PHL, CHN) tuo neljä eläintäkyä; Kiinalla
+   * oli oma jo ennestään. Kaikki neljä ovat KUVATTOMIA kuten erien
+   * M4 ja M10 täyt: `kuva`-kentässä on kuvaputken ämpäritunnus ilman
+   * kansiota (elain-afg, elain-pak, elain-uzb, elain-phl), ja kun
+   * kuvaputki toimittaa kuvan, se ilmestyy kortille ilman
+   * koodimuutosta.
+   *
+   * PAIKAT ON MITATTU KONEELLA. Jokainen piste on maan rajojen
+   * sisällä, maalla ja vähintään 35 lautayksikön päässä jokaisesta
+   * kaupunkimerkistä sekä 30 yksikön päässä muista eläintäyistä
+   * (tests/elaintakyt.test.mjs). Etäisyys lähimpään pelikaupunkiin on
+   * kirjattu jokaisen tietueen koordinaattikommenttiin.
+   *
+   * Faktat on luettu en-Wikipedian raakatekstistä 6.9.2026 laji
+   * kerrallaan, ja lähderivi nimeää artikkelin ja osat.
+   */
+  AFG: {
+    elain: 'lumileopardi',
+    otsikko: 'Vuorten haamu, joka ei osaa karjua',
+    teksti: 'Lumileopardi on Panthera-suvun kissaeläin, jonka turkki on valkoisesta harmaaseen ja jossa on mustia täpliä päässä ja kaulassa sekä suurempia ruusukkeita selässä, kyljissä ja tuuheassa hännässä. Karvat ovat 5–12 senttimetriä pitkiä, säkäkorkeus noin 56 senttimetriä, ruumiin pituus 75–150 senttimetriä ja häntä 80–105 senttimetriä; urokset painavat keskimäärin 45–55 ja naaraat 35–40 kilogrammaa. Laji on sopeutunut kylmään vuoristoon: pienet pyöreät korvat vähentävät lämmönhukkaa, leveät tassut jakavat painon lumella ja niiden alapinnan karva parantaa otetta jyrkillä rinteillä. Paksu, rasvaa varastoiva häntä auttaa tasapainossa ja toimii nukkuessa peittona kasvojen suojana. Toisin kuin muut Panthera-lajit lumileopardi ei osaa karjua: sen äänihuulet ovat vain yhdeksän millimetriä pitkät. Afganistanissa laji elää Hindukušin itäosissa, ja syrjäisessä Wakhanin käytävässä se on tallentunut riistakameroihin 16 eri paikassa.',
+    lahde: 'en-Wikipedia "Snow leopard", johdanto sekä osiot "Characteristics" ja '
+      + '"Distribution and habitat". Tarkistettu 6.9.2026.',
+    kuva: 'elain-afg',
+    // Piste on Wakhanin käytävässä Koillis-Afganistanissa, 136,8
+    // lautayksikköä Kašgarista ja 158,4 Kabulista (vähimmäisetäisyys 35).
+    lon: 73.0,
+    lat: 37.0,
+  },
+  PAK: {
+    elain: 'markhor',
+    otsikko: 'Vuohi, jonka sarvet kiertyvät korkkiruuviksi',
+    teksti: 'Markhor on suuri villivuohi Keski- ja Etelä-Aasian rajaseudun vuoristoista, muun muassa Karakoramista ja Himalajalta, ja se on Pakistanin kansalliseläin. Nimi tulee persian sanasta markhar, kiharainen, ja se viittaa eläimen sarviin; kirjaimellisemmin sanat mar ja khor tarkoittavat käärmeensyöjää, sillä vanhan uskomuksen mukaan markhor tappoi ja söi käärmeitä. Aikuinen markhor on 65–115 senttimetriä korkea, 132–186 senttimetriä pitkä ja painaa 32–110 kiloa; koko Capra-suvussa sillä on suurin säkäkorkeus. Turkki on vaaleanruskeasta mustaan, kesällä sileä ja lyhyt, talvella pitkä ja tuuhea, ja alaraajojen karva on mustavalkoinen. Molemmilla sukupuolilla on tiukkaan kiertyneet korkkiruuvimaiset sarvet, jotka lähtevät päästä yhdessä ja levenevät kärkiä kohti: uroksilla ne kasvavat jopa 160 senttimetriä, naarailla 25. Laji elää 600–3 600 metrin korkeudessa tammi-, mänty- ja katajapensaikoissa, ja suurin kanta on Chitralin kansallispuistossa.',
+    lahde: 'en-Wikipedia "Markhor", johdanto sekä osiot "Description" ja "Distribution '
+      + 'and habitat". Tarkistettu 6.9.2026.',
+    kuva: 'elain-pak',
+    // Piste on Chitralin vuoristossa Pohjois-Pakistanissa, 107,3
+    // lautayksikköä Kabulista (vähimmäisetäisyys 35).
+    lon: 72.0,
+    lat: 35.9,
+  },
+  UZB: {
+    elain: 'bukharanhirvi',
+    otsikko: 'Hirvi, joka elää autiomaan jokivarressa',
+    teksti: 'Bukharanhirvi eli baktrianhirvi on keskiaasialaisen saksanhirven alalaji, joka elää alavilla jokivarsilla keskellä autiomaata. Se muistuttaa ekologialtaan sukulaistaan jarkandinhirveä, ja lajit erottaa toisistaan Tianšanin vuoristo. Väri on tuhkanharmaa kellertävällä kiillolla, takapuolessa on harmaanvalkoinen laikku ja huulten ja leuan reunat ovat vaaleat; sarvet ovat vaaleat, ja täysikasvuisella on kummassakin sarvessa viisi haaraa ja tyypillinen mutka kolmannen haaran jälkeen. Turkki on tummempi ja harmaanruskeampi kuin jarkandinhirvellä, ja jalat, pää ja kaula ovat tummat etenkin uroksilla. Vasat syntyvät täplikkäinä kuten euroopanhirvellä. Laji elää pajun ja poppelin reunustamissa tugai-metsissä eikä vaella, vaikka se voi levittäytyä viereiselle aavikolle yöllä tai viileinä aikoina. Vuonna 1999 hirviä oli jäljellä enintään 400; suojelun ansiosta kanta on kasvanut, ja Uzbekistanin Badai Tugain suojelualueella laskettiin 2009 yhteensä 374 yksilöä.',
+    lahde: 'en-Wikipedia "Bactrian deer", johdanto sekä osiot "Description", "Range" ja '
+      + '"Population". Tarkistettu 6.9.2026.',
+    kuva: 'elain-uzb',
+    // Piste on Amudarjan tugai-vyöhykkeellä Lounais-Uzbekistanissa,
+    // 144,6 lautayksikköä Samarkandista (vähimmäisetäisyys 35).
+    lon: 62.6,
+    lat: 40.2,
+  },
+  PHL: {
+    elain: 'tarsieri',
+    otsikko: 'Nyrkin kokoinen kädellinen, jolla on jättimäiset silmät',
+    teksti: 'Filippiinientarsieri on Filippiineillä kotoperäinen kädellinen, joka kuuluu noin 45 miljoonaa vuotta vanhaan tarsierien heimoon; heimon nimi tulee pitkästä nilkkaluusta eli tarsuksesta. Se on 85–160 millimetriä korkea ja siten yksi maailman pienimmistä kädellisistä: aikuinen on suunnilleen ihmisen nyrkin kokoinen, ja urokset painavat 80–160 grammaa. Silmät ovat kiinni kallossa eivätkä liiku kuopissaan, mutta kaulan erikoisrakenne sallii pään kääntämisen 180 astetta. Silmät ovat suhteettoman suuret — kaikista nisäkkäistä suurin silmän ja ruumiinpainon suhde — ja ne antavat yöeläimelle erinomaisen hämäränäön. Suuret kalvomaiset korvat liikkuvat lähes koko ajan. Pitkä nilkkaluu heittää eläimen vähintään kolmen metrin päähän puusta toiseen, ja sormien ja varpaiden pyöreät tyynyt tarttuvat lähes mihin tahansa pintaan. Ravinto on pääasiassa hyönteisiä, hämähäkkejä ja pieniä selkärankaisia. Lajia tavataan saariston kaakkoisosassa, muun muassa Boholilla, Samarilla ja Leytellä sekä Sarangania myöten.',
+    lahde: 'en-Wikipedia "Philippine tarsier", johdanto sekä osiot "Anatomy and '
+      + 'morphology", "Ecology" ja "Geographic range and habitat". Tarkistettu 6.9.2026.',
+    kuva: 'elain-phl',
+    // Piste on Etelä-Mindanaolla Saranganin seudulla, 344,7
+    // lautayksikköä Manilasta (vähimmäisetäisyys 35).
+    lon: 124.8,
+    lat: 6.0,
+  },
 };
+
 
 /** Maatunnukset siinä järjestyksessä kuin ne on kirjoitettu. */
 export const ELAINTAKY_MAAT = Object.keys(ELAINTAKYT);
