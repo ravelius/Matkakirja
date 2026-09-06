@@ -406,3 +406,34 @@ on Toledo 23,9 lautayksikön päässä Madridista; raja
 `KAUPUNGIN_KOHDALLA_SADE` on 7. Kolme kohdetta jätettiin pois juuri
 tästä säännöstä: Alhambra (Granadan kohdalla), Versailles (7,3 yksikköä
 Pariisista) ja Forth Bridge (7,1 yksikköä Edinburghista).
+## Erä 3 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Viisi maata, kahdeksan kohdetta kuhunkin, yhteensä 40 uutta
+karttanostoa. Kaikki asuvat maan omassa
+`js/packs/maastokohteet-<iso>.js`-tiedostossa lohkossa "K2-ERÄ 3
+6.9.2026" — sama ratkaisu ja sama perustelu kuin erässä 1, koska
+`js/fokuskohteet.js` KOHDE_MAAT on yhä rinnakkaisen erän hallussa.
+Erä on kuvaton; kortti kantaa tekstin ja lähteen. Taulukon luvut
+päivittää Fable laskurilla (`node tools/laske-karttanostot.mjs --md`).
+
+| maa | kohteet |
+|---|---|
+| Alankomaat (NLD) | Woudagemaal, Deltatyöt, Vredespaleis, Domtoren, Bourtange, Giethoorn, Kröller-Müllerin museo, Nijmegen |
+| Suomi (FIN) | Olavinlinna, Turun linna, Vanha Rauma, Verla, Petäjäveden vanha kirkko, Sammallahdenmäki, Kerimäen kirkko, Bomarsund |
+| Portugali (PRT) | Sintra, Batalhan luostari, Tomarin luostari, Guimarães, Almendresin kivikehä, São Vicenten niemi, Elvas, Óbidos |
+| Norja (NOR) | Urnesin sauvakirkko, Røros, Altan kalliopiirrokset, Nordkapp, Nidarosin tuomiokirkko, Vemork, Flåmsbana, Eidsvollin rakennus |
+| Puola (POL) | Malborkin linna, Auschwitz-Birkenau, Jasna Góra, Zamość, Westerplatte, Gniezno, Elblągin kanava, Krzemionki |
+
+Kaikki 40 ovat pääkartan merkkejä: lähin uusi merkki on Sintra 9,2
+lautayksikön päässä Lissabonista, eli yli `KAUPUNGIN_KOHDALLA_SADE`n
+(7) ja yli kaupunkikaton säteen (8). Muissa maissa lähin on 15,2–61,1
+yksikön päässä.
+
+Pois jätettiin kohteita, joiden nimi on jo kartalla (sääntö N3):
+Suomenlinna (Helsingin kohdekartan piste), Afsluitdijk, Delft, Porto,
+Coimbra, Wieliczka, Toruń ja Wrocław (kaupunkien fokusvirran nostoja
+omalla karttapaikallaan) sekä Białowieża (Puolan eläintäky).
+Kinderdijk pudotettiin, koska sen nimiö osui Van Meegeren -skandaalin
+nimiön päälle (`tools/tarkista-nimiolimitys.mjs`); tilalle tuli
+Woudagemaal.
