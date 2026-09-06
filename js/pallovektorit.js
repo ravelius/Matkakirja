@@ -75,7 +75,7 @@ const R2 = 'https://media.matkakirja.app/';
  * (erä V0). Polku on versioitu ja ämpäri lähettää sille `immutable`,
  * joten uusi ajo saa AINA uuden version — vanha jää selainten koreihin.
  */
-export const PALLOVEKTORIT_VERSIO = '2026-09-07a';
+export const PALLOVEKTORIT_VERSIO = '2026-09-06a';
 export const PALLOVEKTORIT_JUURI = `${R2}julisteet/pallo/vektorit/${PALLOVEKTORIT_VERSIO}/`;
 
 /** Rantaviivan tavoiteleveys LAITEPIKSELEINÄ (V3 päättää lopullisen). */
