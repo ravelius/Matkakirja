@@ -22,10 +22,25 @@
  * tiedostosta, jota peli ei koskaan hae, eikä mikään kaatuisi:
  * puuttuva luenta on hiljainen.
  *
- * Lähteitä on kolme, ja ne ovat js/livia.js:n kolme repliikkiryhmää:
+ * Lähteitä on kaksi lajia. Kolme ensimmäistä ovat js/livia.js:n
+ * repliikkiryhmiä:
  *   avaus          LIVIAN_AVAUS, viisi kuplaa aloitusvalinnassa
  *   paljastus      livianPaljastus(), kaksi kuplaa ensisaapumisessa
  *   mannerivihje   MANNERIVIHJE, yksi kupla
+ *
+ * ── KAUPUNKIKOHTAISET LÄHTEET (Ateena ja Sofia ensin) ──────────────
+ *
+ * Raamattu, PULUN ÄÄNI VAIN ATEENA JA SOFIA ENSIN: pulun puhe soi
+ * aluksi vain kahdessa kaupungissa, jotta ääni ehditään kuunnella ja
+ * hyväksyä ennen kuin koko pelin repliikistö ajetaan läpi. Lähteen
+ * nimi on KAUPUNGIN TUNNUS (city.id) ja indeksi tulee kenttien
+ * järjestyksestä (LIVIAN_KAUPUNKILAHTEET) — ei siis kutsupaikan
+ * muistista. Tekstit asuvat pakkauksissa (js/packs/fokusvirta-
+ * ateena.js, js/packs/fokusvirta-sofia.js) eikä niitä kopioida
+ * tänne: peli ja työkalu lukevat saman kentän.
+ *
+ * Muut kaupungit ovat hiljaisia täsmälleen kuten ennen — tuntematon
+ * lähde ei saa nimeä (livianAaniNimi palauttaa null).
  *
  * ── KAIKU SAAPUMISREPLIIKEISSÄ ─────────────────────────────────────
  *
@@ -49,6 +64,15 @@
  * lennahda) ja paljastuksen ensimmäinen ("Kaak. Sähke pöllöltä." —
  * hän saapuu sähkeen kanssa). Muut repliikit sanotaan perillä
  * normaalilla tasolla.
+ *
+ * KAUPUNKIREPLIIKEISTÄ VAIN YKSI SAAPUU: Sofian `paluu`. Se on ainoa
+ * kohta, jossa Livia oikeasti LENTÄÄ TAKAISIN — hän on käynyt pöllön
+ * luona (`odotus`: *"Livia on matkalla"*) ja aloittaa raporttinsa
+ * *"Perillä oltiin"* jo ilmasta. Kaiku kertoo saman kuin avauksessa ja
+ * paljastuksessa: puhe alkaa kaukaa ja laskeutuu ruutuun. Maadoitus,
+ * johdanto, vinkki, linkkiSaate, oikein ja odotus sanotaan kaikki
+ * pelaajan vieressä — pulu on jo paikalla, eikä kaiulla olisi mitään
+ * kerrottavaa. Se olisi pelkkä efekti efektin vuoksi.
  *
  * ── LUENTA SEURAA KUPLIA ───────────────────────────────────────────
  *
@@ -78,14 +102,75 @@ import { AANI_JUURI } from './media.js';
  */
 export const LIVIAN_AANIJUURI = `${AANI_JUURI}aanet/pulu/`;
 
+/**
+ * KAUPUNKIKOHTAISET LÄHTEET: kaupungin tunnus → äänitetyt kentät
+ * siinä järjestyksessä, jossa ne saavat tiedostonumeronsa.
+ *
+ * Kenttien nimet ovat pakkausten omia (js/packs/fokusvirta-<id>.js):
+ * `maadoitus` on `pollo.maadoitus` ja loput sähketehtävän vaiheita
+ * (`sahketehtava.johdanto` jne., js/fokusvirta.js). Järjestystä EI saa
+ * muuttaa jälkikäteen — numero on tiedostonimessä, ja uudelleen
+ * numerointi tarkoittaisi koko kaupungin uudelleengenerointia. Uusi
+ * kenttä lisätään listan LOPPUUN.
+ *
+ * Raamattu (PULUN ÄÄNI VAIN ATEENA JA SOFIA ENSIN): muita kaupunkeja
+ * ei lisätä tähän ennen kuin ääni on kuunneltu ja hyväksytty.
+ */
+export const LIVIAN_KAUPUNKILAHTEET = {
+  ateena: ['maadoitus'],
+  sofia: ['maadoitus', 'johdanto', 'vinkki', 'linkkiSaate', 'oikein', 'odotus', 'paluu'],
+};
+
 /** Repliikkilähteet siinä nimeämisjärjestyksessä, jota työkalu käyttää. */
-export const LIVIAN_AANILAHTEET = ['avaus', 'paljastus', 'mannerivihje'];
+export const LIVIAN_AANILAHTEET = [
+  'avaus', 'paljastus', 'mannerivihje',
+  ...Object.keys(LIVIAN_KAUPUNKILAHTEET),
+];
 
 /**
  * Saapumisrepliikit lähteittäin: indeksit, joissa Livia tulee paikalle
  * ja saa kaikuversion (ks. KAIKU SAAPUMISREPLIIKEISSÄ yllä).
+ *
+ * Sofian `paluu` haetaan kenttälistasta eikä kirjoiteta numerona:
+ * numero on nimeämisen tulos, ei erikseen ylläpidettävä vakio.
  */
-export const LIVIAN_SAAPUMISREPLIIKIT = { avaus: [0], paljastus: [0] };
+export const LIVIAN_SAAPUMISREPLIIKIT = {
+  avaus: [0],
+  paljastus: [0],
+  sofia: [LIVIAN_KAUPUNKILAHTEET.sofia.indexOf('paluu')],
+};
+
+/**
+ * Kaupunkirepliikin järjestysnumero kentän nimestä.
+ *
+ * Tämä on se kohta, jossa kutsupaikka sanoo "Sofian vinkki" eikä
+ * "lähde sofia, indeksi 2": kutsupaikan ei kuulu tietää numeroita.
+ *
+ * @param {string} kaupunkiId kaupungin tunnus (city.id)
+ * @param {string} kentta pakkauksen kentän nimi
+ * @returns {number|null} indeksi tai null, jos kaupunkia tai kenttää
+ *   ei ole äänitetty.
+ */
+export function livianKaupunkiIndeksi(kaupunkiId, kentta) {
+  const kentat = LIVIAN_KAUPUNKILAHTEET[kaupunkiId] ?? [];
+  const indeksi = kentat.indexOf(kentta);
+  return indeksi < 0 ? null : indeksi;
+}
+
+/*
+ * KAUPUNKIÄÄNET OVAT KYTKIMEN TAKANA (omistaja 6.9.2026 ilta: "älä
+ * generoi ääniä vielä tässä vaiheessa"). Kytkentä ja hitaampi
+ * kuplarytmi ovat koodissa valmiina, mutta ennen generointia ne
+ * jäisivät hiljaisiksi ja hitaiksi: kupla odottaisi puhetta, jota ei
+ * ole. Kytkin käännetään trueksi samassa julkaisussa, jossa
+ * generoi-pulu.yml on vienyt ateena-/sofia-tiedostot ämpäriin.
+ */
+export const LIVIAN_KAUPUNKIAANET_KAYTOSSA = true; // generoitu 6.9.2026 ilta (omistaja: "saat generoida kaikki muut paitsi uuden linssin äänet")
+
+/** Onko tälle kaupungin repliikille olemassa äänite? */
+export function livianKaupunkiAanitetty(kaupunkiId, kentta) {
+  return LIVIAN_KAUPUNKIAANET_KAYTOSSA && livianKaupunkiIndeksi(kaupunkiId, kentta) !== null;
+}
 
 /**
  * ÄÄNITETTY PALJASTUSVARIANTTI. Paljastuksen teksti ladotaan maasta ja
@@ -224,7 +309,8 @@ export function pysaytaLivianAani(ui, { haivyta = true } = {}) {
  * päällekkäin olisi pahempi kuin katkennut lause.
  *
  * @param {object} ui pelin käyttöliittymä
- * @param {string} lahde 'avaus' | 'paljastus' | 'mannerivihje'
+ * @param {string} lahde 'avaus' | 'paljastus' | 'mannerivihje' tai
+ *   kaupungin tunnus (LIVIAN_KAUPUNKILAHTEET)
  * @param {number} indeksi repliikin järjestysnumero lähteessä (0-alkuinen)
  * @param {object} [asetukset]
  * @param {string} [asetukset.maahan] paljastuksen maa-muoto (ks.
@@ -280,4 +366,23 @@ export function soitaLivianAani(ui, lahde, indeksi, { maahan = '', paikassa = ''
     audio.dispatchEvent(new Event('error'));
   });
   return audio;
+}
+
+/**
+ * KAUPUNKIREPLIIKIN ÄÄNI KENTÄN NIMELLÄ (js/fokusvirta.js).
+ *
+ * Kutsupaikka sanoo kaupungin ja kentän — "sofia, paluu" — eikä
+ * numeroa: numeron omistaa LIVIAN_KAUPUNKILAHTEET. Kaupunki, jota ei
+ * ole äänitetty, on hiljainen ilman että kutsupaikan tarvitsee tietää
+ * siitä mitään (Raamattu: PULUN ÄÄNI VAIN ATEENA JA SOFIA ENSIN).
+ *
+ * @param {object} ui pelin käyttöliittymä
+ * @param {string} kaupunkiId kaupungin tunnus (city.id)
+ * @param {string} kentta pakkauksen kentän nimi
+ * @returns {HTMLAudioElement|null} soittimen kahva tai null
+ */
+export function soitaLivianKaupunkiAani(ui, kaupunkiId, kentta) {
+  const indeksi = livianKaupunkiIndeksi(kaupunkiId, kentta);
+  if (indeksi === null) return null;
+  return soitaLivianAani(ui, kaupunkiId, indeksi);
 }

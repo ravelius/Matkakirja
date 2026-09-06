@@ -266,8 +266,14 @@ const sofianKupla = await sivu.evaluate(async () => {
    * MONTANA kuplana peräkkäin (js/pollo.js naytaPuheenvuoro), joten
    * väitteen mittaama teksti on pinon kaikkien kuplien teksti
    * yhdistettynä. Odotus jatkuu, kunnes puheenvuoron viimeinen lause
-   * on pinossa (jatko-osat tulevat 1,8–4,2 s välein), enintään 12
-   * sekuntia.
+   * on pinossa, enintään 25 sekuntia.
+   *
+   * ODOTUS PITENI, KUN SOFIA SAI ÄÄNEN (6.9.2026): äänitetty
+   * puheenvuoro etenee kuplan LUKUAJALLA (js/livia.js
+   * livianKuplanLukuaika, enintään 9,5 s per osa) eikä vanhalla
+   * 1,8–4,2 sekunnin perusrytmillä — muuten viimeinen kupla olisi
+   * ruudulla kauan ennen kuin pulu ehtii puhua sen. Sofian maadoitus
+   * on kolme osaa, joten koko sarja kestää nyt reilut 12 sekuntia.
    *
    * PELKÄT PUHEKUPLAT (omistajan tarkennus 3.9.2026): kuplissa ei saa
    * olla nimilappuriviä eikä pöllökuvaketta, joten mittari laskee
@@ -286,7 +292,7 @@ const sofianKupla = await sivu.evaluate(async () => {
         .join(' '),
     };
   };
-  for (let i = 0; i < 24; i += 1) {
+  for (let i = 0; i < 50; i += 1) {
     const tulos = lueKuplat();
     if (/Mut kyllä sen kestää lukea/.test(tulos.teksti)) return tulos;
     await new Promise((r) => setTimeout(r, 500));

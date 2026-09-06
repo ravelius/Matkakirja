@@ -837,7 +837,9 @@ for (const kaupunki of KAUPUNGIT) {
      * sen.
      */
     let kupla = '';
-    for (let i = 0; i < 40; i += 1) {
+    // Odotus 16 s: äänitetyssä kaupungissa lento odottaa kuittauksen
+    // puheen loppuun (js/fokusvirta.js aloitaSahkelento).
+    for (let i = 0; i < 80; i += 1) {
       const k = document.querySelector('.fokusvirta-vinkki');
       if (k && !k.hidden) { kupla = k.textContent ?? ''; break; }
       await new Promise((r) => setTimeout(r, 200));

@@ -2976,16 +2976,28 @@ class Pollo {
    *   ennen jokaista jatko-osaa.
    * @param {boolean} [asetukset.linssinOma] LINSSIN OMA PUHEENVUORO:
    *   ohittaa linssiportin (ks. LINSSIN OMA POIKKEUS alla).
+   * @param {((teksti: string) => number)|null} [asetukset.viive] OMA
+   *   RYTMI ÄÄNITETYLLE PUHEENVUOROLLE (js/fokusvirta.js): funktio,
+   *   joka kertoo edellisen osan perusteella, kuinka kauan seuraavaa
+   *   odotetaan. Livian oma ääni on hitaampi kuin lukurytmi (noin 14
+   *   merkkiä sekunnissa), joten äänitetty repliikki käyttää kuplan
+   *   lukuaikaa (js/livia.js livianKuplanLukuaika) — muuten viimeinen
+   *   osa olisi ruudulla jo silloin, kun puhe on vasta ensimmäisessä.
+   *   Ilman funktiota rytmi on sanamäärään sidottu perusrytmi.
    * @returns {boolean} näkyikö ensimmäinen kupla.
    */
-  naytaPuheenvuoro(osat, { kuittaus = null, jatkuuko = () => true, linssinOma = false } = {}) {
+  naytaPuheenvuoro(osat, {
+    kuittaus = null, jatkuuko = () => true, linssinOma = false, viive = null,
+  } = {}) {
     const palat = (Array.isArray(osat) ? osat : [osat])
       .map((osa) => String(osa ?? '').trim()).filter(Boolean);
     if (!palat.length) return false;
     // LINSSI PÄÄLLÄ: koko puheenvuoro OSINEEN yhtenä jonon alkiona —
     // sen rytmi kuuluu sille itselleen (ks. lykkaaLinssiin).
     if (!linssinOma && linssiEstaa(this.doc)) {
-      return this.lykkaaLinssiin(() => this.naytaPuheenvuoro(palat, { kuittaus, jatkuuko }));
+      return this.lykkaaLinssiin(
+        () => this.naytaPuheenvuoro(palat, { kuittaus, jatkuuko, viive }),
+      );
     }
     // Uusi puheenvuoro syrjäyttää edellisen: kaksi puhujaa yhtä aikaa
     // olisi sekasotku, vaikka puhuja on sama lintu.
@@ -2997,7 +3009,7 @@ class Pollo {
     });
     if (!nakyi || yksi) return nakyi;
     this.puheenvuoro = {
-      palat, seuraava: 1, kuittaus, jatkuuko, linssinOma,
+      palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive,
     };
     this.ajastaPuheenvuoro();
     return true;
@@ -3008,8 +3020,12 @@ class Pollo {
     const tila = this.puheenvuoro;
     if (!tila) return;
     const edellinen = tila.palat[tila.seuraava - 1] ?? '';
-    const viive = Math.min(PUHEENVUORON_VIIVE_YLA, Math.max(PUHEENVUORON_VIIVE_ALA,
-      PUHEENVUORON_PERUSVIIVE + PUHEENVUORON_SANAVIIVE * sanamaara(edellinen)));
+    // Äänitetyllä puheenvuorolla oma rytmi (ks. naytaPuheenvuoro viive);
+    // muuten sanamäärään sidottu perusrytmi.
+    const viive = tila.viive
+      ? Math.max(PUHEENVUORON_VIIVE_ALA, Number(tila.viive(edellinen)) || 0)
+      : Math.min(PUHEENVUORON_VIIVE_YLA, Math.max(PUHEENVUORON_VIIVE_ALA,
+        PUHEENVUORON_PERUSVIIVE + PUHEENVUORON_SANAVIIVE * sanamaara(edellinen)));
     clearTimeout(this.puheenvuoroAjastin);
     this.puheenvuoroAjastin = setTimeout(() => {
       this.puheenvuoroAjastin = null;
@@ -5458,7 +5474,8 @@ export function polloAvauskupla(teksti, asetukset = {}) {
 
 /**
  * Livian puheenvuoro osissa (js/fokusvirta.js fokusvirtaSaapumiskupla).
- * Osat tulevat kuplapinoon peräkkäin, ks. naytaPuheenvuoro.
+ * Osat tulevat kuplapinoon peräkkäin, ks. naytaPuheenvuoro — myös
+ * asetus `viive`, jolla äänitetty repliikki saa puheen rytmin.
  *
  * @returns {boolean} näkyikö ensimmäinen kupla.
  */

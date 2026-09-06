@@ -26,7 +26,7 @@
  *                    ei avainta, ei vientiä.
  *   --aani <id>      käytettävä ääni (tai ympäristö PULU_AANI).
  *   --repliikit a,b  vain nämä avaimet (avaus-1, paljastus-2,
- *                    mannerivihje-1). Tyhjä = kaikki.
+ *                    mannerivihje-1, ateena-1, sofia-7). Tyhjä = kaikki.
  *   --pakota         generoi vaikka tiedosto on jo ämpärissä.
  *   --ei-vientia     generoi ja viimeistele, mutta jätä levylle.
  *   --tempo <luku>   puheen nopeutus ffmpegillä (oletus TEMPO).
@@ -104,8 +104,11 @@ import { fileURLToPath } from 'node:url';
 
 import { LIVIAN_AVAUS, MANNERIVIHJE, livianPaljastus } from '../js/livia.js';
 import {
-  LIVIAN_AANIJUURI, LIVIAN_AANITETTY_PALJASTUS, livianAanitykset,
+  LIVIAN_AANIJUURI, LIVIAN_AANITETTY_PALJASTUS, LIVIAN_KAUPUNKILAHTEET,
+  livianAanitykset,
 } from '../js/liviapuhe.js';
+import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
+import { FOKUSVIRTA_SOFIA } from '../js/packs/fokusvirta-sofia.js';
 import { leikkaaHiljaisuusSuodatin } from './generoi-tehosteet.mjs';
 import { julkinenJuuri, tulkitseEbur128, tulkitseLoudnorm } from './generoi-siirtymamusiikki.mjs';
 
@@ -211,6 +214,29 @@ export function kuplanLukuaika(teksti, vakiot = kuplanVakiot()) {
   return ms / 1000;
 }
 
+/**
+ * KAUPUNKIREPLIIKKI EI OLE YKSI KUPLA VAAN PUHEENVUORO.
+ *
+ * Ateenan ja Sofian repliikit näytetään osiin jaettuna pinona
+ * (js/ui-apurit.js jaaPuheenvuoroksi + js/pollo.js naytaPuheenvuoro):
+ * kuplat EIVÄT korvaa toisiaan, ja jokainen osa odottaa oman
+ * lukuaikansa ennen seuraavaa. Näkyvä aika on siis osien lukuaikojen
+ * summa — käytännössä merkkimäärä × lukuaika per merkki, ilman yhden
+ * kuplan kattoa, joka koskee vain js/livia.js:n omia yksittäisiä
+ * kuplia.
+ *
+ * Ilman tätä eroa kuiva ajo vaatisi kaupunkirepliikkien lyhentämistä
+ * puoleen, vaikka ne mahtuvat ruudulle kokonaisina.
+ *
+ * @param {{lahde:string, teksti:string, merkit:number}} rivi
+ * @param {object} vakiot kuplanVakiot()
+ * @returns {number} sekunteina
+ */
+export function nakyvaAika(rivi, vakiot = kuplanVakiot()) {
+  if (!LIVIAN_KAUPUNKILAHTEET[rivi.lahde]) return kuplanLukuaika(rivi.teksti, vakiot);
+  return Number(((rivi.merkit * vakiot.perMerkki) / 1000).toFixed(3));
+}
+
 // ── tagit ──────────────────────────────────────────────────────────
 
 /**
@@ -220,6 +246,12 @@ export function kuplanLukuaika(teksti, vakiot = kuplanVakiot()) {
  * tageja: [ankkuri, tagi] tarkoittaa "tagi juuri ennen tätä sanaa".
  * Ankkurin on esiinnyttävä repliikissä TÄSMÄLLEEN KERRAN — muuten ajo
  * kaatuu (ks. TAGIT EIVÄT SAA MUUTTAA KAANONIA).
+ *
+ * TAULU KATTAA VAIN js/livia.js:n LÄHTEET (avaus, paljastus,
+ * mannerivihje). Kaupunkilähteet (ateena, sofia) syntyivät v2-mallin
+ * aikaan, jolloin tageja ei lähetetä lainkaan, joten niille ei ole
+ * rivejä eikä niitä vaadita — tagiton repliikki menee läpi
+ * kaanonisena tekstinä.
  */
 export const TAGIT = {
   'avaus-1': { alku: '[excited]', kohdat: [['Sinähän', '[amused]']] },
@@ -290,20 +322,65 @@ export function puhemuoto(teksti, tagit = {}) {
 // ── repliikit ──────────────────────────────────────────────────────
 
 /**
+ * KAUPUNKIEN PAKKAUKSET, joista kaupunkirepliikit luetaan.
+ *
+ * Tekstejä EI kopioida tänne: sama kenttä, jonka peli näyttää kuplana,
+ * on se, joka äänitetään. Kaupunkia lisättäessä riittää rivi tähän ja
+ * kenttälista js/liviapuhe.js:n LIVIAN_KAUPUNKILAHTEET-tauluun.
+ */
+const KAUPUNKIEN_PAKKAUKSET = {
+  ateena: FOKUSVIRTA_ATEENA,
+  sofia: FOKUSVIRTA_SOFIA,
+};
+
+/**
+ * Yhden kaupungin repliikkitekstit LIVIAN_KAUPUNKILAHTEET-järjestyksessä.
+ *
+ * `maadoitus` on pöllökuplan ensimmäinen kappale (pollo.maadoitus) ja
+ * loput sähketehtävän vaiheita (sahketehtava.<kenttä>, js/fokusvirta.js).
+ * Puuttuva kenttä jää tyhjäksi merkkijonoksi, ja livianAanitykset
+ * pudottaa sen pois — tyhjää repliikkiä ei äänitetä.
+ *
+ * @param {string} kaupunkiId kaupungin tunnus
+ * @returns {string[]} tekstit järjestyksessä
+ */
+export function kaupunginRepliikit(kaupunkiId) {
+  const pakkaus = KAUPUNKIEN_PAKKAUKSET[kaupunkiId];
+  if (!pakkaus) return [];
+  return (LIVIAN_KAUPUNKILAHTEET[kaupunkiId] ?? []).map((kentta) => (
+    kentta === 'maadoitus'
+      ? pakkaus.pollo?.maadoitus
+      : pakkaus.sahketehtava?.[kentta]
+  ) ?? '');
+}
+
+/**
  * KAIKKI ÄÄNITETTÄVÄT REPLIIKIT. Tekstit tulevat js/livia.js:stä
- * (kaanoni) ja nimet js/liviapuhe.js:stä (sama funktio kuin pelissä).
- * Paljastus ladotaan äänitetylle variantille (Ateena/Kreikka).
+ * (kaanoni) ja kaupunkien pakkauksista, nimet js/liviapuhe.js:stä
+ * (sama funktio kuin pelissä). Paljastus ladotaan äänitetylle
+ * variantille (Ateena/Kreikka).
+ *
+ * TAGIT VAIN KOLMELLA ENSIMMÄISELLÄ LÄHTEELLÄ. Malli on v2
+ * (TAGIT_KAYTOSSA false), joten kaikki repliikit lähtevät puhtaana
+ * kaanonisena tekstinä eikä kaupunkilähteille kirjoiteta tagitaulua
+ * lainkaan. Jos v3 otetaan joskus takaisin, tagiton lähde menee läpi
+ * tagittomana (puhemuoto ilman kohtia palauttaa tekstin sellaisenaan).
  */
 export function repliikit() {
+  const kaupungit = Object.fromEntries(Object.keys(LIVIAN_KAUPUNKILAHTEET)
+    .map((kaupunkiId) => [kaupunkiId, kaupunginRepliikit(kaupunkiId)]));
+  // Vakiot luetaan js/livia.js:stä kerran, ei rivi kerrallaan.
+  const vakiot = kuplanVakiot();
   return livianAanitykset({
     avaus: LIVIAN_AVAUS,
     paljastus: livianPaljastus(LIVIAN_AANITETTY_PALJASTUS),
     mannerivihje: [MANNERIVIHJE],
+    ...kaupungit,
   }).map((rivi) => ({
     ...rivi,
     puhe: TAGIT_KAYTOSSA ? puhemuoto(rivi.teksti, TAGIT[rivi.avain]) : rivi.teksti,
     arvioSekunteina: Number((rivi.merkit / MERKKIA_SEKUNNISSA).toFixed(1)),
-    kuplaSekunteina: kuplanLukuaika(rivi.teksti),
+    kuplaSekunteina: nakyvaAika(rivi, vakiot),
   }));
 }
 
@@ -776,7 +853,8 @@ async function main() {
     }
     console.log(`\nKuiva ajo valmis: ${tyot.length} repliikkiä, `
       + `${new Set(tyot.map((t) => t.nimi)).size} eri tiedostonimeä. `
-      + 'Yli 6 sekunnin repliikit kannattaa lyhentää (kupla vaihtuu ennen kuin ääni loppuu).');
+      + 'Merkintä PITKÄ tarkoittaa, että kupla vaihtuu ennen kuin ääni loppuu — '
+      + 'kaupunkirepliikeillä (pinoutuva puheenvuoro) mitta on osien lukuaikojen summa.');
     process.exit(0);
   }
 

@@ -204,8 +204,25 @@ function merkitseNahdyksi() {
 function lukuaika(teksti) {
   return Math.min(
     LUKUAIKA_ENINTAAN,
-    Math.max(LUKUAIKA_VAHINTAAN, teksti.length * LUKUAIKA_PER_MERKKI),
+    Math.max(LUKUAIKA_VAHINTAAN, String(teksti ?? '').length * LUKUAIKA_PER_MERKKI),
   );
+}
+
+/**
+ * SAMA LUKUAIKA MUUALLE PELIIN (js/fokusvirta.js).
+ *
+ * Vakiot (LUKUAIKA_PER_MERKKI) on mitoitettu niin, ettei kupla vaihdu
+ * ennen kuin pulun puhe on ohi — ja tools/generoi-pulu.mjs lukee ne
+ * TÄSTÄ tiedostosta. Kun äänitetty repliikki näytetään muualla
+ * (Ateenan ja Sofian kuplat), rytmin on tultava samasta paikasta eikä
+ * omasta kopiosta: kaksi lukuaikaa eriytyisi hiljaa, ja puhe jäisi
+ * kuplien alle.
+ *
+ * @param {string} teksti kuplan teksti
+ * @returns {number} millisekunteina
+ */
+export function livianKuplanLukuaika(teksti) {
+  return lukuaika(teksti);
 }
 
 /**
