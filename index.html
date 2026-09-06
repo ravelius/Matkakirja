@@ -955,8 +955,46 @@
       (#turn-pill) kertoo aria-labelissaan, että se avaa isoisän
       matkalaukun.
     -->
+    <!--
+      LAUKKU VIERII SISUKSESTAAN, EI KORTISTA (omistaja 6.9.2026:
+      "Laukku pitää olla skrollattava myös").
+
+      Kortti itse on nahkakehys: sillä on `overflow: hidden`, koska
+      messinkiset kulmavahvikkeet (.passport-card::after) ja pyöristetyt
+      alakulmat vaativat sen — ja juuri se esti vierityksen, kun sisältö
+      kasvoi ruutua pidemmäksi. Nyt kehys pysyy paikallaan ja VAIN tämä
+      sisus vierii: kulmat, ommel ja nahkareunus eivät liiku mukana,
+      eikä ylärivin MATKAKIRJA-palkki (dialogin ulkopuolella) sitäkään
+      suuremmalla syyllä.
+    -->
+    <div class="laukku-sisus" id="laukku-sisus">
     <p class="passport-count">Matka</p>
     <div id="passport-progress" class="passport-finds"></div>
+    <!--
+      MATKAN TILASTOT VÄKÄSEN ALLE (omistaja 6.9.2026: "Piilota nuo
+      tiedot väkäsen alle").
+
+      Laukun kärki on Sijainti, Kukkaro ja tietäjätaso — ne kertovat
+      missä ollaan ja mihin on varaa. Laskurit, Aarnin luettelo, tavarat
+      ja julisteet ovat matkan kirjanpitoa: kiinnostavaa mutta ei joka
+      avauksella, ja yhdessä ne työnsivät Varusteet ruudun alle. Lohko
+      on siksi OLETUKSENA KIINNI, ja tila muistetaan laitteeseen
+      (js/ui.js: LAUKKU_TILASTOT_AVAIN) kuten muutkin laukun asetukset.
+
+      Otsikkorivi on nappi ja väkänen SVG-viiva (ei emoji), jotta se
+      seuraa laukun muuta messinkiviivastoa.
+    -->
+    <div class="laukku-lohko">
+      <button type="button" class="laukku-lohko-otsikko" id="laukku-tilastot-nappi"
+              aria-expanded="false" aria-controls="laukku-tilastot">
+        <span class="passport-count">Matkan tilastot</span>
+        <svg class="laukku-vakanen" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M9 5.5 15.5 12 9 18.5" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="laukku-lohko-sisus" id="laukku-tilastot">
+       <div id="passport-tilastot" class="passport-finds"></div>
     <!--
       VIHREÄ PASSI POISTETTU (omistajan toive 5.8.2026: "itse asiassa koko
       vihreän passin voi poistaa, tehdään sen tilalle pääaarteista oma
@@ -972,10 +1010,10 @@
       (pikkuselosteNappi), jotta sama komponentti on liitettävissä mihin
       tahansa otsikkoon ilman että jokaiselle kirjoitetaan omaa merkkausta.
     -->
-    <p class="passport-count" id="aarni-otsikko">Aarnin luettelo</p>
-    <div id="passport-aarteet" class="laukku-aarteet"></div>
-    <p class="passport-count">Tavarat</p>
-    <div id="passport-finds" class="passport-finds"></div>
+       <p class="passport-count" id="aarni-otsikko">Aarnin luettelo</p>
+       <div id="passport-aarteet" class="laukku-aarteet"></div>
+       <p class="passport-count">Tavarat</p>
+       <div id="passport-finds" class="passport-finds"></div>
     <!--
       JULISTERIVI (omistajan tilaus 22.8.2026: "Julisteet voisi olla
       oma rivi laukussa mutta kuvakkeet todella pieniä, sama korkeus
@@ -992,8 +1030,10 @@
       sääntö kuin Varusteet-osastolla, ks. js/ui.js renderJulisteet.
       Sisältö rakennetaan siellä taulusta js/packs/julisteet.js.
     -->
-    <div id="juliste-kotelo" class="juliste-kotelo" hidden>
-      <button type="button" id="passport-julisteet" class="laukku-julisterivi"></button>
+       <div id="juliste-kotelo" class="juliste-kotelo" hidden>
+         <button type="button" id="passport-julisteet" class="laukku-julisterivi"></button>
+       </div>
+      </div>
     </div>
     <!--
       VARUSTEET ELI LINSSIVALITSIN (omistajan päätös 18.8.2026:
@@ -1016,14 +1056,17 @@
       löytämätöntä ei näytetä edes harmaana, tai laukku kertoisi mitä
       on vielä hakematta.
 
-      NAPAUTUS SELITTÄÄ, "aktivoi" KYTKEE (omistaja 5.9.2026,
+      NAPAUTUS SELITTÄÄ, "Aktivoi" KYTKEE (omistaja 5.9.2026,
       docs/moduulit/linssit.md): ruudun napautus vaihtaa vain alla
-      olevan selitteen ja panee sen perään "aktivoi"-sanan, jota
-      painamalla linssi menee päälle ja laukku sulkeutuu.
+      olevan selitteen, ja sen alle tulee Aktivoi-nappi, jota
+      painamalla linssi menee päälle ja laukku sulkeutuu. Nappi oli
+      6.9.2026 asti tekstilinkki selitteen perässä; omistaja: "Tee
+      aktivoi tekstistä nappi."
     -->
     <div id="linssi-kotelo" class="linssi-kotelo" hidden>
       <p class="passport-count">Varusteet</p>
       <div id="linssi-valikko" class="linssi-valikko"></div>
+    </div>
     </div>
     <!-- Nimikilpi siirtyi laukusta ylärivin logoon (omistajan toive
          5.8.2026): logoa napauttamalla se avautuu isompana, ja saman

@@ -1267,7 +1267,7 @@ rasterilinsseille: uusi kuva, ei uutta aineistoa.
 topografian `pallolle`, ui:n portti) ja `tests/pallolauta.test.mjs`
 (sallitut Globe.gl-kerrokset).
 
-## Laukussa napautus selittää, "aktivoi" kytkee (5.9.2026)
+## Laukussa napautus selittää, Aktivoi-nappi kytkee (5.–6.9.2026)
 
 Omistajan tilaus sanatarkasti (5.9.2026 ilta):
 
@@ -1287,15 +1287,21 @@ muuten ennallaan:
    arvo ("Ei linssiä"), joten tyhjä tila ei voi olla null. Laukun avaus
    (`openPassport`) ja kytketty linssi (`valitseLinssi`) nollaavat sen.
 2. **Selite kertoo napautetusta linssistä** — nimi ja `lyhyt` — ja sen
-   perässä samassa kappaleessa on `button.linssi-aktivoi`, jossa lukee
-   **aktivoi**. Päällä olevan linssin kohdalla sana on **sammuta** ja se
-   kytkee linssin pois (`valitseLinssi(null)`). "Ei linssiä" -ruutu
-   toimii kuten linssit: otsikko "Paljain silmin", sama selite kuin
-   ennen ja "aktivoi". Nappi on oikea `<button>` (näppäimistö ja
-   ruudunlukija) ja sillä on aria-label "Aktivoi linssi *nimi*" /
-   "Sammuta linssi *nimi*"; ulkoasu on pergamentin tekstilinkki
+   ALLA on `button.linssi-aktivoi`, jossa lukee **Aktivoi**. Päällä
+   olevan linssin kohdalla napissa lukee **Ota pois** (luokka `.pois`)
+   ja se kytkee linssin pois (`valitseLinssi(null)`). "Ei linssiä"
+   -ruutu toimii kuten linssit: otsikko "Paljain silmin", sama selite
+   kuin ennen ja Aktivoi-nappi. Napilla on aria-label "Aktivoi linssi
+   *nimi*" / "Ota linssi *nimi* pois käytöstä".
+
+   **Nappi vaihtoi muotoa 6.9.2026** (omistaja: *"Tee aktivoi tekstistä
+   nappi."*). Sana oli siihen asti ladottu selitekappaleen perään
+   tekstilinkin näköisenä ja oli yhden tekstirivin korkuinen — laukun
+   ainoa varsinainen toiminto ei näyttänyt napilta eikä osunut sormeen.
+   Nyt se on oma lohkonsa selitteen alla: messinkireunus,
+   pergamenttitäyte, kapiteeliteksti ja `min-height: 44px`
    (`.dialog .linssi-aktivoi` voittaa `.dialog button`-napin asun).
-3. **"aktivoi" kytkee ja sulkee laukun.** `ui.aktivoiLinssi(tunnus)`
+3. **Aktivoi kytkee ja sulkee laukun.** `ui.aktivoiLinssi(tunnus)`
    kutsuu `valitseLinssi`ä ja sen jälkeen `suljeLaukku()`:n, joka on
    ainoa paikka, josta laukku suljetaan koodista (`pallo`-linssi käyttää
    samaa metodia).
@@ -1313,6 +1319,7 @@ kartta (`?lauta=kartta`) toimii kuten ennen. Molemmat laudat käyttävät
 tätä samaa ruudukkoa.
 
 **Vartija.** `tests/matkalaukun-linssit.test.mjs`: ruudun napautus ei
-kutsu `valitseLinssi`ä eikä sulje laukkua, selitteen perään tulee
-"aktivoi", ja "aktivoi" kutsuu `valitseLinssi`ä ja sulkee laukun
-("sammuta" kytkee pois).
+kutsu `valitseLinssi`ä eikä sulje laukkua, selitteen ALLE tulee
+Aktivoi-nappi (ei kappaleen sisään), ja se kutsuu `valitseLinssi`ä ja
+sulkee laukun ("Ota pois" kytkee pois). Testi lukee myös CSS:stä, että
+napilla on `min-height: 44px`.

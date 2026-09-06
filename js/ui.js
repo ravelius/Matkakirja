@@ -36,6 +36,7 @@ import {
   cachedImage, cachedSummary, fokusmoodiPaalla,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, unohdaKehittajaKytkimet,
   lautaValinta, palloTurvatilassa, etusivupalloPaalla,
+  laukunTilastotAuki, tallennaLaukunTilastot,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
 import { onAarre } from './tokens.js';
@@ -2092,6 +2093,19 @@ export class UI {
     this.passportAarteet = document.getElementById('passport-aarteet');
     this.passportFinds = document.getElementById('passport-finds');
     this.passportProgress = document.getElementById('passport-progress');
+    /*
+     * MATKAN TILASTOT: laskurit väkäsen alla (omistaja 6.9.2026,
+     * "Piilota nuo tiedot väkäsen alle"). Sijainti, Kukkaro ja
+     * tietäjätaso jäävät #passport-progressiin näkyviin; laskurit
+     * ladotaan tähän lohkoon, joka on oletuksena kiinni.
+     */
+    this.passportTilastot = document.getElementById('passport-tilastot');
+    this.tilastoNappi = document.getElementById('laukku-tilastot-nappi');
+    this.tilastoLohko = document.getElementById('laukku-tilastot');
+    this.tilastoNappi?.addEventListener('click', () => this.vaihdaTilastolohko());
+    // Kiinni-tila kirjoitetaan DOMiin heti, jotta ensimmäinenkin avaus
+    // näyttää laukun oikeassa asennossa ilman välähdystä.
+    this.paivitaTilastolohko(laukunTilastotAuki(), { heti: true });
     // Julisterivi: oma kotelonsa, koska koko rivi piiloutuu ennen
     // ensimmäistä voitettua julistetta (ks. renderJulisteet).
     this.julisteKotelo = document.getElementById('juliste-kotelo');
@@ -10237,6 +10251,7 @@ export class UI {
     const { game } = this;
     const p = game.player;
     this.passportProgress.textContent = '';
+    if (this.passportTilastot) this.passportTilastot.textContent = '';
 
     /*
      * Rivi palauttaa itsensä, jotta kutsuja voi ripustaa siihen omansa
@@ -10249,6 +10264,21 @@ export class UI {
       row.appendChild(html('span', 'find-text', label));
       row.appendChild(html('span', 'find-value', value));
       this.passportProgress.appendChild(row);
+      return row;
+    };
+
+    /*
+     * Sama rivi, mutta väkäsen alle (omistaja 6.9.2026: "Piilota nuo
+     * tiedot väkäsen alle"). Laskurit ovat matkan kirjanpitoa; laukun
+     * kärki on Sijainti, Kukkaro ja tietäjätaso. Ilman lohkoa (vanha
+     * merkkaus, testiympäristö) rivit palaavat matkalohkoon, jotta
+     * mikään tieto ei katoa.
+     */
+    const tilastoRivi = (label, value) => {
+      const row = html('div', 'find');
+      row.appendChild(html('span', 'find-text', label));
+      row.appendChild(html('span', 'find-value', value));
+      (this.passportTilastot ?? this.passportProgress).appendChild(row);
       return row;
     };
 
@@ -10322,7 +10352,7 @@ export class UI {
     // Aarteet: sama laskenta kuin Aarnin luettelossa, jotta laukun kaksi
     // aarrelukua eivät voi mennä eri tahtiin.
     const { kaikki, loydetyt } = this.aarreLuettelo();
-    rivi('Avatut aarteet', `${loydetyt.length} / ${kaikki.length}`);
+    tilastoRivi('Avatut aarteet', `${loydetyt.length} / ${kaikki.length}`);
 
     /*
      * Kaupungit ja maat TÄLTÄ LAUDALTA. Lauta on maailmankartta, jolla
@@ -10337,7 +10367,7 @@ export class UI {
      */
     const kaydyt = game.worldOf?.(p)?.visited ?? new Set();
     const kaupunkeja = game.pack?.cities?.length ?? 0;
-    if (kaupunkeja) rivi('Käydyt kaupungit', `${kaydyt.size} / ${kaupunkeja}`);
+    if (kaupunkeja) tilastoRivi('Käydyt kaupungit', `${kaydyt.size} / ${kaupunkeja}`);
 
     const maaTaulu = game.pack?.map?.cityCountry ?? null;
     if (maaTaulu) {
@@ -10348,12 +10378,67 @@ export class UI {
           const iso = maaTaulu[cityId];
           if (iso) kaydytMaat.add(iso);
         }
-        rivi('Käydyt maat', `${kaydytMaat.size} / ${kaikkiMaat.size}`);
+        tilastoRivi('Käydyt maat', `${kaydytMaat.size} / ${kaikkiMaat.size}`);
       }
     }
 
     const tieto = game.knowledgePercent(p);
-    if (tieto !== null) rivi('Tieto tästä laudasta', `${tieto} %`);
+    if (tieto !== null) tilastoRivi('Tieto tästä laudasta', `${tieto} %`);
+  }
+
+  /**
+   * MATKAN TILASTOT -LOHKON VÄKÄNEN (omistaja 6.9.2026: "Piilota nuo
+   * tiedot väkäsen alle").
+   *
+   * Otsikkorivin napautus avaa ja sulkee lohkon, ja asento muistetaan
+   * laitteeseen (tallennaLaukunTilastot) kuten muutkin laukun
+   * katseluasetukset. Oletus on KIINNI.
+   */
+  vaihdaTilastolohko() {
+    const auki = this.tilastoNappi?.getAttribute('aria-expanded') !== 'true';
+    this.paivitaTilastolohko(auki);
+    tallennaLaukunTilastot(auki);
+  }
+
+  /**
+   * Lohkon asento ruudulle. Liike animoidaan pehmeästi (omistajan
+   * pysyvä linjaus), ja siihen tarvitaan mitattu korkeus: `max-height`
+   * ei osaa siirtyä `auto`-arvoon, joten avattaessa mitataan sisällön
+   * scrollHeight ja siirtymän päätyttyä katto vapautetaan (`none`).
+   * Ilman vapautusta myöhemmin latautuva julistevedos jäisi katkolle.
+   *
+   * @param {boolean} auki haluttu asento
+   * @param {{heti?: boolean}} [asetukset] heti = ilman animaatiota
+   */
+  paivitaTilastolohko(auki, { heti = false } = {}) {
+    const nappi = this.tilastoNappi;
+    const lohko = this.tilastoLohko;
+    if (!nappi || !lohko) return;
+    nappi.setAttribute('aria-expanded', String(auki));
+    nappi.title = auki ? 'Piilota matkan tilastot' : 'Näytä matkan tilastot';
+    lohko.classList.toggle('auki', auki);
+    if (this.tilastoSiirtyma) {
+      lohko.removeEventListener('transitionend', this.tilastoSiirtyma);
+      this.tilastoSiirtyma = null;
+    }
+    if (heti || this.reducedMotion) {
+      lohko.style.maxHeight = auki ? 'none' : '0px';
+      return;
+    }
+    // Lähtökorkeus on aina luku: suljettaessa `none` pitäisi ensin
+    // mitata, tai siirtymällä ei olisi mistä lähteä.
+    lohko.style.maxHeight = auki ? '0px' : `${lohko.scrollHeight}px`;
+    // Asettelun luku pakottaa selaimen huomaamaan lähtöarvon (sama
+    // temppu kuin havaitseLinssiTietojenVaihdossa).
+    void lohko.offsetHeight;
+    lohko.style.maxHeight = auki ? `${lohko.scrollHeight}px` : '0px';
+    this.tilastoSiirtyma = (e) => {
+      if (e.propertyName !== 'max-height' || e.target !== lohko) return;
+      lohko.removeEventListener('transitionend', this.tilastoSiirtyma);
+      this.tilastoSiirtyma = null;
+      if (lohko.classList.contains('auki')) lohko.style.maxHeight = 'none';
+    };
+    lohko.addEventListener('transitionend', this.tilastoSiirtyma);
   }
 
   renderActions() {
@@ -12859,7 +12944,11 @@ export class UI {
    * havainto 9.8.2026). Nollaus tehdään siksi aina showModalin JÄLKEEN.
    */
   nollaaDialoginVieritys(dialogi) {
-    for (const kortti of dialogi.querySelectorAll('.dialog-card')) kortti.scrollTop = 0;
+    // .laukku-sisus mukaan: matkalaukussa vierii kortin sisus eikä
+    // kortti itse (ks. index.html "LAUKKU VIERII SISUKSESTAAN").
+    for (const kortti of dialogi.querySelectorAll('.dialog-card, .laukku-sisus')) {
+      kortti.scrollTop = 0;
+    }
   }
 
   /**
@@ -17245,18 +17334,16 @@ export class UI {
     const linssi = this.linssiTunnuksella(tunnus);
     if (!linssi) {
       // "Ei linssiä" on napautettuna yhtä lailla varuste: sillä on nimi
-      // ja selite, ja sen "aktivoi" palauttaa paljaan kartan.
+      // ja selite, ja sen Aktivoi-nappi palauttaa paljaan kartan.
       if (esikatselussa) this.linssiTiedot.appendChild(html('h3', 'linssi-nimi', 'Paljain silmin'));
-      const teksti = html('p', 'linssi-lyhyt', 'Kartta sellaisena kuin isoisä sen piirsi.');
-      if (esikatselussa) this.lisaaLinssinAktivointi(teksti, null, null);
-      this.linssiTiedot.appendChild(teksti);
+      this.linssiTiedot.appendChild(html('p', 'linssi-lyhyt', 'Kartta sellaisena kuin isoisä sen piirsi.'));
+      if (esikatselussa) this.lisaaLinssinAktivointi(null, null);
       this.havaitseLinssiTietojenVaihto();
       return;
     }
     this.linssiTiedot.appendChild(html('h3', 'linssi-nimi', linssi.nimi));
-    const teksti = html('p', 'linssi-lyhyt', linssi.lyhyt);
-    if (esikatselussa) this.lisaaLinssinAktivointi(teksti, tunnus, linssi);
-    this.linssiTiedot.appendChild(teksti);
+    this.linssiTiedot.appendChild(html('p', 'linssi-lyhyt', linssi.lyhyt));
+    if (esikatselussa) this.lisaaLinssinAktivointi(tunnus, linssi);
     this.havaitseLinssiTietojenVaihto();
 
     /*
@@ -17277,38 +17364,43 @@ export class UI {
   }
 
   /**
-   * "aktivoi" SELITTEEN PERÄÄN (omistaja 5.9.2026 sanatarkasti: *"kun
-   * linssi klikataan matkalaukussa niin silloin päivittyy vasta selite
-   * teksti ja tekstin loppuun tulee "aktivoi", mitä klikkaamalla
-   * linssi menee päälle ja matkalaukku sulkeutuu"*).
+   * AKTIVOI-NAPPI SELITTEEN ALLE (omistaja 6.9.2026: *"Tee aktivoi
+   * tekstistä nappi."*).
    *
-   * Nappi on VIRKKEEN OSA eikä oma rivinsä: se ladotaan selitteen
-   * perään samaan kappaleeseen, tekstilinkin näköisenä kuten muutkin
-   * tämän lohkon toiminnot (.linssi-lahde-avaa). Painettava sana on
-   * silti oikea `<button>`, joten se saa näppäimistön ja ruudunlukijan
-   * ilman lisätemppuja — ja aria-label kertoo, mitä se tekee, koska
-   * pelkkä "aktivoi" ei kerro mitä aktivoidaan.
+   * Kaksivaiheisuus on ennallaan (omistaja 5.9.2026: *"kun linssi
+   * klikataan matkalaukussa niin silloin päivittyy vasta selite teksti
+   * ... mitä klikkaamalla linssi menee päälle ja matkalaukku
+   * sulkeutuu"*) — vain painike vaihtoi muotoa. Sana oli ennen ladottu
+   * selitekappaleen perään tekstilinkin näköisenä ja oli yhden
+   * tekstirivin korkuinen: laukun ainoa varsinainen toiminto ei näyttänyt
+   * napilta eikä osunut sormeen. Nyt se on OMA LOHKONSA selitteen alla,
+   * messinkireunaisena ja 44 pikselin korkuisena (css .linssi-aktivoi).
    *
-   * Päällä olevan linssin kohdalla sana on "sammuta" ja se kytkee
-   * linssin pois (valitseLinssi(null)) — sama nappi, käänteinen
-   * suunta, ei uutta käyttöliittymää.
+   * Päällä olevan linssin kohdalla nappi sanoo "Ota pois" ja kytkee
+   * linssin pois (valitseLinssi(null)) — sama nappi, käänteinen suunta.
+   * Poiskytkentä säilyy siis samassa kohdassa kuin ennenkin; siksi nappi
+   * ei ole disabloitu "Käytössä"-teksti.
    *
-   * @param {Element} teksti selitekappale, jonka perään nappi tulee
+   * aria-label kertoo, MITÄ aktivoidaan: pelkkä "Aktivoi" ei sitä kerro.
+   *
    * @param {string|null} tunnus esikatseltu linssi (null = paljain silmin)
    * @param {object|null} linssi linssimoduuli, jos tunnus osoittaa sellaiseen
    */
-  lisaaLinssinAktivointi(teksti, tunnus, linssi) {
+  lisaaLinssinAktivointi(tunnus, linssi) {
     const paalla = Boolean(tunnus) && tunnus === this.linssiValittu;
-    const nappi = html('button', 'linssi-aktivoi', paalla ? 'sammuta' : 'aktivoi');
+    const nappi = html('button', `linssi-aktivoi${paalla ? ' pois' : ''}`,
+      paalla ? 'Ota pois' : 'Aktivoi');
     nappi.type = 'button';
     const nimi = linssi?.nimi ?? 'Paljain silmin';
-    if (paalla) nappi.setAttribute('aria-label', `Sammuta linssi ${nimi}`);
+    if (paalla) nappi.setAttribute('aria-label', `Ota linssi ${nimi} pois käytöstä`);
     else if (linssi) nappi.setAttribute('aria-label', `Aktivoi linssi ${nimi}`);
     else nappi.setAttribute('aria-label', 'Katso karttaa paljain silmin');
-    // Välilyönti sanan eteen: nappi on inline-elementti kappaleen
-    // sisällä, eikä selite saa liimautua siihen kiinni.
-    teksti.appendChild(document.createTextNode(' '));
-    teksti.appendChild(nappi);
+    /*
+     * Nappi tulee selitteen JÄLKEEN tietolohkoon, ei kappaleen sisään:
+     * kappale on virke ja nappi on toiminto. Kutsuja on siksi jo
+     * latonut selitteen paikalleen, kun tänne tullaan.
+     */
+    this.linssiTiedot.appendChild(nappi);
     nappi.addEventListener('click', () => this.aktivoiLinssi(paalla ? null : tunnus));
     return nappi;
   }
