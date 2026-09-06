@@ -3482,7 +3482,14 @@ export const RAAMATTU = {
           + '(3d-tiles-renderer three.js:lle, MapLibre GL JS:n globe, '
           + 'CesiumJS, muut) lisensseineen ja kokoineen; oma toteutus vain, '
           + 'jos mikaan ei tayta vaatimuksia (ES-moduulit ilman buildia, '
-          + 'Safari, nykyiset kerrokset).',
+          + 'Safari, nykyiset kerrokset). LOPPUTULOS RATKAISEE (omistaja '
+          + '6.9.2026 ilta, sanatarkasti: "Tyon kestolla ei ole valia, '
+          + 'kunhan saadaan paras mahdollinen lopputulos. Voidaan alkaa '
+          + 'suoraan tekemaan sita, jos se on selva, etta se on paras '
+          + 'lopputulokseltaan."): vaihtoehtoa ei valita siirron pienuuden '
+          + 'tai tyoajan vaan lopputuloksen mukaan, ja selvasti paras '
+          + 'toteutetaan suoraan ilman erillista lupakierrosta; kysytaan '
+          + 'vain, jos kaksi jaa mittauksissa tasoihin.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
