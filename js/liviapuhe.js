@@ -157,9 +157,19 @@ export function livianKaupunkiIndeksi(kaupunkiId, kentta) {
   return indeksi < 0 ? null : indeksi;
 }
 
+/*
+ * KAUPUNKIÄÄNET OVAT KYTKIMEN TAKANA (omistaja 6.9.2026 ilta: "älä
+ * generoi ääniä vielä tässä vaiheessa"). Kytkentä ja hitaampi
+ * kuplarytmi ovat koodissa valmiina, mutta ennen generointia ne
+ * jäisivät hiljaisiksi ja hitaiksi: kupla odottaisi puhetta, jota ei
+ * ole. Kytkin käännetään trueksi samassa julkaisussa, jossa
+ * generoi-pulu.yml on vienyt ateena-/sofia-tiedostot ämpäriin.
+ */
+export const LIVIAN_KAUPUNKIAANET_KAYTOSSA = false;
+
 /** Onko tälle kaupungin repliikille olemassa äänite? */
 export function livianKaupunkiAanitetty(kaupunkiId, kentta) {
-  return livianKaupunkiIndeksi(kaupunkiId, kentta) !== null;
+  return LIVIAN_KAUPUNKIAANET_KAYTOSSA && livianKaupunkiIndeksi(kaupunkiId, kentta) !== null;
 }
 
 /**

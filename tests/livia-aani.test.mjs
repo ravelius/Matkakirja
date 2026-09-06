@@ -19,7 +19,7 @@ import { LIVIAN_AVAUS, MANNERIVIHJE, livianPaljastus } from '../js/livia.js';
 import {
   LIVIAN_AANIJUURI, LIVIAN_AANILAHTEET, LIVIAN_AANITETTY_PALJASTUS,
   LIVIAN_KAUPUNKILAHTEET, LIVIAN_SAAPUMISREPLIIKIT, livianAaniNimi,
-  livianAaniOsoite, livianAanitykset, livianKaupunkiAanitetty,
+  livianAaniOsoite, livianAanitykset, livianKaupunkiAanitetty, LIVIAN_KAUPUNKIAANET_KAYTOSSA,
   livianKaupunkiIndeksi, livianSaapumisrepliikki, livianSoitettava,
 } from '../js/liviapuhe.js';
 import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
@@ -80,7 +80,9 @@ test('kaupunkirepliikki nimetään kaupungista ja kentän järjestyksestä', () 
   // Äänittämätön kaupunki tai kenttä on hiljainen, ei arvattu nimi.
   assert.equal(livianKaupunkiIndeksi('venetsia', 'maadoitus'), null);
   assert.equal(livianKaupunkiIndeksi('ateena', 'paluu'), null);
-  assert.equal(livianKaupunkiAanitetty('sofia', 'vinkki'), true);
+  // Kytkin on kiinni kunnes äänet on generoitu (omistaja 6.9.2026:
+  // "älä generoi ääniä vielä tässä vaiheessa"); nimeäminen toimii silti.
+  assert.equal(livianKaupunkiAanitetty('sofia', 'vinkki'), LIVIAN_KAUPUNKIAANET_KAYTOSSA);
   assert.equal(livianKaupunkiAanitetty('sofia', ''), false);
   assert.equal(livianAaniNimi('venetsia', 0), null);
 });
