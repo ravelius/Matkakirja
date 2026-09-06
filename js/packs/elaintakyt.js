@@ -1761,6 +1761,89 @@ export const ELAINTAKYT = {
     lon: 31.66666667,
     lat: -21.66666667,
   },
+  /*
+   * ── ERÄ M12, LÄNSI-AFRIKKA 6.9.2026 ────────────────────────────
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M12 (GHA, SEN, MLI, LBR, SLE) toi viisi uutta eläintäkyä;
+   * yhdelläkään viidestä maasta ei ollut täkyä ennestään, joten
+   * yhtäkään vanhaa tietuetta ei ole koskettu.
+   *
+   * PAIKKA ON MITATTU IRTI KAUPUNGEISTA JA MUISTA MERKEISTÄ. Jokainen
+   * piste on maan rajojen sisällä, maalla ja vähintään 35 lautayksikön
+   * päässä jokaisesta kaupunkimerkistä (tests/elaintakyt.test.mjs
+   * VAHIN_ETAISYYS_KAUPUNKIIN) sekä 30 yksikön päässä muista täyistä.
+   * Ghana ja Mali olivat erän tiukat tapaukset: Ghanassa Molen
+   * puiston kohta olisi ollut saman erän Mole-kohteen päällä, joten
+   * täky vietiin lounaisiin metsiin, ja Malissa Gourman norsujen
+   * läntinen pää osuisi Hombori Tondon päälle, joten piste on alueen
+   * itäpäässä.
+   *
+   * KUVA TULEE KUVAPUTKELTA. Erä on kuvaton, joten `kuva`-kentässä on
+   * pelkkä ämpäritunnus (js/media.js assetOsoite:
+   * `kohtaamiset/elaimet/<tunnus>.jpg`). Kun kuvaputki toimittaa kuvan,
+   * se ilmestyy kortille ilman koodimuutosta.
+   */
+  GHA: {
+    elain: 'valkokaulakalliovaris',
+    otsikko: 'Lintu, jonka luultiin kadonneen Ghanasta',
+    teksti: 'Valkokaulakalliovaris on keskikokoinen varpuslintu, jota tavataan vain Länsi-Afrikan kallioisissa metsissä Guineasta Ghanaan. Sen pää on lähes höyhenetön: paljas iho on kirkkaan keltainen, ja silmien takana on kaksi suurta pyöreää mustaa laikkua. Yläpuoli on harmaanmusta, alapuoli valkoinen, ja poikkeuksellisen pitkä tummanruskea pyrstö toimii tasapainottajana. Lintu ei juuri lennä pitkiä matkoja vaan liikkuu metsässä hyppien ja loikkien tai lyhyin lennoin matalassa kasvillisuudessa. Se syö hyönteisiä ja seuraa toisinaan ajajamuurahaisten parvia napaten niiden säikyttämiä otuksia; poikasille vanhemmat kantavat pieniä sammakoita. Pesä on syvä savikuppi, joka muurataan kallionpintaan tavallisesti luolassa, ja munia on kaksi kahdesti vuodessa. Ghanassa lajin luultiin kuolleen sukupuuttoon vuoteen 2003 asti, jolloin se löydettiin uudelleen maan eteläkeskiosasta.',
+    lahde: 'en-Wikipedia "White-necked rockfowl", johdanto sekä osiot "Distribution and '
+      + 'habitat", "Breeding" ja "Status and conservation". Tarkistettu 6.9.2026.',
+    kuva: 'elain-gha',
+    // Piste on Lounais-Ghanan metsävyöhykkeessä, 39,4 lautayksikköä
+    // Kumasi-laatasta (vähimmäisetäisyys 35).
+    lon: -2.2,
+    lat: 6.3,
+  },
+  SEN: {
+    elain: 'afrikanmanaatti',
+    otsikko: 'Vanhan maailman ainoa manaatti',
+    teksti: 'Afrikanmanaatti on ainoa manaattilaji vanhassa maailmassa ja dugongin ohella toinen kahdesta siellä elävästä sireenieläimestä. Sitä tavataan Senegalista Angolaan, ja sen elinympäristöjen kirjo on sireenieläimistä laajin: Atlantin ulkosaaria, Sahelin jokia ja päiväntasaajan sademetsävirtoja. Ruumis on keskeltä leveimmillään, häntä lapiomainen, ja väri harmaa — mutta levä ja muut pikkueliöt kasvavat sen päällä, joten eläin näyttää usein ruskealta tai vihertävältä. Pituutta voi olla 4,5 metriä ja painoa noin 360 kiloa, ja tavallinen matkavauhti on 5–8 kilometriä tunnissa, säikähtäneenä yli kolmekymmentä. Hampaita ovat vain vahvat poskihampaat, ja jos sellainen irtoaa, tilalle kasvaa uusi. Padot ovat lajin suurin uhka: Diaman pato on eristänyt Senegaljoen manaatit pysyvästi merestä ja Ghanan Akosombon pato omansa vastaavasti.',
+    lahde: 'en-Wikipedia "African manatee", johdanto sekä osiot "Range and habitat" ja '
+      + '"Description". Tarkistettu 6.9.2026.',
+    kuva: 'elain-sen',
+    // Piste on Ylä-Casamancen jokiseudulla Kaakkois-Senegalissa, 116,8
+    // lautayksikköä Dakar-laatasta (vähimmäisetäisyys 35).
+    lon: -13.5,
+    lat: 13.0,
+  },
+  MLI: {
+    elain: 'gourmannorsu',
+    otsikko: 'Vuoden mittainen kierros vesikuoppien väliä',
+    teksti: 'Malin norsut eivät ole oma lajinsa vaan afrikannorsuja, jotka ovat oppineet elämään aavikon laidalla. Ne ovat jäänteitä laumoista, jotka vielä 1970 kiersivät laajalti Sahelissa ja jotka salametsästys sitten hävitti; nykyään ne ovat kutistuneet Gourman seudulle, syrjäiselle alueelle Nigerin mutkan eteläpuolella Timbuktun tienoilla. Kanta on noin 400 yksilöä, ja se tekee vuosittain lähes viidensadan kilometrin vaellusmatkan, jopa 56 kilometriä vuorokaudessa. Reitti kiertää vastapäivään tilapäisten ja pysyvien vesikuoppien kautta: norsut pysyvät alueensa pohjoisosassa, kunnes sateet tulevat kesäkuussa, siirtyvät sitten etelään käyden lyhyesti Burkina Fason puolella ja palaavat taas pohjoiseen. Päivät ne viettävät piilossa akaasioiden keskellä ja tulevat juomaan ja syömään öisin. Kuivuudet ovat koetelleet kantaa: 1983 hallitus kuljetti norsuille vettä autoilla, ja 2009 aikuiset joutuivat kaivamaan vettä syvältä, mutta poikaset eivät ylettäneet siihen kärsällään.',
+    lahde: 'en-Wikipedia "Desert elephant", osio "Mali" sekä johdanto. Tarkistettu 6.9.2026.',
+    kuva: 'elain-mli',
+    // Piste on Gourman itäosassa Nigerin mutkan eteläpuolella, 117,1
+    // lautayksikköä Gao-laatasta (vähimmäisetäisyys 35).
+    lon: -0.5,
+    lat: 15.2,
+  },
+  LBR: {
+    elain: 'kääpiövirtahepo',
+    otsikko: 'Metsän virtahepo, joka nukkuu päivät',
+    teksti: 'Kääpiövirtahepo on Länsi-Afrikan metsien ja soiden asukki, ja valtaosa maailman kannasta elää Liberiassa; pieniä esiintymiä on Sierra Leonessa, Guineassa ja Norsunluurannikolla. Se on puolet tavallisen virtahevon korkeudesta ja alle neljänneksen sen painosta: säkäkorkeus 75–100 senttiä, pituus 150–175 senttiä ja paino 180–275 kiloa. Selkä viettää eteenpäin, jalat ja kaula ovat suhteessa pidemmät ja pää pienempi kuin isolla serkulla — kaikki sopeutumia tiheän metsäkasvillisuuden läpi kulkemiseen. Varpaat ovat harallaan ja räpylät vähäisemmät, jotta metsänpohjalla on hyvä kävellä, mutta korvissa ja sieraimissa on yhä voimakkaat lihasläpät sukeltamista varten. Iho erittää samaa hipposudorihappoa kuin isollakin virtahevolla: punertava neste ei ole hikeä eikä verta vaan toimii ilmeisesti antiseptisenä aurinkovoiteena. Laji on öinen ja arka, ja siksi sitä on tutkittu villinä hyvin vähän; luonnossa niitä arvioitiin 2015 olevan alle 2 500.',
+    lahde: 'en-Wikipedia "Pygmy hippopotamus", johdanto sekä osiot "Description" ja '
+      + '"Conservation". Tarkistettu 6.9.2026.',
+    kuva: 'elain-lbr',
+    // Piste on Cestos-joen seudun sademetsässä Keski-Liberiassa, 89,1
+    // lautayksikköä Kap Palmas -laatasta (vähimmäisetäisyys 35).
+    lon: -9.5,
+    lat: 5.6,
+  },
+  SLE: {
+    elain: 'länsiafrikansimpanssi',
+    otsikko: 'Simpanssi, joka veistää keihään',
+    teksti: 'Länsiafrikansimpanssi on äärimmäisen uhanalainen simpanssin alalaji, jota elää Norsunluurannikolla, Guineassa, Liberiassa, Malissa, Senegalissa, Ghanassa, Sierra Leonessa ja Guinea-Bissaussa; Beninistä, Burkina Fasosta ja Togosta se on hävinnyt. Suurimmat kannat ovat nykyään Guineassa, Sierra Leonessa ja Liberiassa, vaikka laji ulottui aikoinaan Etelä-Senegalista aina Niger-joelle asti. Se on simpanssin alalajeista geneettisesti eriytynein, ja käytös poikkeaa muista niin paljon, että sitä on ehdotettu omaksi lajikseen. Vain nämä simpanssit veistävät puisia keihäitä muiden kädellisten metsästämiseen, käyttävät luolia asuntoinaan, jakavat kasviravintoa keskenään ja liikkuvat myös öisin; kuumalla ne menevät veteen viilentymään ja leikkimään. Naaraat ovat seurallisia ja tukevat toisiaan riidoissa koiraiden kanssa, joten arvojärjestys on tasaisempi kuin Itä-Afrikan simpansseilla — naaraat myös metsästävät ja kulkevat mukana reviiripartioilla.',
+    lahde: 'en-Wikipedia "Western chimpanzee", johdanto sekä osiot "Distribution and habitat" '
+      + 'ja "Unique behaviors". Tarkistettu 6.9.2026.',
+    kuva: 'elain-sle',
+    // Piste on Pohjois-Sierra Leonen metsäisillä kukkuloilla Konon ja
+    // Tonkolilin välissä, 45,8 lautayksikköä Sierra Leone -laatasta
+    // (vähimmäisetäisyys 35).
+    lon: -11.5,
+    lat: 8.6,
+  },
 };
 
 

@@ -1324,3 +1324,84 @@ maalle ja maan rajojen sisään (`tests/elaintakyt.test.mjs`), ja
 saariston oma vesialue on laudan maskissa merta. Zimbabwen musta
 sarvikuono seisoo Gonarezhoun kansallispuistossa 122,1 yksikön päässä
 lähimmästä kaupunkimerkistä.
+## Erä M12 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Afrikan
+kolmas erä ja ensimmäinen Länsi-Afrikan erä: **GHA, SEN, MLI, LBR ja SLE**.
+Kaikilla viidellä oli ennestään kolme maastokohdetta mutta ei yhtäkään
+kohdetta, eläintäkyä eikä skandaalia. Erä kirjoitti kullekin kahdeksan
+kohdetta, yhden eläintäyn ja kaksi skandaalia — yhteensä 55 uutta
+karttamerkkiä. Erä on kuvaton kuten K2-erät 1–4 ja maailman erät M1–M11, ja
+jokainen väite on en-Wikipedian raakatekstin katteessa lähderivillä, joka
+nimeää artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+`node tools/laske-karttanostot.mjs` sanoo erän jälkeen kaikista viidestä
+*täysi*; taulukot ajaa Fable.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Ghana (GHA) | Elminan linna, Kakumin puisto, Larabangan moskeija, Molen puisto, Nzulezo, Osun linna, Pagan krokotiilit, Prinzensteinin linnake | (oli jo: Afadja, Guineanlahti, Voltajärvi) | valkokaulakalliovaris | Kultajakkaran sota 1900, Salagan orjatori |
+| Senegal (SEN) | Gorée, Saint-Louis, Djoudjin lintupuisto, Sine Ngayènen kivikehät, Touban moskeija, Joal-Fadiouth, Saloumin suisto, Ziguinchor | (oli jo: Atlantti, Senegaljoki, Gambiajoki) | afrikanmanaatti | Lat Jor ja rautatie 1886, Aline Sitoé Diatta 1943 |
+| Mali (MLI) | Djennén moskeija, Dogonmaa, Askian hauta, Ségou, Baoulén mutka, Médinen linnake, Sikasson tata, Bamako | (oli jo: Hombori Tondo, Niger, Senegal) | gourmannorsu | Timbuktun käsikirjoitukset 2012, Office du Niger 1932 |
+| Liberia (LBR) | Providence Island, Sapon puisto, Yekepa, Harper, Robertsport, Buchanan, Gbarnga, Bopolu | (oli jo: Mount Wuteve, Atlantti, Cavalla) | kääpiövirtahepo | Firestonen sopimus 1926, Christyn raportti 1930 |
+| Sierra Leone (SLE) | Tiwain suojelualue, Outamba-Kilimi, Golan sademetsä, Bo, Kenema, Bumbunan pato, Bonthe, Kabala | (oli jo: Bintumani, Atlantti, Rokel) | länsiafrikansimpanssi | Lomboko 1849, Koidun kaivossopimus 1995 |
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin, ja jokaisen kohteen lähin on
+kirjattu sen koordinaattirivin viereen. Koko erän lähin merkki on Kakum 9,4
+lautayksikön päässä Kumasi-laatasta ja toiseksi lähin Dékheulén skandaali
+14,8 yksikön päässä Dakarista; raja `KAUPUNGIN_KOHDALLA_SADE` on 7.
+`node tools/tarkista-nostopaikat.mjs` antaa kaikille 55:lle rivin
+*pääkartta*, ja `node tools/tarkista-nimiolimitys.mjs` sanoo yhä
+"NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Viisi rajausta, jotka valitsivat sisällön.** (1) Pelikaupunkien omat
+nähtävyydet jäivät pois: Kumasin Manhyian palatsi (Kumasi), Timbuktun
+käsikirjoituskirjastot kohteena (Timbuktu) ja Freetownin Bunce Island,
+Port Loko ja Fourah Bay College, jotka ovat 6,0, 5,2 ja 12,8 lautayksikön
+päässä Sierra Leone -laatasta. Askian hauta on Gaossa, mutta laudan
+Gao-laatta on 115,9 yksikön päässä haudan oikeasta paikasta, joten se
+kelpasi. (2) Merkkien päällekkäisyys karsi neljä ehdokasta: Cape Coastin
+linna olisi 3,7 yksikön päässä Elminasta, Akosombon pato 7,0 yksikön
+päässä Voltajärvestä (ja padon tarina on jo Voltajärven kortissa),
+Niokolo-Koba 5,0 yksikön päässä Gambiajoesta ja Makeni 10,9 yksikön
+päässä Bumbunasta. (3) Tyyppi kertoo, mitä merkki näyttää: Bandiagaran
+jyrkänne on kirjoitettu Dogonmaana (`kulttuuri`) eikä maastona, sama linja
+kuin M5:n Tassili n'Ajjerissa, ja Senegalin Lac Rose jäi pois, koska se on
+järvi eikä kasvattaisi kohteiden lukua. (4) Yksi ehdokas oli väärässä
+maassa: en-Wikipedian "Mount Nimba Strict Nature Reserve" on Guinean ja
+Norsunluurannikon puolella, joten Liberian Nimba on kartalla Yekepan
+kaivoskaupunkina. (5) Kaksi ehdokasta kaatui lähdeaineiston ohuuteen:
+"Bassari Country" on 698 merkkiä ja "Tongo Hills" 616, ja niiden tilalle
+tulivat Ziguinchor ja Pagan krokotiilit.
+
+**Kolme skandaalimerkkiä on siirretty tietoisesti.** Dékheulén
+taistelupaikalla ja Lombokon linnakkeella ei ole en-Wikipedian
+koordinaattia, joten merkit ovat saman seudun koordinaatillisissa
+pisteissä: Dékheulé Tivaouanessa (en-Wikipedia "Tivaouane") ja Lomboko
+Moajoen suulla Gallinasin rannikolla (en-Wikipedia "Moa River"). Christyn
+raportti koski Liberian koko hallitusta Monroviassa, mutta Monrovian
+piste on jo Providence Islandilla, joten merkki on Sinoen
+satamakaupungissa Greenvillessä. Kaikki kolme on kirjattu skandaalin oman
+lohkon kommenttiin.
+
+**Herkät aiheet lähteen katteessa.** Orjakaupan, pakkotyön ja
+siirtomaasotien luvut ovat artikkelien omia, eikä yhdenkään kortin aihe
+ole käynnissä oleva selkkaus. Sierra Leonen ja Liberian sisällissodat
+mainitaan vain siellä, missä artikkeli kertoo niistä mennyttä aikaa
+(Koidun kaivossopimus 1995, Yekepan kaivoskaupunki, Bumbunan padon
+keskeytys 1997). Bandiagaran kortti on kirjoitettu kohteen historiasta ja
+luonnosta, ei artikkelin nykytilaosuudesta (M3:n Myanmar-linja).
+
+**Eläintäkyjen paikat on mitattu koneellisesti.** Jokainen piste on maan
+rajojen sisällä, maalla ja vähintään 35 lautayksikön päässä jokaisesta
+kaupunkimerkistä (`tests/elaintakyt.test.mjs`) sekä 30 yksikön päässä
+muista täyistä. Erän tiukat tapaukset olivat Ghana ja Mali: Ghanassa
+Molen puiston kohta olisi osunut saman erän Mole-kohteen päälle, joten
+täky vietiin lounaisiin metsiin (lon −2,2 / lat 6,3; etäisyys Kumasiin
+39,4), ja Malissa Gourman norsujen läntinen pää osuisi Hombori Tondon
+päälle, joten piste on alueen itäpäässä (lon −0,5 / lat 15,2).
+
+**Kuvat puuttuvat kaikilta viideltä eläintäyltä.** `kuva`-kentässä on
+kuvaputken ämpäritunnus ilman kansiota (`elain-gha`, `elain-sen`,
+`elain-mli`, `elain-lbr`, `elain-sle`): kun kuvaputki toimittaa kuvan, se
+ilmestyy kortille ilman koodimuutosta, ja siihen asti kortti on kuvaton.

@@ -11303,4 +11303,544 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /*
+   * ══ ERÄ M12, LÄNSI-AFRIKKA 6.9.2026 ══════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M12 (GHA, SEN, MLI, LBR, SLE) tuo kaksi skandaalia kuhunkin
+   * viiteen maahan — kymmenen uutta. Kaikki ovat kuvattomia kuten erän
+   * muutkin nostot, ja jokaisen lähderivi nimeää en-Wikipedian
+   * artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+   *
+   * PAIKAT ON MITATTU. Yksikään uusi merkki ei ole pelikaupungin
+   * kohdalla (KAUPUNGIN_KOHDALLA_SADE 7 lautayksikköä,
+   * js/fokuskohteet.js): lähin on Dékheulé 14,8 lautayksikön päässä
+   * Dakarista ja toiseksi lähin kultajakkaran sota 39,2 yksikön päässä
+   * Kumasi-laatasta, joka on laudalla rannikolla eikä kaupungin
+   * oikealla paikalla.
+   *
+   * KOLME PAIKKAVALINTAA ON TEHTY MERKKIEN PÄÄLLEKKÄISYYDEN TAKIA.
+   * (1) Dékheulén taistelupaikalla ei ole en-Wikipedian koordinaattia,
+   * joten merkki on Cayorin lähimmässä koordinaatillisessa paikassa
+   * Tivaouanessa (en-Wikipedia "Tivaouane"). (2) Lombokon linnakkeella
+   * ei myöskään ole koordinaattia; artikkelin mukaan se oli Gallinasin
+   * suulla lähellä Sulimaa, ja merkki on saman rannikon tunnetussa
+   * pisteessä, Moajoen suulla (en-Wikipedia "Moa River"). (3) Christyn
+   * raportti koski Liberian koko hallitusta Monroviassa, mutta
+   * Monrovian piste on jo saman erän Providence Islandilla, joten
+   * merkki on Sinoen satamakaupungissa Greenvillessä.
+   *
+   * HERKÄT AIHEET ON KIRJOITETTU LÄHTEEN KATTEESSA. Orjakaupan,
+   * pakkotyön ja siirtomaasotien luvut ovat artikkelien omia, eikä
+   * yhdenkään kortin aihe ole käynnissä oleva selkkaus: Sierra Leonen
+   * ja Liberian sisällissodat mainitaan vain siellä, missä artikkeli
+   * kertoo niistä mennyttä aikaa (Koidun kaivossopimus).
+   * ══════════════════════════════════════════════════════════════════ */
+  GHA: [
+    /*
+     * Kumasi, Asanten pääkaupunki. Laudan Kumasi-laatta on 39,2
+     * lautayksikön päässä kaupungin oikeasta paikasta.
+     * Lähde: en.wikipedia.org: War of the Golden Stool
+     */
+    {
+      id: 'kultajakkaran-sota',
+      otsikko: 'Jakkara, jolle kukaan ei istu',
+      nimio: 'Kultajakkara',
+      vuosi: '1900',
+      paikka: 'Kumasi, Asante',
+      lat: 6.7, lon: -1.6258,
+      kortti: 'Britannian kuvernööri saapui Kumasiin maaliskuussa 1900 ja vaati '
+        + 'istuakseen asantien kultajakkaralle. Jakkara ei ollut valtaistuin '
+        + 'vaan kansan sielu, eikä sillä istunut kukaan. Puhe kuunneltiin '
+        + 'vaiti, ja päälliköt lähtivät kotiin valmistelemaan sotaa.',
+      teksti: 'Kultajakkara oli ollut kauan asantien hallitsemisvallan vertauskuva. '
+        + 'Britannia oli miehittänyt Asanten tammikuussa 1896 ja karkottanut '
+        + 'kuninkaan Prempeh I:n maanpakoon. Kuvernööri Frederick Hodgson '
+        + 'saapui Kumasiin pienen joukon kanssa 25. maaliskuuta 1900, nousi '
+        + 'korokkeelle ja ilmoitti koolla olleille johtajille, että Prempeh ei '
+        + 'palaa, että vuoden 1874 Fomenan rauhansopimuksen mukainen '
+        + '160 000 punnan vuotuinen korvaus on yhä maksamatta ja että '
+        + 'kuningattarelle kuuluu kultajakkara.'
+        + '\n\n"Miksi ette tuoneet kultajakkaraa istuimekseni?" hän kysyi. '
+        + 'Vastaus oli hiljaisuus. Britannian parlamentissa David Lloyd George '
+        + 'sanoi seuraavana vuonna, että Hodgsonin retki kultajakkaran perään '
+        + 'muistutti graalin etsintää, ja siirtomaaministeri Joseph '
+        + 'Chamberlainilta kysyttiin toistuvasti, oliko kuvernööri ylipäätään '
+        + 'saanut lupaa vaatia jakkaraa.'
+        + '\n\nSota maksoi briteille ja heidän liittolaisilleen noin tuhat '
+        + 'kaatunutta, ja Asante liitettiin imperiumiin. Sotatavoitteessaan '
+        + 'asantit kuitenkin onnistuivat: jakkara oli piilotettu syvälle '
+        + 'metsään, eivätkä britit koskaan saaneet sitä. Vuonna 1901 he '
+        + 'pidättivät joukon päälliköitä, muun muassa Ejisun kuningataräidin '
+        + 'Yaa Asantewaan, ja karkottivat heidät Seychelleille 25 vuodeksi; '
+        + 'moni kuoli siellä, Yaa Asantewaa 1921. Jakkara löytyi vahingossa '
+        + '1921, kun työmiehet kaivoivat sen esiin ja veivät kultakoristeet.',
+      lahde: 'en-Wikipedia "War of the Golden Stool", johdanto-osa sekä osiot '
+        + '"The Golden Stool" ja "Aftermath". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä kuvernööri Hodgson vaati asanteilta Kumasissa?',
+        vaihtoehdot: [
+          'Kultajakkaraa istuimekseen',
+          'Kultakaivosten omistusta',
+          'Kumasin linnoituksen avaimia',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Salagan kauppakaupunki Itä-Gonjassa.
+     * Lähde: en.wikipedia.org: Salaga
+     */
+    {
+      id: 'salagan-orjatori',
+      otsikko: 'Etelän Timbuktu ja sen tori',
+      nimio: 'Salaga',
+      vuosi: '1800-luku',
+      paikka: 'Salaga, Itä-Gonja',
+      lat: 8.55, lon: -0.5167,
+      kortti: 'Salaga oli 1700- ja 1800-luvulla Kultarannikon suurin orjatori. '
+        + 'Samassa kaupungissa kulki myös kolapähkinä, karja ja maapähkinä, ja '
+        + 'sen monikansallisen väen takia sitä sanottiin etelän Timbuktuksi. '
+        + 'Torin paikalla kasvaa nykyään nuori baobab.',
+      teksti: 'Salaga on Itä-Gonjan piirikunnan pääkaupunki Pohjois-Ghanassa. Nimi '
+        + 'tulee dagbanin sanasta salgi, joka tarkoittaa asuinpaikkaan '
+        + 'tottumista. Kaupunki oli 1700- ja 1800-luvulla seudun tärkein '
+        + 'markkinapaikka, ja sen hallitseminen antoi monopolin sekä '
+        + 'pohjoiseen että etelään suuntautuvaan kauppaan. Salagaa hallitsi '
+        + 'gonjojen sotaisa kuningaskunta, mutta asukkaita olivat myös hausat, '
+        + 'wangarat, dagombat ja gurmat.'
+        + '\n\nTori oli Sahelin eteläisimmässä kolkassa ja välitti karjaa ja '
+        + 'maapähkinää Yendistä sekä kolapähkinää nykyisen Ghanan alueelta '
+        + 'Pohjois-Nigeriaan. Atlantin orjakaupan aikana samaa reittiä '
+        + 'kuljetettiin orjia rannikolle vietäviksi. Kaupungissa on lampi '
+        + 'nimeltä Wonkan bawa, hausaksi orjien peseytymispaikka, ja entisen '
+        + 'orjatorin kohdalla kasvaa nuori baobab.'
+        + '\n\nSalagan jälki näkyy yhä rannikolla: Accran Jamestownin toria '
+        + 'kutsutaan Salagan toriksi, koska sinne myytiin Salagasta tuotuja '
+        + 'ihmisiä. Vuonna 1892 kaupungissa puhkesi sisällissota, ja suuri osa '
+        + 'zongo-väestöstä lähti alueelta. Salaga oli 2012 noin 25 500 '
+        + 'asukkaan kaupunki.',
+      lahde: 'en-Wikipedia "Salaga", johdanto-osa sekä osiot "Etymology" ja '
+        + '"History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Salagaa kutsuttiin etelän Timbuktuksi?',
+        vaihtoehdot: [
+          'Se oli Saharan eteläisin kaupunki',
+          'Sen väki ja kauppa olivat monikansallisia',
+          'Siellä oli suuri käsikirjoituskirjasto',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  SEN: [
+    /*
+     * Dékheulén taistelupaikka Cayorissa. Taistelupaikalla ei ole
+     * en-Wikipedian koordinaattia, joten merkki on Tivaouanen
+     * koordinaatissa (en-Wikipedia "Tivaouane", 14,95 N / 16,8167 W).
+     * Lähde: en.wikipedia.org: Lat Dior
+     */
+    {
+      id: 'lat-dior-ja-rautatie',
+      otsikko: 'Kuningas, joka kielsi radan',
+      nimio: 'Dékheulé',
+      vuosi: '1886',
+      paikka: 'Dékheulé, Cayor',
+      lat: 14.95, lon: -16.8167,
+      kortti: 'Cayorin damel Lat Jor kertoi Ranskan kuvernöörille vastustavansa '
+        + 'Dakarin ja Saint-Louis’n rautatietä niin kauan kuin elää. Rata '
+        + 'valmistui 1886. Samana vuonna hänet houkuteltiin taisteluun, jota '
+        + 'ei voinut voittaa, ja Cayorin kuningaskunta lakkasi olemasta.',
+      teksti: 'Lat Jor Ngoné Latir Jop oli 1800-luvun wolof-valtion Cayorin '
+        + 'hallitsija ja on nykyään Senegalin kansallissankari. Hän nousi '
+        + 'damelin paikalle 1862, kun Ranskan asettama Majojo kukistettiin, '
+        + 'joutui pakenemaan 1864 ja liittyi Saloumin marabuutin Maba Diakhou '
+        + 'Bân oppilaaksi — ratkaisu, joka teki hänestä loppuiäkseen '
+        + 'harjoittavan muslimin ja käänsi Cayorin hallitsijasuvun perinteisen '
+        + 'maallisuuden.'
+        + '\n\nRanska tunnusti hänet Cayorin dameliksi 1870, ja liitto kesti '
+        + 'vuoteen 1883, jolloin hän aloitti kapinan rautatietä vastaan. '
+        + 'Kuvernööri Servatiukselle hänen kerrotaan sanoneen: "Niin kauan '
+        + 'kuin elän, vastustan kaikin voimin tämän radan rakentamista." '
+        + 'Ranskalaiset panivat hänen tilalleen veljenpojan Samba Lawbe '
+        + 'Fallin, ja Lat Jor kävi kolme vuotta sissisotaa pienen joukon '
+        + 'kanssa.'
+        + '\n\nVuoteen 1886 mennessä rata oli valmis ja ranskalaiset '
+        + 'vahvimmillaan. Samba Lawbe Fall sai surmansa neuvotteluissa '
+        + 'lokakuussa, ja loppuvuodesta Lat Jor kaatui Dékheulén taistelussa. '
+        + 'Cayor lakkasi olemasta itsenäinen valtio. Faidherben kerrotaan '
+        + 'sanoneen hänen sotilaistaan: heidät voi tappaa mutta ei häpäistä — '
+        + 'lause on nykyään Senegalin armeijan tunnuslause.',
+      lahde: 'en-Wikipedia "Lat Dior", johdanto-osa sekä osiot "First Reign as '
+        + 'Damel", "Return to Cayor" ja "Legacy". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä vastaan Lat Jor nousi kapinaan vuonna 1883?',
+        vaihtoehdot: [
+          'Ranskan asettamaa veroa',
+          'Islamin leviämistä Cayoriin',
+          'Dakarin ja Saint-Louis’n rautatietä',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Kabroussen kylä Ala-Casamancessa.
+     * Lähde: en.wikipedia.org: Aline Sitoé Diatta
+     */
+    {
+      id: 'aline-sitoe-diatta',
+      otsikko: 'Sadesaaja, joka kiellettiin',
+      nimio: 'Kabrousse',
+      vuosi: '1943',
+      paikka: 'Kabrousse, Ala-Casamance',
+      lat: 12.3556, lon: -16.7206,
+      kortti: 'Kabroussen kylässä nuori joola-nainen alkoi 1942 pitää sadetta '
+        + 'kutsuvia menoja. Sateet tulivat, sato oli runsas ja pyhiinvaeltajia '
+        + 'saapui joka kylästä. Vichy-Ranskan hallinto keräsi samaan aikaan '
+        + 'riisiä pakolla — ja päätti, että nainen oli kapinan alkuunpanija.',
+      teksti: 'Aline Sitoé Diatta syntyi noin 1920 Kabroussessa, jäi orvoksi ja '
+        + 'muutti 1935 Dakariin kotiapulaiseksi. Vuosina 1941–42 hän alkoi '
+        + 'nähdä näkyjä, joiden hän sanoi tulevan Emitailta, joolien '
+        + 'uskomuksen ylimmältä olennolta, ja jotka käskivät hänen palata '
+        + 'kotikyläänsä. Toukokuussa 1942 hän kutsui vanhimmat koolle ja '
+        + 'toimitti kasila-menon, jossa uhrattiin musta sonni. Sen jälkeen '
+        + 'satoi, ja seurasi kuuden viikon juhla-aika.'
+        + '\n\nOpetus törmäsi Vichy-Ranskan maatalouspolitiikkaan. Kun riisiä '
+        + 'ei enää saatu Indokiinasta, hallinto aloitti Casamancessa '
+        + 'pakko-ostokampanjan. Aline Sitoé puolusti paikallisia riisilajikkeita, '
+        + 'torjui maapähkinän kaltaiset rahakasvit ja ennusti pakko-ottojen, '
+        + 'päiveron ja koko Ranskan vallan loppua. Karjan uhraaminen vei '
+        + 'eläimiä, joita hallinto halusi pohjoisen kaupunkien ruoaksi.'
+        + '\n\nTammikuussa 1943 sotilasosastot lähetettiin hakemaan riisiä. '
+        + 'Yhteenottojen jälkeen Aline Sitoé pidätettiin seitsemäntoista muun '
+        + 'kanssa, ja Kabrousse joutui luovuttamaan kaikki riisivarastonsa. '
+        + 'Oikeus tuomitsi hänet kapinaan yllyttämisestä, vaikka Ziguinchorin '
+        + 'katoliset lähetyssaarnaajat vahvistivat hänen sanoneen tehtävänsä '
+        + 'olevan epäpoliittinen. Hänet karkotettiin Kayesiin ja siirrettiin '
+        + 'sieltä Timbuktun leiriin, jossa hän kuoli keripukkiin 22. toukokuuta '
+        + '1944. Kuolemasta kerrottiin julkisesti vasta 1983.',
+      lahde: 'en-Wikipedia "Aline Sitoé Diatta", johdanto-osa sekä osiot "Early '
+        + 'life", "Spiritual leadership" ja "Capture, exile, and death". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Missä Aline Sitoé Diatta kuoli?',
+        vaihtoehdot: [
+          'Kabroussessa',
+          'Ziguinchorissa',
+          'Timbuktun vankileirissä',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  MLI: [
+    /*
+     * Timbuktu. Laudan Timbuktu-laatta on 39,4 lautayksikön päässä
+     * kaupungin oikeasta paikasta, joten merkki ei ole sen kohdalla.
+     * Lähde: en.wikipedia.org: Timbuktu Manuscripts
+     */
+    {
+      id: 'timbuktun-kasikirjoitukset',
+      otsikko: 'Kirjat, jotka piilotettiin koteihin',
+      nimio: 'Ahmed Baba',
+      vuosi: '2012',
+      paikka: 'Timbuktu',
+      lat: 16.7666, lon: -3.0026,
+      kortti: 'Timbuktun kirjastoissa oli satojatuhansia käsikirjoituksia, joista '
+        + 'suurin osa oli yhä tutkimatta ja luetteloimatta. Kun kaupunki '
+        + 'kaatui 2012, osa niistä poltettiin ja varastettiin. Loput '
+        + 'katosivat — kaupunkilaisten koteihin.',
+      teksti: 'Timbuktun kirjurit käänsivät vuosisatojen ajan muun muassa Platonia, '
+        + 'Hippokratesta ja Avicennaa ja kopioivat kahdenkymmenenkahdeksan '
+        + 'niteen arabialaisen sanakirjan. Paikalliset kirjoittivat itse '
+        + 'historiaa, uskontoa, lakia, filosofiaa ja runoutta. Kronikoitsija '
+        + 'Mahmud Kati merkitsi muistiin elokuun 1583 tähdenlennot: "tähdet '
+        + 'lensivät kuin koko taivas olisi syttynyt tuleen". Käsikirjoitukset '
+        + 'periytyivät suvuittain, ja useimmat ovat huonossa kunnossa; '
+        + 'kokonaismäärää ei tiedetä.'
+        + '\n\nMalin sodan aikana 2012–2013 Ansar Dinen taistelijat polttivat '
+        + 'tai veivät 4 203 käsikirjoitusta, ja Ahmed Baban instituutin sekä '
+        + 'erään kirjaston kerrottiin palaneen vetäytymisen yhteydessä. '
+        + 'Yhdeksänkymmentä prosenttia pelastui, koska väestö järjestäytyi '
+        + 'SAVAMA-DCI-järjestön ympärille.'
+        + '\n\nEvakuoinnin järjestivät kirjastonhoitaja Abdel Kader Haidara, '
+        + 'jonka suvussa tehtävä oli kulkenut sukupolvelta toiselle, ja '
+        + 'yhdysvaltalainen kirjojen säilytyksen asiantuntija Stephanie '
+        + 'Diakité. Haidara turvautui paikallisiin perheisiin, jotka '
+        + 'piilottivat instituutin kokoelman koteihinsa, ennen kuin kirjat '
+        + 'kuljetettiin Bamakoon. Turvaan vietiin noin 350 000 '
+        + 'käsikirjoitusta, joista 300 000 oli yhä Bamakossa 2022. Etelässä '
+        + 'odotti uusi vaara: home ja kosteus.',
+      lahde: 'en-Wikipedia "Timbuktu Manuscripts", johdanto-osa sekä osiot '
+        + '"History", "Destruction and evacuation" ja "History of the '
+        + 'evacuation". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka monta käsikirjoitusta vietiin turvaan Bamakoon?',
+        vaihtoehdot: [
+          'Noin 4 200',
+          'Noin 350 000',
+          'Noin 20 000',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Office du Nigerin kastelualue Nionon tasangoilla.
+     * Lähde: en.wikipedia.org: Office du Niger
+     */
+    {
+      id: 'office-du-niger',
+      otsikko: 'Puuvillasuunnitelma, joka ei toteutunut',
+      nimio: 'Office du Niger',
+      vuosi: '1932',
+      paikka: 'Nionon tasangot, Ségou',
+      lat: 14.25, lon: -5.9833,
+      kortti: 'Ranskalainen suunnitelma oli kastella Nigerin vedellä lähes kaksi '
+        + 'miljoonaa hehtaaria Malin tasankoa ja siirtää sinne miljoonia '
+        + 'ihmisiä. Kastelua saatiin vuoteen 1948 mennessä noin 20 000 '
+        + 'hehtaaria — ja pakkotyöhön kymmeniätuhansia.',
+      teksti: 'Office du Niger on Malin puolittain itsenäinen valtionvirasto, joka '
+        + 'hallinnoi suurta kastelujärjestelmää Ségoun alueella. Vesi '
+        + 'ohjataan Nigeristä kanaviin Markalan padolla 35 kilometriä Ségousta '
+        + 'alavirtaan, ja sillä kastellaan lähes 100 000 hehtaaria tasankoa. '
+        + 'Siirtomaahallinto rakensi järjestelmän tuottamaan puuvillaa '
+        + 'tekstiiliteollisuudelle, mutta pääsato on nykyään riisi: noin '
+        + '320 000 tonnia vuodessa eli 40 prosenttia Malin koko tuotannosta.'
+        + '\n\nHanke keksittiin 1910-luvulla. Johtaja Émile Bélimen '
+        + 'suunnitelmissa oli 1920-luvun lopulla 1 850 000 hehtaaria '
+        + 'kasteltuja riisipeltoja, yli 3 000 kilometrin rata Pohjois-Afrikkaan '
+        + 'ja miljoonan tai kolmen ja puolen miljoonan malilaisen '
+        + 'pakkosiirto. Tavoitteisiin ei päästy, mutta kymmeniätuhansia '
+        + 'ihmisiä koottiin pakkotyöhön kauheissa oloissa. Vuoteen 1948 '
+        + 'mennessä kasteltua maata oli noin 20 000 hehtaaria ja viljelijöitä '
+        + 'alle 23 000; kansallistamisen aikaan 1960-luvun alussa heitä oli '
+        + '42 000.'
+        + '\n\nMaakiista sai jatkoa 2008, kun Malin hallitus alkoi tarjota '
+        + 'kastelemattomia maita 30 ja 50 vuoden vuokrasopimuksilla '
+        + 'ulkomaisille sijoittajille. Näkyvin tapaus on Malibya: Libyan '
+        + 'valtio sai 100 000 hehtaaria viideksikymmeneksi vuodeksi ilman '
+        + 'maanvuokraa. Sopimuksen sisältöä ei julkistettu, mutta vuodettu '
+        + 'jäljennös päätyi verkkoon; alueella asui kyliä, eikä ympäristö- ja '
+        + 'sosiaalisia vaikutusarvioita ole julkaistu.',
+      lahde: 'en-Wikipedia "Office du Niger", johdanto-osa sekä osiot "Historical '
+        + 'development" ja "Large-scale land leases". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä Émile Bélimen suunnitelma olisi vaatinut ihmisiltä?',
+        vaihtoehdot: [
+          'Miljoonien malilaisten pakkosiirtoa',
+          'Nigerin kääntämistä toiseen suuntaan',
+          'Sadan padon rakentamista',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  LBR: [
+    /*
+     * Harbel Margibin maakunnassa, Firestonen istutusten keskus.
+     * Lähde: en.wikipedia.org: Firestone Natural Rubber Company
+     */
+    {
+      id: 'firestonen-sopimus',
+      otsikko: 'Miljoona eekkeriä kuudella sentillä',
+      nimio: 'Harbel',
+      vuosi: '1926',
+      paikka: 'Harbel, Margibi',
+      lat: 6.2833, lon: -10.35,
+      kortti: 'Liberian hallitus vuokrasi 1926 Firestonelle miljoona eekkeriä '
+        + 'yhdeksäksikymmeneksiyhdeksäksi vuodeksi kuuden sentin '
+        + 'eekkerihintaan — ja yhtiö sai valita maat mistä tahansa maan '
+        + 'alueelta. Kaupan mukana tuli laina, joka sitoi maan talouden.',
+      teksti: 'Yhdysvaltain kumin saanti oli 1920-luvulla eurooppalaisten '
+        + 'siirtomaavaltojen käsissä, ja kauppaministeri Herbert Hoover piti '
+        + 'kumia elintärkeänä raaka-aineena autonrenkaiden takia. Harvey '
+        + 'Firestone lähetti joulukuussa 1923 asiantuntijoita Liberiaan '
+        + 'tutkimaan maaperää, ja 1926 hallitus myönsi yhtiölle '
+        + '99 vuoden vuokrasopimuksen miljoonasta eekkeristä kuuden sentin '
+        + 'eekkerihinnalla. Syntyi maailman suurin kumiviljelmä; vielä 2005 '
+        + 'Firestonen istutukset olivat lähes kolmasosa Liberian '
+        + 'kumintuotannon alasta.'
+        + '\n\nYhdysvaltain hallitus oli mukana alusta asti. Tutkija Christine '
+        + 'Whyten mukaan ulkoministeriö toivoi, että jättisopimus pitäisi '
+        + 'Liberian amerikkalaisessa vaikutuspiirissä ilman suoraa '
+        + 'hallintoa, ja viime hetkellä sopimukseen lisätty '
+        + '25 miljoonan dollarin laina varmisti yritysvallan.'
+        + '\n\nIstutusten raivaus siirsi ihmisiä. Harbelin asukkaat joutuivat '
+        + 'muuttamaan naapurimaakuntaan, eikä menetyksistä maksettu riittävää '
+        + 'korvausta; uuden kylän nimi on bassaksi Queezahn, "valkoinen, '
+        + 'lähde pois tästä paikasta". Vuonna 1929 Liberian lakiasäätävä '
+        + 'kokous sai kuningas Maya Gedebeolta valituksen, jonka mukaan hanke '
+        + 'oli tuhonnut yhdeksän kylää ja pannut ihmiset valitsemaan '
+        + 'pakkotyön ja maastamuuton väliltä.',
+      lahde: 'en-Wikipedia "Firestone Natural Rubber Company", johdanto-osa ja '
+        + 'osio "Creation and early history". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Paljonko Firestone maksoi vuokramaasta eekkeriä kohti?',
+        vaihtoehdot: [
+          'Kuusi dollaria',
+          'Kuusi senttiä',
+          'Kuusikymmentä senttiä',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Greenville Sinoen maakunnassa. Christyn raportti koski koko
+     * Liberian hallitusta Monroviassa, mutta Monrovian piste on jo
+     * saman erän Providence Islandilla (js/packs/maastokohteet-lbr.js),
+     * joten merkki on Sinoen satamakaupungissa.
+     * Lähde: en.wikipedia.org: Charles D. B. King
+     */
+    {
+      id: 'christyn-raportti',
+      otsikko: 'Raportti, joka kaatoi presidentin',
+      nimio: 'Christyn raportti',
+      vuosi: '1930',
+      paikka: 'Greenville, Sinoe',
+      lat: 5.0167, lon: -9.0333,
+      kortti: 'Vaalinsa hävinnyt haastaja syytti Liberian hallitusta siitä, että '
+        + 'se värväsi ja myi sopimustyöläisiä orjina. Kansainliitto lähetti '
+        + 'komission tutkimaan asian, ja raportti 1930 tuki suurta osaa '
+        + 'syytöksistä. Presidentti ja varapresidentti erosivat.',
+      teksti: 'Charles D. B. King oli Liberian presidentti, jonka kaudella '
+        + 'solmittiin Firestonen kumisopimus ja jonka rahoitusta valvoi '
+        + 'Yhdysvaltain presidentin nimittämä neuvonantaja. Vuoden 1927 '
+        + 'vaaleissa King sai virallisen ilmoituksen mukaan 234 000 ääntä, '
+        + 'vaikka Liberiassa oli tuolloin 15 000 rekisteröityä äänestäjää. '
+        + 'Guinnessin ennätyskirja on siksi merkinnyt hänet historian '
+        + 'vilpillisimmän vaalituloksen voittajaksi.'
+        + '\n\nVaalin hävinnyt Thomas J. R. Faulkner syytti monia hallituksen '
+        + 'jäseniä siitä, että nämä värväsivät ja myivät sopimustyöläisiä '
+        + 'orjina. Liberia kielsi väitteet ja kieltäytyi yhteistyöstä, joten '
+        + 'Kansainliitto asetti komission, jota johti brittiläinen '
+        + 'eläintieteilijä Cuthbert Christy. Yhdysvaltain presidentti Herbert '
+        + 'Hoover katkaisi hetkeksi suhteet painostaakseen Liberiaa '
+        + 'suostumaan.'
+        + '\n\nKansainliitto julkaisi raportin 1930. Se tuki suurta osaa '
+        + 'Faulknerin väitteistä ja nimesi monia virkamiehiä, muun muassa '
+        + 'varapresidentti Allen Yancyn, joka joutui eroamaan sen jälkeen, kun '
+        + 'hänen osallisuutensa Espanjan hallitsemalle Fernando Pón saarelle '
+        + 'viedyn pakkotyön järjestelyihin tuli ilmi. Raportin mukaan '
+        + 'virkamiehet olivat hyväksyneet pakkotyön teiden rakentamiseen ja '
+        + 'tavaran laivaamiseen sekä päälliköiden nöyryyttämiseen, ja '
+        + '"törkeän pelottelun ja tukahduttamisen politiikkaa" oli vuosien '
+        + 'ajan järjestelmällisesti ylläpidetty. King ja Yancy erosivat.',
+      lahde: 'en-Wikipedia "Charles D. B. King", osiot "Presidential election of '
+        + '1927" ja "Forced labor and slavery scandal" sekä en-Wikipedia '
+        + '"Allen N. Yancy", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuka johti Kansainliiton tutkintakomissiota Liberiassa?',
+        vaihtoehdot: [
+          'Herbert Hoover',
+          'Thomas J. R. Faulkner',
+          'Cuthbert Christy',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  SLE: [
+    /*
+     * Lombokon orjalinnake Gallinasin rannikolla. Linnakkeella ei ole
+     * en-Wikipedian koordinaattia; artikkelin mukaan se oli Gallinasin
+     * suulla lähellä Sulimaa, ja merkki on saman rannikon
+     * koordinaatillisessa pisteessä, Moajoen suulla (en-Wikipedia
+     * "Moa River", 7,0192 N / 11,5413 W).
+     * Lähde: en.wikipedia.org: Lomboko
+     */
+    {
+      id: 'lombokon-linnake',
+      otsikko: 'Linnake, jota ei ollut olemassa',
+      nimio: 'Lomboko',
+      vuosi: '1849',
+      paikka: 'Gallinasin rannikko',
+      lat: 7.0192, lon: -11.5413,
+      kortti: 'Gallinasjoen suulla toimi orjalinnake vielä kauan sen jälkeen, kun '
+        + 'orjakauppa oli kielletty — ja keskellä Britannian omaa siirtomaata. '
+        + 'Vuonna 1839 sieltä lähti noin kaksituhatta ihmistä vuodessa. '
+        + 'Kymmenen vuotta myöhemmin laivasto poltti paikan.',
+      teksti: 'Lomboko oli espanjalaisen orjakauppiaan Pedro Blancon hallitsema '
+        + 'orjalinnake nykyisen Sierra Leonen alueella. Se koostui useista '
+        + 'suurista varastoista eli barracooneista, joihin sisämaasta tuodut '
+        + 'ihmiset suljettiin, sekä palatsimaisista rakennuksista, joissa '
+        + 'Blanco asui vaimoineen ja työntekijöineen.'
+        + '\n\nLinnake rakennettiin muutamalle pienelle saarelle Gallinasjoen '
+        + 'suulle lähelle Sulimaa. Alue oli Britannian Sierra Leonen '
+        + 'siirtomaan sisällä, mutta sitä hallitsivat espanjalaiset '
+        + 'orjakauppiaat. Vuoteen 1839 mennessä Gallinasjoen kautta vietiin '
+        + 'noin kaksituhatta orjuutettua ihmistä vuodessa, vaikka orjakauppa '
+        + 'oli laitonta.'
+        + '\n\nVuonna 1849 kuninkaallisen laivaston orjakauppaa vastaan '
+        + 'taisteleva Länsi-Afrikan laivasto-osasto hyökkäsi Lombokoon: '
+        + 'merijalkaväki vapautti orjuutetut ja tuhosi sitten linnoituksen. '
+        + 'Kaupankäynti oli jatkunut vuosikymmeniä sen jälkeen, kun sekä '
+        + 'Britannia että Espanja olivat sen kieltäneet, ja juuri siksi '
+        + 'laivasto-osasto oli ylipäätään olemassa: se partioi Länsi-Afrikan '
+        + 'rannikolla pysäyttämässä orjalaivoja.'
+        + '\n\nLomboko tunnetaan nykyään laajimmin Steven Spielbergin Amistad-'
+        + 'elokuvasta. Siinä päähenkilö Joseph Cinqué ja muut vangitut '
+        + 'tuodaan Lombokoon, ja elokuva näyttää heidän julman kohtelunsa; '
+        + 'loppukohtaus on juuri orjuutettujen vapauttaminen ja linnakkeen '
+        + 'tuho.',
+      lahde: 'en-Wikipedia "Lomboko", johdanto-osa ja osio "Legacy". Tarkistettu '
+        + '6.9.2026.',
+      visa: {
+        kysymys: 'Kuka hallitsi Lombokon orjalinnaketta?',
+        vaihtoehdot: [
+          'Pedro Blanco',
+          'Joseph Cinqué',
+          'Théodore Canot',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Koidu Konon piirikunnassa.
+     * Lähde: en.wikipedia.org: Koidu
+     */
+    {
+      id: 'koidun-kaivossopimus',
+      otsikko: 'Kaivos palkkiona palveluksesta',
+      nimio: 'Koidu',
+      vuosi: '1995',
+      paikka: 'Koidu, Kono',
+      lat: 8.6439, lon: -10.9717,
+      kortti: 'Sierra Leonen hallitus antoi 1995 Koidun timanttikaivoksen '
+        + 'toimiluvan eteläafrikkalaiselle yhtiölle — ei rahasta vaan '
+        + 'palkkioksi sotilaallisesta avusta. Kaksikymmentä vuotta myöhemmin '
+        + 'kaupunki haastoi kaivoksen omistajan oikeuteen maksamattomista '
+        + 'kiinteistöveroista.',
+      teksti: 'Koidu on Konon piirikunnan pääkaupunki Itä-Sierra Leonessa ja '
+        + 'timanttikaupan keskus: kaksi maailman kymmenestä suurimmasta '
+        + 'raakatimantista on löydetty kaupungin läpi virtaavasta Woyiejoesta. '
+        + 'Asukkaita oli vuoden 2015 laskennassa 128 030, ja kaupunki on maan '
+        + 'etnisesti ja uskonnollisesti moninaisimpia — yksikään ryhmä ei ole '
+        + 'siellä enemmistönä.'
+        + '\n\nVuonna 1995 hallitus teki sopimuksen eteläafrikkalaisen Branch '
+        + 'Energy Limitedin kanssa, joka oli hallituksille palkkasotilaita '
+        + 'toimittaneen Executive Outcomesin tytäryhtiö. Vuoden 1994 '
+        + 'kaivoslain nojalla neuvoteltu 25-vuotinen sopimus antoi yhtiölle '
+        + 'Koidun kaivoksen toimiluvan maksuna avusta sisällissodan '
+        + 'kapinallisia vastaan; valtiolle jäi kaivoksesta 60 prosentin '
+        + 'omistus.'
+        + '\n\nPanaman paperit paljastivat myöhemmin, että Beny Steinmetzin '
+        + 'suvun säätiö maksoi 1,2 miljoonaa dollaria puolesta '
+        + 'kaivoslupaa. Oikeudet siirtyivät 2003 Koidu Holdingsille '
+        + '28 miljoonalla dollarilla. Kaupunki haastoi 2015 yhtiön oikeuteen '
+        + '684 000 dollarin maksamattomista kiinteistöveroista, mutta '
+        + 'korkeimman oikeuden tuomari päätti huhtikuussa 2016, että yhtiöt '
+        + 'olivat erillisiä eikä omistaja siksi ollut verovelvollinen.',
+      lahde: 'en-Wikipedia "Koidu", johdanto-osa ja osio "History". Tarkistettu '
+        + '6.9.2026.',
+      visa: {
+        kysymys: 'Millä Sierra Leonen hallitus maksoi 1995 sotilaallisesta avusta?',
+        vaihtoehdot: [
+          'Rahalla',
+          'Maa-alueilla',
+          'Timanttikaivoksen toimiluvalla',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
 };
