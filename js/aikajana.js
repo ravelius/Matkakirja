@@ -559,20 +559,26 @@ function pallolautaAlla(ui) {
  * ... Ja peli alkaa vasta, kun käyttäjä klikkaa aloitustekstin alla
  * olevaa käynnistä nappia."*).
  *
- * KOLME VAIHETTA (css .aikajana-avaus; peite on kaksikerroksinen,
- * ks. tyylitiedoston oma selitys):
+ * KAKSI VAIHETTA (css .aikajana-avaus). Vaiheita oli kolme (musta →
+ * sumea → pois) 6.9.2026 asti: keskimmäisessä peite oheni ja kartta
+ * näkyi himmeänä ja sumeana laatikon takana. OMISTAJAN PALAUTE
+ * 6.9.2026 keskipäivä (iPhone, Ihmisen matka, sanatarkasti):
+ * *"Ladattaessa taustalle ilmestyi haaleasti jotain. Saisi olla
+ * kokonaan musta tausta että takana ei näy mitään."* Sumea poistettiin
+ * siis kokonaan: peite on täysin musta Käynnistä-nappiin asti.
  *
  *   1. MUSTA   kartta-alue häipyy kokonaan mustaan
- *              (AVAUS_PIMENNYS_MS). Linssin oma juuri on rakennettu
- *              mutta odottaa näkymättömänä (.avaus-piilossa), joten
- *              kello ja karuselli eivät pompahda ruudulle. Mustan
- *              päälle tulee kaaren esittelylaatikko.
- *   2. SUMEA   tausta on valmis — kamera-ajo on ajettu pimeässä ja
- *              laatat ehtineet piirtyä, katto AVAUS_TAUSTAN_KATTO_MS —
- *              ja peite ohenee sumentavaksi: kartta ja linssin
- *              elementit tulevat himmeinä ja sumeina laatikon taakse.
- *   3. POIS    Käynnistä-nappi: laatikko häipyy, sumennus katoaa ja
- *              kello lähtee samalla hetkellä.
+ *              (AVAUS_PIMENNYS_MS) ja PYSYY mustana. Linssin oma juuri
+ *              on rakennettu mutta odottaa näkymättömänä
+ *              (.avaus-piilossa); kun tausta on valmis — kamera-ajo
+ *              ajettu ja laatat piirtyneet, katto
+ *              AVAUS_TAUSTAN_KATTO_MS — juuri paljastetaan MUSTAN ALLA
+ *              (valmistaTaustaPimeassa), jottei mikään enää häivy
+ *              esiin sen jälkeen kun peite väistyy. Mustan päällä on
+ *              kaaren esittelylaatikko.
+ *   2. POIS    Käynnistä-nappi: laatikko häipyy, musta väistyy ja
+ *              kello lähtee samalla hetkellä — valmis näkymä paljastuu
+ *              kerralla.
  *
  * Kello EI käy ennen nappia, eikä selostaja lue (sytyta vaikenee
  * avausjakson ajan). Alusta-nappi ei tuo avausta takaisin: se kuuluu
@@ -585,9 +591,10 @@ const AVAUS_KAMERA_MS = 700;
 /** Taustan valmistumista odotetaan enintään tämän verran avauksesta. */
 const AVAUS_TAUSTAN_KATTO_MS = 2500;
 /**
- * Otsikko saa mustan rauhassa vähintään näin kauan. Ilman alarajaa
- * nopea kamera-ajo (mitattu WebKitissä: alle 400 ms) vei sumennukseen
- * ennen kuin laatikko oli edes ehtinyt liukua esiin.
+ * Linssin juuren paljastus mustan alla odottaa vähintään näin kauan.
+ * Sitä ei nähdä (peite on läpinäkymätön), mutta alaraja pitää juuren
+ * häivytyksen erossa laatikon omasta liu'usta: kumpikin on
+ * peittävyysanimaatio, eivätkä ne lähde samasta kehyksestä.
  */
 const AVAUS_LUKUAIKA_MS = 900;
 /** Peitteen poistuminen Käynnistä-napin jälkeen (css .aikajana-avaus.pois). */
@@ -1996,7 +2003,6 @@ class Aikajana {
      * listassa, jotta purku voi perua ne kesken vaiheen.
      */
     this.avaus = null;
-    this.avausSumennin = null;
     this.avausPeite = null;
     this.avausNappi = null;
     this.avausKesken = false;
@@ -2798,33 +2804,51 @@ class Aikajana {
     this.avaus.setAttribute('aria-modal', 'true');
     this.avaus.setAttribute('aria-label', otsikko);
     /*
-     * KAKSI KERROSTA LAATIKON ALLA (ks. css/aikajana.css AVAUSJAKSO):
-     * alimpana sumennin (pelkkä backdrop-filter, ei omaa väriä) ja sen
-     * päällä peite (pelkkä väri, ei suodattimia). Jos selain ei piirrä
-     * sumennusta — mitattu WebKitissä 4.9.2026 — musta ja himmennys
-     * tulevat silti. Laatikko on kummankin päällä ja pysyy terävänä.
+     * YKSI KERROS LAATIKON ALLA (ks. css/aikajana.css AVAUSJAKSO):
+     * pelkkä musta peite ilman suodattimia. Sumennin (backdrop-filter)
+     * poistui 6.9.2026 omistajan palautteesta *"Saisi olla kokonaan
+     * musta tausta että takana ei näy mitään"*: kun mitään ei enää
+     * paljasteta laatikon takaa, sumennettavaa ei ole. Laatikko on
+     * peitteen päällä ja pysyy terävänä.
      */
-    this.avausSumennin = solmu('div', 'aikajana-avaus-sumennin');
-    this.avausSumennin.setAttribute('aria-hidden', 'true');
     this.avausPeite = solmu('div', 'aikajana-avaus-peite');
     this.avausPeite.setAttribute('aria-hidden', 'true');
+    /*
+     * KEHYS ON LAATIKON ULKOPUOLINEN KAJO. Laatikko itse on leikattu
+     * repaleiseksi paperiksi (clip-path), ja clip-path leikkaa myös
+     * elementin oman box-shadow'n — siksi lämmin hehku mustaan
+     * piirretään erilliseen kehykseen, joka ei ole leikattu.
+     */
+    const kehys = solmu('div', 'aikajana-avaus-kehys');
     const laatikko = solmu('div', 'aikajana-avaus-laatikko');
+    kehys.appendChild(laatikko);
     /*
      * LYHDYT YLÄKULMISSA (omistaja 4.9.2026: *"valot loimuamaan kuin
      * valo tulisi padasta ... alueelliset valovaihtelut liekin lailla
      * paperin päällä"*): js/lyhty.js ohjaa kahta valoa kehys kerrallaan;
      * sammutin kutsutaan, kun laatikko väistyy (aloitaAjo, puraAvaus).
+     * `valokohde` on KEHYS: sinne kirjoitetaan laatikkotason varjo- ja
+     * ulkokajoarvot, jotka periytyvät myös leikatulle laatikolle.
      */
-    this.sammutaLyhdyt = sytytaLyhdyt(laatikko, { reducedMotion: this.reducedMotion });
+    this.sammutaLyhdyt = sytytaLyhdyt(laatikko, { reducedMotion: this.reducedMotion, valokohde: kehys });
     laatikko.appendChild(solmu('h2', 'aikajana-avaus-otsikko', otsikko));
     if (esittely.teksti) laatikko.appendChild(solmu('p', 'aikajana-avaus-teksti', esittely.teksti));
     this.avausNappi = solmu('button', 'aikajana-avaus-nappi', 'Käynnistä');
     this.avausNappi.type = 'button';
     this.avausNappi.addEventListener('click', () => this.aloitaAjo());
     laatikko.appendChild(this.avausNappi);
-    this.avaus.append(this.avausSumennin, this.avausPeite, laatikko);
+    this.avaus.append(this.avausPeite, kehys);
     koti.appendChild(this.avaus);
     this.avausKesken = true;
+    /*
+     * PULU VÄISTYY AVAUKSEN AJAKSI (omistaja 6.9.2026: *"Pulu voi olla
+     * pois tästä näkymästä."*). Kelluva pöllönappi elää kartan
+     * kerrosten ulkopuolella, joten peitteen z-index ei yllä sen yli —
+     * sama syy ja sama keino kuin lennossa (css/styles.css
+     * body.flight-active .pollo-nappi). Luokka poistuu kaikilla
+     * poluilla: aloitaAjo ja puraAvaus (jota purku kutsuu).
+     */
+    this.merkitseAvausRuutuun(true);
 
     const heti = this.reducedMotion;
     // Pakotettu asettelu, jotta selain näkee alkuasennon (opacity 0)
@@ -2833,9 +2857,11 @@ class Aikajana {
     this.avaus.classList.add('musta');
     /*
      * TAUSTA VALMIIKSI PIMEÄSSÄ. Kamera-ajo lähtee vasta kun ruutu on
-     * musta, joten kartan hyppyä ei näe. Sumennusvaiheeseen siirrytään
-     * kun ajo on ohi ja laatat ehtineet piirtyä (kaksi kehystä) — tai
-     * viimeistään katon täytyttyä, jottei hidas laatta jumita avausta.
+     * musta, joten kartan hyppyä ei näe. Kun ajo on ohi ja laatat
+     * ehtineet piirtyä (kaksi kehystä) — tai viimeistään katon
+     * täytyttyä, jottei hidas laatta jumita avausta — linssin juuri
+     * paljastetaan MUSTAN ALLA. Ruudulla ei muutu mitään: peite on
+     * läpinäkymätön, ja Käynnistä-nappi paljastaa valmiin näkymän.
      */
     const katto = new Promise((valmis) => this.avausViive(valmis, heti ? 0 : AVAUS_TAUSTAN_KATTO_MS));
     this.avausViive(() => {
@@ -2852,21 +2878,22 @@ class Aikajana {
       if (esittely.teksti) soitaLinssiluenta(this.ui, null, { runko: ESITTELYN_RUNKO, juuri: this.luentajuuri });
       const ajo = Promise.resolve(this.sovitaAlkuun(heti ? 0 : AVAUS_KAMERA_MS))
         .then(() => new Promise((ok) => requestAnimationFrame(() => requestAnimationFrame(ok))));
-      // Alaraja on otsikon lukuaika, yläraja katto: kumpikin täyttyy.
+      // Alaraja pitää juuren häivytyksen erossa laatikon liu'usta, yläraja on katto.
       const lukuaika = new Promise((ok) => this.avausViive(ok, heti ? 0 : AVAUS_LUKUAIKA_MS));
-      Promise.all([Promise.race([ajo, katto]), lukuaika]).then(() => this.sumennaTausta());
+      Promise.all([Promise.race([ajo, katto]), lukuaika]).then(() => this.valmistaTaustaPimeassa());
     }, heti ? 0 : AVAUS_PIMENNYS_MS);
   }
 
   /**
-   * Vaihe 2: musta ohenee himmeäksi ja linssin omat elementit tulevat
-   * sen taakse näkyviin. Sumennus on SUMENTIMEN backdrop-filter eikä
-   * kartan oma suodatin: filter-kerros kartta- tai SVG-solmussa jäi
-   * iOS-kuoressa mitatusti tyhjäksi.
+   * Linssin juuri esiin MUSTAN ALLA. Ennen 6.9.2026 tämä oli sumea
+   * vaihe, jossa peite oheni ja kartta näkyi himmeänä laatikon takana;
+   * omistaja näki siitä iPhonella *"haaleasti jotain"* eikä halunnut
+   * taustaa lainkaan. Peite pysyy nyt läpinäkymättömänä, joten juuren
+   * häivytys tapahtuu näkymättömissä ja Käynnistä paljastaa kerralla
+   * valmiin näkymän ilman jälkihäivytyksiä.
    */
-  sumennaTausta() {
+  valmistaTaustaPimeassa() {
     if (!this.avausKesken || !this.avaus?.isConnected) return;
-    this.avaus.classList.add('sumea');
     this.naytaLinssi();
   }
 
@@ -2881,20 +2908,20 @@ class Aikajana {
    * KÄYNNISTÄ-NAPPI (omistaja 4.9.2026 aamu: *"kun käynnistän nappia
    * painetaan, niin lähinnä aloitustekstilaatikko häviää ja bluraus
    * poistuu ja silloin ollaan jo heti aloitus näkymässä ja vuosiluvut
-   * alkavat virrata"*). Laatikko häipyy, peite katoaa ja kello lähtee
+   * alkavat virrata"*). Laatikko häipyy, musta väistyy ja kello lähtee
    * samalla hetkellä; musiikki nousee täyteen linssitasoon.
    */
   aloitaAjo() {
     if (!this.avausKesken) return;
     this.avausKesken = false;
     this.tyhjennaAvauksenAjastimet();
+    this.merkitseAvausRuutuun(false);
     // Esittelyn luenta katkeaa napista: pelaaja luki jo ja lähtee.
     pysaytaLinssiluenta(this.ui);
     this.naytaLinssi();
     const avaus = this.avaus;
     this.avausNappi = null;
     this.avausPeite = null;
-    this.avausSumennin = null;
     if (avaus) {
       // Lyhdyt palavat vielä häipymisen ajan; silmukka pysähtyy, kun laatikko irtoaa.
       avaus.classList.remove('laatikko-nakyy');
@@ -2908,16 +2935,27 @@ class Aikajana {
     this.aloitaMusiikki(true);
   }
 
+  /**
+   * PULU POIS AVAUKSEN AJAKSI (omistaja 6.9.2026: *"Pulu voi olla pois
+   * tästä näkymästä."*). Body-luokka piilottaa kelluvan pöllönapin ja
+   * sen paneelin (css/styles.css). Kaikki poistumispolut kulkevat
+   * tästä: Käynnistä (aloitaAjo) ja purku (puraAvaus, jonka pura
+   * kutsuu myös kesken avauksen suljettaessa).
+   */
+  merkitseAvausRuutuun(paalla) {
+    document.body?.classList.toggle('aikajana-avaus-auki', paalla);
+  }
+
   /** Avausjakso pois yhdellä kertaa: ajastimet, peite ja laatikko. */
   puraAvaus() {
     this.avausKesken = false;
     this.tyhjennaAvauksenAjastimet();
+    this.merkitseAvausRuutuun(false);
     this.sammutaLyhdyt?.();
     this.sammutaLyhdyt = null;
     this.avaus?.remove();
     this.avaus = null;
     this.avausPeite = null;
-    this.avausSumennin = null;
     this.avausNappi = null;
   }
 

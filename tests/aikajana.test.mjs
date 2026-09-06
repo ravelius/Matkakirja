@@ -787,6 +787,8 @@ test('muotokuvalla on karusellikoko ja valmiiksi sumennettu versio, ilmiökuvall
  */
 
 const AIKAJANA_CSS = readFileSync(new URL('../css/aikajana.css', import.meta.url), 'utf8');
+/* Pöllönapin väistösäännöt asuvat sovelluskehyksen tyylitiedostossa. */
+const STYLES = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
 
 /** cubic-bezier(x1,y1,x2,y2): edistymä (0..1) ajan osuudella t. */
 function kaarenArvo(x1, y1, x2, y2, t) {
@@ -1297,33 +1299,142 @@ test('avausjakson esittely tulee datasta eikä koodista', () => {
   assert.match(MOOTTORI, /if \(esittely\.teksti\) laatikko\.appendChild/);
 });
 
-test('avauksen peite sumentaa backdrop-filterillä ja sillä on varapolku', () => {
-  // Kartan tai SVG:n oma filter jäi iOS-kuoressa tyhjäksi kerrokseksi.
-  const lohko = AIKAJANA_CSS.match(/\.aikajana-avaus \{[\s\S]*?\.aikajana-avaus-nappi:focus-visible[^\n]*\n/)[0];
+/*
+ * PEITE PYSYY TÄYSIN MUSTANA (omistaja 6.9.2026 keskipäivä, iPhone:
+ * *"Ladattaessa taustalle ilmestyi haaleasti jotain. Saisi olla
+ * kokonaan musta tausta että takana ei näy mitään."*). Tämä vartija
+ * väitti aiemmin päinvastaista — että keskimmäinen vaihe ohentaa
+ * peitteen ja sumentaa kartan backdrop-filterillä. Väite on käännetty,
+ * ei poistettu: sumea vaihe ei saa palata takaovesta.
+ */
+test('avauksen peite on täysin musta Käynnistä-nappiin asti', () => {
+  const lohko = AIKAJANA_CSS.match(/\.aikajana-avaus \{[\s\S]*?\.aikajana-avaus-nappi:active[^\n]*\n/)[0];
+  // Ei suodattimia lainkaan: kartan oma filter jäi iOS-kuoressa tyhjäksi
+  // kerrokseksi, ja sumennettavaa ei enää ole.
   assert.ok(!/[^-]\bfilter: blur/.test(lohko), 'avaus ei saa käyttää pelkkää filter: bluria');
-  assert.match(lohko, /\.aikajana-avaus\.sumea \.aikajana-avaus-sumennin \{[\s\S]*?backdrop-filter: blur\(10px\)/);
-  assert.match(lohko, /-webkit-backdrop-filter: blur\(10px\)/);
-  assert.match(lohko, /@supports not \(\(backdrop-filter: blur\(4px\)\) or \(-webkit-backdrop-filter: blur\(4px\)\)\)/);
-  // Varapolku on tummempi läpinäkyvä peite — himmeä tausta ilman sumennusta.
-  const vara = lohko.match(/@supports not \([\s\S]*?\n\}/)[0];
-  const alfa = Number(vara.match(/rgba\(6, 4, 3, ([\d.]+)\)/)[1]);
-  assert.ok(alfa >= 0.8, `varapolun peite on liian ohut: ${alfa}`);
-  /*
-   * TUMMENNUS EI SAA RIIPPUA SUMENNUKSESTA. WebKit ilmoittaa tukevansa
-   * backdrop-filteriä mutta jätti koko elementin — myös sen värin —
-   * piirtämättä, kun sumennus ja väri olivat samassa peitteessä.
-   */
+  assert.ok(!lohko.includes('backdrop-filter'), 'avausjaksossa ei saa olla sumennusta');
+  assert.ok(!AIKAJANA_CSS.includes('aikajana-avaus-sumennin'), 'sumenninkerros poistui sumean mukana');
+  assert.ok(!AIKAJANA_CSS.includes('.aikajana-avaus.sumea'), 'sumea vaihe ei saa palata');
+  // (Karusellin sumeat pikkukuvat ovat eri asia: siellä `sumea` on tiedostopolku.)
+  assert.ok(!MOOTTORI.includes('avausSumennin'), 'moottorissa ei ole sumenninkerrosta');
+  assert.ok(!MOOTTORI.includes("classList.add('sumea')"), 'moottorissa ei ole sumeaa vaihetta');
+  assert.ok(!MOOTTORI.includes('sumennaTausta'), 'sumennaTausta korvattiin valmistaTaustaPimeassa-metodilla');
+  // Peite on puhdas musta ja täysin läpinäkymätön mustassa vaiheessa.
   const peite = lohko.match(/\.aikajana-avaus-peite \{[\s\S]*?\n\}/)[0];
+  assert.match(peite, /background-color: #000;/);
   assert.ok(!peite.includes('backdrop-filter'), 'värikerros ei saa kantaa suodatinta');
-  assert.match(lohko, /\.aikajana-avaus\.sumea \.aikajana-avaus-peite \{[\s\S]*?background-color: rgba\(6, 4, 3, 0\.6\)/);
+  assert.match(lohko, /\.aikajana-avaus\.musta \.aikajana-avaus-peite \{ opacity: 1; \}/);
+  assert.match(lohko, /\.aikajana-avaus\.pois \.aikajana-avaus-peite \{ opacity: 0; \}/);
   // Peite on linssin muiden kerrosten yläpuolella (.aikajana on 7).
   const z = Number(lohko.match(/z-index: (\d+)/)[1]);
   assert.ok(z > 7, `peitteen z-index ${z} ei nouse linssin yli`);
-  // Musta ensin, sumea sen jälkeen, pois viimeisenä (järjestys ratkaisee).
-  assert.ok(lohko.indexOf('.musta') < lohko.indexOf('.sumea'));
-  assert.ok(lohko.indexOf('.sumea') < lohko.indexOf('.pois'));
-  // Sumennin piirretään ENNEN väriä, jotta väri jää sen päälle.
-  assert.match(MOOTTORI, /this\.avaus\.append\(this\.avausSumennin, this\.avausPeite, laatikko\);/);
+  // Musta ensin, pois viimeisenä (järjestys ratkaisee).
+  assert.ok(lohko.indexOf('.musta') < lohko.indexOf('.pois'));
+  // Peite piirretään ennen laatikon kehystä, jotta paperi jää sen päälle.
+  assert.match(MOOTTORI, /this\.avaus\.append\(this\.avausPeite, kehys\);/);
+  /*
+   * LINSSIN JUURI PALJASTETAAN MUSTAN ALLA: entinen sumennaTausta on
+   * nyt valmistaTaustaPimeassa eikä se lisää yhtään luokkaa peitteeseen.
+   */
+  const valmista = metodi('valmistaTaustaPimeassa');
+  assert.match(valmista, /this\.naytaLinssi\(\);/);
+  assert.ok(!valmista.includes('classList'), 'taustan valmistus ei saa muuttaa peitteen tilaa');
+});
+
+/*
+ * PULU POIS AVAUKSEN AJAKSI (omistaja 6.9.2026: *"Pulu voi olla pois
+ * tästä näkymästä."*). Kelluva pöllönappi elää kartan kerrosten
+ * ulkopuolella, joten se piilotetaan body-luokalla kuten lennossa.
+ */
+test('pöllönappi ja sen paneeli väistyvät avausjakson ajaksi', () => {
+  assert.match(metodi('avaaAvausjakso'), /this\.merkitseAvausRuutuun\(true\);/);
+  // Luokka poistuu KAIKISSA poluissa: Käynnistä ja purku (myös kesken avauksen).
+  assert.match(metodi('aloitaAjo'), /this\.merkitseAvausRuutuun\(false\);/);
+  assert.match(metodi('puraAvaus'), /this\.merkitseAvausRuutuun\(false\);/);
+  assert.match(metodi('merkitseAvausRuutuun'), /classList\.toggle\('aikajana-avaus-auki', paalla\)/);
+  assert.ok(PURA.includes('this.puraAvaus();'), 'purku ei pura avausjaksoa');
+  // Sääntö asuu styles.css:ssä samassa kohdassa kuin lennon vastaava.
+  const saanto = STYLES.match(/body\.aikajana-avaus-auki \.pollo-nappi,\n\s*body\.aikajana-avaus-auki \.pollo-paneeli \{[\s\S]*?\n\}/)[0];
+  assert.match(saanto, /opacity: 0;/);
+  assert.match(saanto, /pointer-events: none;/);
+  assert.match(saanto, /transition: opacity 0\.3s ease;/);
+});
+
+/*
+ * KÄYNNISTÄ EROTTUU PAPERISTA (omistaja 6.9.2026: *"Nappi saisi olla
+ * näkyvämpi."*). Entinen nappi oli lähes läpinäkyvä kehys paperin
+ * omalla musteella; nyt se on täytetty tumma mustenappi kultareunalla
+ * ja vaalealla tekstillä.
+ */
+test('Käynnistä-nappi on täytetty eikä läpinäkyvä kehys', () => {
+  const nappi = AIKAJANA_CSS.match(/\.aikajana-avaus-nappi \{[\s\S]*?\n\}/)[0];
+  assert.ok(!/background: rgba\(60, 40, 16, 0\.1\)/.test(nappi), 'haalea täyte poistui');
+  // Täyte on tumma muste (kirkkaus selvästi paperin #d9c69c alapuolella).
+  const [, r, g, b] = nappi.match(/background: linear-gradient\(180deg, rgba\((\d+), (\d+), (\d+), [\d.]+\)/).map(Number);
+  assert.ok(0.299 * r + 0.587 * g + 0.114 * b < 90, `täyte ${r},${g},${b} ei ole tumma`);
+  // Reunus on kultaa ja teksti vaaleaa pergamenttia.
+  assert.match(nappi, /border: 1\.5px solid rgba\(214, 168, 84, 0\.92\);/);
+  assert.match(nappi, /color: #f6e6c2;/);
+  // Kevyt kultahehku ja kosketuskohteen alaraja.
+  assert.match(nappi, /box-shadow:[\s\S]*?rgba\(226, 168, 78, 0\.3\)/);
+  assert.match(nappi, /min-height: 44px;/);
+  // Kirjainkoko ja välistys entistä isommat.
+  assert.ok(Number(nappi.match(/font-size: ([\d.]+)rem;/)[1]) >= 1.0, 'kirjainkoko ei kasvanut');
+  assert.ok(Number(nappi.match(/letter-spacing: ([\d.]+)em;/)[1]) >= 0.15, 'välistys ei kasvanut');
+  // Hover ja focus-visible ovat mukana, samoin näkyvä fokusrengas.
+  assert.match(AIKAJANA_CSS, /\.aikajana-avaus-nappi:hover,\n\.aikajana-avaus-nappi:focus-visible \{/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-avaus-nappi:focus-visible \{ outline: /);
+});
+
+/*
+ * PAPERI ON ELÄVÄ (omistaja 6.9.2026: *"Paperi taustalla saisi olla
+ * elävämmän näköinen reunoiltaan ja tekstuuriltaan."*). Reunat
+ * repaleiset, tekstuuri kaksikerroksinen kohina, läiskät omana
+ * kerroksenaan — eikä yhtään uutta kuvatiedostoa.
+ */
+test('avauslaatikon paperi on repaleinen ja tekstuuriltaan monikerroksinen', () => {
+  const avaus = AIKAJANA_CSS.match(/\.aikajana-avaus-laatikko \{[\s\S]*?\n\}/)[0];
+  // 1. Repaleinen reuna: monikulmio, ei suorakaide eikä pyöristys.
+  const monikulmio = avaus.match(/clip-path: polygon\(([\s\S]*?)\);/)[1];
+  assert.ok(monikulmio.split(',').length >= 24, 'reunassa on liian vähän pisteitä ollakseen repaleinen');
+  assert.ok(!avaus.includes('border-radius'), 'repaleinen paperi ei ole pyöristetty suorakaide');
+  // 2. Kaksi kohinakerrosta (hieno kuitu ja karkea kellastuma), multiply.
+  assert.equal((avaus.match(/feTurbulence/g) ?? []).length, 2, 'kohinaa pitää olla kaksi eri karkeutta');
+  assert.match(avaus, /background-blend-mode: multiply, multiply, normal, normal;/);
+  assert.ok(!avaus.includes('filter: '), 'kohina tulee kuvana, ei CSS-suodattimena (iOS-kuori)');
+  // 3. Läiskät ja kellastumat omana kerroksenaan lyhtyjen alla.
+  const laiskat = AIKAJANA_CSS.match(/\.aikajana-avaus-laatikko::before \{[\s\S]*?\n\}/)[0];
+  assert.ok((laiskat.match(/radial-gradient/g) ?? []).length >= 6, 'läiskiä on liian vähän');
+  assert.match(laiskat, /mix-blend-mode: multiply;/);
+  assert.match(laiskat, /z-index: 0;/);
+  // Kellastunut reunavyö useampana inset-kerroksena.
+  assert.ok((avaus.match(/inset 0 0 \d+px/g) ?? []).length >= 3, 'reunavyö tarvitsee useamman kerroksen');
+});
+
+/*
+ * VALON VASTAKOHTA (omistaja 6.9.2026: lisää tunnelmaa ja elävyyttä).
+ * Varjo syvenee, kun liekit vaimenevat, ja laatikon ulkopuolinen kajo
+ * sykkii samassa tahdissa — laatikko on ainoa valonlähde pimeässä.
+ */
+test('laatikon varjo ja ulkokajo hengittävät lyhtyjen tahdissa', () => {
+  const varjo = AIKAJANA_CSS.match(/\.aikajana-avaus-laatikko::after \{[\s\S]*?\n\}/)[0];
+  assert.match(varjo, /opacity: calc\(0\.55 \+ 0\.45 \* var\(--lyhty-varjo, 0\.25\)\);/);
+  // Kerros on lyhtyjen päällä (sama z-index, pseudo maalataan viimeisenä).
+  assert.match(varjo, /z-index: 1;/);
+  // Alakulmat tummuvat omilla gradienteillaan.
+  assert.ok((varjo.match(/at \d+% 100%/g) ?? []).length === 2, 'kumpikin alakulma tarvitsee oman varjon');
+  /*
+   * Ulkokajo asuu KEHYKSESSÄ eikä paperissa: clip-path leikkaisi
+   * elementin oman box-shadow'n pois.
+   */
+  const kehys = AIKAJANA_CSS.match(/\.aikajana-avaus-kehys \{[\s\S]*?\n\}/)[0];
+  assert.match(kehys, /--lyhty-varjo: 0\.25;/);
+  assert.match(kehys, /--lyhty-ulko: 0\.26;/);
+  assert.match(kehys, /box-shadow:[\s\S]*?rgba\(255, 170, 76, var\(--lyhty-ulko\)\)/);
+  // Sisääntuloliuku siirtyi kehykselle, jotta kajo ja paperi saapuvat yhdessä.
+  assert.match(AIKAJANA_CSS, /\.aikajana-avaus\.laatikko-nakyy \.aikajana-avaus-kehys \{ opacity: 1; transform: none; \}/);
+  assert.match(MOOTTORI, /const kehys = solmu\('div', 'aikajana-avaus-kehys'\);/);
+  assert.match(MOOTTORI, /kehys\.appendChild\(laatikko\);/);
 });
 
 test('tummennus on aiempaa syvempi: kartta erottuu juuri ja juuri', () => {
@@ -1450,13 +1561,13 @@ test('välinäytös on tekstiä kartan päällä, ei korttia; Jatka hehkuu yläp
   const avaus = AIKAJANA_CSS.match(/\.aikajana-avaus-laatikko \{[\s\S]*?\n\}/)[0];
   assert.match(avaus, /background-color: #d9c69c;/);
   assert.match(avaus, /feTurbulence/, 'paperin kuitu tulee SVG-kohinasta kuvana');
-  assert.match(avaus, /rgba\(58, 38, 14, 0\.55\) 100%/, 'paperi tummuu alaspäin');
+  assert.match(avaus, /rgba\(58, 38, 14, 0\.5\) 100%/, 'paperi tummuu alaspäin');
   // Lyhdyt (omistaja 4.9.2026): kaksi kerrosta per nurkka, skriptin ohjaamat muuttujat, ei CSS-keyframeja.
   assert.doesNotMatch(AIKAJANA_CSS, /aikajana-lepatus/, 'keyframe-lepatus korvattiin liekkimallilla (js/lyhty.js)');
   assert.match(AIKAJANA_CSS, /\.aikajana-lyhty > \.kajo \{\n  opacity: var\(--lyhty-kajo\);\n  mix-blend-mode: screen;/);
   assert.match(AIKAJANA_CSS, /\.aikajana-lyhty > \.ydin \{\n  opacity: var\(--lyhty-ydin\);\n  mix-blend-mode: screen;/);
   assert.match(AIKAJANA_CSS, /transform: translate\(var\(--lyhty-dx\), var\(--lyhty-dy\)\) scale\(var\(--lyhty-koko\)\);/);
-  assert.match(metodi('avaaAvausjakso'), /this\.sammutaLyhdyt = sytytaLyhdyt\(laatikko, \{ reducedMotion: this\.reducedMotion \}\);/);
+  assert.match(metodi('avaaAvausjakso'), /this\.sammutaLyhdyt = sytytaLyhdyt\(laatikko, \{ reducedMotion: this\.reducedMotion, valokohde: kehys \}\);/);
   assert.match(metodi('puraAvaus'), /this\.sammutaLyhdyt\?\.\(\);/);
   // Havainnekuva valokeilassa: pelkkä kuva -paneeli ilman laatikkoa, reunat läpinäkyviksi maskilla (ei suodatin).
   // Maski tulee js:n laskemasta muuttujasta (epäsäännöllinen reuna,

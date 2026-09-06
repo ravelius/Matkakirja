@@ -6671,6 +6671,28 @@ body.kartalento .pollo-paneeli {
 }
 
 /*
+ * PULU VÄISTYY MYÖS AIKAJANALINSSIN AVAUSJAKSON AJAKSI (omistajan
+ * palaute 6.9.2026 keskipäivä, iPhone-kuvakaappaus Ihmisen matka
+ * -avauslaatikosta, sanatarkasti: *"Pulu voi olla pois tästä
+ * näkymästä."*).
+ *
+ * Avausjakso on musta ruutu ja sen keskellä pergamenttilaatikko: se on
+ * kohtaus, ei pelitilanne, aivan kuten lento yllä. Peite on kartta-alueen
+ * lapsi (css/aikajana.css .aikajana-avaus, z-index 40) eikä sen
+ * z-index yllä kelluvan pöllönapin (45) yli, joten nappi jäi näkyviin
+ * mustan päälle oikeaan alanurkkaan. Sama häivytys ja sama syy kuin
+ * lennossa; luokka tulee ja menee js/aikajana.js:n
+ * merkitseAvausRuutuun-metodista (avaaAvausjakso, aloitaAjo, puraAvaus),
+ * joten se poistuu myös silloin kun linssi suljetaan kesken avauksen.
+ */
+body.aikajana-avaus-auki .pollo-nappi,
+body.aikajana-avaus-auki .pollo-paneeli {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/*
  * LAUTAA EI MAALATA TÄYSIN PEITTÄVÄN ARKIN ALLA (omistajan pelitesti
  * 25.8.2026: avauslennossa *"menee monta sekuntia, kun pelissä ei
  * tapahdu mitään"*).
