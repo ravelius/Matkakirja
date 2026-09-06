@@ -106,7 +106,7 @@ Työtapa on siksi tämä:
 
 | Rooli | Sessio-id | Kirjattu |
 | --- | --- | --- |
-| Fable | session_018vkp6HxpLR4gxZJFGscSan (uuden tilin päätoimittajasessio, kapulanvaihdon jatkaja; edellinen: session_01BPysCfxscsVyzAEYmb88Zr) | 14.8.2026 |
+| Fable | session_013J6mQw8o5eU14eAcMgJ6vB (päätoimittajasessio 6.9.2026 illasta, jatkaa siirtopromptista docs/raportit/siirto-2026-09-06-ilta-fablelle.md; edelliset: session_018vkp6HxpLR4gxZJFGscSan, session_01BPysCfxscsVyzAEYmb88Zr) | 6.9.2026 |
 | Fable Max (remontti) | session_01Q1M9ZT5Yr1Gbi3eqUyoHHC (moduuli- ja dokumenttiremontti hyväksyttyjen suunnitelmien mukaan: M0–M3 + D1–D6 mainissa 17.8.; M4 odottaa Fablen "O6 mainissa" -ilmoitusta, D7 M-sarjan loppua. Herää Fablen mergeistä webhookilla; Fable-roolin sessio, saa kirjoittaa Raamattuun koordinoidusti) | 17.8.2026 |
 
 **Kaikki Opus- ja Sonnet-työsessiot arkistoitu 17.8.2026** (omistaja;
