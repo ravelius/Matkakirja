@@ -9,8 +9,12 @@
 
 	     Niin kauan kuin arvo on paikkamerkki, sovellus näyttää
 	     käynnistyessään suomenkielisen huomautuksen eikä yritä
-	     ladata mitään. -->
+	     ladata mitään.
+
+	     6.9.2026: pelin osoite on matkakirja.app (omistaja: "Siirrä vain
+	     peli"). Vanha ravelius.github.io/Matkakirja ohjaa tänne 301:llä;
+	     kuori hyväksyy myös sen (PeliSelain.onkoPelinOsoite). -->
 	<key>PELIN_OSOITE</key>
-	<string>https://ravelius.github.io/Matkakirja/</string>
+	<string>https://matkakirja.app/</string>
 </dict>
 </plist>

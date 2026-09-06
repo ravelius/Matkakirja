@@ -174,8 +174,20 @@ final class PeliSelain: NSObject, ObservableObject {
     private func onkoPelinOsoite(_ osoite: URL) -> Bool {
         guard let pelinIsanta = pelinOsoite?.host?.lowercased() else { return false }
         guard let isanta = osoite.host?.lowercased() else { return false }
-        return isanta == pelinIsanta
+        if isanta == pelinIsanta { return true }
+        // 6.9.2026: peli muutti osoitteeseen matkakirja.app ja vanha
+        // GitHub Pages -osoite ohjaa sinne 301:llä. Ilman tätä listaa
+        // ohjauksen kohde näytti ulkopuoliselta linkiltä, kuori avasi sen
+        // Safarissa ja oma näkymä jäi virheeseen "Matka katkesi"
+        // (omistajan havainto 6.9.2026 klo 10.18). Molemmat isännät ja
+        // www-muoto kuuluvat peliin, kumpaan suuntaan ohjaus tahansa kulkee.
+        return PeliSelain.pelinIsannat.contains(isanta)
     }
+
+    /// Isännät, jotka ovat pelin omia osoitteita Config.plistin lisäksi.
+    static let pelinIsannat: Set<String> = [
+        "matkakirja.app", "www.matkakirja.app", "ravelius.github.io",
+    ]
 
     /// Avaa osoitteen Safarissa. Lähdelinkit ja Wikipedia eivät jää pelin
     /// sisään, koska kuoressa ei ole osoiterivia eikä paluunappia.
