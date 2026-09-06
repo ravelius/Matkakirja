@@ -28,16 +28,18 @@ osiot). Kellonajat Suomen aikaa.
 | v1612 | **Ihmisen matka -linssi** (20 pysäkkiä, kuvaputken 20 kuvaa), liekkivalot, aloitusnäkymä lähemmäs ja hidas pyörintä, Livia 1,5 s myöhemmin |
 | v1613 | pohjaraidan valitsin: musiikkia kaikkiin kohtiin (alueet, lehti, matkalaukku, etusivu) |
 | v1614 | kaariluennat 42 kaupungille (100 mp3), mykistys pois |
+| v1615 | kuvien uudelleenyritys 429:ään, kohdekartan pisteet (juurisyy r2.dev), kehittäjän media-mittari |
+| v1616 | Ihmisen matkan hionta: kortin varakuva, kellon askel, lyhyet luennat ja musiikki työnkulkuihin |
+| v1617 | pallon reitit ja uomat pikselipaksuuksiin (olivat alle pikselin), savukkeet pallolle, Venetsian kaanonkorjaus |
+| v1618 | Venetsian kohtaamisluenta, mykistys pois; raportti |
 
-Ämpärissä lisäksi: Ateenan kaupunkiraita, kuusi alueraitaa (Lyria).
+Ämpärissä lisäksi (Lyria): Ateenan kaupunkiraita, kuusi alueraitaa, tilaraidat (lehti, matkalaukku, etusivu), Ihmisen matka -linssin raita ja sen 22 lyhyttä luentaa.
 
-## Kesken aamulla (katso git log ja Actions)
+## Kesken aamulla (katso Actions)
 
-- Ihmisen matkan hionta (Opus): kortin kuva havainnekuvasta kunnes esinekuvat tulevat, kellon luettavuus, lyhyet luennat (linssi-input työnkulkuun), musiikkilaji työnkulkuun, pienet kuvat. Sen jälkeen ajetaan generoi-siirtymamusiikki (ihmisen-matka) ja generoi-luennat (linssi ihmisen-matka).
-- Kuvien uudelleenyritys 429:ään (Opus): media.js, kohdekartan miniatyyrit, sw, kehittäjämittari, Sevillan 3 kohteen wiki.
-- Tilaraidat (lehti, matkalaukku, etusivu): Lyria-ajo käynnissä → PR → merge.
-- Z8-neljännekset kansioon c: ensimmäinen ("-180,0,-90,85") laskee; seuraavat yksi kerrallaan, lopuksi luettelo-input (laatat.json max 8).
-- Kuvaputki: 20 löytökuvaa (Ihmisen matka) ja 21 miniatyyriä jonossa; Fable hyväksyy omistajan valtuutuksella.
+- Z8-neljännekset kansioon c: 1 ja 2 valmiit, 3 ("0,0,90,85") laskee; seuraavat 4–8 yksi kerrallaan (tee-pallolaatat.yml: max 8, min 8, nostot kylla, tunniste c, alue), lopuksi luettelo-input (laatat.json max 8) ja peli taso 8:aan.
+- Kuvaputki: 20 löytökuvaa (Ihmisen matka, kansio esine/) ja 21 kohdekartan miniatyyriä jonossa; Fable hyväksyy omistajan valtuutuksella ja kytkee.
+- Ihmisen matka: kortin kuvateksti katkeaa pitkillä paikannimillä ("Madjedbebe, Arnhemin…") — lyhyt paikannimi korttiin (pieni hionta).
 
 ## Omistajan päätöksiä aamulle
 

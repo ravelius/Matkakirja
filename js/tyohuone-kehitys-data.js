@@ -199,7 +199,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'venetsia',
-      mykistetyt: ['kohtaaminen'],
+      mykistetyt: [],
       otsikko: 'Venetsia — naamio sillan kaiteella',
       saapuminen: 'Vesi nousi yöllä kaduille, ja aamulla torilla '
         + 'käveltiin lankkuja pitkin kuin laivan kannella — kaupunki '
