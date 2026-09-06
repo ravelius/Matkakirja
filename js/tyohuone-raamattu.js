@@ -3395,7 +3395,14 @@ export const RAAMATTU = {
           + 'agentit tauolle. 5h limit tulee muuten liian pian vastaan. '
           + 'ilmoitan kun ne voi laittaa taas kayntiin"): lehtiagentit tekevat '
           + 'checkpoint-commitin worktreehensa ja pysahtyvat; jatko vain '
-          + 'omistajan ilmoituksesta.',
+          + 'omistajan ilmoituksesta. TAUON PURKU YOSESSIOLLE (omistaja '
+          + '6.9.2026 ilta, sanatarkasti: "Voitko tehda promptin toiselle '
+          + 'sessiolle joka tekisi pelkastaan lehtia loppuun eri maanosissa '
+          + 'mutta ei julkaisisi mitaan, jotta ei tulisi konfliktia. Siella '
+          + 'paljon tokeneita jotka pitaisi kayttaa ennen aamua loppuun"): '
+          + 'toisen tilin yosessio tekee lehtityota omalle haaralleen '
+          + '(claude/lehdet-2026-09-06-yo) julkaisematta; paatoimittaja poimii '
+          + 'ja julkaisee aamulla. Prompti docs/raportit/lehtisessio-2026-09-06-yo.md.',
         'PALLO LEVOSSA YHTA TERAVA KUIN TASOKARTTA (omistaja 6.9.2026 '
           + 'iltapaiva, sanatarkasti: "kartta oli ennen palloa paljon teravampi, '
           + 'eli ongelma on pallon renderoinnissa. ainakin kun liike on '
