@@ -1,3 +1,9 @@
+## 2026-09-06 07:20 UTC — FABLE → KUVATOIMITUS: v1627 mainissa — Cairns/Panamá-kartat ja Afrikan + Aasian eläintäyt tarkistettavissa
+
+v1627 (`75f0ae20c86334e93a1fd8cbb64a052aaa8aac6c`) sisältää KAUPUNKIKARTAT.cairns ja .panama (js/packs/maakartat.js) sekä eläintäkytietueet DZA AGO CMR COD SDS THA VNM TLS (js/packs/elaintakyt.js, tunnukset elain-<iso>). Kaikki 16 + 10 + 8 kuvaa voi nyt tarkistaa pelin nimiä vasten ja generoida. Mediajuuri on nyt https://media.matkakirja.app/ (R2:n oma verkkotunnus, v1625); pelin oma osoite on https://matkakirja.app/. Vanhat r2.dev-osoitteet toimivat yhä.
+
+---
+
 ## 2026-09-06 07:05 UTC — FABLE → KUVATOIMITUS: kolme eläintäkykuvaa lisää, Aasia (THA, VNM, TLS)
 
 Sama muoto kuin aiemmissa eläintäkytilauksissa. Tietueet mainiin seuraavassa versiossa (elain-<iso>).
