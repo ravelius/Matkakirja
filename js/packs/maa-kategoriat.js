@@ -36672,4 +36672,1280 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  NGA: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Nigerian alueella oli suuria valtioita kauan ennen '
+          + 'siirtomaarajoja — ja jokaisessa oma tapansa pitää '
+          + 'vallanpitäjä kurissa.',
+      nostot: [
+        {
+          otsikko: 'Kuningatar, joka jätti jälkeensä muurit',
+          aika: '1533–1610',
+          tiedosto: 'Zaria old wall.jpg',
+          teksti: 'Amina syntyi 1500-luvun puolivälissä Zazzaun '
+              + 'kaupunkivaltioon, nykyiseen Zariaan. Kuusitoistavuotiaana '
+              + 'hänet nimettiin kruununperijäksi, ja veljensä ratsuväessä '
+              + 'hänestä tuli hausalaisten ylistyslaulujen mukaan '
+              + '"Nikatun tytär, nainen joka pystyi samaan kuin mies". '
+              + 'Perimätiedon mukaan hän nousi valtaan 1576 ja aloitti '
+              + 'kolmenkymmenenneljän vuoden sotaretket kahdenkymmenentuhannen '
+              + 'jalkamiehen ja tuhannen ratsumiehen armeijalla. Valloitetut '
+              + 'kaupungit hän ympäröi savivalleilla, joita kutsutaan yhä '
+              + 'nimellä ganuwar Amina. Hallitsijaluetteloissa hänen nimeään '
+              + 'ei silti ole, ja osa perimätiedosta pitää häntä prinsessana.',
+          selite: 'Zarian vanha kaupunginmuuri on savea, ja sen jäänteitä on '
+            + 'yhä pystyssä keskellä kasvavaa kaupunkia.',
+          lahde: 'Anasskoko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Tyhjä kalebassi kuninkaan eteen',
+          aika: '1600–1800-luku',
+          // Kuvaton (Opus 6.9.2026): Commonsista ei löydy Oyon
+          // valtakunnan ajalta kuvaa, joka kestäisi lähdetarkistuksen —
+          // hakusanat "Oyo Empire", "Alaafin", "Yoruba horseman".
+          teksti: 'Oyon valtakunta oli 1600- ja 1700-luvulla Länsi-Afrikan '
+              + 'mahtavimpia valtioita, ja sen voima oli ratsuväessä: '
+              + 'hevoset ostettiin pohjoisesta, ja retkikunnat ulottuivat '
+              + 'sadan kilometrin päähän rannikolle asti. Kuningas eli '
+              + 'alaafin ei kuitenkaan ollut yksinvaltias. Seitsemän '
+              + 'ylimmän päällikön neuvosto Oyo Mesi valitsi hänet, ja jos '
+              + 'neuvosto hylkäsi hänet, sen johtaja basorun toi hänelle '
+              + 'tyhjän kalebassin tai papukaijanmunia. Se tarkoitti, ettei '
+              + 'kansa, maailma eivätkä jumalat enää halunneet häntä — ja '
+              + 'perinne odotti kuninkaan silloin väistyvän omin käsin.',
+          selite: 'Oyon hallitsijaa valvoi kaksi neuvostoa: päälliköiden Oyo '
+            + 'Mesi ja maankultin Ogboni, joka puhui tavallisen väen '
+            + 'puolesta.',
+        },
+        {
+          otsikko: 'Opettajat, jotka lähetettiin kylästä kylään',
+          aika: '1793–1864',
+          // Kuvaton (Opus 6.9.2026): Nana Asma'un käsikirjoituksista tai
+          // Sokoton naisopettajista ei ole Commonsissa vapaata kuvaa
+          // (haut "Ajami manuscript Hausa", "Nana Asma'u").
+          teksti: 'Nana Asmaʼu oli Sokoton kalifaatin perustajan tytär ja '
+              + 'yksi 1800-luvun Länsi-Afrikan oppineimmista ihmisistä. Hän '
+              + 'kirjoitti yli kuusikymmentä säilynyttä teosta neljälläkymmenellä '
+              + 'vuodella ja käytti neljää kieltä: arabiaa, fulaa, hausaa ja '
+              + 'tuaregien tamashekia — kaikkia arabialaisin kirjaimin, jotta '
+              + 'ne aukeaisivat muillekin kuin arabiaa lukevalle eliitille. '
+              + 'Vuodesta 1830 hän kokosi joukon naisopettajia, jajeja, jotka '
+              + 'kiersivät kalifaattia opettamassa naisia näiden omissa '
+              + 'kodeissa. Jokainen jaji sai virkamerkiksi malfa-hatun ja '
+              + 'punaisen turbaanin, ja heidän oppilaitaan kutsuttiin '
+              + 'nimellä ʼyan taru, yhteen kokoontuvat.',
+          selite: 'Asmaʼun runot opetettiin ulkoa: mitta ja riimi olivat '
+              + 'muistin apuvälineitä, kun kirjoja oli vähän.',
+        },
+        {
+          otsikko: 'Laskettiinko sinun leskiäitisi?',
+          aika: '1929',
+          tiedosto: 'The Mock Grave of the 1929 Women Riot.jpg',
+          teksti: 'Marraskuussa 1929 tuhannet igbonaiset kävelivät Olokon '
+              + 'kylään protestoimaan siirtomaahallinnon nimittämiä '
+              + 'warrant chief -päälliköitä vastaan. Kipinä syttyi, kun '
+              + 'laskija käski Nwanyeruwa-nimistä naista laskemaan '
+              + 'vuohensa, lampaansa ja väkensä. Nainen ymmärsi sen '
+              + 'veroluetteloksi ja vastasi: "Laskettiinko sinun '
+              + 'leskiäitisi?" Igboperinteessä naiset eivät maksaneet '
+              + 'veroa. Protestin muoto oli vanha tapa nimeltä miehen '
+              + 'päällä istuminen: joukko naisia asettui päällikön talon '
+              + 'eteen laulamaan, kunnes tämä erosi. Kuuden kansan naiset '
+              + 'osallistuivat, ja 1930 koko warrant chief -järjestelmä '
+              + 'purettiin ja naisia nimitettiin paikallisiin '
+              + 'tuomioistuimiin.',
+          selite: 'Vuoden 1929 naisten sodan muistomerkki. Tapahtumia '
+            + 'kutsuttiin siirtomaa-arkistoissa mellakaksi, mutta igboksi '
+            + 'ne ovat Ogu Umunwanyi, naisten sota.',
+          lahde: 'Dappa Solomon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Nigerialaisessa keittiössä riidellään mielellään siitä, '
+          + 'kenen riisi on parasta — ja syödään käsin, koska lusikka vie '
+          + 'puolet tunnusta pois.',
+      nostot: [
+        {
+          otsikko: 'Riisi, josta käydään sotaa netissä',
+          tiedosto: 'Jollof (Jollof- Rice).jpg',
+          teksti: 'Jollof on yhden padan riisiruoka: pitkäjyväinen riisi '
+              + 'kypsennetään tomaatti-, sipuli- ja chilikastikkeessa, jolloin '
+              + 'jyvät imevät värin ja maun. Nimi tulee Jolofin '
+              + 'valtakunnasta nykyisen Senegalin alueelta, ja ruoan '
+              + 'esimuoto on senegalilainen ceebu jën. Nigerian ja Ghanan '
+              + 'välinen kiista siitä, kumman versio on parempi, kasvoi '
+              + '2010-luvulla ilmiöksi nimeltä jollof wars: siihen kuuluu '
+              + 'kokkikilpailuja, someryöpytystä ja kappaleita, kuten '
+              + 'Sister Deborahin Ghana Jollof vuodelta 2016. Riita on '
+              + 'leikkimielinen, mutta kukaan ei myönnä häviötä.',
+          selite: 'Nigerialaisen jollofin tunnusmerkki on savuinen pohja: '
+            + 'riisin annetaan tarttua padan pohjaan aivan lopuksi.',
+          lahde: 'DromoTetteh, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vartaat, joissa mauste on maapähkinää',
+          tiedosto: 'Suya preparation for grilling 1.jpg',
+          teksti: 'Suya on hausalainen katuruoka, alun perin nimeltään '
+              + 'tsire. Ohuiksi viipaloitu naudan-, lampaan- tai '
+              + 'vuohenliha pujotetaan puuvartaisiin ja marinoidaan '
+              + 'yaji-mausteseoksessa, jossa on chiliä, inkivääriä, '
+              + 'kuivattua sipulia ja kuli-kulia eli maapähkinäpuristetta. '
+              + 'Kahta samanlaista yajia ei ole: jokainen myyjä sekoittaa '
+              + 'omansa. Vartaat kastellaan öljyllä ja grillataan hiilillä, '
+              + 'ja valmis liha leikataan suupaloiksi, joiden päälle '
+              + 'ripotellaan lisää mausteseosta sekä sipulia ja tomaattia. '
+              + 'Myyjää kutsutaan nimellä mai suya, suyan omistaja.',
+          selite: 'Yaji-mausteseos odottaa vartaiden vieressä: valmis liha '
+            + 'kierrätetään siinä vielä kerran grillauksen jälkeen.',
+          lahde: 'Kambai Akau, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Keitto, jonka nimi tarkoittaa jauhamista',
+          tiedosto: 'Pot of Egusi soup.jpg',
+          teksti: 'Egusi on kurpitsakasvien — melonin, kurpitsan ja '
+              + 'pullokurpitsan — valkoisia siemeniä, jotka kuivataan ja '
+              + 'jauhetaan. Jorubankielinen nimi kertoo valmistustavan: e '
+              + 'tarkoittaa suunnan, gun jauhamista ja si avaamista, eli '
+              + '"jauhaa auki". Jauhettu siemen paksuntaa keiton ja tuo '
+              + 'siihen runsaasti valkuaista; sekaan tulee palmuöljyä, '
+              + 'lihaa tai kalaa ja iso kasa vihreitä lehtiä, useimmiten '
+              + 'karvaslehteä. Egusi-keittoa syödään ympäri Länsi- ja '
+              + 'Keski-Afrikkaa, ja siemeniä kasvatetaan Nigerian lisäksi '
+              + 'muun muassa Beninissä, Ghanassa ja Kamerunissa.',
+          selite: 'Keitto sakenee jauhetuista siemenistä, ei jauhoista — '
+            + 'siksi pinta näyttää rakeiselta.',
+          lahde: 'Bukky658, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Nyrkillä survottu jamssi',
+          tiedosto: 'POUNDED YAM & VEGETABLE SOUP. A native delicacy of the Yoruba tribe in Nigeria, West Africa..jpg',
+          teksti: 'Iyán eli survottu jamssi tehdään keittämällä valkoista '
+              + 'jamssia ja survomalla se huhmareessa sitkeäksi taikinaksi. '
+              + 'Se kuuluu ruokalajien ryhmään, jota Nigeriassa kutsutaan '
+              + 'nimellä swallow: pala nipistetään sormin, kastetaan '
+              + 'keittoon ja niellään pureskelematta. Iyán on jorubaksi, '
+              + 'hausaksi sakwara ja igboksi utara-ji, ja se tarjotaan '
+              + 'egusin, okran, ewedun tai palmupähkinäkeiton kanssa. '
+              + 'Ile-Ifessä tehdään omaa versiota nimeltä iyan gbere, jossa '
+              + 'jamssitaikinaan sekoitetaan keitettyä afrikanleipäpuun '
+              + 'hedelmää.',
+          selite: 'Survottu jamssi tarjotaan valkoisena palana keiton '
+            + 'vieressä, ja ateria syödään sormin.',
+          lahde: 'Ayoife Oni, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä egusi-keiton paksuus tulee?',
+        vaihtoehdot: [
+          'Vehnäjauhosta',
+          'Maniokkitärkkelyksestä',
+          'Jauhetuista kurpitsakasvien siemenistä',
+          'Kookosmaidosta',
+        ],
+        oikea: 2,
+        fakta: 'Egusi tarkoittaa jorubaksi jauhamista: kuivatut siemenet '
+            + 'jauhetaan ja ne sakeuttavat keiton.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Lagosin musiikki lähti maailmalle kahdesti: ensin '
+          + 'kitaroiden ja puhuvien rumpujen jùjúna, sitten torvien ja '
+          + 'funkin afrobeatina.',
+      nostot: [
+        {
+          otsikko: 'Rumpu, joka puhuu',
+          tiedosto: 'Iya Ilu Dundun.png',
+          teksti: 'Puhuva rumpu on tiimalasin muotoinen, ja sen kahta '
+              + 'kalvoa yhdistävät nahkanarut. Kun soittaja puristaa naruja '
+              + 'kainalonsa alla, kalvon kireys muuttuu ja sävelkorkeus '
+              + 'nousee tai laskee. Koska joruba ja monet muut Länsi-Afrikan '
+              + 'kielet ovat sävelkieliä, taitava soittaja voi jäljitellä '
+              + 'kokonaisia lauseita. Jorubien dùndún-perheessä on viisi '
+              + 'rumputyyppiä, ja asantien atumpanilla ja fontomfromilla '
+              + 'viesti on kulkenut kolmenkymmenen kilometrin päähän, missä '
+              + 'seuraava rumpali on jatkanut sitä eteenpäin.',
+          selite: 'Ìyá ìlù, rumpujen äiti, on dùndún-yhtyeen suurin rumpu; '
+            + 'kylkeen kiinnitetyt tiukut soivat lyönnin mukana.',
+          lahde: 'Mplanetech, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kolme miestä, banjo ja kurpitsakalistin',
+          aika: '1932',
+          tiedosto: 'Shekere-min.jpg',
+          teksti: 'Jùjú syntyi Lagosissa 1920-luvulla ja sai tunnistettavan '
+              + 'muotonsa 1932, kun Tunde King alkoi levyttää sitä. '
+              + 'Kokoonpano oli kolmikko: laulava johtaja banjoineen, '
+              + 'tamburiininsoittaja ja sèkèrè eli helmiverkolla päällystetty '
+              + 'kurpitsakalistin. Tyylin juuret ovat palmuviinibaarien '
+              + 'kitaramusiikissa ja kristittyjen jorubayhteisöjen '
+              + 'asikò-rummutuksessa. Laulut olivat ylistystä ja tarinoita, '
+              + 'ja esitykset saattoivat jatkua tunteja tauotta. Puhuva '
+              + 'rumpu liitettiin kokoonpanoon vasta 1948, ja sähkökitarat '
+              + 'ja vahvistimet kasvattivat yhtyeet myöhemmin kymmenpäisiksi.',
+          selite: 'Sèkèrè on kuivattu kurpitsa, jonka ympärille on punottu '
+            + 'kaurisimpukkaverkko; ravistus antaa jùjúlle sen sihisevän '
+            + 'pohjapulssin.',
+          lahde: 'Comradeayobami, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Ensimmäinen Grammy-ehdokkuus Nigeriaan',
+          aika: '1982',
+          // Kuvaton (Opus 6.9.2026): King Sunny Adésta on Commonsissa vain
+          // yksi kuva, ja se on epätarkka valokuva piirroksesta.
+          teksti: 'Sunday Adeniyi Adegeye eli King Sunny Adé syntyi 1946 '
+              + 'Osogbossa jorubalaiseen ruhtinassukuun ja karkasi '
+              + 'koulusta Lagosiin muusikoksi. Ensimmäinen oma yhtye '
+              + 'perustettiin 1967, ja 1970-luvulla hän oli jo Nigerian '
+              + 'suosituimpia jùjú-soittajia ja perusti oman levy-yhtiön. '
+              + 'Vuonna 1982 Island Records julkaisi hänen levynsä Juju '
+              + 'Music, ja seuraavan vuoden Synchro System toi hänelle '
+              + 'ensimmäisen nigerialaiselle myönnetyn Grammy-ehdokkuuden. '
+              + 'Adén yhtyeessä soi kymmenkunta soittajaa, joukossa pedal '
+              + 'steel -kitara ja useita puhuvia rumpuja.',
+          selite: 'Jùjú levisi maailmalle juuri Adén yhtyeen kautta: '
+              + 'sähköistetty jorubamusiikki löysi 1980-luvulla '
+              + 'kansainvälisen yleisön.',
+        },
+        {
+          otsikko: 'Afrobeat syntyi Los Angelesin reissulla',
+          aika: '1938–1997',
+          tiedosto: 'Fela Kuti Eritage house.jpg',
+          teksti: 'Fela Kuti syntyi Abeokutassa opettajaperheeseen ja lähti '
+              + '1958 Lontooseen opiskelemaan trumpettia. Palattuaan hän '
+              + 'soitti jazzin ja highlifen sekoitusta, kunnes vietti 1969 '
+              + 'kymmenen kuukautta Los Angelesissa ja tutustui '
+              + 'mustien kansalaisoikeusliikkeeseen. Sen jälkeen syntyi '
+              + 'afrobeat: jorubarytmit, funk, jazz ja pitkät, jopa '
+              + 'parikymmenminuuttiset kappaleet, joissa rumpali Tony Allen '
+              + 'piti koossa kymmenien soittajien Africa 70 -orkesteria. '
+              + 'Kuti arvosteli lauluissaan sotilashallintoa suoraan ja '
+              + 'joutui siitä toistuvasti vaikeuksiin. Rock and Roll Hall '
+              + 'of Fame otti hänet joukkoonsa 2026.',
+          selite: 'Abeokutan Kuti Heritage Museum toimii talossa, jossa '
+            + 'asuivat Fela Kutin vanhemmat.',
+          lahde: 'Olalekan Israel Oduntan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Fela Kuti',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Nigerian taide osaa sekä valaa metallia sadan vuoden '
+          + 'tarkkuudella että värjätä kankaan tarinaksi.',
+      nostot: [
+        {
+          otsikko: 'Talonrakentajat löysivät kahdeksantoista päätä',
+          aika: '1938',
+          tiedosto: 'Africa Ife Head 2 Kimbell.jpg',
+          teksti: 'Ilé-Ifèn taiteilijat valoivat 1200- ja 1400-luvun välillä '
+              + 'kuparivaluspäitä, jotka ovat niin luonnonmukaisia, että ne '
+              + 'romuttivat eurooppalaisen käsityksen afrikkalaisesta '
+              + 'taiteesta. Vuonna 1938 talonrakennustyöt Wunmonijen '
+              + 'pihapiirissä paljastivat vahingossa kahdeksantoista '
+              + 'valettua päätä. Ne on tehty vahavalutekniikalla, ne ovat '
+              + 'noin kolme neljäsosaa luonnollisesta koosta, ja kasvot on '
+              + 'peitetty ohuin viiruin. Löytö sai hallinnon säätämään '
+              + 'vientirajoitukset muinaisesineille, mutta yksi pää ehti jo '
+              + 'ulos maasta ja on nykyään British Museumissa.',
+          selite: 'Ifessä tehtiin myös terrakottapäitä samalla '
+            + 'luonnonmukaisella tyylillä; tämä on Kimbellin taidemuseossa '
+            + 'Yhdysvalloissa.',
+          lahde: 'User:FA2010, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Ovi, joka lähti Lontooseen',
+          aika: '1900-luvun alku',
+          tiedosto: 'Detail, Palace door and lintel from Ikere, British Museum 01.jpg',
+          teksti: 'Olowe of Ise oli jorubalainen puunveistäjä, jonka työt '
+              + 'tunnistaa syvästä kohokuvioinnista: hahmot irtoavat '
+              + 'pinnasta melkein kokonaan, ja niiden mittasuhteet on '
+              + 'venytetty kertomaan asemasta. Ikeren kuninkaan palatsin '
+              + 'ovi ja kamana ovat hänen tunnetuin teoksensa. Ne päätyivät '
+              + 'Britannian museoihin 1920-luvulla, kun Nigerian '
+              + 'veistotaidetta esiteltiin Lontoon imperiuminäyttelyssä. '
+              + 'Veistoksissa kerrotaan hallitsijan vastaanotosta: '
+              + 'kuningatar, saattueen kantajat ja vieraat ovat samassa '
+              + 'kuvassa eri kokoisina.',
+          selite: 'Ikeren palatsin oven yksityiskohta British Museumissa. '
+            + 'Alkuperäiset värit näkyvät yhä puun uurteissa.',
+          lahde: '14GTR, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kuningatar istui mallina nigerialaiselle',
+          aika: '1917–1994',
+          // Kuvaton (Opus 6.9.2026): Ben Enwonwun teokset ovat yhä
+          // tekijänoikeuden suojassa, eikä Commonsin näyttelykuvia voi
+          // siksi käyttää.
+          teksti: 'Ben Enwonwu syntyi Onitshassa perinteisen igbolaisen '
+              + 'veistäjän poikana ja peri isänsä työkalut viisivuotiaana. '
+              + 'Hän opiskeli Lontoon Slade School of Fine Artissa ja tuli '
+              + 'ensimmäisenä afrikkalaisena taiteilijana laajalti '
+              + 'tunnetuksi lännessä. Vuoden 1956 vierailullaan kuningatar '
+              + 'Elisabet II tilasi häneltä muotokuvaveistoksen ja istui '
+              + 'sitä varten mallina. Enwonwun tunnetuin veistos Anyanwu, '
+              + 'auringon silmä, on Lagosin kansallismuseon seinällä. '
+              + 'Hänen kadonnut maalauksensa Tutu löytyi 2017 '
+              + 'lontoolaisesta kerrostaloasunnosta ja myytiin '
+              + 'huutokaupassa 1,2 miljoonalla punnalla.',
+          selite: 'Enwonwu kuvitti myös Amos Tutuolan romaanin The Brave '
+              + 'African Huntress vuonna 1958.',
+        },
+        {
+          otsikko: 'Sitoa ja liottaa',
+          tiedosto: 'Stack of Adire , a local Fabric from Abeoukuta.JPG',
+          teksti: 'Adire on jorubanaisten värjäämä kangas, ja nimi kertoo '
+              + 'menetelmän: adi tarkoittaa sitomista ja re liottamista. '
+              + 'Kuvio syntyy suojaamalla osa kankaasta ennen indigokylpyä '
+              + 'joko sitomalla, ompelemalla tai sivelemällä maniokkitahnaa '
+              + 'kuvioksi. Vanhin tunnettu länsiafrikkalainen indigotyö on '
+              + '1000-luvulta Malin Dogonmaalta. Adiresta tuli 1900-luvun '
+              + 'alussa Abeokutan ja Ibadanin naisten iso elinkeino, kun '
+              + 'eurooppalaista puuvillakangasta alkoi tulla halvalla '
+              + 'markkinoille. Kuviot kulkevat suvussa äidiltä tyttärelle.',
+          selite: 'Abeokutaa pidetään adiren pääkaupunkina; torilla kankaat '
+            + 'myydään pinoina, joissa jokaisella kuviolla on nimi.',
+          lahde: 'Olaniyan Olushola, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Nigerialainen kirja on kulkenut kahta reittiä: Lontoon '
+          + 'kustantamojen kautta maailmalle ja Onitshan torin '
+          + 'painokoneista suoraan lukijalle.',
+      nostot: [
+        {
+          otsikko: 'Palmuviinin juoja ja kuollut tiristäjä',
+          aika: '1952',
+          // Kuvaton (Opus 6.9.2026): Amos Tutuolasta ei ole Commonsissa
+          // vapaata kuvaa, ja kirjan kannet ovat tekijänoikeuden alaisia.
+          teksti: 'Amos Tutuola syntyi 1920 kaakaoviljelijän perheeseen ja '
+              + 'kävi koulua kuusi vuotta. Sepän ja lähetin töiden ohessa '
+              + 'hän kirjoitti tarinan miehestä, joka lähtee kuolleiden '
+              + 'kaupunkiin etsimään palmuviinin tiristäjäänsä. Faber and '
+              + 'Faber julkaisi The Palm-Wine Drinkardin Lontoossa 1952, ja '
+              + 'runoilija Dylan Thomas ylisti sitä sanoilla "lyhyt, '
+              + 'tungokseen asti täysi, kaamea ja lumoava". Nigeriassa kirja '
+              + 'sai kovaa kritiikkiä: Tutuolan englanti ei noudattanut '
+              + 'koulukielioppia. Arvostelu on sittemmin vaimennut, ja kirja '
+              + 'on käännetty kymmenille kielille.',
+          selite: 'Tutuola ammensi jorubien suullisesta perinteestä ja '
+              + 'kirjailija D. O. Fagunwan jorubankielisistä romaaneista.',
+        },
+        {
+          otsikko: 'Käsikirjoitus, joka makasi nurkassa',
+          aika: '1958',
+          tiedosto: 'Chinua Achebe - Buffalo 25Sep2008 crop.jpg',
+          teksti: 'Chinua Achebe työskenteli Nigerian yleisradiossa, kun hän '
+              + 'lähetti 1957 ainoan käsinkirjoitetun kappaleensa '
+              + 'romaanistaan lontoolaiseen konekirjoituspalveluun ja '
+              + 'kaksikymmentäkaksi punnan maksun. Vastausta ei kuulunut. '
+              + 'Achebe pyysi esihenkilöään Angela Beattiea poikkeamaan '
+              + 'yrityksessä Lontoon-matkallaan, ja tämä löysi '
+              + 'käsikirjoituksen makaamasta toimiston nurkassa. Heinemann '
+              + 'painoi Things Fall Apartista 1958 kaksituhatta kovakantista '
+              + 'kappaletta. Romaania on sittemmin myyty yli kaksikymmentä '
+              + 'miljoonaa kappaletta ja käännetty 57 kielelle.',
+          selite: 'Achebe puhumassa Buffalossa 2008. Ilman Beattien käyntiä '
+            + 'kirjaa ei ehkä olisi: "olisin lannistunut niin, että olisin '
+            + 'luultavasti luopunut kokonaan", hän sanoi myöhemmin.',
+          lahde: 'Stuart C. Shapiro, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Chinua Achebe',
+        },
+        {
+          otsikko: 'Nobel-puhe, joka omistettiin vangille',
+          aika: '1986',
+          tiedosto: 'Wole Soyinka in 2018-2.jpg',
+          teksti: 'Wole Soyinka on kirjoittanut kolme romaania, '
+              + 'kaksikymmentäviisi näytelmää, seitsemän runokokoelmaa ja '
+              + 'viisi muistelmateosta. Vuonna 1986 hänelle myönnettiin '
+              + 'Nobelin kirjallisuuspalkinto perusteluilla "laajasta '
+              + 'kulttuurinäkymästä ja runollisista sävyistä, joilla hän '
+              + 'muovaa olemassaolon draamaa" — ensimmäisenä afrikkalaisena '
+              + 'kirjailijana. Kiitospuheensa This Past Must Address Its '
+              + 'Present hän omisti tuolloin vielä vankilassa istuneelle '
+              + 'Nelson Mandelalle ja käytti sen Etelä-Afrikan '
+              + 'rotuerottelun arvosteluun.',
+          selite: 'Soyinka Tukholmassa 2018. Hän kirjoittaa jorubalaisesta '
+            + 'perinteestä ja käyttää sitä myös näytelmiensä rakenteena.',
+          lahde: 'Frankie Fouganthin, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Wole Soyinka',
+        },
+        {
+          otsikko: 'Torin painokoneet keksivät pokkarin',
+          aika: '1950-luku',
+          // Kuvaton (Opus 6.9.2026): Onitshan vihkosista ei ole Commonsissa
+          // vapaita kuvia; kannet ovat yhä tekijänoikeuden alaisia.
+          teksti: 'Itä-Nigerian Onitshassa torikauppiaiden painokoneet '
+              + 'seisoivat hiljaisina kuukausina tyhjinä. 1950-luvun alussa '
+              + 'painajat alkoivat täyttää taukoja omilla vihkosillaan: '
+              + 'rakkaustarinoilla, matkakertomuksilla, näytelmillä ja '
+              + 'käytännön oppailla. Läpimurto tuli 1956, kun Ogali A. '
+              + 'Ogalin näytelmä Veronica My Daughter myi kaiken. Sen '
+              + 'jälkeen syntyi satoja vihkosia, joista suuri osa oli '
+              + 'kirjoitettu pidgininglanniksi. Tutkijoille ne ovat nyt '
+              + 'ainutlaatuinen ikkuna aikansa arkeen, ja lukijalle iloa '
+              + 'tuottaa niiden vauhdikas, sääntöjä kaihtava kieli.',
+          selite: 'Onitshan markkinakirjallisuus oli halpaa, nopeaa ja '
+              + 'paikallista — kirjoja myytiin samalla torilla, jolla ne '
+              + 'painettiin.',
+        },
+      ],
+    },
+  ],
+  GHA: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ghana otti nimensä valtakunnalta, joka ei koskaan '
+          + 'sijainnut sen alueella — ja teki nimestä koko mantereen '
+          + 'tunnuksen.',
+      nostot: [
+        {
+          otsikko: 'Nimi lainattiin tuhannen kilometrin päästä',
+          aika: '800–1200-luku',
+          // Kuvaton (Opus 6.9.2026): muinaisen Ghanan valtakunnan
+          // alueelta ei löytynyt Commonsista lähdetarkistuksen kestävää
+          // kuvaa (haku "Ghana Empire", "Koumbi Saleh").
+          teksti: 'Muinainen Ghanan valtakunta sijaitsi nykyisen '
+              + 'Mauritanian kaakkoisosassa ja Länsi-Malissa, yli tuhannen '
+              + 'kilometrin päässä nykyisestä Ghanasta. Sen soninkenkielinen '
+              + 'nimi oli Wagadu, ja sana ghana oli hallitsijan arvonimi, '
+              + 'soturi tai sotapäällikkö; toinen arvonimi kaya maghan '
+              + 'tarkoitti kullan kuningasta. Ensimmäisen tunnetun '
+              + 'maininnan kirjoitti tähtitieteilijä al-Khwarizmi vuonna '
+              + '830, ja 1000-luvulla cordobalainen al-Bakri kuvasi maata '
+              + 'tarkemmin. Valtakunta päätyi 1200-luvulla Malin vasalliksi. '
+              + 'Nimen otti käyttöön Kultarannikko itsenäistyessään 1957.',
+          selite: 'Nimenvalinta oli tietoinen kannanotto: uusi valtio '
+              + 'kytkettiin Afrikan omaan menneisyyteen eikä '
+              + 'siirtomaakauteen.',
+        },
+        {
+          otsikko: 'Palatsi, jossa oli Timesin numero vuodelta 1843',
+          aika: '1817–1925',
+          tiedosto: 'Manhyia Palace – Panorama.jpg',
+          teksti: 'Englantilainen Thomas Edward Bowdich vieraili Kumasissa '
+              + '1817 ja kuvasi asantien kuninkaanpalatsin suunnattomana '
+              + 'rakennuksena, jonka pihoja kiersivät veistoksin '
+              + 'koristellut julkisivut ja kullalla päällystetyt '
+              + 'ikkunankehykset. Winwood Reade näki saman palatsin 1874 ja '
+              + 'luetteli sen huoneista kirjoja monilla kielillä, '
+              + 'böömiläistä lasia, kelloja, hopeaa, persialaisia mattoja, '
+              + 'miekan tekstillä "Kuningatar Viktorialta asantien '
+              + 'kuninkaalle" ja Timesin numeron 17. lokakuuta 1843. '
+              + 'Britit polttivat palatsin samana vuonna. Nykyinen Manhyian '
+              + 'palatsi rakennettiin 1925 kuningas Prempeh I:n paluuta '
+              + 'varten.',
+          selite: 'Manhyian palatsi Kumasissa on nykyään museo, ja asantien '
+            + 'kuningas asuu sen viereisessä uudemmassa palatsissa.',
+          lahde: 'jbdodane, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Seppä toi taskussaan kaakaon',
+          aika: '1876',
+          tiedosto: 'Tetteh Quarshie Cocao Farm - One of the original trees, planted 1879.JPG',
+          teksti: 'Tetteh Quarshie oli gadangme-suvun poika, joka koulutettiin '
+              + 'Akropongin lähetysaseman pajassa sepäksi. Vuonna 1870 hän '
+              + 'lähti Espanjan siirtomaahan Fernando Póon saarelle ja '
+              + 'palasi kuutisen vuotta myöhemmin mukanaan kaakaonpapuja. '
+              + 'Niistä kasvoi Mampongin istutus ja lopulta koko maan '
+              + 'tärkein vientikasvi. Kuvernööri Gordon Guggisberg tutkitti '
+              + '1920-luvulla kilpailevat väitteet: kaakaota olivat '
+              + 'kokeilleet myös Baselin lähetyssaarnaajat ja erään '
+              + 'kuvernöörin poika ilmoitti kunnian isälleen. Selvitys '
+              + 'päätyi Quarshien kannalle. Hän kuoli jouluaattona 1892.',
+          selite: 'Yksi Tetteh Quarshien alkuperäisistä puista kasvaa yhä '
+            + 'Mampongissa, ja kyltti kertoo istutusvuodeksi 1879.',
+          lahde: 'Obruni, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kaakao',
+        },
+        {
+          otsikko: 'Musta tähti nousi keskiyöllä',
+          aika: '6.3.1957',
+          tiedosto: 'Black Star Gate located in Accra.jpg',
+          teksti: 'Kultarannikosta tuli 6. maaliskuuta 1957 ensimmäinen '
+              + 'itsenäistynyt siirtomaa Saharan eteläpuolisessa Afrikassa. '
+              + 'Accraan saapui yli sata toimittajaa ja valokuvaajaa, ja kun '
+              + 'viides päivä vaihtui kuudenneksi, Kwame Nkrumah julisti '
+              + 'kymmenilletuhansille: "Ghana on vapaa ikuisesti." Uuden '
+              + 'maan lipun suunnitteli opettaja Theodosia Okoh: punainen, '
+              + 'keltainen ja vihreä sekä keskellä musta tähti, joka '
+              + 'tarkoittaa afrikkalaista vapautta. Nkrumah avasi Accraan '
+              + 'myös Mustan tähden aukion. Maan nimeksi valittiin '
+              + 'keskiaikaisen valtakunnan nimi.',
+          selite: 'Mustan tähden portti Accrassa. Kaarteen otsassa lukee '
+            + 'AD 1957 ja alempana Freedom and Justice.',
+          lahde: 'Uprising Man, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kwame Nkrumah',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Ghanalainen ateria rakentuu tahmean palan ja tulisen '
+          + 'kastikkeen ympärille, ja aamiaisen saa banaaninlehteen '
+          + 'käärittynä.',
+      nostot: [
+        {
+          otsikko: 'Riisi, jonka durranlehti värjää',
+          tiedosto: 'Waakye and dandelion leaves.jpg',
+          teksti: 'Waakye on riisin ja papujen yhteiskeitos, jota syödään '
+              + 'aamiaiseksi ja lounaaksi. Papuina ovat mustasilmäpavut, ja '
+              + 'kattilaan pannaan mukaan kuivattuja durran lehtiä ja '
+              + 'kalkkikivijauhetta, kaunia. Lehdet värjäävät riisin '
+              + 'punaruskeaksi ja antavat sille oman makunsa; ne poistetaan '
+              + 'ennen tarjoilua. Nimi tulee dagbanin kielestä ja tarkoittaa '
+              + 'tiettyä papua. Ruoan uskotaan syntyneen Pohjois-Ghanan '
+              + 'mole-dagbon-kansojen keskuudessa. Katukeittiössä waakye '
+              + 'kääritään banaaninlehteen ja sen kanssa saa kananmunaa, '
+              + 'garria, salaattia, spagettia ja shitoa.',
+          selite: 'Waakye tunnistaa väristä: punaruskean tekevät durran '
+            + 'lehdet, eivät mausteet.',
+          lahde: 'Kwameghana, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Hapatettua maissia lehden sisällä',
+          tiedosto: 'Kenkey and Shito (Chili).jpg',
+          teksti: 'Kenkey eli komi on ga-kansan ruokaa: maissitaikina '
+              + 'hapatetaan, kääritään maissinlehtiin ja keitetään pitkään '
+              + 'kiinteiksi palloiksi. Fantien versio dokono kääritään '
+              + 'banaaninlehteen, joka antaa toisen värin ja maun. Banku '
+              + 'tehdään samasta hapatetusta maissitaikinasta, mutta siihen '
+              + 'sekoitetaan maniokkitaikinaa ja se hämmennetään kuumassa '
+              + 'vedessä pehmeäksi. Ewekielellä maissi-maniokkiversio on '
+              + 'agbelimorkple ja pelkkä maissi kutornu-kple. Molempia '
+              + 'syödään sormin kastikkeen, keiton tai grillatun tilapian '
+              + 'kanssa.',
+          selite: 'Kenkeyn pallo ja kulhollinen shitoa: hapatettu maissi on '
+            + 'mieto, joten kastike hoitaa maun.',
+          lahde: 'Flixtey, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Musta pippuri, joka on oikeasti kalaa',
+          tiedosto: 'Ghanaian shito.jpg',
+          teksti: 'Shito tarkoittaa gan kielellä mustapippuria, mutta '
+              + 'kyseessä on paksu kastike: kuivattua kalaa ja katkarapua, '
+              + 'inkivääriä, valkosipulia, sipulia ja chiliä jauhetaan '
+              + 'yhteen ja haudutetaan öljyssä runsas tunti, kunnes seos on '
+              + 'lähes mustaa. Jokaisella seudulla ja kylällä on oma '
+              + 'sekoituksensa, mutta alkuperäinen resepti on ga-kansan. '
+              + 'Ghanassa shitoa käytetään kuin ketsuppia: sen kanssa '
+              + 'syödään kenkeytä, riisiä, garria, waakyeta ja bankua, ja '
+              + 'sitä levitetään myös leivälle. Kiinalaisravintoloissa se on '
+              + 'korvannut chiliöljyn.',
+          selite: 'Shito kypsyy öljyssä tunnin verran; valmis kastike '
+            + 'säilyy purkissa pitkään.',
+          lahde: 'Umuhiera, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Banaani, joka paistetaan mausteissa',
+          tiedosto: 'Kelewele, a Ghanaian snack.jpg',
+          teksti: 'Kelewele on kypsästä plantaanibanaanista tehty '
+              + 'iltapala. Banaani leikataan paloiksi, maustetaan '
+              + 'inkiväärillä, chilillä ja mausteseoksella ja paistetaan '
+              + 'öljyssä, kunnes pinta on tumma ja karamellisoitunut. Sitä '
+              + 'myydään illalla kadunkulmissa paperitötteröstä, ja se '
+              + 'tarjotaan usein red red -papumuhennoksen tai kalakeiton '
+              + 'lisukkeena. Paistettu banaani on kotonaan kaikkialla, '
+              + 'missä plantaania kasvaa: Nigeriassa sama pala on dodo, '
+              + 'Indonesiassa pisang goreng ja Karibialla se paistetaan '
+              + 'raakana ja litistetään.',
+          selite: 'Mausteet menevät banaanin pintaan ennen paistoa, ja '
+            + 'sokeri tummentaa palat uunissa mustanruskeiksi.',
+          lahde: 'Maame1Yaa, Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä antaa waakye-riisille sen punaruskean värin?',
+        vaihtoehdot: [
+          'Kuivatut durran lehdet',
+          'Tomaattisose',
+          'Palmuöljy',
+          'Chilijauhe',
+        ],
+        oikea: 0,
+        fakta: 'Durran lehtiä keitetään riisin ja papujen mukana ja ne '
+            + 'poistetaan ennen tarjoilua.',
+      },
+    },
+    {
+      id: 'kasityo',
+      nimi: 'Käsityö',
+      johdanto: 'Ghanassa esine kertoo aina jotain: kankaassa on nimi, '
+          + 'punnuksessa sananlasku ja arkussa koko elämäntyö.',
+      nostot: [
+        {
+          otsikko: 'Kangas, jonka hämähäkki keksi',
+          tiedosto: 'Kente patterns, Tafi, Volta region.jpg',
+          teksti: 'Kente kudotaan kapeina kaistaleina, jotka ommellaan '
+              + 'yhteen isoksi kankaaksi. Nimi tulee asantin sanasta kɛntɛn, '
+              + 'kori, ja asantien perimätiedon mukaan kutojat saivat '
+              + 'kuvionsa Anansi-hämähäkin verkosta Bonwiren kylässä. '
+              + '1700-luvulla kuningas Opoku Ware perusti työpajan, jossa '
+              + 'purettiin tuotua silkkiä ja kudottiin langat uudelleen '
+              + 'omiksi kuvioiksi. Kuvioita on satoja, ja jokaisella on '
+              + 'nimi, joka voi tulla sananlaskusta, tapahtumasta tai '
+              + 'kuningattarenäidistä. Vaikein niistä on adweneasa, "olen '
+              + 'käyttänyt taitoni loppuun".',
+          selite: 'Kaistaleita säilytetään ja myydään kimppuina; ostaja '
+            + 'valitsee usein kuvion nimen eikä värin mukaan.',
+          lahde: 'Warmglow, Wikimedia Commons (CC0)',
+          wiki: 'Kente',
+        },
+        {
+          otsikko: 'Merkit, jotka painetaan kalebassilla',
+          aika: '1817',
+          tiedosto: 'Adinkra 1825.jpg',
+          teksti: 'Adinkra-symbolit ovat akaanien merkkejä, joista kukin '
+              + 'tiivistää käsitteen tai sananlaskun. Ne painetaan '
+              + 'kankaaseen kalebassinpalasta veistetyllä leimasimella ja '
+              + 'puunkuoresta keitetyllä mustalla värillä; samoja merkkejä '
+              + 'veistetään jakkaroihin, seiniin ja kultapunnuksiin. '
+              + 'Perimätieto kertoo, että asantit oppivat taidon Gyamanin '
+              + 'kuninkaalta Nana Kwadwo Agyemang Adinkralta. Ajoitus ei '
+              + 'kuitenkaan täsmää: Thomas Bowdich toi adinkra-kankaan '
+              + 'Kumasista jo 1817, vuosi ennen kuin sota Gyamania vastaan '
+              + 'alkoi. Filosofi Kwame Anthony Appiah on kutsunut merkkejä '
+              + 'tavaksi siirtää monimutkaista ajattelua eteenpäin.',
+          selite: 'Vuoden 1825 adinkra-kangas: leimasin on painettu '
+            + 'ruudukkoon, ja jokainen ruutu on oma merkkinsä.',
+          lahde: 'Tuntematon kutoja, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Punnus, joka kertoo sananlaskun',
+          aika: '1400–1900',
+          tiedosto: 'Akan MHNT.ETH.2010.25.042.jpg',
+          teksti: 'Akaanit punnitsivat kultahiekkaa messinkipunnuksilla, '
+              + 'joita kutsutaan nimellä abrammuo. Niitä valettiin '
+              + 'vahavalutekniikalla arviolta neljä miljoonaa kappaletta '
+              + '1400-luvulta 1900-luvulle. Vanhimmat ovat geometrisia; '
+              + 'noin vuodesta 1600 alkaen tehtiin kuvallisia punnuksia, '
+              + 'jotka esittävät eläimiä, kasveja, ihmisiä, aseita ja '
+              + 'adinkra-merkkejä. Moni niistä viittaa sananlaskuun, joten '
+              + 'punnussarja oli myös käytöstapojen kokoelma. Täysi sarja '
+              + 'nosti miehen arvoa, ja pieni sarja annettiin '
+              + 'vastanaineelle lahjaksi kaupankäynnin aloittamista varten.',
+          selite: 'Lepakkopunnus Toulousen luonnontieteellisen museon '
+            + 'kokoelmasta; mitta-asteikko kertoo, että esine mahtuu '
+            + 'kämmenelle.',
+          lahde: 'Didier Descouens, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Arkku, joka on kaakaopalko',
+          aika: '1989',
+          tiedosto: 'Cocoa pod Paa Joe Fantasy Coffin.jpg',
+          teksti: 'Accran seudulla tehdään arkkuja, jotka esittävät jotain '
+              + 'aivan muuta kuin arkkua: kalaa, kameraa, linja-autoa, '
+              + 'kaakaopalkoa. Nimi on ga-kielellä abebuu adekai, '
+              + 'sananlaskuastiat. Ga-kansan käsityksen mukaan elämä jatkuu '
+              + 'tuonpuoleisessa entisellään, joten arkku kertoo vainajan '
+              + 'ammatin, suvun tunnuseläimen tai arvoaseman — ja vain '
+              + 'sellaiseen arkkuun oikeutettu saa siihen tulla. Arkut '
+              + 'nähtiin ensi kertaa laajasti lännessä Pariisin näyttelyssä '
+              + 'Les Magiciens de la terre vuonna 1989; esillä olleet '
+              + 'seitsemän arkkua olivat Kane Kwein ja Paa Joen tekemiä.',
+          selite: 'Kaakaopalon muotoiset arkut odottavat tienvarressa. '
+            + 'Arkut näytetään vasta hautajaispäivänä.',
+          lahde: 'Danieljatuat, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Ghanan musiikki sai nimensä siitä, mitä klubin ulkopuolella '
+          + 'seisoneet kuulivat sisältä.',
+      nostot: [
+        {
+          otsikko: 'Nimi tuli oven ulkopuolelta',
+          aika: '1920-luku',
+          // Kuvaton (Opus 6.9.2026): Commonsissa ei ole vapaata kuvaa
+          // varhaisesta highlife-orkesterista (haut "highlife band Ghana",
+          // "Ghana brass band Accra").
+          teksti: 'Highlife syntyi 1800-luvun lopulla rannikkokaupungeissa, '
+              + 'kun paikalliset muusikot yhdistivät omat rytminsä '
+              + 'merimiesten tuomiin soittimiin. Nimen antoi yleisö, joka ei '
+              + 'päässyt sisään: 1920-luvulla hienot klubit perivät '
+              + 'seitsemän shillingin ja kuuden pennyn pääsymaksun ja '
+              + 'vaativat iltapukua ja silinteriä, joten ulkona seisojat '
+              + 'kutsuivat sisältä kuuluvaa musiikkia korkeaksi elämäksi. '
+              + 'Orkesterien nimet olivat Jazz Kings, Cape Coast Sugar '
+              + 'Babies ja Accra Orchestra. Unesco otti highlifen '
+              + 'aineettoman kulttuuriperinnön luetteloon 2025.',
+          selite: 'Highlife jakautui 1940-luvulla kahtia: kaupunkien '
+              + 'tanssiorkestereihin ja maaseudun kitarayhtyeisiin.',
+        },
+        {
+          otsikko: 'Apteekkari, joka soitti Armstrongin kanssa',
+          aika: '1956',
+          // Kuvaton (Opus 6.9.2026): E. T. Mensahista ei ole Commonsissa
+          // vapaata kuvaa.
+          teksti: 'Emmanuel Tettey Mensah aloitti kaksitoistavuotiaana '
+              + 'huilistina koulun orkesterissa ja rahoitti myöhemmin oman '
+              + 'musiikkinsa perustamallaan apteekilla. Hänen yhtyeensä '
+              + 'Tempos oli alkujaan Accraan sijoitettujen eurooppalaisten '
+              + 'sotilaiden jamiryhmä, mutta muuttui vähitellen kokonaan '
+              + 'ghanalaiseksi ja Mensahin johtamaksi. Toukokuussa 1956 '
+              + 'Louis Armstrong vieraili Accrassa ja soitti Tempoksen '
+              + 'kanssa; sen jälkeen Mensahia kutsuttiin highlifen '
+              + 'kuninkaaksi. Kitarahighlifen puolella E. K. Nyame ja hänen '
+              + 'Akan Trio -yhtyeensä julkaisivat yli neljäsataa levyä.',
+          selite: 'Tanssiorkesterien highlife levisi Ghanasta Nigeriaan, '
+              + 'jossa siitä tuli igbojen suosituin musiikkilaji '
+              + '1960-luvulla.',
+        },
+        {
+          otsikko: 'Ksylofoni kurpitsoiden päällä',
+          tiedosto: 'Gyil.JPG',
+          teksti: 'Gyil on Pohjois-Ghanan dagara- ja birifor-kansojen '
+              + 'ksylofoni. Siinä on seitsemäntoista puukieltä, jotka on '
+              + 'sidottu kehikkoon kuivattujen kurpitsojen päälle; '
+              + 'kurpitsat toimivat kaikupohjina. Soittaja lyö kieliä '
+              + 'kumipäisillä puunuijilla, ja soitin soi tavallisesti '
+              + 'pareittain kalebassirummun kuorin kanssa. Gyilia '
+              + 'soittavat useimmiten miehet, mutta sääntöä siitä ei ole. '
+              + 'Ylä-Länsi-Ghanasta kotoisin ollut Bernard Woma opetti '
+              + 'soitinta vuosikymmeniä ja vei sen konserttilavoille eri '
+              + 'puolille maailmaa.',
+          selite: 'Kurpitsojen kylkiin porataan reikiä, joten sointiin '
+            + 'tulee lisäksi surisevaa säröä.',
+          lahde: 'Dr clave, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Tanssi, joka silittää ja ajaa autoa',
+          aika: '2010-luku',
+          // Kuvaton (Opus 6.9.2026): azonto-kuvat ovat joko
+          // tunnistettavia lähikuvia ihmisistä tai epätarkkoja.
+          teksti: 'Azonto on Accran rannikkokaupunginosista lähtenyt tanssi '
+              + 'ja musiikkilaji, ja se juontuu ga-kansan kpanlogosta. '
+              + 'Vanha nimi oli apaa, joka tarkoittaa työntekoa: liikkeillä '
+              + 'esitettiin ammatteja. Perusasennossa toinen jalka on '
+              + 'paikallaan ja toinen päkiällään, hartiat ovat rennot ja '
+              + 'kädet piirtävät kuvioita vartalon edessä. Tanssija '
+              + 'näyttelee arjen töitä: silittämistä, pyykinpesua, '
+              + 'autolla ajamista, nyrkkeilyä, rukoilemista, uimista. '
+              + 'Vuonna 2013 azonto näkyi lähes kaikissa ghanalaisissa '
+              + 'musiikkivideoissa ja levisi sieltä muualle Afrikkaan.',
+          selite: 'Azonton liikkeissä on koodattuja viestejä, joten sama '
+              + 'tanssi voi olla vitsi, kehu tai piikki.',
+        },
+      ],
+    },
+    {
+      id: 'tavat',
+      nimi: 'Tavat',
+      johdanto: 'Ghanassa nimi kertoo syntymäpäivän, suku kulkee äidin '
+          + 'kautta ja juhla alkaa siitä, että melu kielletään.',
+      nostot: [
+        {
+          otsikko: 'Nimi kertoo, minä päivänä synnyit',
+          // Kuvaton (Opus 6.9.2026): nimenantoseremoniasta ei löytynyt
+          // Commonsista kuvaa ilman tunnistettavia kasvoja.
+          teksti: 'Akaanit antavat lapselle nimen sen viikonpäivän mukaan, '
+              + 'jona hän syntyi, ja päivännimeen liittyy käsitys sielusta '
+              + 'ja luonteesta. Miehen nimi alkaa Kumasin twissä usein '
+              + 'tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy '
+              + '-a tai -wa; fantien murteessa etuliitteet ovat toiset. '
+              + 'Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: '
+              + 'panyin on vanhempi ja kakra nuorempi kaksonen. Lähes '
+              + 'jokaisella ghanalaisella on päivännimi, vaikka käytössä '
+              + 'olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah '
+              + 'syntyi lauantaina ja YK:n pääsihteeri Kofi Annan '
+              + 'perjantaina.',
+          selite: 'Päivännimet kulkivat orjalaivoissa Karibialle asti: '
+              + 'kapinoiden johtajien nimissä toistuvat Cuffy, Cudjoe ja '
+              + 'Quamina.',
+        },
+        {
+          otsikko: 'Juhla, jossa nälälle nauretaan',
+          tiedosto: 'Homowo Palm Nut Soup.jpg',
+          teksti: 'Homowo on ga-kansan sadonkorjuujuhla, ja nimi tarkoittaa '
+              + 'nälälle huutamista tai sen pilkkaamista. Perimätieto '
+              + 'kertoo suuresta nälänhädästä, jonka jälkeen selvinneet '
+              + 'juhlivat pilkaten nälkää. Juhlavuosi alkaa touko-kesäkuussa, '
+              + 'kun seitsemän pappia kylvää hirssin sovitussa '
+              + 'järjestyksessä. Sen jälkeen alkaa koninfemo, melunteon '
+              + 'kielto: neljään viikkoon ja kahteen päivään ei saa pitää '
+              + 'kovaa ääntä, jotta vilja kasvaa rauhassa. Kiellon '
+              + 'päättymisen ilmoittavat erityiset rummutukset. '
+              + 'Huipennuksessa keitetään palmupähkinäkeittoa ja kpokpoita, '
+              + 'hirssitaikinaa palmuöljyn ja okran kanssa.',
+          selite: 'Palmupähkinäkeitto kiehuu Homowon aattona; kpokpoita '
+            + 'viedään talosta taloon jaettavaksi.',
+          lahde: 'Owula kpakpo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Neljäkymmentä päivää hiljaisuutta',
+          aika: '1826',
+          // Kuvaton (Opus 6.9.2026): Odwira-kuvissa on tunnistettavia
+          // kasvoja lähietäisyydeltä, joten ne on jätetty pois.
+          teksti: 'Akuapemin alueella vietetään syys-lokakuussa Odwira-'
+              + 'juhlaa, joka on samalla jamssijuhla ja puhdistautumisen '
+              + 'aika. Se aloitettiin lokakuussa 1826 Katamansun '
+              + 'taistelun jälkeen, ja sitä on vietetty siitä lähtien '
+              + 'lähes kaksisataa vuotta. Juhlaa edeltää neljänkymmenen '
+              + 'päivän adaebutu, jonka aikana melunteko ja hautajaiset '
+              + 'ovat koko alueella kiellettyjä; kiellon rikkojalle '
+              + 'määrätään sakko. Juhlaviikko alkaa maanantaista, jolloin '
+              + 'raivataan seremoniallinen polku Akropongin keskustasta '
+              + 'kuninkaalliselle hautausmaalle — akaanien käsityksen '
+              + 'mukaan päällikkö ei kuole vaan menee kylään.',
+          selite: 'Uutta jamssia ei saa syödä ennen Odwiraa: ensin ruoka '
+              + 'annetaan esivanhemmille.',
+        },
+        {
+          otsikko: 'Perintö kulkee äidin kautta',
+          // Kuvaton (Opus 6.9.2026): sukujärjestelmää ei voi valokuvata,
+          // eikä perheenjuhlista ole kasvotonta kuvaa.
+          teksti: 'Akaanit ovat matrilineaalinen kansa: sukuun kuulutaan '
+              + 'äidin kautta, ja sitä kautta periytyvät sekä omaisuus '
+              + 'että oikeus päällikkyyteen. Suvut eli abusuat ovat '
+              + 'kahdeksan — Oyoko, Bretuo, Agona, Asona, Asenie, Aduana, '
+              + 'Ekuona ja Asakyiri — ja jokainen niistä hallitsee alueita, '
+              + 'joiden perustajina niitä pidetään; Asanten kuningashuone '
+              + 'on Oyoko. Käytännössä tämä tarkoittaa, että päällikön '
+              + 'seuraaja ei ole hänen poikansa vaan hänen sisarensa poika. '
+              + 'Suvun sisällä vuorottelevat haarat, joita kutsutaan '
+              + 'keittiöiksi, ja kukin esittää vuorollaan oman ehdokkaansa.',
+          selite: 'Perhettä johtaa abusuapanyin, suvun vanhin; sama nimitys '
+              + 'on koko klaanin päälliköllä.',
+        },
+      ],
+    },
+  ],
+  SEN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Senegalin historiassa toistuu sama kysymys: kuka saa '
+          + 'puhua kansan puolesta — ja kenen suvun kautta valta kulkee.',
+      nostot: [
+        {
+          otsikko: 'Valtakunta, jonka perustaja puhui väärää kieltä',
+          aika: '1300–1549',
+          // Kuvaton (Opus 6.9.2026): Jolofin valtakunnan ajalta ei ole
+          // Commonsissa kuvaa, joka kestäisi lähdetarkistuksen.
+          teksti: 'Jolofin valtakunta hallitsi 1300-luvun puolivälistä '
+              + 'alkaen osia nykyisestä Senegalista, Mauritaniasta ja '
+              + 'Gambiasta. Se oli pitkään Malin valtakunnan vasalli, ja '
+              + 'sen väestö oli wolofeja, sereerejä ja fulaneja. '
+              + 'Perimätieto kertoo perustajaksi Ndiadiane Ndiayen, jonka '
+              + 'alkuperästä on monta versiota: toisten mukaan hän oli '
+              + 'almoravidien jälkeläinen, toisten mukaan fulani tai '
+              + 'sereeriprinssi. Kaikissa versioissa toistuu sama '
+              + 'yksityiskohta — hän lausui ensimmäiset sanansa pulaariksi '
+              + 'eikä wolofiksi, mikä teki hänestä jalosukuisen '
+              + 'muukalaisen. Dankin taistelu 1549 hajotti valtakunnan '
+              + 'itsenäisiksi kuningaskunniksi.',
+          selite: 'Jolofin nimi elää yhä ruokalajissa: jollof-riisi on '
+              + 'saanut nimensä tästä valtakunnasta.',
+        },
+        {
+          otsikko: 'Lingeer valitsi kuninkaan',
+          aika: '1846–1855',
+          // Kuvaton (Opus 6.9.2026): Waalon hallitsijoista ei ole
+          // Commonsissa vapaata aikalaiskuvaa.
+          teksti: 'Waalon kuningaskunta hallitsi Senegaljoen alajuoksua, ja '
+              + 'sen valta jakautui kahtia. Kuninkaan arvonimi oli brak, '
+              + 'mutta kruununperimys kulki kolmen äidin puolelta '
+              + 'periytyvän suvun — Logarin, Tedyekin ja Joosin — kautta, '
+              + 'ja niiden naispuolinen perijä lingeer valitsi kuninkaan '
+              + 'jakamaan valtaa kanssaan. Osa lingeereistä hallitsi myös '
+              + 'itse: Njembot Mbodj avioitui 1833 Trarzan emiirin kanssa '
+              + 'padotakseen ryöstöretket ja ranskalaisten etenemisen, ja '
+              + 'hänen sisarensa Ndaté Yalla Mbodj hallitsi vuodesta 1846. '
+              + 'Ranska valloitti Waalon 1855.',
+          selite: 'Joos-suku oli sereeritaustainen, ja sen kantaäitinä '
+              + 'pidetään Sinen lingeeriä Fatim Beyeä.',
+        },
+        {
+          otsikko: 'Ensimmäinen afrikkalainen Ranskan parlamentissa',
+          aika: '1914',
+          tiedosto: 'Blaise Diagne-Dakar-1918.jpg',
+          teksti: 'Blaise Diagne syntyi Goréen saarella 1872 lebou-'
+              + 'kokin ja bissaugbinealaisen äidin lapsena, ja hänet '
+              + 'kasvatti goréelainen Crespinin perhe. Hän työskenteli '
+              + 'Ranskan tullilaitoksessa Dahomeyssa, Madagaskarilla, '
+              + 'Réunionilla ja Ranskan Guayanassa, ennen kuin hänet '
+              + 'valittiin 10. toukokuuta 1914 Ranskan '
+              + 'edustajainhuoneeseen Senegalin neljän kunnan edustajana. '
+              + 'Hän oli ensimmäinen kokonaan länsiafrikkalaista syntyperää '
+              + 'ollut kansanedustaja Ranskassa ja ensimmäinen, joka sai '
+              + 'paikan maan hallituksessa. Edustajana hän istui '
+              + 'kuolemaansa 1934 asti.',
+          selite: 'Väkeä Dakarin satamassa Diagnen saapuessa 1918. Kuva on '
+            + 'ranskalaisesta Le Pays de France -lehdestä.',
+          lahde: 'Tuntematon kuvaaja, Le Pays de France 1918, Wikimedia '
+            + 'Commons (PD)',
+        },
+        {
+          otsikko: 'Runoilija, joka luopui vallasta itse',
+          aika: '1906–2001',
+          // Kuvaton (Opus 6.9.2026): Senghorista on Commonsissa vain
+          // ryhmäkuvia, joissa on tunnistettavia sivullisia.
+          teksti: 'Léopold Sédar Senghor syntyi Joalissa sereeriperheeseen '
+              + 'ja opiskeli Pariisissa, jossa hän kehitti 1930-luvulla '
+              + 'ystäviensä kanssa négritude-ajattelun: mustan kulttuurin '
+              + 'omanarvontunnon, joka ei hae hyväksyntää Euroopalta. Hän '
+              + 'oli runoilija ennen kaikkea muuta ja toimi Senegalin '
+              + 'ensimmäisenä presidenttinä 1960–1980. Vuosikymmeniin '
+              + 'mahtuu myös yksipuoluekausi ja pääministerin '
+              + 'vangitseminen; oppositiopuolueet sallittiin uudelleen '
+              + '1976. Senghor luopui vallasta itse 1980 ja luovutti sen '
+              + 'seuraajalleen — harvinaista siihen aikaan. Hänet '
+              + 'valittiin ensimmäisenä afrikkalaisena Ranskan akatemiaan.',
+          selite: 'Senghorin runot on kirjoitettu ranskaksi mutta sereerien '
+              + 'ja wolofien kuvakielellä; hän kutsui sitä mustan Afrikan '
+              + 'omaksi rytmiksi.',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Senegalissa ateria on yhteinen vati, jonka ympärille '
+          + 'mahtuu aina yksi lisää — se on teranga, vieraanvaraisuus.',
+      nostot: [
+        {
+          otsikko: 'Kansallisruoka syntyi ohran loputtua',
+          tiedosto: 'Partage d\'un repas de Thiéboudienne rouge à Ndiaganiao, Sénégal.jpg',
+          teksti: 'Ceebu jën tarkoittaa wolofiksi riisiä ja kalaa. Riisi, '
+              + 'kala ja vihannekset kypsennetään samassa padassa '
+              + 'tomaattikastikkeessa, ja annos kannetaan pöytään suurella '
+              + 'vadilla: riisi pohjalla, kala ja kokonaiset vihannekset '
+              + 'keskellä. Ruoka on peräisin 1800-luvun Saint-Louisin '
+              + 'kaupungista, ja suullinen perinne kertoo sen syntyneen, kun '
+              + 'kaupungin keittäjä Penda Mbaye korvasi loppuun päässeen '
+              + 'ohran riisillä. Unesco on ottanut ruoan aineettoman '
+              + 'kulttuuriperinnön luetteloonsa. Länsi-Afrikan jollof-riisi '
+              + 'polveutuu siitä, mutta se tehdään yleensä lihasta.',
+          selite: 'Vadin ympärillä syödään lusikalla tai sormin, ja jokainen '
+            + 'pitäytyy omassa lohkossaan.',
+          lahde: 'CelmaKoumba, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Sipulia enemmän kuin lihaa',
+          tiedosto: 'Poulet Yassa.JPG',
+          teksti: 'Yassa ei ole yksittäinen ruoka vaan valmistustapa: liha '
+              + 'tai kala marinoidaan ja haudutetaan. Tunnetuin muoto on '
+              + 'yassa ganaar eli kanayassa, jossa neljästä kuuteen isoa '
+              + 'sipulia kuoritaan yhtä kanaa kohti. Marinadiin tulee '
+              + 'sitruunan tai limetin mehua, sinappia, valkosipulia, '
+              + 'chiliä ja mustapippuria, ja kana saa maustua tunteja tai '
+              + 'yön yli. Sen jälkeen liha ruskistetaan ja sipulit '
+              + 'haudutetaan kastikkeeksi, joka tarjotaan riisin kanssa. '
+              + 'Ruoka on kotoisin Casamancesta Senegalin eteläosasta ja '
+              + 'levinnyt sieltä koko Länsi-Afrikkaan.',
+          selite: 'Kanayassan kastike on lähes kokonaan sipulia; sitruuna '
+            + 'ja sinappi tekevät siitä hapokkaan.',
+          lahde: 'Kinesira, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maapähkinä muhennoksena',
+          tiedosto: 'Mafé de poisson.jpg',
+          teksti: 'Mafé on maapähkinätahnasta keitetty muhennos, jossa on '
+              + 'lihaa tai kalaa, tomaattia ja juureksia. Se on Senegalin '
+              + 'ja Gambian arkiruokaa, ja mandingoksi sen nimi on '
+              + 'tigadɛgɛna, "maapähkinätahnakastike". Ruokahistorioitsijat '
+              + 'ovat eri mieltä sen iästä: mafén nykymuoto syntyi vasta '
+              + 'siirtomaakaudella, kun ranskalainen öljyteollisuus '
+              + 'laajensi maapähkinäviljelmiä Keski-Senegalissa ja hirssin '
+              + 'tilalle tuotiin murtoriisiä Kaakkois-Aasiasta. '
+              + 'Maapähkinä itse on kotoisin Etelä-Amerikasta; sitä '
+              + 'ennen Länsi-Afrikassa kasvatettiin bambaranmaapähkinää.',
+          selite: 'Kalamafé tarjotaan riisin kanssa; kastikkeen paksuus '
+            + 'tulee maapähkinästä eikä jauhoista.',
+          lahde: 'Arnaud 25, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kahvi, jossa on pippuria',
+          aika: '1902',
+          // Kuvaton (Opus 6.9.2026): café Touban myyjistä otetut kuvat
+          // ovat kasvokuvia tai vesileimattuja.
+          teksti: 'Café Touba on kahvia, johon on paahdettu mukaan '
+              + 'djar-maustetta eli guineanpippuria, joskus myös '
+              + 'neilikkaa. Pavut ja mausteet jauhetaan yhdessä, ja juoma '
+              + 'suodatetaan kuten tavallinen kahvi; seoksessa on noin '
+              + 'kahdeksankymmentä prosenttia kahvia ja kaksikymmentä '
+              + 'prosenttia maustetta. Nimi tulee Touban kaupungista, ja '
+              + 'juoman toi Senegaliin muridien veljeskunnan perustaja '
+              + 'Cheikh Amadou Bamba palatessaan maanpaosta Gabonista '
+              + '1902. Sitä tarjotaan juhlissa ja muistotilaisuuksissa, ja '
+              + '2000-luvulla se on levinnyt kadunkulmiin uskonnosta '
+              + 'riippumatta.',
+          selite: 'Guineanpippuri kasvaa Touban seudulla, ja se antaa '
+              + 'kahville pippurisen, hieman yrttisen jälkimaun.',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Senegalissa muusikko on usein myös arkistonhoitaja: '
+          + 'sukujen historia on kulkenut laulajien muistissa vuosisatoja.',
+      nostot: [
+        {
+          otsikko: 'Rumpu, jonka kalvo kiristetään tapeilla',
+          tiedosto: 'Gros plan sur un tambour Sabar et ses ornements.jpg',
+          teksti: 'Sabar on wolofien ja sereerien rumpu, jota soitetaan '
+              + 'yhdellä kädellä ja tamarindipuisella galan-kepillä. '
+              + 'Runko koverretaan dimb-puusta, jota kasvaa '
+              + 'Senegambiassa; veistäjät ovat laobé-käsityöläisiä, ja '
+              + 'vuohennahkainen kalvo kiinnitetään seitsemällä tapilla, '
+              + 'narulla ja punoksella. Sabar on myös tanssin ja '
+              + 'musiikkilajin nimi: häissä ja juhlissa miehet soittavat '
+              + 'ja naiset tanssivat. Kokoonpanossa on eri kokoisia '
+              + 'rumpuja omine nimineen — n\'der, thiol, goron, m\'beng '
+              + 'm\'beng, toungoné ja xiin. Tunnetuin soittaja oli Doudou '
+              + 'N\'Diaye Rose.',
+          selite: 'Tapit ja punos kiristävät kalvon; kireyttä säädetään '
+            + 'lyömällä tappeja syvemmälle.',
+          lahde: 'CelmaKoumba, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaksikymmentäyksi kieltä kurpitsan päällä',
+          tiedosto: 'La kora, instrument rituel et mémoire vivante 04.jpg',
+          teksti: 'Kora on 21-kielinen soitin, jota ei saa mahtumaan '
+              + 'mihinkään yhteen soitinluokkaan. Kaikupohja on '
+              + 'puoliksi leikattu kalebassi, jonka päälle on pingotettu '
+              + 'lehmännahka; kaulaksi on kova puu, ja kielet kulkevat '
+              + 'kahdessa rivissä pystyssä olevan tallan uurteissa. Siksi '
+              + 'sitä kutsutaan kaksitallaiseksi harppuluutuksi. Soittaja '
+              + 'näppäilee peukaloilla ja etusormilla ja pitää muilla '
+              + 'sormilla kiinni kahvoista. Samaan aikaan soivat toistuva '
+              + 'kumbengo-kuvio ja improvisoitu birimintingo — vasen ja '
+              + 'oikea käsi tekevät eri asiaa.',
+          selite: 'Kora on perinteisesti jali-sukujen soitin, ja moderneihin '
+            + 'soittimiin asennetaan nykyään mikrofoni kalebassin sisään.',
+          lahde: '4MAPS, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kirjaston paikkaa piti ihminen',
+          tiedosto: 'BaobabGriots.jpg',
+          teksti: 'Griotti on länsiafrikkalainen historioitsija, laulaja ja '
+              + 'runoilija, joka säilyttää suvun ja kansan historian '
+              + 'muistissaan. Wolofiksi ammatti on gewel, sereeriksi paar '
+              + 'tai kewel ja mandingoksi jali. Kirjojen sijaan kertoja '
+              + 'käyttää mittaa, kertosäkeitä ja soitinta, ja niiden avulla '
+              + 'sukupolvien takaiset tapahtumat pysyvät järjestyksessä. '
+              + 'Griotti on myös neuvonantaja ja sovittelija: hallitsijan '
+              + 'rinnalla oli aina joku, jonka työtä oli muistaa, mitä '
+              + 'edellinen hallitsija oli luvannut. Ammatti periytyy '
+              + 'suvussa isältä ja äidiltä lapselle.',
+          selite: 'Bandian suojelualueella on baobab, jonka onttoon runkoon '
+            + 'on haudattu griotteja.',
+          lahde: 'Ji-Elle, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Sabar sähköbassolla',
+          aika: '1970-luku',
+          // Kuvaton (Opus 6.9.2026): mbalax-esiintyjistä on Commonsissa
+          // vain lähikuvia kasvoista.
+          teksti: 'Mbalax on Senegalin, Gambian ja Mauritanian '
+              + 'kaupunkien tanssimusiikkia. Se syntyi 1970-luvulla, kun '
+              + 'senegalilaiset yhtyeet alkoivat soittaa sabar-rytmejä '
+              + 'sähköbassolla, kitaralla ja koskettimilla ja laulaa '
+              + 'wolofiksi ranskan sijaan. Sekaan sulautettiin soulia, '
+              + 'jazzia, salsaa, kongolaista rumbaa ja rockia. Lajin '
+              + 'pohjalla on sereerien uskonnollinen njuup-perinne. '
+              + 'Tunnetuin mbalax-laulaja on Youssou N\'Dour, joka aloitti '
+              + 'esiintymisen kaksitoistavuotiaana ja soitti 1970-luvulla '
+              + 'Dakarin suosituimmassa Star Bandissa. Tanssilattialla '
+              + 'yleisö palkitsee laulajan kuin griotin.',
+          selite: 'Mbalaxin nimi tulee sabar-rummutuksen säestävästä '
+              + 'rytmistä.',
+        },
+      ],
+    },
+    {
+      id: 'elokuva',
+      nimi: 'Elokuva',
+      johdanto: 'Senegal on afrikkalaisen elokuvan syntymaita: ensimmäinen '
+          + 'elokuva kuvattiin Pariisissa, koska siirtomaassa se oli '
+          + 'käytännössä mahdotonta.',
+      nostot: [
+        {
+          otsikko: 'Ensimmäinen elokuva kuvattiin Seinen rannalla',
+          aika: '1955',
+          // Kuvaton (Opus 6.9.2026): Paulin Vieyrasta tai hänen
+          // elokuvistaan ei ole Commonsissa vapaata kuvaa.
+          teksti: 'Senegalilaisen elokuvan ensimmäinen teos on Paulin '
+              + 'Soumanou Vieyran lyhytelokuva Afrique-sur-Seine vuodelta '
+              + '1955, joka kuvattiin Pariisissa. Vieyra jatkoi '
+              + 'lyhytelokuvilla, jotka kertoivat Moskovasta, Nigeristä ja '
+              + 'siirtomaiden itsenäistymisestä; vuoden 1960 dokumentti '
+              + 'seurasi Kamerunin, Togon, Kongon ja Madagaskarin '
+              + 'itsenäistymistä. Varsinaisesti elokuva-ala lähti käyntiin '
+              + 'vasta Senegalin itsenäistyttyä 1960. Maasta tuli '
+              + 'nopeasti afrikkalaisen elokuvan keskuksia, ja sen '
+              + 'kulta-aika kesti 1960-luvulta 1980-luvun alkuun.',
+          selite: 'Vieyra opiskeli elokuvakoulussa Pariisissa ja toimi '
+              + 'myöhemmin myös afrikkalaisen elokuvan historioitsijana.',
+        },
+        {
+          otsikko: 'Satamatyöläisestä elokuvan isäksi',
+          aika: '1923–2007',
+          tiedosto: 'Monument Ousmane Sembene à l\'UCAD 03.jpg',
+          teksti: 'Ousmane Sembène syntyi kalastajan poikana Ziguinchorissa, '
+              + 'jätti koulun viisitoistavuotiaana ja teki Dakarissa '
+              + 'ruumiillisia töitä. Sotavuosien jälkeen hän matkusti '
+              + 'salamatkustajana Ranskaan, työskenteli Citroënin '
+              + 'tehtaalla ja Marseillen satamassa ja opetteli itse '
+              + 'lukemaan ja kirjoittamaan ranskaa. Ensimmäinen romaani '
+              + 'ilmestyi 1956. Koska kirjat eivät tavoittaneet lukutaidotonta '
+              + 'yleisöä, hän opiskeli 1962–1963 elokuvantekoa Moskovassa. '
+              + 'Lyhytelokuva Borom Sarret valmistui 1963, ja La Noire de… '
+              + 'oli 1966 ensimmäinen Saharan eteläpuolisen afrikkalaisen '
+              + 'ohjaama pitkä elokuva.',
+          selite: 'Sembènen muistomerkki Dakarin yliopiston edessä. Hänen '
+            + 'elokuvansa Mandabi (1968) oli ensimmäinen wolofinkielinen.',
+          lahde: '4MAPS, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ousmane Sembène',
+        },
+        {
+          otsikko: 'Näyttelijä, joka erotettiin ja teki mestariteoksen',
+          aika: '1973',
+          // Kuvaton (Opus 6.9.2026): Mambétystä ei ole Commonsissa
+          // vapaata kuvaa.
+          teksti: 'Djibril Diop Mambéty syntyi 1945 Colobanessa Dakarin '
+              + 'liepeillä ja työskenteli näyttelijänä Dakarin '
+              + 'kansallisteatterissa, kunnes hänet erotettiin '
+              + 'kurinpitosyistä. Ilman elokuvakoulutusta hän ohjasi '
+              + '23-vuotiaana ensimmäisen lyhytelokuvansa Contras\' City '
+              + 'ja seuraavana vuonna Badou Boyn, joka voitti hopeisen '
+              + 'Tanitin Karthagon elokuvajuhlilla. Vuoden 1973 Touki '
+              + 'Bouki on hänen tunnetuin työnsä: kahden nuoren matka '
+              + 'kohti Pariisia kerrotaan katkonaisena, unenomaisena '
+              + 'kuvavirtana. Se sai kriitikoiden palkinnon Cannesissa. '
+              + 'Kaikkiaan Mambéty teki vain viisi pitkää elokuvaa.',
+          selite: 'Touki Bouki tarkoittaa wolofiksi hyeenan matkaa.',
+        },
+        {
+          otsikko: 'Kultainen karhu isovanhempien maasta',
+          aika: '2019–2024',
+          // Kuvaton (Opus 6.9.2026): Mati Diopista on Commonsissa vain
+          // lähikuvia kasvoista.
+          teksti: 'Mati Diop on Djibril Diop Mambétyn veljentytär ja '
+              + 'muusikko Wasis Diopin tytär, ja hän kasvoi Pariisin ja '
+              + 'Senegalin väliä. Vuonna 2019 hänen ensimmäinen pitkä '
+              + 'elokuvansa Atlantics sai Cannesin toiseksi suurimman '
+              + 'palkinnon, Grand Prix\'n. Vuonna 2024 dokumentti Dahomey '
+              + 'voitti Berliinin elokuvajuhlien Kultaisen karhun; se '
+              + 'kertoo Ranskan Beninille palauttamista kuninkaallisista '
+              + 'esineistä. Senegalilainen elokuva on 2010-luvulta lähtien '
+              + 'elpynyt uudelleen, ja valtio on tukenut sitä omalla '
+              + 'rahastollaan vuodesta 2015. Uuden aallon tekijöistä moni '
+              + 'on nainen.',
+          selite: 'Dahomey seuraa esineitä matkalla museosta takaisin '
+              + 'kotiin ja antaa yhdelle patsaalle äänen.',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Senegalin maisema vaihtuu pohjoisen kuivasta sahelista '
+          + 'etelän jokimetsiin — ja välissä on järvi, joka on '
+          + 'vaaleanpunainen.',
+      nostot: [
+        {
+          otsikko: 'Puu, joka kasvaa väärinpäin',
+          tiedosto: 'Baobab and palm trees at the outskirts of Thiès 2007.jpg',
+          teksti: 'Baobabien suku Adansonia on nimetty ranskalaisen '
+              + 'luonnontutkijan Michel Adansonin mukaan, joka kuvasi lajin '
+              + 'ensimmäisenä tarkasti Senegalissa 1700-luvulla. Lajeja on '
+              + 'kahdeksan, ja niitä kasvaa Afrikassa, Madagaskarilla ja '
+              + 'Australiassa. Puuta kutsutaan ylösalaisin kasvavaksi, '
+              + 'koska paksun rungon päällä olevat oksat näyttävät '
+              + 'juurilta. Baobabit ovat pitkäikäisimpiä kasveja, mutta '
+              + 'niiden kukat elävät korkeintaan viisitoista tuntia: ne '
+              + 'avautuvat hämärässä niin nopeasti, että liikkeen näkee '
+              + 'paljain silmin. Runko varastoi vettä, ja hedelmästä '
+              + 'saadaan hapanta jauhetta.',
+          selite: 'Baobabi Thièsin laitamilla. Kuivana kautena puu on '
+            + 'lehdetön, ja silloin sen "juuret taivaalla" näkyvät '
+            + 'parhaiten.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)',
+          wiki: 'Apinanleipäpuu',
+        },
+        {
+          otsikko: 'Järvi, joka on vaaleanpunainen',
+          tiedosto: 'Salt Boats (5990890819).jpg',
+          teksti: 'Retba-järvi eli Lac Rose on 35 kilometriä Dakarista '
+              + 'koilliseen, ja sen erottaa Atlantista vain kapea '
+              + 'dyynikaista. Vesi on paikoin neljänkymmenen prosentin '
+              + 'suolapitoisuudessa, joten siinä kelluu kuin Kuolleessa '
+              + 'meressä. Väri tulee Dunaliella salina -levästä, joka '
+              + 'tuottaa punaista väriainetta pyydystääkseen enemmän '
+              + 'auringonvaloa; sävy on vahvimmillaan kuivana kautena '
+              + 'tammikuun lopusta maaliskuun alkuun. Suolaa nostaa '
+              + 'järvestä jopa kolmetuhatta kerääjää eri puolilta '
+              + 'Länsi-Afrikkaa. Syksyn 2022 tulvat veivät värin, mutta '
+              + 'vuoteen 2025 mennessä se oli palannut osittain.',
+          selite: 'Leijakameralla otetussa kuvassa suolaveneet ja rannalle '
+            + 'kasatut suolakeot erottuvat järven punaista vasten.',
+          lahde: 'Jeff Attaway, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Puisto, joka pääsi pois uhanalaisten listalta',
+          aika: '2024',
+          tiedosto: 'Parc de Niokolo-Koba, Sénégal - COD260725-058.jpg',
+          teksti: 'Niokolo-Koban kansallispuisto Kaakkois-Senegalissa on '
+              + 'yli yhdeksäntuhatta neliökilometriä savannimetsää, jonka '
+              + 'halki virtaa Gambiajoen yläjuoksu. Alue suojeltiin 1925, '
+              + 'siitä tuli kansallispuisto 1954 ja maailmanperintökohde '
+              + '1981. Puistossa kasvaa yli 1 500 kasvilajia, ja siellä on '
+              + '78 prosenttia koko maan jokivarsimetsistä. Vuonna 2007 '
+              + 'Unesco siirsi puiston vaarantuneiden maailmanperintö'
+              + 'kohteiden listalle, koska salametsästys ja laiduntaminen '
+              + 'olivat vähentäneet eläinkantoja. Listalta se poistettiin '
+              + '2024, kun tilanne oli kohentunut.',
+          selite: 'Sadekauden jälkeen puiston tasangot ovat vihreitä; '
+            + 'kuivana kautena eläimet kerääntyvät joen varteen.',
+          lahde: 'COD photographer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Muuri, joka on puita',
+          aika: '2007',
+          // Kuvaton (Opus 6.9.2026): Suuren vihreän muurin istutuksista ei
+          // löytynyt Commonsista kuvaa, jonka sijainti olisi varmistettu.
+          teksti: 'Afrikan unioni hyväksyi 2007 hankkeen nimeltä Suuri '
+              + 'vihreä muuri. Alkuperäinen ajatus oli istuttaa '
+              + 'viidentoista kilometrin levyinen ja 7 775 kilometrin '
+              + 'pituinen puuvyöhyke Djiboutista Dakariin pysäyttämään '
+              + 'Saharan leviäminen. Ajatus on sittemmin muuttunut: koska '
+              + 'aavikon reuna liikkuu sateiden mukaan, hankkeesta on '
+              + 'tullut tilkkutäkki, jossa kerätään sadevettä, suojellaan '
+              + 'olemassa olevaa kasvillisuutta ja parannetaan '
+              + 'perinteisiä viljelytapoja. Tavoitteena on kunnostaa '
+              + 'sata miljoonaa hehtaaria maata vuoteen 2030 mennessä.',
+          selite: 'Muurin läntinen pää on Senegalissa, ja siellä hanke on '
+              + 'edennyt pisimmälle.',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä tekee Retba-järven vedestä vaaleanpunaista?',
+        vaihtoehdot: [
+          'Punainen savi järven pohjassa',
+          'Levä, joka tuottaa punaista väriainetta',
+          'Rautapitoinen lähdevesi',
+          'Auringonlaskun heijastus',
+        ],
+        oikea: 1,
+        fakta: 'Dunaliella salina -levä tekee punaista väriainetta '
+            + 'kerätäkseen enemmän auringonvaloa suolaisessa vedessä.',
+      },
+    },
+  ],
 };

@@ -67,6 +67,11 @@ const SALLITUT = [
   'https://www.hespress.com/',
   'https://www.tsa-algerie.com/',
   'https://africanmanager.com/',
+  // Nigerian, Ghanan ja Senegalin uutislähteet (maalehdet 6.9.2026):
+  // syöte ja artikkelisivut samalla isäntänimellä.
+  'https://dailytrust.com/',
+  'https://www.adomonline.com/',
+  'https://aps.sn/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

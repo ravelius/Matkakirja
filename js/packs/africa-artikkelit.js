@@ -495,9 +495,22 @@ export const OMAT_ARTIKKELIT = {
       + 'kuuluvat kahvilan pöytään joka korttelissa.',
   },
   Senegal: {
-    intro: 'Senegal on Länsi-Afrikan vakaimpia maita Atlantin '
-      + 'rannalla — terangan eli vieraanvaraisuuden maa, jossa '
-      + 'sabar-rummut ja mbalax pitävät tahtia.',
+    // Pidennetty maalehden (MAA_KATEGORIAT.SEN) yhteydessä 6.9.2026:
+    // maalehden etusivun maaosasto näyttää tämän intron sellaisenaan,
+    // joten sen pitää kantaa yksin. Sama malli kuin Egyptillä.
+    intro: 'Senegal on Afrikan läntisin maa, ja sen niemeltä on koko '
+      + 'mantereen lyhyin merimatka Amerikkaan. Maisema vaihtuu '
+      + 'pohjoisen kuivasta sahelista etelän Casamancen vehreyteen, ja '
+      + 'pohjoisrajaa pitkin virtaa Senegaljoki. Keskiajalla aluetta '
+      + 'hallitsi Jolofin valtakunta, ja Waalossa kuninkaan valitsi '
+      + 'lingeer eli äidin puolelta periytyvän suvun naispuolinen '
+      + 'perijä. Vieraanvaraisuudesta puhutaan sanalla teranga: ateria '
+      + 'syödään yhteiseltä vadilta, ja sen ympärille mahtuu aina yksi '
+      + 'lisää. Musiikissa soivat sabar-rummut, 21-kielinen kora ja '
+      + 'mbalax, ja griotit ovat säilyttäneet sukujen historian '
+      + 'muistissaan vuosisatoja. Ensimmäinen presidentti Léopold Sédar '
+      + 'Senghor oli runoilija, ja maasta tuli 1960-luvulla myös '
+      + 'afrikkalaisen elokuvan keskus.',
     artikkeli: 'Senegal sijaitsee Afrikan läntisimmässä kulmassa. '
       + 'Maisema on enimmäkseen matalaa savannia, jonka halki '
       + 'Senegaljoki virtaa pohjoisrajalla; ilmasto vaihettuu '
@@ -546,9 +559,21 @@ export const OMAT_ARTIKKELIT = {
       + 'sukupolvien ketjuna.',
   },
   Nigeria: {
+    // Pidennetty maalehden (MAA_KATEGORIAT.NGA) yhteydessä 6.9.2026:
+    // maalehden etusivun maaosasto näyttää tämän intron sellaisenaan.
     intro: 'Nigeria on Afrikan väkirikkain maa — joka kuudes '
-      + 'afrikkalainen on nigerialainen. Sadat kansat, kielet ja '
-      + 'kaupungit tekevät siitä mantereen suurimman kulttuurimahdin.',
+      + 'afrikkalainen on nigerialainen. Maan halki virtaavat Niger ja '
+      + 'Benue, ja etelän sademetsän ja pohjoisen sahelin väliin mahtuu '
+      + 'satoja kansoja ja kieliä. Jorubien Ifessä valettiin 1200-luvulta '
+      + 'alkaen kuparipäitä, joiden luonnonmukaisuus romutti '
+      + 'eurooppalaisten käsityksen afrikkalaisesta taiteesta, ja '
+      + 'pohjoisen hausakaupungeissa kirjoitettiin arabialaisin '
+      + 'kirjaimin neljällä kielellä. Nykyään Lagos on mantereen '
+      + 'suurimpia kaupunkeja, ja sen musiikki soi kaikkialla: afrobeat '
+      + 'syntyi täällä, ja Nollywood tekee enemmän elokuvia kuin '
+      + 'Hollywood. Amos Tutuola, Chinua Achebe ja Wole Soyinka '
+      + 'kirjoittivat nigerialaisen kirjallisuuden maailmankartalle. '
+      + 'Toreilla tingitään jollof-riisin tuoksussa sadalla kielellä.',
     artikkeli: 'Nigeria sijaitsee Guineanlahden rannalla Länsi-'
       + 'Afrikassa. Maan halki virtaavat Niger- ja Benuejoet, jotka '
       + 'yhtyvät keskellä maata; etelässä on sademetsää ja '
@@ -571,9 +596,22 @@ export const OMAT_ARTIKKELIT = {
       + 'tuoksussa sadalla kielellä.',
   },
   Ghana: {
-    intro: 'Ghana oli Mustan Afrikan ensimmäinen itsenäistynyt '
-      + 'siirtomaa ja on nykyään yksi mantereen vakaimmista maista. '
-      + 'Kulta, kaakao ja kente-kangas ovat sen tunnusmerkit.',
+    // Pidennetty maalehden (MAA_KATEGORIAT.GHA) yhteydessä 6.9.2026:
+    // maalehden etusivun maaosasto näyttää tämän intron sellaisenaan.
+    intro: 'Ghana oli ensimmäinen itsenäistynyt siirtomaa Saharan '
+      + 'eteläpuolisessa Afrikassa: musta tähti nostettiin Accrassa '
+      + '6. maaliskuuta 1957. Nimi lainattiin keskiaikaiselta '
+      + 'valtakunnalta, joka sijaitsi yli tuhannen kilometrin päässä '
+      + 'nykyisistä rajoista. Rannikolla on laguuneja ja linnakkeita, '
+      + 'sisämaassa sademetsää ja pohjoisessa savannia, ja itälaidalla '
+      + 'lepää Voltajärvi, yksi maailman suurimmista tekojärvistä. '
+      + 'Sisämaata hallitsi Asanten valtakunta, joka punnitsi '
+      + 'kultahiekkansa messinkipunnuksilla — ja jokainen punnus '
+      + 'kertoi sananlaskun. Kaakao tuli maahan sepän matkatavaroissa '
+      + '1876 ja teki siitä yhden maailman suurimmista suklaan '
+      + 'raaka-aineen tuottajista. Arkena syödään waakyeta ja kenkeytä '
+      + 'shiton kanssa, juhlassa pukeudutaan kenteen, ja ovella '
+      + 'sanotaan akwaaba.',
     artikkeli: 'Ghana sijaitsee Guineanlahden rannalla. Rannikolla on '
       + 'laguuneja ja kalastajakyliä, sisämaassa sademetsää ja '
       + 'pohjoisessa savannia; maan itälaidalla on Voltajärvi, yksi '

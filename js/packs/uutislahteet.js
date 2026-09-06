@@ -397,4 +397,45 @@ export const UUTISLAHTEET = {
     kieli: 'fr',
     syote: 'https://africanmanager.com/feed/',
   },
+  /*
+   * Nigerian, Ghanan ja Senegalin lähteet (maalehdet NGA/GHA/SEN,
+   * Opus 6.9.2026). Kaikki kolme läpäisivät MOLEMMAT testit: syöte
+   * aukeaa ja artikkelisivun ensimmäisestä <article>-lohkosta jäsentyy
+   * yli 60 merkin kappaleita, ja sivulla on og:image.
+   *
+   * Testattu ja hylätty Nigeriassa: Punch (syötteessä ei <item>-alkioita
+   * lainkaan), Premium Times ja Vanguard (syöte ja og:image kunnossa,
+   * mutta sivun ENSIMMÄINEN <article> on sivupalkin juttukortti, josta
+   * ei jäsenny yhtään pitkää kappaletta — juuri sen js/uutiset.js
+   * poimii), Guardian Nigeria, TheCable ja The Nation (403), Channels TV
+   * (artikkelisivu 403). Nigerian Tribune läpäisi testit ja on varalla.
+   */
+  NGA: {
+    nimi: 'Daily Trust',
+    kieli: 'en',
+    syote: 'https://dailytrust.com/feed/',
+  },
+  /*
+   * Ghanassa hylättiin MyJoyOnline ja GBC (syöte kunnossa, mutta
+   * artikkelisivulta ei jäsenny leipätekstiä), 3news (sama), Graphic
+   * Online (ei og:imagea) ja GhanaWeb (syöteosoite 404). Ghanaian Times
+   * läpäisi testit ja on varalla.
+   */
+  GHA: {
+    nimi: 'Adom Online',
+    kieli: 'en',
+    syote: 'https://www.adomonline.com/feed/',
+  },
+  /*
+   * Senegalissa APS eli Agence de Presse Sénégalaise oli ainoa, jonka
+   * artikkelisivulta leipäteksti jäsentyy. Hylätyt: Le Soleil,
+   * Dakaractu, PressAfrik ja Senego (syöte ja og:image kunnossa, mutta
+   * ei <article>-lohkoa tai ei pitkiä kappaleita), Seneweb ja IGFM
+   * (syöteosoite 404), Sud Quotidien (ei vastausta).
+   */
+  SEN: {
+    nimi: 'APS',
+    kieli: 'fr',
+    syote: 'https://aps.sn/feed/',
+  },
 };

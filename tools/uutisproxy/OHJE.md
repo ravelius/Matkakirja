@@ -24,6 +24,17 @@
 > perustelut ovat js/packs/uutislahteet.js:n TUN-kommentissa.
 > Julkaisu Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Nigeria, Ghana, Senegal):** sallittuihin
+> lisättiin dailytrust.com, www.adomonline.com ja aps.sn (maalehdet
+> NGA/GHA/SEN, testattu 6.9.2026: syöte aukeaa, artikkelisivun
+> ensimmäisestä `<article>`-lohkosta jäsentyy leipäteksti ja `og:image`
+> löytyy). Nigeriassa hylättiin muun muassa Premium Times ja Vanguard:
+> niiden sivun ensimmäinen `<article>` on sivupalkin juttukortti, josta
+> ei jäsenny yhtään yli 60 merkin kappaletta — ja juuri sen
+> js/uutiset.js poimii. Muut hylätyt on lueteltu
+> js/packs/uutislahteet.js:n kommenteissa. Julkaisu Git-integraatiolla
+> mainista.
+>
 > **Päivitys 6.9.2026 (Papua-Uusi-Guinea, Salomonsaaret):**
 > sallittuihin lisättiin www.postcourier.com.pg ja
 > theislandsun.com.sb (maalehdet PNG/SLB, testattu 6.9.2026: syötteessä
