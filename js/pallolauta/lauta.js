@@ -111,6 +111,41 @@ export const PALLOLAUDAN_KERROKSET = ['pointsData', 'htmlElementsData', 'pathsDa
  * kaupunkipisteen kokoa (savuke-pallolauta, kaappaus pallolauta-sofia).
  */
 export const KAUPUNKIPISTEEN_SADE = 0.03;
+/*
+ * PISTE ON LEVY, EI TAPPI (omistaja 6.9.2026 ilta, iPhone, sanatarkasti:
+ * *"piste venyy kun karttaa panoroi"*). Globe.gl piirtää pointsDatan
+ * LIERIÖNÄ pinnasta korkeuteen: kaupunkipiste on 0,3 yksikköä korkea
+ * (0,003 × säde 100) mutta vain 0,105 leveä eli kolme kertaa korkeampi
+ * kuin leveä — tappi, ei täplä (askelhelmi 0,25 × 0,05, viisinkertainen).
+ * Lähikuvassa kamera on vain 8 yksikön päässä pinnasta, joten ruudun
+ * keskellä tappi näkyy päästä (pyöreänä) mutta laidalla sivusta: vaippa
+ * piirtyy pinnan pisteestä kohti kattoa kapseliksi, ja nappulan jalka
+ * (html-merkki korkeudella 0,004) on vielä kauempana. Levossa nappula
+ * seisoo pisteen päällä ruudun keskellä, joten vika näkyy vasta kun
+ * karttaa panoroi ja piste siirtyy laidalle. Mitattu 6.9.2026 (Chromium
+ * 390 × 844 dpr 2, korkeus 0,08, erotuskuva piste näkyvissä/piilossa,
+ * nappula piilotettuna): keskellä 22 × 22 laitepikseliä; 334 css-px
+ * keskustasta lieriö 22 × 50, pääakselien suhde 2,2 (v1640: 22 × 41 —
+ * sen 1,001-säteinen lepokerros peitti vaipan juuren, liikkeessä sekin
+ * oli poissa; lepokerros ei siis ole syy vaan geometria). Levynä samasta
+ * paikasta 22 × 23, suhde 1,0.
+ *
+ * KORJAUS: jokaisen pisteen geometria vaihdetaan LEVYYN — pelkkä lieriön
+ * kansi sen yläpäässä (kirjaston paikallinen z = −1, jonka scale.z vie
+ * korkeuteen), ei vaippaa. Levy on täsmälleen siinä, missä lieriön kansi
+ * oli, joten korkeus, väri, napautus (raycast kanteen) ja siirtymät
+ * (pointsTransitionDuration skaalaa z:aa) ovat ennallaan. Vaihto tehdään
+ * pointRadius-luennassa: kirjasto sitoo olion datumiin ennen luentaa
+ * (data-joint: createObj → updateObj), ja luenta ajetaan täsmälleen
+ * silloin kun olio päivittyy — ei ylimääräistä kehyssilmukkaa. Geometria
+ * rakennetaan kirjaston omilla luokilla ensimmäisestä lieriöstä, koska
+ * pallolaudalla ei ole omaa THREE-tuontia (vrt. js/pallo.js
+ * kolmiulotteinen). HYLÄTTY: pointAltitude pienemmäksi — kirjaston
+ * lattia on 0,1 yksikköä (yhä lähes leveyden mittainen vaippa) ja
+ * korkeus on pisteiden piirtojärjestys; oma Object3D-kerros omilla
+ * levyillä — toinen napautus- ja siirtymäpolku samalle asialle.
+ */
+export const PISTELEVYN_SIVUT = 24;
 /** Merkkien ilmestymisen ja paikanvaihdon kesto (ms). */
 export const MERKKIEN_SIIRTYMA_MS = 250;
 /** Napautuksen osuma ruudulla: lähin kaupunki tai kohde tämän säteen sisällä (px). */
@@ -200,6 +235,74 @@ export function kaupunkipisteenVari(kaupunki) {
   if (kaupunki.kayty) return '#d9a13b';
   if (kaupunki.alku) return '#b28a4a';
   return '#3a2716';
+}
+
+/**
+ * Levyn kärjet, normaalit ja kolmiot kirjaston lieriön paikallisessa
+ * kehyksessä (ks. PISTE ON LEVY): kansi tasossa z = −1 eli lieriön
+ * yläpäässä (kirjasto skaalaa z:n korkeudeksi ja kääntää +z:n pallon
+ * keskustaan, joten −z on pinnasta ulospäin), normaali −z, kolmiot
+ * vastapäivään ulkoa katsottuna (FrontSide). Säde 1: scale.x/y antaa
+ * pisteen säteen kuten lieriöllä.
+ */
+export function pistelevynPuskurit(sivut = PISTELEVYN_SIVUT) {
+  const paikat = new Float32Array((sivut + 1) * 3);
+  const normaalit = new Float32Array((sivut + 1) * 3);
+  paikat[2] = -1;
+  normaalit[2] = -1;
+  for (let i = 0; i < sivut; i += 1) {
+    const kulma = (i / sivut) * 2 * Math.PI;
+    const k = (i + 1) * 3;
+    paikat[k] = Math.cos(kulma);
+    paikat[k + 1] = Math.sin(kulma);
+    paikat[k + 2] = -1;
+    normaalit[k + 2] = -1;
+  }
+  const indeksit = [];
+  // Keskipiste, seuraava, nykyinen: myötäpäivään +z:sta katsottuna on
+  // vastapäivään −z:sta eli ulkoa katsottuna.
+  for (let i = 0; i < sivut; i += 1) indeksit.push(0, ((i + 1) % sivut) + 1, i + 1);
+  return { paikat, normaalit, indeksit };
+}
+
+/**
+ * Levygeometria kirjaston omilla luokilla mallilieriöstä: BufferGeometry
+ * on lieriön kantaluokka ja attribuutin luokka luetaan sen position-
+ * attribuutista (sama kaava kuin js/pallo.js kolmiulotteinen). Null,
+ * jos kirjaston muoto on vaihtunut — piste jää silloin lieriöksi.
+ */
+export function pistelevyGeometria(malli) {
+  const Geometria = Object.getPrototypeOf(malli?.constructor?.prototype ?? {})?.constructor;
+  const Attribuutti = malli?.attributes?.position?.constructor;
+  if (typeof Geometria !== 'function' || typeof Attribuutti !== 'function') return null;
+  const { paikat, normaalit, indeksit } = pistelevynPuskurit();
+  const levy = new Geometria();
+  levy.setAttribute('position', new Attribuutti(paikat, 3));
+  levy.setAttribute('normal', new Attribuutti(normaalit, 3));
+  levy.setIndex(indeksit);
+  levy.userData = { ...(levy.userData ?? {}), pistelevy: true };
+  return levy;
+}
+
+/**
+ * Pisteiden litistäjä yhdelle pallolle: vaihtaa datumin olion lieriön
+ * yhteiseen levyyn kerran per olio (ks. PISTE ON LEVY). Levy rakennetaan
+ * ensimmäisestä lieriöstä ja puretaan laudan mukana.
+ */
+export function luoPisteidenLitistaja() {
+  let levy = null;
+  return {
+    litista(d) {
+      const o = d?.__threeObjPoint;
+      if (!o?.geometry || o.geometry.userData?.pistelevy) return false;
+      levy ??= pistelevyGeometria(o.geometry);
+      if (!levy) return false;
+      o.geometry = levy;
+      return true;
+    },
+    levy: () => levy,
+    pura() { levy?.dispose?.(); levy = null; },
+  };
 }
 
 /** Laudan kohta (x, y) asteiksi ({ lat, lon }) — yksi totuus on lauta. */
@@ -967,6 +1070,7 @@ export async function avaaPallolauta(ui) {
     else napautaNosto(voittaja.o);
   };
 
+  const litistaja = luoPisteidenLitistaja();
   pallo
     .pointsData([])
     .pointLat('lat').pointLng('lon')
@@ -981,6 +1085,9 @@ export async function avaaPallolauta(ui) {
       return 0.003;
     })
     .pointRadius((d) => {
+      // Lieriö levyksi tässä luennassa (PISTE ON LEVY): olio on jo
+      // sidottu datumiin, ja luenta osuu täsmälleen olion päivitykseen.
+      litistaja.litista(d);
       if (d.laji === 'helmi') return REITTIHELMEN_SADE;
       if (d.laji === 'valo') return VALON_SADE;
       return KAUPUNKIPISTEEN_SADE;
@@ -1277,6 +1384,7 @@ export async function avaaPallolauta(ui) {
       document.removeEventListener('visibilitychange', tahdistaLepo);
       kamera.pysaytaKameraAjo();
       eleet.pura();
+      litistaja.pura();
       merkit.pura();
       noppaTakaisin();
       lauta.linssit?.pura();

@@ -2486,3 +2486,43 @@ tauon jälkeinen kehyspiikki katosi (max 517 ms = muiden kehysten
 tasoa). Laattamoottorin oma lepo (260 ms, kynnykset, pikselisuhde) on
 ennallaan — liikkeessä pallo piirtyy täsmälleen kuten v1638.
 
+
+**Pisteet pallolla — levy ja aarrepiste (6.9.2026 ilta, iPhone).**
+Omistaja: *"piste venyy kun karttaa panoroi. nyt kartta ei tökkinyt
+enää"* ja *"aarteen piste syttyy liian lähelle ateenaa, ei pysty
+painamaan"*, *"sama ongelma myös sofiassa"*. (1) VENYMÄ oli geometriaa,
+ei liikettä: Globe.gl piirtää `pointsData`n lieriönä pinnasta
+korkeuteen, ja kaupunkipiste (säde 0,03, korkeus 0,003) on 0,3 yksikköä
+korkea mutta 0,105 leveä eli tappi (askelhelmi 0,25 × 0,05). Lähikuvassa
+kamera on 8 yksikön päässä pinnasta: keskellä tappi näkyy päästä, mutta
+laidalla vaippa piirtyy kapseliksi pinnan pisteestä kohti kattoa, ja
+nappulan jalka (html-merkki korkeudella 0,004) on vielä kauempana —
+levossa nappula seisoo pisteen päällä ruudun keskellä, joten vika näkyi
+vasta panoroitaessa. Mitattu (Chromium 390 × 844 dpr 2, korkeus 0,08,
+erotuskuva piste näkyvissä/piilossa nappula piilotettuna): keskellä
+22 × 22 laitepikseliä; 334 css-px keskustasta lieriö 22 × 50, pääakselien
+suhde 2,2 — sama v1640:ssä (22 × 41; sen 1,001-säteinen lepokerros
+peitti vaipan juuren levossa, liikkeessä sekin oli poissa) ja
+v1641:ssä; lepokerros ei siis ole syy. Korjaus
+(`js/pallolauta/lauta.js` `luoPisteidenLitistaja`): jokaisen pisteen
+geometria vaihdetaan LEVYYN — lieriön kansi yläpäässä (paikallinen
+z = −1, jonka `scale.z` vie korkeuteen), normaali ulospäin, ei vaippaa —
+`pointRadius`-luennassa, jolloin kirjasto on jo sitonut olion datumiin;
+geometria rakennetaan kirjaston omilla luokilla ensimmäisestä lieriöstä
+(vrt. `js/pallo.js kolmiulotteinen`). Korkeus, väri, napautus (raycast
+kanteen) ja siirtymät ovat ennallaan. Levynä 334 css-px keskustasta
+22 × 23, suhde 1,0. Hylätty: `pointAltitude` pienemmäksi (kirjaston
+lattia 0,1 yksikköä jättää vaipan, ja korkeus on piirtojärjestys) ja
+oma Object3D-kerros (toinen napautus- ja siirtymäpolku). (2) AARREPISTE
+piirtyi pallolla datan koordinaatteihin eli täsmälleen nappulan
+jalkaan (Ateenassa 1,3 css-px kaupungin ruutupisteestä, nappulan
+svg-laatikon sisällä), ja pallon osumatesti (lähin merkki) antoi
+tasapelin kaupungille: napautus avasi kaupunkilehden. Tasokartan
+sivusiirto (26.8.2026, koilliseen kun piste on alle 14 yksikön päässä
+laatasta) on nyt yksi funktio `js/fokuspiste.js fokuspisteenSiirto`,
+jota molemmat laudat käyttävät; pallolla (`js/pallolauta/nostot.js`)
+merkki JA osuma siirtyvät, data ei. Saapumisnäkymässä (korkeus 0,28)
+piste on 22 css-px kaupungista koilliseen, nappulan oikean olkapään
+vieressä, ja napautus avaa Ateenassa laattakysymyksen ja Sofiassa
+pöllön sähkekortin. Vartiot: `tests/pallopiste.test.mjs` ja
+savuke-pallolauta 15–16.
