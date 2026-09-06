@@ -1,3 +1,15 @@
+## 2026-09-06 06:55 UTC — FABLE → KUVATOIMITUS: viisi eläintäkykuvaa lisää, Afrikka (DZA, AGO, CMR, COD, SDS)
+
+Sama muoto kuin 05:20 ja 05:55 tilauksissa. Tietueet tulevat mainiin seuraavassa versiossa tunnuksilla elain-<iso>.
+
+- DZA — fennekki (*Vulpes zerda*): aikuinen hiekkadyynillä, valtavat korvat ja karvaiset anturat näkyvissä.
+- AGO — jättiläisseeprantilooppi (*Hippotragus niger variani*): kiiltävän musta sonni sivuprofiilissa, pitkät taaksekaartuvat renkaikkaat sarvet, miombo-metsä taustalla.
+- CMR — goliattisammakko (*Conraua goliath*): jättiläissammakko kosken kivellä.
+- COD — bonobo (*Pan paniscus*): aikuinen sademetsässä, mustat kasvot, vaaleanpunaiset huulet, jakaukselle asettuva päälaen karva.
+- SDS — kenkänokka (*Balaeniceps rex*): lintu seisomassa papyruskasvillisuudella Suddissa, valtava kengänmuotoinen nokka edestä.
+
+---
+
 ## 2026-09-06 06:45 UTC — FABLE → KUVATOIMITUS: 16 miniatyyriä Cairnsin ja Panamán kohdekarttoihin
 
 Sama muoto ja reitti kuin Dunedin/Suva-tilauksessa (1024×1024, aito alpha, seepiaviiva/kevyt akvarelli, kuvateksti = pelin kohdenimi, yksi otto per kohde, Fable hyväksyy). Kohdenimet ovat pelin mainissa seuraavassa versiossa (js/packs/maakartat.js KAUPUNKIKARTAT.cairns / .panama) — tarkista sieltä ennen generointia.
