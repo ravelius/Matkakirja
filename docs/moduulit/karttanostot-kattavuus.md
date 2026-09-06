@@ -545,3 +545,61 @@ vartio 7a olettaa maalta fokuslehden rajauksen (`lehdenRajaus`), ja
 kaikilla viidellä maalla se on olemassa — vartiota ei siis tarvinnut
 koskea, vaan jokainen uusi rivi mitattiin sen sisään ennen kirjoittamista.
 `tools/tarkista-nimiolimitys.mjs` antaa yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+## Erä M4 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Erä
+M4 on Pohjois-Amerikan viisikko, jolla ei ollut yhtäkään karttamerkkiä:
+**CAN, CUB, GRL, GTM ja NIC**. Jokainen sai täyden kiintiön — 8 kohdetta,
+3 maastokohdetta, 1 eläintäky ja 2 skandaalia — eli 13 uutta merkkiä
+maata kohti ja 65 koko erässä. Laskurin (`node tools/laske-karttanostot.mjs`)
+mukaan kaikki viisi ovat erän jälkeen tilassa *täysi*; taulukot ajaa Fable.
+
+Kohteet ja maastokohteet asuvat maan omassa uudessa
+`js/packs/maastokohteet-<iso>.js`-tiedostossa (rekisteröity
+`js/packs/maastokohteet.js`-hakemistoon, `sw.js`:n SHELL-listalle ja
+`tools/build-standalone.mjs`:n MODULES-listalle), eläintäyt
+`js/packs/elaintakyt.js`:ään ja skandaalit `js/packs/skandaalit.js`:ään.
+Erä on kuvaton. Faktat ovat en-Wikipedian raakatekstistä, ja jokainen
+lähderivi nimeää artikkelin ja sen osan sekä tarkistuspäivän 6.9.2026.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Kanada (CAN) | L'Anse aux Meadows, Craigellachie, Rideaun kanava, Head-Smashed-In, Dinosaur Provincial Park, Vanha Québec, Louisbourgin linnoitus, Dawson City | Mount Logan, Naha Dehé, Baffininsaari | (oli jo: jääkarhunpentu) | Pacific 1873, Bre-X 1997 |
+| Kuuba (CUB) | Trinidad, Viñalesin laakso, San Pedro de la Roca, Cienfuegos, Camagüey, Baracoa, Hersheyn rata, Bayamo | Pico Turquino, Cauto, Nuorisonsaari | (oli jo: mehiläiskolibri) | Maine 1898, Playa Girón 1961 |
+| Grönlanti (GRL) | Hvalsey, Ivittuut, Kangerlussuaq, Grönlannin jäätikkö, Sisimiut, Uummannaq, Ittoqqortoormiit, Koillis-Grönlannin kansallispuisto | Gunnbjørn Fjeld, Ilulissatin jäävuono, Diskonsaari | grönlanninkoira | Kuannersuit, Vihreä maa 985 |
+| Guatemala (GTM) | Tikal, El Mirador, Quiriguá, Seibal, Iximche, Chichicastenango, Semuc Champey, San Felipe de Lara | Tajumulco, Atitlánjärvi, Motagua | ketsaali | Banaanisopimus 1904, Santa María 1902 |
+| Nicaragua (NIC) | León, Granada, El Castillo, Bluefields, Solentiname, Somoton kanjoni, Ciudad Darío, Bilwi | Cosigüina, Ometepe, San Juanjoki | guardabarranco | Walker 1856, Kanava 2013 |
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin, ja jokaisen kohteen lähin
+on kirjattu sen koordinaattirivin viereen. Koko erän lähin merkki on
+Ciudad Darío 12,6 lautayksikön päässä Managuasta; raja
+`KAUPUNGIN_KOHDALLA_SADE` on 7. `node tools/tarkista-nostopaikat.mjs`
+antaa kaikille 65:lle rivin *pääkartta*, ja
+`node tools/tarkista-nimiolimitys.mjs` sanoo yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Kolme rajausta, jotka valitsivat sisällön.** (1) Laudan pohjoisreuna
+on 76°N (Millerin lieriö), joten Grönlannista jäivät pois Pituffik
+(Thule 1968), Camp Century ja Qaanaaq — ne olisivat saaneet negatiivisen
+y-koordinaatin eli jääneet laudan yläreunan taakse. (2) Sääntö N3:
+Mackenzie ja Nicaraguajärvi ovat jo laudan omalla nimitaululla
+(`js/packs/maailmankartta-nimet.js`), joten Kanadan joeksi valittiin Naha
+Dehé ja Nicaraguan maastokolmikkoon Cosigüinan tulivuori. (3)
+Kaupunkisääntö pudotti Antigua Guatemalan (8,0 yksikköä pääkaupungista)
+ja Momotombon (8,0 yksikköä Managuasta).
+
+**Vartio 7a ja maat ilman lehteä.** `tools/savukkeet/savuke-maastokohteet.mjs`
+vaatii, että jokainen kohde osuu maan fokuslehden rajaukseen
+(`osuuLehteen`). Kaikilla viidellä maalla rajaus on olemassa
+(`js/packs/fokus-grc.js` FOKUS_POHJAT), joten vartio pätee myös näihin
+tiedostoihin eikä sitä ole kierretty; ratkaisu on kirjattu jokaisen
+tiedoston otsikkokommenttiin. Jos maalla ei olisi rajausta,
+`osuuLehteen` palauttaisi `null` ja vartio ohittaisi maan — vartioita ei
+ole muutettu kummassakaan tapauksessa. Savuke menee läpi 8/8.
+
+**Kuvat puuttuvat kolmelta eläintäyltä.** GRL, GTM ja NIC saivat
+`kuva`-kenttään kuvaputken tunnuksen ilman kansiota (`elain-grl`,
+`elain-gtm`, `elain-nic`), joka osoittaa ämpäriin: kun kuvaputki tekee
+kuvan, se ilmestyy kortille ilman koodimuutosta, ja siihen asti kortti on
+kuvaton.

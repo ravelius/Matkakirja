@@ -71,12 +71,14 @@ import { MAASTOKOHTEET_AUT } from './maastokohteet-aut.js';
 import { MAASTOKOHTEET_BIH } from './maastokohteet-bih.js';
 import { MAASTOKOHTEET_BOL } from './maastokohteet-bol.js';
 import { MAASTOKOHTEET_BRA } from './maastokohteet-bra.js';
+import { MAASTOKOHTEET_CAN } from './maastokohteet-can.js';
 import { MAASTOKOHTEET_CHE } from './maastokohteet-che.js';
 import { MAASTOKOHTEET_CHL } from './maastokohteet-chl.js';
 import { MAASTOKOHTEET_CHN } from './maastokohteet-chn.js';
 import { MAASTOKOHTEET_CMR } from './maastokohteet-cmr.js';
 import { MAASTOKOHTEET_COD } from './maastokohteet-cod.js';
 import { MAASTOKOHTEET_COL } from './maastokohteet-col.js';
+import { MAASTOKOHTEET_CUB } from './maastokohteet-cub.js';
 import { MAASTOKOHTEET_CYP } from './maastokohteet-cyp.js';
 import { MAASTOKOHTEET_CZE } from './maastokohteet-cze.js';
 import { MAASTOKOHTEET_DNK } from './maastokohteet-dnk.js';
@@ -90,6 +92,8 @@ import { MAASTOKOHTEET_FJI } from './maastokohteet-fji.js';
 import { MAASTOKOHTEET_FRA } from './maastokohteet-fra.js';
 import { MAASTOKOHTEET_GBR } from './maastokohteet-gbr.js';
 import { MAASTOKOHTEET_GHA } from './maastokohteet-gha.js';
+import { MAASTOKOHTEET_GRL } from './maastokohteet-grl.js';
+import { MAASTOKOHTEET_GTM } from './maastokohteet-gtm.js';
 import { MAASTOKOHTEET_IRL } from './maastokohteet-irl.js';
 import { MAASTOKOHTEET_IRN } from './maastokohteet-irn.js';
 import { MAASTOKOHTEET_IRQ } from './maastokohteet-irq.js';
@@ -112,6 +116,7 @@ import { MAASTOKOHTEET_MNG } from './maastokohteet-mng.js';
 import { MAASTOKOHTEET_MOZ } from './maastokohteet-moz.js';
 import { MAASTOKOHTEET_NAM } from './maastokohteet-nam.js';
 import { MAASTOKOHTEET_NGA } from './maastokohteet-nga.js';
+import { MAASTOKOHTEET_NIC } from './maastokohteet-nic.js';
 import { MAASTOKOHTEET_NLD } from './maastokohteet-nld.js';
 import { MAASTOKOHTEET_NOR } from './maastokohteet-nor.js';
 import { MAASTOKOHTEET_NZL } from './maastokohteet-nzl.js';
@@ -156,12 +161,14 @@ export const MAASTOKOHTEET = {
   BIH: MAASTOKOHTEET_BIH,
   BOL: MAASTOKOHTEET_BOL,
   BRA: MAASTOKOHTEET_BRA,
+  CAN: MAASTOKOHTEET_CAN,
   CHE: MAASTOKOHTEET_CHE,
   CHL: MAASTOKOHTEET_CHL,
   CHN: MAASTOKOHTEET_CHN,
   CMR: MAASTOKOHTEET_CMR,
   COD: MAASTOKOHTEET_COD,
   COL: MAASTOKOHTEET_COL,
+  CUB: MAASTOKOHTEET_CUB,
   CYP: MAASTOKOHTEET_CYP,
   CZE: MAASTOKOHTEET_CZE,
   DNK: MAASTOKOHTEET_DNK,
@@ -175,6 +182,8 @@ export const MAASTOKOHTEET = {
   FRA: MAASTOKOHTEET_FRA,
   GBR: MAASTOKOHTEET_GBR,
   GHA: MAASTOKOHTEET_GHA,
+  GRL: MAASTOKOHTEET_GRL,
+  GTM: MAASTOKOHTEET_GTM,
   IRL: MAASTOKOHTEET_IRL,
   IRN: MAASTOKOHTEET_IRN,
   IRQ: MAASTOKOHTEET_IRQ,
@@ -197,6 +206,7 @@ export const MAASTOKOHTEET = {
   MOZ: MAASTOKOHTEET_MOZ,
   NAM: MAASTOKOHTEET_NAM,
   NGA: MAASTOKOHTEET_NGA,
+  NIC: MAASTOKOHTEET_NIC,
   NLD: MAASTOKOHTEET_NLD,
   NOR: MAASTOKOHTEET_NOR,
   NZL: MAASTOKOHTEET_NZL,

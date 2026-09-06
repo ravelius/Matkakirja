@@ -1210,6 +1210,59 @@ export const ELAINTAKYT = {
     lon: -76.8,
     lat: 3.8,
   },
+  /*
+   * ── MAAILMAN ERÄ M4 6.9.2026: GRÖNLANTI, GUATEMALA JA NICARAGUA ──
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Kolmella Pohjois-Amerikan maalla ei ollut eläintäkyä lainkaan
+   * (docs/moduulit/karttanostot-kattavuus.md). Tekstit ovat Opuksen
+   * luonnoksia lähteineen — Fable tarkistaa ja kirjoittaa lopulliset
+   * sanamuodot, kuten Euroopan ulkopuolisessa erässä 5.9.2026.
+   *
+   * KUVA ON VIELÄ TILAAMATTA. `kuva`-kentässä on kuvaputken oma tunnus
+   * ilman kansiota, joten se osoittaa ämpäriin (js/media.js
+   * assetOsoite): kun kuvaputki tekee kuvan, se ilmestyy kortille
+   * ilman koodimuutosta, ja siihen asti kortti on kuvaton (404 ei
+   * kaada mitään, js/elaintaky.js hakee kuvan vasta avatessa).
+   */
+  GRL: {
+    elain: 'gronlanninkoira',
+    otsikko: 'Tuhat vuotta valjaissa',
+    teksti: 'Grönlanninkoira eli Kalaallit Qimmiat on suuri husky-tyyppinen rekikoira, jonka thulelaiset toivat Siperiasta Pohjois-Amerikkaan noin tuhat vuotta sitten. Rodun puhtautta varjellaan tarkasti: napapiirin pohjoispuolisessa Länsi-Grönlannissa ja koko Itä-Grönlannissa on kiellettyä tuoda maahan mitään muualta tullutta koiraa, ja vuodesta 2017 jokainen koira on mikrosirutettu ja kirjattu rekisteriin. Kanta pienenee silti: vuonna 2016 koiria oli noin 15 000 ja 2021 enää 12 000. Roald Amundsen käytti grönlanninkoiria retkellään etelänavalle.',
+    lahde: 'en-Wikipedia "Greenland Dog", johdanto-osa ja osio "History". Tarkistettu 6.9.2026.',
+    kuva: 'elain-grl',
+    /*
+     * Piste on Itä-Grönlannin sisämaassa: rannikko on maailmankartan
+     * karkeassa muodossa paikoin merta, ja lähin kaupunkimerkki (Nuuk)
+     * jää satojen yksiköiden päähän.
+     */
+    lon: -32,
+    lat: 68.5,
+  },
+  GTM: {
+    elain: 'ketsaali',
+    otsikko: 'Lintu, joka on myös raha',
+    teksti: 'Ketsaali on Guatemalan kansalliseläin: se on maan lipussa ja vaakunassa, ja maan rahayksikkö on nimetty sen mukaan. Koiraan viheriöivät pyrstösulat ovat pidemmät kuin lintu itse, ja naaras on vaatimattomampi. Laji pesii lahoihin puihin tai tikkojen tekemiin koloihin, ja emot hautovat vuorotellen: koiras päivällä, naaras yöllä. Ketsaali elää sumumetsissä ja vaeltaa vuodenaikojen mukaan rinteiltä latvustoon. Se on luokiteltu silmälläpidettäväksi, ja suurin uhka on elinympäristön häviäminen — Sierra de las Minasin vuoristossa ovat Mesoamerikan laajimmat sumumetsät, ja suuri osa siitä on ollut biosfäärialuetta vuodesta 1990.',
+    lahde: 'en-Wikipedia "Resplendent quetzal", johdanto-osa, ja "Sierra de las Minas", '
+      + 'johdanto-osa ja osio "Biosphere reserve". Tarkistettu 6.9.2026.',
+    kuva: 'elain-gtm',
+    // Piste on Sierra de las Minasin sumumetsävyöhykkeellä, 40,9
+    // lautayksikköä Guatemala Citystä (vähimmäisetäisyys 35).
+    lon: -89.3,
+    lat: 15.15,
+  },
+  NIC: {
+    elain: 'guardabarranco',
+    otsikko: 'Rotkojen vartija ja sen kellonpyrstö',
+    teksti: 'Turkoosikulmamotmot tunnetaan Nicaraguassa nimellä guardabarranco, rotkojen vartija; El Salvadorissa se on torogoz ja Jukatanin mayakielissä pájaro reloj, kellolintu. Nimi tulee pyrstöstä: kaksi pitkää sulkaa päättyy mailanmuotoisiin lippuihin, ja lintu heiluttaa niitä puolelta toiselle kuin kellon heiluria. Heilutus ei ole koristelua vaan viesti pedolle: näen sinut, älä vaivaudu. Toisin kuin useimmilla linnuilla, koreat pyrstösulat ovat molemmilla sukupuolilla. Motmot kaivaa pesäkolonsa tunnelina hiekkatörmään tai kalkkikiven halkeamaan, ja mayat pitivät sitä manalan vartijana, koska se pesi cenotejen reunoilla.',
+    lahde: 'en-Wikipedia "Turquoise-browed motmot", johdanto-osa sekä osiot "Behavior" ja '
+      + '"Cultural relevance". Tarkistettu 6.9.2026.',
+    kuva: 'elain-nic',
+    // Piste on Río San Juanin metsäseudulla järven itäpuolella, 61,3
+    // lautayksikköä Managuasta (vähimmäisetäisyys 35).
+    lon: -84.6,
+    lat: 11.7,
+  },
 };
 
 /** Maatunnukset siinä järjestyksessä kuin ne on kirjoitettu. */

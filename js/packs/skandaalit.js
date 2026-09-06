@@ -6079,4 +6079,489 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /* ==================================================================
+   * MAAILMAN ERÄ M4, 6.9.2026 — POHJOIS-AMERIKKA (CAN, CUB, GRL, GTM,
+   * NIC). Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko
+   * maailmaan."* Euroopan ulkopuolelle ei ollut kirjoitettu yhtäkään
+   * skandaalia; nämä kymmenen ovat viiden maan kiintiö, kaksi kutakin.
+   * Kuvaton erä kuten ensimmäinenkin: kortti kantaa tekstin ja
+   * lähteen. Jokainen piste on tarkistettu niin, ettei se ole
+   * pelikaupungin kohdalla (KAUPUNGIN_KOHDALLA_SADE 7,
+   * js/fokuskohteet.js). Faktat en-Wikipediasta 6.9.2026.
+   * ================================================================ */
+  CAN: [
+    /*
+     * Parlamenttikukkula, Ottawa.
+     * Lähde: en-Wikipedia "Pacific Scandal"
+     */
+    {
+      id: 'pacific-skandaali',
+      otsikko: 'Tyynenmeren skandaali — rata, joka maksoi pääministerin paikan',
+      nimio: 'Pacific 1873',
+      vuosi: '1873',
+      paikka: 'Parlamenttikukkula, Ottawa',
+      lat: 45.4247, lon: -75.695,
+      kortti: 'Kaksi yhtiötä kilpaili mannerradan urakasta, ja toinen niistä antoi '
+        + 'hallituspuolueen vaalikassaan 360 000 dollaria. Kun asianajajan kassakaapista '
+        + 'ilmeisesti varastettu sähke tuli päivänvaloon, Kanadan ensimmäinen pääministeri '
+        + 'joutui eroamaan. Seuraavissa vaaleissa äänestettiin ensimmäistä kertaa salaisella '
+        + 'lipulla.',
+      teksti: 'British Columbia liittyi Kanadaan 1871 ehdolla, että valtio rakentaa radan '
+        + 'Tyynenmeren rannikolta itäisiin maakuntiin. Urakasta kilpaili kaksi ryhmää: Hugh '
+        + 'Allanin Canada Pacific Railway Company ja David Lewis Macphersonin Inter-Oceanic '
+        + 'Railway Company.'
+        + '\n\nToisena huhtikuuta 1873 liberaali kansanedustaja Lucius Seth Huntington kertoi '
+        + 'alahuoneessa löytäneensä todisteet siitä, että Allan seurueineen oli saanut '
+        + 'urakan poliittisia lahjoituksia vastaan. Allan oli lisäksi luvannut pitää '
+        + 'amerikkalaisen pääoman poissa hankkeesta ja valehdellut siitä pääministeri John '
+        + 'A. Macdonaldille: molemmat olivat salaa tekemisissä yhdysvaltalaisten '
+        + 'rahoittajien kanssa, joilla oli osuutensa kilpailevassa Northern Pacific '
+        + '-radassa.'
+        + '\n\nOppositio ja George Brownin The Globe olettivat, että rahat oli käytetty '
+        + 'äänten ostamiseen vuoden 1872 vaaleissa — salaista lippua ei vielä ollut, ja '
+        + 'vaikka lahjonta oli laitonta, sen valvominen oli mahdotonta. Macdonald vakuutti '
+        + 'syyttömyyttään, mutta rahasiirrot tulivat esiin.'
+        + '\n\nMacdonald erosi 5. marraskuuta 1873, ja Alexander Mackenzien liberaalihallitus '
+        + 'nousi valtaan. Yhtenä ensitöistään se sääti salaisen äänestyksen, jota käytettiin '
+        + 'vuoden 1874 vaaleissa ensi kertaa. Rata rakennettiin lopulta aivan toisen yhtiön '
+        + 'voimin, ja se valmistui 1885 — silloin Macdonald oli jo palannut pääministeriksi.',
+      lahde: 'en-Wikipedia "Pacific Scandal", johdanto-osa sekä osiot "Background" ja '
+        + '"Scandal". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä uudistus tehtiin Kanadassa heti Tyynenmeren skandaalin jälkeen?',
+        vaihtoehdot: [
+          'Otettiin käyttöön salainen äänestyslippu',
+          'Rautateiden rakentaminen kiellettiin yksityisiltä',
+          'Pääministerin virka lakkautettiin vuodeksi',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Bre-X Mineralsin pääkonttori, Calgary.
+     * Lähde: en-Wikipedia "Bre-X"
+     */
+    {
+      id: 'bre-x',
+      otsikko: 'Bre-X — maailman suurin kultaesiintymä, jota ei ollut',
+      nimio: 'Bre-X 1997',
+      vuosi: '1997',
+      paikka: 'Bre-X Mineralsin pääkonttori, Calgary',
+      lat: 51.0447, lon: -114.0719,
+      kortti: 'Pennyosakkeesta kasvoi kuuden miljardin dollarin yhtiö, kun se kertoi '
+        + 'löytäneensä Borneon viidakosta seitsemänkymmentä miljoonaa unssia kultaa. '
+        + 'Näytteisiin oli sekoitettu paikallisilta ostettua huuhdottua kultaa. Kun '
+        + 'riippumaton tarkastus paljasti sen, osake putosi kuuteen senttiin ja arviolta '
+        + '40 000 sijoittajaa menetti kaiken.',
+      teksti: 'David Walsh perusti Bre-X Minerals Ltd:n 1989. Yhtiö teki jatkuvasti '
+        + 'tappiota, kunnes se osti maaliskuussa 1993 geologi John Felderhofin neuvosta '
+        + 'alueen Busangin joen läheltä Kalimantanista Indonesiasta. Ensimmäiset kokeet '
+        + 'eivät löytäneet kultaa, mutta joulukuussa 1993, päiviä ennen luvan umpeutumista, '
+        + 'geologi Michael de Guzman kertoi tietävänsä tarkan porauspaikan — se oli tullut '
+        + 'hänelle unessa.'
+        + '\n\nArviot kasvoivat vuosi vuodelta kahdesta miljoonasta unssista '
+        + 'kolmeenkymmeneen, kuuteenkymmeneen ja lopulta seitsemäänkymmeneen miljoonaan '
+        + 'unssiin. Osake nousi Torontossa 280 dollariin ja markkina-arvo yli kuuteen '
+        + 'miljardiin Kanadan dollariin. Jos luvut olisivat pitäneet paikkansa, yhtiöllä '
+        + 'olisi ollut noin kahdeksan prosenttia maailman kullasta.'
+        + '\n\nMaaliskuussa 1997 Freeport-McMoRanin oma tarkastus löysi kaivokselta '
+        + 'merkityksettömän määrän kultaa. De Guzman kuoli matkalla selittämään tulosta '
+        + 'pudottuaan helikopterista, ja kuolemaan liittyi niin paljon epäselvyyksiä, että '
+        + 'siitä syntyi omat huhunsa. Riippumaton Strathcona Minerals raportoi 4. toukokuuta '
+        + '1997, että näytteet oli suolattu kultapölyllä: de Guzman oli ostanut '
+        + 'paikallisilta arviolta 61 000 dollarin edestä huuhdottua kultaa kahden ja puolen '
+        + 'vuoden aikana.'
+        + '\n\nSeitsemäntenä toukokuuta osake romahti. Menettäjiin kuului kanadalaisia '
+        + 'eläkerahastoja: Ontarion opettajien eläkerahasto menetti sata miljoonaa dollaria. '
+        + 'Ratsupoliisi lopetti tutkinnan 1999 nostamatta syytteitä, ja ainoa syytetty '
+        + 'Felderhof vapautettiin 2007.',
+      lahde: 'en-Wikipedia "Bre-X", johdanto-osa sekä osiot "History", "Death of chief '
+        + 'geologist Michael de Guzman", "Fraud exposed" ja "Aftermath". Tarkistettu '
+        + '6.9.2026.',
+      visa: {
+        kysymys: 'Miten Bre-X:n kultanäytteet oli väärennetty?',
+        vaihtoehdot: [
+          'Näytteet oli otettu toisesta kaivoksesta',
+          'Laboratorion tulokset oli kirjoitettu uusiksi',
+          'Näytteisiin oli sekoitettu ostettua huuhdottua kultaa',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  CUB: [
+    /*
+     * Havannan satama.
+     * Lähde: en-Wikipedia "USS Maine (1889)"
+     */
+    {
+      id: 'uss-maine',
+      otsikko: 'Muistakaa Maine — räjähdys, jonka lehdet ratkaisivat',
+      nimio: 'Maine 1898',
+      vuosi: '1898',
+      paikka: 'Havannan satama',
+      lat: 23.1353, lon: -82.3342,
+      kortti: 'Yhdysvaltain sotalaiva räjähti Havannan satamassa helmikuun iltana 1898, ja '
+        + '261 miehistön jäsentä kuoli. Kaksi newyorkilaista lehteä tiesi syyllisen heti, '
+        + 'ilman todisteita. Kaksi kuukautta myöhemmin maat olivat sodassa — ja nykyisin '
+        + 'painavin selitys osoittaa laivan omaan hiilibunkkeriin.',
+      teksti: 'Maine lähetettiin tammikuussa 1898 Key Westistä Havannaan turvaamaan '
+        + 'yhdysvaltalaisia etuja Kuuban itsenäisyyssodan aikana. Viidentenätoista '
+        + 'helmikuuta kello 21.40 aluksessa räjähti yli viisi tonnia tykkien ruutipanoksia, '
+        + 'ja laivan etukolmannes tuhoutui. Suurin osa miehistöstä nukkui juuri siellä.'
+        + '\n\nSyy oli kiistanalainen heti. Laivaston tykistöasiantuntija Philip R. Alger '
+        + 'ilmoitti jo seuraavana päivänä syyksi hiilibunkkerin itsesyttymisen, mitä '
+        + 'laivaston apulaisministeri Theodore Roosevelt vastusti kirjeessään '
+        + 'ennenaikaisena kannanottona kesken tutkinnan.'
+        + '\n\nWilliam Randolph Hearstin New York Journal ja Joseph Pulitzerin New York '
+        + 'World tekivät tapauksesta kampanjan, jota alettiin kutsua keltaiseksi '
+        + 'journalismiksi. Journal omisti aiheelle viikon ajan keskimäärin kahdeksan ja '
+        + 'puoli sivua päivässä ja lupasi 50 000 dollarin palkkion syyllisten '
+        + 'tuomitsemisesta. Pulitzer piti yksityisesti ajatusta Espanjan käskystä '
+        + 'mielettömänä, mutta hänen lehtensä vaati silti Kuuban täyttä itsenäisyyttä '
+        + 'ainoana hyvityksenä.'
+        + '\n\nEspanjan tutkinta päätyi hiilipaloon, amerikkalainen Sampsonin lautakunta '
+        + 'miinaan. Sota alkoi 21. huhtikuuta 1898. Amiraali Hyman Rickoverin teettämä '
+        + 'tutkimus tuki 1970-luvulla hiilibunkkerihypoteesia, ja kiista syystä jatkuu yhä.',
+      lahde: 'en-Wikipedia "USS Maine (1889)", johdanto-osa sekä osiot "Sinking", "Yellow '
+        + 'journalism" ja "Investigations". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä keltaisella journalismilla tarkoitetaan Mainen tapauksessa?',
+        vaihtoehdot: [
+          'Lehdet paisuttelivat ja jopa keksivät uutisia sodan puolesta',
+          'Lehdet kieltäytyivät kirjoittamasta räjähdyksestä',
+          'Lehdet julkaisivat vain laivaston virallisia tiedotteita',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Playa Girón, Sikojenlahti.
+     * Lähde: en-Wikipedia "Bay of Pigs Invasion"
+     */
+    {
+      id: 'sikojenlahti',
+      otsikko: 'Sikojenlahti — salaoperaatio, jonka koko maailma näki',
+      nimio: 'Playa Girón 1961',
+      vuosi: '1961',
+      paikka: 'Playa Girón, Sikojenlahti',
+      lat: 22.0667, lon: -81.0333,
+      kortti: 'Yhdysvaltain tiedustelupalvelu rahoitti ja koulutti kuubalaispakolaisten '
+        + 'prikaatin ja laski sen maihin Sikojenlahdelle huhtikuussa 1961. Operaation piti '
+        + 'näyttää siltä, ettei Yhdysvalloilla ollut sen kanssa tekemistä. Kolmessa '
+        + 'päivässä maihinnousu oli lyöty ja salaisuus mennyt.',
+      teksti: 'Presidentti Dwight D. Eisenhower alkoi vuoden 1960 alussa pohtia keinoja '
+        + 'Fidel Castron syrjäyttämiseksi ja hyväksyi Richard Bissellin suunnitelman, johon '
+        + 'kuului puolisotilaallisen joukon kouluttaminen. Samaan aikaan alkoi Kuuban '
+        + 'kauppasaarto, mikä ajoi Castron kääntymään Neuvostoliiton puoleen; Yhdysvallat '
+        + 'katkaisi diplomaattisuhteet.'
+        + '\n\nCastron valtaannousun jälkeen Yhdysvaltoihin muuttaneet pakolaiset olivat '
+        + 'perustaneet vastavallankumouksellisen prikaati 2506:n. CIA rahoitti sen ja '
+        + 'koulutti sen Guatemalassa; mukana oli myös noin kuusikymmentä Alabaman '
+        + 'ilmakansalliskaartin jäsentä. Yli 1 400 miestä lähti veneillä Guatemalasta ja '
+        + 'Nicaraguasta 17. huhtikuuta 1961, ja kaksi päivää aiemmin kahdeksan CIA:n '
+        + 'toimittamaa B-26-pommittajaa oli iskenyt kuubalaisille lentokentille.'
+        + '\n\nPäävoima nousi maihin Playa Girónilla ja löi paikallisen miliisin. Kun '
+        + 'kansainvälinen yhteisö sai tietää operaatiosta, presidentti John F. Kennedy '
+        + 'päätti olla antamatta lisää ilmatukea — vaikka Eisenhowerin kaudella laadittu '
+        + 'suunnitelma oli edellyttänyt Yhdysvaltain ilma- ja merivoimien osallistumista.'
+        + '\n\nKuuban asevoimat löivät maihinnousun kolmessa päivässä, ja joukot antautuivat '
+        + '20. huhtikuuta. Vangit kuulusteltiin julkisesti, vangittiin ja tuomittiin. '
+        + 'Tappio vahvisti Castron asemaa kansallissankarina, syvensi maiden välistä juopaa '
+        + 'ja työnsi Kuuban lähemmäs Neuvostoliittoa — ja pohjusti seuraavan vuoden '
+        + 'ohjuskriisin.',
+      lahde: 'en-Wikipedia "Bay of Pigs Invasion", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Missä maassa maihinnousuprikaati koulutettiin?',
+        vaihtoehdot: [
+          'Meksikossa',
+          'Guatemalassa',
+          'Puerto Ricossa',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  GRL: [
+    /*
+     * Kvanefjeldin ylätasanko Narsaqin yläpuolella.
+     * Lähde: en-Wikipedia "Kvanefjeld"
+     */
+    {
+      id: 'kuannersuit',
+      otsikko: 'Kuannersuit — vuori, jonka takia hallitus vaihtui',
+      nimio: 'Kuannersuit',
+      vuosi: '2021',
+      paikka: 'Kvanefjeld, Narsaq',
+      lat: 60.97, lon: -45.83,
+      kortti: 'Etelä-Grönlannin ylätasangolla on yksi maailman suurimmista harvinaisten '
+        + 'maametallien esiintymistä — ja malmin seassa uraania. Vuoden 2021 vaalit '
+        + 'käytiin kaivoksesta, ja louhinnan vastustajat voittivat. Uusi laki pysäytti '
+        + 'hankkeen, ja yhtiö haastoi Grönlannin ja Tanskan välimiesmenettelyyn.',
+      teksti: 'Kvanefjeld eli Kuannersuit sijaitsee Ilímaussaqin intruusion laajalla '
+        + 'ylätasangolla Narsaqin kaupungin yläpuolella. Siellä on poikkeuksellisen paljon '
+        + 'harvinaisten maametallien okseja sekä merkittäviä määriä uraania ja sinkkiä. '
+        + 'Esiintymä tunnistettiin 1950-luvulla, kylmän sodan uraanihuuman aikaan, ja '
+        + 'fyysikko Niels Bohr vieraili Narsaqissa 1957 tukemassa varhaisia tutkimuksia. '
+        + 'Kun Tanska luopui ydinvoimasta 1983, etsintä loppui.'
+        + '\n\nGrönlannin hallituksen politiikanmuutos 2010 avasi oven suurille kaivoksille. '
+        + 'Australialainen Greenland Minerals, nykyinen Energy Transition Minerals, hankki '
+        + 'alueen 2007 ja jätti 2015 hakemuksen avolouhoksesta.'
+        + '\n\nVuoden 2021 vaaleissa uraanilouhintaa vastustaneet puolueet, etenkin Inuit '
+        + 'Ataqatigiit, muodostivat hallituksen ja säätivät lain numero 20. Se kieltää '
+        + 'uraanin louhinnan ja etsinnän yli sadan miljoonasosan pitoisuuksissa, ja koska '
+        + 'Kvanefjeldin malmissa uraania on keskimäärin 250–350 miljoonasosaa, laki '
+        + 'käytännössä pysäytti koko hankkeen.'
+        + '\n\nMaaliskuussa 2022 yhtiö käynnisti välimiesmenettelyn Grönlannin ja Tanskan '
+        + 'hallituksia vastaan ja väitti kiellon olleen laiton pakkolunastus. Vuonna 2025 '
+        + 'Kvanefjeld oli yhä välitilassa: vuosien työ ja rahat eivät ole tuottaneet '
+        + 'kaivosta, kun taas naapurissa Tanbreezin hanke on edennyt uuden omistajan '
+        + 'käsissä.',
+      lahde: 'en-Wikipedia "Kvanefjeld", johdanto-osa sekä osiot "Exploration" ja "Politics '
+        + 'and Suspension". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä pysäytti Kvanefjeldin kaivoshankkeen?',
+        vaihtoehdot: [
+          'Malmi loppui kesken koelouhinnan',
+          'Laki, joka kieltää uraanin louhinnan yli sadan miljoonasosan pitoisuuksissa',
+          'Kaivosyhtiö meni konkurssiin',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Brattahlíð, nykyinen Qassiarsuk.
+     * Lähde: en-Wikipedia "Erik the Red"
+     */
+    {
+      id: 'vihrea-maa',
+      otsikko: 'Vihreä maa — historian tunnetuin kiinteistömainos',
+      nimio: 'Vihreä maa 985',
+      vuosi: '985',
+      paikka: 'Brattahlíð, Qassiarsuk',
+      lat: 61.1531, lon: -45.5169,
+      kortti: 'Islannista kolmeksi vuodeksi karkotettu Eirik Punainen tutki lännen jäisen '
+        + 'saaren ja palasi kertomaan siitä. Nimeksi hän antoi Grönlannin, vihreän maan, '
+        + 'omien sanojensa mukaan siksi, että suotuisa nimi houkuttelisi ihmisiä lähtemään. '
+        + 'Laivoja lähti kaksikymmentäviisi, perille pääsi neljätoista.',
+      teksti: 'Eirik Thorvaldsson tuomittiin Thorsnesin käräjillä maanpakoon Islannista '
+        + 'kolmeksi vuodeksi noin vuonna 982. Karkotusaikanaan hän purjehti länteen ja '
+        + 'tutki maata, jonka Gunnbjörn Ulfsson oli nähnyt lähes vuosisata aiemmin myrskyn '
+        + 'ajamana ja jota lainsuojaton Snæbjörn galti oli yrittänyt asuttaa — siinä '
+        + 'onnistumatta.'
+        + '\n\nPalattuaan Islantiin Eirik kertoi maasta, jonka nimi oli hänen oma '
+        + 'keksintönsä. Saagan mukaan hän antoi sille tarkoituksella houkuttelevamman nimen '
+        + 'kuin Islanti, sillä hän tiesi, että asutus onnistuisi vain, jos mukaan lähtisi '
+        + 'mahdollisimman paljon väkeä.'
+        + '\n\nMyyntipuhe tehosi. Kesällä 985 Eirik purjehti takaisin suuren '
+        + 'siirtolaisjoukon kanssa, mutta matka oli kaikkea muuta kuin se, mitä nimi lupasi: '
+        + 'kahdestakymmenestäviidestä lähteneestä laivasta perille pääsi neljätoista, osa '
+        + 'kääntyi takaisin ja loput todennäköisesti katosivat.'
+        + '\n\nIslantilaiset perustivat lounaisrannikolle kaksi siirtokuntaa — Itäisen '
+        + 'nykyisen Qaqortoqin seudulle ja Läntisen Nuukin lähelle — sillä vain ne '
+        + 'kelpasivat maanviljelyyn. Eirik rakensi Brattahlíðin tilan nykyisen Qassiarsukin '
+        + 'kohdalle ja oli Grönlannin mahtavin päällikkö. Kesäisin siirtokunnat lähettivät '
+        + 'miehiä Diskonlahdelle napapiirin pohjoispuolelle metsästämään hylkeitä, '
+        + 'mursunluuta ja rantaan ajautuneita valaita.',
+      lahde: 'en-Wikipedia "Erik the Red", johdanto-osa sekä osiot "Exile" ja "Greenland". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Eirik Punainen antoi saarelle nimen Grönlanti?',
+        vaihtoehdot: [
+          'Saaren rannikko oli hänen nähdessään vihreä',
+          'Nimi oli jo käytössä norjalaisilla kauppiailla',
+          'Suotuisa nimi houkuttelisi asukkaita lähtemään mukaan',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  GTM: [
+    /*
+     * Puerto Barrios, Izabal — radan pääte ja United Fruitin satama.
+     * Lähde: en-Wikipedia "Manuel Estrada Cabrera"
+     */
+    {
+      id: 'banaanisopimus-1904',
+      otsikko: 'Banaanisopimus 1904 — rata, satamat ja verovapaus',
+      nimio: 'Banaanisopimus',
+      vuosi: '1904',
+      paikka: 'Puerto Barrios, Izabal',
+      lat: 15.7267, lon: -88.5944,
+      kortti: 'Guatemalan rata pääkaupungista Puerto Barriosin satamaan jäi kuusikymmentä '
+        + 'mailia vajaaksi, kun rahat loppuivat. Presidentti Manuel Estrada Cabrera '
+        + 'ratkaisi asian kysymättä lainsäätäjältä tai tuomioistuimelta. Sopimus antoi '
+        + 'United Fruit Companylle verovapauksia, maata ja määräysvallan kaikkiin Atlantin '
+        + 'puolen rautateihin.',
+      teksti: 'Manuel Estrada Cabrera hallitsi Guatemalaa vuosina 1898–1920 eli pidempään '
+        + 'kuin kukaan muu maan johtaja. Hän oli lakimies ilman sotilastaustaa ja '
+        + 'nykyaikaisti teollisuutta ja liikennettä, mutta hallitsi diktaattorina: lakkoja '
+        + 'murrettiin asein ja vaaleja ohjailtiin.'
+        + '\n\nLiberaalipuolueen jäsenenä hän halusi rakentaa maanteitä, rautateitä ja '
+        + 'satamia vientitalouden hyväksi. Rataa Puerto Barriosin suuresta satamasta '
+        + 'pääkaupunkiin oli yritetty useaan otteeseen, mutta rahoitus loppui kotimaisen '
+        + 'kahvituotannon romahdukseen ja rata jäi kuusikymmentä mailia vajaaksi.'
+        + '\n\nEstrada Cabrera päätti yksin — lainsäätäjää tai tuomioistuinta kuulematta — '
+        + 'että ainoa keino saada rata valmiiksi oli sopimus United Fruit Companyn kanssa. '
+        + 'Vuonna 1904 allekirjoitettu sopimus yhtiön Minor Cooper Keithin kanssa antoi '
+        + 'sille verovapauksia, maalahjoituksia ja hallinnan kaikkiin Atlantin puolen '
+        + 'rautateihin.'
+        + '\n\nYhtiön tulo maan talouteen ja politiikkaan jäi presidentin katkerimmaksi '
+        + 'perinnöksi, ja sen vaikutusvalta oli väestön keskuudessa syvästi epäsuosittu. '
+        + 'Estrada Cabreran oma valta päättyi 1920, kun kansalliskokous julisti hänet '
+        + 'kykenemättömäksi ja hänet vangittiin korruptiosta.',
+      lahde: 'en-Wikipedia "Manuel Estrada Cabrera", johdanto-osa ja osio "First term: '
+        + 'United Fruit Company". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä United Fruit Company sai vuoden 1904 sopimuksessa?',
+        vaihtoehdot: [
+          'Verovapauksia, maata ja Atlantin puolen rautatiet',
+          'Yksinoikeuden kahvin vientiin',
+          'Oikeuden nimittää maan hallituksen',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Santa Marían tulivuori Quetzaltenangon lähellä.
+     * Lähde: en-Wikipedia "Santa María (volcano)"
+     */
+    {
+      id: 'santa-maria-1902',
+      otsikko: 'Santa Marían tuhka 1902 — kuka sai korvaukset',
+      nimio: 'Santa María 1902',
+      vuosi: '1902',
+      paikka: 'Santa Marían tulivuori, Quetzaltenango',
+      lat: 14.7561, lon: -91.5522,
+      kortti: 'Satoja vuosia hiljaa ollut tulivuori purki lokakuussa 1902 kahdeksan '
+        + 'kuutiokilometriä magmaa — se oli yksi 1900-luvun kolmesta suurimmasta '
+        + 'purkauksesta. Kukaan ei tunnistanut kuukausia jatkuneita järistyksiä '
+        + 'varoitukseksi, ja arviolta kuusituhatta ihmistä kuoli. Sitten alkoi toinen '
+        + 'vääryys.',
+      teksti: 'Santa María oli ollut hiljaa ainakin viisisataa vuotta, kun tammikuussa 1902 '
+        + 'alkoi seudulla järistysparvi ja huhtikuussa koettiin suuri maanjäristys. Purkaus '
+        + 'alkoi 24. lokakuuta, ja voimakkaimmat räjähdykset seurasivat kahtena seuraavana '
+        + 'päivänä.'
+        + '\n\nHohkakiveä satoi 273 000 neliökilometrin alalle ja tuhkaa kulkeutui San '
+        + 'Franciscoon asti, neljäntuhannen kilometrin päähän. Ensimmäinen merkki oli '
+        + 'hiekkasade Quetzaltenangon ylle; sitten tuuli kääntyi ja tuhka alkoi pudota '
+        + 'Helvetian kahviviljelmälle kymmenen kilometrin päässä lounaassa. Jopa 160 '
+        + 'kilometrin säteellä oli täysin pimeää 53 tuntia, ja moni kahviviljelmä tuhoutui.'
+        + '\n\nPurkauksen jälkeen alueelle saapui joukkoja ryöstämään, tappamaan ja '
+        + 'valtaamaan viljelmiä. Alkuperäisväestölle seuraukset olivat kaksinkertaiset: he '
+        + 'menettivät omaisiaan, kotinsa ja satonsa — ja heidät pakotettiin '
+        + 'jälleenrakennustöihin orjuutettuina.'
+        + '\n\nSamaan aikaan kreolimaanomistajat saivat menetyksistään korvaukseksi maata, '
+        + 'joka takavarikoitiin alkuperäisyhteisöiltä San Miguel Uspantánissa Quichén '
+        + 'maakunnassa, Panamissa Suchitepéquezissä ja Sololássa. Vuonna 1922 vanhaan '
+        + 'kraatteriin alkoi kasvaa Santiaguiton laavakupoli, joka on aktiivinen yhä '
+        + 'tänään.',
+      lahde: 'en-Wikipedia "Santa María (volcano)", johdanto-osa sekä osiot "1902 eruption" '
+        + 'ja "Santiaguito". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten purkauksen jälkeiset korvaukset jaettiin?',
+        vaihtoehdot: [
+          'Kaikki menettäjät saivat saman korvauksen valtiolta',
+          'Kreolimaanomistajat saivat maata, joka otettiin alkuperäisyhteisöiltä',
+          'Korvaukset maksoi tulivuorta tutkinut seura',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  NIC: [
+    /*
+     * Rivas — kolme taistelua ja kannaksen kauttakulkureitti.
+     * Lähde: en-Wikipedia "William Walker (filibuster)"
+     */
+    {
+      id: 'william-walker',
+      otsikko: 'Aqui fue Granada — mies, joka teki itsestään presidentin',
+      nimio: 'Walker 1856',
+      vuosi: '1856',
+      paikka: 'Rivas ja Granada',
+      lat: 11.4373, lon: -85.8264,
+      kortti: 'Nashvillelainen lehtimies ja lääkäri purjehti 1855 Nicaraguaan '
+        + 'kuudenkymmenen palkkasotilaan kanssa maan liberaalien avuksi. Vuotta myöhemmin '
+        + 'hän oli itse maan presidentti ja kumosi orjuuden kiellon. Kun keskiamerikkalainen '
+        + 'liittouma ajoi hänet pois, hänen miehensä polttivat Granadan ja jättivät '
+        + 'raunioihin kyltin.',
+      teksti: 'Ennen Panaman kanavaa tärkeä kauppareitti New Yorkista San Franciscoon kulki '
+        + 'Etelä-Nicaraguan halki: laivalla San Juanjokea ylös, Nicaraguajärven poikki ja '
+        + 'postivaunuilla Rivasin kannaksen yli Tyynellemerelle. Reittiä hallitsi Cornelius '
+        + 'Vanderbiltin Accessory Transit Company.'
+        + '\n\nVuonna 1854 syttyi sisällissota Granadaan tukeutuneiden legitimistien ja '
+        + 'Leóniin tukeutuneiden demokraattien välillä. Demokraatit pyysivät apua William '
+        + 'Walkerilta, joka kiersi Yhdysvaltain neutraliteettilait sopimalla presidentti '
+        + 'Francisco Castellónin kanssa "siirtolaisten" tuomisesta maahan. Walker purjehti '
+        + 'San Franciscosta 3. toukokuuta 1855, ja perillä joukkoon liittyi 110 paikallista.'
+        + '\n\nEnsimmäinen hyökkäys Rivasiin torjuttiin — opettaja Enmanuel Mongalo y Rubio '
+        + 'poltti hyökkääjien esikunnan — mutta lokakuussa 1855 Walker valtasi Granadan. '
+        + 'Presidentiksi hänet vihittiin 12. heinäkuuta 1856 vilpillisten vaalien jälkeen. '
+        + 'Hän teki englannista virallisen kielen ja kumosi vuoden 1821 asetuksen, jolla '
+        + 'orjuus oli lakkautettu.'
+        + '\n\nCosta Rican johtama liittouma löi hänet. Joulukuussa 1856 Walkerin kenraali '
+        + 'Charles Frederick Henningsen poltti Granadan paetessaan, ja jäljelle jäivät '
+        + 'raunioihin kirjoitetut sanat "Aqui Fue Granada", täällä oli Granada. Walker '
+        + 'luopui presidenttiydestä 1. toukokuuta 1857 ja teloitettiin Hondurasissa 1860.',
+      lahde: 'en-Wikipedia "William Walker (filibuster)", johdanto-osa sekä osiot '
+        + '"Nicaragua" ja "President of Nicaragua". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä sanat "Aqui fue Granada" tarkoittavat?',
+        vaihtoehdot: [
+          'Täällä oli Granada',
+          'Granada antautuu',
+          'Granadan portti',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Punta Gordan jokisuu — suunnitellun kanavareitin Karibian pää.
+     * Lähde: en-Wikipedia "Attempts to build a canal across Nicaragua"
+     */
+    {
+      id: 'kanavakonsessio',
+      otsikko: 'Kanavakonsessio 2013 — laki 840 ja kadonnut yhtiö',
+      nimio: 'Kanava 2013',
+      vuosi: '2013',
+      paikka: 'Punta Gordan jokisuu, kanavareitin Karibian pää',
+      lat: 11.55, lon: -83.78,
+      kortti: 'Nicaraguan kansalliskokous myönsi 2013 hongkongilaiselle yhtiölle '
+        + 'viidenkymmenen vuoden konsession rakentaa Panamaa suurempi kanava halki maan. '
+        + 'Samana vuonna säädetty laki salli lunastaa 908 neliökilometriä maata ilman '
+        + 'valitusoikeutta. Kanavaa ei koskaan kaivettu, ja yhtiön pääkonttori tyhjeni 2018 '
+        + 'jättämättä osoitetta.',
+      teksti: 'Ajatus kanavasta Nicaraguan halki on siirtomaa-ajalta, ja se on aina '
+        + 'nojannut samaan reittiin: San Juanjoki Karibialta Nicaraguajärvelle ja järven '
+        + 'poikki Rivasin kannakselle. Yhdysvallat luopui suunnitelmasta 1900-luvun alussa '
+        + 'ostettuaan ranskalaisten osuudet Panaman kanavasta.'
+        + '\n\nSyyskuussa 2012 Nicaraguan hallitus ja vasta perustettu HK Nicaragua Canal '
+        + 'Development Group allekirjoittivat aiesopimuksen. HKND oli miljardööri Wang '
+        + 'Jingin johtama yksityinen yhtiö. Kesäkuussa 2013 kansalliskokous hyväksyi lain, '
+        + 'joka antoi sille viidenkymmenen vuoden konsession, ja joulukuussa 2014 yhtiö '
+        + 'ilmoitti aloittavansa työt Briton kylässä Rivasissa.'
+        + '\n\nSamana vuonna säädetty laki 840 salli 908 neliökilometrin pakkolunastukset. '
+        + 'Se kieltää valitusoikeuden lunastuspäätöksestä, määrää korvaukset mitättömiksi '
+        + 'ja antaa sijoittajalle luvan myydä oikeuksiaan osissa. Sitä on kutsuttu '
+        + 'maakaappaukseksi, ja se johti mielenosoituksiin ja väkivaltaisiin yhteenottoihin '
+        + 'turvallisuusjoukkojen kanssa.'
+        + '\n\nRahoitusvaikeuksien jälkeen Wang sulki HKND:n pääkonttorin Kiinassa '
+        + 'huhtikuussa 2018 jättämättä osoitetta tai puhelinnumeroa. Aktivistit muistuttivat, '
+        + 'että sopimus oli purettava 72 kuukaudessa, jos rahoitusta ei saada — määräaika '
+        + 'umpeutui 14. kesäkuuta 2019 — mutta kansalliskokous kumosi lain 840 vasta '
+        + 'toukokuussa 2024.',
+      lahde: 'en-Wikipedia "Attempts to build a canal across Nicaragua", johdanto-osa sekä '
+        + 'osiot "Route" ja "HKND project (2010–2024)". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä laki 840 salli kanavahankkeen tieltä?',
+        vaihtoehdot: [
+          '908 neliökilometrin pakkolunastukset ilman valitusoikeutta',
+          'Kanavan rakentamisen ilman ympäristöselvitystä',
+          'Ulkomaisen työvoiman tuonnin ilman lupia',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
 };

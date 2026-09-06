@@ -28,9 +28,9 @@ const KAIKKI = MAAT.flatMap((iso) => SKANDAALIT[iso].map((s) => ({ iso, ...s }))
  * tilanne; erä M2 (Oseania, 6.9.2026) toi AUS, FJI, NZL, PNG ja SLB
  * kahdella skandaalilla kukin.
  */
-test('skandaaleja on 103 kappaletta 39 maassa, 2–3 per maa', () => {
-  assert.equal(MAAT.length, 39, 'maita on 39');
-  assert.equal(KAIKKI.length, 103, 'skandaaleja on 103');
+test('skandaaleja on 113 kappaletta 44 maassa, 2–3 per maa', () => {
+  assert.equal(MAAT.length, 44, 'maita on 44');
+  assert.equal(KAIKKI.length, 113, 'skandaaleja on 113');
   for (const iso of MAAT) {
     assert.match(iso, /^[A-Z]{3}$/, `${iso}: avain on kolmikirjaiminen maatunnus`);
     const n = SKANDAALIT[iso].length;
