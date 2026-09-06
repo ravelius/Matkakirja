@@ -31214,4 +31214,2763 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * FIDŽI (Opus 6.9.2026, Oseanian maalehtierä). Suvan kaupunkilehti
+   * (kulttuuri-kategoriat.js, avain suva) kantaa kannen ja aiheet
+   * Cakobausta, vuoden 1874 luovutuksesta, kai colo -sodasta,
+   * pääkaupungin siirrosta, Leonidas-laivan sopimustyöläisistä,
+   * yaqonan maljasta ja Etelä-Tyynenmeren yliopistosta — niitä EI
+   * toisteta täällä. Vallankaappaukset (1987, 2000, 2006) on jätetty
+   * pois samalla linjauksella kuin Suvan lehdestä.
+   *
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026:
+   * "History of Fiji", "Lapita culture", "Enele Maʻafu", "Fiji crested
+   * iguana", "Medinilla waterhousei", "Collared lory", "Great Astrolabe
+   * Reef", "Fijian cuisine", "'Ota 'ika", "Tapa cloth", "Drua",
+   * "Culture of Fiji", "Meke", "Lali (drum)", "Tabua".
+   */
+  FJI: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Isoisän matkavuonna 1873 Fidži on vasta muotoutumassa '
+          + 'yhdeksi maaksi, mutta saarilla on takanaan kolmetuhatta vuotta '
+          + 'asutusta ja seitsemänkymmentä vuotta eurooppalaista kauppaa.',
+      nostot: [
+        {
+          otsikko: 'Ruukku, jonka reunaan painettiin hammasleimasin',
+          aika: '1000 eaa.',
+          tiedosto: 'Decorated piece of Lapita pottery from the Bourewa site in Fiji.jpg',
+          teksti: 'Fidžin ensimmäiset asukkaat olivat lapitalaisia, '
+              + 'austronesialaisia merenkulkijoita, jotka levittäytyivät '
+              + 'Bismarckin saaristosta itään ja saapuivat saarille noin '
+              + 'vuosina 1100–1000 eaa. Heidät tunnistaa savesta: '
+              + 'lapitakeramiikan pinta koristeltiin hammastetulla '
+              + 'leimasimella, joka painoi geometrisia kuvioita tiiviiksi '
+              + 'riveiksi. Samanlaisia kuvioita on löydetty Taiwanista, '
+              + 'Batanesista ja Luzonilta asti, ja juuri keramiikka on '
+              + 'vahvin todiste siitä, että lapitalaiset tulivat '
+              + 'Kaakkois-Aasiasta. Viti Levun lounaisrannalla on Bourewan '
+              + 'kaivausalue, josta on nostettu sekä koristeltuja '
+              + 'sirpaleita että simpukasta ja luusta hiottuja helmiä.',
+          selite: 'Bourewan sirpaleen kaarikuviot on painettu savi märkänä '
+            + 'hammastetulla leimasimella, joka on lapitakeramiikan '
+            + 'tuntomerkki.',
+          lahde: 'Patrick Nunn, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Nainen, jonka kasvot rakennettiin luista',
+          aika: '2002',
+          tiedosto: 'Reconstructed head of Mana.jpg',
+          teksti: 'Moturikin saarelta löydettiin vuonna 2002 kokonainen '
+              + 'ihmisluuranko. Se oli lapitanaisen, joka eli viimeistään '
+              + 'vuonna 800 eaa., ja hänet oli haudattu yli puolentoista '
+              + 'metrin syvyyteen häiriintymättömien hiekka- ja '
+              + 'lietekerrosten alle, joista löytyi myös lapitakeramiikkaa. '
+              + 'Kaulan alle oli asetettu suuri simpukankuori ja toinen '
+              + 'polvien väliin, ja haudassa oli lisäksi pienempiä kuoria. '
+              + 'Luuranko sai nimen Mana. Kallosta tehtiin tietokonemallilla '
+              + 'kasvojen rekonstruktio, ja piirteissä on yhtäläisyyksiä '
+              + 'polynesialaisiin, fidžiläisiin ja aasialaisiin — mutta ne '
+              + 'eivät osu selvästi yhteenkään näistä ryhmistä.',
+          selite: 'Manan kasvorekonstruktio on ainoa olemassa oleva esitys '
+            + 'lapitakulttuurin ihmisestä, ja se on Fidžin museossa.',
+          lahde: 'Patrick Nunn, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaksi lastia, joiden perässä laivat tulivat',
+          aika: '1804–1850',
+          tiedosto: 'North Shore Vanua Levu from Utulei Reef - panoramio.jpg',
+          teksti: 'Ensimmäiset eurooppalaiset, jotka viipyivät Fidžissä '
+              + 'pitkään, olivat santelipuukauppiaita. Vanua Levun '
+              + 'lounaisrannalta löytyi 1804 santelipuuta, ja saarille alkoi '
+              + 'purjehtia yhä useampi kauppalaiva. Ryntäys loppui yhtä '
+              + 'äkkiä kuin oli alkanutkin, kun puu ehtyi vuosina 1810–1814. '
+              + '1820-luvulla laivat palasivat toisen tavaran perässä: '
+              + 'merimakkaran, jota kutsuttiin nimellä bêche-de-mer. '
+              + 'Kuivattuna se oli Kiinassa kallista herkkua, ja hyvä lasti '
+              + 'saattoi tuottaa kauppiaalle noin 25 000 dollaria puolessa '
+              + 'vuodessa. Fidžiläiset keräsivät ja kuivasivat saaliin, ja '
+              + 'maksuksi he saivat usein tuliaseita.',
+          selite: 'Vanua Levu on Fidžin toiseksi suurin saari, ja sen '
+            + 'lounaisrannalta löytynyt santelipuu käynnisti saarten '
+            + 'ensimmäisen kauppabuumin.',
+          lahde: 'catlin.wolfard, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Tongalainen prinssi, josta tuli Laun kuningas',
+          aika: '1848–1869',
+          tiedosto: 'Ma\'afu, photograph by Francis H. Dufty.jpg',
+          teksti: 'Enele Ma’afu oli tongalainen prinssi ja kuningas George '
+              + 'Tupou I:n serkku. Kuningas halusi hänet pois kotoa '
+              + 'mahdollisena vallantavoittelijana, ja niin Ma’afu asettui '
+              + '1848 Lakeban saarelle Fidžin itäisessä Lau-ryhmässä '
+              + 'tongalaisyhteisön johtajaksi. Hän toi itäiselle Fidžille '
+              + 'metodistisen kristinuskon, sai 1850 Vanua Balavun saaren '
+              + 'lahjaksi kanootista ja ulotti valtansa Vanua Levun '
+              + 'pohjoisosaan asti. Kun Tonga luopui kesäkuussa 1868 '
+              + 'kaikista vaatimuksistaan Fidžin alueisiin, Laun päälliköt '
+              + 'kokoontuivat Lakebaan ja antoivat hänelle helmikuussa 1869 '
+              + 'arvonimen Tui Lau, Laun kuningas.',
+          selite: 'Francis H. Duftyn valokuvaamossa 1870-luvulla otettu '
+            + 'muotokuva esittää Enele Ma’afua, joka oli yhtä aikaa '
+            + 'tongalainen prinssi ja fidžiläinen päällikkö.',
+          lahde: 'Francis H. Dufty, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Fidžin eläimet ovat purjehtineet, lentäneet tai '
+          + 'ajelehtineet paikalle: leguaanien esi-isien arvellaan '
+          + 'ylittäneen Tyynenmeren yhdeksäntuhatta kilometriä '
+          + 'kelluvien lauttojen varassa.',
+      nostot: [
+        {
+          otsikko: 'Lisko, joka muuttuu mustaksi kun suuttuu',
+          tiedosto: 'Fiji Crested Iguana.jpg',
+          teksti: 'Fidžin kruunuleguaani on kotoperäinen muutamalle '
+              + 'luoteisen Fidžin saarelle ja elää kuivissa metsissä. '
+              + 'Koiraalla on kolme kapeaa kermanvalkoista juovaa ja '
+              + 'niskasta hännän tyveen ulottuva piikkiharja, jonka piikit '
+              + 'yltävät puoleentoista senttiin. Kuoriutuva poikanen on '
+              + 'ensin tummanvihreä ja kirkastuu muutamassa tunnissa '
+              + 'smaragdinvihreäksi. Laji hautoo munia poikkeuksellisen '
+              + 'kauan, 189 vuorokaudesta yhdeksään kuukauteen. Uhattuna '
+              + 'leguaani vaihtaa värinsä vihreästä mustaksi, ja ellei se '
+              + 'riitä, se pullistaa kaulaansa, nyökyttää päätään ja '
+              + 'hyökkää. Fidžin kielessä leguaani on vokai.',
+          selite: 'Fidžin kruunuleguaanin selkää kiertää piikkiharja, ja '
+            + 'laji on luokiteltu äärimmäisen uhanalaiseksi.',
+          lahde: 'Michael Howard, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kukka, jota kasvaa vain yhdellä saarella',
+          tiedosto: 'Medinilla waterhousei (Tagimoucia flower) (31175387024).jpg',
+          teksti: 'Tagimoucia on köynnös, joka kasvaa vain Taveunin saaren '
+              + 'ylängön sademetsässä yli kuudensadan metrin korkeudessa ja '
+              + 'kukkii loka–joulukuussa. Kukat riippuvat jopa '
+              + 'kolmenkymmenen sentin pituisina terttuina, ja niissä on '
+              + 'karmiininpunaista ja valkoista. Kasvi on Fidžin '
+              + 'kansalliskukka, ja se on kuvattuna maan 50 dollarin '
+              + 'setelissä. Nimeen liittyy tarina tytöstä, jota isä kielsi '
+              + 'menemästä naimisiin rakastamansa pojan kanssa; kyyneleistä '
+              + 'syntyi kukka. Sanonta tagi me uci ’ea tarkoittaa itkeä '
+              + 'ollakseen hänen kaltaisensa, ja siitä tehtiin myöhemmin '
+              + 'kansanlaulu Tagimoucia ga.',
+          selite: 'Tagimoucian kukassa on karmiininpunainen ulkokehä ja '
+            + 'valkoinen sisus, ja se on Fidžin kansalliskukka.',
+          lahde: 'John Game, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Höyhen, joka kulki saarelta toiselle',
+          tiedosto: 'Collared Lory.jpg',
+          teksti: 'Kula eli kaulasluri on parikymmentä senttiä pitkä '
+              + 'papukaija, jonka posket, kurkku ja rinta ovat '
+              + 'kirkkaanpunaiset, päälaki tummanvioletti ja siivet, selkä '
+              + 'ja pyrstö vihreät. Höyheniä arvostettiin läntisessä '
+              + 'Polynesiassa niin paljon, että Fidžin, Samoan ja Tongan '
+              + 'välillä toimi siirtomaa-aikaan asti merikauppaverkosto, '
+              + 'jonka tavarana olivat juuri kula-höyhenet. Samoassa lintua '
+              + 'sanotaan nimellä ula ja Tongassa kula. Nykyään laji elää '
+              + 'vain Fidžissä, mutta fossiilit kertovat, että se eli '
+              + 'aikoinaan myös Tongassa, kunnes varhaiset asukkaat '
+              + 'hävittivät sen sieltä.',
+          selite: 'Kaulaslurin punainen rinta ja tummanvioletti päälaki '
+            + 'tekivät sen höyhenistä kauppatavaraa Samoaan ja Tongaan '
+            + 'asti.',
+          lahde: 'JJ Harrison, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Riutta, jonka läpi kalat tulevat syvältä',
+          tiedosto: 'Yellow fiji leather coral Sarcophyton elegans on House Reef (7569622852).jpg',
+          teksti: 'Suuri Astrolabe-riutta ympäröi Kadavun saarta noin sata '
+              + 'kilometriä Viti Levusta etelään. Se on yksi maailman '
+              + 'suurimmista valliriutoista ja kaartuu Kadavun eteläranteelta '
+              + 'pohjoiseen Onon saaren ohi Buliyaan asti. Riutan '
+              + 'erikoisuus ovat kanavat, jotka johtavat hyvin syvästä '
+              + 'vedestä suoraan matalaan laguuniin: niiden ansiosta siellä '
+              + 'lisääntyvät marliinit, hait, tonnikalat, isopiikkimakrillit '
+              + 'ja napsijat. Naiqoro-salmi on rauhoitettu kalastukselta. '
+              + 'Riutta sai nimensä ranskalaisen tutkimusaluksen Astrolaben '
+              + 'mukaan, ja vesi on siellä 25–32-asteista.',
+          selite: 'Nahkakorallit ovat pehmeitä koralleja, ja niitä on '
+            + 'Fidžin riutoilla runsaasti kovien kivikorallien seassa.',
+          lahde: 'Paul Asman and Jill Lenoble, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Fidžin keittiö on juurikasvien, kookoksen ja meren '
+          + 'keittiö — ja intialaisten sopimustyöläisten jälkeen myös '
+          + 'currya ja rotia aamiaiseksi.',
+      nostot: [
+        {
+          otsikko: 'Uuni, joka kaivetaan maahan',
+          tiedosto: 'Lovo.jpg',
+          teksti: 'Lovo on juhla-ateria, jonka valmistaminen vaatii monta '
+              + 'ihmistä — ja juuri työn määrä tekee siitä '
+              + 'merkityksellisen. Maahan kaivettuun kuiluun asetetaan '
+              + 'tulessa kuumennetut kivet, niiden päälle lehtiin käärityt '
+              + 'liha-, kala- ja kasvispaketit, ja lopuksi koko uuni '
+              + 'peitetään säkeillä ja mullalla useiksi tunneiksi. '
+              + 'Fidžiläinen versio maustetaan soijakastikkeella, '
+              + 'valkosipulilla, chilillä ja inkiväärillä. Vakiotäytteitä '
+              + 'ovat palusami eli kookoskermaan kääritty nuori '
+              + 'taaronlehti sekä kalapaketit, joissa on sipulia, '
+              + 'valkosipulia ja chiliä. Tärkkelys tulee jamssista, '
+              + 'kassavasta ja taarosta.',
+          selite: 'Lovossa ruoka kypsyy hehkuvien kivien päällä lehtien '
+            + 'alla, ja uuni peitetään säkeillä ja mullalla useiksi '
+            + 'tunneiksi.',
+          lahde: 'Jaejay77, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kala, joka kypsyy limetissä',
+          tiedosto: 'Kokodafood.jpg',
+          teksti: 'Kokoda on Fidžin tunnetuin kalaruoka: raakaa kalaa, joka '
+              + '”kypsennetään” vastapuristetussa limetin- tai '
+              + 'sitruunanmehussa. Happo denaturoi valkuaisaineet ja tekee '
+              + 'lihasta läpikuultavan valkoista, aivan kuin se olisi '
+              + 'keitetty. Kun kala on valmis, joukkoon sekoitetaan '
+              + 'kookosmaitoa, hienonnettua tomaattia, chiliä ja suolaa, ja '
+              + 'annos tarjotaan usein puolikkaassa kookospähkinässä. Sama '
+              + 'ruoka tunnetaan koko Polynesiassa eri nimillä, ja '
+              + 'Papua-Uudessa-Guineassa se on samannimistä kokodaa — ei '
+              + 'pidä sekoittaa Kokodan polkuun, joka on aivan toinen asia.',
+          selite: 'Kokoda tarjotaan usein puolikkaassa kookospähkinässä, ja '
+            + 'kala on kypsennetty pelkällä sitrushapolla.',
+          lahde: 'yuko_ppp2501, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kaksi juurta, jotka vaihtoivat paikkaa',
+          tiedosto: 'Local Market with taro and coconuts (14050766628).jpg',
+          teksti: 'Dalo eli taaro on Fidžin juhlien tärkein tärkkelyskasvi. '
+              + 'Sitä on seitsemänkymmentä lajiketta, joista osa muuttuu '
+              + 'kypsennettäessä vaaleanpunaiseksi tai keltaiseksi, ja se '
+              + 'kasvaa lähes millaisessa maassa tahansa. Arjessa taaron on '
+              + 'kuitenkin ohittanut tavioka eli kassava, joka on nykyään '
+              + 'maan viljellyin ja syödyin juurikasvi; se keitetään '
+              + 'suolavedessä pehmeäksi ja syödään pataruokien ja curryjen '
+              + 'kanssa. Kumala eli bataatti ei kuulunut alkuperäiseen '
+              + 'ruokavalioon vaan tuotiin Papua-Uudesta-Guineasta, ja se '
+              + 'on nyt halvin juurikasvi.',
+          selite: 'Fidžin toreilla juurikasvit myydään nipuiksi sidottuina, '
+            + 'ja dalo eli taaro on niistä juhlavin.',
+          lahde: 'Michael Coghlan, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Kala, jota ei nosteta pöytään',
+          // Kuvaton (Opus 6.9.2026): Commonsista ei löytynyt kelvollista
+          // Fidžin vesillä otettua haikuvaa, ja aiheeseen sopimaton
+          // riuttakuva olisi harhaanjohtava. Kuva tilataan kuvaputkelta.
+          teksti: 'Fidžin merestä syödään lähes kaikkea: rapuja, simpukoita, '
+              + 'merisiilejä, merimakkaroita, ostereita, hummeria, '
+              + 'mustekalaa ja kalmaria. Yhtä eläintä ei kuitenkaan syödä '
+              + 'koskaan. Hai on Dakuwaqan, merenjumalan, hahmo, ja sen '
+              + 'tappamisen tai syömisen uskotaan tuovan kylälle suuren '
+              + 'onnettomuuden. Kielto on tabu, ei ruokavalio. Samaan '
+              + 'tapaan kilpikonnaa syötiin pitkään, mutta tapojen '
+              + 'muuttuessa ja kantojen huvetessa Fidžin valtio on '
+              + 'rajoittanut tai kieltänyt monen uhanalaisen lajin käytön '
+              + 'ravinnoksi.',
+          selite: 'Dakuwaqa on fidžiläinen merenjumala, joka esiintyy hain '
+            + 'hahmossa, ja siksi haita ei syödä.',
+        },
+      ],
+    },
+    {
+      id: 'kasityo',
+      nimi: 'Käsityö',
+      johdanto: 'Fidžiläinen käsityö tehdään kolmesta aineesta: puun '
+          + 'kuoresta, puun rungosta ja kookoskuidusta — ja jokainen '
+          + 'niistä kestää sukupolvia.',
+      nostot: [
+        {
+          otsikko: 'Kangas, jota ei kudota vaan hakataan',
+          tiedosto: 'Fijian royal tapa cloth, 19th century, Neiman Marcus Collection.JPG',
+          teksti: 'Masi on tapakangasta, jota tehdään paperisilkkiäispuun '
+              + 'sisäkuoresta. Kuori irrotetaan, liotetaan ja hakataan '
+              + 'puunuijalla ohueksi levyksi, ja levyt liitetään yhteen '
+              + 'suuriksi kankaiksi. Tapaa on tehty kaikkialla Oseaniassa: '
+              + 'sitä kutsutaan Tongassa nimellä ngatu, Samoassa siapo ja '
+              + 'Havaijilla kapa. Kuvio tehdään hankaamalla, leimaamalla, '
+              + 'kaavaimella tai savustamalla — savustettu masi kuvui on '
+              + 'oma lajinsa — ja musta väri on nimenomaan fidžiläisen '
+              + 'tapan tuntomerkki, sillä Tongassa sitä ei käytetä. '
+              + 'Kangasta annetaan lahjaksi elämän merkkipäivinä. '
+              + 'Sama kuviokieli toistuu myös lapitakeramiikassa, ja '
+              + 'tutkijat ovat arvelleet kuvioiden siirtyneen kankaan ja '
+              + 'saven välillä kumpaankin suuntaan.',
+          selite: 'Fidžiläisessä masissa kuviot painetaan kaavaimella, ja '
+            + '1800-luvun juhlakankaat ovat useiden metrien mittaisia.',
+          lahde: 'Wmpearl, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Alus, joka vaihtaa keulan ja perän',
+          tiedosto: 'Fijian double canoe, model, Otago Museum, 2016-01-29.jpg',
+          teksti: 'Drua on kaksirunkoinen purjealus, jollaista pidetään '
+              + 'suurimpana ja hienoimpana Oseaniassa ennen eurooppalaisia '
+              + 'rakennettuna merialuksena. Pisimmät druat olivat 30 metriä '
+              + 'ja kantoivat yli kaksisataa ihmistä, eivätkä ne olleet '
+              + 'kaiverrettuja ruuhia vaan lankuista rakennettuja. Drua ei '
+              + 'käänny luovimalla: perästä tulee keula ja keulasta perä, ja '
+              + 'pienempi rungoista pidetään aina tuulen puolella. Rungot '
+              + 'sidottiin yhteen kookoskuidusta punotulla magimagilla. '
+              + 'Vain ylimyksellä sai olla drua, ja rakentamisen '
+              + 'yksinoikeus siirtyi lopulta Laun saarilla asuville '
+              + 'tongalaisille veneenrakentajille.',
+          selite: 'Druan pienempi rungoista pidetään tuulen puolella, ja '
+            + 'kääntyessään alus vaihtaa keulan ja perän paikkaa.',
+          lahde: 'Szilas, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Talo, joka sidotaan kookosnarulla',
+          tiedosto: 'Vusama, Fiji - the chief\'s house.jpg',
+          teksti: 'Vanhan Fidžin kylässä talot olivat neliömäisiä ja katot '
+              + 'pyramidin muotoisia, ja sekä seinät että katto tehtiin '
+              + 'kasvimateriaalista. Sormenpaksuiset ruokokepit kiedottiin '
+              + 'yksitellen magimagiin, kookoskuidusta punottuun ohueen '
+              + 'köyteen, ja punonta muodostaa samalla seinän kuvion. '
+              + 'Charles Wilkesin retkikunta kuvasi tavan jo 1845. '
+              + 'Magimagia punotaan kolmella eri tavalla: talitali '
+              + 'vaakapalkkiin, lalawa pystypalkkiin ja malo kuvioksi. '
+              + 'Päällikön talo oli samanlainen mutta suurempi ja '
+              + 'korkeammalla, ja kylän henkitalo bure kalou nousi '
+              + 'kivistä ja mullasta ladotun pyramidiperustan päälle.',
+          selite: 'Buren seinäkepit kiedotaan magimagiin eli '
+            + 'kookoskuitunaruun, ja punonta muodostaa samalla seinän '
+            + 'kuvion.',
+          lahde: 'Patrick Nunn, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Nuija, joka oli myös arvomerkki',
+          tiedosto: 'Club from Fiji, early 19th century, Metropolitan Museum of Art, 1985.317.6.jpg',
+          teksti: 'Fidžiläisiä nuijia on monta lajia, ja jokaisella on oma '
+              + 'nimensä ja oma tehtävänsä: ula, bulibuli, culacula, gata, '
+              + 'sali ja totokia. Ula on heittonuija, joka veistetään '
+              + 'raskaasta rautapuusta niin, että puun juuripahka jää '
+              + 'nuijan pyöreäksi pääksi. Muotonsa takia sitä on kutsuttu '
+              + 'ananasnuijaksi, ja osassa malleista pää on sileä. Ulan '
+              + 'saattoi joko heittää tai pitää kädessä lyömäaseena, ja se '
+              + 'oli lyhyt: mies kantoi useampaa kerralla. Nuija oli myös '
+              + 'omistajansa arvon merkki, ja arvokkaimpien päähän '
+              + 'upotettiin vaaleita luukiekkoja.',
+          selite: 'Ula on heittonuija, jonka pyöreä pää tehdään puun '
+            + 'juuripahkasta; muotonsa takia sitä on kutsuttu '
+            + 'ananasnuijaksi.',
+          lahde: 'Wmpearl, Wikimedia Commons (CC0)',
+        },
+      ],
+    },
+    {
+      id: 'perinteet',
+      nimi: 'Perinteet',
+      johdanto: 'Fidžiläinen juhla on sarja tarkkoja tekoja: kuka istuu '
+          + 'missä, kuka taputtaa milloin ja kuka saa astua kuumille '
+          + 'kiville.',
+      tehtava: {
+        kysymys: 'Miten Beqan saaren tulikävelyperinne tarinan mukaan sai alkunsa?',
+        vaihtoehdot: [
+          'Merimiehet opettivat sen ohi purjehtiessaan',
+          'Esi-isä sai kyvyn kalastamaltaan henkijumalalta',
+          'Se keksittiin matkailijoita varten 1900-luvulla',
+          'Lähetyssaarnaajat toivat tavan Tongasta',
+        ],
+        oikea: 1,
+        fakta: 'Sawau-heimon esi-isä sai kyvyn kävellä hehkuvilla kivillä '
+            + 'henkijumalalta, jonka hän oli saanut kiinni ankeriaita '
+            + 'kalastaessaan — ja henki sai vastineeksi henkensä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kivet, joilla kävellään paljain jaloin',
+          tiedosto: 'Vilavilairevo Beqa firewalkers.jpg',
+          teksti: 'Vilavilairevo eli tulikävely kuuluu Sawau-heimolle, joka '
+              + 'asuu Beqan saarella kymmenen kilometriä Viti Levusta '
+              + 'etelään. Kylät kuumentavat kuoppaan ladotut kivet '
+              + 'valkohehkuisiksi, ja kävelijät astuvat niiden yli '
+              + 'paljain jaloin. Vanhan kertomuksen mukaan heimon esi-isä '
+              + 'sai kyvyn henkijumalalta, jonka hän oli saanut kiinni '
+              + 'ankeriaita kalastaessaan; hengen henki oli hinta '
+              + 'lahjasta. Ennen kävelyä noudatetaan tiukkoja sääntöjä. '
+              + 'Ilmiö oli matkailijoiden nähtävyys jo 1902, jolloin '
+              + 'Robert Fulton julkaisi siitä ensimmäisen '
+              + 'luonnontieteellisen selitysyrityksen.',
+          selite: 'Vilavilairevossa kävelijät ylittävät valkohehkuisiksi '
+            + 'kuumennetut kivet paljain jaloin, ja perinne kuuluu vain '
+            + 'Beqan Sawau-heimolle.',
+          lahde: '2Cola, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Tanssi, jonka sanat opitaan unessa',
+          aika: '1896',
+          tiedosto: 'Fiji. ""Meke-Meke"" (National Dance) (NBY 441324).jpg',
+          teksti: 'Meke on fidžiläisen tanssin yleisnimi, ja sana on sukua '
+              + 'tongan sanalle me’e ja samoan sanalle mē. Perinteisesti '
+              + 'meken tanssivat joko pelkät miehet tai pelkät naiset, '
+              + 'mutta naapurisaarten vaikutus näkyy: tongalaisesta '
+              + 'ma’ulu’ulusta tuli fidžiläinen vakamalolo, jota tanssivat '
+              + 'molemmat. Friedrich Ratzel kirjoitti 1896, että meke on '
+              + 'yhtä aikaa laulu ja tanssi ja että sen keksijöitä on vain '
+              + 'harvoja — ja että nämä kertovat oppineensa sekä sävelen '
+              + 'että liikkeet henkimaailmassa. Runossa jokainen säe '
+              + 'päättyy samaan vokaaliin.',
+          selite: 'Meken tanssijat asettuvat piiriin, ja laulu ja liike '
+            + 'kuuluvat samaan esitykseen.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Rumpu, joka kutsuu kylän koolle',
+          tiedosto: 'Pair of Lali drums.JPG',
+          teksti: 'Lali on ontoksi koverrettu puinen rakorumpu, joka '
+              + 'muistuttaa tahitilaista ja samoalaista patea. Sitä '
+              + 'lyödään kahdella kapulalla, jotka tehdään pehmeämmästä '
+              + 'puusta kuin rumpu itse, jotta soitin ei vaurioidu. '
+              + 'Rummut tehtiin kaikupuista, kuten intiankatapasta ja '
+              + 'kalofyllumista, ja niitä esiintyi usein pareittain: '
+              + 'suurempi ja pienempi soitettiin vastakkain. Kannettavassa '
+              + 'sotarummussa lali ni valou oli kaksi tai kolme '
+              + 'kaikuonteloa, joilla lähetettiin monimutkaisia merkkejä '
+              + 'taistelukentän yli. Nykyään lali kutsuu kirkkoon.',
+          selite: 'Lalit esiintyvät usein pareittain, ja suurempi ja '
+            + 'pienempi rumpu soitetaan vastakkain.',
+          lahde: 'Notourno08, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Hammas, jota ei myydä vaan annetaan',
+          tiedosto: 'Sperm-whale-tooth hg.jpg',
+          teksti: 'Tabua on kiillotettu kaskelotin hammas ja fidžiläisen '
+              + 'seremonian arvokkain esine. Sitä annetaan sovinnoksi, '
+              + 'kunnianosoitukseksi ja päälliköiden välisissä '
+              + 'neuvotteluissa, ja sen ojentaminen on nimeltään sevusevu. '
+              + 'Alun perin hampaita sai vain rantautuneista valaista ja '
+              + 'vaihtokaupasta Tongan kanssa. Kun eurooppalaiset '
+              + 'huomasivat 1800-luvun alussa, mitä hampaista maksettiin, '
+              + 'saarille tuotiin tuhansia hampaita ja myös norsunluusta ja '
+              + 'mursunsyöksyhampaista tehtyjä jäljennöksiä. Tabua tummuu '
+              + 'vuosien mittaan käsien rasvoista. Vientiin tarvitaan '
+              + 'nykyään lupa.',
+          selite: 'Tabua on kiillotettu kaskelotin hammas, ja se tummuu '
+            + 'vuosien mittaan käsien rasvoista.',
+          lahde: 'Hannes Grobe, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+    },
+  ],
+  /*
+   * PAPUA-UUSI-GUINEA (Opus 6.9.2026, Oseanian maalehtierä). Port
+   * Moresbyn kaupunkilehti (kulttuuri-kategoriat.js, avain portmoresby)
+   * kantaa jo hirin savipata- ja lagatoi-purjehdukset, kansallismuseon
+   * ja esineiden palautukset, vuoden 1873 sataman nimeämisen, vuosien
+   * 1884 ja 1975 liput sekä kultaryntäyksen — niitä EI toisteta täällä.
+   *
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026:
+   * "Kuk Swamp", "Mick Leahy (explorer)", "Kokoda Track campaign",
+   * "Panguna mine", "Bougainville conflict", "Languages of Papua New
+   * Guinea", "Tok Pisin", "Raggiana bird-of-paradise", "Queen
+   * Alexandra's birdwing", "Tree-kangaroo", "Papua New Guinean
+   * cuisine", "Coffee production in Papua New Guinea", "Goroka Show",
+   * "Asaro Mudmen", "Sing-sing (New Guinea)", "Huli people".
+   *
+   * BOUGAINVILLE on kirjattu historiana ja loppuu vuoden 1998 rauhaan
+   * ja autonomiaan; nykyistä itsenäisyysprosessia ei käsitellä (sama
+   * linjaus kuin CAN/MEX/PER/CHL:n herkissä aiheissa).
+   */
+  PNG: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Uuden-Guinean ylängöillä viljeltiin maata jo yhdeksän '
+          + 'tuhatta vuotta sitten, mutta ulkomaailma sai tietää siellä '
+          + 'asuvasta miljoonasta ihmisestä vasta 1930-luvulla.',
+      nostot: [
+        {
+          otsikko: 'Suo, jonka pohjasta löytyi maailman vanhin puutarha',
+          aika: '7000 eaa.',
+          tiedosto: 'Kuk New Guinea 2002.jpg',
+          teksti: 'Kukin suo on Wahgin laaksossa 1 550 metrin korkeudessa '
+              + 'reilun kymmenen kilometrin päässä Mount Hagenista. Sen '
+              + 'turpeesta on kaivettu esiin ojia, kuoppia, tolpanreikiä ja '
+              + 'vesiuria, jotka ovat noin yhdeksäntuhatta vuotta vanhoja. '
+              + 'Ojia on kolmea kokoa: suuret laskuojat, isot ja pienet '
+              + 'sarkaojat. Niillä kuivattiin suota taarolle, joka kasvoi '
+              + 'siellä viljelyn ylärajalla. Banaanin ja sokeriruo’on '
+              + 'viljelystä on todisteita 6 900–6 400 vuoden takaa. Kuk on '
+              + 'siis yksi harvoista paikoista maailmassa, joissa '
+              + 'maanviljely keksittiin itsenäisesti, ja Unesco otti sen '
+              + 'maailmanperintöluetteloon 2008.',
+          selite: 'Kukin varhaisen maanviljelyn alue kattaa 116 hehtaaria '
+            + 'suota Wahgin laaksossa, ja siellä asuvat nykyään melpaa '
+            + 'puhuvat kawelkat.',
+          lahde: 'NASA/JPL, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kaksi veljestä ja miljoona ihmistä',
+          aika: '1930–1933',
+          tiedosto: '(Aerial view of Central Highlands, Papua New Guinea) - DPLA - 41b64ff8aab91bdbd6f8fad149905c27.jpg',
+          teksti: 'Ennen 1930-lukua ulkomaailma piti Uuden-Guinean sisäosia '
+              + 'asumattomina. Australialainen kullanetsijä Mick Leahy '
+              + 'käveli 1930 Mick Dwyerin kanssa saaren poikki ja osoitti '
+              + 'käsityksen vääräksi. Kolme vuotta myöhemmin hän johti '
+              + 'veljensä Danin kanssa retkikuntaa Länsi-ylängöille, teki '
+              + 'kaksi uraauurtavaa lentoa sisämaan yli, löysi Wahgin '
+              + 'laakson ja kuvasi tuhansia valokuvia ja elokuvaa. Juuri '
+              + 'siitä aineistosta tehtiin 1983 palkittu dokumentti First '
+              + 'Contact. Leahyn päiväkirjat kertovat myös toisesta '
+              + 'puolesta: retkikunnan aiheuttamista 41 kuolemasta '
+              + 'vuosina 1930–1934, joita tutkittiin 1936.',
+          selite: 'Uuden-Guinean keskiylängöt ovat 1 500–2 000 metrin '
+            + 'korkeudella, ja pilvipeite piilotti laaksoineen '
+            + 'satojatuhansia ihmisiä ulkomaailmalta 1930-luvulle asti.',
+          lahde: 'Sherwin Carlquist, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Polku, jolla kannettiin toisia selässä',
+          aika: '1942',
+          tiedosto: 'Kokoda track Papua New Guinea.JPG',
+          teksti: 'Kokodan polku nousee Owen Stanleyn vuoriston yli, '
+              + 'korkeimmillaan 2 190 metriin, ja koko matkalla noustaan ja '
+              + 'lasketaan yhteensä noin viisituhatta metriä. Vuonna 1942 '
+              + 'sitä pitkin käytiin taisteluja, mutta huolto lepäsi '
+              + 'papualaisten kantajien harteilla: heidät määrättiin työhön '
+              + 'kesäkuun 15. päivänä 1942 annetulla asetuksella. Yksi '
+              + 'kantaja pystyi kantamaan kolmentoista päivän muona-annokset '
+              + '— mutta kahden miehen syöminä ne loppuivat kuudessa ja '
+              + 'puolessa päivässä. Paluumatkalla kantajat toivat haavoittuneet '
+              + 'paareilla ja hoitivat heitä öisin, ja siitä syntyi nimitys '
+              + 'Fuzzy Wuzzy Angels.',
+          selite: 'Kokodan polku kulkee tiheän sademetsän läpi Owen '
+            + 'Stanleyn vuoriston yli, ja sen ylittäminen kestää '
+            + 'kävellen useita päiviä.',
+          lahde: 'Luke Brindley, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaivos, joka maksoi itsenäisyyden ja sulki itsensä',
+          aika: '1972–1998',
+          tiedosto: 'Bougainville Panguna mine shovel.jpg',
+          teksti: 'Bougainvillen saaren Crown Prince -vuoristosta löytyi '
+              + '1960-luvulla valtava kuparimalmiesiintymä, ja Pangunan '
+              + 'kaivos aloitti tuotannon 1972. Se oli tuolloin maailman '
+              + 'suurin kuparin ja kullan avolouhos, tuotti 12 prosenttia '
+              + 'maan bruttokansantuotteesta ja yli 45 prosenttia '
+              + 'vientituloista, ja sen voitoilla rahoitettiin osaltaan '
+              + 'Papua-Uuden-Guinean itsenäistyminen 1975. Bougainvillelaiset '
+              + 'saivat voitosta 0,5–1,25 prosenttia, ja rikastushiekka '
+              + 'laskettiin suoraan Jaba-jokeen. Vuonna 1988 alkoi kapina, '
+              + 'kaivos suljettiin 1989, ja kymmenvuotinen konflikti päättyi '
+              + '1998 rauhansopimukseen ja autonomiseen hallintoon.',
+          selite: 'Pangunan avolouhoksen kauhakuormaajat olivat 1970-luvun '
+            + 'alussa maailman suurimman kupari- ja kultakaivoksen '
+            + 'työkoneita, ja kaivos on ollut suljettuna vuodesta 1989.',
+          lahde: 'Robert Owen Winkler, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+    {
+      id: 'kielet',
+      nimi: 'Kielet',
+      johdanto: 'Papua-Uusi-Guinea on maailman kielellisesti moninaisin '
+          + 'maa: kieliä on noin 840, eli keskimäärin yksi kieli jokaista '
+          + 'kymmentätuhatta asukasta kohti.',
+      nostot: [
+        {
+          otsikko: 'Kahdeksansataaneljäkymmentä kieltä yhdessä maassa',
+          tiedosto: 'Languages Papua New Guinea.png',
+          teksti: 'Ethnologue laskee Papua-Uudessa-Guineassa puhuttavan 840 '
+              + 'elävää kieltä; pääministeri Michael Somare sanoi 2006 '
+              + 'luvun olevan 832 — ja korosti, että kyse on kielistä eikä '
+              + 'murteista. Niistä 25:llä on virallinen asema. Suurin osa '
+              + 'on papuakieliä, jotka eivät muodosta yhtä sukupuuta vaan '
+              + 'joukon toisistaan riippumattomia kielikuntia. Rannikolla ja '
+              + 'saarilla puhutaan lisäksi austronesialaisia kieliä, ja '
+              + 'muutamalla ulkosaarella polynesialaisia. Laissa tunnustettuja '
+              + 'kieliä on neljä: tok pisin, englanti, hiri motu ja '
+              + 'papuauusiguinealainen viittomakieli, joka sai asemansa '
+              + 'toukokuussa 2015.',
+          selite: 'Papua-Uuden-Guinean kielikartta jakautuu kymmeniin '
+            + 'kielikuntiin, joista suurin on Trans-Uusi-Guinea.',
+          lahde: 'MToumbola, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kieli, joka syntyi työmaalla',
+          tiedosto: 'Lae War Cemetery TokPisin sign at front gate.jpg',
+          teksti: 'Tok pisin on englannin pohjalta syntynyt kreolikieli ja '
+              + 'maan laajimmin käytetty kieli: vuoden 2011 laskennassa '
+              + '68,4 prosenttia väestöstä osasi lukea sitä, englantia vain '
+              + '39,9 prosenttia. Nimestään huolimatta se ei ole enää '
+              + 'pidgin vaan kreoli, koska sillä on äidinkielisiä puhujia. '
+              + 'Sanasto tulee suurimmaksi osaksi englannista, mutta mukana '
+              + 'on saksaa maan pohjoisosan siirtomaa-ajalta sekä '
+              + 'paikallisia lainoja: balus tarkoittaa kyyhkyä ja siitä '
+              + 'johdettuna lentokonetta, bagarapim rikkoa ja belhat '
+              + 'vihaista, kirjaimellisesti kuumaa vatsaa.',
+          selite: 'Sotilashautausmaan portilla teksti on kahdella kielellä, '
+            + 'ja tok pisin on niistä se, jota useampi papuauusiguinealainen '
+            + 'osaa lukea.',
+          lahde: 'Phenss, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Piano, helikopteri ja yksi sitkeä huhu',
+          aika: '1902–1969',
+          // Kuvaton (Opus 6.9.2026): aihe on kielellinen eikä esineellinen,
+          // eikä Commonsista löytynyt kuvaa, joka kertoisi siitä
+          // johdattelematta. Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Kun tok pisinillä ei ole sanaa, puhuja kuvailee asian '
+              + 'kiertäen: skru bilong lek on käden ruuvi eli polvi, gras '
+              + 'bilong het pään ruoho eli hiukset, haus moni rahatalo eli '
+              + 'pankki ja marasin bilong klinim tit hampaidenpuhdistuslääke '
+              + 'eli hammastahna. Pianosta 1900-luvun alun kirjoittajat '
+              + 'merkitsivät muistiin useita erilaisia kuvauksia, kuten '
+              + '”iso laatikko, joka itkee kun sitä lyö”. Kielitieteilijät '
+              + 'huomauttavat, että nämä ovat tilapäisiä selityksiä eivätkä '
+              + 'sanoja. Kuuluisa väite, että helikopteri olisi tok pisiniksi '
+              + 'Jeesuksen vatkain, on sen sijaan ulkomaalaisten keksintö.',
+          selite: 'Kiertoilmaus on pidginkielten tavallinen keino, ja tok '
+            + 'pisinissä se rakennetaan omistusta merkitsevällä sanalla '
+            + 'bilong.',
+        },
+        {
+          otsikko: 'Saksankielinen kreoli, jota puhuu enää harva',
+          // Kuvaton (Opus 6.9.2026): Commonsista ei löytynyt Rabaulin
+          // saksalaisajan kuvaa, joka olisi sekä kelvollisesti lisensoitu
+          // että aiheeseen osuva. Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Maan pohjoispuolisko oli vuosina 1884–1914 saksalainen '
+              + 'siirtomaa nimeltä Saksan Uusi-Guinea, ja virallinen kieli '
+              + 'oli saksa. Nykyään saksaa ei juuri puhuta, mutta jälki '
+              + 'näkyy kahdella tavalla. Tok pisiniin jäi saksalaisia '
+              + 'sanoja, ja Itä-Uuden-Britannian maakunnassa syntyi '
+              + 'unserdeutsch eli Rabaulin kreolisaksa: kieli, jonka sanasto '
+              + 'tulee saksasta mutta rakenne tok pisinistä. Se on ainoa '
+              + 'tunnettu saksan pohjalta syntynyt kreolikieli maailmassa. '
+              + 'Puhujia on enää kourallinen, ja useimmat heistä asuvat '
+              + 'nykyään Australiassa.',
+          selite: 'Unserdeutsch on maailman ainoa saksan pohjalta syntynyt '
+            + 'kreolikieli, ja se syntyi Itä-Uuden-Britannian '
+            + 'lähetysasemilla.',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Uusi-Guinea on maailman toiseksi suurin saari, ja sen '
+          + 'metsissä elää eläimiä, joita ei ole missään muualla: '
+          + 'kengurut kiipeävät puuhun ja perhoset ovat linnun kokoisia.',
+      nostot: [
+        {
+          otsikko: 'Lintu, joka tanssii ja päätyi lippuun',
+          aika: '1971',
+          tiedosto: 'Raggiana Bird-of-paradise 0A2A5379.jpg',
+          teksti: 'Raggianparatiisilintu on suuri paratiisilintu, joka elää '
+              + 'laajalti Uuden-Guinean etelä- ja koillisosissa. Sen nimi on '
+              + 'tok pisiniksi kumul. Koiraat kokoontuvat yhteiselle '
+              + 'soidinaukiolle, joka on 30–100 metriä leveä; siellä ne '
+              + 'kilpailevat korkeiden solakkojen puiden parhaista oksista, '
+              + 'taputtavat siivillään ja ravistelevat päätään naaraiden '
+              + 'edessä. Naaras hautoo munat yksin. Lajin tieteellinen nimi muistaa '
+              + 'genovalaista markiisi Francesco Raggia, jolle Luigi Maria '
+              + 'D’Albertis halusi sen omistaa. Vuonna 1971 lintu valittiin '
+              + 'maan kansallislinnuksi ja se otettiin kansallislippuun, '
+              + 'jossa se lentää keltaisella pohjalla.',
+          selite: 'Raggianparatiisilinnun koiras levittää siipensä ja '
+            + 'kylkisulkansa soitimella, ja juuri tämä lintu on '
+            + 'Papua-Uuden-Guinean lipussa.',
+          lahde: 'JJ Harrison, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Perhonen, joka ammuttiin haulikolla',
+          aika: '1906',
+          tiedosto: 'Ornithoptera alexandrae Strasbourg.jpg',
+          teksti: 'Kuningatar Aleksandran linnunsiipi on maailman suurin '
+              + 'perhonen: naaraan siipiväli on 25–28 senttiä, ruumis '
+              + 'kahdeksan senttiä ja paino jopa kaksitoista grammaa. Laji '
+              + 'elää vain Oron maakunnan sademetsissä itäisessä '
+              + 'Papua-Uudessa-Guineassa, arviolta sadan neliökilometrin '
+              + 'alueella Popondettan lähellä. Keräilijä Albert Meek löysi '
+              + 'sen 1906, ja koska yksilöt lensivät latvustossa, hän kaatoi '
+              + 'ensimmäisen pienellä haulikolla; myöhemmin hän kasvatti '
+              + 'loput toukista. Mount Lamingtonin purkaus 1950-luvulla '
+              + 'tuhosi suuren osan lajin elinalueesta.',
+          selite: 'Kuningatar Aleksandran linnunsiipi on maailman suurin '
+            + 'perhonen, ja sen kansainvälinen kauppa on kielletty.',
+          lahde: 'Thomon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kenguru, joka nousi puuhun',
+          tiedosto: 'Matschies tree kangaroo Dendrolagus matschiei at Bronx Zoo 1.jpg',
+          teksti: 'Puukengurut ovat kengurujen sukulaisia, jotka ovat '
+              + 'siirtyneet takaisin puihin. Niillä on lyhyemmät takajalat '
+              + 'ja vahvemmat etujalat kuin maakenguruilla sekä pitkä häntä '
+              + 'tasapainoksi. Matschienpuukengurun pään ja ruumiin pituus '
+              + 'on noin 81 senttiä, urokset painavat 9–11 ja naaraat 7–9 '
+              + 'kiloa. Naaras synnyttää yhden poikasen vuodessa, ja '
+              + 'vastasyntynyt on ihmisen kynnenpään kokoinen. Suurin '
+              + 'luontainen vaara on ametistipytoni, joka saalistaa '
+              + 'latvustossa. Useimmat puukengurulajit ovat uhanalaisia '
+              + 'metsästyksen ja metsien hakkuiden takia.',
+          selite: 'Matschienpuukengurulla on lyhyet takajalat, vahvat '
+            + 'etujalat ja pitkä häntä, joilla se liikkuu latvustossa.',
+          lahde: 'Fred Hsu, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kyyhky, jonka päässä on pitsiä',
+          tiedosto: 'Guria Pigeon (Goura victoria) head in Port Moresby.jpg',
+          teksti: 'Viktoriankruunukyyhky on maailman suurin nykyinen '
+              + 'kyyhkylaji: pituutta on 73–75 senttiä, joskus yli '
+              + 'kahdeksankymmentä, ja painoa keskimäärin 2,4 kiloa. '
+              + 'Sinertävänharmaan linnun päässä on pitsimäinen töyhtö, '
+              + 'jonka sulat päättyvät valkoisiin kärkiin, rinta on '
+              + 'tummanpurppurainen ja iiris punainen. Se kävelee '
+              + 'kiireettömästi Pohjois-Uuden-Guinean alavien metsien ja '
+              + 'suometsien pohjalla ja syö maahan pudonneita hedelmiä. '
+              + 'Häirittynä se nousee suoraan ylös latvustoon. Nimi '
+              + 'muistaa kuningatar Viktoriaa, ja sukuun kuuluu neljä '
+              + 'kruunukyyhkylajia, jotka kaikki elävät vain Uuden-Guinean '
+              + 'seudulla.',
+          selite: 'Viktoriankruunukyyhkyn viuhkatöyhdön sulat päättyvät '
+            + 'valkoisiin kärkiin, ja laji on maailman suurin kyyhky.',
+          lahde: 'Taro Taylor, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Neljä viidestä papuauusiguinealaisesta elää siitä, mitä '
+          + 'itse kasvattaa, ja ruokapöydän kolme peruskiveä ovat '
+          + 'juurikasvit, banaani ja saago.',
+      nostot: [
+        {
+          otsikko: 'Uuni, joka on samalla kutsu',
+          tiedosto: 'A traditional Papua New Guinean mumu.jpg',
+          teksti: 'Mumu tarkoittaa yhtä aikaa maan kansallisruokaa ja sitä '
+              + 'menetelmää, jolla se tehdään. Kuoppaan ladotaan hehkuvat '
+              + 'kivet tai hiillos, päälle banaaninlehtiin kääritty ruoka, '
+              + 'ja koko uuni suljetaan '
+              + 'moneksi tunniksi. Aineksina ovat sianliha tai kana, '
+              + 'bataatti, taaro, plantaanit ja lehtivihannekset — ylängöillä '
+              + 'suositaan tiettyä saniaista, saarilla kookoskermaa. Mumua '
+              + 'tehdään yhä kotitalouksissa, vaikka uunit ovat tulleet. '
+              + 'Sen sukulainen aigir kypsyy nopeammin: kuumat kivet '
+              + 'pudotetaan suoraan kookosmaitopataan, ja ruoka on valmista '
+              + 'puolessa tunnissa.',
+          selite: 'Mumussa ruoka kääritään banaaninlehtiin ja kypsennetään '
+            + 'kuumien kivien päällä maakuopassa useita tunteja.',
+          lahde: 'Jay Evennett, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Tärkkelys, joka irrotetaan palmun rungosta',
+          tiedosto: 'Sago pancake Papua New Guinea.jpg',
+          teksti: 'Saago ei ole siemen eikä juuri vaan tärkkelys, joka '
+              + 'kaavitaan saagopalmun rungon ytimestä ja huuhdotaan '
+              + 'vedellä jauhoksi. Se on rannikon ja jokilaaksojen tärkein '
+              + 'ravinto, ja tok pisiniksi jauho on saksak. Sepikin alueella '
+              + 'jauho sekoitetaan kiehuvaan veteen, jolloin syntyy nangu, '
+              + 'hyytelömäinen nyytti, joka syödään aterian tärkkelyksenä. '
+              + 'Sama jauho painetaan myös kuumalle pannulle ohueksi '
+              + 'letuksi, joskus kookosraasteen kanssa. Jälkiruoka dia on '
+              + 'saagosta ja banaanista tehty nyytti, joka höyrytetään '
+              + 'banaaninlehdessä.',
+          selite: 'Saagolettu tehdään pelkästä vedestä ja saagopalmun '
+            + 'rungosta saadusta tärkkelyksestä, ja se on rannikon ja '
+            + 'jokilaaksojen perusruokaa.',
+          lahde: 'Toksave, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Bataatti, joka muutti ylängöt',
+          // Kuvaton (Opus 6.9.2026): Commonsista ei löytynyt kelvollisesti
+          // lisensoitua kuvaa ylänköjen bataattipuutarhasta tai torista.
+          // Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Papua-Uuden-Guinean ruokavalio on suurelta osin '
+              + 'kasvisruokaa, ja noin kahdeksankymmentä prosenttia '
+              + 'väestöstä elää siitä, mitä itse kasvattaa. Perusruokana '
+              + 'ovat juurikasvit, banaani ja saago. Ylängöillä '
+              + 'tärkein niistä on kaukau eli bataatti, ja siellä '
+              + 'seitsemänkymmentä prosenttia ihmisistä saa elantonsa '
+              + 'omavaraisviljelystä. Muita perusruokia ovat karuka eli '
+              + 'vuoripandanuksen pähkinä, kassava, leipäpuun hedelmä ulu '
+              + 'ja kookos. Rannikolla ruoka valmistetaan kookosmaidossa ja '
+              + 'kookoskermassa, ylängöillä ei. Sianliha on juhlaruokaa, '
+              + 'jota syödään erityisinä päivinä.',
+          selite: 'Kaukau eli bataatti on Papua-Uuden-Guinean ylänköjen '
+            + 'tärkein perusruoka, ja se kasvaa korkealla viileässä '
+            + 'ilmastossa.',
+        },
+        {
+          otsikko: 'Kahvi, joka kasvaa kahdenkymmenen puun tarhoissa',
+          aika: '1926',
+          tiedosto: 'Papua New Guinea raw arabica coffee beans.jpg',
+          teksti: 'Kahvi on maan toiseksi suurin maatalouden vientituote '
+              + 'öljypalmun jälkeen, ja se työllistää noin 2,5 miljoonaa '
+              + 'ihmistä. Ensimmäiset siemenet olivat jamaikalaista Blue '
+              + 'Mountainia, ja ne istutettiin vuosina 1926–1927. '
+              + 'Suurviljelmien sijaan tuotanto siirtyi 1980-luvulla '
+              + 'pienviljelijöille, jotka tuottavat nykyään yli 85 '
+              + 'prosenttia sadosta. Monella on kahvipuutarha muiden '
+              + 'kasvien seassa, joskus vain parikymmentä puuta. Yhdeksän '
+              + 'kymmenestä pavusta kasvaa viidessä ylänkömaakunnassa, ja '
+              + '95 prosenttia sadosta on pestyä ylänköarabicaa.',
+          selite: 'Papua-Uuden-Guinean kahvisäkki kertoo lastin laadun: '
+            + 'raakoja arabicapapuja, jotka on kasvatettu ylängöillä.',
+          lahde: 'Ella Marie, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'juhlat',
+      nimi: 'Juhlat',
+      johdanto: 'Sing-sing on juhla, jossa kymmenet heimot esittävät '
+          + 'toisilleen oman tanssinsa, laulunsa ja koristelunsa — ja '
+          + 'moni niistä on nuorempi kuin luulisi.',
+      tehtava: {
+        kysymys: 'Milloin Asaron mutamiesten naamiot esitettiin ensimmäisen kerran?',
+        vaihtoehdot: [
+          'Esihistoriallisella ajalla',
+          '1700-luvun sotaretkillä',
+          '1957 maatalousnäyttelyssä',
+          'Vasta 2000-luvun matkailussa',
+        ],
+        oikea: 2,
+        fakta: 'Ruipo Okoroho kehitti isoisänsä girituwai-naamiot '
+            + 'esityskuntoon Itä-ylänköjen maatalousnäyttelyyn 1957, ja '
+            + 'kaksisataa naamioitunutta miestä voitti ensimmäisen '
+            + 'palkinnon.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kun kylä pukeutuu toista kylää varten',
+          tiedosto: 'SingSing Wabag Enga PNG.jpg',
+          teksti: 'Sing-sing on vuosittainen kokoontuminen, jossa heimot ja '
+              + 'kylät esittelevät toisilleen oman kulttuurinsa, tanssinsa '
+              + 'ja musiikkinsa. Nimi on tok pisiniä ja tarkoittaa juuri '
+              + 'sitä, mitä se kuulostaa. Esiintyjät maalaavat itsensä ja '
+              + 'pukevat päähineet, joissa on paratiisilintujen sulkia, '
+              + 'simpukoita, kuoriaisia ja kasveja, ja soittavat '
+              + 'kundu-tiimalasirumpua. Kun maassa on 840 kieltä, sing-sing '
+              + 'on harvoja tilaisuuksia, joissa naapurit näkevät toistensa '
+              + 'perinteen rinnakkain — ja samalla se on muuttunut '
+              + 'kansalliseksi tunnukseksi, jota käytetään maan '
+              + 'esittelemiseen ulkomaille.',
+          selite: 'Sing-singissä jokainen ryhmä esiintyy omassa '
+            + 'koristelussaan, ja päähineiden sulat, simpukat ja kasvit '
+            + 'kertovat mistä ryhmä on kotoisin.',
+          lahde: 'Jialiang Gao, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Näyttely, jonka virkamiehet keksivät',
+          aika: '1956',
+          tiedosto: 'Sing-sing (15397673713).jpg',
+          teksti: 'Gorokan näyttely eli Itä-ylänköjen maatalousnäyttely on '
+              + 'maan suurin kulttuuritapahtuma. Sen käynnistivät 1956 '
+              + 'australialaiset kiapit eli piirivirkamiehet, ja '
+              + 'ensimmäiseen näyttelyyn tuli noin kymmenentuhatta '
+              + 'paikallista sekä vieraita eri puolilta Papuaa ja '
+              + 'Australiaa. Nykyään se pidetään Gorokassa vuosittain '
+              + 'lähellä itsenäisyyspäivää 16. syyskuuta, ja mukana on noin '
+              + 'sata heimoa. Vastaavia näyttelyitä on sittemmin '
+              + 'järjestetty Mount Hagenissa ja muualla, mutta Goroka on '
+              + 'yhä suurin.',
+          selite: 'Gorokan näyttelyssä esiintyy noin sata heimoa, ja se '
+            + 'pidetään vuosittain lähellä itsenäisyyspäivää.',
+          lahde: 'Kahunapule Michael Johnson, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Perinne, joka alkoi kilpailusta',
+          aika: '1957',
+          tiedosto: 'Asaro Mud Men (48885957917).jpg',
+          teksti: 'Asaron laakson mutamiehet eli holosat ovat maan '
+              + 'tunnetuin kuva — ja perinne on nuorempi kuin tarinat '
+              + 'antavat ymmärtää. Antropologi Ton Otton tutkimuksen mukaan '
+              + 'Komuniven kylässä osattiin 1800-luvun lopulta tapa '
+              + 'girituwai, jossa savella peitetty kehikko asetettiin pään '
+              + 'päälle ja siihen tehtiin reiät silmille. Bukiro Poten '
+              + 'pojanpoika Ruipo Okoroho otti sen käyttöön Itä-ylänköjen '
+              + 'maatalousnäyttelyssä 1957, ja kaksisataa naamioitunutta '
+              + 'miestä voitti kilpailun ensimmäisen palkinnon. Vasta '
+              + 'silloin naamioista tuli taidetta ja keho maalattiin '
+              + 'valkoiseksi.',
+          selite: 'Asaron mutamiesten naamiot tehdään Asaro-joen savesta, '
+            + 'joka ei halkeile kuivuessaan, ja niitä koristellaan '
+            + 'sianhampailla ja simpukoilla.',
+          lahde: 'gailhampshire, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Peruukki, joka kasvatetaan omasta tukasta',
+          // Kuvaton (Opus 6.9.2026): Commonsin hulikuvat ovat joko alle
+          // 1 200 pikseliä leveitä, tunnistettavia lähimuotokuvia tai
+          // heijastavia vitriinikuvia. Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Hulit asuvat Helan maakunnassa Etelä-ylängöillä Tagarin '
+              + 'jokilaaksossa noin 1 600 metrin korkeudessa, ja heitä on '
+              + 'yli 250 000. Alueella sataa seitsemänä päivänä '
+              + 'kymmenestä, ja öisin lämpötila laskee lähelle seitsemää '
+              + 'astetta; toisinaan halla tuhoaa kumpupuutarhat. Hulien '
+              + 'tunnetuin tapa on juhlapäähine, joka tehdään värjätystä '
+              + 'ihmisen hiuksesta ja koristellaan paratiisilintujen '
+              + 'sulilla. Eurooppalaiset kohtasivat hulit vasta marraskuussa '
+              + '1934, ja kohtaaminen päättyi verilöylyyn: Foxin veljekset '
+              + 'surmasivat ainakin viisikymmentä ihmistä.',
+          selite: 'Hulien juhlapäähine tehdään värjätystä ihmisen hiuksesta '
+            + 'ja koristellaan paratiisilintujen ja astrapioiden sulilla.',
+        },
+      ],
+    },
+  ],
+  /*
+   * SALOMONSAARET (Opus 6.9.2026, Oseanian maalehtierä). Honiaran
+   * kaupunkilehteä ei ole vielä tehty, joten pääkaupungin omat aiheet —
+   * Guadalcanalin taistelut 1942–1943, Honiaran perustaminen sodan
+   * jälkeen ja kaupungin nähtävyydet — on jätetty tästä pois, jotta ne
+   * jäävät kaupunkilehdelle. Vuosien 1998–2003 levottomuuksia ei
+   * käsitellä (sama linjaus kuin muissa herkissä aiheissa).
+   *
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026:
+   * "Solomon Islands", "Lapita culture", "Langa Langa Lagoon",
+   * "Solomon Islands skink", "Coconut crab", "East Rennell",
+   * "Melanesian megapode", "Marovo Lagoon", "Kavachi", "Tikopia",
+   * "Nguzu nguzu", "ꞋAreꞌare people", "Sweet Lullaby".
+   * Punasulkarahan kuvaus on Wikimedia Commonsin tiedostosivulta
+   * (Honolulu Academy of Artsin kokoelmatiedot), koska
+   * en-Wikipediassa ei ole aiheesta artikkelia.
+   */
+  SLB: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Salomonsaaret sai nimensä väärinkäsityksestä: espanjalaiset '
+          + 'yhdistivät retkikertomukset Raamatun kuningas Salomon '
+          + 'rikkauksiin, eikä kultaa ollut.',
+      nostot: [
+        {
+          otsikko: 'Kansa, joka ohitti suuret saaret',
+          aika: '1200–800 eaa.',
+          tiedosto: 'Map of the Santa Cruz Islands (Solomon Islands).png',
+          teksti: 'Salomonsaarilla on asuttu poikkeuksellisen kauan: '
+              + 'Bukan saaren Kilun luolasta on löydetty jälkiä noin '
+              + '30 000–28 000 eaa., jolloin merenpinta oli matalampi ja '
+              + 'saaret muodostivat yhden suuren maamassan. Noin vuosina '
+              + '1200–800 eaa. saapuivat austronesialaiset lapitalaiset '
+              + 'Bismarckin saaristosta mukanaan tunnusomainen '
+              + 'keramiikkansa. Kielitiede ja perimä kertovat yllättävän '
+              + 'reitin: he loikkasivat jo asuttujen pääsaarten yli ja '
+              + 'asettuivat ensin kaakkoiseen Santa Cruzin ryhmään, ja '
+              + 'vasta myöhemmin kulttuuri levisi takaisin länteen '
+              + 'pääsaarille.',
+          selite: 'Santa Cruzin saaret ovat Salomonsaarten kaakkoisin '
+            + 'ryhmä, ja lapitalaiset asettuivat niille ennen kuin '
+            + 'suurille pääsaarille.',
+          lahde: 'Maximilian Dörrbecker (Chumwa), Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Nimi, joka lupasi kultaa',
+          aika: '1568–1595',
+          // Kuvaton (Opus 6.9.2026): Commonsin Mendaña-muotokuva on vain
+          // 300 pikseliä leveä eikä muuta kelvollista aikalaiskuvaa
+          // löytynyt. Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Espanjalainen merenkulkija Álvaro de Mendaña purjehti '
+              + 'Perusta ja rantautui Santa Isabelin saarelle 7. helmikuuta '
+              + '1568 ensimmäisenä eurooppalaisena. Hän tutki myös Makiran, '
+              + 'Guadalcanalin ja Malaitan. Välit paikallisiin alkoivat '
+              + 'hyvin mutta huononivat, ja elokuussa hän palasi Peruun. '
+              + 'Mendaña ei nimennyt saaristoa, mutta ne, jotka kuulivat '
+              + 'matkasta, alkoivat kutsua sitä nimellä Islas Salomón: '
+              + 'kertomukset sekoittuivat tarinoihin kuningas Salomon '
+              + 'rikkauksista ja Ofirin kaupungista. Toinen retki 1595 '
+              + 'yritti perustaa siirtokunnan Nendön saarelle, mutta se '
+              + 'epäonnistui tauteihin, ja Mendaña kuoli lokakuussa.',
+          selite: 'Álvaro de Mendaña oli ensimmäinen eurooppalainen, joka '
+            + 'näki Salomonsaaret, ja saariston nimi syntyi vasta hänen '
+            + 'matkakertomustensa perusteella.',
+        },
+        {
+          otsikko: 'Saari, jolta lähdettiin sopimustyöhön',
+          aika: '1870–1903',
+          tiedosto: 'Malaita, Solomon Island (22674371123).jpg',
+          teksti: 'Malaitalta lähti 1870-luvulta vuoteen 1903 enemmän '
+              + 'sopimustyöläisiä kuin miltään muulta Salomonsaarelta. '
+              + 'Miehet ja jotkut naiset menivät Queenslandin ja Fidžin '
+              + 'viljelmille; 1870-luvulla värväys oli usein laitonta ja '
+              + 'sitä kutsuttiin nimellä blackbirding. Osa lähti '
+              + 'vapaaehtoisesti ja teki jopa toisen työmatkan, mutta '
+              + 'järjestelmä pysyi riistävänä. Kesäkuussa 1893 kapteeni '
+              + 'Herbert Gibson julisti eteläiset Salomonsaaret Britannian '
+              + 'protektoraatiksi — osaksi juuri siksi, että työvoiman '
+              + 'lähde pysyisi muiden siirtomaavaltojen ulottumattomissa. '
+              + 'Australia karkotti saarelaisia vuoden 1901 lain nojalla.',
+          selite: 'Malaitan rannikkokylät on rakennettu aivan vedenrajaan, '
+            + 'ja saarelta lähti 1800-luvun lopulla eniten '
+            + 'sopimustyöläisiä koko saaristosta.',
+          lahde: 'Leocadio Sebastian, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Maa, joka pudotti nimestään yhden sanan',
+          aika: '1978',
+          tiedosto: 'View of the National Parliament Building, Honiara, Solomon Islands.jpg',
+          teksti: 'Siirtomaahallinnon virallinen nimi oli British Solomon '
+              + 'Islands Protectorate, kunnes se muutettiin 1975 muotoon '
+              + 'The Solomon Islands. Itsehallinto saatiin seuraavana '
+              + 'vuonna, ja 7. heinäkuuta 1978 maa itsenäistyi. Samalla '
+              + 'nimestä pudotettiin määräinen artikkeli: valtio on '
+              + 'virallisesti Solomon Islands ilman the-sanaa, ja '
+              + 'artikkeli kuuluu vain itsenäisyyttä edeltävään aikaan. '
+              + 'Maasta tuli perustuslaillinen monarkia, jonka '
+              + 'valtionpäämiestä edustaa kenraalikuvernööri. '
+              + 'Kansallisparlamentti sai oman talon Honiaraan, ja sen '
+              + 'kartiokatto näkyy kaupungin ylle kohoavalta kukkulalta.',
+          selite: 'Honiaran kansallisparlamentin rakennus on pyöreä ja '
+            + 'kartiokattoinen, ja se seisoo kukkulalla kaupungin '
+            + 'keskustan yläpuolella.',
+          lahde: 'David Jones, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kuudensadan saaren ketjussa jokainen laakso on oma '
+          + 'maailmansa: täällä on maailman suurin skinkki, lintu joka ei '
+          + 'haudo munia itse ja rapu joka kiipeää palmuun.',
+      nostot: [
+        {
+          otsikko: 'Lisko, joka pitää perheestä',
+          tiedosto: 'Corucia zebrata 01.JPG',
+          teksti: 'Salomoninskinkki on maailman suurin skinkkilaji ja '
+              + 'kotoperäinen vain Salomonsaarten saaristossa. Se on '
+              + 'harvinaisuus kahdesti: se on täysin kasvissyöjä ja syö '
+              + 'lehtiä, hedelmiä ja versoja, ja se on yksi harvoista '
+              + 'matelijoista, jotka elävät perheryhmissä. Sekä koiraat '
+              + 'että naaraat puolustavat reviiriään ja käyvät '
+              + 'vihamielisesti ryhmään kuulumattomien kimppuun. Nimet '
+              + 'apinahäntäskinkki ja tarttumahäntäskinkki tulevat '
+              + 'hännästä, joka toimii viidentenä raajana kiipeillessä. '
+              + 'John Edward Gray kuvasi lajin 1855 ja antoi sille '
+              + 'sukunimen Corucia, latinan hohtavasta.',
+          selite: 'Salomoninskinkin häntä on tarttumakykyinen ja toimii '
+            + 'viidentenä raajana, ja laji on maailman suurin skinkki.',
+          lahde: 'H. Zell, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Rapu, joka hukkuu mereen',
+          tiedosto: 'Coconut Crab Birgus latro.jpg',
+          teksti: 'Kookosrapu on maan päällä elävistä niveljalkaisista '
+              + 'suurin. Nuorena se käyttää kotilonkuorta kuten muutkin '
+              + 'erakkoravut, mutta aikuisena sille kasvaa kova takaruumis '
+              + 'eikä kuorta enää tarvita. Samalla se menettää kykynsä '
+              + 'hengittää vedessä: aikuinen rapu hukkuu, jos se on '
+              + 'merivedessä alle vuorokauden. Se kiipeää kymmenmetrisiin '
+              + 'palmuihin ja voi pudota neljä ja puoli metriä '
+              + 'vahingoittumatta. Kookoksen se avaa aina samasta '
+              + 'kohdasta, kolmen itämisreiän luota, hakkaamalla '
+              + 'saksillaan. Täysikasvuiseksi menee 40–60 vuotta, ja '
+              + 'elinikä voi ylittää kuusikymmentä vuotta.',
+          selite: 'Kookosrapu on maan päällä elävistä niveljalkaisista '
+            + 'suurin, ja se hengittää erityisellä keuhkoelimellä eikä '
+            + 'kiduksilla.',
+          lahde: 'Drew Avery, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Atolli, joka nousi merestä',
+          aika: '1998',
+          tiedosto: 'East Rennell-112645.jpg',
+          teksti: 'Rennell on maailman suurin kohonnut koralliatolli: '
+              + '86 kilometriä pitkä, 15 leveä ja 37 000 hehtaaria. Saaren '
+              + 'eteläpäässä on Tegano-järvi, joka oli aikoinaan atollin '
+              + 'laguuni; se on yhä merenpinnan tasolla, vesi on '
+              + 'murtovettä ja järveä reunustavat kalliot ja pienet '
+              + 'kalkkikivisaaret. Itä-Rennell otettiin maailmanperintöön '
+              + '1998, ja hoitosuunnitelma kirjoitettiin yhdessä asukkaiden '
+              + 'kanssa: neljä kylää ja noin 800 ihmistä jatkavat elämäänsä '
+              + 'alueella tapaoikeuden mukaisella maallaan. Saarella on tavattu 50 '
+              + 'lintulajia, joista 21 on kotoperäisiä, ja Tegano-järvessä '
+              + 'elää oma merikäärmelaji.',
+          selite: 'Rennell on maailman suurin kohonnut koralliatolli, ja '
+            + 'sen rantaviiva on paljasta korallikalkkikiveä.',
+          lahde: 'S. A. Tabbasum, Wikimedia Commons (CC BY-SA 3.0 IGO)',
+        },
+        {
+          otsikko: 'Lintu, joka jättää munat maan huomaan',
+          // Kuvaton (Opus 6.9.2026): melanesianisojalkakanasta ei ole
+          // Commonsissa yhtään kuvaa, ja toisen isojalkakanalajin kuva
+          // olisi harhaanjohtava. Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Melanesianisojalkakana ei haudo muniaan ruumiinlämmöllä '
+              + 'vaan jättää ne ympäristön lämmön varaan. Naaras kaivaa '
+              + 'kuopan hiekkarannalle, geotermiseen maahan tai '
+              + 'lahoavaan kasvimassaan, ja munat makaavat 30–90 sentin '
+              + 'syvyydessä 36–37 asteessa, vaikka ilman lämpötila olisi '
+              + '31. Munat ovat suuria ja niissä on poikkeuksellisen '
+              + 'paljon keltuaista. Poikasella ei ole munahammasta: se '
+              + 'rikkoo kuoren jaloillaan ja kaivautuu pintaan, ja siitä '
+              + 'hetkestä alkaen se juoksee, etsii ruokansa ja lentää '
+              + 'lyhyitä matkoja ilman että tapaa vanhempiaan koskaan. '
+              + 'Savon saarella laji munii ympäri vuoden.',
+          selite: 'Melanesianisojalkakanan poikanen kaivautuu maasta '
+            + 'itsenäisenä eikä tapaa vanhempiaan lainkaan.',
+        },
+      ],
+    },
+    {
+      id: 'meri',
+      nimi: 'Meri',
+      johdanto: 'Salomonsaarilla meri ei ole vain tie: se on tulivuori, '
+          + 'ruokakomero ja paikoin myös maa, jonka ihmiset ovat itse '
+          + 'kantaneet paikalle.',
+      nostot: [
+        {
+          otsikko: 'Laguuni, jonka ympärillä on kaksi riuttaa',
+          tiedosto: 'Marovo Lagoon (16 August 2008).jpg',
+          teksti: 'Marovon laguuni Uuden-Georgian saarilla on maailman '
+              + 'suurin kaksoisvalliriutan sulkema laguuni. Se peittää '
+              + '700 neliökilometriä Vangunun ja Nggatokaen sammuneiden '
+              + 'tulivuorisaarten välissä, ja sitä suojaa kaksinkertainen '
+              + 'riuttajärjestelmä. Vuoden 2014 kartoituksessa laguunin '
+              + 'reunariutan ulkopuolella oli koko Läntisen provinssin '
+              + 'korkein elävän korallin peittävyys, keskimäärin 49 '
+              + 'prosenttia. Laguunissa on kymmeniä saaria, joista osa on '
+              + 'asuttuja; asukkaat puhuvat marovoa ja elävät '
+              + 'omavaraisviljelystä ja kalastuksesta. Honiarasta pääsee '
+              + 'perille tunnissa lentäen tai kymmenessä laivalla.',
+          selite: 'Marovon laguuni on maailman suurin kaksoisvalliriutan '
+            + 'sulkema laguuni, ja sen pinta-ala on 700 neliökilometriä.',
+          lahde: 'Xplore Dive, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Tulivuori, jonka kraatterissa ui haita',
+          aika: '1939–',
+          tiedosto: 'Kavachi Eruption.jpg',
+          teksti: 'Kavachi on yksi lounaisen Tyynenmeren aktiivisimmista '
+              + 'merenalaisista tulivuorista. Se on Vangunun saaren '
+              + 'eteläpuolella, ja paikalliset kutsuvat sitä nimellä Rejo '
+              + 'te Kavachi, Kavachin uuni. Ensimmäisestä kirjatusta '
+              + 'purkauksesta 1939 lähtien vuori on noussut merenpinnan '
+              + 'yläpuolelle ja kulunut taas takaisin veden alle ainakin '
+              + 'kahdeksan kertaa. Purkaukset sinkoavat sulaa laavaa '
+              + 'seitsemänkymmentä metriä ja rikkihöyryä viisisataa metriä '
+              + 'korkeuteen. Vuonna 2015 tutkijat löysivät kraatterin '
+              + 'sisältä eläviä haita: vasarahaita, silkkihaita ja '
+              + 'rauskuja.',
+          selite: 'Kavachin purkaus nostaa tuhkaa ja höyryä satojen '
+            + 'metrien korkeuteen, ja tulivuori on noussut saareksi ja '
+            + 'kulunut pois ainakin kahdeksasti.',
+          lahde: 'Alex DeCiccio, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Saaret, jotka kannettiin käsin paikalle',
+          // Kuvaton (Opus 6.9.2026): Commonsin Laulasi-kuvat ovat vain
+          // 720 pikseliä leveitä, eikä muuta varmasti tekosaarta esittävää
+          // kuvaa löytynyt. Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Langa Langan laguuni on 21 kilometriä pitkä ja vajaan '
+              + 'kilometrin leveä kaistale Malaitan länsirannikolla. Sen '
+              + 'asukkaita kutsutaan suolavesi-ihmisiksi, ja he asuvat '
+              + 'pienillä tekosaarilla, jotka on kasattu hiekkasärkkien '
+              + 'päälle kivi kerrallaan. Saaret rakennettiin turvapaikoiksi '
+              + 'sisämaan väkeä pakoon. Laguunilla ei ole puutarhoja, joten '
+              + 'ruoka on aina pitänyt saada vaihtokaupalla. Kirjailija '
+              + 'Jack London purjehti alueella 1908 ja vertasi asukkaita '
+              + 'Venetsian perustajiin: heidän kätensä ja hartiansa olivat '
+              + 'vahvat kanootissa istumisesta, mutta jalat hoikat.',
+          selite: 'Langa Langan laguunin tekosaaret on kasattu '
+            + 'hiekkasärkkien päälle kivi kerrallaan, eikä niillä ole '
+            + 'viljelymaata lainkaan.',
+        },
+        {
+          otsikko: 'Saari, joka päätti hävittää sikansa',
+          aika: '1606',
+          tiedosto: 'Kleding van de inwoners van Tikopia Costumes de habitans de Tikopia (titel op object) Ontdekkingsreis van de Astrolabe (serietitel) Voyage de Découvertes de l\'Astrolabe (serietitel), RP-P-1906-509.jpg',
+          teksti: 'Tikopia on polynesialainen ulkosaari: sen asukkaat ovat '
+              + 'kulttuuriltaan polynesialaisia, vaikka saari on kaukana '
+              + 'Polynesian kolmion ulkopuolella, ja kieli kuuluu samoalaiseen '
+              + 'haaraan. Ensimmäiset eurooppalaiset saapuivat 22. huhtikuuta '
+              + '1606 Pedro Fernandes de Queirósin retkikunnan mukana. '
+              + 'Saarella asuu noin 1 200 ihmistä yli kahdessakymmenessä '
+              + 'kylässä, ja viljely muistuttaa metsäpuutarhaa. Väkiluku on '
+              + 'sidottu tietoisesti siihen, mitä saari kestää: noin vuonna '
+              + '1600 asukkaat päättivät yhdessä teurastaa kaikki siat ja '
+              + 'siirtyä kalastukseen, koska siat söivät liikaa ihmisten '
+              + 'ruokaa.',
+          selite: 'Tikopian asukkaat ovat kulttuuriltaan polynesialaisia, '
+            + 'ja saari on yksi Polynesian kolmion ulkopuolisista '
+            + 'polynesialaisista ulkosaarista.',
+          lahde: 'A. Maurin / Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+      ],
+    },
+    {
+      id: 'kasityo',
+      nimi: 'Käsityö',
+      johdanto: 'Salomonsaarilla arvo tehdään käsin: raha punotaan '
+          + 'simpukasta ja sulista, ja veistoksen pinta hohtaa '
+          + 'helmiäisestä.',
+      nostot: [
+        {
+          otsikko: 'Raha, joka hiotaan simpukasta',
+          tiedosto: 'Écheveau de monnaie de coquillage 11-o.lau-F091.LA915.jpg',
+          teksti: 'Langa Langan laguunin saarilla tehdään simpukkarahaa, ja '
+              + 'työ on naisten. Kuoria käytetään neljää lajia: punahuulista '
+              + 'kalliosimpukkaa romu, valkoista ke’etä, mustaa '
+              + 'hevossimpukkaa kurila ja paksua valkoista kakadua. Kuoret '
+              + 'hakataan paloiksi, hiotaan pyöreiksi kiekoiksi, porataan ja '
+              + 'pujotetaan naruun. Tuotteita on monta: rannerenkaita, '
+              + 'kaulanauhoja, korvakoruja ja arvokkain muoto tafuliae, '
+              + 'jota annetaan morsiusrahana ja hyvityksenä väärin teosta. '
+              + 'Jo 1882 kirjattiin, että '
+              + 'kolikoita tehtiin vain sen verran kuin tarvittiin, ja '
+              + 'juuri siksi rahan arvo pysyi.',
+          selite: 'Tafuliae koostuu rinnakkaisista simpukkakiekkonaruista, '
+            + 'ja se on Malaitan arvokkain kastom-rahan muoto.',
+          lahde: 'Simon Pierre Barrette, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vyö, joka on tehty tuhansista sulista',
+          tiedosto: 'Red feather currency belt, Santa Cruz Islands, HAA.JPG',
+          teksti: 'Santa Cruzin saarilla rahana toimi punasulkavyö. Pohjana '
+              + 'on ohut kaarnanauha, jonka päälle kiinnitetään harmaita '
+              + 'tyynenmerenkyyhkyn sulkia ja niiden päälle pieninä '
+              + 'suomuina punaisen mesikenttäkkään höyheniä, kunnes koko '
+              + 'nauha on kirkkaanpunainen. Valmis vyö sidotaan '
+              + 'kuitunauhalla ja koristellaan helmiäissimpukalla ja '
+              + 'kaurikuorilla. Pieniä höyheniä kuluu yhteen vyöhön '
+              + 'valtava määrä, ja työ vaatii sekä linnustajan että '
+              + 'sitojan. Vyöt olivat saarten arvokkainta omaisuutta, ja '
+              + 'niitä on nykyään museokokoelmissa ympäri maailman — '
+              + 'esimerkiksi Honolulussa.',
+          selite: 'Punasulkavyön pohjana on kaarnanauha, jonka päälle on '
+            + 'ladottu punaisen mesikenttäkkään höyheniä suomujen tapaan.',
+          lahde: 'Hiart, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kala, jonka kylkeen upotettiin helmiäistä',
+          aika: '1905',
+          tiedosto: 'Fish Carving Solomon Islands 20180725-005.jpg',
+          teksti: 'Salomonsaarten veistoperinteen tunnusmerkki on '
+              + 'helmiäisupotus: mustaksi tummennettuun puuhun leikataan '
+              + 'urat, joihin sovitetaan pieniä simpukkakiekkoja ja '
+              + 'kolmioita niin, että pinta muuttuu kuvioiduksi nauhaksi. '
+              + 'Samaa tekniikkaa käytetään kanoottien koristeissa, '
+              + 'kilvissä ja kalapatsaissa. Museoihin päätyi 1900-luvun '
+              + 'alussa suuri määrä esineitä: yksi bonitoa esittävä '
+              + 'veistos ostettiin Melbournen museoon C. Pinschofilta '
+              + 'vuonna 1905, ja se on siellä yhä esillä. Sama '
+              + 'upotustekniikka toistuu keulakuvissa, joissa helmiäinen '
+              + 'piirtää silmien ja kasvojen ääriviivat.',
+          selite: 'Salomonsaarelaisessa kalaveistoksessa mustaksi '
+            + 'tummennettuun puuhun on upotettu satoja helmiäiskolmioita '
+            + 'ja -kiekkoja.',
+          lahde: 'Gary Houston, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Pää, joka kulki kanootin keulassa',
+          // Kuvaton (Opus 6.9.2026): Commonsin nguzu nguzu -kuvat ovat
+          // alle 1 200 pikseliä leveitä tai epävarmaa alkuperää.
+          // Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Nguzu nguzu on kanootin keulakuva, joka kiinnitettiin '
+              + 'vesirajaan sotakanootin keulaan. Siitä käytetään myös '
+              + 'nimiä musu musu ja toto isu. Veistos esittää '
+              + 'rintakuvaa, jolla on suuri pää, pienet käsivarret ja '
+              + 'pyöreät korvakorut, ja kädet on nostettu leuan alle — '
+              + 'toisinaan ne pitelevät toista päätä tai lintua. Ulkoneva '
+              + 'leuka oli perinteisesti hengen tuntomerkki, ja kuvan '
+              + 'tehtävä oli suojella matkalaisia yliluonnollisilta '
+              + 'vaaroilta. Puu tummennettiin mustaksi ja kuvioihin '
+              + 'upotettiin helmiäistä.',
+          selite: 'Nguzu nguzu kiinnitettiin sotakanootin keulaan aivan '
+            + 'vesirajaan suojaamaan matkalaisia.',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Salomonsaarten tunnetuin soitin on bambu: siitä tehdään '
+          + 'panhuiluja, joiden moniäänisyys on kiinnostanut '
+          + 'musiikintutkijoita ympäri maailman.',
+      tehtava: {
+        kysymys: 'Mistä on peräisin Deep Forest -yhtyeen hitissä "Sweet Lullaby" kuultava laulu?',
+        vaihtoehdot: [
+          'Pygmien laulu Keski-Afrikasta',
+          'Rorogwela, vanha laulu Malaitalta',
+          'Studiossa sävelletty melodia 1992',
+          'Brasilialainen kansanlaulu',
+        ],
+        oikea: 1,
+        fakta: 'Hugo Zemp äänitti Afunakwan laulaman Rorogwelan 1970, ja '
+            + 'Unesco julkaisi sen levyllä 1973; kansikuvan väite '
+            + 'pygmilaulusta oli virhe.',
+      },
+      nostot: [
+        {
+          otsikko: 'Bambuputket, joita tutkittiin puoli vuosisataa',
+          tiedosto: 'August 2013 IMG 3060 Pan pipes, Honiara (9560625814).jpg',
+          teksti: 'Malaitan eteläosassa asuvat ’are’aret tunnetaan '
+              + 'monimutkaisesta panhuilumusiikistaan. Soittimet tehdään '
+              + 'eripituisista bambuputkista, jotka sidotaan riviin, ja '
+              + 'yhtye soittaa useaa erikokoista huilua yhtä aikaa niin '
+              + 'että sävelet lomittuvat. Ranskalainen musiikintutkija Hugo '
+              + 'Zemp on tutkinut ’are’arejen musiikkia vuosikymmeniä ja '
+              + 'tehnyt siitä sekä äänitteitä että elokuvia. '
+              + '’Are’are-kieltä puhui 1999 noin 17 900 ihmistä, kun '
+              + '1970-luvulla puhujia oli 8 000–9 000, joten kieli ja sen '
+              + 'mukana musiikkiperinne ovat kasvaneet eivätkä kutistuneet.',
+          selite: '’Are’arejen panhuilut tehdään eripituisista '
+            + 'bambuputkista, jotka sidotaan riviin, ja yhtye soittaa '
+            + 'useaa huilua yhtä aikaa.',
+          lahde: 'Jenny Scott, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Musiikki, jota kirkko ei aina sallinut',
+          tiedosto: 'August 2013 IMG 3072 Pan Pipers, Honiara (9560617356).jpg',
+          teksti: 'Malaitan eteläosan vanha uskonto oli esi-isien '
+              + 'kunnioittamista, ja perinteinen musiikki liittyi siihen '
+              + 'suoraan. Siirtomaa-aikana kristinusko levisi nopeasti, ja '
+              + '1970-luvun puoliväliin mennessä ainakin puolet väestöstä '
+              + 'oli kääntynyt; ensimmäiset raamatunosat käännettiin '
+              + '’are’aren kielelle 1957. Nykyään noin puolet kuuluu '
+              + 'South Seas Evangelical Churchiin ja puolet katoliseen '
+              + 'kirkkoon tai Melanesian anglikaaniseen kirkkoon. '
+              + 'Ensiksi mainittu ei salli perinteistä musiikkia, koska se '
+              + 'yhdistetään esi-isien henkiin — ja siksi panhuiluperinne '
+              + 'on säilynyt toisissa kylissä paremmin kuin toisissa.',
+          selite: 'Panhuiluyhtyeet esiintyvät nykyään kansallisjuhlissa ja '
+            + 'kokouksissa, ja soittajat pitävät huiluja pystyssä rivissä.',
+          lahde: 'Jenny Scott, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kehtolaulu, joka päätyi maailmanlistoille',
+          aika: '1970–1992',
+          // Kuvaton (Opus 6.9.2026): Afunakwasta ei ole vapaata kuvaa,
+          // eikä levynkansi ole vapaa. Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Musiikintutkija Hugo Zemp äänitti 1970 Malaitalla '
+              + 'naisen nimeltä Afunakwa laulamassa kehtolaulun Rorogwela. '
+              + 'Laulu on baegun kieltä, ja sen sanoissa isoveli lohduttaa '
+              + 'orpoa pikkuveljeä, joka on menettänyt vanhempansa. Unesco '
+              + 'julkaisi äänitteen 1973 levyllä Solomon Islands: Fateleka '
+              + 'and Baegu Music from Malaita. Vuonna 1992 ranskalainen '
+              + 'yhtye Deep Forest käytti Afunakwan ääntä kappaleessa '
+              + '"Sweet Lullaby", josta tuli hitti muun muassa '
+              + 'Britanniassa, Australiassa ja Norjassa. Lupaa ei ollut '
+              + 'pyydetty keneltäkään, ja levyn kansitiedoissa laulu '
+              + 'sanottiin virheellisesti afrikkalaisten pygmien lauluksi.',
+          selite: 'Rorogwela on baegu-kansan kehtolaulu Malaitalta, ja '
+            + 'siinä isoveli lohduttaa orvoksi jäänyttä pikkuveljeään.',
+        },
+        {
+          otsikko: 'Laulu kiinalaiskorttelista',
+          aika: '1950-luku',
+          // Kuvaton (Opus 6.9.2026): Edwin Nanau Sitorista tai
+          // laulusta ei ole vapaata kuvaa, ja Honiaran Chinatownista
+          // ei löytynyt kelvollisesti lisensoitua kuvaa.
+          // Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Salomonsaarten perinnemusiikkiin kuuluu sekä ryhmä- '
+              + 'että sooloaulua, rakorumpu- ja panhuiluyhtyeitä. '
+              + 'Bambusoittimet saivat oman yleisönsä 1920-luvulla, ja '
+              + 'niistä kehittyi maan tunnetuin nykysoitinperinne. '
+              + '1950-luvulla Edwin Nanau Sitori sävelsi laulun '
+              + '"Walkabout long Chinatown", jota hallitus on kutsunut '
+              + 'maan epäviralliseksi kansallislauluksi — nimi viittaa '
+              + 'Honiaran kiinalaiskortteliin. Nykyään kuunnellaan '
+              + 'rockia, reggaeta ja sitä, mitä saarilla kutsutaan '
+              + 'nimellä island music.',
+          selite: 'Edwin Nanau Sitorin "Walkabout long Chinatown" on '
+            + 'Salomonsaarten epävirallinen kansallislaulu, ja se '
+            + 'sävellettiin 1950-luvulla.',
+        },
+      ],
+    },
+  ],
+  /*
+   * URUGUAY (URY) — E-Amerikan kuudes maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-uruguay.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO MONTEVIDEON KANSSA: Montevideon kaupunkilehti kattaa jo
+   * kaupunginmuurit, Cisplatinan sodan, Suuren saarron, orjuuden
+   * lakkauttamisen, candomben, Llamadas-kulkueen, tangon, maten ja
+   * Estadio Centenarion. Maalehti EI toista niitä: se kertoo
+   * charrúoista, Coloniasta, Artigasista, Treinta y Tres Orientalesista,
+   * maan luonnosta, ruoasta, kuvataiteesta ja kirjallisuudesta.
+   *
+   * SISÄLTÖLINJAUS (spec-mantereet.md): vuosien 1973–1985 sotilashallinto
+   * on jätetty kokonaan pois — sama linja kuin Chilen ja Perun kanssa.
+   * Charrúoiden vaino kerrotaan tapahtumana ilman julmuuksien
+   * yksityiskohtia, ja kansa näytetään elävänä nykytoimijana (CONACHA
+   * 2005) eikä kadonneena.
+   *
+   * KUVAT: 19 nostokuvaa Commonsista, lisenssi ja tekijä extmetadatasta,
+   * leveys >= 1200 px, jokainen katsottu silmin. YKSI NOSTO JÄI
+   * KUVATTOMAKSI: Juana de Ibarbourou — ainoa riittävän suuri PD-kuva on
+   * 1950-luvun tilaisuudesta, jossa on useita tunnistettavia kasvoja.
+   * HYLÄTYT: "Blas Jaime en Salsipuedes Monumento" (tunnistettavat
+   * kasvot), "Cerro Catedral Massif" (esittää Argentiinan Barilochea),
+   * "Uruguay tannat" (viinipullo etiketteineen eli pakkauskuva),
+   * "Museo Zorrilla.jpg" (voimakas posterisointisuodatin),
+   * "Cabo Polonio 16" (ylälaidassa roikkuvia esineitä).
+   */
+  URY: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1873 Uruguay on 45-vuotias tasavalta, jonka rajat '
+          + 'ovat syntyneet siitä, että kaksi kruunua ja kaksi keisarikuntaa '
+          + 'kiistelivät samasta laidunmaasta.',
+      nostot: [
+        {
+          otsikko: 'Kansa, joka julistettiin kadonneeksi',
+          aika: '1831–1833',
+          tiedosto: 'Guyunusa y Tacuabe.jpg',
+          teksti: 'Charrúat olivat puolinomadeja: kesäisin he tulivat '
+              + 'rannikolle kalaan ja simpukoita keräämään, talvisin he '
+              + 'palasivat sisämaahan metsästämään hirviä ja nandúja '
+              + 'bolas-heittopainoilla ja jousella. Presidentti Fructuoso '
+              + 'Rivera järjesti 11. huhtikuuta 1831 Salsipuedesin '
+              + 'sotaretken, ja sen jälkeen kansa julistettiin virallisesti '
+              + 'sukupuuttoon kuolleeksi. Neljä vangittua vietiin 1833 '
+              + 'Pariisiin näytteille: parantaja Senacua Sénaqué, soturi '
+              + 'Vaimaca-Pirú sekä nuoripari Tacuavé ja Guyunusa. Kukaan '
+              + 'heistä ei palannut. Jälkeläisiä arvioidaan olevan '
+              + '160 000–300 000, ja he perustivat 2005 oman neuvostonsa.',
+          selite: 'Montevideon Los Últimos Charrúas -veistos esittää '
+            + 'Guyunusaa ja Tacuavéta, kahta niistä neljästä charrúasta, '
+            + 'jotka vietiin vuonna 1833 Pariisiin.',
+          lahde: 'EVAJADE, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kaupunki, joka vaihtoi lippua sata vuotta',
+          aika: '1680–1777',
+          tiedosto: 'Calle de los Suspiros towards the sea.JPG',
+          teksti: 'Portugalilainen Manuel Lobo saapui San Gabrielin saarelle '
+              + '20. tammikuuta 1680 viidellä laivalla ja noin '
+              + 'neljälläsadalla miehellä ja alkoi kahdeksan päivää '
+              + 'myöhemmin rakentaa linnoitusta espanjalaisen Buenos Airesin '
+              + 'silmien alle. Espanjalaiset valtasivat sen jo elokuussa, '
+              + 'mutta seuraavan vuoden sopimus palautti sen — ja niin kävi '
+              + 'yhä uudelleen sadan vuoden ajan. Vasta San Ildefonson '
+              + 'sopimus 1777 ratkaisi asian. Elannon toivat salakuljetus ja '
+              + 'villikarjan pyynti. Vanhankaupungin mutkittelevat '
+              + 'portugalilaiskadut erottuvat yhä espanjalaisen osan '
+              + 'suorista linjoista.',
+          selite: 'Colonia del Sacramenton Huokausten katu laskeutuu '
+            + 'mukulakivetettynä suoraan Río de la Platan rantaan, ja '
+            + 'vanhakaupunki on Unescon maailmanperintökohde.',
+          lahde: 'Ypsilon from Finland, Wikimedia Commons (CC0)',
+          wiki: 'Colonia del Sacramento',
+        },
+        {
+          otsikko: 'Isä, joka vietti kolmekymmentä vuotta maanpaossa',
+          aika: '1764–1850',
+          tiedosto: 'Juan Manuel Blanes - Artigas en la Ciudadela.jpg',
+          teksti: 'José Gervasio Artigas oli nuorena karjansalakuljettaja, '
+              + 'jonka päästä luvattiin palkkio; armahdus tuli sillä '
+              + 'ehdolla, että hän liittyi 33-vuotiaana armeijaan. Vuonna '
+              + '1811 hän voitti Las Piedrasin taistelun ja saartoi '
+              + 'Montevideon. Vuoden 1815 kongressissa kuusi provinssia '
+              + 'muodosti Liga Federalin, liittovaltion aatteen ympärille '
+              + 'rakennetun liiton. Portugalilaiset valtasivat Montevideon '
+              + '20. tammikuuta 1817, ja syyskuussa 1820 Artigas ratsasti '
+              + 'Paraguayhin. Hän eli siellä kuolemaansa 1850 asti eikä '
+              + 'palannut koskaan.',
+          selite: 'Juan Manuel Blanesin maalaus esittää Artigasin '
+            + 'Montevideon linnoituksen edessä; hänet tunnetaan Uruguayssa '
+            + 'isänmaan isänä.',
+          lahde: 'Juan Manuel Blanes, Wikimedia Commons (PD)',
+          wiki: 'José Gervasio Artigas',
+        },
+        {
+          otsikko: 'Kolmekymmentäkolme miestä kahdessa veneessä',
+          aika: '1825',
+          tiedosto: 'Juan Manuel Blanes - El Juramento de los Treinta y Tres Orientales.jpg',
+          teksti: 'Kun Brasilia oli liittänyt alueen itseensä Cisplatinan '
+              + 'provinssina, Juan Antonio Lavalleja ja Manuel Oribe '
+              + 'kokosivat pienen retkikunnan Buenos Airesin puolella. '
+              + 'Miehet ylittivät Uruguay-joen kahdella veneellä pimeässä ja '
+              + 'nousivat maihin Agraciadan rannalla 19. huhtikuuta 1825 '
+              + 'aamun sarastaessa. Rannalle pystytettiin sinivalkopunainen '
+              + 'lippu. Siitä alkoi sota, joka synnytti Uruguayn. Juan '
+              + 'Manuel Blanes maalasi kohtauksen 1877 haastateltuaan ensin '
+              + 'eloonjääneitä ja tehtyään muistiinpanoja heidän '
+              + 'kasvoistaan.',
+          selite: 'Blanesin maalaus Kolmenkymmenenkolmen valasta on '
+            + 'uruguaylaisten mieleen syöpyneimpiä kuvia, ja taiteilija '
+            + 'piirsi hahmojen kasvot elossa olleiden mukaan.',
+          lahde: 'Juan Manuel Blanes, Wikimedia Commons (PD)',
+          wiki: 'Juan Manuel Blanes',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Millä kulkuneuvolla Treinta y Tres Orientales ylitti '
+            + 'Uruguay-joen huhtikuussa 1825?',
+        vaihtoehdot: [
+          'Höyrylaivalla',
+          'Kahdella veneellä',
+          'Ratsain kahlaamalla',
+          'Lautalla, jota hevoset vetivät',
+        ],
+        oikea: 1,
+        fakta: 'Retkikunta souti pimeässä kahdella veneellä ja nousi maihin '
+            + 'Agraciadan rannalla aamunkoitteessa 19. huhtikuuta 1825.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Uruguay on matala maa: korkein kohta jää alle '
+          + 'kuudensadan metrin, ja maisema on ruohoa, kumpuja, dyynejä ja '
+          + 'kaksisataa kilometriä valasrantaa.',
+      nostot: [
+        {
+          otsikko: 'Vuori, joka vaihtui kesken kaiken',
+          aika: '1973',
+          tiedosto: 'CerroCatedral.jpg',
+          teksti: 'Uruguayn korkein kohta on Cerro Catedral, 513,66 metriä. '
+              + 'Se on kukkula Maldonadon departementissa Sierra Carapén '
+              + 'ketjussa, joka kuuluu maan halki kulkevaan Cuchilla '
+              + 'Grandeen. Nimi tulee huipun kalliomuodoista, jotka '
+              + 'muistuttavat kirkon torneja. Vielä vuonna 1973 maan '
+              + 'korkeimpana pidettiin Cerro de las Ánimasia, jonka korkeus '
+              + 'on 501 metriä — kunnes sotilaallisen karttalaitoksen '
+              + 'tutkijat mittasivat Cerro Catedralin uudelleen ja huippu '
+              + 'vaihtui. Molemmat jäävät alle Suomen Halticin.',
+          selite: 'Cerro Catedral on niin loiva, että sen huipulle nousee '
+            + 'lammaslaitumia; kalliot huipulla ovat prekambrisia.',
+          lahde: 'Scheridon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kylä, jossa ei ole tietä eikä sähköä',
+          aika: '1753–1881',
+          tiedosto: 'Atardecer en el faro del Cabo.jpg',
+          teksti: 'Cabo Polonio on niemi Rochan departementissa, ja siellä '
+              + 'asuu vakituisesti 128 ihmistä. Perille ei vie tietä: '
+              + 'seitsemän kilometrin matka valtatieltä taitetaan jalan '
+              + 'dyynien läpi tai maasturilla. Sähköverkkoa ja vesijohtoa ei '
+              + 'ole, joten majatalot pyörivät tuulivoimalla ja '
+              + 'aggregaateilla — vain majakka saa virtansa verkosta. '
+              + 'Niemen nimi tulee laivan kapteenista, jonka alus ajoi '
+              + 'karille tammikuussa 1753; kaikki 316 miestä pelastuivat. '
+              + 'Majakka valmistui vasta 1881, ja saarilla lepää maan suurin '
+              + 'merileijonakolonia.',
+          selite: 'Cabo Polonion majakka nousi kallioniemelle 1881, ja sen '
+            + 'ympärille syntyi ensimmäinen pysyvä kalastaja- ja '
+            + 'merileijonanpyytäjäkylä.',
+          lahde: 'Julio Clavijo Ferraro, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Ensimmäinen maa, joka rauhoitti koko merensä',
+          aika: '2013',
+          tiedosto: 'Eubalaena australis 98405964.jpg',
+          teksti: 'Eteläinen mustavalas tunnistetaan siitä, ettei sillä ole '
+              + 'selkäevää ja että sen päässä on kovettumia, jotka '
+              + 'näyttävät valkoisilta niissä asuvien valaantäiden takia. '
+              + 'Talvella se nousee etelämantereen vesiltä pohjoiseen '
+              + 'lisääntymään, ja Maldonadon ja Rochan rannikoilla niitä '
+              + 'nähdään vuosittain kymmenittäin. Naaras palaa samalle '
+              + 'rannalle tyypillisesti kolmen vuoden välein. Uruguayn '
+              + 'parlamentti hyväksyi 4. syyskuuta 2013 yksimielisesti '
+              + 'valas- ja delfiinisuoja-alueen, joka kattaa koko 125 436 '
+              + 'neliökilometrin merialueen — ensimmäisenä maailmassa.',
+          selite: 'Eteläisen mustavalaan maailmankannaksi arvioitiin '
+            + 'vuonna 2009 noin 13 600 yksilöä, kun laji oli aiemmin '
+            + 'metsästetty lähes sukupuuttoon.',
+          lahde: 'Hugo Hulsberg, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Palmulehto, jonka alla on viisituhatta vuotta kumpuja',
+          tiedosto: 'Palmar de tiburcio desde el camino - panoramio.jpg',
+          teksti: 'Rochan ja Treinta y Trésin laitumilla kasvaa saarekkeina '
+              + 'butiá-palmua, ja lehtoa kutsutaan nimellä butiazal. Palmu '
+              + 'viihtyy hiekalla ja kalliolla, myös vanhoilla dyyneillä, ja '
+              + 'kestää kuivuutta. Merínin lahden ympärille syntyi noin '
+              + '4750 eaa. kulttuuri, joka jätti maisemaan tuhansia '
+              + 'matalia kumpuja, cerritos de indios; niiden maakerroksissa '
+              + 'on runsaasti butiá-pähkinöitä jo ennen kuin viljelystä on '
+              + 'merkkejä. Vuodesta 2017 kaikki maan neljä butiá-lajia ovat '
+              + 'suojeltuja: aikuista palmua ei saa kaataa ilman lupaa.',
+          selite: 'Butiá-palmulehdot ovat harvinaisia luontaisia '
+            + 'palmusavanneja, ja niiden hedelmistä tehdään hilloa ja '
+            + 'likööriä.',
+          lahde: 'butiacero, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Uruguaylainen keittiö syntyi siirtolaisten mukana ja '
+          + 'nojaa lihaan — ja yksi sen tuotteista muutti sata vuotta '
+          + 'sitten koko maailman ruokakomeroa.',
+      nostot: [
+        {
+          otsikko: 'Grilli, joka muurataan kotipihalle',
+          tiedosto: 'Parrillero Completo.jpg',
+          teksti: 'Uruguaylaiskodin pihalla on asador: raudasta ja tiilestä '
+              + 'muurattu tulisija, jossa on savupiippu, oma pesä puille ja '
+              + 'iso ritilä. Puut poltetaan ensin hiillokseksi, ja hiilet '
+              + 'siirretään lapiolla ritilän alle — liha ei siis kypsy '
+              + 'liekillä vaan säteilylämmöllä. Täysi asado ei ole pihvi '
+              + 'vaan kokonainen sarja: chorizo, verimakkara morcilla, '
+              + 'palleapihvi entraña, kylkirivi tira de asado ja '
+              + 'chinchulines. Keittiö on italialaisten ja espanjalaisten '
+              + 'siirtolaisten perua, ei alkuperäiskansojen.',
+          selite: 'Asador on kiinteä osa uruguaylaista pihaa, ja sen '
+            + 'alaosaan varastoidaan halot seuraavaa sunnuntaita varten.',
+          lahde: 'Fedaro, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Voileipä, joka sai nimensä väärästä tilauksesta',
+          tiedosto: 'Chivito de lomo con papas fritas.jpg',
+          teksti: 'Chivito tarkoittaa espanjaksi pikkuvuohta, mutta '
+              + 'voileivässä ei ole vuohta lainkaan. Tarina kertoo '
+              + 'asiakkaasta, joka tilasi vuohenlihaa; koska Uruguayssa ei '
+              + 'syödä vuohta, keittiö laittoi tilalle ohuen viipaleen '
+              + 'naudan sisäfilettä eikä kertonut vaihdosta. Nimi jäi. '
+              + 'Nykyiseen versioon kuuluu pekonia, mozzarellaa, kinkkua, '
+              + 'sipulia, kovaksi keitettyä kananmunaa, tomaattia, '
+              + 'oliiveja ja majoneesia, ja täysi annos tulee ranskalaisten '
+              + 'sekä kahden salaatin kanssa. Lautasannosta kutsutaan '
+              + 'nimellä chivito al plato.',
+          selite: 'Chivito on Uruguayn tunnetuin katuruoka, ja sen '
+            + 'kanadalainen muunnos saa lisäkseen paksun viipaleen '
+            + 'pekonia.',
+          lahde: 'Alt alt facts, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Rypäle, jonka baskit toivat mukanaan',
+          tiedosto: 'VIVC12257 TANNAT Cluster in the field 8302.jpg',
+          teksti: 'Tannat on kotoisin Lounais-Ranskan Madiranista, ja sitä '
+              + 'pidetään yhtenä maailman tanniinipitoisimmista '
+              + 'punaviinirypäleistä. Baskisiirtolaiset toivat pistokkaita '
+              + 'Uruguayhin 1800-luvulla, ja etenkin Pascual Harriaguen '
+              + 'viinitarhat menestyivät niin hyvin, että lajiketta '
+              + 'kutsutaan maassa yhä harriagueksi. Uruguaylainen tannat on '
+              + 'kevyempi ja pehmeämpi kuin ranskalainen esikuvansa. '
+              + 'Madiranissa ongelmaan haettiin toista ratkaisua: Patrick '
+              + 'Ducournau kehitti 1990 mikrohapetuksen, jossa viiniin '
+              + 'johdetaan käymisen aikana tarkoin mitattu määrä happea.',
+          selite: 'Tannat on Uruguayn kansallisrypäle, ja siitä tehdään '
+            + 'sekä punaviiniä että täyteläistä roseeta.',
+          lahde: 'Doris Schneider, Julius Kühn-Institut (JKI), Wikimedia '
+            + 'Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kolmekymmentä kiloa lihaa yhteen kilon purkkiin',
+          aika: '1863–1979',
+          tiedosto: 'Anglo 1.jpg',
+          teksti: 'Kemisti Justus von Liebig kehitti 1847 lihauutteen ja '
+              + 'julkaisi menetelmän ilmaiseksi — Euroopassa liha oli vain '
+              + 'liian kallista. Insinööri George Christian Giebert luki '
+              + 'kirjan 1862 ja tajusi, että Uruguayssa nautoja '
+              + 'teurastettiin pelkkien vuotien takia. Uruguay-joen rannalle '
+              + 'nousi 1863 laitos, ja yhtiö perustettiin Lontoossa 4. '
+              + 'joulukuuta 1865. Uutetta varten tarvittiin kolmekymmentä '
+              + 'kiloa lihaa yhtä kilon purkkia kohti. Samasta tehtaasta '
+              + 'tuli myöhemmin Oxo-liemikuutio ja Fray Bentos '
+              + '-säilykeliha; alue on ollut maailmanperintökohde 2015.',
+          selite: 'Fray Bentosin Barrio Anglon laiturinosturit lastasivat '
+            + 'lihauutetta ja säilykkeitä Uruguay-joelle, kunnes tehdas '
+            + 'suljettiin vuonna 1979.',
+          lahde: 'Eduardo Gonzalez, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Uruguaylainen maalaustaide alkaa historiakuvista ja '
+          + 'päätyy ruudukoihin: pienessä maassa syntyi kaksi omaa '
+          + 'kansainvälistä tyylisuuntaa.',
+      nostot: [
+        {
+          otsikko: 'Maalari, joka haastatteli aiheitaan',
+          aika: '1830–1901',
+          tiedosto: 'Juan Manuel Blanes - Cruz de palo.png',
+          teksti: 'Juan Manuel Blanes on Uruguayn kansallismaalari, ja hänen '
+              + 'työtapansa oli poikkeuksellinen: ennen historia-aiheen '
+              + 'maalaamista hän etsi käsiinsä tapahtuman eläviä todistajia, '
+              + 'haastatteli heidät ja teki muistiinpanoja kasvoista, '
+              + 'vaatteista ja maastosta. Niin syntyivät Kolmenkymmenen'
+              + 'kolmen vala 1877 ja Artigas linnoituksen edessä. Blanes '
+              + 'maalasi myös gauchoja ja arkea sekä Buenos Airesin '
+              + 'keltakuumeen 1871 — teoksen, joka teki hänestä tunnetun '
+              + 'koko Río de la Platan alueella.',
+          selite: 'Blanesin gauchoaiheissa pampan ainoa pystysuora on '
+            + 'usein risti tai aitatolppa, ja niistä tuli osa uruguaylaista '
+            + 'kansallista kuvastoa.',
+          lahde: 'Juan Manuel Blanes, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Asianajaja, joka aloitti maalarina 60-vuotiaana',
+          tiedosto: 'Pedro Figari - El Pericón - Google Art Project.jpg',
+          teksti: 'Pedro Figari ehti olla asianajaja, lehtimies, '
+              + 'kansanedustaja ja taidekoulun uudistaja ennen kuin ryhtyi '
+              + 'päätoimiseksi maalariksi yli kuudenkymmenen ikäisenä. Hän '
+              + 'ei maalannut mallista vaan muistista: Río de la Platan '
+              + 'vanhaa arkea, patioita, estancioita, tansseja ja '
+              + 'kulkueita, joita hän oli nähnyt nuorena. Väri on paksua ja '
+              + 'hahmot pieniä, ja sama aihe toistuu kymmeninä versioina. '
+              + 'Figarin tuotanto on siksi yhtä paljon muistiinpanoa kuin '
+              + 'maalausta — sen aikakauden kuva, jota valokuvia ei ole '
+              + 'juuri jäänyt.',
+          selite: 'Pericón on Río de la Platan vanha piiritanssi, jota '
+            + 'tanssittiin puiden alla juhannuksesta karnevaaliin ja jonka '
+            + 'Figari maalasi yhä uudelleen.',
+          lahde: 'Pedro Figari, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Ruudukko, johon mahtuu koko maailma',
+          aika: '1874–1949',
+          tiedosto: 'Joaquín Torres García - Arte constructivo.jpg',
+          teksti: 'Joaquín Torres-García asui vuosikymmeniä Barcelonassa, '
+              + 'New Yorkissa ja Pariisissa ennen kuin palasi 1934 '
+              + 'Montevideoon. Hän kehitti tyylin, jota kutsuu nimellä '
+              + 'universalismo constructivo: kuva jaetaan mustin viivoin '
+              + 'ruutuihin, ja jokaiseen ruutuun ladotaan yksi '
+              + 'yksinkertainen merkki — kala, kello, ankkuri, ihminen, '
+              + 'talo. Ajatus oli, että sama merkkikieli olisi luettavissa '
+              + 'missä tahansa ja minä tahansa vuosisatana. Hän signeerasi '
+              + 'teokset nimikirjaimin, ja Montevideoon jäi hänen ympärilleen '
+              + 'kokonainen koulukunta.',
+          selite: 'Torres-Garcían konstruktiivisissa töissä ruudukko on '
+            + 'sekä sommitelma että kirjoitusjärjestelmä, jota lukija saa '
+            + 'tulkita itse.',
+          lahde: 'Joaquín Torres García (1874 - 1949), Wikimedia Commons '
+            + '(PD)',
+        },
+        {
+          otsikko: 'Kaupungin ääni väripintoina',
+          aika: '1890–1929',
+          tiedosto: 'Composicion-vibracionista.jpg',
+          teksti: 'Rafael Barradas lähti Montevideosta Eurooppaan 1913 ja '
+              + 'päätyi Espanjaan, jossa hän kehitti oman suuntansa: '
+              + 'vibracionismo. Ajatuksena oli maalata se, miltä kaupunki '
+              + 'tuntuu kerralla — raitiovaunun kolina, mainoskyltti, '
+              + 'ohikulkijan hattu ja kellotaulu samassa kuvassa '
+              + 'päällekkäisinä väripintoina. Barradas kuvitti kirjoja ja '
+              + 'suunnitteli lavasteita, ja hänen ateljeessaan kävivät '
+              + 'espanjalaiset runoilijat. Hän palasi Montevideoon '
+              + 'sairaana ja kuoli 38-vuotiaana, mutta ehti vaikuttaa '
+              + 'kokonaiseen sukupolveen.',
+          selite: 'Vibracionismissa kaupungin äänet ja liike puretaan '
+            + 'värikentiksi, joita katsotaan yhtä aikaa eikä '
+            + 'peräkkäin.',
+          lahde: 'Rafael Barradas, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Pieni maa on tuottanut suhteettoman määrän kirjailijoita '
+          + '— ja yksi heistä kirjoitti Pariisissa ranskaksi kirjan, joka '
+          + 'löydettiin vasta viisikymmentä vuotta myöhemmin.',
+      nostot: [
+        {
+          otsikko: 'Kirjailija, jota kukaan ei lukenut elinaikanaan',
+          aika: '1846–1870',
+          tiedosto: 'Plaque Ici vécut et mourut Isidore Ducasse - cour intérieure de Bouillon Chartier Grands Boulevards (août 2023).jpg',
+          teksti: 'Isidore Ducasse syntyi Montevideossa 1846 ranskalaisen '
+              + 'konsulinvirkailijan poikana ja lähetettiin koulutielle '
+              + 'Ranskaan. Hän julkaisi salanimellä comte de Lautréamont '
+              + 'proosarunoelman Les Chants de Maldoror ja kokoelman '
+              + 'Poésies, ja kuoli Pariisissa 1870 vain '
+              + 'kahdenkymmenenneljän vuoden ikäisenä. Teoksia ei myyty '
+              + 'juuri lainkaan. Vasta 1900-luvun alussa surrealistit '
+              + 'löysivät ne ja nostivat Lautréamontin esikuvakseen; '
+              + 'kirjan unenomainen kuvakieli vaikutti sekä kirjallisuuteen '
+              + 'että kuvataiteeseen.',
+          selite: 'Pariisin Grands Boulevards’n sisäpihalla oleva laatta '
+            + 'kertoo, että Isidore Ducasse asui ja kuoli talossa; kaiverrus '
+            + 'lainaa Maldororin säkeitä.',
+          lahde: 'Benoît Prieur, Wikimedia Commons (CC0)',
+          wiki: 'Comte de Lautréamont',
+        },
+        {
+          otsikko: 'Eepos, joka kirjoitettiin kadonneelle kansalle',
+          tiedosto: 'Museo Casa Zorrilla. Jardín..JPG',
+          teksti: 'Juan Zorrilla de San Martín kirjoitti Uruguayn '
+              + 'kansalliseepoksen Tabaré, jonka päähenkilö on '
+              + 'charrúa-äidin ja espanjalaisen isän poika. Runoelma '
+              + 'ilmestyi '
+              + 'aikana, jolloin virallinen historia kertoi charrúoiden '
+              + 'kadonneen — ja juuri se teki siitä kiistellyn: osalle '
+              + 'lukijoista se oli sovituksen ele, toisille kaunistelu. '
+              + 'Zorrilla oli myös diplomaatti ja lehtimies, ja hänen '
+              + 'poikansa oli kuvanveistäjä. Kirjailijan Montevideon-koti '
+              + 'puutarhoineen on nykyään museo, jossa hänen '
+              + 'työhuoneensa on säilytetty entisellään.',
+          selite: 'Museo Zorrilla on Juan Zorrilla de San Martínin entinen '
+            + 'koti Montevideon Punta Carretasissa, ja sen puutarhassa on '
+            + 'hänen poikansa veistoksia.',
+          lahde: 'Rossini, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Novellisti, joka muutti viidakkoon',
+          aika: '1878–1937',
+          tiedosto: 'Horacio Quiroga 1897.jpg',
+          teksti: 'Horacio Quiroga syntyi Saltossa Uruguay-joen varrella, '
+              + 'kirjoitti nuorena runoja ja perusti kirjallisen piirin '
+              + 'Montevideoon. Matka Argentiinan Misionesin punamullalle '
+              + 'muutti kaiken: hän osti maata, rakensi talon ja alkoi '
+              + 'kirjoittaa novelleja, joissa viidakko ei ole kulissi vaan '
+              + 'toinen osapuoli. Kokoelmat Cuentos de amor, de locura y de '
+              + 'muerte ja Cuentos de la selva tekivät hänestä latinalaisen '
+              + 'Amerikan novellin mestarin. Hänen talonsa San Ignaciossa on '
+              + 'nykyään museo, jonne pääsee samalta tieltä kuin '
+              + 'jesuiittaraunioille.',
+          selite: 'Quiroga poseerasi kotitalonsa ovella Saltossa vuonna '
+            + '1897, muutama vuosi ennen kuin muutti Misionesin '
+            + 'viidakkoon.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+          wiki: 'Horacio Quiroga',
+        },
+        {
+          otsikko: 'Runoilija, jolle annettiin koko maanosan nimi',
+          aika: '1892–1979',
+          // Kuvaton (Opus 6.9.2026): Commonsin ainoa >= 1200 px:n PD-kuva
+          // Juana de Ibarbourousta on 1950-luvun tilaisuudesta, jossa on
+          // useita tunnistettavia kasvoja. Muotokuva haetaan myöhemmin.
+          teksti: 'Juana Fernández Morales julkaisi ensimmäisen kokoelmansa '
+              + 'Las lenguas de diamante vuonna 1919 nimellä Juana de '
+              + 'Ibarbourou. Runot olivat suoria ja aistivoimaisia, ja ne '
+              + 'levisivät nopeasti koko espanjankieliseen maailmaan. '
+              + 'Vuonna 1929 hänelle annettiin Montevideon '
+              + 'lainsäädäntöpalatsissa juhlallisesti nimi Juana de '
+              + 'América — arvonimi, jota ei ollut ennen eikä jälkeen '
+              + 'annettu kenellekään. Hän kirjoitti myös lastenkirjoja ja '
+              + 'oli yksi ensimmäisiä latinalaisamerikkalaisia naisia, jotka '
+              + 'saattoivat elää kirjoittamisella.',
+          selite: 'Juana de Ibarbourou sai arvonimensä Montevideon '
+            + 'lainsäädäntöpalatsissa 1929, eikä sitä ole annettu '
+            + 'kenellekään muulle.',
+          wiki: 'Juana de Ibarbourou',
+        },
+      ],
+    },
+  ],
+  /*
+   * PARAGUAY (PRY) — E-Amerikan seitsemäs maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-paraguay.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO ASUNCIÓNIN KANSSA: Asunciónin kaupunkilehti kattaa jo
+   * linnakkeen ja sieltä lähteneet retkikunnat, raitiovaunun, guaranin
+   * kielen aseman, Casa de la Independencian, kolmoisliiton sodan ja
+   * miehityksen, Lópezin palatsin, Panteónin, tererén, ñandutín,
+   * Costaneran ja Asunciónin lahden linnut. Maalehti EI toista niitä.
+   *
+   * SISÄLTÖLINJAUS (spec-mantereet.md): vuosien 1954–1989 hallinto ja
+   * nykypolitiikka on jätetty kokonaan pois. Kolmoisliiton sotaan
+   * viitataan vain taustana ilman uhrilukuja, koska se on Asunciónin
+   * lehden aihe. Chacon sota kerrotaan tapahtumana ilman
+   * taistelukuvauksia. Reduktiot kerrotaan sekä suojana että
+   * pakkosiirtona, ei idyllinä.
+   *
+   * KUVAT: 19 nostokuvaa Commonsista, lisenssi ja tekijä extmetadatasta,
+   * leveys >= 1200 px, jokainen katsottu silmin. YKSI NOSTO JÄI
+   * KUVATTOMAKSI: polca paraguaya — Commonsista ei löytynyt yhtään
+   * kelvollista tanssikuvaa. HYLÄTYT: "Paraguayan harp 1" (soittajan
+   * kasvot tunnistuvat), "Agustín Barrios 1910" (kuvan päälle
+   * kirjoitettu omistuskirjoitus ja signeeraus), "Doña Liduvina
+   * horneando chipa paraguaya en un tatakua" (extmetadatan
+   * Restrictions: personality), "Mbeju and cocido" (mukissa
+   * mainosteksti), "Josefina Pla en su estudio" (tunnistettavat kasvot),
+   * "Ruinas de la Antigua Fundición de Hierro - La Rosada" (tekijätieto
+   * on Commonsissa katkennut muotoon "Diego Fernando Quint…").
+   */
+  PRY: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Paraguay on sisämaavaltio, joka on vuoroin sulkenut '
+          + 'itsensä maailmalta ja vuoroin avannut ovensa selälleen — ja '
+          + 'kummastakin päätöksestä on jäänyt jälki maisemaan.',
+      nostot: [
+        {
+          otsikko: 'Kirkko, jota ei ehditty saada valmiiksi',
+          aika: '1609–1767',
+          tiedosto: 'Jesús de Tavarangue - Church ruins 01.jpg',
+          teksti: 'Jesuiitat alkoivat perustaa lähetysasemia eli reduktioita '
+              + 'vuonna 1609, ja niitä kertyi noin kolmekymmentä nykyisten '
+              + 'Paraguayn, Argentiinan, Brasilian ja Bolivian alueille. '
+              + 'Ensitöikseen papit laativat guaranille kirjoitusasun, sillä '
+              + 'kansa ei ollut kirjoittanut kieltään. Yhteisöissä asui '
+              + 'kaksi- tai kolmetuhatta ihmistä, ja niiden tarkoitus oli '
+              + 'yhtä lailla käännyttää kuin eristää guaranit siirtolaisilta '
+              + 'ja orjapyytäjiltä. Jesús de Tavarangueen oli nousemassa '
+              + '70 metriä pitkä kirkko, kun kunta karkotettiin 1767; '
+              + 'rakennustyö keskeytyi siihen paikkaan.',
+          selite: 'Jesús de Tavarangue ja naapurin Trinidad otettiin '
+            + 'Unescon maailmanperintöluetteloon 1993, ja Paraguayn '
+            + 'reduktiorauniot ovat alueen parhaiten säilyneitä.',
+          lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Diktaattori, joka avasi sikarinsa itse',
+          aika: '1814–1840',
+          tiedosto: 'José Gaspar Rodríguez de Francia.jpg',
+          teksti: 'José Gaspar Rodríguez de Francia osasi viisi kieltä, luki '
+              + 'Voltairea ja harrasti tähtitiedettä — asuncionilaiset '
+              + 'arvelivat häntä velhoksi. Kongressi teki hänestä 1814 '
+              + 'ainoan konsulin ja 1816 elinikäisen diktaattorin. Hän '
+              + 'katkaisi ulkomaankaupan ja rakensi tilalle kotimaista '
+              + 'tuotantoa, määräsi 1828 pojille valtiollisen kouluopetuksen '
+              + 'ja avasi 1836 maan ensimmäisen yleisen kirjaston '
+              + 'vastustajiltaan takavarikoiduista kirjoista. Kukaan ei '
+              + 'saanut tulla kuutta askelta lähemmäksi, ja hän avasi '
+              + 'sisarensa käärimät sikarit itse myrkyn varalta.',
+          selite: 'Francia otti maahansa myös poliittisia pakolaisia: '
+            + 'Uruguayn José Artigas sai turvapaikan 1820 kahdensadan '
+            + 'miehensä kanssa ja jäi Paraguayhin loppuiäkseen.',
+          lahde: 'Alfredo L. Demersay, Wikimedia Commons (PD)',
+          wiki: 'José Gaspar Rodríguez de Francia',
+        },
+        {
+          otsikko: 'Rautatie, joka kulki puulla loppuun asti',
+          aika: '1841–1862',
+          tiedosto: 'J37 682 Bf Encarnación, Lok 524.jpg',
+          teksti: 'Carlos Antonio López lopetti Francian eristyksen: hän '
+              + 'vapautti poliittiset vangit, ryhtyi lakkauttamaan orjuutta '
+              + 'ja palkkasi ulkomaisia, enimmäkseen brittiläisiä insinöörejä. '
+              + 'Maahan nousi tekstiilitehtaita, telakoita ja Humaitán '
+              + 'linnoitus, ja Ybycuíhin rautavalimo La Rosada, jossa '
+              + 'valettiin aseita ja laivanosia. Kauppasopimukset '
+              + 'allekirjoitettiin Brasilian, Britannian, Ranskan, '
+              + 'Yhdysvaltojen ja Argentiinan kanssa. Rautatie vihittiin '
+              + '1861 — ja se ajoi puulla höyryveturein aina vuoteen 1999 '
+              + 'asti.',
+          selite: 'Encarnaciónin ratapihalla ruostuu höyryvetureita, jotka '
+            + 'kuuluivat Etelä-Amerikan varhaisimpiin rautateihin.',
+          lahde: 'Falk2, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Sota, jota kutsuttiin janon sodaksi',
+          aika: '1932–1935',
+          tiedosto: 'Monumento referido a la Guerra del Chaco (Fortín Boquerón).jpg',
+          teksti: 'Paraguay ja Bolivia kiistelivät Chaco Borealista, jonka '
+              + 'alla uskottiin olevan öljyä. Sotaa 1932–1935 kutsuttiin '
+              + 'nimellä La Guerra de la Sed, janon sota, koska aluetta '
+              + 'hallitsee kuivuus: vettä oli usein vaikeampi saada kuin '
+              + 'ammuksia. Se oli ensimmäinen Etelä-Amerikan sota, jossa '
+              + 'käytettiin konekivääreitä, panssaroituja ajoneuvoja ja '
+              + 'lentokoneita. Buenos Airesin rauhankonferenssi antoi '
+              + 'heinäkuussa 1938 kolme neljäsosaa Chacosta Paraguaylle. '
+              + 'Yksi maan vaatimuksen perusteista olivat 1920-luvulla '
+              + 'sinne muuttaneet mennoniittasiirtokunnat.',
+          selite: 'Fortín Boquerónin muistopaikalla Chacon pensaikossa on '
+            + 'jäljennös juoksuhaudan linjasta, jossa sodan ensimmäinen '
+            + 'suuri taistelu käytiin.',
+          lahde: 'Ulises Icardi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Chacon sota',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Paraguay jakautuu kahtia Paraguayjoen kohdalla: idässä '
+          + 'ovat kosteat metsät ja suuret joet, lännessä piikkipensaikko, '
+          + 'jossa vesi on arvokkaampaa kuin maa.',
+      nostot: [
+        {
+          otsikko: 'Tasanko, jossa vesi on harvinaisempaa kuin maa',
+          tiedosto: 'Chaco Boreal Paraguay.jpg',
+          teksti: 'Gran Chaco on kuuma ja kuiva tasanko, joka jakautuu '
+              + 'Paraguayn, Argentiinan ja Bolivian kesken; Paraguayn '
+              + 'puoleista osaa kutsutaan Chaco Borealiksi ja sen keskustaa '
+              + 'Keski-Chacoksi. Alue on yksi Etelä-Amerikan viimeisiä '
+              + 'maatalouden rajaseutuja: teitä on vähän, asukkaita vielä '
+              + 'vähemmän, ja kasvillisuus on piikkipensasta, kovaa '
+              + 'quebracho-puuta ja palmusaarekkeita. Kuivan Chacon '
+              + 'metsäpeite väheni vuosina 2000–2019 arviolta viidenneksen, '
+              + 'ja muutos oli suurin juuri Paraguayn puolella.',
+          selite: 'Chacon palmusavannissa vuorottelevat karibepalmut, '
+            + 'piikkipensaikko ja heinikko, ja sadekaudella maa muuttuu '
+            + 'paikoin läpipääsemättömäksi.',
+          lahde: 'Ilosuna, Wikimedia Commons (CC BY 1.0)',
+          wiki: 'Gran Chaco',
+        },
+        {
+          otsikko: 'Eläin, joka löydettiin fossiilina ennen kuin elävänä',
+          aika: '1930–1975',
+          tiedosto: 'Laika ac Chacoan Peccary (13272874963).jpg',
+          teksti: 'Taguá eli chacon pekari kuvattiin tieteelle vuonna 1930 '
+              + 'pelkkien fossiilien perusteella, ja lajia pidettiin '
+              + 'sukupuuttoon kuolleena. Vuonna 1971 tutkijat huomasivat, '
+              + 'että se elää yhä Argentiinan Saltassa — paikallisille '
+              + 'eläin oli aina ollut tuttu, mutta länsimainen tiede kesti '
+              + 'kauan uskoa asia todeksi, ja kuvaus julkaistiin vasta '
+              + '1975. Taguá on suurin kolmesta pekarilajista ja '
+              + 'sopeutunut kuivuuteen: sillä on laajat sivuontelot pölyä '
+              + 'vastaan ja pienet sorkat, joilla se pujottelee piikeissä. '
+              + 'Yksilöitä arvioidaan olevan noin kolmetuhatta.',
+          selite: 'Taguá on esimerkki Lazarus-taksonista eli lajista, joka '
+            + 'kuvattiin ensin kuolleeksi ja löytyi sitten elävänä.',
+          lahde: 'Laika ac from USA, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Pekarit',
+        },
+        {
+          otsikko: 'Putous, jonka ääni kuului kolmenkymmenen kilometrin päähän',
+          aika: '1982',
+          tiedosto: 'Guayra - Estrangulamento do Rio Paraná no Salto das Sete Quedas, na fronteira Brasil-Paraguai (2).jpg',
+          teksti: 'Paraná-joki kapeni Guairán kohdalla 380 metristä '
+              + 'kuuteenkymmeneen ja syöksyi kahdeksassatoista koskessa, '
+              + 'jotka jakautuivat seitsemään ryhmään — siitä portugalin'
+              + 'kielinen nimi Sete Quedas. Kokonaispudotus oli noin 114 '
+              + 'metriä ja virtaama arvioiden mukaan 13 000–50 000 '
+              + 'kuutiometriä sekunnissa, mikä teki putouksesta yhden '
+              + 'maailman vuolaimmista; sen kohina kuului kolmenkymmenen '
+              + 'kilometrin päähän. Vuonna 1982 Itaipún tekojärvi peitti '
+              + 'kaiken. Brasilialainen runoilija Carlos Drummond de '
+              + 'Andrade julkaisi jäähyväisrunon koko sanomalehden sivun '
+              + 'kokoisena.',
+          selite: 'Guairán putoukset olivat virtaamaltaan maailman '
+            + 'suurimpia, ja vanhoja valokuvia niistä on säilynyt vain '
+            + 'muutamia.',
+          lahde: 'B. Rondon, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Pato, joka valaisee kaksi maata',
+          aika: '1984',
+          tiedosto: 'Itaipu Dam Spillway.jpg',
+          teksti: 'Itaipú valmistui 1984 Paranálle Paraguayn ja Brasilian '
+              + 'rajalle. Nimi tulee guaranista ja tarkoittaa soivaa kiveä. '
+              + 'Voimalassa on kaksikymmentä turbiinia, kukin 700 '
+              + 'megawattia, eli yhteensä 14 gigawattia; putouskorkeus on '
+              + '118 metriä. Kymmenen turbiinia pyörii Paraguayn '
+              + 'taajuudella ja kymmenen Brasilian, sillä maiden '
+              + 'sähköverkot eivät ole yhteensopivia. Paraguayn puolikas '
+              + 'ylittää moninkertaisesti maan oman kulutuksen, joten '
+              + 'ylijäämä myydään Brasiliaan ja siirretään kahdella '
+              + 'kahdeksansadan kilometrin tasavirtajohdolla.',
+          selite: 'Itaipún ylivuotokouru johtaa tulvavedet padon ohi '
+            + 'Paraná-jokeen, ja vuonna 2020 laitos oli maailman toiseksi '
+            + 'eniten sähköä tuottava vesivoimala.',
+          lahde: 'Gabriel Resende Veiga, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Itaipun pato',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä nieli Guairán putoukset vuonna 1982?',
+        vaihtoehdot: [
+          'Maanjäristys',
+          'Itaipún padon tekojärvi',
+          'Pitkä kuivuus',
+          'Maanvyöry',
+        ],
+        oikea: 1,
+        fakta: 'Padon valmistuttua tekojärvi peitti kaikki kahdeksantoista '
+            + 'koskea, ja putouksista jäi vain valokuvia.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Paraguaylainen keittiö on guaranien ja espanjalaisten '
+          + 'yhteinen keksintö, ja sen perusta on maissi, maniokki ja '
+          + 'juusto — ei vehnä.',
+      nostot: [
+        {
+          otsikko: 'Keitto, jota syödään veitsellä',
+          tiedosto: 'Sopa paraguaya cortada en porciones.jpg',
+          teksti: 'Sopa paraguaya tarkoittaa paraguaylaista keittoa, mutta '
+              + 'se ei ole keittoa lainkaan: se on huokoinen, pehmeä '
+              + 'maissileipä, joka leikataan neliöiksi. Aineksina ovat '
+              + 'maissijauho, juusto, sipuli ja maito tai hera, ja se '
+              + 'paistetaan uunivuoassa. Läheinen sukulainen chipa guasú '
+              + 'tehdään tuoreesta maissista, ja sen koostumus on lähempänä '
+              + 'juustokohokasta. Ruoan juuret ovat cario-guaranien '
+              + 'tärkkelysleivässä mbujapessa, jonka saksalainen '
+              + 'matkalainen Ulrich Schmidl kirjasi muistiin jo valloituksen '
+              + 'ensivuosina.',
+          selite: 'Sopa paraguaya kuuluu jokaiseen juhla-ateriaan ja '
+            + 'tarjotaan lämpimänä lihan tai keiton lisänä.',
+          lahde: 'Horacio Cambeiro, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Leipä, joka ei tarvitse hiivaa eikä jääkaappia',
+          tiedosto: 'Chipa paraguaya horneándose en el tatakua.jpg',
+          teksti: 'Chipa on pieni juustoinen sämpylä, jonka resepti '
+              + 'tunnetaan 1700-luvulta ja jonka juuret ovat Asunciónin '
+              + 'guaraneissa. Perusmuoto tehdään maniokkitärkkelyksestä, '
+              + 'paraguaylaisesta juustosta, sianrasvasta ja aniksesta. '
+              + 'Hiivaa ei käytetä, joten leipä säilyy kuumassakin monta '
+              + 'päivää — siksi sitä myydään kaduilla ja linja-autoissa '
+              + 'liinaan käärittynä. Muunnelmia on kymmeniä: chipa mestiza, '
+              + 'chipa so’o lihatäytteellä, chipa manduví '
+              + 'maapähkinöistä ja chipa asador, joka kypsennetään tikun '
+              + 'ympärillä hiilloksen kuumuudessa.',
+          selite: 'Chipat kypsyvät savitiiliuunissa, jonka pohjalle on '
+            + 'levitetty hehkuvat hiilet, ja kuoresta tulee kova mutta '
+            + 'sisus jää pehmeäksi.',
+          lahde: 'Camdiaz91, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kuusitoista tapaa tehdä sama kakku',
+          tiedosto: 'Chipa, cocido quemado y mbeju.jpg',
+          teksti: 'Mbejú tarkoittaa guaraniksi kakkua. Se tehdään '
+              + 'maniokkitärkkelyksestä tai fariñasta, juustosta ja '
+              + 'rasvasta ja paistetaan pannulla molemmin puolin, jolloin '
+              + 'siitä tulee ohut ja hieman rapea. Perinteisesti '
+              + 'tunnettiin kuusitoista eri valmistustapaa, joista '
+              + 'yksitoista on yhä käytössä. Chipan ja sopa paraguayan '
+              + 'tavoin mbejú kuuluu ryhmään tyra — guaranin sana ruoalle, '
+              + 'jota syödään juoman kanssa. Juomana on tavallisimmin mate '
+              + 'cocido, kuumana keitetty ja usein sokerilla ruskistettu '
+              + 'mate.',
+          selite: 'Aamiaispöydässä mbejú, chipa-rinkilät ja kuppi mate '
+            + 'cocidoa ovat paraguaylaisen tyran vakiokolmikko.',
+          lahde: 'Writin, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Salaisuus, joka katosi karkotuksen mukana',
+          aika: '1650–1770',
+          tiedosto: 'Ilex paraguariensis at Buenos Aires Botanical Garden.jpg',
+          teksti: 'Guaranit käyttivät yerba matea kauan ennen '
+              + 'eurooppalaisia, ja kulutus keskittyi Amambayn ja Alto '
+              + 'Paranán seuduille. Kun jesuiitat huomasivat kasvin '
+              + 'kaupallisen arvon, he onnistuivat 1600-luvun puolivälissä '
+              + 'kesyttämään sen ja perustivat viljelmiä reduktioihinsa — '
+              + 'mikä sai villikantoja korjaavat paraguaylaiset raivon '
+              + 'partaalle. Kun kunta karkotettiin 1770-luvulla, viljelmät '
+              + 'rappeutuivat ja itämisen salaisuus katosi. Kasvi '
+              + 'kesytettiin uudelleen vasta yli sata vuotta myöhemmin. '
+              + 'Nykyisin Paraguayn osuus maailman tuotannosta on '
+              + 'kymmenesosa.',
+          selite: 'Yerba mate on pensasmainen orjanlaakerin sukuinen puu, '
+            + 'jonka lehdet kuivataan savussa ennen jauhamista.',
+          lahde: 'Mx. Granger, Wikimedia Commons (CC0)',
+          wiki: 'Mate (juoma)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Paraguaylaisen musiikin kaksi kotia ovat harppu ja '
+          + 'kitara, ja sen kaksi tunnetta ovat nopea polkka ja hidas '
+          + 'guarania.',
+      nostot: [
+        {
+          otsikko: 'Harppu, jonka kielet kulkevat kaulan läpi',
+          tiedosto: 'Paraguayan harp new.jpg',
+          teksti: 'Paraguaylainen harppu on maan kansallissoitin, ja se '
+              + 'syntyi eurooppalaisen ja guaranilaisen musiikin '
+              + 'kohtaamisesta jesuiittareduktioissa. Se on diatoninen ja '
+              + 'siinä on 32–46 kieltä, useimmiten 36–42. Soittaja '
+              + 'näppäilee kynsillä, ei sormenpäillä. Soitin on noin puoli'
+              + 'toista metriä korkea mutta painaa vain nelisen kiloa, ja '
+              + 'se kootaan kolmesta osasta, joita ei liimata yhteen. Kaula '
+              + 'tehdään useimmiten palo santo -puusta, ja soitin '
+              + 'tunnistetaan yhdestä yksityiskohdasta: kielet pujotetaan '
+              + 'kaulan läpi keskeltä eikä sivusta.',
+          selite: 'Paraguaylaisen harpun kaikukoppa on kolmiosainen ja '
+            + 'kaula usein runsaasti koristeleikattu.',
+          lahde: 'M.t.lifshits & Aij, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Polkka, joka soi kahdessa tahtilajissa yhtä aikaa',
+          // Kuvaton (Opus 6.9.2026): Commonsista ei löytynyt yhtään
+          // >= 1200 px:n kuvaa paraguaylaisesta polkkatanssista, jossa
+          // tanssijan kasvot eivät tunnistuisi. Kuva haetaan myöhemmin.
+          teksti: 'Polca paraguaya kehittyi Böömistä levinneestä polkasta, '
+              + 'mutta se ei kuulosta siltä. Eurooppalainen polkka on '
+              + 'kaksijakoinen, kun taas paraguaylainen yhdistää kolmi- ja '
+              + 'kaksijakoisen rytmin samanaikaisesti, jolloin korva kuulee '
+              + 'kaksi eri aikaa päällekkäin. Muunnelmia on kymmeniä, ja '
+              + 'jokaisella on '
+              + 'oma nimensä — galopa, polka valseada, polka popó, polka '
+              + 'jekutu, polka kyre’y, polka syryry ja valittava '
+              + 'purahéi jahe’o. Maaseudulla polkkaa tanssitaan '
+              + 'yhä enemmän kuin guaraniaa.',
+          selite: 'Polca paraguaya on maan yleisin tanssimusiikki, ja sen '
+              + 'kaksoisrytmi erottaa sen eurooppalaisesta polkasta.',
+        },
+        {
+          otsikko: 'Laji, joka keksittiin yhtenä iltana',
+          aika: '1925',
+          tiedosto: 'Monumento a José Asunción Flores, reconocido músico de fama internacional, nacido en Altos.jpg',
+          teksti: 'José Asunción Flores syntyi 1904 Asunciónin köyhässä La '
+              + 'Chacaritan kaupunginosassa, myi lapsena lehtiä ja '
+              + 'kiillotti kenkiä ja pääsi yksitoistavuotiaana poliisin '
+              + 'soittokuntaan. Vuonna 1925 hän kokeili vanhan laulun '
+              + 'Maerãpa Reikuaase sovituksia hitaammiksi ja sai aikaan '
+              + 'jotakin uutta: haikean, verkkaisen lajin, jonka hän nimesi '
+              + 'guaraniaksi. Ensimmäinen kappale oli Jejuí. Runoilija '
+              + 'Manuel Ortiz Guerreron kanssa syntyivät India, Cerro Corá '
+              + 'ja Panambí Verá. India julistettiin kansallislauluksi '
+              + '1944. Flores sävelsi myös kaksitoista sinfoniaa.',
+          selite: 'Altosin kotikylään pystytetty muistomerkki esittää '
+            + 'guaranian luojaa José Asunción Floresia soittimineen.',
+          lahde: 'Ulises Icardi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Guarania',
+        },
+        {
+          otsikko: 'Kitaristi, joka esiintyi kansanpuvussa',
+          aika: '1885–1944',
+          tiedosto: 'Agustín Barrios 1910b.jpg',
+          teksti: 'Agustín Barrios pääsi Asunciónin Colegio Nacionaliin '
+              + 'viisitoistavuotiaana, puhui espanjaa ja guarania ja luki '
+              + 'kolmea muuta kieltä. Hän sävelsi kitaralle yli sata omaa '
+              + 'teosta ja sovitti kaksisataa muuta — enemmän kuin kukaan '
+              + 'aikalaisensa. Pääteos La Catedral valmistui 1921 ja teki '
+              + 'vaikutuksen Andrés Segoviaan. Vuodesta 1932 Barrios '
+              + 'esiintyi paraguaylaisessa kansanpuvussa taiteilijanimellä '
+              + 'Nitsuga Mangoré — Agustín takaperin ja timbú-päällikön '
+              + 'nimi. Häntä on pidetty ensimmäisenä levyttäneenä '
+              + 'klassisena kitaristina, joskin varhaisempiakin '
+              + 'levytyksiä tunnetaan.',
+          selite: 'Barrios kuoli El Salvadorissa 1944, ja hänen oppilaansa '
+            + 'kantoivat arkun hautausmaalle vuoden kuumimmalla viikolla.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Paraguayn kuvataide on syntynyt käsissä: kivessä, '
+          + 'puussa ja savessa — ja sen koulu on reduktioiden veistämö.',
+      nostot: [
+        {
+          otsikko: 'Barokki, jonka veistivät guaranit',
+          aika: '1712–1767',
+          tiedosto: 'Ornamentación, Ruinas Jesuíticas Santísima Trinidad del Paraná, Encarnación, Paraguay - panoramio.jpg',
+          teksti: 'Reduktioiden kirkkoihin syntyi oma tyylinsä, jota '
+              + 'kutsutaan hispano-guaranilaiseksi barokiksi: '
+              + 'eurooppalaiset mallikuvat annettiin guaranilaisille '
+              + 'veistäjille, jotka toteuttivat ne omalla kädenjäljellään '
+              + 'punaiseen hiekkakiveen ja puuhun. Trinidadin kirkon '
+              + 'oviaukkoja kiertävät kasviaiheiset friisit ja soittavat '
+              + 'enkelit. San Ignacio Guazú, joka perustettiin 29. '
+              + 'joulukuuta 1609 päällikkö Arapysandún maille, tunnetaan '
+              + 'tämän barokin pääkaupunkina, ja sen hiippakuntamuseossa on '
+              + 'neljä salillista puisia pyhimysveistoksia.',
+          selite: 'Trinidadin kirkon oviaukon yläpuolella on punaiseen '
+            + 'hiekkakiveen veistetty barokkifriisi, jonka tekijät olivat '
+            + 'guaranilaisia kivenveistäjiä.',
+          lahde: 'rodoluca, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kylä, joka veistää yhä samalla puukolla',
+          tiedosto: 'Sagrada familia - artesania tobateña.JPG',
+          teksti: 'Tobatí tunnetaan koko Paraguayssa puutöistä, '
+              + 'keramiikasta ja veistoksista. Kylän veistäjät tekevät '
+              + 'pyhimyksiä, seimiä ja arkiesineitä paikallisesta puusta, ja '
+              + 'työtapa juontuu suoraan reduktioiden veistämöistä: kuva '
+              + 'hahmotellaan kirveellä ja viimeistellään puukolla, eikä '
+              + 'malli ole koskaan aivan sama kuin edellinen. Tunnetuin '
+              + 'nimi on Don Zenón Páez. Samaa perinnettä jatkavat '
+              + 'naapurikylät omilla erikoisaloillaan, ja käsityö myydään '
+              + 'edelleen kadunvarsikojuista ostajan katsellessa vieressä.',
+          selite: 'Tobateñalainen seimiasetelma on veistetty yhdestä '
+            + 'puunkappaleesta, ja hahmot ovat erikseen tehtyjä vaaleampia '
+            + 'figuureja.',
+          lahde: 'Mateuverte, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Musta savi ja sammakot',
+          tiedosto: 'Itá trabajos de Rosa Britez1.jpg',
+          teksti: 'Itá tarkoittaa guaraniksi kiveä, ja kylää kutsutaan '
+              + 'keramiikan pääkaupungiksi. Sen erikoisuus on musta '
+              + 'saviastiasto, joka saa värinsä poltosta, sekä '
+              + 'eläinhahmoiset astiat — etenkin sammakot, joita tehdään '
+              + 'sekä koriste-esineiksi että vesiruukuiksi. Itá oli '
+              + 'aikoinaan merkittävä fransiskaanireduktio, ja käsityö '
+              + 'säilyi siellä silloinkin, kun jesuiittojen keramiikka '
+              + 'katosi karkotuksen jälkeen. Espanjalaissyntyinen Josefina '
+              + 'Plá ja hänen puolisonsa keraamikko Julián de la Herrería '
+              + 'nostivat 1900-luvulla paraguaylaisen saven takaisin '
+              + 'taiteen puolelle.',
+          selite: 'Itán mustat savisammakot ovat Rosa Britezin '
+            + 'työhuoneesta, ja mukana on pienoismalli tiiliuunista.',
+          lahde: 'Aterovi, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Katu, jolla käsityö myydään yhä kojusta',
+          tiedosto: 'Artesanías de Areguá (8039437870).jpg',
+          teksti: 'Areguá on pieni kaupunki Ypacaraí-järven rannalla, ja se '
+              + 'tunnetaan kahdesta asiasta: mansikoista ja savipajoista. '
+              + 'Kaupunkiin johtavan tien varrella on kojujono, jossa '
+              + 'ruukut, maljakot, patsaat ja maalatut eläinhahmot on '
+              + 'ladottu maasta kattoon asti, ja moni myyjä tekee tavaransa '
+              + 'itse takapihalla. Vanha rautatie kulki Aregúan kautta, ja '
+              + 'sitä pitkin savityöt lähtivät Asunciónin markkinoille. '
+              + 'Kesäisin kaupunki täyttyy järvelle tulevista, ja pajat '
+              + 'pitävät oviaan auki iltaan asti.',
+          selite: 'Aregúan käsityökatu on savipajojen myyntipaikka, ja '
+            + 'suuret maalatut eläinhahmot on tehty ohikulkijan silmää '
+            + 'varten.',
+          lahde: 'Leandro Neumann Ciuffo, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+  ],
+  /*
+   * VENEZUELA (VEN) — E-Amerikan kahdeksas maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-venezuela.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO CARACASIN KANSSA: Caracasin kaupunkilehti kattaa jo
+   * Guaicaipuron, Ávilan, vuoden 1812 järistyksen, Bolívarin ja
+   * Vapauttajan arvonimen, Plaza Bolívarin, Capitolion Carabobo-
+   * kattomaalauksineen, Panteónin, Guzmán Blancon kaupunkiuudistuksen,
+   * Ángelin putouksen, Catatumbon salamat, öljyn, arepan, El Sisteman,
+   * Simón Bolívar -orkesterin, Aula Magnan ja joropon. Maalehti EI
+   * toista niitä.
+   *
+   * SISÄLTÖLINJAUS (spec-mantereet.md): nykypolitiikka ja 2000-luvun
+   * tapahtumat on jätetty kokonaan pois. Siirtomaa-ajan orjatyö
+   * mainitaan asiatietona ilman kuvauksia.
+   *
+   * KUVAT: 19 nostokuvaa Commonsista, lisenssi ja tekijä extmetadatasta,
+   * leveys >= 1200 px, jokainen katsottu silmin. YKSI NOSTO JÄI
+   * KUVATTOMAKSI: tamunangue — Commonsissa ei ole yhtään kuvaa lajista,
+   * ja El Callaon calypson ainoa riittävän suuri kuva kantaa poltettua
+   * päiväysleimaa. AIHETOISTO KIRJATTU: Francisco de Miranda esiintyy
+   * sekä historian että kuvataiteen sivulla, mutta eri näkökulmasta
+   * (elämä / Michelenan maalaus) ja eri kuvin. HYLÄTYT:
+   * "Recorrido-plantación-cacao-hacienda-bukare" (tunnistettavia kasvoja
+   * ja yrityksen logo), "Elaboracioncasabe" (tunnistettavat kasvot),
+   * "Madamas El Callao" (kuvaan poltettu päiväysleima), "Casiquiare,
+   * rio Atabapo ... 1872-1876" (kirjaston hyllymerkinnät kartan
+   * paspartuulla).
+   */
+  VEN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Isoisän matkavuonna 1873 maan nimi on Venezuelan '
+          + 'yhdysvallat, ja sen ensimmäiset vuosisadat ovat kulkeneet '
+          + 'saksalaisten pankkiirien, baskilaisten kauppiaiden ja '
+          + 'kaakaon varassa.',
+      nostot: [
+        {
+          otsikko: 'Nimi, joka syntyi paalutaloista',
+          aika: '1499',
+          tiedosto: 'Palafitos en la Laguna de Sinamaica.jpg',
+          teksti: 'Alonso de Ojedan retkikunta saapui rannikolle vuonna '
+              + '1499. Yleisimmän selityksen mukaan Maracaibo-järven '
+              + 'paalutalot muistuttivat italialaista purjehtijaa Amerigo '
+              + 'Vespuccia Venetsiasta, ja hän nimesi alueen Veneziolaksi, '
+              + 'Pikku Venetsiaksi; espanjaksi siitä tuli Venezuela. Sama '
+              + 'retkikunnan jäsen Martín Fernández de Enciso kertoo '
+              + 'kuitenkin toisin: hänen mukaansa tavatut ihmiset kutsuivat '
+              + 'itseään nimellä Veneciuela, ja maan nimi tulisi siis '
+              + 'paikallisesta sanasta. Kumpaakaan selitystä ei ole '
+              + 'pystytty todistamaan.',
+          selite: 'Sinamaican laguunin paalutalot ovat samaa rakennustapaa '
+            + 'kuin ne, joista maa sai nimensä, ja niiden asukkaat '
+            + 'liikkuvat yhä veneellä.',
+          lahde: 'Jogreher, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Venezuela',
+        },
+        {
+          otsikko: 'Maa, joka annettiin pankkiirille velan pantiksi',
+          aika: '1527–1546',
+          tiedosto: 'Calle colonial del Centro Histórico de Coro.jpg',
+          teksti: 'Juan Martín de Ampués perusti Santa Ana de Coron 26. '
+              + 'heinäkuuta 1527. Vuotta myöhemmin keisari Kaarle V '
+              + 'luovutti koko provinssin velkojensa vakuudeksi '
+              + 'augsburgilaiselle Welser-pankkiirisuvulle, ja aluetta '
+              + 'alettiin kutsua nimellä Klein-Venedig; Coron nimi oli '
+              + 'tuolloin Neu-Augsburg. Ensimmäinen kuvernööri Ambrosius '
+              + 'Ehinger perusti Maracaibon 1529, ja retkikunnat lähtivät '
+              + 'Corosta etsimään El Doradoa. Vuonna 1546 espanjalainen '
+              + 'kuvernööri teloitti Welserien miehet, ja keisari perui '
+              + 'valtakirjan.',
+          selite: 'Coron vanhankaupungin savi- ja bahareque-talot ovat '
+            + 'Karibian ainutlaatuisin maarakennuskokonaisuus, ja osa '
+            + 'kaduista päättyy äkisti Welser-ajan kaavan takia.',
+          lahde: 'Carlos Santos Colorado, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Yhtiö, joka teki kaakaosta arvonimen',
+          aika: '1728–1784',
+          tiedosto: 'Cacao Tree (Theobroma cacao) green pods (17348751253).jpg',
+          teksti: 'Vuosina 1700–1728 Espanjasta purjehti Venezuelaan vain '
+              + 'viisi alusta: kaakaokauppa kulki hollantilaisten käsissä. '
+              + 'Filip V myönsi 25. syyskuuta 1728 baskilaisille '
+              + 'kauppiaille luvan perustaa Guipuzcoana-yhtiön, joka sai '
+              + 'yksinoikeuden koko kauppaan. Ensimmäiset neljä laivaa '
+              + 'lähtivät 1730 viidensadankuudenkymmenenyhden miehen ja '
+              + 'neljän- tai viidenkymmenen tykin kanssa. Laivat lastattiin '
+              + 'ylikuormaan, ja baskeista tuli rikas maanomistajaluokka: '
+              + 'ilmaus un gran cacao tarkoittaa Venezuelassa yhä pilke '
+              + 'silmässä merkkihenkilöä.',
+          selite: 'Kaakaopuun palot kasvavat suoraan rungosta ja oksista, '
+              + 'ja Venezuelan rannikkolaaksot olivat 1700-luvulla '
+              + 'maailman arvostetuimpia kaakaon lähteitä.',
+          lahde: 'Bernard DUPONT from FRANCE, Wikimedia Commons '
+            + '(CC BY-SA 2.0)',
+          wiki: 'Kaakao',
+        },
+        {
+          otsikko: 'Lippu, joka nostettiin ensin väärässä satamassa',
+          aika: '1806–1821',
+          tiedosto: 'Miranda en la Carraca, Arturo Michelena.jpg',
+          teksti: 'Francisco de Miranda oli ehtinyt palvella Espanjan '
+              + 'armeijassa, taistella Yhdysvaltain vapaussodassa ja '
+              + 'komentaa joukkoja Ranskan vallankumouksessa, kun hän 1806 '
+              + 'nousi maihin La Vela de Coron satamassa. Paikalliset '
+              + 'ottivat retkikunnan vastaan kylmästi, mutta mukana ollut '
+              + 'kolmivärilippu nostettiin salkoon ensi kertaa Venezuelan '
+              + 'maalla, ja siitä tuli myöhemmin kolmen valtion lipun '
+              + 'pohja. Miranda johti Caracasia 1810–1812, mutta '
+              + 'espanjalaiset saivat vallan takaisin ja hänet '
+              + 'luovutettiin. Itsenäisyys ratkesi vasta Carabobossa 24. '
+              + 'kesäkuuta 1821.',
+          selite: 'Arturo Michelena maalasi 1896 Mirandan Cádizin La '
+            + 'Carracan vankilassa, ja teoksesta tuli Venezuelan '
+            + 'tunnetuimpia maalauksia.',
+          lahde: 'Arturo Michelena, Wikimedia Commons (PD)',
+          wiki: 'Francisco de Miranda',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Venezuelaan mahtuu pöytävuoria, joki joka virtaa kahteen '
+          + 'suuntaan, tulvatasanko täynnä eläimiä ja neljänkymmenen '
+          + 'metrin dyynejä.',
+      nostot: [
+        {
+          otsikko: 'Vuori, jonka päällä on oma maailmansa',
+          aika: '1884',
+          tiedosto: 'Roraima3 (79).JPG',
+          teksti: 'Roraima on korkein Pacaraiman pöytävuorista eli '
+              + 'tepuista: huippu kohoaa 2 810 metriin, ja sitä ympäröivät '
+              + '400–1 000 metrin jyrkänteet. Pinta-alasta 85 prosenttia on '
+              + 'Venezuelaa. Nimi tulee pemónien kielestä, jossa roroi '
+              + 'tarkoittaa sinivihreää ja ma suurta. Huipun ravinneköyhällä '
+              + 'hiekkakivellä kasvaa lihansyöjäkasveja, ja siellä elää '
+              + 'oma rupikonnalaji. Everard im Thurnin retkikunta nousi '
+              + 'huipulle 18. joulukuuta 1884 reittiä, jonka lintututkija '
+              + 'Henry Whiteley oli osoittanut — ja tapasi ylhäällä '
+              + 'pemóneja.',
+          selite: 'Roraiman pystysuorat seinämät ovat eristäneet huipun '
+            + 'lajiston ympäristöstään, ja siksi siellä elää lajeja, joita '
+            + 'ei ole muualla.',
+          lahde: 'Paolo Costa Baldi, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Tepui',
+        },
+        {
+          otsikko: 'Joki, joka vuotaa toiseen jokeen',
+          aika: '1800',
+          tiedosto: 'Rio Orinoco e Canal do Cassiquiare, Venezuela.jpg',
+          teksti: 'Casiquiare on Orinocon luonnollinen sivuhaara, joka '
+              + 'kääntyy etelään ja laskee Río Negroon — ja yhdistää siten '
+              + 'Orinocon ja Amazonin vesistöt. Se on maailman suurin '
+              + 'luonnonkanava kahden suuren jokijärjestelmän välillä. '
+              + 'Jesuiitta Manuel Román kulki reitin 1744 ja tapasi matkalla '
+              + 'ye’kuana-kansan, jonka kielestä joen nimi polveutuu, mutta '
+              + 'kertomusta ei uskottu ennen kuin espanjalainen rajakomissio '
+              + 'vahvisti sen 1756. Alexander von Humboldt ja Aimé Bonpland '
+              + 'kartoittivat joen vuonna 1800 kanooteilla.',
+          selite: 'Satelliittikuvassa Orinoco kulkee ylhäällä ja Casiquiare '
+            + 'erkanee siitä etelään kohti Amazonin vesistöä.',
+          lahde: 'Coordenação-Geral de Observação da Terra/INPE, Wikimedia '
+            + 'Commons (CC BY-SA 2.0)',
+          wiki: 'Casiquiare',
+        },
+        {
+          otsikko: 'Tasanko, joka on puoli vuotta järvi',
+          tiedosto: 'Wasserschweine und Vögel in der Llanos-Ebene, Venezuela.JPG',
+          teksti: 'Llanos on laaja ruohotasanko Andien itäpuolella, ja sen '
+              + 'läpi virtaa Orinoco. Sadekausi kestää huhtikuusta '
+              + 'marraskuuhun ja kuiva kausi joulukuusta maaliskuuhun, '
+              + 'joten sama maa on vuorotellen tulvavesi ja pölyävä '
+              + 'nurmikko. Eläimet kerääntyvät kuivalla kaudella jäljelle '
+              + 'jääneille vesille: kapybarat, maailman suurimmat jyrsijät, '
+              + 'makaavat rannalla iibisten ja haikaroiden keskellä, ja '
+              + 'vedessä väijyy harvinainen Orinocon krokotiili. '
+              + 'Ekoalueesta on suojeltu 105 323 neliökilometriä eli '
+              + 'runsas neljännes.',
+          selite: 'Kapybaroista on Venezuelassa tullut paastonajan ruokaa, '
+              + 'koska kirkko myönsi kertoman mukaan niiden syömiseen '
+              + 'erivapauden.',
+          lahde: 'Anagoria, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Llanos',
+        },
+        {
+          otsikko: 'Aavikko maailmanperintökaupungin vieressä',
+          aika: '1974',
+          tiedosto: 'Medanos de Coro III.jpg',
+          teksti: 'Coron pohjoispuolella alkaa hiekka. Médanos de Coron '
+              + 'kansallispuisto perustettiin 1974, ja sen 91 '
+              + 'neliökilometriin mahtuu kolme maisemaa: jokien tuoma '
+              + 'tulvatasanko, tuulen muovaama dyynikenttä ja rannikon '
+              + 'mangrovevyöhyke. Dyynikenttä on noin viisi kertaa '
+              + 'kolmekymmentä kilometriä, ja korkeimmat dyynit yltävät '
+              + 'neljäänkymmeneen metriin. Tuuli muuttaa niiden muotoa '
+              + 'jatkuvasti. Sadetta tulee harvoin, mutta joulukuun 1999 '
+              + 'rankkasateissa dyynien väliin syntyi neljä lampea, joita '
+              + 'puistonvartijat eivät olleet ennen nähneet.',
+          selite: 'Médanos de Coron dyynit ovat Karibian rannikon '
+            + 'harvinaisin maisema, ja niiden kasvillisuus rajoittuu '
+            + 'piikkipensaisiin.',
+          lahde: 'Rjcastillo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Venezuelalainen keittiö rakentuu maissin ja maniokin '
+          + 'ympärille, ja sen juhlaruoka käärittiin banaaninlehteen jo '
+          + 'ennen espanjalaisia.',
+      nostot: [
+        {
+          otsikko: 'Kansallisruoka, jossa on kolme väriä',
+          tiedosto: 'Pabellón Criollo Venezolano.jpg',
+          teksti: 'Pabellón criollo on Venezuelan kansallisruoka, ja siinä '
+              + 'yhdistyvät kolmen kulttuurin ainekset: riisi, revitty '
+              + 'haudutettu naudanliha ja mustapapumuhennos. Valtio julisti '
+              + 'sen aineettomaksi kulttuuriperinnöksi 2019. Lisukkeilla on '
+              + 'omat lempinimensä: kun lautasen reunoille asetetaan '
+              + 'paistetut banaaniviipaleet, annos on pabellón con '
+              + 'barandas eli kaiteilla varustettu, ja kun päälle tulee '
+              + 'paistettu kananmuna, se on pabellón a caballo eli '
+              + 'ratsain. Liha voidaan korvata myös kapybaralla.',
+          selite: 'Pabellón criollon kolme osaa tarjotaan erikseen samalle '
+            + 'lautaselle, eikä niitä sekoiteta keskenään.',
+          lahde: 'Wilfredor, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Joulupaketti, joka keitetään',
+          tiedosto: 'Hallaca, Venezuelan Christmas food.jpg',
+          teksti: 'Hallaca on maissitaikinaan käärittyä muhennosta: sisällä '
+              + 'on naudan-, sian- tai kananlihaa sekä rusinoita, '
+              + 'kapriksia, oliiveja, sipulirenkaita ja paprikaa. Taikina '
+              + 'tehdään lihaliemeen ja väritetään annattorasvalla, ja '
+              + 'paketti kääritään banaaninlehteen, sidotaan narulla ja '
+              + 'keitetään. Pohja on alkuperäiskansojen, mutta rusinat ja '
+              + 'oliivit tulivat mukaan 1500-luvulta alkaen. Tarinan mukaan '
+              + 'ruoka syntyi orjatyöväen käsissä: isäntäväen jouluaterian '
+              + 'tähteistä koottiin oma juhlaruoka. Hallacoja tehdään '
+              + 'jouluksi kymmenittäin kerralla.',
+          selite: 'Hallaca sidotaan banaaninlehden sisään ristikkäisellä '
+            + 'narulla, ja lehti antaa keitettäessä ruoalle oman '
+            + 'makunsa.',
+          lahde: 'Wilfredor, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Lettu, joka tehdään tuoreesta maissista',
+          tiedosto: 'Cachapas con queso de mano.JPG',
+          teksti: 'Cachapa erotetaan arepasta yhdellä asialla: se tehdään '
+              + 'tuoreesta, jauhamattomasta maissista eikä kuivatusta '
+              + 'maissijauhosta. Jyvät jauhetaan paksuksi taikinaksi, joka '
+              + 'paistetaan budare-nimisellä matalalla paistinlevyllä '
+              + 'lettujen tapaan; jyvänpaloista tulee pintaan rakeinen '
+              + 'kuvio. Perinteinen tarjoilutapa on taittaa cachapa kahtia '
+              + 'paksun queso de mano -tuorejuustoviipaleen ympärille, '
+              + 'jolloin juusto sulaa hieman sisällä. Itäisillä llanoseilla '
+              + 'ruoan nimi on arepa de maíz jojoto eli pehmeän maissin '
+              + 'arepa.',
+          selite: 'Cachapat paistetaan budarella, ja väliin pannaan viipale '
+            + 'venytettyä queso de mano -juustoa.',
+          lahde: 'Patricia Vegas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Leipä, joka on myrkyllistä ennen puristusta',
+          tiedosto: 'Casabe-3.jpg',
+          teksti: 'Casabe on maniokista tehty ohut ja rapea litteä leipä, '
+              + 'jota paistetaan muutama minuutti budarella. Se tehdään '
+              + 'yleensä karvaasta maniokista, joka on käsittelemättömänä '
+              + 'myrkyllistä: juuri sisältää linamariinia, josta vapautuu '
+              + 'syanidia. Myrkky poistetaan puristamalla neste ulos '
+              + 'punotulla matapi-siivilällä ennen paistamista. Kilosta '
+              + 'maniokkia saa noin kolmanneksen kiloa leipää. Kuivattuna '
+              + 'casabe säilyy kuukausia, ja siksi espanjalaiset ja '
+              + 'merenkulkijat ottivat sen mukaansa 1500-luvulla. Unesco '
+              + 'lisäsi sen kulttuuriperintöluetteloonsa 2024.',
+          selite: 'Casabe paistuu suurina ympyröinä savisella budarella, ja '
+            + 'valmis leipä kuivataan auringossa säilyväksi.',
+          lahde: 'Luisovalles, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Maniokki',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi karvaasta maniokista tehty casabe pitää puristaa '
+            + 'ennen paistamista?',
+        vaihtoehdot: [
+          'Jotta leivästä tulee ohut',
+          'Jotta syanidia tuottava neste saadaan pois',
+          'Jotta taikina käyttyisi',
+          'Jotta leipä säilyisi valkoisena',
+        ],
+        oikea: 1,
+        fakta: 'Maniokin juuressa on linamariinia, ja myrkky irtoaa veden '
+            + 'mukana matapi-siivilässä.',
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Venezuelan taide teki 1800-luvulla pitkän kierroksen '
+          + 'Pariisin salonkien kautta ja palasi 1900-luvulla omalla '
+          + 'keksinnöllään: taiteella, joka liikkuu katsojan mukana.',
+      nostot: [
+        {
+          otsikko: 'Yksitoistavuotias kuvittaja',
+          aika: '1863–1898',
+          tiedosto: 'La Joven Madre 1889 by Arturo Michelena.jpg',
+          teksti: 'Arturo Michelena kuvitti yksitoistavuotiaana kirjan '
+              + 'Costumbres Venezolanas ja sai siitä suojelijan, joka '
+              + 'esitteli hänet vaikutusvaltaisille. Hopeamitali 1883 toi '
+              + 'valtion apurahan Pariisiin, jossa hän opiskeli Académie '
+              + 'Julianissa. Vuoden 1887 Salonissa hänen teoksensa Sairas '
+              + 'lapsi sai toisen luokan kultamitalin — siihen asti korkein '
+              + 'ulkomaalaiselle myönnetty palkinto. Toinen kultamitali '
+              + 'tuli 1889 maailmannäyttelystä. Michelena kuoli '
+              + '35-vuotiaana, mutta hänen maalauksensa Mirandasta '
+              + 'vankilassa on yhä maan tunnetuin.',
+          selite: 'Nuori äiti valmistui 1889 Pariisissa, missä Michelena '
+            + 'asui suurimman osan lyhyestä urastaan.',
+          lahde: 'Arturo Michelena, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Maalari, joka meni tupakkatehtaaseen 13-vuotiaana',
+          aika: '1857–1890',
+          tiedosto: 'Cristobal Rojas 40.JPG',
+          teksti: 'Cristóbal Rojas syntyi Cúan pikkukaupungissa. Isä kuoli, '
+              + 'kun poika oli kolmentoista, ja hän meni töihin '
+              + 'tupakkatehtaaseen elättääkseen perheen. Vuoden 1878 '
+              + 'maanjäristys tuhosi kotiseudun, ja Rojas muutti '
+              + 'Caracasiin; ensimmäiset huomatut työt olivat maalauksia '
+              + 'raunioista. Hän sai 1883 hopeamitalin samassa näyttelyssä '
+              + 'kuin Michelena ja apurahan viisikymmentä pesoa kuukaudessa '
+              + 'Pariisiin. Louvren toistuvat käynnit veivät tyylin '
+              + 'jälkiromantiikasta impressionismiin. Rojas kuoli '
+              + '32-vuotiaana.',
+          selite: 'Rojas maalasi omakuvansa punaisessa baskerissa; hänen '
+            + 'aiheensa olivat useimmiten köyhyys, sairaus ja kaupungin '
+            + 'arki.',
+          lahde: 'Cristóbal Rojas, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Teos, jonka sisään kävellään',
+          aika: '1923–2005',
+          tiedosto: '"Penetrable Amarillo" del artista venezolano Jesús Soto.JPG',
+          teksti: 'Jesús Rafael Soto maalasi kuusitoistavuotiaana '
+              + 'elokuvajulisteita Ciudad Bolívarissa ja päätyi Pariisiin, '
+              + 'jossa hän osallistui 1955 Galerie Denise Renén '
+              + 'näyttelyyn Le Mouvement yhdessä Marcel Duchampin ja Victor '
+              + 'Vasarelyn kanssa; näyttelystä julkaistiin kineettisen '
+              + 'taiteen Keltainen manifesti. Soton tunnetuin keksintö on '
+              + 'Penetrable: tuhansista riippuvista muovitangoista koottu '
+              + 'kuutio, johon katsoja kävelee sisään. Taiteilijan mukaan '
+              + 'sisällä on tunne siitä, että on valon pyörteessä ja tuntee '
+              + 'tilan ruumiillaan.',
+          selite: 'Penetrable-teokset ovat kineettisen taiteen '
+            + 'ääriesimerkki: teos syntyy vasta, kun katsoja liikkuu sen '
+            + 'sisällä.',
+          lahde: 'TainaHijadeDios, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Lattia, joka muuttaa väriä askelten mukaan',
+          aika: '1974',
+          tiedosto: 'Piso Corredor Público.JPG',
+          teksti: 'Carlos Cruz-Diez asui Pariisissa vuodesta 1960 '
+              + 'kuolemaansa 2019 ja tutki koko uransa yhtä asiaa: väriä '
+              + 'itsenäisenä ilmiönä, joka syntyy vasta katsojan silmässä '
+              + 'ja muuttuu ajan ja liikkeen mukana. Hän jakoi työnsä '
+              + 'kahdeksaan tutkimuslinjaan, joilla on omat nimensä, kuten '
+              + 'Physichromie ja Chromosaturation. Vuodesta 1967 hän teki '
+              + 'kymmeniä monumentaaliteoksia julkisiin tiloihin, ja '
+              + 'niistä tunnetuin on Maiquetían lentoaseman mosaiikkilattia '
+              + 'vuodelta 1974, jonka värivyöhykkeet muuttuvat sen mukaan, '
+              + 'mistä suunnasta niitä katsoo.',
+          selite: 'Maiquetían lentoaseman lattia on Cruz-Diezin teos '
+            + 'Ambientación Color Aditivo, ja se on monelle matkustajalle '
+            + 'ensimmäinen näky Venezuelasta.',
+          lahde: 'Karla Santos, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Konserttisalien rinnalla elää neljä alueellista '
+          + 'perinnettä, joista jokaisella on oma rumpunsa, oma juhlansa '
+          + 'ja oma kuukautensa.',
+      nostot: [
+        {
+          otsikko: 'Joulumusiikki, joka syntyi kortteleissa',
+          tiedosto: 'Museo de la Gaita III.jpg',
+          teksti: 'Gaita zuliana on Maracaibon ja Zulian osavaltion oma '
+              + 'laji, ja sen juuret ulottuvat 1800-luvulle. Alkujaan se '
+              + 'oli improvisointia: väki kokoontui piiriin ja kannusti '
+              + 'toisiaan sepittämään säkeitä vuorotellen. Nimi juontuu '
+              + 'mahdollisesti goottilaisesta sanasta gaits, vuohi, sillä '
+              + 'furro-rummun kalvo tehdään vuohennahasta; muut soittimet '
+              + 'ovat maracat, cuatro, charrasca ja tambora. Laji levisi '
+              + 'koko maahan 1960-luvulla ja on nykyään Venezuelan joulun '
+              + 'tunnusmusiikkia. Sanoituksissa kerrotaan Zulian '
+              + 'historiaa.',
+          selite: 'Maracaibon gaitamuseo on omistettu lajille, jota '
+            + 'soitetaan Venezuelassa marraskuusta tammikuuhun.',
+          lahde: 'Rjcastillo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Paholaiset, jotka tanssivat lupauksen takia',
+          aika: '1749',
+          tiedosto: 'Dancing Devils of Yare Mask from Venezuela.jpg',
+          teksti: 'Corpus Christin juhlassa veljeskunnat pukeutuvat '
+              + 'paholaisiksi ja tanssivat kirkon edessä. Tapa syntyi '
+              + '1600-luvun puolivälissä Araguan ja Vargasin haciendoilla, '
+              + 'ja vuodelta 1749 on kirjattu, että miehet, naiset ja '
+              + 'lapset pukeutuivat paholaisiksi täyttääkseen pyhälle '
+              + 'sakramentille antamansa lupauksen. Tunnustettuja '
+              + 'veljeskuntia on yksitoista ja osallistujia yli '
+              + 'viisituhatta; tunnetuin on San Francisco de Yaren '
+              + 'veljeskunta. Unesco otti perinteen aineettoman '
+              + 'kulttuuriperinnön luetteloon vuonna 2012.',
+          selite: 'Yaren paholaisnaamio tehdään paperimassasta ja '
+            + 'maalataan kirkkain värein; jokainen veljeskunta tunnistaa '
+            + 'omansa muodosta.',
+          lahde: 'Wilfredor, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Rummut, joiden kalvo jätetään karvoineen',
+          tiedosto: 'Tambores a la espera.jpg',
+          teksti: 'Rannikon afrovenezuelalainen rumpuperinne on maan '
+              + 'parhaiten tallennettu kansanmusiikin muoto. Rytmeillä on '
+              + 'omat nimensä — sangueo, fulía, parranda ja tamborera — ja '
+              + 'jokaisella rannikkokylällä on omat kokoonpanonsa. '
+              + 'Caracasilainen Fundación Bigott on äänittänyt ja tutkinut '
+              + 'perinnettä vuosikymmeniä ja tuottanut yhtyeitä, kuten Un '
+              + 'Solo Pueblo, Tambor Urbano ja Grupo Madera, jotka ovat '
+              + 'vieneet rumpurytmit myös jazzin, rumban ja salsan '
+              + 'kokoonpanoihin.',
+          selite: 'Rummun kalvo jätetään usein karvoineen, ja rungot '
+            + 'koverretaan yhdestä puunrungosta.',
+          lahde: 'Salteveneno, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Seitsemän tanssia yhtenä päivänä',
+          aika: '13.6.',
+          // Kuvaton (Opus 6.9.2026): Commonsissa ei ole yhtään
+          // tamunangue-kuvaa, ja El Callaon calypson ainoa >= 1200 px:n
+          // kuva kantaa kuvaan poltettua päiväysleimaa. Kuva haetaan
+          // myöhemmin.
+          teksti: 'Laran osavaltiossa vietetään 13. kesäkuuta Padovan '
+              + 'pyhän Antoniuksen juhlaa, ja sen musiikkia kutsutaan '
+              + 'tamunangueksi. Kokonaisuus aloitetaan Neitsyt Marialle '
+              + 'osoitetulla rukouksella, ja sen jälkeen seuraa sarja '
+              + 'tansseja, joilla on omat nimensä: La Bella, La Juruminga, '
+              + 'El Poco a Poco, El Yiyivamos, La Perrendenga, El Galerón '
+              + 'ja El Seis Figureao. Soittimina ovat cuatro ja cinco, ja '
+              + 'lauletaan kaksiäänisesti rumpujen kanssa. Perinne '
+              + 'yhdistää alkuperäiskansojen, espanjalaisia ja '
+              + 'afrikkalaisia aineksia samaan juhlaan.',
+          selite: 'Tamunangue on Laran osavaltion oma juhlaperinne, jossa '
+              + 'seitsemän tanssia esitetään aina samassa '
+              + 'järjestyksessä.',
+        },
+      ],
+    },
+  ],
 };

@@ -178,6 +178,54 @@ export const UUTISLAHTEET = {
     syote: 'https://www.lasillavacia.com/feed/',
   },
   /*
+   * Montevideo Portal on Uruguayn luetuimpia uutissivustoja. Testattu
+   * 6.9.2026: syötteessä kahdeksan juttua (otsikot CDATA-kentissä, jotka
+   * DOMParser purkaa itsestään), ja artikkelisivun ensimmäisestä
+   * <article>-lohkosta jäsentyy kuusi yli 60 merkin kappaletta sekä
+   * og:image.
+   *
+   * Hylätyt: El Paísin /rss ja /rss/ vastaavat 302:lla eikä worker seuraa
+   * uudelleenohjauksia; El Observadorin syöte aukeaa, mutta sen
+   * ensimmäisessä <article>-lohkossa on vain ingressi (sama vika kuin El
+   * Paísilla 6.8.2026); La Repúblican /feed/ palauttaa 404 ja Teledocen
+   * syötteen linkit osoittavat etusivulle. La Diaria läpäisi molemmat
+   * testit, mutta sen leipätekstin seassa on kirjautumiskehote.
+   */
+  URY: {
+    nimi: 'Montevideo Portal',
+    kieli: 'es',
+    syote: 'https://www.montevideo.com.uy/anxml.aspx?59',
+  },
+  /*
+   * ABC Color on Paraguayn suurin päivälehti. Testattu 6.9.2026:
+   * syötteessä sata juttua ja artikkelisivun ensimmäisestä
+   * <article>-lohkosta jäsentyy viisi yli 60 merkin kappaletta sekä
+   * og:image.
+   *
+   * HUOM: osoitteessa on kyselymerkkijono (?outputType=xml), joka
+   * kulkee workerin läpi ongelmitta, koska peli koodaa koko osoitteen
+   * url-parametriin. Hylätyt: abc.com.py/rss.xml (404), Última Horan
+   * rss.xml ja rss/portada.xml (404), La Nación PY /feed/ (404) ja Hoy
+   * /rss (301 ilman toimivaa päätepistettä).
+   */
+  PRY: {
+    nimi: 'ABC Color',
+    kieli: 'es',
+    syote: 'https://www.abc.com.py/arc/outboundfeeds/rss/?outputType=xml',
+  },
+  /*
+   * El Nacional on Venezuelan vanhimpia päivälehtiä. Testattu 6.9.2026:
+   * syötteessä sata juttua ja artikkelisivun ensimmäisestä
+   * <article>-lohkosta jäsentyy 28 yli 60 merkin kappaletta sekä
+   * og:image. Efecto Cocuyon syöte vastasi myös 200:lla, mutta El
+   * Nacional läpäisi artikkelisivutestin ensimmäisellä yrityksellä.
+   */
+  VEN: {
+    nimi: 'El Nacional',
+    kieli: 'es',
+    syote: 'https://www.elnacional.com/feed/',
+  },
+  /*
    * KUUBA (CUB) JÄI ILMAN LÄHDETTÄ (Opus 6.9.2026) — Havannan lehti
    * näkyy siis ilman uutisosiota, eikä mikään mene rikki.
    *
@@ -194,5 +242,51 @@ export const UUTISLAHTEET = {
    * Päätöstä vaativa kysymys Fablelle: kelpaako Cubadebate kuvineen ja
    * syötteen kuvauksineen, vai lisätäänkö js/uutiset.js:n poimintaan
    * kolmas valitsin? Kumpikin on linjauspäätös, ei mekaaninen korjaus.
+   */
+  /*
+   * Post-Courier on Papua-Uuden-Guinean vanhin päivälehti. Testattu
+   * 6.9.2026: syötteessä kymmenen juttua, ja artikkelisivun
+   * ensimmäisessä <article>-lohkossa on yli 60 merkin kappaleita sekä
+   * og:image.
+   *
+   * The National (thenational.com.pg) kokeiltiin ensin, koska se on
+   * maan toinen suuri päivälehti: sen /feed/ palauttaa 403:n
+   * (botti-esto). EMTV:n syöte ohjaa toiseen osoitteeseen eikä worker
+   * seuraa uudelleenohjauksia, ja looppng.com ei vastannut lainkaan
+   * tästä ympäristöstä.
+   */
+  PNG: {
+    nimi: 'Post-Courier',
+    kieli: 'en',
+    syote: 'https://www.postcourier.com.pg/feed/',
+  },
+  /*
+   * The Island Sun on honiaralainen päivälehti. Testattu 6.9.2026:
+   * syötteessä kymmenen juttua, ja artikkelisivun ainoassa
+   * <article>-lohkossa on 24 yli 60 merkin kappaletta sekä og:image.
+   *
+   * Solomon Star (solomonstarnews.com) palautti syötteestä 403:n ja
+   * SIBC (sibconline.com.sb) 503:n.
+   */
+  SLB: {
+    nimi: 'The Island Sun',
+    kieli: 'en',
+    syote: 'https://theislandsun.com.sb/feed/',
+  },
+  /*
+   * FIDŽI (FJI) JÄI ILMAN LÄHDETTÄ (Opus 6.9.2026) — Suvan lehti näkyy
+   * siis ilman uutisosiota, eikä mikään mene rikki. Sama tilanne kuin
+   * Kuuballa.
+   *
+   * Testattu ja hylätty: The Fiji Times (osoite
+   * www.fijitimes.com.fj/feed/?post_type=post avautuu ja siinä on 20
+   * juttua — pelkkä /feed/ ohjautuu etusivulle, koska Yoast on
+   * kytkenyt syötteet pois — mutta artikkelisivulla ei ole
+   * <article>-elementtiä eikä [itemprop="articleBody"]-merkintää),
+   * FBC News (syöte aukeaa, kymmenen juttua ja og:image löytyy, mutta
+   * artikkelisivulla ei ole <article>-elementtiä), Islands Business
+   * (artikkelisivun ensimmäisessä <article>-lohkossa ei ole yhtään yli
+   * 60 merkin kappaletta). Fiji Sun, Fijivillage ja Fijilive eivät
+   * tarjonneet toimivaa RSS-osoitetta (404, HTML-sivu tai 403).
    */
 };

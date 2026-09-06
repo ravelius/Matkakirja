@@ -949,4 +949,82 @@ export const OCEANIA_ARTIKKELIT = {
       + 'jonka kokoelmista osa on tabu, ja sen kenttätyöntekijät ovat '
       + 'tallentaneet suullista perinnettä vuodesta 1976.',
   },
+  /* Fidžin, Papua-Uuden-Guinean ja Salomonsaarten maaintrot
+   * kirjoitettiin 6.9.2026 maalehtien (MAA_KATEGORIAT.FJI, .PNG ja
+   * .SLB) yhteydessä samasta en-Wikipedian aineistosta kuin lehdet.
+   * Vain intro-kenttä, kuten Australialla ja Uudella-Seelannilla.
+   * Avain on maan nimi js/packs/oceania-countries.js:ssä, koska
+   * mailla ei ole erillistä wiki-kenttää. Suvan ja Port Moresbyn
+   * kaupunkilehtien aiheet (Cakobau, luovutus 1874, hiri-purjehdukset,
+   * kansallismuseo) on jätetty pois, koska ne ovat kaupunkilehtien
+   * nostoja. */
+  Fidži: {
+    intro: 'Fidži on 330 saaren ja yli viidensadan luodon ryhmä '
+      + 'eteläisellä Tyynellämerellä, ja saarista noin 110 on pysyvästi '
+      + 'asuttuja. Kaksi suurta '
+      + 'saarta, Viti Levu ja Vanua Levu, ovat vuoristoisia ja '
+      + 'tuuliylärinteiltään sateisia; muut ovat pieniä ja monet '
+      + 'korallin ympäröimiä. **Ensimmäiset asukkaat olivat '
+      + 'lapitalaisia, jotka saapuivat noin vuosina 1100–1000 eaa. ja '
+      + 'jättivät jälkeensä hammasleimasimella koristeltua '
+      + 'keramiikkaa.** Moturikin saarelta löytyi 2002 lapitanaisen '
+      + 'luuranko, joka on vanhempi kuin vuosi 800 eaa.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Fidži ei ole vielä Britannian '
+      + 'siirtomaa vaan lyhytikäinen kuningaskunta, ja saaret ovat olleet '
+      + 'seitsemänkymmentä vuotta kauppalaivojen kohde: ensin '
+      + 'santelipuun, sitten kuivatun merimakkaran takia. Itäisillä '
+      + 'Lau-saarilla valtaa pitää tongalainen prinssi Enele Ma’afu. '
+      + 'Luonto on saariluontoa parhaimmillaan: kruunuleguaani vaihtaa '
+      + 'värinsä mustaksi suuttuessaan, tagimoucia-kukka kasvaa vain '
+      + 'yhden saaren ylängöllä, ja punaisen kula-papukaijan höyheniä '
+      + 'kuljetettiin aikoinaan Samoaan ja Tongaan asti.',
+  },
+  'Papua-Uusi-Guinea': {
+    intro: 'Papua-Uusi-Guinea käsittää maailman toiseksi suurimman '
+      + 'saaren itäisen puoliskon sekä satoja pienempiä saaria. Maa on '
+      + 'vuoristoinen, tiheän sademetsän peittämä ja poikkeuksellisen '
+      + 'vaikeakulkuinen, ja juuri siksi sen laaksot ovat säilyneet '
+      + 'erillisinä maailmoina. **Kieliä puhutaan noin 840 — enemmän kuin '
+      + 'missään muualla maailmassa — ja yhteiseksi kieleksi on '
+      + 'kasvanut englannin pohjalta syntynyt kreoli tok pisin.**'
+      + '\n\n'
+      + 'Ylängöillä maanviljely keksittiin itsenäisesti: Kukin suon '
+      + 'turpeesta on kaivettu yhdeksäntuhatta vuotta vanhoja ojia, '
+      + 'joilla kuivattiin maata taarolle. Ulkomaailma sai tietää '
+      + 'ylängöillä asuvista sadoistatuhansista ihmisistä vasta '
+      + '1930-luvulla, kun australialaiset kullanetsijät kävelivät ja '
+      + 'lensivät saaren sisäosiin. Isoisän matkavuonna 1873 saaren '
+      + 'rannikko on vasta kartoitettavana eikä siirtomaavaltoja ole '
+      + 'vielä tullut.'
+      + '\n\n'
+      + 'Luonto on omanlaisensa: paratiisilinnut tanssivat '
+      + 'soidinaukioilla, maailman suurin perhonen elää yhden maakunnan '
+      + 'sademetsässä, kengurut kiipeävät puihin ja maailman suurin '
+      + 'kyyhky kävelee metsänpohjalla. Sing-sing-juhlassa kymmenet '
+      + 'ryhmät esittävät toisilleen oman tanssinsa ja koristelunsa.',
+  },
+  Salomonsaaret: {
+    intro: 'Salomonsaariin kuuluu kuusi suurta saarta ja 992 pienempää, '
+      + 'ja ne ovat Papua-Uuden-Guinean kaakkoispuolella. Suuret saaret '
+      + 'ovat vuoristoisia ja sademetsän peittämiä. Nimi syntyi '
+      + 'väärinkäsityksestä: kun espanjalainen Álvaro de Mendaña palasi '
+      + '1568 ensimmäiseltä matkaltaan, kertomukset sekoittuivat '
+      + 'tarinoihin kuningas Salomon rikkauksista, ja saaret ristittiin '
+      + 'Islas Salomóniksi. **Kultaa ei ollut.**'
+      + '\n\n'
+      + 'Asutus on vanhaa: Bukan saaren luolasta on löydetty jälkiä noin '
+      + '30 000 vuoden takaa, ja austronesialaiset lapitalaiset saapuivat '
+      + 'noin 1200–800 eaa. Isoisän matkavuonna 1873 saaret eivät ole '
+      + 'vielä minkään vallan alaisia — Britannia julistaa eteläiset '
+      + 'saaret protektoraatikseen vasta 1893 — mutta valaanpyytäjät ja '
+      + 'kauppiaat käyvät jo säännöllisesti, ja Malaitalta lähdetään '
+      + 'sopimustyöhön Queenslandin ja Fidžin viljelmille.'
+      + '\n\n'
+      + 'Meri on täällä samaan aikaan ruokakomero ja tulivuori: Marovon '
+      + 'laguuni on maailman suurin kaksoisvalliriutan sulkema laguuni, '
+      + 'Kavachi purkautuu merenpinnan alla ja Langa Langan laguunissa '
+      + 'ihmiset ovat kasanneet itselleen saaria hiekkasärkkien päälle. '
+      + 'Raha on tehty käsin simpukasta ja punaisista sulista.',
+  },
 };

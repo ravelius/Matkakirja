@@ -254,6 +254,74 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'matkavuonna maan nimi on Kolumbian yhdysvallat ja sen '
       + 'valtaväylä Magdalena-joki.',
   },
+  /* Uruguayn, Paraguayn ja Venezuelan maaintrot kirjoitettiin 6.9.2026
+   * maalehtien (MAA_KATEGORIAT.URY, .PRY ja .VEN) yhteydessä samasta
+   * en-Wikipedian aineistosta kuin lehdet — docs/mantereet-tyoaineisto/
+   * faktapohja-uruguay.md, -paraguay.md ja -venezuela.md. Vain
+   * intro-kenttä, kuten Perulla, Chilellä ja Kolumbialla. Montevideon,
+   * Asunciónin ja Caracasin kaupunkilehtien aiheet (candombe, tango,
+   * guaranin kieli, kolmoisliiton sota, Bolívar, El Sistema) jätettiin
+   * pois, koska ne ovat kaupunkilehtien nostoja. */
+  Uruguay: {
+    intro: 'Uruguay on Etelä-Amerikan pienin espanjankielinen maa ja '
+      + 'melkein kokonaan ruohoa: korkein kohta jää alle kuudensadan '
+      + 'metrin, ja loivat harjanteet kuljettavat laitumia rannikolta '
+      + 'rajalle asti. Atlantin puolella on kaksisataa kilometriä '
+      + 'dyynirantaa, jonne mustavalaat nousevat talvella poikimaan, ja '
+      + 'sisämaassa kasvaa saarekkeina butiá-palmua. Maa oli isoisän '
+      + 'matkavuonna 45-vuotias tasavalta.'
+      + '\n\n'
+      + '**Rajat syntyivät siitä, että kaksi kruunua kiisteli samasta '
+      + 'laidunmaasta: Colonia del Sacramento vaihtoi omistajaa sata '
+      + 'vuotta, kunnes asia ratkaistiin sopimuksella 1777.** Ennen '
+      + 'eurooppalaisia alueella liikkuivat charrúat, joiden jälkeläiset '
+      + 'ovat 2000-luvulla järjestäytyneet uudelleen. Itsenäisyyden '
+      + 'kansallissankari José Artigas kuoli maanpaossa Paraguayssa. '
+      + 'Fray Bentosin lihauutetehdas muutti 1860-luvulla sen, mitä '
+      + 'Euroopassa syötiin, ja karja on yhä maan tunnus: joka pihalla on '
+      + 'oma tiilinen grilli. Baskisiirtolaiset toivat samalla '
+      + 'vuosisadalla mukanaan tannat-rypäleen, josta tuli maan '
+      + 'kansallisviini.',
+  },
+  Paraguay: {
+    intro: 'Paraguay on sisämaavaltio, jonka Paraguayjoki jakaa kahtia. '
+      + 'Idässä ovat kosteat metsät, punainen maa ja suuret joet, '
+      + 'lännessä Gran Chaco: kuuma piikkipensastasanko, jossa vettä on '
+      + 'vaikeampi löytää kuin maata. Chacosta löytyi 1971 elävänä '
+      + 'eläin, joka oli kuvattu tieteelle pelkkien fossiilien '
+      + 'perusteella ja luultu sukupuuttoon kuolleeksi.'
+      + '\n\n'
+      + '**Maan historia on sarja avautumisia ja sulkeutumisia: '
+      + 'jesuiitat rakensivat 1600-luvulta alkaen kolmisenkymmentä '
+      + 'reduktiota, ja niiden karkotuksen jälkeen tri Francia katkaisi '
+      + 'ulkomaankaupan kokonaan.** Seuraava johtaja palkkasi '
+      + 'brittiläisiä insinöörejä, ja rautatie vihittiin 1861 — kaksi '
+      + 'vuotta ennen isoisän matkaa. Paranán varrella jyrisivät vielä '
+      + 'tuolloin Guairán putoukset, joiden ääni kuului kolmenkymmenen '
+      + 'kilometrin päähän; ne jäivät 1982 Itaipún tekojärven alle. '
+      + 'Reduktioista jäi maahan kaksi asiaa, joita kuulee ja näkee yhä: '
+      + 'kynsillä soitettava harppu ja punaiseen hiekkakiveen veistetty '
+      + 'barokki.',
+  },
+  Venezuela: {
+    intro: 'Venezuela on Etelä-Amerikan pohjoisnurkka, ja siihen mahtuu '
+      + 'neljä täysin erilaista maata. Rannikolla on Karibia ja sen '
+      + 'takana neljänkymmenen metrin hiekkadyynejä, keskellä Llanosin '
+      + 'tulvatasanko, jossa kapybarat ja krokotiilit kokoontuvat '
+      + 'kuivan kauden vesille, etelässä Guayanan ylängön pöytävuoret '
+      + 'eli tepuit, ja lännessä Andien haara. Orinocosta erkanee joki, '
+      + 'joka vie osan sen vedestä Amazonin puolelle.'
+      + '\n\n'
+      + '**Maa sai nimensä ilmeisesti Maracaibo-järven paalutaloista, '
+      + 'jotka muistuttivat vuonna 1499 purjehtinutta Amerigo Vespuccia '
+      + 'Venetsiasta — mutta jo retkikunnan oma jäsen kertoi toisin.** '
+      + 'Keisari Kaarle V pantasi provinssin 1528 saksalaisille '
+      + 'pankkiireille, ja 1700-luvulla baskilainen kauppayhtiö teki '
+      + 'kaakaosta maan vientituotteen. Vanhin kaupunki Coro on '
+      + 'rakennettu savesta, ja sen kaduissa näkyy yhä saksalaisen '
+      + 'kauden epäsäännöllinen kaava. Isoisän matkavuonna valtion nimi '
+      + 'on Venezuelan yhdysvallat.',
+  },
   /*
    * SÃO PAULO (23.8.2026). Väitteet ovat samasta erästä kuin lehden
    * tekstit (js/packs/kulttuuri-kategoriat.js, avain saopaulo), ja ne

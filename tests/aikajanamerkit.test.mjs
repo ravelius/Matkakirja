@@ -771,8 +771,11 @@ test('moottori naksahtaa elävästä vaihdoksesta ja kohahtaa vain keksinnön ko
   const MOOTTORI = (await import('node:fs')).readFileSync(
     new URL('../js/aikajana.js', import.meta.url), 'utf8',
   );
-  // Ääni tulee vain elävästä vaihdoksesta: `heti` on rakentaminen ja Alusta.
-  assert.match(MOOTTORI, /const elava = vaihtui && !heti && this\.kelloTeksti !== undefined;/);
+  // Ääni tulee vain elävästä vaihdoksesta: `heti` on rakentaminen ja
+  // Alusta. Vaihdos luetaan ASKELEESTA eikä näytetystä lukemasta
+  // (6.9.2026: kello näyttää täyden luvun, joka vaihtuu joka
+  // kehyksellä — naksahdus joka kehyksellä olisi rätinää).
+  assert.match(MOOTTORI, /const elava = vaihtui && !heti && this\.kelloAskel !== undefined;/);
   assert.match(MOOTTORI, /if \(elava && this\.kaynnissa\) this\.naksahda\(\);/);
   // Kohahdus kuuluu keksinnölle (omistajan päätös 3.9.2026): valon
   // syttyessä, ei merkkipaalulla; naksahdus vain jos se ei soinut.

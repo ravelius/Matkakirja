@@ -24,11 +24,12 @@
  *                  pitkä) ja näyttää logaritmisesti interpoloidun
  *                  lukeman "300 000 v. sitten". Ks. KELLON ASTEIKKO.
  *   `reitti: true` valojen väliin piirtyy isoympyrää seuraava
- *                  reittiviiva sitä mukaa kuin valot syttyvät
- *                  (rakennaReitti, vain pallolla).
+ *                  reittiviiva, joka KASVAA kameran mukana koko
+ *                  pysäkkivälin ajan (rakennaReitti, ajaValia).
  *   `lahikuva` ja `hyppykamera`  kaaren oma lähikuvan mitta, ja pitkällä
- *                  välillä kamera nousee niin kauas, että edellinen valo
- *                  näkyy yhä (pysakinLahikuva).
+ *                  välillä kamera nousee MATKALLA kaarelle ja laskeutuu
+ *                  perillä takaisin lähikuvaan (pysakinLahikuva,
+ *                  hypynLeveys).
  *
  * Näytettävä ajoitus tulee silloin datan `ajoitus`-kentästä (`ajoitus`-
  * apuri) — kortti, lamppu, kellorivi ja havainnekuvan teksti lukevat
@@ -167,6 +168,9 @@ import { luoLiekkivalot } from './aikajana-valo.js';
 // Isoympyrä reittiviivalle: sama kaava kuin lentokaarella ja uomilla
 // (js/linssit/vesistot.js tuo saman parin) — ei omaa kopiota.
 import { isoympyranPiste, kulmaAsteina } from './pallolauta/reitit.js';
+// Laudan projektio tasokartan reittiviivalle: sama kaava kuin
+// pysäkkien x/y:llä (js/linssit/ihmisen-matka.js) — ei omaa kopiota.
+import { projisoiLaudalle } from './fokusmitat.js';
 import { avaaTiedeliite, suljeTiedeliite } from './tiedeliite.js';
 import { sytytaLyhdyt } from './lyhty.js';
 import { rajausTyyli } from './isoisan-valokuvat.js';
@@ -401,16 +405,27 @@ export const PALLON_REIAN_LIUKU_MS = 0;
  *
  * MILLOIN LIIKE ALKAA JA LOPPUU. Kamera lähtee kohti seuraavaa lamppua
  * ENNEN sen syttymistä (AIKAJANAN_KAMERAN_ENNAKKO_OSUUS pysäkin
- * kestosta = 40 % × 4 600 ms ≈ 1 840 ms) ja on perillä vasta
- * AIKAJANAN_KAMERAN_JALKIJATTO_MS syttymisen JÄLKEEN. Saapumishetki
- * lasketaan samalla puhtaalla funktiolla kuin karusellin ennakko
- * (aikaSeuraavaan) — kello ei kulje vakionopeudella, joten "kaksi
- * sekuntia ennen" ei ole sama kuin "kahden sekunnin matka jäljellä".
+ * kestosta) ja pysähtyy AIKAJANAN_KAMERAN_JALKIJATTO_MS ennen sitä.
+ * Saapumishetki lasketaan samalla puhtaalla funktiolla kuin karusellin
+ * ennakko (aikaSeuraavaan) — kello ei kulje vakionopeudella, joten
+ * "kaksi sekuntia ennen" ei ole sama kuin "kahden sekunnin matka
+ * jäljellä".
+ *
+ * KARTTA EI SAA SEISOA (omistaja 6.9.2026 keskipäivä, sanatarkasti:
+ * *"Kartta on liian kaukana ja se saisi liikkua jo aiemmin ja pidemmän
+ * aikaa piirtäen viivaa seuraavaan paikkaan. Lisää dynamiikka
+ * tällä."*). Ennakko oli 40 % pysäkin kestosta: ajo kesti 1 540 ms
+ * pysäkkivälin 7 200 ms:sta eli viidenneksen, ja loput ajasta kartta
+ * seisoi. Nyt ennakko on 80 %: liike alkaa jo pysäkin lukuajan
+ * lopulla ja kestää noin 3 400 ms eli lähes puolet välistä — ja
+ * reittiviiva piirtyy koko sen ajan kameran mukana (ajaValia).
+ * Luenta pidättää tauon loppua (pidataTaukoaLuennalle), joten pitkän
+ * selostuksen jälkeen ajo lähtee heti kun selostaja on vaiennut.
  */
 /** Lähikuvan leveys lautayksikköinä pallolla (mitattu 1 525 km ruudun leveydellä). */
 export const AIKAJANAN_LAHIKUVA_LEVEYS = 434;
 /** Osuus pysäkin kestosta, jonka kamera lähtee liikkeelle etuajassa. */
-export const AIKAJANAN_KAMERAN_ENNAKKO_OSUUS = 0.4;
+export const AIKAJANAN_KAMERAN_ENNAKKO_OSUUS = 0.8;
 /** Ennakko millisekunteina: liike alkaa, kun syttymiseen on tämä aika. */
 export const AIKAJANAN_KAMERAN_ENNAKKO_MS = Math.round(AIKAJANA_VIIVE_MS * AIKAJANAN_KAMERAN_ENNAKKO_OSUUS);
 /** Ajo päättyy vasta tämän verran syttymisen jälkeen (omistaja: "vähän sen jälkeen"). */
@@ -426,7 +441,7 @@ export const AIKAJANAN_KAMERAN_JALKIJATTO_MS = -300;
 export const AIKAJANAN_KAMERAN_POHJA_MS = 900;
 
 /*
- * ── MANNERTEN MITTAISET HYPYT (ihmisen matka, 5.9.2026) ───────────
+ * ── MANNERTEN MITTAISET HYPYT: KAARI, EI KAUKOKUVA ────────────────
  *
  * Keksintökaaressa naapuripysäkit ovat saman maanosan sisällä, ja yksi
  * lähikuvan mitta riittää koko ajolle. Ihmisen leviämisessä väli voi
@@ -434,31 +449,78 @@ export const AIKAJANAN_KAMERAN_POHJA_MS = 900;
  * valo ja niiden välinen reittiviiva jäisivät ruudun ulkopuolelle, ja
  * pelaaja näkisi vain uuden lampun ilman matkaa, joka sinne johti.
  *
- * Kaari kertoo oman perusleveytensä (`aikajana.lahikuva`) ja pyytää
- * hyppykameran (`aikajana.hyppykamera`); silloin kunkin pysäkin leveys
- * lasketaan EDELLISEN pysäkin etäisyydestä isoympyränä. Ilman näitä
- * kenttiä (keksinnöt) mitta on entinen vakio.
+ * ENSIMMÄINEN TOTEUTUS (5.9.2026) ratkaisi sen NOSTAMALLA KAMERAN:
+ * pysäkin lähikuva laskettiin edellisen pysäkin etäisyydestä (2,2 ×
+ * väli, katto 3 600 yksikköä), jolloin koko hyppy mahtui ruudulle myös
+ * PERILLÄ. Omistajan iPhone-kuvakaappaus 6.9.2026 keskipäivällä
+ * (Pinnacle Point) näytti mitä se tarkoitti: koko eteläinen Afrikka
+ * ruudulla ja lamppu muutaman pikselin pisteenä — *"Kartta on liian
+ * kaukana"*.
+ *
+ * NYT PITKÄ HYPPY NÄYTETÄÄN LIIKKEELLÄ. Pysäkillä ollaan AINA tiukassa
+ * lähikuvassa (kaaren oma `lahikuva`), ja matka piirretään KAARENA:
+ * kamera lähtee edellisen lampun lähikuvasta, nousee matkan
+ * puolivälissä korkeintaan AIKAJANAN_HYPYN_KATTOON ja laskeutuu
+ * perille takaisin lähikuvaan. Nousun korkeus tulee välin pituudesta
+ * (2,2 × väli), joten lyhyellä välillä kamera ei nouse lainkaan.
+ * Kaari ajetaan ajaValia-metodissa; kaari pyytää sen kentällä
+ * `aikajana.hyppykamera`, ja ilman kenttää (keksinnöt) kamera vain
+ * siirtyy lampusta toiseen kuten ennen.
  */
-/** Kuinka monta kertaa hypyn pituus mahtuu ruudulle: 2,2 → molemmat päät. */
+/** Kuinka monta kertaa hypyn pituus mahtuu ruudulle kaaren huipulla. */
 export const AIKAJANAN_HYPYN_KERROIN = 2.2;
-/** Kauimmas kamera nousee hypyssä (lautayksikköä ruudun leveydellä). */
-export const AIKAJANAN_HYPYN_KATTO = 3600;
+/** Kauimmas kamera nousee kaaren huipulla (lautayksikköä ruudun leveydellä). */
+export const AIKAJANAN_HYPYN_KATTO = 1600;
 /** Lautayksikköä yhdellä asteella (12 000 yksikköä = 360°). */
 export const LAUTAYKSIKKOA_ASTEELLA = 12000 / 360;
+/** Maailmanlaudan leveys lautayksikköinä (päivämäärärajan katkaisu). */
+export const LAUDAN_LEVEYS_YKS = 360 * LAUTAYKSIKKOA_ASTEELLA;
 
 /**
- * Lähikuvan leveys pysäkillä: perusmitta, tai pitkällä hypyllä niin
- * väljä, että myös edellinen valo ja reittiviiva ovat kuvassa.
+ * Kaaren HUIPPULEVEYS pysäkkivälillä: perusmitta, tai pitkällä hypyllä
+ * niin väljä, että lähtöranta ja reittiviiva ovat kuvassa matkan
+ * puolivälissä. PERILLÄ leveys on aina perusmitta.
  *
  * @param {number} perus kaaren oma lähikuvan leveys (lautayksikköä)
  * @param {number} matka edellisen pysäkin etäisyys (lautayksikköä)
- * @returns {number} näkyvä leveys lautayksikköinä
+ * @returns {number} kaaren huipun leveys lautayksikköinä
  */
 export function pysakinLahikuva(perus, matka, {
   kerroin = AIKAJANAN_HYPYN_KERROIN, katto = AIKAJANAN_HYPYN_KATTO,
 } = {}) {
   if (!(matka > 0)) return perus;
   return Math.min(katto, Math.max(perus, matka * kerroin));
+}
+
+/**
+ * KAAREN PROFIILI: kuinka suuren osan noususta kamera on käyttänyt,
+ * kun matkasta on kuljettu `e`. Nolla molemmissa päissä ja yksi
+ * puolivälissä — ja koska myös derivaatta on nolla päissä, nousu ja
+ * lasku alkavat pehmeästi (Raamattu: KAIKKI LIIKE ANIMOIDAAN
+ * PEHMEÄSTI). sin²(πe) = (1 − cos 2πe) / 2.
+ *
+ * @param {number} e kuljettu osuus 0…1
+ * @returns {number} noususta käytetty osuus 0…1
+ */
+export function aikajananHypynKaari(e) {
+  const x = Math.min(1, Math.max(0, e));
+  return (1 - Math.cos(2 * Math.PI * x)) / 2;
+}
+
+/**
+ * Kameran näkyvä leveys kaaren kohdassa `e`. Interpolointi on
+ * GEOMETRINEN, koska kameran korkeus interpoloidaan logaritmisesti
+ * (js/pallolauta/kamera.js ajaKamera): silloin zoomi tuntuu tasaiselta
+ * eikä nykäise huipulla.
+ *
+ * @param {number} lahikuva perusmitta pysäkillä (lautayksikköä)
+ * @param {number} huippu kaaren huipun leveys (pysakinLahikuva)
+ * @param {number} e kuljettu osuus 0…1
+ * @returns {number} näkyvä leveys lautayksikköinä
+ */
+export function hypynLeveys(lahikuva, huippu, e) {
+  if (!(huippu > lahikuva) || !(lahikuva > 0)) return lahikuva;
+  return lahikuva * ((huippu / lahikuva) ** aikajananHypynKaari(e));
 }
 
 /*
@@ -474,13 +536,44 @@ export function pysakinLahikuva(perus, matka, {
  * 10.3 avauslennon jälki): asteina laskettu paksuus jää alle pikselin
  * eli näkymättömiin. Viiva kulkee pallon pintaa (isoympyrä), ja yli
  * kahden asteen välit tihennetään, jottei se oikaise pallon läpi.
+ *
+ * VIIVA PIIRTYY MATKALLA (omistaja 6.9.2026 keskipäivä: *"se saisi
+ * liikkua jo aiemmin ja pidemmän aikaa piirtäen viivaa seuraavaan
+ * paikkaan"*). Pätkä ei enää ilmesty kerralla valon syttyessä vaan
+ * kasvaa kameran mukana koko pysäkkivälin ajan (paivitaReitti-metodin
+ * `osuus`). GEOMETRIA LASKETAAN KERRAN ja kasvu tehdään KATKOVIIVALLA
+ * — sama ratkaisu ja sama mittaus kuin avauslennon jäljessä
+ * (js/pallolauta/reitit.js `jalki`): kasvava pistelista jää Globe.gl:n
+ * interpolK-tweenin taakse ensimmäisen kirjoituksen mittaiseksi, kun
+ * taas katkon luvut menevät materiaaliin joka päivityksellä.
+ * Tasokartalla sama kasvu on SVG:n `stroke-dasharray` (pathLength 1).
  */
 /** Reittiviivan paksuus RUUTUPIKSELEINÄ (ks. yllä). */
 export const REITIN_PAKSUUS_PX = 3;
 /** Tätä pidempi väli tihennetään isoympyrän pisteillä (astetta). */
 export const REITIN_TIHENNYS_AST = 2;
-/** Viivan sävy: sama lampun kulta kuin valoissa, himmeämpänä. */
-export const REITIN_VARI = 'rgba(255, 208, 102, 0.72)';
+/*
+ * Viivan sävy: sama lampun kulta kuin valoissa. Läpinäkyvyys oli 0,72,
+ * mutta viiva piirtyy pallon PINTAAN eli tummennuskalvon ALLE (kalvo on
+ * kotelon päällä, lamput sen päällä) — mitattuna 6.9.2026 kalvo syö
+ * siitä 86 %, ja himmeä kulta katosi kokonaan. Täysi kirkkaus jättää
+ * kuljetun matkan hennoksi jäljeksi myös valokeilan ulkopuolella.
+ */
+export const REITIN_VARI = 'rgba(255, 208, 102, 0.95)';
+/**
+ * KÄRKI KULKEE KAMERAN EDELLÄ tämän osuuden pysäkkivälistä: kamera
+ * seuraa viivan päätä eikä toisin päin, joten pelaaja näkee minne
+ * ollaan menossa. Perillä viiva on joka tapauksessa valmis.
+ */
+export const REITIN_KARJEN_ENNAKKO = 0.08;
+/**
+ * VALOKEILA KULKEE MUKANA. Tummennuksen reikä on ajon ulkopuolella
+ * nykyisen lampun kohdalla; matkalla se seuraa viivan kärkeä, jolloin
+ * piirtyvä viiva on kirkkaassa kohdassa eikä 86 %:n kalvon alla.
+ * Keila myös laajenee kaaren huipulla tällä kertoimella — silloin
+ * kamera on kauimpana ja matkaa näkyy ruudulla eniten.
+ */
+export const AJON_REIAN_KERROIN = 1.8;
 
 /**
  * Kahden pysäkin väli isoympyrän pisteinä ([[lat, lng]…]).
@@ -499,6 +592,30 @@ export function reitinPisteet(a, b, tihennys = REITIN_TIHENNYS_AST) {
   }
   pisteet.push([loppu.lat, loppu.lng]);
   return pisteet;
+}
+
+/**
+ * Isoympyrän pisteet TASOKARTAN SVG-poluksi. Sama projektio kuin
+ * pysäkeillä (js/linssit/ihmisen-matka.js projisoiLaudalle), joten
+ * viiva osuu lamppuihin. Päivämääräraja katkaisee polun uuteen
+ * osapolkuun: Millerin lieriössä x kiertää nollaan, ja yhtenäinen
+ * viiva vetäisi koko kartan yli. Puhdas funktio (ei DOMia).
+ *
+ * @param {Array<Array<number>>} pisteet [[lat, lng]…]
+ * @param {string} [lauta] laudan projektio (FOKUS_LAUTAPROJEKTIOT)
+ * @returns {string} SVG-polun `d`
+ */
+export function reitinKuvio(pisteet, lauta = 'maailmankartta', katkaisu = LAUDAN_LEVEYS_YKS / 2) {
+  const osat = [];
+  let edellinen = null;
+  for (const piste of pisteet ?? []) {
+    const kohta = projisoiLaudalle(lauta, piste[1], piste[0]);
+    if (!kohta) { edellinen = null; continue; }
+    const komento = !edellinen || Math.abs(kohta.x - edellinen.x) > katkaisu ? 'M' : 'L';
+    osat.push(`${komento}${Math.round(kohta.x * 10) / 10} ${Math.round(kohta.y * 10) / 10}`);
+    edellinen = kohta;
+  }
+  return osat.join(' ');
 }
 
 /**
@@ -1564,10 +1681,9 @@ export function karusellinPaikat(i, nyt, leveysKortteina) {
  *                  suhteita eikä erotuksia: 300 000 → 210 000 on sama
  *                  askel kuin 3 000 → 2 100.
  *
- * Lukema on suuri, joten kello ei näytä yksittäisiä vuosia vaan
- * pyöristää (kellonAskel): 300 000 vuoden kohdalla tuhannen tarkkuus,
- * tuhannen kohdalla yhden. Ilman porrasta viimeinen rulla pyörisi
- * kymmeniä tuhansia numeroita sekunnissa eli harmaana sotkuna.
+ * Lukema on suuri, mutta kello näyttää sen KOKONAAN yhden vuoden
+ * tarkkuudella (omistaja 6.9.2026 keskipäivä). Askel (kellonAskel) ei
+ * enää pyöristä näyttöä vaan antaa naksahduksen ja etunollien tahdin.
  *
  * Näytettävä TEKSTI pysäkillä tulee aina datasta (`ajoitus`):
  * "300 000 vuotta sitten", "n. 1250 jaa.". Kello on rullaava luku
@@ -1580,23 +1696,26 @@ export const ASTEIKON_VALI = 10;
 export const KELLON_NUMEROT = 4;
 
 /*
- * ── KELLON ASKEL ON PYSÄKKIVÄLIN OMA (Fablen arvio 6.9.2026) ───────
+ * ── KELLON ASKEL ON SISÄINEN TAHTI, EI NÄYTÖN PYÖRISTYS ───────────
  *
- * Ensimmäisessä toteutuksessa askel tuli lukeman suuruudesta (100 000
- * → tuhat vuotta, 10 000 → sata). Se näytti kartalla tältä: yksi
- * pysäkkiväli kestää noin 2,6 sekuntia, ja ensimmäisellä välillä
- * (300 000 → 233 000) kello ehti vaihtua 67 kertaa — kuusinumeroinen
- * luku pyöri harmaana sotkuna, ja koska matkamittari kuljettaa
- * VAIHTUVAA numeroa murto-osan verran, näkyvissä oli lisäksi
- * puolittaisia numeroita.
+ * OMISTAJA 6.9.2026 KESKIPÄIVÄ, sanatarkasti: *"Vuosinumerot saisivat
+ * vilistää yksittäisistä numeroista alkaen vuosituhansien läpi."*
  *
- * Askel lasketaan siksi VÄLISTÄ eikä lukemasta: jokainen väli saa
- * suurimman tikkaan (KELLON_ASKELEET), jolla kello vaihtuu välin
- * aikana noin KELLON_MUUTOKSIA_VALILLA kertaa. Silloin vaihtoja on
- * kaikilla väleillä kahdesta neljään sekunnissa riippumatta siitä,
- * onko väli 67 000 vai 500 vuotta — ja koska jokainen tikas on sadan
- * monikerta, kahta viimeistä nollaa (isoissa askelissa kolmea) ei
- * pyöritetä lainkaan.
+ * Saman päivän aamuversio pyöristi NÄYTETYN lukeman tähän askeleeseen,
+ * jolloin kello luki "165 000" ja kaksi viimeistä nollaa seisoivat
+ * paikallaan koko kaaren ajan. Nyt rullat saavat lukeman yhden vuoden
+ * tarkkuudella: ykköset ja kympit vilisevät (matkamittari kuljettaa
+ * murto-osaa), sadat kulkevat hitaammin ja tuhannet vaihtuvat harvoin
+ * — täsmälleen se, mitä mekaaninen mittari tekee, kun luku juoksee.
+ * Kello näyttää siis joka hetki oikean lukeman (164 371) eikä pyöreää
+ * arviota, ja pysäkillä se pysähtyy aineiston omaan tasalukuun.
+ *
+ * ASKEL JÄI SISÄISEKSI. Se lasketaan VÄLISTÄ eikä lukemasta: jokainen
+ * väli saa suurimman tikkaan (KELLON_ASKELEET), jolla kello vaihtuu
+ * välin aikana noin KELLON_MUUTOKSIA_VALILLA kertaa. Sitä käyttävät
+ * naksahdus (AIKAJANA_NAKSU_VALI_MS — 60 naksahdusta sekunnissa olisi
+ * rätinää) ja etunollien piilotus, jota ei kannata laskea joka
+ * kehyksellä. Näytettyyn lukuun se ei enää koske (naytaVuosi).
  */
 
 /**
@@ -1649,17 +1768,23 @@ export function kellonAskel(lukema, arvot = []) {
  * viimeisen pysäkin `ajoitus` on "noin 1250–1300 jaa.". Kun lukema
  * alittaa KELLON_JAA_RAJAN, kello vaihtaa rullista TEKSTIIN ja näyttää
  * vuosiluvun. Nykyhetki on pyöreä 2000 (sama kuin aineiston
- * "vuotta sitten" -luvuissa: 750 → 1250 jaa.), ja luku pyöristetään
- * viiteenkymmeneen vuoteen, jotta kello päätyy tasan siihen lukuun,
- * jonka viimeinen pysäkki sanoo.
+ * "vuotta sitten" -luvuissa: 750 → 1250 jaa.).
+ *
+ * VUOSILUKU JUOKSEE VUOSINA (omistaja 6.9.2026 keskipäivä, sama
+ * pyyntö kuin rullilla: *"Vuosinumerot saisivat vilistää"*).
+ * Ensimmäinen toteutus pyöristi viiteenkymmeneen vuoteen, jolloin
+ * kaaren viimeisillä väleillä luku vaihtui muutaman kerran ja seisoi
+ * muun ajan. Tarkkuus on nyt yksi vuosi — ja koska aineiston luvut
+ * ovat nykyhetkestä laskettuja kokonaisia vuosia, kello päätyy yhä
+ * TASAN siihen lukuun, jonka pysäkki sanoo (750 → 1250 jaa.).
  */
 
 /** Tämän alle mentäessä kello näyttää vuosiluvun tekstinä. */
 export const KELLON_JAA_RAJA = 1900;
 /** "Vuotta sitten" -lukujen nykyhetki (aineiston oma pyöristys). */
 export const KELLON_NYKYHETKI = 2000;
-/** Vuosiluvun pyöristys tekstitilassa. */
-export const KELLON_VUOSI_TARKKUUS = 50;
+/** Vuosiluvun pyöristys tekstitilassa (yksi vuosi = luku juoksee). */
+export const KELLON_VUOSI_TARKKUUS = 1;
 
 /**
  * Kellon lukema vuosilukutekstinä, tai null jos ollaan yhä syvässä
@@ -1732,12 +1857,16 @@ export function luoAsteikko(kaari) {
     yksikko: kaari.yksikko ?? 'v. sitten',
     ryhmitys: true,
     /*
-     * EI MURTO-OSAA (Fablen arvio 6.9.2026): syvässä ajassa kello
-     * etenee askelin, ja jokainen askel on oma pieni rullauksensa.
-     * Murto-osa näyttäisi tässä vain puolittaisia numeroita, koska
-     * vaihtoja on välillä useita sekunnissa.
+     * MURTO-OSA ON PÄÄLLÄ MYÖS SYVÄSSÄ AJASSA (omistaja 6.9.2026
+     * keskipäivä: *"Vuosinumerot saisivat vilistää yksittäisistä
+     * numeroista alkaen vuosituhansien läpi."*). Aamun toteutus
+     * pyöristi lukeman askeleeseen, jolloin kaksi viimeistä nollaa
+     * seisoivat — "165 000" oli puoliksi kuollut mittari. Nyt rullat
+     * saavat täyden lukeman ja ykkösrulla kuljettaa murto-osaa kuten
+     * keksintökellossa; askel jää naksahduksen ja etunollien tahdiksi
+     * (ks. naytaVuosi).
      */
-    murtoOsa: false,
+    murtoOsa: true,
     /*
      * Lähtö on puoli väliä ennen ensimmäistä pysäkkiä: kello ehtii
      * näkyä lukuna ennen kuin ensimmäinen valo syttyy, kuten
@@ -1949,6 +2078,10 @@ class Aikajana {
     this.pienetKuvat = kaari.pienetKuvat !== false;
     /** Reittiviivan pätkät (kaari, jolla `reitti: true`). */
     this.reittiOsat = null;
+    /** Tasokartan reittiviivan kerros (svg). */
+    this.reittikerros = null;
+    /** Kesken oleva pysäkkiväliajo ({ kehys }) — ks. ajaValia. */
+    this.valiajo = null;
     this.tila = { vuosi: this.alku, i: -1, viive: 0 };
     this.kaynnissa = false;
     this.loppu = false;
@@ -2191,6 +2324,9 @@ class Aikajana {
       class: 'aikajana-tummennus-pinta', x: -TUMMENNUKSEN_ULOTTUVUUS, y: -TUMMENNUKSEN_ULOTTUVUUS,
       width: 2 * TUMMENNUKSEN_ULOTTUVUUS, height: 2 * TUMMENNUKSEN_ULOTTUVUUS, mask: 'url(#aikajana-maski)',
     }, this.tummennus);
+    // Reittiviiva tummennuksen päälle mutta lamppujen alle: matka näkyy
+    // valaistuna, eivätkä valot jää viivan alle (rakennaReitti).
+    this.reittikerros = this.kaari.reitti ? el('g', { class: 'aikajana-reitti' }, ui.svg) : null;
     this.valokerros = el('g', { class: 'aikajana-valot' }, ui.svg);
     this.valot = this.tapahtumat.map((t, i) => {
       if (t.paalu || !Number.isFinite(t.x) || !Number.isFinite(t.y)) return null;
@@ -2218,6 +2354,7 @@ class Aikajana {
       const reikaYmpyra = el('circle', { class: 'aikajana-reika', r: MERKIN_SADE * REIAN_SUHDE }, this.maski);
       return { g, reika: reikaYmpyra, x: t.x, y: t.y };
     });
+    this.rakennaReitti();
     this.paivitaMittakaava();
     (ui.nipistysVastaskaalaajat ??= new Set()).add(this.vastaskaala ??= (suhde) => this.paivitaMittakaava(suhde));
     const tummennus = this.tummennus;
@@ -2386,30 +2523,60 @@ class Aikajana {
     this.kalvo.paivita(maali);
   }
 
+  /**
+   * VALOKEILA KULKEE MATKALLA viivan kärjen mukana (ks.
+   * AJON_REIAN_KERROIN). Sama kalvon kahva kuin syttymisen reiällä,
+   * mutta ilman lampun kirjanpitoa: tämä on liikettä, ei tilaa.
+   *
+   * @param {{lat:number, lng:number}} kohta isoympyrän piste
+   * @param {number} e kuljettu osuus 0…1 (keilan laajennus kaarella)
+   */
+  siirraReikaMatkalla(kohta, e) {
+    if (!this.pallolla || !this.kalvo?.paivita) return;
+    const sade = PALLON_REIAN_SADE_PX * (1 + (AJON_REIAN_KERROIN - 1) * aikajananHypynKaari(e));
+    this.reianPaikka = { lat: kohta.lat, lng: kohta.lng, sade };
+    this.kalvo.paivita(this.reianPaikka);
+  }
+
   /* ---------- reittiviiva (kaari, jolla `reitti: true`) ---------- */
 
   /**
    * REITTIVIIVA VALOJEN VÄLIIN. Pätkät lasketaan KERRAN (isoympyrä,
-   * reitinPisteet) ja piirretään sitä mukaa kuin valot syttyvät, joten
-   * kehyskohtaista työtä ei ole. Vain pallolla ja vain kaarella, joka
-   * pyytää sen — keksintökaaressa valot eivät ole yksi matka.
+   * reitinPisteet) ja kasvatetaan katkoviivalla, joten kehyskohtaista
+   * geometriatyötä ei ole. Vain kaarella, joka pyytää sen —
+   * keksintökaaressa valot eivät ole yksi matka.
+   *
+   * PALLOLLA pätkä on laudan linssiapurin polku (`polut`) samassa
+   * osassa kuin valot, joten purku vie kummatkin. TASOKARTALLA se on
+   * SVG-polku omassa kerroksessaan valojen alla; isoympyrän pisteet
+   * projisoidaan laudalle samalla kaavalla kuin pysäkit
+   * (projisoiLaudalle), ja päivämääräraja katkaisee polun osiin,
+   * jottei viiva vedä koko kartan yli.
    */
   rakennaReitti() {
-    if (!this.pallolla || !this.kaari.reitti || !this.lauta?.linssit?.polut) return;
+    if (!this.kaari.reitti) return;
+    if (this.pallolla && !this.lauta?.linssit?.polut) return;
+    if (!this.pallolla && !this.reittikerros) return;
     this.reittiOsat = [];
     let edellinen = null;
     this.tapahtumat.forEach((t, i) => {
       if (!Number.isFinite(t.lat) || !Number.isFinite(t.lon)) return;
       if (edellinen) {
-        this.reittiOsat.push({
-          i,
-          datum: {
+        const pisteet = reitinPisteet(edellinen, t);
+        const osa = { i };
+        if (this.pallolla) {
+          osa.datum = {
             avain: `${PALLON_OSA}-reitti:${i}`,
-            pisteet: reitinPisteet(edellinen, t),
+            pisteet,
             vari: REITIN_VARI,
             paksuus: REITIN_PAKSUUS_PX,
-          },
-        });
+          };
+        } else {
+          osa.polku = el('path', {
+            class: 'aikajana-reittiviiva', d: reitinKuvio(pisteet, this.kaari.lauta), pathLength: 1,
+          }, this.reittikerros);
+        }
+        this.reittiOsat.push(osa);
       }
       edellinen = t;
     });
@@ -2419,14 +2586,42 @@ class Aikajana {
   /**
    * Viiva piirtyy pysäkkiin `i` asti: sama sääntö kuin lampuilla
    * (palaa / ei pala), joten selailu taaksepäin lyhentää sen ja
-   * Alusta (i = −1) vie sen kokonaan pois.
+   * Alusta (i = −1) vie sen kokonaan pois. `osuus` on SEURAAVAN pätkän
+   * (i + 1) kasvava kärki: nolla ei piirrä siitä mitään ja yksi
+   * piirtää sen kokonaan (ks. REITIN_KARJEN_ENNAKKO).
+   *
+   * @param {number} i viimeinen valmis pysäkki
+   * @param {number} [osuus] seuraavan pätkän kuljettu osuus 0…1
    */
-  paivitaReitti(i) {
+  paivitaReitti(i, osuus = 0) {
     if (!this.reittiOsat) return;
-    this.lauta?.linssit?.polut?.(
-      PALLON_OSA,
-      this.reittiOsat.filter((o) => o.i <= i).map((o) => o.datum),
-    );
+    const nakyvat = [];
+    for (const o of this.reittiOsat) {
+      const kasvava = o.i === i + 1 && osuus > 0;
+      if (o.i > i && !kasvava) { this.piirraPatka(o, 0); continue; }
+      const kuljettu = kasvava ? Math.min(1, osuus) : 1;
+      this.piirraPatka(o, kuljettu);
+      if (o.datum) nakyvat.push(o.datum);
+    }
+    if (this.pallolla) this.lauta?.linssit?.polut?.(PALLON_OSA, nakyvat);
+  }
+
+  /**
+   * Yhden pätkän kuljettu osuus. Pallolla se on katkoviivan viivaosa
+   * (Globe.gl normittaa katkon polun pituudella, joten `viiva` = osuus
+   * piirtää juuri alkupään ja `vali` = 1 jättää lopun tyhjäksi);
+   * tasokartalla sama luku on `stroke-dasharray`, kun polun
+   * `pathLength` on 1. Valmis pätkä on yhtenäinen (väli 0).
+   */
+  piirraPatka(osa, osuus) {
+    const o = Math.max(0, Math.min(1, osuus));
+    if (osa.datum) {
+      osa.datum.viiva = o;
+      osa.datum.vali = o >= 1 ? 0 : 1;
+      return;
+    }
+    if (!osa.polku) return;
+    osa.polku.style.strokeDasharray = o >= 1 ? 'none' : `${Math.round(o * 1000) / 1000} 1`;
   }
 
   /**
@@ -2577,36 +2772,44 @@ class Aikajana {
   }
 
   /**
-   * Kamera pysäkin `i` ylle lähikuvaan. Vain pallolla: tasokartalla ajo
-   * sovittaa koko kaaren eikä seuraa pysäkkejä.
+   * Kamera pysäkin `i` ylle lähikuvaan. Kaikki muut ajot kuin pysäkiltä
+   * seuraavalle: alkunäkymä, selailu ja se harvinainen tapaus, jossa
+   * väliajo ei ehtinyt lähteä. Pysäkkiväli ajetaan kaarena (ajaValia),
+   * ja perillä leveys on AINA kaaren perusmitta.
    *
    * @param {number} i pysäkin indeksi
    * @param {number} kesto ajon kesto ms (0 = hyppy)
    * @returns {Promise<boolean>}
    */
   ajaPysakille(i, kesto) {
+    this.pysaytaValiajo();
     const t = this.tapahtumat[i];
+    if (!t) return Promise.resolve(false);
+    const vali = this.valimatka(i, kesto);
+    if (vali) return this.ajaValia(i, vali, kesto);
     const kamera = this.kamera();
-    if (!this.pallolla || !t || !kamera?.ajaKamera) return Promise.resolve(false);
+    if (!this.pallolla || !kamera?.ajaKamera) return Promise.resolve(false);
     if (!Number.isFinite(t.lat) || !Number.isFinite(t.lon)) return Promise.resolve(false);
     return kamera.ajaKamera(
       {
-        x: t.x, y: t.y, lat: t.lat, lng: t.lon, leveys: this.pysakinLeveys(i),
+        x: t.x, y: t.y, lat: t.lat, lng: t.lon, leveys: this.lahikuva,
       },
       { kesto: this.reducedMotion ? 0 : Math.max(0, kesto), pehmennys: aikajananKameranPehmennys },
     );
   }
 
   /**
-   * NÄKYVÄ LEVEYS PYSÄKILLÄ. Kaaren oma perusmitta (keksinnöillä
-   * AIKAJANAN_LAHIKUVA_LEVEYS) — ja jos kaari pyytää hyppykameran,
-   * mannerten mittainen väli vetää kameran niin kauas, että edellinen
-   * valo ja reittiviiva näkyvät samassa kuvassa (ks. pysakinLahikuva).
+   * KAAREN HUIPPULEVEYS pysäkkivälillä. Kaaren oma perusmitta
+   * (keksinnöillä AIKAJANAN_LAHIKUVA_LEVEYS) — ja jos kaari pyytää
+   * hyppykameran, mannerten mittainen väli nostaa kameran matkan
+   * puolivälissä niin kauas, että lähtöranta ja reittiviiva näkyvät
+   * samassa kuvassa (ks. pysakinLahikuva). Perillä ollaan aina
+   * perusmitassa.
    *
-   * @param {number} i pysäkin indeksi
-   * @returns {number} leveys lautayksikköinä
+   * @param {number} i pysäkin indeksi (matka tulee edellisestä)
+   * @returns {number} huipun leveys lautayksikköinä
    */
-  pysakinLeveys(i) {
+  hypynHuippu(i) {
     const t = this.tapahtumat[i];
     const edellinen = this.tapahtumat[i - 1];
     if (!this.kaari.hyppykamera || !t || !edellinen) return this.lahikuva;
@@ -2618,15 +2821,110 @@ class Aikajana {
     return pysakinLahikuva(this.lahikuva, ast * LAUTAYKSIKKOA_ASTEELLA);
   }
 
+  /* ---------- pysäkkiväli: kaari ja kasvava viiva ---------- */
+
   /**
-   * KAMERA LÄHTEE ENNEN SYTTYMISTÄ JA SAAPUU VASTA SEN JÄLKEEN
-   * (omistaja 5.9.2026 ilta, ks. AIKAJANAN_KAMERAN_ENNAKKO_MS).
-   * Saapumisaika lasketaan samalla puhtaalla funktiolla kuin karusellin
-   * ennakko; kesto venytetään jälkijätöllä, jolloin pehmennyksen loppu
-   * jää hiipumaan syttymisen yli.
+   * ONKO TÄMÄ AJO PYSÄKKIVÄLI? Väliajo on ajo NYKYISELTÄ pysäkiltä
+   * seuraavalle (i = tila.i + 1) kaarella, joka pyytää reittiviivan tai
+   * hyppykameran. Selailu (siirry), alkunäkymä ja vähennetty liike
+   * jäävät entiselle suoralle ajolle.
+   *
+   * @returns {?{a:object, b:object}} päätepisteet tai null
+   */
+  valimatka(i, kesto) {
+    if (this.reducedMotion || !(kesto > 0)) return null;
+    if (!this.kaari.reitti && !this.kaari.hyppykamera) return null;
+    if (i !== this.tila.i + 1) return null;
+    const a = this.tapahtumat[i - 1];
+    const b = this.tapahtumat[i];
+    if (!a || !b) return null;
+    const luvut = [a.lat, a.lon, b.lat, b.lon];
+    if (!luvut.every((v) => Number.isFinite(v))) return null;
+    return { a, b };
+  }
+
+  /**
+   * PYSÄKKIVÄLI YHTENÄ LIIKKEENÄ (omistaja 6.9.2026 keskipäivä:
+   * *"se saisi liikkua jo aiemmin ja pidemmän aikaa piirtäen viivaa
+   * seuraavaan paikkaan. Lisää dynamiikka tällä."*).
+   *
+   * Yksi kehyssilmukka hoitaa kolme asiaa samasta osuudesta, jolloin
+   * ne eivät voi mennä epätahtiin:
+   *
+   *   1. KAMERAN PAIKKA on isoympyrän piste lähdön ja määränpään
+   *      välillä — sama viiva, jota reitti piirtää, joten kamera
+   *      seuraa viivaa eikä oikaise sen ohi.
+   *   2. KAMERAN KORKEUS on kaari (hypynLeveys): lähikuvasta ylös
+   *      matkan puolivälissä ja takaisin lähikuvaan perillä.
+   *   3. VIIVAN KÄRKI kulkee REITIN_KARJEN_ENNAKON verran kameran
+   *      edellä ja on perillä valmis.
+   *
+   * Pehmennys on sama smootherstep kuin suorassa ajossa
+   * (aikajananKameranPehmennys): nolla nopeus molemmissa päissä.
+   * Tasokartalla kamera ei liiku (näkymä on koko kaari), mutta viiva
+   * piirtyy samaa tahtia.
+   *
+   * @param {number} i määränpään pysäkki
+   * @param {{a:object, b:object}} vali päätepisteet
+   * @param {number} kesto ajon kesto ms
+   * @returns {Promise<boolean>}
+   */
+  ajaValia(i, { a, b }, kesto) {
+    const kamera = this.pallolla ? this.kamera() : null;
+    const huippu = this.hypynHuippu(i);
+    const alku = { lat: a.lat, lng: a.lon };
+    const loppu = { lat: b.lat, lng: b.lon };
+    const alkuhetki = performance.now();
+    return new Promise((valmis) => {
+      const oma = { kehys: 0 };
+      this.valiajo = oma;
+      const askel = (hetki) => {
+        if (this.valiajo !== oma || this.ui.dead) return;
+        const t = Math.min(1, (hetki - alkuhetki) / kesto);
+        const e = aikajananKameranPehmennys(t);
+        // Valo ehti jo syttyä (lyhyt väli): viiva on valmis, eikä
+        // kasvava kärki saa lyhentää sitä takaisin.
+        if (this.tila.i < i) this.paivitaReitti(i - 1, Math.min(1, e + REITIN_KARJEN_ENNAKKO));
+        if (kamera?.ajaKamera) {
+          const kohta = isoympyranPiste(alku, loppu, e);
+          kamera.ajaKamera(
+            {
+              x: b.x, y: b.y, lat: kohta.lat, lng: kohta.lng, leveys: hypynLeveys(this.lahikuva, huippu, e),
+            },
+            { kesto: 0 },
+          );
+          this.siirraReikaMatkalla(kohta, e);
+        }
+        if (t < 1) { oma.kehys = requestAnimationFrame(askel); return; }
+        this.valiajo = null;
+        if (this.tila.i < i) this.paivitaReitti(i - 1, 1);
+        valmis(true);
+      };
+      oma.kehys = requestAnimationFrame(askel);
+    });
+  }
+
+  /** Kesken oleva väliajo seis (selailu, alustus, loppu, purku). */
+  pysaytaValiajo() {
+    if (!this.valiajo) return;
+    cancelAnimationFrame(this.valiajo.kehys);
+    this.valiajo = null;
+  }
+
+  /**
+   * VÄLIAJO LÄHTEE HYVISSÄ AJOIN ENNEN SYTTYMISTÄ ja pysähtyy vähän
+   * ennen sitä (ks. AIKAJANAN_KAMERAN_ENNAKKO_MS ja
+   * AIKAJANAN_KAMERAN_JALKIJATTO_MS). Saapumisaika lasketaan samalla
+   * puhtaalla funktiolla kuin karusellin ennakko, joten kello, kortit
+   * ja kamera pysyvät samassa tahdissa.
+   *
+   * TASOKARTALLAKIN on ajettavaa, jos kaari piirtää reittiviivan:
+   * kamera pysyy paikallaan, mutta viiva kasvaa kohti seuraavaa
+   * paikkaa samaa tahtia (ajaValia).
    */
   tarkistaKameraEnnakko(tahti) {
-    if (!this.pallolla || this.reducedMotion) return;
+    if (this.reducedMotion) return;
+    if (!this.pallolla && !this.reittiOsat) return;
     const kohde = this.tila.i + 1;
     if (this.kameraKohde === kohde || kohde >= this.tapahtumat.length) return;
     const eta = aikaSeuraavaan(this.tila, this.tapahtumat, tahti, AIKAJANAN_KAMERAN_ENNAKKO_MS + AIKAJANA_ALIASKEL_MS);
@@ -3187,6 +3485,7 @@ class Aikajana {
     }
     for (const valo of this.valot) { if (valo) this.asetaValonTila(valo, valo.g.classList.contains('palaa'), false); }
     // Koko matka näkyviin: loppusanat lupaavat kaaren kaikki valot.
+    this.pysaytaValiajo();
     this.paivitaReitti(this.tapahtumat.length);
     const loppu = this.kaari.loppusanat;
     if (loppu) {
@@ -3234,25 +3533,31 @@ class Aikajana {
      * muutu.
      */
     const vuositeksti = this.asteikko.teksti?.(arvo) ?? null;
+    /*
+     * NÄYTETTY LUKEMA ON TÄYSI (ks. KELLON ASKEL): rullat saavat
+     * lukeman yhden vuoden tarkkuudella, jolloin ykköset ja kympit
+     * vilisevät matkamittarin tavoin, sadat kulkevat hitaammin ja
+     * tuhannet vaihtuvat harvoin. ASKEL jää sisäiseksi tahdiksi:
+     * siitä tulee naksahdus ja etunollien piilotus, eikä kumpikaan
+     * saa tapahtua joka kehyksellä.
+     */
     const teksti = vuositeksti
-      ?? String(kellonNaytto(arvo, askel, suunta)).padStart(this.rullat.length, '0');
+      ?? String(kellonNaytto(arvo, 1, suunta)).padStart(this.rullat.length, '0');
+    const askelteksti = vuositeksti ?? String(kellonNaytto(arvo, askel, suunta));
     // ELÄVÄ VAIHDOS = kello liikkui itse kokonaisen askeleen. Rakentaminen
     // ja Alusta asettavat luvun `heti`-lipulla ilman rullausta, eikä
     // ensimmäinen asetus (ei edellistä lukemaa) ole vaihdos lainkaan.
-    const vaihtui = teksti !== this.kelloTeksti;
-    const elava = vaihtui && !heti && this.kelloTeksti !== undefined;
-    this.kelloTeksti = teksti;
+    const vaihtui = askelteksti !== this.kelloAskel;
+    const elava = vaihtui && !heti && this.kelloAskel !== undefined;
+    this.kelloAskel = askelteksti;
     this.naytaKellonTeksti(vuositeksti);
     if (vuositeksti === null) {
       asetaMatkamittari(this.rullat, arvo, {
         heti: heti || this.reducedMotion,
-        /*
-         * Askelittain etenevä kello rullaa JOKA VAIHDOKSESSA: ilman
-         * murto-osaa numero vain välähtäisi tilalle. Käyvä
-         * keksintökello kuljettaa murto-osaa eikä käytä siirtymää.
-         */
-        liuku: !this.kaynnissa || !this.asteikko.murtoOsa,
-        askel,
+        // Käyvä kello kuljettaa murto-osaa eikä käytä siirtymää;
+        // pysäytetty (selailu) rullaa yhdellä liu'ulla.
+        liuku: !this.kaynnissa,
+        askel: 1,
         suunta,
         murtoOsa: this.asteikko.murtoOsa !== false,
       });
@@ -4244,6 +4549,7 @@ class Aikajana {
      * (js/pallolauta/linssit.js pura). Reiän liuku pysäytetään ensin,
      * jottei kehys enää maalaa purettua kalvoa.
      */
+    this.pysaytaValiajo();
     if (this.pallolla) {
       cancelAnimationFrame(this.reianLiuku);
       this.reianPaikka = null;
@@ -4251,19 +4557,23 @@ class Aikajana {
       // Liekkien kehyssilmukka seis ennen kerrosten purkua.
       this.liekit?.pura();
       this.liekit = null;
-      this.reittiOsat = null;
       this.lauta?.linssit?.pura(PALLON_OSA);
     }
+    this.reittiOsat = null;
     // Tummennus liukuu pois ja poistuu vasta sen jälkeen; määritykset
-    // (maski) sen mukana, koska pinta viittaa niihin.
+    // (maski) ja tasokartan reittiviiva sen mukana, jottei mikään katoa
+    // välähdyksellä keskeltä liukua.
     const tummennus = this.tummennus;
     const maaritykset = this.maaritykset;
+    const reittikerros = this.reittikerros;
+    this.reittikerros = null;
     if (tummennus) {
       tummennus.classList.remove('paalla');
-      const pois = () => { tummennus.remove(); maaritykset?.remove(); };
+      const pois = () => { tummennus.remove(); maaritykset?.remove(); reittikerros?.remove(); };
       if (this.reducedMotion) pois(); else setTimeout(pois, TUMMENNUKSEN_POISTUMA_MS);
     } else {
       maaritykset?.remove();
+      reittikerros?.remove();
     }
     // Terävän tilan pakotus pois AINA, myös kesken ajon suljettaessa.
     this.pakotaLaatu(false);

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1637, teksti: 'Aikajanan ajo, kuusi maalehtea, Ihmisen matka -suunnitelma' },
   { v: 1636, teksti: 'Lehdet Honiara, Port Vila, Denver, Houston + kartat' },
   { v: 1635, teksti: 'Avauslaatikko elavaksi, nostot M12-M18' },
   { v: 1634, teksti: 'Etusivun teksti ei hypi, linssin selite lyhyt' },

@@ -3386,6 +3386,17 @@ export const RAAMATTU = {
           + 'ilman erillista lupaa; matkakirjatekstit, kohtaamiset ja aarrekaari '
           + 'tehdaan uusiin maihin vasta kun Euroopan kaari on hiottu valmiiksi '
           + 'ja monistetaan siita.',
+        'PALLO LEVOSSA YHTA TERAVA KUIN TASOKARTTA (omistaja 6.9.2026 '
+          + 'iltapaiva, sanatarkasti: "kartta oli ennen palloa paljon teravampi, '
+          + 'eli ongelma on pallon renderoinnissa. ainakin kun liike on '
+          + 'pysaytetty, kuva pitaisi renderoitya samalla tarkkuudella kuin 2d '
+          + 'kartassa"): pallon Z8 on 182 px/aste, litte\'an pyramidin z8 on '
+          + '480 px/aste; lepotilassa pallo piirtaa nakyvan alueen paalle '
+          + 'lepokerroksen, joka kootaan suoraan litte\'an pyramidin laatoista '
+          + 'taydella tarkkuudella (tiheä leveys-pituus-verkko, UV Miller-'
+          + 'koordinaateissa), haipyy pehmeasti paalle kun kamera pysahtyy ja '
+          + 'pois kun liike alkaa. Varakeino: pallon Z9 laskettuna litte\'asta '
+          + 'z8:sta.',
         'IHMISEN MATKA ON VARIVIRTOJA, EI PISTEITA (omistaja 6.9.2026 '
           + 'keskipaiva, sanatarkasti: "linssi toimii periaatetasolla vaarin. '
           + 'Siina pitaisi nakya hitaasti kartalla lisaantyva varillinen alue '
@@ -5041,6 +5052,12 @@ export const RAAMATTU = {
           + 'linssiä seitsemässä ryhmässä, tila per linssi, monistettava '
           + 'malli ja järjestys; elävä työlista, jonka Fable päivittää '
           + 'omistajan valintojen mukaan).',
+        'docs/moduulit/ihmisen-matka-virrat.md — Ihmisen matka '
+          + 'varivirtoina: nelja virtaa, ylitykset ja portit, 0,5 asteen '
+          + 'maamaski ja saapumisajan laskenta, canvas-kalvo pallolla, '
+          + 'virtaa seuraava kamera, mitattu suorituskyky, vaiheistus ja '
+          + 'avoimet kysymykset omistajalle (Fablemax 6.9.2026; SUUNNITELMA, '
+          + 'odottaa omistajan vastauksia ennen toteutusta).',
         'docs/moduulit/karttanostot-kattavuus.md — karttanostojen kattavuus '
           + 'maittain (kohteet, maastokohteet, eläintäyt, skandaalit, hetket) '
           + 'ja tavoite per maa; täytetään koneellisesti erissä.',

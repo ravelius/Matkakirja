@@ -27,13 +27,14 @@
  *              niiden väliin piirtyy isoympyrää seuraava reittiviiva
  *              sitä mukaa kuin valot syttyvät.
  *   lahikuva ja hyppykamera
- *              Kaksinkertainen lähikuva keksintöihin nähden (868 vs.
- *              260 lautayksikköä), koska välit ovat mannerten
- *              mittaisia; ja valtameren ylityksessä (Beringia, Sahul,
- *              Lapita, Aotearoa) kamera nousee automaattisesti niin
- *              kauas, että lähtöranta ja reittiviiva ovat yhä kuvassa.
- *              Mitta lasketaan edellisen pysäkin etäisyydestä, joten
- *              dataan ei tarvitse merkitä, mikä väli on merimatka.
+ *              Pysäkillä tiukka lähikuva (560 lautayksikköä, 1,3 ×
+ *              keksintöjen mitta) ja valtameren ylityksessä (Beringia,
+ *              Sahul, Lapita, Aotearoa) KAAREVA AJO: kamera nousee
+ *              matkan puolivälissä niin kauas, että lähtöranta ja
+ *              reittiviiva ovat kuvassa, ja laskeutuu perille takaisin
+ *              lähikuvaan. Nousu lasketaan edellisen pysäkin
+ *              etäisyydestä, joten dataan ei tarvitse merkitä, mikä
+ *              väli on merimatka.
  *
  * ── KUVAT: ESINE KORTTIIN, HAVAINNEKUVA PANEELIIN ─────────────────
  *
@@ -72,9 +73,17 @@ const PALLON_OSA = 'aikajana';
 const LAUTA = 'maailmankartta';
 
 /**
- * Lähikuva on KAKSINKERTAINEN keksintöihin nähden (2 × 434 = 868
- * lautayksikköä, mitattuna noin 3 000 km ruudun leveydellä): siellä
- * naapuripysäkit ovat saman maanosan sisällä, tässä eri mantereilla.
+ * Lähikuva PYSÄKILLÄ on tiukka: 1,3 × keksintöjen 434 = 560
+ * lautayksikköä eli noin 2 000 km ruudun leveydellä.
+ *
+ * ENSIN SE OLI 868 (kaksinkertainen), ja pitkän hypyn kamera nousi
+ * perillä asti niin kauas, että koko hyppy mahtui ruudulle. Omistajan
+ * iPhone-kuvakaappaus 6.9.2026 keskipäivällä (Pinnacle Point) näytti
+ * lopputuloksen: *"Kartta on liian kaukana"* — koko eteläinen Afrikka
+ * ruudulla ja lamppu muutaman pikselin pisteenä. Nyt pysäkki on aina
+ * lähikuvassa ja pitkä väli näytetään LIIKKEELLÄ: kamera nousee
+ * kaarelle matkan puolivälissä ja laskeutuu perille takaisin
+ * (js/aikajana.js hypynLeveys).
  *
  * Luku on KIRJOITETTU AUKI eikä tuotu js/aikajana.js:stä: rekisteri
  * tuo jokaisen linssimoduulin heti matkalaukun luetteloa varten
@@ -82,7 +91,7 @@ const LAUTA = 'maailmankartta';
  * aikajanamoottorin mukanaan. Suhde vartioidaan testissä
  * (tests/ihmisen-matka.test.mjs).
  */
-export const IHMISEN_MATKAN_LAHIKUVA = 868;
+export const IHMISEN_MATKAN_LAHIKUVA = 560;
 
 /** Koko maapallo laudan yksiköissä — kamera sovitetaan tähän lopussa. */
 const MAAILMA = {
@@ -218,6 +227,9 @@ export const LINSSI = {
     lahikuva: IHMISEN_MATKAN_LAHIKUVA,
     hyppykamera: true,
     reitti: true,
+    // Reittiviivan projektio tasokartalla: sama lauta kuin pysäkkien
+    // x/y:llä (ihmisenMatkanPysakit), jotta viiva osuu lamppuihin.
+    lauta: LAUTA,
     tapahtumat: PYSAKIT,
     loppusanat: laatikoksi(data.IHMISEN_MATKA_LOPPU, 'Matka päättyy'),
   },

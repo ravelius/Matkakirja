@@ -33,6 +33,8 @@ import {
   vuosiaSittenLukema, asetaMatkamittari, reitinPisteet, REITIN_PAKSUUS_PX, REITIN_TIHENNYS_AST,
   pysakinLahikuva, AIKAJANAN_HYPYN_KERROIN, AIKAJANAN_HYPYN_KATTO, AIKAJANAN_LAHIKUVA_LEVEYS,
   LAUTAYKSIKKOA_ASTEELLA, AIKAJANA_VIIVE_MS, paneelikuvanOsoite,
+  aikajananHypynKaari, hypynLeveys, reitinKuvio, REITIN_KARJEN_ENNAKKO,
+  AJON_REIAN_KERROIN, REITIN_VARI,
 } from '../js/aikajana.js';
 import {
   LINSSI, PYSAKIT, IHMISEN_MATKAN_LAHIKUVA, ihmisenMatkanPysakit,
@@ -247,7 +249,10 @@ test('kaaren loppupäässä kello näyttää vuosiluvun tekstinä', () => {
   // luku, jonka aineiston `ajoitus` sanoo.
   assert.equal(kellonVuositeksti(750), 'n. 1250 jaa.');
   assert.equal(kellonVuositeksti(1900), null, 'rajalla ollaan yhä syvässä ajassa');
-  assert.equal(kellonVuositeksti(1899), 'n. 100 jaa.');
+  // Tarkkuus on YKSI VUOSI (6.9.2026 keskipäivä): vuosilukukin juoksee
+  // eikä hyppää viidenkymmenen vuoden askelin.
+  assert.equal(kellonVuositeksti(1899), 'n. 101 jaa.');
+  assert.equal(kellonVuositeksti(1247.6), 'n. 752 jaa.', 'vuosiluku ei juokse vuosina');
   assert.equal(kellonVuositeksti(300000), null);
   assert.match(LINSSI.aikajana.tapahtumat.at(-1).ajoitus, /1250/);
   // Asteikko tarjoaa tekstin; keksintökaarella sitä ei ole koskaan.
@@ -292,6 +297,67 @@ test('matkamittari laskee alaspäin ja pyöristyksen nollat seisovat', () => {
   assert.equal(rullat[2].merkki, '0');
   assert.equal(rullat[1].vanha.style.transform, 'translateY(70%)');
   assert.equal(rullat[1].uusi.textContent, '3', 'sadoissa seuraava numero on 4 − 1');
+});
+
+/*
+ * KELLO VILISEE (omistaja 6.9.2026 keskipäivä, sanatarkasti:
+ * *"Vuosinumerot saisivat vilistää yksittäisistä numeroista alkaen
+ * vuosituhansien läpi."*).
+ *
+ * Saman päivän aamuversio pyöristi näytetyn lukeman pysäkkivälin
+ * askeleeseen (1 000 tai 10 000 vuotta), jolloin kello luki "165 000"
+ * ja kaksi tai kolme viimeistä nollaa seisoivat koko kaaren ajan.
+ * Tämä vartija ajaa yhden oikean pysäkkivälin läpi kellon omalla
+ * asteikolla ja vaatii, että jokainen neljä alinta rullaa vaihtaa
+ * numeroa — ja että ylimmät vaihtavat harvemmin kuin alimmat.
+ */
+test('kellon lukema on jatkuva: kaikki neljä alinta numeroa vilisevät', () => {
+  const arvot = LINSSI.aikajana.tapahtumat.map((t) => t.vuosiaSitten);
+  const rullat = tynkaRullat(6);
+  const suunta = luoAsteikko(LINSSI.aikajana).suunta;
+  assert.equal(suunta, -1);
+  // Pinnacle Pointin väli (164 000 → 105 000) sekunnin kehyksinä:
+  // kello etenee ASTEIKON_VALI yksikköä pysäkkiväliä kohti.
+  const alkupaikka = 2 * ASTEIKON_VALI;
+  const kehyksia = 160;
+  const vaihdot = [0, 0, 0, 0, 0, 0];
+  const lukemat = [];
+  let edelliset = null;
+  for (let k = 0; k <= kehyksia; k += 1) {
+    const paikka = alkupaikka + (ASTEIKON_VALI * k) / kehyksia;
+    const arvo = vuosiaSittenLukema(paikka, arvot);
+    // Sama kutsu kuin moottorissa (naytaVuosi): askel 1, murto-osa päällä.
+    asetaMatkamittari(rullat, arvo, { askel: 1, suunta, murtoOsa: true, heti: k === 0 });
+    const merkit = rullat.map((r) => r.merkki);
+    lukemat.push(Number(merkit.join('')));
+    if (edelliset) {
+      for (let i = 0; i < merkit.length; i += 1) if (merkit[i] !== edelliset[i]) vaihdot[i] += 1;
+    }
+    edelliset = merkit;
+  }
+  // NÄYTETTY LUKEMA ON TÄYSI: ei pyöristystä sataan eikä tuhanteen.
+  assert.ok(lukemat.filter((v) => v % 100 !== 0).length > kehyksia / 2,
+    'näytetty lukema pyöristyy yhä sataan');
+  // Neljä alinta rullaa (ykköset, kympit, sadat, tuhannet) vilisevät.
+  for (let i = 2; i < 6; i += 1) {
+    assert.ok(vaihdot[i] > 0, `rulla ${i} seisoo koko välin (${vaihdot.join(', ')})`);
+  }
+  // Ykköset ja kympit vaihtuvat useammin kuin tuhannet ja kymmenettuhannet:
+  // mekaaninen mittari, ei satunnaista välkyntää.
+  assert.ok(vaihdot[5] >= vaihdot[4], `ykköset ${vaihdot[5]} < kympit ${vaihdot[4]}`);
+  assert.ok(vaihdot[4] >= vaihdot[2], `kympit ${vaihdot[4]} < tuhannet ${vaihdot[2]}`);
+  assert.ok(vaihdot[2] >= vaihdot[1], `tuhannet ${vaihdot[2]} < kymmenettuhannet ${vaihdot[1]}`);
+  // PYSÄKILLÄ kello on aineiston omassa tasaluvussa.
+  asetaMatkamittari(rullat, arvot[3], { askel: 1, suunta, murtoOsa: true, heti: true });
+  assert.equal(rullat.map((r) => r.merkki).join(''), String(arvot[3]).padStart(6, '0'));
+
+  // Moottori antaa mittarille lukeman sellaisenaan ja käyttää askelta
+  // vain naksahduksen ja etunollien tahtina (naytaVuosi).
+  const nayta = metodi('naytaVuosi');
+  assert.match(nayta, /const askelteksti = vuositeksti \?\? String\(kellonNaytto\(arvo, askel, suunta\)\);/);
+  assert.match(nayta, /const vaihtui = askelteksti !== this\.kelloAskel;/);
+  assert.match(nayta, /askel: 1,/);
+  assert.equal(luoAsteikko(LINSSI.aikajana).murtoOsa, true, 'syvä aika ei kuljeta murto-osaa');
 });
 
 test('keksintökellon rullaus ei muutu askeleen ja suunnan oletuksista', () => {
@@ -370,12 +436,17 @@ test('viiva piirtyy laudan linssiapurille pikselipaksuisena ja kasvaa valojen mu
    */
   assert.equal(REITIN_PAKSUUS_PX, 3);
   const rakennaReitti = metodi('rakennaReitti');
-  assert.match(rakennaReitti, /if \(!this\.pallolla \|\| !this\.kaari\.reitti \|\| !this\.lauta\?\.linssit\?\.polut\) return;/);
-  assert.match(rakennaReitti, /pisteet: reitinPisteet\(edellinen, t\)/);
+  assert.match(rakennaReitti, /if \(!this\.kaari\.reitti\) return;/);
+  assert.match(rakennaReitti, /if \(this\.pallolla && !this\.lauta\?\.linssit\?\.polut\) return;/);
+  assert.match(rakennaReitti, /pisteet,/);
   assert.match(rakennaReitti, /paksuus: REITIN_PAKSUUS_PX/);
+  // Tasokartalla sama viiva on SVG-polku (pathLength 1) omassa
+  // kerroksessaan; kasvu on stroke-dasharray (piirraPatka).
+  assert.match(rakennaReitti, /reitinKuvio\(pisteet, this\.kaari\.lauta\)/);
+  assert.match(metodi('piirraPatka'), /strokeDasharray/);
   const paivitaReitti = metodi('paivitaReitti');
-  assert.match(paivitaReitti, /linssit\?\.polut\?\.\(\n\s*PALLON_OSA,/, 'viiva menee valojen kanssa samaan osaan');
-  assert.match(paivitaReitti, /filter\(\(o\) => o\.i <= i\)/, 'viiva ei seuraa valoja');
+  assert.match(paivitaReitti, /linssit\?\.polut\?\.\(PALLON_OSA, nakyvat\)/, 'viiva menee valojen kanssa samaan osaan');
+  assert.match(paivitaReitti, /o\.i > i && !kasvava/, 'viiva ei seuraa valoja');
   // Syttyminen, selailu, Alusta ja loppu päivittävät viivan.
   assert.match(metodi('sytyta'), /this\.paivitaReitti\(i\);/);
   assert.match(metodi('siirry'), /this\.paivitaReitti\(i\);/);
@@ -383,38 +454,137 @@ test('viiva piirtyy laudan linssiapurille pikselipaksuisena ja kasvaa valojen mu
   assert.match(metodi('lopeta'), /this\.paivitaReitti\(this\.tapahtumat\.length\);/);
 });
 
+/*
+ * VIIVA KASVAA KAMERAN MUKANA (omistaja 6.9.2026 keskipäivä: *"se
+ * saisi liikkua jo aiemmin ja pidemmän aikaa piirtäen viivaa
+ * seuraavaan paikkaan. Lisää dynamiikka tällä."*).
+ */
+test('reittiviiva piirtyy pysäkkivälin aikana kameran kärjen edellä', () => {
+  const ajaValia = metodi('ajaValia');
+  // Kolme asiaa samasta osuudesta: kärki, kameran paikka ja korkeus.
+  assert.match(ajaValia, /const e = aikajananKameranPehmennys\(t\);/);
+  assert.match(ajaValia, /this\.paivitaReitti\(i - 1, Math\.min\(1, e \+ REITIN_KARJEN_ENNAKKO\)\)/);
+  assert.match(ajaValia, /isoympyranPiste\(alku, loppu, e\)/);
+  assert.match(ajaValia, /leveys: hypynLeveys\(this\.lahikuva, huippu, e\)/);
+  // Kärki on kameran EDELLÄ mutta ei paljon: pysäkkiväli on lyhyt.
+  assert.ok(REITIN_KARJEN_ENNAKKO > 0 && REITIN_KARJEN_ENNAKKO <= 0.15);
+  // Väliajo on vain ajo NYKYISELTÄ pysäkiltä seuraavalle; selailu ja
+  // vähennetty liike jäävät entiselle suoralle ajolle.
+  const valimatka = metodi('valimatka');
+  assert.match(valimatka, /if \(this\.reducedMotion \|\| !\(kesto > 0\)\) return null;/);
+  assert.match(valimatka, /if \(i !== this\.tila\.i \+ 1\) return null;/);
+  assert.match(metodi('ajaPysakille'), /if \(vali\) return this\.ajaValia\(i, vali, kesto\);/);
+  /*
+   * VALOKEILA KULKEE MUKANA. Viiva piirtyy pallon PINTAAN eli
+   * tummennuskalvon alle, ja kalvo syö siitä 86 % (mitattu 6.9.2026,
+   * scratchpad/aikajana-ajo: sama kuva kalvon kanssa ja ilman). Ilman
+   * mukana kulkevaa reikää piirtyvä viiva ei näkyisi lainkaan.
+   */
+  assert.match(ajaValia, /this\.siirraReikaMatkalla\(kohta, e\);/);
+  assert.match(metodi('siirraReikaMatkalla'), /AJON_REIAN_KERROIN/);
+  assert.match(metodi('siirraReikaMatkalla'), /this\.kalvo\.paivita\(this\.reianPaikka\)/);
+  assert.ok(AJON_REIAN_KERROIN > 1 && AJON_REIAN_KERROIN <= 2.5, `keila ${AJON_REIAN_KERROIN}`);
+  // Viiva on täydellä kirkkaudella, koska kalvo tummentaa sen alta.
+  assert.match(REITIN_VARI, /0\.9[0-9]?\)$/, `viivan sävy ${REITIN_VARI}`);
+  // Kesken oleva ajo pysähtyy purussa, lopussa ja uudessa ajossa.
+  assert.match(metodi('pysaytaValiajo'), /cancelAnimationFrame\(this\.valiajo\.kehys\)/);
+  assert.match(metodi('ajaPysakille'), /^\s*this\.pysaytaValiajo\(\);/m);
+  assert.match(metodi('lopeta'), /this\.pysaytaValiajo\(\);/);
+  assert.match(metodi('pura'), /this\.pysaytaValiajo\(\);/);
+});
+
+/*
+ * TASOKARTAN VIIVA on sama isoympyrä laudan projektiossa. Päivämäärän
+ * raja katkaisee polun, jottei viiva vedä koko kartan yli.
+ */
+test('reitinKuvio projisoi isoympyrän laudalle ja katkaisee päivämäärärajalla', () => {
+  const suora = reitinKuvio([[0, 0], [0, 10], [0, 20]], 'maailmankartta');
+  assert.match(suora, /^M[\d.]+ [\d.]+ L[\d.]+ [\d.]+ L[\d.]+ [\d.]+$/);
+  // Beringia: pituusaste kiertää nollan yli, joten polku katkeaa (kaksi M).
+  const yli = reitinKuvio([[65, 170], [66, 178], [66, -178], [65, -170]], 'maailmankartta');
+  assert.equal((yli.match(/M/g) ?? []).length, 2, `polku: ${yli}`);
+  // Tuntematon lauta ei kaada mitään.
+  assert.equal(reitinKuvio([[0, 0], [0, 10]], 'ei-ole'), '');
+  assert.equal(reitinKuvio(null), '');
+  // Kaari kertoo laudan, jotta viiva osuu samaan projektioon kuin pysäkit.
+  assert.equal(LINSSI.aikajana.lauta, 'maailmankartta');
+});
+
 /* ══════════════════════════════════════════════════════════════════
  * 5. KAMERA: VÄLJEMPI LÄHIKUVA JA VALTAMEREN YLITYS
  * ══════════════════════════════════════════════════════════════════ */
 
-test('lähikuva on kaksinkertainen keksintöihin nähden', () => {
-  assert.equal(IHMISEN_MATKAN_LAHIKUVA, 2 * AIKAJANAN_LAHIKUVA_LEVEYS);
-  assert.equal(IHMISEN_MATKAN_LAHIKUVA, 868, 'kaavan korjaus (6.9.2026): keksinnot 434');
+/*
+ * PYSÄKILLÄ TIUKKA LÄHIKUVA (omistaja 6.9.2026 keskipäivä
+ * iPhone-kuvakaappauksesta, Pinnacle Point: *"Kartta on liian
+ * kaukana"*). Ennen mitta oli kaksinkertainen keksintöihin nähden
+ * (868) ja pitkä hyppy nosti kameran vielä perillä asti 3 600
+ * yksikköön — koko eteläinen Afrikka ruudulla.
+ */
+test('lähikuva on tiukka: 1,3 × keksintöjen mitta', () => {
+  assert.equal(IHMISEN_MATKAN_LAHIKUVA, 560, 'mitta vaihtui — mittaa selaimessa uudestaan');
+  assert.ok(IHMISEN_MATKAN_LAHIKUVA >= AIKAJANAN_LAHIKUVA_LEVEYS,
+    'ihmisen matkan välit ovat pidempiä kuin keksintöjen');
+  assert.ok(IHMISEN_MATKAN_LAHIKUVA <= 1.4 * AIKAJANAN_LAHIKUVA_LEVEYS,
+    'lähikuva ei ole enää lähikuva');
 });
 
-test('pitkä hyppy nostaa kameran, lyhyt jättää sen lähikuvaan', () => {
+test('pitkä hyppy nostaa kameran MATKALLA, lyhyt ei nosta lainkaan', () => {
   const perus = IHMISEN_MATKAN_LAHIKUVA;
-  // Saman maanosan sisäinen siirtymä: perusmitta säilyy.
+  // Saman maanosan sisäinen siirtymä: perusmitta säilyy koko matkan.
   assert.equal(pysakinLahikuva(perus, 0), perus);
   assert.equal(pysakinLahikuva(perus, 100), perus);
-  // Sahulin ylitys (noin 900 lautayksikköä ≈ 3 000 km): kamera nousee
-  // niin, että lähtöranta (matkan päässä) on kuvassa.
-  const sahul = pysakinLahikuva(perus, 900);
-  assert.equal(sahul, 900 * AIKAJANAN_HYPYN_KERROIN);
-  assert.ok(sahul / 2 > 900, 'lähtöranta jää ruudun ulkopuolelle');
-  // Katto pitää kameran pallon lähellä pisimmälläkin hypyllä.
+  assert.equal(hypynLeveys(perus, pysakinLahikuva(perus, 100), 0.5), perus);
+  // Sahulin ylitys (noin 600 lautayksikköä ≈ 2 000 km): kaaren huipulla
+  // kamera nousee niin, että lähtöranta on kuvassa.
+  const sahul = pysakinLahikuva(perus, 600);
+  assert.equal(sahul, 600 * AIKAJANAN_HYPYN_KERROIN);
+  assert.ok(sahul / 2 > 600, 'lähtöranta jää ruudun ulkopuolelle');
+  // Mannerten mittainen väli (900+) osuu jo kattoon: kamera ei nouse
+  // enempää, vaan pitkä matka näkyy pidempänä liikkeenä.
+  assert.equal(pysakinLahikuva(perus, 900), AIKAJANAN_HYPYN_KATTO);
+  // Katto on nyt alle PUOLET entisestä (3 600): pitkäkään hyppy ei vie
+  // kameraa maanosan mittaiseen kaukokuvaan.
   assert.equal(pysakinLahikuva(perus, 99999), AIKAJANAN_HYPYN_KATTO);
+  assert.ok(AIKAJANAN_HYPYN_KATTO >= 1400 && AIKAJANAN_HYPYN_KATTO <= 1800, `katto ${AIKAJANAN_HYPYN_KATTO}`);
   // Yksikkömuunnos: 12 000 lautayksikköä = 360°.
   assert.ok(Math.abs(LAUTAYKSIKKOA_ASTEELLA * 360 - 12000) < 1e-9);
 });
 
-test('moottori laskee leveyden edellisestä pysäkistä vain hyppykameralla', () => {
-  const leveys = metodi('pysakinLeveys');
-  assert.match(leveys, /if \(!this\.kaari\.hyppykamera \|\| !t \|\| !edellinen\) return this\.lahikuva;/);
-  assert.match(leveys, /kulmaAsteina\(/);
-  assert.match(leveys, /pysakinLahikuva\(this\.lahikuva, ast \* LAUTAYKSIKKOA_ASTEELLA\)/);
-  assert.match(metodi('ajaPysakille'), /leveys: this\.pysakinLeveys\(i\),/);
-  // Kameran ennakko ja jälkijättö ovat entiset (keksintöjen mitat).
+/*
+ * KAARI: nolla molemmissa päissä, huippu puolivälissä ja pehmeä lähtö
+ * (derivaatta nolla päissä) — Raamattu: KAIKKI LIIKE ANIMOIDAAN
+ * PEHMEÄSTI.
+ */
+test('kaaren profiili nousee puolivälissä ja laskeutuu perille', () => {
+  assert.equal(aikajananHypynKaari(0), 0);
+  assert.ok(Math.abs(aikajananHypynKaari(1)) < 1e-12);
+  assert.ok(Math.abs(aikajananHypynKaari(0.5) - 1) < 1e-12);
+  assert.ok(aikajananHypynKaari(0.02) < 0.01, 'nousu nykäisee lähdössä');
+  assert.ok(aikajananHypynKaari(0.98) < 0.01, 'lasku nykäisee perillä');
+  assert.equal(aikajananHypynKaari(-1), 0);
+  assert.ok(Math.abs(aikajananHypynKaari(2)) < 1e-12);
+  // PERILLÄ JA LÄHDÖSSÄ AINA PERUSMITTA, huipulla kaaren huippu.
+  const perus = IHMISEN_MATKAN_LAHIKUVA;
+  assert.equal(hypynLeveys(perus, 1600, 0), perus);
+  assert.ok(Math.abs(hypynLeveys(perus, 1600, 1) - perus) < 1e-9);
+  assert.ok(Math.abs(hypynLeveys(perus, 1600, 0.5) - 1600) < 1e-9);
+  // Geometrinen interpolointi: puolimatkassa huipulle ollaan
+  // logaritmisesti puolivälissä, ei aritmeettisesti.
+  const nelja = hypynLeveys(perus, 1600, 0.25);
+  assert.ok(Math.abs(nelja - Math.sqrt(perus * 1600)) < 1, `${nelja}`);
+  // Ilman nousua (huippu = perusmitta) leveys ei muutu missään kohtaa.
+  assert.equal(hypynLeveys(perus, perus, 0.5), perus);
+});
+
+test('moottori laskee kaaren huipun edellisestä pysäkistä vain hyppykameralla', () => {
+  const huippu = metodi('hypynHuippu');
+  assert.match(huippu, /if \(!this\.kaari\.hyppykamera \|\| !t \|\| !edellinen\) return this\.lahikuva;/);
+  assert.match(huippu, /kulmaAsteina\(/);
+  assert.match(huippu, /pysakinLahikuva\(this\.lahikuva, ast \* LAUTAYKSIKKOA_ASTEELLA\)/);
+  // Perillä leveys on aina perusmitta — nousu tapahtuu vain matkalla.
+  assert.match(metodi('ajaPysakille'), /leveys: this\.lahikuva,/);
+  // Kameran ennakko lasketaan yhä samalla puhtaalla funktiolla.
   assert.match(metodi('tarkistaKameraEnnakko'), /AIKAJANAN_KAMERAN_ENNAKKO_MS \+ AIKAJANA_ALIASKEL_MS/);
   assert.ok(AIKAJANA_VIIVE_MS > 0);
 });

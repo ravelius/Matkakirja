@@ -45,6 +45,16 @@ const SALLITUT = [
   // ks. js/packs/uutislahteet.js.
   'https://www.lanacion.cl/',
   'https://www.lasillavacia.com/',
+  // Papua-Uuden-Guinean ja Salomonsaarten uutislähteet (maalehdet
+  // 6.9.2026): syöte ja artikkelisivut samalla isäntänimellä. Fidži jäi
+  // ilman lähdettä, ks. js/packs/uutislahteet.js.
+  'https://www.postcourier.com.pg/',
+  'https://theislandsun.com.sb/',
+  // Uruguayn, Paraguayn ja Venezuelan uutislähteet (maalehdet 6.9.2026):
+  // syöte ja artikkelisivut samalla isäntänimellä.
+  'https://www.montevideo.com.uy/',
+  'https://www.abc.com.py/',
+  'https://www.elnacional.com/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei
