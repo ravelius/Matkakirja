@@ -192,20 +192,38 @@ function runko(lahde, nimi) {
   return null;
 }
 
-test('puraDelta on sama työkalussa ja selainmoduulissa', (t) => {
-  const tyokalu = new URL('../tools/tee-pallovektorit.mjs', import.meta.url);
+test('puraDelta purkaa samat tavut samoiksi koordinaateiksi työkalussa ja selainmoduulissa', async (t) => {
+  /*
+   * Työkalu purkaa Float64Array-viivoiksi (mittaus ja testit), selain
+   * [lon, lat] -pareiksi (Line2-janat) — muoto saa erota, KOORDINAATIT
+   * eivät: sama puskuri, sama pistemäärä, samat luvut 1e-4°:n tarkkuudella
+   * ja sama katkojen käsittely. Tekstivertailu hylättiin V1:ssä, koska
+   * selainpurkaja lukee vajaan tiedoston turvallisesti (keskeytys) eikä
+   * sitä haluta työkaluun.
+   */
   const moduuli = new URL('../js/pallovektorit.js', import.meta.url);
-  const tyokalunRunko = runko(readFileSync(tyokalu, 'utf8'), 'puraDelta');
-  assert.ok(tyokalunRunko, 'tools/tee-pallovektorit.mjs: export function puraDelta puuttuu');
   if (!existsSync(moduuli)) {
-    t.skip('js/pallovektorit.js puuttuu vielä (erä V1 tekeillä) — '
-      + 'kun moduuli tulee, purkajan rungon on oltava sanasta sanaan '
-      + 'sama kuin tools/tee-pallovektorit.mjs:ssä.');
+    t.skip('js/pallovektorit.js puuttuu vielä (erä V1 tekeillä)');
     return;
   }
-  const moduulinRunko = runko(readFileSync(moduuli, 'utf8'), 'puraDelta');
-  assert.ok(moduulinRunko, 'js/pallovektorit.js: export function puraDelta puuttuu');
-  assert.equal(moduulinRunko, tyokalunRunko,
-    'puraDelta eroaa työkalun ja selainmoduulin välillä — ämpärin tavut '
-    + 'purkautuisivat selaimessa toisin kuin ne kirjoitettiin');
+  const { puraDelta: puraSelain } = await import('../js/pallovektorit.js');
+  const viivat = [
+    [[15.9612, 26.9701], [15.9700, 26.9800], [16.5000, 27.4444], [16.5001, 27.4445]],
+    [[-179.9999, 71.1234], [179.9999, 71.1235]], // antimeridiaani: iso askel → katko
+    [[0, 0], [3.2767, 0], [6.5534, 0], [9.8301, 0.0001]], // tasan katon rajalla
+  ];
+  const { puskuri } = deltakoodaa(viivat);
+  const tyokalu = puraDelta(puskuri).map(pareiksi);
+  const selain = puraSelain(puskuri).map((v) => v.map(([x, y]) => [x, y]));
+  assert.equal(selain.length, tyokalu.length, 'viivojen (osien) määrä');
+  for (let i = 0; i < tyokalu.length; i += 1) {
+    assert.equal(selain[i].length, tyokalu[i].length, `viiva ${i}: pisteitä`);
+    for (let k = 0; k < tyokalu[i].length; k += 1) {
+      assert.ok(Math.abs(selain[i][k][0] - tyokalu[i][k][0]) < 1e-9
+        && Math.abs(selain[i][k][1] - tyokalu[i][k][1]) < 1e-9, `viiva ${i} piste ${k}`);
+    }
+  }
+  // Tyhjä ja vajaa puskuri: selainpurkaja ei kaadu, työkalu ei tuota roskaa.
+  assert.deepEqual(puraSelain(new ArrayBuffer(0)), []);
+  assert.deepEqual(puraSelain(puskuri.subarray(0, 10)), []);
 });
