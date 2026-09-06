@@ -723,9 +723,26 @@ export const OMAT_ARTIKKELIT = {
       + 'kasvatetaan kahvia, joka kuuluu maailman parhaimpiin.',
   },
   Etiopia: {
-    intro: 'Etiopia on ylänköjen maa, jota ei koskaan kolonisoitu: '
-      + 'oma kirjaimisto, oma ajanlasku ja kahvin kotimaa tekevät '
-      + 'siitä Afrikan omaleimaisimman valtion.',
+    intro: 'Etiopia on ylänköjen maa: suuri osa siitä on yli kahden '
+      + 'kilometrin korkeudessa, ja ylängön halki repeää Suuri '
+      + 'hautavajoama. Korkealla elää lajeja, joita ei ole muualla — '
+      + 'walia-vuorikauris Simien-vuorten jyrkänteillä ja etiopiansusi, '
+      + 'Afrikan uhanalaisin petoeläin, jota on jäljellä vain '
+      + 'seitsemällä vuoristoalueella. Pohjois-Etiopian alkuperäisestä '
+      + 'metsästä on jäljellä noin neljä prosenttia, ja lähes kaikki '
+      + 'siitä kasvaa kirkkojen ympärillä. Maassa on oma kirjaimistonsa, '
+      + 'oma ajanlaskunsa ja kolmetoista kuukautta vuodessa.'
+      + '\n\n'
+      + '**Kristinusko tuli maahan 300-luvulla, ja Lalibelan yksitoista '
+      + 'kirkkoa hakattiin kokonaisina kalliosta 1100- ja 1200-luvulla.** '
+      + 'Kuninkaiden sukua perusteltiin Kebra Nagast -eepoksella, jonka '
+      + 'mukaan hallitsijat polveutuivat Salomosta ja Saban '
+      + 'kuningattaresta. Vuosina 1769–1855 keisarit olivat vain '
+      + 'nimellisiä hallitsijoita Gondarissa, kun maakuntien ruhtinaat '
+      + 'taistelivat vallasta; Menelik II kokosi maan uudelleen, siirsi '
+      + 'pääkaupungin Addis Abebaan 1886 ja toi maahan postin, '
+      + 'hopeataalerin ja rautatien. Kahvipensas kasvaa villinä maan '
+      + 'metsissä, ja ruoka syödään yhteiseltä injera-leivältä käsin.',
     artikkeli: 'Etiopia on ylänköjen maa Afrikan sarvessa. Suuri osa '
       + 'maasta on yli kahden kilometrin korkeudessa, ja ylängön halki '
       + 'repeää Suuri hautavajoama; Sininen Niili saa alkunsa '
@@ -1531,9 +1548,26 @@ export const OMAT_ARTIKKELIT = {
       + 'ja Zambezin virrassa — Nyaminyami, joen henki.',
   },
   Sudan: {
-    intro: 'Sudan on Niilin ja aavikon maa, jossa on enemmän '
-      + 'pyramideja kuin Egyptissä — Nubian mustien faaraoiden '
-      + 'perintö.',
+    intro: 'Sudan on Niilin ja aavikon maa: Valkoinen ja Sininen Niili '
+      + 'yhtyvät Khartumin kohdalla paikassa, jota sanotaan '
+      + 'al-Mograniksi. Aavikon alla kulkee kuivunut jokiuoma Wadi '
+      + 'Howar, joka oli yhdeksäntuhatta vuotta sitten Niilin sivujoki '
+      + 'ja jonka varrella laidunsi karjaa. Ukkospilvien alta nousevat '
+      + 'haboobit, hiekkaseinät, jotka voivat olla kahden kilometrin '
+      + 'korkuisia ja edetä seitsemänkymmentä kilometriä tunnissa. '
+      + 'Punaisenmeren puolella on erillinen korallirakennelma Sanganeb '
+      + 'ja Dungonabin lahti, maailmanperintökohde vuodesta 2016.'
+      + '\n\n'
+      + '**Niilin varrella oli valtakuntia ennen Egyptiä ja sen '
+      + 'jälkeen: Kerma, Napata, Meroë ja kristilliset Nubian '
+      + 'kuningaskunnat.** Meroën kuningattarilla oli oma arvonimensä '
+      + 'kandake, ja valtakunnalla oma kirjoituksensa, jonka merkit '
+      + 'osataan lukea mutta kieltä ei ymmärretä. Vuonna 652 solmittu '
+      + 'baqt-sopimus piti rauhan Nubian ja Egyptin välillä lähes '
+      + 'seitsemänsataa vuotta. Itäisessä autiomaassa liikkuu yhä '
+      + 'beja-kansa, jonka esi-isät egyptiläiset tunsivat nimellä '
+      + 'medjay. Maailman arabikumista noin seitsemänkymmentä '
+      + 'prosenttia kerätään Sudanin akasioista.',
     artikkeli: 'Sudan levittäytyy Saharan itäosasta Niilin varsille. '
       + 'Sininen ja Valkoinen Niili yhtyvät pääkaupunki Khartumissa, '
       + 'ja joen vihreä nauha halkoo aavikkoa kuten Egyptissäkin.'
@@ -1551,9 +1585,26 @@ export const OMAT_ARTIKKELIT = {
       + 'yhä keskeneräinen unelma.',
   },
   'Etelä-Sudan': {
-    intro: 'Etelä-Sudan on maailman nuorin valtio (2011): Suddin '
-      + 'kaislameren, dinkojen karjaleirien ja suurten '
-      + 'antilooppivaellusten maa.',
+    intro: 'Etelä-Sudan on maailman nuorin valtio: itsenäisyys tuli 9. '
+      + 'heinäkuuta 2011, ja YK:n 193. jäsen siitä tuli viisi päivää '
+      + 'myöhemmin. Maan sydän on Sudd, valtava kaislikko, johon '
+      + 'Valkoinen Niili hajoaa ja joka pysäytti vuosisatojen ajan '
+      + 'jokea ylöspäin pyrkineet. Kieliä on yli kuusikymmentä, mutta '
+      + 'yleisin puhuttu on juba-arabia, 1800-luvun varuskunnissa '
+      + 'syntynyt sekakieli; virallinen kieli on englanti. Karja on '
+      + 'monelle kansalle varallisuutta ja runoutta: nuerien pojat '
+      + 'saavat nimensä lempihärältään ja tytöt lypsämältään lehmältä.'
+      + '\n\n'
+      + '**Valkoisen Niilin länsirannalla oli oma kuningaskuntansa '
+      + 'kauan ennen karttoja: shillukien valtakunnan perusti '
+      + 'perimätiedon mukaan Nyikang 1400-luvulla, ja kuninkaan '
+      + 'terveyden ajateltiin olevan sama asia kuin kansan '
+      + 'hyvinvointi.** Sen pääkaupungissa Fashodassa kohtasivat 1898 '
+      + 'ranskalainen ja brittiläinen retkikunta, ja kriisi ratkesi '
+      + 'ilman laukausta. Lounaassa azandeilla on oma valtakuntansa '
+      + 'perinne, kuuluisat monteräiset heittoveitset ja Ture-veijarin '
+      + 'tarinat. Boman ja Bandingilon puistojen välillä kulkee '
+      + 'maailman suurin vuotuinen eläinvaellus.',
     artikkeli: 'Etelä-Sudan itsenäistyi vuonna 2011 pitkien sotien '
       + 'jälkeen — se on maailman nuorin valtio. Maata hallitsevat '
       + 'vedet: Valkoinen Niili ja sen sivujoet hajoavat Suddiksi, '

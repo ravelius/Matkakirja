@@ -482,4 +482,54 @@ export const UUTISLAHTEET = {
     kieli: 'es',
     syote: 'https://www.panamaamerica.com.pa/rss.xml',
   },
+  /*
+   * Radio Dabanga on sudanilaisten toimittajien tekemä uutispalvelu,
+   * joka julkaisee arabiaksi ja englanniksi. Testattu 6.9.2026:
+   * englanninkielisessä syötteessä kaksitoista juttua, ja
+   * artikkelisivun ensimmäisessä <article>-lohkossa on yksitoista yli
+   * 60 merkin kappaletta sekä og:image. Arabiankielisen osaston syöte
+   * (/ar/all-news/feed) palautti nolla juttua, joten kieleksi jäi en.
+   *
+   * Testattu ja hylätty: Sudan Tribune (sudantribune.com/feed/) ja
+   * Al-Rakoba (alrakoba.net/feed/) palauttavat 403:n Cloudflaren
+   * botti-estosta, ja Sudanow Magazinen /feed/ ohjaa etusivulle.
+   */
+  SDN: {
+    nimi: 'Radio Dabanga',
+    kieli: 'en',
+    syote: 'https://www.dabangasudan.org/en/all-news/feed',
+  },
+  /*
+   * Radio Tamazuj lähettää Etelä-Sudaniin ja julkaisee verkossa
+   * englanniksi ja arabiaksi. Testattu 6.9.2026: syötteessä
+   * kaksitoista juttua, ja artikkelisivun <article>-lohkossa on 27 yli
+   * 60 merkin kappaletta sekä og:image. Syötteen osoite /en/rss ohjaa
+   * osoitteeseen /en/feed, eikä worker seuraa uudelleenohjauksia —
+   * siksi taulussa on suoraan lopullinen osoite.
+   *
+   * Testattu ja hylätty: Eye Radio (eyeradio.org/feed/) ja Sudans Post
+   * (sudanspost.com/feed/) — molempien syöte aukeaa, mutta
+   * artikkelisivulla ei ole <article>-elementtiä eikä
+   * [itemprop="articleBody"]-merkintää.
+   */
+  SDS: {
+    nimi: 'Radio Tamazuj',
+    kieli: 'en',
+    syote: 'https://www.radiotamazuj.org/en/feed',
+  },
+  /*
+   * ETIOPIA (ETH) JÄI ILMAN LÄHDETTÄ (Opus 6.9.2026) — Addis Abeban ja
+   * Lalibelan lehdissä ei siis näy uutisosiota, eikä mikään mene
+   * rikki. Sama tilanne kuin Kuuballa ja Fidžillä.
+   *
+   * Testattu ja hylätty: Fana Media Corporation (www.fanamc.com/feed,
+   * amharankielinen syöte, kymmenen juttua) — artikkelisivulla on
+   * <article>-lohko, mutta leipäteksti ei ole <p>-elementeissä, joten
+   * poiminta jäisi tyhjäksi; Addis Fortune (addisfortune.news/feed) ja
+   * New Business Ethiopia — syöte aukeaa, mutta artikkelisivulta
+   * puuttuu <article> tai og:image; Addis Standard, Ethiopian Reporter
+   * ja The Reporter Ethiopia palauttavat 403:n tai captchan; ENA, EBC,
+   * Walta, Addis Zeybe, Shega ja Borkena eivät tarjonneet toimivaa
+   * RSS-osoitetta.
+   */
 };

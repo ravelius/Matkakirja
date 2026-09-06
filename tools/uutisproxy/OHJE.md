@@ -46,6 +46,19 @@
 > `[itemprop="articleBody"]`, joten se hylättiin. Julkaisu tapahtuu
 > automaattisesti mainista, kuten alempien merkintöjen kohdalla.
 >
+> **Päivitys 6.9.2026 (Sudan, Etelä-Sudan):** sallittuihin lisättiin
+> www.dabangasudan.org ja www.radiotamazuj.org (maalehdet SDN/SDS,
+> testattu 6.9.2026: syötteessä kaksitoista juttua, artikkelisivun
+> `<article>`-lohkosta jäsentyy leipäteksti ja `og:image` löytyy).
+> Radio Tamazujin osoite `/en/rss` ohjaa osoitteeseen `/en/feed`, eikä
+> worker seuraa uudelleenohjauksia — taulussa on siksi lopullinen
+> osoite. **Etiopia jäi ilman uutislähdettä:** Fana Median amharan-
+> kielinen syöte aukeaa, mutta artikkelisivun leipäteksti ei ole
+> `<p>`-elementeissä, ja muut kokeillut sivustot olivat botti-eston
+> takana tai ilman toimivaa RSS-osoitetta; perustelut ovat
+> js/packs/uutislahteet.js:n ETH-kommentissa. Julkaisu Git-
+> integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Papua-Uusi-Guinea, Salomonsaaret):**
 > sallittuihin lisättiin www.postcourier.com.pg ja
 > theislandsun.com.sb (maalehdet PNG/SLB, testattu 6.9.2026: syötteessä

@@ -79,6 +79,11 @@ const SALLITUT = [
   'https://www.confidencial.digital/',
   'https://confidencial.digital/',
   'https://www.panamaamerica.com.pa/',
+  // Sudanin ja Etelä-Sudanin uutislähteet (maalehdet 6.9.2026):
+  // syöte ja artikkelisivut samalla isäntänimellä. Etiopia jäi
+  // ilman lähdettä, ks. js/packs/uutislahteet.js.
+  'https://www.dabangasudan.org/',
+  'https://www.radiotamazuj.org/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei
