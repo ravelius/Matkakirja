@@ -683,3 +683,65 @@ Myanmarista ei kirjoitettu juntta- eikä konfliktisisältöä, minkä takia
 kaksi muuten ilmeistä ehdokasta jäi pois: Goteikin viadukti (artikkeli
 kertoo sen tuhoutuneen 2025 sisällissodassa) ja Mogokin
 rubiinikaivokset (artikkelin nykytilaosuus on sotaa).
+
+## Erä M5 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Maailman
+erien ensimmäinen Afrikan erä: **SDS, AGO, CMR, COD ja DZA**. Neljällä maalla
+oli kolme maastokohdetta ja Etelä-Sudanilla kaksi, mutta yhdelläkään ei ollut
+yhtään kohdetta, eläintäkyä eikä skandaalia. Erä kirjoitti kullekin kahdeksan
+kohdetta, yhden eläintäyn ja kaksi skandaalia sekä Etelä-Sudanille lisäksi
+puuttuneen maastokohteen (Sudd) — yhteensä 56 uutta karttamerkkiä. Erä on
+kuvaton kuten K2-erät 1–4 ja maailman erät M1–M4, ja jokainen väite on
+en-Wikipedian raakatekstin katteessa lähderivillä, joka nimeää artikkelin ja
+osan sekä tarkistuspäivän 6.9.2026. `node tools/laske-karttanostot.mjs` sanoo
+erän jälkeen kaikista viidestä *täysi*; taulukot ajaa Fable.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Etelä-Sudan (SDS) | Gondokoro, Lado, Jonglein kanava, Boman puisto, Bandingilon puisto, Wau, Nzara, Nimule | Sudd (uusi; oli jo: Kinyeti, Valkoinen Niili) | kenkänokka | Fashoda 1898, Zubayr 1873 |
+| Angola (AGO) | M’banza-Kongo, São Miguelin linnoitus, Kalandulan putoukset, Quiçaman puisto, Ionan puisto, Moçâmedes, Benguelan rata, Cuito Cuanavale | (oli jo: Morro de Moco, Atlantti, Cuanza) | jättiläisseeprantilooppi | Cassange 1961, Orjatie 1905 |
+| Kamerun (CMR) | Foumbanin palatsi, Djan luonnonpuisto, Bimbia, Rhumsiki, Wazan kansallispuisto, Kribi, Korupin kansallispuisto, Ngaoundéré | (oli jo: Kamerunvuori, Guineanlahti, Sanaga) | goliattisammakko | Nyos 1986, Manga Bell 1914 |
+| Kongo (COD) | Ingan padot, Boyoman putoukset, Virungan puisto, Kahuzi-Biéga, Salongan puisto, Garamban puisto, Upemban puisto, Lubumbashin kaivokset | (oli jo: Mount Stanley, Tanganjikajärvi, Kongo) | bonobo | Casement 1904, Shinkolobwe |
+| Algeria (DZA) | Timgad, Djémila, Tipasa, Tassilin kalliotaide, Qal’at Bani Hammad, Tlemcen, M’zabin laakso, Constantine | (oli jo: Tahat, Välimeri, Chelif) | fennekki | Kärpäsviuhka 1827, Gerboise Bleue 1960 |
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin, ja jokaisen kohteen lähin on
+kirjattu sen koordinaattirivin viereen. Koko erän lähin merkki on Kribi 26,2
+lautayksikön päässä Kamerun-laatasta ja skandaaleista Deim Zubeir 28,6
+yksikön päässä Bahr el Ghazalista; raja `KAUPUNGIN_KOHDALLA_SADE` on 7.
+`node tools/tarkista-nostopaikat.mjs` antaa kaikille 56:lle rivin *pääkartta*,
+ja `node tools/tarkista-nimiolimitys.mjs` sanoo yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Neljä rajausta, jotka valitsivat sisällön.** (1) Sääntö N3 ja tiheä
+rannikko: Angolan rannikolla Lobito, Benguela ja Catumbela ovat samassa
+parinkymmenen lautayksikön ruudussa, joten radalle valittiin ylängön
+Huambo-piste (radan oma artikkeli ei anna koordinaatteja) ja Nevinsonin
+orjatien merkki jäi Benguelaan. Samasta syystä Kamerunista jäi pois Limbe ja
+Buea (molemmat alle kymmenen yksikön päässä Bimbiasta) ja Etelä-Sudanista
+Juba (kolmen yksikön päässä Gondokorosta) sekä Malakal, joka osuu Valkoisen
+Niilin vanhan merkin päälle. (2) M3:n Myanmar-linja: artikkeleita, joiden
+nykytila on sotaa, ei kirjoitettu. Kongosta jätettiin siksi pois Okapin
+luonnonpuisto (artikkelin nykytilaosuus kertoo aseellisesta miehityksestä ja
+siviiliuhreista), ja Virunga sekä Kahuzi-Biéga kirjoitettiin puistojen
+historiasta ja luonnosta — uhanalaisten kohteiden luettelo mainitaan
+asiallisesti yhtenä lauseena. Angolan Cuito Cuanavale on 1987–88 käyty
+taistelu ja kirjoitettu tapahtumahistoriana New Yorkin sopimukseen asti.
+(3) Tyyppi kertoo, mitä merkki näyttää: Tassili n'Ajjer on artikkelissa
+vuoristo, joten nosto rajattiin sen kalliotaiteeseen (`kulttuuri`) eikä
+kirjattu maastoksi, ja Sudd on `jarvi`. (4) Kaksi ehdokasta kaatui
+lähdeaineiston ohuuteen: Tundavalasta ja Tchitundo-Hulusta ei ole
+en-Wikipedian artikkelia lainkaan, ja Serra da Leban artikkeli on neljä riviä
+— niiden tilalle tulivat Moçâmedes ja Ionan puisto.
+
+**Eläintäkyjen paikat on mitattu koneellisesti.** Jokainen piste on maan
+rajojen sisällä, maalla ja vähintään 35 lautayksikön päässä jokaisesta
+kaupunkimerkistä (`tests/elaintakyt.test.mjs`). Kamerun oli erän ainoa tiukka
+tapaus: koko goliattisammakon rannikkokaista on 26–36 yksikön päässä
+Kamerun-laatasta, joten piste haettiin haravoimalla ja se asetettiin
+vyöhykkeen pohjoispäähän (lon 9,9 / lat 3,4; etäisyys 36,5).
+
+**Kuvat puuttuvat kaikilta viideltä eläintäyltä.** `kuva`-kentässä on
+kuvaputken ämpäritunnus ilman kansiota (`elain-dza`, `elain-ago`,
+`elain-cmr`, `elain-cod`, `elain-sds`): kun kuvaputki toimittaa kuvan, se
+ilmestyy kortille ilman koodimuutosta, ja siihen asti kortti on kuvaton.

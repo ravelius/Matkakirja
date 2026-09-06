@@ -7105,4 +7105,509 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /* ==================================================================
+   * ERÄ M5, AFRIKKA (6.9.2026). Omistaja: *"Jatka kartta nostojen tekoa
+   * koko maailmaan."* Viisi maata, kaksi skandaalia kummallekin. Kaikki
+   * pisteet on tarkistettu maan fokuslehden rajausta vasten ja mitattu
+   * irti pelikaupungeista (KAUPUNGIN_KOHDALLA_SADE 7; lähin on Deim
+   * Zubeir 28,6 lautayksikön päässä Bahr el Ghazal -laatasta);
+   * perustelut ja mitat ovat maiden maastokohdepakeissa
+   * (js/packs/maastokohteet-dza.js ja sisarpakit). Erä on kuvaton.
+   * ================================================================ */
+  DZA: [
+    /*
+     * Algeri, deyn linnoitus.
+     * Lähde: en.wikipedia.org: Bakri-Busnach affair
+     */
+    {
+      id: 'karpasviuhka-1827',
+      otsikko: 'Kärpäsviuhka 1827 — isku, joka avasi sadan vuoden miehityksen',
+      nimio: 'Kärpäsviuhka',
+      vuosi: '1827',
+      paikka: 'Algeri, deyn linnoitus',
+      lat: 36.786944, lon: 3.060556,
+      kortti: 'Vehnä oli myyty, laskua ei ollut maksettu, ja velka oli kasvanut '
+        + 'neljääntoista miljoonaan frangiin. Kun Algerin hallitsija kysyi rahoistaan '
+        + 'suoraan Ranskan konsulilta juhlavastaanotolla, vastaus oli sama kuin '
+        + 'kolmenkymmenen vuoden ajan: ei mitään. Sitten hän löi konsulia kasvoihin '
+        + 'kärpäsviuhkan varrella, ja Pariisissa loukkauksesta tuli sotasyy.',
+      teksti: 'Livornosta 1600-luvulla saapuneet juutalaiset kauppiassuvut Bakri ja '
+        + 'Busnach nousivat Algerin kaupan johtoon ja perustivat 1700-luvun lopulla '
+        + 'yhtiön, joka hallitsi elintarvikkeiden — etenkin vehnän — vientiä Ranskaan. '
+        + 'Vallankumouksen ja Napoleonin sotien aikana Ranska osti viljaa velaksi, ja '
+        + 'koska yhtiö rahoitti toimintansa lainaamalla Algerin deyltä, velka oli '
+        + 'tosiasiassa velkaa Algerin hallitsijalle.'
+        + '\n\nVuosina 1800–1826 asia jäi ratkaisematta. Ranska myönsi velkansa 1801 '
+        + 'rauhansopimuksessa mutta ei maksanut sitä; yhtenä verukkeena käytettiin sitä, '
+        + 'että Bakri-Busnach kävi kauppaa myös Britannian kanssa. Vuonna 1826 Hussein '
+        + 'Dey kirjoitti Ranskan ulkoministerille, ja velaksi laskettiin neljätoista '
+        + 'miljoonaa frangia, josta Ranska lupasi maksaa seitsemän. Sitäkään se ei '
+        + 'maksanut.'
+        + '\n\nHuhtikuun 30. päivänä 1827 konsulit olivat koolla deyn luona. Hussein Dey '
+        + 'kysyi Ranskan konsulilta, aikooko maa maksaa sovitun. Kun vastaus oli, ettei '
+        + 'mitään ollut tapahtunut, dey löi häntä kasvoihin kärpäsviuhkan varrella ja '
+        + 'käski ulos. Toisen version mukaan dey tähtäsi kärpäseen ja osui vahingossa.'
+        + '\n\nRanskassa coup d’éventail nostatti vaatimuksen kunnian palauttamisesta. '
+        + 'Hallitus vaati nöyryyttäviä hyvityksiä — korkeimpien virkamiesten pyytämään '
+        + 'anteeksi ranskalaisella laivalla, Ranskan lipun nostoa linnoitukseen ja sadan '
+        + 'tykin kunnianlaukauksia. Kun ehdot torjuttiin, seurasi sodanjulistus ja kolme '
+        + 'vuotta kestänyt Algerin saarto. Vuonna 1830 Ranska maihinnousi ja valtasi '
+        + 'Algerin; miehitys kesti 1960-luvulle asti.',
+      lahde: 'en-Wikipedia "Bakri-Busnach affair", johdanto sekä osiot "Background" ja '
+        + '"The fly-whisk incident". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä kiista deyn ja Ranskan konsulin välillä alkoi?',
+        vaihtoehdot: [
+          'Maksamattomasta viljavelasta',
+          'Kalastusoikeuksista Välimerellä',
+          'Ranskalaisten vankien kohtelusta',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Regganen koekenttä Tanezrouftin autiomaassa.
+     * Lähde: en.wikipedia.org: Gerboise Bleue (nuclear test)
+     */
+    {
+      id: 'gerboise-bleue-1960',
+      otsikko: 'Gerboise Bleue 1960 — sininen hyppyrotta Saharan yllä',
+      nimio: 'Gerboise Bleue',
+      vuosi: '1960',
+      paikka: 'Reggane, Tanezrouftin autiomaa',
+      lat: 26.720278, lon: 0.172778,
+      kortti: 'Sadan metrin terästornin päähän nostettiin plutoniumpommi, ja aamulla '
+        + '13. helmikuuta 1960 autiomaa välähti. Ranskasta tuli neljäs ydinasevalta, ja '
+        + 'koe oli siihen mennessä ylivoimaisesti suurin ensimmäinen ydinkoe: 70 '
+        + 'kilotonnia eli enemmän kuin Yhdysvaltain, Neuvostoliiton ja Britannian '
+        + 'ensimmäiset yhteensä.',
+      teksti: 'Ranskan pääministeri Félix Gaillard määräsi huhtikuussa 1958 ydinkokeen '
+        + 'tehtäväksi vuoden 1960 ensimmäisellä neljänneksellä, ja Charles de Gaulle '
+        + 'vahvisti päätöksen neljännen tasavallan kaaduttua. Ensin kaavailtiin räjäytystä '
+        + 'Korsikan Argentellan kaivoksessa, mutta saaren laajat mielenosoitukset '
+        + 'lopettivat suunnitelman. Paikaksi tuli Saharan sotilaskoekeskus Regganen lähellä '
+        + 'Tanezrouftin autiomaassa — Algerian sodan keskellä.'
+        + '\n\nPommi räjäytettiin 13. helmikuuta 1960 kello 7.04 UTC sadan metrin '
+        + 'terästornin päässä. Komentopaikka oli kuudentoista kilometrin päässä, ja '
+        + 'räjähdyksen vaikutuksia tutkittiin sijoittamalla kalustoa eri etäisyyksille; '
+        + 'lentokoneet keräsivät näytteitä pilvestä. Toimittajia ei päästetty paikalle, '
+        + 'vaan lehdistölle annettiin silminnäkijäkuvaus: "autiomaa syttyi valtavaan '
+        + 'välähdykseen, jota seurasi 45 sekunnin kuluttua tuntuva paineaalto".'
+        + '\n\nKokeen nimi tulee hyppyrotasta, gerboise, ja sininen väri Ranskan lipun '
+        + 'ensimmäisestä väristä. Säteilyä mitattiin kilometrin päässä kymmenen radia '
+        + 'tunnissa ja vielä 570 kilometrin päässä kolme radia tunnissa. Asiakirjat '
+        + 'pidettiin salaisina vuosikymmeniä, ja armeija vakuutti vaikutusten olleen '
+        + 'vähäisiä, mutta paikalla olleet ovat kertoneet suojavarusteiden olleen '
+        + 'olemattomat. Vuonna 2009 Ranska suostui korvaamaan säteilylle altistuneille '
+        + 'uhreille ja julkaisemaan lisää asiakirjoja.',
+      lahde: 'en-Wikipedia "Gerboise Bleue (nuclear test)", johdanto sekä osiot "Name", '
+        + '"Test", "Fallout" ja "Subsequent tests". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi ensimmäistä ydinkoetta ei tehty Korsikalla?',
+        vaihtoehdot: [
+          'Kaivos osoittautui liian pieneksi',
+          'Saarella nousi laaja vastustus',
+          'Merivesi olisi vuotanut kaivokseen',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  AGO: [
+    /*
+     * Malanjen maakunta, Baixa do Cassangen puuvillaviljelmät.
+     * Lähde: en.wikipedia.org: Strike in Baixa do Cassange
+     */
+    {
+      id: 'baixa-do-cassange-1961',
+      otsikko: 'Baixa do Cassange 1961 — poltetut henkilökortit',
+      nimio: 'Cassange 1961',
+      vuosi: '1961',
+      paikka: 'Malanjen maakunta, Baixa do Cassangen viljelmät',
+      lat: -9.533333, lon: 16.35,
+      kortti: 'Puuvillayhtiön työläiset polttivat henkilökorttinsa ja vaativat parempia '
+        + 'oloja. Seuraavana päivänä Portugalin ilmavoimat pommittivat kahtakymmentä '
+        + 'kylää. Kuolleiden määrästä ei ole yksimielisyyttä, mutta tapaus katsotaan '
+        + 'Angolan itsenäisyyssodan ensimmäiseksi liikkeeksi.',
+      teksti: 'Tammikuun 3. päivänä 1961 portugalilais-belgialaisen puuvillayhtiö '
+        + 'Cotonangin maataloustyöläiset nousivat mielenosoitukseen Baixa do Cassangen '
+        + 'seudulla Malanjen maakunnassa Portugalin Angolassa. He vaativat parempia '
+        + 'työoloja, polttivat henkilökorttinsa ja kävivät yhtiön alueella '
+        + 'portugalilaisten kauppiaiden kimppuun. Mielenosoitusta johtivat kaksi siihen '
+        + 'asti tuntematonta angolalaista, António Mariano ja Kulu-Xingu, ja siitä '
+        + 'kasvoi nopeasti yleinen kansannousu.'
+        + '\n\nPortugalin viranomaiset vastasivat seuraavana päivänä ilmahyökkäyksellä '
+        + 'kahteenkymmeneen kylään. Uhriluvuista ei ole yksimielisyyttä: MPLA on '
+        + 'ilmoittanut noin kymmenentuhatta kuollutta, kun useimmat arviot liikkuvat '
+        + 'neljästäsadasta seitsemääntuhanteen. Viidenteen tammikuuta mennessä kapina oli '
+        + 'tukahdutettu.'
+        + '\n\nTapaus ei jäänyt yksittäiseksi. Runsaat kaksi kuukautta myöhemmin, 15. '
+        + 'maaliskuuta 1961, Holden Roberton johtama UPA nosti kansannousun Pohjois-'
+        + 'Angolan bakongo-alueella Ambuilassa; kahdessa päivässä surmattiin noin tuhat '
+        + 'valkoista angolalaista sekä tuntematon määrä siirtomaajärjestystä tukeneita '
+        + 'paikallisia. Portugalin armeija vastasi vastakumouksellisella operaatiolla, '
+        + 'joka tuhosi kymmeniä kyliä ja jossa kuoli noin kaksikymmentätuhatta ihmistä '
+        + 'ennen syyskuuta.'
+        + '\n\nLakkoa pidetään ensimmäisenä poliittisena liikkeenä, joka johti tasan '
+        + 'kuukautta myöhemmin alkaneeseen Angolan itsenäisyyssotaan ja kolmen vuoden '
+        + 'kuluessa Portugalin siirtomaasotaan. Angolassa 4. tammikuuta on nykyään '
+        + 'kansallinen muistopäivä.',
+      lahde: 'en-Wikipedia "Strike in Baixa do Cassange", johdanto ja osio "Revolts". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä työläiset tekivät henkilökorteilleen?',
+        vaihtoehdot: [
+          'Vaihtoivat ne keskenään',
+          'Lähettivät ne kuvernöörille',
+          'Polttivat ne',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Benguelan rannikko, jonne sisämaan saattueet päättyivät.
+     * Lähde: en.wikipedia.org: Henry Nevinson
+     */
+    {
+      id: 'nevinsonin-orjatie',
+      otsikko: 'Moderni orjuus 1905 — matka, joka paljasti kaakaon hinnan',
+      nimio: 'Orjatie 1905',
+      vuosi: '1904–1906',
+      paikka: 'Benguelan rannikko, orjatien pääte',
+      lat: -12.55, lon: 13.416667,
+      kortti: 'Lehti lähetti kirjeenvaihtajan tutkimaan huhua: viedäänkö Angolasta yhä '
+        + 'orjia São Tomén kaakaoviljelmille? Neljänsadanviidenkymmenen mailin matkan '
+        + 'jälkeen hän seurasi kahleisiin pantujen ihmisten jälkiä rannikolle — ja näki, '
+        + 'kuinka viranomaiset "vapauttivat" heidät ja kirjasivat vapaaehtoisiksi '
+        + 'työntekijöiksi.',
+      teksti: 'Henry Woodd Nevinson oli englantilainen kirjeenvaihtaja, joka oli '
+        + 'raportoinut buurisodasta ja Kreikan ja Turkin sodasta. Harper’s Monthly '
+        + 'Magazine palkkasi hänet 1904 selvittämään huhuja siitä, että Angolasta vietiin '
+        + 'yhä orjia São Tomén kaakaoviljelmille — vaikka orjakauppa oli muodollisesti '
+        + 'lakkautettu.'
+        + '\n\nNevinson matkasi sisämaahan noin 450 mailia ja löysi ketjun, jossa ihmisiä '
+        + 'luovutettiin velkojen kuittaamiseksi tai portugalilaisten asiamiesten '
+        + 'ottamina ja vietiin kahleissa rannikon kaupunkeihin. Siellä hän raivostui '
+        + 'siitä, mitä näki: viranomaiset "vapauttivat" saapuneet ja muuttivat heidän '
+        + 'asemansa vapaaehtoisiksi työntekijöiksi, jotka olivat muka suostuneet '
+        + 'lähtemään São Toméen viideksi vuodeksi.'
+        + '\n\nNevinson seurasi matkaa perille asti, vaikka hänen terveytensä oli niin '
+        + 'huono, että hän pelkäsi tulleensa myrkytetyksi. Viljelmillä olot olivat niin '
+        + 'ankarat, että joka viides työntekijä kuoli vuodessa.'
+        + '\n\nKertomus julkaistiin jatkokertomuksena elokuusta 1905 alkaen ja kirjana '
+        + 'nimellä A Modern Slavery Harper and Bros -kustantamolta 1906. Nevinson jatkoi '
+        + 'kampanjoivana toimittajana ja kirjoitti myöhemmin Intiasta Manchester '
+        + 'Guardianille sekä toimi ensimmäisessä maailmansodassa sotakirjeenvaihtajana.',
+      lahde: 'en-Wikipedia "Henry Nevinson", johdanto ja osio "Reporting"; rannikon '
+        + 'orjakaupasta myös en-Wikipedia "Benguela", osio "History". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Nevinsonin näkemät ihmiset kirjattiin vapaaehtoisiksi?',
+        vaihtoehdot: [
+          'Koska he olivat maksaneet matkansa itse',
+          'Koska orjakauppa oli muodollisesti lakkautettu ja asema piti nimetä uudelleen',
+          'Koska he olivat sopineet työstä lähetysaseman kanssa',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  CMR: [
+    /*
+     * Nyosjärvi Luoteis-Kamerunissa.
+     * Lähde: en.wikipedia.org: Lake Nyos disaster
+     */
+    {
+      id: 'nyosjarvi-1986',
+      otsikko: 'Nyosjärvi 1986 — järvi, joka huokaisi',
+      nimio: 'Nyos 1986',
+      vuosi: '1986',
+      paikka: 'Nyosjärvi, Luoteis-Kamerun',
+      lat: 6.44, lon: 10.3,
+      kortti: 'Elokuun 21. päivän iltana järvi kääntyi ympäri ja päästi kerralla '
+        + 'satojatuhansia tonneja hiilidioksidia. Kaasu on ilmaa raskaampaa, joten se '
+        + 'valui laaksoja pitkin kyliin ja tukahdutti nukkuvat: 1 746 ihmistä ja 3 500 '
+        + 'kotieläintä.',
+      teksti: 'Nyosjärvi on kraatterijärvi Luoteis-Kamerunissa. Sen pohjalle oli '
+        + 'kertynyt vuosien mittaan valtava määrä hiilidioksidia, joka pysyi liuenneena '
+        + 'syvän veden paineessa. Elokuun 21. päivänä 1986 kerrostuneisuus purkautui, ja '
+        + 'järvestä vapautui arviolta 100 000–300 000 tonnia kaasua eli noin 1,2 '
+        + 'kuutiokilometriä.'
+        + '\n\nLaukaisijaa ei tiedetä. Useimmat geologit epäilevät maanvyörymää, jotkut '
+        + 'pientä purkausta järven pohjassa, kolmannet järven pinnan viilenemistä '
+        + 'sateessa. Osa tutkijoista huomauttaa, ettei ulkoista syytä välttämättä '
+        + 'tarvita lainkaan: hiilidioksidin liukoisuus riippuu lämpötilasta, joten '
+        + 'kerrostuneisuus on itsessään epävakaa, ja kun kuplia kerran syntyy, ne '
+        + 'nostavat mukanaan lisää kyllästynyttä vettä ja koko järvi kääntyy.'
+        + '\n\nKaasupatsas nousi aluksi lähes sadan kilometrin tuntinopeudella, ja pinnalle '
+        + 'muodostui sadan metrin vesi- ja vaahtopatsas, joka sinkosi rantaan '
+        + 'vähintään 25 metrin aallon. Sitten kaasu laskeutui: se on puolitoista kertaa '
+        + 'ilmaa raskaampaa, joten se myötäili maanpintaa noin 50 metrin paksuisena '
+        + 'mattona ja valui laaksoja pitkin 20–50 kilometrin tuntivauhdilla. Noin 23 '
+        + 'kilometrin matkalla se oli väkevää tarpeeksi tukahduttamaan nukkuvat ihmiset '
+        + 'Nyosin, Kamin, Chan ja Subumin kylissä. Järven sininen vesi muuttui '
+        + 'punaruskeaksi, kun rautapitoinen syvä vesi hapettui pinnalla.'
+        + '\n\nNoin 4 000 asukasta pakeni alueelta, ja moni sai hengitysoireita, ihovaurioita '
+        + 'ja halvauksia. Järveen on sittemmin asennettu putkisto, joka poistaa '
+        + 'hiilidioksidia. Nyos ja kaksi vuotta aiempi Monounin onnettomuus ovat ainoat '
+        + 'kirjatut limniset purkaukset ihmiskunnan historiassa.',
+      lahde: 'en-Wikipedia "Lake Nyos disaster", johdanto sekä osiot "Eruption and gas '
+        + 'release" ja "Effects on survivors". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi kaasu tappoi juuri laaksojen kylissä?',
+        vaihtoehdot: [
+          'Kaasu on ilmaa raskaampaa ja valui laaksoja pitkin',
+          'Tuuli kääntyi yöllä laaksoihin päin',
+          'Kylät olivat järven pintaa korkeammalla',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Douala, Saksan Kamerunin satamakaupunki.
+     * Lähde: en.wikipedia.org: Rudolf Duala Manga Bell
+     */
+    {
+      id: 'duala-manga-bell-1914',
+      otsikko: 'Douala 1914 — kuningas, joka kirjoitti kirjeitä',
+      nimio: 'Manga Bell 1914',
+      vuosi: '1914',
+      paikka: 'Douala, Saksan Kamerun',
+      lat: 4.05, lon: 9.7,
+      kortti: 'Saksan valtiopäivät päätti siirtää dualat pois jokirannasta, jotta '
+        + 'rantatontit jäisivät eurooppalaisille. Kuningas vastusti kirjeillä, '
+        + 'vetoomuksilla ja juridiikalla. Kun ne sivuutettiin, hän etsi tukea muualta — '
+        + 'ja se maksoi hänelle hengen.',
+      teksti: 'Rudolf Duala Manga Bell syntyi 1873 Doualassa alueella, josta tuli '
+        + 'myöhemmin Saksan Kamerun. Hän oli Bellin sukuhaaran kuninkaan Manga Ndumbe '
+        + 'Bellin vanhin poika, kävi koulua sekä Doualassa että Saksassa ja opiskeli '
+        + '1890-luvulla Ulmin lukiossa. Isänsä jälkeen hän nousi hallitsijaksi 2. '
+        + 'syyskuuta 1908. Alussa hän tuki siirtomaahallintoa ja esiintyi eurooppalaisten '
+        + 'hallitsijoiden tapaan; varakkaana miehenä hän peri isältään myös suuret velat.'
+        + '\n\nVuonna 1910 Saksan valtiopäivät laati suunnitelman, jossa joen rannalla '
+        + 'asuvat dualat siirrettäisiin sisämaahan, jotta rantakaistale jäisi kokonaan '
+        + 'eurooppalaisten asuinalueeksi. Manga Bellistä tuli koko duala-kansan '
+        + 'vastarinnan johtaja. Hän ja muut päälliköt painostivat hallintoa ensin '
+        + 'kirjeillä, vetoomuksilla ja oikeudellisilla perusteluilla, mutta ne joko '
+        + 'sivuutettiin tai kumottiin.'
+        + '\n\nSitten Manga Bell kääntyi muiden Euroopan hallitusten puoleen ja lähetti '
+        + 'edustajia muiden kamerunilaiskansojen johtajille ehdottaen Saksan vallan '
+        + 'kaatamista. Bamounien sulttaani Ibrahim Njoya ilmoitti hänen toimistaan '
+        + 'viranomaisille, ja kuningas pidätettiin.'
+        + '\n\nLyhyen oikeudenkäynnin jälkeen Rudolf Duala Manga Bell hirtettiin '
+        + 'maanpetoksesta 8. elokuuta 1914. Kamerunissa hänestä tuli marttyyri, ja '
+        + 'tutkijat pitävät hänen toimintaansa varhaisena esimerkkinä kamerunilaisesta '
+        + 'kansallisaatteesta.',
+      lahde: 'en-Wikipedia "Rudolf Duala Manga Bell", johdanto ja osio "Early life and '
+        + 'reign". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi dualat oli määrä siirtää pois jokirannasta?',
+        vaihtoehdot: [
+          'Rannalle suunniteltiin satamaa',
+          'Alue oli tulvaherkkä',
+          'Rantakaistale haluttiin kokonaan eurooppalaisten asuinalueeksi',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  COD: [
+    /*
+     * Basankusu, Abir Congo Companyn ensimmäinen kauppa-asema.
+     * Lähde: en.wikipedia.org: Casement Report
+     */
+    {
+      id: 'casementin-raportti-1904',
+      otsikko: 'Casementin raportti 1904 — kumivero ja sen hinta',
+      nimio: 'Casement 1904',
+      vuosi: '1903–1908',
+      paikka: 'Basankusu, Abirin kauppa-asema',
+      lat: 1.222222, lon: 19.802778,
+      kortti: 'Kongon vapaavaltio oli Belgian kuninkaan yksityisomaisuutta, ja sen '
+        + 'asukkaat maksoivat veronsa kumina. Kun Britannian konsuli matkusti jokea ylös '
+        + 'ja kirjasi ylös sen, mitä ihmiset kertoivat, raportti muutti Euroopan '
+        + 'mielipiteen — mutta kesti vielä neljä vuotta, ennen kuin kuningas luopui '
+        + 'omistuksestaan.',
+      teksti: 'Berliinin konferenssi antoi 1885 Kongon vapaavaltion Belgian kuninkaan '
+        + 'Leopold II:n yksityiseen omistukseen, ja hän käytti sen luonnonvaroja — '
+        + 'ennen kaikkea kumia — oman varallisuutensa kartuttamiseen. Basankusu oli Abir '
+        + 'Congo Companyn ensimmäinen kauppa-asema Leopoldvillestä ylävirtaan. Yhtiö sai '
+        + 'suuren toimiluvan ja oikeuden verottaa asukkaita kumina; asemat Lopori- ja '
+        + 'Maringa-jokien varrella olivat eurooppalaisen asiamiehen johdossa ja aseistettujen '
+        + 'vartijoiden turvaamia. Kilo kumia maksoi yhtiölle 1,35 frangia ja myytiin '
+        + 'Euroopassa jopa kymmenellä.'
+        + '\n\nVeroa perittiin vankeudella, ruoskimisella ja muilla ruumiillisilla '
+        + 'rangaistuksilla. Väärinkäytöksistä oli kerrottu jo vuosia: lähetyslääkäri '
+        + 'Henry Grattan Guinness sai 1895 kuninkaalta lupauksia, joita ei pidetty, ja '
+        + 'toimittaja E. D. Morel kirjoitti asiasta toistuvasti.'
+        + '\n\nToukokuun 20. päivänä 1903 Britannian alahuone hyväksyi päätöslauselman, '
+        + 'joka vaati hallitusta neuvottelemaan Berliinin sopimuksen muiden '
+        + 'allekirjoittajien kanssa epäkohtien poistamisesta. Boman konsuli, irlantilainen '
+        + 'Roger Casement, sai tehtäväkseen tutkia asian. Raportti julkaistiin 1904, se '
+        + 'kokosi yhteen suuren joukon yksittäisiä kertomuksia tapoista, silpomisista, '
+        + 'sieppauksista ja pahoinpitelyistä, ja vahvisti Morelin syytökset.'
+        + '\n\nCasement ja Morel perustivat Congo Reform Associationin. Belgian parlamentti '
+        + 'pakotti Leopoldin asettamaan riippumattoman tutkintakomission, jonka löydökset '
+        + 'vahvistivat raportin kohta kohdalta. Vuonna 1908 parlamentti liitti '
+        + 'vapaavaltion Belgiaan Belgian Kongona.',
+      lahde: 'en-Wikipedia "Casement Report", johdanto sekä osiot "Publicity 1895–1903" ja '
+        + '"Aftermath"; Basankusun osuudesta en-Wikipedia "Basankusu", osio "Abir Congo '
+        + 'Company". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Millä tavalla Abirin toimiluvan alueen asukkaat maksoivat veronsa?',
+        vaihtoehdot: [
+          'Norsunluuna',
+          'Kumina',
+          'Kuparikiekkoina',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Shinkolobwen kaivos Haut-Katangassa.
+     * Lähde: en.wikipedia.org: Shinkolobwe
+     */
+    {
+      id: 'shinkolobwe',
+      otsikko: 'Shinkolobwe — kaivos, jota ei ollut kartoilla',
+      nimio: 'Shinkolobwe',
+      vuosi: '1915–2004',
+      paikka: 'Shinkolobwe, Haut-Katanga',
+      lat: -11.054972, lon: 26.547278,
+      kortti: 'Katangan malmi oli maailman rikkainta uraania, ja siitä tuli Manhattan-'
+        + 'hankkeen raaka-aine. Osa varastosta ehti jäädä Saksan käsiin 1940. Kaivos '
+        + 'suljettiin virallisesti vasta 2004 — ja sen nimi tarkoittaa paikallisittain '
+        + 'miestä, joka on pinnalta leppoisa mutta suuttuu, kun häntä ärsytetään.',
+      teksti: 'Shinkolobwe oli radium- ja uraanikaivos Haut-Katangan maakunnassa Kongon '
+        + 'demokraattisessa tasavallassa, noin 20 kilometriä Likasista länteen ja 145 '
+        + 'kilometriä Lubumbashista luoteeseen. Englantilainen geologi Robert Rich Sharp '
+        + 'löysi esiintymän 1915.'
+        + '\n\nMalmi oli maailman taloudellisinta uraania, ja siitä tuli Yhdysvaltain '
+        + 'Manhattan-hankkeen ja sitä seuranneiden 1940- ja 1950-luvun ydinaseiden '
+        + 'raaka-aine. Ennen toista maailmansotaa täältä louhittu uraani vietiin '
+        + 'käsiteltäväksi Belgiaan, ja juuri se varasto joutui 1940 Saksan armeijan '
+        + 'haltuun ja päätyi Saksan epäonnistuneeseen ydinohjelmaan.'
+        + '\n\nKaivos on geologinen erikoisuus. Uraanimineraalit sekä niiden seurana '
+        + 'koboltti, hopea, nikkeli, vismutti ja arseeni esiintyvät massiivisena '
+        + 'sulfidimalmina rakojen ja pikkusiirrosten juonteissa Katangan '
+        + 'poimurakenteessa; uraninitin kiteytyminen ajoittuu noin 630 miljoonan vuoden '
+        + 'taakse. Uraniniittikiteet olivat yleisesti sentin tai neljän kokoisia kuutioita, '
+        + 'ja paikalta on tunnistettu useita ennen tuntemattomia mineraaleja.'
+        + '\n\nKaivoksen nimi tulee läheisestä, jo kadonneesta kylästä. Sanaa käytetään '
+        + 'myös sanontana: se tarkoittaa miestä, joka on pinnalta rauhallinen mutta '
+        + 'suuttuu, kun häntä ärsytetään. Kaivos suljettiin virallisesti 2004.',
+      lahde: 'en-Wikipedia "Shinkolobwe", johdanto sekä osiot "Toponym" ja "Geology". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mihin Shinkolobwen uraania käytettiin 1940-luvulla?',
+        vaihtoehdot: [
+          'Manhattan-hankkeen ydinaseisiin',
+          'Kaivoslamppujen valoaineeksi',
+          'Sairaaloiden röntgenlaitteisiin',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  SDS: [
+    /*
+     * Kodok eli entinen Fashoda Valkoisen Niilin varrella.
+     * Lähde: en.wikipedia.org: Fashoda Incident
+     */
+    {
+      id: 'fashoda-1898',
+      otsikko: 'Fashoda 1898 — kaksi lippua saman linnakkeen edessä',
+      nimio: 'Fashoda 1898',
+      vuosi: '1898',
+      paikka: 'Kodok (Fashoda), Valkoinen Niili',
+      lat: 9.8875, lon: 32.110278,
+      kortti: 'Sadanneljänkymmenen hengen ranskalaisretkikunta käveli neljätoista '
+        + 'kuukautta halki Afrikan ja pystytti lipun autiolle Niilin linnakkeelle. '
+        + 'Kymmenen viikkoa myöhemmin paikalle saapui viisi brittiläistä tykkivenettä ja '
+        + '1 500 sotilasta. Miehet joivat viskiä yhdessä; Pariisissa ja Lontoossa '
+        + 'valmistauduttiin sotaan.',
+      teksti: 'Fashodan selkkaus oli Britannian ja Ranskan siirtomaakiistojen huipentuma '
+        + 'Itä-Afrikassa 10. heinäkuuta ja 3. marraskuuta 1898 välillä. Ranska tavoitteli '
+        + 'yhtenäistä vyöhykettä Nigeriltä Niilille ja lähetti kapteeni Jean-Baptiste '
+        + 'Marchandin viemään Fashodan seudun Ranskan suojelukseen. Retkikunta lähti '
+        + 'Brazzavillesta belgialaisella höyrylaivalla, nousi Ubangi-jokea niin pitkälle '
+        + 'kuin pääsi ja marssi sitten viidakon ja pensaikon halki Sudanin aavikoille '
+        + 'sata tonnia varusteita mukanaan — muun muassa kasattava teräshöyryvene, jonka '
+        + 'kattila painoi tonnin.'
+        + '\n\nNeljätoista kuukautta kestäneen taipaleen jälkeen Marchandin joukko saapui '
+        + 'Fashodaan 10. heinäkuuta 1898. Idästä luvatut tukiretkikunnat eivät '
+        + 'päässeet perille, joten sata kaksikymmentä senegalilaista tirailleuria ja '
+        + 'kourallinen ranskalaisupseereita olivat yksin satojen kilometrien päässä '
+        + 'kaikesta avusta.'
+        + '\n\nSyyskuun 18. päivänä joelle ilmestyi viisi brittiläistä tykkivenettä ja '
+        + 'niissä 1 500 brittiläistä, egyptiläistä ja sudanilaista sotilasta Herbert '
+        + 'Kitchenerin johdolla. Kitchener oli juuri voittanut Omdurmanin taistelun. Hän '
+        + 'saapui linnakkeelle 19. syyskuuta egyptiläisessä univormussa ja vaati '
+        + 'Egyptin lipun nostoa — kauas Ranskan lipusta. Marchand suostui sillä ehdolla, '
+        + 'ettei lippu ratkaise alueen asemaa.'
+        + '\n\nKomentajat käyttäytyivät hillitysti: Kitchener kohotti maljan Marchandille '
+        + 'viskillä, jonka juomista ranskalainen kutsui yhdeksi suurimmista uhrauksistaan '
+        + 'isänmaan hyväksi. Euroopassa kriisi kiihtyi kuitenkin sotapeloksi, ja '
+        + 'kuninkaallinen laivasto laati sotakäskyjä. Ranskan hallitus määräsi joukkonsa '
+        + 'hiljaisesti vetäytymään 3. marraskuuta.',
+      lahde: 'en-Wikipedia "Fashoda Incident", johdanto sekä osiot "Marchand expedition", '
+        + '"Kitchener\'s Advance" ja "French withdrawal". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Fashodan kriisi ratkesi?',
+        vaihtoehdot: [
+          'Ranska vetäytyi paikalta marraskuussa',
+          'Britannia luovutti linnakkeen Ranskalle',
+          'Alue jaettiin kahtia joen mukaan',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Deim Zubeir, orjakauppiaan päämaja Bahr el Ghazalissa.
+     * Lähde: en.wikipedia.org: Al-Zubayr Rahma Mansur
+     */
+    {
+      id: 'zubayrin-zaribat',
+      otsikko: 'Zubayrin zaribat 1873 — orjakauppias, josta tehtiin kuvernööri',
+      nimio: 'Zubayr 1873',
+      vuosi: '1856–1873',
+      paikka: 'Deim Zubeir, Bahr el Ghazal',
+      lat: 7.716667, lon: 26.216667,
+      kortti: 'Khartumista lähti 1856 pieni armeija perustamaan varustettuja '
+        + 'kauppa-asemia. Kolmenkymmenen zariban verkosto kasvoi valtioksi valtion '
+        + 'sisällä, ja kun Egyptin kediivi lähetti palkka-armeijan kukistamaan sen, '
+        + 'armeija hävisi. Niinpä kediivi teki toisin: hän nimitti orjakauppiaan '
+        + 'kuvernööriksi.',
+      teksti: 'Al-Zubayr Rahma Mansur syntyi noin 1830 Pohjois-Sudanissa ja aloitti '
+        + 'suuren mittakaavan kauppansa 1856 lähtemällä Khartumista pienen armeijan '
+        + 'kanssa. Hän rakensi verkoston varustettuja kauppa-asemia eli zaribia, joiden '
+        + 'toiminta keskittyi orjakauppaan ja norsunluuhun. Laajimmillaan hänen '
+        + 'kauppavaltakuntansa hallitsi suurta osaa Bahr el Ghazalista sekä alueita '
+        + 'nykyisen Tšadin ja Keski-Afrikan tasavallan puolella.'
+        + '\n\nVuonna 1871 saksalainen tutkimusmatkailija Georg Schweinfurth vieraili '
+        + 'hänen päämajassaan Deim Zubeirissa ja kuvasi orjakauppiaan hovia "vähintäänkin '
+        + 'ruhtinaalliseksi".'
+        + '\n\nEgyptin kediivi Isma\'il Pasha halusi alueen hallintaansa ja lähetti sitä '
+        + 'vastaan palkka-armeijan, mutta Rahma voitti sen. Niinpä kediivi liitti alueen '
+        + 'valtakuntaansa toisella tavalla: hän tunnusti 1873 Rahman vallan ja nimitti '
+        + 'hänet Bahr el Ghazalin kuvernööriksi. Lopulta Rahma hallitsi kolmeakymmentä '
+        + 'zaribaa ja sai beyn ja pashan arvot; Darfurin valtauksessa hän johti '
+        + 'eteläisiä joukkoja, ja häntä kutsuttiin mustaksi pashaksi.'
+        + '\n\nKun kenraali Charles Gordon saapui 1877 Sudanin kuvernööriksi, hänestä ja '
+        + 'Rahmasta tuli vastustajia. Britanniassa Rahma sai lähes myyttisen maineen '
+        + 'Gordonin arkkivihollisena: häntä sanottiin "rikkaimmaksi ja pahimmaksi" ja '
+        + 'kerrottiin, että hänen saattueeseensa kuului kahlehdittuja leijonia.',
+      lahde: 'en-Wikipedia "Al-Zubayr Rahma Mansur", johdanto sekä osiot "Background" ja '
+        + '"Opposition to Gordon". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi kediivi nimitti Rahman kuvernööriksi?',
+        vaihtoehdot: [
+          'Rahma oli luopunut orjakaupasta',
+          'Rahma oli voittanut häntä vastaan lähetetyn armeijan',
+          'Britannia vaati sitä sopimuksessa',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
 };

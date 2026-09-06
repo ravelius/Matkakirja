@@ -1316,6 +1316,89 @@ export const ELAINTAKYT = {
     lon: 97.8,
     lat: 26.3,
   },
+  /*
+   * ── ERÄ M5, AFRIKKA 6.9.2026 ───────────────────────────────────
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M5 (SDS, AGO, CMR, COD, DZA) toi viisi uutta eläintäkyä; yhdellä
+   * viidestä maasta ei ollut täkyä ennestään, joten yhtäkään vanhaa
+   * tietuetta ei ole koskettu.
+   *
+   * PAIKKA ON MITATTU IRTI KAUPUNGEISTA. Jokainen piste on maan rajojen
+   * sisällä ja vähintään 35 lautayksikön päässä jokaisesta
+   * kaupunkimerkistä (tests/elaintakyt.test.mjs
+   * VAHIN_ETAISYYS_KAUPUNKIIN) sekä 30 yksikön päässä muista täyistä.
+   * Kamerunin piste haettiin koneellisella haravoinnilla: koko rannikon
+   * kaita, jossa goliattisammakko elää, on 26–36 yksikön päässä
+   * Kamerun-laatasta, joten täky on vyöhykkeen pohjoispäässä.
+   *
+   * KUVA TULEE KUVAPUTKELTA. Erä on kuvaton, joten `kuva`-kentässä on
+   * pelkkä ämpäritunnus (js/media.js assetOsoite:
+   * `kohtaamiset/elaimet/<tunnus>.jpg`). Kun kuvaputki toimittaa kuvan,
+   * se ilmestyy kortille ilman koodimuutosta.
+   */
+  DZA: {
+    elain: 'fennekki',
+    otsikko: 'Korvat, jotka kuulevat hiekan alle',
+    teksti: 'Fennekki on Pohjois-Afrikan aavikoiden pikkukettu ja maailman pienin koiraeläin: naaras painaa 1–1,9 kiloa ja on rungoltaan 34,5–39,5 senttiä pitkä. Sen tuntomerkki ovat suhteettoman suuret korvat, jotka ovat koiraeläinten suurimmat suhteessa ruumiiseen — ne haihduttavat lämpöä ja kuulevat saaliin liikkeet hiekan alta. Turkki on hiekan värinen, se heijastaa päivällä auringon ja pitää yöllä lämpimänä, ja käpälien anturat ovat tiheän karvan peitossa, jotta kuumalla hiekalla voi kävellä. Munuaiset ovat suuret ja tiiviit ja säästävät vettä kuivina aikoina. Fennekit kaivavat perheittäin hiekkaan koloja, jotka voivat olla 120 neliömetrin laajuisia ja joiden käytävät yhtyvät naapuriperheiden koloihin. Ravinto on hyönteisiä, pikkunisäkkäitä ja lintuja; poikasia saalistaa aavikkohuuhkaja, ja aikuisiakin sakaalit ja tarhahyeenat.',
+    lahde: 'en-Wikipedia "Fennec fox", johdanto sekä osiot "Characteristics" ja '
+      + '"Distribution and habitat". Tarkistettu 6.9.2026.',
+    kuva: 'elain-dza',
+    // Piste on Saharan hiekkatasangolla Keski-Algeriassa, 219,3
+    // lautayksikköä Sahara-laatasta (vähimmäisetäisyys 35).
+    lon: 2.0,
+    lat: 27.5,
+  },
+  AGO: {
+    elain: 'jättiläisseeprantilooppi',
+    otsikko: 'Antilooppi, joka löydettiin kahdesti',
+    teksti: 'Jättiläisseeprantilooppi on vain Angolan keskiylängöllä elävä seeprantiloopin alalaji, jonka kuvaili 1916 brittiläinen eläintieteilijä Oldfield Thomas. Nimen lisäosa variani muistaa Frank Variania, Benguelan rataa rakentanutta insinööriä, joka toi eläimen tieteen tietoon. Nimi jättiläinen viittaa sonnin sarviin, jotka ovat kaikista seeprantiloopeista pisimmät: usein yli 129 senttiä ja pisimmillään mitattuna 165. Aikuinen sonni on kiiltävän musta ja painaa noin 240 kiloa, lehmät jäävät ruskeiksi kuten vasat. Laji katosi sisällissodan vuosiksi ja löydettiin uudelleen, mutta kaikki kuvatut yksilöt olivat naaraita; 2009 sonni paikannettiin ulostenäytteiden DNA:n avulla Luandon luonnonpuistosta ja siirrettiin helikopterilla Cangandalan aitaukseen. Kanta on äärimmäisen uhanalainen: vuonna 2026 yksilöitä arvioidaan olevan noin 310 kahdeksassa laumassa.',
+    lahde: 'en-Wikipedia "Giant sable antelope", johdanto sekä osiot "Taxonomy", "Discovery", '
+      + '"Description" ja "Distribution and habitat". Tarkistettu 6.9.2026.',
+    kuva: 'elain-ago',
+    // Piste on Luandon luonnonpuiston seudulla Kwanzan ja Luandon
+    // välissä, 60,4 lautayksikköä Angola-laatasta (vähimmäisetäisyys 35).
+    lon: 17.5,
+    lat: -11.0,
+  },
+  CMR: {
+    elain: 'goliattisammakko',
+    otsikko: 'Sammakko, joka rakentaa poikasilleen altaan',
+    teksti: 'Goliattisammakko on maailman suurin sammakko: ruumis voi olla 32 senttiä ja paino 3,3 kiloa, ja jalat ojennettuina pisimmät yksilöt ylittävät 80 senttiä. Levinneisyys on hyvin kapea — vain Kamerunin ja Päiväntasaajan Guinean rannikon suuntainen tiheä sademetsäkaita, jossa se elää koskien ja putousten äärellä Sanagan, Kienken, Ntemin ja Mbían vesistöissä. Sillä ei ole ääntä vahvistavaa kurkkupussia, joten se ei kutsu puolisoa kurnuttamalla. Sen sijaan se rakentaa: koiras raivaa jokialtaan puhtaaksi, patoaa vanhan lammikon tai kaivaa uuden, metrin levyisen ja kymmenen sentin syvyisen kuopan sorapenkkaan ja siirtää siinä sivussa isojakin kiviä. Naaras vartioi pesää öisin, ja toukkavaihe kestää 85–95 päivää. Juuri pesänrakennus saattaa selittää lajin koon: raskaita kiviä siirtää parhaiten iso sammakko.',
+    lahde: 'en-Wikipedia "Goliath frog", johdanto sekä osiot "Description", "Habitat and '
+      + 'distribution" ja "Reproduction". Tarkistettu 6.9.2026.',
+    kuva: 'elain-cmr',
+    // Piste on rannikon suuntaisessa metsävyöhykkeessä Sanagan ja
+    // Ntemin altaiden välissä, 36,5 lautayksikköä Kamerun-laatasta
+    // (vähimmäisetäisyys 35).
+    lon: 9.9,
+    lat: 3.4,
+  },
+  COD: {
+    elain: 'bonobo',
+    otsikko: 'Joki, joka teki kahdesta lajista kaksi',
+    teksti: 'Bonobo on ihmisapinoista pienin ja yhdessä simpanssin kanssa ihmisen lähin nykyinen sukulainen. Sitä tavataan vain Kongon demokraattisen tasavallan alueella, noin 500 000 neliökilometrin laikulla Kongo-joen eteläpuolella. Juuri joki teki lajin: kun Kongo muotoutui 1,5–2 miljoonaa vuotta sitten, huono uimari jäi sen eteläpuolelle ja erkani simpanssin esivanhemmista, jotka jäivät pohjoispuolelle. Bonobo on hoikempi kuin simpanssi — kapeat hartiat, ohut kaula, pitkät sääret, mustat kasvot, vaaleanpunaiset huulet ja päälaella jakaukselle asettuva pitkä karva. Ravinto on enimmäkseen hedelmiä. Laumat ovat epätavallisia ihmisapinoiden joukossa siinä, että naaraat pitävät niissä valtaa: yhteen liittoutuneet naaraat voivat olla koiraiden vertaisia tai näitä vahvempia. Villissä luonnossa lajia on tutkittu vähän, koska bonobo on arka ja seutu levoton.',
+    lahde: 'en-Wikipedia "Bonobo", johdanto sekä osiot "Description" ja "Behavior and '
+      + 'ecology". Tarkistettu 6.9.2026.',
+    kuva: 'elain-cod',
+    // Piste on Kongo-joen eteläpuolisessa sademetsässä Salongan
+    // pohjoispuolella, 288,2 lautayksikköä Kongo-laatasta
+    // (vähimmäisetäisyys 35).
+    lon: 20.5,
+    lat: -0.5,
+  },
+  SDS: {
+    elain: 'kenkänokka',
+    otsikko: 'Kenkä, jolla on siivet',
+    teksti: 'Kenkänokka on kookas pitkäjalkainen kahlaaja, joka on saanut nimensä valtavasta kengänmuotoisesta nokastaan. Se muistuttaa haikaraa ja luokiteltiin pitkään sellaiseksi, mutta geenit siirsivät sen pelikaanien ja haikaroiden sukulaiseksi; lähin sukulainen on vasarapää. Lintu on 110–140 senttiä korkea, siipiväli on 230–260 senttiä ja paino 4–7 kiloa. Nokka on vaaleanpunainen, harmaakirjava ja koukkupäinen, ja sen selkäharja on kolmanneksi pisin nykylinnuista pelikaanien ja suurten haikaroiden jälkeen. Jalat ovat pitkät ja jalkaterät poikkeuksellisen suuret — keskivarvas on 17–18 senttiä — mikä auttaa lintua seisomaan kelluvan kasvillisuuden päällä saalista väijyessään. Aikuisen höyhenpuku on siniharmaa, poikasen ruskeampi. Laji elää Itä-Afrikan suurilla soilla Etelä-Sudanista Sambiaan, ja englantilainen John Gould kuvasi sen 1850 Valkoiselta Niililtä tuodusta nahasta.',
+    lahde: 'en-Wikipedia "Shoebill", johdanto sekä osiot "Taxonomy" ja "Description". '
+      + 'Tarkistettu 6.9.2026.',
+    kuva: 'elain-sds',
+    // Piste on Suddin kosteikossa Valkoisen Niilin varrella, 113,7
+    // lautayksikköä Bahr el Ghazal -laatasta (vähimmäisetäisyys 35).
+    lon: 30.4,
+    lat: 7.5,
+  },
 };
 
 /** Maatunnukset siinä järjestyksessä kuin ne on kirjoitettu. */
