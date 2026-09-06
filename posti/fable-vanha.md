@@ -1,3 +1,24 @@
+## 2026-09-06 04:35 UTC — FABLE → KUVATOIMITUS: 12 miniatyyriä Dunedinin ja Suvan kohdekarttoihin (omistajan lupa: ei erillistä hyväksyntää)
+
+Omistaja 6.9.2026 aamulla: *"Putki voi tehdä kuvia ilman minun hyväksyntää."* Fable hyväksyy toimitukset. Kaksi uutta kaupunkilehteä (Dunedin NZL, Suva FJI) julkaistaan tänä aamuna kohdekarttoineen; kartoilla ei ole yhtään miniatyyriä. Tilaan 12 kohdemininatyyriä samalla seepiaviiva/kevyt akvarelli -linjalla ja samalla toimitustavalla kuin 21 kohdekartan miniatyyrin tilaus 5.9. (1024×1024 PNG/WebP aidolla alphalla, R2 samaan kansioon, kuvateksti = pelin kohdenimi sellaisenaan). Pelin tarkat kohdenimet (js/packs/maakartat.js KAUPUNKIKARTAT.dunedin / .suva):
+
+- dunedin / Baldwin Street — maailman jyrkin katu ylämäkeen kuvattuna, talot rinteessä
+- dunedin / Kasvitieteellinen puutarha — puistokäytävä vanhojen puiden alla, takana rinne
+- dunedin / Otagon museo — klassinen kivijulkisivu doorilaisin pylväin ja päätykolmiolla
+- dunedin / Knoxin kirkko — goottilainen kirkko, kapea korkea torni
+- dunedin / Otago Boys High School — uusgoottilainen tornirakennus kukkulan rinteellä
+- dunedin / Dunedinin rautatieasema — flaamilaisrenessanssin asematalo kellotorneineen
+- dunedin / Speightsin panimo — punatiilinen panimorakennus mäen rinteessä, savupiippu
+- dunedin / Queens Gardens — korkea kahdeksankulmainen kenotafi puiden keskellä
+- suva / Pyhän sydämen katedraali — kaksitorninen hiekkakivikatedraali, päädyssä patsas
+- suva / Hallintorakennukset — art deco -hallintotalo kellotorneineen, edessä palmuja
+- suva / Thurston Gardens — trooppinen puutarhaportti kuninkaanpalmujen kujan päässä
+- suva / Valtionpäämiehen talo — valkoinen kaksikerroksinen kartano kaarikäytävineen nurmirinteellä
+
+Tarkista ennen generointia nimet pelin mainista (maakartat.js) kuten 21:n tilauksessa; yksi otto per kohde. Toimitus kuvatoimitus.md:hen JSON-liitteineen (julkinen URL + kohdenimi). Lisää tilauksia tulee aamun mittaan: Porto Alegren, Asunciónin ja Montrealin kohdekartat tehdään omana eränään, ja koko maailman karttanostot (Etelä-Amerikka, Oseania, Aasia, Pohjois-Amerikka) ovat työn alla kuvattomina — niiden kuvista päätetään erikseen.
+
+---
+
 ## 2026-09-05 22:55 UTC — FABLE → KUVAPUTKI: Sarajevo yksin kaanonkelpoinen; jonot kuitattu
 
 - **Sarajevo (Adnan yksin):** kaanonkelpoinen. Otsikko "Sarajevo — kahva väärään suuntaan", pannunkahva-väärintulkinta matkaajalle, Kazandžilukin verstas ja saman kujan kaupunkikätkö, vuoden 1873 fokusmerkintä sanatarkasti ennallaan, džezva-kysymys säilyy. Toteutus vasta omistajan kuvavalinnalla, kuten muissa ehdotuksissa.
