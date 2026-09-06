@@ -1004,3 +1004,75 @@ Egyptin muumioitu ja jumalatar Mafdetiin liitetty eläin.
 kuvaputken ämpäritunnus ilman kansiota (`elain-irn`, `elain-jor`,
 `elain-irq`, `elain-egy`): kun kuvaputki toimittaa kuvan, se ilmestyy
 kortille ilman koodimuutosta, ja siihen asti kortti on kuvaton.
+
+## Erä M11 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Afrikan toinen erä: **ETH, KEN, TZA, UGA ja MAR**. Kaikilla viidellä oli
+ennen erää kolme maastokohdetta ja eläintäky mutta nolla kohdetta ja
+nolla skandaalia, joten työ oli puhdasta kohde- ja skandaalityötä: 8
+kohdetta ja 2 skandaalia kuhunkin maahan, yhteensä 50 uutta
+karttamerkkiä. Erä on kuvaton kuten K2-erät 1–4 ja maailman erät M1–M8,
+ja jokainen väite on en-Wikipedian raakatekstin katteessa lähderivillä,
+joka nimeää artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+`node tools/laske-karttanostot.mjs` sanoo erän jälkeen kaikista
+viidestä *täysi*; taulukot ajaa Fable.
+
+Kohteet asuvat maiden omissa `js/packs/maastokohteet-<iso>.js`
+-tiedostoissa (kaikilla viidellä oli tiedosto jo olemassa, joten uusia
+rekisteröintejä `maastokohteet.js`-hakemistoon, `sw.js`:ään tai
+`tools/build-standalone.mjs`:ään ei tarvittu). Skandaalit ovat
+`js/packs/skandaalit.js`:n lopussa, ja `tests/skandaalit.test.mjs`:n
+lukumäärät päivitettiin (skandaaleja 143 → 153 ja maita 59 → 64).
+Eläintäkyihin ei koskettu: ne olivat jo kaikilla viidellä maalla.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Etiopia (ETH) | Aksum, Fasil Ghebbi, Harar, Tiya, Debre Damo, Danakilin syvänne, Hadar, Balen kansallispuisto | (oli jo: Ras Dejen, Tanajärvi, Sininen-Niili) | (oli jo: gelada) | Magdalan ryöstö 1868, Wuchalen artikla 17 (1889) |
+| Kenia (KEN) | Lamu, Fort Jesus, Gedin rauniot, Thimlich Ohinga, Koobi Fora, Hell's Gate, Amboseli, Lewa | (oli jo: Mount Kenya, Victorianjärvi, Intian valtameri) | (oli jo: kirahvinvasa) | Happy Valley 1920–1941, Tsavon ihmissyöjät 1898 |
+| Tansania (TZA) | Olduvain rotko, Serengeti, Kondoan kalliotaide, Kilwa Kisiwani, Bagamoyo, Ujiji, Tabora, Kalambon putoukset | (oli jo: Kilimandžaro, Intian valtameri, Tanganjikajärvi) | (oli jo: norsunvasa) | Maji Maji 1905–1907, maapähkinähanke 1946–1951 |
+| Uganda (UGA) | Kasubin haudat, Murchisonin putoukset, Queen Elizabethin puisto, Kibalen kansallispuisto, Nyeron kalliomaalaukset, Kidepon laakso, Fort Patiko, Jinja | (oli jo: Mount Stanley, Victorianjärvi, Niili) | (oli jo: gorillanpoikanen) | Kabakan karkotus 1953–1955, kadonneet kreivikunnat 1894–1964 |
+| Marokko (MAR) | Volubilis, Aït Benhaddou, Essaouira, Chefchaouen, Hassan-torni, Erg Chebbi, El Jadida, Lixus | (oli jo: Toubkal, Atlantti, Drâa) | (oli jo: berberiapina) | Agadirin kriisi 1911, Annualin katastrofi 1921 |
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin, ja jokaisen kohteen
+lähin on kirjattu sen koordinaattirivin viereen. Koko erän lähin merkki
+on Volubilis 19,2 lautayksikön päässä Fèsistä ja toiseksi lähin Tiya
+20,6 yksikön päässä Addis Abebasta; raja `KAUPUNGIN_KOHDALLA_SADE` on 7.
+`node tools/tarkista-nostopaikat.mjs` antaa kaikille 50:lle rivin
+*pääkartta*, ja `node tools/tarkista-nimiolimitys.mjs` sanoo yhä
+"NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Neljä rajausta, jotka valitsivat sisällön.** (1) M3:n Myanmar-linja:
+artikkeleita, joiden nykytila on selkkaus, ei kirjoitettu. Etiopian
+**Konso** oli erän ainoa kokonaan hylätty ehdokas — sen artikkelissa on
+oma osio "Conflict since 1990", joka kertoo yhä käynnissä olevasta
+väkivallasta — ja sen tilalle tuli Balen vuorten kansallispuisto.
+Samasta linjasta Lamun kortti kertoo vain kaupungin historian eikä
+artikkelin nykypäivän turvallisuustilannetta. (2) Merkkien
+päällekkäisyys karsi kolme muuten hyvää ehdokasta: **Ngorongoro** osuisi
+kahdeksan lautayksikön päähän Olduvain rotkosta (kraatteri mainitaan
+Olduvain kortissa), **Meknès** on 6,6 yksikön päässä Volubiliksesta
+(kaupunki mainitaan Volubiliksen kortissa) ja Ugandan **Bwindi** on
+täsmälleen samassa pisteessä kuin maan eläintäky, gorillanpoikanen.
+Samasta syystä myös kaksi skandaalia vaihtui: **Aksumin obeliski**
+(Rooma 1937–2005) olisi tullut saman erän Aksum-kohteen päälle, joten
+obeliskin tarina kerrotaan Aksumin kortissa ja Etiopian skandaaleiksi
+tulivat Magdala ja Wuchale, ja **Entebbe 1976** olisi ollut samassa
+pisteessä kuin kabakan karkotus, jonka neuvottelut käytiin Entebben
+Government Housessa. (3) Tyyppi kertoo, mitä merkki näyttää: Danakilin
+syvänne ja Erg Chebbi ovat `muu` eivätkä maastoa, koska maastokiintiö
+oli jo täynnä, ja Kalambon putoukset on `historia`, koska kortti kertoo
+maailman vanhimmasta tunnetusta puurakennelmasta eikä vesiputouksesta.
+(4) Lähdeaineiston ohuus: Fort Patikon ja Kasubin hautojen koordinaatit
+eivät ole en-Wikipedian `coordinates`-propissa vaan artikkelin omassa
+infolaatikossa, ja ne on luettu sieltä; Bigo bya Mugenyi ja Sof Omar
+jäivät pois, koska koordinaattia ei ollut kummassakaan.
+
+**Herkät aiheet on kirjoitettu lähteen katteessa ja ilman
+nykypolitiikkaa.** Maji Majin uhriluvut (75 000–300 000), Tsavon
+uhriluvut (Pattersonin 135, päiväkirjan 28–31 ja isotooppitutkimuksen
+10,5 + 24,2) ja Annualin tappiot ovat artikkelien omia lukuja.
+Siirtomaahistorian pakkosiirrot mainitaan toteavasti siellä missä lähde
+ne mainitsee (Kidepon ik ja ketebo, Queen Elizabethin songora), eikä
+yhdenkään kortin aihe ole käynnissä oleva selkkaus.

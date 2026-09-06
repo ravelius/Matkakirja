@@ -9231,4 +9231,554 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /* ══════════════════════════════════════════════════════════════════
+   * ══ ERÄ M11, AFRIKKA 2 6.9.2026 ══════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M11 (ETH, KEN, TZA, UGA, MAR) tuo kaksi skandaalia kuhunkin
+   * viiteen maahan — kymmenen uutta. Kaikki ovat kuvattomia kuten erän
+   * muutkin nostot, ja jokaisen lähderivi nimeää en-Wikipedian
+   * artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+   *
+   * PAIKAT ON MITATTU. Yksikään uusi merkki ei ole pelikaupungin
+   * kohdalla (KAUPUNGIN_KOHDALLA_SADE 7 lautayksikköä,
+   * js/fokuskohteet.js): lähin on Entebben Government House 23,7
+   * lautayksikön päässä Viktoria Nyanzasta ja toiseksi lähin Wuchale
+   * 25,8 yksikön päässä Lalibelasta.
+   *
+   * KAKSI PAIKKAVALINTAA ON TEHTY MERKKIEN PÄÄLLEKKÄISYYDEN TAKIA.
+   * Aksumin obeliski (Rooma 1937–2005) olisi luonteva Etiopian
+   * skandaali, mutta sen merkki osuisi täsmälleen saman erän
+   * Aksum-kohteen päälle (js/packs/maastokohteet-eth.js), joten
+   * obeliskin tarina kerrotaan Aksumin kortissa ja skandaaleiksi
+   * valittiin Magdala ja Wuchale. Samasta syystä Ugandan Entebbe 1976
+   * jäi pois: se olisi samassa pisteessä kuin kabakan karkotus, jonka
+   * neuvottelut käytiin Entebben Government Housessa.
+   *
+   * HERKÄT AIHEET ON KIRJOITETTU LÄHTEEN KATTEESSA JA ILMAN
+   * NYKYPOLITIIKKAA. Maji Majin uhriluvut, Tsavon uhriluvut ja
+   * Annualin tappiot ovat artikkelien omia lukuja, eikä yhdenkään
+   * kortin aihe ole käynnissä oleva selkkaus.
+   * ══════════════════════════════════════════════════════════════════ */
+  ETH: [
+    /*
+     * Magdalan (Amba Mariamin) linnoitus Wollossa.
+     * Lähde: en.wikipedia.org: British expedition to Abyssinia
+     */
+    {
+      id: 'magdalan-ryosto',
+      otsikko: 'Vastaamaton kirje ja Magdalan saalis',
+      nimio: 'Magdala',
+      vuosi: '1868',
+      paikka: 'Magdalan linnoitus, Wollo',
+      lat: 11.2, lon: 39.283333,
+      kortti: 'Etiopian keisari Tewodros II kirjoitti kuningatar Victorialle ja '
+        + 'pyysi liittolaisuutta. Kirje pantiin talteen, mutta siihen ei '
+        + 'vastattu. Keisari vangitsi konsulin ja lähetyssaarnaajat, ja '
+        + 'Britannia lähetti armeijan hakemaan heidät pois. Panttivangit '
+        + 'vapautuivat — ja linnoituksen aarteet lähtivät samaan aikaan '
+        + 'laivaan.',
+      teksti: 'Tewodros lähetti 1860-luvun alussa kirjeitä Venäjälle, Preussiin, '
+        + 'Itävaltaan, Ranskaan ja Britanniaan. Hän haki sotilasliittoa ja '
+        + 'teknistä apua, sillä hänen valtansa horjui ja Egypti ja osmanit '
+        + 'painoivat rajoilla. Vain Ranska vastasi. Lontoossa kirje otettiin '
+        + 'talteen mutta jätettiin vaille vastausta: Britannian etu oli '
+        + 'yhteistyössä osmanien ja Egyptin kanssa, ja Yhdysvaltain '
+        + 'sisällissodan jälkeen Egyptin ja Sudanin puuvillasta oli tullut '
+        + 'tärkeää.'
+        + '\n\nSeuraava eurooppalainen keisarin tiellä oli lähetyssaarnaaja '
+        + 'Henry Stern, joka oli kirjassaan maininnut Tewodrosin vaatimattoman '
+        + 'syntyperän. Stern ja hänen apulaisensa pantiin kahleisiin, ja '
+        + 'tammikuussa 1864 vangittiin konsuli Charles Duncan Cameron. '
+        + 'Neuvottelijaksi lähetetty Hormuzd Rassam päätyi itsekin vangiksi. '
+        + 'Elokuussa 1867 kuningatar Victoria ilmoitti sotaretkestä, ja '
+        + 'kenraali Robert Napier valtasi Magdalan ja vapautti vangit. '
+        + 'Historioitsija Harold Marcus on kutsunut retkeä yhdeksi historian '
+        + 'kalleimmista kunnia-asioista.'
+        + '\n\nMukana kulki British Museumin virkamies Richard Rivington '
+        + 'Holmes. Käsikirjoitukset päätyivät British Museumiin ja Bodleyn '
+        + 'kirjastoon, muuta saalista Windsoriin, Victoria and Albert '
+        + '-museoon ja armeijamuseoon. Osa on palautettu vähitellen: Kebra '
+        + 'Nagast ja ikoni keisari Yohannes IV:lle 1870-luvulla, toinen '
+        + 'Tewodrosin kruunuista keisarinna Zawditulle 1924, keisarin lakki '
+        + 'ja sinetti Elisabet II:lta 1960-luvulla ja hiuskiehkura '
+        + 'armeijamuseolta 2019. Palautusta ajamaan perustettiin 1999 '
+        + 'järjestö AFROMET.',
+      lahde: 'en-Wikipedia "British expedition to Abyssinia", johdanto-osa sekä '
+        + 'osiot "Background", "Hostages" ja "Looted objects". Tarkistettu '
+        + '6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Tewodros II vangitsi brittiläisen konsulin?',
+        vaihtoehdot: [
+          'Kirjeeseen kuningattarelle ei ollut vastattu',
+          'Konsuli oli jäänyt kiinni vakoilusta',
+          'Konsuli kieltäytyi maksamasta tullia',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Wuchalen kylä Wollossa, jossa sopimus allekirjoitettiin.
+     * Lähde: en.wikipedia.org: Treaty of Wuchale
+     */
+    {
+      id: 'wuchalen-artikla',
+      otsikko: 'Yksi verbi, kaksi eri sopimusta',
+      nimio: 'Wuchale',
+      vuosi: '1889',
+      paikka: 'Wuchale, Wollo',
+      lat: 11.5, lon: 39.6,
+      kortti: 'Italia ja Etiopia allekirjoittivat 1889 ystävyys- ja '
+        + 'kauppasopimuksen kahdella kielellä. Kaksikymmentä artiklaa oli '
+        + 'samoja, yksi ei. Amharaksi keisari sai käyttää Italiaa välittäjänä '
+        + 'muiden valtioiden kanssa; italiaksi hänen oli pakko. Ero oli yhdessä '
+        + 'verbissä.',
+      teksti: 'Sopimuksen allekirjoittivat 2. toukokuuta 1889 Menelik II ja '
+        + 'kreivi Pietro Antonelli pienessä Wuchalen kylässä, jonka mukaan se '
+        + 'nimettiin. Tarkoitus oli edistää ystävyyttä ja kauppaa Italian '
+        + 'Eritrean-miehityksen jälkeen. Menelik luovutti alueita ja sai '
+        + 'vastineeksi vakuutuksen Etiopian itsenäisyydestä sekä rahallista ja '
+        + 'sotilaallista apua. Teksti kirjoitettiin sekä amharaksi että '
+        + 'italiaksi, ja artikla 19 määräsi, että kumpikin versio kertoo saman '
+        + 'asian.'
+        + '\n\nArtikla 17 ei kertonut. Amharaksi keisari "voi käyttää" Italian '
+        + 'hallitusta asioidessaan muiden valtojen kanssa — se oli oikeus, ei '
+        + 'velvollisuus. Italiaksi hänen oli hoidettava kaikki ulkosuhteensa '
+        + 'Italian kautta, mikä tekisi Etiopiasta protektoraatin. Italialaisten '
+        + 'oman selityksen mukaan kyse oli yhden verbin käännösvirheestä: '
+        + 'amharaksi salliva, italiaksi käskevä.'
+        + '\n\nLokakuussa 1889 Italia ilmoitti kaikille Euroopan hallituksille, '
+        + 'että Etiopia on sen suojelualue eivätkä muut saa asioida sen kanssa '
+        + 'suoraan. Väitteen hyväksyivät kaikki paitsi osmanivaltakunta, joka '
+        + 'piti yhä kiinni Eritreasta, ja Venäjä, joka ei sulattanut '
+        + 'ortodoksisen maan alistamista katoliselle. Menelik irtisanoi '
+        + 'sopimuksen, italialaiset hyökkäsivät 1895, ja kahden päivän taistelu '
+        + 'Adwassa päättyi Etiopian voittoon ja turvasi maan itsenäisyyden.',
+      lahde: 'en-Wikipedia "Treaty of Wuchale", johdanto-osa sekä osiot '
+        + '"Background", "Articles" ja "Disputes". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten artikla 17 erosi kieliversioissa?',
+        vaihtoehdot: [
+          'Amharaksi oli pakko, italiaksi sai valita',
+          'Amharaksi sai valita, italiaksi oli pakko',
+          'Artikla puuttui amharankielisestä kokonaan',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  KEN: [
+    /*
+     * Wanjohin laakso Aberdaren vuoriston juurella.
+     * Lähde: en.wikipedia.org: Happy Valley set
+     */
+    {
+      id: 'happy-valley',
+      otsikko: 'Onnellinen laakso ja kreivin kuolema',
+      nimio: 'Happy Valley',
+      vuosi: '1920–1941',
+      paikka: 'Wanjohin laakso, Aberdaren juurella',
+      lat: -0.62765, lon: 36.70832,
+      kortti: 'Wanjohin laaksoon Aberdaren rinteille asettui 1920-luvulla joukko '
+        + 'brittiläisiä ja irlantilaisia aatelisia. Maine syntyi nopeasti: '
+        + 'juhlia, huumeita ja avioliittoja, jotka eivät pysyneet kasassa. Kun '
+        + 'kreivi Erroll surmattiin 1941, oikeudenkäynti näytti Britannialle, '
+        + 'mitä siirtomaan yläluokka oli puuhannut.',
+      teksti: 'Ensimmäinen siirtolaisviljelijä Geoffrey Buxton siirtyi kuivalta '
+        + 'Rift-laaksolta ylös vuorille, löysi mieleisensä maat ja antoi '
+        + 'seudulle nimen Happy Valley. Naivashan järven ympäristö oli '
+        + 'ensimmäisiä eurooppalaisten asuttamia alueita Keniassa ja joukon '
+        + 'metsästysmaita; Aberdaren itäpuolinen Nyeri oli sen tärkein '
+        + 'kaupunki.'
+        + '\n\nJoukkoon luettiin muun muassa lordi Delamere, Karen Blixen ja '
+        + 'hänen miehensä Bror von Blixen-Finecke, Denys Finch Hatton, lady '
+        + 'Idina Sackville, Alice de Janzé sekä Josslyn Hay, Errollin 22. '
+        + 'kreivi. Elämäkerturi Ulf Aschanin sanoin he olivat "sukkelia, '
+        + 'viehättäviä, hyvin kasvatettuja ja lukeneita" ja hellittämättömiä '
+        + 'huvittelussaan, joka saavutettiin useimmiten juomalla, huumeilla ja '
+        + 'seksillä. Vuoden 1929 pörssiromahdus tyrehdytti uusien tulokkaiden '
+        + 'virran, mutta 1939 Keniassa asui jo 21 000 eurooppalaista.'
+        + '\n\nJulkisuuteen piiri jäi rikoksensa kautta. Elokuva White Mischief '
+        + 'dramatisoi oikeudenkäynnin, jossa Sir Jock Delves Broughtonia '
+        + 'syytettiin Errollin murhasta. Juanita Carberry kertoi nuoruudestaan '
+        + 'ja osuudestaan tapaukseen kirjassaan The Happy Valley, ja Frances '
+        + 'Osbornen elämäkerta The Bolter kokosi Idina Sackvillen ympärille '
+        + 'piirin synnyn. 2000-luvun puolivälissä jälkipolvet palasivat '
+        + 'otsikoihin, kun lordi Delameren pojanpojan Thomas Cholmondeleyn '
+        + 'oikeusjutut nousivat julkisuuteen.',
+      lahde: 'en-Wikipedia "Happy Valley set", johdanto-osa sekä osiot '
+        + '"History", "Location", "In popular culture" ja "Notables". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuka antoi laaksolle nimen Happy Valley?',
+        vaihtoehdot: [
+          'Kreivi Erroll',
+          'Karen Blixen',
+          'Viljelijä Geoffrey Buxton',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Tsavo-joen sillan työmaa Ugandan rautatiellä.
+     * Lähde: en.wikipedia.org: Tsavo Man-Eaters
+     */
+    {
+      id: 'tsavon-ihmissyojat',
+      otsikko: 'Sata kolmekymmentäviisi vai kolmekymmentä?',
+      nimio: 'Tsavo',
+      vuosi: '1898',
+      paikka: 'Tsavo-joen silta, Ugandan rautatie',
+      lat: -2.966667, lon: 38.466667,
+      kortti: 'Kaksi harjatonta urosleijonaa pysäytti rautatietyömaan yhdeksäksi '
+        + 'kuukaudeksi. Työnjohtaja ampui ne lopulta ja kirjoitti kirjan, jossa '
+        + 'uhrien määräksi ilmoitettiin 135. Sata vuotta myöhemmin leijonien '
+        + 'luiden ja karvojen kemia kertoi toisenlaisen luvun.',
+      teksti: 'Maaliskuussa 1898 britit alkoivat rakentaa siltaa Tsavo-joen yli '
+        + 'osana rataa, joka yhdisti Ugandan Kilindinin satamaan. Työmaa oli '
+        + 'useita leirejä kolmentoista kilometrin matkalla, ja siellä oli '
+        + 'tuhansia työntekijöitä Intiasta. Kaksi leijonaa alkoi raahata miehiä '
+        + 'teltoista öisin. Nuotiot ja piikkipensasaidat eivät auttaneet: '
+        + 'leijonat hyppäsivät yli tai ryömivät läpi. Sadat pakenivat, ja '
+        + 'sillan rakennus pysähtyi.'
+        + '\n\nEversti John Henry Patterson viritti ansoja ja väijyi puissa. '
+        + 'Ensimmäisen leijonan hän ampui 9. joulukuuta; se oli kuonosta '
+        + 'hännänpäähän 2,95 metriä, ja raatoa kantamaan tarvittiin kahdeksan '
+        + 'miestä. Toinen kaatui kaksikymmentä päivää myöhemmin. Britannian '
+        + 'pääministeri lordi Salisbury selosti asiaa ylähuoneelle: työt olivat '
+        + 'pysähtyneet, koska leijonapari oli saanut "mitä valitettavimman '
+        + 'mieltymyksen työmiehiimme".'
+        + '\n\nPatterson kirjoitti retkestään kirjan ja antoi uhrimääristä '
+        + 'useita lukuja, korkeimpana 135. Oltuaan 25 vuotta hänen '
+        + 'lattiamattoinaan nahat myytiin 1924 Chicagon Field Museumille 5 000 '
+        + 'dollarilla. Vuonna 2001 tutkijat lukivat Pattersonin oman '
+        + 'päiväkirjan ja päätyivät 28–31 uhriin — mutta huomauttivat, että '
+        + 'päiväkirja laski vain intialaiset työntekijät. Vuonna 2009 '
+        + 'julkaistu luiden ja karvojen isotooppitutkimus arvioi, että toinen '
+        + 'leijona söi noin 10,5 ja toinen noin 24,2 ihmistä.',
+      lahde: 'en-Wikipedia "Tsavo Man-Eaters", johdanto-osa sekä osiot '
+        + '"Historical information", "Museum display" ja "Modern research". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten uhrien määrää on myöhemmin tarkistettu?',
+        vaihtoehdot: [
+          'Päiväkirjasta ja luiden isotooppitutkimuksesta',
+          'Rautatieyhtiön palkkalistoista',
+          'Silminnäkijähaastatteluista 1950-luvulla',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  TZA: [
+    /*
+     * Songea, Saksan Itä-Afrikan eteläinen kapina-alue.
+     * Lähde: en.wikipedia.org: Maji Maji Rebellion
+     */
+    {
+      id: 'maji-maji',
+      otsikko: 'Vesi, jonka piti muuttaa luodit',
+      nimio: 'Maji Maji',
+      vuosi: '1905–1907',
+      paikka: 'Songea, Saksan Itä-Afrikka',
+      lat: -10.683333, lon: 35.65,
+      kortti: 'Saksan siirtomaahallinto määräsi 1902 kylät kasvattamaan '
+        + 'puuvillaa vientiin, vaikka vettä ei riittänyt. Kolme vuotta '
+        + 'myöhemmin henkiparantaja jakoi sotalääkettä, jonka luvattiin '
+        + 'muuttaa saksalaisten luodit vedeksi. Kapina levisi koko eteläiseen '
+        + 'siirtomaahan.',
+      teksti: 'Saksan ote Itä-Afrikasta oli heikko, ja siksi se oli kova: '
+        + 'linnakkeita sisämaassa, henkivero vuodesta 1898 ja pakkotyötä '
+        + 'teiden rakentamiseen. Kuvernööri Gustav Adolf von Götzen antoi '
+        + '1902 määräyksen, jonka mukaan jokaisen kylän oli tuotettava oma '
+        + 'kiintiönsä puuvillaa vientiin. Kasvi vaatii paljon vettä, eikä sitä '
+        + 'voinut kasvattaa suuressa osassa maata. Kylänvanhimmat pantiin '
+        + 'valvomaan työtä, mikä asetti heidät omia kyliään vastaan; miesten '
+        + 'ollessa poissa naiset ottivat heidän työnsä, ja 1905 alkoi uhata '
+        + 'kuivuus.'
+        + '\n\nHenkiparantaja Kinjikitile Ngwale kertoi olevansa käärmehenki '
+        + 'Hongon vallassa ja jakoi kannattajilleen lääkettä: vettä, jonka '
+        + 'joukkoon oli sekoitettu risiiniöljyä ja hirssinsiemeniä. Swahiliksi '
+        + 'vesi on maji, ja siitä kapina sai nimensä. Taistelijat sitoivat '
+        + 'hirssinkorsia otsalleen. Heinäkuun 31. päivänä 1905 matumbit '
+        + 'tuhosivat puuvillasadon Samangassa. Kinjikitile hirtettiin '
+        + 'maanpetoksesta, ja ennen teloitustaan hän sanoi levittäneensä '
+        + 'lääkkeen jo koko seudulle.'
+        + '\n\nSota kesti vuoteen 1907. Kuolleita oli 75 000–300 000, valtaosa '
+        + 'nälkään: kapinan kukistamiseen käytetty poltetun maan taktiikka '
+        + 'jätti jälkeensä nälänhädän, jota kutsutaan nimellä ukame, suuri '
+        + 'nälkä. Götzen teetti sodan jälkeen tutkimuksen syistä ja julkaisi '
+        + '1909 oman historiateoksensa kapinasta. Historioitsija John Iliffe '
+        + 'on huomauttanut, ettei kirjassa mainita kertaakaan puuvillahanketta, '
+        + 'jonka kirjoittaja itse oli aloittanut.',
+      lahde: 'en-Wikipedia "Maji Maji Rebellion", johdanto-osa sekä osiot '
+        + '"Causes" ja "Uprising". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä swahilin sana maji tarkoittaa?',
+        vaihtoehdot: [
+          'Vapautta',
+          'Vettä',
+          'Tulta',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Kongwa Dodoman lähellä, hankkeen päämaja.
+     * Lähde: en.wikipedia.org: Tanganyika groundnut scheme
+     */
+    {
+      id: 'maapahkinahanke',
+      otsikko: 'Puoli Lontoota ja kolme miljoonaa eekkeriä',
+      nimio: 'Maapähkinät',
+      vuosi: '1946–1951',
+      paikka: 'Kongwa, Tanganjika',
+      lat: -6.192778, lon: 36.407222,
+      kortti: 'Britannia oli yhä säännöstelyssä ja pulassa margariinista. '
+        + 'Ratkaisuksi päätettiin kylvää maapähkinää kolmelle miljoonalle '
+        + 'eekkerille Tanganjikassa. Varoitukset sateista, teistä ja kiireestä '
+        + 'sivuutettiin, ja viisi vuotta myöhemmin hanke haudattiin 36 '
+        + 'miljoonan punnan tappiolla.',
+      teksti: 'Sodan jälkeen Britannia oli syvästi velkaa Yhdysvalloille, ja '
+        + 'Attleen hallitus haki helpotusta siirtomaista. Vuonna 1946 United '
+        + 'Africa Companyn johtaja Frank Samuel ehdotti maapähkinän '
+        + 'kasvattamista kasviöljyksi Tanganjikassa, joka oli YK:n '
+        + 'huoltohallintoalue. Elintarvikeministeri John Strachey innostui, ja '
+        + 'kolmen kuukauden tutkimusmatka suositteli syyskuussa 1946 3,21 '
+        + 'miljoonan eekkerin viljelyä vuoteen 1952 mennessä. Hallitus hyväksyi '
+        + 'suunnitelman tammikuussa 1947. "Maapähkinäarmeijan" 1 200 paikkaan '
+        + 'ilmoittautui 100 000 entistä sotilasta.'
+        + '\n\nEtujoukko leiriytyi Kongwaan lähelle Dodomaa ja piti maata '
+        + 'sopivana savisuudesta ja vedenpuutteesta huolimatta. Paikalle kasvoi '
+        + 'kokonainen kaupunki, jota kutsuttiin nimellä Half London. Koneita '
+        + 'ostettiin Kanadasta ja Yhdysvaltain armeijan ylijäämävarastoista '
+        + 'Filippiineiltä, ja moni traktori oli jo ruostunut käyttökelvottomaksi. '
+        + 'Dar es Salaamin satama tukkeutui, tulva vei osan yksiraiteista rataa, '
+        + 'ja puskutraktorit saapuivat vasta huhtikuussa 1947. Baobabit eivät '
+        + 'antaneet periksi: yksi niistä oli kylän vankila, toinen esi-isien '
+        + 'palvontapaikka ja monessa asui mehiläispesä.'
+        + '\n\nKesän 1947 lopussa kaksi kolmasosaa traktoreista oli hajalla. '
+        + 'Ylijäämäisistä Sherman-panssarivaunuista riisuttiin panssarit ja '
+        + 'eteen pantiin puskuterä; niitäkään ei riittänyt. Hanke hylättiin '
+        + '1951, ja 1953 sitä kutsuttiin Britannian siirtomaahistorian '
+        + 'pahimmaksi fiaskoksi.',
+      lahde: 'en-Wikipedia "Tanganyika groundnut scheme", johdanto-osa sekä '
+        + 'osiot "Background" ja "Cultivation". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mihin maapähkinöitä oli tarkoitus käyttää?',
+        vaihtoehdot: [
+          'Maalien sideaineeksi',
+          'Margariiniin ja ruokaöljyyn',
+          'Räjähteiden valmistukseen',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  UGA: [
+    /*
+     * Government House Entebbessä, jossa kuvernöörin ja kabakan
+     * neuvottelut käytiin. Lähde: en.wikipedia.org: Kabaka crisis
+     */
+    {
+      id: 'kabakan-karkotus',
+      otsikko: 'Kuudet neuvottelut ja lentolippu Lontooseen',
+      nimio: 'Kabakan karkotus',
+      vuosi: '1953–1955',
+      paikka: 'Government House, Entebbe',
+      lat: 0.05, lon: 32.46,
+      kortti: 'Siirtomaaministerin ohimennen heittämä ajatus Itä-Afrikan '
+        + 'liittovaltiosta säikäytti Bugandan. Kun kabaka Mutesa II vaati '
+        + 'kuningaskunnalleen eroa protektoraatista, kuvernööri Andrew Cohen '
+        + 'perui Britannian tunnustuksen ja lennätti hänet maanpakoon. Kaksi '
+        + 'vuotta myöhemmin hänet oli tuotava takaisin.',
+      teksti: 'Buganda oli vuoden 1900 sopimuksen mukaan perustuslaillinen '
+        + 'monarkia laajemman Ugandan protektoraatin sisällä. Vuodesta 1952 '
+        + 'uusi kuvernööri Sir Andrew Cohen esitti, että Bugandalle '
+        + 'siirrettäisiin lisää tehtäviä — mutta vain jos se muodollisesti '
+        + 'hyväksyisi olevansa osa protektoraattia. Mutesa II suostui, ja '
+        + 'yhteinen muistio julkaistiin maaliskuussa 1953.'
+        + '\n\nKesäkuun 30. päivänä siirtomaaministeri Oliver Lyttelton mainitsi '
+        + 'Lontoossa pitämässään puheessa ohimennen mahdollisuuden koko '
+        + 'Itä-Afrikan yhdistämisestä tai liittovaltiosta. East African '
+        + 'Standard kertoi puheesta 2. ja 3. heinäkuuta, ja Bugandan '
+        + 'ministerit kirjoittivat Cohenille kolme päivää myöhemmin '
+        + 'vastustaakseen ajatusta. Rauhoittelu ei auttanut: baganda pelkäsi '
+        + 'kulttuurinsa sulautuvan, ja vaatimus Bugandan itsenäisyydestä levisi. '
+        + 'Myös Bunyoron, Toron ja Ankolen hallitsijat kirjoittivat huolestaan.'
+        + '\n\nKuudet kahdenkeskiset neuvottelut Government Housessa eivät '
+        + 'ratkaisseet mitään. Cohen ilmoitti, että kiihotus yhtenäistä Ugandaa '
+        + 'vastaan rikkoi vuoden 1900 sopimusta, ja antoi kabakalle viisi '
+        + 'viikkoa harkinta-aikaa. Marraskuun 30. päivänä 1953 hän ojensi '
+        + 'Mutesalle kirjeen, jolla Britannia perui tunnustuksensa tälle '
+        + 'Bugandan laillisena hallitsijana. Cohen julisti hätätilan ja lähetti '
+        + 'kabakan maanpakoon Lontooseen. Suuttumus oli niin laajaa, että '
+        + 'Britannian oli peräännyttävä: Mutesa palautettiin vuoden 1955 '
+        + 'Bugandan sopimuksella, ja koko kiista muovasi sen, millaiseksi '
+        + 'Ugandan itsenäisyys lopulta tuli.',
+      lahde: 'en-Wikipedia "Kabaka crisis", johdanto-osa sekä osiot '
+        + '"Background" ja "Crisis". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä laukaisi kabakan kriisin?',
+        vaihtoehdot: [
+          'Kiista puuvillan hinnasta',
+          'Puhe, jossa vihjattiin Itä-Afrikan liittovaltioon',
+          'Kabakan kieltäytyminen maksamasta veroja',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Buyagan ja Bugangaizin kreivikunnat, nykyinen Kibaalen piiri.
+     * Lähde: en.wikipedia.org: 1964 Ugandan lost counties referendum
+     */
+    {
+      id: 'kadonneet-kreivikunnat',
+      otsikko: 'Maat, jotka luvattiin palkkioksi',
+      nimio: 'Kadonneet maat',
+      vuosi: '1894–1964',
+      paikka: 'Buyaga ja Bugangaizi, Kibaale',
+      lat: 0.783333, lon: 31.083333,
+      kortti: 'Eversti Colvile lupasi Bugandalle kaikki Kafu-joen eteläpuoliset '
+        + 'maat, jos se auttaisi kukistamaan Bunyoron kuningaskunnan. Lupaus '
+        + 'pidettiin, ja kreivikunnat siirtyivät. Vasta seitsemänkymmentä vuotta '
+        + 'myöhemmin asukkaat saivat äänestää siitä, kenelle he kuuluvat.',
+      teksti: 'Brittieversti Henry Colvile hyökkäsi 1893–1894 Bunyoron '
+        + 'kuningaskuntaan turvatakseen ja laajentaakseen nuorta Ugandan '
+        + 'protektoraattia, joka koostui alkuun lähinnä Bugandasta. Tuen '
+        + 'vastineeksi hän lupasi Bugandalle kaiken maan Kafu-joen '
+        + 'eteläpuolelta, ja sodan jälkeen kreivikunnat todella siirrettiin. '
+        + 'Vuoden 1900 Bugandan sopimus vahvisti siirron. Bunyoron hallitus '
+        + 'vetosi Britanniaan yhä uudelleen.'
+        + '\n\nItsenäisyyden lähestyessä kiista uhkasi kärjistyä väkivallaksi. '
+        + 'Munsterin komissio esitti 1961 kansanäänestystä Buyagan ja '
+        + 'Bugangaizin kreivikunnissa sekä yhdessä Bunyoron valitsemassa '
+        + 'kolmannessa. Kumpikaan kuningaskunta ei pitänyt ehdotuksesta: '
+        + 'Bunyoro halusi äänestyksen kaikissa menetetyissä kreivikunnissa, '
+        + 'Buganda ei missään, ja Bunyoron edustajat kävelivät ulos vuoden 1961 '
+        + 'perustuslakikokouksesta. Lordi Molsonin komissio suositteli 1962 '
+        + 'kahden kreivikunnan siirtoa ilman äänestystä, mikä nostatti '
+        + 'kohun Bugandan parlamentissa.'
+        + '\n\nLopullisen ratkaisun saneli siirtomaaministeri Reginald Maudling '
+        + 'Ugandan itsenäisyyskokouksessa kesäkuussa 1962: kansanäänestys '
+        + 'järjestetään vain Buyagassa ja Bugangaizissa, ja äänioikeus on '
+        + 'niillä, jotka asuivat alueella itsenäistymishetkellä. Äänestys '
+        + 'pidettiin marraskuussa 1964, ja asukkaat valitsivat ylivoimaisesti '
+        + 'paluun Bunyoroon.',
+      lahde: 'en-Wikipedia "1964 Ugandan lost counties referendum", johdanto-osa '
+        + 'sekä osiot "Background" ja "Prelude". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Minkä asukkaat valitsivat vuoden 1964 äänestyksessä?',
+        vaihtoehdot: [
+          'Paluun Bunyoroon',
+          'Jäämisen Bugandaan',
+          'Oman erillisen piirikunnan',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  MAR: [
+    /*
+     * Agadirin satama, jonne SMS Panther saapui 1. heinäkuuta 1911.
+     * Lähde: en.wikipedia.org: Agadir Crisis
+     */
+    {
+      id: 'agadirin-kriisi',
+      otsikko: 'Tykkivene, jonka tekosyy saapui myöhässä',
+      nimio: 'Panther Agadirissa',
+      vuosi: '1911',
+      paikka: 'Agadirin satama',
+      lat: 30.421389, lon: -9.583056,
+      kortti: 'Ranska lähetti heinäkuussa 1911 joukkoja Marokon sisäosiin. Saksa '
+        + 'vastasi lähettämällä tykkiveneen Agadiriin muka suojelemaan '
+        + 'kauppaetujaan. Saksalainen siviili, jonka suojeleminen oli koko '
+        + 'tekosyy, saapui kaupunkiin kolme päivää laivan jälkeen.',
+      teksti: 'Ranskan asema Marokossa oli vahvistettu Algecirasin kokouksessa '
+        + '1906, ja 1909 Ranska ja Saksa sopivat, että Ranskalla on poliittinen '
+        + 'valta mutta molemmat kunnioittavat toistensa taloudellisia etuja. '
+        + 'Vuonna 1911 sulttaani Abd al-Hafidia vastaan puhkesi kapina. Ranska '
+        + 'sai sulttaanin pyytämään apua ja lähetti huhtikuun lopussa '
+        + 'lentävän osaston sisämaahan sillä verukkeella, että eurooppalaisia '
+        + 'oli suojeltava Fèsissä — vaikka kapina oli syvällä sisämaassa eikä '
+        + 'vaara ollut todellinen. Espanja miehitti kesäkuussa Larachen ja '
+        + 'Ksar el-Kebirin.'
+        + '\n\nKun Ranskan aloittamiin neuvotteluihin ei kuulunut vastausta, '
+        + 'Saksan ulkoministeri Kiderlen-Waechter pyysi keisarilta luvan '
+        + 'lähettää tykkiveneen. SMS Panther saapui Agadiriin 1. heinäkuuta '
+        + '1911, ja muutamaa päivää myöhemmin sen korvasi risteilijä SMS '
+        + 'Berlin. Saksalainen siviili Hermann Wilberg, jonka pelastaminen oli '
+        + 'esitetty syyksi, lähetettiin paikalle 110 kilometrin päästä ja ehti '
+        + 'perille vasta kolme päivää laivan jälkeen.'
+        + '\n\nHeinäkuun 21. päivänä valtiovarainministeri David Lloyd George '
+        + 'sanoi Lontoossa Mansion Housessa, että nöyryytyksellä ostettu rauha '
+        + 'olisi suurvallalle sietämätön; Saksassa se luettiin varoitukseksi. '
+        + 'Samaan aikaan Berliiniä koetteli rahoituskriisi: pörssi laski '
+        + 'yhdessä päivässä 30 prosenttia ja Reichsbank menetti kuukaudessa '
+        + 'viidenneksen kullastaan. Marraskuun 4. päivänä sovittiin, että '
+        + 'Ranska ottaa Marokon protektoraatikseen ja luovuttaa osan Ranskan '
+        + 'Kongosta Saksan Kamerunille.',
+      lahde: 'en-Wikipedia "Agadir Crisis", johdanto-osa sekä osiot '
+        + '"Background", "Events" ja "Negotiations". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä Saksa sai lopulta vastineeksi?',
+        vaihtoehdot: [
+          'Osan Ranskan Kongosta',
+          'Agadirin sataman',
+          'Kaksi laivastotukikohtaa Marokosta',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Annualin leiri Ait Oulichekin laaksossa Rifin vuorilla.
+     * Lähde: en.wikipedia.org: Battle of Annual
+     */
+    {
+      id: 'annualin-katastrofi',
+      otsikko: 'Sata kolmekymmentä kilometriä ilman vesipistettä',
+      nimio: 'Annual',
+      vuosi: '1921',
+      paikka: 'Annual, Rifin vuoret',
+      lat: 35.12, lon: -3.583,
+      kortti: 'Espanja eteni 1921 Rifiin ilman kunnollisia linnakkeita, '
+        + 'yhteyksiä tai vesipisteitä. Kesäkuussa menetettiin yksi etuvartio, '
+        + 'heinäkuussa toinen. Heinäkuun 22. päivänä perääntyminen muuttui '
+        + 'pakokauhuksi, ja seuraukset kaatoivat hallituksia Madridissa.',
+      teksti: 'Kenraali Manuel Fernández Silvestre aloitti alkuvuodesta 1921 '
+        + 'hyökkäyksen rannikolta Koillis-Marokkoon. Joukot työntyivät lähes '
+        + '130 kilometriä eteenpäin ilman että yhteydet oli turvattu tai '
+        + 'selustan alueet alistettu. Uutta aluetta piti hallussaan vain '
+        + 'pieniä tukikohtia, joissa oli 12–20 miestä; ne olivat kaukana '
+        + 'toisistaan, korkeilla paikoilla, kaukana vedestä ja huonojen '
+        + 'yhteyksien päässä. Päämääränä oli pysyvä tukikohta Al Hoceiman '
+        + 'lahden rannalla.'
+        + '\n\nRifiläisiä joukkoja johti Abd el-Krim, entinen virkamies ja '
+        + 'tulkki Espanjan alkuperäisasiain toimistossa Melillassa. Kesäkuun '
+        + 'ensimmäisenä päivänä rifiläiset valtasivat vain tunteja aiemmin '
+        + 'pystytetyn tukikohdan Abarrán-vuorella, ja 179 espanjalaissotilasta '
+        + 'kuoli. Neljä päivää myöhemmin ylikomissaari Dámaso Berenguer '
+        + 'kieltäytyi lähettämästä Silvestrelle vahvistuksia. Igueribenin '
+        + 'asema piiritettiin 14. heinäkuuta; kun se evakuoitiin 21. '
+        + 'heinäkuuta, kolmensadan miehen varuskunnasta selvisi 33.'
+        + '\n\nSeuraavana päivänä noin 3 000 rifiläistä hyökkäsi Annualin '
+        + 'leiriin, jossa oli 5 000 miestä. Silvestre määräsi perääntymään '
+        + 'kohti Melillaa, mutta kolonna hajosi lähes heti, ja marokkolaiset '
+        + 'apujoukot ja liittolaisheimot siirtyivät vastapuolelle. Espanjassa '
+        + 'tapahtumaa kutsutaan Annualin katastrofiksi. Se kaatoi useita '
+        + 'hallituksia, johti Miguel Primo de Riveran sotilasdiktatuuriin ja '
+        + 'lopulta kuningas Alfonso XIII:n luopumiseen kruunusta.',
+      lahde: 'en-Wikipedia "Battle of Annual", johdanto-osa sekä osiot '
+        + '"Background", "Annual" ja "Battle". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuka johti rifiläisiä Annualissa?',
+        vaihtoehdot: [
+          'Dámaso Berenguer',
+          'Manuel Fernández Silvestre',
+          'Abd el-Krim',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
 };
