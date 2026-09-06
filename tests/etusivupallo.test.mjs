@@ -619,18 +619,30 @@ test('harsojen liuku sammuu ennen laatan reunaa eikä jätä suoraa rajaa', () =
   const sade = Number(yhteinen.match(/--harson-sade: (\d+)%;/)[1]);
   assert.ok(sade <= 56, `säde ${sade} % jättää laatan reunaan näkyvää harsoa`);
 
-  /** Liukuvärin pysäkit: [peittävyys, kohta säteestä %] --harson-haivytyksen funktiona. */
-  const pysakit = (haivytys) => [...yhteinen.matchAll(/rgba\(243, 228, 196, ([\d.]+)\)\s+([^,\n]+)/g)]
-    .map((m) => {
-      const paikka = m[2].trim();
-      if (paikka === 'var(--harson-haivytys)') return [Number(m[1]), haivytys];
-      const c = /calc\(var\(--harson-haivytys\) \+ (\d+)%\)/.exec(paikka);
-      // Viimeisen pysäkin perässä on liukuvärin sulkeva sulku: parseFloat.
-      return [Number(m[1]), c ? haivytys + Number(c[1]) : parseFloat(paikka)];
-    });
+  /*
+   * PYSÄKIT LUETAAN KAAVASTA, EI KIINTEISTÄ LUVUISTA. Liu'un pituus on
+   * oma muuttujansa (--harson-liuku), ja jokainen pysäkki on osuus
+   * siitä: `calc(var(--harson-haivytys) + var(--harson-liuku) * 0,125)`.
+   * Näin liu'un matkaa voi pidentää yhdestä luvusta koskematta
+   * pysäkkeihin (omistaja 6.9.2026 klo 23.58: *"Alaosan vaalean raja
+   * pitää feidautuu pidemmällä matkalla"*).
+   */
+  /** Liukuvärin pysäkit: [peittävyys, kohta säteestä %]. */
+  const pysakit = (haivytys, liuku) => [
+    ...yhteinen.matchAll(/rgba\(243, 228, 196, ([\d.]+)\)\s+([^,\n]+)/g),
+  ].map((m) => {
+    const paikka = m[2].trim();
+    const alfa = Number(m[1]);
+    if (paikka === 'var(--harson-haivytys)') return [alfa, haivytys];
+    const c = /calc\(var\(--harson-haivytys\) \+ var\(--harson-liuku\)(?: \* ([\d.]+))?\)/
+      .exec(paikka);
+    if (c) return [alfa, haivytys + liuku * (c[1] === undefined ? 1 : Number(c[1]))];
+    // Viimeisen pysäkin perässä on liukuvärin sulkeva sulku: parseFloat.
+    return [alfa, parseFloat(paikka)];
+  });
   /** Peittävyys laatan suoran reunan kohdalla (reuna on 50 % laatasta). */
-  const reunapeitto = (haivytys, peitto) => {
-    const lista = pysakit(haivytys);
+  const reunapeitto = (haivytys, liuku, peitto) => {
+    const lista = pysakit(haivytys, liuku);
     assert.equal(lista[lista.length - 1][0], 0, 'viimeinen pysäkki ei ole täysin läpinäkyvä');
     assert.equal(lista[lista.length - 1][1], 100, 'liuku ei sammu vasta ellipsin reunalla');
     const kohta = (50 / sade) * 100;
@@ -652,6 +664,7 @@ test('harsojen liuku sammuu ennen laatan reunaa eikä jätä suoraa rajaa', () =
     return {
       peitto: Number(lohko.match(/--harson-peitto: ([\d.]+);/)[1]),
       haivytys: Number(lohko.match(/--harson-haivytys: (\d+)%;/)[1]),
+      liuku: Number(lohko.match(/--harson-liuku: (\d+)%;/)[1]),
       pysty: Math.abs(Number(inset[1])),
       vaaka: Math.abs(Number(inset[2])),
     };
@@ -666,12 +679,43 @@ test('harsojen liuku sammuu ennen laatan reunaa eikä jätä suoraa rajaa', () =
    * hunnun, joka erottui meren sinen päällä).
    */
   for (const [nimi, h] of [['palsta', palsta], ['juliste', juliste]]) {
-    const reuna = reunapeitto(h.haivytys, h.peitto);
+    const reuna = reunapeitto(h.haivytys, h.liuku, h.peitto);
     assert.ok(reuna === 0,
       `${nimi}n harso on laatan reunalla vielä ${reuna.toFixed(3)} — suora raja näkyisi`);
     // Häivytys kulkee pitkän matkan: yli puolet säteestä.
     assert.ok(100 - h.haivytys > 50,
       `${nimi}n häivytysmatka ${100 - h.haivytys} % säteestä on lyhyt`);
+
+    /*
+     * LIUKU ON PITKÄ JA KULMATON (omistaja 6.9.2026 klo 23.58,
+     * iPad pystyssä, sanatarkasti: *"Alaosan vaalean raja pitää
+     * feidautuu pidemmällä matkalla"*).
+     *
+     * KAKSI EHTOA. (1) MATKA: liuku kulkee vähintään 55 % säteestä
+     * (ennen 45 %) ja päättyy nollaan viimeistään laatan reunalla
+     * (89,3 %). (2) MUOTO: pysäkit ovat nostettu kosini
+     * (1 + cos(pi·u)) / 2, jonka derivaatta on NOLLA molemmissa
+     * päissä — vanha paloittain suora liuku alkoi ja päättyi kulmaan,
+     * ja juuri sen silmä luki rajaksi. Ensimmäisen ja viimeisen
+     * askeleen on siis oltava selvästi loivempia kuin keskimmäisen.
+     */
+    assert.ok(h.liuku >= 55, `${nimi}n liuku ${h.liuku} % säteestä on liian lyhyt`);
+    assert.ok(h.haivytys + h.liuku <= 89.3,
+      `${nimi}n liuku (${h.haivytys} + ${h.liuku} %) ei ehdi nollaan ennen laatan reunaa`);
+    const lista = pysakit(h.haivytys, h.liuku)
+      .filter(([, p]) => p >= h.haivytys && p <= h.haivytys + h.liuku);
+    const askel = [];
+    for (let i = 1; i < lista.length; i++) {
+      askel.push((lista[i - 1][0] - lista[i][0]) / (lista[i][1] - lista[i - 1][1]));
+    }
+    const jyrkin = Math.max(...askel);
+    assert.ok(askel[0] < jyrkin * 0.45 && askel[askel.length - 1] < jyrkin * 0.45,
+      `${nimi}n liuku alkaa tai päättyy kulmaan (askeleet ${askel.map((v) => v.toFixed(3))})`);
+    // Kosinin huippujyrkkyys on pi/2 jaettuna matkalla; sallitaan 5 % heittoa.
+    const odotus = Math.PI / 2 / h.liuku;
+    assert.ok(Math.abs(jyrkin - odotus) < odotus * 0.05,
+      `${nimi}n liuku ei ole nostettu kosini (jyrkin ${jyrkin.toFixed(4)}, `
+      + `kosini ${odotus.toFixed(4)})`);
   }
 
   /* KONEKIRJOITUKSEN HARSO: pienempi teho, isompi ala kuin ennen. */
@@ -703,6 +747,42 @@ test('harsojen liuku sammuu ennen laatan reunaa eikä jätä suoraa rajaa', () =
     `konekirjoituksen harson ala (${palsta.pysty}em × ${palsta.vaaka}em) ei kata rivien päitä`);
   assert.ok(juliste.vaaka >= 5.4,
     `julisteotsikon harso (${juliste.vaaka}em) ei kata leveimmän rivin päitä`);
+
+  /*
+   * LAATTA ON LIUVUN MITTA. Liuvun matka pikseleinä on enintään laatan
+   * puolikas miinus tekstin puolikas — eli TÄSMÄLLEEN inset — koska
+   * liuvun on sammuttava ennen laatan reunaa ja lavan katettava teksti.
+   * Pidempi liuku vaatii siis isomman laatan, ei muuta. Palstan laatta
+   * kasvoi siksi 4,6em → 11em (omistaja: *"pidemmällä matkalla"*), ja
+   * julisteella varovaisemmin, koska työpöydällä otsikko on lähellä
+   * paneelin ylälaitaa.
+   */
+  assert.ok(palsta.pysty >= 10 && palsta.vaaka >= 10,
+    `palstan laatta (${palsta.pysty}em × ${palsta.vaaka}em) ei riitä pitkälle liu'ulle`);
+  assert.ok(juliste.pysty >= 2.8 && juliste.vaaka >= 6,
+    `julisteen laatta (${juliste.pysty}em × ${juliste.vaaka}em) ei riitä pitkälle liu'ulle`);
+  // Lava kattaa tekstin: liuku alkaa vasta tekstin ulkopuolelta.
+  assert.ok(palsta.haivytys >= 28 && juliste.haivytys >= 28,
+    'lava ei enää kata tekstiä — rivien reunat jäisivät ilman harsoa');
+});
+
+/*
+ * HARSO EI SAA MITOITTAA TEKSTIÄ (7.9.2026). Harso on lohkon oma
+ * ::before, joka ulottuu insetillä lohkon ulkopuolelle, ja
+ * absoluuttisesti asemoitu jälkeläinen kasvattaa `scrollHeightia`
+ * alaspäin. fitIntro kutistaa kirjasinta scrollHeightin perusteella,
+ * joten pidempi liuku (isompi laatta) kutisti puhelimen avaustekstin
+ * neljänneksen — koriste sääteli tekstin kokoa. Mittaus lukee nyt
+ * lasten laatikot, eikä pseudo ole `children`-listassa.
+ */
+test('avaustekstin mitoitus ei katso harsoa', () => {
+  const ui = lue('../js/ui.js');
+  assert.match(ui, /introLohkonKorkeus\(palsta\) > kaista/,
+    'fitIntro mittaa yhä scrollHeightia — harso kutistaisi tekstin');
+  assert.match(ui, /for \(const lapsi of palsta\.children\)/,
+    'korkeus ei tule lasten laatikoista');
+  assert.doesNotMatch(ui, /palsta\.scrollHeight > kaista/,
+    'vanha scrollHeight-mittaus on yhä käytössä');
 });
 
 /* ==================== KYTKENTÄ ===================================== */
