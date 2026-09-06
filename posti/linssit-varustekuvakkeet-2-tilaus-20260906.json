@@ -1,0 +1,64 @@
+{
+  "orderId": "fable-linssit-varustekuvakkeet-2-20260906-0550",
+  "receivedAt": "2026-09-06T05:55:11.099934+00:00",
+  "sourceMailboxSha": "57feb1461d85fdaed2f056c884b3689502d1ba2b",
+  "sourceHeading": "## 2026-09-06 05:50 UTC — FABLE → KUVATOIMITUS: kaksi varustekuvaketta laukkuun (Keksinnöt, Ihmisen matka) — KIIREELLINEN, pieni",
+  "originalOrderText": "## 2026-09-06 05:50 UTC — FABLE → KUVATOIMITUS: kaksi varustekuvaketta laukkuun (Keksinnöt, Ihmisen matka) — KIIREELLINEN, pieni\n\nOmistaja 6.9. aamu (kuvakaappaus laukusta): *\"tee paremmat ikonit uusille linsseille. Voivat olla muun kuin linssin näköisiä.\"* Laukun VARUSTEET-ruudukossa vanhoilla linsseillä on pyöreät kuvat (assets/varusteet/varuste-<tunnus>.jpg: topografia, vesistot, maatiedot, vertailu, radio — katso repo: maalaus, jossa suurennuslasi vanhan kartan päällä, seepia/akvarelli, pyöreä rajaus 64 px ruudulla). Kahdelta uudelta linssiltä kuva puuttuu ja ruudulla on pelkkä 🔍-viivakuvake. Tilaan kaksi kuvaa samaan sarjaan, mutta aihe saa olla muu kuin suurennuslasi:\n\n- **varuste-keksinnot** — Keksinnöt-linssi (keksintöjen aikajana 1600–1900): esim. messinkinen taskukello tai hammasrattaat ja pieni höyrykone vanhan piirustuspaperin päällä, sama valo ja väripaletti kuin muissa varustekuvissa.\n- **varuste-ihmisen-matka** — Ihmisen matka -linssi (ihmisen leviäminen Afrikasta koko maapallolle, 300 000 vuotta): esim. jalanjälkiä hiekassa/savessa vanhan maailmankartan päällä tai käsipainanne luolan seinällä, sama sarja.\n\nMuoto: neliö 512×512, JPG sRGB, pyöreään rajaukseen sopiva sommittelu (kohde keskellä, reunat neutraalit), ei tekstiä. Toimitus R2:een + kuvatoimitus.md:hen kuten ennen; kopioin kuvat repoon assets/varusteet/-kansioon (nimet varuste-keksinnot.jpg ja varuste-ihmisen-matka.jpg). Fable hyväksyy.\n",
+  "count": 2,
+  "priority": "urgent-next-nonencounter-production",
+  "status": "queued-for-reference-inspection-and-sol-production",
+  "productionStarted": false,
+  "productionOwner": "root-coordinates-sol-nonencounter-production",
+  "sourceVerifiedMainSha": "1123de87945bdfe92616e992c3a421f18a4cb3c2",
+  "targetAssetsAbsentVerified": true,
+  "referenceAssets": [
+    {
+      "gamePath": "assets/varusteet/varuste-topografia.jpg",
+      "localPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/story-feedback-routing-20260905/runs/2026-09-06T05-53-05.981Z/references/varuste-topografia.jpg",
+      "sha256": "c02d97837222315914f9a68f802dfb307c28904c43231283b86b834791a047fe",
+      "visuallyInspected": false
+    },
+    {
+      "gamePath": "assets/varusteet/varuste-maatiedot.jpg",
+      "localPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/story-feedback-routing-20260905/runs/2026-09-06T05-53-05.981Z/references/varuste-maatiedot.jpg",
+      "sha256": "366d9d549468648e3565c2b6e7a63b572e6814c17d83c1fc815b93e8af51ce9a",
+      "visuallyInspected": false
+    }
+  ],
+  "format": {
+    "width": 512,
+    "height": 512,
+    "mime": "image/jpeg",
+    "colorSpace": "sRGB",
+    "circleCrop": true,
+    "displaySizePx": 64,
+    "text": false
+  },
+  "style": "Match the existing equipment icon series after visually inspecting its references: warm sepia/watercolor, coherent lighting, one strong recognizable motif and quiet background. Test both icons at 64 px in a circular crop. Keep important forms comfortably within the central circle.",
+  "delivery": {
+    "approval": "Root QA, then Fable approval and game integration",
+    "candidateR2Prefix": "varusteet/linssit-20260906-v1/",
+    "reviewFolders": [
+      "Linssit / Keksinnöt",
+      "Linssit / Ihmisen matka"
+    ],
+    "r2DeliveryComplete": false,
+    "gameIntegrationVerified": false
+  },
+  "rows": [
+    {
+      "id": "varuste-keksinnot",
+      "lens": "Keksinnöt",
+      "suggestedConcept": "A brass pocket watch or a clear gear mechanism on old drawing paper; simplify enough to remain recognizable at 64 px.",
+      "gameDestination": "assets/varusteet/varuste-keksinnot.jpg",
+      "imageQaComplete": false
+    },
+    {
+      "id": "varuste-ihmisen-matka",
+      "lens": "Ihmisen matka",
+      "suggestedConcept": "A clear footprint impression in sand/clay over a quiet old-world-map motif, or a cave handprint; strong silhouette at 64 px.",
+      "gameDestination": "assets/varusteet/varuste-ihmisen-matka.jpg",
+      "imageQaComplete": false
+    }
+  ]
+}
