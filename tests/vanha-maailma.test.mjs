@@ -377,7 +377,7 @@ test('Aasian artikkelit noudattavat talon mittaa', async () => {
    * Uganda). Talon mitta koskee kaupunkikortteja, joten maa-avaimet
    * luetellaan tässä nimeltä — lista saa kasvaa vain maan nimillä.
    */
-  const MAA_AVAIMET = new Set(['Myanmar']);
+  const MAA_AVAIMET = new Set(['Myanmar', 'Sri Lanka']);
   for (const [nimi, a] of Object.entries(ASIA_ARTIKKELIT)) {
     if (MAA_AVAIMET.has(nimi)) {
       assert.equal(a.teksti, undefined, `${nimi}: maa-avaimessa on vain intro`);

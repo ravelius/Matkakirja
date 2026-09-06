@@ -3392,4 +3392,28 @@ export const ASIA_ARTIKKELIT = {
       + 'kansallissoitin on harppu, jollaista ei muualla Aasiassa enää '
       + 'soiteta.',
   },
+  'Sri Lanka': {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // LKA) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla. Colombon kaupunkilehti kertoo satamakaupungista, tämä
+    // koko saaresta.
+    intro: 'Sri Lanka on Intian valtameren saari, jota on kutsuttu '
+      + 'monella nimellä: kreikkalaisille se oli Taprobane, arabi- ja '
+      + 'persialaiskauppiaille Sarandib — siitä tuli englannin sana '
+      + 'serendipity, onnekas löytö — ja portugalilaisten Ceilão '
+      + 'muuttui englannissa Ceyloniksi, kunnes maasta tuli 1972 '
+      + 'tasavalta nimeltä Sri Lanka. Saaren historia on kirjoitettu '
+      + 'muistiin poikkeuksellisen pitkään: munkit ovat pitäneet '
+      + 'kronikkaa kuninkaista yli kahden vuosituhannen ajan, ja '
+      + 'buddhalainen pali-kaanoni kirjoitettiin täällä ensimmäisen '
+      + 'kerran palmunlehdille. Kuivan vyöhykkeen kuninkaat '
+      + 'rakennuttivat tekojärviä, joiden ruohottuneille pohjille '
+      + 'norsut yhä kokoontuvat kuivan kauden lopulla. Keskiylängön '
+      + 'viileydessä kasvavat tee ja aito kaneli, jota maailma sai '
+      + 'pitkään vain tältä saarelta. Virallisia kieliä on kaksi, '
+      + 'sinhala ja tamili, ja kansallislaulu on virallinen molemmilla '
+      + '— samalla sävelellä. Pinta-alaansa nähden saarella on Aasian '
+      + 'rikkain lajisto: yli neljännes kukkakasveista kasvaa '
+      + 'luonnonvaraisena vain täällä.',
+  },
 };

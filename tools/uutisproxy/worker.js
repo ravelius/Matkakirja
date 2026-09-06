@@ -93,6 +93,11 @@ const SALLITUT = [
   // syöte ja artikkelisivut samalla isäntänimellä. Syöteosoitteen
   // loppukauttaviiva on pakollinen — ilman sitä vastaus on 301.
   'https://myanmar-now.org/',
+  // Sri Lankan uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä. Osoite on sinhala.adaderana.lk ja polku
+  // rss.xml, koska adaderana.lk ja rss.php vastaavat 301:llä eikä
+  // worker seuraa uudelleenohjauksia.
+  'https://sinhala.adaderana.lk/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

@@ -579,4 +579,26 @@ export const UUTISLAHTEET = {
     kieli: 'my',
     syote: 'https://myanmar-now.org/mm/feed/',
   },
+  /*
+   * Ada Derana on colombolainen uutissivusto, jolla on erilliset
+   * sinhalan-, tamilin- ja englanninkieliset toimitukset.
+   * Sinhalankielinen syöte on paikalliskielinen, ja se valittiin
+   * englanninkielisen ohi maalehtiohjeen mukaisesti. Testattu
+   * 6.9.2026: syötteessä 25 juttua, ja artikkelisivun ainoasta
+   * <article>-lohkosta jäsentyi viidestä yhdeksään yli 60 merkin
+   * kappaletta sekä og:image (kaksi eri juttua testattu).
+   *
+   * OSOITE ON rss.xml EIKÄ rss.php: vanha rss.php vastaa 301:llä
+   * uuteen osoitteeseen, eikä worker seuraa uudelleenohjauksia. Samasta
+   * syystä isäntänimi on sinhala.adaderana.lk — adaderana.lk ja
+   * www.adaderana.lk ohjaavat molemmat eteenpäin.
+   *
+   * Testattu ja hylätty: Daily Mirror (dailymirror.lk/rss, Cloudflaren
+   * botti-esto, 403) ja Hiru News (hirunews.lk/rss.php, 404).
+   */
+  LKA: {
+    nimi: 'Ada Derana',
+    kieli: 'si',
+    syote: 'https://sinhala.adaderana.lk/rss.xml',
+  },
 };

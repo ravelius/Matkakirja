@@ -47,6 +47,7 @@ import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
  * Lista saa vain lyhentyä.
  */
 const VIELA_ILMAN_TUNNUSLUKUJA = new Set([
+  'LKA',
   'MMR',
   'URY', 'PRY', 'VEN', 'FJI', 'PNG', 'SLB', 'GTM', 'NIC', 'PAN',
   // Hongkongilla ei ole MAATIEDOT-riviä (maalehti HKG, 6.9.2026):

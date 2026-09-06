@@ -24,6 +24,20 @@
 > perustelut hylkäyksille ovat js/packs/uutislahteet.js:n
 > MMR-kommentissa. Julkaisu Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Sri Lanka):** sallittuihin lisättiin
+> `https://sinhala.adaderana.lk/` (maalehti LKA, Ada Derana Sinhala,
+> testattu 6.9.2026: syötteessä 25 juttua, ja kahden artikkelisivun
+> ainoasta `<article>`-lohkosta jäsentyi 5 ja 9 yli 60 merkin kappaletta
+> sekä `og:image`). Osoite on kirjoitettava täsmälleen oikein, koska
+> worker ei seuraa uudelleenohjauksia: syöte on `sinhala.adaderana.lk/
+> rss.xml`, kun taas vanha `rss.php` sekä `adaderana.lk` ja
+> `www.adaderana.lk` vastaavat 301:llä. Sinhalankielinen lähde valittiin
+> saman talon englanninkielisen ohi, koska maalehtiohje asettaa
+> paikalliskielisen lähteen ensisijaiseksi. Daily Mirror on Cloudflaren
+> botti-eston takana ja Hiru Newsin RSS-osoite vastaa 404:llä; perustelut
+> ovat js/packs/uutislahteet.js:n LKA-kommentissa. Julkaisu
+> Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

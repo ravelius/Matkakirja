@@ -41541,4 +41541,382 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  LKA: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Sri Lankan menneisyys on kirjoitettu muistiin pidempään kuin melkein '
+          + 'missään: munkit ovat pitäneet kirjaa kuninkaista yli kahden vuosituhannen '
+          + 'ajan. Saaren nimet — Taprobane, Sarandib, Ceylon — kertovat, kuka '
+          + 'kulloinkin purjehti ohi.',
+      nostot: [
+        {
+          otsikko: 'Nälänhätä pani opit palmunlehdille',
+          aika: '1. vuosisata eaa.',
+          tiedosto: 'Ola manuscript on medical subjects, Sri Lanka, 19th century - Royal Ontario Museum - DSC09637.JPG',
+          teksti: 'Buddhalaiset opit kulkivat vuosisatoja pelkkänä puheena: munkit '
+              + 'opettelivat ne ulkoa ja lausuivat toisilleen sukupolvesta toiseen. '
+              + 'Kuningas Walagamban aikana saarta koetteli kaksitoista vuotta kestänyt '
+              + 'nälänhätä, jonka aikana munkit jäivät ilman almuja ja söivät juuria ja '
+              + 'puiden lehtiä; noin kuusikymmentä heistä siirtyi ylängölle Mahaweli-joen '
+              + 'varteen ja selvisi siellä koko ajan. Kun nälkävuodet päättyivät, munkit '
+              + 'olivat nähneet, miten ohuen muistin varassa opit lepäsivät. Noin '
+              + 'viisisataa oppinutta kokoontui Aluviharan kalliotemppeliin Matalessa, '
+              + 'lausui tekstit ääneen, sopi hyväksytystä sanamuodosta ja kaiversi ne '
+              + 'metallipuikolla palmunlehtiin.',
+          selite: 'Ola-lehtikirja tehdään palmyra- tai talipot-palmun lehdistä '
+            + 'leikatuista suikaleista, jotka sidotaan narulla yhteen. Tämä kappale on '
+            + '1800-luvun lääketieteen käsikirja.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kronikka, jolla ajoitettiin Intian keisari',
+          aika: '400-luku – 1837',
+          teksti: 'Munkki Mahānāma kokosi 400- tai 500-luvulla Anuradhapuran '
+              + 'Mahavihara-luostarissa Mahāvaṃsan, pali-kielisen runomuotoisen '
+              + 'kronikan saaren kuninkaista. Luostarissa oli pidetty vuosikirjaa jo '
+              + '200-luvulta eaa. alkaen, ja jatko-osa Cūlavaṃsa vietiin vuoteen 1815 '
+              + 'asti: yhdessä ne ovat yli kahden vuosituhannen katkeamaton '
+              + 'historiakirja, yksi maailman pisimmistä. Länsimaiset tutkijat saivat '
+              + 'kronikasta vihiä 1809, ja George Turnourin käännös 1837 osoitti sen '
+              + 'arvon — Mahāvaṃsan avulla ajoitettiin Intian keisari Ashokan vihkimys, '
+              + 'ja Sanchin kaivaukset tukivat kertomusta. Unesco otti kronikan Maailman '
+              + 'muisti -rekisteriin 2023.',
+        },
+        {
+          otsikko: 'Yhdeksäntoista vuotta Kandyn vieraana',
+          aika: '1659–1681',
+          tiedosto: 'King Rajasingha II (1608-1687).jpg',
+          teksti: 'Anne-laiva menetti mastonsa myrskyssä marraskuussa 1659 ja rantautui '
+              + 'Ceylonille korjaukseen. Kandyn kuninkaan Rajasinha II:n miehet ottivat '
+              + 'kuusitoista miestä kiinni, koska kapteeni Knox oli laiminlyönyt hovin '
+              + 'edellyttämät muodollisuudet. Vankeus oli väljää: saarelta ei saanut '
+              + 'poistua, mutta kapteenin poika Robert Knox elätti itsensä viljelijänä, '
+              + 'rahanlainaajana ja kulkukauppiaana. Yhdeksäntoista vuoden jälkeen hän '
+              + 'pakeni toverinsa kanssa hollantilaisten linnakkeeseen ja kirjoitti '
+              + 'paluumatkalla kirjan An Historical Relation of the Island Ceylon '
+              + '(1681). Daniel Defoe luki sen ennen kuin kirjoitti Robinson Crusoen.',
+          selite: 'Vanha eurooppalainen kaiverrus esittää Kandyn kuningasta Rajasinha '
+            + 'II:ta ja hovin tervehdystapaa — juuri tuollaisen muodollisuuden '
+            + 'laiminlyönti vei Knoxin miehet vangeiksi.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Sopimus, jota kuningas ei allekirjoittanut',
+          aika: '2.3.1815',
+          tiedosto: 'Magul Maduwa, Kandy.jpg',
+          teksti: 'Kandyn kuningaskunta säilyi sisämaan vuorten takana koko sen ajan, '
+              + 'kun portugalilaiset, hollantilaiset ja britit vuorottelivat rannikolla. '
+              + 'Maaliskuun toisena päivänä 1815 kuninkaanlinnan audienssisalissa Magul '
+              + 'Maduwassa allekirjoitettiin sopimus, jolla kuningas Sri Vikrama '
+              + 'Rajasinha julistettiin syöstyksi ja valta siirtyi Britannian kruunulle. '
+              + 'Poikkeuksellista oli, ettei hallitseva kuningas allekirjoittanut sitä '
+              + 'itse vaan hänen hovinsa päälliköt; allekirjoitusten aitous on sittemmin '
+              + 'kyseenalaistettu. Kahdestatoista kohdasta yksi julisti buddhalaisuuden '
+              + 'loukkaamattomaksi ja toinen kielsi kidutuksen ja silpomisen.',
+          selite: 'Magul Maduwa eli kuninkaan audienssisali Kandyssa: puupilarien alla '
+            + 'luettiin sopimus, joka päätti saaren viimeisen kuningaskunnan.',
+          lahde: 'L Manju, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Saari on kokoonsa nähden Aasian lajirikkain: kukkakasveista yli '
+          + 'neljännes ja nisäkkäistä viidennes kasvaa ja elää luonnonvaraisena vain '
+          + 'täällä, ja maa-alasta on suojeltu suurempi osuus kuin missään muualla '
+          + 'maanosassa.',
+      nostot: [
+        {
+          otsikko: 'Metsä, jossa puutkin ovat vain täältä',
+          tiedosto: 'Siharaja Forest Canopy Sri Lanka.jpg',
+          teksti: 'Sinharaja on saaren viimeinen koskematon sademetsä: 360 '
+              + 'neliökilometriä sadetta, sammalta ja pilviä lounaisylängön rinteillä. '
+              + 'Yli kuusikymmentä prosenttia sen puista kasvaa luonnonvaraisena vain '
+              + 'Sri Lankassa, ja kasvitiheydeksi on arvioitu 240 000 yksilöä '
+              + 'hehtaarilla. Saaren kahdestakymmenestä kotoperäisestä lintulajista '
+              + 'täällä elää yhdeksäntoista, muun muassa punanaamamalkoha ja '
+              + 'Sri Lankan siniharakka. Reunakylät keräävät metsästä hunajaa, sieniä ja '
+              + 'palmun makeaa mahlaa, ja vierailija pääsee sisään vain luvanvaraisen '
+              + 'oppaan kanssa. Martin Wijesinhe vartioi metsää epävirallisesti '
+              + '1950-luvulta kuolemaansa 2021 asti.',
+          selite: 'Latvusto sulkeutuu Sinharajassa niin tiiviisti, että metsänpohjalle '
+            + 'pääsee vain pilkahdus valoa — puut kilpailevat siitä kasvamalla '
+            + 'suoraan ylös.',
+          lahde: 'Ruwan Illeperuma, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Norsut palaavat kuninkaan tekojärvelle',
+          tiedosto: 'Minneriya National Park, elephants gathering.jpg',
+          teksti: 'Kuningas Mahasen rakennutti Minneriyan tekojärven 200-luvulla '
+              + 'kastelemaan kuivan vyöhykkeen peltoja. Puolitoista vuosituhatta '
+              + 'myöhemmin se ruokkii toista joukkoa. Kun kuiva kausi elokuusta '
+              + 'lokakuuhun tyhjentää ympäristön vesipaikat, järven pinta laskee ja '
+              + 'paljastaa laajan ruohottuneen pohjan — seudun ainoan vihreän laitumen. '
+              + 'Norsut vaeltavat sinne ympäröivistä metsistä ja toisesta '
+              + 'kansallispuistosta asti: tavallisesti niitä lasketaan sadasta '
+              + 'viidestäkymmenestä kahteensataan, joidenkin raporttien mukaan jopa '
+              + 'seitsemänsataa. Alue rauhoitettiin 1938 ja siitä tuli kansallispuisto '
+              + '1997.',
+          selite: 'Minneriyan tekojärven pohja on kuivan kauden lopulla laidun, ja '
+            + 'kokoontumista sanotaan maailman suurimmaksi aasiannorsujen '
+            + 'kokoontumiseksi.',
+          lahde: 'Walter Gehr, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaupunki, jonka nimi on jalokivikaupunki',
+          tiedosto: 'Star of Bombay.jpg',
+          teksti: 'Ratnapura tarkoittaa sanskritiksi jalokivikaupunkia, ja nimi on '
+              + 'ansaittu: Kalu Gangan laakson sorakerrokset ovat täynnä safiireja ja '
+              + 'rubiineja. Kaivos on kymmenestä viiteenkymmeneen metriä syvä kuoppa, '
+              + 'jota kaivetaan hakulla ja lapiolla; nostettu maa huuhdotaan bambusta '
+              + 'punotussa vaskoolissa, ja koska jalokivi on tavallista kiveä '
+              + 'raskaampaa, se jää pohjalle. Kaupungissa on kolme jalokivitoria, jotka '
+              + 'ovat auki eri aikoina päivästä. Samasta sorasta on löytynyt myös '
+              + 'virtahevon poskihammas ja sarvikuonon leukaluu — eläimiä, joita '
+              + 'saarella ei enää ole.',
+          selite: 'Star of Bombay on srilankalainen 182 karaatin tähtisafiiri. Douglas '
+            + 'Fairbanks antoi sen vaimolleen Mary Pickfordille, ja se on nykyään '
+            + 'Smithsonianissa — ja antoi nimen eräälle ginille.',
+          lahde: 'James St. John, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Ylänkö, jolla on halla ja helle samana päivänä',
+          tiedosto: 'Horton Plains - World\'s end.jpg',
+          teksti: 'Horton Plains on runsaan kahden kilometrin korkeudessa oleva '
+              + 'vuoristoniitty, jonka reunoja kiertää matala, sammalinen pilvimetsä. '
+              + 'Vuoden keskilämpötila on kolmetoista astetta, mutta vuorokauden '
+              + 'sisällä mittari käy viidessä ja kahdessakymmenessäseitsemässä, ja '
+              + 'helmikuun aamuina maassa on tavallisesti halla. Sadetta tulee yli kaksi '
+              + 'metriä vuodessa, ja sumu voi peittää ylängön koko päiväksi. Tasangon '
+              + 'eteläreuna katkeaa kesken: World\'s End on 870 metriä pudottava '
+              + 'pystysuora jyrkänne, jonka alta maisema aukeaa laaksoihin ja kyliin.',
+          selite: 'World\'s Endin reunalta katsotaan suoraan alas ylängön eteläpuolisiin '
+            + 'laaksoihin; sumu peittää näkymän usein kokonaan.',
+          lahde: 'JeninRathnayake, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Riisi, kookos ja mausteet ovat pohja, jonka päälle jokainen saarelle '
+          + 'pysähtynyt kauppias on jättänyt jotain omaansa — ja yksi maailman '
+          + 'tunnetuimmista mausteista on kotoisin juuri täältä.',
+      nostot: [
+        {
+          otsikko: 'Yksi riisikeko, kymmenen kulhoa',
+          teksti: 'Srilankalainen ateria on lautasellinen keitettyä riisiä ja sen '
+              + 'ympärillä rivi pieniä kulhoja: kala- tai lihacurry, pari kasviscurrya, '
+              + 'linssikeitto, pikkelöityä lisuketta ja sambal. Pol sambol on '
+              + 'raastettua kookosta, chiliä, limeä ja kuivattua Malediivien kalaa, joka '
+              + 'antaa kasvisruoallekin syvän suolaisen pohjan. Mausteina ovat goraka, '
+              + 'pandanuksen lehti rampe, curryn lehti karapincha ja ceyloninkaneli. '
+              + 'Perinteisesti ruoka tarjoillaan banaanin- tai lootuksenlehdellä. '
+              + 'Uudenvuoden aamuna syödään kiribathia, kookosmaidossa keitettyä '
+              + 'maitoriisiä, lunu miris -tahnan kanssa.',
+        },
+        {
+          otsikko: 'Lettu, joka paistetaan kulhossa',
+          tiedosto: 'Sri Lanka-Egg hoppers.jpg',
+          teksti: 'Appa eli hopperi tehdään riisijauhosta ja kookosmaidosta, ja taikina '
+              + 'saa hapantua palmuviinin tai hiivan avulla. Pannu on pyöreäpohjainen ja '
+              + 'syvä kuin pieni wokki: taikinaa kaadetaan kauhallinen ja pannua '
+              + 'pyöräytetään, jolloin reunat jäävät ohuiksi ja rapeiksi ja keskusta '
+              + 'paksuksi ja pehmeäksi. Munahopperissa keskelle lyödään kananmuna. '
+              + 'String hopper on eri ruoka: kuumavesitaikina puristetaan muotin läpi '
+              + 'hiuksenohuiksi langoiksi punotulle matolle ja höyrytetään kiekoiksi, '
+              + 'joita syödään kastikkeen kanssa. Appa mainitaan jo vanhassa '
+              + 'tamilinkielisessä runoudessa.',
+          selite: 'Munahopperin reuna on ohut ja pitsimäinen, keskusta paksumpi — muoto '
+            + 'syntyy siitä, että taikina valuu pyöräytettäessä kulhon pohjalle.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kaksi terää rautalevyllä',
+          tiedosto: 'Kottu Roti (mit Meeresfrüchten).jpg',
+          teksti: 'Kottu syntyi 1960- ja 1970-luvulla katuruokana Sri Lankan '
+              + 'itärannikolla, Batticaloassa ja Trincomaleessa, saaren '
+              + 'muslimiyhteisön keittiöissä. Idea oli säästäväinen: edellisen päivän '
+              + 'godamba-rotit, joita leipuri ei ollut saanut kaupaksi, pilkottiin '
+              + 'suikaleiksi ja paistettiin uudestaan. Kuumalla rautalevyllä käristetään '
+              + 'ensin sipuli, vihannekset, muna ja liha, sitten roti lisätään joukkoon '
+              + 'ja kaikki hakataan yhteen kahdella raskaalla lastalla. Ääni on osa '
+              + 'ruokaa: terien rummutus kuuluu kauas ja kertoo, että keittiö on auki. '
+              + 'Nimi tulee tamilin sanasta koththu, hakata.',
+          selite: 'Valmis kottu on suikaleiksi hakattua rotia, munaa, vihanneksia ja '
+            + 'lihaa. Ainekset paistetaan erikseen ja hakataan yhteen vasta lopuksi.',
+          lahde: 'Dankesie, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Aito kaneli irrotetaan messinkitangolla',
+          tiedosto: 'Cinnamomum verum vs Cinnamomum burmanni.jpg',
+          teksti: 'Cinnamomum verum eli aito kaneli on kotoisin Sri Lankasta, ja saari '
+              + 'tuottaa yhä 80–90 prosenttia maailman aidosta kanelista; kasvin vanha '
+              + 'tieteellinen nimi zeylanicum kertoo saman. Puu kasvaisi '
+              + 'viisitoistametriseksi, mutta viljelmillä se pidetään kolmen metrin '
+              + 'pensaana, josta leikataan ohuita oksia. Ulkokuori poistetaan, ja '
+              + 'sisäkuori irrotetaan hankaamalla sitä messinkitangolla ja halkaisemalla '
+              + 'veitsellä, jotta se saataisiin irti mahdollisimman ehjänä. Käärö '
+              + 'kuivataan ensin varjossa ja sitten pimeässä. Ehjä pitkä käärö on '
+              + 'arvokkaampi kuin murut, ja luokat nimetään halkaisijan mukaan: Alba on '
+              + 'alle kuusi milliä.',
+          selite: 'Vasemmalla aito ceyloninkaneli, jonka ohut kuori kääriytyy '
+            + 'monikerroksiseksi käärööksi; oikealla indonesialainen kassia, joka on '
+            + 'paksua ja yksikerroksista. Asteikko on millimetrejä.',
+          lahde: 'Antti Vähä-Sipilä, Wikimedia Commons (CC BY-SA 1.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Millä kanelipuun sisäkuori irrotetaan oksasta?',
+        vaihtoehdot: [
+          'Messinkitangolla',
+          'Kuumalla vedellä',
+          'Puunuijalla',
+          'Rautaviilalla',
+        ],
+        oikea: 0,
+        fakta: 'Kuori hierotaan irti messinkitangolla ja halkaistaan veitsellä, jotta '
+            + 'siitä tulisi mahdollisimman ehjä pitkä käärö — ne ovat arvokkaampia kuin '
+            + 'murut.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Saaren musiikki tulee kahdesta suunnasta: sisämaan temppelirummuista '
+          + 'ja rannikolta, jonne portugalilaiset laivat toivat oman rytminsä. Kolmas '
+          + 'suunta oli radio, joka teki Colombosta koko Etelä-Aasian kuunnelluimman '
+          + 'aseman.',
+      nostot: [
+        {
+          otsikko: 'Rytmi, joka tuli laivoissa ja jäi',
+          teksti: 'Baila on saanut nimensä portugalin verbistä bailar, tanssia. Sen '
+              + 'juuret ovat kahdessa vanhassa muodossa: hitaassa ja juhlallisessa '
+              + 'chicotessa ja nopeassa, nykivässä kafrinhassa. Niitä soittivat '
+              + 'portugalilaisten burgherien jälkeläiset ja afrosrilankalainen yhteisö, '
+              + 'jonka esivanhemmat tuotiin bantualueilta 1600-luvulta alkaen orjina ja '
+              + 'sotilaina ja jonka jälkeläisiä asuu yhä Puttalamin seudulla. Yhteisön '
+              + 'portugalipohjainen kreolikieli on sammunut, mutta rytmi jäi. Poliisista '
+              + 'laulajaksi siirtynyt Wally Bastiansz sovitti sen 1960-luvun alussa '
+              + 'sinhalankielisiin sanoihin. Wada bailassa laulajat sepittävät säkeitä '
+              + 'kilpaa tuomariston antamasta aiheesta.',
+        },
+        {
+          otsikko: 'Aasian ensimmäinen radioasema',
+          tiedosto: 'Radioceylon01.jpeg',
+          teksti: 'Lähetykset alkoivat kokeiluina 1923 siirtomaan lennätinlaitoksen '
+              + 'laitteilla, ja 16. joulukuuta 1925 Colombo Radio aloitti säännölliset '
+              + 'lähetykset yhden kilowatin keskiaaltolähettimellä Welikadasta — '
+              + 'ensimmäisenä Aasiassa. Suurin yleisö tuli kuitenkin muualta: '
+              + '1950-luvun alussa asema avasi hindinkielisen palvelun, ja koska All '
+              + 'India Radio oli kieltänyt elokuvamusiikin, kuulijat naapurimaassa '
+              + 'käänsivät neulansa Colomboon. Vuonna 1952 alkanut toivelistaohjelma '
+              + 'Binaca Geetmala teki asemasta eetterin kuninkaan. Nimeksi tuli Sri '
+              + 'Lanka Broadcasting Corporation 1972.',
+          selite: 'Radio Ceylonin peruskivilaatta aulassa: radiopalvelu erotettiin '
+            + 'omaksi virastokseen 1949, ja laattaan on kaiverrettu tuon hetken '
+            + 'ministerien nimet.',
+          lahde: 'Delboy59, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kahdeksantoista eläintä ennen päähinettä',
+          tiedosto: 'Geta beraya from Sri Lanka 2023.jpg',
+          teksti: 'Kandyn ves-tanssi ei ole alun perin esitys vaan osa Kohomba '
+              + 'kankariya -parannusrituaalia, ja sitä tanssivat vain miehet. Ves-asun '
+              + 'päähine on pyhä: sen katsotaan kuuluvan jumaluus Kohomballe, eikä '
+              + 'tanssija saa sitä ennen kuin osaa kaikki kahdeksantoista vannamia. '
+              + 'Vannamit kuvaavat eläinten liikkeitä — gajaga on norsu, hanuma apina, '
+              + 'ukusa kotka — ja nimi tulee sanasta varnana, ylistävä kuvaus. Tanssijat '
+              + 'olivat oma kastinsa, joka palveli hammastemppeliä; kuninkaiden tuen '
+              + 'loputtua perinne hiipui, kunnes se elvytettiin näyttämölle. Rytmin '
+              + 'pitää geta beraya -rumpu.',
+          selite: 'Geta beraya pitää Kandyn tanssijan rytmissä: nahkakalvot kiristetään '
+            + 'puurungon ympäri kulkevilla nyöreillä, ja rumpua soitetaan molemmista '
+            + 'päistä.',
+          lahde: 'Hyacinth house, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Yksi sävel, kaksi kieltä',
+          teksti: 'Ananda Samarakoon lähti opiskelemaan taidetta ja musiikkia '
+              + 'Santiniketaniin Rabindranath Tagoren yliopistoon, palasi puolen vuoden '
+              + 'jälkeen ja opetti musiikkia Mahinda Collegessa Gallessa 1938–1942. '
+              + 'Hänen laulunsa Namo Namo Matha lauloivat ensimmäisinä koulun oppilaat. '
+              + 'Itsenäistymistä edeltänyt kansallislaulukilpailu meni toiselle '
+              + 'laululle, mutta tulos oli kiistanalainen: voittajat istuivat itse '
+              + 'tuomaristossa. Hallitus vahvisti Samarakoonin laulun 22. marraskuuta '
+              + '1951. M. Nallathamby käänsi sen tamiliksi, ja molemmilla kielillä '
+              + 'lauletaan sama sävel — kuten Suomessa. Vuonna 1961 hallitus muutti '
+              + 'ensimmäistä riviä säveltäjän vastustuksesta huolimatta.',
+        },
+      ],
+    },
+    {
+      id: 'urheilu',
+      nimi: 'Urheilu',
+      johdanto: 'Virallinen kansallislaji on lentopallo, mutta koko maan pysäyttää '
+          + 'kriketti. Kylien kentillä lyödään sen rinnalla peliä, jota ei pelata '
+          + 'missään muualla.',
+      nostot: [
+        {
+          otsikko: 'Viisitoista syöttövuoroa, jotka muuttivat lajin',
+          aika: '1996',
+          teksti: 'Vuoden 1996 maailmancupissa Arjuna Ranatungan joukkue teki jotain, '
+              + 'mitä kukaan ei ollut kokeillut: se lähetti avaajiksi Sanath '
+              + 'Jayasuriyan ja Romesh Kaluwitharanan lyömään täysillä heti '
+              + 'ensimmäisistä viidestätoista syöttövuorosta, joiden ajan kenttäpelaajat '
+              + 'on pakko pitää lähellä. Kun viittäkymmentä juoksua pidettiin tuolloin '
+              + 'hyvänä alkuna, Sri Lanka teki Intiaa vastaan 117 ja Englantia vastaan '
+              + '121. Finaalissa Lahoressa Australia teki 241, ja Aravinda de Silva otti '
+              + 'kolme kettoa ja löi 107 ilman poistoa. Isäntämaa voitti '
+              + 'maailmanmestaruuden ensimmäistä kertaa lajin historiassa.',
+        },
+        {
+          otsikko: 'Kahdeksansataa kettoa ja uran viimeinen pallo',
+          tiedosto: 'Sri Lanka vs Pakistan test match.JPG',
+          teksti: 'Muttiah Muralitharan syntyi 1972 Kandyssa ylämaan tamiliperheeseen: '
+              + 'isoisä oli tullut Etelä-Intiasta teeviljelmille 1920 ja isä leipoi '
+              + 'keksejä. Koulussa hän aloitti keskinopeana syöttäjänä ja vaihtoi '
+              + 'neljäntoista vanhana kierresyöttöön valmentajansa neuvosta. Hänen '
+              + 'kyynärvartensa on synnynnäisesti taipunut ja yliojentuu heitossa, mikä '
+              + 'teki tyylistä kiistellyn, kunnes kansainvälinen liitto hyväksyi sen '
+              + 'biomekaanisten mittausten jälkeen 1996 ja uudestaan 1999. Muralitharan '
+              + 'on ainoa syöttäjä, jolla on kahdeksansataa testikettoa — viimeinen tuli '
+              + 'uran viimeisestä pallosta heinäkuussa 2010.',
+          selite: 'Testiottelu Gallen stadionilla kesäkuussa 2012: valkoiset asut ja '
+            + 'viiden päivän mitta erottavat testikriketin lyhyistä pelimuodoista.',
+          lahde: 'Shehanw, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Bambumaila ja neljä pysäkkiä',
+          tiedosto: 'Jude2e.JPG',
+          teksti: 'Elle on kylien maila- ja pallopeli, joka muistuttaa softballia mutta '
+              + 'on saaren omaa perua. Maila on kuivattua bambua, pallo nykyään '
+              + 'tennispallo — ennen se oli wel kaduru -puun kuivattu hedelmä. '
+              + 'Joukkueessa on kahdestatoista kuuteentoista pelaajaa, lyöjällä on kolme '
+              + 'yritystä osua alakautta heitettyyn palloon, ja radalla on neljä '
+              + 'pysäkkiä noin 55 metrin välein. Juoksija palaa poltetuksi, jos pallo '
+              + 'napataan ilmasta tai jos häneen osutaan heitolla kesken juoksun. Peliä '
+              + 'pelataan riisinkorjuun jälkeen ja uutenavuotena, eikä se vaadi muuta '
+              + 'kuin kentän ja mailan.',
+          selite: 'Ellen maila on kuivattua bambua, ja jokainen lyöjä valitsee '
+            + 'pituuden itselleen sopivaksi.',
+          lahde: 'Elle(Sri Lanka), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kamppailulaji temppelin seinämaalauksissa',
+          teksti: 'Angampora yhdistää kaksi puolta: angam on aseeton taistelu ja '
+              + 'illangam käyttää aseita, muun muassa taipuisaa ethunu kaduwa -miekkaa. '
+              + 'Ominaista ovat painepisteisiin kohdistuvat iskut ja ottelun päättyminen '
+              + 'otteeseen, josta vastustaja ei pääse irti; ottelualue sovitaan '
+              + 'etukäteen, ja joskus se on kuoppa. Kaksi koulukuntaa, Maruwaliya ja '
+              + 'Sudaliya, ottelivat keskenään kuninkaan katsoessa. Laji hiipui, kun '
+              + 'koko saari siirtyi siirtomaahallintoon 1815; usein toistetun väitteen '
+              + 'mukaan se olisi myös kielletty asetuksella, mutta väitteelle ei ole '
+              + 'esitetty näyttöä. Liikkeitä on säilynyt temppelien seinämaalauksissa.',
+        },
+      ],
+    },
+  ],
 };
