@@ -1,0 +1,119 @@
+{
+  "orderId": "fable-elaintakyt-lahi-ita-4-20260906-0735",
+  "receivedAt": "2026-09-06T07:14:21.397827+00:00",
+  "sourceMailboxSha": "818997be55a8df789ba04c31298f67dd26cdfebc",
+  "sourceHeading": "## 2026-09-06 07:35 UTC — FABLE → KUVATOIMITUS: neljä eläintäkykuvaa lisää, Lähi-itä (CYP, OMN, ARE, KWT)",
+  "originalOrderText": "## 2026-09-06 07:35 UTC — FABLE → KUVATOIMITUS: neljä eläintäkykuvaa lisää, Lähi-itä (CYP, OMN, ARE, KWT)\n\nSama muoto kuin aiemmissa. Tietueet mainiin seuraavassa versiossa (elain-<iso>). Qatarille ei tule täkyä (kaupunkisäde).\n\n- CYP — kyproksenpöllönen (*Otus cyprius*): lähikuva pienestä pöllöstä kolossa tai oksalla, tumma höyhenpuku, keltaiset silmät, Välimeren mäntymetsä taustalla.\n- OMN — arabianleopardi (*Panthera pardus nimr*): pienikokoinen leopardi kuivilla kalliorinteillä Dhofarin vuoristossa, vaalea pohjaväri ja tiheät ruusukkeet.\n- ARE — arabiantahri (*Arabitragus jayakari*): tanakka vuorivuohi jyrkällä kalliorinteellä, punaruskea pitkä turkki, taaksepäin kaartuvat sarvet, tumma selkäjuova.\n- KWT — hietakissa (*Felis margarita*): hiekanvärinen pikkukissa aavikkohiekalla, matalalla sivuilla olevat leveät korvat ja karvaiset käpälänpohjat näkyvissä.\n\nJonossa nyt yhteensä 22 eläintäkykuvaa.\n",
+  "count": 4,
+  "status": "queued-awaiting-canonical-record-check",
+  "productionStarted": false,
+  "productionOwner": "root-coordinates-sol-nonencounter-production",
+  "sourceCheckedMainSha": "75f0ae20c86334e93a1fd8cbb64a052aaa8aac6c",
+  "canonicalRecordCheckPending": true,
+  "sourceVerificationPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/story-feedback-routing-20260905/runs/2026-09-06T07-10-15.810Z/canon-verification.json",
+  "format": {
+    "aspectRatio": "4:3",
+    "orientation": "landscape",
+    "mime": "image/jpeg",
+    "colorSpace": "sRGB",
+    "style": "natural wildlife photography with restrained sepia tendency",
+    "people": false
+  },
+  "framingInstruction": "Leave generous breathing room around important subjects for later edge transparency.",
+  "captionRule": "Finnish species name and locality in one sentence; scientific name in source line. Validate species/reference and canonical wording before production.",
+  "preferredPublicMediaRoot": "https://media.matkakirja.app/",
+  "approvalRoute": "Root QA then Fable image approval and game integration",
+  "deliveryNote": "Stable elain-iso keys can immediately activate wired game images. Use versioned candidates until image approval.",
+  "excludedCountryCodes": [
+    "QAT"
+  ],
+  "rows": [
+    {
+      "countryCode": "CYP",
+      "requestedFinnishName": "kyproksenpöllönen",
+      "scientificName": "Otus cyprius",
+      "originalOrderLine": "- CYP — kyproksenpöllönen (*Otus cyprius*): lähikuva pienestä pöllöstä kolossa tai oksalla, tumma höyhenpuku, keltaiset silmät, Välimeren mäntymetsä taustalla.",
+      "requestedVisualDescription": "lähikuva pienestä pöllöstä kolossa tai oksalla, tumma höyhenpuku, keltaiset silmät, Välimeren mäntymetsä taustalla.",
+      "expectedBucketId": "elain-cyp",
+      "canonicalRecordVerified": false,
+      "bucketIdVerifiedInMain": false,
+      "canonicalRecord": {
+        "countryCode": "CYP",
+        "recordPresent": false
+      },
+      "existingAssetCheckRequired": true,
+      "speciesAndLocalityResearchRequired": true,
+      "visualReferencesInspected": false,
+      "productionStarted": false,
+      "imageQaComplete": false,
+      "fableImageApproved": false,
+      "r2DeliveryComplete": false
+    },
+    {
+      "countryCode": "OMN",
+      "requestedFinnishName": "arabianleopardi",
+      "scientificName": "Panthera pardus nimr",
+      "originalOrderLine": "- OMN — arabianleopardi (*Panthera pardus nimr*): pienikokoinen leopardi kuivilla kalliorinteillä Dhofarin vuoristossa, vaalea pohjaväri ja tiheät ruusukkeet.",
+      "requestedVisualDescription": "pienikokoinen leopardi kuivilla kalliorinteillä Dhofarin vuoristossa, vaalea pohjaväri ja tiheät ruusukkeet.",
+      "expectedBucketId": "elain-omn",
+      "canonicalRecordVerified": false,
+      "bucketIdVerifiedInMain": false,
+      "canonicalRecord": {
+        "countryCode": "OMN",
+        "recordPresent": false
+      },
+      "existingAssetCheckRequired": true,
+      "speciesAndLocalityResearchRequired": true,
+      "visualReferencesInspected": false,
+      "productionStarted": false,
+      "imageQaComplete": false,
+      "fableImageApproved": false,
+      "r2DeliveryComplete": false
+    },
+    {
+      "countryCode": "ARE",
+      "requestedFinnishName": "arabiantahri",
+      "scientificName": "Arabitragus jayakari",
+      "originalOrderLine": "- ARE — arabiantahri (*Arabitragus jayakari*): tanakka vuorivuohi jyrkällä kalliorinteellä, punaruskea pitkä turkki, taaksepäin kaartuvat sarvet, tumma selkäjuova.",
+      "requestedVisualDescription": "tanakka vuorivuohi jyrkällä kalliorinteellä, punaruskea pitkä turkki, taaksepäin kaartuvat sarvet, tumma selkäjuova.",
+      "expectedBucketId": "elain-are",
+      "canonicalRecordVerified": false,
+      "bucketIdVerifiedInMain": false,
+      "canonicalRecord": {
+        "countryCode": "ARE",
+        "recordPresent": false
+      },
+      "existingAssetCheckRequired": true,
+      "speciesAndLocalityResearchRequired": true,
+      "visualReferencesInspected": false,
+      "productionStarted": false,
+      "imageQaComplete": false,
+      "fableImageApproved": false,
+      "r2DeliveryComplete": false
+    },
+    {
+      "countryCode": "KWT",
+      "requestedFinnishName": "hietakissa",
+      "scientificName": "Felis margarita",
+      "originalOrderLine": "- KWT — hietakissa (*Felis margarita*): hiekanvärinen pikkukissa aavikkohiekalla, matalalla sivuilla olevat leveät korvat ja karvaiset käpälänpohjat näkyvissä.",
+      "requestedVisualDescription": "hiekanvärinen pikkukissa aavikkohiekalla, matalalla sivuilla olevat leveät korvat ja karvaiset käpälänpohjat näkyvissä.",
+      "expectedBucketId": "elain-kwt",
+      "canonicalRecordVerified": false,
+      "bucketIdVerifiedInMain": false,
+      "canonicalRecord": {
+        "countryCode": "KWT",
+        "recordPresent": false
+      },
+      "existingAssetCheckRequired": true,
+      "speciesAndLocalityResearchRequired": true,
+      "visualReferencesInspected": false,
+      "productionStarted": false,
+      "imageQaComplete": false,
+      "fableImageApproved": false,
+      "r2DeliveryComplete": false
+    }
+  ],
+  "imageQaComplete": false,
+  "r2DeliveryComplete": false,
+  "gameIntegrationVerified": false
+}

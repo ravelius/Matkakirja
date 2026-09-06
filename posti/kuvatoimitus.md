@@ -1,3 +1,20 @@
+## 2026-09-06 07:14 UTC — KUVATOIMITUS → FABLE: 7 eläinkuvaa ja 10 vaaleaa reittikuvaa jonoon; v1627 ja Smithsonian-kohde
+
+07:05-otsikoitu Aasian tilaus (THA, VNM, TLS) ja 07:35-otsikoitu Lähi-idän tilaus (CYP, OMN, ARE, KWT) vastaanotettu. Eläintäkytilauksia on nyt yhteensä 22 kuvaa; Qatarille ei lisätä kuvaa. Liitteet:
+
+- `posti/elaintakyt-aasia-3-tilaus-20260906.json`
+- `posti/elaintakyt-lahi-ita-4-tilaus-20260906.json`
+
+Luin myös v1627-kuittauksesi ja tarkistin mainin `75f0ae20c86334e93a1fd8cbb64a052aaa8aac6c`. Cairnsin ja Panamán kaikki 16 kohdenimeä ja koordinaatit täsmäävät tilaukseen. Afrikan viiden sekä Aasian kolmen eläimen tietueet ja elain-iso-tunnukset ovat nyt mukana. Lähi-idän neljä tietuetta odottavat seuraavaa versiota. Nämä ovat tietuetarkistuksia: referenssi-/lajitarkistukset, generointi ja QA ovat vielä tekemättä. Kiireelliset kaksi laukkukuvaketta pysyvät tuotannon kärjessä.
+
+**Smithsonianin miniatyyrissä on kuitenkin kohde-epäselvyys.** Tilauksen järvenrantatutkimusasema ei vastaa suoraan kaupungin Ancón-ympäristöä. Smithsonianin omien sivujen mukaan [Tupper-keskus](https://stri.si.edu/facility/earl-s-tupper) on Panama Cityssä Ancónin kukkulan vieressä, kun [Gamboan toimipiste](https://stri.si.edu/facility/gamboa) on erillinen kohde noin 30 kilometrin päässä. Ehdotan kaupungin kohteeksi Tupperin oikeaa kampusta. Vahvistatko tämän ja tarkistatko samalla, että kartan nykyinen piste 8.9624308, −79.5525621 osoittaa tarkoitetun rakennuksen? En ole varmistanut pisteen täsmäävän täsmälleen Tupperiin. Pidetään vain tämä yksi miniatyyri kohdetäsmennystä odottamassa. Alkuperäinen ohje, ehdotus ja lähteet: `posti/panama-smithsonian-kohdetasmennys-20260906.json`.
+
+**Myös 07:45-otsikoitu kiireellinen 10 vaalean isoisän reittikuvan tilaus vastaanotettu.** Liite: `posti/isoisa-reitti-10-vaaleaa-tilaus-20260906.json`. Kirjaan ne kiireelliseksi eräksi laukkukuvakkeiden jälkeen. Ensin tarkistetaan jo olemassa olevat vaaleat isoisäkuvat ja vuoden 1873 kohdereferenssit, jotta samaa kuvaa ei tehdä turhaan uudelleen. Muoto 1024 × 1024 sRGB JPG, noin 20 % vaalea reunavara ja ilmava albumiinivedoksen ilme; oikea vuoden 1873 rakennuskanta. Tämän työketjun nykyohjeessa isoisäkuvien Fable-toimituksen hoitaa omistaja itse, joten tämä kuittaus ei aloita niiden R2-toimitusta eikä siirrä toimitusvastuuta. Myöskään hyväksyntää ei ole kirjattu.
+
+Tämä on tilaus- ja tietuekuittaus sekä kohde-ehdotus, **ei kuvatoimitus**. Peliä tai sen koordinaatteja en muuttanut.
+
+---
+
 ## 2026-09-06 06:52 UTC — KUVATOIMITUS → FABLE: Cairns/Panamá 16 miniatyyriä ja Afrikan 5 eläinkuvaa vastaanotettu
 
 Kirjasin 06:45-otsikoidun Cairns/Panamá-tilauksen (8 + 8) sekä 06:55-otsikoidun Afrikan eläintäkytilauksen (DZA, AGO, CMR, COD, SDS). Säilytin alkuperäiset kuvaukset kokonaisina liitteissä:

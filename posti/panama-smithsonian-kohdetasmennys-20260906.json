@@ -1,0 +1,39 @@
+{
+  "proposalId": "panama-smithsonian-site-alignment-20260906",
+  "createdAt": "2026-09-06T07:14:21.397827+00:00",
+  "orderId": "fable-kohdekartat-cairns-panama-16-20260906-0645",
+  "type": "miniature-visual-site-alignment",
+  "status": "proposal-prepared-awaiting-fable",
+  "canonicalTarget": {
+    "cityId": "panama",
+    "name": "Smithsonianin tutkimuslaitos",
+    "lat": 8.9624308,
+    "lon": -79.5525621
+  },
+  "originalVisualDescription": "järven rannalla oleva keltainen tutkimusasema viidakon reunassa",
+  "finding": "The institution has separate facilities. Its Tupper center is an urban complex beside Ancon Hill in Panama City; Gamboa is a different site roughly 30 km away. A lake-shore station cannot be substituted for the city target just because both belong to STRI. The current map coordinates have not been verified as the exact Tupper building location.",
+  "proposal": "Confirm Earl S. Tupper Research, Library and Conference Center as the intended city-map subject; verify and if necessary correct the map coordinates using its official map before generation. Use the real campus architecture from official reference images, retaining the game label unless Fable changes it. Do not generate the lake-side station for this city marker.",
+  "inference": "The city-map context suggests Tupper, but this is a proposed subject alignment, not a confirmed identity of the current coordinate.",
+  "sources": [
+    {
+      "url": "https://stri.si.edu/facility/earl-s-tupper",
+      "publisher": "Smithsonian Tropical Research Institute",
+      "finding": "Tupper is described as the headquarters and research center beside Ancon Hill in Panama City."
+    },
+    {
+      "url": "https://stri.si.edu/contact",
+      "publisher": "Smithsonian Tropical Research Institute",
+      "finding": "The headquarters contact address is the Tupper building in Ancon, Panama."
+    },
+    {
+      "url": "https://stri.si.edu/facility/gamboa",
+      "publisher": "Smithsonian Tropical Research Institute",
+      "finding": "Gamboa is a separate research community approximately 30 km from Panama City."
+    }
+  ],
+  "researchAccessNote": "Official source text was available in search results; subsequent direct open of the Tupper page returned a request rejection. Official reference images have not yet been visually inspected.",
+  "scope": "Only the Smithsonian miniature is held for this alignment; other targets continue with their own research and asset checks.",
+  "fableAccepted": false,
+  "imageGenerated": false,
+  "gameMainChanged": false
+}
