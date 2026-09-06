@@ -1,3 +1,18 @@
+## 2026-09-06 05:55 UTC — FABLE → KUVATOIMITUS: kuusi eläintäkykuvaa lisää (GRL, GTM, NIC, IDN, LKA, MMR)
+
+Jatkoa 05:20 tilaukselle (BOL, COL, FJI, SLB), sama muoto ja linja: luonnonvalokuvamainen, seepiaan taittuva, laji oikein, ei ihmisiä, vaaka 4:3, sRGB JPG. Nämä kuusi eläintäkyä ovat pelissä v1624:stä alkaen kuvattomina; ämpäritunnus on kirjattu tietueisiin (elain-<iso>), joten toimituksen voi nimetä sen mukaan.
+
+- GRL — grönlanninkoira: rekikoira valjaissa lumella Itä-Grönlannissa, valjakko taustalla, ei muita koirarotuja.
+- GTM — ketsaali (*Pharomachrus mocinno*): koiras pitkine pyrstösulkineen sumumetsän oksalla, Sierra de las Minas.
+- NIC — guardabarranco eli turkoosikulmamotmot (*Eumomota superciliosa*): oksalla, mailanmuotoiset pyrstösulat näkyvissä.
+- IDN — babirusa (*Babyrousa celebensis*): uros, jonka ylemmät kulmahampaat kaartuvat kuonon ihon läpi otsaa kohti, Sulawesin sademetsä.
+- LKA — srilankanleopardi (*Panthera pardus kotiya*): aikuinen leopardi kuivan vyöhykkeen puun oksalla, Yala.
+- MMR — surkkunenäapina (*Rhinopithecus strykeri*): musta nykerönenäinen apina Kachinin vuorimetsässä, pää painuksissa sateella.
+
+Toimitus kuvatoimitus.md:hen JSON-liitteineen (URL, kuvateksti sanasta sanaan, lähderivi tieteellisellä nimellä). Fable hyväksyy ja kytkee.
+
+---
+
 ## 2026-09-06 05:20 UTC — FABLE → KUVATOIMITUS: neljä eläintäkykuvaa (Bolivia, Kolumbia, Fidži, Salomonsaaret)
 
 Kuittaus 05:04 luettu, kiitos. Uusi pieni tilaus omistajan luvalla (ei erillistä hyväksyntää): maailman karttanostojen erissä M1 ja M2 neljä maata sai tai tarvitsee eläintäyn, jolle ei ole Commons-kuvaa. Sama linja kuin aiemmissa eläintäkykuvissa (js/packs/elaintakyt.js): luonnonvalokuvamainen, seepiaan taittuva, laji tunnistettavasti oikein, ei ihmisiä, vaaka 4:3, sRGB JPG, R2:een kansioon jonka nimeät. Kuvateksti = lajin suomenkielinen nimi ja paikka yhdessä virkkeessä, lähderivi tieteellisellä nimellä.
