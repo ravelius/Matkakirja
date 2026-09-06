@@ -226,6 +226,32 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'on ollut Tyynenmeren portti kauemmin kuin useimmat Euroopan '
       + 'valtiot ovat olleet olemassa.',
   },
+  /* Kuuban maaintro kirjoitettiin 6.9.2026 maalehden
+   * (MAA_KATEGORIAT.CUB) yhteydessä samasta en-Wikipedian aineistosta
+   * kuin lehti (docs/mantereet-tyoaineisto/faktapohja-kuuba.md). Vain
+   * intro-kenttä, kuten Kanadalla ja Meksikolla. Havannan
+   * kaupunkilehden aiheet (linnoitukset, vuoden 1837 rautatie, USS
+   * Maine, son) jätettiin pois, ja vuoden 1959 vallankumous on
+   * rajattu ulos samalla linjauksella kuin lehdessä. */
+  Kuuba: {
+    intro: 'Kuuba on isoisän matkavuonna 1873 yhä Espanjan siirtomaa, ja '
+      + 'saaren itäpäässä on käyty viisi vuotta sotaa itsenäisyydestä. '
+      + 'Sokeritehtailija Carlos Manuel de Céspedes aloitti sen '
+      + 'lokakuussa 1868 soittamalla tehtaansa kelloa ja vapauttamalla '
+      + 'orjansa. **Orjuus itse jatkuu vielä kolmetoista vuotta: se '
+      + 'lakkautetaan vasta 1886, ja koko läntisellä pallonpuoliskolla '
+      + 'vain Brasilia on myöhemmin.** Sokerista tuli saaren talous, kun '
+      + 'Haitin vallankumous tuhosi kilpailijan 1800-luvun alussa.'
+      + '\n\n'
+      + 'Toinen vientituote kasvaa saaren länsipäässä. Vuelta Abajon '
+      + 'kaistale Pinar del Ríossa on noin 140 kilometriä pitkä ja 16 '
+      + 'leveä, ja monet pitävät sen lehteä maailman parhaana '
+      + 'sikaritupakkana; käärintäsaleissa on vuodesta 1865 istunut '
+      + 'lukija, jonka työntekijät palkkaavat itse. Luonto on omalaatuista '
+      + 'saariluontoa: maailman pienin lintu painaa alle kaksi grammaa, '
+      + 'krokotiili juoksee maalla ja kotiloiden kuoret ovat '
+      + 'keräilijöiden himoitsemia.',
+  },
   /* Chicagon kaksi väkilukua eivät ole lehden omasta erästä, joten ne
    * on tarkistettu erikseen en-Wikipedian artikkelista Chicago
    * 23.8.2026: kaupungin väkiluku 2,74 miljoonaa ja metropolialueen

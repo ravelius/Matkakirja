@@ -47,13 +47,14 @@
  *   E8  Ei verkkoa (etusivu.json ei vastaa): kerrosta ei synny eikä
  *       karttaa herätetä — etusivu on pelkkää paperia julisteotsikon
  *       kanssa.
- *   E11 AVAUKSEN AJOITUS (omistaja 5.9.2026 ilta ja klo 00.20): juliste
+ *   E11 AVAUKSEN AJOITUS (omistaja 6.9.2026 aamu): pallon pysäytyskuva
  *       on ruudulla jo ennen videon latautumista (hidas verkko), ja
- *       napautuksen jälkeen vaiheet tulevat järjestyksessä — pallo ja
- *       otsikko heti, "osa II" 2,3 s päästä feidaten, kirjoituskone
- *       vasta häivytyksen jälkeen. JULISTEOTSIKKO EI LIIKU EIKÄ VAIHDA
- *       KOKOA yhdessäkään vaiheessa (omistaja: *"etusivun otsikko
- *       hyppää alussa eri kokoon kun kirjoituskone teksti alkaa"*).
+ *       napautuksen jälkeen juliste rakentuu järjestyksessä — 0,3 s
+ *       pelkkä pallo ilman otsikkoa, 0,8 s yläviiva, 1,5 s otsikko,
+ *       2,5 s "osa II", 4,5 s kirjoituskone. JULISTEOTSIKKO EI LIIKU
+ *       EIKÄ VAIHDA KOKOA salamien jälkeen (omistaja 5.9.2026:
+ *       *"etusivun otsikko hyppää alussa eri kokoon kun kirjoituskone
+ *       teksti alkaa"*) — juuri siksi välähdys tehdään transformilla.
  *       Samalla otetaan kaappaukset 1400×900.
  *   E9  LÄHTÖKAUPUNGIN VALINTA PALLOLLA (aalto 3A): "Valitse
  *       aloituskaupunki" avaa pallolaudan valintatilaan — tasokartta
@@ -368,9 +369,14 @@ const LUE_TILA = () => {
       }).filter(Boolean),
     aika: document.querySelector('.etusivupallo-video')?.currentTime ?? null,
     /*
-     * AVAUKSEN KOLME VAIHETTA (omistaja 5.9.2026 ilta): juliste näkyy
-     * heti, video vaihtuu sen tilalle, "osa II" feidaa sisään ja vasta
-     * sitten alkaa kirjoituskone.
+     * AVAUKSEN VIISI VAIHETTA (omistaja 6.9.2026 aamu): portin takana
+     * pallo pyörii ILMAN otsikkoa, ja napin painalluksesta juliste
+     * rakentuu pala palalta — yläviiva, otsikko salamana, "osa II"
+     * salamana, alaviiva ja vasta lopuksi kirjoituskone. Peittävyydet
+     * luetaan selaimen laskemina, jotta vartio näkee vaiheet.
+     *
+     * (`julisteenPeitto` on eri asia: se on PALLON pysäytyskuva
+     * .etusivupallo-juliste, ei julisteotsikko.)
      */
     julisteenPeitto: Number(getComputedStyle(
       document.querySelector('.etusivupallo-juliste') ?? document.body,
@@ -381,6 +387,15 @@ const LUE_TILA = () => {
     kerrosNakyy: Boolean(juuri?.classList.contains('nakyy')),
     osanPeitto: Number(getComputedStyle(
       document.querySelector('.juliste-osa') ?? document.body,
+    ).opacity),
+    otsikonPeitto: Number(getComputedStyle(
+      document.querySelector('.juliste-nimi') ?? document.body,
+    ).opacity),
+    ylaviivanPeitto: Number(getComputedStyle(
+      document.querySelector('.juliste-viiva:first-child') ?? document.body,
+    ).opacity),
+    alaviivanPeitto: Number(getComputedStyle(
+      document.querySelector('.juliste-viiva:last-child') ?? document.body,
     ).opacity),
     nimiNakyy: (document.querySelector('.juliste-nimi')?.textContent ?? '').trim(),
     paikkarivi: (document.getElementById('intro-paikka')?.textContent ?? '').length,
@@ -732,23 +747,33 @@ if (koevideo) {
 /* ========== E11: AVAUKSEN AJOITUS (omistaja 5.9.2026 ilta) ========== */
 
 /*
- * Omistaja sanatarkasti: *"tuon etusivun voisi animoida niin että pallo
- * lähtee heti pyörimään ja näytöllä näkyy otsikko, mutta "Osa II.."
- * tulee vasta noin reilun sekunnin päästä feidaten. sitten alkaa
- * kirjoituskone ja luenta"*.
+ * Omistaja 6.9.2026 aamu sanatarkasti: *"ota taustalta pois pelin
+ * otsikko … Kun nappia painetaan niin sitten tulee pienellä viiveellä
+ * yläviiva ja otsikko sitten pienen hetken päästä osa 2 teksti … sitten
+ * tulisi alaviiva otsikkoon ja pienen hetken päästä alkaisi
+ * konekirjoitusteksti."*
  *
- *   E11a Juliste on ruudulla ENNEN kuin video on latautunut (hidas
- *        verkko): kerroksella on nakyy-luokka, juliste peittävä ja
- *        video vielä läpinäkyvä ja lataamatta.
- *   E11b Vaiheet järjestyksessä: 0,3 s otsikko ilman "osa II" ja ilman
- *        kirjoituskonetta → 2,0 s "osa II" yhä piilossa (viive on nyt
- *        2,3 s, omistaja klo 00.20: *"osa 2 saisi tulla sekunnin
- *        myöhemmin"*) → 3,5 s "osa II" näkyvissä → 4,5 s kirjoituskone
- *        käynnissä. Samalla otetaan kaappaukset.
+ *   E11a Pallon pysäytyskuva on ruudulla ENNEN kuin video on latautunut
+ *        (hidas verkko): kerroksella on nakyy-luokka, pysäytyskuva
+ *        peittävä ja video vielä läpinäkyvä ja lataamatta.
+ *   E11b 0,3 s: pallo pyörii, mutta julisteesta ei näy mitään —
+ *        yläviiva, otsikko ja "osa II" ovat kaikki piilossa eikä
+ *        kirjoituskone ole alkanut.
+ *   E11c 0,8 s: yläviiva on piirtynyt, otsikko on yhä piilossa
+ *        (salama alkaa vasta 1,05 s).
+ *   E11d 1,5 s: otsikko on ruudulla, "osa II" ja alaviiva eivät.
+ *   E11e 2,5 s: "osa II" on ruudulla eikä kirjoituskone ole vielä
+ *        alkanut (se alkaa 2,85 s), ja 4,5 s: kirjoituskone käynnissä.
  *   E11f JULISTEOTSIKKO EI LIIKU EIKÄ VAIHDA KOKOA yhdessäkään
- *        vaiheessa (omistaja klo 00.20: *"etusivun otsikko hyppää
- *        alussa eri kokoon kun kirjoituskone teksti alkaa"*): rivien
- *        laatikot ja kirjasinkoot ovat samat 0,3 s ja 6 s kohdalla.
+ *        vaiheessa (omistaja 5.9.2026 klo 00.20: *"etusivun otsikko
+ *        hyppää alussa eri kokoon kun kirjoituskone teksti alkaa"*, ja
+ *        6.9.2026 salama tehdään juuri siksi transformilla): rivien
+ *        laatikot ja kirjasinkoot ovat samat 0,3 s:n (piilossa) ja
+ *        6 s:n (valmis) kohdalla. Vertailuhetkistä jätetään pois ne,
+ *        joissa salama on kesken — silloin transform on tarkoituksella
+ *        suurempi.
+ *
+ * Samalla otetaan kaappaukset.
  */
 
 if (koevideo) {
@@ -791,13 +816,13 @@ if (koevideo) {
   });
   const otokset = new Map();
   /*
-   * Näytehetket ja kaappaukset (omistajan tarkastuskuvat 5.9.2026):
-   * 0,3 s · 2,5 s · 3,5 s · 6 s · 25 s. Väliin mahtuvat vartioiden
-   * omat hetket 2,0 s (osa II ei ole vielä alkanut) ja 4,5 s
-   * (kirjoituskone käynnissä).
+   * Näytehetket ja kaappaukset (omistajan tarkastuskuvat 6.9.2026):
+   * 0,3 s (pelkkä pallo) · 1,2 s (otsikon salama) · 2,5 s ("osa II") ·
+   * 4,5 s (kirjoituskone) · 25 s (pitkä kierros). Väliin mahtuvat
+   * vartioiden omat hetket 0,8 s, 1,5 s, 3,5 s ja 6 s.
    */
-  const KAAPPAUSHETKET = new Set([300, 2500, 3500, 6000, 25000]);
-  for (const ms of [300, 2000, 2500, 3000, 3500, 4500, 6000, 25000]) {
+  const KAAPPAUSHETKET = new Set([300, 1200, 2500, 4500, 25000]);
+  for (const ms of [300, 800, 1200, 1500, 2500, 3500, 4500, 6000, 25000]) {
     // eslint-disable-next-line no-await-in-loop
     await sivu.waitForFunction(
       ([t0, kohta]) => performance.now() - t0 >= kohta, [alkuhetki, ms], { timeout: 60000 },
@@ -812,27 +837,32 @@ if (koevideo) {
     }
   }
   const a = otokset.get(300);
-  const b = otokset.get(2000);
-  const c = otokset.get(3500);
+  const b = otokset.get(800);
+  const c = otokset.get(1500);
   const d = otokset.get(4500);
-  vaadi('E11b pallo ja otsikko ovat ruudulla heti (0,3 s)',
-    a.kerrosNakyy && a.videonPeitto === 1 && a.aika > 0 && a.nimiNakyy.length > 0,
-    `kerros ${a.kerrosNakyy}, video ${a.videonPeitto}, aika ${a.aika}, otsikko "${a.nimiNakyy}"`);
-  vaadi('E11c "osa II" on vielä piilossa eikä kirjoituskone ole alkanut (0,3 s)',
-    a.osanPeitto < 0.1 && a.paikkarivi === 0 && a.runko === 0,
-    `osa ${a.osanPeitto}, paikkarivi ${a.paikkarivi} merkkiä, runko ${a.runko}`);
-  vaadi('E11d "osa II" tulee sekunnin myöhemmin kuin ennen (2,0 s piilossa → 3,5 s näkyvissä)',
-    b.osanPeitto < 0.1 && c.osanPeitto > 0.9,
-    `peittävyydet 0,3 s ${a.osanPeitto} → 2,0 s ${b.osanPeitto} → 3,5 s ${c.osanPeitto}`);
+  vaadi('E11b pallo pyörii, mutta julisteesta ei näy mitään (0,3 s)',
+    a.kerrosNakyy && a.videonPeitto === 1 && a.aika > 0
+    && a.ylaviivanPeitto < 0.1 && a.otsikonPeitto < 0.1 && a.osanPeitto < 0.1
+    && a.paikkarivi === 0 && a.runko === 0,
+    `kerros ${a.kerrosNakyy}, video ${a.videonPeitto}, aika ${a.aika}, `
+    + `yläviiva ${a.ylaviivanPeitto}, otsikko ${a.otsikonPeitto}, osa ${a.osanPeitto}, `
+    + `paikkarivi ${a.paikkarivi} merkkiä`);
+  vaadi('E11c yläviiva piirtyy ensin, otsikko odottaa vielä (0,8 s)',
+    b.ylaviivanPeitto > 0.5 && b.otsikonPeitto < 0.1,
+    `yläviiva ${b.ylaviivanPeitto}, otsikko ${b.otsikonPeitto}`);
+  vaadi('E11d otsikko on ruudulla ennen "osa II":ta ja alaviivaa (1,5 s)',
+    c.otsikonPeitto > 0.9 && c.osanPeitto < 0.1 && c.alaviivanPeitto < 0.1,
+    `otsikko ${c.otsikonPeitto}, osa ${c.osanPeitto}, alaviiva ${c.alaviivanPeitto}`);
   /*
-   * Kirjoituskone alkaa vasta häivytyksen jälkeen, siis 2,3 + 0,9 =
-   * 3,2 s napautuksesta. Vertailuhetki on 2,5 s (alaotsikko on juuri
-   * feidaamassa sisään): 3,0 s olisi vain 200 ms ennen ja heiluisi
-   * kontin hitaiden kehysten mukana.
+   * Kirjoituskone alkaa vasta koko julisteen jälkeen, siis 2,85 s
+   * napautuksesta (AVAUS_KERTOMUS_MS). Vertailuhetki on 2,5 s: sitä
+   * lähempänä mittaus heiluisi kontin hitaiden kehysten mukana.
    */
-  vaadi('E11e kirjoituskone alkaa vasta häivytyksen jälkeen (2,5 s → 4,5 s)',
-    otokset.get(2500).paikkarivi === 0 && d.paikkarivi > 0,
-    `paikkarivi 2,5 s: ${otokset.get(2500).paikkarivi} merkkiä, 4,5 s: ${d.paikkarivi} merkkiä`);
+  const e = otokset.get(2500);
+  vaadi('E11e "osa II" on ruudulla eikä kirjoituskone ole alkanut (2,5 s → 4,5 s)',
+    e.osanPeitto > 0.9 && e.paikkarivi === 0 && d.paikkarivi > 0,
+    `osa 2,5 s ${e.osanPeitto}, paikkarivi 2,5 s: ${e.paikkarivi} merkkiä, `
+    + `4,5 s: ${d.paikkarivi} merkkiä`);
   /*
    * E11f OTSIKKO EI HYPPÄÄ. Juurisyy oli, että js/ui.js fitIntro ajettiin
    * vasta kirjoituskoneen alkaessa ja asetti julisteelle eri koon kuin
@@ -842,6 +872,9 @@ if (koevideo) {
   const rivi = (tila, v) => tila.otsikonRivit.find((r) => r.v === v);
   const eroaa = (x, y) => Math.abs(x - y) > 0.6;
   const hypyt = [];
+  // Vertailuhetket ovat kaikki salamien JÄLKEEN (otsikko 1,05-1,65 s,
+  // "osa II" 1,75-2,35 s): kesken salaman transform on tarkoituksella
+  // suurempi, eikä se ole hyppy vaan juuri se tilattu välähdys.
   for (const hetki of [2500, 3500, 6000, 25000]) {
     for (const r of a.otsikonRivit) {
       const nyt = rivi(otokset.get(hetki), r.v);
@@ -859,7 +892,9 @@ if (koevideo) {
   tieto('otsikon rivit 0,3 s', a.otsikonRivit.map(
     (r) => `${r.v} ${r.koko} ${r.w}×${r.h}`,
   ).join(' | '));
-  tieto('avauksen vaiheet', [...otokset].map(([ms, t]) => `${ms}ms osa ${t.osanPeitto.toFixed(2)} `
+  tieto('avauksen vaiheet', [...otokset].map(([ms, t]) => `${ms}ms viivat `
+    + `${t.ylaviivanPeitto.toFixed(2)}/${t.alaviivanPeitto.toFixed(2)} `
+    + `otsikko ${t.otsikonPeitto.toFixed(2)} osa ${t.osanPeitto.toFixed(2)} `
     + `rivi ${t.paikkarivi} kortteja ${t.kortteja}`).join(' | '));
   if (KUVAKANSIO) tieto('kaappaukset', `${KUVAKANSIO}/etusivupallo-avaus-*.png`);
   await ctx.close();

@@ -385,38 +385,103 @@ test('pöllön kuplat odottavat matkapäiväkirjan luennan loppumista', () => {
 /* ==================== ETUSIVUN AVAUKSEN JÄRJESTYS ================== */
 
 /*
- * OMISTAJAN TILAUS 5.9.2026 ilta, sanatarkasti: *"tuon etusivun voisi
- * animoida niin että pallo lähtee heti pyörimään ja näytöllä näkyy
- * otsikko, mutta "Osa II.." tulee vasta noin reilun sekunnin päästä
- * feidaten. sitten alkaa kirjoituskone ja luenta"*.
+ * OMISTAJAN TILAUS 6.9.2026 aamu, sanatarkasti: *"ota taustalta pois
+ * pelin otsikko ja keskitä aloita seikkailu nappi ihan keskelle ruutua.
+ * Kun nappia painetaan niin sitten tulee pienellä viiveellä yläviiva ja
+ * otsikko sitten pienen hetken päästä osa 2 teksti. se saisi tulla
+ * animoidusti niin että kirjainkoko ja kirkkaus välähtää isompana ja
+ * feidautuu nykyiseen, kuin pieni salaman isku. sitten tulisi alaviiva
+ * otsikkoon ja pienen hetken päästä alkaisi konekirjoitusteksti."*
  *
  * Järjestys ei näkyisi virheenä jos se katoaisi — etusivu vain
  * aukeaisi taas kaikki kerralla — joten luvut ja ketju vartioidaan
  * lähdekoodista niin kuin muutkin ajoitukset.
  */
 
-test('Osa II feidaa sisään sekunnin myöhemmin kuin ennen, vakioina', () => {
-  const viive = luku('OSAN_VIIVE_MS');
-  const haivytys = luku('OSAN_HAIVYTYS_MS');
+test('avauksen viisi vaihetta ovat vakioina ja oikeassa järjestyksessä', () => {
+  const ylaviiva = luku('AVAUS_YLAVIIVA_MS');
+  const otsikko = luku('AVAUS_OTSIKKO_MS');
+  const osa = luku('AVAUS_OSA_MS');
+  const alaviiva = luku('AVAUS_ALAVIIVA_MS');
+  const kertomus = luku('AVAUS_KERTOMUS_MS');
+  // Kaikki ajat ovat napin painalluksesta, joten järjestys on suoraan
+  // lukujen järjestys.
+  assert.ok(ylaviiva < otsikko && otsikko < osa && osa < alaviiva && alaviiva < kertomus,
+    `vaiheet eivät ole järjestyksessä: ${[ylaviiva, otsikko, osa, alaviiva, kertomus]}`);
+  // "pienellä viiveellä yläviiva" — noin puoli sekuntia napista.
+  assert.ok(ylaviiva >= 400 && ylaviiva <= 800, `yläviivan viive ${ylaviiva} ms ei ole noin 600 ms`);
+  // "pienen hetken päästä osa 2 teksti" — otsikon salamasta ~0,7 s.
+  assert.ok(osa - otsikko >= 550 && osa - otsikko <= 900,
+    `osa II tulee ${osa - otsikko} ms otsikon jälkeen, ei noin 700 ms`);
+  // "sitten tulisi alaviiva" — osasta ~0,5 s.
+  assert.ok(alaviiva - osa >= 350 && alaviiva - osa <= 700,
+    `alaviiva tulee ${alaviiva - osa} ms osan jälkeen, ei noin 500 ms`);
+  // "pienen hetken päästä alkaisi konekirjoitusteksti" — alaviivasta ~0,6 s.
+  assert.ok(kertomus - alaviiva >= 400 && kertomus - alaviiva <= 900,
+    `kirjoituskone alkaa ${kertomus - alaviiva} ms alaviivan jälkeen, ei noin 600 ms`);
+  // Salama feidaa nykyiseen kokoon puolessa sekunnissa vajaan sekunnin sijaan.
+  const salama = luku('SALAMAN_KESTO_MS');
+  assert.ok(salama >= 450 && salama <= 750, `salaman häivytys ${salama} ms ei ole 500-700 ms`);
+  const kerroin = Number(UI.match(/const SALAMAN_KERROIN = ([\d.]+)/)[1]);
+  assert.ok(kerroin > 1.1 && kerroin <= 1.4,
+    `salaman lähtökoko ${kerroin} ei ole noin 1,25-kertainen`);
+  // Kestot kulkevat css:ään muuttujina: luvut ovat vain js/ui.js:ssä.
+  for (const [muuttuja, vakio] of [
+    ['--viivan-piirto', 'VIIVAN_PIIRTO_MS'],
+    ['--salaman-kesto', 'SALAMAN_KESTO_MS'],
+  ]) {
+    assert.ok(UI.includes(`setProperty('${muuttuja}', \`\${${vakio}}ms\`)`),
+      `${muuttuja} ei tule css:ään vakiosta ${vakio}`);
+  }
+  assert.match(UI, /setProperty\('--salaman-kerroin', String\(SALAMAN_KERROIN\)\)/,
+    'salaman lähtökoko ei kulje css:ään vakiosta');
+});
+
+test('juliste on kokonaan piilossa aloitusportin takana', () => {
   /*
-   * SEKUNTI LISÄÄ (omistaja 5.9.2026 klo 00.20, sanatarkasti: *"osa 2
-   * saisi tulla sekunnin myöhemmin"*): 1,3 s → 2,3 s. Häivytys pysyy
-   * ennallaan, joten kirjoituskone ja luenta siirtyvät saman sekunnin.
+   * Omistaja 6.9.2026 aamu: *"ota taustalta pois pelin otsikko"*.
+   * Piilossa ovat rivit, viivat JA otsikon oma pergamenttiharso —
+   * harso jäisi muuten vaaleaksi soikioksi tyhjän otsikon paikalle.
    */
-  assert.ok(viive >= 2200 && viive <= 2500,
-    `alaotsikon viive ${viive} ms ei ole sekuntia entistä myöhemmin (2,2-2,5 s)`);
-  assert.ok(haivytys >= 700 && haivytys <= 1100,
-    `häivytys ${haivytys} ms ei ole noin 900 ms`);
-  // Häivytyksen kesto kulkee css:ään muuttujana: yksi luku, kaksi paikkaa.
-  assert.match(UI, /--osan-haivytys', `\$\{OSAN_HAIVYTYS_MS\}ms`\)/,
-    'häivytyksen kesto ei kulje css:ään OSAN_HAIVYTYS_MS:stä');
-  assert.match(CSS, /\.juliste-osa \{ transition: opacity var\(--osan-haivytys[^)]*\) ease-out; \}/,
-    'css ei feidaa alaotsikkoa ease-outilla moduulin muuttujalla');
-  assert.match(CSS, /\.intro-juliste\.osa-piilossa \.juliste-osa \{ opacity: 0;/,
-    'alaotsikon piilotus (pelkkä peittävyys) puuttuu css:stä');
-  // Piilotus on peittävyyttä eikä displayta: mikään ei saa hypätä.
-  assert.doesNotMatch(CSS, /\.intro-juliste\.osa-piilossa \.juliste-osa \{[^}]*display: none/,
-    'alaotsikon piilotus siirtäisi julisteen rivejä');
+  assert.match(CSS, /\.intro-juliste\.avaus-kesken \.juliste-rivi,\n\.intro-juliste\.avaus-kesken \.juliste-viiva \{ opacity: 0; \}/,
+    'julisteen rivit ja viivat eivät ole piilossa portin takana');
+  assert.match(CSS, /\.intro\.intro-pallolla \.intro-juliste\.avaus-kesken::before \{\n  opacity: 0;/,
+    'julisteen pergamenttiharso jäisi portille näkyviin');
+  assert.match(CSS, /\.intro\.intro-pallolla \.intro-palsta\.avaus-kesken::before \{\n  opacity: 0;/,
+    'tekstipalstan harso odottaisi tekstiään näkyvänä koko avauksen ajan');
+  // Piilotus on peittävyyttä ja transformia: mikään ei saa hypätä.
+  assert.doesNotMatch(CSS, /\.intro-juliste\.avaus-kesken [^{]*\{[^}]*display: none/,
+    'julisteen piilotus siirtäisi rivejä');
+  const piilota = UI.match(/ {2}piilotaAvausjuliste\(\) \{[\s\S]*?\n {2}\}/)[0];
+  assert.match(piilota, /this\.introOtsikko\.classList\.add\('avaus-kesken'\)/,
+    'juliste ei mene piiloon portin takana');
+  assert.match(piilota, /this\.introPalsta\?\.classList\.add\('avaus-kesken'\)/,
+    'tekstipalstan harso ei mene piiloon portin takana');
+});
+
+test('otsikko ja osa II välähtävät isompina ja feidaavat nykyiseen', () => {
+  /*
+   * Omistaja 6.9.2026 aamu: *"kirjainkoko ja kirkkaus välähtää isompana
+   * ja feidautuu nykyiseen, kuin pieni salaman isku"*. Koko muuttuu
+   * TRANSFORMILLA eikä kirjasinkoolla, jottei fitIntron mitoitus
+   * rikkoudu (ks. seuraava testi ja savuke E11f).
+   */
+  const salama = CSS.match(/\.intro-juliste\.avaus-kesken \.juliste-rivi\.avaus-salama \{[\s\S]*?\n\}/)[0];
+  assert.match(salama, /transform: scale\(var\(--salaman-kerroin/,
+    'salaman lähtöasento ei ole suurempi transformilla');
+  assert.match(salama, /filter: brightness\(1\.[0-9]+\)/, 'salama ei ole kirkkaampi');
+  assert.match(salama, /transition: none;/,
+    'ilman siirtymän katkaisua lähtöasento ei ehdi ruudulle omaksi kehyksekseen');
+  assert.doesNotMatch(salama, /font-size/,
+    'salama muuttaisi kirjasinkokoa — asettelu hyppäisi ja fitIntro menisi sekaisin');
+  const nakyy = CSS.match(/\.intro-juliste\.avaus-kesken \.juliste-rivi\.avaus-nakyy \{[\s\S]*?\n\}/)[0];
+  assert.match(nakyy, /transform: scale\(1\);/, 'salama ei palaa lopulliseen kokoon');
+  assert.match(nakyy, /transition: opacity var\(--salaman-kesto[\s\S]*?transform var\(--salaman-kesto[\s\S]*?filter var\(--salaman-kesto/,
+    'koko, kirkkaus ja peittävyys eivät feidaa samalla kestolla');
+  // Kaksi kehystä: lähtöasento ensin, siirtymä vasta sitten.
+  const paljasta = UI.match(/ {2}paljastaJulisteenOsa\(valitsin, salamalla = false\) \{[\s\S]*?\n {2}\}/)[0];
+  assert.match(paljasta, /classList\.add\('avaus-salama'\)[\s\S]*requestAnimationFrame\([\s\S]*requestAnimationFrame\([\s\S]*classList\.add\('avaus-nakyy'\)/,
+    'salama ei odota lähtöasennon kehystä ennen siirtymää');
 });
 
 /*
@@ -454,22 +519,36 @@ test('avausotsikon koko on css:ssä ja fitIntrossa sama luku', () => {
 
 test('kirjasinkoko mitataan jo portin takana, ei kirjoituskoneen kanssa', () => {
   const render = UI.match(/ {2}renderIntro\(\) \{[\s\S]*?\n {2}\}\n/)[0];
-  // Portin haara: piilota alaotsikko, mittaa koko, näytä portti.
-  assert.match(render, /this\.piilotaAvausosa\(\);\n[\s\S]{0,900}?this\.fitIntro\(\);\n\s*this\.showAloitusportti\(\);/,
+  // Portin haara: piilota juliste, mittaa koko, näytä portti.
+  assert.match(render, /this\.piilotaAvausjuliste\(\);\n[\s\S]{0,900}?this\.fitIntro\(\);\n\s*this\.showAloitusportti\(\);/,
     'fitIntro ei aja portin takana — otsikko saisi kokonsa vasta kirjoituskoneen alkaessa');
   // Portin ohittava haara (pelin reset) mittaa myös ennen ajastimia.
-  assert.match(render, /this\.introShown = true;[\s\S]{0,600}?this\.fitIntro\(\);[\s\S]*?this\.naytaAvausosa\(/,
+  assert.match(render, /this\.introShown = true;[\s\S]{0,600}?this\.fitIntro\(\);[\s\S]*?this\.naytaAvausjuliste\(/,
     'resetistä palattaessa koko mitattaisiin vasta kertomuksen alkaessa');
 });
 
-test('kirjoituskone ja luenta alkavat vasta Osa II:n häivytyksen jälkeen', () => {
-  const nayta = UI.match(/ {2}naytaAvausosa\(valmis\) \{[\s\S]*?\n {2}\}/)[0];
-  // Kaksi ajastinta peräkkäin: viive → luokka pois → häivytys → valmis.
-  assert.match(nayta, /setTimeout\([\s\S]*?classList\.remove\('osa-piilossa'\)[\s\S]*?setTimeout\([\s\S]*?valmis\(\);[\s\S]*?\}, OSAN_HAIVYTYS_MS\)[\s\S]*?\}, OSAN_VIIVE_MS\)/,
-    'alaotsikon ketju ei ole viive → häivytys → kertomus');
+test('kirjoituskone ja luenta alkavat vasta alaviivan jälkeen', () => {
+  const nayta = UI.match(/ {2}naytaAvausjuliste\(valmis\) \{[\s\S]*?\n {2}\}/)[0];
+  // Viisi vaihetta, jokainen omana ajastimenaan napin painalluksesta.
+  const vaiheet = [
+    ['AVAUS_YLAVIIVA_MS', "juliste-viiva:first-child"],
+    ['AVAUS_OTSIKKO_MS', "juliste-nimi"],
+    ['AVAUS_OSA_MS', "juliste-osa"],
+    ['AVAUS_ALAVIIVA_MS', "juliste-viiva:last-child"],
+  ];
+  for (const [vakio, valitsin] of vaiheet) {
+    assert.ok(new RegExp(`vaihe\\(${vakio},[\\s\\S]{0,200}?${valitsin}`).test(nayta),
+      `vaihe ${vakio} ei paljasta osaa ${valitsin}`);
+  }
+  // Kertomus on ketjun VIIMEINEN vaihe: kirjoituskone ei saa alkaa
+  // ennen alaviivaa.
+  assert.match(nayta, /vaihe\(AVAUS_KERTOMUS_MS, \(\) => \{[\s\S]*?valmis\(\);/,
+    'kirjoituskone ei odota julisteen valmistumista');
+  assert.ok(nayta.indexOf('AVAUS_KERTOMUS_MS') > nayta.indexOf('AVAUS_ALAVIIVA_MS'),
+    'kertomus on ketjussa ennen alaviivaa');
   const render = UI.match(/ {2}renderIntro\(\) \{[\s\S]*?\n {2}\}\n/)[0];
-  assert.match(render, /this\.naytaAvausosa\(aloitaKertomus\);/,
-    'kertomus ei odota alaotsikkoa');
+  assert.match(render, /this\.naytaAvausjuliste\(aloitaKertomus\);/,
+    'kertomus ei odota julistetta');
   // Paikkarivi ja runko säilyttävät keskinäisen järjestyksensä: rivi
   // naputetaan ensin ja luenta alkaa vasta rungon kanssa.
   assert.match(render, /const aloitaKertomus = \(\) => \{[\s\S]*?this\.typeText\(this\.introPaikka[\s\S]*?aloitaRunko, INTRO_TYPE_MS\)/,
@@ -478,25 +557,31 @@ test('kirjoituskone ja luenta alkavat vasta Osa II:n häivytyksen jälkeen', () 
     'luenta ei ala enää rungon kirjoituksen kanssa');
 });
 
-test('vähennetty liike näyttää avauksen heti ilman viiveitä', () => {
-  const nayta = UI.match(/ {2}naytaAvausosa\(valmis\) \{[\s\S]*?\n {2}\}/)[0];
-  assert.match(nayta, /if \(!this\.introOtsikko \|\| this\.reducedMotion\) \{[\s\S]*?valmis\(\);\n {6}return;/,
-    'reduced motionissa kirjoituskone jäisi odottamaan ajastinta');
-  const piilota = UI.match(/ {2}piilotaAvausosa\(\) \{[\s\S]*?\n {2}\}/)[0];
-  assert.match(piilota, /if \(!this\.introOtsikko \|\| this\.reducedMotion\) return;/,
-    'reduced motionissa alaotsikko piilotettaisiin turhaan');
-  assert.match(CSS, /@media \(prefers-reduced-motion: reduce\) \{\n[^}]*\.juliste-osa \{ transition: none; \}\n[^}]*\.intro-juliste\.osa-piilossa \.juliste-osa \{ opacity: 1; \}/,
-    'css ei näytä alaotsikkoa heti vähennetyllä liikkeellä');
+test('vähennetty liike pitää järjestyksen mutta jättää salaman pois', () => {
+  /*
+   * Raamattu (arkkikirjasto): *"prefers-reduced-motion kunnioitetaan
+   * (pelkkä häivytys)"* — omistajan tarkennus 6.9.2026 aamu: *"ei
+   * skaalausta eikä välähdystä, pelkät häivytykset samassa
+   * järjestyksessä"*.
+   */
+  const paljasta = UI.match(/ {2}paljastaJulisteenOsa\(valitsin, salamalla = false\) \{[\s\S]*?\n {2}\}/)[0];
+  assert.match(paljasta, /if \(!salamalla \|\| this\.reducedMotion\) \{[\s\S]*?avaus-nakyy[\s\S]*?return;/,
+    'vähennetyllä liikkeellä otsikko välähtäisi silti');
+  assert.match(CSS, /@media \(prefers-reduced-motion: reduce\) \{[\s\S]*?\.juliste-rivi\.avaus-nakyy \{\n\s*transform: none;\n\s*filter: none;/,
+    'css ei sammuta skaalausta ja kirkkautta vähennetyllä liikkeellä');
 });
 
 test('avausanimaatio ei toistu joka piirrossa', () => {
   const render = UI.match(/ {2}renderIntro\(\) \{[\s\S]*?\n {2}\}\n/)[0];
   // Sama kertalippu kuin kirjoituskoneella: uudelleen renderöinti
   // (kieli, koko) palaa tästä ennen ajastimien asettamista.
-  assert.match(render, /if \(this\.introShown\) return;[\s\S]*?this\.naytaAvausosa\(/,
+  assert.match(render, /if \(this\.introShown\) return;[\s\S]*?this\.naytaAvausjuliste\(/,
     'introShown-kertalippu ei enää suojaa avausanimaatiota');
-  assert.match(render, /this\.introShown = false;[\s\S]{0,120}this\.peruAvausosa\(\);/,
-    'etusivulta poistuttaessa alaotsikon ajastinta ei peruta');
-  assert.match(UI, / {2}peruAvausosa\(\) \{[\s\S]*?clearTimeout\(this\.osanAjastin\)/,
-    'ajastimen peruutus puuttuu');
+  assert.match(render, /this\.introShown = false;[\s\S]{0,120}this\.peruAvausjuliste\(\);/,
+    'etusivulta poistuttaessa julisteen vaiheajastimia ei peruta');
+  assert.match(UI, / {2}peruAvausjuliste\(\) \{[\s\S]*?for \(const ajastin of this\.julisteAjastimet\) clearTimeout\(ajastin\)/,
+    'vaiheajastimien peruutus puuttuu');
+  // Peruutus palauttaa myös julisteen kokonaan näkyviin (pelin reset).
+  assert.match(UI, / {2}peruAvausjuliste\(\) \{[\s\S]*?classList\.remove\('avaus-kesken', 'avaus-harso'\)/,
+    'peruutus jättäisi julisteen piiloon');
 });

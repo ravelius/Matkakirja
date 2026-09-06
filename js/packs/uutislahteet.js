@@ -137,4 +137,62 @@ export const UUTISLAHTEET = {
     kieli: 'es',
     syote: 'https://rpp.pe/rss',
   },
+  /*
+   * La Nación on chileläinen uutissivusto, jonka syöte JA artikkelisivut
+   * läpäisivät molemmat testit 6.9.2026: syötteessä kymmenen juttua ja
+   * artikkelisivun ensimmäisessä <article>-lohkossa kaksitoista yli 60
+   * merkin kappaletta sekä og:image.
+   *
+   * Chilen suuret sivustot kokeiltiin ensin ja hylättiin: La Tercera
+   * (syöte 100 juttua, og:image löytyy, mutta sivulla ei ole
+   * <article>-elementtiä eikä [itemprop="articleBody"]-merkintää —
+   * sama vika kuin El Paísilla 6.8.2026), Radio U. de Chile (sama vika),
+   * The Clinic (kaksitoista <article>-lohkoa, joista ensimmäinen on
+   * nostokortti eikä leipäteksti), ex-ante.cl (artikkelisivu 403).
+   * Emol, BioBioChile, Cooperativa, 24horas, ADN, Meganoticias, CNN
+   * Chile, El Mostrador ja T13 eivät tarjonneet toimivaa RSS-osoitetta.
+   */
+  CHL: {
+    nimi: 'La Nación',
+    kieli: 'es',
+    syote: 'https://www.lanacion.cl/feed/',
+  },
+  /*
+   * La Silla Vacía on kolumbialainen tutkivan journalismin sivusto.
+   * Testattu 6.9.2026: syötteessä kymmenen juttua ja artikkelisivun
+   * ensimmäisessä <article>-lohkossa 40 yli 60 merkin kappaletta sekä
+   * og:image.
+   *
+   * El Tiempo kokeiltiin ensin, koska se on maan luetuin: sen syöte
+   * aukeaa ja og:image löytyy, mutta sivun ensimmäisessä
+   * <article>-lohkossa on vain kuvateksti ja tilausmainos — peli poimii
+   * aina ensimmäisen <article>-elementin, joten popupiin ei jäisi
+   * leipätekstiä. Semanan syötteessä on sata juttua, mutta sen ainoassa
+   * <article>-lohkossa ei ole yhtään kappaletta. El Espectador, El
+   * Colombiano, Blu Radio, RCN Radio, Caracol, Pulzo ja Publimetro eivät
+   * tarjonneet toimivaa RSS-osoitetta.
+   */
+  COL: {
+    nimi: 'La Silla Vacía',
+    kieli: 'es',
+    syote: 'https://www.lasillavacia.com/feed/',
+  },
+  /*
+   * KUUBA (CUB) JÄI ILMAN LÄHDETTÄ (Opus 6.9.2026) — Havannan lehti
+   * näkyy siis ilman uutisosiota, eikä mikään mene rikki.
+   *
+   * Testattu ja hylätty: Cubadebate (syöte aukeaa ja og:image löytyy,
+   * mutta sivulla ei ole <article>-elementtiä eikä
+   * [itemprop="articleBody"]-merkintää — leipäteksti on
+   * <section id="content">-lohkossa, jota js/uutiset.js ei lue),
+   * Prensa Latina (sama vika, ja og:image on kaikissa jutuissa sama
+   * yleiskuva), OnCuba ja 14ymedio (usea <article>-lohko, joista
+   * ensimmäisessä ei ole yhtään kappaletta). Granma, Juventud Rebelde,
+   * Escambray, Trabajadores, ACN, Radio Rebelde, CubaSí, Invasor ja
+   * Vanguardia eivät vastanneet lainkaan tästä ympäristöstä.
+   *
+   * Päätöstä vaativa kysymys Fablelle: kelpaako Cubadebate kuvineen ja
+   * syötteen kuvauksineen, vai lisätäänkö js/uutiset.js:n poimintaan
+   * kolmas valitsin? Kumpikin on linjauspäätös, ei mekaaninen korjaus.
+   */
 };

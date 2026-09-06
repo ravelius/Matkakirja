@@ -27,7 +27,9 @@ import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
  * jo olemassa olevia aukkoja ei kannata sulkea tyhjällä rivillä.
  * Kaikki nämä kuuluvat Aasian tauluun (js/packs/asia-maatiedot.js).
  */
-const VIELA_ILMAN_TUNNUSLUKUJA = new Set(['BHR', 'IND', 'THA', 'VNM', 'IDN', 'MYS']);
+// 6.9.2026: CHL, COL ja CUB saivat maalehden (aiheet) ennen tunnuslukuja;
+// rivit tulevat omana eränään (tools/kirjoita-maatiedot.mjs).
+const VIELA_ILMAN_TUNNUSLUKUJA = new Set(['BHR', 'IND', 'THA', 'VNM', 'IDN', 'MYS', 'CHL', 'COL', 'CUB']);
 
 const SIJA = /^\d+\.\/\d+$/;
 

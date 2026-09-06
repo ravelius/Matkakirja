@@ -29830,4 +29830,1388 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * CHILE (CHL) — E-Amerikan neljäs maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-chile.md; kaikki luvut
+   * tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO VALPARAÍSON KANSSA: Valparaíson kaupunkilehti kattaa jo Kap
+   * Hornin kiertäjien pysähdyspaikan, ascensor-hissit, maalatut rinteet,
+   * Panaman kanavan, vuoden 1906 maanjäristyksen, brittiyhteisön Cerro
+   * Alegrella, El Mercurio de Valparaíson ja Nerudan talot. Maalehti EI
+   * toista niitä: se kertoo mapuchejen rajasta, itsenäisyydestä,
+   * saksalaissiirtolaisista, salpietarista, saarista, luonnosta, ruoasta
+   * ja musiikista.
+   *
+   * SISÄLTÖLINJAUS (spec-mantereet.md, Perustuslain pilarit 3 ja 4):
+   * vuosien 1973–1990 sotilashallinto on JÄTETTY POIS samalla
+   * periaatteella kuin Perun sisäinen konflikti CAN/MEX/PER-erässä — se
+   * on tuoretta poliittista historiaa, jota linjaus "ei nykypolitiikkaa"
+   * ei kata ilman omistajan erillistä päätöstä. Cuecan
+   * kansallistanssiasetus 6.11.1979 mainitaan pelkkänä päivämääränä.
+   * Cuecan ja Perun marineran yhteinen juuri kerrotaan niin, että
+   * molemmat rannat saavat omansa.
+   *
+   * KUVAT: 20 nostokuvaa Commonsista, lisenssi ja tekijä extmetadatasta,
+   * leveys >= 1200 px, jokainen katsottu silmin. Juan Fernándezin kartta
+   * ja Tulimaan asuinpaikkakartta ovat julkaisumuodon asiatietoa
+   * (reseptin sallima poikkeus). HYLÄTYT: "Pareja baila cueca en
+   * ex-casino Ross" (tunnistettavat kasvot ja mainosbanneri), "Pivilcas
+   * por San Pedro" ja "Ofrenda a San Pedro" (tunnistettavat kasvot,
+   * myös lapsen) ja "Iglesia de Castro" (etualalla autot ja
+   * mainoskyltti).
+   */
+  CHL: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1873 Chile on 55-vuotias tasavalta, jonka etelä on '
+          + 'yhä mapuchejen omaa maata ja jonka pohjoisrajan takana Perun '
+          + 'aavikolle nousee juuri ensimmäisiä salpietarikaupunkeja.',
+      nostot: [
+        {
+          otsikko: 'Raja, jota ei ylitetty kolmeensataan vuoteen',
+          aika: '1598–1884',
+          tiedosto: 'Ruca Mapuche 1930.jpg',
+          teksti: 'Espanjalaiset yrittivät perustaa kaupunkeja Biobío-joen '
+              + 'eteläpuolelle, mutta Curalaban taistelu 1598 pysäytti heidät. '
+              + 'Sitä seurasi Seitsemän kaupungin tuho: Valdivia, Osorno, La '
+              + 'Imperial ja neljä muuta hävisivät kuudessa vuodessa. Rajasta '
+              + 'tuli selvä, ja 1600–1700-luvuilla mapuchejen lonkot ja '
+              + 'Espanjan kuvernöörit istuivat sarjan parlamentteja. Filip '
+              + 'II:n mukaan mikään Uuden maailman sota ei maksanut yhtä '
+              + 'monta espanjalaista henkeä; sitä kutsuttiin nimellä Flandes '
+              + 'indiano. Mapuchemaa pysyi itsenäisenä vuoteen 1884.',
+          selite: 'Ruca on mapuchejen perinteinen olkikattoinen talo, ja '
+            + 'kansan johtaja on lonko, sodan ajaksi valittu johtaja toki eli '
+            + '"kirves".',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+          wiki: 'Mapuchet',
+        },
+        {
+          otsikko: 'Itsenäisyys julistettiin taistelun vuosipäivänä',
+          aika: '1810–1818',
+          tiedosto: 'Abrazo de Maipú.jpg',
+          teksti: 'Ensimmäinen hallitusjuntta kokoontui 18. syyskuuta 1810, '
+              + 'mutta vapaussota kesti vielä vuosia. Andit ylittänyt armeija '
+              + 'voitti Chacabucon taistelun 12. helmikuuta 1817. José de San '
+              + 'Martín kieltäytyi ylimmän johtajan paikasta ja antoi sen '
+              + 'Bernardo O’Higginsille, joka julisti maan itsenäiseksi '
+              + 'täsmälleen vuotta myöhemmin, 12. helmikuuta 1818. Maipún '
+              + 'taistelu 5. huhtikuuta 1818 ratkaisi sodan. Viimeiset '
+              + 'kuninkaanmieliset antautuivat vasta Chiloéssa 1826, ja '
+              + 'Espanja tunnusti Chilen vuonna 1844.',
+          selite: 'Pedro Subercaseaux’n maalaus esittää Maipún syleilyä: '
+            + 'O’Higgins tervehti San Martínia maan pelastajana heti '
+            + '5. huhtikuuta 1818 käydyn ratkaisutaistelun jälkeen.',
+          lahde: 'Pedro Subercaseaux, Wikimedia Commons (PD)',
+          wiki: 'Bernardo O’Higgins',
+        },
+        {
+          otsikko: 'Kuusituhatta saksalaista ja poltetut metsät',
+          aika: '1850–1875',
+          tiedosto: 'Frutillar -museo aleman -Casona de campo 02.jpg',
+          teksti: 'Valtio houkutteli eteläisiin metsiin siirtolaisia, ja '
+              + 'vuosina 1850–1875 Valdivian, Osornon ja Llanquihuen seudulle '
+              + 'asettui noin kuusituhatta saksalaista. Osa oli lähtenyt '
+              + 'Euroopasta vuosien 1848–49 vallankumousten jälkeen. '
+              + 'Suunnitelman esitti Bernhard Eunom Philippi, ja Vicente '
+              + 'Pérez Rosales toi 1852 perheet Llanquihue-järven rannoille. '
+              + 'Maa raivattiin tulella: vuoden 1863 kuivuutta hyväksi '
+              + 'käyttäen poltettiin alercemetsät Puerto Varasin ja Puerto '
+              + 'Monttin väliltä. Isoisän matkavuonna muutto oli yhä kesken.',
+          selite: 'Frutillarin saksalaisen siirtokuntamuseon paanuseinäinen '
+            + 'maalaistalo on rakennettu samaan tapaan kuin Llanquihuen '
+            + 'rannoille 1800-luvun puolivälissä asettuneiden kodit.',
+          lahde: 'Rodrigo Fernández, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaupunki, jonka keksintö tappoi',
+          aika: '1872–1960',
+          tiedosto: 'Oficinas salitreras de Humberstone y Santa Laura, Chile, 2016-02-11, DD 90.jpg',
+          teksti: 'Santa Lauran salpietarilaitos perustettiin 1872, kun alue '
+              + 'kuului vielä Peruun; samana vuonna syntyi naapuriin La '
+              + 'Palma, jota johti James Thomas Humberstone. Molemmat '
+              + 'kasvoivat englantilaistyylisiksi kaupungeiksi keskelle '
+              + 'aavikkoa 48 kilometriä Iquiquesta itään, ja huipussaan '
+              + 'niissä asui noin neljätuhatta ihmistä. Kun Fritz Haber ja '
+              + 'Carl Bosch keksivät ammoniakkisynteesin, lannoite alkoi '
+              + 'syntyä ilmasta: talousmalli romahti 1929 ja laitokset '
+              + 'autioituivat 1960. Aavikolla on noin 170 tällaista '
+              + 'haamukaupunkia.',
+          selite: 'Humberstonen salpietarikaupungin aukio soittolavoineen on '
+            + 'ollut autiona vuodesta 1960, ja kohde otettiin Unescon '
+            + 'maailmanperintöluetteloon 2005.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Salpietari',
+        },
+      ],
+    },
+    {
+      id: 'saaret',
+      nimi: 'Saaret',
+      johdanto: 'Chilen pisin ulottuvuus ei ole pituus vaan hajanaisuus: '
+          + 'maahan kuuluu polynesialainen patsassaari, haaksirikkoisen '
+          + 'saari, puukirkkojen saaristo ja Kap Hornin saaret.',
+      nostot: [
+        {
+          otsikko: 'Yhdeksänsataa patsasta, ei yhtään pystyssä',
+          aika: '1250–1500',
+          tiedosto: 'Rano Raraku quarry.jpg',
+          teksti: 'Rapa Nuin moait veistettiin vuosien 1250 ja 1500 välillä. '
+              + 'Niitä on yli yhdeksänsataa, ja lähes puolet seisoo yhä Rano '
+              + 'Rarakun louhoksella. Pää vie kolme kahdeksasosaa koko '
+              + 'hahmosta, jalkoja ei ole lainkaan. Korkein pystytetty patsas '
+              + 'Paro oli lähes kymmenmetrinen ja painoi 82 tonnia. Kun '
+              + 'eurooppalaiset kävivät saarella 1722, patsaat katsoivat yhä '
+              + 'sisämaahan; 1800-luvun jälkipuoliskoon mennessä ne olivat '
+              + 'kaikki kaatuneet. Chile liitti saaren 9. syyskuuta 1888.',
+          selite: 'Rano Rarakun louhoksen rinteessä seisoo satoja '
+            + 'keskeneräisiä moaita, ja lähes puolet saaren yli '
+            + 'yhdeksästäsadasta patsaasta on yhä siellä.',
+          lahde: 'Rivi, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Moai',
+        },
+        {
+          otsikko: 'Mies, joka pyysi jäädä saarelle',
+          aika: '1704–1709',
+          tiedosto: 'Isla de Juan Fernandez Chile.jpg',
+          teksti: 'Skotlantilainen Alexander Selkirk purjehti Cinque Ports '
+              + '-aluksella, jota hän piti merikelvottomana. Syyskuussa 1704 '
+              + 'hän pyysi jäädä Juan Fernándezin saarelle 670 kilometrin '
+              + 'päähän mantereesta — ja oli oikeassa, sillä alus upposi '
+              + 'myöhemmin. Selkirk eli saarella neljä vuotta ja neljä '
+              + 'kuukautta, pyydysti pari kolme vuohta päivässä ja auttoi '
+              + 'keripukkiin sairastuneen miehistön jalkeille, kun Woodes '
+              + 'Rogersin laivat noutivat hänet 2. helmikuuta 1709. Vuonna '
+              + '1869 HMS Topazen miehistö asetti saarelle muistolaatan.',
+          selite: 'Vuoden 1795 kartta esittää Juan Fernándezin saariston '
+            + 'Más a Tierraa, jonka Chile nimesi 1966 Robinson Crusoen '
+            + 'saareksi Daniel Defoen romaanihahmon mukaan.',
+          lahde: 'Claudio Gay, Wikimedia Commons (PD)',
+          wiki: 'Alexander Selkirk',
+        },
+        {
+          otsikko: 'Kirkot, jotka veistettiin kokonaan puusta',
+          aika: '1608–1826',
+          tiedosto: 'Iglesia Tenaún, desde playa.jpg',
+          teksti: 'Ensimmäiset jesuiitat saapuivat Chiloén saaristoon 1608 ja '
+              + 'rakensivat Castroon kirkon 1612. Koska väki asui hajallaan '
+              + 'kymmenillä saarilla, he keksivät kiertävän lähetyksen: papit '
+              + 'matkasivat syyskuusta toukokuuhun dalca-veneillä kappelista '
+              + 'toiseen. Kun jesuiittakunta lakkautettiin 1767, saaristossa '
+              + 'oli 79 kappelia ja kolmetoista lähetyssaarnaajaa. Kirkot '
+              + 'tehtiin kokonaan paikallisesta puusta ja paanuista; '
+              + 'kuusitoista niistä on maailmanperintökohteita. Chiloé oli '
+              + 'Espanjan viimeinen tukikohta ja antautui 15. tammikuuta 1826.',
+          selite: 'Tenaúnin sinivalkoinen puukirkko on yksi Chiloén '
+            + 'kuudestatoista maailmanperintökirkosta, ja se on rakennettu '
+            + 'kokonaan puusta ja paanuista ilman kiveä.',
+          lahde: 'Guillermo Villegas B., Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Chiloé',
+        },
+        {
+          otsikko: 'Maailman eteläisin kansa ja sen sanakirja',
+          aika: '1871',
+          tiedosto: 'Map of Tierra del Fuego showing Ona, Yahgan, Haush.jpg',
+          teksti: 'Yaganit eli yámana asuivat Tulimaan eteläpuolisilla '
+              + 'saarilla Kap Horniin asti — maailman eteläisin '
+              + 'alkuperäiskansa. He liikkuivat kanooteilla, miehet '
+              + 'metsästivät merileijonia ja naiset sukelsivat simpukoita. '
+              + 'Ohi purjehtineet näkivät heidän nuotionsa, ja siitä alue sai '
+              + 'nimen Tierra del Fuego. Anglikaanit Thomas Bridges ja George '
+              + 'Lewis perustivat lähetysaseman 1871, ja Bridges laati yli '
+              + 'vuosikymmenen työnä kieliopin ja 30 000 sanan sanakirjan '
+              + 'yaganin kielestä, joka on kielieristymä ilman sukulaisia.',
+          selite: 'Charles Wellington Furlongin kartta merkitsee Tulimaan '
+            + 'onien, yaganien ja haushien asuinpaikat, jotka hänen '
+            + 'retkikuntansa paikansi vuosina 1907–1910.',
+          lahde: 'Charles Wellington Furlong, Wikimedia Commons (PD)',
+          wiki: 'Tulimaa',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka kauan Alexander Selkirk asui yksin Juan '
+            + 'Fernándezin saarella?',
+        vaihtoehdot: [
+          'Neljä kuukautta',
+          'Vuoden ja neljä kuukautta',
+          'Neljä vuotta ja neljä kuukautta',
+          'Neljätoista vuotta',
+        ],
+        oikea: 2,
+        fakta: 'Selkirk jäi saarelle omasta pyynnöstään syyskuussa 1704 ja '
+            + 'pelastui 2. helmikuuta 1709.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Chile on kapea kaistale Andien ja Tyynenmeren välissä, ja '
+          + 'siihen mahtuu maailman kuivin aavikko, voimakkain mitattu '
+          + 'maanjäristys ja ehkä maailman vanhin puu.',
+      nostot: [
+        {
+          otsikko: 'Aavikko, jossa sadetta ei ole mitattu',
+          tiedosto: 'Anfiteatro, Valle de la Luna, San Pedro de Atacama, Chile, 2016-02-01, DD 149.JPG',
+          teksti: 'Atacama on maailman kuivin ei-polaarinen aavikko ja '
+              + 'maailman suurin sumuaavikko. Kuivuus syntyy kahdesta sadevarjosta: '
+              + 'Andit pysäyttävät Atlantin kosteuden ja rannikkovuoret '
+              + 'Tyynenmeren, ja kylmä Humboldtin merivirta viilentää ilman '
+              + 'niin, ettei se enää sada. Keskimääräinen vuosisade on noin '
+              + 'viisitoista millimetriä, ja joillakin sääasemilla sadetta ei '
+              + 'ole mitattu koskaan; aineisto viittaa siihen, ettei aavikko '
+              + 'saanut merkittävää sadetta vuosina 1570–1971. Sama kuiva '
+              + 'ilma tekee taivaasta maailman parhaan tähtitieteelle.',
+          selite: 'Kuun laakso San Pedro de Atacaman lähellä on suolan '
+            + 'peittämää aavikkoa, jonka maaperää käytetään Mars-laitteiden '
+            + 'testialustana.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Atacama',
+        },
+        {
+          otsikko: 'Kymmenen minuuttia, jotka tuntuivat Havaijilla',
+          aika: '1960',
+          tiedosto: 'Valdivia after earthquake, 1960.jpg',
+          teksti: 'Nazcan laatta työntyy Etelä-Amerikan alle Peru–Chile-'
+              + 'haudassa, ja 22. toukokuuta 1960 sauma petti kymmenen '
+              + 'minuutin ajaksi. Useimmat tutkimukset antavat magnitudiksi '
+              + '9,4–9,6, mikä tekee siitä voimakkaimman koskaan mitatun '
+              + 'maanjäristyksen. Keskus oli lähellä Lumacoa, ja pahiten '
+              + 'kärsi Valdivia. Rannikolla nousi jopa 25 metrin hyökyaaltoja, '
+              + 'ja päähyöky ylitti Tyynenmeren: Havaijin Hiloon se iski yli '
+              + 'kymmenentuhannen kilometrin päässä 10,7 metrin korkuisena. '
+              + 'Uhriarviot vaihtelevat tuhannesta kuuteen tuhanteen.',
+          selite: 'Valdivian puutalot painuivat kaduilleen 22. toukokuuta '
+            + '1960, kun kymmenen minuuttia kestänyt järistys liikutti maata '
+            + 'koko Etelä-Chilessä.',
+          lahde: 'Pierre St. Amand, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Jääkenttä, joka ruokkii kymmeniä jäätiköitä',
+          tiedosto: 'Las Torres, Torres del Paine, Chile.jpg',
+          teksti: 'Eteläinen Patagonian jääkenttä on maailman toiseksi suurin '
+              + 'yhtenäinen jääkenttä napa-alueiden ulkopuolella: noin 350 '
+              + 'kilometriä pitkä ja 16 480 neliökilometriä, josta 14 200 on '
+              + 'Chilen puolella. Se ruokkii kymmeniä jäätiköitä, joista Pío '
+              + 'XI on 1 265 neliökilometrillään eteläisen pallonpuoliskon '
+              + 'suurin Antarktiksen ulkopuolella. Reunalla on Torres del '
+              + 'Painen kansallispuisto, perustettu 1959. Nimi on tehuelchen '
+              + 'kieltä ja tarkoittaa sinistä; kävijöitä on noin 252 000 '
+              + 'vuodessa, ja heistä yli puolet tulee ulkomailta.',
+          selite: 'Torres del Painen kolme graniittitornia kohoavat '
+            + 'jäätikköjärven takaa, ja puiston nimi tarkoittaa tehuelchen '
+            + 'kielellä sinistä.',
+          lahde: 'Aakerueh, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Torres del Painen kansallispuisto',
+        },
+        {
+          otsikko: 'Puu, jossa saattaa olla viisituhatta vuosilustoa',
+          aika: '2020',
+          tiedosto: 'Fitzroya cupressoides kz05.jpg',
+          teksti: 'Alerce eli mapudungunin lawal on Etelä-Amerikan suurin '
+              + 'puulaji: yleensä 40–60 metriä, joskus yli seitsemänkymmentä, '
+              + 'ja rungon läpimitta jopa viisi metriä. Suku on nimetty '
+              + 'Robert FitzRoyn mukaan. Alerce Costeron kansallispuistossa '
+              + 'seisova Alerce Milenario on yli 60 metriä korkea ja rungoltaan '
+              + '4,26 metriä paksu. Jonathan Barichivich ja Antonio Lara '
+              + 'ottivat siitä 2020 osanäytteen ja arvioivat vuosilustoja '
+              + 'olevan yli viisituhatta — jos arvio pitää, puu on maailman '
+              + 'vanhin. Elossa siitä on enää noin 28 prosenttia.',
+          selite: 'Alerce kasvaa Etelä-Chilen sademetsissä hitaasti mutta '
+            + 'pitkään, ja lajia hakattiin voimakkaasti 1800- ja '
+            + '1900-luvuilla.',
+          lahde: 'Krzysztof Ziarnek, Kenraiz, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Patagoniansypressi',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Chilen keittiö on kolmen maan keittiö: aavikon, laaksojen '
+          + 'ja saariston — ja yksi sen rypäleistä oli maailmalta kadonnut '
+          + 'sata vuotta.',
+      nostot: [
+        {
+          otsikko: 'Rypäle, jota luultiin sukupuuttoon kuolleeksi',
+          aika: '1867–1998',
+          tiedosto: 'Carmenere grapes.jpg',
+          teksti: 'Carménère on yksi Bordeaux’n kuudesta alkuperäisestä '
+              + 'punaviinirypäleestä, ja nimi tulee sanasta carmin, karmiini: '
+              + 'lehdet punertuvat syksyllä. Vuoden 1867 viinikirvatuho '
+              + 'hävitti sen Euroopasta lähes kokonaan, ja lajia pidettiin '
+              + 'kadonneena. Pistokkaat oli kuitenkin tuotu 1850-luvulla '
+              + 'Santiagon ympäristön laaksoihin, joihin kirva ei koskaan '
+              + 'levinnyt. Koko 1900-luvun sato korjattiin merlot’na. '
+              + 'Ranskalainen ampelografi Jean Boursiquot tunnisti lajikkeen '
+              + 'omakseen 1994, ja se sai virallisen aseman 1998.',
+          selite: 'Carménèren rypäleterttu kypsyy pari kolme viikkoa merlot’ta '
+            + 'myöhemmin, ja Chilessä lajiketta kasvaa yli 8 800 hehtaaria — '
+            + 'enemmän kuin missään muualla.',
+          lahde: 'Simon-sake, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Ruoka, joka kypsyy kuopassa kuumien kivien päällä',
+          tiedosto: 'Curanto al hoyo.jpg',
+          teksti: 'Curanto tulee mapudungunin sanasta kurantu, kivinen. '
+              + 'Chiloéssa kaivetaan noin puolen metrin kuoppa, pohjalle '
+              + 'ladotaan nuotiossa hehkutetut kivet ja niiden päälle '
+              + 'kerroksittain simpukoita, lihaa, perunaa sekä milcao- ja '
+              + 'chapalele-perunaleipiä. Jokainen kerros peitetään suurilla '
+              + 'nalca-lehdillä, päälle tulevat märät säkit ja turve — '
+              + 'jättimäinen painekattila, jossa ateria kypsyy tunnissa. '
+              + 'Simpukoista välttämättömiä ovat almeja, cholga ja picoroco. '
+              + 'Vanhimmat jäänteet Chiloésta ovat yli 11 000 vuoden takaa.',
+          selite: 'Curanto en hoyo kypsyy maakuopassa kuumien kivien päällä, '
+            + 'ja kerrosten väliin ladotaan simpukoita, lihaa ja '
+            + 'perunaleipiä.',
+          lahde: 'Esteban Varas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maissipiirakka, jonka resepti kirjattiin ennen isoisää',
+          aika: '1862',
+          tiedosto: 'Pastel de choclo Típico de Chile.JPG',
+          teksti: 'Pastel de choclo tehdään jauhetusta makeasta maissista, '
+              + 'joka maustetaan basilikalla ja kypsennetään savipadassa. '
+              + 'Pohjalla on pino: jauhelihaa sipulin ja mausteiden kanssa, '
+              + 'seassa kananmunaa, oliiveja ja rusinoita. Sama pino täyttää '
+              + 'chileläisen empanadan. Luonnontieteilijä Claudio Gay kuvasi '
+              + 'ruoan jo teoksessaan Historia física y política de Chile '
+              + 'vuonna 1862 — silloin täytteenä oli jauhettua lampaanlihaa '
+              + 'ja joskus kanaa, ja maissikerros maustettiin sokerilla, '
+              + 'rasvalla ja chilillä.',
+          selite: 'Pastel de choclo kypsennetään ja tarjotaan matalassa '
+            + 'savipadassa, ja sen maissikuori ruskistuu uunissa sokerin '
+            + 'ansiosta.',
+          lahde: 'Gianinanicole, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Mauste, joka savustetaan puunuotiolla',
+          tiedosto: 'Merquén Mapuche.JPG',
+          teksti: 'Merkén on mapudungunin mezkeñ. Se tehdään cacho de cabra '
+              + '-paprikasta, joka kuivataan ensin auringossa, savustetaan '
+              + 'puunuotiolla, ripustetaan vielä kuivumaan ja vasta sitten '
+              + 'jauhetaan. Merkén natural on pelkkää chiliä ja suolaa; '
+              + 'merkén especial saa mukaan paahdettua korianterinsiementä, '
+              + 'suhteessa noin 70 prosenttia chiliä, 20 suolaa ja 10 '
+              + 'korianteria. Mausteen kotiseutu on Araucanía, mutta '
+              + '2000-luvulta lähtien se on levinnyt koko maan keittiöön ja '
+              + 'sieltä ammattikokkien käyttöön.',
+          selite: 'Merkén on savustetusta cacho de cabra -paprikasta '
+            + 'jauhettu mapuchekeittiön mauste, jossa on usein mukana suolaa '
+            + 'ja paahdettua korianterinsiementä.',
+          lahde: 'Marco Antonio Correa Flores, Wikimedia Commons '
+            + '(CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Chilen musiikki kulkee kolmella tasolla: nenäliinatanssi '
+          + 'kaikkialla, hartauskulkueiden huilut pohjoisessa ja '
+          + 'kaksikymmentäviisikielinen kitara maaseudun runolaulussa.',
+      nostot: [
+        {
+          otsikko: 'Tanssi, joka vaihtoi nimeä rajan yli',
+          aika: '1879',
+          tiedosto: 'Zamacueca por Arturo Gordon.jpg',
+          teksti: 'Cuecassa tanssijoilla on nenäliina oikeassa kädessä; he '
+              + 'kiertävät ympyröitä ja käännöksiä koskematta toisiinsa. '
+              + 'Juuret ovat 1700-luvun lopulla, ja yleisimmän selityksen '
+              + 'mukaan tanssi polveutuu Perussa syntyneestä zamacuecasta, '
+              + 'joka levisi Chileen ja Boliviaan. Perussa chileläinen muoto '
+              + 'oli 1860- ja 1870-luvulla suosituin ja tunnettiin nimellä '
+              + 'chilena; maaliskuussa 1879 kirjailija Abelardo Gamarra antoi '
+              + 'sille uuden nimen marinera maansa merimiesten kunniaksi. '
+              + 'Chilen kansallistanssiksi cueca julistettiin 6.11.1979.',
+          selite: 'Arturo Gordonin maalauksessa zamacuecaa soitetaan harpulla '
+            + 'ja kitaralla, ja tanssi käydään huoneen keskellä muiden '
+            + 'katsoessa.',
+          lahde: 'Arturo Gordon, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Ensimmäinen latinalaisamerikkalainen Louvressa',
+          aika: '1964',
+          tiedosto: 'Dardignac 28 -mural de Violeta Parra -fRF1.jpg',
+          teksti: 'Violeta Parra (1917–1967) kiersi Chilen keräämässä '
+              + 'kansanlauluja ja perinnetaitoja: samalla matkalla syntyivät '
+              + 'hänen keramiikkansa, maalauksensa ja arpillera-kuvakirjontansa. '
+              + 'Huhtikuussa 1964 Louvren koristetaiteen museo avasi näyttelyn '
+              + 'hänen arpilleroistaan, öljymaalauksistaan ja '
+              + 'rautalankaveistoksistaan — ensimmäinen '
+              + 'latinalaisamerikkalaisen taiteilijan yksityisnäyttely siellä. '
+              + 'Laulu "Gracias a la vida" syntyi La Pazissa 1966. Parran '
+              + 'syntymäpäivä 4. lokakuuta on Chilen muusikoiden päivä.',
+          selite: 'Santiagon Bellavistassa oleva mosaiikki esittää Violeta '
+            + 'Parraa kitaroineen; hän oli säveltäjä, folkloristi ja '
+            + 'kuvataiteilija samassa työssä.',
+          lahde: 'Rodrigo Fernández, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Violeta Parra',
+        },
+        {
+          otsikko: 'Huilut, joiden nimi tarkoittaa palvelijaa',
+          aika: '2014',
+          tiedosto: 'Pifilka.jpg',
+          teksti: 'Baile chino on Norte Chicon ja Keski-Chilen '
+              + 'rituaalitanssi. Huilistit, rumpalit ja tanssijat muodostavat '
+              + 'kaksi symmetristä riviä, joita johtaa yksi laulaja, alférez. '
+              + 'Tanssijat notkistavat polvia ja hyppivät samalla kun '
+              + 'huilistit puhaltavat pifilca-huilua. Sana chino tulee '
+              + 'ketšuasta ja aymarasta ja tarkoittaa palvelijaa — nimi kertoo '
+              + 'siis asenteesta pyhää kohtaan eikä Kiinasta. Perinne juontaa '
+              + 'esikolumbiaaniseen Keski-Chileen noin vuosiin 900–1400, ja '
+              + 'Unesco otti sen luetteloonsa 2014.',
+          selite: 'Pifilca on yksiääninen puuhuilu, jota baile chinon '
+            + 'soittajat puhaltavat vuorotellen niin, että sävel syntyy '
+            + 'vasta ryhmässä.',
+          lahde: 'Ana Orero, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kitara, jossa on kaksikymmentäviisi kieltä',
+          tiedosto: 'Guitarrón chileno de Ángel Parra, Museo Violeta Parra, Santiago 20260411.jpg',
+          teksti: 'Guitarrón chileno on kitaran muotoinen näppäilysoitin, '
+              + 'jossa on kaksikymmentäviisi kieltä — harvoin 24 tai 26. Nimi '
+              + 'viittaa kitaraan, mutta rakenne, viritys ja soittotapa ovat '
+              + 'lähempänä renessanssin ja barokin vihuelaa; alkuperä voi '
+              + 'ulottua 1500-luvulle. Vanhoissa soittimissa oli sidotut '
+              + 'suoliotenauhat ja viulun kaltaiset kitkavirittimet. Soitin '
+              + 'on maaseudun runolaulun, canto a lo poetan, vakiosäestäjä, '
+              + 'ja viime vuosina muutama virtuoosi on alkanut kehittää '
+              + 'siitä myös soolosoitinta.',
+          selite: 'Museo Violeta Parran guitarrón kuului Ángel Parralle, ja '
+            + 'sen kaksikymmentäviisi kieltä on ryhmitelty viiteen kuoroon '
+            + 'sekä neljään erilliseen sivukieleen.',
+          lahde: 'Carlos Figueroa Rojas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+  ],
+  /*
+   * KOLUMBIA (COL) — E-Amerikan viides maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-kolumbia.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO BOGOTÁN KANSSA: Bogotán kaupunkilehti kattaa jo muiscat, El
+   * Doradon ja Guatavitan, Kultamuseon, smaragdit ja Lechugan
+   * monstranssin, Ciclovían, Zipaquirán suolakatedraalin,
+   * Kansallismuseon ja pääkaupungin eristyneisyyden. Maalehti EI toista
+   * niitä: se kertoo Cartagenasta, itsenäisyydestä, Mutisin
+   * retkikunnasta, Magdalenasta, San Agustínista, Tierradentrosta,
+   * Ciudad Perdidasta, Zenú-kanavista, luonnosta, ruoasta ja musiikista.
+   *
+   * SISÄLTÖLINJAUS (spec-mantereet.md): 1960-luvulta alkanut aseellinen
+   * konflikti, huumekauppa ja nykypolitiikka on JÄTETTY KOKONAAN POIS —
+   * sama linja kuin Meksikon huumesodan ja Perun sisäisen konfliktin
+   * kanssa CAN/MEX/PER-erässä. Panaman ero 1903 ja Tuhannen päivän sota
+   * jätettiin samoin pois. Cartagenan orjakauppa mainitaan asiatietona
+   * ilman kuvausta, koska se on kaupungin ja koko Karibian historian
+   * ydin.
+   *
+   * KUVAT: 18 nostokuvaa Commonsista, lisenssi ja tekijä extmetadatasta,
+   * leveys >= 1200 px, jokainen katsottu silmin. KAKSI NOSTOA JÄI
+   * KUVATTOMAKSI (sama ratkaisu kuin MEX:n mariachi-nostossa): cumbia ja
+   * marimba de chonta — kaikki löytyneet kuvat olivat tanssijoiden ja
+   * soittajien lähikuvia, joissa kasvot tunnistuvat. HYLÄTYT: "Baile de
+   * cumbia en Mompox" ja "SolReyes20120906 195" (tunnistettavat kasvot,
+   * myös lapsen), "Puente de Boyacá Bridge" (työmaanauhaa ja
+   * joulukoristeita), "Batalla de Boyaca de Martin Tovar y Tovar"
+   * (kaatuneita etualalla), "Ilustraciones José Celestino Mutis"
+   * (epätarkka lattiakuva jäljennöksistä), "Café colombiano Santa Clara"
+   * (kahvilakuva, jossa ihminen tunnistuu), "El Águila (26), Valle"
+   * (sumuista vuoristoa, ei kahvia näkyvissä), "Panelera Corozal El
+   * Triangulo 44" (tyhjiä likaisia valuastioita).
+   */
+  COL: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1873 maan nimi on Kolumbian yhdysvallat, sen '
+          + 'valtaväylä on joki eikä rautatie, ja sen kuuluisin tiedemies on '
+          + 'ollut kuolleena 65 vuotta ilman että töitään on julkaistu.',
+      nostot: [
+        {
+          otsikko: 'Kaupunki, jota rakennettiin kaksisataa vuotta',
+          aika: '1533–1741',
+          tiedosto: 'Castillo San Felipe de Barajas, Cartagena 08.jpg',
+          teksti: 'Cartagena perustettiin 1. kesäkuuta 1533, ja siitä tuli '
+              + 'Bolivian Potosín hopean vientisatama ja asiento-järjestelmän '
+              + 'kautta orjuutettujen afrikkalaisten päätuontisatama. '
+              + 'Merirosvot ryöstivät muurittoman kaupungin 1544 ja 1569, '
+              + 'joten Filip II tilasi 1586 italialaiselta insinööriltä '
+              + 'Battista Antonellilta linnoitussuunnitelman — töitä '
+              + 'jatkettiin kaksisataa vuotta. Amiraali Edward Vernon '
+              + 'saapui huhtikuussa 1741 viidelläkymmenellä sota-aluksella ja '
+              + '25 600 miehellä, epäonnistui San Felipessä ja perääntyi.',
+          selite: 'Castillo San Felipe de Barajas valmistui 1654, ja sen '
+            + 'vallien alla kulkee maanalaisia käytäviä; linnoitus torjui '
+            + 'vuoden 1741 piirityksen.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cartagena (Kolumbia)',
+        },
+        {
+          otsikko: 'Kaksi tuntia sillalla, kolme maata kartalle',
+          aika: '1819',
+          tiedosto: 'Simón Bolívar, 1825.jpg',
+          teksti: 'Simón Bolívarin armeija ylitti Andit Páramo de Pisban '
+              + 'kautta heinäkuussa 1819 — marssi vei miehiltä voimat, mutta '
+              + 'yllätti espanjalaiset. Vargasin suolla voitettiin niukasti '
+              + '25. heinäkuuta, ja 7. elokuuta 1819 Boyacán sillalla '
+              + 'ratkaistiin koko sota kahdessa tunnissa. Varakuningas Juan '
+              + 'de Sámano pakeni pääkaupungista. Angosturan kongressi julisti '
+              + 'samana vuonna Suur-Kolumbian, joka perustettiin Cúcutan '
+              + 'perustuslailla 1821 ja hajosi 1831; siihen kuuluivat '
+              + 'nykyiset Kolumbia, Ecuador, Panama ja Venezuela.',
+          selite: 'José Gil de Castron vuoden 1825 muotokuva esittää Simón '
+            + 'Bolívarin, joka johti Boyacán taistelun ja perusti '
+            + 'Suur-Kolumbian.',
+          lahde: 'José Gil de Castro, Wikimedia Commons (PD)',
+          wiki: 'Suur-Kolumbia',
+        },
+        {
+          otsikko: 'Sata viisi laatikkoa, jotka jäivät työkaluvajaan',
+          aika: '1783–1816',
+          tiedosto: 'José Celestino Mutis.jpg',
+          teksti: 'Kaarle III hylkäsi papin ja lääkärin José Celestino '
+              + 'Mutisin ehdotuksen kahdesti ennen kuin hyväksyi sen 1783. '
+              + 'Kuninkaallinen kasvitieteellinen retkikunta lähti liikkeelle '
+              + '29. huhtikuuta 1783 ja tutki noin kahdeksantuhatta '
+              + 'neliökilometriä kolmenkymmenen vuoden ajan. Tulos oli '
+              + 'valtava: noin kuusituhatta uutta lajia, 6 717 piirrosta ja '
+              + '24 000 kuivattua kasvia. Alexander von Humboldt asui Mutisin '
+              + 'luona kaksi kuukautta 1801. Aineisto lähetettiin Madridiin '
+              + '105 laatikossa — ja unohtui puutarhan työkaluvajaan.',
+          selite: 'Muotokuvassa José Celestino Mutis tutkii kukkaa '
+            + 'suurennuslasilla; hänen retkikuntansa piirrokset julkaistiin '
+            + 'vasta 1952 alkaen, ja työ on yhä kesken.',
+          lahde: 'R. Cristobal, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Joki, jota pitkin maa kulki sisämaahan',
+          aika: '1825–1961',
+          tiedosto: 'Champán en el río Magdalena.jpg',
+          teksti: 'Magdalena virtaa 1 528 kilometriä pohjoiseen ja laskee '
+              + 'Karibialle Barranquillan kohdalla. Sen valuma-alue on '
+              + '273 000 neliökilometriä eli 24 prosenttia maan pinta-alasta, '
+              + 'ja siellä asuu kaksi kolmasosaa väestöstä. Ennen höyryä '
+              + 'matkustajat kulkivat champán-veneillä, joita soudettiin ja '
+              + 'sauvottiin viikkokausia ylävirtaan. Kongressi myönsi '
+              + 'höyrylaivaoikeuden Juan Bernardo Elbersille 1825, mutta '
+              + 'säännöllinen liikenne alkoi vasta 1845 ja jatkui 1961 asti. '
+              + 'Vesistössä tunnetaan 213 kalalajia, joista 55 prosenttia on '
+              + 'kotoperäisiä.',
+          selite: '1800-luvun litografia esittää champánia, katetulla '
+            + 'olkikojulla varustettua jokivenettä, jota sauvottiin '
+            + 'Magdalenaa ylävirtaan sisämaahan.',
+          lahde: 'Suricatem, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Magdalena (joki)',
+        },
+      ],
+    },
+    {
+      id: 'muinaisuus',
+      nimi: 'Muinaisuus',
+      johdanto: 'Kolumbian vanhin taide ei ole kultaa vaan kiveä, savea ja '
+          + 'kaivettua maata: patsaita, maalattuja hautakammioita, '
+          + 'terasseja ja puoli miljoonaa hehtaaria kanavia.',
+      nostot: [
+        {
+          otsikko: 'Kuusisataa patsasta, tekijät tuntemattomia',
+          aika: '5–400 jaa.',
+          tiedosto: 'Parque Arqueológico de San Agustín-Mesita A 07.jpg',
+          teksti: 'San Agustínissa Magdalenan yläjuoksulla on Latinalaisen '
+              + 'Amerikan suurin kokoelma uskonnollisia monumentteja ja '
+              + 'megaliittiveistoksia; sitä pidetään maailman suurimpana '
+              + 'nekropolina. Patsaat on veistetty arviolta vuosien 5 ja 400 '
+              + 'välillä, mutta ajoitus on epävarma ja alue suurelta osin '
+              + 'kaivamatta — veistäjien alkuperä on yhä tuntematon. '
+              + 'Jäänteitä on yli kolmensadan neliökilometrin alalla, ja '
+              + 'itse puistossa on yli 600 patsasta. Ensimmäisenä niistä '
+              + 'kirjoitti espanjalaismunkki Juan de Santa Gertrudis 1756.',
+          selite: 'San Agustínin hautakammion kattokivi lepää kolmen '
+            + 'kaiverretun patsaan varassa, ja hahmoissa on sekä ihmisen '
+            + 'että eläimen piirteitä.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kierreportaat kahdeksan metriä maan alle',
+          aika: '500–800',
+          tiedosto: 'S2010298 diseños tierradentro.jpg',
+          teksti: 'Tierradentron kulttuuri kukoisti Lounais-Kolumbian '
+              + 'vuorilla 200-luvulta eaa. alkaen, ja se tunnetaan '
+              + 'hypogeumeistaan. Tyypilliseen hautakammioon mennään lännestä '
+              + 'kierreportaita pitkin viidestä kahdeksaan metriä maan alle; '
+              + 'päähuoneen ympärillä on pienempiä kammioita. Seinät on '
+              + 'maalattu geometrisin, ihmis- ja eläinaiheisin kuvioin '
+              + 'punaisella, mustalla ja valkoisella. Kaivauksissa on löytynyt '
+              + '162 hypogeumia, ja puiston kammiot ovat 500–800-luvulta. '
+              + 'Alue on ollut maailmanperintökohde vuodesta 1995.',
+          selite: 'Tierradentron hautakammion katto ja pilarit on maalattu '
+            + 'punaisin, mustin ja valkoisin geometrisin kuvioin, ja pilarissa '
+            + 'on kaiverrettu kasvot.',
+          lahde: 'Nelsonc, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Tierradentro',
+        },
+        {
+          otsikko: 'Kaupunki, joka löytyi ammuttua lintua hakiessa',
+          aika: '800–1972',
+          tiedosto: 'Cienaga, Magdalena, Colombia - Ciudad Perdida trek 78.jpg',
+          teksti: 'Sierra Nevada de Santa Martan rinteillä on tairona-kansan '
+              + 'kaupunki, joka perustettiin noin vuonna 800 — arviolta 650 '
+              + 'vuotta ennen Machu Picchua. Siinä on 169 terassia, kivetty '
+              + 'tieverkko ja pieniä pyöreitä aukioita, ja sinne noustaan '
+              + '1 200 kiviporrasta viidakon läpi. Asukkaita arvioidaan olleen '
+              + '2 000–8 000. Aarteenetsijäperhe löysi paikan 1972, kun '
+              + 'ammuttu lintu putosi portaille; arkeologit saapuivat 1976. '
+              + 'Kogit ovat kertoneet käyneensä kaupungissa kaiken aikaa ja '
+              + 'kutsuvat sitä nimellä Teyuna.',
+          selite: 'Ciudad Perdidan pyöreä olkikattoinen maja seisoo '
+            + 'kivitasanteella, jollaisia tairona kaivoi rinteeseen 169 '
+            + 'kappaletta.',
+          lahde: 'McKay Savage, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Puoli miljoonaa hehtaaria kaivettuja kanavia',
+          aika: '200 eaa. – 1000 jaa.',
+          tiedosto: "(Auch) Paire d'ornements d'oreilles - culture Zenù (sinu) - Musée des Amériques – Auch.jpg",
+          teksti: 'San Jorgen, Caucan, Magdalenan ja Nechín muodostama '
+              + 'sisämaan suisto tulvi joka vuosi huhtikuusta marraskuuhun. '
+              + 'Zenút alkoivat 200-luvulla eaa. kaivaa kanavia, jotka '
+              + 'ohjasivat tulvaveden ja tekivät alueesta viljelykelpoisen; '
+              + 'laajimmillaan verkosto kattoi puoli miljoonaa hehtaaria. '
+              + 'Noin vuonna 950 San Jorgen altaassa asui 160 ihmistä '
+              + 'neliökilometrillä. Väki väheni 1100-luvun jälkeen '
+              + 'tuntemattomasta syystä ja siirtyi ylemmäs. Zenúille maailma '
+              + 'oli suuri punos, ja sama kuvio toistuu heidän kultatöissään.',
+          selite: 'Zenú-kulttuurin valetut korvakorut on tehty '
+            + 'puolifiligraanitekniikalla niin, että metallilangat '
+            + 'muodostavat saman punoskuvion kuin kansan kanavaverkosto.',
+          lahde: 'Didier Descouens, Wikimedia Commons (PD)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Ciudad Perdida löydettiin uudelleen vuonna 1972?',
+        vaihtoehdot: [
+          'Satelliittikuvasta',
+          'Kun ammuttu lintu putosi kaupungin kiviportaille',
+          'Vanhasta espanjalaisesta kartasta',
+          'Maanjäristys paljasti terassit',
+        ],
+        oikea: 1,
+        fakta: 'Aarteenetsijäperhe seurasi lintua, huomasi portaat ja nousi '
+            + 'niitä pitkin kaupunkiin; arkeologit saapuivat vasta 1976.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kolumbiassa on kaksi rantaa, kolme Andien haaraa, Amazon '
+          + 'ja llanos-tasangot — ja siksi enemmän lintulajeja kuin missään '
+          + 'muualla maailmassa.',
+      nostot: [
+        {
+          otsikko: 'Enemmän lintuja kuin Euroopassa ja Pohjois-Amerikassa',
+          tiedosto: 'Andean cock-of-the-rock (Rupicola peruvianus sanguinolentus) male Antioquia 2.jpg',
+          teksti: 'Kolumbia on yksi maailman seitsemästätoista '
+              + 'megadiversistä maasta, ja sillä on maailman suurin '
+              + 'lajitiheys pinta-alaa kohti sekä eniten kotoperäisiä lajeja. '
+              + 'Noin kymmenen prosenttia maapallon lajeista elää siellä. '
+              + 'Lintulajeja on yli 1 900 — enemmän kuin Euroopassa ja '
+              + 'Pohjois-Amerikassa yhteensä ja 18 prosenttia koko maailman '
+              + 'lintulajeista. Maa on ensimmäinen myös orkidealajien ja '
+              + 'kotoperäisten perhosten määrässä, ja siellä on 32 '
+              + 'maabiomia ja 314 ekosysteemityyppiä.',
+          selite: 'Andienkalliokukon koiras on tulipunainen ja sen '
+            + 'harjasulat peittävät nokan lähes kokonaan; laji elää Andien '
+            + 'kosteissa vuorimetsissä.',
+          lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kolumbia',
+        },
+        {
+          otsikko: 'Joki, joka on neljä kuukautta punainen',
+          aika: '1969',
+          tiedosto: 'Caño cristales.jpg',
+          teksti: 'Serranía de la Macarena on ylätasanko, jonka kvartsiitti '
+              + 'syntyi noin 1,2 miljardia vuotta sitten. Sen halki virtaa '
+              + 'Caño Cristales, jonka karjatilalliset löysivät 1969. '
+              + 'Heinäkuun lopusta marraskuuhun uoma on keltainen, vihreä, '
+              + 'sininen, musta ja ennen kaikkea punainen: värin tekee '
+              + 'vesikasvi Macarenia clavigera, joka kasvaa kiinni kalliossa '
+              + 'virran alla. Jokea kutsutaan viiden värin joeksi. '
+              + 'Ylätasanko on Andien, llanosin ja Amazonin rajalla, ja siellä '
+              + 'elää noin 420 lintulajia.',
+          selite: 'Caño Cristalesin uomassa kasvava Macarenia clavigera '
+            + 'värjää veden punaiseksi heinäkuun lopusta marraskuuhun.',
+          lahde: 'Ricardo Gonzalez Arango, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Palmu, joka lisääntyy vasta 80-vuotiaana',
+          aika: '1860',
+          tiedosto: 'Valle de Cocora, Colombia 03.jpg',
+          teksti: 'Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 '
+              + 'metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on '
+              + 'maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, '
+              + 'harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan '
+              + 'peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista '
+              + 'kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. '
+              + 'Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja '
+              + 'sen latvoissa pesii uhanalainen keltakorvainen aratti.',
+          selite: 'Cocoran laakson vahapalmut kohoavat sumusta yli '
+            + 'neljänkymmenen metrin korkeuteen, mikä tekee niistä maailman '
+            + 'korkeimman yksisirkkaisen kasvin.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vuoristotundra, joka juottaa pääkaupungin',
+          aika: '1977',
+          tiedosto: 'WLE2026 CO - Valle de frailejones, Páramo de Guerrero (93).jpg',
+          teksti: 'Páramo on trooppinen vuoristotundra metsärajan yläpuolella '
+              + 'ja lumirajan alapuolella; kasvillisuus on jättimäisiä '
+              + 'ruusukekasveja, pensaita ja heiniä. Tutkijoiden mukaan '
+              + 'páramot ovat evoluution kuumia pisteitä, maapallon nopeimmin '
+              + 'kehittyviä alueita. Suurin osa niistä on Kolumbian Andeilla, '
+              + 'ja Sumapazin páramo parinkymmenen kilometrin päässä '
+              + 'Bogotásta etelään on maailman suurin; siitä tuli '
+              + 'kansallispuisto 1977 ja se on ylängön tärkein vesilähde. '
+              + 'Tunnuskasvi on frailejón, "iso munkki".',
+          selite: 'Frailejón eli Espeletia kerää mehevät karvaiset lehtensä '
+            + 'tiiviiseen kierteeseen, ja kuivuneet lehdet jäävät runkoon '
+            + 'suojaamaan kasvia yön pakkaselta.',
+          lahde: 'Jedidiahhorne, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Espeletia',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kolumbian ruoka nousee kolmelta korkeudelta: maissi '
+          + 'laaksoista, kahvi rinteiltä ja ruokosokeri myllyistä, joita on '
+          + 'kaksikymmentätuhatta.',
+      nostot: [
+        {
+          otsikko: 'Katumusharjoitus oli istuttaa kahvipuita',
+          aika: '1808',
+          tiedosto: 'Cultivo de café San Agustin (Huila).jpg',
+          teksti: 'Kahvipensas oli levinnyt maahan vuoteen 1790 mennessä, ja '
+              + 'vanhin kirjallinen maininta on jesuiittapappi José Gumillan '
+              + 'teoksessa vuodelta 1730. Ensimmäinen kaupallinen vienti '
+              + 'kirjattiin 1808: sata säkkiä Cúcutan satamasta. Viljelyn '
+              + 'levitti koillisessa pappi Francisco Romero, joka määräsi '
+              + 'Salazar de las Palmasin seurakuntalaisille '
+              + 'katumusharjoitukseksi kahvipuiden istuttamisen. Nyt maa '
+              + 'tuottaa keskimäärin 11,5 miljoonaa säkkiä vuodessa ja on '
+              + 'arabican osalta maailman suurin; kahvin kulttuurimaisema '
+              + 'otettiin maailmanperintöluetteloon 2011.',
+          selite: 'Kolumbialainen kahvipensas kasvaa jyrkillä rinteillä, ja '
+            + 'sen kirsikat poimitaan käsin sitä mukaa kuin ne punertuvat.',
+          lahde: 'Mfrancoavellaneda, Wikimedia Commons (CC0)',
+          wiki: 'Kahvi',
+        },
+        {
+          otsikko: 'Kolmetuhatta vuotta maissileipää',
+          tiedosto: 'Arepa de Chócolo.jpg',
+          teksti: 'Arepa on maissitaikinasta tehty litteä leipä ja '
+              + 'esikolumbiaaninen ruoka nykyisen Kolumbian, Panaman ja '
+              + 'Venezuelan alueelta. Maissinviljelyn vanhimmat jäljet '
+              + 'Kolumbiasta ovat noin kuudentuhannen vuoden takaa, mutta '
+              + 'arepoja on tehty noin kolmetuhatta vuotta — Venezuelan arvio '
+              + 'on 2 800. Arkeologisilta paikoilta on löydetty sekä '
+              + 'jauhinvälineet että savilevyt, joilla leivät paistettiin. '
+              + 'Vastaavia leipiä ovat Meksikon gordita, El Salvadorin pupusa '
+              + 'ja Ecuadorin maissitortilla; täytteenä on juustoa, lihaa tai '
+              + 'avokadoa.',
+          selite: 'Arepa de chócolo tehdään makeasta tuoreesta maissista ja '
+            + 'halkaistaan juuston ympärille; leipä on esikolumbiaanista '
+            + 'perua.',
+          lahde: 'John Alexis Guerra Gómez, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Arepa',
+        },
+        {
+          otsikko: 'Yhdeksän viikkoa vuodessa syödään muurahaisia',
+          tiedosto: 'Hormiga Culona.jpg',
+          teksti: 'Hormiga culona on yksi suurimmista '
+              + 'lehtileikkurimuurahaislajeista; yhdessä pesässä on noin 3,5 '
+              + 'miljoonaa yksilöä. Santanderissa niitä on syöty satoja, ehkä '
+              + 'tuhansia vuosia, ja perinne on peritty guane-kansalta. '
+              + 'Muurahaisia kerätään vain yhdeksän viikkoa vuodessa, '
+              + 'sadekaudella häälennon aikaan, ja kelpuutetaan vain '
+              + 'kuningattaret. Jalat ja siivet poistetaan, muurahaiset '
+              + 'liotetaan suolavedessä ja paahdetaan savipannulla. Tuotannon '
+              + 'keskukset ovat San Gil ja Barichara, ja niitä annetaan '
+              + 'häälahjaksi.',
+          selite: 'Hormiga culona on lehtileikkurimuurahaisen kuningatar, ja '
+            + 'se pyydystetään häälennon aikana siivet vielä tallella.',
+          lahde: 'Juliett, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kaksikymmentätuhatta myllyä ja yksi sokerikimpale',
+          tiedosto: 'Panela en cuadros.JPG',
+          teksti: 'Panela on puhdistamaton kokoruokosokeri: sokeriruo’on mehu '
+              + 'keitetään, haihdutetaan ja valetaan muotteihin, joissa se '
+              + 'kovettuu kimpaleiksi. Kolumbia on maailman suurin tuottaja '
+              + 'noin 1,4 miljoonalla tonnilla vuodessa, ja sen asukaskohtainen '
+              + 'kulutus on maailman suurin. Ala työllistää noin 350 000 '
+              + 'ihmistä lähes kahdessakymmenessätuhannessa trapiche-myllyssä '
+              + 'ja on perustoimeentulo 236 kunnassa. Sokeriruoko on '
+              + 'pinta-alaltaan maan kuudenneksi laajin viljelykasvi kahvin, '
+              + 'maissin, riisin, banaanin ja puuvillan jälkeen.',
+          selite: 'Panelakimpaleet valetaan muotteihin uritettuina, jotta '
+            + 'niistä on helppo lohkoa pala kerrallaan kuumaan veteen tai '
+            + 'kahviin.',
+          lahde: 'Elifeleth, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Kolumbian musiikki syntyi kolmesta suunnasta yhtä aikaa: '
+          + 'alkuperäiskansojen huiluista, afrikkalaisista rummuista ja '
+          + 'eurooppalaisista kielisoittimista.',
+      nostot: [
+        {
+          otsikko: 'Tanssi, jossa kynttilä on kädessä',
+          // Kuvaton (Opus 6.9.2026): kaikki >= 1200 px:n cumbia-kuvat ovat
+          // tanssijoiden lähikuvia, joissa kasvot tunnistuvat (myös
+          // lasten) — sama hylkäysperuste kuin MEX:n mariachi-nostossa.
+          // Soitinkuva haetaan myöhemmin.
+          teksti: 'Cumbia on rytmi ja kansantanssi, jossa yhdistyvät '
+              + 'alkuperäiskansojen, eurooppalaiset ja afrikkalaiset ainekset. '
+              + 'Sen sanotaan syntyneen afrokolumbialaisen yhteisön '
+              + 'hautajaisperinteistä. Perinteisessä kokoonpanossa on kolme '
+              + 'rumpua — tambora, tambor alegre ja llamador — ja kolme huilua: '
+              + 'gaita hembra, gaita macho ja flauta de millo. Tunnusomaisen '
+              + '"chu-chucu-chu"-rytmin tekee guacharaca-raaputin. '
+              + 'Kolumbialainen cumbia on kaikkien muunnelmien alkulähde, ja '
+              + 'siihen kuuluu tapa tanssia kynttilät käsissä.',
+          selite: 'Cumbian kokoonpanossa on kolme rumpua ja kolme huilua, ja '
+            + 'guacharaca-raaputin pitää tanssin tunnusomaisen rytmin.',
+          wiki: 'Cumbia',
+        },
+        {
+          otsikko: 'Kolme soitinta, kolme maanosaa',
+          tiedosto: 'GON 2993.jpg',
+          teksti: 'Vallenato tarkoittaa laaksossa syntynyttä, ja laakso on '
+              + 'Sierra Nevada de Santa Martan ja Serranía de Periján välissä '
+              + 'Valleduparin ympärillä. Laji sai alkunsa laulajista, jotka '
+              + 'kulkivat karjan kanssa kylästä toiseen ja veivät samalla '
+              + 'uutiset — he lauloivat viestinsä. Kokoonpanon kolme soitinta '
+              + 'tulevat kolmelta mantereelta: nappihaitari Saksasta, '
+              + 'caja-rumpu Afrikasta ja guacharaca-raaputin '
+              + 'alkuperäiskansoilta. Rytmejä eli "ilmoja" on neljä: son, '
+              + 'paseo, merengue ja puya. Unesco pitää lajia kiireellistä '
+              + 'suojelua vaativana perintönä.',
+          selite: 'Vallenaton kolmirivinen nappihaitari on saksalaista '
+            + 'tekoa, ja soittimia saatiin 1800-luvulla todennäköisesti Aruban '
+            + 'ja Curaçaon kautta.',
+          lahde: 'andres felipe paz taborda, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Vallenato',
+        },
+        {
+          otsikko: 'Neljä päivää, sitten Joselito haudataan',
+          aika: '2003',
+          tiedosto: 'Marimonda - Carnaval de Barranquilla 2012.jpg',
+          teksti: 'Barranquillan karnevaalin perinteet ovat 1800-luvulta, ja '
+              + 'juhla kestää neljä päivää ennen laskiaista. Tansseissa '
+              + 'yhdistyvät espanjalainen paloteo, afrikkalainen congo ja '
+              + 'alkuperäiskansojen aiheet, musiikissa ennen muuta cumbia. '
+              + 'Ohjelma alkaa lauantaina kukkien taistelulla, jatkuu '
+              + 'sunnuntain ja maanantain suurkulkueella ja päättyy tiistaina '
+              + 'Joselito Carnavalin hautajaisiin. Unesco otti karnevaalin '
+              + 'luetteloonsa Pariisissa 7. marraskuuta 2003. Tunnuslause on '
+              + '"sen nauttii, joka sen elää".',
+          selite: 'Marimonda on karnevaalin suosituin hahmo: huppupää, jolla '
+            + 'on pitkä nenä, lerpattavat korvat ja kirkkaat vaatteet.',
+          lahde: 'Michele Mariani, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Barranquillan karnevaali',
+        },
+        {
+          otsikko: 'Ksylofoni, joka tuli Afrikan mukana',
+          aika: '2010',
+          // Kuvaton (Opus 6.9.2026): ainoa >= 1200 px:n marimba de chonta
+          // -kuva (GON 2993.jpg) on käytetty jo vallenato-nostossa, ja
+          // muut osumat ovat esiintyjien lähikuvia tunnistettavin
+          // kasvoin. Soitinkuva haetaan myöhemmin.
+          teksti: 'Tyynenmeren rannikon currulao on Kolumbian '
+              + 'afrikkalaisvaikutteisimpia tyylejä. Peruskokoonpanossa on '
+              + 'neljä soittajaa: cununo-rumpu, jota lyödään kämmenellä ja '
+              + 'napautetaan tikulla kylkeen, guasá-helistin eli ontto '
+              + 'sylinteri kevyine siemenineen — ja ennen kaikkea marimba de '
+              + 'chonta, chontaduro-palmun puusta tehty ksylofoni. Soitin tuli '
+              + 'rannikolle afrikkalaisen diasporan mukana ja muistuttaa '
+              + 'soittotavaltaan balafonia; yhteisöille se on sitkeyden '
+              + 'vertauskuva. Unesco otti lajin luetteloonsa 2010.',
+          selite: 'Marimba de chonta tehdään chontaduro-palmun kovasta '
+            + 'puusta, ja sitä soitetaan samaan tapaan kuin afrikkalaista '
+            + 'balafonia.',
+          wiki: 'Marimba',
+        },
+      ],
+    },
+  ],
+  /*
+   * KUUBA (CUB) — P-Amerikan neljäs maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-kuuba.md; kaikki luvut
+   * tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO HAVANNAN KANSSA: Havannan kaupunkilehti kattaa jo kaupungin
+   * perustamisen ja siirrot, "Uuden maailman avaimen", muurien purun,
+   * vuoden 1837 rautatien, Morron ja La Cabañan linnoitukset,
+   * brittivalloituksen 1762, USS Mainen ja vuoden 1898 sodan,
+   * vanhankaupungin kunnostuksen, 1950-luvun autot ja SONIN. Maalehti EI
+   * toista niitä: se kertoo taínoista, sokerista ja orjuudesta,
+   * kymmenvuotisesta sodasta, Martísta, luonnosta, ruoasta, tupakasta ja
+   * sonia vanhemmasta musiikista.
+   *
+   * SISÄLTÖLINJAUS (spec-mantereet.md): vuoden 1959 vallankumous ja sen
+   * jälkeinen politiikka on JÄTETTY KOKONAAN POIS samalla periaatteella
+   * kuin Perun sisäinen konflikti ja Meksikon huumesota CAN/MEX/PER-
+   * erässä. Orjuus ja kymmenvuotinen sota kerrotaan asiatietona ilman
+   * väkivallan kuvausta; Hatueyn kohtalo mainitaan tapahtumana.
+   *
+   * KUVAT: 19 nostokuvaa Commonsista, lisenssi ja tekijä extmetadatasta,
+   * leveys >= 1200 px, jokainen katsottu silmin. Havannan sikaritehtaan
+   * postikortissa ja Matanzasin teatterin puupiirroksessa näkyy
+   * julkaisijan oma teksti — reseptin sallima poikkeus; La Demajaguan
+   * kellon alla on monumentin oma laatta. YKSI NOSTO JÄI KUVATTOMAKSI
+   * (sama ratkaisu kuin MEX:n mariachi-nostossa): Sierra Maestran
+   * cafetalit — Commonsista ei löytynyt yhtään >= 1200 px:n kuvaa
+   * kahviviljelmien raunioista. HYLÄTYT: "Demajagua.jpg" (pelkkää
+   * laattatekstiä), "Monumento a Hatuey - 2008 - panoramio" (leveys 1000
+   * px), "Valle de los Ingenios sugar mill" (nykyaikainen romahtanut
+   * tehdas sähkölinjoineen), "Gran Piedra Cuba" (tutkatorni, ei kahvia),
+   * "Iznaga Tower, Trinidad, Cuba" (näkymä tornin ikkuna-aukosta, ei
+   * tornia), "2006-06-03 Congas1" (tehdasrumpuja eteisessä, valmistajan
+   * merkki kalvossa).
+   */
+  CUB: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Isoisän matkavuonna 1873 Kuuba on yhä Espanjan siirtomaa, '
+          + 'saaren itäpäässä käydään viidettä vuotta sotaa itsenäisyydestä '
+          + 'ja orjuus on yhä laillista.',
+      nostot: [
+        {
+          otsikko: 'Päällikkö, joka tuli varoittamaan',
+          aika: '1511–1512',
+          tiedosto: 'Hatuey Statue - Baracoa - 01.jpg',
+          teksti: 'Hatuey oli taínopäällikkö eli cacique Hispaniolan '
+              + 'Guanabasta. Kun espanjalaiset lähestyivät, hän purjehti noin '
+              + 'neljänsadan hengen kanssa kanooteilla Kuubaan varoittamaan '
+              + 'saaren asukkaita. Bartolomé de las Casas kertoo hänen '
+              + 'näyttäneen koria täynnä kultaa ja koruja ja sanoneen sen '
+              + 'olevan kristittyjen jumala, jonka takia heitä vastaan '
+              + 'hyökätään. Diego Velázquez oli lähtenyt Hispaniolasta 1511 '
+              + 'valloittamaan itäistä Kuubaa. Harvat päälliköt vastasivat '
+              + 'kutsuun; Hatuey vangittiin ja teloitettiin 2. helmikuuta '
+              + '1512.',
+          selite: 'Baracoan aukiolla seisova pronssirintakuva esittää '
+            + 'Hatueyta, jota kutsutaan Kuuban ensimmäiseksi '
+            + 'kansallissankariksi.',
+          lahde: 'Maesi64, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Torni, josta katsottiin sokerilaaksoa',
+          aika: '1791–1886',
+          tiedosto: 'Torre del Iznaga im Valle de los Ingenios.jpg',
+          teksti: 'Haitin vallankumous tuhosi Saint-Dominguen suurviljelmät, '
+              + 'ja sokerimarkkinat siirtyivät Kuubaan. Vuosina 1791–1805 '
+              + 'Havannan kautta saapui 91 211 orjuutettua ihmistä. Espanjan '
+              + 'kansalaisilta orjakauppa kiellettiin 1817, mutta Kuubassa se '
+              + 'jatkui vuoteen 1867; työvoimaa hankittiin myös yli sadan '
+              + 'tuhannen kiinalaisen sopimustyöläisen joukolla. Trinidadin '
+              + 'lähellä oleva Valle de los Ingenios oli sokerin sydän. '
+              + 'Orjuus lakkautettiin kuninkaallisella asetuksella 7. '
+              + 'lokakuuta 1886 — koko läntisellä pallonpuoliskolla vain '
+              + 'Brasilia oli myöhemmin.',
+          selite: 'Manaca Iznagan torni kohoaa Trinidadin sokerilaaksossa, ja '
+            + 'sen kellolla annettiin merkit viljelmän työpäivän rytmiin.',
+          lahde: 'Schwarzenfelder, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kello, joka soi vapaudelle',
+          aika: '1868–1878',
+          tiedosto: 'Demajagua 2.jpg',
+          teksti: 'Sokeritehtailija Carlos Manuel de Céspedes julisti '
+              + 'itsenäisyyden 10. lokakuuta 1868 tilallaan La Demajaguassa: '
+              + 'hän luki manifestin, soitti tehtaan kelloa, nosti uuden lipun '
+              + 'ja vapautti orjansa pyytäen heitä liittymään taisteluun. '
+              + 'Päivä on Kuuban kansallispäivä Grito de Yara. Guáimaron '
+              + 'kokous hyväksyi perustuslain 10. huhtikuuta 1869 ja valitsi '
+              + 'Céspedesin presidentiksi. Sota oli vilkkaimmillaan juuri '
+              + 'vuosina 1872 ja 1873. Se päättyi Zanjónin sopimukseen 10. '
+              + 'helmikuuta 1878.',
+          selite: 'La Demajaguan sokeritehtaan kello kutsui aiemmin '
+            + 'orjuutetut työhön, ja 10. lokakuuta 1868 sillä kutsuttiin '
+            + 'koolle kapina.',
+          lahde: 'Christian Pirkl, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kymmenvuotinen sota',
+        },
+        {
+          otsikko: 'Lippu parvekkeella Madridissa',
+          aika: '1873',
+          tiedosto: 'José Martí statue Cienfuegos.jpg',
+          teksti: 'José Martí syntyi Havannassa 28. tammikuuta 1853. '
+              + 'Poliittisesta toiminnasta hänet karkotettiin Espanjaan '
+              + 'tammikuussa 1871, ja heinäkuussa ilmestyi hänen '
+              + 'pamflettinsa Kuuban poliittisesta vankeudesta. Helmikuussa '
+              + '1873 Kuuban lippu liehui ensimmäisen kerran Madridissa — '
+              + 'hänen parvekkeellaan Concepción Jerónima -kadulla. Kun '
+              + 'Espanjan ensimmäinen tasavalta julistettiin 11. helmikuuta '
+              + '1873 ja vahvisti Kuuban erottamattomaksi osakseen, '
+              + '20-vuotias opiskelija vastasi esseellä ja lähetti sen '
+              + 'pääministerille. Hän kaatui Dos Ríosissa 1895.',
+          selite: 'Cienfuegosin aukiolla seisova marmorimuistomerkki esittää '
+            + 'José Martía, jonka runoista sovitettiin myöhemmin laulun '
+            + '"Guantanamera" sanat.',
+          lahde: 'Dudva, Wikimedia Commons (CC0)',
+          wiki: 'José Martí',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Saarilla eläimet kutistuvat tai kasvavat oudoiksi: Kuubassa '
+          + 'on maailman pienin lintu, oma krokotiili ja kotiloita, joiden '
+          + 'kuoria on kerätty liikaa.',
+      nostot: [
+        {
+          otsikko: 'Lintu, jonka muna on kahvipavun kokoinen',
+          tiedosto: 'Bee hummingbird (Mellisuga helenae) adult male in flight.jpg',
+          teksti: 'Zunzuncito eli kimalaiskolibri on maailman pienin lintu. '
+              + 'Naaras painaa 2,6 grammaa ja on 6,1 senttiä pitkä, koiras '
+              + 'vain 1,95 grammaa ja 5,5 senttiä. Koiraalla on '
+              + 'kirkkaanpunainen kurkku ja sinertävä selkä, ja toisin kuin '
+              + 'muut pikkukolibrit se näyttää pyöreältä ja pullealta. Naaras '
+              + 'munii kaksi munaa, ja kumpikin on kahvipavun kokoinen. Laji '
+              + 'on kotoperäinen vain Kuubassa ja syö kukkien mettä sekä '
+              + 'hyönteisiä; ruokaillessaan se kuljettaa siitepölyä kukasta '
+              + 'toiseen.',
+          selite: 'Kimalaiskolibrin koiras painaa alle kaksi grammaa, ja se '
+            + 'on koko maailman pienin lintu.',
+          lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kimalaiskolibri',
+        },
+        {
+          otsikko: 'Krokotiili, joka juoksee maalla',
+          tiedosto: 'Crocodylus Rhombifer.JPG',
+          teksti: 'Kuubankrokotiili on tyypillisesti 2,1–2,3 metriä pitkä ja '
+              + 'painaa 70–80 kiloa; suuret koiraat yltävät 3,5 metriin. Se '
+              + 'on nykyisistä krokotiileista pitkäjalkaisin ja liikkuu '
+              + 'parhaiten maalla. Vankeudessa lajilla on havaittu '
+              + 'yhteistyömetsästystä ja kykyä oppia temppuja. Laji on '
+              + 'äärimmäisen uhanalainen ja elää luonnossa enää Zapatan '
+              + 'suolla, vaikka fossiileja on löydetty Bahamalta, '
+              + 'Hispaniolalta ja Caymansaarilta. Suolla elää yli 900 '
+              + 'alkuperäistä kasvilajia, 175 lintulajia ja yli tuhat '
+              + 'selkärangatonta lajia.',
+          selite: 'Kuubankrokotiili on pitkäjalkaisin nykyisistä '
+            + 'krokotiileista ja elää luonnonvaraisena vain Zapatan suolla.',
+          lahde: 'Yelles, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kuubankrokotiili',
+        },
+        {
+          otsikko: 'Myrkyllinen maaperä, joka synnyttää lajeja',
+          aika: '2001',
+          tiedosto: 'El Yunque (575 m), Parque Nacional Alejandro de Humboldt, Baracoa - panoramio (1).jpg',
+          teksti: 'Alejandro de Humboldtin kansallispuisto on nimetty '
+              + 'saksalaisen tutkimusmatkailijan mukaan, joka kävi saarella '
+              + '1800 ja 1801. Puisto on 711 neliökilometriä ja nousee '
+              + 'merenpinnasta 1 168 metriin. Se on Kuuban kostein paikka. '
+              + 'Kallioperä on ultraemäksistä serpentiiniä ja peridotiittia, '
+              + 'ja koska maaperä on kasveille myrkyllistä, se on kiihdyttänyt '
+              + 'lajiutumista: puistossa kasvaa yli 900 kasvilajia ja siellä '
+              + 'on suojassa 16 Kuuban 28 kotoperäisestä lajista. Unesco otti '
+              + 'alueen luetteloonsa 2001.',
+          selite: 'Humboldtin kansallispuiston sademetsä laskeutuu Baracoan '
+            + 'rannikolle, ja alue on lajistoltaan Karibian rikkain.',
+          lahde: 'Martin Cígler, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kotilo, jonka kuori vietiin matkamuistona',
+          tiedosto: 'Polymita picta (painted snail) (eastern Cuba) 15 (24575982055).jpg',
+          teksti: 'Polymita on Kuuballe kotoperäinen maakotilosuku, johon '
+              + 'kuuluu kuusi tunnustettua lajia; tyyppilaji on 1778 kuvattu '
+              + 'Polymita picta. Kuoret ovat keräilijöiden himoitsemia, ja '
+              + 'juuri siksi populaatioita on viime vuosina jouduttu '
+              + 'suojelemaan liikakeräilyltä. Kotiloilla on parittelussa '
+              + 'erikoinen tapa: ne käyttävät niin sanottua rakkausnuolta. '
+              + 'Kuoren kuviot vaihtelevat yksilöstä toiseen niin paljon, '
+              + 'ettei kahta samanlaista juuri löydy. Lajit elävät saaren '
+              + 'itäosassa, samoilla '
+              + 'kosteilla rinteillä kuin Humboldtin puiston kotoperäinen '
+              + 'kasvisto.',
+          selite: 'Polymita pictan kuoressa kiertää musta, ruskea ja '
+            + 'valkoinen juova, eikä kahta samanlaista kuorta juuri ole.',
+          lahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kuuban ruokapöytä on monen tulijan yhteinen: '
+          + 'kanarialainen pata, saaren oma papu ja riisi sekä '
+          + 'ranskalaispakolaisten kahvi.',
+      nostot: [
+        {
+          otsikko: 'Vanhat vaatteet ja niiden nimi',
+          aika: '1857',
+          tiedosto: 'Cuban cuisine.jpg',
+          teksti: 'Ropa vieja tarkoittaa vanhoja vaatteita — joko siksi, että '
+              + 'ruoka tehtiin edellisten aterioiden tähteistä, tai siksi että '
+              + 'riekaleiksi haudutettu naudanliha näyttää repaleiselta. '
+              + 'Juuret ovat Iberian sefardijuutalaisten hitaasti '
+              + 'haudutetussa sapatinruoassa, joka levisi Pohjois-Afrikkaan ja '
+              + 'Kanariansaarille. Kanarialaiset siirtolaiset toivat sen '
+              + 'Amerikkaan, ja ensimmäinen maininta Kuubasta on vuodelta '
+              + '1857 — kuusitoista vuotta ennen isoisän matkaa. Nykyään se on '
+              + 'yksi maan kansallisruoista.',
+          selite: 'Ropa vieja on tomaattikastikkeessa haudutettua '
+            + 'riekaleiksi revittyä naudanlihaa, ja se tarjotaan riisin, '
+            + 'papujen ja paistettujen banaaniviipaleiden kanssa.',
+          lahde: 'George Kelly, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Maurit ja kristityt samassa padassa',
+          tiedosto: 'Moros y cristianos, gastronomia cubana.jpg',
+          teksti: 'Moros y cristianos tarkoittaa maureja ja kristittyjä: '
+              + 'moros ovat mustia papuja ja cristianos valkoista riisiä. Nimi '
+              + 'viittaa Iberian niemimaan muslimihallintoon, joka kesti '
+              + '700-luvulta reconquistan päättymiseen 1400-luvulla. Pohjana '
+              + 'on sofrito eli sipulin, valkosipulin ja paprikan '
+              + 'kuullotus, mausteina kumina, oregano ja laakerinlehti. Ero '
+              + 'tavalliseen papu-riisiruokaan on se, että papu ja riisi '
+              + 'kypsennetään samassa padassa papujen keitinveteen. Saaren '
+              + 'itäosassa sama ruoka punaisista pavuista on congrí.',
+          selite: 'Moros y cristianos kypsennetään yhdessä padassa niin, että '
+            + 'riisi imee mustien papujen keitinveden ja värjääntyy siitä.',
+          lahde: 'Juan Emilio Prades Bel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kahviviljelmät, jotka pakenivat Haitista',
+          aika: '1804–2000',
+          // Kuvaton (Opus 6.9.2026): Commonsista ei löytynyt yhtään
+          // >= 1200 px:n kuvaa Sierra Maestran cafetal-raunioista tai
+          // La Isabelican museosta. Kuva haetaan myöhemmin.
+          teksti: 'Ranskalaiset olivat perustaneet kahviviljelmiä '
+              + 'Hispaniolalle 1700-luvulla, mutta Haitin itsenäistyminen '
+              + '1804 ajoi heidät Kuubaan. Sierra Maestran juurelle nousi '
+              + 'kymmeniä cafetaleja, ja maailmanperintökohde käsittää niistä '
+              + '171 seitsemässä ryhmässä. Jokaisella oli sama pohjakaava: '
+              + 'keskellä omistajan baskityylinen asuintalo, ympärillä '
+              + 'oksista ja lehdistä katetut orjien majat sekä terassoitu '
+              + 'secadero, kahvipapujen kuivauskenttä. Viljelmät hävisivät '
+              + '1900-luvun alussa, kun ne eivät pärjänneet Brasilialle, '
+              + 'Kolumbialle ja Costa Ricalle.',
+          selite: 'Sierra Maestran cafetalien terassoidut kuivauskentät ja '
+            + 'baskityyliset asuintalot ovat olleet Unescon '
+            + 'maailmanperintökohteena vuodesta 2000.',
+        },
+        {
+          otsikko: 'Lepakot, jotka päätyivät pullon kylkeen',
+          aika: '1862',
+          tiedosto: 'Edifício Bacardi - Havana (29248663228).jpg',
+          teksti: 'Katalonialainen viinikauppias Facundo Bacardí Massó muutti '
+              + 'Santiago de Cubaan 1830. Rommi oli tuolloin halpaa ja '
+              + 'karkeaa, joten hän eristi paikallisesta sokeriruo’osta oman '
+              + 'hiivakannan, kehitti lähes kymmenessä vuodessa '
+              + 'hiilisuodatuksen ja sekoitti kaksi tislettä valkotammessa — '
+              + 'tuloksena maailman ensimmäinen kirkas ja kevytrunkoinen '
+              + 'rommi. Veljekset ostivat tislaamon 4. helmikuuta 1862. Sen '
+              + 'orsissa asui hedelmälepakoita, ja Facundon vaimo Amalia '
+              + 'ehdotti lepakkoa merkiksi: lukutaidoton asiakas tunnisti '
+              + 'kuvan.',
+          selite: 'Havannan Edificio Bacardí valmistui 1930 ja on Latinalaisen '
+            + 'Amerikan tunnetuimpia art deco -rakennuksia.',
+          lahde: 'Antonio Schubert, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'tupakka',
+      nimi: 'Tupakka',
+      johdanto: 'Kuubassa tupakka ei ole pelkkä kasvi vaan ammattikunta: '
+          + 'kasvattaja, kuivaaja, käärijä — ja lukija, jota käärijät '
+          + 'palkkasivat itse.',
+      nostot: [
+        {
+          otsikko: 'Kaistale, jolla kasvaa maailman paras lehti',
+          aika: '1830',
+          tiedosto: 'Secadero de Tabaco - panoramio.jpg',
+          teksti: 'Vuelta Abajo on Pinar del Ríon maakunnassa saaren '
+              + 'länsipäässä, ja sen pohjoisreunana on Sierra de los Órganos. '
+              + 'Alue on noin 140 kilometriä pitkä ja 16 kilometriä leveä, ja '
+              + 'tupakkateollisuus alkoi siellä noin 1830. Monet pitävät sen '
+              + 'lehteä maailman parhaana sikaritupakkana. Maan viidestä '
+              + 'tupakka-alueesta muut neljä ovat Semi-Vuelta, Partido, '
+              + 'Remedios ja Oriente. Sikarin peitelehti, sidos ja täyte voivat tulla eri '
+              + 'alueilta. Sikarit ovat yhä maan tärkeimpiä vientituotteita: '
+              + '2017 vienti oli 27 prosenttia koko tavaraviennistä.',
+          selite: 'Casa de tabaco eli secadero on olkikattoinen lato, jossa '
+            + 'tupakanlehdet ripustetaan riu’uille kuivumaan viikoiksi ennen '
+            + 'käymistä.',
+          lahde: 'Eduardo Manchon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Laakso, jossa työ tehdään yhä käsin',
+          aika: '1999',
+          tiedosto: 'Mogotes, Viñales Valley, Cuba.jpg',
+          teksti: 'Viñalesin laakso on 132 neliökilometrin karstilaakso '
+              + 'Sierra de los Órganosin vuorissa. Laakson pohjalla '
+              + 'kasvatetaan tupakkaa vuosisatoja vanhoilla '
+              + 'käsityömenetelmillä, joiden sanotaan tuottavan koneellista '
+              + 'parempaa laatua. Pohjalta kohoaa saarten tavoin '
+              + 'mogote-kalkkikivikumpuja, jotka voivat olla kolmensadan '
+              + 'metrin korkuisia; niiden rinteissä on luolia. Unesco otti '
+              + 'laakson maailmanperintöluetteloon 1999 sekä luonnon- että '
+              + 'kulttuurimaisemana — juuri perinteisen tupakanviljelyn '
+              + 'takia.',
+          selite: 'Viñalesin laakson mogotet ovat karstikumpuja, joiden '
+            + 'ympärillä kasvatettu tupakka on maailmanperintökohteen '
+            + 'peruste.',
+          lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kolme sanaa, jotka kertovat kuka kääri',
+          tiedosto: 'Rolling a Cuban Cigar.jpg',
+          teksti: 'Torcedor eli käsin käärivä sikarintekijä on Kuubassa '
+              + 'arvostettu ammatti, ja tekijät esittelevät taitoaan ympäri '
+              + 'maailmaa; nykyään useimmat ovat naisia eli torcedoras. '
+              + 'Laatikoihin ja renkaisiin merkitään aina Hecho en Cuba. '
+              + 'Koneella niputettu mutta käsin viimeistelty sikari saa '
+              + 'lisämerkinnän Hecho a mano ja kokonaan käsin tehty '
+              + 'Totalmente a mano — kolme sanaa erottavat siis kaksi eri '
+              + 'työtapaa. Sikaria itseään kutsutaan nimellä El Habano, ja '
+              + 'tuotantoa ohjaa valtion Cubatabaco.',
+          selite: 'Torcedor kääntää peitelehden sikarin ympärille kämmenensä '
+            + 'ja veitsen avulla; kokonaan käsin tehty sikari saa merkinnän '
+            + 'Totalmente a mano.',
+          lahde: 'kuhnmi, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Sikari',
+        },
+        {
+          otsikko: 'Työntekijät palkkasivat itselleen lukijan',
+          aika: '1865',
+          tiedosto: 'Havana - cigar factory reader.jpg',
+          teksti: 'Lector on työntekijöiden itsensä palkkaama lukija, joka '
+              + 'lukee ääneen kirjoja ja sanomalehtiä käärintäsalissa. Tapa '
+              + 'alkoi Kuubassa 1865 työn yksitoikkoisuutta vastaan ja levisi '
+              + 'Kuuban vaikutuspiiriin, muun muassa Ybor Cityyn Floridaan, '
+              + 'jossa perinne päättyi vuoden 1931 lakon jälkeen. Kuubassa '
+              + 'lukija istuu yhä korokkeellaan, ja Unesco harkitsi 2017 '
+              + 'ammatin merkitsemistä aineettomaksi kulttuuriperinnöksi. Kun '
+              + 'Alonso Menéndez perusti uuden merkin 1935, hän nimesi sen '
+              + 'Montecristoksi: Dumas’n romaani oli käärijöiden suosikki.',
+          selite: 'Havannalaisen sikaritehtaan lukija istuu korokkeellaan '
+            + 'käärintäpöytien yläpuolella, ja jokaisella käärijällä on oma '
+            + 'numeroitu paikkansa.',
+          lahde: 'Harris Brothers, Wikimedia Commons (PD)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka palkkaa kuubalaisen sikaritehtaan lukijan?',
+        vaihtoehdot: [
+          'Tehtaan omistaja',
+          'Työntekijät itse',
+          'Kaupungin kirjasto',
+          'Valtion tupakkayhtiö',
+        ],
+        oikea: 1,
+        fakta: 'Tapa alkoi vuonna 1865, ja lukija luki ääneen kirjoja ja '
+            + 'sanomalehtiä käärintäsalissa työn yksitoikkoisuutta vastaan.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Ennen sonia Kuuballa oli jo kolme omaa musiikkia: salin '
+          + 'danzón, pihan rumba ja maaseudun improvisoitu punto — ja '
+          + 'Santiagosta lähti neljäs.',
+      nostot: [
+        {
+          otsikko: 'Tanssi, jonka aikana ehtii jutella',
+          aika: '1879',
+          tiedosto: 'Teatro de Matanzas, en El Museo Universal.jpg',
+          teksti: 'Danzón on Kuuban virallinen tanssi: hidas ja muodollinen '
+              + 'paritanssi 2/4-tahdissa, jossa on tarkka askelkuvio ja '
+              + 'tyylikkäitä taukoja. Se kehittyi kuubalaisesta contradanzasta '
+              + 'eli habanerasta, ja Haitin vallankumousta paenneet toivat '
+              + 'siihen kreolisynkoopin. Laji vakiintui 1879, kun Miguel '
+              + 'Faílden Las alturas de Simpson esitettiin Matanzasissa. '
+              + 'Tanssijat eivät tanssi johdannon aikana vaan aloittavat '
+              + 'täsmälleen paseon neljännen tahdin neljännellä iskulla; kun '
+              + 'johdanto toistuu, he pysähtyvät juttelemaan.',
+          selite: 'Matanzasin teatteri 1800-luvun puupiirroksessa; samassa '
+            + 'kaupungissa esitettiin 1879 ensimmäinen danzóniksi '
+            + 'tunnistettu sävellys.',
+          lahde: 'Federico Ruiz / Bernardo Rico, Wikimedia Commons (PD)',
+          wiki: 'Danzón',
+        },
+        {
+          otsikko: 'Rummut, jotka olivat aluksi laatikoita',
+          tiedosto: 'Claves hg.jpg',
+          teksti: 'Rumba on maallinen laji, joka syntyi 1800-luvun lopulla '
+              + 'Havannassa ja Matanzasissa. Pohjana ovat afrikkalaiset '
+              + 'abakuá- ja yuka-perinteet sekä espanjalaisvaikutteiset coros '
+              + 'de clave -katukuorot. Muotoja on kolme: yambú, guaguancó ja '
+              + 'columbia. Ydinsoittimia ovat claves eli kaksi kovaa '
+              + 'puutikkua ja kolme rumpua, mutta rumpuina käytettiin '
+              + '1900-luvun alkuun asti puulaatikoita, cajoneja. Laulaja '
+              + 'aloittaa sanattomalla diana-kuviolla ja improvisoi sitten '
+              + 'décimoina, kymmenrivisinä säkeistöinä.',
+          selite: 'Claves ovat kaksi kovapuista tikkua, joiden lyömä '
+            + 'viisi-iskuinen kuvio pitää koko rumbakokoonpanon koossa.',
+          lahde: 'Hannes Grobe, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Rumba',
+        },
+        {
+          otsikko: 'Säkeet, jotka pikakirjoittaja pelasti',
+          aika: '1997',
+          tiedosto: 'Guiro cubano.jpg',
+          teksti: 'Punto guajiro on maaseudun laulettu runouslaji, joka tuli '
+              + 'suosituksi 1600-luvulla ja vakiintui 1700-luvulla; juuret '
+              + 'ovat Andalusiassa ja Kanariansaarilla. Soittimina ovat '
+              + 'espanjalainen kitara, kuubalainen tres, laúd ja tiple sekä '
+              + 'kolme lyömäsoitinta: clave, güiro ja metallinen guayo. Nimi '
+              + 'tulee näppäilystä. Laulajat muodostavat joukkueita ja '
+              + 'improvisoivat säkeensä. Radioaikaan 1935 laji oli '
+              + 'suosituimmillaan, mutta säkeitä ei tallennettu — kunnes '
+              + 'pikakirjoittaja Aida Bode alkoi kirjoittaa niitä muistiin. '
+              + 'Kirja ilmestyi 1997.',
+          selite: 'Güiro tehdään kuivatusta kurpitsasta, jonka kylkeen '
+            + 'uurretaan urat; tikulla raapaisten siitä syntyy punton '
+            + 'perusrytmi.',
+          lahde: 'Miguel Andrade, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Mies, joka ei kirjoittanut laulujaan muistiin',
+          aika: '1883',
+          tiedosto: 'Casa de la Trova - Santiago de Cuba - 1.jpg',
+          teksti: 'Bolero syntyi Itä-Kuubassa 1800-luvun lopulla osana '
+              + 'trova-perinnettä eikä liity samannimiseen vanhaan '
+              + 'espanjalaiseen tanssiin. Sitä on kutsuttu 1900-luvun '
+              + 'latinalaisamerikkalaiseksi rakkauslauluksi. Lajin isä on '
+              + 'Pepe Sánchez (1856–1918), Santiago de Cuban kiertävä '
+              + 'laulaja-kitaristi, joka sävelsi ensimmäisen bolerón '
+              + 'Tristezas vuonna 1883. Hän ei ollut saanut musiikin '
+              + 'koulutusta eikä koskaan kirjoittanut sävellyksiään muistiin, '
+              + 'joten useimmat katosivat; noin kaksi tusinaa säilyi, koska '
+              + 'ystävät ja oppilaat merkitsivät ne ylös.',
+          selite: 'Santiago de Cuban Casa de la Trova on ollut trovadorien '
+            + 'kokoontumispaikka, ja samasta kaupungista lähti bolero '
+            + '1880-luvulla.',
+          lahde: 'Maesi64, Wikimedia Commons (CC0)',
+          wiki: 'Bolero',
+        },
+      ],
+    },
+  ],
 };

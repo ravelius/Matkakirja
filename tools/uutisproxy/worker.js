@@ -40,6 +40,11 @@ const SALLITUT = [
   'https://globalnews.ca/',
   'https://www.jornada.com.mx/',
   'https://rpp.pe/',
+  // Chilen ja Kolumbian uutislähteet (maalehdet 6.9.2026): syöte ja
+  // artikkelisivut samalla isäntänimellä. Kuuba jäi ilman lähdettä,
+  // ks. js/packs/uutislahteet.js.
+  'https://www.lanacion.cl/',
+  'https://www.lasillavacia.com/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

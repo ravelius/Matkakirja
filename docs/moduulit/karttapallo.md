@@ -2092,3 +2092,59 @@ eräehdotukset: `docs/moduulit/karttanostot-kattavuus.md`, osio "Kattavuus
 koko maailmassa 6.9.2026" — 112 maasta 14 on tavoitteessa ja 32:lla ei
 ole yhtäkään karttamerkkiä. Pallolaudalle tämä on inventaariota, ei
 piirtoa: samat merkit näkyvät pallolla laudan omien kerrosten kautta.
+
+**Aloitusportti ilman otsikkoa ja juliste salamana (6.9.2026 aamu).**
+Omistaja katsoi aloitusporttia työpöydällä ja pyysi sanatarkasti:
+
+> *"ota taustalta pois pelin otsikko ja keskitä aloita seikkailu nappi
+> ihan keskelle ruutua. Kun nappia painetaan niin sitten tulee pienellä
+> viiveellä yläviiva ja otsikko sitten pienen hetken päästä osa 2
+> teksti. se saisi tulla animoidusti niin että kirjainkoko ja kirkkaus
+> välähtää isompana ja feidautuu nykyiseen, kuin pieni salaman isku.
+> sitten tulisi alaviiva otsikkoon ja pienen hetken päästä alkaisi
+> konekirjoitusteksti. maailmankartta-animaatio saisi olla vähän
+> tummempi, kuin on ihan aloitusruudussa, ehkä siitä asteen vaaleampi
+> mutta ei niin vaalea kuin nyt"*
+
+1. **PORTIN TAKANA VAIN PALLO JA NAPPI.** Juliste (viivat, otsikko,
+   "osa II") ja sen pergamenttiharso ovat kokonaan piilossa luokalla
+   `.avaus-kesken` — harso on julisteen oma `::before` eikä katoaisi
+   rivien mukana, joten se olisi jäänyt portille vaaleaksi soikioksi.
+   Nappiryhmä siirtyi 62 %:n korkeudelta ruudun keskelle
+   (`.start-gate-keskus` `top: 50%`, `translate(-50%, -50%)`), ja
+   portin tummennuksen soikio 42 %:sta 50 %:iin — valoisinta kohtaa ei
+   enää tarvita otsikolle. "Oppiminen on hauskaa" jää alareunaan.
+2. **VIISI VAIHETTA, JOKAINEN OMANA AJASTIMENAAN** napin painalluksesta
+   (js/ui.js): `AVAUS_YLAVIIVA_MS` 600 (yläviiva piirtyy keskeltä ulos
+   `VIIVAN_PIIRTO_MS` 520 ms:ssä, harso feidaa mukana) ·
+   `AVAUS_OTSIKKO_MS` 1050 (MATKAKIRJA + Vernen kaksi riviä salamana) ·
+   `AVAUS_OSA_MS` 1750 · `AVAUS_ALAVIIVA_MS` 2250 ·
+   `AVAUS_KERTOMUS_MS` 2850 (kirjoituskone ja luenta, ja samalla
+   tekstipalstan harso). Vanhat `OSAN_VIIVE_MS`/`OSAN_HAIVYTYS_MS` ja
+   `.osa-piilossa` poistuivat.
+3. **SALAMA ON TRANSFORMI, EI KIRJASINKOKO.** Rivi maalataan ensin
+   kerran `SALAMAN_KERROIN`-kokoisena (1,25×) ja kirkkaana
+   (`filter: brightness(1.5) drop-shadow(...)`, `transition: none`), ja
+   vasta seuraavassa kehyksessä luokka vaihtuu lopulliseen, jolloin
+   koko, kirkkaus ja hehku feidaavat nykyiseen `SALAMAN_KESTO_MS`
+   600 ms:ssä. Näin fitIntron mitoitus ei liiku eikä asettelu hypi —
+   sama juurisyy kuin 5.9. otsikkohypyssä. Vähennetyllä liikkeellä
+   järjestys ja ajat ovat samat, mutta salamaa ei oteta: pelkät
+   häivytykset.
+4. **TAUSTAPALLO TUMMENI.** `.intro.intro-pallolla .intro-verho` oli
+   vaalea pergamenttihuntu `rgba(239, 220, 180, 0.38)`, joka pesi
+   pallon kalpeaksi heti napista. Nyt se on sama kaava ja väri kuin
+   portilla, yhtä astetta vaaleampana: portti `--portin-tummennus` 0,28
+   keskellä ja `--portin-tummennus-reuna` 0,6 reunoilla, avaus
+   `--avauksen-tummennus` 0,18 ja `--avauksen-tummennus-reuna` 0,44.
+   Tekstin luettavuus ei ole tämän varassa vaan palstan ja otsikon
+   omien harsojen.
+
+Vartijat: tests/lento-ajoitus.test.mjs (viisi vaihetta järjestyksessä ja
+välit 600/700/500/600 ms, juliste piilossa portin takana, salama
+transformilla eikä kirjasinkoolla, kirjoituskone vasta alaviivan
+jälkeen, vähennetty liike ilman salamaa) ja savuke
+`tools/savukkeet/savuke-etusivupallo.mjs` E11b–E11f uusilla hetkillä
+0,3 / 0,8 / 1,2 / 1,5 / 2,5 / 3,5 / 4,5 / 6 / 25 s. Todennettu
+Playwrightilla (Chromium, swiftshader) 1280 × 800 ja 390 × 844 sekä
+pallolla että tasokartalla (`?lauta=kartta`) ja vähennetyllä liikkeellä.

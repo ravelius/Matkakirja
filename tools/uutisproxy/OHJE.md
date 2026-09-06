@@ -1,5 +1,14 @@
 # Uutisvälityksen käyttöönotto (omistajalle, n. 5 min)
 
+> **Päivitys 6.9.2026 (Chile, Kolumbia):** sallittuihin lisättiin
+> www.lanacion.cl ja www.lasillavacia.com (maalehdet CHL/COL, testattu
+> 6.9.2026: syöte aukeaa, artikkelisivun ensimmäisestä `<article>`-
+> lohkosta jäsentyy leipäteksti ja `og:image` löytyy). **Kuuba jäi ilman
+> uutislähdettä:** yksikään tavoitettavissa ollut kuubalainen sivusto ei
+> läpäissyt artikkelisivutestiä, ja perustelut ovat
+> js/packs/uutislahteet.js:n CUB-kommentissa. Julkaisu Git-
+> integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kanada, Meksiko, Peru):** sallittuihin lisättiin
 > globalnews.ca, www.jornada.com.mx ja rpp.pe (maalehdet CAN/MEX/PER,
 > testattu 6.9.2026: syöte aukeaa, artikkelisivulta jäsentyy `<article>` ja
