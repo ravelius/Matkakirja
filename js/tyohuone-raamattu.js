@@ -3512,7 +3512,14 @@ export const RAAMATTU = {
           + 'rajat, jos mitattu hyoty) piirretaan pallolle ruutupikselin '
           + 'levyisina viivoina laattojen paalle Google Earthin tapaan, '
           + 'lahde Natural Earth (PD); fablemax mittaa ja suunnittelee erat, '
-          + 'Opus-parvi toteuttaa.',
+          + 'Opus-parvi toteuttaa. POHJA ILMAN RANTAVIIVAA (omistaja 6.9.2026 '
+          + 'ilta, Mac Studion z8-polton jalkeen, sanatarkasti: "joo '
+          + 'poltetaan vain uudestaan ilman viivaa nyt kun on mac studio '
+          + 'viritetty"): pyramidin pohja poltetaan uudestaan ilman '
+          + 'rantaviivan mustetta ja rantaviiva omalle lapinakyvalle '
+          + 'tasolleen (tasokartta piirtaa sen, pallo jattaa pois vektorin '
+          + 'tieltä) - koko pyramidi z0-z8 ja pallon sarja samaan ajoon '
+          + 'omistajan Macilla (tools/polta-paikallisesti.sh).',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
