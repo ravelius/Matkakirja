@@ -621,7 +621,17 @@ export const RAAMATTU = {
           + 'piirretään pieninä pisteinä Ateenan laatan tapaan '
           + '(ei isoja renkaita) ja kohteiden nimet näkyvät '
           + 'valittaessa; valittavien nimet hieman isommalla, '
-          + 'nykyisen sijainnin nimet paljon pienemmällä.',
+          + 'nykyisen sijainnin nimet paljon pienemmällä. PULU NAYTTAA PAIKAN (omistaja 6.9.2026 ilta, iPad, pulun '
+          + 'keskustelu "Missa Sparta on?", sanatarkasti: "Olisiko pulun '
+          + 'mahdollista nayttaa joku kohta kartalla kysyttaessa, niin etta '
+          + 'kamera lentaisi sinne? Sitten jonnekin tulisi palaa nappi jolla '
+          + 'paasisi lahtopaikkaan takaisin."): kun pelaaja kysyy pululta '
+          + 'paikkaa, pulu vastaa ja kamera lentaa pehmeasti kohteeseen '
+          + '(pelin omat kohteet ensin: kaupungit, nostot, maastokohteet; '
+          + 'muuten pulun antamat koordinaatit), kohde merkitaan '
+          + 'valiaikaisella merkilla, ja ruutuun tulee Palaa-nappi, joka vie '
+          + 'kameran takaisin lahtonakymaan. Tama on pelin oma kamera-ajo eika '
+          + 'riko valloitetun alueen rajaa; pulu ei ratkaise tehtavia.',
         'FOKUSNAPIT (omistaja 24.8.2026, illan pelitesti): '
           + 'vasemman alareunan maannimi (KREIKKA-kartuutsi) on '
           + 'jatkossa MAALEHDEN NAPPI dynaamisella sijainnilla: '
