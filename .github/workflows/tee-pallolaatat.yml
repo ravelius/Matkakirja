@@ -46,6 +46,12 @@ on:
         default: 'ei'
         type: choice
         options: ['ei', 'kylla']
+      luettelo:
+        description: 'Vain luettelo: kirjoittaa ja vie kansion laatat.json (tasot min–max) laskematta laattoja — neljänneksinä lasketun tason 8 käyttöönotto'
+        required: false
+        default: 'ei'
+        type: choice
+        options: ['ei', 'kylla']
 
 permissions:
   contents: read
@@ -106,8 +112,19 @@ jobs:
             --cache-control 'public, max-age=31536000, immutable'
           echo "Viety: vendor/globe.gl-${v}.min.js"
 
+      - name: Vie vain luettelo
+        if: inputs.kuiva != 'kylla' && inputs.luettelo == 'kylla'
+        run: |
+          set -euo pipefail
+          node tools/tee-pallolaatat.mjs --vain-luettelo --min "${{ inputs.min }}" --max "${{ inputs.max }}" --ulos pallolaatat-ulos ${{ inputs.nostot == 'kylla' && '--nostot' || '' }} ${{ inputs.tunniste != '' && format('--tunniste {0}', inputs.tunniste) || '' }}
+          kansio="$(cat pallolaatat-ulos/kansio.txt)"
+          aws s3 cp pallolaatat-ulos/laatat.json "s3://${R2_BUCKET}/${kansio}laatat.json" \
+            --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --no-progress --content-type application/json --cache-control 'public, max-age=3600'
+          echo "Viety luettelo: ${kansio}laatat.json (tasot ${{ inputs.min }}–${{ inputs.max }})"
+
       - name: Asenna sharp ja laske laatat
-        if: inputs.kuiva != 'kylla'
+        if: inputs.kuiva != 'kylla' && inputs.luettelo != 'kylla'
         run: |
           set -euo pipefail
           npm install --no-save --no-fund --no-audit sharp
@@ -115,7 +132,7 @@ jobs:
           echo "Laattoja: $(find pallolaatat-ulos -name '*.jpg' | wc -l), koko: $(du -sh pallolaatat-ulos | cut -f1)"
 
       - name: Vie laatat ämpäriin
-        if: inputs.kuiva != 'kylla'
+        if: inputs.kuiva != 'kylla' && inputs.luettelo != 'kylla'
         run: |
           set -euo pipefail
           kansio="$(cat pallolaatat-ulos/kansio.txt)"
