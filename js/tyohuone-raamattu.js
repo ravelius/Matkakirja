@@ -3390,7 +3390,12 @@ export const RAAMATTU = {
           + 'muuten 5 tunnin raja tulee tayteen ennen aikojaan"): lehtityossa '
           + 'enintaan viisi agenttia kerrallaan (ennen 7-8), ja seuraava era '
           + 'kaynnistetaan vasta edellisen eran julkaisun jalkeen - tilin '
-          + 'viiden tunnin raja ei saa tayttya kesken paivan.',
+          + 'viiden tunnin raja ei saa tayttya kesken paivan. TAUKO (omistaja '
+          + '6.9.2026 klo 15.50, sanatarkasti: "laita kaupunki- ja maalehti '
+          + 'agentit tauolle. 5h limit tulee muuten liian pian vastaan. '
+          + 'ilmoitan kun ne voi laittaa taas kayntiin"): lehtiagentit tekevat '
+          + 'checkpoint-commitin worktreehensa ja pysahtyvat; jatko vain '
+          + 'omistajan ilmoituksesta.',
         'PALLO LEVOSSA YHTA TERAVA KUIN TASOKARTTA (omistaja 6.9.2026 '
           + 'iltapaiva, sanatarkasti: "kartta oli ennen palloa paljon teravampi, '
           + 'eli ongelma on pallon renderoinnissa. ainakin kun liike on '
