@@ -3503,7 +3503,16 @@ export const RAAMATTU = {
           + 'itsenaiset erat ajetaan rinnakkain Opus-parvena (kukin era oma '
           + 'agentti ja commit, selvarajaiset tiedostot, ei paallekkaisia '
           + 'muutoksia), Fable poimii ja julkaisee; lehtityon 5 agentin '
-          + 'katto ei koske tata, mutta viiden tunnin raja pidetaan silmalla.',
+          + 'katto ei koske tata, mutta viiden tunnin raja pidetaan silmalla. '
+          + 'VEKTORIT SAMALLA (omistaja 6.9.2026 ilta, Fablen ehdotukseen '
+          + '"rantaviivat ja nimet vektoreina laattojen paalle, jolloin ne '
+          + 'ovat aina tasan pikselin levyisia", sanatarkasti: "Tehdaan se '
+          + 'vektori juttu nyt samalla"): laattakerroksen rinnalle '
+          + 'suunnitellaan ja toteutetaan vektorikerros - rantaviivat (ja '
+          + 'rajat, jos mitattu hyoty) piirretaan pallolle ruutupikselin '
+          + 'levyisina viivoina laattojen paalle Google Earthin tapaan, '
+          + 'lahde Natural Earth (PD); fablemax mittaa ja suunnittelee erat, '
+          + 'Opus-parvi toteuttaa.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
