@@ -115,6 +115,11 @@ const SALLITUT = [
   // Nepalin uutislähde (maalehti 6.9.2026): Onlinekhabarin syöte ja
   // artikkelisivut ovat samalla isäntänimellä (www).
   'https://www.onlinekhabar.com/',
+  // Madagaskarin uutislähde (maalehti 6.9.2026): L'Express de Madagascar
+  // julkaisee Bloggerissa, joten syöte on osoitteessa
+  // /feeds/posts/default?alt=rss — syöte ja artikkelisivut ovat samalla
+  // isäntänimellä.
+  'https://www.lexpress.mg/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

@@ -93,6 +93,18 @@
 > js/packs/uutislahteet.js:n NPL-kommentissa. Julkaisu Git-
 > integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Madagaskar):** sallittuihin lisättiin
+> www.lexpress.mg (maalehti MDG, testattu 6.9.2026: syötteessä 25
+> juttua, artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy
+> yhdeksän yli 60 merkin kappaletta ja `og:image` löytyy). L'Express de
+> Madagascar julkaisee Bloggerissa, joten syöteosoite on
+> `/feeds/posts/default?alt=rss` — juurihakemiston `/feed/` palauttaa
+> 404:n. Malagassinkielistä lähdettä ei löytynyt: Newsmadan
+> artikkelisivulta puuttuvat og-merkinnät kokonaan, ja Gazetiko, Ao
+> Raha, Inona no vaovao, Gasikara ja TV Plus eivät vastanneet
+> lainkaan; perustelut ovat js/packs/uutislahteet.js:n MDG-kommentissa.
+> Julkaisu Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

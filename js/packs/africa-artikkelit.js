@@ -1217,9 +1217,27 @@ export const OMAT_ARTIKKELIT = {
       + 'siirtyi etelään — ja juuri siksi vanha saari säilyi.',
   },
   Madagaskar: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // MDG) nojaa tähän introon yksin, sama malli kuin Egyptillä ja Kenialla.
     intro: 'Madagaskar on maailman neljänneksi suurin saari ja oma '
-      + 'maailmansa: sen eläimistä ja kasveista suurin osa ei elä '
-      + 'missään muualla maapallolla.',
+      + 'maailmansa: sen eliölajeista yli yhdeksän kymmenestä ei elä '
+      + 'missään muualla maapallolla. Saari irtosi Afrikasta noin 180 '
+      + 'miljoonaa ja Intian niemimaasta noin 90 miljoonaa vuotta '
+      + 'sitten, ja luonto kehittyi eristyksissä omaan suuntaansa. '
+      + 'Ihmiset tulivat kahdelta suunnalta: ensimmäiset purjehtivat '
+      + 'vastapainokanooteilla Kaakkois-Aasiasta, ja malagassin lähin '
+      + 'sukukieli puhutaan yhä Borneolla noin 7 300 kilometrin '
+      + 'päässä; myöhemmin mantereelta tuli bantukansoja ja niiden '
+      + 'mukana sebu-karja. Ylängöllä syntyi Imerinan kuningaskunta, '
+      + 'joka 1800-luvulla vaihtoi kielensä kirjaimiston latinalaiseen, '
+      + 'perusti kouluja ja kävi diplomatiaa Lontoon ja Pariisin '
+      + 'kanssa, kunnes Ranska teki saaresta siirtomaan; itsenäisyys '
+      + 'tuli 1960. Ruokapöydässä on aina riisi — verbi "syödä ateria" '
+      + 'kuuluu suoraan "syödä riisiä" — ja seurana romazava-liemi, '
+      + 'jonka anamalao-lehdet puuduttavat kielen lievästi. Soittimet '
+      + 'tehdään siitä mitä kasvaa: bambusta valiha, ruo\'osta sodina, '
+      + 'ja pohjoisrannikon salegy juoksee lähes kolmeasataa iskua '
+      + 'minuutissa.',
     artikkeli: 'Madagaskar irtosi mantereista kymmeniä miljoonia '
       + 'vuosia sitten, ja sen luonto kehittyi omaan suuntaansa: '
       + 'lemurit, kameleontit ja baobabit ovat saaren omia. '

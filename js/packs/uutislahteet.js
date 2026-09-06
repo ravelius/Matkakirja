@@ -732,4 +732,30 @@ export const UUTISLAHTEET = {
     kieli: 'ne',
     syote: 'https://www.onlinekhabar.com/feed',
   },
+  /*
+   * L'Express de Madagascar on saaren luetuimpia päivälehtiä. Testattu
+   * 6.9.2026: Blogger-syötteessä (feeds/posts/default?alt=rss) 25
+   * juttua, ja artikkelisivun ensimmäisestä <article>-lohkosta jäsentyy
+   * yhdeksän yli 60 merkin kappaletta sekä og:image. Syöte ja
+   * artikkelisivut ovat samalla isäntänimellä.
+   *
+   * MALAGASSINKIELISTÄ LÄHDETTÄ EI LÖYTYNYT, vaikka paikalliskielinen
+   * olisi ensisijainen. Testattu ja hylätty: newsmada.com/feed/
+   * (malagassinkielinen, viisi juttua, artikkelisivun <article>-lohkosta
+   * jäsentyy kolme yli 60 merkin kappaletta — mutta sivulla ei ole
+   * yhtään og-merkintää, joten popupin kuva jäisi puuttumaan);
+   * 2424.mg/feed/ (ranska, syöte kunnossa, mutta sivun ensimmäinen
+   * <article> on sivupalkin juttukortti ilman kappaleita — sama vika
+   * kuin Nigerian hylätyissä); madagascar-tribune.com (syöte ja
+   * og:image kunnossa, mutta artikkelisivulta puuttuvat sekä <article>
+   * että [itemprop="articleBody"]); midi-madagasikara.mg (Sucurin
+   * palomuuri, 403); gazetiko.mg, aoraha.com, inonanovaovao.com,
+   * gasikara.mg ja tvplus.mg (ei nimipalveluvastausta tai yhteys
+   * katkeaa); sobika.com/feed/ (ohjaa mainossivulle).
+   */
+  MDG: {
+    nimi: 'L\'Express de Madagascar',
+    kieli: 'fr',
+    syote: 'https://www.lexpress.mg/feeds/posts/default?alt=rss',
+  },
 };

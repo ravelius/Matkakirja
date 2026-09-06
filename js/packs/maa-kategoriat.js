@@ -44042,4 +44042,412 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MADAGASKAR (MDG) — Afrikan laudan maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-madagaskar.md; kaikki
+   * faktat en-Wikipedian raakatekstistä 6.9.2026, artikkeli ja osio
+   * nimettynä faktapohjassa.
+   *
+   * RAJAUS. Maalehti täydentää karttanostoja eikä toista niitä:
+   * maastokohteet-mdg.js kattaa Maromokotron, Mangokyn, Ambohimangan,
+   * Tsingy de Bemarahan, Baobabien kujan, Isalon, Andasibe-Mantadian,
+   * Ranomafanan, Nosy Borahan ja Antsirananan, skandaalit.js Ranskan ja
+   * Merinan sodat sekä Nosy Been, ja elaintakyt.js Verreaux'n sifakan.
+   * Siksi täällä ei ole lemureita, baobabeja, kansallispuistoja,
+   * merirosvoja eikä 1880-luvun sotia — historia kulkee asutuksesta
+   * Radama I:n aakkosuudistukseen, Rainilaiarivonyyn ja Rovan paloon.
+   *
+   * KOLME NOSTOA ON KUVATTOMIA (salegy, Rakoto Frah, ohabolana):
+   * Commonsista ei löytynyt kelvollista kuvaa ilman tunnistettavia
+   * kasvoja, ja kuvaton nosto on parempi kuin tarkistamaton kuva.
+   */
+  MDG: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Madagaskarille tultiin ensin kanooteilla Kaakkois-Aasiasta ja vasta '
+          + 'myöhemmin mantereelta kanaalin yli — ja 1800-luvulla saaren oma '
+          + 'kuningaskunta kirjoitti kielensä uusiksi ja kävi diplomatiaa Lontoon ja '
+          + 'Pariisin kanssa.',
+      nostot: [
+        {
+          otsikko: 'Kanootti, joka toi kielen 7 300 kilometrin päästä',
+          aika: '500 eaa.–1000 jaa.',
+          tiedosto: 'Canoes Ifaty with sail 1.jpg',
+          teksti: 'Malagassi on läntisin austronesialainen kieli, ja sen lähin sukukieli '
+              + 'ma\'anyan puhutaan yhä Borneolla noin 7 300 kilometrin päässä. '
+              + 'Ensimmäiset tulijat purjehtivat Sundasaarilta vastapainokanooteilla, '
+              + 'joita sanottiin nimellä waka; arkeologien arviot ajankohdasta '
+              + 'vaihtelevat vuosien 500 ja 200 eaa. välistä ajanlaskun alkuun, ja varmin '
+              + 'todiste jatkuvasta asutuksesta on Andavakoerasta vuodelta 490. Kanootissa '
+              + 'kulki riisi, jauhobanaani, taaro ja jamssi. Ylängön metsiin asettuneita '
+              + 'sanotaan perinteessä vazimboiksi, lounaisrannikolle jääneitä kalastajia '
+              + 'vezoiksi. Sebu-karjan toivat vasta noin vuonna 1000 bantukieliset tulijat '
+              + 'mantereelta.',
+          selite: 'Vastapainokanootti purjehtii Ifatyn edustalla lounaisrannikolla. Sama '
+            + 'runkomalli kulki Intian valtameren yli, ja vuonna 2003 jäljennösaluksella '
+            + 'purjehdittiin Jakartasta Madagaskarille todistamaan, että se onnistuu.',
+          lahde: 'Smiley.toerist, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Neljäsataa univormua ja uudet aakkoset',
+          aika: '1817–1830',
+          tiedosto: 'Radama, Late King of Madagascar, by William Ellis (1838).jpg',
+          teksti: 'Lokakuussa 1817 kuningas Radama I allekirjoitti Britannian kanssa '
+              + 'sopimuksen, joka tunnusti hänet Madagaskarin kuninkaaksi ja lopetti '
+              + 'orjaviennin. Korvaus kulki sopimuksessa nimellä The Equivalent: vuosittain '
+              + 'tuhat dollaria kultana ja tuhat hopeana, ruutia, piikiviä ja musketteja — '
+              + 'sekä neljäsataa Britannian armeijan ylijäämäunivormua. Kolme vuotta '
+              + 'myöhemmin Radama tapasi Toamasinassa walesilaiset lähetyssaarnaajat David '
+              + 'Jonesin ja David Griffithsin, joilla oli siellä kolmen oppilaan koulu. '
+              + 'Vuodessa kouluja oli 23 ja oppilaita 2 300, joista kolmasosa tyttöjä. '
+              + 'Kuningas määräsi malagassin kirjoitettavaksi 21 latinalaisella kirjaimella.',
+          selite: 'William Ellisin litografia Radama I:stä vuoden 1838 Madagaskarin '
+            + 'historiasta. Kuninkaan harteilla on lamba, malagassilainen kietaisuvaate, '
+            + 'joka oli hovissa arvon merkki.',
+          lahde: 'William Ellis, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Pääministeri, joka nai kolme kuningatarta',
+          aika: '1864–1895',
+          tiedosto: 'Palais d\'Andafiavaratra 01.jpg',
+          teksti: 'Rainilaiarivony syntyi 1828 Ilafyn kylässä pääministerin poikana ja '
+              + 'nousi armeijan ylipäälliköksi 1861. Kolme vuotta myöhemmin hän ja '
+              + 'kuningatar Rasoherina syrjäyttivät hänen oman isoveljensä, ja '
+              + 'Rainilaiarivony hallitsi seuraavat 31 vuotta pääministerinä — naimalla '
+              + 'peräkkäin kolme kuningatarta: Rasoherinan, Ranavalona II:n ja Ranavalona '
+              + 'III:n. Hän teki koulunkäynnistä pakollista, sääti englantilaiseen malliin '
+              + 'nojaavat lakikokoelmat ja perusti kolme tuomioistuinta Antananarivoon. '
+              + 'Pääkaupunki sai 1864 ensimmäisen sairaalansa ja lääketieteellisen '
+              + 'koulunsa, 1866 ensimmäisen sanomalehtensä, ja 1894 kouluissa oli yli '
+              + '200 000 oppilasta.',
+          selite: 'Andafiavaratran palatsi oli Rainilaiarivonyn koti ja hallinnon '
+            + 'keskus. Nykyään siellä säilytetään esineitä, jotka pelastettiin '
+            + 'kuninkaanmäen palosta.',
+          lahde: 'Maky (Alex Dunkel), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Yö, jona kuninkaanmäki paloi',
+          aika: '1995–2025',
+          tiedosto: 'Reconstructed Rova Antananarivo Madagascar.jpg',
+          teksti: 'Marraskuun 6. päivän yönä 1995 tuli tuhosi tai vaurioitti kaikki '
+              + 'Antananarivon kuninkaanmäen rakennukset. Palokunta saapui myöhässä, ja '
+              + 'letkut eivät sopineet lähipaloposteihin; kukkulan korkeus laski '
+              + 'vedenpainetta. Sivulliset juoksivat liekkien keskelle ja pelastivat noin '
+              + '1 675 esinettä arviolta 6 700:sta. Kuumuus räjäytti kivihaudat. Kohde oli '
+              + 'juuri tulossa maan ensimmäiseksi maailmanperintökohteeksi. Tutkinta päätyi '
+              + 'onnettomuuteen, mutta syystä kiistellään yhä. Palatsin ulkokuoren yli '
+              + '70 000 graniittikivestä noin 20 000 halkesi; jokainen kivi irrotettiin ja '
+              + 'numeroitiin paikalleen palautettavaksi. Työ valmistui 2025.',
+          selite: 'Jälleenrakennettu Manjakamiadana neljine kulmatorneineen kohoaa '
+            + 'Analamangan kukkulalla; oikealla näkyy kuningattaren kappelin torni.',
+          lahde: 'Hery Zo Rakotondramanana, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Saari irtosi Afrikasta 180 ja Intian niemimaasta 90 miljoonaa vuotta '
+          + 'sitten, ja siitä lähtien kaikki on kehittynyt omillaan: yli yhdeksän '
+          + 'kymmenestä lajista ei elä missään muualla.',
+      nostot: [
+        {
+          otsikko: 'Yöeläin, joka koputtaa puuta kuin tikka',
+          tiedosto: 'Wild aye aye.jpg',
+          teksti: 'Ai-ai eli sormieläin on maailman suurin yöllä liikkuva kädellinen. Se '
+              + 'koputtaa puunrunkoa, kuuntelee kaiusta missä on ontelo, jyrsii siihen '
+              + 'reiän jatkuvasti kasvavilla etuhampaillaan ja vetää toukat ulos ohuella '
+              + 'keskisormellaan. Tapa on nimeltään koputteleva ravinnonhaku, ja se vie '
+              + 'ruoanhakuajasta viidestä neljäänkymmeneen prosenttiin. Ainoat muut näin '
+              + 'ruokailevat nisäkkäät ovat eräät Uuden-Guinean ja Pohjois-Australian '
+              + 'pussieläimet. Saarella ei ole tikkoja, ja ai-ai täyttää niiden '
+              + 'paikan. Hampaiden takia varhaiset tutkijat luokittelivat sen oravaksi. '
+              + 'Vuonna 1933 laji julistettiin sukupuuttoon kuolleeksi ja löydettiin '
+              + 'uudelleen 1957.',
+          selite: 'Ai-ain sormet ovat pitkät ja hoikat, ja keskisormi on niistä selvästi '
+            + 'ohuin — juuri sillä se hakee toukat puun sisältä.',
+          lahde: 'nomis-simon, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Muna, joka painoi kymmenen kiloa',
+          aika: 'sukupuuttoon noin 1000',
+          tiedosto: 'Aepyornis eggs.jpg',
+          teksti: 'Norsulinnut olivat lentokyvyttömiä jättiläisiä: korkeimmat kolme metriä '
+              + 'pystyssä, painoarviot 275 kilosta tuhanteen '
+              + 'kiloon. Niiden muna on suurin tunnettu munivan selkärankaisen muna: '
+              + 'tilavuutta 5,6–13 litraa, pituutta 26–40 senttiä, kuorta 3,3 milliä ja '
+              + 'painoa noin kymmenen kiloa. Lähin elävä sukulainen ei ole strutsi vaan '
+              + 'Uuden-Seelannin kiivi, josta suku erkani noin 54 miljoonaa vuotta sitten — '
+              + 'lentokyky katosi kummaltakin erikseen. Radiohiiliajoitusten mukaan linnut '
+              + 'katosivat vuosien 800 ja 1050 välillä. Kaksi kokonaista munaa on löytynyt '
+              + 'Länsi-Australian dyyneistä: ne lienevät ajelehtineet meren yli.',
+          selite: 'Kuusi norsulinnun munaa Pariisin luonnonhistoriallisessa museossa. '
+            + 'Vasemmanpuoleisin on nostettu jalustalle: muna ei seiso itsestään.',
+          lahde: 'FunkMonk, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Saaren ainoa iso peto',
+          tiedosto: 'Fossa (Cryptoprocta ferox), ruhend in Madagaskar.jpg',
+          teksti: 'Fossa on Madagaskarin suurin nisäkäspeto: ruumista 70–80 senttiä, '
+              + 'painoa 5,5–8,6 kiloa, ja sitä on verrattu pieneen puumaan. Osittain '
+              + 'sisäänvedettävät kynnet ja notkeat nilkat sallivat sen laskeutua '
+              + 'puunrunkoa alas pää edellä ja hypätä puusta puuhun. Yli puolet ravinnosta '
+              + 'on lemureita. Luokittelusta kiisteltiin vuosikymmeniä, koska eläin '
+              + 'näyttää kissalta mutta muistuttaa piirteiltään sivettejä; geenitutkimus '
+              + 'ratkaisi asian: kaikki saaren pedot polveutuvat yhdestä ainoasta '
+              + 'saapumisesta noin 18–20 miljoonaa vuotta sitten. Monin paikoin fossaa '
+              + 'pelätään, ja samalla fady-kielto suojelee sitä.',
+          selite: 'Fossa lepää kuivan metsän lehtikarikkeella. Häntä on lähes yhtä pitkä '
+            + 'kuin muu ruumis ja toimii tasapainottajana puissa.',
+          lahde: 'Rod Waddington, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Rikkakasvi, josta tuli syöpälääke',
+          tiedosto: 'Catharanthus roseus 01450.JPG',
+          teksti: 'Ruusukatara kasvaa luonnonvaraisena eteläisen Madagaskarin kuivilla '
+              + 'rannikoilla niin runsaana, että sitä pidetään rikkakasvina: se siementyy '
+              + 'tienpientareille ja kesannoille itsestään. 1950-luvulla kasvista etsittiin '
+              + 'diabeteslääkettä, ja löydöksi tulikin kaksi alkaloidia, vinblastiini ja '
+              + 'vinkristiini, joita käytetään yhä syöpähoidoissa. Niitä syntyy niin '
+              + 'vähäisinä pitoisuuksina ja synteesi on niin kallista, että juuria ja lehtiä '
+              + 'kerätään edelleen käsin. Kasvi on kaikilta osiltaan myrkyllinen, ja yksi '
+              + 'sen malagassinkielisistä nimistä on vonenina, katumuksen kukka: sitä '
+              + 'käytettiin ennen ordaalikokeen myrkkynä.',
+          selite: 'Ruusukataran kukassa on viisi lehteä ja kirkkaanvärinen keskiö; väri '
+            + 'vaihtelee valkoisesta tummanpunaiseen lajikkeen mukaan.',
+          lahde: 'Vengolis, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä on norsulinnun lähin elävä sukulainen?',
+        vaihtoehdot: [
+          'Strutsi',
+          'Kiivi',
+          'Emu',
+          'Kasuaari',
+        ],
+        oikea: 1,
+        fakta: 'Suvut erkanivat noin 54 miljoonaa vuotta sitten, joten lentokyvyttömyys '
+            + 'kehittyi niille erikseen eikä mannerten erotessa.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Malagassiksi aterian syöminen on mihinam-bary, riisin syömistä: riisi on '
+          + 'pöydässä aamulla, päivällä ja illalla, ja kaikki muu on sen seuralaista.',
+      nostot: [
+        {
+          otsikko: 'Riisi ei ole ruokalaji vaan ateria',
+          tiedosto: 'Madagascar - rice terraces.jpg',
+          teksti: 'Ateria on vary ja sen seuralainen laoka. Riisiä on monta tapaa: vary '
+              + 'maina keitetään kuivaksi, vary sosoa vetiseksi puuroksi aamiaiseksi tai '
+              + 'sairaalle, ja sen kanssa syödään kitozaa, savustettuja sebun '
+              + 'lihasuikaleita. Vary amin\'anana on puuroa lihan ja silputun '
+              + 'lehtivihanneksen kanssa; famadihanassa eli luiden kääntämisen juhlassa tarjotaan vary be menaka, '
+              + '"riisi, jossa on paljon rasvaa". Paahdettuna ja jauhettuna riisi on '
+              + 'lango, joka kestää matkan. Yleisin juoma syntyy kattilan pohjasta: '
+              + 'ranon\'ampango on kuumaa vettä paahtuneen riisikuoren päällä. Kuivassa '
+              + 'etelässä riisin korvaa maniokki, maissi tai hapatettu sebunmaito.',
+          selite: 'Riisiterasseja ylängöllä. Useimmilla talouksilla on oma pelto, ja '
+            + 'puuttuva osa ostetaan torilta.',
+          lahde: 'User:Hardscarf, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kansallisruoka, joka puuduttaa kielen',
+          tiedosto: 'Madagaskar stew 2019-10-01.jpg',
+          teksti: 'Romazava on liemi, jossa on naudanlihaa ja lehtivihanneksia. Erottava '
+              + 'tekijä on anamalao, jonka keitetyt lehdet ja kukat jättävät suuhun '
+              + 'lievän puutumisen — tunne on sama kuin jos kielelle olisi laittanut '
+              + 'heikon sähkövirran. Mukaan tulee tavallisesti tomaattia, sipulia ja '
+              + 'inkivääriä. Ruokaa ei mausteta valmiiksi tuliseksi: pöytään tuodaan '
+              + 'sakay, chilistä, inkivääristä ja valkosipulista survottu tahna, ja '
+              + 'jokainen sekoittaa sitä omaan annokseensa. Liemillä on omat tehtävänsä: '
+              + 'ron-akoho eli kana ja inkivääri on kotikonsti flunssaan, ja rompatsa '
+              + 'kuuluu synnyttäneen ruokavalioon.',
+          selite: 'Romazava tarjoillaan omassa padassaan, vieressä punaista vary mena '
+            + '-riisiä ja pieninä lisukkeina lasary ja tuore tomaattisalaatti.',
+          lahde: 'Z thomas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kukka, joka on pölytettävä kahdessatoista tunnissa',
+          tiedosto: 'Gousse de vanille verte.jpg',
+          teksti: 'Vaniljaorkidean kukka on auki noin vuorokauden, usein vähemmän, ja '
+              + 'luonnossa sen pölyttävät vain tietyt orkideamehiläiset — onnistumisen '
+              + 'mahdollisuus on noin prosentti. Siksi jokainen kukka pölytetään käsin '
+              + 'kahdentoista tunnin sisällä: ohuella bambunsiivulla nostetaan kalvo syrjään '
+              + 'ja peukalolla painetaan ponsi luotin vasten. Menetelmän keksi 1841 '
+              + 'Réunionilla kaksitoistavuotias orjuutettu poika Edmond Albius. Köynnös '
+              + 'tuottaa 50–100 palkoa vuodessa ja on tuottava 12–14 vuotta; palko kypsyy '
+              + 'puoli vuotta, ja jokainen poimitaan käsin juuri kun pää alkaa halkeilla.',
+          selite: 'Vihreitä vaniljapalkoja köynnöksessä. Kypsyminen kestää puoli vuotta, '
+            + 'eivätkä palot kypsy samaan aikaan — sato poimitaan päivä kerrallaan.',
+          lahde: 'RAJOELIMBOLOLONA Maryo Sébastieni, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Jälkiruoka, jota keitetään kaksi vuorokautta',
+          tiedosto: 'Préparation koba.14.jpg',
+          teksti: 'Koban-dravinaa varten maapähkinät ja ruskea sokeri jauhetaan yhteen, '
+              + 'seos kiedotaan makeutettuun riisijauhotaikinaan ja kääritään '
+              + 'banaaninlehtiin pitkäksi sylinteriksi. Sitten sitä keitetään '
+              + 'vuorokaudesta kahteen tai pidempään, kunnes sokeri karamellisoituu ja '
+              + 'pähkinät pehmenevät; valmis koba leikataan ohuiksi viipaleiksi. '
+              + 'Toriversio koba akondro on maapähkinää, survottua banaania, hunajaa ja '
+              + 'maissijauhoa banaaninlehdessä höyrytettynä. Kioskien tavallisin '
+              + 'aamiainen on mofo gasy, makeasta riisijauhotaikinasta hiilloksella '
+              + 'paistettu pyöreä leipä; suolainen versio on mofo sakay.',
+          selite: 'Koba kääritään banaaninlehtiin ennen keittoa. Käärö on tiivistettävä '
+            + 'niin, ettei vesi pääse sisään vuorokausien aikana.',
+          lahde: 'Sunielle, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Malagassilainen soitin tehdään usein siitä, mitä pihalla kasvaa — '
+          + 'bambusta, kurpitsasta ja lehmännahasta — ja soittotavat tulivat samoissa '
+          + 'kanooteissa kuin kieli.',
+      nostot: [
+        {
+          otsikko: 'Bambuputki, jonka kielet kuorittiin siitä itsestään',
+          tiedosto: 'Valiha de la musée Lovako Nosy Komba Madagascar 03.jpg',
+          teksti: 'Valiha on bambusta tehty putkisitra ja saaren kansallissoitin. Putken '
+              + 'halkaisija on 5–10 senttiä ja pituus 35–180, ja kieliä on 21–24. '
+              + 'Alun perin kielet olivat säikeitä, jotka nostettiin irti putken omasta '
+              + 'pinnasta ja kohotettiin pienillä kurpitsa- tai puutalloilla, jotka '
+              + 'toimivat samalla virittiminä. Nykyään kieli on usein purettua '
+              + 'polkupyörän jarruvaijeria, joka sidotaan nauloihin; vakavat soittajat '
+              + 'käyttävät kitaran tai pianon kieliä. Merinan valtakaudella pitkät kynnet '
+              + 'olivat aatelin merkki, koska ne sopivat näppäilyyn. Sukulaissoitin '
+              + 'marovany on laatikko, jossa on kielet molemmilla puolilla.',
+          selite: 'Bambuvaliha ja sen vieressä laatikkomainen marovany pienessä '
+            + 'museossa Nosy Komban saarella.',
+          lahde: 'Sishan2405, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Päivän mittainen näytelmä, joka alkaa puheella',
+          tiedosto: 'Hiragasy in Ambositra 01.JPG',
+          teksti: 'Hira gasy on ylängön päivän mittainen näytös: laulua, tanssia ja '
+              + 'kabary-puhetta. Ryhmä on tavallisesti sukua keskenään ja tulee '
+              + 'maaseudulta, ja usein kaksi ryhmää kilpailee vuorotellen. Miehillä on '
+              + 'olkihatut ja punaiset takit 1800-luvun ranskalaisen sotilaspuvun malliin, '
+              + 'naisilla keisarikauden hovin tyyliin ommellut yhtenäiset puvut. '
+              + 'Perinnesoittimia ei juuri kuulu, koska muoto syntyi hovissa: soittimina '
+              + 'ovat viulut, trumpetit sekä virveli- ja bassorumpu. Järjestys on vakio — '
+              + 'rummut, teeman esittelevä kabary, yli tunnin kuorolaulu, neljännestunnin '
+              + 'tanssi ja lyhyt päätös. Ryhmiä on yli kahdeksankymmentä.',
+          selite: 'Hira gasy -ryhmä Ambositrassa. Yleisö vastaa esitykseen taputuksin ja '
+            + 'huudoin — myös paheksuvin, jos sanoma ei kelpaa.',
+          lahde: 'Heinonlein, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaksisataayhdeksänkymmentä iskua minuutissa',
+          aika: '1950-luvulta',
+          teksti: 'Salegy syntyi luoteisrannikolla Mahajangan ja Antsirananan seudulla '
+              + '1950-luvulla, kun rituaaleissa soitettu antsa sai sähkökitarat. Tempo on '
+              + 'noin 290 iskua minuutissa, ja soitinnuksessa ovat helisevä kitara, oikea '
+              + 'tai syntetisoitu haitari, sähköbasso, rumpusetti, djembe ja helistimet. '
+              + 'Keskellä kappaletta on aina folaka, "katkennut", lähes soitinvoittoinen '
+              + 'jakso, jonka aikana laulajat ja yleisö taputtavat päällekkäisiä rytmejä. '
+              + 'Eusèbe Jaojoby syntyi 1955 sakalavaperheeseen Sambavan lähellä ja lauloi '
+              + 'Diego-Suarezissa 1970-luvun alusta yhtyeissä, jotka sekoittivat souliä ja '
+              + 'funkia paikalliseen perinteeseen. Häntä sanotaan salegyn kuninkaaksi.',
+          selite: 'Jaojobyn läpimurtolevy oli 1988 ilmestynyt Samy Mandeha Samy Mitady; '
+            + 'nykyään hänen kanssaan lavalla soittavat vaimo ja aikuiset lapset.',
+        },
+        {
+          otsikko: 'Huilisti, joka päätyi setelin kuvaksi',
+          aika: '1923–2001',
+          teksti: 'Philibert Rabezoza syntyi 1923 Antananarivon laidalla köyhään perheeseen '
+              + 'ja aloitti sodinan eli bambuhuilun soiton seitsemänvuotiaana. Kylän '
+              + 'soittokilpailussa haitareilla ja kitaroilla esiintyneet kilpailijat '
+              + 'heittivät häntä kivillä; kivi osui kasvoihin, mutta poika soitti '
+              + 'esityksensä loppuun ja voitti ensimmäisen palkinnon. Kaksitoistavuotiaana '
+              + 'hän jäi orvoksi ja meni leipurin apulaiseksi. Vuonna 1958 hänet valittiin '
+              + 'soittamaan vierailevalle Ranskan presidentille, ja siitä alkoi ura, jonka '
+              + 'aikana syntyi yli 800 omaa sävellystä. Rakoto Frah ja hänen huilunsa '
+              + 'kuvattiin 200 ariaryn seteliin.',
+          selite: 'Sodinassa on kolmesta kuuteen sormireikää, ja se puhalletaan päädystä. '
+            + 'Rakoto Frah kuoli vähävaraisena, mutta sai valtiolliset hautajaiset.',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Malagassiksi runoa tarkoittava sana tononkira on sanat ja laulu yhdessä, '
+          + 'ja taitava puhuja on saarella arvostetumpi kuin taitava kirjoittaja.',
+      nostot: [
+        {
+          otsikko: 'Suuret kirjoitukset, joita vain viisaat lukivat',
+          aika: '1400-luku–1823',
+          tiedosto: 'Sorabe - l’Académie des sciences d’outre-mer, collection Berthier, HB7.jpg',
+          teksti: 'Sorabe tarkoittaa suuria kirjoituksia: nimi tulee arabian kirjoitusta '
+              + 'merkitsevästä sanasta sura ja malagassin sanasta be, suuri. Se on arabialaiseen '
+              + 'kirjaimistoon perustuva kirjoitustapa, jolla malagassia kirjoitettiin '
+              + '1400-luvulta alkaen, etenkin kaakkoisrannikon antemoro-murteessa. '
+              + 'Pitkään uskottiin, että sen toivat arabikauppiaat, mutta uudempi tutkimus '
+              + 'osoittaa kohti jaavalaisia: kirjaimisto muistuttaa hämmästyttävästi '
+              + 'Jaavan pegonia. Käsikirjoituksia on säilynyt pari sataa, nahkaan '
+              + 'sidottuina ja nahan värin mukaan nimettyinä. Useimmissa on taikakaavoja, '
+              + 'osassa kaakkoisten kansojen syntyhistoriaa.',
+          selite: 'Sorabe-käsikirjoitus maailmankaikkeuden synnystä; vasemmalla sivulla on '
+            + 'sikidy-ennustuksen kaavioita. Käsiala on 1800-luvun alkupuolelta.',
+          lahde: 'Ranasimatsimu, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Eepos, jonka sankari paljastuu soittotaidosta',
+          tiedosto: 'Sora-panorona Ambohimanga.jpg',
+          teksti: 'Iboniaa on kerrottu ympäri saarta eri muodoissa vuosisatoja, kauan '
+              + 'ennen kuin painokone tuli maahan; ensimmäinen tunnettu muistiinkirjoitus '
+              + 'on 1870-luvulta. Sankarin nimi tarkoittaa kirkas- ja lumoavakatseista, ja '
+              + 'hän vaatii kihlausta jo äitinsä kohdusta. Kun Kivimies vie morsiamen, '
+              + 'Ibonia voittaa ensin Suuren Kaiun sanakiistassa ja saa tältä neuvot '
+              + 'edessä oleviin koitoksiin. Päästäkseen Kivimiehen lähelle hän pukeutuu '
+              + 'vanhan miehen nahkaan — mutta paljastuu, koska kukaan muu ei osaa soittaa '
+              + 'valihaa eikä pelata fanoronaa niin kuin hän. Pari saa noin kymmenen '
+              + 'vuotta yhteistä aikaa.',
+          selite: 'Kiveen hakattu fanorona-lauta istuinkivineen. Peliä pelataan pienillä '
+            + 'kivillä, ja taitoa on pidetty älyn mittana.',
+          lahde: 'Gaël RALANTONIRINA, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Se, joka hallitsee sanat, hallitsee valtakunnan',
+          teksti: 'Ohabolana ovat sananlaskuja, ja suurimmassa julkaistussa kokoelmassa '
+              + 'niitä on yli 6 500. Sanamuoto säilyy muuttumattomana, vaikka puhekielen '
+              + 'kielioppi ympärillä muuttuisi, koska sananlaskun korjaaminen olisi '
+              + 'piittaamattomuutta esivanhempia kohtaan. "Moite on kuin tuuli: se tuntuu '
+              + 'mutta ei näy." "Älä ole niin rakastunut, ettet huomaa sateen tulevan." '
+              + 'Kabary on seremoniallinen puhemuoto, jossa sananlasku on vahvin kortti, '
+              + 'ja vanha kokoelma sanoo hallitsemisoikeuden joskus ratkenneen '
+              + 'kaunopuheisuudella. Vastapuolen virhe osoitetaan hienovaraisesti: suora '
+              + 'arvostelu on merkki taidon puutteesta.',
+          selite: 'Kabaryä pidetään häissä, hautajaisissa ja hautojen avaamisen juhlassa; '
+            + 'kaksi puhujaa voi esiintyä samassa tilaisuudessa kumpikin oman yleisönsä '
+            + 'nimeämänä.',
+        },
+        {
+          otsikko: 'Runoilija, joka jäi siirtomaan seurapiirien ulkopuolelle',
+          aika: '1901–1937',
+          tiedosto: 'L\'Aube Rouge (Sotie) manuscript cover.png',
+          teksti: 'Jean-Joseph Rabearivelo syntyi 1901 tai 1903 naimattoman äidin ainoana '
+              + 'lapsena; suku oli merina-aatelia, joka menetti etuoikeutensa '
+              + 'kuningaskunnan päätyttyä. Hänet erotettiin koulusta, ja opinnot loppuivat '
+              + '1915 — ranskan ja sen runouden hän opetteli lukemalla. Kirjapainossa hän '
+              + 'oli oikolukija ja kirjallisuuslehtien toimittaja, ja julkaisi runoja '
+              + 'ranskaksi ja malagassiksi, kaksi romaania ja maan ainoan länsimaisen '
+              + 'oopperan. Vuodesta 1931 hänen surrealistiset runonsa yhdistivät '
+              + 'hainteny-perinteen kuvakielen moderniin runoon ja saivat lukijoita '
+              + 'ulkomailla. Hän riisti henkensä 1937; itsenäistynyt maa nimesi hänet '
+              + 'kansallisrunoilijaksi 1960.',
+          selite: 'Rabearivelon käsin kirjoittama kansilehti näytelmään L\'Aube rouge '
+            + 'vuodelta 1925; ylälaidassa hänen nimikirjaimensa.',
+          lahde: 'Jean-Joseph Rabearivelo, Wikimedia Commons (public domain)',
+        },
+      ],
+    },
+  ],
 };
