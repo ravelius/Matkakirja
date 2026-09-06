@@ -12908,12 +12908,21 @@ export class UI {
     return game.tehtavaTarjolla?.() ? { teksti: tapaa, pois: false } : null;
   }
 
-  /** Asettaa tehtävänapin tekstin, harmauden ja näkyvyyden kortille. */
+  /**
+   * Asettaa tehtävänapin tekstin, harmauden ja näkyvyyden kortille.
+   *
+   * LEHDEN TEHTÄVÄNAPPI ON POISSA (omistaja 6.9.2026 aamu, sanatarkasti:
+   * "Tapaa nappi pitää ottaa pois"): kohtaamiseen ja kätköön mennään
+   * kartan kultaisesta merkistä (Livian ohje saapuessa: "napauta
+   * kaupungin kultaista merkkiä kartalla"), ei lehden alapalkista.
+   * Napin tilalogiikka (tehtavaNapinTila) säilyy, koska savukkeet ja
+   * fokusvirran kuvaukset viittaavat siihen — nappi vain ei näy.
+   */
   paivitaTehtavaNappi(city) {
     const nappi = document.getElementById('arrival-yes');
     if (!nappi || !city) return;
+    nappi.hidden = true;
     const tila = this.tehtavaNapinTila(city);
-    nappi.hidden = !tila;
     if (!tila) return;
     nappi.textContent = tila.teksti;
     nappi.disabled = tila.pois;

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1621, teksti: 'Lehden Tapaa-nappi pois; kohtaamiseen kartan merkista' },
   { v: 1620, teksti: 'Aikajanan kamera pysahtyy ennen valon syttymista' },
   { v: 1619, teksti: 'Laattatyokalu: vain luettelo -ajo tason 8 kayttoonottoon' },
   { v: 1618, teksti: 'Venetsian luenta, mykistys pois; yovuoron raportti' },
