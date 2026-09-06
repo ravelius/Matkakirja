@@ -13,6 +13,7 @@
  * 6. Koko kaari oikeilla tiedoilla: Australia ennen Eurooppaa, Amerikat
  *    Siperian jälkeen, meri estää ilman porttia.
  * 7. Kaari ja moottorin koukut tekstitasolla, sw.js SHELL.
+ * 8. Vanat: edeltäjäketju, johdaVanat oikealla datalla, haaran katkaisu.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -23,11 +24,11 @@ import {
   laskeVirta, laskeKentat, ruudunTila, virranVari, rintamienPainopisteet, kameranLeveysAsteina,
   ylityksenSaapuminen, laatikkoMaski, lahinMaa, rintamanLeveys, nopeusHetkella,
   laatikonSyvyys, laatikkoPehmea, portinLuisu, PORTIN_LUISU_ASTE, PORTIN_LUISU_OSUUS,
-  pakkaaPeitto, puraPeitto, tarkennaKentat,
+  pakkaaPeitto, puraPeitto, tarkennaKentat, johdaVanat, vanaKm, vananPituusKm,
 } from '../js/aikajana-virrat-laskenta.js';
 import { MAAMASKI } from '../js/linssit/ihmisen-matka-maamaski.js';
 import {
-  IHMISEN_MATKA_VIRRAT, IHMISEN_MATKA_RETKI, IHMISEN_MATKA_VANHA, VIRRAN_PEITTO,
+  IHMISEN_MATKA_VIRRAT, IHMISEN_MATKA_RETKI, IHMISEN_MATKA_VANHA, IHMISEN_MATKA_VANAT, VIRRAN_PEITTO,
 } from '../js/linssit/ihmisen-matka-virrat.js';
 import { LINSSI } from '../js/linssit/ihmisen-matka.js';
 import { IHMISEN_MATKA } from '../js/linssit/ihmisen-matka-data.js';
@@ -479,7 +480,7 @@ test('hionta 6.9.2026: laskenta työsäikeessä varapolulla, Käynnistä odottaa
   const TYO = lue('../js/aikajana-virrat-tyo.js');
   // Työsäie tuo saman puhtaan moduulin kuin testit; vastaus siirretään puskureina.
   assert.match(TYO, /from '\.\/aikajana-virrat-laskenta\.js'/);
-  assert.match(TYO, /self\.postMessage\(\{ kentat: \{ aika: kentat\.aika, virta: kentat\.virta \}, tarkka \}, siirto\);/);
+  assert.match(TYO, /self\.postMessage\(\{ kentat: \{ aika: kentat\.aika, virta: kentat\.virta \}, vanat, kotipesat, tarkka \}, siirto\);/);
   assert.match(VIRRAT, /new Worker\(new URL\(TYOSAIKEEN_POLKU, document\.baseURI\), \{ type: 'module' \}\)/);
   assert.ok(!/import\.meta/.test(VIRRAT), 'import.meta ei kelpaa yhden tiedoston versioon');
   assert.match(VIRRAT, /tyosaie\.addEventListener\('error', \(e\) => varapolku\(/);
@@ -496,4 +497,200 @@ test('hionta 6.9.2026: laskenta työsäikeessä varapolulla, Käynnistä odottaa
   assert.match(MOOTTORI, /odotaVirtoja\(\) \{[\s\S]*?virrat\.valmis\.then\(/);
   const CSS = lue('../css/aikajana.css');
   assert.match(CSS, /body\.aikajana-paalla \.pallo-kuori\.pallolauta \{ isolation: isolate; \}/);
+});
+
+/* ------------------------------------------------------------ 8. vanat */
+
+/*
+ * VIRRAT VANOINA (omistaja 6.9.2026; docs/moduulit/ihmisen-matka-vanat.md
+ * luku 2.1): vanat johdetaan saapumisaikakentän edeltäjäketjusta, ei
+ * käsin piirrettyinä käytävinä. Testit vartioivat kolme asiaa:
+ * edeltäjäketju on oikea, kirjanpito ei muuta kentän arvoja, ja
+ * oikealla datalla johdettu selkäranka kulkee siellä missä pitää.
+ */
+
+test('edeltäjä: ketju lähteestä saarelle kulkee ylityksen kautta, nauhan ruutu muistaa pisteensä', () => {
+  // 12 × 6: manner sarakkeissa 0–4, saari sarakkeissa 8–10, väli merta.
+  const leveys = 12;
+  const korkeus = 6;
+  const maa = new Uint8Array(leveys * korkeus);
+  for (let r = 1; r < 5; r += 1) {
+    for (let c = 0; c <= 4; c += 1) maa[r * leveys + c] = 1;
+    for (let c = 8; c <= 10; c += 1) maa[r * leveys + c] = 1;
+  }
+  const ymparisto = { maa, leveys, korkeus };
+  const koordinaatit = (r, c) => ({ lat: 90 - (r + 0.5) * 0.5, lon: -180 + (c + 0.5) * 0.5 });
+  const lahde = koordinaatit(2, 0);
+  const a = koordinaatit(2, 4);
+  const b = koordinaatit(2, 8);
+  const tulos = laskeVirta({
+    nopeus: 1,
+    lahteet: [{ ...lahde, aika: 10000 }],
+    ylitykset: [{ a, b, ikkuna: [9000, 5000], kesto: 100 }],
+  }, ymparisto);
+  const i = (r, c) => r * leveys + c;
+  assert.equal(tulos.edeltaja[i(2, 0)], -1, 'lähteellä ei ole edeltäjää');
+  // Ketju saarelta mantereelle: b:n edeltäjä on a, ja a:sta jatkuu lähteeseen.
+  assert.equal(tulos.edeltaja[i(2, 8)], i(2, 4), 'ylityksen b:n edeltäjä on a');
+  let solmu = i(2, 8);
+  const ketju = [solmu];
+  while (tulos.edeltaja[solmu] >= 0 && ketju.length < 50) {
+    solmu = tulos.edeltaja[solmu];
+    ketju.push(solmu);
+  }
+  assert.equal(solmu, i(2, 0), 'ketju päättyy lähteeseen');
+  assert.ok(ketju.length >= 4 && ketju.length < 20, `ketjun pituus ${ketju.length}`);
+  /*
+   * Nauha PYSTYSUORAAN: ruudukon nurkka on 88°N:llä, jossa puolen
+   * asteen sarakkeet ovat kilometrin päässä toisistaan mutta rivit yhä
+   * 55 km — vaakasuora nauha osuisi kokonaan yhden säteen sisään.
+   */
+  const saaret = new Uint8Array(leveys * korkeus);
+  saaret[1 * leveys + 9] = 1;
+  saaret[4 * leveys + 9] = 1;
+  const nauhaTulos = laskeVirta({
+    nopeus: 1,
+    nauhat: [{ sade: 30, pisteet: [[koordinaatit(1, 9).lat, koordinaatit(1, 9).lon, 3000], [koordinaatit(4, 9).lat, koordinaatit(4, 9).lon, 2000]] }],
+  }, { maa: saaret, leveys, korkeus });
+  assert.equal(nauhaTulos.nauhaPiste[i(1, 9)], 0, 'nauhan alkupää');
+  assert.equal(nauhaTulos.nauhaPiste[i(4, 9)], 1, 'nauhan loppupää');
+  assert.equal(nauhaTulos.nauhaNro[i(4, 9)], 0);
+  assert.equal(nauhaTulos.edeltaja[i(4, 9)], -1, 'nauhan ruutu ei peri edeltäjää');
+  assert.ok(nauhaTulos.aika[i(1, 9)] > nauhaTulos.aika[i(4, 9)], 'nauhan aika laskee janaa pitkin');
+  assert.equal(nauhaTulos.nauhaPiste[i(2, 0)], -1, 'nauhan ulkopuolella ei pistettä');
+  /*
+   * Nauhamerkintä kuuluu voittaneelle saapumiselle: jos sama ruutu
+   * saadaan myöhemmin maata pitkin VANHEMPANA, merkintä nollautuu eikä
+   * vana hyppää siinä nauhalle (mannerruudukko yllä on nauhan alla).
+   */
+  const maanPaalla = laskeVirta({
+    nopeus: 1,
+    lahteet: [{ ...lahde, aika: 10000 }],
+    ylitykset: [{ a, b, ikkuna: [9000, 5000], kesto: 100 }],
+    nauhat: [{ sade: 30, pisteet: [[koordinaatit(1, 9).lat, koordinaatit(1, 9).lon, 3000], [koordinaatit(4, 9).lat, koordinaatit(4, 9).lon, 2000]] }],
+  }, ymparisto);
+  assert.ok(maanPaalla.aika[i(4, 9)] > 3000, 'maata pitkin ehditään ennen nauhaa');
+  assert.equal(maanPaalla.nauhaPiste[i(4, 9)], -1, 'hävinnyt nauhamerkintä nollautuu');
+  assert.ok(maanPaalla.edeltaja[i(4, 9)] >= 0, 'voittanut saapuminen jättää edeltäjän');
+});
+
+test('edeltäjätaulun kirjaaminen ei muuta saapumisaikoja eikä merikenttää', () => {
+  /*
+   * Sama laskenta kahdesti: kerran suoraan, kerran ruudukolla, jossa
+   * jokainen ruutu käydään läpi — arvojen on oltava tavulleen samat
+   * kuin ennen edeltäjäkirjanpitoa. Vertailukohtana on oikea data:
+   * jos kirjaaminen olisi muuttanut järjestystä tai pyöristystä, koko
+   * kaaren mallitaulukko liikkuisi.
+   */
+  const virta = IHMISEN_MATKA_VIRRAT[0];
+  const eka = laskeVirta(virta, { maa: MAA, rannikko: rannikkoMaski(MAA) });
+  const toka = laskeVirta(virta, { maa: MAA, rannikko: rannikkoMaski(MAA) });
+  assert.deepEqual(Array.from(eka.aika), Array.from(toka.aika), 'laskenta ei ole toistettava');
+  assert.deepEqual(Array.from(eka.meri), Array.from(toka.meri));
+  // Edeltäjä osoittaa aina ruutuun, jonka aika on VANHEMPI (tai yhtä vanha).
+  let rikkeita = 0;
+  let ketjuja = 0;
+  for (let i = 0; i < eka.aika.length; i += 1) {
+    const e = eka.edeltaja[i];
+    if (e < 0) continue;
+    ketjuja += 1;
+    if (eka.aika[e] < eka.aika[i]) rikkeita += 1;
+  }
+  assert.ok(ketjuja > 10000, `edeltäjiä vain ${ketjuja}`);
+  assert.equal(rikkeita, 0, `${rikkeita} edeltäjää on nuorempi kuin ruutu itse`);
+});
+
+test('johdaVanat: selkäranka Omosta Monte Verdeen mallin omaa linjaa, haarat katkaistaan rungosta', () => {
+  const pysakit = IHMISEN_MATKA.map(({ tunnus, lat, lon, vuosiaSitten }) => ({ tunnus, lat, lon, vuosiaSitten }));
+  const { vanat, kotipesat } = johdaVanat(KENTAT, IHMISEN_MATKA_VANAT, { maa: MAA, pysakit });
+  const selka = vanat[0];
+  assert.equal(selka.tunnus, 'selkaranka', 'selkäranka on ensimmäinen');
+  assert.equal(selka.virta, 'amerikat');
+  assert.equal(selka.paksuus, 4);
+
+  const piste = (p) => ({ lat: p[0], lon: p[1] });
+  const lahin = (vana, lat, lon) => {
+    let paras = Infinity;
+    for (const p of vana.pisteet) paras = Math.min(paras, vanaKm({ lat, lon }, piste(p)));
+    return paras;
+  };
+  // Alku Omossa (±1°), loppu Monte Verdessä, ja matkalla mallin avainpisteet.
+  const alku = piste(selka.pisteet[0]);
+  assert.ok(Math.abs(alku.lat - 4.8) < 1 && Math.abs(alku.lon - 35.97) < 1, `selkäranka alkaa ${alku.lat},${alku.lon}`);
+  const loppu = piste(selka.pisteet[selka.pisteet.length - 1]);
+  assert.ok(vanaKm(loppu, { lat: -41.5047, lon: -73.2044 }) < 60, 'selkäranka päättyy Monte Verdeen');
+  assert.ok(lahin(selka, 66.0, -176.0) < 150, 'selkäranka kulkee Tšuktšien lukupisteen ohi');
+  assert.ok(lahin(selka, 65.0, -164.5) < 150, 'selkäranka kulkee Sewardin ohi');
+  assert.ok(lahin(selka, 51.3975, 84.6761) < 150, 'selkäranka kulkee Altain ohi');
+
+  // Ajat laskevat monotonisesti jokaisessa vanassa, eikä yksikään ole tyhjä.
+  for (const v of vanat) {
+    assert.ok(v.pisteet.length >= 2, `${v.tunnus}: ${v.pisteet.length} kärkeä`);
+    for (let k = 1; k < v.pisteet.length; k += 1) {
+      assert.ok(v.pisteet[k][2] <= v.pisteet[k - 1][2], `${v.tunnus}: aika kasvaa kärjessä ${k}`);
+    }
+    for (const [lat, lon] of v.pisteet) {
+      assert.ok(lat >= -90 && lat <= 90 && lon >= -180 && lon <= 180, `${v.tunnus}: kärki kartan ulkopuolella`);
+    }
+  }
+  // Kärkien määrä pysyy piirrettävissä rajoissa (mitattu 974 / selkäranka 276).
+  const karkia = vanat.reduce((s, v) => s + v.pisteet.length, 0);
+  assert.ok(karkia > 800 && karkia < 3000, `kärkiä yhteensä ${karkia}`);
+  assert.ok(selka.pisteet.length >= 200 && selka.pisteet.length <= 500, `selkärangassa ${selka.pisteet.length} kärkeä`);
+
+  // Tyynenmeren nauhat sellaisinaan: seitsemän vanaa merivirtana.
+  const nauhat = vanat.filter((v) => v.virta === 'tyynimeri');
+  assert.equal(nauhat.length, 7, 'Tyynenmeren nauhat');
+  assert.ok(nauhat.every((v) => v.paksuus === 2));
+
+  /*
+   * HAARAN KATKAISU: haara ei saa piirtyä rungon päälle. Australian
+   * haara lähtee liitoskärjestä (lähellä selkärankaa) mutta kulkee
+   * omaa linjaansa — valtaosa kärjistä on yli 100 km rungosta.
+   */
+  for (const tunnus of ['australia', 'ita-aasia', 'gronlanti', 'brasilia']) {
+    const haara = vanat.find((v) => v.tunnus === tunnus);
+    assert.ok(haara, `${tunnus} puuttuu`);
+    assert.ok(haara.paksuus < selka.paksuus);
+    const haaranAlku = piste(haara.pisteet[0]);
+    assert.ok(vanaKm(haaranAlku, alku) > 100, `${tunnus} alkaa selkärangan alusta`);
+    assert.ok(lahin(selka, haaranAlku.lat, haaranAlku.lon) <= 150, `${tunnus} leijuu irti rungosta`);
+    const omia = haara.pisteet.filter(([lat, lon]) => lahin(selka, lat, lon) > 100).length;
+    assert.ok(omia > haara.pisteet.length / 2, `${tunnus}: vain ${omia}/${haara.pisteet.length} kärkeä omaa linjaa`);
+  }
+
+  // Kotipesät: kolme laikkaa pysäkkien ajoilla, ei linjaa Afrikan halki.
+  assert.equal(kotipesat.length, 3);
+  for (const pesa of kotipesat) {
+    const t = IHMISEN_MATKA.find((s) => s.tunnus === pesa.tunnus);
+    assert.ok(t, `${pesa.tunnus} ei ole pysäkki`);
+    assert.equal(pesa.aika, t.vuosiaSitten);
+    assert.equal(pesa.lat, t.lat);
+    assert.ok(pesa.sade >= 200 && pesa.sade <= 500);
+  }
+  assert.deepEqual(kotipesat.map((k) => k.tunnus), ['jebel-irhoud', 'omo-kibish', 'pinnacle-point']);
+});
+
+test('vanat: kaari antaa aineiston ja työsäie johtaa vanat kenttien perään', () => {
+  // Aineisto on dataa, ei geometriaa: vain päätepisteet ja paksuudet.
+  assert.equal(LINSSI.aikajana.virrat.vanat, IHMISEN_MATKA_VANAT);
+  assert.ok(IHMISEN_MATKA_VANAT.haarat.length >= 8);
+  assert.equal(IHMISEN_MATKA_VANAT.selkaranka.paksuus, 4);
+  assert.equal(IHMISEN_MATKA_VANAT.nauhat, 'tyynimeri');
+  for (const h of IHMISEN_MATKA_VANAT.haarat) {
+    assert.ok(IHMISEN_MATKA_VIRRAT.some((v) => v.tunnus === h.virta), `${h.tunnus}: tuntematon virta ${h.virta}`);
+    assert.ok(h.paksuus <= 2.5 && h.paksuus > 0);
+  }
+  for (const pesa of IHMISEN_MATKA_VANAT.kotipesat) {
+    assert.ok(IHMISEN_MATKA.some((t) => t.tunnus === pesa.tunnus), `${pesa.tunnus} ei ole pysäkki`);
+  }
+  // Kaari antaa pysäkeistä työsäikeelle vain kevyen listan (ei kuvia).
+  const pysakit = LINSSI.aikajana.virrat.pysakit;
+  assert.equal(pysakit.length, IHMISEN_MATKA.length);
+  assert.deepEqual(Object.keys(pysakit[0]).sort(), ['lat', 'lon', 'tunnus', 'vuosiaSitten']);
+  // Työsäie: vanat kenttien perään, kalvon tarkennus vain pyydettäessä.
+  const TYO = lue('../js/aikajana-virrat-tyo.js');
+  assert.match(TYO, /johdaVanat\(kentat, aineisto\.vanat, \{ maa, leveys, korkeus, pysakit: aineisto\.pysakit \?\? null \}\)/);
+  assert.match(TYO, /const tarkka = kalvo \? tarkennaKentat\(/);
+  assert.match(TYO, /self\.postMessage\(\{ kentat: \{ aika: kentat\.aika, virta: kentat\.virta \}, vanat, kotipesat, tarkka \}, siirto\);/);
 });

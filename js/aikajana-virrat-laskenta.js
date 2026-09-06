@@ -491,7 +491,16 @@ export function lahinMaa(maa, lat, lon, sade = 3, leveys = RUUDUKON_LEVEYS, kork
  *                portit?: [{ alue: [laatikot], avautuu, hajonta? }],
  *                nauhat?: [{ pisteet: [[lat, lon, aika]…], sade }] }
  * @param ymparisto { maa, rannikko, leveys, korkeus, siemen }
- * @returns { aika: Float32Array (vuosia sitten, 0 = ei saavutettu), meri: Float32Array (nauhan meriruudut) }
+ * @returns { aika, meri, edeltaja, nauhaPiste, nauhaNro }
+ *
+ * EDELTÄJÄKETJU (VIRRAT VANOINA, omistaja 6.9.2026): jokaiselle
+ * ruudulle talletetaan se ruutu, JOSTA sen aika viimeksi parani —
+ * ylityksessä a, tavallisessa askelessa naapuri, lähteessä ja nauhassa
+ * −1. Ketju päätepisteestä lähteeseen ON se polku, jota pitkin väri
+ * mallissa sinne kulki, ja siitä johdetaan vanat (johdaVanat,
+ * docs/moduulit/ihmisen-matka-vanat.md 2.1). Kirjanpito ei muuta
+ * `aika`- eikä `meri`-kenttää tavullakaan: se vain kirjoittaa
+ * rinnalle, kun tau paranee.
  */
 export function laskeVirta(virta, {
   maa, rannikko = null, leveys = RUUDUKON_LEVEYS, korkeus = RUUDUKON_KORKEUS, siemen = 1,
@@ -499,6 +508,10 @@ export function laskeVirta(virta, {
   const koko = leveys * korkeus;
   const tau = new Float32Array(koko).fill(Infinity);
   const meri = new Float32Array(koko);
+  // Edeltäjäketju vanoja varten: −1 = lähde, nauha tai saavuttamaton.
+  const edeltaja = new Int32Array(koko).fill(-1);
+  const nauhaPiste = new Int16Array(koko).fill(-1);
+  const nauhaNro = new Int16Array(koko).fill(-1);
   const sisamaa = virta.sisamaa ?? 0.5;
   const reuna = virta.reuna ?? 1.5;
   // Sallittu alue: `alue`-laatikot (tai kaikki) miinus `pois`-laatikot.
@@ -559,10 +572,23 @@ export function laskeVirta(virta, {
     }
   }
   const keko = luoKeko();
-  const kirjaa = (i, t) => {
+  /** Ruudun aika (ja edeltäjä) paremmaksi; palauttaa tosi, jos parani. */
+  const kirjaa = (i, t, mista = -1) => {
     // Portti: alueeseen ei pääse ennen sen avautumista.
     const tt = Math.fround(Math.max(t, -avautuu[i]));
-    if (tt < tau[i]) { tau[i] = tt; keko.lisaa(tt, i); }
+    if (!(tt < tau[i])) return false;
+    tau[i] = tt;
+    edeltaja[i] = mista;
+    /*
+     * Nauhamerkintä kuuluu VOITTANEELLE saapumiselle: jos ruutu, johon
+     * nauha kylvi ajan, saavutetaan myöhemmin maata pitkin vanhempana,
+     * vana ei saa hypätä siinä nauhalle. Merkintä nollataan joka
+     * parannuksella ja kirjoitetaan uudelleen vain, kun nauha voittaa.
+     */
+    nauhaPiste[i] = -1;
+    nauhaNro[i] = -1;
+    keko.lisaa(tt, i);
+    return true;
   };
   // Lähteet.
   for (const l of virta.lahteet ?? []) {
@@ -570,7 +596,10 @@ export function laskeVirta(virta, {
     if (i >= 0 && Number.isFinite(l.aika)) kirjaa(i, -l.aika);
   }
   // Nauhat: janan sisään jäävät ruudut saavat ajan janalta.
-  for (const nauha of virta.nauhat ?? []) rasteroiNauha(nauha, { maa, sallittu, meri, kirjaa, leveys, korkeus });
+  const merkitseNauha = (i, piste, nro) => { nauhaPiste[i] = piste; nauhaNro[i] = nro; edeltaja[i] = -1; };
+  (virta.nauhat ?? []).forEach((nauha, nro) => {
+    rasteroiNauha(nauha, { maa, sallittu, meri, kirjaa, leveys, korkeus, nro, merkitseNauha });
+  });
   // Ylitykset: lisäsärmä a → b.
   const lisasarmat = new Map();
   for (const y of virta.ylitykset ?? []) {
@@ -601,7 +630,7 @@ export function laskeVirta(virta, {
         const dy = dr ? askelKm : 0;
         const km = Math.hypot(dx, dy);
         const kerroin = rannikko && !rannikko[v] ? sisamaa : 1;
-        kirjaa(v, t + km / (nopeus * kerroin));
+        kirjaa(v, t + km / (nopeus * kerroin), u);
       }
     }
     const ylitykset = lisasarmat.get(u);
@@ -611,13 +640,13 @@ export function laskeVirta(virta, {
         const lahto = Math.max(t, -y.avautuu);
         if (lahto > -y.sulkeutuu) continue;
         if (!sallittu[y.b] && !maa[y.b]) continue;
-        kirjaa(y.b, lahto + y.kesto);
+        kirjaa(y.b, lahto + y.kesto, u);
       }
     }
   }
   const aika = new Float32Array(koko);
   for (let i = 0; i < koko; i += 1) if (tau[i] < Infinity) aika[i] = -tau[i];
-  return { aika, meri };
+  return { aika, meri, edeltaja, nauhaPiste, nauhaNro };
 }
 
 /**
@@ -626,7 +655,7 @@ export function laskeVirta(virta, {
  * 15 % myöhäisempi, jotta nauha täyttyy keskeltä. Maaruudut kirjataan
  * lähteiksi (leviävät edelleen), meriruudut merikenttään.
  */
-function rasteroiNauha(nauha, { maa, sallittu, meri, kirjaa, leveys, korkeus }) {
+function rasteroiNauha(nauha, { maa, sallittu, meri, kirjaa, leveys, korkeus, nro = -1, merkitseNauha = null }) {
   const pisteet = nauha.pisteet ?? [];
   const sade = nauha.sade ?? 120;
   const meriSade = nauha.meriSade ?? sade * 0.6;
@@ -662,7 +691,8 @@ function rasteroiNauha(nauha, { maa, sallittu, meri, kirjaa, leveys, korkeus }) 
         const d = Math.hypot(px - u * vx, py - u * vy);
         const aika = (t1 + (t2 - t1) * u) * (1 - 0.15 * Math.min(1, d / sade));
         if (maa[i]) {
-          if (d <= sade && sallittu[i]) kirjaa(i, -aika);
+          // Nauhan ruutu muistaa pisteensä: vana jatkuu nauhaa pitkin taaksepäin.
+          if (d <= sade && sallittu[i] && kirjaa(i, -aika) && merkitseNauha) merkitseNauha(i, u < 0.5 ? k : k + 1, nro);
         } else if (d <= meriSade) {
           if (!meri[i] || aika > meri[i]) meri[i] = aika;
         }
@@ -1073,6 +1103,332 @@ export function tarkennaKentat(kentat, {
   };
 }
 
+/* ------------------------------------------------------------ vanat */
+
+/**
+ * VANAT: leviäminen PÄÄREITTINÄ, ei mantereen täyttönä (Raamattu,
+ * "VIRRAT VANOINA", omistaja 6.9.2026; docs/moduulit/ihmisen-matka-vanat.md
+ * luku 2.1).
+ *
+ * Vanaa ei piirretä käsin: se JOHDETAAN samasta saapumisaikakentästä,
+ * joka värjää ruudut. Dijkstran edeltäjäketju päätepisteestä lähteeseen
+ * on täsmälleen se polku, jota pitkin väri mallissa sinne kulki —
+ * ylitykset, portit ja nauhat mukaan lukien — ja jokainen kärki kantaa
+ * oman saapumisaikansa. Kun malliin säädetään nopeutta tai porttia,
+ * vana seuraa perässä eikä yksikään käsin piirretty linja vanhene.
+ *
+ * Käsin annetaan vain PÄÄTEPISTEET (aineistoa: Monte Verde, Lake Mungo,
+ * Lissabon, …) ja Afrikan kotipesät. Käsin piirretty käytävä hylättiin
+ * kokeessa: sen ajat kentästä eivät olleet monotonisia ja se poikkesi
+ * mallin polusta mediaanina 414 km — kaksi totuutta samalla kartalla
+ * (suunnitelman 2.1 B).
+ */
+
+/** Vartija: edeltäjäketju ei voi olla ruudukkoa pidempi. */
+const VANAN_VARTIJA = 30000;
+
+/** Kahden pisteen etäisyys kilometreinä (tasoapproksimaatio riittää ruudukolla). */
+export function vanaKm(a, b) {
+  const f1 = a.lat * RAD;
+  const f2 = b.lat * RAD;
+  let dl = b.lon - a.lon;
+  while (dl > 180) dl -= 360;
+  while (dl < -180) dl += 360;
+  return 6371 * Math.hypot(dl * RAD * Math.cos((f1 + f2) / 2), f2 - f1);
+}
+
+/** Vanan pituus kilometreinä. */
+export function vananPituusKm(pisteet) {
+  let s = 0;
+  for (let k = 1; k < pisteet.length; k += 1) s += vanaKm(pisteet[k - 1], pisteet[k]);
+  return s;
+}
+
+/**
+ * Onko piste enintään `raja` km:n päässä jonkin vanan kärjestä?
+ * Haaran katkaisu kysyy tätä jokaiselta raakapolun pisteeltä, joten
+ * etäisyys lasketaan halvalla: leveysero karsii ensin (yksi vähennys),
+ * ja pituusero skaalataan kysyjän omalla kosinilla — trigonometriaa ei
+ * lasketa pisteparia kohti lainkaan.
+ */
+function lahellaVanoja(piste, vanat, raja) {
+  const cosLat = Math.cos(piste.lat * RAD);
+  const latRaja = raja / KM_ASTEELLA;
+  for (const v of vanat) {
+    for (const p of v.pisteet) {
+      const dLat = p[0] - piste.lat;
+      if (dLat > latRaja || dLat < -latRaja) continue;
+      let dLon = p[1] - piste.lon;
+      while (dLon > 180) dLon -= 360;
+      while (dLon < -180) dLon += 360;
+      const dx = dLon * cosLat;
+      if (Math.hypot(dx, dLat) * KM_ASTEELLA <= raja) return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * EDELTÄJÄPOLKU päätepisteestä lähteeseen, kärki ensin käännettynä
+ * lähteestä päätepisteeseen. Kolme erikoistapausta ratkeaa ketjussa
+ * ilmaiseksi (suunnitelman 2.1 A):
+ *
+ *   - YLITYS on ketjussa tavallinen särmä (b:n edeltäjä on a);
+ *   - NAUHAN ruudussa hypätään nauhan pisteitä taaksepäin sen alkuun ja
+ *     jatketaan siitä kentässä;
+ *   - SIIRTYMÄ toiseen virtaan (Beringia) jatkuu toisen virran
+ *     lukupisteestä; virran omassa lähteessä (Altai, Bacho Kiro)
+ *     hypätään rungon lähimpään VANHEMPAAN ruutuun.
+ */
+function edeltajapolku(kentat, siirtymat, runko, tunnus, lat, lon, { maa, leveys, korkeus }) {
+  const polku = [];
+  let k = kentat.get(tunnus);
+  let i = lahinMaa(maa, lat, lon, 4, leveys, korkeus);
+  let vartija = 0;
+  while (k && i >= 0 && vartija < VANAN_VARTIJA) {
+    vartija += 1;
+    const p = ruudunKeskus(i, leveys);
+    polku.push({ lat: p.lat, lon: p.lon, aika: k.aika[i], virta: k.tunnus });
+    if (k.nauhaPiste[i] >= 0) {
+      const nauha = k.nauhat[k.nauhaNro[i]];
+      if (!nauha) break;
+      for (let q = k.nauhaPiste[i]; q >= 0; q -= 1) {
+        const [nlat, nlon, naika] = nauha.pisteet[q];
+        polku.push({ lat: nlat, lon: nlon, aika: naika, virta: k.tunnus, nauha: true });
+      }
+      const alku = lahinMaa(maa, nauha.pisteet[0][0], nauha.pisteet[0][1], 4, leveys, korkeus);
+      // Nauhan alun ruudusta jatketaan, jos se on saatu muualta kuin nauhasta.
+      if (alku >= 0 && k.nauhaPiste[alku] < 0 && k.edeltaja[alku] >= 0) { i = k.edeltaja[alku]; continue; }
+      // Muuten lähin ei-nauharuutu, joka on nauhan alkua vanhempi.
+      i = alku >= 0 ? vanhinLahella(k, alku, nauha.pisteet[0][2], { leveys, korkeus, nauhatPois: true }) : -1;
+      continue;
+    }
+    const s = siirtymat.find((x) => x.tunnus === k.tunnus && x.kohde === i);
+    if (s) {
+      const toinen = kentat.get(s.virta);
+      if (!toinen || s.lue < 0) break;
+      k = toinen;
+      i = s.lue;
+      continue;
+    }
+    if (k.edeltaja[i] < 0) {
+      // Virran oma lähde: jatka rungossa, jos se on ehtinyt tänne aiemmin.
+      if (runko && k.tunnus !== runko.tunnus) {
+        const j = vanhinLahella(runko, i, k.aika[i], { leveys, korkeus });
+        if (j >= 0) { k = runko; i = j; continue; }
+      }
+      break;
+    }
+    i = k.edeltaja[i];
+  }
+  return polku.reverse();
+}
+
+/** Lähin ruutu (säde 8), jonka aika kentässä on ≥ `vahintaan`; vanhin voittaa. */
+function vanhinLahella(kentta, keski, vahintaan, { leveys, korkeus, sade = 8, nauhatPois = false }) {
+  const r0 = Math.floor(keski / leveys);
+  const c0 = keski - r0 * leveys;
+  let paras = -1;
+  let parasAika = 0;
+  for (let dr = -sade; dr <= sade; dr += 1) {
+    const r = r0 + dr;
+    if (r < 0 || r >= korkeus) continue;
+    for (let dc = -sade; dc <= sade; dc += 1) {
+      const j = r * leveys + ((c0 + dc + leveys) % leveys);
+      if (nauhatPois && kentta.nauhaPiste[j] >= 0) continue;
+      const a = kentta.aika[j];
+      if (a > parasAika && a >= vahintaan) { paras = j; parasAika = a; }
+    }
+  }
+  return paras;
+}
+
+/** Douglas–Peucker: säilytettävien pisteiden indeksit (etäisyys km). */
+function dpIndeksit(pisteet, tolKm, alku = 0, loppu = pisteet.length - 1) {
+  if (loppu <= alku + 1) return loppu > alku ? [alku, loppu] : [alku];
+  const a = pisteet[alku];
+  const b = pisteet[loppu];
+  let paras = alku;
+  let parasD = -1;
+  let dlon = b.lon - a.lon;
+  while (dlon > 180) dlon -= 360;
+  while (dlon < -180) dlon += 360;
+  for (let k = alku + 1; k < loppu; k += 1) {
+    const p = pisteet[k];
+    const cl = Math.cos(p.lat * RAD);
+    let plon = p.lon - a.lon;
+    while (plon > 180) plon -= 360;
+    while (plon < -180) plon += 360;
+    const vx = dlon * cl;
+    const vy = b.lat - a.lat;
+    const px = plon * cl;
+    const py = p.lat - a.lat;
+    const l2 = vx * vx + vy * vy;
+    const u = l2 > 0 ? Math.max(0, Math.min(1, (px * vx + py * vy) / l2)) : 0;
+    const d = Math.hypot(px - u * vx, py - u * vy) * KM_ASTEELLA;
+    if (d > parasD) { parasD = d; paras = k; }
+  }
+  if (parasD <= tolKm) return [alku, loppu];
+  return [...dpIndeksit(pisteet, tolKm, alku, paras).slice(0, -1), ...dpIndeksit(pisteet, tolKm, paras, loppu)];
+}
+
+/**
+ * AIKATIHENNYS: Douglas–Peucker karsii paikan mukaan eikä tiedä ajasta.
+ * Jos kahden säilytetyn kärjen aikaväli on iso (portin tasanne,
+ * Bab-el-Mandebin odotus), kärki "liukuisi" portin yli lineaarisesti
+ * sen sijaan että odottaisi rajalla. Siksi raakapisteitä palautetaan
+ * väliin, kun aikaväli ylittää `rajaV` vuotta tai `osuus`-osan
+ * vanhemmasta ajasta.
+ */
+function tihennaAjoilla(raaka, indeksit, rajaV, osuus) {
+  const ulos = [indeksit[0]];
+  for (let n = 1; n < indeksit.length; n += 1) {
+    const ia = ulos[ulos.length - 1];
+    const ib = indeksit[n];
+    let ed = raaka[ia];
+    for (let j = ia + 1; j < ib; j += 1) {
+      const p = raaka[j];
+      const raja = Math.max(rajaV, osuus * ed.aika);
+      if (ed.aika - p.aika > raja || (raaka[j + 1] && p.aika - raaka[j + 1].aika > raja)) {
+        ulos.push(j);
+        ed = p;
+      }
+    }
+    ulos.push(ib);
+  }
+  return ulos;
+}
+
+/** Chaikin-tasoitus (päät kiinni); ajat liukuvat lineaarisesti. */
+function chaikinTasoitus(pisteet, kierroksia) {
+  let p = pisteet;
+  for (let n = 0; n < kierroksia; n += 1) {
+    if (p.length < 3) break;
+    const u = [p[0]];
+    for (let k = 0; k + 1 < p.length; k += 1) {
+      const a = p[k];
+      const b = p[k + 1];
+      let dlon = b.lon - a.lon;
+      while (dlon > 180) dlon -= 360;
+      while (dlon < -180) dlon += 360;
+      u.push({ lat: a.lat + 0.25 * (b.lat - a.lat), lon: kierraLon(a.lon + 0.25 * dlon), aika: a.aika + 0.25 * (b.aika - a.aika), virta: a.virta });
+      u.push({ lat: a.lat + 0.75 * (b.lat - a.lat), lon: kierraLon(a.lon + 0.75 * dlon), aika: a.aika + 0.75 * (b.aika - a.aika), virta: b.virta });
+    }
+    u.push(p[p.length - 1]);
+    p = u;
+  }
+  return p;
+}
+
+/** Ajat monotonisesti laskeviksi (kello kulkee yhteen suuntaan). */
+function monotonisetAjat(pisteet) {
+  for (let k = 1; k < pisteet.length; k += 1) {
+    if (pisteet[k].aika > pisteet[k - 1].aika) pisteet[k].aika = pisteet[k - 1].aika;
+  }
+  return pisteet;
+}
+
+/**
+ * VANAT KENTÄSTÄ.
+ *
+ * @param kentat laskeKentat-tulos (tarvitsee `edeltajat` ja `siirtymat`)
+ * @param aineisto IHMISEN_MATKA_VANAT (js/linssit/ihmisen-matka-virrat.js)
+ * @param ymparisto { maa, leveys, korkeus, pysakit } — pysäkit kotipesille
+ * @returns { vanat: [{ tunnus, virta, paksuus, pisteet: [[lat, lon, aika]…] }], kotipesat }
+ *          selkäranka ensin, sitten haarat aineiston järjestyksessä ja
+ *          Tyynenmeren nauhat sellaisinaan.
+ */
+export function johdaVanat(kentat, aineisto, {
+  maa, leveys = RUUDUKON_LEVEYS, korkeus = RUUDUKON_KORKEUS, pysakit = null,
+} = {}) {
+  const edeltajat = kentat?.edeltajat ?? [];
+  if (!edeltajat.length || !aineisto || !maa) return { vanat: [], kotipesat: [] };
+  const siirtymat = kentat.siirtymat ?? [];
+  const kentanVirrat = new Map(edeltajat.map((k) => [k.tunnus, k]));
+  const runko = edeltajat[0];
+  const y = aineisto.yksinkertaistus ?? {};
+  const dpKm = y.dpKm ?? 60;
+  const aikaV = y.aikaV ?? 1500;
+  const aikaOsuus = y.aikaOsuus ?? 0.06;
+  const kierroksia = y.chaikin ?? 2;
+  const haaranEroKm = y.haaranEroKm ?? 100;
+  const ymparisto = { maa, leveys, korkeus };
+  const vanat = [];
+
+  const johda = ({ tunnus, virta, paate, paksuus }, katkaise) => {
+    const raaka = edeltajapolku(kentanVirrat, siirtymat, runko, virta, paate.lat, paate.lon, ymparisto);
+    if (raaka.length < 2) return;
+    /*
+     * HAARAN KATKAISU: haara jakaa rungon kanssa alkupään (australia
+     * kulkee Omosta Intiaan samoja ruutuja kuin selkäranka, ja
+     * Amerikkojen haarat koko matkan Arabiasta Beringiaan). Haara
+     * alkaa siitä kärjestä, jossa se VIIMEKSI on `haaranEroKm`:n
+     * päässä jostakin jo johdetusta PAKSUMMASTA vanasta — se kärki jää
+     * liitokseksi, ja sen jälkeen haara kulkee omaa linjaansa.
+     *
+     * Miksi viimeinen lähellä eikä ensimmäinen kaukana (mitattu
+     * 6.9.2026): tasoitettu runko kaartaa paikoin yli 100 km raa'an
+     * polun ohi, ja yksi tällainen yksittäinen poikkeama heti
+     * liitoksen jälkeen katkaisisi haaran liian aikaisin — Brasilian
+     * ja Grönlannin vanat piirtyivät silloin selkärangan päälle
+     * Arabiasta Beringiaan asti (135–175 päällekkäistä kärkeä).
+     */
+    let alku = 0;
+    if (katkaise) {
+      const paksummat = vanat.filter((v) => v.paksuus > paksuus);
+      if (paksummat.length) {
+        let viimeLahella = -1;
+        for (let k = 0; k < raaka.length; k += 1) {
+          if (lahellaVanoja(raaka[k], paksummat, haaranEroKm)) viimeLahella = k;
+        }
+        if (viimeLahella >= raaka.length - 2) return; // haara kulkee kokonaan rungon päällä
+        alku = Math.max(0, viimeLahella);
+      }
+    }
+    const osa = raaka.slice(alku);
+    if (osa.length < 2) return;
+    const indeksit = tihennaAjoilla(osa, dpIndeksit(osa, dpKm), aikaV, aikaOsuus);
+    const karjet = monotonisetAjat(chaikinTasoitus(indeksit.map((k) => ({ ...osa[k] })), kierroksia));
+    vanat.push({
+      tunnus,
+      virta,
+      paksuus,
+      pisteet: karjet.map((p) => [+p.lat.toFixed(3), +kierraLon(p.lon).toFixed(3), Math.round(p.aika)]),
+    });
+  };
+
+  if (aineisto.selkaranka) johda({ tunnus: 'selkaranka', ...aineisto.selkaranka }, false);
+  for (const haara of aineisto.haarat ?? []) johda(haara, true);
+
+  // Tyynenmeren nauhat ovat jo polylinjoja aikoineen: merivirta nauhana.
+  if (aineisto.nauhat) {
+    const nauhaVirta = edeltajat.find((k) => k.tunnus === aineisto.nauhat);
+    (nauhaVirta?.nauhat ?? []).forEach((n, k) => {
+      vanat.push({
+        tunnus: `${aineisto.nauhat}-${k + 1}`,
+        virta: aineisto.nauhat,
+        paksuus: aineisto.nauhanPaksuus ?? 2,
+        pisteet: n.pisteet.map(([lat, lon, aika]) => [lat, lon, aika]),
+      });
+    });
+  }
+
+  /*
+   * KOTIPESÄT (suunnitelman 2.1.2): Afrikassa on kolme toisistaan
+   * riippumatonta lähdettä, eikä niiden välille piirretä linjaa —
+   * kentän ajat sen varrella eivät ole monotonisia, joten linja olisi
+   * keksitty muuttoliike. Ne näytetään pehmeäreunaisina laikkuina,
+   * jotka syttyvät pysäkin hetkellä.
+   */
+  const kotipesat = [];
+  for (const pesa of aineisto.kotipesat ?? []) {
+    const t = (pysakit ?? []).find((s) => s.tunnus === pesa.tunnus);
+    if (!t) continue;
+    kotipesat.push({ tunnus: pesa.tunnus, lat: t.lat, lon: t.lon, aika: t.vuosiaSitten, sade: pesa.sade ?? 350 });
+  }
+  return { vanat, kotipesat };
+}
+
 /* ---------------------------------------------------------- kaikki */
 
 /**
@@ -1114,17 +1470,40 @@ export function* laskeKentatVaiheittain({ virrat, retki = null, vanha = null }, 
   const ymparisto = { maa, rannikko, leveys, korkeus, siemen };
   const kentat = [];
   const kentta = new Map();
+  const edeltajat = [];
+  const siirtymat = [];
   for (const virta of virrat) {
     const lahteet = [...(virta.lahteet ?? [])];
     for (const l of virta.lahteetToisesta ?? []) {
       const toinen = kentta.get(l.virta);
       const i = toinen ? lahinMaa(maa, l.lue.lat, l.lue.lon, 4, leveys, korkeus) : -1;
       const aika = i >= 0 ? ylityksenSaapuminen(toinen.aika[i], l.ikkuna, l.kesto) : 0;
-      if (aika > 0) lahteet.push({ nimi: l.nimi, lat: l.lat, lon: l.lon, aika });
+      if (aika > 0) {
+        lahteet.push({ nimi: l.nimi, lat: l.lat, lon: l.lon, aika });
+        /*
+         * SIIRTYMÄ virrasta toiseen (Beringia): kohderuudun edeltäjä
+         * ei ole tässä kentässä vaan toisen virran lukupisteessä.
+         * Vana hyppää siitä toiseen kenttään (johdaVanat).
+         */
+        siirtymat.push({
+          tunnus: virta.tunnus,
+          kohde: lahinMaa(maa, l.lat, l.lon, 3, leveys, korkeus),
+          virta: l.virta,
+          lue: i,
+        });
+      }
     }
     const tulos = laskeVirta({ ...virta, lahteet }, ymparisto);
     kentta.set(virta.tunnus, tulos);
     kentat.push({ tunnus: virta.tunnus, ...tulos });
+    edeltajat.push({
+      tunnus: virta.tunnus,
+      aika: tulos.aika,
+      edeltaja: tulos.edeltaja,
+      nauhaPiste: tulos.nauhaPiste,
+      nauhaNro: tulos.nauhaNro,
+      nauhat: virta.nauhat ?? [],
+    });
     yield { vaihe: virta.tunnus, kentat: null };
   }
   const yhdiste = yhdistaVirrat(kentat, leveys * korkeus);
@@ -1135,5 +1514,5 @@ export function* laskeKentatVaiheittain({ virrat, retki = null, vanha = null }, 
       reuna: vanha.reuna ?? 3, siemen: siemen + 41, pehmeys: vanha.pehmeys ?? 2, leveys, korkeus, maa,
     })
     : null;
-  yield { vaihe: 'valmis', kentat: { ...yhdiste, retki: retkiKentta, vanha: vanhaMaski, rannikko } };
+  yield { vaihe: 'valmis', kentat: { ...yhdiste, retki: retkiKentta, vanha: vanhaMaski, rannikko, edeltajat, siirtymat } };
 }

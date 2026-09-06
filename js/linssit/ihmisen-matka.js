@@ -73,7 +73,7 @@
 import { projisoiLaudalle } from '../fokusmitat.js';
 import * as data from './ihmisen-matka-data.js';
 import {
-  IHMISEN_MATKA_VIRRAT, IHMISEN_MATKA_RETKI, IHMISEN_MATKA_VANHA, VIRRAN_PEITTO,
+  IHMISEN_MATKA_VIRRAT, IHMISEN_MATKA_RETKI, IHMISEN_MATKA_VANHA, IHMISEN_MATKA_VANAT, VIRRAN_PEITTO,
 } from './ihmisen-matka-virrat.js';
 import { MAAMASKI } from './ihmisen-matka-maamaski.js';
 
@@ -251,6 +251,10 @@ export const LINSSI = {
       vanha: IHMISEN_MATKA_VANHA,
       peitto: VIRRAN_PEITTO,
       maamaski: MAAMASKI,
+      // Vanat johdetaan kentästä (johdaVanat); kotipesät lukevat aikansa
+      // pysäkeiltä, joten työsäie saa niistä kevyen listan (ei kuvia).
+      vanat: IHMISEN_MATKA_VANAT,
+      pysakit: PYSAKIT.map(({ tunnus, lat, lon, vuosiaSitten }) => ({ tunnus, lat, lon, vuosiaSitten })),
     },
     // Reittiviivan projektio tasokartalla: sama lauta kuin pysäkkien
     // x/y:llä (ihmisenMatkanPysakit), jotta viiva osuu lamppuihin.
