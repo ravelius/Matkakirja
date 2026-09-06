@@ -42,7 +42,7 @@ import {
   naapurienPoltetutMerkit, suljeFokuskohde,
 } from '../fokuskohteet.js';
 import { ELAINTAKY_NAKYY_ASTETTA, avaaElaintaky, elaintakyLaudalla } from '../elaintaky.js';
-import { avaaFokuspiste, fokuspisteKuvio } from '../fokuspiste.js';
+import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenSiirto } from '../fokuspiste.js';
 import { fokusvirtaKohtaamispiste } from '../fokusvirta.js';
 import {
   NOSTOSYM_MINI_RUUTU, NOSTOSYM_NIMIO_KOKO, nostosymNimioAsemointi, nostosymNimioMitta,
@@ -263,7 +263,17 @@ export function luoNostot({
     const city = game.cityOf?.();
     const piste = city ? fokusvirtaKohtaamispiste(ui, city) : null;
     if (piste) {
-      const a = asteet(piste);
+      /*
+       * PISTE POIS NAPPULAN ALTA (omistaja 6.9.2026 ilta: *"aarteen
+       * piste syttyy liian lähelle ateenaa, ei pysty painamaan"*): sama
+       * sivusiirto kuin tasokartalla (js/fokuspiste.js
+       * fokuspisteenSiirto) — merkki JA osuma siirtyvät, data ei.
+       * Nappula ei ota napautuksia (css pointer-events), mutta ilman
+       * siirtoa piste ja kaupunki olivat samassa ruutupisteessä ja
+       * lähin merkki -sääntö antoi tasapelin kaupungille.
+       */
+      const siirto = fokuspisteenSiirto(city, piste);
+      const a = asteet({ x: piste.x + siirto.x, y: piste.y + siirto.y });
       if (a) {
         rivit.push({
           avain: `piste:${city.id}`,

@@ -34,6 +34,24 @@
  *   Mittarit (raportti): tekstuurit lepotilassa (suunnitelman katto
  *      120), joutilas kehysaika p95, DOM-solmut.
  *
+ *   PISTEET PALLOLLA (omistaja 6.9.2026 ilta, iPhone; oma sivu, aarre
+ *   sytytettynä Ateenassa ja Sofiassa):
+ *  15. Kaupunkipiste on LEVY, ei tappi (*"piste venyy kun karttaa
+ *      panoroi"*): jokaisen pisteen geometria on levy
+ *      (js/pallolauta/lauta.js luoPisteidenLitistaja), ja ruudun
+ *      ylälaidalle siirretty piste on yhä pyöreä — erotuskuvan
+ *      (piste näkyvissä / piilossa) laatikon korkeus ≤ 1,35 × leveys
+ *      (lieriönä 22 × 50 laitepikseliä, suhde 2,3).
+ *  16. Aarrepiste ei jää nappulan alle (*"aarteen piste syttyy liian
+ *      lähelle ateenaa, ei pysty painamaan"*, *"sama ongelma myös
+ *      sofiassa"*): kohtaamispisteen merkki on kaupungin ruutupisteestä
+ *      sivussa (tasokartan sivusiirto, js/fokuspiste.js
+ *      fokuspisteenSiirto; saapumisnäkymässä ≈ 22 css-px), ja sen
+ *      napautus avaa laattakysymyksen (#quiz-dialog; Sofiassa pöllön
+ *      sähkekortin .fokusvirta-kortti), ei kaupunkilehteä.
+ *      Nappula ei ota napautuksia (css pointer-events), joten merkin
+ *      ja nappulan svg-laatikon limitys on raportin tieto, ei ehto.
+ *
  *   VAIHE 3, MERKIT PALLOLLA (omistajan kortin vastaus 5.9.2026: nimet
  *   *"ELAVINA tekstielementteina laattojen paalla"*):
  *  12. Nimet Ateenassa ja koko pallolla: elävät H-elementit (≤ 40),
@@ -142,7 +160,9 @@ const tallenne = JSON.stringify(peli.toJSON());
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 
 /** Uusi sivu: tallenne paikallaan, ämpäri reititetty (tai katkaistu). */
-async function avaaSivu({ lauta, ampari = true, reducedMotion = 'no-preference' }) {
+async function avaaSivu({
+  lauta, ampari = true, reducedMotion = 'no-preference', tallenne: data = tallenne,
+}) {
   // Palvelutyöntekijä estetään: sw.js säilöö vendor/-kirjastot omaan
   // koriinsa (VENDORCACHE, 5.9.2026), ja workerin fetch ohittaa
   // Playwrightin page.routen — Globe.gl:n reititys ei muuten näkisi
@@ -156,7 +176,7 @@ async function avaaSivu({ lauta, ampari = true, reducedMotion = 'no-preference' 
       localStorage.removeItem('matkakirja-lauta');
       localStorage.setItem('matkakirja-kehittaja', '1');
     } catch { /* yksityinen tila */ }
-  }, tallenne);
+  }, data);
   const sivu = await ctx.newPage();
   const pyynnot = { pyramidi: 0, pallolaatat: 0, kirjasto: 0, virheet: [] };
   // Sivun virheet raporttiin: hiljainen kaatuminen näkyisi vain
@@ -859,6 +879,145 @@ if (AMPARI_TOIMII) {
     if (pyynnot.virheet.length) tieto('sivun virheet siirron jälkeen', pyynnot.virheet.slice(-5).join(' | '));
   }
   await ctx.close();
+}
+
+/* ================= PISTEET PALLOLLA: LEVY JA AARREPISTE ================= */
+/** Tallenne: Fogg kaupungissa, aarre sytytetty (pullavinkki ostettu). */
+const aarreTallenne = (start) => {
+  const p = new Game({
+    players: [{ name: 'Fogg', color: '#c9a227', start }],
+    pack: packById('maailmankartta'),
+    seed: 5,
+  });
+  p.phase = 'action';
+  p.pullaVinkit.add(`maailmankartta:${start}`);
+  return JSON.stringify(p.toJSON());
+};
+if (AMPARI_TOIMII) {
+  for (const kaupunki of ['ateena', 'sofia']) {
+    const { ctx, sivu, pyynnot } = await avaaSivu({ lauta: 'pallo', tallenne: aarreTallenne(kaupunki) });
+    const auki = await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 45000 })
+      .then(() => true).catch(() => false);
+    if (!auki) { vaadi(`15–16. pallolauta avautuu (${kaupunki})`, false, 'ui.pallolauta ei syntynyt'); await ctx.close(); continue; }
+    await sivu.waitForTimeout(4000);
+
+    /* 16. Aarrepiste sivussa nappulasta ja napautettavissa. */
+    const piste = await sivu.evaluate((id) => {
+      const { ui } = window.matkakirja;
+      ui.pallolauta.ladoHeti();
+      const pallo = ui.pallonInstanssi;
+      const k = ui.pallolauta.kaupunki(id);
+      const datum = pallo.htmlElementsData().find((d) => d.laji === 'piste');
+      const hehku = document.querySelector('.pallolauta-piste .fokuspiste-hehku')?.getBoundingClientRect();
+      const nappula = document.querySelector('.pallolauta-nappula svg')?.getBoundingClientRect();
+      const kotelo = ui.pallolauta.kotelo.getBoundingClientRect();
+      const ruutu = pallo.getScreenCoords(k.lat, k.lon, 0);
+      const keski = hehku ? { x: hehku.left + hehku.width / 2, y: hehku.top + hehku.height / 2 } : null;
+      return {
+        oma: ui.game.cityOf()?.id,
+        datumSiirretty: Boolean(datum) && Math.hypot(datum.lat - k.lat, datum.lng - k.lon) > 0.1,
+        keski,
+        etaisyysPx: keski ? Math.hypot(keski.x - (ruutu.x + kotelo.left), keski.y - (ruutu.y + kotelo.top)) : null,
+        nappulassa: Boolean(keski && nappula) && keski.x >= nappula.left && keski.x <= nappula.right && keski.y >= nappula.top && keski.y <= nappula.bottom,
+      };
+    }, kaupunki);
+    let napautus = { aukesi: false };
+    if (piste.keski) {
+      await sivu.mouse.click(piste.keski.x, piste.keski.y);
+      // Ateena: laattakysymys suoraan (#quiz-dialog). Sofia: pöllön
+      // sähketehtävä, jonka vastauslomake on kohtaamiskortti
+      // (js/fokusvirta.js avaaFokusKohtaaminen) — kumpikin on pisteen ovi.
+      const aukesi = await sivu.waitForFunction(
+        () => document.getElementById('quiz-dialog')?.open === true || Boolean(document.querySelector('.fokusvirta-kortti')),
+        null, { timeout: 5000 },
+      ).then(() => true).catch(() => false);
+      napautus = await sivu.evaluate((aukesi) => ({
+        aukesi,
+        quiz: document.getElementById('quiz-dialog')?.open === true,
+        kortti: Boolean(document.querySelector('.fokusvirta-kortti')),
+        lehti: Boolean(window.matkakirja.ui.arrivalDialog?.open),
+      }), aukesi);
+      if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, `pallolauta-aarrepiste-${kaupunki}.png`) });
+      await sivu.evaluate(() => {
+        document.getElementById('quiz-dialog')?.close?.();
+        for (const e of document.querySelectorAll('.fokusvirta-kortti')) e.remove();
+      });
+    }
+    vaadi(`16. aarrepiste ${kaupunki}: merkki sivussa kaupungista (> 12 px), napautus avaa laattakysymyksen tai sähkekortin`,
+      piste.oma === kaupunki && piste.datumSiirretty && piste.etaisyysPx > 12 && napautus.aukesi && !napautus.lehti,
+      JSON.stringify({ ...piste, napautus }));
+    tieto(`    aarrepiste ${kaupunki}: etäisyys kaupungista (css-px) / nappulan laatikon sisällä`,
+      `${piste.etaisyysPx?.toFixed?.(1)} / ${piste.nappulassa}`);
+
+    /* 15. Kaupunkipiste on levy: geometria ja muoto ruudun laidalla (vain Ateena). */
+    if (kaupunki === 'ateena') {
+      const geometria = await sivu.evaluate(() => {
+        const pisteet = window.matkakirja.ui.pallonInstanssi.pointsData();
+        return {
+          pisteita: pisteet.length,
+          levyja: pisteet.filter((d) => d.__threeObjPoint?.geometry?.userData?.pistelevy).length,
+          karkia: pisteet[0]?.__threeObjPoint?.geometry?.attributes?.position?.count ?? null,
+        };
+      });
+      vaadi('15. kaupunkipisteet ovat levyjä (jokaisen pisteen geometria on levy)',
+        geometria.pisteita > 0 && geometria.levyja === geometria.pisteita, JSON.stringify(geometria));
+      // Piste ruudun ylälaitaan lähikuvassa; nappula piiloon mittauksen ajaksi.
+      const muoto = await (async () => {
+        const kuva = async (piste) => {
+          await sivu.evaluate((nakyy) => {
+            const pallo = window.matkakirja.ui.pallonInstanssi;
+            const d = pallo.pointsData().find((p) => p.id === 'ateena');
+            if (d?.__threeObjPoint) d.__threeObjPoint.visible = nakyy;
+            for (const el of document.querySelectorAll('.pallolauta-nappula')) el.style.visibility = 'hidden';
+          }, piste);
+          await sivu.waitForTimeout(150);
+          return (await sivu.screenshot()).toString('base64');
+        };
+        const paikka = await sivu.evaluate(() => {
+          const { ui } = window.matkakirja;
+          const pallo = ui.pallonInstanssi;
+          const k = ui.pallolauta.kaupunki('ateena');
+          // Kamera 1,8° etelämmäs: Ateena ruudun ylälaidalla (n. 330 css-px keskustasta).
+          pallo.pointOfView({ lat: k.lat - 1.8, lng: k.lon, altitude: 0.08 }, 0);
+          return new Promise((ok) => setTimeout(() => {
+            const kotelo = ui.pallolauta.kotelo.getBoundingClientRect();
+            const p = pallo.getScreenCoords(k.lat, k.lon, 0);
+            ok({ x: p.x + kotelo.left, y: p.y + kotelo.top });
+          }, 1500));
+        });
+        const A = await kuva(true);
+        const B = await kuva(false);
+        await sivu.evaluate(() => {
+          const pallo = window.matkakirja.ui.pallonInstanssi;
+          const d = pallo.pointsData().find((p) => p.id === 'ateena');
+          if (d?.__threeObjPoint) d.__threeObjPoint.visible = true;
+          for (const el of document.querySelectorAll('.pallolauta-nappula')) el.style.visibility = '';
+        });
+        return sivu.evaluate(async ([a, b, paikka]) => {
+          const lataa = async (b64) => { const img = new Image(); await new Promise((ok, ei) => { img.onload = ok; img.onerror = ei; img.src = `data:image/png;base64,${b64}`; }); return img; };
+          const [IA, IB] = await Promise.all([lataa(a), lataa(b)]);
+          const W = IA.width; const H = IA.height;
+          const data = (img) => { const c = document.createElement('canvas'); c.width = W; c.height = H; const k = c.getContext('2d'); k.drawImage(img, 0, 0); return k.getImageData(0, 0, W, H).data; };
+          const DA = data(IA); const DB = data(IB);
+          const dpr = window.devicePixelRatio || 1;
+          const cx = paikka.x * dpr; const cy = paikka.y * dpr; const R = 120;
+          let minx = 1e9; let miny = 1e9; let maxx = -1; let maxy = -1; let n = 0;
+          for (let y = Math.max(0, cy - R | 0); y < Math.min(H, cy + R | 0); y += 1) {
+            for (let x = Math.max(0, cx - R | 0); x < Math.min(W, cx + R | 0); x += 1) {
+              const k = (y * W + x) * 4;
+              const d = Math.max(Math.abs(DA[k] - DB[k]), Math.abs(DA[k + 1] - DB[k + 1]), Math.abs(DA[k + 2] - DB[k + 2]));
+              if (d > 40) { n += 1; minx = Math.min(minx, x); miny = Math.min(miny, y); maxx = Math.max(maxx, x); maxy = Math.max(maxy, y); }
+            }
+          }
+          return n ? { pikseleita: n, w: maxx - minx + 1, h: maxy - miny + 1, suhde: +((maxy - miny + 1) / (maxx - minx + 1)).toFixed(2), keskustasta: Math.round(Math.hypot(paikka.x - window.innerWidth / 2, paikka.y - window.innerHeight / 2)) } : { pikseleita: 0 };
+        }, [A, B, paikka]);
+      })();
+      vaadi('    ruudun laidalle siirretty piste on pyöreä (laatikon korkeus ≤ 1,35 × leveys; lieriönä 2,3)',
+        muoto.pikseleita > 100 && muoto.suhde <= 1.35, JSON.stringify(muoto));
+    }
+    if (pyynnot.virheet.length) tieto(`sivun virheet (${kaupunki})`, pyynnot.virheet.slice(0, 3).join(' | '));
+    await ctx.close();
+  }
 }
 
 /* ================= TASOKARTTA ENNALLAAN ================= */

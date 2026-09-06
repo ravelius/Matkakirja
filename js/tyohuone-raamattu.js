@@ -3443,7 +3443,12 @@ export const RAAMATTU = {
           + 'paalla"): pallolla aarrepiste ei saa jaada nappulan alle vaan sen '
           + 'on oltava napautettavissa kuten tasokartalla, ja pallon '
           + 'kaupunkinimet (CSS2D-kerros) jaavat aina korttien, popupien ja '
-          + 'kuplien alle.',
+          + 'kuplien alle. KORJATTU v1643 (mitattu): PISTE ON LEVY - pallon '
+          + 'pisteet piirretaan levyina, ei lierioina; lierion vaippa venyi '
+          + 'ruudun laidalla kapseliksi (suhde 2,2 -> 1,0). Aarrepiste saa '
+          + 'pallolla saman koillissiirron kuin tasokartalla '
+          + '(js/fokuspiste.js fokuspisteenSiirto, yksi saanto molemmille '
+          + 'laudoille), joten se on napautettavissa nappulan vieressa.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '

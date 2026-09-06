@@ -88,6 +88,28 @@ const PISTE_ERO_MIN = 14;
 const PISTE_SIIRTO_X = 14;
 const PISTE_SIIRTO_Y = -10;
 
+/**
+ * PIIRRETYN PISTEEN SIVUSIIRTO laudan yksiköissä — YKSI SÄÄNTÖ MOLEMMILLE
+ * LAUDOILLE (omistaja 6.9.2026 ilta, iPhone, sanatarkasti: *"aarteen
+ * piste syttyy liian lähelle ateenaa, ei pysty painamaan"* ja *"sama
+ * ongelma myös sofiassa"*). Tasokartalla piste on siirretty laatan
+ * vierestä koilliseen 26.8.2026 lähtien (ks. yllä); karttapallo
+ * (js/pallolauta/nostot.js) piirsi sen datan koordinaatteihin eli
+ * täsmälleen nappulan jalkaan, ja pallon osumatesti (lähin merkki,
+ * js/pallolauta/lauta.js lahinMerkki) antoi tasapelin kaupungille.
+ * Siirto lasketaan nyt täällä ja pallo kysyy sen samasta funktiosta:
+ * etäisyys mitataan kaupungin keskipisteestä, siirto on vakio, eikä
+ * datan koordinaatteihin kosketa kummallakaan laudalla.
+ *
+ * @returns {{ x: number, y: number }} lisättävä siirto (0, 0 kaukana)
+ */
+export function fokuspisteenSiirto(city, piste) {
+  const lahella = Number.isFinite(city?.x) && Number.isFinite(city?.y)
+    && Number.isFinite(piste?.x) && Number.isFinite(piste?.y)
+    && Math.hypot(piste.x - city.x, piste.y - city.y) < PISTE_ERO_MIN;
+  return lahella ? { x: PISTE_SIIRTO_X, y: PISTE_SIIRTO_Y } : { x: 0, y: 0 };
+}
+
 /** Tyylitiedoston tunnus — sama tiedosto kuin fokusvirran korteilla. */
 const PISTE_TYYLIN_TUNNUS = 'fokusvirta-tyyli';
 
@@ -214,10 +236,7 @@ export function paivitaFokuspiste(ui) {
        * mitataan kaupungin keskipisteestä, eli siitä samasta kohdasta,
        * johon laatta ja käännetyn laatan aarremerkki piirtyvät.
        */
-      const lahella = Number.isFinite(city.x) && Number.isFinite(city.y)
-        && Math.hypot(piste.x - city.x, piste.y - city.y) < PISTE_ERO_MIN;
-      const sx = lahella ? PISTE_SIIRTO_X : 0;
-      const sy = lahella ? PISTE_SIIRTO_Y : 0;
+      const { x: sx, y: sy } = fokuspisteenSiirto(city, piste);
       // Kiertävällä laudalla sama merkki molempiin kohtiin (ks. sääntö 1).
       for (const x of ui.kiertoKohdat?.(piste.x) ?? [piste.x]) {
         const ryhma = el('g', { class: 'fokuspiste-ryhma' }, kerros);

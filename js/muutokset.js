@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1643, teksti: 'Pallon piste levyksi; aarrepiste pois nappulan alta' },
   { v: 1642, teksti: 'Pulu puhuu Ateenassa ja Sofiassa' },
   { v: 1641, teksti: 'Lepokerros: ei hyppya, ei kokoamista raahauksessa' },
   { v: 1640, teksti: 'Lehdet 15 maata ja 4 kaupunkia, pulun aani Dr. Von' },
