@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1645, teksti: 'Ihmisen matka varivirtoina pallolla, kellon sumennus' },
   { v: 1644, teksti: 'Pallon nimet jaavat korttien ja kuplien alle' },
   { v: 1643, teksti: 'Pallon piste levyksi; aarrepiste pois nappulan alta' },
   { v: 1642, teksti: 'Pulu puhuu Ateenassa ja Sofiassa' },
