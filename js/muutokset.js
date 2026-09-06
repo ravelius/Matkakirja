@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1655, teksti: 'Linssikalvo pysyy laattojen paalla (syvyyssiirto)' },
   { v: 1654, teksti: 'Pulu nayttaa paikan kartalla ja Palaa vie takaisin' },
   { v: 1653, teksti: 'Pallo: sormen tartunta laskien, kerrokset yhteen kehykseen' },
   { v: 1652, teksti: 'Pulu: tyhja vastaus yritetaan uudestaan, syy kerrotaan' },

@@ -53,6 +53,34 @@
  * päällä.
  */
 export const KALVON_SADE = 1.0015;
+/**
+ * KALVON SYVYYSSIIRTO — polygonOffsetUnits laattakerroksen EDELLE.
+ *
+ * VIKA v1647–v1649 (omistaja 6.9.2026 ilta, iPad Safari, Ihmisen matka,
+ * sanatarkasti: *"Ainakin selaimella täyttöväri ei pysy ihmis
+ * linssissä"*): kalvo näkyi vain tähtimäisinä laikkuina säännöllisen
+ * ruudukon kärkien ympärillä. Syy MITATTU (scratchpad/kalvo,
+ * Chromium 390 × 844 dpr 3): laattakerros piirtyy TÄSMÄLLEEN pinnan
+ * säteellä mutta vetää itsensä syvyyspuskurissa kameraa kohti
+ * (LAATTAKERROS_SYVYYSSIIRTO −8), ja se siirto on MAAILMAN mitassa
+ * d² (1/near − 1/far) / 2²⁴ eli korkeudella 1,1 noin 0,12 yksikköä —
+ * enemmän kuin kalvon oma nosto pinnasta (0,15 yksikköä kärjissä,
+ * mutta jänteen painuma vie sen 0,028:aan kirjaston 90 × 45 -pallon
+ * ruutujen keskellä). Laatta voitti siis syvyystestin kaikkialla
+ * paitsi aivan kalvon kärkien lähellä → tähtikuvio. Ennen laattoja
+ * (v1645) sama kalvo näkyi ehjänä, koska lepokerros jää yleiskuvassa
+ * kokoamatta (LEPOKERROS_KORKEUSRAJA) eikä pohjapallolla ole siirtoa.
+ *
+ * KORJAUS ON SAMA KUIN VEKTOREILLA (js/pallovektorit.js
+ * VEKTORIT_SYVYYSSIIRTO −12): kalvo saa oman, laattoja NEGATIIVISEMMAN
+ * siirron, jolloin sen etumatka on 4 syvyysaskelta + oma nostonsa
+ * KAIKILLA etäisyyksillä (siirto skaalautuu samalla d²:lla kuin
+ * laattojen). Sädekorotus ei kelpaa (näkyisi hyppynä ja parallaksina,
+ * v1641:n oppi), eikä syvyystestin sammuttaminen (kalvo peittäisi
+ * kaupunkipisteet ja nappulan ja vuotaisi horisontin yli). Syvyystesti
+ * jää päälle, joten pallon takapuoli leikkautuu kuten ennen.
+ */
+export const KALVON_SYVYYSSIIRTO = -12;
 /** Polygonin oletuskorkeus, kun linssi ei kerro omaansa (luku 10.1). */
 export const POLYGONIN_KORKEUS = 0.004;
 /** Ruutukalvon reiän oletussäde pikseleinä. */
@@ -159,6 +187,8 @@ function teeMateriaali(pallo, tekstuuri, pinta) {
   const T = globalThis.THREE;
   const asetukset = {
     map: tekstuuri, transparent: true, opacity: 0, depthWrite: false,
+    depthTest: true,
+    polygonOffset: true, polygonOffsetFactor: 0, polygonOffsetUnits: KALVON_SYVYYSSIIRTO,
   };
   if (T?.MeshBasicMaterial) return new T.MeshBasicMaterial(asetukset);
   const perus = etsiMateriaali(pallo, (m) => m.type === 'MeshBasicMaterial');
@@ -169,6 +199,12 @@ function teeMateriaali(pallo, tekstuuri, pinta) {
   kopio.transparent = true;
   kopio.opacity = 0;
   kopio.depthWrite = false;
+  kopio.depthTest = true;
+  // Sama siirto myös varapolulla: kloonattu pintamateriaali jäisi muuten
+  // laattojen alle (ks. KALVON_SYVYYSSIIRTO).
+  kopio.polygonOffset = true;
+  kopio.polygonOffsetFactor = 0;
+  kopio.polygonOffsetUnits = KALVON_SYVYYSSIIRTO;
   if (kopio.emissive) {
     kopio.map = null;
     kopio.color?.set?.(0x000000);

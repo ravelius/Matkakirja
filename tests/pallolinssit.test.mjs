@@ -18,8 +18,14 @@ import { existsSync, readFileSync, statSync } from 'node:fs';
  */
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
-const { luoLinssit, KALVON_SADE, POLYGONIN_KORKEUS } = await import('../js/pallolauta/linssit.js');
+const {
+  luoLinssit, KALVON_SADE, KALVON_SYVYYSSIIRTO, POLYGONIN_KORKEUS,
+} = await import('../js/pallolauta/linssit.js');
 const { PALLOLAUDAN_KERROKSET } = await import('../js/pallolauta/lauta.js');
+const {
+  LAATTAKERROS_RENDER_ORDER_POHJA, LAATTAKERROS_SYVYYSSIIRTO, LEPOKERROS_SYVYYSSIIRTO,
+} = await import('../js/pallolaatat.js');
+const { VEKTORIT_SYVYYSSIIRTO } = await import('../js/pallovektorit.js');
 
 /** Ketjuttuva Globe.gl-tynkä: muistaa kerrosten viimeisimmät listat. */
 function tynkaPallo() {
@@ -45,6 +51,70 @@ test('sopimus 10.1: moottorilla on tasan luvun taulukon rajapinta', () => {
   // jotta pelin viivat lukeutuvat linssin päältä.
   assert.ok(KALVON_SADE > 1 && KALVON_SADE < 1.002);
   assert.equal(POLYGONIN_KORKEUS, 0.004);
+});
+
+/*
+ * ── KALVO PYSYY LAATTAKERROKSEN PÄÄLLÄ ───────────────────────────
+ *
+ * VIKA v1647–v1649 (omistaja 6.9.2026 ilta, iPad Safari, Ihmisen matka:
+ * *"Ainakin selaimella täyttöväri ei pysy ihmis linssissä"*): kalvo
+ * näkyi vain tähtinä säännöllisen ruudukon kärkien ympärillä. Laattojen
+ * polygonOffset (−8 yksikköä) vetää laatan syvyyspuskurissa kameraa
+ * kohti MAAILMAN mitassa d² (1/near − 1/far) / 2²⁴ — korkeudella 1,1
+ * noin 0,12 yksikköä, enemmän kuin kalvon nosto pinnasta, joka jänteen
+ * painuman jälkeen on ruutujen keskellä vain 0,03. Vartio pitää huolen,
+ * ettei kalvo jää enää ilman omaa, laattoja negatiivisempaa siirtoa.
+ * Mitattu Chromiumilla 390 × 844 dpr 3 (scratchpad/kalvo, 40 ka
+ * -näkymä): ennen 9 % kalvon omista väripisteistä näkyi ruudulla,
+ * korjauksen jälkeen 100 % laattojen päällä.
+ */
+test('kalvo piirtyy laattakerroksen päälle: syvyyssiirto, ei sädekorotusta', () => {
+  const src = lue('../js/pallolauta/linssit.js');
+  // Sama sääntö kuin vektoriviivoilla: kaikki pinnan päälliset kerrokset
+  // ovat laattojen (ja lepokerroksen) EDELLÄ neljä syvyysaskelta.
+  assert.equal(KALVON_SYVYYSSIIRTO, -12);
+  assert.equal(KALVON_SYVYYSSIIRTO, VEKTORIT_SYVYYSSIIRTO, 'yksi sääntö, ei kahta lukua');
+  /*
+   * JOS LAATTAKERROS JOSKUS SAA TASOKOHTAISET SIIRROT (ehdotus 6.9.2026:
+   * −3…−11 tason mukaan), tämän ehdon on pidettävä SYVIMPÄÄN siirtoon
+   * nähden — kalvo on aina laattojen edellä, ei vain pohjatason.
+   */
+  assert.ok(KALVON_SYVYYSSIIRTO < LAATTAKERROS_SYVYYSSIIRTO, 'kalvo jäisi laattojen alle');
+  assert.ok(KALVON_SYVYYSSIIRTO < LEPOKERROS_SYVYYSSIIRTO, 'kalvo jäisi lepokerroksen alle');
+  // Materiaali: siirto päällä, syvyystesti PÄÄLLÄ (horisontti leikkaa
+  // kalvon) eikä syvyyskirjoitusta (kalvo ei peitä pisteitä puskurissa).
+  assert.match(src, /polygonOffset: true, polygonOffsetFactor: 0, polygonOffsetUnits: KALVON_SYVYYSSIIRTO,/);
+  assert.match(src, /map: tekstuuri, transparent: true, opacity: 0, depthWrite: false,\n\s*depthTest: true,/);
+  assert.ok(!/depthTest: false/.test(src), 'depthTest pois vuotaisi kalvon pallon takapuolelle');
+  // Varapolku (kloonattu pintamateriaali) saa saman siirron.
+  assert.match(src, /kopio\.polygonOffsetUnits = KALVON_SYVYYSSIIRTO;/);
+  // Kalvo piirtyy läpinäkyvien jonossa laattojen JÄLKEEN (renderOrder).
+  assert.match(src, /mesh\.renderOrder = 1;/);
+  for (let z = 0; z <= 8; z += 1) {
+    assert.ok(1 > LAATTAKERROS_RENDER_ORDER_POHJA + z, `taso ${z} ennen kalvoa`);
+  }
+  // KORJAUS EI OLE SÄDEKOROTUS (v1641:n oppi: nosto näkyisi hyppynä).
+  assert.equal(KALVON_SADE, 1.0015);
+  /*
+   * Miksi pelkkä säde ei riitä (mitattu, sama kaava kuin
+   * tests/pallolepokerros.test.mjs:ssä: Globe.gl near 0,05, far 125 000,
+   * 24-bittinen puskuri): laattojen kahdeksan askelta on korkeudella 1,1
+   * jo 0,1 yksikköä, ja kirjaston 90 × 45 -pallon jänne painuu ruudun
+   * keskellä 0,12 yksikköä eli kalvon 0,15:n nostosta jää 0,03.
+   */
+  const askel = (d) => (d * d * (1 / 0.05 - 1 / 125000)) / 2 ** 24;
+  const sade = 100;
+  const etaisyys = sade * 1.1;
+  const painuma = sade * KALVON_SADE * (1 - Math.cos((Math.hypot(360 / 90, 180 / 45) / 2) * (Math.PI / 180)));
+  const nostoRuudunKeskella = sade * (KALVON_SADE - 1) - painuma;
+  assert.ok(nostoRuudunKeskella > 0, 'kalvo painuisi pinnan sisään');
+  assert.ok(-LAATTAKERROS_SYVYYSSIIRTO * askel(etaisyys) > nostoRuudunKeskella,
+    'ilman omaa siirtoa laatta voitti syvyystestin — juuri tämä oli vika');
+  // Oma siirto on laattojen edellä joka etäisyydellä (sama d²-skaala).
+  for (const korkeus of [0.05, 0.4, 1.1, 2.5]) {
+    const ero = (LAATTAKERROS_SYVYYSSIIRTO - KALVON_SYVYYSSIIRTO) * askel(sade * korkeus);
+    assert.ok(ero + nostoRuudunKeskella > 0, `korkeus ${korkeus}: kalvo jäisi laatan alle`);
+  }
 });
 
 test('linssi kulkee osarekisterien kautta: peli ja linssi eivät pyyhi toisiaan', () => {
