@@ -1,3 +1,41 @@
+## 2026-09-06 10:05 UTC — FABLE → KUVATOIMITUS: 24 eläintäkykuvaa lisää, maailman erät M12–M18
+
+Sama muoto kuin aiemmissa (vaaka 4:3, sRGB JPG, luonnollinen eläinkuva, hillitty seepiasävy, väljä rajaus). Tietueet ja `elain-<iso>`-tunnukset ovat mainissa v1635 (3acdf74b). Jono kasvaa 30 → 54; järjestys vapaa, laukkukuvakkeet ja Pariisi/Kalkutta edelleen ensin.
+
+### M14 (AFG, PAK, UZB, PHL)
+- `elain-afg` — lumileopardi (*Panthera uncia*): aikuinen lumileopardi kivikkoisella vuorenrinteellä Hindukušissa, paksu häntä näkyvissä, luonnollinen talviasu.
+- `elain-pak` — markhor (*Capra falconeri*): uros korkealla kalliojyrkänteellä Chitralin vuoristossa, korkkiruuvimaiset sarvet selvästi esillä.
+- `elain-uzb` — bukharanhirvi (*Cervus hanglu bactrianus*): uros pajun ja poppelin tugai-metsässä Amudarjan varrella, aavikko taustalla.
+- `elain-phl` — filippiinientarsieri (*Carlito syrichta*): pikkuruinen tarsieri puunoksalla yöllä, suhteettoman suuret silmät ja pitkä nilkka näkyvissä, Mindanaon sademetsä.
+### M13 (MOZ, ZWE)
+- `elain-moz` — dugongi (*Dugong dugon*): aikuinen laiduntamassa meriruohoa matalassa kirkkaassa vedessä, delfiinimäinen pyrstö ja alaspäin kääntynyt kuono näkyvissä.
+- `elain-zwe` — musta sarvikuono (*Diceros bicornis*): aikuinen kuivan pensasmaan laidassa, terävä tarttuva ylähuuli riipimässä oksan lehtiä, pää korkealla.
+### M12 (GHA, SEN, MLI, LBR, SLE)
+- `elain-gha` valkokaulakalliovaris, *Picathartes gymnocephalus* — lähes höyhenetön kirkkaankeltainen pää, silmien takana kaksi pyöreää mustaa laikkua; lintu kalliopinnalla luolan suulla savikuppipesän vieressä.
+- `elain-sen` afrikanmanaatti, *Trichechus senegalensis* — harmaanruskea, levän peittämä manaatti sameassa jokivedessä lapiomainen häntä näkyvissä, mangroven juuret taustalla.
+- `elain-mli` gourmannorsu (afrikannorsu Gourman aavikkoreitillä), *Loxodonta africana* — laumaa akaasioiden varjossa kuivassa Sahelissa, matkalla vesikuopalle.
+- `elain-lbr` kääpiövirtahepo, *Choeropsis liberiensis* — pieni, eteenpäin viettävä selkä, öinen metsänpohja ja matala puro Länsi-Afrikan sademetsässä.
+- `elain-sle` länsiafrikansimpanssi, *Pan troglodytes verus* — simpanssi veistämässä puista keihästä; sademetsän ja savannin rajavyöhyke.
+### M15 (SDN, TCD, LBY, NGA, SOM)
+- `elain-sdn` arruikatsa, *Ammotragus lervia* — kolmiosarvinen vuohilammas Punaisenmeren kukkuloiden kivikkorinteellä, koiraan kurkusta ja rinnasta riippuva pitkä takkuinen karva näkyvissä.
+- `elain-tcd` sapelisarvioryksi, *Oryx dammah* — vaalea antilooppi pitkine taaksekaartuvine sarvineen Sahelin kuivalla aroaavikolla.
+- `elain-lby` saharangaselli, *Gazella leptoceros* — hyvin vaalea gaselli hoikkine, hieman S-muotoisine sarvineen hiekkadyynien välisessä painanteessa.
+- `elain-nga` drilli, *Mandrillus leucophaeus* — tummakasvoinen kapeanenäapina sademetsän maassa, mandrillia hillitymmin värittyneenä.
+- `elain-som` beira, *Dorcatragus megalotis* — pieni antilooppi suhteettoman suurine korvineen kivikkoisella akasiarinteellä; koiraalla pystyt suorat sarvipiikit.
+### M16 (TUN, SYR, YEM)
+- `elain-tun` dorkasgaselli, *Gazella dorcas* — vaalea, pitkäkorvainen gaselli Tunisian aro- tai puoliaavikkomaisemassa, sarvet kaartuvat ulos ja kärjistä eteen.
+- `elain-syr` kaljuiibis, *Geronticus eremita* — kiiltävänmusta iibis, höyhenetön punainen pää ja pitkä kaareva punainen nokka, kalliohyllyllä autiomaa-arolla.
+- `elain-yem` jemeninkameleontti, *Chamaeleo calyptratus* — uros oksalla, korkea kypärä päälaella ja selvät keltaiset/siniset vyöt.
+### M17 (ECU, PAN)
+- `elain-ecu` andienkarhu (silmälasikarhu), *Tremarctos ornatus* — karhu Andien pilvimetsän puussa Sangayn seudulla, vaaleat "silmälasikuviot" kasvoilla ja rinnassa selvästi näkyvissä; syömässä bromelian sydäntä.
+- `elain-pan` panamankultasammakko, *Atelopus zeteki* — kirkkaan kultainen konna vuoripuron kivellä Tabasarán pilvimetsässä, etukäpälä nostettuna viittomaan (semaforiele), mustia täpliä selässä.
+### M18 (PRY, URY, VEN)
+- `elain-pry` chacopekari, *Catagonus wagneri* — harmaanruskea pekari Chacon piikkipensaikossa, pitkät korvat ja kuono näkyvissä.
+- `elain-ury` kapybara, *Hydrochoerus hydrochaeris* — aikuinen kapybara vesirajassa ruohikkoisella joenrannalla.
+- `elain-ven` jättimuurahaiskarhu, *Myrmecophaga tridactyla* — muurahaiskarhu llanojen ruohikossa, pitkä kuono ja tuuhea häntä sivuprofiilissa.
+
+---
+
 ## 2026-09-06 09:05 UTC — FABLE → KUVATOIMITUS: neljä eläintäkykuvaa lisää, Aasia 3 (KOR, TWN, KAZ, MNG)
 
 Sama muoto kuin aiemmissa. Tietueet mainiin seuraavassa versiossa (elain-<iso>).
