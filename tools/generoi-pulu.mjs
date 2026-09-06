@@ -30,6 +30,7 @@
  *   --pakota         generoi vaikka tiedosto on jo ämpärissä.
  *   --ei-vientia     generoi ja viimeistele, mutta jätä levylle.
  *   --tempo <luku>   puheen nopeutus ffmpegillä (oletus TEMPO).
+ *   --haku <nimi>    --aanet: listaa vain äänet, joiden nimessä on <nimi>.
  *
  * ------------------------------------------------------------------
  * MIKSI TEMPO TEHDÄÄN FFMPEGILLÄ
@@ -126,19 +127,34 @@ if (process.argv[1] === TAMA && !process.env.NODE_USE_ENV_PROXY
 
 const API = 'https://api.elevenlabs.io';
 const PUHE_OSOITE = `${API}/v1/text-to-speech`;
-const MALLI = 'eleven_v3';
 /*
- * STABILITY 0.0 = "Creative" (eleven_v3:n kolme arvoa ovat 0.0, 0.5 ja
- * 1.0). Kertojan luennat ovat 0.5:llä, koska niiden pitää kuulostaa
- * samalta joka kerta; Livia on tarkoituksella toinen ääripää — juuri
- * Creative tottelee elävöitystageja parhaiten.
+ * MALLI ON V2 JA TAGIT POIS (omistaja 6.9.2026 iltapäivä, ElevenLabsin
+ * sivulla kokeiltuaan: *"v2 versio on parempi tälle äänelle, eli ei
+ * tule ollenkaan ohjausmerkkejä. käytä muutenkin noita säätöjä jotka
+ * näkyvät kuvassa"*). Ääni on "Dr. Von - Quirky, Mad Scientist"
+ * (PULU_AANI_OLETUS). eleven_multilingual_v2 ei ymmärrä v3:n
+ * hakasulkutageja — ne luettaisiin ääneen — joten repliikki lähtee
+ * puhtaana tekstinä. TAGIT-taulu jää talteen v3-kokeilua varten
+ * (MALLI takaisin eleven_v3:een palauttaa ne käyttöön).
+ *
+ * Säätimet omistajan kuvakaappauksesta: Speed hieman keskeltä oikealle
+ * (1,05), Stability keskellä (0,5), Similarity 0,75, Style Exaggeration
+ * nolla, Speaker boost päällä. Nopeus tulee nyt mallista, joten
+ * ffmpeg-tempo on 1,0 (ks. MIKSI TEMPO TEHDÄÄN FFMPEGILLÄ — pätee vain
+ * v3:lle, jolla ei ole speed-säädintä).
  */
-const STABILITY = 0;
+const MALLI = 'eleven_multilingual_v2';
+/** "Dr. Von - Quirky, Mad Scientist" (omistajan valinta 6.9.2026, haettu --haku "Dr. Von"). */
+export const PULU_AANI_OLETUS = process.env.PULU_AANI ?? 'yjJ45q8TVCrtMhEKurxY';
+const TAGIT_KAYTOSSA = MALLI === 'eleven_v3';
+const STABILITY = 0.5;
 const SIMILARITY = 0.75;
-/** Tyylin voimakkuus: pulu saa liioitella, kertoja ei. */
-const STYLE = 0.6;
-/** Nopeutus viimeistelyssä (ks. MIKSI TEMPO TEHDÄÄN FFMPEGILLÄ). */
-const TEMPO = 1.08;
+/** Tyylin voimakkuus: v2:lla nolla (omistajan säätö), v3:lla 0,6. */
+const STYLE = TAGIT_KAYTOSSA ? 0.6 : 0;
+/** Mallin oma nopeus (vain v2-perhe; v3 jättää kentän huomiotta). */
+const SPEED = 1.05;
+/** Nopeutus viimeistelyssä: v3:lla 1,08, v2:lla nopeus tulee mallista. */
+const TEMPO = TAGIT_KAYTOSSA ? 1.08 : 1.0;
 /** Lopputauko, jonka ffmpeg leikkaa naksahduksen kanssa pois. */
 const LOPPUTAUKO = ' <break time="1.0s" />';
 
@@ -285,7 +301,7 @@ export function repliikit() {
     mannerivihje: [MANNERIVIHJE],
   }).map((rivi) => ({
     ...rivi,
-    puhe: puhemuoto(rivi.teksti, TAGIT[rivi.avain]),
+    puhe: TAGIT_KAYTOSSA ? puhemuoto(rivi.teksti, TAGIT[rivi.avain]) : rivi.teksti,
     arvioSekunteina: Number((rivi.merkit / MERKKIA_SEKUNNISSA).toFixed(1)),
     kuplaSekunteina: kuplanLukuaika(rivi.teksti),
   }));
@@ -334,7 +350,8 @@ export function kokoaManifesti(rivit, kestot = new Map()) {
 export function tulkitseArgumentit(argumentit) {
   const liput = {
     toiminto: 'generoi',
-    aani: process.env.PULU_AANI ?? '',
+    aani: PULU_AANI_OLETUS,
+    haku: '',
     valitut: [],
     pakota: false,
     vienti: true,
@@ -350,6 +367,11 @@ export function tulkitseArgumentit(argumentit) {
       const arvo = argumentit[i + 1];
       if (!arvo || String(arvo).startsWith('--')) return { ...liput, virhe: '--aani ilman tunnusta' };
       liput.aani = arvo;
+      i += 1;
+    } else if (arg === '--haku') {
+      const arvo = argumentit[i + 1];
+      if (!arvo || String(arvo).startsWith('--')) return { ...liput, virhe: '--haku ilman hakusanaa' };
+      liput.haku = arvo;
       i += 1;
     } else if (arg === '--tempo') {
       const arvo = Number(argumentit[i + 1]);
@@ -487,23 +509,32 @@ async function haeJson(url, avain) {
  * jaettu haku on valinnainen, eikä sen kaatuminen saa kaataa ajoa.
  * Ajo ei valitse ääntä: valinta on kuuntelupäätös.
  */
-async function haeAanet(avain) {
-  console.log('OMAT ÄÄNET (/v1/voices)\n');
+async function haeAanet(avain, haku = '') {
+  /*
+   * HAKU NIMELLÄ (6.9.2026): omistaja löysi äänen ElevenLabsin sivulta
+   * nimellä, ja voice_id tarvitaan ajoon. `--haku "Dr. Von"` listaa
+   * omista ja jaetuista äänistä ne, joiden nimessä haku esiintyy —
+   * piirresuodatinta ei silloin käytetä.
+   */
+  const nimiOsuu = (aani) => !haku
+    || String(aani?.name ?? '').toLowerCase().includes(haku.toLowerCase());
+  console.log(haku ? `HAKU NIMELLÄ "${haku}"\n` : 'OMAT ÄÄNET (/v1/voices)\n');
   const omat = await haeJson(`${API}/v1/voices`, avain);
   let omia = 0;
   for (const aani of omat.voices ?? []) {
+    if (!nimiOsuu(aani)) continue;
     const osumat = osuvatPiirteet(aani);
-    if (!osumat.length) continue;
+    if (!haku && !osumat.length) continue;
     tulostaAani(aani, osumat);
     omia += 1;
   }
   console.log(omia ? '' : '  (ei osumia — koko lista alla)\n');
-  if (!omia) {
+  if (!omia && !haku) {
     for (const aani of omat.voices ?? []) tulostaAani(aani, []);
   }
 
   console.log('\nJAETUT ÄÄNET (/v1/shared-voices)\n');
-  const haut = [
+  const haut = haku ? [`page_size=100&search=${encodeURIComponent(haku)}`] : [
     'page_size=100&search=raspy',
     'page_size=100&search=gravelly',
     'page_size=100&search=energetic',
@@ -524,8 +555,9 @@ async function haeAanet(avain) {
     for (const aani of aanet) {
       const tunnus = aani.voice_id;
       if (!tunnus || nahdyt.has(tunnus)) continue;
+      if (!nimiOsuu(aani)) continue;
       const osumat = osuvatPiirteet(aani);
-      if (!osumat.length) continue;
+      if (!haku && !osumat.length) continue;
       nahdyt.add(tunnus);
       tulostaAani(aani, osumat);
     }
@@ -550,6 +582,7 @@ async function haeApista(puhe, aani, avain, kohde) {
         similarity_boost: SIMILARITY,
         style: STYLE,
         use_speaker_boost: true,
+        ...(TAGIT_KAYTOSSA ? {} : { speed: SPEED }),
       },
     }),
     signal: AbortSignal.timeout(180000),
@@ -600,7 +633,9 @@ export function kaikuSuodatin({ kesto = KAIUN_KESTO, vaimennus = KAIUN_VAIMENNUS
    */
   return [
     '[0:a]asplit=2[kauas][lahella]',
-    `[kauas]aecho=0.8:0.85:340|620:0.45,volume='${v}*max(0,1-t/${k})':eval=frame[marka]`,
+    // aecho vaatii yhtä monta vaimennusta kuin viivettä (340|620 →
+    // 0.45|0.3); yksi vaimennus kaatoi ffmpegin 6.9.2026 ajossa.
+    `[kauas]aecho=0.8:0.85:340|620:0.45|0.3,volume='${v}*max(0,1-t/${k})':eval=frame[marka]`,
     `[lahella]volume='min(1,t/${k})':eval=frame[kuiva]`,
     '[marka][kuiva]amix=inputs=2:normalize=0[ulos]',
   ].join(';');
@@ -708,7 +743,7 @@ async function main() {
     }
     console.log('ÄÄNIEHDOKKAAT PULULLE — haetaan piirteillä: '
       + `${TOIVOTUT.join(', ')}.\n`);
-    await haeAanet(avain);
+    await haeAanet(avain, liput.haku);
     process.exit(0);
   }
 

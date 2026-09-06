@@ -83898,4 +83898,2156 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KAPKAUPUNKI (Opus 6.9.2026, paketti O9) — Afrikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-kapkaupunki.md ja sen riippumaton tarkistus
+   * tarkistus-kapkaupunki.md (tuomio "kelpaa, kun kohtien A–F
+   * ratkaisut tehdään"; kaikki ratkaisut on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026:
+   * "Cape Town", "History of Cape Town", "Table Mountain",
+   * "Bo-Kaap", "Cape Malays", "Arabic Afrikaans", "Abu Bakr
+   * Effendi", "Company's Garden", "Robben Island", "Kaapse Klopse".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * Saapumisteksti (africa-saapumiset.js) ja valokuvataulu
+   * (africa-valokuvat.js) olivat jo olemassa eikä niihin koskettu.
+   * Saapumiskortin isoisä täydentää vesitynnyrit vuoren juurella —
+   * juuri se 1873-kulma, jolle tämä lehti rakentuu.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto' (AIHE_IKONIT, js/ui-apurit.js); uusia
+   * sivu-id:itä ei tehdä.
+   *
+   * TARKISTUKSEN KAIKKI RATKAISUT ON TEHTY:
+   *  - A: Pöytävuoren khoekhoe-nimestä käytetään VAIN artikkelin
+   *    "Table Mountain" muotoa Huriǂ'oaxa. "History of Cape Town"
+   *    antaa muodon Hoeri 'kwaggo; kahta translitteraatiota samasta
+   *    nimestä ei tarjoilla lukijalle.
+   *  - B: kasvilajien luku on vuoren oman artikkelin 2 285 ja sen
+   *    oma rajaus (Pöytävuori ja Kapin niemimaan vuorijono), ja
+   *    UK-vertaus liitetään lähteen tapaan lukuun 1 500 / 57 km².
+   *    "Cape Town"-artikkelin luku 2 200 jää pois.
+   *  - C: Bo-Kaapin värit kirjoitetaan AUKI. Lähde antaa asukkaiden
+   *    oman selityksen (vuokralla talot maalattiin valkoisiksi) ja
+   *    heti perään toteaa, että kirkkaiden värien perinne näyttää
+   *    alkaneen vasta 1900-luvun lopulla. Molemmat kerrotaan.
+   *    HUOM: africa-kulttuuri.js:n vanha nosto väittää värien olleen
+   *    vapauden merkki; sitä ei muutettu tässä erässä.
+   *  - D: Abu Bakr Effendin oppikirjalle EI anneta vuosilukua.
+   *    "Arabic Afrikaans" sanoo 1869, "Abu Bakr Effendi" sanoo 1877.
+   *  - F: Foreshoren pinta-alaa ei anneta (194 ha vs. 230 ha);
+   *    kerrotaan vain työn kulku 1938–1945.
+   *  - Maclear's Beaconin korkeus on leipätekstin 1 086 m; saman
+   *    artikkelin kuvateksti sanoo kyltin kertovan 1 084 m.
+   *
+   * PILARI 1 JA SPEC-MANTEREET.MD, LINJAUS 1: khoe- ja san-kansat
+   * ovat ensimmäinen nosto ja OMILLA NIMILLÄÄN (ǁAmmaqua,
+   * !Uriǁʼaekua, Sonqua, Ubiqua) ennen siirtomaanimiä. Lähteen
+   * käyttämiä 1600-luvun haukkumanimiä ei toisteta muuten kuin
+   * toteamalla, että hollantilaiset antoivat asukkaille omat nimensä.
+   *
+   * ORJUUS ON PERUSHISTORIAA ja kerrotaan suoraan lukuina, ilman
+   * yksityiskohtien korostusta. APARTHEID JA DISTRICT SIX kerrotaan
+   * tapahtumina. EI NYKYPOLITIIKKAA eikä nykyrikollisuutta:
+   * "Cape Town"-artikkelin Crime-, Safety and security-, Government-
+   * ja Housing-osiot on jätetty kokonaan pois, samoin vuoden 2021
+   * taksialan väkivalta ja ilmastonmuutoksen RCP-skenaariot.
+   *
+   * KAAPSE KLOPSE kerrotaan yhteisön oman juhlan näkökulmasta
+   * (Tweede Nuwe Jaar, orjuutettujen vapaapäivä), ei
+   * minstrel-viihteenä (spec-mantereet.md:n USA-linjauksen henki).
+   * Vanha nimi todetaan loukkaavana ja nimenmuutos kerrotaan.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto ei ollut käytettävissä
+   * tässä erässä (vuorokausikiintiö), eikä lukuja keksitä
+   * (Samarkand-malli v965). Oppaan sääjakso nojaa siksi
+   * en-Wikipedian Climate-osioon ja sanoo sen ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 6.9.2026 (lisenssi ja
+   * tekijä extmetadatasta) ja jokainen katsottiin silmin 900 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin
+   * africa-valokuvat.js:n tai africa-kulttuuri.js:n kapkaupunki-
+   * lohkossa. HYLÄTYT: "Leerlooiende Khoikhoi Het leven der
+   * Khoikhoi, RP-P-1908-3382.jpg" (1700-luvun kaiverruksen alle on
+   * painettu aikakauden haukkumanimi ja henkilöt ovat lähes
+   * alastomia), "Gezicht op de kade in Kaapstad ... RP-F-F08899.jpg"
+   * (stereokortti, jonka reunoihin on painettu studion nimi),
+   * "Gezicht op de dokken bij Kaapstad ... RP-F-2001-7-1128-17.jpg"
+   * (albumisivu koristekehyksineen ja loukkaavine kuvateksteineen),
+   * "Gezicht op Kaapstad en de Tafelberg ... RP-F-F20300.jpg"
+   * (studion kehys ja teksti CABINET-PHOTOGRAPHIE),
+   * "Table Mountain from Blouberg, South Africa (4028515275).jpg"
+   * (kuvassa yksittäinen lapsi), "King Protea in Peninsula Sandstone
+   * Fynbos ... .jpg" (tunnistettava henkilö), "Metrorail Cape Town
+   * Station.JPG" (mainoskuvia koko taustalla).
+   *
+   * KUVISSA ON KAKSI JULKAISIJAN OMAA LITERAA, ja se on reseptin
+   * nimenomainen poikkeus: Rijksmuseumin albumikuviin on painettu
+   * kustantajan otsikko ja negatiivinumero ("BOTANIC GARDENS,
+   * CAPE-TOWN. 40,040. G.W.W." ja "DARLING STREET, CAPE TOWN, FROM
+   * PARADE. 40,026. G.W.W."). Kuvateksti kertoo sen.
+   *
+   * AIHETOISTO, joka on tarkoituksellinen ja kirjattu: Pöytävuori
+   * näkyy sekä kansi- ja avauskuvissa että teemasivun nostoissa,
+   * mutta jokainen kuva on eri tiedosto ja eri paikasta otettu
+   * (kattotaso keskustassa, vuoren laki, Signal Hill, Bloubergin
+   * ranta, kaupungin kulho ja pöytäliinapilvi lähikuvana).
+   */
+  kapkaupunki: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kapkaupunki',
+      johdanto: 'Kapkaupunki on rakennettu vuorten muodostamaan kulhoon '
+        + 'meren rannalle. Se alkoi laivojen vihannestarhana 1652, ja '
+        + 'isoisän matkavuonna 1873 se oli siirtomaan pääkaupunki, '
+        + 'jonka satamasta lähti kaikki timanteista viiniin.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: keskusta
+       * vuorta vasten, kulho vuoren laelta ja satama Taffelinlahden
+       * rannalla.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'At Cape Town (MP) 2018 321.jpg',
+          selite: 'Keskustan korttelit päättyvät Pöytävuoren ja '
+            + 'Paholaisenhuipun seinään aamuvalossa.',
+          lahde: 'Mike Peel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Cape Town city (47390612871).jpg',
+          selite: 'Vuoren laelta katsottuna kaupunki asettuu '
+            + 'Taffelinlahden ja rinteiden väliseen kulhoon.',
+          lahde: 'Raita Futo from Tokyo, Japan, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Cape Town City DSC 3625.jpg',
+          selite: 'Satama-altaat ja aallonmurtaja työntyvät '
+            + 'Taffelinlahdelle keskustan pohjoispuolella.',
+          lahde: 'Ranjithsiji, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Kapkaupungille ei ole vielä generoitu herokuvia,
+       * joten karusellissa on kolme aitoa valokuvaa (vertaa Denveriin
+       * ja Cairnsiin): pöytäliinapilvi Signal Hillin tieltä, koko
+       * lahti vuoren laelta ja kulho puutarhoineen.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Cape Town City Bowl from Signal Hill.JPG',
+          selite: 'Pilvi valuu Pöytävuoren laen yli, ja kaupunki '
+            + 'levittäytyy vuoren ja meren väliin.',
+          lahde: 'Discott, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Cape Town (43677066011).jpg',
+          selite: 'Ylhäältä näkyy koko Taffelinlahden kaari satamasta '
+            + 'Blouberginrannan hiekkasärkille.',
+          lahde: 'Chris Koerner from St. Louis, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Cape Town view.jpg',
+          selite: 'Company’s Gardenin vihreä kiila halkoo keskustaa '
+            + 'kohti satamaa.',
+          lahde: 'Arapsultan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Cape Town tram, Adderley Street - ca. 1900.jpg',
+          vuosi: 'noin 1900',
+          selite: 'Adderley Street noin 1900: raitiovaunu kulkee kadulla, '
+            + 'joka johti satamasta kohti vuorta.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Adderley Street.jpg',
+          selite: 'Sama katu nykyään ilman kiskoja, mutta samassa '
+            + 'suunnassa satamasta vuorelle.',
+          lahde: 'HelenOnline, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Paikka, jossa pilvet kokoontuvat',
+          teksti: 'Alueella asui khoe- ja san-kansoja: itsenäisiä '
+            + 'karjanviljelijöitä, ǁAmmaqua-kauppiaita eli '
+            + 'vedenmiehiä, Sonqua-siimakalastajia ja sisämaan '
+            + 'Ubiqua-paimenmetsästäjiä. Hallitseva ryhmä lahdella '
+            + 'olivat !Uriǁʼaekua, ylängön väki. Antropologi '
+            + 'Theophilus Hahn kirjasi paikan alkuperäisen nimen '
+            + 'muotoon ǁHui ǃGais, "siellä missä pilvet kokoontuvat", '
+            + 'ja vuoren nimi oli Huriǂ’oaxa, merestä nouseva '
+            + 'vuori. ǁAmmaqua kävi lahdella kauppaa jo kauan ennen '
+            + 'yhtiöitä: vuosina 1601–1608 he myivät neljälle laivalle '
+            + '1 839 lammasta ja 149 nautaa, ja vuosina 1600–1652 '
+            + 'lahteen pysähtyi vähintään 1 070 laivaa.',
+          tiedosto: 'Beautiful day from Bloubergstrand of Table Mountain.jpg',
+          selite: 'Taffelinlahden pohjoisrannalta vuori näyttää samalta '
+            + 'kuin purjehtijoille, jotka lähestyivät sitä mereltä.',
+          lahde: 'Wynand, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cape Town',
+        },
+        {
+          otsikko: 'Vihannestarha, joka kasvoi kaupungiksi',
+          teksti: 'Jan van Riebeeckin kolme alusta laskivat maihin '
+            + '6. huhtikuuta 1652, ja jo 29. huhtikuuta mestaripuutarhuri '
+            + 'Hendrik Boom valmisti ensimmäisen kylvömaan. Vuoteen 1653 '
+            + 'mennessä siirtokunta ruokki itsensä ympäri vuoden, ja '
+            + '1658 puutarhassa kasvatettiin lähes jokaista Euroopan ja '
+            + 'Intian puutarhakasvia — perunaa ja maissia ei vielä ollut. '
+            + 'Vesi johdettiin Camissa-joesta kanavia pitkin. Työvoimasta '
+            + 'oli pula, ja yhtiö ratkaisi sen tuomalla orjuutettuja '
+            + 'ihmisiä: vuoden 1657 lopussa heitä oli kaksikymmentä, ja '
+            + 'seuraavana vuonna saapui yhdellä kertaa 402. Siitä lähtien '
+            + 'Kapissa oli enemmän muualta kuin Euroopasta tuotuja.',
+          tiedosto: 'Gezicht op de botanische tuin te Kaapstad, RP-F-F01156-K.jpg',
+          selite: 'Yhtiön puutarhan pääkäytävä 1800-luvun lopun '
+            + 'albumikuvassa, jonka alalaitaan on painettu kustantajan '
+            + 'oma otsikko ja negatiivinumero.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+          wiki: 'Company\'s Garden',
+        },
+        {
+          otsikko: '1873: satama, timantit ja oma hallitus',
+          teksti: 'Isoisän matkavuonna Kapkaupunki oli juuri saanut '
+            + 'oman hallituksensa. Parlamentti oli valittu 1854 '
+            + 'ei-rodullisen äänioikeuden pohjalta, ja 1872 siirtomaa '
+            + 'sai oikeuden valita paikallisesti vastuullisen '
+            + 'pääministerin. Sen jälkeen tuli nopean kasvun kausi. '
+            + 'Ensimmäinen rautatie oli rakennettu 1859, ja 1870-luvulla '
+            + 'rataverkko levisi vauhdilla sisämaahan; Griqualand '
+            + 'Westistä oli löytynyt timantteja 1867. Satamaa oli '
+            + 'rakennettu vasta kymmenen vuotta: kesäkuun 1858 '
+            + 'talvimyrskyt olivat tuhonneet yli kolmekymmentä alusta, '
+            + 'ja Lloyd’s oli kieltäytynyt vakuuttamasta '
+            + 'Taffelinlahdessa talvehtivia laivoja.',
+          tiedosto: 'Gezicht op Darling Street te Kaapstad, RP-F-F01156-J.jpg',
+          selite: 'Darling Street 1800-luvun lopulla: härkäkärryjä, '
+            + 'torikoju ja Paholaisenhuippu taustalla, alalaidassa '
+            + 'kustantajan oma painettu otsikko.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+          wiki: 'History of Cape Town',
+        },
+        {
+          otsikko: 'Bo-Kaap ja kieli, joka kirjoitettiin oikealta',
+          teksti: 'Jan de Waal alkoi 1763 rakentaa Signal Hillin '
+            + 'juurelle pieniä vuokrataloja, huurhuisjeja. Alueelle '
+            + 'muutti kaakkoisaasialaisia muslimikäsityöläisiä, ja '
+            + 'ensimmäinen moskeija avattiin 1794. Vuoden 1834 '
+            + 'vapautumisen jälkeen taloja rakennettiin lisää. '
+            + 'Korttelissa on Etelä-Afrikan suurin ennen vuotta 1850 '
+            + 'rakennetun arkkitehtuurin keskittymä. Talojen kirkkaita '
+            + 'värejä selitetään vapauden merkiksi, koska vuokralla '
+            + 'ollessa ne oli maalattava valkoisiksi — mutta tapa '
+            + 'maalata värikkäästi näyttää yleistyneen vasta '
+            + '1900-luvun lopulla. Korttelin madrasoissa syntyi '
+            + '1830-luvulla arabialainen afrikaans.',
+          tiedosto: 'Cape Town (ZA), Wale Street -- 2024 -- 3544.jpg',
+          selite: 'Wale Streetin rivitalot Bo-Kaapissa jatkuvat '
+            + 'väristä väriin Signal Hillin rinnettä ylös.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bo-Kaap',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Clouds in table mountain (14584234627).jpg',
+          selite: 'Pöytäliinapilvi valuu Pöytävuoren kallioseinää alas '
+            + 'kuin hidastettu vesiputous.',
+          lahde: 'David Rosen from London, UK, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Kapkaupunki on Etelä-Afrikan lainsäädännöllinen '
+          + 'pääkaupunki: parlamentti kokoontuu täällä, vaikka '
+          + 'hallitus istuu Pretoriassa. Kaupunki on rakennettu '
+          + 'Pöytävuoren, Leijonanpään ja Paholaisenhuipun '
+          + 'muodostamaan luonnolliseen amfiteatteriin, ja siitä '
+          + 'etelään työntyy neljänkymmenen kilometrin mittainen '
+          + 'Kapin niemimaa. Ilmasto on kuumakesäinen '
+          + 'välimerenilmasto: sadekausi on talvella kesä–syyskuussa, '
+          + 'ja aurinkoa on noin 3 100 tuntia vuodessa. Kaupungin '
+          + 'edustalla on Robben Island, jossa Nelson Mandela istui '
+          + 'kahdeksantoista vuotta kahdestakymmenestäseitsemästä.',
+        artikkeli: {
+          nimi: 'Matkailijan Kapkaupunki',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa vuori, kaksi merta ja kolmensadan '
+            + 'vuoden kortteli mahtuvat samaan päivään: aamulla '
+            + 'köysirata laelle, iltapäivällä museokortteli ja illalla '
+            + 'satama-allas.',
+          nosto: 'Pöytävuoren kansallispuisto on Etelä-Afrikan käydyin '
+            + 'kansallispuisto, 4,2 miljoonaa kävijää vuodessa. '
+            + 'Marraskuussa 2011 vuori valittiin yhdeksi maailman '
+            + 'seitsemästä uudesta luonnonihmeestä, ja puiston julisti '
+            + 'aikanaan Nelson Mandela 29. toukokuuta 1998.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Cape Town International on kaupungin oma '
+                + 'kansainvälinen kenttä. Rautatieasema on keskustassa '
+                + 'Adderley- ja Strand-katujen varrella, ja sieltä '
+                + 'lähtee neljä lähijunalinjaa: eteläinen linja '
+                + 'Simon’s Towniin, Cape Flatsin linja Retreatiin, '
+                + 'keskilinja Khayelitshaan ja pohjoinen linja Paarliin '
+                + 'ja Stellenboschiin. Kaukojunat vievät Johannesburgiin '
+                + 'Kimberleyn kautta, Durbaniin ja East Londoniin. '
+                + 'Kaupungissa liikkuvat MyCiTi- ja Golden Arrow '
+                + '-bussit. Nykyinen asemarakennus on 1960-luvun alusta; '
+                + 'sitä edelsi pääministeri John Moltenon 1876 aloittama '
+                + 'asema ja sitä ennen vuoden 1861 puinen vaja.',
+            },
+            {
+              otsikko: 'Vuorelle',
+              teksti: 'Köysirata lähtee Tafelberg Roadilta 302 metrin '
+                + 'korkeudelta ja nousee 1 067 metriin. Gondoli pyörii '
+                + 'nousun aikana täyden kierroksen, joten näköala '
+                + 'vaihtuu itsestään. Kävellen suorin reitti on '
+                + 'Platteklip Gorge, noin kaksi ja puoli tuntia ja '
+                + 'kuudensadan metrin nousu ilman varjoa. Etelästä '
+                + 'noustaan Kirstenboschista Skeleton Gorgen tai '
+                + 'Nursery Ravinen kautta, Atlantin puolelta '
+                + 'Kasteelspoortin rotkoa. Sumu ja kylmyys voivat tulla '
+                + 'yllättäen mihin vuodenaikaan tahansa, ja karttaa '
+                + 'kannattaa kantaa mukana.',
+              kuva: {
+                tiedosto: 'Kirstenbosch National Botanical Garden 2024 03.jpg',
+                selite: 'Kirstenboschin puutarha nousee vuoren '
+                  + 'itärinnettä, ja polut jatkuvat sieltä laelle.',
+                lahde: 'Discott, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Bobotie on mausteinen jauhelihavuoka '
+                + 'munakuorrutuksella, ja se on ollut kaupungin ruokaa '
+                + '1600-luvulta asti. Gatsby on pitkä voileipä, joka '
+                + 'täytetään paksuilla ranskanperunoilla ja kaikella '
+                + 'muulla; se tarjottiin ensi kerran 1976 Athlonen '
+                + 'kaupunginosassa. Koe’sister on kanelinen '
+                + 'kap-malaijilainen leivonnainen kookoshiutaleilla, ja '
+                + 'jälkiruoaksi tulee malvapuuding kuuman '
+                + 'vaniljakastikkeen kanssa. Kapkaupunki on myös maan '
+                + 'viiniteollisuuden koti: ensimmäinen etelä-'
+                + 'afrikkalainen viini pullotettiin täällä, ja Groot '
+                + 'Constantia toimii yhä kaupungin rajojen sisällä.',
+              kuva: {
+                tiedosto: 'Bobotie, South African dish.jpg',
+                selite: 'Bobotie tarjotaan uunivuoasta keltaisen '
+                  + 'riisin kanssa.',
+                lahde: 'Olga Ernst, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kaupungin oma juhla',
+              teksti: 'Toinen tammikuuta on Kapkaupungissa oma '
+                + 'juhlapäivä, Tweede Nuwe Jaar. Se juontuu ajasta, '
+                + 'jolloin orjuutetut saivat vuodessa yhden vapaan '
+                + 'päivän juuri silloin; orjuus lakkautettiin Kapissa '
+                + 'virallisesti 1. joulukuuta 1834. Päivänä kulkee '
+                + 'katujen läpi Kaapse Klopse, jopa kolmentoista '
+                + 'tuhannen esiintyjän kulkue: kirkkaat asut, '
+                + 'sateenvarjot, ghoema-rummut ja cape jazz. '
+                + 'Ensimmäinen kulkueryhmä arvioidaan järjestetyn 1887. '
+                + 'Juhlan vanha nimi on nykyään laajalti loukkaavana '
+                + 'pidetty, ja tapahtuma on nimetty uudelleen.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Cape Town '
+                + '-artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska ERA5-normaaleja ei saatu '
+                + 'haettua. Talvi kestää kesäkuusta syyskuuhun, ja '
+                + 'silloin lämpötila on keskimäärin 18 astetta '
+                + 'päivällä ja 8,5 astetta yöllä; Atlantilta tulee '
+                + 'kylmiä rintamia ja voimakasta luoteistuulta. Kesä '
+                + 'joulukuusta maaliskuuhun on lämmin ja kuiva, '
+                + 'keskimäärin 26 ja 16 astetta. Sadetta tulee '
+                + 'kaupungissa 515 millimetriä vuodessa, mutta vuorten '
+                + 'lähellä eteläisissä esikaupungeissa lähes tuhat. '
+                + 'Ukkosia on vähän.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Pöytävuori',
+                tahdet: 3,
+                selite: 'Kolmen kilometrin levyinen tasanko tuhannen '
+                  + 'metrin korkeudessa, köysirata tai kävelyreitti.',
+              },
+              {
+                mita: 'Bo-Kaap',
+                tahdet: 3,
+                selite: 'Mukulakivikadut ja värilliset talot Signal '
+                  + 'Hillin rinteessä, moskeija vuodelta 1794.',
+              },
+              {
+                mita: 'Robben Island',
+                tahdet: 3,
+                selite: 'Lauttamatka saarelle, jossa Nelson Mandela '
+                  + 'istui kahdeksantoista vuotta.',
+              },
+              {
+                mita: 'Kirstenbosch',
+                tahdet: 2,
+                selite: '36 hehtaaria vuoren itärinteellä, viljelyssä '
+                  + 'yli seitsemäntuhatta lajia.',
+              },
+              {
+                mita: 'Company’s Garden',
+                tahdet: 2,
+                selite: 'Etelä-Afrikan vanhin puutarha ja sen vanhin '
+                  + 'viljelty päärynäpuu vuodelta 1652.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5
+             * ja teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Sadekausi on talvella',
+                teksti: 'Kesä joulu–maaliskuussa on kuiva ja lämmin, '
+                  + 'talvi kesä–syyskuussa märkä ja tuulinen — '
+                  + 'päinvastoin kuin Euroopassa.',
+              },
+              {
+                otsikko: 'Kaksi merta, kaksi lämpötilaa',
+                teksti: 'Atlantin puolen rannoilla vesi on 10–13 '
+                  + 'astetta, False Bayn puolella 16–17 — ero syntyy '
+                  + 'niemimaalta alkavasta kylmästä nostovedestä.',
+              },
+              {
+                otsikko: 'Kaakkoistuuli puhaltaa lujaa',
+                teksti: 'Kevään ja kesän kaakkoistuulta kutsutaan '
+                  + 'nimellä Cape Doctor, koska se puhaltaa saasteet '
+                  + 'pois; hattua se ei jätä paikalleen.',
+              },
+              {
+                otsikko: 'Vesi on kallisarvoista',
+                teksti: 'Kaupunki eli ankaran kuivuuden vuosina '
+                  + '2015–2018 ja puolitti vedenkulutuksensa kolmessa '
+                  + 'vuodessa; säästäväisyys on yhä tapa.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Pöytävuori',
+      johdanto: 'Kaupungin yllä on vuori, joka oli aikoinaan laakson '
+        + 'pohja. Sen laella kasvaa enemmän kasvilajeja kuin koko '
+        + 'Britanniassa, ja sen laelta mitattiin aikanaan maapallon '
+        + 'muoto.',
+      tehtava: {
+        kysymys: 'Miksi Maclearin kiviröykkiö rakennettiin Pöytävuoren '
+          + 'laelle vuonna 1865?',
+        vaihtoehdot: [
+          'mittaamaan maapallon kaarevuutta',
+          'merkitsemään siirtomaan rajaa',
+          'varoittamaan laivoja karikosta',
+          'muistoksi ensimmäisestä kiipeäjästä',
+        ],
+        oikea: 0,
+        fakta: 'Sir Thomas Maclear tarkisti röykkiön avulla, oliko '
+          + 'eteläisen pallonpuoliskon kaarevuus todella erilainen kuin '
+          + 'pohjoisen. Ero johtuikin vuoren omasta vetovoimasta — '
+          + 'kaarevuus on sama molemmilla puolilla.',
+      },
+      nostot: [
+        {
+          otsikko: 'Vuori, joka oli laakson pohja',
+          teksti: 'Pöytävuoren tasainen laki ei ole kulunut litteäksi '
+            + 'vaan on synkliinivuori: se oli aikoinaan laakson pohja. '
+            + 'Poimun huippu oli idässä, ja se on kulunut kokonaan pois '
+            + 'yhdessä pehmeämmän liuskeen ja graniittiperustan kanssa '
+            + '— siitä syntyi Cape Flats, tasainen kannas joka yhdistää '
+            + 'niemimaan mantereeseen. Vuoren ylin kuusisataa metriä on '
+            + '450–510 miljoonaa vuotta vanhaa kovaa kvartsiittista '
+            + 'hiekkakiveä, ja sen alla on seitsemänkymmentä metriä '
+            + 'viininpunaista mutakiveä. Tasanko on noin kolme '
+            + 'kilometriä laidasta laitaan.',
+          tiedosto: 'Cape Town (ZA), Table Mountain -- 2024 -- 3437.jpg',
+          selite: 'Vuoren pystysuora kallioseinä katkeaa ylhäällä '
+            + 'terävästi tasaiseen lakeen.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Table Mountain',
+        },
+        {
+          otsikko: 'Enemmän kasveja kuin koko Britanniassa',
+          teksti: 'Pöytävuorella ja Kapin niemimaan vuorijonossa kasvaa '
+            + 'arviolta 2 285 kasvilajia, ja niistä 1 500 mahtuu '
+            + '57 neliökilometrin alalle Pöytävuorella ja sen takaisella '
+            + 'tasangolla — vähintään yhtä monta lajia kuin koko '
+            + 'Yhdistyneessä kuningaskunnassa. Noin neljä viidestä on '
+            + 'fynbosia, afrikaansiksi hienoa pensaikkoa. Fynbos on '
+            + 'sopeutunut tuleen: säännölliset kulot ovat hallinneet '
+            + 'sitä ainakin kaksitoistatuhatta vuotta, ja kymmenen tai '
+            + 'viidentoista vuoden väli suosii suuria proteoja. Vasco '
+            + 'da Gama nimesi rannikon 1495 savujen maaksi näkemiensä '
+            + 'tulien takia.',
+          tiedosto: 'Lion\'s Head and king protea seen from slopes of Table Mountain.jpg',
+          selite: 'Kuningasproteat kukkivat fynbospensaikossa '
+            + 'Leijonanpään edessä vuoren alarinteellä.',
+          lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Table Mountain',
+        },
+        {
+          otsikko: 'Kiviröykkiö, joka oikaisi maapallon',
+          teksti: 'Vuoren korkein kohta on 1 086 metriä, ja siellä on '
+            + 'Sir Thomas Maclearin 1865 rakennuttama kiviröykkiö. '
+            + 'Taustalla oli mittausvirhe: vuonna 1750 Nicolas Louis '
+            + 'de Lacaille oli mitannut meridiaanikaaren '
+            + 'Kapkaupungista pohjoiseen ja päätellyt, että maapallon '
+            + 'kaarevuus on eteläisillä leveysasteilla pienempi kuin '
+            + 'pohjoisilla — pallo olisi siis päärynän muotoinen. '
+            + 'Vuonna 1820 Sir George Everest kävi paikalla ja ehdotti, '
+            + 'että Pöytävuoren oma massa oli vetänyt luotilankaa '
+            + 'vinoon. Kun se otettiin huomioon, kaarevuus osoittautui '
+            + 'samaksi molemmilla pallonpuoliskoilla.',
+          tiedosto: 'Maclear\'s Beacon mound.jpg',
+          selite: 'Vaaleista kivistä ladottu röykkiö seisoo yhä '
+            + 'tasangon korkeimmalla kohdalla.',
+          lahde: 'Jack Zalium, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Table Mountain',
+        },
+        {
+          otsikko: 'Pöytäliina ja Kapin lääkäri',
+          teksti: 'Kun kaakkoistuuli nostaa kostean ilman vuoren '
+            + 'rinnettä ylös kylmempään, kosteus tiivistyy laelle '
+            + 'pilveksi, joka valuu reunan yli. Kapkaupunkilaiset '
+            + 'sanovat vuoren kattavan pöytänsä, ja kansantarina '
+            + 'selittää pilven Paholaisen ja Van Hunks -nimisen '
+            + 'merirosvon tupakanpolttokilpailulla. Sama tuuli tunnetaan '
+            + 'nimellä Cape Doctor, koska se puhaltaa ilmansaasteet '
+            + 'pois; sen takana on Etelä-Atlantin pysyvä korkeapaine, '
+            + 'joka siirtyy auringon mukana. Kaupunki saa noin 3 100 '
+            + 'aurinkotuntia vuodessa, eikä lunta tule muualle kuin '
+            + 'huipuille.',
+          tiedosto: 'Camps Bay – Cape Town suburbs, beach, Lion\'s Head, Twelve Apostles.jpg',
+          selite: 'Kahdentoista apostolin kallioseinä ja Leijonanpää '
+            + 'reunustavat Camps Bayn rantaa auringonlaskussa.',
+          lahde: 'Krigore, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cape Town',
+        },
+      ],
+    },
+  ],
+  /*
+   * NAIROBI (Opus 6.9.2026, paketti O9) — Afrikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-nairobi.md ja sen riippumaton tarkistus
+   * tarkistus-nairobi.md (tuomio "kelpaa, kun kohtien A–F ratkaisut
+   * tehdään"; kaikki ratkaisut on tehty, ks. alla). Väitteet on
+   * luettu en-Wikipedian raakateksteistä 6.9.2026: "Nairobi",
+   * "History of Nairobi", "Nairobi National Park", "Uganda Railway",
+   * "Matatu", "Alibhai Mulla Jeevanjee".
+   *
+   * RAJAUS MAALEHTEEN NÄHDEN (Fablen ohje 6.9.2026): Kenian maalehti
+   * on työn alla samaan aikaan, joten TÄMÄ LEHTI PYSYY KAUPUNGISSA.
+   * Pois on jätetty kaikki, mikä on koko maan aihe: kenialaiset
+   * juoksijat, Suuri hautavajoama laajana ilmiönä, Masai Mara, tee ja
+   * kahvi, swahili maan kielenä, itsenäistyminen valtiollisena
+   * tapahtumana, Mau Mau kansallisena liikkeenä ja mobiiliraha.
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * Saapumisteksti (africa-saapumiset.js) ja valokuvataulu
+   * (africa-valokuvat.js) olivat jo olemassa eikä niihin koskettu.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto' (AIHE_IKONIT, js/ui-apurit.js).
+   *
+   * 1873-KEHYS ON TÄMÄN LEHDEN YDIN: Nairobia EI OLLUT OLEMASSA
+   * isoisän matkavuonna. Paikka oli suoinen ylängön kohta, jossa
+   * maasait paimensivat karjaansa, akamba-kauppiaat kulkivat ja
+   * kikujut viljelivät yläpuolisia rinteitä. Rata saapui vasta
+   * 30.5.1899.
+   *
+   * TARKISTUS LÖYSI REPOSTA ANAKRONISMIN, jota EI korjattu tässä
+   * erässä: africa-saapumiset.js:n nairobi-merkintä sanoo isoisän
+   * tulleen Nairobiin junalla, ja africa-questions.js:n
+   * HUOMIOT.nairobi antaa isoisän puhua rautatieasemasta. Kumpikaan
+   * ei ole mahdollista vuonna 1873. Matkakirjatekstit ja kohtaamiset
+   * ovat omistajan päätöksellä tauolla, joten asia on raportoitu
+   * Fablelle eikä koskettu.
+   *
+   * TARKISTUKSEN KAIKKI RATKAISUT ON TEHTY:
+   *  - A: nimen maasai-muodoksi otetaan kaupungin oman artikkelin
+   *    Enkare Nyirobi. "History of Nairobi" antaa Ewaso Nyirobi.
+   *  - B: korkeus on kaupungin oman artikkelin 1 795 m. "History of
+   *    Nairobi" sanoo 1 661 m ja lisää, ettei malariahyttysiä siinä
+   *    korkeudessa elä — mutta sama artikkeli kertoo, että kaupungin
+   *    alkuvuosia vaivasi juuri malaria. Väite jätettiin pois.
+   *  - C: lempinimi on "Green City in the Sun" (kaksi kolmesta
+   *    lähdekohdasta); "under the Sun" jätetään pois.
+   *  - D: kansallispuisto on KENIAN ensimmäinen (puiston oma
+   *    artikkeli), ei Itä-Afrikan ("History of Nairobi").
+   *  - E: KICC on 32-kerroksinen (rakennuksen oma artikkeli kahdesti);
+   *    "Nairobi" sanoo 28. Valmistumisvuosi 1973 leipätekstin mukaan.
+   *
+   * PILARI 1 JA SPEC-MANTEREET.MD, LINJAUS 1: maasait, akamba ja
+   * kikujut ovat ensimmäinen nosto ja elävinä toimijoina.
+   * Pakkosiirto kerrotaan suoraan sekä kaupungin että
+   * kansallispuiston kohdalla lähteen omilla sanoilla. Kitengelan
+   * maanomistajayhdistys näytetään nykypäivän toimijana.
+   *
+   * RADAN RAKENTAJIEN OLOT kerrotaan suoraan lukuina ja lähteen
+   * omilla sanoilla, ilman julmuuksien yksityiskohtia. Tsavon
+   * leijonat on jätetty pois: ne kuuluvat Tsavoon, eivät Nairobiin.
+   *
+   * EI NYKYPOLITIIKKAA EIKÄ NYKYRIKOLLISUUTTA: parlamentin valtaus
+   * 2024, kuvernöörikiistat, matatualan väkivalta ja korruptio,
+   * Kiberan slummikuvaus ja vuoden 1998 pommi-isku on jätetty
+   * kokonaan pois.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto ei ollut käytettävissä
+   * tässä erässä, eikä lukuja keksitä (Samarkand-malli v965).
+   * Oppaan sääjakso nojaa en-Wikipedian Climate-osioon ja sanoo sen
+   * ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 6.9.2026 (lisenssi ja
+   * tekijä extmetadatasta) ja jokainen katsottiin silmin 900 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin
+   * africa-valokuvat.js:n tai africa-kulttuuri.js:n nairobi-lohkossa
+   * (siellä ovat Karamoja-veturi, kansallispuiston maisema,
+   * sikhiläiset radanrakentajat 1903, kirahvi ja Britam Tower sekä
+   * kirahvi ja siluetti). HYLÄTYT: "A clash of worlds – Nairobi
+   * skyline from the Nairobi National park.jpg" (utuinen, kaupunki
+   * tuskin erottuu), "Nairobi CBD.jpg" (hämärä ja epätarkka),
+   * "Nairobi - View.jpg" ja "Haile Selassie Avenue (Nairobi), 2025
+   * (05).jpg" (isoja mainostauluja ja tunnistettavia kasvoja),
+   * "Kenya National Archives, 2025 (01).jpg" ja "Lascar Kenya
+   * National Archives building (4540823420).jpg" (tunnistettavia
+   * kasvoja etualalla), "Kenyatta International Convention Centre at
+   * August (2).jpg" (epäterävä liikekuva), "Images clicked in
+   * Nairobi National Park 1.jpg" (mehiläisiä puunrungolla, ei
+   * puistoa).
+   *
+   * AIHETOISTO, joka on tarkoituksellinen ja kirjattu: keskustan
+   * siluetti näkyy sekä kansikuvissa että nostossa N3, mutta
+   * jokainen kuva on eri tiedosto ja eri suunnasta (KICC:n katto,
+   * Uhuru Parkin lampi, ilmakuva ruutukaavasta, iltasiluetti).
+   */
+  nairobi: [
+    {
+      id: 'kaupunki',
+      nimi: 'Nairobi',
+      johdanto: 'Nairobi on nuorin Afrikan suurkaupungeista: isoisän '
+        + 'matkavuonna 1873 täällä oli vain viileä puro ja karjalaidun. '
+        + 'Kaupunki alkoi ratatyömaan varikkona 1899 ja on nyt ainoa '
+        + 'pääkaupunki, jonka rajalla on kansallispuisto.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: ilmakuva
+       * liikekeskustasta, näkymä KICC:n katolta ja siluetti Uhuru
+       * Parkin lammelta.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Colors of nairobi.jpg',
+          selite: 'Liikekeskustan korttelit ja Hiltonin lieriö '
+            + 'ylhäältä nähtynä keskellä päivää.',
+          lahde: 'Waceke kamau, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Aerial view of the Nairobi skyline from the KICC rooftop at golden hour.jpg',
+          selite: 'Kongressikeskuksen katolta kaupunki jatkuu '
+            + 'ratapihalle ja siitä eteenpäin tasangolle.',
+          lahde: 'Lebu Ayiga, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Skyline of Nairobi city as seen from Uhuru Park.jpg',
+          selite: 'Uhuru Parkin lammen takaa keskustan tornit nousevat '
+            + 'puiden yli.',
+          lahde: 'DesiBoy101, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Nairobille ei ole vielä generoitu herokuvia, joten
+       * karusellissa on kolme aitoa valokuvaa (vertaa Denveriin ja
+       * Cairnsiin): aamu, ilta ja panoraama.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Nairobi city skyline at dawn 2025.jpg',
+          selite: 'Aamu-usva peittää kaupungin reunat, ja tornit '
+            + 'nousevat siitä yksitellen esiin.',
+          lahde: 'Clinton Nyabuto, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Nairobi Kenya Buildings.jpg',
+          selite: 'Iltavalossa keskustan siluetin oikeassa laidassa '
+            + 'erottuu parlamenttitalon kellotorni.',
+          lahde: 'Antony Trivet, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Kenya - Panorama of Nairobi - panoramio.jpg',
+          selite: 'Panoraamassa liikekeskusta levittäytyy laidasta '
+            + 'laitaan matalan ylänkömaiseman keskellä.',
+          lahde: 'Banja-Frans Mulder, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Photograph of Kenyan Sikh pioneers in-front of Gurdwara Sahib Railway Landhies in Nairobi, Kenya, 1903.jpg',
+          vuosi: '1903',
+          selite: 'Radanrakentajia gurdwaran edessä 1903, kun Nairobi '
+            + 'oli vasta muutaman vuoden ikäinen ratatyömaan leiri.',
+          lahde: 'Unknown photographer, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'A giraffe the tallest animal in Kenya at Nairobi National Park with a background of Britam Tower the tallest building in Kenya.jpg',
+          selite: 'Sama kaupunki nykyään: kirahvi laiduntaa '
+            + 'kansallispuiston ruohikossa tornitalojen edessä.',
+          lahde: 'Alexmbogo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Enkare Nyirobi, viileät vedet',
+          teksti: 'Ennen kaupunkia täällä oli suoinen kohta ylängöllä, '
+            + 'jonka läpi virtasi kylmä puro. Paikkaa käyttivät '
+            + 'paimentolaiskansa maasait, pitkän matkan kauppiaat '
+            + 'akamba ja yläpuolisia metsäisiä rinteitä viljelleet '
+            + 'kikujut. Kaupungin nimi tulee maasain ilmauksesta '
+            + 'Enkare Nyirobi, viileiden vesien paikka. Athin '
+            + 'tasangoilla nykyisen kaupungin itä- ja eteläpuolella oli '
+            + 'runsaasti riistaa, ja maasait paimensivat karjaansa '
+            + 'eläinten keskellä. Kun kaupunki kasvoi, maasait '
+            + 'siirrettiin väkisin, jotta maa vapautui karjatiloille; '
+            + 'vuosien 1904 ja 1911 sopimukset veivät heiltä myös '
+            + 'pohjoiset laidunmaat.',
+          tiedosto: 'Glow over morning chill Nairobi National Park.jpg',
+          selite: 'Aurinko nousee Athin tasangon yli aamu-usvasta '
+            + 'kansallispuiston laidalla.',
+          lahde: 'Ami Gorasia, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Nairobi',
+        },
+        {
+          otsikko: 'Rautakäärme ja kahden kadun kaava',
+          teksti: 'Ugandan radan rakentaminen alkoi Mombasasta 1896 ja '
+            + 'päättyi Kisumuun 1901. Nandi-kansan vanha ennustus oli '
+            + 'puhunut rautakäärmeestä, joka tulee suolajärveltä suurten '
+            + 'järvien maahan juomaan. Rataa haukuttiin Lontoon '
+            + 'parlamentissa hullun radaksi, ja se maksoi arviolta '
+            + 'kolme miljoonaa puntaa. Rakentajia värvättiin yli '
+            + 'kolmekymmentätuhatta Punjabista ja Gujaratista; olot '
+            + 'olivat lähteen omien sanojen mukaan kurjat, ja arviolta '
+            + 'useita tuhansia kuoli. Pääinsinööri George Whitehouse '
+            + 'valitsi varikon paikan, ja Arthur Church piirsi sille '
+            + '1898 kaavan: kaksi katua ja kymmenen puistokatua. Juna '
+            + 'saapui 30. toukokuuta 1899.',
+          tiedosto: 'Train at the old Nairobi Railway stations.jpg',
+          selite: 'Vanhan aseman ratapihalla seisoo yhä rivi vaunuja, '
+            + 'ja niiden takana kohoaa nykyinen keskusta.',
+          lahde: 'Erasmus Kamugisha, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Uganda Railway',
+        },
+        {
+          otsikko: 'Leiri, joka poltettiin ja rakennettiin uudelleen',
+          teksti: 'Whitehouse ennusti radan saavuttua, että paikasta '
+            + 'tulee kahdessa vuodessa suuri ja kukoistava. Alkuvuosia '
+            + 'vaivasi kuitenkin malaria, ja kaupunkia yritettiin '
+            + 'ainakin kerran siirtää muualle. 1900-luvun alussa koko '
+            + 'alkuperäinen kaupunki poltettiin ruttoepidemian jälkeen, '
+            + 'ja Bazaar Street rakennettiin kokonaan uudelleen — se on '
+            + 'nykyinen Biashara Street. Väkiluku nousi vuosina '
+            + '1902–1910 viidestä tuhannesta kuuteentoista tuhanteen. '
+            + '1907 Nairobista tuli Mombasan tilalle protektoraatin '
+            + 'pääkaupunki ja 1919 kunta. Nykyään kaupungissa toimivat '
+            + 'YK:n ympäristöohjelma ja YK:n Nairobin toimisto.',
+          tiedosto: 'Nairobi (17321768382).jpg',
+          selite: 'Liikekeskustan ruutukaava on syntynyt varikon '
+            + 'ympärille kadun kerrallaan.',
+          lahde: 'Ninara from Helsinki, Finland, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'History of Nairobi',
+        },
+        {
+          otsikko: 'Matatu ja nganya',
+          teksti: 'Matatu on yksityisomistuksessa oleva pikkubussi, ja '
+            + 'sillä tehdään Nairobissa yli seitsemänkymmentä '
+            + 'prosenttia työmatkoista. Nimi tulee kolmea tarkoittavasta '
+            + 'sanasta: yhden selityksen mukaan matka maksoi '
+            + '1970-luvulla kolme kymmenen sentin kolikkoa, toisen '
+            + 'mukaan kyse on kikujun ilmauksesta kolmestakymmenestä '
+            + 'sentistä. Reitti on maalattu keltaisena raitana kylkeen '
+            + 'ja sillä on numero. Kuljettajan lisäksi mukana on '
+            + 'rahastaja, makanga. Koristelluimmat matatut ovat '
+            + 'nganyoja: maalauksia, valoja, näyttöjä ja kova '
+            + 'äänentoisto. Räikeät maalaukset olivat kiellettyjä, '
+            + 'kunnes kielto kumottiin 2015.',
+          tiedosto: 'A colorful matatu in Nairobi, Kenya, during rush hour.jpg',
+          selite: 'Violetti matatu odottaa matkustajia keskustan '
+            + 'kadulla ruuhka-aikaan.',
+          lahde: 'AEira-WMF, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Matatu',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Cave at Karura forest.jpg',
+          selite: 'Karuran metsän luolan suulla riippuu viikunapuiden '
+            + 'juuria, ja auringonsäteet putoavat sisään ylhäältä.',
+          lahde: 'Mwintirew, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Nairobi on Kenian pääkaupunki ja Itä-Afrikan tärkein '
+          + 'rahoituskeskus. Se sijaitsee 1 795 metrissä merenpinnasta, '
+          + 'joten päiväntasaajan kaupungin illat ovat viileitä ja '
+          + 'ilma kirkasta. Lempinimi on Green City in the Sun. Rift '
+          + 'Valleyn itäreuna on aivan lännessä, ja Ngong Hills on '
+          + 'kaupungin näkyvin maastonmuoto. Nairobi-joki sivujokineen '
+          + 'virtaa kaupungin läpi. Keskustan ytimessä on City Square, '
+          + 'jonka ympärillä ovat parlamentti, Pyhän perheen '
+          + 'katedraali, kaupungintalo, oikeustalo ja Kenyattan '
+          + 'kongressikeskus.',
+        artikkeli: {
+          nimi: 'Matkailijan Nairobi',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa safari alkaa bussipysäkiltä: '
+            + 'aamulla kansallispuisto seitsemän kilometrin päässä, '
+            + 'iltapäivällä museokukkula ja illalla nyama choma.',
+          nosto: 'Nairobi on lähteen mukaan maailman ainoa pääkaupunki, '
+            + 'jonka rajojen sisällä on kansallispuisto. Puisto on '
+            + '117 neliökilometriä ja aidattu kolmelta sivulta; '
+            + 'eteläinen raja on auki Kitengelan tasangoille, joita '
+            + 'pitkin gnuut ja seeprat yhä liikkuvat.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Jomo Kenyatta International Airport on '
+                + 'kaupungin kansainvälinen kenttä; sen terminaali '
+                + 'valmistui maaliskuussa 1978, ja presidentti Kenyatta '
+                + 'avasi sen alle viisi kuukautta ennen kuolemaansa. '
+                + 'Mombasaan pääsee vuonna 2017 avatulla Standard '
+                + 'Gauge Railwaylla. Kaupungissa liikutaan matatuilla, '
+                + 'joiden reitti näkyy keltaisena raitana kyljessä. '
+                + 'Green Parkin bussiterminaali avattiin 2021 ja '
+                + 'Nairobi Expressway 2022; Thikan moottoritie '
+                + 'levennettiin kahdeksankaistaiseksi 2012.',
+            },
+            {
+              otsikko: 'Puistoja joka suuntaan',
+              teksti: 'Kansallispuisto alkaa seitsemän kilometrin '
+                + 'päässä keskustasta. Karuran metsässä on '
+                + 'luontopolkuja, luolia ja vesiputouksia, ja siellä '
+                + 'on havaittu yli kaksisataa lintulajia. Nairobin '
+                + 'arboretum on kolmenkymmenen hehtaarin puukokoelma '
+                + 'State House Roadin varrella. City Park on yli '
+                + 'kuusikymmentä hehtaaria ja säilyttää laikun '
+                + 'alkuperäistä metsää. Karenin puolella Oloolua '
+                + 'Nature Trail vie kolmenkymmenenseitsemän metrin '
+                + 'syvyiselle luonnonluolalle ja vesiputoukselle, ja '
+                + 'Ngong Road Forest Sanctuaryssa on pyöräpolkuja.',
+              kuva: {
+                tiedosto: 'Nairobi Arboretum Park 01.JPG',
+                selite: 'Arboretumin polku kiertää puiden lomassa '
+                  + 'aivan kaupungin keskellä.',
+                lahde: 'Ahero dala, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Nyama choma tarkoittaa paistettua lihaa, ja se '
+                + 'on Nairobin oma klassikko: liha grillataan hitaasti '
+                + 'ja syödään käsin. Keskustassa on pitkään toimineita '
+                + 'ruokapaikkoja kuten K’osewe ja Amaica, jotka ovat '
+                + 'erikoistuneet afrikkalaisiin ruokiin. Kahvilat ovat '
+                + 'yleistyneet nopeasti, ja Artcaffe, Nairobi Java '
+                + 'House ja Dormans ovat kaupungin omia ketjuja. '
+                + 'Tammi–helmikuussa on Nairobi Restaurant Week, '
+                + 'jolloin ravintolat tarjoavat alennettuja '
+                + 'ateriakokonaisuuksia.',
+              kuva: {
+                tiedosto: 'Nyama Choma.jpg',
+                selite: 'Nyama choma tuodaan pöytään paloiteltuna '
+                  + 'lautaselta.',
+                lahde: 'Samuel Kiongo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kirjoja, elokuvia ja bengaa',
+              teksti: 'Kwani? oli Kenian ensimmäinen '
+                + 'kirjallisuuslehti, ja sen perustivat Nairobissa '
+                + 'asuvat kirjailijat. Kaupungin kustantamot ovat '
+                + 'julkaisseet Ngũgĩ wa Thiong’on ja Meja Mwangin '
+                + 'teoksia. Karen Blixen asui Nairobin seudulla '
+                + 'vuosina 1917–1931, ja kaupunginosa Karen on nimetty '
+                + 'hänen mukaansa; hänen kirjastaan tehtiin 1985 '
+                + 'elokuva, jonka suosio johti Karen Blixen -museon '
+                + 'avaamiseen. Musiikissa Nairobi synnytti bengan, '
+                + 'jazzin ja luo-musiikin yhdistelmän, ja 1970-luvulla '
+                + 'kaupungista tuli soukous-musiikin keskus, kun '
+                + 'kongolaiset yhtyeet muuttivat tänne.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Nairobi-artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa vuosigraafia, '
+                + 'koska ERA5-normaaleja ei saatu haettua. Ilmasto on '
+                + 'subtrooppinen ylänköilmasto, ja kaupunki on 1 795 '
+                + 'metrissä merenpinnasta. Aurinkoisin ja lämpimin '
+                + 'jakso on joulukuusta maaliskuuhun, jolloin '
+                + 'keskimääräinen ylin lämpötila on 28 astetta. '
+                + 'Kesä–heinäkuussa illat ovat viileitä ja lämpötila '
+                + 'voi laskea yhdeksään asteeseen. Sadekausia on kaksi, '
+                + 'mutta sade on kohtalaista; pilvisin jakso on heti '
+                + 'ensimmäisen sadekauden jälkeen, jolloin syyskuuhun '
+                + 'asti tihkuttaa usein. Päiväntasaajan läheisyys '
+                + 'pitää vuodenajat samankaltaisina.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Nairobin kansallispuisto',
+                tahdet: 3,
+                selite: 'Seitsemän kilometrin päässä keskustasta, '
+                  + 'yksi Kenian varmimmista mustasarvikuonon '
+                  + 'näköalapaikoista.',
+              },
+              {
+                mita: 'Kenyattan kongressikeskus',
+                tahdet: 3,
+                selite: '32-kerroksinen torni vuodelta 1973 ja ainoa '
+                  + 'yleisölle avoin helikopterikenttä kaupungissa.',
+              },
+              {
+                mita: 'Kenian kansallismuseo',
+                tahdet: 3,
+                selite: 'Museum Hillin kokoelmat ihmisen alkuperästä '
+                  + 'ja Itä-Afrikan luonnosta.',
+              },
+              {
+                mita: 'Karuran metsä',
+                tahdet: 2,
+                selite: 'Kaupungin sisällä oleva metsä, jossa on '
+                  + 'luolia, vesiputouksia ja yli kaksisataa '
+                  + 'lintulajia.',
+              },
+              {
+                mita: 'Nairobin rautatiemuseo',
+                tahdet: 2,
+                selite: 'Ugandan radan vetureita aseman vieressä; '
+                  + 'museo avattiin 1971.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5
+             * ja teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Illat ovat viileitä',
+                teksti: 'Kaupunki on 1 795 metrissä, ja kesä–heinäkuussa '
+                  + 'lämpötila voi laskea yhdeksään asteeseen — '
+                  + 'päiväntasaaja ei tarkoita hikistä iltaa.',
+              },
+              {
+                otsikko: 'Kaksi sadekautta',
+                teksti: 'Sadetta tulee kahdessa jaksossa, ja '
+                  + 'ensimmäisen jälkeen on usein pilvistä ja '
+                  + 'tihkuttaa syyskuulle asti.',
+              },
+              {
+                otsikko: 'Matatu on oma maailmansa',
+                teksti: 'Reitti näkyy keltaisena raitana kyljessä ja '
+                  + 'numerona; rahastaja kertoo, mihin bussi menee, ja '
+                  + 'musiikki soi kovaa.',
+              },
+              {
+                otsikko: 'Puisto on aitaamaton etelästä',
+                teksti: 'Kansallispuiston eteläraja on avoin '
+                  + 'Kitengelan tasangoille, joten eläimet liikkuvat '
+                  + 'sadekausien mukaan ja määrät vaihtelevat.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Puisto kaupungin rajalla',
+      johdanto: 'Nairobin eteläraja on kansallispuisto, jonka aidaton '
+        + 'reuna aukeaa savannille. Sen historia on myös kertomus '
+        + 'siitä, kuka joutui väistymään ja kuka nousi puolustamaan '
+        + 'kaupungin viheralueita.',
+      tehtava: {
+        kysymys: 'Mitä presidentti Daniel arap Moi poltti Nairobin '
+          + 'kansallispuistossa vuonna 1989?',
+        vaihtoehdot: [
+          'kaksitoista tonnia norsunluuta',
+          'takavarikoituja aseita',
+          'vanhoja rautatiekiskoja',
+          'salametsästäjien verkkoja',
+        ],
+        oikea: 0,
+        fakta: 'Poltto oli julkinen kannanotto salametsästystä vastaan, '
+          + 'ja se paransi Kenian mainetta luonnonsuojelijana. '
+          + 'Polttopaikalla on nykyään muistomerkki, joka on yksi '
+          + 'puiston nähtävyyksistä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kenian ensimmäinen kansallispuisto',
+          teksti: 'Nairobin kansallispuisto avattiin virallisesti 1946, '
+            + 'ja se oli Kenian ensimmäinen kansallispuisto. Puisto on '
+            + '117 neliökilometriä ja alkaa noin seitsemän kilometrin '
+            + 'päässä keskustasta. Kolme sivua on aidattu; eteläinen '
+            + 'raja, Mbagathi-joki, on auki Kitengelan suojelualueelle. '
+            + 'Puistossa elää leijonia, leopardeja, puhveleita, '
+            + 'kirahveja, virtahepoja, seeproja ja gepardeja, ja '
+            + 'lintulajeja on jopa viisisataa. Puiston perustaminen '
+            + 'maksoi maasaipaimentolaisille kotimaan: heidät '
+            + 'siirrettiin mailtaan, kun puisto luotiin.',
+          tiedosto: 'A lake at Uhuru Park in Nairobi, Kenya, at sunset.jpg',
+          selite: 'Kaupungin viheralueet ja tornit kohtaavat Uhuru '
+            + 'Parkin lammen rannalla auringonlaskun aikaan.',
+          lahde: 'AEira-WMF, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Nairobi National Park',
+        },
+        {
+          otsikko: 'Sarvikuonon arkki',
+          teksti: 'Puistoa kutsutaan joskus nimellä Kifaru Ark, '
+            + 'sarvikuonon arkki. Se on yksi Kenian onnistuneimmista '
+            + 'mustasarvikuonon turvapaikoista ja harvoja paikkoja, '
+            + 'joissa kävijä näkee mustasarvikuonon luonnossa lähes '
+            + 'varmasti. Puiston pääportin lähellä toimii 1963 '
+            + 'perustettu turvakoti, joka hoitaa orpoja norsun- ja '
+            + 'sarvikuononpoikasia ja palauttaa ne myöhemmin '
+            + 'suojelualueille. Vuodesta 2005 alue on luokiteltu myös '
+            + 'leijonien suojeluyksiköksi. Puiston pohjoisrajalla '
+            + 'olevien tehtaiden jätevedet kuormittavat sen vesiä.',
+          tiedosto: 'Black rhino female nairobi.jpg',
+          selite: 'Mustasarvikuono seisoo pitkässä heinikossa '
+            + 'hammaslintu selässään.',
+          lahde: 'Zammerman, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Nairobi National Park',
+        },
+        {
+          otsikko: 'Muutto, joka päättyi kaupunkiin',
+          teksti: 'Ennen kaupunkia laumat seurasivat sateita ja '
+            + 'liikkuivat tasangoilla Kilimanjarolta Kenia-vuorelle. '
+            + 'Muutto oli lähteen mukaan yhtä suuri kuin Serengetin '
+            + 'muutto. Kun kaupunki kasvoi, puistosta tuli muuton '
+            + 'pohjoisin raja. Gnuut ja seeprat käyttävät yhä '
+            + 'Kitengelan käytävää: sadekaudella ne hajaantuvat '
+            + 'Athi-Kapitin tasangoille ja kuivalla kaudella palaavat '
+            + 'puistoon, jossa Mbagathi-joen padot pitävät veden '
+            + 'saatavilla. Kitengelan entiset maasaiden ryhmätilat on '
+            + 'yksityistetty, ja maanomistajat ovat perustaneet '
+            + 'yhdistyksen, joka etsii riistaviranomaisen kanssa '
+            + 'ratkaisuja sekä eläimille että ihmisille.',
+          tiedosto: 'Ivory burning site at Nairobi National Park.jpg',
+          selite: 'Norsunluun polttopaikan tuhkakummut ovat yhä '
+            + 'nähtävissä puiston tasangolla.',
+          lahde: 'Ninara from Helsinki, Finland, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Nairobi National Park',
+        },
+        {
+          otsikko: 'Wangari Maathain kaksi kamppailua',
+          teksti: 'Uhuru Park tarkoittaa vapauden puistoa, ja se '
+            + 'rajoittuu suoraan liikekeskustaan. Presidentti Daniel '
+            + 'arap Moi aikoi rakentaa siihen puolueensa '
+            + '62-kerroksisen päämajan. Puisto säilyi, koska Nobelin '
+            + 'rauhanpalkinnon saanut Wangari Maathai kampanjoi sen '
+            + 'puolesta. Toinen kamppailu koski Karuran metsää '
+            + 'kaupungin pohjoisosassa, jota uhkasi korvaaminen '
+            + 'asuntorakentamisella. Nykyään metsässä on luontopolkuja '
+            + 'ja yli kaksisataa lintulajia. Kaupunkia ohjaa yhä '
+            + 'siirtomaa-ajan vuoden 1948 yleiskaava, joka laadittiin '
+            + 'neljäsosamiljoonalle asukkaalle ja varasi 28 prosenttia '
+            + 'maasta julkiseksi tilaksi.',
+          tiedosto: 'Forest trail in the Karura Forest, Nairobi.jpg',
+          selite: 'Karuran metsän punamullalla kulkeva polku katoaa '
+            + 'puiden holviin.',
+          lahde: 'Brihaspati, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Karura Forest',
+        },
+      ],
+    },
+  ],
+  /*
+   * MIAMI (Opus 6.9.2026, paketti O9) — P-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-miami.md ja sen riippumaton tarkistus
+   * tarkistus-miami.md (tuomio "kelpaa kolmen korjauksen jälkeen";
+   * kaikki kolme on tehty, ks. alla). Väitteet on luettu
+   * en-Wikipedian raakatekstistä 6.9.2026: "Miami", "History of
+   * Miami", "Tequesta", "Miami Circle", "Julia Tuttle", "Cape
+   * Florida Light", "Everglades", "Biscayne Bay", "Miami Beach
+   * Architectural District", "Miami Beach, Florida".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   * Saapumisteksti (northamerica-saapumiset.js) ja valokuvataulu
+   * (northamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * koskettu; saapumiskortin isoisä sanoo suoraan, että hänen
+   * kartallaan tässä oli vain mangrovea ja hyttysiä — juuri se
+   * 1873-kulma, jolle nosto M2 rakentuu.
+   *
+   * SIVUJA ON KAKSI kuten Denverissä ja Houstonissa (kaupunki +
+   * teemasivu). Teemasivun id on vakioaihe 'luonto', koska
+   * AIHE_IKONIT ei tarjoa kosteikolle omaa kuvaketta eikä uusia
+   * sivu-id:itä tehdä; sivun nimi "Ruohojoki ja lahti" kertoo aiheen.
+   *
+   * TARKISTUKSEN KAIKKI KORJAUKSET ON TEHTY:
+   *  - A: kaupungin perustamisesta kerrotaan 502 ÄÄNESTÄJÄÄ eikä
+   *    yleisartikkelin "runsaat 300 asukasta". Luvut ovat keskenään
+   *    ristiriidassa (äänestäjiä ei voi olla enemmän kuin asukkaita),
+   *    ja ero selitetään samassa virkkeessä: äänioikeus oli rajattu
+   *    Miamissa ja Daden piirikunnassa asuviin miehiin.
+   *  - B: 50 jalkaa on KALKKIKIVEN paksuus, ei maakerroksen. Lehti
+   *    sanoo kalkkikivikerroksen olevan enintään noin 15 metriä ja
+   *    maakerroksen ohut ilman lukua, koska lähde ei anna sille lukua.
+   *  - C: märän kauden kastepisteraja on 70 °F eli 21 °C.
+   *
+   * PILARI 1 JA SPEC-MANTEREET.MD:N LINJAUS 1: tequestat tulevat
+   * ensimmäisenä nostona ennen kaupungin perustamista, ja heidän
+   * elämäntapansa kerrotaan heidän omin ehdoin. Kansaa ei ole enää
+   * erillisenä yhteisönä, ja se kerrotaan tapahtumina (taudit, sodat,
+   * muutto Kuubaan) eikä "kadonneen kansan" romantiikkana. Miami
+   * Circlen tekijyys kirjoitetaan lähteen varauksella ("luetaan
+   * ansioksi"), koska lähde sanoo "are credited with".
+   *
+   * EI NYKYPOLITIIKKAA EIKÄ NYKYRIKOLLISUUTTA: artikkelin huumesota,
+   * poliisipäällikkö ja Ku Klux Klan 1920-luvulla, vuoden 1980
+   * levottomuudet, vuoden 1933 murhayritys Bayfront Parkissa ja
+   * patsaiden töhriminen 2020 on jätetty kokonaan pois. Overtownin
+   * rotuerottelu ja 1960-luvun pakkolunastukset kerrotaan suoraan
+   * lähteen sanoin nähtävyysjutussa, ilman yksityiskohtien
+   * korostusta (spec-mantereet.md, USA-linjaus).
+   *
+   * ILMASTONMUUTOS näkyy vain neutraalina luonnontieteellisenä
+   * tosiasiana ja lyhyesti, koska laudan visa käsittelee sen jo
+   * (northamerica-questions.js, miami, kysymys 5).
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026 pyyntöön
+   * 429:llä ("Daily API request limit exceeded"), eikä lukuja keksitä
+   * (Samarkand-malli v965) — js/packs/saatiedot.js jää koskematta ja
+   * lehti näkyy ilman säätä kuten Denverissä ja Houstonissa. Oppaan
+   * sääjakso nojaa siksi en-Wikipedian Climate-osioon ja sanoo sen
+   * ääneen.
+   *
+   * KUVAT haettiin Commonsin API:sta kategoria- ja hakusanahauilla
+   * (Miami, Florida skylines; Aerial photographs of Miami, Florida;
+   * History of Miami, Florida; Cape Florida Light; Miami Circle;
+   * Everglades National Park; Pérez Art Museum Miami), lisenssi ja
+   * tekijä luettiin extmetadatasta 6.9.2026, ja jokainen valittu kuva
+   * katsottiin silmin 800–900 px esikatseluna.
+   * HYLKÄYKSET: "From above Brickell Key 120313-8541-jikatu.jpg"
+   * (iso pankin kattotunnus hallitsee kuvaa), "Miami Beach and Port
+   * of Miami Skyline (2720195951).jpg" (auringonlaskun siluetti,
+   * kaupunki ei erotu), "Establishing shot - Miami.jpg"
+   * (rakennustelineet ja nosturit oikeustalon päällä), "Cape Florida
+   * Lighthouse (2).jpg" (majakan sisäportaat, ei majakkaa), "Fort
+   * Dallas Former Slave Quarters Miami (8633509298).jpg" (kova
+   * mustavalkokäsittely), "Fort Dallas Park.jpg" (pelkkä puistokyltti),
+   * "Wynwood Art District (8139425353).jpg" ja "Calle Ocho Little
+   * Havana - Rooster Alley.jpg" (edellinen on pelkkä kyltti,
+   * jälkimmäinen sikarimainos), "Lifeguard tower, Miami Beach,
+   * FL.jpg" (tunnistettavat kasvot etualalla), "PAMM MRD 09.jpg" ja
+   * "PAMM MRD 12.jpg" (työmaakartioita ja tekijänoikeudellisia
+   * veistoksia), "PAMM MRD 20.jpg" (yökuva ihmisjoukosta),
+   * "Freedom Tower Miami East View.JPG" (parkkipaikka vie puolet
+   * kuvasta), "Bayfront Park - panoramio (3).jpg" (orava, ei puisto),
+   * "Ocean Drive South Beach Miami.jpg" (täynnä autoja ja
+   * tunnistettavia ihmisiä), "Biscayne National Park, Florida
+   * (ce927b40-...).jpg" (snorklaajien kasvot ja filminauhan reunat)
+   * ja "Beer and lobster (25537004601).jpg" (tienvarsikyltti).
+   *
+   * AIHETOISTO, joka on tarkoituksellinen ja kirjattu: Cape Floridan
+   * majakka esiintyy kahdessa kuvassa, mutta eri tiedostoina ja eri
+   * aiheena — nostossa M2 majakka itse rannalta nähtynä ja teemasivun
+   * nostossa L4 majakan tornista avautuva näkymä mangroven yli
+   * kaupunkiin. Sama koskee art decoa: nosto M4 näyttää yhden
+   * julkisivun Ocean Drivella ja oppaan jakso 3 rannan, jonka takana
+   * hotellirivi jatkuu.
+   *
+   * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+   * (northamerica-valokuvat.js, miami), jossa se on jo tarkistettu —
+   * vanha puoli on Library of Congressin vedos Miami-joelta 1904 ja
+   * uusi sama joki keskustan kohdalla 2023. Selitteet on kirjoitettu
+   * uudestaan yhdeksi virkkeeksi reseptin mukaan.
+   */
+  miami: [
+    {
+      id: 'kaupunki',
+      nimi: 'Miami',
+      johdanto: 'Miami on Yhdysvaltain suurista kaupungeista nuorin — se '
+        + 'perustettiin vasta 1896. Kaupunki mahtuu matalalle '
+        + 'kalkkikivitasangolle Evergladesin ja Biscayne Bayn väliin, ja '
+        + 'kadulla puhutaan kahta kieltä.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: Brickellin
+       * siluetti lahdelta, Coconut Grove ilmasta ja Edgewater
+       * pengertieltä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Downtown Miami photo (version 2) Don Ramey Logan.jpg',
+          selite: 'Brickellin tornirivi nousee Biscayne Bayn takaa '
+            + 'kirkkaassa iltapäivävalossa.',
+          lahde: 'Don Ramey Logan, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Downtown Coconut Grove.jpg',
+          selite: 'Coconut Groven venesatama ja mangrovesaaret ilmasta '
+            + 'nähtynä, keskusta kaukana horisontissa.',
+          lahde: 'Anthony Quintano from Mount Laurel, United States, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Miami (49167870223).jpg',
+          selite: 'Pengertieltä katsottuna Edgewaterin tornit ja '
+            + 'satamasaaret jakavat lahden kahtia.',
+          lahde: 'Mike McBey, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat — siluetti pengertieltä, keskusta kattotasolta ja
+       * estesaaren nauha ilmasta. Miamille ei ole vielä generoitu
+       * herokuvia, joten karusellissa on kolme aitoa valokuvaa
+       * (vertaa Denveriin ja Cairnsiin).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Downtown Miami skyline May 2011.jpg',
+          selite: 'Keskustan siluetti näkyy kokonaisena lahden yli '
+            + 'pengertien kohdalta.',
+          lahde: 'Daniel Christensen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Downtown Miami historic CBD.jpg',
+          selite: 'Kattotasolta erottuu, miten vanha liikekeskusta '
+            + 'kapenee sataman ja joen väliin.',
+          lahde: 'B137, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Flight from Quito, Ecuador to Miami - the famous strip (16039429263).jpg',
+          selite: 'Estesaari erottuu ilmasta kapeana nauhana, jonka '
+            + 'toisella puolella on lahti ja toisella avomeri.',
+          lahde: 'Murray Foubister, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Indians canoeing on Miami River - J.N. Chamberlain, photographer, Miami, Fla. LCCN00650881.jpg',
+          vuosi: '1904',
+          selite: 'Ruuhia Miami-joella vuonna 1904, kun joki oli yhä '
+            + 'reitti Evergladesilta lahden rannalle.',
+          lahde: 'Library of Congress, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Miami River Downtown Miami Florida 1 May 2023.jpg',
+          selite: 'Sama joki keskustan kohdalla nykyään: rannat ovat '
+            + 'tornitaloja, mutta rahtia lastataan yhä.',
+          lahde: 'Phillip Pessar, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kansa, joka lähti Kuubaan',
+          teksti: 'Tequestat asuivat Miamin seudulla noin kahdentuhannen '
+            + 'vuoden ajan ennen eurooppalaisia. Miami-joen suulla oli '
+            + 'satojen ihmisten kylä, joka ajoittuu vuosiin 500–600 eaa. '
+            + 'Kansa kalasti, metsästi ja keräsi hedelmiä ja juuria eikä '
+            + 'viljellyt maata. Sen ansioksi luetaan Miami Circle, joen '
+            + 'suulle kallioon hakattu ympyrä. Vuonna 1513 Juan Ponce de '
+            + 'León purjehti Biscayne Baylle ja kirjasi paikan nimellä '
+            + 'Chequescha — Miamin ensimmäinen tunnettu nimi. '
+            + 'Espanjalaiset rakensivat joen suulle lähetysaseman 1567, '
+            + 'mutta se jäi lyhytikäiseksi. Taudit ja sodat harvensivat '
+            + 'kansaa, ja 1700-luvun puoliväliin mennessä sen uskotaan '
+            + 'muuttaneen kokonaan Kuubaan.',
+          tiedosto: 'Miami Circle Brickell Point Site.jpg',
+          selite: 'Miami Circlen ympyrä on merkitty nurmikkoon aivan '
+            + 'joen suulla tornitalon juurella.',
+          lahde: 'Phillip Pessar, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Miami Circle',
+        },
+        {
+          otsikko: '1873: kourallinen perheitä lahden rannalla',
+          teksti: 'Isoisän matkavuonna Miamia ei ollut olemassa. Vuosina '
+            + '1858–1896 seudulla asui vain kourallinen perheitä pienissä '
+            + 'kylissä Biscayne Bayn rannalla; ensimmäinen niistä oli joen '
+            + 'suulla, ja sitä kutsuttiin vuoroin nimillä Miami, Miamuh ja '
+            + 'Fort Dallas. Vuoden 1850 laskennassa asukkaita oli '
+            + 'yhdeksänkymmentäkuusi. Vuonna 1870 William Brickell osti '
+            + 'maata joen etelärannalta, ja perhe piti tontillaan '
+            + 'kauppa-asemaa ja postitoimistoa koko loppuvuosisadan. '
+            + 'Laivoja varoitti riutasta Cape Floridan majakka, joka oli '
+            + 'rakennettu 1825, poltettu 1836 ja korjattu 1846.',
+          tiedosto: 'Cape Florida Lighthouse from the beach.JPG',
+          selite: 'Cape Floridan majakka seisoo Key Biscaynen kärjessä '
+            + 'samalla paikalla kuin isoisän aikaan.',
+          lahde: 'Bradleyjs34, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cape Florida Light',
+        },
+        {
+          otsikko: 'Appelsiininkukkia rautatiemagnaatille',
+          teksti: 'Julia Tuttle muutti Clevelandista 1891 ja osti 640 '
+            + 'eekkeriä Miami-joen pohjoisrannalta. Hän yritti taivutella '
+            + 'rautatiemagnaatti Henry Flagleria jatkamaan rataansa '
+            + 'etelään, mutta tämä kieltäytyi. Joulukuussa 1894 pakkanen '
+            + 'tuhosi sitrussadon Pohjois-Floridassa, ja 7. helmikuuta '
+            + '1895 toinen pakkanen vei loputkin — Miamin seutu säästyi. '
+            + 'Flaglerin lähettämä tarkastaja palasi appelsiininkukkien '
+            + 'kanssa. Ensimmäinen juna saapui 13. huhtikuuta 1896, ja '
+            + 'kaupunki perustettiin saman vuoden heinäkuun 28. päivänä. '
+            + 'Perustamiskokouksessa oli 502 äänestäjää — äänioikeus oli '
+            + 'rajattu Miamissa ja Daden piirikunnassa asuviin miehiin.',
+          tiedosto: 'Julia Tuttle Statue.jpg',
+          selite: 'Julia Tuttlen patsaan jalustaan on veistetty '
+            + 'appelsiininkukka, ruuhi ja alligaattori.',
+          lahde: 'Juleskramer, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Julia Tuttle',
+        },
+        {
+          otsikko: 'Pastellikorttelit, jotka melkein purettiin',
+          teksti: 'South Beachin pastellinväriset hotellit ovat maailman '
+            + 'suurin art deco -kokoelma. Suurin osa taloista nousi '
+            + 'lamavuosien ja 1940-luvun alun välillä: tyyli saapui '
+            + 'Miamiin vasta sen jälkeen, kun kiinteistömarkkinat '
+            + 'romahtivat 1925 ja vuoden 1926 hurrikaani jätti seudulla '
+            + '25 000 ihmistä kodittomiksi. Sitä ennen rakennettiin '
+            + 'välimerellistä tyyliä, jota korttelissa on yhä jäljellä. '
+            + 'Kun taloja alettiin purkaa, sisustussuunnittelija Barbara '
+            + 'Baer Capitman perusti 1976 tovereineen Miami Design '
+            + 'Preservation Leaguen. Alue merkittiin kansalliseen '
+            + 'rekisteriin 14. toukokuuta 1979, ja siihen kuuluu 960 '
+            + 'historiallista rakennusta.',
+          tiedosto: 'Ocean Drive - Art Deco buildings in Miami (5410501624).jpg',
+          selite: 'Ocean Driven hotellijulkisivussa toistuvat pyöreät '
+            + 'kulmat, kaiteet ja pystyt siivekkeet.',
+          lahde: 'Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Miami Beach Architectural District',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Miami South Beach - Lifeguard Tower.jpg',
+          selite: 'South Beachin hengenpelastajatornit on maalattu '
+            + 'kirkkain värein, eikä kahta samanlaista ole.',
+          lahde: 'Summerbrize, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Miami on Floridan toiseksi suurin kaupunki ja '
+          + 'Miami-Daden piirikunnan keskus. Se on rakennettu leveälle '
+          + 'tasangolle, jonka länsipuolella on Everglades ja '
+          + 'itäpuolella Biscayne Bay; korkeus merenpinnasta on '
+          + 'useimmissa kaupunginosissa vain noin kaksi metriä. '
+          + 'Golfvirta kulkee lämpimänä noin 24 kilometrin päässä '
+          + 'rannikosta ja pitää ilmaston leutona ympäri vuoden. '
+          + 'Vuoden 2020 laskennassa 70,2 prosenttia asukkaista oli '
+          + 'latinoja.',
+        artikkeli: {
+          nimi: 'Matkailijan Miami',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa aamu alkaa espanjaksi ja iltapäivä '
+            + 'jatkuu vedessä: keskustan museokortteli, Little Havanan '
+            + 'kadut ja estesaaren ranta mahtuvat kaikki samaan '
+            + 'päivään.',
+          nosto: 'Miamia sanotaan Latinalaisen Amerikan pääkaupungiksi. '
+            + 'Se on El Pason jälkeen Yhdysvaltain toiseksi suurin '
+            + 'kaupunki, jossa espanjankieliset ovat enemmistönä, ja '
+            + 'suurin, jossa kuubalaistaustaiset ovat suurin ryhmä. '
+            + 'Kaupungin oma englannin murre syntyi toisen ja kolmannen '
+            + 'polven latinojen puheessa: rytmi tulee espanjasta, mutta '
+            + 'kyseessä on äidinkielinen murre eikä opittu kieli.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Keskustassa liikkuu Metromover: maksuton '
+                + 'kohotettu automaattijuna, jolla on kolme linjaa ja '
+                + '21 asemaa — pysäkki noin kahden korttelin välein. '
+                + 'Sen lisäksi on Metrorailin kaupunkirata, kaksi '
+                + 'linjaa ja 23 asemaa. Maan alle ei juuri rakenneta, '
+                + 'koska pohjavesi on viiden tai kuuden metrin '
+                + 'syvyydessä — siksi radat ovat pylväiden päällä tai '
+                + 'maan tasalla. PortMiami on '
+                + 'maailman vilkkain risteilysatama: vuonna 2017 sen '
+                + 'kautta kulki 5 340 559 matkustajaa, ja terminaaleja '
+                + 'on seitsemän.',
+              kuva: {
+                tiedosto: 'Metromover Downtown Miami, March 2023.jpg',
+                selite: 'Metromoverin kaksi vaunua kulkevat kuljettajatta '
+                  + 'betonipalkin päällä keskustan kortteleiden yli.',
+                lahde: 'Phillip Pessar, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kaksi kieltä ja Little Havana',
+              teksti: 'Kaupungin länsipuolella on Little Havana, jonka '
+                + 'pääkatu Calle Ocho eli kahdeksas katu on '
+                + 'kuubalaissiirtolaisten kortteleiden selkäranka. '
+                + 'Versaillesin ravintola on kadun tunnetuin osoite. '
+                + 'Pohjoisessa on Wynwoodin muraalikortteli ja sen '
+                + 'vieressä Little Haiti, entinen Lemon City. '
+                + 'Etelässä Coconut Grove on asutettu jo 1825, ja sen '
+                + 'kapeat mutkaiset kadut ja tiheä puusto erottavat sen '
+                + 'muusta kaupungista.',
+            },
+            {
+              otsikko: 'Rannalle ja lahdelle',
+              teksti: 'Biscayne Bayn takana on estesaari, jolla ovat '
+                + 'Miami Beach ja South Beach. Ocean Driven hotellirivi '
+                + 'kulkee viidenneltä kadulta viidennelletoista ja on '
+                + 'rannan puolella Lummus Parkin vieressä. Lahdessa on '
+                + 'koralliriuttoja, joten snorklaus ja sukellus ovat '
+                + 'tavallisia harrastuksia. Kaupungissa on yli 80 '
+                + 'puistoa ja puutarhaa; suurimmat ovat Bayfront Park ja '
+                + 'sen pohjoispuolinen museopuisto keskustassa.',
+              kuva: {
+                tiedosto: 'Miami Beach - Beach scene.jpg',
+                selite: 'Leveä hiekkaranta, aurinkovarjojen rivi ja '
+                  + 'hengenpelastajan torni Miami Beachillä aamulla.',
+                lahde: 'P. Hughes, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Miamin keittiö sekoittaa latinalaisamerikkalaista, '
+                + 'karibialaista, soul- ja juutalaista ruokaa '
+                + 'amerikkalaiseen; lopputulosta kutsutaan nimellä '
+                + 'floribbean. Kuubalaissiirtolaiset toivat 1960-luvulla '
+                + 'cubano-voileivän, medianochen, kuubalaisen espresson, '
+                + 'bistec de palomillan ja croquetat. Niitä myydään '
+                + 'katuun avautuvista ikkunoista kauppojen ja '
+                + 'ravintoloiden edustalla. Meri näkyy ruokalistoilla: '
+                + 'kalaravintoloita on Miami-joen varressa ja pitkin '
+                + 'Biscayne Bayn rantaa.',
+              kuva: {
+                tiedosto: 'Versailles, Calle Ocho, Miami - Cuban Sandwich.jpg',
+                selite: 'Cubano-voileipä paistetaan litteäksi ja '
+                  + 'tarjoillaan kuumana Calle Ocholla.',
+                lahde: 'Todd Van Hoosear, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Miami-artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa vuosigraafia, '
+                + 'koska ERA5-normaaleja ei saatu haettua. Ilmasto on '
+                + 'trooppinen monsuuni-ilmasto: kuuma ja märkä kausi '
+                + 'kestää toukokuusta lokakuuhun, lämmin ja kuiva '
+                + 'marraskuusta huhtikuuhun. Talven ylimmät ovat 24,7 ja '
+                + '26,8 asteen välillä ja tammikuu on viilein '
+                + 'keskilämmöllä 20,1 astetta. Sadetta tulee 1 572 '
+                + 'millimetriä vuodessa, ja suurin osa siitä kesän '
+                + 'iltapäiväkuuroina. Hurrikaanikausi on kesäkuun '
+                + 'alusta marraskuun loppuun ja riski on suurimmillaan '
+                + 'elokuun puolivälistä syyskuun loppuun.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'South Beachin art deco -korttelit',
+                tahdet: 3,
+                selite: '960 suojeltua taloa ja maailman suurin art deco '
+                  + '-kokoelma yhdessä kaupunginosassa.',
+              },
+              {
+                mita: 'Everglades kaupungin laidalla',
+                tahdet: 3,
+                selite: 'Ruohojoki alkaa aivan länsipuolelta, ja sen '
+                  + 'alligaattorit ovat eksyneet valtateille asti.',
+              },
+              {
+                mita: 'Calle Ocho ja Little Havana',
+                tahdet: 2,
+                selite: 'Kuubalaiskortteleiden pääkatu, jossa espanja on '
+                  + 'arkikieli ja kahvi tilataan ikkunasta.',
+              },
+              {
+                mita: 'Vapaudentorni',
+                tahdet: 2,
+                selite: 'Vuoden 1925 lehtitalo, joka otti mallia '
+                  + 'Sevillan Giraldasta ja josta tuli pakolaisten '
+                  + 'vastaanottopaikka.',
+              },
+              {
+                mita: 'Biscayne Bayn riutat',
+                tahdet: 2,
+                selite: 'Lahdessa on koralliriuttoja ja satoja saaria '
+                  + 'aivan kaupungin edustalla.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5 ja
+             * teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Kesä on märkä ja hyvin kostea',
+                teksti: 'Touko–lokakuussa iltapäivän ukkoskuurot ovat '
+                  + 'päivittäisiä ja kastepiste pysyy yli 21 asteessa.',
+              },
+              {
+                otsikko: 'Hurrikaanikausi kannattaa tietää',
+                teksti: 'Kausi kestää kesäkuun alusta marraskuun loppuun, '
+                  + 'ja riskihuippu on elokuun puolivälistä syyskuun '
+                  + 'loppuun.',
+              },
+              {
+                otsikko: 'Kaupunki on hyvin matalalla',
+                teksti: 'Korkeus merenpinnasta on useimmissa '
+                  + 'kaupunginosissa noin kaksi metriä, ja noin 40 '
+                  + 'prosenttia asunnoista on tulvariskialueella.',
+              },
+              {
+                otsikko: 'Espanja auttaa enemmän kuin luulisi',
+                teksti: 'Seitsemänkymmentä prosenttia asukkaista on '
+                  + 'latinoja, ja monessa kaupassa espanja on '
+                  + 'ensimmäinen kieli.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Ruohojoki ja lahti',
+      johdanto: 'Kaupungin länsipuolella alkaa ruohojoki ja itäpuolella '
+        + 'lahti, jossa on satoja saaria. Väliin jää kalkkikivikaista, '
+        + 'joka on juuri ja juuri merenpinnan yläpuolella.',
+      tehtava: {
+        kysymys: 'Kuinka kaukana Miamin rannikosta Golfvirta kulkee?',
+        vaihtoehdot: [
+          'noin 24 kilometrin päässä',
+          'noin 240 kilometrin päässä',
+          'aivan rannassa',
+          'vasta Bahaman toisella puolella',
+        ],
+        oikea: 0,
+        fakta: 'Lämmin Golfvirta kulkee pohjoiseen noin 24 kilometrin '
+          + 'päässä rannikosta. Se on syy siihen, että Miamin ilmasto '
+          + 'pysyy lämpimänä ja leutona läpi vuoden.',
+      },
+      nostot: [
+        {
+          otsikko: 'Joki, joka on ruohoa',
+          teksti: 'Miamin länsilaidalla alkaa Everglades, trooppinen '
+            + 'suoalue, joka peittää suurimman osan Etelä-Floridasta. '
+            + 'Vesi ei virtaa uomassa vaan leveänä ja matalana '
+            + 'ruohikkona Okeechobee-järveltä etelään Florida Bayhin — '
+            + 'siitä nimi ruohojoki. Alue ulottuu aivan asuinalueiden '
+            + 'reunaan, ja suon alligaattorit ovat eksyneet '
+            + 'kaupunginosiin ja valtateille asti. Everglades ja lahti '
+            + 'ovat saman järjestelmän kaksi päätä: sama vesi kulkee '
+            + 'suon läpi ja päätyy lopulta merelle.',
+          tiedosto: 'Rainstorm over a Sawgrass Prairie - 2020 Photo Contest (52687302392).jpg',
+          selite: 'Sadekuuro laskeutuu Evergladesin sarapreerian ylle '
+            + 'ilman yhtäkään puuta horisontissa.',
+          lahde: 'evergladesnps, Wikimedia Commons (PD)',
+          wiki: 'Everglades',
+        },
+        {
+          otsikko: 'Lahti, jossa on satoja saaria',
+          teksti: 'Biscayne Bay ulottuu Miamin edustalta etelään Florida '
+            + 'Bayhin, ja siinä on useita satoja luonnollisia ja '
+            + 'keinotekoisia estesaaria. Suurin niistä kantaa Miami '
+            + 'Beachin ja South Beachin, eli kaupungin kuuluisin ranta '
+            + 'on itse asiassa saarella. Lahdessa on koralliriuttoja, ja '
+            + 'sen matalat rannat ovat mangrovea: juuriston seasta '
+            + 'löytyy kalanpoikasia, ja se vaimentaa myrskyaaltoa. '
+            + 'Rantaviiva näyttää suoralta vain kartalla — vedessä se '
+            + 'hajoaa saariksi, kanaviksi ja matalikoiksi.',
+          tiedosto: 'Biscayne National Park H-mangrove shoreline.jpg',
+          selite: 'Mangroven juuret muodostavat lahden rannalle tiheän '
+            + 'seinän, jonka takana vesi on peilityyni.',
+          lahde: 'National Park Service Digital Image Archives, Wikimedia Commons (PD)',
+          wiki: 'Biscayne Bay',
+        },
+        {
+          otsikko: 'Kaksi vuodenaikaa, ei neljä',
+          teksti: 'Miamissa on kuuma ja märkä kausi toukokuusta '
+            + 'lokakuuhun sekä lämmin ja kuiva kausi marraskuusta '
+            + 'huhtikuuhun. Märkä kausi määritellään kosteudesta eikä '
+            + 'kalenterista: se alkaa, kun vuorokauden keskikastepiste '
+            + 'nousee yli 21 asteen. Vuosina 1956–1997 kesä alkoi '
+            + 'aikaisimmillaan 16. huhtikuuta ja myöhimmillään 3. '
+            + 'kesäkuuta, mediaanipäivä oli 21. toukokuuta. Kesällä '
+            + 'iltapäivän ukkoskuuro tai merituuli katkaisee helteen '
+            + 'lähes päivittäin, ja suurin osa vuoden 1 572 millimetrin '
+            + 'sateesta tulee juuri silloin.',
+          tiedosto: 'Downtown Miami summer shower 20100707.jpg',
+          selite: 'Kesäkuuro vetää harmaan verhon keskustan tornien yli '
+            + 'kesken kirkkaan päivän.',
+          lahde: 'Averette, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Miami',
+        },
+        {
+          otsikko: 'Kaupunki huokoisen kiven päällä',
+          teksti: 'Miamin peruskallio on Miamin kalkkikiveä eli '
+            + 'ooliittia, ja kerros on enintään noin viisitoista metriä '
+            + 'paksu; sen päällä on vain ohut maakerros. Kivi syntyi '
+            + 'jääkausien merenpinnan heilahduksista: noin 130 000 '
+            + 'vuotta sitten merenpinta oli noin kahdeksan metriä '
+            + 'nykyistä ylempänä ja koko Etelä-Florida oli matalan '
+            + 'meren alla. Kallion alla on Biscaynen pohjavesiesiintymä, '
+            + 'josta koko metropolialue ottaa juomavetensä. Siksi maata '
+            + 'ei voi kaivaa viittä tai kuutta metriä syvemmälle '
+            + 'osumatta veteen — ja siksi radat kulkevat kaupungissa '
+            + 'pylväiden päällä.',
+          tiedosto: 'Cape Florida Lighthouse (5).jpg',
+          selite: 'Majakan tornista katsottuna kaupunki on ohut nauha '
+            + 'mangrovemeren ja taivaan välissä.',
+          lahde: 'Tamanoeconomico, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Miami',
+        },
+      ],
+    },
+  ],
+  /*
+   * HALIFAX (Opus 6.9.2026, paketti O9) — P-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-halifax.md ja sen riippumaton tarkistus
+   * tarkistus-halifax.md (tuomio "kelpaa kahden korjauksen ja kahden
+   * auki kirjoitettavan ristiriidan jälkeen"; kaikki on tehty, ks.
+   * alla). Väitteet on luettu en-Wikipedian raakatekstistä 6.9.2026:
+   * "Halifax, Nova Scotia", "History of Halifax, Nova Scotia",
+   * "Mi'kmaq", "Halifax Explosion", "Citadel Hill (Fort George)",
+   * "Halifax Town Clock", "Province House (Nova Scotia)",
+   * "Donair".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * Saapumisteksti (northamerica-saapumiset.js) ja valokuvataulu
+   * (northamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * koskettu. Saapumiskortin isoisä puhuu postilaivoista, jotka
+   * lähtevät Eurooppaan säällä kuin säällä — juuri se 1873-kulma,
+   * jolle nosto H3 rakentuu.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto', koska AIHE_IKONIT ei tarjoa satamalle omaa
+   * kuvaketta eikä uusia sivu-id:itä tehdä; sivun nimi "Satama, sumu
+   * ja myrskyt" kertoo aiheen.
+   *
+   * TARKISTUKSEN KAIKKI KOHDAT ON HOIDETTU:
+   *  - A: räjähdyksen uhriluvusta ja Imon kansallisuudesta on kaksi
+   *    lähdeversiota. Lehti käyttää tarkempaa artikkelia
+   *    ("Halifax Explosion"): VÄHINTÄÄN 1 782 kuollutta, ja Imo on
+   *    norjalainen alus, joka oli rahdattu Belgian
+   *    avustustoimikunnalle. Yleisartikkelin "noin 2 000" ja
+   *    "belgialainen avustusalus" jäävät pois.
+   *  - B: kaupunkioikeuksien vuosiluku jätetään kokonaan pois, koska
+   *    sama lähdeartikkeli antaa sille kaksi eri vuotta (1841 ja
+   *    1842) eikä kumpikaan ole toista tarkempi.
+   *  - C: Cornwallisin mukana tulleiden määrä kirjoitetaan muodossa
+   *    "runsaat tuhat", koska lähteet vaihtelevat (1 176–2 500) ja
+   *    kuljetusaluksia oli 13 tai 15.
+   *  - D: sataman mi'kmaq-nimestä annetaan MOLEMMAT lähteen
+   *    käännökset, koska lähde ei valitse niiden välillä.
+   *
+   * PILARI 1 JA SPEC-MANTEREET.MD:N LINJAUS 1: mi'kmaqit tulevat
+   * ensimmäisenä nostona ennen kaupungin perustamista, ja paikan OMA
+   * NIMI (Kjipuktuk) kerrotaan ennen siirtomaanimeä. Kansa kuvataan
+   * elävänä nykypäivän toimijana (väkiluku 2023, kielen puhujat 2021,
+   * Treaty Day). Perustamisesta sanotaan suoraan, että se rikkoi
+   * vuoden 1726 sopimuksia ja aloitti sodan — mutta ILMAN
+   * julmuuksien yksityiskohtia (pilari 4): Cornwallisin
+   * skalppausjulistusta ja Dartmouthin vuoden 1751 tapahtumia ei
+   * kerrota lainkaan.
+   *
+   * AFRICVILLE on luettu mutta jätetty tästä lehdestä pois: kaupungin
+   * 1960-luvulla purkama musta yhteisö vaatisi oman nostonsa, eikä
+   * sitä voi käsitellä ohimennen kunnioittavasti. Se on kirjattu
+   * tarkistusraporttiin jatkotyöksi, ei unohduksena.
+   *
+   * EI NYKYPOLITIIKKAA: kuntaliitoksen hallintokiistat,
+   * laivanrakennussopimukset ja Public Gardensin puiden
+   * vahingoittaminen 2022 on jätetty pois.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026 pyyntöön
+   * 429:llä ("Daily API request limit exceeded"), eikä lukuja keksitä
+   * (Samarkand-malli v965) — js/packs/saatiedot.js jää koskematta.
+   * Oppaan sääjakso nojaa siksi en-Wikipedian Climate-osioon ja sanoo
+   * sen ääneen.
+   *
+   * KUVAT haettiin Commonsin API:sta kategoria- ja hakusanahauilla
+   * (Halifax Harbour, Downtown Halifax, Cityscapes of Halifax,
+   * Halifax Citadel, Halifax Public Gardens, Point Pleasant Park,
+   * Pier 21, Maritime Museum of the Atlantic, History of Halifax),
+   * lisenssi ja tekijä luettiin extmetadatasta 6.9.2026, ja jokainen
+   * valittu kuva katsottiin silmin 800–900 px esikatseluna.
+   * HYLKÄYKSET: "Halifax waterfront.jpg" (utuinen, risteilijän kylki
+   * täyttää kuvan), "Emerald Princess cruise ship departing Halifax,
+   * Nova Scotia 2024.jpg" (varustamon tunnus on kuvan pääaihe),
+   * "HMCS Sackville with Flags.jpg" ja "Citadel Entrance
+   * (48540940721).jpg" sekä "Day 4 - Halifax, Nova Scotia
+   * (48746027523).jpg" ja "(48746030133).jpg" (tunnistettavia
+   * kasvoja), "Halifax - NS - Pier 21.jpg" (pelkkä rakennuksen
+   * kyltti), "Halifax boardwalk.JPG" (ravintolan mainoskyltti ja
+   * ihmisiä), "Saint Paul's Church, Halifax (46908890264).jpg"
+   * (linja-auton mainos peittää kirkon), "Point Pleasant Park June
+   * 2016.jpg" (soratie ja opastaulu, ei puistoa),
+   * "CA-halifax-publ-garden-03.jpg" (kukkaistutus, joka on
+   * käytännössä museomainos), "Beer and lobster (25537004601).jpg"
+   * (tienvarsikyltti) ja "Heartwood - Halifax Harbour
+   * (21153878643).jpg" (annos, jolla ei ole tekemistä Nova Scotian
+   * keittiön kanssa).
+   *
+   * YKSI TIETOINEN POIKKEUS: avauskuvassa "View of Halifax from
+   * Citadel Hill on a foggy day" näkyy talon seinässä pieni
+   * vuokrailmoitus. Se ei ole kuvan päälle lisätty merkintä vaan osa
+   * katunäkymää, ja se on ainoa Commonsin sumukuva Halifaxista, joka
+   * täyttää leveysvaatimuksen — sumu taas on kaupungin oma sääilmiö
+   * eikä sitä voi jättää lehdestä pois.
+   *
+   * ENNEN JA NYT: valokuvataulun paria EI kopioitu, koska sen puolet
+   * eivät esitä samaa paikkaa (hevosraitiovaunut 1894 / lautta).
+   * Lehteen haettiin oma pari, jossa molemmat puolet katsovat
+   * satamaa Dartmouthin suuntaan: vanha puoli on Richard Shortin
+   * piirroksesta tehty kaiverrus vuodelta 1759 ja uusi puoli sama
+   * näkymä lautan kannelta nykyään. Kaiverruksen alalaidassa on
+   * kustantajan oma teksti — reseptin nimenomainen poikkeus
+   * ("julkaisijan oma litera, joka selitetään kuvatekstissä").
+   */
+  halifax: [
+    {
+      id: 'kaupunki',
+      nimi: 'Halifax',
+      johdanto: 'Halifax on rakennettu maailman suurimpiin kuuluvan '
+        + 'luonnonsataman ympärille. Mi\'kmaqit kutsuvat paikkaa nimellä '
+        + 'Kjipuktuk; britit perustivat tähän 1749 linnoituskaupungin, '
+        + 'joka katsoo yhä merelle päin.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: siluetti
+       * satamasta, ranta veneen kannelta ja kellotorni keskustan
+       * kattojen keskellä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: '2022-08-15 01 Wide angle view of Halifax skyline, Nova Scotia, Canada.jpg',
+          selite: 'Halifaxin siluetti satamasta katsottuna, lautta '
+            + 'matkalla Dartmouthiin ja konttinosturit vasemmalla.',
+          lahde: 'Gordon Leggett, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Halifax from the Water (48540602992).jpg',
+          selite: 'Rantaviiva veden tasalta: laiturit, vanhat '
+            + 'makasiinit ja tornit yhtenä rivinä.',
+          lahde: 'WabbitWanderer from London, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'City of Halifax - panoramio.jpg',
+          selite: 'Vanha kellotorni jää keskustan kattojen ja rakenteilla '
+            + 'olevien tornien väliin, satama sumussa taustalla.',
+          lahde: 'Jiaqian AirplaneFan, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat — silta sataman kapeikon yli talvella, linnoituksen
+       * ruohorinne ja kaupunki sumussa. Halifaxille ei ole vielä
+       * generoitu herokuvia, joten karusellissa on kolme aitoa
+       * valokuvaa (vertaa Denveriin ja Cairnsiin).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'A. Murray MacKay Bridge in Halifax.jpg',
+          selite: 'MacKayn silta ylittää sataman kapeimman kohdan; vesi '
+            + 'on auki, vaikka rannat ovat lumessa.',
+          lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Citadel Hill Halifax.JPG',
+          selite: 'Linnoituksen ruohorinne nousee keskustan yläpuolelle, '
+            + 'ja laella liehuu lippu.',
+          lahde: 'Citobun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'View of Halifax from Citadel Hill on a foggy day (3609158827).jpg',
+          selite: 'Sumupäivänä katu häviää linnoituskukkulalta katsottuna '
+            + 'jo muutaman korttelin päässä.',
+          lahde: 'CP Hoffman from Washington, DC, United States, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Halifax looking down George Street, Nova Scotia, Canada, 1759.jpg',
+          vuosi: '1759',
+          selite: 'George Street laskee satamaan ja Dartmouthiin vuoden '
+            + '1759 piirroksessa; alalaidan teksti on kustantajan oma '
+            + 'nimiö.',
+          lahde: 'Richard Short / James Mason, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Halifax-Dartmouth Ferry - Halifax Skyline Sunset (22756203545).jpg',
+          selite: 'Sama salmi nykyään: Dartmouthin lautta ylittää sen '
+            + 'edestakaisin päivät pitkät.',
+          lahde: 'Tony Webster from San Francisco, California, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kjipuktuk, suuri satama',
+          teksti: 'Mi\'kmaqit ovat asuttaneet Nova Scotian niemimaata '
+            + 'kauan ennen kirjoitettua historiaa. Sataman '
+            + 'mi\'kmaq-nimi on Kjipuktuk eli Chebookt, joka käännetään '
+            + 'sekä päällikkösatamaksi että suureksi satamaksi. Ennen '
+            + 'siirtomaakautta yhteisöt liikkuivat vuodenaikojen mukaan: '
+            + 'kesät vietettiin Bedford Basinin rannoilla ja ennen '
+            + 'talvea siirryttiin sisämaahan. Kansan alue on Mi\'kma\'ki, '
+            + 'yksi viidestä Wabanaki-liiton maasta. Vuonna 2023 '
+            + 'mi\'kmaqeja oli alueella 66 748, ja vuoden 2021 '
+            + 'väestönlaskennassa 9 245 ilmoitti puhuvansa '
+            + 'mi\'kmawi\'simkiä. Kansa katsoo, etteivät 1700-luvun '
+            + 'sopimukset luovuttaneet maaoikeutta.',
+          tiedosto: 'Mi\'kmaq people at Tufts Cove, Nova Scotia, Canada, ca. 1871.jpg',
+          selite: 'Mi\'kmaq-asumus Tufts Covessa sataman toisella '
+            + 'rannalla noin vuonna 1871.',
+          lahde: 'Joseph S. Rogers, Wikimedia Commons (PD)',
+          wiki: 'Mi\'kmaq',
+        },
+        {
+          otsikko: 'Kolmetoista laivaa ja kukkula',
+          teksti: 'Kuningas Yrjö II määräsi 1749 Edward Cornwallisin '
+            + 'perustamaan Nova Scotialle uuden pääkaupungin. '
+            + 'Cornwallis saapui Chebuctoon 21. kesäkuuta 1749 '
+            + 'sotasluupilla ja kolmellatoista kuljetusaluksella '
+            + 'mukanaan runsaat tuhat uudisasukasta perheineen. Kaupunki '
+            + 'nimettiin kauppaneuvoston puheenjohtajan, Halifaxin toisen '
+            + 'jaarlin mukaan. Perustaminen rikkoi vuoden 1726 sopimuksia '
+            + 'mi\'kmaqien kanssa ja aloitti sodan. Sotien kausi '
+            + 'päättyi rauhan- ja ystävyyssopimuksiin, ja '
+            + 'kirveenhautajaisseremonia pidettiin 25. kesäkuuta 1761 '
+            + 'kuvernöörin puutarhassa nykyisen Spring Garden Roadin '
+            + 'varrella. Sopimusten muistoksi vietetään Treaty Dayta '
+            + 'lokakuun ensimmäisenä päivänä.',
+          tiedosto: 'Church of Saint Paul and the Parade at Halifax in Nova Scotia, 1759.jpg',
+          selite: 'Vuoden 1759 kaiverruksessa puinen kaupunki kiertää '
+            + 'sotilasparaatikenttää, jonka päässä on kirkko.',
+          lahde: 'Richard Short / Dominic Serres / Ignace Fougeron, Wikimedia Commons (PD)',
+          wiki: 'History of Halifax, Nova Scotia',
+        },
+        {
+          otsikko: '1873: purjeita ja odotettu rata',
+          teksti: 'Isoisän matkavuonna Halifax oli brittiläinen '
+            + 'varuskunta- ja laivastosatama, joka oli ollut kuusi vuotta '
+            + 'osa Kanadaa. Konfederaatio 1867 sai osakseen vastustusta '
+            + 'juuri Halifaxin kauppiailta: maakunta oli varakas ja sen '
+            + 'kauppasuhteet Bostoniin ja New Yorkiin toimivat. '
+            + 'Brittivaruskunta pysyi kaupungissa vuoteen 1906 ja '
+            + 'laivasto vuoteen 1910. Kaupunki odotti tulevansa Kanadan '
+            + 'talvisatamaksi, mutta Intercolonial Railway valmistui '
+            + 'vasta 1876 ja kiersi pohjoisen kautta; useimmat viejät '
+            + 'lähettivät tavaransa Bostonin tai Portlandin kautta. '
+            + 'Kaupungissa syntyi silti kaksi Kanadan suurimmista '
+            + 'pankeista, ja purjelaivakausi oli huipussaan.',
+          tiedosto: 'Barque Noel, Halifax Graving Yard, Halifax, Nova Scotia, 1890.jpg',
+          selite: 'Parkkilaiva Noel kuivatelakassa vuonna 1890, '
+            + 'purjelaivoja odottamassa satamassa taustalla.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'History of Halifax, Nova Scotia',
+        },
+        {
+          otsikko: 'Kuudes joulukuuta 1917',
+          teksti: 'Ranskalainen rahtialus Mont-Blanc ja norjalainen Imo, '
+            + 'joka oli rahdattu Belgian avustustoimikunnalle, '
+            + 'törmäsivät Halifaxin satamassa aamulla 6. joulukuuta '
+            + '1917. Mont-Blanc kuljetti räjähdysaineita; törmäys '
+            + 'vaurioitti kannen bentsolitynnyreitä, höyryt syttyivät, ja '
+            + 'noin kaksikymmentä minuuttia myöhemmin laiva räjähti. '
+            + 'Räjähdys oli aikansa suurin ihmisen aiheuttama. Vähintään '
+            + '1 782 ihmistä kuoli ja arviolta 9 000 loukkaantui, ja '
+            + 'lähes kaikki rakennukset kahdeksansadan metrin säteellä '
+            + 'tuhoutuivat. Hyökyaalto vei mennessään Tufts Coven '
+            + 'mi\'kmaq-yhteisön. Apu tuli Bostonista.',
+          tiedosto: 'Blast cloud from the Halifax Explosion, December 6, 1917.jpg',
+          selite: 'Räjähdyksen savupilvi kuvattuna sataman suulta noin '
+            + 'kaksikymmentä minuuttia törmäyksen jälkeen.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'Halifax Explosion',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Halifax Town Clock 2.jpg',
+          selite: 'Vanha kellotorni seisoo linnoituskukkulan rinteessä '
+            + 'kaupunkiin päin, jotta myös kaupunkilaiset näkevät ajan.',
+          lahde: 'Hayden Soloviev, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Halifax on Nova Scotian pääkaupunki ja Atlantin '
+          + 'Kanadan väkirikkain kunta. Nykyinen Halifax Regional '
+          + 'Municipality syntyi 1. huhtikuuta 1996, kun Halifax, '
+          + 'Dartmouth, Bedford ja Halifaxin piirikunta yhdistettiin '
+          + 'yhdeksi kunnaksi. Vuonna 2024 metropolialueella arvioitiin '
+          + 'olevan 530 167 asukasta, joista 348 634 asui taajamassa. '
+          + 'Kaupunki on Atlantin Kanadan hallinnon, kaupan ja '
+          + 'kulttuurin keskus, ja satama on yhä sen selkäranka.',
+        artikkeli: {
+          nimi: 'Matkailijan Halifax',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jonka ydin mahtuu kävelymatkalle: '
+            + 'satamalaudoitus, linnoituskukkula ja viktoriaaninen '
+            + 'puutarha ovat kaikki puolen tunnin päässä toisistaan.',
+          nosto: 'Halifaxin kuntaan kuuluu maata paljon enemmän kuin '
+            + 'kaupunkia: taajama on 238 neliökilometriä eli alle viisi '
+            + 'prosenttia kunnan maapinta-alasta. Loppu on rannikkoa, '
+            + 'metsää ja maaseutua, jossa on kalasatamia, maatiloja ja '
+            + 'yli kahdentuhannen hehtaarin Long Lake Provincial Park '
+            + 'aivan kaupungin kyljessä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Halifax Stanfield International Airport palvelee '
+                + 'koko maakuntaa, ja vuonna 2025 sen kautta kulki '
+                + '4 140 484 matkustajaa — Kanadan kahdeksanneksi '
+                + 'vilkkain lentoasema. Junayhteys on VIA Railin Ocean, '
+                + 'joka lähtee 1920-luvun asemalta sataman eteläpäässä. '
+                + 'Satamassa kulkee myös Halifax Transitin lautta '
+                + 'Dartmouthiin, ja se on osa tavallista '
+                + 'joukkoliikennettä eikä turistiristeily. Keskusta on '
+                + 'niin pieni, että useimmat kohteet ovat kävelymatkan '
+                + 'päässä toisistaan.',
+              kuva: {
+                tiedosto: 'Halifax station (Nova Scotia).jpg',
+                selite: 'Rautatieaseman keltainen pylväsjulkisivu '
+                  + 'kaukojunien päätepysäkillä sataman kupeessa.',
+                lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kävelymatkat keskustassa',
+              teksti: 'Vuoden 1749 asemakaavaan kuului keskellä '
+                + 'sotilasparaatikenttä, ja Grand Parade on yhä '
+                + 'kaupungin aukio: pohjoispäässä on kaupungintalo ja '
+                + 'eteläpäässä Pyhän Paavalin kirkko. Rannassa kulkee '
+                + 'neljän kilometrin puinen kävelyreitti, jonka varrella '
+                + 'ovat museot ja vanhat makasiinit. Kortteleiden '
+                + 'sisällä ovat Nova Scotian taidegalleria — noin '
+                + '19 000 teosta 150 vuotta vanhassa talossa — ja '
+                + 'kaupunginkirjasto, joka on palkittu arkkitehtuurista '
+                + 'kenraalikuvernöörin mitalilla.',
+              kuva: {
+                tiedosto: 'Halifax central library Oct2014 front.jpg',
+                selite: 'Kirjaston lasilaatikot on ladottu ristiin niin, '
+                  + 'että ylin kerros työntyy kadun yli.',
+                lahde: 'Citobun, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Puistot ja kukkulat',
+              teksti: 'Halifax Common annettiin kaupunkilaisten käyttöön '
+                + '1763, ja se on Kanadan vanhin julkinen puisto. '
+                + 'Linnoituskukkulan rinteet ovat kesäisin täynnä '
+                + 'auringonottajia ja leijoja, ja niiden kupeessa on '
+                + 'viktoriaaninen Public Gardens. Niemimaan kärjessä on '
+                + 'metsäinen Point Pleasant Park, jossa kulkee polkuja '
+                + 'vanhojen brittipatterien lomassa. Mannerpuolella on '
+                + 'Sir Sandford Fleming Park ja sen Dingle Tower, jonka '
+                + 'Connaughtin herttua vihki 1912.',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Halifaxin oma ruoka on donair: ohuiksi leikattua '
+                + 'paistia pitaleivässä, päällä makea valkoinen kastike '
+                + 'sekä tomaattia ja sipulia. Se syntyi kaupungissa '
+                + '1970-luvulla ja on nykyään sen virallinen ruoka. '
+                + 'Muuten pöytä tulee mereltä, ja rannan makasiineissa '
+                + 'on kalaravintoloita vieri vieressä. Alexander Keithin '
+                + 'panimo on toiminut kaupungissa 1800-luvulta asti ja '
+                + 'kuuluu samaan teollisuuden sukupolveen kuin Starr '
+                + 'Manufacturing ja Morse\'s Tea.',
+              kuva: {
+                tiedosto: 'Donair (47003391564).jpg',
+                selite: 'Halifaxin donair tarjoillaan lautaselta: lihaa, '
+                  + 'valkoista kastiketta ja pitaleipä alla.',
+                lahde: 'Paulo O from Halifax, Canada, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Halifax-artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa vuosigraafia, '
+                + 'koska ERA5-normaaleja ei saatu haettua. Ilmasto on '
+                + 'kostea mannerilmasto, jota Golfvirta leudontaa: '
+                + 'lämpötila pysyy tavallisesti kahdeksan pakkasasteen '
+                + 'ja kahdenkymmenenkahdeksan lämpöasteen välissä. '
+                + 'Tammikuu on kylmin ja ainoa kuukausi, jonka '
+                + 'keskiylin on pakkasella (−0,1 astetta). Yli '
+                + 'kolmenkymmenen asteen päiviä on normaalivuonna kolme, '
+                + 'hallayötä 131 ja kokonaan pakkasen puolella olevia '
+                + 'päiviä 49. Hallaton kausi kestää keskimäärin 182 '
+                + 'päivää, tavallisesti toukokuun alusta lokakuun '
+                + 'loppuun.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Halifaxin linnoitus',
+                tahdet: 3,
+                selite: 'Neljäs linnoitus samalla kukkulalla vuodesta '
+                  + '1749; sitä vastaan ei koskaan hyökätty.',
+              },
+              {
+                mita: 'Sataman kävelyreitti',
+                tahdet: 3,
+                selite: 'Neljä kilometriä puulaudoitusta museoiden, '
+                  + 'laitureiden ja aukioiden ohi.',
+              },
+              {
+                mita: 'Vanha kellotorni',
+                tahdet: 2,
+                selite: 'Kentin herttuan kello vuodelta 1803, joka on '
+                  + 'pysähtynyt vain kerran.',
+              },
+              {
+                mita: 'Julkinen puutarha',
+                tahdet: 2,
+                selite: 'Viktoriaaninen puutarha konfederaation '
+                  + 'vuodelta 1867, kansallinen historiallinen kohde.',
+              },
+              {
+                mita: 'Peggys Cove',
+                tahdet: 2,
+                selite: 'Graniittirannikon majakkakylä kaupungin '
+                  + 'ulkopuolella, yli 600 000 kävijää vuodessa.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5 ja
+             * teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Sumu on osa kaupunkia',
+                teksti: 'Meri tuo sumua etenkin kevätkesällä, ja '
+                  + 'sumupäivänä satamaristeily ei näytä juuri mitään.',
+              },
+              {
+                otsikko: 'Kesä tulee myöhään',
+                teksti: 'Meri viivästyttää vuodenaikoja: elokuu on '
+                  + 'lämpimin ja syyskuu leudompi kuin kesäkuu.',
+              },
+              {
+                otsikko: 'Hurrikaanien loppupää yltää tänne',
+                teksti: 'Juan 2003, Dorian 2019 ja Fiona 2022 aiheuttivat '
+                  + 'kaatuneita puita ja päiviä kestäneitä sähkökatkoja.',
+              },
+              {
+                otsikko: 'Talvi on leuto mutta pitkä',
+                teksti: 'Hallayötä on vuodessa 131 ja kokonaan pakkasen '
+                  + 'puolella olevia päiviä 49.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Satama, sumu ja myrskyt',
+      johdanto: 'Halifaxissa sää tulee mereltä ja kaupunki on rakennettu '
+        + 'sen ehdoilla. Satama ei jäädy, kesä tulee myöhässä ja syksyllä '
+        + 'hurrikaanien loppupää yltää tänne asti.',
+      tehtava: {
+        kysymys: 'Mikä kuukausi on Halifaxissa lämpimin?',
+        vaihtoehdot: ['elokuu', 'heinäkuu', 'kesäkuu', 'syyskuu'],
+        oikea: 0,
+        fakta: 'Meri lämpenee hitaasti ja jäähtyy hitaasti, joten '
+          + 'vuodenajat tulevat Halifaxiin myöhässä. Elokuu on lämpimin '
+          + 'kuukausi ja syyskuu kolmanneksi leudoin — kesäkuuta '
+          + 'lämpimämpi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Satama, jota ei tarvinnut kaivaa',
+          teksti: 'Halifaxin satama on maailman suurimpia '
+            + 'luonnonsatamia, ja juuri se toi kaupungin tähän. '
+            + 'Sisääntuloa voitiin puolustaa tykkipattereilla McNabs '
+            + 'Islandilta, Georges Islandilta, Point Pleasantista, '
+            + 'Northwest Armilta ja York Redoubtista, joten yhtään '
+            + 'linnoitusta ei tarvinnut rakentaa avomerelle. Sataman '
+            + 'perällä on Bedford Basin, laaja suojaisa allas, johon '
+            + 'johtaa kapea salmi nimeltä The Narrows. Nykyään Halifax '
+            + 'on Kanadan neljän suurimman konttisataman joukossa, ja '
+            + 'vuonna 2024 sinne saapui 201 risteilyalusta ja 360 000 '
+            + 'matkustajaa.',
+          tiedosto: 'Halifax, Nova Scotia - From the Eagle\'s Nest in Bedford.JPG',
+          selite: 'Bedford Basinin takaa katsottuna kaupunki jää kapean '
+            + 'salmen ja sen ylittävän sillan taakse.',
+          lahde: 'Figure8, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Halifax, Nova Scotia',
+        },
+        {
+          otsikko: 'Meri tekee sään',
+          teksti: 'Halifaxin ilmasto on kostea mannerilmasto, jota '
+            + 'Golfvirta leudontaa: talvi on leudompi ja kesä viileämpi '
+            + 'kuin samalla leveydellä sisämaassa, ja lämpötila pysyy '
+            + 'tavallisesti kahdeksan pakkasasteen ja '
+            + 'kahdenkymmenenkahdeksan lämpöasteen välissä. Meri myös '
+            + 'viivästyttää vuodenaikoja voimakkaasti: tammikuu on '
+            + 'kylmin, elokuu lämpimin ja syyskuu keskilämmöltään '
+            + 'kolmanneksi leudoin kuukausi. Ennätykset kertovat '
+            + 'ääripäät: 37,2 astetta 10. heinäkuuta 1912 ja 29,4 '
+            + 'pakkasastetta 18. helmikuuta 1922.',
+          tiedosto: 'Bedford Basin, Nova Scotia (42617373191).jpg',
+          selite: 'Syksy tulee altaan rannalle vasta lokakuussa, kun '
+            + 'meri on vielä lämmin.',
+          lahde: 'Coastal Elite from Halifax, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Halifax, Nova Scotia',
+        },
+        {
+          otsikko: 'Hurrikaanien pohjoinen pää',
+          teksti: 'Trooppiset myrskyt heikkenevät matkalla pohjoiseen, '
+            + 'mutta yltävät silti Nova Scotiaan. Hurrikaani Juan iski '
+            + 'syyskuussa 2003 kakkosluokan myrskynä ja aiheutti '
+            + 'huomattavaa vahinkoa; se kaatoi suuren osan Public '
+            + 'Gardensin puista, ja puutarha avattiin uudelleen vasta '
+            + 'Kanadan päivänä 2004. Earl sivusi rannikkoa 2010, Dorian '
+            + 'rantautui 2019 juuri kaupungin eteläpuolelle ja Fiona '
+            + 'iski 2022. Kaksi viimeistä kaatoivat puita ja veivät '
+            + 'sähköt päiviksi, mutta Halifax selvisi verrattain '
+            + 'vähällä.',
+          tiedosto: 'Dorian Aftermath HalifaxNS 2019 03 Public Gardens.jpg',
+          selite: 'Myrskyn jälkeen kaatunutta puuta sahataan pois '
+            + 'puutarhan käytävältä.',
+          lahde: 'Verne Equinox, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Halifax, Nova Scotia',
+        },
+        {
+          otsikko: 'Graniittia ja majakoita',
+          teksti: 'Kaupungin ulkopuolella rannikko muuttuu paljaaksi '
+            + 'graniitiksi. Tunnetuin kohta on Peggys Cove, pieni '
+            + 'kalastajakylä ja majakka noin tunnin ajomatkan päässä; '
+            + 'se saa yli 600 000 kävijää vuodessa. Halifaxin oma '
+            + 'rannikko on samaa kiveä: Point Pleasant Parkin polut '
+            + 'kulkevat kallion ja männikön välissä, ja Long Lake '
+            + 'Provincial Park suojelee yli kahdentuhannen hehtaarin '
+            + 'erämaata heti kaupungin länsipuolella. Puisto '
+            + 'perustettiin 1984, ja se tuo erämaan aivan '
+            + 'kaupunkiasutuksen kylkeen.',
+          tiedosto: 'Peggys Cove - NS - Leuchtturm.jpg',
+          selite: 'Peggys Coven majakka seisoo paljaalla graniitilla '
+            + 'ilman puita tai puutarhaa ympärillään.',
+          lahde: 'Taxiarchos228, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Halifax, Nova Scotia',
+        },
+      ],
+    },
+  ],
 };

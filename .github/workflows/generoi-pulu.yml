@@ -74,6 +74,12 @@ on:
           "generoi"; muissa jätetään tyhjäksi.
         required: false
         default: ''
+      haku:
+        description: >-
+          aanet: listaa vain äänet, joiden nimessä tämä sana on
+          (esim. "Dr. Von"). Tyhjä = piirrehaku (käheä, nopea).
+        required: false
+        default: ''
       repliikit:
         description: >-
           Vain nämä repliikit pilkuin TAI välilyönnein (avaus-1,
@@ -175,7 +181,14 @@ jobs:
         if: ${{ inputs.toiminto == 'aanet' }}
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
-        run: node tools/generoi-pulu.mjs --aanet
+          HAKU: ${{ inputs.haku }}
+        run: |
+          set -euo pipefail
+          if [ -n "$HAKU" ]; then
+            node tools/generoi-pulu.mjs --aanet --haku "$HAKU"
+          else
+            node tools/generoi-pulu.mjs --aanet
+          fi
 
       # Kuiva ajo AINA ennen generointia: jokainen repliikki, sen
       # tagitettu puhemuoto ja kohdetiedosto tulostuvat lokiin ennen

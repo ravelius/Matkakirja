@@ -55,6 +55,35 @@ const SALLITUT = [
   'https://www.montevideo.com.uy/',
   'https://www.abc.com.py/',
   'https://www.elnacional.com/',
+  // Kenian, Tansanian ja Ugandan uutislähteet (maalehdet 6.9.2026):
+  // syöte ja artikkelisivut samalla isäntänimellä. Capital FM:n osoite
+  // on .africa, koska .co.ke ohjaa 301:llä eikä worker seuraa
+  // uudelleenohjauksia.
+  'https://capitalfm.africa/',
+  'https://globalpublishers.co.tz/',
+  'https://nilepost.co.ug/',
+  // Marokon, Algerian ja Tunisian uutislähteet (maalehdet 6.9.2026):
+  // syöte ja artikkelisivut samalla isäntänimellä.
+  'https://www.hespress.com/',
+  'https://www.tsa-algerie.com/',
+  'https://africanmanager.com/',
+  // Nigerian, Ghanan ja Senegalin uutislähteet (maalehdet 6.9.2026):
+  // syöte ja artikkelisivut samalla isäntänimellä.
+  'https://dailytrust.com/',
+  'https://www.adomonline.com/',
+  'https://aps.sn/',
+  // Guatemalan, Nicaraguan ja Panaman uutislähteet (maalehdet 6.9.2026).
+  // Confidencialin syöte on www-osoitteessa mutta artikkelilinkit ilman
+  // www:tä, joten molemmat isäntänimet ovat listalla.
+  'https://lahora.gt/',
+  'https://www.confidencial.digital/',
+  'https://confidencial.digital/',
+  'https://www.panamaamerica.com.pa/',
+  // Sudanin ja Etelä-Sudanin uutislähteet (maalehdet 6.9.2026):
+  // syöte ja artikkelisivut samalla isäntänimellä. Etiopia jäi
+  // ilman lähdettä, ks. js/packs/uutislahteet.js.
+  'https://www.dabangasudan.org/',
+  'https://www.radiotamazuj.org/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

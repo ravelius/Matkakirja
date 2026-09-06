@@ -11389,6 +11389,240 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Hermann Park', lat: 29.721, lon: -95.391 },
     ],
   },
+  /*
+   * KAPKAUPUNKI (6.9.2026). Rajaus on 3,7 x 2,9 kilometriä
+   * Victoria & Alfredin satama-altaista Company's Gardenin
+   * museokorttelin eteläpuolelle — perustelu, merentäyttö ja
+   * hylätty laajennus ovat tools/piirra-kaupunkikartta.mjs:n
+   * kapkaupunki-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat khoe-
+   * ja san-kansat lahdella, yhtiön vihannestarha ja orjuus, vuoden
+   * 1873 satama ja timantit sekä Bo-Kaap ja arabialainen afrikaans;
+   * teemasivu kertoo Pöytävuoresta, fynbosista, Maclearin
+   * kiviröykkiöstä ja pöytäliinapilvestä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-kapkaupunki.md, kohta E): Groote Kerk on 55 metrin,
+   * St George's Cathedral 88 metrin ja Grand Parade 99 metrin
+   * päässä lähimmästä kohteesta, ja Koopmans-de Wet House 185
+   * metriä Greenmarket Squaresta. Iziko South African National
+   * Gallery on tasan 200 metriä Etelä-Afrikan museosta eikä ylitä
+   * sääntöä. Ne mainitaan matkaoppaassa tai jäävät pois.
+   *
+   * RAUTATIEASEMA PUDOTETTIIN KUVASYYSTÄ, ei etäisyyden takia:
+   * Commonsista ei löytynyt kuvasäännöt täyttävää kuvaa (ainoa
+   * sisäkuva on täynnä mainoksia). Tilalle otettiin Rust en Vreugd
+   * (Panamán ja Houstonin ennakkotapaus). Aseman historia kerrotaan
+   * lehden nostossa K3 ja matkaoppaan jaksossa 1.
+   *
+   * PÖYTÄVUORI, BO-KAAP JA COMPANY'S GARDEN EIVÄT OLE KARTALLA
+   * AIHESYISTÄ: ne ovat lehden omien nostojen ja teemasivun aihe.
+   * Robben Island on 6,9 kilometriä Bloubergstrandista eikä mahtuisi
+   * ruutuun.
+   */
+  kapkaupunki: {
+    polku: 'assets/kartat/kapkaupunki-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -33.899, etela: -33.932, lansi: 18.406, ita: 18.437 },
+    esittely: 'Kartan alue on Kapkaupungin vanha ydin meren ja '
+      + 'vuoren välissä. Yläreunassa ovat Victoria & Alfredin '
+      + 'satama-altaat ja niiden takana Taffelinlahti; keskellä '
+      + 'kulkee 1800-luvun ruutukaava, jonka pitkät kadut osoittavat '
+      + 'satamasta vuorelle. Vasemmalla oleva tyhjä rinne on Signal '
+      + 'Hill, ja oikeassa alakulmassa erottuu viisikulmainen '
+      + 'linnoitus. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Denverissä ja Houstonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026, ja kaikki 28 väliä on
+       * mitattu uudelleen haversinilla: pienin on 273 metriä
+       * (kaupungintalo – District Six -museo).
+       */
+      { nimi: 'V&A Waterfront', lat: -33.903056, lon: 18.422778 },
+      { nimi: 'Greenmarket Square', lat: -33.922222, lon: 18.42 },
+      { nimi: 'Iziko Slave Lodge', lat: -33.92506, lon: 18.420393 },
+      { nimi: 'Kaupungintalo', lat: -33.925278, lon: 18.423889 },
+      { nimi: 'Hyväntoivonlinnoitus', lat: -33.9259, lon: 18.4278 },
+      { nimi: 'District Six -museo', lat: -33.927723, lon: 18.423673 },
+      { nimi: 'Iziko Etelä-Afrikan museo', lat: -33.928889, lon: 18.415 },
+      { nimi: 'Rust en Vreugd', lat: -33.9304, lon: 18.4205 },
+    ],
+  },
+  /*
+   * NAIROBI (6.9.2026). Rajaus on 3,1 x 2,7 kilometriä Museum
+   * Hilliltä rautatiealueelle — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n nairobi-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * maasait ja paikka ennen kaupunkia, Ugandan radan rakentaminen,
+   * ruttovuosi ja pääkaupungiksi tulo sekä matatu-kulttuuri;
+   * teemasivu kertoo kansallispuistosta, sarvikuonoista,
+   * Kitengelan muuttokäytävästä ja Wangari Maathain kahdesta
+   * kamppailusta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe. Lähimpänä on rautatiemuseo, jonka juttu kertoo
+   * museon omista vetureista eikä radan rakentamisesta.
+   *
+   * UHURU PARK JA KARURAN METSÄ EIVÄT OLE NUMEROITUINA KOHTEINA:
+   * ne ovat teemasivun noston L4 aihe. Uhuru Park näkyy kartalla
+   * puistona ruudun lounaisosassa; Karura on 5,5 kilometriä
+   * pohjoisreunan yläpuolella. Kansallispuisto on noin 11
+   * kilometriä ruudun keskeltä kaakkoon.
+   *
+   * PARLAMENTTITALO PUDOTETTIIN, vaikka etäisyys riittää (374 m
+   * kongressikeskuksesta): sen artikkelin ainoa laaja historiaosuus
+   * koskee vuoden 2024 mielenosoituksia ja niiden uhreja, eikä
+   * juttu mahtuisi lehden linjaukseen "ei nykypolitiikkaa" ilman
+   * että rakennuksen tarina jää tyhjäksi (tarkistus-nairobi.md,
+   * kohta F). Times Tower on 208 metriä kongressikeskuksesta eikä
+   * kanna juttua.
+   *
+   * ARBORETUM JA KANSALLISMUSEO OVAT 216 METRIN PÄÄSSÄ toisistaan
+   * eli niukasti yli 200 metrin säännön. Ne ovat Museum Hillin
+   * vastakkaisilla puolilla ja eri juttujen aiheita.
+   */
+  nairobi: {
+    polku: 'assets/kartat/nairobi-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -1.27, etela: -1.2975, lansi: 36.808, ita: 36.832 },
+    esittely: 'Kartan alue ulottuu Museum Hilliltä pohjoisessa '
+      + 'rautatiealueelle etelässä. Yläreunassa mutkittelee '
+      + 'Nairobi-joki, keskellä kulkee Uhuru Highway leveänä '
+      + 'vinottaisena nauhana, ja sen oikealla puolella on '
+      + 'liikekeskustan tiivis ruutukaava. Vasemmalla laidalla '
+      + 'levittäytyy vihreä vyöhyke arboretumista Uhuru Parkiin, ja '
+      + 'oikeassa alakulmassa haarautuvat ratapihan raiteet. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * 6.9.2026, ja kaikki 28 väliä on mitattu uudelleen
+       * haversinilla: pienin on 216 metriä (arboretum –
+       * kansallismuseo).
+       */
+      { nimi: 'Nairobin arboretum', lat: -1.2743, lon: 36.8131 },
+      { nimi: 'Kenian kansallismuseo', lat: -1.273889, lon: 36.815 },
+      { nimi: 'Nairobin yliopisto', lat: -1.279722, lon: 36.816667 },
+      { nimi: 'Jeevanjeen puutarha', lat: -1.281014, lon: 36.819476 },
+      { nimi: 'Kenian kansallisarkisto', lat: -1.2849, lon: 36.8259 },
+      { nimi: 'Nairobi Gallery', lat: -1.286789, lon: 36.817833 },
+      { nimi: 'Kenyattan kongressikeskus', lat: -1.288611, lon: 36.823056 },
+      { nimi: 'Nairobin rautatiemuseo', lat: -1.293725, lon: 36.822194 },
+    ],
+  },
+  /*
+   * MIAMI (6.9.2026). Rajaus on 3,8 × 4,9 kilometriä Wynwoodista
+   * Miami-joen suulle — perustelu ja itäreunan valinta ovat
+   * tools/piirra-kaupunkikartta.mjs:n miami-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * tequestat ja Miami Circle, vuoden 1873 kourallinen perheitä
+   * lahden rannalla, Julia Tuttle ja rautatie 1896 sekä South Beachin
+   * art deco; teemasivu kertoo Evergladesista, Biscayne Baystä,
+   * kahdesta vuodenajasta ja kalkkikivestä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * MIAMI CIRCLE JÄÄ POIS AIHESYISTÄ, ei etäisyyden takia: se
+   * mahtuisi ruutuun (25,76947 / −80,188961) mutta on noston M1 aihe.
+   * Samasta syystä ruudun ulkopuolelle jäävät Little Havanan
+   * Máximo Gómez Park ja South Beachin art deco -korttelit.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ TAI SEN
+   * TUNTUMASSA (tarkistus-miami.md, kohta F): Frost Science on 128
+   * metrin päässä Pérezin museosta ja Bayside Marketplace 378 metrin
+   * päässä Vapaudentornista mutta on ostoskeskus eikä kohde.
+   * Vizcaya on 3,5 kilometriä etelässä. Kaikki mainitaan
+   * matkaoppaassa.
+   */
+  miami: {
+    polku: 'assets/kartat/miami-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 25.8060, etela: 25.7620, lansi: -80.2160, ita: -80.1780 },
+    esittely: 'Kartan alue ulottuu Wynwoodin varastokortteleista '
+      + 'pohjoisessa Miami-joen suulle etelässä. Oikeassa reunassa on '
+      + 'Biscayne Bay, keskellä keskustan ruutukaava ja vasemmalla '
+      + 'moottoritie, joka erottaa keskustan lännen kaupunginosista. '
+      + 'Alaosassa joki mutkittelee lahteen. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Denverissä ja Houstonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026; Pérezin museon koordinaatti
+       * luettiin artikkelin coord-mallineesta, koska rajapinta ei
+       * palauta sille koordinaattia. Pienin väli on 462 metriä
+       * (Bayfront Park – Olympia-teatteri).
+       */
+      { nimi: 'Wynwoodin muraalikorttelit', lat: 25.804, lon: -80.199 },
+      { nimi: 'Esittävän taiteen keskus', lat: 25.7876332, lon: -80.1920912 },
+      { nimi: 'Pérezin taidemuseo', lat: 25.785894, lon: -80.186705 },
+      { nimi: 'Lyric-teatteri', lat: 25.78188889, lon: -80.198 },
+      { nimi: 'Vapaudentorni', lat: 25.78, lon: -80.18972222 },
+      { nimi: 'Bayfront Park', lat: 25.775, lon: -80.186 },
+      { nimi: 'Olympia-teatteri', lat: 25.7742, lon: -80.19051683 },
+      { nimi: 'Piirikunnan oikeustalo', lat: 25.77461111, lon: -80.19513889 },
+    ],
+  },
+  /*
+   * HALIFAX (6.9.2026). Rajaus on 3,3 × 4,2 kilometriä
+   * linnoituskukkulalta niemimaan eteläkärkeen — perustelu ja ruudun
+   * pystysuunta ovat tools/piirra-kaupunkikartta.mjs:n
+   * halifax-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * mi'kmaqit ja Kjipuktuk, vuoden 1749 perustaminen, isoisän
+   * matkavuoden 1873 purjelaivasatama ja vuoden 1917 räjähdys;
+   * teemasivu kertoo satamasta, säästä, hurrikaaneista ja
+   * graniittirannikosta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe. Lähimpänä on Pyhän Paavalin kirkko, joka näkyy
+   * noston H2 kuvassa vuoden 1759 kaiverruksessa — juttu kertoo
+   * kuitenkin rakennuksesta ja sen esikuvasta Lontoossa, mitä lehti
+   * ei käsittele lainkaan.
+   *
+   * NELJÄ KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-halifax.md, kohta E): Province House on 115 metriä
+   * Pyhän Paavalin kirkosta, Nova Scotian taidegalleria 59 metriä
+   * Province Housesta ja 131 metriä merimuseosta, ja
+   * kaupunginkirjasto 206 metriä vanhasta hautausmaasta. Ne
+   * mainitaan matkaoppaan jaksossa 2, ja kirjastolle on siellä oma
+   * kuva.
+   *
+   * FORT NEEDHAM, AFRICVILLE JA FAIRVIEW LAWN JÄÄVÄT POIS: kaksi
+   * jälkimmäistä ovat ruudun ulkopuolella pohjoisessa, ja
+   * muistokellotorni on noston H4 aihe.
+   */
+  halifax: {
+    polku: 'assets/kartat/halifax-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 44.6560, etela: 44.6180, lansi: -63.6000, ita: -63.5580 },
+    esittely: 'Kartan alue kattaa Halifaxin niemimaan koko leveyden: '
+      + 'oikealla on satama, vasemmalla Northwest Armin kapea vuono ja '
+      + 'väliin jää keskustan ruutukaava. Yläreunassa erottuu '
+      + 'linnoituskukkulan tähtimäinen muoto ja alareunassa niemen '
+      + 'metsäinen kärki. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 6.9.2026,
+       * ja kaikki välit on mitattu uudelleen: pienin on 222 metriä
+       * (linnoitus – kellotorni), toiseksi pienin 238 metriä
+       * (kellotorni – Pyhän Paavalin kirkko).
+       */
+      { nimi: 'Halifaxin linnoitus', lat: 44.6475, lon: -63.58027778 },
+      { nimi: 'Vanha kellotorni', lat: 44.64722222, lon: -63.5775 },
+      { nimi: 'Pyhän Paavalin kirkko', lat: 44.6475, lon: -63.57472222 },
+      { nimi: 'Atlantin merimuseo', lat: 44.64769444, lon: -63.57105556 },
+      { nimi: 'Julkinen puutarha', lat: 44.64277778, lon: -63.58222222 },
+      { nimi: 'Vanha hautausmaa', lat: 44.6434, lon: -63.5728 },
+      { nimi: 'Pier 21', lat: 44.63777778, lon: -63.56583333 },
+      { nimi: 'Point Pleasant Park', lat: 44.62277778, lon: -63.56916667 },
+    ],
+  },
 };
 
 /*

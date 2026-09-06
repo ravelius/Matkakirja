@@ -85,11 +85,21 @@ test('kaikuversio on vain saapumisrepliikeillä', () => {
 
 /* ---------- tagit ---------- */
 
-test('elävöitystagit eivät muuta kaanonin tekstiä', () => {
+/*
+ * V2-MALLILLA PUHE ON PUHDASTA TEKSTIÄ (omistaja 6.9.2026: "v2 versio
+ * on parempi tälle äänelle, eli ei tule ollenkaan ohjausmerkkejä").
+ * Tagit ovat yhä taulussa v3-kokeilua varten, mutta mallille lähtevä
+ * teksti on täsmälleen kaanoni — hakasulku puheessa luettaisiin ääneen.
+ */
+test('v2-mallille lähtee kaanonin teksti ilman tageja; tagitaulu säilyy v3:lle', () => {
   for (const rivi of repliikit()) {
-    assert.ok(TAGIT[rivi.avain], `${rivi.avain}: elävöitystagit puuttuvat`);
-    assert.notEqual(rivi.puhe, rivi.teksti, `${rivi.avain}: puhemuodossa ei ole tageja`);
-    assert.equal(ilmanTageja(rivi.puhe), rivi.teksti,
+    assert.ok(TAGIT[rivi.avain], `${rivi.avain}: elävöitystagit puuttuvat taulusta`);
+    assert.equal(rivi.puhe, rivi.teksti, `${rivi.avain}: puhemuodossa on ohjausmerkkejä`);
+    assert.ok(!/\[[^\]]+\]/.test(rivi.puhe), `${rivi.avain}: hakasulkutagi puheessa`);
+    // Tagitus on yhä kaanonia kunnioittava, jos v3 otetaan takaisin.
+    const tagitettu = puhemuoto(rivi.teksti, TAGIT[rivi.avain]);
+    assert.notEqual(tagitettu, rivi.teksti);
+    assert.equal(ilmanTageja(tagitettu), rivi.teksti,
       `${rivi.avain}: tagien poisto ei palauta kaanonista tekstiä`);
   }
 });

@@ -41876,4 +41876,1266 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * KAPKAUPUNGIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 6.9.2026,
+   * paketti O9). Kartta on js/packs/maakartat.js:
+   * KAUPUNKIKARTAT.kapkaupunki, ja jokainen väite on luettu
+   * en-Wikipedian raakatekstistä 6.9.2026 (artikkelit "V&A
+   * Waterfront", "Greenmarket Square", "Slave Lodge, Cape Town",
+   * "Cape Town City Hall", "Castle of Good Hope", "District Six
+   * Museum", "District Six", "Iziko South African Museum",
+   * "Rust en Vreugd", "Cape Town", "History of Cape Town").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat khoe- ja san-kansat lahdella, yhtiön vihannestarha
+   * ja orjuuden alku, vuoden 1873 satama ja timantit sekä Bo-Kaap ja
+   * arabialainen afrikaans; teemasivu kertoo Pöytävuoresta,
+   * fynbosista, Maclearin kiviröykkiöstä ja pöytäliinapilvestä.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   * Lähimpänä ovat Slave Lodge ja lehden nosto K2: nosto kertoo
+   * puutarhasta ja ensimmäisistä orjakuljetuksista, juttu
+   * rakennuksesta ja sen viidestä eri käyttötarkoituksesta.
+   *
+   * NELJÄ KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ ja yksi
+   * kuvasyystä (tarkistus-kapkaupunki.md, kohta E): Groote Kerk
+   * 55 m, St George's Cathedral 88 m, Grand Parade 99 m,
+   * Koopmans-de Wet House 185 m, ja rautatieasema kuvasyystä.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 900 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * kapkaupunki-lohkossa, africa-valokuvat.js:ssä eikä
+   * africa-kulttuuri.js:ssä.
+   */
+  kapkaupunki: {
+    'V&A Waterfront': {
+      aika: '1860',
+      teksti: 'V&A Waterfront on rakennettu eteläisen pallonpuoliskon '
+          + 'vanhimman toimivan sataman paikalle. Jan van Riebeeck '
+          + 'rakensi tänne pienen laiturin jo 1654, kaksi vuotta '
+          + 'saapumisensa jälkeen. Kunnollista satamaa ei silti ollut '
+          + 'vielä pitkään aikaan: kesäkuun 1858 talvimyrskyt '
+          + 'tuhosivat Taffelinlahdessa yli kolmekymmentä alusta, ja '
+          + 'Lloyd\'s kieltäytyi sen jälkeen vakuuttamasta lahdessa '
+          + 'talvehtivia laivoja.'
+          + '\n\n'
+          + 'Ratkaisu oli aallonmurtaja. Aurinkoisena päivänä 17. '
+          + 'syyskuuta 1860 kadetti prinssi Alfred, kuningatar '
+          + 'Viktorian toinen poika, kaatoi ensimmäisen kivikuorman '
+          + 'mereen. Hänen mukaansa nimettiin ensimmäinen allas. Kun '
+          + 'timantit ja kulta löytyivät, Alfred-allas kävi pieneksi '
+          + 'ja sen viereen rakennettiin Victoria-allas; molemmat '
+          + 'valmistuivat vuosien 1860 ja 1920 välillä, ja niiden '
+          + 'ympärillä on yhä tuon ajan satamarakennuksia.'
+          + '\n\n'
+          + 'Sataman ja kaupungin väliin alettiin täyttää maata 1938, '
+          + 'ja työ valmistui 1945; uusi Foreshore-alue teki '
+          + 'keskustan laajenemisen mahdolliseksi. Nykyinen '
+          + 'satamakaupunginosa syntyi marraskuussa 1988, kun '
+          + 'vanhojen altaiden ympäristöä alettiin kehittää. Alue on '
+          + '123 hehtaaria, siellä on yli 450 liikettä, seitsemän '
+          + 'museota ja 22 historiallista maamerkkiä — ja satama on '
+          + 'yhä työssä keskellä kaikkea.',
+      kuvat: [
+        {
+          tiedosto: 'Cape Town Waterfront (30295020272).jpg',
+          selite: 'Satama-altaat, laiturit ja niiden ympärille '
+            + 'rakennettu kaupunginosa ylhäältä nähtynä.',
+          lahde: 'Bernard DUPONT from FRANCE, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Greenmarket Square': {
+      aika: '1696',
+      teksti: 'Greenmarket Square syntyi luonnostaan: se oli lähin '
+          + 'aukio yhtiön puutarhan ja ympäröivien tilojen tuotteille. '
+          + 'Aukiosta tuli kaupungin hallinnollinen ja sosiaalinen '
+          + 'keskus 1696, kun sen laitaan pystytettiin porvarivartion '
+          + 'vahtitupa. Keskellä oli lähde, josta kaupunkilaiset '
+          + 'hakivat juomavetensä. Torilla myytiin tuoretuotteiden '
+          + 'lisäksi muuta tavaraa ja myös orjuutettuja ihmisiä.'
+          + '\n\n'
+          + 'Vahtitupa purettiin 1761 ja tilalle rakennettiin Old '
+          + 'Town House, joka toimi aikanaan kaupungintalona ja jossa '
+          + 'on nykyään Michaelis-taidekokoelma. Talon pääoven edusta '
+          + 'on Kapkaupungin historiallinen keskipiste. 1730-luvulla '
+          + 'aukion olkikattoiset talot alkoivat vaihtua '
+          + 'tasakattoisiin, ja vuoteen 1845 mennessä lähes kaikki '
+          + 'yksikerroksiset oli korvattu korkeammilla.'
+          + '\n\n'
+          + 'Aukio menetti asemansa, kun kaupungintalo valmistui 1905 '
+          + 'ja kauppa siirtyi Grand Paradelle. 1950-luvulla '
+          + 'Greenmarket Square muutettiin pysäköintialueeksi, ja '
+          + '1961 se ja sitä ympäröivät rakennukset julistettiin '
+          + 'kansallismonumentiksi. Parkkipaikka korvattiin '
+          + '1980-luvun lopulla käsityö- ja kirpputorilla, ja aukio '
+          + 'muutettiin 2000-luvun alussa kävelyalueeksi. Keskellä on '
+          + 'yhä käsikäyttöinen pumppu, joka nostaa vettä kaupungin '
+          + 'alla virtaavasta maanalaisesta joesta.',
+      kuvat: [
+        {
+          tiedosto: 'Old Town House Greenmarket Square, Cape Town.JPG',
+          selite: 'Old Town Housen holvikaarien yllä liehuu lippu ja '
+            + 'kyyhkyset lentävät julkisivun ohi.',
+          lahde: 'NegativeC, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Iziko Slave Lodge': {
+      aika: '1679',
+      teksti: 'Slave Lodge on yksi Kapkaupungin vanhimmista '
+          + 'rakennuksista. Hollantilainen Itä-Intian kauppakomppania '
+          + 'rakensi sen 1679 majoittaakseen orjuutettuja ihmisiä, '
+          + 'jotka tekivät yhtiön töitä. Aluksi taloon mahtui jopa '
+          + 'viisisataa ihmistä, ja olot olivat ahtaat. Asukkaat oli '
+          + 'tuotu Itä-Afrikasta, Madagaskarilta, Intiasta ja '
+          + 'Kaakkois-Aasiasta, ja he tekivät maatalous-, rakennus- '
+          + 'ja kotitaloustöitä.'
+          + '\n\n'
+          + 'Britannian hallinnossa rakennuksen käyttö orjakortteerina '
+          + 'päättyi 1811, ja siitä tuli virastotalo. Sata vuotta se '
+          + 'oli siirtomaahallinnon keskus, ja 1854 sen tiloissa '
+          + 'kokoontui ensimmäinen Kapin parlamentti. Vuonna 1911 talo '
+          + 'muutettiin korkeimmaksi oikeudeksi, ja siihen '
+          + 'rakennettiin oikeussalit ja tuomarien huoneet. Oikeus '
+          + 'toimi täällä 1960-luvulle asti.'
+          + '\n\n'
+          + 'Vuonna 1966 rakennus kunnostettiin museoksi, joka avattiin '
+          + 'yleisölle 1967. Alkuun se oli kulttuurihistoriallinen '
+          + 'museo, mutta 1998 se nimettiin Slave Lodge Museumiksi ja '
+          + 'liitettiin Iziko-museoiden joukkoon. Sama talo on siis '
+          + 'ollut kolmen vuosisadan aikana orjakortteeri, hallinnon '
+          + 'keskus, tuomioistuin ja lopulta museo, joka kertoo '
+          + 'ensimmäisestä käyttötarkoituksestaan.',
+      kuvat: [
+        {
+          tiedosto: 'Iziko Slave Lodge photo4.jpg',
+          selite: 'Keltaisen talon julkisivulla riippuu museon lippuja '
+            + 'kadun kulmassa.',
+          lahde: 'Sami Mlouhi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kaupungintalo': {
+      aika: '1905',
+      teksti: 'Kapkaupungilla ei ollut omaa kaupungintaloa ennen vuotta '
+          + '1905, vaikka pienemmillä paikkakunnilla oli. Ajatus '
+          + 'heräsi 1887 kuningatar Viktorian viisikymmenvuotisjuhlan '
+          + 'yhteydessä, ja kun kaupunginvaltuusto oli hyväksynyt '
+          + 'suunnitelman, järjestettiin 1893 arkkitehtuurikilpailu. '
+          + 'Sen voittivat Harry Austin Reid ja Frederick George '
+          + 'Green. Talo rakennettiin hunajanväristä oolittista '
+          + 'kalkkikiveä, joka tuotiin Bathista Englannista.'
+          + '\n\n'
+          + 'Urut tilattiin Norman and Beardilta Lontoosta ja '
+          + 'Norwichista, ja määritykset laati Pyhän Paavalin '
+          + 'katedraalin urkuri Sir George Martin. Soittimessa on '
+          + '3 165 pilliä, pisin 32 jalkaa ja lyhin kolme neljäsosaa '
+          + 'tuumaa. Tornin kello lyö tunnit ja soittaa '
+          + 'Westminster-neljännekset; kellot valoi John Taylor & Co '
+          + 'Loughboroughissa. Ensimmäisen maailmansodan muistoksi '
+          + 'taloon asennettiin kellopeli, johon lisättiin 1925 '
+          + 'kaksikymmentäkaksi kelloa.'
+          + '\n\n'
+          + 'Talon kuuluisin hetki tuli 11. helmikuuta 1990. Vain '
+          + 'tunteja vankilasta vapautumisensa jälkeen Nelson Mandela '
+          + 'piti ensimmäisen julkisen puheensa vuosikymmeniin '
+          + 'kaupungintalon parvekkeelta Grand Paradelle kokoontuneelle '
+          + 'väelle. Samalle parvekkeelle paljastettiin 24. heinäkuuta '
+          + '2018 hänen patsaansa. Kaupungin virastot ovat nykyään '
+          + 'muualla, ja talo on konsertti- ja näyttelypaikka sekä '
+          + 'Kapkaupungin filharmonikkojen pääsali.',
+      kuvat: [
+        {
+          tiedosto: 'CapeTown CityHall.jpg',
+          selite: 'Kaupungintalon kellotorni nousee Grand Paraden '
+            + 'torikojujen takaa, ja Pöytävuori sulkee näkymän.',
+          lahde: 'Martinvl, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hyväntoivonlinnoitus': {
+      aika: '1666',
+      teksti: 'Hyväntoivonlinnoitus on Etelä-Afrikan vanhin säilynyt '
+          + 'rakennus. Hollantilainen Itä-Intian kauppakomppania '
+          + 'rakensi sen vuosina 1666–1679 korvaamaan Jan van '
+          + 'Riebeeckin savesta ja puusta tehdyn linnakkeen. '
+          + 'Ensimmäinen kivi laskettiin 2. tammikuuta 1666. '
+          + 'Viisikulmaisen linnoituksen bastionit nimettiin 26. '
+          + 'huhtikuuta 1679 Oranian Vilhelm III:n arvonimien mukaan: '
+          + 'Leerdam, Buuren, Katzenellenbogen, Nassau ja Oranje.'
+          + '\n\n'
+          + 'Linnoitus rakennettiin osittain orjatyöllä. Yhtiö ei '
+          + 'orjuuttanut paikallisia, koska se pelkäsi kapinaa eikä '
+          + 'tiennyt, kuinka suuria seudun kansat olivat; sen sijaan '
+          + 'Kapiin tuotiin jopa kuusikymmentätuhatta orjuutettua '
+          + 'ihmistä Madagaskarilta, Mosambikista, Hollannin '
+          + 'Itä-Intiasta ja Intiasta. Portti siirrettiin 1682 '
+          + 'merenpuolelta nykyiselle paikalleen, ja sen päälle '
+          + 'rakennettiin 1684 kellotorni. Kello valettiin '
+          + 'Amsterdamissa 1697, painaa runsaat kolmesataa kiloa ja '
+          + 'kuului kymmenen kilometrin päähän.'
+          + '\n\n'
+          + 'Muurit maalattiin keltaisiksi, koska väri vaimensi '
+          + 'auringon ja kuumuuden vaikutusta. Sisäpihaa jakaa muuri, '
+          + 'ja sen keskellä on De Kat -parveke, jolta luettiin '
+          + 'kuulutukset sotilaille, orjuutetuille ja porvareille; '
+          + 'nykyinen parveke on vuosilta 1786–1790. Linnoitus '
+          + 'suojeltiin 1936 ensimmäisenä kohteena koko '
+          + 'Etelä-Afrikassa. Arkiaamuisin kello kymmenen portit '
+          + 'avataan avainseremonialla, joka jäljittelee noin '
+          + 'kolmensadan vuoden takaista aamurutiinia.',
+      kuvat: [
+        {
+          tiedosto: 'Castle of Good Hope, Cape Town 02.jpg',
+          selite: 'Sisäpihan keltainen muuri, aurinkokello ja '
+            + 'valkoinen De Kat -parveke Paholaisenhuipun edessä.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'District Six -museo': {
+      aika: '1994',
+      teksti: 'District Six sai nimensä 1966, kun siitä tehtiin '
+          + 'Kapkaupungin kuudes kunnallispiiri. Kaupunginosa oli '
+          + 'alkanut kasvaa orjuuden lakkauttamisen jälkeen, ja siellä '
+          + 'asui aikanaan lähes kymmenesosa koko kaupungin väestöstä: '
+          + 'vapautuneiden orjien jälkeläisiä, käsityöläisiä, '
+          + 'kauppiaita ja siirtolaisia. Alue julistettiin 11. '
+          + 'helmikuuta 1966 valkoisten alueeksi, siirrot alkoivat '
+          + '1968, ja yli kuusikymmentätuhatta asukasta siirrettiin '
+          + 'pakolla Cape Flatsin lakeuksille.'
+          + '\n\n'
+          + 'Talot purettiin, mutta suunniteltua uutta kaupunginosaa '
+          + 'ei koskaan rakennettu. Alue nimettiin 1970 uudelleen '
+          + 'Zonnebloemiksi, ja suuri osa siitä jäi tyhjäksi maaksi. '
+          + 'Vanha nimi palautettiin virallisesti 17. joulukuuta 2019 '
+          + 'sen jälkeen, kun museo oli aloittanut asiasta kampanjan '
+          + 'ja osa asukkaista oli hakenut nimenmuutosta jo 2018.'
+          + '\n\n'
+          + 'Museo perustettiin 1994 vanhaan metodistikirkkoon; sen '
+          + 'taustalla oleva säätiö oli aloittanut työnsä 1989. '
+          + 'Museon lattian peittää suuri kartta kaupunginosasta, '
+          + 'johon entiset asukkaat ovat käsin kirjoittaneet, missä '
+          + 'heidän talonsa olivat. Kokoelmassa on vanhoja '
+          + 'liikennemerkkejä, perheiden esineitä ja purkamista '
+          + 'koskevia näyttelyitä; yksi entisistä asukkaista on '
+          + 'jazzpianisti Abdullah Ibrahim. Museo sai 2003 '
+          + 'alankomaalaisen Prince Claus -palkinnon.',
+      kuvat: [
+        {
+          tiedosto: 'District 6 Museum building.JPG',
+          selite: 'Museon vanha kirkkorakennus seisoo kahden '
+            + 'palmun välissä Buitenkant Streetin varrella.',
+          lahde: 'Discott, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Iziko Etelä-Afrikan museo': {
+      aika: '1825',
+      teksti: 'Iziko Etelä-Afrikan museo perustettiin 1825, ja se on '
+          + 'maan ensimmäinen museo. Perustaja oli Kapin siirtomaan '
+          + 'kuvernööri lordi Charles Somerset, joka hoiti virkaa '
+          + 'vuosina 1814–1826. Nykyisellä paikallaan Company\'s '
+          + 'Gardenin eteläpäässä museo on ollut vuodesta 1897. Sana '
+          + 'Iziko on xhosaa ja tarkoittaa tulisijaa; nimi otettiin '
+          + 'käyttöön syyskuussa 2012, kun museo liitettiin '
+          + 'Iziko-museoiden joukkoon.'
+          + '\n\n'
+          + 'Museo alkoi yleismuseona, jossa oli sekä luonnonhistoriaa '
+          + 'että esineistöä lähialueilta ja kauempaa. Vähitellen '
+          + 'kokoelmat järjestettiin samaan tapaan kuin Euroopan ja '
+          + 'Amerikan museoissa 1800-luvun lopulla ja 1900-luvun '
+          + 'alussa. Nykyään museossa on yli puolitoista miljoonaa '
+          + 'tieteellistä näytettä: fossiileja, jotka ovat jopa 700 '
+          + 'miljoonaa vuotta vanhoja, ja hyönteisiä ja kaloja, jotka '
+          + 'on pyydetty muutamaa päivää aiemmin.'
+          + '\n\n'
+          + 'Kokoelmissa on myös 120 000 vuotta vanhoja kivityökaluja, '
+          + '1900-luvun pukuja ja nykyaikaisia painettuja t-paitoja. '
+          + 'Museo on jaettu neljään kerrokseen, joissa on esillä '
+          + 'kalliotaidetta, fossiileja, merieläimiä ja meteoriitteja. '
+          + 'Samalla tontilla on Etelä-Afrikan kansallisgalleria, ja '
+          + 'saman puistokäytävän varrella ovat parlamentti, '
+          + 'kansalliskirjasto ja Pyhän Yrjön katedraali.',
+      kuvat: [
+        {
+          tiedosto: 'Iziko South Africa Museum.JPG',
+          selite: 'Museon vaalea julkisivu päättää Company\'s Gardenin '
+            + 'puistokäytävän etelässä.',
+          lahde: 'Discott, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rust en Vreugd': {
+      aika: '1778',
+      teksti: 'Rust en Vreugd tarkoittaa lepoa ja iloa. Se on '
+          + '1700-luvun kaupunkitalo Buitenkant Streetin varrella, ja '
+          + 'sitä pidetään yhtenä Kapkaupungin hienoimmista '
+          + 'säilyneistä kaupunkiasunnoista. Talon veistetty '
+          + 'rokokoo-ovi ja sen yläpuolinen parveke ovat esimerkki '
+          + 'siitä tyylistä, jota Kapissa rakennettiin, kun '
+          + 'hollantilainen, saksalainen, ranskalainen ja '
+          + 'indonesialainen perinne kohtasivat.'
+          + '\n\n'
+          + 'Kapkaupungissa on maailman suurin Cape Dutch -tyylisten '
+          + 'rakennusten tiheys. Tyyli näkyy selvimmin Constantiassa, '
+          + 'keskustan vanhoissa hallintorakennuksissa ja Long '
+          + 'Streetin varrella. Rust en Vreugd on kaupunkitalon versio '
+          + 'samasta tyylistä: yhtä leveä sali, symmetrinen julkisivu '
+          + 'ja koristeltu pääsisäänkäynti, mutta maalaiskartanon '
+          + 'sijaan kaupunkitontilla.'
+          + '\n\n'
+          + 'Talossa on nykyään esillä William Fehrin kokoelma, jota '
+          + 'hallinnoivat Iziko-museot. Sama kokoelma on osittain '
+          + 'esillä myös Hyväntoivonlinnoituksen De Kat -parvekkeen '
+          + 'takana olevissa saleissa. Talon takana on 1700-luvun '
+          + 'tyyliin palautettu puutarha, ja sen yli näkyy suoraan '
+          + 'Pöytävuoren rinne — juuri se näkymä, jonka takia talo '
+          + 'aikanaan rakennettiin tähän kohtaan.',
+      kuvat: [
+        {
+          tiedosto: 'Rust en Vreugd, House and Garden.jpg',
+          selite: 'Vaaleanpunainen kaupunkitalo parvekkeineen seisoo '
+            + 'puutarhapolun päässä pilviverhoisen vuoren edessä.',
+          lahde: 'Raymond Ellis, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * NAIROBIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 6.9.2026,
+   * paketti O9). Kartta on js/packs/maakartat.js:
+   * KAUPUNKIKARTAT.nairobi, ja jokainen väite on luettu
+   * en-Wikipedian raakatekstistä 6.9.2026 (artikkelit "Nairobi
+   * Arboretum", "National Museums of Kenya", "University of
+   * Nairobi", "Jeevanjee Gardens", "Alibhai Mulla Jeevanjee",
+   * "Kenya National Archives", "Nairobi Gallery", "Kenyatta
+   * International Convention Centre", "Nairobi Railway Museum",
+   * "Nairobi").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat maasait ja paikka ennen kaupunkia, Ugandan radan
+   * rakentaminen, ruttovuosi ja pääkaupungiksi tulo sekä
+   * matatu-kulttuuri; teemasivu kertoo kansallispuistosta,
+   * sarvikuonoista, Kitengelan muuttokäytävästä ja Wangari
+   * Maathain kahdesta kamppailusta. Lähimpänä on rautatiemuseo,
+   * jonka juttu kertoo museon omista vetureista ja kokoelmasta
+   * eikä radan rakentamisesta; sama ero kuin Denverissä Coors
+   * Fieldin ja ohuen ilman välillä.
+   *
+   * PARLAMENTTITALO PUDOTETTIIN linjaussyystä ja Times Tower
+   * aihesyystä; Uhuru Park ja Karuran metsä ovat teemasivun noston
+   * aihe (tarkistus-nairobi.md, kohta F).
+   *
+   * ARBORETUM JA KANSALLISMUSEO OVAT 216 METRIN PÄÄSSÄ toisistaan,
+   * eli niukasti yli 200 metrin säännön. Ne ovat Museum Hillin
+   * vastakkaisilla puolilla ja eri juttujen aiheita: toinen kertoo
+   * vuoden 1907 metsäkoeasemasta, toinen vuoden 1910 seurasta.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 900 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * nairobi-lohkossa, africa-valokuvat.js:ssä eikä
+   * africa-kulttuuri.js:ssä.
+   */
+  nairobi: {
+    'Nairobin arboretum': {
+      aika: '1907',
+      teksti: 'Nairobin arboretum perustettiin 1907, kahdeksan vuotta '
+          + 'sen jälkeen kun juna oli saapunut kaupunkiin. Perustaja '
+          + 'oli Batiscombe, ja tarkoitus oli hyvin käytännöllinen: '
+          + 'kokeilla, mitkä metsäpuulajit kasvavat Nairobin '
+          + 'ylängöllä. Puisto oli siis alun perin koeasema, ei '
+          + 'virkistysalue.'
+          + '\n\n'
+          + 'Alue julistettiin luonnonsuojelualueeksi 1932, ja '
+          + 'omistuskirja siirtyi valtiolle 1996. Kokeilu jätti '
+          + 'jälkeensä poikkeuksellisen kokoelman: kolmenkymmenen '
+          + 'hehtaarin alueella kasvaa yli 350 puulajia, sekä '
+          + 'kotimaisia että tuotuja. Alue toimii yhä sekä '
+          + 'tutkimuspaikkana että kaupunkilaisten ulkoilualueena.'
+          + '\n\n'
+          + 'Arboretum on State House Roadin varrella Kilimanin '
+          + 'kaupunginosassa, aivan presidentin virka-asunnon '
+          + 'naapurissa. Se on osa sitä vihreää vyöhykettä, joka '
+          + 'kulkee Museum Hilliltä Uhuru Parkiin ja jonka takia '
+          + 'Nairobia sanotaan nimellä Green City in the Sun. '
+          + 'Kaupungin viheralueita ohjaa yhä siirtomaa-ajan vuoden '
+          + '1948 yleiskaava, joka varasi 28 prosenttia maasta '
+          + 'julkiseksi tilaksi.',
+      kuvat: [
+        {
+          tiedosto: 'Nairobi Arboretum Park 01.JPG',
+          selite: 'Punamullalla kulkeva polku kaartaa puiden lomassa '
+            + 'arboretumin metsässä.',
+          lahde: 'Ahero dala, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kenian kansallismuseo': {
+      aika: '1910',
+      teksti: 'Kaikki alkoi harrastajaseurasta. East Africa and Uganda '
+          + 'Natural History Society perustettiin vuosina 1910–11, ja '
+          + 'sen jäseninä oli lähetyssaarnaajia, virkamiehiä, '
+          + 'lääkäreitä, hammaslääkäreitä, metsästäjiä ja '
+          + 'plantaasinomistajia. Yksi heistä oli pastori Harry '
+          + 'Leakey, jonka poika Louis Leakey tekisi myöhemmin museosta '
+          + 'ihmisen alkuperän tutkimuksen keskuksen. Seura perusti '
+          + '1911 luonnonhistoriallisen museon ja kirjaston, ja '
+          + 'Aladina Visram maksoi yksikerroksisen kaksihuoneisen '
+          + 'rakennuksen.'
+          + '\n\n'
+          + 'Ensimmäinen palkattu intendentti oli herpetologi Arthur '
+          + 'Loveridge, joka saapui maaliskuussa 1914 ja keskittyi '
+          + 'kokoelmien kartuttamiseen; jäsenet toivat näytteitä, '
+          + 'tekivät työtä ja antoivat rahaa. Kun kuvernööri Sir '
+          + 'Robert Coryndon kuoli yllättäen 1925, hänen leskensä '
+          + 'perusti muistorahaston paremman museon rakentamiseksi. '
+          + 'Valtio antoi vastinrahoituksen, rakentaminen alkoi 1928 '
+          + 'ja talo valmistui 1929 — ilman työ- ja varastotiloja, '
+          + 'joten seura kieltäytyi muuttamasta sisään.'
+          + '\n\n'
+          + 'Riita ratkesi niin, että valtio osti vanhan museon ja '
+          + 'rahalla rakennettiin kolme huonetta lisää. Museo avattiin '
+          + 'virallisesti 22. syyskuuta 1930 nimellä Coryndon Museum. '
+          + 'Nykyään se on National Museums of Kenyan päämaja Museum '
+          + 'Hillillä: organisaatio hoitaa yli kahtakymmentä '
+          + 'aluemuseota ja useita maailmanperintökohteita, ja sen '
+          + 'itäafrikkalainen kasvio on yksi Afrikan suurimmista '
+          + 'biologisista kokoelmista, yli seitsemän ja puoli '
+          + 'miljoonaa näytettä.',
+      kuvat: [
+        {
+          tiedosto: 'Ahmed the elephant.jpg',
+          selite: 'Norsun täytetty hahmo ja sen luuranko seisovat '
+            + 'vierekkäin museon salissa.',
+          lahde: 'Kengee8, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nairobin yliopisto': {
+      aika: '1956',
+      teksti: 'Nairobin yliopisto on Kenian suurin yliopisto, ja sen '
+          + 'juuret ovat 1956 perustetussa Royal Technical Collegessa. '
+          + 'Ajatus korkeakoulusta oli syntynyt jo 1947, peruskivi '
+          + 'laskettiin huhtikuussa 1952, ja ensimmäiset opiskelijat '
+          + 'aloittivat huhtikuussa 1956. Samaan aikaan Nairobin '
+          + 'aasialaisyhteisö suunnitteli omaa korkeakouluaan Mahatma '
+          + 'Gandhin muistoksi; päällekkäisen työn välttämiseksi '
+          + 'Gandhi Memorial Academy liitettiin oppilaitokseen '
+          + 'huhtikuussa 1954.'
+          + '\n\n'
+          + 'Nimi vaihtui kahdesti nopeasti. 25. kesäkuuta 1961 '
+          + 'oppilaitoksesta tuli Itä-Afrikan toinen '
+          + 'yliopistokorkeakoulu nimellä Royal College Nairobi, ja '
+          + '20. toukokuuta 1964 se sai nimen University College '
+          + 'Nairobi. Opiskelijat suorittivat aluksi Lontoon '
+          + 'yliopiston tutkintoja ja vuodesta 1966 Itä-Afrikan '
+          + 'yliopiston tutkintoja.'
+          + '\n\n'
+          + 'Itsenäinen yliopisto syntyi 1. heinäkuuta 1970, kun '
+          + 'Itä-Afrikan yliopisto purettiin ja Kenia, Uganda ja '
+          + 'Tansania saivat kukin omansa: Nairobin yliopisto, '
+          + 'Makerere Ugandaan ja Dar es Salaamin yliopisto '
+          + 'Tansaniaan. Vuonna 1970 opiskelijoita oli 2 768, '
+          + 'lukuvuonna 2023 jo 49 047. Kampuksen pihalla on '
+          + 'suihkulähde nimeltä Fountain of Knowledge.',
+      kuvat: [
+        {
+          tiedosto: 'Fountain Knowledge Univ Nairobi May19 R1600644.jpg',
+          selite: 'Kaareva kiviveistos kirahvireliefeineen suihkuaa '
+            + 'vettä yliopiston pihalla.',
+          lahde: 'Timothy A. Gonsalves, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jeevanjeen puutarha': {
+      aika: '1900-luvun alku',
+      teksti: 'Jeevanjeen puutarha on avoin puisto keskellä '
+          + 'liikekeskustaa, ja se on Nairobin ainoa puisto, joka on '
+          + 'suoraan kansan omistuksessa: alue oli yksityistä maata, '
+          + 'joka lahjoitettiin kaupunkilaisille lepopaikaksi ja jota '
+          + 'pidetään heidän hyväkseen. Se on myös yksi kaupungin '
+          + 'vanhimmista julkisista viheralueista, perustettu '
+          + '1900-luvun alussa.'
+          + '\n\n'
+          + 'Lahjoittaja Alibhai Mulla Jeevanjee syntyi 1856 '
+          + 'Karachissa. Hän lähti kolmenkymmenen vuoden iässä '
+          + 'kiertämään Intiaa kulkukauppiaana, siirtyi Itä-Australiaan '
+          + 'ja oppi siellä englannin, ja palasi Karachiin perustamaan '
+          + 'yhtiön, joka palveli satamaan tulevia laivoja. Vuonna '
+          + '1890 hän purjehti dhow-veneellä Mombasaan avaamaan '
+          + 'sivukonttoria.'
+          + '\n\n'
+          + 'Vuonna 1895 Jeevanjee sai urakan hankkia työvoimaa '
+          + 'Ugandan radan rakentamiseen. Ensimmäisessä ryhmässä oli '
+          + '350 miestä, ja kuudessa vuodessa määrä nousi 31 895:een. '
+          + 'Urakasta tuli hyvin tuottoisa, ja vuosisadan vaihteessa '
+          + 'Jeevanjee oli suurin kiinteistönomistaja sekä Nairobissa '
+          + 'että Mombasassa. Hän osti 1901 Nairobin intialaisen '
+          + 'basaarin, rakensi 1904 pysyvän markkinapaikan ja perusti '
+          + 'viikkolehden African Standard, joka myytiin 1905 ja '
+          + 'nimettiin East African Standardiksi.',
+      kuvat: [
+        {
+          tiedosto: 'Nairobi Jeevanjee Gardens.jpg',
+          selite: 'Puiston avoin keskusaukio on ympäröity vanhoilla '
+            + 'puilla ja kivipenkeillä.',
+          lahde: 'Yerpo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kenian kansallisarkisto': {
+      aika: '1965',
+      teksti: 'Kenian kansallisarkisto perustettiin 1965 parlamentin '
+          + 'säätämällä lailla. Se sai tilat rakennuksesta, jossa oli '
+          + 'aiemmin toiminut Kenya Commercial Bank, ja se seisoo yhä '
+          + 'liikekeskustan laidalla Moi Avenuen varrella '
+          + 'Ambassadeur-hotellin vieressä; takana kulkee Tom Mboya '
+          + 'Street. Kokoelmassa on 40 000 nidettä.'
+          + '\n\n'
+          + 'Rakennuksen pohjakerroksessa on Murumbi-galleria, joka on '
+          + 'nimetty Kenian toisen varapresidentin Joseph Murumbin '
+          + 'mukaan. Se on Afrikan suurin panafrikkalainen '
+          + 'taidegalleria, ja siinä on esineitä eri puolilta '
+          + 'mannerta. Murumbi oli kerännyt kokoelmansa itse ja '
+          + 'torjunut useita suuria ulkomaisia ostotarjouksia.'
+          + '\n\n'
+          + 'Kokoelma jäi Keniaan yhden virkamiehen päätöksellä. '
+          + 'Arkiston ensimmäinen musta johtaja, tri Maina David '
+          + 'Kagombe, pelkäsi Murumbin myyvän kokoelmansa ulkomaille '
+          + 'ja julkaisi maaliskuussa 1976 asetusilmoituksen, joka '
+          + 'esti ketään — myös Murumbia itseään — viemästä maasta '
+          + 'esineitä, jotka johtaja katsoi kansallisesti arvokkaiksi '
+          + 'antiikkiesineiksi. Murumbi myi kokoelmansa ja '
+          + 'Muthaigan-kotinsa Kenian valtiolle.',
+      kuvat: [
+        {
+          tiedosto: 'Kenya National Archives building.jpg',
+          selite: 'Arkiston pylväikkö ja kaiverrettu nimi kohoavat '
+            + 'vilkkaan kadun yläpuolelle.',
+          lahde: 'DesiBoy101, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nairobi Gallery': {
+      aika: '1913',
+      teksti: 'Nairobi Gallery on taidegalleria liikekeskustan '
+          + 'laidalla, ja se on keskittynyt afrikkalaiseen taiteeseen. '
+          + 'Rakennuksen suunnitteli C. Rand Ovary, ja se valmistui '
+          + '1913 siirtomaahallinnon virastoksi: talossa '
+          + 'rekisteröitiin avioliitot, syntymät ja kuolemat. '
+          + 'Itsenäistymisen jälkeen se oli maakuntakomissaarin '
+          + 'toimisto vuoteen 1984 ja sen jälkeen puolueen '
+          + 'piiritoimisto vuoteen 1997.'
+          + '\n\n'
+          + 'Talo julistettiin kansallismonumentiksi 1995, ja se '
+          + 'siirtyi 1997 National Museums of Kenyan omistukseen. '
+          + 'Peruskorjaus alkoi 1999 ja valmistui 2005, jolloin '
+          + 'galleria avattiin ensimmäisen kerran. Vuonna 2019 '
+          + 'kokoelma digitoitiin yhteistyössä Googlen kanssa, ja '
+          + 'salit kuvattiin myös katunäkymän tapaan selattaviksi.'
+          + '\n\n'
+          + 'Kokoelmassa on panafrikkalainen postimerkkikokoelma ja '
+          + 'Joseph Murumbin valokuvia. Joseph ja Sheila Murumbin '
+          + 'huoneessa on lamulainen sohva ja sansibarilainen kaappi. '
+          + 'Muualla saleissa on turkanalaisia koruja, afrikkalaisia '
+          + 'jakkaroita, eri kansojen säilytys- ja keittoastioita, '
+          + 'nubialaisia koreja, puuveistoksia ja kanga-tekstiilejä '
+          + 'sekä nigerialaisten ja tansanialaisten taiteilijoiden '
+          + 'teoksia.',
+      kuvat: [
+        {
+          tiedosto: 'The Nairobi gallery.jpg',
+          selite: 'Metalliromusta koottu veistos vartioi kapeaa '
+            + 'näyttelykäytävää.',
+          lahde: 'Rose Musyoki, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kenyattan kongressikeskus': {
+      aika: '1973',
+      teksti: 'Kenyattan kongressikeskus on Nairobin tunnetuin '
+          + 'rakennus. Presidentti Jomo Kenyatta tilasi sen 1967, ja '
+          + 'sen suunnittelivat norjalainen arkkitehti Karl Henrik '
+          + 'Nøstvik ja kenialainen David Mutiso. Työ tehtiin kolmessa '
+          + 'vaiheessa: ensin jalusta, sitten torni ja lopuksi '
+          + 'täysistuntosali. Rakennus valmistui 1973, ja avajaiset '
+          + 'pidettiin syyskuussa presidentin johdolla.'
+          + '\n\n'
+          + 'Torni on 32-kerroksinen ja runsaat 105 metriä korkea. Se '
+          + 'oli Kenian korkein rakennus 26 vuotta. Muodot viittaavat '
+          + 'perinteiseen afrikkalaiseen rakentamiseen: kuutiot '
+          + 'muodostavat täysistuntosalin, torni on useista kuutioista '
+          + 'koottu lieriö, ja amfiteatteri ja helikopterikenttä ovat '
+          + 'kartioita. Julkisivu on vaaleaa terrakottaa. Torni on '
+          + 'rakennettu betoniytimen ympärille, eikä siinä ole seiniä '
+          + 'vaan lasi-ikkunat, jotka päästävät valon sisään.'
+          + '\n\n'
+          + 'Rakennus oli 1970-luvun taloista ympäristöystävällisin: '
+          + 'runko tehtiin paikallisista aineista eli sorasta, '
+          + 'hiekasta, sementistä ja puusta, ja avarat tilat '
+          + 'mahdollistivat luonnollisen tuuletuksen ja valaistuksen. '
+          + 'Tornin huipulla on 148-paikkainen pyörivä ravintola, joka '
+          + 'kiertää täyden kierroksen 76 minuutissa, ja katolla ainoa '
+          + 'yleisölle avoin helikopterikenttä koko kaupungissa. '
+          + 'Amfiteatteriin mahtuu 800 ja Tsavo-saliin 5 000 ihmistä. '
+          + 'Nimi muutettiin syyskuussa 2013 nelikymmenvuotisjuhlan '
+          + 'yhteydessä.',
+      kuvat: [
+        {
+          tiedosto: 'Kenyatta International Convention Centre 02.jpg',
+          selite: 'Lieriömäinen torni ja kartiokattoinen amfiteatteri '
+            + 'nousevat lipputankojen reunustaman aukion päästä.',
+          lahde: 'Francis Akuka for the Wikimedia Foundation, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nairobin rautatiemuseo': {
+      aika: '1971',
+      teksti: 'Nairobin rautatiemuseo avattiin 1971 aivan '
+          + 'rautatieaseman viereen. Sen kokoelmassa on lakkautetun '
+          + 'East African Railwaysin kalustoa ja esineistöä, ja museota '
+          + 'ylläpitää Kenya Railways. Museolla on säilytetty oma '
+          + 'raideyhteys, ja se on käytännöllinen asia: vaunuja ja '
+          + 'vetureita voidaan siirtää huoltoon ja uusia kokoelmaan '
+          + 'ilman erikoiskuljetuksia.'
+          + '\n\n'
+          + 'Kolme toimintakuntoista höyryveturia säilytetään suojassa '
+          + 'pääkonepajan puolella, ja niitä pääsee katsomaan '
+          + 'sopimalla käynnistä etukäteen. Yksi näyttelyvetureista, '
+          + 'numero 301, esiintyi vuoden 1985 elokuvassa Out of '
+          + 'Africa. Kokoelmassa on myös varhaisia dieselvetureita ja '
+          + 'matkustajavaunuja.'
+          + '\n\n'
+          + 'Tammikuussa 2011 museoon asennettiin toimiva '
+          + 'pienoisrautatie: bensiinimoottorinen veturi ja puiset '
+          + 'vaunut, joita oli aiemmin käytetty Kenya Railwaysin '
+          + 'markkinointiin muun muassa Nairobi Show’n kaltaisissa '
+          + 'näyttelyissä. Kokoelman kartuttamisessa on auttanut '
+          + 'harrastajayhdistys Friends of the Railway Museum East '
+          + 'Africa.',
+      kuvat: [
+        {
+          tiedosto: '5930 the largest Garratt in Africa.jpg',
+          selite: 'Höyryveturin kyljessä lukee E A R, Itä-Afrikan '
+            + 'rautateiden lyhenne.',
+          lahde: 'shankar s., Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * MIAMIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 6.9.2026, paketti
+   * O9). Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.miami, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 6.9.2026
+   * (artikkelit "Wynwood", "Adrienne Arsht Center for the Performing
+   * Arts", "Pérez Art Museum Miami", "Lyric Theater (Miami)",
+   * "Freedom Tower (Miami)", "Bayfront Park", "Olympia Theater
+   * (Miami)" ja "Miami-Dade County Courthouse").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat tequestat ja Miami Circle, vuoden 1873 kourallinen perheitä,
+   * Julia Tuttle ja rautatie 1896 sekä South Beachin art deco;
+   * teemasivu kertoo Evergladesista, Biscayne Baystä, kahdesta
+   * vuodenajasta ja kalkkikivestä. Yksikään kartan kohteista ei ole
+   * niiden aihe. Lähimpänä on Esittävän taiteen keskus, jonka torni
+   * on art decoa kuten noston M4 hotellit — juttu kertoo kuitenkin
+   * tavaratalosta ja konserttitalosta, joita lehti ei käsittele.
+   *
+   * OVERTOWNIN HISTORIA kerrotaan Lyric-teatterin jutussa suoraan
+   * lähteen sanoin: rotuerottelu, "Little Broadway" ja 1960-luvun
+   * pakkolunastukset. Yksityiskohtia ei koristella eikä väkivaltaa
+   * kuvata (spec-mantereet.md, USA-linjaus; pilari 4).
+   *
+   * BAYFRONT PARKIN JUTUSSA EI KERROTA vuoden 1933 murhayrityksestä
+   * eikä patsaiden töhrimisestä 2020: edellinen on väkivaltaa ilman
+   * opetusarvoa tässä yhteydessä, jälkimmäinen nykypolitiikkaa.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 800 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * miami-lohkossa eikä matkakirjan valokuvataulussa.
+   */
+  miami: {
+    'Wynwoodin muraalikorttelit': {
+      aika: '2009',
+      teksti: 'Wynwood oli pitkään teollisuus- ja varastokortteli, jota '
+          + 'kutsuttiin nimillä Little San Juan ja El Barrio: '
+          + 'puertoricolaisia muutti alueelle 1950-luvulla sekä '
+          + 'saarelta että koillisen kaupungeista. Puertoricolaisten '
+          + 'ravintolat, kaupat ja torit reunustavat katuja yhä.'
+          + '\n\n'
+          + 'Kun Midtown Miamin rakennustyöt alkoivat 2005 vanhan '
+          + 'ratapihan paikalla, huomio palasi alueelle ja taiteilijat '
+          + 'alkoivat asettua tyhjiin varastoihin. Vuonna 2009 '
+          + 'kaupunkikehittäjä Tony Goldman tilasi taiteilijoilta '
+          + 'Wynwood Wallsin. Ajatus oli yksinkertainen: muuttaa '
+          + 'varastorakennukset teoksiksi.'
+          + '\n\n'
+          + 'Wynwood Walls on ulkoilmanäyttely, jonka teokset '
+          + 'vaihtuvat, ja se on maailman suurin ulkoilmassa oleva '
+          + 'katutaidemuseo. Kaupunginosan rajat ovat selvät: 20th '
+          + 'Street etelässä, moottoritie I-195 pohjoisessa, I-95 '
+          + 'lännessä ja Florida East Coast Railwayn rata idässä.',
+      kuvat: [
+        {
+          tiedosto: 'Wynwood Walls Miami Florida October 2013.jpg',
+          selite: 'Portin takana avautuu pihamaa, jonka jokainen '
+            + 'seinä on maalattu.',
+          lahde: 'Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Esittävän taiteen keskus': {
+      aika: '2006',
+      teksti: 'Adrienne Arsht Center on yksi Yhdysvaltain suurimmista '
+          + 'esittävän taiteen keskuksista. Se avattiin 5. lokakuuta '
+          + '2006 nimellä Carnival Center, ja nykyisen nimensä se sai '
+          + 'tammikuussa 2008, kun Adrienne Arsht lahjoitti talolle '
+          + 'kolmekymmentä miljoonaa dollaria.'
+          + '\n\n'
+          + 'Osa keskuksesta seisoo vanhan Sears-tavaratalon paikalla. '
+          + 'Talo oli vuodelta 1929 ja art decoa — siis vanhempaa kuin '
+          + 'Ocean Driven hotellit — ja se merkittiin kansalliseen '
+          + 'rekisteriin 1997. Vuoteen 2001 mennessä siitä oli '
+          + 'jäljellä enää seitsenkerroksinen torni, jonka Sears oli '
+          + 'rakentanut myymälänsä pääsisäänkäynniksi. Rakentajat '
+          + 'päättivät säilyttää tornin ja liittää sen uuteen taloon.'
+          + '\n\n'
+          + 'Keskus järjestää maksuttomia yleisötapahtumia ja '
+          + 'taidekasvatusta tuhansille lapsille vuodessa, ja vuodesta '
+          + '2020 se on vienyt yli sata pop up -esitystä sairaaloihin, '
+          + 'puistoihin ja kirjastoihin ympäri piirikuntaa.',
+      kuvat: [
+        {
+          tiedosto: 'Adrienne Arsht Center for the Performing Arts of Miami-Dade County - Flickr - Phillip Pessar.jpg',
+          selite: 'Oopperatalon lasiseinä kaartuu kadun yli, ja '
+            + 'vanha tavaratalon torni näkyy sen takana.',
+          lahde: 'Phillip Pessar, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pérezin taidemuseo': {
+      aika: '2013',
+      teksti: 'Museo perustettiin 1984 nimellä Center for the Fine Arts '
+          + 'ja se toimi Flagler Streetillä Philip Johnsonin '
+          + 'suunnittelemassa kulttuurikeskuksessa. Vuosina 1996–2013 '
+          + 'se oli Miami Art Museum. Nykyisen nimensä ja nykyisen '
+          + 'talonsa museo sai 2013.'
+          + '\n\n'
+          + 'Uuden talon suunnittelivat sveitsiläiset Herzog & de '
+          + 'Meuron, ja sen muoto viittaa Stiltsvilleen — Biscayne '
+          + 'Bayn paaluille rakennettuihin puutaloihin. Rakennuksen '
+          + 'ympärillä riippuu kasveja pitkinä pylväinä, ja se seisoo '
+          + 'Maurice A. Ferré Parkissa aivan lahden rannalla.'
+          + '\n\n'
+          + 'Kokoelmassa oli 2016 lähes kaksituhatta teosta, '
+          + 'pääasiassa 1900- ja 2000-luvun taidetta Amerikoista, '
+          + 'Länsi-Euroopasta ja Afrikasta. Muutto näkyi heti '
+          + 'kävijämäärissä: vanhassa osoitteessa kävi noin 60 000 '
+          + 'ihmistä vuodessa, uudessa talossa yli 150 000 '
+          + 'ensimmäisten neljän kuukauden aikana.',
+      kuvat: [
+        {
+          tiedosto: 'PAMM MRD 08.jpg',
+          selite: 'Riippuvat kasvipylväät varjostavat museon '
+            + 'julkisivua lahden puolelta.',
+          lahde: 'Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lyric-teatteri': {
+      aika: '1913',
+      teksti: 'Lyric-teatterin rakennutti ja omisti georgialainen '
+          + 'liikemies Geder Walker, ja se avattiin 1913 Overtownissa, '
+          + 'jota tuolloin kutsuttiin nimellä Colored Town. Salissa '
+          + 'oli neljäsataa paikkaa. Miami News kuvasi taloa 1915 '
+          + 'sanoin, että se on mahdollisesti kaunein ja kallein '
+          + 'mustien omistama teatteri koko etelässä.'
+          + '\n\n'
+          + 'Teatteri oli osa korttelia, jota sanottiin Little '
+          + 'Broadwayksi: hotellit, ravintolat ja yökerhot vetivät '
+          + 'sekä mustia että valkoisia vieraita, ja alue sai '
+          + 'lempinimen etelän Harlem. Lyricissä esiintyivät ja '
+          + 'puhuivat muun muassa W. E. B. Du Bois, Mary McLeod '
+          + 'Bethune, Marian Anderson, Bessie Smith, Ethel Waters ja '
+          + 'Fisk Jubilee Singers. Walkerin kuoltua 1919 talo siirtyi '
+          + 'hänen vaimolleen Henriettalle.'
+          + '\n\n'
+          + 'Elokuvateatterina Lyric toimi lähes viisikymmentä vuotta, '
+          + 'ja 1959 se myytiin seurakunnalle. 1960-luvulla '
+          + 'liittovaltio, osavaltio ja kaupunki pakkolunastivat '
+          + 'Overtownin rakennuksia moottoritietä ja kaupunkiuudistusta '
+          + 'varten, ja suurin osa Little Broadwayn taloista '
+          + 'purettiin. Lyric säilyi mutta oli vuosikymmeniä kiinni. '
+          + 'Se merkittiin kansalliseen rekisteriin 4. tammikuuta 1989 '
+          + 'ja on nyt kulttuurikeskus.',
+      kuvat: [
+        {
+          tiedosto: 'Miami FL Historic Overtown Lyric Theatre.jpg',
+          selite: 'Ennallistettu julkisivu kaartuu kadun yli, ja '
+            + 'talon nimi on kaiverrettu sisäänkäynnin yläpuolelle.',
+          lahde: 'Pietro, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Vapaudentorni: {
+      aika: '1925',
+      teksti: 'Vapaudentorni rakennettiin 1925 The Miami News '
+          + '-lehden toimitaloksi ja painoksi. Suunnittelijat olivat '
+          + 'Schultze and Weaver, ja tyyli lainaa espanjalaisesta '
+          + 'uusrenessanssista: 78 metriä korkean tornin esikuva on '
+          + 'Sevillan Giralda, ja kupolissa oli koristemajakka. Lehti '
+          + 'muutti pois 1966.'
+          + '\n\n'
+          + 'Nimensä talo sai seuraavasta tehtävästään. Liittovaltio '
+          + 'käytti taloa 1960-luvulla Kuubasta lähteneiden '
+          + 'pakolaisten vastaanottoon: täällä kirjattiin tulijat ja '
+          + 'annettiin terveyden- ja hammashoitoa. Vuonna 1972 '
+          + 'suurin pakolaisaalto oli ohi, ja 1974 valtio myi talon '
+          + 'yksityisille.'
+          + '\n\n'
+          + 'Torni merkittiin kansalliseen rekisteriin 10. syyskuuta '
+          + '1979 ja nimettiin kansalliseksi historialliseksi '
+          + 'maamerkiksi 6. lokakuuta 2008 juuri sen takia, mitä se '
+          + 'merkitsi Kuubasta lähteneille. Toisen kerroksen juhlasalin '
+          + 'seinällä on suuri seinämaalaus, jonka miamilaiset '
+          + 'taiteilijat tekivät 1988 vuoden 1926 alkuperäisen '
+          + 'raunioituneen teoksen pohjalta. Nykyään talo on Miami '
+          + 'Dade Collegen museo ja kulttuurikeskus.',
+      kuvat: [
+        {
+          tiedosto: 'Freedom tower miami-1.jpg',
+          selite: 'Valaistu torni erottuu iltahämärässä matalampien '
+            + 'talojen ja palmurivin takaa.',
+          lahde: 'betty del rio, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bayfront Park': {
+      aika: '1925',
+      teksti: 'Bayfront Park on 32 eekkerin eli runsaan '
+          + 'kolmentoista hehtaarin puisto keskustan reunalla Biscayne '
+          + 'Bayn rannassa. Sitä alettiin rakentaa 1924 Warren Henry '
+          + 'Manningin suunnitelmien mukaan, ja se avattiin '
+          + 'maaliskuussa 1925.'
+          + '\n\n'
+          + 'Puisto sai uuden muodon vuodesta 1980 alkaen, kun '
+          + 'japanilais-amerikkalainen taiteilija ja '
+          + 'maisema-arkkitehti Isamu Noguchi suunnitteli sen '
+          + 'uudelleen. Hänen käsialaansa on myös puiston tunnetuin '
+          + 'teos: Challengerin muistomerkki, sadan jalan korkuinen '
+          + 'kaksoiskierteeksi kierretty teräsveistos, joka vihittiin '
+          + '28. tammikuuta 1988 kaksi vuotta avaruussukkulan '
+          + 'onnettomuuden jälkeen. Jalustan graniittilaattaan on '
+          + 'kaiverrettu runo ja miehistön nimet.'
+          + '\n\n'
+          + 'Puistossa on amfiteatteri ja paviljonki, ja siellä '
+          + 'järjestetään konsertteja, joulunviettoa ja uudenvuoden '
+          + 'juhlat. Pohjoispuolella on Bayside Marketplace ja '
+          + 'seitsemän korttelia pohjoisempana museopuisto, jossa ovat '
+          + 'Pérezin taidemuseo ja tiedemuseo.',
+      kuvat: [
+        {
+          tiedosto: 'Bayfront Park, Miami, FL - IMG 7999.JPG',
+          selite: 'Puiston pyöreä suihkulähde kaartuu kivikehänä '
+            + 'keskustan tornien edessä.',
+          lahde: 'Daderot, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Olympia-teatteri': {
+      aika: '1926',
+      teksti: 'Olympia-teatterin suunnitteli John Eberson, ja se '
+          + 'avattiin 18. helmikuuta 1926 mykkäelokuvateatterina. '
+          + 'Eberson oli erikoistunut niin sanottuun '
+          + 'ilmapiiriteatteriin: sali on rakennettu näyttämään '
+          + 'espanjalaiselta puutarhalta, jonka yllä on tähtitaivas. '
+          + 'Floridassa on jäljellä enää neljä tällaista salia.'
+          + '\n\n'
+          + 'Ohjelmisto seurasi aikaa. Kun äänielokuva ja vaudeville '
+          + 'yleistyivät, lavalla nähtiin Marx-veljekset ja Gypsy Rose '
+          + 'Lee; 1950- ja 1960-luvuilla Etta James, Della Reese ja '
+          + 'B. B. King. Elokuussa 1956 Elvis Presley esiintyi '
+          + 'talossa viisitoista kertaa loppuunmyydylle salille.'
+          + '\n\n'
+          + '1960-luvun lopulla käyttö hiipui ja teatteria kaavailtiin '
+          + 'purettavaksi parkkipaikaksi. Liikemies Maurice Gusman '
+          + 'osti talon 1970 ja lahjoitti sen kaupungille 1975. Sali '
+          + 'oli välillä rockklubi ja sitten taas konserttitalo; '
+          + 'kansalliseen rekisteriin se merkittiin 1984.',
+      kuvat: [
+        {
+          tiedosto: 'Olympia Theatre Miami exterior 2016.jpg',
+          selite: 'Katos ja vanha lippuluukku ovat yhä paikallaan '
+            + 'kadun varrella.',
+          lahde: 'Phillip Pessar, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Piirikunnan oikeustalo': {
+      aika: '1928',
+      teksti: 'Daden piirikunnan oikeustalo rakennettiin 1925–28 '
+          + 'Flagler Streetin varrelle. Se on 361 jalkaa eli 110 '
+          + 'metriä korkea ja siinä on 28 kerrosta; valmistuessaan se '
+          + 'oli Miamin, koko Floridan ja Mason–Dixonin linjan '
+          + 'eteläpuolen korkein rakennus. Suunnittelija A. Ten Eyck '
+          + 'Brown oli piirtänyt luonnokset alun perin Atlantan '
+          + 'kaupungintalon kilpailuun, jossa ne hylättiin.'
+          + '\n\n'
+          + 'Talo nousi vanhan oikeustalon ympärille, ja vanha '
+          + 'rakennus purettiin sisältä pois sitä mukaa kuin uusi '
+          + 'kohosi. Kymmenennessä kerroksessa työ pysähtyi: '
+          + 'rakennus alkoi vajota pehmeään maahan. Neuvoa haettiin '
+          + 'arkkitehdilta, joka oli kohdannut saman ongelman Mexico '
+          + 'Cityn Palacio de Bellas Artesin kanssa, ja hän totesi '
+          + 'perustuspaalut liian matalaksi. Vahvistukseksi valettiin '
+          + 'betonituet, jotka täyttävät yhä suuren osan kellarin '
+          + 'arkistoa.'
+          + '\n\n'
+          + 'Oikeustalo valmistui 1928 neljän miljoonan dollarin '
+          + 'hinnalla ja merkittiin kansalliseen rekisteriin 4. '
+          + 'tammikuuta 1989. Se on yhä piirikunnan siviilioikeuden '
+          + 'päätalo.',
+      kuvat: [
+        {
+          tiedosto: 'Dade County Courthouse (Miami, Florida).jpg',
+          selite: 'Portaittain kapeneva torni päättyy pyramidiin, '
+            + 'joka näkyy yhä keskustan kattojen yli.',
+          lahde: 'Tamanoeconomico, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * HALIFAXIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 6.9.2026, paketti
+   * O9). Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.halifax, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 6.9.2026
+   * (artikkelit "Citadel Hill (Fort George)", "Halifax Town Clock",
+   * "St. Paul's Church (Halifax, Nova Scotia)", "Maritime Museum of
+   * the Atlantic", "Halifax Public Gardens", "Old Burying Ground
+   * (Halifax, Nova Scotia)", "Pier 21" ja "Point Pleasant Park").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat mi'kmaqit ja Kjipuktuk, vuoden 1749 perustaminen, isoisän
+   * matkavuoden 1873 purjelaivasatama ja vuoden 1917 räjähdys;
+   * teemasivu kertoo satamasta, säästä, hurrikaaneista ja
+   * graniittirannikosta. Yksikään kartan kohteista ei ole niiden
+   * aihe.
+   *
+   * LINNOITUS JA KELLOTORNI OVAT SAMALLA KUKKULALLA (222 metrin
+   * päässä toisistaan), joten jutut on kirjoitettu tarkoituksella eri
+   * asioista: linnoitusjuttu neljästä peräkkäisestä linnoituksesta ja
+   * kukkulan madaltamisesta, kellotornijuttu Kentin herttuasta,
+   * Vulliamyn koneistosta ja Whitechapelin kelloista. Sama koskee
+   * Pyhän Paavalin kirkkoa ja vanhaa hautausmaata: kirkkojuttu kertoo
+   * rakennuksesta ja sen lontoolaisesta esikuvasta, hautausmaajuttu
+   * kaupungin ensimmäisestä ja tunnustuksista riippumattomasta
+   * hautapaikasta.
+   *
+   * TITANIC mainitaan merimuseon jutussa, koska museon suurin
+   * näyttely käsittelee sitä ja koska laudan visa kysyy siitä
+   * (northamerica-questions.js, halifax, kysymys 2) — reseptin mukaan
+   * visan vastauksen on löydyttävä lehden teksteistä.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 800 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * halifax-lohkossa eikä matkakirjan valokuvataulussa — myös
+   * valokuvataulun linnoitus- ja rantalaudoituskuvat on tarkistettu
+   * ja kierretty.
+   */
+  halifax: {
+    'Halifaxin linnoitus': {
+      aika: '1856',
+      teksti: 'Kukkulalla on ollut neljä linnoitusta siitä asti, kun '
+          + 'britit perustivat kaupungin 1749. Kaikkia on kutsuttu '
+          + 'nimellä Fort George, mutta virallisesti sen nimen sai vain '
+          + 'kolmas, vuosina 1794–1800 rakennettu linnoitus: '
+          + 'lokakuun 20. päivänä 1798 annettu päiväkäsky nimesi sen '
+          + 'kuningas Yrjö III:n mukaan. Ensimmäinen, toinen ja '
+          + 'nykyinen neljäs ovat virallisesti Halifax Citadel.'
+          + '\n\n'
+          + 'Nykyinen linnoitus on betoninen tähtilinnoitus. Sen '
+          + 'rakentaminen ja kukkulan tasoittaminen ovat laskeneet '
+          + 'laen kymmenestä kahteentoista metriä alkuperäistä '
+          + 'matalammaksi. Linnoitusta vastaan ei koskaan hyökätty, '
+          + 'mutta se oli vuosikymmenet sataman ja laivastotelakan '
+          + 'puolustuksen kulmakivi.'
+          + '\n\n'
+          + 'Kukkula on syy siihen, miksi keskellä kaupunkia on suuri '
+          + 'nurmirinne ilman taloja: linnoituksen ampumasektorit oli '
+          + 'pidettävä avoimina. Nykyään Parks Canada hoitaa aluetta, '
+          + 'ja linnoitus on ennallistettu siihen asuun, jossa se oli '
+          + 'viktoriaanisella ajalla valmistuessaan.',
+      kuvat: [
+        {
+          tiedosto: 'Ditch, Halifax Citadel (3609170469).jpg',
+          selite: 'Vallihaudan graniittimuuri nousee ruohovallin '
+            + 'alle sumuisena aamuna.',
+          lahde: 'CP Hoffman from Washington, DC, United States, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha kellotorni': {
+      aika: '1803',
+      teksti: 'Kellotorni rakennettiin lokakuussa 1803, ja kello on '
+          + 'käynyt 20. päivästä lokakuuta 1803 lähtien. Se on '
+          + 'pysähtynyt vain kerran: Halifaxin räjähdyksessä 1917. '
+          + 'Idea oli Kentin herttuan Edwardin, joka johti Britannian '
+          + 'Pohjois-Amerikan joukkoja ja halusi korjata varuskunnan '
+          + 'myöhästelytavan. Herttua oli tunnetusti pikkutarkka '
+          + 'täsmällisyydestä ja piti mekaanisista laitteista, '
+          + 'erityisesti sellaisista jotka soivat.'
+          + '\n\n'
+          + 'Koneiston teki Benjamin Vulliamy, sama kellontekijä joka '
+          + 'valmisti Kew\'n observatorion regulaattorikellon. Kolme '
+          + 'rautakelloa valettiin Whitechapelin kellovalimossa '
+          + 'Lontoossa — samassa, josta tuli myös Liberty Bell. '
+          + 'Piirustukset teki kapteeni William Fenwick.'
+          + '\n\n'
+          + 'Torni haluttiin alun perin muualle linnoitukseen, mutta '
+          + 'varakuvernööri John Wentworth määräsi sen itärinteelle '
+          + 'Brunswick Streetiä kohti, jotta myös kaupunkilaiset '
+          + 'näkisivät kellon eivätkä vain sotilaat. Alimmassa '
+          + 'kerroksessa oli asunto vahtimestarille perheineen; '
+          + 'pisimpään tehtävää hoiti tykkimies William White. '
+          + 'Kellotaulut maalattiin 1990-luvun alussa takaisin '
+          + 'alkuperäisen sinisiksi.',
+      kuvat: [
+        {
+          tiedosto: 'Looking up Carmichael Street to the Clock, 2014.JPG',
+          selite: 'Katu nousee suoraan kellotornia kohti, ja torni '
+            + 'sulkee näkymän kukkulan rinteellä.',
+          lahde: 'Nelro2, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Paavalin kirkko': {
+      aika: '1750',
+      teksti: 'Pyhän Paavalin seurakunta perustettiin 1749, samana '
+          + 'vuonna kuin kaupunki, ja kirkon rakentaminen alkoi '
+          + 'seuraavana vuonna. Pastori William Tutty vihki sen '
+          + 'käyttöön 2. syyskuuta 1750. Se on Kanadan vanhin '
+          + 'säilynyt protestanttinen kirkko ja koko Halifaxin vanhin '
+          + 'rakennus.'
+          + '\n\n'
+          + 'Pohjakaava ei ole omaperäinen eikä sen ollut tarkoituskaan '
+          + 'olla: se seuraa James Gibbsin suunnitteleman Marybone '
+          + 'Chapelin kaavaa Westminsteristä. Gibbs oli sama arkkitehti, '
+          + 'joka piirsi St Martin-in-the-Fieldsin Trafalgar Squarelle. '
+          + 'Torni on myöhempi lisäys, ja kirkon alla on krypta.'
+          + '\n\n'
+          + 'Kirkko seisoo Grand Paraden eteläpäässä; aukion '
+          + 'pohjoispäässä on kaupungintalo. Vuosisatojen mittaan '
+          + 'kirkossa on siunattu monta seudun tunnettua vainajaa, '
+          + 'muun muassa kuvernööri Charles Lawrence 1760 ja '
+          + 'katolinen pappi Pierre Maillard 1762 — jälkimmäisen '
+          + 'siunaustilaisuuteen osallistui suuri joukko mi\'kmaqeja. '
+          + 'Kirkko nimettiin kansalliseksi historialliseksi kohteeksi '
+          + '1981.',
+      kuvat: [
+        {
+          tiedosto: 'St. Paul\'s Church (3609041903).jpg',
+          selite: 'Valkoinen puukirkko kapeine torneineen seisoo '
+            + 'aukion päässä puiden keskellä.',
+          lahde: 'CP Hoffman from Washington, DC, United States, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Atlantin merimuseo': {
+      aika: '1948',
+      teksti: 'Museo perustettiin 1948 nimellä Maritime Museum of '
+          + 'Canada, ja se toimi aluksi laivastotukikohdassa. '
+          + 'Ensimmäinen palkattu johtaja Niels Jannasch aloitti 1959 '
+          + 'ja jatkoi vuoteen 1985. Nykyinen rakennus valmistui 1981 '
+          + 'osana sataman uudistusta, ja museo oli ensimmäisiä '
+          + 'kohteita, jotka avattiin uudistetulle rannalle.'
+          + '\n\n'
+          + 'Se on Kanadan vanhin ja suurin merimuseo: kokoelmassa on '
+          + 'yli 30 000 esinettä, 70 pienvenettä ja kokonainen '
+          + 'höyrylaiva. CSS Acadia on 180 jalkaa pitkä '
+          + 'merenmittausalus vuodelta 1913, ja museo sai sen 1982. '
+          + 'Museolla on lisäksi 30 000 valokuvaa ja Kanadan suurin '
+          + 'laivamuotokuvien kokoelma sekä 1880-luvun Robertson '
+          + 'Store, vanha laivavarustamon myymälä.'
+          + '\n\n'
+          + 'Museon tunnetuin näyttely kertoo Titanicista. Halifax oli '
+          + 'huhtikuussa 1912 lähin suuri satama onnettomuuspaikalle, '
+          + 'ja pelastustyöt johdettiin täältä. Julkisivun lippurivissä '
+          + 'lukee "Welcome aboard L44 38N G63 34W" — se on museon oma '
+          + 'sijainti asteina ja minuutteina.',
+      kuvat: [
+        {
+          tiedosto: 'Maritime Museum of the Atlantic 9-04-04.JPG',
+          selite: 'Puuverhoiltu museorakennus ja ankkurit sen edessä '
+            + 'sataman laiturilla.',
+          lahde: 'Phobophile~commonswiki, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Julkinen puutarha': {
+      aika: '1874',
+      teksti: 'Halifax Public Gardens on viktoriaaninen puutarha, joka '
+          + 'perustettiin muodollisesti 1867 — samana vuonna kuin '
+          + 'Kanadan konfederaatio. Nykyinen puutarha syntyi 1874, kun '
+          + 'kaksi vanhempaa aluetta yhdistettiin: Nova Scotia '
+          + 'Horticultural Societyn 1837 istuttama puutarha ja sen '
+          + 'viereen 1866 avattu julkinen puisto.'
+          + '\n\n'
+          + 'Puutarhuriksi palkattiin 1872 Richard Power, ja hänen '
+          + 'akselisymmetrinen suunnitelmansa ohjaa aluetta yhä. '
+          + 'Powerin aikana tulivat soittolava, suihkulähteet, patsaat '
+          + 'ja takorautaportit sekä tiheät kuviolliset '
+          + 'kesäkukkaistutukset. Soittolavan suunnitteli arkkitehti '
+          + 'Henry Busch. Kuudentoista eekkerin alueella on kolme '
+          + 'suihkulähdettä, kaksi kivisiltaa ja kolme lampea.'
+          + '\n\n'
+          + 'Puutarha nimettiin kansalliseksi historialliseksi '
+          + 'kohteeksi 1984. Hurrikaani Juan tuhosi 2003 suuren osan '
+          + 'puista, ja puutarha avattiin uudelleen vasta Kanadan '
+          + 'päivänä 2004 — ennallistus rahoitettiin osin miljoonan '
+          + 'dollarin radiokeräyksellä. Osa vanhoista puista selvisi, '
+          + 'muun muassa 1860-luvulta oleva amerikanjalava.',
+      kuvat: [
+        {
+          tiedosto: 'CA-halifax-publ-garden-05.jpg',
+          selite: 'Puron yli näkyy suihkulähde, jonka ympärillä '
+            + 'syyslehdet ovat kaikissa väreissä.',
+          lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha hautausmaa': {
+      aika: '1749',
+      teksti: 'Vanha hautausmaa perustettiin 1749, samana vuonna kuin '
+          + 'kaupunki, ja se oli vuosikymmeniä Halifaxin ainoa '
+          + 'hautapaikka. Alun perin se oli tunnustuksista '
+          + 'riippumaton ja palveli kaikkia kaupunkilaisia; 1793 se '
+          + 'siirtyi anglikaaniselle Pyhän Paavalin seurakunnalle. '
+          + 'Hautausmaa suljettiin 1844, kun Camp Hillin hautausmaa '
+          + 'avattiin.'
+          + '\n\n'
+          + 'Vuosien mittaan tänne haudattiin noin kaksitoistatuhatta '
+          + 'ihmistä, mutta hautakiviä on jäljellä vain noin '
+          + 'tuhatkaksisataa: osa on kadonnut ja monella ei ollut '
+          + 'kiveä lainkaan. Kirjattuina on neljä mi\'kmaq-hautausta '
+          + 'ja 167 mustan haligonialaisen hautausta, kaikki '
+          + 'merkitsemättömiä. Yksi kivi kuitenkin on: pastori William '
+          + 'Furmagen, joka opetti Halifaxin ensimmäisessä mustien '
+          + 'lasten koulussa.'
+          + '\n\n'
+          + 'Paikka rappeutui pitkään, kunnes Old Burying Ground '
+          + 'Foundation kunnosti sen 1980-luvulla. Säätiö hoitaa '
+          + 'hautausmaata yhä ja palkkaa kesäisin oppaita; harvinaisten '
+          + '1700-luvun hautakivien ennallistaminen jatkuu.',
+      kuvat: [
+        {
+          tiedosto: 'Old Burying Ground, Halifax (3608978899).jpg',
+          selite: 'Tummuneet liuskekivet nojaavat toisiinsa '
+            + 'lehmusten alla keskellä kaupunkia.',
+          lahde: 'CP Hoffman from Washington, DC, United States, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pier 21': {
+      aika: '1928',
+      teksti: 'Pier 21 oli valtamerilaivojen terminaali ja '
+          + 'maahantulohalli vuosina 1928–1971. Sen kautta Kanadaan '
+          + 'tuli lähes miljoona siirtolaista, ja se on maan viimeinen '
+          + 'säilynyt satamassa toiminut maahantulopaikka; sitä '
+          + 'verrataan usein Ellis Islandiin.'
+          + '\n\n'
+          + 'Vanha Pier 2 kaupungin pohjoispäässä oli rakennettu 1880, '
+          + 'mutta vuoteen 1913 mennessä oli selvää, että laivojen '
+          + 'kasvava koko vaatii uuden paikan. Maailmansota ja '
+          + 'Halifaxin räjähdys viivyttivät työtä, ja uusi kokonaisuus '
+          + 'valmistui vasta 1928: rahtilaiturit, viljasiilot, uusi '
+          + 'rautatieasema ja kuusisataa jalkaa pitkä kaksikerroksinen '
+          + 'halli. Maahantulotoiminnot olivat toisessa kerroksessa, ja '
+          + 'viereisessä tiilirakennuksessa olivat tulli, '
+          + 'lipunmyynti, lennätin ja avustusjärjestöjen toimistot.'
+          + '\n\n'
+          + 'Kävelysilta johti radan yli laitureille, joilta lähtivät '
+          + 'siirtolaisjunat — kymmenien vaunujen mittaisia junia, '
+          + 'jotka veivät tulijat halki Kanadan uusiin koteihinsa. '
+          + 'Nykyään talossa toimivat Kanadan maahanmuuttomuseo, joka '
+          + 'avattiin yleisölle 1999 ja on Atlantin provinssien ainoa '
+          + 'kansallinen museo, sekä taidekorkeakoulu NSCAD.',
+      kuvat: [
+        {
+          tiedosto: 'Pier 21 2010 1.JPG',
+          selite: 'Tiilinen terminaalirakennus ja vanha '
+            + 'matkustajavaunu sen edessä laiturialueella.',
+          lahde: 'Skeezix1000, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Point Pleasant Park': {
+      aika: '1796',
+      teksti: 'Niemimaan eteläkärjessä on metsäinen puisto, jossa oli '
+          + 'aikanaan useita tykkipattereita. Yksi rakennus on yhä '
+          + 'pystyssä: Prince of Wales Tower vuodelta 1796 on '
+          + 'Pohjois-Amerikan vanhin martellotorni. Puiston polut '
+          + 'kulkevat vanhojen varustusten raunioiden lomassa, ja '
+          + 'kärjestä näkee sataman yli avomerelle.'
+          + '\n\n'
+          + 'Cornwallis asettui 1749 ensin juuri tänne, mutta paikka '
+          + 'oli liian avoin säälle ja asutus siirrettiin '
+          + 'linnoituskukkulan juurelle. Alue jäi Britannian valtion '
+          + 'omistukseen, ja se vuokrattiin kaupungille '
+          + 'seremoniallisella yhden shillingin vuosivuokralla. '
+          + 'Alkuperäisen sopimuksen neuvotteli Sir William Young '
+          + '1866. Nykyään maa on Kanadan valtion ja vuokralaisena '
+          + 'Halifaxin kunta.'
+          + '\n\n'
+          + 'Kesäisin puistossa esittää Shakespeare by the Sea '
+          + '-teatteriryhmä näytelmiä Cambridge Batteryn raunioilla: '
+          + 'sekä Shakespearea että satuihin perustuvia musikaaleja. '
+          + 'Ryhmällä on lisäksi kahdeksankymmenen paikan sisätila '
+          + 'puiston alaparkkipaikalla sadepäivien varalle.',
+      kuvat: [
+        {
+          tiedosto: 'Prince of Wales Tower - 2017 (35781219381).jpg',
+          selite: 'Pyöreä kivitorni seisoo nurmella männikön keskellä '
+            + 'ilman muuta rakennusta ympärillään.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

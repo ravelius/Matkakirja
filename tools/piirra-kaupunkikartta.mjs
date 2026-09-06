@@ -3740,6 +3740,66 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 29.7680, etela: 29.7150, lansi: -95.4050, ita: -95.3500 },
   },
+  miami: {
+    /*
+     * KESKUSTA, WYNWOOD JA JOEN SUU (6.9.2026). Ruutu on 3,8 × 4,9
+     * kilometriä eli Denverin ja Houstonin väliltä. Rajaus alkaa
+     * pohjoisessa Wynwoodin muraalikortteleista, kulkee museopuiston
+     * ja keskustan yli ja päättyy etelässä Miami-joen suulle
+     * Brickelliin.
+     *
+     * ITÄREUNA ON LAHTI JA SE ON TARKOITUS. Biscayne Bay on Miamin
+     * pääpiirre, ja kaupungin koko juoni on kapea kalkkikivikaista
+     * lahden ja lännen suoalueiden välissä; ilman vettä kartta olisi
+     * pelkkä ruutukaava. Itäreuna on vedetty niin, että satamasaari
+     * ja Brickell Key mahtuvat mukaan mutta estesaari (Miami Beach)
+     * jää ulkopuolelle — se on viisi kilometriä idässä, ja sen mukaan
+     * ottaminen puolittaisi kuvasta veteen.
+     *
+     * LITTLE HAVANA JA VIZCAYA JÄÄVÄT POIS. Máximo Gómez Park on
+     * juuri länsireunan takana ja Vizcaya 3,5 kilometriä etelässä;
+     * molemmat mainitaan matkaoppaassa. MIAMI CIRCLE mahtuisi
+     * ruutuun mutta on lehden noston M1 aihe, eikä kohdekartta toista
+     * lehden juttuja (New Yorkin sääntö).
+     *
+     * meri: true. Biscayne Bay on OSM:ssä rantaviivaa
+     * (natural=coastline) eikä vesimonikulmio, joten ilman lippua
+     * lahti jäisi paperin väriseksi.
+     */
+    rajat: { pohjoinen: 25.8060, etela: 25.7620, lansi: -80.2160, ita: -80.1780 },
+    meri: true,
+  },
+  halifax: {
+    /*
+     * NIEMIMAAN YDIN LINNOITUKSELTA POINT PLEASANTIIN (6.9.2026).
+     * Ruutu on 3,3 × 4,2 kilometriä. Rajaus kattaa koko niemimaan
+     * leveyden: idässä satama, lännessä Northwest Arm, pohjoisessa
+     * linnoituskukkula ja etelässä niemen metsäinen kärki.
+     *
+     * RUUTU ON PYSTY, KOSKA NIEMIMAA ON. Halifaxin kohteet ovat
+     * pitkässä nauhassa pohjoisesta etelään, ja leveämpi rajaus veisi
+     * kuvasta puolet Dartmouthin puolelle salmen taakse.
+     *
+     * AFRICVILLE, FORT NEEDHAM JA FAIRVIEW LAWN JÄÄVÄT POIS. Ne ovat
+     * kaikki pohjoisessa ruudun ulkopuolella; Fort Needhamin
+     * muistokellotorni on sitä paitsi lehden noston H4 aihe, eikä
+     * kohdekartta toista lehden juttuja (New Yorkin sääntö).
+     *
+     * meri: true, JA MOLEMMAT TÄYTTÖTAVAT ON KOKEILTU 6.9.2026.
+     * Halifaxin niemimaata kiertää vesi kolmelta sivulta, ja
+     * rantaviiva tulee ruutuun ja poistuu siitä monta kertaa, joten
+     * reunaa pitkin kävelevä täyttö osuu väärään puoleen: tavallinen
+     * merentäyttö varoitti "meri peittäisi 185 % rajauksesta" ja
+     * pudotti täytön pois, ja meri: 'maa' täytti vain Northwest Armin
+     * mutta jätti sataman paperin väriseksi — se olisi ollut
+     * harhaanjohtavaa. Lippu jätettiin muotoon true, jolloin työkalu
+     * piirtää rantanauhan koko rantaviivalle: molemmat vedet näkyvät
+     * samalla tavalla eikä kumpaakaan väitetä maaksi (Tukholman
+     * ennakkotapaus: vaalea meri on parempi kuin väärä meri).
+     */
+    rajat: { pohjoinen: 44.6560, etela: 44.6180, lansi: -63.6000, ita: -63.5580 },
+    meri: true,
+  },
   sanfrancisco: {
     /*
      * Niemen koillisnurkka: Aquatic Parkin rannasta Civic Centeriin ja
@@ -3912,6 +3972,70 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: -22.884, etela: -22.930, lansi: -43.238, ita: -43.158 },
     meri: true,
+  },
+  kapkaupunki: {
+    /*
+     * KAUPUNKIKULHO JA VANHA SATAMA (6.9.2026). Ruutu on
+     * 3,7 x 2,9 kilometriä: pohjoisessa Victoria & Alfredin
+     * satama-altaat, keskellä 1800-luvun ruutukaava Adderley
+     * Streetin ympärillä ja etelässä Company's Gardenin vihreä
+     * kiila museoineen. Kaupunki on rakennettu Pöytävuoren,
+     * Leijonanpään ja Paholaisenhuipun muodostamaan luonnolliseen
+     * amfiteatteriin (en-Wikipedia, "Cape Town", Geography), ja
+     * ruutu on juuri sen kulhon pohja.
+     *
+     * PÖYTÄVUORI EI OLE KARTALLA, ja se on päätös. Vuoren laki on
+     * kolme kilometriä eteläreunan alapuolella, ja se on lehden
+     * teemasivun koko aihe (kulttuuri-kategoriat.js, kapkaupunki,
+     * sivu luonto) — kohdekartta ei toista lehden juttuja
+     * (New Yorkin sääntö). Ruudun eteläreuna jää siksi vuoren
+     * juurelle, jossa katuverkko vielä on.
+     *
+     * BO-KAAP ON RUUDUSSA MUTTA EI NUMEROITUNA. Kaupunginosa on
+     * lehden noston K4 aihe. Se näkyy kartalla lännessä Signal
+     * Hillin rinteen mukulakivikortteleina, ja matkaopas kertoo
+     * miten sinne kävellään.
+     *
+     * meri: true. Table Bay on OSM:ssä pääosin rantaviivaa, ja
+     * ilman lippua kartan koko pohjoisreuna jäisi paperin
+     * väriseksi (sama mittaus kuin Riossa).
+     *
+     * EI laajennusta: reunus veisi pohjoisessa avomerelle,
+     * lännessä Signal Hillin tyhjälle rinteelle ja etelässä
+     * Pöytävuoren kalliolle — kohdekartan kannalta tyhjään.
+     */
+    rajat: { pohjoinen: -33.8990, etela: -33.9320, lansi: 18.4060, ita: 18.4370 },
+    meri: true,
+  },
+  nairobi: {
+    /*
+     * MUSEUM HILLILTÄ RAUTATIEMUSEOLLE (6.9.2026). Ruutu on
+     * 3,1 x 2,7 kilometriä: pohjoisessa Museum Hill ja arboretum,
+     * keskellä liikekeskusta, etelässä rautatiealue. Nairobi
+     * syntyi radan varteen, ja ruutu kulkee siksi radalta
+     * museokukkulalle eikä toisin päin.
+     *
+     * UHURU PARK JA KARURAN METSÄ EIVÄT OLE NUMEROITUINA
+     * KOHTEINA. Molemmat ovat lehden teemasivun noston aihe
+     * (Wangari Maathain kaksi kamppailua), eikä kohdekartta
+     * toista lehden juttuja. Uhuru Park näkyy silti kartalla
+     * puistona ruudun lounaisosassa; Karura on kuusi kilometriä
+     * pohjoiseen eikä mahtuisi ruutuun.
+     *
+     * KANSALLISPUISTO ON SEITSEMÄN KILOMETRIN PÄÄSSÄ etelään
+     * eikä mahdu samaan ruutuun keskustan kanssa. Se on
+     * teemasivun pääaihe.
+     *
+     * ARBORETUM JA KANSALLISMUSEO OVAT 216 METRIN PÄÄSSÄ
+     * toisistaan eli niukasti yli 200 metrin säännön. Ne ovat
+     * Museum Hillin vastakkaisilla puolilla ja eri juttujen
+     * aiheita (metsäkoeasema 1907 ja luonnonhistoriallinen
+     * seura 1910).
+     *
+     * Ei meri-lippua: Nairobi on 480 kilometriä sisämaassa, ja
+     * Nairobi-joki on OSM:ssä tavallinen vesiväylä.
+     */
+    rajat: { pohjoinen: -1.2700, etela: -1.2975, lansi: 36.8080, ita: 36.8320 },
   },
 };
 

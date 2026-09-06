@@ -39,7 +39,16 @@ import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
  * mutta tunnusluvut kirjoitetaan omana eränään js/packs/
  * oceania-maatiedot.js:ään. Lista saa vain lyhentyä.
  */
-const VIELA_ILMAN_TUNNUSLUKUJA = new Set(['URY', 'PRY', 'VEN', 'FJI', 'PNG', 'SLB']);
+/*
+ * Väli-Amerikan uudet maalehdet (GTM, NIC, PAN) saivat aihesivunsa
+ * 6.9.2026. Niiden tunnusluvut kirjoitetaan samalla
+ * tools/kirjoita-maatiedot.mjs-työkalulla ja samasta aineistosta kuin
+ * muutkin Pohjois-Amerikan rivit (js/packs/northamerica-maatiedot.js).
+ * Lista saa vain lyhentyä.
+ */
+const VIELA_ILMAN_TUNNUSLUKUJA = new Set([
+  'URY', 'PRY', 'VEN', 'FJI', 'PNG', 'SLB', 'GTM', 'NIC', 'PAN',
+]);
 
 const SIJA = /^\d+\.\/\d+$/;
 

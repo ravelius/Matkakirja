@@ -33973,4 +33973,6671 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KENIA (KEN) — Afrikan laudan toinen maalehti Egyptin jälkeen
+   * (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-kenia.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA: Keniassa ei ole kaupunkilehteä,
+   * mutta kartalla on paljon. maastokohteet-ken.js kattaa Mount Kenyan,
+   * Victorianjärven, Intian valtameren, Lamun, Fort Jesuksen, Gedin
+   * rauniot, Thimlich Ohingan, Koobi Foran, Hell's Gaten, Amboselin ja
+   * Lewan; skandaalit.js Happy Valleyn ja Tsavon ihmissyöjäleijonat;
+   * elaintakyt.js rothschildinkirahvin. Maalehti EI toista niitä —
+   * siksi rautatiejutussa ei ole leijonia, luonto-osiossa ei
+   * safaripuistoja eikä Turkanan fossiileja, ja siirtolaisten
+   * "Onnellinen laakso" jää skandaalikortille.
+   *
+   * KUVAT: 18 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin.
+   * KAKSI NOSTOA JÄI KUVATTOMAKSI: benga (Commonsissa ei ole yhtään
+   * kelvollista kenialaisen benga-yhtyeen kuvaa) ja Jambo Bwana
+   * (löytyi vain Boney M:n vuoden 2015 kiertuekuvia, jotka eivät kerro
+   * laulusta mitään). HYLÄTYT: "Jomo Kenyatta 1978" (extmetadatan
+   * Artist on "Unknown author"), "Nairobi City Market in Kenya"
+   * (julkisivussa on poliittinen kampanjateksti), "Nyatiti (20th c.)
+   * MIM PHX" (museovitriinin heijastus peittää soittimen kaulan),
+   * "Kenyan music producer Brian Robin in studio with Nyatiti"
+   * (tunnistettavat kasvot), "2018 London Marathon Eliud Kipchoge"
+   * (moottoripyörä peittää juoksijan).
+   *
+   * TUNNISTETTAVAT KASVOT: mukaan on otettu vain kuvia, joissa
+   * tunnistuva henkilö ON jutun aihe (Kenyattan patsas, Wangari
+   * Maathai, Kipchoge Keino, Eliud Kipchoge, David Rudisha, Miriam
+   * Makeba) — sama linja kuin Itävallan Niki Lauda -kuvassa. Muissa
+   * kuvissa ihmiset ovat selin, kaukana tai vain kädet näkyvissä.
+   */
+  KEN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kenian historia kulkee kahteen suuntaan: rannikolle purjehdittiin '
+          + 'valtameren yli vuosituhannen ajan, sisämaahan päästiin vasta kun kiskot '
+          + 'vedettiin Mombasasta Viktorianjärvelle.',
+      nostot: [
+        {
+          otsikko: 'Rannikko, joka kuului sulttaanille viime hetkeen asti',
+          aika: '1414–1963',
+          tiedosto: 'Mombasa old town view.JPG',
+          teksti: 'Mombasa ja Malindi kävivät kauppaa valtameren yli jo ensimmäisellä '
+              + 'vuosisadalla, ja historioitsijat pitivät swahilikaupunkeja pitkään '
+              + 'arabien tai persialaisten perustamina. Arkeologia käänsi käsityksen: '
+              + 'kaupungit ovat paikallisten bantupuhujien omaa työtä, jonka päälle '
+              + 'kauppa toi vaikutteensa. Malindi otti vieraansa ystävällisesti '
+              + 'vastaan — kiinalainen Zheng He poikkesi siellä 1414 viimeisillä '
+              + 'aarrematkoillaan ja Vasco da Gama 1498. Kenian rannikkokaistale pysyi '
+              + 'muodollisesti Sansibarin sulttaanin maana 12. joulukuuta 1963 asti, '
+              + 'jolloin hän luopui siitä samana päivänä kun muu Kenia itsenäistyi.',
+          selite: 'Mombasan vanhankaupungin kujilla on yhä parvekkeita ja '
+            + 'ovikaiverruksia, joissa näkyy sama swahilikulttuurin ja Intian '
+            + 'valtameren kaupan sekoitus kuin Sansibarissa.',
+          lahde: 'FredD, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Rata, jota parlamentti sanoi hulluudeksi',
+          aika: '1896–1901',
+          tiedosto: 'KUR 327.jpg',
+          teksti: 'Joulukuussa 1890 Lontoon ulkoministeriö ehdotti '
+              + 'valtiovarainhallinnolle rautatietä Mombasasta Ugandaan, jotta '
+              + 'orjakuljetukset sisämaasta rannikolle katkeaisivat. Työ alkoi '
+              + 'Mombasasta 1896 ja päättyi Kisumuun Viktorianjärven rannalle 1901. '
+              + 'Rata sai nimensä määränpäänsä mukaan, vaikka kaikki 1 060 kilometriä '
+              + 'olivat nykyisen Kenian puolella. Intiasta tuotiin 200 000 '
+              + 'kiskonpätkää ja 1,2 miljoonaa ratapölkkyä, ja Karachista värvättiin '
+              + 'yli 30 000 työmiestä, enimmäkseen Punjabista ja Gujaratista. '
+              + 'Britannian parlamentissa hanketta sanottiin jättimäiseksi '
+              + 'hulluudeksi, ja pilkkanimi Lunatic Line jäi elämään.',
+          selite: 'Veturin kyljessä lukee KUR, Kenya and Uganda Railways. Radan '
+            + 'nimi vaihtui 1929, kun Ugandan rautatie ja Kenian osuus '
+            + 'yhdistettiin yhdeksi yhtiöksi.',
+          lahde: 'Robin Hutton, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Pääkaupunki, joka valittiin kosteikolta',
+          aika: '1899–1907',
+          tiedosto: 'Nairobi skyline P1000019.jpg',
+          teksti: 'Rautatien pääinsinööri George Whitehouse etsi levähdyspaikkaa ennen '
+              + 'Limurun jyrkkää nousua ja valitsi kosteikon, jolla maasait paimensivat '
+              + 'ja kikujut viljelivät. Nimi tuli maasain sanoista Enkare Nyirobi, '
+              + 'viileä vesi. Hallinnon virkamiehet moittivat paikkaa liian tasaiseksi '
+              + 'ja huonosti kuivatuksi, mutta Arthur Church piirsi sinne 1898 '
+              + 'asemakaavan: kaksi katua, kymmenen puistokatua ja intialaisten '
+              + 'kauppakortteli. Juna saapui 30. toukokuuta 1899. Ruttoepidemian jälkeen '
+              + 'basaarikatu poltettiin ja rakennettiin uudelleen, ja 1907 Nairobista '
+              + 'tuli Mombasan tilalle protektoraatin pääkaupunki.',
+          selite: 'Nairobin keskustan tornit nousevat Upper Hillin suunnasta '
+            + 'katsottuna sen kosteikon päälle, jota rautatieinsinöörit pitivät '
+            + 'liian tasaisena ja huonosti kuivattuna.',
+          lahde: 'Lmwangi, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Yksi sana vaakunaan',
+          aika: '1963',
+          tiedosto: 'Jomo Kenyatta Monument 1991.jpg',
+          teksti: 'Kenia itsenäistyi 12. joulukuuta 1963 ja siitä tuli tasavalta tasan '
+              + 'vuotta myöhemmin. Ensimmäinen pääministeri ja presidentti Jomo '
+              + 'Kenyatta otti käyttöön sanan harambee, joka merkitsee swahiliksi '
+              + 'yhdessä vetämistä: kylä kerää itse varat kouluun tai terveysasemalle '
+              + 'ja valtio lupaa alkupääoman. Sana päätyi maan tunnuslauseeksi ja '
+              + 'vaakunaan. Alkuperästä kiistellään — todennäköisimmin se on '
+              + 'swahilinkielisten kantajien huuto raskaan taakan alla, mutta '
+              + 'kansanselityksen mukaan se tulee rautatietä rakentaneiden '
+              + 'intialaisten työmiesten avunhuudosta Hare Ambe.',
+          selite: 'Jomo Kenyattan muistomerkki Nairobin keskustassa vuonna 1991 '
+            + 'kuvattuna; jalustan laatoissa lukevat hänen puheidensa lauseet.',
+          lahde: 'Ulli 2mecs, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Suuri hautavajoama halkoo Keniaa pohjoisesta etelään, ja sen pohjalla '
+          + 'on ketju järviä, joiden vesi on niin emäksistä ettei siinä eläisi kala — '
+          + 'mutta linnut elävät.',
+      nostot: [
+        {
+          otsikko: 'Miljoona lintua yhdellä järvellä',
+          tiedosto: 'Large number of flamingos at Lake Nakuru.jpg',
+          teksti: 'Nakuru-, Elementaita- ja Bogoria-järvet olivat kymmenentuhatta vuotta '
+              + 'sitten yksi syvä makean veden järvi; kun se kuivui, jäljelle jäi kolme '
+              + 'emäksistä altaan pohjaa. Vesi ruokkii sinileviä, sinilevä ruokkii '
+              + 'pikkuflamingoja, ja parhaimmillaan Nakurun pinta katoaa kokonaan '
+              + 'liikkuvan vaaleanpunaisen maton alle. Linnut vaihtavat järveä ravinnon '
+              + 'mukaan: kun Nakurun vesi nousi 2013, parvet siirtyivät Bogorialle, '
+              + 'jonka rannalla purkautuu kuumia lähteitä. Unesco otti kolmikon '
+              + 'maailmanperintöluetteloon 2011.',
+          selite: 'Pikkuflamingot syövät seisten, pää veden alla, ja siivilöivät '
+            + 'nokallaan sinilevää — siitä myös höyhenten vaaleanpunainen väri.',
+          lahde: 'Syllabub, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Sademetsän viimeinen pala',
+          tiedosto: 'KakamegaForest.jpg',
+          teksti: 'Kakamegan metsä Kenian länsirajalla on maan ainoa trooppinen '
+              + 'sademetsä ja viimeinen jäänne siitä guineo-kongolaisesta metsästä, '
+              + 'joka ulottui aikanaan mantereen halki Kongon altaalle. Suojelualueita '
+              + 'myöten metsää on 238 neliökilometriä, ja siitä vajaa puolet on yhä '
+              + 'alkuperäistä. Kasveja on laskettu 380 lajia, joukossa 60 kämmekkää, '
+              + 'joista yhdeksän ei kasva missään muualla. Lintuja on 367 lajia ja '
+              + 'perhosia 489. Leopardista on tehty viimeinen virallinen havainto '
+              + 'vuonna 1991.',
+          selite: 'Latvusto sulkeutuu Kakamegassa yhtenäiseksi katoksi, ja aukot '
+            + 'ovat ruohoisia kenttiä, joiden syntyä ei osata varmasti selittää.',
+          lahde: 'User:Doron, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Meri keskellä aavikkoa',
+          tiedosto: 'Lake Turkana in Kenya 01.jpg',
+          teksti: 'Turkana-järvi on maailman suurin pysyvä aavikkojärvi ja suurin '
+              + 'emäksinen järvi. Siihen laskee kolme jokea — Omo, Turkwel ja Kerio — '
+              + 'mutta ulos ei mene mitään: vesi poistuu vain haihtumalla, ja siksi se '
+              + 'on suolaista ja niin fluoripitoista ettei se kelpaa juotavaksi. Pinta '
+              + 'laski kymmenen metriä vuosien 1975 ja 1993 välillä. Vesi lämpenee ja '
+              + 'jäähtyy hitaammin kuin ympäröivä maa, joten rannalla puhaltaa lähes '
+              + 'aina ja myrskyt nousevat äkkiä. Järven keskellä on Central Island, '
+              + 'yhä höyryävä tulivuori.',
+          selite: 'Turkanan vesi on sameanvihreää levästä, ja siitä juontuu '
+            + 'lempinimi Jadejärvi. Rannat ovat tuulisia ja lähes puuttomia.',
+          lahde: 'CaptChandra, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Viisikymmentäyksi miljoonaa puuta',
+          aika: '1977–2004',
+          tiedosto: 'Wangari Maathai, 2006 (cropped).jpg',
+          teksti: 'Wangari Maathai lähti 1960 opiskelemaan Yhdysvaltoihin yhtenä noin '
+              + 'kolmestasadasta kenialaisesta, joille järjestettiin lentokuljetus, ja '
+              + 'palasi väitelläkseen Nairobin yliopistossa ensimmäisenä naisena Itä- '
+              + 'ja Keski-Afrikassa. Vuonna 1977 hän perusti Kenian naisneuvoston '
+              + 'siipenä Vihreän vyön liikkeen, jonka ajatus oli yksinkertainen: '
+              + 'kyläläiset istuttavat puita, ja istuttajille maksetaan. Puita on '
+              + 'istutettu yli 51 miljoonaa ja yli 30 000 naista on saanut koulutuksen '
+              + 'metsänhoitoon ja mehiläistarhaukseen. Nobelin rauhanpalkinto tuli '
+              + '2004, ensimmäisenä afrikkalaiselle naiselle.',
+          selite: 'Wangari Maathai vuonna 2006 Brasiliassa pidetyssä '
+            + 'konferenssissa. Hän oli tuolloin jo Nobel-palkittu ja maailman '
+            + 'tunnetuin afrikkalainen ympäristöaktivisti.',
+          lahde: 'Antônio Cruz / Agência Brasil, Wikimedia Commons (CC BY 3.0 BR)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kenialaisen aterian ympärillä ei ole kiirettä: maissi, liha ja tee '
+          + 'ovat arkea, mutta jokaisella on oma seremoniansa.',
+      nostot: [
+        {
+          otsikko: 'Puuro, joka leikataan palasiksi',
+          tiedosto: 'Ugali and cabbage.jpg',
+          teksti: 'Ugali keitetään maissijauhosta ja vedestä niin sitkeäksi, että sen '
+              + 'voi leikata veitsellä ja nostaa sormin. Samaa ruokaa syödään '
+              + 'kuudessatoista maassa eri nimillä: posho, nsima, sadza, isitshwala, '
+              + 'pap. Maissi itsessään on tulokas, se saapui Afrikkaan Amerikoista, '
+              + 'mutta ugalista tuli itäisen Afrikan perusruoka. Pala taitetaan kupiksi '
+              + 'ja siihen kauhaistaan kastiketta tai sukuma wikiä, kaalimaista '
+              + 'lehtivihannesta, jonka nimi tarkoittaa viikon venyttämistä. Vuonna '
+              + '2017 ruokalaji otettiin Unescon aineettoman kulttuuriperinnön '
+              + 'luetteloon — harvinaista ruoalle.',
+          selite: 'Ugali tarjoillaan lautasella omana kimpaleenaan; vieressä on '
+            + 'kaalia ja porkkanaa, arkisin tavallisin lisuke.',
+          lahde: 'Mark Skipper, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Liha, joka syödään seisaaltaan',
+          tiedosto: 'Nyama choma in nairobi kenya.jpg',
+          teksti: 'Nyama choma tarkoittaa swahiliksi yksinkertaisesti paistettua lihaa, '
+              + 'ja Keniassa se on vuohta. Grilliksi kelpaa puu tai puuhiili, ei kaasu, '
+              + 'ja liha nostetaan hiilloksen päälle kokonaisina paloina, jotka '
+              + 'paloitellaan vasta pöydässä. Syöminen on käsin ja seurassa: nyama '
+              + 'choma on yhtä paljon tapa kokoontua kuin ruokalaji, ja sitä '
+              + 'tarjoillaan sekä tienvarsikuppiloissa että kaupungin isoissa '
+              + 'ravintoloissa. Lisukkeeksi tulee kachumbari, tomaatista ja sipulista '
+              + 'tehty raikas salaatti, ja ugalia. Sama ruoka on kansallisruoka myös '
+              + 'Tansaniassa.',
+          selite: 'Liha kypsyy hitaasti hiilloksen päällä kokonaisina paloina — '
+            + 'nairobilaisen grillin ääressä odotetaan mieluummin kuin kiirehditään.',
+          lahde: 'Kengitau254, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Teepensas, joka nousi Limurusta maailmankaupaksi',
+          aika: '1903–',
+          tiedosto: 'Kenya-Tealand-Near-Kericho-2012.JPG',
+          teksti: 'Ensimmäiset teepensaat istutettiin Keniaan 1903 Limuruun, ja '
+              + 'kaupallinen viljely alkoi 1924. Tänään Kenia on maailman suurin mustan '
+              + 'teen viejä: vientiä kertyi 2018 yli 1,3 miljardin dollarin edestä. '
+              + 'Puolet sadosta tulee pientiloilta — Kenya Tea Development Agencyn 66 '
+              + 'tehdasta ottavat vastaan yli puolen miljoonan pienviljelijän lehdet. '
+              + 'Suurin osa teestä käsitellään murskaa–revi–kiepauta-menetelmällä, joka '
+              + 'antaa vahvan aamuteen maun, ja huutokaupataan julkisesti Mombasassa. '
+              + 'Erikoisuus on purppurainen tee, jonka lehdet ovat luonnostaan violetit.',
+          selite: 'Kerichon ylängöllä teepensaat leikataan tasaiseksi matoksi, '
+            + 'jonka yli poimija kurottaa vain nuorimmat lehdet ja silmun.',
+          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Maito, jota kypsytetään noessa',
+          tiedosto: 'SOTET.jpg',
+          teksti: 'Kalenjinien mursik on hapanmaitoa, joka kypsytetään '
+              + 'sotet-kalebassissa. Astia harjataan puhtaaksi käpypalmun oksasta '
+              + 'tehdyllä sosiot-harjalla ja sivellään sisältä puuhiilellä, joka '
+              + 'hehkutetaan itet-pensaan oksista. Hiili tiivistää huokoisen kuoren '
+              + 'ilmatiiviiksi, estää pilaantumisen, antaa maidolle sinertävän sävyn ja '
+              + 'mausteisen maun. Maito jätetään hapantumaan kolmesta viiteen '
+              + 'vuorokautta ja säilyy kuukauden. Mursikia juodaan häiden '
+              + 'myötäjäisneuvottelujen päätteeksi, ja kansainvälisistä kisoista palaava '
+              + 'juoksija saa kulauksen jo lentokentällä.',
+          selite: 'Sotet-kalebassi koristellaan nahkahihnoilla ja simpukoilla, ja '
+            + 'sitä kannetaan kädessä kuin astiaa, jolla on oma arvonsa.',
+          lahde: 'Antony Trivet, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Millä kalebassin sisäpinta käsitellään ennen maidon hapattamista?',
+        vaihtoehdot: [
+          'Hunajalla',
+          'Puuhiilellä',
+          'Merisuolalla',
+          'Voilla',
+        ],
+        oikea: 1,
+        fakta: 'Hehkutettu hiili tiivistää kalebassin huokoiset seinämät, säilöö maidon '
+            + 'ja antaa sille sinertävän värin.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Kenian populaarimusiikin juuret ovat kahdeksankielisessä lyyrassa ja '
+          + 'radiosta kuullussa kongolaisessa kitarassa — ja yksi laulu karkasi '
+          + 'maailmalle niin kauas, ettei sen tekijästä päästy koskaan yksimielisyyteen.',
+      nostot: [
+        {
+          otsikko: 'Lyyra, jota soitetaan varpaalla',
+          tiedosto: 'African local music instrument -Nyatiti 01.jpg',
+          teksti: 'Nyatiti on luolaisten kahdeksankielinen lyyra Siayasta Kisumun '
+              + 'pohjoispuolelta: veistetty kulhokaikupohja, jonka päälle on pingotettu '
+              + 'lehmännahka. Soittaja istuu matalalla orindi-jakkaralla, pujottaa '
+              + 'oikean ison varpaan ympärille takoraudasta tehdyn oduongo-renkaan ja '
+              + 'sitoo säärelle gara-kulkuset. Renkaalla hän lyö tahtia soittimen '
+              + 'alapuuta vasten, joten yksi mies on samaan aikaan laulaja, kitaristi ja '
+              + 'rumpali. Kielet tehtiin ennen naudan jänteistä, nykyään siimasta. '
+              + 'Nyatitin lyömä syke on benga-musiikin lähtökohta.',
+          selite: 'Nyatitin soittaja esiintyy koululaisille: vasen käsi näppäilee '
+            + 'kieliä, oikea pitää soitinta paikallaan ja jalka hoitaa rytmin.',
+          lahde: 'Onesmo Daniel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Basso, joka matkii lyyraa',
+          aika: '1940–1980-luvut',
+          teksti: 'Nairobin radiosta tuli 1940-luvulla tasainen virta soukousta, '
+              + 'eteläafrikkalaista kwelaa, kongolaista sormikitaraa ja kuubalaista '
+              + 'tanssimusiikkia. Kitaristit alkoivat matkia nyatitin synkopoituja '
+              + 'kuvioita, ja bassokitara otti lyyran tehtävän — niin syntyi benga. '
+              + 'Vuonna 1967 Daniel Owino Misiani perusti Shirati Jazzin, ensimmäisen '
+              + 'suuren benga-yhtyeen, jonka levyt olivat Itä-Afrikan myydyimpiä koko '
+              + '1970- ja 1980-luvun. Misiani joutui useasti vankilaan sanoituksista, '
+              + 'joita pidettiin poliittisena arvosteluna. Hänen kuoltuaan 2006 '
+              + 'yhtyeen johdon otti hänen vaimonsa.',
+          selite: 'Misiani syntyi Tansanian puolella Shiratin kylässä, muutti '
+            + 'nuorena Keniaan ja lauloi sekä dholuoksi että swahiliksi.',
+        },
+        {
+          otsikko: 'Rakkauslaulu, jonka tekijästä yhä kiistellään',
+          aika: '1945–',
+          tiedosto: 'Miriam Makeba (1969).jpg',
+          teksti: 'Malaika tarkoittaa swahiliksi enkeliä. Useimmat tutkijat pitävät sen '
+              + 'tekijänä tansanialaista Adam Salimia, joka sävelsi laulun Nairobissa '
+              + '1945–46 tytölle, jonka vanhemmat naittivat toisaalle; kenialainen '
+              + 'Fadhili William levytti sen ensimmäisenä 1960 ja saa siitä '
+              + 'tekijänpalkkiot. Miriam Makeba teki laulusta koko mantereen yhteisen, '
+              + 'ja perässä tulivat Harry Belafonte, Pete Seeger, Boney M ja Angélique '
+              + 'Kidjo. Ruotsalainen Hep Stars kuuli sen nairobilaisen hotellin '
+              + 'kokilta, joka haki kitaran kesken illallisen, ja levytti laulun '
+              + 'Tukholmassa huhtikuussa 1967.',
+          selite: 'Miriam Makeba pukuhuoneessa vuonna 1969. Hänen levytyksensä '
+            + 'Malaikasta teki swahilinkielisestä rakkauslaulusta maailmanhitin.',
+          lahde: 'Rob Mieremet / Nationaal Archief, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Tervehdys, joka päätyi piirrettyyn',
+          aika: '1982',
+          teksti: 'Mombasalainen Them Mushrooms levytti 1982 laulun Jambo Bwana, jonka '
+              + 'sanat ovat käytännössä swahilin alkeiskurssi: jambo, habari gani, '
+              + 'nzuri sana, hakuna matata. Levyä myytiin viidessä vuodessa yli 200 000 '
+              + 'kappaletta ja se sai Keniassa platinaa. Muut yhtyeet levyttivät sen '
+              + 'perässä, ja Boney M teki 1983 oman version, josta oli jäljellä enää '
+              + 'kaksi swahilinkielistä riviä. Kertosäkeen huoleton hakuna matata '
+              + 'siirtyi sieltä Disneyn Leijonakuninkaaseen — ja kiertää nyt maailmaa '
+              + 'ilman että moni tietää sen tulleen Mombasasta.',
+          selite: 'Safari Sound Bandin versio Jambo Jambo on yhä yksi Itä-Afrikan '
+            + 'hotelleissa soitetuimmista kappaleista.',
+        },
+      ],
+    },
+    {
+      id: 'urheilu',
+      nimi: 'Urheilu',
+      johdanto: 'Kenian juoksijat tulevat pääosin samalta kaistaleelta hautavajoaman '
+          + 'länsireunaa, jossa ilma on ohutta ja koulumatka pitkä.',
+      nostot: [
+        {
+          otsikko: 'Poliisi, joka voitti maailmanennätysmiehen kahdellakymmenellä metrillä',
+          aika: '1968–1972',
+          tiedosto: '14-01-10-tbh-012-kipchoge-keino.jpg',
+          teksti: 'Kipchoge Keino syntyi 1940 Nandin maakunnassa; hänen etunimensä '
+              + 'tarkoittaa nandin kielellä viljavaraston viereltä syntynyttä. Orvoksi '
+              + 'jäänyt poika kasvatettiin tädin luona, meni poliisiksi ja pelasi ensin '
+              + 'rugbya. Vuonna 1965 hän paransi 3 000 metrin maailmanennätystä yli '
+              + 'kuudella sekunnilla ensimmäisellä yrityksellään. Méxicon '
+              + 'olympialaisissa 1968 hän voitti 1 500 metriä ohittaen ennätysmies Jim '
+              + 'Ryunin kahdellakymmenellä metrillä — suurin voittoero matkan '
+              + 'olympiahistoriassa — ja otti 5 000 metrillä hopeaa. Münchenissä 1972 '
+              + 'tuli vielä estekulta.',
+          selite: 'Kipchoge Keino vuonna 2014. Hän sai 2016 ensimmäisenä '
+            + 'urheilijana olympialiikkeen Olympic Laurel -tunnustuksen.',
+          lahde: 'Ralf Roletschek, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Kolmeksi kuukaudeksi tullut veli jäi vuosikymmeniksi',
+          aika: '1976–',
+          tiedosto: 'Hill Ten.jpg',
+          teksti: 'Iten on pikkukaupunki 2 400 metrin korkeudessa hautavajoaman '
+              + 'länsireunalla, ja siellä arvioidaan harjoittelevan päivittäin yli '
+              + 'viisituhatta juoksijaa. Nimi on väännös sanoista Hill Ten, jotka '
+              + 'skotti Joseph Thomson raapusti kallioon 1883 kymmenennen '
+              + 'valloittamansa kukkulan merkiksi. Irlantilainen veli Colm O\'Connell '
+              + 'saapui St Patrick\'s -kouluun 1976 kolmeksi kuukaudeksi eikä ole '
+              + 'lähtenyt sen koommin. Hän toi 1990-luvun alussa myös naiset '
+              + 'harjoitusryhmiin, ja jouluaaton Shoe4Africa-katujuoksu on maan suurin '
+              + 'pelkästään naisten kilpailu.',
+          selite: 'Kukkula, jonka Joseph Thomson merkitsi kymmenenneksi ja joka '
+            + 'antoi Itenille nimen. Takana avautuu Kerion laakso.',
+          lahde: 'Toby Tanser, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kaksi tuntia, jota ei laskettu ennätykseksi',
+          aika: '2019',
+          tiedosto: 'INEOS 159 Eliud last 200m.jpg',
+          teksti: 'Eliud Kipchoge kasvoi Nandissa yksinhuoltajaäidin luona ja juoksi '
+              + 'kolme kilometriä kouluun; valmentajansa Patrick Sangin hän tapasi '
+              + '16-vuotiaana. Kahdeksantoistavuotiaana hän oli jo 5 000 metrin '
+              + 'maailmanmestari. Wienin Praterissa 12. lokakuuta 2019 hän juoksi '
+              + 'maratonin matkan aikaan 1.59.40 ensimmäisenä ihmisenä historiassa. '
+              + 'Suoritus ei kelvannut ennätykseksi: kengät olivat erikoisvalmisteiset, '
+              + 'jänikset vaihtuivat kesken matkan eikä kilpailu ollut avoin. Se ei '
+              + 'estänyt sitä olemasta juoksuhistorian puhutuin tunti ja '
+              + 'viisikymmentäyhdeksän minuuttia.',
+          selite: 'Kipchoge Wienin Hauptalleella lokakuussa 2019 viimeisellä '
+            + 'kahdellasadalla metrillä, jänikset jo väistyneinä.',
+          lahde: 'Triathlet 79, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaksi kierrosta ilman jänistä',
+          aika: '2012',
+          tiedosto: 'Rudisha 800m final London 2012.jpg',
+          teksti: 'David Rudisha on maasai Kilgorisista, ja hänen isänsä Daniel juoksi '
+              + '1968 olympiahopeaa 4 × 400 metrin viestissä. Poika aloitti '
+              + 'nelisatasella, kunnes sama veli Colm siirsi hänet kahdeksalle sadalle. '
+              + 'Lontoon olympiafinaalissa 2012 jäniksiä ei arvokisoissa sallita, joten '
+              + 'Rudisha veti itse koko matkan ja tuli maaliin aikaan 1.40,91. Se on '
+              + 'yhä maailmanennätys, ja hän on ainoa mies, joka on alittanut minuutin '
+              + 'ja neljänkymmenenyhden sekunnin rajan; kolme kaikkien aikojen nopeinta '
+              + 'juoksua ovat hänen. Sebastian Coe sanoi sitä kisojen parhaaksi '
+              + 'suoritukseksi.',
+          selite: 'Lontoon olympiafinaali 2012: Rudisha johtaa kärjessä yksin, ja '
+            + 'koko kenttä juoksee hänen perässään henkilökohtaisia ennätyksiään.',
+          lahde: 'Paul Rowlett, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+  ],
+  /*
+   * TANSANIA (TZA) — Afrikan laudan kolmas maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-tansania.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA on tässä tavallista tiukempi, koska
+   * maastokohteet-tza.js kattaa jo Kilimandžaron, Intian valtameren,
+   * Tanganjikajärven, Olduvain rotkon, Serengetin, Kondoan
+   * kalliotaiteen, Kilwa Kisiwanin, Bagamoyon, Ujijin, Taboran ja
+   * Kalambon putoukset, skandaalit.js Maji Majin ja brittiläisen
+   * maapähkinäsuunnitelman ja elaintakyt.js afrikannorsun vasan
+   * Serengetissä. Maalehti EI toista niitä: luonto-osiossa ei ole
+   * Serengetiä eikä Kilimandžaroa, historiassa ei Kilwan eikä
+   * Bagamoyon kauppahistoriaa eikä Livingstonea ja Stanleyta.
+   *
+   * HERKÄT AIHEET: Sansibarin orjakauppa mainitaan vain siltä osin kuin
+   * se selittää Siti binti Saadin taustan; nykypolitiikka (mm. vuoden
+   * 1964 vallankumous) on jätetty pois. Ngorongoron maasaista kerrotaan
+   * vain se, että karjaa paimennetaan alueella — vuoden 2009
+   * rajoituksista käytävä kiista on nykypolitiikkaa.
+   *
+   * KUVAT: 19 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin. YKSI
+   * NOSTO JÄI KUVATTOMAKSI: Siti binti Saad — Commonsissa ei ole
+   * hänestä yhtään tekijätiedoiltaan kelvollista kuvaa. HYLÄTYT:
+   * "Tingatinga House" ja "Tingatinga school paintings" (maalaukset
+   * jäävät kaukaisiksi tienvarsimyyntikuviksi), "Udzungwa Scarp Forest
+   * 20251205 154337" (kyltti keskellä kuvaa), "Zanzibar Taarab
+   * Kidumbak Ensemble" (ryhmäkuva, jossa yhdeksän tunnistettavaa
+   * kasvoa), "Syzygium aromaticum on tree" (kuvattu Balilla, ei
+   * Sansibarissa).
+   */
+  TZA: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Tansanian rajat piirrettiin Euroopassa ja sen yhtenäisyys rakennettiin '
+          + 'kielellä: swahili teki sadasta kansasta yhden maan.',
+      nostot: [
+        {
+          otsikko: 'Housut yhdestä napista',
+          aika: '1890',
+          tiedosto: 'Richard Kiepert, Deutsche und Britische Schutzgebiete in Aequatorial-Ost-Afrika, 1890.jpg',
+          teksti: 'Saksa ja Britannia sopivat 1. heinäkuuta 1890 Itä-Afrikan '
+              + 'etupiireistä. Saksa sai Helgolandin saaren Pohjanmerellä, Caprivin '
+              + 'kaistaleen ja vapaat kädet Dar es Salaamin rannikolla, josta tuli '
+              + 'Saksan Itä-Afrikan ydin; Britannia sai Witun, Sansibarin ja juuri sen '
+              + 'maakaistaleen, jota se tarvitsi rautatielle Viktorianjärvelle. Samalla '
+              + 'sopimuksella vedettiin rajat myös Togon ja Kultarannikon sekä '
+              + 'Kamerunin ja Nigerian välille. Entinen liittokansleri Bismarck pilkkasi '
+              + 'seuraajaansa siitä, että tämä vaihtoi housut yhteen nappiin — nimitys '
+              + 'Helgoland–Sansibar-sopimus jäi hänen jäljiltään.',
+          selite: 'Richard Kiepertin kartta vuodelta 1890 näyttää Saksan ja '
+            + 'Britannian etupiirit kesäkuun sopimusten mukaisina — rajat ovat '
+            + 'suoria viivoja, jotka eivät noudata mitään maastossa näkyvää.',
+          lahde: 'Richard Kiepert, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kolmekymmentäkahdeksan minuuttia',
+          aika: '1896',
+          tiedosto: 'The Crisis at Zanzibar, British War-Ships engaged in the Bombardment of the Sultan\'s Palace - ILN 1896.jpg',
+          teksti: 'Sansibarin sulttaani Hamad kuoli yllättäen 25. elokuuta 1896, ja hänen '
+              + 'veljenpoikansa Khalid muutti palatsiin kysymättä briteiltä lupaa, jonka '
+              + 'vuoden 1890 sopimus vaati. Uhkavaatimus umpeutui kello yhdeksän aamulla '
+              + '27. elokuuta. Kaksi minuuttia yli yhdeksän laivat avasivat tulen, ja '
+              + 'kello 9.46 palatsin lippu oli ammuttu alas. Sota kesti lähteestä '
+              + 'riippuen 38–45 minuuttia ja on maailmanhistorian lyhyin. '
+              + 'Puolustajista kaatui noin viisisataa, '
+              + 'briteiltä haavoittui yksi merimies. Khalid pakeni Saksan konsulaattiin '
+              + 'ja sieltä mantereelle. Palanut Ihmeiden talo oli ollut Itä-Afrikan '
+              + 'ensimmäinen sähkövalaistu rakennus.',
+          selite: 'The Illustrated London Newsin kuvitus 5. syyskuuta 1896: HMS St '
+            + 'George ja HMS Philomel Sansibarin redillä palatsin edustalla.',
+          lahde: 'Fred T. Jane, The Illustrated London News, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Opettaja, joka käänsi Shakespearen',
+          aika: '1961–1985',
+          tiedosto: 'President Nyerere van Tanzania, koppen, Bestanddeelnr 928-2879 (cropped).jpg',
+          teksti: 'Julius Nyerere opiskeli Makereressa ja Edinburghissa, palasi '
+              + 'opettajaksi ja johti maansa itsenäisyyteen 1961; Tanganjika ja '
+              + 'Sansibar yhdistyivät Tansaniaksi 1964. Vuoden 1967 Arushan julistus '
+              + 'nosti omavaraisuuden ja yhteisöllisyyden — ujamaa, suurperhe — maan '
+              + 'ohjelmaksi. Nyerere teki swahilista koko valtion kielen ja käänsi sille '
+              + 'itse Shakespearen Julius Caesarin 1961 ja Venetsian kauppiaan 1972. '
+              + 'Häntä kutsuttiin Mwalimuksi, opettajaksi; patsaita hän kielsi '
+              + 'pystyttämästä itsestään ja jätti presidentin paikan vapaaehtoisesti '
+              + '1985 — harvinaista koko mantereella.',
+          selite: 'Nyerere valtiovierailulla Alankomaissa marraskuussa 1975. '
+            + 'Henkilökunta puhutteli häntä nimellä Mzee, vanhus, ei tittelillä.',
+          lahde: 'Rob Mieremet / Anefo, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Vapauden rata vuorten läpi',
+          aika: '1970–1975',
+          tiedosto: 'Tazara Railway Locomotive.jpg',
+          teksti: 'Sisämaan Sambia sai kuparinsa merelle vain valkoisen vähemmistön '
+              + 'hallitsemien maiden kautta, ja siksi Tansania, Sambia ja Kiina '
+              + 'rakensivat oman ratansa: 1 860 kilometriä Dar es Salaamista Kapiri '
+              + 'Mposhiin. Työ tehtiin 1970–1975, ja se oli siihen mennessä Kiinan '
+              + 'suurin yksittäinen ulkomaanapuhanke, 406 miljoonaa dollaria. Työmaalla '
+              + 'oli noin 13 000 kiinalaista teknikkoa ja 38 000 afrikkalaista '
+              + 'työntekijää. Udzungwan vuoristossa rata kiipeää 158 kilometrin matkalla '
+              + '46 sillan ja 18 tunnelin läpi. Nimeksi tuli Uhuru, swahiliksi vapaus.',
+          selite: 'Tazaran veturi Kapiri Mposhin päätepysäkillä Sambiassa. Rata '
+            + 'kulkee kahden maan halki, mutta sitä hoitaa yksi yhteinen yhtiö.',
+          lahde: 'David Brossard, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Tansaniassa on kraatteri, jonka pohjalla on oma maailmansa, tulivuori '
+          + 'jonka laava on kylmää, ja metsiä, joista löytyy yhä uusia nisäkkäitä.',
+      nostot: [
+        {
+          otsikko: 'Kattila, jonka pohjalla asutaan',
+          tiedosto: 'Zebra herd in Ngorongoro Crater 03.jpg',
+          teksti: 'Ngorongoro on maailman suurin ehjä ja täyttymätön tulivuoren '
+              + 'romahduskattila. Se syntyi kahdesta kolmeen miljoonaa vuotta sitten, '
+              + 'kun suuri tulivuori purkautui ja luhistui itsensä päälle; ennen '
+              + 'romahdusta huippu oli arviolta 4 500–5 800 metrin korkeudessa. '
+              + 'Reunalta pohjalle on 610 metriä ja pohjaa on 260 neliökilometriä. '
+              + 'Keskellä väreilee matala suolajärvi Magadi. Nimi on maasain ääntä '
+              + 'jäljittelevä sana lehmänkellon kilinästä. Ensimmäinen eurooppalainen '
+              + 'laskeutui kattilaan 1892, ja maasait paimentavat karjaansa alueella '
+              + 'yhä.',
+          selite: 'Seepralauma kraatterin pohjalla; taustalla nousee kattilan '
+            + 'reuna, jonka yli eläinten on kiivettävä päästäkseen ulos.',
+          lahde: 'Roryjm0, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Laava, jota voi katsoa päivällä kuin mutavirtaa',
+          tiedosto: 'Lengai from Natron.jpg',
+          teksti: 'Ol Doinyo Lengai on maailman ainoa tulivuori, joka purkaa '
+              + 'natrokarbonatiittia. Sen laava on 540–593-asteista — tavallinen '
+              + 'basalttilaava on satoja asteita kuumempaa — ja niin juoksevaa, että se '
+              + 'virtaa yhdestä viiteen metriä sekunnissa ja on tunnetuista laavoista '
+              + 'kaikkein ohuinta. Päivänvalossa virta näyttää mudalta tai öljyltä ja '
+              + 'hehkuu vasta pimeässä. Tuore laava on musta tai ruskea, mutta se '
+              + 'muuttuu tunneissa tai päivissä lumivalkoiseksi. Maasait ja sonjot '
+              + 'kutsuvat vuorta Jumalan vuoreksi.',
+          selite: 'Ol Doinyo Lengai Natronjärven suunnasta. Huipun valkoisuus ei '
+            + 'ole lunta vaan vanhaa karbonatiittilaavaa.',
+          lahde: 'Clem23, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Apina, joka jäi saarelle meren noustessa',
+          tiedosto: 'Colobo rojo de Zanzíbar (Piliocolobus kirkii), parque nacional de la Bahía Jozani Chwaka, Zanzíbar, Tanzania, 2024-06-02, DD 03.jpg',
+          teksti: 'Sansibarinpunakolobi elää vain Ungujan saarella. Sen esi-isät jäivät '
+              + 'saarelle, kun merenpinta nousi jääkauden lopulla, ja eristys on '
+              + 'pienentänyt kalloa saarisäännön mukaisesti. Yksilöitä arvioidaan olevan '
+              + '1 600–3 000, ja puolet niistä elää suojelualueiden ulkopuolella; '
+              + 'tärkein turvapaikka on Jozanin kansallispuiston 25 neliökilometriä. '
+              + 'Ryhmässä on 30–50 eläintä, ja koiraat pitävät yhtä — ne siistivät '
+              + 'toisiaan ja puolustavat ryhmää yhdessä. Paikalliset kutsuvat lajia '
+              + 'nimellä kima punju, myrkkyapina, sen voimakkaan hajun takia.',
+          selite: 'Sansibarinpunakolobi Jozanin puistossa. Selän ruosteenpunainen '
+            + 'turkki ja vaalea häntä erottavat sen mantereen sukulaisista.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Uusi apinasuku 83 vuoteen',
+          aika: '2003–2005',
+          tiedosto: 'Udzungwa Scarp Forest - 20251205 161307.jpg',
+          teksti: 'Kipunji kuvattiin tieteelle kahdesti peräkkäin, joulukuussa 2003 ja '
+              + 'heinäkuussa 2004, kahden toisistaan tietämättömän tutkimusryhmän '
+              + 'toimesta. Se oli ensimmäinen uusi afrikkalainen apinalaji sitten '
+              + 'vuoden 1984, ja kun perimä osoitti sen olevan lähempänä paviaaneja kuin '
+              + 'mangabeja, sille perustettiin oma suku Rungwecebus — ensimmäinen uusi '
+              + 'apinasuku sitten 1923. Ääni on matala honk-bark, haukun ja tööttäyksen '
+              + 'välimuoto. Eläimiä on noin 1 800, ja ne mahtuvat 17,7 neliökilometrin '
+              + 'metsäsaarekkeisiin Rungwe-vuoren ja Ndundulun ylängöillä.',
+          selite: 'Udzungwan jyrkänteen sademetsää. Juuri tällaisista '
+            + 'ylänkömetsistä kipunji löytyi — ja vain kahdesta erillisestä '
+            + 'saarekkeesta.',
+          lahde: 'Josefito123, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Rannikolla ruoka on maustettua ja kookoksen makuista, sisämaassa '
+          + 'yksinkertaista ja täyttävää — ja iltaisin molemmat kohtaavat torilla.',
+      nostot: [
+        {
+          otsikko: 'Nuput, jotka tekivät saarista maustesaaret',
+          aika: '1800-luku–',
+          tiedosto: 'Cloves-penang-zanzibar.png',
+          teksti: 'Mausteneilikka on kotoisin Indonesian Molukeilta, mutta Omanin '
+              + 'sulttaanit toivat sen Sansibariin 1800-luvun alkupuolella, ja saaret '
+              + 'nousivat maailman suurimmaksi neilikan tuottajaksi — etenkin Pemba, '
+              + 'jonka punainen multa sopi puille. Neilikka on kuivattu kukannuppu, joka '
+              + 'poimitaan käsin ennen kuin se ehtii avautua. Sansibarin osuus maailman '
+              + 'tuotannosta on nykyään noin seitsemän prosenttia, kun Indonesia tuottaa '
+              + 'kolme neljäsosaa. Mausteita kasvatetaan yhä: kanelia, muskottia, '
+              + 'mustapippuria ja kookosta.',
+          selite: 'Vanha kasvitieteellinen taulu vertaa Penangin ja Sansibarin '
+            + 'neilikkaa: sama laji, eri kasvupaikka ja eri muoto.',
+          lahde: 'McCormick and Company, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Riisi, joka kertoo kauppareitin',
+          tiedosto: 'Pilua for many.jpg',
+          teksti: 'Rannikon keittiö on valtameren yli käydyn kaupan tulos: pilau kiehuu '
+              + 'kardemumman, kanelin, neilikan ja kuminan kanssa, biriani kerrostetaan '
+              + 'erikseen keitetystä riisistä ja lihasta, ja kastikkeisiin lorautetaan '
+              + 'kookosmaitoa. Intiasta muuttaneiden perheiden mukana tulivat sambusa, '
+              + 'chapati ja bagia. Sisämaassa syödään yksinkertaisemmin: wali eli riisi, '
+              + 'mishkaki eli marinoidut lihavartaat, tilapia järvestä ja ndizi-nyama, '
+              + 'keittobanaania lihan kanssa. Tansaniassa kasvatetaan ainakin '
+              + 'seitsemäätoista eri banaanilajiketta.',
+          selite: 'Pilau kypsyy juhliin isossa padassa avotulella; kokki on '
+            + 'kietonut ylleen kangan.',
+          lahde: 'Galkey, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Munakas, jonka sisällä on ranskalaiset',
+          tiedosto: 'Chipsi mayai (zege).jpg',
+          teksti: 'Chipsi mayai tarkoittaa kirjaimellisesti ranskalaisia ja munia: '
+              + 'kuumaan pannuun kaadetaan munaseos suoraan paistuvien perunoiden '
+              + 'päälle, ja munakas leikataan sektoreiksi kuin piirakka. Se on '
+              + 'tavallinen aamiainen etenkin maaseudulla. Muuta aamupalaa ovat chai '
+              + 'eli maustettu tee maidolla, chapati, maandazi — hiukan makea '
+              + 'uppopaistettu leivonnainen — ja vitumbua, riisijauhosta paistetut '
+              + 'pienet pyöryläiset. Välipalapöydässä ovat kashata eli kookospatukka, '
+              + 'sambusa ja mkate wa kumimina, sansibarilainen riisileipä.',
+          selite: 'Chipsi mayai leikattuna lohkoiksi, päällä tulista '
+            + 'tomaattikastiketta ja jugurttia.',
+          lahde: 'iamkevoo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Puisto, joka herää auringonlaskussa',
+          tiedosto: 'Food Market, Stone Town (10164244853).jpg',
+          teksti: 'Forodhanin puisto on kapea vihreä kaistale Kivikaupungin '
+              + 'merenrantakadulla, Vanhan linnakkeen ja Ihmeiden talon edessä. Aga '
+              + 'Khanin kulttuurirahasto kunnosti sen kolmella miljoonalla dollarilla. '
+              + 'Joka ilta auringonlaskun jälkeen puistoon nousee ruokatori: hiilloksilla '
+              + 'paistetaan merenherkkuja ja tarjolla on sansibarilaisia ruokia '
+              + 'turisteille ja paikallisille. Kivikaupunki itse on Unescon '
+              + 'maailmanperintökohde vuodesta 2000, ja sen talot on rakennettu '
+              + 'koralliliuskeesta, joka antaa kaduille lämpimän punertavan sävyn.',
+          selite: 'Forodhanin ruokatori sytyttää lamppunsa heti auringonlaskun '
+            + 'jälkeen; myyntipöydät kiertävät puiston vanhoja puita.',
+          lahde: 'Rod Waddington, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Tansanialainen kuva syntyy usein siitä, mitä sattuu olemaan käsillä: '
+          + 'lastulevystä, eebenpuun juurakosta, oven paksusta laudasta tai '
+          + 'puuvillakankaan reunaan painetusta lauseesta.',
+      nostot: [
+        {
+          otsikko: 'Kuusi seuraajaa ja neljä vuotta aikaa',
+          aika: '1968–1972',
+          tiedosto: 'Little world, Aichi prefecture - Main exhibition hall - Tingatinga - Scene of village.jpg',
+          teksti: 'Edward Saidi Tingatinga alkoi maalata Dar es Salaamissa 1968 '
+              + 'aineilla, joihin hänellä oli varaa: lastulevylle ja polkupyörämaalilla. '
+              + 'Useasta kerroksesta emalia tuli hehkuvan kirkas pinta, ja aiheet — '
+              + 'leijona, riikinkukko baobabissa, antilooppi — olivat yhtä aikaa '
+              + 'naiiveja ja pilkallisia. Kun hän kuoli 1972, tyyli oli jo ehtinyt '
+              + 'saada seuraajia, ja Tingatinga-koulusta kasvoi Itä-Afrikan tunnetuin '
+              + 'maalaustyyli. Toisen polven maalarit toivat 1990-luvulla mukaan '
+              + 'kaupungin: ruuhkaisia katuja, toreja ja perspektiiviä.',
+          selite: 'Tingatinga-koulun kyläkuva: kymmeniä hahmoja kerralla, tasainen '
+            + 'väripinta ja piirretty ääriviiva, ei varjoja.',
+          lahde: 'Yanajin33, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Sukupuu, joka veistetään yhdestä rungosta',
+          tiedosto: 'Makonde carving 1.jpg',
+          teksti: 'Makondet veistävät mustaa mpingo-puuta, jonka tiheä puuaines kestää '
+              + 'hienon jäljen. Työ tehdään yhdestä ainoasta rungosta: muoto '
+              + 'hahmotellaan kirveellä, viimeistellään veitsellä ja raspilla ja '
+              + 'vahataan kiiltäväksi. Oksankohtia ja halkeamia ei piiloteta vaan ne '
+              + 'otetaan osaksi teosta. Ujamaa-tyylissä ihmishahmot kiipeävät toistensa '
+              + 'yli pylvääksi, jota kutsutaan elämänpuuksi ja joka kertoo yhteisöstä; '
+              + 'shetani-tyylin henkiolennot ovat kierteisiä ja unenomaisia. Puu on '
+              + 'veistäjille elävä aine, ei raaka-aine.',
+          selite: 'Kolme makonde-veistosta 1960-luvulta. Kasvot on kaiverrettu '
+            + 'kulmikkaiksi, ja vartalot noudattavat rungon omaa muotoa.',
+          lahde: 'MatthiasKabel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Ovi, joka kertoo talon asukkaasta',
+          tiedosto: 'Carved wooden door, Stone Town, Zanzibar (33) (29103171035).jpg',
+          teksti: 'Kivikaupungin tunnetuin yksityiskohta on ovi. Karmit ja lehdet on '
+              + 'kaiverrettu täyteen kuviota ja usein koristeltu intialaiseen tapaan '
+              + 'isoilla messinkinastoilla. Kaksi päätyyliä erottuu heti: intialaisissa '
+              + 'ovissa yläreuna kaartuu, omanilais-arabialaisissa se on suora. '
+              + 'Kaiverrukset ovat usein islamilaisia, esimerkiksi Koraanin säkeitä, '
+              + 'mutta joukossa on myös intialaisia lootuksenkukkia vaurauden '
+              + 'vertauskuvina. Talon julkisivussa kulkee kivipenkki baraza, jolla '
+              + 'istutaan ja jota pitkin kävellään, kun sade tekee kadusta '
+              + 'kulkukelvottoman.',
+          selite: 'Intialaistyylinen ovi Kivikaupungissa: kaartuva yläosa, '
+            + 'läpikaiverrettu koristerivi ja rivi isoja messinkinastoja.',
+          lahde: 'Richard Mortel, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kangas, jolla on nimi ja mielipide',
+          aika: '1900-luku–',
+          tiedosto: 'Khanga.jpg',
+          teksti: 'Kanga on painettu puuvillakangas, noin puolitoista metriä kertaa '
+              + 'metri, ja siinä on kolme osaa: leveä reunus pindo, keskikuvio mji ja '
+              + 'tekstirivi jina eli nimi. Teksti on swahilinkielinen sananlasku, '
+              + 'arvoitus tai terveisiä, ja se tekee kankaasta viestin. Tavan aloitti '
+              + '1900-luvun alussa mombasalainen kauppias Kaderdina Hajee Essak, joka '
+              + 'merkitsi kankaansa tunnuksella ja lisäsi siihen sananlaskun. Lahjaksi '
+              + 'annettaessa on syytä lukea teksti tarkkaan: kaikki jinat eivät ole '
+              + 'kohteliaisuuksia. Kangat myydään aina pareittain.',
+          selite: 'Kankaita myyntitelineessä. Jokaisessa on oma reunuksensa ja '
+            + 'keskikuvionsa, ja alareunaan painettu lause antaa kankaalle nimen.',
+          lahde: 'Bukulu Steven, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Millä maalilla Edward Saidi Tingatinga maalasi ensimmäiset työnsä?',
+        vaihtoehdot: [
+          'Öljyvärillä',
+          'Munatemperalla',
+          'Kirkkaalla lakalla',
+          'Polkupyörämaalilla',
+        ],
+        oikea: 3,
+        fakta: 'Emalimaalia sai pieninä purkkeina joka korjaamolta, ja useaan kertaan '
+            + 'maalattuna se antoi lastulevylle kirkkaan, melkein hehkuvan pinnan.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Sansibarin hoviin tilattu orkesteri synnytti musiikin, joka kulkeutui '
+          + 'palatsista häihin, häistä levylle ja levyltä koko Itä-Afrikkaan.',
+      nostot: [
+        {
+          otsikko: 'Sulttaani tilasi orkesterin Egyptistä',
+          aika: '1870–1905',
+          tiedosto: 'Music academy- Stone Town.jpg',
+          teksti: 'Taarab syntyi Sansibarin hovissa: sulttaani Barghash tilasi '
+              + 'palatsiinsa egyptiläisen soittokunnan ja lähetti Mohamed Ibrahimin '
+              + 'Egyptiin opettelemaan kanunia, siteriä muistuttavaa kielisoitinta. '
+              + 'Palattuaan tämä perusti Sansibarin taarab-orkesterin. Sana tulee '
+              + 'arabian sanasta tarab, musiikin tuottama hurmio. Vuonna 1905 '
+              + 'perustettiin saaren toinen musiikkiseura Ikhwani Safaa, joka toimii '
+              + 'yhä. Sävelmissä kohtaavat Egypti, Intia, Arabian niemimaa ja '
+              + 'Itä-Afrikan omat rytmit.',
+          selite: 'Kivikaupungin musiikkiakatemian soittajia: edessä kanun, '
+            + 'takana viulu ja huilu — sama kokoonpano kuin sata vuotta sitten.',
+          lahde: 'David Poussif De Angelis, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Orjaksi syntynyt laulaja, joka levytti Bombayssa',
+          aika: '1880–1950',
+          teksti: 'Siti binti Saad syntyi noin 1880 orjaksi Fumban kylään Sansibarissa; '
+              + 'hänen vanhempansa työskentelivät neilikkaviljelmillä. Vuonna 1928 hän '
+              + 'matkusti yhtyeineen Bombayn levytysstudioon ja oli ensimmäinen '
+              + 'itäafrikkalainen, joka teki kaupallisia äänitteitä — levyjä kertyi '
+              + 'elämän aikana yli 250. Hän lauloi swahiliksi, ei arabiaksi kuten '
+              + 'edeltäjänsä, ja teki taarabista kaikkien kieltä. Hän toi lajiin myös '
+              + 'natiki-nimisen tanssiosuuden, jonka esikuva oli intialainen tanssi. '
+              + 'Vasta hänen jälkeensä naiset pääsivät miesten laulukerhoihin.',
+          selite: 'Hänen syntymänimensä oli Mtumwa, orja; Siti on kunnianimi, joka '
+            + 'tarkoittaa rouvaa.',
+        },
+        {
+          otsikko: 'Peukalopiano ja Peter Gabrielin levy-yhtiö',
+          aika: '1938–2003',
+          tiedosto: 'Little world, Aichi prefecture - African plaza - Kalimba (Ilimba) - Dar es Salaam in Tanzania - Collected in 1984.jpg',
+          teksti: 'Hukwe Zawose oli gogo-kansaa Keski-Tansaniasta ja soitti ilimbaa, '
+              + 'suurta peukalopianoa eli mbiran sukulaista, jonka metallikielekkeitä '
+              + 'näppäillään peukaloilla. Nyerere kutsui hänet Dar es Salaamiin, ja '
+              + 'kansallinen tunnettuus muuttui kansainväliseksi, kun Peter Gabrielin '
+              + 'Real World julkaisi hänen levynsä Chibite ja Assembly. Zawose hallitsi '
+              + 'useita perinnesoittimia ja oli myös arvostettu laulaja. Hän kuoli 2003; '
+              + 'tytär Pendo ja tyttärentytär Leah esiintyvät yhä yhdessä.',
+          selite: 'Dar es Salaamista vuonna 1984 kerätty peukalopiano. Kielekkeet '
+            + 'on taottu metallista ja viritetty pituutta muuttamalla.',
+          lahde: 'Yanajin33, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Aivot, joita tarvittiin selvitäkseen',
+          aika: '1990-luku–',
+          tiedosto: 'Diamond Platnumz à WeLoveEya 2025 à Cotonou.jpg',
+          teksti: 'Bongo flava on 1990-luvulla syntynyt tansanialainen popmusiikki, joka '
+              + 'yhdistää amerikkalaisen hiphopin taarabiin ja dansiin. Nimi kertoo '
+              + 'oman tarinansa: ubongo on swahiliksi aivot, ja lyhennettä bongo '
+              + 'alettiin käyttää Dar es Salaamista 1970-luvun lopun vaikeina vuosina — '
+              + 'kaupungissa selvitäkseen tarvitsi älyä. Flava on englannin flavour, '
+              + 'maku. Sanoitukset ovat swahiliksi tai englanniksi. Laji levisi '
+              + 'mantereen laajuiseksi noin 2014, kun Diamond Platnumzin hitti My '
+              + 'Number One nousi soittolistoille Nigeriassa, Ghanassa ja '
+              + 'Etelä-Afrikassa.',
+          selite: 'Diamond Platnumz esiintymässä Cotonoussa Beninissä 2025 — '
+            + 'osoitus siitä, kuinka kauas Dar es Salaamin popmusiikki on kulkenut.',
+          lahde: 'Gildas Lissassi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+  ],
+  /*
+   * UGANDA (UGA) — Afrikan laudan neljäs maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-uganda.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA: maastokohteet-uga.js kattaa Mount
+   * Stanleyn, Victorianjärven, Niilin, Kasubin haudat, Murchisonin
+   * putoukset, Queen Elizabethin puiston, Kibalen, Nyeron
+   * kalliomaalaukset, Kidepon laakson, Fort Patikon ja Jinjan;
+   * skandaalit.js kabakan karkotuksen ja vuoden 1900 sopimuksen
+   * maanjaon; elaintakyt.js vuorigorillan Bwindissä. Maalehti EI
+   * toista niitä — siksi luonto-osiossa ei ole gorilloja, Rwenzoria
+   * eikä Niilin lähdettä, ja historiassa ei Kasubin hautoja, vuoden
+   * 1900 sopimusta eikä Samuel Bakerin linnaketta.
+   *
+   * HERKÄT AIHEET: Ugandan marttyyrit kerrotaan tapahtumana ja sen
+   * taustana olleena kolmen uskonnon kilpailuna hovissa; teloituksia
+   * ei kuvata. Idi Aminin kausi, vuoden 1972 karkotukset ja
+   * nykypolitiikka on jätetty kokonaan pois (M3:n Myanmar-linja).
+   *
+   * KUVAT: 18 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin. KAKSI
+   * NOSTOA JÄI KUVATTOMAKSI: luwombo (Commonsissa ei ole yhtään kuvaa
+   * ruokalajista) ja bigwala (kurpitsatorvista ei ole kuvaa lainkaan).
+   * HYLÄTYT: "Uganda railways assessment 2010" -sarja (Ugandan
+   * nykyasemia, ei Kenian rataa), "A traditional meal called Osubi"
+   * (lugbaralainen ruoka, ei luwomboa), "Garçon jouant du nondowou"
+   * (eri maan soitin), "Beautiful amidst mabira forest" (ylivalottunut,
+   * kuvattu auton ikkunan läpi), "Balearica regulorum gibbericeps MHNT"
+   * (pelkkä muna kokoelmalaatikossa).
+   *
+   * TUNNISTETTAVAT KASVOT: kuvissa on suosittu esineitä ja maisemia.
+   * Ainoa poikkeus on engalabi-rummuttaja, jossa esiintyjä on itse
+   * jutun aihe julkisessa kulttuuriesityksessä; adungu-kuvaksi
+   * valittiin lähikuva käsistä juuri tästä syystä.
+   */
+  UGA: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ugandan alueella oli kuningaskuntia kauan ennen kuin maata oli — ja '
+          + 'koko maa sai lopulta nimensä yhden niistä mukaan.',
+      nostot: [
+        {
+          otsikko: 'Maa, joka nimettiin yhden kuningaskunnan mukaan',
+          aika: '1300-luku–',
+          tiedosto: 'Kabaka Palace in Kampala.jpg',
+          teksti: 'Bugandan perimätiedon mukaan kuningaskunnan yhdisti Kato Kintu, '
+              + 'ensimmäinen kabaka, ja valtakunta kasvoi 1700- ja 1800-luvuilla '
+              + 'Itä-Afrikan mahtavimpiin. Hallitsijan rinnalla toimivat lukiiko eli '
+              + 'parlamentti ja katikkiro eli pääministeri, jonka virka syntyi noin '
+              + 'vuonna 1800. Vallanperimys kulki veljeltä veljelle, ja koska seuraaja '
+              + 'valittiin äidin klaanin mukaan, kuninkaan pojat ottivat äitinsä eivätkä '
+              + 'isänsä klaanitunnuksen. Kun britit ottivat alueen hallintaansa, he '
+              + 'käyttivät kuningaskunnasta sen swahilinkielistä nimeä Uganda — ja siitä '
+              + 'tuli koko maan nimi.',
+          selite: 'Kabakan palatsi Kampalan Lubirissa. Kuningaskunta lakkautettiin '
+            + '1967 ja palautettiin seremonialliseksi 1993.',
+          lahde: 'NatureDan, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kymmenen kilometriä kaivantoa',
+          aika: '1300–1500',
+          tiedosto: 'Katonga River View along Kampala-Masaka Highway.jpg',
+          teksti: 'Katonga-joen etelärannalla on Bigo bya Mugenyi, maavalli- ja '
+              + 'kaivantojärjestelmä, jota on yhteensä yli kymmenen kilometriä. Ulommat '
+              + 'kaivannot ovat paikoin yli kymmenen metriä leveitä ja puolestatoista '
+              + 'neljään metriin syviä, ja niiden sisään jää yli kolmesataa hehtaaria. '
+              + 'Radiohiiliajoitukset asettavat työn vuosien 1300 ja 1500 väliin, ja '
+              + 'kohdetta on kutsuttu Ugandan suurimmaksi ja tärkeimmäksi '
+              + 'muinaisjäänteeksi. Kaivauksissa 1960 nostettiin yli 4 200 '
+              + 'keramiikansirua. Perimätieto liittää paikan bachwezeihin, '
+              + 'hallitsijoihin joista kerrotaan tarinoina.',
+          selite: 'Katonga-joki Mpigin piirikunnassa. Kaivannot kaivettiin joen '
+            + 'eteläpuolelle niin, että joki itse muodosti osan rajaa.',
+          lahde: 'Emma Oruk, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kuningas, joka palasi vasta arkussa',
+          aika: '1870–1923',
+          tiedosto: 'Omukama Kabalega capture site.jpg',
+          teksti: 'Bunyoron omukama Kabalega nousi valtaan 1870 ja kehitti maataan '
+              + 'kaupalla — tärkein tulonlähde olivat Kibiron suolakeittimöt Albertin '
+              + 'järven rannalla. Hän lakkautti orjakaupan alueellaan ja rakensi '
+              + 'vakinaisen armeijan perinteisen aateliston tilalle. Kun Britannia '
+              + 'julisti alueelle protektoraatin, seurasi lähes viisi vuotta kestänyt '
+              + 'sota 1894–1899. Kabalega vangittiin 9. huhtikuuta 1899 ja karkotettiin '
+              + 'Seychelleille, missä hän vietti 24 vuotta ja kirjoitti kirjeitä '
+              + 'asiansa puolesta. Paluumatkalla hän kuoli Jinjassa 1923; hauta on '
+              + 'Mparossa Hoimassa.',
+          selite: 'Muistokivi Kangain paikalla, jossa Kabalega vangittiin '
+            + '9. huhtikuuta 1899.',
+          lahde: 'Micheal Kaluba, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Neljäkymmentäviisi nimeä ja pyhiinvaellus',
+          aika: '1885–1964',
+          tiedosto: 'Namugongo Martyrs Shrine exterior view.jpg',
+          teksti: 'Bugandan hovissa kilpaili 1880-luvulla kolme uskontoa: '
+              + 'sansibarilaisten kauppiaiden tuoma islam, anglikaaninen lähetysseura '
+              + 'vuodesta 1877 ja ranskalaiset katoliset valkoiset isät vuodesta 1879. '
+              + 'Käännynnäisiä nousi hovivirkoihin, ja kabaka Mwanga II näki uudessa '
+              + 'lukeneessa virkamiesluokassa uhan. Vuosien 1885 ja 1887 välillä '
+              + 'teloitettiin 22 katolista ja 23 anglikaanista käännynnäistä. Katoliset '
+              + 'julistettiin autuaiksi 1920 ja pyhiksi 1964, ja Namugongon '
+              + 'muistokirkosta tuli Afrikan suurimman vuosittaisen pyhiinvaelluksen '
+              + 'päätepiste.',
+          selite: 'Namugongon marttyyrien basilika valmistui 1973. Sveitsiläisen '
+            + 'Justus Dahindenin suunnittelema katto jäljittelee perinteistä '
+            + 'ugandalaista majaa.',
+          lahde: 'Isabelle Prondzynski, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Uganda on päiväntasaajan vihreä ylänkö: kaksi sadekautta vuodessa, '
+          + 'papyrussoita, kraatterijärviä ja lintuja, joita tullaan katsomaan toiselta '
+          + 'puolelta maailmaa.',
+      nostot: [
+        {
+          otsikko: 'Lintu, joka seisoo tuntikausia paikallaan',
+          tiedosto: 'Uganda\'s Iconic Shoebill Stork in Mabamba Wetland.jpg',
+          teksti: 'Kenkänokka on 110–140 senttiä korkea suolintu, jonka valtava nokka on '
+              + 'kolmanneksi pisin kaikista nykylinnuista pelikaanien ja suurten '
+              + 'haikarojen jälkeen. Se on saanut nimensä nokan muodosta ja tieteellisen '
+              + 'nimensä Balaeniceps rex samasta syystä: valaanpää-kuningas. Lintu '
+              + 'metsästää pelkällä näöllä, seisoo liikkumatta pitkään ja iskee sitten '
+              + 'kerralla — noin 60 prosenttia iskuista tuottaa saaliin, useimmiten '
+              + 'keuhkokalan tai monnin. Se seisoo kelluvan kasvillisuuden päällä '
+              + 'valtavien varpaidensa varassa. Lajia arvioidaan olevan 5 000–8 000 '
+              + 'yksilöä, ja Ugandan suot ovat sen tärkeimpiä esiintymisalueita.',
+          selite: 'Kenkänokka Mabamban papyrussuolla Viktorianjärven rannalla. '
+            + 'Lintu on niin liikkumaton, että sen löytää usein vasta kun se '
+            + 'kääntää päätään.',
+          lahde: 'Sjoerdug, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kruunu, joka nousi lippuun',
+          tiedosto: 'Balearica regulorum 1 Luc Viatour.jpg',
+          teksti: 'Ugandan kansallislintu on harmaakruunukurki, ja se seisoo maan lipussa '
+              + 'toinen jalka koholla. Höyhenpuku on harmaa, posket valkoiset, kurkussa '
+              + 'punainen läiskä ja päälaella jäykkä kultainen kruunu. Itäafrikkalaisella '
+              + 'alalajilla on kasvoissa laajempi paljas punainen alue kuin '
+              + 'eteläafrikkalaisella. Lintu on kaikkiruokainen: siemeniä, hyönteisiä, '
+              + 'sammakoita, matoja ja pieniä kaloja. Se viihtyy kuivalla savannilla '
+              + 'mutta pesii kosteammassa, soilla ja jokien varsilla. Kansainvälinen '
+              + 'luonnonsuojeluliitto luokittelee sen erittäin uhanalaiseksi.',
+          selite: 'Harmaakruunukurjen kultainen töyhtö on jäykkiä, kärjestä '
+            + 'levenneitä höyheniä; poskessa on valkoinen laikku ja kurkussa '
+            + 'punainen pussi.',
+          lahde: 'Luc Viatour, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Järvi, jonka syvyydestä ei olla yksimielisiä',
+          tiedosto: 'Lake Bunyonyi Uganda-15(1).jpg',
+          teksti: 'Bunyonyi tarkoittaa monen pienen linnun paikkaa. Järvi syntyi noin '
+              + '18 000 vuotta sitten, kun tulivuorenpurkaus tukki laakson Kigezin '
+              + 'ylängöllä. Se on 22 kilometriä pitkä ja leveimmillään kuusi, ja pinta on '
+              + 'lähes kahden kilometrin korkeudessa; ympärillä nousee vuoria vielä '
+              + 'kuusisataa metriä järven yläpuolelle. Saaria on 29. Syvyydestä '
+              + 'kiistellään: tutkimuskirjallisuus antaa neljäkymmentä metriä, '
+              + 'paikalliset ja matkaoppaat väittävät yhdeksääsataa, mikä tekisi siitä '
+              + 'Afrikan toiseksi syvimmän. Järvi oli Ugandan 5 000 shillingin setelin '
+              + 'kuvana vuosina 2004–2009.',
+          selite: 'Bunyonyin rannat ovat porrastettuja viljelyterasseja, ja järven '
+            + 'saaret nousevat vedestä jyrkkinä kumpuina.',
+          lahde: 'Yiga Authman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Metsä, jonka keskellä on kaksikymmentäseitsemän kylää',
+          aika: '1932–',
+          tiedosto: 'Road to Jinja.jpg',
+          teksti: 'Mabiran sademetsä Lugazin ja Jinjan välissä kattaa noin 300 '
+              + 'neliökilometriä ja on ollut suojeltu vuodesta 1932. Maasto on loivasti '
+              + 'kumpuilevaa, tasalakiset kukkulat 1 070 ja 1 340 metrin välillä, ja '
+              + 'purot laskevat pohjoiseen Viktorian Niiliin, vaikka Viktorianjärvi on '
+              + 'aivan etelärajalla. Metsässä elää uhanalainen ugandanmangabi, jota '
+              + 'pidettiin pitkään toisen lajin muunnoksena. Suojelualueen sisällä tai '
+              + 'sen reunoilla on noin kaksikymmentäseitsemän asuttua enklaavia, ja '
+              + 'ympärillä on peltoa joka suunnassa.',
+          selite: 'Kampalasta Jinjaan vievä tie halkoo Mabiran suojelumetsän. '
+            + 'Metsä alkaa suoraan tienpenkasta molemmin puolin.',
+          lahde: 'YoTuT, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Ugandalainen ateria kypsyy höyryssä ja kääreessä — ja katuruoka '
+          + 'keksittiin opiskelijakorttelissa.',
+      nostot: [
+        {
+          otsikko: 'Vihreänä poimittu, höyryssä kypsennetty',
+          tiedosto: 'Bunches of matooke and emyera.JPG',
+          teksti: 'Matoke on ryhmä ylängön keittobanaanilajikkeita, jotka poimitaan '
+              + 'raakoina ja vihreinä. Kuori kaavitaan varovasti pois ja hedelmät '
+              + 'kypsennetään höyryssä, minkä jälkeen ne survotaan tahnaksi — Ugandassa '
+              + 'ja Ruandassa tämä on kansallisruoka. Lajikkeet erottaa muista siitä, '
+              + 'että valeversossa on mustia tai pronssinvärisiä laikkuja, jotka saavat '
+              + 'kasvin näyttämään kiillotetulta metallilta, ja lehdet ovat tummempia ja '
+              + 'himmeämpiä. Samaa ruokaa syödään Viktorianjärven ympäri Keniassa ja '
+              + 'Luoteis-Tansaniassa, kukin omalla nimellään.',
+          selite: 'Matoke-tertut torilla. Hedelmät ovat kovia ja vihreitä — '
+            + 'kypsäksi tätä lajiketta ei anneta mennä.',
+          lahde: 'Kalungi Nathan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Hovikokin keksintö vuodelta 1887',
+          aika: '1887–',
+          teksti: 'Bugandan hovin pääkokki Kawuuta tarjosi kabaka Mwangalle vuonna 1887 '
+              + 'padan, jossa liha ja kastike oli kypsennetty kokonaan savustettuun '
+              + 'banaaninlehteen käärittynä — lehdet otetaan ndiizi-lajikkeen nuorista '
+              + 'versoista. Luwombo jäi hoviruoaksi: sitä saivat kuninkaallinen perhe, '
+              + 'vieraat ja päälliköt. Kääre pitää höyryn ja maun sisällään, ja annos '
+              + 'avataan vasta lautasella. Versioita on kanasta, lihasta, kalasta sekä '
+              + 'maapähkinästä ja sienistä. Nykyään sitä syövät kaikki, mutta juhlissa — '
+              + 'kwanjula-kihlajaisissa ja häissä — se on yhä se ruoka, joka kertoo että '
+              + 'vieras on tärkeä.',
+          selite: 'Kokin nimi tunnetaan yhä: Kawuuta oli hovin pääkokin virkanimi '
+            + 'eikä pelkkä henkilönnimi.',
+        },
+        {
+          otsikko: 'Kello, jota syödään',
+          tiedosto: 'Rolex in Mbarara.jpg',
+          teksti: 'Rolex ei ole Ugandassa kello vaan ateria: munakas ja vihannekset '
+              + 'kääritään chapatiin. Nimi tulee englannin sanoista rolled eggs, '
+              + 'käärityt munat. Idea syntyi Busogassa chapatin myyjän kojulla ja levisi '
+              + 'Wandegeyaan Makereren yliopiston kylkeen, jossa opiskelijat tarvitsivat '
+              + 'nopean ja halvan aterian. Siitä tuli koko maan ruokaa. Variaatioilla on '
+              + 'omat nimensä: titanic tehdään kahdesta chapatista, ja kikomandossa '
+              + 'chapati leikataan suikaleiksi ja sekoitetaan papuihin — nimi tulee '
+              + 'sotilaasta, joka syö nopeasti eikä välitä sotkusta.',
+          selite: 'Rolexin teko alkaa siitä, että munaseos kaadetaan kuumalle '
+            + 'pellille; chapatit odottavat vieressä pinossa.',
+          lahde: 'Fralian, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kahvi, joka kasvoi täällä ennen ketään',
+          tiedosto: 'Well dry coffee beans in a locally woven basket.jpg',
+          teksti: 'Uganda on yksi harvoista maista, joissa kahvi on kotoperäistä: '
+              + 'robusta kasvaa villinä Viktorianjärven ympäristön metsissä ja Kampalan '
+              + 'seudulla. Arabica sen sijaan tuotiin Etiopiasta ja se on kotiutunut '
+              + 'Elgon-vuoren rinteille. Kahvi on maan tärkein vientikasvi. '
+              + 'Vuosituhannen vaihteessa käynnistettiin Kibalen villikahvihanke, jossa '
+              + 'metsäkahvia yritettiin myydä varjossa kasvatetun kahvin tapaan '
+              + 'erikoistuotteena niin, että tuotto rahoittaisi metsän suojelua. Kahvin '
+              + 'viennin valvontaa varten perustettiin oma virasto 1991.',
+          selite: 'Kuivattuja raakoja kahvipapuja punotussa korissa. Vihreä papu '
+            + 'saa värinsä vasta paahdossa.',
+          lahde: 'Jameswasswa, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mihin luwombon liha ja kastike kääritään kypsennettäväksi?',
+        vaihtoehdot: [
+          'Banaaninlehtiin',
+          'Maissinlehtiin',
+          'Palmunlehtiin',
+          'Saviruukkuun',
+        ],
+        oikea: 0,
+        fakta: 'Savustettu lehti kestää höyryn eikä repeä, ja kääre avataan vasta '
+            + 'lautasella, jotta tuoksu ei karkaa matkalla.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Ugandalaiset soittimet on tehty siitä mitä kasvaa: kurpitsasta, '
+          + 'taipuneesta oksasta, lehmännahasta ja yhdestä kitarasta.',
+      nostot: [
+        {
+          otsikko: 'Neljä mestaria jäljellä',
+          teksti: 'Bigwala on Busogan kuningaskunnan juhlamusiikkia, jota soitetaan '
+              + 'kurpitsatorvilla. Yksi torvi aloittaa, ja neljä tai useampi vastaa '
+              + 'vuorotellen niin, että sävelmä syntyy vasta soittajien välistä; sitten '
+              + 'mukaan tulevat laulajat ja tanssijat, jotka kiertävät soittajia. Sanat '
+              + 'kertovat kuningaskunnan historiaa. Ennen bigwalaa soitettiin '
+              + 'kruunajaisissa ja hautajaisissa, nykyään harvemmin: taidon osaavia '
+              + 'vanhoja mestareita on jäljellä neljä, ja siksi laji on Unescon '
+              + 'kiireellistä suojelua vaativien luettelossa.',
+          selite: 'Hoketointi tarkoittaa sitä, että kukin soittaja soittaa vain '
+            + 'yhden sävelen vuorollaan — melodia on olemassa vain yhdessä.',
+        },
+        {
+          otsikko: 'Harppu, jonka päällä voi istua',
+          tiedosto: 'African arched harp(Adungu).jpg',
+          teksti: 'Adungu on acholien ja alurien kaarevaharppu Pohjois-Ugandasta. '
+              + 'Kaikukoppa on koverrettu puusta ja päällystetty lehmännahalla; kielet '
+              + 'kulkevat nahan läpi kaarevaan oksaan kiinnitettyihin virityspuikkoihin. '
+              + 'Kieliä on kuudesta kymmeneen tai enemmän, ja ennen ne tehtiin suolesta '
+              + 'ja jänteistä, nykyään nailonista. Soittimia on eri kokoja: pienintä '
+              + 'pidetään vartaloa vasten, ja suurin, bassoadungu, on niin iso että '
+              + 'soittaja istuu sen päällä. Yhtyeessä bassoadungu kantaa pohjan, jonka '
+              + 'päälle pienemmät soittavat.',
+          selite: 'Adungun kielet on solmittu kaarevaan varteen puutapeilla, ja '
+            + 'viritys muuttuu tappia kiertämällä.',
+          lahde: 'Dorothy6161, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Yksi kitara ja pitkä tarina',
+          aika: '1950-luvulta',
+          tiedosto: 'Kadongo kamu.jpg',
+          teksti: 'Kadongo kamu tarkoittaa lugandaksi yhtä pientä kitaraa, ja se on '
+              + 'Ugandan vanhin valtavirran musiikkilaji. Se kasvoi bagandojen '
+              + 'perinnemusiikista ja bakisimba-rummutuksesta, ja yleistyi 1950- ja '
+              + '1960-luvuilla, kun akustisia kitaroita alkoi olla saatavilla. Laji on '
+              + 'yhtä paljon tarinankerrontaa kuin musiikkia: sanat käsittelevät '
+              + 'yhteiskuntaa, rakkautta ja moraalia, ja laulu voi kestää pitkään. '
+              + 'Alan isänä pidetään Fred Masagazia ja isoisänä Christopher Ssebadukaa. '
+              + 'Kampalan kaduilla lajia soitetaan yhä pienelle yleisölle kolehtia '
+              + 'vastaan.',
+          selite: 'Kadongo kamun kokoonpano on pieni: laulu, kitara ja tarina, '
+            + 'joka voi jatkua säkeistöstä toiseen.',
+          lahde: 'Dorothy6161, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Pitkä rumpu ja sen seurue',
+          tiedosto: 'Traditional engalabi drumming in a Baganda cultural performance.jpg',
+          teksti: 'Ugandalaisessa yhtyeessä rumpuja on monta lajia. Engalabi on pitkä '
+              + 'pyöreä rumpu, jota lyödään käsin ja joka kuuluu tanssin mukana lähes '
+              + 'joka juhlaan. Sen rinnalla soivat kielisoittimet ennanga-harppu ja '
+              + 'entongoli-lyyra sekä paikallinen jousisoitin kadingidi. Kuninkaalliset '
+              + 'rummut ovat oma lukunsa: ne ovat suuria ja pyhiä, eikä niitä lyödä '
+              + 'huvin vuoksi. Tanssilajeista tunnetuin on bakisimba, jonka askel '
+              + 'seuraa rumpukuviota niin tarkasti, että rumpali ja tanssija tekevät '
+              + 'käytännössä saman liikkeen.',
+          selite: 'Engalabia lyödään paljain käsin, ei kapuloilla, ja rumpali '
+            + 'istuu tai seisoo soittimen takana.',
+          lahde: 'Nambogo Catharine, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'tavat',
+      nimi: 'Tavat',
+      johdanto: 'Ugandassa nimi, kangas ja rummun isku ovat kaikki viestejä — ja '
+          + 'jokainen niistä kertoo, kenen kanssa olet tekemisissä.',
+      nostot: [
+        {
+          otsikko: 'Viisikymmentäkaksi klaania ja yksi tunnus',
+          tiedosto: 'Sculpture of the Nvuma Clan.jpg',
+          teksti: 'Bugandassa oli vuonna 2009 vähintään 52 tunnustettua klaania, ja '
+              + 'ainakin neljä muuta tavoitteli asemaa. Klaanit jakautuvat neljään '
+              + 'ryhmään sen mukaan, milloin ne tulivat: vanhimmat seitsemän ovat '
+              + 'nansangwa, alueella jo ennestään olleet, ja kolmentoista kerrotaan '
+              + 'saapuneen Kintun mukana. Jokaisella klaanilla on oma tunnuksensa. '
+              + 'Klaani periytyy isältä, mutta kuninkaan pojat ottivat äitinsä '
+              + 'tunnuksen, koska seuraaja valittiin äidin klaanista. Vanhastaan '
+              + 'klaanipäälliköillä oli kabakaan nähden paljon valtaa, joka väheni vasta '
+              + 'vähitellen.',
+          selite: 'Nvuma-klaanin veistos Bugandassa. Jalustan laattaan on '
+            + 'kaiverrettu klaanin tunnus, päätunnus ja alkuperäkylä.',
+          lahde: 'Ivan Visual2, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Nimi, jolla tervehditään',
+          tiedosto: 'King Oyos Palace 02.jpg',
+          teksti: 'Länsi-Ugandassa ihmisellä on oman nimensä lisäksi empaako, '
+              + 'kunnianimi, jolla häntä puhutellaan. Niitä on kaksitoista ja lisäksi '
+              + 'yksi vain kuninkaille. Empaakoa käytetään tervehdyksenä ja kiintymyksen, '
+              + 'kunnioituksen tai anteeksipyynnön osoituksena: oikean nimen sijaan '
+              + 'sanotaan empaako, ja tilanne pehmenee. Tapa on peräisin ajalta, jolloin '
+              + 'biito-klaani valloitti Kitaran valtakunnan, ja se elää banyoroilla, '
+              + 'batooroilla, batukuilla, batagwendoilla ja banyabindeilla sekä Kongon '
+              + 'bahemoilla. Unesco on ottanut sen kiireellistä suojelua vaativien '
+              + 'luetteloon.',
+          selite: 'Toron kuningaskunnan palatsi Fort Portalissa. Empaako on '
+            + 'batooroiden ja banyoroiden yhteinen tapa, ja kuninkaalle on varattu '
+            + 'oma kunnianimensä.',
+          lahde: 'Shaayflix Dr Shaay, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kangas, joka kuoritaan puusta',
+          tiedosto: 'Olubugo 2.jpg',
+          teksti: 'Lubugo tehdään mutuba-puun eli Ficus natalensiksen sisäkuoresta: '
+              + 'kuori irrotetaan rungosta, liotetaan ja hakataan nuijilla, kunnes se '
+              + 'leviää moninkertaiseksi ja muuttuu pehmeäksi, nahkamaiseksi kankaaksi. '
+              + 'Puu ei kuole korjuuseen: sama runko antaa satoa vuosittain jopa '
+              + 'neljäkymmentä vuotta, yhteensä pari sataa neliömetriä kangasta. '
+              + 'Baganda kutsuu puuta nimellä omutuba. Lubugo oli Bugandassa ja '
+              + 'Bunyorossa tavallinen vaate, kunnes arabikauppiaat toivat 1840-luvun '
+              + 'alussa puuvillan ja silkin. Se on Ugandan ainoa kohde Unescon '
+              + 'aineettoman kulttuuriperinnön luetteloissa.',
+          selite: 'Valmis lubugo-levy kuivumassa. Väri tulee puusta itsestään, ei '
+            + 'värjäyksestä, ja pinta on nahkamainen.',
+          lahde: 'Geossegawa, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Satoja iskuja, satoja merkityksiä',
+          tiedosto: 'Buganda Drum Store in Uganda.jpg',
+          teksti: 'Bugandassa viestit kulkivat rummuilla. Rumpukielessä oli satoja eri '
+              + 'iskukuvioita, ja jokaisella oli oma merkityksensä, joten tieto liikkui '
+              + 'kuningaskunnan halki lähes hetkessä — nopeammin kuin kukaan olisi '
+              + 'ehtinyt juosta. Jokaisella päälliköllä oli oma sotahuutonsa ja oma '
+              + 'rumpukuvionsa, jolla hänet tunnistettiin. Rumpu ei siis ollut vain '
+              + 'soitin vaan tunnus ja tiedotusväline yhtä aikaa, ja kuninkaalliset '
+              + 'rummut olivat kuningaskunnan pyhimpiä esineitä.',
+          selite: 'Rumpuvarasto Bugandassa: ngoma-rumpuja eri kokoisina, kalvot '
+            + 'kiinnitettyinä nahkanauhoilla puurunkoon.',
+          lahde: 'Nantumbwe J, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+  ],
+  /*
+   * MAROKKO (MAR) — Afrikan toinen maalehti Egyptin jälkeen (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-marokko.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KAUPUNKIEN JA KARTTANOSTOJEN KANSSA: Tangerin ja Marrakechin
+   * litteät kulttuurinostot (africa-kulttuuri.js) kattavat jo Matissen,
+   * minttuteen, gnawan, Jemaa el-Fnan, halqan ja tajinen; maastokohteet-mar.js
+   * Toubkalin, Volubiliksen, Aït Benhaddoun, Essaouiran, Chefchaouenin,
+   * Hassan-tornin, Erg Chebbin, El Jadidan ja Lixuksen; skandaalit.js
+   * Agadirin 1911 ja Annualin 1921; elaintakyt.js berberiapinan. Maalehti
+   * EI toista niitä: se kertoo Fèsin synnystä, al-Qarawiyyinista, kolmen
+   * kuninkaan taistelusta, Songhai-retkestä, ruoasta, käsityöstä,
+   * musiikista ja luonnosta.
+   *
+   * SISÄLTÖLINJAUS: nykypolitiikkaa ei käsitellä, eikä Länsi-Saharan
+   * kysymystä mainita.
+   *
+   * KUVAT: 18 nostokuvaa Commonsista, lisenssi ja tekijä tarkistettuina,
+   * leveys >= 1200 px, jokainen katsottu silmin. KAKSI NOSTOA JÄI
+   * KUVATTOMAKSI (andalusialainen nuba ja malhun) — kuvatilaukset on
+   * kirjattu raporttiin. HYLÄTYT: "Argan Oil Cooperative 01" (kaksi
+   * tunnistettavaa kasvoa lähikuvassa), "Fez Chouara Tannery
+   * (54238811661)" (yksittäinen työntekijä tunnistettavissa),
+   * "South Tazekka Peak Atlas Cedar" (kaukokuva, jossa setrit eivät
+   * erotu ja huipulla on mastoja).
+   */
+  MAR: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Marokko ei koskaan kuulunut Osmanien valtakuntaan, ja '
+          + 'siksi sen tarina kulkee omaa uraansa: pakolaisprinssistä '
+          + 'kaupunkiin, kaupungista yliopistoon ja yliopistosta '
+          + 'aavikon yli Nigerin mutkaan.',
+      nostot: [
+        {
+          otsikko: 'Prinssi, joka pakeni ja perusti valtion',
+          aika: '789–808',
+          tiedosto: 'Moulay Idriss Zerhoun, Morocco - panoramio.jpg',
+          teksti: 'Idris ibn Abdallah saapui vuonna 789 Tangeriin ja '
+              + 'siitä Walīlīhin, roomalaisen Volubiliksen viereen. '
+              + 'Kaupunkia asutti awraba-berberiheimo, jonka päällikön '
+              + 'tyttären Kenzan hän nai — ja siitä avioliitosta lasketaan '
+              + 'idrisidien dynastian synty. Hän hallitsi kolme vuotta ja '
+              + 'kuoli 791 ilmeisesti Bagdadin kalifin lähettien '
+              + 'myrkyttämänä. Poika Idris II syntyi vasta muutamaa '
+              + 'kuukautta myöhemmin, kasvoi heimon huomassa ja siirsi '
+              + 'hallintonsa vuonna 808 Fèsiin, josta hän teki '
+              + 'kukoistavan pääkaupungin. Isän hauta on yhä pyhiinvaellus'
+              + 'kohde vuorenrinteen kaupungissa, joka kantaa hänen nimeään.',
+          selite: 'Moulay Idriss Zerhoun nousee kahdelle kukkulalle '
+            + 'Volubiliksen vieressä, ja sen keskellä on vihreäkattoinen '
+            + 'pyhäkkö, jossa Idris I on haudattuna.',
+          lahde: 'Ben Bender, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Yliopisto, jonka perusti kauppiaan tytär',
+          aika: '857–859',
+          tiedosto: 'Qarawiyyin courtyard and pavilion.jpg',
+          teksti: 'Fatima al-Fihrin suku oli muuttanut Tunisian '
+              + 'Kairouanista Fèsiin 800-luvun alussa, ja kokonainen '
+              + 'kaupunginosa oli täynnä samaa tulijajoukkoa. Kun isä '
+              + 'kuoli, Fatima ja hänen sisarensa Mariam perivät suuren '
+              + 'omaisuuden, ja Fatima lupasi käyttää perintönsä '
+              + 'kokonaan moskeijaan. Siitä kasvoi al-Qarawiyyin, '
+              + '"kairouanilaisten moskeija", ja sen ympärille '
+              + 'opetuslaitos, jota Unesco ja Guinness World Records '
+              + 'pitävät maailman vanhimpana yhä toimivana '
+              + 'korkeakouluna. Osa historioitsijoista epäilee tarinaa: '
+              + 'seinästä löytyi 1900-luvulla laastikerrosten alta '
+              + 'perustamiskirjoitus, jonka mukaan moskeijan rakennutti '
+              + 'Dawud ibn Idris vuonna 877.',
+          selite: 'Al-Qarawiyyinin pihalla on kaksi puista lehtimajaa, '
+            + 'joiden mallina ovat Alhambran leijonapihan paviljongit; '
+            + 'lattia on ladottu zellij-mosaiikista.',
+          lahde: 'Ahmed.magdy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Taistelu, jossa kuoli kolme kuningasta',
+          aika: '4.8.1578',
+          tiedosto: 'Battle of alcacer quibir.jpg',
+          teksti: 'Syrjäytetty sulttaani Abu Abdallah Mohammed II pyysi '
+              + 'apua Portugalin kuninkaalta Sebastian I:ltä saadakseen '
+              + 'valtaistuimensa takaisin sedältään Abd al-Malikilta. '
+              + 'Armeijat kohtasivat Ksar el-Kebirin lähellä 4. elokuuta '
+              + '1578. Päivä päättyi niin, että kaikki kolme johtajaa '
+              + 'olivat kuolleet: Abd al-Malik kuoli kesken taistelun, '
+              + 'Abu Abdallah hukkui jokeen paetessaan ja 24-vuotias '
+              + 'Sebastian kaatui kentälle jättämättä perillistä. '
+              + 'Marokossa taistelua sanotaan kolmen kuninkaan '
+              + 'taisteluksi. Vangituista portugalilaisaatelisista '
+              + 'maksetut lunnaat veivät Portugalin lähes vararikkoon, '
+              + 'ja kaksi vuotta myöhemmin Espanjan Filip II otti maan '
+              + 'haltuunsa.',
+          selite: 'Aikalaispiirros kuvaa taistelujärjestyksen: '
+            + 'portugalilaiset ovat asettuneet neliöön keskelle tasankoa '
+            + 'ja marokkolainen ratsuväki kaartaa sen ympäri.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kultainen sulttaani ja retki Nigerille',
+          aika: '1590–1591',
+          tiedosto: 'El Badi Palace, Marrakesh, Morocco, 20250125 0952 7109.jpg',
+          teksti: 'Taistelun voittajaksi jäi Ahmad al-Mansur, jota '
+              + 'kutsuttiin nimellä al-Dhahabī, kultainen. Lunnasrahoilla '
+              + 'hän rakensi Marrakechiin El Badin palatsin, jonka työ '
+              + 'alkoi jo joulukuussa 1578 ja kesti viisitoista vuotta. '
+              + 'Kultaa hän halusi lisää, ja se oli Saharan takana: '
+              + '16. lokakuuta 1590 lähti aavikon yli neljäntuhannen '
+              + 'miehen armeija, jota johti espanjalaissyntyinen Judar '
+              + 'Pasha. Tondibin taistelussa songhailaisia oli '
+              + 'nelinkymmentätuhatta, mutta heillä ei ollut ruutiaseita. '
+              + 'Marokkolaiset ryöstivät Timbuktun, Djennén ja pääkaupunki '
+              + 'Gaon — ja huomasivat, ettei Saharan takaista valtakuntaa '
+              + 'voi hallita. Kaupungit menetettiin pian vuoden 1620 jälkeen.',
+          selite: 'El Badin palatsista ovat jäljellä vain paksut '
+            + 'savimuurit ja pihan altaat; muurien harjalla pesii '
+            + 'kattohaikaroita.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Marokkolaisessa keittiössä makea ja suolainen ovat '
+          + 'samalla lautasella, ja arvokkaimmat raaka-aineet syntyvät '
+          + 'hitaasti: puusta, joka kasvaa vain täällä, ja padasta, joka '
+          + 'kiehuu koko aamun.',
+      tehtava: {
+        kysymys: 'Kuinka paljon kuivattua arganin hedelmää tarvitaan yhteen litraan öljyä?',
+        vaihtoehdot: [
+          'Noin neljä kiloa hedelmää',
+          'Noin neljäkymmentä kiloa',
+          'Noin kaksisataa kiloa',
+          'Puolisen kiloa hedelmää',
+        ],
+        oikea: 1,
+        fakta: 'Argania kasvaa luonnonvaraisena vain Marokossa ja '
+            + 'Lounais-Algeriassa, ja öljyn hinta selittyy sillä, miten '
+            + 'vähän yhdestä sadosta tulee.',
+      },
+      nostot: [
+        {
+          otsikko: 'Puu, joka antaa litran kerrallaan',
+          tiedosto: 'Argan Tree near Tafraoute.jpg',
+          teksti: 'Argania kasvaa luonnonvaraisena vain Marokossa ja '
+              + 'Lounais-Algeriassa, ja sen ytimistä puristetaan öljyä. '
+              + 'Yhden litran saamiseksi tarvitaan noin neljäkymmentä '
+              + 'kiloa kuivattua hedelmää: pähkinän sisällä on vain yhdestä '
+              + 'kolmeen ydintä, ja niistäkin öljyä irtoaa kolmannes tai '
+              + 'puolet. Ruokaöljyä varten ytimet paahdetaan kevyesti, '
+              + 'jauhetaan ja puristetaan, ja puristejäte menee karjan '
+              + 'rehuksi. Työ on perinteisesti berberinaisten, ja se '
+              + 'tehdään osuuskunnissa: Essaouiran takamaastossa toimi '
+              + 'vuonna 2020 noin kolmesataa pienyritystä. Koneellisesti '
+              + 'puristettu öljy maksaa alle puolet osuuskuntien öljystä.',
+          selite: 'Arganin oksat kasvavat matalalle ja tiheään, ja puu '
+            + 'kestää kuivuutta, joka tappaisi useimmat muut puut.',
+          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Piiras, joka on sekä suolainen että makea',
+          tiedosto: 'Pastilla from Souk Jmiaa in Casablanca 17.jpg',
+          teksti: 'Pastilla tarjoillaan juhlaruoan alkuruokana. Sen '
+              + 'kuori on warqa, taikinalevy, joka syntyy läiskimällä '
+              + 'tahmeaa taikinaa kuumalle levylle limittäisiksi '
+              + 'ympyröiksi. Täytteenä oli ennen kyyhkynpoikanen, nykyään '
+              + 'useimmiten liemessä haudutettu ja revitty kana, ja sen '
+              + 'päälle tulee kerros paahdettua mantelia, kanelia ja '
+              + 'sokeria. Historioitsija Anny Gaul on löytänyt 1200-luvun '
+              + 'andalusialaisesta keittokirjasta ohjeen, jossa kyyhky '
+              + 'kypsennetään kanelin, mantelin, sahramin ja kananmunan '
+              + 'kanssa ja ruoka kypsennetään kahteen kertaan — sama '
+              + 'kaava kuin nyt. Toisen tulkinnan mukaan piiras saapui '
+              + 'Tetouaniin osmanien Algeriasta vasta 1830 jälkeen.',
+          selite: 'Warqa-levyt tehdään käsin: taikinamöykkyä läiskitään '
+            + 'kuumalle pyörylle limittäin, kunnes syntyy paperinohut '
+            + 'lehti.',
+          lahde: 'Mounir Neddi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Mauste, jossa on kaksikymmentäseitsemän ainesta',
+          tiedosto: 'Moroccan spices.jpg',
+          teksti: 'Ras el hanout tarkoittaa kaupan parasta, ja siihen '
+              + 'voidaan yhdistää jopa kaksikymmentäseitsemän maustetta. '
+              + 'Osa niistä tuli idästä arabien mukana, mutta moni on '
+              + 'maan omaa satoa: sahrami Taliouinesta, minttu ja oliivit '
+              + 'Meknèsistä, appelsiinit ja sitruunat Fèsistä. '
+              + 'Marokkolaisen ruoan tunnistaa säilötystä sitruunasta, '
+              + 'arganöljystä, kuivatuista hedelmistä ja smenistä, '
+              + 'suolatusta ja kypsytetystä voista, jonka tuoksu on '
+              + 'väkevä. Perusvilja on nykyään vehnä ja riisi, mutta '
+              + '1900-luvun puoliväliin asti etelässä syötiin ennen '
+              + 'kaikkea ohraa.',
+          selite: 'Marokkolaisen maustekaupan mausteet ladotaan '
+            + 'kartioiksi peltiastioiden päälle, jotta ostaja näkee värin '
+            + 'ja pääsee haistamaan.',
+          lahde: 'Kyle Simourd, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Keitto, joka katkaisee paaston',
+          tiedosto: 'Harira..JPG',
+          teksti: 'Harira on koko Pohjois-Afrikan keitto, mutta jokainen '
+              + 'maa tekee sen omalla tavallaan. Marokkolainen versio '
+              + 'nojaa tomaattiin, linsseihin ja kikherneisiin, ja se '
+              + 'maustetaan inkiväärillä, kanelilla ja korianterilla. '
+              + 'Suuruste on tadouira, jauhon ja veden seos, joka '
+              + 'kaadetaan pataan vasta lopuksi ja tekee keitosta '
+              + 'samettisen. Talvella harira syödään illallisena, mutta '
+              + 'ramadanin aikana se on se lautanen, joka odottaa '
+              + 'auringonlaskua: keitto, leipää ja taateleita. Samaan '
+              + 'vuodenaikaan kuuluu myös bissara, härkäpavuista keitetty '
+              + 'sakea sose.',
+          selite: 'Marokkolaisessa hariran kulhossa näkyvät kikherneet, '
+            + 'linssit ja ohuet nuudelit sekä tomaatista tuleva punainen '
+            + 'liemi.',
+          lahde: 'Miansari66, Wikimedia Commons (CC0)',
+        },
+      ],
+    },
+    {
+      id: 'kasityo',
+      nimi: 'Käsityö',
+      johdanto: 'Fèsin medinassa työ jaetaan kortteleittain, ja moni '
+          + 'ammatti tekee yhä samat liikkeet kuin tuhat vuotta sitten — '
+          + 'myös silloin, kun kukaan ei enää muista, miten kone toimi.',
+      nostot: [
+        {
+          otsikko: 'Altaat, joissa väri on kasvia',
+          tiedosto: 'Chouara Tannery - 154 - Marokko Handybilder 2018 - Fes (27347707917).jpg',
+          teksti: 'Chouara on Fèsin vanhimman kaupunginosan suurin '
+              + 'parkitsemo. Vuodat liotetaan ensin valkoisissa '
+              + 'liuoksissa, joissa on lehmänvirtsaa, kyyhkynulosteita, '
+              + 'poltettua kalkkia, suolaa ja vettä; se kestää kahdesta '
+              + 'kolmeen vuorokautta ja tekee nahasta pehmeän ja '
+              + 'väriä imevän. Sitten tulevat värialtaat: unikko antaa '
+              + 'punaisen, indigo sinisen ja henna oranssin. Lopuksi '
+              + 'nahat kuivataan auringossa. Koneita ei käytetä lainkaan. '
+              + 'Kronikoitsija al-Jazna\'in mukaan kaupungissa oli '
+              + 'almohadien aikana 86 parkitsemoa, ja nahkaa vietiin '
+              + 'Bagdadiin asti.',
+          selite: 'Chouaran altaat täyttävät kokonaisen korttelin: '
+            + 'valkoiset liotusaltaat ovat vasemmalla ja pyöreät '
+            + 'väriastiat oikealla.',
+          lahde: 'Uwe Brodrecht, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Palapeli, joka ladotaan nurin päin',
+          tiedosto: 'Zellige upside-down assembly.jpg',
+          teksti: 'Zellij tehdään lasitetuista laatoista, jotka poltetaan '
+              + 'ensin noin kymmenen sentin neliöiksi. Sen jälkeen '
+              + 'käsityöläinen hakkaa niistä pienellä kirvesmäisellä '
+              + 'vasaralla muotoja, jotka hän on opetellut ulkoa, ja '
+              + 'palat sovitetaan yhteen kuvioksi — kuvapuoli alaspäin, '
+              + 'niin että työn aikana näkyy vain nurja puoli. Varhaisin '
+              + 'ajoitettu marokkolainen zellij on Kutubiyya-moskeijan '
+              + 'minareetissa 1100-luvun puolivälistä. Tetouanissa '
+              + 'tehdään toisin: siellä palat leikataan ennen polttoa, '
+              + 'jolloin emali kestää paremmin mutta värit jäävät '
+              + 'himmeämmiksi ja saumat väljemmiksi.',
+          selite: 'Zellij-paneeli kootaan kuvapuoli alaspäin, ja vasta '
+            + 'kun laasti on kuivunut, se käännetään ympäri.',
+          lahde: 'Jadcooper, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kello, jota kukaan ei enää osaa korjata',
+          aika: '1357',
+          tiedosto: 'Fez Dar al-Magana (54252219356).jpg',
+          teksti: 'Vastapäätä Bou Inanian medresaa Fèsissä on talo, jonka '
+              + 'julkisivussa on kaksitoista ikkunaa ja niiden alla '
+              + 'messinkimaljat. Kronikoitsija al-Jazna\'in mukaan '
+              + 'vesikello valmistui 6. toukokuuta 1357, ja sen '
+              + 'suunnitteli ajanlaskuun erikoistunut Abu al-Hassan ibn '
+              + 'Ali Ahmed el-Tlemsani. Oletetaan, että ovien takana '
+              + 'kulki pieniä vaunuja köyden varassa: toisessa päässä '
+              + 'riippui paino, toisessa kellui paino tasaisesti '
+              + 'tyhjenevän vesialtaan pinnalla, ja kerran tunnissa yksi '
+              + 'ovi aukesi ja metallipallo putosi maljaan. Kello on '
+              + 'ollut rikki sukupolvien ajan, maljat irrotettiin 2004, '
+              + 'eikä korjaus ole onnistunut — kukaan ei tiedä varmasti, '
+              + 'miten se toimi.',
+          selite: 'Dar al-Maganan julkisivussa on kaksitoista kaari-ikkunaa '
+            + 'ja niiden alla ulos työntyvät puupalkit, jotka kannattivat '
+            + 'maljojen suojakattoa.',
+          lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kaupunki, joka teki savesta ammatin',
+          tiedosto: 'SafiTöpferei.jpg',
+          teksti: 'Safi on Atlantin rannikon kaupunki, jossa asuu noin '
+              + '346 000 ihmistä ja joka oli portugalilaisten hallussa '
+              + 'vuosina 1488–1541. Savenvalanta oli kaupungissa vanhaa '
+              + 'työtä, mutta 1900-luvun alussa marokkolainen mestari '
+              + 'Boujemâa Lamali perusti sinne keramiikkakoulun '
+              + 'siirtomaahallinnon tuella, ja siitä lähtien keramiikka '
+              + 'on ollut Safin elinkeino: ennen koronapandemiaa '
+              + 'kaupungissa oli 212 työpajaa ja kaksituhatta '
+              + 'rekisteröityä käsityöläistä sekä tuhansia '
+              + 'rekisteröimättömiä. Samasta satamasta lähtee myös suurin '
+              + 'osa maan sardiinisaaliista.',
+          selite: 'Safin savenvalajien kukkulalla astiat poltetaan '
+            + 'valkoisiksi kalkituissa uuneissa, joiden polttopuut '
+            + 'pinotaan katolle.',
+          lahde: 'Ziegler175, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Marokossa on kolme musiikkia kolmelle eri paikalle: '
+          + 'palatsin andalusialainen sarja, käsityöläiskorttelin '
+          + 'runolaulu ja kylänraitin rumpupiiri.',
+      nostot: [
+        {
+          otsikko: 'Sarja jokaiselle vuorokauden tunnille',
+          // Kuvaton (Opus 6.9.2026): Commonsin haut andalusialaisesta
+          // orkesterista palauttivat vain vanhoja kirjaskannauksia, eikä
+          // vapaata kuvaa marokkolaisesta al-Ala-yhtyeestä löytynyt.
+          // Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Andalusialainen taidemusiikki tuli Marokkoon '
+              + 'al-Andalusista, ja täällä sitä kutsutaan nimellä al-Ala. '
+              + 'Sen perusmuoto on nuba, sarja, joka rakentuu yhden '
+              + 'sävelmoodin varaan ja kestää noin tunnin. Perimätiedon '
+              + 'mukaan nubia oli alun perin kaksikymmentäneljä, yksi '
+              + 'vuorokauden jokaista tuntia kohti. Nimi tulee sanasta '
+              + 'nawbah, vuoro: muusikko odotti verhon takana, kunnes '
+              + 'verhonvartija tuli kertomaan, että vuoro on hänen. '
+              + 'Sanat ovat muwashshah- ja zajal-runoutta, ja lajin '
+              + 'kaupungit ovat Tetouan, Fès, Meknès, Rabat ja Oujda.',
+          selite: 'Nuba on tunnin mittainen sarja, joka pysyy koko ajan '
+            + 'samassa sävelmoodissa ja kiihtyy loppua kohti.',
+        },
+        {
+          otsikko: 'Runoutta, jota lauloivat käsityöläiset',
+          aika: '1400-luvulta',
+          // Kuvaton (Opus 6.9.2026): Commonsissa on malhunista vain
+          // videotiedostoja, ei valokuvia. Kuvatilaus on kirjattu
+          // raporttiin.
+          teksti: 'Malhun tarkoittaa melodista runoa. Se syntyi '
+              + 'Tafilaltin keitailla 1400-luvulla puhtaana runoutena ja '
+              + 'levisi sieltä kaupunkeihin, joissa siitä tuli '
+              + 'käsityöläiskiltojen miesten oma laji: suutarit, '
+              + 'satulasepät ja kutojat lauloivat sitä työn ääressä ja '
+              + 'juhlissa. Runo eli qasida rakentuu soolona lauletuista '
+              + 'säkeistä, joita katkoo harba-kertosäe; lopussa tulee '
+              + 'drīdka, joka kiihdyttää tahdin ja ilmoittaa, että runo '
+              + 'päättyy. Vanhoista tekijöistä tunnetuin on Abderrahman '
+              + 'El Majdoub, joka kuoli 1568. Unesco otti malhunin '
+              + 'aineettoman kulttuuriperinnön luetteloon joulukuussa 2023.',
+          selite: 'Malhun on laulettua runoutta, jonka kotipaikka ovat '
+            + 'Fèsin, Meknèsin ja Salén käsityöläiskorttelit.',
+        },
+        {
+          otsikko: 'Banjo, joka muutti maan musiikin',
+          aika: '1969',
+          tiedosto: 'Mawazine célèbre la confluence des cultures (5793143185).jpg',
+          teksti: 'Nass El Ghiwane perustettiin Casablancassa vuonna 1969, '
+              + 'ja se syntyi poliittisen avantgardeteatterin piiristä. '
+              + 'Yhtye toi ensimmäisenä marokkolaiseen musiikkiin '
+              + 'banjon, ja sen soundissa on transsimainen ote ja gnawan '
+              + 'vaikutus. Sanat nojaavat vanhaan pohjoisafrikkalaiseen '
+              + 'sufirunouteen, ennen kaikkea 1500-luvulla eläneeseen '
+              + 'Abderrahman El Majdoubiin — sama runoilija, jota '
+              + 'malhun-laulajat ovat laulaneet vuosisatoja. Martin '
+              + 'Scorsese kutsui yhtyettä Afrikan Rolling Stonesiksi ja '
+              + 'valitsi siitä kertovan dokumentin Trances vuodelta 1981 '
+              + 'World Cinema Foundationin ensimmäiseksi restauroitavaksi '
+              + 'elokuvaksi.',
+          selite: 'Nass El Ghiwane esiintyi Rabatin Mawazine-festivaalilla; '
+            + 'lavalla soivat banjo, basso ja käsirummut.',
+          lahde: 'Naoufel Cherkaoui, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Tanssi, jota ei voi viedä pois kylästä',
+          tiedosto: 'Ahwach Aoulouz.png',
+          teksti: 'Ahwash on eteläisen Marokon amazigh-kylien yhteinen '
+              + 'esitys, jossa tanssi, laulu, runo ja kehärummut '
+              + 'kuuluvat samaan kokonaisuuteen. Esiintyjiä on kaksi '
+              + 'suurta ryhmää, tavallisesti miehet ja naiset '
+              + 'vastakkain, ja ne vuorottelevat: toinen laulaa säkeen, '
+              + 'toinen vastaa. Osallistujia on usein yli kaksikymmentä '
+              + 'ja toisinaan puolitoistasataa, ja juuri siksi ahwash '
+              + 'esitetään harvoin oman kylän ulkopuolella — koko '
+              + 'joukkoa ei saa liikkeelle. Siitä seuraa, että jokaisella '
+              + 'kylällä on oma versionsa. Laji elää Ouarzazaten seudulla, '
+              + 'Drâan laaksossa, Sousissa ja Korkeassa Atlaksessa.',
+          selite: 'Ahwash-esityksessä rumpalit istuvat keskellä ja '
+            + 'laulajat seisovat kaaressa heidän ympärillään.',
+          lahde: 'Dounia Benjelloun-Mezian, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Marokko on kolme maata päällekkäin: setrimetsä '
+          + 'vuorten yläpuolella, laguuni rannikolla ja kylmä '
+          + 'merivirta niiden edessä.',
+      nostot: [
+        {
+          otsikko: 'Metsä, joka kasvaa kahden kilometrin korkeudessa',
+          tiedosto: 'Cedar forest, Morocco.jpg',
+          teksti: 'Atlaksensetri on kotoperäinen Marokon Rifissä ja '
+              + 'Atlasvuorissa sekä Algerian Tell-Atlaksessa. Se kasvaa '
+              + '1 170–2 200 metrin korkeudessa, usein puhtaina metsinä. '
+              + 'Marokossa on maailman suurin setripinta-ala, noin '
+              + '163 000 hehtaaria, ja siitä 115 000 hehtaaria eli neljä '
+              + 'viidesosaa on Keski-Atlaksessa. Metsä on kutistunut: '
+              + 'vuoden 1927 tiedoissa pelkästään Keski-Atlaksessa oli yli '
+              + '150 000 hehtaaria, ja Rifin metsistä on jäljellä enää '
+              + 'kuudestoistaosa maan setrialasta. Algeriassa laji on '
+              + 'taantunut 23 000 hehtaarista alle 15 000:een tulipalojen '
+              + 'ja hakkuiden takia.',
+          selite: 'Keski-Atlaksen setrimetsässä sataa talvella lunta: '
+            + 'puiden oksat levittyvät litteiksi katoksiksi ja maa on '
+            + 'valkoisena.',
+          lahde: 'Der-Herr-Simo-95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Leijona, jonka harja ulottui kyynärpäihin',
+          aika: '1960-luku',
+          tiedosto: 'Barbary lion.jpg',
+          teksti: 'Atlasleijona eli Pohjois-Afrikassa Marokosta '
+              + 'Egyptiin. Metsästys- ja havaintotietojen läpikäynti '
+              + 'osoitti, että pieniä ryhmiä saattoi säilyä Algeriassa '
+              + '1960-luvun alkuun ja Marokossa 1960-luvun puoliväliin; '
+              + 'sen jälkeen laji on luonnosta hävinnyt. Museoiden '
+              + 'täytetyt urokset ovat kuonosta hännänpäähän '
+              + '2,35–2,8-metrisiä, ja harjan karvat ovat 8–22 '
+              + 'senttimetriä pitkiä; osalla harja jatkui hartioiden yli '
+              + 'ja vatsan alta kyynärpäihin asti. Selitykseksi on '
+              + 'tarjottu Atlaksen muuta Afrikkaa kylmempää talvea. '
+              + 'Rabatin eläintarhan leijonat olivat aatelisten ja '
+              + 'berberien lahjoja kuningasperheelle: kun perhe joutui '
+              + '1953 maanpakoon, niitä oli 21.',
+          selite: 'Vuonna 1893 Algeriassa otettu valokuva on harvoja '
+            + 'kuvia luonnossa eläneestä atlasleijonasta.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Laguuni, jossa lasketaan satatuhatta lintua',
+          tiedosto: 'Lagune Bleu Moulay Bousselham.jpg',
+          teksti: 'Merja Zerga on 4 500 hehtaarin rannikkolaguuni, jonka '
+              + 'keskisyvyys on vain puolitoista metriä. Se on '
+              + 'Ramsar-kohde ja yksi Itä-Atlantin muuttoreitin '
+              + 'avainpaikoista: lajeja on sata, talvella laguunilla on '
+              + '15 000–30 000 sorsalintua ja säännöllisesti '
+              + '50 000–100 000 kahlaajaa. Talvivieraita ovat muun muassa '
+              + 'ruostesorsa, marmorisorsa, isoflamingo, avosetti ja '
+              + 'tundrakurmitsa, ja vakituisiin kuuluu suopöllö. '
+              + 'Talvivieraiden luettelossa on myös siperiankuovi — laji, '
+              + 'jota ei ole enää löydetty mistään ja jonka viimeiset '
+              + 'säännölliset talvehtimispaikat olivat juuri täällä.',
+          selite: 'Merja Zergan laguuni avautuu merelle kapean suun '
+            + 'kautta, ja sen keskellä on laajoja hiekkasärkkiä, jotka '
+            + 'paljastuvat laskuvedellä.',
+          lahde: 'Younes MAHRACH, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Putous, jonka nimi tarkoittaa jauhamista',
+          tiedosto: 'Cascades d\'Ouzoud.jpg',
+          teksti: 'Ouzoud on yhteisnimi useille putouksille Azilalin '
+              + 'maakunnassa Keski-Atlaksessa. Vesi putoaa kaikkiaan '
+              + '110 metriä kolmessa portaassa El-Abid-joen rotkoon; '
+              + 'joen nimi tarkoittaa orjien jokea. Azilalin kaupunkiin '
+              + 'on matkaa 36 kilometriä ja Marrakechiin 150. Nimi '
+              + 'ouzoud tarkoittaa berberiksi viljan jauhamista, ja se '
+              + 'kertoo, mihin vettä käytettiin ennen kuin sitä tultiin '
+              + 'katsomaan: putouksen yläpuolella on yhä pieniä '
+              + 'vesimyllyjä, joissa jauhettiin kylän vilja. Alempana '
+              + 'rotkossa kasvaa oliivipuita, joita kastellaan samasta '
+              + 'joesta.',
+          selite: 'Ouzoudin putoukset syöksyvät punaruskeaa kalliota '
+            + 'pitkin kolmessa portaassa, ja alin allas jää sumun '
+            + 'peittoon.',
+          lahde: 'Tomkeene, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+  ],
+  /*
+   * ALGERIA (DZA) — Afrikan kolmas maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-algeria.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KOHTEIDEN JA KARTTANOSTOJEN KANSSA: Saharan ja Ahaggarin
+   * litteät kulttuurinostot (africa-kulttuuri.js) kattavat jo tuaregit,
+   * tifinaghin, suolakaravaanit, Assekremin, imzad-viulun ja Tin Hinanin;
+   * maastokohteet-dza.js Timgadin, Djémilan, Tipasan, Tassilin
+   * kalliotaiteen, Tlemcenin, M’zabin laakson ja Constantinen
+   * (Cirta, Numidia, Jugurtha); skandaalit.js kärpäsviuhkatapauksen 1827
+   * ja Gerboise Bleuen 1960; elaintakyt.js fennekin. Maalehti EI toista
+   * niitä: historia alkaa rustamideista, luonto välttää fennekin, ja
+   * antiikin rauniot on jätetty karttanostoille.
+   *
+   * SISÄLTÖLINJAUS: vuosien 1954–1962 sodan väkivaltaa ja 1990-luvun
+   * sisällissotaa ei kuvata; itsenäistyminen kerrotaan äänestyksinä ja
+   * päivämäärinä. Nykypolitiikkaa ei käsitellä.
+   *
+   * KUVAT: Commons, lisenssi ja tekijä extmetadatasta, leveys >= 1200 px,
+   * jokainen katsottu silmin. Kuvattomat nostot on merkitty
+   * rivikommentein ja kirjattu raporttiin kuvaputkelle.
+   */
+  DZA: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Algerian tarina on kolmen pääkaupungin tarina: aavikon '
+          + 'reunan imaamivaltion, Välimeren merivallan ja lopulta '
+          + 'tasavallan, joka valitsi itsenäisyyspäiväkseen saman '
+          + 'päivämäärän kuin miehityksen alku.',
+      nostot: [
+        {
+          otsikko: 'Imaamivaltio, joka otti vastaan toisinajattelijat',
+          aika: '777–909',
+          tiedosto: 'Ghardaia01.jpg',
+          teksti: 'Rustamidien valtio syntyi vuonna 777, kun persialaista '
+              + 'sukua ollut Abd al-Rahman ibn Rustam valittiin ibadi'
+              + 'laisten imaamiksi. Pääkaupunki Tahert nousi ylängölle '
+              + 'nykyisen Tiaretin kohdalle, ja sen valta ulottui '
+              + 'lopulta Keski- ja Länsi-Algeriaan, Etelä-Tunisiaan ja '
+              + 'Libyan Jebel Nafusaan asti. Kaupungissa puhuttiin '
+              + 'arabiaa, berberiä ja persiaa, ja se veti puoleensa '
+              + 'oppineita, jotka eivät mahtuneet kalifaatin '
+              + 'valtavirtaan. Vuonna 909 ismaililainen fatimidikalifaatti '
+              + 'valtasi Tahertin, ja pakenevat ibadilaiset siirtyivät '
+              + 'etelään Saharan reunalle — sieltä alkaa M’zabin '
+              + 'kaupunkien tarina.',
+          selite: 'Ghardaïan tori M’zabin laaksossa: talot nousevat '
+            + 'kukkulalle kerroksittain, ja huipulla kohoaa ibadilaisen '
+            + 'moskeijan kartiomainen minareetti.',
+          lahde: 'Paebi, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Merikaupunki, joka valitsi itselleen hallitsijan',
+          aika: '1516',
+          tiedosto: 'Hayreddin Barbarossa 1530-60.jpg',
+          teksti: 'Algerin regenssi syntyi vuonna 1516, kun Aruj '
+              + 'Barbarossa otti kaupungin haltuunsa. Valtio oli '
+              + 'muodollisesti Osmanien valtakunnan maakunta, mutta '
+              + '1600-luvun puolivälistä lähtien käytännössä itsenäinen. '
+              + 'Hallintomuoto vaihtui matkan varrella kolmesti: '
+              + 'sulttaanikunnasta pashalikiksi 1519 ja siitä '
+              + 'sotilastasavallaksi, jossa upseerien kokous valitsi '
+              + 'johtajakseen deyn. Kaupunki eli merenkulusta ja '
+              + 'kaappauksista, ja Välimeren valtioilla oli sen kanssa '
+              + 'sopimuksia ja riitoja kolmen vuosisadan ajan. Viimeinen '
+              + 'hallitsija oli Hussein Dey, joka lähti maanpakoon '
+              + '10. heinäkuuta 1830.',
+          selite: 'Aruj Barbarossan veli Hayreddin kuvattiin 1500-luvun '
+            + 'italialaisessa puupiirroksessa panssariin puettuna ja '
+            + 'kruunattuna; kuvateksti nimittää hänet Algerin kuninkaaksi.',
+          lahde: 'Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Emiiri, joka rakensi valtion sodan keskelle',
+          aika: '1832–1847',
+          tiedosto: 'Abdelkader Ibn Muhieddine (1808-1883).jpg',
+          teksti: 'Abd al-Qadir ibn Muhyi al-Din syntyi vuosien 1806 ja '
+              + '1808 välillä. Nuorena hän teki kaksi pyhiinvaellusta '
+              + 'Mekkaan ja kävi Damaskoksessa ja Bagdadissa; '
+              + 'paluumatkalla häneen teki vaikutuksen se, miten Egyptin '
+              + 'Muhammad Ali uudisti maataan. Vuonna 1832 hänet '
+              + 'nimitettiin emiiriksi, ja hän johti vastarintaa Ranskan '
+              + 'valloitusta vastaan viisitoista vuotta rakentaen samalla '
+              + 'omaa hallintoa. Antautumisen jälkeen 1847 hän oli '
+              + 'vankina Ranskassa lähes viisi vuotta. Napoleon III '
+              + 'vapautti hänet, ja 1855 hän asettui Damaskokseen, jossa '
+              + 'hän kirjoitti pääteoksensa Kitab al-Mawaqif ja esti 1860 '
+              + 'kaupungin kristityn yhteisön joukkomurhan.',
+          selite: 'Emiiri Abdelkader kuvattiin vanhoilla päivillään '
+            + 'Damaskoksessa valkoisessa viitassa ja rinnassaan monen '
+            + 'maan kunniamerkit.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kaksi kansanäänestystä ja sama päivämäärä',
+          aika: '1962',
+          // Kuvaton (Opus 6.9.2026): Commonsista ei löytynyt vapaata,
+          // riittävän suurta kuvaa vuoden 1962 kansanäänestyksistä tai
+          // itsenäisyyspäivästä. Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Neuvottelut päättyivät maaliskuussa 1962 Évianin '
+              + 'sopimuksiin. Ranskan äänestäjät hyväksyivät ne '
+              + '8. huhtikuuta 1962: puolesta äänesti 91 prosenttia. '
+              + 'Algeriassa äänestettiin 1. heinäkuuta, ja itsenäisyyden '
+              + 'puolesta annettiin 99,72 prosenttia äänistä. '
+              + 'Itsenäisyyspäiväksi valittiin 5. heinäkuuta 1962 — '
+              + 'täsmälleen sama päivä, jona Ranska oli vallannut Algerin '
+              + 'vuonna 1830. Väliin mahtui 132 vuotta, joista maa oli '
+              + 'ollut virallisesti osa Ranskaa vuodesta 1848. '
+              + 'Päivämäärän valinta oli tietoinen: kalenteri palautti '
+              + 'sen, minkä kalenteri oli vienyt.',
+          selite: 'Algerian itsenäisyyspäivä on 5. heinäkuuta, sama '
+            + 'päivämäärä kuin Algerin valtauksella vuonna 1830.',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Algerian ruoka tulee kolmelta suunnalta: berberien '
+          + 'suurimoista, Saharan taatelitarhoista ja rannikon '
+          + 'kaupungeista, joissa juhlaruoka on nuudeli.',
+      nostot: [
+        {
+          otsikko: 'Jyvä, joka pyöritetään käsin',
+          tiedosto: 'Femme semoule couscous.jpg',
+          teksti: 'Kuskus on höyrytettyä, käsin pyöriteltyä durum'
+              + 'suurimoa; tavallinen raekoko on noin kaksi milli'
+              + 'metriä, mutta hienompaa ja karkeampaa laatua on myös. '
+              + 'Se on perusruoka Algeriassa, Tunisiassa, Mauritaniassa, '
+              + 'Marokossa ja Libyassa. Nimi on lähes varmasti '
+              + 'berberiperäinen: kabyylin ja riifin kielissä ruoka on '
+              + 'seksu ja Saharan berberikielissä keskesu, ja juuri '
+              + 'tarkoittaa hyvin muotoiltua ja pyöreäksi pyöriteltyä. '
+              + 'Neljä maata — Algeria, Mauritania, Marokko ja Tunisia — '
+              + 'jättivät yhteisen hakemuksen, ja kuskus otettiin '
+              + 'Unescon aineettoman kulttuuriperinnön luetteloon '
+              + 'vuonna 2020.',
+          selite: 'Suurimot kosteutetaan ja hierotaan kämmenellä '
+            + 'laakeassa vadissa, kunnes jyvät ovat tasakokoisia; vasta '
+            + 'sitten ne höyrytetään.',
+          lahde: 'D@LY3D, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Taateli, jonka läpi näkee valon',
+          tiedosto: 'Dattes de Deglet nour à Tolga (Wilaya de Biskra).jpg',
+          teksti: 'Deglet Nour tarkoittaa valon taatelia, ja nimi on '
+              + 'kuvaus: hedelmä on pehmeä, läpikuultavan vaalea ja '
+              + 'maultaan hunajainen. Lajike on kotoisin Tolgan keitaalta '
+              + 'Algeriasta, ja Pierre Munierin mukaan se levisi '
+              + '1200-luvun lopulla ja 1300-luvun alussa Tolgasta '
+              + 'naapurikeitaille Biskraan ja Oued Righiin. Tunisiaan sen '
+              + 'vei 1600-luvun lopulla tozeurilainen viljelijä Sidi '
+              + 'Touati, ja sieltä lajike on kulkenut Libyaan ja '
+              + 'Yhdysvaltoihin asti. FAO:n mukaan se on vientiarvoltaan '
+              + 'maailman johtava taatelilajike, ja Algerian '
+              + 'maatalousministeriö on varannut nimen omille '
+              + 'taateleilleen.',
+          selite: 'Deglet Nour -taatelit ovat vaaleampia ja ohut'
+            + 'kuorisempia kuin useimmat muut lajikkeet, ja ne myydään '
+            + 'usein yhä oksassaan.',
+          lahde: 'Yelles, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Nuudeli, joka kuuluu juhlaan',
+          tiedosto: '20161201 211328rechta.jpg',
+          teksti: 'Rechta tehdään durumjauhosta ja vedestä: taikina '
+              + 'kaulitaan ohueksi levyksi ja leikataan käsin kapeiksi '
+              + 'suikaleiksi. Se on Algerin kaupungin tunnusruoka ja '
+              + 'yhtä rakastettu Blidassa ja Constantinessa. Algerissa ja '
+              + 'Blidassa nuudelit tarjoillaan kanan, kikherneiden ja '
+              + 'nauriiden kanssa liemessä, joka maustetaan '
+              + 'valkopippurilla ja kanelilla; Constantinessa kastike on '
+              + 'tomaattipohjainen ja siinä on sipulia, porkkanaa ja '
+              + 'vihreää paprikaa. Rechta on juhlaruoka: se tehdään '
+              + 'häihin ja uskonnollisiin juhlapäiviin, ja sen '
+              + 'valmistaminen alusta asti on tapa osoittaa, että vieras '
+              + 'on tärkeä.',
+          selite: 'Rechta-lautasella nuudelit ovat pohjalla ja kana, '
+            + 'kikherneet ja nauriit niiden päällä; liemi kaadetaan '
+            + 'vasta pöydässä.',
+          lahde: 'ABBASHouda, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Viinimaa, joka lakkasi olemasta',
+          aika: '1930–1970-luku',
+          // Kuvaton (Opus 6.9.2026): Commonsin algerialaiset
+          // viininkorjuukuvat ovat alle 1 100 pikseliä leveitä ja ainoa
+          // muu osuma on pienikokoinen viinialuekartta. Kuvatilaus on
+          // kirjattu raporttiin.
+          teksti: 'Viininviljely alkoi Algeriassa foinikialaisten ja '
+              + 'roomalaisten aikana ja hiipui islamin tultua. Ranskan '
+              + 'vallan alettua 1830 tarhat istutettiin uudelleen, ja kun '
+              + 'viinikirva tuhosi Ranskan omat viinitarhat 1800-luvun '
+              + 'puolivälissä, algerialainen viini täytti aukon: tuotanto '
+              + 'kasvoi 25 000 hehtolitrasta vuonna 1854 kymmeneen '
+              + 'miljoonaan vuonna 1915. Huipulla 1930-luvun lopulla '
+              + 'tarhoja oli yli neljätuhatta neliökilometriä. Ennen '
+              + 'itsenäisyyttä Algeria oli maailman suurin viininviejä, '
+              + 'ja sen tumma, väkevä punaviini päätyi sekoitukseksi '
+              + 'Etelä-Ranskan viineihin. Itsenäistymisen jälkeen '
+              + 'markkina katosi, ja tarhat vaihdettiin viljaan ja '
+              + 'syötäviin rypäleisiin.',
+          selite: 'Algerian viinitarhat olivat ylätasangoilla rannikon '
+            + 'takana, ja niiden sato meni lähes kokonaan vientiin.',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Algeriassa kirjoitettiin yhteiskuntatieteen ensimmäinen '
+          + 'suuri teos vuorikylän hiljaisuudessa — ja 1900-luvulla maa '
+          + 'antoi maailmalle Nobel-kirjailijan, tähden ja akateemikon.',
+      nostot: [
+        {
+          otsikko: 'Kirja, joka syntyi kolmen vuoden eristyksessä',
+          aika: '1375–1378',
+          tiedosto: 'Bust of Ibn Khaldun (Casbah of Bejaia, Algeria).jpg',
+          teksti: 'Tlemcenin sulttaani lähetti Ibn Khaldunin vuonna 1375 '
+              + 'Biskran arabiheimojen luo. Paluumatkalla hän haki turvaa '
+              + 'berberiheimolta Länsi-Algerian Qalat Ibn Salaman '
+              + 'kylässä ja jäi sinne yli kolmeksi vuodeksi. Eristys oli '
+              + 'hänelle työrauhaa: omaelämäkertansa mukaan hän kirjoitti '
+              + 'kuudessa kuukaudessa Muqaddimahin, maailmanhistoriansa '
+              + 'johdannon, josta tuli kuuluisampi kuin itse historiasta. '
+              + 'Sen ydinajatus on asabiyya, ryhmäkiinteys, joka nostaa '
+              + 'suvun valtaan ja kantaa samalla sen tuhon siementä. '
+              + 'Kylässä ei ollut kirjastoa, joten viimeistelyä varten '
+              + 'hänen oli palattava 1378 kotikaupunkiinsa Tunisiin.',
+          selite: 'Ibn Khaldunin rintakuva seisoo Béjaïan kasbahissa '
+            + 'Algeriassa, samassa maassa, jossa Muqaddimah syntyi.',
+          lahde: 'Reda Kerbouche, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maalivahti, josta tuli Nobel-kirjailija',
+          aika: '1913–1960',
+          tiedosto: '20041113-002 Lourmarin Tombstone Albert Camus.jpg',
+          teksti: 'Albert Camus syntyi 7. marraskuuta 1913 Mondovissa. '
+              + 'Nuorena hän pelasi maalivahtina Racing Universitaire '
+              + 'd’Algerin junioreissa vuosina 1928–1930, ja '
+              + 'joukkuehenki merkitsi hänelle paljon; myöhemmin hän '
+              + 'sanoi, että jalkapallon yksinkertainen moraali oli '
+              + 'toista maata kuin se moraali, jota valtio ja kirkko '
+              + 'vaativat. Peliura loppui vuonna 1930, kun hänellä '
+              + 'todettiin seitsemäntoistavuotiaana tuberkuloosi, ja hän '
+              + 'kääntyi filosofian puoleen. Vuonna 1957 hän sai '
+              + 'kirjallisuuden Nobelin 44-vuotiaana — historian toiseksi '
+              + 'nuorimpana ja ensimmäisenä Afrikassa syntyneenä '
+              + 'palkinnon saajana. Hän kuoli auto-onnettomuudessa '
+              + '4. tammikuuta 1960, ja hänet haudattiin Lourmarinin '
+              + 'kylään Etelä-Ranskaan.',
+          selite: 'Camus haudattiin Lourmariniin Etelä-Ranskaan, ja '
+            + 'hautakiveen on hakattu vain nimi ja kaksi vuosilukua.',
+          lahde: 'Walter Popp, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Tähti, joka oli myös serkku',
+          aika: '1956',
+          tiedosto: 'KatebYacinePassport.jpg',
+          teksti: 'Kateb Yacine syntyi Constantinessa 2. elokuuta 1929. '
+              + 'Koululaisena hän osallistui 8. toukokuuta 1945 '
+              + 'mielenosoituksiin ja joutui kolme päivää myöhemmin '
+              + 'pidätetyksi kahdeksi kuukaudeksi; koulusta hänet '
+              + 'erotettiin, ja isä lähetti hänet Bônen lukioon. Siellä '
+              + 'hän tapasi naimisissa olevan serkkunsa, jota hän kutsui '
+              + 'nimellä Nedjma, tähti, ja jonka kanssa hän eli omien '
+              + 'sanojensa mukaan ehkä kahdeksan kuukautta. Samalla '
+              + 'nimellä ilmestyi 1956 romaani, josta tuli Algerian '
+              + 'tunnetuin kirja. Myöhemmin hän siirtyi teatteriin ja '
+              + 'kirjoitti algerianarabiaksi ja puolusti berberikielten '
+              + 'asemaa.',
+          selite: 'Kateb Yacinen passi on esillä museossa: '
+            + 'henkilötietosivulla on hänen valokuvansa ja leima '
+            + 'Pekingistä, jossa hän kävi kirjailijana.',
+          lahde: 'Chris93, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Luokkansa ainoa ja akatemian ensimmäinen',
+          aika: '1936–2015',
+          // Kuvaton (Opus 6.9.2026): Assia Djebarista ei ole Commonsissa
+          // riittävän suurta vapaata valokuvaa; suurimmat ovat alle
+          // 800 pikseliä leveitä. Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Fatima-Zohra Imalayen syntyi Cherchellissä 30. '
+              + 'kesäkuuta 1936 ja kirjoitti nimellä Assia Djebar. '
+              + 'Blidan koraanikoulussa hän oli toinen kahdesta '
+              + 'tytöstä, Algerin lukiossa luokkansa ainoa muslimi ja '
+              + '1955 ensimmäinen algerialainen musliminainen, joka '
+              + 'pääsi Ranskan huippukouluun École normale '
+              + 'supérieureen. Hän kirjoitti '
+              + 'romaaneja, käänsi ja ohjasi elokuvia, ja hänen työnsä '
+              + 'ydin oli algerialaisten naisten sukupolvien ketju. '
+              + 'Vuonna 1996 hän sai Neustadt-palkinnon, ja 16. kesäkuuta '
+              + '2005 hänet valittiin Ranskan akatemiaan ensimmäisenä '
+              + 'maghrebilaisena kirjailijana.',
+          selite: 'Assia Djebar oli ensimmäinen Maghrebin maista '
+            + 'kotoisin oleva kirjailija Ranskan akatemiassa.',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Algeriassa jokaisella kaupungilla on oma lajinsa: '
+          + 'Oranissa raï, Algerin kasbahissa chaabi ja Kabyliassa '
+          + 'laulu, joka kulki ympäri maailmaa.',
+      nostot: [
+        {
+          otsikko: 'Sana, joka tarkoittaa mielipidettä',
+          aika: '1920-luvulta',
+          tiedosto: 'Cheb Khaled performed in Oran on July 5th 2011.jpg',
+          teksti: 'Raï syntyi Oranin satamakaupungissa 1920-luvulla '
+              + 'köyhien musiikkina, ja sen varhaiset sanoitukset '
+              + 'kertoivat sairauksista ja arjen ahtaudesta. Vanhempia '
+              + 'esittäjiä kutsutaan nimillä cheikh ja cheikha, nuorempia '
+              + 'nimillä cheb ja cheba — sana tarkoittaa nuorta, ja se '
+              + 'erotti 1980-luvun sukupolven edeltäjistään. Laji oli '
+              + 'pitkään miesten, mutta vuosisadan loppuun mennessä '
+              + 'naislaulajat olivat tavallisia. Levynkansista tulivat '
+              + 'tutuiksi Cheikha Remitti, Cheb Khaled, Cheb Mami ja '
+              + 'Cheba Zahouania, ja raïsta tuli 1980-luvulla Algerian '
+              + 'tunnetuin vientituote.',
+          selite: 'Cheb Khaled esiintyi Oranissa heinäkuussa 2011 — '
+            + 'samassa kaupungissa, jossa raï syntyi lähes sata vuotta '
+            + 'aiemmin.',
+          lahde: 'Magharebia, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kansan musiikki, joka alkoi paheksuttuna',
+          aika: '1930-luku',
+          tiedosto: 'Orchester El Gusto 03.jpg',
+          teksti: 'Chaabi tarkoittaa kansan omaa. Sen muotoili Algerin '
+              + 'kasbahissa 1930-luvulla El Hadj M’Hamed El Anka, ja '
+              + 'se nojaa andalusialaisen musiikin moodeihin ja '
+              + 'rytmeihin, vaikka sanat ovat arkista puhekieltä. '
+              + 'Orkesterissa soittaa toistakymmentä muusikkoa, ja sen '
+              + 'tunnussoitin on algerialainen mandole, banjon ja '
+              + 'mandoliinin sukulainen; mukana ovat myös kemandja, '
+              + 'piano, qanun ja tar-kehärumpu. Aluksi laji oli '
+              + 'paheksuttu ja soi suljettujen ovien takana, mutta '
+              + '1950-luvun lopulla se oli jo häiden ja juhlien '
+              + 'musiikkia.',
+          selite: 'Algerialainen mandole on chaabin tunnussoitin: '
+            + 'nelinkertaisin kielikuoroin varustettu pitkäkaulainen '
+            + 'luuttu, jota soitetaan plektralla.',
+          lahde: 'Schorle, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Laulu, joka lähti ja tuli takaisin',
+          aika: '1973',
+          tiedosto: 'Orchester El Gusto 24.jpg',
+          teksti: 'Dahmane El Harrachi — oikealta nimeltään Amrani '
+              + 'Abderrahmane — kirjoitti ja levytti vuonna 1973 '
+              + 'chaabi-laulun "Ya Rayah". Sen sanat puhuttelevat '
+              + 'lähtijää: sinä joka lähdet, minne matka, tiedätkö mitä '
+              + 'olet jättämässä. Laulu on maastamuuttajan balladi, ja '
+              + 'juuri siksi se on kulkenut maasta toiseen. Vuonna 1997 '
+              + 'Rachid Taha levytti siitä uuden version, joka ilmestyi '
+              + 'singlenä 26. elokuuta ja josta tuli hitti Ranskassa ja '
+              + 'kauempanakin. Sama laulu on siis matkustanut kahdesti: '
+              + 'ensin siirtolaisten mukana pois ja sitten levyn mukana '
+              + 'takaisin.',
+          selite: 'Chaabi-yhtyeen lyömäsoittimet ovat tar-kehärumpu ja '
+            + 'darbuka, ja niiden varassa laulun tahti kulkee.',
+          lahde: 'Schorle, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kehtolaulu kabyylin kielellä',
+          aika: '1976',
+          tiedosto: 'Idir Bondy France 21-06-2008.jpg',
+          teksti: 'Idir ja runoilija Ben Mohamed sävelsivät laulun, jonka '
+              + 'piti mennä Radio Algerin laulajalle Nouaralle. Kun tämä '
+              + 'kieltäytyi, Idir esitti sen itse yhdessä laulaja Milan '
+              + 'kanssa, ja siitä tuli välitön menestys. Alkuperäinen '
+              + 'nimi oli "A Baba-inu Ba", ja tunnetuksi se tuli muodossa '
+              + '"A Vava Inouva" — laulu isälle, jonka ovea lapsi pyytää '
+              + 'avaamaan. Vuonna 1976 julkaistusta kappaleesta tuli '
+              + 'kansainvälisesti tunnetuin kabyylinkielinen laulu, ja se '
+              + 'on käännetty muun muassa arabiaksi, espanjaksi, '
+              + 'ranskaksi ja kreikaksi. Samanniminen albumi ilmestyi '
+              + '1991.',
+          selite: 'Idir esiintyi akustisen kitaran kanssa; hänen '
+            + 'sovituksensa toi kabyylilaulun eurooppalaisille lavoille.',
+          lahde: 'Suaudeau, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Algerian luonnossa kaikki on äärimmäistä: puu, joka '
+          + 'kasvaa satojen kilometrien päässä lähimmästä metsästä, ja '
+          + 'kissa, joka ei tarvitse vettä lainkaan.',
+      tehtava: {
+        kysymys: 'Mikä tekee saharansypressin lisääntymisestä ainutlaatuisen?',
+        vaihtoehdot: [
+          'Se kukkii vain kerran sadassa vuodessa',
+          'Sen juuret ulottuvat sadan metrin syvyyteen',
+          'Siemen syntyy pelkästään siitepölystä',
+          'Se kasvaa vain suolaisessa pohjavedessä',
+        ],
+        oikea: 2,
+        fakta: 'Tapaa kutsutaan isälinjaiseksi apomiksikseksi, ja se '
+            + 'tunnetaan puiden joukossa vain muutamalta lajilta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Puu, jolla ei ole äitiä',
+          tiedosto: 'Cupressus dupreziana1.jpg',
+          teksti: 'Saharansypressi kasvaa vain Tassili n’Ajjerin '
+              + 'vuorilla Kaakkois-Algeriassa, satojen kilometrien '
+              + 'päässä lähimmistä muista puista. Sadetta alueella tulee '
+              + 'noin kolmekymmentä millimetriä vuodessa, ja enemmistön '
+              + 'puista arvioidaan olevan yli kahdentuhannen vuoden '
+              + 'ikäisiä; uutta taimettumista ei ole kirjattu yli '
+              + 'kolmeenkymmeneen vuoteen. Vuosien 1997–2001 '
+              + 'kartoituksissa yksilöitä löytyi 233, mutta maaliskuussa '
+              + '2026 niitä oli enää 212 — kuivuus tappoi 21 suurta puuta. '
+              + 'Lajilla on poikkeuksellinen lisääntymistapa: siemen '
+              + 'syntyy pelkästään siitepölystä, ja emopuu antaa vain '
+              + 'ravinnon eikä yhtään omaa geeniä.',
+          selite: 'Saharansypressin runko on kiertynyt ja osin kuollut, '
+            + 'mutta latvus vihertää yhä; puu kasvaa paljaalla kalliolla '
+            + 'Tassilin ylängöllä.',
+          lahde: 'Gruban, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Afrikan ainoa oma hirvi',
+          tiedosto: 'Cervus elaphus barbarus, Tierpark Berlin, 523-629.jpg',
+          teksti: 'Berberihirvi on saksanhirven alalaji ja ainoa '
+              + 'Afrikassa alkuperäinen hirvieläin — toinen, '
+              + 'jättiläismäinen Megaceroides algericus, kuoli sukupuuttoon '
+              + 'noin kuusituhatta vuotta sitten. Laji viihtyy tiheissä ja '
+              + 'kosteissa metsissä Algeriassa, Tunisiassa ja Marokossa, '
+              + 'ja tunnettuja laumoja on Akfadoun, Bouzeguènen ja '
+              + 'Zéraldan seuduilla. Marokosta hirvi metsästettiin '
+              + 'sukupuuttoon, ja se palautettiin sinne 1990-luvulla '
+              + 'Tunisian kannasta. Perimää tutkittaessa selvisi jotain '
+              + 'yllättävää: Pohjois-Afrikan hirvet ovat lähes '
+              + 'erottamattomia Sardinian ja Korsikan hirvistä, joten '
+              + 'ihmiset ovat aikoinaan vieneet ne Afrikasta saarille.',
+          selite: 'Berberihirven sarvet ovat pienemmät ja turkki '
+            + 'täplikkäämpi kuin muilla saksanhirven muodoilla.',
+          lahde: 'Lotse, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Gepardi, joka ei juo',
+          aika: '2008–2020',
+          // Kuvaton (Opus 6.9.2026): ainoa Commonsin kuva Algerian
+          // saharangepardista on riistakameran otos, jonka leveys on
+          // 895 pikseliä. Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Saharangepardi on luokiteltu äärimmäisen '
+              + 'uhanalaiseksi: vuonna 2008 aikuisia arvioitiin olevan '
+              + 'alle kaksisataaviisikymmentä. Vuosien 2007–2012 '
+              + 'aineistossa Länsi-, Keski- ja Pohjois-Afrikan gepardeja '
+              + 'laskettiin 457, joista 191 Algerian ja Malin alueella. '
+              + 'Elokuun 2008 ja marraskuun 2010 välillä Ahaggarin '
+              + 'kansallispuiston riistakamerat tallensivat neljä '
+              + 'yksilöä, ja vuonna 2020 algerialaiset luonnontutkijat '
+              + 'kuvasivat yhden uudelleen. Aavikossa gepardi on '
+              + 'muuttanut tapojaan: se liikkuu enimmäkseen yöllä, kulkee '
+              + 'pidempiä matkoja ja elää harvemmassa kuin savannilla. '
+              + 'Vettä se ei tarvitse juotavaksi, vaan saa nesteen '
+              + 'saaliinsa verestä.',
+          selite: 'Saharangepardi on aavikon oloihin sopeutunut gepardin '
+            + 'alalaji, joka liikkuu enimmäkseen pimeän aikaan.',
+        },
+        {
+          otsikko: 'Lammas, joka hyppää kaksi metriä',
+          tiedosto: 'Arui02.jpg',
+          teksti: 'Harjalammas eli aoudad on Pohjois-Afrikan vuorten oma '
+              + 'sorkkaeläin, jota tavataan Algeriasta Egyptiin ja etelään '
+              + 'Malin ja Nigerin puolelle. Säkäkorkeus on 75–110 '
+              + 'senttimetriä ja paino 30–145 kiloa; sarvet kaartuvat '
+              + 'ulos, taakse ja sisään ja voivat kasvaa yli '
+              + 'seitsemänkymmenen sentin mittaisiksi. Nimensä se on '
+              + 'saanut kurkusta ja rinnasta riippuvasta pitkästä '
+              + 'karvatupsusta. Eläin saa tarvitsemansa veden ravinnosta, '
+              + 'lepää päivän kuumuudessa ja liikkuu aamuin illoin, ja '
+              + 'vaaran uhatessa se pakenee ylämäkeen — paikaltaan se '
+              + 'hyppää yli kahden metrin korkeuteen.',
+          selite: 'Harjalampaan kurkusta ja rinnasta riippuu pitkä '
+            + 'karvatupsu, ja sarvet kaartuvat ulos, taakse ja sisään.',
+          lahde: 'Krzysztof Kozłowski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+  ],
+  /*
+   * TUNISIA (TUN) — Afrikan neljäs maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-tunisia.md; luvut
+   * tarkistettu en-Wikipedian raakatekstistä 6.9.2026, kaksi
+   * Unesco-merkintää (harissa 2022, charfia 2020) suoraan
+   * ich.unesco.orgista.
+   *
+   * TYÖNJAKO KARTHAGON JA KARTTANOSTOJEN KANSSA: Karthagon litteät
+   * kulttuurinostot (africa-kulttuuri.js) kattavat jo Bardon mosaiikit,
+   * purppuravärin ja sotanorsut; maastokohteet-tun.js Douggan, El Jemin,
+   * Kairouanin altaat, Kerkouanen, Soussen ribatin, Matmatan ja Sbeitlan;
+   * skandaalit.js Bardon sopimuksen 1881 ja Chott el Djeridin
+   * "Saharan meren"; elaintakyt.js kaljuiibiksen. Maalehti EI toista
+   * niitä: se kertoo Didon tarusta, Rooman viljahuollosta, aghlabideista,
+   * 1800-luvun uudistuksista, ruoasta, kuvataiteesta, musiikista ja
+   * merestä. Luonto-osaston tilalla on Meri, koska maan luontokohteet
+   * ovat karttanostoissa.
+   *
+   * SISÄLTÖLINJAUS: nykypolitiikkaa, arabikevättä eikä väkivaltaisia
+   * nykytapahtumia käsitellä.
+   *
+   * KUVAT: Commons, lisenssi ja tekijä tarkistettuina, leveys >= 1200 px,
+   * jokainen katsottu silmin. KOLME NOSTOA JÄI KUVATTOMAKSI (Tunisin
+   * koulukunta, Safia Farhat, mezoued) — kuvatilaukset raportissa.
+   * HYLÄTYT: "Home made Harissa Sauce N75" (kolmiosainen kollaasi),
+   * "Harissa 3" (esittää Libanonin Harissaa eikä chilitahnaa),
+   * "Horniman instruments 28 (Oud arbi)" (museon numerolappu näkyvissä),
+   * "Mezoued beja 01" ja "Mezoued jerbi 01" (tunnistettavia kasvoja
+   * lähikuvassa / liian pimeä).
+   */
+  TUN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Tunisian rannikko on ollut kolmesti keskus eikä reuna: '
+          + 'puunilaisen meriverkoston pääkaupunkina, Rooman '
+          + 'ruokakomerona ja arabidynastian tukikohtana, josta '
+          + 'purjehdittiin Sisiliaan.',
+      tehtava: {
+        kysymys: 'Kuinka suuren osan vuodesta Rooman Afrikka-provinssi ruokki pääkaupunkinsa?',
+        vaihtoehdot: [
+          'Koko vuoden yhtäjaksoisesti',
+          'Kolme kuukautta vuodesta',
+          'Vain sadonkorjuun ajan',
+          'Kahdeksan kuukautta',
+        ],
+        oikea: 3,
+        fakta: 'Loput neljä kuukautta tulivat Egyptistä — kaksi '
+            + 'provinssia piti siis miljoonakaupungin pystyssä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupunki, joka mahtui härännahan sisään',
+          aika: '814 eaa.',
+          tiedosto: 'Turner Dido Building Carthage.jpg',
+          teksti: 'Kreikkalais-roomalaisen taruston mukaan Karthagon '
+              + 'perusti Tyroksen kuningatar, jota kutsutaan nimillä Dido '
+              + 'ja Elissa. Hän pakeni veljeään Pygmalionia ja purjehti '
+              + 'Luoteis-Afrikkaan, jossa hänelle luvattiin maata sen '
+              + 'verran kuin härännahalla saa peitettyä; hän leikkasi '
+              + 'nahan hiuksenohuiksi suikaleiksi ja piiritti niillä '
+              + 'kokonaisen kukkulan. Vanhin tunnettu maininta on '
+              + 'sisilialaisen Timaioksen kadonneissa teksteissä, joiden '
+              + 'mukaan kaupunki syntyi 814 eaa., suunnilleen samaan '
+              + 'aikaan kuin Rooma. Kertomukset on kirjoitettu satoja '
+              + 'vuosia tapahtumien jälkeen, eikä paikalta ole löytynyt '
+              + 'asutusta 700-luvun eaa. viimeistä neljännestä kauempaa.',
+          selite: 'J. M. W. Turnerin maalaus vuodelta 1815 kuvaa Didon '
+            + 'rakentamassa Karthagoa: satama on kesken, ja aurinko '
+            + 'nousee juuri rakennustelineiden takaa.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Provinssi, joka ruokki miljoonakaupungin',
+          aika: '146 eaa.–200-luku',
+          tiedosto: 'Dominus Julius mosaic in the Bardo National Museum(12240864473).jpg',
+          teksti: 'Rooman Afrikka-provinssi perustettiin 146 eaa. '
+              + 'kolmannen puunilaissodan jälkeen, ja se kattoi suunnilleen '
+              + 'nykyisen Tunisian, Koillis-Algerian ja Länsi-Libyan '
+              + 'rannikon. Hallintopääkaupungiksi tuli Utica, joka oli '
+              + 'sodassa asettunut Rooman puolelle. Provinssia sanottiin '
+              + 'valtakunnan viljakomeroksi: se ruokki Rooman väestön '
+              + 'kahdeksan kuukautta vuodesta, ja loput neljä tulivat '
+              + 'Egyptistä. Yhden arvion mukaan Luoteis-Afrikka tuotti '
+              + 'miljoona tonnia viljaa vuodessa, ja siitä neljännes '
+              + 'lähti vientiin. Toisella vuosisadalla eaa. oliiviöljy '
+              + 'nousi viljan rinnalle, ja rikkaus näkyi kaupunkien '
+              + 'määrässä.',
+          selite: 'Dominus Juliuksen mosaiikki näyttää maatilan vuoden: '
+            + 'keskellä on herran linnamainen talo ja sen ympärillä '
+            + 'kylvö, sadonkorjuu, metsästys ja oliivinpoiminta.',
+          lahde: 'Boyd Dwyer, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Kapinallinen amiraali avasi tien Sisiliaan',
+          aika: '827–902',
+          tiedosto: 'Aghlabids Tunisia 880 CE.jpg',
+          teksti: 'Aghlabidit hallitsivat Ifriqiyaa vuosina 800–909 '
+              + 'abbasidien nimellisenä vasallina, ja heidän '
+              + 'pääkaupunkinsa oli Kairouan. Kesäkuussa 827 avautui '
+              + 'tilaisuus: Sisilian bysanttilaisen laivaston komentaja '
+              + 'Eufemios kapinoi keisari Mikael II:ta vastaan, hävisi ja '
+              + 'pyysi aghlabideilta apua. Retkikunnan johtoon asetettiin '
+              + 'oppinut tuomari Asad ibn al-Furat. Ensimmäinen hyökkäys '
+              + 'Syrakusaan epäonnistui, mutta vuonna 831 valloitettiin '
+              + 'Palermo, josta tuli uuden maakunnan pääkaupunki. '
+              + 'Viimeinen suuri bysanttilaislinnake Taormina kaatui '
+              + 'vasta 902 — valloitus kesti siis 75 vuotta.',
+          selite: 'Aghlabidien kultadinaari on ohut ja kevyt, ja sen '
+            + 'molemmat puolet on täytetty kufilaisella kirjoituksella '
+            + 'ilman kuvia.',
+          lahde: 'PHGCOM, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Arabimaailman ensimmäinen perustuslaki',
+          aika: '1846–1861',
+          tiedosto: 'Kheireddine Pacha high.JPG',
+          teksti: 'Husainidisuvun kymmenes bey Ahmad I hallitsi vuodesta '
+              + '1837 kuolemaansa 1855 ja lakkautti orjuuden tammikuussa '
+              + '1846. Uudistukset jatkuivat kahdessa askeleessa. '
+              + 'Vuoden 1857 perustavanlaatuinen sopimus vahvisti '
+              + 'orjuuden lakkauttamisen ja takasi hengen ja omaisuuden '
+              + 'turvan, verotuksen yhdenvertaisuuden, uskonnonvapauden '
+              + 'ja yhdenvertaisuuden lain edessä. Sen pohjalta '
+              + 'kirjoitettu perustuslaki astui voimaan 26. huhtikuuta '
+              + '1861 — ensimmäisenä kirjoitettuna perustuslakina '
+              + 'arabimaissa ja ensimmäisenä valtiossa, jonka uskonto oli '
+              + 'islam. Uudistusten takana vaikutti ministeri Khayr '
+              + 'al-Din, ja teksti käännettiin ranskaksi ja '
+              + 'osmaniturkiksi jo samana vuonna.',
+          selite: 'Khayr al-Din Pasha kuvattiin ratsain sotilaspuvussa ja '
+            + 'punaisessa fetsissä; hän oli Tunisian uudistusten '
+            + 'keskeisin ministeri.',
+          lahde: 'Louis Simil, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Tunisialainen ruoka nojaa kahteen asiaan, joita maasta '
+          + 'riittää vientiin asti: oliiviöljyyn ja tuliseen '
+          + 'chilitahnaan.',
+      nostot: [
+        {
+          otsikko: 'Tahna, joka tuli Amerikasta ja jäi',
+          tiedosto: 'Harissa Sauce.JPG',
+          teksti: 'Harissan kotiseutu on Kap Bonin niemi ja sen '
+              + 'päätuotantopaikka Nabeul. Tahnaan tulee paahdettuja '
+              + 'punaisia paprikoita, baklouti-paprikaa, valkosipulia, '
+              + 'kuminan- ja korianterinsiemeniä, juustokuminaa ja '
+              + 'oliiviöljyä, joka kantaa rasvaliukoiset maut. '
+              + 'Chilipaprika ei ole Välimeren oma kasvi: se tuli '
+              + 'tunisialaiseen keittiöön Kolumbuksen vaihdon myötä, '
+              + 'oletettavasti Espanjan miehityksen aikana 1535–1574. '
+              + 'Tunisia on nykyään maailman suurin valmiin harissan '
+              + 'viejä, ja Unesco otti harissan tiedot, taidot ja tavat '
+              + 'aineettoman kulttuuriperinnön luetteloon vuonna 2022.',
+          selite: 'Harissa hierretään kuivatuista chileistä tahnaksi, ja '
+            + 'pinnalle kaadetaan oliiviöljyä, joka säilöö sen.',
+          lahde: 'Miansari66, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Öljy, joka matkustaa toisen nimellä',
+          tiedosto: 'Photo View of an expanse of olive trees near Sousse 1959 - Touring Club Italiano BBW 277.jpg',
+          teksti: 'Maailman oliiviöljytuotanto oli vuonna 2022 yhteensä '
+              + '2,7 miljoonaa tonnia, ja suurimpiin tuottajiin kuuluivat '
+              + 'Espanja, Italia, Kreikka, Turkki ja Tunisia. '
+              + 'Alkuperämaa merkitään pulloon lyhenteellä, ja Tunisian '
+              + 'koodi on TU. Yhdysvaltain tullimääräysten mukaan '
+              + 'todellinen alkuperä on ilmoitettava samalla puolella '
+              + 'etikettiä yhtä suurin kirjaimin, mutta moni merkki '
+              + 'painaa eteen isolla "imported from Italy" ja muut maat '
+              + 'pienellä taakse. Niinpä italialaiseksi luultu öljy on '
+              + 'usein peräisin Turkista, Tunisiasta, Marokosta, '
+              + 'Espanjasta tai Kreikasta.',
+          selite: 'Oliivitarhat Soussen takamaastossa vuonna 1959: puut '
+            + 'on istutettu tasavälein niin kauas kuin silmä kantaa, '
+            + 'koska kuivalla maalla jokainen puu tarvitsee oman alansa.',
+          lahde: 'Archivio Storico del Touring Club Italiano, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Taskussa on kokonainen kananmuna',
+          tiedosto: 'Brik tunisien, mai 2020.jpg',
+          teksti: 'Brik on uppopaistettu taikinatasku, ja sen kuori on '
+              + 'malsouka eli warka. Levyt tehdään läiskimällä tahmeaa '
+              + 'taikinaa kuumalle tarttumattomalle pinnalle limittäisinä '
+              + 'ympyröinä ja kypsentämällä ne hetken. Tunnetuimmassa '
+              + 'versiossa kolmiotaskun sisään laitetaan kokonainen raaka '
+              + 'kananmuna, hienonnettua sipulia, tonnikalaa, harissaa ja '
+              + 'persiljaa — ja koko syömisen taito on siinä, ettei '
+              + 'keltuainen valu käsille. Muita täytteitä ovat jauheliha, '
+              + 'kana, kapris, juusto ja anjovis. Algeriassa ja Libyassa '
+              + 'sama ruoka tunnetaan nimellä bourek.',
+          selite: 'Brik tarjoillaan kuumana suoraan paistosta, ja '
+            + 'kolmion nurkasta näkyy, että sisällä on kokonainen '
+            + 'kananmuna.',
+          lahde: 'Habib M’henni, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Leivos, joka on nimetty muotonsa mukaan',
+          tiedosto: 'Makrouds Kairouan.jpg',
+          teksti: 'Makroudh on maghrebilainen leivonnainen, jonka pohja '
+              + 'tehdään mannasuurimoista ja täyte taatelimassasta, '
+              + 'pähkinöistä tai mantelista. Nimi tulee suoraan sen '
+              + 'muodosta: taikinatanko leikataan viistoon, jolloin '
+              + 'jokaisesta palasta tulee vinoneliö. Leivokset '
+              + 'uppopaistetaan tai paistetaan uunissa ja kastetaan '
+              + 'lopuksi hunajaan, joka jää kiiltämään pintaan. Tunisiassa '
+              + 'makroudh yhdistetään erityisesti Kairouaniin, jonka '
+              + 'markkinoilla niitä myydään pinoina; taateleita saadaan '
+              + 'etelän keitailta, joten leivos yhdistää kaksi maata '
+              + 'samaan suupalaan.',
+          selite: 'Makroudhin vinoneliön muoto syntyy siitä, että '
+            + 'täytetty taikinatanko leikataan viistosti paloiksi.',
+          lahde: 'Cimoi, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Tunisia on maalattu kahdesti: kerran eurooppalaisten '
+          + 'silmin, jotka löysivät täältä värin, ja kerran omin voimin, '
+          + 'kun maalle rakennettiin oma taidekoulunsa.',
+      nostot: [
+        {
+          otsikko: 'Kaksi viikkoa, jotka muuttivat maalaustaidetta',
+          aika: '1914',
+          tiedosto: 'Kairouan III d\'August Macke (Musée de l\'Orangerie, Paris) (46882305455).jpg',
+          teksti: 'Sveitsiläis-saksalainen Paul Klee matkusti huhtikuussa '
+              + '1914 Tunisiaan ystäviensä August Macken ja Louis '
+              + 'Moillietin kanssa. Valo teki häneen niin suuren '
+              + 'vaikutuksen, että hän kirjoitti päiväkirjaansa: väri on '
+              + 'ottanut minut haltuunsa, enää minun ei tarvitse juosta '
+              + 'sen perässä — väri ja minä olemme yhtä, olen maalari. '
+              + 'Kotiin palattuaan hän maalasi ensimmäisen täysin '
+              + 'abstraktin teoksensa "Kairouanin tapaan", joka koostuu '
+              + 'värillisistä suorakaiteista ja muutamasta ympyrästä. '
+              + 'Värillisestä suorakaiteesta tuli hänen '
+              + 'perusrakennuspalikkansa, jota tutkijat ovat verranneet '
+              + 'nuottiin. Egyptissä hän kävi 1928, mutta se ei tehnyt '
+              + 'samaa.',
+          selite: 'August Macken akvarelli "Kairouan III" on samalta '
+            + 'matkalta: kaupunki on hajotettu läpikuultaviksi '
+            + 'väripinnoiksi, joista erottuvat muuri, palmu ja kulkija.',
+          lahde: 'Jean-Pierre Dalbéra, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Koulukunta, joka perustettiin omaa maalaustaidetta varten',
+          aika: '1940-luvun loppu',
+          // Kuvaton (Opus 6.9.2026): Yahia Turkin teokset ovat yhä
+          // tekijänoikeuden alaisia, eikä Commonsissa ole vapaata kuvaa
+          // hänestä tai École de Tunisin ryhmästä. Kuvatilaus on
+          // kirjattu raporttiin.
+          teksti: 'Pierre Boucherle kokosi 1940-luvun lopulla joukon '
+              + 'taiteilijoita École de Tunisiksi. Ajatus oli, että '
+              + 'ryhmään otetaan ihmisiä uskonnosta, taustasta ja '
+              + 'tyylistä riippumatta ja että maalle luodaan oma '
+              + 'maalaustaide. Yahia Turki, jota kutsutaan tunisialaisen '
+              + 'maalaustaiteen isäksi, syntyi 1903 Istanbulissa '
+              + 'turkkilaiselle äidille ja djerbalaiselle isälle. '
+              + 'Kiinnostus muotoon ja väriin heräsi koraanikoulun '
+              + 'kirjoitustauluista, ensimmäisen menestyksen hän sai '
+              + 'Tunisian salongissa 1923, ja Pariisissa hän vieraili '
+              + 'Matissen ja Derainin ateljeissa. Itsenäistymisen jälkeen '
+              + '1956 hänestä tuli koulukunnan puheenjohtaja, ja hän '
+              + 'hoiti tehtävää kuolemaansa 1969 asti.',
+          selite: 'École de Tunis oli ensimmäinen ryhmä, joka asetti '
+            + 'tavoitteekseen nimenomaan tunisialaisen maalaustaiteen.',
+        },
+        {
+          otsikko: 'Ryhmän ainoa nainen, koulun ensimmäinen johtaja',
+          aika: '1949–1966',
+          // Kuvaton (Opus 6.9.2026): Safia Farhatista tai hänen
+          // kuvakudoksistaan ei ole Commonsissa yhtään kuvaa.
+          // Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Safia Farhat syntyi Radèsissa 1924 ja kuoli samassa '
+              + 'kaupungissa 2004. Hän liittyi École de Tunisin ryhmään '
+              + 'vuonna 1949 sen ainoana naisena, ja hänet muistetaan '
+              + 'ennen kaikkea siitä, että hän toi maahan modernin '
+              + 'kuvakudoksen; hän työskenteli myös muotoilun, '
+              + 'keramiikan ja lasimaalauksen parissa ja rakensi '
+              + 'yhteistyötä taiteilijoiden ja käsityöläisten välille. '
+              + 'Vuonna 1959 hän perusti Faïza-lehden, ensimmäisen '
+              + 'arabialais-afrikkalaisen naistenlehden. Hän oli '
+              + 'ensimmäinen nainen ja ensimmäinen tunisialainen Tunisin '
+              + 'taideakatemian johtajana, ja se avasi koulun ovet '
+              + 'kokonaiselle naistaiteilijoiden sukupolvelle; vuodesta '
+              + '1966 hän johti taideinstituuttia ja sen uutta '
+              + 'arkkitehtuurikoulua.',
+          selite: 'Safia Farhat toi Tunisiaan modernin kuvakudoksen ja '
+            + 'johti maan taidekoulua ensimmäisenä naisena.',
+        },
+        {
+          otsikko: 'Kylä, joka maalattiin kahdella värillä',
+          aika: '1920-luku',
+          tiedosto: 'Streets of Sidi Bou Said. Northern Tunisia, Mediterranean Sea, Northern Africa.Streets of Sidi Bou Said. Northern Tunisia, Mediterranean Sea, Northern Africa.jpg',
+          teksti: 'Sidi Bou Saïd sai nimensä uskonnollisesta hahmosta Abu '
+              + 'Said al-Bajista; sitä ennen kylää kutsuttiin nimellä '
+              + 'Jbel el-Menar. Kylän kuuluisan sinivalkoisen väriparin '
+              + 'teki suosituksi 1920-luvulla ranskalainen paroni '
+              + 'Rodolphe d’Erlanger, joka asui siellä. Valkoiset '
+              + 'seinät, siniset ikkunaluukut ja ovet sekä '
+              + 'bougainvillean punainen ovat siitä lähtien olleet kylän '
+              + 'tunnusmerkit, ja mäeltä avautuu näkymä Tunisin lahdelle. '
+              + 'Kylään pääsee TGM-junalla, joka kulkee Tunisista La '
+              + 'Marsaan — sama rata, jota pitkin taidemaalarit ovat '
+              + 'tulleet sinne sata vuotta.',
+          selite: 'Sidi Bou Saïdin kujilla seinät ovat valkoiset ja '
+            + 'ovet, ikkunaluukut ja ristikot siniset; muurien yli '
+            + 'roikkuu bougainvilleaa.',
+          lahde: 'Mstyslav Chernov, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Tunisian klassinen musiikki oli katoamassa, kunnes '
+          + 'ranskalainen paroni kirjoitti sen muistiin — ja samaan '
+          + 'aikaan maaseudulla soi säkkipilli, jota kukaan ei '
+          + 'kirjoittanut muistiin.',
+      nostot: [
+        {
+          otsikko: 'Kolmetoista sarjaa, jotka jäivät jäljelle',
+          tiedosto: 'Luth - Collection des instruments de musique du Baron d\'Erlanger.jpg',
+          teksti: 'Malouf tarkoittaa tuttua ja tavanomaista. Laji tuli '
+              + 'Andalusiasta ja on läheistä sukua Libyan maloufille, '
+              + 'Algerian gharnatille ja Marokon al-Alalle; osmanien aika '
+              + 'toi siihen turkkilaisia vaikutteita, mutta soittimet '
+              + 'pysyivät omina — tunisialainen luuttu ʻūd tūnsī on tästä '
+              + 'tunnusmerkillinen esimerkki. Rakenteen ydin on nuba, '
+              + 'kaksiosainen sarja, joka pysyy yhdessä sävelmoodissa ja '
+              + 'kestää noin tunnin. Perimätiedon mukaan jokaisella '
+              + 'päivällä ja juhlalla oli oma nubansa, mutta jäljellä on '
+              + 'kolmetoista. Nykyään maloufia kuullaan etenkin häissä, '
+              + 'ja äänitteitä on vähän.',
+          selite: 'Tunisialainen luuttu paroni d’Erlangerin '
+            + 'soitinkokoelmassa; seinällä on hänen oma muotokuvansa.',
+          lahde: 'IssamBarhoumi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Paroni, joka kirjoitti musiikin kuuteen niteeseen',
+          aika: '1932–1934',
+          tiedosto: 'Palais Ennejma Ezzahra, Baron D\'Erlanger, sidi Bou Said, 2024 20240609 102524.jpg',
+          teksti: 'Rodolphe d’Erlanger kokosi maloufin säännöt ja '
+              + 'historian kuuteen niteeseen ja perusti Rachidian, '
+              + 'konservatorion, joka toimii yhä. Hänen ehdotuksestaan '
+              + 'kuningas Fuad I kutsui koolle arabialaisen musiikin '
+              + 'kongressin Kairoon 14. maaliskuuta – 3. huhtikuuta 1932, '
+              + 'ja d’Erlanger toimi sen varapuheenjohtajana. Paikalla '
+              + 'olivat muun muassa Béla Bartók ja Paul Hindemith, ja '
+              + 'delegaatioita tuli Algeriasta, Egyptistä, Irakista, '
+              + 'Marokosta, Syyriasta, Tunisiasta ja Turkista. '
+              + 'Kongressissa äänitettiin 360 esitystä, joista 162 '
+              + 'julkaistiin levyinä; äänitteitä säilytetään Pariisissa, '
+              + 'Lontoossa ja Berliinissä.',
+          selite: 'Ennejma Ezzahra oli d’Erlangerin koti Sidi Bou '
+            + 'Saïdissa, ja siitä tuli soitinmuseo ja konserttitalo.',
+          lahde: 'Habib M’henni, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Säkkipilli, jossa on kaksi lehmänsarvea',
+          // Kuvaton (Opus 6.9.2026): Commonsin mezoued-kuvissa on
+          // lähikuvassa tunnistettavia kasvoja tai ne ovat liian pimeitä.
+          // Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Mezoued tarkoittaa säkkiä tai eväspussia, ja niin se '
+              + 'on tehty: pussi on uuhen nahkaa, siitä lähtee '
+              + 'kaksoisputki, jossa on yksöislehdykkä, ja putki päättyy '
+              + 'kahteen lehmänsarveen. Samannimistä musiikkia soitetaan '
+              + 'darbouka-rummun kanssa. Se oli alun perin maaseudun ja '
+              + 'työväen musiikkia, sitä soitettiin häissä ja juhlissa, ja '
+              + 'siihen kuuluu tansseja, joiden sanotaan vievän '
+              + 'transsiin. Vaikka laji ei kuulunut hienoihin saleihin, '
+              + 'siitä on tullut yksi Tunisian suosituimmista, ja se on '
+              + 'kaupunkien laitamien oma ääni.',
+          selite: 'Mezouedin pussi tehdään uuhen nahasta ja soittimen '
+            + 'kaksoisputki päättyy kahteen lehmänsarveen.',
+        },
+        {
+          otsikko: 'Luuttu, joka löysi tiensä jazzlavoille',
+          tiedosto: 'Anouar Brahem Quartet Lantaren Venster Rotterdam 27 maart 2014 - Anouar Brahem (51266239479).jpg',
+          teksti: 'Tunisialainen ʻūd tūnsī on lähisukulainen '
+              + 'algerialaiselle ja marokkolaiselle udille, mutta oma '
+              + 'soittimensa: viritys ja soittotapa poikkeavat, ja se '
+              + 'kuuluu maloufin kokoonpanoon. 1900-luvun tunisialaisia '
+              + 'muusikoita ovat oud-soittaja Anouar Brahem, viulisti ja '
+              + 'säveltäjä Jasser Haj Youssef, laulaja Dhafer Youssef '
+              + 'sekä harvinaisuus, kokonaan naisista koostuva orkesteri '
+              + 'El Azifet. Vanhemman polven nimiä ovat Saliha, Raoul '
+              + 'Journo, Hedi Jouini, Fethia Khairi ja Naâma. Brahemin '
+              + 'levyt ilmestyvät eurooppalaisella jazzlevymerkillä, ja '
+              + 'niissä ud soittaa pianon ja kontrabasson rinnalla.',
+          selite: 'Anouar Brahem soittaa udia jazzkokoonpanossa; soitin '
+            + 'on sama kuin maloufin orkesterissa, mutta musiikki eri.',
+          lahde: 'Dirk Neven, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'meri',
+      nimi: 'Meri',
+      johdanto: 'Tunisian meri ei ole vain rantaviiva: se on '
+          + 'lintujen talvipaikka, palmunlehdistä rakennettu pyydys ja '
+          + 'Välimeren voimakkain vuorovesi.',
+      nostot: [
+        {
+          otsikko: 'Järvi, jonka padot melkein tappoivat',
+          aika: '1980–2006',
+          tiedosto: 'Ichkeul National Park-130277.jpg',
+          teksti: 'Ichkeulin järvi on Pohjois-Tunisiassa, parikymmentä '
+              + 'kilometriä Bizertestä, Afrikan pohjoisimmasta '
+              + 'kaupungista. Kansallispuisto on 126 neliökilometriä ja '
+              + 'pääsi maailmanperintöluetteloon 1980. Järvi ja sen '
+              + 'kosteikot ovat satojentuhansien muuttolintujen '
+              + 'levähdyspaikka: sorsia, hanhia, kattohaikaroita ja '
+              + 'flamingoja. Sitten järveen laskevat joet padottiin, '
+              + 'makean veden tulo väheni, ja ruovikot ja sarat '
+              + 'vaihtuivat suolaa sietäviin kasveihin — lintumäärät '
+              + 'romahtivat. Kohde siirrettiin uhanalaisten '
+              + 'maailmanperintökohteiden listalle 1996 ja poistettiin '
+              + 'siltä 2006, kun suolaisuutta oli saatu laskemaan.',
+          selite: 'Ichkeulin matala järvi ja sen yllä kohoava vuori: '
+            + 'rantavedessä näkyy vesikasvillisuutta, joka on '
+            + 'lintujen ravintoa.',
+          lahde: 'Christian Manhart, Wikimedia Commons (CC BY-SA 3.0 IGO)',
+        },
+        {
+          otsikko: 'Aita, joka rakennetaan mereen joka vuosi',
+          aika: '2020',
+          tiedosto: 'Un pecheur lance sont filet en nasse à Kerkennah - tunisie.jpg',
+          teksti: 'Kerkennahin saarilla kalastetaan charfialla. Se on '
+              + 'kiinteä pyydys: palmunlehtiä lyödään merenpohjaan '
+              + 'kolmioksi, joka katkaisee laskuveden mukana liikkuvien '
+              + 'kalojen tien ja ohjaa ne kammioihin ja lopulta verkkoon. '
+              + 'Toisin kuin pohjatroolaus, pyydys ei raavi pohjaa, ja '
+              + 'kalat pysyvät elossa nostoon asti. Charfia pidetään '
+              + 'toiminnassa vain syyspäiväntasauksen ja kesäkuun '
+              + 'välillä, jotta meri saa lepoajan, ja aidat rakennetaan '
+              + 'joka vuosi uudelleen yhteisellä aterialla ja rukouksilla. '
+              + 'Pyyntipaikka periytyy usein isältä vanhimmalle pojalle. '
+              + 'Unesco merkitsi tavan luetteloonsa 2020.',
+          selite: 'Kerkennahin kalastaja seisoo veneessään matalikolla; '
+            + 'saarten ympärillä meri on niin matalaa, että pohja näkyy '
+            + 'kauas.',
+          lahde: 'Skander zarrad, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Välimeren voimakkain vuorovesi',
+          tiedosto: 'Port de sfax in sunset.jpg',
+          teksti: 'Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa '
+              + 'se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. '
+              + 'Välimerellä vuorovesi jää useimmiten muutamaan '
+              + 'kymmeneen senttiin, mutta lahden pohjukassa Gabèsin '
+              + 'kohdalla se nousee ja laskee suurvuoroveden aikaan jopa '
+              + '2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja '
+              + 'ne elävät sienestä ja tonnikalasta. Syrtti mainitaan '
+              + 'myös Uudessa testamentissa: kun Paavalia kuljetettiin '
+              + 'vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan '
+              + 'aluksen Syrttiin ja teki kaikkensa välttääkseen sen.',
+          selite: 'Sfaxin satama Gabèsin lahden pohjoispäässä: viljasiilot '
+            + 'ja nosturit erottuvat auringonlaskua vasten.',
+          lahde: 'Alwaleed369, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Saari, jolta Odysseus ei tahtonut lähteä',
+          aika: '2023',
+          tiedosto: 'Houmt el souk.jpg',
+          teksti: 'Djerba on 514 neliökilometriä ja Pohjois-Afrikan '
+              + 'suurin saari; vuoden 2014 laskennassa siellä asui '
+              + '163 726 ihmistä. Saarta on pidetty lootuksensyöjien '
+              + 'saarena, jonne Odysseus ajautui ja jossa miehistö '
+              + 'unohti kotimatkan; kreikkalaisille se tunnettiin '
+              + 'nimillä Lytos ja Meninx. Saaren juutalaisyhteisön El '
+              + 'Ghriban synagoga on ollut yhtäjaksoisessa käytössä yli '
+              + 'kaksituhatta vuotta, ja perimätiedon mukaan Jerusalemin '
+              + 'temppelin tuhoutuessa paenneet papit toivat mukanaan '
+              + 'oven ja kiviä, jotka muurattiin rakennukseen. Unesco '
+              + 'otti koko saaren maailmanperintöluetteloon vuonna 2023.',
+          selite: 'Houmt Souk on Djerban pääkaupunki: matalaa valkoista '
+            + 'asutusta levittäytyy rannalta sisämaahan niin kauas kuin '
+            + 'saari riittää.',
+          lahde: 'Synek125, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+    },
+  ],
+  NGA: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Nigerian alueella oli suuria valtioita kauan ennen '
+          + 'siirtomaarajoja — ja jokaisessa oma tapansa pitää '
+          + 'vallanpitäjä kurissa.',
+      nostot: [
+        {
+          otsikko: 'Kuningatar, joka jätti jälkeensä muurit',
+          aika: '1533–1610',
+          tiedosto: 'Zaria old wall.jpg',
+          teksti: 'Amina syntyi 1500-luvun puolivälissä Zazzaun '
+              + 'kaupunkivaltioon, nykyiseen Zariaan. Kuusitoistavuotiaana '
+              + 'hänet nimettiin kruununperijäksi, ja veljensä ratsuväessä '
+              + 'hänestä tuli hausalaisten ylistyslaulujen mukaan '
+              + '"Nikatun tytär, nainen joka pystyi samaan kuin mies". '
+              + 'Perimätiedon mukaan hän nousi valtaan 1576 ja aloitti '
+              + 'kolmenkymmenenneljän vuoden sotaretket kahdenkymmenentuhannen '
+              + 'jalkamiehen ja tuhannen ratsumiehen armeijalla. Valloitetut '
+              + 'kaupungit hän ympäröi savivalleilla, joita kutsutaan yhä '
+              + 'nimellä ganuwar Amina. Hallitsijaluetteloissa hänen nimeään '
+              + 'ei silti ole, ja osa perimätiedosta pitää häntä prinsessana.',
+          selite: 'Zarian vanha kaupunginmuuri on savea, ja sen jäänteitä on '
+            + 'yhä pystyssä keskellä kasvavaa kaupunkia.',
+          lahde: 'Anasskoko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Tyhjä kalebassi kuninkaan eteen',
+          aika: '1600–1800-luku',
+          // Kuvaton (Opus 6.9.2026): Commonsista ei löydy Oyon
+          // valtakunnan ajalta kuvaa, joka kestäisi lähdetarkistuksen —
+          // hakusanat "Oyo Empire", "Alaafin", "Yoruba horseman".
+          teksti: 'Oyon valtakunta oli 1600- ja 1700-luvulla Länsi-Afrikan '
+              + 'mahtavimpia valtioita, ja sen voima oli ratsuväessä: '
+              + 'hevoset ostettiin pohjoisesta, ja retkikunnat ulottuivat '
+              + 'sadan kilometrin päähän rannikolle asti. Kuningas eli '
+              + 'alaafin ei kuitenkaan ollut yksinvaltias. Seitsemän '
+              + 'ylimmän päällikön neuvosto Oyo Mesi valitsi hänet, ja jos '
+              + 'neuvosto hylkäsi hänet, sen johtaja basorun toi hänelle '
+              + 'tyhjän kalebassin tai papukaijanmunia. Se tarkoitti, ettei '
+              + 'kansa, maailma eivätkä jumalat enää halunneet häntä — ja '
+              + 'perinne odotti kuninkaan silloin väistyvän omin käsin.',
+          selite: 'Oyon hallitsijaa valvoi kaksi neuvostoa: päälliköiden Oyo '
+            + 'Mesi ja maankultin Ogboni, joka puhui tavallisen väen '
+            + 'puolesta.',
+        },
+        {
+          otsikko: 'Opettajat, jotka lähetettiin kylästä kylään',
+          aika: '1793–1864',
+          // Kuvaton (Opus 6.9.2026): Nana Asma'un käsikirjoituksista tai
+          // Sokoton naisopettajista ei ole Commonsissa vapaata kuvaa
+          // (haut "Ajami manuscript Hausa", "Nana Asma'u").
+          teksti: 'Nana Asmaʼu oli Sokoton kalifaatin perustajan tytär ja '
+              + 'yksi 1800-luvun Länsi-Afrikan oppineimmista ihmisistä. Hän '
+              + 'kirjoitti yli kuusikymmentä säilynyttä teosta neljälläkymmenellä '
+              + 'vuodella ja käytti neljää kieltä: arabiaa, fulaa, hausaa ja '
+              + 'tuaregien tamashekia — kaikkia arabialaisin kirjaimin, jotta '
+              + 'ne aukeaisivat muillekin kuin arabiaa lukevalle eliitille. '
+              + 'Vuodesta 1830 hän kokosi joukon naisopettajia, jajeja, jotka '
+              + 'kiersivät kalifaattia opettamassa naisia näiden omissa '
+              + 'kodeissa. Jokainen jaji sai virkamerkiksi malfa-hatun ja '
+              + 'punaisen turbaanin, ja heidän oppilaitaan kutsuttiin '
+              + 'nimellä ʼyan taru, yhteen kokoontuvat.',
+          selite: 'Asmaʼun runot opetettiin ulkoa: mitta ja riimi olivat '
+              + 'muistin apuvälineitä, kun kirjoja oli vähän.',
+        },
+        {
+          otsikko: 'Laskettiinko sinun leskiäitisi?',
+          aika: '1929',
+          tiedosto: 'The Mock Grave of the 1929 Women Riot.jpg',
+          teksti: 'Marraskuussa 1929 tuhannet igbonaiset kävelivät Olokon '
+              + 'kylään protestoimaan siirtomaahallinnon nimittämiä '
+              + 'warrant chief -päälliköitä vastaan. Kipinä syttyi, kun '
+              + 'laskija käski Nwanyeruwa-nimistä naista laskemaan '
+              + 'vuohensa, lampaansa ja väkensä. Nainen ymmärsi sen '
+              + 'veroluetteloksi ja vastasi: "Laskettiinko sinun '
+              + 'leskiäitisi?" Igboperinteessä naiset eivät maksaneet '
+              + 'veroa. Protestin muoto oli vanha tapa nimeltä miehen '
+              + 'päällä istuminen: joukko naisia asettui päällikön talon '
+              + 'eteen laulamaan, kunnes tämä erosi. Kuuden kansan naiset '
+              + 'osallistuivat, ja 1930 koko warrant chief -järjestelmä '
+              + 'purettiin ja naisia nimitettiin paikallisiin '
+              + 'tuomioistuimiin.',
+          selite: 'Vuoden 1929 naisten sodan muistomerkki. Tapahtumia '
+            + 'kutsuttiin siirtomaa-arkistoissa mellakaksi, mutta igboksi '
+            + 'ne ovat Ogu Umunwanyi, naisten sota.',
+          lahde: 'Dappa Solomon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Nigerialaisessa keittiössä riidellään mielellään siitä, '
+          + 'kenen riisi on parasta — ja syödään käsin, koska lusikka vie '
+          + 'puolet tunnusta pois.',
+      nostot: [
+        {
+          otsikko: 'Riisi, josta käydään sotaa netissä',
+          tiedosto: 'Jollof (Jollof- Rice).jpg',
+          teksti: 'Jollof on yhden padan riisiruoka: pitkäjyväinen riisi '
+              + 'kypsennetään tomaatti-, sipuli- ja chilikastikkeessa, jolloin '
+              + 'jyvät imevät värin ja maun. Nimi tulee Jolofin '
+              + 'valtakunnasta nykyisen Senegalin alueelta, ja ruoan '
+              + 'esimuoto on senegalilainen ceebu jën. Nigerian ja Ghanan '
+              + 'välinen kiista siitä, kumman versio on parempi, kasvoi '
+              + '2010-luvulla ilmiöksi nimeltä jollof wars: siihen kuuluu '
+              + 'kokkikilpailuja, someryöpytystä ja kappaleita, kuten '
+              + 'Sister Deborahin Ghana Jollof vuodelta 2016. Riita on '
+              + 'leikkimielinen, mutta kukaan ei myönnä häviötä.',
+          selite: 'Nigerialaisen jollofin tunnusmerkki on savuinen pohja: '
+            + 'riisin annetaan tarttua padan pohjaan aivan lopuksi.',
+          lahde: 'DromoTetteh, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vartaat, joissa mauste on maapähkinää',
+          tiedosto: 'Suya preparation for grilling 1.jpg',
+          teksti: 'Suya on hausalainen katuruoka, alun perin nimeltään '
+              + 'tsire. Ohuiksi viipaloitu naudan-, lampaan- tai '
+              + 'vuohenliha pujotetaan puuvartaisiin ja marinoidaan '
+              + 'yaji-mausteseoksessa, jossa on chiliä, inkivääriä, '
+              + 'kuivattua sipulia ja kuli-kulia eli maapähkinäpuristetta. '
+              + 'Kahta samanlaista yajia ei ole: jokainen myyjä sekoittaa '
+              + 'omansa. Vartaat kastellaan öljyllä ja grillataan hiilillä, '
+              + 'ja valmis liha leikataan suupaloiksi, joiden päälle '
+              + 'ripotellaan lisää mausteseosta sekä sipulia ja tomaattia. '
+              + 'Myyjää kutsutaan nimellä mai suya, suyan omistaja.',
+          selite: 'Yaji-mausteseos odottaa vartaiden vieressä: valmis liha '
+            + 'kierrätetään siinä vielä kerran grillauksen jälkeen.',
+          lahde: 'Kambai Akau, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Keitto, jonka nimi tarkoittaa jauhamista',
+          tiedosto: 'Pot of Egusi soup.jpg',
+          teksti: 'Egusi on kurpitsakasvien — melonin, kurpitsan ja '
+              + 'pullokurpitsan — valkoisia siemeniä, jotka kuivataan ja '
+              + 'jauhetaan. Jorubankielinen nimi kertoo valmistustavan: e '
+              + 'tarkoittaa suunnan, gun jauhamista ja si avaamista, eli '
+              + '"jauhaa auki". Jauhettu siemen paksuntaa keiton ja tuo '
+              + 'siihen runsaasti valkuaista; sekaan tulee palmuöljyä, '
+              + 'lihaa tai kalaa ja iso kasa vihreitä lehtiä, useimmiten '
+              + 'karvaslehteä. Egusi-keittoa syödään ympäri Länsi- ja '
+              + 'Keski-Afrikkaa, ja siemeniä kasvatetaan Nigerian lisäksi '
+              + 'muun muassa Beninissä, Ghanassa ja Kamerunissa.',
+          selite: 'Keitto sakenee jauhetuista siemenistä, ei jauhoista — '
+            + 'siksi pinta näyttää rakeiselta.',
+          lahde: 'Bukky658, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Nyrkillä survottu jamssi',
+          tiedosto: 'POUNDED YAM & VEGETABLE SOUP. A native delicacy of the Yoruba tribe in Nigeria, West Africa..jpg',
+          teksti: 'Iyán eli survottu jamssi tehdään keittämällä valkoista '
+              + 'jamssia ja survomalla se huhmareessa sitkeäksi taikinaksi. '
+              + 'Se kuuluu ruokalajien ryhmään, jota Nigeriassa kutsutaan '
+              + 'nimellä swallow: pala nipistetään sormin, kastetaan '
+              + 'keittoon ja niellään pureskelematta. Iyán on jorubaksi, '
+              + 'hausaksi sakwara ja igboksi utara-ji, ja se tarjotaan '
+              + 'egusin, okran, ewedun tai palmupähkinäkeiton kanssa. '
+              + 'Ile-Ifessä tehdään omaa versiota nimeltä iyan gbere, jossa '
+              + 'jamssitaikinaan sekoitetaan keitettyä afrikanleipäpuun '
+              + 'hedelmää.',
+          selite: 'Survottu jamssi tarjotaan valkoisena palana keiton '
+            + 'vieressä, ja ateria syödään sormin.',
+          lahde: 'Ayoife Oni, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä egusi-keiton paksuus tulee?',
+        vaihtoehdot: [
+          'Vehnäjauhosta',
+          'Maniokkitärkkelyksestä',
+          'Jauhetuista kurpitsakasvien siemenistä',
+          'Kookosmaidosta',
+        ],
+        oikea: 2,
+        fakta: 'Egusi tarkoittaa jorubaksi jauhamista: kuivatut siemenet '
+            + 'jauhetaan ja ne sakeuttavat keiton.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Lagosin musiikki lähti maailmalle kahdesti: ensin '
+          + 'kitaroiden ja puhuvien rumpujen jùjúna, sitten torvien ja '
+          + 'funkin afrobeatina.',
+      nostot: [
+        {
+          otsikko: 'Rumpu, joka puhuu',
+          tiedosto: 'Iya Ilu Dundun.png',
+          teksti: 'Puhuva rumpu on tiimalasin muotoinen, ja sen kahta '
+              + 'kalvoa yhdistävät nahkanarut. Kun soittaja puristaa naruja '
+              + 'kainalonsa alla, kalvon kireys muuttuu ja sävelkorkeus '
+              + 'nousee tai laskee. Koska joruba ja monet muut Länsi-Afrikan '
+              + 'kielet ovat sävelkieliä, taitava soittaja voi jäljitellä '
+              + 'kokonaisia lauseita. Jorubien dùndún-perheessä on viisi '
+              + 'rumputyyppiä, ja asantien atumpanilla ja fontomfromilla '
+              + 'viesti on kulkenut kolmenkymmenen kilometrin päähän, missä '
+              + 'seuraava rumpali on jatkanut sitä eteenpäin.',
+          selite: 'Ìyá ìlù, rumpujen äiti, on dùndún-yhtyeen suurin rumpu; '
+            + 'kylkeen kiinnitetyt tiukut soivat lyönnin mukana.',
+          lahde: 'Mplanetech, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kolme miestä, banjo ja kurpitsakalistin',
+          aika: '1932',
+          tiedosto: 'Shekere-min.jpg',
+          teksti: 'Jùjú syntyi Lagosissa 1920-luvulla ja sai tunnistettavan '
+              + 'muotonsa 1932, kun Tunde King alkoi levyttää sitä. '
+              + 'Kokoonpano oli kolmikko: laulava johtaja banjoineen, '
+              + 'tamburiininsoittaja ja sèkèrè eli helmiverkolla päällystetty '
+              + 'kurpitsakalistin. Tyylin juuret ovat palmuviinibaarien '
+              + 'kitaramusiikissa ja kristittyjen jorubayhteisöjen '
+              + 'asikò-rummutuksessa. Laulut olivat ylistystä ja tarinoita, '
+              + 'ja esitykset saattoivat jatkua tunteja tauotta. Puhuva '
+              + 'rumpu liitettiin kokoonpanoon vasta 1948, ja sähkökitarat '
+              + 'ja vahvistimet kasvattivat yhtyeet myöhemmin kymmenpäisiksi.',
+          selite: 'Sèkèrè on kuivattu kurpitsa, jonka ympärille on punottu '
+            + 'kaurisimpukkaverkko; ravistus antaa jùjúlle sen sihisevän '
+            + 'pohjapulssin.',
+          lahde: 'Comradeayobami, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Ensimmäinen Grammy-ehdokkuus Nigeriaan',
+          aika: '1982',
+          // Kuvaton (Opus 6.9.2026): King Sunny Adésta on Commonsissa vain
+          // yksi kuva, ja se on epätarkka valokuva piirroksesta.
+          teksti: 'Sunday Adeniyi Adegeye eli King Sunny Adé syntyi 1946 '
+              + 'Osogbossa jorubalaiseen ruhtinassukuun ja karkasi '
+              + 'koulusta Lagosiin muusikoksi. Ensimmäinen oma yhtye '
+              + 'perustettiin 1967, ja 1970-luvulla hän oli jo Nigerian '
+              + 'suosituimpia jùjú-soittajia ja perusti oman levy-yhtiön. '
+              + 'Vuonna 1982 Island Records julkaisi hänen levynsä Juju '
+              + 'Music, ja seuraavan vuoden Synchro System toi hänelle '
+              + 'ensimmäisen nigerialaiselle myönnetyn Grammy-ehdokkuuden. '
+              + 'Adén yhtyeessä soi kymmenkunta soittajaa, joukossa pedal '
+              + 'steel -kitara ja useita puhuvia rumpuja.',
+          selite: 'Jùjú levisi maailmalle juuri Adén yhtyeen kautta: '
+              + 'sähköistetty jorubamusiikki löysi 1980-luvulla '
+              + 'kansainvälisen yleisön.',
+        },
+        {
+          otsikko: 'Afrobeat syntyi Los Angelesin reissulla',
+          aika: '1938–1997',
+          tiedosto: 'Fela Kuti Eritage house.jpg',
+          teksti: 'Fela Kuti syntyi Abeokutassa opettajaperheeseen ja lähti '
+              + '1958 Lontooseen opiskelemaan trumpettia. Palattuaan hän '
+              + 'soitti jazzin ja highlifen sekoitusta, kunnes vietti 1969 '
+              + 'kymmenen kuukautta Los Angelesissa ja tutustui '
+              + 'mustien kansalaisoikeusliikkeeseen. Sen jälkeen syntyi '
+              + 'afrobeat: jorubarytmit, funk, jazz ja pitkät, jopa '
+              + 'parikymmenminuuttiset kappaleet, joissa rumpali Tony Allen '
+              + 'piti koossa kymmenien soittajien Africa 70 -orkesteria. '
+              + 'Kuti arvosteli lauluissaan sotilashallintoa suoraan ja '
+              + 'joutui siitä toistuvasti vaikeuksiin. Rock and Roll Hall '
+              + 'of Fame otti hänet joukkoonsa 2026.',
+          selite: 'Abeokutan Kuti Heritage Museum toimii talossa, jossa '
+            + 'asuivat Fela Kutin vanhemmat.',
+          lahde: 'Olalekan Israel Oduntan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Fela Kuti',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Nigerian taide osaa sekä valaa metallia sadan vuoden '
+          + 'tarkkuudella että värjätä kankaan tarinaksi.',
+      nostot: [
+        {
+          otsikko: 'Talonrakentajat löysivät kahdeksantoista päätä',
+          aika: '1938',
+          tiedosto: 'Africa Ife Head 2 Kimbell.jpg',
+          teksti: 'Ilé-Ifèn taiteilijat valoivat 1200- ja 1400-luvun välillä '
+              + 'kuparivaluspäitä, jotka ovat niin luonnonmukaisia, että ne '
+              + 'romuttivat eurooppalaisen käsityksen afrikkalaisesta '
+              + 'taiteesta. Vuonna 1938 talonrakennustyöt Wunmonijen '
+              + 'pihapiirissä paljastivat vahingossa kahdeksantoista '
+              + 'valettua päätä. Ne on tehty vahavalutekniikalla, ne ovat '
+              + 'noin kolme neljäsosaa luonnollisesta koosta, ja kasvot on '
+              + 'peitetty ohuin viiruin. Löytö sai hallinnon säätämään '
+              + 'vientirajoitukset muinaisesineille, mutta yksi pää ehti jo '
+              + 'ulos maasta ja on nykyään British Museumissa.',
+          selite: 'Ifessä tehtiin myös terrakottapäitä samalla '
+            + 'luonnonmukaisella tyylillä; tämä on Kimbellin taidemuseossa '
+            + 'Yhdysvalloissa.',
+          lahde: 'User:FA2010, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Ovi, joka lähti Lontooseen',
+          aika: '1900-luvun alku',
+          tiedosto: 'Detail, Palace door and lintel from Ikere, British Museum 01.jpg',
+          teksti: 'Olowe of Ise oli jorubalainen puunveistäjä, jonka työt '
+              + 'tunnistaa syvästä kohokuvioinnista: hahmot irtoavat '
+              + 'pinnasta melkein kokonaan, ja niiden mittasuhteet on '
+              + 'venytetty kertomaan asemasta. Ikeren kuninkaan palatsin '
+              + 'ovi ja kamana ovat hänen tunnetuin teoksensa. Ne päätyivät '
+              + 'Britannian museoihin 1920-luvulla, kun Nigerian '
+              + 'veistotaidetta esiteltiin Lontoon imperiuminäyttelyssä. '
+              + 'Veistoksissa kerrotaan hallitsijan vastaanotosta: '
+              + 'kuningatar, saattueen kantajat ja vieraat ovat samassa '
+              + 'kuvassa eri kokoisina.',
+          selite: 'Ikeren palatsin oven yksityiskohta British Museumissa. '
+            + 'Alkuperäiset värit näkyvät yhä puun uurteissa.',
+          lahde: '14GTR, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kuningatar istui mallina nigerialaiselle',
+          aika: '1917–1994',
+          // Kuvaton (Opus 6.9.2026): Ben Enwonwun teokset ovat yhä
+          // tekijänoikeuden suojassa, eikä Commonsin näyttelykuvia voi
+          // siksi käyttää.
+          teksti: 'Ben Enwonwu syntyi Onitshassa perinteisen igbolaisen '
+              + 'veistäjän poikana ja peri isänsä työkalut viisivuotiaana. '
+              + 'Hän opiskeli Lontoon Slade School of Fine Artissa ja tuli '
+              + 'ensimmäisenä afrikkalaisena taiteilijana laajalti '
+              + 'tunnetuksi lännessä. Vuoden 1956 vierailullaan kuningatar '
+              + 'Elisabet II tilasi häneltä muotokuvaveistoksen ja istui '
+              + 'sitä varten mallina. Enwonwun tunnetuin veistos Anyanwu, '
+              + 'auringon silmä, on Lagosin kansallismuseon seinällä. '
+              + 'Hänen kadonnut maalauksensa Tutu löytyi 2017 '
+              + 'lontoolaisesta kerrostaloasunnosta ja myytiin '
+              + 'huutokaupassa 1,2 miljoonalla punnalla.',
+          selite: 'Enwonwu kuvitti myös Amos Tutuolan romaanin The Brave '
+              + 'African Huntress vuonna 1958.',
+        },
+        {
+          otsikko: 'Sitoa ja liottaa',
+          tiedosto: 'Stack of Adire , a local Fabric from Abeoukuta.JPG',
+          teksti: 'Adire on jorubanaisten värjäämä kangas, ja nimi kertoo '
+              + 'menetelmän: adi tarkoittaa sitomista ja re liottamista. '
+              + 'Kuvio syntyy suojaamalla osa kankaasta ennen indigokylpyä '
+              + 'joko sitomalla, ompelemalla tai sivelemällä maniokkitahnaa '
+              + 'kuvioksi. Vanhin tunnettu länsiafrikkalainen indigotyö on '
+              + '1000-luvulta Malin Dogonmaalta. Adiresta tuli 1900-luvun '
+              + 'alussa Abeokutan ja Ibadanin naisten iso elinkeino, kun '
+              + 'eurooppalaista puuvillakangasta alkoi tulla halvalla '
+              + 'markkinoille. Kuviot kulkevat suvussa äidiltä tyttärelle.',
+          selite: 'Abeokutaa pidetään adiren pääkaupunkina; torilla kankaat '
+            + 'myydään pinoina, joissa jokaisella kuviolla on nimi.',
+          lahde: 'Olaniyan Olushola, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Nigerialainen kirja on kulkenut kahta reittiä: Lontoon '
+          + 'kustantamojen kautta maailmalle ja Onitshan torin '
+          + 'painokoneista suoraan lukijalle.',
+      nostot: [
+        {
+          otsikko: 'Palmuviinin juoja ja kuollut tiristäjä',
+          aika: '1952',
+          // Kuvaton (Opus 6.9.2026): Amos Tutuolasta ei ole Commonsissa
+          // vapaata kuvaa, ja kirjan kannet ovat tekijänoikeuden alaisia.
+          teksti: 'Amos Tutuola syntyi 1920 kaakaoviljelijän perheeseen ja '
+              + 'kävi koulua kuusi vuotta. Sepän ja lähetin töiden ohessa '
+              + 'hän kirjoitti tarinan miehestä, joka lähtee kuolleiden '
+              + 'kaupunkiin etsimään palmuviinin tiristäjäänsä. Faber and '
+              + 'Faber julkaisi The Palm-Wine Drinkardin Lontoossa 1952, ja '
+              + 'runoilija Dylan Thomas ylisti sitä sanoilla "lyhyt, '
+              + 'tungokseen asti täysi, kaamea ja lumoava". Nigeriassa kirja '
+              + 'sai kovaa kritiikkiä: Tutuolan englanti ei noudattanut '
+              + 'koulukielioppia. Arvostelu on sittemmin vaimennut, ja kirja '
+              + 'on käännetty kymmenille kielille.',
+          selite: 'Tutuola ammensi jorubien suullisesta perinteestä ja '
+              + 'kirjailija D. O. Fagunwan jorubankielisistä romaaneista.',
+        },
+        {
+          otsikko: 'Käsikirjoitus, joka makasi nurkassa',
+          aika: '1958',
+          tiedosto: 'Chinua Achebe - Buffalo 25Sep2008 crop.jpg',
+          teksti: 'Chinua Achebe työskenteli Nigerian yleisradiossa, kun hän '
+              + 'lähetti 1957 ainoan käsinkirjoitetun kappaleensa '
+              + 'romaanistaan lontoolaiseen konekirjoituspalveluun ja '
+              + 'kaksikymmentäkaksi punnan maksun. Vastausta ei kuulunut. '
+              + 'Achebe pyysi esihenkilöään Angela Beattiea poikkeamaan '
+              + 'yrityksessä Lontoon-matkallaan, ja tämä löysi '
+              + 'käsikirjoituksen makaamasta toimiston nurkassa. Heinemann '
+              + 'painoi Things Fall Apartista 1958 kaksituhatta kovakantista '
+              + 'kappaletta. Romaania on sittemmin myyty yli kaksikymmentä '
+              + 'miljoonaa kappaletta ja käännetty 57 kielelle.',
+          selite: 'Achebe puhumassa Buffalossa 2008. Ilman Beattien käyntiä '
+            + 'kirjaa ei ehkä olisi: "olisin lannistunut niin, että olisin '
+            + 'luultavasti luopunut kokonaan", hän sanoi myöhemmin.',
+          lahde: 'Stuart C. Shapiro, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Chinua Achebe',
+        },
+        {
+          otsikko: 'Nobel-puhe, joka omistettiin vangille',
+          aika: '1986',
+          tiedosto: 'Wole Soyinka in 2018-2.jpg',
+          teksti: 'Wole Soyinka on kirjoittanut kolme romaania, '
+              + 'kaksikymmentäviisi näytelmää, seitsemän runokokoelmaa ja '
+              + 'viisi muistelmateosta. Vuonna 1986 hänelle myönnettiin '
+              + 'Nobelin kirjallisuuspalkinto perusteluilla "laajasta '
+              + 'kulttuurinäkymästä ja runollisista sävyistä, joilla hän '
+              + 'muovaa olemassaolon draamaa" — ensimmäisenä afrikkalaisena '
+              + 'kirjailijana. Kiitospuheensa This Past Must Address Its '
+              + 'Present hän omisti tuolloin vielä vankilassa istuneelle '
+              + 'Nelson Mandelalle ja käytti sen Etelä-Afrikan '
+              + 'rotuerottelun arvosteluun.',
+          selite: 'Soyinka Tukholmassa 2018. Hän kirjoittaa jorubalaisesta '
+            + 'perinteestä ja käyttää sitä myös näytelmiensä rakenteena.',
+          lahde: 'Frankie Fouganthin, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Wole Soyinka',
+        },
+        {
+          otsikko: 'Torin painokoneet keksivät pokkarin',
+          aika: '1950-luku',
+          // Kuvaton (Opus 6.9.2026): Onitshan vihkosista ei ole Commonsissa
+          // vapaita kuvia; kannet ovat yhä tekijänoikeuden alaisia.
+          teksti: 'Itä-Nigerian Onitshassa torikauppiaiden painokoneet '
+              + 'seisoivat hiljaisina kuukausina tyhjinä. 1950-luvun alussa '
+              + 'painajat alkoivat täyttää taukoja omilla vihkosillaan: '
+              + 'rakkaustarinoilla, matkakertomuksilla, näytelmillä ja '
+              + 'käytännön oppailla. Läpimurto tuli 1956, kun Ogali A. '
+              + 'Ogalin näytelmä Veronica My Daughter myi kaiken. Sen '
+              + 'jälkeen syntyi satoja vihkosia, joista suuri osa oli '
+              + 'kirjoitettu pidgininglanniksi. Tutkijoille ne ovat nyt '
+              + 'ainutlaatuinen ikkuna aikansa arkeen, ja lukijalle iloa '
+              + 'tuottaa niiden vauhdikas, sääntöjä kaihtava kieli.',
+          selite: 'Onitshan markkinakirjallisuus oli halpaa, nopeaa ja '
+              + 'paikallista — kirjoja myytiin samalla torilla, jolla ne '
+              + 'painettiin.',
+        },
+      ],
+    },
+  ],
+  GHA: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ghana otti nimensä valtakunnalta, joka ei koskaan '
+          + 'sijainnut sen alueella — ja teki nimestä koko mantereen '
+          + 'tunnuksen.',
+      nostot: [
+        {
+          otsikko: 'Nimi lainattiin tuhannen kilometrin päästä',
+          aika: '800–1200-luku',
+          // Kuvaton (Opus 6.9.2026): muinaisen Ghanan valtakunnan
+          // alueelta ei löytynyt Commonsista lähdetarkistuksen kestävää
+          // kuvaa (haku "Ghana Empire", "Koumbi Saleh").
+          teksti: 'Muinainen Ghanan valtakunta sijaitsi nykyisen '
+              + 'Mauritanian kaakkoisosassa ja Länsi-Malissa, yli tuhannen '
+              + 'kilometrin päässä nykyisestä Ghanasta. Sen soninkenkielinen '
+              + 'nimi oli Wagadu, ja sana ghana oli hallitsijan arvonimi, '
+              + 'soturi tai sotapäällikkö; toinen arvonimi kaya maghan '
+              + 'tarkoitti kullan kuningasta. Ensimmäisen tunnetun '
+              + 'maininnan kirjoitti tähtitieteilijä al-Khwarizmi vuonna '
+              + '830, ja 1000-luvulla cordobalainen al-Bakri kuvasi maata '
+              + 'tarkemmin. Valtakunta päätyi 1200-luvulla Malin vasalliksi. '
+              + 'Nimen otti käyttöön Kultarannikko itsenäistyessään 1957.',
+          selite: 'Nimenvalinta oli tietoinen kannanotto: uusi valtio '
+              + 'kytkettiin Afrikan omaan menneisyyteen eikä '
+              + 'siirtomaakauteen.',
+        },
+        {
+          otsikko: 'Palatsi, jossa oli Timesin numero vuodelta 1843',
+          aika: '1817–1925',
+          tiedosto: 'Manhyia Palace – Panorama.jpg',
+          teksti: 'Englantilainen Thomas Edward Bowdich vieraili Kumasissa '
+              + '1817 ja kuvasi asantien kuninkaanpalatsin suunnattomana '
+              + 'rakennuksena, jonka pihoja kiersivät veistoksin '
+              + 'koristellut julkisivut ja kullalla päällystetyt '
+              + 'ikkunankehykset. Winwood Reade näki saman palatsin 1874 ja '
+              + 'luetteli sen huoneista kirjoja monilla kielillä, '
+              + 'böömiläistä lasia, kelloja, hopeaa, persialaisia mattoja, '
+              + 'miekan tekstillä "Kuningatar Viktorialta asantien '
+              + 'kuninkaalle" ja Timesin numeron 17. lokakuuta 1843. '
+              + 'Britit polttivat palatsin samana vuonna. Nykyinen Manhyian '
+              + 'palatsi rakennettiin 1925 kuningas Prempeh I:n paluuta '
+              + 'varten.',
+          selite: 'Manhyian palatsi Kumasissa on nykyään museo, ja asantien '
+            + 'kuningas asuu sen viereisessä uudemmassa palatsissa.',
+          lahde: 'jbdodane, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Seppä toi taskussaan kaakaon',
+          aika: '1876',
+          tiedosto: 'Tetteh Quarshie Cocao Farm - One of the original trees, planted 1879.JPG',
+          teksti: 'Tetteh Quarshie oli gadangme-suvun poika, joka koulutettiin '
+              + 'Akropongin lähetysaseman pajassa sepäksi. Vuonna 1870 hän '
+              + 'lähti Espanjan siirtomaahan Fernando Póon saarelle ja '
+              + 'palasi kuutisen vuotta myöhemmin mukanaan kaakaonpapuja. '
+              + 'Niistä kasvoi Mampongin istutus ja lopulta koko maan '
+              + 'tärkein vientikasvi. Kuvernööri Gordon Guggisberg tutkitti '
+              + '1920-luvulla kilpailevat väitteet: kaakaota olivat '
+              + 'kokeilleet myös Baselin lähetyssaarnaajat ja erään '
+              + 'kuvernöörin poika ilmoitti kunnian isälleen. Selvitys '
+              + 'päätyi Quarshien kannalle. Hän kuoli jouluaattona 1892.',
+          selite: 'Yksi Tetteh Quarshien alkuperäisistä puista kasvaa yhä '
+            + 'Mampongissa, ja kyltti kertoo istutusvuodeksi 1879.',
+          lahde: 'Obruni, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kaakao',
+        },
+        {
+          otsikko: 'Musta tähti nousi keskiyöllä',
+          aika: '6.3.1957',
+          tiedosto: 'Black Star Gate located in Accra.jpg',
+          teksti: 'Kultarannikosta tuli 6. maaliskuuta 1957 ensimmäinen '
+              + 'itsenäistynyt siirtomaa Saharan eteläpuolisessa Afrikassa. '
+              + 'Accraan saapui yli sata toimittajaa ja valokuvaajaa, ja kun '
+              + 'viides päivä vaihtui kuudenneksi, Kwame Nkrumah julisti '
+              + 'kymmenilletuhansille: "Ghana on vapaa ikuisesti." Uuden '
+              + 'maan lipun suunnitteli opettaja Theodosia Okoh: punainen, '
+              + 'keltainen ja vihreä sekä keskellä musta tähti, joka '
+              + 'tarkoittaa afrikkalaista vapautta. Nkrumah avasi Accraan '
+              + 'myös Mustan tähden aukion. Maan nimeksi valittiin '
+              + 'keskiaikaisen valtakunnan nimi.',
+          selite: 'Mustan tähden portti Accrassa. Kaarteen otsassa lukee '
+            + 'AD 1957 ja alempana Freedom and Justice.',
+          lahde: 'Uprising Man, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kwame Nkrumah',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Ghanalainen ateria rakentuu tahmean palan ja tulisen '
+          + 'kastikkeen ympärille, ja aamiaisen saa banaaninlehteen '
+          + 'käärittynä.',
+      nostot: [
+        {
+          otsikko: 'Riisi, jonka durranlehti värjää',
+          tiedosto: 'Waakye and dandelion leaves.jpg',
+          teksti: 'Waakye on riisin ja papujen yhteiskeitos, jota syödään '
+              + 'aamiaiseksi ja lounaaksi. Papuina ovat mustasilmäpavut, ja '
+              + 'kattilaan pannaan mukaan kuivattuja durran lehtiä ja '
+              + 'kalkkikivijauhetta, kaunia. Lehdet värjäävät riisin '
+              + 'punaruskeaksi ja antavat sille oman makunsa; ne poistetaan '
+              + 'ennen tarjoilua. Nimi tulee dagbanin kielestä ja tarkoittaa '
+              + 'tiettyä papua. Ruoan uskotaan syntyneen Pohjois-Ghanan '
+              + 'mole-dagbon-kansojen keskuudessa. Katukeittiössä waakye '
+              + 'kääritään banaaninlehteen ja sen kanssa saa kananmunaa, '
+              + 'garria, salaattia, spagettia ja shitoa.',
+          selite: 'Waakye tunnistaa väristä: punaruskean tekevät durran '
+            + 'lehdet, eivät mausteet.',
+          lahde: 'Kwameghana, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Hapatettua maissia lehden sisällä',
+          tiedosto: 'Kenkey and Shito (Chili).jpg',
+          teksti: 'Kenkey eli komi on ga-kansan ruokaa: maissitaikina '
+              + 'hapatetaan, kääritään maissinlehtiin ja keitetään pitkään '
+              + 'kiinteiksi palloiksi. Fantien versio dokono kääritään '
+              + 'banaaninlehteen, joka antaa toisen värin ja maun. Banku '
+              + 'tehdään samasta hapatetusta maissitaikinasta, mutta siihen '
+              + 'sekoitetaan maniokkitaikinaa ja se hämmennetään kuumassa '
+              + 'vedessä pehmeäksi. Ewekielellä maissi-maniokkiversio on '
+              + 'agbelimorkple ja pelkkä maissi kutornu-kple. Molempia '
+              + 'syödään sormin kastikkeen, keiton tai grillatun tilapian '
+              + 'kanssa.',
+          selite: 'Kenkeyn pallo ja kulhollinen shitoa: hapatettu maissi on '
+            + 'mieto, joten kastike hoitaa maun.',
+          lahde: 'Flixtey, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Musta pippuri, joka on oikeasti kalaa',
+          tiedosto: 'Ghanaian shito.jpg',
+          teksti: 'Shito tarkoittaa gan kielellä mustapippuria, mutta '
+              + 'kyseessä on paksu kastike: kuivattua kalaa ja katkarapua, '
+              + 'inkivääriä, valkosipulia, sipulia ja chiliä jauhetaan '
+              + 'yhteen ja haudutetaan öljyssä runsas tunti, kunnes seos on '
+              + 'lähes mustaa. Jokaisella seudulla ja kylällä on oma '
+              + 'sekoituksensa, mutta alkuperäinen resepti on ga-kansan. '
+              + 'Ghanassa shitoa käytetään kuin ketsuppia: sen kanssa '
+              + 'syödään kenkeytä, riisiä, garria, waakyeta ja bankua, ja '
+              + 'sitä levitetään myös leivälle. Kiinalaisravintoloissa se on '
+              + 'korvannut chiliöljyn.',
+          selite: 'Shito kypsyy öljyssä tunnin verran; valmis kastike '
+            + 'säilyy purkissa pitkään.',
+          lahde: 'Umuhiera, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Banaani, joka paistetaan mausteissa',
+          tiedosto: 'Kelewele, a Ghanaian snack.jpg',
+          teksti: 'Kelewele on kypsästä plantaanibanaanista tehty '
+              + 'iltapala. Banaani leikataan paloiksi, maustetaan '
+              + 'inkiväärillä, chilillä ja mausteseoksella ja paistetaan '
+              + 'öljyssä, kunnes pinta on tumma ja karamellisoitunut. Sitä '
+              + 'myydään illalla kadunkulmissa paperitötteröstä, ja se '
+              + 'tarjotaan usein red red -papumuhennoksen tai kalakeiton '
+              + 'lisukkeena. Paistettu banaani on kotonaan kaikkialla, '
+              + 'missä plantaania kasvaa: Nigeriassa sama pala on dodo, '
+              + 'Indonesiassa pisang goreng ja Karibialla se paistetaan '
+              + 'raakana ja litistetään.',
+          selite: 'Mausteet menevät banaanin pintaan ennen paistoa, ja '
+            + 'sokeri tummentaa palat uunissa mustanruskeiksi.',
+          lahde: 'Maame1Yaa, Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä antaa waakye-riisille sen punaruskean värin?',
+        vaihtoehdot: [
+          'Kuivatut durran lehdet',
+          'Tomaattisose',
+          'Palmuöljy',
+          'Chilijauhe',
+        ],
+        oikea: 0,
+        fakta: 'Durran lehtiä keitetään riisin ja papujen mukana ja ne '
+            + 'poistetaan ennen tarjoilua.',
+      },
+    },
+    {
+      id: 'kasityo',
+      nimi: 'Käsityö',
+      johdanto: 'Ghanassa esine kertoo aina jotain: kankaassa on nimi, '
+          + 'punnuksessa sananlasku ja arkussa koko elämäntyö.',
+      nostot: [
+        {
+          otsikko: 'Kangas, jonka hämähäkki keksi',
+          tiedosto: 'Kente patterns, Tafi, Volta region.jpg',
+          teksti: 'Kente kudotaan kapeina kaistaleina, jotka ommellaan '
+              + 'yhteen isoksi kankaaksi. Nimi tulee asantin sanasta kɛntɛn, '
+              + 'kori, ja asantien perimätiedon mukaan kutojat saivat '
+              + 'kuvionsa Anansi-hämähäkin verkosta Bonwiren kylässä. '
+              + '1700-luvulla kuningas Opoku Ware perusti työpajan, jossa '
+              + 'purettiin tuotua silkkiä ja kudottiin langat uudelleen '
+              + 'omiksi kuvioiksi. Kuvioita on satoja, ja jokaisella on '
+              + 'nimi, joka voi tulla sananlaskusta, tapahtumasta tai '
+              + 'kuningattarenäidistä. Vaikein niistä on adweneasa, "olen '
+              + 'käyttänyt taitoni loppuun".',
+          selite: 'Kaistaleita säilytetään ja myydään kimppuina; ostaja '
+            + 'valitsee usein kuvion nimen eikä värin mukaan.',
+          lahde: 'Warmglow, Wikimedia Commons (CC0)',
+          wiki: 'Kente',
+        },
+        {
+          otsikko: 'Merkit, jotka painetaan kalebassilla',
+          aika: '1817',
+          tiedosto: 'Adinkra 1825.jpg',
+          teksti: 'Adinkra-symbolit ovat akaanien merkkejä, joista kukin '
+              + 'tiivistää käsitteen tai sananlaskun. Ne painetaan '
+              + 'kankaaseen kalebassinpalasta veistetyllä leimasimella ja '
+              + 'puunkuoresta keitetyllä mustalla värillä; samoja merkkejä '
+              + 'veistetään jakkaroihin, seiniin ja kultapunnuksiin. '
+              + 'Perimätieto kertoo, että asantit oppivat taidon Gyamanin '
+              + 'kuninkaalta Nana Kwadwo Agyemang Adinkralta. Ajoitus ei '
+              + 'kuitenkaan täsmää: Thomas Bowdich toi adinkra-kankaan '
+              + 'Kumasista jo 1817, vuosi ennen kuin sota Gyamania vastaan '
+              + 'alkoi. Filosofi Kwame Anthony Appiah on kutsunut merkkejä '
+              + 'tavaksi siirtää monimutkaista ajattelua eteenpäin.',
+          selite: 'Vuoden 1825 adinkra-kangas: leimasin on painettu '
+            + 'ruudukkoon, ja jokainen ruutu on oma merkkinsä.',
+          lahde: 'Tuntematon kutoja, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Punnus, joka kertoo sananlaskun',
+          aika: '1400–1900',
+          tiedosto: 'Akan MHNT.ETH.2010.25.042.jpg',
+          teksti: 'Akaanit punnitsivat kultahiekkaa messinkipunnuksilla, '
+              + 'joita kutsutaan nimellä abrammuo. Niitä valettiin '
+              + 'vahavalutekniikalla arviolta neljä miljoonaa kappaletta '
+              + '1400-luvulta 1900-luvulle. Vanhimmat ovat geometrisia; '
+              + 'noin vuodesta 1600 alkaen tehtiin kuvallisia punnuksia, '
+              + 'jotka esittävät eläimiä, kasveja, ihmisiä, aseita ja '
+              + 'adinkra-merkkejä. Moni niistä viittaa sananlaskuun, joten '
+              + 'punnussarja oli myös käytöstapojen kokoelma. Täysi sarja '
+              + 'nosti miehen arvoa, ja pieni sarja annettiin '
+              + 'vastanaineelle lahjaksi kaupankäynnin aloittamista varten.',
+          selite: 'Lepakkopunnus Toulousen luonnontieteellisen museon '
+            + 'kokoelmasta; mitta-asteikko kertoo, että esine mahtuu '
+            + 'kämmenelle.',
+          lahde: 'Didier Descouens, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Arkku, joka on kaakaopalko',
+          aika: '1989',
+          tiedosto: 'Cocoa pod Paa Joe Fantasy Coffin.jpg',
+          teksti: 'Accran seudulla tehdään arkkuja, jotka esittävät jotain '
+              + 'aivan muuta kuin arkkua: kalaa, kameraa, linja-autoa, '
+              + 'kaakaopalkoa. Nimi on ga-kielellä abebuu adekai, '
+              + 'sananlaskuastiat. Ga-kansan käsityksen mukaan elämä jatkuu '
+              + 'tuonpuoleisessa entisellään, joten arkku kertoo vainajan '
+              + 'ammatin, suvun tunnuseläimen tai arvoaseman — ja vain '
+              + 'sellaiseen arkkuun oikeutettu saa siihen tulla. Arkut '
+              + 'nähtiin ensi kertaa laajasti lännessä Pariisin näyttelyssä '
+              + 'Les Magiciens de la terre vuonna 1989; esillä olleet '
+              + 'seitsemän arkkua olivat Kane Kwein ja Paa Joen tekemiä.',
+          selite: 'Kaakaopalon muotoiset arkut odottavat tienvarressa. '
+            + 'Arkut näytetään vasta hautajaispäivänä.',
+          lahde: 'Danieljatuat, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Ghanan musiikki sai nimensä siitä, mitä klubin ulkopuolella '
+          + 'seisoneet kuulivat sisältä.',
+      nostot: [
+        {
+          otsikko: 'Nimi tuli oven ulkopuolelta',
+          aika: '1920-luku',
+          // Kuvaton (Opus 6.9.2026): Commonsissa ei ole vapaata kuvaa
+          // varhaisesta highlife-orkesterista (haut "highlife band Ghana",
+          // "Ghana brass band Accra").
+          teksti: 'Highlife syntyi 1800-luvun lopulla rannikkokaupungeissa, '
+              + 'kun paikalliset muusikot yhdistivät omat rytminsä '
+              + 'merimiesten tuomiin soittimiin. Nimen antoi yleisö, joka ei '
+              + 'päässyt sisään: 1920-luvulla hienot klubit perivät '
+              + 'seitsemän shillingin ja kuuden pennyn pääsymaksun ja '
+              + 'vaativat iltapukua ja silinteriä, joten ulkona seisojat '
+              + 'kutsuivat sisältä kuuluvaa musiikkia korkeaksi elämäksi. '
+              + 'Orkesterien nimet olivat Jazz Kings, Cape Coast Sugar '
+              + 'Babies ja Accra Orchestra. Unesco otti highlifen '
+              + 'aineettoman kulttuuriperinnön luetteloon 2025.',
+          selite: 'Highlife jakautui 1940-luvulla kahtia: kaupunkien '
+              + 'tanssiorkestereihin ja maaseudun kitarayhtyeisiin.',
+        },
+        {
+          otsikko: 'Apteekkari, joka soitti Armstrongin kanssa',
+          aika: '1956',
+          // Kuvaton (Opus 6.9.2026): E. T. Mensahista ei ole Commonsissa
+          // vapaata kuvaa.
+          teksti: 'Emmanuel Tettey Mensah aloitti kaksitoistavuotiaana '
+              + 'huilistina koulun orkesterissa ja rahoitti myöhemmin oman '
+              + 'musiikkinsa perustamallaan apteekilla. Hänen yhtyeensä '
+              + 'Tempos oli alkujaan Accraan sijoitettujen eurooppalaisten '
+              + 'sotilaiden jamiryhmä, mutta muuttui vähitellen kokonaan '
+              + 'ghanalaiseksi ja Mensahin johtamaksi. Toukokuussa 1956 '
+              + 'Louis Armstrong vieraili Accrassa ja soitti Tempoksen '
+              + 'kanssa; sen jälkeen Mensahia kutsuttiin highlifen '
+              + 'kuninkaaksi. Kitarahighlifen puolella E. K. Nyame ja hänen '
+              + 'Akan Trio -yhtyeensä julkaisivat yli neljäsataa levyä.',
+          selite: 'Tanssiorkesterien highlife levisi Ghanasta Nigeriaan, '
+              + 'jossa siitä tuli igbojen suosituin musiikkilaji '
+              + '1960-luvulla.',
+        },
+        {
+          otsikko: 'Ksylofoni kurpitsoiden päällä',
+          tiedosto: 'Gyil.JPG',
+          teksti: 'Gyil on Pohjois-Ghanan dagara- ja birifor-kansojen '
+              + 'ksylofoni. Siinä on seitsemäntoista puukieltä, jotka on '
+              + 'sidottu kehikkoon kuivattujen kurpitsojen päälle; '
+              + 'kurpitsat toimivat kaikupohjina. Soittaja lyö kieliä '
+              + 'kumipäisillä puunuijilla, ja soitin soi tavallisesti '
+              + 'pareittain kalebassirummun kuorin kanssa. Gyilia '
+              + 'soittavat useimmiten miehet, mutta sääntöä siitä ei ole. '
+              + 'Ylä-Länsi-Ghanasta kotoisin ollut Bernard Woma opetti '
+              + 'soitinta vuosikymmeniä ja vei sen konserttilavoille eri '
+              + 'puolille maailmaa.',
+          selite: 'Kurpitsojen kylkiin porataan reikiä, joten sointiin '
+            + 'tulee lisäksi surisevaa säröä.',
+          lahde: 'Dr clave, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Tanssi, joka silittää ja ajaa autoa',
+          aika: '2010-luku',
+          // Kuvaton (Opus 6.9.2026): azonto-kuvat ovat joko
+          // tunnistettavia lähikuvia ihmisistä tai epätarkkoja.
+          teksti: 'Azonto on Accran rannikkokaupunginosista lähtenyt tanssi '
+              + 'ja musiikkilaji, ja se juontuu ga-kansan kpanlogosta. '
+              + 'Vanha nimi oli apaa, joka tarkoittaa työntekoa: liikkeillä '
+              + 'esitettiin ammatteja. Perusasennossa toinen jalka on '
+              + 'paikallaan ja toinen päkiällään, hartiat ovat rennot ja '
+              + 'kädet piirtävät kuvioita vartalon edessä. Tanssija '
+              + 'näyttelee arjen töitä: silittämistä, pyykinpesua, '
+              + 'autolla ajamista, nyrkkeilyä, rukoilemista, uimista. '
+              + 'Vuonna 2013 azonto näkyi lähes kaikissa ghanalaisissa '
+              + 'musiikkivideoissa ja levisi sieltä muualle Afrikkaan.',
+          selite: 'Azonton liikkeissä on koodattuja viestejä, joten sama '
+              + 'tanssi voi olla vitsi, kehu tai piikki.',
+        },
+      ],
+    },
+    {
+      id: 'tavat',
+      nimi: 'Tavat',
+      johdanto: 'Ghanassa nimi kertoo syntymäpäivän, suku kulkee äidin '
+          + 'kautta ja juhla alkaa siitä, että melu kielletään.',
+      nostot: [
+        {
+          otsikko: 'Nimi kertoo, minä päivänä synnyit',
+          // Kuvaton (Opus 6.9.2026): nimenantoseremoniasta ei löytynyt
+          // Commonsista kuvaa ilman tunnistettavia kasvoja.
+          teksti: 'Akaanit antavat lapselle nimen sen viikonpäivän mukaan, '
+              + 'jona hän syntyi, ja päivännimeen liittyy käsitys sielusta '
+              + 'ja luonteesta. Miehen nimi alkaa Kumasin twissä usein '
+              + 'tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy '
+              + '-a tai -wa; fantien murteessa etuliitteet ovat toiset. '
+              + 'Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: '
+              + 'panyin on vanhempi ja kakra nuorempi kaksonen. Lähes '
+              + 'jokaisella ghanalaisella on päivännimi, vaikka käytössä '
+              + 'olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah '
+              + 'syntyi lauantaina ja YK:n pääsihteeri Kofi Annan '
+              + 'perjantaina.',
+          selite: 'Päivännimet kulkivat orjalaivoissa Karibialle asti: '
+              + 'kapinoiden johtajien nimissä toistuvat Cuffy, Cudjoe ja '
+              + 'Quamina.',
+        },
+        {
+          otsikko: 'Juhla, jossa nälälle nauretaan',
+          tiedosto: 'Homowo Palm Nut Soup.jpg',
+          teksti: 'Homowo on ga-kansan sadonkorjuujuhla, ja nimi tarkoittaa '
+              + 'nälälle huutamista tai sen pilkkaamista. Perimätieto '
+              + 'kertoo suuresta nälänhädästä, jonka jälkeen selvinneet '
+              + 'juhlivat pilkaten nälkää. Juhlavuosi alkaa touko-kesäkuussa, '
+              + 'kun seitsemän pappia kylvää hirssin sovitussa '
+              + 'järjestyksessä. Sen jälkeen alkaa koninfemo, melunteon '
+              + 'kielto: neljään viikkoon ja kahteen päivään ei saa pitää '
+              + 'kovaa ääntä, jotta vilja kasvaa rauhassa. Kiellon '
+              + 'päättymisen ilmoittavat erityiset rummutukset. '
+              + 'Huipennuksessa keitetään palmupähkinäkeittoa ja kpokpoita, '
+              + 'hirssitaikinaa palmuöljyn ja okran kanssa.',
+          selite: 'Palmupähkinäkeitto kiehuu Homowon aattona; kpokpoita '
+            + 'viedään talosta taloon jaettavaksi.',
+          lahde: 'Owula kpakpo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Neljäkymmentä päivää hiljaisuutta',
+          aika: '1826',
+          // Kuvaton (Opus 6.9.2026): Odwira-kuvissa on tunnistettavia
+          // kasvoja lähietäisyydeltä, joten ne on jätetty pois.
+          teksti: 'Akuapemin alueella vietetään syys-lokakuussa Odwira-'
+              + 'juhlaa, joka on samalla jamssijuhla ja puhdistautumisen '
+              + 'aika. Se aloitettiin lokakuussa 1826 Katamansun '
+              + 'taistelun jälkeen, ja sitä on vietetty siitä lähtien '
+              + 'lähes kaksisataa vuotta. Juhlaa edeltää neljänkymmenen '
+              + 'päivän adaebutu, jonka aikana melunteko ja hautajaiset '
+              + 'ovat koko alueella kiellettyjä; kiellon rikkojalle '
+              + 'määrätään sakko. Juhlaviikko alkaa maanantaista, jolloin '
+              + 'raivataan seremoniallinen polku Akropongin keskustasta '
+              + 'kuninkaalliselle hautausmaalle — akaanien käsityksen '
+              + 'mukaan päällikkö ei kuole vaan menee kylään.',
+          selite: 'Uutta jamssia ei saa syödä ennen Odwiraa: ensin ruoka '
+              + 'annetaan esivanhemmille.',
+        },
+        {
+          otsikko: 'Perintö kulkee äidin kautta',
+          // Kuvaton (Opus 6.9.2026): sukujärjestelmää ei voi valokuvata,
+          // eikä perheenjuhlista ole kasvotonta kuvaa.
+          teksti: 'Akaanit ovat matrilineaalinen kansa: sukuun kuulutaan '
+              + 'äidin kautta, ja sitä kautta periytyvät sekä omaisuus '
+              + 'että oikeus päällikkyyteen. Suvut eli abusuat ovat '
+              + 'kahdeksan — Oyoko, Bretuo, Agona, Asona, Asenie, Aduana, '
+              + 'Ekuona ja Asakyiri — ja jokainen niistä hallitsee alueita, '
+              + 'joiden perustajina niitä pidetään; Asanten kuningashuone '
+              + 'on Oyoko. Käytännössä tämä tarkoittaa, että päällikön '
+              + 'seuraaja ei ole hänen poikansa vaan hänen sisarensa poika. '
+              + 'Suvun sisällä vuorottelevat haarat, joita kutsutaan '
+              + 'keittiöiksi, ja kukin esittää vuorollaan oman ehdokkaansa.',
+          selite: 'Perhettä johtaa abusuapanyin, suvun vanhin; sama nimitys '
+              + 'on koko klaanin päälliköllä.',
+        },
+      ],
+    },
+  ],
+  SEN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Senegalin historiassa toistuu sama kysymys: kuka saa '
+          + 'puhua kansan puolesta — ja kenen suvun kautta valta kulkee.',
+      nostot: [
+        {
+          otsikko: 'Valtakunta, jonka perustaja puhui väärää kieltä',
+          aika: '1300–1549',
+          // Kuvaton (Opus 6.9.2026): Jolofin valtakunnan ajalta ei ole
+          // Commonsissa kuvaa, joka kestäisi lähdetarkistuksen.
+          teksti: 'Jolofin valtakunta hallitsi 1300-luvun puolivälistä '
+              + 'alkaen osia nykyisestä Senegalista, Mauritaniasta ja '
+              + 'Gambiasta. Se oli pitkään Malin valtakunnan vasalli, ja '
+              + 'sen väestö oli wolofeja, sereerejä ja fulaneja. '
+              + 'Perimätieto kertoo perustajaksi Ndiadiane Ndiayen, jonka '
+              + 'alkuperästä on monta versiota: toisten mukaan hän oli '
+              + 'almoravidien jälkeläinen, toisten mukaan fulani tai '
+              + 'sereeriprinssi. Kaikissa versioissa toistuu sama '
+              + 'yksityiskohta — hän lausui ensimmäiset sanansa pulaariksi '
+              + 'eikä wolofiksi, mikä teki hänestä jalosukuisen '
+              + 'muukalaisen. Dankin taistelu 1549 hajotti valtakunnan '
+              + 'itsenäisiksi kuningaskunniksi.',
+          selite: 'Jolofin nimi elää yhä ruokalajissa: jollof-riisi on '
+              + 'saanut nimensä tästä valtakunnasta.',
+        },
+        {
+          otsikko: 'Lingeer valitsi kuninkaan',
+          aika: '1846–1855',
+          // Kuvaton (Opus 6.9.2026): Waalon hallitsijoista ei ole
+          // Commonsissa vapaata aikalaiskuvaa.
+          teksti: 'Waalon kuningaskunta hallitsi Senegaljoen alajuoksua, ja '
+              + 'sen valta jakautui kahtia. Kuninkaan arvonimi oli brak, '
+              + 'mutta kruununperimys kulki kolmen äidin puolelta '
+              + 'periytyvän suvun — Logarin, Tedyekin ja Joosin — kautta, '
+              + 'ja niiden naispuolinen perijä lingeer valitsi kuninkaan '
+              + 'jakamaan valtaa kanssaan. Osa lingeereistä hallitsi myös '
+              + 'itse: Njembot Mbodj avioitui 1833 Trarzan emiirin kanssa '
+              + 'padotakseen ryöstöretket ja ranskalaisten etenemisen, ja '
+              + 'hänen sisarensa Ndaté Yalla Mbodj hallitsi vuodesta 1846. '
+              + 'Ranska valloitti Waalon 1855.',
+          selite: 'Joos-suku oli sereeritaustainen, ja sen kantaäitinä '
+              + 'pidetään Sinen lingeeriä Fatim Beyeä.',
+        },
+        {
+          otsikko: 'Ensimmäinen afrikkalainen Ranskan parlamentissa',
+          aika: '1914',
+          tiedosto: 'Blaise Diagne-Dakar-1918.jpg',
+          teksti: 'Blaise Diagne syntyi Goréen saarella 1872 lebou-'
+              + 'kokin ja bissaugbinealaisen äidin lapsena, ja hänet '
+              + 'kasvatti goréelainen Crespinin perhe. Hän työskenteli '
+              + 'Ranskan tullilaitoksessa Dahomeyssa, Madagaskarilla, '
+              + 'Réunionilla ja Ranskan Guayanassa, ennen kuin hänet '
+              + 'valittiin 10. toukokuuta 1914 Ranskan '
+              + 'edustajainhuoneeseen Senegalin neljän kunnan edustajana. '
+              + 'Hän oli ensimmäinen kokonaan länsiafrikkalaista syntyperää '
+              + 'ollut kansanedustaja Ranskassa ja ensimmäinen, joka sai '
+              + 'paikan maan hallituksessa. Edustajana hän istui '
+              + 'kuolemaansa 1934 asti.',
+          selite: 'Väkeä Dakarin satamassa Diagnen saapuessa 1918. Kuva on '
+            + 'ranskalaisesta Le Pays de France -lehdestä.',
+          lahde: 'Tuntematon kuvaaja, Le Pays de France 1918, Wikimedia '
+            + 'Commons (PD)',
+        },
+        {
+          otsikko: 'Runoilija, joka luopui vallasta itse',
+          aika: '1906–2001',
+          // Kuvaton (Opus 6.9.2026): Senghorista on Commonsissa vain
+          // ryhmäkuvia, joissa on tunnistettavia sivullisia.
+          teksti: 'Léopold Sédar Senghor syntyi Joalissa sereeriperheeseen '
+              + 'ja opiskeli Pariisissa, jossa hän kehitti 1930-luvulla '
+              + 'ystäviensä kanssa négritude-ajattelun: mustan kulttuurin '
+              + 'omanarvontunnon, joka ei hae hyväksyntää Euroopalta. Hän '
+              + 'oli runoilija ennen kaikkea muuta ja toimi Senegalin '
+              + 'ensimmäisenä presidenttinä 1960–1980. Vuosikymmeniin '
+              + 'mahtuu myös yksipuoluekausi ja pääministerin '
+              + 'vangitseminen; oppositiopuolueet sallittiin uudelleen '
+              + '1976. Senghor luopui vallasta itse 1980 ja luovutti sen '
+              + 'seuraajalleen — harvinaista siihen aikaan. Hänet '
+              + 'valittiin ensimmäisenä afrikkalaisena Ranskan akatemiaan.',
+          selite: 'Senghorin runot on kirjoitettu ranskaksi mutta sereerien '
+              + 'ja wolofien kuvakielellä; hän kutsui sitä mustan Afrikan '
+              + 'omaksi rytmiksi.',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Senegalissa ateria on yhteinen vati, jonka ympärille '
+          + 'mahtuu aina yksi lisää — se on teranga, vieraanvaraisuus.',
+      nostot: [
+        {
+          otsikko: 'Kansallisruoka syntyi ohran loputtua',
+          tiedosto: 'Partage d\'un repas de Thiéboudienne rouge à Ndiaganiao, Sénégal.jpg',
+          teksti: 'Ceebu jën tarkoittaa wolofiksi riisiä ja kalaa. Riisi, '
+              + 'kala ja vihannekset kypsennetään samassa padassa '
+              + 'tomaattikastikkeessa, ja annos kannetaan pöytään suurella '
+              + 'vadilla: riisi pohjalla, kala ja kokonaiset vihannekset '
+              + 'keskellä. Ruoka on peräisin 1800-luvun Saint-Louisin '
+              + 'kaupungista, ja suullinen perinne kertoo sen syntyneen, kun '
+              + 'kaupungin keittäjä Penda Mbaye korvasi loppuun päässeen '
+              + 'ohran riisillä. Unesco on ottanut ruoan aineettoman '
+              + 'kulttuuriperinnön luetteloonsa. Länsi-Afrikan jollof-riisi '
+              + 'polveutuu siitä, mutta se tehdään yleensä lihasta.',
+          selite: 'Vadin ympärillä syödään lusikalla tai sormin, ja jokainen '
+            + 'pitäytyy omassa lohkossaan.',
+          lahde: 'CelmaKoumba, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Sipulia enemmän kuin lihaa',
+          tiedosto: 'Poulet Yassa.JPG',
+          teksti: 'Yassa ei ole yksittäinen ruoka vaan valmistustapa: liha '
+              + 'tai kala marinoidaan ja haudutetaan. Tunnetuin muoto on '
+              + 'yassa ganaar eli kanayassa, jossa neljästä kuuteen isoa '
+              + 'sipulia kuoritaan yhtä kanaa kohti. Marinadiin tulee '
+              + 'sitruunan tai limetin mehua, sinappia, valkosipulia, '
+              + 'chiliä ja mustapippuria, ja kana saa maustua tunteja tai '
+              + 'yön yli. Sen jälkeen liha ruskistetaan ja sipulit '
+              + 'haudutetaan kastikkeeksi, joka tarjotaan riisin kanssa. '
+              + 'Ruoka on kotoisin Casamancesta Senegalin eteläosasta ja '
+              + 'levinnyt sieltä koko Länsi-Afrikkaan.',
+          selite: 'Kanayassan kastike on lähes kokonaan sipulia; sitruuna '
+            + 'ja sinappi tekevät siitä hapokkaan.',
+          lahde: 'Kinesira, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maapähkinä muhennoksena',
+          tiedosto: 'Mafé de poisson.jpg',
+          teksti: 'Mafé on maapähkinätahnasta keitetty muhennos, jossa on '
+              + 'lihaa tai kalaa, tomaattia ja juureksia. Se on Senegalin '
+              + 'ja Gambian arkiruokaa, ja mandingoksi sen nimi on '
+              + 'tigadɛgɛna, "maapähkinätahnakastike". Ruokahistorioitsijat '
+              + 'ovat eri mieltä sen iästä: mafén nykymuoto syntyi vasta '
+              + 'siirtomaakaudella, kun ranskalainen öljyteollisuus '
+              + 'laajensi maapähkinäviljelmiä Keski-Senegalissa ja hirssin '
+              + 'tilalle tuotiin murtoriisiä Kaakkois-Aasiasta. '
+              + 'Maapähkinä itse on kotoisin Etelä-Amerikasta; sitä '
+              + 'ennen Länsi-Afrikassa kasvatettiin bambaranmaapähkinää.',
+          selite: 'Kalamafé tarjotaan riisin kanssa; kastikkeen paksuus '
+            + 'tulee maapähkinästä eikä jauhoista.',
+          lahde: 'Arnaud 25, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kahvi, jossa on pippuria',
+          aika: '1902',
+          // Kuvaton (Opus 6.9.2026): café Touban myyjistä otetut kuvat
+          // ovat kasvokuvia tai vesileimattuja.
+          teksti: 'Café Touba on kahvia, johon on paahdettu mukaan '
+              + 'djar-maustetta eli guineanpippuria, joskus myös '
+              + 'neilikkaa. Pavut ja mausteet jauhetaan yhdessä, ja juoma '
+              + 'suodatetaan kuten tavallinen kahvi; seoksessa on noin '
+              + 'kahdeksankymmentä prosenttia kahvia ja kaksikymmentä '
+              + 'prosenttia maustetta. Nimi tulee Touban kaupungista, ja '
+              + 'juoman toi Senegaliin muridien veljeskunnan perustaja '
+              + 'Cheikh Amadou Bamba palatessaan maanpaosta Gabonista '
+              + '1902. Sitä tarjotaan juhlissa ja muistotilaisuuksissa, ja '
+              + '2000-luvulla se on levinnyt kadunkulmiin uskonnosta '
+              + 'riippumatta.',
+          selite: 'Guineanpippuri kasvaa Touban seudulla, ja se antaa '
+              + 'kahville pippurisen, hieman yrttisen jälkimaun.',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Senegalissa muusikko on usein myös arkistonhoitaja: '
+          + 'sukujen historia on kulkenut laulajien muistissa vuosisatoja.',
+      nostot: [
+        {
+          otsikko: 'Rumpu, jonka kalvo kiristetään tapeilla',
+          tiedosto: 'Gros plan sur un tambour Sabar et ses ornements.jpg',
+          teksti: 'Sabar on wolofien ja sereerien rumpu, jota soitetaan '
+              + 'yhdellä kädellä ja tamarindipuisella galan-kepillä. '
+              + 'Runko koverretaan dimb-puusta, jota kasvaa '
+              + 'Senegambiassa; veistäjät ovat laobé-käsityöläisiä, ja '
+              + 'vuohennahkainen kalvo kiinnitetään seitsemällä tapilla, '
+              + 'narulla ja punoksella. Sabar on myös tanssin ja '
+              + 'musiikkilajin nimi: häissä ja juhlissa miehet soittavat '
+              + 'ja naiset tanssivat. Kokoonpanossa on eri kokoisia '
+              + 'rumpuja omine nimineen — n\'der, thiol, goron, m\'beng '
+              + 'm\'beng, toungoné ja xiin. Tunnetuin soittaja oli Doudou '
+              + 'N\'Diaye Rose.',
+          selite: 'Tapit ja punos kiristävät kalvon; kireyttä säädetään '
+            + 'lyömällä tappeja syvemmälle.',
+          lahde: 'CelmaKoumba, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaksikymmentäyksi kieltä kurpitsan päällä',
+          tiedosto: 'La kora, instrument rituel et mémoire vivante 04.jpg',
+          teksti: 'Kora on 21-kielinen soitin, jota ei saa mahtumaan '
+              + 'mihinkään yhteen soitinluokkaan. Kaikupohja on '
+              + 'puoliksi leikattu kalebassi, jonka päälle on pingotettu '
+              + 'lehmännahka; kaulaksi on kova puu, ja kielet kulkevat '
+              + 'kahdessa rivissä pystyssä olevan tallan uurteissa. Siksi '
+              + 'sitä kutsutaan kaksitallaiseksi harppuluutuksi. Soittaja '
+              + 'näppäilee peukaloilla ja etusormilla ja pitää muilla '
+              + 'sormilla kiinni kahvoista. Samaan aikaan soivat toistuva '
+              + 'kumbengo-kuvio ja improvisoitu birimintingo — vasen ja '
+              + 'oikea käsi tekevät eri asiaa.',
+          selite: 'Kora on perinteisesti jali-sukujen soitin, ja moderneihin '
+            + 'soittimiin asennetaan nykyään mikrofoni kalebassin sisään.',
+          lahde: '4MAPS, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kirjaston paikkaa piti ihminen',
+          tiedosto: 'BaobabGriots.jpg',
+          teksti: 'Griotti on länsiafrikkalainen historioitsija, laulaja ja '
+              + 'runoilija, joka säilyttää suvun ja kansan historian '
+              + 'muistissaan. Wolofiksi ammatti on gewel, sereeriksi paar '
+              + 'tai kewel ja mandingoksi jali. Kirjojen sijaan kertoja '
+              + 'käyttää mittaa, kertosäkeitä ja soitinta, ja niiden avulla '
+              + 'sukupolvien takaiset tapahtumat pysyvät järjestyksessä. '
+              + 'Griotti on myös neuvonantaja ja sovittelija: hallitsijan '
+              + 'rinnalla oli aina joku, jonka työtä oli muistaa, mitä '
+              + 'edellinen hallitsija oli luvannut. Ammatti periytyy '
+              + 'suvussa isältä ja äidiltä lapselle.',
+          selite: 'Bandian suojelualueella on baobab, jonka onttoon runkoon '
+            + 'on haudattu griotteja.',
+          lahde: 'Ji-Elle, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Sabar sähköbassolla',
+          aika: '1970-luku',
+          // Kuvaton (Opus 6.9.2026): mbalax-esiintyjistä on Commonsissa
+          // vain lähikuvia kasvoista.
+          teksti: 'Mbalax on Senegalin, Gambian ja Mauritanian '
+              + 'kaupunkien tanssimusiikkia. Se syntyi 1970-luvulla, kun '
+              + 'senegalilaiset yhtyeet alkoivat soittaa sabar-rytmejä '
+              + 'sähköbassolla, kitaralla ja koskettimilla ja laulaa '
+              + 'wolofiksi ranskan sijaan. Sekaan sulautettiin soulia, '
+              + 'jazzia, salsaa, kongolaista rumbaa ja rockia. Lajin '
+              + 'pohjalla on sereerien uskonnollinen njuup-perinne. '
+              + 'Tunnetuin mbalax-laulaja on Youssou N\'Dour, joka aloitti '
+              + 'esiintymisen kaksitoistavuotiaana ja soitti 1970-luvulla '
+              + 'Dakarin suosituimmassa Star Bandissa. Tanssilattialla '
+              + 'yleisö palkitsee laulajan kuin griotin.',
+          selite: 'Mbalaxin nimi tulee sabar-rummutuksen säestävästä '
+              + 'rytmistä.',
+        },
+      ],
+    },
+    {
+      id: 'elokuva',
+      nimi: 'Elokuva',
+      johdanto: 'Senegal on afrikkalaisen elokuvan syntymaita: ensimmäinen '
+          + 'elokuva kuvattiin Pariisissa, koska siirtomaassa se oli '
+          + 'käytännössä mahdotonta.',
+      nostot: [
+        {
+          otsikko: 'Ensimmäinen elokuva kuvattiin Seinen rannalla',
+          aika: '1955',
+          // Kuvaton (Opus 6.9.2026): Paulin Vieyrasta tai hänen
+          // elokuvistaan ei ole Commonsissa vapaata kuvaa.
+          teksti: 'Senegalilaisen elokuvan ensimmäinen teos on Paulin '
+              + 'Soumanou Vieyran lyhytelokuva Afrique-sur-Seine vuodelta '
+              + '1955, joka kuvattiin Pariisissa. Vieyra jatkoi '
+              + 'lyhytelokuvilla, jotka kertoivat Moskovasta, Nigeristä ja '
+              + 'siirtomaiden itsenäistymisestä; vuoden 1960 dokumentti '
+              + 'seurasi Kamerunin, Togon, Kongon ja Madagaskarin '
+              + 'itsenäistymistä. Varsinaisesti elokuva-ala lähti käyntiin '
+              + 'vasta Senegalin itsenäistyttyä 1960. Maasta tuli '
+              + 'nopeasti afrikkalaisen elokuvan keskuksia, ja sen '
+              + 'kulta-aika kesti 1960-luvulta 1980-luvun alkuun.',
+          selite: 'Vieyra opiskeli elokuvakoulussa Pariisissa ja toimi '
+              + 'myöhemmin myös afrikkalaisen elokuvan historioitsijana.',
+        },
+        {
+          otsikko: 'Satamatyöläisestä elokuvan isäksi',
+          aika: '1923–2007',
+          tiedosto: 'Monument Ousmane Sembene à l\'UCAD 03.jpg',
+          teksti: 'Ousmane Sembène syntyi kalastajan poikana Ziguinchorissa, '
+              + 'jätti koulun viisitoistavuotiaana ja teki Dakarissa '
+              + 'ruumiillisia töitä. Sotavuosien jälkeen hän matkusti '
+              + 'salamatkustajana Ranskaan, työskenteli Citroënin '
+              + 'tehtaalla ja Marseillen satamassa ja opetteli itse '
+              + 'lukemaan ja kirjoittamaan ranskaa. Ensimmäinen romaani '
+              + 'ilmestyi 1956. Koska kirjat eivät tavoittaneet lukutaidotonta '
+              + 'yleisöä, hän opiskeli 1962–1963 elokuvantekoa Moskovassa. '
+              + 'Lyhytelokuva Borom Sarret valmistui 1963, ja La Noire de… '
+              + 'oli 1966 ensimmäinen Saharan eteläpuolisen afrikkalaisen '
+              + 'ohjaama pitkä elokuva.',
+          selite: 'Sembènen muistomerkki Dakarin yliopiston edessä. Hänen '
+            + 'elokuvansa Mandabi (1968) oli ensimmäinen wolofinkielinen.',
+          lahde: '4MAPS, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ousmane Sembène',
+        },
+        {
+          otsikko: 'Näyttelijä, joka erotettiin ja teki mestariteoksen',
+          aika: '1973',
+          // Kuvaton (Opus 6.9.2026): Mambétystä ei ole Commonsissa
+          // vapaata kuvaa.
+          teksti: 'Djibril Diop Mambéty syntyi 1945 Colobanessa Dakarin '
+              + 'liepeillä ja työskenteli näyttelijänä Dakarin '
+              + 'kansallisteatterissa, kunnes hänet erotettiin '
+              + 'kurinpitosyistä. Ilman elokuvakoulutusta hän ohjasi '
+              + '23-vuotiaana ensimmäisen lyhytelokuvansa Contras\' City '
+              + 'ja seuraavana vuonna Badou Boyn, joka voitti hopeisen '
+              + 'Tanitin Karthagon elokuvajuhlilla. Vuoden 1973 Touki '
+              + 'Bouki on hänen tunnetuin työnsä: kahden nuoren matka '
+              + 'kohti Pariisia kerrotaan katkonaisena, unenomaisena '
+              + 'kuvavirtana. Se sai kriitikoiden palkinnon Cannesissa. '
+              + 'Kaikkiaan Mambéty teki vain viisi pitkää elokuvaa.',
+          selite: 'Touki Bouki tarkoittaa wolofiksi hyeenan matkaa.',
+        },
+        {
+          otsikko: 'Kultainen karhu isovanhempien maasta',
+          aika: '2019–2024',
+          // Kuvaton (Opus 6.9.2026): Mati Diopista on Commonsissa vain
+          // lähikuvia kasvoista.
+          teksti: 'Mati Diop on Djibril Diop Mambétyn veljentytär ja '
+              + 'muusikko Wasis Diopin tytär, ja hän kasvoi Pariisin ja '
+              + 'Senegalin väliä. Vuonna 2019 hänen ensimmäinen pitkä '
+              + 'elokuvansa Atlantics sai Cannesin toiseksi suurimman '
+              + 'palkinnon, Grand Prix\'n. Vuonna 2024 dokumentti Dahomey '
+              + 'voitti Berliinin elokuvajuhlien Kultaisen karhun; se '
+              + 'kertoo Ranskan Beninille palauttamista kuninkaallisista '
+              + 'esineistä. Senegalilainen elokuva on 2010-luvulta lähtien '
+              + 'elpynyt uudelleen, ja valtio on tukenut sitä omalla '
+              + 'rahastollaan vuodesta 2015. Uuden aallon tekijöistä moni '
+              + 'on nainen.',
+          selite: 'Dahomey seuraa esineitä matkalla museosta takaisin '
+              + 'kotiin ja antaa yhdelle patsaalle äänen.',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Senegalin maisema vaihtuu pohjoisen kuivasta sahelista '
+          + 'etelän jokimetsiin — ja välissä on järvi, joka on '
+          + 'vaaleanpunainen.',
+      nostot: [
+        {
+          otsikko: 'Puu, joka kasvaa väärinpäin',
+          tiedosto: 'Baobab and palm trees at the outskirts of Thiès 2007.jpg',
+          teksti: 'Baobabien suku Adansonia on nimetty ranskalaisen '
+              + 'luonnontutkijan Michel Adansonin mukaan, joka kuvasi lajin '
+              + 'ensimmäisenä tarkasti Senegalissa 1700-luvulla. Lajeja on '
+              + 'kahdeksan, ja niitä kasvaa Afrikassa, Madagaskarilla ja '
+              + 'Australiassa. Puuta kutsutaan ylösalaisin kasvavaksi, '
+              + 'koska paksun rungon päällä olevat oksat näyttävät '
+              + 'juurilta. Baobabit ovat pitkäikäisimpiä kasveja, mutta '
+              + 'niiden kukat elävät korkeintaan viisitoista tuntia: ne '
+              + 'avautuvat hämärässä niin nopeasti, että liikkeen näkee '
+              + 'paljain silmin. Runko varastoi vettä, ja hedelmästä '
+              + 'saadaan hapanta jauhetta.',
+          selite: 'Baobabi Thièsin laitamilla. Kuivana kautena puu on '
+            + 'lehdetön, ja silloin sen "juuret taivaalla" näkyvät '
+            + 'parhaiten.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 PL)',
+          wiki: 'Apinanleipäpuu',
+        },
+        {
+          otsikko: 'Järvi, joka on vaaleanpunainen',
+          tiedosto: 'Salt Boats (5990890819).jpg',
+          teksti: 'Retba-järvi eli Lac Rose on 35 kilometriä Dakarista '
+              + 'koilliseen, ja sen erottaa Atlantista vain kapea '
+              + 'dyynikaista. Vesi on paikoin neljänkymmenen prosentin '
+              + 'suolapitoisuudessa, joten siinä kelluu kuin Kuolleessa '
+              + 'meressä. Väri tulee Dunaliella salina -levästä, joka '
+              + 'tuottaa punaista väriainetta pyydystääkseen enemmän '
+              + 'auringonvaloa; sävy on vahvimmillaan kuivana kautena '
+              + 'tammikuun lopusta maaliskuun alkuun. Suolaa nostaa '
+              + 'järvestä jopa kolmetuhatta kerääjää eri puolilta '
+              + 'Länsi-Afrikkaa. Syksyn 2022 tulvat veivät värin, mutta '
+              + 'vuoteen 2025 mennessä se oli palannut osittain.',
+          selite: 'Leijakameralla otetussa kuvassa suolaveneet ja rannalle '
+            + 'kasatut suolakeot erottuvat järven punaista vasten.',
+          lahde: 'Jeff Attaway, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Puisto, joka pääsi pois uhanalaisten listalta',
+          aika: '2024',
+          tiedosto: 'Parc de Niokolo-Koba, Sénégal - COD260725-058.jpg',
+          teksti: 'Niokolo-Koban kansallispuisto Kaakkois-Senegalissa on '
+              + 'yli yhdeksäntuhatta neliökilometriä savannimetsää, jonka '
+              + 'halki virtaa Gambiajoen yläjuoksu. Alue suojeltiin 1925, '
+              + 'siitä tuli kansallispuisto 1954 ja maailmanperintökohde '
+              + '1981. Puistossa kasvaa yli 1 500 kasvilajia, ja siellä on '
+              + '78 prosenttia koko maan jokivarsimetsistä. Vuonna 2007 '
+              + 'Unesco siirsi puiston vaarantuneiden maailmanperintö'
+              + 'kohteiden listalle, koska salametsästys ja laiduntaminen '
+              + 'olivat vähentäneet eläinkantoja. Listalta se poistettiin '
+              + '2024, kun tilanne oli kohentunut.',
+          selite: 'Sadekauden jälkeen puiston tasangot ovat vihreitä; '
+            + 'kuivana kautena eläimet kerääntyvät joen varteen.',
+          lahde: 'COD photographer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Muuri, joka on puita',
+          aika: '2007',
+          // Kuvaton (Opus 6.9.2026): Suuren vihreän muurin istutuksista ei
+          // löytynyt Commonsista kuvaa, jonka sijainti olisi varmistettu.
+          teksti: 'Afrikan unioni hyväksyi 2007 hankkeen nimeltä Suuri '
+              + 'vihreä muuri. Alkuperäinen ajatus oli istuttaa '
+              + 'viidentoista kilometrin levyinen ja 7 775 kilometrin '
+              + 'pituinen puuvyöhyke Djiboutista Dakariin pysäyttämään '
+              + 'Saharan leviäminen. Ajatus on sittemmin muuttunut: koska '
+              + 'aavikon reuna liikkuu sateiden mukaan, hankkeesta on '
+              + 'tullut tilkkutäkki, jossa kerätään sadevettä, suojellaan '
+              + 'olemassa olevaa kasvillisuutta ja parannetaan '
+              + 'perinteisiä viljelytapoja. Tavoitteena on kunnostaa '
+              + 'sata miljoonaa hehtaaria maata vuoteen 2030 mennessä.',
+          selite: 'Muurin läntinen pää on Senegalissa, ja siellä hanke on '
+              + 'edennyt pisimmälle.',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä tekee Retba-järven vedestä vaaleanpunaista?',
+        vaihtoehdot: [
+          'Punainen savi järven pohjassa',
+          'Levä, joka tuottaa punaista väriainetta',
+          'Rautapitoinen lähdevesi',
+          'Auringonlaskun heijastus',
+        ],
+        oikea: 1,
+        fakta: 'Dunaliella salina -levä tekee punaista väriainetta '
+            + 'kerätäkseen enemmän auringonvaloa suolaisessa vedessä.',
+      },
+    },
+  ],
+  /*
+   * GUATEMALA (Opus 6.9.2026, maalehtierä GTM+NIC+PAN). Väitteet on
+   * luettu en-Wikipedian raakateksteistä 6.9.2026: "Guatemala",
+   * "Tecun Uman", "Antigua Guatemala", "Popol Vuh", "Justo Rufino
+   * Barrios", "Volcán de Fuego", "Sierra de los Cuchumatanes", "Maya
+   * Biosphere Reserve", "Monterrico, Guatemala", "Guatemalan cuisine",
+   * "Kak'ik", "Pepián", "Fiambre", "Maya textiles", "Marimba" ja
+   * "Rabinal Achí".
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA: Guatemalalla ei ole kaupunkilehteä,
+   * mutta maalla on kahdeksan kohdetta ja kolme maastokohdetta
+   * (js/packs/maastokohteet-gtm.js: Tajumulco, Atitlánjärvi, Motagua,
+   * Tikal, El Mirador, Quiriguá, Seibal, Iximche, Chichicastenango,
+   * Semuc Champey, San Felipe de Lara), eläintäky ketsaalista
+   * (js/packs/elaintakyt.js) ja kaksi skandaalia (js/packs/skandaalit.js:
+   * United Fruitin banaanisopimus 1904 ja Santa Marían purkaus 1902).
+   * Lehti EI toista niitä: Iximchestä kerrotaan vain pääkaupungin
+   * muuttolistan ensimmäisenä rivinä ja Chichicastenangosta vain
+   * käsikirjoituksen syntypaikkana.
+   *
+   * SISÄLTÖLINJAUS: sisällissota 1960–1996 ja nykypolitiikka on jätetty
+   * kokonaan pois samalla periaatteella kuin Kuuban vallankumous
+   * CUB-lohkosta. Valloitus ja Barriosin kova ote kerrotaan
+   * tapahtumina ilman väkivallan kuvausta.
+   *
+   * KUVAT: 15 nostokuvaa Commonsista, lisenssi ja tekijä extmetadatasta,
+   * leveys >= 1200 px, jokainen katsottu silmin. VIISI NOSTOA JÄI
+   * KUVATTOMAKSI: Barrios (ainoa muotokuva on 681 px leveä, ja
+   * ratsastajapatsaan kuvassa näkyy hevosen vatsa eikä miestä),
+   * vyökangaspuut, marimba de tecomates, kromaattinen marimba ja
+   * Rabinal Achí (näistä ei löytynyt yhtään >= 1200 px:n kuvaa ilman
+   * tunnistettavia kasvoja). HYLÄTYT: "GuatemalanMarimbaGourds­
+   * Chichicastenango" ja "Intérpretes de marimba en el Paseo de la
+   * Sexta" (tunnistettavat kasvot), "Tejedora K'aqchikel de Santa
+   * Catarina Palopó" (tunnistettavat kasvot), "Antigua Guatemala 1979 -
+   * Arco de Santa Catalina" (valokuvan valkoinen kehys),
+   * "Church of Santa Teresa ruins" (sininen tikas ja muovipeite).
+   */
+  GTM: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Isoisän matkavuonna 1873 Guatemala on kaksivuotiaan '
+          + 'liberaalivallankumouksen maa, mutta sen alla on mayaruhtinaita, '
+          + 'neljästi siirretty pääkaupunki ja kirja, joka melkein katosi.',
+      nostot: [
+        {
+          otsikko: 'Ruhtinas, jonka nimi säilyi vain omissa papereissa',
+          aika: '1524',
+          tiedosto: 'Statue of Tecun Uman - Central Plaza - Santa Cruz del Quiche - Quiche - Guatemala (15754040660).jpg',
+          teksti: 'Kʼicheʼ-mayojen viimeisiä hallitsijoita oli Tecun Uman. '
+              + 'Hän kaatui 12. helmikuuta 1524, kun Pedro de Alvarado eteni '
+              + 'Quetzaltenangon laaksoon 180 ratsumiehen, 300 jalkamiehen ja '
+              + 'tuhansien meksikolaisten liittolaisten kanssa. Ratsuväki oli '
+              + 'kʼicheʼille outo näky, sillä hevosia ei Amerikassa ollut. '
+              + 'Alvarado kertoi kirjeessään Cortésille vain kaataneensa '
+              + 'yhden Qʼumarkajin neljästä ruhtinaasta eikä maininnut nimeä '
+              + '— nimen Tecum Umam säilyttivät kʼicheʼien omat asiakirjat. '
+              + 'Guatemala julisti hänet kansallissankariksi 22. maaliskuuta '
+              + '1960.',
+          selite: 'Santa Cruz del Quichén keskusaukion patsas esittää Tecun '
+              + 'Umania, joka on ollut Guatemalan virallinen kansallissankari '
+              + 'vuodesta 1960.',
+          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Pääkaupunki, joka muutti neljä kertaa',
+          aika: '1524–1776',
+          tiedosto: 'Antigua Agua.jpg',
+          teksti: 'Guatemalan pääkaupunki on vaihtanut paikkaa neljästi. '
+              + 'Ensimmäinen oli Iximche 1524, toinen Almolongan laaksossa, '
+              + 'ja sen tuhosi 11. syyskuuta 1541 Agua-tulivuoresta '
+              + 'purkautunut mutavyöry. Kolmas perustettiin 10. maaliskuuta '
+              + '1543 Panchoyn laaksoon, ja se oli Guatemalan '
+              + 'kenraalikapteenikunnan pääkaupunki 230 vuotta. Vuoden 1773 '
+              + 'Santa Martan maanjäristykset kaatoivat sen, ja kruunu '
+              + 'määräsi 1776 pääkaupungin siirrettäväksi nykyiselle '
+              + 'paikalleen. Vanhaan kaupunkiin jäi silti väkeä, ja siitä '
+              + 'tuli La Antigua Guatemala.',
+          selite: 'Antigua Guatemala oli 1543–1773 koko Guatemalan '
+              + 'kenraalikapteenikunnan pääkaupunki, ja sen takana kohoaa '
+              + 'Agua-tulivuori, joka tuhosi kaupungin edeltäjän 1541.',
+          lahde: 'Ondřej Žváček, Wikimedia Commons (CC BY 2.5)',
+        },
+        {
+          otsikko: 'Pyhä kirja, joka päätyi Chicagoon',
+          aika: '1701–1941',
+          tiedosto: 'Popol vuh.jpg',
+          teksti: 'Popol Vuh on kʼicheʼ-mayojen luomiskertomus ja '
+              + 'sukuhistoria. Dominikaani Francisco Ximénez kirjoitti sen '
+              + 'muistiin Chichicastenangossa vuodesta 1701 alkaen kahtena '
+              + 'rinnakkaisena palstana, kʼicheʼksi ja espanjaksi. '
+              + 'Käsikirjoitus päätyi San Carlosin yliopiston kirjastoon, '
+              + 'josta Carl Scherzer kopioi sen 1854 — ja jonka hyllystä '
+              + 'apotti Brasseur de Bourbourg vei niteen 1855 Ranskaan. '
+              + 'Sieltä se kulki keräilijältä toiselle Chicagon '
+              + 'Newberry-kirjastoon, ja Adrián Recinos löysi sen sieltä '
+              + 'uudelleen 1941. Isoisän matkavuonna kirja oli Euroopassa.',
+          selite: 'Ximénezin käsikirjoituksen ensimmäisellä sivulla Popol '
+              + 'Vuhin teksti kulkee kahdessa palstassa: vasemmalla kʼicheʼ, '
+              + 'oikealla espanjankielinen käännös.',
+          lahde: 'Francisco Ximénez, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Presidentti, joka astui virkaan isoisän matkavuonna',
+          aika: '1873',
+          // Kuvaton (Opus 6.9.2026): Barriosista on Commonsissa vain 681
+          // px leveä muotokuva, ja Guatemala Cityn ratsastajapatsaasta
+          // otetussa kuvassa näkyy hevosen vatsa eikä miestä itseään.
+          teksti: 'Justo Rufino Barrios aloitti presidenttinä 4. kesäkuuta '
+              + '1873. Hän oli lakimies San Marcosista, noussut kenraaliksi '
+              + 'kapinallisarmeijassa ja yksi vuoden 1871 vallankumouksen '
+              + 'johtajista. Uudistukset olivat perusteellisia: kirkko '
+              + 'erotettiin valtiosta, siviiliavioliitosta tuli ainoa '
+              + 'virallinen, väestökirjanpito siirtyi seurakunnilta '
+              + 'viranomaisille, hautausmaista tehtiin maallisia ja '
+              + 'alkeiskoulusta ilmainen ja pakollinen. Vastustajiaan '
+              + 'kohtaan hän oli suvaitsematon, ja monet joutuivat '
+              + 'maanpakoon. Hän kaatui 1885 yrittäessään yhdistää '
+              + 'Väli-Amerikan uudelleen.',
+          selite: 'Justo Rufino Barrios johti Guatemalaa 1873–1885, ja hänen '
+              + 'liberaaliuudistuksensa siirsivät koulut, avioliitot ja '
+              + 'väestökirjanpidon kirkolta valtiolle.',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Guatemalassa on 37 tulivuorta, Väli-Amerikan korkein '
+          + 'ylänkö ja Amazonin pohjoispuolen laajin trooppinen metsä.',
+      nostot: [
+        {
+          otsikko: 'Vuori, jonka nimi tarkoittaa tulen paikkaa',
+          tiedosto: 'Volcan de Fuego in Guatemala - Eruption at night.jpg',
+          teksti: 'Guatemalassa on 37 tulivuorta, ja niistä neljä on '
+              + 'toiminnassa: Pacaya, Santiaguito, Tacaná ja Fuego. Fuego on '
+              + 'kaqchikeliksi Chi Qʼaqʼ, "siellä missä tuli on". Se seisoo '
+              + 'noin 16 kilometriä Antigua Guatemalasta länteen kolmen '
+              + 'departementin rajalla ja purkautuu tiuhaan; viimeisin '
+              + 'purkausjakso alkoi 5. kesäkuuta 2025. Tulivuoret ovat '
+              + 'siellä siksi, että Cocos-laatta painuu rannikon edustalla '
+              + 'Karibian laatan alle. Ylänköjen halki kulkeva Motaguan '
+              + 'siirros taas on aiheuttanut maan suurimmat maanjäristykset.',
+          selite: 'Fuego on yksi Guatemalan neljästä aktiivisesta '
+              + 'tulivuoresta, ja se purkaa hehkuvaa ainesta useita kertoja '
+              + 'tunnissa.',
+          lahde: 'Kieran Wood, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Väli-Amerikan korkein vuoristo ilman tulivuoria',
+          tiedosto: 'Sierra de los Cuchumatanes.jpg',
+          teksti: 'Sierra de los Cuchumatanes Länsi-Guatemalassa on '
+              + 'Väli-Amerikan korkein vuoristo, jossa ei ole yhtään '
+              + 'tulivuorta. Se kohoaa 500 metristä yli 3 800 metriin ja '
+              + 'kattaa noin 16 350 neliökilometriä; siitä 1 500 '
+              + 'neliökilometriä on yli kolmen kilometrin korkeudessa, mikä '
+              + 'tekee siitä koko Väli-Amerikan laajimman ylängön. Kallio on '
+              + 'karstia ja sedimenttikiveä paleotsooiselta ja '
+              + 'mesotsooiselta ajalta. Nimi tulee mamin sanoista cuchuj ja '
+              + 'matán, "se joka koottiin ylivoimalla".',
+          selite: 'Cuchumatanesin ylänkö laskeutuu Huehuetenangon laaksoon, '
+              + 'ja se on Väli-Amerikan korkein vuoristo, jossa ei ole '
+              + 'tulivuoria.',
+          lahde: 'Maricela Argueta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Metsä, joka elää purukumista ja palmunlehdistä',
+          aika: '1990',
+          tiedosto: 'Flickr - ggallice - Buried temple, Maya Biosphere Reserve, El Petén.jpg',
+          teksti: 'Maya-biosfäärialue perustettiin Peténiin 1990 '
+              + 'suojelemaan Amazonin pohjoispuolen suurinta trooppista '
+              + 'metsää. Se on 21 602 neliökilometriä, ja sen '
+              + 'monikäyttövyöhykkeellä paikallisyhteisöille on myönnetty '
+              + '25 vuoden metsänkäyttöoikeuksia. Sieltä kerätään kolmea '
+              + 'perinteistä tuotetta: chicleä eli sapotillipuun maitiaista, '
+              + 'josta tehtiin purukumia, xatea eli kukka-asetelmiin '
+              + 'myytävää palmunlehteä ja maustepippuria. Vuonna 2005 '
+              + 'sertifioitiin kestäväksi 4 500 neliökilometrin hakkuut.',
+          selite: 'Maya-biosfäärialueen metsässä on tuhansia raunioituneita '
+              + 'rakennuksia, jotka näkyvät enää kumpuina maanpinnalla.',
+          lahde: 'Geoff Gallice, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Musta hiekka, jolta kilpikonnat lähtevät',
+          tiedosto: 'Baby-turtle.jpg',
+          teksti: 'Monterrico on kylä Guatemalan Tyynenmeren rannikolla '
+              + 'Santa Rosan departementissa. Hiekka on tulivuorenmustaa, ja '
+              + 'pitkä ranta on neljän merikilpikonnalajin pesimäpaikka. '
+              + 'Munien kerääminen elo–marraskuussa on paikallista '
+              + 'perinnettä, ja osa keräilijöistä luovuttaa saaliistaan '
+              + 'sovitun osuuden tortugarioihin eli kuoriutumistarhoihin; '
+              + 'suurin osa rannalle munituista munista päätyy silti '
+              + 'syötäväksi. Kylässä asuu noin tuhat ihmistä, ja se on myös '
+              + 'pääkaupunkilaisten viikonloppuranta.',
+          selite: 'Tortugariossa kuoriutunut merikilpikonnan poikanen '
+              + 'lasketaan mereen samalta rannalta, jolle muna oli munittu.',
+          lahde: 'DrStockPhoto.com, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Guatemalan keittiö on mayakeittiö espanjalaisin '
+          + 'lisäyksin: pohjana maissi, chili ja pavut, ja neljä '
+          + 'pataruokaa on julistettu kansalliseksi kulttuuriperinnöksi.',
+      nostot: [
+        {
+          otsikko: 'Neljä ruokaa, jotka valtio julisti perinnöksi',
+          aika: '2007',
+          tiedosto: 'Pepián Guatemala.jpg',
+          teksti: 'Guatemalan kulttuuri- ja urheiluministeriö julisti 2007 '
+              + 'neljä ruokaa maan aineettomaksi kulttuuriperinnöksi: '
+              + 'pepiánin, jocónin, kaqʼikin ja banaanimolen. Kaikki ovat '
+              + 'recadoja eli sakeaan kastikkeeseen haudutettuja patoja, '
+              + 'joissa mayakeittiön ainekset ja espanjalaiset '
+              + 'valmistustavat sekoittuvat. Pepián on niistä vanhin ja '
+              + 'tunnetuin. Liha haudutetaan kastikkeessa, joka suurustetaan '
+              + 'kurpitsansiemenillä ja johon tulee tomaattia, tomatilloa ja '
+              + 'chiliä. Kaupungeissa se on tavallista katuruokaa.',
+          selite: 'Pepián on Guatemalan kansallisruokia, ja se keitetään '
+              + 'suurissa padoissa myös kadulla myytäväksi.',
+          lahde: 'Josué Goge, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Keitto, jonka nimi tarkoittaa punaista ja tulista',
+          tiedosto: '2010.05.13.141849 Kac-iq Fonda Calle Real Antigua Guatemala.jpg',
+          teksti: 'Kaqʼik on kalkkunakeitto, jonka nimi tulee qʼeqchiʼn '
+              + 'sanoista kaq, punainen, ja ik, tulinen tai chili. Se on '
+              + 'esikolumbiaanista perua, ja Verapazin perinteiseen reseptiin '
+              + 'kuuluvat chompipe-kalkkuna, valkosipuli, sipuli, minttu, '
+              + 'korianteri ja zamat-lehdet. Punaisen värin antaa jauhettu '
+              + 'annatto, ja väri on yhdistetty esikolumbiaanisten '
+              + 'uhrimenojen vereen. Keitto tarjotaan riisin, chilin ja '
+              + 'mashán-lehtiin käärittyjen valkoisten tamaalien sekä '
+              + 'kaakaojuoman kanssa.',
+          selite: 'Kaqʼik tarjotaan saviruukussa riisin ja mashán-lehteen '
+              + 'kääritty tamaalin kanssa.',
+          lahde: 'Hermann Luyken, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Salaatti, joka syntyi hautausmaalla',
+          aika: '1. marraskuuta',
+          tiedosto: 'Fiambre - 11042021.jpg',
+          teksti: 'Fiambre on kylmä salaatti, jota syödään vain kerran '
+              + 'vuodessa: pyhäinpäivänä ja vainajien päivänä. Tapa alkoi '
+              + 'siitä, että perheet veivät hautausmaalle vainajiensa '
+              + 'lempiruokia — ja kun kaikki toivat omansa, ruoat '
+              + 'sekoittuivat lopulta yhdeksi ainoaksi salaatiksi. Siinä voi '
+              + 'olla kymmeniä aineksia: makkaroita ja leikkeleitä, etikkaan '
+              + 'säilöttyä pikkumaissia ja sipulia, punajuurta, pacaya-palmun '
+              + 'kukintoja, juustoja, oliiveja ja kanaa. Punajuuri tekee '
+              + 'siitä punaisen, ilman sitä valkoisen, ja resepti periytyy '
+              + 'suvussa.',
+          selite: 'Fiambre kootaan kymmenistä aineksista, ja se syödään '
+              + 'kylmänä pyhäinpäivänä 1. marraskuuta.',
+          lahde: 'Gobierno de Guatemala, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Sadat tamaalit ja torstain perunanyytti',
+          tiedosto: 'Tamal Colorado de Guatemala, abierto.JPG',
+          teksti: 'Guatemalassa sanotaan olevan satoja tamaalilajeja. '
+              + 'Toisin kuin Meksikossa, ne kääritään useimmiten banaanin- '
+              + 'tai maxán-lehteen maissinlehden sijaan, ja taikina '
+              + 'keitetään valmiiksi ennen täyttämistä. Tamales colorados '
+              + 'saa värinsä tomaatista ja annatosta, ja sisällä on '
+              + 'paprikaa, kapriksia, oliiveja ja lihaa; tamales negros on '
+              + 'makea, sillä siihen tulee suklaata, rusinoita, luumuja ja '
+              + 'manteleita. Maissinlehteen kääritty pienempi chuchito on '
+              + 'oma lajinsa, ja torstaisin syödään perunataikinasta tehtyjä '
+              + 'pacheja.',
+          selite: 'Tamal colorado saa värinsä tomaatista ja annatosta, ja se '
+              + 'kypsennetään banaanin- tai maxán-lehden sisällä.',
+          lahde: 'Labarradulce, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi guatemalalaisessa fiambressa on kymmeniä aineksia?',
+        vaihtoehdot: [
+          'Se on ravintoloiden kilpailu parhaasta salaatista',
+          'Perheiden hautausmaalle viemät eri ruoat sekoittuivat yhdeksi',
+          'Se on espanjalaisen laivamuonan perillinen',
+          'Aineksia lisätään yksi joka vuosikymmen',
+        ],
+        oikea: 1,
+        fakta: 'Ruoat vietiin hautausmaalle vainajien lempiruokina, ja kun '
+            + 'jokainen perhe toi omansa, ne päätyivät samaan kulhoon.',
+      },
+    },
+    {
+      id: 'tekstiilit',
+      nimi: 'Tekstiilit',
+      johdanto: 'Guatemalassa vaatteesta näkee, mistä kylästä ihminen on: '
+          + 'jokaisella yhteisöllä on oma kuvionsa, ja kangas kudotaan yhä '
+          + 'vyötäröltä puuhun jännitetyillä kangaspuilla.',
+      nostot: [
+        {
+          otsikko: 'Kangaspuut, joista jää jäljelle kasa keppejä',
+          // Kuvaton (Opus 6.9.2026): jokaisessa >= 1200 px:n
+          // telar de cintura -kuvassa on kutojan tunnistettavat kasvot.
+          teksti: 'Telar de cintura eli vyökangaspuut ovat '
+              + 'esikolumbiaaninen keksintö, ja niitä käytetään yhä. Loimen '
+              + 'toinen pää sidotaan puuhun tai pylvääseen ja toinen kutojan '
+              + 'vyötärölle: kireyttä säädetään kallistamalla omaa vartaloa. '
+              + 'Yhtä tutkijaa lainaten laitteesta ei jää kankaan '
+              + 'valmistuttua muuta kuin kasa keppejä — ja silti sitä on '
+              + 'pidetty polkukangaspuita herkempänä kutojan omille '
+              + 'ideoille. Espanjalaiset toivat polkukangaspuut, mutta ne '
+              + 'eivät syrjäyttäneet vanhaa tapaa.',
+          selite: 'Vyökangaspuissa loimi kiristyy kutojan oman vartalon '
+              + 'painosta, ja kankaan valmistuttua laitteesta jää jäljelle '
+              + 'vain nippu keppejä.',
+        },
+        {
+          otsikko: 'Puku, jonka jokainen osa on oma sanansa',
+          tiedosto: 'Modern Mayan Textiles.jpg',
+          teksti: 'Naisen perinneasu on traje. Siihen kuuluu huipil eli '
+              + 'suorakaiteen muotoinen pusero, jonka keskellä on aukko '
+              + 'päälle, corte eli nilkkoihin ulottuva kiedottu hame ja faja '
+              + 'eli vyötärönauha, joka pitää kokonaisuuden koossa. Päässä '
+              + 'on usein pañuelo-liina tai cinta, metrien pituinen nauha, '
+              + 'joka punotaan hiuksiin. Huipil on tavallisesti vaaleaa '
+              + 'ohutta puuvillaa, johon kuviot on kudottu brokadina. '
+              + 'Miesten perinneasu on jäänyt paljon harvinaisemmaksi kuin '
+              + 'naisten.',
+          selite: 'Trajen osat ovat huipil, kiedottu corte-hame ja faja, '
+              + 'joka sitoo asun vyötäröltä.',
+          lahde: 'Alulo, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kuvio kertoo, mistä kylästä olet',
+          tiedosto: 'Huipil San Antonio Aguas Calientes Front weaving and stitching.JPG',
+          teksti: 'Jokaisella yhteisöllä on oma huipil-kuvionsa, värinsä ja '
+              + 'pituutensa, ja lisäksi omat juhlahuipilinsa. Toisen kylän '
+              + 'kuvion käyttäminen omassa kylässä on ollut sopimatonta, '
+              + 'mutta vierailulla toisessa kylässä sen kuvion pukeminen on '
+              + 'kohteliaisuus. Yhteisön kuvio on kutojalle runko, ei '
+              + 'sääntökirja: sen sisään jokainen tekee omat '
+              + 'yksityiskohtansa, eikä kahta samanlaista synny. Guatemalan '
+              + 'kongressissa esitettiin 2011 lakia, joka suojaisi kuviot '
+              + 'jäljittelyltä ja auttaisi kutojia elämään työllään.',
+          selite: 'San Antonio Aguas Calientesin kylän huipileissa on omat '
+              + 'lintu- ja kukka-aiheensa, joista asun kotipaikan tunnistaa.',
+          lahde: 'Hubertl, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Napanuora, äitipuu ja valmis kangas',
+          tiedosto: 'Güipel ceremonial, Aldea de Chuacruz (Sololá, Guatemala).jpg',
+          teksti: 'Antropologi Linda Brown on kuvannut, miten '
+              + 'tzʼutujil-mayoilla kutominen kerrataan syntymänä. Köysi, '
+              + 'joka yhdistää kangaspuut pylvääseen, on nimeltään '
+              + 'napanuora, ja pylväs on Äitipuu, ensimmäisen luojaparin '
+              + 'ruumiillistuma. Kun kutoja istuu paikallaan ja kangas '
+              + 'kasvaa, hän toistaa raskauden kulun — ja lopuksi sekä lapsi '
+              + 'että kangas on irrotettava leikkaamalla siitä, missä ne '
+              + 'syntyivät. Kutomisen suojelija on Vanha Isoäiti, '
+              + 'ensimmäinen kätilö, joka liitetään synnytyksen '
+              + 'jumalattareen Chac Cheliin.',
+          selite: 'Chuacruzin kylän seremoniallinen huipil on kudottu '
+              + 'juhlakäyttöön, ja sen keskellä oleva kuvio ympäröi '
+              + 'pääaukkoa.',
+          lahde: 'José Luis Filpo Cabana, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Guatemalan kansallissoitin on marimba, ja sen ääneen '
+          + 'kuuluu surinaa, joka syntyy putken suulle pingotetusta '
+          + 'kalvosta.',
+      nostot: [
+        {
+          otsikko: 'Ensimmäinen kirjattu marimba soi katedraalin juhlassa',
+          aika: '1680',
+          // Kuvaton (Opus 6.9.2026): ainoassa >= 1200 px:n kuvassa
+          // kurpitsakaikupohjaisesta marimbasta on tunnistettavat kasvot.
+          teksti: 'Vanhin tunnettu maininta marimbasta Guatemalassa on 13. '
+              + 'marraskuuta 1680: soitin oli mukana Santiago de los '
+              + 'Caballerosin katedraalin vihkiäisjuhlissa, ja se oli '
+              + 'marimba de tecomates eli kurpitsakaikupohjilla varustettu. '
+              + 'Väli-Amerikan ensimmäinen maininta on vuodelta 1550, '
+              + 'jolloin Guatemalaan orjuutettujen afrikkalaisten kerrotaan '
+              + 'soittaneen sitä. Soitin levisi 1700- ja 1800-luvuilla maya- '
+              + 'ja ladinokokoonpanoihin, ja vuoden 1821 '
+              + 'itsenäisyysjulistuksessa se nimettiin maan '
+              + 'kansallissoittimeksi.',
+          selite: 'Marimba de tecomatesin kaikupohjina ovat eri kokoiset '
+              + 'kuivatut kurpitsat, jotka riippuvat kielten alla.',
+        },
+        {
+          otsikko: 'Surina, joka tulee sian suolesta',
+          tiedosto: 'Musicians playing a marimba, Flores, Guatemala 1923.jpg',
+          teksti: 'Marimban ääni ei ole puhdas, ja se on tarkoitus. '
+              + 'Jokaisen kielen alla on kaikupohja: perinteisessä '
+              + 'soittimessa eri kokoisia kurpitsoja, hienommassa veistetty '
+              + 'puinen putki, jonka pituus voidaan virittää tarkasti. '
+              + 'Väli-Amerikassa ja Meksikossa putken pohjaan tehdään reikä '
+              + 'ja se peitetään ohuella kalvolla, joka on otettu sian '
+              + 'suolesta. Kalvo värähtelee mukana ja tuottaa surisevan '
+              + 'säröäänen, jota kutsutaan nimellä charleo. Nykysoittimissa '
+              + 'putket ovat muovia ja kalvo paperia, mutta surina on yhä '
+              + 'siinä.',
+          selite: 'Floresissa 1923 soitetun marimban kielten alla riippuvat '
+              + 'puiset kaikuputket, joiden pohjan kalvo saa aikaan '
+              + 'charleo-surinan.',
+          lahde: 'Jerome O. Kilmartin, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Quetzaltenangolainen, joka teki marimbasta pianon',
+          aika: '1894',
+          // Kuvaton (Opus 6.9.2026): kromaattisesta marimbasta ei löytynyt
+          // yhtään >= 1200 px:n kuvaa ilman tunnistettavia kasvoja.
+          teksti: 'Vanha marimba oli diatoninen: siinä oli vain yksi '
+              + 'kieliriviin ladottu asteikko. Antigua Guatemalassa pappi '
+              + 'Joseph de Padilla oli 1700-luvun puolivälissä laajentanut '
+              + 'koskettimiston 42 kieleen ja nostanut soittimen neljälle '
+              + 'jalalle, jotta sitä voi soittaa seisten. Vuonna 1894 '
+              + 'quetzaltenangolainen Sebastián Hurtado rakensi ensimmäisen '
+              + 'kromaattisen eli kaksirivisen marimban hormigo-puusta. '
+              + 'Hänen poikansa esittivät soitinta Buffalossa New Yorkin '
+              + 'osavaltiossa 1908, ja niin marimba lähti maailmalle.',
+          selite: 'Kromaattisessa marimbassa on kaksi kielirivistöä pianon '
+              + 'koskettimiston tapaan, ja sillä voi soittaa kaikissa '
+              + 'sävellajeissa.',
+        },
+        {
+          otsikko: 'Näytelmä, jota on esitetty samana päivänä vuosisatoja',
+          aika: '25. tammikuuta',
+          // Kuvaton (Opus 6.9.2026): Rabinal Achín esityksestä tai
+          // naamioista ei löytynyt yhtään >= 1200 px:n Commons-kuvaa.
+          teksti: 'Rabinal Achí on kʼicheʼnkielinen tanssinäytelmä, jonka '
+              + 'oma nimi on Xajoj Tun, "rummun tanssi". Se esitetään joka '
+              + 'vuosi 25. tammikuuta Rabinalissa Baja Verapazissa Pyhän '
+              + 'Paavalin päivänä, ja koko kylä osallistuu. Soittimina ovat '
+              + 'rakorumpu ja kaksi torvea, ja hahmot erottaa toisistaan '
+              + 'puunaamioista. Juoni kertoo Rabinalin ja kʼicheʼien '
+              + 'todellisesta kiistasta. Veljeskunnan jäsen Bartolo Sis '
+              + 'kirjoitti vuorosanat muistiin 1850, ja Unesco nimesi '
+              + 'näytelmän ihmiskunnan mestariteokseksi 2005.',
+          selite: 'Rabinal Achí on harvoja ennen siirtomaa-aikaa syntyneitä '
+              + 'näytelmiä, joita esitetään yhä alkuperäisellä kielellään.',
+        },
+      ],
+    },
+  ],
+  /*
+   * NICARAGUA (Opus 6.9.2026, maalehtierä GTM+NIC+PAN). Väitteet on
+   * luettu en-Wikipedian raakateksteistä 6.9.2026: "Nicaragua",
+   * "History of Nicaragua", "Managua", "Old Cathedral of Managua",
+   * "Ancient footprints of Acahualinca", "Nicaraguan Sign Language",
+   * "Masaya Volcano", "Bosawás Biosphere Reserve", "Mombacho",
+   * "Apoyo Lagoon Natural Reserve", "Nicaraguan cuisine", "Gallo pinto",
+   * "Nacatamal", "Vigorón", "Pinolillo", "Music of Nicaragua",
+   * "José de la Cruz Mena", "Palo de Mayo", "El Güegüense",
+   * "Culture of Nicaragua" ja "Masaya".
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA: Nicaragualla ei ole kaupunkilehteä,
+   * mutta maalla on kahdeksan kohdetta ja kolme maastokohdetta
+   * (js/packs/maastokohteet-nic.js: Cosigüina, Ometepe, San Juanjoki,
+   * León, Granada, El Castillo, Bluefields, Solentiname, Somoton
+   * kanjoni, Ciudad Darío, Bilwi), eläintäky turkoosikulmamotmotista
+   * (js/packs/elaintakyt.js) ja neljä skandaalia
+   * (js/packs/skandaalit.js). Lehti EI toista niitä: Rubén Darío,
+   * Ernesto Cardenalin Solentiname, William Walker, Mosquitorannikko ja
+   * San Juanjoen kauttakulkureitti on jätetty karttanostoille, ja
+   * Leónin ja Granadan kilpailu kerrotaan vain siitä näkökulmasta,
+   * miksi pääkaupungiksi valittiin kolmas kaupunki.
+   *
+   * SISÄLTÖLINJAUS: vuoden 1979 vallankumous, contra-sota ja
+   * nykypolitiikka on jätetty kokonaan pois samalla periaatteella kuin
+   * Kuuban vallankumous CUB-lohkosta. Bosawásin maakiistat ja niiden
+   * väkivalta on samoin rajattu ulos.
+   *
+   * KUVAT: 11 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin.
+   * YHDEKSÄN NOSTOA JÄI KUVATTOMAKSI (Acahualincan jäljet, maan nimi,
+   * viittomakieli, José de la Cruz Mena, Palo de Mayo, chicherot, La
+   * Mocuana, La Cegua ja Masayan käsityötori) — niistä ei löytynyt
+   * yhtään >= 1200 px:n Commons-kuvaa, tai ainoissa riittävän suurissa
+   * on tunnistettavat kasvot. HYLÄTYT: "Palo-de-Mayo" (tunnistettavat
+   * kasvot ja tekijä tuntematon), "MainCrater Masaya" (kuvaan poltettu
+   * päiväysleima), "Mombacho from Nandasmo" (mainostaulut etualalla),
+   * "Mercado de Artesanías de Masaya" (kuvassa on katu ja autot),
+   * "Nicaragua-708" (täytetyt kanat korissa), "Quesillo de Nicaragua"
+   * (kuvassa ruokailija).
+   */
+  NIC: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Nicaraguan vanhimmat jäljet ovat kirjaimellisesti '
+          + 'jalanjälkiä, maan nimen selitys korjattiin vasta 2002, ja '
+          + 'pääkaupunki valittiin siksi, ettei se ollut kumpikaan '
+          + 'riitapuoli.',
+      nostot: [
+        {
+          otsikko: 'Jäljet, jotka löytyivät vuosi isoisän matkan jälkeen',
+          aika: '1874',
+          // Kuvaton (Opus 6.9.2026): ainoa Commons-kuva jäljistä
+          // ("HuellasdeAcahualinca") on 1 080 px leveä.
+          teksti: 'Managuanjärven etelärannalta löytyi 1874 rakennustöissä '
+              + 'jotain odottamatonta: ihmisen jalanjälkiä kivettyneessä '
+              + 'tuhkassa ja mudassa. Enintään viisitoista ihmistä oli '
+              + 'kulkenut siitä noin 2 120 vuotta sitten. Usein kerrotaan '
+              + 'heidän paenneen purkausta, mutta askelten väli osoittaa '
+              + 'kävelyä, ei juoksua. Amerikkalainen lääkäri Earl Flint toi '
+              + 'löydön tiedemaailman tietoon 1884, ja Carnegie-instituutti '
+              + 'kaivoi paikan esiin 1941–1942 ja rakensi sen ylle museon. '
+              + 'Jälkiä on löydetty vielä neljän metrin syvyydestä.',
+          selite: 'Acahualincan jalanjäljet ovat noin 2 120 vuotta vanhat, '
+              + 'ja ne säilyivät, koska Masayan tuhkakerros kivettyi niiden '
+              + 'päälle.',
+        },
+        {
+          otsikko: 'Maan nimi ei tullutkaan päälliköltä',
+          aika: '2002',
+          // Kuvaton (Opus 6.9.2026): nicaraoista tai chorotegoista ei
+          // löytynyt Commonsista kelvollista >= 1200 px:n kuvaa.
+          teksti: 'Nicaraguan nimi tulee sanasta Nicānāhuac, jolla nawatia '
+              + 'puhuneet nicaraot kutsuivat Suur-Nicoyan seutua nykyisen '
+              + 'Nicaraguan ja Costa Rican alueella. Pitkään opetettiin, '
+              + 'että nimi olisi syntynyt päällikkö Nicaraon nimestä ja '
+              + 'sanasta agua, vesi. Vuonna 2002 kävi ilmi, että päällikön '
+              + 'oikea nimi oli Macuilmiquiztli, ja selitys kaatui. '
+              + 'Nicaraot ja chorotegat olivat vaeltaneet etelään Meksikon '
+              + 'Cholulan laaksosta, ja kolmas kansa, subtiabat, saapui '
+              + 'Guerreron seudulta noin vuonna 1200.',
+          selite: 'Nicaraguan läntiset kansat olivat kielensä ja '
+              + 'kulttuurinsa puolesta osa Mesoamerikkaa, ja ne olivat '
+              + 'muuttaneet nykyisen Meksikon alueelta.',
+        },
+        {
+          otsikko: 'Pääkaupunki valittiin, koska se ei ollut kumpikaan',
+          aika: '1852',
+          tiedosto: 'Antigua Catedral de Managua.jpg',
+          teksti: 'Itsenäisen Nicaraguan politiikkaa hallitsi Leónin '
+              + 'liberaalin ja Granadan konservatiivisen eliitin kilpailu, '
+              + 'joka ajautui toistuvasti sisällissodaksi 1840- ja '
+              + '1850-luvuilla. Ratkaisu löytyi kaupunkien väliltä. Managua '
+              + 'oli ollut kalastajakylä, joka sai kaupunkioikeudet 1819 '
+              + 'nimellä Leal Villa de Santiago de Managua, ja juuri '
+              + 'sijainti riitapuolten puolivälissä teki siitä luontevan '
+              + 'kompromissin. Pääkaupungiksi se valittiin 1852. Isoisän '
+              + 'matkan jälkeisinä vuosina kaupunkia koettelivat suuret '
+              + 'tulvat 1876 ja 1885.',
+          selite: 'Managuan vanha katedraali kesti vuoden 1931 '
+              + 'maanjäristyksen, koska siitä oli valmiina vasta rautarunko, '
+              + 'mutta vuoden 1972 järistys teki siitä käyttökelvottoman.',
+          lahde: 'eric molina, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kieli, jonka syntyminen ehdittiin nähdä',
+          aika: '1977–1986',
+          // Kuvaton (Opus 6.9.2026): Nicaraguan viittomakielestä ei ole
+          // Commonsissa yhtään kuvaa.
+          teksti: 'Nicaraguan viittomakieli on harvinaisuus: se on yksi '
+              + 'harvoista kielistä, joiden syntyminen on ehditty '
+              + 'dokumentoimaan. Ennen 1970-lukua kuurot elivät maassa '
+              + 'erillään toisistaan ja käyttivät kotona kehitettyjä omia '
+              + 'viittomia. Managuan San Judasin kaupunginosaan '
+              + 'perustettiin 1977 erityiskoulu, jossa aloitti 50 kuuroa '
+              + 'lasta, ja 1980 Villa Libertadiin ammattikoulu; 1983 '
+              + 'oppilaita oli jo yli neljäsataa. Opetus keskittyi puhuttuun '
+              + 'espanjaan, mutta lapset kehittivät keskenään oman '
+              + 'kielensä. Henkilökunta ei ymmärtänyt sitä ja kutsui '
+              + 'kesäkuussa 1986 paikalle kielitieteilijän.',
+          selite: 'Nicaraguan viittomakieli syntyi kahden koulun oppilaiden '
+              + 'kesken 1980-luvulla, ja se on harvoja kieliä, joiden '
+              + 'kielioppi on nähty muodostuvan tyhjästä.',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Managuasta tuli Nicaraguan pääkaupunki?',
+        vaihtoehdot: [
+          'Se oli maan suurin kaupunki',
+          'Se oli sopivasti riitelevien Leónin ja Granadan välissä',
+          'Sen satama oli maan tärkein',
+          'Espanjan kruunu määräsi niin',
+        ],
+        oikea: 1,
+        fakta: 'Managua oli ollut kalastajakylä, ja se valittiin '
+            + 'pääkaupungiksi 1852 nimenomaan siksi, että se sijaitsi '
+            + 'kilpailevien kaupunkien puolivälissä.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Nicaragua on tulivuorten ja järvien maa: yhdessä '
+          + 'kraatterissa on palanut laavaa vuosisatoja, toisen pohjalla '
+          + 'ui kaloja, joita ei ole missään muualla.',
+      nostot: [
+        {
+          otsikko: 'Kraatteri, joka on savunnut vuosisatoja',
+          aika: '1670',
+          tiedosto: 'Volcán Masaya.jpg',
+          teksti: 'Masayan tulivuori tunnetaan myös vanhalla '
+              + 'nawatinkielisellä nimellään Popogatepe. Nykyinen kaldera '
+              + 'syntyi noin 2 500 vuotta sitten purkauksessa, joka syöksi '
+              + 'kahdeksan kuutiokilometriä basalttista ainesta. Vuonna '
+              + '1670 Nindirín kraatterissa oli kilometrin levyinen '
+              + 'laavajärvi, joka vuoti yli reunojen, ja 1772 laavaa '
+              + 'purkautui kylkihalkeamasta. Sen jälkeen laava on näkynyt '
+              + 'vain Santiagon kuilussa, joka savuaa yhä ja päästää suuria '
+              + 'määriä rikkidioksidia. Masayasta tuli 1979 Nicaraguan '
+              + 'ensimmäinen kansallispuisto.',
+          selite: 'Masayan Santiago-kuilu hehkuu öisin, koska sen pohjalla '
+              + 'on ajoittain näkyvissä sula laava.',
+          lahde: 'Kim Gunnarsson, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Amazonin jälkeen suurin sademetsä',
+          aika: '1997',
+          tiedosto: 'PenasBlancas, part of the Bosawas Reserve, Jinotega Department, Nicaragua.jpg',
+          teksti: 'Bosawásin biosfäärialue Pohjois-Nicaraguan Jinotegassa '
+              + 'on noin 20 000 neliökilometriä eli noin 15 prosenttia koko '
+              + 'maan pinta-alasta, ja se on Amazonin jälkeen läntisen '
+              + 'pallonpuoliskon suurin trooppinen sademetsä. Unesco otti '
+              + 'sen biosfäärialueeksi 1997. Nimi on lyhenne kolmesta '
+              + 'maastonkohdasta: Bocay-joesta, Saslaya-vuoresta ja '
+              + 'Waspuk-joesta. Alue on suurelta osin tutkimatta, ja '
+              + 'hyönteislajeja arvioidaan olevan 100 000–200 000. Se on '
+              + 'mayangna- ja miskitokansojen kotiseutua.',
+          selite: 'Peñas Blancasin kalliomassiivi kohoaa Bosawásin '
+              + 'sademetsän keskeltä Jinotegan departementissa.',
+          lahde: 'Rebecca Ore, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Sammunut vuori, jonka laella on oma metsänsä',
+          aika: '1570',
+          tiedosto: 'Mombacho taken from the Pan-American Highway.jpg',
+          teksti: 'Mombacho on 1 344 metriä korkea kerrostulivuori Granadan '
+              + 'kaupungin vieressä. Sen viimeisin purkaus oli 1570, eikä '
+              + 'sitä aiemmista ole historiallista tietoa. Huippu on niin '
+              + 'korkealla ja kostea, että siellä kasvaa sumumetsää ja '
+              + 'kääpiömetsää, joiden kasveja ja eläimiä ei tavata muualta '
+              + 'kuin tältä vuorelta. Rinteiltä on laskettu yli 700 '
+              + 'kasvilajia, joukossa runsaasti kämmeköitä. Vuori on yksi '
+              + 'Nicaraguan 78 suojelualueesta, ja vaativammalle El Puma '
+              + '-polulle pääsee vain oppaan kanssa.',
+          selite: 'Mombachon huippua peittää lähes jatkuvasti pilvi, ja '
+              + 'juuri se pitää yllä vuoren omaa sumumetsää.',
+          lahde: 'FurlongWiki, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kraatterijärvi, joka teki omat kalalajinsa',
+          aika: '2008–2010',
+          tiedosto: 'Lagoon Vista - Laguna de Apoyo - Near Granada - Nicaragua - 01 (31971805505) (2).jpg',
+          teksti: 'Laguna de Apoyo on sammuneen tulivuoren kalderaan '
+              + 'syntynyt järvi Masayan ja Granadan välissä. Se on lähes '
+              + 'pyöreä, halkaisijaltaan 6,6 kilometriä, 175 metriä syvä ja '
+              + 'noin 23 000 vuotta vanha; vettä ei virtaa ulos, vaan '
+              + 'tasapaino syntyy pohjaveden liikkeestä. Eristys on '
+              + 'tuottanut kuusi kirjoahvenlajia, joita ei ole missään '
+              + 'muualla maailmassa: ensimmäinen kuvattiin 1976, kolme '
+              + 'lisää 2008 ja kaksi viimeistä vasta 2010. Järvi on ollut '
+              + 'suojelualue 1991, ja siitä on kirjattu yli 230 lintulajia.',
+          selite: 'Laguna de Apoyon reunat ovat sammuneen tulivuoren '
+              + 'kalderan seinämät, ja järven pohja on 175 metrin syvyydessä.',
+          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Lännessä syödään maissia, itärannikolla kalaa ja '
+          + 'kookosta — ja koko maassa riisiä ja papuja, jotka on '
+          + 'kypsennetty samassa pannussa.',
+      nostot: [
+        {
+          otsikko: 'Kansallisruoka, jonka nimi on kirjava kukko',
+          tiedosto: 'Gallo pinto-IMG 0672.JPG',
+          teksti: 'Gallo pinto tarkoittaa kirjavaa kukkoa, ja nimi tulee '
+              + 'siitä, miltä ruoka näyttää: mustien tai punaisten papujen '
+              + 'kanssa kypsennetty riisi muuttuu täplikkääksi. Sekä '
+              + 'Nicaragua että Costa Rica pitävät sitä kansallisruokanaan, '
+              + 'ja siitä, kumman maan ruoka se alun perin on, kiistellään '
+              + 'yhä; juurten arvellaan yleisesti olevan afrokaribialaiset. '
+              + 'Nicaragualaisessa versiossa riisi keitetään suolan ja '
+              + 'sipulin kanssa, ja pavut kypsennetään valkosipulin, '
+              + 'oreganon ja sipulin kera. Ruoka kelpaa aamiaiseksi ja '
+              + 'lounaaksi.',
+          selite: 'Gallo pinto saa täplikkään värinsä siitä, että riisi '
+              + 'kypsennetään papujen keitinveden kanssa.',
+          lahde: 'C T Johansson, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Nyytti, jonka tekemiseen menee kaksi päivää',
+          tiedosto: 'Nacatamal y patacones con frijoles molidos.jpg',
+          teksti: 'Nacatamal on Nicaraguan juhlava tamaali, ja nimi tulee '
+              + 'nawatin sanoista nakat, liha, ja tamal. Pohjana on '
+              + 'kalkkivedessä keitetty maissitaikina, johon sekoitetaan '
+              + 'sianrasvaa, suolaa ja annattoa. Täytteeksi tulee '
+              + 'marinoitua sianlihaa, riisiä, perunaviipaleita, tomaattia, '
+              + 'sipulia, paprikaa, oliiveja ja mintunoksa sekä pieni '
+              + 'chile congo -chili; joskus mukaan pannaan luumuja, '
+              + 'rusinoita tai kapriksia. Kaikki kääritään '
+              + 'banaaninlehteen, sidotaan narulla tyynymäiseksi mytyksi ja '
+              + 'höyrytetään tunteja. Työ vie usein kaksi päivää ja koko '
+              + 'perheen.',
+          selite: 'Nacatamal kääritään banaaninlehteen ja sidotaan narulla, '
+              + 'ja lehti antaa kypsyessään ruoalle oman tuoksunsa.',
+          lahde: 'Arturo Sotillo, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Ruoka, joka sai nimensä lääkemainoksesta',
+          aika: '1914',
+          tiedosto: 'VIGORON.JPG',
+          teksti: 'Vigorón on Granadan oma ruoka ja yksi maan '
+              + 'tunnetuimmista. Osia on kolme: keitettyä kassavaa eli '
+              + 'yucaa, rapeaksi paistettua chicharrónia ja curtidoa eli '
+              + 'kaalisalaattia, johon tulee tomaattia, sipulia ja chiliä '
+              + 'etikkaan ja suolaan marinoituna. Kaikki tarjotaan '
+              + 'banaaninlehden päällä ja syödään ilman aterimia. Nimi on '
+              + 'peräisin sattumasta: María Luisa Cisneros Lacayo kehitti '
+              + 'annoksen Granadassa 1914 ja nimesi sen nähtyään julisteen, '
+              + 'jossa mainostettiin Vigorón-nimistä lääkejuomaa.',
+          selite: 'Vigorónin kolme osaa — keitetty yuca, chicharrón ja '
+              + 'etikkainen kaalisalaatti — tarjotaan banaaninlehdellä '
+              + 'ilman aterimia.',
+          lahde: 'Nicaraguan food, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Juoma, josta koko kansa sai lempinimensä',
+          tiedosto: 'Prepared pinol in two large mugs ready to drink.jpg',
+          teksti: 'Pinolillo on paahdetusta maissista ja pienestä määrästä '
+              + 'paahdettua kaakaota jauhettu juoma, jota maustetaan '
+              + 'kanelilla, maustepippurilla ja neilikalla ja joka '
+              + 'sekoitetaan veteen tai maitoon. Nimi tulee sanasta pinole, '
+              + 'joka tarkoittaa paahdettua ja jauhettua maissia. Juoma on '
+              + 'niin keskeinen, että nicaragualaiset kutsuvat itseään '
+              + 'nimellä pinoleros, pinolillon juojat. Perinteinen astia on '
+              + 'jícara, jícaro-puun kovasta hedelmäkuoresta tehty kulho, '
+              + 'johon kaiverretaan usein kukkia tai maisemia.',
+          selite: 'Pinol ja pinolillo jauhetaan paahdetusta maissista, ja '
+              + 'juoma on paksua ja rakenteeltaan hiukan karkeaa.',
+          lahde: 'GrammarFascist, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä nicaragualainen vigorón sai nimensä?',
+        vaihtoehdot: [
+          'Sen keksijän sukunimestä',
+          'Julisteesta, joka mainosti Vigorón-nimistä lääkejuomaa',
+          'Granadan kaupunginosasta',
+          'Espanjalaisesta sotilasarvosta',
+        ],
+        oikea: 1,
+        fakta: 'María Luisa Cisneros Lacayo kehitti annoksen Granadassa '
+            + '1914 ja otti nimen näkemästään lääkemainoksesta.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Nicaraguan marimbaa soitetaan istuen, soitin polvien '
+          + 'päällä — ja maan rakastetuin säveltäjä kirjoitti valssinsa '
+          + 'sokeana.',
+      nostot: [
+        {
+          otsikko: 'Marimba, jota soitetaan polvien päällä',
+          tiedosto: 'Marimbas en el baile de negras, Masaya Nicaragua tomada por Maynor Valenzuela.jpg',
+          teksti: 'Nicaraguan marimba eroaa muun Väli-Amerikan marimboista '
+              + 'soittotavaltaan: soittaja istuu ja pitää soitinta '
+              + 'polvillaan sen sijaan että seisoisi sen ääressä. Mukana on '
+              + 'tavallisesti basso, kitara ja guitarrilla, pieni '
+              + 'mandoliinia muistuttava kitara, ja kokoonpano soittaa '
+              + 'juhlissa taustamusiikkina. Soittimen kielet ovat kovaa '
+              + 'puuta, ja ne on ladottu eri mittaisten bambu- tai '
+              + 'metalliputkien päälle; lyömiseen käytetään kahta tai '
+              + 'neljää vasaraa.',
+          selite: 'Nicaraguan marimba on niin pieni, että se lepää '
+              + 'soittajan polvilla, ja sitä lyödään kahdella tai neljällä '
+              + 'vasaralla.',
+          lahde: 'Mynor 2009, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Säveltäjä, joka kirjoitti valssinsa sokeana',
+          aika: '1874–1907',
+          // Kuvaton (Opus 6.9.2026): Menasta tai hänen mukaansa nimetystä
+          // Leónin teatterista ei löytynyt >= 1200 px:n Commons-kuvaa.
+          teksti: 'José de la Cruz Mena syntyi Leónissa 3. toukokuuta 1874 '
+              + 'muusikkosukuun, opiskeli Managuan musiikkikoulussa ja '
+              + 'soitti trumpettia kaupungin orkestereissa. Hän sairastui '
+              + 'kaksikymmentäyksivuotiaana spitaaliin. Häntä ei siirretty '
+              + 'maan spitaalisiirtolaan, koska hän omisti kolme teostaan '
+              + 'presidentti José Santos Zelayalle. Viidessä vuodessa hän '
+              + 'sokeutui täysin, esiintyi enää harvoin ja kuoli 22. '
+              + 'syyskuuta 1907. Hänet tunnetaan nimellä "jumalallinen '
+              + 'spitaalinen", ja Leónin teatteri on nimetty hänen '
+              + 'mukaansa.',
+          selite: 'José de la Cruz Menan valssit ovat Nicaraguan '
+              + 'tunnetuinta taidemusiikkia, vaikka suuri osa hänen '
+              + 'tuotannostaan on kadonnut.',
+        },
+        {
+          otsikko: 'Toukotanko, jota lähetyssaarnaaja paheksui 1874',
+          aika: '1874',
+          // Kuvaton (Opus 6.9.2026): ainoassa Commons-kuvassa Palo de
+          // Mayosta on tunnistettavia kasvoja eikä tekijää ole merkitty.
+          teksti: 'Palo de Mayo on Karibian rannikon afronicaragualainen '
+              + 'juhla ja tanssi, joka on nimetty nauhoin koristellun '
+              + 'toukotangon mukaan. Se juhlii sadetta ja uutta kasvua, ja '
+              + 'perinne alkoi Bluefieldsissä; brittiuudisasukkaat toivat '
+              + 'nauhatanssin sinne todennäköisesti 1830-luvun alussa. '
+              + 'Isoisän matkan jälkeisenä vuonna 1874 moravialainen '
+              + 'lähetyssaarnaaja J. E. Lundberg kirjoitti sen jo '
+              + 'muuttuneen: juhlaa vietettiin öisin kuutamossa ja '
+              + 'meluisasti. Soittimina olivat puunrungosta koverretut '
+              + 'rummut, pyykkilautabasso ja aasin leukaluu.',
+          selite: 'Palo de Mayon toukotanko on korkea puinen tanko, jonka '
+              + 'latvasta riippuu pitkiä värillisiä nauhoja.',
+        },
+        {
+          otsikko: 'Pohjoisessa soi polkka',
+          // Kuvaton (Opus 6.9.2026): chichero-yhtyeestä ei löytynyt
+          // yhtään >= 1200 px:n Commons-kuvaa.
+          teksti: 'Nicaraguan musiikki jakautuu kolmeen alueeseen. Karibian '
+              + 'rannikolla kuuluu afrikkalainen ja alkuperäiskansojen '
+              + 'perintö, Tyynenmeren puolella alkuperäiskansojen ja '
+              + 'espanjalaisen kulttuurin sekoitus — ja maan pohjois- ja '
+              + 'keskiosissa musiikki on eurooppalaisempaa, koska seudulle '
+              + 'muutti aikanaan runsaasti saksalaisia. Siellä tanssitaan '
+              + 'yhä polkkaa ja masurkkaa. Yksityisjuhlissa soittaa usein '
+              + 'chichero-yhtye: trumpetti, pasuuna tai muu vaskisoitin ja '
+              + 'joukko lyömäsoittajia.',
+          selite: 'Chichero-yhtye on Nicaraguan juhlien vakiokokoonpano, '
+              + 'jossa vaskisoittimet ja lyömäsoittimet kulkevat mukana '
+              + 'ilman lavaa.',
+        },
+      ],
+    },
+    {
+      id: 'kansanperinne',
+      nimi: 'Kansanperinne',
+      johdanto: 'Nicaraguan tunnetuin näytelmä pilkkaa vallanpitäjiä '
+          + 'naamion takaa, ja maan kuuluisin tarina kertoo kadonneesta '
+          + 'aarteesta.',
+      nostot: [
+        {
+          otsikko: 'Näytelmä, jossa vanha mies huijaa kuvernööriä',
+          aika: '1500-luku',
+          tiedosto: 'Mascaras de El Gueguense.jpg',
+          teksti: 'El Güegüense on satiirinen naamionäytelmä ja Nicaraguan '
+              + 'tunnetuin kansanteos. Sen kirjoitti tuntematon tekijä '
+              + '1500-luvulla, ja se on läntisen pallonpuoliskon vanhimpia '
+              + 'alkuperäiskansojen tanssinäytelmiä. Nimi tulee nawatin '
+              + 'sanasta wewej, vanha tai viisas mies. Vuorosanoja on 314, '
+              + 'ja ne ovat sekaisin nawatia ja espanjaa; hahmoja on '
+              + 'neljätoista, joukossa kuvernööri Tastuanes ja neljä '
+              + 'muulia. Näytelmä esitetään Diriambassa 17.–27. tammikuuta, '
+              + 'ja Unesco nimesi sen mestariteokseksi 2005.',
+          selite: 'El Güegüensen hahmot tunnistaa puisista naamioista, ja '
+              + 'näytelmä siirtyi suullisena perinteenä kirjaksi vasta '
+              + '1942.',
+          lahde: 'Rodrigo Fernández, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Prinsessa, joka kätki aarteen ja jäi luolaan',
+          // Kuvaton (Opus 6.9.2026): La Mocuanasta ei ole Commonsissa
+          // kuvitusta.
+          teksti: 'La Mocuana on Nicaraguan kuuluisin kansantarina, ja sen '
+              + 'uskotaan pohjautuvan tositapahtumiin. Päällikkö otti '
+              + 'espanjalaiset ensin vieraanvaraisesti vastaan mutta käski '
+              + 'heidät sitten pois. Kun nämä palasivat aarteen perässä, '
+              + 'päällikkö piilotti sen, ja ainoa toinen paikan tietäjä oli '
+              + 'hänen tyttärensä. Tytär rakastui myöhemmin erään '
+              + 'espanjalaissotilaan poikaan ja antoi tälle isänsä aarteen '
+              + 'yhteistä tulevaisuutta varten — ja mies sulki hänet '
+              + 'luolaan ja pakeni kullan kanssa. Tyttö pääsi ulos luolan '
+              + 'takakautta ja jäi vaeltamaan metsiin.',
+          selite: 'La Mocuanan tarina liittyy piilotettuun aarteeseen, ja '
+              + 'sen kerrotaan pohjautuvan todelliseen päällikön tyttäreen.',
+        },
+        {
+          otsikko: 'Hahmo, joka varmisti että miehet tulivat kotiin',
+          // Kuvaton (Opus 6.9.2026): La Ceguasta ei ole Commonsissa
+          // kuvitusta.
+          teksti: 'La Cegua on metsässä asuva olento, jonka nimi tulee '
+              + 'todennäköisesti nawatin sanasta cihua, nainen. '
+              + 'Kertomukset vaihtelevat: toisissa hänellä on valkoinen '
+              + 'maissinlehtipuku ja huntu, toisissa pitkä musta tukka '
+              + 'kasvojen edessä tai guarumo-puun lehdistä tehty asu ja '
+              + 'banaaninlehtien käheyttämä ääni. Miehet lähtevät hänen '
+              + 'peräänsä metsäteille eivätkä palaa entisellään. Suojaksi '
+              + 'neuvotaan heittämään maahan sinapinsiemeniä, joita hän jää '
+              + 'poimimaan. Tarinan tehtävä on ilmeinen: se saa miehet '
+              + 'palaamaan töistä suoraan kotiin.',
+          selite: 'La Cegua kuuluu Nicaraguan varoittaviin '
+              + 'kansantarinoihin, joita on kerrottu maaseudulla '
+              + 'sukupolvesta toiseen.',
+        },
+        {
+          otsikko: 'Kaupunki, jota sanotaan kansanperinteen kehdoksi',
+          // Kuvaton (Opus 6.9.2026): Masayan käsityötorista ei löytynyt
+          // kelvollista kuvaa — ainoassa suuressa on katu ja autot.
+          teksti: 'Masayaa kutsutaan Nicaraguan kansanperinteen kehdoksi ja '
+              + 'käsityön sydämeksi. Kaupungin päätorilla myydään käsin '
+              + 'kudottuja riippumattoja, kirjottuja puseroita, '
+              + 'puuveistoksia ja hamppupunoksia, ja järven puoleisessa '
+              + 'kaupunginosassa on kokonainen kortteli, joka tekee vain '
+              + 'riippumattoja. Vanhaan 1900-luvun alun markkinahalliin on '
+              + 'kunnostettu erillinen käsityötori, jossa esitetään '
+              + 'torstai-iltaisin kansantansseja. Monimbón kaupunginosa on '
+              + 'Masayan alkuperäisasutuksista ainoa, joka on säilyttänyt '
+              + 'oman identiteettinsä.',
+          selite: 'Masayan käsityötori toimii vanhassa 1900-luvun alun '
+              + 'markkinahallissa, ja sen tavaroista tunnetuimpia ovat '
+              + 'käsin kudotut riippumatot.',
+        },
+      ],
+    },
+  ],
+  /*
+   * PANAMA (Opus 6.9.2026, maalehtierä GTM+NIC+PAN). Väitteet on luettu
+   * en-Wikipedian raakateksteistä 6.9.2026: "Panama", "History of
+   * Panama", "Isthmus of Panama", "Great American Interchange",
+   * "Barro Colorado Island", "Smithsonian Tropical Research Institute",
+   * "Harpy eagle", "Panamanian cuisine", "Sancocho", "Bollo",
+   * "Carimañola", "Music of Panama", "Tamborito", "Pollera",
+   * "Mola (art form)" ja "Culture of Panama".
+   *
+   * TYÖNJAKO PANAMÁN KAUPUNKILEHDEN JA KARTTANOSTOJEN KANSSA: Panamán
+   * kaupunkilehti (js/packs/kulttuuri-kategoriat.js, avain panama)
+   * kattaa jo hopeatien ja Ristien tien, Henry Morganin, Casco Viejon,
+   * panamahatun, Cerro Ancónin, cimarrónit, vuoden 1855 rautatien ja
+   * kanavan sulut. Maastokohteet (js/packs/maastokohteet-pan.js:
+   * Volcán Barú, Coiba, Chagres, Portobelo, Panaman rautatie, El Caño,
+   * Guna Yala, Los Santos, Bocas del Toro, Dariénin aukko,
+   * Helmisaaret), eläintäky kultasammakosta ja skandaalit (San Blasin
+   * kapina 1925, Dariénin hanke 1698) kantavat omansa. Maalehti EI
+   * toista niitä: kannaksesta kerrotaan geologiana ja eläimistönä,
+   * Guna Yalasta vain molan ja nuchukanan kautta.
+   *
+   * SISÄLTÖLINJAUS (sama kuin faktapohja-panama.md:ssä): Noriegan aika,
+   * vuoden 1989 hyökkäys ja kanavaa koskeva nykypolitiikka on jätetty
+   * kokonaan pois. Vuoden 1903 ero Kolumbiasta mainitaan vain
+   * juhlapäivänä.
+   *
+   * KUVAT: 14 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin.
+   * KUUSI NOSTOA JÄI KUVATTOMAKSI (vuoden 1826
+   * kongressi, ceviche, tamborito, congo, música típica ja nuchukana):
+   * niistä ei löytynyt yhtään >= 1200 px:n Commons-kuvaa ilman
+   * tunnistettavia kasvoja tai vesileimaa. HYLÄTYT: "Empolleradas
+   * Panameñas" ja "Pollera panameña, tesoro de la tradición"
+   * (tunnistettavat kasvot), "Pollera montuna azul" (vesileima ja
+   * kasvot), "Tamborito La Mochila" (tunnistettavat kasvot), "Harpy
+   * Eagle immature - Darién - Panama" (kuvaan poltettu tekijäleima),
+   * "Best Annual Music Festivals in Panama" (kuvattu San Franciscossa,
+   * ei Panamassa), "ISS022-E-13352 - View of Panama" (pelkkiä pilviä).
+   */
+  PAN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Panaman kannaksella on tehty Amerikan varhaisinta '
+          + 'keramiikkaa, nähty Tyynimeri ensi kertaa idästä päin ja '
+          + 'kutsuttu koolle maanosan ensimmäinen yhteinen kokous.',
+      nostot: [
+        {
+          otsikko: 'Kulta, joka kulki Jukatanille asti',
+          aika: '2500 eaa.–1501',
+          tiedosto: 'Panama Pendant with two figures DMA 1976-W-245.jpg',
+          teksti: 'Monagrillon arkeologiselta alueelta Azueron niemimaalta '
+              + 'on löydetty keramiikkaa vuosilta 2500–1200 eaa. — se on '
+              + 'Väli-Amerikan varhaisimpia. Samasta paikasta on myös yksi '
+              + 'seudun vanhimmista maissinviljelyn jäljistä. Monagrillosta '
+              + 'kehittyi Gran Coclén kulttuurialue, jonka kultasepäntyö '
+              + 'levisi kauas: coclélaisia kultaesineitä on löydetty '
+              + 'Chichén Itzástä Jukatanin niemimaalta asti. Kun '
+              + 'eurooppalaiset saapuivat 1501, kannaksella puhuttiin '
+              + 'tšibtša- ja tšoko-kieliä.',
+          selite: 'Panaman esikolumbiaanisissa kultariipuksissa toistuvat '
+              + 'ihmishahmot päähineineen, ja samanlaisia esineitä on '
+              + 'kulkeutunut kaukaisiin kauppapaikkoihin.',
+          lahde: 'FA2010, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Mies, joka näki Etelämeren ensimmäisenä',
+          aika: '1513',
+          tiedosto: 'Monumento a Balboa.jpg',
+          teksti: 'Vasco Núñez de Balboa kuuli Karibian rannikkoa '
+              + 'purjehtiessaan paikallisilta, että kannaksen toisella '
+              + 'puolella on toinen meri. Hän ylitti kannaksen Dariénin '
+              + 'kautta ja näki 25. syyskuuta 1513 ensimmäisenä '
+              + 'eurooppalaisena Tyynenmeren. Nimeksi tuli Etelämeri, koska '
+              + 'se oli kannaksen eteläpuolella. Kuusi vuotta myöhemmin, '
+              + '1519, Tyynenmeren rannalle perustettiin Panamán kaupunki '
+              + 'pienen alkuperäisasutuksen viereen. Espanjan valtakuntaan '
+              + 'kannas kuului yli kolmesataa vuotta, 1513–1821.',
+          selite: 'Panamán kaupungin Balboa-muistomerkissä valloittaja '
+              + 'seisoo maapallon päällä, jota kannattelevat neljää '
+              + 'maanosaa esittävät hahmot.',
+          lahde: 'Pabloalcides, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Itsenäisyys alkoi maakunnasta, ei pääkaupungista',
+          aika: '1821',
+          tiedosto: 'Iglesia de San Atanasio -La Villa de Los Santos, Los Santos.jpg',
+          teksti: 'Panaman itsenäistyminen alkoi maaseudulta. Azueron '
+              + 'niemimaan asukkaat julistivat 10. marraskuuta 1821 '
+              + 'eroavansa Espanjasta; tapahtuma tunnetaan nimellä Grito de '
+              + 'La Villa de Los Santos. Veraguasissa se katsottiin '
+              + 'maanpetokseksi ja pääkaupungissa hätiköinniksi, mutta se '
+              + 'pakotti erojulistusta valmistelevat kiirehtimään. '
+              + 'Kuningasmielinen everstiluutnantti José de Fábrega oli jo '
+              + 'käännytetty, ja 28. marraskuuta 1821 kokoontunut '
+              + 'kansalliskokous julisti kannaksen irti Espanjasta ja '
+              + 'liitti sen Bolívarin Kolumbiaan. Sitä päivää vietetään yhä '
+              + 'itsenäisyyspäivänä.',
+          selite: 'San Atanasion kirkko seisoo La Villa de Los Santosissa, '
+              + 'kaupungissa, jossa Azueron asukkaat julistivat 10. '
+              + 'marraskuuta 1821 eroavansa Espanjasta.',
+          lahde: 'Gualberto107, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kokous, jossa Amerikka tapasi itsensä',
+          aika: '1826',
+          // Kuvaton (Opus 6.9.2026): kongressista löytyi vain moderni
+          // karttakaavio, ei kuvaa.
+          teksti: 'Simón Bolívar kutsui kesäkuussa 1826 Panamán kaupunkiin '
+              + 'kokouksen, jota kutsutaan amfiktyoniseksi kongressiksi '
+              + 'antiikin kreikkalaisten kaupunkiliittojen mukaan. Paikalla '
+              + 'olivat edustajat Argentiinasta, Boliviasta, Brasiliasta, '
+              + 'Väli-Amerikasta, Yhdysvalloista, Suur-Kolumbiasta, '
+              + 'Chilestä, Meksikosta ja Perusta. Tarkoitus oli liittää '
+              + 'vasta itsenäistyneet maat yhdeksi puolustusliitoksi '
+              + 'Euroopan suurvaltoja vastaan, jotka puhuivat menetettyjen '
+              + 'siirtomaidensa takaisin ottamisesta. Paikaksi valittiin '
+              + 'kannas, koska sen kautta kuljettiin joka tapauksessa '
+              + 'kumpaankin suuntaan.',
+          selite: 'Vuoden 1826 kongressi oli ensimmäinen kerta, kun vasta '
+              + 'itsenäistyneiden Amerikan valtioiden edustajat '
+              + 'kokoontuivat saman pöydän ääreen.',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Panaman kannas on kapein kohta, jossa kaksi maanosaa '
+          + 'liittyy yhteen — ja sen syntyminen muutti sekä valtamerten '
+          + 'virrat että eläimistön molemmilla mantereilla.',
+      nostot: [
+        {
+          otsikko: 'Maakannas, joka pani jään navalle',
+          tiedosto: 'Nahl 1850, Der Isthmus von Panama auf der Höhe des Chagres River.jpg',
+          teksti: 'Panaman kannas nousi merestä arviolta noin kolme '
+              + 'miljoonaa vuotta sitten, kun Cocos-laatta työntyi Karibian '
+              + 'laatan alle ja nosti merenpohjaa; osa tutkijoista pitää '
+              + 'kannasta vanhempana, jopa 10–15 miljoonan vuoden ikäisenä. '
+              + 'Seuraukset olivat maailmanlaajuiset. Atlantin ja '
+              + 'Tyynenmeren vedet erosivat, syntyi Golfvirta, ja lämpimien '
+              + 'ja kylmien virtausten kierto muuttui niin, että '
+              + 'pohjoiselle navalle alkoi kertyä jääkalottia. Ajatuksen '
+              + 'esitti 1910 Henry Fairfield Osborn nisäkäsfossiilien '
+              + 'perusteella.',
+          selite: 'Charles Christian Nahlin öljymaalaus vuodelta 1850 '
+              + 'esittää Chagres-jokea, jota pitkin kannaksen yli '
+              + 'kuljettiin ennen rautatietä.',
+          lahde: 'Charles Christian Nahl, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Silta, jota pitkin eläimet vaihtoivat mantereita',
+          tiedosto: 'Glyptodon clavipes 01.jpg',
+          teksti: 'Kun kannas sulkeutui, alkoi suuri amerikkalainen vaihto: '
+              + 'maaeläimet pääsivät kulkemaan mantereelta toiselle, ja '
+              + 'liikenne kiihtyi noin 2,7 miljoonaa vuotta sitten. '
+              + 'Etelä-Amerikassa oli siihen asti kehittynyt oma '
+              + 'eläimistönsä erillään muusta maailmasta: vyötiäisiä, '
+              + 'muurahaiskarhuja ja laiskiaisia sekä niiden sukuisia '
+              + 'jättiläisiä — panssaroituja glyptodontteja ja norsun '
+              + 'kokoisia maalaiskiaisia. Suuria saalistajia olivat '
+              + 'pussinisäkkäät ja lentokyvyttömät kauhulinnut. Pohjoisesta '
+              + 'tuli kissoja, koiraeläimiä ja karhuja.',
+          selite: 'Glyptodon oli vyötiäisten sukulainen, jonka kilpi oli '
+              + 'yhtenäinen kupu; laji kehittyi Etelä-Amerikassa maanosien '
+              + 'ollessa erillään.',
+          lahde: 'H. Zell, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Saari, jonka jokainen puu on laskettu',
+          aika: '1923',
+          tiedosto: 'Barro Colorado Research.JPG',
+          teksti: 'Barro Colorado syntyi vahingossa: kun Chagres padottiin '
+              + 'Gatúnjärveksi 1913, vesi peitti metsän ja kukkuloiden '
+              + 'huiput jäivät saariksi. Suurin niistä on 15,6 '
+              + 'neliökilometriä. Se rauhoitettiin 17. huhtikuuta 1923, ja '
+              + 'vuodesta 1946 sitä on hoitanut Smithsonian-instituutti. '
+              + 'Saarelle perustettiin 1980 viidenkymmenen hehtaarin '
+              + 'koeala, jonka ensimmäisessä laskennassa 1982 kirjattiin '
+              + 'jokainen yli senttimetrin paksuinen puu ja pensas — noin '
+              + '240 000 runkoa ja 303 lajia. Laskenta uusitaan viiden '
+              + 'vuoden välein.',
+          selite: 'Barro Coloradon tutkimusasema on yksi maailman '
+              + 'tutkituimpia trooppisen metsän kenttäasemia, ja sinne '
+              + 'pääsee vain veneellä.',
+          lahde: 'Chad Carson, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Vaakunalintu, joka saalistaa apinoita',
+          tiedosto: 'Captive Harpia harpyja (Harpy Eagle) at Belize Zoo.jpg',
+          teksti: 'Harpyijakotka on Panaman kansallislintu ja sen vaakunan '
+              + 'lintu. Nimi tulee kreikan mytologian harpyijoista, '
+              + 'tuulihengistä, joilla oli petolinnun jalat ja naisen pää. '
+              + 'Naaras painaa tavallisesti 6–9 kiloa, ja laji on koko '
+              + 'levinneisyysalueensa suurin petolintu. Se elää sademetsän '
+              + 'ylimmässä latvuskerroksessa ja saalistaa etenkin apinoita '
+              + 'ja laiskiaisia; kamerapyydysten ja kirjallisuuden '
+              + 'perusteella saalislajeja tunnetaan 116. Elinympäristön '
+              + 'häviäminen on hävittänyt lajin lähes koko '
+              + 'Väli-Amerikasta.',
+          selite: 'Harpyijakotkan päälaen sulkatöyhtö nousee pystyyn, kun '
+              + 'lintu kuuntelee ääntä latvuksessa.',
+          lahde: 'Perryprog, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Barro Coloradon saari syntyi?',
+        vaihtoehdot: [
+          'Se kohosi merestä tulivuoren purkauksessa',
+          'Kanavan tekojärvi peitti metsän, ja kukkulan huippu jäi saareksi',
+          'Se irtosi mantereesta maanjäristyksessä',
+          'Se rakennettiin kanavan ruoppausmassoista',
+        ],
+        oikea: 1,
+        fakta: 'Chagres padottiin 1913 Gatúnjärveksi, ja veden noustessa '
+            + 'metsäisten kukkuloiden huiput jäivät saariksi keskelle '
+            + 'kanavaa.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Panaman kansallisruokaa käytetään vertauskuvana koko '
+          + 'maasta: monta ainesta, yksi pata.',
+      nostot: [
+        {
+          otsikko: 'Keitto, joka on vertauskuva koko maasta',
+          tiedosto: 'Sancocho de guandú con carne salá.JPG',
+          teksti: 'Sancocho de gallina on Panaman kansallisruoka. '
+              + 'Perusaineksia on kolme: kana, ñame-jamssi ja culantro. '
+              + 'Jamssi antaa keitolle sen paksun rakenteen ja culantro '
+              + 'suurimman osan mausta ja vihertävästä sävystä. Mukaan '
+              + 'tulee usein myös kassavaa, maissintähkää ja otoe-juurta. '
+              + 'La Chorreran versio tehdään vain vapaana kasvaneesta '
+              + 'kanasta, ja Chiriquín maakunnan versio on tukevin ja '
+              + 'kurpitsan takia kellertävä. Ruokaa käytetään vertauskuvana '
+              + 'maan monimuotoisuudesta: jokainen aines tuo omansa samaan '
+              + 'pataan.',
+          selite: 'Sancocho tarjotaan valkoisen riisin kanssa, joka joko '
+              + 'sekoitetaan keittoon tai syödään lusikallisen rinnalla.',
+          lahde: 'Jdvillalobos, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Maissinyytti, joka voi olla raskaana',
+          tiedosto: 'Bollos.jpg',
+          teksti: 'Bollo on maissista, kassavasta tai perunasta tehty '
+              + 'nyytti, joka kääritään lehteen ja keitetään. Maissi- ja '
+              + 'kassavabollot ovat Panaman ja Kolumbian Karibian rannikon '
+              + 'alkuperäisruokaa, ja niitä on verrattu Andien humitaan ja '
+              + 'Brasilian pamonhaan. Panamassa päälajeja on kaksi: '
+              + 'tuoreesta maissista tehty bollo de maíz nuevo ja '
+              + 'kuivatusta maissista tehty, joka maustetaan voilla — tai '
+              + 'täytetään naudanlihalla, jolloin sitä kutsutaan nimellä '
+              + 'bollo preñado, raskaana oleva bollo. Käärepaperina on '
+              + 'nahuala-palmun lehti, maissinlehti tai banaaninlehti.',
+          selite: 'Bollot sidotaan maissinlehtiin ja keitetään; nyyttiä on '
+              + 'kuvattu tamaalin sukulaiseksi.',
+          lahde: 'George Lou, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kassavapasteija, jonka sisällä on lihaa',
+          tiedosto: 'Barranquilla - Carimañolas.jpg',
+          teksti: 'Carimañola muistuttaa empanadaa, mutta kuori ei ole '
+              + 'vehnää vaan keitettyä ja survottua kassavaa eli yucaa. '
+              + 'Taikinaan lisätään hieman voita, öljyä tai suolaa, se '
+              + 'muotoillaan torpedon muotoiseksi ja täytetään jauhelihalla, '
+              + 'revitulla kanalla tai juustolla; joskus mukaan tulee '
+              + 'kuullotettua sipulia, valkosipulia, paprikaa tai kuminaa. '
+              + 'Nyytti uppopaistetaan kullanruskeaksi ja tarjotaan sueron '
+              + 'tai tulisen ají-kastikkeen kanssa. Se on tavallista '
+              + 'aamiais- ja välipalaruokaa Panaman ja Kolumbian Karibian '
+              + 'rannikolla.',
+          selite: 'Carimañolan kuori tehdään keitetystä kassavasta, ja '
+              + 'nyytti muotoillaan torpedoksi ennen uppopaistoa.',
+          lahde: 'Jdvillalobos, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Kaksi merta, kaksi kalaa',
+          // Kuvaton (Opus 6.9.2026): panamalaisesta cevichestä ei
+          // löytynyt yhtään >= 1200 px:n Commons-kuvaa.
+          teksti: 'Kahden valtameren välissä oleva maa syö luonnollisesti '
+              + 'kalaa. Panaman ceviche tehdään useimmiten corvinasta tai '
+              + 'tilapiasta. Keittiön perusta on kuitenkin maalla: riisi, '
+              + 'maissi ja pavut. Yleisimpiä pääruokia ovat arroz con '
+              + 'pollo ja sancocho, ja aamiaispöydän vakiovieras on '
+              + 'hojaldre, taikinasta paistettu litteä leipä. Jouluateriaan '
+              + 'kuuluvat kanatamaalit, arroz con pollo, paistettu porsas, '
+              + 'kalkkuna ja täyte, ja pöydässä on hedelmiä ja '
+              + 'hedelmäkakkua. Juhlajuoma on ron ponche, rommilla '
+              + 'terästetty munatoti.',
+          selite: 'Corvina on Panaman Tyynenmeren puolen tavallisin '
+              + 'ruokakala, ja siitä tehdään sekä ceviche että paistetut '
+              + 'annokset.',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Panaman kansallistanssissa on kolme rumpua, naislaulaja '
+          + 'ja yleisö, joka taputtaa kaksi kertaa tahtiin.',
+      nostot: [
+        {
+          otsikko: 'Kolme rumpua ja laulaja ympyrän keskellä',
+          aika: '1600-luku',
+          // Kuvaton (Opus 6.9.2026): tamborito-rummuista ei löytynyt
+          // yhtään >= 1200 px:n Commons-kuvaa ilman tunnistettavia
+          // kasvoja.
+          teksti: 'Tamborito, "pieni rumpu", on Panaman kansallistanssi, ja '
+              + 'sen sävelmien juuret ulottuvat 1600-luvulle. Se on '
+              + 'espanjalaisen, alkuperäiskansojen ja afrikkalaisen '
+              + 'perinteen sekoitus: rytmi on afrikkalainen ja sanat '
+              + 'toistuvia kuten Länsi-Afrikan lauluperinteessä. '
+              + 'Esiintyjien ympärille muodostuu ihmisrengas, joka '
+              + 'taputtaa kahdesti tahtia kohti ja vastaa laulajan '
+              + 'säkeisiin. Rumpuja on kolme, kaikki koverrettu '
+              + 'paikallisista puista ja päällystetty parkitulla '
+              + 'naudannahalla: lyhyt ja leveä caja, pohjaäänen antava '
+              + 'repujador ja korkeaääninen repicador.',
+          selite: 'Tamboriton kolme rumpua ovat caja, repujador ja '
+              + 'repicador, ja ne koverretaan yhdestä puunrungosta.',
+        },
+        {
+          otsikko: 'Viisi kieltä ja kolme kieltä',
+          tiedosto: 'Mejorana2.jpg',
+          teksti: 'Panaman maaseudun soittimista tärkeimmät ovat '
+              + 'mejoranera ja rabel. Mejoranera on viisikielinen pieni '
+              + 'kitara, jolla säestetään mejorana-lauluja ja torrenteja; '
+              + 'rabel on kolmikielinen viulu, jolla soitetaan cumbioita, '
+              + 'puntoja ja pasilloja. Ne kuuluvat etenkin keskisiin '
+              + 'maakuntiin Cocléen, Herreraan, Los Santosiin ja '
+              + 'Veraguasiin. Näiden laulujen erikoisuus on laulutapa: '
+              + 'saloman ja mejoranan huudahtelevan tyylin sanotaan '
+              + 'periytyvän sevillalaisilta.',
+          selite: 'Mejoranera on viisikielinen panamalainen kitara, ja se '
+              + 'on maaseudun laulujen tärkein säestyssoitin.',
+          lahde: 'Kiam-shim, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Karibian rannikon oma perinne',
+          // Kuvaton (Opus 6.9.2026): congo-perinteestä ei löytynyt yhtään
+          // Panamassa kuvattua >= 1200 px:n Commons-kuvaa.
+          teksti: 'Panaman pohjoisrannikon mustien yhteisöjen musiikkia '
+              + 'kutsutaan nimellä congo, ja se on kotonaan Costa Arriban '
+              + 'seudulla Colónin maakunnassa, muun muassa Portobelossa. '
+              + 'Rannikon musiikkiin ovat vaikuttaneet sekä 1500–1800-'
+              + 'luvuilla Länsi-Afrikasta orjuutettuina tuodut ihmiset että '
+              + '1840-luvulta 1914 asti rautatie- ja kanavatöihin muuttaneet '
+              + 'karibialaiset — jamaikalaiset, trinidadilaiset, '
+              + 'barbadoslaiset, martiniquelaiset ja saintlucialaiset. '
+              + 'Siksi Panamassa soi myös calypso ja reggae.',
+          selite: 'Congo-perinne elää Panaman Karibian rannikon kylissä, ja '
+              + 'sen juuret ovat Länsi-Afrikasta tuotujen ihmisten '
+              + 'yhteisöissä.',
+        },
+        {
+          otsikko: 'Haitari, joka valtasi maaseudun',
+          aika: '1940-luku',
+          // Kuvaton (Opus 6.9.2026): panamalaisesta típico-yhtyeestä ei
+          // löytynyt yhtään kelvollista Commons-kuvaa.
+          teksti: 'Nykyistä panamalaista kansanmusiikkia kutsutaan nimillä '
+              + 'música típica ja pindín. Se on ottanut 1940-luvulta '
+              + 'lähtien mukaan güiron, congan ja ennen kaikkea haitarin, '
+              + 'joka on nyt lajin tunnusääni. Kaupungissa soi toinen '
+              + 'perinne: panamalainen Luis Russell soitti 1920-luvulla '
+              + 'Louis Armstrongin kanssa, ja 1960-luvulla syntyivät '
+              + 'Combos Nacionales, viiden ja kymmenen soittajan väliset '
+              + 'sähköiset yhtyeet, jotka sekoittivat jazzia, calypsoa, '
+              + 'salsaa, merengueä ja soulia. Panaman tunnetuin '
+              + 'salsamuusikko on Rubén Blades.',
+          selite: 'Música típicassa haitari on johtava soitin, ja sen '
+              + 'rinnalla soivat güiro ja conga.',
+        },
+      ],
+    },
+    {
+      id: 'kasityot',
+      nimi: 'Käsityöt',
+      johdanto: 'Panaman kansallispuvun tekemiseen menee puolitoista '
+          + 'vuotta, ja gunanaisten pusero syntyy leikkaamalla pois.',
+      nostot: [
+        {
+          otsikko: 'Puku, jota tehdään puolitoista vuotta',
+          tiedosto: 'Pollera SantoDomingo.jpg',
+          teksti: 'Pollera on Panaman kansallispuku: käsin tehty hame ja '
+              + 'pusero, joiden juuret ovat 1500- ja 1600-luvulla '
+              + 'saapuneiden espanjalaisnaisten vaatteissa. Puku ommellaan '
+              + 'mittatilaustyönä, koska istuvuutta pidetään olennaisena, '
+              + 'ja yhden valmistus vie puolestatoista kahteen vuoteen. '
+              + 'Päälajeja on kaksi: juhlava gala ja arkinen labor. '
+              + 'Tekotapoja on kolme — talco al sol bordada, gala de labor '
+              + 'zurcida calada ja marcada — ja kuviot ovat useimmiten '
+              + 'värikkäitä kukkia valkoisella pohjalla. Tekijöitä on '
+              + 'eniten Azueron niemimaalla.',
+          selite: 'Polleran kuviot tehdään pistoin ja pitsein ohuelle '
+              + 'puuvillalle, ja yhden puvun ompelu vie yli vuoden.',
+          lahde: 'BlundiesBestBoots, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Seitsemän ketjua ja vapisevat hiuskoristeet',
+          aika: 'tammikuu',
+          tiedosto: 'Ciudad de Panamá Carnival 1946, 41 of 58.jpg',
+          teksti: 'Pollera ei ole pelkkä puku vaan koko varustus. Siihen '
+              + 'kuuluvat huivi ja viuhka, seitsemän kullattua '
+              + 'hopeaketjua, viiden kamman sarja ja tembleques — helmillä '
+              + 'ja kristalleilla koristellut hiuskoristeet, jotka '
+              + 'värisevät liikkeen mukana; nimi tulee sanasta temblar, '
+              + 'vapista. Alla on kaksi alushametta. Puvut periytyvät '
+              + 'suvussa, ja niitä myydään myös käytettyinä. Tammikuussa '
+              + 'Las Tablasissa järjestetään Desfile de las Mil Polleras, '
+              + 'tuhannen polleran kulkue, jossa maan eri seutujen mallit '
+              + 'nähdään yhtaikaa.',
+          selite: 'Vuoden 1946 karnevaaliviikolla kuvatuissa polleroissa '
+              + 'näkyvät hiuksiin kiinnitetyt tembleques ja puvun oma '
+              + 'pitsireunus.',
+          lahde: 'Richard, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Pusero, joka tehdään leikkaamalla pois',
+          tiedosto: 'MolasGuna.jpg',
+          teksti: 'Mola on gunanaisten puseron kuviopaneeli, ja gunan '
+              + 'kielellä sana tarkoittaa paitaa. Kuviot olivat alun perin '
+              + 'kehomaalauksia; espanjalaisten tulon jälkeen samat '
+              + 'geometriset kuviot siirtyivät kankaalle, ensin '
+              + 'maalaamalla ja sitten ompelemalla. Kangas saatiin '
+              + '1800-luvulla vaihtokauppana laivoilta, jotka tulivat '
+              + 'ostamaan kookoksia. Tekotapa on käänteinen applikointi: '
+              + 'kahdesta seitsemään erivärista kangaskerrosta ommellaan '
+              + 'yhteen, ja kuvio syntyy leikkaamalla kerroksia pois ja '
+              + 'kääntämällä reunat alle. Parhaissa pistot ovat lähes '
+              + 'näkymättömiä.',
+          selite: 'Molissa kuviot esittävät geometrian ohella kukkia, '
+              + 'lintuja ja merieläimiä, ja jokainen paneeli tehdään '
+              + 'käsin.',
+          lahde: 'Ayaita, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Puuhahmot, jotka nukkuvat nyytissä',
+          // Kuvaton (Opus 6.9.2026): nuchukana-hahmoista ei ole
+          // Commonsissa kelvollista kuvaa.
+          teksti: 'Nuchukana ovat gunien veistämiä ihmisenmuotoisia '
+              + 'puuhahmoja. Niitä käytetään parantamiseen: kun joku '
+              + 'sairastuu, pidetään meno, jossa lauletaan ja poltetaan '
+              + 'tupakkaa, ja hahmoja pyydetään etsimään taudin syy. Kun '
+              + 'niitä ei tarvita, ne pidetään nyytissä talossa, jossa '
+              + 'niiden uskotaan pitävän pahat henget ulkona. Jokaisella on '
+              + 'oma tarinansa, ja ne periytyvät sukupolvelta toiselle; '
+              + 'niiden pesu kuuluu vain nuorille tytöille tai iäkkäille '
+              + 'isoäideille. Vanha ja kulunut hahmo heitetään pois, '
+              + 'joskus laulun saattelemana.',
+          selite: 'Nuchukana veistetään puusta ihmisen muotoon, ja niitä '
+              + 'säilytetään nyytissä talon sisällä.',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten gunanaisten mola-paneelin kuvio syntyy?',
+        vaihtoehdot: [
+          'Kuvio kudotaan suoraan kankaaseen',
+          'Useasta värillisestä kangaskerroksesta leikataan osia pois',
+          'Kuvio painetaan puukaavaimella',
+          'Kuvio maalataan kasviväreillä',
+        ],
+        oikea: 1,
+        fakta: 'Tekotapa on käänteinen applikointi: kahdesta seitsemään '
+            + 'kangaskerrosta ommellaan yhteen, ja kuvio paljastuu, kun '
+            + 'kerroksia leikataan auki ja reunat käännetään alle.',
+      },
+    },
+  ],
+  /*
+   * ETIOPIA (Opus 6.9.2026, Afrikan maalehtierä). Addis Abeban litteät
+   * "Elämää"-nostot (africa-kulttuuri.js, avain addisabeba) kertovat
+   * kahviseremoniasta, ethio-jazzista ja injerasta, ja kartan
+   * maastokohteet (maastokohteet-eth.js) Ras Dejenistä, Tanajärvestä,
+   * Sinisestä-Niilistä, Aksumista, Fasil Ghebbistä, Hararista, Tiyasta,
+   * Debre Damosta, Danakilista, Hadarista ja Balen puistosta —
+   * skandaalit.js kertoo Tewodros II:n kirjeen ja Wuchalen sopimuksen.
+   * Lehti täydentää niitä eikä toista niitä.
+   *
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026:
+   * "Lalibela", "Kebra Nagast", "Zemene Mesafint", "Menelik II",
+   * "Teff", "Ethiopian cuisine", "Berbere", "Ensete ventricosum",
+   * "Yared", "Begena", "Azmari", "Masenqo", "Krar", "Eskista",
+   * "Geʽez script", "Garima Gospels", "Ethiopian talismanic scrolls",
+   * "Ethiopian calendar", "Church forests of Ethiopia", "Walia ibex",
+   * "Sof Omar Caves" ja "Ethiopian wolf".
+   */
+  ETH: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Isoisän matkavuonna 1873 Etiopiaa hallitsee keisari, jonka '
+          + 'edeltäjät olivat sata vuotta olleet ruhtinaidensa vankeja — ja '
+          + 'jonka valtakunta väittää polveutuvansa Salomosta.',
+      nostot: [
+        {
+          otsikko: 'Yksitoista kirkkoa, jotka kaivettiin alaspäin',
+          aika: '1181–1221',
+          tiedosto: 'Bete Giyorgis 01.jpg',
+          teksti: 'Lalibelan kirkkoja ei rakennettu vaan louhittiin: '
+              + 'punaisesta tuffikalliosta hakattiin ensin ympäri kulkeva '
+              + 'kuilu ja sitten kirkko sen keskelle, pilarit, ikkunat ja '
+              + 'katto samasta kivipaadesta. Yksitoista kirkkoa on '
+              + 'perinteen mukaan Zagwe-kuningas Gebre Meskel Lalibelan '
+              + 'ajalta, ja niiden nimet ja sijoittelu toistavat '
+              + 'Jerusalemia — osa tutkijoista yhdistää työn siihen, että '
+              + 'Jerusalem menetettiin 1187. Portugalilainen pappi '
+              + 'Francisco Álvares näki kirkot 1520-luvulla ja lopetti '
+              + 'kuvauksensa vannomalla Jumalan nimeen, ettei ollut '
+              + 'valehdellut sanaakaan.',
+          selite: 'Bete Giyorgis on Lalibelan kirkoista tunnetuin: sen '
+            + 'ristinmuotoinen katto on maanpinnan tasalla, ja kirkkoon '
+            + 'laskeudutaan alaspäin.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Lalibela',
+        },
+        {
+          otsikko: 'Kirja, joka teki kuninkaista Salomon jälkeläisiä',
+          aika: '1300-luku',
+          tiedosto: 'Saba ephiop 02.jpg',
+          teksti: 'Kebra Nagast, Kuninkaiden kunnia, on 1300-luvulla '
+              + 'geezin kielellä kirjoitettu kansalliseepos: 117 lukua '
+              + 'siitä, kuinka Saban kuningatar Makeda matkusti Salomon '
+              + 'luo ja kuinka heidän poikansa Menelik I toi liitonarkin '
+              + 'Etiopiaan. Nykytutkimus pitää kertomusta 1200-luvulla '
+              + 'valtaan nousseen Salomonisen dynastian oikeutuksena — '
+              + 'juuri se antoi sille tekstin, jolla se saattoi syrjäyttää '
+              + 'Zagwe-hallitsijat. Dynastia hallitsi vuoteen 1974 asti, '
+              + 'ja moni uskoo kirjan yhä historiaksi.',
+          selite: 'Saban kuningattaren ja Salomon tarina on etiopialaisen '
+            + 'maalauksen suosituimpia aiheita, ja se kerrotaan ruutu '
+            + 'ruudulta.',
+          lahde: 'Tuntematon etiopialainen maalari, Wikimedia Commons (PD)',
+          wiki: 'Kebra Negast',
+        },
+        {
+          otsikko: 'Sata vuotta, jolloin keisari oli vieras omassa linnassaan',
+          aika: '1769–1855',
+          teksti: 'Ras Mikael Sehul syrjäytti keisari Iyoas I:n 7. '
+              + 'toukokuuta 1769, ja siitä alkoi Zemene Mesafint, '
+              + 'ruhtinaiden aika. Keisarit istuivat yhä Gondarissa, '
+              + 'mutta valta oli maakuntien ruhtinailla, jotka '
+              + 'taistelivat keskenään siitä, kuka saisi pitää '
+              + 'kuninkaiden kuningasta holhouksessaan. Nimi on Raamatun '
+              + 'Tuomarien kirjasta. Vahvimmat suvut olivat Yejjun '
+              + 'Warra Seh -dynastia ja Tigren ruhtinaat, ja kausi '
+              + 'päättyi vasta 11. helmikuuta 1855, kun Kassa Haylu '
+              + 'kruunattiin keisari Tewodros II:ksi lyötyään kaikki '
+              + 'kilpailijansa.',
+          wiki: 'Zemene Mesafint',
+        },
+        {
+          otsikko: 'Keisari, joka tilasi maalleen postin ja polkupyörät',
+          aika: '1886–1913',
+          teksti: 'Menelik II siirsi pääkaupunkinsa Addis Abebaan 1886 ja '
+              + 'kruunattiin Entoton vuorella 3. marraskuuta 1889. Hänen '
+              + 'luottomiehensä oli sveitsiläinen insinööri Alfred Ilg, '
+              + 'joka viipyi maassa 29 vuotta ja sai ainoana '
+              + 'ulkomaalaisena bitwoded-arvon. Menelikin aikana maahan '
+              + 'tuli posti 1893, oma hopeataaleri 1894, isorokkorokotukset '
+              + '1898, ensimmäinen valtion koulu 1906, polkupyörät '
+              + 'joulukuussa 1907 ja autot tammikuussa 1908. Rautatie '
+              + 'Djiboutista aloitettiin 1897, mutta se valmistui '
+              + 'pääkaupunkiin asti vasta 1917, neljä vuotta keisarin '
+              + 'kuoleman jälkeen.',
+          wiki: 'Menelik II',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Etiopialainen ateria on yhteinen: pata kaadetaan leivän '
+          + 'päälle ja kaikki repivät oman palansa samasta reunasta.',
+      nostot: [
+        {
+          otsikko: 'Vilja, jonka nimi tarkoittaa kadonnutta',
+          tiedosto: 'Teff Village Oromia Ethiopia Oct19 R16 02202.jpg',
+          teksti: 'Tefin siemen on halkaisijaltaan alle millimetrin, ja '
+              + 'nimi tulee ilmeisesti amharan sanasta teffa, katosi — '
+              + 'kourallinen riittää kylvöksi isolle pellolle, mutta '
+              + 'maahan pudonnutta jyvää ei löydä enää kukaan. Lajia on '
+              + 'viljelty Etiopian ylängöllä ainakin vuodesta 1000 eaa., '
+              + 'ja 2016 maassa kasvoi yli 90 prosenttia koko maailman '
+              + 'tefistä. Kasvi kestää sekä kuivuutta että vettynyttä '
+              + 'maata, ja parhaat sadot saadaan 1 800–2 100 metrissä. '
+              + 'Jauhoista hapatetaan injera, iso huokoinen lettuleipä, '
+              + 'joka on samalla lautanen ja lusikka.',
+          selite: 'Tef kasvaa hennoksi ja lakoontuu helposti, joten sato '
+            + 'korjataan käsin sirpillä.',
+          lahde: 'Timothy A. Gonsalves, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Teff',
+        },
+        {
+          otsikko: 'Pata, jossa on viisitoista maustetta',
+          tiedosto: 'Injera and doro wat.jpg',
+          teksti: 'Wat on etiopialaisen keittiön peruspata, ja se alkaa '
+              + 'aina samalla tavalla: valtava määrä hienonnettua '
+              + 'punasipulia haudutetaan pannulla ilman rasvaa, kunnes se '
+              + 'hajoaa kastikkeeksi. Vasta sitten lisätään niter kibbeh, '
+              + 'maustettu kirkastettu voi, ja berbere — chilistä, '
+              + 'korianterista, inkivääristä, sarviapilasta, '
+              + 'ryytineilikasta ja korarima-kardemummasta hierottu '
+              + 'mausteseos, joka antaa padalle sen värin. Doro wat, '
+              + 'kanapata kovaksi keitettyine kananmunineen, on juhlien '
+              + 'pata; kuurmaustettu alicha wat tehdään ilman berberea.',
+          selite: 'Doro wat on juhlien pata: kanaa ja kovaksi keitetty '
+            + 'kananmuna berbere-kastikkeessa injeran päällä.',
+          lahde: 'Edsel Little, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Ethiopian cuisine',
+        },
+        {
+          otsikko: 'Banaani, jota ei syödä hedelmänä',
+          tiedosto: 'Ensete ventricosum - Flower and top leafs.jpg',
+          teksti: 'Enset näyttää banaanilta ja kasvaa kuuden metrin '
+              + 'korkuiseksi, mutta sen hedelmä on syömäkelvoton. Ruoka '
+              + 'on runko: se survotaan, haudataan maahan kuopan pohjalle '
+              + 'ja käytetään kuukausia, jolloin syntyy kocho, hapan '
+              + 'taikina, josta paistetaan leipää. Etiopia on ainoa maa, '
+              + 'jossa kasvia viljellään, ja se ruokkii noin kaksikymmentä '
+              + 'miljoonaa ihmistä eteläisillä ylängöillä. Enset kestää '
+              + 'kuivuutta ja sen voi korjata minä tahansa vuodenaikana, '
+              + 'joten sitä on kutsuttu nälkää vastaan istutetuksi puuksi. '
+              + 'Skotlantilainen James Bruce kuvasi sen 1769.',
+          selite: 'Enset kukkii vain kerran elämänsä lopussa; ruoaksi käytetään '
+            + 'runkoa ja juurta, ei hedelmää.',
+          lahde: 'Rillke, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ensete ventricosum',
+        },
+        {
+          otsikko: 'Paastopäivät tekivät keittiöstä kasvisruokaa',
+          tiedosto: 'Injera, Fasting Food, Ethiopia (11286899826).jpg',
+          teksti: 'Etiopian ortodoksinen tewahedo-kirkko paastoaa joka '
+              + 'keskiviikko ja perjantai sekä koko paastonajan, eikä '
+              + 'silloin syödä mitään eläinperäistä — ei lihaa, ei maitoa, '
+              + 'ei kananmunaa. Siksi maan keittiössä on satoja vegaanisia '
+              + 'ruokia ja poikkeuksellisen laaja valikoima kasviöljyjä: '
+              + 'seesamin ja saflorin lisäksi puristetaan nugia eli '
+              + 'niger-siemenen öljyä. Paastopäivän ateria on '
+              + 'beyaynetu, injeran päälle aseteltu kehä kasvispatoja: '
+              + 'linssiä, kikhernettä, punajuurta, kaalia ja tuoretta '
+              + 'salaattia, joista jokainen syödään samasta leivästä.',
+          selite: 'Paastopäivän beyaynetu kootaan injeran päälle kehäksi, jossa '
+            + 'jokainen kasvispata on oma makunsa.',
+          lahde: 'Rod Waddington, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Ethiopian Orthodox Tewahedo Church',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä ensetistä eli väärästä banaanista syödään?',
+        vaihtoehdot: [
+          'Hedelmä',
+          'Runko ja juuri',
+          'Lehdet',
+          'Siemenet',
+        ],
+        oikea: 1,
+        fakta: 'Runko survotaan ja käytetään kuopassa kuukausia, jolloin '
+            + 'syntyy kocho-taikina; hedelmä on syömäkelvoton.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Etiopiassa on oma sävelasteikkonsa, oma nuottikirjoituksensa '
+          + 'ja soittimet, jotka jaettiin aikoinaan pyhiin ja syntisiin.',
+      nostot: [
+        {
+          otsikko: 'Mies, joka keksi nuotit ennen Eurooppaa',
+          aika: '505–571',
+          tiedosto: '"Yared An (sic) His Disciples Singing A Song In Front Of King Gebreme Skel . . ." (3171512810).jpg',
+          teksti: 'Pyhä Yared syntyi Aksumissa 505 ja sävelsi zeman, '
+              + 'Etiopian kirkon kirkkolaulun, sekä merkintätavan, jolla '
+              + 'se kirjoitettiin muistiin. Perimätiedon mukaan poikana '
+              + 'hän ei oppinut mitään, kunnes näki toukan yrittävän '
+              + 'puuhun yhä uudelleen ja alkoi lukea. Kuningas Gebre '
+              + 'Meskelin hovissa hänestä tuli kuuluisa, mutta hän pyysi '
+              + 'lupaa lähteä opettamaan ja rukoilemaan. Yared kokosi '
+              + 'Deggua-laulukirjan ja kuoli 66-vuotiaana 571 luolassa '
+              + 'Simien-vuorilla. Hänen laulunsa kaikuvat kirkoissa yhä.',
+          selite: 'Yaredin laulua kuningas Gebre Meskelin edessä maalataan '
+            + 'etiopialaisten kirkkojen seiniin yhä uudelleen.',
+          lahde: 'A. Davey, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Yared',
+        },
+        {
+          otsikko: 'Kymmenkielinen soitin, joka soi paastonaikana',
+          tiedosto: 'Begena, Ethiopia, wood, leather, skin, bowel strings, iron nails - Linden-Museum - Stuttgart, Germany - DSC03896.jpg',
+          teksti: 'Begena on kymmenkielinen laatikkolyyra, jota soitetaan '
+              + 'vain zemaan eli hengelliseen musiikkiin. Perimätieto '
+              + 'sanoo sen olevan sama soitin, jolla Daavid rauhoitti '
+              + 'kuningas Saulia ja jonka Menelik I toi Afrikkaan; '
+              + 'käsikirjoituksissa se esiintyy 1400-luvun alusta. '
+              + 'Sitä soitetaan yksin lauluäänen kanssa, ja sanat kertovat '
+              + 'elämän katoavaisuudesta ja kuolemasta. Kirkko ei käytä '
+              + 'begenaa jumalanpalveluksessa, mutta paastonaikana sen '
+              + 'matala surina kuuluu radiosta ja kirkkojen pihoilta. '
+              + 'Addis Abeban Yared-musiikkikoulu alkoi opettaa sitä 1972.',
+          selite: 'Begenan kymmentä kieltä näppäillään vasemmalla kädellä, ja '
+            + 'soittimen matala surina kuuluu etenkin paastonaikana.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+          wiki: 'Begena',
+        },
+        {
+          otsikko: 'Yhdellä kielellä pilkattiin keisareitakin',
+          tiedosto: 'Violon masenko-Ethiopie.jpg',
+          teksti: 'Azmari on kiertävä laulaja, joka säestää itseään '
+              + 'yksikielisellä masenqo-jousisoittimella tai krar-lyyralla '
+              + 'ja sepittää säkeet paikan päällä. Masenqon kaikukoppa on '
+              + 'neljästä laudasta liimattu neliö, jonka yli on pingotettu '
+              + 'nahka, ja ainoa kieli on hevosenjouhta. Azmarit '
+              + 'mainitaan ensi kertaa 1400-luvun puolivälissä, ja he '
+              + 'olivat maan yhteiskuntakriitikkoja: keisarikaan ei '
+              + 'säästynyt, jos hän oli epäsuosittu. Naisazmarit olivat '
+              + 'yhtä lailla ammattilaisia. Nykyään heitä kuulee '
+              + 'tej bet -nimisissä hunajaviinikapakoissa.',
+          selite: 'Masenqon ainoa kieli on hevosenjouhta, ja sen '
+            + 'neliönmuotoisen kaikukopan yli on pingotettu nahka.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Azmari',
+        },
+        {
+          otsikko: 'Tanssi, joka tehdään pelkillä hartioilla',
+          teksti: 'Eskista tarkoittaa amharaksi tanssivia hartioita. '
+              + 'Jalat pysyvät lähes paikallaan, ja liike tulee '
+              + 'ylävartalosta: hartiat, rintakehä, pää ja niska '
+              + 'nytkähtelevät rummun tahdissa niin nopeasti, että '
+              + 'tanssia pidetään yhtenä Afrikan teknisesti '
+              + 'vaativimmista. Tanssi on kotoisin amharojen alueelta, '
+              + 'mutta sitä tanssitaan koko maassa häissä ja juhlissa, ja '
+              + 'sillä on omat alueelliset tyylinsä. Parhaalle tanssijalle '
+              + 'annetaan shilimat: katsoja painaa setelin tanssijan '
+              + 'hikiselle otsalle, johon se jää kiinni.',
+          wiki: 'Eskista',
+        },
+      ],
+    },
+    {
+      id: 'kirjat',
+      nimi: 'Kirjat ja aika',
+      johdanto: 'Etiopiassa on oma kirjaimistonsa ja oma kalenterinsa: '
+          + 'vuosi alkaa syyskuussa, kuukausia on kolmetoista ja '
+          + 'vuosiluku on seitsemän vuotta pienempi kuin muualla.',
+      nostot: [
+        {
+          otsikko: 'Kirjaimisto, johon vokaalit kasvoivat kiinni',
+          tiedosto: 'Ethiopian - Leaf from Gunda Gunde Gospels - Walters W850154R - Open Obverse.jpg',
+          teksti: 'Geezin kirjaimisto polveutuu muinaisesta '
+              + 'eteläarabialaisesta kirjoituksesta ja oli aluksi pelkkiä '
+              + 'konsonantteja, jotka kirjoitettiin oikealta vasemmalle. '
+              + '300-luvulla siihen tehtiin ratkaiseva muutos: jokaiseen '
+              + 'konsonanttiin liitettiin vokaalimerkki niin, että '
+              + 'kirjaimesta tuli tavu, ja kirjoitussuunta kääntyi '
+              + 'vasemmalta oikealle. Kuningas Ezanan piirtokirjoitukset '
+              + 'ovat vanhimmat kokonaan vokalisoidut tekstit. Amharaksi '
+              + 'kirjaimistoa sanotaan fideliksi, ja sillä kirjoitetaan '
+              + 'amharan ja tigrinjan lisäksi yli kahtakymmentä muuta '
+              + 'kieltä.',
+          selite: 'Geezin kirjaimet ovat tavumerkkejä, ja kirkkokirjat '
+            + 'kirjoitettiin käsin pergamentille punaisella ja mustalla.',
+          lahde: 'Tuntematon etiopialainen kirjuri, Walters Art Museum, '
+            + 'Wikimedia Commons (PD)',
+          wiki: 'Geʽez script',
+        },
+        {
+          otsikko: 'Maailman vanhin kuvitettu evankeliumikirja',
+          aika: 'n. 390–660',
+          tiedosto: 'Garima-Gospels-1.jpg',
+          teksti: 'Abba Gariman luostarissa Tigrayssa säilytetään kolmea '
+              + 'geeziksi kirjoitettua evankeliumikirjaa. Radiohiiliajoitus '
+              + 'antoi vanhimmalle, Garima kakkoselle, iäksi noin 390–570 '
+              + 'ja Garima ykköselle 530–660 — ne ovat siis maailman '
+              + 'vanhimmat säilyneet kuvitetut kristilliset '
+              + 'käsikirjoitukset. Länsimainen tutkimus piti niitä '
+              + 'käsialan perusteella pitkään 1100-luvun töinä. Kirjat '
+              + 'eivät tiettävästi ole koskaan poistuneet luostarista; '
+              + 'kun seutu oli vuosisatoja vieraan vallan alla, ne '
+              + 'saattoivat maata piilossa luolassa.',
+          selite: 'Garima-evankeliumien kaarikuvat ovat maailman vanhimpia '
+            + 'säilyneitä kristillisiä kirjankuvituksia.',
+          lahde: 'Tuntematon, Wikimedia Commons (PD)',
+          wiki: 'Garima Gospels',
+        },
+        {
+          otsikko: 'Käärö, joka mitattiin potilaan pituiseksi',
+          teksti: 'Sairas tilasi suojakäärön dabtaralta, kirkon '
+              + 'oppineelta, joka ei ollut pappi. Käärö kirjoitettiin '
+              + 'geeziksi nahalle, ja siihen maalattiin silmiä, '
+              + 'geometrisia kuvioita ja rukouksia; teksti tehtiin juuri '
+              + 'sitä ihmistä varten, jota sen piti auttaa. Käärö '
+              + 'ripustettiin kaulaan tai kiedottiin vartalon ympärille, '
+              + 'ja koska geeziä osasivat vain harvat, teksti piti lukea '
+              + 'sairaalle ääneen, jotta se vaikuttaisi. Vanhimmat '
+              + 'säilyneet ovat 1500-luvulta, ja niitä uskotaan tehdyn jo '
+              + '900-luvulta alkaen.',
+          wiki: 'Ethiopian art',
+        },
+        {
+          otsikko: 'Kolmastoista kuukausi, jossa on viisi päivää',
+          teksti: 'Etiopian kalenterissa on kaksitoista kolmenkymmenen '
+              + 'päivän kuukautta ja niiden perässä kolmastoista, johon '
+              + 'jää viisi päivää — karkausvuonna kuusi. Vuosi vaihtuu '
+              + 'meidän syyskuumme 11. päivänä, ja uudenvuodenpäivää '
+              + 'sanotaan amharaksi Enkutatashiksi, korujen lahjaksi. '
+              + 'Ajanlaskun alkupiste on eri kuin lännessä, joten '
+              + 'vuosiluku on seitsemän tai kahdeksan vuotta pienempi '
+              + 'kuin muualla maailmassa. Neljän vuoden karkauskierto on '
+              + 'nimetty evankelistojen mukaan: Johanneksen, Matteuksen, '
+              + 'Markuksen ja Luukkaan vuodet seuraavat toisiaan.',
+          wiki: 'Ethiopian calendar',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Montako päivää on Etiopian kalenterin kolmannessatoista '
+            + 'kuukaudessa?',
+        vaihtoehdot: [
+          'Kolmekymmentä',
+          'Kaksikymmentäkahdeksan',
+          'Viisi tai kuusi',
+          'Kymmenen',
+        ],
+        oikea: 2,
+        fakta: 'Kaksitoista kuukautta on tasan kolmenkymmenen päivän '
+            + 'mittaisia, ja loput viisi tai kuusi päivää muodostavat '
+            + 'oman kuukautensa.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Ylänkö on saari: kolmen kilometrin korkeudessa elää '
+          + 'lajeja, joita ei ole missään muualla, ja alhaalla virtaa '
+          + 'joki kallion sisään.',
+      nostot: [
+        {
+          otsikko: 'Metsäsaaret, joita kirkot ovat vartioineet 1 500 vuotta',
+          teksti: 'Pohjois-Etiopian ylängöistä on raivattu pelloiksi niin '
+              + 'paljon, että alkuperäistä metsää on jäljellä noin neljä '
+              + 'prosenttia — ja lähes kaikki siitä kasvaa kirkkojen '
+              + 'ympärillä. Perinteen mukaan kirkon kuuluu seisoa metsässä, '
+              + 'ja siksi noin 35 000 kirkkometsää on säilynyt vihreinä '
+              + 'saarekkeina keskellä kynnettyä maata; pienin on kolme '
+              + 'hehtaaria, suurin kolmesataa. Metsät nostavat pohjaveden '
+              + 'pintaa, viilentävät ja pitävät pölyttäjät hengissä. Kun '
+              + 'reunat alkoivat kulua, papit ja kyläläiset ryhtyivät '
+              + 'muuraamaan niiden ympärille kiviaitoja.',
+          wiki: 'Ethiopian Orthodox Tewahedo Church',
+        },
+        {
+          otsikko: 'Vuorikauris, joka jäi yhden vuoriston vangiksi',
+          tiedosto: 'Walia ibex 2.jpg',
+          teksti: 'Walia-vuorikauris elää vain Simien-vuorten jyrkänteillä '
+              + 'ja on eteläisin nykyisistä vuorikauriista. Uros painaa '
+              + '80–125 kiloa, ja sen taaksepäin kaartuvat sarvet '
+              + 'kasvavat yli metrin mittaisiksi. Turkki on '
+              + 'suklaanruskea, vatsa ja jalkojen sisäpinnat valkoiset. '
+              + 'Aikuisen ainoat luonnonviholliset ovat hyeena ja '
+              + 'leopardi. Laji luokiteltiin 1990-luvun lopulla '
+              + 'äärimmäisen uhanalaiseksi, ja vaikka kanta kasvaisi, '
+              + 'jäljellä oleva vuoristo elättäisi vain noin kaksituhatta '
+              + 'yksilöä — kotiseutua ei ole enempää.',
+          selite: 'Walia-vuorikauriin sarvet kaartuvat taaksepäin ja kasvavat '
+            + 'uroksella yli metrin mittaisiksi.',
+          lahde: 'Leonard A. Floyd, Wikimedia Commons (CC0)',
+          wiki: 'Walia ibex',
+        },
+        {
+          otsikko: 'Joki, joka katoaa maan alle ja tulee ulos kilometrin päästä',
+          aika: '1972',
+          tiedosto: 'Sof Omar Cave, Ethiopia (10116690765).jpg',
+          teksti: 'Weyib-joki painuu Ayiew Macon suulta kallion sisään ja '
+              + 'nousee taas päivänvaloon Holucan lähteellä kilometrin '
+              + 'päässä. Väliin jää Sof Omar, Etiopian pisin luola: '
+              + 'mitattua käytävää on 15,1 kilometriä, ja vuoden 1972 '
+              + 'kartoituksessa se oli koko Afrikan pisin. Luolan '
+              + 'kuuluisin osa on Pylväiden sali. Paikka on pyhä sekä '
+              + 'muslimeille että oromojen omalle uskonnolle, ja se on '
+              + 'saanut nimensä alueella asuneesta pyhästä miehestä; '
+              + 'tyttären nimi Ayiew jäi joen nielevään suuhun.',
+          selite: 'Sof Omarin luolassa on mitattua käytävää 15,1 kilometriä, ja '
+            + 'Weyib-joki virtaa sen läpi.',
+          lahde: 'Rod Waddington, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Sof Omar Caves',
+        },
+        {
+          otsikko: 'Afrikan harvinaisin peto syö jyrsijöitä',
+          tiedosto: 'Canis simensis Bale Mountains National Park 9.jpg',
+          teksti: 'Etiopiansusi on kooltaan kojootin luokkaa, kapeapäinen '
+              + 'ja punavalkoinen, ja se on Afrikan uhanalaisin '
+              + 'petoeläin. Toisin kuin useimmat suuret koiraeläimet se ei '
+              + 'ole yleissyöjä vaan erikoistunut ylängön jyrsijöihin, '
+              + 'joita se pyydystää yksin päiväsaikaan — vaikka nukkuu ja '
+              + 'liikkuu laumassa. Lajia on jäljellä vain seitsemällä '
+              + 'toisistaan erillään olevalla vuoristoalueella 3 000–4 500 '
+              + 'metrin korkeudessa, ja aikuisia laskettiin 2011 vain '
+              + '360–440, joista yli puolet Balen vuorilla. Suurin uhka '
+              + 'ovat kylien koirien taudit.',
+          selite: 'Etiopiansusi metsästää yksin päiväsaikaan ylängön '
+            + 'jyrsijöitä, vaikka nukkuu ja liikkuu laumassa.',
+          lahde: 'Laika ac, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Ethiopian wolf',
+        },
+      ],
+    },
+  ],
+  /*
+   * SUDAN (Opus 6.9.2026, Afrikan maalehtierä). Kartan maastokohteet
+   * (maastokohteet-sdn.js) kertovat Jebel Marrasta, Punaisestamerestä,
+   * Niilistä, Meroësta, Jebel Barkalista, Kermasta, Vanhasta
+   * Dongolasta, Solebista, Naqasta, Dinderistä ja Sennarista, ja
+   * Darfurin ja Suakinin litteät nostot (africa-kulttuuri.js)
+   * kraatterijärvistä, Furin sulttaanikunnasta, kamelipaimenista,
+   * korallikaupungista ja pyhiinvaeltajien satamasta. Lehti täydentää
+   * niitä. Nykyinen selkkaus on jätetty kokonaan pois (M3:n
+   * Myanmar-linja); uusin kerrottu tapahtuma on 1900-luvun alkupuolelta.
+   *
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026: "Baqt",
+   * "Kandake", "Amanirenas", "Meroë Head", "Meroitic script",
+   * "Beja people", "Kisra", "Gum arabic", "Hibiscus tea",
+   * "Ful medames", "Music of Sudan", "Faras", "Nubian architecture",
+   * "Ibrahim El-Salahi", "Haboob", "Dungonab Bay", "Wadi Howar" ja
+   * "Khartoum".
+   */
+  SDN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Niilin mutkassa on hallittu kolmea vuosituhatta: Kushin '
+          + 'kuningattaria, kristillisiä Nubian valtakuntia ja '
+          + 'kirjoitusta, jota kukaan ei osaa lukea.',
+      nostot: [
+        {
+          otsikko: 'Rauhansopimus, joka kesti lähes seitsemänsataa vuotta',
+          aika: '652',
+          teksti: 'Arabiarmeija tuli Egyptistä etelään vuonna 652 ja '
+              + 'kohtasi Makurian kristillisen kuningaskunnan Dongolan '
+              + 'muurien edessä. Valloitus jäi tekemättä, ja sen sijaan '
+              + 'syntyi baqt: sopimus, jonka mukaan kumpikaan ei hyökkää '
+              + 'toisen kimppuun ja kauppiaat saavat kulkea vapaasti '
+              + 'rajan yli. Nubian oli lähetettävä pohjoiseen vuosittain '
+              + 'kolmesataakuusikymmentä orjaa, ja Egyptistä tuli '
+              + 'vastineeksi laivalasteittain vehnää ja linssejä. '
+              + 'Sopimusta ei ehkä koskaan kirjoitettu paperille, mutta '
+              + 'sen mukaan elettiin 1300-luvulle asti — pitempään kuin '
+              + 'minkään toisen tunnetun sopimuksen mukaan.',
+          wiki: 'Mukurra',
+        },
+        {
+          otsikko: 'Kuningatar, joka hautasi keisarin pään portaiden alle',
+          aika: '25–22 eaa.',
+          tiedosto: 'Relief with queen Amanishakheto and her name in Meroitic hieroglyphs, 1st century BC, sandstone, from Pyramid 6, Meroe, Sudan, ÄM 2244, 2245, in the Ägyptisches Museum Berlin.jpg',
+          teksti: 'Kushin hallitsijan arvonimi kandake tarkoitti '
+              + 'kuningatarta tai kuningataräitiä, ja kun sen kantaja '
+              + 'hallitsi itse, hän käytti myös kuninkaan arvoa qore. '
+              + 'Kandake Amanirenas johti sotaa Rooman Egyptiä vastaan '
+              + 'vuosina 25–22 eaa. Sotaretkeltä tuotiin saaliina '
+              + 'keisari Augustuksen pronssinen pää, joka haudattiin '
+              + 'Meroëssa temppelin portaiden alle — niin että kaikki '
+              + 'temppeliin tulijat astuivat sen päälle. Britti John '
+              + 'Garstang löysi pään joulukuussa 1910 kahden ja puolen '
+              + 'metrin syvyydestä puhtaasta hiekasta, ja se on nyt Britannian '
+              + 'museossa.',
+          selite: 'Kandake Amanishakheton hiekkakivireliefi on Meroën '
+            + 'pyramidista 6, ja kuningattaren nimi on kirjoitettu sen '
+            + 'viereen meroiittisin hieroglyfein.',
+          lahde: 'Neoclassicism Enthusiast, Wikimedia Commons (CC0)',
+          wiki: 'Kandake',
+        },
+        {
+          otsikko: 'Kirjoitus, joka osataan lukea muttei ymmärtää',
+          aika: '1909',
+          tiedosto: 'Egyptian - Votive Plaque of King Tanyidamani - Walters 22258 - Back.jpg',
+          teksti: 'Meroën valtakunnalla oli oma kirjoituksensa 200-luvulta '
+              + 'eaa. alkaen, ja itse asiassa kaksi: hieroglyfimuoto '
+              + 'juhlallisiin piirtokirjoituksiin ja kursiivi arkeen. '
+              + 'Merkit polveutuvat egyptiläisistä, ja englantilainen '
+              + 'Francis Llewellyn Griffith ratkaisi niiden äänteet 1909 '
+              + 'vertaamalla piirtokirjoituksissa esiintyviä egyptiläisiä '
+              + 'nimiä. Siitä lähtien tekstit on osattu lausua ääneen — '
+              + 'mutta itse kieltä ei yhä ymmärretä, koska sillä ei ole '
+              + 'tunnettua sukulaista. Viimeinen meroiittinen '
+              + 'piirtokirjoitus on 400-luvulta jaa.',
+          selite: 'Kuningas Tanyidamanin votiivilaatassa on meroiittista '
+            + 'kirjoitusta, jonka merkit osataan lukea mutta sanoja ei '
+            + 'ymmärretä.',
+          lahde: 'Tuntematon, Walters Art Museum, Wikimedia Commons (PD)',
+          wiki: 'Meroitic script',
+        },
+        {
+          otsikko: 'Autiomaan kansa, jonka egyptiläiset tunsivat',
+          tiedosto: 'African - Beja Shield - Walters 511398.jpg',
+          teksti: 'Beja-kansa asuu Punaisenmeren ja Niilin välisessä '
+              + 'Itäisessä autiomaassa Egyptin kaakkoiskolkasta Sudanin '
+              + 'halki Eritreaan, ja sen esi-isät ovat olleet samalla '
+              + 'seudulla ainakin vuodesta 4000 eaa. Egyptiläiset '
+              + 'kutsuivat heitä medjay-nimellä ja antiikin kirjoittajat '
+              + 'blemmyeiksi. Bejoja arvioidaan olevan 1,9–3 miljoonaa. '
+              + 'Osa puhuu omaa kuusilaista bedžan kieltään, osa tigreä '
+              + 'ja osa arabiaa. 900-luvulla arabimaantieteilijä '
+              + 'al-Maqdisi kirjoitti heidän olevan kristittyjä; '
+              + '1400-luvulle tultaessa he olivat muslimeja. Elämä on yhä '
+              + 'kamelien ja vuohien tahdissa liikkuvaa.',
+          selite: 'Bejojen kilpi tehtiin paksusta vuodasta; tämä 1800-luvun '
+            + 'kappale on Walters Art Museumin kokoelmassa.',
+          lahde: 'Tuntematon, Walters Art Museum, Wikimedia Commons (PD)',
+          wiki: 'Bedžat',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi meroiittisia tekstejä ei ymmärretä, vaikka merkit '
+            + 'osataan lukea?',
+        vaihtoehdot: [
+          'Tekstejä on säilynyt vain kaksi',
+          'Merkit ovat kuluneet pois',
+          'Kielellä ei ole tunnettua sukukieltä',
+          'Ne on kirjoitettu salakirjoituksella',
+        ],
+        oikea: 2,
+        fakta: 'Griffith ratkaisi merkkien äänteet 1909, mutta itse kieli '
+            + 'on yhä tuntematon eikä sitä voi verrata mihinkään.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Durra eli sorghum on maan leipävilja, ja tärkein '
+          + 'vientituote on hartsi, jota useimmat maistavat päivittäin '
+          + 'tietämättään.',
+      nostot: [
+        {
+          otsikko: 'Leipä, joka paistuu puolessa minuutissa',
+          tiedosto: 'الكسره.jpg',
+          teksti: 'Kisra on Sudanin arkileipä: durrajauhoista tehty '
+              + 'taikina jätetään yön yli hapantumaan, ja aamulla se '
+              + 'levitetään ohuena kalvona kuumalle doukalle, matalalle '
+              + 'metalli- tai savilevylle. Paperinohut leipä on valmis '
+              + 'noin puolessa minuutissa. Toinen muoto samasta '
+              + 'taikinasta on aseeda, paksu puuro, jonka kanssa syödään '
+              + 'mullah-pataa. Jyvät jauhetaan perinteisesti '
+              + 'satulakivellä, joka kestää kaksi tai kolme sukupolvea. '
+              + 'Vielä 1990-luvulla kisraan kului maassa arviolta '
+              + '18 000–27 000 tonnia durrajauhoa vuodessa.',
+          selite: 'Kisra levitetään ohueksi kalvoksi kuumalle doukalle ja on '
+            + 'valmis noin puolessa minuutissa.',
+          lahde: 'شيراز شوشو, Wikimedia Commons (CC0)',
+          wiki: 'Kisra',
+        },
+        {
+          otsikko: 'Hartsi, joka on melkein jokaisessa limonadissa',
+          tiedosto: 'Gum Arabic.jpg',
+          teksti: 'Arabikumi on akasian runkoon viilletystä haavasta '
+              + 'valuvaa hartsia, joka kovettuu kellertäviksi paloiksi. '
+              + 'Noin seitsemänkymmentä prosenttia maailman tuotannosta '
+              + 'kerätään Sudanissa, ja loput muualta Sahelista. Aine '
+              + 'liukenee veteen ja estää juoman aineksia erottumasta, '
+              + 'joten sitä on virvoitusjuomissa, makeisissa ja '
+              + 'lääkkeissä lisäaineena E414. Ilman sitä ei myöskään '
+              + 'painettaisi kivipainoja eikä sekoitettaisi vesivärejä. '
+              + 'Nimi on peräisin siitä, että Eurooppaan tavara tuli '
+              + 'arabialaisten satamien kautta jo 800-luvulla.',
+          selite: 'Arabikumi kovettuu läpikuultaviksi paloiksi, jotka kerätään '
+            + 'käsin akasian rungolta.',
+          lahde: 'Tarig A. Eltom, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Arabikumi',
+        },
+        {
+          otsikko: 'Punainen juoma, joka ei ole teetä',
+          tiedosto: 'Dry flower Hipiscus , karkade ,كركدي 01.jpg',
+          teksti: 'Karkade keitetään Hibiscus sabdariffa -kasvin '
+              + 'punaisista verholehdistä, ei teepensaan lehdistä. Maku '
+              + 'on hapan, karpalomainen, ja väri niin syvänpunainen '
+              + 'että lasi näyttää täyteläiseltä läpivalaistunakin. '
+              + 'Länsi-Afrikassa sama juoma tunnetaan nimillä bissap ja '
+              + 'zobo ja se tarjotaan kylmänä, mutta Sudanissa ja '
+              + 'Egyptissä se juodaan usein lämpimänä. Kasvi on '
+              + 'kotoisin Länsi-Afrikasta, jossa sitä alettiin viljellä '
+              + 'ensin siementen ja vasta myöhemmin verholehtien takia.',
+          selite: 'Karkade keitetään hibiskuksen paksuista verholehdistä, jotka '
+            + 'kuivataan punaisiksi tähdiksi.',
+          lahde: 'Aimen taha, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Hibiscus tea',
+        },
+        {
+          otsikko: 'Papuja, jotka on hauduttu yön yli',
+          tiedosto: 'Ful Mudammas.jpg',
+          teksti: 'Nimi tarkoittaa haudattuja papuja: härkäpavut '
+              + 'kiehuvat matalalla lämmöllä koko yön isossa '
+              + 'metallikannussa, josta ne myös tarjoillaan aamulla. '
+              + 'Päälle kaadetaan öljyä ja kuminaa ja lisätään maun '
+              + 'mukaan valkosipulia, sipulia, sitruunaa, persiljaa tai '
+              + 'chiliä. Ruoka on vanha: Nasaretin lähistön '
+              + 'kivikautiselta paikalta on kaivettu esiin 2 600 '
+              + 'kuivattua härkäpapua, ja Jerusalemin Talmud tuntee '
+              + 'ruoan jo 300-luvulla. Keskiajan Kairossa fulin keitto '
+              + 'oli erään korttelin asukkaiden yksinoikeus. Sudanissa '
+              + 'se on aamiainen, joka syödään yhdessä samalta vadilta.',
+          selite: 'Ful medames tarjoillaan tasaiseksi levitettynä, ja se '
+            + 'syödään leivällä kauhoen.',
+          lahde: 'Tarboosh, Wikimedia Commons (CC0)',
+          wiki: 'Ful medames',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Sudanin sävelet ovat viisisävelisiä ja rytmi jaettu '
+          + 'moneen kerrokseen — se erottaa maan musiikin naapureista '
+          + 'niin idässä kuin pohjoisessa.',
+      nostot: [
+        {
+          otsikko: 'Musiikkilaji, joka nimettiin salkun mukaan',
+          aika: '1920-luku',
+          teksti: 'Omdurmanissa syntyi 1920-luvulla uusi kaupunkilaulu: '
+              + 'solisti ja kuoro, säestyksenä pelkkä tar-kehärumpu, ja '
+              + 'sävelmät lainattiin uskonnollisesta ylistyslaulusta '
+              + 'madeehista mutta sanat olivat maallisia. Tyylin aloitti '
+              + 'Muhamad Wad El Faki, joka oli oppinut äänenkäytön '
+              + 'koraanikoulussa. Nimen se sai vasta 1940-luvulla, kun '
+              + 'radiojuontaja Ahmed Mohamed Saleh soitti ohjelmassaan '
+              + 'vanhoja levyjä, joita hän kantoi salkussa — hageeba '
+              + 'tarkoittaa salkkua. Ensimmäiset savikiekot äänitettiin '
+              + 'Kairossa 1930-luvulla ja myytiin Omdurmanista käsin.',
+          wiki: 'Music of Sudan',
+        },
+        {
+          otsikko: 'Lyyra, joka soi henkien parannusmenoissa',
+          tiedosto: 'Frederick Goodall, The Kissar Player.jpg',
+          teksti: 'Tanbura eli kissar on Itä-Afrikan tyypillisimpiä '
+              + 'soittimia: kuppimainen lyyra, jonka kieliä näppäillään '
+              + 'laulun säestykseksi. Nubialaisessa musiikissa se oli '
+              + 'laulajan vakiosoitin, kunnes arabialainen oud syrjäytti '
+              + 'sen 1900-luvun kuluessa. Tanburaa soitetaan yhä '
+              + 'zar-menoissa, joissa naiset kutsuvat ja karkottavat '
+              + 'henkiä musiikin ja tanssin avulla. Sudanilaisen '
+              + 'musiikin perusta pysyi tästä huolimatta omanaan: '
+              + 'viisisävelinen asteikko, päällekkäiset rytmit ja '
+              + 'vuorolaulu erottavat sen arabimaailman melodiaperinteestä.',
+          selite: 'Frederick Goodallin 1800-luvun maalaus esittää kissar-lyyran '
+            + 'soittajaa; soittimen kaareen on sidottu höyheniä ja '
+            + 'kangasta.',
+          lahde: 'Frederick Goodall, Wikimedia Commons (PD)',
+          wiki: 'Music of Sudan',
+        },
+        {
+          otsikko: 'Naiset, joiden laulu saattoi ratkaista riidan',
+          teksti: 'Länsi-Sudanissa on hakamat: arvostettuja naisia, '
+              + 'joiden ase on runo. He ylistävät tai pilkkaavat oman '
+              + 'heimonsa miehiä, ja heidän sanansa painaa niin paljon, '
+              + 'että rauhantyötä tekevät järjestöt ovat pyytäneet heitä '
+              + 'käyttämään vaikutusvaltaansa sovitteluun ja '
+              + 'ympäristöasioihin. Etnomusikologi Roxane Connick '
+              + 'Carlisle kuvasi 1960-luvun kenttätyössään zaghawa-kansan '
+              + 'naislaulajia: vapaa rytmi, laskeva melodia oktaavin '
+              + 'sisällä ja ennen kaikkea merkitsevä teksti. Naisten '
+              + 'omaa musiikkia ovat myös dalooka-rummun tahdittamat '
+              + 'aghani al-banat eli tyttöjen laulut.',
+          wiki: 'Music of Sudan',
+        },
+        {
+          otsikko: 'Perjantain rumpu ei ole esitys vaan rukous',
+          teksti: 'Sudanissa on lukuisia sufilaisia veljeskuntia, ja '
+              + 'jokaisella on oma zikrinsä eli muistamisen menonsa: '
+              + 'lausuntaa, rumpuja, tanssia, pukuja ja suitsuketta, '
+              + 'joiden tarkoitus on viedä osallistuja tavallisen '
+              + 'tajunnan tuolle puolen. Menot pidetään useimmiten '
+              + 'perjantai-iltapäivällä, ja tunnetuin niistä kokoontuu '
+              + 'sheikki Hamed el-Nilin haudalle Omdurmanissa. Osallistujat '
+              + 'eivät pidä zikriä musiikkiesityksenä lainkaan vaan '
+              + 'rukouksen muotona — vaikka ulkopuoliselle se kuulostaa '
+              + 'ja näyttää konsertilta.',
+          wiki: 'Suufilaisuus',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä hageeba-musiikki sai nimensä?',
+        vaihtoehdot: [
+          'Salkusta, jossa radiojuontaja kantoi vanhoja levyjä',
+          'Kaupunginosasta Omdurmanissa',
+          'Rummun nimestä',
+          'Ensimmäisen laulajan sukunimestä',
+        ],
+        oikea: 0,
+        fakta: 'Nimi annettiin vasta 1940-luvulla, parikymmentä vuotta sen '
+            + 'jälkeen kun musiikkia oli alettu laulaa.',
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Nubian kirkkojen seinillä on tuhannen vuoden takaisia '
+          + 'kasvoja, ja savitiilestä osataan muurata holvi ilman '
+          + 'yhtäkään lautaa.',
+      nostot: [
+        {
+          otsikko: 'Katedraali, joka löytyi hiekan alta ennen tulvaa',
+          aika: '1960–1964',
+          tiedosto: 'Faras - Saint Anne - Google Art Project.jpg',
+          teksti: 'Puolalainen retkikunta alkoi 1960 kaivaa kumpua '
+              + 'Farasissa, koska Assuanin padon allas oli nielemässä '
+              + 'koko seudun. Kummun sisältä paljastui katedraali, jonka '
+              + 'piispa Aetios oli perustanut vuonna 620 ja jonka hiekka '
+              + 'oli täyttänyt kokonaan — juuri siksi maalaukset olivat '
+              + 'säilyneet. Seiniltä löytyi 169 kuvaa arkkienkeleistä, '
+              + 'kuninkaista, piispoista ja pyhimyksistä, tempera '
+              + 'kuivalle rappaukselle maalattuna, kerroksina 700-luvulta '
+              + '1300-luvulle. Kuvista 120 irrotettiin seinistä; 66 on '
+              + 'nyt Varsovassa ja loput Khartumin kansallismuseossa. '
+              + 'Itse kaupunki jäi Nasser-järven alle.',
+          selite: 'Farasin katedraalin pyhä Anna kuuluu Nubian kristillisen '
+            + 'taiteen parhaiten säilyneisiin maalauksiin ja on nyt '
+            + 'Varsovassa.',
+          lahde: 'Tuntematon nubialainen maalari, Wikimedia Commons (PD)',
+          wiki: 'Faras',
+        },
+        {
+          otsikko: 'Holvi, joka muurataan ilman muottia',
+          tiedosto: 'Gurna Mosque R01.jpg',
+          teksti: 'Nubialaisten kirkkojen huomattavin rakennuspiirre on '
+              + 'savitiilestä muurattu holvi. Sen erikoisuus on siinä, '
+              + 'ettei se tarvitse puista tukimuottia: tiilet ladotaan '
+              + 'vinoon riviin päätyseinää vasten, ja jokainen uusi rivi '
+              + 'nojaa edelliseen, kunnes katto sulkeutuu. Puuta ei '
+              + 'siis kulu lainkaan, mikä on aavikon reunalla ratkaiseva '
+              + 'etu. Egyptiläinen arkkitehti Hassan Fathy löysi '
+              + 'tekniikan uudelleen nubialaisesta Abu al-Richen kylästä '
+              + 'ja teki siitä 1900-luvulla oman rakennustapansa '
+              + 'perustan. Sitä pidetään yhä yhtenä ekologisimmista '
+              + 'rakennustavoista.',
+          selite: 'Hassan Fathyn suunnittelema New Gournan moskeija on '
+            + 'rakennettu savitiilestä nubialaisin holvein ja kupolein.',
+          lahde: 'Marc Ryckaert, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Hassan Fathy',
+        },
+        {
+          otsikko: 'Koulu, joka teki kirjaimista kuvia',
+          aika: '1957–',
+          teksti: 'Ibrahim El-Salahi syntyi Omdurmanissa 1930 perheeseen, '
+              + 'jossa isä piti koraanikoulua — sieltä hän oppi '
+              + 'arabialaisen kalligrafian, josta tuli myöhemmin hänen '
+              + 'maalaustensa runko. Opiskeltuaan Lontoon Slade School '
+              + 'of Fine Artissa 1954–1957 hän palasi Khartumiin, ja '
+              + 'hänen ympärilleen syntyi Khartumin koulu, joka yhdisti '
+              + 'islamilaisen kirjainkuvion, afrikkalaisen muodon ja '
+              + 'länsimaisen modernismin. Vuonna 2013 Tate Modern '
+              + 'järjesti hänestä ensimmäisen afrikkalaista '
+              + 'nykytaiteilijaa esittelevän retrospektiivinsä.',
+          wiki: 'Ibrahim El-Salahi',
+        },
+        {
+          otsikko: 'Kuninkaan haudan päälle ladottiin valkoista ja mustaa',
+          aika: 'n. 2500–1500 eaa.',
+          tiedosto: 'Kerma-Deffufa.jpg',
+          teksti: 'Kerman kuninkaiden haudat ovat pyöreitä kuoppia, '
+              + 'joiden päälle on kasattu kolmen metrin korkuinen kumpu '
+              + 'valkoisia ja mustia autiomaan kiviä kuvioksi. Suurimman '
+              + 'kummun halkaisija on yhdeksän metriä, ja niitä ympäröi '
+              + 'rivistö pienempiä hautoja. Kummun sisällä kulkee '
+              + 'savimuurien tukema käytävä holvattuun kammioon, jossa '
+              + 'kuningas makasi kivijalkaisella vuoteella. Kerman '
+              + 'itäisen deffufan seinät on maalattu eläinaiheilla '
+              + 'punaisella, sinisellä, keltaisella ja mustalla, ja '
+              + 'rakennuksen ympärillä on 30 000 hautaa.',
+          selite: 'Kerman läntinen deffufa on savitiilestä muurattu '
+            + 'temppelirakennus muinaisen kaupungin keskellä.',
+          lahde: 'Lassi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kerma',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Sudanissa kaksi jokea yhtyy yhdeksi, hiekka nousee '
+          + 'kahden kilometrin korkuiseksi seinäksi ja aavikon alla on '
+          + 'kadonneen joen uoma.',
+      nostot: [
+        {
+          otsikko: 'Hiekkaseinä, joka pimentää kaupungin',
+          tiedosto: 'Dust storm over Sudan and the Red Sea (MODIS 2017-06-26).jpg',
+          teksti: 'Haboob syntyy ukkospilven alaspäisestä virtauksesta: '
+              + 'kylmä ilma syöksyy maahan, leviää joka suuntaan ja '
+              + 'nostaa pölyn seinäksi, joka vyöryy maiseman yli. '
+              + 'Khartumissa on mitattu haboobeja, joiden korkeus on '
+              + 'kahden kilometrin luokkaa ja jotka etenevät '
+              + 'seitsemänkymmenen kilometrin tuntinopeudella; pisimmät '
+              + 'ovat kestäneet kuusi ja puoli tuntia. Rintama voi olla '
+              + 'tuhat kilometriä leveä. Sana on arabian sanasta habb, '
+              + 'puhaltaa, ja se on Sudanista lähtöisin — Yhdysvalloissa '
+              + 'sitä alettiin käyttää vasta 1972.',
+          selite: 'Sudanin pölymyrskyt kantavat hiekkaa Punaisenmeren yli; '
+            + 'MODIS-satelliitti tallensi tämän pilven kesäkuussa 2017.',
+          lahde: 'Jeff Schmaltz, MODIS Land Rapid Response Team, NASA GSFC, '
+            + 'Wikimedia Commons (PD)',
+          wiki: 'Haboob',
+        },
+        {
+          otsikko: 'Riutta keskellä merta, kaukana rannasta',
+          aika: '2016',
+          teksti: 'Sanganeb on erillinen korallirakennelma keskellä '
+              + 'Punaistamerta, kaukana rannikon riutoista. Sadan '
+              + 'kolmenkymmenen kilometrin päässä Port Sudanista '
+              + 'pohjoiseen aukeaa Dungonabin lahti, jonka keskiosaa, '
+              + 'Rawayahin laguunia, kiertää oma riuttakehänsä. Alue '
+              + 'merkittiin Ramsar-kosteikoksi 2009 ja hyväksyttiin '
+              + 'maailmanperintöluetteloon 2016 nimellä Sanganeb sekä '
+              + 'Dungonabin lahti ja Mukkawarin saari. Lahden rannan '
+              + 'mangrovet ja pikkusaaret ovat merkittävä lintualue: '
+              + 'siellä elävät muun muassa valkosilmälokki ja '
+              + 'nokihaukka.',
+          wiki: 'Dungonab Bay',
+        },
+        {
+          otsikko: 'Keltainen Niili, joka kuivui kahdentuhannen vuoden takana',
+          teksti: 'Wadi Howar on yli 1 100 kilometriä pitkä kuiva uoma, '
+              + 'joka alkaa Tšadin Ennedistä ja päättyy Niiliin Vanhan '
+              + 'Dongolan kohdalla. Nykyään siihen sataa noin 25 '
+              + 'millimetriä vuodessa, mutta 9 500–4 500 vuotta sitten se '
+              + 'oli Niilin sivujoki, jota kutsutaan Keltaiseksi Niiliksi: '
+              + 'silloin Saharan eteläraja oli viisisataa kilometriä '
+              + 'nykyistä pohjoisempana ja uoman varrella laidunsi '
+              + 'karjaa. Kuivumisen aikana joesta tuli ensin '
+              + 'makeanveden järvien ketju, joka näkyy vielä Ptolemaioksen '
+              + 'maailmankartalla, ja noin kaksituhatta vuotta sitten se '
+              + 'kuoli kokonaan.',
+          wiki: 'Wadi Howar',
+        },
+        {
+          otsikko: 'Paikka, jossa kaksi Niiliä sekoittuu yhdeksi',
+          tiedosto: 'Landsat.jpg',
+          teksti: 'Khartum on rakennettu kielekkeelle, jossa etelästä '
+              + 'tuleva Valkoinen Niili ja idästä tuleva Sininen Niili '
+              + 'yhtyvät; paikkaa sanotaan arabiaksi al-Mograniksi, '
+              + 'yhtymäksi. Joet jakavat kaupungin kolmeen osaan, joita '
+              + 'sillat yhdistävät: varsinainen Khartum, Bahri '
+              + 'pohjoisessa ja Omdurman lännessä. Kaupungin nimen '
+              + 'alkuperästä kiistellään: yhden selityksen mukaan se on '
+              + 'dinkan sanoista khar-tuom, paikka jossa joet kohtaavat, '
+              + 'toisen mukaan arabian sanasta khurtum, kärsä, joka '
+              + 'kuvaisi jokien väliin jäävää kapeaa maakaistaletta.',
+          selite: 'Sininen Niili tulee kaakosta ja Valkoinen Niili etelästä, '
+            + 'ja Khartum kasvaa juuri niiden väliin jäävälle kielekkeelle.',
+          lahde: 'NASA, Wikimedia Commons (PD)',
+          wiki: 'Khartum',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä haboob on?',
+        vaihtoehdot: [
+          'Niilin tulva',
+          'Ukkosen synnyttämä pölymyrsky',
+          'Kesäinen kuumuusaalto',
+          'Autiomaan lähde',
+        ],
+        oikea: 1,
+        fakta: 'Ukkospilven alaspäinen virtaus nostaa hiekan seinäksi, '
+            + 'joka voi olla kahden kilometrin korkuinen.',
+      },
+    },
+  ],
+  /*
+   * ETELÄ-SUDAN (Opus 6.9.2026, Afrikan maalehtierä). Kartan
+   * maastokohteet (maastokohteet-sds.js) kattavat Kinyetin, Valkoisen
+   * Niilin, Suddin, Gondokoron, Ladon, Jonglein kanavan, Boman ja
+   * Bandingilon puistot, Waun, Nzaran ja Nimulen, ja Bahr el Ghazalin
+   * litteät nostot (africa-kulttuuri.js) dinkojen karjaleirit, Suddin
+   * ja antilooppivaelluksen — lehti täydentää niitä. Vuosien 2013–2018
+   * sisällissota ja nykyinen tilanne on jätetty pois (M3:n
+   * Myanmar-linja); itsenäistyminen kerrotaan tapahtumana ilman
+   * osapuolikehystä.
+   *
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026:
+   * "Shilluk Kingdom", "Nyikang", "Fashoda Incident", "Azande",
+   * "South Sudan", "Culture of South Sudan", "South Sudanese cuisine",
+   * "Mandazi", "Nile perch", "Nuer people", "Dinka people",
+   * "Dinka language" ja "Juba Arabic".
+   */
+  SDS: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Valkoisen Niilin varrella on ollut kuningaskuntia kauan '
+          + 'ennen kuin kartantekijät pääsivät Suddin läpi — ja maailman '
+          + 'nuorin valtio on vasta reilun vuosikymmenen vanha.',
+      nostot: [
+        {
+          otsikko: 'Kuningas, jonka terveydestä riippui koko kansan onni',
+          aika: '1400-luku',
+          teksti: 'Shilluk-kuningaskunta syntyi Valkoisen Niilin '
+              + 'länsirannalle, ja perimätiedon mukaan sen perusti '
+              + 'Nyikang 1400-luvun jälkipuoliskolla. Kuninkaan arvo on '
+              + 'reth, ja se on yhtä lailla uskonnollinen kuin '
+              + 'poliittinen: hallitsijan terveys ja kansan hyvinvointi '
+              + 'ajateltiin samaksi asiaksi, ja menot toistavat Nyikangin '
+              + 'tarinaa. Charles Seligman tutki hallitsemistapaa 1911, ja '
+              + 'James George Frazer otti sen 1916 esimerkiksi pyhästä '
+              + 'kuninkuudesta Kultaisessa oksassa. Valtakunta oli '
+              + 'vahvimmillaan 1700- ja 1800-luvun vaihteessa, ja sen '
+              + 'pääkaupunki oli Fashoda.',
+          wiki: 'Shilluk Kingdom',
+        },
+        {
+          otsikko: 'Kaksi armeijaa kohtasi — ja joi viskiä',
+          aika: '1898',
+          tiedosto: 'Groupe de la mission Marchand au Caire 1898.jpg',
+          teksti: 'Kapteeni Jean-Baptiste Marchand lähti Brazzavillesta '
+              + 'sadankahdenkymmenen senegalilaissotilaan ja '
+              + 'kahdentoista upseerin kanssa. Mukana kannettiin sata '
+              + 'tonnia tavaraa, muun muassa osiin purettu teräshöyryvene, '
+              + 'jonka kattila yksin painoi tonnin. Neljäntoista kuukauden '
+              + 'marssin jälkeen retkikunta saapui Fashodaan 10. '
+              + 'heinäkuuta 1898 — ja 19. syyskuuta paikalle nousi '
+              + 'Herbert Kitchener viidellä tykkiveneellä ja 1 500 '
+              + 'sotilaalla. Miehet kohtelivat toisiaan kohteliaasti: '
+              + 'Kitchener kohotti maljan viskillä, jota juominen oli '
+              + 'Marchandin mukaan suurimpia uhrauksia, joita hän oli '
+              + 'isänmaalleen tehnyt. Ranska vetäytyi 3. marraskuuta.',
+          selite: 'Marchandin retkikunnan upseerit ja senegalilaissotilaat '
+            + 'kuvattiin Kairossa 1898, kun matka oli jo takana.',
+          lahde: 'E. Lauro, Wikimedia Commons (PD)',
+          wiki: 'Fashodan selkkaus',
+        },
+        {
+          otsikko: 'Heittoveitsi, jossa on kolme terää',
+          teksti: 'Azandeja hallitsi Avongara-suku, ja heidän seutunsa '
+              + 'ulottuu nykyisen Etelä-Sudanin lounaiskolkasta Kongoon '
+              + 'ja Keski-Afrikan tasavaltaan. Kuuluisin heidän '
+              + 'esineistään on shongo: kaareva heittoveitsi, jossa on '
+              + 'usein monta terää eri suuntiin ja joka osoittaa, kuinka '
+              + 'taitavia zandeseppiä oli. Kansa asuu maanviljelijöinä: '
+              + 'pelloilla kasvaa maissia, riisiä, maapähkinää, seesamia, '
+              + 'maniokkia ja bataattia, ja puutarhoissa mangoa, '
+              + 'appelsiinia, banaania ja ananasta. Zandea puhuu noin 1,1 '
+              + 'miljoonaa ihmistä.',
+          wiki: 'Azande people',
+        },
+        {
+          otsikko: 'Maa, jolle piti ensin keksiä nimi',
+          aika: '2011',
+          teksti: 'Kansanäänestys järjestettiin 9.–15. tammikuuta 2011, ja '
+              + '98,83 prosenttia äänestäneistä kannatti eroa. Nimestä '
+              + 'väiteltiin komiteassa vielä sen jälkeen: ehdolla olivat '
+              + 'muun muassa Azania, Nile Republic, Kush Republic ja '
+              + 'Juwama, joka olisi ollut yhdistelmä kolmen suurimman '
+              + 'kaupungin nimistä Juba, Wau ja Malakal. Nimeksi valittiin '
+              + '23. tammikuuta Etelä-Sudanin tasavalta. Maa itsenäistyi '
+              + '9. heinäkuuta 2011 Afrikan 54. valtiona, liittyi 14. '
+              + 'heinäkuuta YK:n 193. jäseneksi ja 27. heinäkuuta '
+              + 'Afrikan unioniin. Syyskuussa Google Maps piirsi rajan '
+              + 'kartalle.',
+          wiki: 'Etelä-Sudan',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä nimiehdotus Juwama olisi tullut?',
+        vaihtoehdot: [
+          'Kolmen suurimman kaupungin nimistä',
+          'Niilin vanhasta nimestä',
+          'Ensimmäisen presidentin sukunimestä',
+          'Suurimman heimon nimestä',
+        ],
+        oikea: 0,
+        fakta: 'Juba, Wau ja Malakal — ehdotus hävisi nimelle '
+            + 'Etelä-Sudanin tasavalta tammikuussa 2011.',
+      },
+    },
+    {
+      id: 'tarinat',
+      nimi: 'Tarinat ja uskomukset',
+      johdanto: 'Kun jokin menee pieleen, kysymys ei ole mitä tapahtui '
+          + 'vaan kuka sen takana on — ja vastauksen antaa oraakkeli.',
+      nostot: [
+        {
+          otsikko: 'Veijari, joka tekee kaiken väärin',
+          teksti: 'Azandejen tarinoiden päähenkilö on Ture, veijari, joka '
+              + 'tekee harkitsemattomia päätöksiä ja äkkipikaisia tekoja '
+              + 'ja saa niistä aina seuraukset. Tarinoita ei kerrota '
+              + 'siksi että Turea ihailtaisiin vaan päinvastoin: hän '
+              + 'näyttää, mitä yhteisössä ei sovi tehdä, ja kuulija '
+              + 'oppii säännöt nauramalla niiden rikkojalle. Zanden '
+              + 'kirjallisuus on suullista; osan siitä kirjasivat ylös '
+              + 'lähetyssaarnaajat 1900-luvun alussa, ja käännöksiä '
+              + 'julkaistiin 1960-luvulla — muun muassa antropologi '
+              + 'E. E. Evans-Pritchardin kokoelma Ture-tarinoita.',
+          wiki: 'Azande people',
+        },
+        {
+          otsikko: 'Kolme oraakkelia, joilla oli eri hinta',
+          teksti: 'Azandet käyttivät kolmea oraakkelia, ja niillä oli '
+              + 'selvä arvojärjestys. Arvostetuin oli benge, myrkkyoraakkeli, '
+              + 'jota vain miehet saivat käyttää ja jonka päätöstä ei '
+              + 'kyseenalaistettu. Sitä halvempi ja kaikille avoin oli '
+              + 'termiittioraakkeli, jonka vastausta naiset, miehet ja '
+              + 'lapset saivat kysyä. Halvin ja epäluotettavimpana '
+              + 'pidetty oli hankausoraakkeli, kahdesta puupalasta tehty '
+              + 'väline, joka kulki mukana ja jolta saattoi kysyä missä '
+              + 'ja milloin tahansa. Pitkään oraakkelit olivat myös '
+              + 'oikeuslaitos: ne osoittivat, kuka oli aiheuttanut '
+              + 'onnettomuuden.',
+          wiki: 'Azande people',
+        },
+        {
+          otsikko: 'Keihäänherrat uhraavat härän',
+          teksti: 'Dinkojen uskonnossa on yksi luoja, Nhialic, ja hänen '
+              + 'alaisuudessaan joukko jumalia ja henkiä. Nhialic on '
+              + 'kaukainen eikä puutu ihmisten asioihin suoraan, joten '
+              + 'yhteys hoidetaan uhrilla: kalastuskeihään herrat, oma '
+              + 'pappissukunsa, uhraavat härkiä. Pyhä voima ei tule '
+              + 'kirjasta vaan luonnosta ja ympäröivästä maailmasta. '
+              + 'Nuoret miehet tulevat aikuisiksi vihkimysmenossa, jossa '
+              + 'otsaan piirretään merkki terävällä esineellä, ja '
+              + 'samalla he saavat toisen nimensä — sen mukaan, minkä '
+              + 'värinen heidän lehmänsä on.',
+          wiki: 'Dinkat',
+        },
+        {
+          otsikko: 'Palmu, josta kansa sai nimensä',
+          tiedosto: 'A doum palm tree (Hyphaene thebaica) in Nubia sheltering 3 p Wellcome V0043198.jpg',
+          teksti: 'Nyikang on shillukien esi-isä ja kuningaskunnan '
+              + 'perustaja, ja hänen kauttaan kansa ymmärtää itsensä '
+              + 'yhdeksi. Nimi tarkoittaa Kangin poikaa, mutta sanalla '
+              + 'kango on shillukin kielessä kaksi merkitystä: se on '
+              + 'doum-palmu ja se on verbi tuoda. Siksi nimen voi '
+              + 'kääntää joko palmun pojaksi tai sen pojaksi, joka tuo — '
+              + 'oletettavasti elämän tai hedelmällisyyden. Shillukit '
+              + 'kutsuvat itseään nimellä Cøllø ja kotimaataan '
+              + 'ilmauksella pothe Chol. Nykyinen kirjoitusasu Nyikang '
+              + 'vakiintui vasta vuoden 1925 jälkeen.',
+          selite: 'Doum-palmu kasvaa Niilin varrella, ja sen shillukinkielinen nimi '
+            + 'kango on sama sana, joka on Nyikangin nimessä; Faguet’n puupiirros '
+            + 'on noin vuodelta 1867.',
+          lahde: 'Faguet, Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Nyikang',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mihin azandet käyttivät oraakkeleita?',
+        vaihtoehdot: [
+          'Sään ennustamiseen',
+          'Sadon jakamiseen',
+          'Selvittämään, kuka oli onnettomuuden takana',
+          'Matkareitin valintaan',
+        ],
+        oikea: 2,
+        fakta: 'Oraakkeli oli pitkään myös oikeuslaitos: sen vastaus '
+            + 'ratkaisi, miten epäilyyn vastattiin.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Ruoka tulee kolmesta suunnasta: durrapellosta, joen '
+          + 'kalasta ja maapähkinästä, joka päätyy sekä pataan että '
+          + 'jälkiruokaan.',
+      nostot: [
+        {
+          otsikko: 'Sama taikina paistetaan tai keitetään',
+          teksti: 'Etelä-Sudanin keittiö nojaa viljaan: maissiin, '
+              + 'durraan ja hirssiin. Kansallisruoka on kisra, ohut '
+              + 'durrasta hapatettu lettu, ja samasta jauhosta keitetään '
+              + 'aseeda, paksu puuro. Hirssistä tehdään wala-wala. '
+              + 'Puuron kanssa syödään pataa, ja se kauhotaan kädellä '
+              + 'kaikkien yhteiseltä vadilta. Papuja, linssejä ja '
+              + 'maapähkinöitä on joka pöydässä, samoin okraa ja '
+              + 'jamssia; lihaa on vuohta, lammasta ja kanaa, ja se '
+              + 'keitetään, grillataan tai kuivataan. Arabialainen '
+              + 'keittiö on jättänyt jälkensä pohjoisimpiin ruokiin.',
+          wiki: 'South Sudanese cuisine',
+        },
+        {
+          otsikko: 'Pinaattipata, joka maistuu maapähkinältä',
+          teksti: 'Kombo tehdään kolmesta aineksesta: pinaatista tai '
+              + 'muusta lehtivihanneksesta, maapähkinävoista ja '
+              + 'tomaatista. Maapähkinä antaa padalle paksuuden ja '
+              + 'rasvan, joten liha ei ole välttämätön — samasta syystä '
+              + 'maapähkinä on koko seudun tärkein valkuaisen lähde. '
+              + 'Sama pähkinä päätyy myös jälkiruokaan: ful sudani on '
+              + 'makeinen, jossa paahdetut maapähkinät sidotaan '
+              + 'sokerilla. Kalastajakylissä pöydässä on kajaik, '
+              + 'kuivatusta kalasta keitetty pata, ja kaupungeissa '
+              + 'paistetaan mandazia, kolmion muotoista uppopaistettua '
+              + 'leipää.',
+          wiki: 'South Sudanese cuisine',
+        },
+        {
+          otsikko: 'Kala, joka painaa enemmän kuin kaksi ihmistä',
+          tiedosto: 'Lates niloticus.jpg',
+          teksti: 'Niiliahven on yksi maailman suurimmista makean veden '
+              + 'kaloista: pisimmät ovat lähes kaksimetrisiä ja painavat '
+              + 'jopa kaksisataa kiloa, vaikka useimmat jäävät reilun '
+              + 'metrin mittaisiksi. Se on hopeanhohtoinen, sinertävä, ja '
+              + 'sen mustan silmän ympärillä on kirkkaankeltainen rengas. '
+              + 'Laji on kotoperäinen muun muassa Niilissä, Kongossa, '
+              + 'Nigerissä, Senegalissa ja Tšadjärvessä. Etelä-Sudanin '
+              + 'jokikylissä kalastus on karjan rinnalla toinen '
+              + 'elinkeino, ja saalis kuivataan auringossa, jotta se '
+              + 'säilyy sadekauden yli.',
+          selite: 'Niiliahvenen mustan silmän ympärillä on kirkkaankeltainen '
+            + 'rengas, ja kylki hohtaa hopealle.',
+          lahde: 'Pavel Zuber, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Nile perch',
+        },
+        {
+          otsikko: 'Karjaa ei teurasteta ruoaksi',
+          tiedosto: 'COSV - Sud Sudan 2007 - Livestock farming.jpg',
+          teksti: 'Nuerien perusruokaa ovat kala ja hirssi, ei liha. '
+              + 'Karja on pyhää: eläintä ei tapeta siksi, että joku '
+              + 'haluaisi syödä lihaa, vaan teurastukseen liittyy aina '
+              + 'meno, tanssi tai laulu, ja tavallisesti kaadetaan vain '
+              + 'vanha tai sairas eläin. Itsestään kuollut eläin syödään. '
+              + 'Karjan arvo mitataan maidossa, ja ylimääräisestä '
+              + 'tehdään juustoa. Jos naapurin lehmät eivät lypsä '
+              + 'tarpeeksi, muut antavat omastaan — varallisuuden '
+              + 'kerääminen ei ole päämäärä, eikä iso karja tuo '
+              + 'omistajalleen erioikeuksia.',
+          selite: 'Etelä-Sudanin karja on pitkäsarvista, ja sen arvo mitataan '
+            + 'maidossa; ylimääräisestä tehdään juustoa.',
+          lahde: 'COSV, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Nuerit',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Yhtä soitinta soittaa kolme miestä, ja loput kylästä '
+          + 'ottavat kelloja käteensä.',
+      nostot: [
+        {
+          otsikko: 'Ksylofoni, jota soittaa kolme ihmistä yhtä aikaa',
+          teksti: 'Kpaningbo on iso puinen ksylofoni, jota soittaa kolme '
+              + 'ihmistä yhtä aikaa: kuviot lomittuvat toistensa väliin, '
+              + 'niin ettei kukaan soita koko melodiaa yksin. '
+              + 'Loppukylä täydentää soiton kelloilla ja muilla '
+              + 'lyömäsoittimilla, jotka kiertävät soittajalta toiselle. '
+              + 'Wayo-levyllä azandejen rumpalit yhdistävät hengellisen '
+              + 'laulun tähän lomittuvaan rytmiin. Etelä-Sudanin '
+              + 'kansanmusiikki on muutenkin monen kansan musiikkia: '
+              + 'dinkojen laulujen runous on erityisen arvostettua ja '
+              + 'azandet tunnetaan tarinankerronnastaan.',
+          wiki: 'Culture of South Sudan',
+        },
+        {
+          otsikko: 'Juban yöt, jolloin soittivat Skylarks ja Rejaf Jazz',
+          aika: '1970–1980-luvut',
+          teksti: 'Juba oli 1970- ja 1980-luvuilla vilkkaan yöelämän '
+              + 'kaupunki, ja lavalla soittivat muun muassa Skylarks ja '
+              + 'Rejaf Jazz. Musiikissa kuului koko naapuruston kirjo: '
+              + 'monet muusikot lauloivat englanniksi, suahiliksi, '
+              + 'juba-arabiaksi, omalla kielellään tai sekoittaen niitä '
+              + 'kaikkia. Myöhemmin tähän tuli lisää sävyjä, kun '
+              + 'eteläsudanilaisia asui pitkiä aikoja Etiopiassa, '
+              + 'Keniassa ja Ugandassa ja oppi sikäläiset kielet ja '
+              + 'tyylit. Emmanuel Kembe laulaa kansanmusiikkia, reggaeta '
+              + 'ja afrobeatia, Yaba Angelosi afrobeatia, r&b:tä ja '
+              + 'zoukia.',
+          wiki: 'Culture of South Sudan',
+        },
+        {
+          otsikko: 'Poika saa nimensä lempihäriltään',
+          teksti: 'Nuerien keskuudessa lähes jokaisella on karjanimi. '
+              + 'Poika valitsee nimensä lempihärkänsä mukaan — sen '
+              + 'muodon ja värin — ja tyttö saa nimen lehmästä, jota hän '
+              + 'lypsää; joskus nimi periytyy eläimen mukana '
+              + 'sukupolvelta toiselle. Lauluissa ylistetään juuri sitä '
+              + 'eläintä, jonka nimen laulaja kantaa. Myös dinkat saavat '
+              + 'toisen nimensä lehmän värin mukaan aikuistumismenossa. '
+              + 'Historialliset tapahtumat jäävät nimiin samalla tavalla: '
+              + 'lapsi voi saada nimen sen mukaan, mitä hänen '
+              + 'syntymävuotenaan tapahtui.',
+          wiki: 'Nuerit',
+        },
+        {
+          otsikko: 'Rumpu, joka veistettiin ihmisen muotoiseksi',
+          teksti: 'Azandejen soittimet ovat myös veistoksia: rummut ja '
+              + 'sansa-peukalopianot tehtiin toisinaan ihmisen tai '
+              + 'eläimen muotoisiksi, toisinaan puhtaan kuviollisiksi. '
+              + 'Peukalopianossa on laatikon päälle kiinnitetyt '
+              + 'metallikielet, joita näppäillään peukaloilla, ja se '
+              + 'kulkee mukana taskussa. Soittimia käytettiin häissä ja '
+              + 'kylän yhteisissä tansseissa. Sama kädentaito näkyy '
+              + 'zandejen puu- ja saviveistoksissa, jotka esittävät '
+              + 'tärkeitä eläimiä tai esi-isiä.',
+          wiki: 'Azande people',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Montako soittajaa kpaningbo-ksylofonia soittaa?',
+        vaihtoehdot: [
+          'Yksi',
+          'Kaksi',
+          'Kolme',
+          'Koko kylä yhtä aikaa',
+        ],
+        oikea: 2,
+        fakta: 'Kolme soittajaa lomittaa kuvionsa, ja muut kyläläiset '
+            + 'säestävät kelloilla ja lyömäsoittimilla.',
+      },
+    },
+    {
+      id: 'kielet',
+      nimi: 'Kielet',
+      johdanto: 'Virallinen kieli on englanti, yleisin puhuttu on '
+          + 'sekakieli, ja niiden lisäksi kieliä on yli kuusikymmentä.',
+      nostot: [
+        {
+          otsikko: 'Kuusikymmentä kieltä ja yksi virallinen',
+          teksti: 'Etelä-Sudanissa puhutaan yli kuuttakymmentä '
+              + 'alkuperäiskieltä, ja useimmat niistä kuuluvat '
+              + 'nilo-saharalaiseen kielikuntaan — mukana on sekä '
+              + 'Niilin sudanilaisia että Keski-Sudanin kieliä. '
+              + 'Virallinen kieli on englanti. Läntisen Bahr el Ghazalin '
+              + 'ja Sudanin rajaseudulla asuu ihmisiä, joiden esi-isät '
+              + 'jäivät seudulle palatessaan pyhiinvaellukselta Mekasta '
+              + 'Länsi-Afrikkaan; he puhuvat tšadilaisia kieliä ja '
+              + 'elävät osan vuodesta paimentolaisina. Itsenäistymisen '
+              + 'jälkeen maa on suunnannut katseensa itään ja '
+              + 'suahilinkieliseen Itä-Afrikan yhteisöön.',
+          wiki: 'Culture of South Sudan',
+        },
+        {
+          otsikko: 'Kieli, joka syntyi varuskunnassa',
+          teksti: 'Juba-arabia syntyi 1800-luvulla sotilaiden '
+              + 'jälkeläisten keskuudessa: väki oli koottu eri kansoista, '
+              + 'ja yhteiseksi kieleksi muodostui sudaninarabiaan '
+              + 'perustuva pidgin, jonka kielioppi on hyvin '
+              + 'yksinkertainen ja sanastossa näkyvät dinka, bari, '
+              + 'pojulu ja shilluk. Se on kaikesta huolimatta maan '
+              + 'puhutuin kieli, yleisempi kuin virallinen englanti, ja '
+              + 'sitä kuulee etenkin Ekvatorian maakunnassa ja Juban '
+              + 'kaduilla. Vasta 1970-luvulla se tunnustettiin omaksi '
+              + 'kielimuodokseen eikä pelkäksi huonoksi arabiaksi.',
+          wiki: 'Juba Arabic',
+        },
+        {
+          otsikko: 'Kieli, jossa vokaalilla on kolme pituutta',
+          teksti: 'Dinkan kielessä on piirre, joka on maailman kielissä '
+              + 'harvinainen: vokaalilla voi olla kolme eri pituutta, ja '
+              + 'pituus vaihtaa sanan merkityksen. Kieli myös taivuttaa '
+              + 'sanoja vokaalia vaihtamalla samaan tapaan kuin englannin '
+              + 'goose ja geese. Murteita on toistakymmentä — Padang, '
+              + 'Rek, Agaar, Bor ja muut — ja ne ovat niin erilaisia, '
+              + 'että kukin tarvitsee oman kirjakielensä; yhtenäistä '
+              + 'kielioppia on vasta ehdotettu. Lähin sukukieli on nuer. '
+              + 'Sanastossa on paljon yhteistä nubian kanssa, luultavasti '
+              + 'keskiajan Alwan valtakunnan ajoilta.',
+          wiki: 'Dinkan kieli',
+        },
+        {
+          otsikko: 'Zande on yhden kansan ja monen kielen nimi',
+          teksti: 'Azandet kutsuvat kieltään nimellä Pa-Zande, ja sitä '
+              + 'puhuu noin 1,1 miljoonaa ihmistä. Nimi zande tarkoittaa '
+              + 'myös laajempaa kieliryhmää, johon kuuluvat muun muassa '
+              + 'adio, barambu, apambia, geme, kpatiri ja nzakara. Kieli '
+              + 'kulkee suullisesti: kirjattua zande-kirjallisuutta on '
+              + 'vähän, ja sekin on enimmäkseen 1900-luvun alun '
+              + 'lähetyssaarnaajien muistiin merkitsemää suullista '
+              + 'perinnettä, jota käännettiin 1960-luvulla. Azandet '
+              + 'tunnetaan koko seudulla juuri tarinankertojinaan.',
+          wiki: 'Azande people',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä on Etelä-Sudanin virallinen kieli?',
+        vaihtoehdot: [
+          'Juba-arabia',
+          'Dinka',
+          'Suahili',
+          'Englanti',
+        ],
+        oikea: 3,
+        fakta: 'Puhutuin kieli on kuitenkin juba-arabia, joka syntyi '
+            + '1800-luvun varuskunnissa.',
+      },
+    },
+  ],
 };

@@ -1,5 +1,64 @@
 # Uutisvälityksen käyttöönotto (omistajalle, n. 5 min)
 
+> **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
+> lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
+> (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,
+> artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy leipäteksti
+> ja `og:image` löytyy). Kaksi osoitetta on kirjoitettava täsmälleen
+> oikein, koska worker ei seuraa uudelleenohjauksia: Capital FM on
+> `.africa` (`.co.ke` vastaa 301:llä) ja Nile Postin syöteosoitteesta
+> puuttuu loppukauttaviiva. Nation-ryhmän lehdet (Daily Nation, Taifa
+> Leo, Daily Monitor, Mwananchi, The Citizen) ovat kaikissa kolmessa
+> maassa Cloudflaren botti-eston takana; perustelut hylkäyksille ovat
+> js/packs/uutislahteet.js:n maakohtaisissa kommenteissa. Julkaisu Git-
+> integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Marokko, Algeria, Tunisia):** sallittuihin
+> lisättiin www.hespress.com, www.tsa-algerie.com ja africanmanager.com
+> (maalehdet MAR/DZA/TUN, testattu 6.9.2026: syöte aukeaa,
+> artikkelisivulta jäsentyy leipäteksti ja `og:image` löytyy).
+> Hespress on arabiankielinen, ja oikealta vasemmalle kirjoitettava
+> teksti toimii ilman lisätöitä. TSA:n artikkelisivulla on myös
+> `[itemprop="articleBody"]`. Tunisiassa kolme suosittua lähdettä
+> hylättiin artikkelisivutestissä (Mosaique FM, Kapitalis, Leaders);
+> perustelut ovat js/packs/uutislahteet.js:n TUN-kommentissa.
+> Julkaisu Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Nigeria, Ghana, Senegal):** sallittuihin
+> lisättiin dailytrust.com, www.adomonline.com ja aps.sn (maalehdet
+> NGA/GHA/SEN, testattu 6.9.2026: syöte aukeaa, artikkelisivun
+> ensimmäisestä `<article>`-lohkosta jäsentyy leipäteksti ja `og:image`
+> löytyy). Nigeriassa hylättiin muun muassa Premium Times ja Vanguard:
+> niiden sivun ensimmäinen `<article>` on sivupalkin juttukortti, josta
+> ei jäsenny yhtään yli 60 merkin kappaletta — ja juuri sen
+> js/uutiset.js poimii. Muut hylätyt on lueteltu
+> js/packs/uutislahteet.js:n kommenteissa. Julkaisu Git-integraatiolla
+> mainista.
+>
+> **Päivitys 6.9.2026 (Guatemala, Nicaragua, Panama):** sallittuihin
+> lisättiin lahora.gt, www.confidencial.digital, confidencial.digital ja
+> www.panamaamerica.com.pa (maalehdet GTM/NIC/PAN, testattu 6.9.2026:
+> syöte aukeaa, artikkelisivun `<article>`-lohkosta jäsentyy leipäteksti
+> ja `og:image` löytyy). Confidencialin syöte on www-osoitteessa mutta
+> sen artikkelilinkit ilman www:tä, joten listalla on molemmat
+> isäntänimet. Prensa Libren (Guatemala) syöte aukeaa mutta
+> artikkelisivulta puuttuu sekä `<article>` että
+> `[itemprop="articleBody"]`, joten se hylättiin. Julkaisu tapahtuu
+> automaattisesti mainista, kuten alempien merkintöjen kohdalla.
+>
+> **Päivitys 6.9.2026 (Sudan, Etelä-Sudan):** sallittuihin lisättiin
+> www.dabangasudan.org ja www.radiotamazuj.org (maalehdet SDN/SDS,
+> testattu 6.9.2026: syötteessä kaksitoista juttua, artikkelisivun
+> `<article>`-lohkosta jäsentyy leipäteksti ja `og:image` löytyy).
+> Radio Tamazujin osoite `/en/rss` ohjaa osoitteeseen `/en/feed`, eikä
+> worker seuraa uudelleenohjauksia — taulussa on siksi lopullinen
+> osoite. **Etiopia jäi ilman uutislähdettä:** Fana Median amharan-
+> kielinen syöte aukeaa, mutta artikkelisivun leipäteksti ei ole
+> `<p>`-elementeissä, ja muut kokeillut sivustot olivat botti-eston
+> takana tai ilman toimivaa RSS-osoitetta; perustelut ovat
+> js/packs/uutislahteet.js:n ETH-kommentissa. Julkaisu Git-
+> integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Papua-Uusi-Guinea, Salomonsaaret):**
 > sallittuihin lisättiin www.postcourier.com.pg ja
 > theislandsun.com.sb (maalehdet PNG/SLB, testattu 6.9.2026: syötteessä
