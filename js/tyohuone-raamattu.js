@@ -3410,7 +3410,16 @@ export const RAAMATTU = {
           + '(generoi-laattapyramidi TASOJA 8 -> 9), jonka lepokerros ottaa '
           + 'kayttoon ilman koodimuutosta - omistajan paatos. Uusi pyramidin '
           + 'poltto ilman pallon sarjan polttoa sammuttaa lepokerroksen '
-          + 'versiovahtiin, joten sarjat poltetaan yhdessa.',
+          + 'versiovahtiin, joten sarjat poltetaan yhdessa. PALAUTE v1639:STA '
+          + '(omistaja 6.9.2026 iltapaiva, sanatarkasti: "kun kuva tarkentuu, '
+          + 'niin se zoomautuu vahan sisaan, mika nakyy hyppyna. saako pois? '
+          + 'vieritys ei ole jostain syysta enaa niin sulavaa vaikka tarkkuus '
+          + 'vieritys on pois paalta ja kartta on ropeloinen vierityksen '
+          + 'aikana"): lepokerros ei saa muuttaa kuvan kokoa terävöityessään '
+          + '(sama sade kuin pinta, ei korotusta - jarjestys hoidetaan '
+          + 'syvyydella, ei sateella), eika sen olemassaolo saa hidastaa '
+          + 'vieritysta tai ropeloittaa pintaa liikkeen aikana: liikkeessa '
+          + 'pallon on piirryttava tasmalleen kuten ennen v1639:aa.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
