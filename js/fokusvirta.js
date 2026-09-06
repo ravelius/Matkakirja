@@ -2993,8 +2993,10 @@ function aloitaSahkelento(ui, city, data) {
     if (!ui.game.tokens?.has(city.id)) return;
     const tehtava = data.sahketehtava ?? {};
     const nakyi = naytaPolloKupla(ui, tehtava.paluu ?? 'Perillä oltiin. Pöllö kertoi paikan.');
-    // Ainoa kaupunkirepliikki, joka saa kaikuversion: Livia palaa
-    // lennolta ja aloittaa jo ilmasta (js/liviapuhe.js).
+    // Ainoa kaupunkirepliikki, jossa Livia palaa lennolta ja aloittaa
+    // jo ilmasta. Ääni on silti kuiva: kaiku otettiin pois pulun
+    // alusta omistajan päätöksellä 6.9.2026 ilta (js/liviapuhe.js
+    // LIVIAN_KAIKU).
     if (nakyi) soitaLivianKaupunkiAani(ui, city.id, 'paluu');
     clearTimeout(ui.sahkeAarreAjastin);
     ui.sahkeAarreAjastin = setTimeout(() => paljastaSahkeAarre(ui, city, data), SAHKE_PALUU_MS);

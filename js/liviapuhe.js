@@ -42,37 +42,28 @@
  * Muut kaupungit ovat hiljaisia täsmälleen kuten ennen — tuntematon
  * lähde ei saa nimeä (livianAaniNimi palauttaa null).
  *
- * ── KAIKU SAAPUMISREPLIIKEISSÄ ─────────────────────────────────────
+ * ── KAIKU ON POISTETTU PULUN ALUSTA ────────────────────────────────
  *
- * Omistaja 6.9.2026, sanatarkasti: *"Voidaan käyttää myös pulun
- * ääneen efektejä (kaiku alussa kun tulee ja aloittaa jo huutelemaan
- * viestiä ennenkuin on edes ehtinyt kokonaan perille). Kaiku voidaan
- * sitten feidata pois kun pulu 'perillä' ja nostaa äänitasoa
- * hieman."*
+ * Omistaja 6.9.2026 ilta, sanatarkasti: *"ota kaiku pois pulun tekstin
+ * alusta"*. Se kumoaa saman päivän aiemman tilauksen (*"Voidaan
+ * käyttää myös pulun ääneen efektejä (kaiku alussa kun tulee ja
+ * aloittaa jo huutelemaan viestiä ennenkuin on edes ehtinyt kokonaan
+ * perille)"*): kuultuna kaiku söi repliikin ensimmäiset sanat, ja pulu
+ * puhuu nyt KUIVALLA ÄÄNELLÄ ALUSTA ASTI joka repliikissä.
  *
- * Kaiku on LEIVOTTU ÄÄNITTEESEEN (ffmpeg, tools/generoi-pulu.mjs),
- * ei tehty pelissä Web Audiolla. Kaksi syytä: (1) pelin kuplaäänet
- * soitetaan tavallisella <audio>-elementillä, joten Web Audio -kaiku
- * vaatisi koko soittotien vaihtamisen AudioContextiin vain kahden
- * repliikin takia; (2) leivottu versio kuullaan ja hyväksytään
- * kerran ajossa, eikä se voi kuulostaa eri laitteilla eri tavalta.
- * Kaikuversiolla on oma tiedostonsa (`-kaiku`), joten kuiva versio
- * jää talteen vertailua varten.
+ * Päätös on yhdessä vakiossa (LIVIAN_KAIKU) eikä hajallaan
+ * kutsupaikoissa: kaikuversiot ovat yhä ämpärissä (ne on kerran
+ * maksettu ja generoitu, tools/generoi-pulu.mjs teeKaiku), joten
+ * paluu olisi yhden rivin vaihto — mutta peli ei niitä hae.
  *
- * SAAPUMISREPLIIKKI on se kupla, jossa Livia tulee paikalle: avauksen
- * ensimmäinen (hän lennähtää mukaan, js/livia.js naytaRepliikki
- * lennahda) ja paljastuksen ensimmäinen ("Kaak. Sähke pöllöltä." —
- * hän saapuu sähkeen kanssa). Muut repliikit sanotaan perillä
- * normaalilla tasolla.
- *
- * KAUPUNKIREPLIIKEISTÄ VAIN YKSI SAAPUU: Sofian `paluu`. Se on ainoa
- * kohta, jossa Livia oikeasti LENTÄÄ TAKAISIN — hän on käynyt pöllön
- * luona (`odotus`: *"Livia on matkalla"*) ja aloittaa raporttinsa
- * *"Perillä oltiin"* jo ilmasta. Kaiku kertoo saman kuin avauksessa ja
- * paljastuksessa: puhe alkaa kaukaa ja laskeutuu ruutuun. Maadoitus,
- * johdanto, vinkki, linkkiSaate, oikein ja odotus sanotaan kaikki
- * pelaajan vieressä — pulu on jo paikalla, eikä kaiulla olisi mitään
- * kerrottavaa. Se olisi pelkkä efekti efektin vuoksi.
+ * SAAPUMISREPLIIKIT (LIVIAN_SAAPUMISREPLIIKIT) jäävät silti tähän
+ * moduuliin: generointityökalu lukee ne, ja ne kertovat manifestissa,
+ * mille repliikeille kaikuversio on olemassa. Ne ovat ne kuplat,
+ * joissa Livia tulee paikalle: avauksen ensimmäinen (hän lennähtää
+ * mukaan, js/livia.js naytaRepliikki lennahda), paljastuksen
+ * ensimmäinen ("Kaak. Sähke pöllöltä.") ja kaupunkirepliikeistä vain
+ * Sofian `paluu` (hän palaa pöllön luota). Peli soittaa niistäkin nyt
+ * kuivan version.
  *
  * ── LUENTA SEURAA KUPLIA ───────────────────────────────────────────
  *
@@ -129,7 +120,8 @@ export const LIVIAN_AANILAHTEET = [
 
 /**
  * Saapumisrepliikit lähteittäin: indeksit, joissa Livia tulee paikalle
- * ja saa kaikuversion (ks. KAIKU SAAPUMISREPLIIKEISSÄ yllä).
+ * ja joille on generoitu kaikuversio (ks. KAIKU ON POISTETTU PULUN
+ * ALUSTA yllä — peli ei enää soita niitä, työkalu tuntee ne).
  *
  * Sofian `paluu` haetaan kenttälistasta eikä kirjoiteta numerona:
  * numero on nimeämisen tulos, ei erikseen ylläpidettävä vakio.
@@ -188,16 +180,26 @@ export const LIVIAN_AANITETTY_PALJASTUS = { maahan: 'Kreikkaan', paikassa: 'Atee
 /** Häivytys, kun seuraava kupla katkaisee edellisen repliikin. */
 export const LIVIAN_HAIVYTYS_MS = 160;
 
-/** Onko tämä repliikki se, jossa Livia saapuu (kaikuversio)? */
+/** Onko tämä repliikki se, jossa Livia saapuu (kaikuversio on olemassa)? */
 export function livianSaapumisrepliikki(lahde, indeksi) {
   return (LIVIAN_SAAPUMISREPLIIKIT[lahde] ?? []).includes(indeksi);
 }
+
+/*
+ * KAIKU POIS PULUN ALUSTA (omistaja 6.9.2026 ilta: "ota kaiku pois
+ * pulun tekstin alusta"). Tämä on se yksi paikka, joka päättää, hakeeko
+ * peli kaikuversion vai kuivan: false = kuiva aina, myös
+ * saapumisrepliikeissä. Kaikutiedostot jäävät ämpäriin, joten päätöksen
+ * peruminen on tämän rivin vaihto — ei uutta ajoa.
+ */
+export const LIVIAN_KAIKU = false;
 
 /**
  * Repliikin tiedostonimi ämpärissä.
  *
  * PUHDAS FUNKTIO — sama pelissä ja työkalussa. `kaiku` valitsee
- * saapumisversion; ilman lippua nimi on kuiva perusversio.
+ * saapumisversion; ilman lippua nimi on kuiva perusversio. Peli ei
+ * enää anna lippua (LIVIAN_KAIKU), vain generointityökalu antaa.
  * Palauttaa null, jos lähde tai indeksi ei kelpaa.
  */
 export function livianAaniNimi(lahde, indeksi, { kaiku = false } = {}) {
@@ -207,11 +209,13 @@ export function livianAaniNimi(lahde, indeksi, { kaiku = false } = {}) {
 }
 
 /**
- * Se tiedosto, jonka PELI soittaa: saapumisrepliikissä kaikuversio,
- * muualla kuiva. Null, jos repliikkiä ei ole olemassa.
+ * Se tiedosto, jonka PELI soittaa: aina KUIVA versio (LIVIAN_KAIKU on
+ * false, omistajan päätös 6.9.2026 ilta). Null, jos repliikkiä ei ole
+ * olemassa.
  */
 export function livianSoitettava(lahde, indeksi) {
-  return livianAaniNimi(lahde, indeksi, { kaiku: livianSaapumisrepliikki(lahde, indeksi) });
+  const kaiku = LIVIAN_KAIKU && livianSaapumisrepliikki(lahde, indeksi);
+  return livianAaniNimi(lahde, indeksi, { kaiku });
 }
 
 /** Repliikin koko osoite ämpärissä. */

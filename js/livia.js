@@ -273,9 +273,10 @@ function naytaRepliikki(ui, i) {
   }
   /*
    * ÄÄNI SEURAA KUPLAA (omistaja 6.9.2026): repliikki soitetaan Livian
-   * omalla äänellä silloin kun kupla oikeasti näkyi — ensimmäinen saa
-   * kaikuversion, jossa pulu huutaa viestiään jo kaukaa
-   * (js/liviapuhe.js). Puuttuva äänite on hiljainen, kupla ennallaan.
+   * omalla äänellä silloin kun kupla oikeasti näkyi. Myös ensimmäinen
+   * on kuiva — kaiku otettiin pois pulun alusta omistajan päätöksellä
+   * 6.9.2026 ilta (js/liviapuhe.js LIVIAN_KAIKU). Puuttuva äänite on
+   * hiljainen, kupla ennallaan.
    */
   soitaLivianAani(ui, 'avaus', i);
   // Lippu vasta kun sarja oikeasti näkyi (sama sopimus kuin pöllön
@@ -543,8 +544,9 @@ function paljastusRepliikki(ui, cityId, i, jalkeen, repliikit = LIVIAN_PALJASTUS
   if (onLivianSekoilua(teksti)) soitaLivianTehoste('sekoilee');
   /*
    * ÄÄNI SEURAA KUPLAA (omistaja 6.9.2026): ensimmäinen repliikki on
-   * saapuminen ja saa kaikuversion — pulu huutaa sähkettä jo ennen
-   * kuin on perillä (js/liviapuhe.js).
+   * saapuminen, mutta sekin soi kuivana — kaiku otettiin pois pulun
+   * alusta omistajan päätöksellä 6.9.2026 ilta (js/liviapuhe.js
+   * LIVIAN_KAIKU).
    */
   soitaLivianAani(ui, 'paljastus', i, variantti);
   paljastusAjastin = setTimeout(seuraava, lukuaika(teksti));
