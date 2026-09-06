@@ -795,7 +795,9 @@ test('viivalaatalla on oma osoite ja oma noutoavain', () => {
   assert.match(PYRAMIDI, /taso\.viiva/, 'laattaUrl ei tunne viivatasoa');
   assert.match(PYRAMIDI, /\/viivat\/z\$\{taso\.z\}/,
     'viivalaatan osoite ei mene viivat-alipolkuun');
-  assert.match(PYRAMIDI, /taso\.viiva \? 'v'/,
+  // Etuliite on oma haaransa nyt, kun kerroksia on neljä (rantataso
+  // 6.9.2026); sääntö on sama: viivalaatta ei jaa avainta pohjan kanssa.
+  assert.match(PYRAMIDI, /if \(taso\.viiva\) return 'v';/,
     'viivalaatan noutoavaimella ei ole omaa etuliitettä — kerroksen '
     + 'kiinnitys merkitsisi pohjalaatan noudetuksi');
 });

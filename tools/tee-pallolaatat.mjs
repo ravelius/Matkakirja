@@ -2,6 +2,7 @@
  * KARTTAPALLON LAATAT — juliste Millerista Web Mercator -laatoiksi.
  *
  *   node tools/tee-pallolaatat.mjs [--kuiva] [--min 0] [--max 7] [--nostot]
+ *        [--ilman-rantaa]
  *        [--ulos pallolaatat-ulos] [--alue lon0,lat0,lon1,lat1] [--tunniste b]
  *
  * --tunniste liittää ämpärin kansion nimeen loppuliitteen (esim.
@@ -255,9 +256,21 @@ async function noudaLaatta(url, yrityksia = 9) {
  * Pohja ja viivataso yhdistetään laattaa noudettaessa; puuttuva
  * pohjalaatta on merta.
  */
-function teeLukija(luettelo, sharp, { nostot = false } = {}) {
+function teeLukija(luettelo, sharp, { nostot = false, ranta = true } = {}) {
   const L = luettelo.laatta ?? 512;
   const viivaversio = luettelo.viivataso?.versio ?? null;
+  /*
+   * RANTATASO (omistaja 6.9.2026 ilta): kun pohja on poltettu
+   * `--ilman-rantaviivaa`, rantaviivan muste on omalla läpinäkyvällä
+   * tasollaan. Pallon sarjaan se yhdistetään SAMALLA SÄÄNNÖLLÄ kuin
+   * viivataso — paitsi kun pallo piirtää rantaviivan vektorina
+   * (js/pallovektorit.js), jolloin `--ilman-rantaa` jättää sen pois ja
+   * vektori on ainoa rantaviiva myös laatoissa.
+   *
+   * Vanha luettelo ilman `rantataso`-kenttää: null, eikä mitään
+   * yhdistetä — rantaviiva on silloin pohjalaatoissa kuten ennen.
+   */
+  const rantaversio = ranta ? (luettelo.rantataso?.versio ?? null) : null;
   // Nostotaso (nimet, karttanostot) on vain tasoilla nostotaso.tasot (z5–z7).
   const nostoversio = nostot ? (luettelo.nostotaso?.versio ?? null) : null;
   const nostotasot = new Set(luettelo.nostotaso?.tasot ?? []);
@@ -279,7 +292,13 @@ function teeLukija(luettelo, sharp, { nostot = false } = {}) {
         tilasto.noudettu += 1;
         const { data, info } = await sharp(pohja).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
         const kuva = { data, w: info.width, h: info.height };
+        /*
+         * KERROSTEN JÄRJESTYS ON PIIRTOJÄRJESTYS ja sama kuin
+         * tasokartalla (js/laattapyramidi.js varmistaKerrokset):
+         * pohja → ranta → viiva → nosto.
+         */
         const kerrokset = [];
+        if (rantaversio) kerrokset.push(`${rantaversio}/ranta/z${z}/${tx}/${ty}.webp`);
         if (viivaversio) kerrokset.push(`${viivaversio}/viivat/z${z}/${tx}/${ty}.webp`);
         if (nostoversio && nostotasot.has(z)) kerrokset.push(`${nostoversio}/nostot/z${z}/${tx}/${ty}.webp`);
         for (const polku of kerrokset) {
@@ -561,6 +580,13 @@ async function paa() {
   const ulos = lippu('--ulos') ?? 'pallolaatat-ulos';
   const alue = lippu('--alue')?.split(',').map(Number) ?? null;
   const nostot = argv.includes('--nostot');
+  /*
+   * `--ilman-rantaa`: pallon sarja kootaan ilman rantatasoa, koska
+   * pallo piirtää rantaviivan vektorina. Oletus on RANTA MUKAAN, jos
+   * luettelossa on rantataso — silloin pallon laatta on sama kartta
+   * kuin tasokartan laatta.
+   */
+  const ranta = !argv.includes('--ilman-rantaa');
   const tunniste = lippu('--tunniste') ?? '';
   if (!/^[a-z0-9]*$/.test(tunniste)) throw new Error(`--tunniste: vain a–z ja 0–9 (${tunniste})`);
 
@@ -569,6 +595,7 @@ async function paa() {
   let yhteensa = 0;
   for (let Z = min; Z <= max; Z += 1) yhteensa += tasonLaatat(Z, alue).length;
   console.log(`pyramidi ${luettelo.versio}, viivat ${luettelo.viivataso?.versio ?? '-'}, `
+    + `ranta ${ranta ? (luettelo.rantataso?.versio ?? '-') : 'ei'}, `
     + `nostot ${nostot ? (luettelo.nostotaso?.versio ?? '-') : 'ei'}, `
     + `Mercator-tasot ${min}–${max} (lähteet z${lahdetaso(min)}–z${lahdetaso(max)}), `
     + `${yhteensa} laattaa → ${kansio}`);
@@ -583,13 +610,15 @@ async function paa() {
   const vainLuettelo = argv.includes('--vain-luettelo');
   if (vainLuettelo) {
     mkdirSync(ulos, { recursive: true });
-    kirjoitaLuettelo(ulos, luettelo, { min, max, nostot, tunniste, kansio });
+    kirjoitaLuettelo(ulos, luettelo, {
+      min, max, nostot, ranta, tunniste, kansio,
+    });
     console.log(`kirjoitettu vain luettelo kansioon ${ulos}; ämpärin kansio: ${kansio}`);
     return;
   }
 
   const sharp = (await import('sharp')).default;
-  const lukija = teeLukija(luettelo, sharp, { nostot });
+  const lukija = teeLukija(luettelo, sharp, { nostot, ranta });
   mkdirSync(ulos, { recursive: true });
   let tehty = 0;
   const alku = Date.now();
@@ -606,15 +635,27 @@ async function paa() {
       }
     }
   }
-  kirjoitaLuettelo(ulos, luettelo, { min, max, nostot, tunniste, kansio });
+  kirjoitaLuettelo(ulos, luettelo, {
+    min, max, nostot, ranta, tunniste, kansio,
+  });
   console.log(`kirjoitettu ${tehty} laattaa kansioon ${ulos}; ämpärin kansio: ${kansio}`);
 }
 
 /** Kansion luettelo (laatat.json) ja kansio.txt työnkulun vientiä varten. */
-export function kirjoitaLuettelo(ulos, luettelo, { min, max, nostot, tunniste, kansio }) {
+export function kirjoitaLuettelo(ulos, luettelo, {
+  min, max, nostot, ranta = true, tunniste, kansio,
+}) {
   writeFileSync(join(ulos, 'laatat.json'), `${JSON.stringify({
     versio: luettelo.versio,
     viivat: luettelo.viivataso?.versio ?? null,
+    /*
+     * RANTATASON VERSIO SARJASSA — lepokerroksen versiovahti lukee
+     * tämän (js/pallolaatat.js lepokerroksenKerrokset): jos sarjassa on
+     * rantaviiva poltettuna, lepokerroksen on piirrettävä sama taso
+     * pohjan päälle; jos ei ole (--ilman-rantaa, vektorikerros päällä),
+     * lepokerros jättää sen pois eikä levossa ilmesty toista viivaa.
+     */
+    ranta: ranta ? (luettelo.rantataso?.versio ?? null) : null,
     nostot: nostot ? (luettelo.nostotaso?.versio ?? null) : null,
     ...(tunniste ? { tunniste } : {}),
     tasot: { min, max },

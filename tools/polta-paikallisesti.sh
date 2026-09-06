@@ -87,9 +87,16 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
                                        OLEMASSA OLEVIIN versiopolkuihin
                              z0-z7   = työnkulun oma jako (uusi versio)
                              kaikki  = z0-z7 ja z8 (uusi versio)
+                             --ilman-rantaviivaa lisää rantataso-shardit
   --versio V                 pohjan versio polussa (oletus: ämpärin luettelosta)
   --viivaversio V            viivatason versio  (oletus: luettelosta)
   --nostoversio V            nostotason versio  (oletus: luettelosta)
+  --rantaversio V            rantatason versio  (oletus: luettelosta)
+  --ilman-rantaviivaa        polta pohja ILMAN rantaviivaa ja rantaviiva
+                             omalle laapinaekyvaelle tasolleen (ranta/z...).
+                             Vaatii --sarjat kaikki, uuden --versio,
+                             --rantaversio ja --pallo (kaikki versiot
+                             vaihtuvat, ks. VERSIOVAHTI).
   --laatu 0.9                webp-laatu         (oletus: luettelosta)
   --patina kevyt             patinataso         (oletus: luettelosta)
   --piirit kylla|ei          erikoispiirit viivatasolle (oletus: luettelosta)
@@ -109,6 +116,10 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
                              sammuttaa kerroksen)
   --pallotunniste X          pallon kansion loppuliite (js/pallo.js
                              PALLO_LAATTATUNNISTE); pakollinen --pallon kanssa
+  --pallon-ranta             polta rantaviiva MYOES pallon sarjaan
+                             (oletus --ilman-rantaviivaa-tilassa: ei —
+                             pallolla rantaviiva on vektorina,
+                             js/pallovektorit.js)
   --ei-luetteloa             älä koota äläkä vie pyramidi.jsonia
   --pakota-luettelo          vie luettelo, vaikka se eroaisi ämpärin
                              luettelosta muutenkin kuin z8:n osalta
@@ -135,12 +146,14 @@ done
 
 # ----------------------------------------------------------- valitsimet
 SARJAT=z8
-VERSIO=""; VIIVAVERSIO=""; NOSTOVERSIO=""
+VERSIO=""; VIIVAVERSIO=""; NOSTOVERSIO=""; RANTAVERSIO=""
+ILMAN_RANTAVIIVAA=0
 LAATU=""; PATINA=""; PIIRIT=""
 KORKEUS=1
 YTIMET=""
 ULOS="$JUURI/pyramidi-poltto"
 KOE=0; VAIN=""; VIE=1; SIIVOA=0; UUDESTAAN=0; PALLO=0; PALLOTUNNISTE=""
+PALLON_RANTA=0
 LUETTELO=1; PAKOTA_LUETTELO=0; LISTA=0; LAPSI=0
 
 while [ $# -gt 0 ]; do
@@ -149,6 +162,8 @@ while [ $# -gt 0 ]; do
     --versio) VERSIO="$2"; shift 2 ;;
     --viivaversio) VIIVAVERSIO="$2"; shift 2 ;;
     --nostoversio) NOSTOVERSIO="$2"; shift 2 ;;
+    --rantaversio) RANTAVERSIO="$2"; shift 2 ;;
+    --ilman-rantaviivaa) ILMAN_RANTAVIIVAA=1; shift ;;
     --laatu) LAATU="$2"; shift 2 ;;
     --patina) PATINA="$2"; shift 2 ;;
     --piirit) PIIRIT="$2"; shift 2 ;;
@@ -162,6 +177,7 @@ while [ $# -gt 0 ]; do
     --uudestaan) UUDESTAAN=1; shift ;;
     --pallo) PALLO=1; shift ;;
     --pallotunniste) PALLOTUNNISTE="$2"; shift 2 ;;
+    --pallon-ranta) PALLON_RANTA=1; shift ;;
     --ei-luetteloa) LUETTELO=0; shift ;;
     --pakota-luettelo) PAKOTA_LUETTELO=1; shift ;;
     --lista) LISTA=1; shift ;;
@@ -173,6 +189,30 @@ done
 
 [ "$KOE" -eq 1 ] && VIE=0
 case "$KORKEUS" in 1|3) ;; *) echo "VIRHE: --korkeus on 1 tai 3" >&2; exit 2 ;; esac
+
+# RANTATON POHJA ON KOKO PYRAMIDIN UUSINTAPOLTTO.
+#
+# Pohjalaattojen sisältö muuttuu (rantaviiva pois), joten polku on
+# uusi: vanhan version alle ei koskaan kirjoiteta eri sisältöä. Ja
+# koska pohjan versio vaihtuu, lepokerroksen versiovahti (js/pallo.js
+# lepokerroksenKerrokset) sammuttaa kerroksen, kunnes pallon oma sarja
+# on poltettu samasta versiosta — siksi --pallo on pakollinen.
+if [ "$ILMAN_RANTAVIIVAA" -eq 1 ]; then
+  case "$SARJAT" in
+    kaikki|z0-z7) ;;
+    *) echo "VIRHE: --ilman-rantaviivaa vaatii --sarjat kaikki (tai z0-z7):" >&2
+       echo "pohjan sisältö muuttuu, joten koko pyramidi on poltettava." >&2
+       exit 2 ;;
+  esac
+  [ -n "$RANTAVERSIO" ] || {
+    echo "VIRHE: --ilman-rantaviivaa vaatii --rantaversio <v> — rantaviivan" >&2
+    echo "muste menee omaan versiopolkuunsa <rantaversio>/ranta/z..." >&2
+    exit 2 ; }
+  [ -n "$VERSIO" ] || {
+    echo "VIRHE: --ilman-rantaviivaa vaatii uuden --versio <v>: rannaton pohja" >&2
+    echo "on eri kuva kuin ämpärissä oleva, eikä sitä kirjoiteta sen päälle." >&2
+    exit 2 ; }
+fi
 
 # ------------------------------------------------------------- esitarkistus
 #
@@ -317,6 +357,10 @@ lue_ampari () {
       ["A_VERSIO", j.versio ?? ""],
       ["A_VIIVAVERSIO", j.viivataso?.versio ?? j.versio ?? ""],
       ["A_NOSTOVERSIO", j.nostotaso?.versio ?? j.versio ?? ""],
+      // Tyhjä, jos ämpärissä EI ole rantatasoa: silloin rantaviiva on
+      // pohjalaatoissa eikä luetteloon saa kirjoittaa rantataso-kenttää,
+      // joka lupaisi pelille laattoja joita ei ole.
+      ["A_RANTAVERSIO", j.rantataso?.versio ?? ""],
       ["A_LAATU", j.laatu ?? 0.9],
       ["A_PATINA", j.patina ?? "kevyt"],
       ["A_PIIRIT", (j.viivataso?.piirit ?? true) ? "kylla" : "ei"],
@@ -349,6 +393,14 @@ shardit () {
   local nostoarg="--nostotaso --nostoversio $NOSTOVERSIO"
   local viivaarg="--viivataso --viivaversio $VIIVAVERSIO"
   [ "$PIIRIT" = "ei" ] && viivaarg="$viivaarg --eipiirit"
+  # RANTATASO (omistaja 6.9.2026 ilta): rantaviiva pois pohjasta omalle
+  # laapinaekyvaelle tasolleen, jotta pallon vektoriviiva (V1-V3) on
+  # ainoa rantaviiva pallolla. Pohjashardit saavat --ilman-rantaviivaa ja
+  # rantataso omat shardinsa; jako on sama kuin viivatasolla, koska
+  # laattoja on saman verran (z0-z7 4 992, z8 7 104).
+  local rantaarg="--rantataso --rantaversio $RANTAVERSIO"
+  local pohjaarg=""
+  [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && pohjaarg=" --ilman-rantaviivaa"
   # UUSI NOSTO- TAI VIIVAVERSIO POLTTAA KOKO KERROKSEN, EI VAIN z8:AA.
   #
   # Luettelon `nostotaso.nostot` (tunnus -> tiiviste) lasketaan aina
@@ -372,13 +424,14 @@ shardit () {
   esac
   case "$SARJAT" in
     z0-z7|kaikki)
-      echo "z0-z6|--tasot 0-6 --kaariminuutit 3"
-      echo "z7a|--tasot 7 --sarakkeet 0-43 --kaariminuutit $KORKEUS"
-      echo "z7b|--tasot 7 --sarakkeet 44-87 --kaariminuutit $KORKEUS"
-      echo "z7c|--tasot 7 --sarakkeet 88-131 --kaariminuutit $KORKEUS"
-      echo "z7d|--tasot 7 --sarakkeet 132-168 --kaariminuutit $KORKEUS"
+      echo "z0-z6|--tasot 0-6 --kaariminuutit 3$pohjaarg"
+      echo "z7a|--tasot 7 --sarakkeet 0-43 --kaariminuutit $KORKEUS$pohjaarg"
+      echo "z7b|--tasot 7 --sarakkeet 44-87 --kaariminuutit $KORKEUS$pohjaarg"
+      echo "z7c|--tasot 7 --sarakkeet 88-131 --kaariminuutit $KORKEUS$pohjaarg"
+      echo "z7d|--tasot 7 --sarakkeet 132-168 --kaariminuutit $KORKEUS$pohjaarg"
       echo "viiva-z0-z7|--tasot 0-7 $viivaarg"
       echo "nosto-z5-z7|--tasot 5-7 $nostoarg"
+      [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && echo "ranta-z0-z7|--tasot 0-7 $rantaarg"
       ;;
   esac
   case "$SARJAT" in
@@ -387,7 +440,8 @@ shardit () {
       while [ "$a" -lt "$Z8_SARAKKEITA" ]; do
         b=$((a + Z8_KAISTA - 1))
         [ "$b" -ge "$Z8_SARAKKEITA" ] && b=$((Z8_SARAKKEITA - 1))
-        printf 'z8-%03d|--tasoja 9 --tasot 8 --sarakkeet %s-%s --kaariminuutit %s\n' "$n" "$a" "$b" "$KORKEUS"
+        printf 'z8-%03d|--tasoja 9 --tasot 8 --sarakkeet %s-%s --kaariminuutit %s%s\n' \
+          "$n" "$a" "$b" "$KORKEUS" "$pohjaarg"
         a=$((b + 1)); n=$((n + 1))
       done
       # Viivataso z8 on 8 680 laattaa ja nostotaso z8 2 075 — pelkkää
@@ -401,6 +455,15 @@ shardit () {
         a=$((b + 1)); n=$((n + 1))
       done
       echo "nosto-z8|--tasoja 9 --tasot 8 $nostoarg"
+      if [ "$ILMAN_RANTAVIIVAA" -eq 1 ]; then
+        a=0; n=1
+        while [ "$a" -lt "$Z8_SARAKKEITA" ]; do
+          b=$((a + Z8_KAISTA * 8 - 1))
+          [ "$b" -ge "$Z8_SARAKKEITA" ] && b=$((Z8_SARAKKEITA - 1))
+          printf 'ranta-z8-%02d|--tasoja 9 --tasot 8 --sarakkeet %s-%s %s\n' "$n" "$a" "$b" "$rantaarg"
+          a=$((b + 1)); n=$((n + 1))
+        done
+      fi
       ;;
   esac
 }
@@ -489,6 +552,14 @@ vie_shardi () {
       --cache-control 'public, max-age=31536000, immutable' \
       --no-progress >/dev/null
   fi
+  if [ -d "$kansio/ranta" ]; then
+    aws s3 sync "$kansio/ranta" "s3://$AMPARI/julisteet/pyramidi/$RANTAVERSIO/ranta" \
+      --endpoint-url "$PAATE" \
+      --exclude '*' --include '*.webp' \
+      --content-type image/webp \
+      --cache-control 'public, max-age=31536000, immutable' \
+      --no-progress >/dev/null
+  fi
   echo "$nimi viety ämpäriin."
 }
 
@@ -511,10 +582,17 @@ kokoa_luettelo () {
   esac
   local lisa=""
   [ "$PIIRIT" = "ei" ] && lisa="--eipiirit"
+  # RANTATASO LUETTELOON: peite lasketaan rantaviiva-aineistosta, joten
+  # luettelojobi tarvitsee --data-kansion (sama Natural Earth kuin
+  # shardeilla). Ilman --rantaversiota kenttää ei synny lainkaan, ja
+  # vanha peli (ja rantaviivallinen pohja) toimii kuten ennen.
+  [ -n "$RANTAVERSIO" ] && lisa="$lisa --rantaversio $RANTAVERSIO"
+  [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && lisa="$lisa --ilman-rantaviivaa"
   mkdir -p "$kansio"
   rm -f "$kansio/pyramidi.json"
   # shellcheck disable=SC2086
   node "$JUURI/tools/generoi-laattapyramidi.mjs" "$kansio" \
+    --data "$ULOS/ne-data" \
     $tasoja --tasot "$tasot" --versio "$VERSIO" --nostoversio "$NOSTOVERSIO" \
     --viivaversio "$VIIVAVERSIO" --kaariminuutit "$KORKEUS" \
     --laatu "$LAATU" --patina "$PATINA" $lisa --vain-luettelo \
@@ -607,8 +685,16 @@ polta_pallo () {
     exit 2
   }
   (cd "$JUURI" && npm install --no-save --no-fund --no-audit sharp)
-  local kansio
-  (cd "$JUURI" && node tools/tee-pallolaatat.mjs --min 0 --max 8 --nostot \
+  local kansio rantalippu=""
+  # PALLOLLA RANTAVIIVA ON VEKTORI (js/pallovektorit.js), joten sarjaan ei
+  # polteta rantatasoa: poltettu muste jäisi vektorin alle venytettynä
+  # usvana ja levossa viiva näkyisi kahtena. `--pallon-ranta` palauttaa
+  # sen, jos vektorikerros ei vielä ole julkaistu.
+  if [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && [ "$PALLON_RANTA" -eq 0 ]; then
+    rantalippu="--ilman-rantaa"
+  fi
+  # shellcheck disable=SC2086
+  (cd "$JUURI" && node tools/tee-pallolaatat.mjs --min 0 --max 8 --nostot $rantalippu \
     --tunniste "$PALLOTUNNISTE" --ulos "$ULOS/pallolaatat")
   kansio="$(cat "$ULOS/pallolaatat/kansio.txt")"
   aws s3 sync "$ULOS/pallolaatat" "s3://$AMPARI/$kansio" \
@@ -634,9 +720,42 @@ eval "$(lue_ampari)"
 VERSIO="${VERSIO:-$A_VERSIO}"
 VIIVAVERSIO="${VIIVAVERSIO:-$A_VIIVAVERSIO}"
 NOSTOVERSIO="${NOSTOVERSIO:-$A_NOSTOVERSIO}"
+RANTAVERSIO="${RANTAVERSIO:-$A_RANTAVERSIO}"
 LAATU="${LAATU:-$A_LAATU}"
 PATINA="${PATINA:-$A_PATINA}"
 PIIRIT="${PIIRIT:-$A_PIIRIT}"
+
+# Rannaton pohja on UUSI versio, ei lisä vanhaan: ämpärin nykyisen
+# version alle ei kirjoiteta eri sisältöä (laatat ovat vuoden
+# välimuistissa). Ja koska pohjan versio vaihtuu, pallon sarja on
+# poltettava samasta versiosta tai lepokerros sammuu.
+if [ "$ILMAN_RANTAVIIVAA" -eq 1 ]; then
+  [ "$VERSIO" != "$A_VERSIO" ] || {
+    echo "VIRHE: --versio $VERSIO on ämpärin nykyinen versio. Rannaton pohja" >&2
+    echo "tarvitsee oman polkunsa; anna uusi --versio." >&2
+    exit 2 ; }
+  # KAIKKI KOLME MERKKITASOA UUSIIN VERSIOIHIN. Uusintapoltto ajaa myös
+  # viiva- ja nostotason, ja ne kirjoittaisivat oletuksena ämpärin
+  # NYKYISIIN versiopolkuihin — polkuihin, jotka ovat selaimissa vuoden
+  # välimuistissa. Sama polku, eri sisältö on juuri se virhe, jota
+  # versiointi estää.
+  for parivi in "viivaversio:$VIIVAVERSIO:$A_VIIVAVERSIO" \
+                "nostoversio:$NOSTOVERSIO:$A_NOSTOVERSIO"; do
+    nimi="${parivi%%:*}"; loput="${parivi#*:}"
+    uusi="${loput%%:*}"; vanha="${loput#*:}"
+    [ "$uusi" != "$vanha" ] || {
+      echo "VIRHE: --ilman-rantaviivaa polttaa myös viiva- ja nostotason;" >&2
+      echo "anna niille uudet versiot: --$nimi <uusi> (nyt $uusi = ämpärin)." >&2
+      exit 2 ; }
+  done
+  if [ "$VIE" -eq 1 ] && [ "$PALLO" -ne 1 ] && [ "$LISTA" -eq 0 ] && [ "$LAPSI" -eq 0 ]; then
+    echo "VIRHE: --ilman-rantaviivaa vaatii --pallo --pallotunniste <kirjain>:" >&2
+    echo "pohjan versio vaihtuu, ja lepokerroksen versiovahti (js/pallo.js" >&2
+    echo "lepokerroksenKerrokset) sammuttaa kerroksen, kunnes pallon sarja on" >&2
+    echo "poltettu samasta versiosta." >&2
+    exit 2
+  fi
+fi
 
 if [ "$LISTA" -eq 1 ]; then
   shardit | awk -F'|' '{ printf "%-14s %s\n", $1, $2 }'
@@ -654,6 +773,8 @@ esitarkistus
 
 echo "Paikallinen poltto — sarjat $SARJAT, ytimiä $YTIMET"
 echo "  pohja   $VERSIO   viivat $VIIVAVERSIO   nostot $NOSTOVERSIO"
+[ "$ILMAN_RANTAVIIVAA" -eq 1 ] \
+  && echo "  ranta   $RANTAVERSIO (pohja ILMAN rantaviivaa; pallolla vektori)"
 echo "  laatu   $LAATU  patina $PATINA  piirit $PIIRIT  korkeus ${KORKEUS}′"
 echo "  ulos    $ULOS"
 [ "$VIE" -eq 1 ] && echo "  vienti  s3://$AMPARI/julisteet/pyramidi/ ($PAATE)" \
@@ -732,8 +853,10 @@ alkoi="$(date +%s)"
 virhe=0
 xargs -P "$YTIMET" -I{} "$ITSE" --lapsi --vain {} \
   --sarjat "$SARJAT" --versio "$VERSIO" --viivaversio "$VIIVAVERSIO" \
-  --nostoversio "$NOSTOVERSIO" --laatu "$LAATU" --patina "$PATINA" \
+  --nostoversio "$NOSTOVERSIO" --rantaversio "$RANTAVERSIO" \
+  --laatu "$LAATU" --patina "$PATINA" \
   --piirit "$PIIRIT" --korkeus "$KORKEUS" --ulos "$ULOS" \
+  $( [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && echo --ilman-rantaviivaa ) \
   $( [ "$VIE" -eq 1 ] || echo --ei-vie ) \
   $( [ "$SIIVOA" -eq 1 ] && echo --siivoa ) \
   < "$lista" || virhe=1

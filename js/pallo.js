@@ -1349,7 +1349,7 @@ function luoLepokerros({ pallo, kotelo, ikkuna, renderer, laattataso = () => NaN
     mittarit.mercatorTaso = laattataso();
     if (!lepokerroksenTasoRiittaa(taso, laattataso(), pov.lat)) return luovuta(`pallon laatat jo tiheämmät (z${taso.z})`);
     const tasot = (pyramidinKerrostasot(taso.z) ?? [])
-      .filter((t) => (t.nosto ? kerrokset.nosto : (t.viiva ? kerrokset.viiva : true)));
+      .filter((t) => (t.nosto ? kerrokset.nosto : (t.viiva ? kerrokset.viiva : (t.ranta ? kerrokset.ranta : true))));
     if (!tasot.length) return luovuta('pyramidin tasoa ei ole');
     // Pallon sarjassa nostot ovat tällä tasolla laatoissa: ilman pyramidin
     // nostotasoa kerros PEITTÄISI ne — silloin ei kerrosta.
