@@ -77,7 +77,7 @@ commitit olivat vain kontissa; jos tätä tiedostoa ei ole päivitetty
    elokuvakamerassa numerot blurrautuvat yhteen"). Omistaja: "Hio ensin,
    julkaise sitten" → julkaisu vasta kun omistaja on katsonut hiotut
    kuvakaappaukset (työpöytä + puhelin, 300/40/15 ka ja loppu).
-2. **Pallon pisteet (fablemax)** — omistaja v1641:stä: "piste venyy kun
+2. **POIMITTU ja julkaistu v1643 — ei tehdä uudestaan.** Pallon pisteet (fablemax) — omistaja v1641:stä: "piste venyy kun
    karttaa panoroi" (kaupunkipiste venyy kapseliksi liikkeessä) ja
    "aarteen piste syttyy liian lähelle ateenaa, ei pysty painamaan …
    sama ongelma myös sofiassa" (aarrepiste jää nappulan alle pallolla;
