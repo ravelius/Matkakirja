@@ -23,10 +23,22 @@
 // 8,8 milj. km²). Tauluun on siksi kirjattu 10,0 milj. km²; sijoitus
 // 2. on sama kummallakin luvulla, koska Venäjä on 17,1 milj. km².
 //
+// Kuuban keskitulo on toinen poikkeus. Maailmanpankin
+// NY.GNP.PCAP.CD-sarjan tuorein Kuuban havainto on vuodelta 2019
+// (9 010 $), kun muilla luku on vuodelta 2024. Sijoitus on siksi
+// laskettu vuoden 2019 jakaumasta (187 suvereenia valtiota) eikä
+// muiden maiden 2024-jakaumasta — vanhan luvun vertaaminen tuoreisiin
+// antaisi Kuuballe liian korkean sijan. Vuosilukua ei kirjoiteta
+// arvokenttään: js/maalehti.js lukee palkin pituuden kentän
+// numeroista (parseInt ilman välimerkkejä), joten "(2019)" venyttäisi
+// Kuuban tulopalkin täyteen pituuteen.
+//
 // Demokratiaselitysten faktat ovat en-Wikipedian artikkeleista
-// "Politics of the United States", "Politics of Canada" ja "Politics
-// of Mexico" (luettu 6.9.2026); tervehdysten kielet ja osuudet
-// "Languages of ..." -artikkeleista ja sanamuodot en-Wiktionarysta.
+// "Politics of the United States", "Politics of Canada", "Politics
+// of Mexico" ja "Politics of Cuba" (luettu 6.9.2026); tervehdysten
+// kielet ja osuudet "Languages of ..." -artikkeleista, Kuuban osalta
+// artikkeleista "Demographics of Cuba" ja "Haitian Creole", ja
+// sanamuodot en-Wiktionarysta.
 //
 // Jokainen tervehdyksen lippu on tarkistettu Commonsista: puuttuva
 // tiedostonimi jättäisi kortin puolityhjäksi ilman virhettä.
@@ -62,6 +74,43 @@ export const NORTHAMERICA_MAATIEDOT = {
       { teksti: 'Good morning', kieli: 'englanti', lippu: 'Flag of Canada.svg', osuus: '86 %' },
       { teksti: 'Bonjour', kieli: 'ranska', lippu: 'Flag of Quebec.svg', osuus: '30 %' },
       { teksti: 'Ublaahatsiatkut', kieli: 'inuktitut (Nunavut)', lippu: 'Flag of Nunavut.svg', osuus: '0,1 %' },
+    ],
+  },
+  CUB: {
+    vakiluku: '11 milj.',
+    vakilukuSija: '86./195',
+    pintaAla: '110 000 km²',
+    pintaAlaSija: '105./195',
+    demokratia: {
+      arvo: '0,06',
+      sija: '155./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~CUB',
+      selitys: 'Kuuba on perustuslaissa määritelty yhtenäinen yhden puolueen '
+        + 'marxilais-leniniläinen sosialistinen tasavalta, ja sen poliittinen '
+        + 'järjestelmä on ollut sosialistinen vuodesta 1961. Vuoden 2019 '
+        + 'perustuslaki nimeää Kuuban kommunistisen puolueen yhteiskunnan ja '
+        + 'valtion johtavaksi voimaksi, joka voi asettaa maan politiikan '
+        + 'suunnan, ja puolueen ensimmäisen sihteerin asema on maan '
+        + 'vaikutusvaltaisin. Toimeenpanovaltaa käyttää ministerineuvosto '
+        + 'pääministerin johdolla, ja lainsäädäntövalta on yksikamarisella '
+        + 'kansanvallan kansalliskokouksella, joka on perustuslain mukaan '
+        + 'valtion ylin elin. Vaaleja järjestetään, mutta poliittisen '
+        + 'järjestelmän tutkijat kuvaavat Kuubaa yhden puolueen '
+        + 'autoritaariseksi hallinnoksi, jossa poliittista oppositiota ei '
+        + 'sallita eikä vaaleja pidetä demokraattisina. V-Demin indeksien '
+        + 'mukaan Kuuba on Latinalaisen Amerikan toiseksi vähiten '
+        + 'demokraattinen maa. Tiedon sensuuri, myös internetin käytön '
+        + 'rajoittaminen, on laajaa, ja Toimittajat ilman rajoja pitää Kuubaa '
+        + 'yhtenä maailman huonoimmista maista lehdistönvapaudessa.',
+    },
+    keskitulo: {
+      arvo: '9 010 $/v',
+      sija: '74./190',
+    },
+    tervehdykset: [
+      { teksti: 'Buenos días', kieli: 'espanja', lippu: 'Flag of Cuba.svg', osuus: '100 %' },
+      { teksti: 'Bonjou', kieli: 'haitinkreoli', lippu: 'Flag of Haiti.svg', osuus: '3 %' },
+      { teksti: 'Good morning', kieli: 'englanti (koulujen pakollinen kieli)', lippu: 'Flag of the United Kingdom.svg', osuus: '30 %' },
     ],
   },
   MEX: {

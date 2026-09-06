@@ -18,14 +18,17 @@
 // kohdalleen.
 //
 // Demokratiaselitysten faktat ovat en-Wikipedian artikkeleista
-// "Politics of Brazil", "Politics of Argentina", "Politics of Peru"
-// ja "Politics of Ecuador" (luettu 6.9.2026); tervehdysten kielet ja
-// osuudet "Languages of ..." -artikkeleista sekä Ecuadorin osalta
+// "Politics of Brazil", "Politics of Argentina", "Politics of Peru",
+// "Politics of Ecuador", "Politics of Chile" ja "Politics of
+// Colombia" (luettu 6.9.2026); tervehdysten kielet ja osuudet
+// "Languages of ..." -artikkeleista sekä Ecuadorin osalta
 // artikkelista "Ecuador", ja sanamuodot en-Wiktionarysta.
 //
 // Ecuadorille on kirjattu kaksi tervehdystä: shuarin kielelle ei
 // löytynyt lähteen katteessa olevaa tervehdystä, ja arvattu sana on
-// huonompi kuin puuttuva rivi.
+// huonompi kuin puuttuva rivi. Samasta syystä Chilelle on kaksi:
+// rapanuin ja aymaran tervehdyksille ei löytynyt en-Wiktionaryn
+// katetta, joten mukana ovat vain espanja ja mapudungun.
 //
 // Jokainen tervehdyksen lippu on tarkistettu Commonsista: puuttuva
 // tiedostonimi jättäisi kortin puolityhjäksi ilman virhettä.
@@ -94,6 +97,77 @@ export const SOUTHAMERICA_MAATIEDOT = {
       { teksti: 'Bom dia', kieli: 'portugali', lippu: 'Flag of Brazil.svg', osuus: '98 %' },
       { teksti: 'Guten Tag', kieli: 'hunsrik (Etelä-Brasilia)', lippu: 'Flag of Germany.svg', osuus: '1,4 %' },
       { teksti: 'こんにちは', kieli: 'japani (São Paulo)', lippu: 'Flag of Japan.svg', osuus: '0,2 %' },
+    ],
+  },
+  CHL: {
+    vakiluku: '20 milj.',
+    vakilukuSija: '65./195',
+    pintaAla: '757 000 km²',
+    pintaAlaSija: '37./195',
+    demokratia: {
+      arvo: '0,78',
+      sija: '16./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~CHL',
+      selitys: 'Chile on presidentin johtama tasavalta, jossa presidentti on sekä '
+        + 'valtion- että hallituksen päämies ja jossa toimii '
+        + 'monipuoluejärjestelmä; lainsäädäntövalta on kaksikamarisella '
+        + 'kansalliskongressilla ja tuomioistuimet ovat erillään '
+        + 'hallituksesta ja kongressista. Nykyinen perustuslaki hyväksyttiin '
+        + 'kansanäänestyksessä syyskuussa 1980 Augusto Pinochetin '
+        + 'sotilasdiktatuurin aikana ja tuli voimaan maaliskuussa 1981. Kun '
+        + 'Pinochet hävisi kansanäänestyksen 1988, perustuslakia muutettiin '
+        + 'seuraavana vuonna niin, että sen muuttaminen kävi helpommaksi. '
+        + 'Vuonna 2006 kongressin hyväksymät uudistukset poistivat nimitetyt '
+        + 'ja elinikäiset senaattorit, antoivat presidentille oikeuden '
+        + 'erottaa puolustushaarojen komentajat ja lyhensivät '
+        + 'presidenttikauden kuudesta neljään vuoteen ilman välitöntä '
+        + 'uudelleenvalintaa. V-Demin mittareissa Chile oli 2023 Latinalaisen '
+        + 'Amerikan kolmanneksi vaalidemokraattisin maa; The Economist '
+        + 'Intelligence Unit luokitteli sen 2023 puutteelliseksi '
+        + 'demokratiaksi.',
+    },
+    keskitulo: {
+      arvo: '15 840 $/v',
+      sija: '58./190',
+    },
+    tervehdykset: [
+      { teksti: 'Buenos días', kieli: 'espanja', lippu: 'Flag of Chile.svg', osuus: '99 %' },
+      { teksti: 'Mari mari', kieli: 'mapudungun (mapuche)', lippu: 'Flag of the Mapuches (1992).svg', osuus: '1 %' },
+    ],
+  },
+  COL: {
+    vakiluku: '53 milj.',
+    vakilukuSija: '28./195',
+    pintaAla: '1,1 milj. km²',
+    pintaAlaSija: '25./195',
+    demokratia: {
+      arvo: '0,56',
+      sija: '52./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~COL',
+      selitys: 'Kolumbia on presidentin johtama tasavalta ja monipuoluedemokratia, '
+        + 'jossa presidentti on sekä valtion- että hallituksen päämies. '
+        + 'Lainsäädäntövalta on kaksikamarisella kongressilla, ja tuomiovalta '
+        + 'on hallituksesta ja kongressista riippumaton: ylimpiä '
+        + 'tuomioistuimia on neljä, perustuslakituomioistuin, korkein oikeus, '
+        + 'valtioneuvosto ja ylin tuomarineuvosto. Vuoden 1991 perustuslaki '
+        + 'toi mukanaan tutela-menettelyn, jolla kuka tahansa voi viedä '
+        + 'perusoikeuksiensa loukkauksen heti tuomarin ratkaistavaksi, jos '
+        + 'muuta keinoa ei ole. Presidentti valitaan yhdeksi neljän vuoden '
+        + 'kaudeksi, eikä hän ole vuodesta 2015 saanut asettua uudelleen '
+        + 'ehdolle edes välivuosien jälkeen. Senaatin 108 jäsentä valitaan '
+        + 'yhdellä valtakunnallisella listalla ja edustajainhuoneen 172 '
+        + 'jäsentä 32 departementin vaalipiireistä. The Economist '
+        + 'Intelligence Unit luokitteli Kolumbian 2024 puutteelliseksi '
+        + 'demokratiaksi.',
+    },
+    keskitulo: {
+      arvo: '7 090 $/v',
+      sija: '93./190',
+    },
+    tervehdykset: [
+      { teksti: 'Buenos días', kieli: 'espanja', lippu: 'Flag of Colombia.svg', osuus: '99 %' },
+      { teksti: 'Good morning', kieli: 'englanti (San Andrésin saaret)', lippu: 'Flag of the United Kingdom.svg', osuus: '0,2 %' },
+      { teksti: 'Bom dia', kieli: 'portugali (Amazonin rajaseutu)', lippu: 'Flag of Brazil.svg', osuus: '0,1 %' },
     ],
   },
   ECU: {

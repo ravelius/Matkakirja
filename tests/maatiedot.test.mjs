@@ -25,11 +25,10 @@ import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
  * Maat, joiden tunnusluvut ovat vielä tekemättä. Lista saa vain
  * lyhentyä: uutta maalehteä ei kirjoiteta ilman tunnuslukuja, mutta
  * jo olemassa olevia aukkoja ei kannata sulkea tyhjällä rivillä.
- * Kaikki nämä kuuluvat Aasian tauluun (js/packs/asia-maatiedot.js).
+ * 6.9.2026 lista tyhjeni: viimeiset kuusi (BHR, IND, THA, VNM, IDN,
+ * MYS) saivat rivinsä js/packs/asia-maatiedot.js:ään.
  */
-// 6.9.2026: CHL, COL ja CUB saivat maalehden (aiheet) ennen tunnuslukuja;
-// rivit tulevat omana eränään (tools/kirjoita-maatiedot.mjs).
-const VIELA_ILMAN_TUNNUSLUKUJA = new Set(['BHR', 'IND', 'THA', 'VNM', 'IDN', 'MYS', 'CHL', 'COL', 'CUB']);
+const VIELA_ILMAN_TUNNUSLUKUJA = new Set([]);
 
 const SIJA = /^\d+\.\/\d+$/;
 
