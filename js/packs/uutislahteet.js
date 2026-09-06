@@ -758,4 +758,25 @@ export const UUTISLAHTEET = {
     kieli: 'fr',
     syote: 'https://www.lexpress.mg/feeds/posts/default?alt=rss',
   },
+  /*
+   * Sierraloaded on Freetownissa toimiva verkkolehti ja maan
+   * luetuimpia uutissivustoja. Testattu 6.9.2026: syötteessä kymmenen
+   * juttua, ja artikkelisivun ensimmäisestä <article>-lohkosta jäsentyy
+   * viisitoista yli 60 merkin kappaletta sekä og:image. Syöte ja
+   * artikkelisivut ovat samalla isäntänimellä.
+   *
+   * Testattu ja hylätty: Awoko (awokonewspaper.sl:n varmenne ei vastaa
+   * isäntänimeä, joten yhteys ei aukea), Politico SL
+   * (www.politicosl.com/feed vastaa 404:lla), Concord Times
+   * (slconcordtimes.com/feed ohjaa 302:lla etusivulle eikä worker seuraa
+   * uudelleenohjauksia), Standard Times Press (404) ja Sierra Leone
+   * Times (403). Sierra Leone Telegraphin ja AYV Newsin syötteet
+   * aukesivat molemmat, mutta Sierraloaded valittiin, koska se on
+   * näistä luetuin ja sen artikkelisivun rakenne on selkein.
+   */
+  SLE: {
+    nimi: 'Sierraloaded',
+    kieli: 'en',
+    syote: 'https://sierraloaded.sl/feed/',
+  },
 };

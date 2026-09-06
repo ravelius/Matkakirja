@@ -105,6 +105,16 @@
 > lainkaan; perustelut ovat js/packs/uutislahteet.js:n MDG-kommentissa.
 > Julkaisu Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Sierra Leone):** sallittuihin lisättiin
+> sierraloaded.sl (maalehti SLE, testattu 6.9.2026: syötteessä kymmenen
+> juttua, artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy
+> viisitoista yli 60 merkin kappaletta ja `og:image` löytyy). Osoite on
+> ilman www-etuliitettä, koska sekä syöte että artikkelilinkit ovat
+> isäntänimellä `sierraloaded.sl`. Awoko, Politico SL, Concord Times,
+> Standard Times Press ja Sierra Leone Times hylättiin (varmennevirhe,
+> 404, 302 ja 403); perustelut ovat js/packs/uutislahteet.js:n
+> SLE-kommentissa. Julkaisu tapahtuu integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

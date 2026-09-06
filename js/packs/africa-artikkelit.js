@@ -935,9 +935,27 @@ export const OMAT_ARTIKKELIT = {
       + 'aavikon suolaa — samoja tavaroita kuin keisarien aikaan.',
   },
   'Sierra Leone': {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // SLE) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla. Faktat: docs/mantereet-tyoaineisto/faktapohja-sierraleone.md.
     intro: 'Sierra Leone on Länsi-Afrikan vehreä rannikkomaa, jonka '
-      + 'pääkaupunki Freetown perustettiin vapautettujen orjien '
-      + 'kodiksi. Nimi tarkoittaa leijonavuorta.',
+      + 'nimen antoivat portugalilaiset purjehtijat 1400-luvulla: '
+      + 'leijonavuoret nousevat merestä heti rannan takaa. Pääkaupunki '
+      + 'Freetown perustettiin 1792 vapautettujen orjien kaupungiksi, ja '
+      + 'seuraavien vuosikymmenten aikana sinne tuotiin tuhansia ihmisiä, '
+      + 'jotka laivasto oli vapauttanut laittomilta orjalaivoilta — '
+      + 'heistä, Nova Scotian uudisasukkaista ja Jamaikan marooneista '
+      + 'syntyi krio-väestö ja krio-kieli, jota nykyään puhuu lähes koko '
+      + 'maa. Suurimmat kansat ovat temnet ja mendet, ja rannikon takana '
+      + 'alkaa Ylä-Guinean sademetsävyöhyke, jonka viimeisiä paloja '
+      + 'suojellaan Golassa ja Tiwain saarella. Sisämaa liitettiin '
+      + 'siirtomaahan protektoraattina 1896, itsenäisyys tuli 27. '
+      + 'huhtikuuta 1961 Milton Margain johdolla ja tasavalta 1971. '
+      + 'Riisi on ateria, jonka päälle tulee kassavanlehti- tai '
+      + 'maapähkinäkastike, ja maan tunnetuin luonnonvara ovat timantit. '
+      + 'Freetownia sanottiin siirtomaa-aikana Afrikan Ateenaksi: sen '
+      + 'Fourah Bay College on Saharan eteläpuolisen Afrikan ensimmäinen '
+      + 'länsimainen yliopisto.',
     artikkeli: 'Sierra Leone sijaitsee Atlantin rannalla Länsi-'
       + 'Afrikassa. Portugalilainen purjehtija nimesi niemen '
       + 'leijonavuoreksi 1400-luvulla — kerrotaan, että ukkonen jylisi '

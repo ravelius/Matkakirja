@@ -44450,4 +44450,383 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * SIERRA LEONE (SLE) — Opus 6.9.2026, Afrikan maalehtierä.
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-sierraleone.md.
+   *
+   * RAJAUS. Laudan kaupungilla sierraleone on litteät nostot
+   * (africa-kulttuuri.js): Freetownin puuvillapuu kuvineen, krio
+   * arkikielenä ja riisi perusruokana — maalehti EI toista niitä.
+   * Puuvillapuusta ei ole omaa nostoa (sama kuva on jo litteässä
+   * nostossa ja isoisän valokuvaparissa), krio esiintyy vain
+   * kirjakielenä ja riisi vain lajina ja viljelytaitona. Kartta kattaa
+   * maan luonnon (maastokohteet-sle.js: Bintumani, Rokel, Tiwai,
+   * Outamba-Kilimi, Gola, Bumbuna), simpanssin (elaintakyt.js) sekä
+   * Lombokon linnakkeen ja Koidun kaivossopimuksen (skandaalit.js),
+   * joten lehdessä ei ole luonto-aihetta eikä timantti- tai
+   * orjalinnakenostoa.
+   *
+   * HERKÄT AIHEET. Sisällissota (1991–2002) mainitaan vain
+   * tapahtumana, joka keskeytti lyhtykilpailut ja ajoi muusikon
+   * maasta; osapuolia ja nykypolitiikkaa ei kuvata (M3:n
+   * Myanmar-linja). Sande-seura kerrotaan naamiotaiteena ja tanssijan
+   * roolina; seuran initiaatiokäytännöt eivät ole matkalehden aihe.
+   *
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026:
+   * "Freetown", "Nova Scotian Settlers", "Sierra Leone", "Bai Bureh",
+   * "Masquerade in Mende culture", "Art in Sierra Leone", "Nomoli
+   * figurine", "Sande society", "Music of Sierra Leone", "Ebenezer
+   * Calendar", "S. E. Rogie", "Bubu music", "Gullah", "Sierra Leonean
+   * cuisine", "Oryza glaberrima", "Bunce Island", "Palm wine",
+   * "Garri", "Fourah Bay College", "Mass media in Sierra Leone",
+   * "Krio language", "Thomas Decker" ja "Africanus Horton".
+   *
+   * KUVAT. Vain neljällä nostolla on kuva: Commonsissa on Sierra
+   * Leonesta hyvin vähän vapaita ≥ 1200 px:n kuvia. Hylätyt (Hofstran
+   * 1930-luvun negatiiviskannaukset, museokyltillinen naamiokuva,
+   * Nigerian palmuviinikuvat) on lueteltu faktapohjassa; loput nostot
+   * odottavat kuvaputkea.
+   */
+  SLE: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Freetownin perusti neljä joukkoa ihmisiä, jotka olivat kaikki '
+          + 'tulleet meren yli: Lontoon köyhät, Nova Scotian loyalistit, Jamaikan '
+          + 'maroonit ja orjalaivoilta vapautetut.',
+      nostot: [
+        {
+          otsikko: 'Vapaa kaupunki, joka epäonnistui ensin',
+          aika: '1787–1792',
+          tiedosto: 'Freetown Court 1984.jpg',
+          teksti: 'Ensimmäinen yritys kaatui kahdessa vuodessa. Lontoosta lähetettiin '
+              + '1787 nelisensataa vapautettua mustaa asukasta, jotka perustivat '
+              + 'Granville Townin maalle, joka ostettiin koya-temnejen kuningas '
+              + 'Tomilta ja sijaishallitsija Naimbanalta; kuningas Jimmy poltti kylän '
+              + '1789. Toinen yritys onnistui: Thomas Peters vei Nova Scotian mustien '
+              + 'loyalistien valitukset Lontooseen, luutnantti John Clarkson värväsi '
+              + 'halukkaat, ja viisitoista laivaa lähti Halifaxista tammikuussa 1792. '
+              + 'Maihin nousi vajaat tuhatkaksisataa ihmistä, matkalla kuoli 64. '
+              + 'Joukossa oli Harry Washington, joka oli paennut George Washingtonin '
+              + 'orjuudesta.',
+          selite: 'Freetownin vanhin kortteli seisoo yhä sillä ruutukaavalla, jonka '
+            + 'uudisasukkaat mittasivat rantaan 1792 pohjoisamerikkalaisen '
+            + 'kaupungin malliin.',
+          lahde: 'Brian Harrington Spier, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Maroonit, jotka tuotiin kukistamaan kapina',
+          aika: '1799–1800',
+          teksti: 'Sierra Leone Companyn lontoolaiset omistajat kieltäytyivät antamasta '
+              + 'asukkaille maata omistukseen, ja 1799 osa uudisasukkaista nousi '
+              + 'kapinaan. Kruunu kukisti sen tuomalla paikalle yli viisisataa '
+              + 'jamaikalaista maroonia, jotka oli karkotettu Trelawny Townista Nova '
+              + 'Scotian kautta ja jotka saapuivat 1800 everstinsä Montague Jamesin '
+              + 'johdolla. Palkaksi maroonit saivat parhaat talot ja maat sekä oman '
+              + 'kaupunginosansa, ja 1820-luvulla he olivat syrjäyttäneet '
+              + 'nova-scotialaiset siirtokunnan tärkeimpinä kauppiaina. Mukana tuli '
+              + 'gumbe, neliskulmainen jalallinen rumpu, jolla Jamaikan maroonikylät '
+              + 'olivat välittäneet viestejä.',
+        },
+        {
+          otsikko: 'Kaksikymmentä dollaria oppipojasta',
+          aika: '1808–1874',
+          teksti: 'Vuoden 1808 ensimmäisenä päivänä yhtiön kuvernööri Thomas Ludlam '
+              + 'luovutti oikeuskirjansa, ja siirtokunnasta tuli kruununsiirtomaa. '
+              + 'Freetown oli seuraavat vuosikymmenet Brittiläisen Länsi-Afrikan '
+              + 'pääkaupunki, orjalaivoja pysäyttävän laivasto-osaston tukikohta ja '
+              + 'kolmen sekakomissiotuomioistuimen paikka. Laittomilta laivoilta '
+              + 'vapautettuja tuotiin tuhansittain, ja heidät myytiin kahdenkymmenen '
+              + 'dollarin kappalehintaan oppipojiksi vanhoille asukkaille — '
+              + 'osa kohteli heitä omaisuutenaan. Vapautetut perustivat niemen kylät '
+              + 'ja menestyivät kauppiaina, ja heistä, marooneista ja '
+              + 'nova-scotialaisista syntyi krio-väestö.',
+        },
+        {
+          otsikko: 'Sata puntaa päälliköstä, viisisataa kuvernööristä',
+          aika: '1893–1908',
+          teksti: 'Bai Bureh syntyi 1840 Kassehissa loko-päällikön ja temne-kauppiaan '
+              + 'poikana ja sai sotilaskoulutuksessa nimen Kebalai, se joka ei väsy '
+              + 'sotaan. Kun siirtomaahallinto pani 1893 voimaan mökkiveron, hän '
+              + 'kieltäytyi maksamasta: hänen kansansa ei maksaisi veroa vieraalle '
+              + 'hallitsijalle. Kuvernööri Frederic Cardew lupasi sata puntaa hänen '
+              + 'kiinniottamisestaan, ja Bai Bureh lupasi viisisataa kuvernöörin '
+              + 'kiinniottamisesta. Sota kesti kuukausia, ja siinä surmattiin myös '
+              + 'kriolaisia kauppiaita hallinnon tukijoina. Antauduttuaan marraskuussa '
+              + '1898 Bai Bureh karkotettiin Kultarannikolle, mutta hän palasi 1905 '
+              + 'Kassehin päälliköksi.',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Sierra Leonen taide on tehty käytettäväksi: naamiolla on nimi ja '
+          + 'tehtävä, kivihahmo asetetaan pellon reunaan vartioimaan satoa, ja '
+          + 'lyhtyjuhlan jättiläiset rakennetaan joka vuosi uudelleen paperista.',
+      nostot: [
+        {
+          otsikko: 'Ainoa naamio, jota Afrikassa tanssivat naiset',
+          tiedosto: 'Sande Society Mask (sowei), Sierra Leone, Sewa-Mende people, Monowulo workshop, c. 1945, wood, blackened raffia - Chazen Museum of Art - DSC01748.JPG',
+          teksti: 'Sande-seuran juhlat ovat ainoat tilaisuudet Afrikassa, joissa naiset '
+              + 'tavan mukaan käyttävät naamiota. Mendeksi se on sowei, temneksi anawu: '
+              + 'umpinainen kypärä, jonka pinta on kiillotettu kiiltävän mustaksi. '
+              + 'Jokainen piirre tarkoittaa jotakin — täysi otsa viisautta, alas '
+              + 'luodut silmät vaatimattomuutta, kaulan renkaat terveyttä ja '
+              + 'kaurisimpukat vaurautta, ja huolellisesti punottu kampaus muistuttaa '
+              + 'siitä, ettei kukaan letitä hiuksiaan yksin. Veistäjät ovat yleensä '
+              + 'miehiä, ja taitavaa kutsutaan nimellä Sowo Gande. Naamiossa tanssii '
+              + 'ndoli jowei, tanssin asiantuntija.',
+          selite: 'Sowei-naamio on umpinainen puukypärä, jonka veistetty kampaus ja '
+            + 'kiillotettu musta pinta ovat Sande-seuran tunnusmerkit.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kivihahmot, joiden tekijää kukaan ei muista',
+          tiedosto: 'Nomoli-British Museum (4).jpg',
+          teksti: 'Nomolit ovat pieniä vuolukivestä, kalkkikivestä tai graniitista '
+              + 'veistettyjä hahmoja ja Sierra Leonen vanhinta tunnettua taidetta. '
+              + 'Portugalilaiset kirjasivat ne muistiin jo 1400-luvulla, ja '
+              + 'lähetyssaarnaaja George Thompson löysi 1852 viisi kappaletta '
+              + 'hävitetyn kylän paikalta. Kun eurooppalaiset kysyivät hahmoista, '
+              + 'seudun asukkaat vastasivat, että ne ovat henkien työtä eikä kukaan '
+              + 'osaa enää tehdä sellaisia. Mendet pitävät niitä seudun aiempien '
+              + 'asukkaiden kuvina, temnet vanhoina päällikköinä. Hahmot asetetaan '
+              + 'kotien lähelle ja viljelyksille suojaamaan satoa, ja niiltä kysytään '
+              + 'neuvoa.',
+          selite: 'Nomolit kaivetaan maasta eteläisessä Sierra Leonessa, ja hahmo on '
+            + 'usein kyykyssä, pieni esine käsissään.',
+          lahde: 'John Atherton, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Naamio, jonka otsassa on peili',
+          teksti: 'Mendejen naamiokalenterissa on toistakymmentä hahmoa, ja voimakkain '
+              + 'niistä on gbini. Se saapuu vain suuriin hetkiin: Poro-seuran '
+              + 'initiaation päätökseen, kun kyseessä on ylipäällikön poika, sekä '
+              + 'ylipäällikön kruunajaisiin ja hautajaisiin. Asuun kuuluu '
+              + 'leopardinnahka, ja litteä pyöreä päähine on tehty eläimennahasta '
+              + 'bambukehikon päälle: koristeena kaurisimpukoita ja mustia, valkoisia '
+              + 'ja punaisia kangassuikaleita, keskellä pyöreä peili. Samassa '
+              + 'perinteessä on myös pellehahmoja — gongoli, gonde ja samawa — joiden '
+              + 'esitykset ovat huumoria, satiiria ja parodiaa.',
+        },
+        {
+          otsikko: 'Lyhtyjuhla, joka alkoi yhdestä matkasta Gambiaan',
+          aika: '1930-luvulta',
+          teksti: 'Freetownin kuuluisin taidetapahtuma sai alkunsa siitä, että liikemies '
+              + 'Daddy Maggay näki Gambiassa katolisen lyhtykulkueen ja päätti kokeilla '
+              + 'samaa kotona. Kulkueet kasvoivat vuosi vuodelta, osaksi siksi että '
+              + 'Maggayn vaimon maissi ja couscous keräsivät väkeä. Vuodesta 1961 '
+              + 'kilpailua järjesti Young Men’s Muslim Association ramadanin '
+              + 'kunniaksi: seurat rakensivat puusta, bambusta, rautalangasta, '
+              + 'paperista ja riisistä valtavia valaistuja lyhtyjä, jotka esittivät '
+              + 'maamerkkejä, eläimiä ja yliluonnollisia olentoja. Säännölliset '
+              + 'kilpailut päättyivät 1991 sisällissotaan, mutta lyhtyjä tehdään yhä.',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Sierra Leonen soittimena on ollut kitara, bambupilli ja auton osasta '
+          + 'taivutettu putki — ja yksi maan lauluista jäi Georgian rannikolle '
+          + 'kahdeksi vuosisadaksi.',
+      nostot: [
+        {
+          otsikko: 'Bussilaulu, jonka levy-yhtiö tilasi',
+          aika: '1950–1960-luvut',
+          teksti: 'Sierra Leonen palmuviinimusiikkia sanotaan maringaksi, ja sen teki '
+              + 'tunnetuksi kriolainen Ebenezer Calendar yhtyeineen. Ammatiltaan hän '
+              + 'oli puuseppä ja arkuntekijä, isä barbadoslainen tai jamaikalainen, '
+              + 'äiti kriolainen; soittimina kulkivat kitara, trumpetti, mandoliini ja '
+              + 'kornetti, ja tyylissä kuului karibialainen calypso. Kuuluisin '
+              + 'kappale syntyi tilaustyönä: levy-yhtiö Decca pyysi laulun uuden '
+              + 'kaksikerroksisen bussilinjan avajaisiin, ja Double-Decker Bus jäi '
+              + 'soimaan vuosikymmeniksi. Myöhemmin Calendarin sanoitukset kääntyivät '
+              + 'yhteiskunnallisiksi ja hengellisiksi.',
+        },
+        {
+          otsikko: 'Räätäli, joka soitti iltaisin ilmaiseksi',
+          aika: '1926–1994',
+          teksti: 'Sooliman Ernest Rogers eli S. E. Rogie syntyi 1926 Fonikohissa ja '
+              + 'maksoi seitsenvuotiaana koulunsa myymällä halkoja. Freetownissa hän '
+              + 'meni räätälin oppipojaksi, kuunteli asiakkaikseen sattuneita '
+              + 'muusikoita ja opetteli kitaran itse. Päivät kuluivat kiertävässä '
+              + 'räätälinliikkeessä, illat soittaen ilmaiseksi. Tyyliin tarttui '
+              + 'palmuviinimusiikin lisäksi veljen gramofonilta amerikkalainen Jimmie '
+              + 'Rodgers jodlauksineen, ja Rogie lauloi englanniksi, krioksi, mendeksi '
+              + 'ja temneksi. My Lovely Elizabeth teki hänestä tunnetun, ja vuonna '
+              + '2019 yhdysvaltalainen Vampire Weekend rakensi kappaleensa hänen '
+              + 'kitarasilmukastaan.',
+        },
+        {
+          otsikko: 'Bambupillit ja auton osat',
+          teksti: 'Bubu on temnejen musiikkia. Alun perin sitä soitettiin animistisissa '
+              + 'seremonioissa, mutta siitä tuli ramadanin kulkuemusiikkia: soittimina '
+              + 'ovat bambusta tehdyt pillit ja metalliputket, usein auton osista '
+              + 'taivutetut. Ahmed Janka Nabay oli ensimmäinen, joka levytti '
+              + 'bubua ja lisäsi siihen sähkösoittimet; hänen mukaansa musiikin sanoma '
+              + 'oli rauha, hyvä hallinto ja naisten aseman vahvistaminen. Nabay joutui '
+              + 'lähtemään maasta sodan aikana ja kokosi Brooklynissa yhtyeen, joka toi '
+              + 'bubun maailmalle 2010 — se oli tyylin ensimmäinen kansainvälinen levy.',
+        },
+        {
+          otsikko: 'Laulu, joka löytyi kahdelta mantereelta',
+          aika: '1940-luku ja 1990-luku',
+          teksti: 'Georgian rannikolla asunut gullah-perhe oli säilyttänyt suvussaan '
+              + 'laulun, jonka sanoja kukaan ei enää ymmärtänyt. Kielitieteilijä '
+              + 'Lorenzo Turner tunnisti sen 1940-luvulla mendenkieliseksi — se on '
+              + 'todennäköisesti pisin afrikkalaisella kielellä säilynyt teksti, joka '
+              + 'kulki orjalaivoissa Atlantin yli. 1990-luvulla tutkijat Joseph Opala, '
+              + 'Cynthia Schmidt ja Taziff Koroma löysivät Sierra Leonesta syrjäisen '
+              + 'kylän, jossa samaa laulua yhä laulettiin, ja saivat selville, että se '
+              + 'on hautajaisvirsi. Kahden perheen kohtaaminen on tallennettu '
+              + 'dokumenttielokuvaan The Language You Cry In.',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Riisin ympärille rakentuu kaikki muu: kastike survotaan huhmareessa, '
+          + 'juoma valutetaan palmusta ja kassavasta tehdään sekä kastiketta että '
+          + 'jauhoa.',
+      nostot: [
+        {
+          otsikko: 'Riisi, joka kesytettiin Länsi-Afrikassa',
+          teksti: 'Aasialaisen riisin rinnalla maailmassa on toinenkin kesytetty laji: '
+              + 'Oryza glaberrima, afrikkalainen riisi, joka otettiin viljelyyn '
+              + 'Länsi-Afrikassa noin kolmetuhatta vuotta sitten. Se kestää kuivuutta, '
+              + 'syvää vettä, karua maata ja tuholaisia paremmin kuin tulokas, ja sen '
+              + 'jyvä on pieni ja päärynän muotoinen, lese punertava, maku pähkinäinen. '
+              + 'Sierra Leonessa riisiä kasvattaa 85 prosenttia viljelijöistä ja sitä '
+              + 'syödään 76 kiloa henkeä kohti vuodessa. Rannikkoa sanottiin '
+              + 'riisirannaksi, ja juuri viljelytaidon takia Carolinan ja Georgian '
+              + 'istutusten omistajat maksoivat täältä viedyistä orjuutetuista '
+              + 'korkeampaa hintaa kuin muualta tuoduista.',
+        },
+        {
+          otsikko: 'Kansallisruoka survotaan huhmareessa',
+          teksti: 'Kassavanlehtiä on sanottu Sierra Leonen kansallisruoaksi, ja sen '
+              + 'valmistus alkaa kärsivällisyydellä: nuorimmat lehdet pestään, '
+              + 'survotaan huhmareessa hyvin hienoksi ja silputaan vielä ennen '
+              + 'keittämistä. Sitten ne uppoavat palaver-kastikkeeseen, jonka pohjana '
+              + 'on punainen palmuöljy, sipulia, pippuria sekä kalaa tai lihaa; '
+              + 'juhlavampaan versioon palmuöljyn tilalle vaihdetaan kookosöljy. Muita '
+              + 'riisin päälle tulevia kastikkeita ovat bataatinlehdet, crain crain, '
+              + 'okra ja maapähkinäpata. Kassavasta käytetään koko kasvi: juuresta '
+              + 'survotaan fufua, lehdistä tulee kastike.',
+        },
+        {
+          otsikko: 'Se joka tuo poyon, tuo elämän',
+          teksti: 'Palmuviini valutetaan puun katkaistusta kukinnosta astiaan, joka '
+              + 'sidotaan tyngän alle. Ensimmäinen valkoinen neste on makeaa ja '
+              + 'alkoholitonta, mutta ilmassa olevat hiivat aloittavat käymisen '
+              + 'saman tien: kahdessa tunnissa astiassa on noin nelisprosenttista '
+              + 'juomaa, vuorokaudessa happaman kirpeää ja lopulta etikkaa. '
+              + 'Sierra Leonessa juoma on nimeltään poyo, ja sitä tarjotaan häissä, '
+              + 'syntymäjuhlissa ja hautajaisvalvojaisissa. Limbojen sanonta kertoo '
+              + 'juoman asemasta lyhyesti: se joka tuo poyon, tuo elämän.',
+        },
+        {
+          otsikko: 'Kassavan toinen puoli',
+          tiedosto: 'Cassava preparation into Gari.jpg',
+          teksti: 'Kassavan juuri on syötävä vasta käsittelyn jälkeen, sillä siinä on '
+              + 'luontaisia syanohydriinimyrkkyjä. Gariksi juuret kuoritaan, pestään '
+              + 'ja raastetaan massaksi, joka puristetaan huokoisessa säkissä yhdestä '
+              + 'vuorokauteen, seulotaan ja paahdetaan leveällä pannulla — kuumuus '
+              + 'poistaa myrkyt, ja kuiva rae säilyy pitkään ilman kylmää. Garia '
+              + 'liotetaan kylmässä vedessä sokerin, hunajan, paahdettujen '
+              + 'maapähkinöiden tai maidon kanssa, tai siitä vaivataan kastikkeen '
+              + 'seuraksi eba-taikinaa. Sierra Leonen keittiön muita tärkkelyksiä ovat '
+              + 'acheke ja binch eli silmäpavut.',
+          selite: 'Gari paahdetaan leveällä matalalla pannulla avotulen päällä, ja '
+            + 'kuumuus poistaa kassavan luontaiset myrkyt.',
+          lahde: 'Fodiebrima, Wikimedia Commons (CC0)',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Siirtomaa-aikana Freetownia sanottiin Afrikan Ateenaksi: siellä olivat '
+          + 'mantereen ensimmäinen länsimainen yliopisto, sen ensimmäinen painokone ja '
+          + 'lehdet, joita luettiin ympäri Länsi-Afrikkaa.',
+      nostot: [
+        {
+          otsikko: 'Yliopisto, joka avattiin ennen rautateitä',
+          aika: '1827–',
+          tiedosto: 'Old building of Fourah Bay College. Cline Town, Freetown, Sierra Leone.jpg',
+          teksti: 'Fourah Bay College perustettiin 18. helmikuuta 1827 anglikaanisen '
+              + 'lähetysseuran kouluksi kuvernööri Charles MacCarthyn tuella, ja se on '
+              + 'Saharan eteläpuolisen Afrikan ensimmäinen länsimainen yliopisto. '
+              + 'Ensimmäinen opiskelija oli Samuel Ajayi Crowther, josta tuli '
+              + 'myöhemmin Länsi-Afrikan anglikaaninen piispa. Vuosina 1876–1967 '
+              + 'oppilaitos oli sidoksissa Durhamin yliopistoon, ja sinne tuli '
+              + 'opiskelijoita '
+              + 'Nigeriasta, Ghanasta ja Norsunluurannikolta asti. Vanhan päärakennuksen '
+              + 'peruskiven laski 1845 kuvernööri William Fergusson, ja työtä valvoi '
+              + 'eteläcarolinalainen Edward Jones, oppilaitoksen ensimmäinen musta '
+              + 'johtaja.',
+          selite: 'Fourah Bay Collegen vanha päärakennus valmistui 1845, julistettiin '
+            + 'kansallismonumentiksi 1955, jäi käytöstä 1990 ja vaurioitui tulipalossa '
+            + '1999.',
+          lahde: 'Jared & Melanie & Huxley Ponchot, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Painokone, jonka ranskalaiset ehtivät ensin',
+          aika: '1794–1934',
+          teksti: 'Afrikan ensimmäinen moderni painokone tuotiin Freetowniin 1794, mutta '
+              + 'ranskalainen hyökkäysosasto tuhosi sen ennen kuin sillä ehdittiin '
+              + 'painaa riviäkään. Seuraava saatiin käyntiin 1800, ja siitä syntyivät '
+              + 'lehdet Sierra Leone Advertiser ja Royal Gazette. 1860-luvulla '
+              + 'Freetownista tuli afrikkalaisen journalismin keskus, jonne tuli '
+              + 'toimittajia ympäri mannerta ja kauempaakin: New Eran perusti '
+              + 'länsi-intialainen William Drake. Lehdet kirjoittivat rasismista, '
+              + 'siirtomaavallasta ja afrikkalaisten oikeuksista. Vuonna 1934 '
+              + 'perustettiin Länsi-Afrikan ensimmäinen englanninkielinen '
+              + 'radiopalvelu.',
+        },
+        {
+          otsikko: 'Shakespeare krioksi, koska kieli ei ole murre',
+          aika: '1964–2013',
+          teksti: 'Kriota puhuu yli yhdeksänkymmentä prosenttia maan väestöstä, mutta '
+              + 'sillä ei ole virallista asemaa. Sanasto tulee englannista, kieliopin '
+              + 'arvellaan seuraavan jamaikalaista maroonikreolia ja afrikkalaiset '
+              + 'sanat ovat pääosin '
+              + 'akanista, jorubasta ja igbosta; lapsi on pikin portugalin sanasta '
+              + 'pequeno. Toimittaja ja kielimies Thomas Decker väitti 1900-luvun '
+              + 'puolivälissä, ettei krio ole murre vaan kieli, ja todisti sen '
+              + 'kääntämällä: Shakespearen Julius Caesar ilmestyi krioksi 1964 ja '
+              + 'sovitus As You Like Itistä 1966. Uusi testamentti käännettiin 1986 '
+              + 'ja Vanha testamentti 2013.',
+        },
+        {
+          otsikko: 'Lääkäri, joka otti nimekseen Africanus',
+          aika: '1835–1883',
+          teksti: 'James Beale Horton syntyi Gloucesterin kylässä Freetownin lähellä '
+              + 'igbo-perheeseen, jonka laivasto oli vapauttanut orjalaivasta. Hän kävi '
+              + 'Sierra Leone Grammar Schoolin ja Fourah Bay Collegen, sai stipendin ja '
+              + 'opiskeli lääkäriksi Lontoossa ja Edinburghissa; opiskeluaikanaan hän '
+              + 'otti itselleen nimen Africanus. Hänestä tuli yksi Britannian armeijan '
+              + 'ensimmäisistä mustista upseereista, mutta muistetuinta ovat kirjat: '
+              + 'West African Countries and Peoples vuodelta 1868 kumosi eurooppalaisia '
+              + 'rotuoppeja ja vaati itsehallintoa Länsi-Afrikan siirtomaille. '
+              + 'Merkuriuksen kraatteri on nimetty hänen mukaansa.',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä Shakespearen näytelmän Thomas Decker julkaisi krioksi 1964?',
+        vaihtoehdot: [
+          'Hamletin',
+          'Macbethin',
+          'Myrskyn',
+          'Julius Caesarin',
+        ],
+        oikea: 3,
+        fakta: 'Decker halusi todistaa, ettei krio ole murre vaan kieli, joka kantaa '
+            + 'maailmankirjallisuutta.',
+      },
+    },
+  ],
 };

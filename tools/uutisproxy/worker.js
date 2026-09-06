@@ -120,6 +120,9 @@ const SALLITUT = [
   // /feeds/posts/default?alt=rss — syöte ja artikkelisivut ovat samalla
   // isäntänimellä.
   'https://www.lexpress.mg/',
+  // Sierra Leonen uutislähde (maalehti 6.9.2026): syöte ja
+  // artikkelisivut samalla isäntänimellä, ilman www-etuliitettä.
+  'https://sierraloaded.sl/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei
