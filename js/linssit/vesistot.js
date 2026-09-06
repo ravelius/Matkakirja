@@ -78,13 +78,13 @@
  *
  * KAKSI ASIAA MUUTTUU LAUDALTA PALLOLLE.
  *
- * 1. VIIVANLEVEYS ON ASTEITA, EI PIKSELEITÄ. Yllä perusteltu
- *    `non-scaling-stroke` on SVG:n keino; pallolla viivan paksuus on
- *    Globe.gl:n pathStroke eli kulma-aste, ja se kasvaa zoomatessa kuten
- *    kaikki muukin pallon pinnalla. Mitta on otettu matkareitistä
- *    (js/pallolauta/reitit.js MATKAREITIN_PAKSUUS_AST = 0,05), jotta
- *    pääjoki lukeutuu reittiä vahvempana ja sivujoki sitä hennompana —
- *    sama kolmiportainen järjestys kuin laudalla, sen omissa yksiköissä.
+ * 1. VIIVANLEVEYS ON RUUDUN PIKSELEITÄ MYÖS PALLOLLA. Yllä perusteltu
+ *    `non-scaling-stroke` on SVG:n keino; pallolla saman tekee
+ *    Globe.gl:n pathStroke, joka on mitattuna CSS-pikseleitä ruudulla
+ *    eikä asteita (js/pallolauta/reitit.js). Mitta on otettu
+ *    matkareitistä (MATKAREITIN_PAKSUUS_PX = 2,5), jotta pääjoki
+ *    lukeutuu reittiä vahvempana ja sivujoki sitä hennompana — sama
+ *    kolmiportainen järjestys kuin laudalla, samoissa yksiköissä.
  * 2. PEHMENNYSTÄ EI TARVITA. Laudalla polut pehmennetään
  *    (smoothOpenPath); pallolla Globe.gl pilkkoo polun itse
  *    (pathResolution), ja mitattuna aineiston pisteväli on enimmillään
@@ -185,31 +185,34 @@ const JARVEN_REUNA = 1.4;
 /* ------------------------------------------------------- pallon mitat */
 
 /*
- * UOMAN JA PENKEREEN PAKSUUS ASTEINA (Globe.gl pathStroke).
+ * UOMAN JA PENKEREEN PAKSUUS RUUTUPIKSELEINÄ (Globe.gl pathStroke).
  *
- * Mittatikku on matkareitti: js/pallolauta/reitit.js
- * MATKAREITIN_PAKSUUS_AST = 0,05 on se viiva, jonka pelaaja tuntee
- * pallolta entuudestaan. Pääjoki on sitä hitusen vahvempi (0,06), koska
- * se on tässä linssissä pääasia; keskisuuri jää alle (0,04) ja sivujoki
- * puoleen (0,025). Suhde 2,4 : 1,6 : 1 on sama kuin laudan pikseleillä
- * (3,0 : 2,0 : 1,3), joten kolmiportainen järjestys säilyy sellaisenaan.
+ * MITTA ON SAMA KUIN LAUDALLA. Ensimmäinen pallototeutus laski nämä
+ * asteina (0,06 / 0,04 / 0,025) moduulien vanhojen kommenttien mukaan,
+ * ja mitattuna uoma jäi alle pikselin levyiseksi eli näkymättömiin.
+ * `pathStroke` on tässä Globe.gl-versiossa CSS-PIKSELEITÄ RUUDULLA
+ * (js/pallolauta/reitit.js, mitattu docs/moduulit/karttapallo.md luku
+ * 10.3), eli täsmälleen sama laji kuin laudan `non-scaling-stroke`
+ * -leveydet yllä (LEVEYS 3,0 / 2,0 / 1,3).
  *
- * PENGER ON SAMASSA SUHTEESSA KUIN LAUDALLA (7/3 ja 5/2), ei kiinteä
- * lisäys: asteissa lisäys olisi eri levyinen eri zoomilla, kun laudalla
- * se oli ruudun pikseleitä. Luokka 3 jää ilman pengertä samasta syystä
- * kuin laudalla — penger söisi luokkien eron.
+ * UOMA ON LAUDAN MITTA × 1,2. Pallon pohja on tummempi ja kirjavampi
+ * kuin pergamentti — reliefi kalvona, meri sen alla — joten sama luku
+ * lukeutuisi hennompana; viidennes lisää palauttaa laudan tuntuman.
+ * Suhde 2,25 : 1,5 : 1 on laudan suhde (2,3 : 1,5 : 1) pyöristettynä,
+ * joten kolmiportainen järjestys säilyy sellaisenaan.
  *
- * AVOIN KYSYMYS MOOTTORILLE (aalto 1A / Fable): aste on kiinteä pallon
- * pinnalla, joten koko maailma ruudulla (korkeus 2,5, ~2 px asteessa)
- * ohentaa uoman alle pikselin, kun saapumisnäkymässä (~55 px asteessa)
- * se on kolme pikseliä. Sama pätee matkareittiin, joka piirretään vain
- * lähellä. Jos `lauta.linssit` joskus asettaa listat uudelleen kameran
- * pysähtyessä (kuten nimiladonta, LAATU_LEPOVIIVE_MS), nämä luvut
- * kannattaa kertoa kameran korkeudella — silloin uoma olisi taas
- * merkintä eikä mitta, niin kuin laudalla.
+ * PENGER ON LAUDAN LUKU SELLAISENAAN (7 ja 5): penger on REUNA, ja
+ * reunan mitta on ruudulla sama kuin laudalla — noin 1,7 ja 1,3
+ * pikseliä uoman kummallakin puolella. Luokka 3 jää ilman pengertä
+ * samasta syystä kuin laudalla: penger söisi luokkien eron.
+ *
+ * ZOOMI EI ENÄÄ OHENNA. Aikaisempi avoin kysymys (aste on kiinteä
+ * pallon pinnalla, joten koko maailma ruudulla ohentaa uoman alle
+ * pikselin) katosi tämän myötä: ruutupikseli on ruutupikseli joka
+ * korkeudella, aivan kuten laudalla.
  */
-export const PALLON_UOMA_AST = { 1: 0.06, 2: 0.04, 3: 0.025 };
-export const PALLON_PENGER_AST = { 1: 0.14, 2: 0.1 };
+export const PALLON_UOMA_PX = { 1: 3.6, 2: 2.4, 3: 1.6 };
+export const PALLON_PENGER_PX = { 1: 7, 2: 5 };
 
 /*
  * KORKEUDET PALLON PINNASTA. Kalvo (reliefi) on omana kuorenaan
@@ -378,7 +381,7 @@ export function vesistotPallolle(aineisto, asteet) {
     palat.forEach((pala, k) => {
       const pisteet = tihennaKaarella(pala);
       const tunnus = palat.length > 1 ? `${i}/${k}` : `${i}`;
-      const penger = PALLON_PENGER_AST[luokka];
+      const penger = PALLON_PENGER_PX[luokka];
       if (penger) {
         penkat.push({
           avain: `penger:${tunnus}`,
@@ -396,7 +399,7 @@ export function vesistotPallolle(aineisto, asteet) {
         tarkeys: luokka,
         pisteet,
         vari: UOMA[luokka] ?? UOMA[3],
-        paksuus: PALLON_UOMA_AST[luokka] ?? PALLON_UOMA_AST[3],
+        paksuus: PALLON_UOMA_PX[luokka] ?? PALLON_UOMA_PX[3],
         korkeus: UOMAN_KORKEUS,
         katko: 0,
       });

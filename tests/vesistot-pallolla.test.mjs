@@ -21,7 +21,7 @@ import assert from 'node:assert/strict';
 
 const {
   LINSSI, vesistotPallolle, katkaiseSauma, tihennaKaarella,
-  PALLON_UOMA_AST, PALLON_PENGER_AST, VESINIMIEN_KATTO, JARVEN_KORKEUS,
+  PALLON_UOMA_PX, PALLON_PENGER_PX, VESINIMIEN_KATTO, JARVEN_KORKEUS,
 } = await import('../js/linssit/vesistot.js');
 const { MAAILMANKARTAN_MAASTO } = await import('../js/packs/maailmankartta-maasto.js');
 const { MAAILMANKARTAN_NIMET } = await import('../js/packs/maailmankartta-nimet.js');
@@ -124,16 +124,26 @@ test('pitkät välit tihennetään isoympyrän pisteillä', () => {
 });
 
 test('tärkein joki saa paksuimman viivan', () => {
-  assert.ok(PALLON_UOMA_AST[1] > PALLON_UOMA_AST[2]);
-  assert.ok(PALLON_UOMA_AST[2] > PALLON_UOMA_AST[3]);
-  assert.ok(PALLON_PENGER_AST[1] > PALLON_UOMA_AST[1]);
-  assert.equal(PALLON_PENGER_AST[3], undefined);
+  assert.ok(PALLON_UOMA_PX[1] > PALLON_UOMA_PX[2]);
+  assert.ok(PALLON_UOMA_PX[2] > PALLON_UOMA_PX[3]);
+  assert.ok(PALLON_PENGER_PX[1] > PALLON_UOMA_PX[1]);
+  assert.equal(PALLON_PENGER_PX[3], undefined);
+  /*
+   * PAKSUUS ON RUUTUPIKSELEITÄ, EI ASTEITA (karttapallo.md luku 10.3).
+   * Alle 1,5 px:n uoma katoaa ruudulta — juuri niin kävi, kun luvut
+   * olivat asteita (0,025 → alle pikselin). Vartio pitää sekä nimen
+   * että suuruusluokan.
+   */
+  for (const [luokka, px] of Object.entries(PALLON_UOMA_PX)) {
+    assert.ok(px >= 1.5 && px <= 4, `uoma ${luokka} on ${px} px`);
+  }
+  for (const px of Object.values(PALLON_PENGER_PX)) assert.ok(px >= 1.5);
   const luokat = new Map(MAAILMANKARTAN_NIMET.joet.map((j) => [j.avain, j.tarkeys]));
   const uomat = tulos.polut.filter((d) => d.avain.startsWith('uoma:'));
   const paksuin = Math.max(...uomat.map((d) => d.paksuus));
   for (const d of uomat) {
     const luokka = luokat.get(d.nimi) ?? 3;
-    assert.equal(d.paksuus, PALLON_UOMA_AST[luokka]);
+    assert.equal(d.paksuus, PALLON_UOMA_PX[luokka]);
     if (luokka === 1) assert.equal(d.paksuus, paksuin);
     assert.equal(d.katko, 0);
   }

@@ -127,11 +127,13 @@ export const AVAUSLENNON_PYORINTA_AST = 5;
  * `offset *= linewidth; offset /= resolution.y`, eli luku on
  * css-pikseleitä ruudulla. Ensimmäinen toteutus laski paksuuden
  * asteina (0,89) tämän moduulin kommenttien mukaan, ja viiva jäi alle
- * pikselin levyiseksi eli näkymättömiin. AVOIN: samat "asteina"-
- * kommentit ovat myös reitit.js:n ja linssien paksuusvakioissa
- * (MATKAREITIN_PAKSUUS_AST 0,05 jne.) — ne ovat siis paljon ohuempia
- * kuin oli tarkoitus, mutta niiden korjaus on oma työnsä eikä kuulu
- * tähän tilaukseen.
+ * pikselin levyiseksi eli näkymättömiin. Samat "asteina"-kommentit
+ * olivat myös reitit.js:n ja linssien paksuusvakioissa
+ * (MATKAREITIN_PAKSUUS_AST 0,05 jne.); ne on sittemmin korjattu
+ * `_PX`-nimisiksi ruutupikseleiksi (karttapallo.md luku 10.3,
+ * "Viivapaksuudet pallolla"). Sama mittaus osoitti myös, ettei
+ * laitepikselisuhde vaikuta lukuun: 11 piirtyi puhelimella (dpr 2)
+ * 22 laitepikseliä eli tasan 11 css-pikseliä.
  */
 export const AVAUSLENNON_VIIVAN_PX = 11;
 /** Jäljen pisteitä koko kaarella; kasvava jälki saa niistä osuutensa. */

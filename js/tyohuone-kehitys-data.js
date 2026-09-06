@@ -199,7 +199,7 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'venetsia',
-      mykistetyt: [],
+      mykistetyt: ['kohtaaminen'],
       otsikko: 'Venetsia — naamio sillan kaiteella',
       saapuminen: 'Vesi nousi yöllä kaduille, ja aamulla torilla '
         + 'käveltiin lankkuja pitkin kuin laivan kannella — kaupunki '
@@ -208,12 +208,18 @@ export const KAARI_PAKETIT = {
         + 'linnunnokka, silmäaukot tyhjinä. Kukaan ohikulkija ei '
         + 'vilkaissut sitä; minä piirsin sen vihkooni enkä saanut '
         + 'siitä silmiäni irti.',
+      /*
+       * KAANONKORJAUS (Fable 6.9.2026): tilauskirjassa ei ole Horation
+       * nimikirjaimia — kukaan nykyhetkessä ei tunnista isoisää
+       * (docs/tarina.md). Tilaajan nimi on jäänyt musteläikän alle.
+       * Kohtaamisen luenta generoidaan uudestaan (mykistetyt).
+       */
       henkilo: 'Naamiontekijä Lucia pitää pajaa kolmannessa polvessa; '
-        + 'tilauskirjassa on vuosi 1873 ja nimikirjaimet H. F.',
+        + 'tilauskirjassa on vuosi 1873 ja tilaajan nimi musteläikän alla.',
       kohtaaminen: 'Pajassa naamiontekijä Lucia tunnistaa linnunnokan yhdellä '
         + 'vilkaisulla. "Tuo on pajamme työtä — tilauskirjassa lukee '
-        + '1873 ja nimikirjaimet H. F. Vastaa väliin taitettuun '
-        + 'kysymykseen, niin luen tilauksen loppuun."',
+        + '1873, ja tilaajan nimi on jäänyt musteläikän alle. Vastaa '
+        + 'väliin taitettuun kysymykseen, niin luen tilauksen loppuun."',
       kysymys: {
         q: 'Miksi ruttolääkärin naamiossa on pitkä linnunnokka?',
         vaihtoehdot: [

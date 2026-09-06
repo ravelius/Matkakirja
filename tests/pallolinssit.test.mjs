@@ -88,7 +88,7 @@ test('polygonsData on sallittu kerros ja moottori asettaa sen sopimuksen mukaan'
   // Reittikerros lukee paksuuden ja katkon datumista, jotta linssin
   // viiva voi olla eri paksuinen kuin pelin reitti.
   const reitit = lue('../js/pallolauta/reitit.js');
-  assert.match(reitit, /\.pathStroke\(\(d\) => d\.paksuus \?\? MATKAREITIN_PAKSUUS_AST\)/);
+  assert.match(reitit, /\.pathStroke\(\(d\) => d\.paksuus \?\? MATKAREITIN_PAKSUUS_PX\)/);
   assert.match(reitit, /aseta\('peli', polut\);/, 'pelin reitit ovat oma osansa');
 });
 
@@ -122,4 +122,72 @@ test('ui: pallolaudalla pallolle-linssi piirtyy pallolle eikä avaa linssikartta
   assert.match(ui, /if \(tunnus && this\.pallolautaPaalla\(\) && !pallolle\) this\.avaaLinssikartta\(\{ linssi: true \}\);/);
   // Nukkuva kartta ei unohda pallolinssin valintaa (paivitaLinssit).
   assert.match(ui, /if \(this\.pallolinssiKelpaa\(haluttu, nakyvat\)\) \{/);
+});
+
+/*
+ * ── VIIVAPAKSUUDET OVAT RUUTUPIKSELEITÄ ──────────────────────────
+ *
+ * `pathStroke` on tässä Globe.gl-versiossa CSS-pikseleitä ruudulla
+ * (Line2/LineMaterial, worldUnits epätosi; mitattu 5.9.2026,
+ * docs/moduulit/karttapallo.md luku 10.3). Asteina laskettu paksuus
+ * jää alle pikselin eli näkymättömiin — juuri niin kävi ensimmäisissä
+ * pallototeutuksissa. Vartio pitää sekä NIMEN (`_PX`, jottei seuraava
+ * lukija luule luvun olevan asteita) että SUURUUSLUOKAN (≥ 1,5 px).
+ */
+test('pallon polkujen paksuudet ovat _PX-nimisiä ruutupikseleitä, ei asteita', async () => {
+  const reitit = await import('../js/pallolauta/reitit.js');
+  const vesistot = await import('../js/linssit/vesistot.js');
+  const aikajana = await import('../js/aikajana.js');
+  const avaus = await import('../js/pallolauta/avaus.js');
+
+  const paksuudet = {
+    'reitit.MATKAREITIN_PAKSUUS_PX': reitit.MATKAREITIN_PAKSUUS_PX,
+    'reitit.MATKAREITIN_VARJON_PAKSUUS_PX': reitit.MATKAREITIN_VARJON_PAKSUUS_PX,
+    'avaus.AVAUSLENNON_VIIVAN_PX': avaus.AVAUSLENNON_VIIVAN_PX,
+    'aikajana.REITIN_PAKSUUS_PX': aikajana.REITIN_PAKSUUS_PX,
+    'vesistot.PALLON_UOMA_PX.1': vesistot.PALLON_UOMA_PX[1],
+    'vesistot.PALLON_UOMA_PX.2': vesistot.PALLON_UOMA_PX[2],
+    'vesistot.PALLON_UOMA_PX.3': vesistot.PALLON_UOMA_PX[3],
+    'vesistot.PALLON_PENGER_PX.1': vesistot.PALLON_PENGER_PX[1],
+    'vesistot.PALLON_PENGER_PX.2': vesistot.PALLON_PENGER_PX[2],
+  };
+  for (const [nimi, px] of Object.entries(paksuudet)) {
+    assert.equal(typeof px, 'number', `${nimi} puuttuu`);
+    assert.ok(px >= 1.5, `${nimi} on ${px} px — alle 1,5 px hukkuu ruudulla`);
+    assert.ok(px <= 12, `${nimi} on ${px} px — polku ei ole putki`);
+  }
+  // Omistajan sopimat kaksi lukua eivät saa liikkua muun mukana.
+  assert.equal(avaus.AVAUSLENNON_VIIVAN_PX, 11, 'avauslento = css .etusivupallo-viiva');
+  assert.equal(aikajana.REITIN_PAKSUUS_PX, 3, 'ihmisen matkan reittiviiva');
+  // Varjo on musteviivaa leveämpi — muuten se ei olisi varjo.
+  assert.ok(reitit.MATKAREITIN_VARJON_PAKSUUS_PX > reitit.MATKAREITIN_PAKSUUS_PX);
+
+  /*
+   * Nimivartio: yksikään pallon POLKUJEN paksuusvakio ei saa olla
+   * `_AST`-loppuinen. Kaaret (arcStroke) ovat putkia pallon omissa
+   * yksiköissä, ja niiden nimi on `_YKS` — sekään ei ole `_AST`.
+   */
+  for (const polku of ['../js/pallolauta/reitit.js', '../js/linssit/vesistot.js', '../js/aikajana.js']) {
+    const lahde = lue(polku);
+    const osumat = lahde.match(/export const [A-Z_]*(PAKSUUS|LEVEYS|UOMA|PENGER)[A-Z_]*_AST\b/g) ?? [];
+    assert.deepEqual(osumat, [], `${polku}: paksuus asteina — ${osumat.join(', ')}`);
+  }
+});
+
+/*
+ * NAAPURIREITIN VARJO (5.9.2026): pallon pinta on tumma ja kirjava,
+ * eikä 42 %:n muste lukeudu siltä kuten pergamentilta. Jokainen reitti
+ * on siksi kaksi polkua: vaalea varjo hitusen alempana ja musteviiva
+ * sen päällä — samalla katkolla, jotta katkoviiva pysyy yhtenä
+ * merkkinä.
+ */
+test('naapurireitti piirtyy varjon kanssa: kaksi polkua per reitti', () => {
+  const reitit = lue('../js/pallolauta/reitit.js');
+  assert.match(reitit, /polut\.push\(m\.varjo, m\.datum\);/, 'varjo ennen viivaa');
+  assert.match(reitit, /paksuus: MATKAREITIN_VARJON_PAKSUUS_PX,/);
+  assert.match(reitit, /vari: REITIN_VARIT\.varjo,/);
+  // Varjo on omalla korkeudellaan, jottei kaksi viivaa välky toistensa läpi.
+  assert.match(reitit, /pisteet\.map\(\(\[lat, lng\]\) => \[lat, lng, REITIN_VARJON_KORKEUS\]\)/);
+  assert.match(reitit, /export const REITIN_VARJON_KORKEUS = 0\.0018;/);
+  assert.match(reitit, /\.pathPointAlt\(\(p\) => \(p\.length > 2 \? p\[2\] : REITIN_KORKEUS\)\)/);
 });
