@@ -445,4 +445,63 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'uudelleen; kymmenen vuotta myöhemmin väkiluku oli 80 prosenttia '
       + 'vuoden 2000 tasosta.',
   },
+  /* MONTREAL (6.9.2026). Kaupunkilehti kirjoitettiin 23.8.2026
+   * (js/packs/kulttuuri-kategoriat.js, avain montreal), mutta sen
+   * lohkokommentin lupaama ARTIKKELIT-merkintä jäi silloin
+   * lisäämättä — etusivun leipäteksti puuttui lehdestä kokonaan.
+   * Tämä merkintä korjaa puutteen samasta aineistosta: jokainen väite
+   * on lehden omista teksteistä ja niiden lähteistä
+   * (docs/mantereet-tyoaineisto/faktapohja-montreal.md ja
+   * tarkistus-montreal.md, en-Wikipedia 23.8.2026) — uusia
+   * lähdehakuja ei tehty. Tarkistusraportin C-kohta on otettu
+   * huomioon: vuosilukua 1763 ei käytetä, koska sitä ei ole
+   * "Montreal"-artikkelissa, vaan teksti kertoo vain valtauksen 1760
+   * ja antautumisen Britannialle. Sisältölinjaus on sama kuin
+   * lehdessä: kaksikielisyys todetaan kaupungin peruskirjan ja
+   * väestönlaskennan tasolla, ei nykypolitiikkaa. */
+  Montreal: {
+    intro: 'Montreal on Québecin suurin ja Kanadan toiseksi suurin '
+      + 'kaupunki, saari keskellä Saint Lawrence -jokea. Saaren '
+      + 'keskellä kohoaa Mont Royal, jonka nimestä kaupungin oma nimi '
+      + 'on lyhentynyt. Ranskalaiset '
+      + 'lähetyssaarnaajat perustivat paikalle Ville-Marien 1642, ja '
+      + '**siirtokunta oli 1650-luvun alussa niin pieni, että se oltiin '
+      + 'hylkäämässä** — vuoteen 1685 mennessä asukkaita oli kuusisataa '
+      + 'ja paikasta oli tullut turkiskaupan keskus.'
+      + '\n\n'
+      + 'Ranska hallitsi siirtokuntaa vuoteen 1760, jolloin Montreal '
+      + 'antautui brittihyökkäykselle Seitsenvuotisen sodan aikana. '
+      + 'Kaupunkioikeudet tulivat 1832, ja sen jälkeen kasvu oli nopeaa: '
+      + 'Lachine-kanava vei 1825 laivat koskien ohi ja Victoria-silta '
+      + '1859 rautatien joen yli. Vuoteen 1860 mennessä Montreal oli '
+      + 'Brittiläisen Pohjois-Amerikan suurin kaupunki, joka hallitsi '
+      + 'muun maan taloutta ja kulttuuria.'
+      + '\n\n'
+      + 'Isoisän matkavuoden tienoilla kaupunki oli keskellä '
+      + 'rakennustöitä. **Notre-Damen kirkon sisustus — syvänsininen '
+      + 'holvikatto kultatähtineen — tehtiin juuri vuosina 1872–1879**, '
+      + 'ja kaupungintalo nousi 1873 vanhan jesuiittapuutarhan '
+      + 'paikalle. Vuoden 1871 väestönlaskennassa asukkaita oli '
+      + '130 022.',
+    teksti: 'Montreal on saari Saint Lawrence -joessa. Saaren keskellä '
+      + 'kohoaa Mont Royal, jonka rinteeltä koko kaupunki näkyy '
+      + 'kerralla, ja joen väylä vie valtamerialukset Atlantilta '
+      + 'Suurille järville asti.'
+      + '\n\n'
+      + 'Paul Chomedey de Maisonneuve perusti Ville-Marien 1642, ja '
+      + 'sulpitiaanimunkit vetivät saarelle ensimmäiset katulinjat. '
+      + 'Kaupunki siirtyi Britannian valtaan 1760, sai kaupunkioikeudet '
+      + '1832 ja kasvoi rautateiden ja sataman varassa mantereen '
+      + 'solmukohdaksi. Satama on noin 1 600 kilometrin päässä '
+      + 'Atlantilta, mutta se on silti lyhin suora reitti '
+      + 'Pohjois-Amerikan Keskilännestä Eurooppaan.'
+      + '\n\n'
+      + 'Nykyään ranska on kaupungin peruskirjan mukainen virallinen '
+      + 'kieli, ja Montreal on samalla yksi Kanadan kaksikielisimmistä '
+      + 'kaupungeista. Keskustan alla kulkee käytäväverkosto, joka sai '
+      + 'alkunsa 1962 Place Ville Marien työmaalla ja on kasvanut '
+      + 'yhdeksi maailman laajimmista maanalaisista jalankulkualueista. '
+      + 'Metro avattiin 1966, ja sen kumipyöräiset junat ovat '
+      + 'tavallista hiljaisempia.',
+  },
 };

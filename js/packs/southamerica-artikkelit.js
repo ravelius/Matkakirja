@@ -741,4 +741,104 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'Pelourinhon värikkäitä kortteleita on kunnostettu 1990-luvulta '
       + 'alkaen, ja entisöityjä rakennuksia on yli 800.',
   },
+  /* PORTO ALEGRE (6.9.2026). Jokainen väite tulee samasta erästä kuin
+   * lehden tekstit (js/packs/kulttuuri-kategoriat.js, avain
+   * portoalegre), ja ne on tarkistettu en-Wikipedian raakateksteistä
+   * 24.8.2026 (faktapohja-portoalegre.md + tarkistus-portoalegre.md)
+   * — uusia lähdehakuja ei tarvittu. Sisältölinjaus on
+   * spec-mantereet.md:n E-Amerikka-osio: siirtolaisuus, kapina ja
+   * charque-talouden orjatyö kerrotaan tapahtumina ja lukuina, ei
+   * nykypolitiikkaa. Vuoden 1873 kulma on introssa, koska se on koko
+   * lehden kantava aihe: isoisän matkavuosi osuu saksalais- ja
+   * italialaissiirtolaisuuden väliin. */
+  'Porto Alegre': {
+    intro: 'Porto Alegre on Rio Grande do Sulin pääkaupunki ja Brasilian '
+      + 'eteläisin osavaltion pääkaupunki. Se on rakennettu Guaíban '
+      + 'itärannalle suistoalueelle, joka on syntynyt viiden joen '
+      + 'yhtymäkohtaan, ja neljäkymmentä kukkulaa rikkovat muuten '
+      + 'tasaista maisemaa. Nimi tarkoittaa kirjaimellisesti iloista '
+      + 'satamaa.'
+      + '\n\n'
+      + 'Portugali toi 1750-luvulta alkaen alueelle atsoorilaisperheitä, '
+      + 'ja kylä perustettiin virallisesti 26. maaliskuuta 1772; jo '
+      + 'seuraavana vuonna siitä tuli maakunnan pääkaupunki. '
+      + '**Farroupilha-kapinan aikana 1835–1845 kaupunkia piiritettiin '
+      + 'kolmesti, eivätkä kapinalliset saaneet sitä kertaakaan '
+      + 'takaisin** — siitä se sai keisarilta arvonimen Leal e Valorosa, '
+      + 'uskollinen ja urhea, joka lukee yhä vaakunassa.'
+      + '\n\n'
+      + 'Isoisän matkan aikoihin kaupunki oli siirtolaisaaltojen '
+      + 'välissä: **saksalaiset olivat asuttaneet osavaltiota vuodesta '
+      + '1824, italialaiset saapuivat vasta 1875.** Vuoden 1872 '
+      + 'väestönlaskennassa asukkaita oli 43 998, ja keskustan kivinen '
+      + 'markkinahalli oli ollut auki nelisen vuotta.',
+    teksti: 'Porto Alegre on Brasilian eteläkulmassa, Guaíban rannalla. '
+      + 'Vesi ei ole merta vaan laaja ja matala suistoalue, josta vedet '
+      + 'laskevat etelään Patojen laguuniin ja vasta sieltä '
+      + 'Atlantille.'
+      + '\n\n'
+      + 'Kaupunki perustettiin 1772 atsoorilaissiirtokunnaksi ja siitä '
+      + 'tuli maakunnan pääkaupunki 1773. Farroupilha-kapina 1835–1845 '
+      + 'jätti siihen kolmen piirityksen jäljet ja arvonimen. '
+      + '1800-luvun talous nojasi charqueen eli kuivalihaan, jota '
+      + 'valmistettiin orjatyöllä, ja saksalaiset ja italialaiset '
+      + 'siirtolaiset muuttivat osavaltion väestön puolessa '
+      + 'vuosisadassa.'
+      + '\n\n'
+      + 'Nykyään kaupungissa on kaksi suurta jalkapalloseuraa, joiden '
+      + 'ottelulla on oma nimi, ja rannassa entinen hiilivoimala toimii '
+      + 'kulttuurikeskuksena. Huhti–toukokuussa 2024 Guaíba nousi 5,31 '
+      + 'metriin ja ylitti vuoden 1941 ennätyksen; keskustan suojaksi '
+      + '1940-luvulla rakennettu penger esti pahimman vahingon '
+      + 'historiallisessa ytimessä.',
+  },
+  /* ASUNCIÓN (6.9.2026). Jokainen väite tulee samasta erästä kuin
+   * lehden tekstit (js/packs/kulttuuri-kategoriat.js, avain asuncion),
+   * ja ne on tarkistettu en-Wikipedian raakateksteistä 24.8.2026
+   * (faktapohja-asuncion.md + tarkistus-asuncion.md) — uusia
+   * lähdehakuja ei tarvittu. Kolmoisliiton sota on introssa, koska
+   * isoisän matkavuosi 1873 osuu suoraan sen jälkeiseen miehitykseen;
+   * väestötappioista annetaan haarukka eikä yhtä lukua, kuten
+   * lehdessäkin. Nykypolitiikka on kokonaan poissa. */
+  'Asunción': {
+    intro: 'Asunción on Paraguayn pääkaupunki ja yksi Río de la Platan '
+      + 'altaan pisimpään yhtäjaksoisesti asutuista paikoista. Se on '
+      + 'Paraguayjoen vasemmalla rannalla lähellä kohtaa, jossa jokeen '
+      + 'yhtyy Pilcomayo, ja vanha kaupunki on rakennettu seitsemälle '
+      + 'matalalle kukkulalle. Luoteessa kaupungin erottaa naapurimaista '
+      + 'Asunciónin lahti.'
+      + '\n\n'
+      + 'Espanjalaiset pystyttivät paikalle linnakkeen elokuussa 1537. '
+      + '**Kun alkuperäisväestö tuhosi tuoreen Buenos Airesin 1542, sen '
+      + 'asukkaat pakenivat tänne, ja Asunciónista tuli koko alueen '
+      + 'keskus, josta lähetettiin retkikuntia perustamaan yli '
+      + 'seitsemänkymmentä muuta siirtokuntaa.** Siksi kaupunkia '
+      + 'kutsutaan yhä kaupunkien äidiksi. Itsenäisyys julistettiin '
+      + 'toukokuussa 1811.'
+      + '\n\n'
+      + '**Isoisän matkan aikoihin Asunción oli vieraan armeijan '
+      + 'kaupunki:** Kolmoisliiton sota 1864–1870 päättyi Paraguayn '
+      + 'tuhoisaan tappioon, ja miehitys jatkui vuoteen 1876. '
+      + 'Presidentin palatsi ja sankaripanteoni, kaupungin kaksi '
+      + 'tunnetuinta rakennusta, olivat vuonna 1873 kumpikin '
+      + 'keskeneräisiä.',
+    teksti: 'Asunción on Etelä-Amerikan sisämaassa, Paraguayjoen '
+      + 'rannalla. Matkaa Atlantille on noin tuhat ja Tyynellemerelle '
+      + 'noin 1 300 kilometriä, ja perinteinen tie kaupunkiin on '
+      + 'kulkenut jokea pitkin etelästä.'
+      + '\n\n'
+      + 'Espanjalaiset perustivat linnakkeen 1537, ja siitä kasvoi Río '
+      + 'de la Platan alueen ensimmäinen keskus. Itsenäisyys tuli 1811, '
+      + 'ja Kolmoisliiton sota 1864–1870 tyhjensi maan: vuoden 1871 '
+      + 'väestönlaskennassa koko maassa oli 221 079 asukasta, joista '
+      + 'miehiä vain 28 746. Vieraat joukot pitivät pääkaupunkia '
+      + 'hallussaan vuoteen 1876.'
+      + '\n\n'
+      + 'Nykyään Paraguayssa on kaksi virallista kieltä, espanja ja '
+      + 'guaraní, ja jälkimmäistä puhuu enemmistö väestöstä. Kaupungin '
+      + 'arkeen kuuluu tereré, jääkylmä mate, joka kiertää seurueessa '
+      + 'yhteisestä astiasta. Vuonna 2011 joen rantaan avattiin '
+      + 'rantapuisto, joka yhdistää vanhan keskustan rakennukset '
+      + 'veteen.',
+  },
 };
