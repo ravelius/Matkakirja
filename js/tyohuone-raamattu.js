@@ -3600,7 +3600,14 @@ export const RAAMATTU = {
           + 'sinen paalla kolmen sadasosan huntu erottui viivana; reittikuvien '
           + 'maskiaukon vyo on S-kayra (js/etusivupallo.js julisteenMaski), ei '
           + 'suora liuku. Testi laskee reunan peittavyyden pysakeista ja vaatii '
-          + 'nollan (tests/etusivupallo.test.mjs).',
+          + 'nollan (tests/etusivupallo.test.mjs). PALAUTE (omistaja 6.9.2026 '
+          + 'ilta, iPad pystyssa, sanatarkasti: "Alaosan tekstin vaalea pohja on '
+          + 'liian voimakas. Taustan maapallo saisi tayttaa kokoruudun niin '
+          + 'etta pallon rajat eivat nay"): avaustekstin harso alaosassa '
+          + 'selvasti haaleammaksi (teksti pysyy luettavana pallon paalla), ja '
+          + 'etusivun pallo skaalataan peittamaan koko ruutu joka kuvasuhteella '
+          + '(iPad pysty, puhelin, tyopoyta) niin ettei pallon reuna tai '
+          + 'horisontti nay missaan.',
         'IHMISEN MATKA ON VARIVIRTOJA, EI PISTEITA (omistaja 6.9.2026 '
           + 'keskipaiva, sanatarkasti: "linssi toimii periaatetasolla vaarin. '
           + 'Siina pitaisi nakya hitaasti kartalla lisaantyva varillinen alue '
