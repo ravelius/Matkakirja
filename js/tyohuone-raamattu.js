@@ -5390,6 +5390,12 @@ export const RAAMATTU = {
           + 'nauha) ja Opus-parven erat V0-V4 tehtavanantoineen (Fablemax '
           + '6.9.2026; SUUNNITELMA, toteutus Opus-parvella laattakerroksen '
           + 'E1:n rinnalla).',
+        'docs/moduulit/ihmisen-matka-vanat.md — Ihmisen matka vanoina: '
+          + 'paareitin ja haarojen johtaminen saapumisaikakentasta '
+          + '(edeltajapolku), Line2-piirto ja kaista, selkarankaa seuraava '
+          + 'kamera, kuusi esityksen kuvaa ja loytogalleria (Tiedeliite), '
+          + 'tekstiehdotus, mitatut vaihtoehdot ja Opus-parven erat V0-V5 '
+          + '(Fablemax 6.9.2026; SUUNNITELMA, toteutus Opus-parvella).',
         'docs/moduulit/karttanostot-kattavuus.md — karttanostojen kattavuus '
           + 'maittain (kohteet, maastokohteet, eläintäyt, skandaalit, hetket) '
           + 'ja tavoite per maa; täytetään koneellisesti erissä.',
