@@ -24501,6 +24501,39 @@ svg.rough-annotation { pointer-events: none; }
  * (.pallolauta-takana) ja nimen siirtymä pisteestä uuteen paikkaan
  * liukuu (.pallolauta-nimi-siirto). Reduced motion: ei siirtymiä.
  */
+/*
+ * ── CSS2D-KERROS JÄÄ AINA KORTTIEN, POPUPIEN JA KUPLIEN ALLE ──────
+ *
+ * OMISTAJA 6.9.2026 ilta (Raamattu, PALLO LEVOSSA YHTA TERAVA KUIN
+ * TASOKARTTA, LISAKSI-kohta, sanatarkasti: *"kaupunkien nimet näkyvät
+ * popup sivujen päällä"*): pallon kaupunkinimet jäävät aina korttien,
+ * popupien ja kuplien alle.
+ *
+ * JUURISYY (mitattu Chromiumilla 6.9.2026). Globe.gl:n CSS2DRenderer
+ * kirjoittaa syvyysjärjestyksen JOKAISEN merkin omaan tyyliin:
+ * `element.style.zIndex = n - i`, eli lähin merkki saa suurimman luvun
+ * (mitattu 1…10, katto on merkkien määrä). Kerroksen kotelo saa vain
+ * `position: absolute; top: 0; pointer-events: none` — ei z-indexiä —
+ * eikä yksikään esivanhempi kotelosta ylös (.scene-container,
+ * .pallo-kotelo, .pallo-kuori, .map-pane, .stage, .app) ole oma
+ * pinontakontekstinsa. Luvut valuivat siis juuren pinoon ja
+ * mittelivät suoraan pelin omien kerrosten kanssa: kohdekortti
+ * (.fokuskohde-popup, z-index 6) jäi lähimpien nimien alle ja kaukaiset
+ * nimet jäivät kortin alle — sama kerros kahdella puolen korttia.
+ *
+ * YKSI SÄÄNTÖ KERROKSELLE, EI KORTTIKOHTAISIA PAIKKAUKSIA: kirjaston
+ * omat kerrokset kotelossa (CSS2D-kerros, ruutukalvot, työkaluvihje)
+ * saavat z-indexin 0 eli OMAN PINONTAKONTEKSTIN. Silloin merkkien
+ * inline-luvut järjestävät vain merkit keskenään — kerros itse on
+ * pallon kankaan päällä (kangas on sijoittamaton, siis alempana) mutta
+ * tason 0 arvoisena kaiken pelin UI:n alla. Kerros ei myöskään voi
+ * enää nousta laudan omien kerrosten ohi: noppa (.die-layer, 3),
+ * linssikartan kehys (3) ja päälle jäävä ruutukalvo (2) pysyvät päällä.
+ * Alle jäävä ruutukalvo (js/pallolauta/linssit.js kalvoRuudulle, alle:
+ * true) on samassa kotelossa samalla luvulla ja kerroksen EDELLÄ
+ * DOMissa, joten se jää yhä merkkien alle kuten ennenkin.
+ */
+.pallo-kotelo .scene-container > div { z-index: 0; }
 .pallolauta-merkki {
   pointer-events: none;
   transition: opacity 250ms ease-in-out;

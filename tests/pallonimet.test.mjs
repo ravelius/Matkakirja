@@ -225,3 +225,35 @@ test('sallitut kerrokset eivät kasvaneet; uudet moduulit ovat SHELLissä; pallo
   assert.match(css, /@keyframes pallolauta-ilmesty/);
   assert.match(css, /\.pallolauta-merkki \{ transition: none; animation: none; \}/);
 });
+
+/*
+ * 6. CSS2D-KERROS JÄÄ KORTTIEN, POPUPIEN JA KUPLIEN ALLE (omistaja
+ *    6.9.2026 ilta, Raamattu PALLO LEVOSSA YHTA TERAVA KUIN TASOKARTTA,
+ *    LISAKSI-kohta, sanatarkasti: *"kaupunkien nimet nakyvat popup
+ *    sivujen paalla"*).
+ *
+ * Globe.gl:n CSS2DRenderer kirjoittaa syvyysjärjestyksen JOKAISEN merkin
+ * omaan tyyliin (element.style.zIndex = n - i), eikä kerroksen kotelo saa
+ * z-indexiä lainkaan. Ilman omaa pinontakontekstia nuo luvut valuvat
+ * juuren pinoon ja mittelevät suoraan pelin kerrosten kanssa: mitattu
+ * Chromiumilla 6.9.2026, jolloin lähimmät nimet piirtyivät kohdekortin
+ * (.fokuskohde-popup, z-index 6) päälle ja kaukaisemmat sen alle.
+ *
+ * Sääntö on KERROKSEN, ei kortin. Vartio lukee kolme asiaa: sääntö on
+ * olemassa, kortti on yhä kuudessa (eli kerroksen yläpuolella), eikä
+ * yksittäisille pallon merkeille ole lisätty korttikohtaisia paikkauksia.
+ */
+test('pallon CSS2D-kerros on oma pinontakonteksti eikä nouse korttien päälle', () => {
+  const css = lue('../css/styles.css');
+  assert.match(css, /^\.pallo-kotelo \.scene-container > div \{ z-index: 0; \}$/m,
+    'CSS2D-kerroksen kotelolta puuttuu oma pinontakonteksti');
+  // Kortti pysyy kerroksen yläpuolella (css/fokuskohteet.css).
+  assert.match(lue('../css/fokuskohteet.css'), /\.fokuskohde-popup \{[^}]*\n\s*z-index: 6;/,
+    'kohdekortin z-index ei ole enää 6');
+  // Ei korttikohtaisia paikkauksia: yksikään pallon merkkien sääntö ei
+  // mainitse korttia, popupia tai kuplaa.
+  const saannot = css.match(/^[^{}\n]*\.pallolauta-(?:nimi|merkki|nosto|piste)[^{}\n]*\{[^}]*\}/gm) ?? [];
+  for (const s of saannot) {
+    assert.ok(!/fokuskohde|popup|kupla|toast/.test(s), `korttikohtainen paikkaus: ${s}`);
+  }
+});
