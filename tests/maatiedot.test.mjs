@@ -47,6 +47,7 @@ import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
  * Lista saa vain lyhentyä.
  */
 const VIELA_ILMAN_TUNNUSLUKUJA = new Set([
+  'TLS',
   // Grönlanti ja Saint Helena eivät ole Maailmanpankin suvereenien
   // valtioiden aineistossa, Hongkong on rajattu sekä Maailmanpankin
   // maalistalta että V-Demin 172 valtion joukosta (maalehdet 6.9.2026):

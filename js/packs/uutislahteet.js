@@ -1061,4 +1061,32 @@ export const UUTISLAHTEET = {
     kieli: 'en',
     syote: 'https://thenewshawks.com/feed/',
   },
+  /*
+   * Tatoli on Itä-Timorin uutistoimisto (Agência Noticiosa de
+   * Timor-Leste), ja tatoli.tl:n pääsyöte on tetuminkielinen.
+   * Testattu 6.9.2026: syötteessä kymmenen juttua, ja artikkelisivun
+   * ensimmäisestä <article>-lohkosta jäsentyy kuusi yli 60 merkin
+   * kappaletta sekä og:image. MyMemory kääntää tetumista suomeen
+   * (langpair tet|fi vastasi 200:lla), joten kieleksi on merkitty tet.
+   *
+   * VALTIOLLINEN LÄHDE VALITTIIN, KOSKA YKSITYISET EIVÄT LÄPÄISSEET.
+   * Timor Post (timorpost.com/feed/, 35 juttua) on maan suurimpia
+   * yksityisiä lehtiä ja sen syöte aukeaa, mutta artikkelisivulla ei
+   * ole <article>-elementtiä eikä [itemprop="articleBody"]-merkintää,
+   * joten popupiin jäisi vain syötteen parin lauseen kuvaus. The Dili
+   * Weekly (thediliweekly.com/feed/) läpäisi kappaletestin mutta
+   * artikkelisivulta puuttuu og:image, ja tuorein juttu oli
+   * kaksi viikkoa vanha. Suara Timor Lorosae, GMN, Timor Agora, Neon
+   * Metin ja Diariu Nasional eivät vastanneet lainkaan, ja
+   * independente.tl palautti 404:n kaikilla kokeilluilla
+   * syöteosoitteilla.
+   *
+   * OSOITE ON ILMAN www:tä TARKOITUKSELLA: www.tatoli.tl vastaa
+   * 301:llä, eikä worker seuraa uudelleenohjauksia.
+   */
+  TLS: {
+    nimi: 'Tatoli',
+    kieli: 'tet',
+    syote: 'https://tatoli.tl/feed/',
+  },
 };

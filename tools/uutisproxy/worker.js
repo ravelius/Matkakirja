@@ -166,6 +166,10 @@ const SALLITUT = [
   // koska www.thenewshawks.com ohjaa 301:llä eikä worker seuraa
   // uudelleenohjauksia.
   'https://thenewshawks.com/',
+  // Itä-Timorin uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä. Osoite on ilman www:tä, koska www.tatoli.tl
+  // vastaa 301:llä eikä worker seuraa uudelleenohjauksia.
+  'https://tatoli.tl/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

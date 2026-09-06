@@ -245,6 +245,20 @@
 > js/packs/uutislahteet.js:n ZWE-kommentissa. Julkaisu Git-
 > integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Itä-Timor):** sallittuihin lisättiin tatoli.tl
+> (maalehti TLS, testattu 6.9.2026: syötteessä kymmenen juttua,
+> artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy kuusi yli
+> 60 merkin kappaletta ja `og:image` löytyy). Osoite on ilman www:tä,
+> koska `www.tatoli.tl` vastaa 301:llä eikä worker seuraa
+> uudelleenohjauksia. Tatoli on valtiollinen uutistoimisto, ja se
+> valittiin vasta sen jälkeen kun yksityiset vaihtoehdot kaatuivat
+> artikkelisivutestiin: Timor Postin syöte aukeaa mutta sivulta puuttuu
+> sekä `<article>` että `[itemprop="articleBody"]`, ja The Dili Weekly
+> läpäisi kappaletestin mutta jäi ilman `og:image`ä. Syöte on
+> tetuminkielinen, ja MyMemory kääntää sen (`langpair=tet|fi`). Muut
+> hylätyt on lueteltu js/packs/uutislahteet.js:n TLS-kommentissa.
+> Julkaisu Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

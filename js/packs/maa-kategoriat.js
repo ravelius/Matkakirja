@@ -49521,4 +49521,386 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * ITÄ-TIMOR (TLS) — Oseanian laudan maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-itatimor.md; kaikki
+   * luvut ja nimet luettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA. js/packs/maastokohteet-tls.js kattaa
+   * jo Cristo Rein, Maubaran, Balibon, Lailin luolan, Baucaun, Baguian
+   * linnakkeen, Viquequen, Nino Konis Santanan kansallispuiston,
+   * Matebianin, Ataúron ja Timorinmeren; js/packs/skandaalit.js Lifaun
+   * topassit (1702–1769) ja Manufahin kapinan (1911–1912);
+   * js/packs/elaintakyt.js timorinpeipon. Maalehti EI toista niitä:
+   * historiassa ei ole Dilin perustamista eikä topasseja, luonto-osiossa
+   * ei Ataúroa, Matebiania eikä kansallispuiston lintuja. Tatamailau on
+   * lehden oma aihe juuri siksi, että se pudotettiin karttamerkeistä
+   * liian lähellä Dili-laattaa olevana.
+   *
+   * HERKÄT AIHEET. Vuoden 1975 jälkeisestä miehityksestä ja
+   * nykypolitiikasta ei kirjoiteta lainkaan (M3:n Myanmar-linja):
+   * historia päättyy siirtomaakauden rajanvetoon ja kielivalintaan,
+   * eikä yhdelläkään nostolla ole nykypäivän poliittista osapuolta.
+   * Kahvinostosta on jätetty pois miehityksen aikainen tuotannon
+   * romahdus, vaikka lähde sen mainitsee.
+   *
+   * KUVAT: 12 nostokuvaa Commonsista, lisenssi ja tekijä extmetadatasta,
+   * leveys >= 1200 px, jokainen katsottu silmin. KAHDEKSAN NOSTOA JÄI
+   * KUVATTOMAKSI — kuvaputkelle tilattavat kohteet ovat erän
+   * raportissa. HYLÄTYT: "Tais Cova Lima 2" (kolme tunnistettavaa lapsen
+   * kasvoa etualalla), "Karau dikur" (soittajan kasvot lähikuvassa),
+   * "Osttimor expo 2025 2025-05-10 2" (japanilainen myymälähylly
+   * kylttiteksteineen), "Santalum album leaves" (kasvitieteellisen
+   * puutarhan nimilappu keskellä kuvaa), "AMH-6089-NA Map of Timor and
+   * environs" (tekijäksi merkitty vain "Anoniem").
+   */
+  TLS: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Itä-Timorin historia on kirjoitettu kahdella kädellä: sisämaassa omat '
+          + 'kuningaskunnat ja pyhät talot, rannikolla santelipuun ostajat, jotka tulivat '
+          + 'ensin Kiinasta ja Jaavasta ja vasta sitten Euroopasta.',
+      nostot: [
+        {
+          otsikko: 'Saari, jonka nimi tarkoittaa itää',
+          aika: '1200-luku–1300-luku',
+          tiedosto: 'AMH-5247-NA Map of Timor and several islands.jpg',
+          teksti: 'Vanhin tunnettu maininta Timorista on 1200-luvun kiinalainen Zhu Fan '
+              + 'Zhi, jossa saarta sanotaan nimellä Ti-wu ja kehutaan sen santelipuusta. '
+              + 'Seuraavalla vuosisadalla jaavalainen Nagarakretagama luettelee Timurin '
+              + 'Majapahitin valtapiiriin kuuluvaksi saareksi. 1300-luvulla Timor oli '
+              + 'kiinni kaakkoisaasialaisissa, kiinalaisissa ja intialaisissa '
+              + 'kauppaverkoissa ja vei santelipuuta, hunajaa ja vahaa. Nimi tulee '
+              + 'malaijin sanasta timur, itä, koska saari on Pienten Sundasaarten '
+              + 'itäisin. Portugalinkielinen Timor-Leste tarkoittaa siis Itä-itää; '
+              + 'tetumiksi maa on Timór Lorosa\'e, se missä aurinko nousee.',
+          selite: 'Isaak de Graafin kartta Timorista ja Pienistä Sundasaarista. '
+            + 'Hollantilaisen kauppakomppanian kartoissa saari kulki nimellä Tymor, '
+            + 'ja sen luoteispuolella on Sandelbosch, santelipuumetsä.',
+          lahde: 'Isaak de Graaf, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kaksi valtaa joka kuningaskunnassa',
+          tiedosto: 'Nahasaka All Saints Day.JPG',
+          teksti: 'Ennen eurooppalaisia Timorilla oli tapaoikeuden hallitsema verkosto '
+              + 'pieniä valtioita. Pienin yksikkö oli yhden pyhän talon ympärille '
+              + 'kokoontuva yhteisö, näistä muodostuivat sucot ja sucoista '
+              + 'kuningaskunta, jota johti liurai. Valta oli jaettu kahdelle: liuraille '
+              + 'kuului maallinen puoli ja rai nainille hengellinen, ja jälkimmäisen '
+              + 'asema liittyi kuningaskunnan tärkeimpään pyhään taloon. Liittosuhteet '
+              + 'vaihtuivat tiuhaan, mutta moni kuningaskunta pysyi pystyssä 1500-luvun '
+              + 'ensimmäisistä eurooppalaisista kuvauksista siirtomaakauden loppuun asti.',
+          selite: 'Nahasakan animistiselle hautausmaalle Uato-Larissa tuodaan '
+            + 'pyhäinpäivänä uhrikoreja, ja ne asetetaan kalliolle levitetyn '
+            + 'tais-kankaan päälle.',
+          lahde: 'Josh Trindade, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Pala maata rajan väärällä puolella',
+          aika: '1859–1916',
+          tiedosto: '1920s Timor Island Map.jpg',
+          teksti: 'Portugali ja Alankomaat jakoivat saaren Lissabonin sopimuksella 1859: '
+              + 'länsi hollantilaisille ja Kupangille, itä portugalilaisille ja Dilille. '
+              + 'Viiva jätti kaksi portugalilaista palaa hollantilaisen alueen sisään, '
+              + 'Oecussen ja Noimutin. Lopullinen raja piirrettiin Haagissa vasta puoli '
+              + 'vuosisataa myöhemmin, ja sama viiva erottaa yhä Indonesian ja '
+              + 'Itä-Timorin. Oecusse on siksi 814 neliökilometrin eksklaavi, jonka '
+              + 'maaraja on noin 300 kilometriä mutta rannikkoa vain viisikymmentä. '
+              + 'Muusta maasta sinne on linnuntietä 58 kilometriä ja maanteitse yli '
+              + 'seitsemänkymmentä. Nimi tulee baikenon sanoista oe ja kussi, vesiruukku.',
+          selite: 'Brittiläisen sotaministeriön 1920-luvun kartassa Timor on jaettu '
+            + 'kahtia, ja pohjoisrannikolla keskellä hollantilaista aluetta on Okusi — '
+            + 'portugalilainen kaistale, joka on nykyään Itä-Timorin eksklaavi.',
+          lahde: 'British War Office / Enyavar, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kaksi virallista kieltä ja kolmisenkymmentä murretta',
+          teksti: 'Itä-Timor on Aasian ainoa suvereeni valtio, jonka virallinen kieli on '
+              + 'portugali; toinen virallinen on tetum. Perustuslaki nimeää lisäksi '
+              + 'englannin ja indonesian työkieliksi. Alkuperäiskieliä on laskutavasta '
+              + 'riippuen enintään yhdeksäntoista ja murteita kolmisenkymmentä, ja ne '
+              + 'kuuluvat kahteen eri kielikuntaan: austronesialaisiin, kuten tetum, '
+              + 'mambai ja tokodede, sekä papualaisiin, kuten bunak, makasae ja '
+              + 'fataluku. Vuoden 2015 laskennassa yleisin äidinkieli oli Dilin tetum '
+              + '30,6 prosentilla ja toiseksi yleisin mambai 16,6 prosentilla. '
+              + 'Kouluissa käänne oli nopea: portugalinkielisiä alakouluja oli 2001 '
+              + 'vain 8,4 prosenttia, neljä vuotta myöhemmin 81,6.',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Timor ei ole tulivuorisaari vaan Australian mannerreunan pala, jonka '
+          + 'törmäys nosti vuoriksi — ja niiden rinteillä elää lajeja, joita ei tavata '
+          + 'missään muualla.',
+      nostot: [
+        {
+          otsikko: 'Kaikkien isoisä',
+          tiedosto: 'Sombra do Ramelau.jpg',
+          teksti: 'Maan korkein kohta on 2 963 metrin Tatamailau noin seitsemänkymmentä '
+              + 'kilometriä Dilistä etelään. Nimi on mambain kieltä ja tarkoittaa '
+              + 'kaikkien isoisää; Ramelau on koko vuoristomassiivin nimi. '
+              + 'Siirtomaa-aikana vuorta pidettiin 1900-luvulla Portugalin korkeimpana, '
+              + 'koska emämaan oma ylin huippu jää sitä matalammaksi. Huipulla seisoo '
+              + 'kolmimetrinen Neitsyt Marian patsas, joka valettiin Italiassa ja '
+              + 'pystytettiin 1997, ja vuorelle noustaan vuosittain pyhiinvaellukselle '
+              + 'Marian ilmestyspäivänä 25. maaliskuuta. Kuivalla kaudella huipulla voi '
+              + 'olla pakkanen.',
+          selite: 'Auringon noustessa Tatamailaun varjo kurottuu kilometrien päähän yli '
+            + 'laaksojen. Vanha vuoristometsä on rinteiltä lähes kadonnut, ja tilalla '
+            + 'kasvaa eukalyptusta.',
+          lahde: 'AlipioJG, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Vuoret, jotka nousivat väärässä järjestyksessä',
+          tiedosto: 'Hato Builico Village.jpg',
+          teksti: 'Timor ei syntynyt tulivuorista vaan törmäyksestä. Saari on Bandan '
+              + 'kaaren etuosaa, ja sen kivet ovat Australian mannerlaatan reunaa, joka '
+              + 'on kaavittu kaaren päälle laattojen työntyessä yhteen; tulivuorten jono '
+              + 'jää pohjoiseen toiselle saarikaarelle. Ramelaun vuoriston huippu on '
+              + 'permikautista Maubissen muodostumaa, saaren vanhimpia kivilajeja, ja se '
+              + 'lepää nuoremman, triaskautisen Aitutun kalkkikiven päällä: vanha kerros '
+              + 'työntyi päällimmäiseksi ja jäi siksi korkeimmalle. Lähes puolella maan '
+              + 'pinta-alasta rinne on yli neljänkymmenen prosentin kaltevuudessa.',
+          selite: 'Hato Builicon kylä Ramelaun rinteillä. Kylästä lähtee pyhiinvaeltajien '
+            + 'polku huipulle, ja pellot on raivattu jyrkkiin rinteisiin.',
+          lahde: 'Tanmanfalcon, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kääpiönorsuja ja jättiläisliskoja',
+          teksti: 'Timor kuuluu Wallacean vyöhykkeeseen, jossa Aasian ja Australian '
+              + 'eliömaailmat kohtaavat; saarella aasialaiset lajit ovat enemmistönä. '
+              + 'Pleistoseenikaudella täällä eli komodonvaraanin kaltaisia '
+              + 'jättiläisvaraaneja ja kääpiöstegodoneja, norsujen sukulaisia — samaa '
+              + 'sarjaa kuin Floresilla, Sumballa ja Sulawesilla. Nykylajistossa on omia '
+              + 'kotoperäisiä nisäkkäitä, muun muassa vain Timorilla elävä päästäinen ja '
+              + 'oma rottalajinsa; kuskus taas on australialaisperäinen pussieläin, joka '
+              + 'on ilmeisesti tuotu saarelle. Lintulajeja on 250, ja niistä 24 elää vain '
+              + 'täällä. Metsä pudottaa lehtensä kuivaksi kaudeksi.',
+        },
+        {
+          otsikko: 'Puu, joka elää toisten juurista',
+          tiedosto: 'Santalum album Fruit 01.jpg',
+          teksti: 'Valkosantelipuu on neljästä yhdeksään metriä korkea ainavihanta puu, '
+              + 'joka ei tule toimeen yksin: sen juurissa on imujuuria, joilla se '
+              + 'kiinnittyy naapuripuiden juuriin ja ottaa niistä fosforia, typpeä ja '
+              + 'kaliumia sekä varjon. Isäntälajeja tunnetaan kolmisensataa, eikä niille '
+              + 'koidu siitä sanottavaa vahinkoa. Arvo on ytimessä: vain sydänpuu '
+              + 'tuoksuu, ja siitä veistetään ja tislataan öljyä, kun taas vaalea '
+              + 'pintapuu on hajuton. Hedelmiä puu tekee kolmen vuoden ikäisenä ja '
+              + 'itämiskykyisiä siemeniä viiden, ja linnut levittävät ne. Timor kuuluu '
+              + 'lajin alkuperäiseen levinneisyysalueeseen.',
+          selite: 'Valkosantelipuun tummunut hedelmä oksalla. Kuva on Nepalista: '
+            + 'Commonsissa ei ole tekijätiedoiltaan kelvollista kuvaa Timorin omista '
+            + 'santelipuista.',
+          lahde: 'Krish Dulal, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Itä-Timorin pöydässä kohtaa kolme maailmaa: maissi ja riisi pelloilta, '
+          + 'kala mereltä ja portugalilainen ruokakirja, joka tuli laivalla mutta jäi '
+          + 'asumaan.',
+      nostot: [
+        {
+          otsikko: 'Kahvi, joka kasvoi ilman lannoitetta',
+          tiedosto: 'Kaffee Osttimor.jpg',
+          teksti: 'Kahvi on maan tärkein vientikasvi: vuosina 2013–2019 sen osuus '
+              + 'kaikesta muusta kuin fossiilisen polttoaineen viennistä oli 90 '
+              + 'prosenttia. Pensaita on kasvatettu saarella satoja vuosia, ja 1800-luvun '
+              + 'lopulla kahvi oli jo puolet siirtomaan kaupasta. Tiloja on noin 46 000, '
+              + 'ja ne työllistävät viidesosan maan väestöstä; 46 prosenttia '
+              + 'kotitalouksista saa tulonsa yksinomaan kahvista. Tarhoja on hoidettu '
+              + 'vähän eikä niissä ole käytetty torjunta-aineita tai lannoitteita, mikä '
+              + 'on osoittautunut luomukahvin ostajille valtiksi. Maassa kahvia sanotaan '
+              + 'maatalouden kultaiseksi prinssiksi.',
+          selite: 'Raakoja kahvipapuja säkissä Ermerassa, maan tärkeimmällä '
+            + 'kahviseudulla ylängöllä Dilistä lounaaseen.',
+          lahde: 'Janina M Pawelz, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Maissi, papu ja kurpitsa samassa padassa',
+          teksti: 'Batar daan on itätimorilaisen kotiruoan perusmalli: maissi, mungpavut '
+              + 'ja kurpitsa haudutetaan yhdessä. Riisi on maan yleisimmin viljelty '
+              + 'kasvi, mutta sen rinnalla kasvatetaan bataattia, maissia, maniokkia ja '
+              + 'taroa, ja lisukkeeksi papuja, kaalia, pinaattia, sipulia ja lehmänpapua. '
+              + 'Liha tulee useimmiten omasta pihasta: valtaosa talouksista pitää kanoja, '
+              + 'sikoja ja vuohia. Kaksi kolmasosaa perheistä saa osan ruoastaan omasta '
+              + 'viljelystä tai kalastuksesta, ja silti maa ei tuota tarpeeksi ruokaa '
+              + 'itselleen vaan tuo osan ulkomailta.',
+        },
+        {
+          otsikko: 'Makrilli tamarindissa',
+          teksti: 'Ikan sabuko on kuninkaanmakrilli, joka marinoidaan tamarindissa ja '
+              + 'kypsennetään basilikan ja paprikan kanssa. Kastikkeeksi tulee budu: '
+              + 'tomaattia, minttua, limeä ja sipulia. Kalastus on maatalouden jälkeen '
+              + 'maan toiseksi tärkein elinkeino, ja saaliista 94 prosenttia nousee '
+              + 'merestä eikä joista. Muita arkiruokia ovat fuuntaul tong ja gailong, '
+              + 'keitto, jossa on punaisia papuja, naudanlihaa, salaattia ja kananmunaa '
+              + 'riisin kera, sekä tapai, käytetty riisi, joka on yhtaikaa makeaa, '
+              + 'hapanta ja hitusen alkoholista.',
+        },
+        {
+          otsikko: 'Portugali jäi ruokapöytään',
+          teksti: 'Siirtomaakausi näkyy Itä-Timorin pöydässä selvemmin kuin juuri missään '
+              + 'muualla Kaakkois-Aasiassa. Feijoada — possua, valkoisia papuja ja '
+              + 'chorizoa — on sama pata kuin muissakin entisissä Portugalin '
+              + 'siirtomaissa, ja caril on mieto kanacurry, jonka pohjana on paahdetusta '
+              + 'paprikasta ja kookoksesta survottu tahna. Jälkiruoaksi tulee pastel de '
+              + 'nata, portugalilainen munatorttu, tai bibingka, grillattu kerroksellinen '
+              + 'kookoskakku. Makuja on kulkeutunut myös Portugalin muista siirtomaista, '
+              + 'koska niistä tuotiin sotilaita Timorille.',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Itä-Timorin kuvataide on kudottua ja rakennettua: kuvio kulkee '
+          + 'kankaassa ja sukupolvien muisti pyhän talon katossa.',
+      nostot: [
+        {
+          otsikko: 'Kangas, jolla maksettiin',
+          tiedosto: 'Textile, East Timor - Museu do Oriente - Lisbon, Portugal - DSC06854.JPG',
+          teksti: 'Tais on itätimorilainen kudottu kangas, joka on ollut myös vaihdon '
+              + 'väline: sillä on maksettu karjasta ja muista arvoista. Seremoniassa tais '
+              + 'puetaan yhdessä sulkien, korallin sekä kullan tai hopean kanssa, ja '
+              + 'katolinen kirkko on ottanut sen omiin menoihinsa. Kutominen on '
+              + 'yksinomaan naisten työtä, ja taito siirtyy suullisena perintönä '
+              + 'sukupolvelta toiselle. Kauneimpiin kankaisiin kääritään vainaja hautaan, '
+              + 'ja sukujen välisissä avioliittoneuvotteluissa tais on osa sopimusta. '
+              + 'Vastasyntyneestä sanotaan, että lapsi tuo mukanaan langan ja puolan.',
+          selite: 'Museu do Orienten kokoelmassa Lissabonissa oleva tais mane eli miesten '
+            + 'kangas, joka kiedotaan vyötärölle ja jonka pää on viimeistelty tupsuiksi.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Krokotiili, josta saari syntyi',
+          tiedosto: 'Tais im Parlament.jpg',
+          teksti: 'Tais-kankaan kuviot vaihtelevat seudusta toiseen ja kertovat usein '
+              + 'paikasta tai tapahtumasta. Eläinaiheista tavallisin on krokotiili, johon '
+              + 'saaren syntytaru perustuu, ja lähes joka kankaassa toistuu geometrinen '
+              + 'kaif-kuvio. Kolmetoista kuntaa tekee kolmetoista tyyliä: Oecussessa '
+              + 'näkyy portugalilainen vaikutus kukka- ja pyhimysaiheineen ja vaimein '
+              + 'mustan, oranssin ja keltaisen sävyin, Ermerassa hallitsee mustavalkoinen '
+              + 'kuviointi vanhojen päällikkösukujen mukaan, Manufahissa toistuvat lisko '
+              + 'ja sika, ja Dilissä värit ovat kirkkaita, koska pääkaupungissa taisia '
+              + 'myydään.',
+          selite: 'Itä-Timorin parlamentin istuntosalissa on esillä eri kuntien '
+            + 'tais-kankaita: Lautém, Bobonaro, Manatuto, Oecussi, Manufahi, Cova Lima '
+            + 'ja Viqueque.',
+          lahde: 'J. Patrick Fischer, Wikimedia Commons (CC BY 2.5)',
+        },
+        {
+          otsikko: 'Väri tulee mangonkuoresta',
+          tiedosto: 'Tais weaving from Timor Leste.jpg',
+          teksti: 'Tais kudotaan kuivalla kaudella lähes kokonaan käsin, ja tavallisin '
+              + 'väline on vyökangaspuu: loimen kireys tulee kutojan vyötärölle '
+              + 'sidotusta hihnasta, ja sen paine tekee pitkästä työstä ruumiillisesti '
+              + 'raskaan. Puuvilla on portugalilaisen kauppakauden perua; nykyään mukaan '
+              + 'tulee halvempaa raionia, akryyliä ja polyesteriä. Värit sekoitetaan '
+              + 'kasveista — taun, kinur ja teka sekä mangonkuori, perunanlehti, '
+              + 'kaktuksenkukka ja kurkuma — ja taitavaa sekoittajaa verrataan '
+              + 'alkemistiin. Punainen on yleisin, koska se merkitsee pitkää ikää ja '
+              + 'rohkeutta. Yhteen kankaaseen menee päivistä vuoteen.',
+          selite: 'Tais-kankaan raidoitus lähikuvassa. 1970-luvulta alkaen kankaisiin on '
+            + 'kudottu myös kirjoitusta, ensin indonesiaksi ja myöhemmin tetumiksi, '
+            + 'portugaliksi ja englanniksi.',
+          lahde: 'Rahmaziz, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Talo, joka on samalla suku',
+          tiedosto: 'Uma Lulik, Mane Hitu.jpg',
+          teksti: 'Yhteisön keskus on uma lulik, pyhä talo. Se on rakennus, mutta '
+              + 'käsitteenä se ulottuu koko sen ympärille kokoontuvaan yhteisöön: '
+              + 'sukulaisuus lasketaan talojen sisällä ja niiden välillä, ja moni '
+              + 'kaupunkilainen tunnistaa yhä oman talonsa toisella puolella maata. '
+              + 'Rakennustyyli vaihtelee kunnasta toiseen. Ajatus on venynyt koko maan '
+              + 'mittaan niin, että kansalliskokousta on kuvattu koko kansan yhteiseksi '
+              + 'pyhäksi taloksi. Taustalla on lulik, pyhyyden käsite: pyhä voi olla myös '
+              + 'esine, esimerkiksi suvussa polvesta toiseen periytynyt portugalilainen '
+              + 'lippu.',
+          selite: 'Mane Hitun pyhä talo Maununossa Ainaron kunnassa. Ruokokatto ulottuu '
+            + 'lähes maahan asti, ja rakennus lepää puupilarien varassa.',
+          lahde: 'David Palazón, Tatoli Ba Kultura, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mihin eläimeen Timorin saaren syntytaru perustuu?',
+        vaihtoehdot: [
+          'Vuohi',
+          'Merikilpikonna',
+          'Kakadu',
+          'Krokotiili',
+        ],
+        oikea: 3,
+        fakta: 'Siksi krokotiili on myös tais-kankaiden yleisin eläinaihe.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Itä-Timorissa rumpu ja gongi ovat naisten soittimia, tanssi ja laulu '
+          + 'kulkevat samassa esityksessä, ja koko ohjelmisto on siirtynyt sukupolvelta '
+          + 'toiselle ilman nuottia.',
+      nostot: [
+        {
+          otsikko: 'Tanssi, jolla otettiin miehet vastaan',
+          tiedosto: 'Ornament for dancing the traditional dance Bso\'ot 2.jpg',
+          teksti: 'Laajimmalle levinnyt kansanmusiikin muoto oli likurai, naisten tanssi, '
+              + 'jolla sodasta palaavat miehet otettiin vastaan. Tanssijoilla oli pieni '
+              + 'rumpu, ja kulkueissa kannettiin toisinaan kaatuneen vihollisen päitä. '
+              + 'Nykyinen likurai on eri asia: sen tanssivat naiset kosiskeluleikkinä. '
+              + 'Saaren musiikki kantaa myös tuontitavaraa kahdelta suunnalta — '
+              + 'portugalilainen fado ja indonesialainen gamelan ovat kumpikin jättäneet '
+              + 'jälkensä, ja siirtolaisyhteisöissä Australiassa ja Portugalissa '
+              + 'timorilainen kansanmusiikki on sekoittunut muiden entisten siirtomaiden '
+              + 'musiikkiin.',
+          selite: 'Oecussen Taibocossa sidotaan tanssijoiden nilkkoihin Bso\'ot-tanssin '
+            + 'kulkuset, jotka on tehty hopeasta, kullasta ja vanhoista kolikoista.',
+          lahde: 'David Palazón, Tatoli ba Kultura, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Rumpu ja gongi ovat naisten soittimia',
+          teksti: 'Kahdesta timorilaisesta soittimesta puhutaan aina ensin. Babadok on '
+              + 'pieni kartiomainen puurumpu, kolmestakymmenestä viiteenkymmeneen '
+              + 'senttimetriä pitkä ja läpimitaltaan noin viisitoista, ja sitä lyödään '
+              + 'vuorotellen molemmilla käsillä. Dadir eli gong on noin '
+              + 'kaksikymmentäviisisenttinen metallirengas, jota lyödään puukapulalla; '
+              + 'sillä ei ole määrättyä sävelkorkeutta eikä sitä voi virittää. Kumpaakin '
+              + 'soittavat naiset. Myöhemmin ohjelmistoon ovat tulleet länsimaiset viola '
+              + 'ja sopraanohuilu sekä kitara, jonka toivat siirtomaaherrat — omia '
+              + 'kielisoittimia saarella on silti ennestään.',
+        },
+        {
+          otsikko: 'Neljä lajia, ei yhtään nuottia',
+          teksti: 'Timorilainen esitysohjelmisto jakautuu neljään selvärajaiseen lajiin: '
+              + 'tebe, tebedai, dansa ja cansaun. Kaikki lepäävät suullisen perinteen '
+              + 'varassa ja ovat siirtyneet sukupolvelta toiselle ilman kirjoitettua '
+              + 'nuottia. Musiikki ja tanssi eivät ole erillisiä taiteita vaan saman '
+              + 'esityksen kaksi puolta, ja samaan kokonaisuuteen kuuluvat puku ja korut. '
+              + 'Laulun sanat ovat tetumiksi tai portugaliksi, maan kahdella virallisella '
+              + 'kielellä. Päälle on kertynyt uudempia kerroksia radiosta ja '
+              + 'siirtolaisilta: rock, hiphop ja reggae kuuluvat Dilissä siinä missä '
+              + 'muuallakin.',
+        },
+        {
+          otsikko: 'Kuunsirppi otsalla, kiekko rinnalla',
+          teksti: 'Esiintyjän puku on osa musiikkia. Miehet kietovat vyötärölleen tais '
+              + 'manen ja naiset asettavat tais feton kainaloiden alle. Miehen päähuivin '
+              + 'päälle tulee kaibauk, metallinen kuunsirppi, johon on kiinnitetty pieniä '
+              + 'kyynel- ja korvakoristeita; suurin ja komein kuului liuraille eli '
+              + 'päällikölle. Asuun kuuluvat myös surik, soturin miekka, ja belak, '
+              + 'rinnalle ripustettava metallikiekko. Naisilla on kaibaukin lisäksi ulum '
+              + 'suku hiuksissa, pitkäpiikkinen sasuit-kampa ja mortene-kaulanauha. '
+              + 'Kaikki esiintyvät paljain jaloin, olkapäillään salenda-huivi.',
+        },
+      ],
+    },
+  ],
 };

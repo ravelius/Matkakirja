@@ -1027,4 +1027,25 @@ export const OCEANIA_ARTIKKELIT = {
       + 'ihmiset ovat kasanneet itselleen saaria hiekkasärkkien päälle. '
       + 'Raha on tehty käsin simpukasta ja punaisista sulista.',
   },
+  'Itä-Timor': {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // TLS) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla. Faktat en-Wikipedian artikkeleista "Timor-Leste",
+    // "Timor", "Tatamailau" ja "Oecusse" (luettu 6.9.2026).
+    intro: 'Itä-Timor on Timorin saaren itäinen puolisko, ja siihen '
+      + 'kuuluvat myös Oecussen eksklaavi Länsi-Timorin sisällä sekä '
+      + 'Ataúron ja Jacon saaret. Saaren nimi tulee malaijin sanasta '
+      + 'timur, itä, joten portugalinkielinen **Timor-Leste tarkoittaa '
+      + 'kirjaimellisesti Itä-itää**. Sisämaa on vuoristoa: korkein '
+      + 'kohta on 2 963 metrin Tatamailau, jonka nimi tarkoittaa '
+      + 'mambain kielellä kaikkien isoisää. Rannikolta vietiin '
+      + 'santelipuuta kiinalaisiin, jaavalaisiin ja intialaisiin '
+      + 'kauppaverkkoihin jo 1300-luvulla, ja juuri santelipuu toi '
+      + 'paikalle 1500-luvulla ensimmäiset eurooppalaiset. Portugali '
+      + 'ja Alankomaat jakoivat saaren 1859, ja jaon jäljiltä maalla on '
+      + 'yhä pala maata keskellä naapurivaltiota. Nykyään Itä-Timor on '
+      + 'Aasian ainoa suvereeni valtio, jossa portugali on virallinen '
+      + 'kieli tetumin rinnalla, ja sen tärkein vientikasvi on '
+      + 'ylängöillä kasvava kahvi.',
+  },
 };
