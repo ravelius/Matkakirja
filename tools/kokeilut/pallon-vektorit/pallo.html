@@ -11,7 +11,14 @@
   CSS2D-nimen kuten pallolauta, ja piirtää päälle rantaviivat ja rajat
   vektoreina valitulla tavalla (vektorit.js):
 
-    ?vektorit=line2|nauha|polut|svg|ei   toteutustapa
+    ?vektorit=line2|nauha|polut|svg|ei   kokeilun oma toteutustapa
+    ?vektorit=peli     PELIN OMA MODUULI js/pallovektorit.js (luoPallovektorit),
+                       aineisto ämpäristä (PALLOVEKTORIT_JUURI) — silloin
+                       mittari mittaa tuotantokoodia, ei kokeilua. Kokeilun
+                       omat säätöparametrit (leveys, offset, syvyys, lod,
+                       peitto, rajakatko) EIVÄT päde tässä tavassa: vakiot
+                       tulevat moduulista (V3 säätää ne). `?vari=debug`
+                       värjää jaetut materiaalit magentaksi mittausta varten.
     ?leveys=1.5        viivan leveys LAITEpikseleinä
     ?vari=debug        magenta (mittari erottaa viivan pikselit)
     ?rajat=0           vain rantaviiva
@@ -37,6 +44,7 @@ import {
   lataaPallokirjasto, laatatSaatavilla, rakennaPallo, pallonKaupungit, pallonLepokerros, kolmiulotteinen, PALLO_LAUTA,
 } from '../../../js/pallo.js';
 import { packById } from '../../../js/pack.js';
+import { luoPallovektorit } from '../../../js/pallovektorit.js';
 import { luoVektorit } from './vektorit.js';
 
 const q = new URLSearchParams(location.search);
@@ -69,7 +77,61 @@ pallo
   .htmlElement((d) => { const el = document.createElement('div'); el.className = 'koe-nimi'; el.textContent = d.teksti; return el; })
   .htmlTransitionDuration(0);
 
-const vektorit = TAPA === 'ei' ? null : luoVektorit({
+/*
+ * PELIN OMA VIIVAKERROS (js/pallolauta/reitit.js) supistettuna: pelin
+ * vektorimoduuli lukee Line2-luokat kirjaston omasta nipusta työntämällä
+ * hetkeksi nollamittaisen polun tähän kerrokseen (js/pallovektorit.js
+ * luku "nollamittainen polku"). Kokeilusivulla ei ole reittejä, joten
+ * osarekisteri riittää sellaisenaan.
+ */
+function luoKoereitit() {
+  const osat = new Map();
+  pallo
+    .pathsData([])
+    .pathPoints('pisteet')
+    .pathPointLat((p) => p[0]).pathPointLng((p) => p[1])
+    .pathPointAlt((p) => (p.length > 2 ? p[2] : 0.002))
+    .pathColor((d) => d.vari)
+    .pathStroke((d) => d.paksuus ?? 2)
+    .pathTransitionDuration(0)
+    .pathResolution(2);
+  return {
+    aseta(nimi, lista = []) {
+      osat.set(nimi, lista);
+      const kaikki = [];
+      for (const o of osat.values()) kaikki.push(...o);
+      pallo.pathsData(kaikki);
+    },
+  };
+}
+
+/*
+ * TUOTANTOTAPA (?vektorit=peli): sama moduuli, samat vakiot ja sama
+ * ämpäriaineisto kuin pallolaudalla. Debug-väri annetaan jälkikäteen
+ * jaettuihin materiaaleihin (moduulin vakioita ei muuteta): kloonit
+ * häiveen ajaksi perivät sävyn, joten yksi värjäys riittää lajia kohti.
+ */
+function varitaDebug() {
+  const nahdyt = new Set();
+  pallo.scene().traverse((o) => {
+    if (!o.userData?.pallovektorit || !o.material || nahdyt.has(o.material)) return;
+    nahdyt.add(o.material);
+    o.material.color?.set?.('#ff00ff');
+  });
+}
+
+function luoPelinVektorit() {
+  const kahva = luoPallovektorit({ pallo, kotelo, reitit: luoKoereitit() });
+  if (!DEBUG) return kahva;
+  const paivitaAlkuperainen = kahva.paivita;
+  return {
+    ...kahva,
+    valmis: kahva.valmis.then((v) => { varitaDebug(); return v; }),
+    async paivita(...a) { const v = await paivitaAlkuperainen(...a); varitaDebug(); return v; },
+  };
+}
+
+const vektorit = TAPA === 'ei' ? null : TAPA === 'peli' ? luoPelinVektorit() : luoVektorit({
   pallo, kotelo, tapa: TAPA, juuri: q.get('aineisto') ?? '/_aineisto/',
   leveysLaitePx: LEVEYS, korkeus: Number(q.get('korkeus') ?? 0),
   renderOrder: Number(q.get('renderorder') ?? -0.5), lapinakyva: q.get('opaakki') !== '1',
@@ -95,6 +157,8 @@ window.koe = {
   pallo,
   kotelo,
   vektorit,
+  /** Laattakerroksen kahva (js/pallo.js luoLepokerros) mittarille. */
+  lepokerros: () => pallonLepokerros(pallo),
   ateena: { lat: ateena.lat, lng: ateena.lon },
   koepiste: KOEPISTE,
   asetaNakyma({ lat, lng, korkeus }) { pallo.pointOfView({ lat, lng, altitude: korkeus }, 0); },

@@ -2678,3 +2678,114 @@ Neljä lukua on syytä lukea oikein.
    läpi. Kyse on kontin rasteroijasta, ei laitteesta — mutta
    kaappauskatto kannattaa nostaa, kun savuketta seuraavan kerran
    kosketaan.
+
+**V2 tehty: vektoriviivat — rantaviivat ja rajat laattojen päälle
+(6.9.2026 ilta).** Raamatun linjaus VEKTORIT SAMALLA (omistaja: *"Tehdään
+se vektori juttu nyt samalla."*) on kytketty pelilautaan. `js/pallolauta/
+lauta.js` luo reittikerroksen jälkeen `luoPallovektorit({ pallo, kotelo,
+reitit })` — reittien jälkeen, koska kerros lukee Line2-luokat kirjaston
+omasta nipusta työntämällä hetkeksi nollamittaisen polun reittikerrokseen
+— tarjoaa kahvan `lauta.vektorit()` mittareille (kuten `lepokerros()`) ja
+purkaa sen `pura()`:ssa ennen `pallo._destructor?.()`:ää. Perääntymistie
+on `?vektorit=0` (`pallovektoritPaalla()`), jolloin kerrosta ei luoda
+lainkaan. Moduuli `js/pallovektorit.js` (V1) ja aineisto ämpärissä
+(`julisteet/pallo/vektorit/2026-09-06a/`, V0) olivat valmiina; V2 ei
+muuttanut kumpaakaan eikä laattakerrosta.
+
+MITATTU tuotantokoodilla (`tools/savukkeet/mittaa-pallon-vektorit.mjs
+--tapa=peli --vari=debug --vartio`, joka ajaa kokeilusivulla pelin oman
+moduulin ja ämpäriaineiston; puhelin 390 × 844 dpr 3, CPU-throttle 4×,
+Ateena). Vektoriviiva on mittauksessa magentaa, joten sen paksuus luetaan
+suoraan pikseleistä; POLTETTU-sarake on saman kuvan tumman musteen
+paksuus (`pinta`), joka laskee kaiken tumman — rantaviivan, tiet, nimet,
+maaston varjot — eli se on ylä-arvio rantaviivalle, mutta kertoo, miten
+paljon laatan venytys paksuntaa poltettua jälkeä näkymästä toiseen:
+
+| näkymä | poltettu muste mediaani/p75 | VEKTORI mediaani/p90 |
+| --- | --- | --- |
+| lepo Ateena 0,35 | 2 / 4 px | **2 / 3 px** |
+| lepo lähikuva 0,08 | 5 / 7 px | **2 / 3 px** |
+| lepo koko pallo 2,5 | 5 / 10 px | **3 / 7 px** |
+| kesken panoroinnin 25 % | 3 / 5 px | **2 / 3 px** |
+| kesken panoroinnin 55 % | 2 / 3 px | **2 / 3 px** |
+| zoom 1,0 | 15 / 25 px | **2 / 4 px** |
+| zoom 0,35 | 4 / 7 px | **2 / 3 px** |
+| zoom 0,1 | 6 / 8 px | **2 / 3 px** |
+| zoom 0,05 | 3 / 5 px | **2 / 3 px** |
+
+Vektori on siis TASAN SAMA LEVEYS joka näkymässä ja joka hetkellä —
+1,5 laitepikseliä + reunanpehmennys = mediaani 2 px — kun poltettu jälki
+vaihtelee 2:n ja 15:n välillä sen mukaan, kuinka paljon laattaa
+venytetään. Muut luvut samasta ajosta:
+
+- **Syvyysjärjestys pitää laattakerrosta vasten.** Vektorin
+  `polygonOffsetUnits −12` ja läpinäkyvien jono `renderOrder −0,5` on
+  suunniteltu lepokerrosta (−8, renderOrder −1) vasten, ja sama pätee E1:n
+  laattakerrokseen: se on samalla siirrolla −8 ja `renderOrder −10 + z`
+  eli kaikki sen tasot ovat läpinäkyvien jonon alussa vektorin alla, ja
+  kun laatta on häipynyt täyteen peittoon, se siirtyy opaakkien jonoon
+  eli piirtyy vielä aiemmin. Verkot ovat lisäksi jänteen painuman verran
+  pinnan sisäpuolella, kun vektori on täsmälleen säteellä R. Mitattu:
+  lähikuva 0,08, magentapikseleitä pintakerroksen kanssa 14 979 ja
+  kerros piilotettuna (29 verkkoa) 14 734 — suhde **1,017** (raja
+  0,97…1,03), eli kerros ei syö viivasta pikseliäkään. `js/pallolaatat.js`
+  ei siis tarvinnut muutosta.
+- **Kytkentä todennettu PELISSÄ** (ei vain kokeilusivulla): `?lauta=pallo`
+  tallenteella Ateenassa, puhelin dpr 3 — `ui.pallolauta.vektorit()`
+  palauttaa kahvan, kerroksen tila `nakyy`, taso 4, 16 solua, 24 449
+  janaa, 17 pyyntöä ja 114 kt, ja pallon näyttämöllä on 16 näkyvää
+  `userData.pallovektorit`-oliota. `pathsData` on 0, eli luokkien
+  lukemiseen käytetty nollamittainen polku poistui reittikerrokselta.
+  `?vektorit=0` antaa kahvaksi null ja 0 oliota.
+- **Pisteet voittavat viivan.** Koepiste (kultainen levy Sounionin
+  kärjessä) sai lähikuvassa 0 magentapikseliä levyn sisään (708 px
+  kultaa) — opaakit merkit piirtyvät ennen läpinäkyviä.
+- **Horisontti.** Koko pallon näkymässä magentaa kiekon ulkopuolella
+  26 / 31 978 px = **0,08 %** (raja 0,3 %).
+- **Kerroksen hinta.** Oma osuus piirtokutsuista Ateenassa **14**
+  (68 kerroksen kanssa, 54 ilman, 16 solua); kerroksen oma JS
+  `paivitaMs` pahimmillaan **4,4 ms** (mediaani 0,2 ms, 4× hidastus);
+  saapumisnäkymä maksoi **16 pyyntöä ja 111 kt** (raja 30 / 150 kt);
+  zoomissa 2,5 → 0,05 taso valittiin monotonisesti 2 → 3 → 4.
+  Panoroinnin p50-kehys 1 333 ms vs. 617 ms ilman kerrosta = **2,16 ×**
+  (raja 2,2 ×) — kontin ohjelmistorasteroijalla, ei laitteella; oikean
+  näytönohjaimen luku on yhä saatava omistajan puhelimelta
+  (suunnitelman luku 7).
+
+TYÖPÖYTÄ (1440 × 900 dpr 2, ei hidastusta) antaa saman viivan: lepo
+Ateena 2 / 4 px, lähikuva 2 / 3, liike 2 / 4, zoomin portaat 2 / 4, 2 / 4,
+2 / 3, 2 / 3; koepisteessä 0 magentaa, z-taistelu 1,013 (27 verkkoa
+piilotettu), horisonttivuoto 0,07 %, panorointi 1 583 ms vs 900 ms =
+1,76 ×. Koko pallon näkymässä työpöydän leveämpi ruutu ja dpr 2 antavat
+tarpeen 13,4 px/aste, jolloin tasoksi valikoituu 1 — koko maailma on
+YKSI solu ja kerroksen oma osuus piirtokutsuista on **1** (puhelimella
+49). Sama vakio siis ratkaisee puhelimen yleiskuvan.
+
+MITKÄ RAJAT EIVÄT TÄYTY (vartio puhelimella 18 OK / 2 FAIL, työpöydällä
+17 OK / 3 FAIL). Rajaa ei löysätty eikä `js/pallovektorit.js`:ää muutettu
+— kaikki kolme ovat vakiokysymyksiä, jotka suunnitelma jättää erälle V3:
+
+1. **Leveys koko pallon näkymässä** mediaani 3 px (raja 2) ja
+   puhelimella p90 7 px (raja 6; työpöydällä 6). Yleiskuvassa tiheät
+   rannikot ovat lähempänä toisiaan kuin viivan leveys, ja viivat
+   sulautuvat läiskiksi — täsmälleen luvun 4.4 riski *"Koko pallon
+   näkymässä tason 1 viivat sulautuvat läiskiksi (p90 6 px)"*.
+   Puhelimella tilanne on pahempi, koska tarve on 18,9 laitepikseliä
+   astetta kohti ja 0,03° × 18,9 = 0,567 ylittää `VEKTORIT_TERAVYYS_PX
+   0,5`:n niukasti: taso 2 (10°:n solut) valikoituu tason 1 sijaan.
+   Vastatoimi on suunnitelmassa sanatarkasti: *"Taso 0 (0,1°)
+   yleiskuvaan: TERAVYYS_PX 0,5 → yleiskuvassa 1,0 (kuten
+   LAATU_TERAVYYS_KAUKO); V3 säätää."*
+2. **Kerroksen oma osuus piirtokutsuista koko pallolla** puhelimella
+   49–50 (raja 4) — sama juuri kuin edellä: taso 2 näyttää 65 solua
+   yhden sijaan. Työpöydällä sama mitta on **1**, koska siellä taso 1
+   valikoituu ja koko maailma on yksi solu. Sama vakio korjaa
+   molemmat.
+3. **`paivitaMs` työpöydällä pahimmillaan 11,9 ms** (raja 5; mediaani
+   0,3 ms, puhelimella pahin 4,4 ms) ja **saapumisnäkymän pyynnöt
+   työpöydällä 39** (raja 30; puhelimella 16). Molemmat ovat sama
+   ilmiö: 1440 × 900:n näkymä kattaa Ateenassa 39 kymmenen asteen solua
+   puhelimen 16:n sijaan, ja yksi päivitys panee ne kaikki liikkeelle
+   kerralla. Luvun 5 rajat on mitattu puhelimella; kumpi korjataan —
+   solukoko, latauksen jaksotus vai rajan näkymäkohtaisuus — on V3:n ja
+   suunnitelman asia, ei kytkennän.
