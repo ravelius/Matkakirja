@@ -1,4 +1,4 @@
-# Hakee ääniehdokkaita Freesoundista.
+# Hakee ääniä Freesoundista. Kaksi tilaa samassa ajossa.
 #
 # MIKSI TÄMÄ ON TYÖNKULKU EIKÄ KOMENTO:
 #
@@ -11,44 +11,126 @@
 # avaimia liitetä keskusteluun, koska ne päätyisivät lokeihin. Tämä
 # työnkulku on se reitti, jolla avainta voi käyttää rikkomatta sääntöä.
 #
+# ── TILA 1: ehdokkaat (oletus) ────────────────────────────────────────
+#
 # Tulokset tulevat ajon lokiin ja artefaktina. Peliin ne otetaan
 # äänistudion kautta ("Tuo valinnat"), ei automaattisesti: äänen
 # valinta on kuuntelupäätös, jota kone ei voi tehdä.
+#
+# ── TILA 2: pulu-tehosteet ────────────────────────────────────────────
+#
+# Omistajan tilaus 6.9.2026 aamupäivä, sanatarkasti: *"Pululle ja
+# muuallekin tarvitaan ääniefektejä: linnun siivet lentäessä,
+# tömähdyksiä (pulu laskeutuu), hassuja täyteääniä kun pulu sekoilee
+# (doing vieteriääni yms), oven lämähdys kiinni ja auki (pulu tulee tai
+# lähtee), viuhahdusefektejä yms. NÄITÄ EI GENEROIDA."*
+#
+# Tässä tilassa kuuntelupäätöstä ei ole ennen ajoa: lista
+# tools/tehosteet/pulu-tehosteet.json kertoo tunnukset, hakusanat,
+# kestorajat ja lisenssit, ja ajo valitsee jokaiselle YHDEN osuman
+# mitattavista luvuista (arvosana, lataukset, kesto), lataa
+# esikatselu-mp3:n, normalisoi sen ffmpegillä −14 LUFSiin ja vie
+# ämpärin kansioon aanet/tehosteet/pulu/ manifestin kanssa.
+#
+# KUUNTELE TEHOSTEET AJON JÄLKEEN. Ajo tarkistaa keston ja tason, ei
+# sitä kuulostaako ääni siivenräpytykseltä. Huonon osuman vaihtaa
+# ajamalla saman työnkulun uudestaan syötteellä `tunnus`.
+#
+# LISENSSIT. Vain CC0 ja CC BY, rajaus Freesoundin filter-parametrilla.
+# CC BY vaatii attribuution, ja se kirjataan manifestiin (tekijä,
+# lisenssi, Freesoundin id ja sivu) — ajon loki listaa ne myös erikseen.
+#
+# TÄMÄ AJO EI COMMITTOI MITÄÄN. Media kuuluu ämpäriin, ei repoon
+# (Raamattu: "kaikki aina ämpäriin"); työkalu kirjoittaa media/-puolelle,
+# joka on .gitignoressa, ja se tarkistetaan koneellisesti.
+#
+# SALAISUUDET. Ehdokashaku tarvitsee vain Freesoundin avaimen.
+# Pulu-tehosteet tarvitsee sen LISÄKSI neljä R2-salaisuutta (samat kuin
+# vie-aanet.yml ja generoi-tehosteet.yml):
+#   R2_ACCOUNT_ID  R2_ACCESS_KEY_ID  R2_SECRET_ACCESS_KEY  R2_BUCKET
+# Jos jokin puuttuu, ajo kertoo sen nimeltä ennen kuin mitään haetaan.
 
 name: Äänihaku (Freesound)
 
 on:
   workflow_dispatch:
     inputs:
+      tila:
+        description: 'ehdokkaat = kuunneltavia ehdokkaita; pulu-tehosteet = ajaa tehostelistan ja vie ämpäriin'
+        required: true
+        type: choice
+        default: 'ehdokkaat'
+        options: ['ehdokkaat', 'pulu-tehosteet']
       kori:
-        description: 'Valmis kori (meri, basaari, aavikko, sademetsä…) — jätä tyhjäksi jos käytät omaa hakua'
+        description: '[ehdokkaat] Valmis kori (meri, basaari, aavikko, sademetsä…) — jätä tyhjäksi jos käytät omaa hakua'
         required: false
         default: 'meri'
       haku:
-        description: 'Oma hakulause englanniksi (ohittaa korin)'
+        description: '[ehdokkaat] Oma hakulause englanniksi (ohittaa korin)'
         required: false
         default: ''
       maara:
-        description: 'Montako ehdokasta'
+        description: '[ehdokkaat] Montako ehdokasta'
         required: false
         default: '12'
       min-kesto:
-        description: 'Lyhin hyväksyttävä kesto sekunteina'
+        description: '[ehdokkaat] Lyhin hyväksyttävä kesto sekunteina'
         required: false
         default: '20'
       max-kesto:
-        description: 'Pisin hyväksyttävä kesto sekunteina'
+        description: '[ehdokkaat] Pisin hyväksyttävä kesto sekunteina'
         required: false
         default: '600'
+      tunnus:
+        description: '[pulu-tehosteet] Vain tämä tunnus (esim. siivet-lento). Tyhjä = koko lista.'
+        required: false
+        default: ''
+      kuiva:
+        description: '[pulu-tehosteet] Kuiva ajo: hae ja valitse, älä lataa äläkä vie ämpäriin'
+        required: false
+        type: boolean
+        default: false
 
-# Vain luku: työnkulku ei kirjoita repoon mitään. Tulokset ovat
-# ehdokkaita, ja niistä valitseminen on kuuntelutyötä.
+# Vain luku: kumpikaan tila ei kirjoita repoon mitään. Ehdokkaat ovat
+# ehdokkaita, ja valmiit tehosteet menevät ämpäriin.
 permissions:
   contents: read
+
+# Yksi ajo kerrallaan: kaksi rinnakkaista kirjoittaisi ämpärin samoihin
+# avaimiin ja samaan manifestiin.
+concurrency:
+  group: aanihaku
+  cancel-in-progress: false
 
 jobs:
   hae:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # Avain tulee repon salaisuuksista eikä sitä tulosteta: työkalu
+      # kertoo vain, mistä muuttujasta se löytyi.
+      #
+      # Kaikki tavalliset kirjoitusasut välitetään, koska salaisuuden
+      # nimeä ei voi tarkistaa repon ulkopuolelta ja väärä arvaus
+      # näyttäisi samalta kuin puuttuva avain. Määrittelemätön salaisuus
+      # on tyhjä merkkijono, jonka työkalu ohittaa.
+      FREESOUND_API: ${{ secrets.FREESOUND_API }}
+      FREESOUND_API_KEY: ${{ secrets.FREESOUND_API_KEY }}
+      FREESOUND_AVAIN: ${{ secrets.FREESOUND_AVAIN }}
+      FREESOUND_TOKEN: ${{ secrets.FREESOUND_TOKEN }}
+      FREESOUND: ${{ secrets.FREESOUND }}
+      # Vienti on työkalun sisällä, mutta salaisuudet tulevat tästä —
+      # samat nimet ja sama endpoint-tyyli kuin vie-aanet.yml:ssä.
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      # R2 ei hyväksy AWS:n uudempia tarkistussummaotsakkeita, jotka
+      # aws-cli 2.23:sta alkaen lähtevät oletuksena mukaan.
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
     steps:
       - uses: actions/checkout@v4
 
@@ -56,21 +138,38 @@ jobs:
         with:
           node-version: '22'
 
+      # Puuttuva R2-salaisuus tulisi muuten vastaan vasta aws-clin
+      # "Invalid endpoint" -virheenä, ja vasta sen jälkeen kun kaikki
+      # kaksitoista ääntä on jo haettu ja normalisoitu. Arvoja ei
+      # tulosteta, vain onko ne asetettu.
+      - name: Tarkista vientisalaisuudet
+        if: inputs.tila == 'pulu-tehosteet' && !inputs.kuiva
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "${R2_ACCOUNT_ID:-}" ]            || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ]        || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ]    || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "${R2_BUCKET:-}" ]                || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            echo "Lisää ne: Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          echo "Kaikki neljä R2-salaisuutta löytyvät."
+
+      # ffmpeg puuttuu ubuntu-latest-ajurista, ja hiljaisuuden leikkaus,
+      # häivytykset ja tason mittaus ovat sen varassa.
+      - name: Asenna ffmpeg
+        if: inputs.tila == 'pulu-tehosteet' && !inputs.kuiva
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          ffmpeg -version | head -1
+
       - name: Hae ehdokkaat
-        env:
-          # Avain tulee repon salaisuuksista eikä sitä tulosteta:
-          # työkalu kertoo vain, mistä muuttujasta se löytyi.
-          #
-          # Kaikki tavalliset kirjoitusasut välitetään, koska
-          # salaisuuden nimeä ei voi tarkistaa repon ulkopuolelta ja
-          # väärä arvaus näyttäisi samalta kuin puuttuva avain.
-          # Määrittelemätön salaisuus on tyhjä merkkijono, jonka
-          # työkalu ohittaa.
-          FREESOUND_API: ${{ secrets.FREESOUND_API }}
-          FREESOUND_API_KEY: ${{ secrets.FREESOUND_API_KEY }}
-          FREESOUND_AVAIN: ${{ secrets.FREESOUND_AVAIN }}
-          FREESOUND_TOKEN: ${{ secrets.FREESOUND_TOKEN }}
-          FREESOUND: ${{ secrets.FREESOUND }}
+        if: inputs.tila == 'ehdokkaat'
         run: |
           args="--maara ${{ inputs.maara }}"
           args="$args --min-kesto ${{ inputs.min-kesto }}"
@@ -82,7 +181,32 @@ jobs:
           fi
           eval node tools/hae-freesound.mjs $args --ulos ehdokkaat.json
 
-      - name: Talleta ehdokkaat
+      - name: Aja pulun tehostelista
+        if: inputs.tila == 'pulu-tehosteet'
+        run: |
+          args="--pulu --ulos ehdokkaat.json"
+          if [ -n "${{ inputs.tunnus }}" ]; then
+            args="$args --tunnus ${{ inputs.tunnus }}"
+          fi
+          if [ "${{ inputs.kuiva }}" = "true" ]; then
+            args="$args --kuiva"
+          fi
+          eval node tools/hae-freesound.mjs $args
+
+      # Vartija sille, mitä tämä ajo lupaa: repoon ei jää mitään.
+      - name: Varmista ettei repoon jäänyt mitään
+        if: always()
+        run: |
+          set -euo pipefail
+          muuttunut="$(git status --porcelain -- . ':!ehdokkaat.json')"
+          if [ -n "$muuttunut" ]; then
+            echo "::error::Ajo muutti työhakemistoa — media kuuluu ämpäriin, ei repoon."
+            echo "$muuttunut"
+            exit 1
+          fi
+          echo "Työhakemisto on siisti."
+
+      - name: Talleta tulokset
         if: always()
         uses: actions/upload-artifact@v4
         with:

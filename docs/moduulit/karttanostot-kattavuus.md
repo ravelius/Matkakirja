@@ -183,7 +183,7 @@ Edellä oleva 2.9.2026 taulukko on jätetty koskematta tarkoituksella:
 rinnakkaiset erät päivittävät sitä, ja Euroopan luvut näkyvät tässä
 osiossa tuoreina.
 
-**Tilanne yhdellä silmäyksellä (erien M1–M5 ja M8 jälkeen, 6.9.2026 aamupäivä).** 112 maasta **55 on tavoitteessa** ja 57 vajaita. Eurooppa on täynnä; maailman erät M1 (Etelä-Amerikka), M2 (Oseania), M3 (Aasia), M4 (Pohjois-Amerikka), M5 (Afrikka) ja M8 (Aasia 2) toivat yhteensä noin 360 uutta karttamerkkiä. Tarkoitukselliset vajeet: Fidži, Salomonsaaret, Hongkong ja Singapore (lehden ikkuna tai kaupunkisäde). Erä M6 (Lähi-itä) on työn alla.
+**Tilanne yhdellä silmäyksellä (erien M1–M6, M8, M9 ja M11 jälkeen, 6.9.2026 keskipäivä).** 112 maasta **67 on tavoitteessa** ja 45 vajaita. Tarkoitukselliset vajeet: Fidži, Salomonsaaret, Hongkong, Singapore, Qatar, Kuwait ja Kypros (lehden ikkuna tai kaupunkisäde). Erä M10 (Aasia 3) on työn alla; jäljellä Afrikan ja Aasian loput maat.
 
 ### Eurooppa (29 maata)
 
@@ -223,18 +223,18 @@ osiossa tuoreina.
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Kypros (CYP) | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | kohteita −8, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
-| Oman (OMN) | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | kohteita −8, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
-| Qatar (QAT) | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | kohteita −8, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
-| Arabiemiirikunnat (ARE) | 1 | 2 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −7, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
-| Kuwait (KWT) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Saudi-Arabia (SAU) | 1 | 2 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −7, maastoa −1, skandaaleja −2 |
 | Jemen (YEM) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Iran (IRN) | 1 | 3 | 0 | 0 | 0 | 0 | 3 | 1 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
-| Jordania (JOR) | 1 | 3 | 0 | 0 | 0 | 0 | 3 | 1 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
 | Syyria (SYR) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
-| Irak (IRQ) | 3 | 3 | 0 | 0 | 0 | 0 | 5 | 1 | kohteita −5, eläintäky puuttuu, skandaaleja −2 |
-| Egypti (EGY) | 4 | 3 | 0 | 0 | 3 | 0 | 9 | 1 | kohteita −4, eläintäky puuttuu, skandaaleja −2 |
+| Qatar (QAT) | 5 | 3 | 0 | 2 | 0 | 0 | 10 | 0 | kohteita −3, eläintäky puuttuu |
+| Kuwait (KWT) | 5 | 4 | 1 | 2 | 0 | 0 | 11 | 0 | kohteita −3 |
+| Kypros (CYP) | 7 | 3 | 1 | 2 | 0 | 0 | 12 | 0 | kohteita −1 |
+| Iran (IRN) | 8 | 3 | 1 | 2 | 0 | 0 | 12 | 1 | täysi |
+| Irak (IRQ) | 8 | 3 | 1 | 2 | 0 | 0 | 12 | 1 | täysi |
+| Jordania (JOR) | 8 | 3 | 1 | 2 | 0 | 0 | 12 | 1 | täysi |
+| Oman (OMN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Saudi-Arabia (SAU) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Arabiemiirikunnat (ARE) | 9 | 3 | 1 | 2 | 0 | 0 | 14 | 0 | täysi |
+| Egypti (EGY) | 8 | 3 | 1 | 2 | 3 | 0 | 15 | 1 | täysi |
 
 ### Aasia (19 maata)
 
@@ -265,11 +265,8 @@ osiossa tuoreina.
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | Saint Helena (SHN) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
-| Etiopia (ETH) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
 | Ghana (GHA) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Kenia (KEN) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
 | Liberia (LBR) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Marokko (MAR) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
 | Madagaskar (MDG) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
 | Mali (MLI) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
 | Mosambik (MOZ) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
@@ -278,8 +275,6 @@ osiossa tuoreina.
 | Senegal (SEN) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
 | Sierra Leone (SLE) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
 | Tšad (TCD) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Tansania (TZA) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
-| Uganda (UGA) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
 | Libya (LBY) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
 | Nigeria (NGA) | 0 | 4 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
 | Somalia (SOM) | 0 | 4 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
@@ -290,7 +285,12 @@ osiossa tuoreina.
 | Kamerun (CMR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Kongo (COD) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Algeria (DZA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Etiopia (ETH) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Kenia (KEN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Marokko (MAR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Etelä-Sudan (SDS) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Tansania (TZA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Uganda (UGA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 
 ### Pohjois-Amerikka (7 maata)
 
@@ -332,7 +332,7 @@ osiossa tuoreina.
 | Papua-Uusi-Guinea (PNG) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Itä-Timor (TLS) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 
-Maita 112, tavoitteessa 55, vajaita 57.
+Maita 112, tavoitteessa 67, vajaita 45.
 
 ## Maailman erät (ehdotus)
 
@@ -353,7 +353,7 @@ tiedostoon.
 | M3 (tehty 6.9.) | Aasia | Hongkong (HKG) 0, Indonesia (IDN) 0, Intia (IND) 0, Sri Lanka (LKA) 0, Myanmar (MMR) 0 |
 | M4 (tehty 6.9.) | Pohjois-Amerikka | Kanada (CAN) 0, Kuuba (CUB) 0, Grönlanti (GRL) 0, Guatemala (GTM) 0, Nicaragua (NIC) 0 |
 | M5 (tehty 6.9.) | Afrikka | Saint Helena (SHN) 0, Etelä-Sudan (SDS) 2, Angola (AGO) 3, Kamerun (CMR) 3, Kongo (COD) 3 |
-| M6 | Lähi-itä | Kypros (CYP) 2, Oman (OMN) 2, Qatar (QAT) 2, Arabiemiirikunnat (ARE) 3, Kuwait (KWT) 3 |
+| M6 (tehty 6.9.) | Lähi-itä | Kypros (CYP) 2, Oman (OMN) 2, Qatar (QAT) 2, Arabiemiirikunnat (ARE) 3, Kuwait (KWT) 3 |
 | M7 (tehty erinä 2–4) | Eurooppa | Tanska (DNK) 11, Ruotsi (SWE) 11, Itävalta (AUT) 12, Irlanti (IRL) 12, Liettua (LTU) 12 |
 
 Erä M7 on sama kuin Euroopan "erä 2 (ehdotus)" yllä — sama viisikko,
@@ -1004,3 +1004,75 @@ Egyptin muumioitu ja jumalatar Mafdetiin liitetty eläin.
 kuvaputken ämpäritunnus ilman kansiota (`elain-irn`, `elain-jor`,
 `elain-irq`, `elain-egy`): kun kuvaputki toimittaa kuvan, se ilmestyy
 kortille ilman koodimuutosta, ja siihen asti kortti on kuvaton.
+
+## Erä M11 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Afrikan toinen erä: **ETH, KEN, TZA, UGA ja MAR**. Kaikilla viidellä oli
+ennen erää kolme maastokohdetta ja eläintäky mutta nolla kohdetta ja
+nolla skandaalia, joten työ oli puhdasta kohde- ja skandaalityötä: 8
+kohdetta ja 2 skandaalia kuhunkin maahan, yhteensä 50 uutta
+karttamerkkiä. Erä on kuvaton kuten K2-erät 1–4 ja maailman erät M1–M8,
+ja jokainen väite on en-Wikipedian raakatekstin katteessa lähderivillä,
+joka nimeää artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+`node tools/laske-karttanostot.mjs` sanoo erän jälkeen kaikista
+viidestä *täysi*; taulukot ajaa Fable.
+
+Kohteet asuvat maiden omissa `js/packs/maastokohteet-<iso>.js`
+-tiedostoissa (kaikilla viidellä oli tiedosto jo olemassa, joten uusia
+rekisteröintejä `maastokohteet.js`-hakemistoon, `sw.js`:ään tai
+`tools/build-standalone.mjs`:ään ei tarvittu). Skandaalit ovat
+`js/packs/skandaalit.js`:n lopussa, ja `tests/skandaalit.test.mjs`:n
+lukumäärät päivitettiin (skandaaleja 143 → 153 ja maita 59 → 64).
+Eläintäkyihin ei koskettu: ne olivat jo kaikilla viidellä maalla.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Etiopia (ETH) | Aksum, Fasil Ghebbi, Harar, Tiya, Debre Damo, Danakilin syvänne, Hadar, Balen kansallispuisto | (oli jo: Ras Dejen, Tanajärvi, Sininen-Niili) | (oli jo: gelada) | Magdalan ryöstö 1868, Wuchalen artikla 17 (1889) |
+| Kenia (KEN) | Lamu, Fort Jesus, Gedin rauniot, Thimlich Ohinga, Koobi Fora, Hell's Gate, Amboseli, Lewa | (oli jo: Mount Kenya, Victorianjärvi, Intian valtameri) | (oli jo: kirahvinvasa) | Happy Valley 1920–1941, Tsavon ihmissyöjät 1898 |
+| Tansania (TZA) | Olduvain rotko, Serengeti, Kondoan kalliotaide, Kilwa Kisiwani, Bagamoyo, Ujiji, Tabora, Kalambon putoukset | (oli jo: Kilimandžaro, Intian valtameri, Tanganjikajärvi) | (oli jo: norsunvasa) | Maji Maji 1905–1907, maapähkinähanke 1946–1951 |
+| Uganda (UGA) | Kasubin haudat, Murchisonin putoukset, Queen Elizabethin puisto, Kibalen kansallispuisto, Nyeron kalliomaalaukset, Kidepon laakso, Fort Patiko, Jinja | (oli jo: Mount Stanley, Victorianjärvi, Niili) | (oli jo: gorillanpoikanen) | Kabakan karkotus 1953–1955, kadonneet kreivikunnat 1894–1964 |
+| Marokko (MAR) | Volubilis, Aït Benhaddou, Essaouira, Chefchaouen, Hassan-torni, Erg Chebbi, El Jadida, Lixus | (oli jo: Toubkal, Atlantti, Drâa) | (oli jo: berberiapina) | Agadirin kriisi 1911, Annualin katastrofi 1921 |
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin, ja jokaisen kohteen
+lähin on kirjattu sen koordinaattirivin viereen. Koko erän lähin merkki
+on Volubilis 19,2 lautayksikön päässä Fèsistä ja toiseksi lähin Tiya
+20,6 yksikön päässä Addis Abebasta; raja `KAUPUNGIN_KOHDALLA_SADE` on 7.
+`node tools/tarkista-nostopaikat.mjs` antaa kaikille 50:lle rivin
+*pääkartta*, ja `node tools/tarkista-nimiolimitys.mjs` sanoo yhä
+"NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Neljä rajausta, jotka valitsivat sisällön.** (1) M3:n Myanmar-linja:
+artikkeleita, joiden nykytila on selkkaus, ei kirjoitettu. Etiopian
+**Konso** oli erän ainoa kokonaan hylätty ehdokas — sen artikkelissa on
+oma osio "Conflict since 1990", joka kertoo yhä käynnissä olevasta
+väkivallasta — ja sen tilalle tuli Balen vuorten kansallispuisto.
+Samasta linjasta Lamun kortti kertoo vain kaupungin historian eikä
+artikkelin nykypäivän turvallisuustilannetta. (2) Merkkien
+päällekkäisyys karsi kolme muuten hyvää ehdokasta: **Ngorongoro** osuisi
+kahdeksan lautayksikön päähän Olduvain rotkosta (kraatteri mainitaan
+Olduvain kortissa), **Meknès** on 6,6 yksikön päässä Volubiliksesta
+(kaupunki mainitaan Volubiliksen kortissa) ja Ugandan **Bwindi** on
+täsmälleen samassa pisteessä kuin maan eläintäky, gorillanpoikanen.
+Samasta syystä myös kaksi skandaalia vaihtui: **Aksumin obeliski**
+(Rooma 1937–2005) olisi tullut saman erän Aksum-kohteen päälle, joten
+obeliskin tarina kerrotaan Aksumin kortissa ja Etiopian skandaaleiksi
+tulivat Magdala ja Wuchale, ja **Entebbe 1976** olisi ollut samassa
+pisteessä kuin kabakan karkotus, jonka neuvottelut käytiin Entebben
+Government Housessa. (3) Tyyppi kertoo, mitä merkki näyttää: Danakilin
+syvänne ja Erg Chebbi ovat `muu` eivätkä maastoa, koska maastokiintiö
+oli jo täynnä, ja Kalambon putoukset on `historia`, koska kortti kertoo
+maailman vanhimmasta tunnetusta puurakennelmasta eikä vesiputouksesta.
+(4) Lähdeaineiston ohuus: Fort Patikon ja Kasubin hautojen koordinaatit
+eivät ole en-Wikipedian `coordinates`-propissa vaan artikkelin omassa
+infolaatikossa, ja ne on luettu sieltä; Bigo bya Mugenyi ja Sof Omar
+jäivät pois, koska koordinaattia ei ollut kummassakaan.
+
+**Herkät aiheet on kirjoitettu lähteen katteessa ja ilman
+nykypolitiikkaa.** Maji Majin uhriluvut (75 000–300 000), Tsavon
+uhriluvut (Pattersonin 135, päiväkirjan 28–31 ja isotooppitutkimuksen
+10,5 + 24,2) ja Annualin tappiot ovat artikkelien omia lukuja.
+Siirtomaahistorian pakkosiirrot mainitaan toteavasti siellä missä lähde
+ne mainitsee (Kidepon ik ja ketebo, Queen Elizabethin songora), eikä
+yhdenkään kortin aihe ole käynnissä oleva selkkaus.

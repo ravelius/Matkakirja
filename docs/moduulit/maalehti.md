@@ -296,3 +296,38 @@ Kanadan pinta-ala on ainoa poikkeus: Maailmanpankin sarja antaa sille
 pakolliset kentät ja vähintään yksi tervehdys. Testissä on nimetty
 odotuslista niistä Aasian maista, joiden luvut ovat vielä tekemättä
 (BHR, IND, THA, VNM, IDN, MYS); lista saa vain lyhentyä.
+
+## Tunnuslukujen odotuslista tyhjeni (6.9.2026, iltapäivä)
+
+Yhdeksän puuttunutta riviä kirjoitettiin samalla menetelmällä ja
+samasta aineistosta kuin saman päivän aamun erä: CHL ja COL
+`southamerica-maatiedot.js`:ään, CUB `northamerica-maatiedot.js`:ään
+sekä BHR, IDN, IND, MYS, THA ja VNM `asia-maatiedot.js`:ään. Rivit
+tuotettiin `tools/kirjoita-maatiedot.mjs`-työkalulla ja liitettiin
+olemassa oleviin tauluihin aakkosjärjestykseen, joten tiedostojen
+otsikkokommentit säilyivät. `tests/maatiedot.test.mjs`:n
+`VIELA_ILMAN_TUNNUSLUKUJA` on nyt tyhjä.
+
+Menetelmä tarkistettiin toistamalla aamun erän yhdeksän maan kaikki
+27 sijalukua (väkiluku, pinta-ala, keskitulo) sekä niiden
+demokratiasijat: jokainen osui kohdalleen, joten sijat ovat
+vertailukelpoisia aiempien kanssa.
+
+Kaksi poikkeusta on kirjattu tiedostojen otsikkoihin:
+
+- **Kuuban keskitulo.** Maailmanpankin NY.GNP.PCAP.CD-sarjan tuorein
+  Kuuban havainto on vuodelta 2019 (9 010 $), kun muilla luku on
+  vuodelta 2024. Sija on siksi laskettu vuoden 2019 jakaumasta;
+  2024-jakaumaan verrattuna Kuuba näyttäisi rikkaammalta kuin on.
+  Vuosilukua ei kirjoiteta arvokenttään, koska js/maalehti.js lukee
+  tulopalkin pituuden kentän numeroista.
+- **Aasian demokratianimittäjä.** Uusissa kuudessa rivissä se on
+  `/172` (V-Demin 2025-aineisto, sama kuin Amerikoissa ja Oseaniassa),
+  vanhemmissa Aasian riveissä `/179`. Sija itse on kummassakin laskettu
+  samasta indeksistä, vain vertailujoukko on eri kokoinen.
+
+Tervehdyksissä pidettiin kiinni siitä, että sanamuodolla on
+en-Wiktionaryn kate. Siksi Chilelle jäi vain kaksi tervehdystä
+(espanja ja mapudungun): rapanuin ja aymaran tervehdyksistä ei
+löytynyt Wiktionary-artikkelia, ja arvattu sana olisi huonompi kuin
+puuttuva rivi.

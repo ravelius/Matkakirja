@@ -13,7 +13,7 @@ const VANHA_STORAGE_KEY = 'afrikan-tahti-sound';
 
 import { valittuAani, jaaAlku } from './aani-ehdokkaat.js';
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
-import { haeAani } from './media.js';
+import { AANI_JUURI, haeAani } from './media.js';
 
 // Ambienssin ristihäivytys ja tapahtumien väli. Väli on tarkoituksella pitkä
 // ja epäsäännöllinen: säännöllinen ääni alkaa kuulua kellona.
@@ -352,6 +352,12 @@ class Sound {
     this.noise = null;
     this.ambience = null;
     this.ambienceType = null;
+    /*
+     * Pulun tehosteiden manifesti: null = ei vielä yritetty, olio =
+     * yritetty (tyhjä olio, jos manifestia ei ollut). Lippu estää
+     * saman haun tekemisen kahdesti — ks. lataaPulunTehosteet.
+     */
+    this.pulunTehosteet = null;
     // Väistökerroin syntetisoidulle äänimaisemalle. Nauhoitetulla
     // taustalla on oma vastaava (js/ambience-stream.js), ja ne ajetaan
     // yhdessä: aiemmin vain nauhoitettu väistyi, ja syntetisoitu jäi
@@ -1105,6 +1111,42 @@ class Sound {
         })
         .catch(() => { /* ei verkkoa — synteesi kelpaa */ });
     }
+    this.lataaPulunTehosteet();
+  }
+
+  /**
+   * PULUN TEHOSTEET MANIFESTIN KAUTTA (ks. PULUN_TEHOSTEET yllä).
+   *
+   * Kaksi askelta eikä yksi: ensin manifesti, joka kertoo mikä tiedosto
+   * kuuluu millekin tunnukselle, sitten tiedostot. Osoitetta ei voi
+   * kovakoodata, koska huonon osuman korvaaminen paremmalla vaihtaa
+   * tiedoston nimen mukana kulkevat tekijä- ja lisenssitiedot — ja
+   * pelin ei pidä odottaa julkaisua sen takia.
+   *
+   * Epäonnistuminen (ei verkkoa, ei vielä ajettua hakua) EI ole virhe:
+   * tehostetta ei silloin ole, ja play() jättää sen soittamatta.
+   */
+  lataaPulunTehosteet() {
+    if (this.pulunTehosteet) return;
+    this.pulunTehosteet = {};
+    fetch(PULUN_MANIFESTI, { mode: 'cors' })
+      .then((res) => (res.ok ? res.json() : Promise.reject(new Error('http'))))
+      .then((manifesti) => {
+        const rivit = Array.isArray(manifesti?.tehosteet) ? manifesti.tehosteet : [];
+        const tunnuksesta = new Map(rivit.map((rivi) => [rivi.tunnus, rivi]));
+        for (const [avain, tiedot] of Object.entries(PULUN_TEHOSTEET)) {
+          const rivi = tunnuksesta.get(tiedot.tunnus);
+          if (!rivi?.tiedosto) continue;
+          this.pulunTehosteet[avain] = rivi;
+          // Peili ensin, alkuperäinen lähde varareittinä (js/media.js).
+          haeAani(`${PULUN_TEHOSTEJUURI}${rivi.tiedosto}`)
+            .then((res) => (res.ok ? res.arrayBuffer() : Promise.reject(new Error('http'))))
+            .then((data) => this.ctx.decodeAudioData(data))
+            .then((buf) => { this.samples[avain] = buf; })
+            .catch(() => { /* yksi tehoste jää soimatta, muut kelpaavat */ });
+        }
+      })
+      .catch(() => { /* manifestia ei ole vielä ajettu — tehosteet ovat hiljaa */ });
   }
 
   /**
@@ -1304,6 +1346,62 @@ const REAL_SAMPLES = {
   win: { url: 'assets/audio/efekti-voitto.mp3', credit: 'ElevenLabs SFX' },
 };
 
+/*
+ * ── PULUN TEHOSTEET: MANIFESTISTA, EI TAULUKOSTA ─────────────────────
+ *
+ * Omistajan tilaus 6.9.2026 aamupäivä, sanatarkasti: *"Pululle ja
+ * muuallekin tarvitaan ääniefektejä: linnun siivet lentäessä,
+ * tömähdyksiä (pulu laskeutuu), hassuja täyteääniä kun pulu sekoilee
+ * (doing vieteriääni yms), oven lämähdys kiinni ja auki (pulu tulee tai
+ * lähtee), viuhahdusefektejä yms. NÄITÄ EI GENEROIDA."*
+ *
+ * Ne haetaan siis valmiina äänitteinä Freesoundista (CC0 tai CC BY,
+ * tools/hae-freesound.mjs --pulu) eikä ElevenLabsilta. Sillä on yksi
+ * seuraus tälle tiedostolle: OSOITETTA EI VOI KIRJOITTAA TÄHÄN. Kun
+ * huono osuma vaihdetaan parempaan, uusi ääni tulee samalle
+ * tunnukselle mutta on eri tiedosto eri tekijältä eri lisenssillä —
+ * ja pelin pitäisi silloin odottaa julkaisua. Siksi tässä on vain
+ * TUNNUS, ja tiedostonimi, tekijä ja lisenssi luetaan ajossa
+ * manifestista, jonka hakuajo kirjoittaa ämpäriin äänten viereen.
+ *
+ * ÄÄNET SOIVAT VAIN JOS MANIFESTI ON LADATTU. Synteesivastinetta ei
+ * ole: puuttuva puskuri tarkoittaa hiljaisuutta (play palaa
+ * REAL_PLAYERSista epätotena eikä SOUNDSissa ole näitä nimiä). Se on
+ * oikea käytös — arvattu siivenräpytys olisi huonompi kuin ei mitään.
+ */
+export const PULUN_TEHOSTEJUURI = `${AANI_JUURI}aanet/tehosteet/pulu/`;
+const PULUN_MANIFESTI = `${PULUN_TEHOSTEJUURI}manifesti.json`;
+
+/*
+ * TASO: −8 dB LUENTAAN NÄHDEN (omistajan tilaus). Tiedostot on
+ * normalisoitu −14 LUFSiin, mikä on lähellä puheen tasoa; tehoste ei
+ * saa nousta luennan päälle, joten sitä vaimennetaan tasan sen verran.
+ * 10^(−8/20) ≈ 0,40.
+ */
+const PULUN_TASO = 0.4;
+/** Lähtövoimakkuus ennen −8 dB:n vaimennusta (sama kuin muilla efekteillä). */
+const PULUN_PERUSVOIMA = 0.35;
+
+/**
+ * Pelin tehostenimi → listan tunnus (tools/tehosteet/pulu-tehosteet.json).
+ * `kesto` on soitettavan siivun pituus ja `voima` tehostekohtainen
+ * hienosäätö: tömähdys saa kuulua täydellä, hassu täyteääni ei.
+ */
+const PULUN_TEHOSTEET = {
+  'pulu.siivet': { tunnus: 'siivet-lento', kesto: 1.4, voima: 0.9 },
+  'pulu.siivet-lasku': { tunnus: 'siivet-laskeutuminen', kesto: 1.2, voima: 0.9 },
+  'pulu.tomahdys': { tunnus: 'tomahdys-laskeutuminen', kesto: 0.7, voima: 1 },
+  'pulu.doing': { tunnus: 'doing-vieteri', kesto: 1.1, voima: 0.8 },
+  'pulu.sekoilu': { tunnus: 'sekoilu-2', kesto: 1.2, voima: 0.8 },
+  'pulu.ovi-auki': { tunnus: 'ovi-auki', kesto: 1.6, voima: 0.9 },
+  'pulu.ovi-kiinni': { tunnus: 'ovi-lamahdys', kesto: 1.2, voima: 0.9 },
+  'pulu.viuhahdus': { tunnus: 'viuhahdus-tulo', kesto: 0.9, voima: 0.85 },
+  'pulu.viuhahdus-lahto': { tunnus: 'viuhahdus-lahto', kesto: 0.9, voima: 0.85 },
+  'pulu.kujerrus': { tunnus: 'kujerrus', kesto: 1.4, voima: 0.9 },
+  'pulu.sahke': { tunnus: 'paperin-kahina', kesto: 1, voima: 0.8 },
+  'pulu.kilahdus': { tunnus: 'kellon-kilahdus', kesto: 1.2, voima: 0.8 },
+};
+
 // Mitkä äänet soivat oikeasta äänitteestä ja miten siivu otetaan.
 const REAL_PLAYERS = {
   dieTick: (s) => s.playSlice('dice', { dur: 0.08, gain: 0.4, isku: true }),
@@ -1394,6 +1492,25 @@ const REAL_PLAYERS = {
   turn: (s) => s.playSlice('turn', { dur: 1.1, gain: 0.3, alusta: true }),
   win: (s) => s.playSlice('win', { dur: 3.6, gain: 0.5, alusta: true }),
 };
+
+/*
+ * Pulun tehosteet soittajiksi yhdellä silmukalla eikä kahdellatoista
+ * käsin kirjoitetulla rivillä: ne eroavat toisistaan vain kestossa ja
+ * voimassa, ja ne luetaan jo taulukosta. Kaikki soivat ALUSTA — nämä
+ * ovat kertaeleitä, joilla on oma alkunsa, eivät jatkuvia äänitteitä
+ * joista poimitaan siivu.
+ *
+ * `viive` antaa kutsujan porrastaa kaksi tehostetta peräkkäin (Livia:
+ * viuhahdus ja siivet), `voima` vaimentaa yksittäisen soiton.
+ */
+for (const [avain, tiedot] of Object.entries(PULUN_TEHOSTEET)) {
+  REAL_PLAYERS[avain] = (s, { viive = 0, voima = 1 } = {}) => s.playSlice(avain, {
+    dur: tiedot.kesto,
+    gain: PULUN_PERUSVOIMA * PULUN_TASO * tiedot.voima * voima,
+    alusta: true,
+    delay: viive,
+  });
+}
 
 
 // --- äänimaisemat -----------------------------------------------------------
