@@ -260,3 +260,39 @@ poissa — se avaa saman kartan tilan, johon pääsee ilmankin.
 Omistaja päättää myöhemmin, tuleeko varusteelle uusi merkitys (esim.
 maiden vertailu, tunnusluvut kartalle tai suodatin "mitkä maat olen
 jo lukenut") vai poistetaanko se. Tätä EI ratkaista loppukirissä.
+
+## Maan tunnusluvut: Amerikat ja Oseania mukaan (6.9.2026)
+
+Kartan alla oleva tunnuslukulaatikko (väkiluku, pinta-ala,
+V-Dem-demokratiaindeksi, keskitulo ja tervehdykset) tulee taulusta
+`MAATIEDOT[laudan tunnus][maatunnus]` (js/sisaltotaulut.js). Puuttuva
+rivi ei kaada mitään: laatikko vain jää piiloon. Niinpä yhdeksän maan
+lehti oli tältä osin tyhjä, koska tauluja oli vain Afrikalle,
+Euroopalle ja Aasialle.
+
+Uudet taulut: `js/packs/northamerica-maatiedot.js` (USA, CAN, MEX),
+`js/packs/southamerica-maatiedot.js` (BRA, ARG, PER, ECU) ja
+`js/packs/oceania-maatiedot.js` (AUS, NZL). Ne on tuotettu samalla
+`tools/kirjoita-maatiedot.mjs`-työkalulla kuin Aasian taulu, ja ne on
+kytketty `KAIKKI_MAATIEDOT`-yhdistelmään sekä `tools/build-standalone.mjs`-
+ja `sw.js`-listoihin.
+
+Lähteet ja vertailuvuodet ovat samat kuin Euroopan taulussa, jotta
+sijaluvut ovat vertailukelpoisia: Maailmanpankin SP.POP.TOTL (2024),
+AG.SRF.TOTL.K2 (2023) ja NY.GNP.PCAP.CD (2024) sekä V-Demin liberaalin
+demokratian indeksi (2025) Our World in Datan aineistosta; kaikki
+haettu 6.9.2026. Sijoitus lasketaan suvereenien valtioiden kesken
+(193 maata; V-Demissä 172), ja menetelmä tarkistettiin toistamalla
+Italian, Ranskan, Espanjan ja Tanskan valmiit luvut. Demokratiaselitykset
+nojaavat en-Wikipedian "Politics of ..." -artikkeleihin ja tervehdykset
+"Languages of ..." -artikkeleihin sekä en-Wiktionaryyn (luettu 6.9.2026).
+
+Kanadan pinta-ala on ainoa poikkeus: Maailmanpankin sarja antaa sille
+15,6 milj. km², joten tauluun on kirjattu yleisesti käytetty
+10,0 milj. km². Sijoitus (2.) on sama kummallakin luvulla.
+
+`tests/maatiedot.test.mjs` vahtii, että jokaisella maalla, jolla on
+`MAA_KATEGORIAT`-lohko, on myös tunnuslukurivi, ja että rivillä on
+pakolliset kentät ja vähintään yksi tervehdys. Testissä on nimetty
+odotuslista niistä Aasian maista, joiden luvut ovat vielä tekemättä
+(BHR, IND, THA, VNM, IDN, MYS); lista saa vain lyhentyä.

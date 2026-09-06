@@ -24,6 +24,9 @@ import { OCEANIA_VALOKUVAT } from './packs/oceania-valokuvat.js';
 import { AFRICA_MAATIEDOT } from './packs/africa-maatiedot.js';
 import { EUROPE_MAATIEDOT } from './packs/europe-maatiedot.js';
 import { ASIA_MAATIEDOT } from './packs/asia-maatiedot.js';
+import { NORTHAMERICA_MAATIEDOT } from './packs/northamerica-maatiedot.js';
+import { SOUTHAMERICA_MAATIEDOT } from './packs/southamerica-maatiedot.js';
+import { OCEANIA_MAATIEDOT } from './packs/oceania-maatiedot.js';
 import { EUROPE_KIELET } from './packs/europe-kielet.js';
 import { OMAT_ARTIKKELIT } from './packs/africa-artikkelit.js';
 import { EUROPE_ARTIKKELIT } from './packs/europe-artikkelit.js';
@@ -100,7 +103,18 @@ export const KAIKKI_VALOKUVAT = {
   ...AFRICA_VALOKUVAT, ...EUROPE_VALOKUVAT, ...ASIA_VALOKUVAT, ...ASIA_LISAT_VALOKUVAT,
   ...NORTHAMERICA_VALOKUVAT, ...SOUTHAMERICA_VALOKUVAT, ...OCEANIA_VALOKUVAT,
 };
-const KAIKKI_MAATIEDOT = { ...AFRICA_MAATIEDOT, ...EUROPE_MAATIEDOT, ...ASIA_MAATIEDOT };
+/*
+ * Amerikoiden ja Oseanian taulut tulivat mukaan 6.9.2026: maalehti
+ * lukee tunnusluvut MAATIEDOT[laudan tunnus][maatunnus], eikä puuttuva
+ * rivi kaada mitään — se vain jättää kartan alta väkiluvun, pinta-alan,
+ * demokratiaindeksin ja tervehdykset pois. USA:n, Kanadan, Meksikon,
+ * Brasilian, Argentiinan, Perun, Ecuadorin, Australian ja Uuden-
+ * Seelannin lehdet olivat siihen asti tältä osin tyhjiä.
+ */
+const KAIKKI_MAATIEDOT = {
+  ...AFRICA_MAATIEDOT, ...EUROPE_MAATIEDOT, ...ASIA_MAATIEDOT,
+  ...NORTHAMERICA_MAATIEDOT, ...SOUTHAMERICA_MAATIEDOT, ...OCEANIA_MAATIEDOT,
+};
 
 /*
  * HUOM: avain puuttuvalta laudalta ei kaada mitään — sisältö vain
